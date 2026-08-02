@@ -1,0 +1,6 @@
+/.lake
+**/.lake
+.antigravity/
+__pycache__/
+*.pyc
+directory_tree.txt

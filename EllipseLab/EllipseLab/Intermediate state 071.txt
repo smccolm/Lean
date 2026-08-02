@@ -1,0 +1,3711 @@
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.MeasureTheory.Integral.DominatedConvergence
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
+import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.InverseDeriv
+import Mathlib.Analysis.Normed.Ring.InfiniteSum
+import Mathlib.RingTheory.Binomial
+
+set_option linter.style.whitespace false
+
+noncomputable section
+
+open MeasureTheory
+open Filter
+open Set
+
+namespace EllipseOmega
+
+def shapeParam (a b : ℝ) : ℝ :=
+  |a - b| / (a + b)
+
+def kappa (lamPi : ℝ) : ℝ :=
+  (4 * lamPi) / (1 + lamPi)^2
+
+def omegaIntegrand (lamPi : ℝ) (t : ℝ) : ℝ :=
+  Real.sqrt (1 - kappa lamPi * t) / Real.sqrt (t * (1 - t))
+
+def Omega (lamPi : ℝ) : ℝ :=
+  (1 + lamPi) * ∫ t in (0 : ℝ)..1, omegaIntegrand lamPi t
+
+def circleIntegrand (t : ℝ) : ℝ :=
+  1 / Real.sqrt (t * (1 - t))
+
+def circleIntegral : ℝ :=
+  ∫ t in (0 : ℝ)..1, circleIntegrand t
+
+theorem shapeParam_self (a : ℝ) : shapeParam a a = 0 := by
+  simp [shapeParam]
+
+theorem shapeParam_symm (a b : ℝ) : shapeParam a b = shapeParam b a := by
+  simp [shapeParam, abs_sub_comm, add_comm]
+
+theorem kappa_zero : kappa 0 = 0 := by
+  simp [kappa]
+
+theorem kappa_nonneg {lamPi : ℝ} (h0 : 0 ≤ lamPi) : 0 ≤ kappa lamPi := by
+  unfold kappa
+  exact div_nonneg (by nlinarith) (sq_nonneg (1 + lamPi))
+
+theorem kappa_le_one {lamPi : ℝ} (h0 : 0 ≤ lamPi) :
+    kappa lamPi ≤ 1 := by
+  unfold kappa
+  have hnum : 4 * lamPi ≤ (1 + lamPi)^2 := by
+    have hs : 0 ≤ (1 - lamPi)^2 := sq_nonneg (1 - lamPi)
+    nlinarith
+  have hdiv :
+      (4 * lamPi) / (1 + lamPi)^2 ≤ (1 + lamPi)^2 / (1 + lamPi)^2 := by
+    exact div_le_div_of_nonneg_right hnum (sq_nonneg (1 + lamPi))
+  have hne : (1 + lamPi)^2 ≠ 0 := by
+    nlinarith
+  simpa [hne] using hdiv
+
+theorem one_sub_kappa_mul_nonneg {lamPi t : ℝ}
+    (h0 : 0 ≤ lamPi) (_h1 : lamPi ≤ 1) (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ 1 - kappa lamPi * t := by
+  have hk0 : 0 ≤ kappa lamPi := kappa_nonneg h0
+  have hk1 : kappa lamPi ≤ 1 := kappa_le_one h0
+  have hkt : kappa lamPi * t ≤ 1 := by
+    nlinarith
+  nlinarith
+
+theorem omegaIntegrand_nonneg (lamPi t : ℝ) : 0 ≤ omegaIntegrand lamPi t := by
+  unfold omegaIntegrand
+  exact div_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _)
+
+theorem circleIntegrand_nonneg (t : ℝ) : 0 ≤ circleIntegrand t := by
+  unfold circleIntegrand
+  exact div_nonneg zero_le_one (Real.sqrt_nonneg _)
+
+theorem omegaIntegrand_zero (t : ℝ) :
+    omegaIntegrand 0 t = circleIntegrand t := by
+  simp [omegaIntegrand, kappa, circleIntegrand]
+
+theorem Omega_zero_unfold :
+    Omega 0 = circleIntegral := by
+  simp [Omega, omegaIntegrand, kappa, circleIntegral, circleIntegrand]
+
+theorem Omega_circle_unfold (a : ℝ) :
+    Omega (shapeParam a a) = circleIntegral := by
+  simp [Omega, omegaIntegrand, kappa, shapeParam,
+    circleIntegral, circleIntegrand]
+
+theorem Omega_circle_eq_Omega_zero (a : ℝ) :
+    Omega (shapeParam a a) = Omega 0 := by
+  simp [shapeParam]
+
+theorem gamma_one_half_eq_sqrt_pi :
+    Real.Gamma ((1 : ℝ) / 2) = Real.sqrt Real.pi := by
+  simpa using Real.Gamma_one_half_eq
+
+theorem gamma_one_half_mul_gamma_one_half_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2) = Real.pi := by
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2)
+        = Real.sqrt Real.pi * Real.Gamma ((1 : ℝ) / 2) := by
+          rw [gamma_one_half_eq_sqrt_pi]
+    _ = Real.sqrt Real.pi * Real.sqrt Real.pi := by
+          rw [gamma_one_half_eq_sqrt_pi]
+    _ = Real.pi := by
+          have hs : (Real.sqrt Real.pi)^2 = Real.pi := by
+            simpa using Real.sq_sqrt Real.pi_nonneg
+          simpa [pow_two] using hs
+
+theorem gamma_one_half_reflection_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) = Real.pi := by
+  have hgamma :
+      Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) =
+        Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+    simpa using Real.Gamma_mul_Gamma_one_sub ((1 : ℝ) / 2)
+  have hsin : Real.sin (Real.pi * ((1 : ℝ) / 2)) = 1 := by
+    have harg : Real.pi * ((1 : ℝ) / 2) = Real.pi / 2 := by
+      ring
+    rw [harg, Real.sin_pi_div_two]
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2))
+        = Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+          exact hgamma
+    _ = Real.pi / 1 := by
+          rw [hsin]
+    _ = Real.pi := by
+          simp
+
+theorem complex_gamma_one_half_eq_ofReal :
+    Complex.Gamma ((1 : ℂ) / 2) = ((Real.Gamma ((1 : ℝ) / 2) : ℝ) : ℂ) := by
+  have h1 : (1 : ℂ) / 2 = ↑((1 : ℝ) / 2) := by
+    norm_num
+  rw [h1, Complex.Gamma_ofReal]
+
+theorem complex_gamma_one_half_mul_gamma_one_half_eq_pi :
+    Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  rw [complex_gamma_one_half_eq_ofReal]
+  have hcast :
+      (((Real.Gamma ((1 : ℝ) / 2) *
+        Real.Gamma ((1 : ℝ) / 2) : ℝ)) : ℂ) = (Real.pi : ℂ) := by
+    exact congrArg (fun x : ℝ => (x : ℂ))
+      gamma_one_half_mul_gamma_one_half_eq_pi
+  push_cast at hcast ⊢
+  exact hcast
+
+theorem complex_beta_half_half_eq_pi :
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  have hs : 0 < (((1 : ℂ) / 2).re) := by
+    norm_num
+  calc
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2)
+        = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+            Complex.Gamma (((1 : ℂ) / 2) + ((1 : ℂ) / 2)) := by
+          exact Complex.betaIntegral_eq_Gamma_mul_div
+            ((1 : ℂ) / 2) ((1 : ℂ) / 2) hs hs
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+          Complex.Gamma 1 := by
+          congr 3
+          ring
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) := by
+          simp
+    _ = (Real.pi : ℂ) := by
+          exact complex_gamma_one_half_mul_gamma_one_half_eq_pi
+
+def betaHalfHalfIntegrand (x : ℝ) : ℂ :=
+  (x : ℂ) ^ (((1 : ℂ) / 2) - 1) *
+    (1 - (x : ℂ)) ^ (((1 : ℂ) / 2) - 1)
+
+theorem complex_beta_half_half_unfold :
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2) =
+      ∫ x : ℝ in (0 : ℝ)..1, betaHalfHalfIntegrand x := by
+  simp [Complex.betaIntegral, betaHalfHalfIntegrand]
+
+theorem Omega_zero_eq_pi_iff_circleIntegral_eq_pi :
+    Omega 0 = Real.pi ↔ circleIntegral = Real.pi := by
+  constructor <;> intro h
+  · simpa [Omega_zero_unfold] using h
+  · simpa [Omega_zero_unfold] using h
+
+theorem Omega_zero_eq_pi_of_circleIntegral_eq_pi
+    (h : circleIntegral = Real.pi) :
+    Omega 0 = Real.pi := by
+  simpa [Omega_zero_unfold] using h
+
+theorem Omega_circle_eq_pi_iff_circleIntegral_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi ↔ circleIntegral = Real.pi := by
+  constructor <;> intro h
+  · simpa [Omega_circle_unfold] using h
+  · simpa [Omega_circle_unfold] using h
+
+theorem Omega_circle_eq_pi_of_circleIntegral_eq_pi
+    (a : ℝ) (h : circleIntegral = Real.pi) :
+    Omega (shapeParam a a) = Real.pi := by
+  simpa [Omega_circle_unfold] using h
+
+def unitCircleAntideriv (x : ℝ) : ℝ :=
+  Real.arcsin x
+
+theorem unitCircleAntideriv_hasDerivAt
+    {x : ℝ} (hx₁ : x ≠ -1) (hx₂ : x ≠ 1) :
+    HasDerivAt unitCircleAntideriv
+      (1 / Real.sqrt (1 - x ^ 2)) x := by
+  simpa [unitCircleAntideriv] using
+    Real.hasDerivAt_arcsin hx₁ hx₂
+
+theorem unitCircleAntideriv_hasDerivAt_Ioo
+    {x : ℝ} (hx : x ∈ Set.Ioo (-1 : ℝ) 1) :
+    HasDerivAt unitCircleAntideriv
+      (1 / Real.sqrt (1 - x ^ 2)) x := by
+  have hx₁ : x ≠ -1 := by
+    linarith [hx.1]
+  have hx₂ : x ≠ 1 := by
+    linarith [hx.2]
+  exact unitCircleAntideriv_hasDerivAt hx₁ hx₂
+
+theorem unitCircleAntideriv_one :
+    unitCircleAntideriv 1 = Real.pi / 2 := by
+  simp [unitCircleAntideriv]
+
+theorem unitCircleAntideriv_neg_one :
+    unitCircleAntideriv (-1) = -(Real.pi / 2) := by
+  simp [unitCircleAntideriv]
+
+theorem unitCircleAntideriv_endpoint_gap :
+    unitCircleAntideriv 1 - unitCircleAntideriv (-1) = Real.pi := by
+  rw [unitCircleAntideriv_one, unitCircleAntideriv_neg_one]
+  ring
+
+def unitCircleIntegrand (x : ℝ) : ℝ :=
+  1 / Real.sqrt (1 - x ^ 2)
+
+theorem unitCircleIntegrand_nonneg (x : ℝ) :
+    0 ≤ unitCircleIntegrand x := by
+  unfold unitCircleIntegrand
+  exact div_nonneg zero_le_one (Real.sqrt_nonneg _)
+
+theorem affine_to_unitCircle_mem_Ioo {t : ℝ}
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    2 * t - 1 ∈ Set.Ioo (-1 : ℝ) 1 := by
+  constructor <;> nlinarith [ht.1, ht.2]
+
+theorem one_sub_affine_sq_eq_four_mul (t : ℝ) :
+    1 - (2 * t - 1) ^ 2 = 4 * (t * (1 - t)) := by
+  ring
+
+theorem sqrt_one_sub_affine_sq (t : ℝ) :
+    Real.sqrt (1 - (2 * t - 1) ^ 2) =
+      2 * Real.sqrt (t * (1 - t)) := by
+  rw [one_sub_affine_sq_eq_four_mul]
+  calc
+    Real.sqrt (4 * (t * (1 - t)))
+        = Real.sqrt (4 : ℝ) * Real.sqrt (t * (1 - t)) := by
+          have h4 : 0 ≤ (4 : ℝ) := by
+            norm_num
+          rw [Real.sqrt_mul h4]
+    _ = 2 * Real.sqrt (t * (1 - t)) := by
+          have hsqrt4 : Real.sqrt (4 : ℝ) = 2 := by
+            have h : (4 : ℝ) = 2 ^ 2 := by
+              norm_num
+            have h2 : 0 ≤ (2 : ℝ) := by
+              norm_num
+            rw [h, Real.sqrt_sq h2]
+          rw [hsqrt4]
+
+theorem circleIntegrand_eq_two_mul_unitCircleIntegrand_affine
+    {t : ℝ} (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := by
+  have hspos : 0 < Real.sqrt (t * (1 - t)) := by
+    apply Real.sqrt_pos.2
+    nlinarith [ht.1, ht.2]
+  have hsneq : Real.sqrt (t * (1 - t)) ≠ 0 := by
+    linarith
+  unfold circleIntegrand unitCircleIntegrand
+  have hsqrt := sqrt_one_sub_affine_sq t
+  calc
+    1 / Real.sqrt (t * (1 - t))
+        = 2 / (2 * Real.sqrt (t * (1 - t))) := by
+          field_simp [hsneq]
+    _ = 2 / Real.sqrt (1 - (2 * t - 1) ^ 2) := by
+          rw [hsqrt]
+    _ = 2 * (1 / Real.sqrt (1 - (2 * t - 1) ^ 2)) := by
+          ring
+
+theorem circleIntegrand_eq_two_mul_unitCircleIntegrand_affine_Icc
+    {t : ℝ} (ht : t ∈ Set.Icc (0 : ℝ) 1) :
+    circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := by
+  rcases lt_or_eq_of_le ht.1 with ht0 | rfl
+  · rcases lt_or_eq_of_le ht.2 with ht1 | rfl
+    · exact circleIntegrand_eq_two_mul_unitCircleIntegrand_affine ⟨ht0, ht1⟩
+    · unfold circleIntegrand unitCircleIntegrand
+      have h1 : Real.sqrt (1 * (1 - 1)) = 0 := by
+        norm_num
+      have h2 : Real.sqrt (1 - (2 * 1 - 1) ^ 2) = 0 := by
+        norm_num
+      rw [h1, h2]
+      norm_num
+  · unfold circleIntegrand unitCircleIntegrand
+    have h1 : Real.sqrt (0 * (1 - 0)) = 0 := by
+      norm_num
+    have h2 : Real.sqrt (1 - (2 * 0 - 1) ^ 2) = 0 := by
+      norm_num
+    rw [h1, h2]
+    norm_num
+
+theorem unitCircleIntegrand_intervalIntegrable :
+    IntervalIntegrable unitCircleIntegrand MeasureTheory.volume (-1 : ℝ) 1 := by
+  apply intervalIntegral.intervalIntegrable_deriv_of_nonneg
+  · have h_eq : Set.uIcc (-1 : ℝ) 1 = Set.Icc (-1 : ℝ) 1 :=
+      Set.uIcc_of_le (by norm_num)
+    rw [h_eq]
+    exact Real.continuous_arcsin.continuousOn
+  · intro x hx
+    have hx_eq :
+        Set.Ioo (min (-1 : ℝ) 1) (max (-1 : ℝ) 1) = Set.Ioo (-1 : ℝ) 1 := by
+      congr 1 <;> norm_num
+    rw [hx_eq] at hx
+    exact unitCircleAntideriv_hasDerivAt_Ioo hx
+  · intro x _hx
+    exact unitCircleIntegrand_nonneg x
+
+theorem unitCircleIntegral_eq_endpoint_gap :
+    (∫ x in (-1 : ℝ)..1, unitCircleIntegrand x) =
+      unitCircleAntideriv 1 - unitCircleAntideriv (-1) := by
+  apply intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le (by norm_num)
+  any_goals exact unitCircleIntegrand_intervalIntegrable
+  any_goals exact Real.continuous_arcsin.continuousOn
+  any_goals
+    intro x hx
+    exact unitCircleAntideriv_hasDerivAt_Ioo hx
+
+theorem circleIntegral_eq_unitCircleIntegral :
+    circleIntegral = ∫ x in (-1 : ℝ)..1, unitCircleIntegrand x := by
+  calc
+    circleIntegral = ∫ t in (0 : ℝ)..1, circleIntegrand t := rfl
+    _ = ∫ t in (0 : ℝ)..1, (2 : ℝ) • unitCircleIntegrand (2 * t + (-1)) := by
+          apply intervalIntegral.integral_congr
+          intro t ht
+          have ht' : t ∈ Set.Icc (0 : ℝ) 1 := by
+            have h : Set.uIcc (0 : ℝ) 1 = Set.Icc (0 : ℝ) 1 :=
+              Set.uIcc_of_le (by norm_num)
+            rwa [h] at ht
+          have h_val := circleIntegrand_eq_two_mul_unitCircleIntegrand_affine_Icc ht'
+          calc
+            circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := h_val
+            _ = (2 : ℝ) • unitCircleIntegrand (2 * t + (-1)) := rfl
+    _ = (2 : ℝ) • ∫ t in (0 : ℝ)..1, unitCircleIntegrand (2 * t + (-1)) := by
+          rw [intervalIntegral.integral_smul]
+    _ = ∫ x in (2 * 0 + (-1) : ℝ)..(2 * 1 + (-1)), unitCircleIntegrand x := by
+          exact intervalIntegral.smul_integral_comp_mul_add unitCircleIntegrand
+            (a := (0 : ℝ)) (b := (1 : ℝ)) (c := (2 : ℝ)) (d := (-1 : ℝ))
+    _ = ∫ x in (-1 : ℝ)..1, unitCircleIntegrand x := by
+          congr 1 <;> norm_num
+
+theorem circleIntegral_eq_pi :
+    circleIntegral = Real.pi := by
+  rw [circleIntegral_eq_unitCircleIntegral, unitCircleIntegral_eq_endpoint_gap]
+  rw [unitCircleAntideriv_endpoint_gap]
+
+theorem Omega_zero_eq_pi :
+    Omega 0 = Real.pi := by
+  exact Omega_zero_eq_pi_of_circleIntegral_eq_pi circleIntegral_eq_pi
+
+theorem Omega_circle_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi := by
+  exact Omega_circle_eq_pi_of_circleIntegral_eq_pi a circleIntegral_eq_pi
+
+def ellipsePerimeterModel (a b : ℝ) : ℝ :=
+  (a + b) * Omega (shapeParam a b)
+
+theorem Omega_shapeParam_symm (a b : ℝ) :
+    Omega (shapeParam a b) = Omega (shapeParam b a) := by
+  rw [shapeParam_symm]
+
+theorem Omega_shapeParam_self_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi := by
+  simpa [shapeParam_self] using Omega_zero_eq_pi
+
+theorem ellipsePerimeterModel_symm (a b : ℝ) :
+    ellipsePerimeterModel a b = ellipsePerimeterModel b a := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_symm, add_comm]
+
+theorem ellipsePerimeterModel_of_shapeParam_eq_zero {a b : ℝ}
+    (h : shapeParam a b = 0) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  unfold ellipsePerimeterModel
+  rw [h, Omega_zero_eq_pi]
+
+theorem ellipsePerimeterModel_circle (a : ℝ) :
+    ellipsePerimeterModel a a = (2 * a) * Real.pi := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_self, Omega_zero_eq_pi]
+  ring
+
+theorem ellipsePerimeterModel_circle' (a : ℝ) :
+    ellipsePerimeterModel a a = 2 * Real.pi * a := by
+  rw [ellipsePerimeterModel_circle]
+  ring
+
+theorem shapeParam_nonneg_of_pos_sum {a b : ℝ}
+    (hsum : 0 < a + b) :
+    0 ≤ shapeParam a b := by
+  unfold shapeParam
+  exact div_nonneg (abs_nonneg (a - b)) (le_of_lt hsum)
+
+theorem shapeParam_le_one_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b ≤ 1 := by
+  unfold shapeParam
+  have hab : |a - b| ≤ a + b := by
+    refine abs_le.mpr ?_
+    constructor <;> nlinarith
+  have haux : |a - b| / (a + b) ≤ (a + b) / (a + b) := by
+    exact div_le_div_of_nonneg_right hab (le_of_lt hsum)
+  have hne : a + b ≠ 0 := ne_of_gt hsum
+  simpa [hne] using haux
+
+theorem shapeParam_mem_Icc_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact shapeParam_nonneg_of_pos_sum hsum
+  · exact shapeParam_le_one_of_nonneg ha hb hsum
+
+theorem shapeParam_eq_zero_iff_of_pos_sum {a b : ℝ}
+    (hsum : 0 < a + b) :
+    shapeParam a b = 0 ↔ a = b := by
+  constructor
+  · intro h
+    have hzero : |a - b| = 0 := by
+      by_contra hne
+      have hdivne : |a - b| / (a + b) ≠ 0 := by
+        exact div_ne_zero hne (ne_of_gt hsum)
+      exact hdivne (by simpa [shapeParam] using h)
+    have hab : a - b = 0 := abs_eq_zero.mp hzero
+    linarith
+  · intro h
+    simp [shapeParam, h]
+
+theorem shapeParam_eq_zero_iff_of_nonneg_of_pos_sum {a b : ℝ}
+    (_ha : 0 ≤ a) (_hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b = 0 ↔ a = b := by
+  exact shapeParam_eq_zero_iff_of_pos_sum hsum
+
+theorem ellipsePerimeterModel_eq_sum_mul_pi_of_eq {a b : ℝ}
+    (h : a = b) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  subst h
+  rw [ellipsePerimeterModel_circle]
+  ring
+
+theorem ellipsePerimeterModel_eq_sum_mul_pi_of_shapeParam_zero {a b : ℝ}
+    (h : shapeParam a b = 0) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  exact ellipsePerimeterModel_of_shapeParam_eq_zero h
+
+theorem shapeParam_eq_sub_div_of_le {a b : ℝ}
+    (h : b ≤ a) :
+    shapeParam a b = (a - b) / (a + b) := by
+  unfold shapeParam
+  rw [abs_of_nonneg (sub_nonneg.mpr h)]
+
+theorem shapeParam_eq_rev_sub_div_of_le {a b : ℝ}
+    (h : a ≤ b) :
+    shapeParam a b = (b - a) / (a + b) := by
+  unfold shapeParam
+  rw [abs_of_nonpos (sub_nonpos.mpr h)]
+  congr 1
+  ring
+
+theorem shapeParam_right_zero_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    shapeParam a 0 = 1 := by
+  rw [shapeParam_eq_sub_div_of_le (by linarith)]
+  simp [ha.ne']
+
+theorem shapeParam_left_zero_of_pos {b : ℝ}
+    (hb : 0 < b) :
+    shapeParam 0 b = 1 := by
+  rw [shapeParam_eq_rev_sub_div_of_le (by linarith)]
+  simp [hb.ne']
+
+theorem ellipsePerimeterModel_right_zero_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    ellipsePerimeterModel a 0 = a * Omega 1 := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_right_zero_of_pos ha]
+  ring
+
+theorem ellipsePerimeterModel_left_zero_of_pos {b : ℝ}
+    (hb : 0 < b) :
+    ellipsePerimeterModel 0 b = b * Omega 1 := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_left_zero_of_pos hb]
+  ring
+
+theorem shapeParam_scale_of_pos {a b c : ℝ}
+    (hc : 0 < c) :
+    shapeParam (c * a) (c * b) = shapeParam a b := by
+  unfold shapeParam
+  have hsub : c * a - c * b = c * (a - b) := by
+    ring
+  have hadd : c * a + c * b = c * (a + b) := by
+    ring
+  rw [hsub, hadd, abs_mul, abs_of_nonneg (le_of_lt hc)]
+  by_cases hab : a + b = 0
+  · simp [hab]
+  · have hc0 : c ≠ 0 := ne_of_gt hc
+    field_simp [hc0, hab]
+
+theorem ellipsePerimeterModel_scale_of_pos {a b c : ℝ}
+    (hc : 0 < c) :
+    ellipsePerimeterModel (c * a) (c * b) = c * ellipsePerimeterModel a b := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_scale_of_pos hc]
+  ring
+
+def eccentricitySq (a b : ℝ) : ℝ :=
+  1 - (b / a) ^ 2
+
+theorem one_add_shapeParam_eq_two_mul_div_of_le {a b : ℝ}
+    (hba : b ≤ a) (hsum : a + b ≠ 0) :
+    1 + shapeParam a b = (2 * a) / (a + b) := by
+  rw [shapeParam_eq_sub_div_of_le hba]
+  field_simp [hsum]
+  ring
+
+theorem kappa_shapeParam_eq_one_sub_sq_div_sq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = 1 - (b / a) ^ 2 := by
+  have hsum : a + b ≠ 0 := by
+    linarith
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  rw [shapeParam_eq_sub_div_of_le hba, kappa]
+  have hden : 1 + (a - b) / (a + b) = (2 * a) / (a + b) := by
+    field_simp [hsum]
+    ring
+  rw [hden]
+  field_simp [ha0, hsum]
+  ring
+
+theorem kappa_shapeParam_eq_sub_sq_div_sq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = (a ^ 2 - b ^ 2) / a ^ 2 := by
+  rw [kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba]
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  field_simp [ha0]
+
+theorem kappa_shapeParam_eq_eccentricitySq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = eccentricitySq a b := by
+  unfold eccentricitySq
+  exact kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba
+
+theorem omegaIntegrand_shapeParam_eq_eccentricitySq_of_le {a b t : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    omegaIntegrand (shapeParam a b) t =
+      Real.sqrt (1 - eccentricitySq a b * t) /
+        Real.sqrt (t * (1 - t)) := by
+  unfold omegaIntegrand eccentricitySq
+  rw [kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba]
+
+theorem ellipsePerimeterModel_eq_majorAxisIntegral_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      2 * a * ∫ t in (0 : ℝ)..1, omegaIntegrand (shapeParam a b) t := by
+  have hsum : a + b ≠ 0 := by
+    linarith
+  unfold ellipsePerimeterModel Omega
+  rw [one_add_shapeParam_eq_two_mul_div_of_le hba hsum]
+  field_simp [hsum]
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      2 * a *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq a b * t) /
+            Real.sqrt (t * (1 - t)) := by
+  rw [ellipsePerimeterModel_eq_majorAxisIntegral_of_le ha hb hba]
+  apply congrArg (fun z : ℝ => 2 * a * z)
+  apply intervalIntegral.integral_congr
+  intro t ht
+  exact omegaIntegrand_shapeParam_eq_eccentricitySq_of_le ha hb hba
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_ge {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      2 * b *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq b a * t) /
+            Real.sqrt (t * (1 - t)) := by
+  rw [ellipsePerimeterModel_symm]
+  exact ellipsePerimeterModel_eq_classicalIntegral_of_le hb ha hab
+
+theorem eccentricitySq_nonneg_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    0 ≤ eccentricitySq a b := by
+  rw [← kappa_shapeParam_eq_eccentricitySq_of_le ha hb hba]
+  have hsum : 0 < a + b := by
+    linarith
+  exact kappa_nonneg (shapeParam_nonneg_of_pos_sum hsum)
+
+theorem eccentricitySq_le_one_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricitySq a b ≤ 1 := by
+  rw [← kappa_shapeParam_eq_eccentricitySq_of_le ha hb hba]
+  have hsum : 0 < a + b := by
+    linarith
+  exact kappa_le_one (shapeParam_nonneg_of_pos_sum hsum)
+
+theorem eccentricitySq_mem_Icc_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricitySq a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricitySq_nonneg_of_le ha hb hba
+  · exact eccentricitySq_le_one_of_le ha hb hba
+
+theorem eccentricitySq_self {a : ℝ} (ha : a ≠ 0) :
+    eccentricitySq a a = 0 := by
+  simp [eccentricitySq, ha]
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      2 * max a b *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq (max a b) (min a b) * t) /
+            Real.sqrt (t * (1 - t)) := by
+  by_cases hba : b ≤ a
+  · have ha' : 0 < a := by
+      linarith
+    have hmax : max a b = a := max_eq_left hba
+    have hmin : min a b = b := min_eq_right hba
+    rw [hmax, hmin]
+    exact ellipsePerimeterModel_eq_classicalIntegral_of_le ha' hb hba
+  · have hab : a ≤ b := le_of_not_ge hba
+    have hb' : 0 < b := by
+      linarith
+    have hmax : max a b = b := max_eq_right hab
+    have hmin : min a b = a := min_eq_left hab
+    rw [hmax, hmin]
+    exact ellipsePerimeterModel_eq_classicalIntegral_of_ge ha hb' hab
+
+theorem ellipsePerimeterModel_circle_eq_classicalIntegral {a : ℝ}
+    (ha : 0 < a) :
+    ellipsePerimeterModel a a =
+      2 * a *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq a a * t) /
+            Real.sqrt (t * (1 - t)) := by
+  simpa using
+    ellipsePerimeterModel_eq_classicalIntegral_of_le ha (le_of_lt ha) le_rfl
+
+def eccentricity (a b : ℝ) : ℝ :=
+  Real.sqrt (eccentricitySq a b)
+
+theorem eccentricity_nonneg (a b : ℝ) :
+    0 ≤ eccentricity a b := by
+  unfold eccentricity
+  exact Real.sqrt_nonneg _
+
+theorem eccentricity_sq_eq_eccentricitySq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ^ 2 = eccentricitySq a b := by
+  unfold eccentricity
+  simpa using Real.sq_sqrt (eccentricitySq_nonneg_of_le ha hb hba)
+
+theorem eccentricity_le_one_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ≤ 1 := by
+  have hsq : eccentricity a b ^ 2 = eccentricitySq a b := by
+    exact eccentricity_sq_eq_eccentricitySq_of_le ha hb hba
+  have h0 : 0 ≤ eccentricity a b := eccentricity_nonneg a b
+  have h1 : eccentricitySq a b ≤ 1 := by
+    exact eccentricitySq_le_one_of_le ha hb hba
+  nlinarith [hsq, h0, h1]
+
+theorem eccentricity_mem_Icc_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricity_nonneg a b
+  · exact eccentricity_le_one_of_le ha hb hba
+
+theorem eccentricity_self_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    eccentricity a a = 0 := by
+  unfold eccentricity
+  rw [eccentricitySq_self (ne_of_gt ha)]
+  simp
+
+def completeEllipticEParam (m : ℝ) : ℝ :=
+  (1 / 2) *
+    ∫ t in (0 : ℝ)..1,
+      Real.sqrt (1 - m * t) / Real.sqrt (t * (1 - t))
+
+theorem completeEllipticEParam_zero :
+    completeEllipticEParam 0 = Real.pi / 2 := by
+  unfold completeEllipticEParam
+  have h :
+      ∫ t in (0 : ℝ)..1,
+        Real.sqrt (1 - 0 * t) / Real.sqrt (t * (1 - t)) = circleIntegral := by
+    apply intervalIntegral.integral_congr
+    intro t ht
+    simp [circleIntegrand]
+  rw [h, circleIntegral_eq_pi]
+  ring
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticEParam (eccentricitySq a b) := by
+  rw [ellipsePerimeterModel_eq_classicalIntegral_of_le ha hb hba]
+  unfold completeEllipticEParam
+  ring
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticEParam (eccentricitySq b a) := by
+  rw [ellipsePerimeterModel_symm]
+  exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le hb ha hab
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticEParam (eccentricitySq (max a b) (min a b)) := by
+  by_cases hba : b ≤ a
+  · have ha' : 0 < a := by
+      linarith
+    rw [max_eq_left hba, min_eq_right hba]
+    exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+      ha' hb hba
+  · have hab : a ≤ b := le_of_not_ge hba
+    have hb' : 0 < b := by
+      linarith
+    rw [max_eq_right hab, min_eq_left hab]
+    exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge
+      ha hb' hab
+
+def completeEllipticEModulus (k : ℝ) : ℝ :=
+  completeEllipticEParam (k ^ 2)
+
+theorem completeEllipticEModulus_zero :
+    completeEllipticEModulus 0 = Real.pi / 2 := by
+  unfold completeEllipticEModulus
+  simpa using completeEllipticEParam_zero
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticEModulus (eccentricity a b) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le ha hb hba]
+  unfold completeEllipticEModulus
+  rw [eccentricity_sq_eq_eccentricitySq_of_le ha hb hba]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_ge
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticEModulus (eccentricity b a) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge ha hb hab]
+  unfold completeEllipticEModulus
+  rw [eccentricity_sq_eq_eccentricitySq_of_le hb ha hab]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticEModulus (eccentricity (max a b) (min a b)) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_nonneg
+    ha hb hsum]
+  unfold completeEllipticEModulus
+  have hmaxpos : 0 < max a b := by
+    by_cases hba : b ≤ a
+    · rw [max_eq_left hba]
+      linarith
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [max_eq_right hab]
+      linarith
+  have hminnonneg : 0 ≤ min a b := by
+    by_cases hba : b ≤ a
+    · rw [min_eq_right hba]
+      exact hb
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [min_eq_left hab]
+      exact ha
+  have hminlemax : min a b ≤ max a b := by
+    by_cases hba : b ≤ a
+    · rw [min_eq_right hba, max_eq_left hba]
+      exact hba
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [min_eq_left hab, max_eq_right hab]
+      exact hab
+  rw [eccentricity_sq_eq_eccentricitySq_of_le hmaxpos hminnonneg hminlemax]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEParam_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticEParam 0 := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+    ha (le_of_lt ha) le_rfl]
+  rw [eccentricitySq_self (ne_of_gt ha)]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEModulus_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticEModulus 0 := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le
+    ha (le_of_lt ha) le_rfl]
+  rw [eccentricity_self_of_pos ha]
+
+def completeEllipticETrig (k : ℝ) : ℝ :=
+  ∫ θ in (0 : ℝ)..(Real.pi / 2),
+    Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2)
+
+theorem completeEllipticETrig_zero :
+    completeEllipticETrig 0 = Real.pi / 2 := by
+  unfold completeEllipticETrig
+  have h :
+      (∫ θ in (0 : ℝ)..(Real.pi / 2),
+        Real.sqrt (1 - 0 ^ 2 * Real.sin θ ^ 2)) =
+      ∫ θ in (0 : ℝ)..(Real.pi / 2), (1 : ℝ) := by
+    apply intervalIntegral.integral_congr
+    intro θ hθ
+    simp
+  rw [h, intervalIntegral.integral_const]
+  ring
+
+def trigSubstitutionTarget (k : ℝ) : Prop :=
+  completeEllipticEModulus k = completeEllipticETrig k
+
+theorem trigSubstitutionTarget_zero :
+    trigSubstitutionTarget 0 := by
+  unfold trigSubstitutionTarget
+  rw [completeEllipticEModulus_zero, completeEllipticETrig_zero]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le_of_substitution
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a)
+    (hsub : trigSubstitutionTarget (eccentricity a b)) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticETrig (eccentricity a b) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le ha hb hba]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge_of_substitution
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b)
+    (hsub : trigSubstitutionTarget (eccentricity b a)) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticETrig (eccentricity b a) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_ge ha hb hab]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_nonneg_of_substitution
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b)
+    (hsub : trigSubstitutionTarget (eccentricity (max a b) (min a b))) :
+    ellipsePerimeterModel a b =
+      4 * max a b * completeEllipticETrig (eccentricity (max a b) (min a b)) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_nonneg ha hb hsum]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticETrig_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticETrig 0 := by
+  rw [ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEModulus_zero ha]
+  rw [completeEllipticEModulus_zero, completeEllipticETrig_zero]
+
+def sinSqSubst (θ : ℝ) : ℝ :=
+  Real.sin θ ^ 2
+
+theorem sinSqSubst_nonneg (θ : ℝ) :
+    0 ≤ sinSqSubst θ := by
+  unfold sinSqSubst
+  exact sq_nonneg (Real.sin θ)
+
+theorem sinSqSubst_le_one (θ : ℝ) :
+    sinSqSubst θ ≤ 1 := by
+  have hs : |Real.sin θ| ≤ 1 := by
+    simpa using Real.abs_sin_le_one θ
+  have hs1 : -1 ≤ Real.sin θ := (abs_le.mp hs).1
+  have hs2 : Real.sin θ ≤ 1 := (abs_le.mp hs).2
+  unfold sinSqSubst
+  nlinarith
+
+theorem sinSqSubst_mem_Icc_zero_one (θ : ℝ) :
+    sinSqSubst θ ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact sinSqSubst_nonneg θ
+  · exact sinSqSubst_le_one θ
+
+theorem one_sub_sinSqSubst_eq_cos_sq (θ : ℝ) :
+    1 - sinSqSubst θ = Real.cos θ ^ 2 := by
+  unfold sinSqSubst
+  nlinarith [Real.sin_sq_add_cos_sq θ]
+
+theorem sqrt_sinSqSubst_eq_abs_sin (θ : ℝ) :
+    Real.sqrt (sinSqSubst θ) = |Real.sin θ| := by
+  unfold sinSqSubst
+  simpa using Real.sqrt_sq_eq_abs (Real.sin θ)
+
+theorem sqrt_one_sub_sinSqSubst_eq_abs_cos (θ : ℝ) :
+    Real.sqrt (1 - sinSqSubst θ) = |Real.cos θ| := by
+  rw [one_sub_sinSqSubst_eq_cos_sq]
+  simpa using Real.sqrt_sq_eq_abs (Real.cos θ)
+
+theorem sin_nonneg_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    0 ≤ Real.sin θ := by
+  have hmem : θ ∈ Set.Icc (0 : ℝ) Real.pi := by
+    constructor
+    · exact hθ.1
+    · nlinarith [hθ.2, Real.pi_pos]
+  exact Real.sin_nonneg_of_mem_Icc hmem
+
+theorem cos_nonneg_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    0 ≤ Real.cos θ := by
+  have hlow : -(Real.pi / 2) ≤ (0 : ℝ) := by
+    nlinarith [Real.pi_pos]
+  have hmem : θ ∈ Set.Icc (-(Real.pi / 2)) (Real.pi / 2) := by
+    constructor
+    · exact le_trans hlow hθ.1
+    · exact hθ.2
+  exact Real.cos_nonneg_of_mem_Icc hmem
+
+theorem sqrt_sinSqSubst_eq_sin_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ) = Real.sin θ := by
+  rw [sqrt_sinSqSubst_eq_abs_sin]
+  rw [abs_of_nonneg (sin_nonneg_of_mem_Icc_zero_pi_div_two hθ)]
+
+theorem sqrt_one_sub_sinSqSubst_eq_cos_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (1 - sinSqSubst θ) = Real.cos θ := by
+  rw [sqrt_one_sub_sinSqSubst_eq_abs_cos]
+  rw [abs_of_nonneg (cos_nonneg_of_mem_Icc_zero_pi_div_two hθ)]
+
+theorem sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+    {θ : ℝ} (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+      Real.sin θ * Real.cos θ := by
+  rw [Real.sqrt_mul (sinSqSubst_nonneg θ)]
+  rw [sqrt_sinSqSubst_eq_sin_of_mem_Icc_zero_pi_div_two hθ]
+  rw [sqrt_one_sub_sinSqSubst_eq_cos_of_mem_Icc_zero_pi_div_two hθ]
+
+theorem sinSqSubst_zero :
+    sinSqSubst 0 = 0 := by
+  simp [sinSqSubst]
+
+theorem sinSqSubst_pi_div_two :
+    sinSqSubst (Real.pi / 2) = 1 := by
+  simp [sinSqSubst]
+
+theorem sinSqSubst_deriv (θ : ℝ) :
+    HasDerivAt sinSqSubst (2 * Real.sin θ * Real.cos θ) θ := by
+  unfold sinSqSubst
+  have h := (Real.hasDerivAt_sin θ).pow 2
+  simpa [mul_comm, mul_left_comm, mul_assoc] using h
+
+theorem elliptic_integrand_subst_eq_trig_on_Ioo (k : ℝ) :
+    Set.EqOn
+      (fun θ =>
+        (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+          (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+          (2 * Real.sin θ * Real.cos θ))
+      (fun θ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      (Set.Ioo (0 : ℝ) (Real.pi / 2)) := by
+  intro θ hθ
+  have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+    exact ⟨le_of_lt hθ.1, le_of_lt hθ.2⟩
+  have hsin : 0 < Real.sin θ := by
+    have hmem : θ ∈ Set.Ioo (0 : ℝ) Real.pi := by
+      constructor
+      · exact hθ.1
+      · nlinarith [hθ.2, Real.pi_pos]
+    exact Real.sin_pos_of_mem_Ioo hmem
+  have hcos : 0 < Real.cos θ := by
+    have hmem : θ ∈ Set.Ioo (-(Real.pi / 2)) (Real.pi / 2) := by
+      constructor
+      · have hneg : -(Real.pi / 2) < (0 : ℝ) := by
+          nlinarith [Real.pi_pos]
+        exact lt_trans hneg hθ.1
+      · exact hθ.2
+    exact Real.cos_pos_of_mem_Ioo hmem
+  have hden :
+      2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+        2 * Real.sin θ * Real.cos θ := by
+    calc
+      2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ))
+          = 2 * (Real.sin θ * Real.cos θ) := by
+              rw
+                [sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+                  hθ']
+      _ = 2 * Real.sin θ * Real.cos θ := by
+            ring
+  calc
+    (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+      (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+        (2 * Real.sin θ * Real.cos θ)
+      =
+      (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+        (2 * Real.sin θ * Real.cos θ)) *
+          (2 * Real.sin θ * Real.cos θ) := by
+            rw [hden]
+    _ = Real.sqrt (1 - k ^ 2 * sinSqSubst θ) := by
+          have hmul : 2 * Real.sin θ * Real.cos θ ≠ 0 := by
+            exact mul_ne_zero (mul_ne_zero (by norm_num) hsin.ne') hcos.ne'
+          exact div_mul_cancel₀ _ hmul
+    _ = Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+          simp [sinSqSubst]
+
+theorem sinSqSubst_mem_Icc_zero_one_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (_ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    sinSqSubst θ ∈ Set.Icc (0 : ℝ) 1 := by
+  exact sinSqSubst_mem_Icc_zero_one θ
+
+theorem sinSqSubst_mapsTo_Icc_zero_pi_div_two :
+    MapsTo sinSqSubst (Set.Icc (0 : ℝ) (Real.pi / 2)) (Set.Icc (0 : ℝ) 1) := by
+  intro θ hθ
+  exact sinSqSubst_mem_Icc_zero_one_of_mem_Icc_zero_pi_div_two hθ
+
+theorem sinSqSubst_left_endpoint :
+    sinSqSubst 0 = 0 := by
+  exact sinSqSubst_zero
+
+theorem sinSqSubst_right_endpoint :
+    sinSqSubst (Real.pi / 2) = 1 := by
+  exact sinSqSubst_pi_div_two
+
+theorem sin_pos_of_mem_Ioo_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < Real.sin θ := by
+  have hmem : θ ∈ Set.Ioo (0 : ℝ) Real.pi := by
+    constructor
+    · exact hθ.1
+    · nlinarith [hθ.2, Real.pi_pos]
+  exact Real.sin_pos_of_mem_Ioo hmem
+
+theorem cos_pos_of_mem_Ioo_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < Real.cos θ := by
+  have hmem : θ ∈ Set.Ioo (-(Real.pi / 2)) (Real.pi / 2) := by
+    constructor
+    · have hneg : -(Real.pi / 2) < (0 : ℝ) := by
+        nlinarith [Real.pi_pos]
+      exact lt_trans hneg hθ.1
+    · exact hθ.2
+  exact Real.cos_pos_of_mem_Ioo hmem
+
+theorem jacobian_sinSqSubst (θ : ℝ) :
+    HasDerivAt sinSqSubst (2 * Real.sin θ * Real.cos θ) θ := by
+  exact sinSqSubst_deriv θ
+
+theorem jacobian_sinSqSubst_pos_on_Ioo {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < 2 * Real.sin θ * Real.cos θ := by
+  have hsin : 0 < Real.sin θ := by
+    exact sin_pos_of_mem_Ioo_zero_pi_div_two hθ
+  have hcos : 0 < Real.cos θ := by
+    exact cos_pos_of_mem_Ioo_zero_pi_div_two hθ
+  nlinarith
+
+theorem denominator_subst_eq_sin_mul_cos_on_Icc {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+      Real.sin θ * Real.cos θ := by
+  exact
+    sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+      hθ
+
+theorem elliptic_integrand_subst_eq_two_mul_trig_on_Ioo (k : ℝ) :
+    Set.EqOn
+      (fun θ =>
+        2 *
+          ((Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+            (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+            (2 * Real.sin θ * Real.cos θ)))
+      (fun θ => 2 * Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      (Set.Ioo (0 : ℝ) (Real.pi / 2)) := by
+  intro θ hθ
+  exact congrArg (fun x : ℝ => 2 * x)
+    (elliptic_integrand_subst_eq_trig_on_Ioo k hθ)
+
+theorem completeEllipticETrig_integrand_continuous (k : ℝ) :
+    Continuous (fun θ : ℝ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2)) := by
+  exact Real.continuous_sqrt.comp
+    (continuous_const.sub (continuous_const.mul (Real.continuous_sin.pow 2)))
+
+theorem completeEllipticETrig_integrand_intervalIntegrable (k : ℝ) :
+    IntervalIntegrable
+      (fun θ : ℝ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      MeasureTheory.volume
+      (0 : ℝ)
+      (Real.pi / 2) := by
+  exact (completeEllipticETrig_integrand_continuous k).intervalIntegrable _ _
+
+theorem omega_denominator_radicand_nonneg {t : ℝ}
+    (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ t * (1 - t) := by
+  nlinarith
+
+theorem omega_denominator_sqrt_pos {t : ℝ}
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 < Real.sqrt (t * (1 - t)) := by
+  apply Real.sqrt_pos.2
+  nlinarith [ht.1, ht.2]
+
+theorem completeEllipticEParam_numerator_radicand_nonneg
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (_ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ 1 - k ^ 2 * t := by
+  have hk_sq_le : k ^ 2 ≤ 1 := by
+    nlinarith
+  have hkt_le : k ^ 2 * t ≤ 1 := by
+    nlinarith
+  nlinarith
+
+theorem completeEllipticEParam_integrand_nonneg_on_Ioo
+    {k t : ℝ} (_hk0 : 0 ≤ k) (_hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 ≤
+      Real.sqrt (1 - k ^ 2 * t) /
+        Real.sqrt (t * (1 - t)) := by
+  have hnum :
+      0 ≤ Real.sqrt (1 - k ^ 2 * t) := by
+    exact Real.sqrt_nonneg _
+  have hden :
+      0 < Real.sqrt (t * (1 - t)) := by
+    exact omega_denominator_sqrt_pos ht
+  exact div_nonneg hnum (le_of_lt hden)
+
+theorem completeEllipticEParam_numerator_sqrt_le_one
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    Real.sqrt (1 - k ^ 2 * t) ≤ 1 := by
+  have hrad_nonneg : 0 ≤ 1 - k ^ 2 * t := by
+    exact completeEllipticEParam_numerator_radicand_nonneg hk0 hk1 ht0 ht1
+  have hsq :
+      (Real.sqrt (1 - k ^ 2 * t)) ^ 2 ≤ (1 : ℝ) ^ 2 := by
+    rw [Real.sq_sqrt hrad_nonneg]
+    nlinarith
+  have hsqrt_nonneg : 0 ≤ Real.sqrt (1 - k ^ 2 * t) := by
+    exact Real.sqrt_nonneg _
+  nlinarith
+
+theorem completeEllipticEParam_integrand_le_circleIntegrand_on_Ioo
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) ≤
+      circleIntegrand t := by
+  have hnum_le : Real.sqrt (1 - k ^ 2 * t) ≤ 1 := by
+    exact completeEllipticEParam_numerator_sqrt_le_one
+      hk0 hk1 (le_of_lt ht.1) (le_of_lt ht.2)
+  have hden_nonneg : 0 ≤ Real.sqrt (t * (1 - t)) := by
+    exact Real.sqrt_nonneg _
+  have hdiv :
+      Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) ≤
+        1 / Real.sqrt (t * (1 - t)) := by
+    exact div_le_div_of_nonneg_right hnum_le hden_nonneg
+  simpa [circleIntegrand] using hdiv
+
+theorem completeEllipticEParam_integrand_eq_num_mul_circleIntegrand
+    (k t : ℝ) :
+    Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) =
+      Real.sqrt (1 - k ^ 2 * t) * circleIntegrand t := by
+  unfold circleIntegrand
+  ring
+
+theorem completeEllipticEParam_integrand_nonneg_on_Ioo'
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 ≤ Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) := by
+  exact completeEllipticEParam_integrand_nonneg_on_Ioo hk0 hk1 ht
+
+def completeEllipticEHalfIntegrand (k t : ℝ) : ℝ :=
+  Real.sqrt (1 - k ^ 2 * t) / (2 * Real.sqrt (t * (1 - t)))
+
+def completeEllipticESubstIntegrand (k θ : ℝ) : ℝ :=
+  (2 * Real.sin θ * Real.cos θ) *
+    completeEllipticEHalfIntegrand k (sinSqSubst θ)
+
+theorem completeEllipticEHalfIntegrand_eq_const_mul
+    (k t : ℝ) :
+    completeEllipticEHalfIntegrand k t =
+      (1 / 2) *
+        (Real.sqrt (1 - k ^ 2 * t) /
+          Real.sqrt (t * (1 - t))) := by
+  unfold completeEllipticEHalfIntegrand
+  by_cases h : Real.sqrt (t * (1 - t)) = 0
+  · simp [h]
+  · field_simp [h]
+
+theorem completeEllipticEModulus_eq_integral_halfIntegrand (k : ℝ) :
+    completeEllipticEModulus k =
+      ∫ t in (0 : ℝ)..1, completeEllipticEHalfIntegrand k t := by
+  unfold completeEllipticEModulus
+  unfold completeEllipticEParam
+  rw [← intervalIntegral.integral_const_mul]
+  apply intervalIntegral.integral_congr
+  intro t _ht
+  simpa using (completeEllipticEHalfIntegrand_eq_const_mul k t).symm
+
+theorem completeEllipticESubstIntegrand_eq_trig_ae (k : ℝ) :
+    ∀ᵐ θ : ℝ ∂ MeasureTheory.volume,
+      θ ∈ Set.uIoc (0 : ℝ) (Real.pi / 2) →
+        completeEllipticESubstIntegrand k θ =
+          Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+  have hne : ∀ᵐ θ : ℝ ∂ MeasureTheory.volume, θ ≠ Real.pi / 2 := by
+    rw [MeasureTheory.ae_iff]
+    · simp
+  filter_upwards [hne] with θ hne hθ
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  rw [Set.uIoc_of_le hle] at hθ
+  have hθ' : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2) := by
+    constructor
+    · exact hθ.1
+    · exact lt_of_le_of_ne hθ.2 hne
+  simpa [completeEllipticESubstIntegrand, completeEllipticEHalfIntegrand,
+    mul_assoc, mul_left_comm, mul_comm] using
+    elliptic_integrand_subst_eq_trig_on_Ioo k hθ'
+
+theorem completeEllipticEHalfIntegrand_substitution (k : ℝ) :
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), completeEllipticESubstIntegrand k θ =
+      ∫ t in (sinSqSubst 0)..(sinSqSubst (Real.pi / 2)),
+        completeEllipticEHalfIntegrand k t := by
+  have hf :
+      ContinuousOn sinSqSubst (Set.uIcc (0 : ℝ) (Real.pi / 2)) := by
+    unfold sinSqSubst
+    exact (Real.continuous_sin.pow 2).continuousOn
+  have hff' :
+      ∀ x ∈ Set.Ioo (min (0 : ℝ) (Real.pi / 2)) (max (0 : ℝ) (Real.pi / 2)),
+        HasDerivAt sinSqSubst (2 * Real.sin x * Real.cos x) x := by
+    intro x _hx
+    exact sinSqSubst_deriv x
+  have hf' :
+      ∀ x ∈ Set.Ioo (min (0 : ℝ) (Real.pi / 2)) (max (0 : ℝ) (Real.pi / 2)),
+        0 ≤ 2 * Real.sin x * Real.cos x := by
+    intro x hx
+    have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+      nlinarith [Real.pi_pos]
+    have hx' : x ∈ Set.Ioo (0 : ℝ) (Real.pi / 2) := by
+      simpa [min_eq_left hle, max_eq_right hle] using hx
+    exact le_of_lt (jacobian_sinSqSubst_pos_on_Ioo hx')
+  simpa [completeEllipticESubstIntegrand, Function.comp, mul_assoc, mul_left_comm, mul_comm]
+    using
+      (intervalIntegral.integral_comp_mul_deriv_of_deriv_nonneg
+        (a := (0 : ℝ))
+        (b := (Real.pi / 2))
+        (f := sinSqSubst)
+        (f' := fun θ : ℝ => 2 * Real.sin θ * Real.cos θ)
+        (g := completeEllipticEHalfIntegrand k)
+        hf
+        hff'
+        hf')
+
+/--
+Trig-substitution bridge.
+
+Shows that the parameter-form complete elliptic integral agrees with the
+standard trigonometric form under `t = sin θ ^ 2`.
+-/
+theorem completeEllipticEModulus_eq_trig (k : ℝ) :
+    completeEllipticEModulus k = completeEllipticETrig k := by
+  calc
+    completeEllipticEModulus k
+        = ∫ t in (0 : ℝ)..1, completeEllipticEHalfIntegrand k t := by
+            exact completeEllipticEModulus_eq_integral_halfIntegrand k
+    _ = ∫ θ in (0 : ℝ)..(Real.pi / 2), completeEllipticESubstIntegrand k θ := by
+          symm
+          simpa [sinSqSubst_zero, sinSqSubst_pi_div_two] using
+            completeEllipticEHalfIntegrand_substitution k
+    _ = ∫ θ in (0 : ℝ)..(Real.pi / 2),
+          Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+          apply intervalIntegral.integral_congr_ae
+          exact completeEllipticESubstIntegrand_eq_trig_ae k
+    _ = completeEllipticETrig k := by
+          rfl
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticETrig (eccentricity a b) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le_of_substitution
+      ha
+      hb
+      hba
+  unfold trigSubstitutionTarget
+  exact completeEllipticEModulus_eq_trig (eccentricity a b)
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticETrig (eccentricity b a) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge_of_substitution
+      ha
+      hb
+      hab
+  unfold trigSubstitutionTarget
+  exact completeEllipticEModulus_eq_trig (eccentricity b a)
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b * completeEllipticETrig (eccentricity (max a b) (min a b)) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_nonneg_of_substitution
+      ha
+      hb
+      hsum
+  unfold trigSubstitutionTarget
+  exact completeEllipticEModulus_eq_trig (eccentricity (max a b) (min a b))
+
+theorem completeEllipticETrig_integrand_nonneg (k θ : ℝ) :
+    0 ≤ Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+  exact Real.sqrt_nonneg _
+
+theorem completeEllipticETrig_nonneg (k : ℝ) :
+    0 ≤ completeEllipticETrig k := by
+  unfold completeEllipticETrig
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  apply intervalIntegral.integral_nonneg hle
+  intro θ hθ
+  exact completeEllipticETrig_integrand_nonneg k θ
+
+theorem completeEllipticETrig_integrand_le_one
+    {k θ : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1) :
+    Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) ≤ 1 := by
+  have hs : |Real.sin θ| ≤ 1 := by
+    simpa using Real.abs_sin_le_one θ
+  have hs0 : 0 ≤ Real.sin θ ^ 2 := by
+    positivity
+  have hs1 : Real.sin θ ^ 2 ≤ 1 := by
+    have hsL : -1 ≤ Real.sin θ := (abs_le.mp hs).1
+    have hsR : Real.sin θ ≤ 1 := (abs_le.mp hs).2
+    nlinarith
+  exact completeEllipticEParam_numerator_sqrt_le_one hk0 hk1 hs0 hs1
+
+theorem completeEllipticETrig_integrand_le_one_of_mem_Icc
+    {k θ : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (_hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) ≤ 1 := by
+  exact completeEllipticETrig_integrand_le_one hk0 hk1
+
+theorem completeEllipticETrig_integrand_antitone
+    {k l θ : ℝ} (hk0 : 0 ≤ k) (hkl : k ≤ l) (hl1 : l ≤ 1) :
+    Real.sqrt (1 - l ^ 2 * Real.sin θ ^ 2) ≤
+      Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+  have hk1 : k ≤ 1 := le_trans hkl hl1
+  have hl0 : 0 ≤ l := le_trans hk0 hkl
+  have hk_sq_le_l_sq : k ^ 2 ≤ l ^ 2 := by
+    nlinarith
+  have hs0 : 0 ≤ Real.sin θ ^ 2 := by
+    positivity
+  have hs : |Real.sin θ| ≤ 1 := by
+    simpa using Real.abs_sin_le_one θ
+  have hs1 : Real.sin θ ^ 2 ≤ 1 := by
+    have hsL : -1 ≤ Real.sin θ := (abs_le.mp hs).1
+    have hsR : Real.sin θ ≤ 1 := (abs_le.mp hs).2
+    nlinarith
+  have hradl_nonneg : 0 ≤ 1 - l ^ 2 * Real.sin θ ^ 2 := by
+    exact completeEllipticEParam_numerator_radicand_nonneg hl0 hl1 hs0 hs1
+  have hradk_nonneg : 0 ≤ 1 - k ^ 2 * Real.sin θ ^ 2 := by
+    exact completeEllipticEParam_numerator_radicand_nonneg hk0 hk1 hs0 hs1
+  have hrad :
+      1 - l ^ 2 * Real.sin θ ^ 2 ≤
+        1 - k ^ 2 * Real.sin θ ^ 2 := by
+    nlinarith
+  have hsq :
+      (Real.sqrt (1 - l ^ 2 * Real.sin θ ^ 2)) ^ 2 ≤
+        (Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2)) ^ 2 := by
+    rw [Real.sq_sqrt hradl_nonneg, Real.sq_sqrt hradk_nonneg]
+    exact hrad
+  have hleft_nonneg : 0 ≤ Real.sqrt (1 - l ^ 2 * Real.sin θ ^ 2) := by
+    exact Real.sqrt_nonneg _
+  have hright_nonneg : 0 ≤ Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+    exact Real.sqrt_nonneg _
+  nlinarith
+
+theorem completeEllipticETrig_integrand_antitone_of_mem_Icc
+    {k l θ : ℝ} (hk0 : 0 ≤ k) (hkl : k ≤ l) (hl1 : l ≤ 1)
+    (_hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (1 - l ^ 2 * Real.sin θ ^ 2) ≤
+      Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+  exact completeEllipticETrig_integrand_antitone hk0 hkl hl1
+
+theorem completeEllipticETrig_antitone_on_unitInterval
+    {k l : ℝ} (hk0 : 0 ≤ k) (hkl : k ≤ l) (hl1 : l ≤ 1) :
+    completeEllipticETrig l ≤ completeEllipticETrig k := by
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  calc
+    completeEllipticETrig l
+        = ∫ θ in (0 : ℝ)..(Real.pi / 2),
+            Real.sqrt (1 - l ^ 2 * Real.sin θ ^ 2) := by
+            rfl
+    _ ≤ ∫ θ in (0 : ℝ)..(Real.pi / 2),
+          Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+          exact intervalIntegral.integral_mono
+            (μ := MeasureTheory.volume)
+            hle
+            (completeEllipticETrig_integrand_intervalIntegrable l)
+            (completeEllipticETrig_integrand_intervalIntegrable k)
+            (by
+              intro θ
+              exact completeEllipticETrig_integrand_antitone hk0 hkl hl1)
+    _ = completeEllipticETrig k := by
+          rfl
+
+theorem sin_pow_even_intervalIntegrable (n : ℕ) :
+    IntervalIntegrable (fun θ => Real.sin θ ^ (2 * n)) MeasureTheory.volume 0 (Real.pi / 2) := by
+  apply Continuous.intervalIntegrable
+  exact Continuous.pow Real.continuous_sin (2 * n)
+
+/-
+Elliptic-series definitions and coefficient algebra.
+
+This block defines the coefficient sequence and supporting recurrence facts used
+to convert the trigonometric integral expansion into `completeEllipticESeries`.
+-/
+def ellipticESeriesCoeff (n : ℕ) : ℝ :=
+  ((((2 * n).factorial : ℝ) /
+      (((2 : ℝ) ^ n * (n.factorial : ℝ)) ^ 2)) ^ 2) *
+    (1 / (1 - 2 * (n : ℝ)))
+
+def ellipticESeriesTerm (k : ℝ) (n : ℕ) : ℝ :=
+  ellipticESeriesCoeff n * k ^ (2 * n)
+
+def completeEllipticESeries (k : ℝ) : ℝ :=
+  (Real.pi / 2) * ∑' n : ℕ, ellipticESeriesTerm k n
+
+def seriesExpansionTarget (k : ℝ) : Prop :=
+  completeEllipticETrig k = completeEllipticESeries k
+
+theorem ellipticESeriesCoeff_zero :
+    ellipticESeriesCoeff 0 = 1 := by
+  unfold ellipticESeriesCoeff
+  norm_num
+
+theorem ellipticESeriesCoeff_one :
+    ellipticESeriesCoeff 1 = -(1 / 4 : ℝ) := by
+  unfold ellipticESeriesCoeff
+  norm_num
+
+theorem ellipticESeriesTerm_zero_eval (k : ℝ) :
+    ellipticESeriesTerm k 0 = 1 := by
+  unfold ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_zero]
+  norm_num
+
+theorem ellipticESeriesTerm_one_eval (k : ℝ) :
+    ellipticESeriesTerm k 1 = -(1 / 4 : ℝ) * k ^ 2 := by
+  unfold ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_one]
+
+theorem ellipticESeriesCoeff_two :
+    ellipticESeriesCoeff 2 = -(3 / 64 : ℝ) := by
+  unfold ellipticESeriesCoeff
+  norm_num
+
+theorem ellipticESeriesCoeff_three :
+    ellipticESeriesCoeff 3 = -(5 / 256 : ℝ) := by
+  unfold ellipticESeriesCoeff
+  norm_num
+
+theorem ellipticESeriesTerm_two_eval (k : ℝ) :
+    ellipticESeriesTerm k 2 = -(3 / 64 : ℝ) * k ^ 4 := by
+  unfold ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_two]
+
+theorem ellipticESeriesTerm_three_eval (k : ℝ) :
+    ellipticESeriesTerm k 3 = -(5 / 256 : ℝ) * k ^ 6 := by
+  unfold ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_three]
+
+theorem seriesExpansionTarget_iff (k : ℝ) :
+    seriesExpansionTarget k ↔
+      completeEllipticETrig k =
+        (Real.pi / 2) * ∑' n : ℕ, ellipticESeriesTerm k n := by
+  rfl
+
+theorem seriesExpansionTarget_iff_unfolded (k : ℝ) :
+    seriesExpansionTarget k ↔
+      completeEllipticETrig k =
+        (Real.pi / 2) * ∑' n : ℕ, ellipticESeriesCoeff n * k ^ (2 * n) := by
+  unfold seriesExpansionTarget completeEllipticESeries ellipticESeriesTerm
+  rfl
+
+theorem completeEllipticETrig_eq_completeEllipticESeries_of_seriesExpansionTarget
+    {k : ℝ} (hseries : seriesExpansionTarget k) :
+    completeEllipticETrig k = completeEllipticESeries k := by
+  exact hseries
+
+theorem completeEllipticETrig_eq_tsum_of_seriesExpansionTarget
+    {k : ℝ} (hseries : seriesExpansionTarget k) :
+    completeEllipticETrig k =
+      (Real.pi / 2) * ∑' n : ℕ, ellipticESeriesTerm k n := by
+  unfold seriesExpansionTarget completeEllipticESeries at hseries
+  exact hseries
+
+theorem completeEllipticETrig_eq_tsum_unfolded_of_seriesExpansionTarget
+    {k : ℝ} (hseries : seriesExpansionTarget k) :
+    completeEllipticETrig k =
+      (Real.pi / 2) * ∑' n : ℕ, ellipticESeriesCoeff n * k ^ (2 * n) := by
+  unfold seriesExpansionTarget completeEllipticESeries ellipticESeriesTerm at hseries
+  exact hseries
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_seriesExpansionTarget
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a)
+    (hseries : seriesExpansionTarget (eccentricity a b)) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticESeries (eccentricity a b) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le ha hb hba]
+  exact congrArg (fun z : ℝ => 4 * a * z) hseries
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_seriesExpansionTarget
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b)
+    (hseries : seriesExpansionTarget (eccentricity b a)) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticESeries (eccentricity b a) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge ha hb hab]
+  exact congrArg (fun z : ℝ => 4 * b * z) hseries
+
+/-
+Conditional series wrapper.
+
+Converts the trigonometric perimeter form to the elliptic-series form assuming
+the relevant `seriesExpansionTarget`.
+-/
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_seriesExpansionTarget
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b)
+    (hseries : seriesExpansionTarget (eccentricity (max a b) (min a b))) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticESeries (eccentricity (max a b) (min a b)) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_nonneg ha hb hsum]
+  exact congrArg (fun z : ℝ => 4 * max a b * z) hseries
+
+def wallisEvenCoeff (n : ℕ) : ℝ :=
+  ((2 * n).factorial : ℝ) /
+    (((2 : ℝ) ^ n * (n.factorial : ℝ)) ^ 2)
+
+def sqrtOneSubCoeff (n : ℕ) : ℝ :=
+  wallisEvenCoeff n * (1 / (1 - 2 * (n : ℝ)))
+
+def wallisIntegralCandidate (n : ℕ) : ℝ :=
+  (Real.pi / 2) * wallisEvenCoeff n
+
+theorem wallisEvenCoeff_zero :
+    wallisEvenCoeff 0 = 1 := by
+  unfold wallisEvenCoeff
+  norm_num
+
+theorem wallisEvenCoeff_one :
+    wallisEvenCoeff 1 = (1 / 2 : ℝ) := by
+  unfold wallisEvenCoeff
+  norm_num
+
+theorem wallisEvenCoeff_two :
+    wallisEvenCoeff 2 = (3 / 8 : ℝ) := by
+  unfold wallisEvenCoeff
+  norm_num
+
+theorem wallisEvenCoeff_three :
+    wallisEvenCoeff 3 = (5 / 16 : ℝ) := by
+  unfold wallisEvenCoeff
+  norm_num
+
+theorem wallisEvenCoeff_nonneg (n : ℕ) :
+    0 ≤ wallisEvenCoeff n := by
+  unfold wallisEvenCoeff
+  exact div_nonneg (by positivity) (by positivity)
+
+theorem sqrtOneSubCoeff_zero :
+    sqrtOneSubCoeff 0 = 1 := by
+  unfold sqrtOneSubCoeff
+  rw [wallisEvenCoeff_zero]
+  norm_num
+
+theorem sqrtOneSubCoeff_one :
+    sqrtOneSubCoeff 1 = (-(1 / 2 : ℝ)) := by
+  unfold sqrtOneSubCoeff
+  rw [wallisEvenCoeff_one]
+  norm_num
+
+theorem sqrtOneSubCoeff_two :
+    sqrtOneSubCoeff 2 = (-(1 / 8 : ℝ)) := by
+  unfold sqrtOneSubCoeff
+  rw [wallisEvenCoeff_two]
+  norm_num
+
+theorem sqrtOneSubCoeff_three :
+    sqrtOneSubCoeff 3 = (-(1 / 16 : ℝ)) := by
+  unfold sqrtOneSubCoeff
+  rw [wallisEvenCoeff_three]
+  norm_num
+
+theorem wallisIntegralCandidate_zero :
+    wallisIntegralCandidate 0 = Real.pi / 2 := by
+  unfold wallisIntegralCandidate
+  rw [wallisEvenCoeff_zero]
+  ring
+
+theorem wallisIntegralCandidate_one :
+    wallisIntegralCandidate 1 = Real.pi / 4 := by
+  unfold wallisIntegralCandidate
+  rw [wallisEvenCoeff_one]
+  ring
+
+theorem wallisIntegralCandidate_two :
+    wallisIntegralCandidate 2 = 3 * Real.pi / 16 := by
+  unfold wallisIntegralCandidate
+  rw [wallisEvenCoeff_two]
+  ring
+
+theorem wallisIntegralCandidate_three :
+    wallisIntegralCandidate 3 = 5 * Real.pi / 32 := by
+  unfold wallisIntegralCandidate
+  rw [wallisEvenCoeff_three]
+  ring
+
+theorem wallisIntegralCandidate_nonneg (n : ℕ) :
+    0 ≤ wallisIntegralCandidate n := by
+  unfold wallisIntegralCandidate
+  have hw : 0 ≤ wallisEvenCoeff n := wallisEvenCoeff_nonneg n
+  nlinarith [Real.pi_pos, hw]
+
+theorem ellipticESeriesCoeff_eq_wallis_sq_mul (n : ℕ) :
+    ellipticESeriesCoeff n =
+      wallisEvenCoeff n ^ 2 * (1 / (1 - 2 * (n : ℝ))) := by
+  unfold ellipticESeriesCoeff wallisEvenCoeff
+  ring
+
+theorem ellipticESeriesCoeff_eq_bridge (n : ℕ) :
+    ellipticESeriesCoeff n =
+      sqrtOneSubCoeff n * wallisEvenCoeff n := by
+  rw [ellipticESeriesCoeff_eq_wallis_sq_mul]
+  unfold sqrtOneSubCoeff
+  ring
+
+theorem bridge_eq_ellipticESeriesCoeff (n : ℕ) :
+    sqrtOneSubCoeff n * wallisEvenCoeff n =
+      ellipticESeriesCoeff n := by
+  rw [ellipticESeriesCoeff_eq_bridge]
+
+theorem ellipticESeriesTerm_eq_bridge (k : ℝ) (n : ℕ) :
+    ellipticESeriesTerm k n =
+      (sqrtOneSubCoeff n * wallisEvenCoeff n) * k ^ (2 * n) := by
+  unfold ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_eq_bridge]
+
+theorem pi_half_mul_ellipticESeriesTerm_eq_bridge
+    (k : ℝ) (n : ℕ) :
+    (Real.pi / 2) * ellipticESeriesTerm k n =
+      sqrtOneSubCoeff n * wallisIntegralCandidate n * k ^ (2 * n) := by
+  rw [ellipticESeriesTerm_eq_bridge]
+  unfold wallisIntegralCandidate
+  ring
+
+theorem ellipticESeriesCoeff_zero_via_bridge :
+    sqrtOneSubCoeff 0 * wallisEvenCoeff 0 = 1 := by
+  rw [bridge_eq_ellipticESeriesCoeff, ellipticESeriesCoeff_zero]
+
+theorem ellipticESeriesCoeff_one_via_bridge :
+    sqrtOneSubCoeff 1 * wallisEvenCoeff 1 = -(1 / 4 : ℝ) := by
+  rw [bridge_eq_ellipticESeriesCoeff, ellipticESeriesCoeff_one]
+
+theorem ellipticESeriesCoeff_two_via_bridge :
+    sqrtOneSubCoeff 2 * wallisEvenCoeff 2 = -(3 / 64 : ℝ) := by
+  rw [bridge_eq_ellipticESeriesCoeff, ellipticESeriesCoeff_two]
+
+theorem ellipticESeriesCoeff_three_via_bridge :
+    sqrtOneSubCoeff 3 * wallisEvenCoeff 3 = -(5 / 256 : ℝ) := by
+  rw [bridge_eq_ellipticESeriesCoeff, ellipticESeriesCoeff_three]
+
+def eTrigBinomialTerm (k : ℝ) (n : ℕ) (θ : ℝ) : ℝ :=
+  sqrtOneSubCoeff n * k ^ (2 * n) * Real.sin θ ^ (2 * n)
+
+def eTrigBinomialSeries (k θ : ℝ) : ℝ :=
+  ∑' n : ℕ, eTrigBinomialTerm k n θ
+
+def eTrigBinomialTarget (k : ℝ) : Prop :=
+  Set.EqOn
+    (fun θ : ℝ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+    (fun θ : ℝ => eTrigBinomialSeries k θ)
+    (Set.uIcc (0 : ℝ) (Real.pi / 2))
+
+def wallisTarget (n : ℕ) : Prop :=
+  ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * n) =
+    wallisIntegralCandidate n
+
+def eTrigTermwiseTarget (k : ℝ) : Prop :=
+  ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialSeries k θ =
+    ∑' n : ℕ,
+      ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialTerm k n θ
+
+def eSeriesSummableTarget (k : ℝ) : Prop :=
+  Summable (fun n : ℕ => ellipticESeriesTerm k n)
+
+theorem eTrigBinomialTerm_zero (k θ : ℝ) :
+    eTrigBinomialTerm k 0 θ = 1 := by
+  unfold eTrigBinomialTerm
+  rw [sqrtOneSubCoeff_zero]
+  norm_num
+
+theorem eTrigBinomialTerm_one (k θ : ℝ) :
+    eTrigBinomialTerm k 1 θ =
+      (-(1 / 2 : ℝ)) * k ^ 2 * Real.sin θ ^ 2 := by
+  unfold eTrigBinomialTerm
+  rw [sqrtOneSubCoeff_one]
+
+theorem eTrigBinomialTerm_two (k θ : ℝ) :
+    eTrigBinomialTerm k 2 θ =
+      (-(1 / 8 : ℝ)) * k ^ 4 * Real.sin θ ^ 4 := by
+  unfold eTrigBinomialTerm
+  rw [sqrtOneSubCoeff_two]
+
+theorem eTrigBinomialTerm_three (k θ : ℝ) :
+    eTrigBinomialTerm k 3 θ =
+      (-(1 / 16 : ℝ)) * k ^ 6 * Real.sin θ ^ 6 := by
+  unfold eTrigBinomialTerm
+  rw [sqrtOneSubCoeff_three]
+
+theorem wallisTarget_zero :
+    wallisTarget 0 := by
+  unfold wallisTarget
+  rw [wallisIntegralCandidate_zero]
+  simp
+
+theorem eSeriesSummableTarget_of_summable
+    {k : ℝ} (hs : Summable (fun n : ℕ => ellipticESeriesTerm k n)) :
+    eSeriesSummableTarget k := by
+  exact hs
+
+theorem eSeries_eq_tsum_scaled_of_summable
+    {k : ℝ} (hs : eSeriesSummableTarget k) :
+    completeEllipticESeries k =
+      ∑' n : ℕ, (Real.pi / 2) * ellipticESeriesTerm k n := by
+  unfold eSeriesSummableTarget at hs
+  unfold completeEllipticESeries
+  have hsum :
+      HasSum
+        (fun n : ℕ => (Real.pi / 2) * ellipticESeriesTerm k n)
+        ((Real.pi / 2) * ∑' n : ℕ, ellipticESeriesTerm k n) := by
+    exact hs.hasSum.mul_left (Real.pi / 2)
+  symm
+  exact hsum.tsum_eq
+
+theorem eTrig_eq_integral_binomial_of_target
+    {k : ℝ} (hbinom : eTrigBinomialTarget k) :
+    completeEllipticETrig k =
+      ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialSeries k θ := by
+  unfold completeEllipticETrig
+  unfold eTrigBinomialTarget at hbinom
+  apply intervalIntegral.integral_congr
+  intro θ hθ
+  exact hbinom hθ
+
+theorem integral_eTrigBinomialTerm_eq_scaled_seriesTerm_of_wallis
+    (k : ℝ) (n : ℕ) (hwallis : wallisTarget n) :
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialTerm k n θ =
+      (Real.pi / 2) * ellipticESeriesTerm k n := by
+  unfold wallisTarget at hwallis
+  unfold eTrigBinomialTerm
+  rw [intervalIntegral.integral_const_mul]
+  rw [hwallis]
+  calc
+    (sqrtOneSubCoeff n * k ^ (2 * n)) * wallisIntegralCandidate n
+        = sqrtOneSubCoeff n * wallisIntegralCandidate n * k ^ (2 * n) := by
+          ring
+    _ = (Real.pi / 2) * ellipticESeriesTerm k n := by
+          exact (pi_half_mul_ellipticESeriesTerm_eq_bridge k n).symm
+
+theorem eTrig_eq_tsum_scaled_of_targets
+    {k : ℝ}
+    (hbinom : eTrigBinomialTarget k)
+    (htermwise : eTrigTermwiseTarget k)
+    (hwallis : ∀ n : ℕ, wallisTarget n) :
+    completeEllipticETrig k =
+      ∑' n : ℕ, (Real.pi / 2) * ellipticESeriesTerm k n := by
+  calc
+    completeEllipticETrig k
+        = ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialSeries k θ := by
+            exact eTrig_eq_integral_binomial_of_target hbinom
+    _ = ∑' n : ℕ,
+          ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialTerm k n θ := by
+          exact htermwise
+    _ = ∑' n : ℕ, (Real.pi / 2) * ellipticESeriesTerm k n := by
+          apply tsum_congr
+          intro n
+          exact
+            integral_eTrigBinomialTerm_eq_scaled_seriesTerm_of_wallis
+              k n (hwallis n)
+
+theorem seriesExpansionTarget_of_targets
+    {k : ℝ}
+    (hbinom : eTrigBinomialTarget k)
+    (htermwise : eTrigTermwiseTarget k)
+    (hsummable : eSeriesSummableTarget k)
+    (hwallis : ∀ n : ℕ, wallisTarget n) :
+    seriesExpansionTarget k := by
+  unfold seriesExpansionTarget
+  calc
+    completeEllipticETrig k
+        = ∑' n : ℕ, (Real.pi / 2) * ellipticESeriesTerm k n := by
+            exact eTrig_eq_tsum_scaled_of_targets hbinom htermwise hwallis
+    _ = completeEllipticESeries k := by
+          symm
+          exact eSeries_eq_tsum_scaled_of_summable hsummable
+
+theorem two_mul_natCast_ne_one (n : ℕ) :
+    (2 * (n : ℝ)) ≠ 1 := by
+  intro h
+  have hnat : 2 * n = 1 := by
+    exact_mod_cast h
+  have heven : Even (1 : ℕ) := by
+    rw [← hnat]
+    exact ⟨n, by ring⟩
+  norm_num at heven
+
+theorem one_sub_two_natCast_ne_zero (n : ℕ) :
+    1 - 2 * (n : ℝ) ≠ 0 := by
+  intro h
+  have h' : 2 * (n : ℝ) = 1 := by
+    linarith
+  exact two_mul_natCast_ne_one n h'
+
+theorem wallisEvenCoeff_succ (n : ℕ) :
+    wallisEvenCoeff (n + 1) =
+      ((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2)) * wallisEvenCoeff n := by
+  unfold wallisEvenCoeff
+  have hfac :
+      ((2 * (n + 1)).factorial : ℝ) =
+        (2 * (n : ℝ) + 2) * (2 * (n : ℝ) + 1) *
+          ((2 * n).factorial : ℝ) := by
+    have h1 : 2 * (n + 1) = (2 * n + 1) + 1 := by
+      ring
+    rw [h1, Nat.factorial_succ, Nat.cast_mul]
+    have h2 : 2 * n + 1 = (2 * n) + 1 := by
+      ring
+    rw [h2, Nat.factorial_succ, Nat.cast_mul]
+    push_cast
+    ring
+  have hden :
+      (2 : ℝ) ^ (n + 1) * ((n + 1).factorial : ℝ) =
+        (2 * (n : ℝ) + 2) * ((2 : ℝ) ^ n * (n.factorial : ℝ)) := by
+    rw [pow_succ, Nat.factorial_succ, Nat.cast_mul]
+    push_cast
+    ring
+  rw [hfac, hden]
+  have hne1 : (2 * (n : ℝ) + 2) ≠ 0 := by
+    positivity
+  have hne2 : (2 : ℝ) ^ n * (n.factorial : ℝ) ≠ 0 := by
+    positivity
+  have hne3 :
+      (2 * (n : ℝ) + 2) * ((2 : ℝ) ^ n * (n.factorial : ℝ)) ≠ 0 := by
+    exact mul_ne_zero hne1 hne2
+  field_simp [hne1, hne2, hne3]
+
+theorem wallisIntegralCandidate_succ (n : ℕ) :
+    wallisIntegralCandidate (n + 1) =
+      ((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2)) *
+        wallisIntegralCandidate n := by
+  unfold wallisIntegralCandidate
+  rw [wallisEvenCoeff_succ]
+  ring
+
+theorem sqrtOneSubCoeff_succ (n : ℕ) :
+    sqrtOneSubCoeff (n + 1) =
+      ((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2)) * sqrtOneSubCoeff n := by
+  unfold sqrtOneSubCoeff
+  rw [wallisEvenCoeff_succ]
+  have hs :
+      1 - 2 * ((n + 1 : ℕ) : ℝ) = -(2 * (n : ℝ) + 1) := by
+    push_cast
+    ring
+  rw [hs]
+  have hne1 : 1 - 2 * (n : ℝ) ≠ 0 := by
+    exact one_sub_two_natCast_ne_zero n
+  have hne2 : 2 * (n : ℝ) + 2 ≠ 0 := by
+    positivity
+  have hne3 : 2 * (n : ℝ) + 1 ≠ 0 := by
+    positivity
+  field_simp [hne1, hne2, hne3]
+  ring
+
+def ellipticESeriesRatio (n : ℕ) : ℝ :=
+  ((2 * (n : ℝ) - 1) * (2 * (n : ℝ) + 1)) / (2 * (n : ℝ) + 2) ^ 2
+
+def ellipticESeriesTermRatio (k : ℝ) (n : ℕ) : ℝ :=
+  ellipticESeriesRatio n * k ^ 2
+
+theorem ellipticESeriesCoeff_succ (n : ℕ) :
+    ellipticESeriesCoeff (n + 1) =
+      ellipticESeriesRatio n * ellipticESeriesCoeff n := by
+  unfold ellipticESeriesRatio
+  rw [ellipticESeriesCoeff_eq_bridge, ellipticESeriesCoeff_eq_bridge]
+  rw [sqrtOneSubCoeff_succ, wallisEvenCoeff_succ]
+  have hne : 2 * (n : ℝ) + 2 ≠ 0 := by
+    positivity
+  field_simp [hne]
+
+theorem ellipticESeriesTerm_succ (k : ℝ) (n : ℕ) :
+    ellipticESeriesTerm k (n + 1) =
+      ellipticESeriesTermRatio k n * ellipticESeriesTerm k n := by
+  unfold ellipticESeriesTermRatio ellipticESeriesTerm
+  rw [ellipticESeriesCoeff_succ]
+  have hpow : 2 * (n + 1) = 2 + 2 * n := by
+    ring
+  rw [hpow, pow_add]
+  ring
+
+theorem abs_ellipticESeriesTerm_succ (k : ℝ) (n : ℕ) :
+    |ellipticESeriesTerm k (n + 1)| =
+      |ellipticESeriesTermRatio k n| * |ellipticESeriesTerm k n| := by
+  rw [ellipticESeriesTerm_succ]
+  rw [abs_mul]
+
+def wallisRecurrenceTarget : Prop :=
+  ∀ n : ℕ,
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * (n + 1)) =
+      ((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2)) *
+        ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * n)
+
+theorem wallisTarget_of_base_and_recurrence
+    (h0 : wallisTarget 0)
+    (hrec : wallisRecurrenceTarget) :
+    ∀ n : ℕ, wallisTarget n := by
+  intro n
+  induction n with
+  | zero =>
+      exact h0
+  | succ n ih =>
+      unfold wallisTarget at ih ⊢
+      rw [hrec n, ih, wallisIntegralCandidate_succ]
+
+theorem wallisRecurrenceTarget_proved :
+    wallisRecurrenceTarget := by
+  intro n
+  rw [show 2 * (n + 1) = 2 * n + 2 by ring]
+  simpa using
+    (integral_sin_pow (a := (0 : ℝ)) (b := (Real.pi / 2)) (2 * n))
+
+/--
+Wallis even-power integral package.
+
+Proves the closed form for all integrals of `sin θ ^ (2 * n)` on
+`[0, π / 2]`, used to turn termwise trig integrals into elliptic-series
+coefficients.
+-/
+theorem wallisTarget_all :
+    ∀ n : ℕ, wallisTarget n := by
+  exact
+    wallisTarget_of_base_and_recurrence
+      wallisTarget_zero
+      wallisRecurrenceTarget_proved
+
+theorem integral_eTrigBinomialTerm_eq_scaled_seriesTerm
+    (k : ℝ) (n : ℕ) :
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), eTrigBinomialTerm k n θ =
+      (Real.pi / 2) * ellipticESeriesTerm k n := by
+  exact
+    integral_eTrigBinomialTerm_eq_scaled_seriesTerm_of_wallis
+      k n (wallisTarget_all n)
+
+theorem eTrig_eq_tsum_scaled_of_binomial_and_termwise
+    {k : ℝ}
+    (hbinom : eTrigBinomialTarget k)
+    (htermwise : eTrigTermwiseTarget k) :
+    completeEllipticETrig k =
+      ∑' n : ℕ, (Real.pi / 2) * ellipticESeriesTerm k n := by
+  exact
+    eTrig_eq_tsum_scaled_of_targets
+      hbinom
+      htermwise
+      wallisTarget_all
+
+theorem abs_ellipticESeriesRatio_le_one (n : ℕ) :
+    |ellipticESeriesRatio n| ≤ 1 := by
+  unfold ellipticESeriesRatio
+  have hden : 0 < (2 * (n : ℝ) + 2) ^ 2 := by
+    positivity
+  have hden_ne : (2 * (n : ℝ) + 2) ^ 2 ≠ 0 := ne_of_gt hden
+  apply abs_le.mpr
+  constructor
+  · have : -1 ≤
+        ((2 * (n : ℝ) - 1) * (2 * (n : ℝ) + 1)) /
+          (2 * (n : ℝ) + 2) ^ 2 := by
+      field_simp [hden_ne]
+      nlinarith
+    simpa using this
+  · have : ((2 * (n : ℝ) - 1) * (2 * (n : ℝ) + 1)) /
+        (2 * (n : ℝ) + 2) ^ 2 ≤ 1 := by
+      field_simp [hden_ne]
+      nlinarith
+    simpa using this
+
+theorem abs_ellipticESeriesTermRatio_le_sq
+    (k : ℝ) (n : ℕ) :
+    |ellipticESeriesTermRatio k n| ≤ k ^ 2 := by
+  unfold ellipticESeriesTermRatio
+  rw [abs_mul, abs_of_nonneg (sq_nonneg k)]
+  have hk2 : 0 ≤ k ^ 2 := by
+    positivity
+  have hr : |ellipticESeriesRatio n| ≤ 1 := by
+    exact abs_ellipticESeriesRatio_le_one n
+  nlinarith
+
+theorem norm_ellipticESeriesTerm_succ_le_sq_mul
+    (k : ℝ) (n : ℕ) :
+    ‖ellipticESeriesTerm k (n + 1)‖ ≤
+      k ^ 2 * ‖ellipticESeriesTerm k n‖ := by
+  rw [Real.norm_eq_abs, Real.norm_eq_abs, abs_ellipticESeriesTerm_succ]
+  exact
+    mul_le_mul_of_nonneg_right
+      (abs_ellipticESeriesTermRatio_le_sq k n)
+      (abs_nonneg _)
+
+theorem eSeriesSummable_of_abs_lt_one
+    {k : ℝ} (hk : |k| < 1) :
+    Summable (fun n : ℕ => ellipticESeriesTerm k n) := by
+  have hk' : -1 < k ∧ k < 1 := abs_lt.mp hk
+  have hk2 : k ^ 2 < 1 := by
+    nlinarith [hk'.1, hk'.2]
+  have hratio :
+      ∀ᶠ n : ℕ in Filter.atTop,
+        ‖ellipticESeriesTerm k (n + 1)‖ ≤
+          k ^ 2 * ‖ellipticESeriesTerm k n‖ := by
+    exact Filter.Eventually.of_forall
+      (norm_ellipticESeriesTerm_succ_le_sq_mul k)
+  exact summable_of_ratio_norm_eventually_le hk2 hratio
+
+theorem eSeriesSummableTarget_of_abs_lt_one
+    {k : ℝ} (hk : |k| < 1) :
+    eSeriesSummableTarget k := by
+  exact eSeriesSummable_of_abs_lt_one hk
+
+theorem seriesExpansionTarget_of_binomial_and_termwise_of_abs_lt_one
+    {k : ℝ}
+    (hk : |k| < 1)
+    (hbinom : eTrigBinomialTarget k)
+    (htermwise : eTrigTermwiseTarget k) :
+    seriesExpansionTarget k := by
+  exact
+    seriesExpansionTarget_of_targets
+      hbinom
+      htermwise
+      (eSeriesSummableTarget_of_abs_lt_one hk)
+      wallisTarget_all
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_binomial_and_termwise
+    {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a)
+    (hk : |eccentricity a b| < 1)
+    (hbinom : eTrigBinomialTarget (eccentricity a b))
+    (htermwise : eTrigTermwiseTarget (eccentricity a b)) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticESeries (eccentricity a b) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_seriesExpansionTarget
+      ha hb hba
+  exact
+    seriesExpansionTarget_of_binomial_and_termwise_of_abs_lt_one
+      hk hbinom htermwise
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_binomial_and_termwise
+    {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b)
+    (hk : |eccentricity b a| < 1)
+    (hbinom : eTrigBinomialTarget (eccentricity b a))
+    (htermwise : eTrigTermwiseTarget (eccentricity b a)) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticESeries (eccentricity b a) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_seriesExpansionTarget
+      ha hb hab
+  exact
+    seriesExpansionTarget_of_binomial_and_termwise_of_abs_lt_one
+      hk hbinom htermwise
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_binomial_and_termwise
+    {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b)
+    (hk : |eccentricity (max a b) (min a b)| < 1)
+    (hbinom :
+      eTrigBinomialTarget (eccentricity (max a b) (min a b)))
+    (htermwise :
+      eTrigTermwiseTarget (eccentricity (max a b) (min a b))) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticESeries (eccentricity (max a b) (min a b)) := by
+  apply
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_seriesExpansionTarget
+      ha hb hsum
+  exact
+    seriesExpansionTarget_of_binomial_and_termwise_of_abs_lt_one
+      hk hbinom htermwise
+
+theorem kSqSinSqSubst_lt_one_of_abs_lt_one
+    {k θ : ℝ}
+    (hk : |k| < 1)
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    k ^ 2 * sinSqSubst θ < 1 := by
+  have hk' : -1 < k ∧ k < 1 := by
+    exact abs_lt.mp hk
+  have hk2 : k ^ 2 < 1 := by
+    nlinarith [hk'.1, hk'.2]
+  have hs0 : 0 ≤ sinSqSubst θ := by
+    exact sinSqSubst_nonneg θ
+  have hs1 : sinSqSubst θ ≤ 1 := by
+    exact (sinSqSubst_mem_Icc_zero_one_of_mem_Icc_zero_pi_div_two hθ).2
+  nlinarith
+
+theorem eTrigBinomialTerm_eq_coeff_mul_pow
+    (k θ : ℝ) (n : ℕ) :
+    eTrigBinomialTerm k n θ =
+      sqrtOneSubCoeff n * (k ^ 2 * sinSqSubst θ) ^ n := by
+  calc
+    eTrigBinomialTerm k n θ
+        =
+        sqrtOneSubCoeff n *
+          (k ^ (2 * n) * Real.sin θ ^ (2 * n)) := by
+            unfold eTrigBinomialTerm
+            ring
+    _ =
+        sqrtOneSubCoeff n *
+          ((k ^ 2) ^ n * (Real.sin θ ^ 2) ^ n) := by
+            rw [pow_mul, pow_mul]
+    _ =
+        sqrtOneSubCoeff n *
+          (k ^ 2 * Real.sin θ ^ 2) ^ n := by
+            rw [← mul_pow]
+    _ =
+        sqrtOneSubCoeff n *
+          (k ^ 2 * sinSqSubst θ) ^ n := by
+            simp [sinSqSubst]
+
+theorem abs_sqrtOneSubCoeffRatio_le_one (n : ℕ) :
+    |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2))| ≤ 1 := by
+  have hnum :
+      |2 * (n : ℝ) - 1| ≤ 2 * (n : ℝ) + 2 := by
+    apply abs_le.mpr
+    constructor <;> nlinarith
+  have hden_nonneg : 0 ≤ 2 * (n : ℝ) + 2 := by
+    positivity
+  have hden_pos : 0 < 2 * (n : ℝ) + 2 := by
+    positivity
+  have hden_ne : 2 * (n : ℝ) + 2 ≠ 0 := ne_of_gt hden_pos
+  have haux :
+      |2 * (n : ℝ) - 1| / (2 * (n : ℝ) + 2) ≤
+        (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 2) := by
+    exact div_le_div_of_nonneg_right hnum hden_nonneg
+  calc
+    |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2))|
+        = |2 * (n : ℝ) - 1| / (2 * (n : ℝ) + 2) := by
+            rw [abs_div, abs_of_nonneg hden_nonneg]
+    _ ≤ (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 2) := haux
+    _ = 1 := by
+          field_simp [hden_ne]
+
+theorem eTrigBinomialTerm_succ_eq_ratio_mul
+    (k θ : ℝ) (n : ℕ) :
+    eTrigBinomialTerm k (n + 1) θ =
+      (((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2)) *
+          (k ^ 2 * sinSqSubst θ)) *
+        eTrigBinomialTerm k n θ := by
+  unfold eTrigBinomialTerm
+  rw [sqrtOneSubCoeff_succ]
+  have hkpow : k ^ (2 * (n + 1)) = k ^ 2 * k ^ (2 * n) := by
+    have hpow : 2 * (n + 1) = 2 + 2 * n := by
+      ring
+    rw [hpow, pow_add]
+  have hspow :
+      Real.sin θ ^ (2 * (n + 1)) =
+        Real.sin θ ^ 2 * Real.sin θ ^ (2 * n) := by
+    have hpow : 2 * (n + 1) = 2 + 2 * n := by
+      ring
+    rw [hpow, pow_add]
+  rw [hkpow, hspow]
+  unfold sinSqSubst
+  ring
+
+theorem abs_eTrigBinomialTerm_succ_le_sq_mul
+    (k θ : ℝ) (n : ℕ) :
+    |eTrigBinomialTerm k (n + 1) θ| ≤
+      k ^ 2 * |eTrigBinomialTerm k n θ| := by
+  rw [eTrigBinomialTerm_succ_eq_ratio_mul, abs_mul]
+  have hratio :
+      |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2) *
+          (k ^ 2 * sinSqSubst θ))| ≤
+        k ^ 2 := by
+    have hks : 0 ≤ k ^ 2 * sinSqSubst θ := by
+      exact mul_nonneg (sq_nonneg k) (sinSqSubst_nonneg θ)
+    rw [abs_mul, abs_of_nonneg hks]
+    have hr : |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2))| ≤ 1 := by
+      exact abs_sqrtOneSubCoeffRatio_le_one n
+    have hs1 : sinSqSubst θ ≤ 1 := by
+      exact sinSqSubst_le_one θ
+    have hk2 : 0 ≤ k ^ 2 := by
+      positivity
+    nlinarith
+  exact mul_le_mul_of_nonneg_right hratio (abs_nonneg _)
+
+theorem eTrigBinomialSummable_of_abs_lt_one
+    {k : ℝ}
+    (hk : |k| < 1)
+    (θ : ℝ) :
+    Summable (fun n : ℕ => eTrigBinomialTerm k n θ) := by
+  have hk' : -1 < k ∧ k < 1 := by
+    exact abs_lt.mp hk
+  have hk2 : k ^ 2 < 1 := by
+    nlinarith [hk'.1, hk'.2]
+  have hratio :
+      ∀ᶠ n : ℕ in Filter.atTop,
+        ‖eTrigBinomialTerm k (n + 1) θ‖ ≤
+          k ^ 2 * ‖eTrigBinomialTerm k n θ‖ := by
+    exact Filter.Eventually.of_forall (fun n => by
+      simpa [Real.norm_eq_abs] using
+        abs_eTrigBinomialTerm_succ_le_sq_mul k θ n)
+  exact summable_of_ratio_norm_eventually_le hk2 hratio
+
+theorem abs_eTrigBinomialTerm_le_abs_coeff_mul_abs_k_pow
+    (k θ : ℝ) (n : ℕ) :
+    |eTrigBinomialTerm k n θ| ≤
+      |sqrtOneSubCoeff n| * |k| ^ (2 * n) := by
+  unfold eTrigBinomialTerm
+  rw [abs_mul, abs_mul, abs_pow, abs_pow]
+  have hsin : |Real.sin θ| ≤ 1 := by
+    simpa using Real.abs_sin_le_one θ
+  have hpow : |Real.sin θ| ^ (2 * n) ≤ 1 := by
+    exact pow_le_one₀ (abs_nonneg _) hsin
+  have hfront_nonneg : 0 ≤ |sqrtOneSubCoeff n| * |k| ^ (2 * n) := by
+    positivity
+  calc
+    |sqrtOneSubCoeff n| * |k| ^ (2 * n) * |Real.sin θ| ^ (2 * n)
+        ≤ |sqrtOneSubCoeff n| * |k| ^ (2 * n) * 1 := by
+          exact mul_le_mul_of_nonneg_left hpow hfront_nonneg
+    _ = |sqrtOneSubCoeff n| * |k| ^ (2 * n) := by
+          ring
+
+theorem eTrigBinomialTerm_pi_div_two_abs
+    (k : ℝ) (n : ℕ) :
+    |eTrigBinomialTerm k n (Real.pi / 2)| =
+      |sqrtOneSubCoeff n| * |k| ^ (2 * n) := by
+  unfold eTrigBinomialTerm
+  simp [abs_mul, abs_pow, Real.sin_pi_div_two]
+
+theorem abs_eTrigBinomialTerm_le_pi_div_two
+    (k θ : ℝ) (n : ℕ) :
+    |eTrigBinomialTerm k n θ| ≤
+      |eTrigBinomialTerm k n (Real.pi / 2)| := by
+  rw [eTrigBinomialTerm_pi_div_two_abs]
+  exact abs_eTrigBinomialTerm_le_abs_coeff_mul_abs_k_pow k θ n
+
+theorem summable_abs_eTrigBinomialTerm_pi_div_two_of_abs_lt_one
+    {k : ℝ} (hk : |k| < 1) :
+    Summable (fun n : ℕ => |eTrigBinomialTerm k n (Real.pi / 2)|) := by
+  have hk' : -1 < k ∧ k < 1 := by
+    exact abs_lt.mp hk
+  have hk2 : k ^ 2 < 1 := by
+    nlinarith [hk'.1, hk'.2]
+  have hratio :
+      ∀ᶠ n : ℕ in Filter.atTop,
+        ‖|eTrigBinomialTerm k (n + 1) (Real.pi / 2)|‖ ≤
+          k ^ 2 * ‖|eTrigBinomialTerm k n (Real.pi / 2)|‖ := by
+    exact Filter.Eventually.of_forall (fun n => by
+      have h :=
+        abs_eTrigBinomialTerm_succ_le_sq_mul k (Real.pi / 2) n
+      simpa [Real.norm_eq_abs, abs_abs] using h)
+  exact summable_of_ratio_norm_eventually_le hk2 hratio
+
+theorem eTrigBinomialTerm_continuous (k : ℝ) (n : ℕ) :
+    Continuous (fun θ : ℝ => eTrigBinomialTerm k n θ) := by
+  unfold eTrigBinomialTerm
+  have hsin : Continuous (fun θ : ℝ => Real.sin θ ^ (2 * n)) := by
+    exact Real.continuous_sin.pow (2 * n)
+  have hmul : Continuous (fun θ : ℝ => k ^ (2 * n) * Real.sin θ ^ (2 * n)) := by
+    exact continuous_const.mul hsin
+  simpa [mul_assoc] using (continuous_const.mul hmul)
+
+theorem eTrigTermwiseTarget_of_abs_lt_one
+    {k : ℝ} (hk : |k| < 1) :
+    eTrigTermwiseTarget k := by
+  unfold eTrigTermwiseTarget
+  let bound : ℕ → ℝ → ℝ := fun n _ =>
+    |eTrigBinomialTerm k n (Real.pi / 2)|
+  have hF_meas :
+      ∀ n : ℕ,
+        AEStronglyMeasurable
+          (fun t : ℝ => eTrigBinomialTerm k n t)
+          (MeasureTheory.volume.restrict
+            (Set.uIoc (0 : ℝ) (Real.pi / 2))) := by
+    intro n
+    exact (eTrigBinomialTerm_continuous k n).aestronglyMeasurable
+  have h_bound :
+      ∀ n : ℕ,
+        ∀ᵐ t : ℝ ∂ MeasureTheory.volume,
+          t ∈ Set.uIoc (0 : ℝ) (Real.pi / 2) →
+            ‖eTrigBinomialTerm k n t‖ ≤ bound n t := by
+    intro n
+    exact Filter.Eventually.of_forall (fun t _ht => by
+      simpa [bound, Real.norm_eq_abs] using
+        abs_eTrigBinomialTerm_le_pi_div_two k t n)
+  have h_bound_summable :
+      ∀ᵐ t : ℝ ∂ MeasureTheory.volume,
+        t ∈ Set.uIoc (0 : ℝ) (Real.pi / 2) →
+          Summable (fun n : ℕ => bound n t) := by
+    exact Filter.Eventually.of_forall (fun t _ht => by
+      dsimp [bound]
+      exact summable_abs_eTrigBinomialTerm_pi_div_two_of_abs_lt_one hk)
+  have h_bound_integrable :
+      IntervalIntegrable
+        (fun t : ℝ => ∑' n : ℕ, bound n t)
+        MeasureTheory.volume
+        (0 : ℝ)
+        (Real.pi / 2) := by
+    dsimp [bound]
+    have hconst :
+        Continuous
+          (fun _ : ℝ =>
+            ∑' n : ℕ, |eTrigBinomialTerm k n (Real.pi / 2)|) := by
+      exact continuous_const
+    exact hconst.intervalIntegrable (0 : ℝ) (Real.pi / 2)
+  have h_lim :
+      ∀ᵐ t : ℝ ∂ MeasureTheory.volume,
+        t ∈ Set.uIoc (0 : ℝ) (Real.pi / 2) →
+          HasSum
+            (fun n : ℕ => eTrigBinomialTerm k n t)
+            (eTrigBinomialSeries k t) := by
+    exact Filter.Eventually.of_forall (fun t _ht => by
+      unfold eTrigBinomialSeries
+      exact (eTrigBinomialSummable_of_abs_lt_one hk t).hasSum)
+  have hsum :
+      HasSum
+        (fun n : ℕ =>
+          ∫ t in (0 : ℝ)..(Real.pi / 2), eTrigBinomialTerm k n t)
+        (∫ t in (0 : ℝ)..(Real.pi / 2), eTrigBinomialSeries k t) := by
+    exact
+      intervalIntegral.hasSum_integral_of_dominated_convergence
+        (a := (0 : ℝ))
+        (b := (Real.pi / 2))
+        (μ := MeasureTheory.volume)
+        (F := fun n t => eTrigBinomialTerm k n t)
+        (f := eTrigBinomialSeries k)
+        bound
+        hF_meas
+        h_bound
+        h_bound_summable
+        h_bound_integrable
+        h_lim
+  exact hsum.tsum_eq.symm
+
+theorem seriesExpansionTarget_of_binomial_of_abs_lt_one
+    {k : ℝ}
+    (hk : |k| < 1)
+    (hbinom : eTrigBinomialTarget k) :
+    seriesExpansionTarget k := by
+  exact
+    seriesExpansionTarget_of_binomial_and_termwise_of_abs_lt_one
+      hk
+      hbinom
+      (eTrigTermwiseTarget_of_abs_lt_one hk)
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_binomial
+    {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a)
+    (hk : |eccentricity a b| < 1)
+    (hbinom : eTrigBinomialTarget (eccentricity a b)) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticESeries (eccentricity a b) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_binomial_and_termwise
+      ha
+      hb
+      hba
+      hk
+      hbinom
+      (eTrigTermwiseTarget_of_abs_lt_one hk)
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_binomial
+    {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b)
+    (hk : |eccentricity b a| < 1)
+    (hbinom : eTrigBinomialTarget (eccentricity b a)) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticESeries (eccentricity b a) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_binomial_and_termwise
+      ha
+      hb
+      hab
+      hk
+      hbinom
+      (eTrigTermwiseTarget_of_abs_lt_one hk)
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_binomial
+    {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b)
+    (hk : |eccentricity (max a b) (min a b)| < 1)
+    (hbinom :
+      eTrigBinomialTarget (eccentricity (max a b) (min a b))) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticESeries (eccentricity (max a b) (min a b)) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_binomial_and_termwise
+      ha
+      hb
+      hsum
+      hk
+      hbinom
+      (eTrigTermwiseTarget_of_abs_lt_one hk)
+
+/-
+Scalar binomial square-root series support.
+
+This block proves the analytic scalar identity
+`sqrt (1 - x) = sqrtOneSubSeries x` for `|x| < 1`, then transports it into the
+elliptic-integrand series expansion.
+-/
+def sqrtOneSubSeriesTerm (x : ℝ) (n : ℕ) : ℝ :=
+  sqrtOneSubCoeff n * x ^ n
+
+def sqrtOneSubSeries (x : ℝ) : ℝ :=
+  ∑' n : ℕ, sqrtOneSubSeriesTerm x n
+
+def sqrtOneSubSeriesTarget (x : ℝ) : Prop :=
+  Real.sqrt (1 - x) = sqrtOneSubSeries x
+
+theorem sqrtOneSubSeriesTerm_zero (x : ℝ) :
+    sqrtOneSubSeriesTerm x 0 = 1 := by
+  unfold sqrtOneSubSeriesTerm
+  rw [sqrtOneSubCoeff_zero]
+  norm_num
+
+theorem sqrtOneSubSeriesTerm_one (x : ℝ) :
+    sqrtOneSubSeriesTerm x 1 = (-(1 / 2 : ℝ)) * x := by
+  unfold sqrtOneSubSeriesTerm
+  rw [sqrtOneSubCoeff_one]
+  ring
+
+theorem sqrtOneSubSeriesTerm_succ_eq_ratio_mul
+    (x : ℝ) (n : ℕ) :
+    sqrtOneSubSeriesTerm x (n + 1) =
+      (((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2)) * x) *
+        sqrtOneSubSeriesTerm x n := by
+  unfold sqrtOneSubSeriesTerm
+  rw [sqrtOneSubCoeff_succ, pow_succ]
+  ring
+
+theorem abs_sqrtOneSubSeriesTerm_succ
+    (x : ℝ) (n : ℕ) :
+    |sqrtOneSubSeriesTerm x (n + 1)| =
+      |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2) * x)| *
+        |sqrtOneSubSeriesTerm x n| := by
+  rw [sqrtOneSubSeriesTerm_succ_eq_ratio_mul]
+  rw [abs_mul]
+
+theorem norm_sqrtOneSubSeriesTerm_succ_le_abs_mul
+    (x : ℝ) (n : ℕ) :
+    ‖sqrtOneSubSeriesTerm x (n + 1)‖ ≤
+      |x| * ‖sqrtOneSubSeriesTerm x n‖ := by
+  rw [Real.norm_eq_abs, Real.norm_eq_abs, abs_sqrtOneSubSeriesTerm_succ]
+  have hr :
+      |((2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2) * x)| ≤ |x| := by
+    rw [abs_mul]
+    calc
+      |(2 * (n : ℝ) - 1) / (2 * (n : ℝ) + 2)| * |x|
+          ≤ 1 * |x| := by
+            exact mul_le_mul_of_nonneg_right
+              (abs_sqrtOneSubCoeffRatio_le_one n)
+              (abs_nonneg x)
+      _ = |x| := by ring
+  exact mul_le_mul_of_nonneg_right hr (abs_nonneg _)
+
+theorem sqrtOneSubSeriesSummable_of_abs_lt_one
+    {x : ℝ} (hx : |x| < 1) :
+    Summable (fun n : ℕ => sqrtOneSubSeriesTerm x n) := by
+  have hratio :
+      ∀ᶠ n : ℕ in Filter.atTop,
+        ‖sqrtOneSubSeriesTerm x (n + 1)‖ ≤
+          |x| * ‖sqrtOneSubSeriesTerm x n‖ := by
+    exact Filter.Eventually.of_forall
+      (norm_sqrtOneSubSeriesTerm_succ_le_abs_mul x)
+  exact summable_of_ratio_norm_eventually_le hx hratio
+
+theorem sqrtOneSubSeriesTerm_at_kSqSinSqSubst
+    (k θ : ℝ) (n : ℕ) :
+    sqrtOneSubSeriesTerm (k ^ 2 * sinSqSubst θ) n =
+      eTrigBinomialTerm k n θ := by
+  unfold sqrtOneSubSeriesTerm
+  symm
+  exact eTrigBinomialTerm_eq_coeff_mul_pow k θ n
+
+theorem eTrigBinomialSeries_eq_sqrtOneSubSeries
+    (k θ : ℝ) :
+    eTrigBinomialSeries k θ = sqrtOneSubSeries (k ^ 2 * sinSqSubst θ) := by
+  unfold eTrigBinomialSeries sqrtOneSubSeries
+  apply tsum_congr
+  intro n
+  symm
+  exact sqrtOneSubSeriesTerm_at_kSqSinSqSubst k θ n
+
+theorem sqrtOneSubSeriesSummable_at_kSqSinSqSubst_of_abs_lt_one
+    {k θ : ℝ}
+    (hk : |k| < 1)
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Summable (fun n : ℕ => sqrtOneSubSeriesTerm (k ^ 2 * sinSqSubst θ) n) := by
+  have hnonneg : 0 ≤ k ^ 2 * sinSqSubst θ := by
+    exact mul_nonneg (sq_nonneg k) (sinSqSubst_nonneg θ)
+  have hlt : k ^ 2 * sinSqSubst θ < 1 := by
+    exact kSqSinSqSubst_lt_one_of_abs_lt_one hk hθ
+  have habs : |k ^ 2 * sinSqSubst θ| < 1 := by
+    rwa [abs_of_nonneg hnonneg]
+  exact sqrtOneSubSeriesSummable_of_abs_lt_one habs
+
+theorem eTrigBinomialTarget_of_sqrtOneSubSeriesTarget_of_abs_lt_one
+    {k : ℝ}
+    (hk : |k| < 1)
+    (hscalar : ∀ x : ℝ, |x| < 1 → sqrtOneSubSeriesTarget x) :
+    eTrigBinomialTarget k := by
+  intro θ hθ
+  change Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) = eTrigBinomialSeries k θ
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+    simpa [Set.uIcc_of_le hle] using hθ
+  have hnonneg : 0 ≤ k ^ 2 * sinSqSubst θ := by
+    exact mul_nonneg (sq_nonneg k) (sinSqSubst_nonneg θ)
+  have hlt : k ^ 2 * sinSqSubst θ < 1 := by
+    exact kSqSinSqSubst_lt_one_of_abs_lt_one hk hθ'
+  have habs : |k ^ 2 * sinSqSubst θ| < 1 := by
+    rwa [abs_of_nonneg hnonneg]
+  have hx :
+      sqrtOneSubSeriesTarget (k ^ 2 * sinSqSubst θ) := by
+    exact hscalar (k ^ 2 * sinSqSubst θ) habs
+  unfold sqrtOneSubSeriesTarget at hx
+  rw [eTrigBinomialSeries_eq_sqrtOneSubSeries]
+  simpa [sinSqSubst] using hx
+
+theorem seriesExpansionTarget_of_sqrtOneSubSeriesTarget_of_abs_lt_one
+    {k : ℝ}
+    (hk : |k| < 1)
+    (hscalar : ∀ x : ℝ, |x| < 1 → sqrtOneSubSeriesTarget x) :
+    seriesExpansionTarget k := by
+  apply seriesExpansionTarget_of_binomial_of_abs_lt_one hk
+  exact eTrigBinomialTarget_of_sqrtOneSubSeriesTarget_of_abs_lt_one hk hscalar
+
+def binomHalf : ℕ → ℝ
+  | 0 => 1
+  | n + 1 => binomHalf n * (1 / 2 - (n : ℝ)) / ((n : ℝ) + 1)
+
+theorem binomHalf_succ (n : ℕ) :
+    binomHalf (n + 1) = binomHalf n * (1 / 2 - (n : ℝ)) / ((n : ℝ) + 1) := by
+  rfl
+
+theorem sqrtOneSubCoeff_eq_binomHalf_mul_neg_one_pow (n : ℕ) :
+    sqrtOneSubCoeff n = binomHalf n * (-1 : ℝ) ^ n := by
+  induction n with
+  | zero =>
+      unfold sqrtOneSubCoeff wallisEvenCoeff
+      simp[binomHalf]
+  | succ n ih =>
+      rw [sqrtOneSubCoeff_succ n]
+      rw [ih]
+      rw [binomHalf_succ n]
+      have h_pow : (-1 : ℝ) ^ (n + 1) = (-1 : ℝ) ^ n * (-1 : ℝ) := by
+        rw [pow_add, pow_one]
+      rw [h_pow]
+      have hd1 : (n : ℝ) + 1 ≠ 0 := by positivity
+      have hd2 : 2 * (n : ℝ) + 2 ≠ 0 := by positivity
+      field_simp
+      ring
+
+theorem sqrtOneSubSeriesTerm_eq_binomHalf_term (x : ℝ) (n : ℕ) :
+    sqrtOneSubSeriesTerm x n = binomHalf n * (-x) ^ n := by
+  unfold sqrtOneSubSeriesTerm
+  rw[sqrtOneSubCoeff_eq_binomHalf_mul_neg_one_pow n]
+  have h_neg_x : (-x) ^ n = (-1 : ℝ) ^ n * x ^ n := by
+    have h_eq : -x = -1 * x := by ring
+    rw [h_eq, mul_pow]
+  rw [h_neg_x]
+  ring
+
+theorem ring_choose_succ_right (a : ℝ) (n : ℕ) :
+    Ring.choose a (n + 1) = Ring.choose a n * (a - n) / (n + 1) := by
+  have h :=
+    Ring.choose_smul_choose (r := a) (n := n + 1) (k := n) (Nat.le_succ n)
+  have hcoeff : (((n + 1).choose n : ℕ) : ℝ) = n + 1 := by
+    exact_mod_cast Nat.choose_succ_self_right n
+  have hsub : n + 1 - n = 1 := by
+    omega
+  rw [nsmul_eq_mul, hcoeff, hsub] at h
+  have hone : Ring.choose (a - n) 1 = a - n := by
+    simp
+  rw [hone] at h
+  have hn1 : (n + 1 : ℝ) ≠ 0 := by
+    positivity
+  apply (eq_div_iff hn1).2
+  simpa [mul_comm, mul_left_comm, mul_assoc] using h
+
+theorem binomHalf_eq_choose (n : ℕ) :
+    binomHalf n = Ring.choose ((1 : ℝ) / 2) n := by
+  induction n with
+  | zero =>
+      simp [binomHalf]
+  | succ n ih =>
+      rw [binomHalf_succ, ih, ring_choose_succ_right ((1 : ℝ) / 2) n]
+
+theorem sqrtOneSubSeriesTerm_eq_choose_term (x : ℝ) (n : ℕ) :
+    sqrtOneSubSeriesTerm x n = Ring.choose ((1 : ℝ) / 2) n * (-x) ^ n := by
+  rw [sqrtOneSubSeriesTerm_eq_binomHalf_term, binomHalf_eq_choose]
+
+theorem sqrtOneSubSeries_abs_summable_of_abs_lt_one {x : ℝ} (hx : |x| < 1) :
+    Summable (fun n : ℕ => |sqrtOneSubSeriesTerm x n|) := by
+  have hratio :
+      ∀ᶠ n : ℕ in Filter.atTop,
+        ‖|sqrtOneSubSeriesTerm x (n + 1)|‖ ≤
+          |x| * ‖|sqrtOneSubSeriesTerm x n|‖ := by
+    exact Filter.Eventually.of_forall (fun n => by
+      have h := norm_sqrtOneSubSeriesTerm_succ_le_abs_mul x n
+      simpa [Real.norm_eq_abs, abs_abs] using h)
+  exact summable_of_ratio_norm_eventually_le hx hratio
+
+theorem sqrtOneSubSeries_cauchy_coeff (x : ℝ) (n : ℕ) :
+    ∑ kl ∈ Finset.antidiagonal n,
+      sqrtOneSubSeriesTerm x kl.1 * sqrtOneSubSeriesTerm x kl.2 =
+        Ring.choose (1 : ℝ) n * (-x) ^ n := by
+  calc
+    ∑ kl ∈ Finset.antidiagonal n,
+        sqrtOneSubSeriesTerm x kl.1 * sqrtOneSubSeriesTerm x kl.2
+      =
+      ∑ kl ∈ Finset.antidiagonal n,
+        (Ring.choose ((1 : ℝ) / 2) kl.1 *
+          Ring.choose ((1 : ℝ) / 2) kl.2) * (-x) ^ n := by
+        apply Finset.sum_congr rfl
+        intro kl hkl
+        rcases Finset.mem_antidiagonal.mp hkl with hsum
+        rw [sqrtOneSubSeriesTerm_eq_choose_term, sqrtOneSubSeriesTerm_eq_choose_term]
+        calc
+          Ring.choose ((1 : ℝ) / 2) kl.1 * (-x) ^ kl.1 *
+              (Ring.choose ((1 : ℝ) / 2) kl.2 * (-x) ^ kl.2)
+            =
+              (Ring.choose ((1 : ℝ) / 2) kl.1 *
+                Ring.choose ((1 : ℝ) / 2) kl.2) *
+                  ((-x) ^ kl.1 * (-x) ^ kl.2) := by
+                ring
+          _ =
+              (Ring.choose ((1 : ℝ) / 2) kl.1 *
+                Ring.choose ((1 : ℝ) / 2) kl.2) *
+                  (-x) ^ n := by
+                rw [← pow_add, hsum]
+    _ =
+      (∑ kl ∈ Finset.antidiagonal n,
+        Ring.choose ((1 : ℝ) / 2) kl.1 *
+          Ring.choose ((1 : ℝ) / 2) kl.2) * (-x) ^ n := by
+        rw [← Finset.sum_mul]
+    _ = Ring.choose (1 : ℝ) n * (-x) ^ n := by
+        have hadd :
+            ∑ kl ∈ Finset.antidiagonal n,
+              Ring.choose ((1 : ℝ) / 2) kl.1 *
+                Ring.choose ((1 : ℝ) / 2) kl.2
+              = Ring.choose (1 : ℝ) n := by
+          calc
+            ∑ kl ∈ Finset.antidiagonal n,
+                Ring.choose ((1 : ℝ) / 2) kl.1 *
+                  Ring.choose ((1 : ℝ) / 2) kl.2
+              = Ring.choose (((1 : ℝ) / 2) + ((1 : ℝ) / 2)) n := by
+                  symm
+                  exact Ring.add_choose_eq
+                    (r := ((1 : ℝ) / 2))
+                    (s := ((1 : ℝ) / 2))
+                    (k := n)
+                    (h := Commute.all ((1 : ℝ) / 2) ((1 : ℝ) / 2))
+            _ = Ring.choose (1 : ℝ) n := by
+                  congr 1
+                  ring
+        rw [hadd]
+
+theorem choose_one_mul_pow_eq_zero_of_two_le (x : ℝ) {n : ℕ} (hn : 2 ≤ n) :
+    Ring.choose (1 : ℝ) n * (-x) ^ n = 0 := by
+  have hlt : 1 < n := by
+    linarith
+  have hchoose_nat : Nat.choose 1 n = 0 := by
+    exact Nat.choose_eq_zero_of_lt hlt
+  have hchoose : Ring.choose (1 : ℝ) n = 0 := by
+    rw [show (1 : ℝ) = ((1 : ℕ) : ℝ) by norm_num]
+    rw [Ring.choose_natCast]
+    exact_mod_cast hchoose_nat
+  rw [hchoose]
+  simp
+
+theorem sqrtOneSubSeries_sq_eq_one_sub {x : ℝ} (hx : |x| < 1) :
+    (sqrtOneSubSeries x) ^ 2 = 1 - x := by
+  have hsabs :
+      Summable (fun n : ℕ => ‖sqrtOneSubSeriesTerm x n‖) := by
+    simpa [Real.norm_eq_abs] using
+      sqrtOneSubSeries_abs_summable_of_abs_lt_one hx
+  calc
+    (sqrtOneSubSeries x) ^ 2
+        = (∑' n : ℕ, sqrtOneSubSeriesTerm x n) *
+            (∑' n : ℕ, sqrtOneSubSeriesTerm x n) := by
+          simp [sqrtOneSubSeries, pow_two]
+    _ =
+      ∑' n : ℕ,
+        ∑ kl ∈ Finset.antidiagonal n,
+          sqrtOneSubSeriesTerm x kl.1 * sqrtOneSubSeriesTerm x kl.2 := by
+          exact
+            tsum_mul_tsum_eq_tsum_sum_antidiagonal_of_summable_norm hsabs hsabs
+    _ = ∑' n : ℕ, Ring.choose (1 : ℝ) n * (-x) ^ n := by
+          apply tsum_congr
+          intro n
+          exact sqrtOneSubSeries_cauchy_coeff x n
+    _ = Finset.sum ({0, 1} : Finset ℕ)
+          (fun n : ℕ => Ring.choose (1 : ℝ) n * (-x) ^ n) := by
+          exact
+            tsum_eq_sum
+              (s := ({0, 1} : Finset ℕ))
+              (f := fun n : ℕ => Ring.choose (1 : ℝ) n * (-x) ^ n)
+              (by
+                intro n hn
+                have h2 : 2 ≤ n := by
+                  rcases n with _ | _ | n
+                  · simp at hn
+                  · simp at hn
+                  · omega
+                exact choose_one_mul_pow_eq_zero_of_two_le x h2)
+    _ = Ring.choose (1 : ℝ) 0 * (-x) ^ 0 +
+          Ring.choose (1 : ℝ) 1 * (-x) ^ 1 := by
+          simp
+    _ = 1 - x := by
+          have hchoose0 : Ring.choose (1 : ℝ) 0 = 1 := by
+            simp
+          have hchoose1 : Ring.choose (1 : ℝ) 1 = 1 := by
+            rw [show (1 : ℝ) = ((1 : ℕ) : ℝ) by norm_num]
+            rw [Ring.choose_natCast]
+            norm_num
+          rw [hchoose0, hchoose1]
+          ring
+
+theorem sqrtOneSubSeries_zero_val :
+    sqrtOneSubSeries 0 = 1 := by
+  unfold sqrtOneSubSeries
+  have h : (fun n : ℕ => sqrtOneSubSeriesTerm 0 n) = (fun n : ℕ => if n = 0 then 1 else 0) := by
+    ext n
+    cases n with
+    | zero => rw [sqrtOneSubSeriesTerm_zero]; simp
+    | succ n =>
+        unfold sqrtOneSubSeriesTerm
+        simp [pow_succ]
+  rw [h, tsum_ite_eq]
+
+theorem sqrtOneSubSeriesTerm_continuous (n : ℕ) :
+    Continuous (fun x : ℝ => sqrtOneSubSeriesTerm x n) := by
+  unfold sqrtOneSubSeriesTerm
+  exact continuous_const.mul (continuous_id.pow n)
+
+theorem norm_sqrtOneSubSeriesTerm_le_on_Icc
+    {r x : ℝ} (hr0 : 0 ≤ r) (hx : x ∈ Set.Icc (-r) r) (n : ℕ) :
+    ‖sqrtOneSubSeriesTerm x n‖ ≤ |sqrtOneSubSeriesTerm r n| := by
+  have hxr : |x| ≤ r := by
+    exact abs_le.mpr ⟨hx.1, hx.2⟩
+  unfold sqrtOneSubSeriesTerm
+  rw [Real.norm_eq_abs, abs_mul, abs_mul, abs_pow, abs_pow, abs_of_nonneg hr0]
+  apply mul_le_mul_of_nonneg_left
+  · induction n with
+    | zero =>
+        simp
+    | succ n ih =>
+        rw [pow_succ, pow_succ]
+        exact mul_le_mul ih hxr (abs_nonneg x) (pow_nonneg hr0 n)
+  · exact abs_nonneg _
+
+theorem sqrtOneSubSeries_continuousOn_Icc
+    {r : ℝ} (hr0 : 0 ≤ r) (hr1 : r < 1) :
+    ContinuousOn sqrtOneSubSeries (Set.Icc (-r) r) := by
+  have hsumm : Summable (fun n : ℕ => |sqrtOneSubSeriesTerm r n|) := by
+    have hrabs : |r| < 1 := by
+      simpa [abs_of_nonneg hr0] using hr1
+    exact sqrtOneSubSeries_abs_summable_of_abs_lt_one hrabs
+  unfold sqrtOneSubSeries
+  apply continuousOn_tsum
+  · intro n
+    exact (sqrtOneSubSeriesTerm_continuous n).continuousOn
+  · exact hsumm
+  · intro n x hx
+    exact norm_sqrtOneSubSeriesTerm_le_on_Icc hr0 hx n
+
+theorem sqrtOneSubSeries_nonneg_of_abs_lt_one {x : ℝ} (hx : |x| < 1) :
+    0 ≤ sqrtOneSubSeries x := by
+  by_contra hxneg
+  have hxlt : sqrtOneSubSeries x < 0 := by
+    exact lt_of_not_ge hxneg
+  let r : ℝ := (|x| + 1) / 2
+  have hr0 : 0 ≤ r := by
+    dsimp [r]
+    nlinarith [abs_nonneg x]
+  have hxr : |x| < r := by
+    dsimp [r]
+    nlinarith
+  have hr1 : r < 1 := by
+    dsimp [r]
+    nlinarith
+  have hxmem : x ∈ Set.Icc (-r) r := by
+    exact ⟨le_of_lt (abs_lt.mp hxr).1, le_of_lt (abs_lt.mp hxr).2⟩
+  have h0mem : (0 : ℝ) ∈ Set.Icc (-r) r := by
+    exact ⟨by nlinarith [hr0], by nlinarith [hr0]⟩
+  have hseg :
+      Set.uIcc x 0 ⊆ Set.Icc (-r) r := by
+    intro y hy
+    have hmin : -r ≤ min x 0 := by
+      exact le_min hxmem.1 h0mem.1
+    have hmax : max x 0 ≤ r := by
+      exact max_le hxmem.2 h0mem.2
+    exact ⟨le_trans hmin hy.1, le_trans hy.2 hmax⟩
+  have hcont_Icc : ContinuousOn sqrtOneSubSeries (Set.Icc (-r) r) := by
+    exact sqrtOneSubSeries_continuousOn_Icc hr0 hr1
+  have hcont_seg : ContinuousOn sqrtOneSubSeries (Set.uIcc x 0) := by
+    exact hcont_Icc.mono hseg
+  have h0pos : 0 < sqrtOneSubSeries 0 := by
+    rw [sqrtOneSubSeries_zero_val]
+    norm_num
+  have hzmem : (0 : ℝ) ∈ Set.uIcc (sqrtOneSubSeries x) (sqrtOneSubSeries 0) := by
+    constructor
+    · exact le_trans (min_le_left _ _) (le_of_lt hxlt)
+    · exact le_trans (le_of_lt h0pos) (le_max_right _ _)
+  rcases intermediate_value_uIcc hcont_seg hzmem with ⟨y, hyseg, hyzero⟩
+  have hymem : y ∈ Set.Icc (-r) r := by
+    exact hseg hyseg
+  have hyabs_le : |y| ≤ r := by
+    exact abs_le.mpr ⟨hymem.1, hymem.2⟩
+  have hyabs : |y| < 1 := by
+    exact lt_of_le_of_lt hyabs_le hr1
+  have hsq : (sqrtOneSubSeries y) ^ 2 = 1 - y := by
+    exact sqrtOneSubSeries_sq_eq_one_sub hyabs
+  rw [hyzero] at hsq
+  have hy1 : y = 1 := by
+    nlinarith
+  have hylt1 : y < 1 := by
+    exact (abs_lt.mp hyabs).2
+  linarith
+
+/--
+Scalar square-root binomial series.
+
+For `|x| < 1`, proves that the constructed coefficient series evaluates to
+`sqrt (1 - x)`. This is the analytic core behind the elliptic series expansion
+for `|k| < 1`.
+-/
+theorem sqrtOneSubSeriesTarget_of_abs_lt_one (x : ℝ) (hx : |x| < 1) :
+    sqrtOneSubSeriesTarget x := by
+  unfold sqrtOneSubSeriesTarget
+  have hxnonneg : 0 ≤ 1 - x := by
+    have hx' := abs_lt.mp hx
+    nlinarith
+  have hsq :
+      (sqrtOneSubSeries x) ^ 2 = (Real.sqrt (1 - x)) ^ 2 := by
+    calc
+      (sqrtOneSubSeries x) ^ 2 = 1 - x := by
+        exact sqrtOneSubSeries_sq_eq_one_sub hx
+      _ = (Real.sqrt (1 - x)) ^ 2 := by
+        symm
+        exact Real.sq_sqrt hxnonneg
+  have hser_nonneg : 0 ≤ sqrtOneSubSeries x := by
+    exact sqrtOneSubSeries_nonneg_of_abs_lt_one hx
+  have hsqrt_nonneg : 0 ≤ Real.sqrt (1 - x) := by
+    exact Real.sqrt_nonneg _
+  have hEq : sqrtOneSubSeries x = Real.sqrt (1 - x) := by
+    nlinarith [hsq, hser_nonneg, hsqrt_nonneg]
+  exact hEq.symm
+
+theorem seriesExpansionTarget_final_clean
+    {k : ℝ} (hk : |k| < 1) :
+    seriesExpansionTarget k := by
+  exact
+    seriesExpansionTarget_of_sqrtOneSubSeriesTarget_of_abs_lt_one
+      hk
+      (fun x hx => sqrtOneSubSeriesTarget_of_abs_lt_one x hx)
+
+theorem eccentricitySq_lt_one_of_pos {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) :
+    eccentricitySq a b < 1 := by
+  unfold eccentricitySq
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  have hsq_pos : 0 < (b / a) ^ 2 := by
+    exact sq_pos_of_ne_zero (div_ne_zero hb.ne' ha0)
+  nlinarith
+
+theorem eccentricitySq_pos_of_lt {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b < a) :
+    0 < eccentricitySq a b := by
+  unfold eccentricitySq
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  have ha2 : 0 < a ^ 2 := by
+    positivity
+  have hab2 : b ^ 2 < a ^ 2 := by
+    nlinarith
+  have hsq_lt : (b / a) ^ 2 < 1 := by
+    have hrewrite : (b / a) ^ 2 = b ^ 2 / a ^ 2 := by
+      field_simp [ha0]
+    rw [hrewrite]
+    have hdiv : b ^ 2 / a ^ 2 < a ^ 2 / a ^ 2 := by
+      exact div_lt_div_of_pos_right hab2 ha2
+    have ha2ne : a ^ 2 ≠ 0 := by
+      exact pow_ne_zero 2 ha0
+    simpa [ha2ne] using hdiv
+  nlinarith
+
+theorem eccentricitySq_mem_Ioo_of_lt {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hba : b < a) :
+    eccentricitySq a b ∈ Set.Ioo (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricitySq_pos_of_lt ha hb.le hba
+  · exact eccentricitySq_lt_one_of_pos ha hb
+
+theorem eccentricity_lt_one_of_le_of_pos {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hba : b ≤ a) :
+    eccentricity a b < 1 := by
+  have hsq : eccentricity a b ^ 2 = eccentricitySq a b := by
+    exact eccentricity_sq_eq_eccentricitySq_of_le ha hb.le hba
+  have h0 : 0 ≤ eccentricity a b := eccentricity_nonneg a b
+  have h1 : eccentricitySq a b < 1 := by
+    exact eccentricitySq_lt_one_of_pos ha hb
+  nlinarith [hsq, h0, h1]
+
+theorem eccentricity_pos_of_lt {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b < a) :
+    0 < eccentricity a b := by
+  unfold eccentricity
+  exact Real.sqrt_pos.2 (eccentricitySq_pos_of_lt ha hb hba)
+
+theorem eccentricity_mem_Ioo_of_lt {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hba : b < a) :
+    eccentricity a b ∈ Set.Ioo (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricity_pos_of_lt ha hb.le hba
+  · exact eccentricity_lt_one_of_le_of_pos ha hb hba.le
+
+theorem abs_eccentricity_lt_one_of_le_of_pos {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hba : b ≤ a) :
+    |eccentricity a b| < 1 := by
+  rw [abs_of_nonneg (eccentricity_nonneg a b)]
+  exact eccentricity_lt_one_of_le_of_pos ha hb hba
+
+theorem abs_eccentricity_max_min_lt_one_of_pos {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) :
+    |eccentricity (max a b) (min a b)| < 1 := by
+  by_cases hba : b ≤ a
+  · rw [max_eq_left hba, min_eq_right hba]
+    exact abs_eccentricity_lt_one_of_le_of_pos ha hb hba
+  · have hab : a ≤ b := le_of_not_ge hba
+    rw [max_eq_right hab, min_eq_left hab]
+    exact abs_eccentricity_lt_one_of_le_of_pos hb ha hab
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_pos
+    {a b : ℝ} (ha : 0 < a) (hb : 0 < b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticESeries (eccentricity a b) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_seriesExpansionTarget
+      ha hb.le hba
+      (seriesExpansionTarget_final_clean
+        (abs_eccentricity_lt_one_of_le_of_pos ha hb hba))
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_pos
+    {a b : ℝ} (ha : 0 < a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticESeries (eccentricity b a) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_ge_of_seriesExpansionTarget
+      ha.le hb hab
+      (seriesExpansionTarget_final_clean
+        (abs_eccentricity_lt_one_of_le_of_pos hb ha hab))
+
+/-
+Positive-semiaxis public wrappers.
+
+These theorems package the strict positive case after proving the eccentricity
+lies inside the open unit interval.
+-/
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_pos
+    {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    ellipsePerimeterModel a b =
+      4 * max a b * completeEllipticESeries
+        (eccentricity (max a b) (min a b)) := by
+  have hsum : 0 < a + b := by
+    linarith
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg_of_seriesExpansionTarget
+      ha.le hb.le hsum
+      (seriesExpansionTarget_final_clean
+        (abs_eccentricity_max_min_lt_one_of_pos ha hb))
+
+theorem seriesExpansionTarget_zero :
+    seriesExpansionTarget 0 := by
+  exact seriesExpansionTarget_final_clean (by norm_num)
+
+theorem completeEllipticESeries_zero_eq_pi_div_two :
+    completeEllipticESeries 0 = Real.pi / 2 := by
+  have hseries : completeEllipticETrig 0 = completeEllipticESeries 0 := by
+    exact seriesExpansionTarget_zero
+  rw [completeEllipticETrig_zero] at hseries
+  exact hseries.symm
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticESeries_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticESeries 0 := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_le_of_pos
+    ha ha le_rfl]
+  rw [eccentricity_self_of_pos ha]
+
+theorem ellipsePerimeterModel_circle_eq_two_pi_mul_via_series
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 2 * Real.pi * a := by
+  rw [ellipsePerimeterModel_circle_eq_four_mul_completeEllipticESeries_zero ha]
+  rw [completeEllipticESeries_zero_eq_pi_div_two]
+  ring
+
+theorem completeEllipticETrig_one :
+    completeEllipticETrig 1 = 1 := by
+  unfold completeEllipticETrig
+  have h :
+      (∫ θ in (0 : ℝ)..(Real.pi / 2),
+        Real.sqrt (1 - 1 ^ 2 * Real.sin θ ^ 2)) =
+      ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.cos θ := by
+    apply intervalIntegral.integral_congr
+    intro θ hθ
+    have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+      nlinarith [Real.pi_pos]
+    have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+      simpa [Set.uIcc_of_le hle] using hθ
+    calc
+      Real.sqrt (1 - 1 ^ 2 * Real.sin θ ^ 2)
+          = Real.sqrt (1 - sinSqSubst θ) := by
+              simp [sinSqSubst]
+      _ = Real.cos θ := by
+            exact sqrt_one_sub_sinSqSubst_eq_cos_of_mem_Icc_zero_pi_div_two hθ'
+  rw [h]
+  rw [integral_cos]
+  simp
+
+theorem eccentricity_right_zero_of_pos {a : ℝ}
+    (_ha : 0 < a) :
+    eccentricity a 0 = 1 := by
+  unfold eccentricity eccentricitySq
+  simp
+
+theorem ellipsePerimeterModel_right_zero_eq_four_mul {a : ℝ}
+    (ha : 0 < a) :
+    ellipsePerimeterModel a 0 = 4 * a := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le
+    ha (by norm_num) (by linarith)]
+  rw [eccentricity_right_zero_of_pos ha, completeEllipticETrig_one]
+  ring
+
+theorem ellipsePerimeterModel_left_zero_eq_four_mul {b : ℝ}
+    (hb : 0 < b) :
+    ellipsePerimeterModel 0 b = 4 * b := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge
+    (by norm_num) hb (by linarith)]
+  rw [eccentricity_right_zero_of_pos hb, completeEllipticETrig_one]
+  ring
+
+theorem completeEllipticEModulus_one :
+    completeEllipticEModulus 1 = 1 := by
+  rw [completeEllipticEModulus_eq_trig 1, completeEllipticETrig_one]
+
+theorem completeEllipticEParam_one :
+    completeEllipticEParam 1 = 1 := by
+  simpa [completeEllipticEModulus] using completeEllipticEModulus_one
+
+theorem Omega_one_eq_four :
+    Omega 1 = 4 := by
+  have h1 : ellipsePerimeterModel (1 : ℝ) 0 = Omega 1 := by
+    simpa using ellipsePerimeterModel_right_zero_of_pos (a := 1) (by norm_num)
+  have h2 : ellipsePerimeterModel (1 : ℝ) 0 = 4 := by
+    simpa using ellipsePerimeterModel_right_zero_eq_four_mul (a := 1) (by norm_num)
+  nlinarith [h1, h2]
+
+/-
+Endpoint `k = 1` support.
+
+This block proves the endpoint series value by combining closed-form coefficient
+partial sums with Wallis squeeze bounds.
+-/
+theorem ellipticESeriesCoeff_succ_eq_partialStep (n : ℕ) :
+    ellipticESeriesCoeff (n + 1) =
+      (2 * (((n + 1 : ℕ) : ℝ)) + 1) * wallisEvenCoeff (n + 1) ^ 2
+        - (2 * (n : ℝ) + 1) * wallisEvenCoeff n ^ 2 := by
+  have hd1 : 2 * (n : ℝ) + 2 ≠ 0 := by positivity
+  have hd2 : -(2 * (n : ℝ) + 1) ≠ 0 := by
+    have : 0 ≤ (n : ℝ) := Nat.cast_nonneg n
+    linarith
+  have hs :
+      1 - 2 * (((n + 1 : ℕ) : ℝ)) = -(2 * (n : ℝ) + 1) := by
+    push_cast
+    ring
+  have hleft :
+      ellipticESeriesCoeff (n + 1) =
+        -((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2) ^ 2) *
+          wallisEvenCoeff n ^ 2 := by
+    rw[ellipticESeriesCoeff_eq_wallis_sq_mul, wallisEvenCoeff_succ, hs]
+    field_simp [hd1, hd2]
+  have hright :
+      (2 * (((n + 1 : ℕ) : ℝ)) + 1) * wallisEvenCoeff (n + 1) ^ 2
+        - (2 * (n : ℝ) + 1) * wallisEvenCoeff n ^ 2 =
+      -((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2) ^ 2) *
+        wallisEvenCoeff n ^ 2 := by
+    rw[wallisEvenCoeff_succ]
+    push_cast
+    field_simp [hd1]
+    ring
+  exact hleft.trans hright.symm
+
+theorem ellipticESeriesCoeff_partialSum_closed_form (n : ℕ) :
+    (∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) =
+      (2 * (n : ℝ) + 1) * wallisEvenCoeff n ^ 2 := by
+  induction n with
+  | zero =>
+      rw[Finset.sum_range_one, ellipticESeriesCoeff_zero, wallisEvenCoeff_zero]
+      norm_num
+  | succ n ih =>
+      rw[Finset.sum_range_succ, ih, ellipticESeriesCoeff_succ_eq_partialStep]
+      push_cast
+      ring
+
+theorem completeEllipticESeries_one_partialSum_closed_form (n : ℕ) :
+    (Real.pi / 2) * (∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) =
+      (Real.pi / 2) * ((2 * (n : ℝ) + 1) * wallisEvenCoeff n ^ 2) := by
+  rw [ellipticESeriesCoeff_partialSum_closed_form]
+
+def oddWallisIntegralCandidate (n : ℕ) : ℝ :=
+  1 / ((2 * (n : ℝ) + 1) * wallisEvenCoeff n)
+
+def oddWallisTarget (n : ℕ) : Prop :=
+  ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * n + 1) =
+    oddWallisIntegralCandidate n
+
+theorem wallisEvenCoeff_pos (n : ℕ) :
+    0 < wallisEvenCoeff n := by
+  unfold wallisEvenCoeff
+  positivity
+
+theorem oddWallisIntegralCandidate_succ (n : ℕ) :
+    oddWallisIntegralCandidate (n + 1) =
+      ((2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 3)) *
+        oddWallisIntegralCandidate n := by
+  unfold oddWallisIntegralCandidate
+  rw [wallisEvenCoeff_succ]
+  have hw : wallisEvenCoeff n ≠ 0 := by
+    exact ne_of_gt (wallisEvenCoeff_pos n)
+  have h1 : 2 * (n : ℝ) + 1 ≠ 0 := by
+    positivity
+  have h2 : 2 * (n : ℝ) + 2 ≠ 0 := by
+    positivity
+  have h3 : 2 * (n : ℝ) + 3 ≠ 0 := by
+    positivity
+  push_cast
+  field_simp [hw, h1, h2, h3]
+  ring
+
+def oddWallisRecurrenceTarget : Prop :=
+  ∀ n : ℕ,
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * (n + 1) + 1) =
+      ((2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 3)) *
+        ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * n + 1)
+
+theorem oddWallisRecurrenceTarget_proved :
+    oddWallisRecurrenceTarget := by
+  intro n
+  have hpow : 2 * (n + 1) + 1 = (2 * n + 1) + 2 := by
+    omega
+  rw [hpow]
+  have hcoef :
+      ((2 * (n : ℝ) + 1 + 1) / (2 * (n : ℝ) + 1 + 2)) =
+        ((2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 3)) := by
+    ring
+  simpa [hcoef] using
+    (integral_sin_pow
+      (a := (0 : ℝ))
+      (b := (Real.pi / 2))
+      (2 * n + 1))
+
+theorem oddWallisTarget_zero :
+    oddWallisTarget 0 := by
+  unfold oddWallisTarget oddWallisIntegralCandidate
+  rw [wallisEvenCoeff_zero]
+  norm_num
+
+theorem oddWallisTarget_all :
+    ∀ n : ℕ, oddWallisTarget n := by
+  intro n
+  induction n with
+  | zero =>
+      exact oddWallisTarget_zero
+  | succ n ih =>
+      unfold oddWallisTarget at ih ⊢
+      rw [oddWallisRecurrenceTarget_proved n]
+      rw [ih]
+      rw [oddWallisIntegralCandidate_succ]
+
+theorem oddWallisIntegral_eq_candidate (n : ℕ) :
+    ∫ θ in (0 : ℝ)..(Real.pi / 2), Real.sin θ ^ (2 * n + 1) =
+      oddWallisIntegralCandidate n := by
+  exact oddWallisTarget_all n
+
+theorem sin_pow_succ_le_self_of_mem_Icc
+    {θ : ℝ} (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) (m : ℕ) :
+    Real.sin θ ^ (m + 1) ≤ Real.sin θ ^ m := by
+  have hsin0 : 0 ≤ Real.sin θ := by
+    exact sin_nonneg_of_mem_Icc_zero_pi_div_two hθ
+  have hsin1 : Real.sin θ ≤ 1 := by
+    have hs : |Real.sin θ| ≤ 1 := by
+      simpa using Real.abs_sin_le_one θ
+    exact (abs_le.mp hs).2
+  rw [pow_succ]
+  exact mul_le_of_le_one_right (pow_nonneg hsin0 m) hsin1
+
+theorem sin_pow_odd_le_even_on_Icc
+    {θ : ℝ} (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) (n : ℕ) :
+    Real.sin θ ^ (2 * n + 1) ≤ Real.sin θ ^ (2 * n) := by
+  exact sin_pow_succ_le_self_of_mem_Icc hθ (2 * n)
+
+theorem sin_pow_even_succ_le_odd_on_Icc
+    {θ : ℝ} (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) (n : ℕ) :
+    Real.sin θ ^ (2 * (n + 1)) ≤ Real.sin θ ^ (2 * n + 1) := by
+  have hpow : 2 * (n + 1) = 2 * n + 1 + 1 := by
+    omega
+  rw [hpow]
+  exact sin_pow_succ_le_self_of_mem_Icc hθ (2 * n + 1)
+
+theorem oddWallisCandidate_nonneg (n : ℕ) :
+    0 ≤ oddWallisIntegralCandidate n := by
+  unfold oddWallisIntegralCandidate
+  have hw : 0 < wallisEvenCoeff n := wallisEvenCoeff_pos n
+  positivity
+
+theorem wallisEvenCoeff_ne_zero (n : ℕ) :
+    wallisEvenCoeff n ≠ 0 := by
+  exact ne_of_gt (wallisEvenCoeff_pos n)
+
+theorem sin_pow_nat_intervalIntegrable (m : ℕ) :
+    IntervalIntegrable
+      (fun θ : ℝ => Real.sin θ ^ m)
+      MeasureTheory.volume
+      (0 : ℝ)
+      (Real.pi / 2) := by
+  exact (Real.continuous_sin.pow m).intervalIntegrable _ _
+
+theorem oddWallisIntegral_le_wallisIntegralCandidate (n : ℕ) :
+    oddWallisIntegralCandidate n ≤ wallisIntegralCandidate n := by
+  rw [← oddWallisIntegral_eq_candidate n]
+  rw [← wallisTarget_all n]
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  exact intervalIntegral.integral_mono_on
+    (μ := MeasureTheory.volume)
+    hle
+    (sin_pow_nat_intervalIntegrable (2 * n + 1))
+    (sin_pow_nat_intervalIntegrable (2 * n))
+    (by
+      intro θ hθ
+      have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+        simpa [Set.uIcc_of_le hle] using hθ
+      exact sin_pow_odd_le_even_on_Icc hθ' n)
+
+theorem wallisIntegralCandidate_succ_le_oddWallisIntegralCandidate (n : ℕ) :
+    wallisIntegralCandidate (n + 1) ≤ oddWallisIntegralCandidate n := by
+  rw [← wallisTarget_all (n + 1)]
+  rw [← oddWallisIntegral_eq_candidate n]
+  have hle : (0 : ℝ) ≤ Real.pi / 2 := by
+    nlinarith [Real.pi_pos]
+  exact intervalIntegral.integral_mono_on
+    (μ := MeasureTheory.volume)
+    hle
+    (sin_pow_nat_intervalIntegrable (2 * (n + 1)))
+    (sin_pow_nat_intervalIntegrable (2 * n + 1))
+    (by
+      intro θ hθ
+      have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+        simpa [Set.uIcc_of_le hle] using hθ
+      exact sin_pow_even_succ_le_odd_on_Icc hθ' n)
+
+def wallisScaledPartial (n : ℕ) : ℝ :=
+  (Real.pi / 2) * ((2 * (n : ℝ) + 1) * wallisEvenCoeff n ^ 2)
+
+theorem one_le_wallisScaledPartial (n : ℕ) :
+    1 ≤ wallisScaledPartial n := by
+  have h := oddWallisIntegral_le_wallisIntegralCandidate n
+  unfold oddWallisIntegralCandidate wallisIntegralCandidate at h
+  have hdenpos :
+      0 < (2 * (n : ℝ) + 1) * wallisEvenCoeff n := by
+    exact mul_pos (by positivity) (wallisEvenCoeff_pos n)
+  have hmul := mul_le_mul_of_nonneg_right h (le_of_lt hdenpos)
+  have hleft :
+      (1 / ((2 * (n : ℝ) + 1) * wallisEvenCoeff n)) *
+          ((2 * (n : ℝ) + 1) * wallisEvenCoeff n) = 1 := by
+    exact one_div_mul_cancel (ne_of_gt hdenpos)
+  have hright :
+      (Real.pi / 2 * wallisEvenCoeff n) *
+          ((2 * (n : ℝ) + 1) * wallisEvenCoeff n) =
+        wallisScaledPartial n := by
+    unfold wallisScaledPartial
+    ring
+  rwa [hleft, hright] at hmul
+
+theorem wallisScaledPartial_le_ratio (n : ℕ) :
+    wallisScaledPartial n ≤ (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1) := by
+  have h := wallisIntegralCandidate_succ_le_oddWallisIntegralCandidate n
+  unfold wallisIntegralCandidate oddWallisIntegralCandidate at h
+  rw [wallisEvenCoeff_succ] at h
+  have hp1 : 0 < 2 * (n : ℝ) + 1 := by
+    positivity
+  have hp2 : 0 < 2 * (n : ℝ) + 2 := by
+    positivity
+  have hw : 0 < wallisEvenCoeff n := by
+    exact wallisEvenCoeff_pos n
+  have hmul_nonneg :
+      0 ≤ (2 * (n : ℝ) + 2) *
+          ((2 * (n : ℝ) + 1) * wallisEvenCoeff n) := by
+    exact mul_nonneg
+      (le_of_lt hp2)
+      (mul_nonneg (le_of_lt hp1) (le_of_lt hw))
+  have hmul := mul_le_mul_of_nonneg_right h hmul_nonneg
+  have hleft :
+      (Real.pi / 2 *
+          (((2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 2)) *
+            wallisEvenCoeff n)) *
+        ((2 * (n : ℝ) + 2) *
+          ((2 * (n : ℝ) + 1) * wallisEvenCoeff n)) =
+      wallisScaledPartial n * (2 * (n : ℝ) + 1) := by
+    unfold wallisScaledPartial
+    field_simp [ne_of_gt hp2]
+  have hright :
+      (wallisEvenCoeff n)⁻¹ * (2 * (n : ℝ) + 1)⁻¹ *
+        ((2 * (n : ℝ) + 2) *
+          ((2 * (n : ℝ) + 1) * wallisEvenCoeff n)) =
+      2 * (n : ℝ) + 2 := by
+    field_simp [ne_of_gt hp1, ne_of_gt hw]
+  have hmul' :
+      wallisScaledPartial n * (2 * (n : ℝ) + 1) ≤
+        2 * (n : ℝ) + 2 := by
+    simpa [hleft, hright] using hmul
+  have hdiv :
+      wallisScaledPartial n * (2 * (n : ℝ) + 1) /
+          (2 * (n : ℝ) + 1) ≤
+        (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1) := by
+    exact div_le_div_of_nonneg_right hmul' (le_of_lt hp1)
+  have hcancel :
+      wallisScaledPartial n * (2 * (n : ℝ) + 1) /
+          (2 * (n : ℝ) + 1) =
+        wallisScaledPartial n := by
+    field_simp [ne_of_gt hp1]
+  simpa [hcancel] using hdiv
+
+theorem wallisScaledPartial_squeeze (n : ℕ) :
+    1 ≤ wallisScaledPartial n ∧
+      wallisScaledPartial n ≤
+        (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1) := by
+  constructor
+  · exact one_le_wallisScaledPartial n
+  · exact wallisScaledPartial_le_ratio n
+
+theorem tendsto_inv_two_mul_nat_add_one :
+    Filter.Tendsto (fun n : ℕ => (2 * (n : ℝ) + 1)⁻¹) Filter.atTop (nhds 0) := by
+  rw[Metric.tendsto_atTop]
+  intro ε hε
+  have hex : ∃ N : ℕ, ε⁻¹ < (N : ℝ) := exists_nat_gt ε⁻¹
+  rcases hex with ⟨N, hN⟩
+  use N
+  intro n hn
+  have hn_re : (N : ℝ) ≤ (n : ℝ) := Nat.cast_le.mpr hn
+  have hn_eps : ε⁻¹ < (n : ℝ) := lt_of_lt_of_le hN hn_re
+  have h_pos : 0 < 2 * (n : ℝ) + 1 := by positivity
+  rw[Real.dist_eq, sub_zero, abs_of_pos (inv_pos.mpr h_pos)]
+  have h1 : (n : ℝ) < 2 * (n : ℝ) + 1 := by
+    have : 0 ≤ (n : ℝ) := Nat.cast_nonneg n
+    linarith
+  have hn_eps2 : ε⁻¹ < 2 * (n : ℝ) + 1 := lt_trans hn_eps h1
+  have hmul1 : ε⁻¹ * ε < (2 * (n : ℝ) + 1) * ε := mul_lt_mul_of_pos_right hn_eps2 hε
+  rw [inv_mul_cancel₀ (ne_of_gt hε)] at hmul1
+  have hmul2 : 1 * (2 * (n : ℝ) + 1)⁻¹ < ((2 * (n : ℝ) + 1) * ε) * (2 * (n : ℝ) + 1)⁻¹ :=
+    mul_lt_mul_of_pos_right hmul1 (inv_pos.mpr h_pos)
+  have h_cancel : ((2 * (n : ℝ) + 1) * ε) * (2 * (n : ℝ) + 1)⁻¹ = ε := by
+    calc
+      ((2 * (n : ℝ) + 1) * ε) * (2 * (n : ℝ) + 1)⁻¹
+        = ε * ((2 * (n : ℝ) + 1) * (2 * (n : ℝ) + 1)⁻¹) := by ring
+      _ = ε * 1 := by rw[mul_inv_cancel₀ (ne_of_gt h_pos)]
+      _ = ε := by ring
+  rw[h_cancel, one_mul] at hmul2
+  exact hmul2
+
+theorem tendsto_upper_bound_one :
+    Filter.Tendsto (fun n : ℕ => (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1)) Filter.atTop (nhds 1) := by
+  have heq : (fun n : ℕ => (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1)) =
+      fun n : ℕ => 1 + (2 * (n : ℝ) + 1)⁻¹ := by
+    ext n
+    have hne : 2 * (n : ℝ) + 1 ≠ 0 := by positivity
+    calc
+      (2 * (n : ℝ) + 2) / (2 * (n : ℝ) + 1)
+        = (2 * (n : ℝ) + 1 + 1) / (2 * (n : ℝ) + 1) := by ring
+      _ = (2 * (n : ℝ) + 1) / (2 * (n : ℝ) + 1) + 1 / (2 * (n : ℝ) + 1) := by
+          exact add_div (2 * (n : ℝ) + 1) 1 (2 * (n : ℝ) + 1)
+      _ = 1 + (2 * (n : ℝ) + 1)⁻¹ := by
+          rw [div_self hne, one_div]
+  rw [heq]
+  have h1 : nhds (1 : ℝ) = nhds (1 + 0) := by rw[add_zero]
+  rw [h1]
+  exact Filter.Tendsto.add tendsto_const_nhds tendsto_inv_two_mul_nat_add_one
+
+theorem tendsto_wallisScaledPartial :
+    Filter.Tendsto wallisScaledPartial Filter.atTop (nhds 1) := by
+  apply tendsto_of_tendsto_of_tendsto_of_le_of_le tendsto_const_nhds tendsto_upper_bound_one
+  · exact fun n => (wallisScaledPartial_squeeze n).1
+  · exact fun n => (wallisScaledPartial_squeeze n).2
+
+theorem tendsto_partial_sums_coeff :
+    Filter.Tendsto (fun n : ℕ => ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i)
+      Filter.atTop (nhds (2 / Real.pi)) := by
+  have heq : (fun n : ℕ => ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) =
+      fun n : ℕ => (2 / Real.pi) * wallisScaledPartial n := by
+    ext n
+    have h1 := completeEllipticESeries_one_partialSum_closed_form n
+    calc
+      ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i
+        = (2 / Real.pi) * ((Real.pi / 2) * ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) := by
+          rw [← mul_assoc]
+          have h_cancel : (2 / Real.pi) * (Real.pi / 2) = 1 := by
+            have hpipos : 0 < Real.pi := Real.pi_pos
+            have hpio : Real.pi ≠ 0 := ne_of_gt hpipos
+            calc
+              (2 / Real.pi) * (Real.pi / 2) = (2 * Real.pi) / (Real.pi * 2) := by ring
+              _ = 1 := by
+                rw [mul_comm]
+                exact div_self (mul_ne_zero hpio (by norm_num))
+          rw [h_cancel, one_mul]
+      _ = (2 / Real.pi) * wallisScaledPartial n := by
+          rw [h1]
+          rfl
+  rw [heq]
+  have hlimit : nhds (2 / Real.pi) = nhds (2 / Real.pi * 1) := by rw [mul_one]
+  rw [hlimit]
+  exact Filter.Tendsto.const_mul (2 / Real.pi) tendsto_wallisScaledPartial
+
+def eCoeffAbs (n : ℕ) : ℝ := |ellipticESeriesCoeff n|
+
+theorem eCoeffAbs_zero : eCoeffAbs 0 = 1 := by
+  unfold eCoeffAbs
+  rw[ellipticESeriesCoeff_zero, abs_one]
+
+theorem eCoeffAbs_succ (n : ℕ) : eCoeffAbs (n + 1) = -ellipticESeriesCoeff (n + 1) := by
+  unfold eCoeffAbs
+  have h_nonpos : ellipticESeriesCoeff (n + 1) ≤ 0 := by
+    induction n with
+    | zero =>
+        rw[ellipticESeriesCoeff_one]
+        norm_num
+    | succ n ih =>
+        rw[ellipticESeriesCoeff_succ]
+        have hratio : 0 ≤ ellipticESeriesRatio (n + 1) := by
+          unfold ellipticESeriesRatio
+          have hnum : 0 ≤ (2 * ((n + 1 : ℕ) : ℝ) - 1) * (2 * ((n + 1 : ℕ) : ℝ) + 1) := by
+            push_cast
+            have h1 : 1 ≤ (n : ℝ) + 1 := by exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+            nlinarith
+          have hden : 0 < (2 * ((n + 1 : ℕ) : ℝ) + 2) ^ 2 := by positivity
+          exact div_nonneg hnum (le_of_lt hden)
+        exact mul_nonpos_of_nonneg_of_nonpos hratio ih
+  exact abs_of_nonpos h_nonpos
+
+theorem eCoeffAbs_nonneg (n : ℕ) :
+    0 ≤ eCoeffAbs n := by
+  unfold eCoeffAbs
+  exact abs_nonneg _
+
+theorem sum_eCoeffAbs_succ_eq (n : ℕ) :
+    ∑ i ∈ Finset.range (n + 1), eCoeffAbs i =
+      2 - ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i := by
+  induction n with
+  | zero =>
+      rw [Finset.sum_range_one, eCoeffAbs_zero]
+      rw [Finset.sum_range_one, ellipticESeriesCoeff_zero]
+      norm_num
+  | succ n ih =>
+      have hsum :
+          (∑ i ∈ Finset.range (n + 1 + 1), ellipticESeriesCoeff i) =
+            (∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) +
+              ellipticESeriesCoeff (n + 1) := by
+        rw [Finset.sum_range_succ]
+      calc
+        ∑ i ∈ Finset.range (n + 1 + 1), eCoeffAbs i
+            =
+          (∑ i ∈ Finset.range (n + 1), eCoeffAbs i) +
+            eCoeffAbs (n + 1) := by
+              rw [Finset.sum_range_succ]
+        _ =
+          (2 - ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) +
+            eCoeffAbs (n + 1) := by
+              rw [ih]
+        _ =
+          2 - ∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i -
+            ellipticESeriesCoeff (n + 1) := by
+              rw [eCoeffAbs_succ n]
+              ring
+        _ =
+          2 -
+            ((∑ i ∈ Finset.range (n + 1), ellipticESeriesCoeff i) +
+              ellipticESeriesCoeff (n + 1)) := by
+              ring
+        _ =
+          2 - ∑ i ∈ Finset.range (n + 1 + 1), ellipticESeriesCoeff i := by
+              rw [hsum]
+
+theorem sum_eCoeffAbs (n : ℕ) :
+    ∑ i ∈ Finset.range n, eCoeffAbs i =
+      if n = 0 then 0 else 2 - ∑ i ∈ Finset.range n, ellipticESeriesCoeff i := by
+  cases n with
+  | zero => simp
+  | succ n =>
+      have h_nz : n + 1 ≠ 0 := Nat.succ_ne_zero n
+      rw [if_neg h_nz]
+      exact sum_eCoeffAbs_succ_eq n
+
+theorem sum_eCoeffAbs_le (n : ℕ) : ∑ i ∈ Finset.range n, eCoeffAbs i ≤ 2 := by
+  rw [sum_eCoeffAbs]
+  split_ifs with h
+  · norm_num
+  · have h_sum_pos : 0 ≤ ∑ i ∈ Finset.range n, ellipticESeriesCoeff i := by
+      cases n with
+      | zero => contradiction
+      | succ m =>
+          rw[ellipticESeriesCoeff_partialSum_closed_form]
+          have hm : 0 ≤ 2 * (m : ℝ) + 1 := by positivity
+          have hw : 0 ≤ wallisEvenCoeff m ^ 2 := by positivity
+          exact mul_nonneg hm hw
+    linarith
+
+theorem summable_eCoeffAbs : Summable eCoeffAbs :=
+  summable_of_sum_range_le eCoeffAbs_nonneg sum_eCoeffAbs_le
+
+theorem summable_ellipticESeriesCoeff : Summable ellipticESeriesCoeff := by
+  have h_abs : Summable (fun n => ‖ellipticESeriesCoeff n‖) := by
+    simp_rw [Real.norm_eq_abs]
+    exact summable_eCoeffAbs
+  exact Summable.of_norm h_abs
+
+theorem tendsto_partial_sums_coeff_unbiased :
+    Filter.Tendsto (fun n : ℕ => ∑ i ∈ Finset.range n, ellipticESeriesCoeff i)
+      Filter.atTop (nhds (2 / Real.pi)) := by
+  rw[Metric.tendsto_atTop]
+  intro ε hε
+  have h_tendsto := tendsto_partial_sums_coeff
+  rw [Metric.tendsto_atTop] at h_tendsto
+  rcases h_tendsto ε hε with ⟨N, hN⟩
+  use N + 1
+  intro n hn
+  cases n with
+  | zero => omega
+  | succ m =>
+      have hm : N ≤ m := by omega
+      exact hN m hm
+
+theorem tsum_ellipticESeriesCoeff :
+    ∑' n, ellipticESeriesCoeff n = 2 / Real.pi := by
+  have h1 := summable_ellipticESeriesCoeff.hasSum.tendsto_sum_nat
+  have h2 := tendsto_partial_sums_coeff_unbiased
+  exact tendsto_nhds_unique h1 h2
+
+theorem hasSum_ellipticESeriesCoeff :
+    HasSum ellipticESeriesCoeff (2 / Real.pi) := by
+  have h := summable_ellipticESeriesCoeff.hasSum
+  rwa [tsum_ellipticESeriesCoeff] at h
+
+/--
+Endpoint series value at `k = 1`.
+
+Uses the Wallis squeeze and coefficient partial sums to prove that the complete
+elliptic series converges to `1` at the degenerate endpoint.
+-/
+theorem completeEllipticESeries_one_eq_one :
+    completeEllipticESeries 1 = 1 := by
+  unfold completeEllipticESeries
+  have heq : (fun n : ℕ => ellipticESeriesTerm 1 n) = ellipticESeriesCoeff := by
+    ext n
+    unfold ellipticESeriesTerm
+    have h1 : (1 : ℝ) ^ (2 * n) = 1 := by exact one_pow (2 * n)
+    rw [h1, mul_one]
+  rw [heq]
+  have hsum := hasSum_ellipticESeriesCoeff.tsum_eq
+  rw[hsum]
+  have h_ne : Real.pi * 2 ≠ 0 := by positivity
+  calc
+    (Real.pi / 2) * (2 / Real.pi) = (Real.pi * 2) / (Real.pi * 2) := by ring
+    _ = 1 := div_self h_ne
+
+theorem ellipsePerimeterModel_right_zero_eq_four_mul_series
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a 0 =
+      4 * a * completeEllipticESeries (eccentricity a 0) := by
+  rw [eccentricity_right_zero_of_pos ha]
+  rw [completeEllipticESeries_one_eq_one]
+  simpa using ellipsePerimeterModel_right_zero_eq_four_mul ha
+
+theorem ellipsePerimeterModel_left_zero_eq_four_mul_series
+    {b : ℝ} (hb : 0 < b) :
+    ellipsePerimeterModel 0 b =
+      4 * b * completeEllipticESeries (eccentricity b 0) := by
+  rw [eccentricity_right_zero_of_pos hb]
+  rw [completeEllipticESeries_one_eq_one]
+  simpa using ellipsePerimeterModel_left_zero_eq_four_mul hb
+
+/--
+Public all-cases perimeter theorem.
+
+For nonnegative semiaxes `a` and `b`, with `a + b > 0`, the model perimeter is
+given by the complete elliptic series evaluated at the eccentricity determined
+by the major and minor semiaxes.
+
+This theorem includes the strict ellipse case and the two degenerate endpoint
+cases `b = 0` and `a = 0`.
+-/
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticESeries
+          (eccentricity (max a b) (min a b)) := by
+  by_cases ha_pos : 0 < a
+  · by_cases hb_pos : 0 < b
+    · exact
+        ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_pos
+          ha_pos hb_pos
+    · have hb_zero : b = 0 := by
+        exact le_antisymm (le_of_not_gt hb_pos) hb
+      subst b
+      rw [max_eq_left (le_of_lt ha_pos), min_eq_right (le_of_lt ha_pos)]
+      exact ellipsePerimeterModel_right_zero_eq_four_mul_series ha_pos
+  · have ha_zero : a = 0 := by
+      exact le_antisymm (le_of_not_gt ha_pos) ha
+    subst a
+    have hb_pos : 0 < b := by
+      simpa using hsum
+    rw [max_eq_right (le_of_lt hb_pos), min_eq_left (le_of_lt hb_pos)]
+    exact ellipsePerimeterModel_left_zero_eq_four_mul_series hb_pos
+
+/--
+Sanity checks for the public nonnegative theorem.
+
+These corollaries verify that the unified `max`/`min` formulation reduces
+correctly in the degenerate endpoint cases `b = 0` and `a = 0`. They are not
+new results, but serve as regression checks that the final theorem agrees with
+the previously established endpoint behavior.
+-/
+theorem ellipsePerimeterModel_right_zero_eq_series_of_nonneg_form
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a 0 =
+      4 * max a 0 *
+        completeEllipticESeries
+          (eccentricity (max a 0) (min a 0)) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg
+      ha.le
+      (by norm_num)
+      (by simpa using ha)
+
+theorem ellipsePerimeterModel_left_zero_eq_series_of_nonneg_form
+    {b : ℝ} (hb : 0 < b) :
+    ellipsePerimeterModel 0 b =
+      4 * max 0 b *
+        completeEllipticESeries
+          (eccentricity (max 0 b) (min 0 b)) := by
+  exact
+    ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg
+      (by norm_num)
+      hb.le
+      (by simpa using hb)
+
+/--
+Expanded public series form.
+
+This is the same all-cases theorem as
+`ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg`, but with
+`completeEllipticESeries` unfolded so the final infinite series is visible at
+the theorem boundary.
+-/
+theorem ellipsePerimeterModel_eq_four_mul_tsum_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        ((Real.pi / 2) *
+          ∑' n : ℕ,
+            ellipticESeriesCoeff n *
+              eccentricity (max a b) (min a b) ^ (2 * n)) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticESeries_of_nonneg
+    ha hb hsum]
+  rfl
+
+end EllipseOmega

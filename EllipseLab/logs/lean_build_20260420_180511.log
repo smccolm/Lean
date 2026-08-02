@@ -1,0 +1,54 @@
+==================================================
+LEAN DIAGNOSTIC BUILD LOG
+==================================================
+Timestamp: 2026-04-20 18:05:11.52
+ProjectRoot: E:\Lean\EllipseLab
+
+===== where =====
+C:\Users\Naraphim\.elan\bin\lean.exe
+C:\Users\Naraphim\.elan\bin\lake.exe
+C:\Users\Naraphim\.elan\bin\elan.exe
+
+===== versions =====
+Lean (version 4.30.0-rc2, x86_64-w64-windows-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)
+Lake version 5.0.0-src+3dc1a08 (Lean version 4.30.0-rc2)
+elan 4.2.1 (3d5138e15 2026-03-18)
+
+===== lean-toolchain =====
+leanprover/lean4:v4.30.0-rc2
+
+===== lake env =====
+ELAN=elan
+ELAN_HOME=C:\Users\Naraphim\.elan
+ELAN_TOOLCHAIN=leanprover/lean4:v4.30.0-rc2
+LAKE=c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\bin\lake.exe
+LAKE_HOME=c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2
+LAKE_CONFIG=C:\Users\Naraphim\.lake\config.toml
+LAKE_PKG_URL_MAP={}
+LAKE_NO_CACHE=false
+LAKE_CACHE_KEY=
+LAKE_CACHE_ARTIFACT_ENDPOINT=
+LAKE_CACHE_REVISION_ENDPOINT=
+LAKE_CACHE_SERVICE=
+LEAN=c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\bin\lean.exe
+LEAN_SYSROOT=c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2
+LEAN_AR=c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\bin\llvm-ar.exe
+LEAN_CC=
+LAKE_CACHE_DIR=C:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\lake\cache
+LAKE_ARTIFACT_CACHE=
+LEAN_PATH=E:\Lean\EllipseLab\.lake\packages\Cli\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\batteries\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\Qq\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\aesop\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\proofwidgets\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\importGraph\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\LeanSearchClient\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\plausible\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\packages\mathlib\.lake\build\lib\lean;E:\Lean\EllipseLab\.lake\build\lib\lean;c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\lib\lean
+LEAN_SRC_PATH=E:\Lean\EllipseLab\.lake\packages\Cli;E:\Lean\EllipseLab\.lake\packages\Cli;E:\Lean\EllipseLab\.lake\packages\batteries;E:\Lean\EllipseLab\.lake\packages\batteries;E:\Lean\EllipseLab\.lake\packages\Qq;E:\Lean\EllipseLab\.lake\packages\Qq;E:\Lean\EllipseLab\.lake\packages\aesop;E:\Lean\EllipseLab\.lake\packages\aesop;E:\Lean\EllipseLab\.lake\packages\proofwidgets;E:\Lean\EllipseLab\.lake\packages\proofwidgets;E:\Lean\EllipseLab\.lake\packages\proofwidgets;E:\Lean\EllipseLab\.lake\packages\importGraph;E:\Lean\EllipseLab\.lake\packages\importGraph;E:\Lean\EllipseLab\.lake\packages\LeanSearchClient;E:\Lean\EllipseLab\.lake\packages\LeanSearchClient;E:\Lean\EllipseLab\.lake\packages\plausible;E:\Lean\EllipseLab\.lake\packages\plausible;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab\.lake\packages\mathlib;E:\Lean\EllipseLab;c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\src\lean\lake
+LEAN_GITHASH=3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc
+PATH=E:\Lean\EllipseLab\.lake\packages\Cli\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\batteries\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\Qq\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\aesop\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\proofwidgets\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\importGraph\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\LeanSearchClient\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\plausible\.lake\build\bin;E:\Lean\EllipseLab\.lake\packages\mathlib\.lake\build\bin;E:\Lean\EllipseLab\.lake\build\bin;E:\Lean\EllipseLab\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\mathlib\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\plausible\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\LeanSearchClient\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\importGraph\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\proofwidgets\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\aesop\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\Qq\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\batteries\.lake\build\lib;E:\Lean\EllipseLab\.lake\packages\Cli\.lake\build\lib;c:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\bin;C:\Users\Naraphim\.elan\bin;C:\Users\Naraphim\.elan\toolchains\leanprover--lean4---v4.30.0-rc2\bin;C:\ProgramData\anaconda3\condabin;C:\Program Files\ImageMagick-7.1.2-Q16-HDRI;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\ffmpeg\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.2\;C:\ProgramData\anaconda3;C:\ProgramData\anaconda3\Scripts;C:\ProgramData\anaconda3\Library\bin;C:\Users\Naraphim\AppData\Roaming\Python\Python312\Scripts;C:\Program Files (x86)\ffmpeg-4.4-amd64-static;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Users\Naraphim\AppData\Roaming\Python\Python313\Scripts;C:\Program Files\exiftool-13.51_64;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Users\Naraphim\.elan\bin;C:\Users\Naraphim\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Naraphim\AppData\Local\Programs\Python\Python310\;C:\Users\Naraphim\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Naraphim\AppData\Local\Programs\Python\Python312\;C:\Users\Naraphim\AppData\Local\Programs\Python\Launcher\;C:\Users\Naraphim\AppData\Local\Microsoft\WindowsApps;C:\Users\Naraphim\.dotnet\tools;C:\Users\Naraphim\AppData\Local\Muse Hub\lib;C:\Users\Naraphim\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\Naraphim\AppData\Roaming\npm;C:\Users\Naraphim\AppData\Local\Microsoft\WinGet\Packages\DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Naraphim\AppData\Local\Programs\Microsoft VS Code\bin
+
+===== lake build -v --log-level=trace --no-ansi =====
+✖ [0/0] Running job computation
+error: no such file or directory (error code: 4294963238)
+  file: E:\Lean\EllipseLab\EllipseLab\Basic.lean
+Some required targets logged failures:
+- job computation
+error: build failed
+
+===== result =====
+ExitCode: 1
+LogFile: E:\Lean\EllipseLab\logs\lean_build_20260420_180511.log

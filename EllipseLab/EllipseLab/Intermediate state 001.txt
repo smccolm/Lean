@@ -1,0 +1,160 @@
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.MeasureTheory.Integral.DominatedConvergence
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
+import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+
+set_option linter.style.whitespace false
+
+noncomputable section
+
+open MeasureTheory
+open Filter
+open Set
+
+namespace EllipseOmega
+
+def shapeParam (a b : ℝ) : ℝ :=
+  |a - b| / (a + b)
+
+def kappa (lamPi : ℝ) : ℝ :=
+  (4 * lamPi) / (1 + lamPi)^2
+
+def omegaIntegrand (lamPi : ℝ) (t : ℝ) : ℝ :=
+  Real.sqrt (1 - kappa lamPi * t) / Real.sqrt (t * (1 - t))
+
+def Omega (lamPi : ℝ) : ℝ :=
+  (1 + lamPi) * ∫ t in (0 : ℝ)..1, omegaIntegrand lamPi t
+
+def circleIntegrand (t : ℝ) : ℝ :=
+  1 / Real.sqrt (t * (1 - t))
+
+def circleIntegral : ℝ :=
+  ∫ t in (0 : ℝ)..1, circleIntegrand t
+
+theorem shapeParam_self (a : ℝ) : shapeParam a a = 0 := by
+  simp [shapeParam]
+
+theorem shapeParam_symm (a b : ℝ) : shapeParam a b = shapeParam b a := by
+  simp[shapeParam, abs_sub_comm, add_comm]
+
+theorem kappa_zero : kappa 0 = 0 := by
+  simp [kappa]
+
+theorem kappa_nonneg {lamPi : ℝ} (h0 : 0 ≤ lamPi) : 0 ≤ kappa lamPi := by
+  unfold kappa
+  exact div_nonneg (by nlinarith) (sq_nonneg (1 + lamPi))
+
+theorem kappa_le_one {lamPi : ℝ} (h0 : 0 ≤ lamPi) :
+    kappa lamPi ≤ 1 := by
+  unfold kappa
+  have hnum : 4 * lamPi ≤ (1 + lamPi)^2 := by
+    have hs : 0 ≤ (1 - lamPi)^2 := sq_nonneg (1 - lamPi)
+    nlinarith
+  have hdiv :
+      (4 * lamPi) / (1 + lamPi)^2 ≤ (1 + lamPi)^2 / (1 + lamPi)^2 := by
+    exact div_le_div_of_nonneg_right hnum (sq_nonneg (1 + lamPi))
+  have hne : (1 + lamPi)^2 ≠ 0 := by
+    nlinarith
+  simpa [hne] using hdiv
+
+theorem one_sub_kappa_mul_nonneg {lamPi t : ℝ}
+    (h0 : 0 ≤ lamPi) (_h1 : lamPi ≤ 1) (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ 1 - kappa lamPi * t := by
+  have hk0 : 0 ≤ kappa lamPi := kappa_nonneg h0
+  have hk1 : kappa lamPi ≤ 1 := kappa_le_one h0
+  have hkt : kappa lamPi * t ≤ 1 := by
+    nlinarith
+  nlinarith
+
+theorem omegaIntegrand_nonneg (lamPi t : ℝ) : 0 ≤ omegaIntegrand lamPi t := by
+  unfold omegaIntegrand
+  exact div_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _)
+
+theorem circleIntegrand_nonneg (t : ℝ) : 0 ≤ circleIntegrand t := by
+  unfold circleIntegrand
+  exact div_nonneg zero_le_one (Real.sqrt_nonneg _)
+
+theorem omegaIntegrand_zero (t : ℝ) :
+    omegaIntegrand 0 t = circleIntegrand t := by
+  simp [omegaIntegrand, kappa, circleIntegrand]
+
+theorem Omega_zero_unfold :
+    Omega 0 = circleIntegral := by
+  simp[Omega, omegaIntegrand, kappa, circleIntegral, circleIntegrand]
+
+theorem Omega_circle_unfold (a : ℝ) :
+    Omega (shapeParam a a) = circleIntegral := by
+  simp[Omega, omegaIntegrand, kappa, shapeParam,
+    circleIntegral, circleIntegrand]
+
+theorem Omega_circle_eq_Omega_zero (a : ℝ) :
+    Omega (shapeParam a a) = Omega 0 := by
+  simp [shapeParam]
+
+theorem gamma_one_half_eq_sqrt_pi :
+    Real.Gamma ((1 : ℝ) / 2) = Real.sqrt Real.pi := by
+  simpa using Real.Gamma_one_half_eq
+
+theorem gamma_one_half_mul_gamma_one_half_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2) = Real.pi := by
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2)
+        = Real.sqrt Real.pi * Real.Gamma ((1 : ℝ) / 2) := by
+          rw[gamma_one_half_eq_sqrt_pi]
+    _ = Real.sqrt Real.pi * Real.sqrt Real.pi := by
+          rw [gamma_one_half_eq_sqrt_pi]
+    _ = Real.pi := by
+          have hs : (Real.sqrt Real.pi)^2 = Real.pi := by
+            simpa using Real.sq_sqrt Real.pi_nonneg
+          simpa [pow_two] using hs
+
+theorem gamma_one_half_reflection_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) = Real.pi := by
+  have hgamma :
+      Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) =
+        Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+    simpa using Real.Gamma_mul_Gamma_one_sub ((1 : ℝ) / 2)
+  have hsin : Real.sin (Real.pi * ((1 : ℝ) / 2)) = 1 := by
+    have harg : Real.pi * ((1 : ℝ) / 2) = Real.pi / 2 := by
+      ring
+    rw [harg, Real.sin_pi_div_two]
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2))
+        = Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+          exact hgamma
+    _ = Real.pi / 1 := by
+          rw [hsin]
+    _ = Real.pi := by
+          simp
+
+theorem complex_gamma_one_half_mul_gamma_one_half_eq_pi :
+    Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  have hcast : (((Real.Gamma ((1 : ℝ) / 2) *
+      Real.Gamma ((1 : ℝ) / 2) : ℝ)) : ℂ) = (Real.pi : ℂ) := by
+    exact congrArg (fun x : ℝ => (x : ℂ)) gamma_one_half_mul_gamma_one_half_eq_pi
+  have h1 : (1 : ℂ) / 2 = ↑((1 : ℝ) / 2) := by norm_num
+  rw [h1, Complex.Gamma_ofReal]
+  push_cast at hcast ⊢
+  exact hcast
+
+theorem complex_beta_half_half_eq_pi :
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  have hs : 0 < (((1 : ℂ) / 2).re) := by
+    norm_num
+  calc
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2)
+        = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+            Complex.Gamma (((1 : ℂ) / 2) + ((1 : ℂ) / 2)) := by
+          exact Complex.betaIntegral_eq_Gamma_mul_div ((1 : ℂ) / 2) ((1 : ℂ) / 2) hs hs
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+          Complex.Gamma 1 := by
+          congr 3
+          ring
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) := by
+          simp
+    _ = (Real.pi : ℂ) := by
+          exact complex_gamma_one_half_mul_gamma_one_half_eq_pi
+
+end EllipseOmega

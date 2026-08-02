@@ -1,0 +1,1183 @@
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.MeasureTheory.Integral.DominatedConvergence
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
+import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.InverseDeriv
+
+set_option linter.style.whitespace false
+
+noncomputable section
+
+open MeasureTheory
+open Filter
+open Set
+
+namespace EllipseOmega
+
+def shapeParam (a b : ℝ) : ℝ :=
+  |a - b| / (a + b)
+
+def kappa (lamPi : ℝ) : ℝ :=
+  (4 * lamPi) / (1 + lamPi)^2
+
+def omegaIntegrand (lamPi : ℝ) (t : ℝ) : ℝ :=
+  Real.sqrt (1 - kappa lamPi * t) / Real.sqrt (t * (1 - t))
+
+def Omega (lamPi : ℝ) : ℝ :=
+  (1 + lamPi) * ∫ t in (0 : ℝ)..1, omegaIntegrand lamPi t
+
+def circleIntegrand (t : ℝ) : ℝ :=
+  1 / Real.sqrt (t * (1 - t))
+
+def circleIntegral : ℝ :=
+  ∫ t in (0 : ℝ)..1, circleIntegrand t
+
+theorem shapeParam_self (a : ℝ) : shapeParam a a = 0 := by
+  simp [shapeParam]
+
+theorem shapeParam_symm (a b : ℝ) : shapeParam a b = shapeParam b a := by
+  simp [shapeParam, abs_sub_comm, add_comm]
+
+theorem kappa_zero : kappa 0 = 0 := by
+  simp [kappa]
+
+theorem kappa_nonneg {lamPi : ℝ} (h0 : 0 ≤ lamPi) : 0 ≤ kappa lamPi := by
+  unfold kappa
+  exact div_nonneg (by nlinarith) (sq_nonneg (1 + lamPi))
+
+theorem kappa_le_one {lamPi : ℝ} (h0 : 0 ≤ lamPi) :
+    kappa lamPi ≤ 1 := by
+  unfold kappa
+  have hnum : 4 * lamPi ≤ (1 + lamPi)^2 := by
+    have hs : 0 ≤ (1 - lamPi)^2 := sq_nonneg (1 - lamPi)
+    nlinarith
+  have hdiv :
+      (4 * lamPi) / (1 + lamPi)^2 ≤ (1 + lamPi)^2 / (1 + lamPi)^2 := by
+    exact div_le_div_of_nonneg_right hnum (sq_nonneg (1 + lamPi))
+  have hne : (1 + lamPi)^2 ≠ 0 := by
+    nlinarith
+  simpa [hne] using hdiv
+
+theorem one_sub_kappa_mul_nonneg {lamPi t : ℝ}
+    (h0 : 0 ≤ lamPi) (_h1 : lamPi ≤ 1) (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ 1 - kappa lamPi * t := by
+  have hk0 : 0 ≤ kappa lamPi := kappa_nonneg h0
+  have hk1 : kappa lamPi ≤ 1 := kappa_le_one h0
+  have hkt : kappa lamPi * t ≤ 1 := by
+    nlinarith
+  nlinarith
+
+theorem omegaIntegrand_nonneg (lamPi t : ℝ) : 0 ≤ omegaIntegrand lamPi t := by
+  unfold omegaIntegrand
+  exact div_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _)
+
+theorem circleIntegrand_nonneg (t : ℝ) : 0 ≤ circleIntegrand t := by
+  unfold circleIntegrand
+  exact div_nonneg zero_le_one (Real.sqrt_nonneg _)
+
+theorem omegaIntegrand_zero (t : ℝ) :
+    omegaIntegrand 0 t = circleIntegrand t := by
+  simp [omegaIntegrand, kappa, circleIntegrand]
+
+theorem Omega_zero_unfold :
+    Omega 0 = circleIntegral := by
+  simp [Omega, omegaIntegrand, kappa, circleIntegral, circleIntegrand]
+
+theorem Omega_circle_unfold (a : ℝ) :
+    Omega (shapeParam a a) = circleIntegral := by
+  simp [Omega, omegaIntegrand, kappa, shapeParam,
+    circleIntegral, circleIntegrand]
+
+theorem Omega_circle_eq_Omega_zero (a : ℝ) :
+    Omega (shapeParam a a) = Omega 0 := by
+  simp [shapeParam]
+
+theorem gamma_one_half_eq_sqrt_pi :
+    Real.Gamma ((1 : ℝ) / 2) = Real.sqrt Real.pi := by
+  simpa using Real.Gamma_one_half_eq
+
+theorem gamma_one_half_mul_gamma_one_half_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2) = Real.pi := by
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma ((1 : ℝ) / 2)
+        = Real.sqrt Real.pi * Real.Gamma ((1 : ℝ) / 2) := by
+          rw [gamma_one_half_eq_sqrt_pi]
+    _ = Real.sqrt Real.pi * Real.sqrt Real.pi := by
+          rw [gamma_one_half_eq_sqrt_pi]
+    _ = Real.pi := by
+          have hs : (Real.sqrt Real.pi)^2 = Real.pi := by
+            simpa using Real.sq_sqrt Real.pi_nonneg
+          simpa [pow_two] using hs
+
+theorem gamma_one_half_reflection_eq_pi :
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) = Real.pi := by
+  have hgamma :
+      Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2)) =
+        Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+    simpa using Real.Gamma_mul_Gamma_one_sub ((1 : ℝ) / 2)
+  have hsin : Real.sin (Real.pi * ((1 : ℝ) / 2)) = 1 := by
+    have harg : Real.pi * ((1 : ℝ) / 2) = Real.pi / 2 := by
+      ring
+    rw [harg, Real.sin_pi_div_two]
+  calc
+    Real.Gamma ((1 : ℝ) / 2) * Real.Gamma (1 - ((1 : ℝ) / 2))
+        = Real.pi / Real.sin (Real.pi * ((1 : ℝ) / 2)) := by
+          exact hgamma
+    _ = Real.pi / 1 := by
+          rw [hsin]
+    _ = Real.pi := by
+          simp
+
+theorem complex_gamma_one_half_eq_ofReal :
+    Complex.Gamma ((1 : ℂ) / 2) = ((Real.Gamma ((1 : ℝ) / 2) : ℝ) : ℂ) := by
+  have h1 : (1 : ℂ) / 2 = ↑((1 : ℝ) / 2) := by
+    norm_num
+  rw [h1, Complex.Gamma_ofReal]
+
+theorem complex_gamma_one_half_mul_gamma_one_half_eq_pi :
+    Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  rw [complex_gamma_one_half_eq_ofReal]
+  have hcast :
+      (((Real.Gamma ((1 : ℝ) / 2) *
+        Real.Gamma ((1 : ℝ) / 2) : ℝ)) : ℂ) = (Real.pi : ℂ) := by
+    exact congrArg (fun x : ℝ => (x : ℂ))
+      gamma_one_half_mul_gamma_one_half_eq_pi
+  push_cast at hcast ⊢
+  exact hcast
+
+theorem complex_beta_half_half_eq_pi :
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2) = (Real.pi : ℂ) := by
+  have hs : 0 < (((1 : ℂ) / 2).re) := by
+    norm_num
+  calc
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2)
+        = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+            Complex.Gamma (((1 : ℂ) / 2) + ((1 : ℂ) / 2)) := by
+          exact Complex.betaIntegral_eq_Gamma_mul_div
+            ((1 : ℂ) / 2) ((1 : ℂ) / 2) hs hs
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) /
+          Complex.Gamma 1 := by
+          congr 3
+          ring
+    _ = Complex.Gamma ((1 : ℂ) / 2) * Complex.Gamma ((1 : ℂ) / 2) := by
+          simp
+    _ = (Real.pi : ℂ) := by
+          exact complex_gamma_one_half_mul_gamma_one_half_eq_pi
+
+def betaHalfHalfIntegrand (x : ℝ) : ℂ :=
+  (x : ℂ) ^ (((1 : ℂ) / 2) - 1) *
+    (1 - (x : ℂ)) ^ (((1 : ℂ) / 2) - 1)
+
+theorem complex_beta_half_half_unfold :
+    Complex.betaIntegral ((1 : ℂ) / 2) ((1 : ℂ) / 2) =
+      ∫ x : ℝ in (0 : ℝ)..1, betaHalfHalfIntegrand x := by
+  simp [Complex.betaIntegral, betaHalfHalfIntegrand]
+
+theorem Omega_zero_eq_pi_iff_circleIntegral_eq_pi :
+    Omega 0 = Real.pi ↔ circleIntegral = Real.pi := by
+  constructor <;> intro h
+  · simpa [Omega_zero_unfold] using h
+  · simpa [Omega_zero_unfold] using h
+
+theorem Omega_zero_eq_pi_of_circleIntegral_eq_pi
+    (h : circleIntegral = Real.pi) :
+    Omega 0 = Real.pi := by
+  simpa [Omega_zero_unfold] using h
+
+theorem Omega_circle_eq_pi_iff_circleIntegral_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi ↔ circleIntegral = Real.pi := by
+  constructor <;> intro h
+  · simpa [Omega_circle_unfold] using h
+  · simpa [Omega_circle_unfold] using h
+
+theorem Omega_circle_eq_pi_of_circleIntegral_eq_pi
+    (a : ℝ) (h : circleIntegral = Real.pi) :
+    Omega (shapeParam a a) = Real.pi := by
+  simpa [Omega_circle_unfold] using h
+
+def unitCircleAntideriv (x : ℝ) : ℝ :=
+  Real.arcsin x
+
+theorem unitCircleAntideriv_hasDerivAt
+    {x : ℝ} (hx₁ : x ≠ -1) (hx₂ : x ≠ 1) :
+    HasDerivAt unitCircleAntideriv
+      (1 / Real.sqrt (1 - x ^ 2)) x := by
+  simpa [unitCircleAntideriv] using
+    Real.hasDerivAt_arcsin hx₁ hx₂
+
+theorem unitCircleAntideriv_hasDerivAt_Ioo
+    {x : ℝ} (hx : x ∈ Set.Ioo (-1 : ℝ) 1) :
+    HasDerivAt unitCircleAntideriv
+      (1 / Real.sqrt (1 - x ^ 2)) x := by
+  have hx₁ : x ≠ -1 := by
+    linarith [hx.1]
+  have hx₂ : x ≠ 1 := by
+    linarith [hx.2]
+  exact unitCircleAntideriv_hasDerivAt hx₁ hx₂
+
+theorem unitCircleAntideriv_one :
+    unitCircleAntideriv 1 = Real.pi / 2 := by
+  simp [unitCircleAntideriv]
+
+theorem unitCircleAntideriv_neg_one :
+    unitCircleAntideriv (-1) = -(Real.pi / 2) := by
+  simp [unitCircleAntideriv]
+
+theorem unitCircleAntideriv_endpoint_gap :
+    unitCircleAntideriv 1 - unitCircleAntideriv (-1) = Real.pi := by
+  rw [unitCircleAntideriv_one, unitCircleAntideriv_neg_one]
+  ring
+
+def unitCircleIntegrand (x : ℝ) : ℝ :=
+  1 / Real.sqrt (1 - x ^ 2)
+
+theorem unitCircleIntegrand_nonneg (x : ℝ) :
+    0 ≤ unitCircleIntegrand x := by
+  unfold unitCircleIntegrand
+  exact div_nonneg zero_le_one (Real.sqrt_nonneg _)
+
+theorem affine_to_unitCircle_mem_Ioo {t : ℝ}
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    2 * t - 1 ∈ Set.Ioo (-1 : ℝ) 1 := by
+  constructor <;> nlinarith [ht.1, ht.2]
+
+theorem one_sub_affine_sq_eq_four_mul (t : ℝ) :
+    1 - (2 * t - 1) ^ 2 = 4 * (t * (1 - t)) := by
+  ring
+
+theorem sqrt_one_sub_affine_sq (t : ℝ) :
+    Real.sqrt (1 - (2 * t - 1) ^ 2) =
+      2 * Real.sqrt (t * (1 - t)) := by
+  rw [one_sub_affine_sq_eq_four_mul]
+  calc
+    Real.sqrt (4 * (t * (1 - t)))
+        = Real.sqrt (4 : ℝ) * Real.sqrt (t * (1 - t)) := by
+          have h4 : 0 ≤ (4 : ℝ) := by
+            norm_num
+          rw [Real.sqrt_mul h4]
+    _ = 2 * Real.sqrt (t * (1 - t)) := by
+          have hsqrt4 : Real.sqrt (4 : ℝ) = 2 := by
+            have h : (4 : ℝ) = 2 ^ 2 := by
+              norm_num
+            have h2 : 0 ≤ (2 : ℝ) := by
+              norm_num
+            rw [h, Real.sqrt_sq h2]
+          rw [hsqrt4]
+
+theorem circleIntegrand_eq_two_mul_unitCircleIntegrand_affine
+    {t : ℝ} (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := by
+  have hspos : 0 < Real.sqrt (t * (1 - t)) := by
+    apply Real.sqrt_pos.2
+    nlinarith [ht.1, ht.2]
+  have hsneq : Real.sqrt (t * (1 - t)) ≠ 0 := by
+    linarith
+  unfold circleIntegrand unitCircleIntegrand
+  have hsqrt := sqrt_one_sub_affine_sq t
+  calc
+    1 / Real.sqrt (t * (1 - t))
+        = 2 / (2 * Real.sqrt (t * (1 - t))) := by
+          field_simp [hsneq]
+    _ = 2 / Real.sqrt (1 - (2 * t - 1) ^ 2) := by
+          rw [hsqrt]
+    _ = 2 * (1 / Real.sqrt (1 - (2 * t - 1) ^ 2)) := by
+          ring
+
+theorem circleIntegrand_eq_two_mul_unitCircleIntegrand_affine_Icc
+    {t : ℝ} (ht : t ∈ Set.Icc (0 : ℝ) 1) :
+    circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := by
+  rcases lt_or_eq_of_le ht.1 with ht0 | rfl
+  · rcases lt_or_eq_of_le ht.2 with ht1 | rfl
+    · exact circleIntegrand_eq_two_mul_unitCircleIntegrand_affine ⟨ht0, ht1⟩
+    · unfold circleIntegrand unitCircleIntegrand
+      have h1 : Real.sqrt (1 * (1 - 1)) = 0 := by
+        norm_num
+      have h2 : Real.sqrt (1 - (2 * 1 - 1) ^ 2) = 0 := by
+        norm_num
+      rw [h1, h2]
+      norm_num
+  · unfold circleIntegrand unitCircleIntegrand
+    have h1 : Real.sqrt (0 * (1 - 0)) = 0 := by
+      norm_num
+    have h2 : Real.sqrt (1 - (2 * 0 - 1) ^ 2) = 0 := by
+      norm_num
+    rw [h1, h2]
+    norm_num
+
+theorem unitCircleIntegrand_intervalIntegrable :
+    IntervalIntegrable unitCircleIntegrand MeasureTheory.volume (-1 : ℝ) 1 := by
+  apply intervalIntegral.intervalIntegrable_deriv_of_nonneg
+  · have h_eq : Set.uIcc (-1 : ℝ) 1 = Set.Icc (-1 : ℝ) 1 :=
+      Set.uIcc_of_le (by norm_num)
+    rw [h_eq]
+    exact Real.continuous_arcsin.continuousOn
+  · intro x hx
+    have hx_eq :
+        Set.Ioo (min (-1 : ℝ) 1) (max (-1 : ℝ) 1) = Set.Ioo (-1 : ℝ) 1 := by
+      congr 1 <;> norm_num
+    rw [hx_eq] at hx
+    exact unitCircleAntideriv_hasDerivAt_Ioo hx
+  · intro x _hx
+    exact unitCircleIntegrand_nonneg x
+
+theorem unitCircleIntegral_eq_endpoint_gap :
+    (∫ x in (-1 : ℝ)..1, unitCircleIntegrand x) =
+      unitCircleAntideriv 1 - unitCircleAntideriv (-1) := by
+  apply intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le (by norm_num)
+  any_goals exact unitCircleIntegrand_intervalIntegrable
+  any_goals exact Real.continuous_arcsin.continuousOn
+  any_goals
+    intro x hx
+    exact unitCircleAntideriv_hasDerivAt_Ioo hx
+
+theorem circleIntegral_eq_unitCircleIntegral :
+    circleIntegral = ∫ x in (-1 : ℝ)..1, unitCircleIntegrand x := by
+  calc
+    circleIntegral = ∫ t in (0 : ℝ)..1, circleIntegrand t := rfl
+    _ = ∫ t in (0 : ℝ)..1, (2 : ℝ) • unitCircleIntegrand (2 * t + (-1)) := by
+          apply intervalIntegral.integral_congr
+          intro t ht
+          have ht' : t ∈ Set.Icc (0 : ℝ) 1 := by
+            have h : Set.uIcc (0 : ℝ) 1 = Set.Icc (0 : ℝ) 1 :=
+              Set.uIcc_of_le (by norm_num)
+            rwa [h] at ht
+          have h_val := circleIntegrand_eq_two_mul_unitCircleIntegrand_affine_Icc ht'
+          calc
+            circleIntegrand t = 2 * unitCircleIntegrand (2 * t - 1) := h_val
+            _ = (2 : ℝ) • unitCircleIntegrand (2 * t + (-1)) := rfl
+    _ = (2 : ℝ) • ∫ t in (0 : ℝ)..1, unitCircleIntegrand (2 * t + (-1)) := by
+          rw [intervalIntegral.integral_smul]
+    _ = ∫ x in (2 * 0 + (-1) : ℝ)..(2 * 1 + (-1)), unitCircleIntegrand x := by
+          exact intervalIntegral.smul_integral_comp_mul_add unitCircleIntegrand
+            (a := (0 : ℝ)) (b := (1 : ℝ)) (c := (2 : ℝ)) (d := (-1 : ℝ))
+    _ = ∫ x in (-1 : ℝ)..1, unitCircleIntegrand x := by
+          congr 1 <;> norm_num
+
+theorem circleIntegral_eq_pi :
+    circleIntegral = Real.pi := by
+  rw [circleIntegral_eq_unitCircleIntegral, unitCircleIntegral_eq_endpoint_gap]
+  rw [unitCircleAntideriv_endpoint_gap]
+
+theorem Omega_zero_eq_pi :
+    Omega 0 = Real.pi := by
+  exact Omega_zero_eq_pi_of_circleIntegral_eq_pi circleIntegral_eq_pi
+
+theorem Omega_circle_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi := by
+  exact Omega_circle_eq_pi_of_circleIntegral_eq_pi a circleIntegral_eq_pi
+
+def ellipsePerimeterModel (a b : ℝ) : ℝ :=
+  (a + b) * Omega (shapeParam a b)
+
+theorem Omega_shapeParam_symm (a b : ℝ) :
+    Omega (shapeParam a b) = Omega (shapeParam b a) := by
+  rw [shapeParam_symm]
+
+theorem Omega_shapeParam_self_eq_pi (a : ℝ) :
+    Omega (shapeParam a a) = Real.pi := by
+  simpa [shapeParam_self] using Omega_zero_eq_pi
+
+theorem ellipsePerimeterModel_symm (a b : ℝ) :
+    ellipsePerimeterModel a b = ellipsePerimeterModel b a := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_symm, add_comm]
+
+theorem ellipsePerimeterModel_of_shapeParam_eq_zero {a b : ℝ}
+    (h : shapeParam a b = 0) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  unfold ellipsePerimeterModel
+  rw [h, Omega_zero_eq_pi]
+
+theorem ellipsePerimeterModel_circle (a : ℝ) :
+    ellipsePerimeterModel a a = (2 * a) * Real.pi := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_self, Omega_zero_eq_pi]
+  ring
+
+theorem ellipsePerimeterModel_circle' (a : ℝ) :
+    ellipsePerimeterModel a a = 2 * Real.pi * a := by
+  rw [ellipsePerimeterModel_circle]
+  ring
+
+theorem shapeParam_nonneg_of_pos_sum {a b : ℝ}
+    (hsum : 0 < a + b) :
+    0 ≤ shapeParam a b := by
+  unfold shapeParam
+  exact div_nonneg (abs_nonneg (a - b)) (le_of_lt hsum)
+
+theorem shapeParam_le_one_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b ≤ 1 := by
+  unfold shapeParam
+  have hab : |a - b| ≤ a + b := by
+    refine abs_le.mpr ?_
+    constructor <;> nlinarith
+  have haux : |a - b| / (a + b) ≤ (a + b) / (a + b) := by
+    exact div_le_div_of_nonneg_right hab (le_of_lt hsum)
+  have hne : a + b ≠ 0 := ne_of_gt hsum
+  simpa [hne] using haux
+
+theorem shapeParam_mem_Icc_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact shapeParam_nonneg_of_pos_sum hsum
+  · exact shapeParam_le_one_of_nonneg ha hb hsum
+
+theorem shapeParam_eq_zero_iff_of_pos_sum {a b : ℝ}
+    (hsum : 0 < a + b) :
+    shapeParam a b = 0 ↔ a = b := by
+  constructor
+  · intro h
+    have hzero : |a - b| = 0 := by
+      by_contra hne
+      have hdivne : |a - b| / (a + b) ≠ 0 := by
+        exact div_ne_zero hne (ne_of_gt hsum)
+      exact hdivne (by simpa [shapeParam] using h)
+    have hab : a - b = 0 := abs_eq_zero.mp hzero
+    linarith
+  · intro h
+    simp [shapeParam, h]
+
+theorem shapeParam_eq_zero_iff_of_nonneg_of_pos_sum {a b : ℝ}
+    (_ha : 0 ≤ a) (_hb : 0 ≤ b) (hsum : 0 < a + b) :
+    shapeParam a b = 0 ↔ a = b := by
+  exact shapeParam_eq_zero_iff_of_pos_sum hsum
+
+theorem ellipsePerimeterModel_eq_sum_mul_pi_of_eq {a b : ℝ}
+    (h : a = b) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  subst h
+  rw [ellipsePerimeterModel_circle]
+  ring
+
+theorem ellipsePerimeterModel_eq_sum_mul_pi_of_shapeParam_zero {a b : ℝ}
+    (h : shapeParam a b = 0) :
+    ellipsePerimeterModel a b = (a + b) * Real.pi := by
+  exact ellipsePerimeterModel_of_shapeParam_eq_zero h
+
+theorem shapeParam_eq_sub_div_of_le {a b : ℝ}
+    (h : b ≤ a) :
+    shapeParam a b = (a - b) / (a + b) := by
+  unfold shapeParam
+  rw [abs_of_nonneg (sub_nonneg.mpr h)]
+
+theorem shapeParam_eq_rev_sub_div_of_le {a b : ℝ}
+    (h : a ≤ b) :
+    shapeParam a b = (b - a) / (a + b) := by
+  unfold shapeParam
+  rw [abs_of_nonpos (sub_nonpos.mpr h)]
+  congr 1
+  ring
+
+theorem shapeParam_right_zero_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    shapeParam a 0 = 1 := by
+  rw [shapeParam_eq_sub_div_of_le (by linarith)]
+  simp [ha.ne']
+
+theorem shapeParam_left_zero_of_pos {b : ℝ}
+    (hb : 0 < b) :
+    shapeParam 0 b = 1 := by
+  rw [shapeParam_eq_rev_sub_div_of_le (by linarith)]
+  simp [hb.ne']
+
+theorem ellipsePerimeterModel_right_zero_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    ellipsePerimeterModel a 0 = a * Omega 1 := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_right_zero_of_pos ha]
+  ring
+
+theorem ellipsePerimeterModel_left_zero_of_pos {b : ℝ}
+    (hb : 0 < b) :
+    ellipsePerimeterModel 0 b = b * Omega 1 := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_left_zero_of_pos hb]
+  ring
+
+theorem shapeParam_scale_of_pos {a b c : ℝ}
+    (hc : 0 < c) :
+    shapeParam (c * a) (c * b) = shapeParam a b := by
+  unfold shapeParam
+  have hsub : c * a - c * b = c * (a - b) := by
+    ring
+  have hadd : c * a + c * b = c * (a + b) := by
+    ring
+  rw [hsub, hadd, abs_mul, abs_of_nonneg (le_of_lt hc)]
+  by_cases hab : a + b = 0
+  · simp [hab]
+  · have hc0 : c ≠ 0 := ne_of_gt hc
+    field_simp [hc0, hab]
+
+theorem ellipsePerimeterModel_scale_of_pos {a b c : ℝ}
+    (hc : 0 < c) :
+    ellipsePerimeterModel (c * a) (c * b) = c * ellipsePerimeterModel a b := by
+  unfold ellipsePerimeterModel
+  rw [shapeParam_scale_of_pos hc]
+  ring
+
+def eccentricitySq (a b : ℝ) : ℝ :=
+  1 - (b / a) ^ 2
+
+theorem one_add_shapeParam_eq_two_mul_div_of_le {a b : ℝ}
+    (hba : b ≤ a) (hsum : a + b ≠ 0) :
+    1 + shapeParam a b = (2 * a) / (a + b) := by
+  rw [shapeParam_eq_sub_div_of_le hba]
+  field_simp [hsum]
+  ring
+
+theorem kappa_shapeParam_eq_one_sub_sq_div_sq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = 1 - (b / a) ^ 2 := by
+  have hsum : a + b ≠ 0 := by
+    linarith
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  rw [shapeParam_eq_sub_div_of_le hba, kappa]
+  have hden : 1 + (a - b) / (a + b) = (2 * a) / (a + b) := by
+    field_simp [hsum]
+    ring
+  rw [hden]
+  field_simp [ha0, hsum]
+  ring
+
+theorem kappa_shapeParam_eq_sub_sq_div_sq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = (a ^ 2 - b ^ 2) / a ^ 2 := by
+  rw [kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba]
+  have ha0 : a ≠ 0 := ne_of_gt ha
+  field_simp [ha0]
+
+theorem kappa_shapeParam_eq_eccentricitySq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    kappa (shapeParam a b) = eccentricitySq a b := by
+  unfold eccentricitySq
+  exact kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba
+
+theorem omegaIntegrand_shapeParam_eq_eccentricitySq_of_le {a b t : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    omegaIntegrand (shapeParam a b) t =
+      Real.sqrt (1 - eccentricitySq a b * t) /
+        Real.sqrt (t * (1 - t)) := by
+  unfold omegaIntegrand eccentricitySq
+  rw [kappa_shapeParam_eq_one_sub_sq_div_sq_of_le ha hb hba]
+
+theorem ellipsePerimeterModel_eq_majorAxisIntegral_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      2 * a * ∫ t in (0 : ℝ)..1, omegaIntegrand (shapeParam a b) t := by
+  have hsum : a + b ≠ 0 := by
+    linarith
+  unfold ellipsePerimeterModel Omega
+  rw [one_add_shapeParam_eq_two_mul_div_of_le hba hsum]
+  field_simp [hsum]
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      2 * a *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq a b * t) /
+            Real.sqrt (t * (1 - t)) := by
+  rw [ellipsePerimeterModel_eq_majorAxisIntegral_of_le ha hb hba]
+  apply congrArg (fun z : ℝ => 2 * a * z)
+  apply intervalIntegral.integral_congr
+  intro t ht
+  exact omegaIntegrand_shapeParam_eq_eccentricitySq_of_le ha hb hba
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_ge {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      2 * b *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq b a * t) /
+            Real.sqrt (t * (1 - t)) := by
+  rw [ellipsePerimeterModel_symm]
+  exact ellipsePerimeterModel_eq_classicalIntegral_of_le hb ha hab
+
+theorem eccentricitySq_nonneg_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    0 ≤ eccentricitySq a b := by
+  rw [← kappa_shapeParam_eq_eccentricitySq_of_le ha hb hba]
+  have hsum : 0 < a + b := by
+    linarith
+  exact kappa_nonneg (shapeParam_nonneg_of_pos_sum hsum)
+
+theorem eccentricitySq_le_one_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricitySq a b ≤ 1 := by
+  rw [← kappa_shapeParam_eq_eccentricitySq_of_le ha hb hba]
+  have hsum : 0 < a + b := by
+    linarith
+  exact kappa_le_one (shapeParam_nonneg_of_pos_sum hsum)
+
+theorem eccentricitySq_mem_Icc_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricitySq a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricitySq_nonneg_of_le ha hb hba
+  · exact eccentricitySq_le_one_of_le ha hb hba
+
+theorem eccentricitySq_self {a : ℝ} (ha : a ≠ 0) :
+    eccentricitySq a a = 0 := by
+  simp [eccentricitySq, ha]
+
+theorem ellipsePerimeterModel_eq_classicalIntegral_of_nonneg {a b : ℝ}
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      2 * max a b *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq (max a b) (min a b) * t) /
+            Real.sqrt (t * (1 - t)) := by
+  by_cases hba : b ≤ a
+  · have ha' : 0 < a := by
+      linarith
+    have hmax : max a b = a := max_eq_left hba
+    have hmin : min a b = b := min_eq_right hba
+    rw [hmax, hmin]
+    exact ellipsePerimeterModel_eq_classicalIntegral_of_le ha' hb hba
+  · have hab : a ≤ b := le_of_not_ge hba
+    have hb' : 0 < b := by
+      linarith
+    have hmax : max a b = b := max_eq_right hab
+    have hmin : min a b = a := min_eq_left hab
+    rw [hmax, hmin]
+    exact ellipsePerimeterModel_eq_classicalIntegral_of_ge ha hb' hab
+
+theorem ellipsePerimeterModel_circle_eq_classicalIntegral {a : ℝ}
+    (ha : 0 < a) :
+    ellipsePerimeterModel a a =
+      2 * a *
+        ∫ t in (0 : ℝ)..1,
+          Real.sqrt (1 - eccentricitySq a a * t) /
+            Real.sqrt (t * (1 - t)) := by
+  simpa using
+    ellipsePerimeterModel_eq_classicalIntegral_of_le ha (le_of_lt ha) le_rfl
+
+def eccentricity (a b : ℝ) : ℝ :=
+  Real.sqrt (eccentricitySq a b)
+
+theorem eccentricity_nonneg (a b : ℝ) :
+    0 ≤ eccentricity a b := by
+  unfold eccentricity
+  exact Real.sqrt_nonneg _
+
+theorem eccentricity_sq_eq_eccentricitySq_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ^ 2 = eccentricitySq a b := by
+  unfold eccentricity
+  simpa using Real.sq_sqrt (eccentricitySq_nonneg_of_le ha hb hba)
+
+theorem eccentricity_le_one_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ≤ 1 := by
+  have hsq : eccentricity a b ^ 2 = eccentricitySq a b := by
+    exact eccentricity_sq_eq_eccentricitySq_of_le ha hb hba
+  have h0 : 0 ≤ eccentricity a b := eccentricity_nonneg a b
+  have h1 : eccentricitySq a b ≤ 1 := by
+    exact eccentricitySq_le_one_of_le ha hb hba
+  nlinarith [hsq, h0, h1]
+
+theorem eccentricity_mem_Icc_of_le {a b : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    eccentricity a b ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact eccentricity_nonneg a b
+  · exact eccentricity_le_one_of_le ha hb hba
+
+theorem eccentricity_self_of_pos {a : ℝ}
+    (ha : 0 < a) :
+    eccentricity a a = 0 := by
+  unfold eccentricity
+  rw [eccentricitySq_self (ne_of_gt ha)]
+  simp
+
+def completeEllipticEParam (m : ℝ) : ℝ :=
+  (1 / 2) *
+    ∫ t in (0 : ℝ)..1,
+      Real.sqrt (1 - m * t) / Real.sqrt (t * (1 - t))
+
+theorem completeEllipticEParam_zero :
+    completeEllipticEParam 0 = Real.pi / 2 := by
+  unfold completeEllipticEParam
+  have h :
+      ∫ t in (0 : ℝ)..1,
+        Real.sqrt (1 - 0 * t) / Real.sqrt (t * (1 - t)) = circleIntegral := by
+    apply intervalIntegral.integral_congr
+    intro t ht
+    simp [circleIntegrand]
+  rw [h, circleIntegral_eq_pi]
+  ring
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticEParam (eccentricitySq a b) := by
+  rw [ellipsePerimeterModel_eq_classicalIntegral_of_le ha hb hba]
+  unfold completeEllipticEParam
+  ring
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticEParam (eccentricitySq b a) := by
+  rw [ellipsePerimeterModel_symm]
+  exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le hb ha hab
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticEParam (eccentricitySq (max a b) (min a b)) := by
+  by_cases hba : b ≤ a
+  · have ha' : 0 < a := by
+      linarith
+    rw [max_eq_left hba, min_eq_right hba]
+    exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+      ha' hb hba
+  · have hab : a ≤ b := le_of_not_ge hba
+    have hb' : 0 < b := by
+      linarith
+    rw [max_eq_right hab, min_eq_left hab]
+    exact ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge
+      ha hb' hab
+
+def completeEllipticEModulus (k : ℝ) : ℝ :=
+  completeEllipticEParam (k ^ 2)
+
+theorem completeEllipticEModulus_zero :
+    completeEllipticEModulus 0 = Real.pi / 2 := by
+  unfold completeEllipticEModulus
+  simpa using completeEllipticEParam_zero
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticEModulus (eccentricity a b) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le ha hb hba]
+  unfold completeEllipticEModulus
+  rw [eccentricity_sq_eq_eccentricitySq_of_le ha hb hba]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_ge
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticEModulus (eccentricity b a) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_ge ha hb hab]
+  unfold completeEllipticEModulus
+  rw [eccentricity_sq_eq_eccentricitySq_of_le hb ha hab]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_nonneg
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b) :
+    ellipsePerimeterModel a b =
+      4 * max a b *
+        completeEllipticEModulus (eccentricity (max a b) (min a b)) := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_nonneg
+    ha hb hsum]
+  unfold completeEllipticEModulus
+  have hmaxpos : 0 < max a b := by
+    by_cases hba : b ≤ a
+    · rw [max_eq_left hba]
+      linarith
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [max_eq_right hab]
+      linarith
+  have hminnonneg : 0 ≤ min a b := by
+    by_cases hba : b ≤ a
+    · rw [min_eq_right hba]
+      exact hb
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [min_eq_left hab]
+      exact ha
+  have hminlemax : min a b ≤ max a b := by
+    by_cases hba : b ≤ a
+    · rw [min_eq_right hba, max_eq_left hba]
+      exact hba
+    · have hab : a ≤ b := le_of_not_ge hba
+      rw [min_eq_left hab, max_eq_right hab]
+      exact hab
+  rw [eccentricity_sq_eq_eccentricitySq_of_le hmaxpos hminnonneg hminlemax]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEParam_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticEParam 0 := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEParam_of_le
+    ha (le_of_lt ha) le_rfl]
+  rw [eccentricitySq_self (ne_of_gt ha)]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEModulus_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticEModulus 0 := by
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le
+    ha (le_of_lt ha) le_rfl]
+  rw [eccentricity_self_of_pos ha]
+
+def completeEllipticETrig (k : ℝ) : ℝ :=
+  ∫ θ in (0 : ℝ)..(Real.pi / 2),
+    Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2)
+
+theorem completeEllipticETrig_zero :
+    completeEllipticETrig 0 = Real.pi / 2 := by
+  unfold completeEllipticETrig
+  have h :
+      (∫ θ in (0 : ℝ)..(Real.pi / 2),
+        Real.sqrt (1 - 0 ^ 2 * Real.sin θ ^ 2)) =
+      ∫ θ in (0 : ℝ)..(Real.pi / 2), (1 : ℝ) := by
+    apply intervalIntegral.integral_congr
+    intro θ hθ
+    simp
+  rw [h, intervalIntegral.integral_const]
+  ring
+
+def trigSubstitutionTarget (k : ℝ) : Prop :=
+  completeEllipticEModulus k = completeEllipticETrig k
+
+theorem trigSubstitutionTarget_zero :
+    trigSubstitutionTarget 0 := by
+  unfold trigSubstitutionTarget
+  rw [completeEllipticEModulus_zero, completeEllipticETrig_zero]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_le_of_substitution
+    {a b : ℝ} (ha : 0 < a) (hb : 0 ≤ b) (hba : b ≤ a)
+    (hsub : trigSubstitutionTarget (eccentricity a b)) :
+    ellipsePerimeterModel a b =
+      4 * a * completeEllipticETrig (eccentricity a b) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_le ha hb hba]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_ge_of_substitution
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b)
+    (hsub : trigSubstitutionTarget (eccentricity b a)) :
+    ellipsePerimeterModel a b =
+      4 * b * completeEllipticETrig (eccentricity b a) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_ge ha hb hab]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_eq_four_mul_completeEllipticETrig_of_nonneg_of_substitution
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hsum : 0 < a + b)
+    (hsub : trigSubstitutionTarget (eccentricity (max a b) (min a b))) :
+    ellipsePerimeterModel a b =
+      4 * max a b * completeEllipticETrig (eccentricity (max a b) (min a b)) := by
+  unfold trigSubstitutionTarget at hsub
+  rw [ellipsePerimeterModel_eq_four_mul_completeEllipticEModulus_of_nonneg ha hb hsum]
+  rw [hsub]
+
+theorem ellipsePerimeterModel_circle_eq_four_mul_completeEllipticETrig_zero
+    {a : ℝ} (ha : 0 < a) :
+    ellipsePerimeterModel a a = 4 * a * completeEllipticETrig 0 := by
+  rw [ellipsePerimeterModel_circle_eq_four_mul_completeEllipticEModulus_zero ha]
+  rw [completeEllipticEModulus_zero, completeEllipticETrig_zero]
+
+def sinSqSubst (θ : ℝ) : ℝ :=
+  Real.sin θ ^ 2
+
+theorem sinSqSubst_nonneg (θ : ℝ) :
+    0 ≤ sinSqSubst θ := by
+  unfold sinSqSubst
+  exact sq_nonneg (Real.sin θ)
+
+theorem sinSqSubst_le_one (θ : ℝ) :
+    sinSqSubst θ ≤ 1 := by
+  have hs : |Real.sin θ| ≤ 1 := by
+    simpa using Real.abs_sin_le_one θ
+  have hs1 : -1 ≤ Real.sin θ := (abs_le.mp hs).1
+  have hs2 : Real.sin θ ≤ 1 := (abs_le.mp hs).2
+  unfold sinSqSubst
+  nlinarith
+
+theorem sinSqSubst_mem_Icc_zero_one (θ : ℝ) :
+    sinSqSubst θ ∈ Set.Icc (0 : ℝ) 1 := by
+  constructor
+  · exact sinSqSubst_nonneg θ
+  · exact sinSqSubst_le_one θ
+
+theorem one_sub_sinSqSubst_eq_cos_sq (θ : ℝ) :
+    1 - sinSqSubst θ = Real.cos θ ^ 2 := by
+  unfold sinSqSubst
+  nlinarith [Real.sin_sq_add_cos_sq θ]
+
+theorem sqrt_sinSqSubst_eq_abs_sin (θ : ℝ) :
+    Real.sqrt (sinSqSubst θ) = |Real.sin θ| := by
+  unfold sinSqSubst
+  simpa using Real.sqrt_sq_eq_abs (Real.sin θ)
+
+theorem sqrt_one_sub_sinSqSubst_eq_abs_cos (θ : ℝ) :
+    Real.sqrt (1 - sinSqSubst θ) = |Real.cos θ| := by
+  rw [one_sub_sinSqSubst_eq_cos_sq]
+  simpa using Real.sqrt_sq_eq_abs (Real.cos θ)
+
+theorem sin_nonneg_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    0 ≤ Real.sin θ := by
+  have hmem : θ ∈ Set.Icc (0 : ℝ) Real.pi := by
+    constructor
+    · exact hθ.1
+    · nlinarith [hθ.2, Real.pi_pos]
+  exact Real.sin_nonneg_of_mem_Icc hmem
+
+theorem cos_nonneg_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    0 ≤ Real.cos θ := by
+  have hlow : -(Real.pi / 2) ≤ (0 : ℝ) := by
+    nlinarith [Real.pi_pos]
+  have hmem : θ ∈ Set.Icc (-(Real.pi / 2)) (Real.pi / 2) := by
+    constructor
+    · exact le_trans hlow hθ.1
+    · exact hθ.2
+  exact Real.cos_nonneg_of_mem_Icc hmem
+
+theorem sqrt_sinSqSubst_eq_sin_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ) = Real.sin θ := by
+  rw [sqrt_sinSqSubst_eq_abs_sin]
+  rw [abs_of_nonneg (sin_nonneg_of_mem_Icc_zero_pi_div_two hθ)]
+
+theorem sqrt_one_sub_sinSqSubst_eq_cos_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (1 - sinSqSubst θ) = Real.cos θ := by
+  rw [sqrt_one_sub_sinSqSubst_eq_abs_cos]
+  rw [abs_of_nonneg (cos_nonneg_of_mem_Icc_zero_pi_div_two hθ)]
+
+theorem sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+    {θ : ℝ} (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+      Real.sin θ * Real.cos θ := by
+  rw [Real.sqrt_mul (sinSqSubst_nonneg θ)]
+  rw [sqrt_sinSqSubst_eq_sin_of_mem_Icc_zero_pi_div_two hθ]
+  rw [sqrt_one_sub_sinSqSubst_eq_cos_of_mem_Icc_zero_pi_div_two hθ]
+
+theorem sinSqSubst_zero :
+    sinSqSubst 0 = 0 := by
+  simp [sinSqSubst]
+
+theorem sinSqSubst_pi_div_two :
+    sinSqSubst (Real.pi / 2) = 1 := by
+  simp [sinSqSubst]
+
+theorem sinSqSubst_deriv (θ : ℝ) :
+    HasDerivAt sinSqSubst (2 * Real.sin θ * Real.cos θ) θ := by
+  unfold sinSqSubst
+  have h := (Real.hasDerivAt_sin θ).pow 2
+  simpa [mul_comm, mul_left_comm, mul_assoc] using h
+
+theorem elliptic_integrand_subst_eq_trig_on_Ioo (k : ℝ) :
+    Set.EqOn
+      (fun θ =>
+        (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+          (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+          (2 * Real.sin θ * Real.cos θ))
+      (fun θ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      (Set.Ioo (0 : ℝ) (Real.pi / 2)) := by
+  intro θ hθ
+  have hθ' : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2) := by
+    exact ⟨le_of_lt hθ.1, le_of_lt hθ.2⟩
+  have hsin : 0 < Real.sin θ := by
+    have hmem : θ ∈ Set.Ioo (0 : ℝ) Real.pi := by
+      constructor
+      · exact hθ.1
+      · nlinarith [hθ.2, Real.pi_pos]
+    exact Real.sin_pos_of_mem_Ioo hmem
+  have hcos : 0 < Real.cos θ := by
+    have hmem : θ ∈ Set.Ioo (-(Real.pi / 2)) (Real.pi / 2) := by
+      constructor
+      · have hneg : -(Real.pi / 2) < (0 : ℝ) := by
+          nlinarith [Real.pi_pos]
+        exact lt_trans hneg hθ.1
+      · exact hθ.2
+    exact Real.cos_pos_of_mem_Ioo hmem
+  have hden :
+      2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+        2 * Real.sin θ * Real.cos θ := by
+    calc
+      2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ))
+          = 2 * (Real.sin θ * Real.cos θ) := by
+              rw
+                [sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+                  hθ']
+      _ = 2 * Real.sin θ * Real.cos θ := by
+            ring
+  calc
+    (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+      (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+        (2 * Real.sin θ * Real.cos θ)
+      =
+      (Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+        (2 * Real.sin θ * Real.cos θ)) *
+          (2 * Real.sin θ * Real.cos θ) := by
+            rw [hden]
+    _ = Real.sqrt (1 - k ^ 2 * sinSqSubst θ) := by
+          have hmul : 2 * Real.sin θ * Real.cos θ ≠ 0 := by
+            exact mul_ne_zero (mul_ne_zero (by norm_num) hsin.ne') hcos.ne'
+          exact div_mul_cancel₀ _ hmul
+    _ = Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2) := by
+          simp [sinSqSubst]
+
+theorem sinSqSubst_mem_Icc_zero_one_of_mem_Icc_zero_pi_div_two {θ : ℝ}
+    (_ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    sinSqSubst θ ∈ Set.Icc (0 : ℝ) 1 := by
+  exact sinSqSubst_mem_Icc_zero_one θ
+
+theorem sinSqSubst_mapsTo_Icc_zero_pi_div_two :
+    MapsTo sinSqSubst (Set.Icc (0 : ℝ) (Real.pi / 2)) (Set.Icc (0 : ℝ) 1) := by
+  intro θ hθ
+  exact sinSqSubst_mem_Icc_zero_one_of_mem_Icc_zero_pi_div_two hθ
+
+theorem sinSqSubst_left_endpoint :
+    sinSqSubst 0 = 0 := by
+  exact sinSqSubst_zero
+
+theorem sinSqSubst_right_endpoint :
+    sinSqSubst (Real.pi / 2) = 1 := by
+  exact sinSqSubst_pi_div_two
+
+theorem sin_pos_of_mem_Ioo_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < Real.sin θ := by
+  have hmem : θ ∈ Set.Ioo (0 : ℝ) Real.pi := by
+    constructor
+    · exact hθ.1
+    · nlinarith [hθ.2, Real.pi_pos]
+  exact Real.sin_pos_of_mem_Ioo hmem
+
+theorem cos_pos_of_mem_Ioo_zero_pi_div_two {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < Real.cos θ := by
+  have hmem : θ ∈ Set.Ioo (-(Real.pi / 2)) (Real.pi / 2) := by
+    constructor
+    · have hneg : -(Real.pi / 2) < (0 : ℝ) := by
+        nlinarith [Real.pi_pos]
+      exact lt_trans hneg hθ.1
+    · exact hθ.2
+  exact Real.cos_pos_of_mem_Ioo hmem
+
+theorem jacobian_sinSqSubst (θ : ℝ) :
+    HasDerivAt sinSqSubst (2 * Real.sin θ * Real.cos θ) θ := by
+  exact sinSqSubst_deriv θ
+
+theorem jacobian_sinSqSubst_pos_on_Ioo {θ : ℝ}
+    (hθ : θ ∈ Set.Ioo (0 : ℝ) (Real.pi / 2)) :
+    0 < 2 * Real.sin θ * Real.cos θ := by
+  have hsin : 0 < Real.sin θ := by
+    exact sin_pos_of_mem_Ioo_zero_pi_div_two hθ
+  have hcos : 0 < Real.cos θ := by
+    exact cos_pos_of_mem_Ioo_zero_pi_div_two hθ
+  nlinarith
+
+theorem denominator_subst_eq_sin_mul_cos_on_Icc {θ : ℝ}
+    (hθ : θ ∈ Set.Icc (0 : ℝ) (Real.pi / 2)) :
+    Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)) =
+      Real.sin θ * Real.cos θ := by
+  exact
+    sqrt_sinSqSubst_mul_one_sub_sinSqSubst_eq_sin_mul_cos_of_mem_Icc_zero_pi_div_two
+      hθ
+
+theorem elliptic_integrand_subst_eq_two_mul_trig_on_Ioo (k : ℝ) :
+    Set.EqOn
+      (fun θ =>
+        2 *
+          ((Real.sqrt (1 - k ^ 2 * sinSqSubst θ) /
+            (2 * Real.sqrt (sinSqSubst θ * (1 - sinSqSubst θ)))) *
+            (2 * Real.sin θ * Real.cos θ)))
+      (fun θ => 2 * Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      (Set.Ioo (0 : ℝ) (Real.pi / 2)) := by
+  intro θ hθ
+  exact congrArg (fun x : ℝ => 2 * x)
+    (elliptic_integrand_subst_eq_trig_on_Ioo k hθ)
+
+theorem completeEllipticETrig_integrand_continuous (k : ℝ) :
+    Continuous (fun θ : ℝ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2)) := by
+  exact Real.continuous_sqrt.comp
+    (continuous_const.sub (continuous_const.mul (Real.continuous_sin.pow 2)))
+
+theorem completeEllipticETrig_integrand_intervalIntegrable (k : ℝ) :
+    IntervalIntegrable
+      (fun θ : ℝ => Real.sqrt (1 - k ^ 2 * Real.sin θ ^ 2))
+      MeasureTheory.volume
+      (0 : ℝ)
+      (Real.pi / 2) := by
+  exact (completeEllipticETrig_integrand_continuous k).intervalIntegrable _ _
+
+theorem omega_denominator_radicand_nonneg {t : ℝ}
+    (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ t * (1 - t) := by
+  nlinarith
+
+theorem omega_denominator_sqrt_pos {t : ℝ}
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 < Real.sqrt (t * (1 - t)) := by
+  apply Real.sqrt_pos.2
+  nlinarith [ht.1, ht.2]
+
+theorem completeEllipticEParam_numerator_radicand_nonneg
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (_ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    0 ≤ 1 - k ^ 2 * t := by
+  have hk_sq_le : k ^ 2 ≤ 1 := by
+    nlinarith
+  have hkt_le : k ^ 2 * t ≤ 1 := by
+    nlinarith
+  nlinarith
+
+theorem completeEllipticEParam_integrand_nonneg_on_Ioo
+    {k t : ℝ} (_hk0 : 0 ≤ k) (_hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 ≤
+      Real.sqrt (1 - k ^ 2 * t) /
+        Real.sqrt (t * (1 - t)) := by
+  have hnum :
+      0 ≤ Real.sqrt (1 - k ^ 2 * t) := by
+    exact Real.sqrt_nonneg _
+  have hden :
+      0 < Real.sqrt (t * (1 - t)) := by
+    exact omega_denominator_sqrt_pos ht
+  exact div_nonneg hnum (le_of_lt hden)
+
+theorem completeEllipticEParam_numerator_sqrt_le_one
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
+    Real.sqrt (1 - k ^ 2 * t) ≤ 1 := by
+  have hrad_nonneg : 0 ≤ 1 - k ^ 2 * t := by
+    exact completeEllipticEParam_numerator_radicand_nonneg hk0 hk1 ht0 ht1
+  have hsq :
+      (Real.sqrt (1 - k ^ 2 * t)) ^ 2 ≤ (1 : ℝ) ^ 2 := by
+    rw [Real.sq_sqrt hrad_nonneg]
+    nlinarith
+  have hsqrt_nonneg : 0 ≤ Real.sqrt (1 - k ^ 2 * t) := by
+    exact Real.sqrt_nonneg _
+  nlinarith
+
+theorem completeEllipticEParam_integrand_le_circleIntegrand_on_Ioo
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) ≤
+      circleIntegrand t := by
+  have hnum_le : Real.sqrt (1 - k ^ 2 * t) ≤ 1 := by
+    exact completeEllipticEParam_numerator_sqrt_le_one
+      hk0 hk1 (le_of_lt ht.1) (le_of_lt ht.2)
+  have hden_nonneg : 0 ≤ Real.sqrt (t * (1 - t)) := by
+    exact Real.sqrt_nonneg _
+  have hdiv :
+      Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) ≤
+        1 / Real.sqrt (t * (1 - t)) := by
+    exact div_le_div_of_nonneg_right hnum_le hden_nonneg
+  simpa [circleIntegrand] using hdiv
+
+theorem completeEllipticEParam_integrand_eq_num_mul_circleIntegrand
+    (k t : ℝ) :
+    Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) =
+      Real.sqrt (1 - k ^ 2 * t) * circleIntegrand t := by
+  unfold circleIntegrand
+  ring
+
+theorem completeEllipticEParam_integrand_nonneg_on_Ioo'
+    {k t : ℝ} (hk0 : 0 ≤ k) (hk1 : k ≤ 1)
+    (ht : t ∈ Set.Ioo (0 : ℝ) 1) :
+    0 ≤ Real.sqrt (1 - k ^ 2 * t) / Real.sqrt (t * (1 - t)) := by
+  exact completeEllipticEParam_integrand_nonneg_on_Ioo hk0 hk1 ht
+
+end EllipseOmega

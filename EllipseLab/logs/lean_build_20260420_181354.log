@@ -1,0 +1,32 @@
+==================================================
+LEAN DIAGNOSTIC BUILD LOG
+==================================================
+Timestamp: 2026-04-20 18:13:54.23
+ProjectRoot: E:\Lean\EllipseLab
+BuildTarget: EllipseLab.Shape
+===== where =====
+
+> where.exe lean
+
+> where.exe lake
+
+> where.exe elan
+===== versions =====
+
+> lean --version
+
+> lake --version
+
+> elan --version
+===== lean-toolchain =====
+
+> type lean-toolchain
+===== lake env =====
+
+> lake env
+===== lake build =====
+
+> lake build EllipseLab.Shape -v --log-level=trace --no-ansi
+===== result =====
+ExitCode: 1
+LogFile: E:\Lean\EllipseLab\logs\lean_build_20260420_181354.log
