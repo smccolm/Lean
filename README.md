@@ -12,8 +12,7 @@ Lean/
 ├── EllipseLab/          # Development laboratory and step-by-step proof iterations
 ├── Compacted Graphs/    # Subproject formalizing compactified graphs and cylindrical topology
 ├── visualizer/          # Reusable 3D WebGL & 2D Python interactive visualization suite
-├── Article/             # Formal paper drafts and document exports
-└── logs/                # Sequential project execution logs (#001 - #013)
+└── Article/             # Formal paper drafts and document exports
 ```
 
 ---
@@ -64,8 +63,3 @@ lake build
 cd "../Compacted Graphs"
 lake build
 ```
-
----
-
-## 📜 Project Logging
-All development steps, prompts, file updates, and verification outputs are tracked in sequence under `logs/#<seq>_<timestamp>_<topic>.md`.
