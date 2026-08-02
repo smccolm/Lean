@@ -3,11 +3,11 @@ echo ====================================================================
 echo  Lean Workspace - GitHub Push Script (https://github.com/smccolm/Lean)
 echo ====================================================================
 echo.
-echo Staging all recent workspace files, Lean code, and logs...
+echo Staging workspace files...
 git add .
 
 echo Committing workspace progress...
-git commit -m "Workspace update: Main README, Compacted Graphs, visualizer, and project logs"
+git commit -m "Untrack logs directory from GitHub repository"
 
 echo.
 echo Pushing to GitHub (origin/main)...
