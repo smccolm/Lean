@@ -18,7 +18,9 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/Asymptotics.lean`](RiemannZeta/GuthMaynard/Asymptotics.lean)**: Asymptotic relations matching the Guth-Maynard epsilon-power convention $T^{o(1)}$, equipped with `EpsilonPowerBound` defining properties.
 - **[`RiemannZeta/GuthMaynard/Separated.lean`](RiemannZeta/GuthMaynard/Separated.lean)**: Properties and translation symmetries for bounded 1-separated sets over explicit frequency intervals.
 - **[`RiemannZeta/GuthMaynard/Statements.lean`](RiemannZeta/GuthMaynard/Statements.lean)**: Exact kernel-checked propositions mapping the Guth-Maynard Large Values Estimate and Zero-Density exponents over polynomial bases.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 33 core declarations.
+- **[`RiemannZeta/GuthMaynard/ZeroCount.lean`](RiemannZeta/GuthMaynard/ZeroCount.lean)**: Interface tying exact multiplicity counts of `riemannZeta` zeros to topological regions, parameterized finiteness, and dyadic reduction properties.
+- **[`RiemannZeta/GuthMaynard/ExponentArithmetic.lean`](RiemannZeta/GuthMaynard/ExponentArithmetic.lean)**: Zero-`sorry` formulation of exact rational inequalities, integer parameter bounds, and rational exponent limits utilized in Section 13.1.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 42 core declarations.
 
 ---
 
@@ -30,7 +32,7 @@ lake build
 lake env lean RiemannZeta/Audit.lean
 ```
 
-All 33 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
+All 42 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
 
 ---
 

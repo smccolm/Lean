@@ -7,6 +7,8 @@ import RiemannZeta.CrossNormProduct
 import RiemannZeta.GuthMaynard.Asymptotics
 import RiemannZeta.GuthMaynard.Separated
 import RiemannZeta.GuthMaynard.Statements
+import RiemannZeta.GuthMaynard.ZeroCount
+import RiemannZeta.GuthMaynard.ExponentArithmetic
 
 open RiemannZeta
 open RiemannZeta.GuthMaynard
@@ -62,3 +64,16 @@ open RiemannZeta.GuthMaynard
 #print axioms GuthMaynardLargeValues
 #print axioms GuthMaynardZeroDensity
 #print axioms CombinedZeroDensity
+
+-- Zero Count Interface
+#print axioms ZetaZeroCountModel
+#print axioms zerosInRect
+#print axioms zeroCountRect
+#print axioms N
+#print axioms DyadicReductionProp
+
+-- Exponent Arithmetic
+#print axioms denom_pos
+#print axioms alpha
+#print axioms final_exponent
+#print axioms exists_k_bound
