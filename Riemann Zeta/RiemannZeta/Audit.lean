@@ -12,6 +12,7 @@ import RiemannZeta.GuthMaynard.ZeroDetector
 import RiemannZeta.GuthMaynard.Transfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.PolynomialPowers
+import RiemannZeta.GuthMaynard.InghamBound
 
 open RiemannZeta
 open RiemannZeta.GuthMaynard
@@ -94,3 +95,7 @@ open RiemannZeta.GuthMaynard
 
 -- Polynomial Powers
 #print axioms PolynomialPowerModel
+
+-- Ingham Bound
+#print axioms InghamZeroDensity
+#print axioms CombinedZeroDensityTransfer

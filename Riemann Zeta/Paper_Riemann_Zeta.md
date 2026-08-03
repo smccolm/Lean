@@ -154,7 +154,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Core Declarations & Mathlib Dependencies
 
-All 50 canonical declarations across 13 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
+All 52 canonical declarations across 14 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
 
 | Theorem Name | Lean 4 Declaration | Submodule File | Mathlib Basis / Dependency |
 | :--- | :--- | :--- | :--- |

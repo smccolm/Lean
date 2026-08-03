@@ -22,8 +22,9 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/ExponentArithmetic.lean`](RiemannZeta/GuthMaynard/ExponentArithmetic.lean)**: Zero-`sorry` formulation of exact rational inequalities, integer parameter bounds, and rational exponent limits utilized in Section 13.1.
 - **[`RiemannZeta/GuthMaynard/ZeroDetector.lean`](RiemannZeta/GuthMaynard/ZeroDetector.lean)**: Abstract formalization of the Zero Detector Dirichlet polynomial, Type I classification, and Type II bounds hypotheses.
 - **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Formulation of Dirichlet polynomial exponentiation and relations between large base values and powered values.
+- **[`RiemannZeta/GuthMaynard/InghamBound.lean`](RiemannZeta/GuthMaynard/InghamBound.lean)**: Statement of the Ingham bound hypothesis and definition of the combined zero-density transfer (F-12).
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 50 core declarations.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 52 core declarations.
 
 ---
 
@@ -35,7 +36,7 @@ lake build
 lake env lean RiemannZeta/Audit.lean
 ```
 
-All 50 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
+All 52 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
 
 ---
 
