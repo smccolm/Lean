@@ -131,9 +131,30 @@ $$\zeta(1 + i t) \neq 0$$
 
 ---
 
-# 6. Audited Core Declarations & Mathlib Dependencies
+# 6. Guth-Maynard Target Infrastructure & Formal Statements
 
-All 21 canonical declarations across 5 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
+The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). As a first step, we have defined the exact target propositions (without yet providing their proofs). These kernel-checked `Prop` signatures form the rigorous interface for future verification.
+
+## Theorem 11 (Large Values Estimate Target Statement)
+**Status**: Unproved (Target Specification).
+For any $\varepsilon > 0$, there exists a constant $C$ such that for a sequence $b_n \in \mathbb{C}$ with $\|b_n\| \le 1$, and a $1$-separated set $W \subset [0, T]$ satisfying $\|D_N(t)\| \ge V$ for all $t \in W$, the cardinality is bounded by:
+$$ |W| \le C T^\varepsilon \left( N^2 V^{-2} + N^{18/5} V^{-4} + T N^{12/5} V^{-4} \right) $$
+
+## Theorem 12 (Zero Density Deduction Target Statement)
+**Status**: Unproved (Target Specification).
+Assuming an undefined zero-counting function $N(\sigma, T)$, for $\sigma \ge 7/10$:
+$$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{15(1-\sigma)}{3+5\sigma} + \varepsilon}\right) $$
+
+## Corollary 1 (Combined Zero Density Exponent)
+**Status**: Unproved (Target Specification).
+Combining with assumed Ingham bounds for $\sigma \le 7/10$, for $\sigma \ge 1/2$:
+$$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\right) $$
+
+---
+
+# 7. Audited Core Declarations & Mathlib Dependencies
+
+All 33 canonical declarations across 8 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
 
 | Theorem Name | Lean 4 Declaration | Submodule File | Mathlib Basis / Dependency |
 | :--- | :--- | :--- | :--- |
@@ -158,10 +179,22 @@ All 21 canonical declarations across 5 mathematical submodules in package `Riema
 | Hardy Neg Norm | `hardyZ_neg_norm` | `HardyZ.lean` | `hardyZ_norm_eq_riemannZeta_norm`, `h_symm` |
 | 1-Line Nonvanishing | `riemannZeta_ne_zero_on_one_line` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` |
 | Totalized Nonvanishing | `riemannZeta_ne_zero_totalized` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` |
+| Epsilon-Power Asymptotics | `EpsilonPowerBound` | `GuthMaynard/Asymptotics.lean` | `IsBigO` |
+| Epsilon-Power Refl | `EpsilonPowerBound.refl` | `GuthMaynard/Asymptotics.lean` | `IsBigO.of_bound` |
+| Epsilon-Power Trans | `EpsilonPowerBound.trans` | `GuthMaynard/Asymptotics.lean` | `IsBigO.mul` |
+| Separated Sets | `IsSeparated` | `GuthMaynard/Separated.lean` | `Metric.dist` |
+| Target Interval | `InTargetInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
+| Base Interval | `InBaseInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
+| Set Translation | `translateSet` | `GuthMaynard/Separated.lean` | `Finset.image` |
+| Separated Translation | `isSeparated_translate` | `GuthMaynard/Separated.lean` | `dist_sub_sub` |
+| Interval Translation | `inBaseInterval_translate` | `GuthMaynard/Separated.lean` | `Set.mem_Icc` |
+| Large Values Estimate | `GuthMaynardLargeValues` | `GuthMaynard/Statements.lean` | Target Specification |
+| Zero-Density Deduction | `GuthMaynardZeroDensity` | `GuthMaynard/Statements.lean` | Target Specification |
+| Combined Exponent | `CombinedZeroDensity` | `GuthMaynard/Statements.lean` | Target Specification |
 
 ---
 
-# 7. Reproducibility & Verification Metadata
+# 8. Reproducibility & Verification Metadata
 
 The formalization relies on the following exact environment:
 - **Lean Toolchain**: `leanprover/lean4:v4.30.0-rc2`
@@ -172,7 +205,7 @@ The formalization relies on the following exact environment:
 
 ---
 
-# 8. Conclusion & Future Work
+# 9. Conclusion & Future Work
 
 We have constructed a machine-checked Lean 4 library of finite Dirichlet polynomial conjugation identities, coordinate packaging for Mathlib's completed Zeta functional equation, and a complex-valued Hardy-type phase normalization.
 
@@ -182,7 +215,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 
 ---
 
-# 9. References
+# 10. References
 
 1. Larry Guth and James Maynard, *"New large value estimates for Dirichlet polynomials,"* **Annals of Mathematics**, vol. 203, no. 2, pp. 623-675, 2026. DOI: 10.4007/annals.2026.203.2.6.
 2. David Loeffler and Michael Stoll, *"Formalizing zeta and L-functions in Lean,"* **Annals of Formalized Mathematics**, vol. 1, 2025. DOI: 10.46298/afm.15328. arXiv:2503.00959.

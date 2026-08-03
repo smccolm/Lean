@@ -15,7 +15,10 @@ Author: **S. McColm**
 - **[`RiemannZeta/CompletedZetaSymmetry.lean`](RiemannZeta/CompletedZetaSymmetry.lean)**: Coordinate representation of Mathlib's completed Riemann Zeta functional equation $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ and fourfold zero orbit under two assumed conjugate zeros.
 - **[`RiemannZeta/HardyZ.lean`](RiemannZeta/HardyZ.lean)**: Classical Riemann-Siegel theta angle $\theta(t)$, complex-valued Hardy-type phase normalization $H(t) = e^{i\theta(t)}\zeta(1/2+it)$, norm equivalence $\|H(t)\| = \|\zeta(1/2+it)\|$, zero equivalence $H(t)=0 \iff \zeta(1/2+it)=0$, and conditional norm parameter negation symmetry $\|H(-t)\| = \|H(t)\|$.
 - **[`RiemannZeta/Nonvanishing.lean`](RiemannZeta/Nonvanishing.lean)**: Classical non-vanishing along $\mathrm{Re}(s) = 1$ for $t \neq 0$ excluding the pole at $s = 1$, with Mathlib totalization disclosure.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 21 core declarations.
+- **[`RiemannZeta/GuthMaynard/Asymptotics.lean`](RiemannZeta/GuthMaynard/Asymptotics.lean)**: Asymptotic relations matching the Guth-Maynard epsilon-power convention $T^{o(1)}$, equipped with `EpsilonPowerBound` defining properties.
+- **[`RiemannZeta/GuthMaynard/Separated.lean`](RiemannZeta/GuthMaynard/Separated.lean)**: Properties and translation symmetries for bounded 1-separated sets over explicit frequency intervals.
+- **[`RiemannZeta/GuthMaynard/Statements.lean`](RiemannZeta/GuthMaynard/Statements.lean)**: Exact kernel-checked propositions mapping the Guth-Maynard Large Values Estimate and Zero-Density exponents over polynomial bases.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 33 core declarations.
 
 ---
 
@@ -27,7 +30,7 @@ lake build
 lake env lean RiemannZeta/Audit.lean
 ```
 
-All 21 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
+All 33 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
 
 ---
 
@@ -38,6 +41,7 @@ All 21 audited declarations depend exclusively on standard Lean 4 axioms (`prope
   2. *Coordinate Wrappers*: Packaging Mathlib's `completedRiemannZeta_one_sub` and `riemannZeta_ne_zero_of_one_le_re` into coordinate representations.
   3. *Complex Phase Normalization*: Formalizing $H(t) = e^{i \theta(t)} \zeta(1/2 + i t)$ as a complex-valued phase normalization ($H : \mathbb{R} \to \mathbb{C}$).
   4. *Inherited Analytic Foundations*: Functional equation and boundary non-vanishing inherited directly from Mathlib 4.
+  5. *Guth-Maynard Target Infrastructure*: Statement formulations and explicit asymptotic machinery required for the zero-density deduction sequence.
 
 - **AI Tool Disclosure**: All Lean 4 proof developments, manuscript drafts, and verification steps were assisted by AI coding agents (Antigravity/Gemini). S. McColm performed overall mathematical oversight, project specification, design review, and accepts full responsibility for the mathematical content.
 
