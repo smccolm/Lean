@@ -7,11 +7,11 @@ echo Staging workspace files...
 git add .
 
 echo Committing workspace progress...
-git commit -m "Complete resolution of all 46 re-audit critiques: refactored module names, verified no-sorry audit, updated CI workflow, corrected citations, and exported Paper_Riemann_Zeta_v7.docx"
+git commit -m "Update git author history and repository files"
 
 echo.
-echo Pushing to GitHub (origin/main)...
-git push origin main
+echo Pushing to GitHub (origin/main --force)...
+git push origin main --force
 
 echo.
 echo ====================================================================
