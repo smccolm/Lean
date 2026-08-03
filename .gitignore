@@ -1,8 +1,21 @@
-/.lake
-**/.lake
-.antigravity/
-__pycache__/
-*.pyc
-directory_tree.txt
+# Lean 4 & Lake build directories
+.lake/
+build/
 logs/
-**/logs/
+*.olean
+*.ilean
+*.c
+*.log
+
+# Temporary Word & OS files
+~$*.docx
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+
+# Scratch files
+scratch/
+rewrite_env.sh
+review_text.txt
+reaudit_text.txt

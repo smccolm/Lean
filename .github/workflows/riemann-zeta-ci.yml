@@ -36,12 +36,12 @@ jobs:
           set -o pipefail
           lake env lean RiemannZeta/Audit.lean 2>&1 | tee audit.log
           if grep -Fq "sorryAx" audit.log; then
-            echo "sorryAx dependency detected"
+            echo "ERROR: sorryAx dependency detected in core declarations!"
             exit 1
           fi
 
-      - name: Upload audit log
+      - name: Upload audit log artifact
         uses: actions/upload-artifact@v4
         with:
-          name: riemann-zeta-audit
+          name: riemann-zeta-audit-log
           path: "Riemann Zeta/audit.log"

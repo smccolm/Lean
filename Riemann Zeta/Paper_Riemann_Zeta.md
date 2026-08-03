@@ -1,9 +1,9 @@
 ---
-title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Hardy Z-Function Identities in Lean 4"
+title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Complex-Valued Hardy-Type Normalization Identities in Lean 4"
 author: "S. McColm"
-date: "August 2, 2026"
+date: "August 3, 2026"
 abstract: |
-  We present a Lean 4 library (toolchain `v4.30.0-rc2`, version `0.1.0`) of finite positive-index Dirichlet-polynomial conjugation identities and coordinate corollaries of Mathlib's completed Riemann Zeta symmetries. The library defines finite Dirichlet polynomials over $\mathbb{N}+$, proves conjugation and norm invariance, packages a product-of-norms API with elementary factor-swap and zero-factor lemmas, and derives the four standard symmetry evaluations associated with a zero of the completed Zeta function. We also define a complex-valued Hardy-type normalization on the critical line and prove that it has the same norm and zeros as the Riemann Zeta function there. These results do not formalize zero-density estimates, do not rule out off-line zeros, and do not establish that the Hardy-type normalization is real-valued. Verification details are tied to local commit `d6c7c51` and its continuous integration audit.
+  We present a Lean 4 library (pinned to Lean `v4.30.0-rc2` and Mathlib 4 revision `5450b53e5d`) of finite positive-index Dirichlet-polynomial conjugation lemmas, elementary products-of-norms identities, and coordinate wrappers for existing Mathlib theorems about the completed Riemann Zeta function. We also define a complex-valued Hardy-type phase normalization on the critical line and prove norm and zero equivalence with the Riemann Zeta function. A two-reflection theorem packages the functional-equation images of two assumed conjugate zeros. The library does not prove zero-density estimates, a one-zero fourfold orbit, real-valuedness of the classical Hardy Z-function, or new zero-free regions. Verification details are tied to the repository release and its continuous integration audit.
 ---
 
 # 1. Introduction & Contextualization
@@ -18,7 +18,18 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we do not formalize the analytic measure bounds or zero-density counting theorems of Guth-Maynard. Instead, we establish a clean, machine-checked foundational library in **Lean 4** covering finite Dirichlet polynomial conjugation identities, coordinate symmetries of the completed Zeta function, and the classical Hardy Z-function [2, 3].
+In this work, we do not formalize the analytic measure bounds or zero-density counting theorems of Guth-Maynard. Instead, we establish a machine-checked library in **Lean 4** covering finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, and a complex-valued Hardy-type phase normalization [2, 3].
+
+## Contribution Taxonomy & Originality Disclosure
+The mathematical content of this package is structured into four distinct layers:
+
+1. **Finite Sum Dualities (New Definitions)**: Formalization of positive-index Dirichlet polynomials over $\mathbb{N}_+$ (`dirichletPoly`), conjugate coefficient sequences (`conjCoeff`), and cross-norm evaluation products (`crossNormProduct`).
+2. **Coordinate Wrappers (Local Packaging)**: Repackaging Mathlib's `completedRiemannZeta_one_sub` and `riemannZeta_ne_zero_of_one_le_re` into coordinate representations over evaluation points $s(\sigma, t) = \sigma + i t$.
+3. **Complex Phase Normalization (New Definitions)**: Formalization of $H(t) = e^{i \theta(t)} \zeta(1/2 + i t)$ as a complex-valued phase normalization ($H : \mathbb{R} \to \mathbb{C}$).
+4. **Inherited Analytic Foundations**: The completed Zeta functional equation and boundary non-vanishing are inherited directly from Mathlib 4.
+
+## AI Tool Disclosure & Human Review Statement
+All Lean 4 proof developments, manuscript drafts, and verification steps were assisted by AI coding agents (Antigravity/Gemini). S. McColm performed overall mathematical oversight, project specification, design review, and accepts full responsibility for the mathematical content.
 
 ---
 
@@ -51,8 +62,6 @@ For all $\sigma_1, \sigma_2, t \in \mathbb{R}$:
 
 $$\text{crossNormProduct}(a, S, \sigma_1, \sigma_2, t) = \text{crossNormProduct}(a^*, S, \sigma_2, \sigma_1, -t)$$
 
-*Proof.* Follows from double conjugation $(a^*)^* = a$ and real multiplication commutativity $x \cdot y = y \cdot x$. $\quad \square$
-
 ## Theorem 3 (Evaluation Product Real-Part Upper Bound)
 For all $\sigma_1, \sigma_2, t \in \mathbb{R}$:
 
@@ -72,19 +81,19 @@ Away from $s = 0$ and $s = 1$, Mathlib's completed Riemann Zeta function agrees 
 ## Theorem 5 (Functional Equation Reflection)
 For all $\sigma, t \in \mathbb{R}$, $\Lambda(\sigma + i t) = \Lambda((1 - \sigma) - i t)$.
 
-## Theorem 6 (Full Fourfold Zero Orbit)
-If $\Lambda(\sigma + i t) = 0$ and $\Lambda(\sigma - i t) = 0$, then $\Lambda(s)$ vanishes at all four symmetry points:
+## Theorem 6 (Fourfold Zero Orbit / Two-Reflection Pair Theorem)
+If completed Riemann Zeta vanishes at both $\sigma + i t$ and $\sigma - i t$, then by functional equation reflection it vanishes at all four symmetry points:
 
-1. $\sigma + i t$
-2. $(1 - \sigma) - i t \quad (\text{via Mathlib functional equation})$
-3. $(1 - \sigma) + i t \quad (\text{via functional equation reflection})$
-4. $\sigma - i t \quad (\text{via parameter negation})$
+1. $\sigma + i t \quad (\text{assumed zero } h_1)$
+2. $(1 - \sigma) - i t \quad (\text{via functional equation reflection of } h_1)$
+3. $(1 - \sigma) + i t \quad (\text{via functional equation reflection of } h_2)$
+4. $\sigma - i t \quad (\text{assumed zero } h_2)$
 
 *Point Collision Note*: On symmetry loci ($t = 0$ or $\sigma = 1/2$), these four evaluation points may coincide.
 
 ---
 
-# 4. Classical Hardy Z-Function Properties
+# 4. Complex-Valued Hardy-Type Phase Normalization
 
 ## Definition 4 (Riemann-Siegel Theta Function)
 For $t \in \mathbb{R}$, the Riemann-Siegel theta function $\theta(t)$ is defined using Mathlib's principal branch:
@@ -96,14 +105,18 @@ For $t \in \mathbb{R}$, the complex-valued Hardy-type normalization $H(t)$ is de
 
 $$H(t) = e^{i \theta(t)} \zeta\left( \frac{1}{2} + i t \right)$$
 
+*Real-Valuedness Disclaimer*: The present library defines $H : \mathbb{R} \to \mathbb{C}$ as a complex-valued phase normalization. It does not establish that $H(t)$ is real-valued for real $t$ or identify it fully with the classical real Hardy Z-function.
+
 ## Theorem 7 (Norm Equivalence)
 For all $t \in \mathbb{R}$, $|H(t)| = |\zeta(1/2 + i t)|$.
 
 ## Theorem 8 (Zero Equivalence)
 For all $t \in \mathbb{R}$, $H(t) = 0 \iff \zeta(1/2 + i t) = 0$.
 
-## Theorem 9 (Hardy Norm Parameter Negation Symmetry)
-For all $t \in \mathbb{R}$, $|H(-t)| = |H(t)|$ under critical line norm symmetry.
+## Theorem 9 (Conditional Hardy Norm Parameter Symmetry)
+For all $t \in \mathbb{R}$, provided $\|\zeta(1/2 - i t)\| = \|\zeta(1/2 + i t)\|$ ($h_{\text{symm}}$), we have:
+
+$$\|H(-t)\| = \|H(t)\|$$
 
 ---
 
@@ -118,39 +131,60 @@ $$\zeta(1 + i t) \neq 0$$
 
 ---
 
-# 6. Complete Formalization Mapping & Mathlib Dependencies
+# 6. Audited Core Declarations & Mathlib Dependencies
 
 All 21 canonical declarations across 5 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
 
-| Mathematical Theorem | Formal Lean 4 Declaration | Module File | Mathlib Basis / Dependency | Audit Status |
-| :--- | :--- | :--- | :--- | :--- |
-| $\overline{A(s)} = A^*(\overline{s})$ | `dirichletPoly_conj` | `FiniteDirichletPolynomial.lean` | `cpow_conj`, `map_sum` | Verified (No `sorryAx`) |
-| $\|A(s)\| = \|A^*(\bar{s})\|$ | `dirichletPoly_norm_conj` | `FiniteDirichletPolynomial.lean` | `norm_star` | Verified (No `sorryAx`) |
-| $\|A(\sigma+it)\|^2 = \|A^*(\sigma-it)\|^2$ | `dirichletNormSquare_conj_line` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_norm_conj` | Verified (No `sorryAx`) |
-| $V \le \|A(\sigma+it)\| \iff V \le \|A^*(\sigma-it)\|$ | `threshold_conj_line_iff` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_norm_conj` | Verified (No `sorryAx`) |
-| $A(\sigma+it)=0 \implies A^*(\sigma-it)=0$ | `dirichletPoly_zero_conj` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_conj`, `star_zero` | Verified (No `sorryAx`) |
-| $A(\sigma+it)=0 \iff A^*(\sigma-it)=0$ | `dirichletPoly_zero_conj_iff` | `FiniteDirichletPolynomial.lean` | `star_eq_zero` | Verified (No `sorryAx`) |
-| $\text{crossNormProduct} \ge 0$ | `crossNormProduct_nonneg` | `CrossNormProduct.lean` | `mul_nonneg`, `norm_nonneg` | Verified (No `sorryAx`) |
-| $(a^*)^* = a$ | `conjCoeff_conjCoeff` | `CrossNormProduct.lean` | `star_star` | Verified (No `sorryAx`) |
-| Factor Swap Invariance | `crossNormProduct_swap` | `CrossNormProduct.lean` | `mul_comm` | Verified (No `sorryAx`) |
-| $|\operatorname{Re}(A A^*)| \le \text{crossNormProduct}$ | `realPart_abs_le_crossNormProduct` | `CrossNormProduct.lean` | `abs_re_le_norm`, `norm_mul` | Verified (No `sorryAx`) |
-| $A(\sigma_1+it)=0 \implies \text{crossNormProduct}=0$ | `crossNormProduct_eq_zero_of_left` | `CrossNormProduct.lean` | `norm_zero`, `zero_mul` | Verified (No `sorryAx`) |
-| $A^*(\sigma_2-it)=0 \implies \text{crossNormProduct}=0$ | `crossNormProduct_eq_zero_of_right` | `CrossNormProduct.lean` | `norm_zero`, `mul_zero` | Verified (No `sorryAx`) |
-| $\text{crossNormProduct}=0 \iff A=0 \lor A^*=0$ | `crossNormProduct_eq_zero_iff` | `CrossNormProduct.lean` | `mul_eq_zero`, `norm_eq_zero` | Verified (No `sorryAx`) |
-| $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ | `completedRiemannZeta_reflection` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
-| $\Lambda(\sigma+it)=0 \iff \Lambda(1-\sigma-it)=0$ | `completedRiemannZeta_zero_reflection_iff` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
-| Full 4-Fold Zero Orbit | `completedRiemannZeta_fourfold_zero_orbit` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_reflection` | Verified (No `sorryAx`) |
-| $\|H(t)\| = \|\zeta(1/2+it)\|$ | `hardyZ_norm_eq_riemannZeta_norm` | `HardyZ.lean` | `norm_mul`, `norm_exp` | Verified (No `sorryAx`) |
-| $H(t)=0 \iff \zeta(1/2+it)=0$ | `hardyZ_zero_iff_riemannZeta_zero` | `HardyZ.lean` | `exp_ne_zero`, `mul_eq_zero` | Verified (No `sorryAx`) |
-| $\|H(-t)\| = \|H(t)\|$ | `hardyZ_neg_norm` | `HardyZ.lean` | `riemannZeta_conj`, `norm_star` | Verified (No `sorryAx`) |
-| $\forall t \neq 0, \zeta(1+it) \neq 0$ | `riemannZeta_ne_zero_on_one_line` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` | Verified (No `sorryAx`) |
-| Totalized $\zeta(1+it) \neq 0$ | `riemannZeta_ne_zero_totalized` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` | Verified (No `sorryAx`) |
+| Theorem Name | Lean 4 Declaration | Submodule File | Mathlib Basis / Dependency |
+| :--- | :--- | :--- | :--- |
+| Conjugation | `dirichletPoly_conj` | `FiniteDirichletPolynomial.lean` | `cpow_conj`, `map_sum` |
+| Norm Conjugation | `dirichletPoly_norm_conj` | `FiniteDirichletPolynomial.lean` | `norm_star` |
+| Norm-Square Line | `dirichletNormSquare_conj_line` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_norm_conj` |
+| Threshold Iff | `threshold_conj_line_iff` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_norm_conj` |
+| Zero Conjugation | `dirichletPoly_zero_conj` | `FiniteDirichletPolynomial.lean` | `dirichletPoly_conj`, `star_zero` |
+| Zero Conj Iff | `dirichletPoly_zero_conj_iff` | `FiniteDirichletPolynomial.lean` | `star_eq_zero` |
+| Nonnegative | `crossNormProduct_nonneg` | `CrossNormProduct.lean` | `mul_nonneg`, `norm_nonneg` |
+| Involution | `conjCoeff_conjCoeff` | `CrossNormProduct.lean` | `star_star` |
+| Factor Swap | `crossNormProduct_swap` | `CrossNormProduct.lean` | `mul_comm` |
+| Real-Part Bound | `realPart_abs_le_crossNormProduct` | `CrossNormProduct.lean` | `abs_re_le_norm`, `norm_mul` |
+| Zero Left | `crossNormProduct_eq_zero_of_left` | `CrossNormProduct.lean` | `norm_zero`, `zero_mul` |
+| Zero Right | `crossNormProduct_eq_zero_of_right` | `CrossNormProduct.lean` | `norm_zero`, `mul_zero` |
+| Zero Iff | `crossNormProduct_eq_zero_iff` | `CrossNormProduct.lean` | `mul_eq_zero`, `norm_eq_zero` |
+| Reflection | `completedRiemannZeta_reflection` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` |
+| Zero Reflection | `completedRiemannZeta_zero_reflection_iff` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` |
+| 4-Fold Orbit | `completedRiemannZeta_fourfold_zero_orbit` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_reflection` |
+| Hardy Norm Eq | `hardyZ_norm_eq_riemannZeta_norm` | `HardyZ.lean` | `norm_mul`, `norm_exp` |
+| Hardy Zero Iff | `hardyZ_zero_iff_riemannZeta_zero` | `HardyZ.lean` | `exp_ne_zero`, `mul_eq_zero` |
+| Hardy Neg Norm | `hardyZ_neg_norm` | `HardyZ.lean` | `hardyZ_norm_eq_riemannZeta_norm`, `h_symm` |
+| 1-Line Nonvanishing | `riemannZeta_ne_zero_on_one_line` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` |
+| Totalized Nonvanishing | `riemannZeta_ne_zero_totalized` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` |
 
 ---
 
-# 7. References
+# 7. Reproducibility & Verification Metadata
+
+The formalization relies on the following exact environment:
+- **Lean Toolchain**: `leanprover/lean4:v4.30.0-rc2`
+- **Mathlib Revision**: `5450b53e5ddc75d46418fabb605edbf36bd0beb6`
+- **Package Version**: `0.1.0`
+- **Build Command**: `lake build`
+- **Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean`
+
+---
+
+# 8. Conclusion & Future Work
+
+We have constructed a machine-checked Lean 4 library of finite Dirichlet polynomial conjugation identities, coordinate packaging for Mathlib's completed Zeta functional equation, and a complex-valued Hardy-type phase normalization.
+
+**Future Technical Extensions**:
+1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
+2. Deriving zero-density estimate scaffolding over Dirichlet polynomials.
+
+---
+
+# 9. References
 
 1. Larry Guth and James Maynard, *"New large value estimates for Dirichlet polynomials,"* **Annals of Mathematics**, vol. 203, no. 2, pp. 623-675, 2026. DOI: 10.4007/annals.2026.203.2.6.
 2. David Loeffler and Michael Stoll, *"Formalizing zeta and L-functions in Lean,"* **Annals of Formalized Mathematics**, vol. 1, 2025. DOI: 10.46298/afm.15328. arXiv:2503.00959.
-3. The Lean Community, *"Mathlib 4: The Lean 4 Mathematical Library,"* 2026. https://leanprover-community.github.io/mathlib4_docs/
+3. The Lean Community, *"Mathlib 4: The Lean 4 Mathematical Library,"* 2026. Pinned commit `5450b53e5d`. https://leanprover-community.github.io/mathlib4_docs/
 4. A. E. Ingham, *"On the Estimation of N(σ, T),"* **The Quarterly Journal of Mathematics**, os-11(1), pp. 201-202, 1940. DOI: 10.1093/qmath/os-11.1.201.

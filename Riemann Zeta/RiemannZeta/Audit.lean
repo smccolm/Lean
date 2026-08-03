@@ -3,7 +3,6 @@ import RiemannZeta.Nonvanishing
 import RiemannZeta.CompletedZetaSymmetry
 import RiemannZeta.FiniteDirichletPolynomial
 import RiemannZeta.CrossNormProduct
-import Mathlib.Util.PrintSorries
 
 open RiemannZeta
 
@@ -15,7 +14,7 @@ open RiemannZeta
 #print axioms dirichletPoly_zero_conj
 #print axioms dirichletPoly_zero_conj_iff
 
--- Cross-Norm Product Declarations (6)
+-- Cross-Norm Product Declarations (7)
 #print axioms crossNormProduct_nonneg
 #print axioms conjCoeff_conjCoeff
 #print axioms crossNormProduct_swap
@@ -29,7 +28,7 @@ open RiemannZeta
 #print axioms completedRiemannZeta_zero_reflection_iff
 #print axioms completedRiemannZeta_fourfold_zero_orbit
 
--- Hardy Z Declarations (3)
+-- Complex Hardy-Type Normalization Declarations (3)
 #print axioms hardyZ_norm_eq_riemannZeta_norm
 #print axioms hardyZ_zero_iff_riemannZeta_zero
 #print axioms hardyZ_neg_norm

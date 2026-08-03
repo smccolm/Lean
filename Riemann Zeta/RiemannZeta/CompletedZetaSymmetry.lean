@@ -50,12 +50,13 @@ theorem completedRiemannZeta_norm_reflection (σ t : ℝ) :
       ‖completedRiemannZeta (point (1 - σ) (-t))‖ := by
   rw [completedRiemannZeta_reflection]
 
-/-- Full Fourfold Zero Orbit Theorem:
-    If completed Riemann Zeta vanishes at σ + i t and σ - i t, then it vanishes at all four symmetry points:
-    1. σ + i t
-    2. (1 - σ) - i t (via Mathlib functional equation)
-    3. (1 - σ) + i t (via functional equation reflection)
-    4. σ - i t (via parameter negation)
+/-- Fourfold Zero Orbit (Two-Reflection Pair Theorem):
+    If completed Riemann Zeta vanishes at both σ + i t (h_zero) and σ - i t (h_zero_neg),
+    then functional equation reflection supplies zeros at all four symmetry points:
+    1. σ + i t (assumed)
+    2. (1 - σ) - i t (via reflection of h_zero)
+    3. (1 - σ) + i t (via reflection of h_zero_neg)
+    4. σ - i t (assumed)
     Note: On symmetry loci (t = 0 or σ = 1/2), these evaluation points may coincide. -/
 theorem completedRiemannZeta_fourfold_zero_orbit (σ t : ℝ)
     (h_zero : completedRiemannZeta (point σ t) = 0)
