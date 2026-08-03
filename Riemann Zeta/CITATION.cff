@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this formalization in your work, please cite it as below."
 authors:
   - family-names: "McColm"
-    given-names: "Scott"
+    given-names: "S."
 title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Hardy Z-Function Identities in Lean 4"
 version: "0.1.0"
 date-released: "2026-08-02"

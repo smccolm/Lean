@@ -1,6 +1,6 @@
 ---
 title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Hardy Z-Function Identities in Lean 4"
-author: "Scott McColm (with AI Proof Assistance)"
+author: "S. McColm"
 date: "August 2, 2026"
 abstract: |
   We present a Lean 4 library (toolchain `v4.30.0-rc2`, version `0.1.0`) of finite positive-index Dirichlet-polynomial conjugation identities and coordinate corollaries of Mathlib's completed Riemann Zeta symmetries. The library defines finite Dirichlet polynomials over $\mathbb{N}+$, proves conjugation and norm invariance, packages a product-of-norms API with elementary factor-swap and zero-factor lemmas, and derives the four standard symmetry evaluations associated with a zero of the completed Zeta function. We also define a complex-valued Hardy-type normalization on the critical line and prove that it has the same norm and zeros as the Riemann Zeta function there. These results do not formalize zero-density estimates, do not rule out off-line zeros, and do not establish that the Hardy-type normalization is real-valued. Verification details are tied to local commit `d6c7c51` and its continuous integration audit.
