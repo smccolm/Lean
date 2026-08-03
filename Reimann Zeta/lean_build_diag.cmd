@@ -6,6 +6,7 @@ cd /d "%~dp0"
 if not exist "lakefile.lean" if not exist "lakefile.toml" (
   echo I could not find lakefile.lean or lakefile.toml in:
   echo   %CD%
+  pause
   exit /b 1
 )
 
@@ -130,5 +131,11 @@ echo Log saved to:
 echo %LOGFILE%
 
 del "%RUNNER%" >nul 2>&1
+
+echo.
+echo ==================================================
+echo Press any key to close this window...
+echo ==================================================
+pause
 
 exit /b %EXITCODE%
