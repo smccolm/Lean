@@ -8,6 +8,8 @@ import RiemannZeta.GuthMaynard.Asymptotics
 import RiemannZeta.GuthMaynard.Separated
 import RiemannZeta.GuthMaynard.Statements
 import RiemannZeta.GuthMaynard.ZeroCount
+import RiemannZeta.GuthMaynard.ZeroDetector
+import RiemannZeta.GuthMaynard.Transfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 
 open RiemannZeta
@@ -77,3 +79,14 @@ open RiemannZeta.GuthMaynard
 #print axioms alpha
 #print axioms final_exponent
 #print axioms exists_k_bound
+
+-- Zero Detector
+#print axioms ZeroDetectorModel
+#print axioms detectPoly
+#print axioms IsTypeIZero
+#print axioms IsTypeIIZero
+#print axioms TypeIIBoundHypothesis
+
+-- Transfer Theorem
+#print axioms MeanValueHypothesis
+#print axioms ConditionalZeroDensityTransfer
