@@ -11,6 +11,7 @@ import RiemannZeta.GuthMaynard.ZeroCount
 import RiemannZeta.GuthMaynard.ZeroDetector
 import RiemannZeta.GuthMaynard.Transfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
+import RiemannZeta.GuthMaynard.PolynomialPowers
 
 open RiemannZeta
 open RiemannZeta.GuthMaynard
@@ -90,3 +91,6 @@ open RiemannZeta.GuthMaynard
 -- Transfer Theorem
 #print axioms MeanValueHypothesis
 #print axioms ConditionalZeroDensityTransfer
+
+-- Polynomial Powers
+#print axioms PolynomialPowerModel
