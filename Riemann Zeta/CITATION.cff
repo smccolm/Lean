@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this formalization in your work, please cite it as below."
+authors:
+  - family-names: "McColm"
+    given-names: "Scott"
+title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Hardy Z-Function Identities in Lean 4"
+version: "1.0.0"
+date-released: "2026-08-02"
+repository-code: "https://github.com/smccolm/Lean/tree/main/Riemann%20Zeta"

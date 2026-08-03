@@ -1,0 +1,32 @@
+import RiemannZeta.HardyZ
+import RiemannZeta.Nonvanishing
+import RiemannZeta.PhaseWinding
+import RiemannZeta.DirichletDensity
+import RiemannZeta.AsymmetricEnergy
+import Mathlib.Util.PrintSorries
+
+open RiemannZeta
+
+#print axioms dirichletPoly_conj
+#print axioms dirichletPoly_norm_conj
+#print axioms dirichletNormSquare_conj_line
+#print axioms threshold_conj_line_iff
+#print axioms dirichletPoly_zero_conj
+
+#print axioms crossNormProduct_nonneg
+#print axioms conjCoeff_conjCoeff
+#print axioms crossNormProduct_swap
+#print axioms realPart_abs_le_crossNormProduct
+#print axioms crossNormProduct_eq_zero_of_left
+#print axioms crossNormProduct_eq_zero_of_right
+#print axioms crossNormProduct_eq_zero_iff
+
+#print axioms completedRiemannZeta_reflection
+#print axioms completedRiemannZeta_zero_reflection_iff
+#print axioms completedRiemannZeta_fourfold_zero_orbit
+
+#print axioms hardyZ_norm_eq_riemannZeta_norm
+#print axioms hardyZ_zero_iff_riemannZeta_zero
+
+#print axioms riemannZeta_ne_zero_on_one_line
+#print axioms riemannZeta_ne_zero_totalized

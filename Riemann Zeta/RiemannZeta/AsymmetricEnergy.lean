@@ -11,58 +11,66 @@ noncomputable section
 
 namespace RiemannZeta
 
-/-- Asymmetric cross-energy operator for Dirichlet polynomials across arbitrary off-line heights σ1, σ2. -/
-def crossEnergy (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ) : ℝ :=
-  ‖dirichletPoly a S (offLinePoint σ1 t)‖ * ‖dirichletPoly (conjCoeff a) S (offLinePoint σ2 (-t))‖
+/-- Asymmetric cross-norm product for finite Dirichlet polynomials evaluated at coordinates (σ1, t) and (σ2, -t). -/
+def crossNormProduct (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ) : ℝ :=
+  ‖dirichletPoly a S (point σ1 t)‖ * ‖dirichletPoly (conjCoeff a) S (point σ2 (-t))‖
 
-/-- Non-negativity of the cross-energy operator: CrossEnergy(σ1, σ2, t, A) ≥ 0. -/
-theorem crossEnergy_nonneg (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ) :
-    0 ≤ crossEnergy a S σ1 σ2 t := by
-  dsimp [crossEnergy]
+/-- Non-negativity of the cross-norm product: crossNormProduct(a, S, σ1, σ2, t) ≥ 0. -/
+theorem crossNormProduct_nonneg (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ) :
+    0 ≤ crossNormProduct a S σ1 σ2 t := by
+  dsimp [crossNormProduct]
   exact mul_nonneg (norm_nonneg _) (norm_nonneg _)
 
 /-- Double conjugation identity for coefficient sequences: (a*)*_n = a_n. -/
-theorem conjCoeff_conjCoeff (a : ℕ → ℂ) :
+theorem conjCoeff_conjCoeff (a : ℕ+ → ℂ) :
     conjCoeff (conjCoeff a) = a := by
   ext n
   dsimp [conjCoeff]
   exact star_star (a n)
 
-/-- Asymmetric Cross-Energy Commutative Duality Theorem:
-    ‖A(σ1 + i t)‖ · ‖A*(σ2 - i t)‖ = ‖A*(σ2 - i t)‖ · ‖A(σ1 + i t)‖. -/
-theorem crossEnergy_duality (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ) :
-    crossEnergy a S σ1 σ2 t = crossEnergy (conjCoeff a) S σ2 σ1 (-t) := by
-  dsimp [dirichletEnergy, crossEnergy]
+/-- Factor swap invariance for the cross-norm product:
+    crossNormProduct(a, S, σ1, σ2, t) = crossNormProduct(a*, S, σ2, σ1, -t). -/
+theorem crossNormProduct_swap (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ) :
+    crossNormProduct a S σ1 σ2 t = crossNormProduct (conjCoeff a) S σ2 σ1 (-t) := by
+  dsimp [crossNormProduct]
   rw [neg_neg]
   rw [conjCoeff_conjCoeff]
   exact mul_comm _ _
 
-/-- Cross-energy lower bound via real part of the bilinear product:
-    CrossEnergy(σ1, σ2, t, A) ≥ |Re(A(σ1 + i t) · A*(σ2 - i t))|. -/
-theorem crossEnergy_ge_re (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ) :
-    |(dirichletPoly a S (offLinePoint σ1 t) * dirichletPoly (conjCoeff a) S (offLinePoint σ2 (-t))).re| ≤
-      crossEnergy a S σ1 σ2 t := by
-  dsimp [crossEnergy]
-  have h := abs_re_le_norm (dirichletPoly a S (offLinePoint σ1 t) * dirichletPoly (conjCoeff a) S (offLinePoint σ2 (-t)))
+/-- Upper bound on the absolute value of the real part of the bilinear evaluation product:
+    |Re( A(σ1 + i t) · A*(σ2 - i t) )| ≤ crossNormProduct(a, S, σ1, σ2, t). -/
+theorem realPart_abs_le_crossNormProduct (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ) :
+    |(dirichletPoly a S (point σ1 t) * dirichletPoly (conjCoeff a) S (point σ2 (-t))).re| ≤
+      crossNormProduct a S σ1 σ2 t := by
+  dsimp [crossNormProduct]
+  have h := abs_re_le_norm (dirichletPoly a S (point σ1 t) * dirichletPoly (conjCoeff a) S (point σ2 (-t)))
   rw [norm_mul] at h
   exact h
 
-/-- Universal Zero-Locator Theorem:
-    If A(s) has an off-line zero at σ1 + i t, then the cross-energy product vanishes
-    unconditionally for EVERY height σ2: CrossEnergy(σ1, σ2, t, A) = 0. -/
-theorem crossEnergy_zero_of_left_zero (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ)
-    (h_zero : dirichletPoly a S (offLinePoint σ1 t) = 0) :
-    crossEnergy a S σ1 σ2 t = 0 := by
-  dsimp [crossEnergy]
+/-- Left-factor vanishing lemma:
+    If A(σ1 + i t) = 0, then crossNormProduct(a, S, σ1, σ2, t) = 0 for every σ2. -/
+theorem crossNormProduct_eq_zero_of_left (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ)
+    (h_zero : dirichletPoly a S (point σ1 t) = 0) :
+    crossNormProduct a S σ1 σ2 t = 0 := by
+  dsimp [crossNormProduct]
   rw [h_zero, norm_zero, zero_mul]
 
-/-- Dual Zero-Locator Theorem:
-    If A*(s) has an off-line zero at σ2 - i t, then the cross-energy product vanishes
-    unconditionally for EVERY height σ1: CrossEnergy(σ1, σ2, t, A) = 0. -/
-theorem crossEnergy_zero_of_right_zero (a : ℕ → ℂ) (S : Finset ℕ) (σ1 σ2 t : ℝ)
-    (h_zero : dirichletPoly (conjCoeff a) S (offLinePoint σ2 (-t)) = 0) :
-    crossEnergy a S σ1 σ2 t = 0 := by
-  dsimp [crossEnergy]
+/-- Right-factor vanishing lemma:
+    If A*(σ2 - i t) = 0, then crossNormProduct(a, S, σ1, σ2, t) = 0 for every σ1. -/
+theorem crossNormProduct_eq_zero_of_right (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ)
+    (h_zero : dirichletPoly (conjCoeff a) S (point σ2 (-t)) = 0) :
+    crossNormProduct a S σ1 σ2 t = 0 := by
+  dsimp [crossNormProduct]
   rw [h_zero, norm_zero, mul_zero]
+
+/-- Characterization of cross-norm product vanishing:
+    crossNormProduct(a, S, σ1, σ2, t) = 0 ↔ A(σ1 + i t) = 0 ∨ A*(σ2 - i t) = 0. -/
+theorem crossNormProduct_eq_zero_iff (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ1 σ2 t : ℝ) :
+    crossNormProduct a S σ1 σ2 t = 0 ↔
+      dirichletPoly a S (point σ1 t) = 0 ∨
+      dirichletPoly (conjCoeff a) S (point σ2 (-t)) = 0 := by
+  dsimp [crossNormProduct]
+  rw [mul_eq_zero]
+  rw [norm_eq_zero, norm_eq_zero]
 
 end RiemannZeta
