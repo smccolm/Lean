@@ -3,7 +3,7 @@ title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dual
 author: "Scott McColm (with AI Proof Assistance)"
 date: "August 2, 2026"
 abstract: |
-  We present a Lean 4 library (toolchain `v4.30.0-rc2`, version `0.1.0`) of finite positive-index Dirichlet-polynomial conjugation identities and coordinate corollaries of Mathlib's completed Riemann Zeta symmetries. The library defines finite Dirichlet polynomials over $\mathbb{N}+$, proves conjugation and norm invariance, packages a product-of-norms API with elementary factor-swap and zero-factor lemmas, and derives the four standard symmetry evaluations associated with a zero of the completed Zeta function. We also define a complex-valued Hardy-type normalization on the critical line and prove that it has the same norm and zeros as the Riemann Zeta function there. These results do not formalize zero-density estimates, do not rule out off-line zeros, and do not establish that the Hardy-type normalization is real-valued. Verification details are tied to local commit `81439b5` and its continuous integration audit.
+  We present a Lean 4 library (toolchain `v4.30.0-rc2`, version `0.1.0`) of finite positive-index Dirichlet-polynomial conjugation identities and coordinate corollaries of Mathlib's completed Riemann Zeta symmetries. The library defines finite Dirichlet polynomials over $\mathbb{N}+$, proves conjugation and norm invariance, packages a product-of-norms API with elementary factor-swap and zero-factor lemmas, and derives the four standard symmetry evaluations associated with a zero of the completed Zeta function. We also define a complex-valued Hardy-type normalization on the critical line and prove that it has the same norm and zeros as the Riemann Zeta function there. These results do not formalize zero-density estimates, do not rule out off-line zeros, and do not establish that the Hardy-type normalization is real-valued. Verification details are tied to local commit `d6c7c51` and its continuous integration audit.
 ---
 
 # 1. Introduction & Contextualization
@@ -73,12 +73,12 @@ Away from $s = 0$ and $s = 1$, Mathlib's completed Riemann Zeta function agrees 
 For all $\sigma, t \in \mathbb{R}$, $\Lambda(\sigma + i t) = \Lambda((1 - \sigma) - i t)$.
 
 ## Theorem 6 (Full Fourfold Zero Orbit)
-If $\Lambda(\sigma + i t) = 0$, then $\Lambda(s)$ vanishes at all four symmetry points:
+If $\Lambda(\sigma + i t) = 0$ and $\Lambda(\sigma - i t) = 0$, then $\Lambda(s)$ vanishes at all four symmetry points:
 
 1. $\sigma + i t$
 2. $(1 - \sigma) - i t \quad (\text{via Mathlib functional equation})$
-3. $\sigma - i t \quad (\text{via Mathlib complex conjugation})$
-4. $(1 - \sigma) + i t \quad (\text{via functional equation + complex conjugation})$
+3. $(1 - \sigma) + i t \quad (\text{via functional equation reflection})$
+4. $\sigma - i t \quad (\text{via parameter negation})$
 
 *Point Collision Note*: On symmetry loci ($t = 0$ or $\sigma = 1/2$), these four evaluation points may coincide.
 
@@ -103,7 +103,7 @@ For all $t \in \mathbb{R}$, $|H(t)| = |\zeta(1/2 + i t)|$.
 For all $t \in \mathbb{R}$, $H(t) = 0 \iff \zeta(1/2 + i t) = 0$.
 
 ## Theorem 9 (Hardy Norm Parameter Negation Symmetry)
-For all $t \in \mathbb{R}$, $|H(-t)| = |H(t)|$.
+For all $t \in \mathbb{R}$, $|H(-t)| = |H(t)|$ under critical line norm symmetry.
 
 ---
 
@@ -120,7 +120,7 @@ $$\zeta(1 + i t) \neq 0$$
 
 # 6. Complete Formalization Mapping & Mathlib Dependencies
 
-All 20 canonical declarations across 5 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
+All 21 canonical declarations across 5 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
 
 | Mathematical Theorem | Formal Lean 4 Declaration | Module File | Mathlib Basis / Dependency | Audit Status |
 | :--- | :--- | :--- | :--- | :--- |
@@ -137,13 +137,14 @@ All 20 canonical declarations across 5 mathematical submodules in package `Riema
 | $A(\sigma_1+it)=0 \implies \text{crossNormProduct}=0$ | `crossNormProduct_eq_zero_of_left` | `CrossNormProduct.lean` | `norm_zero`, `zero_mul` | Verified (No `sorryAx`) |
 | $A^*(\sigma_2-it)=0 \implies \text{crossNormProduct}=0$ | `crossNormProduct_eq_zero_of_right` | `CrossNormProduct.lean` | `norm_zero`, `mul_zero` | Verified (No `sorryAx`) |
 | $\text{crossNormProduct}=0 \iff A=0 \lor A^*=0$ | `crossNormProduct_eq_zero_iff` | `CrossNormProduct.lean` | `mul_eq_zero`, `norm_eq_zero` | Verified (No `sorryAx`) |
-| $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ | `completedRiemannZeta_reflection` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
-| $\Lambda(\sigma+it)=0 \iff \Lambda(1-\sigma-it)=0$ | `completedRiemannZeta_zero_reflection_iff` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
-| Full 4-Fold Zero Orbit | `completedRiemannZeta_fourfold_zero_orbit` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_conj` | Verified (No `sorryAx`) |
+| $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ | `completedRiemannZeta_reflection` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
+| $\Lambda(\sigma+it)=0 \iff \Lambda(1-\sigma-it)=0$ | `completedRiemannZeta_zero_reflection_iff` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_one_sub` | Verified (No `sorryAx`) |
+| Full 4-Fold Zero Orbit | `completedRiemannZeta_fourfold_zero_orbit` | `CompletedZetaSymmetry.lean` | `completedRiemannZeta_reflection` | Verified (No `sorryAx`) |
 | $\|H(t)\| = \|\zeta(1/2+it)\|$ | `hardyZ_norm_eq_riemannZeta_norm` | `HardyZ.lean` | `norm_mul`, `norm_exp` | Verified (No `sorryAx`) |
 | $H(t)=0 \iff \zeta(1/2+it)=0$ | `hardyZ_zero_iff_riemannZeta_zero` | `HardyZ.lean` | `exp_ne_zero`, `mul_eq_zero` | Verified (No `sorryAx`) |
 | $\|H(-t)\| = \|H(t)\|$ | `hardyZ_neg_norm` | `HardyZ.lean` | `riemannZeta_conj`, `norm_star` | Verified (No `sorryAx`) |
 | $\forall t \neq 0, \zeta(1+it) \neq 0$ | `riemannZeta_ne_zero_on_one_line` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` | Verified (No `sorryAx`) |
+| Totalized $\zeta(1+it) \neq 0$ | `riemannZeta_ne_zero_totalized` | `Nonvanishing.lean` | `riemannZeta_ne_zero_of_one_le_re` | Verified (No `sorryAx`) |
 
 ---
 
