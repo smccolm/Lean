@@ -29,7 +29,7 @@ if "%~1"=="" (
   echo @echo off
   echo cd /d "%CD%"
   echo echo ==================================================
-  echo echo LEAN DIAGNOSTIC BUILD LOG - REIMANN ZETA
+  echo echo LEAN DIAGNOSTIC BUILD LOG - RIEMANN ZETA
   echo echo ==================================================
   echo echo Timestamp: %DATE% %TIME%
   echo echo ProjectRoot: %CD%
@@ -52,46 +52,46 @@ if "%~1"=="" (
   echo   echo lean-toolchain file not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta.lean =====
-  echo if exist "ReimannZeta.lean" ^(
-  echo   type "ReimannZeta.lean"
+  echo echo ===== RiemannZeta.lean =====
+  echo if exist "RiemannZeta.lean" ^(
+  echo   type "RiemannZeta.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta.lean not found
+  echo   echo RiemannZeta.lean not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta\HardyZ.lean =====
-  echo if exist "ReimannZeta\HardyZ.lean" ^(
-  echo   type "ReimannZeta\HardyZ.lean"
+  echo echo ===== RiemannZeta\HardyZ.lean =====
+  echo if exist "RiemannZeta\HardyZ.lean" ^(
+  echo   type "RiemannZeta\HardyZ.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta\HardyZ.lean not found
+  echo   echo RiemannZeta\HardyZ.lean not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta\Nonvanishing.lean =====
-  echo if exist "ReimannZeta\Nonvanishing.lean" ^(
-  echo   type "ReimannZeta\Nonvanishing.lean"
+  echo echo ===== RiemannZeta\Nonvanishing.lean =====
+  echo if exist "RiemannZeta\Nonvanishing.lean" ^(
+  echo   type "RiemannZeta\Nonvanishing.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta\Nonvanishing.lean not found
+  echo   echo RiemannZeta\Nonvanishing.lean not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta\PhaseWinding.lean =====
-  echo if exist "ReimannZeta\PhaseWinding.lean" ^(
-  echo   type "ReimannZeta\PhaseWinding.lean"
+  echo echo ===== RiemannZeta\PhaseWinding.lean =====
+  echo if exist "RiemannZeta\PhaseWinding.lean" ^(
+  echo   type "RiemannZeta\PhaseWinding.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta\PhaseWinding.lean not found
+  echo   echo RiemannZeta\PhaseWinding.lean not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta\DirichletDensity.lean =====
-  echo if exist "ReimannZeta\DirichletDensity.lean" ^(
-  echo   type "ReimannZeta\DirichletDensity.lean"
+  echo echo ===== RiemannZeta\DirichletDensity.lean =====
+  echo if exist "RiemannZeta\DirichletDensity.lean" ^(
+  echo   type "RiemannZeta\DirichletDensity.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta\DirichletDensity.lean not found
+  echo   echo RiemannZeta\DirichletDensity.lean not found
   echo ^)
   echo echo.
-  echo echo ===== ReimannZeta\AsymmetricEnergy.lean =====
-  echo if exist "ReimannZeta\AsymmetricEnergy.lean" ^(
-  echo   type "ReimannZeta\AsymmetricEnergy.lean"
+  echo echo ===== RiemannZeta\AsymmetricEnergy.lean =====
+  echo if exist "RiemannZeta\AsymmetricEnergy.lean" ^(
+  echo   type "RiemannZeta\AsymmetricEnergy.lean"
   echo ^) else ^(
-  echo   echo ReimannZeta\AsymmetricEnergy.lean not found
+  echo   echo RiemannZeta\AsymmetricEnergy.lean not found
   echo ^)
   echo echo.
   echo echo ===== lake env =====
