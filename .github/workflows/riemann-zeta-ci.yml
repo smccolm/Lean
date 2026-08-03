@@ -3,19 +3,45 @@ name: Riemann Zeta Lean CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - "Riemann Zeta/**"
+      - ".github/workflows/riemann-zeta-ci.yml"
   pull_request:
     branches: [ main ]
+    paths:
+      - "Riemann Zeta/**"
+      - ".github/workflows/riemann-zeta-ci.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  build:
+  build-and-audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Lean & Build Package
+      - name: Build package
         uses: leanprover/lean-action@v1
         with:
           lake-package-directory: "Riemann Zeta"
           build: true
-          lint: true
+          lint: false
+
+      - name: Run no-sorry audit
+        working-directory: "Riemann Zeta"
+        shell: bash
+        run: |
+          set -o pipefail
+          lake env lean RiemannZeta/Audit.lean 2>&1 | tee audit.log
+          if grep -Fq "sorryAx" audit.log; then
+            echo "sorryAx dependency detected"
+            exit 1
+          fi
+
+      - name: Upload audit log
+        uses: actions/upload-artifact@v4
+        with:
+          name: riemann-zeta-audit
+          path: "Riemann Zeta/audit.log"

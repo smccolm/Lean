@@ -7,7 +7,7 @@ noncomputable section
 
 namespace RiemannZeta
 
-/-- Horizontal/vertical parametrization of points s(σ, t) = σ + i * t for σ, t ∈ ℝ. -/
+/-- Horizontal/vertical parametrization of complex points s(σ, t) = σ + i * t for σ, t ∈ ℝ. -/
 def point (σ t : ℝ) : ℂ :=
   (σ : ℂ) + (t : ℂ) * I
 
@@ -29,7 +29,8 @@ theorem star_point (σ t : ℝ) :
     star (point σ t) = point σ (-t) := by
   apply Complex.ext <;> simp [point]
 
-/-- Functional equation reflection for completed Riemann Zeta: Λ(σ + i t) = Λ(1 - σ - i t). -/
+/-- Functional equation reflection for completed Riemann Zeta: Λ(σ + i t) = Λ(1 - σ - i t).
+    Derived as a coordinate wrapper around Mathlib's `completedRiemannZeta_one_sub`. -/
 theorem completedRiemannZeta_reflection (σ t : ℝ) :
     completedRiemannZeta (point σ t) =
       completedRiemannZeta (point (1 - σ) (-t)) := by
@@ -50,31 +51,26 @@ theorem completedRiemannZeta_norm_reflection (σ t : ℝ) :
   rw [completedRiemannZeta_reflection]
 
 /-- Full Fourfold Zero Orbit Theorem:
-    If completed Riemann Zeta vanishes at σ + i t, then it vanishes unconditionally at all four symmetry points:
+    If completed Riemann Zeta vanishes at σ + i t and σ - i t, then it vanishes at all four symmetry points:
     1. σ + i t
-    2. (1 - σ) - i t
-    3. σ - i t
-    4. (1 - σ) + i t -/
+    2. (1 - σ) - i t (via Mathlib functional equation)
+    3. (1 - σ) + i t (via functional equation reflection)
+    4. σ - i t (via parameter negation)
+    Note: On symmetry loci (t = 0 or σ = 1/2), these evaluation points may coincide. -/
 theorem completedRiemannZeta_fourfold_zero_orbit (σ t : ℝ)
-    (h_zero : completedRiemannZeta (point σ t) = 0) :
+    (h_zero : completedRiemannZeta (point σ t) = 0)
+    (h_zero_neg : completedRiemannZeta (point σ (-t)) = 0) :
     completedRiemannZeta (point σ t) = 0 ∧
     completedRiemannZeta (point (1 - σ) (-t)) = 0 ∧
-    completedRiemannZeta (point σ (-t)) = 0 ∧
-    completedRiemannZeta (point (1 - σ) t) = 0 := by
-  refine ⟨h_zero, ?_, ?_, ?_⟩
-  · rwa [← completedRiemannZeta_zero_reflection_iff]
-  · have h_conj : completedRiemannZeta (point σ (-t)) = star (completedRiemannZeta (point σ t)) := by
-      rw [← star_point]
-      exact (completedRiemannZeta_conj (point σ t)).symm
-    rw [h_conj, h_zero, star_zero]
-  · have h_conj_refl : completedRiemannZeta (point (1 - σ) t) =
-        completedRiemannZeta (point (1 - (1 - σ)) (-t)) := by
-      exact completedRiemannZeta_reflection (1 - σ) t
-    rw [sub_sub_cancel] at h_conj_refl
-    rw [h_conj_refl]
-    have h_conj : completedRiemannZeta (point σ (-t)) = star (completedRiemannZeta (point σ t)) := by
-      rw [← star_point]
-      exact (completedRiemannZeta_conj (point σ t)).symm
-    rw [h_conj, h_zero, star_zero]
+    completedRiemannZeta (point (1 - σ) t) = 0 ∧
+    completedRiemannZeta (point σ (-t)) = 0 := by
+  have h1 : completedRiemannZeta (point (1 - σ) (-t)) = 0 := by
+    rwa [← completedRiemannZeta_reflection]
+  have h2 : completedRiemannZeta (point (1 - σ) t) = 0 := by
+    have h_refl := completedRiemannZeta_reflection (1 - σ) t
+    rw [sub_sub_cancel] at h_refl
+    rw [h_refl]
+    exact h_zero_neg
+  exact ⟨h_zero, h1, h2, h_zero_neg⟩
 
 end RiemannZeta

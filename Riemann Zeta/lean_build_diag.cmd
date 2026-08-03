@@ -73,25 +73,25 @@ if "%~1"=="" (
   echo   echo RiemannZeta\Nonvanishing.lean not found
   echo ^)
   echo echo.
-  echo echo ===== RiemannZeta\PhaseWinding.lean =====
-  echo if exist "RiemannZeta\PhaseWinding.lean" ^(
-  echo   type "RiemannZeta\PhaseWinding.lean"
+  echo echo ===== RiemannZeta\CompletedZetaSymmetry.lean =====
+  echo if exist "RiemannZeta\CompletedZetaSymmetry.lean" ^(
+  echo   type "RiemannZeta\CompletedZetaSymmetry.lean"
   echo ^) else ^(
-  echo   echo RiemannZeta\PhaseWinding.lean not found
+  echo   echo RiemannZeta\CompletedZetaSymmetry.lean not found
   echo ^)
   echo echo.
-  echo echo ===== RiemannZeta\DirichletDensity.lean =====
-  echo if exist "RiemannZeta\DirichletDensity.lean" ^(
-  echo   type "RiemannZeta\DirichletDensity.lean"
+  echo echo ===== RiemannZeta\FiniteDirichletPolynomial.lean =====
+  echo if exist "RiemannZeta\FiniteDirichletPolynomial.lean" ^(
+  echo   type "RiemannZeta\FiniteDirichletPolynomial.lean"
   echo ^) else ^(
-  echo   echo RiemannZeta\DirichletDensity.lean not found
+  echo   echo RiemannZeta\FiniteDirichletPolynomial.lean not found
   echo ^)
   echo echo.
-  echo echo ===== RiemannZeta\AsymmetricEnergy.lean =====
-  echo if exist "RiemannZeta\AsymmetricEnergy.lean" ^(
-  echo   type "RiemannZeta\AsymmetricEnergy.lean"
+  echo echo ===== RiemannZeta\CrossNormProduct.lean =====
+  echo if exist "RiemannZeta\CrossNormProduct.lean" ^(
+  echo   type "RiemannZeta\CrossNormProduct.lean"
   echo ^) else ^(
-  echo   echo RiemannZeta\AsymmetricEnergy.lean not found
+  echo   echo RiemannZeta\CrossNormProduct.lean not found
   echo ^)
   echo echo.
   echo echo ===== lake env =====
@@ -99,6 +99,9 @@ if "%~1"=="" (
   echo echo.
   echo echo ===== lake build =====
   echo %BUILD_CMD%
+  echo echo.
+  echo echo ===== Audit Execution =====
+  echo lake env lean RiemannZeta\Audit.lean
 ) > "%RUNNER%"
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^

@@ -2,8 +2,8 @@ import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.Complex.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import RiemannZeta.PhaseWinding
-import RiemannZeta.DirichletDensity
+import RiemannZeta.CompletedZetaSymmetry
+import RiemannZeta.FiniteDirichletPolynomial
 
 open Complex BigOperators Real
 

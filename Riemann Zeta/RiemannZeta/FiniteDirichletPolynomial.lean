@@ -2,7 +2,7 @@ import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.Complex.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import RiemannZeta.PhaseWinding
+import RiemannZeta.CompletedZetaSymmetry
 
 open Complex BigOperators Real
 
@@ -31,9 +31,9 @@ theorem dirichletPoly_conj (a : ℕ+ → ℂ) (S : Finset ℕ+) (s : ℂ) :
   congr 1 with n
   rw [map_mul]
   congr 1
-  have hn_pos : 0 < ((n : ℕ) : ℝ) := Nat.cast_pos.mpr n.pos
-  have hn_arg : (((n : ℕ) : ℂ)).arg ≠ π := by
-    rw [arg_ofReal_of_nonneg (le_of_lt hn_pos)]
+  have hn_pos : 0 ≤ ((n : ℕ) : ℝ) := Nat.cast_nonneg (n : ℕ)
+  have hn_arg : (((n : ℕ) : ℝ) : ℂ).arg ≠ π := by
+    rw [arg_ofReal_of_nonneg hn_pos]
     exact Real.pi_ne_zero.symm
   have h_conj := cpow_conj (((n : ℕ) : ℝ) : ℂ) (-s) hn_arg
   simp only [conj_ofReal, map_neg] at h_conj
@@ -53,7 +53,7 @@ theorem dirichletNormSquare_conj_line (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ t
   rw [← star_point]
   rw [← dirichletPoly_norm_conj]
 
-/-- Threshold condition equivalence across conjugate parameters:
+/-- Threshold condition predicate equivalence across conjugate parameters:
     V ≤ ‖A(σ + i t)‖ ↔ V ≤ ‖A*(σ - i t)‖. -/
 theorem threshold_conj_line_iff (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ t V : ℝ) :
     V ≤ ‖dirichletPoly a S (point σ t)‖ ↔
@@ -71,5 +71,16 @@ theorem dirichletPoly_zero_conj (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ t : ℝ
     rw [← star_point]
     exact (dirichletPoly_conj a S (point σ t)).symm
   rw [h_conj, h_zero, star_zero]
+
+/-- Two-way zero conjugation equivalence for finite Dirichlet polynomials:
+    A(σ + i t) = 0 ↔ A*(σ - i t) = 0. -/
+theorem dirichletPoly_zero_conj_iff (a : ℕ+ → ℂ) (S : Finset ℕ+) (σ t : ℝ) :
+    dirichletPoly a S (point σ t) = 0 ↔
+      dirichletPoly (conjCoeff a) S (point σ (-t)) = 0 := by
+  have h1 : dirichletPoly (conjCoeff a) S (point σ (-t)) =
+      star (dirichletPoly a S (point σ t)) := by
+    rw [← star_point]
+    exact (dirichletPoly_conj a S (point σ t)).symm
+  rw [h1, star_eq_zero]
 
 end RiemannZeta

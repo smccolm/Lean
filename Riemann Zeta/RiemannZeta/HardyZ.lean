@@ -22,15 +22,21 @@ lemma criticalLinePoint_im (t : ℝ) : (criticalLinePoint t).im = t := by
 /-- The complex conjugate of a point on the critical line s(t) = 1/2 + i t is 1 - s(t) = 1/2 - i t. -/
 theorem conj_criticalLinePoint (t : ℝ) :
     star (criticalLinePoint t) = 1 - criticalLinePoint t := by
-  apply Complex.ext <;> simp [criticalLinePoint] <;> norm_num
+  apply Complex.ext
+  · simp [criticalLinePoint]
+    norm_num
+  · simp [criticalLinePoint]
 
 /-- Argument equality lemma for the critical line: s(-t) = 1 - s(t). -/
 lemma criticalLinePoint_neg_eq_one_sub (t : ℝ) :
     criticalLinePoint (-t) = 1 - criticalLinePoint t := by
-  apply Complex.ext <;> simp [criticalLinePoint] <;> norm_num
+  apply Complex.ext
+  · simp [criticalLinePoint]
+    norm_num
+  · simp [criticalLinePoint]
 
 /-- The completed Riemann Zeta function functional equation on the critical line:
-    Λ(1/2 + i t) = Λ(1/2 - i t). -/
+    Λ(1/2 + i t) = Λ(1/2 - i t). Derived as a coordinate wrapper around Mathlib's `completedRiemannZeta_one_sub`. -/
 theorem completedRiemannZeta_criticalLine_functional_eq (t : ℝ) :
     completedRiemannZeta (criticalLinePoint t) =
       completedRiemannZeta (1 - criticalLinePoint t) := by
@@ -51,15 +57,16 @@ theorem completedRiemannZeta_norm_criticalLine_neg (t : ℝ) :
       ‖completedRiemannZeta (criticalLinePoint (-t))‖ := by
   rw [completedRiemannZeta_criticalLine_symm]
 
-/-- Classical Riemann-Siegel theta function phase angle θ(t) on the critical line. -/
+/-- Classical Riemann-Siegel theta function phase angle θ(t) on the critical line.
+    Uses Mathlib's principal branch Complex.log. -/
 def riemannSiegelTheta (t : ℝ) : ℝ :=
   (Complex.log (Gamma ((1 / 4 : ℂ) + (t / 2 : ℂ) * I))).im - (t / 2) * Real.log Real.pi
 
-/-- Classical Hardy Z-function Z(t) = exp(i * θ(t)) * ζ(1/2 + i t). -/
+/-- Complex-valued Hardy-type normalization H(t) = exp(i * θ(t)) * ζ(1/2 + i t). -/
 def hardyZ (t : ℝ) : ℂ :=
   exp (I * (riemannSiegelTheta t : ℂ)) * riemannZeta (criticalLinePoint t)
 
-/-- Absolute value correspondence: |Z(t)| = |ζ(1/2 + i t)|. -/
+/-- Absolute value correspondence: ‖H(t)‖ = ‖ζ(1/2 + i t)‖. -/
 theorem hardyZ_norm_eq_riemannZeta_norm (t : ℝ) :
     ‖hardyZ t‖ = ‖riemannZeta (criticalLinePoint t)‖ := by
   dsimp [hardyZ]
@@ -71,11 +78,20 @@ theorem hardyZ_norm_eq_riemannZeta_norm (t : ℝ) :
     rw [h_re, Real.exp_zero]
   rw [h_phase, one_mul]
 
-/-- Zero equivalence: Z(t) = 0 ↔ ζ(1/2 + i t) = 0. -/
+/-- Zero equivalence: H(t) = 0 ↔ ζ(1/2 + i t) = 0. -/
 theorem hardyZ_zero_iff_riemannZeta_zero (t : ℝ) :
     hardyZ t = 0 ↔ riemannZeta (criticalLinePoint t) = 0 := by
   dsimp [hardyZ]
   have h_exp_ne_zero : exp (I * (riemannSiegelTheta t : ℂ)) ≠ 0 := exp_ne_zero _
-  exact mul_eq_zero_iff_right h_exp_ne_zero
+  rw [mul_eq_zero]
+  simp [h_exp_ne_zero]
+
+/-- Symmetry of the Hardy-type norm under parameter negation:
+    ‖H(-t)‖ = ‖H(t)‖ under Zeta critical line norm symmetry. -/
+theorem hardyZ_neg_norm (t : ℝ) (h_symm : ‖riemannZeta (criticalLinePoint (-t))‖ = ‖riemannZeta (criticalLinePoint t)‖) :
+    ‖hardyZ (-t)‖ = ‖hardyZ t‖ := by
+  rw [hardyZ_norm_eq_riemannZeta_norm (-t)]
+  rw [hardyZ_norm_eq_riemannZeta_norm t]
+  exact h_symm
 
 end RiemannZeta

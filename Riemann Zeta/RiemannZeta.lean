@@ -1,6 +1,5 @@
 import RiemannZeta.HardyZ
 import RiemannZeta.Nonvanishing
-import RiemannZeta.PhaseWinding
-import RiemannZeta.DirichletDensity
-import RiemannZeta.AsymmetricEnergy
-import RiemannZeta.Audit
+import RiemannZeta.CompletedZetaSymmetry
+import RiemannZeta.FiniteDirichletPolynomial
+import RiemannZeta.CrossNormProduct
