@@ -15,7 +15,9 @@ def ZeroRectangle (σ_min σ_max T_min T_max : ℝ) : Set ℂ :=
 /-- An interface for counting zeros of the Riemann Zeta function with analytic multiplicity.
     This serves as the canonical description of the zeros used throughout the proof. -/
 structure ZetaZeroCountModel where
-  /-- Analytic multiplicity of a zero. -/
+  /-- Analytic multiplicity of a zero.
+      PROVISIONAL: This field currently serves as an abstract interface. A full 
+      analytic vanishing order definition is deferred to future work. -/
   multiplicity : ℂ → ℕ
   /-- A point has positive multiplicity if and only if it is a zero of riemannZeta. -/
   zero_iff : ∀ s : ℂ, multiplicity s > 0 ↔ riemannZeta s = 0
