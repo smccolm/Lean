@@ -24,19 +24,22 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Formulation of Dirichlet polynomial exponentiation and relations between large base values and powered values.
 - **[`RiemannZeta/GuthMaynard/InghamBound.lean`](RiemannZeta/GuthMaynard/InghamBound.lean)**: Statement of the Ingham bound hypothesis and definition of the combined zero-density transfer (F-12).
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 52 core declarations.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 57 core declarations.
 
 ---
 
-## Verification & Axiom Audit
+## 5. Build Instructions
 
-To verify the package locally using `lake`:
+### Verification
+
+Ensure you have Lean `v4.30.0-rc2` installed.
+To compile the project and verify the exact `sorry`-free status, run:
 ```bash
 lake build
 lake env lean RiemannZeta/Audit.lean
 ```
 
-All 52 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
+All 57 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
 
 ---
 

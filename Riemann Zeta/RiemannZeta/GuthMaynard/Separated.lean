@@ -58,3 +58,14 @@ theorem inBaseInterval_translate (T : ℝ) (W : Finset ℝ) (h : InTargetInterva
   · linarith [hT.2]
 
 end RiemannZeta.GuthMaynard
+
+/-- 
+Combinatorial separation extraction hypothesis. 
+States that from any finite set S where local occupancy in [x, x+1) is bounded by L,
+we can extract a 1-separated subset W whose size is proportional to S.
+Isolated as a hypothesis pending a full Lean combinatorial proof.
+-/
+def SeparatedSelectionHypothesis : Prop :=
+  ∀ (S : Finset ℝ) (L : ℕ),
+    (∀ (x : ℤ), (S.filter (fun t => (x : ℝ) ≤ t ∧ t < (x : ℝ) + 1)).card ≤ L) →
+    ∃ W ⊆ S, RiemannZeta.GuthMaynard.IsSeparated 1 W ∧ S.card ≤ 2 * L * W.card

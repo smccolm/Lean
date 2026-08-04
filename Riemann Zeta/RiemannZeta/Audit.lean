@@ -6,13 +6,17 @@ import RiemannZeta.CrossNormProduct
 
 import RiemannZeta.GuthMaynard.Asymptotics
 import RiemannZeta.GuthMaynard.Separated
+import RiemannZeta.GuthMaynard.ExtractSeparated
 import RiemannZeta.GuthMaynard.Statements
 import RiemannZeta.GuthMaynard.ZeroCount
+import RiemannZeta.GuthMaynard.SymmetryTransfer
 import RiemannZeta.GuthMaynard.ZeroDetector
+import RiemannZeta.GuthMaynard.BetaDependence
 import RiemannZeta.GuthMaynard.Transfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.PolynomialPowers
 import RiemannZeta.GuthMaynard.InghamBound
+import RiemannZeta.GuthMaynard.DensityReduction
 
 open RiemannZeta
 open RiemannZeta.GuthMaynard
@@ -75,6 +79,13 @@ open RiemannZeta.GuthMaynard
 #print axioms zeroCountRect
 #print axioms N
 #print axioms DyadicReductionProp
+#print axioms ExtractSeparatedHypothesis
+
+-- Symmetry Transfer
+#print axioms FunctionalSymmetryHypothesis
+
+-- Density Reduction
+#print axioms SymmetricDensityReductionProp
 
 -- Exponent Arithmetic
 #print axioms denom_pos
@@ -89,6 +100,9 @@ open RiemannZeta.GuthMaynard
 #print axioms IsTypeIIZero
 #print axioms TypeIIBoundHypothesis
 
+-- Beta Dependence
+#print axioms BetaDependenceRemovalHypothesis
+
 -- Transfer Theorem
 #print axioms MeanValueHypothesis
 #print axioms ConditionalZeroDensityTransfer
@@ -99,3 +113,4 @@ open RiemannZeta.GuthMaynard
 -- Ingham Bound
 #print axioms InghamZeroDensity
 #print axioms CombinedZeroDensityTransfer
+#print axioms NormalizedCoeffsBoundHypothesis

@@ -16,8 +16,8 @@ namespace RiemannZeta.GuthMaynard
 structure ZeroDetectorModel where
   /-- The coefficients of the zero detecting polynomial for a given N. -/
   coeff : ℕ → ℕ → ℂ
-  /-- The coefficient magnitude bound. -/
-  coeff_bound : ∀ N n, ‖coeff N n‖ ≤ 1 -- Simplification for the analytic interface
+  /-- The coefficient magnitude bound by an epsilon power (since it involves a truncated divisor sum). -/
+  coeff_bound : ∀ (ε : ℝ), 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ (N n : ℕ), 0 < n → ‖coeff N n‖ ≤ C * (n : ℝ) ^ ε
   
 /-- The Dirichlet polynomial D_N(s) used for detection. -/
 noncomputable def detectPoly (detector : ZeroDetectorModel) (N : ℕ) (s : ℂ) : ℂ :=
@@ -38,13 +38,18 @@ def IsTypeIIZero (model : ZetaZeroCountModel) (detector : ZeroDetectorModel)
     (σ T1 T2 : ℝ) (ρ : ℂ) (T : ℝ) : Prop :=
   ρ ∈ zerosInRect model σ 1 T1 T2 ∧ ¬ IsTypeIZero detector ρ T
 
-/-- F-03 Hypothesis: The number of Type II zeros is bounded by T^{2-2σ} (log T)^{O(1)}.
-    Formulated using the T^{o(1)} epsilon-power convention. -/
-def TypeIIBoundHypothesis (model : ZetaZeroCountModel) (detector : ZeroDetectorModel) : Prop :=
-  ∀ (σ : ℝ), 7/10 ≤ σ → σ ≤ 1 →
+/-- Explicit Halasz-Montgomery consequence for the large values of Dirichlet polynomials.
+    Specifically controls Type II zeros with the exponent 3(1-σ)/(3σ-1) in [3/4, 4/5]. -/
+def HalaszMontgomeryConsequence (model : ZetaZeroCountModel) (detector : ZeroDetectorModel) : Prop :=
+  ∀ (σ : ℝ), 3/4 ≤ σ → σ ≤ 4/5 →
     EpsilonPowerBound 
       (fun (T : ℝ) => (((zerosInRect model σ 1 T (2*T)).filter 
         (fun ρ => IsTypeIIZero model detector σ T (2*T) ρ T)).card : ℝ))
-      (fun (T : ℝ) => T ^ (2 - 2 * σ))
+      (fun (T : ℝ) => T ^ (3 * (1 - σ) / (3 * σ - 1)))
+
+/-- F-03 Hypothesis: The number of Type II zeros is bounded appropriately.
+    We formulate this explicitly to include the Halasz-Montgomery consequence. -/
+def TypeIIBoundHypothesis (model : ZetaZeroCountModel) (detector : ZeroDetectorModel) : Prop :=
+  HalaszMontgomeryConsequence model detector
 
 end RiemannZeta.GuthMaynard
