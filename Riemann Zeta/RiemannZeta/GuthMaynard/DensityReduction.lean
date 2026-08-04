@@ -15,9 +15,20 @@ def SymmetricDensityReductionProp (model : ZetaZeroCountModel) : Prop :=
 
 /-- F-13 implies F-14: The Functional Symmetry Hypothesis implies 
     the symmetric density reduction property. -/
-def FunctionalSymmetryImpliesReduction : Prop :=
-  ∀ (model : ZetaZeroCountModel),
-    FunctionalSymmetryHypothesis model →
-    SymmetricDensityReductionProp model
+theorem functional_symmetry_implies_reduction (model : ZetaZeroCountModel) 
+    (h_sym : FunctionalSymmetryHypothesis model) : 
+    SymmetricDensityReductionProp model := by
+  intro σ T h_half_lt h_le_one
+  have h_le : 1 - σ ≤ σ := by linarith
+  unfold N zeroCountRect
+  apply Finset.sum_le_sum_of_subset_of_nonneg
+  · intro s
+    rw [zerosInRect, zerosInRect, Set.Finite.mem_toFinset, Set.Finite.mem_toFinset, 
+        Set.mem_inter_iff, Set.mem_inter_iff, ZeroRectangle, ZeroRectangle, 
+        Set.mem_setOf_eq, Set.mem_setOf_eq]
+    rintro ⟨⟨hσ, hs1, ht1, ht2⟩, hz⟩
+    exact ⟨⟨le_trans h_le hσ, hs1, ht1, ht2⟩, hz⟩
+  · intro i _ _
+    exact Nat.zero_le _
 
 end RiemannZeta.GuthMaynard

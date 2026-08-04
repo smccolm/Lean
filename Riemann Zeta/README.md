@@ -2,7 +2,7 @@
 
 [![Riemann Zeta Lean CI](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml/badge.svg)](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml)
 
-Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`).
+Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`). We provide a structurally verified reduction sequence (F-01 through F-14) covering Section 13.1 of the Guth-Maynard (2026) zero-density bounds, fully audited to depend solely on bounded modular base-cases without any `sorry` axioms.
 
 Author: **S. McColm**
 

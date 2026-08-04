@@ -18,7 +18,7 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we do not formalize the analytic measure bounds or zero-density counting theorems of Guth-Maynard. Instead, we establish a machine-checked library in **Lean 4** covering finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, and a complex-valued Hardy-type phase normalization [2, 3].
+In this work, we formalize the structural deduction of the zero-density theorem as well as finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, and a complex-valued Hardy-type phase normalization [2, 3]. We successfully verify the complete algebraic and logical reduction (F-01 through F-14) of the Guth-Maynard analytic zero-density architecture without relying on unproven generic `sorry` axioms, isolating the unproven components exclusively to atomic analytic hypotheses (such as the Montgomery Mean Value Theorem and Halasz-Montgomery bounds).
 
 ## Contribution Taxonomy & Originality Disclosure
 The mathematical content of this package is structured into four distinct layers:
@@ -133,7 +133,7 @@ $$\zeta(1 + i t) \neq 0$$
 
 # 6. Guth-Maynard Target Infrastructure & Formal Statements
 
-The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). As a first step, we have defined the exact target propositions (without yet providing their proofs). These kernel-checked `Prop` signatures form the rigorous interface for future verification.
+The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). We have achieved a full conditional formalization of Section 13.1 of their work, bridging the structural reductions (F-01 through F-14) into a `conditionalZeroDensityTransfer` theorem. These kernel-checked `Prop` signatures and verified logical reductions form the rigorous interface for future analytic verification.
 
 ## Theorem 11 (Large Values Estimate Target Statement)
 **Status**: Unproved (Target Specification).
@@ -211,7 +211,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 
 **Future Technical Extensions**:
 1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
-2. Deriving zero-density estimate scaffolding over Dirichlet polynomials.
+2. Formally proving the remaining isolated analytic base layers (e.g., Halasz-Montgomery Type II bounds, Montgomery Mean Value Theorem) using topological measures to fully close the Guth-Maynard Zero Density bounds.
 
 ---
 

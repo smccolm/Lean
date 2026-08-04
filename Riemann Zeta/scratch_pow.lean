@@ -1,34 +1,20 @@
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
+import Mathlib.Algebra.BigOperators.Basic
+import Mathlib.Algebra.BigOperators.Ring
 import RiemannZeta.GuthMaynard.ZeroDetector
 import Mathlib.Tactic
-import Mathlib.Tactic
 
-open Complex Finset
+open Complex Finset RiemannZeta.GuthMaynard
 open scoped BigOperators
 
-namespace RiemannZeta.GuthMaynard
-
-noncomputable def powCoeff (N k : ℕ) (m : ℕ) : ℂ :=
+noncomputable def powCoeff_alt (N k : ℕ) (m : ℕ) : ℂ :=
   ∑ p ∈ (Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc N (2 * N))).filter (fun p => (∏ x : Fin k, p x) = m),
     ∏ x : Fin k, detectorCoeff N (p x)
 
-noncomputable def powPoly (N k : ℕ) (s : ℂ) : ℂ :=
-  ∑ m ∈ Finset.Icc (N^k) ((2*N)^k), powCoeff N k m * (m : ℂ) ^ (-s)
-
-/-- F-07: The power identity hypothesis.
-    Asserts that the explicitly constructed convolution coefficients satisfy the algebraic power identity. -/
-def PolynomialPowerIdentityHypothesis : Prop :=
-  ∀ (N k : ℕ) (s : ℂ), (detectPoly N s) ^ k = powPoly N k s
-
-/-- F-07: Large value power hypothesis.
-    Asserts that if the base polynomial is large, the powered polynomial is correspondingly large.
-    This follows immediately from the power identity, but we state it as a hypothesis to isolate the algebra. -/
-def LargeValuePowerHypothesis : Prop :=
-  ∀ (N k : ℕ) (ρ : ℂ) (V : ℝ), 0 ≤ V →
-    V ≤ ‖detectPoly N ρ‖ →
-    V^k ≤ ‖powPoly N k ρ‖
+noncomputable def powPoly_alt (N k : ℕ) (s : ℂ) : ℂ :=
+  ∑ m ∈ Finset.Icc (N^k) ((2*N)^k), powCoeff_alt N k m * (m : ℂ) ^ (-s)
 
 theorem prod_cpow_nat {ι : Type*} (s : Finset ι) (p : ι → ℕ) (z : ℂ) :
   (∏ i ∈ s, (p i : ℂ) ^ z) = (∏ i ∈ s, (p i : ℂ)) ^ z := by
@@ -40,7 +26,7 @@ theorem prod_cpow_nat {ι : Type*} (s : Finset ι) (p : ι → ℕ) (z : ℂ) :
     push_cast at this ⊢
     rw [this]
 
-lemma prod_bound_Icc {N k : ℕ} (p : Fin k → ℕ) (hp : p ∈ Fintype.piFinset fun _ => Ioc N (2 * N)) :
+lemma prod_bound_Icc {N k : ℕ} {p : Fin k → ℕ} (hp : p ∈ Fintype.piFinset fun _ => Ioc N (2 * N)) :
   (∏ i, p i) ∈ Icc (N ^ k) ((2 * N) ^ k) := by
   rw [Fintype.mem_piFinset] at hp
   rw [mem_Icc]
@@ -50,7 +36,8 @@ lemma prod_bound_Icc {N k : ℕ} (p : Fin k → ℕ) (hp : p ∈ Fintype.piFinse
       · intro i _
         exact zero_le N
       · intro i _
-        exact le_of_lt (mem_Ioc.mp (hp i)).1
+        have := (mem_Ioc.mp (hp i)).1
+        exact le_of_lt this
     simp only [Finset.prod_const, Finset.card_univ, Fintype.card_fin] at h1
     exact h1
   · have h2 : ∏ i : Fin k, p i ≤ ∏ i : Fin k, (2 * N) := by
@@ -62,9 +49,9 @@ lemma prod_bound_Icc {N k : ℕ} (p : Fin k → ℕ) (hp : p ∈ Fintype.piFinse
     simp only [Finset.prod_const, Finset.card_univ, Fintype.card_fin] at h2
     exact h2
 
-theorem polynomialPowerIdentity : PolynomialPowerIdentityHypothesis := by
-  intro N k s
-  dsimp [PolynomialPowerIdentityHypothesis, detectPoly, powPoly, powCoeff]
+theorem polynomialPowerIdentity_alt (N k : ℕ) (s : ℂ) :
+  (detectPoly N s) ^ k = powPoly_alt N k s := by
+  dsimp [detectPoly, powPoly_alt, powCoeff_alt]
   have h1 := Finset.sum_pow' (Ioc N (2 * N)) (fun (n : ℕ) => detectorCoeff N n * (n : ℂ) ^ (-s)) k
   rw [h1]
   
@@ -76,13 +63,10 @@ theorem polynomialPowerIdentity : PolynomialPowerIdentityHypothesis := by
         (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s) := by
     apply sum_congr rfl
     intro m _
-    rw [Finset.sum_mul]
     apply sum_congr rfl
     intro p hp
     rw [mem_filter] at hp
-    rw [← hp.2]
-    push_cast
-    rfl
+    rw [hp.2]
   rw [hRHS]
 
   have hRHS2 : (∑ m ∈ Icc (N ^ k) ((2 * N) ^ k),
@@ -90,18 +74,9 @@ theorem polynomialPowerIdentity : PolynomialPowerIdentityHypothesis := by
         (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s)) = 
     ∑ p ∈ Fintype.piFinset fun _ => Ioc N (2 * N),
       (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s) := by
-    exact Finset.sum_fiberwise_of_maps_to prod_bound_Icc (fun p => (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s))
+    exact (Finset.sum_fiberwise_of_maps_to prod_bound_Icc (fun p => (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s))).symm
   rw [hRHS2]
 
   apply sum_congr rfl
   intro p _
   rw [prod_mul_distrib, prod_cpow_nat]
-
-theorem largeValuePower : LargeValuePowerHypothesis := by
-  intro N k ρ V hV1 hV2
-  have h_id : powPoly N k ρ = (detectPoly N ρ) ^ k := (polynomialPowerIdentity N k ρ).symm
-  rw [h_id]
-  rw [norm_pow]
-  exact pow_le_pow_left₀ hV1 hV2 k
-
-end RiemannZeta.GuthMaynard

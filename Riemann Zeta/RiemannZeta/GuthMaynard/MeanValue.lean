@@ -27,21 +27,21 @@ def MontgomeryMeanValue : Prop :=
     M1 ≤ M2 →
     IsSeparated 1 W →
     (∀ x ∈ W, x ∈ Set.Icc T0 (T0 + T)) →
-    ∑ t ∈ W, ‖∑ m ∈ Ioc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 ≤
-      C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2
+    ∑ t ∈ W, ‖∑ m ∈ Icc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 ≤
+      C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2
 
 /-- F-10: Mean-value bound hypothesis for powers of the Dirichlet polynomial.
     This is the exact specific variant consumed by the zero density transfer. -/
-def MeanValueHypothesis (detector : ZeroDetectorModel) (powerModel : ∀ k, PolynomialPowerModel detector k) : Prop :=
+def MeanValueHypothesis : Prop :=
   ∃ (C : ℝ), ∀ (N : ℕ) (k : ℕ) (V T : ℝ) (W : Finset ℝ),
     0 < N → 1 ≤ T → 0 < V →
     IsSeparated 1 W →
     InTargetInterval T W →
-    (∀ t ∈ W, V^k ≤ ‖(powerModel k).powPoly N (t * I)‖) →
-    (W.card : ℝ) ≤ C * (T + ((2 * N)^k - N^k : ℝ)) * V^(-2 * (k : ℝ)) * ∑ m ∈ Ioc (N^k) ((2*N)^k), ‖(powerModel k).powCoeff N m‖^2
+    (∀ t ∈ W, V^k ≤ ‖powPoly N k (t * I)‖) →
+    (W.card : ℝ) ≤ C * (T + ((2 * N)^k - N^k : ℝ)) * V^(-2 * (k : ℝ)) * ∑ m ∈ Icc (N^k) ((2*N)^k), ‖powCoeff N k m‖^2
 
-lemma mean_value_reduction (detector : ZeroDetectorModel) (powerModel : ∀ k, PolynomialPowerModel detector k)
-    (h_mont : MontgomeryMeanValue) : MeanValueHypothesis detector powerModel := by
+lemma mean_value_reduction
+    (h_mont : MontgomeryMeanValue) : MeanValueHypothesis := by
   rcases h_mont with ⟨C, hC_pos, h_mont_bound⟩
   use C
   intro N k V T W hN hT hV hSep hTarget h_lower
@@ -52,7 +52,7 @@ lemma mean_value_reduction (detector : ZeroDetectorModel) (powerModel : ∀ k, P
     apply Nat.pow_le_pow_left
     omega
   
-  let a := (powerModel k).powCoeff N
+  let a := powCoeff N k
   have h_base : ∀ x ∈ W, x ∈ Set.Icc T (T + T) := by
     intro x hx
     have hx_tgt := hTarget x hx
@@ -63,18 +63,23 @@ lemma mean_value_reduction (detector : ZeroDetectorModel) (powerModel : ∀ k, P
 
   have h_bound := h_mont_bound M1 M2 T T W a hT hM1_le_M2 hSep h_base
   
-  have h_sum_lower : (W.card : ℝ) * (V^k)^2 ≤ ∑ t ∈ W, ‖∑ m ∈ Ioc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 := by
+  have h_sum_lower : (W.card : ℝ) * (V^k)^2 ≤ ∑ t ∈ W, ‖∑ m ∈ Icc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 := by
     calc (W.card : ℝ) * (V^k)^2 = ∑ t ∈ W, (V^k)^2 := by simp
-      _ ≤ ∑ t ∈ W, ‖∑ m ∈ Ioc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 := by
+      _ ≤ ∑ t ∈ W, ‖∑ m ∈ Icc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ ^ 2 := by
         apply sum_le_sum
         intro t ht
         have hl := h_lower t ht
-        -- unfold powPoly to match the sum
-        change V^k ≤ ‖∑ m ∈ Ioc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I)‖ at hl
+        have h_neg : -(t : ℂ) * I = -((t : ℂ) * I) := by ring
+        have h_eq : powPoly N k (t * I) = ∑ m ∈ Icc M1 M2, a m * (m : ℂ) ^ (-(t : ℂ) * I) := by
+          dsimp [powPoly, a, M1, M2]
+          apply Finset.sum_congr rfl
+          intro m hm
+          rw [h_neg]
+        rw [←h_eq]
         have hp : 0 ≤ V^k := by positivity
         nlinarith [hl]
 
-  have hl2 : (W.card : ℝ) * (V^k)^2 ≤ C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 := by
+  have hl2 : (W.card : ℝ) * (V^k)^2 ≤ C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2 := by
     linarith [h_sum_lower, h_bound]
     
   have hpV : 0 < (V^k)^2 := by positivity
@@ -82,33 +87,31 @@ lemma mean_value_reduction (detector : ZeroDetectorModel) (powerModel : ∀ k, P
   have hpV2 : (V^k)^2 = V ^ (2 * (k : ℝ)) := by
     have h1 : (V^k)^2 = V ^ (2 * k) := by ring
     have h2 : V ^ (2 * k) = V ^ (2 * (k : ℝ)) := by
-      rw [Real.rpow_natCast]
-      push_cast
-      rfl
-    exact h1.trans h2
+      have h3 : V ^ (2 * k) = V ^ ((2 * k : ℕ) : ℝ) := Real.rpow_natCast V (2 * k) |>.symm
+      have h4 : ((2 * k : ℕ) : ℝ) = 2 * (k : ℝ) := by push_cast; rfl
+      rw [h4] at h3
+      exact h3
+    rw [h1, h2]
 
   rw [hpV2] at hl2
-  have h_div : (W.card : ℝ) ≤ C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 / V ^ (2 * (k : ℝ)) := by
-    -- We can divide by V^(2k) because it's positive.
+  have h_div : (W.card : ℝ) ≤ C * (T + (M2 - M1 : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) / V ^ (2 * (k : ℝ)) := by
     have hpV3 : 0 < V ^ (2 * (k : ℝ)) := by rw [←hpV2]; exact hpV
     exact (le_div_iff₀ hpV3).mpr hl2
     
-  have h_div2 : C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 / V ^ (2 * (k : ℝ)) = C * (T + (M2 - M1 : ℝ)) * V ^ (-2 * (k : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 := by
-    -- 1 / x = x⁻¹ and x⁻¹ = x^(-1) for rpow.
-    have h_inv : 1 / V ^ (2 * (k : ℝ)) = V ^ (-2 * (k : ℝ)) := by
+  have h_div2 : C * (T + (M2 - M1 : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) / V ^ (2 * (k : ℝ)) = C * (T + (M2 - M1 : ℝ)) * V ^ (-2 * (k : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) := by
+    have h_inv : 1 / V ^ (2 * (k : ℝ)) = V ^ (-(2 * (k : ℝ))) := by
       rw [one_div, ←Real.rpow_neg (le_of_lt hV)]
-    calc C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 / V ^ (2 * (k : ℝ))
-      _ = C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 * (1 / V ^ (2 * (k : ℝ))) := by ring
-      _ = C * (T + (M2 - M1 : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 * V ^ (-2 * (k : ℝ)) := by rw [h_inv]
-      _ = C * (T + (M2 - M1 : ℝ)) * V ^ (-2 * (k : ℝ)) * ∑ m ∈ Ioc M1 M2, ‖a m‖ ^ 2 := by ring
+    have h_neg : -(2 * (k : ℝ)) = -2 * (k : ℝ) := by ring
+    rw [h_neg] at h_inv
+    calc C * (T + (M2 - M1 : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) / V ^ (2 * (k : ℝ))
+      _ = C * (T + (M2 - M1 : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) * (1 / V ^ (2 * (k : ℝ))) := by ring
+      _ = C * (T + (M2 - M1 : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) * V ^ (-2 * (k : ℝ)) := by rw [h_inv]
+      _ = C * (T + (M2 - M1 : ℝ)) * V ^ (-2 * (k : ℝ)) * (∑ m ∈ Icc M1 M2, ‖a m‖ ^ 2) := by ring
   
   rw [h_div2] at h_div
   
-  have hM2M1 : (M2 - M1 : ℝ) = (2 * N)^k - N^k := by
-    have h1 : (M2 : ℝ) = ((2 * N)^k : ℝ) := rfl
-    have h2 : (M1 : ℝ) = (N^k : ℝ) := rfl
-    rw [h1, h2]
-    exact Nat.cast_sub hM1_le_M2
+  have hM2M1 : (M2 - M1 : ℝ) = ((2 * N)^k - N^k : ℝ) := by
+    exact_mod_cast rfl
 
   rw [hM2M1] at h_div
   exact h_div
