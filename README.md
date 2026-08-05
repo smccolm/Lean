@@ -26,6 +26,11 @@ Lean/
 ### 1. Riemann Zeta Formalization (`Riemann Zeta/`)
 Mechanized Lean 4 formalization of finite positive-index Dirichlet polynomial conjugation identities, coordinate packaging for Mathlib's completed Riemann Zeta functional equation, and complex-valued Hardy-type phase normalization.
 
+**IMPORTANT NOTE**: This subproject currently represents a formalized research blueprint for the Guth-Maynard zero-density transfer (Section 13.1), *not* a kernel-checked unconditional proof. The repository clearly distinguishes between:
+- **Proved Lemmas**: Valid elementary reductions, translation of separated sets, convolution-support, and finite positive-index identities.
+- **Conditional Reductions**: Deductions assuming specific abstract hypotheses (e.g., `beta_dependence_removal`).
+- **Outstanding Hypotheses**: Mathematical axioms provided as parameters for explicit evaluation (e.g., Fourier inversion over smooth cutoffs, Halasz-Montgomery Type II exponents, specific polynomial powering bounds).
+
 - **Toolchain**: Lean 4 `v4.30.0-rc2` & Mathlib `5450b53e5d`
 - **Submodules**:
   - `FiniteDirichletPolynomial.lean`: Positive-index Dirichlet polynomials over $\mathbb{N}_+$, conjugation invariance $\overline{A(s)} = A^*(\overline{s})$, and two-way zero conjugation.
@@ -33,7 +38,8 @@ Mechanized Lean 4 formalization of finite positive-index Dirichlet polynomial co
   - `CompletedZetaSymmetry.lean`: Coordinate packaging of completed Zeta functional equation $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ and fourfold zero orbit under two assumed conjugate zeros.
   - `HardyZ.lean`: Complex-valued Hardy-type phase normalization $H(t) = e^{i\theta(t)}\zeta(1/2+it)$, norm equivalence $\|H(t)\| = \|\zeta(1/2+it)\|$, zero equivalence $H(t)=0 \iff \zeta(1/2+it)=0$, and conditional norm negation symmetry.
   - `Nonvanishing.lean`: Classical boundary nonvanishing along $\mathrm{Re}(s) = 1$ for $t \neq 0$ with Mathlib totalization disclosure.
-  - `Audit.lean`: Automated `#print axioms` audit across all 21 core declarations (0 `sorryAx` dependencies).
+  - `GuthMaynard/`: Conditional formalization of the Section 13.1 Guth-Maynard zero-density transfer logic, decomposing the problem into dyadic block extraction, explicit separated sets tied to Type I zeros, and bounding unproved axioms explicitly in parameter signatures.
+  - `Audit.lean`: Automated Meta script audit across all core declarations (ensures 0 `sorryAx` dependencies on proved lemmas and 0 global `axiom` declarations in the project namespace).
 
 ### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/`)
 A mechanized Lean 4 proof of the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:

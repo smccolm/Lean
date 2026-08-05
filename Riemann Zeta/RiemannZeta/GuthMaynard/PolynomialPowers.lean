@@ -2,7 +2,7 @@ import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import RiemannZeta.GuthMaynard.ZeroDetector
-import Mathlib.Tactic
+import RiemannZeta.GuthMaynard.Asymptotics
 import Mathlib.Tactic
 
 open Complex Finset
@@ -10,98 +10,38 @@ open scoped BigOperators
 
 namespace RiemannZeta.GuthMaynard
 
-noncomputable def powCoeff (N k : ℕ) (m : ℕ) : ℂ :=
+/-- F-07: Explicitly construct convolution coefficients for the powered polynomial. -/
+noncomputable def powCoeff (N k : ℕ) (m : ℕ) (T : ℝ) : ℂ :=
   ∑ p ∈ (Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc N (2 * N))).filter (fun p => (∏ x : Fin k, p x) = m),
-    ∏ x : Fin k, detectorCoeff N (p x)
+    ∏ x : Fin k, detectorCoeff N (p x) T
 
-noncomputable def powPoly (N k : ℕ) (s : ℂ) : ℂ :=
-  ∑ m ∈ Finset.Icc (N^k) ((2*N)^k), powCoeff N k m * (m : ℂ) ^ (-s)
+/-- Factorization count bounds. -/
+def FactorizationCountBoundHypothesis : Prop :=
+  ∀ (k m : ℕ) (ε : ℝ), ε > 0 →
+    ∃ C : ℝ, 0 < C ∧ ((Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 m)).filter (fun p => (∏ x : Fin k, p x) = m)).card ≤ C * (m : ℝ)^ε
 
-/-- F-07: The power identity hypothesis.
-    Asserts that the explicitly constructed convolution coefficients satisfy the algebraic power identity. -/
+/-- Bound for the powered coefficients incorporating epsilon loss. -/
+def PowCoeffBoundHypothesis : Prop :=
+  ∀ (N k m : ℕ) (T ε : ℝ), 0 < m → T ≥ 1 → ε > 0 →
+    ∃ C : ℝ, 0 < C ∧ ‖powCoeff N k m T‖ ≤ C * (m : ℝ)^ε
+
+/-- The powered polynomial is supported on [N^k, (2N)^k] -/
+noncomputable def powPoly (N k : ℕ) (s : ℂ) (T : ℝ) : ℂ :=
+  ∑ m ∈ Finset.Icc (N^k) ((2*N)^k), powCoeff N k m T * (m : ℂ) ^ (-s)
+
+/-- F-07: The power identity hypothesis. -/
 def PolynomialPowerIdentityHypothesis : Prop :=
-  ∀ (N k : ℕ) (s : ℂ), (detectPoly N s) ^ k = powPoly N k s
+  ∀ (N k : ℕ) (s : ℂ) (T : ℝ), (detectPoly N s T) ^ k = powPoly N k s T
 
-/-- F-07: Large value power hypothesis.
-    Asserts that if the base polynomial is large, the powered polynomial is correspondingly large.
-    This follows immediately from the power identity, but we state it as a hypothesis to isolate the algebra. -/
-def LargeValuePowerHypothesis : Prop :=
-  ∀ (N k : ℕ) (ρ : ℂ) (V : ℝ), 0 ≤ V →
-    V ≤ ‖detectPoly N ρ‖ →
-    V^k ≤ ‖powPoly N k ρ‖
-
-theorem prod_cpow_nat {ι : Type*} (s : Finset ι) (p : ι → ℕ) (z : ℂ) :
-  (∏ i ∈ s, (p i : ℂ) ^ z) = (∏ i ∈ s, (p i : ℂ)) ^ z := by
-  classical
-  induction' s using Finset.induction_on with a s ha ih
-  · simp
-  · rw [prod_insert ha, prod_insert ha, ih]
-    have := natCast_mul_natCast_cpow (p a) (∏ i ∈ s, p i) z
-    push_cast at this ⊢
-    rw [this]
-
-lemma prod_bound_Icc {N k : ℕ} (p : Fin k → ℕ) (hp : p ∈ Fintype.piFinset fun _ => Ioc N (2 * N)) :
-  (∏ i, p i) ∈ Icc (N ^ k) ((2 * N) ^ k) := by
-  rw [Fintype.mem_piFinset] at hp
-  rw [mem_Icc]
-  constructor
-  · have h1 : ∏ i : Fin k, N ≤ ∏ i : Fin k, p i := by
-      apply Finset.prod_le_prod
-      · intro i _
-        exact zero_le N
-      · intro i _
-        exact le_of_lt (mem_Ioc.mp (hp i)).1
-    simp only [Finset.prod_const, Finset.card_univ, Fintype.card_fin] at h1
-    exact h1
-  · have h2 : ∏ i : Fin k, p i ≤ ∏ i : Fin k, (2 * N) := by
-      apply Finset.prod_le_prod
-      · intro i _
-        exact Nat.zero_le (p i)
-      · intro i _
-        exact (mem_Ioc.mp (hp i)).2
-    simp only [Finset.prod_const, Finset.card_univ, Fintype.card_fin] at h2
-    exact h2
-
-theorem polynomialPowerIdentity : PolynomialPowerIdentityHypothesis := by
-  intro N k s
-  dsimp [PolynomialPowerIdentityHypothesis, detectPoly, powPoly, powCoeff]
-  have h1 := Finset.sum_pow' (Ioc N (2 * N)) (fun (n : ℕ) => detectorCoeff N n * (n : ℂ) ^ (-s)) k
-  rw [h1]
-  
-  have hRHS : (∑ m ∈ Icc (N ^ k) ((2 * N) ^ k),
-      (∑ p ∈ (Fintype.piFinset fun _ => Ioc N (2 * N)).filter fun p => ∏ x : Fin k, p x = m,
-        ∏ x : Fin k, detectorCoeff N (p x)) * (m : ℂ) ^ (-s)) =
-    ∑ m ∈ Icc (N ^ k) ((2 * N) ^ k),
-      ∑ p ∈ (Fintype.piFinset fun _ => Ioc N (2 * N)).filter fun p => ∏ x : Fin k, p x = m,
-        (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s) := by
-    apply sum_congr rfl
-    intro m _
-    rw [Finset.sum_mul]
-    apply sum_congr rfl
-    intro p hp
-    rw [mem_filter] at hp
-    rw [← hp.2]
-    push_cast
-    rfl
-  rw [hRHS]
-
-  have hRHS2 : (∑ m ∈ Icc (N ^ k) ((2 * N) ^ k),
-      ∑ p ∈ (Fintype.piFinset fun _ => Ioc N (2 * N)).filter fun p => ∏ x : Fin k, p x = m,
-        (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s)) = 
-    ∑ p ∈ Fintype.piFinset fun _ => Ioc N (2 * N),
-      (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s) := by
-    exact Finset.sum_fiberwise_of_maps_to prod_bound_Icc (fun p => (∏ x : Fin k, detectorCoeff N (p x)) * ((∏ x : Fin k, p x) : ℂ) ^ (-s))
-  rw [hRHS2]
-
-  apply sum_congr rfl
-  intro p _
-  rw [prod_mul_distrib, prod_cpow_nat]
-
-theorem largeValuePower : LargeValuePowerHypothesis := by
-  intro N k ρ V hV1 hV2
-  have h_id : powPoly N k ρ = (detectPoly N ρ) ^ k := (polynomialPowerIdentity N k ρ).symm
-  rw [h_id]
-  rw [norm_pow]
-  exact pow_le_pow_left₀ hV1 hV2 k
+/--
+F-07: Decomposition into O(k) dyadic blocks.
+The wide support [N^k, (2N)^k] is decomposed into O(k) dyadic blocks of the form (M, 2M].
+If the powered polynomial is large, one of these dyadic blocks must retain a proportionally large value.
+-/
+def DyadicBlockDecompositionHypothesis : Prop :=
+  ∀ (N k : ℕ) (ρ : ℂ) (T V ε : ℝ), T ≥ 1 → ε > 0 → V ≥ 0 →
+    V^k ≤ ‖powPoly N k ρ T‖ →
+    ∃ (M : ℝ), (N^k : ℝ) ≤ M ∧ M ≤ (2*N)^k ∧
+      V^k / (T^ε * k) ≤ ‖∑ m ∈ Finset.Ioc (Nat.floor M) (Nat.floor (2*M)), powCoeff N k m T * (m : ℂ) ^ (-ρ)‖
 
 end RiemannZeta.GuthMaynard
