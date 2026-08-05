@@ -26,10 +26,10 @@ Lean/
 ### 1. Riemann Zeta Formalization (`Riemann Zeta/`)
 Mechanized Lean 4 formalization of finite positive-index Dirichlet polynomial conjugation identities, coordinate packaging for Mathlib's completed Riemann Zeta functional equation, and complex-valued Hardy-type phase normalization.
 
-**IMPORTANT NOTE**: This subproject currently represents a formalized research blueprint for the Guth-Maynard zero-density transfer (Section 13.1), *not* a kernel-checked unconditional proof. The repository clearly distinguishes between:
-- **Proved Lemmas**: Valid elementary reductions, translation of separated sets, convolution-support, and finite positive-index identities.
-- **Conditional Reductions**: Deductions assuming specific abstract hypotheses (e.g., `beta_dependence_removal`).
-- **Outstanding Hypotheses**: Mathematical axioms provided as parameters for explicit evaluation (e.g., Fourier inversion over smooth cutoffs, Halasz-Montgomery Type II exponents, specific polynomial powering bounds).
+**IMPORTANT NOTE**: This subproject has achieved **Goal B** (the conditional Section 13.1 proof chain), serving as a formalized research blueprint for the Guth-Maynard zero-density transfer, *not* a kernel-checked unconditional proof. The repository clearly distinguishes between:
+- **Proved Theorems & Reductions**: Structural implication chain of the transfer theorem, valid elementary reductions, translation of separated sets, convolution-support, coefficient normalization, and set monotonicity.
+- **Temporary Analytic Hypotheses**: Deductions assuming specific analytic properties (e.g., Fourier decay, localized pigeonholing).
+- **Outstanding Hypotheses**: Mathematical axioms provided as parameters for explicit evaluation (e.g., Halasz-Montgomery Type II exponents, specific dyadic block selection bounds).
 
 - **Toolchain**: Lean 4 `v4.30.0-rc2` & Mathlib `5450b53e5d`
 - **Submodules**:

@@ -7,17 +7,16 @@ open Complex
 
 namespace RiemannZeta.GuthMaynard
 
-/-- Symmetry-informed density reduction (F-14).
-    Under the Functional Symmetry Hypothesis, the number of zeros `N(σ, T)` 
-    is bounded related to `N(1-σ, T)`. -/
-def SymmetricDensityReductionProp (model : ZetaZeroCountModel) : Prop :=
+/-- Monotonic density reduction (F-14).
+    The number of zeros `N(σ, T)` is monotonically bounded by `N(1-σ, T)` for `σ ≥ 1/2` 
+    simply because the region `Re(s) ≥ σ` is a subset of `Re(s) ≥ 1-σ`. 
+    This is an ordinary set monotonicity consequence, not dependent on functional symmetry. -/
+def MonotonicDensityReductionProp (model : ZetaZeroCountModel) : Prop :=
   ∀ (σ T : ℝ), 1/2 < σ → σ ≤ 1 → N model σ T ≤ N model (1 - σ) T
 
-/-- F-13 implies F-14: The Functional Symmetry Hypothesis implies 
-    the symmetric density reduction property. -/
-theorem functional_symmetry_implies_reduction (model : ZetaZeroCountModel) 
-    (h_sym : FunctionalSymmetryHypothesis model) : 
-    SymmetricDensityReductionProp model := by
+/-- F-13/F-14: Set monotonicity of the zero count. -/
+theorem monotonic_density_reduction (model : ZetaZeroCountModel) : 
+    MonotonicDensityReductionProp model := by
   intro σ T h_half_lt h_le_one
   have h_le : 1 - σ ≤ σ := by linarith
   unfold N zeroCountRect

@@ -15,14 +15,15 @@ namespace RiemannZeta.GuthMaynard
 /-- Actual truncated Möbius coefficients b_n.
     b_n = (sum_{d | n, d <= 2T^{1/100}} mu(d)) * exp(-n / T^{1/2}) 
     We just axiomatize the sequence here with an uninterpreted function `mobius_sum` for the algebraic part. -/
-noncomputable def mobius_sum (n : ℕ) (T : ℝ) : ℂ := sorry -- Would map to Mathlib moebius over divisors
+opaque mobius_sum (n : ℕ) (T : ℝ) : ℂ
 
 noncomputable def detectorCoeff (N n : ℕ) (T : ℝ) : ℂ := 
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
 
-lemma detectorCoeff_bound (ε : ℝ) (hε : 0 < ε) (T : ℝ) (hT : 1 ≤ T) : 
-  ∃ C : ℝ, 0 < C ∧ ∀ (N n : ℕ), 0 < n → ‖detectorCoeff N n T‖ ≤ C * (n : ℝ) ^ ε := by
-  sorry
+/-- Hypothesis bounding the detector coefficient with epsilon losses. -/
+def DetectorCoeffBoundHypothesis : Prop :=
+  ∀ (ε : ℝ), 0 < ε → ∀ (T : ℝ), 1 ≤ T → 
+    ∃ C : ℝ, 0 < C ∧ ∀ (N n : ℕ), 0 < n → ‖detectorCoeff N n T‖ ≤ C * (n : ℝ) ^ ε
   
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/
 noncomputable def detectPoly (N : ℕ) (s : ℂ) (T : ℝ) : ℂ :=

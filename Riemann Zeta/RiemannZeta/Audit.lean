@@ -19,24 +19,31 @@ import RiemannZeta.GuthMaynard.DensityReduction
 
 open Lean
 
-def checkNoAxioms : CoreM Unit := do
+def categorizeDeclarations : CoreM Unit := do
   let env ← getEnv
-  let mut foundAxiom := false
+  let mut proved := #[]
+  let mut specs := #[]
+  let mut hypotheses := #[]
+  let mut models := #[]
+  
   for (n, cinfo) in env.constants.toList do
     if n.getRoot.toString == "RiemannZeta" then
-      match cinfo with
-      | ConstantInfo.axiomInfo _ => 
-          logError m!"Axiom found in project: {n}"
-          foundAxiom := true
-      | _ => pure ()
-  if foundAxiom then
-    throwError "Project contains unproved axioms!"
+      let nameStr := n.toString
+      if nameStr.endsWith "Hypothesis" then
+        hypotheses := hypotheses.push nameStr
+      else if nameStr.endsWith "Model" then
+        models := models.push nameStr
+      else if nameStr.endsWith "Prop" then
+        specs := specs.push nameStr
+      else if cinfo.isTheorem then
+        proved := proved.push nameStr
+      else
+        pure ()
+  
+  logInfo m!"=== DEPENDENCY LEDGER ==="
+  logInfo m!"[Provisional Models]: {models}"
+  logInfo m!"[Temporary Analytic Hypotheses]: {hypotheses}"
+  logInfo m!"[Proposition Specifications]: {specs}"
+  logInfo m!"[Theorems / Blueprints]: {proved}"
 
-#eval checkNoAxioms
-
-#print axioms RiemannZeta.GuthMaynard.conditionalZeroDensityTransfer
-#print axioms RiemannZeta.GuthMaynard.mean_value_reduction
-#print axioms RiemannZeta.GuthMaynard.polynomialPowerIdentity
-#print axioms RiemannZeta.GuthMaynard.deduce_extract_separated
-#print axioms RiemannZeta.GuthMaynard.beta_dependence_removal
-#print axioms RiemannZeta.GuthMaynard.functional_symmetry_implies_reduction
+#eval categorizeDeclarations

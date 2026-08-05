@@ -14,13 +14,16 @@ namespace RiemannZeta.GuthMaynard
 def ZeroRectangle (σ_min σ_max T_min T_max : ℝ) : Set ℂ :=
   { s : ℂ | σ_min ≤ s.re ∧ s.re ≤ σ_max ∧ T_min ≤ s.im ∧ s.im ≤ T_max }
 
+/-- Placeholder for Mathlib's analytic order of vanishing for a complex function. -/
+opaque analyticVanishingOrder (f : ℂ → ℂ) (s : ℂ) : ℕ
+
 /-- An interface for counting zeros of the Riemann Zeta function with analytic multiplicity.
     This serves as the canonical description of the zeros used throughout the proof. -/
 structure ZetaZeroCountModel where
-  /-- Analytic multiplicity of a zero. This must correspond to the analytic vanishing order. -/
+  /-- Analytic multiplicity of a zero. -/
   multiplicity : ℂ → ℕ
-  /-- A point has positive multiplicity if and only if it is a zero of riemannZeta. -/
-  zero_iff : ∀ s : ℂ, multiplicity s > 0 ↔ riemannZeta s = 0
+  /-- Multiplicity must exactly equal the analytic vanishing order of riemannZeta. -/
+  order_eq : ∀ s : ℂ, multiplicity s = analyticVanishingOrder riemannZeta s
   /-- The zeros are isolated, so they are finite in any compact rectangle. -/
   finite_zeros : ∀ σ_min σ_max T_min T_max,
     (ZeroRectangle σ_min σ_max T_min T_max ∩ {s | riemannZeta s = 0}).Finite
@@ -63,11 +66,11 @@ lemma zeroCountRect_split (model : ZetaZeroCountModel) (σ_min σ_max T₁ T₂ 
 noncomputable def N (model : ZetaZeroCountModel) (σ T : ℝ) : ℕ :=
   zeroCountRect model σ 1 (-T) T
 
-/-- The dyadic zero reduction proposition.
-    Bounds the global zero count N(σ, T) by a finite sum of dyadic slabs
-    and a low-height remainder on the full [-T, T] interval using symmetry. -/
-def DyadicReductionProp (model : ZetaZeroCountModel) (σ T : ℝ) : Prop :=
-  ∃ k : ℕ, N model σ T ≤ 2 * (zeroCountRect model σ 1 0 (T / 2^(k:ℝ)) + ∑ j ∈ Finset.range k,
-    zeroCountRect model σ 1 (T / 2^((j:ℝ)+1)) (T / 2^(j:ℝ)))
+/-- 
+F-02: Dyadic zero reduction proposition.
+This is mathematically redundant as a standalone assumption.
+The partition of the total zero count N(σ, T) into dyadic slabs
+is an internal algebraic step deferred to the AlgebraicCombinationHypothesis proof.
+-/
 
 end RiemannZeta.GuthMaynard
