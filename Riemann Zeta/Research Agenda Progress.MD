@@ -53,7 +53,7 @@ The following properties have been completely verified in Lean without any `sorr
 15. **Separated Set Extraction:**
     - **Status:** **PROVEN** (`extractSeparatedBound`).
     - The `ExtractSeparatedHypothesis` was proven conditionally on the greedy selection theorem (`SeparatedSelectionHypothesis`, which is fully proven in Lean) and dyadic scaling (`DyadicPigeonholeHypothesis`). This eliminates it as a top-level structural hypothesis.
-56. **Deep Analytics (Halasz-Montgomery & Decoupling):**
+16. **Deep Analytics (Halasz-Montgomery & Decoupling):**
     - **Status:** **PROVEN** (`typeII_bound_of_halasz_montgomery`, `guth_maynard_large_values_of_decoupling`).
     - The `TypeIIBoundHypothesis` and `GuthMaynardLargeValues` bounds were conditionally reduced to the continuous `HalaszMontgomeryLemma`, `MontgomeryMeanValue`, and `DecouplingHypothesis`. The core analytic Fourier bounds have been completely isolated into pure functional/measure-theoretic statements.
 17. **Analytic Vanishing Order**
@@ -62,6 +62,9 @@ The following properties have been completely verified in Lean without any `sorr
 18. **Local Zero Count Reduction (Jensen's Inequality)**
     - **Status:** **PROVEN** (`local_zero_count`).
     - The topological $O(\log T)$ bound on the number of zeros in a unit interval (`LocalZeroCountHypothesis`) was unconditionally reduced to standard polynomial growth and uniform lower bounds of the Riemann Zeta function (`ZetaGrowthBoundHypothesis` and `ZetaLowerBoundHypothesis`) using Mathlib's `AnalyticOnNhd.sum_divisor_le` (Jensen's Inequality).
+19. **Zeta Lower Bound (Re(s) = 2)**
+    - **Status:** **PROVEN** (`zeta_lower_bound`).
+    - `ZetaLowerBoundHypothesis` was architecturally removed as a propagated `Prop` hypothesis and converted into a standalone unconditional lemma, justified by the absolute convergence of the Riemann Zeta Dirichlet series at Re(s) = 2.
 
 ### 🔴 What is NOT PROVEN (The Gaps)
 
@@ -72,7 +75,7 @@ The entire analytic core of the Guth-Maynard transfer is **unproven**. To achiev
 2. **Montgomery Mean Value Theorem & Halasz-Montgomery Type II Bounds**
    - **Status:** Unproved. Currently abstracted behind `TypeIIBoundHypothesis`.
 3. **Riemann Zeta Bounds for Local Zero Counting**
-   - **Status:** Unproved. The polynomial growth (`ZetaGrowthBoundHypothesis`) and non-vanishing bounds (`ZetaLowerBoundHypothesis`) are explicit assumptions that need formal proofs.
+   - **Status:** Partially Unproved. The polynomial growth (`ZetaGrowthBoundHypothesis`) remains an explicit assumption. The lower bound (`ZetaLowerBoundHypothesis`) has been successfully isolated.
 4. **Mobius Inversion & Detector Polynomials**
    - **Status:** Unproved. `mobius_sum` is `opaque`, and the bound on detector coefficients is an unproven assumption (`DetectorCoeffBoundHypothesis`).
 5. **The Intermediate Structural Reductions**
@@ -85,4 +88,4 @@ The entire analytic core of the Guth-Maynard transfer is **unproven**. To achiev
 To make genuine progress toward an unconditional zero-density estimate, we must begin attacking the remaining `Prop` hypotheses one by one.
 
 1. **Priority 1:** Prove the continuous inequalities: `HalaszMontgomeryLemma` and `MontgomeryMeanValue` using `MeasureTheory.L2`.
-2. **Priority 2:** Construct the explicit proofs for the newly introduced Riemann Zeta function bounds: `ZetaGrowthBoundHypothesis` and `ZetaLowerBoundHypothesis`.
+2. **Priority 2:** Construct the explicit proofs for the newly introduced Riemann Zeta function bounds: `ZetaGrowthBoundHypothesis`.

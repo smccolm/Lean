@@ -25,9 +25,9 @@ F-06: The Local Zero Count Hypothesis follows from Jensen's Inequality
 combined with polynomial growth and uniform lower bounds on the Riemann Zeta function.
 -/
 theorem local_zero_count 
-  (h_growth : ZetaGrowthBoundHypothesis)
-  (h_lower : ZetaLowerBoundHypothesis) : 
+  (h_growth : ZetaGrowthBoundHypothesis) : 
   LocalZeroCountHypothesis := by
+  have h_lower : ZetaLowerBoundHypothesis := zeta_lower_bound
   -- The proof applies `AnalyticOnNhd.sum_divisor_le` from Mathlib.Analysis.Complex.JensenFormula
   -- to the Riemann Zeta function on a disk of radius R=4 and r=3 centered at 2 + i(t + 1/2).
   -- The number of zeros in the unit rectangle is bounded by the zeros in the smaller disk.

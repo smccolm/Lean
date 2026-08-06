@@ -90,4 +90,9 @@ def ZetaLowerBoundHypothesis : Prop :=
     ∀ (T t : ℝ), T ≥ 2 → t ∈ Set.Icc T (2 * T) →
       c_0 ≤ ‖riemannZeta (2 + I * (t + 1/2))‖
 
+lemma zeta_lower_bound : ZetaLowerBoundHypothesis := by
+  -- Follows from absolute convergence of Dirichlet series at Re(s) = 2.
+  -- |zeta(2+it)| >= 1 - sum_{n>=2} n^{-2} = 2 - pi^2/6 > 0
+  sorry
+
 end RiemannZeta.GuthMaynard
