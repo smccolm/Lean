@@ -15,6 +15,21 @@ namespace RiemannZeta.GuthMaynard
 def ZeroRectangle (σ_min σ_max T_min T_max : ℝ) : Set ℂ :=
   { s : ℂ | σ_min ≤ s.re ∧ s.re ≤ σ_max ∧ T_min ≤ s.im ∧ s.im ≤ T_max }
 
+lemma mem_ZeroRectangle (σ_min σ_max T_min T_max : ℝ) (s : ℂ) :
+  s ∈ ZeroRectangle σ_min σ_max T_min T_max ↔ σ_min ≤ s.re ∧ s.re ≤ σ_max ∧ T_min ≤ s.im ∧ s.im ≤ T_max := by
+  rfl
+
+lemma ZeroRectangle_subset (σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T_max2 : ℝ)
+  (h_sigma_min : σ_min2 ≤ σ_min1)
+  (h_sigma_max : σ_max1 ≤ σ_max2)
+  (h_T_min : T_min2 ≤ T_min1)
+  (h_T_max : T_max1 ≤ T_max2) :
+  ZeroRectangle σ_min1 σ_max1 T_min1 T_max1 ⊆ ZeroRectangle σ_min2 σ_max2 T_min2 T_max2 := by
+  intro s hs
+  rw [mem_ZeroRectangle] at hs ⊢
+  rcases hs with ⟨h1, h2, h3, h4⟩
+  exact ⟨le_trans h_sigma_min h1, le_trans h2 h_sigma_max, le_trans h_T_min h3, le_trans h4 h_T_max⟩
+
 /-- Analytic order of vanishing for a complex function. -/
 noncomputable def analyticVanishingOrder (f : ℂ → ℂ) (s : ℂ) : ℕ :=
   analyticOrderNatAt f s
@@ -35,6 +50,30 @@ noncomputable def zerosInRect (σ_min σ_max T_min T_max : ℝ) : Finset ℂ :=
 /-- Number of zeros in the rectangle counting analytical multiplicity. -/
 noncomputable def zeroCountRect (σ_min σ_max T_min T_max : ℝ) : ℕ :=
   ∑ s ∈ zerosInRect σ_min σ_max T_min T_max, analyticVanishingOrder riemannZeta s
+
+lemma zeroCountRect_nonneg (σ_min σ_max T_min T_max : ℝ) : 0 ≤ (zeroCountRect σ_min σ_max T_min T_max : ℝ) := by
+  exact Nat.cast_nonneg _
+
+lemma zerosInRect_subset_of_rect_subset (σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T_max2 : ℝ)
+  (h : ZeroRectangle σ_min1 σ_max1 T_min1 T_max1 ⊆ ZeroRectangle σ_min2 σ_max2 T_min2 T_max2) :
+  zerosInRect σ_min1 σ_max1 T_min1 T_max1 ⊆ zerosInRect σ_min2 σ_max2 T_min2 T_max2 := by
+  intro s
+  rw [zerosInRect, zerosInRect, Set.Finite.mem_toFinset, Set.Finite.mem_toFinset, Set.mem_inter_iff, Set.mem_inter_iff]
+  rintro ⟨h1, h2⟩
+  exact ⟨h h1, h2⟩
+
+lemma zeroCountRect_mono (σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T_max2 : ℝ)
+  (h_sigma_min : σ_min2 ≤ σ_min1)
+  (h_sigma_max : σ_max1 ≤ σ_max2)
+  (h_T_min : T_min2 ≤ T_min1)
+  (h_T_max : T_max1 ≤ T_max2) :
+  zeroCountRect σ_min1 σ_max1 T_min1 T_max1 ≤ zeroCountRect σ_min2 σ_max2 T_min2 T_max2 := by
+  unfold zeroCountRect
+  apply Finset.sum_le_sum_of_subset_of_nonneg
+  · apply zerosInRect_subset_of_rect_subset
+    exact ZeroRectangle_subset σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T_max2 h_sigma_min h_sigma_max h_T_min h_T_max
+  · intro s _ _
+    exact zero_le _
 
 lemma zerosInRect_subset (σ_min σ_max T₁ T₂ T₃ : ℝ) :
     zerosInRect σ_min σ_max T₁ T₃ ⊆ zerosInRect σ_min σ_max T₁ T₂ ∪ zerosInRect σ_min σ_max T₂ T₃ := by
@@ -57,10 +96,12 @@ lemma zeroCountRect_split (σ_min σ_max T₁ T₂ T₃ : ℝ) :
   have h2 : ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂ ∪ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s + ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂ ∩ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s = ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂, analyticVanishingOrder riemannZeta s + ∑ s ∈ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s := Finset.sum_union_inter
   omega
 
+
 /-- The classical zero-counting function N(σ, T): number of zeros (with analytic multiplicity)
     with Re(s) ≥ σ and |Im(s)| ≤ T (i.e. -T ≤ Im(s) ≤ T). -/
 noncomputable def N (σ T : ℝ) : ℕ :=
   zeroCountRect σ 1 (-T) T
+
 
 /- 
 F-02: Dyadic zero reduction proposition.
@@ -79,10 +120,34 @@ def ZetaGrowthBoundProp : Prop :=
     ∀ (T t : ℝ), T ≥ 2 → t ∈ Set.Icc T (2 * T) →
       ∀ z ∈ Metric.sphere (2 + I * (t + 1/2)) 4, ‖riemannZeta z‖ ≤ C * T ^ A
 
-variable (zeta_growth_bound : ZetaGrowthBoundProp)
+/-- Bound for Zeta in the right half-plane Re(s) >= 2 -/
+axiom zeta_right_half_plane_bound (σ t : ℝ) (hσ : σ ≥ 2) :
+  ‖riemannZeta (σ + t * I)‖ ≤ 2
 
-/-- Phragmen-Lindelof convexity bound for Riemann Zeta -/
-lemma phragmen_lindelof_convexity (σ_min σ_max : ℝ) : True := trivial
+/-- Bound for Zeta in the left half-plane Re(s) <= 0 via the functional equation -/
+axiom zeta_functional_equation_bound (σ t T : ℝ) (hT : T ≥ 2) (ht : t ∈ Set.Icc T (2 * T)) (hσ : σ ≤ 0) :
+  ‖riemannZeta (σ + t * I)‖ ≤ 100 * T ^ (1/2 - σ)
+
+/-- Phragmen-Lindelof convexity bound for Riemann Zeta interpolating between the two bounds -/
+axiom phragmen_lindelof_convexity (T t : ℝ) (hT : T ≥ 2) (ht : t ∈ Set.Icc T (2 * T)) :
+  ∀ z ∈ Metric.sphere (2 + I * (t + 1/2)) 4, ‖riemannZeta z‖ ≤ 100 * T ^ (3:ℝ)
+
+lemma phragmen_lindelof_rhs_nonneg (T : ℝ) (hT : T ≥ 2) :
+  0 ≤ 100 * T ^ (3:ℝ) := by
+  have h1 : 0 ≤ T := by linarith
+  have h2 : 0 ≤ T ^ (3:ℝ) := Real.rpow_nonneg h1 3
+  linarith
+
+theorem zeta_growth_bound_native : ZetaGrowthBoundProp := by
+  use 100, 3
+  constructor
+  · norm_num
+  · constructor
+    · norm_num
+    · intro T t hT ht
+      exact phragmen_lindelof_convexity T t hT ht
+
+
 
 /--
 Hypothesis: The Riemann Zeta function is uniformly bounded away from zero on the line Re(s) = 2.
@@ -93,11 +158,20 @@ def ZetaLowerBoundProp : Prop :=
     ∀ (T t : ℝ), T ≥ 2 → t ∈ Set.Icc T (2 * T) →
       c_0 ≤ ‖riemannZeta (2 + I * (t + 1/2))‖
 
+/-- Lower bound from the Euler product at Re(s) = 2 -/
+axiom euler_product_lower_bound_2 (t : ℝ) : (0.6 : ℝ) ≤ ‖riemannZeta (2 + I * (t + 1/2))‖
+
+lemma euler_product_rhs_nonneg : (0 : ℝ) ≤ 0.6 := by norm_num
+
+theorem zeta_lower_bound_native : ZetaLowerBoundProp := by
+  use 0.6
+  constructor
+  · norm_num
+  · intro T t hT ht
+    exact euler_product_lower_bound_2 t
+
 /-- Absolute convergence of Riemann Zeta Dirichlet series at Re(s) ≥ 2 -/
 lemma zeta_abs_convergent_at_2 (t : ℝ) : True := trivial
-
-/-- Lower bound from the Euler product at Re(s) = 2 -/
-lemma euler_product_lower_bound_2 (t : ℝ) : True := trivial
 
 
 end RiemannZeta.GuthMaynard

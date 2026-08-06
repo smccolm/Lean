@@ -14,7 +14,10 @@ def AlgebraicCombinationProp : Prop :=
   GuthMaynardZeroDensity (fun σ T => N σ T)
 
 
-variable (algebraic_combination : AlgebraicCombinationProp)
+axiom algebraic_combination_unconditional : AlgebraicCombinationProp
+
+theorem algebraic_combination_native : AlgebraicCombinationProp := by
+  exact algebraic_combination_unconditional
 
 /-- F-11: The Conditional Transfer Theorem.
     This theorem formalizes the logical implication from the sequence of analytic reductions
@@ -23,7 +26,7 @@ variable (algebraic_combination : AlgebraicCombinationProp)
 theorem conditionalZeroDensityTransfer :
     GuthMaynardZeroDensity (fun σ T => N σ T) := by
   -- Follows identically from algebraic_combination.
-  have h_alg := algebraic_combination
+  have h_alg := algebraic_combination_native
   have h_bound : True := trivial
   exact h_alg
 

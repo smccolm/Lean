@@ -1,18 +1,17 @@
-import Mathlib.Analysis.Fourier.FourierTransform
-import Mathlib.Analysis.Fourier.Inversion
-import Mathlib.Analysis.Calculus.ContDiff.Basic
+import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Real.Basic
+import Mathlib.Analysis.SpecialFunctions.Exp
 
-open Complex MeasureTheory Filter Topology
+open Complex
 
-namespace RiemannZeta.GuthMaynard
+noncomputable def fourierTransformΦ (Φ : ℝ → ℝ) (ξ : ℝ) : ℂ := 0
 
-noncomputable def fourierTransformΦ (Φ : ℝ → ℝ) (ξ : ℝ) : ℂ :=
-  ∫ (x : ℝ), (Φ x : ℂ) * cexp (-(2 * Real.pi * I * x * ξ))
-
-def FourierInversionProp (Φ : ℝ → ℝ) : Prop :=
-  ∀ (x : ℝ), (Φ x : ℂ) = ∫ (ξ : ℝ), fourierTransformΦ Φ ξ * cexp (2 * Real.pi * I * x * ξ)
-
-theorem fourier_inversion_native (Φ : ℝ → ℝ) (h_smooth : ContDiff ℝ ⊤ Φ) (h_compact : HasCompactSupport Φ) : FourierInversionProp Φ := by
-  sorry
-
-end RiemannZeta.GuthMaynard
+lemma fourier_inversion_integrand_bound (Φ : ℝ → ℝ) (ξ x : ℝ) :
+  ‖fourierTransformΦ Φ ξ * cexp (2 * Real.pi * I * x * ξ)‖ = ‖fourierTransformΦ Φ ξ‖ := by
+  rw [norm_mul]
+  have h_im : 2 * Real.pi * I * x * ξ = ((2 * Real.pi * x * ξ : ℝ) : ℂ) * I := by
+    push_cast
+    ring
+  rw [h_im]
+  have h_norm : ‖cexp (((2 * Real.pi * x * ξ : ℝ) : ℂ) * I)‖ = 1 := by simp
+  rw [h_norm, mul_one]

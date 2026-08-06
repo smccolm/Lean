@@ -11,6 +11,9 @@ namespace RiemannZeta.GuthMaynard
 def IsSeparated (δ : ℝ) (W : Finset ℝ) : Prop :=
   ∀ x ∈ W, ∀ y ∈ W, x ≠ y → δ ≤ dist x y
 
+lemma card_pos_of_nonempty {α : Type*} (W : Finset α) (h : W.Nonempty) : 0 < W.card := by
+  exact Finset.card_pos.mpr h
+
 /-- 
 The exact interval used in the zero-density theorem (Section 13.1) dyadic decomposition:
 points lie in `[T, 2 * T]`.
@@ -56,6 +59,15 @@ theorem inBaseInterval_translate (T : ℝ) (W : Finset ℝ) (h : InTargetInterva
   constructor
   · linarith [hT.1]
   · linarith [hT.2]
+
+theorem translateSet_card (c : ℝ) (W : Finset ℝ) : (translateSet c W).card = W.card := by
+  unfold translateSet
+  apply Finset.card_image_of_injective
+  intro x y hxy
+  change x - c = y - c at hxy
+  have h1 : x - c + c = y - c + c := by rw [hxy]
+  ring_nf at h1
+  exact h1
 
 end RiemannZeta.GuthMaynard
 

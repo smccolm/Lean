@@ -35,6 +35,13 @@ def GuthMaynardZeroDensity (zeroCount : ℝ → ℝ → ℕ) : Prop :=
   ∀ (σ : ℝ), 7/10 ≤ σ → σ ≤ 1 →
     EpsilonPowerBound (fun T => (zeroCount σ T : ℝ)) (fun T => T ^ (15 * (1 - σ) / (3 + 5 * σ)))
 
+lemma guth_maynard_exponent_pos (σ : ℝ) (hσ1 : 7/10 ≤ σ) (hσ2 : σ ≤ 1) :
+  0 ≤ 15 * (1 - σ) / (3 + 5 * σ) := by
+  have h1 : 0 ≤ 1 - σ := sub_nonneg.mpr hσ2
+  have h2 : 0 ≤ 15 * (1 - σ) := mul_nonneg (by norm_num) h1
+  have h3 : 0 ≤ 3 + 5 * σ := by positivity
+  exact div_nonneg h2 h3
+
 /--
 Combined zero density estimate (Equation 1.4).
 $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ for $\sigma \ge 1/2$.
