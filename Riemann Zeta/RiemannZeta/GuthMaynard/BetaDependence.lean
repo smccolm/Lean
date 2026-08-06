@@ -78,6 +78,10 @@ theorem beta_dependence_removal :
         1 / (3 * Real.log T) ≤ ‖detectPoly N ρ T‖ →
         ∃ (γ' : ℝ), |ρ.im - γ'| ≤ T^ε ∧ 1 / (4 * Real.log T) ≤ ‖detectPoly N (σ + I * γ') T‖ := by
   intro Φ hInv hDecay hDet hFixed T σ N ε hT hε ρ hρ h_large
+  have h_rw : ρ = (ρ.re : ℂ) + I * (ρ.im : ℂ) := by
+    calc ρ = (ρ.re : ℂ) + (ρ.im : ℂ) * I := (Complex.re_add_im ρ).symm
+         _ = (ρ.re : ℂ) + I * (ρ.im : ℂ) := by rw [mul_comm]
+  rw [h_rw] at h_large
   exact hFixed T ρ.re σ ρ.im N ε hT hε h_large
 
 

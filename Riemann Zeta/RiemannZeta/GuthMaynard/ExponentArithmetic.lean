@@ -36,10 +36,14 @@ theorem k_selection (N T σ : ℝ) (hN : 1 < N) (hT : 1 < T) (hσ : 7/10 ≤ σ)
     have hk_gt : A - 1 < (k : ℝ) := sub_lt_iff_lt_add.mpr (Nat.lt_floor_add_one A)
 
     have hA_ge_3 : (3 : ℝ) ≤ A := by
-      have h_mul : (3 : ℝ) * Real.log N ≤ (15 / d) * Real.log T := by linarith
+      have h_mul : (3 : ℝ) * Real.log N ≤ (15 / d) * Real.log T := by
+        calc (3 : ℝ) * Real.log N ≤ 3 * ( (5 / d) * Real.log T ) := mul_le_mul_of_nonneg_left h1 (by norm_num)
+        _ = (15 / d) * Real.log T := by ring
       exact (le_div_iff₀ hlogN).mpr h_mul
 
-    have hk_ge_3 : k ≥ 3 := Nat.le_floor.mp hA_ge_3
+    have hk_ge_3 : k ≥ 3 := by
+      have h_k_real : (2 : ℝ) < (k : ℝ) := by linarith
+      exact_mod_cast h_k_real
     have hk_ge_2 : k ≥ 2 := by linarith
 
     refine ⟨hk_ge_2, ?_, ?_⟩
@@ -51,6 +55,7 @@ theorem k_selection (N T σ : ℝ) (hN : 1 < N) (hT : 1 < T) (hσ : 7/10 ≤ σ)
           have h_eq : (A - 1) * Real.log N = (15 / d) * Real.log T - Real.log N := by
             calc (A - 1) * Real.log N = A * Real.log N - Real.log N := by ring
             _ = (15 / d) * Real.log T - Real.log N := by rw [hA_mul]
+          have h_15 : (15 / d) * Real.log T = (10 / d) * Real.log T + (5 / d) * Real.log T := by ring
           linarith
         have h6 : Real.log (T ^ (10 / d)) = (10 / d) * Real.log T := Real.log_rpow hTpos (10 / d)
         have h7 : Real.log (N ^ (k : ℝ)) = (k : ℝ) * Real.log N := Real.log_rpow hNpos (k : ℝ)

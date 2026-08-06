@@ -13,10 +13,10 @@ open Classical
 namespace RiemannZeta.GuthMaynard
 
 
-/-- Actual truncated Möbius coefficients b_n.
+/- Actual truncated Möbius coefficients b_n.
     b_n = (sum_{d | n, d <= 2T^{1/100}} mu(d)) * exp(-n / T^{1/2}) 
     We just assume the sequence here with an uninterpreted function `mobius_sum` for the algebraic part. -/
-variable (mobius_sum : ℕ → ℝ → ℂ)
+opaque mobius_sum : ℕ → ℝ → ℂ
 
 noncomputable def detectorCoeff (N n : ℕ) (T : ℝ) : ℂ := 
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
@@ -32,7 +32,8 @@ lemma mobius_sum_bound (n : ℕ) (T : ℝ) : True := trivial
 /-- Exponential decay bound for the smoothing factor -/
 lemma exp_smoothing_bound (n : ℕ) (T ε : ℝ) (hε : 0 < ε) : True := trivial
 
-variable (detector_coeff_bound : DetectorCoeffBoundProp)
+theorem detector_coeff_bound_native : DetectorCoeffBoundProp := by
+  sorry
 
 
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/

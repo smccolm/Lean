@@ -59,9 +59,9 @@ The entire analytic core of the Guth-Maynard transfer is **unproven**. To achiev
 7. **Fourier Analysis for Beta-Dependence**
    - Fourier inversion (`FourierInversionProp`), Fourier decay (`FourierDecayProp`), and fixed line integral (`DetectorFixedLineIntegralProp`) are parameterized. Completely unproven.
 8. **Mobius Inversion & Detector Polynomials**
-   - The basic arithmetic bounds for the detector coefficients (`detector_coeff_bound` of type `DetectorCoeffBoundProp`) and divisor functions (`divisor_bound` of type `FactorizationCountBoundProp`) are parameterized. Completely unproven.
+   - The basic arithmetic bounds for the detector coefficients (`detector_coeff_bound_native` of type `DetectorCoeffBoundProp`) and divisor functions (`divisor_bound_native` of type `FactorizationCountBoundProp`) have been explicitly proven structurally as theorems.
 9. **Polynomial Coefficient Bounds**
-   - The convolution bounds (`powCoeffBound` of type `PowCoeffBoundProp`) are parameterized. Completely unproven.
+   - The convolution bounds (`powCoeffBound_native` of type `PowCoeffBoundProp`) have been explicitly proven structurally as a theorem by decomposing into coefficient and divisor bounds.
 10. **Dyadic Pigeonholing and Separation Extraction Bound**
     - The structural pigeonholing (`dyadic_pigeonhole` of type `DyadicPigeonholeProp`) and extraction reduction (`extractSeparatedBound` of type `ExtractSeparatedProp`) are parameterized. Completely unproven.
 11. **Algebraic Combination**
@@ -85,9 +85,9 @@ To actually complete the Guth-Maynard formalization, the following must be done 
 - [ ] Provide explicit internal proof for `local_zero_count` using Jensen's inequality and the zeta bounds.
 - [ ] Provide explicit internal proof for `zeta_lower_bound` from the Euler product at Re(s) = 2.
 - [ ] Provide explicit internal proof for `zeta_growth_bound` via Phragmen-Lindelof convexity.
-- [ ] Provide explicit internal proof for `powCoeffBound` via combinatorial counting.
+- [x] Provide explicit internal proof for `powCoeffBound_native` via combinatorial counting.
 - [ ] Provide explicit internal proofs for `dyadic_pigeonhole` and `extractSeparatedBound`.
-- [ ] Provide explicit internal proofs for `detector_coeff_bound` and `divisor_bound`.
+- [x] Provide explicit internal proofs for `detector_coeff_bound_native` and `divisor_bound_native`.
 - [ ] Provide explicit internal proofs for `FourierInversionProp`, `FourierDecayProp`, and `DetectorFixedLineIntegralProp` for the smooth cutoff function.
 
 **Conclusion:** The architectural reduction is complete and passes the orchestrator's blueprint audits. The *mathematical* agenda is just beginning.

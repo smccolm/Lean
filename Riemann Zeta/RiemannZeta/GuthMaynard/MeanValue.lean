@@ -1,9 +1,12 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Finset.Basic
+import Mathlib.Analysis.Complex.Basic
+import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import RiemannZeta.GuthMaynard.Separated
 
 open Complex Finset
+open scoped BigOperators
 
 namespace RiemannZeta.GuthMaynard
 
