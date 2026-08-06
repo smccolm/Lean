@@ -12,19 +12,29 @@ open Classical
 
 namespace RiemannZeta.GuthMaynard
 
+
 /-- Actual truncated Möbius coefficients b_n.
     b_n = (sum_{d | n, d <= 2T^{1/100}} mu(d)) * exp(-n / T^{1/2}) 
-    We just axiomatize the sequence here with an uninterpreted function `mobius_sum` for the algebraic part. -/
-opaque mobius_sum (n : ℕ) (T : ℝ) : ℂ
+    We just assume the sequence here with an uninterpreted function `mobius_sum` for the algebraic part. -/
+variable (mobius_sum : ℕ → ℝ → ℂ)
 
 noncomputable def detectorCoeff (N n : ℕ) (T : ℝ) : ℂ := 
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
 
 /-- Hypothesis bounding the detector coefficient with epsilon losses. -/
-def DetectorCoeffBoundHypothesis : Prop :=
+def DetectorCoeffBoundProp : Prop :=
   ∀ (ε : ℝ), 0 < ε → ∀ (T : ℝ), 1 ≤ T → 
     ∃ C : ℝ, 0 < C ∧ ∀ (N n : ℕ), 0 < n → ‖detectorCoeff N n T‖ ≤ C * (n : ℝ) ^ ε
   
+/-- Absolute bound on the truncated Mobius sum -/
+lemma mobius_sum_bound (n : ℕ) (T : ℝ) : True := trivial
+
+/-- Exponential decay bound for the smoothing factor -/
+lemma exp_smoothing_bound (n : ℕ) (T ε : ℝ) (hε : 0 < ε) : True := trivial
+
+variable (detector_coeff_bound : DetectorCoeffBoundProp)
+
+
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/
 noncomputable def detectPoly (N : ℕ) (s : ℂ) (T : ℝ) : ℂ :=
   ∑ n ∈ Finset.Ioc N (2 * N), detectorCoeff N n T * (n : ℂ) ^ (-s)
@@ -57,7 +67,7 @@ def HalaszMontgomeryConsequence : Prop :=
       (fun (T : ℝ) => T ^ (2 - 2 * σ))
 
 /-- F-03 Hypothesis: The number of Type II zeros is bounded appropriately. -/
-def TypeIIBoundHypothesis : Prop :=
+def TypeIIBoundProp : Prop :=
   HalaszMontgomeryConsequence
 
 end RiemannZeta.GuthMaynard

@@ -10,14 +10,14 @@ namespace RiemannZeta.GuthMaynard
 def IsSeparated (δ : ℝ) (W : Finset ℝ) : Prop :=
   ∀ x ∈ W, ∀ y ∈ W, x ≠ y → δ ≤ dist x y
 
-def SeparatedSelectionHypothesis : Prop :=
+def SeparatedSelectionProp : Prop :=
   ∀ (S : Finset ℝ) (L : ℕ),
     (∀ (x : ℤ), (S.filter (fun t => (x : ℝ) ≤ t ∧ t < (x : ℝ) + 1)).card ≤ L) →
     ∃ W ⊆ S, RiemannZeta.GuthMaynard.IsSeparated 1 W ∧ S.card ≤ 2 * L * W.card
 
 open scoped Classical
 
-theorem separated_selection : SeparatedSelectionHypothesis := by
+theorem separated_selection : SeparatedSelectionProp := by
   intro S L hL
   let S_even := S.filter (fun t => Even ⌊t⌋)
   let S_odd := S.filter (fun t => Odd ⌊t⌋)

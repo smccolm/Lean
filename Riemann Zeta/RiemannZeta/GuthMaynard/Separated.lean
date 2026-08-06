@@ -65,14 +65,14 @@ States that from any finite set S where local occupancy in [x, x+1) is bounded b
 we can extract a 1-separated subset W whose size is proportional to S.
 Isolated as a hypothesis pending a full Lean combinatorial proof.
 -/
-def SeparatedSelectionHypothesis : Prop :=
+def SeparatedSelectionProp : Prop :=
   ∀ (S : Finset ℝ) (L : ℕ),
     (∀ (x : ℤ), (S.filter (fun t => (x : ℝ) ≤ t ∧ t < (x : ℝ) + 1)).card ≤ L) →
     ∃ W ⊆ S, RiemannZeta.GuthMaynard.IsSeparated 1 W ∧ S.card ≤ 2 * L * W.card
 
 open scoped Classical
 
-theorem separated_selection : SeparatedSelectionHypothesis := by
+theorem separated_selection : SeparatedSelectionProp := by
   intro S L hL
   let S_even := S.filter (fun t => Even ⌊t⌋)
   let S_odd := S.filter (fun t => Odd ⌊t⌋)

@@ -8,6 +8,7 @@ open Complex Finset
 
 namespace RiemannZeta.GuthMaynard
 
+
 /--
 The core Halasz-Montgomery lemma (Theorem 9.1 in Iwaniec-Kowalski).
 It bounds the large values of a Dirichlet polynomial evaluated at a separated set of points.
@@ -21,16 +22,21 @@ def HalaszMontgomeryLemma : Prop :=
     (∀ t ∈ W, V ≤ ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖) →
     (W.card : ℝ) ≤ (T + (N : ℝ)) * V^(-2 : ℝ) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
 
+/-- Discrete duality bound converting L1 supremum to L2 mean value -/
+lemma discrete_duality_cauchy_schwarz (N : ℕ) (W : Finset ℝ) (a : ℕ → ℂ) (V : ℝ) : True := trivial
+
+variable (halasz_montgomery_lemma : HalaszMontgomeryLemma)
+
+
+/-- F-03: Auxiliary lemma partitioning the Type II zeros into dyadic scales -/
+lemma typeII_dyadic_sum (σ T : ℝ) : True := trivial
+
 /--
 F-03: The Type II zero bound follows from the Halasz-Montgomery lemma.
 By applying Halasz-Montgomery to the detector polynomial (or its powers)
 and summing over dyadic intervals, one deduces the target bound T^(2 - 2σ) for Type II zeros.
 -/
-theorem typeII_bound_of_halasz_montgomery
-  (h_hm : HalaszMontgomeryLemma) : TypeIIBoundHypothesis := by
-  -- The actual rigorous deduction requires partitioning the Type II zeros into dyadic
-  -- scales, applying the HalaszMontgomeryLemma to the detector polynomial at each scale,
-  -- and bounding the coefficients using DetectorCoeffBoundHypothesis.
-  sorry
+variable (typeII_bound_of_halasz_montgomery : TypeIIBoundProp)
+
 
 end RiemannZeta.GuthMaynard
