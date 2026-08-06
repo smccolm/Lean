@@ -67,14 +67,14 @@ F-04: Beta dependence removal hypothesis.
 For every T ≥ 1, σ, β and N, if the actual detector D_N(s)
 is large at a zero ρ = β + iγ, then D_N(σ + iγ') is large for some γ' shifted by at most T^ε.
 -/
-theorem beta_dependence_removal (model : ZetaZeroCountModel) :
+theorem beta_dependence_removal :
   ∀ (Φ : ℝ → ℝ),
     FourierInversionHypothesis Φ →
     FourierDecayHypothesis Φ →
     DetectorFixedLineIntegralHypothesis Φ →
     FixedLineCoefficientBoundsHypothesis Φ →
     ∀ (T : ℝ) (σ : ℝ) (N : ℕ) (ε : ℝ), T ≥ 1 → ε > 0 →
-      ∀ (ρ : ℂ), ρ ∈ zerosInRect model σ 1 T (2 * T) →
+      ∀ (ρ : ℂ), ρ ∈ zerosInRect σ 1 T (2 * T) →
         1 / (3 * Real.log T) ≤ ‖detectPoly N ρ T‖ →
         ∃ (γ' : ℝ), |ρ.im - γ'| ≤ T^ε ∧ 1 / (4 * Real.log T) ≤ ‖detectPoly N (σ + I * γ') T‖ := by
   intro Φ hInv hDecay hDet hFixed T σ N ε hT hε ρ hρ h_large

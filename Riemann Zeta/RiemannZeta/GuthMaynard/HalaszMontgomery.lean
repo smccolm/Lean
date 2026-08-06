@@ -26,8 +26,8 @@ F-03: The Type II zero bound follows from the Halasz-Montgomery lemma.
 By applying Halasz-Montgomery to the detector polynomial (or its powers)
 and summing over dyadic intervals, one deduces the target bound T^(2 - 2σ) for Type II zeros.
 -/
-theorem typeII_bound_of_halasz_montgomery (model : ZetaZeroCountModel)
-  (h_hm : HalaszMontgomeryLemma) : TypeIIBoundHypothesis model := by
+theorem typeII_bound_of_halasz_montgomery
+  (h_hm : HalaszMontgomeryLemma) : TypeIIBoundHypothesis := by
   -- The actual rigorous deduction requires partitioning the Type II zeros into dyadic
   -- scales, applying the HalaszMontgomeryLemma to the detector polynomial at each scale,
   -- and bounding the coefficients using DetectorCoeffBoundHypothesis.

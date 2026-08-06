@@ -40,25 +40,24 @@ def IsTypeIZero (ρ : ℂ) (T : ℝ) : Prop :=
 
 /-- F-03: Type II zero classification.
     A Type II zero is a zero in the target rectangle that is not a Type I zero. -/
-def IsTypeIIZero (model : ZetaZeroCountModel)
-    (σ T1 T2 : ℝ) (ρ : ℂ) (T : ℝ) : Prop :=
-  ρ ∈ zerosInRect model σ 1 T1 T2 ∧ ¬ IsTypeIZero ρ T
+def IsTypeIIZero (σ T1 T2 : ℝ) (ρ : ℂ) (T : ℝ) : Prop :=
+  ρ ∈ zerosInRect σ 1 T1 T2 ∧ ¬ IsTypeIZero ρ T
 
 /-- Number of Type II zeros in the rectangle counting analytical multiplicity. -/
-noncomputable def typeIIZeroCount (model : ZetaZeroCountModel) (σ T1 T2 T : ℝ) : ℕ :=
-  ∑ s ∈ (zerosInRect model σ 1 T1 T2).filter (fun ρ => IsTypeIIZero model σ T1 T2 ρ T), model.multiplicity s
+noncomputable def typeIIZeroCount (σ T1 T2 T : ℝ) : ℕ :=
+  ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => IsTypeIIZero σ T1 T2 ρ T), analyticVanishingOrder riemannZeta s
 
 /-- Explicit Halasz-Montgomery consequence for the large values of Dirichlet polynomials.
     Specifically controls Type II zeros with the exponent 2 - 2σ throughout [7/10, 4/5]. 
     Replaces the Huxley estimate used earlier. -/
-def HalaszMontgomeryConsequence (model : ZetaZeroCountModel) : Prop :=
+def HalaszMontgomeryConsequence : Prop :=
   ∀ (σ : ℝ), 7/10 ≤ σ → σ ≤ 4/5 →
     EpsilonPowerBound 
-      (fun (T : ℝ) => (typeIIZeroCount model σ T (2*T) T : ℝ))
+      (fun (T : ℝ) => (typeIIZeroCount σ T (2*T) T : ℝ))
       (fun (T : ℝ) => T ^ (2 - 2 * σ))
 
 /-- F-03 Hypothesis: The number of Type II zeros is bounded appropriately. -/
-def TypeIIBoundHypothesis (model : ZetaZeroCountModel) : Prop :=
-  HalaszMontgomeryConsequence model
+def TypeIIBoundHypothesis : Prop :=
+  HalaszMontgomeryConsequence
 
 end RiemannZeta.GuthMaynard

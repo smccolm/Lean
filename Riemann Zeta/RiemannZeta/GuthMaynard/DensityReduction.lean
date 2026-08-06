@@ -11,12 +11,12 @@ namespace RiemannZeta.GuthMaynard
     The number of zeros `N(σ, T)` is monotonically bounded by `N(1-σ, T)` for `σ ≥ 1/2` 
     simply because the region `Re(s) ≥ σ` is a subset of `Re(s) ≥ 1-σ`. 
     This is an ordinary set monotonicity consequence, not dependent on functional symmetry. -/
-def MonotonicDensityReductionProp (model : ZetaZeroCountModel) : Prop :=
-  ∀ (σ T : ℝ), 1/2 < σ → σ ≤ 1 → N model σ T ≤ N model (1 - σ) T
+def MonotonicDensityReductionProp : Prop :=
+  ∀ (σ T : ℝ), 1/2 < σ → σ ≤ 1 → N σ T ≤ N (1 - σ) T
 
 /-- F-13/F-14: Set monotonicity of the zero count. -/
-theorem monotonic_density_reduction (model : ZetaZeroCountModel) : 
-    MonotonicDensityReductionProp model := by
+theorem monotonic_density_reduction : 
+    MonotonicDensityReductionProp := by
   intro σ T h_half_lt h_le_one
   have h_le : 1 - σ ≤ σ := by linarith
   unfold N zeroCountRect

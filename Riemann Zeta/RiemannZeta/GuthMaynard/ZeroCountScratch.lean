@@ -4,8 +4,8 @@ open Complex Finset Set
 
 namespace RiemannZeta.GuthMaynard
 
-lemma zeroCountRect_symm (model : ZetaZeroCountModel) (σ T : ℝ) :
-    zeroCountRect model σ 1 (-T) 0 = zeroCountRect model σ 1 0 T := by
+lemma zeroCountRect_symm (σ T : ℝ) :
+    zeroCountRect σ 1 (-T) 0 = zeroCountRect σ 1 0 T := by
   unfold zeroCountRect
   apply Finset.sum_bij (fun s _ => conj s)
   · intro s hs
