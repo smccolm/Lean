@@ -23,22 +23,23 @@ The following results are genuinely proved in Lean without project-specific axio
 6. **Finite separated-set selection:** `separated_selection` proves a combinatorial selection theorem from a unit-interval occupancy bound. This does not prove the zeta-specific extraction theorem `extract_separated_lemma`.
 7. **Exponent arithmetic:** `k_selection`, `denom_pos`, `guth_maynard_exponent_pos`, and the elementary inequality `extractSeparated_k_selection`.
 8. **Dirichlet-polynomial infrastructure:** The dyadic interval definition, bridge to the existing positive-index polynomial, normalized coefficient bound, and two-factor convolution support.
-9. **Elementary smoothing and cutoff facts:** `exp_smoothing_bound`, cutoff nonnegativity, cutoff support boundary lemmas, and the upper bounds `psiCutoff_le_exp` and `psiCutoff_bounded_of_sigma_le_beta`.
-10. **Elementary complex-exponential facts:** `cexp_periodic_1`, `cexp_zero_eval`, and the norm reduction `fourier_inversion_integrand_bound`. These do not constitute Fourier inversion or Fourier decay.
-11. **Finite-sum inequalities:** `sum_sq_le_card_mul_sum_sq`, `complex_sum_sq_le_card_mul_sum_sq`, and the elementary nonnegativity/zero lemmas for finite L2 sums.
-12. **Basic zero-rectangle set reasoning:** Rectangle membership and inclusion lemmas. Results involving `zerosInRect` or `zeroCountRect` additionally depend on the provisional axiom `riemannZeta_finite_zeros_in_rect` and are not unconditional zeta-zero-counting theorems.
-13. **Type-I/Type-II partition identity:** `typeI_add_typeII_eq_total` is a finite-set filtering identity, conditional on the provisional zero-set construction.
-14. **Powered-polynomial definitional identity:** `powPoly_eval` and `polynomial_power_identity` follow from the definition `powPoly := detectPoly ^ k`. An expansion into convolution coefficients has not been completed.
-15. **Special divisor-bound case:** `k_divisor_function_bound_one` proves only the stated `m = 1` boundary case. The general `k_divisor_function_bound` remains an axiom.
-16. **Combined exponent implication:** `combined_zero_density_transfer_native` is an axiom-free proof that assumed Ingham and Guth–Maynard zero-density bounds imply the combined exponent. It is a conditional implication and does not prove either analytic premise or instantiate the result for the project's zeta zero count. The previously unused Huxley premise has been removed from the statement.
+9. **Truncated Möbius detector:** `detectorDivisors` has exact membership and finite-cutoff support theorems. `norm_mobius_sum_le_cutoff`, `detectorCoeff_eq_zero_iff`, and `norm_detectorCoeff_le_cutoff` prove the magnitude and vanishing behavior of the smoothed coefficients. `detectorCoeff_bound` proves `DetectorCoeffBoundProp`, uniformly in positive `n` for each fixed `T`.
+10. **Elementary smoothing and cutoff facts:** `exp_smoothing_bound`, cutoff nonnegativity, cutoff support boundary lemmas, and the upper bounds `psiCutoff_le_exp` and `psiCutoff_bounded_of_sigma_le_beta`.
+11. **Elementary complex-exponential facts:** `cexp_periodic_1`, `cexp_zero_eval`, and the norm reduction `fourier_inversion_integrand_bound`. These do not constitute Fourier inversion or Fourier decay.
+12. **Finite-sum inequalities:** `sum_sq_le_card_mul_sum_sq`, `complex_sum_sq_le_card_mul_sum_sq`, and the elementary nonnegativity/zero lemmas for finite L2 sums.
+13. **Basic zero-rectangle set reasoning:** Rectangle membership and inclusion lemmas. Results involving `zerosInRect` or `zeroCountRect` additionally depend on the provisional axiom `riemannZeta_finite_zeros_in_rect` and are not unconditional zeta-zero-counting theorems.
+14. **Type-I/Type-II partition identity:** `typeI_add_typeII_eq_total` is a finite-set filtering identity, conditional on the provisional zero-set construction.
+15. **Powered-polynomial definitional identity:** `powPoly_eval` and `polynomial_power_identity` follow from the definition `powPoly := detectPoly ^ k`. An expansion into convolution coefficients has not been completed.
+16. **Special divisor-bound case:** `k_divisor_function_bound_one` proves only the stated `m = 1` boundary case. The general `k_divisor_function_bound` remains an axiom.
+17. **Combined exponent implication:** `combined_zero_density_transfer_native` is an axiom-free proof that assumed Ingham and Guth–Maynard zero-density bounds imply the combined exponent. It is a conditional implication and does not prove either analytic premise or instantiate the result for the project's zeta zero count. The previously unused Huxley premise has been removed from the statement.
 
 ## Provisional or Model-Only Results
 
 Some declarations remain provisional specifications rather than proved results.
 
-- `mobius_sum n T` now implements `∑_{d ∣ n, d ≤ 2T^(1/100)} μ(d)`, and `detectorCoeff` applies the intended exponential smoothing. The uniform magnitude theorem `DetectorCoeffBoundProp` is stated but not proved.
+- `DetectorCoeffBoundProp` is proved with the quantifier order currently encoded in Lean: its constant is uniform in positive `n` but may depend on the already-fixed `T`. A stronger constant uniform in `T` is not claimed; obtaining that form requires the general divisor-function estimate tracked with the powered-coefficient work.
 - The vacuous declarations `jensens_inequality_disk`, `zeta_abs_convergent_at_2`, `typeII_dyadic_sum`, and `recursive_block_decomposition` have been removed rather than retained as `True`-valued results.
-- Several positivity lemmas verify only that the proposed right-hand side of a future estimate is nonnegative. They do not establish the corresponding mean-value, decoupling, zero-count, or detector estimate.
+- Several positivity lemmas verify only that the proposed right-hand side of a future estimate is nonnegative. They do not establish the corresponding mean-value, decoupling, or zero-count estimate.
 
 ## Unproved Results and Explicit Dependencies
 
@@ -52,7 +53,7 @@ The declaration `conditionalZeroDensityTransfer` is **not** currently a proof fr
 The Section 13.1 proof still needs to implement the following chain explicitly:
 
 1. dyadic reduction of the global zero count;
-2. the actual truncated Möbius zero detector;
+2. integration of the now-verified truncated Möbius detector layer into the transfer argument;
 3. the Type-I/Type-II estimates;
 4. removal of beta dependence;
 5. zeta-specific separated-set extraction with multiplicity control;
@@ -87,14 +88,14 @@ No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency. The former `p
 - The default `lake build` completes successfully with zero Lean warnings.
 - Direct builds of `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` succeed with zero Lean warnings. This does not prove their remaining analytic axioms or proposition specifications.
 - `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` are now in the default import graph. `LargeValues.lean` still contains no proof of `GuthMaynardLargeValues`; the former dangling variable that assumed that target has been removed.
-- `Audit.lean` imports every production module and explicitly audits 102 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. The current audit reports 21 failing theorems, all through project-specific axioms rather than `sorryAx`.
+- `Audit.lean` imports every production module and explicitly audits 110 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. All eight detector-support and detector-magnitude theorems pass. The current audit reports 21 failing theorems, all through project-specific axioms rather than `sorryAx`.
 - The README and paper now describe the failing audit honestly; their broader mathematical claims still require continued synchronization as the remaining Shitlist items are repaired.
 
 ## Research-Agenda Milestones
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit cover every production module and all 102 exported source-level theorems. The exact detector formula is present, but its magnitude estimate and the complete zero-count interface remain incomplete. |
+| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit cover every production module and all 110 exported source-level theorems. The exact detector formula, divisor-variable support, smoothing zero equivalence, and encoded magnitude estimate are proved; the complete zero-count interface remains incomplete. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The desired conclusion is presently assumed through `algebraic_combination_unconditional`. |
 | Goal C: discharge auxiliary classical hypotheses | **Not achieved.** The local zero count, Type II estimate, mean-value theorem, smoothing, divisor bound, and related inputs remain axiomatic. |
 | Goal D: prove the Guth–Maynard large-values theorem | **Not achieved.** The decoupling and large-values modules now compile, but decoupling remains axiomatic and `LargeValues.lean` contains no proof of the target. |
@@ -102,14 +103,13 @@ No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency. The former `p
 
 ## Next Steps
 
-1. Prove the magnitude bound for the actual truncated Möbius detector coefficients.
-2. Prove a conditional powered-coefficient theorem from the explicit detector and divisor bounds, then discharge those inputs separately.
-3. Resolve the audit's 21 reported theorem-dependency failures one ranked proof obligation at a time.
-4. Keep the root import graph and explicit audit list synchronized as modules and public theorems change.
-5. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
-6. Discharge the remaining hypotheses one at a time, beginning with the smallest precise combinatorial or Mathlib-bridge obligation.
-7. Synchronize the README and paper with the audited Lean status after each verified increment.
+1. Prove a powered-coefficient theorem from the explicit detector estimates and a faithful general divisor bound, then remove `k_divisor_function_bound`.
+2. Resolve the audit's 21 reported theorem-dependency failures one ranked proof obligation at a time.
+3. Keep the root import graph and explicit audit list synchronized as modules and public theorems change.
+4. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
+5. Discharge the remaining hypotheses one at a time, beginning with the smallest precise combinatorial or Mathlib-bridge obligation.
+6. Synchronize the README and paper with the audited Lean status after each verified increment.
 
 ## Defensible Current Claim
 
-The repository contains a partially verified Lean infrastructure package for a future Guth–Maynard formalization, including genuine elementary results about finite Dirichlet polynomials, separated finite sets, exponent arithmetic, finite-sum inequalities, and conditional exponent combination. The Section 13.1 zero-density transfer, its main analytic inputs, and the Guth–Maynard large-values theorem remain unproved.
+The repository contains a partially verified Lean infrastructure package for a future Guth–Maynard formalization, including genuine results about the exact truncated Möbius detector support and fixed-`T` magnitude, finite Dirichlet polynomials, separated finite sets, exponent arithmetic, finite-sum inequalities, and conditional exponent combination. The Section 13.1 zero-density transfer, its main analytic inputs, and the Guth–Maynard large-values theorem remain unproved.

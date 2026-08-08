@@ -133,7 +133,9 @@ $$\zeta(1 + i t) \neq 0$$
 
 # 6. Guth-Maynard Target Infrastructure & Formal Statements
 
-The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). We have achieved a full conditional formalization of Section 13.1 of their work, bridging the structural reductions (F-01 through F-14) into a `conditionalZeroDensityTransfer` theorem. These kernel-checked `Prop` signatures and verified logical reductions form the rigorous interface for future analytic verification.
+The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). The project currently contains formal target specifications and several kernel-checked infrastructure lemmas, but it has not yet implemented the Section 13.1 transfer: `conditionalZeroDensityTransfer` still depends transitively on an axiom equivalent to the desired conclusion.
+
+The detector layer now implements the exact truncated Möbius divisor sum. `mem_detectorDivisors`, `detectorDivisors_subset_range`, and `detectorDivisors_card_le_cutoff` prove its divisor-variable support. `norm_mobius_sum_le_cutoff`, `detectorCoeff_eq_zero_iff`, and `norm_detectorCoeff_le_cutoff` prove the cutoff magnitude and vanishing behavior after exponential smoothing. Finally, `detectorCoeff_bound` proves `DetectorCoeffBoundProp` with a constant uniform in positive `n` for each fixed `T`; the encoded quantifier order permits this constant to depend on `T`, so this is not yet the stronger divisor-function bound uniform in `T` needed for the later coefficient-power layer.
 
 ## Theorem 11 (Large Values Estimate Target Statement)
 **Status**: Unproved (Target Specification).
@@ -154,7 +156,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 102 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 21 theorems depend on project-specific mathematical axioms. No audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 21 theorems depend on project-specific mathematical axioms. All eight new detector theorems pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -184,6 +186,9 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Epsilon-Power Asymptotics | `EpsilonPowerBound` | `GuthMaynard/Asymptotics.lean` | `IsBigO` |
 | Epsilon-Power Refl | `EpsilonPowerBound.refl` | `GuthMaynard/Asymptotics.lean` | `IsBigO.of_bound` |
 | Epsilon-Power Trans | `EpsilonPowerBound.trans` | `GuthMaynard/Asymptotics.lean` | `IsBigO.mul` |
+| Detector Support | `detectorDivisors_subset_range` | `GuthMaynard/ZeroDetector.lean` | `Nat.mem_divisors`, `Nat.lt_floor_add_one` |
+| Detector Cutoff Bound | `norm_detectorCoeff_le_cutoff` | `GuthMaynard/ZeroDetector.lean` | `abs_moebius_le_one`, `norm_sum_le`, `exp_smoothing_bound` |
+| Detector Epsilon Bound | `detectorCoeff_bound` | `GuthMaynard/ZeroDetector.lean` | `norm_detectorCoeff_le_cutoff`, `Real.one_le_rpow` |
 | Separated Sets | `IsSeparated` | `GuthMaynard/Separated.lean` | `Metric.dist` |
 | Target Interval | `InTargetInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
 | Base Interval | `InBaseInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |

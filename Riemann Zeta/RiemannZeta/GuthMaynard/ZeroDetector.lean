@@ -15,19 +15,74 @@ open Classical
 namespace RiemannZeta.GuthMaynard
 
 
+/-- One past the natural-number floor of the detector's divisor cutoff. -/
+noncomputable def detectorCutoff (T : ℝ) : ℕ :=
+  ⌊2 * T ^ (1 / 100 : ℝ)⌋₊ + 1
+
+/-- The exact finite support of the truncated Möbius sum in the divisor variable. -/
+noncomputable def detectorDivisors (n : ℕ) (T : ℝ) : Finset ℕ :=
+  n.divisors.filter (fun d => (d : ℝ) ≤ 2 * T ^ (1 / 100 : ℝ))
+
+@[simp]
+lemma mem_detectorDivisors {d n : ℕ} {T : ℝ} :
+    d ∈ detectorDivisors n T ↔
+      (d ∣ n ∧ n ≠ 0) ∧ (d : ℝ) ≤ 2 * T ^ (1 / 100 : ℝ) := by
+  simp [detectorDivisors, Nat.mem_divisors]
+
+/-- Every retained divisor lies below the natural cutoff, uniformly in `n`. -/
+lemma detectorDivisors_subset_range (n : ℕ) (T : ℝ) :
+    detectorDivisors n T ⊆ Finset.range (detectorCutoff T) := by
+  intro d hd
+  rw [mem_detectorDivisors] at hd
+  rw [Finset.mem_range, detectorCutoff]
+  have hdlt : (d : ℝ) < (⌊2 * T ^ (1 / 100 : ℝ)⌋₊ : ℝ) + 1 :=
+    hd.2.trans_lt (Nat.lt_floor_add_one (2 * T ^ (1 / 100 : ℝ)))
+  exact_mod_cast hdlt
+
+lemma detectorDivisors_card_le_cutoff (n : ℕ) (T : ℝ) :
+    (detectorDivisors n T).card ≤ detectorCutoff T := by
+  simpa using Finset.card_le_card (detectorDivisors_subset_range n T)
+
 /- Actual truncated Möbius divisor sum
    `∑_{d ∣ n, d ≤ 2 T^(1/100)} μ(d)`. -/
 noncomputable def mobius_sum (n : ℕ) (T : ℝ) : ℂ :=
-  ∑ d ∈ n.divisors.filter (fun (d : ℕ) => (d : ℝ) ≤ 2 * T ^ (1 / 100 : ℝ)),
-    (ArithmeticFunction.moebius d : ℂ)
+  ∑ d ∈ detectorDivisors n T, (ArithmeticFunction.moebius d : ℂ)
 
 noncomputable def detectorCoeff (n : ℕ) (T : ℝ) : ℂ :=
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
 
-/-- Hypothesis bounding the detector coefficient with epsilon losses. -/
+/-- Magnitude property for the detector coefficient. Its quantifier order permits
+    the constant to depend on `T`, while remaining uniform in positive `n`. -/
 def DetectorCoeffBoundProp : Prop :=
   ∀ (ε : ℝ), 0 < ε → ∀ (T : ℝ), 1 ≤ T → 
     ∃ C : ℝ, 0 < C ∧ ∀ n : ℕ, 0 < n → ‖detectorCoeff n T‖ ≤ C * (n : ℝ) ^ ε
+
+lemma norm_moebius_cast_le_one (d : ℕ) :
+    ‖(ArithmeticFunction.moebius d : ℂ)‖ ≤ 1 := by
+  rw [Complex.norm_intCast]
+  exact_mod_cast ArithmeticFunction.abs_moebius_le_one (n := d)
+
+/-- Truncation bounds the Möbius sum by a quantity depending only on `T`. -/
+lemma norm_mobius_sum_le_cutoff (n : ℕ) (T : ℝ) :
+    ‖mobius_sum n T‖ ≤ (detectorCutoff T : ℝ) := by
+  calc
+    ‖mobius_sum n T‖
+        ≤ ∑ d ∈ detectorDivisors n T,
+            ‖(ArithmeticFunction.moebius d : ℂ)‖ := by
+          simpa [mobius_sum] using
+            norm_sum_le (detectorDivisors n T)
+              (fun d => (ArithmeticFunction.moebius d : ℂ))
+    _ ≤ ∑ _d ∈ detectorDivisors n T, (1 : ℝ) := by
+      exact Finset.sum_le_sum fun d _ => norm_moebius_cast_le_one d
+    _ = ((detectorDivisors n T).card : ℝ) := by simp
+    _ ≤ (detectorCutoff T : ℝ) := by
+      exact_mod_cast detectorDivisors_card_le_cutoff n T
+
+@[simp]
+lemma detectorCoeff_eq_zero_iff (n : ℕ) (T : ℝ) :
+    detectorCoeff n T = 0 ↔ mobius_sum n T = 0 := by
+  rw [detectorCoeff, mul_eq_zero]
+  simp
 
 /-- Exponential decay bound for the smoothing factor -/
 lemma exp_smoothing_bound (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
@@ -44,6 +99,36 @@ lemma exp_smoothing_bound (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
   have h5 : Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ)) ≤ Real.exp 0 := Real.exp_le_exp.mpr h4
   rw [Real.exp_zero] at h5
   exact h5
+
+/-- The smoothed detector coefficient has the same uniform-in-`n` cutoff bound. -/
+lemma norm_detectorCoeff_le_cutoff (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
+    ‖detectorCoeff n T‖ ≤ (detectorCutoff T : ℝ) := by
+  rw [detectorCoeff, norm_mul]
+  calc
+    ‖mobius_sum n T‖ *
+          ‖(Real.exp (-(n : ℝ) / T ^ (1 / 2 : ℝ)) : ℂ)‖
+        ≤ (detectorCutoff T : ℝ) * 1 := by
+          apply mul_le_mul (norm_mobius_sum_le_cutoff n T)
+          · rw [Complex.norm_real]
+            exact exp_smoothing_bound n T hT
+          · positivity
+          · positivity
+    _ = (detectorCutoff T : ℝ) := mul_one _
+
+/-- F-02: The actual truncated detector coefficients satisfy the stated
+    epsilon-power magnitude bound, uniformly in `n` for each fixed `T`. -/
+theorem detectorCoeff_bound : DetectorCoeffBoundProp := by
+  intro ε hε T hT
+  refine ⟨(detectorCutoff T : ℝ) + 1, by positivity, ?_⟩
+  intro n hn
+  have hn_one : (1 : ℝ) ≤ n := by exact_mod_cast hn
+  have hpow : (1 : ℝ) ≤ (n : ℝ) ^ ε := Real.one_le_rpow hn_one hε.le
+  calc
+    ‖detectorCoeff n T‖ ≤ (detectorCutoff T : ℝ) :=
+      norm_detectorCoeff_le_cutoff n T hT
+    _ ≤ ((detectorCutoff T : ℝ) + 1) * 1 := by norm_num
+    _ ≤ ((detectorCutoff T : ℝ) + 1) * (n : ℝ) ^ ε := by
+      exact mul_le_mul_of_nonneg_left hpow (by positivity)
 
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/
 noncomputable def detectPoly (N : ℕ) (s : ℂ) (T : ℝ) : ℂ :=

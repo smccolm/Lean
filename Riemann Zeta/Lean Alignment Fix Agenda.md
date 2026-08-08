@@ -63,8 +63,8 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed 8 August 2026:** replaced name-based categorization with a synchronized 110-theorem list and transitive dependency checks across every production module. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | ~~Warning-producing production files and `run_lake_build.bat`~~ | **Completed 8 August 2026:** eliminated all 31 warning lines at their sources and made every runner build/audit stage fail on any future Lean warning. | Easy–moderate—complete |
-| 9 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | **Actual truncated Möbius coefficients implemented during #8.** Still prove their support and uniform magnitude properties. | Moderate |
-| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | **Two `sorry`s and the unused coefficient-bound axiom removed during #8.** Still prove the coefficient theorem from explicit detector/divisor inputs and remove the general divisor axiom. | Moderate–hard |
+| 9 | ~~`RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed 8 August 2026:** proved exact divisor-variable support, smoothing zero equivalence, the cutoff magnitude bound, and the encoded fixed-`T` epsilon-power property. | Moderate—complete |
+| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | **Two `sorry`s and the unused coefficient-bound axiom removed during #8; detector input proved during #9.** Still prove the coefficient theorem from an explicit general divisor bound and remove the remaining divisor axiom. | Moderate–hard |
 | 11 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
 | 12 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6; vacuous dyadic lemma removed during #8.** Still prove the dyadic step and large-value consequence from explicit inputs, and remove the Type II axiom. | Hard |
 | 13 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | **Jensen `True` placeholder removed during #8.** Replace eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
@@ -165,7 +165,7 @@ The audit may initially report failures. It must not suppress them merely to kee
 **Required actions:**
 
 1. **Completed 8 August 2026:** defined the actual truncated Möbius sum and detector coefficients.
-2. Prove exact support and smoothing properties.
+2. **Completed 8 August 2026:** proved exact divisor-variable support, cutoff cardinality, exponential-smoothing zero equivalence, a cutoff norm bound uniform in `n`, and `DetectorCoeffBoundProp` with its encoded fixed-`T` constant dependency.
 3. The former admitted theorem was deleted during #8. Reintroduce a coefficient theorem only with complete finite-product proofs and explicit narrower inputs.
 4. **Completed 8 August 2026:** removed `powCoeffBound_unconditional`.
 5. Isolate the precise general divisor-function statement required by the coefficient bound.
@@ -416,8 +416,21 @@ Every completed repair iteration must record:
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, `Analytic Research Agenda.md`, rank 8, and the affected later Shitlist entries. |
 | Remaining obstruction | Proceed to Shitlist #9: prove support and magnitude properties for the actual truncated Möbius detector. |
 
+### Completed Iteration: Shitlist #9
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta/GuthMaynard/ZeroDetector.lean` and its synchronized entries in `RiemannZeta/Audit.lean` |
+| Previous defect | The truncated Möbius formula was defined, but its exact divisor-variable support, cutoff cardinality, smoothing zero behavior, and `DetectorCoeffBoundProp` magnitude theorem were unproved. |
+| Result | Added `detectorCutoff` and `detectorDivisors`; proved exact membership, range support, and cutoff cardinality. Bounded each complex-cast Möbius value by one, bounded the full truncated sum and smoothed coefficient by `detectorCutoff T`, proved that exponential smoothing introduces no new zeros, and proved `detectorCoeff_bound : DetectorCoeffBoundProp`. The proof uses the explicit cutoff and Mathlib's `abs_moebius_le_one`; it introduces no assumption. |
+| Constant dependency | The existing proposition orders its quantifiers as `∀ ε, ∀ T, ∃ C, ∀ n`, so the proved constant is uniform in positive `n` for each fixed `T` and may depend on `T`. A stronger constant uniform in `T` is not claimed and is tied to the general divisor-function obligation in Shitlist #10. |
+| Audit impact | Added all eight new public theorems to the transitive audit. Direct audit execution finds 110 listed and 110 discovered production theorems; every new detector theorem passes with only permitted Lean/Mathlib logical axioms. The same 21 unrelated project-axiom dependency failures remain. |
+| Verification | `lake build RiemannZeta.GuthMaynard.ZeroDetector`, `lake build RiemannZeta`, and direct elaboration of `scratch_pow.lean` all succeed with zero Lean warnings. The principal runner logged to `logs/overall_proof_20260808_052739.log`: the default build and explicit production coverage passed with zero Lean warnings; the synchronized audit found 110 listed and 110 discovered theorems, passed every new detector theorem, and correctly failed on the same 21 unrelated project-axiom dependencies; the prohibited-placeholder, unsafe-bypass, and audit-quality scans passed; the project-axiom scan correctly failed on 26 remaining declarations. The complete log contains no line beginning `warning:`. Overall exit code remains honestly `1` because the audit and project-axiom gates are not yet complete. Repository scans found no `sorry`, `admit`, `sorryAx`, `native_decide`, `implemented_by`, `unsafe`, or linter-suppression matches in Lean source, and `git diff --check` found no whitespace errors. |
+| Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 9, and the Phase 2 detector action in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #10: prove the powered-coefficient estimate from faithful detector/divisor inputs and remove `k_divisor_function_bound`. |
+
 ## Current Priority
 
-The proof run is warning-free and the warning gate is enforced. Proceed to Shitlist #9: prove support and magnitude properties for the actual truncated Möbius detector.
+The detector support and encoded fixed-`T` magnitude theorem are kernel-checked. Proceed to Shitlist #10: prove the powered-coefficient estimate from faithful detector/divisor inputs and remove the remaining general divisor axiom.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.
