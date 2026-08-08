@@ -11,6 +11,7 @@ import RiemannZeta.GuthMaynard.DirichletPolynomial
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.ExtractSeparated
 import RiemannZeta.GuthMaynard.HalaszMontgomery
+import RiemannZeta.GuthMaynard.TypeIIZeros
 import RiemannZeta.GuthMaynard.InghamBound
 import RiemannZeta.GuthMaynard.LargeValues
 import RiemannZeta.GuthMaynard.MeanValueCS

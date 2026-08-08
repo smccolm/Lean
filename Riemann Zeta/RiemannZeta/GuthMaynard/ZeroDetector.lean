@@ -147,30 +147,27 @@ def IsTypeIZero (ρ : ℂ) (T : ℝ) : Prop :=
     T ^ (1/100 : ℝ) ≤ N ∧ N ≤ T ^ (1/2 : ℝ) * (Real.log T) ^ 2 ∧
     1 / (3 * Real.log T) ≤ ‖detectPoly (2^j) ρ T‖
 
-/-- F-03: Type II zero classification.
-    A Type II zero is a zero in the target rectangle that is not a Type I zero. -/
-def IsTypeIIZero (σ T1 T2 : ℝ) (ρ : ℂ) (T : ℝ) : Prop :=
+/-- The residual zero class used in the Type-I/complement partition.
+    This is not Maynard--Pratt's contour-integral Type II condition. -/
+def IsResidualZero (σ T1 T2 : ℝ) (ρ : ℂ) (T : ℝ) : Prop :=
   ρ ∈ zerosInRect σ 1 T1 T2 ∧ ¬ IsTypeIZero ρ T
 
-/-- Number of Type II zeros in the rectangle counting analytical multiplicity. -/
-noncomputable def typeIIZeroCount (σ T1 T2 T : ℝ) : ℕ :=
-  ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => IsTypeIIZero σ T1 T2 ρ T), analyticVanishingOrder riemannZeta s
+/-- Number of residual zeros in the rectangle, counted with analytic multiplicity. -/
+noncomputable def residualZeroCount (σ T1 T2 T : ℝ) : ℕ :=
+  ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => IsResidualZero σ T1 T2 ρ T),
+    analyticVanishingOrder riemannZeta s
 
-/-- Explicit Halasz-Montgomery consequence for the large values of Dirichlet polynomials.
-    Specifically controls Type II zeros with the exponent 2 - 2σ throughout [7/10, 4/5]. 
-    Replaces the Huxley estimate used earlier. -/
-def HalaszMontgomeryConsequence : Prop :=
+/-- Target bound for residual zeros throughout `σ ∈ [7/10, 4/5]`.
+    A source-faithful proof first embeds residual zeros into the genuine
+    contour-integral Type II class. -/
+def ResidualZeroBoundProp : Prop :=
   ∀ (σ : ℝ), 7/10 ≤ σ → σ ≤ 4/5 →
     EpsilonPowerBound 
-      (fun (T : ℝ) => (typeIIZeroCount σ T (2*T) T : ℝ))
+      (fun (T : ℝ) => (residualZeroCount σ T (2*T) T : ℝ))
       (fun (T : ℝ) => T ^ (2 - 2 * σ))
 
 lemma typeII_exponent_pos (σ : ℝ) (hσ2 : σ ≤ 4/5) :
   0 ≤ 2 - 2 * σ := by
   linarith
-
-/-- F-03 Hypothesis: The number of Type II zeros is bounded appropriately. -/
-def TypeIIBoundProp : Prop :=
-  HalaszMontgomeryConsequence
 
 end RiemannZeta.GuthMaynard

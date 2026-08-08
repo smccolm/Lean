@@ -54,11 +54,11 @@ theorem local_zero_count_native : LocalZeroCountProp := by
 noncomputable def typeIZeroCount (σ T1 T2 T : ℝ) : ℕ :=
   ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => IsTypeIZero ρ T), analyticVanishingOrder riemannZeta s
 
-/-- Total zero count is the sum of Type I and Type II zeros. -/
-lemma typeI_add_typeII_eq_total (σ T1 T2 T : ℝ) :
-  typeIZeroCount σ T1 T2 T + typeIIZeroCount σ T1 T2 T = zeroCountRect σ 1 T1 T2 := by
-  have H : typeIIZeroCount σ T1 T2 T = ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => ¬IsTypeIZero ρ T), analyticVanishingOrder riemannZeta s := by
-    unfold typeIIZeroCount IsTypeIIZero
+/-- Total zero count is the sum of Type I and residual zeros. -/
+lemma typeI_add_residual_eq_total (σ T1 T2 T : ℝ) :
+  typeIZeroCount σ T1 T2 T + residualZeroCount σ T1 T2 T = zeroCountRect σ 1 T1 T2 := by
+  have H : residualZeroCount σ T1 T2 T = ∑ s ∈ (zerosInRect σ 1 T1 T2).filter (fun ρ => ¬IsTypeIZero ρ T), analyticVanishingOrder riemannZeta s := by
+    unfold residualZeroCount IsResidualZero
     apply Finset.sum_congr
     · ext x
       simp only [Finset.mem_filter]

@@ -12,17 +12,21 @@ namespace RiemannZeta.GuthMaynard
 
 
 /--
-Montgomery's Mean Value Theorem (Discrete version).
-Bounds the sum over a separated set of the square of a Dirichlet polynomial.
-Used to bound the additive energy in the Halasz-Montgomery lemma and Large Values estimate.
+The discrete Dirichlet-polynomial mean-value input used in Section 13.1.
+
+The existentially quantified `C` is an absolute constant: it is chosen before
+the polynomial length, height, separated set, and coefficients. This represents
+the implied constant in the paper's `≲` notation rather than incorrectly fixing
+that constant to one.
 -/
 def MontgomeryMeanValue : Prop :=
-  ∀ (N : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
-    0 < N → 1 ≤ T →
-    IsSeparated 1 W →
-    InTargetInterval T W →
-    ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
-      (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
+  ∃ C : ℝ, 0 < C ∧
+    ∀ (N : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
+      0 < N → 1 ≤ T →
+      IsSeparated 1 W →
+      InTargetInterval T W →
+      ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
+        C * (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
 
 lemma mean_value_pos (N : ℕ) (W : Finset ℝ) (a : ℕ → ℂ) :
   0 ≤ ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 := by
@@ -45,15 +49,11 @@ lemma l2_norm_sq_zero_iff (N : ℕ) (a : ℕ → ℂ) :
   intro _
   rw [sq_eq_zero_iff, norm_eq_zero]
 
-lemma montgomery_mean_value_rhs_nonneg (N : ℕ) (T : ℝ) (a : ℕ → ℂ) (hT : 0 ≤ T) :
-  0 ≤ (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := by
+lemma montgomery_mean_value_rhs_nonneg (C : ℝ) (N : ℕ) (T : ℝ) (a : ℕ → ℂ)
+    (hC : 0 ≤ C) (hT : 0 ≤ T) :
+    0 ≤ C * (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := by
   have h1 : 0 ≤ T + (N : ℝ) := add_nonneg hT (Nat.cast_nonneg N)
   have h2 : 0 ≤ ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := l2_norm_sq_nonneg N a
-  exact mul_nonneg h1 h2
-
-axiom montgomery_mean_value_unconditional : MontgomeryMeanValue
-
-theorem montgomery_mean_value_native : MontgomeryMeanValue := by
-  exact montgomery_mean_value_unconditional
+  positivity
 
 end RiemannZeta.GuthMaynard

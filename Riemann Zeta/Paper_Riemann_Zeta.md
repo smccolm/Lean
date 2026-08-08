@@ -158,7 +158,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 20 theorems depend on project-specific mathematical axioms. All detector theorems and the conditional powered-coefficient theorem pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 113 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 17 theorems depend on project-specific mathematical axioms. All detector theorems, the conditional powered-coefficient theorem, the mean-value-to-large-values implication, and the five generic Type II deductions pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -192,6 +192,11 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Detector Cutoff Bound | `norm_detectorCoeff_le_cutoff` | `GuthMaynard/ZeroDetector.lean` | `abs_moebius_le_one`, `norm_sum_le`, `exp_smoothing_bound` |
 | Detector Epsilon Bound | `detectorCoeff_bound` | `GuthMaynard/ZeroDetector.lean` | `norm_detectorCoeff_le_cutoff`, `Real.one_le_rpow` |
 | Conditional Powered-Coefficient Bound | `powCoeff_bound_of_uniform_detector_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit detector/factorization inputs, `norm_sum_le`, `Real.finset_prod_rpow` |
+| Discrete Mean-Value Input | `MontgomeryMeanValue` | `GuthMaynard/MeanValue.lean` | Unproved proposition specification with one absolute implied constant |
+| Conditional Large-Value Count | `halasz_montgomery_lemma_of_mean_value` | `GuthMaynard/HalaszMontgomery.lean` | Explicit `MontgomeryMeanValue` input and finite-sum inequalities |
+| Contour Type II Condition | `IsContourTypeIIZero` | `GuthMaynard/TypeIIZeros.lean` | Short Möbius polynomial, Gamma factor, and `riemannZeta` contour integral |
+| Type II Analytic Inputs | `TypeIContourTypeIICoverProp`, `TypeIIFourthMomentReductionProp`, `TwistedZetaFourthMomentProp` | `GuthMaynard/TypeIIZeros.lean` | Explicit unproved source-facing proposition specifications |
+| Conditional Residual-Zero Bound | `residual_zero_bound_of_cover_reduction_and_fourth_moment` | `GuthMaynard/TypeIIZeros.lean` | Audit-clean deduction from the three explicit Type II inputs over generic finite weighted data |
 | Separated Sets | `IsSeparated` | `GuthMaynard/Separated.lean` | `Metric.dist` |
 | Target Interval | `InTargetInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
 | Base Interval | `InBaseInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
@@ -212,7 +217,7 @@ The formalization relies on the following exact environment:
 - **Package Version**: `0.1.0`
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 20 dependency failures)
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 17 dependency failures)
 
 ---
 
@@ -222,7 +227,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 
 **Future Technical Extensions**:
 1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
-2. Formally proving the remaining isolated analytic base layers (e.g., Halasz-Montgomery Type II bounds, Montgomery Mean Value Theorem) using topological measures to fully close the Guth-Maynard Zero Density bounds.
+2. Proving the Maynard–Pratt Type-I/Type-II cover, contour-to-twisted-fourth-moment reduction, twisted fourth moment, and Montgomery mean-value theorem needed to close the Guth–Maynard zero-density argument.
 
 ---
 
