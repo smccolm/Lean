@@ -28,6 +28,9 @@ The repository is aligned only when all of the following hold:
 7. Audit output contains no project-specific mathematical axiom and no `sorryAx`.
 8. The README, paper, research-progress file, and theorem documentation agree with the compiled Lean declarations.
 9. The principal proof run emits zero Lean warnings or linter diagnostics from project source; warnings are fixed at their source rather than suppressed or filtered.
+10. Every primitive hypothesis of `conditionalZeroDensityTransfer` is discharged by a kernel-checked project theorem.
+11. The project proves `GuthMaynardLargeValues` and obtains both the concrete Guth–Maynard and combined Ingham/Guth–Maynard zero-density results by theorem application, without project axioms or conclusion-shaped assumptions.
+12. `run_lake_build.bat` finishes with `PASS` and exit code `0` from a clean project state.
 
 Standard Lean/Mathlib logical dependencies such as `propext`, `Classical.choice`, and `Quot.sound` are permitted when inherited normally and reported transparently.
 
@@ -60,7 +63,7 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 | `clean_cache.lean` deleted `.lake/build` through elaboration-time `#eval`; `build_it.lean` invoked a hard-coded user-specific Lake path through `#eval`. | #2, #8 | **Resolved by deletion:** neither utility was imported or needed by the principal runner. |
 | Several files historically described as deleted remained as empty or comment-only tombstones. | #2 | **Resolved:** every empty/tombstone Lean file has been deleted; no zero-byte Lean file remains. |
 | `Audit.lean` checks transitive dependencies for 194 synchronized production theorems. | #6 | **Complete for the cleaned tree's named public theorems:** the only auxiliary Lean declarations are anonymous examples, and both are covered by the runner. The audit correctly remains red on four project-axiom-dependent declarations. |
-| `GuthMaynardLargeValues` formerly omitted positivity/eventual quantifiers and used the opposite exponential sign without a proof. | #14, #18, Goal A | **Resolved at the statement boundary:** the source-positive form has the correct quantifiers and `V > 0`; the negative-sign form is proved by coefficient conjugation. The analytic theorem remains an input. |
+| `GuthMaynardLargeValues` formerly omitted positivity/eventual quantifiers and used the opposite exponential sign without a proof. | #14, #19, Goal A | **Resolved at the statement boundary:** the source-positive form has the correct quantifiers and `V > 0`; the negative-sign form is proved by coefficient conjugation. The analytic theorem remains an input. |
 | `MontgomeryMeanValue` formerly used `[T,2T]`, while #13 produces `[0,3T]`. | #11, #14 | **Resolved at the interface boundary:** the proposition and finite consequence now use `[0,T]`; #13 is consumable at height `3T`. |
 | `k_selection` formerly omitted part of equation (13.1) and did not bound `k`. | #14 | **Resolved:** both inequalities, `2 ≤ k ≤ 101`, and eventual absorption of the detector upper-scale logarithm are kernel-checked. |
 | The explicit `powCoeff` expansion was not proved equal to `powPoly`; `polynomial_power_identity` was only a definitional structural-power identity. | #10, #14 | **Resolved in #10:** `polynomial_power_identity` is now the full finite coefficient expansion, with audited support and complex-power lemmas. |
@@ -69,7 +72,7 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 | Section 13.1 uses the new argument only for `7/10 ≤ σ ≤ 4/5` and invokes Huxley for `σ ≥ 4/5`, while `GuthMaynardZeroDensity` asks for the whole range through `σ = 1`. | #14 | **Resolved conditionally:** `high_sigma_of_huxley` proves the exact exponent comparison and the primitive-input transfer accepts `HuxleyZeroDensity`. |
 | `Transfer.lean` formerly assumed a definitionally equivalent copy of its target and contained an unused `h_bound : True`. | #14 | **Resolved:** all circular declarations and the transfer-local `True` artifact are deleted. The audit-clean replacement derives its former Type-I slab and dyadic-to-global intermediates from ten individually named primitive inputs. |
 | `BetaDependence.lean` contains an axiom with conclusion `True`, a contour-shift interface with unconstrained error, and a pigeonhole axiom that already packages essentially the desired beta-removal conclusion. | #16 | **Statement redesign required, not merely axiom discharge.** |
-| `l2_parabola_incidence_bound` is false for arbitrary finite 1-separated sets without a containing interval, and the decoupling block-index conventions disagree. | #17 | **Statement redesign required before proof work.** |
+| `l2_parabola_incidence_bound` is false for arbitrary finite 1-separated sets without a containing interval, and the decoupling block-index conventions disagree. | #19 | **Statement redesign required before proof work.** |
 | #12 and #13 contain valid finite/conditional deductions, but their strongest proposition inputs package hard analytic reductions. The reopened #13 audit additionally found a shifted, scale-filtered occupancy input and unnormalized interval/loss output. | #12, #13 | **#12 reaches the concrete residual-zero target conditionally. Resolved for #13's conditional layer:** the local input is now an ordinary unshifted unit-zero bound; shifted covering, interval/coefficient translation, and epsilon-loss absorption are kernel-checked. The two analytic inputs remain #15/#16 obligations. |
 | The paper stated stale audit counts. | Documentation gate | **Resolved during #8 and kept synchronized:** after the completed #14 additions, the reproducibility section reports 4 failures across the current 194 declarations. |
 
@@ -98,7 +101,21 @@ This table supersedes any unqualified use of “complete” in the chronological
 
 Therefore #1–#8 close repair or evaluation defects, #9–#13 close only their explicit finite/conditional scopes, and #14 closes the primitive-input conditional transfer milestone. The full repository does not satisfy the non-negotiable completion conditions while 13 project axioms and four audited forbidden dependencies remain.
 
-## Files Ordered by Estimated Repair Difficulty
+## Five Remaining Items: Exhaustive Completion Contract
+
+Only Shitlist #15–#19 remain. They are ordered by dependency, not by estimated effort. Each item has a bounded mathematical responsibility and an objective completion test. The list is exhaustive: every current direct project axiom, every primitive premise of #14, the Guth–Maynard large-values theorem, final integration, audit synchronization, documentation, and the principal runner are assigned below.
+
+| Item | Discrete responsibility | Required Lean deliverable | Completion test |
+|---:|---|---|---|
+| 15 | **Zeta zero-count foundations** | In `ZeroCount.lean` and focused supporting modules: replace its four axioms with proofs; prove the ordinary unit-height `LocalZeroMultiplicityBoundProp`; and prove the concrete Huxley and Ingham zero-density inputs for `N`. | No project axiom remains in the zero-count layer; `zeta_growth_bound_native`, `zeta_lower_bound_native`, the local-zero theorem, `HuxleyZeroDensity (fun σ T => N σ T)`, and `InghamZeroDensity (fun σ T => N σ T)` all pass the transitive audit. |
+| 16 | **Beta-removal theorem** | Redesign the malformed smoothing/contour interfaces, replace all seven `BetaDependence.lean` axioms, and prove `DetectorBetaShiftProp` from genuine Fourier, decay, contour-shift, truncation, averaging, and pigeonhole lemmas. | `BetaDependence.lean` contains no project axiom, `True` placeholder, unconstrained error, or conclusion-shaped premise; the concrete beta-shift theorem passes the transitive audit. |
+| 17 | **Arithmetic coefficients and Montgomery mean value** | Prove `DivisorCountBoundProp`, `FactorizationCountBoundProp`, and `MontgomeryMeanValue` in their current uniform quantified forms, repairing the statements first if source comparison exposes an error. | All three propositions have named kernel-checked witnesses; the powered-coefficient and Halász–Montgomery downstream theorems specialize without these hypotheses. |
+| 18 | **Type-II residual analysis and Goal C integration** | Prove `TypeIContourTypeIICoverProp`, the concrete `TypeIIFourthMomentReductionProp`, and `TwistedZetaFourthMomentProp`; then specialize `conditionalZeroDensityTransfer` using #15–#18 so its only remaining premise is `GuthMaynardLargeValues`. | A public audited theorem derives the concrete full-range zero-density result from `GuthMaynardLargeValues` alone. No other analytic or arithmetic proposition parameter remains. |
+| 19 | **Guth–Maynard large values and final project integration** | Repair and prove the decoupling/incidence layer, remove its two axioms, formalize and prove `GuthMaynardLargeValues`, apply the #18 theorem and the existing combined-exponent transfer, synchronize every public document and audit entry, and retain reusable results in source-faithful modules. | The concrete Guth–Maynard and combined zero-density theorems are project-theorem complete; all direct-axiom and prohibited-proof scans are empty; all public audits pass; every build is warning-free; and `run_lake_build.bat` returns `PASS`/`0`. |
+
+Completing all five rows is, by definition, completion of the repository's current research agenda: Goals A–D are proved in Lean, the useful Goal E infrastructure is retained and documented, every integrity gate passes, and no untracked mathematical hypothesis remains. Upstream submission to Mathlib is optional follow-on work and is not a blocker for this repository-completion claim.
+
+## Historical Files Ordered by Estimated Repair Difficulty
 
 This ordering estimates the difficulty of producing a genuine, mathematically faithful replacement. It does not treat deletion of a canonical theorem as completion of the intended research objective.
 
@@ -117,11 +134,12 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 11 | ~~`RiemannZeta/GuthMaynard/MeanValue.lean`~~ | **Finite/conditional layer completed 8 August 2026:** removed the Montgomery mean-value axiom, proved the finite consequence from an explicit input, and repaired the interval convention to `[0,T]`, consumable by #13 at height `3T`. The analytic mean-value proposition remains unproved. | Hard—finite/conditional layer complete; analytic theorem open |
 | 12 | ~~`RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, `ZeroDetector.lean`, and `TypeIIZeros.lean`~~ | **Conditional/concrete layer completed:** coverage is eventual in height and source-range restricted; the generic count is identified with the concrete analytic-multiplicity residual count; and the concrete `ResidualZeroBoundProp` follows from the three explicit analytic inputs. Proving those inputs remains Goal C. | Very hard—conditional/concrete layer complete |
 | 13 | ~~`RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `DirichletPolynomial.lean`, `Separated.lean`, `ZeroDetector.lean`, and `ZeroCount.lean`~~ | **Conditional/normalized layer completed 8 August 2026:** the local input is now an unshifted unit-zero multiplicity estimate; shifted-bin covering, raw loss accounting, `[0,3T]` translation, coefficient phase twisting with norm preservation, and pure epsilon-power normalization are kernel-checked. `DetectorBetaShiftProp` and the unit-zero estimate remain explicit #16/#15 analytic obligations. | Very hard—conditional/normalized layer complete |
-| 14 | `RiemannZeta/GuthMaynard/Transfer.lean`, with prerequisite repairs in `Statements.lean`, `MeanValue.lean`, `ExponentArithmetic.lean`, `DirichletPolynomial.lean`, `PolynomialPowers.lean`, and `ZeroCount.lean` | **Partial implementation 8 August 2026:** circularity removed; source interfaces, F-06/F-08, finite F-07, F-09/F-10 exponent bounds, Type-I/residual assembly, and Huxley branch are kernel-checked. Still open: uniform central Type-I asymptotic assembly and a proof of F-01, currently exposed as two narrower interim parameters. | Very hard—integrity fixed; research completion open |
-| 15 | `RiemannZeta/GuthMaynard/ZeroCount.lean` | **Compact-rectangle zeta-zero finiteness completed during #13.** Prove or faithfully refactor the remaining growth bounds, Phragmén–Lindelöf, and Euler-product lower bound. | Very hard |
-| 16 | `RiemannZeta/GuthMaynard/BetaDependence.lean` | Replace seven axioms with genuine Schwartz/Fourier inversion, decay, contour-shift, truncation, and pigeonhole arguments. | Very hard |
-| 17 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6; vacuous recursive lemma and unused broad–narrow axiom removed during #8.** Still prove the stated block decomposition and formalize incidence and decoupling without axioms. | Extreme |
-| 18 | `RiemannZeta/GuthMaynard/LargeValues.lean` | **Module-level target assumption removed during #6.** Still assemble and prove the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
+| 14 | `RiemannZeta/GuthMaynard/Transfer.lean` and prerequisites | **Completed at the primitive-input conditional boundary 8 August 2026:** F-01 through F-10, the central Type-I estimate, dyadic-to-global reduction, residual assembly, and high-`σ` branch are kernel-checked. | Very hard—complete |
+| 15 | Zero-count foundations | See the authoritative five-item completion contract above. | Very hard—open |
+| 16 | Beta removal | See the authoritative five-item completion contract above. | Very hard—open |
+| 17 | Arithmetic coefficients and Montgomery mean value | See the authoritative five-item completion contract above. | Very hard—open |
+| 18 | Type-II residual analysis and Goal C integration | See the authoritative five-item completion contract above. | Extreme—open |
+| 19 | Large values and final integration | See the authoritative five-item completion contract above. | Hardest—open |
 
 ## Dependency-Aware Execution Plan
 
@@ -299,22 +317,12 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 
 ### Phase 5: Discharge classical auxiliary hypotheses—Goal C
 
-**Files:**
+This phase is exactly Shitlist #15–#18:
 
-- `RiemannZeta/GuthMaynard/ZeroCount.lean`
-- `RiemannZeta/GuthMaynard/MeanValue.lean`
-- `RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
-- `RiemannZeta/GuthMaynard/BetaDependence.lean`
-- `RiemannZeta/GuthMaynard/ExtractSeparated.lean`
-
-**Required actions:**
-
-1. **Completed during #13:** construct the finite zeta-zero set in compact rectangles using Mathlib's finiteness theorem and count it with analytic multiplicity.
-2. Prove the unit-height local zero-count estimate.
-3. Prove the required Montgomery mean-value theorem.
-4. Derive the Type II bound.
-5. Complete the Fourier smoothing and contour-shift infrastructure.
-6. Re-run the transfer audit after removing each explicit hypothesis.
+1. **#15:** finish the zeta zero-count foundations, local unit-height bound, and Huxley/Ingham inputs.
+2. **#16:** prove the beta-removal theorem after replacing the malformed Fourier/contour interfaces.
+3. **#17:** prove the divisor-count, factorization-count, and Montgomery mean-value inputs.
+4. **#18:** prove the three Type-II inputs and specialize the completed transfer to a theorem whose only premise is `GuthMaynardLargeValues`.
 
 **Exit evidence:**
 
@@ -330,7 +338,7 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 - `RiemannZeta/GuthMaynard/LargeValues.lean`
 - additional focused modules introduced only when they represent real mathematical responsibilities
 
-**Required actions:**
+**Required actions—Shitlist #19:**
 
 1. **Compilation completed; statement review reopened:** repair the false interval-free incidence proposition and reconcile the two block-index conventions.
 2. Replace the incidence and final decoupling axioms with actual proofs only after their corrected statements are source-faithful.
@@ -355,7 +363,7 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 - `Paper_Riemann_Zeta.md`
 - `Research Agenda Progress.MD`
 
-**Required actions:**
+**Required actions—final acceptance portion of Shitlist #19:**
 
 1. Import every production module through the root library.
 2. Run the full build and standalone checks for any remaining non-root Lean files.
@@ -374,7 +382,7 @@ rg --no-ignore -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" .
 lake build
 ```
 
-The prohibited-construct scans return no code matches, the build succeeds without omitted production modules or Lean warnings, and the explicit theorem audits contain no project-specific assumptions.
+The prohibited-construct scans return no code matches, the build succeeds without omitted production modules or Lean warnings, the explicit theorem audits contain no project-specific assumptions, and `run_lake_build.bat --no-pause` returns exit code `0` with final status `PASS`.
 
 ## Per-Iteration Record
 
@@ -736,8 +744,12 @@ These corrections do not invalidate the kernel-checked lemmas. They narrow the c
 
 ## Current Priority
 
-Shitlist #14 needs no further implementation. Continue by discharging or repairing its primitive premises, beginning with the malformed beta-removal and decoupling interfaces, then the narrow unit-zero and beta-shift estimates, arithmetic coefficient bounds, Type-II analytic inputs, mean-value theorem, Huxley bound, and Guth–Maynard large-values theorem.
+Exactly five items remain, in dependency order:
 
-The beta-removal and decoupling interfaces must still be redesigned before their analytic results can be claimed. #13's normalized conditional theorem may depend on a faithful beta-removal proposition and a narrow unit-zero proposition, but those analytic inputs must eventually be proved through #16 and #15 rather than weakened or replaced by shifted conclusion-shaped assumptions.
+1. **#15 — Zeta zero-count foundations.** Discharge four zero-count axioms and prove the unit-zero, Huxley, and Ingham inputs.
+2. **#16 — Beta removal.** Discharge seven beta-layer axioms and prove `DetectorBetaShiftProp` from faithful analysis.
+3. **#17 — Arithmetic and mean value.** Prove divisor count, factorization count, and `MontgomeryMeanValue`.
+4. **#18 — Type II and Goal C integration.** Prove the three residual inputs and reduce the public zero-density theorem to the single premise `GuthMaynardLargeValues`.
+5. **#19 — Large values and final integration.** Discharge the two decoupling axioms, prove `GuthMaynardLargeValues`, derive the concrete Guth–Maynard and combined zero-density theorems, and make the principal runner pass.
 
-The first major research milestone—a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses—is achieved. The final large-values theorem remains the hardest long-term objective.
+These five tasks are exhaustive. No sixth mathematical cleanup item is deferred beyond them. When #15–#19 meet their stated completion tests, the overall research agenda is complete.
