@@ -17,13 +17,44 @@ This is a conditional formulation of Theorem 1.1 representing the required algeb
 -/
 def GuthMaynardLargeValues : Prop :=
   ∀ (ε : ℝ), ε > 0 →
-    ∃ (C : ℝ), ∀ (N : ℕ) (V T : ℝ) (b : ℕ → ℂ) (W : Finset ℝ),
-      0 < N → 1 ≤ T → 1 ≤ V →
+    ∃ (C T₀ : ℝ), 0 < C ∧ 1 ≤ T₀ ∧
+    ∀ (N : ℕ) (V T : ℝ) (b : ℕ → ℂ) (W : Finset ℝ),
+      0 < N → T₀ ≤ T → 0 < V →
+      (∀ n, ‖b n‖ ≤ 1) →
+      IsSeparated 1 W →
+      InBaseInterval T W →
+      (∀ t ∈ W, V ≤ ‖sourceDirichletPoly N b t‖) →
+      (W.card : ℝ) ≤ C * T ^ ε * ((N:ℝ)^2 * V^(-2:ℝ) + (N:ℝ)^(18/5:ℝ) * V^(-4:ℝ) + T * (N:ℝ)^(12/5:ℝ) * V^(-4:ℝ))
+
+/-- The equivalent negative-sign form consumed by the project's detector
+polynomials. Its proof is coefficient conjugation, not an additional analytic
+assumption. -/
+def GuthMaynardLargeValuesNeg : Prop :=
+  ∀ (ε : ℝ), ε > 0 →
+    ∃ (C T₀ : ℝ), 0 < C ∧ 1 ≤ T₀ ∧
+    ∀ (N : ℕ) (V T : ℝ) (b : ℕ → ℂ) (W : Finset ℝ),
+      0 < N → T₀ ≤ T → 0 < V →
       (∀ n, ‖b n‖ ≤ 1) →
       IsSeparated 1 W →
       InBaseInterval T W →
       (∀ t ∈ W, V ≤ ‖dirichletPoly N b t‖) →
       (W.card : ℝ) ≤ C * T ^ ε * ((N:ℝ)^2 * V^(-2:ℝ) + (N:ℝ)^(18/5:ℝ) * V^(-4:ℝ) + T * (N:ℝ)^(12/5:ℝ) * V^(-4:ℝ))
+
+theorem guthMaynardLargeValues_neg
+    (hLargeValues : GuthMaynardLargeValues) : GuthMaynardLargeValuesNeg := by
+  intro ε hε
+  obtain ⟨C, T₀, hC, hT₀, hLarge⟩ := hLargeValues ε hε
+  refine ⟨C, T₀, hC, hT₀, ?_⟩
+  intro N V T b W hN hT hV hb hSeparated hInterval hValues
+  apply hLarge N V T (conjugateCoeffs b) W hN hT hV
+  · intro n
+    rw [norm_conjugateCoeffs]
+    exact hb n
+  · exact hSeparated
+  · exact hInterval
+  · intro t ht
+    rw [norm_sourceDirichletPoly_conjugateCoeffs]
+    exact hValues t ht
 
 /--
 Theorem 1.2 (Zero density estimate).

@@ -23,6 +23,45 @@ An interval-indexed Dirichlet polynomial $D_N(t) = \sum_{n \sim N} a_n n^{-it}$.
 noncomputable def dirichletPoly (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
   ∑ n ∈ dyadicInterval N, a n * (n : ℂ) ^ (-t * I)
 
+/-- The positive-sign convention used in Guth--Maynard Theorem 1.1. -/
+noncomputable def sourceDirichletPoly (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
+  ∑ n ∈ dyadicInterval N, a n * (n : ℂ) ^ (t * I)
+
+/-- Pointwise complex conjugation of a coefficient sequence. -/
+noncomputable def conjugateCoeffs (a : ℕ → ℂ) (n : ℕ) : ℂ := star (a n)
+
+/-- The positive- and negative-sign Dirichlet-polynomial conventions have the
+same norms after conjugating the arbitrary coefficient sequence. -/
+theorem norm_sourceDirichletPoly_conjugateCoeffs
+    (N : ℕ) (a : ℕ → ℂ) (t : ℝ) :
+    ‖sourceDirichletPoly N (conjugateCoeffs a) t‖ = ‖dirichletPoly N a t‖ := by
+  have hstar : star (sourceDirichletPoly N (conjugateCoeffs a) t) = dirichletPoly N a t := by
+    unfold sourceDirichletPoly conjugateCoeffs dirichletPoly
+    rw [star_sum]
+    apply Finset.sum_congr rfl
+    intro n hn
+    rw [star_mul, star_star,
+      mul_comm (star ((n : ℂ) ^ ((t : ℂ) * I))) (a n)]
+    congr 1
+    have hnPos : 0 < n := by
+      rw [dyadicInterval, Finset.mem_Ioc] at hn
+      omega
+    have hnArg : ((n : ℂ)).arg ≠ Real.pi := by
+      change ((((n : ℝ) : ℂ)).arg ≠ Real.pi)
+      rw [Complex.arg_ofReal_of_nonneg (by positivity : (0 : ℝ) ≤ n)]
+      exact Real.pi_ne_zero.symm
+    have hnCast : (n : ℂ) = ((n : ℝ) : ℂ) := by norm_num
+    rw [hnCast]
+    have hConj := Complex.cpow_conj (((n : ℝ) : ℂ)) ((t : ℂ) * I) hnArg
+    simp only [map_mul, Complex.conj_ofReal, Complex.conj_I] at hConj
+    convert hConj.symm using 1
+    ring_nf
+  rw [← hstar, norm_star]
+
+theorem norm_conjugateCoeffs (a : ℕ → ℂ) (n : ℕ) :
+    ‖conjugateCoeffs a n‖ = ‖a n‖ := by
+  exact norm_star _
+
 /--
 Twist coefficients by the unimodular phase produced when the ordinate is
 translated by `c`.  The value at `0` is left unchanged; dyadic intervals never

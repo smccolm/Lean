@@ -52,4 +52,29 @@ theorem EpsilonPowerBound.trans {f g h : ℝ → ℝ}
       _ = T ^ ε * |h T| := by ring_nf
   exact H4.trans_eventuallyEq Heq
 
+/-- The epsilon-power convention is stable under pointwise addition. -/
+theorem EpsilonPowerBound.add {f h g : ℝ → ℝ}
+    (hf : EpsilonPowerBound f g) (hh : EpsilonPowerBound h g) :
+    EpsilonPowerBound (fun T => f T + h T) g := by
+  intro ε hε
+  let q : ℝ → ℝ := fun T => T ^ ε * |g T|
+  have hf' : (fun T => |f T|) =O[atTop] q := hf ε hε
+  have hh' : (fun T => |h T|) =O[atTop] q := hh ε hε
+  have hTriangle : (fun T => |f T + h T|) =O[atTop]
+      (fun T => |f T| + |h T|) := by
+    apply IsBigO.of_bound 1
+    filter_upwards [] with T
+    simpa only [Real.norm_eq_abs, abs_abs,
+      abs_of_nonneg (add_nonneg (abs_nonneg (f T)) (abs_nonneg (h T))), one_mul] using
+      abs_add_le (f T) (h T)
+  have hSum : (fun T => |f T| + |h T|) =O[atTop] q := hf'.add hh'
+  exact hTriangle.trans hSum
+
+/-- Pointwise equality may be used to change the counted function. -/
+theorem EpsilonPowerBound.congr_left {f h g : ℝ → ℝ}
+    (hf : EpsilonPowerBound f g) (hEq : ∀ T, f T = h T) :
+    EpsilonPowerBound h g := by
+  intro ε hε
+  simpa only [← hEq] using hf ε hε
+
 end RiemannZeta.GuthMaynard

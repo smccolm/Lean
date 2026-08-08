@@ -24,7 +24,7 @@ def MontgomeryMeanValue : Prop :=
     ∀ (N : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
       0 < N → 1 ≤ T →
       IsSeparated 1 W →
-      InTargetInterval T W →
+      InBaseInterval T W →
       ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
         C * (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
 

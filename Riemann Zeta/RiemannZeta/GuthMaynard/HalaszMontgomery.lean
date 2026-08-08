@@ -20,7 +20,7 @@ def HalaszMontgomeryLemma : Prop :=
     ∀ (N : ℕ) (T : ℝ) (V : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
       0 < N → 1 ≤ T → 0 < V →
       IsSeparated 1 W →
-      InTargetInterval T W →
+      InBaseInterval T W →
       (∀ t ∈ W, V ≤ ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖) →
       (W.card : ℝ) ≤
         C * (T + (N : ℝ)) * V^(-2 : ℝ) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
