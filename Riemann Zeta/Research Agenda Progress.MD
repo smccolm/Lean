@@ -21,13 +21,17 @@ The production Guth–Maynard source still contains 14 direct project `axiom` de
 | Critical | `l2_parabola_incidence_bound` bounds the cardinality of an arbitrary finite 1-separated real set without any height interval. This is false as stated. The block indices in `DecouplingProp` also do not match the separate block-decomposition convention. | Shitlist #17 requires statement repair before the decoupling axioms can be meaningfully discharged. |
 | High | `k_selection` does not formalize the full scale choice in Guth–Maynard equation (13.1): its second branch proves only the lower inequality, it lacks the source upper-scale hypothesis, it does not prove the upper inequality there, and it gives no uniform bound on `k`. | The exponent/scale infrastructure is insufficient for the F-07 to F-10 transfer chain despite being axiom-free. |
 | High | `GuthMaynardLargeValues` is only a proposition definition. It omits an explicit positive constant and eventual threshold, adds `1 ≤ V`, and uses `n^{-it}` whereas Theorem 1.1 is written with `n^{it}`. | Goal A's exact source-statement gate is not complete. The sign conventions are likely equivalent, but no Lean equivalence bridge proves that fact. |
+| High | `MontgomeryMeanValue` requires the separated set to lie in `[T,2T]`, while #13's normalized extraction produces a translated set in `[0,3T]`. | The present conditional mean-value theorem remains valid for its own statement, but #14 cannot consume it without repairing the interval interface and proving the associated phase-translation bridge. |
 | Resolved in #10 | `polynomial_power_identity` formerly stated only the definitional equality `powPoly = detectPoly ^ k`. | It now proves the full finite `powCoeff` expansion over `m ∈ [N^k,(2N)^k]`, including `k = 0`, by expanding over tuples and regrouping by their product. |
+| High | The exact powered expansion has support across `(N^k,(2N)^k]`, which spans up to `k` ordinary dyadic blocks. The block with a large value may vary with the ordinate. | F-07 still needs the block split, powered phase identity, coefficient normalization, and simultaneous block-and-ordinate pigeonholing. The completed expansion alone is not a large-values-ready polynomial. |
+| High | The project count `N σ T` uses the full ordinate interval `[-T,T]`, whereas the Section 13.1 detector and current Type-I/Type-II layers control positive slabs `[T,2T]`. | F-01 needs a zeta-conjugation and analytic-multiplicity bridge plus an eventual dyadic summation with a finite low-height remainder. No current theorem performs this global reduction. |
+| High | Section 13.1 invokes the new argument only on `7/10 ≤ σ ≤ 4/5` and uses Huxley's bound for `σ ≥ 4/5`; the project target `GuthMaynardZeroDensity` runs through `σ = 1`. | A faithful public transfer theorem must accept an explicit `HuxleyZeroDensity` or equally narrow high-`σ` hypothesis. |
 | High | The repaired #12 theorem still composes three strong proposition inputs. `TypeIIFourthMomentReductionProp` packages the Gamma-decay, Hölder, separation, and local-multiplicity work rather than proving it. | The generic and concrete residual-count deductions are valid, including the eventual coverage bridge and exact multiplicity-count identity, but they do not prove Maynard–Pratt Lemma 24. |
 | Resolved for #13's conditional layer | The critical audit found that `LocalZeroMultiplicityBoundProp` directly assumed the shifted, scale-filtered occupancy estimate and that the output interval and logarithmic losses were not ready for the large-values step. | The input now bounds only unshifted unit intervals. Lean proves the `2⌈H⌉+1` shifted-bin cover, raw enlarged-interval estimate, ordinate/coefficient translation to `[0,3T]`, phase-norm preservation, and pure epsilon-power normalization. The unit-zero and beta-shift propositions themselves remain unproved #15/#16 analytic inputs. |
 | Resolved in #9 | `DetectorCoeffBoundProp` chooses its constant after fixing `T` and cannot by itself support powering. | The exact detector is now bounded by `n.divisors.card`, and `uniformDetectorCoeffBound_of_divisorCount` proves the full `T`-uniform estimate from the explicit classical `DivisorCountBoundProp`. The classical divisor estimate remains Goal C work. |
 | Resolved in #8 | `Paper_Riemann_Zeta.md` formerly expected 17 audit failures after the production audit had fallen to 6. | The paper, README, and agendas now report 6 dependency failures across the current 140 synchronized declarations. |
 
-The source comparison above follows Guth–Maynard Theorem 1.1 and Section 13.1. In particular, Section 13.1 uses `7/10 ≤ σ ≤ 4/5`, `O(log T)` dyadic scales, a complete two-sided choice of `N^k` in equation (13.1), separated large values, and a large-values/mean-value case split. The present Lean development formalizes only fragments of that chain.
+The source comparison above follows Guth–Maynard Theorem 1.1 and Section 13.1. In particular, Section 13.1 uses the new argument on `7/10 ≤ σ ≤ 4/5`, invokes Huxley for `σ ≥ 4/5`, uses `O(log T)` dyadic scales, makes a complete two-sided choice of `N^k` in equation (13.1), extracts separated large values, and splits between the large-values and mean-value estimates. The present Lean development formalizes only fragments of that chain.
 
 ## Verified Kernel-Checked Results
 
@@ -47,7 +51,7 @@ The following are genuinely proved without project-specific axioms or `sorryAx`,
 12. The exact Type-I-plus-residual filtering identity. A residual zero is not definitionally identified with a source contour-Type-II zero.
 13. The structural identity `powPoly = detectPoly ^ k`, the full finite coefficient expansion `polynomial_power_identity`, the substantive conditional bound from a uniform detector input, and `powCoeff_bound_of_divisor_and_factorization`, which exposes the two classical arithmetic inputs directly.
 14. The conditional combined-exponent implication from separately assumed Ingham and Guth–Maynard zero-density estimates.
-15. The conditional finite large-value count from an explicit `MontgomeryMeanValue` parameter. The analytic mean-value theorem remains unproved.
+15. The conditional finite large-value count from an explicit `MontgomeryMeanValue` parameter. The analytic mean-value theorem remains unproved, and its current `[T,2T]` interval interface is not compatible with #13's translated `[0,3T]` output.
 16. Generic residual-count comparison and epsilon-bound composition from explicit coverage, Type-II fourth-moment reduction, and twisted-fourth-moment inputs; eventual source coverage is now bridged to the concrete dyadic zeta-zero family, whose weighted count is proved equal to `residualZeroCount`, yielding a concrete conditional `ResidualZeroBoundProp` theorem.
 17. Finite admissible dyadic scales, exact weighted pigeonholing, multiplicity aggregation, and shifted-bin covering from an ordinary unshifted unit-zero multiplicity bound.
 18. Raw conditional Type-I extraction with explicit `T^δ (log T)^2` loss, exact detector-line and coefficient-phase translation identities, coefficient-norm preservation, and normalized conditional extraction into `[0,3T]` with a pure `C T^ε |W|` bound.
@@ -56,25 +60,32 @@ The following are genuinely proved without project-specific axioms or `sorryAx`,
 
 An explicit proposition parameter is preferable to a hidden axiom only when its statement is mathematically faithful and strictly upstream. It still does not count as a proved analytic result.
 
-- `MontgomeryMeanValue` is an explicit uniform proposition with one positive absolute constant. It is unproved.
+- `MontgomeryMeanValue` is an explicit uniform proposition with one positive absolute constant. It is unproved. Its current `[T,2T]` interval convention must be generalized to a base interval or arbitrary interval of controlled length before it can be used with #13; the corresponding coefficient phase-translation identity must be proved.
 - `DivisorCountBoundProp` and `FactorizationCountBoundProp` are unproved classical arithmetic inputs. `UniformDetectorCoeffBoundProp` is no longer an independent obligation: it is conditionally proved from `DivisorCountBoundProp`.
 - `TypeIContourTypeIICoverProp`, `TypeIIFourthMomentReductionProp`, and `TwistedZetaFourthMomentProp` are unproved analytic inputs. The reduction proposition contains most of the hard Appendix C work. The source coverage and generic reduction now instantiate the actual finite zeta-zero family and concrete `ResidualZeroBoundProp` without an additional zero-set assumption.
 - `DetectorBetaShiftProp` is an unproved analytic input to #13 and belongs to the redesigned #16 Fourier/contour argument. `LocalZeroMultiplicityBoundProp` is now the narrow unproved unit-zero input: it gives a uniform multiplicity-weighted `O(log T)` bound for ordinary unshifted unit intervals of Type-I zeros. #13 proves the shifted and scale-filtered occupancy estimate from it.
+- `HuxleyZeroDensity (fun σ T => N σ T)` is a legitimate high-`σ` input to the conditional transfer: the source uses Huxley on `4/5 ≤ σ ≤ 1`, outside the central Section 13.1 argument. It is stated but unproved in the project.
+- This Huxley dependency is internal to deriving the full-range Guth–Maynard theorem. It does not belong in `CombinedZeroDensityTransfer`, which correctly assumes the completed full-range Guth–Maynard estimate and combines that estimate only with Ingham.
+- The global count convention requires preservation of zeta zeros and analytic multiplicity under complex conjugation. No current project theorem supplies this exact bridge. #14 should prove it if practical; otherwise the conditional transfer must expose one narrowly stated provisional parameter and track its later discharge under #15.
 - The four `ZeroCount.lean` axioms cover right-half-plane growth, functional-equation growth, Phragmén–Lindelöf interpolation, and an Euler-product lower bound. Compact-rectangle zero finiteness is proved independently of them.
 - The seven `BetaDependence.lean` axioms and two `Decoupling.lean` axioms are not acceptable final dependencies. Several need new statements, not just proof terms.
 
 ## Main Transfer Gap
 
-The Section 13.1 chain has not been assembled. A valid replacement for `conditionalZeroDensityTransfer` must explicitly implement:
+The Section 13.1 chain has not been assembled. The formal Shitlist #14 plan now separates the work into the following auditable steps:
 
-1. dyadic reduction of the zero count;
-2. the exact detector classification and Type-I/contour-Type-II cover;
-3. beta removal and local zero multiplicity;
-4. **kernel-checked conditionally:** weighted separated extraction from a narrow unit-zero input, shifted-bin covering, interval normalization, coefficient phase translation, and explicit epsilon-loss absorption;
-5. the classical divisor-count and factorization-count inputs; the downstream uniform-detector reduction and explicit polynomial-power coefficient expansion are now kernel-checked;
-6. the complete `k`-selection inequalities and a bounded choice of `k`;
-7. the large-values/mean-value case split; and
-8. the final exponent algebra yielding `30(1-σ)/(13+10σ)`.
+1. **F-01:** prove the positive-slab-to-global reduction, including zeta conjugation with analytic multiplicity, eventual dyadic summation, the geometric bound, and the finite low-height remainder;
+2. **F-02/F-03:** consume the actual detector and exact Type-I/residual partition, deriving the concrete residual-zero estimate from the separately named Type-I/contour-Type-II coverage, fourth-moment reduction, and twisted-fourth-moment inputs;
+3. **F-04/F-05:** derive #13's normalized separated output from the explicit beta-shift and ordinary unit-zero multiplicity inputs;
+4. **F-06:** prove the exact translated normalized-detector identity, `N^σ` scaling, phase preservation, and coefficient-growth estimate;
+5. **F-07:** use the completed convolution expansion, then prove the lower-endpoint vanishing, finite dyadic block split, powered phase identity, coefficient normalization, and block-and-ordinate pigeonholing;
+6. **F-08:** replace `k_selection` by an eventual uniformly bounded positive choice satisfying both sides of equation (13.1) from the actual detector-scale range;
+7. **F-09:** in the `Q = N^k ≤ T^α` branch, apply the repaired large-values hypothesis and bound `Q^(2-2σ)`, `Q^(18/5-4σ)`, and `T Q^(12/5-4σ)`;
+8. **F-10:** in the `Q > T^α` branch, apply the repaired mean-value hypothesis and bound `Q^(2-2σ) + T Q^(1-2σ)` using the equation (13.2) rational inequality;
+9. assemble the central positive-slab theorem for `7/10 ≤ σ ≤ 4/5`, extend it to the project count `N σ T`, and use an explicit Huxley input for `4/5 ≤ σ ≤ 1`; and
+10. expose a public primitive-input `conditionalZeroDensityTransfer` that derives the #10, #12, and #13 intermediate propositions internally, then delete the conclusion-equivalent transfer axiom and every `True` artifact.
+
+The Section 13.1 target exponent is `15(1-σ)/(3+5σ)`. The later combined Ingham/Guth–Maynard exponent is `30(1-σ)/13`; the previously recorded `30(1-σ)/(13+10σ)` expression was erroneous.
 
 No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` currently assumes the final conclusion through a definitionally equal wrapper.
 
@@ -94,7 +105,7 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: exact formal targets and infrastructure | **Partially achieved, with remaining statement-level defects.** Useful definitions and finite infrastructure exist, including the exact polynomial-power coefficient expansion and #13's normalized translated extraction interface; the auxiliary Lean tree is clean, and the runner covers every retained Lean file. `GuthMaynardLargeValues` still does not match the source quantifiers/sign convention exactly, and `k_selection` remains incomplete. |
+| Goal A: exact formal targets and infrastructure | **Partially achieved, with remaining statement-level defects.** Useful definitions and finite infrastructure exist, including the exact polynomial-power coefficient expansion and #13's normalized translated extraction interface; the auxiliary Lean tree is clean, and the runner covers every retained Lean file. `GuthMaynardLargeValues` still does not match the source quantifiers/sign convention, `MontgomeryMeanValue` has an incompatible interval interface, `k_selection` remains incomplete, and the global positive/negative-height bridge is absent. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The only theorem with that name is circular. |
 | Goal C: discharge classical hypotheses | **Not achieved.** Fourteen direct axioms remain, strong analytic proposition inputs are unproved, and several beta/decoupling interfaces are malformed. |
 | Goal D: Guth–Maynard large-values theorem | **Not achieved.** `LargeValues.lean` contains no theorem proving the target; the decoupling layer is axiomatic and partly misstated. |
@@ -105,13 +116,16 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 1. **Shitlists #2 and #8 completed:** all retained Lean files are classified, warning-failing runner stages cover both auxiliary examples, side-effect utilities are gone, and integrity scans use `--no-ignore`.
 2. **Shitlist #13 conditional/normalized layer completed:** the input is an ordinary unit-zero bound; shifted covering, raw loss accounting, ordinate/coefficient translation, and epsilon normalization are kernel-checked.
 3. Repair the formal targets in `Statements.lean`, including positivity/eventual quantifiers and a proved bridge between the `n^{it}` and `n^{-it}` sign conventions.
-4. Repair `k_selection` to match the complete equation (13.1) scale choice, including its hypotheses, both inequalities, and a bounded `k`. The structural-power/explicit-coefficient expansion is complete.
-5. Redesign the malformed beta-removal and decoupling propositions before attempting their proofs. Remove every `True` placeholder and conclusion-shaped input. The redesigned beta layer must eventually prove #13's pointwise beta-shift interface.
-6. Replace `Transfer.lean` with an explicit F-01 through F-10 conditional deduction. Do not retain `AlgebraicCombinationProp` or `algebraic_combination_unconditional`.
-7. Prove the narrow unit-zero, beta-shift, Type-II, mean-value, divisor-count, factorization-count, growth, and Euler-product inputs one independently auditable obligation at a time.
-8. Formalize the corrected decoupling and large-values chain only after its exact source-facing statements are stable.
-9. Synchronize README, paper, progress, audit list, Shitlist, and runner evidence after each material change.
+4. Repair `MontgomeryMeanValue` to use a base interval or arbitrary interval of controlled length, and prove the coefficient phase-translation bridge needed for #13's `[0,3T]` output.
+5. Repair `k_selection` to match the complete equation (13.1) scale choice, including the actual detector upper scale, both inequalities, eventual logarithmic absorption, and a uniform bound on `k`.
+6. Establish F-01's conjugation/multiplicity and dyadic-summation boundary for the global `N σ T` count, proving it directly where practical or exposing exactly one narrow provisional conditional input.
+7. Complete F-06/F-07 normalization and block preparation, then prove F-09 and F-10 as independent case theorems before assembling `Transfer.lean`.
+8. Replace `Transfer.lean` with the explicit F-01 through F-10 conditional deduction and the separately named Huxley high-`σ` branch. Do not retain `AlgebraicCombinationProp`, `algebraic_combination_unconditional`, `algebraic_combination_native`, or `h_bound : True`.
+9. Redesign the malformed beta-removal and decoupling propositions before attempting their proofs. The redesigned beta layer must eventually prove #13's pointwise beta-shift interface.
+10. Prove the narrow unit-zero, beta-shift, Type-II, mean-value, Huxley, divisor-count, factorization-count, conjugation, growth, and Euler-product inputs one independently auditable obligation at a time.
+11. Formalize the corrected decoupling and large-values chain only after its exact source-facing statements are stable.
+12. Synchronize README, paper, progress, audit list, Shitlist, and runner evidence after each material change.
 
 ## Defensible Current Claim
 
-The repository has a warning-free production build, a cleaned auxiliary Lean tree, all-retained-file runner coverage, and a useful but incomplete Lean infrastructure layer: compact zeta-zero finiteness, an actual truncated Möbius detector, the exact finite polynomial-power coefficient expansion, finite dyadic pigeonholing, weighted separated selection, shifted-bin covering, exact phase translation, and a downstream-normalized conditional Type-I extraction theorem. It does not yet verify the Section 13.1 transfer or the Guth–Maynard large-values theorem. Fourteen project axioms remain; the transfer is circular; the beta-shift and unit-zero inputs to #13 are unproved; important beta and decoupling interfaces remain vacuous or incorrect; and the source-facing large-values and `k`-selection statements need repair.
+The repository has a warning-free production build, a cleaned auxiliary Lean tree, all-retained-file runner coverage, and a useful but incomplete Lean infrastructure layer: compact zeta-zero finiteness, an actual truncated Möbius detector, the exact finite polynomial-power coefficient expansion, finite dyadic pigeonholing, weighted separated selection, shifted-bin covering, exact phase translation, and a downstream-normalized conditional Type-I extraction theorem. It does not yet verify the Section 13.1 transfer or the Guth–Maynard large-values theorem. Fourteen project axioms remain; the transfer is circular; the beta-shift and unit-zero inputs to #13 are unproved; important beta and decoupling interfaces remain vacuous or incorrect; the source-facing large-values and `k`-selection statements need repair; the current mean-value interval is incompatible with #13; powered dyadic block preparation is missing; and no theorem yet bridges positive slabs to the global `[-T,T]` count with multiplicity.
