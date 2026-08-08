@@ -18,7 +18,7 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The complete F-01 through F-14 deduction is not yet proved: the current executable audit reports admitted and project-specific axiom dependencies in the transfer and analytic layers.
+In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The complete F-01 through F-14 deduction is not yet proved: the current executable audit reports project-specific axiom dependencies in the transfer and analytic layers.
 
 ## Contribution Taxonomy & Originality Disclosure
 The mathematical content of this package is structured into four distinct layers:
@@ -135,7 +135,9 @@ $$\zeta(1 + i t) \neq 0$$
 
 The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). The project currently contains formal target specifications and several kernel-checked infrastructure lemmas, but it has not yet implemented the Section 13.1 transfer: `conditionalZeroDensityTransfer` still depends transitively on an axiom equivalent to the desired conclusion.
 
-The detector layer now implements the exact truncated Möbius divisor sum. `mem_detectorDivisors`, `detectorDivisors_subset_range`, and `detectorDivisors_card_le_cutoff` prove its divisor-variable support. `norm_mobius_sum_le_cutoff`, `detectorCoeff_eq_zero_iff`, and `norm_detectorCoeff_le_cutoff` prove the cutoff magnitude and vanishing behavior after exponential smoothing. Finally, `detectorCoeff_bound` proves `DetectorCoeffBoundProp` with a constant uniform in positive `n` for each fixed `T`; the encoded quantifier order permits this constant to depend on `T`, so this is not yet the stronger divisor-function bound uniform in `T` needed for the later coefficient-power layer.
+The detector layer now implements the exact truncated Möbius divisor sum. `mem_detectorDivisors`, `detectorDivisors_subset_range`, and `detectorDivisors_card_le_cutoff` prove its divisor-variable support. `norm_mobius_sum_le_cutoff`, `detectorCoeff_eq_zero_iff`, and `norm_detectorCoeff_le_cutoff` prove the cutoff magnitude and vanishing behavior after exponential smoothing. Finally, `detectorCoeff_bound` proves `DetectorCoeffBoundProp` with a constant uniform in positive `n` for each fixed `T`; the stronger constant uniform in `T` is stated separately as `UniformDetectorCoeffBoundProp` and remains a classical arithmetic input.
+
+For polynomial powers, `FactorizationCountBoundProp` now places its constant before the target integer `m`, and `PowCoeffBoundProp` places its constant before `N`, `m`, and `T`. Thus neither statement can be discharged by choosing a new constant for each coefficient. The kernel-checked theorem `powCoeff_bound_of_uniform_detector_and_factorization` combines the `T`-uniform detector input with the uniform factorization-count input: it spends half of epsilon on each bound, controls the finite product using the relation `∏ p_i = m`, and then bounds the convolution sum by the number of factorization tuples. This is a genuine conditional theorem, not a proof of either arithmetic premise. The former `k_divisor_function_bound` project axiom has been removed.
 
 ## Theorem 11 (Large Values Estimate Target Statement)
 **Status**: Unproved (Target Specification).
@@ -156,7 +158,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 21 theorems depend on project-specific mathematical axioms. All eight new detector theorems pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 20 theorems depend on project-specific mathematical axioms. All detector theorems and the conditional powered-coefficient theorem pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -189,6 +191,7 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Detector Support | `detectorDivisors_subset_range` | `GuthMaynard/ZeroDetector.lean` | `Nat.mem_divisors`, `Nat.lt_floor_add_one` |
 | Detector Cutoff Bound | `norm_detectorCoeff_le_cutoff` | `GuthMaynard/ZeroDetector.lean` | `abs_moebius_le_one`, `norm_sum_le`, `exp_smoothing_bound` |
 | Detector Epsilon Bound | `detectorCoeff_bound` | `GuthMaynard/ZeroDetector.lean` | `norm_detectorCoeff_le_cutoff`, `Real.one_le_rpow` |
+| Conditional Powered-Coefficient Bound | `powCoeff_bound_of_uniform_detector_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit detector/factorization inputs, `norm_sum_le`, `Real.finset_prod_rpow` |
 | Separated Sets | `IsSeparated` | `GuthMaynard/Separated.lean` | `Metric.dist` |
 | Target Interval | `InTargetInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
 | Base Interval | `InBaseInterval` | `GuthMaynard/Separated.lean` | `Set.Icc` |
@@ -209,7 +212,7 @@ The formalization relies on the following exact environment:
 - **Package Version**: `0.1.0`
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 21 dependency failures)
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 20 dependency failures)
 
 ---
 

@@ -2,7 +2,7 @@
 
 [![Riemann Zeta Lean CI](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml/badge.svg)](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml)
 
-Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`). The repository also contains provisional infrastructure for the Guth–Maynard (2026) zero-density program. The Section 13.1 transfer and its analytic inputs are not yet proved; the executable dependency audit intentionally fails while project postulates and admitted proof terms remain.
+Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`). The repository also contains provisional infrastructure for the Guth–Maynard (2026) zero-density program. The Section 13.1 transfer and its analytic inputs are not yet proved; the executable dependency audit intentionally fails while project postulates remain.
 
 Author: **S. McColm**
 
@@ -20,8 +20,8 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/Statements.lean`](RiemannZeta/GuthMaynard/Statements.lean)**: Exact kernel-checked propositions mapping the Guth-Maynard Large Values Estimate and Zero-Density exponents over polynomial bases.
 - **[`RiemannZeta/GuthMaynard/ZeroCount.lean`](RiemannZeta/GuthMaynard/ZeroCount.lean)**: Interface tying exact multiplicity counts of `riemannZeta` zeros to topological regions, parameterized finiteness, and dyadic reduction properties.
 - **[`RiemannZeta/GuthMaynard/ExponentArithmetic.lean`](RiemannZeta/GuthMaynard/ExponentArithmetic.lean)**: Zero-`sorry` formulation of exact rational inequalities, integer parameter bounds, and rational exponent limits utilized in Section 13.1.
-- **[`RiemannZeta/GuthMaynard/ZeroDetector.lean`](RiemannZeta/GuthMaynard/ZeroDetector.lean)**: The actual truncated Möbius divisor sum with exponential smoothing, exact divisor-variable support, a cutoff-uniform magnitude estimate in `n` for each fixed `T`, the resulting detector polynomial, and Type I/II specifications. A stronger bound with a constant independent of `T` would require the general divisor estimate tracked in the next polynomial-coefficient milestone.
-- **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Powered-polynomial definitions and an explicit coefficient-bound specification. The former admitted coefficient theorem has been removed; the general divisor estimate and coefficient theorem remain open.
+- **[`RiemannZeta/GuthMaynard/ZeroDetector.lean`](RiemannZeta/GuthMaynard/ZeroDetector.lean)**: The actual truncated Möbius divisor sum with exponential smoothing, exact divisor-variable support, a cutoff-uniform magnitude estimate in `n` for each fixed `T`, the resulting detector polynomial, and Type I/II specifications. The stronger `T`-uniform form needed for powering is exposed separately as `UniformDetectorCoeffBoundProp`.
+- **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Powered-polynomial and convolution-coefficient definitions plus the kernel-checked conditional theorem `powCoeff_bound_of_uniform_detector_and_factorization`. The theorem derives the source-faithful coefficient bound from explicit `UniformDetectorCoeffBoundProp` and `FactorizationCountBoundProp` inputs. The former general divisor axiom is removed; proving those two classical arithmetic inputs and the coefficient expansion of `powPoly` remain open.
 - **[`RiemannZeta/GuthMaynard/InghamBound.lean`](RiemannZeta/GuthMaynard/InghamBound.lean)**: Statement of the Ingham bound hypothesis and definition of the combined zero-density transfer (F-12).
 - **[`RiemannZeta/GuthMaynard/HalaszMontgomery.lean`](RiemannZeta/GuthMaynard/HalaszMontgomery.lean)**: Compiling Halász–Montgomery interface and conditional consequence; its mean-value and Type II dependencies remain unproved.
 - **[`RiemannZeta/GuthMaynard/Decoupling.lean`](RiemannZeta/GuthMaynard/Decoupling.lean)**: Compiling decoupling statement infrastructure whose broad–narrow, incidence, and final bounds remain axiomatic.
@@ -42,7 +42,7 @@ run_lake_build.bat
 
 For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The default root imports every intended production module and builds with zero Lean warnings. The audit list and discovered production theorem set currently both contain 110 declarations. The audit exits nonzero because 21 theorems have project-specific axiom dependencies; no audited theorem now depends on `sorryAx`. All eight detector-support and detector-magnitude results pass the dependency audit. The remaining failure is the expected honest status until the other proof obligations are discharged.
+The default root imports every intended production module and builds with zero Lean warnings. The audit list and discovered production theorem set currently both contain 110 declarations. The audit exits nonzero because 20 theorems have project-specific axiom dependencies; no audited theorem now depends on `sorryAx`. The detector results and the new conditional powered-coefficient theorem pass the dependency audit. The remaining failure is the expected honest status until the other proof obligations are discharged.
 
 ---
 

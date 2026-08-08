@@ -20,7 +20,7 @@ The remaining assumptions are purely analytic in nature and require advanced int
 - `detector_fixed_line_integral_unconditional`: Decomposed into `cauchy_residue_dirichlet_polynomial` (expressing the Dirichlet polynomial as a contour integral) and `contour_shift_to_real_line` (shifting the integral to the fixed line).
 - `fixed_line_coefficient_bounds_unconditional`: Decomposed into `fourier_decay_error_bound` (bounding the Fourier truncation error) and `pigeonhole_integral_bound` (using the pigeonhole principle to extract a large polynomial value).
 - `extract_separated_lemma`: Decomposed into the purely combinatorial extraction `extract_1_separated_subset`, which itself is reduced to the foundational 1D finite Vitali covering lemma (`vitali_covering_lemma_1D`).
-- `k_divisor_function_bound`: Multiplicative number theory bound for $d_k(n) \ll_\varepsilon n^\varepsilon$.
+- `UniformDetectorCoeffBoundProp` and `FactorizationCountBoundProp`: the two source-faithful multiplicative-number-theory inputs for the conditional powered-coefficient theorem. The former `k_divisor_function_bound` module axiom has been removed; these proposition specifications remain to be proved from classical divisor estimates.
 - `euler_product_lower_bound_2`: Bounding $|\zeta(s)|$ from below on the $\Re(s)=2$ line using the Euler product formulation.
 
 ## Next Steps

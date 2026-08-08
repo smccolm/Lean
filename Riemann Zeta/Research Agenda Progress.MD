@@ -9,7 +9,7 @@ The project contains a useful collection of kernel-checked elementary lemmas, fo
 
 The default `lake build` target imports and compiles every intended production module with zero Lean warnings. Warning-free compilation does not make the unresolved project-axiom dependencies valid.
 
-The non-test Guth–Maynard source contains 26 direct `axiom` declarations, all of which occur in modules reachable from the default `RiemannZeta` root import. A theorem is therefore counted as proved below only when its audited dependencies contain no project-specific axiom and no `sorryAx`.
+The non-test Guth–Maynard source contains 25 direct `axiom` declarations, all of which occur in modules reachable from the default `RiemannZeta` root import. A theorem is therefore counted as proved below only when its audited dependencies contain no project-specific axiom and no `sorryAx`.
 
 ## Verified Results
 
@@ -30,14 +30,14 @@ The following results are genuinely proved in Lean without project-specific axio
 13. **Basic zero-rectangle set reasoning:** Rectangle membership and inclusion lemmas. Results involving `zerosInRect` or `zeroCountRect` additionally depend on the provisional axiom `riemannZeta_finite_zeros_in_rect` and are not unconditional zeta-zero-counting theorems.
 14. **Type-I/Type-II partition identity:** `typeI_add_typeII_eq_total` is a finite-set filtering identity, conditional on the provisional zero-set construction.
 15. **Powered-polynomial definitional identity:** `powPoly_eval` and `polynomial_power_identity` follow from the definition `powPoly := detectPoly ^ k`. An expansion into convolution coefficients has not been completed.
-16. **Special divisor-bound case:** `k_divisor_function_bound_one` proves only the stated `m = 1` boundary case. The general `k_divisor_function_bound` remains an axiom.
+16. **Conditional powered-coefficient bound:** `powCoeff_bound_of_uniform_detector_and_factorization` proves the full `PowCoeffBoundProp` conclusion from the separately stated, narrower `UniformDetectorCoeffBoundProp` and `FactorizationCountBoundProp` inputs. Its finite-product and convolution-sum proof is kernel-checked. The classical inputs themselves remain unproved specifications; `k_divisor_function_bound_one` proves only its stated `m = 1` boundary case.
 17. **Combined exponent implication:** `combined_zero_density_transfer_native` is an axiom-free proof that assumed Ingham and Guth–Maynard zero-density bounds imply the combined exponent. It is a conditional implication and does not prove either analytic premise or instantiate the result for the project's zeta zero count. The previously unused Huxley premise has been removed from the statement.
 
 ## Provisional or Model-Only Results
 
 Some declarations remain provisional specifications rather than proved results.
 
-- `DetectorCoeffBoundProp` is proved with the quantifier order currently encoded in Lean: its constant is uniform in positive `n` but may depend on the already-fixed `T`. A stronger constant uniform in `T` is not claimed; obtaining that form requires the general divisor-function estimate tracked with the powered-coefficient work.
+- `DetectorCoeffBoundProp` is proved with the quantifier order currently encoded in Lean: its constant is uniform in positive `n` but may depend on the already-fixed `T`. The stronger `UniformDetectorCoeffBoundProp` and the source-faithful, `m`-uniform `FactorizationCountBoundProp` are explicit unproved inputs to the conditional powered-coefficient theorem.
 - The vacuous declarations `jensens_inequality_disk`, `zeta_abs_convergent_at_2`, `typeII_dyadic_sum`, and `recursive_block_decomposition` have been removed rather than retained as `True`-valued results.
 - Several positivity lemmas verify only that the proposed right-hand side of a future estimate is nonnegative. They do not establish the corresponding mean-value, decoupling, or zero-count estimate.
 
@@ -75,41 +75,42 @@ The current source includes, among others, the following unproved declarations:
 - `cauchy_residue_dirichlet_polynomial`, `contour_shift_to_real_line`, `fourier_decay_error_bound`, and `pigeonhole_integral_bound`;
 - `type_I_zeros_dyadic_sum_bound` and `dyadic_pigeonhole_lemma`;
 - `vitali_covering_lemma_1D`, `extract_1_separated_subset`, and `extract_separated_lemma`;
-- `k_divisor_function_bound`;
+- the proposition specifications `UniformDetectorCoeffBoundProp` and `FactorizationCountBoundProp`, which replace the former module-level divisor axiom as explicit inputs rather than asserted facts;
 - `l2_parabola_incidence_bound` and `l2_decoupling_bound_unconditional`; and
 - `algebraic_combination_unconditional`, which is equivalent to the desired zero-density conclusion and must be removed rather than treated as an acceptable analytic hypothesis.
 
 ### Admitted-proof status
 
-No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency. The former `powCoeffBound_native` declaration and its standalone `powCoeffBound_unconditional` axiom were removed; `PowCoeffBoundProp` remains an unproved specification. This removal restores integrity but does not prove the coefficient estimate.
+No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency. The former `powCoeffBound_native`, `powCoeffBound_unconditional`, and `k_divisor_function_bound` declarations are removed. `PowCoeffBoundProp` is now conditionally proved by `powCoeff_bound_of_uniform_detector_and_factorization`; this does not prove its two explicit classical arithmetic inputs.
 
 ## Build and Audit Status
 
 - The default `lake build` completes successfully with zero Lean warnings.
 - Direct builds of `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` succeed with zero Lean warnings. This does not prove their remaining analytic axioms or proposition specifications.
 - `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` are now in the default import graph. `LargeValues.lean` still contains no proof of `GuthMaynardLargeValues`; the former dangling variable that assumed that target has been removed.
-- `Audit.lean` imports every production module and explicitly audits 110 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. All eight detector-support and detector-magnitude theorems pass. The current audit reports 21 failing theorems, all through project-specific axioms rather than `sorryAx`.
+- `Audit.lean` imports every production module and explicitly audits 110 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. All detector theorems and `powCoeff_bound_of_uniform_detector_and_factorization` pass. Removing the divisor axiom reduced the current audit from 21 to 20 failing theorems, all through other project-specific axioms rather than `sorryAx`.
 - The README and paper now describe the failing audit honestly; their broader mathematical claims still require continued synchronization as the remaining Shitlist items are repaired.
 
 ## Research-Agenda Milestones
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit cover every production module and all 110 exported source-level theorems. The exact detector formula, divisor-variable support, smoothing zero equivalence, and encoded magnitude estimate are proved; the complete zero-count interface remains incomplete. |
+| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit cover every production module and all 110 exported source-level theorems. The exact detector formula, support, smoothing facts, and fixed-`T` magnitude estimate are proved. The powered-coefficient estimate is conditionally proved from source-faithful uniform arithmetic inputs; the complete zero-count interface remains incomplete. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The desired conclusion is presently assumed through `algebraic_combination_unconditional`. |
-| Goal C: discharge auxiliary classical hypotheses | **Not achieved.** The local zero count, Type II estimate, mean-value theorem, smoothing, divisor bound, and related inputs remain axiomatic. |
+| Goal C: discharge auxiliary classical hypotheses | **Not achieved.** The local zero count, Type II estimate, mean-value theorem, smoothing, and related inputs remain axiomatic. The detector/factorization uniform bounds are now explicit proposition inputs rather than project axioms, but are not yet proved. |
 | Goal D: prove the Guth–Maynard large-values theorem | **Not achieved.** The decoupling and large-values modules now compile, but decoupling remains axiomatic and `LargeValues.lean` contains no proof of the target. |
 | Goal E: reusable analytic-number-theory library | **Early infrastructure only.** Some finite-sum, separation, asymptotic, and polynomial lemmas may become reusable after their interfaces stabilize. |
 
 ## Next Steps
 
-1. Prove a powered-coefficient theorem from the explicit detector estimates and a faithful general divisor bound, then remove `k_divisor_function_bound`.
-2. Resolve the audit's 21 reported theorem-dependency failures one ranked proof obligation at a time.
-3. Keep the root import graph and explicit audit list synchronized as modules and public theorems change.
-4. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
-5. Discharge the remaining hypotheses one at a time, beginning with the smallest precise combinatorial or Mathlib-bridge obligation.
-6. Synchronize the README and paper with the audited Lean status after each verified increment.
+1. Remove the Montgomery mean-value axiom by proving the stated theorem or exposing only a precise, legitimate conditional interface.
+2. Prove `UniformDetectorCoeffBoundProp` and `FactorizationCountBoundProp` from classical divisor estimates, then instantiate the conditional powered-coefficient theorem.
+3. Complete the equality between the structural power `powPoly` and its explicit convolution-coefficient expansion.
+4. Resolve the audit's 20 reported theorem-dependency failures one ranked proof obligation at a time.
+5. Keep the root import graph and explicit audit list synchronized as modules and public theorems change.
+6. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
+7. Synchronize the README and paper with the audited Lean status after each verified increment.
 
 ## Defensible Current Claim
 
-The repository contains a partially verified Lean infrastructure package for a future Guth–Maynard formalization, including genuine results about the exact truncated Möbius detector support and fixed-`T` magnitude, finite Dirichlet polynomials, separated finite sets, exponent arithmetic, finite-sum inequalities, and conditional exponent combination. The Section 13.1 zero-density transfer, its main analytic inputs, and the Guth–Maynard large-values theorem remain unproved.
+The repository contains a partially verified Lean infrastructure package for a future Guth–Maynard formalization, including genuine results about the exact truncated Möbius detector, a kernel-checked conditional powered-coefficient estimate from explicit uniform arithmetic inputs, finite Dirichlet polynomials, separated finite sets, exponent arithmetic, finite-sum inequalities, and conditional exponent combination. The two arithmetic inputs, the Section 13.1 zero-density transfer, its main analytic inputs, and the Guth–Maynard large-values theorem remain unproved.

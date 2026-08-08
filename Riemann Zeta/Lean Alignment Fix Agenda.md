@@ -64,7 +64,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | ~~Warning-producing production files and `run_lake_build.bat`~~ | **Completed 8 August 2026:** eliminated all 31 warning lines at their sources and made every runner build/audit stage fail on any future Lean warning. | Easy–moderate—complete |
 | 9 | ~~`RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed 8 August 2026:** proved exact divisor-variable support, smoothing zero equivalence, the cutoff magnitude bound, and the encoded fixed-`T` epsilon-power property. | Moderate—complete |
-| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | **Two `sorry`s and the unused coefficient-bound axiom removed during #8; detector input proved during #9.** Still prove the coefficient theorem from an explicit general divisor bound and remove the remaining divisor axiom. | Moderate–hard |
+| 10 | ~~`RiemannZeta/GuthMaynard/PolynomialPowers.lean`~~ | **Completed 8 August 2026:** corrected constant dependencies, proved the powered-coefficient theorem from two explicit uniform arithmetic inputs, and removed the general divisor axiom. | Moderate–hard—complete |
 | 11 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
 | 12 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6; vacuous dyadic lemma removed during #8.** Still prove the dyadic step and large-value consequence from explicit inputs, and remove the Type II axiom. | Hard |
 | 13 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | **Jensen `True` placeholder removed during #8.** Replace eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
@@ -166,10 +166,10 @@ The audit may initially report failures. It must not suppress them merely to kee
 
 1. **Completed 8 August 2026:** defined the actual truncated Möbius sum and detector coefficients.
 2. **Completed 8 August 2026:** proved exact divisor-variable support, cutoff cardinality, exponential-smoothing zero equivalence, a cutoff norm bound uniform in `n`, and `DetectorCoeffBoundProp` with its encoded fixed-`T` constant dependency.
-3. The former admitted theorem was deleted during #8. Reintroduce a coefficient theorem only with complete finite-product proofs and explicit narrower inputs.
+3. **Completed 8 August 2026:** proved `powCoeff_bound_of_uniform_detector_and_factorization` with complete finite-product and convolution-sum arguments from two explicit narrower inputs.
 4. **Completed 8 August 2026:** removed `powCoeffBound_unconditional`.
-5. Isolate the precise general divisor-function statement required by the coefficient bound.
-6. Prove it or expose it only as an explicit, source-faithful parameter of a genuinely conditional coefficient theorem.
+5. **Completed 8 August 2026:** isolated `FactorizationCountBoundProp` with its constant uniform in the positive target `m`, and isolated the stronger `T`-uniform `UniformDetectorCoeffBoundProp` required by the source argument.
+6. **Completed 8 August 2026:** removed `k_divisor_function_bound` and exposed the two unproved classical inputs only as explicit parameters of the genuinely conditional coefficient theorem.
 
 **Exit evidence:**
 
@@ -429,8 +429,22 @@ Every completed repair iteration must record:
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 9, and the Phase 2 detector action in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #10: prove the powered-coefficient estimate from faithful detector/divisor inputs and remove `k_divisor_function_bound`. |
 
+### Completed Iteration: Shitlist #10
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta/GuthMaynard/PolynomialPowers.lean`, its synchronized entry in `RiemannZeta/Audit.lean`, and the unreferenced duplicate `TestPiFinset.lean` |
+| Previous defect | `k_divisor_function_bound` was a project axiom; `divisor_bound_native` merely wrapped it. Both `FactorizationCountBoundProp` and `PowCoeffBoundProp` chose their constants after the coefficient target, so their bounds did not encode the uniformity used in Section 13.1. No theorem derived the powered coefficient estimate from narrower arithmetic inputs. |
+| Result | Corrected `FactorizationCountBoundProp` so its constant depends on `k` and epsilon but is uniform in positive `m`. Added `UniformDetectorCoeffBoundProp` with a constant uniform in `n` and `T`. Corrected `PowCoeffBoundProp` so its constant is uniform in `N`, positive `m`, and `T`. Proved `powCoeff_bound_of_uniform_detector_and_factorization` by splitting epsilon in half, multiplying the per-factor detector bounds, rewriting the product of real powers using `∏ p_i = m`, bounding the convolution sum termwise, and applying the uniform factorization count. |
+| Integrity change | Deleted `k_divisor_function_bound` and its wrapper `divisor_bound_native`; introduced no replacement axiom. Deleted the unreferenced root-level `TestPiFinset.lean`, which duplicated the canonical `m = 1` lemma with an unused hypothesis. The two remaining classical arithmetic obligations are proposition specifications passed explicitly to the conditional theorem, not asserted facts. |
+| Source fidelity | Guth–Maynard Section 13.1 applies the large-values and mean-value estimates to a bounded power of the normalized detector polynomial. The corrected constant order and the two uniform arithmetic inputs represent the coefficient-growth requirement without allowing a new constant for each coefficient. The separate equality between structural `powPoly` and the explicit coefficient expansion remains future F-07 work. |
+| Audit impact | Replaced `divisor_bound_native` in the synchronized audit with the new conditional theorem. Direct audit execution finds 110 listed and 110 discovered production theorems; the new theorem passes with only permitted Lean/Mathlib logical axioms. Removing the divisor axiom reduces the unrelated forbidden-dependency failures from 21 to 20 and the direct project-axiom declarations from 26 to 25. |
+| Verification | `lake build RiemannZeta.GuthMaynard.PolynomialPowers`, `lake build RiemannZeta`, and direct elaboration of `scratch_pow.lean` all succeed with zero Lean warnings. The principal runner logged to `logs/overall_proof_20260808_055216.log`: the default build and explicit production coverage passed with zero Lean warnings; the synchronized audit found 110 listed and 110 discovered theorems, passed the new conditional coefficient theorem, and correctly failed on 20 remaining project-axiom dependencies; the prohibited-placeholder, unsafe-bypass, and audit-quality scans passed; the project-axiom scan correctly failed on 25 remaining declarations. The complete log contains no line beginning `warning:`. Overall exit code remains honestly `1` because the audit and project-axiom gates are not yet complete. Repository scans found no `sorry`, `admit`, `sorryAx`, `native_decide`, `implemented_by`, `unsafe`, or linter-suppression matches in Lean source, and `git diff --check` found no whitespace errors. |
+| Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, `Analytic Research Agenda.md`, rank 10, and every Phase 2 arithmetic action in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #11: remove the Montgomery mean-value axiom while retaining a source-faithful theorem boundary. Separately, prove the two explicit arithmetic inputs and the coefficient-expansion identity in later F-07 work. |
+
 ## Current Priority
 
-The detector support and encoded fixed-`T` magnitude theorem are kernel-checked. Proceed to Shitlist #10: prove the powered-coefficient estimate from faithful detector/divisor inputs and remove the remaining general divisor axiom.
+The powered-coefficient implication is kernel-checked and the divisor axiom is removed. Proceed to Shitlist #11: remove the Montgomery mean-value axiom while retaining a source-faithful theorem boundary.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.
