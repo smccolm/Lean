@@ -3,32 +3,10 @@ import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.InghamBound
 import RiemannZeta.GuthMaynard.PolynomialPowers
 import RiemannZeta.GuthMaynard.TypeIIZeros
+import RiemannZeta.GuthMaynard.DyadicTransfer
+import RiemannZeta.GuthMaynard.CentralTypeI
 
 namespace RiemannZeta.GuthMaynard
-
-/-- The still-open central Type-I slab estimate. Unlike the former
-`AlgebraicCombinationProp`, this counts only Type-I zeros on `[T,2T]` and is
-strictly narrower than the global zero-density conclusion. The finite
-F-06/F-10 infrastructure is intended to discharge this proposition from the
-source large-values and mean-value inputs. -/
-def TypeIPositiveSlabBoundProp : Prop :=
-  ∀ σ : ℝ, 7 / 10 ≤ σ → σ ≤ 4 / 5 →
-    EpsilonPowerBound
-      (fun T => (typeIZeroCount σ T (2 * T) T : ℝ))
-      (fun T => T ^ final_exponent σ)
-
-/-- Provisional F-01 boundary. It contains only the zero-count geometry from a
-positive dyadic slab to the full `[-T,T]` convention; it contains no detector,
-large-values, or Type-I estimate. Its direct proof still requires the recorded
-zeta-conjugation/multiplicity lemma and dyadic summation. -/
-def DyadicToGlobalZeroCountProp : Prop :=
-  ∀ σ : ℝ, 7 / 10 ≤ σ → σ ≤ 4 / 5 →
-    EpsilonPowerBound
-      (fun T => (zeroCountRect σ 1 T (2 * T) : ℝ))
-      (fun T => T ^ final_exponent σ) →
-    EpsilonPowerBound
-      (fun T => (N σ T : ℝ))
-      (fun T => T ^ final_exponent σ)
 
 /-- The exact Type-I/residual partition turns the two central slab bounds into
 the total positive-slab estimate. -/
@@ -71,20 +49,32 @@ theorem high_sigma_of_huxley
   exact Real.rpow_le_rpow_of_exponent_le (by linarith : 1 ≤ T)
     (huxley_exponent_le_final σ hσLower hσUpper)
 
-/-- Honest interim conditional transfer. It removes the former assumed target
-and performs the Type-I/residual, F-01-boundary, and Huxley deductions. The two
-remaining parameters are explicit narrower obligations, not aliases of
-`GuthMaynardZeroDensity`: F-06/F-10 must discharge `hTypeI`, and F-01 must
-discharge `hDyadic`. -/
+/-- Primitive-input conditional transfer for Section 13.1. Every intermediate
+Type-I, Type-II, powered-coefficient, extraction, dyadic, and high-sigma
+proposition is derived internally from its individually named source input. -/
 theorem conditionalZeroDensityTransfer
-    (hTypeI : TypeIPositiveSlabBoundProp)
-    (hResidual : ResidualZeroBoundProp)
-    (hDyadic : DyadicToGlobalZeroCountProp)
+    (hLargeValues : GuthMaynardLargeValues)
+    (hMeanValue : MontgomeryMeanValue)
+    (hBeta : DetectorBetaShiftProp)
+    (hLocal : LocalZeroMultiplicityBoundProp)
+    (hDivisor : DivisorCountBoundProp)
+    (hFactorization : FactorizationCountBoundProp)
+    (hCover : TypeIContourTypeIICoverProp)
+    (hReduction : TypeIIFourthMomentReductionProp dyadicZetaZeros
+      (analyticVanishingOrder riemannZeta) zetaIsContourTypeII)
+    (hMoment : TwistedZetaFourthMomentProp)
     (hHuxley : HuxleyZeroDensity (fun σ T => N σ T)) :
     GuthMaynardZeroDensity (fun σ T => N σ T) := by
+  have hExtract := extractSeparated_of_beta_shift_and_local_multiplicity hBeta hLocal
+  have hPow := powCoeff_bound_of_divisor_and_factorization hDivisor hFactorization
+  have hTypeI := typeIPositiveSlabBound_of_section13_inputs
+    hLargeValues hMeanValue hExtract hPow
+  have hResidual := residualZeroBound_of_contourTypeII_reduction_and_fourthMoment
+    hCover hReduction hMoment
   intro σ hσLower hσUpper
   by_cases hCentral : σ ≤ 4 / 5
-  · exact hDyadic σ hσLower hCentral
+  · exact dyadicToGlobalZeroCount σ (final_exponent σ)
+      (final_exponent_nonneg σ hσLower hCentral)
       (central_positive_slab_of_typeI_and_residual
         hTypeI hResidual σ hσLower hCentral)
   · exact high_sigma_of_huxley hHuxley σ (by linarith) hσUpper

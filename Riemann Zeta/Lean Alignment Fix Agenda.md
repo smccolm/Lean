@@ -59,21 +59,21 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 | Five retained auxiliary files failed standalone elaboration: `RiemannZeta/GuthMaynard/test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean`. | #2 | **Resolved:** all five were unreferenced duplicates, broken API probes, or stale experiments and have been deleted. |
 | `clean_cache.lean` deleted `.lake/build` through elaboration-time `#eval`; `build_it.lean` invoked a hard-coded user-specific Lake path through `#eval`. | #2, #8 | **Resolved by deletion:** neither utility was imported or needed by the principal runner. |
 | Several files historically described as deleted remained as empty or comment-only tombstones. | #2 | **Resolved:** every empty/tombstone Lean file has been deleted; no zero-byte Lean file remains. |
-| `Audit.lean` checks transitive dependencies for 173 synchronized production theorems. | #6 | **Complete for the cleaned tree's named public theorems:** the only auxiliary Lean declarations are anonymous examples, and both are covered by the runner. The audit correctly remains red on four project-axiom-dependent declarations. |
+| `Audit.lean` checks transitive dependencies for 194 synchronized production theorems. | #6 | **Complete for the cleaned tree's named public theorems:** the only auxiliary Lean declarations are anonymous examples, and both are covered by the runner. The audit correctly remains red on four project-axiom-dependent declarations. |
 | `GuthMaynardLargeValues` formerly omitted positivity/eventual quantifiers and used the opposite exponential sign without a proof. | #14, #18, Goal A | **Resolved at the statement boundary:** the source-positive form has the correct quantifiers and `V > 0`; the negative-sign form is proved by coefficient conjugation. The analytic theorem remains an input. |
 | `MontgomeryMeanValue` formerly used `[T,2T]`, while #13 produces `[0,3T]`. | #11, #14 | **Resolved at the interface boundary:** the proposition and finite consequence now use `[0,T]`; #13 is consumable at height `3T`. |
 | `k_selection` formerly omitted part of equation (13.1) and did not bound `k`. | #14 | **Resolved:** both inequalities, `2 ≤ k ≤ 101`, and eventual absorption of the detector upper-scale logarithm are kernel-checked. |
 | The explicit `powCoeff` expansion was not proved equal to `powPoly`; `polynomial_power_identity` was only a definitional structural-power identity. | #10, #14 | **Resolved in #10:** `polynomial_power_identity` is now the full finite coefficient expansion, with audited support and complex-power lemmas. |
-| The powered support `(N^k,(2N)^k]` is wider than one dyadic block, and the block giving a large contribution may depend on the ordinate. | #14 | **Finite F-07 resolved:** the lower endpoint vanishes; the support splits into exactly `k` dyadic blocks; powered translation, normalization, unit coefficient bounds, and simultaneous fixed-block/ordinate-subset pigeonholing are kernel-checked. Uniform asymptotic loss absorption remains part of the central assembly. |
-| `N σ T` counts zeros in `[-T,T]`, but the Section 13.1 detector and current Type-I/Type-II interfaces treat positive slabs `[T,2T]`. No current theorem transfers zeta zeros and analytic multiplicity under complex conjugation or performs the eventual dyadic slab summation. | #14, #15 | **F-01 is open:** prove the conjugation/multiplicity bridge and the finite low-height plus geometric dyadic reduction, or expose a narrow provisional conjugation parameter in the conditional theorem. |
-| Section 13.1 uses the new argument only for `7/10 ≤ σ ≤ 4/5` and invokes Huxley for `σ ≥ 4/5`, while `GuthMaynardZeroDensity` asks for the whole range through `σ = 1`. | #14 | **Resolved conditionally:** `high_sigma_of_huxley` proves the exact exponent comparison and the public interim transfer accepts `HuxleyZeroDensity`. |
-| `Transfer.lean` formerly assumed a definitionally equivalent copy of its target and contained an unused `h_bound : True`. | #14 | **Integrity defect resolved:** all three circular declarations and the `True` artifact are deleted. The replacement is audit-clean but remains an interim theorem with explicit `TypeIPositiveSlabBoundProp` and `DyadicToGlobalZeroCountProp` parameters. |
+| The powered support `(N^k,(2N)^k]` is wider than one dyadic block, and the block giving a large contribution may depend on the ordinate. | #14 | **Resolved:** the exact block split and simultaneous pigeonhole are integrated with restricted globally unit-bounded coefficients, a coefficient constant uniform for `2 ≤ k ≤ 101`, fixed-block comparison estimates, and uniform epsilon-loss absorption. |
+| `N σ T` counts zeros in `[-T,T]`, but the Section 13.1 detector and Type-I/Type-II interfaces treat positive slabs `[T,2T]`. | #14 | **F-01 resolved:** zeta conjugation, analytic-multiplicity preservation, equality of negative/positive rectangle counts, finite low-height control, and eventual dyadic summation are kernel-checked. |
+| Section 13.1 uses the new argument only for `7/10 ≤ σ ≤ 4/5` and invokes Huxley for `σ ≥ 4/5`, while `GuthMaynardZeroDensity` asks for the whole range through `σ = 1`. | #14 | **Resolved conditionally:** `high_sigma_of_huxley` proves the exact exponent comparison and the primitive-input transfer accepts `HuxleyZeroDensity`. |
+| `Transfer.lean` formerly assumed a definitionally equivalent copy of its target and contained an unused `h_bound : True`. | #14 | **Resolved:** all circular declarations and the transfer-local `True` artifact are deleted. The audit-clean replacement derives its former Type-I slab and dyadic-to-global intermediates from ten individually named primitive inputs. |
 | `BetaDependence.lean` contains an axiom with conclusion `True`, a contour-shift interface with unconstrained error, and a pigeonhole axiom that already packages essentially the desired beta-removal conclusion. | #16 | **Statement redesign required, not merely axiom discharge.** |
 | `l2_parabola_incidence_bound` is false for arbitrary finite 1-separated sets without a containing interval, and the decoupling block-index conventions disagree. | #17 | **Statement redesign required before proof work.** |
 | #12 and #13 contain valid finite/conditional deductions, but their strongest proposition inputs package hard analytic reductions. The reopened #13 audit additionally found a shifted, scale-filtered occupancy input and unnormalized interval/loss output. | #12, #13 | **#12 reaches the concrete residual-zero target conditionally. Resolved for #13's conditional layer:** the local input is now an ordinary unshifted unit-zero bound; shifted covering, interval/coefficient translation, and epsilon-loss absorption are kernel-checked. The two analytic inputs remain #15/#16 obligations. |
-| The paper stated an expected audit count of 17 failures after the production audit had fallen to 6. | Documentation gate | **Resolved during #8 and kept synchronized:** after the #14 additions, the reproducibility section reports 4 failures across the current 173 declarations. |
+| The paper stated stale audit counts. | Documentation gate | **Resolved during #8 and kept synchronized:** after the completed #14 additions, the reproducibility section reports 4 failures across the current 194 declarations. |
 
-Current clean facts are narrower: the repository has no Lean file containing `sorry`, `admit`, or `sorryAx`; the production graph and both auxiliary examples elaborate with zero warnings under the five-stage principal runner; the production audit synchronizes 173 declarations and reports 4 forbidden dependency failures; and the source contains 13 direct project axioms. The runner covers every retained Lean file but correctly exits nonzero on the audit and axiom gates.
+Current clean facts are narrower: the production graph and both auxiliary examples elaborate with zero warnings under the five-stage principal runner; the production audit synchronizes 194 declarations and reports 4 forbidden dependency failures; and the source contains 13 direct project axioms. The runner covers every retained Lean file but correctly exits nonzero on the audit and axiom gates.
 
 ### Authoritative Audit of Shitlist #1–#14
 
@@ -82,21 +82,21 @@ This table supersedes any unqualified use of “complete” in the chronological
 | Item | Verdict | Audited boundary |
 |---:|---|---|
 | 1 | **Verified complete** | The deliberately false `TestAxiom.lean` file is absent and unreferenced. |
-| 2 | **Verified complete as cleanup** | The retained tree has 30 Lean files, no empty Lean file, and only two non-production anonymous-example files. All listed obsolete tests, tombstones, and side-effect utilities are absent. |
+| 2 | **Verified complete as cleanup** | The retained tree has 32 Lean files, no empty Lean file, and only two non-production anonymous-example files. All listed obsolete tests, tombstones, and side-effect utilities are absent. |
 | 3 | **Verified complete** | `TestExp.lean` and `test_separated.lean` elaborate in the principal runner; `test_zeta.lean` is absent. |
 | 4 | **Verified complete** | The Fourier toy and zero-count scratch modules are absent and unreferenced. |
 | 5 | **Verified complete** | `CombinedZeroDensityTransfer` has no unused Huxley premise. The distinct Huxley input used by #14 is mathematically scoped to the high-`σ` branch. |
-| 6 | **Verified complete as audit infrastructure** | The explicit and discovered theorem sets agree at 173/173 and transitive dependencies are checked. Four failures are reported rather than hidden. |
-| 7 | **Verified complete** | The root imports every one of the 26 subordinate production modules, giving a 27-file production graph. |
+| 6 | **Verified complete as audit infrastructure** | The explicit and discovered theorem sets agree at 194/194 and transitive dependencies are checked. Four failures are reported rather than hidden. |
+| 7 | **Verified complete** | The root imports every one of the 28 subordinate production modules, giving a 29-file production graph. |
 | 8 | **Verified complete as evaluation infrastructure** | The principal runner covers production, focused modules, both examples, warning checks, prohibited constructs, direct axioms, and the transitive audit. Its overall exit remains nonzero for valid mathematical-integrity reasons. |
 | 9 | **Finite/source-reduction layer complete** | The actual truncated Möbius detector and divisor-cardinality reduction are proved. `DivisorCountBoundProp` remains an unproved Goal C input. |
 | 10 | **Finite/conditional layer complete** | Exact coefficient expansion and the conditional coefficient bound are proved. `DivisorCountBoundProp` and `FactorizationCountBoundProp` remain unproved. |
 | 11 | **Finite/conditional layer complete** | The Halász–Montgomery consequence is derived from explicit `MontgomeryMeanValue`; its repaired `[0,T]` convention is compatible with #13. The analytic mean-value proposition remains unproved. |
 | 12 | **Conditional/concrete layer complete** | The concrete `ResidualZeroBoundProp` follows from three explicit source-facing propositions. Those analytic propositions remain unproved and include the hard Type-II reduction. |
 | 13 | **Conditional/normalized layer complete** | Shifted covering, translation, phase preservation, and epsilon normalization follow from two explicit analytic inputs. `DetectorBetaShiftProp` and the unit-zero multiplicity proposition remain unproved. |
-| 14 | **Open—partial implementation only** | Circularity and the `True` artifact are gone; source interfaces, finite F-06–F-10 infrastructure, exponent arithmetic, slab assembly, and the Huxley branch are checked. The theorem still accepts `TypeIPositiveSlabBoundProp` and `DyadicToGlobalZeroCountProp`; central Type-I assembly and F-01 remain open. |
+| 14 | **Verified complete at the planned conditional boundary** | F-01 through F-10 are kernel-checked as one deduction. The public theorem derives the central Type-I slab and global dyadic reduction from ten named primitive inputs; all 21 newly audited theorems pass with only permitted logical dependencies. |
 
-Therefore #1–#8 close repair or evaluation defects, #9–#13 close only their explicit finite/conditional scopes, and #14 remains the current research item. The full repository does not satisfy the non-negotiable completion conditions while 13 project axioms and four audited forbidden dependencies remain.
+Therefore #1–#8 close repair or evaluation defects, #9–#13 close only their explicit finite/conditional scopes, and #14 closes the primitive-input conditional transfer milestone. The full repository does not satisfy the non-negotiable completion conditions while 13 project axioms and four audited forbidden dependencies remain.
 
 ## Files Ordered by Estimated Repair Difficulty
 
@@ -109,7 +109,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
 | 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
-| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed for all named public theorems in the cleaned tree:** transitive checks cover the synchronized list, currently 173 production theorems; the only auxiliary declarations are anonymous examples. Four current dependency failures are reported honestly. | Easy–moderate—complete |
+| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed for all named public theorems in the cleaned tree:** transitive checks cover the synchronized list, currently 194 production theorems; the only auxiliary declarations are anonymous examples. Four current dependency failures are reported honestly. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | ~~Warning-producing files and `run_lake_build.bat`~~ | **Completed after re-audit 8 August 2026:** all five Lean stages—including both retained examples—fail on any `warning:` diagnostic; integrity scans use `--no-ignore`; current stages 1–4 pass warning-free while the audit and axiom gates fail honestly. | Easy–moderate—complete |
 | 9 | ~~`RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed after re-audit 8 August 2026:** proved full-divisor-cardinality bounds independent of `T` and derived `UniformDetectorCoeffBoundProp` from the exact classical `DivisorCountBoundProp`. | Moderate—integrity/source reduction complete; divisor theorem remains Goal C |
@@ -160,7 +160,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 **Required actions:**
 
-1. **Completed for the production perimeter 8 August 2026:** created an explicit, synchronization-checked list, currently containing 173 exported source-level theorems.
+1. **Completed for the production perimeter 8 August 2026:** created an explicit, synchronization-checked list, currently containing 194 exported source-level theorems.
 2. **Completed 8 August 2026:** imported every intended production module into the audit after making the three previously omitted modules compilable.
 3. **Completed 8 August 2026:** replaced name-based classification with transitive `Lean.collectAxioms` inspection.
 4. **Completed 8 August 2026:** the audit exits nonzero and identifies every audited theorem with a `sorryAx` or project-specific axiom dependency.
@@ -232,7 +232,7 @@ The synchronized audit covers every named public theorem in the cleaned tree. Th
 7. **Completed after re-audit:** bounded the truncated support by `n.divisors`, proved the Möbius sum and detector coefficient are bounded by `n.divisors.card` uniformly in `T`, and derived `UniformDetectorCoeffBoundProp` from `DivisorCountBoundProp`.
 8. **Completed after re-audit:** proved `powCoeff_bound_of_divisor_and_factorization`, exposing the classical divisor-count and factorization-count inputs directly rather than treating the uniform detector bound as independent.
 9. **Completed 8 August 2026:** proved the equality between structural power and the explicit `powCoeff` convolution expansion for all `k`, with product support and complex-power multiplicativity proved separately.
-10. **Open Goal C/#14 integration:** prove `DivisorCountBoundProp` and `FactorizationCountBoundProp`, then connect the completed expansion and conditional estimate to the transfer.
+10. **Goal C boundary after completed #14 integration:** the transfer now consumes `DivisorCountBoundProp` and `FactorizationCountBoundProp` directly; proving those two propositions remains open arithmetic work.
 
 **Exit evidence:**
 
@@ -275,7 +275,7 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 
 **Current re-audit status:** the mean-value, residual/Type-II semantic, and extraction sublayers made real progress, but this phase fails because `BetaDependence.lean` still contains seven axioms, a `True` placeholder, and malformed interfaces.
 
-### Phase 4: Complete Goal B—the conditional Section 13.1 transfer
+### Phase 4: Goal B—the conditional Section 13.1 transfer (completed at the primitive-input boundary)
 
 **File:** `RiemannZeta/GuthMaynard/Transfer.lean`
 
@@ -517,7 +517,7 @@ Every completed repair iteration must record:
 | Audit impact | The synchronized audit now contains 129 explicit and 129 discovered production theorems. `prod_natCast_cpow_eq`, `powCoeff_product_mem_support`, and the substantive `polynomial_power_identity` all pass with only permitted Lean/Mathlib logical axioms. The same 6 unrelated forbidden-dependency failures and 14 direct project axioms remain. |
 | Verification | The focused `PolynomialPowers` build completed successfully with zero warnings. The principal runner logged to `logs/overall_proof_20260808_115701.log`: stages 1–4 passed warning-free; the transitive audit synchronized 129/129 declarations, passed `prod_natCast_cpow_eq`, `powCoeff_product_mem_support`, and the substantive `polynomial_power_identity`, and failed only on the same 6 unrelated project-axiom dependencies. Integrity scans found no admitted-proof or unsafe-bypass material and correctly reported 14 direct project axioms. The overall exit code remains honestly 1. |
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, `Analytic Research Agenda.md`, `Polynomial Power Expansion Notes.md`, rank 10, and the Phase 2 actions in this agenda. |
-| Remaining obstruction | Shitlist #10 is complete at the honest finite/conditional boundary. `DivisorCountBoundProp` and `FactorizationCountBoundProp` remain unproved Goal C inputs, and Shitlist #14 must use the completed expansion and bound rather than assume the transfer conclusion. |
+| Remaining obstruction | Shitlist #10 is complete at the honest finite/conditional boundary. Shitlist #14 now uses the completed expansion and bound; `DivisorCountBoundProp` and `FactorizationCountBoundProp` remain unproved Goal C inputs. |
 
 ### Completed Iteration: Shitlist #11
 
@@ -599,7 +599,7 @@ The implementation record above remains accurate history, but the stronger compl
 
 | Field | Current finding and required treatment |
 |---|---|
-| Current verdict | The generic theorem `finite_weighted_extract_separated` and its supporting zero-finiteness, scale-selection, fiber-weight, and weighted-separation results are genuine kernel-checked progress. The present asymptotic wrapper is not yet the source-usable #13 boundary required by #14. |
+| Current verdict | This historical finite layer was later superseded by the completed normalized #13 wrapper, which is consumed by the completed conditional #14 transfer. Its beta-shift and unit-zero premises remain unproved. |
 | Local-input defect | `LocalZeroMultiplicityBoundProp` quantifies over every displacement function and directly returns the exact multiplicity sum in each shifted, scale-filtered unit bin. This packages the pullback and finite interval-covering step that the pre-implementation plan assigned to #13. Replace it with a uniform multiplicity-weighted bound for ordinary unit intervals of zeta zeros. |
 | Required local deduction | Prove that a shifted unit bin with displacement at most `H` pulls back into `[z-H,z+1+H]`; cover that interval by at most `2⌈H⌉+3` ordinary unit bins; restrict to the selected Type-I scale; and derive an `O((H+1) log T)` shifted occupancy bound. This finite deduction belongs in `ExtractSeparated.lean`, not in an analytic hypothesis. |
 | Beta-removal boundary | `DetectorBetaShiftProp` may remain the explicit input consumed by #13, but it is not a proved analytic result. Its eventual proof must be assembled in #16 from genuine smoothing/Fourier inversion, decay, contour or Mellin shift, truncation, integral averaging, and pigeonhole lemmas. The malformed current `BetaDependence.lean` interfaces are not acceptable evidence for it. |
@@ -622,7 +622,7 @@ The implementation record above remains accurate history, but the stronger compl
 | Polynomial translation | Added `phaseShiftCoeffs`, `dirichletPoly_translate`, and `norm_phaseShiftCoeffs`. Added detector-line and translated-detector coefficients plus exact detector/Dirichlet-polynomial identities. Translation changes coefficient phases but preserves every coefficient norm. |
 | Normalized theorem | Restated `ExtractSeparatedTarget` as a downstream-ready target and proved `extractSeparated_of_beta_shift_and_local_multiplicity`. It chooses `δ = min (ε/4) (1/2)`, translates the set to `[0,3T]`, carries the phase-twisted polynomial values, and uses `Real.log_le_rpow_div` to absorb `T^δ (log T)^2` into a pure `T^ε` loss. |
 | Assumption audit | The final theorem depends only on the explicit `DetectorBetaShiftProp` and the narrowed `LocalZeroMultiplicityBoundProp`. Neither contains a separated set, translated output, final Type-I count bound, or epsilon-normalized conclusion. No project axiom was added. |
-| Audit impact | At the #13 iteration, eight public theorems were added and all passed. The later #14 audit supersedes its counts: 173/173 declarations, 4 unrelated dependency failures, and 13 direct project axioms. |
+| Audit impact | At the #13 iteration, eight public theorems were added and all passed. The completed #14 audit supersedes its counts: 194/194 declarations, 4 unrelated dependency failures, and 13 direct project axioms. |
 | Verification | Focused `DirichletPolynomial` and `ExtractSeparated` builds and the full default build completed with zero Lean warnings. `run_lake_build.bat --no-pause` logged to `logs/overall_proof_20260808_124518.log`: stages 1–4 passed warning-free, the audit synchronized 140/140 and passed every #13 theorem, integrity scans found no admitted-proof or unsafe-bypass material, and the axiom scan correctly reported 14 existing declarations. The same 6 unrelated audit failures remain, so the overall exit code is honestly 1. |
 | Remaining analytic boundary | The conditional/normalized #13 layer is complete. Proving `LocalZeroMultiplicityBoundProp` is #15/Goal C local-zero work; proving `DetectorBetaShiftProp` is #16/Goal C Fourier/contour work. The repository does not yet have an unconditional Type-I extraction theorem. |
 
@@ -647,7 +647,7 @@ The implementation record above remains accurate history, but the stronger compl
 | Target | `run_lake_build.bat`, with status synchronization in README, paper, this agenda, and `Research Agenda Progress.MD`. |
 | Previous defect | The runner's warning gate covered production builds and the audit but omitted the two retained Lean examples. Its `findstr /B` check only recognized `warning:` at the start of a line, and its integrity scans respected ignore rules that could hide ordinary ignored Lean files. |
 | Result | Expanded the principal evaluation from three to five Lean stages: default production build, explicit production redundancy, `TestExp.lean`, `test_separated.lean`, and `Audit.lean`. Every stage uses the same nonzero-exit and warning-failure logic. Warning detection now finds `warning:` anywhere in stage output, and proof-integrity scans use `rg --no-ignore`. |
-| Coverage | The current tree contains 30 Lean files. The root build covers its 27-file production import graph, the audit is executed explicitly, and the two remaining files are executed explicitly as examples. No retained Lean file is outside the human-facing evaluation. |
+| Coverage | The current tree contains 32 Lean files. The root build covers its 29-file production import graph, the audit is executed explicitly, and the two remaining files are executed explicitly as examples. No retained Lean file is outside the human-facing evaluation. |
 | Verification | `cmd /c run_lake_build.bat --no-pause` logged to `logs/overall_proof_20260808_112057.log`. Stages 1–4 passed with zero Lean warnings. Stage 5 synchronized 123 explicit and 123 discovered theorems and failed on the same 6 project-axiom dependencies. Integrity scans found no admitted-proof or unsafe-bypass material and correctly failed on 14 direct project axioms. Overall exit code was honestly `1`; the log contains no `warning:` diagnostic. |
 | Documentation | Updated runner coverage in `README.md` and `Paper_Riemann_Zeta.md`, corrected the paper's stale expected audit count from 17 to 6, and synchronized both agenda documents. |
 | Remaining obstruction | #8 has no remaining warning or retained-file coverage defect. At the current #14 revision, the overall runner cannot pass until later Shitlist items remove the 4 audited dependency failures and all 13 direct project axioms. |
@@ -666,24 +666,24 @@ The implementation record above remains accurate history, but the stronger compl
 | Verification | Focused builds of `ZeroDetector` and `PolynomialPowers` completed successfully with zero warnings. The principal runner logged to `logs/overall_proof_20260808_113250.log`: stages 1–4 passed warning-free; the audit synchronized 128/128 declarations, passed all five additions, and failed on the same 6 unrelated project-axiom dependencies; integrity scans found no admitted-proof or unsafe-bypass material and correctly reported 14 direct project axioms. Overall exit code remained honestly `1`. |
 | Honest boundary | `DivisorCountBoundProp` is a classical theorem specification, not a proved theorem. #9 completes the exact finite bound and source-uniform conditional reduction; proving the epsilon-power divisor estimate remains Goal C/#10 arithmetic work. |
 
-### Pre-Implementation Source and Interface Audit: Shitlist #14
+### Source and Interface Audit: Shitlist #14
 
 At the pre-implementation audit, `Transfer.lean` was circular and supplied no part of the Section 13.1 deduction. The implementation results below supersede that baseline.
 
 | F-step | Current status | Required #14 treatment |
 |---|---|---|
-| F-01 dyadic zero reduction | **Open.** `zeroCountRect_split` exists, but `N σ T` counts `[-T,T]` while the detector machinery treats positive `[T,2T]` slabs. | Prove zeta-zero and analytic-multiplicity preservation under conjugation; prove the eventual dyadic summation, geometric bound, and finite low-height remainder. If the conjugation theorem cannot yet be discharged, expose one narrow provisional proposition parameter and assign its proof to #15. |
-| F-02 detector coefficients | **Substantially complete.** The truncated Möbius detector, admissible scales, and source-uniform conditional coefficient bound exist. | Consume the actual detector. Do not replace it with a proxy or new bundled detector hypothesis. |
-| F-03 Type I/Type II | **Conditional/concrete layer complete.** The exact Type-I/residual partition and conditional concrete `ResidualZeroBoundProp` exist. | Assemble the slab count from the Type-I and residual terms. The public primitive-input wrapper should derive the residual bound from the separately named coverage, fourth-moment-reduction, and twisted-fourth-moment inputs. |
+| F-01 dyadic zero reduction | **Complete.** Zeta conjugation, analytic-order preservation, negative/positive rectangle equality, finite low-height control, and the eventual dyadic reduction are proved. | Implemented in `ZeroCount.lean` and `DyadicTransfer.lean`; no provisional parameter remains. |
+| F-02 detector coefficients | **Complete conditionally.** The truncated Möbius detector, admissible scales, and source-uniform conditional coefficient bound are consumed by the central proof. | `DivisorCountBoundProp` remains an explicit primitive arithmetic input. |
+| F-03 Type I/Type II | **Complete conditionally.** The exact partition is assembled and the residual bound is derived internally. | The three source-facing Type-II propositions remain explicit primitive analytic inputs. |
 | F-04 beta removal | **Explicit conditional boundary only.** `DetectorBetaShiftProp` is source-facing but unproved. | Accept it explicitly for Goal B and keep its proof assigned to #16. Do not use the malformed conclusion-shaped declarations in `BetaDependence.lean`. |
-| F-05 separated extraction | **Conditional/normalized layer complete.** #13 produces a translated 1-separated set in `[0,3T]`, preserves coefficient norms, and gives a pure epsilon-power count loss. | Invoke `extractSeparated_of_beta_shift_and_local_multiplicity` from explicit beta-shift and ordinary unit-zero inputs. |
-| F-06 normalize coefficients | **Finite identity complete.** Exact fixed-line and translated powered identities, left-endpoint scaling, and normalized coefficient bounds are kernel-checked. | Integrate these results into the uniform asymptotic Type-I slab proof. |
-| F-07 polynomial powers | **Finite preparation complete.** Lower-endpoint vanishing, the exact `k`-block split, unit coefficient normalization, pointwise lower bounds, and simultaneous block/ordinate pigeonholing are proved. | Absorb bounded block and coefficient losses uniformly in the central asymptotic assembly. |
-| F-08 choose `k` | **Complete.** Both sides of equation (13.1), `2 ≤ k ≤ 101`, and eventual detector-scale upper control are proved. | Consume the theorem in the central assembly. |
-| F-09 large-values case | **Exponent layer complete; analytic application open.** All three exact power terms are bounded by the target exponent. | Apply `GuthMaynardLargeValuesNeg` to the normalized fixed block and absorb its finite/logarithmic losses uniformly. |
-| F-10 mean-value case | **Interface and exponent layer complete; analytic application open.** The base interval is repaired, both terms have the target exponent, and equation (13.2) has a completed-square proof. | Apply `MontgomeryMeanValue` to the normalized fixed block and finish uniform loss accounting. |
+| F-05 separated extraction | **Complete conditionally.** #13's normalized extraction is invoked from the beta-shift and ordinary unit-zero inputs. | Those two primitive inputs remain unproved. |
+| F-06 normalize coefficients | **Complete.** Exact identities, restricted globally unit-bounded coefficients, threshold inversion, and uniform coefficient constants are integrated. | No #14 work remains. |
+| F-07 polynomial powers | **Complete.** The block split and simultaneous pigeonhole feed the central proof, with all bounded losses absorbed. | No #14 work remains. |
+| F-08 choose `k` | **Complete.** Both sides of equation (13.1), `2 ≤ k ≤ 101`, and detector-scale control are consumed. | No #14 work remains. |
+| F-09 large-values case | **Complete conditionally.** The normalized fixed block is passed to the repaired large-values input and every loss is absorbed. | `GuthMaynardLargeValues` remains an explicit primitive analytic input. |
+| F-10 mean-value case | **Complete conditionally.** The normalized-block mean-value case and its exponent comparison are assembled. | `MontgomeryMeanValue` remains an explicit primitive analytic input. |
 
-#### Planned implementation order
+#### Implemented order
 
 1. Repair `GuthMaynardLargeValues`: positive constant, eventual threshold, source sign convention, `V > 0`, and a proved `n^{it}`/`n^{-it}` bridge.
 2. Repair the mean-value interval interface and prove translation by coefficient phase twisting.
@@ -695,9 +695,9 @@ At the pre-implementation audit, `Transfer.lean` was circular and supplied no pa
 8. Expose a public primitive-input `conditionalZeroDensityTransfer` that derives the #10, #12, and #13 intermediate propositions internally. Only after it elaborates, delete `AlgebraicCombinationProp`, `algebraic_combination_unconditional`, `algebraic_combination_native`, and the unused `h_bound : True`.
 9. Add every new public theorem to `Audit.lean`, synchronize the paper, README, both agendas, and run the principal warning-failing evaluation.
 
-#### Planned public dependency boundary
+#### Implemented public dependency boundary
 
-The final theorem may take individually named `GuthMaynardLargeValues`, `HuxleyZeroDensity`, `MontgomeryMeanValue`, Type-I/contour-Type-II coverage, Type-II fourth-moment reduction, twisted fourth moment, beta shift, ordinary unit-zero multiplicity, divisor-count, and factorization-count hypotheses. A temporary conjugation/multiplicity parameter is permitted only if it is narrowly stated, strictly upstream, and explicitly assigned to later discharge. It may not accept `GuthMaynardZeroDensity`, `AlgebraicCombinationProp`, or any equivalent wrapper.
+The final theorem takes individually named `GuthMaynardLargeValues`, `MontgomeryMeanValue`, beta shift, ordinary unit-zero multiplicity, divisor-count, factorization-count, Type-I/contour-Type-II coverage, Type-II fourth-moment reduction, twisted fourth moment, and `HuxleyZeroDensity` hypotheses. It takes no conjugation/multiplicity parameter, `GuthMaynardZeroDensity`, `AlgebraicCombinationProp`, slab-bound premise, or dyadic-to-global premise.
 
 The Huxley input belongs specifically to constructing the full-range `GuthMaynardZeroDensity` conclusion from the central Section 13.1 argument. It is not reintroduced into the already-correct F-12 combined-exponent theorem, which legitimately assumes that full-range Guth–Maynard result and then combines it only with Ingham.
 
@@ -711,13 +711,14 @@ Shitlist #14 is complete only when the real F-01 through F-10 deduction is kerne
 |---|---|
 | Circularity | Deleted `AlgebraicCombinationProp`, `algebraic_combination_unconditional`, `algebraic_combination_native`, and `h_bound : True`. Lean-source search no longer finds those declarations. |
 | Source interfaces | Repaired `GuthMaynardLargeValues`, proved its sign bridge, and changed the mean-value/Halász–Montgomery interval to `[0,T]`. |
-| F-06/F-07 | Added lower-endpoint vanishing, exact wide-support decomposition, powered fixed-line and translation identities, normalized coefficient bounds, pointwise powered lower bounds, and simultaneous fixed-block/ordinate-subset pigeonholing. |
+| F-01 | Proved zeta conjugation away from the pole, preservation of iterated derivatives and analytic vanishing order, symmetry of multiplicity-weighted rectangle counts, finite low-height control, and the generic positive-slab-to-global dyadic theorem. |
+| F-06/F-07 | Added lower-endpoint vanishing, exact wide-support decomposition, powered fixed-line and translation identities, normalized coefficient bounds, pointwise powered lower bounds, simultaneous fixed-block/ordinate-subset pigeonholing, globally restricted block coefficients, and uniform bounded-`k` loss control. |
 | F-08 | Added the full bounded equation-(13.1) theorem and eventual detector upper-scale estimate. |
-| F-09/F-10 | Proved every displayed power-term comparison and equation (13.2), including the combined three-term and two-term bounds. |
-| Downstream transfer | Proved the exact Type-I/residual slab assembly and the Huxley high-`σ` branch. The new `conditionalZeroDensityTransfer` is kernel-checked and its axiom audit contains only permitted Lean/Mathlib axioms. |
-| Audit | The synchronized audit discovers and explicitly checks 173 public theorems. All new #14 declarations pass. The audit still fails on four pre-existing project-axiom-dependent declarations in `ZeroCount.lean`, `BetaDependence.lean`, and `Decoupling.lean`. |
-| Principal evaluation | `run_lake_build.bat --no-pause` logged the current re-audit to `logs/overall_proof_20260808_140222.log`. Stages 1–4 passed with zero Lean warnings; stage 5 synchronized 173/173 declarations and failed on exactly the four known dependencies. The integrity gate found no `sorry`, `admit`, `sorryAx`, or unsafe bypass and correctly failed on the 13 direct project axioms. Overall exit code was honestly `1`. |
-| Honest remaining boundary | #14 is **not marked complete**. `TypeIPositiveSlabBoundProp` still represents the uniform central F-06/F-10 asymptotic assembly, and `DyadicToGlobalZeroCountProp` still represents F-01. Both are strictly narrower than the global conclusion, but the planned primitive-input milestone requires proving and removing them. |
+| F-09/F-10 | Proved and applied every displayed power-term comparison, including equation (13.2), normalized threshold inversion, fixed-block length comparison, and uniform epsilon-loss absorption. |
+| Downstream transfer | `typeIPositiveSlabBound_of_section13_inputs` derives the Type-I slab from four source inputs. `conditionalZeroDensityTransfer` derives that theorem, the residual theorem, extraction, powered coefficients, dyadic reduction, and Huxley branch from ten named primitive inputs. |
+| Audit | The synchronized audit discovers and explicitly checks 194 public theorems. All 21 newly registered #14 declarations pass. The audit still fails on four pre-existing project-axiom-dependent declarations in `ZeroCount.lean`, `BetaDependence.lean`, and `Decoupling.lean`. |
+| Principal evaluation | `run_lake_build.bat --no-pause` logged the concluding run to `logs/overall_proof_20260808_154845.log`. Stages 1–4 passed with zero warnings; stage 5 synchronized 194/194 declarations and failed on exactly four pre-existing dependencies. The integrity gate correctly found 13 direct project axioms, so the overall exit code remains honestly `1`. |
+| Honest remaining boundary | #14 is **complete conditionally, not unconditionally**. Its ten primitive inputs remain research obligations. `TypeIPositiveSlabBoundProp` is now a derived internal intermediate, and `DyadicToGlobalZeroCountProp` has been deleted. |
 
 ### Re-Audit Correction to Historical Completion Records
 
@@ -729,18 +730,14 @@ The iteration records above remain useful accounts of what each repair changed a
 - #9 now derives the source-uniform detector estimate from the explicit classical `DivisorCountBoundProp`; that classical estimate itself remains open;
 - #10 now proves the structural-power/explicit-coefficient identity and exposes `DivisorCountBoundProp` and `FactorizationCountBoundProp` directly, but does not prove those classical growth inputs;
 - #12 now reaches the concrete `ResidualZeroBoundProp` from honest source-facing inputs; those hard analytic inputs remain open. #13 now completes the conditional/normalized extraction layer from a narrow unshifted unit-zero input and `DetectorBetaShiftProp`; proving those two analytic inputs remains #15/#16 work.
-- #14 removes the circular conclusion-equivalent assumption and proves substantial finite infrastructure, but remains open because `TypeIPositiveSlabBoundProp` and `DyadicToGlobalZeroCountProp` are still explicit interim parameters.
+- #14 removes the circular conclusion-equivalent assumption and completes the primitive-input conditional transfer; its ten source-facing hypotheses remain later research obligations.
 
 These corrections do not invalidate the kernel-checked lemmas. They narrow the completion claims to exactly what those lemmas establish.
 
 ## Current Priority
 
-Continue Shitlist #14 from the two explicit interim boundaries left by the implementation audit:
-
-1. prove `TypeIPositiveSlabBoundProp` from `GuthMaynardLargeValues`, `MontgomeryMeanValue`, `ExtractSeparatedTarget`, and `PowCoeffBoundProp`, using the completed F-06/F-10 lemmas and a finite maximum over `2 ≤ k ≤ 101` to make every constant uniform;
-2. prove F-01 by establishing zeta-zero and analytic-multiplicity preservation under conjugation, followed by the eventual dyadic summation, geometric estimate, and finite low-height remainder; and
-3. restate `conditionalZeroDensityTransfer` directly over the planned primitive inputs and delete `TypeIPositiveSlabBoundProp` and `DyadicToGlobalZeroCountProp` from its signature.
+Shitlist #14 needs no further implementation. Continue by discharging or repairing its primitive premises, beginning with the malformed beta-removal and decoupling interfaces, then the narrow unit-zero and beta-shift estimates, arithmetic coefficient bounds, Type-II analytic inputs, mean-value theorem, Huxley bound, and Guth–Maynard large-values theorem.
 
 The beta-removal and decoupling interfaces must still be redesigned before their analytic results can be claimed. #13's normalized conditional theorem may depend on a faithful beta-removal proposition and a narrow unit-zero proposition, but those analytic inputs must eventually be proved through #16 and #15 rather than weakened or replaced by shifted conclusion-shaped assumptions.
 
-The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.
+The first major research milestone—a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses—is achieved. The final large-values theorem remains the hardest long-term objective.

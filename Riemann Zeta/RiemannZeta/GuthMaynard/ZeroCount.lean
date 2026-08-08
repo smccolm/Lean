@@ -5,8 +5,12 @@ import Mathlib.Data.Finset.Basic
 import Mathlib.Topology.Instances.Complex
 import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.Analytic.Order
+import Mathlib.Analysis.Calculus.Deriv.Star
+import Mathlib.Analysis.Complex.CauchyIntegral
+import Mathlib.Analysis.Analytic.Uniqueness
 
-open Complex
+open Complex Filter
+open scoped Topology
 
 namespace RiemannZeta.GuthMaynard
 
@@ -110,6 +114,194 @@ lemma zeroCountRect_split (σ_min σ_max T₁ T₂ T₃ : ℝ) :
     with Re(s) ≥ σ and |Im(s)| ≤ T (i.e. -T ≤ Im(s) ≤ T). -/
 noncomputable def N (σ T : ℝ) : ℕ :=
   zeroCountRect σ 1 (-T) T
+
+/-- Conjugating both the argument and value of zeta gives an analytic function
+on the complement of the pole. -/
+private noncomputable def conjugateRiemannZeta (z : ℂ) : ℂ :=
+  (starRingEnd ℂ) (riemannZeta ((starRingEnd ℂ) z))
+
+/-- The Riemann zeta function commutes with complex conjugation away from its
+totalized value at the pole. The proof uses the Dirichlet series on `Re s > 1`
+and analytic continuation on `ℂ \ {1}`. -/
+theorem riemannZeta_conj (z : ℂ) (hz : z ≠ 1) :
+    riemannZeta (star z) = star (riemannZeta z) := by
+  have hAnalyticZeta : AnalyticOnNhd ℂ riemannZeta ({1}ᶜ : Set ℂ) :=
+    analyticOn_riemannZeta
+  have hAnalyticConj : AnalyticOnNhd ℂ conjugateRiemannZeta ({1}ᶜ : Set ℂ) := by
+    rw [Complex.analyticOnNhd_iff_differentiableOn isOpen_compl_singleton]
+    intro w hw
+    have hwNe : w ≠ 1 := by simpa using hw
+    have hstarNe : star w ≠ 1 := by
+      intro h
+      apply hwNe
+      have := congrArg star h
+      simpa using this
+    apply DifferentiableAt.differentiableWithinAt
+    change DifferentiableAt ℂ ((starRingEnd ℂ) ∘ riemannZeta ∘ (starRingEnd ℂ)) w
+    rw [differentiableAt_conj_conj_iff]
+    exact differentiableAt_riemannZeta hstarNe
+  have hAtTwo : riemannZeta =ᶠ[𝓝 (2 : ℂ)] conjugateRiemannZeta := by
+    have hOpen : {w : ℂ | 1 < w.re} ∈ 𝓝 (2 : ℂ) := by
+      apply IsOpen.mem_nhds
+      · exact isOpen_lt continuous_const continuous_re
+      · norm_num
+    filter_upwards [hOpen] with w hw
+    have hstarRe : (star w).re = w.re := by simp
+    rw [zeta_eq_tsum_one_div_nat_add_one_cpow hw]
+    unfold conjugateRiemannZeta
+    rw [zeta_eq_tsum_one_div_nat_add_one_cpow (by simpa [hstarRe] using hw)]
+    rw [Complex.conj_tsum]
+    congr 1
+    funext n
+    simp only [one_div]
+    rw [map_inv₀]
+    congr 1
+    have hBaseArg : (((n + 1 : ℕ) : ℂ)).arg ≠ Real.pi := by
+      change ((((n + 1 : ℕ) : ℝ) : ℂ)).arg ≠ Real.pi
+      rw [Complex.arg_ofReal_of_nonneg (by positivity : (0 : ℝ) ≤ (n + 1 : ℕ))]
+      exact Real.pi_ne_zero.symm
+    simpa using (Complex.cpow_conj ((n + 1 : ℕ) : ℂ) (star w) hBaseArg)
+  have hEq := hAnalyticZeta.eqOn_of_preconnected_of_eventuallyEq hAnalyticConj
+    (isConnected_compl_singleton_of_one_lt_rank (by simp) (1 : ℂ)).isPreconnected
+    (by norm_num : (2 : ℂ) ∈ ({1}ᶜ : Set ℂ)) hAtTwo
+  have hzMem : z ∈ ({1}ᶜ : Set ℂ) := by simpa using hz
+  have h := hEq hzMem
+  unfold conjugateRiemannZeta at h
+  have hs := congrArg star h
+  simpa using hs.symm
+
+/-- Iterated complex derivatives commute with conjugating both the input and
+the output. -/
+theorem iteratedDeriv_conj_conj (f : ℂ → ℂ) (n : ℕ) :
+    iteratedDeriv n ((starRingEnd ℂ) ∘ f ∘ (starRingEnd ℂ)) =
+      (starRingEnd ℂ) ∘ iteratedDeriv n f ∘ (starRingEnd ℂ) := by
+  induction n with
+  | zero => rfl
+  | succ n ih =>
+      rw [show n + 1 = n.succ by omega, iteratedDeriv_succ, ih,
+        deriv_conj_conj, ← iteratedDeriv_succ]
+
+/-- Conjugating both the input and output of an analytic function preserves
+its analytic order. -/
+theorem analyticOrderAt_conj_conj (f : ℂ → ℂ) (z : ℂ)
+    (hf : AnalyticAt ℂ f z) :
+    analyticOrderAt ((starRingEnd ℂ) ∘ f ∘ (starRingEnd ℂ)) (star z) =
+      analyticOrderAt f z := by
+  let g := (starRingEnd ℂ) ∘ f ∘ (starRingEnd ℂ)
+  have hg : AnalyticAt ℂ g (star z) := by
+    change AnalyticAt ℂ ((starRingEnd ℂ) ∘ f ∘ (starRingEnd ℂ)) (star z)
+    rw [Complex.analyticAt_iff_eventually_differentiableAt]
+    have hfd := Complex.analyticAt_iff_eventually_differentiableAt.mp hf
+    have ht : Tendsto (starRingEnd ℂ) (𝓝 (star z)) (𝓝 z) := by
+      have ht0 : Tendsto (starRingEnd ℂ) (𝓝 (star z)) (𝓝 (star (star z))) :=
+        Complex.continuous_conj.continuousAt
+      simpa using ht0
+    filter_upwards [ht.eventually hfd] with w hw
+    rw [differentiableAt_conj_conj_iff]
+    exact hw
+  apply ENat.eq_of_forall_natCast_le_iff
+  intro n
+  rw [natCast_le_analyticOrderAt_iff_iteratedDeriv_eq_zero hg,
+    natCast_le_analyticOrderAt_iff_iteratedDeriv_eq_zero hf]
+  constructor
+  · intro h i hi
+    have hgi := h i hi
+    rw [iteratedDeriv_conj_conj f i] at hgi
+    simpa [Function.comp_apply] using congrArg star hgi
+  · intro h i hi
+    rw [iteratedDeriv_conj_conj f i]
+    simp [Function.comp_apply, h i hi]
+
+/-- Analytic multiplicity of a zeta zero is preserved by conjugation. -/
+theorem analyticVanishingOrder_conj (z : ℂ) (hz : z ≠ 1) :
+    analyticVanishingOrder riemannZeta (star z) =
+      analyticVanishingOrder riemannZeta z := by
+  have hzStar : star z ≠ 1 := by
+    intro h
+    apply hz
+    have := congrArg star h
+    simpa using this
+  have hEvent : riemannZeta =ᶠ[𝓝 (star z)] conjugateRiemannZeta := by
+    have hOpen : ({1}ᶜ : Set ℂ) ∈ 𝓝 (star z) :=
+      isOpen_compl_singleton.mem_nhds (by simpa using hzStar)
+    filter_upwards [hOpen] with w hw
+    have hwNe : w ≠ 1 := by simpa using hw
+    have hwStarNe : star w ≠ 1 := by
+      intro h
+      apply hwNe
+      have := congrArg star h
+      simpa using this
+    unfold conjugateRiemannZeta
+    simpa using riemannZeta_conj (star w) hwStarNe
+  have hAnalytic : AnalyticAt ℂ riemannZeta z :=
+    analyticOn_riemannZeta z (by simpa using hz)
+  have hOrderConj := analyticOrderAt_conj_conj riemannZeta z hAnalytic
+  have hOrderEvent := analyticOrderAt_congr hEvent
+  exact congrArg ENat.toNat (hOrderEvent.trans hOrderConj)
+
+/-- Negative and positive ordinate rectangles contain the same zeta-zero
+multiplicity, by conjugation. -/
+theorem zeroCountRect_neg_eq_pos (σ T : ℝ) :
+    zeroCountRect σ 1 (-T) 0 = zeroCountRect σ 1 0 T := by
+  unfold zeroCountRect
+  have hNegPos : ∀ z ∈ zerosInRect σ 1 (-T) 0, star z ∈ zerosInRect σ 1 0 T := by
+    intro z hz
+    rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff] at hz ⊢
+    rcases hz with ⟨hzRect, hzZero⟩
+    rw [mem_ZeroRectangle] at hzRect ⊢
+    change riemannZeta z = 0 at hzZero
+    have hzNe : z ≠ 1 := by
+      intro h
+      subst z
+      exact riemannZeta_one_ne_zero hzZero
+    refine ⟨⟨by simpa using hzRect.1, by simpa using hzRect.2.1,
+      by simp; linarith, by simp; linarith⟩, ?_⟩
+    change riemannZeta (star z) = 0
+    rw [riemannZeta_conj z hzNe, hzZero]
+    simp
+  have hPosNeg : ∀ z ∈ zerosInRect σ 1 0 T, star z ∈ zerosInRect σ 1 (-T) 0 := by
+    intro z hz
+    rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff] at hz ⊢
+    rcases hz with ⟨hzRect, hzZero⟩
+    rw [mem_ZeroRectangle] at hzRect ⊢
+    change riemannZeta z = 0 at hzZero
+    have hzNe : z ≠ 1 := by
+      intro h
+      subst z
+      exact riemannZeta_one_ne_zero hzZero
+    refine ⟨⟨by simpa using hzRect.1, by simpa using hzRect.2.1,
+      by simp; linarith, by simp; linarith⟩, ?_⟩
+    change riemannZeta (star z) = 0
+    rw [riemannZeta_conj z hzNe, hzZero]
+    simp
+  exact Finset.sum_bij' (fun z _ => star z) (fun z _ => star z)
+    hNegPos hPosNeg
+    (fun z _ => by simp)
+    (fun z _ => by simp)
+    (fun z hz => by
+      have hzNe : z ≠ 1 := by
+        rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff] at hz
+        have hzZero : riemannZeta z = 0 := hz.2
+        intro h
+        subst z
+        exact riemannZeta_one_ne_zero hzZero
+      exact (analyticVanishingOrder_conj z hzNe).symm)
+
+/-- Iterating `zeroCountRect_split` decomposes a positive-height rectangle into
+the fixed low rectangle `[0,1]` and the first `m` dyadic slabs. -/
+theorem zeroCountRect_zero_two_pow_le (σ : ℝ) (m : ℕ) :
+    zeroCountRect σ 1 0 (((2 : ℕ) ^ m : ℕ) : ℝ) ≤
+      zeroCountRect σ 1 0 1 +
+        ∑ i ∈ Finset.range m,
+          zeroCountRect σ 1 (((2 : ℕ) ^ i : ℕ) : ℝ)
+            (((2 : ℕ) ^ (i + 1) : ℕ) : ℝ) := by
+  induction m with
+  | zero => simp
+  | succ m ih =>
+      have hSplit := zeroCountRect_split σ 1 0
+        (((2 : ℕ) ^ m : ℕ) : ℝ) (((2 : ℕ) ^ (m + 1) : ℕ) : ℝ)
+      rw [Finset.sum_range_succ]
+      omega
 
 
 /- 
