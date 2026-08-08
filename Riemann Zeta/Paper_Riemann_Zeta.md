@@ -158,7 +158,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 113 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 17 theorems depend on project-specific mathematical axioms. All detector theorems, the conditional powered-coefficient theorem, the mean-value-to-large-values implication, and the five generic Type II deductions pass, and no audited theorem depends on `sorryAx`. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 123 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 6 theorems depend on project-specific mathematical axioms. The compact-rectangle zeta-zero finiteness theorem, finite dyadic-scale and weighted extraction machinery, conditional Type-I extraction theorem, detector theorems, conditional powered-coefficient theorem, mean-value-to-large-values implication, and five generic Type II deductions pass; no audited theorem depends on `sorryAx`. Fourteen direct project axioms remain. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -191,6 +191,9 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Detector Support | `detectorDivisors_subset_range` | `GuthMaynard/ZeroDetector.lean` | `Nat.mem_divisors`, `Nat.lt_floor_add_one` |
 | Detector Cutoff Bound | `norm_detectorCoeff_le_cutoff` | `GuthMaynard/ZeroDetector.lean` | `abs_moebius_le_one`, `norm_sum_le`, `exp_smoothing_bound` |
 | Detector Epsilon Bound | `detectorCoeff_bound` | `GuthMaynard/ZeroDetector.lean` | `norm_detectorCoeff_le_cutoff`, `Real.one_le_rpow` |
+| Compact Zeta-Zero Finiteness | `riemannZeta_finite_zeros_in_rect` | `GuthMaynard/ZeroCount.lean` | `IsCompact.inter_riemannZetaZeros_finite` |
+| Weighted Separated Selection | `weighted_separated_selection` | `GuthMaynard/Separated.lean` | Finite even/odd unit-bin decomposition |
+| Conditional Type-I Extraction | `extractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Explicit beta-shift/local-multiplicity inputs, weighted pigeonholing and selection |
 | Conditional Powered-Coefficient Bound | `powCoeff_bound_of_uniform_detector_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit detector/factorization inputs, `norm_sum_le`, `Real.finset_prod_rpow` |
 | Discrete Mean-Value Input | `MontgomeryMeanValue` | `GuthMaynard/MeanValue.lean` | Unproved proposition specification with one absolute implied constant |
 | Conditional Large-Value Count | `halasz_montgomery_lemma_of_mean_value` | `GuthMaynard/HalaszMontgomery.lean` | Explicit `MontgomeryMeanValue` input and finite-sum inequalities |

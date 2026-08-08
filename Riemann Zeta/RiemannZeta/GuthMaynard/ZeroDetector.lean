@@ -4,6 +4,7 @@ import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Analysis.SpecialFunctions.Log.Base
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.NumberTheory.ArithmeticFunction.Moebius
 import Mathlib.NumberTheory.Divisors
@@ -138,14 +139,123 @@ lemma detectPoly_eval (N : ℕ) (s : ℂ) (T : ℝ) :
   detectPoly N s T = ∑ n ∈ Finset.Ioc N (2 * N), detectorCoeff n T * (n : ℂ) ^ (-s) := by
   rfl
 
+/-- The upper endpoint of the dyadic detector-scale range. -/
+noncomputable def detectorScaleUpper (T : ℝ) : ℝ :=
+  T ^ (1 / 2 : ℝ) * (Real.log T) ^ 2
+
+/-- A dyadic exponent is admissible when its scale lies in the source range. -/
+def IsAdmissibleDyadicScale (T : ℝ) (j : ℕ) : Prop :=
+  T ^ (1 / 100 : ℝ) ≤ (2 : ℝ) ^ j ∧
+    (2 : ℝ) ^ j ≤ detectorScaleUpper T
+
+/-- A finite search bound for all admissible dyadic exponents. -/
+noncomputable def dyadicScaleIndexCount (T : ℝ) : ℕ :=
+  ⌊Real.logb 2 (detectorScaleUpper T)⌋₊ + 1
+
+/-- The finite set of admissible dyadic detector exponents. -/
+noncomputable def admissibleDyadicIndices (T : ℝ) : Finset ℕ :=
+  (Finset.range (dyadicScaleIndexCount T)).filter (IsAdmissibleDyadicScale T)
+
+lemma admissibleDyadicScale_index_lt (T : ℝ) (j : ℕ)
+    (hj : IsAdmissibleDyadicScale T j) : j < dyadicScaleIndexCount T := by
+  have hUpperPos : 0 < detectorScaleUpper T :=
+    lt_of_lt_of_le (by positivity : (0 : ℝ) < (2 : ℝ) ^ j) hj.2
+  have hjLog : (j : ℝ) ≤ Real.logb 2 (detectorScaleUpper T) := by
+    rw [Real.le_logb_iff_rpow_le (by norm_num) hUpperPos, Real.rpow_natCast]
+    exact hj.2
+  exact Nat.lt_succ_of_le (Nat.le_floor hjLog)
+
+lemma mem_admissibleDyadicIndices (T : ℝ) (j : ℕ) :
+    j ∈ admissibleDyadicIndices T ↔ IsAdmissibleDyadicScale T j := by
+  constructor
+  · intro hj
+    exact (Finset.mem_filter.mp hj).2
+  · intro hj
+    exact Finset.mem_filter.mpr ⟨Finset.mem_range.mpr
+      (admissibleDyadicScale_index_lt T j hj), hj⟩
+
+lemma admissibleDyadicIndices_card_le (T : ℝ) :
+    (admissibleDyadicIndices T).card ≤ dyadicScaleIndexCount T := by
+  unfold admissibleDyadicIndices
+  exact (Finset.card_filter_le _ _).trans_eq (Finset.card_range _)
+
+lemma detectorScaleUpper_le_rpow (T : ℝ) (hT : 1 ≤ T) :
+    detectorScaleUpper T ≤ T ^ (5 / 2 : ℝ) := by
+  have hT0 : 0 ≤ T := hT.trans' zero_le_one
+  have hLog0 : 0 ≤ Real.log T := Real.log_nonneg hT
+  have hLogT : Real.log T ≤ T := Real.log_le_self hT0
+  have hSq : (Real.log T) ^ 2 ≤ T ^ 2 := by nlinarith
+  calc
+    detectorScaleUpper T = T ^ (1 / 2 : ℝ) * (Real.log T) ^ 2 := rfl
+    _ ≤ T ^ (1 / 2 : ℝ) * T ^ (2 : ℕ) := by
+      exact mul_le_mul_of_nonneg_left hSq (Real.rpow_nonneg hT0 _)
+    _ = T ^ (5 / 2 : ℝ) := by
+      rw [← Real.rpow_natCast, ← Real.rpow_add (lt_of_lt_of_le zero_lt_one hT)]
+      congr 1
+      norm_num
+
+/-- The admissible dyadic scale count has the required logarithmic growth. -/
+lemma dyadicScaleIndexCount_le_log (T : ℝ) (hT : Real.exp 2 ≤ T) :
+    (dyadicScaleIndexCount T : ℝ) ≤
+      ((5 / 2 : ℝ) / Real.log 2 + 1 / 2) * Real.log T := by
+  have hTpos : 0 < T := lt_of_lt_of_le (Real.exp_pos 2) hT
+  have hTone : 1 ≤ T := by
+    have : (1 : ℝ) < Real.exp 2 := by
+      rw [← Real.exp_zero]
+      exact Real.exp_lt_exp.mpr (by norm_num)
+    exact (this.trans_le hT).le
+  have hLogTwo : 0 < Real.log 2 := Real.log_pos (by norm_num)
+  have hLogT : 2 ≤ Real.log T := by
+    have := Real.log_le_log (Real.exp_pos 2) hT
+    simpa using this
+  have hUpperPos : 0 < detectorScaleUpper T := by
+    unfold detectorScaleUpper
+    positivity
+  have hUpper : detectorScaleUpper T ≤ T ^ (5 / 2 : ℝ) :=
+    detectorScaleUpper_le_rpow T hTone
+  have hLogbUpper :
+      Real.logb 2 (detectorScaleUpper T) ≤ (5 / 2 : ℝ) * Real.logb 2 T := by
+    calc
+      Real.logb 2 (detectorScaleUpper T) ≤ Real.logb 2 (T ^ (5 / 2 : ℝ)) :=
+        Real.logb_le_logb_of_le (by norm_num) hUpperPos hUpper
+      _ = (5 / 2 : ℝ) * Real.logb 2 T := by
+        rw [Real.logb_rpow_eq_mul_logb_of_pos hTpos]
+  have hLogbUpperNonneg : 0 ≤ Real.logb 2 (detectorScaleUpper T) := by
+    have hSqrt : 1 ≤ T ^ (1 / 2 : ℝ) := Real.one_le_rpow hTone (by norm_num)
+    have hLogSq : 1 ≤ (Real.log T) ^ 2 := by nlinarith
+    have hUpperOne : 1 ≤ detectorScaleUpper T := by
+      calc
+        1 = 1 * 1 := by norm_num
+        _ ≤ T ^ (1 / 2 : ℝ) * (Real.log T) ^ 2 :=
+          mul_le_mul hSqrt hLogSq zero_le_one (zero_le_one.trans hSqrt)
+        _ = detectorScaleUpper T := rfl
+    rw [Real.logb]
+    exact div_nonneg (Real.log_nonneg hUpperOne) hLogTwo.le
+  change ((⌊Real.logb 2 (detectorScaleUpper T)⌋₊ + 1 : ℕ) : ℝ) ≤ _
+  push_cast
+  calc
+    (⌊Real.logb 2 (detectorScaleUpper T)⌋₊ : ℝ) + 1
+        ≤ Real.logb 2 (detectorScaleUpper T) + 1 := by
+          gcongr
+          exact Nat.floor_le hLogbUpperNonneg
+    _ ≤ (5 / 2 : ℝ) * Real.logb 2 T + 1 := by linarith
+    _ = ((5 / 2 : ℝ) / Real.log 2) * Real.log T + 1 := by
+      rw [Real.logb]
+      field_simp
+    _ ≤ ((5 / 2 : ℝ) / Real.log 2) * Real.log T +
+          (1 / 2 : ℝ) * Real.log T := by linarith
+    _ = ((5 / 2 : ℝ) / Real.log 2 + 1 / 2) * Real.log T := by ring
+
+/-- Detection at one particular admissible dyadic scale. -/
+def IsTypeIZeroAtScale (ρ : ℂ) (T : ℝ) (j : ℕ) : Prop :=
+  j ∈ admissibleDyadicIndices T ∧
+    1 / (3 * Real.log T) ≤ ‖detectPoly (2 ^ j) ρ T‖
+
 /-- F-03: Type I zero classification.
     A zero ρ = β + iγ with γ ∈ [T, 2T] is a Type I zero if |D_N(ρ)| ≥ 1/(3 log T)
     for some N = 2^j in the specified range. -/
 def IsTypeIZero (ρ : ℂ) (T : ℝ) : Prop :=
-  ∃ j : ℕ,
-    let N : ℝ := (2 : ℝ) ^ j
-    T ^ (1/100 : ℝ) ≤ N ∧ N ≤ T ^ (1/2 : ℝ) * (Real.log T) ^ 2 ∧
-    1 / (3 * Real.log T) ≤ ‖detectPoly (2^j) ρ T‖
+  ∃ j : ℕ, IsTypeIZeroAtScale ρ T j
 
 /-- The residual zero class used in the Type-I/complement partition.
     This is not Maynard--Pratt's contour-integral Type II condition. -/

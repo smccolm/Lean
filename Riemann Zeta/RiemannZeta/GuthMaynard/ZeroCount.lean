@@ -1,4 +1,4 @@
-import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.NumberTheory.LSeries.ZetaZeros
 import Mathlib.Analysis.Complex.Basic
 -- Force rebuild
 import Mathlib.Data.Finset.Basic
@@ -30,16 +30,25 @@ lemma ZeroRectangle_subset (σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2
   rcases hs with ⟨h1, h2, h3, h4⟩
   exact ⟨le_trans h_sigma_min h1, le_trans h2 h_sigma_max, le_trans h_T_min h3, le_trans h4 h_T_max⟩
 
+lemma isCompact_ZeroRectangle (σ_min σ_max T_min T_max : ℝ) :
+    IsCompact (ZeroRectangle σ_min σ_max T_min T_max) := by
+  have hRectangle :
+      ZeroRectangle σ_min σ_max T_min T_max =
+        Set.Icc σ_min σ_max ×ℂ Set.Icc T_min T_max := by
+    ext z
+    simp [ZeroRectangle, Complex.mem_reProdIm, and_assoc]
+  rw [hRectangle]
+  exact isCompact_Icc.reProdIm isCompact_Icc
+
 /-- Analytic order of vanishing for a complex function. -/
 noncomputable def analyticVanishingOrder (f : ℂ → ℂ) (s : ℂ) : ℕ :=
   analyticOrderNatAt f s
 
-/- 
-  The zeros of the Riemann Zeta function in any compact rectangle are finite.
-  This is unconditionally true by the identity theorem for analytic functions,
-  since riemannZeta is analytic everywhere except at 1, and is not identically zero.
--/
-axiom riemannZeta_finite_zeros_in_rect : ∀ (σ_min σ_max T_min T_max : ℝ), (ZeroRectangle σ_min σ_max T_min T_max ∩ {s | riemannZeta s = 0}).Finite
+/-- The zeros of the Riemann zeta function in a compact rectangle form a finite set. -/
+theorem riemannZeta_finite_zeros_in_rect (σ_min σ_max T_min T_max : ℝ) :
+    (ZeroRectangle σ_min σ_max T_min T_max ∩ {s | riemannZeta s = 0}).Finite := by
+  simpa only [riemannZetaZeros, Set.mem_setOf_eq] using
+    (isCompact_ZeroRectangle σ_min σ_max T_min T_max).inter_riemannZetaZeros_finite
 
 open scoped BigOperators
 
