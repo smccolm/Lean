@@ -70,7 +70,7 @@ Fix the cause of each diagnostic. Do not hide it with `set_option linter... fals
 
 Before editing:
 
-1. Read `Guth_Maynard_Formalization_Research_Agenda.docx`, `Research Agenda Progress.MD`, `README.md`, `Paper_Riemann_Zeta.md`, `RiemannZeta/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task.
+1. Read `Guth_Maynard_Formalization_Research_Agenda.docx`, `Research Agenda Progress.MD`, `Lean Alignment Fix Agenda.md`, `Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `RiemannZeta/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task.
 2. Inspect the current working tree and preserve all user changes. Do not overwrite or revert unrelated work.
 3. Identify whether the target is a definition, a formal statement, a conditional theorem, or an unconditional theorem. State that status accurately.
 4. Inspect the exact source theorem and existing Mathlib APIs before designing the Lean signature.
@@ -91,7 +91,7 @@ Before declaring completion:
 4. Verify that no new theorem depends on `sorryAx` or a project-specific axiom.
 5. Confirm that the default root module imports every intended production module. A successful default build is insufficient if substantive files are outside the import graph.
 6. Confirm that focused builds and the principal runner emit no Lean warning or linter diagnostic from project source.
-7. Update the README, paper, audit file, and research-progress document when proof status or dependencies change.
+7. Update the README, paper, audit file, Shitlist, research-progress document, and canonical proof-architecture diagram when proof status or dependencies change.
 8. Report exact commands, results, remaining assumptions, warnings, and failures. Do not summarize a warning-producing or partial build as “clean.”
 
 ## Principal Human-Facing Evaluation: `run_lake_build.bat`
@@ -201,6 +201,12 @@ Every substantive iteration must leave:
 - a precise account of remaining obligations; and
 - no new hidden assumptions or placeholder mathematics; and
 - zero Lean warnings in the files changed and in every claimed-clean evaluation scope.
+
+## Mandatory Proof-Architecture Synchronization
+
+`Proof Architecture.md` is the canonical Mermaid view of the logical proof dependencies and completion status. `Lean Alignment Fix Agenda.md` remains the authority for Shitlist task numbers and acceptance tests, while `Research Agenda Progress.MD` remains the evidence-based status report.
+
+Whenever a change alters a theorem's proof status, an open obligation, a dependency edge, or a Shitlist assignment, update all three documents in the same change. Every unfinished Mermaid node must name its owning Shitlist number. A crossed-out Shitlist item must have no unfinished node in the diagram, and a newly discovered obligation must be assigned to an existing open item unless the project owner explicitly changes the exhaustive completion contract. Before handoff, verify that the diagram, Shitlist, and progress report make identical claims about what is done and what remains.
 
 ## Handling the Current Noncompliant Baseline
 

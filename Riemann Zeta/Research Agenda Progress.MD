@@ -9,6 +9,8 @@ The repository now contains a kernel-checked conditional formalization of the Se
 
 Shitlist #15–#19 are now the exhaustive remaining research agenda. Each has a discrete mathematical output and an objective acceptance test. Completion of all five means that every primitive input is proved, every current project axiom is removed, the final concrete zero-density theorem is kernel-checked, all documentation is synchronized, and `run_lake_build.bat` returns `PASS` with exit code `0`.
 
+The canonical logical dependency view is [`Proof Architecture.md`](Proof%20Architecture.md). Its unfinished nodes use the same #15–#19 ownership as the Shitlist; it and this progress report must change atomically with the authoritative completion contract in `Lean Alignment Fix Agenda.md`.
+
 The current five-stage principal runner covers every retained Lean file in its intended role: the root build covers the 29-file production graph, `Audit.lean` runs as the explicit dependency audit, and `TestExp.lean` plus `test_separated.lean` elaborate as separate warning-failing example stages. There are 32 Lean files on disk, and all non-audit elaboration stages pass with zero warnings. The audit and direct-axiom gate still fail honestly on the known mathematical assumptions.
 
 The production Guth–Maynard source still contains 13 direct project `axiom` declarations: seven in `BetaDependence.lean`, two in `Decoupling.lean`, and four in `ZeroCount.lean`. `Transfer.lean` no longer declares an axiom. No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency.
@@ -32,7 +34,7 @@ This table is the authoritative status summary for items #1–#14. “Conditiona
 | 11 | **Finite/conditional layer verified; analytic input open** | The consequence is genuinely derived from explicit `MontgomeryMeanValue`; the interval is now `[0,T]` and is compatible with #13 at height `3T`. The analytic mean-value proposition itself remains unproved. |
 | 12 | **Conditional/concrete layer verified; analytic inputs open** | The concrete residual-zero bound follows from three named upstream propositions. Those propositions still package the Type-I/Type-II coverage and fourth-moment analysis. |
 | 13 | **Conditional/normalized layer verified; analytic inputs open** | Shifted-bin covering, translation, phase preservation, and epsilon normalization are proved from `DetectorBetaShiftProp` and an ordinary unit-zero multiplicity bound. Those two inputs remain unproved. |
-| 14 | **Verified complete at the planned conditional boundary** | F-01 through F-10 are assembled. `conditionalZeroDensityTransfer` derives the Type-I slab, residual bound, separated extraction, powered-coefficient estimate, dyadic-to-global reduction, and high-`σ` branch from ten individually named primitive inputs; it no longer accepts the two interim propositions. All 21 newly registered theorems pass the transitive audit. |
+| ~~14~~ | **Verified complete at the planned conditional boundary** | F-01 through F-10 are assembled. `conditionalZeroDensityTransfer` derives the Type-I slab, residual bound, separated extraction, powered-coefficient estimate, dyadic-to-global reduction, and high-`σ` branch from ten individually named primitive inputs; it no longer accepts the two interim propositions. All 21 newly registered theorems pass the transitive audit. |
 
 Accordingly, #1–#8 are complete repair/evaluation items, #9–#13 are complete only at their explicitly finite or conditional boundaries, and #14 is complete at its explicitly conditional primitive-input boundary. The project as a whole remains unaligned because the non-negotiable no-project-axiom and clean-audit gates still fail.
 
@@ -143,7 +145,7 @@ The Section 13.1 target exponent is `15(1-σ)/(3+5σ)`. The later combined Ingha
 
 | Item | Discrete task | Inputs or defects eliminated | Required end state |
 |---:|---|---|---|
-| 15 | **Zeta zero-count foundations** | Four `ZeroCount.lean` axioms; `LocalZeroMultiplicityBoundProp`; concrete Huxley and Ingham inputs | Growth/lower-bound wrappers, unit-height zero count, `HuxleyZeroDensity (fun σ T => N σ T)`, and `InghamZeroDensity (fun σ T => N σ T)` are kernel-checked and audit-clean. |
+| 15 | **Zeta zero-count foundations and classical density endpoints** | Four `ZeroCount.lean` axioms; `LocalZeroMultiplicityBoundProp`; concrete Huxley and Ingham inputs | Growth/lower-bound wrappers and the unit-height Jensen zero count are proved first. After #17 provides the required mean-value machinery, `HuxleyZeroDensity (fun σ T => N σ T)` and `InghamZeroDensity (fun σ T => N σ T)` are kernel-checked and audit-clean. #15 remains open until both passes are complete. |
 | 16 | **Beta removal** | Seven `BetaDependence.lean` axioms; `DetectorBetaShiftProp` | Faithful smoothing, Fourier decay, contour shift, truncation, averaging, and pigeonholing prove the beta-shift theorem with no vacuous or conclusion-shaped interface. |
 | 17 | **Arithmetic coefficients and mean value** | `DivisorCountBoundProp`; `FactorizationCountBoundProp`; `MontgomeryMeanValue` | All three propositions have named kernel-checked proofs and their downstream coefficient/large-value consequences no longer require them as parameters. |
 | 18 | **Type-II analysis and Goal C integration** | `TypeIContourTypeIICoverProp`; concrete fourth-moment reduction; twisted zeta fourth moment | The three inputs are proved and a public audit-clean theorem derives the concrete zero-density bound from `GuthMaynardLargeValues` alone. |
@@ -152,6 +154,14 @@ The Section 13.1 target exponent is `15(1-σ)/(3+5σ)`. The later combined Ingha
 The ten premises of `conditionalZeroDensityTransfer` are exhaustively assigned: large values to #19; Montgomery mean value plus divisor and factorization bounds to #17; beta shift to #16; local zero count and Huxley to #15; and the three Type-II premises to #18. The additional Ingham input needed for the combined exponent is assigned to #15. The 13 direct project axioms are also exhaustively assigned: four to #15, seven to #16, and two to #19.
 
 There is no sixth deferred cleanup or proof item. If work on one row exposes a genuinely new necessary lemma, that lemma belongs inside the same row unless it changes the published mathematical target; it does not silently create an open-ended new Shitlist item.
+
+## Shitlist #15 Plan and Dependency Finding
+
+The detailed implementation plan is now recorded in the Shitlist. Its critical finding is that #15 cannot be completed as a strictly isolated predecessor to #17: the zeta-growth and local Jensen work can be completed first, but the classical Ingham/Huxley endpoint requires the mean-value/Halász–Montgomery machinery owned by #17. This is an internal scheduling edge, not an additional completion item.
+
+The conclusive #15 acceptance sequence is: repair exact statements; prove the four zeta analytic foundations; derive the ordinary unit-height multiplicity bound through Jensen's formula with a pole-safe eventual threshold; complete #17's required mean-value layer; prove Ingham and Huxley for the project's symmetric count `N`; then run focused builds, the transitive audit, and the principal evaluator. Completion removes the four `ZeroCount.lean` axioms and the associated zero-count-wrapper audit failures, but does not by itself imply overall project completion.
+
+The current source/API anchors are Mathlib's [`JensenFormula`](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Complex/JensenFormula.html), the [Guth–Maynard paper](https://arxiv.org/html/2405.20552v2), and the explicit [Ingham estimate](https://arxiv.org/abs/2507.15184). Proof status remains determined solely by compiled Lean and the dependency audit.
 
 ## Defensible Current Claim
 

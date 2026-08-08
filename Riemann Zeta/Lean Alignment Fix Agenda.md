@@ -97,23 +97,40 @@ This table supersedes any unqualified use of “complete” in the chronological
 | 11 | **Finite/conditional layer complete** | The Halász–Montgomery consequence is derived from explicit `MontgomeryMeanValue`; its repaired `[0,T]` convention is compatible with #13. The analytic mean-value proposition remains unproved. |
 | 12 | **Conditional/concrete layer complete** | The concrete `ResidualZeroBoundProp` follows from three explicit source-facing propositions. Those analytic propositions remain unproved and include the hard Type-II reduction. |
 | 13 | **Conditional/normalized layer complete** | Shifted covering, translation, phase preservation, and epsilon normalization follow from two explicit analytic inputs. `DetectorBetaShiftProp` and the unit-zero multiplicity proposition remain unproved. |
-| 14 | **Verified complete at the planned conditional boundary** | F-01 through F-10 are kernel-checked as one deduction. The public theorem derives the central Type-I slab and global dyadic reduction from ten named primitive inputs; all 21 newly audited theorems pass with only permitted logical dependencies. |
+| ~~14~~ | **Verified complete at the planned conditional boundary** | F-01 through F-10 are kernel-checked as one deduction. The public theorem derives the central Type-I slab and global dyadic reduction from ten named primitive inputs; all 21 newly audited theorems pass with only permitted logical dependencies. |
 
 Therefore #1–#8 close repair or evaluation defects, #9–#13 close only their explicit finite/conditional scopes, and #14 closes the primitive-input conditional transfer milestone. The full repository does not satisfy the non-negotiable completion conditions while 13 project axioms and four audited forbidden dependencies remain.
 
 ## Five Remaining Items: Exhaustive Completion Contract
 
-Only Shitlist #15–#19 remain. They are ordered by dependency, not by estimated effort. Each item has a bounded mathematical responsibility and an objective completion test. The list is exhaustive: every current direct project axiom, every primitive premise of #14, the Guth–Maynard large-values theorem, final integration, audit synchronization, documentation, and the principal runner are assigned below.
+Only Shitlist #15–#19 remain. They are bounded work packages, not a strict serial order; the dependency graph requires a first and second pass through #15 around #17. Each item has a discrete mathematical responsibility and an objective completion test. The list is exhaustive: every current direct project axiom, every primitive premise of #14, the Guth–Maynard large-values theorem, final integration, audit synchronization, documentation, and the principal runner are assigned below.
+
+The canonical dependency view is [`Proof Architecture.md`](Proof%20Architecture.md). This table is authoritative for task numbering and acceptance tests; the diagram and `Research Agenda Progress.MD` must be updated in the same change whenever a status, obligation, or dependency changes.
 
 | Item | Discrete responsibility | Required Lean deliverable | Completion test |
 |---:|---|---|---|
-| 15 | **Zeta zero-count foundations** | In `ZeroCount.lean` and focused supporting modules: replace its four axioms with proofs; prove the ordinary unit-height `LocalZeroMultiplicityBoundProp`; and prove the concrete Huxley and Ingham zero-density inputs for `N`. | No project axiom remains in the zero-count layer; `zeta_growth_bound_native`, `zeta_lower_bound_native`, the local-zero theorem, `HuxleyZeroDensity (fun σ T => N σ T)`, and `InghamZeroDensity (fun σ T => N σ T)` all pass the transitive audit. |
+| 15 | **Zeta zero-count foundations and classical density endpoints** | First repair the exact interfaces and replace the four `ZeroCount.lean` axioms with source-faithful proofs. Use a high-threshold Jensen argument to prove the ordinary unit-height `LocalZeroMultiplicityBoundProp`. After #17 supplies the required mean-value machinery, prove the concrete Ingham and Huxley zero-density inputs for `N`. | No project axiom remains in the zero-count layer; `zeta_growth_bound_native`, `zeta_lower_bound_native`, the local-zero theorem, `HuxleyZeroDensity (fun σ T => N σ T)`, and `InghamZeroDensity (fun σ T => N σ T)` all pass the transitive audit. The item is not crossed out after the foundation pass alone. |
 | 16 | **Beta-removal theorem** | Redesign the malformed smoothing/contour interfaces, replace all seven `BetaDependence.lean` axioms, and prove `DetectorBetaShiftProp` from genuine Fourier, decay, contour-shift, truncation, averaging, and pigeonhole lemmas. | `BetaDependence.lean` contains no project axiom, `True` placeholder, unconstrained error, or conclusion-shaped premise; the concrete beta-shift theorem passes the transitive audit. |
 | 17 | **Arithmetic coefficients and Montgomery mean value** | Prove `DivisorCountBoundProp`, `FactorizationCountBoundProp`, and `MontgomeryMeanValue` in their current uniform quantified forms, repairing the statements first if source comparison exposes an error. | All three propositions have named kernel-checked witnesses; the powered-coefficient and Halász–Montgomery downstream theorems specialize without these hypotheses. |
 | 18 | **Type-II residual analysis and Goal C integration** | Prove `TypeIContourTypeIICoverProp`, the concrete `TypeIIFourthMomentReductionProp`, and `TwistedZetaFourthMomentProp`; then specialize `conditionalZeroDensityTransfer` using #15–#18 so its only remaining premise is `GuthMaynardLargeValues`. | A public audited theorem derives the concrete full-range zero-density result from `GuthMaynardLargeValues` alone. No other analytic or arithmetic proposition parameter remains. |
 | 19 | **Guth–Maynard large values and final project integration** | Repair and prove the decoupling/incidence layer, remove its two axioms, formalize and prove `GuthMaynardLargeValues`, apply the #18 theorem and the existing combined-exponent transfer, synchronize every public document and audit entry, and retain reusable results in source-faithful modules. | The concrete Guth–Maynard and combined zero-density theorems are project-theorem complete; all direct-axiom and prohibited-proof scans are empty; all public audits pass; every build is warning-free; and `run_lake_build.bat` returns `PASS`/`0`. |
 
 Completing all five rows is, by definition, completion of the repository's current research agenda: Goals A–D are proved in Lean, the useful Goal E infrastructure is retained and documented, every integrity gate passes, and no untracked mathematical hypothesis remains. Upstream submission to Mathlib is optional follow-on work and is not a blocker for this repository-completion claim.
+
+### Conclusive Plan for Shitlist #15
+
+Shitlist #15 is one discrete acceptance item with an internal dependency break; it is not a sixth task. Execute and verify it through these gates:
+
+1. **Statement gate:** audit the rectangle convention, multiplicity convention, sigma ranges, signs, constants, and eventual thresholds. Repair any interface that cannot express the source theorem faithfully before proving it.
+2. **Zeta-foundation gate:** eliminate the four direct `ZeroCount.lean` axioms by proving the right-half-plane bound from the Dirichlet-series/Euler-product region, the left-half-plane bound from the functional equation and explicit Gamma control, the strip bound by a source-faithful convexity argument, and a concrete positive Euler-product lower bound. Delete obsolete wrappers rather than retaining parallel axiomatic paths.
+3. **Local-zero gate:** prove a stronger uniform unit-rectangle zero bound with a sufficiently large `T₀` so the Jensen discs avoid the pole at `1`; apply Mathlib's Jensen zero-count inequality and bridge its divisor/order notion to the project's `analyticVanishingOrder`; then specialize to `LocalZeroMultiplicityBoundProp`.
+4. **Mean-value dependency gate:** complete the relevant #17 Montgomery/Halász–Montgomery machinery. This is a real dependency of the classical density proofs, so #15 may remain in progress while #17 is completed.
+5. **Density gate:** formalize and prove source-faithful Ingham and Huxley estimates for the project's symmetric multiplicity-weighted `N`, including the conversion from the classical positive-ordinate convention where required.
+6. **Acceptance gate:** add every new public theorem to `Audit.lean`, build all affected modules without warnings, run the principal evaluator, and synchronize this agenda, `Research Agenda Progress.MD`, and `Proof Architecture.md`.
+
+The expected measurable effect of completing #15 is that the four direct axioms in `ZeroCount.lean` disappear, the two current zero-count-wrapper audit failures disappear, and the local-zero, Huxley, and Ingham propositions become named audit-clean project theorems. The repository will still remain globally incomplete until #16–#19 pass their own tests.
+
+Primary design references are Mathlib's [`JensenFormula`](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Complex/JensenFormula.html) API for the local zero count, the source [Guth–Maynard paper](https://arxiv.org/html/2405.20552v2) for the Huxley branch and target exponents, and the explicit [Ingham zero-density formulation](https://arxiv.org/abs/2507.15184) for checking the classical exponent and logarithmic loss. These references guide statements; only Lean's kernel-checked dependencies determine completion.
 
 ## Historical Files Ordered by Estimated Repair Difficulty
 
@@ -134,7 +151,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 11 | ~~`RiemannZeta/GuthMaynard/MeanValue.lean`~~ | **Finite/conditional layer completed 8 August 2026:** removed the Montgomery mean-value axiom, proved the finite consequence from an explicit input, and repaired the interval convention to `[0,T]`, consumable by #13 at height `3T`. The analytic mean-value proposition remains unproved. | Hard—finite/conditional layer complete; analytic theorem open |
 | 12 | ~~`RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, `ZeroDetector.lean`, and `TypeIIZeros.lean`~~ | **Conditional/concrete layer completed:** coverage is eventual in height and source-range restricted; the generic count is identified with the concrete analytic-multiplicity residual count; and the concrete `ResidualZeroBoundProp` follows from the three explicit analytic inputs. Proving those inputs remains Goal C. | Very hard—conditional/concrete layer complete |
 | 13 | ~~`RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `DirichletPolynomial.lean`, `Separated.lean`, `ZeroDetector.lean`, and `ZeroCount.lean`~~ | **Conditional/normalized layer completed 8 August 2026:** the local input is now an unshifted unit-zero multiplicity estimate; shifted-bin covering, raw loss accounting, `[0,3T]` translation, coefficient phase twisting with norm preservation, and pure epsilon-power normalization are kernel-checked. `DetectorBetaShiftProp` and the unit-zero estimate remain explicit #16/#15 analytic obligations. | Very hard—conditional/normalized layer complete |
-| 14 | `RiemannZeta/GuthMaynard/Transfer.lean` and prerequisites | **Completed at the primitive-input conditional boundary 8 August 2026:** F-01 through F-10, the central Type-I estimate, dyadic-to-global reduction, residual assembly, and high-`σ` branch are kernel-checked. | Very hard—complete |
+| ~~14~~ | ~~`RiemannZeta/GuthMaynard/Transfer.lean` and prerequisites~~ | **Completed at the primitive-input conditional boundary 8 August 2026:** F-01 through F-10, the central Type-I estimate, dyadic-to-global reduction, residual assembly, and high-`σ` branch are kernel-checked. | Very hard—complete |
 | 15 | Zero-count foundations | See the authoritative five-item completion contract above. | Very hard—open |
 | 16 | Beta removal | See the authoritative five-item completion contract above. | Very hard—open |
 | 17 | Arithmetic coefficients and Montgomery mean value | See the authoritative five-item completion contract above. | Very hard—open |
@@ -319,10 +336,11 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 
 This phase is exactly Shitlist #15–#18:
 
-1. **#15:** finish the zeta zero-count foundations, local unit-height bound, and Huxley/Ingham inputs.
+1. **#15 first pass:** finish the zeta analytic foundations and local unit-height Jensen bound.
 2. **#16:** prove the beta-removal theorem after replacing the malformed Fourier/contour interfaces.
 3. **#17:** prove the divisor-count, factorization-count, and Montgomery mean-value inputs.
-4. **#18:** prove the three Type-II inputs and specialize the completed transfer to a theorem whose only premise is `GuthMaynardLargeValues`.
+4. **#15 second pass:** use #17's mean-value machinery to prove the concrete Ingham and Huxley inputs. Do not cross out #15 before this pass is complete.
+5. **#18:** prove the three Type-II inputs and specialize the completed transfer to a theorem whose only premise is `GuthMaynardLargeValues`.
 
 **Exit evidence:**
 
