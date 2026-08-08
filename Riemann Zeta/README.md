@@ -45,7 +45,7 @@ run_lake_build.bat
 
 For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The default root imports every intended production module and builds with zero Lean warnings. The audit list and discovered production theorem set currently both contain 123 declarations. The audit exits nonzero because 6 theorems have project-specific axiom dependencies; no audited theorem depends on `sorryAx`. The zeta-zero finiteness, dyadic-scale, weighted-selection, finite-extraction, and conditional Type-I extraction results all pass, as do the earlier detector, powered-coefficient, mean-value consequence, and generic Type II deductions. Fourteen direct project axioms remain, so the principal proof runner correctly reports overall `FAIL` until those obligations are discharged.
+The runner performs five warning-failing Lean stages: the default production build, redundant explicit production-module coverage, direct elaboration of `TestExp.lean`, direct elaboration of `test_separated.lean`, and the transitive axiom audit. Its integrity scans use `--no-ignore` so ordinary ignored directories cannot hide Lean source. The default root imports every intended production module and builds with zero Lean warnings, and both retained examples elaborate with zero warnings. The audit list and discovered production theorem set currently both contain 123 declarations. The audit exits nonzero because 6 theorems have project-specific axiom dependencies; no audited theorem depends on `sorryAx`. Fourteen direct project axioms remain, so the principal proof runner correctly reports overall `FAIL` until those obligations are discharged.
 
 ---
 

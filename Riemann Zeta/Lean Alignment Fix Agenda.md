@@ -55,11 +55,11 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 
 | Finding | Affected Shitlist items | Corrected assessment |
 |---|---|---|
-| The default production build is not a repository-wide build. There are 60 Lean files on disk, of which 32 are outside the 28-file production/audit perimeter. | #2, #6, #8 | **Reopened as a verification-perimeter defect.** Every retained file must be classified and compiled or removed. |
-| Five retained auxiliary files fail standalone elaboration: `RiemannZeta/GuthMaynard/test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean`. | #2, #8 | **Open.** A warning-free root build is insufficient under `AGENTS.md`. |
-| `clean_cache.lean` deletes `.lake/build` through elaboration-time `#eval`; `build_it.lean` invokes a hard-coded user-specific Lake path through `#eval`. | #8 | **Open.** Side-effect utilities must not be silently treated as proof-source exclusions. |
-| Several files historically described as deleted remain as empty or comment-only tombstones, including `RiemannZeta/GuthMaynard/ExtractSeparated_scratch.lean`. | #2 | **Historical record corrected.** The mathematical experiments were neutralized, but the paths were not all removed and retained-file compliance was not demonstrated. |
-| `Audit.lean` genuinely checks transitive dependencies for 123 synchronized production theorems, but it does not audit declarations outside that explicit production list. | #6 | **Production audit complete; repository-wide audit incomplete.** |
+| The default production build was not a repository-wide build: 32 of 60 Lean files were outside the 28-file production/audit perimeter. | #2, #6, #8 | **Resolved:** #2 removed 30 obsolete auxiliary files; #8 now runs both retained anonymous examples as separate warning-failing stages. |
+| Five retained auxiliary files failed standalone elaboration: `RiemannZeta/GuthMaynard/test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean`. | #2 | **Resolved:** all five were unreferenced duplicates, broken API probes, or stale experiments and have been deleted. |
+| `clean_cache.lean` deleted `.lake/build` through elaboration-time `#eval`; `build_it.lean` invoked a hard-coded user-specific Lake path through `#eval`. | #2, #8 | **Resolved by deletion:** neither utility was imported or needed by the principal runner. |
+| Several files historically described as deleted remained as empty or comment-only tombstones. | #2 | **Resolved:** every empty/tombstone Lean file has been deleted; no zero-byte Lean file remains. |
+| `Audit.lean` checks transitive dependencies for 123 synchronized production theorems. | #6 | **Complete for the cleaned tree's named public theorems:** the only auxiliary Lean declarations are anonymous examples. The two examples still need runner inclusion under #8. |
 | `GuthMaynardLargeValues` omits explicit positivity/eventual quantifiers, adds `1 ≤ V`, and uses the opposite exponential sign from Theorem 1.1 without a proved equivalence bridge. | #14, #18, Goal A | **Statement repair required before downstream completion can be claimed.** |
 | `k_selection` omits part of Guth–Maynard equation (13.1) in its second branch and does not formalize the required upper-scale hypothesis or boundedness of `k`. | #14 | **Prerequisite incomplete.** The existing theorem is axiom-free but not the full source step. |
 | The explicit `powCoeff` expansion is not proved equal to `powPoly`; `polynomial_power_identity` is only a definitional structural-power identity. | #10, #14 | **#10 conditional estimate retained; F-07 bridge remains open.** |
@@ -69,7 +69,7 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 | #12 and #13 contain valid finite/conditional deductions, but their strongest proposition inputs package the hard analytic reductions. | #12, #13 | **Integrity/conditional layers complete only. Analytic source theorems remain open.** |
 | The paper still states an expected audit count of 17 failures in one reproducibility passage, while the current production audit reports 6. | Documentation gate | **Synchronization condition fails.** |
 
-Current clean facts are narrower: no Lean file contains `sorry`, `admit`, or `sorryAx`; the production graph builds with zero warnings; the production audit synchronizes 123 declarations and reports 6 forbidden dependency failures; and the source contains 14 direct project axioms. The principal rerun in `logs/overall_proof_20260808_110343.log` confirms those facts and exits nonzero honestly, but it does not establish all-file compliance.
+Current clean facts are narrower: the repository has 30 Lean files, no empty/tombstone Lean file, and no Lean file containing `sorry`, `admit`, or `sorryAx`; the production graph and both auxiliary examples elaborate with zero warnings under the five-stage principal runner; the production audit synchronizes 123 declarations and reports 6 forbidden dependency failures; and the source contains 14 direct project axioms. The runner covers every retained Lean file but correctly exits nonzero on the audit and axiom gates.
 
 ## Files Ordered by Estimated Repair Difficulty
 
@@ -78,13 +78,13 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | Rank | File or group | Required repair | Estimated difficulty |
 |---:|---|---|---|
 | 1 | ~~`RiemannZeta/GuthMaynard/TestAxiom.lean`~~ | **Completed 8 August 2026:** deleted the isolated file containing the deliberately false axiom and its dependent theorem. | Trivial—complete |
-| 2 | Auxiliary tests, scratch files, and tombstones, including `ExtractSeparated_scratch.lean` and stale zero-count-model tests | **Reopened 8 August 2026:** the admitted proof terms are gone, but several supposedly deleted paths remain and five retained auxiliary files fail elaboration. Classify, repair, or remove every non-production Lean file. | Easy–moderate—open |
+| 2 | ~~Auxiliary tests, scratch files, tombstones, and side-effect utilities~~ | **Completed after re-audit 8 August 2026:** removed 30 unreferenced obsolete Lean files, preserved the useful power-expansion idea as Markdown, and directly elaborated both retained anonymous examples without warnings. | Easy–moderate—complete |
 | 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
 | 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
-| 6 | `RiemannZeta/Audit.lean` | **Production portion completed:** transitive checks cover a synchronized list of 123 production theorems. **Reopened repository-wide portion:** excluded auxiliary/global declarations are not audited. | Easy–moderate—partial |
+| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed for all named public theorems in the cleaned tree:** transitive checks cover the synchronized list of 123 production theorems; the only auxiliary declarations are anonymous examples. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
-| 8 | Warning-producing files and `run_lake_build.bat` | **Production portion completed:** the root build and production audit fail on warnings. **Reopened all-file portion:** the runner does not elaborate every retained Lean file and omits two side-effectful utilities. | Easy–moderate—partial |
+| 8 | ~~Warning-producing files and `run_lake_build.bat`~~ | **Completed after re-audit 8 August 2026:** all five Lean stages—including both retained examples—fail on any `warning:` diagnostic; integrity scans use `--no-ignore`; current stages 1–4 pass warning-free while the audit and axiom gates fail honestly. | Easy–moderate—complete |
 | 9 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | **Integrity repair completed:** the detector is genuine and support/smoothing lemmas are proved. The encoded bound is only uniform in `n` after fixing `T`; source-uniform control remains an upstream obligation. | Moderate—conditional layer complete |
 | 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | **Conditional coefficient proof completed:** the theorem is substantive from two explicit arithmetic inputs. The inputs and the equality between structural power and the explicit convolution-coefficient expansion remain open. | Moderate–hard—partial |
 | 11 | ~~`RiemannZeta/GuthMaynard/MeanValue.lean`~~ | **Completed 8 August 2026:** removed the Montgomery mean-value axiom and exact-constant wrapper, corrected the statement to one absolute implied constant, and proved the finite large-value count from that explicit input. | Hard—integrity alignment complete; analytic theorem remains open |
@@ -103,7 +103,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 **Files:**
 
 - [x] `RiemannZeta/GuthMaynard/TestAxiom.lean` — deleted 8 August 2026 after confirming that no module imported or referenced its declarations
-- [ ] Auxiliary scratch/test cleanup — **reopened 8 August 2026:** admitted terms were removed, but retained tombstones and five standalone elaboration failures show that all-file cleanup was not completed
+- [x] Auxiliary scratch/test cleanup — **completed after re-audit 8 August 2026:** removed all obsolete, failing, empty, tombstone, duplicate, and side-effectful Lean files; retained only two compiling anonymous examples
 - [x] `TestExp.lean` and `test_separated.lean` — converted to complete examples on 8 August 2026; `test_zeta.lean` — deleted rather than retaining an admitted Euler-product theorem
 - [x] `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` — deleted 8 August 2026 after confirming that canonical code did not import or use them
 
@@ -121,7 +121,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 - every retained test compiles; and
 - removed files and any preserved knowledge are documented.
 
-**Current re-audit status:** this phase fails its exit evidence because five retained auxiliary files do not compile and multiple supposedly deleted/tombstoned paths remain.
+**Current re-audit status:** Phase 0 passes its exit evidence. The only retained non-production Lean files are `TestExp.lean` and `test_separated.lean`; both elaborate with exit code 0 and no warnings.
 
 ### Phase 1: Establish trustworthy verification infrastructure
 
@@ -139,7 +139,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 4. **Completed 8 August 2026:** the audit exits nonzero and identifies every audited theorem with a `sorryAx` or project-specific axiom dependency.
 5. **Completed 8 August 2026:** removed the unused Huxley premise from the canonical combined-transfer signature, corrected the documentation, and deleted the stale, unreferenced `ScratchTransfer.lean` duplicate.
 6. **Completed 8 August 2026:** extended the root import graph to all intended production modules after their compilation repairs.
-7. **Open after re-audit:** extend the verification policy to declarations in every retained Lean file, or explicitly remove files that are not part of the project.
+7. **Completed during reopened #2:** removed every obsolete auxiliary named declaration. The two retained auxiliary files contain only anonymous examples and both elaborate directly.
 
 **Exit evidence:**
 
@@ -149,7 +149,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 The audit may initially report failures. It must not suppress them merely to keep the default build green.
 
-The synchronized audit is trustworthy for its production list. It is not evidence that auxiliary/global theorems outside that list were checked.
+The synchronized audit covers every named public theorem in the cleaned tree. The retained auxiliary files contain anonymous examples rather than audit-list declarations.
 
 ### Phase 1A: Enforce a warning-free proof run
 
@@ -176,7 +176,8 @@ The synchronized audit is trustworthy for its production list. It is not evidenc
 4. **Completed 8 August 2026:** removed the admitted coefficient theorem and implemented the actual detector definition rather than disabling proof-integrity diagnostics.
 5. **Completed 8 August 2026:** added a runner gate that makes any Lean `warning:` line fail its build/audit stage.
 6. **Completed 8 August 2026:** used no linter-disable option, warning filter, or output suppression.
-7. **Open after re-audit:** make the runner elaborate every retained safe Lean file and reject excluded failing tests; replace or relocate `clean_cache.lean` and `build_it.lean` so proof checking has no elaboration-time filesystem/process side effects.
+7. **Completed after reopened #2:** deleted `clean_cache.lean`, `build_it.lean`, and all failing auxiliary tests; added separate warning-failing runner stages for `TestExp.lean` and `test_separated.lean`.
+8. **Completed after re-audit:** strengthened warning detection to find `warning:` anywhere in Lean output and strengthened Lean-source integrity scans with `--no-ignore`.
 
 **Exit evidence:**
 
@@ -184,7 +185,7 @@ The synchronized audit is trustworthy for its production list. It is not evidenc
 - the principal runner log contains no project `warning:` line; and
 - an intentionally introduced warning in a temporary verification fixture is detected by the runner gate before that fixture is removed.
 
-**Current re-audit status:** the production warning gate passes, but the all-file proof-run condition fails because five auxiliary files do not elaborate and 32 Lean files lie outside the production/audit perimeter.
+**Current re-audit status:** Phase 1A passes its all-retained-file and zero-warning exit evidence. The runner's overall status remains `FAIL` for mathematical integrity reasons, not warning or coverage defects.
 
 ### Phase 2: Repair finite and arithmetic infrastructure
 
@@ -560,13 +561,39 @@ Every completed repair iteration must record:
 | Verification | Focused builds of `ZeroCount`, `ZeroDetector`, `Separated`, and `ExtractSeparated`, the full default build, `lake env lean test_separated.lean`, and `lake env lean scratch_pow.lean` succeed with zero Lean warnings. The principal runner logged to `logs/overall_proof_20260808_104536.log`: both build stages passed warning-free; the synchronized audit reported 123/123 declarations and the expected 6 unrelated failures; the prohibited-placeholder, unsafe-bypass, and audit-quality scans passed; and the project-axiom scan correctly found 14 remaining declarations. Overall exit code remains honestly `1`. |
 | Honest analytic boundary | `DetectorBetaShiftProp` and `LocalZeroMultiplicityBoundProp` remain unproved proposition specifications. The former belongs to the beta-removal/Fourier work; the latter requires the Jensen/growth/local-zero analysis. Consequently #13 completes the finite and conditional deduction, not those two analytic theorems and not the full Section 13.1 transfer. |
 
+### Completed Reopened Iteration: Shitlist #2
+
+| Field | Record |
+|---|---|
+| Target | All 32 Lean files that lay outside the 28-file production/audit perimeter at the highly critical re-audit. |
+| Previous defect | Five auxiliary files failed elaboration; 18 files were zero-byte or comment-only tombstones; several remaining files duplicated canonical theorems or stale APIs; `clean_cache.lean` and `build_it.lean` performed filesystem/process actions through `#eval`; and `scratch_pow.lean` contained a useful but unaudited proof plan. |
+| Reference check | Repository-wide import and reference searches found no production import or canonical theorem dependency on any deletion target. `TestExp.lean` and `test_separated.lean` were the only useful theorem-free regression examples. |
+| Result | Deleted 30 obsolete auxiliary Lean files: 21 under `RiemannZeta/GuthMaynard`, eight tracked root utilities/tests, and the ignored stale `scratch/Test.lean`. Retained only `TestExp.lean` and `test_separated.lean`. The tree now contains 30 Lean files total and no zero-byte Lean file. |
+| Knowledge preservation | Converted the substantive `scratch_pow.lean` idea into `Polynomial Power Expansion Notes.md`, including the intended expansion statement, the distinction from the reflexive structural identity, boundary concerns, and a likely finite-fiber proof route. No theorem is claimed in that note. |
+| Verification | Direct `lake env lean TestExp.lean` and `lake env lean test_separated.lean` each exited 0 with no warning or error output. Repository inventory confirms 30 Lean files total, exactly two auxiliaries, and no empty Lean files. Repository-wide scans report zero `sorry`/`admit`/`sorryAx` matches, zero unsafe-bypass matches, and the unchanged 14 direct project axioms. The principal runner logged to `logs/overall_proof_20260808_111318.log`: both production build stages passed warning-free, the audit synchronized 123/123 declarations and reported the same 6 axiom-dependent failures, and overall exit code remained honestly `1`. |
+| Audit impact | The synchronized audit remains correctly scoped to 123 named production theorems. The retained auxiliary files contain anonymous `example` declarations only, so the cleaned tree has no named auxiliary theorem omitted from the audit. |
+| Documentation | Updated this agenda and `Research Agenda Progress.MD`; preserved the power-expansion research content in its own Markdown note. Historical records remain as chronology, while this record is the current disposition. |
+| Remaining obstruction | None for #2. Shitlist #8's runner-coverage follow-up is completed in the next record. |
+
+### Completed Reopened Iteration: Shitlist #8
+
+| Field | Record |
+|---|---|
+| Target | `run_lake_build.bat`, with status synchronization in README, paper, this agenda, and `Research Agenda Progress.MD`. |
+| Previous defect | The runner's warning gate covered production builds and the audit but omitted the two retained Lean examples. Its `findstr /B` check only recognized `warning:` at the start of a line, and its integrity scans respected ignore rules that could hide ordinary ignored Lean files. |
+| Result | Expanded the principal evaluation from three to five Lean stages: default production build, explicit production redundancy, `TestExp.lean`, `test_separated.lean`, and `Audit.lean`. Every stage uses the same nonzero-exit and warning-failure logic. Warning detection now finds `warning:` anywhere in stage output, and proof-integrity scans use `rg --no-ignore`. |
+| Coverage | The current tree contains 30 Lean files. The root build covers its 27-file production import graph, the audit is executed explicitly, and the two remaining files are executed explicitly as examples. No retained Lean file is outside the human-facing evaluation. |
+| Verification | `cmd /c run_lake_build.bat --no-pause` logged to `logs/overall_proof_20260808_112057.log`. Stages 1–4 passed with zero Lean warnings. Stage 5 synchronized 123 explicit and 123 discovered theorems and failed on the same 6 project-axiom dependencies. Integrity scans found no admitted-proof or unsafe-bypass material and correctly failed on 14 direct project axioms. Overall exit code was honestly `1`; the log contains no `warning:` diagnostic. |
+| Documentation | Updated runner coverage in `README.md` and `Paper_Riemann_Zeta.md`, corrected the paper's stale expected audit count from 17 to 6, and synchronized both agenda documents. |
+| Remaining obstruction | #8 has no remaining warning or retained-file coverage defect. The overall runner cannot pass until later Shitlist items remove the six audited dependency failures and all fourteen direct project axioms. |
+
 ### Re-Audit Correction to Historical Completion Records
 
 The iteration records above remain useful accounts of what each repair changed at that time, but their words “deleted,” “complete,” and “every” must be read subject to the highly critical re-audit near the top of this file. In particular:
 
-- #2 did remove the admitted content that motivated the task, but all named/tombstone paths were not absent at re-audit time and retained auxiliary compilation was not clean;
-- #6 established a real synchronized transitive audit for the production theorem list, not for every declaration in every Lean file;
-- #8 established warning-free production builds and warning gates, not an all-file elaboration gate;
+- #2's initially incomplete deletion claim has now been repaired: every obsolete/tombstone path is absent and both retained examples elaborate cleanly;
+- #6's synchronized transitive audit now covers every named public theorem in the cleaned tree; the two auxiliary declarations are anonymous examples;
+- #8's initially production-only warning gate now covers both retained examples and uses ignore-resistant integrity scans;
 - #9 proves the fixed-`T` property actually encoded, not the source-uniform detector coefficient estimate;
 - #10 proves a conditional coefficient bound but not the structural-power/explicit-coefficient identity or its two arithmetic inputs;
 - #12 and #13 complete honest finite/conditional deductions, while their hard analytic proposition inputs and concrete downstream instantiations remain open.
@@ -575,11 +602,10 @@ These corrections do not invalidate the kernel-checked lemmas. They narrow the c
 
 ## Current Priority
 
-Before implementing Shitlist #14, close three prerequisite integrity/source gates:
+Before implementing Shitlist #14, close the remaining source-facing prerequisite gates:
 
-1. repair or remove every excluded failing/tombstone Lean file and make `run_lake_build.bat` account for every retained safe Lean file;
-2. repair `GuthMaynardLargeValues` and prove the sign-convention bridge needed for exact source correspondence; and
-3. repair the full equation (13.1) `k`-selection theorem and the structural-power/explicit-coefficient expansion.
+1. repair `GuthMaynardLargeValues` and prove the sign-convention bridge needed for exact source correspondence; and
+2. repair the full equation (13.1) `k`-selection theorem and the structural-power/explicit-coefficient expansion.
 
 Then proceed to #14: delete the conclusion-equivalent transfer postulate and implement F-01 through F-10 from individually named upstream hypotheses. The beta-removal and decoupling interfaces must be redesigned before they can serve as legitimate inputs; #13's `DetectorBetaShiftProp` and `LocalZeroMultiplicityBoundProp` must eventually be proved rather than weakened.
 

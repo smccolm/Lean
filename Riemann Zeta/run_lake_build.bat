@@ -47,8 +47,8 @@ set "FAILED=0"
   echo.
   echo Lean verifies proofs by compiling their declarations and checking
   echo their dependencies in the kernel. This runner cannot make an
-  echo unproved theorem true; it fails when a production module, audit,
-  echo proof-integrity gate, or zero-warning gate fails.
+  echo unproved theorem true; it fails when a production module, retained
+  echo example, audit, proof-integrity gate, or zero-warning gate fails.
   echo.
 ) > "%LOG%"
 
@@ -58,9 +58,11 @@ echo ============================================================
 echo Log: %LOG%
 echo.
 
-call :run_lake "1/3 Default project build" build RiemannZeta
-call :run_lake "2/3 Explicit production-module coverage" build RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.Decoupling RiemannZeta.GuthMaynard.LargeValues
-call :run_lake "3/3 Current Lean audit module" env lean RiemannZeta\Audit.lean
+call :run_lake "1/5 Default project build" build RiemannZeta
+call :run_lake "2/5 Explicit production-module coverage" build RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.Decoupling RiemannZeta.GuthMaynard.LargeValues
+call :run_lake "3/5 Retained example: complex exponential" env lean TestExp.lean
+call :run_lake "4/5 Retained example: separated selection" env lean test_separated.lean
+call :run_lake "5/5 Current Lean audit module" env lean RiemannZeta\Audit.lean
 
 echo.
 echo [INTEGRITY] Repository-wide prohibited-proof scan
@@ -126,7 +128,7 @@ set "STEP_EXIT=%ERRORLEVEL%"
 type "%STEP_LOG%"
 type "%STEP_LOG%" >> "%LOG%"
 
-findstr /B /C:"warning:" "%STEP_LOG%" >nul 2>&1
+findstr /C:"warning:" "%STEP_LOG%" >nul 2>&1
 set "WARNING_SCAN=%ERRORLEVEL%"
 
 if "%STEP_EXIT%"=="0" (
@@ -157,7 +159,7 @@ if "%STEP_EXIT%"=="0" (
 exit /b 0
 
 :scan_sorry
-rg -n "\b(sorry|admit)\b|sorryAx" -g "*.lean" . > "%STEP_LOG%" 2>&1
+rg --no-ignore -n "\b(sorry|admit)\b|sorryAx" -g "*.lean" . > "%STEP_LOG%" 2>&1
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no sorry, admit, or sorryAx text found in Lean files.
@@ -177,7 +179,7 @@ if "%SCAN_EXIT%"=="1" (
 exit /b 0
 
 :scan_axioms
-rg -n "^\s*(axiom|constant)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+rg --no-ignore -n "^\s*(axiom|constant)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no project axiom or constant declarations found in Lean files.
@@ -197,7 +199,7 @@ if "%SCAN_EXIT%"=="1" (
 exit /b 0
 
 :scan_unsafe
-rg -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+rg --no-ignore -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no prohibited unsafe proof bypass found in Lean files.

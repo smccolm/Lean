@@ -7,7 +7,7 @@
 
 The repository contains useful kernel-checked finite mathematics and several honest conditional deductions. It does **not** contain a verified formalization of the Section 13.1 zero-density transfer, the Guth–Maynard large-values theorem, or the principal analytic inputs needed by either result.
 
-The current default build is warning-free for the root-imported production graph. That is a narrower claim than repository-wide verification. There are 60 Lean files on disk: the root library plus its 26 imported modules and `Audit.lean` form the 28-file production/audit perimeter; 32 other Lean files are outside it. Five retained auxiliary files fail standalone elaboration, and two excluded utility files execute filesystem or process actions through `#eval`. The repository therefore does not presently satisfy the all-Lean-file policy in `AGENTS.md`.
+The current five-stage principal runner covers every retained Lean file in its intended role: the root build covers the 27-file production graph, `Audit.lean` runs as the explicit dependency audit, and `TestExp.lean` plus `test_separated.lean` elaborate as separate warning-failing example stages. There are 30 Lean files on disk, and all non-audit elaboration stages pass with zero warnings. The audit and direct-axiom gate still fail honestly on the known mathematical assumptions.
 
 The production Guth–Maynard source still contains 14 direct project `axiom` declarations: seven in `BetaDependence.lean`, two in `Decoupling.lean`, one in `Transfer.lean`, and four in `ZeroCount.lean`. No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency.
 
@@ -16,7 +16,7 @@ The production Guth–Maynard source still contains 14 direct project `axiom` de
 | Severity | Finding | Consequence |
 |---|---|---|
 | Critical | `Transfer.lean` defines `AlgebraicCombinationProp` to be the target zero-density conclusion, postulates that proposition, and returns it from `conditionalZeroDensityTransfer`. | Goal B has no mathematical proof progress. The current transfer is circular and must be removed, not generalized. |
-| Critical | Repository-wide build coverage is false. `test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean` fail standalone elaboration. Numerous other retained files are empty or tombstone-only. | Shitlist #2, #6, and #8 were marked complete too broadly. The runner proves only the production perimeter, not compliance of every Lean file. |
+| Resolved in #2/#8 | The re-audit found five failing auxiliary files, numerous empty/tombstone files, stale model experiments, two elaboration-time side-effect utilities, and a runner that omitted retained examples. | Thirty obsolete Lean files were removed, the useful expansion idea was preserved as Markdown, and the two retained anonymous examples are now separate warning-failing runner stages. |
 | Critical | `BetaDependence.lean` contains `smooth_compact_is_schwartz ... : True`; `beta_dependence_removal` ignores its smoothing data and simply applies `pigeonhole_integral_bound`, which already supplies essentially the desired conclusion. `contour_shift_to_real_line` permits an unconstrained existential error. | The beta-removal layer is not merely unproved; several interfaces are vacuous or conclusion-shaped and require redesign before proof work. |
 | Critical | `l2_parabola_incidence_bound` bounds the cardinality of an arbitrary finite 1-separated real set without any height interval. This is false as stated. The block indices in `DecouplingProp` also do not match the separate block-decomposition convention. | Shitlist #17 requires statement repair before the decoupling axioms can be meaningfully discharged. |
 | High | `k_selection` does not formalize the full scale choice in Guth–Maynard equation (13.1): its second branch proves only the lower inequality, it lacks the source upper-scale hypothesis, it does not prove the upper inequality there, and it gives no uniform bound on `k`. | The exponent/scale infrastructure is insufficient for the F-07 to F-10 transfer chain despite being axiom-free. |
@@ -80,11 +80,12 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 ## Build, Audit, and Repository Status
 
 - `lake build` succeeds without Lean warnings for the default `RiemannZeta` library graph.
-- The principal runner log `logs/overall_proof_20260808_110343.log` records 123 explicit and 123 discovered production theorems, 6 forbidden-dependency failures, 14 direct project axioms, warning-free production builds, and an honest overall exit code of 1.
-- `Audit.lean` is a real transitive dependency audit for its synchronized production theorem list. It is **not** a repository-wide theorem audit: auxiliary/global declarations outside that list are not audited.
-- Standalone audit checks found five elaboration failures outside the production graph: a duplicate declaration in `RiemannZeta/GuthMaynard/test_pow.lean`, a nonexistent Mathlib import in `test_le_floor.lean`, a syntax error in `TestCauchy.lean`, and stale removed-API usage in `test7.lean` and `test8.lean`.
-- `clean_cache.lean` removes `.lake/build` during elaboration through `#eval IO.FS.removeDirAll`; `build_it.lean` invokes a hard-coded user-specific Lake executable through `#eval`. Neither belongs in an unchecked proof-source perimeter.
-- Numerous zero-byte or comment-only test/scratch files remain. In particular, `ExtractSeparated_scratch.lean` says only that it was deleted, but the file itself remains. Historical Shitlist records claiming every such path was deleted are therefore not literally accurate.
+- The completed-#8 principal runner log `logs/overall_proof_20260808_112057.log` records five Lean stages. The production builds and both retained examples pass with zero warnings; the audit synchronizes 123/123 declarations and reports 6 forbidden-dependency failures; the integrity scan reports 14 direct project axioms; and the overall exit code is honestly 1.
+- `Audit.lean` is a real transitive dependency audit for its synchronized production theorem list. The two remaining auxiliary Lean files contain anonymous `example` declarations rather than named public theorems, so the cleanup leaves no named auxiliary theorem outside the audit.
+- Shitlist #2 removed all five failing auxiliary files, all empty/comment-only Lean tombstones, stale zero-count-model experiments, duplicate scratch lemmas, and obsolete `#check` probes. No Lean file is empty.
+- `clean_cache.lean` and `build_it.lean` were deleted. Lean elaboration can no longer trigger their cache deletion or hard-coded external process invocation.
+- `Polynomial Power Expansion Notes.md` preserves the only substantive removed scratch idea and states explicitly that the structural-to-coefficient expansion remains unproved.
+- `TestExp.lean` and `test_separated.lean` are the only retained non-production Lean files. They are stages 3 and 4 of the principal runner and pass without warnings.
 - The prohibited-proof scan is clean for `sorry`, `admit`, and `sorryAx`. The project-axiom scan is not clean, and the vacuity scan finds `smooth_compact_is_schwartz : True` plus the unused `h_bound : True` in `Transfer.lean`.
 - README and paper synchronization is not complete; the paper's stale expected-failure count is one confirmed discrepancy.
 
@@ -92,7 +93,7 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: exact formal targets and infrastructure | **Partially achieved, with a statement-level defect.** Useful definitions and finite infrastructure exist, but `GuthMaynardLargeValues` does not yet match the source quantifiers/sign convention exactly, auxiliary Lean coverage is incomplete, and the scale/power bridge is unfinished. |
+| Goal A: exact formal targets and infrastructure | **Partially achieved, with a statement-level defect.** Useful definitions and finite infrastructure exist, the auxiliary Lean tree is clean, and the runner covers every retained Lean file. `GuthMaynardLargeValues` still does not match the source quantifiers/sign convention exactly, and the scale/power bridge is unfinished. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The only theorem with that name is circular. |
 | Goal C: discharge classical hypotheses | **Not achieved.** Fourteen direct axioms remain, strong analytic proposition inputs are unproved, and several beta/decoupling interfaces are malformed. |
 | Goal D: Guth–Maynard large-values theorem | **Not achieved.** `LargeValues.lean` contains no theorem proving the target; the decoupling layer is axiomatic and partly misstated. |
@@ -100,7 +101,7 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 
 ## Corrected Work Order
 
-1. Restore the verification perimeter: classify, repair, or remove every auxiliary Lean file; eliminate elaboration-time side-effect utilities from proof sources; and make the human-facing runner compile every retained Lean file or explicitly classify a safe exclusion.
+1. **Shitlists #2 and #8 completed:** all retained Lean files are classified, warning-failing runner stages cover both auxiliary examples, side-effect utilities are gone, and integrity scans use `--no-ignore`.
 2. Repair the formal targets in `Statements.lean`, including positivity/eventual quantifiers and a proved bridge between the `n^{it}` and `n^{-it}` sign conventions.
 3. Repair `k_selection` to match the complete equation (13.1) scale choice, including its hypotheses, both inequalities, and a bounded `k`; then prove the structural-power/explicit-coefficient expansion.
 4. Redesign the malformed beta-removal and decoupling propositions before attempting their proofs. Remove every `True` placeholder and conclusion-shaped input.
@@ -111,4 +112,4 @@ No existing Lean theorem performs this chain. `conditionalZeroDensityTransfer` c
 
 ## Defensible Current Claim
 
-The repository has a warning-free production build and a useful but incomplete Lean infrastructure layer: compact zeta-zero finiteness, an actual truncated Möbius detector, finite dyadic pigeonholing, weighted separated selection, and several kernel-checked conditional deductions. It does not yet verify the Section 13.1 transfer or the Guth–Maynard large-values theorem. Fourteen project axioms remain; the transfer is circular; important beta and decoupling interfaces are vacuous or incorrect; the source-facing large-values and `k`-selection statements need repair; and the all-file verification policy is violated by excluded failing and side-effectful Lean files.
+The repository has a warning-free production build, a cleaned auxiliary Lean tree, all-retained-file runner coverage, and a useful but incomplete Lean infrastructure layer: compact zeta-zero finiteness, an actual truncated Möbius detector, finite dyadic pigeonholing, weighted separated selection, and several kernel-checked conditional deductions. It does not yet verify the Section 13.1 transfer or the Guth–Maynard large-values theorem. Fourteen project axioms remain; the transfer is circular; important beta and decoupling interfaces are vacuous or incorrect; and the source-facing large-values and `k`-selection statements need repair.
