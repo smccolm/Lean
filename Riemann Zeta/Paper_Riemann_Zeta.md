@@ -156,6 +156,8 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 `RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 22 theorems depend on `sorryAx` or project-specific mathematical axioms. The table below is a selected declaration map, not a clean-audit certificate.
 
+Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
+
 | Theorem Name | Lean 4 Declaration | Submodule File | Mathlib Basis / Dependency |
 | :--- | :--- | :--- | :--- |
 | Conjugation | `dirichletPoly_conj` | `FiniteDirichletPolynomial.lean` | `cpow_conj`, `map_sum` |

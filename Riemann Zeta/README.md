@@ -23,6 +23,9 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/ZeroDetector.lean`](RiemannZeta/GuthMaynard/ZeroDetector.lean)**: Abstract formalization of the Zero Detector Dirichlet polynomial, Type I classification, and Type II bounds hypotheses.
 - **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Formulation of Dirichlet polynomial exponentiation and relations between large base values and powered values.
 - **[`RiemannZeta/GuthMaynard/InghamBound.lean`](RiemannZeta/GuthMaynard/InghamBound.lean)**: Statement of the Ingham bound hypothesis and definition of the combined zero-density transfer (F-12).
+- **[`RiemannZeta/GuthMaynard/HalaszMontgomery.lean`](RiemannZeta/GuthMaynard/HalaszMontgomery.lean)**: Compiling Halász–Montgomery interface and conditional consequence; its mean-value and Type II dependencies remain unproved.
+- **[`RiemannZeta/GuthMaynard/Decoupling.lean`](RiemannZeta/GuthMaynard/Decoupling.lean)**: Compiling decoupling statement infrastructure whose broad–narrow, incidence, and final bounds remain axiomatic.
+- **[`RiemannZeta/GuthMaynard/LargeValues.lean`](RiemannZeta/GuthMaynard/LargeValues.lean)**: Production module reserving the F-06 proof boundary; it currently makes no large-values proof claim.
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
 - **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 110 exported source-level theorems across every production module.
 
@@ -39,7 +42,7 @@ run_lake_build.bat
 
 For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The audit list and discovered production theorem set currently both contain 110 declarations. The audit exits nonzero because 22 theorems have a transitive `sorryAx` or project-specific axiom dependency. That failure is the expected honest status until the remaining proof obligations are discharged.
+The default root imports every intended production module. The audit list and discovered production theorem set currently both contain 110 declarations. The audit exits nonzero because 22 theorems have a transitive `sorryAx` or project-specific axiom dependency. That failure is the expected honest status until the remaining proof obligations are discharged.
 
 ---
 

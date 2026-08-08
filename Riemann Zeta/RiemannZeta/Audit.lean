@@ -1,8 +1,5 @@
 import Lean.Util.CollectAxioms
 import RiemannZeta
-import RiemannZeta.GuthMaynard.HalaszMontgomery
-import RiemannZeta.GuthMaynard.Decoupling
-import RiemannZeta.GuthMaynard.LargeValues
 
 open Lean
 

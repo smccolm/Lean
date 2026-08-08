@@ -58,7 +58,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
 | 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed 8 August 2026:** replaced name-based categorization with a synchronized 110-theorem list and transitive dependency checks across every production module. | Easy–moderate—complete |
-| 7 | `RiemannZeta.lean` | Import the three now-compiling production modules into the default root graph. | Easy |
+| 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
 | 9 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | Remove two `sorry`s and two axioms; prove the finite-product algebra and address the general k-divisor bound faithfully. | Moderate–hard |
 | 10 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
@@ -109,7 +109,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 3. **Completed 8 August 2026:** replaced name-based classification with transitive `Lean.collectAxioms` inspection.
 4. **Completed 8 August 2026:** the audit exits nonzero and identifies every audited theorem with a `sorryAx` or project-specific axiom dependency.
 5. **Completed 8 August 2026:** removed the unused Huxley premise from the canonical combined-transfer signature, corrected the documentation, and deleted the stale, unreferenced `ScratchTransfer.lean` duplicate.
-6. Extend the root import graph only as repaired modules become compilable.
+6. **Completed 8 August 2026:** extended the root import graph to all intended production modules after their compilation repairs.
 
 **Exit evidence:**
 
@@ -355,8 +355,19 @@ Every completed repair iteration must record:
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 6, and the Phase 1 audit actions in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #7: add the now-compiling production modules to the default `RiemannZeta` root import graph. |
 
+### Completed Iteration: Shitlist #7
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta.lean`, `RiemannZeta/Audit.lean`, and the production-coverage stage in `run_lake_build.bat` |
+| Previous defect | `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` compiled only through the runner's supplemental stage and were absent from the default library root. The audit redundantly imported them itself instead of proving that the root covered them. |
+| Result | Added all three modules to `RiemannZeta.lean`; simplified `Audit.lean` to obtain the entire production environment from the root import; retained the runner's explicit module builds as a redundant coverage check and renamed that stage accurately. |
+| Verification | `lake build RiemannZeta` succeeds with warnings and compiles all three newly imported modules. Direct audit execution through the root finds exactly 110 listed and 110 discovered theorems, then correctly exits `1` on the same 22 dependency failures. Repository search confirms all three imports are explicit in `RiemannZeta.lean`. The principal runner logged to `logs/overall_proof_20260808_045030.log`: the default build, redundant explicit production coverage, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
+| Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 7, and the Phase 1 root-coverage action in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #8: replace the constant truncated-Möbius detector model in `ZeroDetector.lean`. |
+
 ## Current Priority
 
-The next infrastructure step is Shitlist #7: extend the default root import graph to the now-compiling production modules. The trustworthy audit will continue to fail until the separately ranked proof defects are removed.
+The verification infrastructure is now aligned. Proceed to Shitlist #8 and the finite detector layer; the trustworthy audit will continue to fail until the separately ranked proof defects are removed.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.

@@ -59,7 +59,7 @@ echo Log: %LOG%
 echo.
 
 call :run_lake "1/3 Default project build" build RiemannZeta
-call :run_lake "2/3 Production modules omitted from the root import graph" build RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.Decoupling RiemannZeta.GuthMaynard.LargeValues
+call :run_lake "2/3 Explicit production-module coverage" build RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.Decoupling RiemannZeta.GuthMaynard.LargeValues
 call :run_lake "3/3 Current Lean audit module" env lean RiemannZeta\Audit.lean
 
 echo.
