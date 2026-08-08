@@ -141,6 +141,8 @@ For polynomial powers, `FactorizationCountBoundProp` places its constant before 
 
 For Type II zeros, `FiniteTypeICoverProp` now matches the asymptotic setting: it requires coverage only eventually in the height parameter and only in the source range `7/10 ≤ σ ≤ 4/5`. The theorem `finiteTypeICover_of_typeIContourTypeII` derives this finite-family coverage for `zerosInRect σ 1 T (2T)` from the source-facing `TypeIContourTypeIICoverProp`. The exact identity `weightedResidualCount_dyadicZetaZeros_eq` connects the generic real-valued weighted sum to `residualZeroCount` with analytic multiplicity. Consequently `residualZeroBound_of_contourTypeII_reduction_and_fourthMoment` proves the concrete `ResidualZeroBoundProp` from the coverage, Appendix C reduction, and twisted fourth-moment inputs. This is a kernel-checked conditional instantiation, not a proof of those three analytic inputs or of Maynard–Pratt Lemma 24.
 
+For Type I extraction, `LocalZeroMultiplicityBoundProp` now states only an ordinary multiplicity-weighted `O(log T)` bound in unshifted unit-height intervals. The generic theorem `shifted_bin_weight_le_of_unit_bin_weight` proves that displacement by at most `H` expands a shifted unit bin into at most `2⌈H⌉+1` original bins. `rawExtractSeparated_of_beta_shift_and_local_multiplicity` then produces the source-forced enlarged interval and the explicit `T^δ (log T)^2` loss. The normalized theorem `extractSeparated_of_beta_shift_and_local_multiplicity` translates the selected set into `[0,3T]`, rewrites the detector as a Dirichlet polynomial with phase-twisted coefficients, proves those phases preserve coefficient norms, and absorbs the explicit losses into `T^ε`. This deduction is kernel-checked conditional on the pointwise `DetectorBetaShiftProp` and the narrow unit-zero input; neither analytic input is proved here.
+
 ## Theorem 11 (Large Values Estimate Target Statement)
 **Status**: Unproved (Target Specification).
 For any $\varepsilon > 0$, there exists a constant $C$ such that for a sequence $b_n \in \mathbb{C}$ with $\|b_n\| \le 1$, and a $1$-separated set $W \subset [0, T]$ satisfying $\|D_N(t)\| \ge V$ for all $t \in W$, the cardinality is bounded by:
@@ -160,7 +162,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 132 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 6 theorems depend on project-specific mathematical axioms. The compact-rectangle zeta-zero finiteness theorem, finite dyadic-scale and weighted extraction machinery, conditional Type-I extraction theorem, detector/divisor-count reductions, powered-polynomial expansion and conditional coefficient theorems, mean-value-to-large-values implication, and the generic plus concrete conditional Type II deductions pass; no audited theorem depends on `sorryAx`. Fourteen direct project axioms remain. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 140 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 6 theorems depend on project-specific mathematical axioms. The compact-rectangle zeta-zero finiteness theorem, finite dyadic-scale and weighted extraction machinery, shifted-bin covering, phase-translation identities, raw and normalized conditional Type-I extraction theorems, detector/divisor-count reductions, powered-polynomial expansion and conditional coefficient theorems, mean-value-to-large-values implication, and the generic plus concrete conditional Type II deductions pass. Fourteen direct project axioms remain. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -197,7 +199,10 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Conditional Uniform Detector Bound | `uniformDetectorCoeffBound_of_divisorCount` | `GuthMaynard/ZeroDetector.lean` | Explicit `DivisorCountBoundProp` input |
 | Compact Zeta-Zero Finiteness | `riemannZeta_finite_zeros_in_rect` | `GuthMaynard/ZeroCount.lean` | `IsCompact.inter_riemannZetaZeros_finite` |
 | Weighted Separated Selection | `weighted_separated_selection` | `GuthMaynard/Separated.lean` | Finite even/odd unit-bin decomposition |
-| Conditional Type-I Extraction | `extractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Explicit beta-shift/local-multiplicity inputs, weighted pigeonholing and selection |
+| Polynomial Phase Translation | `dirichletPoly_translate`, `norm_phaseShiftCoeffs` | `GuthMaynard/DirichletPolynomial.lean` | Finite sums, complex powers, positive dyadic indices |
+| Shifted-Bin Covering | `shifted_bin_weight_le_of_unit_bin_weight` | `GuthMaynard/ExtractSeparated.lean` | Integer floors, finite interval cardinality, weighted fiber decomposition |
+| Raw Conditional Type-I Extraction | `rawExtractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Explicit beta-shift/unit-zero inputs, weighted pigeonholing, covering, and selection |
+| Normalized Conditional Type-I Extraction | `extractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Raw extraction, exact phase translation, `[0,3T]` interval control, and epsilon-loss absorption |
 | Conditional Powered-Coefficient Bound | `powCoeff_bound_of_uniform_detector_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit detector/factorization inputs, `norm_sum_le`, `Real.finset_prod_rpow` |
 | Divisor-to-Powered-Coefficient Bound | `powCoeff_bound_of_divisor_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit divisor-count/factorization inputs and the uniform-detector deduction |
 | Polynomial-Power Coefficient Expansion | `polynomial_power_identity` | `GuthMaynard/PolynomialPowers.lean` | `Finset.sum_pow'`, product support, complex powers of natural products, finite fiber regrouping |
@@ -228,7 +233,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 6 dependency failures across 132 synchronized declarations)
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 6 dependency failures across 140 synchronized declarations)
 
 ---
 

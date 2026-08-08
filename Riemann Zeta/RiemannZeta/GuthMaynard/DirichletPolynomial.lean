@@ -23,6 +23,41 @@ An interval-indexed Dirichlet polynomial $D_N(t) = \sum_{n \sim N} a_n n^{-it}$.
 noncomputable def dirichletPoly (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
   ∑ n ∈ dyadicInterval N, a n * (n : ℂ) ^ (-t * I)
 
+/--
+Twist coefficients by the unimodular phase produced when the ordinate is
+translated by `c`.  The value at `0` is left unchanged; dyadic intervals never
+use that index, and this convention makes norm preservation unconditional.
+-/
+noncomputable def phaseShiftCoeffs (c : ℝ) (a : ℕ → ℂ) (n : ℕ) : ℂ :=
+  if n = 0 then a n else a n * (n : ℂ) ^ (-c * I)
+
+/-- Translating the ordinate is exactly coefficient phase twisting. -/
+theorem dirichletPoly_translate (N : ℕ) (a : ℕ → ℂ) (c t : ℝ) :
+    dirichletPoly N a (t + c) = dirichletPoly N (phaseShiftCoeffs c a) t := by
+  unfold dirichletPoly
+  apply Finset.sum_congr rfl
+  intro n hn
+  have hnPos : 0 < n := by
+    rw [dyadicInterval, Finset.mem_Ioc] at hn
+    omega
+  have hnNe : (n : ℂ) ≠ 0 := by exact_mod_cast hnPos.ne'
+  rw [phaseShiftCoeffs, if_neg hnPos.ne']
+  rw [mul_assoc, ← Complex.cpow_add _ _ hnNe]
+  congr 2
+  push_cast
+  ring
+
+/-- The coefficient twist used for ordinate translation preserves every norm. -/
+theorem norm_phaseShiftCoeffs (c : ℝ) (a : ℕ → ℂ) (n : ℕ) :
+    ‖phaseShiftCoeffs c a n‖ = ‖a n‖ := by
+  by_cases hn : n = 0
+  · simp [phaseShiftCoeffs, hn]
+  · have hnPos : (0 : ℝ) < n := by exact_mod_cast Nat.pos_of_ne_zero hn
+    rw [phaseShiftCoeffs, if_neg hn, norm_mul]
+    change ‖a n‖ * ‖((n : ℝ) : ℂ) ^ (-c * I)‖ = ‖a n‖
+    rw [Complex.norm_cpow_eq_rpow_re_of_pos hnPos]
+    simp
+
 /-- 
 The normalized coefficients $\widetilde{b}_n = (N/n)^\sigma b_n$. 
 -/
