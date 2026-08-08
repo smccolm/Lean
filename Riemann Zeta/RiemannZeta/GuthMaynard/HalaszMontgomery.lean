@@ -54,17 +54,15 @@ theorem halasz_montgomery_lemma_native : HalaszMontgomeryLemma := by
     le_trans h_sum_V2 h_mean
   have h_V2_inv_pos : 0 < V^(-2 : ℝ) := by
     apply Real.rpow_pos_of_pos hV
-  have h_final : (W.card : ℝ) * V^2 * V^(-2 : ℝ) ≤ (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 * V^(-2 : ℝ) := by
-    apply mul_le_mul_of_nonneg_right h_combined (le_of_lt h_V2_inv_pos)
+  have h_final :
+      (W.card : ℝ) * V^2 * V^(-2 : ℝ) ≤
+        ((T + (N : ℝ)) * (∑ n ∈ Ioc N (2 * N), ‖a n‖^2)) * V^(-2 : ℝ) := by
+    exact mul_le_mul_of_nonneg_right h_combined (le_of_lt h_V2_inv_pos)
   have h_V2_cancel : V^2 * V^(-2 : ℝ) = 1 := by
-    rw [← Real.rpow_add hV]
+    rw [← Real.rpow_two, ← Real.rpow_add hV]
     norm_num
-    exact Real.rpow_zero V
   rw [mul_assoc, h_V2_cancel, mul_one] at h_final
-  -- Now we just need to commute the V^(-2) to match the target
-  have h_target_comm : (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 * V^(-2 : ℝ) = (T + (N : ℝ)) * V^(-2 : ℝ) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := by ring
-  rw [h_target_comm] at h_final
-  exact h_final
+  simpa only [mul_assoc, mul_left_comm, mul_comm] using h_final
 
 
 /-- F-03: Auxiliary lemma partitioning the Type II zeros into dyadic scales -/

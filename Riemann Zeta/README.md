@@ -2,7 +2,7 @@
 
 [![Riemann Zeta Lean CI](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml/badge.svg)](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml)
 
-Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`). We provide a structurally verified reduction sequence (F-01 through F-14) covering Section 13.1 of the Guth-Maynard (2026) zero-density bounds, fully audited to depend solely on bounded modular base-cases without any `sorry` axioms.
+Mechanized formalization of finite Dirichlet polynomial conjugation dualities, fourfold completed Zeta function orbits, and complex-valued Hardy-type phase normalization identities in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0-rc2`, package version `0.1.0`). The repository also contains provisional infrastructure for the Guth–Maynard (2026) zero-density program. The Section 13.1 transfer and its analytic inputs are not yet proved; the executable dependency audit intentionally fails while project postulates and admitted proof terms remain.
 
 Author: **S. McColm**
 
@@ -24,7 +24,7 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/PolynomialPowers.lean`](RiemannZeta/GuthMaynard/PolynomialPowers.lean)**: Formulation of Dirichlet polynomial exponentiation and relations between large base values and powered values.
 - **[`RiemannZeta/GuthMaynard/InghamBound.lean`](RiemannZeta/GuthMaynard/InghamBound.lean)**: Statement of the Ingham bound hypothesis and definition of the combined zero-density transfer (F-12).
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Dedicated automated audit file executing `#print axioms` across all 57 core declarations.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 110 exported source-level theorems across every production module.
 
 ---
 
@@ -32,14 +32,14 @@ Author: **S. McColm**
 
 ### Verification
 
-Ensure you have Lean `v4.30.0-rc2` installed.
-To compile the project and verify the exact `sorry`-free status, run:
-```bash
-lake build
-lake env lean RiemannZeta/Audit.lean
+Ensure you have Lean `v4.30.0-rc2` installed. On Windows, the principal human-facing verification is:
+```powershell
+run_lake_build.bat
 ```
 
-All 57 audited declarations depend exclusively on standard Lean 4 axioms (`propext`, `Classical.choice`, `Quot.sound`) with **0 `sorryAx` dependencies**.
+For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
+
+The audit list and discovered production theorem set currently both contain 110 declarations. The audit exits nonzero because 22 theorems have a transitive `sorryAx` or project-specific axiom dependency. That failure is the expected honest status until the remaining proof obligations are discharged.
 
 ---
 

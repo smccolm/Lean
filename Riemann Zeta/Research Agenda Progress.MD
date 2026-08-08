@@ -7,7 +7,7 @@
 
 The project contains a useful collection of kernel-checked elementary lemmas, formal target statements, and provisional interfaces for the Guth–Maynard program. It does **not** yet contain a verified formalization of the Section 13.1 zero-density transfer.
 
-The default `lake build` target currently succeeds with warnings. In particular, Lean reports that `powCoeffBound_native` uses `sorry`. Three substantive files—`HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean`—are not imported by the default root module; direct builds of the first two currently fail, and `LargeValues.lean` imports the failing decoupling module.
+The default `lake build` target currently succeeds with warnings. In particular, Lean reports that `powCoeffBound_native` uses `sorry`. Three substantive files—`HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean`—now compile directly but are not yet imported by the default root module.
 
 The non-test Guth–Maynard source contains 28 direct `axiom` declarations, 24 of which occur in modules reachable from the default `RiemannZeta` root import. A theorem is therefore counted as proved below only when its audited dependencies contain no project-specific axiom and no `sorryAx`.
 
@@ -85,28 +85,27 @@ The current source includes, among others, the following unproved declarations:
 ## Build and Audit Status
 
 - The default `lake build` completes successfully but emits warnings, including `declaration uses 'sorry'` for `powCoeffBound_native`.
-- Direct compilation of `HalaszMontgomery.lean` currently fails in the proof of `halasz_montgomery_lemma_native`.
-- Direct compilation of `Decoupling.lean` currently fails with syntax, typeclass, and missing-import/type errors.
-- `LargeValues.lean` is outside the default import graph, imports `Decoupling.lean`, and presently declares only a variable assuming `GuthMaynardLargeValues`; it does not prove the large-values theorem.
-- `Audit.lean` does not execute `#print axioms`. It categorizes declarations by name suffix and by `cinfo.isTheorem`, so it cannot establish the claimed absence of `sorryAx` or project axioms.
-- The README and paper currently contain stronger build and proof-status claims than the source supports and should be synchronized in a later documentation pass.
+- Direct builds of `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` now succeed with warnings. The compilation repairs do not prove the remaining analytic axioms or replace the `True` placeholders.
+- `LargeValues.lean` is still outside the default import graph and contains no proof of `GuthMaynardLargeValues`; the former dangling variable that assumed that target has been removed.
+- `Audit.lean` imports every production module and explicitly audits 110 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. The current audit reports 22 failing theorems, including the `sorryAx` dependency in `powCoeffBound_native` and multiple project-specific analytic axioms.
+- The README and paper now describe the failing audit honestly; their broader mathematical claims still require continued synchronization as the remaining Shitlist items are repaired.
 
 ## Research-Agenda Milestones
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: formal statement and infrastructure layer | **Partially achieved.** Several useful definitions and statements compile, but the exact detector, source-fidelity audit, complete zero-count interface, and full build/audit coverage remain incomplete. |
+| Goal A: formal statement and infrastructure layer | **Partially achieved.** The explicit dependency audit now covers every production module and all 110 exported source-level theorems, but the exact detector, complete zero-count interface, and default-root coverage remain incomplete. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The desired conclusion is presently assumed through `algebraic_combination_unconditional`. |
 | Goal C: discharge auxiliary classical hypotheses | **Not achieved.** The local zero count, Type II estimate, mean-value theorem, smoothing, divisor bound, and related inputs remain axiomatic. |
-| Goal D: prove the Guth–Maynard large-values theorem | **Not achieved.** The relevant decoupling module does not compile, and `LargeValues.lean` assumes rather than proves the target. |
+| Goal D: prove the Guth–Maynard large-values theorem | **Not achieved.** The decoupling and large-values modules now compile, but decoupling remains axiomatic and `LargeValues.lean` contains no proof of the target. |
 | Goal E: reusable analytic-number-theory library | **Early infrastructure only.** Some finite-sum, separation, asymptotic, and polynomial lemmas may become reusable after their interfaces stabilize. |
 
 ## Next Steps
 
 1. Remove the two `sorry`s from `powCoeffBound_native` and audit its remaining dependence on the general divisor bound.
 2. Replace the constant `mobius_sum` model with the actual truncated Möbius coefficients and prove their support and size properties.
-3. Repair and import `HalaszMontgomery.lean` and `Decoupling.lean` so the default build covers every intended production module.
-4. Replace `Audit.lean` with an explicit declaration list and `#print axioms` checks, including all agenda-critical theorems and all non-root production modules.
+3. Import the now-compiling `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` modules through the default root build.
+4. Resolve the audit's 22 reported theorem-dependency failures one ranked proof obligation at a time.
 5. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
 6. Discharge the remaining hypotheses one at a time, beginning with the smallest precise combinatorial or Mathlib-bridge obligation.
 7. Synchronize the README and paper with the audited Lean status after each verified increment.

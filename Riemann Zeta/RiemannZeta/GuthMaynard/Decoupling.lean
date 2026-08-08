@@ -1,6 +1,8 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Finset.Basic
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import RiemannZeta.GuthMaynard.Separated
 
 open Complex Finset
@@ -23,7 +25,7 @@ def DecouplingProp : Prop :=
         InBaseInterval T W →
         -- The polynomial sum bounded by the decoupling bound over blocks of size N/K
         ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
-          C * K^ε * (∑ k ∈ Ioc 0 K, ∑ t ∈ W, ‖∑ n ∈ Ioc (N + k * (N / K)) (N + (k + 1) * (N / K)), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2)
+          C * (K : ℝ)^ε * (∑ k ∈ Ioc 0 K, ∑ t ∈ W, ‖∑ n ∈ Ioc (N + k * (N / K)) (N + (k + 1) * (N / K)), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2)
 
 /-- Bourgain-Guth recursive block decomposition step -/
 lemma recursive_block_decomposition (N K : ℕ) (W : Finset ℝ) (a : ℕ → ℂ) : True := trivial
@@ -31,7 +33,7 @@ lemma recursive_block_decomposition (N K : ℕ) (W : Finset ℝ) (a : ℕ → �
 lemma l2_decoupling_rhs_nonneg (C ε : ℝ) (K : ℕ) (hC : 0 < C) :
   0 ≤ C * (K : ℝ) ^ ε := by
   have h1 : 0 ≤ (K : ℝ) := Nat.cast_nonneg K
-  have h2 : 0 ≤ (K : ℝ) ^ ε := Real.rpow_nonneg h1 ε
+  have h2 : 0 ≤ (K : ℝ) ^ ε := by positivity
   exact mul_nonneg (le_of_lt hC) h2
 
 /-- 
@@ -62,9 +64,11 @@ The Bourgain-Guth recursive method requires splitting the frequency interval [N,
 into small blocks. Here we formulate the algebraic identity that the sum over [N, 2N]
 is the sum over blocks of length N/K.
 -/
-variable (block_decomposition : ∀ (N K : ℕ) (hK : 0 < K) (a : ℕ → ℂ) (t : ℝ),
-  (N % K = 0) →
-  ∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I) =
-  ∑ k ∈ Ioc 0 K, ∑ n ∈ Ioc (N + (k - 1) * (N / K)) (N + k * (N / K)), a n * (n : ℂ) ^ (-(t : ℂ) * I))
+def BlockDecompositionProp : Prop :=
+  ∀ (N K : ℕ), 0 < K → ∀ (a : ℕ → ℂ) (t : ℝ),
+    (N % K = 0) →
+    ∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I) =
+      ∑ k ∈ Ioc 0 K, ∑ n ∈ Ioc (N + (k - 1) * (N / K)) (N + k * (N / K)),
+        a n * (n : ℂ) ^ (-(t : ℂ) * I)
 
 end RiemannZeta.GuthMaynard

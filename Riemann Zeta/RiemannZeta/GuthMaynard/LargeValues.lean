@@ -11,11 +11,9 @@ open Complex Finset
 namespace RiemannZeta.GuthMaynard
 
 
-/--
-F-06: The Guth-Maynard Large Values Estimate (Theorem 1.1) follows from
-the combination of Montgomery's Mean Value Theorem (for the large-scale additive energy)
-and the l^2 decoupling inequality (for the fine-scale frequency concentration).
+/-
+F-06 remains an open proof obligation. This module imports the proposed analytic
+inputs, but does not claim that they currently imply `GuthMaynardLargeValues`.
 -/
-variable (guth_maynard_large_values_of_decoupling : GuthMaynardLargeValues)
 
 end RiemannZeta.GuthMaynard

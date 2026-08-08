@@ -57,18 +57,18 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
 | 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
-| 6 | `RiemannZeta/Audit.lean` | Replace name-based categorization with complete import coverage and actual axiom-dependency checks. | Easy–moderate |
-| 7 | `RiemannZeta.lean` | Import every intended production module once those modules compile. | Easy but dependency-blocked |
+| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed 8 August 2026:** replaced name-based categorization with a synchronized 110-theorem list and transitive dependency checks across every production module. | Easy–moderate—complete |
+| 7 | `RiemannZeta.lean` | Import the three now-compiling production modules into the default root graph. | Easy |
 | 8 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
 | 9 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | Remove two `sorry`s and two axioms; prove the finite-product algebra and address the general k-divisor bound faithfully. | Moderate–hard |
 | 10 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
-| 11 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | Repair compilation, prove the large-value consequence from an explicit mean-value input, replace the `True` dyadic lemma, and remove the Type II axiom. | Hard |
+| 11 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6.** Still prove the large-value consequence from an explicit mean-value input, replace the `True` dyadic lemma, and remove the Type II axiom. | Hard |
 | 12 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | Replace the Jensen `True` placeholder and eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
 | 13 | `RiemannZeta/GuthMaynard/Transfer.lean` | Remove the assumed conclusion and implement F-01 through F-10 from separately named upstream hypotheses. | Very hard |
 | 14 | `RiemannZeta/GuthMaynard/ZeroCount.lean` | Prove or faithfully refactor zero finiteness with multiplicity, growth bounds, Phragmén–Lindelöf, and the Euler-product lower bound. | Very hard |
 | 15 | `RiemannZeta/GuthMaynard/BetaDependence.lean` | Replace seven axioms with genuine Schwartz/Fourier inversion, decay, contour-shift, truncation, and pigeonhole arguments. | Very hard |
-| 16 | `RiemannZeta/GuthMaynard/Decoupling.lean` | Repair syntax and type errors, replace the `True` block decomposition, and formalize the broad–narrow and incidence bounds without axioms. | Extreme |
-| 17 | `RiemannZeta/GuthMaynard/LargeValues.lean` | Remove the module-level assumption and ultimately assemble the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
+| 16 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6.** Still replace the `True` block decomposition and formalize the broad–narrow and incidence bounds without axioms. | Extreme |
+| 17 | `RiemannZeta/GuthMaynard/LargeValues.lean` | **Module-level target assumption removed during #6.** Still assemble and prove the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
 
 ## Dependency-Aware Execution Plan
 
@@ -104,10 +104,10 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 **Required actions:**
 
-1. Create an explicit list of every public and agenda-critical declaration.
-2. Import every intended production module into the audit.
-3. Inspect dependencies rather than classifying declarations by name or declaration kind.
-4. Make `sorryAx` and project-specific axioms visible as audit failures.
+1. **Completed 8 August 2026:** created an explicit, synchronization-checked list of all 110 exported source-level theorems.
+2. **Completed 8 August 2026:** imported every intended production module into the audit after making the three previously omitted modules compilable.
+3. **Completed 8 August 2026:** replaced name-based classification with transitive `Lean.collectAxioms` inspection.
+4. **Completed 8 August 2026:** the audit exits nonzero and identifies every audited theorem with a `sorryAx` or project-specific axiom dependency.
 5. **Completed 8 August 2026:** removed the unused Huxley premise from the canonical combined-transfer signature, corrected the documentation, and deleted the stale, unreferenced `ScratchTransfer.lean` duplicate.
 6. Extend the root import graph only as repaired modules become compilable.
 
@@ -343,8 +343,20 @@ Every completed repair iteration must record:
 | Documentation | Updated `Research Agenda Progress.MD`, rank 5, and the Phase 1 action in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #6: replace `RiemannZeta/Audit.lean` with a genuine dependency audit. |
 
+### Completed Iteration: Shitlist #6
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta/Audit.lean`, with compilation-enabling repairs in `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` required for complete import coverage |
+| Previous defect | The audit categorized declarations by spelling and `isTheorem`, omitted production modules, did not inspect transitive dependencies, and always exited successfully despite known project axioms and `sorryAx`. |
+| Result | Replaced the categorizer with an explicit list of 110 exported source-level theorems. The audit imports the root plus all three non-root production modules, checks its list against discovered public theorems, detects duplicates and stale entries, computes dependencies with `Lean.collectAxioms`, permits only `propext`, `Classical.choice`, and `Quot.sound`, and exits nonzero on any violation. It currently reports 22 dependency failures rather than concealing them. |
+| Supporting repairs | Corrected multiplication grouping and real-power cancellation in `halasz_montgomery_lemma_native`; added the required real/complex power imports and casts in `Decoupling.lean`; converted its unused block-decomposition module parameter into a proposition specification; removed the dangling `LargeValues.lean` variable that merely assumed the target. These changes make all three modules compile but do not discharge their analytic axioms or placeholder obligations. |
+| Verification | Direct builds of `HalaszMontgomery`, `Decoupling`, and `LargeValues` succeed with warnings. Direct execution of `RiemannZeta/Audit.lean` finds exactly 110 listed and 110 discovered source-level theorems, then exits `1` after reporting 22 theorems with forbidden transitive dependencies. The principal runner logged to `logs/overall_proof_20260808_044517.log`: the default build, all three formerly omitted production-module builds, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
+| Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 6, and the Phase 1 audit actions in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #7: add the now-compiling production modules to the default `RiemannZeta` root import graph. |
+
 ## Current Priority
 
-Begin with Phase 0 and Phase 1. After the repository is free of admitted scratch/test declarations and has a trustworthy audit, proceed through the Goal B dependency chain rather than attempting the full large-values theorem prematurely.
+The next infrastructure step is Shitlist #7: extend the default root import graph to the now-compiling production modules. The trustworthy audit will continue to fail until the separately ranked proof defects are removed.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.

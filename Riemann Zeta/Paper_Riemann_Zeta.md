@@ -18,7 +18,7 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we formalize the structural deduction of the zero-density theorem as well as finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, and a complex-valued Hardy-type phase normalization [2, 3]. We successfully verify the complete algebraic and logical reduction (F-01 through F-14) of the Guth-Maynard analytic zero-density architecture without relying on unproven generic `sorry` axioms, isolating the unproven components exclusively to atomic analytic hypotheses (such as the Montgomery Mean Value Theorem and Halasz-Montgomery bounds).
+In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The complete F-01 through F-14 deduction is not yet proved: the current executable audit reports admitted and project-specific axiom dependencies in the transfer and analytic layers.
 
 ## Contribution Taxonomy & Originality Disclosure
 The mathematical content of this package is structured into four distinct layers:
@@ -154,7 +154,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-All 57 canonical declarations across 16 mathematical submodules in package `RiemannZeta` (pinned to Lean `v4.30.0-rc2`) have been verified with **0 errors, 0 warnings, and 0 `sorryAx` dependencies**.
+`RiemannZeta/Audit.lean` explicitly lists all 110 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero: 22 theorems depend on `sorryAx` or project-specific mathematical axioms. The table below is a selected declaration map, not a clean-audit certificate.
 
 | Theorem Name | Lean 4 Declaration | Submodule File | Mathlib Basis / Dependency |
 | :--- | :--- | :--- | :--- |
@@ -200,8 +200,9 @@ The formalization relies on the following exact environment:
 - **Lean Toolchain**: `leanprover/lean4:v4.30.0-rc2`
 - **Mathlib Revision**: `5450b53e5ddc75d46418fabb605edbf36bd0beb6`
 - **Package Version**: `0.1.0`
-- **Build Command**: `lake build`
-- **Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean`
+- **Principal Verification Command**: `run_lake_build.bat`
+- **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify 22 dependency failures)
 
 ---
 
