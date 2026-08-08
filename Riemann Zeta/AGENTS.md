@@ -49,6 +49,23 @@ Standard logical axioms inherited from Lean and Mathlib—normally `propext`, `C
 - Asymptotic notation must use explicit Lean definitions with all epsilon quantifiers and allowed parameter dependencies represented faithfully.
 - Search Mathlib before reproving a result, but verify the exact semantics and audit the resulting theorem dependencies.
 
+## Zero-Warning and Linter Policy
+
+The project owner's proof run must contain no Lean warning or linter diagnostic from project source. A build stage that exits successfully but prints `warning:` is not clean and does not satisfy the project evaluation standard.
+
+This requirement includes, without limitation:
+
+- unused-variable and unused-argument warnings;
+- deprecated syntax, tactics, declarations, or APIs;
+- tactic and declaration-style warnings emitted by Lean;
+- declarations reported as using `sorry`;
+- declaration, documentation, and formatting linters; and
+- warnings produced while compiling retained tests, scratch files, or explicitly covered production modules.
+
+Fix the cause of each diagnostic. Do not hide it with `set_option linter... false`, blanket linter exclusions, output filtering, log redirection, or a runner rule that ignores warnings. An underscore-prefixed or anonymous binder is acceptable only when the parameter is intentionally irrelevant to the mathematically faithful statement; it must not conceal a malformed interface or unused hypothesis that should be removed.
+
+`run_lake_build.bat` must treat any Lean `warning:` diagnostic from project compilation or audit execution as a failed evaluation gate. Its final `PASS` requires zero Lean errors, zero Lean warnings, a passing dependency audit, and passing proof-integrity scans.
+
 ## Required Development Workflow
 
 Before editing:
@@ -73,8 +90,9 @@ Before declaring completion:
 3. Run explicit axiom audits for every new or changed public theorem and every agenda-critical downstream theorem.
 4. Verify that no new theorem depends on `sorryAx` or a project-specific axiom.
 5. Confirm that the default root module imports every intended production module. A successful default build is insufficient if substantive files are outside the import graph.
-6. Update the README, paper, audit file, and research-progress document when proof status or dependencies change.
-7. Report exact commands, results, remaining assumptions, and failures. Do not summarize a warning-producing or partial build as “clean.”
+6. Confirm that focused builds and the principal runner emit no Lean warning or linter diagnostic from project source.
+7. Update the README, paper, audit file, and research-progress document when proof status or dependencies change.
+8. Report exact commands, results, remaining assumptions, warnings, and failures. Do not summarize a warning-producing or partial build as “clean.”
 
 ## Principal Human-Facing Evaluation: `run_lake_build.bat`
 
@@ -91,6 +109,7 @@ The runner's intent is to provide one action that:
 - executes the project's Lean axiom audit;
 - scans the entire Lean source tree for forbidden proof shortcuts;
 - reports each stage as pass or fail without suppressing warnings or errors;
+- treats any Lean warning from project source as a failed evaluation gate;
 - writes a complete timestamped log under `logs/`;
 - returns exit code `0` only when every required build, audit, and integrity gate passes; and
 - pauses for a human when launched by double-click while supporting `--no-pause` for agents and CI.
@@ -103,14 +122,16 @@ Rules for maintaining the runner:
 4. Never make the runner return success by excluding a failing module, ignoring a nonzero exit code, filtering an error from the log, weakening a scan, or relabeling a failed stage.
 5. A successful default `lake build` alone must not be presented as an overall pass when the runner reports failure.
 6. A runner `PASS` is valid only when the audit is a genuine dependency audit and all intended production modules are included.
-7. After changing Lean source, imports, `lakefile.toml`, `lean-toolchain`, the audit, or the runner itself, execute:
+7. A runner `PASS` is invalid if any project build or audit stage emits a Lean warning, even when that stage's process exit code is `0`.
+8. Do not suppress, filter, downgrade, or globally disable warnings to obtain a pass. Repair the source of each diagnostic.
+9. After changing Lean source, imports, `lakefile.toml`, `lean-toolchain`, the audit, or the runner itself, execute:
 
    ```powershell
    cmd /c run_lake_build.bat --no-pause
    ```
 
-8. Report the runner's final exit code, final status, log path, and every remaining failed stage in the handoff.
-9. If the runner itself is broken or cannot be executed, the task is not fully verified. Repair it or report the exact environmental blocker; do not substitute an unaudited success claim.
+10. Report the runner's final exit code, final status, log path, every remaining failed stage, and every remaining warning in the handoff.
+11. If the runner itself is broken or cannot be executed, the task is not fully verified. Repair it or report the exact environmental blocker; do not substitute an unaudited success claim.
 
 The current repository is expected to produce `FAIL` until the recorded proof and audit defects are repaired. That failure is useful evidence. Agents must preserve its honesty while progressively converting each failed gate into a genuine pass.
 
@@ -125,6 +146,8 @@ rg -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" .
 ```
 
 Review matches in comments as well as code so stale documentation is corrected. The final code scan must contain no prohibited declaration or proof term.
+
+The focused module build and principal runner log must also contain no line beginning with `warning:` for project source. A zero exit code does not override this diagnostic requirement.
 
 Run the principal overall evaluation using the pinned toolchain:
 
@@ -176,11 +199,12 @@ Every substantive iteration must leave:
 - an explicit axiom audit;
 - accurate proof-status documentation;
 - a precise account of remaining obligations; and
-- no new hidden assumptions or placeholder mathematics.
+- no new hidden assumptions or placeholder mathematics; and
+- zero Lean warnings in the files changed and in every claimed-clean evaluation scope.
 
 ## Handling the Current Noncompliant Baseline
 
-The repository currently contains existing project axioms, `sorryAx` dependencies, provisional models, and production-like modules that are not covered by the default build. Treat these as known defects to eliminate, not as accepted patterns.
+The repository currently contains existing project axioms, `sorryAx` dependencies, provisional models, and warning-producing declarations. Treat these as known defects to eliminate, not as accepted patterns.
 
 An incremental task may remove only part of this debt, but the agent must:
 

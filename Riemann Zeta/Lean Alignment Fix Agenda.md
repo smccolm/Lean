@@ -10,7 +10,7 @@ Bring the Lean source into compliance with the repository's proof-integrity rule
 
 This agenda distinguishes:
 
-- **integrity alignment:** removing `sorry`, project axioms, hidden target assumptions, toy definitions, vacuous placeholders, excluded failing modules, and misleading proof claims; and
+- **integrity alignment:** removing `sorry`, project axioms, hidden target assumptions, toy definitions, vacuous placeholders, excluded failing modules, Lean warnings/linter diagnostics, and misleading proof claims; and
 - **research completion:** proving the conditional Section 13.1 transfer, discharging its classical analytic inputs, and ultimately proving the Guth–Maynard large-values theorem.
 
 Deleting or downgrading an invalid theorem may restore integrity, but it does not count as proving the intended mathematics. Each such change must be recorded accurately.
@@ -27,6 +27,7 @@ The repository is aligned only when all of the following hold:
 6. Every public and agenda-critical theorem has an explicit dependency audit.
 7. Audit output contains no project-specific mathematical axiom and no `sorryAx`.
 8. The README, paper, research-progress file, and theorem documentation agree with the compiled Lean declarations.
+9. The principal proof run emits zero Lean warnings or linter diagnostics from project source; warnings are fixed at their source rather than suppressed or filtered.
 
 Standard Lean/Mathlib logical dependencies such as `propext`, `Classical.choice`, and `Quot.sound` are permitted when inherited normally and reported transparently.
 
@@ -44,6 +45,8 @@ At the establishment of this agenda:
 - `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` are absent from the default root import graph; and
 - `Audit.lean` categorizes declarations but does not perform the claimed axiom audit.
 
+At adoption of the zero-warning policy on 8 August 2026, the principal runner emitted 31 distinct `warning:` lines across 11 project files. These include unused binders, deprecated `push_neg` uses, a tactic-style suggestion, and the `PolynomialPowers.lean` admitted-declaration warning.
+
 These are defects to eliminate, not accepted project conventions.
 
 ## Files Ordered by Estimated Repair Difficulty
@@ -59,16 +62,17 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
 | 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed 8 August 2026:** replaced name-based categorization with a synchronized 110-theorem list and transitive dependency checks across every production module. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
-| 8 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
-| 9 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | Remove two `sorry`s and two axioms; prove the finite-product algebra and address the general k-divisor bound faithfully. | Moderate–hard |
-| 10 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
-| 11 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6.** Still prove the large-value consequence from an explicit mean-value input, replace the `True` dyadic lemma, and remove the Type II axiom. | Hard |
-| 12 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | Replace the Jensen `True` placeholder and eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
-| 13 | `RiemannZeta/GuthMaynard/Transfer.lean` | Remove the assumed conclusion and implement F-01 through F-10 from separately named upstream hypotheses. | Very hard |
-| 14 | `RiemannZeta/GuthMaynard/ZeroCount.lean` | Prove or faithfully refactor zero finiteness with multiplicity, growth bounds, Phragmén–Lindelöf, and the Euler-product lower bound. | Very hard |
-| 15 | `RiemannZeta/GuthMaynard/BetaDependence.lean` | Replace seven axioms with genuine Schwartz/Fourier inversion, decay, contour-shift, truncation, and pigeonhole arguments. | Very hard |
-| 16 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6.** Still replace the `True` block decomposition and formalize the broad–narrow and incidence bounds without axioms. | Extreme |
-| 17 | `RiemannZeta/GuthMaynard/LargeValues.lean` | **Module-level target assumption removed during #6.** Still assemble and prove the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
+| 8 | Warning-producing production files and `run_lake_build.bat` | Eliminate all 31 current Lean warning lines across 11 files and make the principal runner fail on any future project warning without suppressing linters. | Easy–moderate |
+| 9 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
+| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | Remove two `sorry`s and two axioms; prove the finite-product algebra and address the general k-divisor bound faithfully. | Moderate–hard |
+| 11 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
+| 12 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6.** Still prove the large-value consequence from an explicit mean-value input, replace the `True` dyadic lemma, and remove the Type II axiom. | Hard |
+| 13 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | Replace the Jensen `True` placeholder and eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
+| 14 | `RiemannZeta/GuthMaynard/Transfer.lean` | Remove the assumed conclusion and implement F-01 through F-10 from separately named upstream hypotheses. | Very hard |
+| 15 | `RiemannZeta/GuthMaynard/ZeroCount.lean` | Prove or faithfully refactor zero finiteness with multiplicity, growth bounds, Phragmén–Lindelöf, and the Euler-product lower bound. | Very hard |
+| 16 | `RiemannZeta/GuthMaynard/BetaDependence.lean` | Replace seven axioms with genuine Schwartz/Fourier inversion, decay, contour-shift, truncation, and pigeonhole arguments. | Very hard |
+| 17 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6.** Still replace the `True` block decomposition and formalize the broad–narrow and incidence bounds without axioms. | Extreme |
+| 18 | `RiemannZeta/GuthMaynard/LargeValues.lean` | **Module-level target assumption removed during #6.** Still assemble and prove the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
 
 ## Dependency-Aware Execution Plan
 
@@ -118,6 +122,38 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 - successful results are distinguished from specifications and conditional theorems.
 
 The audit may initially report failures. It must not suppress them merely to keep the default build green.
+
+### Phase 1A: Enforce a warning-free proof run
+
+**Files:**
+
+- `RiemannZeta/GuthMaynard/ZeroCount.lean`
+- `RiemannZeta/GuthMaynard/ZeroDetector.lean`
+- `RiemannZeta/GuthMaynard/Decoupling.lean`
+- `RiemannZeta/GuthMaynard/DirichletPolynomial.lean`
+- `RiemannZeta/GuthMaynard/ExponentArithmetic.lean`
+- `RiemannZeta/GuthMaynard/ExtractSeparated.lean`
+- `RiemannZeta/GuthMaynard/MeanValue.lean`
+- `RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
+- `RiemannZeta/GuthMaynard/InghamBound.lean`
+- `RiemannZeta/GuthMaynard/Pigeonhole.lean`
+- `RiemannZeta/GuthMaynard/PolynomialPowers.lean`
+- `run_lake_build.bat`
+
+**Required actions:**
+
+1. Eliminate the 31 distinct warning lines recorded in `logs/overall_proof_20260808_045030.log` by correcting their source.
+2. Remove unused hypotheses or mark binders intentionally anonymous only when doing so preserves the faithful mathematical interface.
+3. Replace deprecated tactics and APIs with supported equivalents.
+4. Resolve proof-integrity warnings through real proofs or honest removal/refactoring, never by disabling the diagnostic.
+5. Add a runner gate that makes any project `warning:` line produce a failed overall evaluation.
+6. Do not use linter-disable options, warning filters, or output suppression to satisfy this phase.
+
+**Exit evidence:**
+
+- focused compilation of every affected module emits no Lean warning;
+- the principal runner log contains no project `warning:` line; and
+- an intentionally introduced warning in a temporary verification fixture is detected by the runner gate before that fixture is removed.
 
 ### Phase 2: Repair finite and arithmetic infrastructure
 
@@ -250,7 +286,8 @@ The audit may initially report failures. It must not suppress them merely to kee
 2. Run the full build and standalone checks for any remaining non-root Lean files.
 3. Run the repository-wide prohibited-construct scan.
 4. Run the explicit axiom audit for every public theorem.
-5. Synchronize all documentation with the exact final result.
+5. Confirm that all builds and the audit emit zero Lean warnings or linter diagnostics from project source.
+6. Synchronize all documentation with the exact final result.
 
 **Exit evidence:**
 
@@ -261,7 +298,7 @@ rg -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" .
 lake build
 ```
 
-The prohibited-construct scans return no code matches, the build succeeds without omitted production modules, and the explicit theorem audits contain no project-specific assumptions.
+The prohibited-construct scans return no code matches, the build succeeds without omitted production modules or Lean warnings, and the explicit theorem audits contain no project-specific assumptions.
 
 ## Per-Iteration Record
 
@@ -274,7 +311,7 @@ Every completed repair iteration must record:
 | Previous defect | `sorry`, axiom, toy model, circular assumption, build failure, or audit omission |
 | Result | Definition, statement, conditional theorem, or unconditional theorem |
 | Dependencies | Mathlib results and explicit theorem parameters |
-| Verification | Exact build and `#print axioms` commands and outputs |
+| Verification | Exact build and `#print axioms` commands and outputs, including the count and text of any remaining Lean warnings |
 | Documentation | README, paper, progress, and audit changes |
 | Remaining obstruction | Next precise theorem or library gap |
 
@@ -364,10 +401,10 @@ Every completed repair iteration must record:
 | Result | Added all three modules to `RiemannZeta.lean`; simplified `Audit.lean` to obtain the entire production environment from the root import; retained the runner's explicit module builds as a redundant coverage check and renamed that stage accurately. |
 | Verification | `lake build RiemannZeta` succeeds with warnings and compiles all three newly imported modules. Direct audit execution through the root finds exactly 110 listed and 110 discovered theorems, then correctly exits `1` on the same 22 dependency failures. Repository search confirms all three imports are explicit in `RiemannZeta.lean`. The principal runner logged to `logs/overall_proof_20260808_045030.log`: the default build, redundant explicit production coverage, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 7, and the Phase 1 root-coverage action in this agenda. |
-| Remaining obstruction | Proceed to Shitlist #8: replace the constant truncated-Möbius detector model in `ZeroDetector.lean`. |
+| Remaining obstruction | Proceed to Shitlist #8: eliminate all Lean warnings and enforce the runner's zero-warning gate. |
 
 ## Current Priority
 
-The verification infrastructure is now aligned. Proceed to Shitlist #8 and the finite detector layer; the trustworthy audit will continue to fail until the separately ranked proof defects are removed.
+The import and dependency-audit infrastructure is aligned. Proceed to Shitlist #8: make the human-facing proof run warning-free and enforce that invariant before continuing to the finite detector layer at #9.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.
