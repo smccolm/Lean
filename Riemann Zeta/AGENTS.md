@@ -76,6 +76,44 @@ Before declaring completion:
 6. Update the README, paper, audit file, and research-progress document when proof status or dependencies change.
 7. Report exact commands, results, remaining assumptions, and failures. Do not summarize a warning-producing or partial build as “clean.”
 
+## Principal Human-Facing Evaluation: `run_lake_build.bat`
+
+`run_lake_build.bat` is a first-class project interface and the principal human-facing evaluation of the formalization. The project owner will use this file to run and inspect the overall proof. AI agents must treat its correctness, clarity, and continued operation as part of the proof deliverable, not as incidental build tooling.
+
+Lean does not execute a proof like an ordinary program; it validates the proof by elaborating declarations, compiling the relevant modules, and checking dependencies in the kernel. `run_lake_build.bat` must make that verification process visible and understandable to a human who launches the file directly.
+
+The runner's intent is to provide one action that:
+
+- starts from the repository root regardless of the caller's current directory;
+- uses the toolchain pinned by `lean-toolchain`;
+- builds the default Lean project;
+- explicitly builds intended production modules that are not yet reachable from the root import graph;
+- executes the project's Lean axiom audit;
+- scans the entire Lean source tree for forbidden proof shortcuts;
+- reports each stage as pass or fail without suppressing warnings or errors;
+- writes a complete timestamped log under `logs/`;
+- returns exit code `0` only when every required build, audit, and integrity gate passes; and
+- pauses for a human when launched by double-click while supporting `--no-pause` for agents and CI.
+
+Rules for maintaining the runner:
+
+1. Do not delete, rename, bypass, or materially narrow `run_lake_build.bat` without the project owner's explicit permission.
+2. Keep its production-module target list synchronized with the actual project. Adding a production module requires adding it to the root import graph or to the runner's explicit coverage until the root graph is repaired.
+3. Keep its integrity scans synchronized with `AGENTS.md` and its audit stage synchronized with `RiemannZeta/Audit.lean`.
+4. Never make the runner return success by excluding a failing module, ignoring a nonzero exit code, filtering an error from the log, weakening a scan, or relabeling a failed stage.
+5. A successful default `lake build` alone must not be presented as an overall pass when the runner reports failure.
+6. A runner `PASS` is valid only when the audit is a genuine dependency audit and all intended production modules are included.
+7. After changing Lean source, imports, `lakefile.toml`, `lean-toolchain`, the audit, or the runner itself, execute:
+
+   ```powershell
+   cmd /c run_lake_build.bat --no-pause
+   ```
+
+8. Report the runner's final exit code, final status, log path, and every remaining failed stage in the handoff.
+9. If the runner itself is broken or cannot be executed, the task is not fully verified. Repair it or report the exact environmental blocker; do not substitute an unaudited success claim.
+
+The current repository is expected to produce `FAIL` until the recorded proof and audit defects are repaired. That failure is useful evidence. Agents must preserve its honesty while progressively converting each failed gate into a genuine pass.
+
 ## Mandatory Checks
 
 Use repository-wide searches equivalent to the following before handoff:
@@ -88,7 +126,13 @@ rg -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" .
 
 Review matches in comments as well as code so stale documentation is corrected. The final code scan must contain no prohibited declaration or proof term.
 
-Run the project build using the pinned toolchain:
+Run the principal overall evaluation using the pinned toolchain:
+
+```powershell
+cmd /c run_lake_build.bat --no-pause
+```
+
+For focused development, also run the relevant direct project build:
 
 ```powershell
 lake build
