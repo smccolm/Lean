@@ -30,7 +30,7 @@ The following results are genuinely proved in Lean without project-specific axio
 13. **Type-I/Type-II partition identity:** `typeI_add_typeII_eq_total` is a finite-set filtering identity, conditional on the provisional zero-set construction.
 14. **Powered-polynomial definitional identity:** `powPoly_eval` and `polynomial_power_identity` follow from the definition `powPoly := detectPoly ^ k`. An expansion into convolution coefficients has not been completed.
 15. **Special divisor-bound case:** `k_divisor_function_bound_one` proves only the stated `m = 1` boundary case. The general `k_divisor_function_bound` remains an axiom.
-16. **Combined exponent implication:** `combined_zero_density_transfer_native` is an axiom-free proof that assumed Ingham, Huxley, and Guth–Maynard zero-density bounds imply the combined exponent. It is a conditional implication and does not prove any of its analytic premises or instantiate the result for the project's zeta zero count. The Huxley premise is present in the statement but unused by the proof.
+16. **Combined exponent implication:** `combined_zero_density_transfer_native` is an axiom-free proof that assumed Ingham and Guth–Maynard zero-density bounds imply the combined exponent. It is a conditional implication and does not prove either analytic premise or instantiate the result for the project's zeta zero count. The previously unused Huxley premise has been removed from the statement.
 
 ## Provisional or Model-Only Results
 

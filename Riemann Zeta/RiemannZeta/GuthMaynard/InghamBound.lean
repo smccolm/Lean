@@ -20,13 +20,12 @@ def HuxleyZeroDensity (zeroCount : ℝ → ℝ → ℕ) : Prop :=
     EpsilonPowerBound (fun T => (zeroCount σ T : ℝ)) (fun T => T ^ (3 * (1 - σ) / (3 * σ - 1)))
 
 /-- F-12: Combined zero density estimate transfer theorem.
-    Combining Ingham's bound (which is better for $\sigma$ closer to $1/2$),
-    Huxley's bound, and the Guth-Maynard bound yields the combined zero density bound.
+    Ingham's bound supplies the required exponent for `1/2 ≤ σ ≤ 7/10`,
+    while the Guth-Maynard bound supplies it for `7/10 < σ ≤ 1`.
 -/
 def CombinedZeroDensityTransfer : Prop :=
   ∀ (zeroCount : ℝ → ℝ → ℕ),
     InghamZeroDensity zeroCount →
-    HuxleyZeroDensity zeroCount →
     GuthMaynardZeroDensity zeroCount →
     CombinedZeroDensity zeroCount
 
@@ -49,9 +48,9 @@ lemma EpsilonPowerBound_mono (f g1 g2 : ℝ → ℝ)
           rw [Real.norm_eq_abs, abs_mul, abs_of_nonneg h1, abs_abs]
   exact h_base.trans h_mono
 
-/-- F-12: The Combined Zero Density Estimate transfer theorem has been formally proven unconditionally. -/
+/-- F-12: Kernel-checked combination of the two explicitly supplied zero-density bounds. -/
 theorem combined_zero_density_transfer_native : CombinedZeroDensityTransfer := by
-  intro zeroCount hIngham _ hGuthMaynard
+  intro zeroCount hIngham hGuthMaynard
   intro σ h_half h_one
   by_cases h_710 : σ ≤ 7/10
   · have hIng := hIngham σ h_half h_one

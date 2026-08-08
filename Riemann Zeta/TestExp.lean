@@ -4,5 +4,5 @@ import Mathlib.Analysis.SpecialFunctions.Exp
 
 open Complex
 
-lemma test_norm_cexp (y : ℝ) : ‖exp (y * I)‖ = 1 := by
-  sorry
+example (y : ℝ) : ‖exp (y * I)‖ = 1 := by
+  simp

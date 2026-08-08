@@ -54,9 +54,9 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 |---:|---|---|---|
 | 1 | ~~`RiemannZeta/GuthMaynard/TestAxiom.lean`~~ | **Completed 8 August 2026:** deleted the isolated file containing the deliberately false axiom and its dependent theorem. | Trivial—complete |
 | 2 | ~~`ExtractSeparated_scratch.lean`, `Test.lean`, `test2.lean`–`test6.lean`~~ | **Completed 8 August 2026:** deleted seven unreferenced, admitted experiments written against the removed zero-count-model API. | Trivial–easy—complete |
-| 3 | `TestExp.lean`, `test_separated.lean`, `test_zeta.lean` | Reuse existing proved lemmas where possible; otherwise remove the admitted experiments until their mathematics is proved. | Easy |
-| 4 | `RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` | Remove the zero Fourier-transform toy model and unused module-level symmetry assumption, or delete the scratch files. | Easy |
-| 5 | `RiemannZeta/GuthMaynard/InghamBound.lean` | Remove or justify the unused Huxley premise and synchronize the statement with the actual proof. | Easy |
+| 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
+| 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
+| 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
 | 6 | `RiemannZeta/Audit.lean` | Replace name-based categorization with complete import coverage and actual axiom-dependency checks. | Easy–moderate |
 | 7 | `RiemannZeta.lean` | Import every intended production module once those modules compile. | Easy but dependency-blocked |
 | 8 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
@@ -78,11 +78,8 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 - [x] `RiemannZeta/GuthMaynard/TestAxiom.lean` — deleted 8 August 2026 after confirming that no module imported or referenced its declarations
 - [x] `ExtractSeparated_scratch.lean`, `Test.lean`, and `test2.lean` through `test6.lean` — deleted 8 August 2026 after confirming that they were unreferenced, admitted experiments against stale APIs
-- `TestExp.lean`
-- `test_separated.lean`
-- `test_zeta.lean`
-- `RiemannZeta/GuthMaynard/test_fourier.lean`
-- `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`
+- [x] `TestExp.lean` and `test_separated.lean` — converted to complete examples on 8 August 2026; `test_zeta.lean` — deleted rather than retaining an admitted Euler-product theorem
+- [x] `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` — deleted 8 August 2026 after confirming that canonical code did not import or use them
 
 **Required actions:**
 
@@ -111,7 +108,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 2. Import every intended production module into the audit.
 3. Inspect dependencies rather than classifying declarations by name or declaration kind.
 4. Make `sorryAx` and project-specific axioms visible as audit failures.
-5. Correct the unused Huxley premise or its documentation.
+5. **Completed 8 August 2026:** removed the unused Huxley premise from the canonical combined-transfer signature, corrected the documentation, and deleted the stale, unreferenced `ScratchTransfer.lean` duplicate.
 6. Extend the root import graph only as repaired modules become compilable.
 
 **Exit evidence:**
@@ -306,6 +303,45 @@ Every completed repair iteration must record:
 | Verification | Confirmed all seven paths are absent and no Lean file references `ExtractSeparated_scratch` or `representative_selection`. The remaining code-level `sorry` scan now finds five terms: one each in the three Shitlist #3 tests and two in `PolynomialPowers.lean`. The default `lake build` completed successfully with the previously documented `powCoeffBound_native` `sorry` warning and unrelated linter warnings. |
 | Documentation | Marked rank 2 and its Phase 0 entry complete in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #3: repair or remove `TestExp.lean`, `test_separated.lean`, and `test_zeta.lean`. |
+
+### Completed Iteration: Shitlist #3
+
+| Field | Record |
+|---|---|
+| Target | `TestExp.lean`, `test_separated.lean`, and `test_zeta.lean` |
+| Mathematical source | Mathlib's complex-exponential norm simplification and the canonical project theorem `separated_selection`. The Euler-product lower bound remains a later analytic obligation in `ZeroCount.lean`. |
+| Previous defect | Each file contained one `sorry`. The separation file duplicated `IsSeparated`, and the zeta file claimed the still-unproved uniform lower bound. |
+| Result | Replaced `test_norm_cexp` with a complete `simp`-proved example; replaced the duplicated separation theorem with an example applying canonical `separated_selection`; deleted `test_zeta.lean` without replacing or claiming the Euler-product result. |
+| Dependencies | `TestExp.lean` uses Mathlib complex exponential facts. `test_separated.lean` imports `RiemannZeta.GuthMaynard.Separated` and applies its axiom-clean selection theorem. |
+| Verification | `lake env lean TestExp.lean` and `lake env lean test_separated.lean` both completed successfully. `#print axioms separated_selection` reports only `propext`, `Classical.choice`, and `Quot.sound`. A code-level scan now finds exactly two remaining `sorry` proof terms, both in `PolynomialPowers.lean`; `test_zeta.lean` is absent. The principal runner logged to `logs/overall_proof_20260808_042042.log`: the default build passed, the known omitted production modules failed, the current audit module executed, and the global result correctly remained `FAIL` because of later Shitlist defects. |
+| Documentation | Marked rank 3 and its Phase 0 entry complete in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #4: remove or repair `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`. |
+
+### Completed Iteration: Shitlist #4
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` |
+| Mathematical source | The canonical `BetaDependence.lean` already contains the non-toy Fourier-transform definition and its integrand-norm lemma. A future zero-count symmetry theorem must be proved from zeta symmetry and multiplicity preservation rather than introduced as an unused module variable. |
+| Previous defect | `test_fourier.lean` defined `fourierTransformΦ` to be the constant `0`, making its test mathematically vacuous. `ZeroCountScratch.lean` introduced an unused module-level parameter asserting the desired zero-count symmetry. Both files were outside the production import graph. |
+| Result | Deleted both isolated scratch files. No theorem, assumption, or claimed mathematical result replaced them. |
+| Dependencies | None. Repository search confirmed that no canonical Lean module imported either file or used `zeroCountRect_symm`; the only other `fourier_inversion_integrand_bound` is the canonical declaration in `BetaDependence.lean`. |
+| Verification | Confirmed both paths are absent, no Lean file references either scratch module or `zeroCountRect_symm`, and no zero-valued `fourierTransformΦ` definition remains. The code-level `sorry` scan still finds only the two terms in `PolynomialPowers.lean`. The principal runner logged to `logs/overall_proof_20260808_042738.log`: the default build passed; omitted production modules, prohibited-proof/axiom gates, and audit-quality gate correctly failed for later Shitlist items; the overall result remained `FAIL`. |
+| Documentation | Marked rank 4 and its Phase 0 entry complete in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #5: align the unused Huxley premise and documentation in `RiemannZeta/GuthMaynard/InghamBound.lean`. |
+
+### Completed Iteration: Shitlist #5
+
+| Field | Record |
+|---|---|
+| Target | `RiemannZeta/GuthMaynard/InghamBound.lean`; obsolete duplicate `RiemannZeta/GuthMaynard/ScratchTransfer.lean` |
+| Mathematical source | The exponent comparison used by the proof splits at `σ = 7/10`: Ingham supplies the low-σ range and Guth–Maynard supplies the high-σ range. Huxley's estimate is not required for this combined `30(1-σ)/13` implication. |
+| Previous defect | `CombinedZeroDensityTransfer` required `HuxleyZeroDensity`, but `combined_zero_density_transfer_native` ignored that premise. The comments incorrectly described a three-bound combination. |
+| Result | Removed the Huxley premise from the canonical combined-transfer proposition, updated its proof to accept exactly the two used hypotheses, and rewrote its documentation as a kernel-checked conditional implication. Deleted the unimported `ScratchTransfer.lean`, which redundantly redeclared the transfer framework and had become incompatible with current Mathlib. The standalone canonical `HuxleyZeroDensity` specification remains available but is not presented as a dependency of this theorem. |
+| Dependencies | Explicit `InghamZeroDensity` and `GuthMaynardZeroDensity` hypotheses plus the axiom-clean exponent comparison and `EpsilonPowerBound_mono`. |
+| Verification | `lake env lean RiemannZeta/GuthMaynard/InghamBound.lean` completed successfully (with only deprecation/style warnings). `#print axioms RiemannZeta.GuthMaynard.combined_zero_density_transfer_native` reports only `propext`, `Classical.choice`, and `Quot.sound`. Repository search confirmed that no code references the deleted scratch module and no documentation still describes the transfer as using three bounds. The principal runner logged to `logs/overall_proof_20260808_043258.log`: the default build and current audit-module execution passed; omitted production modules, the global `sorry`/axiom gates, and the audit-quality gate correctly failed for later Shitlist items; the overall result remained `FAIL`. |
+| Documentation | Updated `Research Agenda Progress.MD`, rank 5, and the Phase 1 action in this agenda. |
+| Remaining obstruction | Proceed to Shitlist #6: replace `RiemannZeta/Audit.lean` with a genuine dependency audit. |
 
 ## Current Priority
 
