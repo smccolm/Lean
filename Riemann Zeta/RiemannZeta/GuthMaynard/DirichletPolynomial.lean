@@ -32,7 +32,7 @@ noncomputable def normalizedCoeffs (N : ℕ) (σ : ℝ) (b : ℕ → ℂ) (n : �
 /--
 A bridge from the interval-indexed `dirichletPoly` to the existing `RiemannZeta.dirichletPoly` over `PNat`.
 -/
-theorem dirichletPoly_eq_existing (N : ℕ) (hN : 0 < N) (a : ℕ → ℂ) (t : ℝ) :
+theorem dirichletPoly_eq_existing (N : ℕ) (a : ℕ → ℂ) (t : ℝ) :
     dirichletPoly N a t = 
       RiemannZeta.dirichletPoly 
         (fun n => a n.val) 

@@ -170,8 +170,4 @@ theorem zeta_lower_bound_native : ZetaLowerBoundProp := by
   · intro T t hT ht
     exact euler_product_lower_bound_2 t
 
-/-- Absolute convergence of Riemann Zeta Dirichlet series at Re(s) ≥ 2 -/
-lemma zeta_abs_convergent_at_2 (t : ℝ) : True := trivial
-
-
 end RiemannZeta.GuthMaynard

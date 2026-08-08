@@ -7,9 +7,9 @@
 
 The project contains a useful collection of kernel-checked elementary lemmas, formal target statements, and provisional interfaces for the Guth–Maynard program. It does **not** yet contain a verified formalization of the Section 13.1 zero-density transfer.
 
-The default `lake build` target imports and compiles every intended production module, with warnings. In particular, Lean reports that `powCoeffBound_native` uses `sorry`; full import coverage does not make the unresolved proof dependencies valid.
+The default `lake build` target imports and compiles every intended production module with zero Lean warnings. Warning-free compilation does not make the unresolved project-axiom dependencies valid.
 
-The non-test Guth–Maynard source contains 28 direct `axiom` declarations, all of which now occur in modules reachable from the default `RiemannZeta` root import. A theorem is therefore counted as proved below only when its audited dependencies contain no project-specific axiom and no `sorryAx`.
+The non-test Guth–Maynard source contains 26 direct `axiom` declarations, all of which occur in modules reachable from the default `RiemannZeta` root import. A theorem is therefore counted as proved below only when its audited dependencies contain no project-specific axiom and no `sorryAx`.
 
 ## Verified Results
 
@@ -34,10 +34,10 @@ The following results are genuinely proved in Lean without project-specific axio
 
 ## Provisional or Model-Only Results
 
-Some declarations compile and have axiom-free proofs only because their underlying definitions are simplified models rather than the objects required by the research agenda.
+Some declarations remain provisional specifications rather than proved results.
 
-- `mobius_sum n T` is currently defined to be the constant `1`, not the truncated Möbius sum specified by Section 13.1. Consequently, `mobius_sum_bound` and `detector_coeff_bound_native` prove bounds for this toy coefficient model, not for the intended zero detector.
-- `jensens_inequality_disk` and `zeta_abs_convergent_at_2` currently have conclusion `True`; they record no substantive analytic result.
+- `mobius_sum n T` now implements `∑_{d ∣ n, d ≤ 2T^(1/100)} μ(d)`, and `detectorCoeff` applies the intended exponential smoothing. The uniform magnitude theorem `DetectorCoeffBoundProp` is stated but not proved.
+- The vacuous declarations `jensens_inequality_disk`, `zeta_abs_convergent_at_2`, `typeII_dyadic_sum`, and `recursive_block_decomposition` have been removed rather than retained as `True`-valued results.
 - Several positivity lemmas verify only that the proposed right-hand side of a future estimate is nonnegative. They do not establish the corresponding mean-value, decoupling, zero-count, or detector estimate.
 
 ## Unproved Results and Explicit Dependencies
@@ -75,26 +75,26 @@ The current source includes, among others, the following unproved declarations:
 - `type_I_zeros_dyadic_sum_bound` and `dyadic_pigeonhole_lemma`;
 - `vitali_covering_lemma_1D`, `extract_1_separated_subset`, and `extract_separated_lemma`;
 - `k_divisor_function_bound`;
-- `bourgain_guth_broad_narrow_decomposition`, `l2_parabola_incidence_bound`, and `l2_decoupling_bound_unconditional`; and
+- `l2_parabola_incidence_bound` and `l2_decoupling_bound_unconditional`; and
 - `algebraic_combination_unconditional`, which is equivalent to the desired zero-density conclusion and must be removed rather than treated as an acceptable analytic hypothesis.
 
-### Outstanding `sorryAx`
+### Admitted-proof status
 
-`powCoeffBound_native` contains two `sorry` terms in `PolynomialPowers.lean`. Its axiom audit includes both `sorryAx` and `k_divisor_function_bound`. Although it no longer calls the standalone axiom `powCoeffBound_unconditional`, the coefficient theorem has **not** been discharged unconditionally.
+No Lean file contains `sorry`, `admit`, or a `sorryAx` dependency. The former `powCoeffBound_native` declaration and its standalone `powCoeffBound_unconditional` axiom were removed; `PowCoeffBoundProp` remains an unproved specification. This removal restores integrity but does not prove the coefficient estimate.
 
 ## Build and Audit Status
 
-- The default `lake build` completes successfully but emits warnings, including `declaration uses 'sorry'` for `powCoeffBound_native`.
-- Direct builds of `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` now succeed with warnings. The compilation repairs do not prove the remaining analytic axioms or replace the `True` placeholders.
+- The default `lake build` completes successfully with zero Lean warnings.
+- Direct builds of `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` succeed with zero Lean warnings. This does not prove their remaining analytic axioms or proposition specifications.
 - `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` are now in the default import graph. `LargeValues.lean` still contains no proof of `GuthMaynardLargeValues`; the former dangling variable that assumed that target has been removed.
-- `Audit.lean` imports every production module and explicitly audits 110 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. The current audit reports 22 failing theorems, including the `sorryAx` dependency in `powCoeffBound_native` and multiple project-specific analytic axioms.
+- `Audit.lean` imports every production module and explicitly audits 102 exported source-level theorems using `Lean.collectAxioms`. It verifies list synchronization and exits nonzero on forbidden dependencies. The current audit reports 21 failing theorems, all through project-specific axioms rather than `sorryAx`.
 - The README and paper now describe the failing audit honestly; their broader mathematical claims still require continued synchronization as the remaining Shitlist items are repaired.
 
 ## Research-Agenda Milestones
 
 | Milestone | Current assessment |
 |---|---|
-| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit now cover every production module and all 110 exported source-level theorems, but the exact detector and complete zero-count interface remain incomplete. |
+| Goal A: formal statement and infrastructure layer | **Partially achieved.** The default root and explicit dependency audit cover every production module and all 102 exported source-level theorems. The exact detector formula is present, but its magnitude estimate and the complete zero-count interface remain incomplete. |
 | Goal B: conditional zero-density transfer | **Not achieved.** The desired conclusion is presently assumed through `algebraic_combination_unconditional`. |
 | Goal C: discharge auxiliary classical hypotheses | **Not achieved.** The local zero count, Type II estimate, mean-value theorem, smoothing, divisor bound, and related inputs remain axiomatic. |
 | Goal D: prove the Guth–Maynard large-values theorem | **Not achieved.** The decoupling and large-values modules now compile, but decoupling remains axiomatic and `LargeValues.lean` contains no proof of the target. |
@@ -102,9 +102,9 @@ The current source includes, among others, the following unproved declarations:
 
 ## Next Steps
 
-1. Remove the two `sorry`s from `powCoeffBound_native` and audit its remaining dependence on the general divisor bound.
-2. Replace the constant `mobius_sum` model with the actual truncated Möbius coefficients and prove their support and size properties.
-3. Resolve the audit's 22 reported theorem-dependency failures one ranked proof obligation at a time.
+1. Prove the magnitude bound for the actual truncated Möbius detector coefficients.
+2. Prove a conditional powered-coefficient theorem from the explicit detector and divisor bounds, then discharge those inputs separately.
+3. Resolve the audit's 21 reported theorem-dependency failures one ranked proof obligation at a time.
 4. Keep the root import graph and explicit audit list synchronized as modules and public theorems change.
 5. Refactor `conditionalZeroDensityTransfer` to accept the individually named Goal B hypotheses and implement the real F-01 through F-10 deduction. Remove `algebraic_combination_unconditional`.
 6. Discharge the remaining hypotheses one at a time, beginning with the smallest precise combinatorial or Mathlib-bridge obligation.

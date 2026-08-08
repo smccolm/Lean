@@ -5,6 +5,8 @@ import Mathlib.Data.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.SpecialFunctions.Exp
+import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+import Mathlib.NumberTheory.Divisors
 
 open Complex
 open scoped BigOperators
@@ -13,43 +15,22 @@ open Classical
 namespace RiemannZeta.GuthMaynard
 
 
-/- Actual truncated Möbius coefficients b_n.
-    b_n = (sum_{d | n, d <= 2T^{1/100}} mu(d)) * exp(-n / T^{1/2}) 
-    We just assume the sequence here with an uninterpreted function `mobius_sum` for the algebraic part. -/
-def mobius_sum (n : ℕ) (T : ℝ) : ℂ := 1
+/- Actual truncated Möbius divisor sum
+   `∑_{d ∣ n, d ≤ 2 T^(1/100)} μ(d)`. -/
+noncomputable def mobius_sum (n : ℕ) (T : ℝ) : ℂ :=
+  ∑ d ∈ n.divisors.filter (fun (d : ℕ) => (d : ℝ) ≤ 2 * T ^ (1 / 100 : ℝ)),
+    (ArithmeticFunction.moebius d : ℂ)
 
-noncomputable def detectorCoeff (N n : ℕ) (T : ℝ) : ℂ := 
+noncomputable def detectorCoeff (n : ℕ) (T : ℝ) : ℂ :=
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
 
 /-- Hypothesis bounding the detector coefficient with epsilon losses. -/
 def DetectorCoeffBoundProp : Prop :=
   ∀ (ε : ℝ), 0 < ε → ∀ (T : ℝ), 1 ≤ T → 
-    ∃ C : ℝ, 0 < C ∧ ∀ (N n : ℕ), 0 < n → ‖detectorCoeff N n T‖ ≤ C * (n : ℝ) ^ ε
-
-lemma mobius_sum_rhs_nonneg (C : ℝ) (hC : 0 < C) (n : ℕ) (ε : ℝ) :
-  0 ≤ C * (n : ℝ) ^ ε := by
-  have h1 : 0 ≤ (n : ℝ) := Nat.cast_nonneg n
-  have h2 : 0 ≤ (n : ℝ) ^ ε := Real.rpow_nonneg h1 ε
-  exact mul_nonneg (le_of_lt hC) h2
-  
-/-- Absolute bound on the truncated Mobius sum -/
-lemma mobius_sum_bound (ε : ℝ) (hε : 0 < ε) :
-  ∃ C : ℝ, 0 < C ∧ ∀ (n : ℕ), 0 < n → ∀ (T : ℝ), 1 ≤ T → ‖mobius_sum n T‖ ≤ C * (n : ℝ) ^ ε := by
-  use 1
-  constructor
-  · norm_num
-  · intro n hn T _
-    unfold mobius_sum
-    rw [norm_one, one_mul]
-    have h1 : (1 : ℝ) = (1 : ℝ) ^ ε := by rw [Real.one_rpow]
-    rw [h1]
-    apply Real.rpow_le_rpow
-    · norm_num
-    · exact Nat.one_le_cast.mpr hn
-    · exact le_of_lt hε
+    ∃ C : ℝ, 0 < C ∧ ∀ n : ℕ, 0 < n → ‖detectorCoeff n T‖ ≤ C * (n : ℝ) ^ ε
 
 /-- Exponential decay bound for the smoothing factor -/
-lemma exp_smoothing_bound (n : ℕ) (T : ℝ) (hn : 0 < n) (hT : 1 ≤ T) :
+lemma exp_smoothing_bound (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
   ‖Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ))‖ ≤ 1 := by
   rw [Real.norm_eq_abs]
   have h_exp_pos : 0 ≤ Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ)) := (Real.exp_pos _).le
@@ -64,35 +45,12 @@ lemma exp_smoothing_bound (n : ℕ) (T : ℝ) (hn : 0 < n) (hT : 1 ≤ T) :
   rw [Real.exp_zero] at h5
   exact h5
 
-theorem detector_coeff_bound_native : DetectorCoeffBoundProp := by
-  intro ε hε T hT
-  have h_mobius := mobius_sum_bound ε hε
-  rcases h_mobius with ⟨C, hC_pos, hC_bound⟩
-  use C
-  constructor
-  · exact hC_pos
-  · intro N n hn
-    unfold detectorCoeff
-    have h_norm : ‖mobius_sum n T * (Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ)) : ℂ)‖ = 
-      ‖mobius_sum n T‖ * ‖(Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ)) : ℂ)‖ := norm_mul _ _
-    rw [h_norm]
-    have h_exp_complex : ‖(Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ)) : ℂ)‖ = ‖Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ))‖ := by
-      exact Complex.norm_real _
-    rw [h_exp_complex]
-    have h1 := hC_bound n hn T hT
-    have h2 := exp_smoothing_bound n T hn hT
-    have h3 : ‖mobius_sum n T‖ * ‖Real.exp (-(n : ℝ) / T ^ (1/2 : ℝ))‖ ≤ ‖mobius_sum n T‖ * 1 := by
-      apply mul_le_mul_of_nonneg_left h2 (norm_nonneg _)
-    rw [mul_one] at h3
-    exact le_trans h3 h1
-
-
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/
 noncomputable def detectPoly (N : ℕ) (s : ℂ) (T : ℝ) : ℂ :=
-  ∑ n ∈ Finset.Ioc N (2 * N), detectorCoeff N n T * (n : ℂ) ^ (-s)
+  ∑ n ∈ Finset.Ioc N (2 * N), detectorCoeff n T * (n : ℂ) ^ (-s)
 
 lemma detectPoly_eval (N : ℕ) (s : ℂ) (T : ℝ) :
-  detectPoly N s T = ∑ n ∈ Finset.Ioc N (2 * N), (detectorCoeff N n T) * (n : ℂ) ^ (-s) := by
+  detectPoly N s T = ∑ n ∈ Finset.Ioc N (2 * N), detectorCoeff n T * (n : ℂ) ^ (-s) := by
   rfl
 
 /-- F-03: Type I zero classification.
@@ -122,7 +80,7 @@ def HalaszMontgomeryConsequence : Prop :=
       (fun (T : ℝ) => (typeIIZeroCount σ T (2*T) T : ℝ))
       (fun (T : ℝ) => T ^ (2 - 2 * σ))
 
-lemma typeII_exponent_pos (σ : ℝ) (hσ1 : 7/10 ≤ σ) (hσ2 : σ ≤ 4/5) :
+lemma typeII_exponent_pos (σ : ℝ) (hσ2 : σ ≤ 4/5) :
   0 ≤ 2 - 2 * σ := by
   linarith
 

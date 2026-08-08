@@ -84,7 +84,7 @@ theorem k_selection (N T σ : ℝ) (hN : 1 < N) (hT : 1 < T) (hσ : 7/10 ≤ σ)
       linarith
     · intro _
       refine ⟨rfl, ?_⟩
-      push_neg at hNT
+      push Not at hNT
       have h1 : Real.log (T ^ (5 / d)) < Real.log N := (Real.log_lt_log_iff (Real.rpow_pos_of_pos hTpos _) hNpos).mpr hNT
       have h2 : Real.log (T ^ (5 / d)) = (5 / d) * Real.log T := Real.log_rpow hTpos (5 / d)
       have h3 : (5 / d) * Real.log T < Real.log N := by linarith

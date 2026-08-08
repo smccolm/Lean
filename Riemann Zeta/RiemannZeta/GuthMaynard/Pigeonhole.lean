@@ -11,7 +11,7 @@ namespace RiemannZeta.GuthMaynard
 lemma pigeonhole_real_sum (n : ℕ) (a : ℕ → ℝ) (S : ℝ) (hS : S ≤ ∑ i ∈ range n, a i) (hn : 0 < n) :
   ∃ i ∈ range n, S / n ≤ a i := by
   by_contra h
-  push_neg at h
+  push Not at h
   have h_sum : ∑ i ∈ range n, a i < ∑ i ∈ range n, (S / n) := by
     apply Finset.sum_lt_sum
     · intro i _

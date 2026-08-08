@@ -27,22 +27,11 @@ def DecouplingProp : Prop :=
         ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
           C * (K : ℝ)^ε * (∑ k ∈ Ioc 0 K, ∑ t ∈ W, ‖∑ n ∈ Ioc (N + k * (N / K)) (N + (k + 1) * (N / K)), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2)
 
-/-- Bourgain-Guth recursive block decomposition step -/
-lemma recursive_block_decomposition (N K : ℕ) (W : Finset ℝ) (a : ℕ → ℂ) : True := trivial
-
 lemma l2_decoupling_rhs_nonneg (C ε : ℝ) (K : ℕ) (hC : 0 < C) :
   0 ≤ C * (K : ℝ) ^ ε := by
   have h1 : 0 ≤ (K : ℝ) := Nat.cast_nonneg K
   have h2 : 0 ≤ (K : ℝ) ^ ε := by positivity
   exact mul_nonneg (le_of_lt hC) h2
-
-/-- 
-The Bourgain-Guth Broad/Narrow frequency decomposition. 
-Separates the frequency domain into transverse (broad) regions and localized (narrow) regions.
--/
-axiom bourgain_guth_broad_narrow_decomposition :
-  ∀ (N K : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
-    ∃ (W_broad W_narrow : Finset ℝ), W ⊆ W_broad ∪ W_narrow
 
 /--
 The L^2 incidence bound over the parabola. 

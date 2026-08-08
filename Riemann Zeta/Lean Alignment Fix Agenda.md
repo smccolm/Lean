@@ -62,16 +62,16 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
 | 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed 8 August 2026:** replaced name-based categorization with a synchronized 110-theorem list and transitive dependency checks across every production module. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
-| 8 | Warning-producing production files and `run_lake_build.bat` | Eliminate all 31 current Lean warning lines across 11 files and make the principal runner fail on any future project warning without suppressing linters. | Easy–moderate |
-| 9 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | Implement the actual truncated Möbius coefficients and prove their support and magnitude properties. | Moderate |
-| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | Remove two `sorry`s and two axioms; prove the finite-product algebra and address the general k-divisor bound faithfully. | Moderate–hard |
+| 8 | ~~Warning-producing production files and `run_lake_build.bat`~~ | **Completed 8 August 2026:** eliminated all 31 warning lines at their sources and made every runner build/audit stage fail on any future Lean warning. | Easy–moderate—complete |
+| 9 | `RiemannZeta/GuthMaynard/ZeroDetector.lean` | **Actual truncated Möbius coefficients implemented during #8.** Still prove their support and uniform magnitude properties. | Moderate |
+| 10 | `RiemannZeta/GuthMaynard/PolynomialPowers.lean` | **Two `sorry`s and the unused coefficient-bound axiom removed during #8.** Still prove the coefficient theorem from explicit detector/divisor inputs and remove the general divisor axiom. | Moderate–hard |
 | 11 | `RiemannZeta/GuthMaynard/MeanValue.lean` | Remove the Montgomery mean-value axiom and either prove the theorem or expose it only as a legitimate explicit upstream parameter. | Hard |
-| 12 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6.** Still prove the large-value consequence from an explicit mean-value input, replace the `True` dyadic lemma, and remove the Type II axiom. | Hard |
-| 13 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | Replace the Jensen `True` placeholder and eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
+| 12 | `RiemannZeta/GuthMaynard/HalaszMontgomery.lean` | **Compilation repaired during #6; vacuous dyadic lemma removed during #8.** Still prove the dyadic step and large-value consequence from explicit inputs, and remove the Type II axiom. | Hard |
+| 13 | `RiemannZeta/GuthMaynard/ExtractSeparated.lean` | **Jensen `True` placeholder removed during #8.** Replace eight axioms with genuine combinatorial extraction and explicit, narrower analytic inputs. | Hard–very hard |
 | 14 | `RiemannZeta/GuthMaynard/Transfer.lean` | Remove the assumed conclusion and implement F-01 through F-10 from separately named upstream hypotheses. | Very hard |
 | 15 | `RiemannZeta/GuthMaynard/ZeroCount.lean` | Prove or faithfully refactor zero finiteness with multiplicity, growth bounds, Phragmén–Lindelöf, and the Euler-product lower bound. | Very hard |
 | 16 | `RiemannZeta/GuthMaynard/BetaDependence.lean` | Replace seven axioms with genuine Schwartz/Fourier inversion, decay, contour-shift, truncation, and pigeonhole arguments. | Very hard |
-| 17 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6.** Still replace the `True` block decomposition and formalize the broad–narrow and incidence bounds without axioms. | Extreme |
+| 17 | `RiemannZeta/GuthMaynard/Decoupling.lean` | **Compilation repaired during #6; vacuous recursive lemma and unused broad–narrow axiom removed during #8.** Still prove the stated block decomposition and formalize incidence and decoupling without axioms. | Extreme |
 | 18 | `RiemannZeta/GuthMaynard/LargeValues.lean` | **Module-level target assumption removed during #6.** Still assemble and prove the full Guth–Maynard large-values theorem. | Hardest; long-term Goal D |
 
 ## Dependency-Aware Execution Plan
@@ -142,12 +142,12 @@ The audit may initially report failures. It must not suppress them merely to kee
 
 **Required actions:**
 
-1. Eliminate the 31 distinct warning lines recorded in `logs/overall_proof_20260808_045030.log` by correcting their source.
-2. Remove unused hypotheses or mark binders intentionally anonymous only when doing so preserves the faithful mathematical interface.
-3. Replace deprecated tactics and APIs with supported equivalents.
-4. Resolve proof-integrity warnings through real proofs or honest removal/refactoring, never by disabling the diagnostic.
-5. Add a runner gate that makes any project `warning:` line produce a failed overall evaluation.
-6. Do not use linter-disable options, warning filters, or output suppression to satisfy this phase.
+1. **Completed 8 August 2026:** eliminated the 31 distinct warning lines recorded in `logs/overall_proof_20260808_045030.log` by correcting their source.
+2. **Completed 8 August 2026:** removed unused hypotheses and deleted malformed vacuous declarations rather than disguising them with binder names.
+3. **Completed 8 August 2026:** replaced deprecated tactics with supported `push Not` syntax.
+4. **Completed 8 August 2026:** removed the admitted coefficient theorem and implemented the actual detector definition rather than disabling proof-integrity diagnostics.
+5. **Completed 8 August 2026:** added a runner gate that makes any Lean `warning:` line fail its build/audit stage.
+6. **Completed 8 August 2026:** used no linter-disable option, warning filter, or output suppression.
 
 **Exit evidence:**
 
@@ -164,10 +164,10 @@ The audit may initially report failures. It must not suppress them merely to kee
 
 **Required actions:**
 
-1. Define the actual truncated Möbius sum and detector coefficients.
+1. **Completed 8 August 2026:** defined the actual truncated Möbius sum and detector coefficients.
 2. Prove exact support and smoothing properties.
-3. Prove the two finite-product steps currently replaced by `sorry`.
-4. Remove `powCoeffBound_unconditional`.
+3. The former admitted theorem was deleted during #8. Reintroduce a coefficient theorem only with complete finite-product proofs and explicit narrower inputs.
+4. **Completed 8 August 2026:** removed `powCoeffBound_unconditional`.
 5. Isolate the precise general divisor-function statement required by the coefficient bound.
 6. Prove it or expose it only as an explicit, source-faithful parameter of a genuinely conditional coefficient theorem.
 
@@ -403,8 +403,21 @@ Every completed repair iteration must record:
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 7, and the Phase 1 root-coverage action in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #8: eliminate all Lean warnings and enforce the runner's zero-warning gate. |
 
+### Completed Iteration: Shitlist #8
+
+| Field | Record |
+|---|---|
+| Target | Eleven warning-producing production modules, `RiemannZeta/Audit.lean`, retained `scratch_pow.lean`, and `run_lake_build.bat` |
+| Previous defect | The principal run emitted 31 distinct Lean warning lines. The runner treated warning-producing builds as passes; warning sources included unused hypotheses, deprecated tactics, vacuous `True` lemmas, a constant detector toy, and the admitted `powCoeffBound_native` declaration. |
+| Result | Removed unused hypotheses, replaced deprecated tactics, deleted four vacuous `True` declarations and one unused malformed broad–narrow axiom, implemented the actual truncated Möbius divisor sum, and deleted the admitted coefficient theorem plus its unused standalone axiom. Updated the retained polynomial-power scratch file to the faithful `T`-dependent detector interface and removed its unfinished regrouping claim. The exact detector and coefficient bounds remain unproved specifications. The runner now rejects any build/audit stage containing a line beginning `warning:` even if Lean exits `0`. |
+| Audit impact | The synchronized public-theorem list changed from 110 to 102 after removing invalid declarations. Direct audit execution reports 102 listed and 102 discovered theorems, with 21 project-axiom dependency failures and no `sorryAx`. Direct project-axiom declarations decreased from 28 to 26. |
+| Warning-gate test | A temporary imported `WarningFixture.lean` produced an unused-variable warning while Lean exited `0`; the runner correctly reported `FAIL: 1/3 Default project build emitted Lean warnings despite exit 0` in `logs/overall_proof_20260808_050618.log`. The fixture and import were then removed. |
+| Verification | `lake build RiemannZeta` and direct elaboration of `scratch_pow.lean` both succeed with no Lean warnings. The principal runner logged to `logs/overall_proof_20260808_051323.log`: the default build and explicit production coverage passed with zero Lean warnings; the synchronized audit found 102 listed and 102 discovered theorems and correctly failed on 21 project-axiom dependencies; the prohibited-placeholder, unsafe-bypass, and audit-quality scans passed; the project-axiom scan correctly failed on 26 remaining declarations. The complete log contains no line beginning `warning:`. Overall exit code remains honestly `1` because the audit and project-axiom gates are not yet complete. Repository scans found no `sorry`, `admit`, `sorryAx`, `native_decide`, `implemented_by`, `unsafe`, or linter-suppression matches in Lean source, and `git diff --check` found no whitespace errors. |
+| Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, `Analytic Research Agenda.md`, rank 8, and the affected later Shitlist entries. |
+| Remaining obstruction | Proceed to Shitlist #9: prove support and magnitude properties for the actual truncated Möbius detector. |
+
 ## Current Priority
 
-The import and dependency-audit infrastructure is aligned. Proceed to Shitlist #8: make the human-facing proof run warning-free and enforce that invariant before continuing to the finite detector layer at #9.
+The proof run is warning-free and the warning gate is enforced. Proceed to Shitlist #9: prove support and magnitude properties for the actual truncated Möbius detector.
 
 The first major research milestone remains a kernel-checked conditional Section 13.1 transfer from explicit, individually named hypotheses. The final large-values theorem remains the hardest long-term objective.

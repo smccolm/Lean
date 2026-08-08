@@ -24,7 +24,7 @@ def MontgomeryMeanValue : Prop :=
     ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 ≤
       (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
 
-lemma mean_value_pos (N : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ) :
+lemma mean_value_pos (N : ℕ) (W : Finset ℝ) (a : ℕ → ℂ) :
   0 ≤ ∑ t ∈ W, ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖^2 := by
   apply Finset.sum_nonneg
   intros
@@ -45,7 +45,7 @@ lemma l2_norm_sq_zero_iff (N : ℕ) (a : ℕ → ℂ) :
   intro _
   rw [sq_eq_zero_iff, norm_eq_zero]
 
-lemma montgomery_mean_value_rhs_nonneg (N : ℕ) (T : ℝ) (W : Finset ℝ) (a : ℕ → ℂ) (hT : 0 ≤ T) :
+lemma montgomery_mean_value_rhs_nonneg (N : ℕ) (T : ℝ) (a : ℕ → ℂ) (hT : 0 ≤ T) :
   0 ≤ (T + (N : ℝ)) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := by
   have h1 : 0 ≤ T + (N : ℝ) := add_nonneg hT (Nat.cast_nonneg N)
   have h2 : 0 ≤ ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := l2_norm_sq_nonneg N a

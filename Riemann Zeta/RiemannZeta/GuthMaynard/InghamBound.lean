@@ -50,8 +50,7 @@ lemma EpsilonPowerBound_mono (f g1 g2 : ℝ → ℝ)
 
 /-- F-12: Kernel-checked combination of the two explicitly supplied zero-density bounds. -/
 theorem combined_zero_density_transfer_native : CombinedZeroDensityTransfer := by
-  intro zeroCount hIngham hGuthMaynard
-  intro σ h_half h_one
+  intro zeroCount hIngham hGuthMaynard σ h_half h_one
   by_cases h_710 : σ ≤ 7/10
   · have hIng := hIngham σ h_half h_one
     apply EpsilonPowerBound_mono _ _ _ hIng
@@ -63,7 +62,7 @@ theorem combined_zero_density_transfer_native : CombinedZeroDensityTransfer := b
       rw [div_le_div_iff₀ hd1 (by norm_num)]
       nlinarith
     exact h1
-  · push_neg at h_710
+  · push Not at h_710
     have hGM := hGuthMaynard σ (by linarith) h_one
     apply EpsilonPowerBound_mono _ _ _ hGM
     intro T hT

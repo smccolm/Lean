@@ -7,7 +7,7 @@ The remaining assumptions are purely analytic in nature and require advanced int
 ## Remaining Analytic Axioms
 
 ### 1. Fourier Analysis & Decoupling
-- `l2_decoupling_bound_unconditional`: Decomposed into `bourgain_guth_broad_narrow_decomposition` (frequency separation) and `l2_parabola_incidence_bound` (geometric L2 incidence constraint over the parabola).
+- `l2_decoupling_bound_unconditional`: remains an unproved final decoupling postulate. The earlier unused broad–narrow postulate was removed; `l2_parabola_incidence_bound` remains as an unproved geometric incidence input.
 - `fourier_inversion_unconditional`: Decomposed into `smooth_compact_is_schwartz` (embedding compactly supported smooth functions into the Schwartz space) and `schwartz_fourier_inversion` (the actual Fourier inversion for Schwartz functions).
 - `fourier_decay_unconditional`: Upgraded to `SchwartzFourierDecayProp` forcing rapid decay bounded by any polynomial degree for Schwartz functions.
 

@@ -22,9 +22,6 @@ def LocalZeroCountProp : Prop :=
   ∃ C > 0, ∀ (σ t T : ℝ), T ≥ 2 → t ∈ Set.Icc T (2 * T) →
     (zeroCountRect σ 1 t (t + 1) : ℝ) ≤ C * Real.log T
 
-/-- Jensen's inequality application for the number of zeros in a disk -/
-lemma jensens_inequality_disk (f : ℂ → ℂ) (z₀ : ℂ) (r R : ℝ) (hr : 0 < r) (hR : r < R) : True := trivial
-
 /-- Upper bound for Zeta on a disk covering the critical strip -/
 axiom zeta_upper_bound_disk (t T : ℝ) (hT : T ≥ 2) (ht : t ∈ Set.Icc T (2 * T)) :
   ∃ (C : ℝ), ∀ z ∈ Metric.closedBall (2 + t * I) 3, ‖riemannZeta z‖ ≤ C * T
@@ -157,7 +154,7 @@ theorem extractSeparatedBound_native : ExtractSeparatedProp := by
 
 end RiemannZeta.GuthMaynard
 
-lemma extractSeparated_k_selection (N : ℕ) (T : ℝ) (hT : T ≥ 2) (hN : 0 < N) :
+lemma extractSeparated_k_selection (N : ℕ) (T : ℝ) (hT : T ≥ 2) :
   (T^(10 : ℝ) / N) ≤ (T^(15 : ℝ) / N) := by
   apply div_le_div_of_nonneg_right
   · have h1 : (10 : ℝ) ≤ 15 := by norm_num

@@ -48,7 +48,7 @@ set "FAILED=0"
   echo Lean verifies proofs by compiling their declarations and checking
   echo their dependencies in the kernel. This runner cannot make an
   echo unproved theorem true; it fails when a production module, audit,
-  echo or proof-integrity gate fails.
+  echo proof-integrity gate, or zero-warning gate fails.
   echo.
 ) > "%LOG%"
 
@@ -92,8 +92,8 @@ echo ============================================================>> "%LOG%"
 if "%FAILED%"=="0" (
   echo PASS: Every requested build, audit, and integrity gate passed.
   echo PASS: Every requested build, audit, and integrity gate passed.>> "%LOG%"
-  echo This means Lean accepted the declarations currently present and the scans found no forbidden proof shortcuts.
-  echo This means Lean accepted the declarations currently present and the scans found no forbidden proof shortcuts.>> "%LOG%"
+  echo This means Lean accepted the declarations currently present, emitted no warnings, and the scans found no forbidden proof shortcuts.
+  echo This means Lean accepted the declarations currently present, emitted no warnings, and the scans found no forbidden proof shortcuts.>> "%LOG%"
   set "EXIT_CODE=0"
 ) else (
   echo FAIL: The repository does not currently pass overall proof verification.
@@ -126,12 +126,32 @@ set "STEP_EXIT=%ERRORLEVEL%"
 type "%STEP_LOG%"
 type "%STEP_LOG%" >> "%LOG%"
 
+findstr /B /C:"warning:" "%STEP_LOG%" >nul 2>&1
+set "WARNING_SCAN=%ERRORLEVEL%"
+
 if "%STEP_EXIT%"=="0" (
-  echo PASS: %STEP_NAME%
-  echo PASS: %STEP_NAME%>> "%LOG%"
+  if "%WARNING_SCAN%"=="1" (
+    echo PASS: %STEP_NAME% ^(zero Lean warnings^)
+    echo PASS: %STEP_NAME% ^(zero Lean warnings^)>> "%LOG%"
+  ) else if "%WARNING_SCAN%"=="0" (
+    echo FAIL: %STEP_NAME% emitted Lean warnings despite exit 0.
+    echo FAIL: %STEP_NAME% emitted Lean warnings despite exit 0.>> "%LOG%"
+    set "FAILED=1"
+  ) else (
+    echo FAIL: warning detection failed for %STEP_NAME% ^(exit %WARNING_SCAN%^).
+    echo FAIL: warning detection failed for %STEP_NAME% ^(exit %WARNING_SCAN%^).>> "%LOG%"
+    set "FAILED=1"
+  )
 ) else (
   echo FAIL: %STEP_NAME% ^(exit %STEP_EXIT%^)
   echo FAIL: %STEP_NAME% ^(exit %STEP_EXIT%^)>> "%LOG%"
+  if "%WARNING_SCAN%"=="0" (
+    echo FAIL: %STEP_NAME% also emitted Lean warnings.
+    echo FAIL: %STEP_NAME% also emitted Lean warnings.>> "%LOG%"
+  ) else if not "%WARNING_SCAN%"=="1" (
+    echo FAIL: warning detection failed for %STEP_NAME% ^(exit %WARNING_SCAN%^).
+    echo FAIL: warning detection failed for %STEP_NAME% ^(exit %WARNING_SCAN%^).>> "%LOG%"
+  )
   set "FAILED=1"
 )
 exit /b 0

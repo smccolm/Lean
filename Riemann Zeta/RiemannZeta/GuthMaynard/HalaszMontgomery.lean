@@ -23,7 +23,7 @@ def HalaszMontgomeryLemma : Prop :=
     (∀ t ∈ W, V ≤ ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖) →
     (W.card : ℝ) ≤ (T + (N : ℝ)) * V^(-2 : ℝ) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2
 
-lemma halasz_montgomery_rhs_nonneg (N : ℕ) (T V : ℝ) (W : Finset ℝ) (a : ℕ → ℂ)
+lemma halasz_montgomery_rhs_nonneg (N : ℕ) (T V : ℝ) (a : ℕ → ℂ)
   (hT : 0 < T) (hN : 0 < N) (hV : 0 < V) :
   0 ≤ (T + (N : ℝ)) * V^(-2 : ℝ) * ∑ n ∈ Ioc N (2 * N), ‖a n‖^2 := by
   have h1 : 0 ≤ T + (N : ℝ) := add_nonneg (le_of_lt hT) (Nat.cast_nonneg N)
@@ -64,9 +64,6 @@ theorem halasz_montgomery_lemma_native : HalaszMontgomeryLemma := by
   rw [mul_assoc, h_V2_cancel, mul_one] at h_final
   simpa only [mul_assoc, mul_left_comm, mul_comm] using h_final
 
-
-/-- F-03: Auxiliary lemma partitioning the Type II zeros into dyadic scales -/
-lemma typeII_dyadic_sum (σ T : ℝ) : True := trivial
 
 /--
 F-03: The Type II zero bound follows from the Halasz-Montgomery lemma.
