@@ -1,26 +1,15 @@
-# Polynomial Power Expansion Notes
+# Polynomial Power Expansion Proof Notes
 
-This note preserves the useful part of the removed `scratch_pow.lean` experiment. It records a future proof obligation and does not claim that the expansion is proved.
+This note records the completed implementation of the finite coefficient expansion in `RiemannZeta/GuthMaynard/PolynomialPowers.lean`. It originated as the useful part of the removed `scratch_pow.lean` experiment; the canonical result is now a kernel-checked production theorem.
 
 ## Canonical Definitions
 
-`RiemannZeta/GuthMaynard/PolynomialPowers.lean` defines:
+- `powPoly N k s T := (detectPoly N s T) ^ k`.
+- `powCoeff N k m T` sums products of detector coefficients over functions `p : Fin k → ℕ` whose values lie in `(N, 2N]` and whose product is `m`.
 
-- `powPoly N k s T := (detectPoly N s T) ^ k`; and
-- `powCoeff N k m T` as the sum of products of detector coefficients over functions `p : Fin k → ℕ` whose values lie in `(N, 2N]` and whose product is `m`.
+## Proved Expansion
 
-The removed scratch file introduced `powCoeff_alt` with exactly the same expression and proved only the definitional identity `powCoeff_alt = powCoeff` by reflexivity. It also proposed the explicit finite sum
-
-```lean
-∑ m ∈ Finset.Icc (N ^ k) ((2 * N) ^ k),
-  powCoeff N k m T * (m : ℂ) ^ (-s)
-```
-
-as the desired coefficient expansion of `powPoly`.
-
-## Required Theorem
-
-The substantive missing result is an equality of the following form:
+`polynomial_power_identity` proves, for every `N`, `k`, `s`, and `T`,
 
 ```lean
 powPoly N k s T =
@@ -28,15 +17,16 @@ powPoly N k s T =
     powCoeff N k m T * (m : ℂ) ^ (-s)
 ```
 
-The proof must expand the finite power, regroup tuples by their product, justify the support interval, and reconcile the complex-power product with the product of the individual terms. Boundary cases, especially `k = 0`, must be checked explicitly. The existing `polynomial_power_identity` proves only the definitional structural identity `powPoly = detectPoly ^ k`; it does not prove this coefficient expansion.
+The proof:
 
-## Likely Lean Route
+1. applies `Finset.sum_pow'` to expand the `k`-th power over tuples indexed by `Fin k`;
+2. separates the product of detector coefficients from the product of complex powers;
+3. uses `prod_natCast_cpow_eq`, based on `Complex.natCast_mul_natCast_cpow`, to identify the latter with the complex power of the tuple product;
+4. uses `powCoeff_product_mem_support` to place every product in `[N^k, (2N)^k]`; and
+5. applies `Finset.sum_fiberwise_of_maps_to` to regroup tuples by their natural-number product, producing exactly `powCoeff`.
 
-1. Express the `k`-th power of the finite detector sum as a sum over `Fin k → ℕ`.
-2. Restrict every coordinate to `Finset.Ioc N (2 * N)`.
-3. Regroup the tuple sum by `m = ∏ i, p i` using a finite fiber decomposition.
-4. Prove that every product lies in `Finset.Icc (N ^ k) ((2 * N) ^ k)` under the necessary hypotheses on `N` and `k`.
-5. identify each fiber sum with `powCoeff N k m T`.
-6. prove the required complex-power multiplicativity for the positive natural factors.
+The support lemma and expansion include `k = 0`: both tuple products are empty products equal to one, and the support interval is `[1,1]`.
 
-This obligation remains part of Shitlist #10 and is a prerequisite for the F-07 polynomial-power step in Shitlist #14.
+## Honest Remaining Boundary
+
+The expansion itself is unconditional and audited. The coefficient-growth theorem remains conditional on the separate classical propositions `DivisorCountBoundProp` and `FactorizationCountBoundProp`. Proving those epsilon-power counting estimates is Goal C work; it is not hidden inside the expansion theorem.

@@ -73,10 +73,16 @@ noncomputable def weightedResidualCount {α : Type*} (Z : ℝ → ℝ → Finset
     (multiplicity : α → ℕ) (isTypeI : ℝ → α → Prop) (σ T : ℝ) : ℝ :=
   weightedCount Z multiplicity (fun U x => ¬ isTypeI U x) σ T
 
-/-- Pointwise Type-I/Type-II coverage on generic finite zero data. -/
+/--
+Type-I/Type-II coverage on generic finite zero data in the source σ-range.
+Coverage is eventual in the height parameter, matching the source theorem and
+the eventual nature of `EpsilonPowerBound`.
+-/
 def FiniteTypeICoverProp {α : Type*} (Z : ℝ → ℝ → Finset α)
     (isTypeI isTypeII : ℝ → α → Prop) : Prop :=
-  ∀ (σ T : ℝ) (x : α), x ∈ Z σ T → isTypeI T x ∨ isTypeII T x
+  ∀ (σ : ℝ), 7 / 10 ≤ σ → σ ≤ 4 / 5 →
+    ∀ᶠ T : ℝ in atTop, ∀ x : α, x ∈ Z σ T →
+      isTypeI T x ∨ isTypeII T x
 
 /--
 The Appendix C reduction from the genuine Type II count to the scaled twisted
@@ -102,14 +108,15 @@ def FiniteResidualZeroBoundProp {α : Type*} (Z : ℝ → ℝ → Finset α)
 theorem weightedResidualCount_le_weightedCount_of_cover {α : Type*}
     (Z : ℝ → ℝ → Finset α) (multiplicity : α → ℕ)
     (isTypeI isTypeII : ℝ → α → Prop)
-    (hCover : FiniteTypeICoverProp Z isTypeI isTypeII) (σ T : ℝ) :
+    (σ T : ℝ)
+    (hCover : ∀ x : α, x ∈ Z σ T → isTypeI T x ∨ isTypeII T x) :
     weightedResidualCount Z multiplicity isTypeI σ T ≤
       weightedCount Z multiplicity isTypeII σ T := by
   unfold weightedResidualCount weightedCount
   apply Finset.sum_le_sum_of_subset_of_nonneg
   · intro x hx
     simp only [Finset.mem_filter] at hx ⊢
-    exact ⟨hx.1, (hCover σ T x hx.1).resolve_left hx.2⟩
+    exact ⟨hx.1, (hCover x hx.1).resolve_left hx.2⟩
   · intro x _ _
     positivity
 
@@ -117,13 +124,15 @@ theorem weightedResidualCount_le_weightedCount_of_cover {α : Type*}
 theorem residual_epsilonPowerBound_of_cover {α : Type*}
     (Z : ℝ → ℝ → Finset α) (multiplicity : α → ℕ)
     (isTypeI isTypeII : ℝ → α → Prop)
-    (hCover : FiniteTypeICoverProp Z isTypeI isTypeII) (σ : ℝ) :
+    (hCover : FiniteTypeICoverProp Z isTypeI isTypeII)
+    (σ : ℝ) (hσLower : 7 / 10 ≤ σ) (hσUpper : σ ≤ 4 / 5) :
     EpsilonPowerBound
       (fun T => weightedResidualCount Z multiplicity isTypeI σ T)
       (fun T => weightedCount Z multiplicity isTypeII σ T) := by
   intro ε hε
   apply IsBigO.of_bound 1
-  filter_upwards [eventually_ge_atTop (1 : ℝ)] with T hT
+  filter_upwards [hCover σ hσLower hσUpper, eventually_ge_atTop (1 : ℝ)]
+    with T hCoverT hT
   have hResidualNonneg : 0 ≤ weightedResidualCount Z multiplicity isTypeI σ T := by
     unfold weightedResidualCount weightedCount
     positivity
@@ -142,7 +151,7 @@ theorem residual_epsilonPowerBound_of_cover {α : Type*}
     weightedResidualCount Z multiplicity isTypeI σ T
         ≤ weightedCount Z multiplicity isTypeII σ T :=
       weightedResidualCount_le_weightedCount_of_cover
-        Z multiplicity isTypeI isTypeII hCover σ T
+        Z multiplicity isTypeI isTypeII σ T hCoverT
     _ = 1 * |weightedCount Z multiplicity isTypeII σ T| := by
       rw [abs_of_nonneg hTypeIINonneg, one_mul]
     _ ≤ T ^ ε * |weightedCount Z multiplicity isTypeII σ T| :=
@@ -194,8 +203,77 @@ theorem residual_zero_bound_of_cover_reduction_and_fourth_moment {α : Type*}
     FiniteResidualZeroBoundProp Z multiplicity isTypeI := by
   intro σ hσLower hσUpper
   exact (residual_epsilonPowerBound_of_cover
-    Z multiplicity isTypeI isTypeII hCover σ).trans <|
+    Z multiplicity isTypeI isTypeII hCover σ hσLower hσUpper).trans <|
       (hReduction σ hσLower hσUpper).trans <|
         scaled_twistedZetaFourthMoment_bound hMoment σ
+
+/-- The concrete finite family of zeta zeros in the dyadic height rectangle. -/
+noncomputable def dyadicZetaZeros (σ T : ℝ) : Finset ℂ :=
+  zerosInRect σ 1 T (2 * T)
+
+/-- The project Type-I predicate with the height argument first. -/
+def zetaIsTypeI (T : ℝ) (ρ : ℂ) : Prop :=
+  IsTypeIZero ρ T
+
+/-- The source-facing contour-Type-II predicate with the height argument first. -/
+def zetaIsContourTypeII (T : ℝ) (ρ : ℂ) : Prop :=
+  IsContourTypeIIZero ρ T
+
+/-- Source-level contour coverage supplies the eventual finite coverage needed
+    for the concrete dyadic zeta-zero family. -/
+theorem finiteTypeICover_of_typeIContourTypeII
+    (hCover : TypeIContourTypeIICoverProp) :
+    FiniteTypeICoverProp dyadicZetaZeros zetaIsTypeI zetaIsContourTypeII := by
+  rcases hCover with ⟨T₀, _hT₀, hCover⟩
+  intro σ hσLower _hσUpper
+  filter_upwards [eventually_ge_atTop T₀] with T hT
+  intro ρ hρ
+  apply hCover T hT ρ
+  · rw [dyadicZetaZeros, zerosInRect, Set.Finite.mem_toFinset,
+      Set.mem_inter_iff] at hρ
+    rw [mem_ZeroRectangle] at hρ ⊢
+    rcases hρ with ⟨⟨hρLower, hρUpper, hρTLower, hρTUpper⟩, _hρZero⟩
+    constructor
+    · norm_num at hσLower ⊢
+      exact (by linarith : (1 / 2 : ℝ) ≤ σ).trans hρLower
+    · exact ⟨hρUpper, hρTLower, hρTUpper⟩
+  · rw [dyadicZetaZeros, zerosInRect, Set.Finite.mem_toFinset,
+      Set.mem_inter_iff] at hρ
+    exact hρ.2
+
+/-- The generic weighted residual count agrees exactly with the project's
+    concrete analytic-multiplicity count. -/
+lemma weightedResidualCount_dyadicZetaZeros_eq (σ T : ℝ) :
+    weightedResidualCount dyadicZetaZeros
+        (analyticVanishingOrder riemannZeta) zetaIsTypeI σ T =
+      (residualZeroCount σ T (2 * T) T : ℝ) := by
+  unfold weightedResidualCount weightedCount dyadicZetaZeros residualZeroCount
+    IsResidualZero zetaIsTypeI
+  rw [Nat.cast_sum]
+  apply Finset.sum_congr
+  · ext ρ
+    simp only [Finset.mem_filter]
+    tauto
+  · intro ρ _hρ
+    rfl
+
+/--
+Concrete conditional form of the Maynard--Pratt Type II deduction for the
+project's finite zeta-zero family. The three hypotheses are the source coverage,
+the Appendix C reduction, and the twisted fourth-moment estimate.
+-/
+theorem residualZeroBound_of_contourTypeII_reduction_and_fourthMoment
+    (hCover : TypeIContourTypeIICoverProp)
+    (hReduction : TypeIIFourthMomentReductionProp dyadicZetaZeros
+      (analyticVanishingOrder riemannZeta) zetaIsContourTypeII)
+    (hMoment : TwistedZetaFourthMomentProp) :
+    ResidualZeroBoundProp := by
+  have hGeneric := residual_zero_bound_of_cover_reduction_and_fourth_moment
+    dyadicZetaZeros (analyticVanishingOrder riemannZeta)
+      zetaIsTypeI zetaIsContourTypeII
+      (finiteTypeICover_of_typeIContourTypeII hCover) hReduction hMoment
+  intro σ hσLower hσUpper
+  simpa only [weightedResidualCount_dyadicZetaZeros_eq] using
+    hGeneric σ hσLower hσUpper
 
 end RiemannZeta.GuthMaynard

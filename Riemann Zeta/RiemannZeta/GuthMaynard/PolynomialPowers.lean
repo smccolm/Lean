@@ -25,42 +25,6 @@ def FactorizationCountBoundProp : Prop :=
       (((Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 m)).filter
         (fun p => (∏ x : Fin k, p x) = m)).card : ℝ) ≤ C * (m : ℝ) ^ ε
 
-/-- Strong detector input needed for a coefficient bound uniform in `T`.
-    Unlike `DetectorCoeffBoundProp`, the constant is chosen before `T`. -/
-def UniformDetectorCoeffBoundProp : Prop :=
-  ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
-    ∀ (n : ℕ) (T : ℝ), 0 < n → 1 ≤ T →
-      ‖detectorCoeff n T‖ ≤ C * (n : ℝ) ^ ε
-
-/-- Classical bound for the k-th divisor function -/
-lemma k_divisor_function_bound_one (k : ℕ) (ε : ℝ) :
-  (((Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 1)).filter (fun p => (∏ x : Fin k, p x) = 1)).card : ℝ) ≤ 1 * (1 : ℝ)^ε := by
-  have h1 : (1 : ℝ)^ε = 1 := Real.one_rpow ε
-  rw [h1, mul_one]
-  have h2 : ((Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 1)).filter (fun p => (∏ x : Fin k, p x) = 1)).card ≤
-             (Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 1)).card := Finset.card_filter_le _ _
-  have h3 : (Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc 1 1)).card = ∏ x : Fin k, (Finset.Ioc 1 1).card := by
-    exact Fintype.card_piFinset _
-  rw [h3] at h2
-  have h4 : ∏ x : Fin k, (Finset.Ioc 1 1).card = ∏ x : Fin k, 0 := by
-    apply Finset.prod_congr rfl
-    intro x _
-    exact Nat.sub_self 1
-  rw [h4] at h2
-  cases k with
-  | zero =>
-    have h_prod_one : ∏ x : Fin 0, (0 : ℕ) = 1 := rfl
-    rw [h_prod_one] at h2
-    exact_mod_cast h2
-  | succ k' =>
-    have h_prod_zero : ∏ x : Fin (k' + 1), (0 : ℕ) = 0 := by
-      apply Finset.prod_eq_zero (Finset.mem_univ (0 : Fin (k' + 1)))
-      rfl
-    rw [h_prod_zero] at h2
-    have h5 : ((Fintype.piFinset (fun (_ : Fin (k' + 1)) => Finset.Ioc 1 1)).filter (fun p => ∏ x, p x = 1)).card = 0 := by linarith
-    rw [h5]
-    norm_num
-
 /-- Source-faithful powered-coefficient bound. Its constant may depend on `k`
     and `ε`, but is uniform in `N`, positive `m`, and `T ≥ 1`. -/
 def PowCoeffBoundProp : Prop :=
@@ -171,8 +135,16 @@ theorem powCoeff_bound_of_uniform_detector_and_factorization
           dsimp [δ]
           ring
 
-/-- The powered polynomial is defined structurally as the power of the detector.
-    The algebraic expansion into coefficients is deferred to the block decomposition. -/
+/-- The powered-coefficient bound follows from the classical divisor-count
+    estimate and the source-faithful factorization-count estimate. -/
+theorem powCoeff_bound_of_divisor_and_factorization
+    (hDivisor : DivisorCountBoundProp)
+    (hFactorization : FactorizationCountBoundProp) :
+    PowCoeffBoundProp :=
+  powCoeff_bound_of_uniform_detector_and_factorization
+    (uniformDetectorCoeffBound_of_divisorCount hDivisor) hFactorization
+
+/-- The powered polynomial, defined structurally as a power of the detector. -/
 noncomputable def powPoly (N k : ℕ) (s : ℂ) (T : ℝ) : ℂ :=
   (detectPoly N s T) ^ k
 
@@ -180,9 +152,79 @@ lemma powPoly_eval (N k : ℕ) (s : ℂ) (T : ℝ) :
   powPoly N k s T = (detectPoly N s T) ^ k := by
   rfl
 
-/-- F-07: The power identity theorem. -/
+/-- Complex powers of a finite product of natural numbers factor coordinatewise. -/
+lemma prod_natCast_cpow_eq {k : ℕ} (p : Fin k → ℕ) (s : ℂ) :
+    (∏ x : Fin k, (p x : ℂ) ^ s) = ((∏ x : Fin k, p x : ℕ) : ℂ) ^ s := by
+  classical
+  induction (Finset.univ : Finset (Fin k)) using Finset.induction_on with
+  | empty => simp
+  | @insert a u ha ih =>
+      rw [Finset.prod_insert ha, Finset.prod_insert ha, Nat.cast_mul,
+        Complex.natCast_mul_natCast_cpow, ih]
+
+/-- A tuple supported on `(N, 2N]` has product supported on `[N^k, (2N)^k]`.
+    This includes the empty-product case `k = 0`. -/
+lemma powCoeff_product_mem_support (N k : ℕ) (p : Fin k → ℕ)
+    (hp : p ∈ Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc N (2 * N))) :
+    (∏ x : Fin k, p x) ∈ Finset.Icc (N ^ k) ((2 * N) ^ k) := by
+  rw [Fintype.mem_piFinset] at hp
+  rw [Finset.mem_Icc]
+  constructor
+  · calc
+      N ^ k = ∏ _x : Fin k, N := by simp
+      _ ≤ ∏ x : Fin k, p x := by
+        apply Finset.prod_le_prod
+        · intro _x _
+          exact Nat.zero_le N
+        · intro x _
+          exact (Finset.mem_Ioc.mp (hp x)).1.le
+  · calc
+      ∏ x : Fin k, p x ≤ ∏ _x : Fin k, 2 * N := by
+        apply Finset.prod_le_prod
+        · intro x _
+          exact Nat.zero_le (p x)
+        · intro x _
+          exact (Finset.mem_Ioc.mp (hp x)).2
+      _ = (2 * N) ^ k := by simp
+
+/-- F-07: Expanding the structural power and collecting tuples by their product
+    gives exactly the explicit convolution coefficients `powCoeff`. -/
 theorem polynomial_power_identity (N k : ℕ) (s : ℂ) (T : ℝ) :
-  (detectPoly N s T) ^ k = powPoly N k s T := rfl
+    powPoly N k s T =
+      ∑ m ∈ Finset.Icc (N ^ k) ((2 * N) ^ k),
+        powCoeff N k m T * (m : ℂ) ^ (-s) := by
+  classical
+  let tuples := Fintype.piFinset (fun (_ : Fin k) => Finset.Ioc N (2 * N))
+  have hsupport : ∀ p ∈ tuples,
+      (∏ x : Fin k, p x) ∈ Finset.Icc (N ^ k) ((2 * N) ^ k) := by
+    intro p hp
+    exact powCoeff_product_mem_support N k p hp
+  rw [powPoly, detectPoly, Finset.sum_pow']
+  change (∑ p ∈ tuples,
+      ∏ x : Fin k, (detectorCoeff (p x) T * (p x : ℂ) ^ (-s))) = _
+  calc
+    (∑ p ∈ tuples,
+        ∏ x : Fin k, (detectorCoeff (p x) T * (p x : ℂ) ^ (-s))) =
+        ∑ p ∈ tuples,
+          (∏ x : Fin k, detectorCoeff (p x) T) *
+            ((∏ x : Fin k, p x : ℕ) : ℂ) ^ (-s) := by
+      apply Finset.sum_congr rfl
+      intro p _hp
+      rw [Finset.prod_mul_distrib, prod_natCast_cpow_eq]
+    _ = ∑ m ∈ Finset.Icc (N ^ k) ((2 * N) ^ k),
+        ∑ p ∈ tuples with (∏ x : Fin k, p x) = m,
+          (∏ x : Fin k, detectorCoeff (p x) T) *
+            ((∏ x : Fin k, p x : ℕ) : ℂ) ^ (-s) := by
+      symm
+      exact Finset.sum_fiberwise_of_maps_to hsupport _
+    _ = ∑ m ∈ Finset.Icc (N ^ k) ((2 * N) ^ k),
+        powCoeff N k m T * (m : ℂ) ^ (-s) := by
+      apply Finset.sum_congr rfl
+      intro m _hm
+      rw [powCoeff, Finset.sum_mul]
+      apply Finset.sum_congr rfl
+      intro p hp
+      rw [(Finset.mem_filter.mp hp).2]
 
 /- 
 F-07: Decomposition into O(k) dyadic blocks.

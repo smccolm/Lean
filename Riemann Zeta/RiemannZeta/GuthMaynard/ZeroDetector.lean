@@ -58,6 +58,24 @@ def DetectorCoeffBoundProp : Prop :=
   ∀ (ε : ℝ), 0 < ε → ∀ (T : ℝ), 1 ≤ T → 
     ∃ C : ℝ, 0 < C ∧ ∀ n : ℕ, 0 < n → ‖detectorCoeff n T‖ ≤ C * (n : ℝ) ^ ε
 
+/-- The classical epsilon-power bound for the number of positive divisors.
+    The constant may depend on `ε` but is uniform in positive `n`. -/
+def DivisorCountBoundProp : Prop :=
+  ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
+    ∀ n : ℕ, 0 < n → (n.divisors.card : ℝ) ≤ C * (n : ℝ) ^ ε
+
+/-- Source-uniform detector bound needed when the detector polynomial is powered.
+    Unlike `DetectorCoeffBoundProp`, the constant is chosen before `T`. -/
+def UniformDetectorCoeffBoundProp : Prop :=
+  ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
+    ∀ (n : ℕ) (T : ℝ), 0 < n → 1 ≤ T →
+      ‖detectorCoeff n T‖ ≤ C * (n : ℝ) ^ ε
+
+/-- The truncated support is a subset of the full positive-divisor set. -/
+lemma detectorDivisors_subset_divisors (n : ℕ) (T : ℝ) :
+    detectorDivisors n T ⊆ n.divisors := by
+  exact Finset.filter_subset _ _
+
 lemma norm_moebius_cast_le_one (d : ℕ) :
     ‖(ArithmeticFunction.moebius d : ℂ)‖ ≤ 1 := by
   rw [Complex.norm_intCast]
@@ -78,6 +96,22 @@ lemma norm_mobius_sum_le_cutoff (n : ℕ) (T : ℝ) :
     _ = ((detectorDivisors n T).card : ℝ) := by simp
     _ ≤ (detectorCutoff T : ℝ) := by
       exact_mod_cast detectorDivisors_card_le_cutoff n T
+
+/-- The truncated Möbius sum is bounded by the full divisor count, uniformly in `T`. -/
+lemma norm_mobius_sum_le_divisors_card (n : ℕ) (T : ℝ) :
+    ‖mobius_sum n T‖ ≤ (n.divisors.card : ℝ) := by
+  calc
+    ‖mobius_sum n T‖
+        ≤ ∑ d ∈ detectorDivisors n T,
+            ‖(ArithmeticFunction.moebius d : ℂ)‖ := by
+          simpa [mobius_sum] using
+            norm_sum_le (detectorDivisors n T)
+              (fun d => (ArithmeticFunction.moebius d : ℂ))
+    _ ≤ ∑ _d ∈ detectorDivisors n T, (1 : ℝ) := by
+      exact Finset.sum_le_sum fun d _ => norm_moebius_cast_le_one d
+    _ = ((detectorDivisors n T).card : ℝ) := by simp
+    _ ≤ (n.divisors.card : ℝ) := by
+      exact_mod_cast Finset.card_le_card (detectorDivisors_subset_divisors n T)
 
 @[simp]
 lemma detectorCoeff_eq_zero_iff (n : ℕ) (T : ℝ) :
@@ -116,6 +150,21 @@ lemma norm_detectorCoeff_le_cutoff (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
           · positivity
     _ = (detectorCutoff T : ℝ) := mul_one _
 
+/-- The smoothed coefficient is bounded by the full divisor count, uniformly in `T`. -/
+lemma norm_detectorCoeff_le_divisors_card (n : ℕ) (T : ℝ) (hT : 1 ≤ T) :
+    ‖detectorCoeff n T‖ ≤ (n.divisors.card : ℝ) := by
+  rw [detectorCoeff, norm_mul]
+  calc
+    ‖mobius_sum n T‖ *
+          ‖(Real.exp (-(n : ℝ) / T ^ (1 / 2 : ℝ)) : ℂ)‖
+        ≤ (n.divisors.card : ℝ) * 1 := by
+          apply mul_le_mul (norm_mobius_sum_le_divisors_card n T)
+          · rw [Complex.norm_real]
+            exact exp_smoothing_bound n T hT
+          · positivity
+          · positivity
+    _ = (n.divisors.card : ℝ) := mul_one _
+
 /-- F-02: The actual truncated detector coefficients satisfy the stated
     epsilon-power magnitude bound, uniformly in `n` for each fixed `T`. -/
 theorem detectorCoeff_bound : DetectorCoeffBoundProp := by
@@ -130,6 +179,17 @@ theorem detectorCoeff_bound : DetectorCoeffBoundProp := by
     _ ≤ ((detectorCutoff T : ℝ) + 1) * 1 := by norm_num
     _ ≤ ((detectorCutoff T : ℝ) + 1) * (n : ℝ) ^ ε := by
       exact mul_le_mul_of_nonneg_left hpow (by positivity)
+
+/-- The exact detector satisfies the source-uniform epsilon-power estimate
+    once the classical divisor-count bound is supplied. -/
+theorem uniformDetectorCoeffBound_of_divisorCount
+    (hDivisor : DivisorCountBoundProp) :
+    UniformDetectorCoeffBoundProp := by
+  intro ε hε
+  obtain ⟨C, hC, hBound⟩ := hDivisor ε hε
+  refine ⟨C, hC, ?_⟩
+  intro n T hn hT
+  exact (norm_detectorCoeff_le_divisors_card n T hT).trans (hBound n hn)
 
 /-- The Dirichlet polynomial D_N(s) used for detection. Depends essentially on T. -/
 noncomputable def detectPoly (N : ℕ) (s : ℂ) (T : ℝ) : ℂ :=
