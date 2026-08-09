@@ -3,8 +3,8 @@ flowchart TD
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
-    CD["#15 Classical density analysis<br/>OPEN<br/>Littlewood/Gabriel, zeta fourth moment,<br/>full MHH N^4 V^-6 large-values branch"]
-    ZD["#15 Ingham and Huxley<br/>OPEN<br/>endpoint assembly and transfer<br/>to symmetric multiplicity-weighted N"]
+    CD["#15 Classical density analysis<br/>OPEN<br/>mollifier algebra and Jensen bridge DONE;<br/>Littlewood/Gabriel, zeta fourth moment,<br/>full MHH N^4 V^-6 branch OPEN"]
+    ZD["#15 Ingham and Huxley<br/>OPEN<br/>Ingham sigma=1/2,1 and Huxley sigma=1 DONE;<br/>interior estimates and Huxley sigma=3/4 OPEN"]
     BR["#16 Beta removal<br/>DONE"]
     AC["#17 Coefficient bounds<br/>OPEN"]
     MV["Montgomery mean value<br/>DONE"]
