@@ -145,7 +145,9 @@ For Type I extraction, `LocalZeroMultiplicityBoundProp` states an ordinary multi
 
 The mean-value layer is also unconditional. `MeanValueProof.lean` establishes exact continuous Dirichlet-polynomial mean square, a finite reciprocal-log Hilbert inequality, and a local Sobolev sample bound; together these prove `montgomery_mean_value_native`. The wrapper `halasz_montgomery_lemma_native` specializes the finite large-value count without an analytic premise.
 
-Shitlist #15 nevertheless remains open. The concrete Ingham endpoint still requires the critical-line fourth moment and the mollified Littlewood/Gabriel zero-detection argument. The concrete Huxley endpoint additionally requires its approximate functional equation and powered Dirichlet-polynomial large-values estimate. Neither endpoint is currently a Lean theorem for the project's symmetric multiplicity-weighted `N`.
+Shitlist #15 nevertheless remains open. Its first remaining part is the classical density-analysis engine: a multiplicity-aware Littlewood rectangle theorem, finite Gabriel vertical-integral convexity, the critical-line fourth moment and mollifier boundary moments, and the full classical Montgomery–Halász–Huxley large-values estimate
+$$R\ll_\varepsilon T^\varepsilon\left(N^2V^{-2}+T\min(NV^{-2},N^4V^{-6})\right).$$
+The existing `halasz_montgomery_lemma_native` supplies only the basic $V^{-2}$ mean-value consequence; it does not prove the $N^4V^{-6}$ branch responsible for Huxley's exponent above $\sigma=3/4$. The second part of #15 must assemble Ingham's exponent $3(1-\sigma)/(2-\sigma)$ and Huxley's exponent $3(1-\sigma)/(3\sigma-1)$, including their boundary cases, and specialize the proved positive-ordinate-to-symmetric bridge. Neither endpoint is currently a Lean theorem for the project's symmetric multiplicity-weighted `N`.
 
 ## Theorem 11 (Large Values Estimate Target Statement)
 **Status**: Unproved (Target Specification).

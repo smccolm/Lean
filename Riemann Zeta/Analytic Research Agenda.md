@@ -19,6 +19,7 @@ The remaining assumptions include both analytic and arithmetic inputs and requir
 - `DivisorCountBoundProp` and `FactorizationCountBoundProp`: the two explicit classical multiplicative-number-theory inputs for `powCoeff_bound_of_divisor_and_factorization`. The source-uniform `UniformDetectorCoeffBoundProp` is derived from `DivisorCountBoundProp`, and the exact finite `powPoly`/`powCoeff` expansion is kernel-checked independently; the two classical growth inputs themselves remain to be proved.
 - `euler_product_lower_bound_2` is complete and supplies the concrete lower bound on the $\Re(s)=2$ line.
 - `MontgomeryMeanValue` is complete via `montgomery_mean_value_native`; `halasz_montgomery_lemma_native` supplies the downstream finite large-value count without an analytic premise.
+- Shitlist #15's classical density analysis remains open. For Ingham it requires a multiplicity-aware Littlewood rectangle theorem, finite Gabriel vertical-integral convexity, the critical-line zeta fourth moment, and mollifier boundary moments. For Huxley it requires the full classical Montgomery–Halász–Huxley estimate, especially the `T * N^4 * V⁻⁶` branch; the existing basic `halasz_montgomery_lemma_native` does not contain that branch.
 - `TypeIContourTypeIICoverProp`: the source-facing assertion that every relevant zeta zero is Type I or satisfies the Gamma–zeta contour largeness condition `IsContourTypeIIZero`. Residual zeros are now represented separately as the complement of Type I.
 - `TypeIIFourthMomentReductionProp`: the Appendix C reduction bounding a generic weighted count of contour Type II zeros by `T^(1-2σ)` times the twisted fourth moment. Its proof must supply Gamma decay/truncation, Hölder, separated extraction, and local multiplicity control.
 - `TwistedZetaFourthMomentProp`: the epsilon-power bound of order `T` for the fourth moment of the short Möbius polynomial times `riemannZeta` over `[T/2, 3T]`.
@@ -27,7 +28,7 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 ## Next Steps
 
-1. Prove the classical Ingham and Huxley density endpoints for the project's symmetric multiplicity-weighted count.
+1. Complete #15 in two ordered parts: first prove the Littlewood/Gabriel/fourth-moment/mollifier engine and the full classical Montgomery–Halász–Huxley large-values estimate; then assemble the Ingham and Huxley exponents and transfer both to the project's symmetric multiplicity-weighted count.
 2. Prove `DivisorCountBoundProp` and `FactorizationCountBoundProp`.
 3. Prove the Type-I/Type-II cover, contour reduction, and twisted fourth-moment propositions, then instantiate the generic residual-zero theorem for zeta zeros.
 4. Repair and prove the decoupling/incidence interfaces, then prove `GuthMaynardLargeValues` and complete final integration.
