@@ -3,7 +3,7 @@ flowchart TD
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
-    CD["#15 Classical density analysis<br/>OPEN<br/>mollifier algebra and Jensen bridge DONE;<br/>Littlewood/Gabriel, zeta fourth moment,<br/>full MHH N^4 V^-6 branch OPEN"]
+    CD["#15 Classical density analysis<br/>OPEN<br/>mollifier algebra, critical-line second moment,<br/>and Jensen bridge DONE;<br/>Littlewood/Gabriel, zeta fourth moment,<br/>right-edge/horizontal estimates,<br/>full MHH N^4 V^-6 branch OPEN"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>Ingham sigma=1/2,1 and Huxley sigma=1 DONE;<br/>interior estimates and Huxley sigma=3/4 OPEN"]
     BR["#16 Beta removal<br/>DONE"]
     AC["#17 Coefficient bounds<br/>OPEN"]
