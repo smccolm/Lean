@@ -1,29 +1,24 @@
 # Analytic Research Agenda: Riemann Zeta Guth-Maynard Proof
 
-The project has a warning-free compiling algebraic, combinatorial, and asymptotic infrastructure layer, but substantial project axioms and unproved proposition specifications remain. The next work is the deep analytic phase.
+The project has a warning-free compiling algebraic, combinatorial, and asymptotic infrastructure layer. Beta removal, local zero multiplicity, and Montgomery mean value are proved. Two direct project axioms and several unproved proposition specifications remain; the next work is the classical density, arithmetic, Type-II, and large-values phase.
 
-The remaining assumptions are purely analytic in nature and require advanced integration with Mathlib's measure theory, complex analysis, and Fourier analysis libraries.
+The remaining assumptions include both analytic and arithmetic inputs and require advanced integration with Mathlib's measure theory, complex analysis, Fourier analysis, and multiplicative number theory libraries.
 
 ## Remaining Analytic Obligations
 
-### 1. Fourier Analysis & Decoupling
+### 1. Decoupling
 - `l2_decoupling_bound_unconditional`: remains an unproved final decoupling postulate. The earlier unused broad–narrow postulate was removed; `l2_parabola_incidence_bound` remains as an unproved geometric incidence input.
-- `fourier_inversion_unconditional`: Decomposed into `smooth_compact_is_schwartz` (embedding compactly supported smooth functions into the Schwartz space) and `schwartz_fourier_inversion` (the actual Fourier inversion for Schwartz functions).
-- `fourier_decay_unconditional`: Upgraded to `SchwartzFourierDecayProp` forcing rapid decay bounded by any polynomial degree for Schwartz functions.
 
 ### 2. Complex Analysis & Zero Counting
-- `LocalZeroMultiplicityBoundProp`: prove the uniform multiplicity-weighted `O(log T)` estimate for ordinary unshifted unit-height intervals of Type-I zeta zeros. Mathlib's `AnalyticOnNhd.sum_divisor_le` provides the Jensen framework; #13 now derives the shifted, scale-filtered occupancy estimate by finite covering.
-- `phragmen_lindelof_convexity`: The Phragmén-Lindelöf principle for bounding analytic functions in vertical strips (convexity bound).
+- `LocalZeroMultiplicityBoundProp` is complete: `localZeroMultiplicityBound_native` proves the uniform multiplicity-weighted `O(log T)` estimate for ordinary unshifted unit-height intervals of Type-I zeta zeros using Mathlib's Jensen framework.
 - Compact-rectangle zeta-zero finiteness is complete: `riemannZeta_finite_zeros_in_rect` is derived from Mathlib's `IsCompact.inter_riemannZetaZeros_finite`.
 
 ### 3. Analytic Number Theory & Integration
-- `detector_fixed_line_integral_unconditional`: Decomposed into `cauchy_residue_dirichlet_polynomial` (expressing the Dirichlet polynomial as a contour integral) and `contour_shift_to_real_line` (shifting the integral to the fixed line).
-- `fixed_line_coefficient_bounds_unconditional`: Decomposed into `fourier_decay_error_bound` (bounding the Fourier truncation error) and `pigeonhole_integral_bound` (using the pigeonhole principle to extract a large polynomial value).
-- `DetectorBetaShiftProp`: prove the pointwise beta-removal statement that moves each Type-I zero ordinate by at most `T^δ` while preserving a large detector value on the fixed line.
-- Type-I separated extraction is conditionally and downstream-normalized: `shifted_bin_weight_le_of_unit_bin_weight` derives shifted occupancy from the narrow unit-zero input; `rawExtractSeparated_of_beta_shift_and_local_multiplicity` exposes the enlarged interval and explicit losses; and `extractSeparated_of_beta_shift_and_local_multiplicity` translates to `[0,3T]`, twists coefficients with unchanged norms, and absorbs the losses into `T^ε`. The former false half-size/Vitali axioms are removed.
+- `DetectorBetaShiftProp` is complete: `beta_dependence_removal` moves each Type-I zero ordinate by at most `T^δ` while preserving the required large detector value on the fixed line. The proof uses rational Phragmén–Lindelöf localization rather than the originally proposed Fourier cutoff.
+- Type-I separated extraction is unconditional: `extractSeparated_native` combines the beta theorem and native Jensen bound with `shifted_bin_weight_le_of_unit_bin_weight`, the raw enlarged-interval theorem, translation to `[0,3T]`, coefficient phase twisting, and epsilon-loss absorption.
 - `DivisorCountBoundProp` and `FactorizationCountBoundProp`: the two explicit classical multiplicative-number-theory inputs for `powCoeff_bound_of_divisor_and_factorization`. The source-uniform `UniformDetectorCoeffBoundProp` is derived from `DivisorCountBoundProp`, and the exact finite `powPoly`/`powCoeff` expansion is kernel-checked independently; the two classical growth inputs themselves remain to be proved.
-- `euler_product_lower_bound_2`: Bounding $|\zeta(s)|$ from below on the $\Re(s)=2$ line using the Euler product formulation.
-- `MontgomeryMeanValue`: the discrete Dirichlet-polynomial mean-value theorem needed in Section 13.1, stated with one absolute implied constant. It is now an explicit proposition input rather than a project axiom; `halasz_montgomery_lemma_of_mean_value` proves the downstream finite large-value count from it.
+- `euler_product_lower_bound_2` is complete and supplies the concrete lower bound on the $\Re(s)=2$ line.
+- `MontgomeryMeanValue` is complete via `montgomery_mean_value_native`; `halasz_montgomery_lemma_native` supplies the downstream finite large-value count without an analytic premise.
 - `TypeIContourTypeIICoverProp`: the source-facing assertion that every relevant zeta zero is Type I or satisfies the Gamma–zeta contour largeness condition `IsContourTypeIIZero`. Residual zeros are now represented separately as the complement of Type I.
 - `TypeIIFourthMomentReductionProp`: the Appendix C reduction bounding a generic weighted count of contour Type II zeros by `T^(1-2σ)` times the twisted fourth moment. Its proof must supply Gamma decay/truncation, Hölder, separated extraction, and local multiplicity control.
 - `TwistedZetaFourthMomentProp`: the epsilon-power bound of order `T` for the fourth moment of the short Möbius polynomial times `riemannZeta` over `[T/2, 3T]`.
@@ -32,9 +27,7 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 ## Next Steps
 
-1. Import and align `Mathlib.Analysis.Fourier` for inversion and decay.
-2. Develop the necessary `MeasureTheory` integral bounding techniques.
-3. Bridge Mathlib's `riemannZeta` Dirichlet series to the Euler product form.
-4. Prove `DetectorBetaShiftProp` and `LocalZeroMultiplicityBoundProp`; the downstream finite separated-set extraction is already kernel-checked.
-5. Prove the Type-I/Type-II cover, contour reduction, and twisted fourth-moment propositions, then instantiate the generic residual-zero theorem for zeta zeros.
-6. Prove `MontgomeryMeanValue` using a source-faithful large-sieve or mean-value argument for separated ordinates.
+1. Prove the classical Ingham and Huxley density endpoints for the project's symmetric multiplicity-weighted count.
+2. Prove `DivisorCountBoundProp` and `FactorizationCountBoundProp`.
+3. Prove the Type-I/Type-II cover, contour reduction, and twisted fourth-moment propositions, then instantiate the generic residual-zero theorem for zeta zeros.
+4. Repair and prove the decoupling/incidence interfaces, then prove `GuthMaynardLargeValues` and complete final integration.

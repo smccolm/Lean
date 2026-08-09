@@ -18,7 +18,7 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The F-01 through F-10 transfer is kernel-checked conditionally from ten explicit primitive inputs. Those inputs and the later large-values/classical-density applications are not yet proved; the executable audit reports project-specific axiom dependencies in the remaining analytic layers.
+In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The F-01 through F-10 transfer is kernel-checked conditionally from ten explicit primitive inputs. Three of those inputs—local zero multiplicity, Montgomery mean value, and beta removal—are now proved; the later large-values/classical-density applications and the remaining arithmetic/Type-II inputs are not yet proved.
 
 ## Contribution Taxonomy & Originality Disclosure
 The mathematical content of this package is structured into four distinct layers:
@@ -133,7 +133,7 @@ $$\zeta(1 + i t) \neq 0$$
 
 # 6. Guth-Maynard Target Infrastructure & Formal Statements
 
-The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). The conclusion-equivalent transfer axiom has been deleted. Its replacement `conditionalZeroDensityTransfer` is a kernel-checked primitive-input theorem: it derives separated extraction, powered-coefficient control, the complete central Type-I estimate, the residual Type-II estimate, the positive-slab partition, the F-01 dyadic-to-global reduction, and Huxley's high-$\sigma$ branch from individually named analytic/arithmetic inputs. Two of those inputs are now discharged: `localZeroMultiplicityBound_native` proves the Jensen local-zero estimate and `montgomery_mean_value_native` proves the base-interval Montgomery estimate.
+The primary long-term objective of this project is the zero-density bound of Guth and Maynard (2026). The conclusion-equivalent transfer axiom has been deleted. Its replacement `conditionalZeroDensityTransfer` is a kernel-checked primitive-input theorem: it derives separated extraction, powered-coefficient control, the complete central Type-I estimate, the residual Type-II estimate, the positive-slab partition, the F-01 dyadic-to-global reduction, and Huxley's high-$\sigma$ branch from individually named analytic/arithmetic inputs. Three of those inputs are now discharged: `localZeroMultiplicityBound_native` proves the Jensen local-zero estimate, `montgomery_mean_value_native` proves the base-interval Montgomery estimate, and `beta_dependence_removal` proves the pointwise fixed-line detector shift.
 
 The detector layer implements the exact truncated Möbius divisor sum. In addition to the cutoff support and magnitude results, `detectorDivisors_subset_divisors`, `norm_mobius_sum_le_divisors_card`, and `norm_detectorCoeff_le_divisors_card` bound the construction by the full divisor count independently of `T`. `uniformDetectorCoeffBound_of_divisorCount` then proves the source-uniform `UniformDetectorCoeffBoundProp` from the explicit classical epsilon-power divisor estimate `DivisorCountBoundProp`. The deduction is kernel-checked; the classical divisor-count proposition itself remains unproved.
 
@@ -141,7 +141,7 @@ For polynomial powers, `FactorizationCountBoundProp` places its constant before 
 
 For Type II zeros, `FiniteTypeICoverProp` now matches the asymptotic setting: it requires coverage only eventually in the height parameter and only in the source range `7/10 ≤ σ ≤ 4/5`. The theorem `finiteTypeICover_of_typeIContourTypeII` derives this finite-family coverage for `zerosInRect σ 1 T (2T)` from the source-facing `TypeIContourTypeIICoverProp`. The exact identity `weightedResidualCount_dyadicZetaZeros_eq` connects the generic real-valued weighted sum to `residualZeroCount` with analytic multiplicity. Consequently `residualZeroBound_of_contourTypeII_reduction_and_fourthMoment` proves the concrete `ResidualZeroBoundProp` from the coverage, Appendix C reduction, and twisted fourth-moment inputs. This is a kernel-checked conditional instantiation, not a proof of those three analytic inputs or of Maynard–Pratt Lemma 24.
 
-For Type I extraction, `LocalZeroMultiplicityBoundProp` states an ordinary multiplicity-weighted `O(log T)` bound in unshifted unit-height intervals. `typeI_unit_bin_sum_le_jensen` proves the pointwise bin estimate on pole-safe concentric discs and bridges Jensen divisors to `analyticVanishingOrder`; `localZeroMultiplicityBound_native` discharges the proposition. The generic theorem `shifted_bin_weight_le_of_unit_bin_weight` and the normalized extraction then supply shifted covering, translation into `[0,3T]`, phase preservation, and epsilon-loss absorption. Only the pointwise `DetectorBetaShiftProp` remains open in this extraction chain.
+For Type I extraction, `LocalZeroMultiplicityBoundProp` states an ordinary multiplicity-weighted `O(log T)` bound in unshifted unit-height intervals. `typeI_unit_bin_sum_le_jensen` proves the pointwise bin estimate on pole-safe concentric discs and bridges Jensen divisors to `analyticVanishingOrder`; `localZeroMultiplicityBound_native` discharges the proposition. `BetaDependence.lean` applies a rational localizer and Mathlib's right-half-plane Phragmén–Lindelöf theorem to prove `beta_dependence_removal : DetectorBetaShiftProp` with the exact $T^\delta$ displacement and $1/(4\log T)$ threshold. This is an alternative complex-analytic realization of the source's smooth Fourier-localization step. The theorem `extractSeparated_native` combines both inputs with shifted covering, translation into `[0,3T]`, phase preservation, and epsilon-loss absorption, so the extraction chain is unconditional.
 
 The mean-value layer is also unconditional. `MeanValueProof.lean` establishes exact continuous Dirichlet-polynomial mean square, a finite reciprocal-log Hilbert inequality, and a local Sobolev sample bound; together these prove `montgomery_mean_value_native`. The wrapper `halasz_montgomery_lemma_native` specializes the finite large-value count without an analytic premise.
 
@@ -166,7 +166,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 267 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero only for the beta-removal and decoupling native theorems. The zeta foundation, Jensen local count, Montgomery mean value, and native Halász–Montgomery consequence are audit-clean. Nine direct project axioms remain outside #15. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 269 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero only for `l2_decoupling_bound_native`. The zeta foundation, Jensen local count, Montgomery mean value, beta removal, unconditional separated extraction, and native Halász–Montgomery consequence are audit-clean. Two direct project axioms remain, both in `Decoupling.lean`. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `DyadicTransfer`, `CentralTypeI`, `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -207,6 +207,8 @@ Every intended production module is imported through the default `RiemannZeta` l
 | Shifted-Bin Covering | `shifted_bin_weight_le_of_unit_bin_weight` | `GuthMaynard/ExtractSeparated.lean` | Integer floors, finite interval cardinality, weighted fiber decomposition |
 | Raw Conditional Type-I Extraction | `rawExtractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Explicit beta-shift/unit-zero inputs, weighted pigeonholing, covering, and selection |
 | Normalized Conditional Type-I Extraction | `extractSeparated_of_beta_shift_and_local_multiplicity` | `GuthMaynard/ExtractSeparated.lean` | Raw extraction, exact phase translation, `[0,3T]` interval control, and epsilon-loss absorption |
+| Native Beta Removal | `beta_dependence_removal` | `GuthMaynard/BetaDependence.lean` | Rational localizer, detector coefficient-mass bounds, boundary decay, and right-half-plane Phragmén–Lindelöf |
+| Unconditional Type-I Extraction | `extractSeparated_native` | `GuthMaynard/BetaDependence.lean` | Native beta removal, native Jensen multiplicity, and the normalized extraction theorem |
 | Conditional Powered-Coefficient Bound | `powCoeff_bound_of_uniform_detector_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit detector/factorization inputs, `norm_sum_le`, `Real.finset_prod_rpow` |
 | Divisor-to-Powered-Coefficient Bound | `powCoeff_bound_of_divisor_and_factorization` | `GuthMaynard/PolynomialPowers.lean` | Explicit divisor-count/factorization inputs and the uniform-detector deduction |
 | Polynomial-Power Coefficient Expansion | `polynomial_power_identity` | `GuthMaynard/PolynomialPowers.lean` | `Finset.sum_pow'`, product support, complex powers of natural products, finite fiber regrouping |
@@ -239,7 +241,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify two dependency failures across 267 synchronized declarations)
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify one decoupling dependency failure across 269 synchronized declarations)
 
 ---
 
@@ -249,7 +251,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 
 **Future Technical Extensions**:
 1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
-2. Proving the Maynard–Pratt Type-I/Type-II cover, contour-to-twisted-fourth-moment reduction, twisted fourth moment, and Montgomery mean-value theorem needed to close the Guth–Maynard zero-density argument.
+2. Proving the Maynard–Pratt Type-I/Type-II cover, contour-to-twisted-fourth-moment reduction, and twisted fourth moment needed to close the Guth–Maynard zero-density argument.
 
 ---
 
