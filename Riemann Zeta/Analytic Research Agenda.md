@@ -1,8 +1,8 @@
 # Analytic Research Agenda: Riemann Zeta Guth-Maynard Proof
 
-The project has a warning-free compiling algebraic, combinatorial, asymptotic, and initial classical-density infrastructure layer. Beta removal, local zero multiplicity, Montgomery mean value, the finite Möbius mollifier algebra, the pole-free Ingham detector, and the detector-to-Jensen divisor bridge are proved. Two direct project axioms and several unproved proposition specifications remain; the next work is the interior classical-density, arithmetic, Type-II, and large-values phase.
+The project has a warning-free compiling algebraic, combinatorial, asymptotic, and initial classical-density infrastructure layer. Beta removal, local zero multiplicity, Montgomery mean value, the finite Möbius mollifier algebra, the pole-free Ingham detector, the detector-to-Jensen divisor bridge, divisor-count growth, ordered-factorization growth, and powered detector-coefficient growth are proved. Two direct project axioms and several unproved analytic proposition specifications remain; the next work is the interior classical-density, Type-II, and large-values phase.
 
-The remaining assumptions include both analytic and arithmetic inputs and require advanced integration with Mathlib's measure theory, complex analysis, Fourier analysis, and multiplicative number theory libraries.
+The remaining assumptions are analytic inputs requiring advanced integration with Mathlib's measure theory, complex analysis, and Fourier-analysis libraries. The arithmetic coefficient inputs formerly assigned to #17 are complete.
 
 ## Remaining Analytic Obligations
 
@@ -16,7 +16,7 @@ The remaining assumptions include both analytic and arithmetic inputs and requir
 ### 3. Analytic Number Theory & Integration
 - `DetectorBetaShiftProp` is complete: `beta_dependence_removal` moves each Type-I zero ordinate by at most `T^δ` while preserving the required large detector value on the fixed line. The proof uses rational Phragmén–Lindelöf localization rather than the originally proposed Fourier cutoff.
 - Type-I separated extraction is unconditional: `extractSeparated_native` combines the beta theorem and native Jensen bound with `shifted_bin_weight_le_of_unit_bin_weight`, the raw enlarged-interval theorem, translation to `[0,3T]`, coefficient phase twisting, and epsilon-loss absorption.
-- `DivisorCountBoundProp` and `FactorizationCountBoundProp`: the two explicit classical multiplicative-number-theory inputs for `powCoeff_bound_of_divisor_and_factorization`. The source-uniform `UniformDetectorCoeffBoundProp` is derived from `DivisorCountBoundProp`, and the exact finite `powPoly`/`powCoeff` expansion is kernel-checked independently; the two classical growth inputs themselves remain to be proved.
+- `DivisorCountBoundProp` and `FactorizationCountBoundProp` are complete via `divisorCountBound_native` and `factorizationCountBound_native`. The source-uniform `UniformDetectorCoeffBoundProp` follows from the first, the exact finite `powPoly`/`powCoeff` expansion is kernel-checked independently, and `powCoeffBound_native` supplies the unconditional powered-coefficient estimate.
 - `euler_product_lower_bound_2` is complete and supplies the concrete lower bound on the $\Re(s)=2$ line.
 - `MontgomeryMeanValue` is complete via `montgomery_mean_value_native`; `halasz_montgomery_lemma_native` supplies the downstream finite large-value count without an analytic premise.
 - `ClassicalDensity.lean` now proves the exact finite Möbius convolution and cancellation, global analyticity of a pole-free Ingham detector, zeta-zero multiplicity inheritance, a general detector/Jensen divisor inequality, full unit-bin control down to `σ = 1/2`, dyadic `O(T log T)`, its symmetric exponent-one consequence, Ingham at `σ = 1/2,1`, and Huxley at `σ = 1`.
@@ -31,6 +31,5 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 ## Next Steps
 
 1. Complete #15 in two ordered parts: extend the proved rectangle argument principle to the weighted Littlewood/boundary-perturbation theorem, then prove Gabriel/fourth-moment/mollifier estimates and the full classical Montgomery–Halász–Huxley large-values estimate; finally assemble the Ingham and Huxley exponents and transfer both to the project's symmetric multiplicity-weighted count.
-2. Prove `DivisorCountBoundProp` and `FactorizationCountBoundProp`.
-3. Prove the Type-I/Type-II cover, contour reduction, and twisted fourth-moment propositions, then instantiate the generic residual-zero theorem for zeta zeros.
-4. Repair and prove the decoupling/incidence interfaces, then prove `GuthMaynardLargeValues` and complete final integration.
+2. Prove the Type-I/Type-II cover, contour reduction, and twisted fourth-moment propositions, then instantiate the generic residual-zero theorem for zeta zeros.
+3. Repair and prove the decoupling/incidence interfaces, then prove `GuthMaynardLargeValues` and complete final integration.

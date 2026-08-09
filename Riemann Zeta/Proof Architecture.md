@@ -6,7 +6,7 @@ flowchart TD
     CD["#15 Classical density analysis<br/>OPEN<br/>mollifier algebra, critical-line second moment,<br/>Jensen bridge, rectangle argument principle,<br/>and linear zeta strip growth DONE;<br/>weighted Littlewood/Gabriel, fourth moment,<br/>right-edge/horizontal estimates,<br/>full MHH N^4 V^-6 branch OPEN"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>Ingham sigma=1/2,1 and Huxley sigma=1 DONE;<br/>interior estimates and Huxley sigma=3/4 OPEN"]
     BR["#16 Beta removal<br/>DONE"]
-    AC["#17 Coefficient bounds<br/>OPEN"]
+    AC["#17 Coefficient bounds<br/>DONE<br/>divisor count, ordered factorizations,<br/>powered coefficients"]
     MV["Montgomery mean value<br/>DONE"]
 
     EX["Separated extraction<br/>DONE"]
@@ -75,8 +75,8 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,BR,MV,EX,DY done;
+    class ZB,LZ,BR,AC,MV,EX,DY done;
     class HM done;
     class CT,TR,CB conditional;
-    class CD,ZD,AC,T2,GCS,DC,GM,GZD,CZD,QA open;
+    class CD,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
     class MZ available;

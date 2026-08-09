@@ -4,6 +4,7 @@ import RiemannZeta.CompletedZetaSymmetry
 import RiemannZeta.FiniteDirichletPolynomial
 import RiemannZeta.CrossNormProduct
 import RiemannZeta.GuthMaynard.Asymptotics
+import RiemannZeta.GuthMaynard.ArithmeticCoefficients
 import RiemannZeta.GuthMaynard.BetaDependence
 import RiemannZeta.GuthMaynard.Decoupling
 import RiemannZeta.GuthMaynard.DensityReduction

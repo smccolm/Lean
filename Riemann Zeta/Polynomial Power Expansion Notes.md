@@ -27,6 +27,6 @@ The proof:
 
 The support lemma and expansion include `k = 0`: both tuple products are empty products equal to one, and the support interval is `[1,1]`.
 
-## Honest Remaining Boundary
+## Arithmetic Completion
 
-The expansion itself is unconditional and audited. The coefficient-growth theorem remains conditional on the separate classical propositions `DivisorCountBoundProp` and `FactorizationCountBoundProp`. Proving those epsilon-power counting estimates is Goal C work; it is not hidden inside the expansion theorem.
+The expansion itself is unconditional and audited. `ArithmeticCoefficients.lean` proves the formerly separate classical propositions as `divisorCountBound_native` and `factorizationCountBound_native`, then exports `powCoeffBound_native : PowCoeffBoundProp`. Thus the coefficient-growth theorem now specializes without an arithmetic premise while the finite expansion remains logically independent of those estimates.
