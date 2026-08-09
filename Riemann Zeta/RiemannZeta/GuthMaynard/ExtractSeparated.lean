@@ -298,6 +298,209 @@ def LocalZeroMultiplicityBoundProp : Prop :=
             (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1),
             analyticVanishingOrder riemannZeta ρ ≤ L
 
+/-- Jensen's inequality bounds one ordinary unit-height bin of Type-I zeros, with analytic
+multiplicity.  The inner radius `3/2` contains the relevant critical-strip rectangle and the
+outer radius `7/4` is the pole-safe circle controlled in `ZeroCount.lean`. -/
+theorem typeI_unit_bin_sum_le_jensen (σ T : ℝ) (z : ℤ)
+    (hσLower : 7 / 10 ≤ σ) (hT : 8 ≤ T) :
+    ((∑ ρ ∈ (typeIZeroSet σ T).filter
+        (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1),
+        analyticVanishingOrder riemannZeta ρ : ℕ) : ℝ) ≤
+      Real.log ((100 * T ^ (3 : ℝ)) / (0.6 : ℝ)) /
+        Real.log ((7/4 : ℝ) / (3/2 : ℝ)) := by
+  let S := (typeIZeroSet σ T).filter
+    (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1)
+  by_cases hSEmpty : S = ∅
+  · change ((∑ ρ ∈ S, analyticVanishingOrder riemannZeta ρ : ℕ) : ℝ) ≤ _
+    rw [hSEmpty]
+    simp only [Finset.sum_empty, Nat.cast_zero]
+    have hLogDen : 0 < Real.log ((7/4 : ℝ) / (3/2 : ℝ)) := by
+      apply Real.log_pos
+      norm_num
+    have hM : 1 ≤ 100 * T ^ (3 : ℝ) := by
+      norm_num [Real.rpow_natCast]
+      have hT2 : 1 ≤ T ^ (2 : ℕ) := by nlinarith
+      calc
+        1 ≤ 100 * T := by nlinarith
+        _ ≤ 100 * T * T ^ (2 : ℕ) := by nlinarith
+        _ = 100 * T ^ (3 : ℕ) := by ring
+    have hRatio : 1 ≤ (100 * T ^ (3 : ℝ)) / (0.6 : ℝ) := by
+      norm_num at hM ⊢
+      nlinarith
+    exact div_nonneg (Real.log_nonneg hRatio) hLogDen.le
+  · have hSNonempty : S.Nonempty := Finset.nonempty_iff_ne_empty.mpr hSEmpty
+    obtain ⟨ρ₀, hρ₀⟩ := hSNonempty
+    have hρ₀Data := Finset.mem_filter.mp hρ₀
+    have hρ₀Rect : ρ₀ ∈ zerosInRect σ 1 T (2 * T) :=
+      (Finset.mem_filter.mp hρ₀Data.1).1
+    rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff, mem_ZeroRectangle] at hρ₀Rect
+    have hzRange : (z : ℝ) ∈ Set.Icc (T - 1) (2 * T) := by
+      constructor
+      · linarith [hρ₀Rect.1.2.2.1, hρ₀Data.2.2]
+      · linarith [hρ₀Rect.1.2.2.2, hρ₀Data.2.1]
+    let c : ℂ := 2 + I * (((z : ℝ) + 1/2 : ℝ) : ℂ)
+    let U : Set ℂ := Metric.closedBall c (7/4 : ℝ)
+    have hUCompact : IsCompact U := isCompact_closedBall c (7/4 : ℝ)
+    have hUPre : IsPreconnected U := (convex_closedBall c (7/4 : ℝ)).isPreconnected
+    have hcU : c ∈ U := by
+      simp only [U, Metric.mem_closedBall, dist_self]
+      norm_num
+    have hUAnalytic : AnalyticOnNhd ℂ riemannZeta U := by
+      apply analyticOn_riemannZeta.mono
+      intro w hw
+      have hwNorm : ‖w - c‖ ≤ 7/4 := by
+        simpa [U, Metric.mem_closedBall, dist_eq_norm] using hw
+      have hwImDiff : |w.im - ((z : ℝ) + 1/2)| ≤ 7/4 := by
+        calc
+          |w.im - ((z : ℝ) + 1/2)| = |(w - c).im| := by simp [c]
+          _ ≤ ‖w - c‖ := abs_im_le_norm _
+          _ ≤ 7/4 := hwNorm
+      have hwIm : 1 < w.im := by
+        have := (abs_le.mp hwImDiff).1
+        linarith [hzRange.1]
+      intro hwOne
+      subst w
+      norm_num at hwIm
+    have hcLower : (0.6 : ℝ) ≤ ‖riemannZeta c‖ := by
+      simpa [c] using euler_product_lower_bound_2 (z : ℝ)
+    have hcNe : riemannZeta c ≠ 0 := by
+      intro hcZero
+      rw [hcZero, norm_zero] at hcLower
+      norm_num at hcLower
+    have hcOrder : analyticOrderAt riemannZeta c ≠ ⊤ := by
+      rw [analyticOrderAt_eq_zero.mpr (Or.inr hcNe)]
+      exact ENat.coe_ne_top 0
+    have hSU : ∀ ρ ∈ S, ρ ∈ Metric.closedBall c (3/2 : ℝ) := by
+      intro ρ hρ
+      have hρData := Finset.mem_filter.mp hρ
+      have hρRect : ρ ∈ zerosInRect σ 1 T (2 * T) :=
+        (Finset.mem_filter.mp hρData.1).1
+      rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff, mem_ZeroRectangle] at hρRect
+      rw [Metric.mem_closedBall, dist_eq_norm]
+      have hreLower : -(13/10 : ℝ) ≤ (ρ - c).re := by
+        norm_num [c]
+        linarith [hσLower, hρRect.1.1]
+      have hreUpper : (ρ - c).re ≤ 0 := by
+        norm_num [c]
+        linarith [hρRect.1.2.1]
+      have himLower : -(1/2 : ℝ) ≤ (ρ - c).im := by
+        norm_num [c]
+        linarith [hρData.2.1]
+      have himUpper : (ρ - c).im ≤ 1/2 := by
+        norm_num [c]
+        linarith [hρData.2.2]
+      rw [mul_self_le_mul_self_iff (norm_nonneg _) (by norm_num)]
+      rw [Complex.norm_mul_self_eq_normSq, normSq_apply]
+      nlinarith [sq_nonneg ((ρ - c).re + 13/10), sq_nonneg ((ρ - c).im + 1/2),
+        sq_nonneg ((ρ - c).im - 1/2)]
+    let V : Set ℂ := Metric.closedBall c (3/2 : ℝ)
+    have hVCompact : IsCompact V := isCompact_closedBall c (3/2 : ℝ)
+    have hVPre : IsPreconnected V := (convex_closedBall c (3/2 : ℝ)).isPreconnected
+    have hcV : c ∈ V := by
+      simp only [V, Metric.mem_closedBall, dist_self]
+      norm_num
+    have hVAnalytic : AnalyticOnNhd ℂ riemannZeta V :=
+      hUAnalytic.mono (Metric.closedBall_subset_closedBall (by norm_num : (3/2 : ℝ) ≤ 7/4))
+    have hSV : ∀ ρ ∈ S, ρ ∈ V := by simpa [V] using hSU
+    have hBridge := finset_analyticVanishingOrder_le_finsum_divisor hVAnalytic hVCompact
+      hVPre hcV hcOrder S hSV
+    have hM : 1 ≤ 100 * T ^ (3 : ℝ) := by
+      norm_num [Real.rpow_natCast]
+      have hT2 : 1 ≤ T ^ (2 : ℕ) := by nlinarith
+      calc
+        1 ≤ 100 * T := by nlinarith
+        _ ≤ 100 * T * T ^ (2 : ℕ) := by nlinarith
+        _ = 100 * T ^ (3 : ℕ) := by ring
+    have hUAnalyticAbs : AnalyticOnNhd ℂ riemannZeta
+        (Metric.closedBall c |(7/4 : ℝ)|) := by
+      simpa [U, abs_of_pos (by norm_num : (0 : ℝ) < 7/4)] using hUAnalytic
+    have hJensen := hUAnalyticAbs.sum_divisor_le
+      (r := (3/2 : ℝ)) (R := (7/4 : ℝ)) (M := 100 * T ^ (3 : ℝ))
+      (by norm_num) (by norm_num) hM hcNe (by
+        intro w hw
+        exact zeta_jensen_sphere_bound T (z : ℝ) hT hzRange w (by
+          simpa [c, abs_of_pos (by norm_num : (0 : ℝ) < 7/4)] using hw))
+    rw [abs_of_pos (by norm_num : (0 : ℝ) < 3/2)] at hJensen
+    change ((∑ ρ ∈ S, analyticVanishingOrder riemannZeta ρ : ℕ) : ℝ) ≤ _
+    refine hBridge.trans (le_trans (by simpa [c, V]
+      using hJensen) ?_)
+    have hLogDen : 0 < Real.log ((7/4 : ℝ) / (3/2 : ℝ)) := by
+      apply Real.log_pos
+      norm_num
+    apply div_le_div_of_nonneg_right _ hLogDen.le
+    have hMPos : 0 < 100 * T ^ (3 : ℕ) := by positivity
+    have hcNormPos : 0 < ‖riemannZeta c‖ := norm_pos_iff.mpr hcNe
+    have hRatioLe : (100 * T ^ (3 : ℕ)) / ‖riemannZeta c‖ ≤
+        (100 * T ^ (3 : ℕ)) / (0.6 : ℝ) :=
+      div_le_div_of_nonneg_left hMPos.le (by norm_num) hcLower
+    exact Real.log_le_log
+      (div_pos hMPos (by simpa [c] using hcNormPos)) (by simpa [c] using hRatioLe)
+
+/-- The ordinary unit-height Type-I multiplicity input follows from the pole-safe Jensen bound. -/
+theorem localZeroMultiplicityBound_native : LocalZeroMultiplicityBoundProp := by
+  let D : ℝ := Real.log ((7/4 : ℝ) / (3/2 : ℝ))
+  let K : ℝ := 100 / D
+  refine ⟨K + 1, max (Real.exp 2) 8, ?_, le_max_left _ _, ?_⟩
+  · have hD : 0 < D := by
+      dsimp [D]
+      apply Real.log_pos
+      norm_num
+    have hK : 0 < K := div_pos (by norm_num) hD
+    linarith
+  · intro σ T hσLower _hσUpper hT
+    have hTExp : Real.exp 2 ≤ T := le_trans (le_max_left _ _) hT
+    have hTEight : 8 ≤ T := le_trans (le_max_right _ _) hT
+    have hTPos : 0 < T := by linarith
+    have hLogTwo : 2 ≤ Real.log T := by
+      have := Real.log_le_log (Real.exp_pos 2) hTExp
+      simpa using this
+    have hLogOne : 1 ≤ Real.log T := by linarith
+    have hD : 0 < D := by
+      dsimp [D]
+      apply Real.log_pos
+      norm_num
+    have hK : 0 < K := div_pos (by norm_num) hD
+    let L : ℕ := ⌈K * Real.log T⌉₊
+    refine ⟨L, ?_, ?_⟩
+    · have hxNonneg : 0 ≤ K * Real.log T := mul_nonneg hK.le (by linarith)
+      have hCeil : (L : ℝ) < K * Real.log T + 1 := by
+        simpa [L] using Nat.ceil_lt_add_one hxNonneg
+      have hAbsorb : K * Real.log T + 1 ≤ (K + 1) * Real.log T := by
+        nlinarith
+      exact hCeil.le.trans hAbsorb
+    · intro z
+      have hRaw := typeI_unit_bin_sum_le_jensen σ T z hσLower hTEight
+      have hNumerator :
+          Real.log ((100 * T ^ (3 : ℝ)) / (0.6 : ℝ)) ≤ 100 * Real.log T := by
+        have hConst := Real.log_le_sub_one_of_pos (show (0 : ℝ) < 500/3 by norm_num)
+        calc
+          Real.log ((100 * T ^ (3 : ℝ)) / (0.6 : ℝ)) =
+              Real.log ((500/3 : ℝ) * T ^ (3 : ℝ)) := by
+            congr 1
+            ring
+          _ = Real.log (500/3 : ℝ) + Real.log (T ^ (3 : ℝ)) := by
+            rw [Real.log_mul (by norm_num) (Real.rpow_pos_of_pos hTPos 3).ne']
+          _ = Real.log (500/3 : ℝ) + 3 * Real.log T := by
+            rw [Real.log_rpow hTPos]
+          _ ≤ 100 * Real.log T := by nlinarith
+      have hCount :
+          ((∑ ρ ∈ (typeIZeroSet σ T).filter
+              (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1),
+              analyticVanishingOrder riemannZeta ρ : ℕ) : ℝ) ≤ K * Real.log T := by
+        calc
+          _ ≤ Real.log ((100 * T ^ (3 : ℝ)) / (0.6 : ℝ)) / D := by
+            simpa [D] using hRaw
+          _ ≤ (100 * Real.log T) / D :=
+            div_le_div_of_nonneg_right hNumerator hD.le
+          _ = K * Real.log T := by
+            dsimp [K]
+            field_simp
+      have hCountCeil := hCount.trans (Nat.le_ceil (K * Real.log T))
+      change (∑ ρ ∈ (typeIZeroSet σ T).filter
+          (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1),
+          analyticVanishingOrder riemannZeta ρ) ≤ L
+      exact_mod_cast hCountCeil
+
 /-- Membership in the enlarged interval forced by beta removal. -/
 def InShiftedTargetInterval (T H : ℝ) (W : Finset ℝ) : Prop :=
   ∀ t ∈ W, t ∈ Set.Icc (T - H) (2 * T + H)
@@ -583,5 +786,11 @@ theorem extractSeparated_of_beta_shift_and_local_multiplicity
             rw [translateSet_card]
             dsimp [q]
             ring
+
+/-- With the Jensen input discharged, beta removal is the only remaining premise of the
+separated Type-I extraction theorem. -/
+theorem extractSeparated_of_beta_shift (hBeta : DetectorBetaShiftProp) :
+    ExtractSeparatedTarget :=
+  extractSeparated_of_beta_shift_and_local_multiplicity hBeta localZeroMultiplicityBound_native
 
 end RiemannZeta.GuthMaynard

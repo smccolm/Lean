@@ -21,20 +21,21 @@ This is the canonical logical dependency map for the proof, not an import graph.
 
 | Node | Meaning and principal files |
 |---|---|
-| Zeta foundations | **#15:** `ZeroCount.lean`; growth, functional-equation, convexity, and Euler-product lower bounds. |
-| Local zero count | **#15:** `ExtractSeparated.lean` or a focused supporting module; Jensen's formula and analytic multiplicity. |
-| Density endpoints | **#15:** `InghamBound.lean`; concrete Ingham and Huxley estimates for `N`. |
+| Zeta analytic foundations | **Done in #15:** `ZetaBounds.lean` and `ZeroCount.lean`; Abel continuation, pole-safe polynomial vertical growth, right-half-plane control, and the Euler/Möbius lower bound are kernel-checked. No project axiom remains in this layer. |
+| Local zero count | **Done in #15:** `ExtractSeparated.lean`; Jensen's formula is bridged to analytic multiplicity and proves `localZeroMultiplicityBound_native`. |
+| Classical density analysis | **#15:** the critical-line fourth moment, Littlewood/Gabriel step, mollified contour identity, and Huxley approximate-functional-equation/large-values estimate required by the primary sources are not yet formalized. |
+| Density endpoints | **#15:** `InghamBound.lean`; the concrete Ingham and Huxley estimates for the project's symmetric multiplicity-weighted `N` remain open. |
 | Beta removal | **#16:** `BetaDependence.lean`; Fourier decay, contour shifting, truncation, averaging, and pigeonholing. |
 | Coefficient bounds | **#17:** `ZeroDetector.lean` and `PolynomialPowers.lean`; divisor and factorization estimates. |
-| Mean value | **#17:** `MeanValue.lean`; Montgomery's estimate on `[0,T]`. |
+| Mean value | **Done in #17:** `MeanValueProof.lean`; Montgomery's estimate on `[0,T]` and its Halász–Montgomery consequence are kernel-checked. |
 | Type-II inputs | **#18:** `TypeIIZeros.lean`; coverage, fourth-moment reduction, and twisted zeta fourth moment. |
 | Goal C specialization | **#18:** transfer integration producing a theorem whose only remaining premise is `GuthMaynardLargeValues`. |
 | Decoupling and GM large values | **#19:** `Decoupling.lean` and `LargeValues.lean`. |
 | Final results and gates | **#19:** concrete Guth–Maynard and combined zero-density theorems, `Audit.lean`, documentation, and `run_lake_build.bat`. |
 
-The completed conditional path consists of the #13 separated extraction, the Halász–Montgomery deduction, the #14 central Type-I estimate, the slab-to-symmetric-count transfer, the #14 primitive-input transfer, and the combined-exponent transfer.
+The completed conditional path consists of the #13 separated extraction, the now-unconditional Montgomery mean-value and Halász–Montgomery estimates, the #14 central Type-I estimate, the slab-to-symmetric-count transfer, the #14 primitive-input transfer, and the combined-exponent transfer.
 
-The dependency-respecting order is **#15 foundations → #17 → finish #15 density endpoints**. #16 can proceed independently before #18; #18 must produce the Goal C specialization before #19 can apply the proved large-values theorem and close the project.
+The #15 foundation and mean-value prerequisites are complete. Its remaining dependency chain is **critical-line fourth moment and zero-detection identities → Ingham; approximate functional equation and powered large-values estimate → Huxley → concrete symmetric-count endpoints**. #16 can proceed independently before #18; #18 must produce the Goal C specialization before #19 can apply the proved large-values theorem and close the project.
 
 An item is crossed out only when every red node bearing its number is kernel-checked and its Shitlist completion test passes.
 
@@ -54,15 +55,16 @@ No unfinished diagram node may omit its Shitlist number. No crossed-out item may
 flowchart TD
     MZ["Mathlib APIs<br/>AVAILABLE"]
 
-    ZF["#15 Zeta foundations<br/>OPEN"]
-    LZ["#15 Local zero count<br/>OPEN"]
+    ZB["Zeta analytic foundations<br/>DONE"]
+    LZ["Local zero count<br/>DONE"]
+    CD["#15 Classical density analysis<br/>OPEN"]
     ZD["#15 Ingham and Huxley<br/>OPEN"]
     BR["#16 Beta removal<br/>OPEN"]
     AC["#17 Coefficient bounds<br/>OPEN"]
-    MV["#17 Mean value<br/>OPEN"]
+    MV["Montgomery mean value<br/>DONE"]
 
     EX["Separated extraction<br/>DONE CONDITIONALLY"]
-    HM["Halasz-Montgomery<br/>DONE CONDITIONALLY"]
+    HM["Halasz-Montgomery<br/>DONE"]
     CT["Central Type I<br/>DONE CONDITIONALLY"]
     DY["Slab to symmetric N<br/>DONE"]
 
@@ -78,11 +80,12 @@ flowchart TD
     CZD["#19 Combined zero density<br/>OPEN"]
     QA["#19 Final verification<br/>OPEN"]
 
-    MZ --> ZF
-    ZF --> LZ
-    ZF --> ZD
-    LZ --> ZD
-    MV --> ZD
+    MZ --> ZB
+    ZB --> LZ
+    ZB --> CD
+    LZ --> CD
+    MV --> CD
+    CD --> ZD
 
     LZ --> EX
     BR --> EX
@@ -97,7 +100,6 @@ flowchart TD
     T2 --> TR
 
     TR --> GCS
-    ZF --> GCS
     LZ --> GCS
     ZD --> GCS
     BR --> GCS
@@ -115,7 +117,7 @@ flowchart TD
 
     GZD --> QA
     CZD --> QA
-    ZF --> QA
+    ZB --> QA
     BR --> QA
     DC --> QA
 
@@ -124,8 +126,9 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class DY done;
-    class EX,HM,CT,TR,CB conditional;
-    class ZF,LZ,ZD,BR,AC,MV,T2,GCS,DC,GM,GZD,CZD,QA open;
+    class ZB,LZ,MV,DY done;
+    class HM done;
+    class EX,CT,TR,CB conditional;
+    class CD,ZD,BR,AC,T2,GCS,DC,GM,GZD,CZD,QA open;
     class MZ available;
 ```

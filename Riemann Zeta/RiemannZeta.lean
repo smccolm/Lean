@@ -17,6 +17,7 @@ import RiemannZeta.GuthMaynard.InghamBound
 import RiemannZeta.GuthMaynard.LargeValues
 import RiemannZeta.GuthMaynard.MeanValueCS
 import RiemannZeta.GuthMaynard.MeanValue
+import RiemannZeta.GuthMaynard.MeanValueProof
 import RiemannZeta.GuthMaynard.Pigeonhole
 import RiemannZeta.GuthMaynard.PolynomialPowers
 import RiemannZeta.GuthMaynard.Separated

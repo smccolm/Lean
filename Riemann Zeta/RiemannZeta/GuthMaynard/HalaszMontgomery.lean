@@ -3,7 +3,7 @@ import Mathlib.Data.Real.Basic
 import Mathlib.Data.Finset.Basic
 import RiemannZeta.GuthMaynard.ZeroDetector
 import RiemannZeta.GuthMaynard.Separated
-import RiemannZeta.GuthMaynard.MeanValue
+import RiemannZeta.GuthMaynard.MeanValueProof
 
 open Complex Finset
 
@@ -71,5 +71,10 @@ theorem halasz_montgomery_lemma_of_mean_value
     norm_num
   rw [mul_assoc, h_V2_cancel, mul_one] at h_final
   simpa only [mul_assoc, mul_left_comm, mul_comm] using h_final
+
+/-- The Halász–Montgomery large-value counting estimate with its Montgomery
+mean-value premise discharged by the project theorem. -/
+theorem halasz_montgomery_lemma_native : HalaszMontgomeryLemma :=
+  halasz_montgomery_lemma_of_mean_value montgomery_mean_value_native
 
 end RiemannZeta.GuthMaynard
