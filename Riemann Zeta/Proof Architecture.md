@@ -1,20 +1,26 @@
 flowchart TD
     MZ["Mathlib APIs<br/>AVAILABLE"]
+    ER["PNT+ and expdb source infrastructure<br/>AVAILABLE FOR SELECTIVE PORTING"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
-    CD["#15 Classical density analysis<br/>OPEN<br/>mollifier algebra, critical-line second moment,<br/>Jensen bridge, rectangle argument principle,<br/>and linear zeta strip growth DONE;<br/>weighted Littlewood/Gabriel, fourth moment,<br/>right-edge/horizontal estimates,<br/>full MHH N^4 V^-6 branch OPEN"]
-    ZD["#15 Ingham and Huxley<br/>OPEN<br/>Ingham sigma=1/2,1 and Huxley sigma=1 DONE;<br/>interior estimates and Huxley sigma=3/4 OPEN"]
+    CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
+    ZT["#15 Truncated zeta at zeros<br/>OPEN<br/>uniform Euler-Maclaurin relation"]
+    VD["#15 van der Corput and Weyl<br/>OPEN<br/>B/A process instances, exponent pairs<br/>(1/2,1/2) and (1/6,2/3)"]
+    CLV["#15 Classical large values<br/>OPEN<br/>full MHH estimate including<br/>T N^4 V^-6"]
+    FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, exact sigma"]
+    ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
+
     BR["#16 Beta removal<br/>DONE"]
     AC["#17 Coefficient bounds<br/>DONE<br/>divisor count, ordered factorizations,<br/>powered coefficients"]
     MV["Montgomery mean value<br/>DONE"]
+    HM["Basic Halasz-Montgomery<br/>DONE"]
 
-    EX["Separated extraction<br/>DONE"]
-    HM["Halasz-Montgomery<br/>DONE"]
+    EX["Separated Type-I extraction<br/>DONE"]
     CT["Central Type I<br/>DONE CONDITIONALLY"]
     DY["Slab to symmetric N<br/>DONE"]
 
-    T2["#18 Type II<br/>OPEN"]
+    T2["#18 Type II contour inputs<br/>OPEN<br/>coverage, fourth-moment reduction,<br/>twisted fourth moment"]
     TR["Primitive-input transfer<br/>DONE CONDITIONALLY"]
     GCS["#18 Goal C specialization<br/>OPEN"]
 
@@ -27,13 +33,22 @@ flowchart TD
     QA["#19 Final verification<br/>OPEN"]
 
     MZ --> ZB
+    MZ --> CF
+    ER --> ZT
+    ER --> VD
     ZB --> LZ
-    ZB --> CD
-    LZ --> CD
-    MV --> CD
-    HM --> CD
-    AC --> CD
-    CD --> ZD
+    ZB --> CF
+    ZB --> ZT
+
+    VD --> CLV
+    MV --> CLV
+    HM --> CLV
+    AC --> CLV
+    ZT --> FDT
+    VD --> FDT
+    CLV --> FDT
+    LZ --> FDT
+    FDT --> ZD
     DY --> ZD
 
     LZ --> EX
@@ -75,8 +90,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,BR,AC,MV,EX,DY done;
-    class HM done;
+    class ZB,LZ,CF,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class CD,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
-    class MZ available;
+    class ZT,VD,CLV,FDT,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
+    class MZ,ER available;
