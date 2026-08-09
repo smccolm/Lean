@@ -17,7 +17,7 @@ flowchart TD
     HM["Basic Halasz-Montgomery<br/>DONE"]
 
     EX["Separated Type-I extraction<br/>DONE"]
-    CT["Central Type I<br/>DONE CONDITIONALLY"]
+    CT["Central Type I<br/>DONE CONDITIONALLY<br/>only #19 GM large values remains"]
     DY["Slab to symmetric N<br/>DONE"]
 
     T2["#18 Type II contour inputs<br/>OPEN<br/>coverage, fourth-moment reduction,<br/>twisted fourth moment"]
@@ -72,6 +72,7 @@ flowchart TD
     T2 --> GCS
 
     DC --> GM
+    GM -->|GuthMaynardLargeValues| CT
     GCS --> GZD
     GM --> GZD
 

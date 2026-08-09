@@ -157,6 +157,8 @@ The Section 13.1 target exponent is `15(1-σ)/(3+5σ)`. The later combined Ingha
 
 The five still-unresolved premises of `conditionalZeroDensityTransfer` remain exhaustively assigned: large values to #19, Huxley to #15, and the three Type-II premises to #18. Its divisor and factorization parameters are now discharged by #17, while Montgomery mean value, local zero count, and beta shift were already proved. The additional Ingham input needed for the combined exponent remains assigned to #15. The two remaining direct project axioms are both assigned to #19.
 
+For Central Type I specifically, `montgomery_mean_value_native`, `extractSeparated_native`, and `powCoeffBound_native` discharge three of the four inputs of `typeIPositiveSlabBound_of_section13_inputs`. Its sole remaining premise is #19's `GuthMaynardLargeValues`. This is not #15's classical Montgomery–Halász–Huxley estimate; the proof architecture displays the two large-values dependencies as separate nodes and now includes the explicit `GuthMaynardLargeValues → Central Type I` edge.
+
 There is no fifth deferred cleanup or proof item. If work on one row exposes a genuinely new necessary lemma, that lemma belongs inside the same row unless it changes the published mathematical target; it does not silently create an open-ended new Shitlist item.
 
 ## Shitlist #15 Selected Path and Dependency Finding
