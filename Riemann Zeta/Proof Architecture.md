@@ -1,11 +1,11 @@
 flowchart TD
     MZ["Mathlib APIs<br/>AVAILABLE"]
-    ER["PNT+ and expdb source infrastructure<br/>AVAILABLE FOR SELECTIVE PORTING"]
+    ER["PNT+ and ANTEDB reference material<br/>AVAILABLE FOR SELECTIVE ADAPTATION"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
     CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
-    ZT["#15 Truncated zeta at zeros<br/>OPEN<br/>uniform Euler-Maclaurin relation"]
+    ZT["#15 Truncated zeta at zeros<br/>DONE<br/>exact Euler-Maclaurin relation<br/>and uniform zero error"]
     VD["#15 van der Corput and Weyl<br/>OPEN<br/>B/A process instances, exponent pairs<br/>(1/2,1/2) and (1/6,2/3)"]
     CLV["#15 Classical large values<br/>OPEN<br/>full MHH estimate including<br/>T N^4 V^-6"]
     FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, exact sigma"]
@@ -90,7 +90,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class ZT,VD,CLV,FDT,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
+    class VD,CLV,FDT,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
     class MZ,ER available;

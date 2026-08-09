@@ -19,6 +19,16 @@ def HuxleyZeroDensity (zeroCount : ℝ → ℝ → ℕ) : Prop :=
   ∀ (σ : ℝ), 3/4 ≤ σ → σ ≤ 1 →
     EpsilonPowerBound (fun T => (zeroCount σ T : ℝ)) (fun T => T ^ (3 * (1 - σ) / (3 * σ - 1)))
 
+/-- At the left endpoint of Huxley's range, its exponent agrees with Ingham's exponent.
+Consequently the `σ = 3/4` case of Huxley is supplied by any full Ingham estimate. -/
+theorem huxley_zero_density_at_three_quarters_of_ingham
+    {zeroCount : ℝ → ℝ → ℕ} (hIngham : InghamZeroDensity zeroCount) :
+    EpsilonPowerBound (fun T => (zeroCount (3 / 4) T : ℝ))
+      (fun T => T ^ (3 * (1 - (3 / 4 : ℝ)) / (3 * (3 / 4 : ℝ) - 1))) := by
+  have h := hIngham (3 / 4) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
 /-- F-12: Combined zero density estimate transfer theorem.
     Ingham's bound supplies the required exponent for `1/2 ≤ σ ≤ 7/10`,
     while the Guth-Maynard bound supplies it for `7/10 < σ ≤ 1`.
