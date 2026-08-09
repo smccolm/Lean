@@ -341,6 +341,118 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.norm_mollifierCriticalCoeff_sq_le_inv,
   ``RiemannZeta.GuthMaynard.mollifierCriticalCoeff_l2_le_harmonic,
   ``RiemannZeta.GuthMaynard.integral_norm_sq_zetaMollifier_criticalLine_le,
+  ``RiemannZeta.GuthMaynard.norm_riemannZeta_le_twenty_mul_abs_im_on_classical_strip,
+  ``RiemannZeta.GuthMaynard.analytic_rectangle_logDeriv_integral_eq_order_sum,
+  ``RiemannZeta.GuthMaynard.regularizedInghamZeroDetector_rectangle_argumentPrinciple,
+
+  -- Vendored PNT+ rectangle and argument-principle infrastructure
+  ``MeromorphicOn.exists_nonzero_seq_divisor_support_diff_zero,
+  ``mem_Rect,
+  ``mapsTo_rectangle_left_re,
+  ``mapsTo_rectangleBorder_right_re,
+  ``Square_apply,
+  ``ContinuousOn.rectangleBorderNoPIntegrable,
+  ``Set.ne_left_of_mem_uIoo,
+  ``square_subset_square,
+  ``RectanglePullToNhdOfPole'',
+  ``ResidueTheoremAtOrigin',
+  ``Rectangle.symm,
+  ``logDeriv_hasSimplePolesOn_of_meromorphicOrderAt_ne_top,
+  ``HolomorphicOn.rectangleBorderIntegrable,
+  ``segment_reProdIm_segment_eq_convexHull,
+  ``RectangleIntegralHSplit',
+  ``RectangleIntegral_congr,
+  ``integral_const_div_sq_add_sq,
+  ``HIntegral_symm,
+  ``residue_eq_of_tendsto,
+  ``mapsTo_rectangle_left_im_NoP,
+  ``RectangleBorderIntegrable.add,
+  ``RectangleIntegral.const_smul,
+  ``rectangle_argumentChange_eq_two_pi_sum_meromorphicOrderAt,
+  ``mapsTo_rectangleBorder_right_im,
+  ``rectangle_subset_punctured_rect,
+  ``ResidueTheoremAtOrigin_aux1c',
+  ``ResidueTheoremAtOrigin_aux2c',
+  ``rectangleBorder_subset_rectangle,
+  ``simplePole_sub_residue_isBigO_one,
+  ``sumResiduesIn_inter_eq_of_set_eq,
+  ``RectSubRect',
+  ``verticalPath_not_eventuallyConst,
+  ``RectangleIntegral'_congr,
+  ``mapsTo_rectangleBorder_left_im,
+  ``residue_eq_zero_of_not_pole_of_meromorphicAt,
+  ``rectangle_mem_nhds_iff,
+  ``ContinuousOn.rectangleBorder_integrable,
+  ``integral_const_div_self_add_im,
+  ``Complex.inv_re_add_im,
+  ``RectanglePullToNhdOfPole,
+  ``RectangleIntegralVSplit,
+  ``continuous_self_div_sq_add_sq,
+  ``HolomorphicOn.rectangleBorderIntegrable',
+  ``MeromorphicOn.divisor_support_inter_compact_finite,
+  ``ContinuousLinearEquiv.coe_toLinearEquiv_symm,
+  ``existsDifferentiableOn_of_bddAbove,
+  ``SmallSquareInRectangle,
+  ``verticalIntegral_split_three,
+  ``rectangle_disjoint_singleton,
+  ``ResidueTheoremAtOrigin,
+  ``rectangleIntegral_symm,
+  ``rectangleIntegral_symm_re,
+  ``mapsTo_rectangleBorder_left_re,
+  ``RectangleIntegralVSplit',
+  ``MeromorphicOn.exists_ball_inter_divisor_support_eq_singleton,
+  ``square_neg,
+  ``MeromorphicOn.divisor_support_discrete,
+  ``VIntegral_symm,
+  ``MeromorphicOn.exists_seq_eq_range_divisor_support,
+  ``divisor_support_rectangle_finite,
+  ``logDeriv_sub_principal_isBigO_one_of_meromorphicOrderAt,
+  ``preimage_equivRealProdCLM_reProdIm,
+  ``left_mem_rect,
+  ``HasSimplePolesOn.mono,
+  ``logDeriv_poles_eq_divisor_support,
+  ``mapsTo_rectangle_left_im,
+  ``ResidueTheoremAtOrigin_aux2c,
+  ``RectangleIntegralHSplit,
+  ``RectangleIntegral.translate',
+  ``rect_subset_iff,
+  ``residue_analyticAt_eq_zero,
+  ``Set.ne_right_of_mem_uIoo,
+  ``Complex.nhds_hasBasis_square,
+  ``right_mem_rect,
+  ``integral_const_div_re_add_self,
+  ``rectangleBorder_disjoint_singleton,
+  ``Set.left_not_mem_uIoo,
+  ``RectanglePullToNhdOfPole',
+  ``square_mem_nhds,
+  ``RectSubRect,
+  ``mapsTo_rectangle_right_re,
+  ``ContinuousOn.rectangleBorderIntegrable,
+  ``IsBigO_to_BddAbove,
+  ``RectangleIntegral'_eq_sumResiduesIn,
+  ``ResidueTheoremOnRectangleWithSimplePole',
+  ``logDeriv_residue_eq_meromorphicOrderAt,
+  ``rectangleIntegral_logDeriv_eq_sum_meromorphicOrderAt,
+  ``rectangle_in_convex,
+  ``RectangleIntegral.translate,
+  ``not_mem_rectangleBorder_of_rectangle_mem_nhds,
+  ``mapsTo_rectangle_right_im_NoP,
+  ``mapsTo_rectangle_left_re_NoP,
+  ``ResidueTheoremOnRectangleWithSimplePole,
+  ``HolomorphicOn.vanishesOnRectangle,
+  ``RectangleIntegral.const_mul',
+  ``rectangleBorder_subset_punctured_rect,
+  ``MeromorphicOn.divisor_support_countable,
+  ``ResidueTheoremAtOrigin_aux1c,
+  ``ResidueTheoremInRectangle,
+  ``DiffVertRect_eq_UpperLowerUs,
+  ``Rectangle.symm_re,
+  ``mapsTo_rectangle_right_re_NoP,
+  ``Set.right_not_mem_uIoo,
+  ``mapsTo_rectangle_right_im,
+  ``sq_add_sq_ne_zero,
+  ``BddAbove_on_rectangle_of_bdd_near,
+  ``integral_self_div_sq_add_sq,
 
   -- Production modules formerly omitted from the root import graph
   ``RiemannZeta.GuthMaynard.halasz_montgomery_rhs_nonneg,
@@ -366,10 +478,26 @@ private def isCompilerGeneratedTheorem (name : Name) : Bool :=
   let text := name.toString
   text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_"
 
+/-- Vendored PNT+ modules are production proof infrastructure even though the
+upstream declarations intentionally extend root namespaces. -/
+private def auditedExternalModules : Array Name := #[
+  `RiemannZeta.External.PNT.Rectangle,
+  `RiemannZeta.External.PNT.DivisorSupport,
+  `RiemannZeta.External.PNT.ResidueCalcOnRectangles,
+  `RiemannZeta.External.PNT.RectangleArgumentPrinciple
+]
+
+private def isFromAuditedExternalModule (env : Environment) (name : Name) : Bool :=
+  match env.getModuleIdxFor? name with
+  | none => false
+  | some moduleIdx =>
+      auditedExternalModules.contains env.header.modules[moduleIdx.toNat]!.module
+
 private def exportedProjectTheorems (env : Environment) : Array Name := Id.run do
   let mut names := #[]
   for (name, info) in env.constants.toList do
-    if name.getRoot == `RiemannZeta && info.isTheorem && !isCompilerGeneratedTheorem name then
+    if (name.getRoot == `RiemannZeta || isFromAuditedExternalModule env name) &&
+        info.isTheorem && !isPrivateName name && !isCompilerGeneratedTheorem name then
       names := names.push name
   return names.qsort Name.quickLt
 

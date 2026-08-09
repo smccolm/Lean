@@ -150,7 +150,11 @@ $$
 \int_0^T\left|M_X\left(\frac12+it\right)\right|^2dt
 \le \left(T+2(2\pi+1)X\right)(1+\log X).
 $$
-This has the `(T+O(X)) log X` strength of the critical-line mollifier input used in the source argument. Shitlist #15 nevertheless remains open. Its first remaining part is the interior classical density-analysis engine: a multiplicity-aware Littlewood rectangle theorem, finite Gabriel vertical-integral convexity, the critical-line zeta fourth moment, the right-edge mollified-error and horizontal-edge estimates, and the full classical Montgomery–Halász–Huxley large-values estimate
+This has the `(T+O(X)) log X` strength of the critical-line mollifier input used in the source argument. Shitlist #15 nevertheless remains open because several parts of the interior classical density-analysis engine remain unproved.
+
+The rectangle argument-principle core is now kernel-checked. The project ports the PNT+ rectangle geometry, finite divisor-support, and residue calculus to Lean 4.30, then proves that the normalized contour integral of `logDeriv f` equals the finite sum of meromorphic orders in the rectangle. `ClassicalArgumentPrinciple.lean` specializes this result to the globally analytic pole-free Ingham detector while retaining finite-order and boundary-nonvanishing hypotheses explicitly. It also derives the concrete classical-strip growth bound `‖ζ(s)‖ ≤ 20 |Im(s)|` for `1/2 ≤ Re(s) < 3` and `|Im(s)| ≥ 1`. This closes the unweighted multiplicity-aware argument-principle sublemma, but it does not yet supply Littlewood's weighted logarithmic integral, a boundary-avoiding perturbation theorem, or the edge bounds needed for the density estimate.
+
+The remaining interior engine therefore consists of the weighted Littlewood/Gabriel step, the critical-line zeta fourth moment, the right-edge mollified-error and horizontal-edge estimates, and the full classical Montgomery–Halász–Huxley large-values estimate
 $$R\ll_\varepsilon T^\varepsilon\left(N^2V^{-2}+T\min(NV^{-2},N^4V^{-6})\right).$$
 The existing `halasz_montgomery_lemma_native` supplies only the basic $V^{-2}$ mean-value consequence; it does not prove the $N^4V^{-6}$ branch responsible for Huxley's exponent above $\sigma=3/4$. The second part of #15 must assemble Ingham's exponent $3(1-\sigma)/(2-\sigma)$ and Huxley's exponent $3(1-\sigma)/(3\sigma-1)$ over their full intervals, prove the remaining Huxley boundary at $\sigma=3/4$, and specialize the proved positive-ordinate-to-symmetric bridge. Neither fully quantified endpoint proposition is currently a Lean theorem for the project's symmetric multiplicity-weighted `N`.
 
@@ -173,7 +177,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 322 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. It checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision the audit exits nonzero only for `l2_decoupling_bound_native`. The zeta foundation, Jensen local count, classical mollifier/detector foundations, critical-line mollifier second moment, endpoint boundary cases, Montgomery mean value, beta removal, unconditional separated extraction, and native Halász–Montgomery consequence are audit-clean. Two direct project axioms remain, both in `Decoupling.lean`. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 432 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. This includes all 107 public theorems from the vendored PNT+ rectangle modules, discovered by module provenance despite their upstream global names. The audit checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision it exits nonzero only for `l2_decoupling_bound_native`. The zeta foundation, Jensen local count, classical mollifier/detector foundations, critical-line mollifier second moment, rectangle argument principle, endpoint boundary cases, Montgomery mean value, beta removal, unconditional separated extraction, and native Halász–Montgomery consequence are audit-clean. Two direct project axioms remain, both in `Decoupling.lean`. The table below is a selected declaration map, not a clean-audit certificate.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `DyadicTransfer`, `CentralTypeI`, `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -250,7 +254,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify one decoupling dependency failure across 322 synchronized declarations)
+- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify one decoupling dependency failure across 432 synchronized declarations)
 
 ---
 
