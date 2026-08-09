@@ -566,7 +566,36 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.logarithmicSum_eq_sum_range,
   ``RiemannZeta.GuthMaynard.criticalLineTerm_eq_cpow,
   ``RiemannZeta.GuthMaynard.criticalLineWeylBlock_eq_cpow,
-  ``RiemannZeta.GuthMaynard.norm_criticalLineWeylBlock_le
+  ``RiemannZeta.GuthMaynard.norm_criticalLineWeylBlock_le,
+
+  -- Shitlist #15 Package C: finite Montgomery--Halasz--Huxley large values
+  ``RiemannZeta.GuthMaynard.dyadicInterval_eq_Ico_succ,
+  ``RiemannZeta.GuthMaynard.logarithmicKernel_eq_logarithmicSum,
+  ``RiemannZeta.GuthMaynard.logarithmicKernel_eq_shifted_phaseSum,
+  ``RiemannZeta.GuthMaynard.logarithmicKernel_zero,
+  ``RiemannZeta.GuthMaynard.norm_logarithmicKernel_zero,
+  ``RiemannZeta.GuthMaynard.logarithmicKernel_neg,
+  ``RiemannZeta.GuthMaynard.norm_logarithmicKernel_abs,
+  ``RiemannZeta.GuthMaynard.norm_logarithmicKernel_le_div,
+  ``RiemannZeta.GuthMaynard.logarithmicPhase_secondDifference_bounds,
+  ``RiemannZeta.GuthMaynard.norm_logarithmicKernel_le_sqrt,
+  ``RiemannZeta.GuthMaynard.norm_phaseAlign_le_one,
+  ``RiemannZeta.GuthMaynard.phaseAlign_mul,
+  ``RiemannZeta.GuthMaynard.norm_sum_mul_sq_le,
+  ``RiemannZeta.GuthMaynard.sum_norm_sq_sum_le_gram,
+  ``RiemannZeta.GuthMaynard.logarithmicPhase_gram_eq_kernel,
+  ``RiemannZeta.GuthMaynard.halasz_montgomery_duality,
+  ``RiemannZeta.GuthMaynard.separated_annulus_card_le_two,
+  ``RiemannZeta.GuthMaynard.sum_inv_distance_near_le_harmonic,
+  ``RiemannZeta.GuthMaynard.logarithmicKernel_row_sum_le,
+  ``RiemannZeta.GuthMaynard.local_classical_large_values,
+  ``RiemannZeta.GuthMaynard.classical_large_values_of_local_scale,
+  ``RiemannZeta.GuthMaynard.dyadic_energy_le_length,
+  ``RiemannZeta.GuthMaynard.threshold_sq_le_length_mul_energy,
+  ``RiemannZeta.GuthMaynard.classical_large_values_sixth_branch,
+  ``RiemannZeta.GuthMaynard.classical_large_values_second_branch,
+  ``RiemannZeta.GuthMaynard.classical_large_values_with_harmonic,
+  ``RiemannZeta.GuthMaynard.classical_montgomery_halasz_huxley_native
 ]
 
 /-- The number printed by the audit, derived directly from its explicit list. -/

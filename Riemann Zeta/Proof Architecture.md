@@ -7,7 +7,7 @@ flowchart TD
     CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
     ZT["#15 Truncated zeta at zeros<br/>DONE<br/>exact Euler-Maclaurin relation<br/>and uniform zero error"]
     VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>critical-line weighted blocks"]
-    CLV["#15 Classical large values<br/>OPEN<br/>full MHH estimate including<br/>T N^4 V^-6"]
+    CLV["#15 Classical large values<br/>DONE<br/>finite MHH theorem including<br/>T N^4 V^-6"]
     FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, medium alternative,<br/>exact sigma"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
 
@@ -93,7 +93,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,VD,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,VD,CLV,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class CLV,FDT,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
+    class FDT,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
     class MZ,ER available;
