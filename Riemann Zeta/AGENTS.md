@@ -83,6 +83,27 @@ During implementation:
 4. Compile the edited module after each meaningful change.
 5. Do not make unrelated cleanup changes in files owned by the user.
 
+## Persistence and Legitimate Stopping Conditions
+
+A request to **prove**, **fix**, **complete**, **fully implement**, or **do** a Shitlist item binds the agent to the requested end theorem and its stated acceptance test. Supporting lemmas and successful checks are implementation milestones, not substitutes for that deliverable.
+
+1. **Do not stop at an intermediate lemma.** A new definition, derivative formula, finite reduction, conditional theorem, focused build, or audit-clean helper is not a stopping condition while the requested theorem remains unproved.
+2. **Do not convert unfinished implementation into a planning handoff.** Isolating the next subproblem, writing a list of remaining steps, or updating the documentation does not satisfy a request to perform those steps.
+3. **If a safe in-scope next step exists, take it.** Continue from one lemma to the next, including through difficult analytic, combinatorial, and integration work. Difficulty, proof length, slow elaboration, failed first approaches, and the need for additional research are expected parts of the task rather than reasons to end the turn.
+4. **Treat verification as a gate, not an exit ramp.** Passing a focused build or axiom audit authorizes continuation to the next obligation. Run final verification only after the requested mathematical output exists, while still using incremental checks during development.
+5. **Documentation must follow proof status, not replace proof work.** Synchronize the Shitlist, progress report, and proof architecture when status changes, but then continue implementing if the user's requested acceptance condition is still open.
+6. **Do not manufacture a blocker.** “This is substantial,” “this requires many lemmas,” “no existing repository proves it,” “the remaining step is now precisely isolated,” or “this would take another iteration” are not blockers.
+7. **A legitimate stop before completion requires an actual impasse:**
+   - a necessary action requires new user authority or an external credential;
+   - a required external service, dependency, or tool is unavailable after reasonable alternatives and retries;
+   - the requested statement is false or inconsistent, with a concrete mathematical demonstration; or
+   - every identified proof route has reached a specific technical obstruction that cannot be resolved with the available code, Mathlib APIs, source literature, or a faithful reformulation.
+8. **Before reporting an impasse, exhaust the available work.** Inspect relevant local and external sources, try materially different proof decompositions, prove all independent supporting obligations, preserve compiling code, and state the exact failed Lean goal or mathematical contradiction. A first failed tactic or cumbersome formalization is not exhaustion.
+9. **Never describe partial progress as completion.** If a legitimate impasse remains, say explicitly that the requested item is incomplete, identify the exact acceptance clause still failing, and distinguish proved infrastructure from the missing end theorem.
+10. **Explicit persistence language has force.** When the user says “fully,” “completely,” “do it,” “do not stop,” or objects to previous stopping, continue until the requested acceptance test passes or one of the legitimate impasses above is established. Do not end merely to provide a progress report.
+
+The operational test is simple: before ending an implementation turn, ask whether the user could truthfully cross out the requested Shitlist item under its existing completion test. If not, and a safe in-scope proof step remains, continue working.
+
 Before declaring completion:
 
 1. Scan the entire repository for prohibited placeholders and postulates.
@@ -220,4 +241,4 @@ An incremental task may remove only part of this debt, but the agent must:
 - avoid describing the repository as globally compliant; and
 - refuse any shortcut that merely renames, wraps, or relocates an unproved assumption.
 
-If a requested theorem cannot yet be proved, stop at a faithful statement or a theorem with legitimate explicit upstream parameters. Record the precise missing lemma and leave the code kernel-checkable. An honest, narrow obstruction is a valid research result; an admitted theorem is not.
+If a requested theorem reaches a legitimate impasse under the persistence rules above, preserve only faithful statements and theorems with legitimate explicit upstream parameters. Record the precise missing lemma and leave the code kernel-checkable. This is a fallback after exhaustive work, not permission to stop when an implementable next step remains. An honest, narrow obstruction is a valid research result; an admitted theorem is not.

@@ -6,9 +6,9 @@ flowchart TD
     LZ["Local zero count<br/>DONE"]
     CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
     ZT["#15 Truncated zeta at zeros<br/>DONE<br/>exact Euler-Maclaurin relation<br/>and uniform zero error"]
-    VD["#15 van der Corput and Weyl<br/>OPEN<br/>B/A process instances, exponent pairs<br/>(1/2,1/2) and (1/6,2/3)"]
+    VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>critical-line weighted blocks"]
     CLV["#15 Classical large values<br/>OPEN<br/>full MHH estimate including<br/>T N^4 V^-6"]
-    FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, exact sigma"]
+    FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, medium alternative,<br/>exact sigma"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
 
     BR["#16 Beta removal<br/>DONE"]
@@ -25,6 +25,7 @@ flowchart TD
     GCS["#18 Goal C specialization<br/>OPEN"]
 
     DC["#19 Decoupling<br/>OPEN"]
+    RF["#19 Smooth reflection principle<br/>OPEN<br/>approximate functional equation<br/>for GM Section 6"]
     GM["#19 GM large values<br/>OPEN"]
     GZD["#19 GM zero density<br/>OPEN"]
 
@@ -72,6 +73,7 @@ flowchart TD
     T2 --> GCS
 
     DC --> GM
+    RF --> GM
     GM -->|GuthMaynardLargeValues| CT
     GCS --> GZD
     GM --> GZD
@@ -91,7 +93,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,VD,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class VD,CLV,FDT,ZD,T2,GCS,DC,GM,GZD,CZD,QA open;
+    class CLV,FDT,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
     class MZ,ER available;
