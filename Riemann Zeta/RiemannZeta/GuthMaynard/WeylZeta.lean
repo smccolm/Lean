@@ -142,4 +142,64 @@ theorem norm_criticalLineWeylBlock_le
   rw [hsimplify] at hweighted
   exact hweighted
 
+/-- A zeta block with an arbitrary nonnegative real-part weight. -/
+noncomputable def weightedWeylBlock
+    (σ t : ℝ) (A N : ℕ) : ℂ :=
+  ∑ n ∈ Finset.range N,
+    ((A + n : ℝ) ^ (-σ) : ℝ) •
+      unitaryPhase (logarithmicPhase t (A + n))
+
+theorem weightedWeylBlock_eq_cpow
+    (σ t : ℝ) (A N : ℕ) (hA : 0 < A) :
+    weightedWeylBlock σ t A N =
+      ∑ n ∈ Finset.range N,
+        (A + n : ℂ) ^ (-((σ : ℂ) + (t : ℂ) * I)) := by
+  unfold weightedWeylBlock
+  apply Finset.sum_congr rfl
+  intro n _
+  have hm : 0 < A + n := by omega
+  have hmNe : ((A + n : ℕ) : ℂ) ≠ 0 := by exact_mod_cast hm.ne'
+  rw [Complex.real_smul]
+  have hReal : ((A + n : ℕ) : ℝ) = (A : ℝ) + (n : ℝ) := by norm_num
+  have hComplex : ((A + n : ℕ) : ℂ) = (A : ℂ) + (n : ℂ) := by norm_num
+  rw [← hReal, ← hComplex]
+  rw [unitaryPhase_logarithmicPhase_eq_cpow t (A + n) hm]
+  rw [Complex.ofReal_cpow (Nat.cast_nonneg (A + n))]
+  simp only [Complex.ofReal_natCast]
+  have hNeg : (((-σ : ℝ) : ℂ)) = -(σ : ℂ) := by norm_num
+  rw [hNeg]
+  rw [← Complex.cpow_add _ _ hmNe]
+  congr 2
+  ring
+
+/-- The uniform-prefix Weyl estimate transferred by Abel summation to the
+weight `n⁻ˢ` for every `σ ≥ 0`. -/
+theorem norm_weightedWeylBlock_le
+    (σ Y : ℝ) (A N : ℕ) (hσ : 0 ≤ σ)
+    (hY : 1 ≤ Y) (hA : 0 < A) (hN : 0 < N)
+    (hYA : Y ≤ A) (hAY : (A : ℝ) ^ 2 ≤ Y ^ 3) (hNA : N ≤ A) :
+    ‖weightedWeylBlock σ (Y ^ 3) A N‖ ≤
+      (A : ℝ) ^ (-σ) * (30 * Real.sqrt ((A : ℝ) * Y)) := by
+  let f : ℕ → ℝ := fun n => (A + n : ℝ) ^ (-σ)
+  let g : ℕ → ℂ := fun n =>
+    unitaryPhase (logarithmicPhase (Y ^ 3) (A + n))
+  have hweighted := norm_weighted_sum_le_of_antitone f g N
+    (30 * Real.sqrt ((A : ℝ) * Y)) hN
+    (fun i _ => by dsimp only [f]; positivity)
+    (fun i _ => by
+      dsimp only [f]
+      apply Real.rpow_le_rpow_of_nonpos
+      · positivity
+      · exact_mod_cast (show A + i ≤ A + (i + 1) by omega)
+      · linarith)
+    (fun j hj => by
+      dsimp only [g]
+      rw [← logarithmicSum_eq_sum_range]
+      exact logarithmic_weyl_exponent_pair_prefix Y A j hY hA hYA hAY
+        (hj.trans hNA))
+  change ‖weightedWeylBlock σ (Y ^ 3) A N‖ ≤ _
+  rw [show weightedWeylBlock σ (Y ^ 3) A N =
+      ∑ n ∈ Finset.range N, f n • g n by rfl]
+  simpa only [f, Nat.cast_zero, add_zero] using hweighted
+
 end RiemannZeta.GuthMaynard

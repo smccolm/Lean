@@ -142,7 +142,7 @@ lemma zeroCountRect_mono (σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T
   · apply zerosInRect_subset_of_rect_subset
     exact ZeroRectangle_subset σ_min1 σ_max1 T_min1 T_max1 σ_min2 σ_max2 T_min2 T_max2 h_sigma_min h_sigma_max h_T_min h_T_max
   · intro s _ _
-    exact zero_le _
+    exact Nat.zero_le _
 
 lemma zerosInRect_subset (σ_min σ_max T₁ T₂ T₃ : ℝ) :
     zerosInRect σ_min σ_max T₁ T₃ ⊆ zerosInRect σ_min σ_max T₁ T₂ ∪ zerosInRect σ_min σ_max T₂ T₃ := by
@@ -161,7 +161,7 @@ lemma zeroCountRect_split (σ_min σ_max T₁ T₂ T₃ : ℝ) :
   have h1 : ∑ s ∈ zerosInRect σ_min σ_max T₁ T₃, analyticVanishingOrder riemannZeta s ≤ ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂ ∪ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s := by
     apply Finset.sum_le_sum_of_subset_of_nonneg
     · exact zerosInRect_subset σ_min σ_max T₁ T₂ T₃
-    · intros; exact zero_le _
+    · intros; exact Nat.zero_le _
   have h2 : ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂ ∪ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s + ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂ ∩ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s = ∑ s ∈ zerosInRect σ_min σ_max T₁ T₂, analyticVanishingOrder riemannZeta s + ∑ s ∈ zerosInRect σ_min σ_max T₂ T₃, analyticVanishingOrder riemannZeta s := Finset.sum_union_inter
   omega
 

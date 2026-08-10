@@ -27,6 +27,12 @@ import RiemannZeta.GuthMaynard.SymmetryTransfer
 import RiemannZeta.GuthMaynard.CentralTypeI
 import RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple
 import RiemannZeta.GuthMaynard.ClassicalDensity
+import RiemannZeta.GuthMaynard.ClassicalDetector
+import RiemannZeta.GuthMaynard.FiniteDensityTransfer
+import RiemannZeta.GuthMaynard.ClassicalPowering
+import RiemannZeta.GuthMaynard.FiniteDensityEndpoint
+import RiemannZeta.GuthMaynard.FiniteDensityExponents
+import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.ClassicalLargeValues
 import RiemannZeta.GuthMaynard.ClassicalMoments
 import RiemannZeta.GuthMaynard.Transfer

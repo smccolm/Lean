@@ -287,7 +287,7 @@ theorem tendsto_zetaMollifier_ofReal_atTop (X : ℕ) (hX : 1 ≤ X) :
       have hpow := tendsto_natCast_cpow_neg_ofReal_atTop n hnLt
       have hmul := hpow.const_mul (((ArithmeticFunction.moebius n : ℤ) : ℂ))
       simpa [hnOne] using hmul
-  have hsum := tendsto_finset_sum (Icc 1 X) hterm
+  have hsum := tendsto_finsetSum (Icc 1 X) hterm
   simpa [hX] using hsum
 
 lemma exists_zetaMollifier_ofReal_ne_zero (X : ℕ) (hX : 1 ≤ X) :

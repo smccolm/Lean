@@ -704,9 +704,9 @@ private lemma intervalIntegral_congr_ae_of_codiscreteWithin_along_path
   refine intervalIntegral.integral_congr_ae_restrict (μ := volume) ?_
   apply ae_restrict_le_codiscreteWithin measurableSet_uIoc
   change {x : ℝ | f (p x) = g (p x)} ∈ Filter.codiscreteWithin (Set.uIoc a b)
-  simpa [Set.preimage] using Filter.codiscreteWithin.mono Set.uIoc_subset_uIcc
+  simpa [Set.preimage] using Filter.codiscreteWithin_mono Set.uIoc_subset_uIcc
     (hp_an.preimage_mem_codiscreteWithin hp_nonconst
-      (Filter.codiscreteWithin.mono
+      (Filter.codiscreteWithin_mono
         (by intro s hs; rcases hs with ⟨x, hx, rfl⟩; exact hp_maps hx) heq))
 
 -- Under `HasSimplePolesOn f U`, every point with strictly negative meromorphic order has order
@@ -858,7 +858,7 @@ private lemma meromorphicOrderAt_sub_principalPart_nonneg
   let rest : ℂ → ℂ := fun z ↦ ∑ q ∈ polesFin.erase p, residue f q / (z - q)
   have hrest_cont : ContinuousAt rest p := by
     dsimp [rest]
-    refine tendsto_finset_sum _ (fun q hq ↦ ?_)
+    refine tendsto_finsetSum _ (fun q hq ↦ ?_)
     have hpq : p - q ≠ 0 := sub_ne_zero.mpr (Finset.mem_erase.mp hq).1.symm
     have h_cont : ContinuousAt (fun z : ℂ ↦ residue f q / (z - q)) p := by
       fun_prop (disch := exact hpq)
@@ -947,7 +947,7 @@ private lemma principalPart_borderIntegrable {f : ℂ → ℂ} {z w : ℂ}
   let fNF := toMeromorphicNFOn f R
   let principalPart := fun s ↦ ∑ p ∈ polesFin, residue fNF p / (s - p)
   refine ContinuousOn.rectangleBorder_integrable ?_
-  refine continuousOn_finset_sum _ ?_
+  refine continuousOn_finsetSum _ ?_
   intro p hp s hs
   have hsp : s ≠ p := fun hsp => Set.disjoint_right.mp f_no_poles_boundary
     ((by simpa [polesFin, poles] using hp : p ∈ poles).2) (hsp ▸ hs)
@@ -979,7 +979,7 @@ private lemma sum_div_rectangleBorderIntegrable {z w : ℂ} {S : Finset ℂ}
     (hS_disjoint : Disjoint (RectangleBorder z w) S) (c : ℂ → ℂ) :
     RectangleBorderIntegrable (fun s ↦ ∑ p ∈ S, c p / (s - p)) z w := by
   refine ContinuousOn.rectangleBorder_integrable ?_
-  refine continuousOn_finset_sum _ ?_
+  refine continuousOn_finsetSum _ ?_
   intro p hp s hs
   have hsp : s ≠ p := fun hsp => Set.disjoint_right.mp hS_disjoint hp (hsp ▸ hs)
   have : ContinuousAt (fun z : ℂ ↦ c p / (z - p)) s := by

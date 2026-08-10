@@ -193,7 +193,7 @@ lemma integral_conj_dirichletTimeUpTo_mul_dirichletTimeUpTo
     intro t
     simp only [dirichletTimeUpTo, map_sum, Finset.sum_mul, Finset.mul_sum]
   simp_rw [hexpand]
-  rw [intervalIntegral.integral_finset_sum]
+  rw [intervalIntegral.integral_finsetSum]
   · rw [show
         (∑ m ∈ Finset.Icc 1 X,
           ∫ t : ℝ in 0..T, ∑ n ∈ Finset.Icc 1 X,
@@ -205,7 +205,7 @@ lemma integral_conj_dirichletTimeUpTo_mul_dirichletTimeUpTo
               (a m * Complex.exp (-(Complex.I * (t : ℂ) * (Real.log m : ℂ)))) by
       apply Finset.sum_congr rfl
       intro m hm
-      exact intervalIntegral.integral_finset_sum (fun n hn ↦ by
+      exact intervalIntegral.integral_finsetSum (fun n hn ↦ by
         apply Continuous.intervalIntegrable
         fun_prop)]
     rw [show

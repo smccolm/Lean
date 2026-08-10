@@ -1,14 +1,20 @@
 flowchart TD
     MZ["Mathlib APIs<br/>AVAILABLE"]
-    ER["PNT+ and ANTEDB reference material<br/>AVAILABLE FOR SELECTIVE ADAPTATION"]
+    PZ["Pinned PNT+ sharp-zeta stack<br/>AVAILABLE AND AUDITED"]
+    ER["ANTEDB reference material<br/>AVAILABLE FOR SELECTIVE ADAPTATION"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
     CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
-    ZT["#15 Truncated zeta at zeros<br/>DONE<br/>exact Euler-Maclaurin relation<br/>and uniform zero error"]
-    VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>critical-line weighted blocks"]
+    ZT["Exact Abel/Euler-Maclaurin truncation<br/>DONE<br/>error <= ||rho|| b^-beta / beta"]
+    ST["Sharp zero truncation<br/>DONE<br/>length a comparable to T,<br/>partial sum <= 149 a^-beta"]
+    VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>weighted blocks for every sigma >= 0"]
     CLV["#15 Classical large values<br/>DONE<br/>finite MHH theorem including<br/>T N^4 V^-6"]
-    FDT["#15 Finite zero-density transfer<br/>OPEN<br/>separation, Type-I/II alternatives,<br/>Fourier translation, medium alternative,<br/>exact sigma"]
+    MR["Medium-reflection infrastructure<br/>AVAILABLE; NOT ON #15 ENDPOINT PATH<br/>exact Poisson/cosine identity, nonstationary expansion,<br/>stationary normal form and quadratic control"]
+    FDT["#15 Finite transfer machinery<br/>DONE<br/>exact-beta removal, multiplicity extraction,<br/>normalization and unrestricted MHH bridge"]
+    PW["#15 Exact finite powering<br/>DONE<br/>power identity, factorization bound,<br/>normalized powered-block extraction"]
+    RA["#15 Endpoint range arithmetic<br/>DONE<br/>Ingham range empty; Huxley range empty<br/>or below proved Weyl threshold"]
+    FA["#15 Finite scale/exponent assembly<br/>OPEN<br/>detector branch, mollifier scale and power choice;<br/>finite Corollary 11.10"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
 
     BR["#16 Beta removal<br/>DONE"]
@@ -35,21 +41,33 @@ flowchart TD
 
     MZ --> ZB
     MZ --> CF
-    ER --> ZT
+    PZ --> ST
+    ER --> MR
     ER --> VD
     ZB --> LZ
     ZB --> CF
     ZB --> ZT
+    ZT --> ST
 
     VD --> CLV
     MV --> CLV
     HM --> CLV
     AC --> CLV
-    ZT --> FDT
+    ST --> FDT
     VD --> FDT
+    VD --> MR
     CLV --> FDT
     LZ --> FDT
-    FDT --> ZD
+    AC --> FDT
+    HM --> FDT
+    FDT --> PW
+    AC --> PW
+    PW --> FA
+    FDT --> FA
+    VD --> FA
+    CLV --> FA
+    RA --> FA
+    FA --> ZD
     DY --> ZD
 
     LZ --> EX
@@ -93,7 +111,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,VD,CLV,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class FDT,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
-    class MZ,ER available;
+    class FA,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
+    class MZ,PZ,ER,MR available;

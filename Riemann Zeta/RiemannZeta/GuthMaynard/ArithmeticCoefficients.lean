@@ -130,7 +130,7 @@ theorem divisorCountBound_native : DivisorCountBoundProp := by
                     _ = ((p : ℝ) ^ n.factorization p) ^ eps := by
                           rw [Real.rpow_natCast]
             _ = (∏ p ∈ n.primeFactors, (p : ℝ) ^ n.factorization p) ^ eps := by
-                  rw [Real.finset_prod_rpow]
+                  rw [Real.finsetProd_rpow]
                   intro p hp
                   positivity
             _ = (n : ℝ) ^ eps := by

@@ -730,6 +730,89 @@ theorem classical_large_values_second_branch :
       field_simp [hV.ne']
       nlinarith [sq_nonneg (N : ℝ)]
 
+/-- The mean-value branch does not intrinsically require `N ≤ T`. Keeping the
+`N²/V²` diagonal term separately absorbs the additional `N` in `T+N`. This is
+the form needed by the finite classical zero detector, whose convolution has
+polynomially long support. -/
+theorem classical_large_values_second_branch_unrestricted :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (N : ℕ) (T V : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
+        0 < N → 1 ≤ T → 0 < V →
+        (∀ n ∈ dyadicInterval N, ‖a n‖ ≤ 1) →
+        IsSeparated 1 W → InBaseInterval T W →
+        (∀ t ∈ W, V ≤ ‖dirichletPoly N a t‖) →
+        (W.card : ℝ) ≤
+          C * ((N : ℝ) ^ 2 / V ^ 2 + T * (N : ℝ) / V ^ 2) := by
+  rcases halasz_montgomery_lemma_native with ⟨C, hC, hHM⟩
+  refine ⟨C, hC, ?_⟩
+  intro N T V W a hN hT hV ha hSep hBase hLarge
+  have hRawLarge : ∀ t ∈ W,
+      V ≤ ‖∑ n ∈ Ioc N (2 * N), a n * (n : ℂ) ^ (-(t : ℂ) * I)‖ := by
+    intro t ht
+    simpa only [dirichletPoly, dyadicInterval, ofReal_neg, ofReal_mul] using hLarge t ht
+  have hbound := hHM N T V W a hN hT hV hSep hBase hRawLarge
+  have henergy := dyadic_energy_le_length N a ha
+  have henergy' : (∑ n ∈ Ioc N (2 * N), ‖a n‖ ^ 2) ≤ (N : ℝ) := by
+    simpa only [dyadicInterval] using henergy
+  have hInv : V ^ (-2 : ℝ) = 1 / V ^ 2 := by
+    rw [Real.rpow_neg hV.le, Real.rpow_two, inv_eq_one_div]
+  rw [hInv] at hbound
+  calc
+    (W.card : ℝ) ≤ C * (T + (N : ℝ)) * (1 / V ^ 2) *
+        ∑ n ∈ Ioc N (2 * N), ‖a n‖ ^ 2 := hbound
+    _ ≤ C * (T + (N : ℝ)) * (1 / V ^ 2) * (N : ℝ) := by
+      gcongr
+    _ = C * ((N : ℝ) ^ 2 / V ^ 2 + T * (N : ℝ) / V ^ 2) := by ring
+
+/-- The complete second/sixth-power classical estimate before logarithmic
+absorption, valid for arbitrary positive polynomial length. -/
+theorem classical_large_values_with_harmonic_unrestricted :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (N : ℕ) (T V : ℝ) (W : Finset ℝ) (a : ℕ → ℂ),
+        0 < N → 1 ≤ T → 0 < V →
+        (∀ n ∈ dyadicInterval N, ‖a n‖ ≤ 1) →
+        IsSeparated 1 W → InBaseInterval T W →
+        (∀ t ∈ W, V ≤ ‖dirichletPoly N a t‖) →
+        (W.card : ℝ) ≤
+          C * (1 + (((harmonic N : ℚ) : ℝ))) *
+            ((N : ℝ) ^ 2 / V ^ 2 +
+              T * min ((N : ℝ) / V ^ 2) ((N : ℝ) ^ 4 / V ^ 6)) := by
+  rcases classical_large_values_second_branch_unrestricted with ⟨C₂, hC₂, hSecond⟩
+  let C := max C₂ 4000000
+  refine ⟨C, lt_of_lt_of_le hC₂ (le_max_left _ _), ?_⟩
+  intro N T V W a hN hT hV ha hSep hBase hLarge
+  have hH : 0 ≤ (((harmonic N : ℚ) : ℝ)) := by
+    rw [harmonic_eq_sum_Icc]
+    push_cast
+    positivity
+  by_cases hBD : (N : ℝ) / V ^ 2 ≤ (N : ℝ) ^ 4 / V ^ 6
+  · rw [min_eq_left hBD]
+    have hbasic := hSecond N T V W a hN hT hV ha hSep hBase hLarge
+    have hbasic' : (W.card : ℝ) ≤
+        C₂ * ((N : ℝ) ^ 2 / V ^ 2 + T * ((N : ℝ) / V ^ 2)) := by
+      simpa only [mul_div_assoc] using hbasic
+    have hinner : 0 ≤ (N : ℝ) ^ 2 / V ^ 2 + T * ((N : ℝ) / V ^ 2) := by
+      positivity
+    have hCscale : C₂ ≤ C * (1 + (((harmonic N : ℚ) : ℝ))) := by
+      have hCnonneg : 0 ≤ C := (lt_of_lt_of_le hC₂ (le_max_left _ _)).le
+      exact (le_max_left C₂ 4000000).trans <| by
+        simpa only [mul_one] using
+          mul_le_mul_of_nonneg_left (by linarith : 1 ≤ 1 + (((harmonic N : ℚ) : ℝ))) hCnonneg
+    exact hbasic'.trans (mul_le_mul_of_nonneg_right hCscale hinner)
+  · rw [min_eq_right (le_of_not_ge hBD)]
+    have hsixth := classical_large_values_sixth_branch N T V W a hN
+      (zero_le_one.trans hT) hV ha hSep hBase hLarge
+    have hsixth' : (W.card : ℝ) ≤
+        4000000 * (1 + (((harmonic N : ℚ) : ℝ))) *
+          ((N : ℝ) ^ 2 / V ^ 2 + T * ((N : ℝ) ^ 4 / V ^ 6)) := by
+      simpa only [mul_div_assoc] using hsixth
+    have hinner : 0 ≤ (N : ℝ) ^ 2 / V ^ 2 + T * ((N : ℝ) ^ 4 / V ^ 6) := by
+      positivity
+    have hcoef : 4000000 * (1 + (((harmonic N : ℚ) : ℝ))) ≤
+        C * (1 + (((harmonic N : ℚ) : ℝ))) :=
+      mul_le_mul_of_nonneg_right (le_max_right _ _) (by linarith)
+    exact hsixth'.trans (mul_le_mul_of_nonneg_right hcoef hinner)
+
 /-- The two classical branches combined before absorbing the harmonic loss. -/
 theorem classical_large_values_with_harmonic :
     ∃ C : ℝ, 0 < C ∧

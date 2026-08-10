@@ -105,7 +105,7 @@ theorem powCoeff_bound_of_uniform_detector_and_factorization
       _ = (∏ _x : Fin k, A) * (∏ x : Fin k, (p x : ℝ) ^ δ) := by
             rw [Finset.prod_mul_distrib]
       _ = A ^ k * (m : ℝ) ^ δ := by
-            rw [Real.finset_prod_rpow Finset.univ (fun x => (p x : ℝ))]
+            rw [Real.finsetProd_rpow Finset.univ (fun x => (p x : ℝ))]
             · have hp_prod_real : ∏ x : Fin k, (p x : ℝ) = (m : ℝ) := by
                 exact_mod_cast hp_prod
               rw [hp_prod_real]

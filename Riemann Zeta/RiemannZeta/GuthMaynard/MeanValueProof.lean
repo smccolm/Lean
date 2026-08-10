@@ -21,9 +21,6 @@ lemma integral_cexp_int (k : ℤ) :
   by_cases hk : k = 0
   · subst k
     simp
-    change ((2 * Real.pi : ℝ) : ℂ) * 1 = 2 * (Real.pi : ℂ)
-    push_cast
-    ring_nf
   · simp only [hk, if_false]
     have hc : Complex.I * (k : ℂ) ≠ 0 :=
       mul_ne_zero Complex.I_ne_zero (Int.cast_ne_zero.mpr hk)
@@ -84,7 +81,7 @@ lemma integral_conj_trigPoly_mul_trigPoly (s : Finset ℤ) (a b : ℤ → ℂ) :
     intro x
     simp only [trigPoly, map_sum, Finset.sum_mul, Finset.mul_sum]
   simp_rw [hexpand]
-  rw [intervalIntegral.integral_finset_sum]
+  rw [intervalIntegral.integral_finsetSum]
   · calc
       (∑ m ∈ s, ∫ x : ℝ in 0..2 * Real.pi, ∑ n ∈ s,
           conj (a n * Complex.exp (Complex.I * (n : ℂ) * (x : ℂ))) *
@@ -94,7 +91,7 @@ lemma integral_conj_trigPoly_mul_trigPoly (s : Finset ℤ) (a b : ℤ → ℂ) :
               (b m * Complex.exp (Complex.I * (m : ℂ) * (x : ℂ))) := by
         apply Finset.sum_congr rfl
         intro m hm
-        exact intervalIntegral.integral_finset_sum (fun n hn => by
+        exact intervalIntegral.integral_finsetSum (fun n hn => by
           apply Continuous.intervalIntegrable
           fun_prop)
       _ = (2 * Real.pi : ℝ) * ∑ n ∈ s, conj (a n) * b n := by
@@ -287,7 +284,7 @@ lemma integral_sawtooth_conj_trigPoly_mul_trigPoly
     intro x
     simp only [trigPoly, map_sum, Finset.sum_mul, Finset.mul_sum]
   simp_rw [hexpand]
-  rw [intervalIntegral.integral_finset_sum]
+  rw [intervalIntegral.integral_finsetSum]
   · calc
       (∑ m ∈ s, ∫ x : ℝ in 0..2 * Real.pi, ∑ n ∈ s,
           ((Real.pi - x : ℝ) : ℂ) *
@@ -299,7 +296,7 @@ lemma integral_sawtooth_conj_trigPoly_mul_trigPoly
                 (b m * Complex.exp (Complex.I * (m : ℂ) * (x : ℂ)))) := by
         apply Finset.sum_congr rfl
         intro m hm
-        exact intervalIntegral.integral_finset_sum (fun n hn => by
+        exact intervalIntegral.integral_finsetSum (fun n hn => by
           apply Continuous.intervalIntegrable
           fun_prop)
       _ = 2 * Real.pi * Complex.I * hilbertForm s a b := by
@@ -772,7 +769,7 @@ lemma integral_conj_dirichletTime_mul_dirichletTime
     intro t
     simp only [dirichletTime, map_sum, Finset.sum_mul, Finset.mul_sum]
   simp_rw [hexpand]
-  rw [intervalIntegral.integral_finset_sum]
+  rw [intervalIntegral.integral_finsetSum]
   · rw [show
         (∑ m ∈ Finset.Ioc N (2 * N),
           ∫ t : ℝ in 0..T, ∑ n ∈ Finset.Ioc N (2 * N),
@@ -784,7 +781,7 @@ lemma integral_conj_dirichletTime_mul_dirichletTime
               (a m * Complex.exp (-(Complex.I * (t : ℂ) * (Real.log m : ℂ)))) by
       apply Finset.sum_congr rfl
       intro m hm
-      exact intervalIntegral.integral_finset_sum (fun n hn => by
+      exact intervalIntegral.integral_finsetSum (fun n hn => by
         apply Continuous.intervalIntegrable
         fun_prop)]
     rw [show
