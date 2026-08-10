@@ -4,6 +4,7 @@ flowchart TD
     ER["ANTEDB classical zero-density blueprint<br/>AVAILABLE AS REFERENCE"]
     MP["Maynard-Pratt Appendix C<br/>AVAILABLE AS REFERENCE"]
     HY["Hughes-Young twisted fourth moment<br/>AVAILABLE AS REFERENCE"]
+    DFI["Duke-Friedlander-Iwaniec<br/>quadratic-divisor theorem<br/>AVAILABLE AS REFERENCE"]
     GMR["Guth-Maynard Sections 3-12<br/>AVAILABLE AS REFERENCE"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
@@ -31,10 +32,14 @@ flowchart TD
     CT["Central Type I<br/>DONE CONDITIONALLY<br/>only #19 GM large values remains"]
     DY["Slab to symmetric N<br/>DONE"]
 
-    GD["#18 Uniform vertical Gamma decay<br/>OPEN"]
-    CV["#18 Type-I/contour-Type-II coverage<br/>OPEN"]
+    CI["#18 Coverage-range contract repair<br/>OPEN<br/>source range Re rho >= 7/10"]
+    GD["#18 Uniform vertical Gamma decay<br/>and contour integrability<br/>OPEN"]
+    CV["#18 Appendix C contour coverage<br/>OPEN<br/>Mellin inversion, zero cancellation,<br/>residue and tails"]
+    SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>OPEN"]
     CR["#18 Type-II fourth-moment reduction<br/>OPEN"]
-    TM["#18 Twisted zeta fourth moment<br/>OPEN<br/>Hughes-Young upper-bound corollary"]
+    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN"]
+    QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
+    TM["#18 Generic short-polynomial<br/>twisted fourth moment and M-squared<br/>specialization<br/>OPEN"]
     TR["Primitive-input transfer<br/>DONE CONDITIONALLY<br/>open inputs #15, #18, #19"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
@@ -94,17 +99,28 @@ flowchart TD
     MV --> HM
     HM --> CT
 
+    MP --> CI
+    CI --> CV
     MP --> CV
     MP --> CR
     PZ --> GD
     MZ --> GD
+    PZ --> CV
+    MZ --> CV
     GD --> CV
     GD --> CR
     ZB --> CV
-    LZ --> CR
-    EX --> CR
-    HY --> TM
-    PZ --> TM
+    LZ --> SS
+    MZ --> SS
+    SS --> CR
+    HY --> AF
+    HY --> QD
+    DFI --> QD
+    PZ --> AF
+    MZ --> AF
+    MZ --> QD
+    AF --> TM
+    QD --> TM
     AC --> TM
 
     CT --> TR
@@ -156,5 +172,5 @@ flowchart TD
 
     class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,GD,CV,CR,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
-    class MZ,PZ,ER,MP,HY,GMR available;
+    class MR,FR,ZD,CI,GD,CV,SS,CR,AF,QD,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
+    class MZ,PZ,ER,MP,HY,DFI,GMR available;
