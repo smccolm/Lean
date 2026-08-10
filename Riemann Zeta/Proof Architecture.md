@@ -1,55 +1,63 @@
 flowchart TD
-    MZ["Mathlib APIs<br/>AVAILABLE"]
-    PZ["Pinned PNT+ sharp-zeta stack<br/>AVAILABLE AND AUDITED"]
-    ER["ANTEDB reference material<br/>AVAILABLE FOR SELECTIVE ADAPTATION"]
+    MZ["Mathlib analytic, Fourier,<br/>linear-algebra and combinatorics APIs<br/>AVAILABLE"]
+    PZ["Pinned PNT+ zeta, Mellin and<br/>Poisson/Euler-Maclaurin stack<br/>AVAILABLE AND AUDITED"]
+    ER["ANTEDB classical zero-density blueprint<br/>AVAILABLE AS REFERENCE"]
+    MP["Maynard-Pratt Appendix C<br/>AVAILABLE AS REFERENCE"]
+    HY["Hughes-Young twisted fourth moment<br/>AVAILABLE AS REFERENCE"]
+    GMR["Guth-Maynard Sections 3-12<br/>AVAILABLE AS REFERENCE"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
-    CF["Mollifier and contour foundations<br/>DONE<br/>retained as optional alternative"]
-    ZT["Exact Abel/Euler-Maclaurin truncation<br/>DONE<br/>error <= ||rho|| b^-beta / beta"]
-    ST["Sharp zero truncation<br/>DONE<br/>length a comparable to T,<br/>partial sum <= 149 a^-beta"]
-    VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>weighted blocks for every sigma >= 0"]
-    CLV["#15 Classical large values<br/>DONE<br/>finite MHH theorem including<br/>T N^4 V^-6"]
-    MR["#15 Medium Type-I reflection<br/>OPEN<br/>infrastructure DONE; uniform stationary main term,<br/>dual block and controlled losses OPEN"]
-    FDT["#15 Finite transfer machinery<br/>DONE<br/>exact-beta removal, multiplicity extraction,<br/>normalization and unrestricted MHH bridge"]
-    PW["#15 Exact finite powering<br/>DONE<br/>power identity, factorization bound,<br/>normalized powered-block extraction"]
-    RA["#15 Exceptional-range arithmetic<br/>DONE<br/>Ingham short-zeta range empty; Huxley range<br/>empty or below proved Weyl threshold"]
-    DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE<br/>pointwise q/2 versus 3/4 split; exact-sigma localization;<br/>multiplicity-dominant branch and common scale;<br/>Type I on (Y,A], Type II on (X,X*Y]"]
-    FA["#15 Finite scale/exponent assembly<br/>DONE<br/>MHH exponent, two-or-three scale reduction,<br/>Corollary 11.10 envelope and endpoint certificates"]
-    TE["#15 Terminal Type-I estimate<br/>OPEN<br/>Euler-Maclaurin/nonstationary control<br/>for scales comparable to T"]
-    FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume detector branches, medium reflection,<br/>terminal estimate and assembly certificates"]
-    ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
+    CF["Mollifier and contour foundations<br/>DONE"]
+    ZT["Exact Abel/Euler-Maclaurin truncation<br/>DONE"]
+    ST["Sharp zero truncation<br/>DONE"]
+    VD["#15 van der Corput and Weyl<br/>DONE"]
+    CLV["#15 Classical MHH large values<br/>DONE"]
+    FDT["#15 Finite transfer machinery<br/>DONE"]
+    PW["#15 Exact finite powering<br/>DONE"]
+    RA["#15 Exceptional-range arithmetic<br/>DONE"]
+    DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE"]
+    FA["#15 Finite scale/exponent assembly<br/>DONE"]
+    MR["#15 Medium Type-I reflection<br/>OPEN<br/>uniform stationary main term,<br/>dual block and fixed coefficients"]
+    TE["#15 Terminal Type-I estimate<br/>OPEN<br/>Euler-Maclaurin/nonstationary control"]
+    FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume dichotomy and endpoint certificates"]
+    ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
     BR["#16 Beta removal<br/>DONE"]
-    AC["#17 Coefficient bounds<br/>DONE<br/>divisor count, ordered factorizations,<br/>powered coefficients"]
+    AC["#17 Coefficient bounds<br/>DONE"]
     MV["Montgomery mean value<br/>DONE"]
     HM["Basic Halasz-Montgomery<br/>DONE"]
-
     EX["Separated Type-I extraction<br/>DONE"]
     CT["Central Type I<br/>DONE CONDITIONALLY<br/>only #19 GM large values remains"]
     DY["Slab to symmetric N<br/>DONE"]
 
-    T2["#18 Type II contour inputs<br/>OPEN<br/>coverage, fourth-moment reduction,<br/>twisted fourth moment"]
-    TR["Primitive-input transfer<br/>DONE CONDITIONALLY"]
-    GCS["#18 Goal C specialization<br/>OPEN"]
+    GD["#18 Uniform vertical Gamma decay<br/>OPEN"]
+    CV["#18 Type-I/contour-Type-II coverage<br/>OPEN"]
+    CR["#18 Type-II fourth-moment reduction<br/>OPEN"]
+    TM["#18 Twisted zeta fourth moment<br/>OPEN<br/>Hughes-Young upper-bound corollary"]
+    TR["Primitive-input transfer<br/>DONE CONDITIONALLY<br/>open inputs #15, #18, #19"]
+    GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
-    DC["#19 Decoupling<br/>OPEN"]
-    RF["#19 Smooth reflection principle<br/>OPEN<br/>approximate functional equation<br/>for GM Section 6"]
-    GM["#19 GM large values<br/>OPEN"]
-    GZD["#19 GM zero density<br/>OPEN"]
-
-    CB["Combined transfer<br/>DONE CONDITIONALLY"]
+    DR["#19 Delete false decoupling contracts<br/>OPEN<br/>remove both project axioms"]
+    MX["#19 Sampling matrix, singular values<br/>and trace-cube reduction<br/>OPEN"]
+    PS["#19 Poisson expansion and S1<br/>OPEN"]
+    RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN"]
+    HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
+    S2["#19 S2 estimate<br/>OPEN"]
+    AE["#19 Affine transforms, approximate energy<br/>and S3 estimate<br/>OPEN"]
+    GM["#19 Guth-Maynard large values<br/>OPEN"]
+    GZD["#19 Concrete GM zero density<br/>OPEN"]
+    CB["Combined transfer<br/>DONE CONDITIONALLY<br/>open inputs #15 and #19"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    QA["#19 Final verification<br/>OPEN"]
+    QA["#19 Final verification<br/>OPEN<br/>audit clean, zero warnings,<br/>runner PASS / exit 0"]
 
     MZ --> ZB
     MZ --> CF
+    PZ --> ZT
     PZ --> ST
     ER --> MR
-    ER --> VD
-    ER --> DI
+    ER --> TE
     ZB --> LZ
-    ZB --> CF
     ZB --> ZT
     ZT --> ST
 
@@ -59,11 +67,9 @@ flowchart TD
     AC --> CLV
     ST --> FDT
     VD --> FDT
-    VD --> MR
     CLV --> FDT
     LZ --> FDT
     AC --> FDT
-    HM --> FDT
     FDT --> PW
     AC --> PW
     FDT --> DI
@@ -71,7 +77,7 @@ flowchart TD
     ST --> DI
     DI -->|medium Type I| MR
     DI -->|terminal Type I| TE
-    DI -->|short Type I and Type II| FR
+    DI -->|short branches| FR
     MR --> FR
     TE --> FR
     PW --> FA
@@ -88,22 +94,47 @@ flowchart TD
     MV --> HM
     HM --> CT
 
+    MP --> CV
+    MP --> CR
+    PZ --> GD
+    MZ --> GD
+    GD --> CV
+    GD --> CR
+    ZB --> CV
+    LZ --> CR
+    EX --> CR
+    HY --> TM
+    PZ --> TM
+    AC --> TM
+
     CT --> TR
     DY --> TR
     ZD -->|Huxley| TR
-    T2 --> TR
-
+    CV --> TR
+    CR --> TR
+    TM --> TR
     TR --> GCS
-    LZ --> GCS
-    ZD --> GCS
-    BR --> GCS
-    AC --> GCS
-    MV --> GCS
-    T2 --> GCS
 
-    DC --> GM
-    RF --> GM
+    GMR --> MX
+    GMR --> PS
+    GMR --> RF
+    GMR --> HB
+    GMR --> AE
+    MZ --> MX
+    MZ --> PS
+    MZ --> HB
+    MZ --> AE
+    PZ --> RF
+    MX --> PS
+    PS --> S2
+    RF --> S2
+    HB --> S2
+    PS --> AE
+    MX --> GM
+    S2 --> GM
+    AE --> GM
     GM -->|GuthMaynardLargeValues| CT
+    GM -->|sole premise after #15/#18| GCS
     GCS --> GZD
     GM --> GZD
 
@@ -111,11 +142,12 @@ flowchart TD
     GZD --> CB
     CB --> CZD
 
+    DR --> QA
     GZD --> QA
     CZD --> QA
     ZB --> QA
     BR --> QA
-    DC --> QA
+    GM --> QA
 
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
     classDef conditional fill:#fff2bf,stroke:#9a6a00,color:#332500,stroke-width:2px;
@@ -124,5 +156,5 @@ flowchart TD
 
     class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class MR,TE,FR,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
-    class MZ,PZ,ER available;
+    class MR,TE,FR,ZD,GD,CV,CR,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
+    class MZ,PZ,ER,MP,HY,GMR available;
