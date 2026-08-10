@@ -14,7 +14,9 @@ Lean's standard logical axioms.
 
 The synchronization check also rejects a newly exported project theorem until it
 is deliberately added to the explicit list. Compiler-generated equation and proof
-theorems are excluded from that public-source check.
+theorems are excluded from that public-source check.  A separate named-output
+gate prevents a clean subset of the development from being presented as the
+completed research agenda while required end theorems are absent.
 -/
 
 /-- Standard Lean/Mathlib logical axioms permitted by the project policy. -/
@@ -560,8 +562,44 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.shortMobiusSquareCoeff_bound,
   ``RiemannZeta.GuthMaynard.twistedZetaMomentIntegrand_eq_zeta_four_mul_mobius_sq,
   ``RiemannZeta.GuthMaynard.twistedZetaFourthMoment_eq,
-  ``RiemannZeta.GuthMaynard.l2_decoupling_rhs_nonneg,
-  ``RiemannZeta.GuthMaynard.l2_decoupling_bound_native,
+  ``RiemannZeta.GuthMaynard.exists_gmSmoothCutoff,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.nonneg,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.bounded,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.equals_one,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.support,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.mk.injEq,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.mk.inj,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.smooth,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.mk.sizeOf_spec,
+  ``RiemannZeta.GuthMaynard.GMSmoothCutoff.exists_iteratedFDeriv_bound,
+  ``RiemannZeta.GuthMaynard.approximateAdditiveQuadruples_mono,
+  ``RiemannZeta.GuthMaynard.approxAddEnergy_mono,
+  ``RiemannZeta.GuthMaynard.approxAddEnergy_eq_zero_of_neg,
+  ``RiemannZeta.GuthMaynard.approxAddEnergy_nonneg,
+  ``RiemannZeta.GuthMaynard.approxAddEnergy_le_card_pow_four,
+  ``RiemannZeta.GuthMaynard.card_sq_le_approxAddEnergy,
+  ``RiemannZeta.GuthMaynard.gmR_one,
+  ``RiemannZeta.GuthMaynard.norm_gmR_le_card,
+  ``RiemannZeta.GuthMaynard.gmR_reciprocal,
+  ``RiemannZeta.GuthMaynard.norm_gmR_reciprocal,
+  ``RiemannZeta.GuthMaynard.gmMatrix_mulVec_apply,
+  ``RiemannZeta.GuthMaynard.gmMatrix_sample_energy_lower,
+  ``RiemannZeta.GuthMaynard.gmCoefficient_energy_le,
+  ``RiemannZeta.GuthMaynard.gmMatrix_mul_conjTranspose_apply,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_apply_eq_phase_sum,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_isHermitian,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_posSemidef,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_eigenvalue_nonneg,
+  ``RiemannZeta.GuthMaynard.gmMatrixSingularValue_nonneg,
+  ``RiemannZeta.GuthMaynard.gmMatrixSingularValue_sq,
+  ``RiemannZeta.GuthMaynard.gmMatrixSingularValue_sixth,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_trace_expand,
+  ``RiemannZeta.GuthMaynard.matrix_trace_cube_expand,
+  ``RiemannZeta.GuthMaynard.Matrix.IsHermitian.trace_cube_eq_sum_eigenvalues_cube,
+  ``RiemannZeta.GuthMaynard.sixthMoment_dispersion_nonneg,
+  ``RiemannZeta.GuthMaynard.sixthMoment_tail_lower,
+  ``RiemannZeta.GuthMaynard.coordinate_sixth_le_trace_dispersion_max,
+  ``RiemannZeta.GuthMaynard.gmMatrix_singularValue_sixth_le_dispersion_max,
 
   -- Shitlist #15: logarithmic phase and finite Weyl-differencing foundation
   ``RiemannZeta.GuthMaynard.norm_unitaryPhase,
@@ -942,6 +980,21 @@ def auditedDeclarations : Array Name := #[
 /-- The number printed by the audit, derived directly from its explicit list. -/
 def auditedDeclarationCount : Nat := auditedDeclarations.size
 
+/-- Named end theorems required before the human-facing runner may describe
+the research agenda as complete.  Names are checked dynamically so this audit
+continues to elaborate while an output is still under construction. -/
+def requiredResearchOutputs : Array (Nat × Name) := #[
+  (15, `RiemannZeta.GuthMaynard.ingham_zero_density_native),
+  (15, `RiemannZeta.GuthMaynard.huxley_zero_density_native),
+  (18, `RiemannZeta.GuthMaynard.typeIContourTypeIICoverOn_native),
+  (18, `RiemannZeta.GuthMaynard.typeIIFourthMomentReduction_native),
+  (18, `RiemannZeta.GuthMaynard.twistedZetaFourthMoment_native),
+  (18, `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_of_largeValues_native),
+  (19, `RiemannZeta.GuthMaynard.guthMaynardLargeValues_native),
+  (19, `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_native),
+  (19, `RiemannZeta.GuthMaynard.combined_zero_density_native)
+]
+
 private def isCompilerGeneratedTheorem (name : Name) : Bool :=
   let text := name.toString
   text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_"
@@ -1008,9 +1061,26 @@ def runDependencyAudit : CoreM Unit := do
         failures := failures + 1
         logInfo m!"FAIL {name}: forbidden dependencies {forbidden}; all axioms {axioms}"
 
+  logInfo m!"=== RESEARCH AGENDA OUTPUT GATE ==="
+  for (item, name) in requiredResearchOutputs do
+    if env.contains name then
+      match env.find? name with
+      | some info =>
+          if info.isTheorem then
+            logInfo m!"PASS [Shitlist #{item}] {name}"
+          else
+            failures := failures + 1
+            logInfo m!"FAIL [Shitlist #{item}] {name} exists but is not a theorem"
+      | none =>
+          failures := failures + 1
+          logInfo m!"FAIL [Shitlist #{item}] required theorem missing: {name}"
+    else
+      failures := failures + 1
+      logInfo m!"FAIL [Shitlist #{item}] required theorem missing: {name}"
+
   if failures == 0 then
-    logInfo m!"AUDIT PASS: all {auditedDeclarationCount} declarations have permitted dependencies."
+    logInfo m!"AUDIT PASS: all {auditedDeclarationCount} declarations have permitted dependencies and every required research output exists."
   else
-    throwError "AUDIT FAIL: {failures} dependency or synchronization failure(s) across {auditedDeclarationCount} explicit declarations"
+    throwError "AUDIT FAIL: {failures} dependency, synchronization, or required-output failure(s) across {auditedDeclarationCount} explicit declarations"
 
 #eval runDependencyAudit

@@ -6,7 +6,9 @@ import RiemannZeta.CrossNormProduct
 import RiemannZeta.GuthMaynard.Asymptotics
 import RiemannZeta.GuthMaynard.ArithmeticCoefficients
 import RiemannZeta.GuthMaynard.BetaDependence
-import RiemannZeta.GuthMaynard.Decoupling
+import RiemannZeta.GuthMaynard.LargeValuesDefinitions
+import RiemannZeta.GuthMaynard.LargeValuesMatrix
+import RiemannZeta.GuthMaynard.TraceDispersion
 import RiemannZeta.GuthMaynard.DensityReduction
 import RiemannZeta.GuthMaynard.DirichletPolynomial
 import RiemannZeta.GuthMaynard.DyadicTransfer

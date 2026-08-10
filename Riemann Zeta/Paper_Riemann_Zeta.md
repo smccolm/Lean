@@ -18,7 +18,7 @@ $$A(s) = \sum_{n \in S} a_n n^{-s} \quad (S \subset \mathbb{N}_{\ge 1})$$
 
 serve as essential approximations, mollifiers, and large-value estimators. Recent developments by Larry Guth and James Maynard (2026) established new large-value estimates for Dirichlet polynomials, deriving the zero-density bound $N(\sigma, T) \le T^{\frac{30(1-\sigma)}{13} + o(1)}$ [1].
 
-In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The F-01 through F-10 transfer is kernel-checked conditionally from ten explicit primitive inputs. Local zero multiplicity, Montgomery mean value, beta removal, divisor count, ordered-factorization count, and the finite classical Montgomery–Halász–Huxley large-values theorem are now proved. The exact-$\sigma$ classical density transfer, Type-II inputs, and Guth–Maynard large-values proof remain open. The two historical `Decoupling.lean` contracts are false and scheduled for deletion; they are not mathematical inputs from Guth–Maynard.
+In this work, we formalize finite Dirichlet polynomial conjugation identities, coordinate wrappers around Mathlib's completed Zeta symmetries, a complex-valued Hardy-type phase normalization, and provisional interfaces for the Guth–Maynard zero-density architecture [2, 3]. The F-01 through F-10 transfer is kernel-checked conditionally from ten explicit primitive inputs. Local zero multiplicity, Montgomery mean value, beta removal, divisor count, ordered-factorization count, and the finite classical Montgomery–Halász–Huxley large-values theorem are proved. The false historical decoupling model has been deleted and replaced by kernel-checked cutoff, sampling-matrix, Gram-spectrum, trace-cube, and sixth-moment dispersion foundations. The exact-$\sigma$ classical density transfer, Type-II inputs, and the analytic Poisson/energy portion of the Guth–Maynard large-values proof remain open.
 
 ## Contribution Taxonomy & Originality Disclosure
 The mathematical content of this package is structured into four distinct layers:
@@ -181,7 +181,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 887 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. This includes the complete exported surface of the vendored PNT+ rectangle and sharp-zeta modules, discovered by module provenance despite their upstream global names, and the new #18 coverage-range, Gamma-decay, contour-integrability, scaled-separation, detector-cancellation, and `M²` arithmetic declarations. The audit checks that the explicit list matches the discovered theorem set and permits only `propext`, `Classical.choice`, and `Quot.sound`. At the current revision it exits nonzero only for `l2_decoupling_bound_native`. The zeta foundation, Jensen local count, classical mollifier/detector foundations, critical-line mollifier second moment, rectangle argument principle, sharp truncation at zeros, van der Corput/Weyl stack, finite Type-I/Type-II dichotomy, terminal Type-I estimate, classical Montgomery–Halász–Huxley theorem, endpoint boundary cases, Montgomery mean value, beta removal, unconditional separated extraction, arithmetic coefficient estimates, native Halász–Montgomery consequence, and completed #18 support packages are audit-clean. Two direct project axioms remain, both in the rejected `Decoupling.lean` model. The table below is a selected declaration map, not a clean-audit certificate.
+`RiemannZeta/Audit.lean` explicitly lists all 923 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set and every existing declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. A separate named-output gate rejects the nine absent #15/#18/#19 end theorems, so the executable audit remains nonzero until the research agenda is complete. No direct project axiom remains.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `DyadicTransfer`, `CentralTypeI`, `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -262,7 +262,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom Audit Command**: `lake env lean RiemannZeta/Audit.lean` (currently expected to exit nonzero and identify one historical decoupling dependency failure across 887 synchronized declarations)
+- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (923/923 existing dependency checks pass; the command exits nonzero on nine missing research outputs)
 
 ---
 
@@ -274,7 +274,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
 2. Completing #15's medium reflection, finite reduction, and concrete Ingham/Huxley endpoints; the terminal estimate is now complete.
 3. Proving the Maynard–Pratt Type-I/Type-II cover, contour-to-twisted-fourth-moment reduction, and Hughes–Young-range twisted fourth moment required by #18.
-4. Replacing the false decoupling contracts with the source Guth–Maynard sampling-matrix/Poisson/reflection/approximate-energy proof and closing final integration.
+4. Completing the source Guth–Maynard proof after the proved matrix/dispersion layer: Poisson, `S₁/S₂/S₃`, reflection, Heath–Brown, affine transformation, energy, and final integration.
 
 ---
 

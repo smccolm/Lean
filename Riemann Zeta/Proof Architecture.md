@@ -45,9 +45,9 @@ flowchart TD
     TR["Primitive-input transfer<br/>DONE CONDITIONALLY<br/>open inputs #15, #18, #19"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
-    DR["#19 Delete false decoupling contracts<br/>OPEN<br/>remove both project axioms"]
-    SF["#19 Source-facing finite definitions<br/>OPEN<br/>smooth data, sampling operator,<br/>R sum and approximate energy"]
-    MX["#19 Sampling matrix, singular values<br/>and trace-cube reduction<br/>OPEN"]
+    DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
+    SF["#19 Source-facing finite definitions<br/>OPEN<br/>cutoff, derivative bounds, matrix,<br/>R sum and core energy bounds DONE;<br/>reindexing/floor bridge open"]
+    MX["#19 Sampling matrix and trace reduction<br/>OPEN<br/>Gram kernel/spectrum/cubic trace/<br/>sixth dispersion DONE;<br/>operator singular-value bound open"]
     PS["#19 Poisson expansion and S1<br/>OPEN"]
     RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
@@ -61,7 +61,8 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["Combined transfer<br/>DONE CONDITIONALLY<br/>open inputs #15 and #19"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    QA["#19 Final verification<br/>OPEN<br/>audit clean, zero warnings,<br/>runner PASS / exit 0"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>923/923 dependencies,<br/>zero warnings/axioms"]
+    QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
     MZ --> CF
@@ -193,6 +194,7 @@ flowchart TD
     CB --> CZD
 
     DR --> QA
+    IG --> QA
     GZD --> QA
     CZD --> QA
     ZB --> QA
@@ -204,7 +206,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,MS done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,MS,DR,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,DR,SF,MX,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,SF,MX,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;
