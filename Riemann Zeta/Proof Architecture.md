@@ -35,14 +35,14 @@ flowchart TD
 
     CI["#18 Coverage-range contract repair<br/>DONE<br/>source range Re rho >= 7/10"]
     GD["#18 Uniform vertical Gamma decay<br/>and contour-integrand integrability<br/>DONE"]
-    CV["#18 Appendix C contour coverage<br/>OPEN - NEXT CLOSEOUT #2<br/>Mellin inversion, zero cancellation,<br/>residue and tails"]
+    CV["#18 Appendix C contour coverage<br/>DONE<br/>Mellin inversion, zero cancellation,<br/>rectangle shift, residue, quantitative tails<br/>and dyadic dichotomy proved"]
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - NEXT CLOSEOUT #3"]
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
-    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>four native inputs remain open"]
+    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>three native inputs remain open"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
@@ -64,7 +64,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1008/1008 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1009/1009 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -215,7 +215,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,CR,MS,DR,SF,MX,PF,HT,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CV,AF,QD,TM,GCS,UF,S1,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,AF,QD,TM,GCS,UF,S1,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

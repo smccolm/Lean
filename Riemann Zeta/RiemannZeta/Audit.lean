@@ -537,6 +537,8 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.typeII_Gamma_vertical_decay,
   ``RiemannZeta.GuthMaynard.typeII_Gamma_norm_le_inv_pow,
   ``RiemannZeta.GuthMaynard.typeII_Gamma_norm_le_fourteen,
+  ``RiemannZeta.GuthMaynard.appendixC_Gamma_vertical_decay,
+  ``RiemannZeta.GuthMaynard.appendixC_Gamma_norm_le_inv_pow,
   ``RiemannZeta.GuthMaynard.continuous_typeII_Gamma_horizontal,
   ``RiemannZeta.GuthMaynard.integrable_typeII_Gamma_horizontal,
   ``RiemannZeta.GuthMaynard.integrable_one_add_abs_mul_typeII_Gamma_horizontal,
@@ -584,6 +586,8 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.mobius_sum_eq_ite_of_lt_detectorCutoff,
   ``RiemannZeta.GuthMaynard.detectorCoeff_one,
   ``RiemannZeta.GuthMaynard.detectorCoeff_eq_zero_of_lt_cutoff,
+  ``RiemannZeta.GuthMaynard.typeIContourTypeIICoverOn_native,
+  ``RiemannZeta.GuthMaynard.typeIContourTypeIICover_native,
   ``RiemannZeta.GuthMaynard.shortMobiusSquare_tuple_mem_support,
   ``RiemannZeta.GuthMaynard.shortMobiusPolynomial_sq_eq,
   ``RiemannZeta.GuthMaynard.shortMobiusSquareCoeff_eq_zero_of_not_mem,
@@ -945,9 +949,6 @@ def auditedDeclarations : Array Name := #[
   ``DerivUpperBnd_aux7_1,
   ``ZetaSum_aux2a,
   ``ZetaSum_aux3,
-  ``RectangleIntegralHSplit._abel_1_1,
-  ``DiffVertRect_eq_UpperLowerUs._abel_1_4,
-  ``rectangleIntegral_symm_re._abel_1_3,
 
   -- Classical finite zero-density transfer and powering
   ``RiemannZeta.GuthMaynard.classical_large_values_second_branch_unrestricted,
@@ -1082,7 +1083,8 @@ def requiredResearchOutputs : Array (Nat × Name) := #[
 
 private def isCompilerGeneratedTheorem (name : Name) : Bool :=
   let text := name.toString
-  text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_"
+  text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_" ||
+    text.contains "._abel_"
 
 /-- Vendored PNT+ modules are production proof infrastructure even though the
 upstream declarations intentionally extend root namespaces. -/

@@ -102,6 +102,66 @@ theorem typeII_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)
     _ ≤ Real.Gamma n := hGammaMono
     _ = (Nat.factorial (n - 1) : ℝ) := hGammaNat
 
+/-- Uniform arbitrary-order polynomial decay on the wider strip traversed by
+the Appendix C rectangle shift.  Allowing positive real part changes the
+harmless recurrence constant from `(n-1)!` to `n!`. -/
+theorem appendixC_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)
+    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ 1 / 2) :
+    |t| ^ n * ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤
+      (Nat.factorial n : ℝ) := by
+  by_cases ht : t = 0
+  · subst t
+    have hnPos : 0 < n := lt_of_lt_of_le (by norm_num) hn
+    rw [abs_zero, zero_pow hnPos.ne', zero_mul]
+    positivity
+  let s : ℂ := (a : ℂ) + (t : ℂ) * I
+  have hsFactor : ∀ j < n, s + (j : ℂ) ≠ 0 := by
+    intro j hj hzero
+    have him := congrArg Complex.im hzero
+    simp [s, ht] at him
+  have hRec := Gamma_add_nat_eq_prod_mul s n hsFactor
+  have hNormRec :
+      ‖Complex.Gamma (s + n)‖ =
+        ‖∏ j ∈ Finset.range n, (s + (j : ℂ))‖ * ‖Complex.Gamma s‖ := by
+    rw [hRec, norm_mul]
+  have hProd : |t| ^ n ≤ ‖∏ j ∈ Finset.range n, (s + (j : ℂ))‖ := by
+    simpa [s] using abs_im_pow_le_norm_prod_horizontal a t n
+  have hShiftRe : (s + n).re = a + n := by simp [s]
+  have hShiftPos : 0 < (s + n).re := by
+    rw [hShiftRe]
+    have hnReal : (3 : ℝ) ≤ n := by exact_mod_cast hn
+    linarith
+  have hNormShift : ‖Complex.Gamma (s + n)‖ ≤ Real.Gamma (a + n) := by
+    simpa [hShiftRe] using Complex.Gamma.norm_le_Gamma_re hShiftPos
+  have hTwo : (2 : ℝ) ≤ a + n := by
+    have hnReal : (3 : ℝ) ≤ n := by exact_mod_cast hn
+    linarith
+  have hUpper : a + n ≤ (n : ℝ) + 1 := by linarith
+  have hNtwo : (2 : ℝ) ≤ (n : ℝ) + 1 := by
+    exact_mod_cast (show 2 ≤ n + 1 by omega)
+  have hGammaMono : Real.Gamma (a + n) ≤ Real.Gamma ((n : ℝ) + 1) :=
+    Real.Gamma_strictMonoOn_Ici.monotoneOn hTwo hNtwo hUpper
+  have hGammaNat : Real.Gamma ((n : ℝ) + 1) = (Nat.factorial n : ℝ) := by
+    simpa only [Nat.cast_add, Nat.cast_one] using Real.Gamma_nat_eq_factorial n
+  calc
+    |t| ^ n * ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖
+        ≤ ‖∏ j ∈ Finset.range n, (s + (j : ℂ))‖ * ‖Complex.Gamma s‖ := by
+          simpa [s] using mul_le_mul_of_nonneg_right hProd (norm_nonneg _)
+    _ = ‖Complex.Gamma (s + n)‖ := hNormRec.symm
+    _ ≤ Real.Gamma (a + n) := hNormShift
+    _ ≤ Real.Gamma ((n : ℝ) + 1) := hGammaMono
+    _ = (Nat.factorial n : ℝ) := hGammaNat
+
+/-- Division form of the wide-strip Appendix C Gamma estimate. -/
+theorem appendixC_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
+    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ 1 / 2)
+    (ht : 1 ≤ |t|) :
+    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤
+      (Nat.factorial n : ℝ) / |t| ^ n := by
+  have htPos : 0 < |t| := lt_of_lt_of_le zero_lt_one ht
+  apply (le_div_iff₀ (pow_pos htPos n)).2
+  simpa [mul_comm] using appendixC_Gamma_vertical_decay n hn haLower haUpper
+
 /-- Division form of `typeII_Gamma_vertical_decay`, convenient for tail estimates. -/
 theorem typeII_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
     {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ))
