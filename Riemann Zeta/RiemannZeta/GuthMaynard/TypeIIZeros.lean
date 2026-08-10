@@ -38,14 +38,22 @@ def IsContourTypeIIZero (ρ : ℂ) (T : ℝ) : Prop :=
   (1 / 3 : ℝ) ≤ ‖typeIIContourIntegral ρ T‖
 
 /--
-Source-level Type-I/Type-II coverage corresponding to Maynard--Pratt Lemma 23.
+Source-level Type-I/Type-II coverage above a specified real-part threshold.
 It is stated separately from the residual class `¬ IsTypeIZero`.
 -/
-def TypeIContourTypeIICoverProp : Prop :=
+def TypeIContourTypeIICoverOnProp (σ₀ : ℝ) : Prop :=
   ∃ T₀ : ℝ, 2 ≤ T₀ ∧
     ∀ (T : ℝ), T₀ ≤ T → ∀ (ρ : ℂ),
-      ρ ∈ ZeroRectangle (1 / 2) 1 T (2 * T) → riemannZeta ρ = 0 →
+      ρ ∈ ZeroRectangle σ₀ 1 T (2 * T) → riemannZeta ρ = 0 →
         IsTypeIZero ρ T ∨ IsContourTypeIIZero ρ T
+
+/--
+The source-range Type-I/Type-II coverage needed by the Section 13.1 transfer.
+The lower threshold `7/10` stays strictly inside the Appendix C range
+`Re ρ ≥ 1/2 + 1 / log T` for all sufficiently large `T`.
+-/
+def TypeIContourTypeIICoverProp : Prop :=
+  TypeIContourTypeIICoverOnProp (7 / 10)
 
 /-- The fourth-moment integrand used in the proof of Maynard--Pratt Lemma 24. -/
 noncomputable def twistedZetaMomentIntegrand (T t : ℝ) : ℝ :=
@@ -234,8 +242,7 @@ theorem finiteTypeICover_of_typeIContourTypeII
     rw [mem_ZeroRectangle] at hρ ⊢
     rcases hρ with ⟨⟨hρLower, hρUpper, hρTLower, hρTUpper⟩, _hρZero⟩
     constructor
-    · norm_num at hσLower ⊢
-      exact (by linarith : (1 / 2 : ℝ) ≤ σ).trans hρLower
+    · exact hσLower.trans hρLower
     · exact ⟨hρUpper, hρTLower, hρTUpper⟩
   · rw [dyadicZetaZeros, zerosInRect, Set.Finite.mem_toFinset,
       Set.mem_inter_iff] at hρ

@@ -47,7 +47,7 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/Decoupling.lean`](RiemannZeta/GuthMaynard/Decoupling.lean)**: Historical, rejected statement layer. Its interval-free incidence contract and off-by-one block contract are false, and its two axioms are scheduled for deletion under #19. Guth–Maynard does not use this parabola-decoupling model; the replacement plan follows the paper's sampling-matrix, singular-value/trace-cube, Poisson, smooth-reflection, and approximate-energy argument.
 - **[`RiemannZeta/GuthMaynard/LargeValues.lean`](RiemannZeta/GuthMaynard/LargeValues.lean)**: Production module reserving the F-06 proof boundary; it currently makes no large-values proof claim.
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 857 exported source-level theorems across every production module, including the globally named public declarations in the vendored PNT+ modules.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 887 exported source-level theorems across every production module, including the globally named public declarations in the vendored PNT+ modules and the new #18 support packages.
 
 ---
 
@@ -62,7 +62,7 @@ run_lake_build.bat
 
 For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The runner performs five warning-failing Lean stages: the default production build, redundant explicit production-module coverage, both retained examples, and the transitive axiom audit. Its integrity scans use `--no-ignore`. The latest run, `logs/overall_proof_20260810_010725.log`, passes stages 1–4 with zero Lean warnings and synchronizes 857/857 declarations. Every new #15 finite-transfer, powering, dichotomy, weighted-Weyl, finite-MHH, endpoint-range, finite-scale, medium-reflection, and terminal Type-I theorem is audit-clean. Only `l2_decoupling_bound_native` has a project-specific axiom dependency. Two direct project axioms remain, both in the rejected `Decoupling.lean` model, so the principal runner correctly reports overall `FAIL` with exit code `1` until #19 deletes that model and proves the source large-values theorem.
+The runner performs five warning-failing Lean stages: the default production build, redundant explicit production-module coverage, both retained examples, and the transitive axiom audit. Its integrity scans use `--no-ignore`. The latest run, `logs/overall_proof_20260810_025105.log`, passes stages 1–4 with zero Lean warnings and synchronizes 887/887 declarations. Every new #15 finite-transfer, powering, dichotomy, weighted-Weyl, finite-MHH, endpoint-range, finite-scale, medium-reflection, and terminal Type-I theorem and every completed #18 support theorem is audit-clean. Only `l2_decoupling_bound_native` has a project-specific axiom dependency. Two direct project axioms remain, both in the rejected `Decoupling.lean` model, so the principal runner correctly reports overall `FAIL` with exit code `1` until #19 deletes that model and proves the source large-values theorem.
 
 ---
 

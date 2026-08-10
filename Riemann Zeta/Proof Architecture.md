@@ -32,14 +32,15 @@ flowchart TD
     CT["Central Type I<br/>DONE CONDITIONALLY<br/>only #19 GM large values remains"]
     DY["Slab to symmetric N<br/>DONE"]
 
-    CI["#18 Coverage-range contract repair<br/>OPEN<br/>source range Re rho >= 7/10"]
-    GD["#18 Uniform vertical Gamma decay<br/>and contour integrability<br/>OPEN"]
+    CI["#18 Coverage-range contract repair<br/>DONE<br/>source range Re rho >= 7/10"]
+    GD["#18 Uniform vertical Gamma decay<br/>and contour-integrand integrability<br/>DONE"]
     CV["#18 Appendix C contour coverage<br/>OPEN<br/>Mellin inversion, zero cancellation,<br/>residue and tails"]
-    SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>OPEN"]
-    CR["#18 Type-II fourth-moment reduction<br/>OPEN"]
+    SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
+    CR["#18 Type-II fourth-moment reduction<br/>OPEN<br/>scaled extraction input DONE"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN"]
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
-    TM["#18 Generic short-polynomial<br/>twisted fourth moment and M-squared<br/>specialization<br/>OPEN"]
+    MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
+    TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
     TR["Primitive-input transfer<br/>DONE CONDITIONALLY<br/>open inputs #15, #18, #19"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
@@ -121,7 +122,8 @@ flowchart TD
     MZ --> QD
     AF --> TM
     QD --> TM
-    AC --> TM
+    AC --> MS
+    MS --> TM
 
     CT --> TR
     DY --> TR
@@ -170,7 +172,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,MS done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CI,GD,CV,SS,CR,AF,QD,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR available;

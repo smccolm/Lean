@@ -12,6 +12,7 @@ import RiemannZeta.GuthMaynard.DirichletPolynomial
 import RiemannZeta.GuthMaynard.DyadicTransfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.ExtractSeparated
+import RiemannZeta.GuthMaynard.GammaVerticalDecay
 import RiemannZeta.GuthMaynard.HalaszMontgomery
 import RiemannZeta.GuthMaynard.TypeIIZeros
 import RiemannZeta.GuthMaynard.InghamBound
@@ -21,6 +22,7 @@ import RiemannZeta.GuthMaynard.MeanValue
 import RiemannZeta.GuthMaynard.MeanValueProof
 import RiemannZeta.GuthMaynard.Pigeonhole
 import RiemannZeta.GuthMaynard.PolynomialPowers
+import RiemannZeta.GuthMaynard.ScaledSeparated
 import RiemannZeta.GuthMaynard.Separated
 import RiemannZeta.GuthMaynard.Statements
 import RiemannZeta.GuthMaynard.SymmetryTransfer
@@ -36,6 +38,9 @@ import RiemannZeta.GuthMaynard.FiniteDensityExponents
 import RiemannZeta.GuthMaynard.FiniteScaleAssembly
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.TerminalTypeI
+import RiemannZeta.GuthMaynard.TypeIIContour
+import RiemannZeta.GuthMaynard.TypeIICoverage
+import RiemannZeta.GuthMaynard.TwistedMoment
 import RiemannZeta.GuthMaynard.ClassicalLargeValues
 import RiemannZeta.GuthMaynard.ClassicalMoments
 import RiemannZeta.GuthMaynard.Transfer
