@@ -19,7 +19,7 @@ flowchart TD
     DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE"]
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
     MR["#15 Medium Type-I reflection<br/>OPEN<br/>uniform stationary main term,<br/>dual block and fixed coefficients"]
-    TE["#15 Terminal Type-I estimate<br/>OPEN<br/>Euler-Maclaurin/nonstationary control"]
+    TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
     FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume dichotomy and endpoint certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
@@ -154,7 +154,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class MR,TE,FR,ZD,GD,CV,CR,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,GD,CV,CR,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,GMR available;

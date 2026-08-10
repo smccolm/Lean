@@ -899,6 +899,11 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.reflectionStationaryPoint_mem_Icc_iff,
   ``RiemannZeta.GuthMaynard.reflectionStationaryPoint_mem_dyadic_iff,
   ``RiemannZeta.GuthMaynard.secondDeriv_reflectionPhase_dyadic_bounds,
+  ``RiemannZeta.GuthMaynard.norm_logarithmicPhase_prefix_le_div,
+  ``RiemannZeta.GuthMaynard.norm_terminalWeightedBlock_le,
+  ``RiemannZeta.GuthMaynard.dirichletPoly_classicalZetaLongLineCoeff_eq_terminal,
+  ``RiemannZeta.GuthMaynard.norm_terminal_classicalZetaLongLineCoeff_le,
+  ``RiemannZeta.GuthMaynard.typeI_scale_lt_height_of_large,
   ``RiemannZeta.GuthMaynard.weightedWeylBlock_eq_cpow,
   ``RiemannZeta.GuthMaynard.norm_weightedWeylBlock_le,
 ]
