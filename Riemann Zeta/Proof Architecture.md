@@ -6,6 +6,7 @@ flowchart TD
     HY["Hughes-Young twisted fourth moment<br/>AVAILABLE AS REFERENCE"]
     DFI["Duke-Friedlander-Iwaniec<br/>quadratic-divisor theorem<br/>AVAILABLE AS REFERENCE"]
     GMR["Guth-Maynard Sections 3-12<br/>AVAILABLE AS REFERENCE"]
+    HBR["Heath-Brown 1979<br/>difference-set mean square<br/>AVAILABLE AS REFERENCE"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
@@ -45,13 +46,18 @@ flowchart TD
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>OPEN<br/>remove both project axioms"]
+    SF["#19 Source-facing finite definitions<br/>OPEN<br/>smooth data, sampling operator,<br/>R sum and approximate energy"]
     MX["#19 Sampling matrix, singular values<br/>and trace-cube reduction<br/>OPEN"]
     PS["#19 Poisson expansion and S1<br/>OPEN"]
     RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
-    AE["#19 Affine transforms, approximate energy<br/>and S3 estimate<br/>OPEN"]
-    GM["#19 Guth-Maynard large values<br/>OPEN"]
+    EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
+    SL["#19 S3 localization<br/>change of variables and tails<br/>OPEN"]
+    AT["#19 Affine-transformation estimate<br/>GM Proposition 9.1<br/>OPEN"]
+    S3["#19 Refined S3 estimate<br/>GM Proposition 10.1<br/>OPEN"]
+    EG["#19 GCD/spacing energy theorem<br/>GM Section 11<br/>OPEN"]
+    GM["#19 Exact Guth-Maynard large values<br/>Sections 3 and 12 assembly<br/>OPEN"]
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["Combined transfer<br/>DONE CONDITIONALLY<br/>open inputs #15 and #19"]
     CZD["#19 Combined zero density<br/>OPEN"]
@@ -136,21 +142,47 @@ flowchart TD
     GMR --> MX
     GMR --> PS
     GMR --> RF
-    GMR --> HB
-    GMR --> AE
+    GMR --> SF
+    GMR --> SL
+    GMR --> AT
+    GMR --> EG
+    HBR --> HB
+    MZ --> SF
     MZ --> MX
     MZ --> PS
     MZ --> HB
-    MZ --> AE
+    MZ --> EN
+    MZ --> SL
+    MZ --> AT
+    MZ --> EG
+    PZ --> PS
     PZ --> RF
+    SF --> MX
+    SF --> PS
+    SF --> RF
+    SF --> HB
+    SF --> EN
+    SF --> SL
+    SF --> AT
     MX --> PS
     PS --> S2
     RF --> S2
     HB --> S2
-    PS --> AE
+    AC --> S2
+    HB --> EN
+    PS --> SL
+    EN --> SL
+    SL --> S3
+    AT --> S3
+    EN --> S3
+    HB --> EG
+    EN --> EG
+    DR --> GM
+    CLV --> GM
     MX --> GM
     S2 --> GM
-    AE --> GM
+    S3 --> GM
+    EG --> GM
     GM -->|GuthMaynardLargeValues| CT
     GM -->|sole premise after #15/#18| GCS
     GCS --> GZD
@@ -174,5 +206,5 @@ flowchart TD
 
     class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,MS done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,DR,MX,PS,RF,HB,S2,AE,GM,GZD,CZD,QA open;
-    class MZ,PZ,ER,MP,HY,DFI,GMR available;
+    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,DR,SF,MX,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;
