@@ -32,6 +32,7 @@ import RiemannZeta.GuthMaynard.FiniteDensityTransfer
 import RiemannZeta.GuthMaynard.ClassicalPowering
 import RiemannZeta.GuthMaynard.FiniteDensityEndpoint
 import RiemannZeta.GuthMaynard.FiniteDensityExponents
+import RiemannZeta.GuthMaynard.FiniteScaleAssembly
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.ClassicalLargeValues
 import RiemannZeta.GuthMaynard.ClassicalMoments

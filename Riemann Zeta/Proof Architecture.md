@@ -10,11 +10,13 @@ flowchart TD
     ST["Sharp zero truncation<br/>DONE<br/>length a comparable to T,<br/>partial sum <= 149 a^-beta"]
     VD["#15 van der Corput and Weyl<br/>DONE<br/>multi-period B and finite A processes,<br/>(1/6,2/3) exponent, uniform prefixes,<br/>weighted blocks for every sigma >= 0"]
     CLV["#15 Classical large values<br/>DONE<br/>finite MHH theorem including<br/>T N^4 V^-6"]
-    MR["Medium-reflection infrastructure<br/>AVAILABLE; NOT ON #15 ENDPOINT PATH<br/>exact Poisson/cosine identity, nonstationary expansion,<br/>stationary normal form and quadratic control"]
+    MR["#15 Medium Type-I reflection<br/>OPEN<br/>infrastructure DONE; uniform stationary main term,<br/>dual block and controlled losses OPEN"]
     FDT["#15 Finite transfer machinery<br/>DONE<br/>exact-beta removal, multiplicity extraction,<br/>normalization and unrestricted MHH bridge"]
     PW["#15 Exact finite powering<br/>DONE<br/>power identity, factorization bound,<br/>normalized powered-block extraction"]
-    RA["#15 Endpoint range arithmetic<br/>DONE<br/>Ingham range empty; Huxley range empty<br/>or below proved Weyl threshold"]
-    FA["#15 Finite scale/exponent assembly<br/>OPEN<br/>detector branch, mollifier scale and power choice;<br/>finite Corollary 11.10"]
+    RA["#15 Exceptional-range arithmetic<br/>DONE<br/>Ingham short-zeta range empty; Huxley range<br/>empty or below proved Weyl threshold"]
+    DI["#15 Finite Type-I/Type-II dichotomy<br/>OPEN<br/>ordinary-zeta Type I and genuinely short<br/>zeta-times-Mobius Type II"]
+    FA["#15 Finite scale/exponent assembly<br/>DONE<br/>MHH exponent, two-or-three scale reduction,<br/>Corollary 11.10 envelope and endpoint certificates"]
+    FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume detector branches, medium reflection,<br/>terminal estimate and assembly certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
 
     BR["#16 Beta removal<br/>DONE"]
@@ -62,12 +64,16 @@ flowchart TD
     HM --> FDT
     FDT --> PW
     AC --> PW
+    FDT --> DI
+    PW --> DI
+    DI -->|medium Type I| MR
+    DI -->|short Type I and Type II| FR
+    MR --> FR
     PW --> FA
-    FDT --> FA
-    VD --> FA
     CLV --> FA
     RA --> FA
-    FA --> ZD
+    FA --> FR
+    FR --> ZD
     DY --> ZD
 
     LZ --> EX
@@ -111,7 +117,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,FA,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class FA,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
-    class MZ,PZ,ER,MR available;
+    class MR,DI,FR,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
+    class MZ,PZ,ER available;

@@ -7,10 +7,11 @@ namespace RiemannZeta.GuthMaynard
 
 These lemmas isolate the exact range comparisons used when the finite
 large-values estimates are specialized to the Ingham and Huxley endpoints.
-In particular, they show that the medium-length stationary-phase reflection
-is not a dependency of either endpoint: the relevant zeta-polynomial range is
-empty for Ingham and for the lower part of Huxley's interval, and the proved
-Weyl threshold covers the remaining Huxley range.
+They resolve only the exceptional short zeta-polynomial alternative: that
+range is empty for Ingham and for the lower part of Huxley's interval, while
+the proved Weyl threshold covers the remaining Huxley range.  They do not
+remove the distinct medium ordinary-zeta Type-I reflection in ANTEDB Lemma
+11.5.
 -/
 
 /-- In the interior of Ingham's interval, the upper end of the
