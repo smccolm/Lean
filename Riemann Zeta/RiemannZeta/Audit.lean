@@ -676,6 +676,15 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.gmScaledTraceKernel_poisson,
   ``RiemannZeta.GuthMaynard.gmTraceKernel_poisson,
   ``RiemannZeta.GuthMaynard.gmTraceKernel_tsum_eq_intBlock,
+  ``RiemannZeta.GuthMaynard.gmTraceFourier_zero_zero_eq_cutoffL2Sq,
+  ``RiemannZeta.GuthMaynard.gmTraceKernel_zero_tsum_eq_column_sum,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_trace_eq_cutoff_sum,
+  ``RiemannZeta.GuthMaynard.gmScaledTraceFourier_summable,
+  ``RiemannZeta.GuthMaynard.gmTraceFourier_zero_nonzero_pointwise_bound,
+  ``RiemannZeta.GuthMaynard.gmTraceFourier_zero_nonzero_tail_bound,
+  ``RiemannZeta.GuthMaynard.gmMatrix_gram_trace_poisson_expand,
+  ``RiemannZeta.GuthMaynard.gmMatrix_hilbertSchmidt_trace_estimate,
+  ``RiemannZeta.GuthMaynard.gmMatrix_hilbertSchmidt_trace_estimate_hundred,
 
   -- Shitlist #15: logarithmic phase and finite Weyl-differencing foundation
   ``RiemannZeta.GuthMaynard.norm_unitaryPhase,

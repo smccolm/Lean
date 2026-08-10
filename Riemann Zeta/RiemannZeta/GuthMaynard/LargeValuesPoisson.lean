@@ -393,4 +393,246 @@ theorem gmTraceKernel_tsum_eq_intBlock (cutoff : GMSmoothCutoff)
       exact (le_div_iff₀ hN).mpr (le_of_lt hnCast)
     simp [gmTraceKernel, gmSmoothCutoff_eq_zero_of_two_le cutoff hRatio]
 
+/-! ## Hilbert--Schmidt first-trace expansion -/
+
+/-- The squared `L²` mass of the fixed real cutoff. -/
+noncomputable def gmCutoffL2Sq (cutoff : GMSmoothCutoff) : ℝ :=
+  ∫ x : ℝ, cutoff x ^ 2
+
+/-- The zero Fourier mode of `h₀ = w²` is exactly the squared `L²` mass
+of the cutoff. -/
+theorem gmTraceFourier_zero_zero_eq_cutoffL2Sq (cutoff : GMSmoothCutoff) :
+    gmTraceFourier cutoff 0 0 = (gmCutoffL2Sq cutoff : ℂ) := by
+  rw [gmTraceFourier, SchwartzMap.fourier_coe, Real.fourier_eq']
+  simp only [inner_zero_right, mul_zero, ofReal_zero, zero_mul, Complex.exp_zero,
+    one_smul, gmTraceKernelSchwartz_apply]
+  unfold gmCutoffL2Sq
+  let L : ℝ := ∫ x : ℝ, cutoff x ^ 2
+  change (∫ x : ℝ, gmTraceKernel cutoff 0 x) = (L : ℂ)
+  calc
+    (∫ x : ℝ, gmTraceKernel cutoff 0 x) =
+        ∫ x : ℝ, ((cutoff x ^ 2 : ℝ) : ℂ) := by
+      apply integral_congr_ae
+      filter_upwards with x
+      simp [gmTraceKernel]
+    _ = (L : ℂ) := by
+      dsimp only [L]
+      exact integral_ofReal
+
+/-- At zero ordinate, compact support identifies the integer Poisson sum with
+the literal natural-number matrix columns `(N,2N]`. -/
+theorem gmTraceKernel_zero_tsum_eq_column_sum (cutoff : GMSmoothCutoff)
+    (N : ℕ) (hN : 0 < N) :
+    ∑' n : ℤ, gmTraceKernel cutoff 0 ((n : ℝ) / N) =
+      ∑ n : GMColumn N, (cutoff ((n : ℝ) / N) ^ 2 : ℂ) := by
+  rw [gmTraceKernel_tsum_eq_intBlock cutoff 0 (N : ℝ) (by exact_mod_cast hN)]
+  have hFloorN : Int.floor (N : ℝ) = (N : ℤ) := by simp
+  have hFloorTwoN : Int.floor (2 * (N : ℝ)) = ((2 * N : ℕ) : ℤ) := by
+    calc
+      Int.floor (2 * (N : ℝ)) = Int.floor (((2 * N : ℕ) : ℝ)) := by
+        congr 1
+        norm_num
+      _ = ((2 * N : ℕ) : ℤ) := Int.floor_natCast (R := ℝ) (2 * N)
+  rw [hFloorN, hFloorTwoN]
+  have hInterval :
+      Finset.Ioc (N : ℤ) ((2 * N : ℕ) : ℤ) =
+        (Finset.Ioc N (2 * N)).map Nat.castEmbedding := by
+    ext z
+    simp only [Finset.mem_Ioc, Finset.mem_map]
+    constructor
+    · intro hz
+      have hzNonneg : 0 ≤ z := by omega
+      have hzCast : (z.toNat : ℤ) = z := Int.toNat_of_nonneg hzNonneg
+      refine ⟨z.toNat, ?_, ?_⟩
+      · constructor <;> omega
+      · change (z.toNat : ℤ) = z
+        exact hzCast
+    · rintro ⟨n, hn, rfl⟩
+      change (N : ℤ) < (n : ℤ) ∧ (n : ℤ) ≤ (2 * N : ℤ)
+      exact_mod_cast hn
+  rw [hInterval, Finset.sum_map]
+  have hAttach :
+      (∑ n : GMColumn N, (cutoff ((n : ℝ) / N) ^ 2 : ℂ)) =
+        ∑ n ∈ dyadicInterval N, (cutoff ((n : ℝ) / N) ^ 2 : ℂ) := by
+    conv_rhs => rw [← Finset.sum_attach]
+    rw [Finset.univ_eq_attach (dyadicInterval N)]
+  rw [hAttach]
+  apply Finset.sum_congr rfl
+  intro n hn
+  simp [gmTraceKernel]
+
+/-- The first Gram trace is the row cardinality times the common diagonal
+cutoff sum. -/
+theorem gmMatrix_gram_trace_eq_cutoff_sum (cutoff : GMSmoothCutoff)
+    (N : ℕ) (W : Finset ℝ) :
+    Matrix.trace (gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose) =
+      (W.card : ℂ) *
+        ∑ n : GMColumn N, (cutoff ((n : ℝ) / N) ^ 2 : ℂ) := by
+  simp only [Matrix.trace, Matrix.diag_apply]
+  simp_rw [gmMatrix_gram_apply_eq_phase_sum]
+  simp only [sub_self, zero_mul, Complex.cpow_zero, mul_one]
+  rw [Finset.sum_const, Finset.card_univ, Fintype.card_coe]
+  simp only [nsmul_eq_mul]
+
+/-- The scaled Fourier samples in the source Poisson formula are absolutely
+summable. -/
+theorem gmScaledTraceFourier_summable (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) :
+    Summable (fun m : ℤ ↦
+      (N : ℂ) * gmTraceFourier cutoff t (N * (m : ℝ))) := by
+  let F : 𝓢(ℝ, ℂ) :=
+    SchwartzMap.fourierTransformCLM ℂ
+      (gmScaledTraceKernelSchwartz cutoff t N hN)
+  have hBigO := F.isBigO_cocompact_rpow (-2)
+  have hSummable : Summable (fun m : ℤ ↦ F (m : ℝ)) :=
+    summable_of_isBigO (Real.summable_abs_int_rpow one_lt_two)
+      (hBigO.comp_tendsto Int.tendsto_coe_cofinite)
+  simpa only [F, SchwartzMap.fourierTransformCLM_apply,
+    gmScaledTraceKernel_fourier cutoff t N _ hN] using hSummable
+
+/-- The full nonzero-frequency contribution in the first-trace Poisson
+expansion. -/
+noncomputable def gmTraceNonzeroTail (cutoff : GMSmoothCutoff) (N : ℕ) : ℂ :=
+  ∑' m : ℤ, if m = 0 then 0 else
+    (N : ℂ) * gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))
+
+/-- Pointwise comparison of a nonzero scaled Fourier coefficient with the
+integer `j`-series. -/
+theorem gmTraceFourier_zero_nonzero_pointwise_bound (cutoff : GMSmoothCutoff)
+    (j : ℕ) (hj : 2 ≤ j) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ), 0 < N → ∀ (m : ℤ), m ≠ 0 →
+      ‖(N : ℂ) * gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))‖ ≤
+        C / (N : ℝ) ^ (j - 1) * ‖1 / (m : ℂ) ^ j‖ := by
+  obtain ⟨C, hC, hDecay⟩ := gmTraceFourier_fixed_t_decay cutoff 0 j
+  refine ⟨C, hC, ?_⟩
+  intro N hN m hm
+  have hNr : 0 < (N : ℝ) := by exact_mod_cast hN
+  have hmReal : (m : ℝ) ≠ 0 := by exact_mod_cast hm
+  have hmAbs : 0 < |(m : ℝ)| := abs_pos.mpr hmReal
+  have hFreqAbs : |(N : ℝ) * (m : ℝ)| = (N : ℝ) * |(m : ℝ)| := by
+    rw [abs_mul, abs_of_pos hNr]
+  have hDenom : 0 < |(N : ℝ) * (m : ℝ)| ^ j := by positivity
+  have hFourier :
+      ‖gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))‖ ≤
+        C / |(N : ℝ) * (m : ℝ)| ^ j := by
+    apply (le_div_iff₀ hDenom).2
+    simpa [mul_comm] using hDecay ((N : ℝ) * (m : ℝ))
+  rw [norm_mul, Complex.norm_natCast, norm_div, norm_one, norm_pow,
+    Complex.norm_intCast]
+  calc
+    (N : ℝ) * ‖gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))‖ ≤
+        (N : ℝ) * (C / |(N : ℝ) * (m : ℝ)| ^ j) := by
+      gcongr
+    _ = C / (N : ℝ) ^ (j - 1) * (1 / |(m : ℝ)| ^ j) := by
+      rw [hFreqAbs, mul_pow]
+      have hjEq : j = (j - 1) + 1 := by omega
+      rw [hjEq, pow_succ]
+      field_simp
+      congr 1
+
+/-- Arbitrary-order uniform bound for the complete nonzero-frequency tail.
+The constant is independent of the scale `N`. -/
+theorem gmTraceFourier_zero_nonzero_tail_bound (cutoff : GMSmoothCutoff)
+    (j : ℕ) (hj : 2 ≤ j) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ), 0 < N →
+      ‖gmTraceNonzeroTail cutoff N‖ ≤ K / (N : ℝ) ^ (j - 1) := by
+  obtain ⟨C, hC, hPointwise⟩ :=
+    gmTraceFourier_zero_nonzero_pointwise_bound cutoff j hj
+  have hPSeries : Summable (fun m : ℤ ↦ ‖1 / (m : ℂ) ^ j‖) := by
+    have hNorm : (fun m : ℤ ↦ ‖1 / (m : ℂ) ^ j‖) =
+        fun m : ℤ ↦ |1 / (m : ℝ) ^ j| := by
+      funext m
+      simp only [norm_div, norm_one, norm_pow, Complex.norm_intCast,
+        abs_div, abs_one, pow_abs]
+    rw [hNorm, summable_abs_iff]
+    exact Real.summable_one_div_int_pow.mpr (by omega)
+  let B : ℝ := ∑' m : ℤ, ‖1 / (m : ℂ) ^ j‖
+  have hB : 0 ≤ B := tsum_nonneg fun m ↦ norm_nonneg _
+  refine ⟨C * B + 1, by positivity, ?_⟩
+  intro N hN
+  have hNr : 0 < (N : ℝ) := by exact_mod_cast hN
+  let scale : ℝ := C / (N : ℝ) ^ (j - 1)
+  have hComparison : ∀ m : ℤ,
+      ‖if m = 0 then 0 else
+          (N : ℂ) * gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))‖ ≤
+        scale * ‖1 / (m : ℂ) ^ j‖ := by
+    intro m
+    by_cases hm : m = 0
+    · have hjZero : j ≠ 0 := by omega
+      simp [hm, hjZero]
+    · simpa only [if_false, hm, scale] using hPointwise N hN m hm
+  have hScaledSummable : Summable (fun m : ℤ ↦ scale * ‖1 / (m : ℂ) ^ j‖) :=
+    hPSeries.mul_left scale
+  have hBound := tsum_of_norm_bounded hScaledSummable.hasSum hComparison
+  rw [tsum_mul_left] at hBound
+  change ‖gmTraceNonzeroTail cutoff N‖ ≤ scale * B at hBound
+  calc
+    ‖gmTraceNonzeroTail cutoff N‖ ≤ scale * B := hBound
+    _ ≤ (C * B + 1) / (N : ℝ) ^ (j - 1) := by
+      dsimp only [scale]
+      have hPow : 0 < (N : ℝ) ^ (j - 1) := by positivity
+      rw [div_mul_eq_mul_div]
+      apply (div_le_div_iff_of_pos_right hPow).2
+      exact le_add_of_nonneg_right zero_le_one
+
+/-- Exact first-trace Poisson expansion with the zero Fourier mode isolated. -/
+theorem gmMatrix_gram_trace_poisson_expand (cutoff : GMSmoothCutoff)
+    (N : ℕ) (hN : 0 < N) (W : Finset ℝ) :
+    Matrix.trace (gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose) =
+      (W.card : ℂ) *
+        ((N : ℂ) * gmTraceFourier cutoff 0 0 + gmTraceNonzeroTail cutoff N) := by
+  rw [gmMatrix_gram_trace_eq_cutoff_sum]
+  rw [← gmTraceKernel_zero_tsum_eq_column_sum cutoff N hN]
+  rw [gmTraceKernel_poisson cutoff 0 (N : ℝ) (by exact_mod_cast hN)]
+  have hCast : (((N : ℝ) : ℂ)) = (N : ℂ) := by norm_num
+  simp_rw [hCast]
+  have hSummable : Summable (fun m : ℤ ↦
+      (N : ℂ) * gmTraceFourier cutoff 0 ((N : ℝ) * (m : ℝ))) := by
+    simpa only [hCast] using
+      gmScaledTraceFourier_summable cutoff 0 (N : ℝ) (by exact_mod_cast hN)
+  rw [hSummable.tsum_eq_add_tsum_ite 0]
+  simp only [Int.cast_zero, mul_zero, gmTraceNonzeroTail]
+
+/-- Source-faithful Guth--Maynard Hilbert--Schmidt estimate with the hidden
+polynomial-cardinality exponent made explicit. -/
+theorem gmMatrix_hilbertSchmidt_trace_estimate (cutoff : GMSmoothCutoff)
+    (A J : ℕ) (hJ : 1 ≤ J) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ) (W : Finset ℝ), 0 < N →
+      (W.card : ℝ) ≤ (N : ℝ) ^ A →
+      ‖Matrix.trace (gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose) -
+          (N : ℂ) * (W.card : ℂ) * (gmCutoffL2Sq cutoff : ℂ)‖ ≤
+        K / (N : ℝ) ^ J := by
+  let j : ℕ := A + J + 1
+  have hj : 2 ≤ j := by dsimp only [j]; omega
+  obtain ⟨K, hK, hTail⟩ := gmTraceFourier_zero_nonzero_tail_bound cutoff j hj
+  refine ⟨K, hK, ?_⟩
+  intro N W hN hCard
+  have hDifference :
+      Matrix.trace (gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose) -
+          (N : ℂ) * (W.card : ℂ) * (gmCutoffL2Sq cutoff : ℂ) =
+        (W.card : ℂ) * gmTraceNonzeroTail cutoff N := by
+    rw [gmMatrix_gram_trace_poisson_expand cutoff N hN W,
+      gmTraceFourier_zero_zero_eq_cutoffL2Sq]
+    ring
+  rw [hDifference, norm_mul, Complex.norm_natCast]
+  calc
+    (W.card : ℝ) * ‖gmTraceNonzeroTail cutoff N‖ ≤
+        (N : ℝ) ^ A * (K / (N : ℝ) ^ (j - 1)) := by
+      exact mul_le_mul hCard (hTail N hN) (norm_nonneg _) (by positivity)
+    _ = K / (N : ℝ) ^ J := by
+      have hNr : (N : ℝ) ≠ 0 := by exact_mod_cast hN.ne'
+      have hjSub : j - 1 = A + J := by dsimp only [j]; omega
+      rw [hjSub, pow_add]
+      field_simp
+
+/-- Literal `O(N⁻¹⁰⁰)` form of Guth--Maynard Lemma 4.4. -/
+theorem gmMatrix_hilbertSchmidt_trace_estimate_hundred
+    (cutoff : GMSmoothCutoff) (A : ℕ) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ) (W : Finset ℝ), 0 < N →
+      (W.card : ℝ) ≤ (N : ℝ) ^ A →
+      ‖Matrix.trace (gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose) -
+          (N : ℂ) * (W.card : ℂ) * (gmCutoffL2Sq cutoff : ℂ)‖ ≤
+        K / (N : ℝ) ^ 100 := by
+  exact gmMatrix_hilbertSchmidt_trace_estimate cutoff A 100 (by norm_num)
+
 end RiemannZeta.GuthMaynard
