@@ -30,7 +30,7 @@ flowchart TD
     MV["Montgomery mean value<br/>DONE"]
     HM["Basic Halasz-Montgomery<br/>DONE"]
     EX["Separated Type-I extraction<br/>DONE"]
-    CT["Central Type I<br/>DONE CONDITIONALLY<br/>only #19 GM large values remains"]
+    CT["#19-dependent Central Type I<br/>DONE CONDITIONALLY<br/>only GM large values remains"]
     DY["Slab to symmetric N<br/>DONE"]
 
     CI["#18 Coverage-range contract repair<br/>DONE<br/>source range Re rho >= 7/10"]
@@ -42,13 +42,16 @@ flowchart TD
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
-    TR["Primitive-input transfer<br/>DONE CONDITIONALLY<br/>open inputs #15, #18, #19"]
+    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>four native inputs remain open"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
     SF["#19 Source-facing finite definitions<br/>DONE<br/>affine reindexing, scaling and<br/>seven-bin exact-energy bridge proved"]
     MX["#19 Sampling matrix and trace reduction<br/>DONE<br/>exact Lemmas 4.1-4.2<br/>operator-norm conclusions proved"]
-    PS["#19 Poisson expansion and S1<br/>OPEN - NEXT CLOSEOUT #1<br/>Schwartz kernels, Mellin zero-mode decay,<br/>Fourier dilation and Poisson identity DONE"]
+    PF["#19 Fourier/Poisson foundations<br/>DONE<br/>Schwartz kernels, zero-mode decay,<br/>dilation, Poisson and finite support"]
+    HT["#19 Hilbert-Schmidt trace expansion<br/>OPEN - NEXT PROOF<br/>specialize t = 0, isolate zero mode,<br/>bound the nonzero-frequency tail"]
+    UF["#19 Uniform two-parameter Fourier decay<br/>and cubic trace split<br/>OPEN"]
+    S1["#19 S1 estimate<br/>OPEN<br/>GM Proposition 5.1"]
     RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN - NEXT CLOSEOUT #4"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
@@ -59,7 +62,7 @@ flowchart TD
     EG["#19 GCD/spacing energy theorem<br/>GM Section 11<br/>OPEN"]
     GM["#19 Exact Guth-Maynard large values<br/>Sections 3 and 12 assembly<br/>OPEN"]
     GZD["#19 Concrete GM zero density<br/>OPEN"]
-    CB["Combined transfer<br/>DONE CONDITIONALLY<br/>open inputs #15 and #19"]
+    CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
     IG["#19 Dependency and integrity layer<br/>DONE<br/>999/999 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
@@ -141,7 +144,7 @@ flowchart TD
     TR --> GCS
 
     GMR --> MX
-    GMR --> PS
+    GMR --> PF
     GMR --> RF
     GMR --> SF
     GMR --> SL
@@ -150,28 +153,33 @@ flowchart TD
     HBR --> HB
     MZ --> SF
     MZ --> MX
-    MZ --> PS
+    MZ --> PF
     MZ --> HB
     MZ --> EN
     MZ --> SL
     MZ --> AT
     MZ --> EG
-    PZ --> PS
+    PZ --> PF
     PZ --> RF
     SF --> MX
-    SF --> PS
+    SF --> PF
     SF --> RF
     SF --> HB
     SF --> EN
     SF --> SL
     SF --> AT
-    MX --> PS
-    PS --> S2
+    MX --> HT
+    PF --> HT
+    PF --> UF
+    MX --> UF
+    HT --> S1
+    UF --> S1
+    UF --> S2
     RF --> S2
     HB --> S2
     AC --> S2
     HB --> EN
-    PS --> SL
+    UF --> SL
     EN --> SL
     SL --> S3
     AT --> S3
@@ -181,6 +189,7 @@ flowchart TD
     DR --> GM
     CLV --> GM
     MX --> GM
+    S1 --> GM
     S2 --> GM
     S3 --> GM
     EG --> GM
@@ -206,7 +215,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,CR,MS,DR,SF,MX,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,CR,MS,DR,SF,MX,PF,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CV,AF,QD,TM,GCS,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,CV,AF,QD,TM,GCS,HT,UF,S1,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

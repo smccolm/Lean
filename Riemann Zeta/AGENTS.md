@@ -154,7 +154,7 @@ Rules for maintaining the runner:
 10. Report the runner's final exit code, final status, log path, every remaining failed stage, and every remaining warning in the handoff.
 11. If the runner itself is broken or cannot be executed, the task is not fully verified. Repair it or report the exact environmental blocker; do not substitute an unaudited success claim.
 
-The current repository is expected to produce `FAIL` until the recorded proof and audit defects are repaired. That failure is useful evidence. Agents must preserve its honesty while progressively converting each failed gate into a genuine pass.
+The current repository is expected to produce `FAIL` until the named research-output defects are repaired. The build, warning, dependency, and integrity gates currently pass; the output gate fails. That failure is useful evidence. Agents must preserve its honesty while progressively converting each missing theorem into a genuine pass.
 
 ## Mandatory Checks
 
@@ -229,11 +229,11 @@ Every substantive iteration must leave:
 
 Whenever a change alters a theorem's proof status, an open obligation, a dependency edge, or a Shitlist assignment, update all three documents in the same change. Every unfinished Mermaid node must name its owning Shitlist number. A crossed-out Shitlist item must have no unfinished node in the diagram, and a newly discovered obligation must be assigned to an existing open item unless the project owner explicitly changes the exhaustive completion contract. Before handoff, verify that the diagram, Shitlist, and progress report make identical claims about what is done and what remains.
 
-## Handling the Current Noncompliant Baseline
+## Handling the Current Incomplete Baseline
 
-The repository currently contains existing project axioms, `sorryAx` dependencies, provisional models, and warning-producing declarations. Treat these as known defects to eliminate, not as accepted patterns.
+The repository currently has no project axiom, `sorryAx` dependency, admitted proof, excluded Lean file, or warning-producing declaration in the principal evaluation scope. It remains mathematically incomplete because the named #15, #18, and #19 output theorems are absent and the principal runner therefore returns `FAIL`. Preserve the clean integrity baseline while completing those outputs.
 
-An incremental task may remove only part of this debt, but the agent must:
+While research outputs remain incomplete, the agent must:
 
 - introduce no new violation;
 - reduce or preserve, never increase, the set of existing violations;

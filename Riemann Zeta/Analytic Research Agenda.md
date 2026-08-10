@@ -1,6 +1,6 @@
 # Analytic Research Agenda: Riemann Zeta Guth-Maynard Proof
 
-The project has a warning-free compiling algebraic, combinatorial, asymptotic, and initial classical-density infrastructure layer. Beta removal, local zero multiplicity, Montgomery mean value, the finite Möbius mollifier algebra, the pole-free Ingham detector, the detector-to-Jensen divisor bridge, divisor-count growth, ordered-factorization growth, and powered detector-coefficient growth are proved. Two direct project axioms and several unproved analytic proposition specifications remain; the next work is the interior classical-density, Type-II, and large-values phase.
+The project has a warning-free compiling algebraic, combinatorial, asymptotic, and initial classical-density infrastructure layer. Beta removal, local zero multiplicity, Montgomery mean value, the finite Möbius mollifier algebra, the pole-free Ingham detector, the detector-to-Jensen divisor bridge, divisor-count growth, ordered-factorization growth, and powered detector-coefficient growth are proved. No direct project axiom remains. The unproved work is confined to the named #15, #18, and #19 analytic outputs.
 
 The remaining assumptions are analytic inputs requiring advanced integration with Mathlib's measure theory, complex analysis, and Fourier-analysis libraries. The arithmetic coefficient inputs formerly assigned to #17 are complete.
 
@@ -8,7 +8,7 @@ The remaining assumptions are analytic inputs requiring advanced integration wit
 
 ### 1. Guth–Maynard large-values architecture
 
-- The two historical `Decoupling.lean` contracts are false, not merely unproved. The interval-free incidence statement has no scale parameter capable of controlling arbitrary finite separated sets. The block contract has an off-by-one counterexample at `K=N` with the coefficient supported at `N+1`. Guth–Maynard's paper does not use a parabola-decoupling theorem; both contracts and both project axioms must be deleted.
+- The two historical `Decoupling.lean` contracts were false, not merely unproved. The interval-free incidence statement had no scale parameter capable of controlling arbitrary finite separated sets. The block contract had an off-by-one counterexample at `K=N` with the coefficient supported at `N+1`. Guth–Maynard's paper does not use a parabola-decoupling theorem; the file, both contracts, and both project axioms have been deleted.
 - Their replacement is the source chain: a smooth Dirichlet-polynomial sampling matrix, singular values and trace-cube reduction, Poisson expansion, the `S₁`/`S₂`/`S₃` estimates, the Section 6 smooth reflection formula, the Heath–Brown difference-set mean-square estimate, affine transformations, tolerance-one approximate additive energy, and the GCD/spacing assembly. Only that chain may discharge `GuthMaynardLargeValues`.
 
 ### 2. Complex Analysis & Zero Counting
@@ -36,7 +36,7 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 The current complete-closeout queue, from least to greatest estimated difficulty, is:
 
-1. **#19 Fourier/Poisson/`S₁`:** `LargeValuesPoisson.lean` now proves the actual compactly supported trace kernel is Schwartz, identifies its zero Fourier mode by Mellin/Fourier conversion, obtains arbitrary-order uniform zero-mode decay, proves exact Fourier dilation, and instantiates source-normalized Poisson summation with finite support. Complete the remaining two-parameter part of Lemma 4.3, the trace split, and Proposition 5.1.
+1. **#19 Hilbert–Schmidt trace expansion:** `LargeValuesPoisson.lean` now proves the actual compactly supported trace kernel is Schwartz, identifies its zero Fourier mode by Mellin/Fourier conversion, obtains arbitrary-order uniform zero-mode decay, proves exact Fourier dilation, and instantiates source-normalized Poisson summation with finite support. Combine the `t = 0` specialization with the exact Gram diagonal to prove the first-trace Poisson main term and uniform nonzero-frequency tail before attempting the harder two-parameter cubic trace and `S₁` package.
 2. **#18 Appendix C coverage:** use the completed Gamma, integrability, cancellation, multiplicity, and reduction layers to prove `typeIContourTypeIICoverOn_native`.
 3. **#18 smooth `ζ²` AFE and diagonal:** close this independent node using the already fixed `M²` support and coefficient range; keep the DFI off-diagonal theorem as a separate open node.
 4. **#19 smooth reflection:** prove Lemma 6.2 with uniform Mellin truncation and explicit tails. Its `S₂` application remains downstream of Heath–Brown.
