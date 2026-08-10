@@ -54,7 +54,7 @@ the Euler-integral norm bound after shifting to the right, and monotonicity of
 the real Gamma function on `[2, ∞)`.
 -/
 theorem typeII_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)
-    {a t : ℝ} (haLower : -(3 / 10 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
+    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
     |t| ^ n * ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤
       (Nat.factorial (n - 1) : ℝ) := by
   by_cases ht : t = 0
@@ -104,7 +104,7 @@ theorem typeII_Gamma_vertical_decay (n : ℕ) (hn : 3 ≤ n)
 
 /-- Division form of `typeII_Gamma_vertical_decay`, convenient for tail estimates. -/
 theorem typeII_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
-    {a t : ℝ} (haLower : -(3 / 10 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ))
+    {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ))
     (ht : 1 ≤ |t|) :
     ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤
       (Nat.factorial (n - 1) : ℝ) / |t| ^ n := by
@@ -112,9 +112,81 @@ theorem typeII_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
   apply (le_div_iff₀ (pow_pos htPos n)).2
   simpa [mul_comm] using typeII_Gamma_vertical_decay n hn haLower haUpper
 
+/-- A uniform bound on the compact central part of the Type-II Gamma strip. -/
+theorem typeII_Gamma_norm_le_fourteen {a t : ℝ}
+    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
+    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ≤ 14 := by
+  let s : ℂ := (a : ℂ) + (t : ℂ) * I
+  have hsFactor : ∀ (j : ℕ), j < 3 → s + (j : ℂ) ≠ 0 := by
+    intro j hj hzero
+    have hRe := congrArg Complex.re hzero
+    simp [s] at hRe
+    interval_cases j <;> norm_num at hRe ⊢ <;> linarith
+  have hRec := Gamma_add_nat_eq_prod_mul s (3 : ℕ) hsFactor
+  have hShiftRe : (s + 3).re = a + 3 := by simp [s]
+  have hShiftPos : 0 < (s + 3).re := by rw [hShiftRe]; linarith
+  have hNormShift : ‖Complex.Gamma (s + 3)‖ ≤ Real.Gamma (a + 3) := by
+    simpa [hShiftRe] using Complex.Gamma.norm_le_Gamma_re hShiftPos
+  have hTwo : (2 : ℝ) ≤ a + 3 := by linarith
+  have hThree : a + 3 ≤ (3 : ℝ) := by linarith
+  have hGammaMono : Real.Gamma (a + 3) ≤ Real.Gamma 3 :=
+    Real.Gamma_strictMonoOn_Ici.monotoneOn hTwo (by norm_num) hThree
+  have hGammaThree : Real.Gamma 3 = 2 := by
+    convert Real.Gamma_nat_eq_factorial 2 using 1
+    all_goals norm_num
+  have hShift : ‖Complex.Gamma (s + 3)‖ ≤ 2 :=
+    hNormShift.trans (hGammaMono.trans_eq hGammaThree)
+  have h0 : (1 / 5 : ℝ) ≤ ‖s‖ := by
+    calc
+      (1 / 5 : ℝ) ≤ |a| := by rw [abs_of_neg (by linarith)]; linarith
+      _ = |s.re| := by simp [s]
+      _ ≤ ‖s‖ := Complex.abs_re_le_norm s
+  have h1 : (1 / 2 : ℝ) ≤ ‖s + 1‖ := by
+    calc
+      (1 / 2 : ℝ) ≤ |(s + 1).re| := by
+        simp [s, abs_of_nonneg (by linarith : 0 ≤ a + 1)]
+        linarith
+      _ ≤ ‖s + 1‖ := Complex.abs_re_le_norm (s + 1)
+  have h2 : (3 / 2 : ℝ) ≤ ‖s + 2‖ := by
+    calc
+      (3 / 2 : ℝ) ≤ |(s + 2).re| := by
+        simp [s, abs_of_nonneg (by linarith : 0 ≤ a + 2)]
+        linarith
+      _ ≤ ‖s + 2‖ := Complex.abs_re_le_norm (s + 2)
+  have hProd : (3 / 20 : ℝ) ≤
+      ‖∏ j ∈ Finset.range 3, (s + (j : ℂ))‖ := by
+    rw [norm_prod]
+    norm_num [Finset.prod_range_succ]
+    have h01 : (1 / 10 : ℝ) ≤ ‖s‖ * ‖s + 1‖ := by
+      calc
+        (1 / 10 : ℝ) = (1 / 5 : ℝ) * (1 / 2 : ℝ) := by norm_num
+        _ ≤ ‖s‖ * (1 / 2 : ℝ) :=
+          mul_le_mul_of_nonneg_right h0 (by norm_num)
+        _ ≤ ‖s‖ * ‖s + 1‖ :=
+          mul_le_mul_of_nonneg_left h1 (norm_nonneg s)
+    have h012 : (3 / 20 : ℝ) ≤ (‖s‖ * ‖s + 1‖) * ‖s + 2‖ := by
+      calc
+        (3 / 20 : ℝ) = (1 / 10 : ℝ) * (3 / 2 : ℝ) := by norm_num
+        _ ≤ (‖s‖ * ‖s + 1‖) * (3 / 2 : ℝ) :=
+          mul_le_mul_of_nonneg_right h01 (by norm_num)
+        _ ≤ (‖s‖ * ‖s + 1‖) * ‖s + 2‖ :=
+          mul_le_mul_of_nonneg_left h2 (by positivity)
+    simpa [mul_assoc] using h012
+  have hNormRec :
+      ‖Complex.Gamma (s + 3)‖ =
+        ‖∏ j ∈ Finset.range 3, (s + (j : ℂ))‖ * ‖Complex.Gamma s‖ := by
+    have hRec' : Complex.Gamma (s + 3) =
+        (∏ j ∈ Finset.range 3, (s + (j : ℂ))) * Complex.Gamma s := by
+      simpa using hRec
+    rw [hRec', norm_mul]
+  rw [hNormRec] at hShift
+  have hGammaNonneg := norm_nonneg (Complex.Gamma s)
+  have hGap := mul_nonneg (sub_nonneg.mpr hProd) hGammaNonneg
+  nlinarith
+
 /-- Gamma is continuous along every horizontal line in the Type-II contour strip. -/
 theorem continuous_typeII_Gamma_horizontal {a : ℝ}
-    (haLower : -(3 / 10 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
+    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
     Continuous (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I)) := by
   apply continuous_iff_continuousAt.2
   intro t
@@ -137,7 +209,7 @@ theorem continuous_typeII_Gamma_horizontal {a : ℝ}
 set_option maxHeartbeats 800000 in
 /-- The Gamma factor itself is integrable on every horizontal line in the Type-II strip. -/
 theorem integrable_typeII_Gamma_horizontal {a : ℝ}
-    (haLower : -(3 / 10 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
+    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
     MeasureTheory.Integrable
       (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I)) := by
   let f : ℝ → ℂ := fun t => Complex.Gamma ((a : ℂ) + (t : ℂ) * I)
@@ -212,7 +284,7 @@ set_option maxHeartbeats 800000 in
 /-- Multiplying the horizontal Gamma factor by a linear ordinate weight
 preserves whole-line integrability. -/
 theorem integrable_one_add_abs_mul_typeII_Gamma_horizontal {a : ℝ}
-    (haLower : -(3 / 10 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
+    (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ)) :
     MeasureTheory.Integrable (fun t : ℝ =>
       ((1 + |t| : ℝ) : ℂ) * Complex.Gamma ((a : ℂ) + (t : ℂ) * I)) := by
   let f : ℝ → ℂ := fun t =>

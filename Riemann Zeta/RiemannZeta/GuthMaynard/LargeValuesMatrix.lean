@@ -1,10 +1,11 @@
 import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.Analysis.CStarAlgebra.Matrix
 import Mathlib.LinearAlgebra.Matrix.Hermitian
 import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 import RiemannZeta.GuthMaynard.LargeValuesDefinitions
 
 open Complex Finset
-open scoped BigOperators ComplexOrder Matrix
+open scoped BigOperators ComplexOrder Matrix Matrix.Norms.L2Operator
 
 namespace RiemannZeta.GuthMaynard
 
@@ -19,6 +20,12 @@ action and Gram identities.  The analytic trace estimates are downstream.
 indexed by `(N,2N]`. -/
 noncomputable def gmMatrix (cutoff : GMSmoothCutoff) (N : ℕ) (W : Finset ℝ) :
     Matrix (GMRow W) (GMColumn N) ℂ := fun t n => gmMatrixEntry cutoff N t n
+
+/-- Euclidean operator norm of the rectangular sampling matrix.  This is the
+largest singular value `s₁(M_W)` in Guth--Maynard Lemmas 4.1--4.2. -/
+noncomputable def gmMatrixOperatorNorm (cutoff : GMSmoothCutoff) (N : ℕ)
+    (W : Finset ℝ) : ℝ :=
+  ‖gmMatrix cutoff N W‖
 
 /-- Restriction of an ambient coefficient sequence to the matrix columns. -/
 def gmCoefficientVector (N : ℕ) (b : ℕ → ℂ) : GMColumn N → ℂ := fun n => b n
@@ -68,6 +75,62 @@ theorem gmCoefficient_energy_le (N : ℕ) (b : ℕ → ℂ)
       simp only [gmCoefficientVector]
       nlinarith
     _ = N := by simp [GMColumn, dyadicInterval]; omega
+
+/-- The Euclidean operator norm controls the complete sampled energy. -/
+theorem gmMatrix_energy_le_operatorNorm (cutoff : GMSmoothCutoff) (N : ℕ)
+    (W : Finset ℝ) (b : ℕ → ℂ) :
+    ∑ t : GMRow W,
+        ‖(gmMatrix cutoff N W).mulVec (gmCoefficientVector N b) t‖ ^ 2 ≤
+      gmMatrixOperatorNorm cutoff N W ^ 2 *
+        ∑ n : GMColumn N, ‖gmCoefficientVector N b n‖ ^ 2 := by
+  let x : EuclideanSpace ℂ (GMColumn N) :=
+    EuclideanSpace.equiv (GMColumn N) ℂ |>.symm (gmCoefficientVector N b)
+  let y : EuclideanSpace ℂ (GMRow W) :=
+    EuclideanSpace.equiv (GMRow W) ℂ |>.symm
+      ((gmMatrix cutoff N W).mulVec (gmCoefficientVector N b))
+  have h := Matrix.l2_opNorm_mulVec (gmMatrix cutoff N W) x
+  have hx : ‖x‖ ^ 2 =
+      ∑ n : GMColumn N, ‖gmCoefficientVector N b n‖ ^ 2 := by
+    rw [EuclideanSpace.norm_sq_eq]
+    rfl
+  have hy : ‖y‖ ^ 2 =
+      ∑ t : GMRow W,
+        ‖(gmMatrix cutoff N W).mulVec (gmCoefficientVector N b) t‖ ^ 2 := by
+    rw [EuclideanSpace.norm_sq_eq]
+    rfl
+  change ‖y‖ ≤ ‖gmMatrix cutoff N W‖ * ‖x‖ at h
+  have hsq := pow_le_pow_left₀ (norm_nonneg _) h 2
+  rw [hy, mul_pow, hx] at hsq
+  simpa only [gmMatrixOperatorNorm] using hsq
+
+/-- Source-faithful quantitative conclusion of Guth--Maynard Lemma 4.1,
+stated with an arbitrary positive threshold `V`. -/
+theorem gm_largeValues_card_le_operatorNorm (cutoff : GMSmoothCutoff) (N : ℕ)
+    (W : Finset ℝ) (b : ℕ → ℂ) (V : ℝ) (hV : 0 < V)
+    (hb : ∀ n ∈ dyadicInterval N, ‖b n‖ ≤ 1)
+    (hLarge : ∀ t ∈ W, V ≤ ‖gmSmoothDirichletPoly cutoff N b t‖) :
+    (W.card : ℝ) ≤
+      (N : ℝ) * gmMatrixOperatorNorm cutoff N W ^ 2 / V ^ 2 := by
+  have hSample := gmMatrix_sample_energy_lower cutoff N W b V hV.le hLarge
+  have hOperator := gmMatrix_energy_le_operatorNorm cutoff N W b
+  have hCoeff := gmCoefficient_energy_le N b hb
+  have hOpNonneg : 0 ≤ gmMatrixOperatorNorm cutoff N W ^ 2 := sq_nonneg _
+  have hCombined : (W.card : ℝ) * V ^ 2 ≤
+      gmMatrixOperatorNorm cutoff N W ^ 2 * N := by
+    calc
+      (W.card : ℝ) * V ^ 2 ≤
+          ∑ t : GMRow W,
+            ‖(gmMatrix cutoff N W).mulVec (gmCoefficientVector N b) t‖ ^ 2 :=
+        hSample
+      _ ≤ gmMatrixOperatorNorm cutoff N W ^ 2 *
+          ∑ n : GMColumn N, ‖gmCoefficientVector N b n‖ ^ 2 := hOperator
+      _ ≤ gmMatrixOperatorNorm cutoff N W ^ 2 * N :=
+        mul_le_mul_of_nonneg_left hCoeff hOpNonneg
+  apply (le_div_iff₀ (sq_pos_of_pos hV)).2
+  calc
+    (W.card : ℝ) * V ^ 2 ≤
+        gmMatrixOperatorNorm cutoff N W ^ 2 * N := hCombined
+    _ = (N : ℝ) * gmMatrixOperatorNorm cutoff N W ^ 2 := by ring
 
 /-- Entrywise expansion of the row Gram matrix `M M*`. -/
 theorem gmMatrix_mul_conjTranspose_apply (cutoff : GMSmoothCutoff) (N : ℕ)
@@ -166,6 +229,89 @@ theorem gmMatrixSingularValue_sixth (cutoff : GMSmoothCutoff) (N : ℕ)
   rw [show gmMatrixSingularValue cutoff N W i ^ 6 =
       (gmMatrixSingularValue cutoff N W i ^ 2) ^ 3 by ring]
   rw [gmMatrixSingularValue_sq]
+
+/-- A positive Hermitian matrix is bounded in Euclidean operator norm by any
+eigenvalue which dominates its spectrum. -/
+theorem Matrix.IsHermitian.l2_opNorm_le_eigenvalue {ι : Type*} [Fintype ι]
+    [DecidableEq ι] [Nonempty ι] {A : Matrix ι ι ℂ} (hA : A.IsHermitian)
+    (hnonneg : ∀ i, 0 ≤ hA.eigenvalues i) (j : ι)
+    (hj : ∀ i, hA.eigenvalues i ≤ hA.eigenvalues j) :
+    ‖A‖ ≤ hA.eigenvalues j := by
+  let U : Matrix ι ι ℂ := hA.eigenvectorUnitary
+  let D : Matrix ι ι ℂ := Matrix.diagonal (Complex.ofReal ∘ hA.eigenvalues)
+  have hspec : A = U * (D * star U) := by
+    simpa [U, D, Unitary.conjStarAlgAut_apply, mul_assoc] using hA.spectral_theorem
+  have hunit : star U * U = 1 := by simp [U]
+  have hone : ‖(1 : Matrix ι ι ℂ)‖ = 1 := by
+    rw [show (1 : Matrix ι ι ℂ) = Matrix.diagonal 1 by ext i k; simp]
+    rw [Matrix.l2_opNorm_diagonal]
+    apply le_antisymm
+    · rw [pi_norm_le_iff_of_nonneg zero_le_one]
+      simp
+    · have h := norm_le_pi_norm (fun _ : ι => (1 : ℂ))
+          (Classical.choice inferInstance)
+      rw [norm_one] at h
+      exact h
+  have hnormsq : ‖U‖ * ‖U‖ = 1 := by
+    have h := Matrix.l2_opNorm_conjTranspose_mul_self U
+    rw [show U.conjTranspose = star U by rfl, hunit, hone] at h
+    exact h.symm
+  have hnormU : ‖U‖ = 1 := by nlinarith [norm_nonneg U]
+  have hnormStarU : ‖star U‖ = 1 := by
+    rw [← show U.conjTranspose = star U by rfl]
+    rw [Matrix.l2_opNorm_conjTranspose, hnormU]
+  have hD : ‖D‖ ≤ hA.eigenvalues j := by
+    rw [Matrix.l2_opNorm_diagonal]
+    rw [pi_norm_le_iff_of_nonneg (hnonneg j)]
+    intro i
+    change ‖(hA.eigenvalues i : ℂ)‖ ≤ hA.eigenvalues j
+    rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg (hnonneg i)]
+    exact hj i
+  calc
+    ‖A‖ = ‖U * (D * star U)‖ := congrArg norm hspec
+    _ ≤ ‖U‖ * ‖D * star U‖ := Matrix.l2_opNorm_mul _ _
+    _ ≤ ‖U‖ * (‖D‖ * ‖star U‖) :=
+      mul_le_mul_of_nonneg_left (Matrix.l2_opNorm_mul _ _) (norm_nonneg U)
+    _ = ‖D‖ := by rw [hnormU, hnormStarU]; ring
+    _ ≤ hA.eigenvalues j := hD
+
+/-- The matrix operator norm is bounded by one of the row-Gram singular
+values.  The selected index realizes the largest Gram eigenvalue. -/
+theorem exists_gmMatrixOperatorNorm_le_singularValue (cutoff : GMSmoothCutoff)
+    (N : ℕ) (W : Finset ℝ) (hW : W.Nonempty) :
+    ∃ j : GMRow W,
+      gmMatrixOperatorNorm cutoff N W ≤ gmMatrixSingularValue cutoff N W j := by
+  let H := gmMatrix_gram_isHermitian cutoff N W
+  haveI : Nonempty (GMRow W) := by
+    rcases hW with ⟨t, ht⟩
+    exact ⟨⟨t, ht⟩⟩
+  obtain ⟨j, _hjMem, hj⟩ :=
+    Finset.exists_mem_eq_sup'
+      (Finset.univ_nonempty : (Finset.univ : Finset (GMRow W)).Nonempty)
+      H.eigenvalues
+  refine ⟨j, ?_⟩
+  have hjMax : ∀ i, H.eigenvalues i ≤ H.eigenvalues j := by
+    intro i
+    rw [← hj]
+    exact Finset.le_sup' H.eigenvalues (Finset.mem_univ i)
+  have hGramNorm :
+      ‖gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose‖ ≤
+        H.eigenvalues j :=
+    Matrix.IsHermitian.l2_opNorm_le_eigenvalue H
+      (gmMatrix_gram_eigenvalue_nonneg cutoff N W) j hjMax
+  have hGramEq :
+      ‖gmMatrix cutoff N W * (gmMatrix cutoff N W).conjTranspose‖ =
+        ‖gmMatrix cutoff N W‖ * ‖gmMatrix cutoff N W‖ := by
+    have h := Matrix.l2_opNorm_conjTranspose_mul_self
+      (gmMatrix cutoff N W).conjTranspose
+    simpa [Matrix.l2_opNorm_conjTranspose] using h
+  have hsq : gmMatrixOperatorNorm cutoff N W ^ 2 ≤
+      gmMatrixSingularValue cutoff N W j ^ 2 := by
+    rw [gmMatrixOperatorNorm, pow_two, gmMatrixSingularValue_sq]
+    rw [← hGramEq]
+    exact hGramNorm
+  exact (sq_le_sq₀ (norm_nonneg _)
+    (gmMatrixSingularValue_nonneg cutoff N W j)).mp hsq
 
 /-- First trace expansion for the row Gram matrix. -/
 theorem gmMatrix_gram_trace_expand (cutoff : GMSmoothCutoff) (N : ℕ)

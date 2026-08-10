@@ -37,7 +37,7 @@ flowchart TD
     GD["#18 Uniform vertical Gamma decay<br/>and contour-integrand integrability<br/>DONE"]
     CV["#18 Appendix C contour coverage<br/>OPEN<br/>Mellin inversion, zero cancellation,<br/>residue and tails"]
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
-    CR["#18 Type-II fourth-moment reduction<br/>OPEN<br/>scaled extraction input DONE"]
+    CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN"]
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
@@ -46,8 +46,8 @@ flowchart TD
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
-    SF["#19 Source-facing finite definitions<br/>OPEN<br/>cutoff, derivative bounds, matrix,<br/>R sum and core energy bounds DONE;<br/>reindexing/floor bridge open"]
-    MX["#19 Sampling matrix and trace reduction<br/>OPEN<br/>Gram kernel/spectrum/cubic trace/<br/>sixth dispersion DONE;<br/>operator singular-value bound open"]
+    SF["#19 Source-facing finite definitions<br/>DONE<br/>affine reindexing, scaling and<br/>seven-bin exact-energy bridge proved"]
+    MX["#19 Sampling matrix and trace reduction<br/>DONE<br/>exact Lemmas 4.1-4.2<br/>operator-norm conclusions proved"]
     PS["#19 Poisson expansion and S1<br/>OPEN"]
     RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
@@ -61,7 +61,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["Combined transfer<br/>DONE CONDITIONALLY<br/>open inputs #15 and #19"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>923/923 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>975/975 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -206,7 +206,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,MS,DR,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,SS,CR,MS,DR,SF,MX,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,CV,CR,AF,QD,TM,GCS,SF,MX,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,CV,AF,QD,TM,GCS,PS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

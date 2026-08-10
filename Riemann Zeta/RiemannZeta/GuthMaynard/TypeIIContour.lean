@@ -123,10 +123,10 @@ set_option maxHeartbeats 800000 in
 /-- Every integral occurring in the source Type-II detector is a genuine
 whole-line Bochner integral, not merely a totalized expression. -/
 theorem integrable_typeIIContourIntegrand {ρ : ℂ} {T : ℝ}
-    (hT : 0 < T) (hρLower : 7 / 10 ≤ ρ.re) (hρUpper : ρ.re ≤ 4 / 5) :
+    (hT : 0 < T) (hρLower : 7 / 10 ≤ ρ.re) (hρUpper : ρ.re ≤ 1) :
     Integrable (typeIIContourIntegrand ρ T) := by
   let a : ℝ := 1 / 2 - ρ.re
-  have haLower : -(3 / 10 : ℝ) ≤ a := by dsimp [a]; linarith
+  have haLower : -(1 / 2 : ℝ) ≤ a := by dsimp [a]; linarith
   have haUpper : a ≤ -(1 / 5 : ℝ) := by dsimp [a]; linarith
   let base : ℝ → ℂ := fun u =>
     ((1 + |u| : ℝ) : ℂ) * Complex.Gamma ((a : ℂ) + (u : ℂ) * I)
