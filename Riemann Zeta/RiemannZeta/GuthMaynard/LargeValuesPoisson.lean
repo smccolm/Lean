@@ -1,0 +1,396 @@
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Analysis.Fourier.PoissonSummation
+import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+import Mathlib.Analysis.MellinInversion
+import RiemannZeta.GuthMaynard.TraceDispersion
+
+open Complex Filter MeasureTheory Real Set
+open scoped ContDiff FourierTransform SchwartzMap Topology
+
+namespace RiemannZeta.GuthMaynard
+
+/-!
+# Fourier kernels for the Guth--Maynard trace expansion
+
+This module starts the source Lemmas 4.3--4.5 from the actual cutoff used by
+the sampling matrix.  In particular, the oscillatory kernel is a genuine
+compactly supported smooth function and its Fourier transform is obtained
+from Mathlib's Schwartz-space Fourier transform.
+-/
+
+/-- The source kernel `h_t(u) = w(u)^2 u^(it)`.  `Real.log` is harmless at
+zero because the cutoff vanishes on a neighborhood of zero. -/
+noncomputable def gmTraceKernel (cutoff : GMSmoothCutoff) (t x : ℝ) : ℂ :=
+  (cutoff x : ℂ) ^ 2 *
+    Complex.exp ((((t * Real.log x : ℝ) : ℂ) * I))
+
+lemma gmSmoothCutoff_eq_zero_of_lt_one (cutoff : GMSmoothCutoff)
+    {x : ℝ} (hx : x < 1) : cutoff x = 0 := by
+  by_contra hne
+  have hxSupport : x ∈ Function.support cutoff := hne
+  have hxIcc := cutoff.support hxSupport
+  exact (not_le_of_gt hx) hxIcc.1
+
+theorem gmSmoothCutoff_eq_zero_at_one (cutoff : GMSmoothCutoff) :
+    cutoff 1 = 0 := by
+  by_contra hne
+  have hSupportNhd : Function.support cutoff ∈ 𝓝 (1 : ℝ) :=
+    cutoff.smooth.continuous.isOpen_support.mem_nhds hne
+  have hIccNhd : Set.Icc (1 : ℝ) 2 ∈ 𝓝 (1 : ℝ) :=
+    Filter.mem_of_superset hSupportNhd cutoff.support
+  have hInterior : (1 : ℝ) ∈ interior (Set.Icc (1 : ℝ) 2) :=
+    mem_interior_iff_mem_nhds.mpr hIccNhd
+  rw [interior_Icc] at hInterior
+  exact (lt_irrefl (1 : ℝ)) hInterior.1
+
+theorem gmSmoothCutoff_eq_zero_at_two (cutoff : GMSmoothCutoff) :
+    cutoff 2 = 0 := by
+  by_contra hne
+  have hSupportNhd : Function.support cutoff ∈ 𝓝 (2 : ℝ) :=
+    cutoff.smooth.continuous.isOpen_support.mem_nhds hne
+  have hIccNhd : Set.Icc (1 : ℝ) 2 ∈ 𝓝 (2 : ℝ) :=
+    Filter.mem_of_superset hSupportNhd cutoff.support
+  have hInterior : (2 : ℝ) ∈ interior (Set.Icc (1 : ℝ) 2) :=
+    mem_interior_iff_mem_nhds.mpr hIccNhd
+  rw [interior_Icc] at hInterior
+  exact (lt_irrefl (2 : ℝ)) hInterior.2
+
+theorem gmSmoothCutoff_eq_zero_of_le_one (cutoff : GMSmoothCutoff)
+    {x : ℝ} (hx : x ≤ 1) : cutoff x = 0 := by
+  rcases hx.eq_or_lt with rfl | hx
+  · exact gmSmoothCutoff_eq_zero_at_one cutoff
+  · exact gmSmoothCutoff_eq_zero_of_lt_one cutoff hx
+
+theorem gmSmoothCutoff_eq_zero_of_two_le (cutoff : GMSmoothCutoff)
+    {x : ℝ} (hx : 2 ≤ x) : cutoff x = 0 := by
+  rcases hx.eq_or_lt with rfl | hx
+  · exact gmSmoothCutoff_eq_zero_at_two cutoff
+  · by_contra hne
+    have hxSupport := cutoff.support hne
+    exact (not_le_of_gt hx) hxSupport.2
+
+theorem contDiff_gmTraceKernel (cutoff : GMSmoothCutoff) (t : ℝ) :
+    ContDiff ℝ ∞ (gmTraceKernel cutoff t) := by
+  rw [contDiff_iff_contDiffAt]
+  intro x
+  by_cases hx : x = 0
+  · subst x
+    have hEventually : gmTraceKernel cutoff t =ᶠ[𝓝 0] 0 := by
+      filter_upwards [Iio_mem_nhds (show (0 : ℝ) < 1 by norm_num)] with y hy
+      simp [gmTraceKernel, gmSmoothCutoff_eq_zero_of_lt_one cutoff hy]
+    exact contDiffAt_const.congr_of_eventuallyEq hEventually
+  · have hcut : ContDiffAt ℝ ∞ (fun y : ℝ => (cutoff y : ℂ) ^ 2) x := by
+      have hcutReal : ContDiffAt ℝ ∞ cutoff x := cutoff.smooth.contDiffAt
+      have hcutComplex : ContDiffAt ℝ ∞ (fun y : ℝ => (cutoff y : ℂ)) x :=
+        Complex.ofRealCLM.contDiff.contDiffAt.comp x hcutReal
+      exact hcutComplex.pow 2
+    have hphase : ContDiffAt ℝ ∞
+        (fun y : ℝ => Complex.exp ((((t * Real.log y : ℝ) : ℂ) * I))) x := by
+      apply ContDiffAt.cexp
+      have hlog : ContDiffAt ℝ ∞ Real.log x := Real.contDiffAt_log.2 hx
+      have hscaled : ContDiffAt ℝ ∞ (fun y : ℝ => t * Real.log y) x :=
+        contDiffAt_const.mul hlog
+      have hcast : ContDiffAt ℝ ∞
+          (fun y : ℝ => ((t * Real.log y : ℝ) : ℂ)) x :=
+        Complex.ofRealCLM.contDiff.contDiffAt.comp x hscaled
+      exact hcast.mul contDiffAt_const
+    exact hcut.mul hphase
+
+theorem hasCompactSupport_gmTraceKernel (cutoff : GMSmoothCutoff) (t : ℝ) :
+    HasCompactSupport (gmTraceKernel cutoff t) := by
+  apply HasCompactSupport.intro isCompact_Icc
+  intro x hx
+  have hcut : cutoff x = 0 := by
+    by_contra hne
+    exact hx (cutoff.support hne)
+  simp [gmTraceKernel, hcut]
+
+/-- The trace kernel as a Schwartz function. -/
+noncomputable def gmTraceKernelSchwartz (cutoff : GMSmoothCutoff) (t : ℝ) :
+    𝓢(ℝ, ℂ) :=
+  (hasCompactSupport_gmTraceKernel cutoff t).toSchwartzMap
+    (contDiff_gmTraceKernel cutoff t)
+
+@[simp]
+theorem gmTraceKernelSchwartz_apply (cutoff : GMSmoothCutoff) (t x : ℝ) :
+    gmTraceKernelSchwartz cutoff t x = gmTraceKernel cutoff t x := rfl
+
+/-- The Fourier coefficient `h-hat_t(ξ)` appearing in Lemmas 4.3--4.5. -/
+noncomputable def gmTraceFourier (cutoff : GMSmoothCutoff) (t ξ : ℝ) : ℂ :=
+  𝓕 (gmTraceKernelSchwartz cutoff t) ξ
+
+/-- For every fixed ordinate, the source Fourier kernel has arbitrary-order
+decay in the frequency.  The uniform polynomial dependence on `t` is proved
+separately for the full two-parameter form of Lemma 4.3. -/
+theorem gmTraceFourier_fixed_t_decay (cutoff : GMSmoothCutoff) (t : ℝ)
+    (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ ξ : ℝ,
+      |ξ| ^ j * ‖gmTraceFourier cutoff t ξ‖ ≤ C := by
+  let F : 𝓢(ℝ, ℂ) := 𝓕 (gmTraceKernelSchwartz cutoff t)
+  obtain ⟨C, hC, hbound⟩ := F.decay j 0
+  refine ⟨C, hC, ?_⟩
+  intro ξ
+  simpa [F, gmTraceFourier, Real.norm_eq_abs] using hbound ξ
+
+/-- At zero Fourier frequency, the trace kernel is the Mellin transform of
+the fixed squared cutoff on the vertical line `Re s = 1`. -/
+theorem gmTraceFourier_zero_eq_mellin (cutoff : GMSmoothCutoff) (t : ℝ) :
+    gmTraceFourier cutoff t 0 =
+      mellin (fun x : ℝ => ((cutoff x : ℂ) ^ 2))
+        ((1 : ℂ) + (t : ℂ) * I) := by
+  have hIntegrable : Integrable (gmTraceKernel cutoff t) :=
+    (gmTraceKernelSchwartz cutoff t).integrable
+  have hOutside :
+      ∫ x : ℝ in (Set.Ioi 0)ᶜ, gmTraceKernel cutoff t x = 0 := by
+    apply setIntegral_eq_zero_of_forall_eq_zero
+    intro x hx
+    have hxNonpos : x ≤ 0 := by simpa using hx
+    simp [gmTraceKernel,
+      gmSmoothCutoff_eq_zero_of_lt_one cutoff (hxNonpos.trans_lt zero_lt_one)]
+  have hWhole :
+      ∫ x : ℝ, gmTraceKernel cutoff t x =
+        ∫ x : ℝ in Set.Ioi 0, gmTraceKernel cutoff t x := by
+    have hSplit := integral_add_compl (measurableSet_Ioi : MeasurableSet (Set.Ioi (0 : ℝ)))
+      hIntegrable
+    rw [hOutside, add_zero] at hSplit
+    exact hSplit.symm
+  rw [gmTraceFourier, SchwartzMap.fourier_coe, Real.fourier_eq']
+  simp only [inner_zero_right, mul_zero, ofReal_zero, zero_mul, Complex.exp_zero,
+    one_smul, gmTraceKernelSchwartz_apply]
+  rw [hWhole, mellin]
+  apply setIntegral_congr_fun measurableSet_Ioi
+  intro x hx
+  have hxPos : 0 < x := hx
+  have hxNe : (x : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr hxPos.ne'
+  change (cutoff x : ℂ) ^ 2 * Complex.exp (((t * Real.log x : ℝ) : ℂ) * I) =
+    (x : ℂ) ^ ((1 : ℂ) + (t : ℂ) * I - 1) * (cutoff x : ℂ) ^ 2
+  rw [Complex.cpow_def_of_ne_zero hxNe]
+  rw [Complex.ofReal_mul, Complex.ofReal_log hxPos.le]
+  simp only [add_sub_cancel_left, mul_comm (t : ℂ) I]
+  ring_nf
+
+/-- The fixed logarithmic-coordinate kernel whose Fourier transform is the
+zero-frequency coefficient `ĥ_t(0)`. -/
+noncomputable def gmMellinKernel (cutoff : GMSmoothCutoff) (u : ℝ) : ℂ :=
+  (Real.exp (-u) : ℂ) * (cutoff (Real.exp (-u)) : ℂ) ^ 2
+
+theorem contDiff_gmMellinKernel (cutoff : GMSmoothCutoff) :
+    ContDiff ℝ ∞ (gmMellinKernel cutoff) := by
+  have hExp : ContDiff ℝ ∞ (fun u : ℝ => Real.exp (-u)) :=
+    Real.contDiff_exp.comp contDiff_neg
+  have hExpComplex : ContDiff ℝ ∞
+      (fun u : ℝ => (Real.exp (-u) : ℂ)) :=
+    Complex.ofRealCLM.contDiff.comp hExp
+  have hCut : ContDiff ℝ ∞
+      (fun u : ℝ => (cutoff (Real.exp (-u)) : ℂ)) :=
+    Complex.ofRealCLM.contDiff.comp (cutoff.smooth.comp hExp)
+  exact hExpComplex.mul (hCut.pow 2)
+
+theorem hasCompactSupport_gmMellinKernel (cutoff : GMSmoothCutoff) :
+    HasCompactSupport (gmMellinKernel cutoff) := by
+  apply HasCompactSupport.intro
+    (isCompact_Icc : IsCompact (Set.Icc (-Real.log 2) 0))
+  intro u hu
+  have hcut : cutoff (Real.exp (-u)) = 0 := by
+    by_contra hne
+    have hRange := cutoff.support hne
+    apply hu
+    rw [Set.mem_Icc]
+    constructor
+    · have hLog : -u ≤ Real.log 2 := by
+        apply (Real.exp_le_exp).mp
+        rw [Real.exp_log (by norm_num : (0 : ℝ) < 2)]
+        exact hRange.2
+      linarith
+    · have hZero : (0 : ℝ) ≤ -u := by
+        rw [← Real.exp_le_exp]
+        simpa using hRange.1
+      linarith
+  simp [gmMellinKernel, hcut]
+
+/-- The logarithmic-coordinate kernel as a Schwartz function. -/
+noncomputable def gmMellinKernelSchwartz (cutoff : GMSmoothCutoff) :
+    𝓢(ℝ, ℂ) :=
+  (hasCompactSupport_gmMellinKernel cutoff).toSchwartzMap
+    (contDiff_gmMellinKernel cutoff)
+
+@[simp]
+theorem gmMellinKernelSchwartz_apply (cutoff : GMSmoothCutoff) (u : ℝ) :
+    gmMellinKernelSchwartz cutoff u = gmMellinKernel cutoff u := rfl
+
+/-- The source coefficient at Fourier frequency zero is a sample of one
+fixed Schwartz transform at frequency `t/(2π)`. -/
+theorem gmTraceFourier_zero_eq_mellinKernel_fourier
+    (cutoff : GMSmoothCutoff) (t : ℝ) :
+    gmTraceFourier cutoff t 0 =
+      𝓕 (gmMellinKernelSchwartz cutoff) (t / (2 * Real.pi)) := by
+  rw [gmTraceFourier_zero_eq_mellin, mellin_eq_fourier,
+    SchwartzMap.fourier_coe]
+  simp
+  apply congrArg (fun f : ℝ → ℂ => 𝓕 f (t / (2 * Real.pi)))
+  funext u
+  rw [gmMellinKernelSchwartz_apply]
+  simp [gmMellinKernel, Complex.ofReal_exp]
+
+/-- The zero-frequency half of Lemma 4.3(2), with the harmless Fourier
+normalization `2π` left visible.  Its constant is independent of `t`. -/
+theorem gmTraceFourier_zero_uniform_decay (cutoff : GMSmoothCutoff)
+    (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ t : ℝ,
+      |t / (2 * Real.pi)| ^ j * ‖gmTraceFourier cutoff t 0‖ ≤ C := by
+  obtain ⟨C, hC, hBound⟩ := (𝓕 (gmMellinKernelSchwartz cutoff)).decay j 0
+  refine ⟨C, hC, ?_⟩
+  intro t
+  rw [gmTraceFourier_zero_eq_mellinKernel_fourier]
+  change ‖t / (2 * Real.pi)‖ ^ j *
+    ‖𝓕 (gmMellinKernelSchwartz cutoff) (t / (2 * Real.pi))‖ ≤ C
+  simpa only [norm_iteratedFDeriv_zero] using
+    hBound (t / (2 * Real.pi))
+
+/-- Lemma 4.3(2) at `ξ = 0` in the paper's unscaled `t` variable. -/
+theorem gmTraceFourier_zero_uniform_decay_source
+    (cutoff : GMSmoothCutoff) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ t : ℝ,
+      |t| ^ j * ‖gmTraceFourier cutoff t 0‖ ≤ C := by
+  obtain ⟨C, hC, hBound⟩ := gmTraceFourier_zero_uniform_decay cutoff j
+  let scale : ℝ := 2 * Real.pi
+  have hScale : 0 < scale := by dsimp [scale]; positivity
+  refine ⟨scale ^ j * C, mul_pos (pow_pos hScale j) hC, ?_⟩
+  intro t
+  have hAbs : |t| = scale * |t / scale| := by
+    rw [abs_div, abs_of_pos hScale]
+    field_simp [hScale.ne']
+  rw [hAbs, mul_pow]
+  calc
+    scale ^ j * |t / scale| ^ j * ‖gmTraceFourier cutoff t 0‖ =
+        scale ^ j *
+          (|t / scale| ^ j * ‖gmTraceFourier cutoff t 0‖) := by ring
+    _ ≤ scale ^ j * C :=
+      mul_le_mul_of_nonneg_left (hBound t) (pow_nonneg hScale.le j)
+
+/-- The source trace kernel after dilation by the Dirichlet-polynomial
+length.  Integer samples of this function are exactly `h_t(n / N)`. -/
+noncomputable def gmScaledTraceKernel
+    (cutoff : GMSmoothCutoff) (t N x : ℝ) : ℂ :=
+  gmTraceKernel cutoff t (x / N)
+
+theorem contDiff_gmScaledTraceKernel (cutoff : GMSmoothCutoff) (t N : ℝ) :
+    ContDiff ℝ ∞ (gmScaledTraceKernel cutoff t N) := by
+  unfold gmScaledTraceKernel
+  exact (contDiff_gmTraceKernel cutoff t).comp
+    (contDiff_id.div_const N)
+
+theorem hasCompactSupport_gmScaledTraceKernel (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) :
+    HasCompactSupport (gmScaledTraceKernel cutoff t N) := by
+  apply HasCompactSupport.intro (isCompact_Icc : IsCompact (Set.Icc N (2 * N)))
+  intro x hx
+  have hNotScaled : x / N ∉ Set.Icc (1 : ℝ) 2 := by
+    intro hScaled
+    apply hx
+    rw [Set.mem_Icc] at hScaled ⊢
+    constructor
+    · simpa using (le_div_iff₀ hN).mp hScaled.1
+    · exact (div_le_iff₀ hN).mp hScaled.2
+  have hcut : cutoff (x / N) = 0 := by
+    by_contra hne
+    exact hNotScaled (cutoff.support hne)
+  simp [gmScaledTraceKernel, gmTraceKernel, hcut]
+
+/-- The dilated trace kernel as a Schwartz function. -/
+noncomputable def gmScaledTraceKernelSchwartz (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) : 𝓢(ℝ, ℂ) :=
+  (hasCompactSupport_gmScaledTraceKernel cutoff t N hN).toSchwartzMap
+    (contDiff_gmScaledTraceKernel cutoff t N)
+
+@[simp]
+theorem gmScaledTraceKernelSchwartz_apply (cutoff : GMSmoothCutoff)
+    (t N x : ℝ) (hN : 0 < N) :
+    gmScaledTraceKernelSchwartz cutoff t N hN x =
+      gmTraceKernel cutoff t (x / N) := rfl
+
+/-- Fourier dilation for the source kernel, with Mathlib's `2π` Fourier
+normalization. -/
+theorem gmScaledTraceKernel_fourier (cutoff : GMSmoothCutoff)
+    (t N ξ : ℝ) (hN : 0 < N) :
+    𝓕 (gmScaledTraceKernelSchwartz cutoff t N hN) ξ =
+      (N : ℂ) * gmTraceFourier cutoff t (N * ξ) := by
+  let g : ℝ → ℂ := fun y =>
+    Complex.exp (((-2 * Real.pi * y * (N * ξ) : ℝ) : ℂ) * I) *
+      gmTraceKernel cutoff t y
+  have hChange := Measure.integral_comp_div g N
+  rw [abs_of_pos hN] at hChange
+  rw [SchwartzMap.fourier_coe, Real.fourier_eq', gmTraceFourier,
+    SchwartzMap.fourier_coe, Real.fourier_eq']
+  simp only [Real.inner_apply, gmScaledTraceKernelSchwartz_apply,
+    gmTraceKernelSchwartz_apply, smul_eq_mul]
+  calc
+    (∫ x : ℝ,
+        Complex.exp (((-2 * Real.pi * (x * ξ) : ℝ) : ℂ) * I) *
+          gmTraceKernel cutoff t (x / N)) =
+        ∫ x : ℝ, g (x / N) := by
+      apply integral_congr_ae
+      filter_upwards with x
+      dsimp only [g]
+      have hphase : -2 * Real.pi * (x / N) * (N * ξ) =
+          -2 * Real.pi * (x * ξ) := by
+        field_simp [hN.ne']
+      rw [hphase]
+    _ = N • ∫ y : ℝ, g y := hChange
+    _ = (N : ℂ) * ∫ y : ℝ,
+        Complex.exp (((-2 * Real.pi * (y * (N * ξ)) : ℝ) : ℂ) * I) *
+          gmTraceKernel cutoff t y := by
+      change (N : ℂ) * ∫ y : ℝ, g y = _
+      congr 1
+      apply integral_congr_ae
+      filter_upwards with y
+      dsimp only [g]
+      have hphase : -2 * Real.pi * y * (N * ξ) =
+          -2 * Real.pi * (y * (N * ξ)) := by ring
+      rw [hphase]
+
+/-- Literal Poisson summation for the dilated source trace kernel.  This is
+the analytic equality used before separating the zero and nonzero Fourier
+frequencies in Guth--Maynard Lemmas 4.4--4.5. -/
+theorem gmScaledTraceKernel_poisson (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) :
+    ∑' n : ℤ, gmTraceKernel cutoff t ((n : ℝ) / N) =
+      ∑' m : ℤ, 𝓕 (gmScaledTraceKernelSchwartz cutoff t N hN) (m : ℝ) := by
+  simpa using
+    (SchwartzMap.tsum_eq_tsum_fourier
+      (gmScaledTraceKernelSchwartz cutoff t N hN) 0)
+
+/-- Poisson summation in the source normalization: the `m`-th dual
+coefficient is `N ĥ_t(Nm)`. -/
+theorem gmTraceKernel_poisson (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) :
+    ∑' n : ℤ, gmTraceKernel cutoff t ((n : ℝ) / N) =
+      ∑' m : ℤ, (N : ℂ) * gmTraceFourier cutoff t (N * (m : ℝ)) := by
+  rw [gmScaledTraceKernel_poisson cutoff t N hN]
+  congr 1
+  funext m
+  exact gmScaledTraceKernel_fourier cutoff t N m hN
+
+/-- Compact support converts the integer series in Poisson summation into
+the literal finite block `(N,2N)`.  The omitted right endpoint contributes
+zero because a smooth function supported in `[1,2]` vanishes at `2`. -/
+theorem gmTraceKernel_tsum_eq_intBlock (cutoff : GMSmoothCutoff)
+    (t N : ℝ) (hN : 0 < N) :
+    ∑' n : ℤ, gmTraceKernel cutoff t ((n : ℝ) / N) =
+      ∑ n ∈ Finset.Ioc (Int.floor N) (Int.floor (2 * N)),
+        gmTraceKernel cutoff t ((n : ℝ) / N) := by
+  rw [tsum_eq_sum (s := Finset.Ioc (Int.floor N) (Int.floor (2 * N))) ?_]
+  intro n hn
+  rw [Finset.mem_Ioc, not_and_or] at hn
+  rcases hn with hnLower | hnUpper
+  · have hnCast : (n : ℝ) ≤ N := by
+      exact (Int.le_floor).mp (le_of_not_gt hnLower)
+    have hRatio : (n : ℝ) / N ≤ 1 := (div_le_one hN).mpr hnCast
+    simp [gmTraceKernel, gmSmoothCutoff_eq_zero_of_le_one cutoff hRatio]
+  · have hnCast : 2 * N < (n : ℝ) := by
+      exact (Int.floor_lt).mp (lt_of_not_ge hnUpper)
+    have hRatio : 2 ≤ (n : ℝ) / N := by
+      exact (le_div_iff₀ hN).mpr (le_of_lt hnCast)
+    simp [gmTraceKernel, gmSmoothCutoff_eq_zero_of_two_le cutoff hRatio]
+
+end RiemannZeta.GuthMaynard
