@@ -29,6 +29,7 @@ import RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple
 import RiemannZeta.GuthMaynard.ClassicalDensity
 import RiemannZeta.GuthMaynard.ClassicalDetector
 import RiemannZeta.GuthMaynard.FiniteDensityTransfer
+import RiemannZeta.GuthMaynard.ClassicalDichotomy
 import RiemannZeta.GuthMaynard.ClassicalPowering
 import RiemannZeta.GuthMaynard.FiniteDensityEndpoint
 import RiemannZeta.GuthMaynard.FiniteDensityExponents

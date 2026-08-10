@@ -14,8 +14,9 @@ flowchart TD
     FDT["#15 Finite transfer machinery<br/>DONE<br/>exact-beta removal, multiplicity extraction,<br/>normalization and unrestricted MHH bridge"]
     PW["#15 Exact finite powering<br/>DONE<br/>power identity, factorization bound,<br/>normalized powered-block extraction"]
     RA["#15 Exceptional-range arithmetic<br/>DONE<br/>Ingham short-zeta range empty; Huxley range<br/>empty or below proved Weyl threshold"]
-    DI["#15 Finite Type-I/Type-II dichotomy<br/>OPEN<br/>ordinary-zeta Type I and genuinely short<br/>zeta-times-Mobius Type II"]
+    DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE<br/>pointwise q/2 versus 3/4 split; exact-sigma localization;<br/>multiplicity-dominant branch and common scale;<br/>Type I on (Y,A], Type II on (X,X*Y]"]
     FA["#15 Finite scale/exponent assembly<br/>DONE<br/>MHH exponent, two-or-three scale reduction,<br/>Corollary 11.10 envelope and endpoint certificates"]
+    TE["#15 Terminal Type-I estimate<br/>OPEN<br/>Euler-Maclaurin/nonstationary control<br/>for scales comparable to T"]
     FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume detector branches, medium reflection,<br/>terminal estimate and assembly certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three endpoint cases DONE;<br/>sigma=3/4 Huxley follows from Ingham"]
 
@@ -46,6 +47,7 @@ flowchart TD
     PZ --> ST
     ER --> MR
     ER --> VD
+    ER --> DI
     ZB --> LZ
     ZB --> CF
     ZB --> ZT
@@ -66,9 +68,12 @@ flowchart TD
     AC --> PW
     FDT --> DI
     PW --> DI
+    ST --> DI
     DI -->|medium Type I| MR
+    DI -->|terminal Type I| TE
     DI -->|short Type I and Type II| FR
     MR --> FR
+    TE --> FR
     PW --> FA
     CLV --> FA
     RA --> FA
@@ -117,7 +122,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,FA,BR,AC,MV,HM,EX,DY done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,BR,AC,MV,HM,EX,DY done;
     class CT,TR,CB conditional;
-    class MR,DI,FR,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
+    class MR,TE,FR,ZD,T2,GCS,DC,RF,GM,GZD,CZD,QA open;
     class MZ,PZ,ER available;
