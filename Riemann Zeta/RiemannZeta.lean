@@ -44,6 +44,7 @@ import RiemannZeta.GuthMaynard.FiniteDensityExponents
 import RiemannZeta.GuthMaynard.FiniteScaleAssembly
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.TerminalTypeI
+import RiemannZeta.GuthMaynard.TypeIFiniteEstimates
 import RiemannZeta.GuthMaynard.TypeIIContour
 import RiemannZeta.GuthMaynard.TypeIIFourthMomentReduction
 import RiemannZeta.GuthMaynard.TypeIICoverage

@@ -293,7 +293,7 @@ theorem logarithmicPhase_secondDifference_bounds
   · exact hlower.trans_eq hEq
   · exact hEq.symm.trans_le hupper
 
-private theorem logarithmic_B_process_majorant_le
+theorem logarithmic_B_process_majorant_le
     (N : ℕ) (t : ℝ) (hN : 0 < N) (hNt : (N : ℝ) ≤ t)
     (htN : t ≤ (N : ℝ) ^ 2) :
     (((N - 1 : ℕ) : ℝ) * (t / (N : ℝ) ^ 2) / (2 * Real.pi) + 2) *

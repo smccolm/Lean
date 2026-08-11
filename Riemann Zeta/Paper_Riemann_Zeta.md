@@ -154,7 +154,7 @@ This has the `(T+O(X)) log X` strength of the critical-line mollifier input used
 
 The rectangle argument-principle core is now kernel-checked. The project ports the PNT+ rectangle geometry, finite divisor-support, and residue calculus to Lean 4.30, then proves that the normalized contour integral of `logDeriv f` equals the finite sum of meromorphic orders in the rectangle. `ClassicalArgumentPrinciple.lean` specializes this result to the globally analytic pole-free Ingham detector while retaining finite-order and boundary-nonvanishing hypotheses explicitly. It also derives the concrete classical-strip growth bound `‖ζ(s)‖ ≤ 20 |Im(s)|` for `1/2 ≤ Re(s) < 3` and `|Im(s)| ≥ 1`. Weighted Littlewood, boundary perturbation, Gabriel interpolation, the standalone zeta fourth moment, and the remaining edge estimates are unfinished optional extensions; they are not on the selected #15 critical path.
 
-The selected remaining interior engine is a finite zero-density-from-large-values route. The sharp approximation, dichotomy, exact powering infrastructure, coefficient growth, MHH/Weyl estimates, endpoint arithmetic, and terminal Type-I restriction are proved, but the compiled pieces are not joined. Moreover, `powered_sharp_block_large_values_bound` is specialized to `sharpMollifiedLineCoeff A 1`, whereas the dichotomy's actual Type-II block uses `sharpMollifiedLineCoeff Y X` with $X=\lfloor T^{\delta_2/2}\rfloor$; the actual Type-II powered application remains open. ANTEDB Lemma 11.5 gives the Type-I fork: common smoothing and scale split; direct deweighting for short blocks; stationary B-process $N\mapsto T/N$ followed by the same deweighting for medium blocks. `MediumReflection.lean` proves phase geometry and rescaling but not the uniform $x^{-\sigma-it}$ stationary formula or weighted dual block. Both branch estimates must then be consumed with analytic multiplicity and endpoint certificates in a slab theorem. Guth–Maynard's distinct Section 6 reflection does not supply these interfaces.
+The selected remaining interior engine is a finite zero-density-from-large-values route. The sharp approximation, dichotomy, exact powering infrastructure, coefficient growth, MHH/Weyl estimates, endpoint arithmetic, and terminal restriction are proved. `TypeIFiniteEstimates.lean` proves the exhaustive scale split, fixed and unit-bounded sharp coefficients, and a uniform `100\sqrt t` prefix estimate transferred by Abel summation to the actual sharp-cutoff block. That estimate gives a valid conditional medium exclusion, but it does not dominate the detector threshold throughout the medium range: at the diagnostic scale `σ=3/4`, `N=T^(2/3)`, its weighted size is of order one. The source-faithful smooth extraction, stationary dual polynomial at scale `T/N`, reflected-block Fourier deweighting, actual Type-II powered application, and certificate/branch-to-slab consumers remain open.
 $$R\ll_\varepsilon T^\varepsilon\left(N^2V^{-2}+T\min(NV^{-2},N^4V^{-6})\right).$$
 The theorem `classical_montgomery_halasz_huxley_native` proves this estimate for bounded coefficients on a dyadic interval and a finite one-separated set in $[0,T]$, with an explicit positive constant and the exact minimum of the second- and sixth-power branches. The final transfer must now derive Ingham's exponent $3(1-\sigma)/(2-\sigma)$ and Huxley's exponent $3(1-\sigma)/(3\sigma-1)$ over their full intervals and specialize the positive-ordinate-to-symmetric bridge. At $\sigma=3/4$ the two exponents both equal $3/5$, so the Huxley boundary follows from Ingham and is not a separate analytic obstruction. Neither fully quantified endpoint proposition is currently a Lean theorem for the project's symmetric multiplicity-weighted `N`.
 
@@ -181,7 +181,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 1069 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set and every existing declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. A separate named-output gate rejects the seven absent #15/#18/#19 end theorems, so the executable audit remains nonzero until the research agenda is complete. No direct project axiom remains.
+`RiemannZeta/Audit.lean` explicitly lists all 1078 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set and every existing declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. A separate named-output gate rejects the seven absent #15/#18/#19 end theorems, so the executable audit remains nonzero until the research agenda is complete. No direct project axiom remains.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `DyadicTransfer`, `CentralTypeI`, `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -262,7 +262,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (1069/1069 existing dependency checks pass; the command exits nonzero on seven missing research outputs)
+- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (1078/1078 existing dependency checks pass; the command exits nonzero on seven missing research outputs)
 
 ---
 
@@ -272,7 +272,7 @@ We have constructed a machine-checked Lean 4 library of finite Dirichlet polynom
 
 **Future Technical Extensions**:
 1. Formalizing continuous branch choices for $\theta(t)$ to prove that $H(t)$ is real-valued.
-2. Completing #15's actual-`X` Type-II powered MHH application, Type-I smoothing/scale split, medium B-process, shared deweighting, branch-to-slab reduction, and concrete Ingham/Huxley endpoints.
+2. Completing #15's Type-I smoothing, stationary `T/N` B-process and reflected deweighting, actual-`X` Type-II powered MHH application, branch-to-slab reduction, and concrete Ingham/Huxley endpoints.
 3. Proving the Hughes–Young-range twisted fourth moment required by #18; the Maynard–Pratt Type-I/Type-II cover and contour-to-twisted-fourth-moment reduction are complete.
 4. Completing the source Guth–Maynard proof after the proved matrix/dispersion, first- and cubic-trace Poisson, `S₁`, uniform Fourier-decay, and smooth-reflection layers: the remaining `S₂/S₃`, Heath–Brown, affine transformation, energy, and final integration.
 

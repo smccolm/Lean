@@ -21,9 +21,9 @@ flowchart TD
     DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE"]
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
     TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
-    PS["#15 Type-I smoothing and scale split<br/>OPEN - NEXT ACCESSIBLE GLUE<br/>remove the inactive sharp cutoff,<br/>extract one common smooth block,<br/>split short versus medium scale"]
-    MR["#15 Medium Type-I B-process<br/>OPEN - HARD CORE<br/>exact Poisson phase geometry and rescaling DONE;<br/>uniform sigma-weighted stationary formula,<br/>dual block at scale T/N OPEN"]
-    FD["#15 Shared Type-I Fourier deweighting<br/>OPEN<br/>short or reflected smooth block to one<br/>fixed-coefficient zeta polynomial<br/>on a common separated set"]
+    PS["#15 Type-I smoothing and scale split<br/>OPEN<br/>terminal scale split DONE;<br/>common source-faithful smooth extraction OPEN"]
+    MR["#15 Medium Type-I B-process<br/>OPEN - HARD CORE<br/>phase geometry and 100 sqrt(t) bound DONE;<br/>stationary dual block at scale T/N OPEN"]
+    FD["#15 Shared Type-I Fourier deweighting<br/>OPEN<br/>sharp coefficient identity DONE;<br/>reflected smooth-block deweighting OPEN"]
     PB["#15 X=1 powered-block MHH theorem<br/>DONE<br/>ordinary sharp-zeta coefficients;<br/>not the dichotomy's actual Type-II cutoff"]
     IIE["#15 Actual Type-II powered MHH application<br/>OPEN - ACCESSIBLE FINITE GLUE<br/>generalize from cutoff X=1 to<br/>X=floor(T^(delta2/2)) and apply certificates"]
     ZR["#15 Short Type-I range resolution<br/>OPEN<br/>apply MHH/powering or Weyl according<br/>to the endpoint scale certificate"]
@@ -70,16 +70,13 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1069/1069 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1078/1078 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
     MZ --> CF
     PZ --> ZT
     PZ --> ST
-    ER --> PS
-    ER --> MR
-    ER --> FD
     ER --> TE
     ZB --> LZ
     ZB --> ZT
@@ -101,9 +98,11 @@ flowchart TD
     ST --> DI
     DI -->|Type I witness| TE
     TE -->|large witness has N below height| PS
-    PS -->|short Type I| FD
-    PS -->|medium Type I| MR
-    MR -->|dual short block| FD
+    DI -->|fixed sharp coefficients| FD
+    PS -->|medium smooth block| MR
+    PS -->|short smooth block| FD
+    PS -->|short scale certificate| ZR
+    MR -->|reflected short block| FD
     FD --> ZR
     VD --> ZR
     CLV --> ZR
