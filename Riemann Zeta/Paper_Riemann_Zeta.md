@@ -181,7 +181,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 1009 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set and every existing declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. A separate named-output gate rejects the seven absent #15/#18/#19 end theorems, so the executable audit remains nonzero until the research agenda is complete. No direct project axiom remains.
+`RiemannZeta/Audit.lean` explicitly lists all 1018 exported source-level theorems across the production modules and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set and every existing declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. A separate named-output gate rejects the seven absent #15/#18/#19 end theorems, so the executable audit remains nonzero until the research agenda is complete. No direct project axiom remains.
 
 Every intended production module is imported through the default `RiemannZeta` library root. The runner also builds `DyadicTransfer`, `CentralTypeI`, `HalaszMontgomery`, `Decoupling`, and `LargeValues` explicitly as a redundant coverage check.
 
@@ -262,7 +262,7 @@ The formalization relies on the following exact environment:
 - **Principal Verification Command**: `run_lake_build.bat`
 - **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
 - **Principal Runner Coverage**: five warning-failing stages covering the default production graph, explicit production-module redundancy, both retained examples, and the transitive axiom audit
-- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (1009/1009 existing dependency checks pass; the command exits nonzero on seven missing research outputs)
+- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (1018/1018 existing dependency checks pass; the command exits nonzero on seven missing research outputs)
 
 ---
 

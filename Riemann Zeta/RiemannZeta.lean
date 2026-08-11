@@ -46,6 +46,7 @@ import RiemannZeta.GuthMaynard.TypeIIContour
 import RiemannZeta.GuthMaynard.TypeIIFourthMomentReduction
 import RiemannZeta.GuthMaynard.TypeIICoverage
 import RiemannZeta.GuthMaynard.TwistedMoment
+import RiemannZeta.GuthMaynard.TwistedDiagonal
 import RiemannZeta.GuthMaynard.ClassicalLargeValues
 import RiemannZeta.GuthMaynard.ClassicalMoments
 import RiemannZeta.GuthMaynard.Transfer

@@ -20,7 +20,7 @@ flowchart TD
     RA["#15 Exceptional-range arithmetic<br/>DONE"]
     DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE"]
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
-    MR["#15 Medium Type-I reflection<br/>OPEN - NEXT CLOSEOUT #5 / HIGH PAYOFF<br/>uniform stationary main term,<br/>dual block and fixed coefficients"]
+    MR["#15 Medium Type-I reflection<br/>OPEN - NEXT CLOSEOUT / HIGH PAYOFF<br/>exact stationary integral rescaling DONE;<br/>uniform stationary main term, dual T/N block,<br/>ordinate-independent coefficients OPEN"]
     TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
     FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume dichotomy and endpoint certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
@@ -38,7 +38,7 @@ flowchart TD
     CV["#18 Appendix C contour coverage<br/>DONE<br/>Mellin inversion, zero cancellation,<br/>rectangle shift, residue, quantitative tails<br/>and dyadic dichotomy proved"]
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
-    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - NEXT CLOSEOUT #3"]
+    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - NEXT CLOSEOUT<br/>finite hm=kn phase, integral and norm bound DONE;<br/>completed-zeta-squared AFE and weighted<br/>asymptotic diagonal OPEN"]
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
@@ -52,7 +52,7 @@ flowchart TD
     HT["#19 Hilbert-Schmidt trace expansion<br/>DONE<br/>exact first-trace Poisson formula,<br/>zero mode and uniform N^-100 tail"]
     UF["#19 Uniform two-parameter Fourier decay<br/>and cubic trace split<br/>OPEN - NEXT #19 PROOF"]
     S1["#19 S1 estimate<br/>OPEN<br/>GM Proposition 5.1"]
-    RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN - NEXT CLOSEOUT #4"]
+    RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN - NEXT CLOSEOUT<br/>cutoff Mellin convergence and inversion DONE;<br/>uniform frequency truncation, finite dual sum<br/>and T^-100 tail OPEN"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
     EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
@@ -64,7 +64,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1009/1009 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1018/1018 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -172,6 +172,7 @@ flowchart TD
     PF --> HT
     PF --> UF
     MX --> UF
+    UF -->|Lemma 4.3 truncation| RF
     HT --> S1
     UF --> S1
     UF --> S2

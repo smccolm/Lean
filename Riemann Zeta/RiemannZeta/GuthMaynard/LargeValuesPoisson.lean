@@ -169,6 +169,23 @@ theorem gmTraceFourier_zero_eq_mellin (cutoff : GMSmoothCutoff) (t : ℝ) :
   simp only [add_sub_cancel_left, mul_comm (t : ℂ) I]
   ring_nf
 
+/-- The squared Guth--Maynard cutoff is absolutely Mellin convergent on the
+source line `Re s = 1`.  At this line the Mellin density is just `w²`, so the
+claim follows directly from compact support and continuity. -/
+theorem mellinConvergent_gmCutoffSq_one (cutoff : GMSmoothCutoff) :
+    MellinConvergent (fun x : ℝ => ((cutoff x : ℂ) ^ 2)) (1 : ℂ) := by
+  rw [MellinConvergent]
+  have hContinuous : Continuous (fun x : ℝ => ((cutoff x : ℂ) ^ 2)) := by
+    exact (Complex.ofRealCLM.continuous.comp cutoff.smooth.continuous).pow 2
+  have hCompact : HasCompactSupport (fun x : ℝ => ((cutoff x : ℂ) ^ 2)) := by
+    apply HasCompactSupport.intro isCompact_Icc
+    intro x hx
+    have hcut : cutoff x = 0 := by
+      by_contra hne
+      exact hx (cutoff.support hne)
+    simp [hcut]
+  simpa using (hContinuous.integrable_of_hasCompactSupport hCompact).integrableOn
+
 /-- The fixed logarithmic-coordinate kernel whose Fourier transform is the
 zero-frequency coefficient `ĥ_t(0)`. -/
 noncomputable def gmMellinKernel (cutoff : GMSmoothCutoff) (u : ℝ) : ℂ :=
@@ -217,6 +234,48 @@ noncomputable def gmMellinKernelSchwartz (cutoff : GMSmoothCutoff) :
 @[simp]
 theorem gmMellinKernelSchwartz_apply (cutoff : GMSmoothCutoff) (u : ℝ) :
     gmMellinKernelSchwartz cutoff u = gmMellinKernel cutoff u := rfl
+
+/-- The Mellin transform of the squared cutoff is integrable on the complete
+vertical line `Re s = 1`.  The proof identifies that line with a rescaled
+Fourier transform of the compactly supported logarithmic kernel. -/
+theorem verticalIntegrable_mellin_gmCutoffSq_one (cutoff : GMSmoothCutoff) :
+    VerticalIntegrable (mellin (fun x : ℝ => ((cutoff x : ℂ) ^ 2))) 1 := by
+  rw [VerticalIntegrable]
+  let F : 𝓢(ℝ, ℂ) := 𝓕 (gmMellinKernelSchwartz cutoff)
+  have hFourier : Integrable (F : ℝ → ℂ) := F.integrable
+  have hScaled : Integrable
+      (fun u : ℝ => 𝓕 (gmMellinKernelSchwartz cutoff) (u / (2 * Real.pi))) := by
+    simpa [F, div_eq_mul_inv] using
+      hFourier.comp_mul_right' (show (2 * Real.pi)⁻¹ ≠ 0 by positivity)
+  apply hScaled.congr
+  filter_upwards with u
+  rw [mellin_eq_fourier, SchwartzMap.fourier_coe]
+  simp only [Complex.add_re, Complex.add_im, Complex.ofReal_re, Complex.ofReal_im,
+    Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im, mul_zero,
+    sub_zero, add_zero, zero_add, one_mul, mul_one, neg_mul]
+  congr 2
+
+/-- Exact pointwise Mellin inversion of the squared source cutoff.  This is
+the checked form of the Mellin representation used at the start of
+Guth--Maynard Lemma 6.2. -/
+theorem gmCutoffSq_mellinInversion (cutoff : GMSmoothCutoff)
+    {x : ℝ} (hx : 0 < x) :
+    mellinInv 1 (mellin (fun y : ℝ => ((cutoff y : ℂ) ^ 2))) x =
+      (cutoff x : ℂ) ^ 2 := by
+  exact mellinInv_mellin_eq 1 (fun y : ℝ => ((cutoff y : ℂ) ^ 2)) hx
+    (mellinConvergent_gmCutoffSq_one cutoff)
+    (verticalIntegrable_mellin_gmCutoffSq_one cutoff)
+    ((Complex.ofRealCLM.continuous.comp cutoff.smooth.continuous).pow 2).continuousAt
+
+/-- Substitution of the exact Mellin inversion formula into the oscillatory
+trace kernel.  This is the non-asymptotic starting identity for the rescaling
+argument in Guth--Maynard Lemma 6.2. -/
+theorem gmTraceKernel_mellinInversion (cutoff : GMSmoothCutoff)
+    (t : ℝ) {x : ℝ} (hx : 0 < x) :
+    gmTraceKernel cutoff t x =
+      mellinInv 1 (mellin (fun y : ℝ => ((cutoff y : ℂ) ^ 2))) x *
+        Complex.exp ((((t * Real.log x : ℝ) : ℂ) * I)) := by
+  rw [gmTraceKernel, gmCutoffSq_mellinInversion cutoff hx]
 
 /-- The source coefficient at Fourier frequency zero is a sample of one
 fixed Schwartz transform at frequency `t/(2π)`. -/

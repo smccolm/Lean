@@ -48,7 +48,7 @@ Author: **S. McColm**
 - **[`RiemannZeta/GuthMaynard/LargeValuesPoisson.lean`](RiemannZeta/GuthMaynard/LargeValuesPoisson.lean)**: The genuine source kernel `w(u)²uⁱᵗ`, its Schwartz realization, endpoint vanishing, Mellin identity at zero frequency, arbitrary-order uniform zero-mode decay, exact Fourier dilation, source-normalized Poisson summation, and finite integer-support reduction. It also proves the exact Hilbert–Schmidt/first-trace Poisson expansion, identifies the zero mode, and bounds the complete nonzero-frequency tail by `O(N⁻¹⁰⁰)` after polynomial cardinality loss. The uniform two-parameter Lemma 4.3 estimates, cubic trace split, and Proposition 5.1 remain open.
 - **[`RiemannZeta/GuthMaynard/LargeValues.lean`](RiemannZeta/GuthMaynard/LargeValues.lean)**: Production module reserving the F-06 proof boundary; it currently makes no large-values proof claim.
 - **[`RiemannZeta/GuthMaynard/Transfer.lean`](RiemannZeta/GuthMaynard/Transfer.lean)**: Conditional zero-density transfer theorem parameterizing the final exponent over explicit hypotheses from F-01 through F-10.
-- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 1009 exported source-level theorems across every production module, including the globally named public declarations in vendored PNT+ and the new #18/#19 layers.
+- **[`RiemannZeta/Audit.lean`](RiemannZeta/Audit.lean)**: Executable transitive dependency audit covering all 1018 exported source-level theorems across every production module, including the globally named public declarations in vendored PNT+ and the new #15/#18/#19 closeout foundations.
 
 ---
 
@@ -63,7 +63,7 @@ run_lake_build.bat
 
 For CI or a terminal session, use `run_lake_build.bat --no-pause`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The runner performs five warning-failing Lean stages: the default production build, redundant explicit production-module coverage, both retained examples, and the transitive axiom/output audit. Its integrity scans use `--no-ignore`. The current focused audit passes all 1009 dependency checks with zero project axioms. The output gate reports seven missing research outputs—two for #15, two for #18, and three for #19—so the overall runner remains expected to return the honest result `FAIL`/`1`.
+The runner performs five warning-failing Lean stages: the default production build, redundant explicit production-module coverage, both retained examples, and the transitive axiom/output audit. Its integrity scans use `--no-ignore`. The current focused audit passes all 1018 dependency checks with zero project axioms. The output gate reports seven missing research outputs—two for #15, two for #18, and three for #19—so the overall runner remains expected to return the honest result `FAIL`/`1`.
 
 ---
 

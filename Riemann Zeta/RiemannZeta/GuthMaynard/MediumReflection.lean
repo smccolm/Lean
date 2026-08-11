@@ -37,6 +37,12 @@ to `1`. -/
 noncomputable def stationaryNormalPhase (z : ℝ) : ℝ :=
   z - 1 - Real.log z
 
+/-- The positive-frequency oscillatory integrand in a reflected zeta block. -/
+noncomputable def reflectionOscillatoryIntegrand
+    (s : ℂ) (m y : ℝ) : ℂ :=
+  (y : ℂ) ^ (-s) *
+    Complex.exp (2 * Real.pi * I * ((m * y : ℝ) : ℂ))
+
 theorem hasDerivAt_reflectionPhase
     (t m x : ℝ) (hx : x ≠ 0) :
     HasDerivAt (reflectionPhase t m)
@@ -168,6 +174,28 @@ theorem reflectionPhase_stationary_rescale
   unfold reflectionStationaryPoint
   field_simp [Real.pi_ne_zero, hm.ne']
   ring
+
+/-- Exact change of scale from a physical zeta block to coordinates centered
+at the logarithmic stationary point.  This is the measure-theoretic
+rescaling required before the uniform stationary-phase estimate is applied. -/
+theorem reflectionOscillatoryIntegral_stationary_rescale
+    {s : ℂ} {m a b : ℝ} (ht : 0 < s.im) (hm : 0 < m) :
+    (∫ y in a..b, reflectionOscillatoryIntegrand s m y) =
+      (reflectionStationaryPoint s.im m : ℂ) *
+        ∫ z in a / reflectionStationaryPoint s.im m..
+            b / reflectionStationaryPoint s.im m,
+          reflectionOscillatoryIntegrand s m
+            (reflectionStationaryPoint s.im m * z) := by
+  let x₀ := reflectionStationaryPoint s.im m
+  have hx₀ : 0 < x₀ := reflectionStationaryPoint_pos ht hm
+  have hChange := intervalIntegral.smul_integral_comp_mul_left
+    (f := reflectionOscillatoryIntegrand s m)
+    (a := a / x₀) (b := b / x₀) x₀
+  rw [Complex.real_smul] at hChange
+  have ha : x₀ * (a / x₀) = a := by field_simp [hx₀.ne']
+  have hb : x₀ * (b / x₀) = b := by field_simp [hx₀.ne']
+  rw [ha, hb] at hChange
+  simpa only [x₀] using hChange.symm
 
 theorem hasDerivAt_stationaryNormalPhase
     {z : ℝ} (hz : z ≠ 0) :
