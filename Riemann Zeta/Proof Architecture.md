@@ -50,9 +50,10 @@ flowchart TD
     MX["#19 Sampling matrix and trace reduction<br/>DONE<br/>exact Lemmas 4.1-4.2<br/>operator-norm conclusions proved"]
     PF["#19 Fourier/Poisson foundations<br/>DONE<br/>Schwartz kernels, zero-mode decay,<br/>dilation, Poisson and finite support"]
     HT["#19 Hilbert-Schmidt trace expansion<br/>DONE<br/>exact first-trace Poisson formula,<br/>zero mode and uniform N^-100 tail"]
-    UF["#19 Uniform two-parameter Fourier decay<br/>and cubic trace split<br/>OPEN - NEXT #19 PROOF"]
+    UF["#19 Uniform two-parameter Fourier decay<br/>DONE<br/>all derivative orders and explicit<br/>T^-100 far-frequency control"]
+    CS["#19 Cubic trace split<br/>OPEN - NEXT #19 PROOF<br/>Lemma 4.5 and S1/S2/S3 partition"]
     S1["#19 S1 estimate<br/>OPEN<br/>GM Proposition 5.1"]
-    RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>OPEN - NEXT CLOSEOUT<br/>cutoff Mellin convergence and inversion DONE;<br/>uniform frequency truncation, finite dual sum<br/>and T^-100 tail OPEN"]
+    RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>DONE<br/>exact signed finite mode formula,<br/>aggregate estimate, T0^-1/2 core<br/>and T^-100 far-frequency control"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
     EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
@@ -64,7 +65,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1018/1018 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1052/1052 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -171,10 +172,12 @@ flowchart TD
     MX --> HT
     PF --> HT
     PF --> UF
-    MX --> UF
+    PF --> CS
+    MX --> CS
     UF -->|Lemma 4.3 truncation| RF
     HT --> S1
     UF --> S1
+    CS --> S1
     UF --> S2
     RF --> S2
     HB --> S2
@@ -216,7 +219,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,UF,RF,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,AF,QD,TM,GCS,UF,S1,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class MR,FR,ZD,AF,QD,TM,GCS,CS,S1,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

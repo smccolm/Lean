@@ -34,12 +34,13 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 ## Next Steps
 
-The current complete-closeout queue, from least to greatest estimated difficulty, is:
+The current closeout queue, from least to greatest estimated difficulty, is:
 
 1. **#18 smooth `ζ²` AFE and diagonal:** close this independent node using the already fixed `M²` support and coefficient range; keep the DFI off-diagonal theorem as a separate open node.
-2. **#19 smooth reflection:** prove Lemma 6.2 with uniform Mellin truncation and explicit tails. Its `S₂` application remains downstream of Heath–Brown.
-3. **#15 medium Type-I reflection:** finish the stationary main term, dual-block recovery, and coefficient deweighting from the existing phase geometry. Then immediately close the finite reduction and concrete Ingham/Huxley endpoints.
-4. **#19 uniform Fourier/cubic trace:** the Hilbert–Schmidt first-trace theorem is complete, including exact zero-mode isolation and a uniform `N⁻¹⁰⁰` tail. Next prove the genuinely two-parameter Lemma 4.3 bound, the cubic Poisson trace split, and Proposition 5.1 for `S₁`.
+2. **#15 medium Type-I reflection:** finish the stationary main term, dual-block recovery, and coefficient deweighting from the existing phase geometry. Then immediately close the finite reduction and concrete Ingham/Huxley endpoints.
+3. **#19 cubic trace:** the Hilbert–Schmidt first-trace theorem and genuinely two-parameter Lemma 4.3 decay are complete. Next prove the cubic Poisson trace split and Proposition 5.1 for `S₁`.
+
+Completed closeout: **#19 smooth reflection.** `LargeValuesReflection.lean` proves the signed finite Lemma 6.2 formula, aggregate estimate, uniform two-parameter decay, `T₀⁻¹/²` reflection-integral bound, and explicit `T⁻¹⁰⁰` far-frequency control. Its `S₂` application remains downstream of Heath–Brown.
 
 The full #19 energy-moment node, #18 twisted fourth moment, `S₂`, refined `S₃`, and the final density theorems are not independent closeouts yet. They consume Heath–Brown, DFI, Proposition 9.1, or other open nodes. Those three source theorems remain the independent hard cores after the four-package queue.
 
