@@ -45,6 +45,9 @@ import RiemannZeta.GuthMaynard.FiniteScaleAssembly
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.TerminalTypeI
 import RiemannZeta.GuthMaynard.TypeIFiniteEstimates
+import RiemannZeta.GuthMaynard.TypeISmoothing
+import RiemannZeta.GuthMaynard.TypeIReflection
+import RiemannZeta.GuthMaynard.TypeIFourierDeweight
 import RiemannZeta.GuthMaynard.TypeIIContour
 import RiemannZeta.GuthMaynard.TypeIIFourthMomentReduction
 import RiemannZeta.GuthMaynard.TypeIICoverage

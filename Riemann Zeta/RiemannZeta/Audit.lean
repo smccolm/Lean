@@ -683,7 +683,6 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.contDiff_gmScaledTraceKernel,
   ``RiemannZeta.GuthMaynard.hasCompactSupport_gmScaledTraceKernel,
   ``RiemannZeta.GuthMaynard.gmScaledTraceKernelSchwartz_apply,
-  ``RiemannZeta.GuthMaynard.gmScaledTraceKernelSchwartz.congr_simp,
   ``RiemannZeta.GuthMaynard.gmScaledTraceKernel_fourier,
   ``RiemannZeta.GuthMaynard.gmScaledTraceKernel_poisson,
   ``RiemannZeta.GuthMaynard.gmTraceKernel_poisson,
@@ -1128,6 +1127,41 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.mediumTypeIBProcess_native,
   ``RiemannZeta.GuthMaynard.mediumTypeILargeValue_false,
   ``RiemannZeta.GuthMaynard.typeIClassicalLargeValues_native,
+  ``RiemannZeta.GuthMaynard.contDiff_typeIDyadicCutoff,
+  ``RiemannZeta.GuthMaynard.typeISmoothStep_eq_one,
+  ``RiemannZeta.GuthMaynard.typeISmoothStep_eq_zero,
+  ``RiemannZeta.GuthMaynard.typeIDyadicCutoff_nonneg,
+  ``RiemannZeta.GuthMaynard.typeIDyadicCutoff_le_one,
+  ``RiemannZeta.GuthMaynard.typeIDyadicCutoff_eq_zero_of_le_half,
+  ``RiemannZeta.GuthMaynard.typeIDyadicCutoff_eq_zero_of_two_le,
+  ``RiemannZeta.GuthMaynard.contDiff_typeITailBoundary,
+  ``RiemannZeta.GuthMaynard.typeITailBoundary_natCast,
+  ``RiemannZeta.GuthMaynard.contDiff_typeISourceSmoothWeight,
+  ``RiemannZeta.GuthMaynard.sum_typeIDyadicCutoff_eq,
+  ``RiemannZeta.GuthMaynard.sum_typeIDyadicCutoff_eq_one,
+  ``RiemannZeta.GuthMaynard.classicalZetaLongTail_eq_sum_smoothBlocks,
+  ``RiemannZeta.GuthMaynard.typeISourceSmoothBlock_eq_restricted,
+  ``RiemannZeta.GuthMaynard.classicalZetaLongTail_eq_sum_sourceSmoothBlocks,
+  ``RiemannZeta.GuthMaynard.exists_typeISmoothBlock_large,
+  ``RiemannZeta.GuthMaynard.exists_common_typeISmoothBlock_large,
+  ``RiemannZeta.GuthMaynard.contDiff_typeIReflectionKernel,
+  ``RiemannZeta.GuthMaynard.hasCompactSupport_typeIReflectionKernel,
+  ``RiemannZeta.GuthMaynard.typeIReflectionSchwartz_apply,
+  ``RiemannZeta.GuthMaynard.typeIReflection_poisson,
+  ``RiemannZeta.GuthMaynard.typeIReflectionKernel_natCast,
+  ``RiemannZeta.GuthMaynard.typeIReflectionFourier_neg_eq_stationaryIntegral,
+  ``RiemannZeta.GuthMaynard.typeIReflection_stationary_window,
+  ``RiemannZeta.GuthMaynard.fourierDeweightFiniteBlock_native,
+  ``RiemannZeta.GuthMaynard.contDiff_typeILogWeight,
+  ``RiemannZeta.GuthMaynard.hasCompactSupport_typeILogWeight,
+  ``RiemannZeta.GuthMaynard.typeILogWeightSchwartz_apply,
+  ``RiemannZeta.GuthMaynard.typeILogWeight_log_nat,
+  ``RiemannZeta.GuthMaynard.typeISourceSmoothBlock_fourierDeweight,
+  ``RiemannZeta.GuthMaynard.contDiff_typeIReflectedLogWeight,
+  ``RiemannZeta.GuthMaynard.hasCompactSupport_typeIReflectedLogWeight,
+  ``RiemannZeta.GuthMaynard.typeIReflectedLogWeightSchwartz_apply,
+  ``RiemannZeta.GuthMaynard.typeIReflectedLogWeight_log_nat,
+  ``RiemannZeta.GuthMaynard.typeIReflectedBlock_fourierDeweight,
   ``RiemannZeta.GuthMaynard.weightedWeylBlock_eq_cpow,
   ``RiemannZeta.GuthMaynard.norm_weightedWeylBlock_le,
 ]
@@ -1153,7 +1187,7 @@ def requiredResearchOutputs : Array (Nat × Name) := #[
 private def isCompilerGeneratedTheorem (name : Name) : Bool :=
   let text := name.toString
   text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_" ||
-    text.contains "._abel_"
+    text.contains "._abel_" || text.contains ".congr_simp"
 
 /-- Vendored PNT+ modules are production proof infrastructure even though the
 upstream declarations intentionally extend root namespaces. -/
