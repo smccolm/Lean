@@ -22,7 +22,7 @@ flowchart TD
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
     TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
     PS["#15 Type-I smoothing and scale split<br/>DONE<br/>exact smooth partition, common block<br/>and cardinality-preserving scale selection"]
-    MR["#15 Medium Type-I B-process<br/>OPEN - HARD CORE<br/>exact smooth Poisson and corrected T/N<br/>stationary window DONE; uniform stationary<br/>main term plus summed remainder OPEN"]
+    MR["#15 Medium Type-I B-process<br/>OPEN - NARROWED HARD CORE<br/>exact Mellin inversion, weighted reflection,<br/>common interval and finite critical-mode<br/>polynomial DONE; source boundary plus<br/>wrong-sign/far-mode remainder OPEN"]
     FD["#15 Shared Type-I Fourier deweighting<br/>DONE<br/>exact short and reflected log weights<br/>to coefficient-one shifted polynomials"]
     PB["#15 X=1 powered-block MHH theorem<br/>DONE<br/>ordinary sharp-zeta coefficients;<br/>not the dichotomy's actual Type-II cutoff"]
     IIE["#15 Actual Type-II powered MHH application<br/>OPEN - ACCESSIBLE FINITE GLUE<br/>generalize from cutoff X=1 to<br/>X=floor(T^(delta2/2)) and apply certificates"]
@@ -70,7 +70,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1112/1112 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1141/1141 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB

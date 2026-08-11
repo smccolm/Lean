@@ -1243,6 +1243,229 @@ theorem norm_gmReflectionIntegral_le_ten_div_sqrt {tau A B : ℝ}
         gcongr
       _ = 10 / Real.sqrt tau := by ring
 
+/-- A bounded-variation amplitude may be inserted into the logarithmic
+reflection integral without losing the square-root cancellation.  This is
+the weighted van der Corput estimate needed by the Type-I B-process: the
+coefficient is the bare `10 / sqrt tau` bound multiplied by the endpoint value
+and total variation of the amplitude.
+
+The statement is deliberately quantitative.  It does not package a desired
+reflection conclusion as a hypothesis; `w'` is the actual derivative of the
+concrete amplitude and the right side is its literal interval integral. -/
+theorem norm_weighted_gmReflectionIntegral_le
+    {tau A B : ℝ} (htau : 1 ≤ tau) (hA : 0 < A) (hAB : A ≤ B)
+    (w w' : ℝ → ℂ)
+    (hw : ∀ x ∈ Set.Icc A B, HasDerivAt w (w' x) x)
+    (hw' : IntervalIntegrable w' volume A B) :
+    ‖∫ v in A..B, w v *
+        ((v : ℂ)⁻¹ * Complex.exp
+          ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))‖ ≤
+      (10 / Real.sqrt tau) *
+        (‖w B‖ + ∫ v in A..B, ‖w' v‖) := by
+  let k : ℝ → ℂ := fun v =>
+    (v : ℂ)⁻¹ * Complex.exp
+      ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))
+  let F : ℝ → ℂ := fun x => ∫ v in A..x, k v
+  have hkInt : IntervalIntegrable k volume A B := by
+    simpa only [k] using intervalIntegrable_gmReflectionIntegrand hAB hA
+  have hkContinuousPos : ContinuousOn k (Set.Ioi 0) := by
+    apply continuousOn_of_forall_continuousAt
+    intro x hx
+    have hxPos : 0 < x := hx
+    have hPhase : ContinuousAt
+        (fun y : ℝ => tau * Real.log y - 2 * Real.pi * y) x :=
+      (continuousAt_const.mul (Real.continuousAt_log hxPos.ne')).sub
+        (continuousAt_const.mul continuousAt_id)
+    exact (Complex.continuous_ofReal.continuousAt.comp continuousAt_id).inv₀
+        (Complex.ofReal_ne_zero.mpr hxPos.ne') |>.mul
+      ((Complex.continuous_ofReal.continuousAt.comp hPhase).mul
+        continuousAt_const).cexp
+  have hkContinuousAt : ∀ x ∈ Set.Icc A B, ContinuousAt k x := by
+    intro x hx
+    have hxPos : 0 < x := hA.trans_le hx.1
+    exact (hkContinuousPos x hxPos).continuousAt (Ioi_mem_nhds hxPos)
+  have hkContinuous : ContinuousOn k (Set.Icc A B) :=
+    fun x hx => (hkContinuousAt x hx).continuousWithinAt
+  have hFDeriv : ∀ x ∈ Set.Icc A B, HasDerivAt F (k x) x := by
+    intro x hx
+    have hkAx : IntervalIntegrable k volume A x := by
+      simpa only [k] using
+        intervalIntegrable_gmReflectionIntegrand hx.1 hA
+    exact intervalIntegral.integral_hasDerivAt_right hkAx
+      (hkContinuousPos.stronglyMeasurableAtFilter isOpen_Ioi x
+        (hA.trans_le hx.1))
+      (hkContinuousAt x hx)
+  have hFContinuous : ContinuousOn F (Set.Icc A B) :=
+    fun x hx => (hFDeriv x hx).continuousAt.continuousWithinAt
+  have hFContinuousU : ContinuousOn F (Set.uIcc A B) := by
+    simpa only [Set.uIcc_of_le hAB] using hFContinuous
+  have hwU : ∀ x ∈ Set.uIcc A B, HasDerivAt w (w' x) x := by
+    simpa only [Set.uIcc_of_le hAB] using hw
+  have hFDerivU : ∀ x ∈ Set.uIcc A B, HasDerivAt F (k x) x := by
+    simpa only [Set.uIcc_of_le hAB] using hFDeriv
+  have hparts := intervalIntegral.integral_mul_deriv_eq_deriv_mul
+    hwU hFDerivU hw' hkInt
+  have hFA : F A = 0 := by simp [F]
+  have hFB : F B = gmReflectionIntegral tau A B := by
+    rfl
+  have hFBound : ∀ x ∈ Set.Icc A B, ‖F x‖ ≤ 10 / Real.sqrt tau := by
+    intro x hx
+    simpa only [F, k, gmReflectionIntegral] using
+      norm_gmReflectionIntegral_le_ten_div_sqrt htau hA hx.1
+  have hvariationNonneg : 0 ≤ ∫ v in A..B, ‖w' v‖ := by
+    exact intervalIntegral.integral_nonneg hAB fun _ _ => norm_nonneg _
+  have hweightedVariation :
+      ‖∫ v in A..B, w' v * F v‖ ≤
+        (10 / Real.sqrt tau) * ∫ v in A..B, ‖w' v‖ := by
+    calc
+      ‖∫ v in A..B, w' v * F v‖ ≤
+          |∫ v in A..B, ‖w' v * F v‖| :=
+        intervalIntegral.norm_integral_le_abs_integral_norm
+      _ = ∫ v in A..B, ‖w' v * F v‖ := by
+        rw [abs_of_nonneg]
+        exact intervalIntegral.integral_nonneg hAB fun _ _ => norm_nonneg _
+      _ ≤ ∫ v in A..B, ‖w' v‖ * (10 / Real.sqrt tau) := by
+        apply intervalIntegral.integral_mono_on hAB
+        · simpa only [norm_mul] using
+            (hw'.norm.mul_continuousOn hFContinuousU.norm)
+        · exact hw'.norm.mul_const (10 / Real.sqrt tau)
+        · intro v hv
+          rw [norm_mul]
+          exact mul_le_mul_of_nonneg_left (hFBound v hv) (norm_nonneg _)
+      _ = (10 / Real.sqrt tau) * ∫ v in A..B, ‖w' v‖ := by
+        rw [intervalIntegral.integral_mul_const]
+        ring
+  rw [hparts, hFA, hFB]
+  simp only [mul_zero, sub_zero]
+  calc
+    ‖w B * gmReflectionIntegral tau A B - ∫ v in A..B, w' v * F v‖ ≤
+        ‖w B * gmReflectionIntegral tau A B‖ +
+          ‖∫ v in A..B, w' v * F v‖ := norm_sub_le _ _
+    _ ≤ ‖w B‖ * (10 / Real.sqrt tau) +
+          (10 / Real.sqrt tau) * ∫ v in A..B, ‖w' v‖ := by
+      gcongr
+      rw [norm_mul]
+      gcongr
+      exact norm_gmReflectionIntegral_le_ten_div_sqrt htau hA hAB
+    _ = (10 / Real.sqrt tau) *
+          (‖w B‖ + ∫ v in A..B, ‖w' v‖) := by ring
+
+/-- The real power amplitude occurring after Mellin reflection.  Writing it
+as an exponential keeps the derivative and its parameter dependence
+literal, including at nonintegral `sigma`. -/
+noncomputable def gmReflectionPowerWeight (sigma v : ℝ) : ℂ :=
+  Complex.exp (((-sigma * Real.log v : ℝ) : ℂ))
+
+theorem hasDerivAt_gmReflectionPowerWeight
+    {sigma v : ℝ} (hv : 0 < v) :
+    HasDerivAt (gmReflectionPowerWeight sigma)
+      (((-sigma / v : ℝ) : ℂ) * gmReflectionPowerWeight sigma v) v := by
+  unfold gmReflectionPowerWeight
+  have hReal : HasDerivAt (fun x : ℝ => -sigma * Real.log x) (-sigma / v) v := by
+    simpa only [div_eq_mul_inv] using
+      (Real.hasDerivAt_log hv.ne').const_mul (-sigma)
+  convert hReal.ofReal_comp.cexp using 1
+  all_goals ring
+
+theorem norm_gmReflectionPowerWeight {sigma v : ℝ} (hv : 0 < v) :
+    ‖gmReflectionPowerWeight sigma v‖ = v ^ (-sigma) := by
+  unfold gmReflectionPowerWeight
+  rw [Complex.norm_exp]
+  simp only [ofReal_re]
+  rw [Real.rpow_def_of_pos hv]
+  congr 1
+  ring
+
+/-- Weighted logarithmic B-process estimate for the exact power amplitude.
+The variation integral is left visible: downstream scale arithmetic may use
+either its exact antiderivative or a sharper restricted-window estimate. -/
+theorem norm_powerWeighted_gmReflectionIntegral_le
+    {tau sigma A B : ℝ} (htau : 1 ≤ tau) (hA : 0 < A) (hAB : A ≤ B) :
+    ‖∫ v in A..B, gmReflectionPowerWeight sigma v *
+        ((v : ℂ)⁻¹ * Complex.exp
+          ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))‖ ≤
+      (10 / Real.sqrt tau) *
+        (B ^ (-sigma) +
+          ∫ v in A..B,
+            ‖(((-sigma / v : ℝ) : ℂ) *
+              gmReflectionPowerWeight sigma v)‖) := by
+  let w' : ℝ → ℂ := fun v =>
+    (((-sigma / v : ℝ) : ℂ) * gmReflectionPowerWeight sigma v)
+  have hw : ∀ x ∈ Set.Icc A B,
+      HasDerivAt (gmReflectionPowerWeight sigma) (w' x) x := by
+    intro x hx
+    exact hasDerivAt_gmReflectionPowerWeight (hA.trans_le hx.1)
+  have hw' : IntervalIntegrable w' volume A B := by
+    apply ContinuousOn.intervalIntegrable
+    apply continuousOn_of_forall_continuousAt
+    intro x hx
+    have hxIcc : x ∈ Set.Icc A B := by
+      simpa only [Set.uIcc_of_le hAB] using hx
+    have hxPos : 0 < x := hA.trans_le hxIcc.1
+    exact (Complex.continuous_ofReal.continuousAt.comp
+        (continuousAt_const.div continuousAt_id hxPos.ne')).mul
+      (hasDerivAt_gmReflectionPowerWeight hxPos).continuousAt
+  have hBase := norm_weighted_gmReflectionIntegral_le htau hA hAB
+    (gmReflectionPowerWeight sigma) w' hw hw'
+  simpa only [w', norm_gmReflectionPowerWeight (hA.trans_le hAB)] using hBase
+
+theorem star_gmReflectionPowerWeight (sigma v : ℝ) :
+    star (gmReflectionPowerWeight sigma v) =
+      gmReflectionPowerWeight sigma v := by
+  unfold gmReflectionPowerWeight
+  rw [Complex.star_def, ← Complex.exp_conj]
+  simp
+
+/-- Conjugated form of the power-weighted B-process estimate.  This is the
+Fourier sign produced by the medium Type-I block. -/
+theorem norm_conj_powerWeighted_gmReflectionIntegral_le
+    {tau sigma A B : ℝ} (htau : 1 ≤ tau) (hA : 0 < A) (hAB : A ≤ B) :
+    ‖∫ v in A..B, gmReflectionPowerWeight sigma v *
+        star ((v : ℂ)⁻¹ * Complex.exp
+          ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))‖ ≤
+      (10 / Real.sqrt tau) *
+        (B ^ (-sigma) +
+          ∫ v in A..B,
+            ‖(((-sigma / v : ℝ) : ℂ) *
+              gmReflectionPowerWeight sigma v)‖) := by
+  let f : ℝ → ℂ := fun v =>
+    gmReflectionPowerWeight sigma v *
+      ((v : ℂ)⁻¹ * Complex.exp
+        ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))
+  have hfInt : IntervalIntegrable f volume A B := by
+    apply ContinuousOn.intervalIntegrable
+    apply continuousOn_of_forall_continuousAt
+    intro v hv
+    have hvIcc : v ∈ Set.Icc A B := by
+      simpa only [Set.uIcc_of_le hAB] using hv
+    have hvPos : 0 < v := hA.trans_le hvIcc.1
+    have hPhase : ContinuousAt
+        (fun x : ℝ => tau * Real.log x - 2 * Real.pi * x) v :=
+      (continuousAt_const.mul (Real.continuousAt_log hvPos.ne')).sub
+        (continuousAt_const.mul continuousAt_id)
+    exact (hasDerivAt_gmReflectionPowerWeight hvPos).continuousAt.mul
+      ((Complex.continuous_ofReal.continuousAt.comp continuousAt_id).inv₀
+          (Complex.ofReal_ne_zero.mpr hvPos.ne') |>.mul
+        ((Complex.continuous_ofReal.continuousAt.comp hPhase).mul
+          continuousAt_const).cexp)
+  have hConj := Complex.conjCLE.toContinuousLinearMap.intervalIntegral_comp_comm hfInt
+  have hPointwise : (fun v : ℝ => star (f v)) = fun v =>
+      gmReflectionPowerWeight sigma v *
+        star ((v : ℂ)⁻¹ * Complex.exp
+          ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))) := by
+    funext v
+    dsimp only [f]
+    rw [Complex.star_def, map_mul]
+    have hs := star_gmReflectionPowerWeight sigma v
+    rw [Complex.star_def] at hs
+    rw [hs]
+  have hConj' : (∫ v in A..B, star (f v)) =
+      star (∫ v in A..B, f v) := by
+    simpa only [Complex.conjCLE_apply, Complex.star_def] using hConj
+  rw [← hPointwise, hConj']
+  rw [Complex.star_def, Complex.norm_conj]
+  exact norm_powerWeighted_gmReflectionIntegral_le htau hA hAB
+
 /-- Positive Fourier modes may be integrated over the common source interval
 `[1/m, 2M/m]`.  Its endpoints were chosen so that the support `[1,2]` is
 contained in the interval for every `1 ≤ m ≤ M`. -/

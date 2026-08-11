@@ -197,13 +197,18 @@ theorem typeISourceSmoothBlock_fourierDeweight
   rw [typeILogWeightSchwartz_apply,
     typeILogWeight_log_nat Y A r n σ (hPositive n hn)]
 
-/-- The source weight which occurs after the medium Type-I B-process, written
-in logarithmic coordinates.  With `C = 2πt/Q`, its value is
-`ψ(C/eᵘ) (C/eᵘ)^(1-σ)`, exactly the amplitude in ANTEDB Lemma 11.5 after
-the harmless conjugation which changes `m^(it)` to `m^(-it)`. -/
+/-- The phase-derived leading weight after the medium Type-I B-process,
+written in logarithmic coordinates.  For Mathlib's Fourier convention the
+negative mode `-m` has stationary point `t / (2πm)`.  Thus, with
+`C = t / (2πQ)`, the weight is `ψ(C/eᵘ) (C/eᵘ)^(1-σ)`.
+
+The displayed formula in ANTEDB Lemma 11.5 has `2πt/(mQ)` instead.  That
+factor is incompatible with the derivative of the phase in the same display;
+this definition follows the exact Poisson identity proved in
+`typeIReflectionFourier_neg_eq_stationaryIntegral`. -/
 noncomputable def typeIReflectedLogWeight
     (Q : ℕ) (t σ u : ℝ) : ℂ :=
-  let C := 2 * Real.pi * t / Q
+  let C := t / (2 * Real.pi * Q)
   (typeIDyadicCutoff (C * Real.exp (-u)) : ℂ) *
     Complex.exp (((((1 - σ) * (Real.log C - u) : ℝ) : ℂ)))
 
@@ -212,7 +217,7 @@ theorem contDiff_typeIReflectedLogWeight
     ContDiff ℝ ∞ (typeIReflectedLogWeight Q t σ) := by
   unfold typeIReflectedLogWeight
   have hlinear : ContDiff ℝ ∞ (fun u : ℝ =>
-      (1 - σ) * (Real.log (2 * Real.pi * t / (Q : ℝ)) - u)) :=
+      (1 - σ) * (Real.log (t / (2 * Real.pi * (Q : ℝ))) - u)) :=
     contDiff_const.mul (contDiff_const.sub contDiff_id)
   exact (Complex.ofRealCLM.contDiff.comp
       (contDiff_typeIDyadicCutoff.comp (by fun_prop))).mul
@@ -222,7 +227,7 @@ theorem contDiff_typeIReflectedLogWeight
 theorem hasCompactSupport_typeIReflectedLogWeight
     (Q : ℕ) (t σ : ℝ) (hQ : 0 < Q) (ht : 0 < t) :
     HasCompactSupport (typeIReflectedLogWeight Q t σ) := by
-  let C : ℝ := 2 * Real.pi * t / Q
+  let C : ℝ := t / (2 * Real.pi * Q)
   have hC : 0 < C := by
     dsimp only [C]
     positivity
@@ -279,15 +284,15 @@ theorem typeIReflectedLogWeight_log_nat
     (Q n : ℕ) (t σ : ℝ) (hQ : 0 < Q) (ht : 0 < t) (hn : 0 < n) :
     typeIReflectedLogWeight Q t σ (Real.log n) =
       (typeIDyadicCutoff
-        ((2 * Real.pi * t / Q) / n) : ℂ) *
+        ((t / (2 * Real.pi * Q)) / n) : ℂ) *
         Complex.exp (((((1 - σ) *
-          Real.log ((2 * Real.pi * t / Q) / n) : ℝ) : ℂ))) := by
+          Real.log ((t / (2 * Real.pi * Q)) / n) : ℝ) : ℂ))) := by
   have hnReal : (0 : ℝ) < n := by exact_mod_cast hn
-  have hC : 0 < 2 * Real.pi * t / (Q : ℝ) := by positivity
+  have hC : 0 < t / (2 * Real.pi * (Q : ℝ)) := by positivity
   dsimp [typeIReflectedLogWeight]
   rw [Real.exp_neg, Real.exp_log hnReal]
-  have hratio : (2 * Real.pi * t / (Q : ℝ)) * ((n : ℝ)⁻¹) =
-      (2 * Real.pi * t / (Q : ℝ)) / (n : ℝ) := by ring
+  have hratio : (t / (2 * Real.pi * (Q : ℝ))) * ((n : ℝ)⁻¹) =
+      (t / (2 * Real.pi * (Q : ℝ))) / (n : ℝ) := by ring
   rw [hratio]
   congr 2
   rw [Real.log_div hC.ne' hnReal.ne']
