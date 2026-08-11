@@ -20,9 +20,14 @@ flowchart TD
     RA["#15 Exceptional-range arithmetic<br/>DONE"]
     DI["#15 Finite Type-I/Type-II dichotomy<br/>DONE"]
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
-    MR["#15 Medium Type-I reflection<br/>OPEN - NEXT CLOSEOUT / HIGH PAYOFF<br/>exact stationary integral rescaling DONE;<br/>uniform stationary main term, dual T/N block,<br/>ordinate-independent coefficients OPEN"]
     TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
-    FR["#15 Finite zero-density reduction<br/>OPEN<br/>consume dichotomy and endpoint certificates"]
+    PS["#15 Type-I smoothing and scale split<br/>OPEN - NEXT ACCESSIBLE GLUE<br/>remove the inactive sharp cutoff,<br/>extract one common smooth block,<br/>split short versus medium scale"]
+    MR["#15 Medium Type-I B-process<br/>OPEN - HARD CORE<br/>exact Poisson phase geometry and rescaling DONE;<br/>uniform sigma-weighted stationary formula,<br/>dual block at scale T/N OPEN"]
+    FD["#15 Shared Type-I Fourier deweighting<br/>OPEN<br/>short or reflected smooth block to one<br/>fixed-coefficient zeta polynomial<br/>on a common separated set"]
+    PB["#15 X=1 powered-block MHH theorem<br/>DONE<br/>ordinary sharp-zeta coefficients;<br/>not the dichotomy's actual Type-II cutoff"]
+    IIE["#15 Actual Type-II powered MHH application<br/>OPEN - ACCESSIBLE FINITE GLUE<br/>generalize from cutoff X=1 to<br/>X=floor(T^(delta2/2)) and apply certificates"]
+    ZR["#15 Short Type-I range resolution<br/>OPEN<br/>apply MHH/powering or Weyl according<br/>to the endpoint scale certificate"]
+    FR["#15 Branch-to-slab density reduction<br/>OPEN<br/>consume the dichotomy, Type-I and Type-II<br/>cardinality bounds, multiplicity and certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
     BR["#16 Beta removal<br/>DONE"]
@@ -51,8 +56,8 @@ flowchart TD
     PF["#19 Fourier/Poisson foundations<br/>DONE<br/>Schwartz kernels, zero-mode decay,<br/>dilation, Poisson and finite support"]
     HT["#19 Hilbert-Schmidt trace expansion<br/>DONE<br/>exact first-trace Poisson formula,<br/>zero mode and uniform N^-100 tail"]
     UF["#19 Uniform two-parameter Fourier decay<br/>DONE<br/>all derivative orders and explicit<br/>T^-100 far-frequency control"]
-    CS["#19 Cubic trace split<br/>OPEN - NEXT #19 PROOF<br/>Lemma 4.5 and S1/S2/S3 partition"]
-    S1["#19 S1 estimate<br/>OPEN<br/>GM Proposition 5.1"]
+    CS["#19 Cubic trace split<br/>DONE<br/>exact Lemma 4.5 Poisson expansion,<br/>diagonal plus T^-100 remainder,<br/>and S1/S2/S3 partition"]
+    S1["#19 S1 estimate<br/>DONE<br/>epsilon-separated GM Proposition 5.1<br/>with uniform T^-10 decay"]
     RF["#19 Smooth reflection / AFE<br/>GM Lemma 6.2<br/>DONE<br/>exact signed finite mode formula,<br/>aggregate estimate, T0^-1/2 core<br/>and T^-100 far-frequency control"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
@@ -65,14 +70,16 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1052/1052 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1069/1069 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
     MZ --> CF
     PZ --> ZT
     PZ --> ST
+    ER --> PS
     ER --> MR
+    ER --> FD
     ER --> TE
     ZB --> LZ
     ZB --> ZT
@@ -92,14 +99,32 @@ flowchart TD
     FDT --> DI
     PW --> DI
     ST --> DI
-    DI -->|medium Type I| MR
-    DI -->|terminal Type I| TE
-    DI -->|short branches| FR
-    MR --> FR
-    TE --> FR
+    DI -->|Type I witness| TE
+    TE -->|large witness has N below height| PS
+    PS -->|short Type I| FD
+    PS -->|medium Type I| MR
+    MR -->|dual short block| FD
+    FD --> ZR
+    VD --> ZR
+    CLV --> ZR
+    RA --> ZR
+    PB --> ZR
+    DI -->|Type II witness| IIE
+    PW --> PB
+    AC --> PB
+    CLV --> PB
+    PW --> IIE
+    AC --> IIE
+    CLV --> IIE
     PW --> FA
     CLV --> FA
     RA --> FA
+    FA --> ZR
+    FA --> IIE
+    ZR --> FR
+    IIE --> FR
+    LZ --> FR
+    FDT --> FR
     FA --> FR
     FR --> ZD
     DY --> ZD
@@ -219,7 +244,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,UF,RF,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PB,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,UF,CS,S1,RF,IG done;
     class CT,TR,CB conditional;
-    class MR,FR,ZD,AF,QD,TM,GCS,CS,S1,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class PS,MR,FD,IIE,ZR,FR,ZD,AF,QD,TM,GCS,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;
