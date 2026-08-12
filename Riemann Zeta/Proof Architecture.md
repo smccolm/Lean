@@ -45,7 +45,7 @@ flowchart TD
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>DONE<br/>strengthened completed-xi AFE,<br/>paired Gamma ratio, integrable envelope<br/>and concrete weighted hm=kn bound"]
-    QD["#18 Quadratic-divisor off-diagonal<br/>OPEN - FINITE FOURIER ENTRY DONE<br/>exact am-bn shift partition, symmetry,<br/>ZMod Parseval and exact Kloosterman<br/>mean square DONE; divisor Voronoi,<br/>pointwise composite Weil, Bessel transforms<br/>and DFI error OPEN"]
+    QD["#18 Quadratic-divisor off-diagonal<br/>OPEN - EXACT CONTOUR LAYER DONE<br/>finite shift/Fourier/Kloosterman L2 DONE;<br/>periodic Estermann continuation, double-pole<br/>residue and Mellin-Barnes Voronoi theorem DONE;<br/>source-weight tail discharge, delta localization,<br/>dual-transform estimates and DFI error OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
     TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>three native inputs remain open"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1259/1259 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1296/1296 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB

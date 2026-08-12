@@ -313,6 +313,7 @@ theorem kloostermanSumZMod_mean_square (q : ℕ) [NeZero q] (n : ZMod q) :
       rw [ZMod.stdAddChar.map_add_eq_mul, ZMod.stdAddChar.map_add_eq_mul,
         star_mul]
       ring
+
     _ = ∑ d : (ZMod q)ˣ, ∑ e : (ZMod q)ˣ,
           (star (ZMod.stdAddChar
               (n * (↑(d⁻¹) : ZMod q)) : ℂ) *
@@ -343,6 +344,227 @@ theorem kloostermanSumZMod_mean_square (q : ℕ) [NeZero q] (n : ZMod q) :
       rw [Finset.sum_const, nsmul_eq_mul, Finset.card_univ,
         ZMod.card_units_eq_totient]
       ring
+
+/-- Exact square-root cancellation on average along an invertible affine
+frequency progression.  This is the form of finite Fourier cancellation
+needed when the DFI transformed variables are summed before absolute values
+are taken: multiplication by a unit and translation merely permute the
+frequencies modulo `q`. -/
+theorem kloostermanSumZMod_affine_mean_square (q : ℕ) [NeZero q]
+    (h : ZMod q) (a : (ZMod q)ˣ) (b : ZMod q) :
+    (∑ x : ZMod q,
+      star (kloostermanSumZMod q ((a : ZMod q) * x + b) h) *
+        kloostermanSumZMod q ((a : ZMod q) * x + b) h) =
+      (q : ℂ) * (Nat.totient q : ℂ) := by
+  let e : ZMod q ≃ ZMod q := a.mulLeft.trans (Equiv.addRight b)
+  calc
+    (∑ x : ZMod q,
+        star (kloostermanSumZMod q ((a : ZMod q) * x + b) h) *
+          kloostermanSumZMod q ((a : ZMod q) * x + b) h) =
+        ∑ y : ZMod q,
+          star (kloostermanSumZMod q y h) * kloostermanSumZMod q y h := by
+      refine Fintype.sum_equiv e _ _ (fun x => ?_)
+      rfl
+    _ = (q : ℂ) * (Nat.totient q : ℂ) :=
+      kloostermanSumZMod_mean_square q h
+
+/-- Real norm-square form of the affine Kloosterman Parseval identity. -/
+theorem sum_norm_kloostermanSumZMod_affine_sq (q : ℕ) [NeZero q]
+    (h : ZMod q) (a : (ZMod q)ˣ) (b : ZMod q) :
+    (∑ x : ZMod q, ‖kloostermanSumZMod q ((a : ZMod q) * x + b) h‖ ^ 2) =
+      (q : ℝ) * (Nat.totient q : ℝ) := by
+  have hParseval := congrArg Complex.re
+    (kloostermanSumZMod_affine_mean_square q h a b)
+  simpa [← Complex.normSq_eq_norm_sq, Complex.normSq_eq_conj_mul_self] using hParseval
+
+/-- At most `L / q + 1` natural numbers below `L` occupy any prescribed
+residue class modulo a nonzero modulus `q`. -/
+theorem range_zmod_fiber_card_le (q L : ℕ) [NeZero q] (r : ZMod q) :
+    ((Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r)).card ≤ L / q + 1 := by
+  let fiber : Finset ℕ :=
+    (Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r)
+  have hCard : fiber.card ≤ (Finset.range (L / q + 1)).card := by
+    apply Finset.card_le_card_of_injOn (fun n : ℕ => n / q)
+    · intro n hn
+      have hnL : n < L := Finset.mem_range.mp (Finset.mem_filter.mp hn).1
+      have hq : 0 < q := Nat.pos_of_ne_zero (NeZero.ne q)
+      have hdiv : n / q ≤ L / q := Nat.div_le_div_right hnL.le
+      have hlt : n / q < L / q + 1 := by omega
+      simpa using (Finset.mem_range.mpr hlt)
+    · intro m hm n hn hmn
+      have hmod : m % q = n % q := by
+        rw [← ZMod.natCast_eq_natCast_iff']
+        exact (Finset.mem_filter.mp hm).2.trans (Finset.mem_filter.mp hn).2.symm
+      change m / q = n / q at hmn
+      calc
+        m = m % q + q * (m / q) := (Nat.mod_add_div m q).symm
+        _ = n % q + q * (n / q) := by rw [hmod, hmn]
+        _ = n := Nat.mod_add_div n q
+  simpa [fiber] using hCard
+
+/-- A finite interval of an invertible affine progression retains the
+square-root average cancellation of a complete Kloosterman family, with only
+the unavoidable number of complete residue blocks. -/
+theorem sum_range_norm_kloostermanSumZMod_affine_sq_le
+    (q L : ℕ) [NeZero q] (h : ZMod q) (a : (ZMod q)ˣ) (b : ZMod q) :
+    ∑ n ∈ Finset.range L,
+        ‖kloostermanSumZMod q ((a : ZMod q) * (n : ZMod q) + b) h‖ ^ 2 ≤
+      ((L / q + 1 : ℕ) : ℝ) * ((q : ℝ) * (Nat.totient q : ℝ)) := by
+  let energy : ZMod q → ℝ := fun r =>
+    ‖kloostermanSumZMod q ((a : ZMod q) * r + b) h‖ ^ 2
+  have hFiber : ∀ r : ZMod q,
+      (((Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r)).card : ℝ) ≤
+        ((L / q + 1 : ℕ) : ℝ) := by
+    intro r
+    exact_mod_cast (range_zmod_fiber_card_le q L r)
+  change ∑ n ∈ Finset.range L, energy (n : ZMod q) ≤ _
+  calc
+    ∑ n ∈ Finset.range L, energy (n : ZMod q) =
+        ∑ r : ZMod q,
+          ∑ n ∈ (Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r),
+            energy (n : ZMod q) := by
+      exact (Finset.sum_fiberwise_of_maps_to
+        (s := Finset.range L) (t := Finset.univ)
+        (g := fun n : ℕ => (n : ZMod q)) (by simp)
+        (fun n : ℕ => energy (n : ZMod q))).symm
+    _ =
+        ∑ r : ZMod q,
+          (((Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r)).card : ℝ) *
+            energy r := by
+      apply Finset.sum_congr rfl
+      intro r _hr
+      calc
+        ∑ n ∈ (Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r),
+            energy (n : ZMod q) =
+            ∑ _n ∈ (Finset.range L).filter (fun n : ℕ => (n : ZMod q) = r),
+              energy r := by
+          apply Finset.sum_congr rfl
+          intro n hn
+          rw [(Finset.mem_filter.mp hn).2]
+        _ = _ := by simp
+    _ ≤ ∑ r : ZMod q, ((L / q + 1 : ℕ) : ℝ) * energy r := by
+      apply Finset.sum_le_sum
+      intro r _hr
+      exact mul_le_mul_of_nonneg_right (hFiber r) (sq_nonneg _)
+    _ = ((L / q + 1 : ℕ) : ℝ) * ((q : ℝ) * (Nat.totient q : ℝ)) := by
+      rw [← Finset.mul_sum, sum_norm_kloostermanSumZMod_affine_sq]
+
+/-- Cauchy--Schwarz form of the finite transformed-frequency estimate.  It
+retains the exact `ℓ2` norm of the Voronoi/Bessel weights and pays only the
+complete-block Kloosterman energy. -/
+theorem norm_sum_range_mul_kloostermanSumZMod_affine_le
+    (q L : ℕ) [NeZero q] (h : ZMod q) (a : (ZMod q)ˣ) (b : ZMod q)
+    (w : ℕ → ℂ) :
+    ‖∑ n ∈ Finset.range L,
+        w n * kloostermanSumZMod q ((a : ZMod q) * (n : ZMod q) + b) h‖ ≤
+      Real.sqrt (∑ n ∈ Finset.range L, ‖w n‖ ^ 2) *
+        Real.sqrt (((L / q + 1 : ℕ) : ℝ) *
+          ((q : ℝ) * (Nat.totient q : ℝ))) := by
+  calc
+    ‖∑ n ∈ Finset.range L,
+        w n * kloostermanSumZMod q ((a : ZMod q) * (n : ZMod q) + b) h‖ ≤
+        ∑ n ∈ Finset.range L,
+          ‖w n‖ * ‖kloostermanSumZMod q
+            ((a : ZMod q) * (n : ZMod q) + b) h‖ := by
+      calc
+        ‖∑ n ∈ Finset.range L,
+            w n * kloostermanSumZMod q ((a : ZMod q) * (n : ZMod q) + b) h‖ ≤
+            ∑ n ∈ Finset.range L,
+              ‖w n * kloostermanSumZMod q
+                ((a : ZMod q) * (n : ZMod q) + b) h‖ := norm_sum_le _ _
+        _ = _ := by simp only [norm_mul]
+    _ ≤ Real.sqrt (∑ n ∈ Finset.range L, ‖w n‖ ^ 2) *
+        Real.sqrt (∑ n ∈ Finset.range L,
+          ‖kloostermanSumZMod q
+            ((a : ZMod q) * (n : ZMod q) + b) h‖ ^ 2) :=
+      Real.sum_mul_le_sqrt_mul_sqrt (Finset.range L) (‖w ·‖)
+        (fun n => ‖kloostermanSumZMod q
+          ((a : ZMod q) * (n : ZMod q) + b) h‖)
+    _ ≤ Real.sqrt (∑ n ∈ Finset.range L, ‖w n‖ ^ 2) *
+        Real.sqrt (((L / q + 1 : ℕ) : ℝ) *
+          ((q : ℝ) * (Nat.totient q : ℝ))) := by
+      gcongr
+      exact sum_range_norm_kloostermanSumZMod_affine_sq_le q L h a b
+
+/-- Two-frequency version of the complete-block Kloosterman energy bound.
+For each second frequency, an invertible first coefficient makes the first
+frequency run through complete residue blocks.  This is the exact geometry
+of the `S(h, ām-b̄n;q)` term in DFI equation (24). -/
+theorem sum_range_range_norm_kloostermanSumZMod_affine_sq_le
+    (q L₁ L₂ : ℕ) [NeZero q] (h : ZMod q) (a : (ZMod q)ˣ)
+    (b c : ZMod q) :
+    ∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+        ‖kloostermanSumZMod q
+          ((a : ZMod q) * (m : ZMod q) + b * (n : ZMod q) + c) h‖ ^ 2 ≤
+      (L₂ : ℝ) * (((L₁ / q + 1 : ℕ) : ℝ) *
+        ((q : ℝ) * (Nat.totient q : ℝ))) := by
+  calc
+    ∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+        ‖kloostermanSumZMod q
+          ((a : ZMod q) * (m : ZMod q) + b * (n : ZMod q) + c) h‖ ^ 2 =
+        ∑ n ∈ Finset.range L₂, ∑ m ∈ Finset.range L₁,
+          ‖kloostermanSumZMod q
+            ((a : ZMod q) * (m : ZMod q) +
+              (b * (n : ZMod q) + c)) h‖ ^ 2 := by
+      rw [Finset.sum_comm]
+      apply Finset.sum_congr rfl
+      intro n _hn
+      apply Finset.sum_congr rfl
+      intro m _hm
+      congr 3
+      ring
+    _ ≤ ∑ _n ∈ Finset.range L₂,
+        (((L₁ / q + 1 : ℕ) : ℝ) *
+          ((q : ℝ) * (Nat.totient q : ℝ))) := by
+      apply Finset.sum_le_sum
+      intro n _hn
+      exact sum_range_norm_kloostermanSumZMod_affine_sq_le
+        q L₁ h a (b * (n : ZMod q) + c)
+    _ = (L₂ : ℝ) * (((L₁ / q + 1 : ℕ) : ℝ) *
+        ((q : ℝ) * (Nat.totient q : ℝ))) := by simp
+
+/-- Weighted two-frequency Cauchy--Schwarz estimate for the double-dual
+Voronoi term.  Unlike a pointwise triangle bound, this retains the exact
+`ℓ2` norm of the Bessel/Mellin transform weights and obtains square-root
+cancellation from finite Fourier orthogonality. -/
+theorem norm_sum_range_range_mul_kloostermanSumZMod_affine_le
+    (q L₁ L₂ : ℕ) [NeZero q] (h : ZMod q) (a : (ZMod q)ˣ)
+    (b c : ZMod q) (w : ℕ → ℕ → ℂ) :
+    ‖∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+        w m n * kloostermanSumZMod q
+          ((a : ZMod q) * (m : ZMod q) + b * (n : ZMod q) + c) h‖ ≤
+      Real.sqrt
+          (∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+            ‖w m n‖ ^ 2) *
+        Real.sqrt ((L₂ : ℝ) * (((L₁ / q + 1 : ℕ) : ℝ) *
+          ((q : ℝ) * (Nat.totient q : ℝ)))) := by
+  let P := Finset.range L₁ ×ˢ Finset.range L₂
+  let K : ℕ × ℕ → ℂ := fun p =>
+    kloostermanSumZMod q
+      ((a : ZMod q) * (p.1 : ZMod q) + b * (p.2 : ZMod q) + c) h
+  calc
+    ‖∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+        w m n * kloostermanSumZMod q
+          ((a : ZMod q) * (m : ZMod q) + b * (n : ZMod q) + c) h‖ =
+        ‖∑ p ∈ P, w p.1 p.2 * K p‖ := by
+      simp [P, K, Finset.sum_product]
+    _ ≤ ∑ p ∈ P, ‖w p.1 p.2‖ * ‖K p‖ := by
+      calc
+        ‖∑ p ∈ P, w p.1 p.2 * K p‖ ≤
+            ∑ p ∈ P, ‖w p.1 p.2 * K p‖ := norm_sum_le _ _
+        _ = _ := by simp only [norm_mul]
+    _ ≤ Real.sqrt (∑ p ∈ P, ‖w p.1 p.2‖ ^ 2) *
+        Real.sqrt (∑ p ∈ P, ‖K p‖ ^ 2) :=
+      Real.sum_mul_le_sqrt_mul_sqrt P (fun p => ‖w p.1 p.2‖) (‖K ·‖)
+    _ ≤ Real.sqrt
+          (∑ m ∈ Finset.range L₁, ∑ n ∈ Finset.range L₂,
+            ‖w m n‖ ^ 2) *
+        Real.sqrt ((L₂ : ℝ) * (((L₁ / q + 1 : ℕ) : ℝ) *
+          ((q : ℝ) * (Nat.totient q : ℝ)))) := by
+      simp only [P, K, Finset.sum_product]
+      gcongr
+      exact sum_range_range_norm_kloostermanSumZMod_affine_sq_le
+        q L₁ L₂ h a b c
 
 /-- The elementary cardinality bound for a complete Kloosterman sum.  This is
 not the Weil bound: it saves no square root and therefore does not close the
