@@ -9,6 +9,7 @@ import RiemannZeta.GuthMaynard.BetaDependence
 import RiemannZeta.GuthMaynard.LargeValuesDefinitions
 import RiemannZeta.GuthMaynard.LargeValuesLanguage
 import RiemannZeta.GuthMaynard.LargeValuesMatrix
+import RiemannZeta.GuthMaynard.LargeValuesLocalization
 import RiemannZeta.GuthMaynard.TraceDispersion
 import RiemannZeta.GuthMaynard.LargeValuesPoisson
 import RiemannZeta.GuthMaynard.LargeValuesReflection
@@ -45,6 +46,7 @@ import RiemannZeta.GuthMaynard.FiniteScaleAssembly
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.TerminalTypeI
 import RiemannZeta.GuthMaynard.TypeIFiniteEstimates
+import RiemannZeta.GuthMaynard.TypeIFiniteWindow
 import RiemannZeta.GuthMaynard.TypeISmoothing
 import RiemannZeta.GuthMaynard.TypeIReflection
 import RiemannZeta.GuthMaynard.TypeIFourierDeweight

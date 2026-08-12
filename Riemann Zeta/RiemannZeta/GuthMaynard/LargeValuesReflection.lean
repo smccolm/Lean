@@ -1071,6 +1071,82 @@ theorem intervalIntegrable_gmReflectionIntegrand {tau a b : ℝ}
       (Complex.ofReal_ne_zero.mpr hvPos.ne') |>.mul
     ((Complex.continuous_ofReal.continuousAt.comp hPhase).mul continuousAt_const).cexp
 
+/-- Pointwise identification of the inner Fubini integral used in the Mellin
+reflection formula.  Naming this equality is essential for retaining the
+finite Dirichlet polynomial inside the outer Mellin integral. -/
+private theorem intervalIntegral_gmMellinReflectionIntegrand_eq
+    (cutoff : GMSmoothCutoff) (t r : ℝ) {N m M : ℕ}
+    (hN : 0 < N) (hm : 1 ≤ m) (hmM : m ≤ M) :
+    (∫ v in (N : ℝ)..(2 * N * M : ℝ),
+        gmMellinReflectionIntegrand cutoff t (N * m) v r) =
+      ((N * m : ℕ) : ℂ) * ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) *
+        gmCutoffMellin cutoff r *
+          gmReflectionIntegral (t - r) N (2 * N * M) := by
+  have hAB : (N : ℝ) ≤ 2 * N * M := by
+    have hNReal : (0 : ℝ) < N := by exact_mod_cast hN
+    have hMReal : (1 : ℝ) ≤ M := by exact_mod_cast hm.trans hmM
+    nlinarith
+  have hNReal : (0 : ℝ) < N := by exact_mod_cast hN
+  have hqNat : 0 < N * m := Nat.mul_pos hN (lt_of_lt_of_le Nat.zero_lt_one hm)
+  have hqReal : (0 : ℝ) < N * m := by exact_mod_cast hqNat
+  unfold gmReflectionIntegral
+  rw [← intervalIntegral.integral_const_mul]
+  apply intervalIntegral.integral_congr
+  intro v hv
+  have hvPos : 0 < v := hNReal.trans_le
+    ((Set.uIcc_of_le hAB ▸ hv).1)
+  unfold gmMellinReflectionIntegrand
+  change
+    ((v : ℂ) / (((N : ℝ) * m : ℝ) : ℂ))⁻¹ *
+          Complex.exp (-(((r * Real.log (v / ((N : ℝ) * m)) : ℝ) : ℂ) * I)) *
+        gmCutoffMellin cutoff r *
+          Complex.exp ((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)) =
+      ((N * m : ℕ) : ℂ) * ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) *
+        gmCutoffMellin cutoff r *
+          ((v : ℂ)⁻¹ * Complex.exp
+            (((((t - r) * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)))
+  have hlog : Real.log (v / ((N : ℝ) * m)) =
+      Real.log v - Real.log ((N : ℝ) * m) :=
+    Real.log_div hvPos.ne' hqReal.ne'
+  rw [hlog]
+  have hqComplex : (((N : ℝ) * m : ℝ) : ℂ) = ((N * m : ℕ) : ℂ) := by
+    norm_num
+  rw [← hqComplex]
+  rw [Complex.cpow_def_of_ne_zero (Complex.ofReal_ne_zero.mpr hqReal.ne')]
+  rw [← Complex.ofReal_log hqReal.le]
+  have hRatioInv :
+      ((v : ℂ) / (((N : ℝ) * m : ℝ) : ℂ))⁻¹ =
+        (((N : ℝ) * m : ℝ) : ℂ) * (v : ℂ)⁻¹ := by
+    field_simp [Complex.ofReal_ne_zero.mpr hqReal.ne',
+      Complex.ofReal_ne_zero.mpr hvPos.ne']
+  have hExpEq :
+      Complex.exp (-(((r * (Real.log v - Real.log ((N : ℝ) * m)) : ℝ) : ℂ) * I)) *
+          Complex.exp ((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)) =
+        Complex.exp ((Real.log ((N : ℝ) * m) : ℂ) * ((r : ℂ) * I)) *
+          Complex.exp (((((t - r) * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)) := by
+    rw [← Complex.exp_add, ← Complex.exp_add]
+    congr 1
+    push_cast
+    ring
+  rw [hRatioInv]
+  calc
+    (((N : ℝ) * m : ℝ) : ℂ) * (v : ℂ)⁻¹ *
+          Complex.exp (-(((r * (Real.log v - Real.log ((N : ℝ) * m)) : ℝ) : ℂ) * I)) *
+        gmCutoffMellin cutoff r *
+          Complex.exp ((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I)) =
+      (((N : ℝ) * m : ℝ) : ℂ) * (v : ℂ)⁻¹ * gmCutoffMellin cutoff r *
+        (Complex.exp (-(((r * (Real.log v - Real.log ((N : ℝ) * m)) : ℝ) : ℂ) * I)) *
+          Complex.exp ((((t * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))) := by ring
+    _ = (((N : ℝ) * m : ℝ) : ℂ) * (v : ℂ)⁻¹ * gmCutoffMellin cutoff r *
+        (Complex.exp ((Real.log ((N : ℝ) * m) : ℂ) * ((r : ℂ) * I)) *
+          Complex.exp (((((t - r) * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))) := by
+      rw [hExpEq]
+    _ = (((N : ℝ) * m : ℝ) : ℂ) *
+          Complex.exp ((Real.log ((N : ℝ) * m) : ℂ) * ((r : ℂ) * I)) *
+        gmCutoffMellin cutoff r *
+          ((v : ℂ)⁻¹ * Complex.exp
+            (((((t - r) * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))) := by ring
+
 /-- Uniform first/second-derivative estimate for the common reflection
 integral.  This is the `T₀⁻¹/²` analytic core of Guth--Maynard Lemma 6.2. -/
 theorem norm_gmReflectionIntegral_le_ten_div_sqrt {tau A B : ℝ}
@@ -1644,6 +1720,220 @@ noncomputable def gmReflectedMode (cutoff : GMSmoothCutoff)
             gmCutoffMellin cutoff r *
               gmReflectionIntegral (t - r) N (2 * N * M))
 
+/-- One positive reflected mode before summing over the Fourier frequency.
+The normalization is arranged so that the natural-number scale cancels
+inside the aggregate sum. -/
+noncomputable def gmPositiveDualModeIntegrand (cutoff : GMSmoothCutoff)
+    (t : ℝ) (N M m : ℕ) (r : ℝ) : ℂ :=
+  ((N * m : ℕ) : ℂ)⁻¹ * ((N * m : ℕ) : ℂ) ^ (-((t : ℂ) * I)) *
+    ((1 / (2 * Real.pi) : ℝ) •
+      (((N * m : ℕ) : ℂ) * ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) *
+        gmCutoffMellin cutoff r *
+          gmReflectionIntegral (t - r) N (2 * N * M)))
+
+/-- The common finite Dirichlet polynomial retained inside the Mellin
+integral.  This is the cancellation-bearing object missing from a
+mode-by-mode triangle inequality. -/
+noncomputable def gmPositiveDualDirichletPoly
+    (t : ℝ) (N M : ℕ) (r : ℝ) : ℂ :=
+  ∑ m ∈ Finset.Icc 1 M,
+    ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))
+
+private theorem integrable_gmPositiveDualModeIntegrand
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N m M : ℕ}
+    (hN : 0 < N) (hm : 1 ≤ m) (hmM : m ≤ M) :
+    Integrable (gmPositiveDualModeIntegrand cutoff t N M m) := by
+  have hAB : (N : ℝ) ≤ 2 * N * M := by
+    have hNReal : (0 : ℝ) < N := by exact_mod_cast hN
+    have hMReal : (1 : ℝ) ≤ M := by exact_mod_cast hm.trans hmM
+    nlinarith
+  have hProd := integrable_gmMellinReflectionIntegrand cutoff t hN hm hmM
+  have hInner : Integrable (fun r : ℝ =>
+      ∫ v in (N : ℝ)..(2 * N * M : ℝ),
+        gmMellinReflectionIntegrand cutoff t (N * m) v r) := by
+    simpa only [intervalIntegral.integral_of_le hAB, Set.uIoc_of_le hAB,
+      Function.uncurry_apply_pair] using
+      hProd.integral_prod_right
+  have hSimplified : Integrable (fun r : ℝ =>
+      ((N * m : ℕ) : ℂ) * ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) *
+        gmCutoffMellin cutoff r *
+          gmReflectionIntegral (t - r) N (2 * N * M)) := by
+    apply hInner.congr
+    filter_upwards with r
+    exact intervalIntegral_gmMellinReflectionIntegrand_eq
+      cutoff t r hN hm hmM
+  have hMul := hSimplified.const_mul
+    (((N * m : ℕ) : ℂ)⁻¹ * ((N * m : ℕ) : ℂ) ^ (-((t : ℂ) * I)) *
+      ((1 / (2 * Real.pi) : ℝ) : ℂ))
+  convert hMul using 1
+  funext r
+  rw [gmPositiveDualModeIntegrand, Complex.real_smul]
+  ring
+
+/-- Each positive Fourier coefficient is the integral of its normalized
+dual-mode integrand. -/
+theorem gmTraceFourier_pos_eq_integral_dualMode (cutoff : GMSmoothCutoff)
+    (t : ℝ) {N m M : ℕ} (hN : 0 < N) (hm : 1 ≤ m) (hmM : m ≤ M) :
+    gmTraceFourier cutoff t ((N : ℝ) * m) =
+      ∫ r : ℝ, gmPositiveDualModeIntegrand cutoff t N M m r := by
+  rw [gmTraceFourier_pos_eq_mellinReflection cutoff t hN hm hmM]
+  unfold gmPositiveDualModeIntegrand
+  rw [MeasureTheory.integral_const_mul]
+  rw [MeasureTheory.integral_smul]
+
+/-- Exact aggregate positive-mode identity with the finite Dirichlet
+polynomial kept inside the single Mellin integral. -/
+theorem gmTraceFourier_pos_sum_eq_integral_dualPoly
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N M : ℕ} (hN : 0 < N) :
+    (∑ m ∈ Finset.Icc 1 M, gmTraceFourier cutoff t ((N : ℝ) * m)) =
+      ∫ r : ℝ, ∑ m ∈ Finset.Icc 1 M,
+        gmPositiveDualModeIntegrand cutoff t N M m r := by
+  calc
+    (∑ m ∈ Finset.Icc 1 M, gmTraceFourier cutoff t ((N : ℝ) * m)) =
+        ∑ m ∈ Finset.Icc 1 M,
+          ∫ r : ℝ, gmPositiveDualModeIntegrand cutoff t N M m r := by
+      apply Finset.sum_congr rfl
+      intro m hm
+      have hmRange := Finset.mem_Icc.mp hm
+      exact gmTraceFourier_pos_eq_integral_dualMode cutoff t hN
+        hmRange.1 hmRange.2
+    _ = ∫ r : ℝ, ∑ m ∈ Finset.Icc 1 M,
+        gmPositiveDualModeIntegrand cutoff t N M m r := by
+      symm
+      apply MeasureTheory.integral_finsetSum
+      intro m hm
+      have hmRange := Finset.mem_Icc.mp hm
+      exact integrable_gmPositiveDualModeIntegrand cutoff t hN
+        hmRange.1 hmRange.2
+
+/-- Algebraic cancellation of the scale factors in the aggregate integrand.
+The remaining finite sum is precisely one Dirichlet polynomial. -/
+theorem sum_gmPositiveDualModeIntegrand_eq
+    (cutoff : GMSmoothCutoff) (t r : ℝ) {N M : ℕ} (hN : 0 < N) :
+    (∑ m ∈ Finset.Icc 1 M,
+        gmPositiveDualModeIntegrand cutoff t N M m r) =
+      (1 / (2 * Real.pi) : ℝ) •
+        (gmCutoffMellin cutoff r *
+          gmReflectionIntegral (t - r) N (2 * N * M) *
+            gmPositiveDualDirichletPoly t N M r) := by
+  rw [gmPositiveDualDirichletPoly]
+  rw [Complex.real_smul]
+  rw [Finset.mul_sum, Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro m hm
+  have hmPos : 0 < N * m := by
+    exact Nat.mul_pos hN (lt_of_lt_of_le Nat.zero_lt_one (Finset.mem_Icc.mp hm).1)
+  have hq : ((N * m : ℕ) : ℂ) ≠ 0 := by exact_mod_cast hmPos.ne'
+  rw [gmPositiveDualModeIntegrand]
+  have hpow :
+      ((N * m : ℕ) : ℂ) ^ (-((t : ℂ) * I)) *
+          ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) =
+        ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I)) := by
+    rw [← Complex.cpow_add _ _ hq]
+    congr 2
+    push_cast
+    ring
+  simp_rw [Complex.real_smul]
+  have hqCancel : ((N * m : ℕ) : ℂ)⁻¹ * ((N * m : ℕ) : ℂ) = 1 :=
+    inv_mul_cancel₀ hq
+  calc
+    ((N * m : ℕ) : ℂ)⁻¹ * ((N * m : ℕ) : ℂ) ^ (-((t : ℂ) * I)) *
+          (((1 / (2 * Real.pi) : ℝ) : ℂ) *
+            (((N * m : ℕ) : ℂ) * ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I) *
+              gmCutoffMellin cutoff r *
+                gmReflectionIntegral (t - r) N (2 * N * M))) =
+        (((1 / (2 * Real.pi) : ℝ) : ℂ) *
+          (((N * m : ℕ) : ℂ)⁻¹ * ((N * m : ℕ) : ℂ)) *
+          (((N * m : ℕ) : ℂ) ^ (-((t : ℂ) * I)) *
+            ((N * m : ℕ) : ℂ) ^ ((r : ℂ) * I)) *
+          gmCutoffMellin cutoff r *
+            gmReflectionIntegral (t - r) N (2 * N * M)) := by ring
+    _ = (((1 / (2 * Real.pi) : ℝ) : ℂ) *
+        (gmCutoffMellin cutoff r *
+          gmReflectionIntegral (t - r) N (2 * N * M) *
+            ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I)))) := by
+      rw [hqCancel, hpow]
+      ring
+
+/-- Cancellation-preserving norm form of the positive half of Guth--Maynard
+Lemma 6.2.  No factor equal to the number of Fourier modes is introduced. -/
+theorem norm_gmTraceFourier_pos_sum_le_dualPoly
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N M : ℕ} (hN : 0 < N) :
+    ‖∑ m ∈ Finset.Icc 1 M, gmTraceFourier cutoff t ((N : ℝ) * m)‖ ≤
+      ∫ r : ℝ, (1 / (2 * Real.pi) : ℝ) *
+        ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *
+        ‖gmPositiveDualDirichletPoly t N M r‖ := by
+  rw [gmTraceFourier_pos_sum_eq_integral_dualPoly cutoff t hN]
+  calc
+    ‖∫ r : ℝ, ∑ m ∈ Finset.Icc 1 M,
+        gmPositiveDualModeIntegrand cutoff t N M m r‖ ≤
+        ∫ r : ℝ, ‖∑ m ∈ Finset.Icc 1 M,
+          gmPositiveDualModeIntegrand cutoff t N M m r‖ :=
+      MeasureTheory.norm_integral_le_integral_norm _
+    _ = ∫ r : ℝ, (1 / (2 * Real.pi) : ℝ) *
+        ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *
+        ‖gmPositiveDualDirichletPoly t N M r‖ := by
+      apply MeasureTheory.integral_congr_ae
+      filter_upwards with r
+      rw [sum_gmPositiveDualModeIntegrand_eq cutoff t r hN]
+      rw [norm_smul, Real.norm_eq_abs, abs_of_pos (by positivity :
+        0 < (1 / (2 * Real.pi) : ℝ)), norm_mul, norm_mul]
+      ring
+
+/-- The negative Fourier modes satisfy the conjugate cancellation-preserving
+bound.  In particular, no factor equal to the number of modes is introduced
+on the negative half either. -/
+theorem norm_gmTraceFourier_neg_sum_le_dualPoly
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N M : ℕ} (hN : 0 < N) :
+    ‖∑ m ∈ Finset.Icc 1 M,
+        gmTraceFourier cutoff t (-((N : ℝ) * m))‖ ≤
+      ∫ r : ℝ, (1 / (2 * Real.pi) : ℝ) *
+        ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (-t - r) N (2 * N * M)‖ *
+        ‖gmPositiveDualDirichletPoly (-t) N M r‖ := by
+  have hsum :
+      (∑ m ∈ Finset.Icc 1 M,
+          gmTraceFourier cutoff t (-((N : ℝ) * m))) =
+        star (∑ m ∈ Finset.Icc 1 M,
+          gmTraceFourier cutoff (-t) ((N : ℝ) * m)) := by
+    calc
+      (∑ m ∈ Finset.Icc 1 M,
+          gmTraceFourier cutoff t (-((N : ℝ) * m))) =
+          ∑ m ∈ Finset.Icc 1 M,
+            star (gmTraceFourier cutoff (-t) ((N : ℝ) * m)) := by
+        apply Finset.sum_congr rfl
+        intro m _
+        exact gmTraceFourier_neg_eq_conj cutoff t ((N : ℝ) * m)
+      _ = star (∑ m ∈ Finset.Icc 1 M,
+          gmTraceFourier cutoff (-t) ((N : ℝ) * m)) := by simp
+  rw [hsum, norm_star]
+  exact norm_gmTraceFourier_pos_sum_le_dualPoly cutoff (-t) hN
+
+/-- Cancellation-preserving estimate for the complete retained signed window.
+This removes the spurious mode-cardinality loss from
+`norm_gmSmoothReflection_native_le`.  The uniform `T₀⁻¹ᐟ²` extraction and the
+summed omitted-frequency remainder required by the published Lemma 6.2 remain
+separate obligations. -/
+theorem norm_gmTraceFourier_signed_sum_le_dualPoly
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N M : ℕ} (hN : 0 < N) :
+    ‖∑ m ∈ Finset.Icc 1 M,
+        (gmTraceFourier cutoff t ((N : ℝ) * m) +
+          gmTraceFourier cutoff t (-((N : ℝ) * m)))‖ ≤
+      (∫ r : ℝ, (1 / (2 * Real.pi) : ℝ) *
+        ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *
+        ‖gmPositiveDualDirichletPoly t N M r‖) +
+      ∫ r : ℝ, (1 / (2 * Real.pi) : ℝ) *
+        ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (-t - r) N (2 * N * M)‖ *
+        ‖gmPositiveDualDirichletPoly (-t) N M r‖ := by
+  rw [Finset.sum_add_distrib]
+  exact (norm_add_le _ _).trans (add_le_add
+    (norm_gmTraceFourier_pos_sum_le_dualPoly cutoff t hN)
+    (norm_gmTraceFourier_neg_sum_le_dualPoly cutoff t hN))
+
 /-- Positive Fourier modes are exactly the reflected Mellin modes. -/
 theorem gmTraceFourier_pos_eq_reflectedMode (cutoff : GMSmoothCutoff)
     (t : ℝ) {N m M : ℕ} (hN : 0 < N) (hm : 1 ≤ m) (hmM : m ≤ M) :
@@ -1669,11 +1959,10 @@ theorem gmTraceFourier_neg_eq_mellinReflection (cutoff : GMSmoothCutoff)
   rw [gmTraceFourier_neg_eq_conj]
   rw [gmTraceFourier_pos_eq_mellinReflection cutoff (-t) hN hm hmM]
 
-/-- Guth--Maynard smooth reflection in exact finite signed-mode form.  This
-is the native approximate functional equation before the paper suppresses
-the Mellin cutoff and far-frequency tail with `\lessapprox` notation.  Every
-nonzero mode in the finite source range is represented, with the negative
-half supplied by the proved conjugation symmetry. -/
+/-- Exact finite signed-mode identity used in Guth--Maynard smooth reflection.
+Every retained nonzero mode is represented, with the negative half supplied
+by proved conjugation symmetry.  This identity is not the quantitative
+complete-mode approximate functional equation of Lemma 6.2. -/
 theorem gmSmoothReflection_native (cutoff : GMSmoothCutoff)
     (t : ℝ) {N M : ℕ} (hN : 0 < N) :
     (∑ m ∈ Finset.Icc 1 M,
@@ -1771,12 +2060,11 @@ theorem norm_gmTraceFourier_pos_le_mellinReflection
               ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ := by
           rw [MeasureTheory.integral_const_mul]
 
-/-- Aggregate signed-mode estimate corresponding to the inequality step in
-Guth--Maynard Lemma 6.2.  Unlike a pointwise mode estimate, this theorem is
-already in the finite nonzero-frequency form consumed by the `S₂` argument.
-The reflection integrals are controlled by
-`norm_gmReflectionIntegral_le_ten_div_sqrt`, while frequencies beyond the
-finite range are controlled by `gmTraceFourier_far_frequency_decay`. -/
+/-- Coarse finite signed-mode estimate obtained by the triangle inequality.
+It loses the cardinality of the mode set and therefore is not the quantitative
+Lemma 6.2 estimate consumed by `S₂`.  The aggregate positive-mode identity
+below preserves the cancellation-bearing finite polynomial and is the correct
+starting point for that remaining estimate. -/
 theorem norm_gmSmoothReflection_native_le (cutoff : GMSmoothCutoff)
     (t : ℝ) {N M : ℕ} (hN : 0 < N) :
     ‖∑ m ∈ Finset.Icc 1 M,

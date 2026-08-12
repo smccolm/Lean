@@ -67,7 +67,8 @@ No later theorem is permitted to reinsert the inconsistent factor.
 | Write the reflected amplitude | The source factor `psi(c/m) (c/m)^(1-sigma)` in logarithmic coordinates, with corrected `c` from the stationary point | `typeIReflectedLogWeight`, `typeIReflectedLogWeight_log_nat` | Kernel-checked |
 | Prove the reflected amplitude is admissible for Fourier removal | Smoothness, compact support, and a Schwartz realization | `contDiff_typeIReflectedLogWeight`, `hasCompactSupport_typeIReflectedLogWeight`, `typeIReflectedLogWeightSchwartz` | Kernel-checked |
 | Fourier-deweight the reflected block | Exact integral of coefficient-one shifted dual polynomials | `typeIReflectedBlock_fourierDeweight` | Kernel-checked |
-| Resolve the retained finite window | Route the zero and wrong-sign central modes, discretize the Mellin variable for the retained negative modes, select a common shift bin, and consume the endpoint certificates | Existing generic shifted-family machinery and the proved MHH/Weyl estimates consume the exact finite window exported by `mediumTypeIExactBProcess_native` | Open downstream in `ZR`; the B-process itself is complete |
+| Package a generic direct Type-I MHH bound and normalize the actual enlarged interval | Apply coefficient-uniform MHH to an explicitly supplied sharp block, derive `[0,3T]` from `[T-T^δ,2T+T^δ]`, and separately project an endpoint certificate | `typeI_finite_window_resolution_native`, `typeI_dichotomy_witness_mhh_bound_native`, `typeIEndpointScaleDispatch_native`, and the Ingham/Huxley specializations in `TypeIFiniteWindow.lean` | Kernel-checked helpers; actual dichotomy/scale/majorant consumer `ZR` open |
+| Resolve the production Type-I branch | Unpack `ClassicalTypeITypeIIDichotomyConclusion`, normalize the ordinate interval, identify `τ` with the actual `N,T` scale, prove the terminal majorant, and dispatch direct/powered/Weyl ranges | No public theorem yet | Open under #15 |
 
 ## Exact replacement of the stationary-main-term route
 
@@ -94,21 +95,25 @@ finite central window, and the explicit remainder estimate
 
 The zero and wrong-sign frequencies are not discarded or hidden in that
 remainder: they remain visible members of the exact finite central window.
-Their case analysis, together with shifted-family selection for the retained
-negative modes and endpoint-certificate consumption, is the downstream finite
-large-values obligation `ZR`. This division matches the human proof: the
-B-process is the exact transform and uniform nonstationary-tail estimate;
-`ZR` is its finite-window consumer.
+The dichotomy separately gives an exact sharp polynomial with fixed bounded
+coefficients, so the coefficient-uniform MHH theorem is a promising canonical
+route. The present helper does not yet perform the required join: the actual
+ordinate translation, physical-to-logarithmic scale relation, terminal
+majorant, and direct/powered/Weyl certificate dispatch remain `ZR`.
 
 ## Dependency result
 
-The corrected dependency chain is
+The canonical corrected dependency chain is
 
-`Type-I witness -> smooth common block -> {short deweighting | exact medium
-B-process} -> finite central window plus summed far tail -> reflected
-deweighting -> finite-window/certificate resolution`.
+`actual sharp Type-I witness -> enlarged-interval normalization -> coefficient-uniform finite MHH -> endpoint
+scale dispatch -> branch-to-slab reduction`.
 
-Thus all three named interfaces are complete: smoothing, the exact medium
-B-process, and shared deweighting. The next open edge is `ZR`, which consumes
-the already finite central window and resolves its sign cases and endpoint
-certificates; it is not an unproved Poisson remainder.
+The independent analytic realization remains
+
+`smooth common block -> exact medium B-process -> finite central window plus
+summed far tail -> reflected deweighting`.
+
+Smoothing, exact medium reflection, shared deweighting, and the generic direct
+MHH helper and interval normalization are complete. The actual Type-I dichotomy consumer `ZR` and the
+actual-cutoff Type-II application `IIE` remain open; only after both are proved
+can the branches enter the slab reduction `FR`.

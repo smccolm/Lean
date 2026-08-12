@@ -17,6 +17,13 @@ The exact interval convention used in Section 13.1 for dyadic Dirichlet polynomi
 def dyadicInterval (N : ℕ) : Finset ℕ :=
   Ioc N (2 * N)
 
+/-- The literally closed endpoint convention displayed in Guth--Maynard
+Theorem 1.1.  The project uses `dyadicInterval N = (N,2N]` internally; the
+lemmas below expose the exact one-term difference instead of treating the two
+conventions as definitionally equal. -/
+def publishedDyadicInterval (N : ℕ) : Finset ℕ :=
+  Icc N (2 * N)
+
 /-- 
 An interval-indexed Dirichlet polynomial $D_N(t) = \sum_{n \sim N} a_n n^{-it}$.
 -/
@@ -26,6 +33,35 @@ noncomputable def dirichletPoly (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
 /-- The positive-sign convention used in Guth--Maynard Theorem 1.1. -/
 noncomputable def sourceDirichletPoly (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
   ∑ n ∈ dyadicInterval N, a n * (n : ℂ) ^ (t * I)
+
+/-- Positive-sign Dirichlet polynomial with the closed endpoint convention
+printed in the source theorem. -/
+noncomputable def publishedSourceDirichletPoly
+    (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
+  ∑ n ∈ publishedDyadicInterval N, a n * (n : ℂ) ^ (t * I)
+
+/-- The published closed block is exactly the project's block plus its left
+endpoint.  This is the source-convention bridge; no endpoint is silently
+dropped. -/
+theorem publishedSourceDirichletPoly_eq_left_add
+    (N : ℕ) (a : ℕ → ℂ) (t : ℝ) :
+    publishedSourceDirichletPoly N a t =
+      a N * (N : ℂ) ^ (t * I) + sourceDirichletPoly N a t := by
+  have hinterval : publishedDyadicInterval N =
+      insert N (dyadicInterval N) := by
+    ext n
+    simp only [publishedDyadicInterval, dyadicInterval, mem_Icc, mem_insert,
+      mem_Ioc]
+    omega
+  rw [publishedSourceDirichletPoly, hinterval]
+  simp [sourceDirichletPoly, dyadicInterval]
+
+/-- If the left endpoint coefficient is zero, the published and project
+conventions agree exactly. -/
+theorem publishedSourceDirichletPoly_eq_source_of_left_eq_zero
+    (N : ℕ) (a : ℕ → ℂ) (t : ℝ) (hleft : a N = 0) :
+    publishedSourceDirichletPoly N a t = sourceDirichletPoly N a t := by
+  rw [publishedSourceDirichletPoly_eq_left_add, hleft, zero_mul, zero_add]
 
 /-- Pointwise complex conjugation of a coefficient sequence. -/
 noncomputable def conjugateCoeffs (a : ℕ → ℂ) (n : ℕ) : ℂ := star (a n)

@@ -238,6 +238,61 @@ Every substantive iteration must leave:
 - no new hidden assumptions or placeholder mathematics; and
 - zero Lean warnings in the files changed and in every claimed-clean evaluation scope.
 
+## Semantic Completion and Anti-Overstatement Gate
+
+A clean build and axiom audit establish kernel integrity only. They do not establish
+that a declaration proves the source theorem named in documentation. Before marking
+any Shitlist subtask, Mermaid node, source lemma, proposition, or theorem as `DONE`,
+perform and record the following semantic checks:
+
+1. **The public theorem must consume the real upstream object.** A generic theorem
+   about separately supplied variables does not close a branch whose upstream module
+   returns a structure, disjunction, witness family, matrix, contour integral, or zero
+   set unless a kernel-checked consumer explicitly unpacks that output and applies the
+   theorem to it.
+2. **Every scale variable must be linked.** If the paper uses a logarithmic exponent
+   such as `τ`, Lean must relate it to the physical parameters such as `N` and `T` in
+   the same theorem chain. Pairing an unrelated exponent inequality with a cardinality
+   theorem is packaging, not endpoint assembly.
+3. **All hypotheses advertised as discharged must actually be derived.** Interval
+   translations, cutoff support, terminal majorants, separation changes, coefficient
+   normalization, and parameter ranges may not remain theorem parameters when the
+   node claims to derive them from an upstream witness.
+4. **A source lemma is complete only at its source conclusion.** Exact identities,
+   pointwise bounds, finite truncations, and far-tail estimates are supporting lemmas.
+   They do not complete an approximate functional equation, large-values estimate,
+   or density theorem until one public theorem assembles the complete sum, main term,
+   error term, hypotheses, and uniform constant dependencies stated by the source.
+5. **Do not infer usage from comments or nearby declarations.** If documentation says
+   a theorem uses a tail estimate, stationary bound, source bridge, or arithmetic
+   result, verify that the proof term transitively depends on it or that a later
+   audited consumer performs the advertised composition.
+6. **Specification conventions need proved bridges.** Differences in interval
+   endpoints, sign conventions, smoothing, normalization, zero rectangles, or
+   multiplicity are unresolved until Lean proves the required equality, implication,
+   or loss-absorbing transfer.
+7. **Audit counts are not completion evidence.** A declaration may be perfectly
+   kernel-checked and still be too weak, disconnected, or merely conditional. Report
+   dependency integrity and mathematical/source completeness as separate verdicts.
+8. **Green-node test.** For every proposed `DONE` node, name the exact public theorem,
+   unfold its proposition and principal definitions, identify its immediate upstream
+   declarations, and show that its conclusion is the acceptance result rather than an
+   independently assumed certificate or a projection from one. If this cannot be
+   done, leave the node open and label the proved helper precisely.
+9. **Source-entry test for long proof chains.** When an argument begins with a target
+   theorem object but the formal machinery uses a smoothed, localized, reindexed, or
+   otherwise transformed object, the entry bridge is its own proof obligation. Do not
+   mark downstream matrix, Fourier, or energy machinery as an unconditional proof of
+   the target chain while that bridge is absent.
+
+The final pre-handoff audit must therefore answer two independent questions:
+
+- Does Lean accept the existing declarations without prohibited dependencies?
+- Do the public consumer theorems exactly realize the mathematical dependency edges
+  and source conclusions claimed by the Shitlist, progress report, paper, and diagram?
+
+A `DONE` status requires both answers to be yes.
+
 ## Mandatory Proof-Architecture Synchronization
 
 `Proof Architecture.md` is the canonical Mermaid view of the logical proof dependencies and completion status. `Lean Alignment Fix Agenda.md` remains the authority for Shitlist task numbers and acceptance tests, while `Research Agenda Progress.MD` remains the evidence-based status report.
