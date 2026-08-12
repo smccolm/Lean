@@ -25,9 +25,9 @@ flowchart TD
     MR["#15 Medium Type-I B-process<br/>DONE<br/>interior source boundary removed exactly;<br/>scaled Poisson, symmetric finite dual window,<br/>exact Mellin retained modes and uniform<br/>Q^-101 M^-100 far tail"]
     FD["#15 Shared Type-I Fourier deweighting<br/>DONE<br/>exact short and reflected log weights<br/>to coefficient-one shifted polynomials"]
     PB["#15 X=1 powered-block MHH theorem<br/>DONE<br/>ordinary sharp-zeta coefficients;<br/>not the dichotomy's actual Type-II cutoff"]
-    IIE["#15 Actual Type-II powered MHH application<br/>OPEN - ACCESSIBLE FINITE GLUE<br/>generalize from cutoff X=1 to<br/>X=floor(T^(delta2/2)) and apply certificates"]
+    IIE["#15 Actual Type-II powered MHH application<br/>DONE<br/>arbitrary-X detector normalization,<br/>exact powering, dyadic extraction and MHH"]
     TG["#15 Generic direct Type-I MHH helper<br/>DONE<br/>coefficient-uniform cardinality bound<br/>and abstract certificate projections"]
-    ZR["#15 Actual Type-I branch resolution<br/>OPEN<br/>enlarged-interval MHH consumer DONE;<br/>unpack conclusion, link tau to N and T,<br/>discharge majorant and endpoint branches"]
+    ZR["#15 Actual Type-I branch resolution<br/>DONE<br/>N^sigma source normalization, harmonic-loss<br/>absorption, exact powered extraction,<br/>weighted Weyl and endpoint routing"]
     FR["#15 Branch-to-slab density reduction<br/>OPEN<br/>consume the dichotomy, Type-I and Type-II<br/>cardinality bounds, multiplicity and certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
@@ -62,7 +62,7 @@ flowchart TD
     CS["#19 Cubic trace split<br/>DONE<br/>exact Lemma 4.5 Poisson expansion,<br/>diagonal plus T^-100 remainder,<br/>and S1/S2/S3 partition"]
     S1["#19 S1 estimate<br/>DONE<br/>epsilon-separated GM Proposition 5.1<br/>with uniform T^-10 decay"]
     RI["#19 Exact smooth-reflection identities<br/>DONE<br/>signed finite modes, Mellin/Fubini formulas,<br/>and two-sign cancellation-preserving bounds"]
-    RF["#19 Quantitative smooth reflection / AFE<br/>OPEN<br/>extract uniform T0^-1/2 factor and<br/>sum omitted modes into T^-100 remainder"]
+    RF["#19 Quantitative smooth reflection / AFE<br/>OPEN<br/>Mellin decay, dual tail bound and uniform<br/>core T0^-1/2 bounds DONE; integrate tails<br/>and prove complete T^-100 remainder OPEN"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
     EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1177/1177 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1198/1198 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -262,7 +262,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,TG,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
     class CT,TR,CB conditional;
-    class ZR,IIE,FR,ZD,AF,QD,TM,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class FR,ZD,AF,QD,TM,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

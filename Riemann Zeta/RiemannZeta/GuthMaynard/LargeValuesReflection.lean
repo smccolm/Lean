@@ -447,12 +447,12 @@ theorem gmTraceFourier_neg_eq_conj (cutoff : GMSmoothCutoff) (t ξ : ℝ) :
   simp only [map_neg, map_mul, map_ofNat, conj_ofReal, conj_I]
   ring_nf
 
-private noncomputable def gmCutoffMellin
+noncomputable def gmCutoffMellin
     (cutoff : GMSmoothCutoff) (r : ℝ) : ℂ :=
   mellin (fun y : ℝ => ((cutoff y : ℂ) ^ 2))
     ((1 : ℂ) + (r : ℂ) * I)
 
-private theorem gmCutoffMellin_eq_fourier
+theorem gmCutoffMellin_eq_fourier
     (cutoff : GMSmoothCutoff) (r : ℝ) :
     gmCutoffMellin cutoff r =
       𝓕 (gmMellinKernelSchwartz cutoff) (r / (2 * Real.pi)) := by
@@ -464,7 +464,7 @@ private theorem gmCutoffMellin_eq_fourier
   rw [gmMellinKernelSchwartz_apply]
   simp [gmMellinKernel, Complex.ofReal_exp]
 
-private theorem continuous_gmCutoffMellin (cutoff : GMSmoothCutoff) :
+theorem continuous_gmCutoffMellin (cutoff : GMSmoothCutoff) :
     Continuous (gmCutoffMellin cutoff) := by
   have hEq : gmCutoffMellin cutoff = fun r : ℝ =>
       𝓕 (gmMellinKernelSchwartz cutoff) (r / (2 * Real.pi)) := by
@@ -473,6 +473,42 @@ private theorem continuous_gmCutoffMellin (cutoff : GMSmoothCutoff) :
   rw [hEq]
   exact (𝓕 (gmMellinKernelSchwartz cutoff)).continuous.comp
     (continuous_id.div_const (2 * Real.pi))
+
+/-- The fixed Mellin weight has arbitrary polynomial decay.  This is the
+quantitative input used to truncate the Mellin ordinate in the published
+smooth-reflection argument. -/
+theorem gmCutoffMellin_polynomial_decay
+    (cutoff : GMSmoothCutoff) (n : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ r : ℝ,
+      |r| ^ n * ‖gmCutoffMellin cutoff r‖ ≤ C := by
+  let F : 𝓢(ℝ, ℂ) := 𝓕 (gmMellinKernelSchwartz cutoff)
+  let C : ℝ := (2 * Real.pi) ^ n * SchwartzMap.seminorm ℝ n 0 F
+  have hC : 0 ≤ C := by
+    dsimp [C]
+    positivity
+  refine ⟨C, hC, ?_⟩
+  intro r
+  have hSem := SchwartzMap.le_seminorm' (𝕜 := ℝ) n 0 F
+    (r / (2 * Real.pi))
+  rw [iteratedDeriv_zero] at hSem
+  have hSem' : ‖r / (2 * Real.pi)‖ ^ n *
+      ‖F (r / (2 * Real.pi))‖ ≤ SchwartzMap.seminorm ℝ n 0 F := by
+    exact hSem
+  rw [gmCutoffMellin_eq_fourier]
+  change |r| ^ n * ‖F (r / (2 * Real.pi))‖ ≤ C
+  have hpi : 0 < 2 * Real.pi := by positivity
+  have hAbs : |r| = (2 * Real.pi) * ‖r / (2 * Real.pi)‖ := by
+    rw [Real.norm_eq_abs, abs_div, abs_of_pos hpi]
+    field_simp [hpi.ne']
+  rw [hAbs, mul_pow]
+  dsimp only [C]
+  calc
+    (2 * Real.pi) ^ n * ‖r / (2 * Real.pi)‖ ^ n *
+          ‖F (r / (2 * Real.pi))‖ =
+        (2 * Real.pi) ^ n *
+          (‖r / (2 * Real.pi)‖ ^ n * ‖F (r / (2 * Real.pi))‖) := by ring
+    _ ≤ (2 * Real.pi) ^ n * SchwartzMap.seminorm ℝ n 0 F :=
+      mul_le_mul_of_nonneg_left hSem' (pow_nonneg hpi.le n)
 
 private noncomputable def gmMellinReflectionIntegrand
     (cutoff : GMSmoothCutoff) (t q : ℝ) (v r : ℝ) : ℂ :=
@@ -1738,6 +1774,76 @@ noncomputable def gmPositiveDualDirichletPoly
     (t : ℝ) (N M : ℕ) (r : ℝ) : ℂ :=
   ∑ m ∈ Finset.Icc 1 M,
     ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))
+
+/-- The retained dual polynomial has the elementary cardinality bound.  The
+quantitative reflection theorem keeps the polynomial itself on the core
+Mellin range and uses this estimate only on the omitted tail. -/
+theorem norm_gmPositiveDualDirichletPoly_le
+    (t : ℝ) {N M : ℕ} (hN : 0 < N) (r : ℝ) :
+    ‖gmPositiveDualDirichletPoly t N M r‖ ≤ M := by
+  rw [gmPositiveDualDirichletPoly]
+  calc
+    ‖∑ m ∈ Finset.Icc 1 M,
+        ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))‖ ≤
+        ∑ m ∈ Finset.Icc 1 M,
+          ‖((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))‖ :=
+      norm_sum_le _ _
+    _ = ∑ _m ∈ Finset.Icc 1 M, (1 : ℝ) := by
+      apply Finset.sum_congr rfl
+      intro m hm
+      have hmPos : 0 < N * m :=
+        Nat.mul_pos hN (lt_of_lt_of_le Nat.zero_lt_one (Finset.mem_Icc.mp hm).1)
+      rw [Complex.norm_natCast_cpow_of_pos hmPos]
+      simp
+    _ = M := by simp
+
+/-- Uniform `T₀⁻¹ᐟ²` stationary bound on the core Mellin window for the
+positive reflected phase. -/
+theorem norm_gmReflectionIntegral_pos_core_le
+    {t r T₀ A B : ℝ} (hT₀ : 4 ≤ T₀) (ht : T₀ ≤ t)
+    (hr : |r| ≤ T₀ / 2) (hA : 0 < A) (hAB : A ≤ B) :
+    ‖gmReflectionIntegral (t - r) A B‖ ≤
+      10 / Real.sqrt (T₀ / 2) := by
+  have hrUpper : r ≤ T₀ / 2 := le_trans (le_abs_self r) hr
+  have hTau : 1 ≤ t - r := by linarith
+  have hBase := norm_gmReflectionIntegral_le_ten_div_sqrt
+    hTau hA hAB
+  have hSqrt : Real.sqrt (T₀ / 2) ≤ Real.sqrt (t - r) := by
+    exact Real.sqrt_le_sqrt (by linarith)
+  exact hBase.trans (div_le_div_of_nonneg_left (by norm_num)
+    (Real.sqrt_pos.2 (by linarith)) hSqrt)
+
+/-- The opposite signed phase is nonstationary on the same core window and
+obeys the same (deliberately loose) `T₀⁻¹ᐟ²` majorant. -/
+theorem norm_gmReflectionIntegral_neg_core_le
+    {t r T₀ A B : ℝ} (hT₀ : 4 ≤ T₀) (ht : T₀ ≤ t)
+    (hr : |r| ≤ T₀ / 2) (hA : 0 < A) (hAB : A ≤ B) :
+    ‖gmReflectionIntegral (-t - r) A B‖ ≤
+      10 / Real.sqrt (T₀ / 2) := by
+  have hrLower : -(T₀ / 2) ≤ r := by
+    exact (neg_le_neg hr).trans (neg_abs_le r)
+  have hPhase : -t - r < 2 * Real.pi * A := by
+    nlinarith [Real.pi_pos]
+  have hBase := norm_gmReflectionIntegral_le_right hAB hA hPhase
+  have hDenom : T₀ / 2 ≤ 2 * Real.pi * A - (-t - r) := by
+    nlinarith [Real.pi_pos]
+  have hDenomPos : 0 < 2 * Real.pi * A - (-t - r) := by linarith
+  have hT₀Pos : 0 < T₀ := by linarith
+  have hFirst : 2 / (2 * Real.pi * A - (-t - r)) ≤ 4 / T₀ := by
+    rw [div_le_iff₀ hDenomPos, div_eq_mul_inv]
+    calc
+      (2 : ℝ) ≤ (4 / T₀) * (T₀ / 2) := by
+        field_simp
+        norm_num
+      _ ≤ (4 / T₀) * (2 * Real.pi * A - (-t - r)) := by
+        gcongr
+  have hSqrtPos : 0 < Real.sqrt (T₀ / 2) := Real.sqrt_pos.2 (by linarith)
+  have hSquare : Real.sqrt (T₀ / 2) ^ 2 = T₀ / 2 := by
+    rw [sq_sqrt (by linarith)]
+  have hSecond : 4 / T₀ ≤ 10 / Real.sqrt (T₀ / 2) := by
+    rw [div_le_div_iff₀ hT₀Pos hSqrtPos]
+    nlinarith [hSquare, Real.sqrt_nonneg (T₀ / 2)]
+  exact hBase.trans (hFirst.trans hSecond)
 
 private theorem integrable_gmPositiveDualModeIntegrand
     (cutoff : GMSmoothCutoff) (t : ℝ) {N m M : ℕ}
