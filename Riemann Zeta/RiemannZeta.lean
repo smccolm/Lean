@@ -19,6 +19,7 @@ import RiemannZeta.GuthMaynard.DirichletPolynomial
 import RiemannZeta.GuthMaynard.DyadicTransfer
 import RiemannZeta.GuthMaynard.ExponentArithmetic
 import RiemannZeta.GuthMaynard.ExtractSeparated
+import RiemannZeta.GuthMaynard.GammaPairBound
 import RiemannZeta.GuthMaynard.GammaVerticalDecay
 import RiemannZeta.GuthMaynard.HalaszMontgomery
 import RiemannZeta.GuthMaynard.TypeIIZeros
@@ -56,6 +57,7 @@ import RiemannZeta.GuthMaynard.TypeIICoverage
 import RiemannZeta.GuthMaynard.TwistedMoment
 import RiemannZeta.GuthMaynard.TwistedDiagonal
 import RiemannZeta.GuthMaynard.SmoothZetaAFE
+import RiemannZeta.GuthMaynard.QuadraticDivisor
 import RiemannZeta.GuthMaynard.ClassicalLargeValues
 import RiemannZeta.GuthMaynard.ClassicalMoments
 import RiemannZeta.GuthMaynard.Transfer

@@ -44,8 +44,8 @@ flowchart TD
     CV["#18 Appendix C contour coverage<br/>DONE<br/>Mellin inversion, zero cancellation,<br/>rectangle shift, residue, quantitative tails<br/>and dyadic dichotomy proved"]
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
-    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - ANALYTIC WEIGHT CORE<br/>completed-xi AFE and ordinary-zeta normalization DONE;<br/>exact weighted hm=kn reduction and harmonic majorant DONE;<br/>uniform Hughes-Young Gamma-ratio weight bound OPEN"]
-    QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
+    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>DONE<br/>strengthened completed-xi AFE,<br/>paired Gamma ratio, integrable envelope<br/>and concrete weighted hm=kn bound"]
+    QD["#18 Quadratic-divisor off-diagonal<br/>OPEN - FINITE FOURIER ENTRY DONE<br/>exact am-bn shift partition, symmetry,<br/>ZMod Parseval and exact Kloosterman<br/>mean square DONE; divisor Voronoi,<br/>pointwise composite Weil, Bessel transforms<br/>and DFI error OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
     TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>three native inputs remain open"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1233/1233 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1259/1259 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -262,7 +262,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,MS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
     class CT,TR,CB conditional;
-    class FR,ZD,AF,QD,TM,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class FR,ZD,QD,TM,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

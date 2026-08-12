@@ -1,7 +1,9 @@
 import Mathlib.NumberTheory.LSeries.Dirichlet
+import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
 import PrimeNumberTheoremAnd.Mathlib.NumberTheory.LSeries.RiemannZetaHadamard
 import RiemannZeta.External.PNT.ResidueCalcOnRectangles
 import RiemannZeta.External.PNT.ZetaBoundsUpstream
+import RiemannZeta.GuthMaynard.GammaPairBound
 import RiemannZeta.GuthMaynard.TwistedDiagonal
 
 open Complex Filter MeasureTheory Set Topology
@@ -235,11 +237,13 @@ theorem afePoleNormalization_ne_zero (t : ℝ) : afePoleNormalization t ≠ 0 :=
   · exact afeCriticalPoint_ne_zero (-t)
   · exact sub_ne_zero.mpr (afeCriticalPoint_ne_one (-t)).symm
 
-/-- Entire pole-cancelled contour numerator.  The Gaussian is the standard
-Hughes--Young choice; the xi numerators encode the four completed zeta
-factors without leaving meromorphic singularities. -/
+/-- Entire pole-cancelled contour numerator.  The even Gaussian is a
+stronger member of the standard Hughes--Young admissible kernel family; its
+fixed strength `100` absorbs the uniform paired Gamma growth proved below.
+The xi numerators encode the four completed zeta factors without leaving
+meromorphic singularities. -/
 noncomputable def smoothZetaSqContourNumerator (t : ℝ) (w : ℂ) : ℂ :=
-  Complex.exp (w ^ 2) *
+  Complex.exp (100 * w ^ 2) *
     completedXiNumerator (afeCriticalPoint t + w) ^ 2 *
     completedXiNumerator (afeCriticalPoint (-t) + w) ^ 2 /
       afePoleNormalization t
@@ -281,8 +285,8 @@ theorem smoothZetaSqContourNumerator_zero (t : ℝ) :
     smoothZetaSqContourNumerator t 0 =
       completedRiemannZeta (afeCriticalPoint t) ^ 2 *
         completedRiemannZeta (afeCriticalPoint (-t)) ^ 2 := by
-  simp only [smoothZetaSqContourNumerator, zero_pow (by decide : 2 ≠ 0), exp_zero,
-    one_mul, add_zero]
+  simp only [smoothZetaSqContourNumerator, zero_pow (by decide : 2 ≠ 0), mul_zero,
+    exp_zero, one_mul, add_zero]
   rw [completedXiNumerator_eq _
       (afeCriticalPoint_ne_zero t) (afeCriticalPoint_ne_one t),
     completedXiNumerator_eq _ (afeCriticalPoint_ne_zero (-t))
@@ -337,7 +341,7 @@ theorem exists_smoothZetaSqContourIntegrand_horizontal_bound
     ∃ C : ℝ, C > 0 ∧ ∀ H : ℝ, H ≥ 1 → ∀ x ∈ Set.uIcc (-c) c,
       ‖smoothZetaSqContourIntegrand t ((x : ℂ) + (H : ℂ) * I)‖ ≤
         ‖(afePoleNormalization t)⁻¹‖ *
-          Real.exp (c ^ 2 - H ^ 2 +
+          Real.exp (100 * c ^ 2 - H ^ 2 +
             4 * C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) := by
   obtain ⟨C, hC, hxi⟩ := exists_completedXiNumerator_order_three_halves_bound
   refine ⟨C, hC, ?_⟩
@@ -376,14 +380,14 @@ theorem exists_smoothZetaSqContourIntegrand_horizontal_bound
       x ^ 2 = |x| ^ 2 := by rw [sq_abs]
       _ ≤ c ^ 2 := by simpa only [pow_two] using hsquare
   have hgauss :
-      ‖Complex.exp (((x : ℂ) + (H : ℂ) * I) ^ 2)‖ ≤
-        Real.exp (c ^ 2 - H ^ 2) := by
+      ‖Complex.exp (100 * (((x : ℂ) + (H : ℂ) * I) ^ 2))‖ ≤
+        Real.exp (100 * c ^ 2 - H ^ 2) := by
     rw [Complex.norm_exp]
     apply Real.exp_le_exp.mpr
     have hre : ((((x : ℂ) + (H : ℂ) * I) ^ 2).re) = x ^ 2 - H ^ 2 := by
       simp [pow_two, mul_re, mul_im]
-    rw [hre]
-    linarith
+    norm_num [mul_re, hre]
+    nlinarith [sq_nonneg H]
   have hwNorm : 1 ≤ ‖(x : ℂ) + (H : ℂ) * I‖ := by
     have himle := Complex.abs_im_le_norm ((x : ℂ) + (H : ℂ) * I)
     have himle' : H ≤ ‖(x : ℂ) + (H : ℂ) * I‖ := by
@@ -392,15 +396,15 @@ theorem exists_smoothZetaSqContourIntegrand_horizontal_bound
   unfold smoothZetaSqContourIntegrand smoothZetaSqContourNumerator
   rw [norm_div, norm_div, norm_mul, norm_mul, norm_pow, norm_pow]
   have hnum :
-      ‖Complex.exp (((x : ℂ) + (H : ℂ) * I) ^ 2)‖ *
+      ‖Complex.exp (100 * (((x : ℂ) + (H : ℂ) * I) ^ 2))‖ *
           ‖completedXiNumerator
             (afeCriticalPoint t + ((x : ℂ) + (H : ℂ) * I))‖ ^ 2 *
           ‖completedXiNumerator
             (afeCriticalPoint (-t) + ((x : ℂ) + (H : ℂ) * I))‖ ^ 2 ≤
-        Real.exp (c ^ 2 - H ^ 2 +
+        Real.exp (100 * c ^ 2 - H ^ 2 +
           4 * C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) := by
     calc
-      _ ≤ Real.exp (c ^ 2 - H ^ 2) *
+      _ ≤ Real.exp (100 * c ^ 2 - H ^ 2) *
           Real.exp (C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) ^ 2 *
           Real.exp (C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) ^ 2 := by
             gcongr
@@ -410,18 +414,18 @@ theorem exists_smoothZetaSqContourIntegrand_horizontal_bound
           rw [pow_two, ← Real.exp_add]
           congr 1
           ring
-        change Real.exp (c ^ 2 - H ^ 2) * Real.exp q ^ 2 * Real.exp q ^ 2 = _
+        change Real.exp (100 * c ^ 2 - H ^ 2) * Real.exp q ^ 2 * Real.exp q ^ 2 = _
         rw [hq, ← Real.exp_add, ← Real.exp_add]
         congr 1
         dsimp [q]
         ring
   calc
-    _ ≤ (Real.exp (c ^ 2 - H ^ 2 +
+    _ ≤ (Real.exp (100 * c ^ 2 - H ^ 2 +
           4 * C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) /
         ‖afePoleNormalization t‖) / 1 := by
       gcongr
     _ = ‖(afePoleNormalization t)⁻¹‖ *
-          Real.exp (c ^ 2 - H ^ 2 +
+          Real.exp (100 * c ^ 2 - H ^ 2 +
             4 * C * (2 + |t| + c + H) ^ (3 / 2 : ℝ)) := by
       rw [norm_inv]
       field_simp [norm_ne_zero_iff.mpr (afePoleNormalization_ne_zero t)]
@@ -437,10 +441,10 @@ theorem tendsto_hIntegral_smoothZetaSq_top_zero
   let A : ℝ := 2 + |t| + c
   let K : ℝ := ‖(afePoleNormalization t)⁻¹‖
   let envelope : ℝ → ℝ := fun H =>
-    K * Real.exp (c ^ 2 - H ^ 2 + 4 * C * (A + H) ^ (3 / 2 : ℝ))
+    K * Real.exp (100 * c ^ 2 - H ^ 2 + 4 * C * (A + H) ^ (3 / 2 : ℝ))
   have henv0 : Tendsto envelope atTop (𝓝 0) := by
     unfold envelope
-    have hraw := tendsto_exp_const_sub_sq_add_three_halves A (4 * C) (c ^ 2)
+    have hraw := tendsto_exp_const_sub_sq_add_three_halves A (4 * C) (100 * c ^ 2)
     simpa only [mul_zero] using Tendsto.const_mul K hraw
   rw [tendsto_zero_iff_norm_tendsto_zero]
   apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
@@ -628,7 +632,7 @@ noncomputable def smoothZetaSqDivisorContourIntegrand
   let w : ℂ := (c : ℂ) + (u : ℂ) * I
   let s₁ : ℂ := afeCriticalPoint t + w
   let s₂ : ℂ := afeCriticalPoint (-t) + w
-  Complex.exp (w ^ 2) *
+  Complex.exp (100 * w ^ 2) *
     (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2 *
     Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2 *
     LSeries (fun n : ℕ => (n.divisors.card : ℂ)) s₁ *
@@ -658,6 +662,246 @@ theorem afeGammaNormalization_ne_zero (t : ℝ) :
   apply mul_ne_zero <;> apply pow_ne_zero <;>
     apply Complex.Gammaℝ_ne_zero_of_re_pos <;>
     norm_num [afeCriticalPoint]
+
+/-- The polynomial part of the coefficientwise Hughes--Young weight on the
+imaginary contour. -/
+noncomputable def hughesYoungPolynomialRatio (t u : ℝ) : ℂ :=
+  let s₁ := afeCriticalPoint t + (u : ℂ) * I
+  let s₂ := afeCriticalPoint (-t) + (u : ℂ) * I
+  (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2 /
+    afePoleNormalization t
+
+/-- The paired archimedean Gamma quotient in the coefficientwise smooth AFE
+weight. -/
+noncomputable def hughesYoungGammaRatio (t u : ℝ) : ℂ :=
+  let s₁ := afeCriticalPoint t + (u : ℂ) * I
+  let s₂ := afeCriticalPoint (-t) + (u : ℂ) * I
+  Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2 /
+    afeGammaNormalization t
+
+/-- The complete normalized archimedean coefficient on `w = iu`.  The
+Dirichlet monomial has norm one and is kept separate. -/
+noncomputable def hughesYoungArchimedeanWeight (t u : ℝ) : ℂ :=
+  Complex.exp (100 * (((u : ℂ) * I) ^ 2)) *
+    hughesYoungPolynomialRatio t u * hughesYoungGammaRatio t u
+
+private theorem norm_criticalPolynomial (y : ℝ) :
+    ‖((1 / 2 : ℂ) + (y : ℂ) * I) *
+        (1 - ((1 / 2 : ℂ) + (y : ℂ) * I))‖ = 1 / 4 + y ^ 2 := by
+  rw [norm_mul]
+  have h₁ : ‖(1 / 2 : ℂ) + (y : ℂ) * I‖ = Real.sqrt (1 / 4 + y ^ 2) := by
+    rw [Complex.norm_def]
+    congr 1
+    simp [Complex.normSq, sq]
+    ring
+  have h₂ : ‖1 - ((1 / 2 : ℂ) + (y : ℂ) * I)‖ =
+      Real.sqrt (1 / 4 + y ^ 2) := by
+    rw [Complex.norm_def]
+    congr 1
+    simp [Complex.normSq, sq]
+    ring
+  rw [h₁, h₂, ← sq]
+  exact Real.sq_sqrt (by positivity)
+
+/-- Uniform polynomial control in the normalized Hughes--Young weight. -/
+theorem norm_hughesYoungPolynomialRatio_le (t u : ℝ) :
+    ‖hughesYoungPolynomialRatio t u‖ ≤ (2 + 8 * u ^ 2) ^ 4 := by
+  let A := (1 / 4 : ℝ) + t ^ 2
+  let Ap := (1 / 4 : ℝ) + (t + u) ^ 2
+  let Am := (1 / 4 : ℝ) + (t - u) ^ 2
+  have hA : 0 < A := by dsimp [A]; positivity
+  have hAp : 0 ≤ Ap := by dsimp [Ap]; positivity
+  have hAm : 0 ≤ Am := by dsimp [Am]; positivity
+  have hp : Ap ≤ 2 * A + 2 * u ^ 2 := by
+    dsimp [A, Ap]
+    nlinarith [sq_nonneg (t - u)]
+  have hm : Am ≤ 2 * A + 2 * u ^ 2 := by
+    dsimp [A, Am]
+    nlinarith [sq_nonneg (t + u)]
+  have hB : 0 ≤ 2 * A + 2 * u ^ 2 := by positivity
+  have hAquarter : (1 / 4 : ℝ) ≤ A := by
+    dsimp [A]
+    nlinarith [sq_nonneg t]
+  have hprod : Ap * Am ≤ (2 * A + 2 * u ^ 2) ^ 2 := by
+    calc
+      Ap * Am ≤ (2 * A + 2 * u ^ 2) * Am :=
+        mul_le_mul_of_nonneg_right hp hAm
+      _ ≤ (2 * A + 2 * u ^ 2) * (2 * A + 2 * u ^ 2) :=
+        mul_le_mul_of_nonneg_left hm hB
+      _ = (2 * A + 2 * u ^ 2) ^ 2 := by ring
+  have hratio : Ap * Am / A ^ 2 ≤ (2 + 8 * u ^ 2) ^ 2 := by
+    rw [div_le_iff₀ (sq_pos_of_pos hA)]
+    calc
+      Ap * Am ≤ (2 * A + 2 * u ^ 2) ^ 2 := hprod
+      _ ≤ ((2 + 8 * u ^ 2) * A) ^ 2 := by
+        gcongr
+        nlinarith
+      _ = (2 + 8 * u ^ 2) ^ 2 * A ^ 2 := by ring
+  have hratio0 : 0 ≤ Ap * Am / A ^ 2 := by positivity
+  unfold hughesYoungPolynomialRatio afePoleNormalization
+  dsimp only
+  have hs₁ : afeCriticalPoint t + (u : ℂ) * I =
+      (1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I := by
+    unfold afeCriticalPoint
+    push_cast
+    ring
+  have hs₂ : afeCriticalPoint (-t) + (u : ℂ) * I =
+      (1 / 2 : ℂ) + ((-(t - u) : ℝ) : ℂ) * I := by
+    unfold afeCriticalPoint
+    push_cast
+    ring
+  have hP₁ : ‖(afeCriticalPoint t + (u : ℂ) * I) *
+      (1 - (afeCriticalPoint t + (u : ℂ) * I))‖ = Ap := by
+    rw [hs₁, norm_criticalPolynomial]
+  have hP₂ : ‖(afeCriticalPoint (-t) + (u : ℂ) * I) *
+      (1 - (afeCriticalPoint (-t) + (u : ℂ) * I))‖ = Am := by
+    rw [hs₂, norm_criticalPolynomial]
+    dsimp [Am]
+    ring
+  have hP0₁ : ‖afeCriticalPoint t * (1 - afeCriticalPoint t)‖ = A := by
+    unfold afeCriticalPoint
+    rw [norm_criticalPolynomial]
+  have hP0₂ : ‖afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ = A := by
+    unfold afeCriticalPoint
+    rw [norm_criticalPolynomial]
+    dsimp [A]
+    ring
+  have hden : ‖afeCriticalPoint t * (1 - afeCriticalPoint t) *
+      afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ = A ^ 2 := by
+    rw [show afeCriticalPoint t * (1 - afeCriticalPoint t) *
+        afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t)) =
+      (afeCriticalPoint t * (1 - afeCriticalPoint t)) *
+        (afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))) by ring,
+      norm_mul, hP0₁, hP0₂, pow_two]
+  rw [norm_div, norm_mul, norm_pow, norm_pow, norm_pow, hP₁, hP₂, hden]
+  change (Ap ^ 2 * Am ^ 2) / (A ^ 2) ^ 2 ≤ (2 + 8 * u ^ 2) ^ 4
+  have hpow := pow_le_pow_left₀ hratio0 hratio 2
+  convert hpow using 1
+  all_goals field_simp [hA.ne']
+
+/-- The cancellation-sensitive Gamma ratio is uniformly Gaussian in the
+contour ordinate and independent of the height `t`. -/
+theorem norm_hughesYoungGammaRatio_le (t u : ℝ) :
+    ‖hughesYoungGammaRatio t u‖ ≤ Real.exp (16 * u ^ 2) := by
+  have hpair := norm_GammaR_critical_symmetric_le t u
+  have hcentral : 0 <
+      ‖Complex.Gammaℝ (afeCriticalPoint t)‖ *
+        ‖Complex.Gammaℝ (afeCriticalPoint (-t))‖ := by
+    apply mul_pos <;> rw [norm_pos_iff]
+    · exact Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num [afeCriticalPoint])
+    · exact Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num [afeCriticalPoint])
+  unfold hughesYoungGammaRatio afeGammaNormalization
+  dsimp only
+  rw [norm_div, norm_mul, norm_pow, norm_pow, norm_mul, norm_pow, norm_pow]
+  have hpairSq := pow_le_pow_left₀ (mul_nonneg (norm_nonneg _) (norm_nonneg _)) hpair 2
+  have hexp : Real.exp (8 * u ^ 2) ^ 2 = Real.exp (16 * u ^ 2) := by
+    rw [pow_two, ← Real.exp_add]
+    congr 1
+    ring
+  have hdenEq :
+      ‖Complex.Gammaℝ (afeCriticalPoint t)‖ ^ 2 *
+          ‖Complex.Gammaℝ (afeCriticalPoint (-t))‖ ^ 2 =
+        (‖Complex.Gammaℝ (afeCriticalPoint t)‖ *
+          ‖Complex.Gammaℝ (afeCriticalPoint (-t))‖) ^ 2 := by ring
+  rw [hdenEq]
+  rw [div_le_iff₀ (sq_pos_of_pos hcentral)]
+  unfold afeCriticalPoint at hpairSq ⊢
+  have hpArg : (1 / 2 : ℂ) + (t : ℂ) * I + (u : ℂ) * I =
+      (1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I := by
+    push_cast
+    ring
+  have hmArg : (1 / 2 : ℂ) + ((-t : ℝ) : ℂ) * I + (u : ℂ) * I =
+      (1 / 2 : ℂ) + ((-t + u : ℝ) : ℂ) * I := by
+    push_cast
+    ring
+  calc
+    ‖Complex.Gammaℝ ((1 / 2 : ℂ) + (t : ℂ) * I + (u : ℂ) * I)‖ ^ 2 *
+          ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t : ℝ) : ℂ) * I + (u : ℂ) * I)‖ ^ 2
+        = (‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I)‖ *
+            ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t + u : ℝ) : ℂ) * I)‖) ^ 2 := by
+          rw [hpArg, hmArg, mul_pow]
+    _ ≤ (Real.exp (8 * u ^ 2) *
+          (‖Complex.Gammaℝ ((1 / 2 : ℂ) + (t : ℂ) * I)‖ *
+            ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t : ℝ) : ℂ) * I)‖)) ^ 2 := hpairSq
+    _ = Real.exp (16 * u ^ 2) *
+          (‖Complex.Gammaℝ ((1 / 2 : ℂ) + (t : ℂ) * I)‖ *
+            ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t : ℝ) : ℂ) * I)‖) ^ 2 := by
+          rw [mul_pow, hexp]
+
+/-- The actual normalized archimedean AFE coefficient has uniform Gaussian
+decay.  This is the Hughes--Young weight estimate that the finite diagonal
+consumer requires; no Stirling or weight hypothesis remains. -/
+theorem norm_hughesYoungArchimedeanWeight_le (t u : ℝ) :
+    ‖hughesYoungArchimedeanWeight t u‖ ≤
+      Real.exp (-84 * u ^ 2) * (2 + 8 * u ^ 2) ^ 4 := by
+  unfold hughesYoungArchimedeanWeight
+  rw [norm_mul, norm_mul, Complex.norm_exp]
+  have hgauss :
+      (100 * (((u : ℂ) * I) ^ 2)).re = -100 * u ^ 2 := by
+    simp [pow_two, mul_re, mul_im]
+  rw [hgauss]
+  calc
+    Real.exp (-100 * u ^ 2) * ‖hughesYoungPolynomialRatio t u‖ *
+          ‖hughesYoungGammaRatio t u‖
+        ≤ Real.exp (-100 * u ^ 2) * (2 + 8 * u ^ 2) ^ 4 *
+            Real.exp (16 * u ^ 2) := by
+          gcongr
+          · exact norm_hughesYoungPolynomialRatio_le t u
+          · exact norm_hughesYoungGammaRatio_le t u
+    _ = Real.exp (-84 * u ^ 2) * (2 + 8 * u ^ 2) ^ 4 := by
+      rw [mul_assoc, mul_comm ((2 + 8 * u ^ 2) ^ 4), ← mul_assoc,
+        ← Real.exp_add]
+      congr 1
+      ring_nf
+
+/-- A purely Gaussian envelope for the exact coefficientwise weight.  The
+polynomial loss is absorbed while retaining an integrable majorant. -/
+theorem norm_hughesYoungArchimedeanWeight_le_gaussian (t u : ℝ) :
+    ‖hughesYoungArchimedeanWeight t u‖ ≤ 16 * Real.exp (-68 * u ^ 2) := by
+  have hone : 1 + 4 * u ^ 2 ≤ Real.exp (4 * u ^ 2) := by
+    simpa [add_comm] using Real.add_one_le_exp (4 * u ^ 2)
+  have hpow : (1 + 4 * u ^ 2) ^ 4 ≤ (Real.exp (4 * u ^ 2)) ^ 4 :=
+    pow_le_pow_left₀ (by positivity) hone 4
+  calc
+    ‖hughesYoungArchimedeanWeight t u‖
+        ≤ Real.exp (-84 * u ^ 2) * (2 + 8 * u ^ 2) ^ 4 :=
+          norm_hughesYoungArchimedeanWeight_le t u
+    _ = 16 * Real.exp (-84 * u ^ 2) * (1 + 4 * u ^ 2) ^ 4 := by ring
+    _ ≤ 16 * Real.exp (-84 * u ^ 2) * (Real.exp (4 * u ^ 2)) ^ 4 := by
+      gcongr
+    _ = 16 * Real.exp (-68 * u ^ 2) := by
+      have hexp : (Real.exp (4 * u ^ 2)) ^ 4 = Real.exp (16 * u ^ 2) := by
+        rw [← Real.exp_nat_mul]
+        congr 1
+        norm_num
+        ring
+      rw [hexp, mul_assoc, ← Real.exp_add]
+      congr 2
+      ring
+
+/-- The Gaussian envelope left by the exact Hughes--Young weight is
+integrable on the full Mellin line. -/
+theorem integrable_hughesYoungWeightEnvelope :
+    Integrable (fun u : ℝ => 16 * Real.exp (-68 * u ^ 2)) := by
+  exact (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 68)).const_mul 16
+
+/-- At `w = iu`, the normalized analytic factor in the divisor contour is
+exactly the coefficientwise Hughes--Young archimedean weight.  This theorem
+prevents the weight estimate from floating free of the proved AFE contour. -/
+theorem smoothZetaSqDivisorContourIntegrand_zeroLine_eq_weight
+    (t u : ℝ) :
+    smoothZetaSqDivisorContourIntegrand t 0 u /
+        afeGammaNormalization t =
+      hughesYoungArchimedeanWeight t u *
+        LSeries (fun n : ℕ => (n.divisors.card : ℂ))
+          (afeCriticalPoint t + (u : ℂ) * I) *
+        LSeries (fun n : ℕ => (n.divisors.card : ℂ))
+          (afeCriticalPoint (-t) + (u : ℂ) * I) /
+        ((u : ℂ) * I) := by
+  unfold smoothZetaSqDivisorContourIntegrand hughesYoungArchimedeanWeight
+    hughesYoungPolynomialRatio hughesYoungGammaRatio
+  dsimp only [ofReal_zero, zero_add]
+  ring_nf
 
 /-- Ordinary-zeta form of the smooth AFE.  Thus the proved contour identity
 is not merely an identity for an auxiliary completion: after division by the
@@ -726,7 +970,7 @@ theorem smoothZetaSqContourIntegrand_eq_divisorContour
   unfold smoothZetaSqContourIntegrand smoothZetaSqContourNumerator
     smoothZetaSqDivisorContourIntegrand
   dsimp only
-  change (Complex.exp (w ^ 2) * completedXiNumerator s₁ ^ 2 *
+  change (Complex.exp (100 * w ^ 2) * completedXiNumerator s₁ ^ 2 *
       completedXiNumerator s₂ ^ 2 / afePoleNormalization t) / w = _
   rw [completedXiNumerator_eq s₁ hs₁0 hs₁1,
     completedXiNumerator_eq s₂ hs₂0 hs₂1, hΛ₁, hΛ₂]
@@ -944,15 +1188,15 @@ noncomputable def smoothTwistedWeightedDiagonal
 arithmetic majorant proved above.  This is the missing bridge between the
 analytic AFE weight and the regrouped `q = hm = kn` diagonal: no unweighted
 phase integral is substituted for a weighted one. -/
-theorem norm_smoothTwistedWeightedDiagonal_le
-    {T : ℝ} {ell cutoff : ℕ} (a : ℕ → ℂ)
+theorem norm_smoothTwistedWeightedDiagonal_le_mul
+    {T C : ℝ} {ell cutoff : ℕ} (a : ℕ → ℂ)
     (weight : ℕ → ℕ → ℕ → ℝ → ℂ)
     (hWeight : ∀ q ∈ Finset.Icc 1 cutoff,
       ∀ h ∈ q.divisors.filter (fun h => h ≤ ell),
       ∀ k ∈ q.divisors.filter (fun k => k ≤ ell),
-        ‖∫ t in T / 2..3 * T, weight q h k t‖ ≤ 5 * T / 2) :
+        ‖∫ t in T / 2..3 * T, weight q h k t‖ ≤ C * (5 * T / 2)) :
     ‖smoothTwistedWeightedDiagonal T ell cutoff a weight‖ ≤
-      smoothTwistedDiagonalMajorant T ell cutoff a := by
+      C * smoothTwistedDiagonalMajorant T ell cutoff a := by
   unfold smoothTwistedWeightedDiagonal smoothTwistedDiagonalMajorant
   calc
     ‖∑ q ∈ Finset.Icc 1 cutoff,
@@ -974,7 +1218,7 @@ theorem norm_smoothTwistedWeightedDiagonal_le
             ∑ k ∈ q.divisors.filter (fun k => k ≤ ell),
               (‖a h‖ * ((q / h).divisors.card : ℝ)) *
                 (‖a k‖ * ((q / k).divisors.card : ℝ)) *
-                (q : ℝ)⁻¹ * (5 * T / 2) := by
+                (q : ℝ)⁻¹ * (C * (5 * T / 2)) := by
           apply Finset.sum_le_sum
           intro q hq
           have hqPos : 0 < q := (Finset.mem_Icc.mp hq).1
@@ -990,8 +1234,12 @@ theorem norm_smoothTwistedWeightedDiagonal_le
               ((q / h).divisors.card : ℝ) * ((q / k).divisors.card : ℝ) *
                 (q : ℝ)⁻¹ := by positivity
           nlinarith [mul_le_mul_of_nonneg_left hw hcoef]
-    _ = (5 * T / 2) * ∑ q ∈ Finset.Icc 1 cutoff,
-          smoothTwistedDiagonalFiber ell q a ^ 2 * (q : ℝ)⁻¹ := by
+    _ = C * ((5 * T / 2) * ∑ q ∈ Finset.Icc 1 cutoff,
+          smoothTwistedDiagonalFiber ell q a ^ 2 * (q : ℝ)⁻¹) := by
+          rw [show C * ((5 * T / 2) * ∑ q ∈ Finset.Icc 1 cutoff,
+              smoothTwistedDiagonalFiber ell q a ^ 2 * (q : ℝ)⁻¹) =
+            C * (5 * T / 2) * ∑ q ∈ Finset.Icc 1 cutoff,
+              smoothTwistedDiagonalFiber ell q a ^ 2 * (q : ℝ)⁻¹ by ring]
           rw [Finset.mul_sum]
           apply Finset.sum_congr rfl
           intro q hq
@@ -999,17 +1247,17 @@ theorem norm_smoothTwistedWeightedDiagonal_le
           let S := q.divisors.filter (fun h => h ≤ ell)
           let x : ℕ → ℝ := fun h => ‖a h‖ * ((q / h).divisors.card : ℝ)
           have hInner : ∀ h ∈ S,
-              (∑ k ∈ S, x h * x k * (q : ℝ)⁻¹ * (5 * T / 2)) =
-                x h * (∑ k ∈ S, x k) * (q : ℝ)⁻¹ * (5 * T / 2) := by
+              (∑ k ∈ S, x h * x k * (q : ℝ)⁻¹ * (C * (5 * T / 2))) =
+                x h * (∑ k ∈ S, x k) * (q : ℝ)⁻¹ * (C * (5 * T / 2)) := by
             intro h hh
             calc
-              (∑ k ∈ S, x h * x k * (q : ℝ)⁻¹ * (5 * T / 2)) =
-                  x h * (q : ℝ)⁻¹ * (5 * T / 2) * ∑ k ∈ S, x k := by
+              (∑ k ∈ S, x h * x k * (q : ℝ)⁻¹ * (C * (5 * T / 2))) =
+                  x h * (q : ℝ)⁻¹ * (C * (5 * T / 2)) * ∑ k ∈ S, x k := by
                     rw [Finset.mul_sum]
                     apply Finset.sum_congr rfl
                     intro k hk
                     ring
-              _ = x h * (∑ k ∈ S, x k) * (q : ℝ)⁻¹ * (5 * T / 2) := by ring
+              _ = x h * (∑ k ∈ S, x k) * (q : ℝ)⁻¹ * (C * (5 * T / 2)) := by ring
           dsimp [S, x] at hInner ⊢
           rw [Finset.sum_congr rfl hInner, pow_two]
           let A := ∑ h ∈ q.divisors.filter (fun h => h ≤ ell),
@@ -1017,10 +1265,10 @@ theorem norm_smoothTwistedWeightedDiagonal_le
           have hOuter :
               (∑ h ∈ q.divisors.filter (fun h => h ≤ ell),
                 (‖a h‖ * ((q / h).divisors.card : ℝ) * A) *
-                  (q : ℝ)⁻¹ * (5 * T / 2)) =
-                A * A * (q : ℝ)⁻¹ * (5 * T / 2) := by
+                  (q : ℝ)⁻¹ * (C * (5 * T / 2))) =
+                A * A * (q : ℝ)⁻¹ * (C * (5 * T / 2)) := by
             calc
-              _ = A * (q : ℝ)⁻¹ * (5 * T / 2) *
+              _ = A * (q : ℝ)⁻¹ * (C * (5 * T / 2)) *
                   ∑ h ∈ q.divisors.filter (fun h => h ≤ ell),
                     ‖a h‖ * ((q / h).divisors.card : ℝ) := by
                       rw [Finset.mul_sum]
@@ -1029,5 +1277,48 @@ theorem norm_smoothTwistedWeightedDiagonal_le
                       ring
               _ = _ := by dsimp [A]; ring
           exact hOuter.trans (by dsimp [A]; ring)
+
+/-- The normalized-weight consumer is the unit-constant specialization of
+the quantitative diagonal theorem. -/
+theorem norm_smoothTwistedWeightedDiagonal_le
+    {T : ℝ} {ell cutoff : ℕ} (a : ℕ → ℂ)
+    (weight : ℕ → ℕ → ℕ → ℝ → ℂ)
+    (hWeight : ∀ q ∈ Finset.Icc 1 cutoff,
+      ∀ h ∈ q.divisors.filter (fun h => h ≤ ell),
+      ∀ k ∈ q.divisors.filter (fun k => k ≤ ell),
+        ‖∫ t in T / 2..3 * T, weight q h k t‖ ≤ 5 * T / 2) :
+    ‖smoothTwistedWeightedDiagonal T ell cutoff a weight‖ ≤
+      smoothTwistedDiagonalMajorant T ell cutoff a := by
+  simpa using norm_smoothTwistedWeightedDiagonal_le_mul a weight
+    (C := 1) (by simpa using hWeight)
+
+/-- The concrete coefficientwise AFE weight satisfies the exact interval
+bound required by the weighted diagonal consumer, with its Gaussian decay
+retained uniformly in the height interval. -/
+theorem norm_integral_hughesYoungArchimedeanWeight_le
+    {T : ℝ} (hT : 0 ≤ T) (u : ℝ) :
+    ‖∫ t in T / 2..3 * T, hughesYoungArchimedeanWeight t u‖ ≤
+      (16 * Real.exp (-68 * u ^ 2)) * (5 * T / 2) := by
+  apply (intervalIntegral.norm_integral_le_of_norm_le_const fun t _ =>
+    norm_hughesYoungArchimedeanWeight_le_gaussian t u).trans
+  have hlen : |3 * T - T / 2| = 5 * T / 2 := by
+    rw [abs_of_nonneg]
+    · ring
+    · linarith
+  rw [hlen]
+
+/-- The actual Hughes--Young coefficientwise weight, rather than an abstract
+surrogate, is consumed by the diagonal majorant at every Mellin ordinate.
+The remaining scalar envelope is integrable by
+`integrable_hughesYoungWeightEnvelope`. -/
+theorem norm_hughesYoungWeightedDiagonalSlice_le
+    {T : ℝ} (hT : 0 ≤ T) {ell cutoff : ℕ} (a : ℕ → ℂ) (u : ℝ) :
+    ‖smoothTwistedWeightedDiagonal T ell cutoff a
+        (fun _q _h _k t => hughesYoungArchimedeanWeight t u)‖ ≤
+      (16 * Real.exp (-68 * u ^ 2)) *
+        smoothTwistedDiagonalMajorant T ell cutoff a := by
+  apply norm_smoothTwistedWeightedDiagonal_le_mul a _
+  intro q hq h hh k hk
+  exact norm_integral_hughesYoungArchimedeanWeight_le hT u
 
 end RiemannZeta.GuthMaynard
