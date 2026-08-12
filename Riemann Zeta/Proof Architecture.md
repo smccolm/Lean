@@ -44,7 +44,7 @@ flowchart TD
     CV["#18 Appendix C contour coverage<br/>DONE<br/>Mellin inversion, zero cancellation,<br/>rectangle shift, residue, quantitative tails<br/>and dyadic dichotomy proved"]
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
-    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - NEXT CLOSEOUT<br/>finite hm=kn phase, integral and norm bound DONE;<br/>completed-zeta-squared AFE and weighted<br/>asymptotic diagonal OPEN"]
+    AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>OPEN - ANALYTIC WEIGHT CORE<br/>completed-xi AFE and ordinary-zeta normalization DONE;<br/>exact weighted hm=kn reduction and harmonic majorant DONE;<br/>uniform Hughes-Young Gamma-ratio weight bound OPEN"]
     QD["#18 Quadratic-divisor<br/>off-diagonal theorem<br/>OPEN"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1198/1198 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1233/1233 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB

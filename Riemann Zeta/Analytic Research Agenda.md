@@ -36,15 +36,13 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 The current closeout queue, from least to greatest estimated difficulty, is:
 
-1. **#15 actual-`X` Type-II powered MHH:** generalize the existing finite endpoint theorem from `X=1` to the dichotomy's real cutoff using #17 coefficient growth. This is the most accessible new interface.
-2. **#15 actual Type-I branch resolution:** consume the dichotomy's sharp Type-I witness, use the proved interval bridge, prove the scale bridge, discharge the terminal majorant, and apply direct MHH, powering, or Weyl according to the endpoint certificate.
-3. **#18 smooth `ζ²` AFE and diagonal:** close this independent node while keeping DFI separate.
-4. **#15 branch-to-slab resolution:** combine the completed Type-I transform and finite-window consumer with the actual-`X` Type-II result, multiplicity control, and endpoint certificates.
-5. **#19 quantitative reflection bridge:** the exact three-piece published/source-to-smoothed-matrix localization is complete. Prove the complete two-sign Lemma 6.2 inequality with its aggregate `T₀⁻¹ᐟ²` factor and summed `T⁻¹⁰⁰` remainder; then prove native Heath–Brown and `S₂`.
+1. **#15 branch-to-slab resolution:** combine the completed actual-`X` Type-II and normalized direct/powered/Weyl Type-I branch theorems with multiplicity control and endpoint certificates.
+2. **#19 quantitative reflection bridge:** the exact three-piece published/source-to-smoothed-matrix localization and local reflection estimates are complete. Prove the complete two-sign Lemma 6.2 inequality with its aggregate `T₀⁻¹ᐟ²` factor and summed `T⁻¹⁰⁰` remainder; then prove native Heath–Brown and `S₂`.
+3. **#18 smooth `ζ²` AFE and diagonal:** the completed contour, ordinary-zeta normalization, divisor opening, and general weighted-diagonal majorant are proved. Complete the independent source-specific Gamma-ratio weight estimate while keeping DFI separate.
 
 Completed supporting layer: **#19 exact smooth-reflection identities and cancellation preservation.** `LargeValuesReflection.lean` proves signed finite formulas, uniform two-parameter decay, the pointwise `T₀⁻¹/²` reflection-integral bound, far-frequency decay, and positive, negative, and signed aggregate estimates with no mode-cardinality loss. Uniform aggregate `T₀⁻¹/²` extraction and the summed two-sided `T⁻¹⁰⁰` omitted-mode remainder remain open; `S₂` is also downstream of Heath–Brown.
 
-The full #19 energy-moment node, #18 twisted fourth moment, `S₂`, refined `S₃`, and the final density theorems are not independent closeouts yet. They consume Heath–Brown, DFI, Proposition 9.1, or other open nodes. Those three source theorems remain the independent hard cores after the four-package queue.
+The full #19 energy-moment node, #18 twisted fourth moment, `S₂`, refined `S₃`, and the final density theorems are not independent closeouts yet. They consume Heath–Brown, DFI, Proposition 9.1, the Hughes–Young Gamma-ratio estimate, or other open nodes. Those source theorems remain the independent hard cores after the current queue.
 
 ## Primary Research Sources and Reusable Formal APIs
 
