@@ -22,11 +22,11 @@ flowchart TD
     FA["#15 Finite scale/exponent assembly<br/>DONE"]
     TE["#15 Terminal Type-I estimate<br/>DONE<br/>uniform prefix Kusmin-Landau,<br/>Abel weight and sharp cutoff"]
     PS["#15 Type-I smoothing and scale split<br/>DONE<br/>exact smooth partition, common block<br/>and cardinality-preserving scale selection"]
-    MR["#15 Medium Type-I B-process<br/>OPEN - NARROWED HARD CORE<br/>exact Mellin inversion, weighted reflection,<br/>common interval and finite critical-mode<br/>polynomial DONE; source boundary plus<br/>wrong-sign/far-mode remainder OPEN"]
+    MR["#15 Medium Type-I B-process<br/>DONE<br/>interior source boundary removed exactly;<br/>scaled Poisson, symmetric finite dual window,<br/>exact Mellin retained modes and uniform<br/>Q^-101 M^-100 far tail"]
     FD["#15 Shared Type-I Fourier deweighting<br/>DONE<br/>exact short and reflected log weights<br/>to coefficient-one shifted polynomials"]
     PB["#15 X=1 powered-block MHH theorem<br/>DONE<br/>ordinary sharp-zeta coefficients;<br/>not the dichotomy's actual Type-II cutoff"]
     IIE["#15 Actual Type-II powered MHH application<br/>OPEN - ACCESSIBLE FINITE GLUE<br/>generalize from cutoff X=1 to<br/>X=floor(T^(delta2/2)) and apply certificates"]
-    ZR["#15 Short Type-I range resolution<br/>OPEN<br/>apply MHH/powering or Weyl according<br/>to the endpoint scale certificate"]
+    ZR["#15 Type-I finite-window resolution<br/>OPEN<br/>resolve zero/wrong-sign central modes;<br/>apply MHH/powering or Weyl according<br/>to the endpoint scale certificate"]
     FR["#15 Branch-to-slab density reduction<br/>OPEN<br/>consume the dichotomy, Type-I and Type-II<br/>cardinality bounds, multiplicity and certificates"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
@@ -70,7 +70,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1141/1141 dependencies,<br/>zero warnings/axioms"]
+    IG["#19 Dependency and integrity layer<br/>DONE<br/>1153/1153 dependencies,<br/>zero warnings/axioms"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
 
     MZ --> ZB
@@ -246,7 +246,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,FD,PB,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,UF,CS,S1,RF,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,MS,DR,SF,MX,PF,HT,UF,CS,S1,RF,IG done;
     class CT,TR,CB conditional;
-    class MR,IIE,ZR,FR,ZD,AF,QD,TM,GCS,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class IIE,ZR,FR,ZD,AF,QD,TM,GCS,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

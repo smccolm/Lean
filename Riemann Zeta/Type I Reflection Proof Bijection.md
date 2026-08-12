@@ -60,11 +60,14 @@ No later theorem is permitted to reinsert the inconsistent factor.
 | Insert the actual dyadic cutoff by Mellin inversion | Exact pointwise Mellin inversion on `Re s = 1`, with Schwartz decay and the Fubini hypotheses proved | `typeIDyadicCutoff_eq_verticalMellinIntegral`, `integrable_typeIMellinReflectionIntegrand` | Kernel-checked |
 | Rescale every retained mode | The substitution `v=m*x`, the corrected `mQ` cutoff scale, and one interval `[Q/2,2MQ]` shared by every `1≤m≤M` | `typeIDyadicPhysicalIntegral_rescale`, `typeIDyadicPhysicalIntegral_eq_common_mellinReflection` | Kernel-checked |
 | Assemble the critical modes | A literal finite polynomial inside one Mellin integral; no Fresnel limit, pointwise main-term approximation, or stationary-mode error remains | `sum_typeIDyadicPhysicalIntegral_eq_reflectedMellinPolynomial` | Kernel-checked |
-| Remove the noncritical Poisson modes | Uniformly bound the zero, wrong-sign, and frequencies beyond the `T^ε T/Q` window below the witness threshold, while retaining the exact tail-boundary weight | `typeIReflectionFourier_fixed_decay` and `typeIReflectionFourier_summable` prove arbitrary-order decay and absolute convergence for every fixed source block; the required constant is not yet uniform in `Y,A,r,σ,t` | **Open at the parameter-uniform estimate** |
+| Remove the artificial source boundary on an interior medium block | Prove that the exact tail boundary is identically one throughout the selected dyadic cutoff support | `typeISourceSmoothWeight_eq_dyadic_of_interior` and `typeIReflectionKernel_eq_dyadicPhysical_of_interior` | Kernel-checked |
+| Normalize the full Poisson kernel uniformly | Rescale by the block length and bound every derivative uniformly in the source parameters | `typeINormalizedKernel_uniform_iteratedFDeriv` | Kernel-checked |
+| Remove all frequencies outside the finite dual window | Obtain arbitrary-order pointwise Fourier decay and sum both infinite tails with one explicit parameter-uniform constant | `typeINormalizedFourier_uniform_decay`, `typeINormalizedFourier_far_frequency_decay`, and `typeINormalizedFarTail_bound` give the complete bound `K (1+|t|)^102 / (Q^101 M^100)` | Kernel-checked |
+| Split exact Poisson into retained modes and the complete tail | Use scaled Poisson, retain the symmetric finite interval `[-M,M]`, and identify its complement exactly with the summed tail | `typeINormalizedKernel_poisson`, `typeINormalizedPoisson_split`, and the public package `mediumTypeIExactBProcess_native` | Kernel-checked |
 | Write the reflected amplitude | The source factor `psi(c/m) (c/m)^(1-sigma)` in logarithmic coordinates, with corrected `c` from the stationary point | `typeIReflectedLogWeight`, `typeIReflectedLogWeight_log_nat` | Kernel-checked |
 | Prove the reflected amplitude is admissible for Fourier removal | Smoothness, compact support, and a Schwartz realization | `contDiff_typeIReflectedLogWeight`, `hasCompactSupport_typeIReflectedLogWeight`, `typeIReflectedLogWeightSchwartz` | Kernel-checked |
 | Fourier-deweight the reflected block | Exact integral of coefficient-one shifted dual polynomials | `typeIReflectedBlock_fourierDeweight` | Kernel-checked |
-| Preserve separation after ordinate shifts | Discretize the Mellin variable, select a common shift bin, and bound the discarded cardinality | Existing generic shifted-family machinery can be reused after the noncritical remainder theorem produces the complete reflected block | Downstream in `ZR`, not part of the three interfaces |
+| Resolve the retained finite window | Route the zero and wrong-sign central modes, discretize the Mellin variable for the retained negative modes, select a common shift bin, and consume the endpoint certificates | Existing generic shifted-family machinery and the proved MHH/Weyl estimates consume the exact finite window exported by `mediumTypeIExactBProcess_native` | Open downstream in `ZR`; the B-process itself is complete |
 
 ## Exact replacement of the stationary-main-term route
 
@@ -80,38 +83,32 @@ proves:
 5. a weighted `10/sqrt(tau)` bound for the common reflection integral; and
 6. exact finite assembly into `typeIReflectedMellinPolynomial`.
 
-The medium interface is nevertheless not complete until Lean controls the
-parts of the complete source Poisson series not covered by that retained-mode
-identity:
+The medium B-process interface is complete. On an interior medium block Lean
+proves that `typeITailBoundary` is exactly one on the whole cutoff support, so
+there is no endpoint error to estimate. After normalization it proves uniform
+bounds for all iterated derivatives, converts those bounds to arbitrary-order
+Fourier decay, and sums both tails outside `[-M,M]`. The public theorem
+`mediumTypeIExactBProcess_native` combines scaled Poisson summation, the exact
+finite central window, and the explicit remainder estimate
+`K (1+|t|)^102 / (Q^101 M^100)`.
 
-1. keep the complete `typeITailBoundary`, or prove its two transition pieces
-   separately negligible;
-2. split off the zero and wrong-sign Fourier modes;
-3. prove a uniform summable tail beyond `M ≍ T^ε T/Q` using repeated
-   integration by parts or Schwartz Fourier decay; and
-4. show the aggregate discarded contribution is below a fixed fraction of
-   the selected Type-I witness threshold.
-
-The exact Mellin factorization removes the former Fresnel/Gaussian
-obstruction. The remaining obstruction is narrower and explicit: a
-source-weighted, scale-uniform nonstationary Fourier-tail theorem. PNT+'s
-public `nonstationary_phase_integral_bound` and
-`nonstationary_power_phase_expansion` cover sharp monotone power amplitudes;
-they do not directly cover the compact smooth product used here. Mathlib's
-Schwartz derivative/Fourier estimates provide the correct lower-level route,
-but the required uniform derivative and summed-tail specialization is not yet
-present.
+The zero and wrong-sign frequencies are not discarded or hidden in that
+remainder: they remain visible members of the exact finite central window.
+Their case analysis, together with shifted-family selection for the retained
+negative modes and endpoint-certificate consumption, is the downstream finite
+large-values obligation `ZR`. This division matches the human proof: the
+B-process is the exact transform and uniform nonstationary-tail estimate;
+`ZR` is its finite-window consumer.
 
 ## Dependency result
 
 The corrected dependency chain is
 
-`Type-I witness -> smooth common block -> {short deweighting | medium Poisson}
--> exact Mellin B-process -> noncritical-tail removal -> short dual polynomial
--> Type-I range resolution`.
+`Type-I witness -> smooth common block -> {short deweighting | exact medium
+B-process} -> finite central window plus summed far tail -> reflected
+deweighting -> finite-window/certificate resolution`.
 
-Thus smoothing is genuinely complete, shared deweighting is genuinely
-complete on both concrete amplitudes, and the retained critical-mode B-process
-is exact. The only open edge among the three named interfaces is the
-full-source boundary/wrong-sign/far-frequency remainder estimate inside the
-medium B-process.
+Thus all three named interfaces are complete: smoothing, the exact medium
+B-process, and shared deweighting. The next open edge is `ZR`, which consumes
+the already finite central window and resolves its sign cases and endpoint
+certificates; it is not an unproved Poisson remainder.
