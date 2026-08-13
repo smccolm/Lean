@@ -203,6 +203,36 @@ theorem periodicEstermann_eq_LSeries (q : ℕ) [NeZero q]
           LSeries.convolution_map_zero]
       · exact periodicDivisorConvolutionCoeff_eq q Φ hn
 
+/-- Absolute convergence of the periodic divisor Dirichlet series in its
+source half-plane.  This is the summability statement underlying the
+right-line Fubini step in divisor Voronoi summation. -/
+theorem periodicDivisorCoeff_LSeriesSummable (q : ℕ) [NeZero q]
+    (Φ : ZMod q → ℂ) {s : ℂ} (hs : 1 < s.re) :
+    LSeriesSummable (periodicDivisorCoeff q Φ) s := by
+  have hIndicatorSummable (a : ZMod q) :
+      LSeriesSummable (residueIndicator q a) s := by
+    apply LSeriesSummable_of_bounded_of_one_lt_re (m := 1) _ hs
+    intro n hn
+    by_cases hna : (n : ZMod q) = a <;> simp [residueIndicator, hna]
+  let F : ZMod q → ZMod q → ℕ → ℂ := fun a b =>
+    Φ (a * b) • LSeries.convolution
+      (residueIndicator q a) (residueIndicator q b)
+  have hF (a b : ZMod q) : LSeriesSummable (F a b) s :=
+    ((hIndicatorSummable a).convolution (hIndicatorSummable b)).smul (Φ (a * b))
+  have hOuter : LSeriesSummable (∑ a : ZMod q, ∑ b : ZMod q, F a b) s := by
+    apply LSeriesSummable.sum
+    intro a _ha
+    apply LSeriesSummable.sum
+    intro b _hb
+    exact hF a b
+  have hCoeff : (∑ a : ZMod q, ∑ b : ZMod q, F a b) =
+      periodicDivisorConvolutionCoeff q Φ := by
+    funext n
+    simp [F, periodicDivisorConvolutionCoeff]
+  rw [hCoeff] at hOuter
+  exact (LSeriesSummable_congr s
+    (fun hn => periodicDivisorConvolutionCoeff_eq q Φ hn)).mp hOuter
+
 /-- The exact reflected expression occurring in the functional equation of a
 periodic L-function. -/
 noncomputable def periodicLFunctionDual (q : ℕ) [NeZero q]
