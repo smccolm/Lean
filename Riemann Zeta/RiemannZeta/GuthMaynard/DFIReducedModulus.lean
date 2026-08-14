@@ -12,6 +12,10 @@ open Complex
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The reduced denominator `q / gcd(a,q)`, totalized at `q = 0` so it can
+be used under finite sums before positivity of the summation index is opened. -/
+def dfiReducedDenominator (a q : ℕ) : ℕ := q / a.gcd q
+
 /-- The reduced numerator and denominator of `a/q`. -/
 structure DFIReducedModulus (a q : ℕ) [NeZero q] where
   gcd : ℕ := a.gcd q
@@ -38,6 +42,39 @@ noncomputable def dfiReducedModulus (a q : ℕ) [NeZero q] :
 
 instance (a q : ℕ) [NeZero q] : NeZero (dfiReducedModulus a q).denominator :=
   ⟨(dfiReducedModulus a q).denominator_pos.ne'⟩
+
+theorem dfiReducedModulus_denominator_eq (a q : ℕ) [NeZero q] :
+    (dfiReducedModulus a q).denominator = dfiReducedDenominator a q := rfl
+
+/-- Reduction of `a/q` can only decrease its denominator.  DFI uses this
+elementary fact when the dual transition `r²/S` is enlarged to the original
+delta-method modulus `q²/S`. -/
+theorem dfiReducedModulus_denominator_le (a q : ℕ) [NeZero q] :
+    (dfiReducedModulus a q).denominator ≤ q := by
+  change q / a.gcd q ≤ q
+  exact Nat.div_le_self q (a.gcd q)
+
+/-- The logarithm of a reduced denominator is uniformly bounded by the
+logarithm of the original positive modulus.  This is the exact uniformity
+needed when the two reduced Voronoi moduli occur in DFI equation (27). -/
+theorem abs_log_dfiReducedModulus_denominator_le (a q : ℕ) [NeZero q] :
+    |Real.log ((dfiReducedModulus a q).denominator : ℝ)| ≤
+      Real.log (q : ℝ) := by
+  have hdenPos : (0 : ℝ) < (dfiReducedModulus a q).denominator := by
+    exact_mod_cast (dfiReducedModulus a q).denominator_pos
+  have hdenOne : (1 : ℝ) ≤ (dfiReducedModulus a q).denominator := by
+    exact_mod_cast (dfiReducedModulus a q).denominator_pos
+  have hdenLe : ((dfiReducedModulus a q).denominator : ℝ) ≤ q := by
+    exact_mod_cast dfiReducedModulus_denominator_le a q
+  rw [abs_of_nonneg (Real.log_nonneg hdenOne)]
+  exact Real.log_le_log hdenPos hdenLe
+
+theorem abs_log_dfiReducedDenominator_le
+    (a q : ℕ) (hq : 0 < q) :
+    |Real.log (dfiReducedDenominator a q : ℝ)| ≤ Real.log (q : ℝ) := by
+  letI : NeZero q := ⟨hq.ne'⟩
+  simpa only [dfiReducedModulus_denominator_eq] using
+    abs_log_dfiReducedModulus_denominator_le a q
 
 theorem dfiReducedModulus_numerator_isUnit (a q : ℕ) [NeZero q] :
     IsUnit ((dfiReducedModulus a q).numerator :

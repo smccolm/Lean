@@ -1,5 +1,7 @@
 import RiemannZeta.GuthMaynard.DFIEquation27
+import RiemannZeta.GuthMaynard.DFIEquation22Source
 import RiemannZeta.GuthMaynard.DFIEquation28
+import RiemannZeta.GuthMaynard.DFIEquation29
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 /-!
@@ -594,6 +596,703 @@ theorem dfiEquation30_physical_log_bound
         mul_le_mul_of_nonneg_left hkernel (mul_nonneg hmin hC.le)
       _ = K * min X Y * Real.log Q := by simp [K]; ring)
 
+/-- The logarithmic double-main integral occurring in DFI equation (27) is
+bounded by the equation-(30) physical mass.  This is the missing norm bridge
+between the raw localized weight and the actual two Voronoi main terms. -/
+theorem exists_norm_dfiEquation27PhysicalMainIntegral_le
+    {Q P X Y U h : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (a b q : ℕ), 0 < q → ∀ qx qy : ℕ,
+      ‖dfiEquation27PhysicalMainIntegral w q a b qx qy
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+          (Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+          min X Y * Real.log Q := by
+  obtain ⟨K₀, hK₀, hphysical⟩ :=
+    dfiEquation30_physical_log_bound w hf hbox hφ hscale hQ hU
+  refine ⟨K₀, hK₀, ?_⟩
+  intro a b q hq qx qy
+  let F : ℝ → ℝ → ℂ := dfiLocalizedWeight f φ h
+  let G : ℝ × ℝ → ℂ := fun p =>
+    dfiEquation27C a b qx qy F p.1 p.2 *
+      (dfiDeltaKernel w q (p.1 - p.2 - h) : ℂ)
+  let H : ℝ × ℝ → ℝ := fun p =>
+    ‖F p.1 p.2‖ * |dfiDeltaKernel w q (p.1 - p.2 - h)|
+  let LX : ℝ := Real.log (2 * X) + |Real.log a| +
+    2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|
+  let LY : ℝ := Real.log (2 * Y) + |Real.log b| +
+    2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|
+  let B : ℝ := LX * LY
+  have hLX : 0 ≤ LX := by
+    dsimp [LX]
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hLY : 0 ≤ LY := by
+    dsimp [LY]
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  have hB : 0 ≤ B := mul_nonneg hLX hLY
+  have hGsmooth : Continuous G := by
+    dsimp [G, F]
+    exact (contDiff_uncurry_dfiEquation27C_source hf hbox hφ a b qx qy).continuous.mul
+      (Complex.ofRealCLM.continuous.comp
+        ((contDiff_dfiDeltaKernel w q hq).continuous.comp (by fun_prop)))
+  have hGsupport : Function.support G ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) := by
+    intro p hp
+    have hFne : F p.1 p.2 ≠ 0 := by
+      intro hz
+      exact hp (by simp [G, dfiEquation27C, hz])
+    exact support_uncurry_dfiLocalizedWeight_subset hbox hFne
+  have hGint : Integrable G (volume.prod volume) :=
+    hGsmooth.integrable_of_hasCompactSupport
+      (HasCompactSupport.of_support_subset_isCompact
+        (isCompact_Icc.prod isCompact_Icc) hGsupport)
+  have hHsmooth : Continuous H := by
+    dsimp [H, F]
+    exact (contDiff_uncurry_dfiLocalizedWeight hf hφ).continuous.norm.mul
+      ((contDiff_dfiDeltaKernel w q hq).continuous.abs.comp (by fun_prop))
+  have hHsupport : Function.support H ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) := by
+    intro p hp
+    have hFne : F p.1 p.2 ≠ 0 := by
+      intro hz
+      exact hp (by simp [H, hz])
+    exact support_uncurry_dfiLocalizedWeight_subset hbox hFne
+  have hHint : Integrable H (volume.prod volume) :=
+    hHsmooth.integrable_of_hasCompactSupport
+      (HasCompactSupport.of_support_subset_isCompact
+        (isCompact_Icc.prod isCompact_Icc) hHsupport)
+  have hpoint (p : ℝ × ℝ) : ‖G p‖ ≤ B * H p := by
+    rw [norm_mul, Complex.norm_real, Real.norm_eq_abs]
+    by_cases hFzero : F p.1 p.2 = 0
+    · simp [H, dfiEquation27C, hFzero]
+    · have hxy : (p.1, p.2) ∈
+          Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
+        support_uncurry_dfiLocalizedWeight_subset hbox hFzero
+      have hxlog :=
+        abs_log_le_log_two_mul_of_mem_Icc hf.one_le_X hxy.1
+      have hylog :=
+        abs_log_le_log_two_mul_of_mem_Icc hf.one_le_Y hxy.2
+      have hcb := norm_dfiEquation27C_le a b qx qy F p.1 p.2
+      have hCtoB :
+          ‖dfiEquation27C a b qx qy F p.1 p.2‖ ≤
+            B * ‖F p.1 p.2‖ := by
+        dsimp [B, LX, LY]
+        calc
+          ‖dfiEquation27C a b qx qy F p.1 p.2‖ ≤
+              (|Real.log p.1| + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+                (|Real.log p.2| + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+                ‖F p.1 p.2‖ := hcb
+          _ ≤ (Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+                (Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+                ‖F p.1 p.2‖ := by gcongr
+      simpa [H, mul_assoc] using
+        mul_le_mul_of_nonneg_right hCtoB
+          (abs_nonneg (dfiDeltaKernel w q (p.1 - p.2 - h)))
+  have hproduct :
+      ‖∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), G p
+          ∂(volume.prod volume)‖ ≤
+        ∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), B * H p
+          ∂(volume.prod volume) := by
+    exact MeasureTheory.norm_integral_le_of_norm_le
+      ((hHint.const_mul B).integrableOn)
+      (Filter.Eventually.of_forall hpoint)
+  have hnonneg (p : ℝ × ℝ) : 0 ≤ B * H p := by
+    exact mul_nonneg hB (mul_nonneg (norm_nonneg _) (abs_nonneg _))
+  have hwhole :
+      (∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), B * H p
+          ∂(volume.prod volume)) ≤
+        ∫ p : ℝ × ℝ, B * H p ∂(volume.prod volume) :=
+    MeasureTheory.integral_mono_measure Measure.restrict_le_self
+      (Filter.Eventually.of_forall hnonneg) (hHint.const_mul B)
+  have hmainRewrite :
+      dfiEquation27PhysicalMainIntegral w q a b qx qy F h =
+        ∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), G p
+          ∂(volume.prod volume) := by
+    unfold dfiEquation27PhysicalMainIntegral
+    exact (MeasureTheory.setIntegral_prod G hGint.integrableOn).symm
+  have hmassRewrite :
+      (∫ p : ℝ × ℝ, B * H p ∂(volume.prod volume)) =
+        B * dfiEquation30PhysicalAbsoluteIntegral w q F h := by
+    rw [MeasureTheory.integral_const_mul]
+    unfold dfiEquation30PhysicalAbsoluteIntegral
+    rw [MeasureTheory.integral_prod H hHint]
+  rw [hmainRewrite]
+  calc
+    ‖∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), G p
+        ∂(volume.prod volume)‖ ≤
+        ∫ p in Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ), B * H p
+          ∂(volume.prod volume) := hproduct
+    _ ≤ ∫ p : ℝ × ℝ, B * H p ∂(volume.prod volume) := hwhole
+    _ = B * dfiEquation30PhysicalAbsoluteIntegral w q F h := hmassRewrite
+    _ ≤ B * (K₀ * min X Y * Real.log Q) :=
+      mul_le_mul_of_nonneg_left (hphysical q hq) hB
+    _ = K₀ * LX * LY * min X Y * Real.log Q := by
+      dsimp [B]
+      ring
+
+/-- Uniform equation-(27) physical-main bound after substituting the two
+reduced Voronoi denominators.  For every retained delta modulus `q ≤ 2Q`,
+both reduced logarithms are absorbed into `log (2Q)`. -/
+theorem exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
+    {Q P X Y U h : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (a b q : ℕ), 0 < q → (q : ℝ) ≤ 2 * Q →
+      ‖dfiEquation27PhysicalMainIntegral w q a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+          (Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+          min X Y * Real.log Q := by
+  obtain ⟨K, hK, hmain⟩ :=
+    exists_norm_dfiEquation27PhysicalMainIntegral_le
+      w hf hbox hφ hscale hQ hU
+  refine ⟨K, hK, ?_⟩
+  intro a b q hq hqQ
+  have hqlog : Real.log (q : ℝ) ≤ Real.log (2 * Q) := by
+    exact Real.log_le_log (by exact_mod_cast hq) hqQ
+  have hqa := abs_log_dfiReducedDenominator_le a q hq
+  have hqb := abs_log_dfiReducedDenominator_le b q hq
+  have hlogQ : 0 ≤ Real.log Q :=
+    Real.log_nonneg (by linarith)
+  have hmin : 0 ≤ min X Y := by
+    exact le_min (zero_le_one.trans hf.one_le_X)
+      (zero_le_one.trans hf.one_le_Y)
+  have hLX : 0 ≤ Real.log (2 * X) + |Real.log a| +
+      2 * |Real.eulerMascheroniConstant| +
+        2 * |Real.log (dfiReducedDenominator a q : ℝ)| := by
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hLY : 0 ≤ Real.log (2 * Y) + |Real.log b| +
+      2 * |Real.eulerMascheroniConstant| +
+        2 * |Real.log (dfiReducedDenominator b q : ℝ)| := by
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  refine (hmain a b q hq
+    (dfiReducedDenominator a q) (dfiReducedDenominator b q)).trans ?_
+  have hqaQ :
+      |Real.log (dfiReducedDenominator a q : ℝ)| ≤ Real.log (2 * Q) :=
+    hqa.trans hqlog
+  have hqbQ :
+      |Real.log (dfiReducedDenominator b q : ℝ)| ≤ Real.log (2 * Q) :=
+    hqb.trans hqlog
+  have hlog2Q : 0 ≤ Real.log (2 * Q) :=
+    Real.log_nonneg (by nlinarith)
+  have hLXQ : 0 ≤ Real.log (2 * X) + |Real.log a| +
+      2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q) := by
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hLYQ : 0 ≤ Real.log (2 * Y) + |Real.log b| +
+      2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q) := by
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  gcongr
+
+/-- The central integral in equation (27), with the reduced Voronoi
+denominators substituted, has the same logarithmic envelope as the physical
+main integral but no delta-kernel loss.  Both dyadic support projections are
+used, giving the sharp factor `min X Y`. -/
+theorem exists_norm_dfiEquation27CentralIntegral_reduced_le
+    {P X Y U h : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (a b q : ℕ), 0 < q →
+      ‖dfiEquation27CentralIntegral a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+          min X Y := by
+  obtain ⟨C, hC, hpoint⟩ :=
+    exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+      hf hbox hφ hscale 0
+  let K : ℝ := C * dfiEquation27LogLeibnizConstant 0
+  have hK : 0 < K :=
+    mul_pos hC (dfiEquation27LogLeibnizConstant_pos 0)
+  refine ⟨K, hK, ?_⟩
+  intro a b q hq
+  let g : ℝ → ℂ := fun x =>
+    dfiEquation27SourceSliceFamily a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) h x 0
+  let LX : ℝ := 1 + Real.log (2 * X) + |Real.log a| +
+    2 * |Real.eulerMascheroniConstant| + 2 * Real.log q
+  let LY : ℝ := 1 + Real.log (2 * Y) + |Real.log b| +
+    2 * |Real.eulerMascheroniConstant| + 2 * Real.log q
+  let B : ℝ := K * LX * LY
+  have hlogq : 0 ≤ Real.log (q : ℝ) :=
+    Real.log_nonneg (by exact_mod_cast hq)
+  have hLX : 0 ≤ LX := by
+    dsimp [LX]
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hLY : 0 ≤ LY := by
+    dsimp [LY]
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  have hB : 0 ≤ B := by positivity
+  have hgInt : Integrable g := by
+    simpa only [g] using integrable_dfiEquation27_source_center
+      hf hbox hφ a b (dfiReducedDenominator a q)
+        (dfiReducedDenominator b q)
+  have hgContinuous : Continuous g := by
+    have hcenterCD := (contDiff_uncurry_dfiEquation27_sourceSliceFamily
+      (h := h)
+      hf hbox hφ a b (dfiReducedDenominator a q)
+        (dfiReducedDenominator b q)).comp (contDiff_prodMk_left (0 : ℝ))
+    simpa only [g, Function.comp_apply, Function.uncurry_apply_pair] using
+      hcenterCD.continuous
+  have hgCont : Continuous (fun x => ‖g x‖) := hgContinuous.norm
+  have hgBound (x : ℝ) : |‖g x‖| ≤ B := by
+    rw [abs_of_nonneg (norm_nonneg _)]
+    have hp := hpoint h a b (dfiReducedDenominator a q)
+      (dfiReducedDenominator b q) x 0
+    have hqa := abs_log_dfiReducedDenominator_le a q hq
+    have hqb := abs_log_dfiReducedDenominator_le b q hq
+    have hLXred : 0 ≤ 1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| +
+          2 * |Real.log (dfiReducedDenominator a q : ℝ)| := by
+      have : 0 ≤ Real.log (2 * X) :=
+        Real.log_nonneg (by nlinarith [hf.one_le_X])
+      positivity
+    have hLYred : 0 ≤ 1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| +
+          2 * |Real.log (dfiReducedDenominator b q : ℝ)| := by
+      have : 0 ≤ Real.log (2 * Y) :=
+        Real.log_nonneg (by nlinarith [hf.one_le_Y])
+      positivity
+    dsimp [g, B, K, LX, LY]
+    simp only [iteratedDeriv_zero, pow_zero, mul_one] at hp
+    calc
+      ‖dfiEquation27SourceSliceFamily a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h x 0‖ ≤
+          (1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| +
+                2 * |Real.log (dfiReducedDenominator a q : ℝ)|) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| +
+                2 * |Real.log (dfiReducedDenominator b q : ℝ)|) *
+            C * dfiEquation27LogLeibnizConstant 0 := hp
+      _ ≤ (1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+            C * dfiEquation27LogLeibnizConstant 0 := by
+          gcongr
+          exact (dfiEquation27LogLeibnizConstant_pos 0).le
+      _ = (C * dfiEquation27LogLeibnizConstant 0) *
+            (1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) := by ring
+  have hsuppX : Function.support (fun x => ‖g x‖) ⊆ Set.Icc X (2 * X) := by
+    intro x hx
+    exact support_dfiEquation27_source_center_subset
+      (h := h) hbox a b (dfiReducedDenominator a q)
+        (dfiReducedDenominator b q) (by simpa using hx)
+  have hsuppY : Function.support (fun x => ‖g x‖) ⊆
+      Set.Icc (Y + h) (2 * Y + h) := by
+    intro x hx
+    have hgx : g x ≠ 0 := by simpa using hx
+    have hlocal : dfiLocalizedWeight f φ h x (x - h) ≠ 0 := by
+      intro hz
+      exact hgx (by simp [g, dfiEquation27SourceSliceFamily,
+        dfiEquation27Slice, dfiEquation27C, hz])
+    have hpMem : (x, x - h) ∈ Function.support
+        (Function.uncurry (dfiLocalizedWeight f φ h)) := hlocal
+    have hp := support_uncurry_dfiLocalizedWeight_subset hbox hpMem
+    constructor <;> linarith [hp.2.1, hp.2.2]
+  have hXbound : (∫ x : ℝ, ‖g x‖) ≤ X * B := by
+    have h := integral_abs_le_interval_length_mul
+      (fun x => ‖g x‖) hgCont
+      (show X ≤ 2 * X by linarith [hf.one_le_X]) hsuppX hgBound
+    calc
+      (∫ x : ℝ, ‖g x‖) ≤ (2 * X - X) * B := by
+        simpa [abs_of_nonneg, norm_nonneg] using h
+      _ = X * B := by ring
+  have hYbound : (∫ x : ℝ, ‖g x‖) ≤ Y * B := by
+    have hraw := integral_abs_le_interval_length_mul
+      (fun x => ‖g x‖) hgCont
+      (show Y + h ≤ 2 * Y + h by linarith [hf.one_le_Y]) hsuppY hgBound
+    calc
+      (∫ x : ℝ, ‖g x‖) ≤ (2 * Y + h - (Y + h)) * B := by
+        simpa [abs_of_nonneg, norm_nonneg] using hraw
+      _ = Y * B := by ring
+  have hnorm : ‖∫ x : ℝ, g x‖ ≤ ∫ x : ℝ, ‖g x‖ :=
+    MeasureTheory.norm_integral_le_integral_norm _
+  unfold dfiEquation27CentralIntegral
+  have hfun : (fun x : ℝ =>
+      dfiEquation27C a b (dfiReducedDenominator a q)
+        (dfiReducedDenominator b q) (dfiLocalizedWeight f φ h) x (x - h)) =
+      g := by
+    funext x
+    simp [g, dfiEquation27SourceSliceFamily, dfiEquation27Slice]
+  rw [hfun]
+  calc
+    ‖∫ x : ℝ, g x‖ ≤ ∫ x : ℝ, ‖g x‖ := hnorm
+    _ ≤ min (X * B) (Y * B) := le_min hXbound hYbound
+    _ = min X Y * B := (min_mul_of_nonneg X Y hB).symm
+    _ = K * LX * LY * min X Y := by ring
+
+/-- The elementary comparison series used for the logarithmic equation-(27)
+tail is a `p`-series of exponent `3/2`. -/
+theorem summable_natCast_inv_sq_mul_rpow_half :
+    Summable (fun q : ℕ =>
+      (((q : ℝ) ^ 2)⁻¹ * (q : ℝ) ^ (1 / 2 : ℝ))) := by
+  have hsum : Summable (fun q : ℕ => (q : ℝ) ^ (-(3 / 2 : ℝ))) :=
+    Real.summable_nat_rpow.mpr (by norm_num)
+  convert hsum using 1
+  funext q
+  by_cases hq : q = 0
+  · simp [hq]
+  · have hqpos : (0 : ℝ) < q := by exact_mod_cast Nat.pos_of_ne_zero hq
+    calc
+      ((q : ℝ) ^ 2)⁻¹ * (q : ℝ) ^ (1 / 2 : ℝ) =
+          (q : ℝ) ^ (-(2 : ℝ)) * (q : ℝ) ^ (1 / 2 : ℝ) := by
+        congr 1
+        calc
+          ((q : ℝ) ^ 2)⁻¹ = ((q : ℝ) ^ (2 : ℝ))⁻¹ :=
+            congrArg (fun x : ℝ => x⁻¹) (Real.rpow_natCast (q : ℝ) 2).symm
+          _ = (q : ℝ) ^ (-(2 : ℝ)) :=
+            (Real.rpow_neg hqpos.le (2 : ℝ)).symm
+      _ = (q : ℝ) ^ (-(2 : ℝ) + (1 / 2 : ℝ)) := by
+        rw [Real.rpow_add hqpos]
+      _ = (q : ℝ) ^ (-(3 / 2 : ℝ)) := by norm_num
+
+/-- The exact integrated summand of DFI equation (3)/(27), including the
+external Jacobian `(ab)⁻¹`. -/
+noncomputable def dfiEquation27CentralSummand
+    (a b h : ℕ) (F : ℝ → ℝ → ℂ) (q : ℕ) : ℂ :=
+  (((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b h q) *
+    dfiEquation27CentralIntegral a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q) F h
+
+/-- DFI's infinite Ramanujan main term after integration against the source
+test function.  Absolute summability is proved below. -/
+noncomputable def dfiEquation27CentralSeries
+    (a b h : ℕ) (F : ℝ → ℝ → ℂ) : ℂ :=
+  ∑' q : ℕ, dfiEquation27CentralSummand a b h F q
+
+/-- Absolute convergence of the literal equation-(27) central series.  The
+two logarithms cost only `q^(1/2)`, leaving the summable exponent `-3/2`
+after the inverse-square arithmetic coefficient. -/
+theorem summable_dfiEquation27CentralSummand
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h) :
+    Summable (fun q : ℕ =>
+      dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) q) := by
+  obtain ⟨K, hK, hcentral⟩ :=
+    exists_norm_dfiEquation27CentralIntegral_reduced_le
+      (h := (h : ℝ)) hf hbox hφ hscale
+  let AX : ℝ := 1 + Real.log (2 * X) + |Real.log a| +
+    2 * |Real.eulerMascheroniConstant|
+  let AY : ℝ := 1 + Real.log (2 * Y) + |Real.log b| +
+    2 * |Real.eulerMascheroniConstant|
+  let D : ℝ :=
+    ‖(((a : ℂ) * b)⁻¹)‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+      (AX + 8) * (AY + 8) * min X Y
+  have hAX : 0 ≤ AX := by
+    dsimp [AX]
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hAY : 0 ≤ AY := by
+    dsimp [AY]
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  have hmin : 0 ≤ min X Y :=
+    le_min (zero_le_one.trans hf.one_le_X) (zero_le_one.trans hf.one_le_Y)
+  have hD : 0 ≤ D := by positivity
+  have hmajor : Summable (fun q : ℕ =>
+      D * (((q : ℝ) ^ 2)⁻¹ * (q : ℝ) ^ (1 / 2 : ℝ))) :=
+    summable_natCast_inv_sq_mul_rpow_half.mul_left D
+  apply Summable.of_norm_bounded hmajor
+  intro q
+  by_cases hq0 : q = 0
+  · subst q
+    simp [dfiEquation27CentralSummand,
+      dfiEquation27ArithmeticCoefficient]
+  · have hq : 0 < q := Nat.pos_of_ne_zero hq0
+    letI : NeZero q := ⟨hq0⟩
+    have hqOne : (1 : ℝ) ≤ q := by exact_mod_cast hq
+    have hqPowOne : (1 : ℝ) ≤ (q : ℝ) ^ (1 / 4 : ℝ) :=
+      Real.one_le_rpow hqOne (by norm_num)
+    have hlog := Real.log_natCast_le_rpow_div q
+      (by norm_num : (0 : ℝ) < 1 / 4)
+    have hLXpow : AX + 2 * Real.log q ≤
+        (AX + 8) * (q : ℝ) ^ (1 / 4 : ℝ) := by
+      have hAXpow : AX ≤ AX * (q : ℝ) ^ (1 / 4 : ℝ) := by
+        nlinarith [mul_le_mul_of_nonneg_left hqPowOne hAX]
+      have hlog' : 2 * Real.log q ≤
+          8 * (q : ℝ) ^ (1 / 4 : ℝ) := by
+        norm_num at hlog ⊢
+        linarith
+      nlinarith
+    have hLYpow : AY + 2 * Real.log q ≤
+        (AY + 8) * (q : ℝ) ^ (1 / 4 : ℝ) := by
+      have hAYpow : AY ≤ AY * (q : ℝ) ^ (1 / 4 : ℝ) := by
+        nlinarith [mul_le_mul_of_nonneg_left hqPowOne hAY]
+      have hlog' : 2 * Real.log q ≤
+          8 * (q : ℝ) ^ (1 / 4 : ℝ) := by
+        norm_num at hlog ⊢
+        linarith
+      nlinarith
+    have hhalf :
+        (q : ℝ) ^ (1 / 4 : ℝ) * (q : ℝ) ^ (1 / 4 : ℝ) =
+          (q : ℝ) ^ (1 / 2 : ℝ) := by
+      rw [← Real.rpow_add (by positivity : (0 : ℝ) < q)]
+      norm_num
+    rw [dfiEquation27CentralSummand, norm_mul, norm_mul]
+    have hprod := mul_le_mul
+      (norm_dfiEquation27ArithmeticCoefficient_le_inv_sq
+        a b h q ha hb hh)
+      (hcentral a b q hq)
+      (norm_nonneg (dfiEquation27CentralIntegral a b
+        (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+        (dfiLocalizedWeight f φ h) h)) (by positivity)
+    calc
+      ‖((a : ℂ) * b)⁻¹‖ * ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+          ‖dfiEquation27CentralIntegral a b
+            (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+            (dfiLocalizedWeight f φ h) h‖ =
+        ‖((a : ℂ) * b)⁻¹‖ *
+          (‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+            ‖dfiEquation27CentralIntegral a b
+              (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+              (dfiLocalizedWeight f φ h) h‖) := by ring
+      _ ≤ ‖((a : ℂ) * b)⁻¹‖ *
+          ((((a * b * h ^ 2 : ℕ) : ℝ)) * ((q : ℝ) ^ 2)⁻¹ *
+            (K * (AX + 2 * Real.log q) * (AY + 2 * Real.log q) * min X Y)) :=
+        mul_le_mul_of_nonneg_left hprod (norm_nonneg _)
+      _ = (‖((a : ℂ) * b)⁻¹‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+            min X Y) * ((q : ℝ) ^ 2)⁻¹ *
+          (AX + 2 * Real.log q) * (AY + 2 * Real.log q) := by ring
+      _ ≤ (‖((a : ℂ) * b)⁻¹‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+            min X Y) * ((q : ℝ) ^ 2)⁻¹ *
+          ((AX + 8) * (q : ℝ) ^ (1 / 4 : ℝ)) *
+          ((AY + 8) * (q : ℝ) ^ (1 / 4 : ℝ)) := by
+        gcongr
+      _ = D * (((q : ℝ) ^ 2)⁻¹ *
+          ((q : ℝ) ^ (1 / 4 : ℝ) * (q : ℝ) ^ (1 / 4 : ℝ))) := by
+        dsimp [D]
+        ring
+      _ = D * (((q : ℝ) ^ 2)⁻¹ * (q : ℝ) ^ (1 / 2 : ℝ)) := by
+        rw [hhalf]
+
+/-- Source-strength pointwise majorant for the integrated equation-(27)
+central summand.  For every `0 < ε < 1`, the two logarithms in the central
+integral cost only `q^ε`; the arithmetic coefficient still supplies
+`q⁻²`.  This is the quantitative input for truncating the infinite
+Ramanujan main term at modulus `Q`. -/
+theorem exists_norm_dfiEquation27CentralSummand_le_epsilon
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h)
+    {ε : ℝ} (hε0 : 0 < ε) (hε1 : ε < 1) :
+    ∃ D : ℝ, 0 ≤ D ∧ ∀ q : ℕ, 0 < q →
+      ‖dfiEquation27CentralSummand a b h
+          (dfiLocalizedWeight f φ h) q‖ ≤
+        D * (q : ℝ) ^ (-(2 - ε)) := by
+  obtain ⟨K, hK, hcentral⟩ :=
+    exists_norm_dfiEquation27CentralIntegral_reduced_le
+      (h := (h : ℝ)) hf hbox hφ hscale
+  let AX : ℝ := 1 + Real.log (2 * X) + |Real.log a| +
+    2 * |Real.eulerMascheroniConstant|
+  let AY : ℝ := 1 + Real.log (2 * Y) + |Real.log b| +
+    2 * |Real.eulerMascheroniConstant|
+  let E : ℝ := 4 * ε⁻¹
+  let D : ℝ :=
+    ‖(((a : ℂ) * b)⁻¹)‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+      (AX + E) * (AY + E) * min X Y
+  have hAX : 0 ≤ AX := by
+    dsimp [AX]
+    have : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    positivity
+  have hAY : 0 ≤ AY := by
+    dsimp [AY]
+    have : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    positivity
+  have hE : 0 ≤ E := by
+    dsimp [E]
+    positivity
+  have hmin : 0 ≤ min X Y :=
+    le_min (zero_le_one.trans hf.one_le_X) (zero_le_one.trans hf.one_le_Y)
+  have hD : 0 ≤ D := by positivity
+  refine ⟨D, hD, ?_⟩
+  intro q hq
+  letI : NeZero q := ⟨hq.ne'⟩
+  have hqreal : (0 : ℝ) < q := by exact_mod_cast hq
+  have hqOne : (1 : ℝ) ≤ q := by exact_mod_cast hq
+  have hδ0 : (0 : ℝ) < ε / 2 := by positivity
+  have hqPowOne : (1 : ℝ) ≤ (q : ℝ) ^ (ε / 2) :=
+    Real.one_le_rpow hqOne hδ0.le
+  have hlog := Real.log_natCast_le_rpow_div q hδ0
+  have hlog' : 2 * Real.log q ≤ E * (q : ℝ) ^ (ε / 2) := by
+    calc
+      2 * Real.log q ≤ 2 * ((q : ℝ) ^ (ε / 2) / (ε / 2)) := by
+        gcongr
+      _ = E * (q : ℝ) ^ (ε / 2) := by
+        dsimp [E]
+        field_simp [ne_of_gt hε0]
+        ring
+  have hLXpow : AX + 2 * Real.log q ≤
+      (AX + E) * (q : ℝ) ^ (ε / 2) := by
+    have hAXpow : AX ≤ AX * (q : ℝ) ^ (ε / 2) := by
+      nlinarith [mul_le_mul_of_nonneg_left hqPowOne hAX]
+    nlinarith
+  have hLYpow : AY + 2 * Real.log q ≤
+      (AY + E) * (q : ℝ) ^ (ε / 2) := by
+    have hAYpow : AY ≤ AY * (q : ℝ) ^ (ε / 2) := by
+      nlinarith [mul_le_mul_of_nonneg_left hqPowOne hAY]
+    nlinarith
+  have hεpow :
+      (q : ℝ) ^ (ε / 2) * (q : ℝ) ^ (ε / 2) = (q : ℝ) ^ ε := by
+    rw [← Real.rpow_add hqreal]
+    congr 1
+    ring
+  have hinvSq : ((q : ℝ) ^ 2)⁻¹ = (q : ℝ) ^ (-(2 : ℝ)) := by
+    calc
+      ((q : ℝ) ^ 2)⁻¹ = ((q : ℝ) ^ (2 : ℝ))⁻¹ :=
+        congrArg (fun x : ℝ => x⁻¹) (Real.rpow_natCast (q : ℝ) 2).symm
+      _ = (q : ℝ) ^ (-(2 : ℝ)) :=
+        (Real.rpow_neg hqreal.le (2 : ℝ)).symm
+  rw [dfiEquation27CentralSummand, norm_mul, norm_mul]
+  have hprod := mul_le_mul
+    (norm_dfiEquation27ArithmeticCoefficient_le_inv_sq
+      a b h q ha hb hh)
+    (hcentral a b q hq)
+    (norm_nonneg (dfiEquation27CentralIntegral a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) h)) (by positivity)
+  calc
+    ‖((a : ℂ) * b)⁻¹‖ * ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+        ‖dfiEquation27CentralIntegral a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ =
+      ‖((a : ℂ) * b)⁻¹‖ *
+        (‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+          ‖dfiEquation27CentralIntegral a b
+            (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+            (dfiLocalizedWeight f φ h) h‖) := by ring
+    _ ≤ ‖((a : ℂ) * b)⁻¹‖ *
+        ((((a * b * h ^ 2 : ℕ) : ℝ)) * ((q : ℝ) ^ 2)⁻¹ *
+          (K * (AX + 2 * Real.log q) * (AY + 2 * Real.log q) * min X Y)) :=
+      mul_le_mul_of_nonneg_left hprod (norm_nonneg _)
+    _ = (‖((a : ℂ) * b)⁻¹‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+          min X Y) * ((q : ℝ) ^ 2)⁻¹ *
+        (AX + 2 * Real.log q) * (AY + 2 * Real.log q) := by ring
+    _ ≤ (‖((a : ℂ) * b)⁻¹‖ * (((a * b * h ^ 2 : ℕ) : ℝ)) * K *
+          min X Y) * ((q : ℝ) ^ 2)⁻¹ *
+        ((AX + E) * (q : ℝ) ^ (ε / 2)) *
+        ((AY + E) * (q : ℝ) ^ (ε / 2)) := by
+      gcongr
+    _ = D * (((q : ℝ) ^ 2)⁻¹ *
+        ((q : ℝ) ^ (ε / 2) * (q : ℝ) ^ (ε / 2))) := by
+      dsimp [D]
+      ring
+    _ = D * ((q : ℝ) ^ (-(2 : ℝ)) * (q : ℝ) ^ ε) := by
+      rw [hεpow, hinvSq]
+    _ = D * (q : ℝ) ^ (-(2 : ℝ) + ε) := by
+      rw [Real.rpow_add hqreal]
+    _ = D * (q : ℝ) ^ (-(2 - ε)) := by
+      congr 2
+      ring
+
+/-- Quantitative tail of the integrated central series in DFI equation
+(27).  This is the exact `Q⁻¹⁺ε` truncation estimate used in the passage
+from the finite delta-symbol sum to the infinite Ramanujan main term. -/
+theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_epsilon
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h)
+    {ε : ℝ} (hε0 : 0 < ε) (hε1 : ε < 1) (L : ℕ) (hL : 0 < L) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+          (dfiLocalizedWeight f φ h) (L + (j + 1))‖ ≤
+        D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) := by
+  obtain ⟨D, hD, hpoint⟩ :=
+    exists_norm_dfiEquation27CentralSummand_le_epsilon
+      hf hbox hφ hscale a b h ha hb hh hε0 hε1
+  refine ⟨D, hD, ?_⟩
+  have hp : 1 < 2 - ε := by linarith
+  have hSeries := tsum_nat_add_one_rpow_neg_le
+    (L := (L : ℝ)) (p := 2 - ε) (Nat.cast_pos.mpr hL) hp
+  have hSeries' :
+      ∑' j : ℕ, ((L : ℝ) + (j + 1 : ℕ)) ^ (-(2 - ε)) ≤
+        (L : ℝ) ^ (-(1 - ε)) / (1 - ε) := by
+    convert hSeries using 1
+    all_goals ring_nf
+  have hPowerSummable : Summable (fun j : ℕ =>
+      ((L : ℝ) + (j + 1 : ℕ)) ^ (-(2 - ε))) := by
+    have hbase : Summable (fun n : ℕ => (n : ℝ) ^ (-(2 - ε))) :=
+      Real.summable_nat_rpow.mpr (by linarith)
+    have hshift := (summable_nat_add_iff (L + 1)).2 hbase
+    simpa [Nat.cast_add, add_assoc, add_comm, add_left_comm] using hshift
+  apply Real.tsum_le_of_sum_range_le
+  · intro j
+    exact norm_nonneg _
+  · intro N
+    calc
+      ∑ j ∈ Finset.range N, ‖dfiEquation27CentralSummand a b h
+          (dfiLocalizedWeight f φ h) (L + (j + 1))‖ ≤
+          ∑ j ∈ Finset.range N,
+            D * ((L : ℝ) + (j + 1 : ℕ)) ^ (-(2 - ε)) := by
+        gcongr with j hj
+        have hq : 0 < L + (j + 1) := by omega
+        simpa only [Nat.cast_add, Nat.cast_one, add_assoc, add_comm,
+          add_left_comm] using hpoint (L + (j + 1)) hq
+      _ = D * ∑ j ∈ Finset.range N,
+          ((L : ℝ) + (j + 1 : ℕ)) ^ (-(2 - ε)) := by
+        rw [Finset.mul_sum]
+      _ ≤ D * ∑' j : ℕ,
+          ((L : ℝ) + (j + 1 : ℕ)) ^ (-(2 - ε)) := by
+        gcongr
+        exact hPowerSummable.sum_le_tsum (Finset.range N)
+          (fun j _ => Real.rpow_nonneg (by positivity) _)
+      _ ≤ D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) :=
+        mul_le_mul_of_nonneg_left hSeries' hD
+
 /-- The divisor-variable integral `||I||` of DFI equation (30), including
 the two positive scaling Jacobians. -/
 noncomputable def dfiEquation30DivisorAbsoluteIntegral
@@ -628,5 +1327,311 @@ theorem dfiEquation30
       ((a : ℝ) * b)⁻¹ * (K * min X Y * Real.log Q) :=
         mul_le_mul_of_nonneg_left (hphysical q hq) hab
     _ = K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q := by ring
+
+/-- The totalized equation-(24) main branch is exactly the equation-(27)
+arithmetic coefficient times the physical main integral, including the
+two divisor-variable Jacobians.  This is the source-entry bridge needed to
+apply the analytic equation-(27) estimate to equation (22). -/
+theorem dfiEquation24MainTotal_eq_equation27_summand
+    {Q : ℝ} (w : DFIDeltaWeight Q) (a b h q : ℕ)
+    (ha : 0 < a) (hb : 0 < b) (hab : a.Coprime b)
+    (F : ℝ → ℝ → ℂ) :
+    dfiEquation24MainTotal q a b (h : ℤ)
+        (dfiEquation23Weight w F a b (h : ℤ) q) =
+      (((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b h q) *
+        dfiEquation27PhysicalMainIntegral w q a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q) F (h : ℝ) := by
+  by_cases hq0 : q = 0
+  · subst q
+    simp [dfiEquation24MainTotal, dfiEquation27ArithmeticCoefficient]
+  · have hq : 0 < q := Nat.pos_of_ne_zero hq0
+    letI : NeZero q := ⟨hq0⟩
+    rw [dfiEquation24MainTotal, dif_neg hq0]
+    rw [dfiEquation27_main_summand_exact w a b q ha hb hab F (h : ℤ)]
+    rw [dfiEquation27ArithmeticCoefficient_eq]
+    rw [ramanujanSumInt_neg]
+    rw [ramanujanSumInt_ofNat_eq_ramanujanSum, star_ramanujanSum]
+    rw [dfiReducedModulus_denominator_eq,
+      dfiReducedModulus_denominator_eq]
+    push_cast
+    field_simp
+
+/-- The complete finite double-main contribution in equations (22)--(24)
+is the finite physical equation-(27) sum. -/
+theorem sum_dfiEquation24MainTotal_eq_sum_dfiEquation27Physical
+    {Q : ℝ} (w : DFIDeltaWeight Q) (a b h : ℕ)
+    (ha : 0 < a) (hb : 0 < b) (hab : a.Coprime b)
+    (F : ℝ → ℝ → ℂ) :
+    (∑ q ∈ dfiEquation22Moduli Q,
+      dfiEquation24MainTotal q a b (h : ℤ)
+        (dfiEquation23Weight w F a b (h : ℤ) q)) =
+      ∑ q ∈ dfiEquation22Moduli Q,
+        (((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b h q) *
+          dfiEquation27PhysicalMainIntegral w q a b
+            (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+            F (h : ℝ) := by
+  apply Finset.sum_congr rfl
+  intro q _
+  exact dfiEquation24MainTotal_eq_equation27_summand
+    w a b h q ha hb hab F
+
+/-- The finite central equation-(27) sum over the delta-symbol moduli
+approximates the infinite Ramanujan main series with the precise
+`Q⁻¹⁺ε` tail.  The cutoff is handled exactly as `[1, ceil(2Q))`, so no
+endpoint convention is hidden in this estimate. -/
+theorem exists_norm_sum_dfiEquation27Central_sub_series_le_epsilon
+    {P X Y U Q : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) (hQ : 2 ≤ Q)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h)
+    {ε : ℝ} (hε0 : 0 < ε) (hε1 : ε < 1) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation27CentralSummand a b h
+            (dfiLocalizedWeight f φ h) q) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ ≤
+        D * (Q ^ (-(1 - ε)) / (1 - ε)) := by
+  let K : ℕ := ⌈2 * Q⌉₊
+  let L : ℕ := K - 1
+  have hceil : 2 * Q ≤ (K : ℝ) := by
+    exact Nat.le_ceil (2 * Q)
+  have hK : 1 < K := by
+    have : (2 : ℝ) < K := by nlinarith
+    have htwo : 2 < K := by exact_mod_cast this
+    omega
+  have hL : 0 < L := by
+    dsimp [L]
+    omega
+  obtain ⟨D, hD, htail⟩ :=
+    exists_tsum_norm_dfiEquation27CentralSummand_tail_le_epsilon
+      hf hbox hφ hscale a b h ha hb hh hε0 hε1 L hL
+  refine ⟨D, hD, ?_⟩
+  let F : ℕ → ℂ := fun q =>
+    dfiEquation27CentralSummand a b h (dfiLocalizedWeight f φ h) q
+  have hF : Summable F :=
+    summable_dfiEquation27CentralSummand
+      hf hbox hφ hscale a b h ha hb hh
+  have hSplit := hF.sum_add_tsum_nat_add K
+  have hFinite : ∑ q ∈ Finset.range K, F q =
+      ∑ q ∈ dfiEquation22Moduli Q, F q := by
+    rw [dfiEquation22Moduli_eq_Ico]
+    change ∑ q ∈ Finset.range K, F q = ∑ q ∈ Finset.Ico 1 K, F q
+    rw [show Finset.range K = insert 0 (Finset.Ico 1 K) by
+      ext q
+      simp
+      omega]
+    simp [F, dfiEquation27CentralSummand,
+      dfiEquation27ArithmeticCoefficient]
+  have hShift : Summable (fun j : ℕ => F (j + K)) :=
+    (summable_nat_add_iff K).2 hF
+  have hTailNorm :
+      ‖∑' j : ℕ, F (j + K)‖ ≤ ∑' j : ℕ, ‖F (j + K)‖ :=
+    norm_tsum_le_tsum_norm hShift.norm
+  have hIndex : ∀ j : ℕ, j + K = L + (j + 1) := by
+    intro j
+    dsimp [L]
+    omega
+  have hTailBound :
+      ∑' j : ℕ, ‖F (j + K)‖ ≤
+        D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) := by
+    calc
+      ∑' j : ℕ, ‖F (j + K)‖ =
+          ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+            (dfiLocalizedWeight f φ h) (L + (j + 1))‖ := by
+        apply tsum_congr
+        intro j
+        rw [← hIndex j]
+      _ ≤ D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) := htail
+  have hLQ : Q ≤ (L : ℝ) := by
+    have hKone : 1 ≤ K := hK.le
+    have hcast : (L : ℝ) = (K : ℝ) - 1 := by
+      dsimp [L]
+      rw [Nat.cast_sub hKone, Nat.cast_one]
+    rw [hcast]
+    nlinarith
+  have hQpos : 0 < Q := by linarith
+  have hpow : (L : ℝ) ^ (-(1 - ε)) ≤ Q ^ (-(1 - ε)) :=
+    Real.rpow_le_rpow_of_nonpos hQpos hLQ (by linarith)
+  have hden : 0 ≤ (1 - ε)⁻¹ := by positivity
+  have hTailScale :
+      D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) ≤
+        D * (Q ^ (-(1 - ε)) / (1 - ε)) := by
+    apply mul_le_mul_of_nonneg_left _ hD
+    simpa [div_eq_mul_inv] using mul_le_mul_of_nonneg_right hpow hden
+  unfold dfiEquation27CentralSeries
+  change ‖(∑ q ∈ dfiEquation22Moduli Q, F q) - ∑' q : ℕ, F q‖ ≤
+    D * (Q ^ (-(1 - ε)) / (1 - ε))
+  calc
+    ‖(∑ q ∈ dfiEquation22Moduli Q, F q) - ∑' q : ℕ, F q‖ =
+        ‖∑' j : ℕ, F (j + K)‖ := by
+      rw [← hSplit, hFinite]
+      simp
+    _ ≤ ∑' j : ℕ, ‖F (j + K)‖ := hTailNorm
+    _ ≤ D * ((L : ℝ) ^ (-(1 - ε)) / (1 - ε)) := hTailBound
+    _ ≤ D * (Q ^ (-(1 - ε)) / (1 - ε)) := hTailScale
+
+/-- Equations (27)--(30), main branch: the finite double-main contribution
+from the delta method differs from DFI's infinite Ramanujan main term by
+the sum of the integrated small-modulus delta-kernel error and the exact
+`Q⁻¹⁺ε` central tail.  No provisional error certificate occurs in this
+statement: both terms are the concrete envelopes proved from equation (2). -/
+theorem exists_norm_sum_dfiEquation24Main_sub_centralSeries_le
+    {P X Y U Q : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) (hQ : 2 ≤ Q)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h)
+    (hab : a.Coprime b) (j : ℕ) (hj : 2 ≤ j)
+    {ε : ℝ} (hε0 : 0 < ε) (hε1 : ε < 1) :
+    ∃ C D : ℝ, 0 < C ∧ 0 ≤ D ∧
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation24MainTotal q a b (h : ℤ)
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b (h : ℤ) q)) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ ≤
+        ‖(((a : ℂ) * b)⁻¹)‖ *
+          (C * (((a * b : ℕ) : ℝ) *
+            (divisorEpsilonConstant ε * (h : ℝ) ^ ε) *
+            ((1 + ε⁻¹) * max 1
+              ((((⌈2 * Q⌉₊ - 1) + 1 : ℕ) : ℝ) ^ ε))) *
+            dfiEquation27IntegratedErrorEnvelope Q X Y U a b
+              (⌈2 * Q⌉₊ - 1) j) +
+          D * (Q ^ (-(1 - ε)) / (1 - ε)) := by
+  let K : ℕ := ⌈2 * Q⌉₊
+  let L : ℕ := K - 1
+  have hQpos : 0 < Q := by linarith
+  have hceil : 2 * Q ≤ (K : ℝ) := Nat.le_ceil (2 * Q)
+  have hKtwo : 2 < K := by
+    exact_mod_cast (show (2 : ℝ) < K by nlinarith)
+  have hL : 1 ≤ L := by
+    dsimp [L]
+    omega
+  have hset : Finset.Icc 1 L = dfiEquation22Moduli Q := by
+    rw [dfiEquation22Moduli_eq_Ico]
+    change Finset.Icc 1 L = Finset.Ico 1 K
+    ext q
+    simp only [Finset.mem_Icc, Finset.mem_Ico]
+    dsimp [L]
+    omega
+  obtain ⟨C, hC, hsmall⟩ :=
+    norm_sum_Icc_dfiEquation27_reduced_main_error_le_epsilon
+      hQpos w hf hbox hφ hscale j hj hε0
+  obtain ⟨D, hD, htail⟩ :=
+    exists_norm_sum_dfiEquation27Central_sub_series_le_epsilon
+      hf hbox hφ hscale hQ a b h ha hb hh hε0 hε1
+  refine ⟨C, D, hC, hD, ?_⟩
+  let c : ℂ := ((a : ℂ) * b)⁻¹
+  let physical : ℕ → ℂ := fun q =>
+    dfiEquation27PhysicalMainIntegral w q a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) (h : ℝ)
+  let central : ℕ → ℂ := fun q =>
+    dfiEquation27CentralIntegral a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) (h : ℝ)
+  have hsmallApply := hsmall a b h L ha hb hh hL
+  rw [hset] at hsmallApply
+  have hPhysCentral :
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          c * dfiEquation27ArithmeticCoefficient a b h q * physical q) -
+        ∑ q ∈ dfiEquation22Moduli Q,
+          c * dfiEquation27ArithmeticCoefficient a b h q * central q‖ ≤
+      ‖c‖ *
+        (C * (((a * b : ℕ) : ℝ) *
+          (divisorEpsilonConstant ε * (h : ℝ) ^ ε) *
+          ((1 + ε⁻¹) * max 1 ((((L + 1 : ℕ) : ℝ) ^ ε)))) *
+          dfiEquation27IntegratedErrorEnvelope Q X Y U a b L j) := by
+    rw [← Finset.sum_sub_distrib]
+    have hfactor :
+        (∑ q ∈ dfiEquation22Moduli Q,
+          (c * dfiEquation27ArithmeticCoefficient a b h q * physical q -
+            c * dfiEquation27ArithmeticCoefficient a b h q * central q)) =
+          c * ∑ q ∈ dfiEquation22Moduli Q,
+            dfiEquation27ArithmeticCoefficient a b h q *
+              (physical q - central q) := by
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro q _
+      ring
+    rw [hfactor, norm_mul]
+    exact mul_le_mul_of_nonneg_left hsmallApply (norm_nonneg c)
+  have hMain :
+      (∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation24MainTotal q a b (h : ℤ)
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b (h : ℤ) q)) =
+        ∑ q ∈ dfiEquation22Moduli Q,
+          c * dfiEquation27ArithmeticCoefficient a b h q * physical q := by
+    rw [sum_dfiEquation24MainTotal_eq_sum_dfiEquation27Physical
+      w a b h ha hb hab (dfiLocalizedWeight f φ h)]
+  have hCentral :
+      (∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation27CentralSummand a b h
+            (dfiLocalizedWeight f φ h) q) =
+        ∑ q ∈ dfiEquation22Moduli Q,
+          c * dfiEquation27ArithmeticCoefficient a b h q * central q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rfl
+  have hTriangle :
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation24MainTotal q a b (h : ℤ)
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b (h : ℤ) q)) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ ≤
+        ‖(∑ q ∈ dfiEquation22Moduli Q,
+            c * dfiEquation27ArithmeticCoefficient a b h q * physical q) -
+          ∑ q ∈ dfiEquation22Moduli Q,
+            c * dfiEquation27ArithmeticCoefficient a b h q * central q‖ +
+        ‖(∑ q ∈ dfiEquation22Moduli Q,
+            dfiEquation27CentralSummand a b h
+              (dfiLocalizedWeight f φ h) q) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ := by
+    rw [hMain, hCentral]
+    calc
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          c * dfiEquation27ArithmeticCoefficient a b h q * physical q) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ =
+        ‖((∑ q ∈ dfiEquation22Moduli Q,
+            c * dfiEquation27ArithmeticCoefficient a b h q * physical q) -
+          ∑ q ∈ dfiEquation22Moduli Q,
+            c * dfiEquation27ArithmeticCoefficient a b h q * central q) +
+          ((∑ q ∈ dfiEquation22Moduli Q,
+            c * dfiEquation27ArithmeticCoefficient a b h q * central q) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h))‖ := by
+          congr 1
+          ring
+      _ ≤ _ := norm_add_le _ _
+  calc
+    ‖(∑ q ∈ dfiEquation22Moduli Q,
+        dfiEquation24MainTotal q a b (h : ℤ)
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b (h : ℤ) q)) -
+        dfiEquation27CentralSeries a b h
+          (dfiLocalizedWeight f φ h)‖ ≤ _ := hTriangle
+    _ ≤ ‖c‖ *
+          (C * (((a * b : ℕ) : ℝ) *
+            (divisorEpsilonConstant ε * (h : ℝ) ^ ε) *
+            ((1 + ε⁻¹) * max 1 ((((L + 1 : ℕ) : ℝ) ^ ε)))) *
+            dfiEquation27IntegratedErrorEnvelope Q X Y U a b L j) +
+        D * (Q ^ (-(1 - ε)) / (1 - ε)) :=
+      add_le_add hPhysCentral htail
+    _ = ‖(((a : ℂ) * b)⁻¹)‖ *
+          (C * (((a * b : ℕ) : ℝ) *
+            (divisorEpsilonConstant ε * (h : ℝ) ^ ε) *
+            ((1 + ε⁻¹) * max 1
+              ((((⌈2 * Q⌉₊ - 1) + 1 : ℕ) : ℝ) ^ ε))) *
+            dfiEquation27IntegratedErrorEnvelope Q X Y U a b
+              (⌈2 * Q⌉₊ - 1) j) +
+          D * (Q ^ (-(1 - ε)) / (1 - ε)) := by
+      rfl
 
 end RiemannZeta.GuthMaynard

@@ -110,6 +110,17 @@ theorem mem_dfiEquation22Moduli_iff {Q : ℝ} (q : ℕ) :
     refine ⟨⟨by omega, ?_⟩, hlt⟩
     exact_mod_cast (Nat.le_ceil (2 * Q)).trans' hlt.le
 
+/-- The source modulus set is the ordinary initial interval
+`[1, ceil(2Q))`.  This form is used to split the infinite equation-(27)
+Ramanujan series exactly at the delta-symbol cutoff. -/
+theorem dfiEquation22Moduli_eq_Ico (Q : ℝ) :
+    dfiEquation22Moduli Q = Finset.Ico 1 ⌈2 * Q⌉₊ := by
+  ext q
+  rw [mem_dfiEquation22Moduli_iff]
+  simp only [Finset.mem_Ico]
+  rw [← Nat.lt_ceil]
+  omega
+
 /-- The delta expansion is a `q`-series with finite support even before the
 source-size truncation. -/
 theorem dfiDeltaExpansion_eq_tsum_moduli

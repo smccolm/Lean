@@ -341,8 +341,9 @@ theorem dfiEquation14
 by the test-function mass, is controlled by the quotient-derivative `L¹`
 norm. -/
 theorem abs_dfi_first_remainder_le
-    {Q : ℝ} (w : DFIDeltaWeight Q) (q j : ℕ) (hj : 2 ≤ j) :
+    {Q : ℝ} (w : DFIDeltaWeight Q) (j : ℕ) (hj : 2 ≤ j) :
     ∃ C : ℝ, 0 < C ∧
+      ∀ q : ℕ,
       |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
           iteratedDeriv j (dfiWeightQuotient w) r| ≤
         C * Q * (Q ^ (j + 2))⁻¹ := by
@@ -352,6 +353,7 @@ theorem abs_dfi_first_remainder_le
   let C : ℝ := 4 * Cpsi * Cw
   have hC : 0 < C := by positivity
   refine ⟨C, hC, ?_⟩
+  intro q
   have hrem := integrableOn_dfi_first_remainder w q j hj
   have hderivcont : Continuous
       (iteratedDeriv j (dfiWeightQuotient w)) :=
@@ -404,18 +406,18 @@ theorem abs_dfi_first_remainder_le
 /-- DFI equation (15).  The exact identity supplies `q^(j-1)`; since
 `q ≥ 1`, this implies the paper's displayed (slightly weaker) `q^j` bound. -/
 theorem dfiEquation15
-    {Q : ℝ} (w : DFIDeltaWeight Q) (q : ℕ) (hq : 0 < q)
-    (j : ℕ) (hj : 2 ≤ j) :
+    {Q : ℝ} (w : DFIDeltaWeight Q) (j : ℕ) (hj : 2 ≤ j) :
     ∃ C : ℝ, 0 < C ∧
-      ∀ f : ℝ → ℝ,
+      ∀ (q : ℕ), 0 < q → ∀ f : ℝ → ℝ,
       |(q : ℝ) ^ (j - 1) * (∫ u : ℝ, f u) *
           (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
             iteratedDeriv j (dfiWeightQuotient w) r)| ≤
         C * (q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ *
           |∫ u : ℝ, f u| := by
-  obtain ⟨C, hC, hrem⟩ := abs_dfi_first_remainder_le w q j hj
+  obtain ⟨C, hC, hrem⟩ := abs_dfi_first_remainder_le w j hj
   refine ⟨C, hC, ?_⟩
-  intro f
+  intro q hq f
+  have hrem := hrem q
   have hqreal : (1 : ℝ) ≤ q := by exact_mod_cast hq
   have hqpow : (q : ℝ) ^ (j - 1) ≤ (q : ℝ) ^ j := by
     rw [show j = (j - 1) + 1 by omega, pow_succ]
@@ -706,9 +708,9 @@ theorem integral_Ioi_abs_weight_scaled_deriv_le
 /-- The second Euler--Maclaurin remainder in DFI (12), before its exterior
 power of `q`, is bounded by the scale-sensitive absolute kernel. -/
 theorem abs_dfi_second_remainder_le
-    {Q : ℝ} (w : DFIDeltaWeight Q) (q j : ℕ) (hj : 2 ≤ j) :
+    {Q : ℝ} (w : DFIDeltaWeight Q) (j : ℕ) (hj : 2 ≤ j) :
     ∃ C : ℝ, 0 < C ∧
-      ∀ (f : ℝ → ℝ) (U : ℕ),
+      ∀ (q : ℕ) (f : ℝ → ℝ) (U : ℕ),
         ContDiff ℝ ∞ f → HasCompactSupport f →
         tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) →
       |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
@@ -722,7 +724,7 @@ theorem abs_dfi_second_remainder_le
   let C : ℝ := Cpsi * Ckernel
   have hC : 0 < C := mul_pos hCpsi hCkernel
   refine ⟨C, hC, ?_⟩
-  intro f U hf hfc hsupp
+  intro q f U hf hfc hsupp
   have hkernel' := hkernel f U hf hfc hsupp (by omega)
   let Kouter : ℝ → ℝ := fun r => ∫ u : ℝ,
     |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)
@@ -783,10 +785,9 @@ theorem abs_dfi_second_remainder_le
 equation (15), it follows by weakening the corrected identity's stronger
 `q^(j-1)` coefficient. -/
 theorem dfiEquation16
-    {Q : ℝ} (w : DFIDeltaWeight Q) (q : ℕ) (hq : 0 < q)
-    (j : ℕ) (hj : 2 ≤ j) :
+    {Q : ℝ} (w : DFIDeltaWeight Q) (j : ℕ) (hj : 2 ≤ j) :
     ∃ C : ℝ, 0 < C ∧
-      ∀ (f : ℝ → ℝ) (U : ℕ),
+      ∀ (q : ℕ), 0 < q → ∀ (f : ℝ → ℝ) (U : ℕ),
         ContDiff ℝ ∞ f → HasCompactSupport f →
         tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) →
       |(q : ℝ) ^ (j - 1) *
@@ -796,10 +797,10 @@ theorem dfiEquation16
         C * (q : ℝ) ^ j * Q ^ (j - 1) *
           ∫ v : ℝ, |iteratedDeriv j f v| := by
   obtain ⟨C, hC, hrem⟩ :=
-    abs_dfi_second_remainder_le w q j hj
+    abs_dfi_second_remainder_le w j hj
   refine ⟨C, hC, ?_⟩
-  intro f U hf hfc hsupp
-  have hrem' := hrem f U hf hfc hsupp
+  intro q hq f U hf hfc hsupp
+  have hrem' := hrem q f U hf hfc hsupp
   have hqreal : (1 : ℝ) ≤ q := by exact_mod_cast hq
   have hqpow : (q : ℝ) ^ (j - 1) ≤ (q : ℝ) ^ j := by
     rw [show j = (j - 1) + 1 by omega, pow_succ]
@@ -1160,25 +1161,25 @@ theorem dfiEquation17
 existential absolute constant.  This is the quantitative delta-symbol
 approximation obtained by assembling equations (12)--(17). -/
 theorem dfiEquation18
-    {Q : ℝ} (w : DFIDeltaWeight Q) (q : ℕ) (hq : 0 < q)
-    (U j : ℕ) (hj : 2 ≤ j) :
+    {Q : ℝ} (w : DFIDeltaWeight Q) (U j : ℕ) (hj : 2 ≤ j) :
     ∃ C : ℝ, 0 < C ∧
-      ∀ f : ℝ → ℝ, ContDiff ℝ ∞ f → HasCompactSupport f →
+      ∀ (q : ℕ), 0 < q → ∀ f : ℝ → ℝ,
+        ContDiff ℝ ∞ f → HasCompactSupport f →
         tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) →
       |dfiEquation12Left w q f - f 0| ≤
         C * ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, |f u|) +
           (q : ℝ) ^ j * Q ^ (j - 1) *
             ∫ u : ℝ, |iteratedDeriv j f u|) := by
   obtain ⟨Cmass, hCmass, hmass⟩ := dfiEquation14 w j
-  obtain ⟨Cfirst, hCfirst, hfirst⟩ := dfiEquation15 w q hq j hj
+  obtain ⟨Cfirst, hCfirst, hfirst⟩ := dfiEquation15 w j hj
   obtain ⟨Csecond, hCsecond, hsecond⟩ :=
-    dfiEquation16 w q hq j hj
+    dfiEquation16 w j hj
   let Cpoint : ℝ := 2 + 2 * Real.pi
   let C : ℝ := Cmass * Cpoint + Cfirst + Csecond
   refine ⟨C, by positivity, ?_⟩
-  intro f hf hfc hsupp
-  have hfirst'raw := hfirst f
-  have hsecond'raw := hsecond f U hf hfc hsupp
+  intro q hq f hf hfc hsupp
+  have hfirst'raw := hfirst q hq f
+  have hsecond'raw := hsecond q hq f U hf hfc hsupp
   let A : ℝ := ∫ u : ℝ, |f u|
   let B : ℝ := ∫ u : ℝ, |iteratedDeriv j f u|
   let p : ℝ := (q : ℝ) ^ j

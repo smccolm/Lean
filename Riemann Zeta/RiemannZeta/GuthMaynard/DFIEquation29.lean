@@ -1,4 +1,5 @@
 import RiemannZeta.GuthMaynard.DFIEquation24
+import RiemannZeta.GuthMaynard.DFIBesselKernel
 import RiemannZeta.GuthMaynard.DFIEquation28
 import RiemannZeta.GuthMaynard.ArithmeticCoefficients
 import Mathlib.Analysis.SumIntegralComparisons
@@ -265,6 +266,41 @@ theorem exists_dfiEquation29Multiplier_half_line_uniform_bound
       (1 - 2 * ((1 / 2 : ℂ) + (u : ℂ) * I)).re = 0 := by simp
   rw [hRe, Real.rpow_zero, one_mul]
   simpa using hOne (1 / 2) (by norm_num) (by norm_num) u
+
+/-- On DFI's retained-frequency line `Re z = 3/4`, the exact modulus
+factor is `q^(-1/2)`.  The remaining archimedean factor is uniform in
+the positive modulus. -/
+theorem exists_dfiEquation29Multiplier_threeQuarter_line_uniform_bound
+    (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (q : ℕ) (_hq : NeZero q) (u : ℝ),
+      ‖dfiEquation29Multiplier q branch
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+        C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * (1 + |u|) ^ 2 := by
+  obtain ⟨C, hC, hOne⟩ :=
+    dfiEquation29Multiplier_threeQuarter_strip_bound 1 branch
+  refine ⟨C, hC, ?_⟩
+  intro q hq u
+  letI : NeZero q := hq
+  have hqPos : 0 < q := NeZero.pos q
+  rw [dfiEquation29Multiplier_eq_modulus_cpow_mul_one, norm_mul,
+    Complex.norm_natCast_cpow_of_pos hqPos]
+  have hRe :
+      (1 - 2 * ((3 / 4 : ℂ) + (u : ℂ) * I)).re = -(1 / 2 : ℝ) := by
+    norm_num
+  rw [hRe]
+  have hOne' :
+      ‖dfiEquation29Multiplier 1 branch
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤ C * (1 + |u|) ^ 2 := by
+    simpa using hOne (3 / 4) (by norm_num) (by norm_num) u
+  calc
+    (q : ℝ) ^ (-(1 / 2 : ℝ)) *
+        ‖dfiEquation29Multiplier 1 branch
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+      (q : ℝ) ^ (-(1 / 2 : ℝ)) * (C * (1 + |u|) ^ 2) :=
+        mul_le_mul_of_nonneg_left
+          hOne'
+          (Real.rpow_nonneg (Nat.cast_nonneg q) _)
+    _ = C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * (1 + |u|) ^ 2 := by ring
 
 /-- Uniform-in-the-modulus version of the shifted-strip multiplier bound.
 The factor `q^(2+2k)` is the exact worst modulus power on the strip
@@ -743,7 +779,7 @@ theorem DFIVoronoiTestFunction.tendsto_dfiEquation29_half_horizontal_zero
       (C := envelope y) (fun x hx => by
         have hx' := Set.uIoc_subset_uIcc hx
         rw [Set.uIcc_of_le (by norm_num : -(1 / 2 : ℝ) ≤ 1 / 2)] at hx'
-        simpa [f, envelope] using hDecay x hx'.1 hx'.2 y)
+        simpa [f, envelope] using hDecay x hx'.1 (by linarith [hx'.2]) y)
     norm_num at hInt ⊢
     simpa using hInt
   have hTop : Tendsto (fun y : ℝ => ∫ x : ℝ in
@@ -772,20 +808,22 @@ theorem DFIVoronoiTestFunction.tendsto_dfiEquation29_threeQuarter_horizontal_zer
     {n : ℕ} (hn : 0 < n) :
     Tendsto (fun y : ℝ => ∫ x : ℝ in (-(1 / 2 : ℝ))..(3 / 4 : ℝ),
         dfiEquation29Integrand q branch g n ((x : ℂ) + (y : ℂ) * I))
-      atTop (ℕ 0) ∧
+      atTop (𝓝 0) ∧
     Tendsto (fun y : ℝ => ∫ x : ℝ in (-(1 / 2 : ℝ))..(3 / 4 : ℝ),
         dfiEquation29Integrand q branch g n ((x : ℂ) + (y : ℂ) * I))
-      atBot (ℕ 0) := by
+      atBot (𝓝 0) := by
   obtain ⟨C, _, hDecay⟩ :=
     hg.exists_dfiEquation29Integrand_right_strip_decay q branch hn
   let f : ℂ → ℂ := dfiEquation29Integrand q branch g n
   let envelope : ℝ → ℝ := fun y => (5 / 4 : ℝ) * C * (1 + y ^ 2)⁻¹
   have hDen : Tendsto (fun y : ℝ => 1 + y ^ 2) atTop atTop :=
     tendsto_const_nhds.add_atTop (tendsto_pow_atTop (by norm_num))
-  have hEnv : Tendsto envelope atTop (ℕ 0) := by
-    dsimp [envelope]
-    simpa [div_eq_mul_inv, mul_assoc] using
-      tendsto_const_nhds.div_atTop hDen
+  have hEnv : Tendsto envelope atTop (𝓝 0) := by
+    change Tendsto
+      (fun y : ℝ => ((5 / 4 : ℝ) * C) * (1 + y ^ 2)⁻¹) atTop (𝓝 0)
+    simpa [div_eq_mul_inv] using
+      (tendsto_const_nhds.div_atTop hDen :
+        Tendsto (fun y : ℝ => ((5 / 4 : ℝ) * C) / (1 + y ^ 2)) atTop (𝓝 0))
   have boundIntegral : ∀ y : ℝ,
       ‖∫ x : ℝ in (-(1 / 2 : ℝ))..(3 / 4 : ℝ),
           f ((x : ℂ) + (y : ℂ) * I)‖ ≤ envelope y := by
@@ -797,16 +835,18 @@ theorem DFIVoronoiTestFunction.tendsto_dfiEquation29_threeQuarter_horizontal_zer
         rw [Set.uIcc_of_le (by norm_num : -(1 / 2 : ℝ) ≤ 3 / 4)] at hx'
         simpa [f] using hDecay x hx'.1 hx'.2 y)
     norm_num at hInt ⊢
-    simpa [envelope, mul_assoc] using hInt
+    convert hInt using 1
+    dsimp [envelope]
+    ring
   have hTop : Tendsto (fun y : ℝ => ∫ x : ℝ in
       (-(1 / 2 : ℝ))..(3 / 4 : ℝ), f ((x : ℂ) + (y : ℂ) * I))
-      atTop (ℕ 0) := by
+      atTop (𝓝 0) := by
     rw [tendsto_zero_iff_norm_tendsto_zero]
     exact squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
       (Eventually.of_forall boundIntegral) hEnv
   have hBottomTop : Tendsto (fun H : ℝ => ∫ x : ℝ in
       (-(1 / 2 : ℝ))..(3 / 4 : ℝ),
-        f ((x : ℂ) + ((-H : ℝ) : ℂ) * I)) atTop (ℕ 0) := by
+        f ((x : ℂ) + ((-H : ℝ) : ℂ) * I)) atTop (𝓝 0) := by
     rw [tendsto_zero_iff_norm_tendsto_zero]
     apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
       (Eventually.of_forall fun H => ?_) hEnv
@@ -844,7 +884,7 @@ theorem DFIVoronoiTestFunction.dfiEquation29TransformAt_threeQuarter
   have hRight : Integrable (fun u : ℝ => f ((right : ℂ) + (u : ℂ) * I)) := by
     apply hg.integrable_dfiEquation29Integrand_right_vertical q branch hn
     · norm_num [right]
-    · simp [right]
+    · norm_num [right]
   have hVertical : VerticalIntegral f left = VerticalIntegral f right :=
     dfiEquation29_verticalIntegral_eq hHol
       (by simpa [left, right, f] using hBot)
@@ -880,7 +920,7 @@ theorem DFIVoronoiTestFunction.dfiEquation29TransformAt_half
   have hRight : Integrable (fun u : ℝ => f ((right : ℂ) + (u : ℂ) * I)) := by
     apply hg.integrable_dfiEquation29Integrand_right_vertical q branch hn
     · norm_num [right]
-    · simp [right]
+    · norm_num [right]
   have hVertical : VerticalIntegral f left = VerticalIntegral f right :=
     dfiEquation29_verticalIntegral_eq hHol
       (by simpa [left, right, f] using hBot)
@@ -919,6 +959,85 @@ theorem DFIVoronoiTestFunction.exists_mellin_scaled_half_line_bound
           ‖mellin g₁ ((1 / 2 : ℂ) + (u : ℂ) * I)‖ ≤ B := by
         simpa using hMellin u
       exact mul_le_mul_of_nonneg_left hm hR
+
+/-- Scaling of the Mellin transform on DFI's source line `Re z = 3/4`.
+All dependence on the physical scale is the exact factor `S^(3/4)`. -/
+theorem DFIVoronoiTestFunction.exists_mellin_scaled_threeQuarter_line_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (S : ℝ) (hS : 0 < S) :
+    ∃ B : ℝ, 0 ≤ B ∧ ∀ u : ℝ,
+      (1 + |u|) ^ 6 * ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+        S ^ (3 / 4 : ℝ) * B := by
+  let g₁ : ℝ → ℂ := fun x ↦ g (S * x)
+  have hg₁ : DFIVoronoiTestFunction g₁ := by
+    simpa [g₁] using hg.scaleNormalize S hS
+  obtain ⟨B, hB, hMellin⟩ :=
+    hg₁.exists_mellin_one_add_abs_pow_line_bound 6 (3 / 4)
+  refine ⟨B, hB, ?_⟩
+  intro u
+  let R : ℝ := S ^ (3 / 4 : ℝ)
+  have hR : 0 ≤ R := Real.rpow_nonneg hS.le _
+  rw [mellin_eq_scale_cpow_mul_normalized g S hS, norm_mul,
+    Complex.norm_cpow_eq_rpow_re_of_pos hS]
+  have hRe : (((3 / 4 : ℂ) + (u : ℂ) * I).re) = (3 / 4 : ℝ) := by
+    norm_num
+  rw [hRe]
+  change (1 + |u|) ^ 6 *
+      (R * ‖mellin g₁ ((3 / 4 : ℂ) + (u : ℂ) * I)‖) ≤ R * B
+  calc
+    (1 + |u|) ^ 6 *
+        (R * ‖mellin g₁ ((3 / 4 : ℂ) + (u : ℂ) * I)‖) =
+      R * ((1 + |u|) ^ 6 *
+        ‖mellin g₁ ((3 / 4 : ℂ) + (u : ℂ) * I)‖) := by ring
+    _ ≤ R * B := by
+      have hm : (1 + |u|) ^ 6 *
+          ‖mellin g₁ ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤ B := by
+        simpa using hMellin u
+      exact mul_le_mul_of_nonneg_left hm hR
+
+/-- Pointwise source-line estimate for the normalized DFI Voronoi transform.
+The exact physical powers are exposed rather than absorbed into the constant. -/
+theorem DFIVoronoiTestFunction.exists_dfiEquation29Integrand_scaled_threeQuarter_line_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (S : ℝ) (hS : 0 < S) (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n → ∀ u : ℝ,
+      ‖dfiEquation29Integrand q branch g n
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+        C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+          (n : ℝ) ^ (-(1 / 4 : ℝ)) * (1 + u ^ 2)⁻¹ := by
+  obtain ⟨A, hA, hMultiplier⟩ :=
+    exists_dfiEquation29Multiplier_threeQuarter_line_uniform_bound branch
+  obtain ⟨B, hB, hMellin⟩ :=
+    hg.exists_mellin_scaled_threeQuarter_line_bound S hS
+  refine ⟨A * B, mul_nonneg hA.le hB, ?_⟩
+  intro q hq n hn u
+  letI : NeZero q := hq
+  have hqPow : 0 ≤ (q : ℝ) ^ (-(1 / 2 : ℝ)) :=
+    Real.rpow_nonneg (Nat.cast_nonneg q) _
+  have hCore := norm_mul_le_inv_one_add_sq_of_pow_growth_decay
+    (mul_nonneg hA.le hqPow) (hMultiplier q hq u) (hMellin u)
+  rw [norm_mul] at hCore
+  have hPower :
+      ‖(n : ℂ) ^ (-(1 - ((3 / 4 : ℂ) + (u : ℂ) * I)))‖ =
+        (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+    rw [Complex.norm_natCast_cpow_of_pos hn]
+    congr 1
+    norm_num
+  unfold dfiEquation29Integrand
+  rw [norm_mul, norm_mul, hPower]
+  calc
+    (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+        ‖dfiEquation29Multiplier q branch ((3 / 4 : ℂ) + (u : ℂ) * I)‖ *
+          ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖ =
+      (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (‖dfiEquation29Multiplier q branch ((3 / 4 : ℂ) + (u : ℂ) * I)‖ *
+          ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖) := by ring
+    _ ≤ (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+        ((A * (q : ℝ) ^ (-(1 / 2 : ℝ))) *
+          (S ^ (3 / 4 : ℝ) * B) * (1 + u ^ 2)⁻¹) :=
+      mul_le_mul_of_nonneg_left hCore
+        (Real.rpow_nonneg (Nat.cast_nonneg n) _)
+    _ = (A * B) * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+        (n : ℝ) ^ (-(1 / 4 : ℝ)) * (1 + u ^ 2)⁻¹ := by ring
 
 theorem DFIVoronoiTestFunction.exists_dfiEquation29Integrand_scaled_half_line_bound
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
@@ -1002,6 +1121,169 @@ theorem DFIVoronoiTestFunction.norm_dfiEquation29TransformAt_half_le_of_pointwis
       mul_le_mul_of_nonneg_left hIntegral (norm_nonneg _)
     _ = ‖(1 / (2 * Real.pi * I) : ℂ)‖ * D *
         (∫ u : ℝ, (1 + u ^ 2)⁻¹) := by ring
+
+/-- Integrate a pointwise majorant on DFI's retained line `Re z = 3/4`. -/
+theorem DFIVoronoiTestFunction.norm_dfiEquation29TransformAt_threeQuarter_le_of_pointwise
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (q : ℕ) [NeZero q] (branch : DFIVoronoiDualBranch)
+    {n : ℕ} (hn : 0 < n) (D : ℝ)
+    (hPoint : ∀ u : ℝ,
+      ‖dfiEquation29Integrand q branch g n
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤ D * (1 + u ^ 2)⁻¹) :
+    ‖dfiEquation29TransformAt q branch g n (3 / 4 : ℝ)‖ ≤
+      ‖(1 / (2 * Real.pi * I) : ℂ)‖ * D *
+        (∫ u : ℝ, (1 + u ^ 2)⁻¹) := by
+  have hTargetInt : Integrable (fun u : ℝ =>
+      ‖dfiEquation29Integrand q branch g n
+        ((3 / 4 : ℂ) + (u : ℂ) * I)‖) := by
+    have hInt := hg.integrable_dfiEquation29Integrand_right_vertical
+      (σ := (3 / 4 : ℝ)) q branch hn (by norm_num) (by norm_num)
+    simpa using hInt.norm
+  have hMajorInt : Integrable (fun u : ℝ => D * (1 + u ^ 2)⁻¹) :=
+    integrable_inv_one_add_sq.const_mul D
+  have hIntegral :
+      (∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖) ≤
+        D * (∫ u : ℝ, (1 + u ^ 2)⁻¹) := by
+    calc
+      (∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖) ≤
+          ∫ u : ℝ, D * (1 + u ^ 2)⁻¹ :=
+        integral_mono hTargetInt hMajorInt hPoint
+      _ = D * (∫ u : ℝ, (1 + u ^ 2)⁻¹) := by
+        rw [MeasureTheory.integral_const_mul]
+  calc
+    ‖dfiEquation29TransformAt q branch g n (3 / 4 : ℝ)‖ ≤
+        ‖(1 / (2 * Real.pi * I) : ℂ)‖ *
+          ∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+            ((3 / 4 : ℂ) + (u : ℂ) * I)‖ := by
+      unfold dfiEquation29TransformAt
+      simpa using norm_verticalIntegral'_le_integral_norm
+        (dfiEquation29Integrand q branch g n) (3 / 4 : ℝ)
+    _ ≤ ‖(1 / (2 * Real.pi * I) : ℂ)‖ *
+        (D * (∫ u : ℝ, (1 + u ^ 2)⁻¹)) :=
+      mul_le_mul_of_nonneg_left hIntegral (norm_nonneg _)
+    _ = ‖(1 / (2 * Real.pi * I) : ℂ)‖ * D *
+        (∫ u : ℝ, (1 + u ^ 2)⁻¹) := by ring
+
+/-- The original normalized Voronoi transform, estimated on DFI's
+`Re z = 3/4` line.  The constant is independent of `q`, `S`, and `n`. -/
+theorem DFIVoronoiTestFunction.exists_dfiEquation29InitialTransform_scaled_threeQuarter_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (S : ℝ) (hS : 0 < S) (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n →
+      ‖dfiEquation29InitialTransform q branch g n‖ ≤
+        C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+          (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+  obtain ⟨A, hA, hPoint⟩ :=
+    hg.exists_dfiEquation29Integrand_scaled_threeQuarter_line_bound S hS branch
+  let J : ℝ := ∫ u : ℝ, (1 + u ^ 2)⁻¹
+  let C : ℝ := ‖(1 / (2 * Real.pi * I) : ℂ)‖ * A * J
+  have hJ : 0 ≤ J := by
+    dsimp [J]
+    exact integral_nonneg fun u ↦ inv_nonneg.mpr (by positivity : 0 ≤ 1 + u ^ 2)
+  refine ⟨C, by dsimp [C]; positivity, ?_⟩
+  intro q hq n hn
+  letI : NeZero q := hq
+  let D : ℝ := A * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+    (n : ℝ) ^ (-(1 / 4 : ℝ))
+  have hThreeQuarter :=
+    hg.norm_dfiEquation29TransformAt_threeQuarter_le_of_pointwise
+      q branch hn D (fun u => by simpa [D] using hPoint q hq n hn u)
+  have hShift : dfiEquation29InitialTransform q branch g n =
+      dfiEquation29TransformAt q branch g n (3 / 4 : ℝ) := by
+    calc
+      dfiEquation29InitialTransform q branch g n =
+          dfiEquation29TransformAt q branch g n (-(1 / 2 : ℝ)) :=
+        (dfiEquation29TransformAt_initial q branch g n).symm
+      _ = dfiEquation29TransformAt q branch g n (3 / 4 : ℝ) :=
+        hg.dfiEquation29TransformAt_threeQuarter q branch hn
+  rw [hShift]
+  calc
+    ‖dfiEquation29TransformAt q branch g n (3 / 4 : ℝ)‖ ≤
+        ‖(1 / (2 * Real.pi * I) : ℂ)‖ * D * J := by
+      simpa [J] using hThreeQuarter
+    _ = C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+        (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+      dsimp [C, D]
+      ring
+
+/-- Universal retained-frequency estimate on `Re z = 3/4`.  The constant is
+chosen before the source test function; its entire source dependence is the
+explicit Mellin bound `B`. -/
+theorem exists_dfiEquation29InitialTransform_threeQuarter_constant
+    (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ {g : ℝ → ℂ}, DFIVoronoiTestFunction g →
+      ∀ {B : ℝ}, (∀ u : ℝ,
+        (1 + |u|) ^ 6 *
+          ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤ B) →
+      ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n →
+        ‖dfiEquation29InitialTransform q branch g n‖ ≤
+          C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * B *
+            (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+  obtain ⟨A, hA, hMultiplier⟩ :=
+    exists_dfiEquation29Multiplier_threeQuarter_line_uniform_bound branch
+  let J : ℝ := ∫ u : ℝ, (1 + u ^ 2)⁻¹
+  let C : ℝ := ‖(1 / (2 * Real.pi * I) : ℂ)‖ * A * J
+  have hJ : 0 ≤ J := by
+    dsimp [J]
+    exact integral_nonneg fun u ↦ inv_nonneg.mpr (by positivity : 0 ≤ 1 + u ^ 2)
+  refine ⟨C, by dsimp [C]; positivity, ?_⟩
+  intro g hg B hMellin q hq n hn
+  letI : NeZero q := hq
+  let D : ℝ := A * (q : ℝ) ^ (-(1 / 2 : ℝ)) * B *
+    (n : ℝ) ^ (-(1 / 4 : ℝ))
+  have hPoint : ∀ u : ℝ,
+      ‖dfiEquation29Integrand q branch g n
+          ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤ D * (1 + u ^ 2)⁻¹ := by
+    intro u
+    have hqPow : 0 ≤ (q : ℝ) ^ (-(1 / 2 : ℝ)) :=
+      Real.rpow_nonneg (Nat.cast_nonneg q) _
+    have hCore := norm_mul_le_inv_one_add_sq_of_pow_growth_decay
+      (mul_nonneg hA.le hqPow) (hMultiplier q hq u) (hMellin u)
+    rw [norm_mul] at hCore
+    have hPower :
+        ‖(n : ℂ) ^ (-(1 - ((3 / 4 : ℂ) + (u : ℂ) * I)))‖ =
+          (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+      rw [Complex.norm_natCast_cpow_of_pos hn]
+      congr 1
+      norm_num
+    unfold dfiEquation29Integrand
+    rw [norm_mul, norm_mul, hPower]
+    calc
+      (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+          ‖dfiEquation29Multiplier q branch ((3 / 4 : ℂ) + (u : ℂ) * I)‖ *
+            ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖ =
+        (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+          (‖dfiEquation29Multiplier q branch ((3 / 4 : ℂ) + (u : ℂ) * I)‖ *
+            ‖mellin g ((3 / 4 : ℂ) + (u : ℂ) * I)‖) := by ring
+      _ ≤ (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+          ((A * (q : ℝ) ^ (-(1 / 2 : ℝ))) * B * (1 + u ^ 2)⁻¹) :=
+        mul_le_mul_of_nonneg_left hCore
+          (Real.rpow_nonneg (Nat.cast_nonneg n) _)
+      _ = D * (1 + u ^ 2)⁻¹ := by
+        dsimp [D]
+        ring
+  have hThreeQuarter :=
+    hg.norm_dfiEquation29TransformAt_threeQuarter_le_of_pointwise
+      q branch hn D hPoint
+  have hShift : dfiEquation29InitialTransform q branch g n =
+      dfiEquation29TransformAt q branch g n (3 / 4 : ℝ) := by
+    calc
+      dfiEquation29InitialTransform q branch g n =
+          dfiEquation29TransformAt q branch g n (-(1 / 2 : ℝ)) :=
+        (dfiEquation29TransformAt_initial q branch g n).symm
+      _ = dfiEquation29TransformAt q branch g n (3 / 4 : ℝ) :=
+        hg.dfiEquation29TransformAt_threeQuarter q branch hn
+  rw [hShift]
+  calc
+    ‖dfiEquation29TransformAt q branch g n (3 / 4 : ℝ)‖ ≤
+        ‖(1 / (2 * Real.pi * I) : ℂ)‖ * D * J := by
+      simpa [J] using hThreeQuarter
+    _ = C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * B *
+        (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+      dsimp [C, D]
+      ring
 
 /-- Universal right-contour constant for Equation (29).  It is selected
 before the test function and its Mellin bound, so later arithmetic slices
@@ -1230,6 +1512,258 @@ theorem DFIVoronoiTestFunction.exists_dfiEquation29InitialTransform_decay
       dsimp [C]
       ring
 
+/-- Source-uniform left-contour form of DFI (29).  An explicit Mellin bound
+is preserved as a visible factor, while the remaining constant is universal
+for the chosen contour depth and Voronoi branch. -/
+theorem exists_dfiEquation29InitialTransform_decay_constant
+    (k : ℕ) (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ {g : ℝ → ℂ}, DFIVoronoiTestFunction g →
+      ∀ {B : ℝ}, (∀ u : ℝ,
+        (1 + |u|) ^ (2 * (k + 1) + 4) *
+          ‖mellin g (((-(1 / 2 : ℝ) - k : ℝ) : ℂ) + (u : ℂ) * I)‖ ≤ B) →
+      ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n →
+        ‖dfiEquation29InitialTransform q branch g n‖ ≤
+          C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+            (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+  let σ : ℝ := -(1 / 2 : ℝ) - k
+  let p : ℕ := 2 * (k + 1)
+  obtain ⟨A, hA, hMultiplier⟩ :=
+    exists_dfiEquation29Multiplier_explicit_modulus_bound k branch
+  let J : ℝ := ∫ u : ℝ, (1 + u ^ 2)⁻¹
+  let C : ℝ := ‖(1 / (2 * Real.pi * I) : ℂ)‖ * A * J
+  have hJ : 0 ≤ J := by
+    dsimp [J]
+    exact integral_nonneg fun u ↦ inv_nonneg.mpr (by positivity : 0 ≤ 1 + u ^ 2)
+  refine ⟨C, by dsimp [C]; positivity, ?_⟩
+  intro g hg B hMellin q hq n hn
+  letI : NeZero q := hq
+  let D : ℝ := (n : ℝ) ^ (σ - 1)
+  let Qk : ℝ := (q : ℝ) ^ (2 + 2 * (k : ℝ))
+  have hD : 0 ≤ D := Real.rpow_nonneg (Nat.cast_nonneg n) _
+  have hQk : 0 ≤ Qk := Real.rpow_nonneg (Nat.cast_nonneg q) _
+  have hσLower : -(1 / 2 : ℝ) - k ≤ σ := by simp [σ]
+  have hσUpper : σ ≤ -(1 / 2 : ℝ) := by
+    dsimp [σ]
+    exact sub_le_self _ (Nat.cast_nonneg k)
+  have hTargetInt : Integrable (fun u : ℝ ↦
+      ‖dfiEquation29Integrand q branch g n
+        ((σ : ℂ) + (u : ℂ) * I)‖) :=
+    (hg.integrable_dfiEquation29Integrand_vertical q k branch hn
+      hσLower hσUpper).norm
+  have hMajorInt : Integrable (fun u : ℝ ↦
+      D * (A * Qk) * B * (1 + u ^ 2)⁻¹) := by
+    simpa [mul_assoc] using
+      integrable_inv_one_add_sq.const_mul (D * (A * Qk) * B)
+  have hPoint : ∀ u : ℝ,
+      ‖dfiEquation29Integrand q branch g n
+          ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+        D * (A * Qk) * B * (1 + u ^ 2)⁻¹ := by
+    intro u
+    have hMellinAt :
+        (1 + |u|) ^ (p + 4) *
+          ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ B := by
+      simpa [σ, p] using hMellin u
+    have hCore := norm_mul_le_inv_one_add_sq_of_pow_growth_decay
+      (mul_nonneg hA.le hQk)
+      (by simpa [Qk, p, mul_assoc] using
+        hMultiplier q hq σ hσLower hσUpper u)
+      hMellinAt
+    rw [norm_mul] at hCore
+    have hPower :
+        ‖(n : ℂ) ^ (-(1 - ((σ : ℂ) + (u : ℂ) * I)))‖ = D := by
+      rw [Complex.norm_natCast_cpow_of_pos hn]
+      congr 1
+      simp
+    unfold dfiEquation29Integrand
+    rw [norm_mul, norm_mul, hPower]
+    calc
+      D * ‖dfiEquation29Multiplier q branch ((σ : ℂ) + (u : ℂ) * I)‖ *
+          ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ =
+        D * (‖dfiEquation29Multiplier q branch ((σ : ℂ) + (u : ℂ) * I)‖ *
+          ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖) := by ring
+      _ ≤ D * ((A * Qk) * B * (1 + u ^ 2)⁻¹) :=
+        mul_le_mul_of_nonneg_left hCore hD
+      _ = D * (A * Qk) * B * (1 + u ^ 2)⁻¹ := by ring
+  have hIntegral :
+      (∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+          ((σ : ℂ) + (u : ℂ) * I)‖) ≤
+        D * (A * Qk) * B * J := by
+    calc
+      (∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+          ((σ : ℂ) + (u : ℂ) * I)‖) ≤
+          ∫ u : ℝ, D * (A * Qk) * B * (1 + u ^ 2)⁻¹ :=
+        integral_mono hTargetInt hMajorInt hPoint
+      _ = D * (A * Qk) * B * J := by
+        rw [MeasureTheory.integral_const_mul]
+  have hInitialShift : dfiEquation29InitialTransform q branch g n =
+      dfiEquation29TransformAt q branch g n σ := by
+    calc
+      dfiEquation29InitialTransform q branch g n =
+          dfiEquation29TransformAt q branch g n (-(1 / 2 : ℝ)) :=
+        (dfiEquation29TransformAt_initial q branch g n).symm
+      _ = dfiEquation29TransformAt q branch g n σ := by
+        simpa [σ] using hg.dfiEquation29TransformAt_shift q k branch hn
+  have hD_eq : D = (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+    dsimp [D, σ]
+    congr 1
+    ring
+  rw [hInitialShift]
+  calc
+    ‖dfiEquation29TransformAt q branch g n σ‖ ≤
+        ‖(1 / (2 * Real.pi * I) : ℂ)‖ *
+          ∫ u : ℝ, ‖dfiEquation29Integrand q branch g n
+            ((σ : ℂ) + (u : ℂ) * I)‖ :=
+      norm_verticalIntegral'_le_integral_norm _ _
+    _ ≤ ‖(1 / (2 * Real.pi * I) : ℂ)‖ *
+        (D * (A * Qk) * B * J) :=
+      mul_le_mul_of_nonneg_left hIntegral (norm_nonneg _)
+    _ = C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+        (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+      rw [hD_eq]
+      dsimp [C, Qk]
+      ring
+
+/-- Test-function-facing wrapper around the universal source-uniform
+left-contour constant. -/
+theorem DFIVoronoiTestFunction.exists_dfiEquation29InitialTransform_decay_of_mellin_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (k : ℕ) (branch : DFIVoronoiDualBranch) {B : ℝ}
+    (hMellin : ∀ u : ℝ,
+      (1 + |u|) ^ (2 * (k + 1) + 4) *
+        ‖mellin g (((-(1 / 2 : ℝ) - k : ℝ) : ℂ) + (u : ℂ) * I)‖ ≤ B) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ),
+      0 < n →
+      ‖dfiEquation29InitialTransform q branch g n‖ ≤
+        C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+          (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+  obtain ⟨C, hC, hUniversal⟩ :=
+    exists_dfiEquation29InitialTransform_decay_constant k branch
+  exact ⟨C, hC, hUniversal hg hMellin⟩
+
+/-- The residue-independent Voronoi summand is the divisor weight times the
+equation-(29) initial transform. -/
+theorem dfiVoronoiDualTerm_eq_divisorWeight_mul_initial
+    (q : ℕ) [NeZero q] (branch : DFIVoronoiDualBranch)
+    (g : ℝ → ℂ) (n : ℕ) :
+    dfiVoronoiDualTerm q branch g n =
+      divisorWeight n * dfiEquation29InitialTransform q branch g n := by
+  cases branch <;> rfl
+
+/-- Universal divisor-weighted version of the explicit Mellin-input decay.
+The exponent `1/2` in the native divisor bound converts
+`n^(-3/2-k)` into the summable `n^(-1-k)`. -/
+theorem exists_dfiVoronoiDualTerm_decay_constant
+    (k : ℕ) (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ {g : ℝ → ℂ}, DFIVoronoiTestFunction g →
+      ∀ {B : ℝ}, (∀ u : ℝ,
+        (1 + |u|) ^ (2 * (k + 1) + 4) *
+          ‖mellin g (((-(1 / 2 : ℝ) - k : ℝ) : ℂ) + (u : ℂ) * I)‖ ≤ B) →
+      ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n →
+        ‖dfiVoronoiDualTerm q branch g n‖ ≤
+          C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+            (n : ℝ) ^ (-(1 : ℝ) - k) := by
+  obtain ⟨A, hA, hTransform⟩ :=
+    exists_dfiEquation29InitialTransform_decay_constant k branch
+  obtain ⟨D, hD, hDivisor⟩ :=
+    divisorCountBound_native (1 / 2 : ℝ) (by norm_num)
+  refine ⟨D * A, mul_nonneg hD.le hA, ?_⟩
+  intro g hg B hMellin q hq n hn
+  letI : NeZero q := hq
+  rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial, norm_mul]
+  have hWeight : ‖divisorWeight n‖ ≤ D * (n : ℝ) ^ (1 / 2 : ℝ) := by
+    simpa [divisorWeight] using hDivisor n hn
+  have hTransform' := hTransform hg hMellin q hq n hn
+  calc
+    ‖divisorWeight n‖ * ‖dfiEquation29InitialTransform q branch g n‖ ≤
+        (D * (n : ℝ) ^ (1 / 2 : ℝ)) *
+          (A * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+            (n : ℝ) ^ (-(3 / 2 : ℝ) - k)) :=
+      mul_le_mul hWeight hTransform' (norm_nonneg _)
+        (mul_nonneg hD.le (Real.rpow_nonneg (Nat.cast_nonneg n) _))
+    _ = (D * A) * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+        (n : ℝ) ^ (-(1 : ℝ) - k) := by
+      calc
+        (D * (n : ℝ) ^ (1 / 2 : ℝ)) *
+            (A * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+              (n : ℝ) ^ (-(3 / 2 : ℝ) - k)) =
+          ((D * A) * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B) *
+            ((n : ℝ) ^ (1 / 2 : ℝ) *
+              (n : ℝ) ^ (-(3 / 2 : ℝ) - k)) := by ring
+        _ = ((D * A) * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B) *
+            (n : ℝ) ^ ((1 / 2 : ℝ) + (-(3 / 2 : ℝ) - k)) := by
+          rw [Real.rpow_add (Nat.cast_pos.mpr hn)]
+        _ = (D * A) * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+            (n : ℝ) ^ (-(1 : ℝ) - k) := by
+          congr 1
+          ring_nf
+
+/-- Summed universal Equation (29) tail with the explicit source Mellin
+factor retained. -/
+theorem exists_dfiVoronoiDualTerm_tail_decay_constant
+    (k : ℕ) (hk : 0 < k) (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ {g : ℝ → ℂ}, DFIVoronoiTestFunction g →
+      ∀ {B : ℝ}, 0 ≤ B → (∀ u : ℝ,
+        (1 + |u|) ^ (2 * (k + 1) + 4) *
+          ‖mellin g (((-(1 / 2 : ℝ) - k : ℝ) : ℂ) + (u : ℂ) * I)‖ ≤ B) →
+      ∀ (q L : ℕ) (_hq : NeZero q), 0 < L →
+        ∑' j : ℕ, ‖dfiVoronoiDualTerm q branch g (L + (j + 1))‖ ≤
+          C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+            ((L : ℝ) ^ (-(k : ℝ)) / (k : ℝ)) := by
+  obtain ⟨C, hC, hPoint⟩ :=
+    exists_dfiVoronoiDualTerm_decay_constant k branch
+  refine ⟨C, hC, ?_⟩
+  intro g hg B hB hMellin q L hq hL
+  letI : NeZero q := hq
+  let A : ℝ := C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hSeries := tsum_nat_add_one_rpow_neg_le
+    (L := (L : ℝ)) (p := 1 + (k : ℝ))
+    (Nat.cast_pos.mpr hL) (by
+      have hk' : (0 : ℝ) < k := by exact_mod_cast hk
+      linarith)
+  have hSeries' :
+      ∑' j : ℕ, ((L : ℝ) + (j + 1 : ℕ)) ^ (-(1 + (k : ℝ))) ≤
+        (L : ℝ) ^ (-(k : ℝ)) / (k : ℝ) := by
+    convert hSeries using 1
+    all_goals ring_nf
+  have hPowerSummable : Summable (fun j : ℕ ↦
+      ((L : ℝ) + (j + 1 : ℕ)) ^ (-(1 + (k : ℝ)))) := by
+    have hbase : Summable (fun n : ℕ ↦ (n : ℝ) ^ (-(1 + (k : ℝ)))) :=
+      Real.summable_nat_rpow.mpr (by
+        have hk' : (0 : ℝ) < k := by exact_mod_cast hk
+        linarith)
+    have hshift := (summable_nat_add_iff (L + 1)).2 hbase
+    simpa [Nat.cast_add, add_assoc, add_comm, add_left_comm] using hshift
+  apply Real.tsum_le_of_sum_range_le
+  · intro j
+    exact norm_nonneg _
+  · intro N
+    calc
+      ∑ j ∈ Finset.range N,
+          ‖dfiVoronoiDualTerm q branch g (L + (j + 1))‖ ≤
+          ∑ j ∈ Finset.range N,
+            A * ((L : ℝ) + (j + 1 : ℕ)) ^ (-(1 + (k : ℝ))) := by
+        gcongr with j hj
+        have hn : 0 < L + (j + 1) := by omega
+        have hpnt := hPoint hg hMellin q hq (L + (j + 1)) hn
+        have hexp : -(1 + (k : ℝ)) = -(1 : ℝ) - k := by ring_nf
+        dsimp [A]
+        rw [hexp]
+        simpa only [Nat.cast_add, Nat.cast_one, add_assoc, add_comm,
+          add_left_comm] using hpnt
+      _ = A * ∑ j ∈ Finset.range N,
+            ((L : ℝ) + (j + 1 : ℕ)) ^ (-(1 + (k : ℝ))) := by
+        rw [Finset.mul_sum]
+      _ ≤ A * ∑' j : ℕ,
+            ((L : ℝ) + (j + 1 : ℕ)) ^ (-(1 + (k : ℝ))) := by
+        gcongr
+        exact hPowerSummable.sum_le_tsum
+          (Finset.range N) (fun j _ ↦ Real.rpow_nonneg (by positivity) _)
+      _ ≤ A * ((L : ℝ) ^ (-(k : ℝ)) / (k : ℝ)) :=
+        mul_le_mul_of_nonneg_left hSeries' hA
+      _ = C * (q : ℝ) ^ (2 + 2 * (k : ℝ)) * B *
+          ((L : ℝ) ^ (-(k : ℝ)) / (k : ℝ)) := rfl
+
 /-- Scale-explicit form of DFI (29).  After normalizing a test function at
 physical scale `S`, the constant is uniform in the modulus and positive dual
 frequency.  The displayed factor is
@@ -1366,15 +1900,6 @@ theorem DFIVoronoiTestFunction.exists_dfiEquation29InitialTransform_scaled_decay
       dsimp [C, Qk]
       ring
 
-/-- The residue-independent Voronoi summand is the divisor weight times the
-equation-(29) initial transform. -/
-theorem dfiVoronoiDualTerm_eq_divisorWeight_mul_initial
-    (q : ℕ) [NeZero q] (branch : DFIVoronoiDualBranch)
-    (g : ℝ → ℂ) (n : ℕ) :
-    dfiVoronoiDualTerm q branch g n =
-      divisorWeight n * dfiEquation29InitialTransform q branch g n := by
-  cases branch <;> rfl
-
 /-- Retained-frequency version of DFI (29), after inserting the native
 divisor estimate with exponent `1/4`. -/
 theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_retained_bound
@@ -1412,6 +1937,42 @@ theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_retained_bound
             (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
           congr 1
           ring_nf
+
+/-- Source-strength retained-frequency bound on DFI's `Re z = 3/4` line.
+After inserting the divisor estimate with an arbitrary positive exponent,
+the normalized dual summand has the paper's `n^(-1/4+ε)` decay. -/
+theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_threeQuarter_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (S : ℝ) (hS : 0 < S) (ε : ℝ) (hε : 0 < ε)
+    (branch : DFIVoronoiDualBranch) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (q : ℕ) (_hq : NeZero q) (n : ℕ), 0 < n →
+      ‖dfiVoronoiDualTerm q branch g n‖ ≤
+        C * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+          (n : ℝ) ^ (ε - 1 / 4) := by
+  obtain ⟨A, hA, hTransform⟩ :=
+    hg.exists_dfiEquation29InitialTransform_scaled_threeQuarter_bound S hS branch
+  obtain ⟨D, hD, hDivisor⟩ := divisorCountBound_native ε hε
+  refine ⟨D * A, mul_nonneg hD.le hA, ?_⟩
+  intro q hq n hn
+  letI : NeZero q := hq
+  rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial, norm_mul]
+  have hWeight : ‖divisorWeight n‖ ≤ D * (n : ℝ) ^ ε := by
+    simpa [divisorWeight] using hDivisor n hn
+  have hTransform' := hTransform q hq n hn
+  calc
+    ‖divisorWeight n‖ * ‖dfiEquation29InitialTransform q branch g n‖ ≤
+        (D * (n : ℝ) ^ ε) *
+          (A * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+            (n : ℝ) ^ (-(1 / 4 : ℝ))) :=
+      mul_le_mul hWeight hTransform' (norm_nonneg _)
+        (mul_nonneg hD.le (Real.rpow_nonneg (Nat.cast_nonneg n) _))
+    _ = ((D * A) * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ)) *
+        ((n : ℝ) ^ ε * (n : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
+    _ = ((D * A) * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ)) *
+        (n : ℝ) ^ (ε + (-(1 / 4 : ℝ))) := by
+      rw [Real.rpow_add (Nat.cast_pos.mpr hn)]
+    _ = (D * A) * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
+        (n : ℝ) ^ (ε - 1 / 4) := by ring
 
 /-- DFI (29) after inserting the native divisor-function estimate.  The
 constant remains uniform in the modulus and positive dual frequency. -/
@@ -1742,6 +2303,159 @@ theorem exists_dfiEquation28_ySlice_mellin_bound
       |>.mellin_half_line_bound_of_physical_profile hA hB hDeriv u
   simpa only [A, B, C₆] using hMellin
 
+/-- Source-uniform three-quarter-line version of the preceding
+second-variable Mellin estimate. -/
+theorem exists_dfiEquation28_ySlice_mellin_threeQuarter_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) :
+    ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x u : ℝ),
+        let C₆ := ∑ j ∈ Finset.range 7, C j
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (2 * Y / b)
+        (1 + |u|) ^ 6 *
+            ‖mellin
+              (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+                a b h q x)
+              ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ 6 *
+            (64 *
+              ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+              (D * A + D * (1024 * A * (1 + D * B) ^ 6))) := by
+  choose C hC hBound using fun j =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ 0 j
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x u
+  dsimp only
+  let C₆ : ℝ := ∑ j ∈ Finset.range 7, C j
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := C₆ * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hC₆ : 0 < C₆ := by
+    dsimp [C₆]
+    exact Finset.sum_pos (fun j hj => hC j) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by
+    dsimp [A]
+    positivity
+  have hB : 0 ≤ B := by
+    dsimp [B]
+    positivity
+  have hDeriv : ∀ j ≤ 6, ∀ y : ℝ,
+      ‖iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y‖ ≤ A * B ^ j := by
+    intro j hj y
+    have hjMem : j ∈ Finset.range 7 := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C j ≤ C₆ := by
+      dsimp [C₆]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hjMem
+    have hEq : iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y =
+        dfiMixedDeriv 0 j
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C j * qQ⁻¹ * B ^ (0 + j) := by
+        simpa only [qQ, B] using
+          hBound j a b q ha hb hq hqQ h x y
+      _ ≤ C₆ * qQ⁻¹ * B ^ j := by
+        simp only [zero_add]
+        gcongr
+      _ = A * B ^ j := rfl
+  have hMellin :=
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+      |>.mellin_threeQuarter_line_bound_of_physical_profile hA hB hDeriv u
+  simpa only [A, B, C₆] using hMellin
+
+/-- Source-uniform arbitrary-line counterpart for the second-variable
+slice.  Together with the first-variable theorem below this supplies both
+left-contour tails in the double Voronoi branch of DFI (24). -/
+theorem exists_dfiEquation28_ySlice_mellin_line_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) (σ : ℝ) :
+    ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x u : ℝ),
+        let C₆ := ∑ j ∈ Finset.range 7, C j
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * Y / b) (Y / b)⁻¹)
+        (1 + |u|) ^ 6 *
+            ‖mellin
+              (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+                a b h q x)
+              ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ 6 *
+            (64 * ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+              (D ^ |σ| * A +
+                D ^ |σ| * (A * (|σ| + 6 + D * B) ^ 6))) := by
+  choose C hC hBound using fun j =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ 0 j
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x u
+  dsimp only
+  let C₆ : ℝ := ∑ j ∈ Finset.range 7, C j
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := C₆ * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hC₆ : 0 < C₆ := by
+    dsimp [C₆]
+    exact Finset.sum_pos (fun j hj => hC j) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hDeriv : ∀ j ≤ 6, ∀ y : ℝ,
+      ‖iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y‖ ≤ A * B ^ j := by
+    intro j hj y
+    have hjMem : j ∈ Finset.range 7 := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C j ≤ C₆ := by
+      dsimp [C₆]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hjMem
+    have hEq : iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y =
+        dfiMixedDeriv 0 j
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C j * qQ⁻¹ * B ^ (0 + j) := by
+        simpa only [qQ, B] using
+          hBound j a b q ha hb hq hqQ h x y
+      _ ≤ C₆ * qQ⁻¹ * B ^ j := by
+        simp only [zero_add]
+        gcongr
+      _ = A * B ^ j := rfl
+  have hMellin :=
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+      |>.mellin_line_bound_of_physical_profile σ hA hB hDeriv u
+  simpa only [A, B, C₆] using hMellin
+
 /-- First-variable counterpart of `exists_dfiEquation28_ySlice_mellin_bound`.
 The same source-level quantifier discipline is preserved. -/
 theorem exists_dfiEquation28_xSlice_mellin_bound
@@ -1819,5 +2533,579 @@ theorem exists_dfiEquation28_xSlice_mellin_bound
     (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
       |>.mellin_half_line_bound_of_physical_profile hA hB hDeriv u
   simpa only [A, B, C₆] using hMellin
+
+/-- Source-uniform three-quarter-line counterpart for the first variable. -/
+theorem exists_dfiEquation28_xSlice_mellin_threeQuarter_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) :
+    ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y u : ℝ),
+        let C₆ := ∑ i ∈ Finset.range 7, C i
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (2 * X / a)
+        (1 + |u|) ^ 6 *
+            ‖mellin
+              (fun x => dfiEquation23Weight w
+                (dfiLocalizedWeight f φ h) a b h q x y)
+              ((3 / 4 : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ 6 *
+            (64 *
+              ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+              (D * A + D * (1024 * A * (1 + D * B) ^ 6))) := by
+  choose C hC hBound using fun i =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ i 0
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y u
+  dsimp only
+  let C₆ : ℝ := ∑ i ∈ Finset.range 7, C i
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := C₆ * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hC₆ : 0 < C₆ := by
+    dsimp [C₆]
+    exact Finset.sum_pos (fun i hi => hC i) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by
+    dsimp [A]
+    positivity
+  have hB : 0 ≤ B := by
+    dsimp [B]
+    positivity
+  have hDeriv : ∀ i ≤ 6, ∀ x : ℝ,
+      ‖iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x‖ ≤ A * B ^ i := by
+    intro i hi x
+    have hiMem : i ∈ Finset.range 7 := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C i ≤ C₆ := by
+      dsimp [C₆]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hiMem
+    have hEq : iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x =
+        dfiMixedDeriv i 0
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C i * qQ⁻¹ * B ^ (i + 0) := by
+        simpa only [qQ, B] using
+          hBound i a b q ha hb hq hqQ h x y
+      _ ≤ C₆ * qQ⁻¹ * B ^ i := by
+        simp only [add_zero]
+        gcongr
+      _ = A * B ^ i := rfl
+  have hMellin :=
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+      |>.mellin_threeQuarter_line_bound_of_physical_profile hA hB hDeriv u
+  simpa only [A, B, C₆] using hMellin
+
+/-- Source-uniform arbitrary-line Mellin bound for the first-variable
+equation-(23) slice.  Taking `σ = -1/2-k` is the repeated-contour-shift
+input that makes the complement of DFI's range (29) arbitrarily small. -/
+theorem exists_dfiEquation28_xSlice_mellin_line_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) (σ : ℝ) :
+    ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y u : ℝ),
+        let C₆ := ∑ i ∈ Finset.range 7, C i
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * X / a) (X / a)⁻¹)
+        (1 + |u|) ^ 6 *
+            ‖mellin
+              (fun x => dfiEquation23Weight w
+                (dfiLocalizedWeight f φ h) a b h q x y)
+              ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ 6 *
+            (64 * ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+              (D ^ |σ| * A +
+                D ^ |σ| * (A * (|σ| + 6 + D * B) ^ 6))) := by
+  choose C hC hBound using fun i =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ i 0
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y u
+  dsimp only
+  let C₆ : ℝ := ∑ i ∈ Finset.range 7, C i
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := C₆ * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hC₆ : 0 < C₆ := by
+    dsimp [C₆]
+    exact Finset.sum_pos (fun i hi => hC i) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hDeriv : ∀ i ≤ 6, ∀ x : ℝ,
+      ‖iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x‖ ≤ A * B ^ i := by
+    intro i hi x
+    have hiMem : i ∈ Finset.range 7 := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C i ≤ C₆ := by
+      dsimp [C₆]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hiMem
+    have hEq : iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x =
+        dfiMixedDeriv i 0
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C i * qQ⁻¹ * B ^ (i + 0) := by
+        simpa only [qQ, B] using
+          hBound i a b q ha hb hq hqQ h x y
+      _ ≤ C₆ * qQ⁻¹ * B ^ i := by
+        simp only [add_zero]
+        gcongr
+      _ = A * B ^ i := rfl
+  have hMellin :=
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+      |>.mellin_line_bound_of_physical_profile σ hA hB hDeriv u
+  simpa only [A, B, C₆] using hMellin
+
+/-- All-orders, source-uniform Mellin bound for the second-variable slice
+of DFI (23).  The constants are chosen before every arithmetic parameter. -/
+theorem exists_dfiEquation28_ySlice_mellin_line_bound_order
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) (σ : ℝ) (p : ℕ) :
+    ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x u : ℝ),
+        let Csum := ∑ j ∈ Finset.range (p + 1), C j
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * Y / b) (Y / b)⁻¹)
+        (1 + |u|) ^ p *
+            ‖mellin
+              (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+                a b h q x)
+              ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ p *
+            ((2 : ℝ) ^ p *
+              ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+              (D ^ |σ| * A +
+                D ^ |σ| * (A * (|σ| + (p : ℝ) + D * B) ^ p))) := by
+  choose C hC hBound using fun j =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ 0 j
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x u
+  dsimp only
+  let Csum : ℝ := ∑ j ∈ Finset.range (p + 1), C j
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := Csum * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hCsum : 0 < Csum := by
+    dsimp [Csum]
+    exact Finset.sum_pos (fun j hj => hC j) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hDeriv : ∀ j ≤ p, ∀ y : ℝ,
+      ‖iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y‖ ≤ A * B ^ j := by
+    intro j hj y
+    have hjMem : j ∈ Finset.range (p + 1) := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C j ≤ Csum := by
+      dsimp [Csum]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hjMem
+    have hEq : iteratedDeriv j
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x) y =
+        dfiMixedDeriv 0 j
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C j * qQ⁻¹ * B ^ (0 + j) := by
+        simpa only [qQ, B] using
+          hBound j a b q ha hb hq hqQ h x y
+      _ ≤ Csum * qQ⁻¹ * B ^ j := by
+        simp only [zero_add]
+        gcongr
+      _ = A * B ^ j := rfl
+  have hMellin :=
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+      |>.mellin_line_bound_of_physical_profile_order σ p hA hB hDeriv u
+  simpa only [A, B, Csum] using hMellin
+
+/-- All-orders, source-uniform Mellin bound for the first-variable slice
+of DFI (23). -/
+theorem exists_dfiEquation28_xSlice_mellin_line_bound_order
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2) (σ : ℝ) (p : ℕ) :
+    ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y u : ℝ),
+        let Csum := ∑ i ∈ Finset.range (p + 1), C i
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * X / a) (X / a)⁻¹)
+        (1 + |u|) ^ p *
+            ‖mellin
+              (fun x => dfiEquation23Weight w
+                (dfiLocalizedWeight f φ h) a b h q x y)
+              ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          (1 + 2 * Real.pi) ^ p *
+            ((2 : ℝ) ^ p *
+              ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+              (D ^ |σ| * A +
+                D ^ |σ| * (A * (|σ| + (p : ℝ) + D * B) ^ p))) := by
+  choose C hC hBound using fun i =>
+    dfiEquation28_uniform hf hbox hφ hscale w hUQ i 0
+  refine ⟨C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y u
+  dsimp only
+  let Csum : ℝ := ∑ i ∈ Finset.range (p + 1), C i
+  let qQ : ℝ := (q : ℝ) * Q
+  let A : ℝ := Csum * qQ⁻¹
+  let B : ℝ := ((a : ℝ) * (b : ℝ)) / qQ
+  have hCsum : 0 < Csum := by
+    dsimp [Csum]
+    exact Finset.sum_pos (fun i hi => hC i) ⟨0, by simp⟩
+  have hqR : 0 < (q : ℝ) := by exact_mod_cast hq
+  have hqQPos : 0 < qQ := by
+    dsimp [qQ]
+    exact mul_pos hqR w.Q_pos
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hDeriv : ∀ i ≤ p, ∀ x : ℝ,
+      ‖iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x‖ ≤ A * B ^ i := by
+    intro i hi x
+    have hiMem : i ∈ Finset.range (p + 1) := by
+      simp only [Finset.mem_range]
+      omega
+    have hCle : C i ≤ Csum := by
+      dsimp [Csum]
+      exact Finset.single_le_sum (fun k hk => (hC k).le) hiMem
+    have hEq : iteratedDeriv i
+        (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+          a b h q x y) x =
+        dfiMixedDeriv i 0
+          (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+            a b h q) x y := by
+      simp [dfiMixedDeriv]
+    rw [hEq]
+    calc
+      _ ≤ C i * qQ⁻¹ * B ^ (i + 0) := by
+        simpa only [qQ, B] using
+          hBound i a b q ha hb hq hqQ h x y
+      _ ≤ Csum * qQ⁻¹ * B ^ i := by
+        simp only [add_zero]
+        gcongr
+      _ = A * B ^ i := rfl
+  have hMellin :=
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+      |>.mellin_line_bound_of_physical_profile_order σ p hA hB hDeriv u
+  simpa only [A, B, Csum] using hMellin
+
+/-- Full source-uniform left-shifted transform bound for the second variable
+in DFI (29).  This is the rapid-decay complement to the retained range. -/
+theorem exists_dfiEquation29_ySlice_decay_transform_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (k : ℕ) (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x : ℝ)
+        (r : ℕ) (_hr : NeZero r) (n : ℕ), 0 < n →
+        let p := 2 * (k + 1) + 4
+        let Csum := ∑ j ∈ Finset.range (p + 1), C j
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * Y / b) (Y / b)⁻¹)
+        let M := (1 + 2 * Real.pi) ^ p *
+          ((2 : ℝ) ^ p *
+            ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+            (D ^ |-(1 / 2 : ℝ) - k| * A +
+              D ^ |-(1 / 2 : ℝ) - k| *
+                (A * (|-(1 / 2 : ℝ) - k| + (p : ℝ) + D * B) ^ p)))
+        ‖dfiEquation29InitialTransform r branch
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x) n‖ ≤
+          K * (r : ℝ) ^ (2 + 2 * (k : ℝ)) * M *
+            (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+  obtain ⟨K, hK, hTransform⟩ :=
+    exists_dfiEquation29InitialTransform_decay_constant k branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_ySlice_mellin_line_bound_order
+      hf hbox hφ hscale w hUQ (-(1 / 2 : ℝ) - k) (2 * (k + 1) + 4)
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x r hr n hn
+  dsimp only
+  exact hTransform
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+    (hMellin a b q ha hb hq hqQ h x) r hr n hn
+
+/-- Full source-uniform left-shifted transform bound for the first variable
+in DFI (29). -/
+theorem exists_dfiEquation29_xSlice_decay_transform_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (k : ℕ) (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y : ℝ)
+        (r : ℕ) (_hr : NeZero r) (n : ℕ), 0 < n →
+        let p := 2 * (k + 1) + 4
+        let Csum := ∑ i ∈ Finset.range (p + 1), C i
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * X / a) (X / a)⁻¹)
+        let M := (1 + 2 * Real.pi) ^ p *
+          ((2 : ℝ) ^ p *
+            ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+            (D ^ |-(1 / 2 : ℝ) - k| * A +
+              D ^ |-(1 / 2 : ℝ) - k| *
+                (A * (|-(1 / 2 : ℝ) - k| + (p : ℝ) + D * B) ^ p)))
+        ‖dfiEquation29InitialTransform r branch
+            (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x y) n‖ ≤
+          K * (r : ℝ) ^ (2 + 2 * (k : ℝ)) * M *
+            (n : ℝ) ^ (-(3 / 2 : ℝ) - k) := by
+  obtain ⟨K, hK, hTransform⟩ :=
+    exists_dfiEquation29InitialTransform_decay_constant k branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_xSlice_mellin_line_bound_order
+      hf hbox hφ hscale w hUQ (-(1 / 2 : ℝ) - k) (2 * (k + 1) + 4)
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y r hr n hn
+  dsimp only
+  exact hTransform
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+    (hMellin a b q ha hb hq hqQ h y) r hr n hn
+
+/-- Source-uniform summed complement of the second-variable retained window
+in DFI (29). -/
+theorem exists_dfiEquation29_ySlice_tail_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (k : ℕ) (hk : 0 < k) (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x : ℝ)
+        (r L : ℕ) (_hr : NeZero r), 0 < L →
+        let p := 2 * (k + 1) + 4
+        let Csum := ∑ j ∈ Finset.range (p + 1), C j
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * Y / b) (Y / b)⁻¹)
+        let M := (1 + 2 * Real.pi) ^ p *
+          ((2 : ℝ) ^ p *
+            ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+            (D ^ |-(1 / 2 : ℝ) - k| * A +
+              D ^ |-(1 / 2 : ℝ) - k| *
+                (A * (|-(1 / 2 : ℝ) - k| + (p : ℝ) + D * B) ^ p)))
+        ∑' j : ℕ, ‖dfiVoronoiDualTerm r branch
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x) (L + (j + 1))‖ ≤
+          K * (r : ℝ) ^ (2 + 2 * (k : ℝ)) * M *
+            ((L : ℝ) ^ (-(k : ℝ)) / (k : ℝ)) := by
+  obtain ⟨K, hK, hTail⟩ :=
+    exists_dfiVoronoiDualTerm_tail_decay_constant k hk branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_ySlice_mellin_line_bound_order
+      hf hbox hφ hscale w hUQ (-(1 / 2 : ℝ) - k) (2 * (k + 1) + 4)
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x r L hr hL
+  let M : ℝ := (1 + 2 * Real.pi) ^ (2 * (k + 1) + 4) *
+    ((2 : ℝ) ^ (2 * (k + 1) + 4) *
+      ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+      ((max 1 (max (2 * Y / b) (Y / b)⁻¹)) ^ |-(1 / 2 : ℝ) - k| *
+          ((∑ j ∈ Finset.range (2 * (k + 1) + 4 + 1), C j) *
+            ((q : ℝ) * Q)⁻¹) +
+        (max 1 (max (2 * Y / b) (Y / b)⁻¹)) ^ |-(1 / 2 : ℝ) - k| *
+          (((∑ j ∈ Finset.range (2 * (k + 1) + 4 + 1), C j) *
+              ((q : ℝ) * Q)⁻¹) *
+            (|-(1 / 2 : ℝ) - k| + ((2 * (k + 1) + 4 : ℕ) : ℝ) +
+              (max 1 (max (2 * Y / b) (Y / b)⁻¹)) *
+                (((a : ℝ) * (b : ℝ)) / ((q : ℝ) * Q))) ^
+                  (2 * (k + 1) + 4))))
+  have hMellin' := hMellin a b q ha hb hq hqQ h x
+  have hM : 0 ≤ M := by
+    have hz := hMellin' 0
+    exact (norm_nonneg _).trans
+      (by simpa [M] using hz)
+  simpa [M] using hTail
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+    hM hMellin' r L hr hL
+
+/-- Source-uniform summed complement of the first-variable retained window
+in DFI (29). -/
+theorem exists_dfiEquation29_xSlice_tail_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (k : ℕ) (hk : 0 < k) (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y : ℝ)
+        (r L : ℕ) (_hr : NeZero r), 0 < L →
+        let p := 2 * (k + 1) + 4
+        let Csum := ∑ i ∈ Finset.range (p + 1), C i
+        let qQ := (q : ℝ) * Q
+        let A := Csum * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (max (2 * X / a) (X / a)⁻¹)
+        let M := (1 + 2 * Real.pi) ^ p *
+          ((2 : ℝ) ^ p *
+            ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+            (D ^ |-(1 / 2 : ℝ) - k| * A +
+              D ^ |-(1 / 2 : ℝ) - k| *
+                (A * (|-(1 / 2 : ℝ) - k| + (p : ℝ) + D * B) ^ p)))
+        ∑' j : ℕ, ‖dfiVoronoiDualTerm r branch
+            (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x y) (L + (j + 1))‖ ≤
+          K * (r : ℝ) ^ (2 + 2 * (k : ℝ)) * M *
+            ((L : ℝ) ^ (-(k : ℝ)) / (k : ℝ)) := by
+  obtain ⟨K, hK, hTail⟩ :=
+    exists_dfiVoronoiDualTerm_tail_decay_constant k hk branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_xSlice_mellin_line_bound_order
+      hf hbox hφ hscale w hUQ (-(1 / 2 : ℝ) - k) (2 * (k + 1) + 4)
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y r L hr hL
+  let M : ℝ := (1 + 2 * Real.pi) ^ (2 * (k + 1) + 4) *
+    ((2 : ℝ) ^ (2 * (k + 1) + 4) *
+      ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+      ((max 1 (max (2 * X / a) (X / a)⁻¹)) ^ |-(1 / 2 : ℝ) - k| *
+          ((∑ i ∈ Finset.range (2 * (k + 1) + 4 + 1), C i) *
+            ((q : ℝ) * Q)⁻¹) +
+        (max 1 (max (2 * X / a) (X / a)⁻¹)) ^ |-(1 / 2 : ℝ) - k| *
+          (((∑ i ∈ Finset.range (2 * (k + 1) + 4 + 1), C i) *
+              ((q : ℝ) * Q)⁻¹) *
+            (|-(1 / 2 : ℝ) - k| + ((2 * (k + 1) + 4 : ℕ) : ℝ) +
+              (max 1 (max (2 * X / a) (X / a)⁻¹)) *
+                (((a : ℝ) * (b : ℝ)) / ((q : ℝ) * Q))) ^
+                  (2 * (k + 1) + 4))))
+  have hMellin' := hMellin a b q ha hb hq hqQ h y
+  have hM : 0 ≤ M := by
+    have hz := hMellin' 0
+    exact (norm_nonneg _).trans
+      (by simpa [M] using hz)
+  simpa [M] using hTail
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+    hM hMellin' r L hr hL
+
+/-- DFI (29), retained second-variable transform with all source parameters
+and the universal contour constant quantified in the source order. -/
+theorem exists_dfiEquation29_ySlice_threeQuarter_transform_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ j, 0 < C j) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (x : ℝ)
+        (r : ℕ) (_hr : NeZero r) (n : ℕ), 0 < n →
+        let C₆ := ∑ j ∈ Finset.range 7, C j
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (2 * Y / b)
+        ‖dfiEquation29InitialTransform r branch
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x) n‖ ≤
+          K * (r : ℝ) ^ (-(1 / 2 : ℝ)) *
+            ((1 + 2 * Real.pi) ^ 6 *
+              (64 * ((-Real.log (Y / b)) - (-Real.log (2 * Y / b))) *
+                (D * A + D * (1024 * A * (1 + D * B) ^ 6)))) *
+            (n : ℝ) ^ (-(1 / 4 : ℝ)) := by
+  obtain ⟨K, hK, hUniversal⟩ :=
+    exists_dfiEquation29InitialTransform_threeQuarter_constant branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_ySlice_mellin_threeQuarter_bound
+      hf hbox hφ hscale w hUQ
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h x r hr n hn
+  dsimp only
+  exact hUniversal
+    (dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q hq x)
+    (hMellin a b q ha hb hq hqQ h x) r hr n hn
+
+/-- First-variable counterpart of the source-uniform retained transform
+bound in DFI (29). -/
+theorem exists_dfiEquation29_xSlice_threeQuarter_transform_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hUQ : U = Q ^ 2)
+    (branch : DFIVoronoiDualBranch) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∃ C : ℕ → ℝ, (∀ i, 0 < C i) ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → 0 < q →
+        (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ) (y : ℝ)
+        (r : ℕ) (_hr : NeZero r) (m : ℕ), 0 < m →
+        let C₆ := ∑ i ∈ Finset.range 7, C i
+        let qQ := (q : ℝ) * Q
+        let A := C₆ * qQ⁻¹
+        let B := ((a : ℝ) * (b : ℝ)) / qQ
+        let D := max 1 (2 * X / a)
+        ‖dfiEquation29InitialTransform r branch
+            (fun x => dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b h q x y) m‖ ≤
+          K * (r : ℝ) ^ (-(1 / 2 : ℝ)) *
+            ((1 + 2 * Real.pi) ^ 6 *
+              (64 * ((-Real.log (X / a)) - (-Real.log (2 * X / a))) *
+                (D * A + D * (1024 * A * (1 + D * B) ^ 6)))) *
+            (m : ℝ) ^ (-(1 / 4 : ℝ)) := by
+  obtain ⟨K, hK, hUniversal⟩ :=
+    exists_dfiEquation29InitialTransform_threeQuarter_constant branch
+  obtain ⟨C, hC, hMellin⟩ :=
+    exists_dfiEquation28_xSlice_mellin_threeQuarter_bound
+      hf hbox hφ hscale w hUQ
+  refine ⟨K, hK, C, hC, ?_⟩
+  intro a b q ha hb hq hqQ h y r hr m hm
+  dsimp only
+  exact hUniversal
+    (dfiEquation23Weight_xSlice w hf hbox hφ a b ha h q hq y)
+    (hMellin a b q ha hb hq hqQ h y) r hr m hm
 
 end RiemannZeta.GuthMaynard

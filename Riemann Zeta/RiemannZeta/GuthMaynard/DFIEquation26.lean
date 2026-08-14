@@ -324,6 +324,12 @@ theorem ramanujanSum_eq_dfi26 (q h : ℕ) [NeZero q] :
   rw [← Finset.sum_filter]
   rw [filter_divisors_dvd_eq_gcd_divisors h q (NeZero.pos q)]
 
+/-- Ramanujan sums at natural frequencies are real. -/
+theorem star_ramanujanSum (q h : ℕ) [NeZero q] :
+    star (ramanujanSum q h) = ramanujanSum q h := by
+  rw [ramanujanSum_eq_dfi26]
+  simp
+
 /-- The divisor-loss form of the estimate following DFI equation (26).  This
 is the form used under the paper's ubiquitous epsilon-power convention. -/
 theorem norm_ramanujanSum_le_gcd_mul_divisors (q h : ℕ) [NeZero q] :
