@@ -1,4 +1,5 @@
 import RiemannZeta.GuthMaynard.DFIProposition1
+import RiemannZeta.GuthMaynard.GammaVerticalDecay
 import Mathlib.Analysis.Complex.PhragmenLindelof
 
 /-! Periodic Estermann strip bounds and the unconditional Mellin--Barnes
@@ -443,21 +444,19 @@ theorem norm_betaIntegral_le_re_betaIntegral
           Complex.ofReal_cpow hx1.le]
         norm_num
 
-theorem norm_Gamma_le_realGamma_ratio_mul_anchor
-    {a u : ℝ} (ha0 : 0 < a) (ha : a ≤ 3 / 2) :
-    ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ * Real.Gamma (3 / 2) ≤
-      Real.Gamma a *
-        ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ := by
+theorem norm_Gamma_le_realGamma_ratio_mul_general_anchor
+    {a A u : ℝ} (ha0 : 0 < a) (ha : a ≤ A) :
+    ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ * Real.Gamma A ≤
+      Real.Gamma a * ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ := by
   rcases ha.eq_or_lt with rfl | haLt
   · simp [mul_comm]
   let s : ℂ := (a : ℂ) + (u : ℂ) * I
-  let b : ℝ := 3 / 2 - a
+  let b : ℝ := A - a
   have hb : 0 < b := by dsimp [b]; linarith
   have hs : 0 < s.re := by simpa [s] using ha0
   have hGamma := Complex.Gamma_mul_Gamma_eq_betaIntegral hs
     (show 0 < ((b : ℂ)).re by simpa using hb)
-  have hsum : s + (b : ℂ) =
-      (3 / 2 : ℂ) + (u : ℂ) * I := by
+  have hsum : s + (b : ℂ) = (A : ℂ) + (u : ℂ) * I := by
     dsimp [s, b]
     push_cast
     ring
@@ -467,61 +466,312 @@ theorem norm_Gamma_le_realGamma_ratio_mul_anchor
   have hBeta := norm_betaIntegral_le_re_betaIntegral s (b : ℂ)
   have hBetaReal :
       (Complex.betaIntegral (a : ℂ) (b : ℂ)).re =
-        Real.Gamma a * Real.Gamma b / Real.Gamma (3 / 2) := by
+        Real.Gamma a * Real.Gamma b / Real.Gamma A := by
     rw [Complex.betaIntegral_eq_Gamma_mul_div (a : ℂ) (b : ℂ)
       (by simpa using ha0) (by simpa using hb)]
-    rw [show (a : ℂ) + (b : ℂ) = (3 / 2 : ℝ) by
+    rw [show (a : ℂ) + (b : ℂ) = (A : ℝ) by
       dsimp [b]
       push_cast
       ring]
     rw [Complex.Gamma_ofReal a, Complex.Gamma_ofReal b,
-      Complex.Gamma_ofReal (3 / 2)]
+      Complex.Gamma_ofReal A]
     norm_cast
   have hBeta' :
       ‖Complex.betaIntegral s (b : ℂ)‖ ≤
-        Real.Gamma a * Real.Gamma b / Real.Gamma (3 / 2) := by
+        Real.Gamma a * Real.Gamma b / Real.Gamma A := by
     rw [show s.re = a by simp [s], show ((b : ℂ)).re = b by simp,
       hBetaReal] at hBeta
     exact hBeta
   have hGa : 0 < Real.Gamma a := Real.Gamma_pos_of_pos ha0
   have hGb : 0 < Real.Gamma b := Real.Gamma_pos_of_pos hb
-  have hGanchor : 0 < Real.Gamma (3 / 2) :=
-    Real.Gamma_pos_of_pos (by norm_num)
+  have hA0 : 0 < A := ha0.trans_le ha
+  have hGanchor : 0 < Real.Gamma A := Real.Gamma_pos_of_pos hA0
   have hAnchorNorm : 0 ≤
-      ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ := norm_nonneg _
+      ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ := norm_nonneg _
   have hMul :
       ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ * Real.Gamma b ≤
-        ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
-          (Real.Gamma a * Real.Gamma b / Real.Gamma (3 / 2)) := by
+        ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
+          (Real.Gamma a * Real.Gamma b / Real.Gamma A) := by
     calc
       ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ * Real.Gamma b =
           ‖Complex.Gamma s‖ * ‖(Real.Gamma b : ℂ)‖ := by
         simp [s, abs_of_pos hGb]
-      _ = ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
+      _ = ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
           ‖Complex.betaIntegral s (b : ℂ)‖ := hNorm
-      _ ≤ ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
-          (Real.Gamma a * Real.Gamma b / Real.Gamma (3 / 2)) :=
+      _ ≤ ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
+          (Real.Gamma a * Real.Gamma b / Real.Gamma A) :=
         mul_le_mul_of_nonneg_left hBeta' hAnchorNorm
   have hCancel :
       ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ ≤
-        ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
-          Real.Gamma a / Real.Gamma (3 / 2) := by
+        ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
+          Real.Gamma a / Real.Gamma A := by
     have hEq :
-        ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
-            (Real.Gamma a * Real.Gamma b / Real.Gamma (3 / 2)) =
-          (‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ *
-            Real.Gamma a / Real.Gamma (3 / 2)) * Real.Gamma b := by ring
+        ‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
+            (Real.Gamma a * Real.Gamma b / Real.Gamma A) =
+          (‖Complex.Gamma ((A : ℂ) + (u : ℂ) * I)‖ *
+            Real.Gamma a / Real.Gamma A) * Real.Gamma b := by ring
     rw [hEq] at hMul
     nlinarith
   have hFinal := (le_div_iff₀ hGanchor).mp hCancel
   nlinarith
 
-theorem exists_realGamma_bound_three_quarters_three_halves :
+theorem norm_Gamma_le_realGamma_ratio_mul_anchor
+    {a u : ℝ} (ha0 : 0 < a) (ha : a ≤ 3 / 2) :
+    ‖Complex.Gamma ((a : ℂ) + (u : ℂ) * I)‖ * Real.Gamma (3 / 2) ≤
+      Real.Gamma a *
+        ‖Complex.Gamma ((3 / 2 : ℂ) + (u : ℂ) * I)‖ :=
+  by
+    simpa using
+      (norm_Gamma_le_realGamma_ratio_mul_general_anchor
+        (A := (3 / 2 : ℝ)) (u := u) ha0 ha)
+
+theorem norm_dfiGammaRecurrenceProduct_le (k : ℕ) (u : ℝ) :
+    ‖∏ j ∈ Finset.range k,
+        ((3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ))‖ ≤
+      (((k : ℝ) + 2) * (1 + |u|)) ^ k := by
+  rw [norm_prod]
+  calc
+    ∏ j ∈ Finset.range k,
+          ‖(3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ)‖ ≤
+        ∏ _j ∈ Finset.range k, ((k : ℝ) + 2) * (1 + |u|) := by
+      apply Finset.prod_le_prod
+      · intro j hj
+        exact norm_nonneg _
+      · intro j hj
+        have hjk : (j : ℝ) ≤ k := by
+          exact_mod_cast (Nat.le_of_lt (Finset.mem_range.mp hj))
+        have hre :
+            (((3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ))).re =
+              (3 / 2 : ℝ) + j := by simp
+        have him :
+            (((3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ))).im = -u := by simp
+        calc
+          ‖(3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ)‖ ≤
+              |(3 / 2 : ℝ) + j| + |-u| := by
+            simpa [hre, him] using
+              Complex.norm_le_abs_re_add_abs_im
+                ((3 / 2 : ℂ) - (u : ℂ) * I + (j : ℂ))
+          _ = (3 / 2 : ℝ) + j + |u| := by
+            rw [abs_of_nonneg (by positivity : (0 : ℝ) ≤ 3 / 2 + j), abs_neg]
+          _ ≤ ((k : ℝ) + 2) * (1 + |u|) := by
+            nlinarith [abs_nonneg u]
+    _ = (((k : ℝ) + 2) * (1 + |u|)) ^ k := by simp
+
+theorem norm_Gamma_mul_voronoiExp_shifted_anchor_le
+    (k : ℕ) (u : ℝ) :
+    ‖Complex.Gamma ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) *
+        Complex.exp (Real.pi * I *
+          ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+      4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|) ∧
+    ‖Complex.Gamma ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) *
+        Complex.exp (-Real.pi * I *
+          ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+      4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|) := by
+  let s : ℂ := (3 / 2 : ℂ) - (u : ℂ) * I
+  have hs : ∀ j < k, s + (j : ℂ) ≠ 0 := by
+    intro j hj hzero
+    have hre := congrArg Complex.re hzero
+    simp [s] at hre
+    have hjpos : (0 : ℝ) < 3 / 2 + j := by positivity
+    linarith
+  have hRec := Gamma_add_nat_eq_prod_mul s k hs
+  have hArg : s + k =
+      ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) := by
+    dsimp [s]
+    push_cast
+    ring
+  rw [hArg] at hRec
+  have hProd := norm_dfiGammaRecurrenceProduct_le k u
+  have hExpPos :
+      ‖Complex.exp (Real.pi * I *
+          ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) / 2)‖ =
+        ‖Complex.exp (Real.pi * I * s / 2)‖ := by
+    rw [Complex.norm_exp, Complex.norm_exp]
+    simp [s]
+  have hExpNeg :
+      ‖Complex.exp (-Real.pi * I *
+          ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) / 2)‖ =
+        ‖Complex.exp (-Real.pi * I * s / 2)‖ := by
+    rw [Complex.norm_exp, Complex.norm_exp]
+    simp [s]
+  constructor
+  · rw [hRec, norm_mul, norm_mul, hExpPos]
+    calc
+      ‖∏ j ∈ Finset.range k, (s + (j : ℂ))‖ *
+          ‖Complex.Gamma s‖ * ‖Complex.exp (Real.pi * I * s / 2)‖ =
+          ‖∏ j ∈ Finset.range k, (s + (j : ℂ))‖ *
+            ‖Complex.Gamma s * Complex.exp (Real.pi * I * s / 2)‖ := by
+        rw [norm_mul]
+        ring
+      _ ≤ (((k : ℝ) + 2) * (1 + |u|)) ^ k *
+          (4 * (1 + |u|)) := by
+        exact mul_le_mul
+          (by simpa [s] using hProd)
+          (by simpa [s] using norm_Gamma_mul_voronoiExp_pos_le u)
+          (norm_nonneg _)
+          (by positivity)
+      _ = 4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|) := by ring
+  · rw [hRec, norm_mul, norm_mul, hExpNeg]
+    calc
+      ‖∏ j ∈ Finset.range k, (s + (j : ℂ))‖ *
+          ‖Complex.Gamma s‖ * ‖Complex.exp (-Real.pi * I * s / 2)‖ =
+          ‖∏ j ∈ Finset.range k, (s + (j : ℂ))‖ *
+            ‖Complex.Gamma s * Complex.exp (-Real.pi * I * s / 2)‖ := by
+        rw [norm_mul]
+        ring
+      _ ≤ (((k : ℝ) + 2) * (1 + |u|)) ^ k *
+          (4 * (1 + |u|)) := by
+        exact mul_le_mul
+          (by simpa [s] using hProd)
+          (by simpa [s] using norm_Gamma_mul_voronoiExp_neg_le u)
+          (norm_nonneg _)
+          (by positivity)
+      _ = 4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|) := by ring
+
+theorem exists_realGamma_bound_three_halves_shift (k : ℕ) :
     ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
-      3 / 4 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
-  have hne : (Set.Icc (3 / 4 : ℝ) (3 / 2)).Nonempty :=
+      3 / 2 ≤ a → a ≤ 3 / 2 + k → Real.Gamma a ≤ C := by
+  have hne : (Set.Icc (3 / 2 : ℝ) (3 / 2 + k)).Nonempty :=
+    Set.nonempty_Icc.mpr (le_add_of_nonneg_right (Nat.cast_nonneg k))
+  have hcont : ContinuousOn Real.Gamma
+      (Set.Icc (3 / 2 : ℝ) (3 / 2 + k)) :=
+    Real.differentiableOn_Gamma_Ioi.continuousOn.mono (by
+      intro a ha
+      exact lt_of_lt_of_le (by norm_num) ha.1)
+  obtain ⟨a₀, ha₀, hmax⟩ := isCompact_Icc.exists_isMaxOn hne hcont
+  refine ⟨Real.Gamma a₀, Real.Gamma_pos_of_pos
+    (lt_of_lt_of_le (by norm_num) ha₀.1), ?_⟩
+  intro a haLower haUpper
+  exact hmax ⟨haLower, haUpper⟩
+
+theorem exists_norm_Gamma_mul_voronoiExp_shifted_strip_bound (k : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
+      3 / 2 ≤ a → a ≤ 3 / 2 + k → ∀ u : ℝ,
+      ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
+          Complex.exp (Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) ^ (k + 1) ∧
+      ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
+          Complex.exp (-Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) ^ (k + 1) := by
+  obtain ⟨B, hB, hBound⟩ := exists_realGamma_bound_three_halves_shift k
+  let A : ℝ := 3 / 2 + k
+  have hA0 : 0 < A := by dsimp [A]; positivity
+  have hGA : 0 < Real.Gamma A := Real.Gamma_pos_of_pos hA0
+  refine ⟨4 * B * ((k : ℝ) + 2) ^ k / Real.Gamma A, by positivity, ?_⟩
+  intro a haLower haUpper u
+  have ha0 : 0 < a := lt_of_lt_of_le (by norm_num) haLower
+  have haA : a ≤ A := by simpa [A] using haUpper
+  have hRatio := norm_Gamma_le_realGamma_ratio_mul_general_anchor
+    (A := A) (u := -u) ha0 haA
+  have hRatio' :
+      ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ * Real.Gamma A ≤
+        Real.Gamma a *
+          ‖Complex.Gamma ((A : ℂ) - (u : ℂ) * I)‖ := by
+    simpa [Complex.ofReal_neg, neg_mul, mul_comm] using hRatio
+  have hGaB : Real.Gamma a ≤ B := hBound a haLower haUpper
+  have hAnchor := norm_Gamma_mul_voronoiExp_shifted_anchor_le k u
+  have hAComplex :
+      ((((3 / 2 : ℝ) + k : ℝ) : ℂ) - (u : ℂ) * I) =
+        (A : ℂ) - (u : ℂ) * I := by simp [A]
+  rw [hAComplex] at hAnchor
+  constructor
+  · have hExpEq :
+        ‖Complex.exp (Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          ‖Complex.exp (Real.pi * I *
+            ((A : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      rw [Complex.norm_exp, Complex.norm_exp]
+      simp
+    have hProduct :
+        (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+          ‖Complex.exp (Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖) * Real.Gamma A ≤
+          B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) := by
+      calc
+        (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+            ‖Complex.exp (Real.pi * I *
+              ((a : ℂ) - (u : ℂ) * I) / 2)‖) * Real.Gamma A =
+            (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ * Real.Gamma A) *
+              ‖Complex.exp (Real.pi * I *
+                ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by ring
+        _ ≤ (Real.Gamma a *
+              ‖Complex.Gamma ((A : ℂ) - (u : ℂ) * I)‖) *
+              ‖Complex.exp (Real.pi * I *
+                ((a : ℂ) - (u : ℂ) * I) / 2)‖ :=
+          mul_le_mul_of_nonneg_right hRatio' (norm_nonneg _)
+        _ = Real.Gamma a *
+            ‖Complex.Gamma ((A : ℂ) - (u : ℂ) * I) *
+              Complex.exp (Real.pi * I *
+                ((A : ℂ) - (u : ℂ) * I) / 2)‖ := by
+          rw [norm_mul, hExpEq]
+          ring
+        _ ≤ B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) :=
+          mul_le_mul hGaB hAnchor.1 (norm_nonneg _) hB.le
+    have hDiv := (le_div_iff₀ hGA).2 hProduct
+    rw [norm_mul]
+    calc
+      ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+          ‖Complex.exp (Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) /
+            Real.Gamma A := hDiv
+      _ = (4 * B * ((k : ℝ) + 2) ^ k / Real.Gamma A) *
+          (1 + |u|) ^ (k + 1) := by
+        rw [mul_pow, pow_succ]
+        ring
+  · have hExpEq :
+        ‖Complex.exp (-Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          ‖Complex.exp (-Real.pi * I *
+            ((A : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      rw [Complex.norm_exp, Complex.norm_exp]
+      simp
+    have hProduct :
+        (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+          ‖Complex.exp (-Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖) * Real.Gamma A ≤
+          B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) := by
+      calc
+        (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+            ‖Complex.exp (-Real.pi * I *
+              ((a : ℂ) - (u : ℂ) * I) / 2)‖) * Real.Gamma A =
+            (‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ * Real.Gamma A) *
+              ‖Complex.exp (-Real.pi * I *
+                ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by ring
+        _ ≤ (Real.Gamma a *
+              ‖Complex.Gamma ((A : ℂ) - (u : ℂ) * I)‖) *
+              ‖Complex.exp (-Real.pi * I *
+                ((a : ℂ) - (u : ℂ) * I) / 2)‖ :=
+          mul_le_mul_of_nonneg_right hRatio' (norm_nonneg _)
+        _ = Real.Gamma a *
+            ‖Complex.Gamma ((A : ℂ) - (u : ℂ) * I) *
+              Complex.exp (-Real.pi * I *
+                ((A : ℂ) - (u : ℂ) * I) / 2)‖ := by
+          rw [norm_mul, hExpEq]
+          ring
+        _ ≤ B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) :=
+          mul_le_mul hGaB hAnchor.2 (norm_nonneg _) hB.le
+    have hDiv := (le_div_iff₀ hGA).2 hProduct
+    rw [norm_mul]
+    calc
+      ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I)‖ *
+          ‖Complex.exp (-Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          B * (4 * (((k : ℝ) + 2) * (1 + |u|)) ^ k * (1 + |u|)) /
+            Real.Gamma A := hDiv
+      _ = (4 * B * ((k : ℝ) + 2) ^ k / Real.Gamma A) *
+          (1 + |u|) ^ (k + 1) := by
+        rw [mul_pow, pow_succ]
+        ring
+
+theorem exists_realGamma_bound_half_three_halves :
+    ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
+      1 / 2 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
+  have hne : (Set.Icc (1 / 2 : ℝ) (3 / 2)).Nonempty :=
     Set.nonempty_Icc.mpr (by norm_num)
-  have hcont : ContinuousOn Real.Gamma (Set.Icc (3 / 4 : ℝ) (3 / 2)) :=
+  have hcont : ContinuousOn Real.Gamma (Set.Icc (1 / 2 : ℝ) (3 / 2)) :=
     Real.differentiableOn_Gamma_Ioi.continuousOn.mono (by
       intro a ha
       exact lt_of_lt_of_le (by norm_num) ha.1)
@@ -534,14 +784,14 @@ theorem exists_realGamma_bound_three_quarters_three_halves :
 
 theorem exists_norm_Gamma_mul_voronoiExp_strip_bound :
     ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
-      3 / 4 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      1 / 2 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
       ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
           Complex.exp (Real.pi * I *
             ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤ C * (1 + |u|) ∧
       ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
           Complex.exp (-Real.pi * I *
             ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤ C * (1 + |u|) := by
-  obtain ⟨B, hB, hBound⟩ := exists_realGamma_bound_three_quarters_three_halves
+  obtain ⟨B, hB, hBound⟩ := exists_realGamma_bound_half_three_halves
   have hG : 0 < Real.Gamma (3 / 2) :=
     Real.Gamma_pos_of_pos (by norm_num)
   refine ⟨4 * B / Real.Gamma (3 / 2), by positivity, ?_⟩
@@ -730,7 +980,7 @@ theorem periodicLFunctionDual_strip_bound
           (ZMod.dft fun x => Ψ (-x)) hre him
       _ ≤ L₂ * (2 * (1 + |u|)) :=
         mul_le_mul_of_nonneg_left hsNorm hL₂
-  have hGammaBound := hGamma a haLower haUpper u
+  have hGammaBound := hGamma a (by linarith) haUpper u
   have hScalarBound := hScalar a haLower haUpper u
   have hOne : 0 ≤ 1 + |u| := by positivity
   unfold periodicLFunctionDual
@@ -1081,17 +1331,18 @@ theorem DFIVoronoiTestFunction.mellin_polynomial_decay
     _ ≤ (2 * Real.pi) ^ n * SchwartzMap.seminorm ℝ n 0 F :=
       mul_le_mul_of_nonneg_left hSem' (pow_nonneg hpi.le n)
 
-/-- The compact support gives a bound for the Mellin transform uniform on
-the complete DFI contour-shift strip. -/
-theorem DFIVoronoiTestFunction.exists_mellin_strip_bound
-    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
-    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
-      -(1 / 2 : ℝ) ≤ σ → σ ≤ 3 / 2 → ∀ u : ℝ,
+/-- Compact support gives a Mellin bound uniform on any prescribed finite
+vertical strip.  This general form is needed when a Voronoi dual contour is
+moved farther left to obtain arbitrary decay in its discrete frequency. -/
+theorem DFIVoronoiTestFunction.exists_mellin_interval_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (c d : ℝ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ), c ≤ σ → σ ≤ d → ∀ u : ℝ,
       ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
   let Fleft : SchwartzMap ℝ ℂ :=
-    dfiVoronoiMellinKernelSchwartz hg (-(1 / 2 : ℝ))
+    dfiVoronoiMellinKernelSchwartz hg c
   let Fright : SchwartzMap ℝ ℂ :=
-    dfiVoronoiMellinKernelSchwartz hg (3 / 2 : ℝ)
+    dfiVoronoiMellinKernelSchwartz hg d
   let C : ℝ := (∫ v : ℝ, ‖Fleft v‖) + ∫ v : ℝ, ‖Fright v‖
   have hLeftInt : Integrable (fun v : ℝ ↦ ‖Fleft v‖) := Fleft.integrable.norm
   have hRightInt : Integrable (fun v : ℝ ↦ ‖Fright v‖) := Fright.integrable.norm
@@ -1105,21 +1356,20 @@ theorem DFIVoronoiTestFunction.exists_mellin_strip_bound
   have hPoint : ∀ v : ℝ, ‖Fσ v‖ ≤ ‖Fleft v‖ + ‖Fright v‖ := by
     intro v
     have hExp : Real.exp (-σ * v) ≤
-        Real.exp ((1 / 2 : ℝ) * v) + Real.exp (-(3 / 2 : ℝ) * v) := by
+        Real.exp (-c * v) + Real.exp (-d * v) := by
       by_cases hv : 0 ≤ v
-      · have hlin : -σ * v ≤ (1 / 2 : ℝ) * v := by nlinarith
+      · have hlin : -σ * v ≤ -c * v := by nlinarith
         exact (Real.exp_le_exp.mpr hlin).trans
           (le_add_of_nonneg_right (Real.exp_pos _).le)
       · have hv' : v < 0 := lt_of_not_ge hv
-        have hlin : -σ * v ≤ -(3 / 2 : ℝ) * v := by nlinarith
+        have hlin : -σ * v ≤ -d * v := by nlinarith
         exact (Real.exp_le_exp.mpr hlin).trans
           (le_add_of_nonneg_left (Real.exp_pos _).le)
     change ‖(Real.exp (-σ * v) : ℂ) * g (Real.exp (-v))‖ ≤
-      ‖(Real.exp (-(-(1 / 2 : ℝ)) * v) : ℂ) * g (Real.exp (-v))‖ +
-      ‖(Real.exp (-(3 / 2 : ℝ) * v) : ℂ) * g (Real.exp (-v))‖
+      ‖(Real.exp (-c * v) : ℂ) * g (Real.exp (-v))‖ +
+      ‖(Real.exp (-d * v) : ℂ) * g (Real.exp (-v))‖
     simp only [norm_mul, Complex.norm_real, Real.norm_eq_abs,
       abs_of_pos (Real.exp_pos _)]
-    rw [show -(-(1 / 2 : ℝ)) * v = (1 / 2 : ℝ) * v by ring]
     nlinarith [norm_nonneg (g (Real.exp (-v)))]
   have hLone : ‖Fσ.toLp 1‖ ≤ C := by
     rw [SchwartzMap.norm_toLp_one]
@@ -1134,6 +1384,42 @@ theorem DFIVoronoiTestFunction.exists_mellin_strip_bound
   exact (SchwartzMap.norm_fourier_apply_le_toLp_one Fσ
     (u / (2 * Real.pi))).trans hLone
 
+/-- Rapid Mellin decay on one arbitrary vertical line, expressed using the
+inhomogeneous weight used by the DFI multiplier estimates. -/
+theorem DFIVoronoiTestFunction.exists_mellin_one_add_abs_pow_line_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j : ℕ) (σ : ℝ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ u : ℝ,
+      (1 + |u|) ^ j *
+        ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨M, hM, hBound⟩ := hg.exists_mellin_interval_bound σ σ
+  obtain ⟨D, hD, hDecay⟩ := hg.mellin_polynomial_decay σ j
+  refine ⟨2 ^ (j - 1) * (M + D), by positivity, ?_⟩
+  intro u
+  have hMu : ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ M :=
+    hBound σ le_rfl le_rfl u
+  have hDu := hDecay u
+  have hBinom : (1 + |u|) ^ j ≤ 2 ^ (j - 1) * (1 + |u| ^ j) := by
+    simpa using add_pow_le (show (0 : ℝ) ≤ 1 by norm_num) (abs_nonneg u) j
+  calc
+    (1 + |u|) ^ j *
+          ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+        (2 ^ (j - 1) * (1 + |u| ^ j)) *
+          ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ :=
+      mul_le_mul_of_nonneg_right hBinom (norm_nonneg _)
+    _ = 2 ^ (j - 1) *
+        (‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ +
+          |u| ^ j * ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖) := by ring
+    _ ≤ 2 ^ (j - 1) * (M + D) := by gcongr
+
+/-- The compact support gives a bound for the Mellin transform uniform on
+the complete DFI contour-shift strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) ≤ σ → σ ≤ 3 / 2 → ∀ u : ℝ,
+      ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C :=
+  hg.exists_mellin_interval_bound (-(1 / 2 : ℝ)) (3 / 2 : ℝ)
+
 theorem DFIVoronoiTestFunction.differentiable_mellin
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
     Differentiable ℂ (mellin g) := by
@@ -1142,6 +1428,166 @@ theorem DFIVoronoiTestFunction.differentiable_mellin
     (hg.continuous.locallyIntegrable.locallyIntegrableOn (Set.Ioi 0))
     (hg.isBigO_atTop (s.re + 1)) (by linarith)
     (hg.isBigO_atZero (s.re - 1)) (by linarith)
+
+/-- Arbitrary-order polynomial Mellin bound on either boundary of the
+standard DFI strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_pow_boundary_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j : ℕ) (σ : ℝ)
+    (hσLower : -(1 / 2 : ℝ) ≤ σ) (hσUpper : σ ≤ 3 / 2) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ u : ℝ,
+      ‖(((σ : ℂ) + (u : ℂ) * I) - 3) ^ j *
+        mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨M, hM, hMellin⟩ := hg.exists_mellin_strip_bound
+  obtain ⟨D, hD, hDecay⟩ := hg.mellin_polynomial_decay σ j
+  refine ⟨4 ^ j * 2 ^ (j - 1) * (M + D), by positivity, ?_⟩
+  intro u
+  let s : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hSigma : |σ - 3| ≤ 4 := by
+    rw [abs_of_nonpos (by linarith)]
+    linarith
+  have hsNorm : ‖s - 3‖ ≤ 4 * (1 + |u|) := by
+    calc
+      ‖s - 3‖ ≤ |(s - 3).re| + |(s - 3).im| :=
+        Complex.norm_le_abs_re_add_abs_im (s - 3)
+      _ = |σ - 3| + |u| := by simp [s]
+      _ ≤ 4 * (1 + |u|) := by nlinarith [abs_nonneg u]
+  have hPow : ‖s - 3‖ ^ j ≤ 4 ^ j * (1 + |u|) ^ j := by
+    simpa [mul_pow] using pow_le_pow_left₀ (norm_nonneg (s - 3)) hsNorm j
+  have hBinom : (1 + |u|) ^ j ≤ 2 ^ (j - 1) * (1 + |u| ^ j) := by
+    simpa using add_pow_le (show (0 : ℝ) ≤ 1 by norm_num) (abs_nonneg u) j
+  have hMu : ‖mellin g s‖ ≤ M := hMellin σ hσLower hσUpper u
+  have hDu : |u| ^ j * ‖mellin g s‖ ≤ D := hDecay u
+  have hCombined : (1 + |u| ^ j) * ‖mellin g s‖ ≤ M + D := by
+    calc
+      (1 + |u| ^ j) * ‖mellin g s‖ =
+          ‖mellin g s‖ + |u| ^ j * ‖mellin g s‖ := by ring
+      _ ≤ M + D := add_le_add hMu hDu
+  rw [norm_mul, norm_pow]
+  calc
+    ‖s - 3‖ ^ j * ‖mellin g s‖ ≤
+        (4 ^ j * (1 + |u|) ^ j) * ‖mellin g s‖ :=
+      mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
+    _ ≤ (4 ^ j * (2 ^ (j - 1) * (1 + |u| ^ j))) *
+        ‖mellin g s‖ := by gcongr
+    _ = 4 ^ j * 2 ^ (j - 1) *
+        ((1 + |u| ^ j) * ‖mellin g s‖) := by ring
+    _ ≤ 4 ^ j * 2 ^ (j - 1) * (M + D) := by gcongr
+
+/-- Phragmén--Lindelöf makes the arbitrary-order boundary estimate uniform
+throughout the standard DFI strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_pow_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) ≤ σ → σ ≤ 3 / 2 → ∀ u : ℝ,
+      ‖(((σ : ℂ) + (u : ℂ) * I) - 3) ^ j *
+        mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨Ca, hCa, hBoundA⟩ :=
+    hg.exists_mellin_pow_boundary_bound j (-(1 / 2 : ℝ)) (by norm_num) (by norm_num)
+  obtain ⟨Cb, hCb, hBoundB⟩ :=
+    hg.exists_mellin_pow_boundary_bound j (3 / 2 : ℝ) (by norm_num) (by norm_num)
+  obtain ⟨M, hM, hMellin⟩ := hg.exists_mellin_strip_bound
+  let f : ℂ → ℂ := fun s ↦ (s - 3) ^ j * mellin g s
+  let strip : Set ℂ := Complex.re ⁻¹' Ioo (-(1 / 2 : ℝ)) (3 / 2 : ℝ)
+  let l : Filter ℂ := comap (abs ∘ Complex.im) atTop ⊓ Filter.principal strip
+  have hDiff : Differentiable ℂ f := by
+    dsimp [f]
+    exact ((differentiable_id.sub_const 3).pow j).mul hg.differentiable_mellin
+  have hStripEventually : ∀ᶠ z : ℂ in l, z ∈ strip := by
+    exact (show ∀ᶠ z : ℂ in Filter.principal strip, z ∈ strip by
+      simp).filter_mono inf_le_right
+  have hFPoly : f =O[l] (fun z : ℂ ↦ (4 + |z.im|) ^ j) := by
+    apply IsBigO.of_bound M
+    filter_upwards [hStripEventually] with z hz
+    have hzLower : -(1 / 2 : ℝ) ≤ z.re := hz.1.le
+    have hzUpper : z.re ≤ 3 / 2 := hz.2.le
+    have hRe : |z.re - 3| ≤ 4 := by
+      rw [abs_of_nonpos (by linarith)]
+      linarith
+    have hzNorm : ‖z - 3‖ ≤ 4 + |z.im| := by
+      calc
+        ‖z - 3‖ ≤ |(z - 3).re| + |(z - 3).im| :=
+          Complex.norm_le_abs_re_add_abs_im (z - 3)
+        _ = |z.re - 3| + |z.im| := by simp
+        _ ≤ 4 + |z.im| := by linarith
+    have hPow : ‖z - 3‖ ^ j ≤ (4 + |z.im|) ^ j := by
+      simpa using pow_le_pow_left₀ (norm_nonneg (z - 3)) hzNorm j
+    have hMellinZ : ‖mellin g z‖ ≤ M := by
+      have hzEq : ((z.re : ℂ) + (z.im : ℂ) * I) = z := by
+        apply Complex.ext <;> simp
+      rw [← hzEq]
+      exact hMellin z.re hzLower hzUpper z.im
+    change ‖(z - 3) ^ j * mellin g z‖ ≤ M * ‖(4 + |z.im|) ^ j‖
+    rw [norm_mul, norm_pow, Real.norm_eq_abs,
+      abs_of_nonneg (by positivity : 0 ≤ (4 + |z.im|) ^ j)]
+    calc
+      ‖z - 3‖ ^ j * ‖mellin g z‖ ≤
+          (4 + |z.im|) ^ j * ‖mellin g z‖ :=
+        mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
+      _ ≤ (4 + |z.im|) ^ j * M :=
+        mul_le_mul_of_nonneg_left hMellinZ (by positivity)
+      _ = M * (4 + |z.im|) ^ j := by ring
+  have hRealPoly :
+      (fun t : ℝ ↦ (4 + t) ^ j) =O[atTop]
+        (fun t : ℝ ↦ Real.exp (Real.exp t)) := by
+    have hShift := (Real.isLittleO_pow_exp_atTop (n := j)).comp_tendsto
+      (tendsto_atTop_add_const_left atTop (4 : ℝ) tendsto_id)
+    have hFirst : (fun t : ℝ ↦ (4 + t) ^ j) =O[atTop]
+        (fun t : ℝ ↦ Real.exp (t + 4)) := by
+      simpa [add_comm] using hShift.isBigO
+    have hSecond : (fun t : ℝ ↦ Real.exp (t + 4)) =O[atTop]
+        (fun t : ℝ ↦ Real.exp (Real.exp t)) := by
+      apply IsBigO.of_bound (Real.exp 4)
+      filter_upwards with t
+      have htExp : t ≤ Real.exp t :=
+        (le_add_of_nonneg_right (show (0 : ℝ) ≤ 1 by norm_num)).trans
+          (Real.add_one_le_exp t)
+      simp only [Real.norm_eq_abs, abs_of_pos (Real.exp_pos _)]
+      rw [Real.exp_add]
+      calc
+        Real.exp t * Real.exp 4 = Real.exp 4 * Real.exp t := by ring
+        _ ≤ Real.exp 4 * Real.exp (Real.exp t) :=
+          mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr htExp)
+            (Real.exp_pos 4).le
+    exact hFirst.trans hSecond
+  have hToTop : Tendsto (abs ∘ Complex.im) l atTop := by
+    exact tendsto_comap.mono_left inf_le_left
+  have hPolyComplex :
+      (fun z : ℂ ↦ (4 + |z.im|) ^ j) =O[l]
+        (fun z : ℂ ↦ Real.exp (Real.exp |z.im|)) := by
+    simpa [Function.comp_def] using hRealPoly.comp_tendsto hToTop
+  have hGrowth : ∃ c < Real.pi / ((3 / 2 : ℝ) - (-(1 / 2 : ℝ))), ∃ B,
+      f =O[l] (fun z ↦ Real.exp (B * Real.exp (c * |z.im|))) := by
+    refine ⟨1, ?_, 1, ?_⟩
+    · nlinarith [Real.pi_gt_three]
+    · simpa using hFPoly.trans hPolyComplex
+  refine ⟨Ca + Cb, add_nonneg hCa hCb, ?_⟩
+  intro σ hσLower hσUpper u
+  let z : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hPL := PhragmenLindelof.vertical_strip
+    (f := f) (a := -(1 / 2 : ℝ)) (b := (3 / 2 : ℝ))
+    (C := Ca + Cb) hDiff.diffContOnCl (by simpa [l, strip] using hGrowth)
+    (fun w hw ↦ by
+      have hwEq : (-(1 / 2 : ℂ) + (w.im : ℂ) * I) = w := by
+        apply Complex.ext
+        · norm_num
+          exact hw.symm
+        · simp
+      have h := (hBoundA w.im).trans (le_add_of_nonneg_right hCb)
+      push_cast at h
+      rw [hwEq] at h
+      exact h)
+    (fun w hw ↦ by
+      have hwEq : ((3 / 2 : ℂ) + (w.im : ℂ) * I) = w := by
+        apply Complex.ext
+        · norm_num
+          exact hw.symm
+        · simp
+      have h := (hBoundB w.im).trans (le_add_of_nonneg_left hCa)
+      push_cast at h
+      rw [hwEq] at h
+      exact h)
+    (z := z) (by simpa [z] using hσLower) (by simpa [z] using hσUpper)
+  simpa [f, z] using hPL
 
 theorem DFIVoronoiTestFunction.exists_mellin_six_boundary_bound
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (σ : ℝ)
@@ -1300,6 +1746,163 @@ theorem DFIVoronoiTestFunction.exists_mellin_six_strip_bound
     (z := z) (by simpa [z] using hσLower) (by simpa [z] using hσUpper)
   simpa [f, z] using hPL
 
+/-- Translating by the inverse source weight moves the sixth-order Mellin
+bound one full unit to the left.  This is the strip used for the absolutely
+convergent form of the DFI double Voronoi expansion. -/
+theorem DFIVoronoiTestFunction.exists_mellin_six_deep_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(3 / 2 : ℝ) ≤ σ → σ ≤ 1 / 2 → ∀ u : ℝ,
+      ‖(((σ : ℂ) + (u : ℂ) * I) - 2) ^ 6 *
+        mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨C, hC, hStrip⟩ := hg.invWeight.exists_mellin_six_strip_bound
+  refine ⟨C, hC, ?_⟩
+  intro σ hσLower hσUpper u
+  let z : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have h := hStrip (σ + 1) (by linarith) (by linarith) u
+  have hLine : (((σ + 1 : ℝ) : ℂ) + (u : ℂ) * I) = z + 1 := by
+    dsimp [z]
+    push_cast
+    ring
+  rw [hLine, hg.mellin_invWeight_add_one z] at h
+  have hCenter : z + 1 - 3 = z - 2 := by ring
+  rw [hCenter] at h
+  exact h
+
+/-- Arbitrary-order version of the preceding contour translation.  After
+`k` inverse source weights, the standard sixth-order Mellin bound is valid
+on the strip translated `k` units to the left. -/
+theorem DFIVoronoiTestFunction.exists_mellin_six_shifted_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (k : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) - k ≤ σ → σ ≤ 3 / 2 - k → ∀ u : ℝ,
+      ‖(((σ : ℂ) + (u : ℂ) * I) + k - 3) ^ 6 *
+        mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨C, hC, hStrip⟩ :=
+    (hg.invWeightIterate k).exists_mellin_six_strip_bound
+  refine ⟨C, hC, ?_⟩
+  intro σ hσLower hσUpper u
+  let z : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hLower : -(1 / 2 : ℝ) ≤ σ + k := by
+    norm_num at hσLower ⊢
+    linarith
+  have hUpper : σ + k ≤ 3 / 2 := by
+    norm_num at hσUpper ⊢
+    linarith
+  have h := hStrip (σ + k) hLower hUpper u
+  have hLine : (((σ + k : ℝ) : ℂ) + (u : ℂ) * I) = z + k := by
+    dsimp [z]
+    push_cast
+    ring
+  rw [hLine, hg.mellin_invWeightIterate_add_nat k z] at h
+  exact h
+
+/-- Arbitrary vertical polynomial order on every integer translate of the
+DFI Mellin strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_pow_shifted_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j k : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) - k ≤ σ → σ ≤ 3 / 2 - k → ∀ u : ℝ,
+      ‖(((σ : ℂ) + (u : ℂ) * I) + k - 3) ^ j *
+        mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨C, hC, hStrip⟩ :=
+    (hg.invWeightIterate k).exists_mellin_pow_strip_bound j
+  refine ⟨C, hC, ?_⟩
+  intro σ hσLower hσUpper u
+  let z : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hLower : -(1 / 2 : ℝ) ≤ σ + k := by
+    norm_num at hσLower ⊢
+    linarith
+  have hUpper : σ + k ≤ 3 / 2 := by
+    norm_num at hσUpper ⊢
+    linarith
+  have h := hStrip (σ + k) hLower hUpper u
+  have hLine : (((σ + k : ℝ) : ℂ) + (u : ℂ) * I) = z + k := by
+    dsimp [z]
+    push_cast
+    ring
+  rw [hLine, hg.mellin_invWeightIterate_add_nat k z] at h
+  exact h
+
+/-- Uniform rapid decay in the standard `1 + |u|` weight on every translated
+DFI strip.  This is the form used simultaneously on vertical and horizontal
+sides of the equation (29) contour rectangles. -/
+theorem DFIVoronoiTestFunction.exists_mellin_one_add_abs_pow_shifted_strip_bound
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j k : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) - k ≤ σ → σ ≤ 3 / 2 - k → ∀ u : ℝ,
+      (1 + |u|) ^ j *
+        ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨C₀, hC₀, hZero⟩ := hg.exists_mellin_pow_shifted_strip_bound 0 k
+  obtain ⟨Cj, hCj, hPowBound⟩ := hg.exists_mellin_pow_shifted_strip_bound j k
+  refine ⟨2 ^ (j - 1) * (C₀ + Cj), by positivity, ?_⟩
+  intro σ hσLower hσUpper u
+  let z : ℂ := (σ : ℂ) + (u : ℂ) * I
+  let center : ℂ := z + k - 3
+  have hZero' : ‖mellin g z‖ ≤ C₀ := by
+    simpa [z] using hZero σ hσLower hσUpper u
+  have hWeighted : ‖center‖ ^ j * ‖mellin g z‖ ≤ Cj := by
+    have h := hPowBound σ hσLower hσUpper u
+    rw [norm_mul, norm_pow] at h
+    simpa [center, z] using h
+  have hCenterIm : center.im = u := by simp [center, z]
+  have hAbs : |u| ≤ ‖center‖ := by
+    simpa [hCenterIm] using Complex.abs_im_le_norm center
+  have hAbsPow : |u| ^ j ≤ ‖center‖ ^ j :=
+    pow_le_pow_left₀ (abs_nonneg u) hAbs j
+  have hDecay : |u| ^ j * ‖mellin g z‖ ≤ Cj :=
+    (mul_le_mul_of_nonneg_right hAbsPow (norm_nonneg _)).trans hWeighted
+  have hBinom : (1 + |u|) ^ j ≤ 2 ^ (j - 1) * (1 + |u| ^ j) := by
+    simpa using add_pow_le (show (0 : ℝ) ≤ 1 by norm_num) (abs_nonneg u) j
+  calc
+    (1 + |u|) ^ j * ‖mellin g z‖ ≤
+        (2 ^ (j - 1) * (1 + |u| ^ j)) * ‖mellin g z‖ :=
+      mul_le_mul_of_nonneg_right hBinom (norm_nonneg _)
+    _ = 2 ^ (j - 1) *
+        (‖mellin g z‖ + |u| ^ j * ‖mellin g z‖) := by ring
+    _ ≤ 2 ^ (j - 1) * (C₀ + Cj) := by gcongr
+
+/-- Uniform sixth-order vertical decay on every integer translate of the
+DFI Mellin strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_decay_shifted_strip
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (k : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) - k ≤ σ → σ ≤ 3 / 2 - k → ∀ u : ℝ, 1 ≤ |u| →
+      (1 + |u|) ^ 6 *
+        ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨D, hD, hStrip⟩ := hg.exists_mellin_six_shifted_strip_bound k
+  let R : ℝ := 2 + |(k : ℝ) - 3|
+  have hR : 0 ≤ R := by positivity
+  refine ⟨R ^ 6 * D, mul_nonneg (pow_nonneg hR 6) hD, ?_⟩
+  intro σ hσLower hσUpper u hu
+  let s : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hIm : |u| ≤ ‖s + k - 3‖ := by
+    have him := Complex.abs_im_le_norm (s + k - 3)
+    simpa [s] using him
+  have hLinear : 1 + |u| ≤ R * ‖s + k - 3‖ := by
+    have hNormOne : 1 ≤ ‖s + k - 3‖ := by
+      calc
+        1 ≤ |u| := hu
+        _ ≤ ‖s + k - 3‖ := hIm
+    have hRone : 2 ≤ R := by
+      dsimp [R]
+      linarith [abs_nonneg ((k : ℝ) - 3)]
+    calc
+      1 + |u| ≤ 2 * ‖s + k - 3‖ := by nlinarith
+      _ ≤ R * ‖s + k - 3‖ := by gcongr
+  have hPow : (1 + |u|) ^ 6 ≤
+      R ^ 6 * ‖s + k - 3‖ ^ 6 := by
+    simpa [mul_pow] using
+      pow_le_pow_left₀ (by positivity : 0 ≤ 1 + |u|) hLinear 6
+  have hStrip' := hStrip σ hσLower hσUpper u
+  rw [norm_mul, norm_pow] at hStrip'
+  calc
+    (1 + |u|) ^ 6 * ‖mellin g s‖ ≤
+        (R ^ 6 * ‖s + k - 3‖ ^ 6) * ‖mellin g s‖ :=
+      mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
+    _ = R ^ 6 * (‖s + k - 3‖ ^ 6 * ‖mellin g s‖) := by ring
+    _ ≤ R ^ 6 * D := by gcongr
+
 theorem DFIVoronoiTestFunction.exists_mellin_decay_strip
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
     ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
@@ -1325,6 +1928,34 @@ theorem DFIVoronoiTestFunction.exists_mellin_decay_strip
         (2 ^ 6 * ‖s - 3‖ ^ 6) * ‖mellin g s‖ :=
       mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
     _ = 2 ^ 6 * (‖s - 3‖ ^ 6 * ‖mellin g s‖) := by ring
+    _ ≤ 2 ^ 6 * D := by gcongr
+
+/-- Sixth-order vertical decay on the left-shifted DFI Mellin strip. -/
+theorem DFIVoronoiTestFunction.exists_mellin_decay_deep_strip
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : ℝ),
+      -(3 / 2 : ℝ) ≤ σ → σ ≤ 1 / 2 → ∀ u : ℝ, 1 ≤ |u| →
+      (1 + |u|) ^ 6 *
+        ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤ C := by
+  obtain ⟨D, hD, hStrip⟩ := hg.exists_mellin_six_deep_strip_bound
+  refine ⟨2 ^ 6 * D, by positivity, ?_⟩
+  intro σ hσLower hσUpper u hu
+  let s : ℂ := (σ : ℂ) + (u : ℂ) * I
+  have hIm : |u| ≤ ‖s - 2‖ := by
+    have := Complex.abs_im_le_norm (s - 2)
+    simpa [s] using this
+  have hLinear : 1 + |u| ≤ 2 * ‖s - 2‖ := by
+    nlinarith
+  have hPow : (1 + |u|) ^ 6 ≤ 2 ^ 6 * ‖s - 2‖ ^ 6 := by
+    simpa [mul_pow] using
+      pow_le_pow_left₀ (by positivity : 0 ≤ 1 + |u|) hLinear 6
+  have hStrip' := hStrip σ hσLower hσUpper u
+  rw [norm_mul, norm_pow] at hStrip'
+  calc
+    (1 + |u|) ^ 6 * ‖mellin g s‖ ≤
+        (2 ^ 6 * ‖s - 2‖ ^ 6) * ‖mellin g s‖ :=
+      mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
+    _ = 2 ^ 6 * (‖s - 2‖ ^ 6 * ‖mellin g s‖) := by ring
     _ ≤ 2 ^ 6 * D := by gcongr
 
 theorem DFIVoronoiTestFunction.exists_periodicEstermann_mul_mellin_strip_decay

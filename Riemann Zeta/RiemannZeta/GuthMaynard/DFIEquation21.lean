@@ -573,4 +573,88 @@ theorem dfiEquation21
         rw [mul_pow, mul_pow, pow_add, pow_add]
         ring
 
+/-- Uniform-in-the-shift form of DFI equation (21).  The source derivative
+constants and cutoff constants are chosen before the shift `h`; consequently
+the displayed constant cannot depend on the additive-divisor shift. -/
+theorem dfiEquation21_uniform_in_shift
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U : ℝ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hscale : U ≤ P⁻¹ * min X Y) (i j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (h x y : ℝ),
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        C * (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j ∧
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        C * U⁻¹ ^ (i + j) := by
+  obtain ⟨Cf, hCf, hfb⟩ := hf.exists_uniform_localized_derivative_bound hbox i j
+  obtain ⟨Cφ, hCφ, hφb⟩ := hφ.exists_uniform_derivative_bound (i + j)
+  let C := Cf * Cφ * 2 ^ (i + j)
+  have hC : 0 < C := by
+    dsimp [C]
+    positivity
+  have hP : 0 < P := zero_lt_one.trans_le hf.one_le_P
+  have hX : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hUX : U * P ≤ X := by
+    calc
+      U * P ≤ (P⁻¹ * min X Y) * P :=
+        mul_le_mul_of_nonneg_right hscale hP.le
+      _ = min X Y := by field_simp [hP.ne']
+      _ ≤ X := min_le_left _ _
+  have hUY : U * P ≤ Y := by
+    calc
+      U * P ≤ (P⁻¹ * min X Y) * P :=
+        mul_le_mul_of_nonneg_right hscale hP.le
+      _ = min X Y := by field_simp [hP.ne']
+      _ ≤ Y := min_le_right _ _
+  have hPX : P / X ≤ U⁻¹ := by
+    rw [div_le_iff₀ hX, ← div_eq_inv_mul, le_div_iff₀ hφ.U_pos]
+    nlinarith [hUX]
+  have hPY : P / Y ≤ U⁻¹ := by
+    rw [div_le_iff₀ hY, ← div_eq_inv_mul, le_div_iff₀ hφ.U_pos]
+    nlinarith [hUY]
+  have hUinv : 0 ≤ U⁻¹ := inv_nonneg.mpr hφ.U_pos.le
+  have hfactorX : 0 ≤ U⁻¹ + P / X :=
+    add_nonneg hUinv (div_nonneg hP.le hX.le)
+  have hfactorY : 0 ≤ U⁻¹ + P / Y :=
+    add_nonneg hUinv (div_nonneg hP.le hY.le)
+  have htwoX : U⁻¹ + P / X ≤ 2 * U⁻¹ := by linarith
+  have htwoY : U⁻¹ + P / Y ≤ 2 * U⁻¹ := by linarith
+  have htwoNonneg : 0 ≤ 2 * U⁻¹ := mul_nonneg (by norm_num) hUinv
+  refine ⟨C, hC, ?_⟩
+  intro h x y
+  have hbase := norm_dfiMixedDeriv_localized_le hf.smooth hφ.smooth
+    (zero_le_one.trans hf.one_le_P) hX hY hCf.le i j hfb hφb h x y
+  have hbase' :
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        Cf * Cφ * (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j := by
+    simpa [add_comm] using hbase
+  constructor
+  · exact hbase'.trans (by
+      dsimp [C]
+      have hone : (1 : ℝ) ≤ 2 ^ (i + j) := one_le_pow₀ (by norm_num)
+      have hK : 0 ≤ Cf * Cφ := mul_nonneg hCf.le hCφ.le
+      have hKC : Cf * Cφ ≤ Cf * Cφ * 2 ^ (i + j) :=
+        le_mul_of_one_le_right hK hone
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right hKC (pow_nonneg hfactorX _))
+        (pow_nonneg hfactorY _))
+  · calc
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+          Cf * Cφ * (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j := hbase'
+      _ ≤ Cf * Cφ * (2 * U⁻¹) ^ i * (2 * U⁻¹) ^ j := by
+        have hK : 0 ≤ Cf * Cφ := mul_nonneg hCf.le hCφ.le
+        have hpowX : (U⁻¹ + P / X) ^ i ≤ (2 * U⁻¹) ^ i :=
+          pow_le_pow_left₀ hfactorX htwoX i
+        have hpowY : (U⁻¹ + P / Y) ^ j ≤ (2 * U⁻¹) ^ j :=
+          pow_le_pow_left₀ hfactorY htwoY j
+        exact mul_le_mul
+          (mul_le_mul_of_nonneg_left hpowX hK) hpowY
+          (pow_nonneg hfactorY _)
+          (mul_nonneg hK (pow_nonneg htwoNonneg _))
+      _ = C * U⁻¹ ^ (i + j) := by
+        dsimp [C]
+        rw [mul_pow, mul_pow, pow_add, pow_add]
+        ring
+
 end RiemannZeta.GuthMaynard

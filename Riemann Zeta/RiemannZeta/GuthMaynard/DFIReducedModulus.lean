@@ -89,6 +89,167 @@ theorem stdAddChar_neg_mul_eq_reduced (a q d n : ℕ) [NeZero q] :
   rw [AddChar.map_neg_eq_inv, AddChar.map_neg_eq_inv,
     stdAddChar_mul_eq_reduced]
 
+/-- If `q = g * q'`, multiplying a representative modulo `q'` by `g`
+lifts its standard additive character exactly to modulus `q`.  This is the
+cross-modulus identity needed to put the reduced inverse frequencies in DFI
+equation (23) back into one modulus in equation (24). -/
+theorem stdAddChar_gcd_mul_val_lift
+    (q g q' : ℕ) [NeZero q] [NeZero q'] (hq : g * q' = q)
+    (z : ZMod q') :
+    ZMod.stdAddChar (((g * z.val : ℕ) : ZMod q)) = ZMod.stdAddChar z := by
+  have hqC : (q : ℂ) = (g : ℂ) * (q' : ℂ) := by
+    exact_mod_cast hq.symm
+  have hq'ne : (q' : ℂ) ≠ 0 := by
+    exact_mod_cast NeZero.ne q'
+  have hgneNat : g ≠ 0 := by
+    intro hg
+    rw [hg, zero_mul] at hq
+    exact NeZero.ne q hq.symm
+  have hgne : (g : ℂ) ≠ 0 := by exact_mod_cast hgneNat
+  calc
+    ZMod.stdAddChar (((g * z.val : ℕ) : ZMod q)) =
+        Complex.exp
+          (2 * (Real.pi : ℂ) * Complex.I * ((g * z.val : ℕ) : ℂ) / q) := by
+      simpa only [Int.cast_natCast] using
+        ZMod.stdAddChar_coe (N := q) ((g * z.val : ℕ) : ℤ)
+    _ = Complex.exp
+          (2 * (Real.pi : ℂ) * Complex.I * (z.val : ℂ) / q') := by
+      apply congrArg Complex.exp
+      rw [hqC]
+      push_cast
+      field_simp
+    _ = ZMod.stdAddChar ((z.val : ℕ) : ZMod q') := by
+      simpa only [Int.cast_natCast] using
+        (ZMod.stdAddChar_coe (N := q') (z.val : ℤ)).symm
+    _ = ZMod.stdAddChar z := by rw [ZMod.natCast_zmod_val]
+
+/-- Natural-frequency form of the same character lift.  Unlike the
+representative form above, this version can be applied before reducing a
+product modulo `q'`, which is exactly what the inverse-frequency terms of
+equation (24) require. -/
+theorem stdAddChar_gcd_mul_nat_lift
+    (q g q' x : ℕ) [NeZero q] [NeZero q'] (hq : g * q' = q) :
+    ZMod.stdAddChar (((g * x : ℕ) : ZMod q)) =
+      ZMod.stdAddChar ((x : ℕ) : ZMod q') := by
+  have hqC : (q : ℂ) = (g : ℂ) * (q' : ℂ) := by
+    exact_mod_cast hq.symm
+  have hgneNat : g ≠ 0 := by
+    intro hg
+    rw [hg, zero_mul] at hq
+    exact NeZero.ne q hq.symm
+  have hgne : (g : ℂ) ≠ 0 := by exact_mod_cast hgneNat
+  have hq'ne : (q' : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne q'
+  calc
+    ZMod.stdAddChar (((g * x : ℕ) : ZMod q)) =
+        Complex.exp (2 * (Real.pi : ℂ) * Complex.I * ((g * x : ℕ) : ℂ) / q) := by
+      simpa only [Int.cast_natCast] using
+        ZMod.stdAddChar_coe (N := q) ((g * x : ℕ) : ℤ)
+    _ = Complex.exp (2 * (Real.pi : ℂ) * Complex.I * (x : ℂ) / q') := by
+      apply congrArg Complex.exp
+      rw [hqC]
+      push_cast
+      field_simp
+    _ = ZMod.stdAddChar ((x : ℕ) : ZMod q') := by
+      simpa only [Int.cast_natCast] using
+        (ZMod.stdAddChar_coe (N := q') (x : ℤ)).symm
+
+/-- Modular inversion commutes with passage from modulus `q` to a divisor
+`q'` when the residue is a unit modulo `q`.  The left side is written using
+the canonical natural representative because that is what the character
+lift in `stdAddChar_gcd_mul_val_lift` consumes. -/
+theorem zmod_inv_val_cast_of_dvd
+    (q q' d : ℕ) [NeZero q] [NeZero q'] (hq' : q' ∣ q)
+    (hd : d.Coprime q) :
+    ((((d : ZMod q)⁻¹).val : ℕ) : ZMod q') = (d : ZMod q')⁻¹ := by
+  have hdUnit : IsUnit (d : ZMod q) := (ZMod.isUnit_iff_coprime d q).2 hd
+  have hmul : (d : ZMod q)⁻¹ * (d : ZMod q) = 1 :=
+    ZMod.inv_mul_of_unit _ hdUnit
+  have hcast := congrArg (ZMod.castHom hq' (ZMod q')) hmul
+  have hcastMul :
+      ((((d : ZMod q)⁻¹).val : ℕ) : ZMod q') * (d : ZMod q') = 1 := by
+    simpa only [map_mul, map_one, map_natCast, ZMod.castHom_apply,
+      ZMod.cast_eq_val] using hcast
+  exact (ZMod.inv_eq_of_mul_eq_one q' (d : ZMod q')
+    ((((d : ZMod q)⁻¹).val : ℕ) : ZMod q') (by simpa [mul_comm] using hcastMul)).symm
+
+/-- In a `ZMod` ring the inverse of a product of units is the product of
+their inverses.  `ZMod` is totalized rather than a division ring, so the
+unit hypotheses are essential and kept explicit. -/
+theorem zmod_mul_inv_of_isUnit
+    (q : ℕ) (x y : ZMod q) (hx : IsUnit x) (hy : IsUnit y) :
+    (x * y)⁻¹ = x⁻¹ * y⁻¹ := by
+  apply ZMod.inv_eq_of_mul_eq_one q
+  calc
+    (x * y) * (x⁻¹ * y⁻¹) = (x * x⁻¹) * (y * y⁻¹) := by ring
+    _ = 1 := by rw [ZMod.mul_inv_of_unit x hx, ZMod.mul_inv_of_unit y hy, one_mul]
+
+/-- The fixed modulus-`q` frequency corresponding to the inverse additive
+phase at the reduced denominator of `a/q`. -/
+noncomputable def dfiLiftedInverseFrequency
+    (a q n : ℕ) [NeZero q] : ZMod q :=
+  let R := dfiReducedModulus a q
+  ((R.gcd * ((R.numerator : ZMod R.denominator)⁻¹ *
+    (n : ZMod R.denominator)).val : ℕ) : ZMod q)
+
+/-- Exact inverse-phase lift used in DFI equation (24).  After reducing
+`a/q`, the phase `(a' d)⁻¹ n / q'` equals a fixed lifted frequency times
+`d⁻¹ / q` at the original modulus. -/
+theorem stdAddChar_reduced_inverse_eq_lifted
+    (a q d n : ℕ) [NeZero q] (hd : d.Coprime q) :
+    ZMod.stdAddChar
+        (((((dfiReducedModulus a q).numerator * d : ℕ) :
+          ZMod (dfiReducedModulus a q).denominator)⁻¹) *
+          (n : ZMod (dfiReducedModulus a q).denominator)) =
+      ZMod.stdAddChar
+        (dfiLiftedInverseFrequency a q n * (d : ZMod q)⁻¹) := by
+  let R := dfiReducedModulus a q
+  have hdenDvd : R.denominator ∣ q := by
+    exact ⟨R.gcd, by rw [mul_comm, R.denominator_reconstruct]⟩
+  have hnumUnit : IsUnit (R.numerator : ZMod R.denominator) :=
+    dfiReducedModulus_numerator_isUnit a q
+  have hdUnitQ : IsUnit (d : ZMod q) := (ZMod.isUnit_iff_coprime d q).2 hd
+  have hdUnitR : IsUnit (d : ZMod R.denominator) := by
+    rw [ZMod.isUnit_iff_coprime]
+    exact hd.of_dvd_right hdenDvd
+  have hInvCast := zmod_inv_val_cast_of_dvd q R.denominator d hdenDvd hd
+  have hLift := stdAddChar_gcd_mul_nat_lift q R.gcd R.denominator
+    (((R.numerator : ZMod R.denominator)⁻¹ *
+      (n : ZMod R.denominator)).val * ((d : ZMod q)⁻¹).val)
+    R.denominator_reconstruct
+  rw [dfiLiftedInverseFrequency]
+  change ZMod.stdAddChar ((((R.numerator * d : ℕ) : ZMod R.denominator)⁻¹) *
+      (n : ZMod R.denominator)) = _
+  rw [show dfiReducedModulus a q = R from rfl]
+  rw [Nat.cast_mul]
+  rw [zmod_mul_inv_of_isUnit R.denominator
+    (R.numerator : ZMod R.denominator) (d : ZMod R.denominator)
+    hnumUnit hdUnitR]
+  rw [← hInvCast]
+  calc
+    ZMod.stdAddChar
+        ((R.numerator : ZMod R.denominator)⁻¹ *
+          ((((d : ZMod q)⁻¹).val : ℕ) : ZMod R.denominator) *
+          (n : ZMod R.denominator)) =
+        ZMod.stdAddChar
+          (((((R.numerator : ZMod R.denominator)⁻¹ *
+            (n : ZMod R.denominator)).val * ((d : ZMod q)⁻¹).val : ℕ) :
+              ZMod R.denominator)) := by
+      congr 1
+      rw [Nat.cast_mul, ZMod.natCast_zmod_val]
+      ring
+    _ = ZMod.stdAddChar
+          (((R.gcd * (((R.numerator : ZMod R.denominator)⁻¹ *
+            (n : ZMod R.denominator)).val * ((d : ZMod q)⁻¹).val) : ℕ) :
+              ZMod q)) := hLift.symm
+    _ = ZMod.stdAddChar
+          (((R.gcd * ((R.numerator : ZMod R.denominator)⁻¹ *
+            (n : ZMod R.denominator)).val : ℕ) : ZMod q) *
+              (d : ZMod q)⁻¹) := by
+      congr 1
+      rw [Nat.cast_mul, Nat.cast_mul, ZMod.natCast_zmod_val]
+      push_cast
+      ring
+
 theorem dfiReducedModulus_frequency_isUnit
     (a q d : ℕ) [NeZero q] (hd : d.Coprime q) :
     IsUnit ((((dfiReducedModulus a q).numerator * d : ℕ) :
@@ -180,6 +341,56 @@ noncomputable def dfiEquation23ReducedGroupedRight
       dfiVoronoiBranchValue qₓ dₓ bx
         (fun x => dfiVoronoiRemainderValue qᵧ dᵧ (E x))
 
+/-- The literal nine-branch expansion with independently reduced moduli. -/
+noncomputable def dfiEquation23ReducedRight
+    (qₓ qᵧ : ℕ) [NeZero qₓ] [NeZero qᵧ]
+    (dₓ : ZMod qₓ) (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) : ℂ :=
+  ∑ byBranch : DFIVoronoiBranch, ∑ bxBranch : DFIVoronoiBranch,
+    dfiVoronoiBranchValue qₓ dₓ bxBranch
+      (fun x => dfiVoronoiBranchValue qᵧ dᵧ byBranch (E x))
+
+structure DFIEquation23ReducedFullAdmissible
+    (qᵧ : ℕ) [NeZero qᵧ] (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) where
+  ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
+  xAfterYBranch : ∀ branch : DFIVoronoiBranch,
+    DFIVoronoiTestFunction
+      (fun x => dfiVoronoiBranchValue qᵧ dᵧ branch (E x))
+
+theorem dfiEquation23_reduced_of_fullAdmissible
+    (qₓ qᵧ : ℕ) [NeZero qₓ] [NeZero qᵧ]
+    (dₓ : ZMod qₓ) (dᵧ : ZMod qᵧ)
+    (hdₓ : IsUnit dₓ) (hdᵧ : IsUnit dᵧ)
+    (E : ℝ → ℝ → ℂ)
+    (hE : DFIEquation23ReducedFullAdmissible qᵧ dᵧ E) :
+    dfiEquation23ReducedLeft qₓ qᵧ dₓ dᵧ E =
+      dfiEquation23ReducedRight qₓ qᵧ dₓ dᵧ E := by
+  unfold dfiEquation23ReducedLeft dfiEquation23ReducedRight
+  have hinner : ∀ x : ℝ,
+      periodicDivisorWeightedSum qᵧ (dfiVoronoiCharacter qᵧ dᵧ) (E x) =
+        ∑ branch : DFIVoronoiBranch,
+          dfiVoronoiBranchValue qᵧ dᵧ branch (E x) := fun x =>
+    (hE.ySlice x).dfiProposition1_native_branch_sum qᵧ dᵧ hdᵧ
+  simp_rw [hinner]
+  have hsummable : ∀ branch : DFIVoronoiBranch,
+      Summable (fun n : ℕ =>
+        periodicDivisorCoeff qₓ (dfiVoronoiCharacter qₓ dₓ) n *
+          dfiVoronoiBranchValue qᵧ dᵧ branch (E n)) := fun branch =>
+    (hE.xAfterYBranch branch).summable_periodicDivisorWeighted qₓ
+      (dfiVoronoiCharacter qₓ dₓ)
+  unfold periodicDivisorWeightedSum
+  simp_rw [Finset.mul_sum]
+  change (∑' n : ℕ, ∑ branch : DFIVoronoiBranch,
+      periodicDivisorCoeff qₓ (dfiVoronoiCharacter qₓ dₓ) n *
+        dfiVoronoiBranchValue qᵧ dᵧ branch (E n)) = _
+  rw [Summable.tsum_finsetSum (s := Finset.univ)
+    (fun branch _ => hsummable branch)]
+  apply Finset.sum_congr rfl
+  intro branch _hbranch
+  change periodicDivisorWeightedSum qₓ (dfiVoronoiCharacter qₓ dₓ)
+      (fun x => dfiVoronoiBranchValue qᵧ dᵧ branch (E x)) = _
+  exact DFIVoronoiTestFunction.dfiProposition1_native_branch_sum
+    (hE.xAfterYBranch branch) qₓ dₓ hdₓ
+
 structure DFIEquation23ReducedAdmissible
     (qᵧ : ℕ) [NeZero qᵧ] (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) where
   ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
@@ -233,6 +444,49 @@ noncomputable def dfiEquation23Weight_reducedAdmissible
   xRemainder := dfiEquation23Weight_remainderBranch
     w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ hdᵧ
 
+noncomputable def dfiEquation23Weight_reducedFullAdmissible
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (h : ℤ)
+    (q₀ : ℕ) (hq₀ : 0 < q₀)
+    (qᵧ : ℕ) [NeZero qᵧ] (dᵧ : ZMod qᵧ) :
+    DFIEquation23ReducedFullAdmissible qᵧ dᵧ
+      (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q₀) where
+  ySlice := dfiEquation23Weight_ySlice w hf hbox hφ a b hb h q₀ hq₀
+  xAfterYBranch := by
+    intro branch
+    cases branch with
+    | mainTerm =>
+        exact dfiEquation23Weight_mainBranch
+          w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ
+    | minusTerm =>
+        exact dfiEquation23Weight_dualBranch
+          w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ .minusTerm
+    | plusTerm =>
+        exact dfiEquation23Weight_dualBranch
+          w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ .plusTerm
+
+theorem dfiEquation23Weight_reduced_ungrouped
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (h : ℤ)
+    (q₀ : ℕ) (hq₀ : 0 < q₀)
+    (qₓ qᵧ : ℕ) [NeZero qₓ] [NeZero qᵧ]
+    (dₓ : ZMod qₓ) (dᵧ : ZMod qᵧ)
+    (hdₓ : IsUnit dₓ) (hdᵧ : IsUnit dᵧ) :
+    dfiEquation23ReducedLeft qₓ qᵧ dₓ dᵧ
+      (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q₀) =
+    dfiEquation23ReducedRight qₓ qᵧ dₓ dᵧ
+      (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q₀) := by
+  exact dfiEquation23_reduced_of_fullAdmissible
+    qₓ qᵧ dₓ dᵧ hdₓ hdᵧ _
+    (dfiEquation23Weight_reducedFullAdmissible
+      w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ)
+
 theorem dfiEquation23Weight_reduced_grouped
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -273,6 +527,36 @@ theorem dfiEquation23Weight_source_grouped
         (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q) := by
   rw [dfiEquation23SourceLeft_eq_reduced]
   exact dfiEquation23Weight_reduced_grouped
+    w hf hbox hφ a b ha hb h q hq
+    (dfiReducedModulus a q).denominator
+    (dfiReducedModulus b q).denominator
+    ((((dfiReducedModulus a q).numerator * d : ℕ) :
+      ZMod (dfiReducedModulus a q).denominator))
+    (-((((dfiReducedModulus b q).numerator * d : ℕ) :
+      ZMod (dfiReducedModulus b q).denominator)))
+    (dfiReducedModulus_frequency_isUnit a q d hd)
+    (dfiReducedModulus_neg_frequency_isUnit b q d hd)
+
+/-- Source-entry equation (23) in the literal ungrouped nine-branch form. -/
+theorem dfiEquation23Weight_source_ungrouped
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (h : ℤ)
+    (q : ℕ) [NeZero q] (hq : 0 < q) (d : ℕ) (hd : d.Coprime q) :
+    dfiEquation23SourceLeft q a b d
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q) =
+      dfiEquation23ReducedRight
+        (dfiReducedModulus a q).denominator
+        (dfiReducedModulus b q).denominator
+        ((((dfiReducedModulus a q).numerator * d : ℕ) :
+          ZMod (dfiReducedModulus a q).denominator))
+        (-((((dfiReducedModulus b q).numerator * d : ℕ) :
+          ZMod (dfiReducedModulus b q).denominator)))
+        (dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q) := by
+  rw [dfiEquation23SourceLeft_eq_reduced]
+  exact dfiEquation23Weight_reduced_ungrouped
     w hf hbox hφ a b ha hb h q hq
     (dfiReducedModulus a q).denominator
     (dfiReducedModulus b q).denominator

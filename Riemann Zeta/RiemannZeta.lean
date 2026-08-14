@@ -79,7 +79,11 @@ import RiemannZeta.GuthMaynard.KloostermanPolynomialL
 import RiemannZeta.GuthMaynard.KloostermanEulerProduct
 import RiemannZeta.GuthMaynard.KloostermanFactorization
 import RiemannZeta.GuthMaynard.KloostermanLocalEuler
+import RiemannZeta.GuthMaynard.KloostermanEquationTen
+import RiemannZeta.GuthMaynard.KloostermanPrimePower
+import RiemannZeta.GuthMaynard.KloostermanComposite
 import RiemannZeta.GuthMaynard.DFIEquation26
+import RiemannZeta.GuthMaynard.DFIEquation28
 import RiemannZeta.GuthMaynard.Estermann
 import RiemannZeta.GuthMaynard.DivisorVoronoi
 import RiemannZeta.GuthMaynard.ClassicalLargeValues

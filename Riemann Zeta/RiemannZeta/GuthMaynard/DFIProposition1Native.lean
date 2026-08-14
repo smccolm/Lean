@@ -15,8 +15,211 @@ noncomputable def dfiArchimedeanScale (q : ℕ) [NeZero q] : ℝ :=
   ‖(q : ℂ) ^ (1 / 2 : ℂ)‖ *
     ‖(2 * Real.pi : ℂ) ^ (-(3 / 2 : ℂ))‖
 
+/-- The non-Gamma scaling factor on a general reflected vertical line. -/
+noncomputable def dfiArchimedeanScaleAt (q : ℕ) [NeZero q] (a : ℝ) : ℝ :=
+  ‖(q : ℂ) ^ ((a : ℂ) - 1)‖ * ‖(2 * Real.pi : ℂ) ^ (-(a : ℂ))‖
+
 theorem dfiArchimedeanScale_nonneg (q : ℕ) [NeZero q] :
     0 ≤ dfiArchimedeanScale q := mul_nonneg (norm_nonneg _) (norm_nonneg _)
+
+theorem dfiArchimedeanScaleAt_nonneg (q : ℕ) [NeZero q] (a : ℝ) :
+    0 ≤ dfiArchimedeanScaleAt q a :=
+  mul_nonneg (norm_nonneg _) (norm_nonneg _)
+
+theorem exists_dfiArchimedeanScaleAt_shifted_bound
+    (q k : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
+      3 / 2 ≤ a → a ≤ 3 / 2 + k → dfiArchimedeanScaleAt q a ≤ C := by
+  let K : Set ℝ := Set.Icc (3 / 2 : ℝ) (3 / 2 + k)
+  have hK : IsCompact K := isCompact_Icc
+  have hKne : K.Nonempty := Set.nonempty_Icc.mpr
+    (le_add_of_nonneg_right (Nat.cast_nonneg k))
+  have hq : (q : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne q)
+  have hpi : (2 * Real.pi : ℂ) ≠ 0 :=
+    mul_ne_zero (by norm_num) (Complex.ofReal_ne_zero.mpr Real.pi_ne_zero)
+  have hcont : Continuous fun a : ℝ => dfiArchimedeanScaleAt q a := by
+    unfold dfiArchimedeanScaleAt
+    have hqpow : Continuous fun a : ℝ =>
+        (q : ℂ) ^ ((a : ℂ) - 1) :=
+      (Complex.continuous_ofReal.sub continuous_const).const_cpow (Or.inl hq)
+    have hpipow : Continuous fun a : ℝ =>
+        (2 * Real.pi : ℂ) ^ (-(a : ℂ)) :=
+      Complex.continuous_ofReal.neg.const_cpow (Or.inl hpi)
+    exact hqpow.norm.mul hpipow.norm
+  obtain ⟨a₀, ha₀, hmax⟩ := hK.exists_isMaxOn hKne hcont.continuousOn
+  refine ⟨dfiArchimedeanScaleAt q a₀ + 1, by
+    have := dfiArchimedeanScaleAt_nonneg q a₀
+    linarith, ?_⟩
+  intro a haLower haUpper
+  have hle := hmax (show a ∈ K from ⟨haLower, haUpper⟩)
+  change dfiArchimedeanScaleAt q a ≤ dfiArchimedeanScaleAt q a₀ at hle
+  linarith
+
+/-- Uniform control of the non-Gamma factors on the reflected compact strip
+corresponding to `-1/2 ≤ Re z ≤ 1/2`.  This is the compact part of the
+rightward contour displacement used for the retained frequencies in DFI
+equation (29). -/
+theorem exists_dfiArchimedeanScaleAt_half_strip_bound
+    (q : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
+      1 / 2 ≤ a → a ≤ 3 / 2 → dfiArchimedeanScaleAt q a ≤ C := by
+  let K : Set ℝ := Set.Icc (1 / 2 : ℝ) (3 / 2)
+  have hK : IsCompact K := isCompact_Icc
+  have hKne : K.Nonempty := Set.nonempty_Icc.mpr (by norm_num)
+  have hq : (q : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne q)
+  have hpi : (2 * Real.pi : ℂ) ≠ 0 :=
+    mul_ne_zero (by norm_num) (Complex.ofReal_ne_zero.mpr Real.pi_ne_zero)
+  have hcont : Continuous fun a : ℝ => dfiArchimedeanScaleAt q a := by
+    unfold dfiArchimedeanScaleAt
+    have hqpow : Continuous fun a : ℝ =>
+        (q : ℂ) ^ ((a : ℂ) - 1) :=
+      (Complex.continuous_ofReal.sub continuous_const).const_cpow (Or.inl hq)
+    have hpipow : Continuous fun a : ℝ =>
+        (2 * Real.pi : ℂ) ^ (-(a : ℂ)) :=
+      Complex.continuous_ofReal.neg.const_cpow (Or.inl hpi)
+    exact hqpow.norm.mul hpipow.norm
+  obtain ⟨a₀, ha₀, hmax⟩ := hK.exists_isMaxOn hKne hcont.continuousOn
+  refine ⟨dfiArchimedeanScaleAt q a₀ + 1, by
+    have := dfiArchimedeanScaleAt_nonneg q a₀
+    linarith, ?_⟩
+  intro a haLower haUpper
+  have hle := hmax (show a ∈ K from ⟨haLower, haUpper⟩)
+  change dfiArchimedeanScaleAt q a ≤ dfiArchimedeanScaleAt q a₀ at hle
+  linarith
+
+theorem norm_dfiPeriodicArchimedeanFactor_mul_exp_at
+    (q : ℕ) [NeZero q] (a u sign : ℝ) :
+    ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+        cexp ((sign : ℂ) * Real.pi * I *
+          ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+      dfiArchimedeanScaleAt q a *
+        ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+          cexp ((sign : ℂ) * Real.pi * I *
+            ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by
+  let r : ℂ := (a : ℂ) - (u : ℂ) * I
+  unfold dfiPeriodicArchimedeanFactor dfiArchimedeanScaleAt
+  repeat' rw [norm_mul]
+  have hqnorm : ‖(q : ℂ) ^ (r - 1)‖ =
+      ‖(q : ℂ) ^ ((a : ℂ) - 1)‖ := by
+    rw [Complex.norm_natCast_cpow_of_pos (NeZero.pos q),
+      Complex.norm_natCast_cpow_of_pos (NeZero.pos q)]
+    simp [r]
+  have hpinorm : ‖(2 * Real.pi : ℂ) ^ (-r)‖ =
+      ‖(2 * Real.pi : ℂ) ^ (-(a : ℂ))‖ := by
+    have hbase : (2 * Real.pi : ℂ) = ((2 * Real.pi : ℝ) : ℂ) := by norm_num
+    rw [hbase]
+    rw [Complex.norm_cpow_eq_rpow_re_of_pos
+        (by positivity : (0 : ℝ) < 2 * Real.pi),
+      Complex.norm_cpow_eq_rpow_re_of_pos
+        (by positivity : (0 : ℝ) < 2 * Real.pi)]
+    simp [r]
+  change ‖(q : ℂ) ^ (r - 1)‖ * ‖(2 * Real.pi : ℂ) ^ (-r)‖ *
+      ‖Gamma r‖ * ‖cexp ((sign : ℂ) * Real.pi * I * r / 2)‖ = _
+  rw [hqnorm, hpinorm]
+  dsimp [r]
+  ring
+
+theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_shifted_strip_bound
+    (q k : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
+      3 / 2 ≤ a → a ≤ 3 / 2 + k → ∀ u : ℝ,
+      ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+          cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) ^ (k + 1) ∧
+      ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+          cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) ^ (k + 1) := by
+  obtain ⟨S, hS, hScale⟩ := exists_dfiArchimedeanScaleAt_shifted_bound q k
+  obtain ⟨G, hG, hGamma⟩ :=
+    exists_norm_Gamma_mul_voronoiExp_shifted_strip_bound k
+  refine ⟨S * G, mul_pos hS hG, ?_⟩
+  intro a haLower haUpper u
+  have hScale' := hScale a haLower haUpper
+  have hGamma' := hGamma a haLower haUpper u
+  constructor
+  · have hnorm :
+        ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+            cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          dfiArchimedeanScaleAt q a *
+            ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+              cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      simpa using norm_dfiPeriodicArchimedeanFactor_mul_exp_at q a u 1
+    rw [hnorm]
+    calc
+      dfiArchimedeanScaleAt q a *
+          ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+            cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          S * (G * (1 + |u|) ^ (k + 1)) :=
+        mul_le_mul hScale' hGamma'.1 (norm_nonneg _)
+          (le_of_lt hS)
+      _ = (S * G) * (1 + |u|) ^ (k + 1) := by ring
+
+  · have hnorm :
+        ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+            cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          dfiArchimedeanScaleAt q a *
+            ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+              cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      simpa using norm_dfiPeriodicArchimedeanFactor_mul_exp_at q a u (-1)
+    rw [hnorm]
+    calc
+      dfiArchimedeanScaleAt q a *
+          ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+            cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          S * (G * (1 + |u|) ^ (k + 1)) :=
+        mul_le_mul hScale' hGamma'.2 (norm_nonneg _)
+          (le_of_lt hS)
+      _ = (S * G) * (1 + |u|) ^ (k + 1) := by ring
+
+/-- Uniform control of both exponential Gamma combinations on the full
+reflected strip `1/2 ≤ Re s ≤ 3/2`. -/
+theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_half_strip_bound
+    (q : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
+      1 / 2 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+          cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) ∧
+      ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+          cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          C * (1 + |u|) := by
+  obtain ⟨S, hS, hScale⟩ := exists_dfiArchimedeanScaleAt_half_strip_bound q
+  obtain ⟨G, hG, hGamma⟩ := exists_norm_Gamma_mul_voronoiExp_strip_bound
+  refine ⟨S * G, mul_pos hS hG, ?_⟩
+  intro a haLower haUpper u
+  have hScale' := hScale a haLower haUpper
+  have hGamma' := hGamma a haLower haUpper u
+  constructor
+  · have hnorm :
+        ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+            cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          dfiArchimedeanScaleAt q a *
+            ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+              cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      simpa using norm_dfiPeriodicArchimedeanFactor_mul_exp_at q a u 1
+    rw [hnorm]
+    calc
+      dfiArchimedeanScaleAt q a *
+          ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+            cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          S * (G * (1 + |u|)) :=
+        mul_le_mul hScale' hGamma'.1 (norm_nonneg _) hS.le
+      _ = (S * G) * (1 + |u|) := by ring
+  · have hnorm :
+        ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
+            cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ =
+          dfiArchimedeanScaleAt q a *
+            ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+              cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ := by
+      simpa using norm_dfiPeriodicArchimedeanFactor_mul_exp_at q a u (-1)
+    rw [hnorm]
+    calc
+      dfiArchimedeanScaleAt q a *
+          ‖Gamma ((a : ℂ) - (u : ℂ) * I) *
+            cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
+          S * (G * (1 + |u|)) :=
+        mul_le_mul hScale' hGamma'.2 (norm_nonneg _) hS.le
+      _ = (S * G) * (1 + |u|) := by ring
 
 theorem norm_dfiPeriodicArchimedeanFactor_mul_exp (q : ℕ) [NeZero q]
     (u sign : ℝ) :
@@ -762,5 +965,212 @@ theorem DFIVoronoiTestFunction.dfiProposition1_native
   rw [hg.reflectedIntegral_voronoiCharacter q d hd]
   simp_rw [periodicDivisorCoeff_voronoiCharacter]
   ring
+
+/-- Uniform polynomial control of both DFI Voronoi multipliers throughout an
+arbitrary left-shift strip.  Together with arbitrary Mellin decay, this is the
+quantitative contour-shift input in DFI equation (29). -/
+theorem exists_norm_dfiVoronoiMultipliers_shifted_strip_bound
+    (q k : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) - k ≤ σ → σ ≤ -(1 / 2 : ℝ) → ∀ u : ℝ,
+      ‖dfiVoronoiMinusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          C * (1 + |u|) ^ (2 * (k + 1)) ∧
+      ‖dfiVoronoiPlusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          C * (1 + |u|) ^ (2 * (k + 1)) := by
+  obtain ⟨B, hB, hFactor⟩ :=
+    exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_shifted_strip_bound q k
+  have hqPos : (0 : ℝ) < q := by exact_mod_cast NeZero.pos q
+  refine ⟨2 * q * B ^ 2, by positivity, ?_⟩
+  intro σ hσLower hσUpper u
+  let a : ℝ := 1 - σ
+  let r : ℂ := (a : ℂ) - (u : ℂ) * I
+  have haLower : (3 / 2 : ℝ) ≤ a := by dsimp [a]; linarith
+  have haUpper : a ≤ (3 / 2 : ℝ) + k := by dsimp [a]; linarith
+  have hr : 1 - ((σ : ℂ) + (u : ℂ) * I) = r := by
+    dsimp [r, a]
+    push_cast
+    ring
+  have hFactors := hFactor a haLower haUpper u
+  let X : ℂ := dfiPeriodicArchimedeanFactor q r *
+    cexp (Real.pi * I * r / 2)
+  let Y : ℂ := dfiPeriodicArchimedeanFactor q r *
+    cexp (-Real.pi * I * r / 2)
+  have hX : ‖X‖ ≤ B * (1 + |u|) ^ (k + 1) := by
+    simpa [X, r] using hFactors.1
+  have hY : ‖Y‖ ≤ B * (1 + |u|) ^ (k + 1) := by
+    simpa [Y, r] using hFactors.2
+  have hBP : 0 ≤ B * (1 + |u|) ^ (k + 1) := by positivity
+  have hq : (0 : ℝ) ≤ q := by positivity
+  have hExpPos :
+      cexp (Real.pi * I * r) =
+        cexp (Real.pi * I * r / 2) * cexp (Real.pi * I * r / 2) := by
+    rw [← Complex.exp_add]
+    congr 1
+    ring
+  have hExpNeg :
+      cexp (-Real.pi * I * r) =
+        cexp (-Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2) := by
+    rw [← Complex.exp_add]
+    congr 1
+    ring
+  have hMinusRewrite :
+      dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+        X ^ 2 + Y ^ 2 := by
+    rw [hExpPos, hExpNeg]
+    dsimp [X, Y]
+    ring
+  have hCancel :
+      cexp (Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2) = 1 := by
+    rw [← Complex.exp_add]
+    ring_nf
+    simp
+  have hPlusRewrite : dfiPeriodicArchimedeanFactor q r ^ 2 = X * Y := by
+    dsimp [X, Y]
+    rw [show
+      (dfiPeriodicArchimedeanFactor q r * cexp (Real.pi * I * r / 2)) *
+          (dfiPeriodicArchimedeanFactor q r * cexp (-Real.pi * I * r / 2)) =
+        dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2)) by ring,
+      hCancel, mul_one]
+  constructor
+  · unfold dfiVoronoiMinusMultiplier
+    rw [hr, show
+      (q : ℂ) * dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+        (q : ℂ) * (X ^ 2 + Y ^ 2) by
+          calc
+            (q : ℂ) * dfiPeriodicArchimedeanFactor q r ^ 2 *
+                (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+              (q : ℂ) * (dfiPeriodicArchimedeanFactor q r ^ 2 *
+                (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r))) := by ring
+            _ = (q : ℂ) * (X ^ 2 + Y ^ 2) := by rw [hMinusRewrite]]
+    rw [norm_mul, Complex.norm_natCast]
+    calc
+      q * ‖X ^ 2 + Y ^ 2‖ ≤ q * (‖X‖ ^ 2 + ‖Y‖ ^ 2) := by
+        gcongr
+        calc
+          ‖X ^ 2 + Y ^ 2‖ ≤ ‖X ^ 2‖ + ‖Y ^ 2‖ := norm_add_le _ _
+          _ = ‖X‖ ^ 2 + ‖Y‖ ^ 2 := by rw [norm_pow, norm_pow]
+      _ ≤ q * ((B * (1 + |u|) ^ (k + 1)) ^ 2 +
+          (B * (1 + |u|) ^ (k + 1)) ^ 2) := by
+        gcongr
+      _ = (2 * q * B ^ 2) * (1 + |u|) ^ (2 * (k + 1)) := by
+        rw [mul_pow, ← pow_mul]
+        ring
+  · unfold dfiVoronoiPlusMultiplier
+    rw [hr, hPlusRewrite]
+    rw [norm_mul, norm_mul, norm_mul, Complex.norm_natCast]
+    norm_num
+    calc
+      2 * q * (‖X‖ * ‖Y‖) ≤
+          2 * q * ((B * (1 + |u|) ^ (k + 1)) *
+            (B * (1 + |u|) ^ (k + 1))) := by
+        gcongr
+      _ = (2 * q * B ^ 2) * (1 + |u|) ^ (2 * (k + 1)) := by
+        rw [show
+          (B * (1 + |u|) ^ (k + 1)) *
+              (B * (1 + |u|) ^ (k + 1)) =
+            B ^ 2 * ((1 + |u|) ^ (k + 1)) ^ 2 by ring,
+          ← pow_mul]
+        ring_nf
+
+/-- Uniform polynomial control of both DFI multipliers on the right-shift
+strip used to retain the source frequencies in equation (29). -/
+theorem exists_norm_dfiVoronoiMultipliers_half_strip_bound
+    (q : ℕ) [NeZero q] :
+    ∃ C : ℝ, 0 < C ∧ ∀ (σ : ℝ),
+      -(1 / 2 : ℝ) ≤ σ → σ ≤ 1 / 2 → ∀ u : ℝ,
+      ‖dfiVoronoiMinusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          C * (1 + |u|) ^ 2 ∧
+      ‖dfiVoronoiPlusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+          C * (1 + |u|) ^ 2 := by
+  obtain ⟨B, hB, hFactor⟩ :=
+    exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_half_strip_bound q
+  have hqPos : (0 : ℝ) < q := by exact_mod_cast NeZero.pos q
+  refine ⟨2 * q * B ^ 2, by positivity, ?_⟩
+  intro σ hσLower hσUpper u
+  let a : ℝ := 1 - σ
+  let r : ℂ := (a : ℂ) - (u : ℂ) * I
+  have haLower : (1 / 2 : ℝ) ≤ a := by dsimp [a]; linarith
+  have haUpper : a ≤ (3 / 2 : ℝ) := by dsimp [a]; linarith
+  have hr : 1 - ((σ : ℂ) + (u : ℂ) * I) = r := by
+    dsimp [r, a]
+    push_cast
+    ring
+  have hFactors := hFactor a haLower haUpper u
+  let X : ℂ := dfiPeriodicArchimedeanFactor q r *
+    cexp (Real.pi * I * r / 2)
+  let Y : ℂ := dfiPeriodicArchimedeanFactor q r *
+    cexp (-Real.pi * I * r / 2)
+  have hX : ‖X‖ ≤ B * (1 + |u|) := by
+    simpa [X, r] using hFactors.1
+  have hY : ‖Y‖ ≤ B * (1 + |u|) := by
+    simpa [Y, r] using hFactors.2
+  have hBP : 0 ≤ B * (1 + |u|) := by positivity
+  have hq : (0 : ℝ) ≤ q := by positivity
+  have hExpPos :
+      cexp (Real.pi * I * r) =
+        cexp (Real.pi * I * r / 2) * cexp (Real.pi * I * r / 2) := by
+    rw [← Complex.exp_add]
+    congr 1
+    ring
+  have hExpNeg :
+      cexp (-Real.pi * I * r) =
+        cexp (-Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2) := by
+    rw [← Complex.exp_add]
+    congr 1
+    ring
+  have hMinusRewrite :
+      dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+        X ^ 2 + Y ^ 2 := by
+    rw [hExpPos, hExpNeg]
+    dsimp [X, Y]
+    ring
+  have hCancel :
+      cexp (Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2) = 1 := by
+    rw [← Complex.exp_add]
+    ring_nf
+    simp
+  have hPlusRewrite : dfiPeriodicArchimedeanFactor q r ^ 2 = X * Y := by
+    dsimp [X, Y]
+    rw [show
+      (dfiPeriodicArchimedeanFactor q r * cexp (Real.pi * I * r / 2)) *
+          (dfiPeriodicArchimedeanFactor q r * cexp (-Real.pi * I * r / 2)) =
+        dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r / 2) * cexp (-Real.pi * I * r / 2)) by ring,
+      hCancel, mul_one]
+  constructor
+  · unfold dfiVoronoiMinusMultiplier
+    rw [hr, show
+      (q : ℂ) * dfiPeriodicArchimedeanFactor q r ^ 2 *
+          (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+        (q : ℂ) * (X ^ 2 + Y ^ 2) by
+          calc
+            (q : ℂ) * dfiPeriodicArchimedeanFactor q r ^ 2 *
+                (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r)) =
+              (q : ℂ) * (dfiPeriodicArchimedeanFactor q r ^ 2 *
+                (cexp (Real.pi * I * r) + cexp (-Real.pi * I * r))) := by ring
+            _ = (q : ℂ) * (X ^ 2 + Y ^ 2) := by rw [hMinusRewrite]]
+    rw [norm_mul, Complex.norm_natCast]
+    calc
+      q * ‖X ^ 2 + Y ^ 2‖ ≤ q * (‖X‖ ^ 2 + ‖Y‖ ^ 2) := by
+        gcongr
+        calc
+          ‖X ^ 2 + Y ^ 2‖ ≤ ‖X ^ 2‖ + ‖Y ^ 2‖ := norm_add_le _ _
+          _ = ‖X‖ ^ 2 + ‖Y‖ ^ 2 := by rw [norm_pow, norm_pow]
+      _ ≤ q * ((B * (1 + |u|)) ^ 2 + (B * (1 + |u|)) ^ 2) := by
+        gcongr
+      _ = (2 * q * B ^ 2) * (1 + |u|) ^ 2 := by ring
+  · unfold dfiVoronoiPlusMultiplier
+    rw [hr, hPlusRewrite]
+    rw [norm_mul, norm_mul, norm_mul, Complex.norm_natCast]
+    norm_num
+    calc
+      2 * q * (‖X‖ * ‖Y‖) ≤
+          2 * q * ((B * (1 + |u|)) * (B * (1 + |u|))) := by
+        gcongr
+      _ = (2 * q * B ^ 2) * (1 + |u|) ^ 2 := by ring
 
 end RiemannZeta.GuthMaynard
