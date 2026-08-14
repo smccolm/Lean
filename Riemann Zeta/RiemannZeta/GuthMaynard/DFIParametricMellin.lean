@@ -351,8 +351,14 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
     exact hu (hSupport (by simpa only [Function.mem_support] using hne))
   have derivativeSupport (j : ℕ) :
       Function.support (iteratedDeriv j f) ⊆ Set.Icc C D := by
-    exact (support_iteratedDeriv_subset_tsupport j).trans
-      (closure_minimal hSupport isClosed_Icc)
+    have hTsupport : tsupport (iteratedDeriv j f) ⊆ tsupport f := by
+      induction j with
+      | zero => simp
+      | succ j ih =>
+          rw [iteratedDeriv_succ]
+          exact tsupport_deriv_subset.trans ih
+    exact (subset_tsupport _).trans <|
+      hTsupport.trans (closure_minimal hSupport isClosed_Icc)
   have integralBound (j : ℕ) (K : ℝ)
       (hBound : ∀ u : ℝ, ‖iteratedDeriv j f u‖ ≤ K) :
       ∫ u : ℝ, ‖iteratedDeriv j f u‖ ≤ (D - C) * K := by
@@ -442,7 +448,23 @@ theorem DFIVoronoiTestFunction.mellin_half_line_bound_of_kernel_bounds
   have hG : ContDiff ℝ ∞ G := hg.contDiff_mellinKernel (1 / 2)
   have hGSupport : Function.support G ⊆
       Set.Icc (-Real.log hg.upper) (-Real.log hg.lower) := by
-    exact support_dfiVoronoiMellinKernel_subset hg (1 / 2)
+    intro v hv
+    have hgNonzero : g (Real.exp (-v)) ≠ 0 := by
+      intro hz
+      exact hv (by simp [G, dfiVoronoiMellinKernel, hz])
+    have hs := hg.support_subset hgNonzero
+    have hUpperPos : 0 < hg.upper := hg.lower_pos.trans_le hg.lower_le_upper
+    constructor
+    · have hlog : -v ≤ Real.log hg.upper := by
+        apply (Real.exp_le_exp).mp
+        rw [Real.exp_log hUpperPos]
+        exact hs.2
+      linarith
+    · have hlog : Real.log hg.lower ≤ -v := by
+        apply (Real.exp_le_exp).mp
+        rw [Real.exp_log hg.lower_pos]
+        exact hs.1
+      linarith
   have hLog : -Real.log hg.upper ≤ -Real.log hg.lower := by
     exact neg_le_neg (Real.log_le_log hg.lower_pos hg.lower_le_upper)
   have hFourier := one_add_abs_fourier_decay_of_support_of_bounds
