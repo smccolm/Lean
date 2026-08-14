@@ -56,14 +56,13 @@ theorem exists_dfiArchimedeanScaleAt_shifted_bound
   linarith
 
 /-- Uniform control of the non-Gamma factors on the reflected compact strip
-corresponding to `-1/2 ≤ Re z ≤ 1/2`.  This is the compact part of the
-rightward contour displacement used for the retained frequencies in DFI
-equation (29). -/
-theorem exists_dfiArchimedeanScaleAt_half_strip_bound
+corresponding to `-1/2 ≤ Re z ≤ 3/4`.  The right endpoint is the source
+line that produces the `q⁻¹/² n⁻¹/⁴` transform scale in DFI (29). -/
+theorem exists_dfiArchimedeanScaleAt_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
-      1 / 2 ≤ a → a ≤ 3 / 2 → dfiArchimedeanScaleAt q a ≤ C := by
-  let K : Set ℝ := Set.Icc (1 / 2 : ℝ) (3 / 2)
+      1 / 4 ≤ a → a ≤ 3 / 2 → dfiArchimedeanScaleAt q a ≤ C := by
+  let K : Set ℝ := Set.Icc (1 / 4 : ℝ) (3 / 2)
   have hK : IsCompact K := isCompact_Icc
   have hKne : K.Nonempty := Set.nonempty_Icc.mpr (by norm_num)
   have hq : (q : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne q)
@@ -172,18 +171,18 @@ theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_shifted_strip_bound
       _ = (S * G) * (1 + |u|) ^ (k + 1) := by ring
 
 /-- Uniform control of both exponential Gamma combinations on the full
-reflected strip `1/2 ≤ Re s ≤ 3/2`. -/
-theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_half_strip_bound
+reflected strip `1/4 ≤ Re s ≤ 3/2`. -/
+theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
-      1 / 2 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      1 / 4 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
       ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
           cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
           C * (1 + |u|) ∧
       ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
           cexp (-Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
           C * (1 + |u|) := by
-  obtain ⟨S, hS, hScale⟩ := exists_dfiArchimedeanScaleAt_half_strip_bound q
+  obtain ⟨S, hS, hScale⟩ := exists_dfiArchimedeanScaleAt_quarter_strip_bound q
   obtain ⟨G, hG, hGamma⟩ := exists_norm_Gamma_mul_voronoiExp_strip_bound
   refine ⟨S * G, mul_pos hS hG, ?_⟩
   intro a haLower haUpper u
@@ -990,7 +989,7 @@ theorem exists_norm_dfiVoronoiMultipliers_shifted_strip_bound
     dsimp [r, a]
     push_cast
     ring
-  have hFactors := hFactor a haLower haUpper u
+  have hFactors := hFactor a (by linarith [haLower]) haUpper u
   let X : ℂ := dfiPeriodicArchimedeanFactor q r *
     cexp (Real.pi * I * r / 2)
   let Y : ℂ := dfiPeriodicArchimedeanFactor q r *
@@ -1075,24 +1074,24 @@ theorem exists_norm_dfiVoronoiMultipliers_shifted_strip_bound
           ← pow_mul]
         ring_nf
 
-/-- Uniform polynomial control of both DFI multipliers on the right-shift
-strip used to retain the source frequencies in equation (29). -/
-theorem exists_norm_dfiVoronoiMultipliers_half_strip_bound
+/-- Uniform polynomial control of both DFI multipliers through the source
+right-shift line `Re z = 3/4` used in equation (29). -/
+theorem exists_norm_dfiVoronoiMultipliers_three_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ (σ : ℝ),
-      -(1 / 2 : ℝ) ≤ σ → σ ≤ 1 / 2 → ∀ u : ℝ,
+      -(1 / 2 : ℝ) ≤ σ → σ ≤ 3 / 4 → ∀ u : ℝ,
       ‖dfiVoronoiMinusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
           C * (1 + |u|) ^ 2 ∧
       ‖dfiVoronoiPlusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
           C * (1 + |u|) ^ 2 := by
   obtain ⟨B, hB, hFactor⟩ :=
-    exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_half_strip_bound q
+    exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_quarter_strip_bound q
   have hqPos : (0 : ℝ) < q := by exact_mod_cast NeZero.pos q
   refine ⟨2 * q * B ^ 2, by positivity, ?_⟩
   intro σ hσLower hσUpper u
   let a : ℝ := 1 - σ
   let r : ℂ := (a : ℂ) - (u : ℂ) * I
-  have haLower : (1 / 2 : ℝ) ≤ a := by dsimp [a]; linarith
+  have haLower : (1 / 4 : ℝ) ≤ a := by dsimp [a]; linarith
   have haUpper : a ≤ (3 / 2 : ℝ) := by dsimp [a]; linarith
   have hr : 1 - ((σ : ℂ) + (u : ℂ) * I) = r := by
     dsimp [r, a]

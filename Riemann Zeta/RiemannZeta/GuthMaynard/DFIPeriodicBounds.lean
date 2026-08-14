@@ -766,12 +766,12 @@ theorem exists_norm_Gamma_mul_voronoiExp_shifted_strip_bound (k : ℕ) :
         rw [mul_pow, pow_succ]
         ring
 
-theorem exists_realGamma_bound_half_three_halves :
+theorem exists_realGamma_bound_quarter_three_halves :
     ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
-      1 / 2 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
-  have hne : (Set.Icc (1 / 2 : ℝ) (3 / 2)).Nonempty :=
+      1 / 4 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
+  have hne : (Set.Icc (1 / 4 : ℝ) (3 / 2)).Nonempty :=
     Set.nonempty_Icc.mpr (by norm_num)
-  have hcont : ContinuousOn Real.Gamma (Set.Icc (1 / 2 : ℝ) (3 / 2)) :=
+  have hcont : ContinuousOn Real.Gamma (Set.Icc (1 / 4 : ℝ) (3 / 2)) :=
     Real.differentiableOn_Gamma_Ioi.continuousOn.mono (by
       intro a ha
       exact lt_of_lt_of_le (by norm_num) ha.1)
@@ -784,14 +784,14 @@ theorem exists_realGamma_bound_half_three_halves :
 
 theorem exists_norm_Gamma_mul_voronoiExp_strip_bound :
     ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
-      1 / 2 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      1 / 4 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
       ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
           Complex.exp (Real.pi * I *
             ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤ C * (1 + |u|) ∧
       ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
           Complex.exp (-Real.pi * I *
             ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤ C * (1 + |u|) := by
-  obtain ⟨B, hB, hBound⟩ := exists_realGamma_bound_half_three_halves
+  obtain ⟨B, hB, hBound⟩ := exists_realGamma_bound_quarter_three_halves
   have hG : 0 < Real.Gamma (3 / 2) :=
     Real.Gamma_pos_of_pos (by norm_num)
   refine ⟨4 * B / Real.Gamma (3 / 2), by positivity, ?_⟩

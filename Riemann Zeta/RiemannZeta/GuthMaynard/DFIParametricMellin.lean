@@ -342,7 +342,7 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
     (hK₀ : 0 ≤ K₀) (hK₆ : 0 ≤ K₆)
     (hBound₀ : ∀ u : ℝ, ‖iteratedDeriv 0 f u‖ ≤ K₀)
     (hBound₆ : ∀ u : ℝ, ‖iteratedDeriv 6 f u‖ ≤ K₆) :
-    ∀ ξ : ℝ, (1 + |ξ|) ^ 6 * ‖𝐽 f ξ‖ ≤
+    ∀ ξ : ℝ, (1 + |ξ|) ^ 6 * ‖𝓕 f ξ‖ ≤
       64 * (D - C) * (K₀ + K₆) := by
   have hCompact : HasCompactSupport f := by
     apply HasCompactSupport.intro isCompact_Icc
@@ -380,7 +380,9 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
     have hSetBound := MeasureTheory.norm_setIntegral_le_of_norm_le_const
       (μ := MeasureTheory.volume) (s := Set.Icc C D) (C := K)
       (f := fun u : ℝ => ‖iteratedDeriv j f u‖)
-      measure_Icc_lt_top fun u _hu => hBound u
+      measure_Icc_lt_top fun u _hu => by
+        rw [Real.norm_of_nonneg (norm_nonneg _)]
+        exact hBound u
     have hMeasure : (MeasureTheory.volume (Set.Icc C D)).toReal = D - C := by
       rw [Real.volume_Icc, ENNReal.toReal_ofReal (sub_nonneg.mpr hCD)]
     rw [hIntegralEq]
@@ -390,11 +392,11 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
         rw [Real.norm_eq_abs, abs_of_nonneg hNonneg]
       _ ≤ K * (MeasureTheory.volume (Set.Icc C D)).toReal := hSetBound
       _ = (D - C) * K := by rw [hMeasure]; ring
-  have hZero (ξ : ℝ) : ‖𝐽 f ξ‖ ≤ (D - C) * K₀ := by
+  have hZero (ξ : ℝ) : ‖𝓕 f ξ‖ ≤ (D - C) * K₀ := by
     have h := abs_pow_mul_norm_fourier_complex_le f hf hCompact 0 ξ
     simpa using h.trans (integralBound 0 K₀ hBound₀)
   have hSix (ξ : ℝ) :
-      |ξ| ^ 6 * ‖𝐽 f ξ‖ ≤ (D - C) * K₆ :=
+      |ξ| ^ 6 * ‖𝓕 f ξ‖ ≤ (D - C) * K₆ :=
     (abs_pow_mul_norm_fourier_complex_le f hf hCompact 6 ξ).trans
       (integralBound 6 K₆ hBound₆)
   intro ξ
@@ -405,7 +407,7 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
       norm_num at hp
       exact hp
     calc
-      (1 + |ξ|) ^ 6 * ‖𝐽 f ξ‖ ≤ 64 * ((D - C) * K₀) :=
+      (1 + |ξ|) ^ 6 * ‖𝓕 f ξ‖ ≤ 64 * ((D - C) * K₀) :=
         mul_le_mul hWeight (hZero ξ) (norm_nonneg _) (by positivity)
       _ ≤ 64 * (D - C) * (K₀ + K₆) := by
         have hLen : 0 ≤ D - C := sub_nonneg.mpr hCD
@@ -418,10 +420,10 @@ theorem one_add_abs_fourier_decay_of_support_of_bounds
       norm_num at hp
       exact hp
     calc
-      (1 + |ξ|) ^ 6 * ‖𝐽 f ξ‖ ≤
-          (64 * |ξ| ^ 6) * ‖𝐽 f ξ‖ :=
+      (1 + |ξ|) ^ 6 * ‖𝓕 f ξ‖ ≤
+          (64 * |ξ| ^ 6) * ‖𝓕 f ξ‖ :=
         mul_le_mul_of_nonneg_right hWeight (norm_nonneg _)
-      _ = 64 * (|ξ| ^ 6 * ‖𝐽 f ξ‖) := by ring
+      _ = 64 * (|ξ| ^ 6 * ‖𝓕 f ξ‖) := by ring
       _ ≤ 64 * ((D - C) * K₆) :=
         mul_le_mul_of_nonneg_left (hSix ξ) (by positivity)
       _ ≤ 64 * (D - C) * (K₀ + K₆) := by
@@ -483,23 +485,583 @@ theorem DFIVoronoiTestFunction.mellin_half_line_bound_of_kernel_bounds
     rw [huEq]
     nlinarith [Real.pi_pos, abs_nonneg (u / (2 * Real.pi))]
   have hPow := pow_le_pow_left₀ (by positivity : 0 ≤ 1 + |u|) hScale 6
-  rw [hg.mellin_eq_fourier_mellinKernel (1 / 2) u]
+  rw [show (1 / 2 : ℂ) = ((1 / 2 : ℝ) : ℂ) by norm_num,
+    hg.mellin_eq_fourier_mellinKernel (1 / 2) u]
   calc
     (1 + |u|) ^ 6 *
-        ‖𝐽 (dfiVoronoiMellinKernelSchwartz hg (1 / 2))
+        ‖𝓕 (dfiVoronoiMellinKernelSchwartz hg (1 / 2))
           (u / (2 * Real.pi))‖ ≤
       ((1 + 2 * Real.pi) * (1 + |u / (2 * Real.pi)|)) ^ 6 *
-        ‖𝐽 (dfiVoronoiMellinKernelSchwartz hg (1 / 2))
+        ‖𝓕 (dfiVoronoiMellinKernelSchwartz hg (1 / 2))
           (u / (2 * Real.pi))‖ :=
       mul_le_mul_of_nonneg_right hPow (norm_nonneg _)
     _ = (1 + 2 * Real.pi) ^ 6 *
         ((1 + |u / (2 * Real.pi)|) ^ 6 *
-          ‖𝐽 G (u / (2 * Real.pi))‖) := by rfl
+          ‖𝓕 G (u / (2 * Real.pi))‖) := by
+      rw [SchwartzMap.fourier_coe]
+      change ((1 + 2 * Real.pi) * (1 + |u / (2 * Real.pi)|)) ^ 6 *
+          ‖𝓕 G (u / (2 * Real.pi))‖ = _
+      rw [mul_pow]
+      ring
     _ ≤ (1 + 2 * Real.pi) ^ 6 *
         (64 * ((-Real.log hg.lower) - (-Real.log hg.upper)) *
           (K₀ + K₆)) :=
       mul_le_mul_of_nonneg_left (hFourier (u / (2 * Real.pi)))
         (pow_nonneg (by positivity) 6)
+
+/-- The physical-variable Euler operator produced by one derivative in the
+logarithmic Mellin coordinate. -/
+noncomputable def dfiMellinLogOperator
+    (σ : ℝ) (g : ℝ → ℂ) (x : ℝ) : ℂ :=
+  (σ : ℂ) * g x + (x : ℂ) * deriv g x
+
+/-- One logarithmic derivative of the Mellin kernel is exactly minus the
+same kernel with the Euler operator applied to its physical weight. -/
+theorem deriv_dfiVoronoiMellinKernel
+    {σ : ℝ} {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (u : ℝ) :
+    deriv (dfiVoronoiMellinKernel σ g) u =
+      -(Real.exp (-σ * u) : ℂ) *
+        dfiMellinLogOperator σ g (Real.exp (-u)) := by
+  have hInnerWeight : HasDerivAt (fun v : ℝ => -σ * v) (-σ) u := by
+    simpa using (hasDerivAt_id u).const_mul (-σ)
+  have hWeightReal : HasDerivAt (fun v : ℝ => Real.exp (-σ * v))
+      (Real.exp (-σ * u) * (-σ)) u :=
+    (Real.hasDerivAt_exp (-σ * u)).comp u hInnerWeight
+  have hWeight : HasDerivAt
+      (fun v : ℝ => (Real.exp (-σ * v) : ℂ))
+      ((Real.exp (-σ * u) * (-σ) : ℝ) : ℂ) u := by
+    simpa only [Function.comp_apply, Complex.ofRealCLM_apply] using
+      Complex.ofRealCLM.hasFDerivAt.comp_hasDerivAt u hWeightReal
+  have hInnerArg : HasDerivAt (fun v : ℝ => -v) (-1) u :=
+    hasDerivAt_neg u
+  have hArg : HasDerivAt (fun v : ℝ => Real.exp (-v))
+      (-Real.exp (-u)) u := by
+    simpa only [mul_neg, mul_one] using
+      (Real.hasDerivAt_exp (-u)).comp u hInnerArg
+  have hgDeriv : HasDerivAt g (deriv g (Real.exp (-u))) (Real.exp (-u)) :=
+    (hg.differentiable (by simp)).differentiableAt.hasDerivAt
+  have hComp := hgDeriv.scomp u hArg
+  have hProduct := hWeight.mul hComp
+  apply HasDerivAt.deriv
+  convert hProduct using 1
+  unfold dfiMellinLogOperator
+  simp only [Function.comp_apply, real_smul]
+  push_cast
+  ring
+
+/-- The physical weight obtained after `k` logarithmic derivatives of a
+Mellin kernel.  The sign is included, so the next kernel identity has no
+external parity bookkeeping. -/
+noncomputable def dfiMellinLogDerivativeIterate
+    (σ : ℝ) : ℕ → (ℝ → ℂ) → ℝ → ℂ
+  | 0, g => g
+  | k + 1, g => fun x =>
+      -dfiMellinLogOperator σ (dfiMellinLogDerivativeIterate σ k g) x
+
+@[simp]
+theorem dfiMellinLogDerivativeIterate_zero (σ : ℝ) (g : ℝ → ℂ) :
+    dfiMellinLogDerivativeIterate σ 0 g = g := rfl
+
+@[simp]
+theorem dfiMellinLogDerivativeIterate_succ
+    (σ : ℝ) (k : ℕ) (g : ℝ → ℂ) :
+    dfiMellinLogDerivativeIterate σ (k + 1) g =
+      fun x => -dfiMellinLogOperator σ
+        (dfiMellinLogDerivativeIterate σ k g) x := rfl
+
+theorem contDiff_dfiMellinLogOperator
+    {σ : ℝ} {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) :
+    ContDiff ℝ ∞ (dfiMellinLogOperator σ g) := by
+  have hDeriv : ContDiff ℝ ∞ (deriv g) := by
+    simpa [iteratedDeriv_one] using
+      (ContDiff.contDiff_iteratedDeriv_top hg 1)
+  unfold dfiMellinLogOperator
+  have hCast : ContDiff ℝ ∞ (fun x : ℝ => (x : ℂ)) :=
+    Complex.ofRealCLM.contDiff
+  exact contDiff_const.mul hg |>.add (hCast.mul hDeriv)
+
+theorem contDiff_dfiMellinLogDerivativeIterate
+    {σ : ℝ} {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (k : ℕ) :
+    ContDiff ℝ ∞ (dfiMellinLogDerivativeIterate σ k g) := by
+  induction k with
+  | zero => simpa using hg
+  | succ k ih =>
+      simpa [dfiMellinLogDerivativeIterate] using
+        (contDiff_dfiMellinLogOperator ih).neg
+
+/-- Exact chain-rule expansion of every logarithmic Mellin derivative into
+the recursively generated physical Euler weight. -/
+theorem iteratedDeriv_dfiVoronoiMellinKernel
+    {σ : ℝ} {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g)
+    (k : ℕ) (u : ℝ) :
+    iteratedDeriv k (dfiVoronoiMellinKernel σ g) u =
+      dfiVoronoiMellinKernel σ
+        (dfiMellinLogDerivativeIterate σ k g) u := by
+  induction k generalizing u with
+  | zero => rfl
+  | succ k ih =>
+      rw [iteratedDeriv_succ]
+      have hFunctions : iteratedDeriv k (dfiVoronoiMellinKernel σ g) =
+          dfiVoronoiMellinKernel σ
+            (dfiMellinLogDerivativeIterate σ k g) := by
+        funext v
+        exact ih v
+      rw [hFunctions, deriv_dfiVoronoiMellinKernel
+        (contDiff_dfiMellinLogDerivativeIterate hg k) u]
+      simp only [dfiMellinLogDerivativeIterate_succ,
+        dfiVoronoiMellinKernel]
+      ring
+
+/-- The physical monomials generated by repeated application of the Mellin
+logarithmic Euler operator. -/
+noncomputable def dfiMellinEulerBasis
+    (j : ℕ) (g : ℝ → ℂ) (x : ℝ) : ℂ :=
+  (x : ℂ) ^ j * iteratedDeriv j g x
+
+theorem hasDerivAt_dfiMellinEulerBasis
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (j : ℕ) (x : ℝ) :
+    HasDerivAt (dfiMellinEulerBasis j g)
+      ((j : ℂ) * (x : ℂ) ^ (j - 1) * iteratedDeriv j g x +
+        (x : ℂ) ^ j * iteratedDeriv (j + 1) g x) x := by
+  have hPowReal : HasDerivAt (fun y : ℝ => y ^ j)
+      ((j : ℝ) * x ^ (j - 1)) x := hasDerivAt_pow j x
+  have hPow : HasDerivAt (fun y : ℝ => ((y : ℂ) ^ j))
+      ((j : ℂ) * (x : ℂ) ^ (j - 1)) x := by
+    convert Complex.ofRealCLM.hasFDerivAt.comp_hasDerivAt x hPowReal using 1 <;>
+      simp [Function.comp_def]
+  have hIter : HasDerivAt (iteratedDeriv j g)
+      (iteratedDeriv (j + 1) g x) x := by
+    rw [iteratedDeriv_succ]
+    exact ((ContDiff.contDiff_iteratedDeriv_top hg j).differentiable
+      (by simp)).differentiableAt.hasDerivAt
+  simpa only [dfiMellinEulerBasis] using hPow.mul hIter
+
+/-- The Euler operator sends the `j`th physical basis term to the adjacent
+two basis terms.  This is the finite algebra underlying DFI's repeated
+Mellin integration by parts. -/
+theorem dfiMellinLogOperator_eulerBasis
+    {σ : ℝ} {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (j : ℕ) (x : ℝ) :
+    dfiMellinLogOperator σ (dfiMellinEulerBasis j g) x =
+      ((σ : ℂ) + j) * dfiMellinEulerBasis j g x +
+        dfiMellinEulerBasis (j + 1) g x := by
+  unfold dfiMellinLogOperator
+  rw [(hasDerivAt_dfiMellinEulerBasis hg j x).deriv]
+  cases j with
+  | zero => simp [dfiMellinEulerBasis]
+  | succ j =>
+      simp only [dfiMellinEulerBasis, Nat.cast_add, Nat.cast_one,
+        Nat.add_sub_cancel, pow_succ]
+      ring
+
+theorem dfiMellinLogOperator_add
+    {σ : ℝ} {f g : ℝ → ℂ} (hf : ContDiff ℝ ∞ f)
+    (hg : ContDiff ℝ ∞ g) (x : ℝ) :
+    dfiMellinLogOperator σ (fun y => f y + g y) x =
+      dfiMellinLogOperator σ f x + dfiMellinLogOperator σ g x := by
+  have hf' : HasDerivAt f (deriv f x) x :=
+    (hf.differentiable (by simp)).differentiableAt.hasDerivAt
+  have hg' : HasDerivAt g (deriv g x) x :=
+    (hg.differentiable (by simp)).differentiableAt.hasDerivAt
+  have hDeriv : deriv (fun y => f y + g y) x = deriv f x + deriv g x := by
+    simpa only [Pi.add_apply] using (hf'.add hg').deriv
+  unfold dfiMellinLogOperator
+  rw [hDeriv]
+  ring
+
+theorem dfiMellinLogOperator_const_mul
+    {σ : ℝ} {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (c : ℂ) (x : ℝ) :
+    dfiMellinLogOperator σ (fun y => c * f y) x =
+      c * dfiMellinLogOperator σ f x := by
+  have hf' : HasDerivAt f (deriv f x) x :=
+    (hf.differentiable (by simp)).differentiableAt.hasDerivAt
+  have hDeriv : deriv (fun y => c * f y) x = c * deriv f x := by
+    exact (hf'.const_mul c).deriv
+  unfold dfiMellinLogOperator
+  rw [hDeriv]
+  ring
+
+theorem dfiMellinLogOperator_neg
+    {σ : ℝ} {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (x : ℝ) :
+    dfiMellinLogOperator σ (fun y => -f y) x =
+      -dfiMellinLogOperator σ f x := by
+  simpa only [neg_one_mul] using
+    dfiMellinLogOperator_const_mul hf (-1) x
+
+@[fun_prop]
+theorem contDiff_dfiMellinEulerBasis
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (j : ℕ) :
+    ContDiff ℝ ∞ (dfiMellinEulerBasis j g) := by
+  unfold dfiMellinEulerBasis
+  exact (Complex.ofRealCLM.contDiff.pow j).mul
+    (ContDiff.contDiff_iteratedDeriv_top hg j)
+
+noncomputable def dfiMellinEulerPolynomial6
+    (c₀ c₁ c₂ c₃ c₄ c₅ c₆ : ℂ) (g : ℝ → ℂ) (x : ℝ) : ℂ :=
+  c₀ * dfiMellinEulerBasis 0 g x +
+  c₁ * dfiMellinEulerBasis 1 g x +
+  c₂ * dfiMellinEulerBasis 2 g x +
+  c₃ * dfiMellinEulerBasis 3 g x +
+  c₄ * dfiMellinEulerBasis 4 g x +
+  c₅ * dfiMellinEulerBasis 5 g x +
+  c₆ * dfiMellinEulerBasis 6 g x
+
+theorem contDiff_dfiMellinEulerPolynomial6
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g)
+    (c₀ c₁ c₂ c₃ c₄ c₅ c₆ : ℂ) :
+    ContDiff ℝ ∞ (dfiMellinEulerPolynomial6 c₀ c₁ c₂ c₃ c₄ c₅ c₆ g) := by
+  unfold dfiMellinEulerPolynomial6
+  have h (j : ℕ) (c : ℂ) :
+      ContDiff ℝ ∞ (fun x => c * dfiMellinEulerBasis j g x) :=
+    contDiff_const.mul (contDiff_dfiMellinEulerBasis hg j)
+  exact ((((((h 0 c₀).add (h 1 c₁)).add (h 2 c₂)).add
+    (h 3 c₃)).add (h 4 c₄)).add (h 5 c₅)).add (h 6 c₆)
+
+/-- One application of the half-line Mellin Euler operator to a degree-six
+Euler polynomial. -/
+theorem dfiMellinLogOperator_eulerPolynomial6_half
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g)
+    (c₀ c₁ c₂ c₃ c₄ c₅ c₆ : ℂ) (x : ℝ) :
+    dfiMellinLogOperator (1 / 2)
+        (dfiMellinEulerPolynomial6 c₀ c₁ c₂ c₃ c₄ c₅ c₆ g) x =
+      dfiMellinEulerPolynomial6
+        ((1 / 2 : ℂ) * c₀)
+        ((3 / 2 : ℂ) * c₁ + c₀)
+        ((5 / 2 : ℂ) * c₂ + c₁)
+        ((7 / 2 : ℂ) * c₃ + c₂)
+        ((9 / 2 : ℂ) * c₄ + c₃)
+        ((11 / 2 : ℂ) * c₅ + c₄)
+        ((13 / 2 : ℂ) * c₆ + c₅) g x +
+      c₆ * dfiMellinEulerBasis 7 g x := by
+  unfold dfiMellinEulerPolynomial6
+  repeat' rw [dfiMellinLogOperator_add]
+  all_goals try fun_prop
+  repeat' rw [dfiMellinLogOperator_const_mul]
+  all_goals try exact contDiff_dfiMellinEulerBasis hg _
+  repeat' rw [dfiMellinLogOperator_eulerBasis hg]
+  norm_num
+  ring
+
+/-- The exact sixth logarithmic derivative used in the quantitative
+Mellin-line estimate.  The rational coefficients are the shifted Stirling
+coefficients of `(1/2 + x d/dx)^6`. -/
+theorem dfiMellinLogDerivativeIterate_six_half
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) :
+    dfiMellinLogDerivativeIterate (1 / 2) 6 g =
+      dfiMellinEulerPolynomial6 (1 / 64) (91 / 8) (1771 / 16)
+        190 (395 / 4) 18 1 g := by
+  have step (c₀ c₁ c₂ c₃ c₄ c₅ : ℂ) :
+      dfiMellinLogOperator (1 / 2)
+          (dfiMellinEulerPolynomial6 c₀ c₁ c₂ c₃ c₄ c₅ 0 g) =
+        dfiMellinEulerPolynomial6
+          ((1 / 2 : ℂ) * c₀)
+          ((3 / 2 : ℂ) * c₁ + c₀)
+          ((5 / 2 : ℂ) * c₂ + c₁)
+          ((7 / 2 : ℂ) * c₃ + c₂)
+          ((9 / 2 : ℂ) * c₄ + c₃)
+          ((11 / 2 : ℂ) * c₅ + c₄) c₅ g := by
+    funext x
+    simpa using dfiMellinLogOperator_eulerPolynomial6_half
+      hg c₀ c₁ c₂ c₃ c₄ c₅ 0 x
+  have hZero : g = dfiMellinEulerPolynomial6 1 0 0 0 0 0 0 g := by
+    funext x
+    simp [dfiMellinEulerPolynomial6, dfiMellinEulerBasis]
+  have h₁ : dfiMellinLogDerivativeIterate (1 / 2) 1 g =
+      fun x => -dfiMellinEulerPolynomial6 (1 / 2) 1 0 0 0 0 0 g x := by
+    change (fun x => -dfiMellinLogOperator (1 / 2) g x) = _
+    rw (occs := .pos [1]) [hZero]
+    rw [step]
+    norm_num
+  have h₂ : dfiMellinLogDerivativeIterate (1 / 2) 2 g =
+      dfiMellinEulerPolynomial6 (1 / 4) 2 1 0 0 0 0 g := by
+    change (fun x => -dfiMellinLogOperator (1 / 2)
+      (dfiMellinLogDerivativeIterate (1 / 2) 1 g) x) = _
+    rw [h₁]
+    funext x
+    rw [dfiMellinLogOperator_neg
+      (contDiff_dfiMellinEulerPolynomial6 hg _ _ _ _ _ _ _) x,
+      congr_fun (step (1 / 2) 1 0 0 0 0) x]
+    norm_num
+  have h₃ : dfiMellinLogDerivativeIterate (1 / 2) 3 g =
+      fun x => -dfiMellinEulerPolynomial6 (1 / 8) (13 / 4)
+        (9 / 2) 1 0 0 0 g x := by
+    change (fun x => -dfiMellinLogOperator (1 / 2)
+      (dfiMellinLogDerivativeIterate (1 / 2) 2 g) x) = _
+    rw [h₂, step]
+    norm_num
+  have h₄ : dfiMellinLogDerivativeIterate (1 / 2) 4 g =
+      dfiMellinEulerPolynomial6 (1 / 16) 5 (29 / 2) 8 1 0 0 g := by
+    change (fun x => -dfiMellinLogOperator (1 / 2)
+      (dfiMellinLogDerivativeIterate (1 / 2) 3 g) x) = _
+    rw [h₃]
+    funext x
+    rw [dfiMellinLogOperator_neg
+      (contDiff_dfiMellinEulerPolynomial6 hg _ _ _ _ _ _ _) x,
+      congr_fun (step (1 / 8) (13 / 4) (9 / 2) 1 0 0) x]
+    norm_num
+  have h₅ : dfiMellinLogDerivativeIterate (1 / 2) 5 g =
+      fun x => -dfiMellinEulerPolynomial6 (1 / 32) (121 / 16)
+        (165 / 4) (85 / 2) (25 / 2) 1 0 g x := by
+    change (fun x => -dfiMellinLogOperator (1 / 2)
+      (dfiMellinLogDerivativeIterate (1 / 2) 4 g) x) = _
+    rw [h₄, step]
+    norm_num
+  change (fun x => -dfiMellinLogOperator (1 / 2)
+    (dfiMellinLogDerivativeIterate (1 / 2) 5 g) x) = _
+  rw [h₅]
+  funext x
+  rw [dfiMellinLogOperator_neg
+    (contDiff_dfiMellinEulerPolynomial6 hg _ _ _ _ _ _ _) x,
+    congr_fun (step (1 / 32) (121 / 16) (165 / 4) (85 / 2) (25 / 2) 1) x]
+  norm_num
+
+/-- Explicit sixth-order kernel bound from physical Euler-basis bounds.  The
+constant `512` dominates the sum of the seven shifted-Stirling
+coefficients, while `(1+R)^6` simultaneously dominates every `R^j` for
+`j ≤ 6`. -/
+theorem norm_dfiMellinLogDerivativeIterate_six_half_le
+    {g : ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (x : ℝ) {A R : ℝ}
+    (hA : 0 ≤ A) (hR : 0 ≤ R)
+    (hBasis : ∀ j ≤ 6,
+      ‖dfiMellinEulerBasis j g x‖ ≤ A * R ^ j) :
+    ‖dfiMellinLogDerivativeIterate (1 / 2) 6 g x‖ ≤
+      512 * A * (1 + R) ^ 6 := by
+  rw [congr_fun (dfiMellinLogDerivativeIterate_six_half hg) x]
+  unfold dfiMellinEulerPolynomial6
+  simp only [one_mul]
+  have hPow (j : ℕ) (hj : j ≤ 6) : R ^ j ≤ (1 + R) ^ 6 := by
+    have hbase : R ≤ 1 + R := by linarith
+    have hj' : R ^ j ≤ (1 + R) ^ j :=
+      pow_le_pow_left₀ hR hbase j
+    exact hj'.trans (pow_le_pow_right₀ (by linarith : 1 ≤ 1 + R) hj)
+  have hTerm (c : ℝ) (hc : 0 ≤ c) (j : ℕ) (hj : j ≤ 6) :
+      ‖(c : ℂ) * dfiMellinEulerBasis j g x‖ ≤
+        c * (A * (1 + R) ^ 6) := by
+    rw [norm_mul, Complex.norm_real, Real.norm_of_nonneg hc]
+    calc
+      c * ‖dfiMellinEulerBasis j g x‖ ≤ c * (A * R ^ j) := by
+        gcongr
+        exact hBasis j hj
+      _ ≤ c * (A * (1 + R) ^ 6) := by
+        gcongr
+        exact hPow j hj
+  have hTriangle :
+      ‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+          (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x +
+          (1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x +
+          (190 : ℂ) * dfiMellinEulerBasis 3 g x +
+          (395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x +
+          (18 : ℂ) * dfiMellinEulerBasis 5 g x +
+          dfiMellinEulerBasis 6 g x‖ ≤
+        ‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x‖ +
+        ‖(91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x‖ +
+        ‖(1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x‖ +
+        ‖(190 : ℂ) * dfiMellinEulerBasis 3 g x‖ +
+        ‖(395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖ +
+        ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖ +
+        ‖dfiMellinEulerBasis 6 g x‖ := by
+    calc
+      _ ≤ ‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+            (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x +
+            (1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x +
+            (190 : ℂ) * dfiMellinEulerBasis 3 g x +
+            (395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x +
+            (18 : ℂ) * dfiMellinEulerBasis 5 g x‖ +
+          ‖dfiMellinEulerBasis 6 g x‖ := norm_add_le _ _
+      _ ≤ (‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+              (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x +
+              (1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x +
+              (190 : ℂ) * dfiMellinEulerBasis 3 g x +
+              (395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖ +
+            ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖) +
+          ‖dfiMellinEulerBasis 6 g x‖ := by
+        gcongr
+        exact norm_add_le _ _
+      _ ≤ ((‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+                (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x +
+                (1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x +
+                (190 : ℂ) * dfiMellinEulerBasis 3 g x‖ +
+              ‖(395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖) +
+            ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖) +
+          ‖dfiMellinEulerBasis 6 g x‖ := by
+        gcongr
+        exact norm_add_le _ _
+      _ ≤ (((‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+                  (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x +
+                  (1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x‖ +
+                ‖(190 : ℂ) * dfiMellinEulerBasis 3 g x‖) +
+              ‖(395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖) +
+            ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖) +
+          ‖dfiMellinEulerBasis 6 g x‖ := by
+        gcongr
+        exact norm_add_le _ _
+      _ ≤ ((((‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x +
+                    (91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x‖ +
+                  ‖(1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x‖) +
+                ‖(190 : ℂ) * dfiMellinEulerBasis 3 g x‖) +
+              ‖(395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖) +
+            ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖) +
+          ‖dfiMellinEulerBasis 6 g x‖ := by
+        gcongr
+        exact norm_add_le _ _
+      _ ≤ _ := by
+        gcongr
+        exact norm_add_le _ _
+  refine hTriangle.trans ?_
+  have h₀ : ‖(1 / 64 : ℂ) * dfiMellinEulerBasis 0 g x‖ ≤
+      (1 / 64) * (A * (1 + R) ^ 6) := by
+    convert hTerm (1 / 64) (by norm_num) 0 (by norm_num) using 1
+    norm_num
+  have h₁ : ‖(91 / 8 : ℂ) * dfiMellinEulerBasis 1 g x‖ ≤
+      (91 / 8) * (A * (1 + R) ^ 6) := by
+    convert hTerm (91 / 8) (by norm_num) 1 (by norm_num) using 1
+    norm_num
+  have h₂ : ‖(1771 / 16 : ℂ) * dfiMellinEulerBasis 2 g x‖ ≤
+      (1771 / 16) * (A * (1 + R) ^ 6) := by
+    convert hTerm (1771 / 16) (by norm_num) 2 (by norm_num) using 1
+    norm_num
+  have h₃ : ‖(190 : ℂ) * dfiMellinEulerBasis 3 g x‖ ≤
+      190 * (A * (1 + R) ^ 6) := by
+    exact hTerm 190 (by norm_num) 3 (by norm_num)
+  have h₄ : ‖(395 / 4 : ℂ) * dfiMellinEulerBasis 4 g x‖ ≤
+      (395 / 4) * (A * (1 + R) ^ 6) := by
+    convert hTerm (395 / 4) (by norm_num) 4 (by norm_num) using 1
+    norm_num
+  have h₅ : ‖(18 : ℂ) * dfiMellinEulerBasis 5 g x‖ ≤
+      18 * (A * (1 + R) ^ 6) := by
+    exact hTerm 18 (by norm_num) 5 (by norm_num)
+  have h₆ : ‖dfiMellinEulerBasis 6 g x‖ ≤ A * (1 + R) ^ 6 := by
+    exact (hBasis 6 le_rfl).trans (mul_le_mul_of_nonneg_left
+      (hPow 6 le_rfl) hA)
+  have hScale : 0 ≤ A * (1 + R) ^ 6 := by positivity
+  calc
+    _ ≤ (1 / 64) * (A * (1 + R) ^ 6) +
+          (91 / 8) * (A * (1 + R) ^ 6) +
+          (1771 / 16) * (A * (1 + R) ^ 6) +
+          190 * (A * (1 + R) ^ 6) +
+          (395 / 4) * (A * (1 + R) ^ 6) +
+          18 * (A * (1 + R) ^ 6) +
+          A * (1 + R) ^ 6 := by
+      gcongr
+    _ ≤ 512 * (A * (1 + R) ^ 6) := by linarith
+    _ = 512 * A * (1 + R) ^ 6 := by ring
+
+theorem DFIVoronoiTestFunction.iteratedDeriv_eq_zero_of_not_mem
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (j : ℕ) {x : ℝ}
+    (hx : x ∉ Set.Icc hg.lower hg.upper) :
+    iteratedDeriv j g x = 0 := by
+  have hTsupport : tsupport (iteratedDeriv j g) ⊆ tsupport g := by
+    induction j with
+    | zero => simp
+    | succ j ih =>
+        rw [iteratedDeriv_succ]
+        exact tsupport_deriv_subset.trans ih
+  by_contra hne
+  have hxSupport : x ∈ Function.support (iteratedDeriv j g) := by
+    simpa only [Function.mem_support] using hne
+  have hxClosure : x ∈ tsupport g :=
+    hTsupport (subset_tsupport _ hxSupport)
+  exact hx ((closure_minimal hg.support_subset isClosed_Icc) hxClosure)
+
+/-- Uniform physical derivative bounds imply an explicit sixth-order
+Mellin-line bound.  This is the source-uniform form of the integration by
+parts step between DFI equations (28) and (29). -/
+theorem DFIVoronoiTestFunction.mellin_half_line_bound_of_physical_profile
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) {A B : ℝ}
+    (hA : 0 ≤ A) (hB : 0 ≤ B)
+    (hDeriv : ∀ j ≤ 6, ∀ x : ℝ,
+      ‖iteratedDeriv j g x‖ ≤ A * B ^ j) :
+    ∀ u : ℝ,
+      (1 + |u|) ^ 6 *
+        ‖mellin g ((1 / 2 : ℂ) + (u : ℂ) * I)‖ ≤
+      (1 + 2 * Real.pi) ^ 6 *
+        (64 * ((-Real.log hg.lower) - (-Real.log hg.upper)) *
+          ((max 1 hg.upper) * A +
+            (max 1 hg.upper) *
+              (512 * A * (1 + (max 1 hg.upper) * B) ^ 6))) := by
+  let D : ℝ := max 1 hg.upper
+  have hDOne : 1 ≤ D := le_max_left _ _
+  have hD : 0 ≤ D := zero_le_one.trans hDOne
+  have hUpperD : hg.upper ≤ D := le_max_right _ _
+  have kernelWeightBound (v : ℝ)
+      (hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper) :
+      Real.exp (-(1 / 2 : ℝ) * v) ≤ D := by
+    have hyD : Real.exp (-v) ≤ D := hv.2.trans hUpperD
+    have hsq : Real.exp (-(1 / 2 : ℝ) * v) ^ 2 = Real.exp (-v) := by
+      rw [pow_two, ← Real.exp_add]
+      congr 1
+      ring
+    have hweight : 0 ≤ Real.exp (-(1 / 2 : ℝ) * v) := (Real.exp_pos _).le
+    nlinarith [mul_self_le_mul_self (zero_le_one.trans hDOne)
+      (show D ≤ D ^ 2 by nlinarith)]
+  have hKernelZero (j : ℕ) (v : ℝ)
+      (hv : Real.exp (-v) ∉ Set.Icc hg.lower hg.upper) :
+      dfiMellinEulerBasis j g (Real.exp (-v)) = 0 := by
+    unfold dfiMellinEulerBasis
+    rw [hg.iteratedDeriv_eq_zero_of_not_mem j hv]
+    simp
+  have hKernelBasis (v : ℝ) (hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper) :
+      ∀ j ≤ 6,
+        ‖dfiMellinEulerBasis j g (Real.exp (-v))‖ ≤
+          A * (D * B) ^ j := by
+    intro j hj
+    unfold dfiMellinEulerBasis
+    rw [norm_mul, norm_pow, Complex.norm_real,
+      Real.norm_of_nonneg (Real.exp_pos _).le]
+    calc
+      Real.exp (-v) ^ j * ‖iteratedDeriv j g (Real.exp (-v))‖ ≤
+          D ^ j * (A * B ^ j) := by
+        gcongr
+        · exact hv.2.trans hUpperD
+        · exact hDeriv j hj (Real.exp (-v))
+      _ = A * (D * B) ^ j := by
+        rw [mul_pow]
+        ring
+  have hK₀ : ∀ v : ℝ,
+      ‖iteratedDeriv 0 (dfiVoronoiMellinKernel (1 / 2) g) v‖ ≤ D * A := by
+    intro v
+    rw [iteratedDeriv_dfiVoronoiMellinKernel hg.smooth 0 v]
+    by_cases hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper
+    · unfold dfiVoronoiMellinKernel
+      rw [norm_mul, Complex.norm_real,
+        Real.norm_of_nonneg (Real.exp_pos _).le]
+      simp only [dfiMellinLogDerivativeIterate_zero]
+      calc
+        Real.exp (-(1 / 2 : ℝ) * v) * ‖g (Real.exp (-v))‖ ≤
+            D * (A * B ^ 0) := by
+          gcongr
+          · exact kernelWeightBound v hv
+          · exact hDeriv 0 (by norm_num) (Real.exp (-v))
+        _ = D * A := by ring
+    · have hz := hKernelZero 0 v hv
+      simp [dfiMellinEulerBasis] at hz
+      simp only [dfiVoronoiMellinKernel,
+        dfiMellinLogDerivativeIterate_zero, hz, mul_zero, norm_zero]
+      exact mul_nonneg hD hA
+  have hK₆ : ∀ v : ℝ,
+      ‖iteratedDeriv 6 (dfiVoronoiMellinKernel (1 / 2) g) v‖ ≤
+        D * (512 * A * (1 + D * B) ^ 6) := by
+    intro v
+    rw [iteratedDeriv_dfiVoronoiMellinKernel hg.smooth 6 v]
+    by_cases hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper
+    · unfold dfiVoronoiMellinKernel
+      rw [norm_mul, Complex.norm_real,
+        Real.norm_of_nonneg (Real.exp_pos _).le]
+      exact mul_le_mul (kernelWeightBound v hv)
+        (norm_dfiMellinLogDerivativeIterate_six_half_le hg.smooth
+          (Real.exp (-v)) hA (mul_nonneg hD hB) (hKernelBasis v hv))
+        (norm_nonneg _) (by positivity)
+    · have hzero (j : ℕ) :
+          dfiMellinEulerBasis j g (Real.exp (-v)) = 0 :=
+        hKernelZero j v hv
+      unfold dfiVoronoiMellinKernel
+      rw [congr_fun (dfiMellinLogDerivativeIterate_six_half hg.smooth)
+        (Real.exp (-v))]
+      simp only [dfiMellinEulerPolynomial6, hzero, mul_zero, add_zero,
+        norm_zero]
+      positivity
+  simpa only [D] using hg.mellin_half_line_bound_of_kernel_bounds
+    (mul_nonneg hD hA)
+    (mul_nonneg hD (by positivity)) hK₀ hK₆
 
 /-- Quantitative form of Fourier integration by parts for a family supported
 in one fixed interval.  Unlike the compactness-based existence theorem below,
