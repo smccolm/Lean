@@ -36,6 +36,35 @@ structure DFIDeltaWeight (Q : ℝ) where
   derivativeBound : ∀ j : ℕ, ∃ C : ℝ, 0 < C ∧ ∀ u : ℝ,
     ‖iteratedDeriv j toFun u‖ ≤ C * (Q ^ (j + 1))⁻¹
 
+/-- An explicit family of the equation-(9) derivative constants.  The
+profile is kept separate from `DFIDeltaWeight` so a source theorem can
+quantify over one `D` before varying the physical scale `Q`. -/
+structure DFIDeltaWeightProfile {Q : ℝ} (w : DFIDeltaWeight Q)
+    (D : ℕ → ℝ) : Prop where
+  positive : ∀ j, 0 < D j
+  bound : ∀ j u, ‖iteratedDeriv j w.toFun u‖ ≤
+    D j * (Q ^ (j + 1))⁻¹
+
+/-- Every individual delta weight admits a profile.  Uniform DFI
+applications must additionally keep this chosen profile fixed while `Q`
+varies; this theorem alone deliberately makes no such family claim. -/
+theorem DFIDeltaWeight.exists_profile {Q : ℝ} (w : DFIDeltaWeight Q) :
+    ∃ D : ℕ → ℝ, DFIDeltaWeightProfile w D := by
+  choose D hD hbound using w.derivativeBound
+  exact ⟨D, hD, hbound⟩
+
+/-- Finite aggregate of the equation-(9) constants needed up to order
+`J`. -/
+noncomputable def dfiDeltaFiniteConstant (D : ℕ → ℝ) (J : ℕ) : ℝ :=
+  ∑ j ∈ Finset.range (J + 1), D j
+
+theorem DFIDeltaWeightProfile.le_finiteConstant
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) {j J : ℕ} (hj : j ≤ J) :
+    D j ≤ dfiDeltaFiniteConstant D J := by
+  unfold dfiDeltaFiniteConstant
+  exact Finset.single_le_sum (fun k _hk ↦ (hD.positive k).le) (by simp [hj])
+
 instance {Q : ℝ} : CoeFun (DFIDeltaWeight Q) (fun _ => ℝ → ℝ) :=
   ⟨DFIDeltaWeight.toFun⟩
 

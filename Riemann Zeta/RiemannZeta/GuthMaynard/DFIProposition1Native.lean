@@ -22,6 +22,27 @@ noncomputable def dfiArchimedeanScaleAt (q : ℕ) [NeZero q] (a : ℝ) : ℝ :=
 theorem dfiArchimedeanScale_nonneg (q : ℕ) [NeZero q] :
     0 ≤ dfiArchimedeanScale q := mul_nonneg (norm_nonneg _) (norm_nonneg _)
 
+/-- The exact modulus dependence of the reflected-line factor is the
+square root of the Voronoi modulus. -/
+theorem dfiArchimedeanScale_eq (q : ℕ) [NeZero q] :
+    dfiArchimedeanScale q =
+      (q : ℝ) ^ (1 / 2 : ℝ) *
+        ‖(2 * Real.pi : ℂ) ^ (-(3 / 2 : ℂ))‖ := by
+  unfold dfiArchimedeanScale
+  rw [Complex.norm_natCast_cpow_of_pos (NeZero.pos q)]
+  norm_num
+
+/-- Squaring the reflected-line factor costs one power of the Voronoi
+modulus; the remaining factor is an absolute archimedean constant. -/
+theorem dfiArchimedeanScale_sq_le (q : ℕ) [NeZero q] :
+    dfiArchimedeanScale q ^ 2 ≤
+      ‖(2 * Real.pi : ℂ) ^ (-(3 / 2 : ℂ))‖ ^ 2 * q := by
+  rw [dfiArchimedeanScale_eq]
+  have hq : (0 : ℝ) ≤ q := by positivity
+  rw [mul_pow, ← Real.sqrt_eq_rpow, Real.sq_sqrt hq]
+  ring_nf
+  exact le_rfl
+
 theorem dfiArchimedeanScaleAt_nonneg (q : ℕ) [NeZero q] (a : ℝ) :
     0 ≤ dfiArchimedeanScaleAt q a :=
   mul_nonneg (norm_nonneg _) (norm_nonneg _)
@@ -61,8 +82,8 @@ line that produces the `q⁻¹/² n⁻¹/⁴` transform scale in DFI (29). -/
 theorem exists_dfiArchimedeanScaleAt_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
-      1 / 4 ≤ a → a ≤ 3 / 2 → dfiArchimedeanScaleAt q a ≤ C := by
-  let K : Set ℝ := Set.Icc (1 / 4 : ℝ) (3 / 2)
+      3 / 16 ≤ a → a ≤ 3 / 2 → dfiArchimedeanScaleAt q a ≤ C := by
+  let K : Set ℝ := Set.Icc (3 / 16 : ℝ) (3 / 2)
   have hK : IsCompact K := isCompact_Icc
   have hKne : K.Nonempty := Set.nonempty_Icc.mpr (by norm_num)
   have hq : (q : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne q)
@@ -175,7 +196,7 @@ reflected strip `1/4 ≤ Re s ≤ 3/2`. -/
 theorem exists_norm_dfiPeriodicArchimedeanFactor_mul_exp_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
-      1 / 4 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      3 / 16 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
       ‖dfiPeriodicArchimedeanFactor q ((a : ℂ) - (u : ℂ) * I) *
           cexp (Real.pi * I * ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤
           C * (1 + |u|) ∧
@@ -1079,7 +1100,7 @@ right-shift line `Re z = 3/4` used in equation (29). -/
 theorem exists_norm_dfiVoronoiMultipliers_three_quarter_strip_bound
     (q : ℕ) [NeZero q] :
     ∃ C : ℝ, 0 < C ∧ ∀ (σ : ℝ),
-      -(1 / 2 : ℝ) ≤ σ → σ ≤ 3 / 4 → ∀ u : ℝ,
+      -(1 / 2 : ℝ) ≤ σ → σ ≤ 13 / 16 → ∀ u : ℝ,
       ‖dfiVoronoiMinusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
           C * (1 + |u|) ^ 2 ∧
       ‖dfiVoronoiPlusMultiplier q ((σ : ℂ) + (u : ℂ) * I)‖ ≤
@@ -1091,7 +1112,7 @@ theorem exists_norm_dfiVoronoiMultipliers_three_quarter_strip_bound
   intro σ hσLower hσUpper u
   let a : ℝ := 1 - σ
   let r : ℂ := (a : ℂ) - (u : ℂ) * I
-  have haLower : (1 / 4 : ℝ) ≤ a := by dsimp [a]; linarith
+  have haLower : (3 / 16 : ℝ) ≤ a := by dsimp [a]; linarith
   have haUpper : a ≤ (3 / 2 : ℝ) := by dsimp [a]; linarith
   have hr : 1 - ((σ : ℂ) + (u : ℂ) * I) = r := by
     dsimp [r, a]

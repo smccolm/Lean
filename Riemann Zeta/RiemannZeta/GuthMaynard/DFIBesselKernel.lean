@@ -212,6 +212,65 @@ theorem abs_dfiBesselY0Tail_le {x : ℝ} (hx : 0 < x) :
       norm_num
       ring
 
+/-- A sharper small-argument majorant for the Schläfli tail.  The exponent
+`1/4` is deliberately weaker than the logarithmic truth but strong enough
+to create a nonempty absolute Mellin strip together with the far
+`x⁻¹ᐟ²` estimate. -/
+theorem abs_dfiBesselY0Tail_le_quarter {x : ℝ} (hx : 0 < x) :
+    |dfiBesselY0Tail x| ≤
+      (1 / x) ^ (1 / 4 : ℝ) * Real.Gamma (1 / 4) := by
+  have hQuarter : (0 : ℝ) < 1 / 4 := by norm_num
+  have hGammaInt := Real.integral_rpow_mul_exp_neg_mul_Ioi hQuarter hx
+  have hMajorant : IntegrableOn
+      (fun t : ℝ => t ^ ((1 / 4 : ℝ) - 1) * Real.exp (-(x * t)))
+      (Set.Ioi 0) := by
+    have h := integrableOn_rpow_mul_exp_neg_mul_rpow
+      (p := (1 : ℝ)) (s := -(3 / 4 : ℝ)) (b := x)
+      (by norm_num) (by norm_num) hx
+    convert h using 1
+    ext t
+    norm_num
+  have hTail := integrableOn_dfiBesselY0Tail_integrand hx
+  have hnonneg : 0 ≤ dfiBesselY0Tail x := by
+    unfold dfiBesselY0Tail
+    exact integral_nonneg fun t =>
+      div_nonneg (Real.exp_pos _).le (Real.sqrt_nonneg _)
+  rw [abs_of_nonneg hnonneg]
+  unfold dfiBesselY0Tail
+  calc
+    ∫ t in Set.Ioi (0 : ℝ), Real.exp (-x * t) / Real.sqrt (1 + t ^ 2) ≤
+        ∫ t in Set.Ioi (0 : ℝ),
+          t ^ ((1 / 4 : ℝ) - 1) * Real.exp (-(x * t)) := by
+      exact setIntegral_mono_on hTail hMajorant measurableSet_Ioi fun t ht => by
+        have htPos : 0 < t := ht
+        have htPowPos : 0 < t ^ (3 / 4 : ℝ) := Real.rpow_pos_of_pos htPos _
+        have hsqrtPos : 0 < Real.sqrt (1 + t ^ 2) := by positivity
+        have htPowLe : t ^ (3 / 4 : ℝ) ≤ Real.sqrt (1 + t ^ 2) := by
+          by_cases htOne : t ≤ 1
+          · have hpowOne : t ^ (3 / 4 : ℝ) ≤ 1 :=
+              Real.rpow_le_one htPos.le htOne (by norm_num)
+            have hsqrtOne : 1 ≤ Real.sqrt (1 + t ^ 2) := by
+              have hsquare := Real.sq_sqrt (by positivity : 0 ≤ 1 + t ^ 2)
+              nlinarith [Real.sqrt_nonneg (1 + t ^ 2), sq_nonneg t]
+            exact hpowOne.trans hsqrtOne
+          · have htOne' : 1 ≤ t := le_of_not_ge htOne
+            have hpowT : t ^ (3 / 4 : ℝ) ≤ t := by
+              simpa using Real.rpow_le_self_of_one_le htOne' (by norm_num : 3 / 4 ≤ (1 : ℝ))
+            have htSqrt : t ≤ Real.sqrt (1 + t ^ 2) := by
+              have hsquare := Real.sq_sqrt (by positivity : 0 ≤ 1 + t ^ 2)
+              nlinarith [Real.sqrt_nonneg (1 + t ^ 2)]
+            exact hpowT.trans htSqrt
+        have hInv : 1 / Real.sqrt (1 + t ^ 2) ≤ 1 / t ^ (3 / 4 : ℝ) :=
+          one_div_le_one_div_of_le htPowPos htPowLe
+        rw [show t ^ ((1 / 4 : ℝ) - 1) = 1 / t ^ (3 / 4 : ℝ) by
+          rw [show (1 / 4 : ℝ) - 1 = -(3 / 4 : ℝ) by ring,
+            Real.rpow_neg htPos.le]
+          ring]
+        rw [div_eq_mul_inv, one_div]
+        simpa [mul_comm] using
+          mul_le_mul_of_nonneg_left hInv (Real.exp_pos (-x * t)).le
+    _ = (1 / x) ^ (1 / 4 : ℝ) * Real.Gamma (1 / 4) := hGammaInt
+
 /-- On the nonstationary part of Schläfli's oscillatory integral, the
 first-derivative test gives the required square-root cancellation. -/
 theorem norm_dfiBesselY0Osc_far_le {x : ℝ} (hx : 1 ≤ x) :
@@ -510,6 +569,95 @@ Bessel estimates. -/
 noncomputable def dfiBesselQuarterNorm (g : ℝ → ℂ) (n : ℕ) : ℝ :=
   ∫ x in Set.Ioi (0 : ℝ),
     ‖g x‖ / Real.sqrt (Real.sqrt (x * n))
+
+/-- The frequency-independent quarter-weighted mass underlying the physical
+order-zero Bessel estimates. -/
+noncomputable def dfiBesselQuarterBaseNorm (g : ℝ → ℂ) : ℝ :=
+  ∫ x in Set.Ioi (0 : ℝ), ‖g x‖ / Real.sqrt (Real.sqrt x)
+
+theorem sqrt_sqrt_eq_rpow_quarter (x : ℝ) (hx : 0 ≤ x) :
+    Real.sqrt (Real.sqrt x) = x ^ (1 / 4 : ℝ) := by
+  rw [Real.sqrt_eq_rpow, Real.sqrt_eq_rpow, ← Real.rpow_mul hx]
+  norm_num
+
+theorem sqrt_sqrt_mul_nat_eq_mul_rpow_quarter
+    (x : ℝ) (n : ℕ) (hx : 0 ≤ x) :
+    Real.sqrt (Real.sqrt (x * n)) =
+      Real.sqrt (Real.sqrt x) * (n : ℝ) ^ (1 / 4 : ℝ) := by
+  rw [Real.sqrt_mul hx]
+  rw [Real.sqrt_mul (Real.sqrt_nonneg x)]
+  have hn4 := sqrt_sqrt_eq_rpow_quarter (n : ℝ) (Nat.cast_nonneg n)
+  rw [hn4]
+
+theorem dfiBesselQuarterNorm_eq_rpow_mul_base
+    (g : ℝ → ℂ) (n : ℕ) (hn : 0 < n) :
+    dfiBesselQuarterNorm g n =
+      (n : ℝ) ^ (-(1 / 4 : ℝ)) * dfiBesselQuarterBaseNorm g := by
+  have hnR : (0 : ℝ) < n := by exact_mod_cast hn
+  unfold dfiBesselQuarterNorm dfiBesselQuarterBaseNorm
+  rw [← MeasureTheory.integral_const_mul]
+  apply MeasureTheory.integral_congr_ae
+  filter_upwards [ae_restrict_mem measurableSet_Ioi] with x hx
+  rw [sqrt_sqrt_mul_nat_eq_mul_rpow_quarter x n hx.le]
+  have hnx : 0 < (n : ℝ) ^ (1 / 4 : ℝ) := Real.rpow_pos_of_pos hnR _
+  have hxq : 0 < Real.sqrt (Real.sqrt x) :=
+    Real.sqrt_pos.2 (Real.sqrt_pos.2 hx)
+  rw [Real.rpow_neg hnR.le]
+  field_simp [hnx.ne', hxq.ne']
+
+theorem DFIVoronoiTestFunction.continuous_besselQuarterWeight
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
+    Continuous (fun x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt x)) := by
+  rw [continuous_iff_continuousAt]
+  intro x
+  by_cases hx : x < hg.lower
+  · have hzero : (fun x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt x)) =ᶠ[nhds x]
+        fun _ => 0 := by
+      filter_upwards [Iio_mem_nhds hx] with y hy
+      have hgy : g y = 0 := by
+        by_contra hne
+        exact (not_le_of_gt hy) (hg.support_subset hne).1
+      simp [hgy]
+    exact continuousAt_const.congr_of_eventuallyEq hzero
+  · have hxpos : 0 < x := hg.lower_pos.trans_le (not_lt.mp hx)
+    exact hg.continuous.continuousAt.norm.div
+      (Real.continuous_sqrt.comp Real.continuous_sqrt).continuousAt
+      (Real.sqrt_pos.2 (Real.sqrt_pos.2 hxpos)).ne'
+
+theorem DFIVoronoiTestFunction.integrableOn_besselQuarterWeight
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
+    IntegrableOn (fun x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt x))
+      (Set.Ioi 0) := by
+  have hSupport : Function.support
+      (fun x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt x)) ⊆ Function.support g := by
+    intro x hx
+    by_contra hgx
+    exact hx (by simp [Function.mem_support] at hgx ⊢; simp [hgx])
+  have hCompact : HasCompactSupport
+      (fun x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt x)) :=
+    HasCompactSupport.mono hg.hasCompactSupport hSupport
+  exact hg.continuous_besselQuarterWeight.integrable_of_hasCompactSupport
+    hCompact |>.integrableOn
+
+theorem DFIVoronoiTestFunction.integrableOn_besselQuarterWeight_mul_nat
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    (n : ℕ) (hn : 0 < n) :
+    IntegrableOn (fun x : ℝ =>
+      ‖g x‖ / Real.sqrt (Real.sqrt (x * n))) (Set.Ioi 0) := by
+  have hnR : (0 : ℝ) < n := by exact_mod_cast hn
+  have hEq : (λ x : ℝ => ‖g x‖ / Real.sqrt (Real.sqrt (x * n))) =ᵐ[
+      volume.restrict (Set.Ioi 0)]
+      fun x => (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (‖g x‖ / Real.sqrt (Real.sqrt x)) := by
+    filter_upwards [ae_restrict_mem measurableSet_Ioi] with x hx
+    rw [sqrt_sqrt_mul_nat_eq_mul_rpow_quarter x n hx.le,
+      Real.rpow_neg hnR.le]
+    have hnx : 0 < (n : ℝ) ^ (1 / 4 : ℝ) := Real.rpow_pos_of_pos hnR _
+    have hxq : 0 < Real.sqrt (Real.sqrt x) :=
+      Real.sqrt_pos.2 (Real.sqrt_pos.2 hx)
+    field_simp [hnx.ne', hxq.ne']
+  exact (hg.integrableOn_besselQuarterWeight.const_mul
+    ((n : ℝ) ^ (-(1 / 4 : ℝ)))).congr hEq.symm
 
 /-- The literal positive-sign transform has DFI's retained-frequency
 quarter-power size. -/

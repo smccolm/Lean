@@ -108,6 +108,24 @@ theorem exists_dfiWeight_zero_one_bounds
     exact hx.trans (mul_le_mul_of_nonneg_right (le_max_right C₀ C₁)
       (inv_nonneg.mpr (sq_nonneg Q)))
 
+/-- Zeroth and first equation-(9) bounds from one explicit profile. -/
+theorem dfiWeight_zero_one_bounds_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) :
+    (∀ x : ℝ, |w x| ≤ max (D 0) (D 1) * Q⁻¹) ∧
+    (∀ x : ℝ, |deriv w x| ≤ max (D 0) (D 1) * (Q ^ 2)⁻¹) := by
+  constructor
+  · intro x
+    have hx : |w x| ≤ D 0 * Q⁻¹ := by
+      simpa [Real.norm_eq_abs] using hD.bound 0 x
+    exact hx.trans (mul_le_mul_of_nonneg_right (le_max_left (D 0) (D 1))
+      (inv_nonneg.mpr w.Q_pos.le))
+  · intro x
+    have hx : |deriv w x| ≤ D 1 * (Q ^ 2)⁻¹ := by
+      simpa [iteratedDeriv_one, Real.norm_eq_abs] using hD.bound 1 x
+    exact hx.trans (mul_le_mul_of_nonneg_right (le_max_right (D 0) (D 1))
+      (inv_nonneg.mpr (sq_nonneg Q)))
+
 /-- A smooth DFI cutoff and its derivative vanish throughout the inner
 support gap. -/
 theorem dfiWeight_and_deriv_eq_zero_of_pos_lt
@@ -975,6 +993,22 @@ theorem dfiEquation19 {Q : ℝ} (w : DFIDeltaWeight Q) :
   obtain ⟨C, hC, hw, hdw⟩ := exists_dfiWeight_zero_one_bounds w
   refine ⟨24 * C, mul_pos (by norm_num) hC, ?_⟩
   intro q hq u
+  by_cases hu : u = 0
+  · subst u
+    exact dfiEquation19_zero w hC hw hdw q hq
+  · exact dfiEquation19_of_ne_zero w hC hw hdw q hq u hu
+
+/-- DFI equation (19) with a constant determined solely by the fixed
+equation-(9) profile. -/
+theorem dfiEquation19_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) (q : ℕ) (hq : 0 < q) (u : ℝ) :
+    |dfiDeltaKernel w q u| ≤
+      (24 * max (D 0) (D 1)) *
+        (((q : ℝ) * Q + Q ^ 2)⁻¹ + ((q : ℝ) * Q + |u|)⁻¹) := by
+  have hC : 0 < max (D 0) (D 1) :=
+    (hD.positive 0).trans_le (le_max_left _ _)
+  obtain ⟨hw, hdw⟩ := dfiWeight_zero_one_bounds_of_profile hD
   by_cases hu : u = 0
   · subst u
     exact dfiEquation19_zero w hC hw hdw q hq

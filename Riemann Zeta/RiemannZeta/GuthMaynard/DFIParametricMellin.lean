@@ -82,19 +82,6 @@ theorem tsupport_uncurry_dfiParametricMellinKernel_subset
     (support_uncurry_dfiParametricMellinKernel_subset hC hSupport)
     (isClosed_Icc.prod isClosed_Icc)
 
-theorem contDiff_uncurry_dfiMixedDeriv
-    {F : ℝ → ℝ → ℂ}
-    (hF : ContDiff ℝ ∞ (Function.uncurry F)) (i j : ℕ) :
-    ContDiff ℝ ∞ (Function.uncurry (dfiMixedDeriv i j F)) := by
-  have hPartial : ContDiff ℝ ∞
-      (dfiPartialX i (dfiPartialY j (Function.uncurry F))) :=
-    contDiff_dfiPartialX i (contDiff_dfiPartialY j hF)
-  convert hPartial using 1
-  ext p
-  rcases p with ⟨x, y⟩
-  simp only [Function.uncurry_apply_pair]
-  exact dfiMixedDeriv_eq_partialXY hF i j x y
-
 /-- Every mixed derivative of a smooth rectangularly supported source is
 uniformly bounded.  The bound is qualitative here; equation (28) later
 provides the source-scale dependence needed for the quantitative error. -/
@@ -1632,7 +1619,7 @@ theorem DFIVoronoiTestFunction.mellin_line_bound_of_physical_profile_order
         _ = D ^ |σ| * A := by ring
     · have hz := hg.mellinLogDerivativeIterate_eq_zero_of_not_mem σ 0 hv
       simp only [dfiVoronoiMellinKernel, hz, mul_zero, norm_zero]
-      positivity
+      exact mul_nonneg (Real.rpow_nonneg hD _) hA
   have hKp : ∀ v : ℝ,
       ‖iteratedDeriv p (dfiVoronoiMellinKernel σ g) v‖ ≤
         D ^ |σ| * (A * (|σ| + (p : ℝ) + D * B) ^ p) := by
@@ -1653,10 +1640,91 @@ theorem DFIVoronoiTestFunction.mellin_line_bound_of_physical_profile_order
         (norm_nonneg _) (Real.rpow_nonneg hD _)
     · have hz := hg.mellinLogDerivativeIterate_eq_zero_of_not_mem σ p hv
       simp only [dfiVoronoiMellinKernel, hz, mul_zero, norm_zero]
-      positivity
+      exact mul_nonneg (Real.rpow_nonneg hD _)
+        (mul_nonneg hA (pow_nonneg (by positivity) p))
   simpa only [D] using hg.mellin_line_bound_of_kernel_bounds_order σ p
     (mul_nonneg (Real.rpow_nonneg hD _) hA)
     (mul_nonneg (Real.rpow_nonneg hD _)
+      (mul_nonneg hA (pow_nonneg (by positivity) p)))
+    hK₀ hKp
+
+/-- Sharp arbitrary-order Mellin decay on a nonpositive vertical line.
+
+Unlike `mellin_line_bound_of_physical_profile_order`, this theorem keeps the
+direction of the real power on the support.  When `σ ≤ 0` and
+`x ∈ [lower, upper]`, the Mellin weight satisfies `x ^ σ ≤ lower ^ σ`.
+This is the scale-sensitive estimate needed after the left contour shift in
+DFI equation (29); replacing it by a symmetric `D ^ |σ|` bound loses the
+negative power of the dyadic scale. -/
+theorem DFIVoronoiTestFunction.mellin_line_bound_of_physical_profile_order_of_nonpos
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) (σ : ℝ) (p : ℕ)
+    (hσ : σ ≤ 0) {A B : ℝ} (hA : 0 ≤ A) (hB : 0 ≤ B)
+    (hDeriv : ∀ j ≤ p, ∀ x : ℝ,
+      ‖iteratedDeriv j g x‖ ≤ A * B ^ j) :
+    ∀ u : ℝ,
+      (1 + |u|) ^ p *
+        ‖mellin g ((σ : ℂ) + (u : ℂ) * I)‖ ≤
+      (1 + 2 * Real.pi) ^ p *
+        ((2 : ℝ) ^ p *
+          ((-Real.log hg.lower) - (-Real.log hg.upper)) *
+          (hg.lower ^ σ * A +
+            hg.lower ^ σ *
+              (A * (|σ| + (p : ℝ) + hg.upper * B) ^ p))) := by
+  have hUpper : 0 ≤ hg.upper :=
+    hg.lower_pos.le.trans hg.lower_le_upper
+  have kernelWeightBound (v : ℝ)
+      (hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper) :
+      Real.exp (-σ * v) ≤ hg.lower ^ σ := by
+    have hRewrite : Real.exp (-σ * v) = Real.exp (-v) ^ σ := by
+      rw [show -σ * v = (-v) * σ by ring, Real.exp_mul]
+    rw [hRewrite]
+    exact Real.rpow_le_rpow_of_nonpos hg.lower_pos hv.1 hσ
+  have hK₀ : ∀ v : ℝ,
+      ‖iteratedDeriv 0 (dfiVoronoiMellinKernel σ g) v‖ ≤
+        hg.lower ^ σ * A := by
+    intro v
+    rw [iteratedDeriv_dfiVoronoiMellinKernel hg.smooth 0 v]
+    by_cases hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper
+    · unfold dfiVoronoiMellinKernel
+      rw [norm_mul, Complex.norm_real,
+        Real.norm_of_nonneg (Real.exp_pos _).le]
+      simp only [dfiMellinLogDerivativeIterate_zero]
+      calc
+        Real.exp (-σ * v) * ‖g (Real.exp (-v))‖ ≤
+            hg.lower ^ σ * (A * B ^ 0) := by
+          exact mul_le_mul (kernelWeightBound v hv)
+            (hDeriv 0 (Nat.zero_le p) (Real.exp (-v)))
+            (norm_nonneg _) (Real.rpow_nonneg hg.lower_pos.le _)
+        _ = hg.lower ^ σ * A := by ring
+    · have hz := hg.mellinLogDerivativeIterate_eq_zero_of_not_mem σ 0 hv
+      simp only [dfiVoronoiMellinKernel, hz, mul_zero, norm_zero]
+      exact mul_nonneg (Real.rpow_nonneg hg.lower_pos.le _) hA
+  have hKp : ∀ v : ℝ,
+      ‖iteratedDeriv p (dfiVoronoiMellinKernel σ g) v‖ ≤
+        hg.lower ^ σ *
+          (A * (|σ| + (p : ℝ) + hg.upper * B) ^ p) := by
+    intro v
+    rw [iteratedDeriv_dfiVoronoiMellinKernel hg.smooth p v]
+    by_cases hv : Real.exp (-v) ∈ Set.Icc hg.lower hg.upper
+    · unfold dfiVoronoiMellinKernel
+      rw [norm_mul, Complex.norm_real,
+        Real.norm_of_nonneg (Real.exp_pos _).le]
+      have hx : |Real.exp (-v)| ≤ hg.upper := by
+        rw [abs_of_pos (Real.exp_pos _)]
+        exact hv.2
+      have hPhysical :=
+        norm_iteratedDeriv_dfiMellinLogDerivativeIterate_le
+          (σ := σ) (A := A) (B := B) (D := hg.upper) (p := p) hg.smooth
+          hB hUpper hDeriv p 0 (by omega) (Real.exp (-v)) hx
+      exact mul_le_mul (kernelWeightBound v hv) (by simpa using hPhysical)
+        (norm_nonneg _) (Real.rpow_nonneg hg.lower_pos.le _)
+    · have hz := hg.mellinLogDerivativeIterate_eq_zero_of_not_mem σ p hv
+      simp only [dfiVoronoiMellinKernel, hz, mul_zero, norm_zero]
+      exact mul_nonneg (Real.rpow_nonneg hg.lower_pos.le _)
+        (mul_nonneg hA (pow_nonneg (by positivity) p))
+  exact hg.mellin_line_bound_of_kernel_bounds_order σ p
+    (mul_nonneg (Real.rpow_nonneg hg.lower_pos.le _) hA)
+    (mul_nonneg (Real.rpow_nonneg hg.lower_pos.le _)
       (mul_nonneg hA (pow_nonneg (by positivity) p)))
     hK₀ hKp
 

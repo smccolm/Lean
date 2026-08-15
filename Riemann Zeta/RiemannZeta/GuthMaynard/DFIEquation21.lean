@@ -104,6 +104,19 @@ theorem dfiMixedDeriv_eq_partialXY
   funext x'
   simpa using (dfiPartialY_apply j hf x' y).symm
 
+/-- Every mixed derivative of a smooth two-variable weight is again smooth
+as a function on the product. -/
+theorem contDiff_uncurry_dfiMixedDeriv
+    {f : ℝ → ℝ → ℂ} (hf : ContDiff ℝ ∞ (Function.uncurry f))
+    (i j : ℕ) :
+    ContDiff ℝ ∞ (Function.uncurry (dfiMixedDeriv i j f)) := by
+  have heq : Function.uncurry (dfiMixedDeriv i j f) =
+      dfiPartialX i (dfiPartialY j (Function.uncurry f)) := by
+    funext p
+    exact dfiMixedDeriv_eq_partialXY hf i j p.1 p.2
+  rw [heq]
+  exact contDiff_dfiPartialX i (contDiff_dfiPartialY j hf)
+
 theorem support_dfiMixedDeriv_subset_tsupport
     {f : ℝ → ℝ → ℂ} (hf : ContDiff ℝ ∞ (Function.uncurry f)) (i j : ℕ) :
     Function.support (Function.uncurry (dfiMixedDeriv i j f)) ⊆
@@ -375,6 +388,31 @@ structure DFIRedundantCutoff (φ : ℝ → ℂ) (U : ℝ) : Prop where
   derivativeBound : ∀ k : ℕ, ∃ C : ℝ, 0 < C ∧
     ∀ z : ℝ, ‖iteratedDeriv k φ z‖ ≤ C * U⁻¹ ^ k
 
+/-- Explicit equation-(21) cutoff derivative constants.  A uniform source
+family fixes `D` before varying `U`; this prevents a scale-dependent
+existential constant from masquerading as DFI's implicit constant. -/
+structure DFIRedundantCutoffProfile {φ : ℝ → ℂ} {U : ℝ}
+    (hφ : DFIRedundantCutoff φ U) (D : ℕ → ℝ) : Prop where
+  positive : ∀ k, 0 < D k
+  bound : ∀ k z, ‖iteratedDeriv k φ z‖ ≤ D k * U⁻¹ ^ k
+
+theorem DFIRedundantCutoff.exists_profile
+    {φ : ℝ → ℂ} {U : ℝ} (hφ : DFIRedundantCutoff φ U) :
+    ∃ D : ℕ → ℝ, DFIRedundantCutoffProfile hφ D := by
+  choose D hD hbound using hφ.derivativeBound
+  exact ⟨D, hD, hbound⟩
+
+noncomputable def dfiCutoffFiniteConstant (D : ℕ → ℝ) (J : ℕ) : ℝ :=
+  ∑ k ∈ Finset.range (J + 1), D k
+
+theorem DFIRedundantCutoffProfile.le_finiteConstant
+    {φ : ℝ → ℂ} {U : ℝ} {hφ : DFIRedundantCutoff φ U}
+    {D : ℕ → ℝ} (hD : DFIRedundantCutoffProfile hφ D)
+    {k J : ℕ} (hk : k ≤ J) :
+    D k ≤ dfiCutoffFiniteConstant D J := by
+  unfold dfiCutoffFiniteConstant
+  exact Finset.single_le_sum (fun l _hl ↦ (hD.positive l).le) (by simp [hk])
+
 theorem DFIEquation2.localized_derivative_bound
     {f : ℝ → ℝ → ℂ} {P X Y : ℝ} (hf : DFIEquation2 f P X Y)
     (hbox : DFILocalizedBox f X Y) (r s : ℕ) :
@@ -444,6 +482,103 @@ theorem DFIEquation2.localized_derivative_bound
     _ = C * (P / X) ^ r * (P / Y) ^ s := by
       rw [pow_add, div_pow, div_pow]
       field_simp [hX.ne', hY.ne']
+
+/-- Profile-explicit version of the localized derivative estimate.  Unlike
+`DFIEquation2.localized_derivative_bound`, its constant is the actual
+equation-(2) profile entry, so it remains uniform when `P`, `X`, `Y`, and
+the test function vary through a source family with a common profile. -/
+theorem DFIEquation2Profile.localized_derivative_bound
+    {f : ℝ → ℝ → ℂ} {P X Y : ℝ} {C : ℕ → ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hC : DFIEquation2Profile f P X Y C)
+    (hbox : DFILocalizedBox f X Y) (r s : ℕ) (x y : ℝ) :
+    ‖dfiMixedDeriv r s f x y‖ ≤
+      C r s * (P / X) ^ r * (P / Y) ^ s := by
+  by_cases hzero : dfiMixedDeriv r s f x y = 0
+  · rw [hzero, norm_zero]
+    exact mul_nonneg
+      (mul_nonneg (hC.positive r s).le (pow_nonneg (div_nonneg
+        (zero_le_one.trans hf.one_le_P) (zero_le_one.trans hf.one_le_X)) _))
+      (pow_nonneg (div_nonneg
+        (zero_le_one.trans hf.one_le_P) (zero_le_one.trans hf.one_le_Y)) _)
+  have hmemSupport : (x, y) ∈
+      Function.support (Function.uncurry (dfiMixedDeriv r s f)) := hzero
+  have hts : tsupport (Function.uncurry f) ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
+    closure_minimal hbox.support_subset (isClosed_Icc.prod isClosed_Icc)
+  have hxy := hts
+    (support_dfiMixedDeriv_subset_tsupport hf.smooth r s hmemSupport)
+  have hxX : X ≤ x := hxy.1.1
+  have hyY : Y ≤ y := hxy.2.1
+  have hX : 0 < X := lt_of_lt_of_le zero_lt_one hf.one_le_X
+  have hY : 0 < Y := lt_of_lt_of_le zero_lt_one hf.one_le_Y
+  have hx : 0 < x := hX.trans_le hxX
+  have hy : 0 < y := hY.trans_le hyY
+  have hdecX0 : 0 ≤ (1 + x / X)⁻¹ := by positivity
+  have hdecY0 : 0 ≤ (1 + y / Y)⁻¹ := by positivity
+  have hdecX1 : (1 + x / X)⁻¹ ≤ 1 := by
+    exact inv_le_one_of_one_le₀ (by
+      have : 0 ≤ x / X := div_nonneg hx.le hX.le
+      linarith)
+  have hdecY1 : (1 + y / Y)⁻¹ ≤ 1 := by
+    exact inv_le_one_of_one_le₀ (by
+      have : 0 ≤ y / Y := div_nonneg hy.le hY.le
+      linarith)
+  have hC0 : 0 ≤ C r s := (hC.positive r s).le
+  have hP : 0 ≤ P := zero_le_one.trans hf.one_le_P
+  have hraw : x ^ r * y ^ s * ‖dfiMixedDeriv r s f x y‖ ≤
+      C r s * P ^ (r + s) := by
+    calc
+      x ^ r * y ^ s * ‖dfiMixedDeriv r s f x y‖ =
+          |x| ^ r * |y| ^ s * ‖dfiMixedDeriv r s f x y‖ := by
+            rw [abs_of_pos hx, abs_of_pos hy]
+      _ ≤ C r s * (1 + x / X)⁻¹ * (1 + y / Y)⁻¹ * P ^ (r + s) :=
+        hC.bound r s x y hx hy
+      _ ≤ C r s * 1 * 1 * P ^ (r + s) := by gcongr
+      _ = C r s * P ^ (r + s) := by ring
+  have hxpow : 0 < x ^ r := pow_pos hx _
+  have hypow : 0 < y ^ s := pow_pos hy _
+  have hXpow : 0 < X ^ r := pow_pos hX _
+  have hYpow : 0 < Y ^ s := pow_pos hY _
+  have hdivide : ‖dfiMixedDeriv r s f x y‖ ≤
+      C r s * P ^ (r + s) / (x ^ r * y ^ s) := by
+    apply (le_div_iff₀ (mul_pos hxpow hypow)).2
+    nlinarith [hraw]
+  have hdenom : X ^ r * Y ^ s ≤ x ^ r * y ^ s := by
+    exact mul_le_mul (pow_le_pow_left₀ hX.le hxX r)
+      (pow_le_pow_left₀ hY.le hyY s) (pow_nonneg hY.le _)
+      (pow_nonneg hx.le _)
+  calc
+    ‖dfiMixedDeriv r s f x y‖ ≤
+        C r s * P ^ (r + s) / (x ^ r * y ^ s) := hdivide
+    _ ≤ C r s * P ^ (r + s) / (X ^ r * Y ^ s) :=
+      div_le_div_of_nonneg_left
+        (mul_nonneg (hC.positive r s).le (pow_nonneg hP _))
+        (mul_pos hXpow hYpow) hdenom
+    _ = C r s * (P / X) ^ r * (P / Y) ^ s := by
+      rw [pow_add, div_pow, div_pow]
+      field_simp [hX.ne', hY.ne']
+
+/-- A single explicit equation-(2) profile constant controls every mixed
+derivative through the requested rectangle of orders. -/
+theorem DFIEquation2Profile.uniform_localized_derivative_bound
+    {f : ℝ → ℝ → ℂ} {P X Y : ℝ} {C : ℕ → ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hC : DFIEquation2Profile f P X Y C)
+    (hbox : DFILocalizedBox f X Y) {i j r s : ℕ}
+    (hr : r ≤ i) (hs : s ≤ j) (x y : ℝ) :
+    ‖dfiMixedDeriv r s f x y‖ ≤
+      dfiEquation2FiniteConstant C (max i j) *
+        (P / X) ^ r * (P / Y) ^ s := by
+  have hrs : C r s ≤ dfiEquation2FiniteConstant C (max i j) :=
+    hC.le_finiteConstant (hr.trans (le_max_left _ _))
+      (hs.trans (le_max_right _ _))
+  exact (hC.localized_derivative_bound hf hbox r s x y).trans (by
+    have hPX : 0 ≤ (P / X) ^ r := pow_nonneg
+      (div_nonneg (zero_le_one.trans hf.one_le_P)
+        (zero_le_one.trans hf.one_le_X)) _
+    have hPY : 0 ≤ (P / Y) ^ s := pow_nonneg
+      (div_nonneg (zero_le_one.trans hf.one_le_P)
+        (zero_le_one.trans hf.one_le_Y)) _
+    gcongr)
 
 theorem DFIEquation2.exists_uniform_localized_derivative_bound
     {f : ℝ → ℝ → ℂ} {P X Y : ℝ} (hf : DFIEquation2 f P X Y)
@@ -654,6 +789,101 @@ theorem dfiEquation21_uniform_in_shift
           (mul_nonneg hK (pow_nonneg htwoNonneg _))
       _ = C * U⁻¹ ^ (i + j) := by
         dsimp [C]
+        rw [mul_pow, mul_pow, pow_add, pow_add]
+        ring
+
+/-- Scale-uniform equation-(21) estimate with every implicit derivative
+constant replaced by a finite, explicit source profile aggregate.  This is
+the form needed by the published DFI error theorem: its displayed constant
+does not arise from an existential chosen after `P`, `X`, `Y`, or `U`. -/
+theorem dfiEquation21_of_profiles_uniform_in_shift
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (i j : ℕ) :
+    ∀ (h x y : ℝ),
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        (dfiEquation2FiniteConstant Cf (max i j) *
+            dfiCutoffFiniteConstant Cφ (i + j) * 2 ^ (i + j)) *
+          (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j ∧
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        (dfiEquation2FiniteConstant Cf (max i j) *
+            dfiCutoffFiniteConstant Cφ (i + j) * 2 ^ (i + j)) *
+          U⁻¹ ^ (i + j) := by
+  let A := dfiEquation2FiniteConstant Cf (max i j)
+  let B := dfiCutoffFiniteConstant Cφ (i + j)
+  have hA : 0 < A := hfC.finiteConstant_pos (max i j)
+  have hB : 0 < B := by
+    dsimp [B, dfiCutoffFiniteConstant]
+    exact Finset.sum_pos (fun k _hk ↦ hφC.positive k) ⟨0, by simp⟩
+  have hfb : ∀ r ∈ Finset.range (i + 1),
+      ∀ s ∈ Finset.range (j + 1), ∀ x y,
+        ‖dfiMixedDeriv r s f x y‖ ≤
+          A * (P / X) ^ r * (P / Y) ^ s := by
+    intro r hr s hs x y
+    exact hfC.uniform_localized_derivative_bound hf hbox
+      (Finset.mem_range_succ_iff.mp hr) (Finset.mem_range_succ_iff.mp hs) x y
+  have hφb : ∀ k ≤ i + j, ∀ z,
+      ‖iteratedDeriv k φ z‖ ≤ B * U⁻¹ ^ k := by
+    intro k hk z
+    exact (hφC.bound k z).trans
+      (mul_le_mul_of_nonneg_right (hφC.le_finiteConstant hk)
+        (pow_nonneg (inv_nonneg.mpr hφ.U_pos.le) _))
+  have hP : 0 < P := zero_lt_one.trans_le hf.one_le_P
+  have hX : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hUX : U * P ≤ X := by
+    calc
+      U * P ≤ (P⁻¹ * min X Y) * P :=
+        mul_le_mul_of_nonneg_right hscale hP.le
+      _ = min X Y := by field_simp [hP.ne']
+      _ ≤ X := min_le_left _ _
+  have hUY : U * P ≤ Y := by
+    calc
+      U * P ≤ (P⁻¹ * min X Y) * P :=
+        mul_le_mul_of_nonneg_right hscale hP.le
+      _ = min X Y := by field_simp [hP.ne']
+      _ ≤ Y := min_le_right _ _
+  have hPX : P / X ≤ U⁻¹ := by
+    rw [div_le_iff₀ hX, ← div_eq_inv_mul, le_div_iff₀ hφ.U_pos]
+    nlinarith [hUX]
+  have hPY : P / Y ≤ U⁻¹ := by
+    rw [div_le_iff₀ hY, ← div_eq_inv_mul, le_div_iff₀ hφ.U_pos]
+    nlinarith [hUY]
+  have hUinv : 0 ≤ U⁻¹ := inv_nonneg.mpr hφ.U_pos.le
+  have hfactorX : 0 ≤ U⁻¹ + P / X :=
+    add_nonneg hUinv (div_nonneg hP.le hX.le)
+  have hfactorY : 0 ≤ U⁻¹ + P / Y :=
+    add_nonneg hUinv (div_nonneg hP.le hY.le)
+  have htwoX : U⁻¹ + P / X ≤ 2 * U⁻¹ := by linarith
+  have htwoY : U⁻¹ + P / Y ≤ 2 * U⁻¹ := by linarith
+  intro h x y
+  have hbase := norm_dfiMixedDeriv_localized_le hf.smooth hφ.smooth
+    (zero_le_one.trans hf.one_le_P) hX hY hA.le i j hfb hφb h x y
+  have hbase' :
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+        A * B * (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j := by
+    simpa [add_comm] using hbase
+  constructor
+  · exact hbase'.trans (by
+      have hone : (1 : ℝ) ≤ 2 ^ (i + j) := one_le_pow₀ (by norm_num)
+      have hAB : 0 ≤ A * B := mul_nonneg hA.le hB.le
+      have hABC : A * B ≤ A * B * 2 ^ (i + j) :=
+        le_mul_of_one_le_right hAB hone
+      dsimp only [A, B]
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right hABC (pow_nonneg hfactorX _))
+        (pow_nonneg hfactorY _))
+  · calc
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight f φ h) x y‖ ≤
+          A * B * (U⁻¹ + P / X) ^ i * (U⁻¹ + P / Y) ^ j := hbase'
+      _ ≤ A * B * (2 * U⁻¹) ^ i * (2 * U⁻¹) ^ j := by gcongr
+      _ = (dfiEquation2FiniteConstant Cf (max i j) *
+            dfiCutoffFiniteConstant Cφ (i + j) * 2 ^ (i + j)) *
+          U⁻¹ ^ (i + j) := by
+        dsimp [A, B]
         rw [mul_pow, mul_pow, pow_add, pow_add]
         ring
 

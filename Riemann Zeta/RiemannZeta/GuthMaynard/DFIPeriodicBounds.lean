@@ -768,10 +768,10 @@ theorem exists_norm_Gamma_mul_voronoiExp_shifted_strip_bound (k : ℕ) :
 
 theorem exists_realGamma_bound_quarter_three_halves :
     ∃ C : ℝ, 0 < C ∧ ∀ a : ℝ,
-      1 / 4 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
-  have hne : (Set.Icc (1 / 4 : ℝ) (3 / 2)).Nonempty :=
+      3 / 16 ≤ a → a ≤ 3 / 2 → Real.Gamma a ≤ C := by
+  have hne : (Set.Icc (3 / 16 : ℝ) (3 / 2)).Nonempty :=
     Set.nonempty_Icc.mpr (by norm_num)
-  have hcont : ContinuousOn Real.Gamma (Set.Icc (1 / 4 : ℝ) (3 / 2)) :=
+  have hcont : ContinuousOn Real.Gamma (Set.Icc (3 / 16 : ℝ) (3 / 2)) :=
     Real.differentiableOn_Gamma_Ioi.continuousOn.mono (by
       intro a ha
       exact lt_of_lt_of_le (by norm_num) ha.1)
@@ -784,7 +784,7 @@ theorem exists_realGamma_bound_quarter_three_halves :
 
 theorem exists_norm_Gamma_mul_voronoiExp_strip_bound :
     ∃ C : ℝ, 0 < C ∧ ∀ (a : ℝ),
-      1 / 4 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
+      3 / 16 ≤ a → a ≤ 3 / 2 → ∀ u : ℝ,
       ‖Complex.Gamma ((a : ℂ) - (u : ℂ) * I) *
           Complex.exp (Real.pi * I *
             ((a : ℂ) - (u : ℂ) * I) / 2)‖ ≤ C * (1 + |u|) ∧

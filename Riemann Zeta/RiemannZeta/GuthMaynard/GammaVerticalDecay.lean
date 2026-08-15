@@ -162,6 +162,115 @@ theorem appendixC_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
   apply (le_div_iff₀ (pow_pos htPos n)).2
   simpa [mul_comm] using appendixC_Gamma_vertical_decay n hn haLower haUpper
 
+/-- Gamma is continuous on every horizontal line in the full strip used by
+the DFI retained contour. -/
+theorem continuous_appendixC_Gamma_horizontal {a : ℝ}
+    (haPos : 0 < a) :
+    Continuous (fun t : ℝ => Complex.Gamma ((a : ℂ) + (t : ℂ) * I)) := by
+  apply continuous_iff_continuousAt.2
+  intro t
+  have hNoPole : ∀ m : ℕ, (a : ℂ) + (t : ℂ) * I ≠ -m := by
+    intro m hm
+    have hRe := congrArg Complex.re hm
+    simp only [add_re, ofReal_re, mul_re, I_re, ofReal_im, I_im, mul_zero,
+      zero_mul, sub_self, add_zero, neg_re, natCast_re] at hRe
+    have hmNonneg : (0 : ℝ) ≤ m := Nat.cast_nonneg m
+    linarith
+  have hInner : ContinuousAt (fun u : ℝ => (a : ℂ) + (u : ℂ) * I) t := by
+    fun_prop
+  exact ContinuousAt.comp'
+    (Complex.differentiableAt_Gamma _ hNoPole).continuousAt hInner
+
+set_option maxHeartbeats 800000 in
+/-- The square of the Gamma norm is integrable on each retained-contour
+horizontal line.  This is the absolute convergence used by the `K₀`
+Voronoi branch before the physical test-function integral is inserted. -/
+theorem integrable_sq_norm_appendixC_Gamma_horizontal {a : ℝ}
+    (haPos : 0 < a) (haUpper : a ≤ 1 / 2) :
+    MeasureTheory.Integrable (fun t : ℝ =>
+      ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2) := by
+  let f : ℝ → ℝ := fun t =>
+    ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2
+  let g : ℝ → ℝ := fun t => 36 * t ^ (-(6 : ℝ))
+  have haLower : -(1 / 2 : ℝ) ≤ a := by linarith
+  have hCont : Continuous f := by
+    dsimp [f]
+    exact (continuous_appendixC_Gamma_horizontal haPos).norm.pow 2
+  have hGPos : MeasureTheory.IntegrableOn g (Set.Ioi (1 : ℝ)) := by
+    exact (integrableOn_Ioi_rpow_of_lt (a := -(6 : ℝ)) (by norm_num)
+      (by norm_num)).const_mul 36
+  have hPos : MeasureTheory.IntegrableOn f (Set.Ioi (1 : ℝ)) := by
+    apply MeasureTheory.Integrable.mono' hGPos hCont.aestronglyMeasurable
+    filter_upwards [MeasureTheory.ae_restrict_mem measurableSet_Ioi] with t ht
+    have htPos : 0 < t := lt_trans zero_lt_one ht
+    have htAbs : 1 ≤ |t| := by simpa [abs_of_pos htPos] using ht.le
+    have hDecay := appendixC_Gamma_norm_le_inv_pow 3 (by norm_num)
+      haLower haUpper htAbs
+    have hSq :
+        ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2 ≤
+          (6 / |t| ^ 3) ^ 2 :=
+      pow_le_pow_left₀ (norm_nonneg _) (by norm_num at hDecay ⊢; exact hDecay) 2
+    have hEq : (6 / |t| ^ 3) ^ 2 = g t := by
+      dsimp [g]
+      rw [abs_of_pos htPos]
+      simp [div_eq_mul_inv, Real.rpow_neg htPos.le]
+      ring
+    rw [← hEq]
+    change |f t| ≤ (6 / |t| ^ 3) ^ 2
+    rw [abs_of_nonneg (by dsimp [f]; positivity)]
+    exact hSq
+  have hGNeg : MeasureTheory.IntegrableOn (fun t : ℝ => g (-t))
+      (Set.Iio (-1 : ℝ)) := by
+    have hSource : MeasureTheory.IntegrableOn g (Set.Ioi (-(-1 : ℝ))) := by
+      simpa using hGPos
+    exact hSource.comp_neg_Iio
+  have hNeg : MeasureTheory.IntegrableOn f (Set.Iio (-1 : ℝ)) := by
+    apply MeasureTheory.Integrable.mono' hGNeg hCont.aestronglyMeasurable
+    filter_upwards [MeasureTheory.ae_restrict_mem measurableSet_Iio] with t ht
+    change t < -1 at ht
+    have htNeg : t < 0 := by linarith
+    have htAbs : 1 ≤ |t| := by rw [abs_of_neg htNeg]; linarith
+    have hDecay := appendixC_Gamma_norm_le_inv_pow 3 (by norm_num)
+      haLower haUpper htAbs
+    have hSq :
+        ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2 ≤
+          (6 / |t| ^ 3) ^ 2 :=
+      pow_le_pow_left₀ (norm_nonneg _) (by norm_num at hDecay ⊢; exact hDecay) 2
+    have hEq : (6 / |t| ^ 3) ^ 2 = g (-t) := by
+      dsimp [g]
+      rw [abs_of_neg htNeg]
+      have hnegPos : 0 < -t := by linarith
+      simp [div_eq_mul_inv, Real.rpow_neg hnegPos.le]
+      ring
+    rw [← hEq]
+    change |f t| ≤ (6 / |t| ^ 3) ^ 2
+    rw [abs_of_nonneg (by dsimp [f]; positivity)]
+    exact hSq
+  have hMid : MeasureTheory.IntegrableOn f (Set.Icc (-1 : ℝ) 1) :=
+    hCont.continuousOn.integrableOn_Icc
+  have hLeft : MeasureTheory.IntegrableOn f (Set.Iic (1 : ℝ)) := by
+    have hNegClosed : MeasureTheory.IntegrableOn f (Set.Iic (-1 : ℝ)) :=
+      (integrableOn_Iic_iff_integrableOn_Iio).mpr hNeg
+    have hUnion := MeasureTheory.integrableOn_union.2 ⟨hNegClosed, hMid⟩
+    have hSet : Set.Iic (-1 : ℝ) ∪ Set.Icc (-1 : ℝ) 1 = Set.Iic 1 := by
+      ext t
+      simp only [Set.mem_union, Set.mem_Iic, Set.mem_Icc]
+      constructor
+      · intro ht
+        rcases ht with ht | ht <;> linarith
+      · intro ht
+        by_cases ht' : t ≤ -1
+        · exact Or.inl ht'
+        · exact Or.inr ⟨by linarith, ht⟩
+    rwa [hSet] at hUnion
+  rw [← MeasureTheory.integrableOn_univ]
+  have hAll := MeasureTheory.integrableOn_union.2 ⟨hLeft, hPos⟩
+  have hSet : Set.Iic (1 : ℝ) ∪ Set.Ioi (1 : ℝ) = Set.univ := by
+    ext t
+    simp only [Set.mem_union, Set.mem_Iic, Set.mem_Ioi, Set.mem_univ, iff_true]
+    exact le_or_gt t 1
+  rwa [hSet] at hAll
+
 /-- Division form of `typeII_Gamma_vertical_decay`, convenient for tail estimates. -/
 theorem typeII_Gamma_norm_le_inv_pow (n : ℕ) (hn : 3 ≤ n)
     {a t : ℝ} (haLower : -(1 / 2 : ℝ) ≤ a) (haUpper : a ≤ -(1 / 5 : ℝ))

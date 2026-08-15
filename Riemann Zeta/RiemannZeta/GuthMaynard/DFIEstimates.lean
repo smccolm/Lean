@@ -24,6 +24,12 @@ theorem dfiEquation13 {Q : ℝ} (w : DFIDeltaWeight Q) (j : ℕ) :
       ‖iteratedDeriv j w.toFun u‖ ≤ C * (Q ^ (j + 1))⁻¹ :=
   w.derivativeBound j
 
+/-- Equation (13) with its scale-independent source profile exposed. -/
+theorem dfiEquation13_of_profile {Q : ℝ} {w : DFIDeltaWeight Q}
+    {D : ℕ → ℝ} (hD : DFIDeltaWeightProfile w D) (j : ℕ) (u : ℝ) :
+    ‖iteratedDeriv j w.toFun u‖ ≤ D j * (Q ^ (j + 1))⁻¹ :=
+  hD.bound j u
+
 /-- The normalized positive lattice sum is the finite sum used by the
 Euler--Maclaurin formula. -/
 theorem sum_Ioc_dfiWeight_eq_one {Q : ℝ} (w : DFIDeltaWeight Q) :
@@ -155,6 +161,29 @@ theorem integral_abs_iteratedDeriv_dfiWeight_le
     (∫ u : ℝ, |iteratedDeriv j w.toFun u|) ≤
         (2 * Q - -(2 * Q)) * (C * (Q ^ (j + 1))⁻¹) := h
     _ = 4 * C * Q * (Q ^ (j + 1))⁻¹ := by ring
+
+/-- Integrated equation (13) with the same explicit profile entry as the
+pointwise estimate. -/
+theorem integral_abs_iteratedDeriv_dfiWeight_le_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) (j : ℕ) :
+    (∫ u : ℝ, |iteratedDeriv j w.toFun u|) ≤
+      4 * D j * Q * (Q ^ (j + 1))⁻¹ := by
+  have hcont : Continuous (iteratedDeriv j w.toFun) :=
+    w.smooth.continuous_iteratedDeriv j
+      (WithTop.coe_le_coe.mpr (le_of_lt (ENat.coe_lt_top j)))
+  have hbound : ∀ u : ℝ,
+      |iteratedDeriv j w.toFun u| ≤ D j * (Q ^ (j + 1))⁻¹ := by
+    intro u
+    simpa [Real.norm_eq_abs] using hD.bound j u
+  have h := integral_abs_le_interval_length_mul
+    (iteratedDeriv j w.toFun) hcont
+    (show -(2 * Q) ≤ 2 * Q by nlinarith [w.Q_pos.le])
+    (support_iteratedDeriv_dfiWeight_subset w j) hbound
+  calc
+    (∫ u : ℝ, |iteratedDeriv j w.toFun u|) ≤
+        (2 * Q - -(2 * Q)) * (D j * (Q ^ (j + 1))⁻¹) := h
+    _ = 4 * D j * Q * (Q ^ (j + 1))⁻¹ := by ring
 
 /-- Every derivative of the removable quotient `w(r)/r` is supported in
 the same symmetric cutoff interval. -/

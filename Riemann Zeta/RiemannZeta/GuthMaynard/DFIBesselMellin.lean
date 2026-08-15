@@ -493,6 +493,60 @@ theorem dfiBesselK0_ofReal_eq_integral {x : ℝ} :
   push_cast
   ring
 
+/-- Absolute Mellin convergence of the literal Macdonald kernel throughout
+its natural right half-plane.  This is extracted from the joint integral
+used in the Fubini evaluation, so it records convergence independently of
+the later closed-form calculation. -/
+theorem mellinConvergent_dfiBesselK0
+    {s : ℂ} (hs : 0 < s.re) :
+    MellinConvergent (fun x : ℝ => (dfiBesselK0 x : ℂ)) s := by
+  let F : ℝ × ℝ → ℂ := fun p =>
+    (p.1 : ℂ) ^ (s - 1) * Complex.exp (-(p.1 * Real.cosh p.2))
+  have hjointOn : IntegrableOn F (Set.Ioi 0 ×ˢ Set.Ioi 0) :=
+    integrableOn_dfiBesselK0_mellin_joint hs
+  have hjoint : Integrable F
+      ((volume.restrict (Set.Ioi 0)).prod
+        (volume.restrict (Set.Ioi 0))) := by
+    simpa only [F, Measure.prod_restrict] using hjointOn
+  have hIntegrated : IntegrableOn
+      (fun x : ℝ => ∫ t : ℝ in Set.Ioi 0, F (x, t))
+      (Set.Ioi 0) := hjoint.integral_prod_left
+  unfold MellinConvergent
+  refine hIntegrated.congr_fun ?_ measurableSet_Ioi
+  intro x _hx
+  change (∫ t : ℝ in Set.Ioi 0, F (x, t)) =
+    (x : ℂ) ^ (s - 1) • (dfiBesselK0 x : ℂ)
+  rw [dfiBesselK0_ofReal_eq_integral]
+  simp only [smul_eq_mul]
+  rw [
+    ← MeasureTheory.integral_const_mul]
+
+/-- Mellin convergence after the square-root dilation appearing in DFI's
+literal `K₀(4π√(nx)/q)` transform. -/
+theorem mellinConvergent_dfiBesselK0_mul_sqrt
+    {A : ℝ} (hA : 0 < A) {s : ℂ} (hs : 0 < s.re) :
+    MellinConvergent
+      (fun x : ℝ => (dfiBesselK0 (A * Real.sqrt x) : ℂ)) s := by
+  have hbase : MellinConvergent
+      (fun y : ℝ => (dfiBesselK0 y : ℂ)) (2 * s) := by
+    apply mellinConvergent_dfiBesselK0
+    norm_num
+    linarith
+  have hscaled : MellinConvergent
+      (fun y : ℝ => (dfiBesselK0 (A * y) : ℂ)) (2 * s) :=
+    (MellinConvergent.comp_mul_left hA).2 hbase
+  have hscaled' : MellinConvergent
+      (fun y : ℝ => (dfiBesselK0 (A * y) : ℂ))
+        (s / ((1 / 2 : ℝ) : ℂ)) := by
+    convert hscaled using 1
+    norm_num
+    ring
+  have hroot := (MellinConvergent.comp_rpow
+    (f := fun y : ℝ => (dfiBesselK0 (A * y) : ℂ))
+    (s := s) (a := (1 / 2 : ℝ)) (by norm_num)).2
+      hscaled'
+  simpa only [Real.sqrt_eq_rpow] using hroot
+
 /-- Fubini evaluation of the Mellin transform of the positive DFI kernel,
 before simplifying the beta factor. -/
 theorem integral_cpow_mul_dfiBesselK0_Ioi_eq_beta
@@ -618,5 +672,42 @@ theorem integral_cpow_mul_dfiBesselK0_Ioi_eq
       dfiBesselK0MellinSymbol s := by
   rw [integral_cpow_mul_dfiBesselK0_Ioi_eq_beta hs,
     half_beta_mul_Gamma_eq_besselK0MellinSymbol hs]
+
+/-- Mellin transform of the square-root-scaled Macdonald kernel.  This is
+the exact change of variables required when DFI's literal kernel
+`K₀(A√x)` is compared with its Mellin--Barnes multiplier. -/
+theorem mellin_dfiBesselK0_mul_sqrt
+    {A : ℝ} (hA : 0 < A) {s : ℂ} (hs : 0 < s.re) :
+    mellin (fun x : ℝ => (dfiBesselK0 (A * Real.sqrt x) : ℂ)) s =
+      2 * (A : ℂ) ^ (-(2 * s)) * dfiBesselK0MellinSymbol (2 * s) := by
+  have hroot : (fun x : ℝ => (dfiBesselK0 (A * Real.sqrt x) : ℂ)) =
+      (fun x : ℝ => (dfiBesselK0 (A * x ^ (1 / 2 : ℝ)) : ℂ)) := by
+    funext x
+    rw [Real.sqrt_eq_rpow]
+  rw [hroot]
+  change mellin
+    (fun x : ℝ => (dfiBesselK0 (A * (x ^ (1 / 2 : ℝ))) : ℂ)) s = _
+  rw [mellin_comp_rpow
+    (fun y : ℝ => (dfiBesselK0 (A * y) : ℂ)) s (1 / 2 : ℝ)]
+  norm_num
+  norm_num [div_eq_mul_inv] at ⊢
+  have hmul : s * 2 = 2 * s := by ring
+  rw [hmul]
+  have hscale := mellin_comp_mul_left
+    (fun y : ℝ => (dfiBesselK0 y : ℂ)) (2 * s) hA
+  change 2 * mellin (fun y : ℝ => (dfiBesselK0 (A * y) : ℂ)) (2 * s) = _
+  rw [hscale]
+  have hs2 : 0 < (2 * s).re := by
+    have hre : (2 * s).re = 2 * s.re := by norm_num
+    rw [hre]
+    linarith
+  have hk : mellin (fun y : ℝ => (dfiBesselK0 y : ℂ)) (2 * s) =
+      dfiBesselK0MellinSymbol (2 * s) := by
+    unfold mellin
+    simpa only [smul_eq_mul] using
+      integral_cpow_mul_dfiBesselK0_Ioi_eq hs2
+  rw [hk]
+  change 2 * ((A : ℂ) ^ (-(2 * s)) * dfiBesselK0MellinSymbol (2 * s)) = _
+  ring
 
 end RiemannZeta.GuthMaynard

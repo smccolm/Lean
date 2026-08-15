@@ -54,6 +54,102 @@ theorem dfiReducedModulus_denominator_le (a q : ℕ) [NeZero q] :
   change q / a.gcd q ≤ q
   exact Nat.div_le_self q (a.gcd q)
 
+/-- If the source coefficients are coprime, the two gcd factors created by
+reducing `a/q` and `b/q` have product dividing `q`.  This is the arithmetic
+cancellation used in DFI equation (29); bounding the two gcds separately would
+introduce a spurious dependence on `a` and `b`. -/
+theorem gcd_mul_gcd_dvd_right_of_coprime
+    (a b q : ℕ) (hab : a.Coprime b) :
+    Nat.gcd a q * Nat.gcd b q ∣ q := by
+  simpa [Nat.gcd_comm] using
+    (hab.gcd_both q q).mul_dvd_of_dvd_of_dvd
+      (Nat.gcd_dvd_left q a) (Nat.gcd_dvd_left q b)
+
+/-- Exact inverse-square-root normalization of the reduced denominator.
+Unlike the convenient one-variable majorant below, this identity retains the
+gcd factor needed for the coprime two-variable cancellation in DFI. -/
+theorem dfiReducedModulus_denominator_rpow_neg_half_eq
+    (a q : ℕ) [NeZero q] :
+    ((dfiReducedModulus a q).denominator : ℝ) ^ (-(1 / 2 : ℝ)) =
+      Real.sqrt (Nat.gcd a q) / Real.sqrt q := by
+  let R := dfiReducedModulus a q
+  have hdenR : (0 : ℝ) < R.denominator := by exact_mod_cast R.denominator_pos
+  have hEq : Real.sqrt q = Real.sqrt R.gcd * Real.sqrt R.denominator := by
+    rw [← Real.sqrt_mul (Nat.cast_nonneg R.gcd)]
+    congr 1
+    exact_mod_cast R.denominator_reconstruct.symm
+  rw [Real.rpow_neg (Nat.cast_nonneg R.denominator), ← Real.sqrt_eq_rpow]
+  change (Real.sqrt R.denominator)⁻¹ = Real.sqrt R.gcd / Real.sqrt q
+  rw [hEq]
+  have hg : 0 < Real.sqrt R.gcd := Real.sqrt_pos.2 (by exact_mod_cast R.gcd_pos)
+  have hd : 0 < Real.sqrt R.denominator := Real.sqrt_pos.2 hdenR
+  field_simp
+
+/-- The inverse square root of a reduced denominator retains only the
+harmless numerator gcd.  This is the exact normalization used when the
+DFI equation-(29) transform bounds are combined with Weil's estimate. -/
+theorem dfiReducedModulus_denominator_rpow_neg_half_le
+    (a q : ℕ) [NeZero q] (ha : 0 < a) :
+    ((dfiReducedModulus a q).denominator : ℝ) ^ (-(1 / 2 : ℝ)) ≤
+      Real.sqrt a / Real.sqrt q := by
+  let R := dfiReducedModulus a q
+  have hq : 0 < q := NeZero.pos q
+  have hden : 0 < R.denominator := R.denominator_pos
+  have hg : R.gcd ≤ a := Nat.gcd_le_left q ha
+  have hrec : R.gcd * R.denominator = q := R.denominator_reconstruct
+  have hdenR : (0 : ℝ) < R.denominator := by exact_mod_cast hden
+  have hEq : Real.sqrt q = Real.sqrt R.gcd * Real.sqrt R.denominator := by
+    rw [← Real.sqrt_mul (Nat.cast_nonneg R.gcd)]
+    congr 1
+    exact_mod_cast hrec.symm
+  rw [Real.rpow_neg (Nat.cast_nonneg R.denominator), ← Real.sqrt_eq_rpow]
+  have hsqrtg : Real.sqrt R.gcd ≤ Real.sqrt a := by
+    exact Real.sqrt_le_sqrt (by exact_mod_cast hg)
+  have hsqrtDen : 0 < Real.sqrt R.denominator := Real.sqrt_pos.2 hdenR
+  calc
+    (Real.sqrt R.denominator)⁻¹ =
+        Real.sqrt R.gcd / (Real.sqrt R.gcd * Real.sqrt R.denominator) := by
+      by_cases hg0 : R.gcd = 0
+      · have : q = 0 := by simpa [hg0] using hrec.symm
+        exact (NeZero.ne q this).elim
+      field_simp
+    _ ≤ Real.sqrt a / (Real.sqrt R.gcd * Real.sqrt R.denominator) := by
+      gcongr
+    _ = Real.sqrt a / Real.sqrt q := by rw [← hEq]
+
+/-- First-power companion to
+`dfiReducedModulus_denominator_rpow_neg_half_le`. -/
+theorem dfiReducedModulus_denominator_inv_le
+    (a q : ℕ) [NeZero q] (ha : 0 < a) :
+    (((dfiReducedModulus a q).denominator : ℝ)⁻¹) ≤ (a : ℝ) / q := by
+  let R := dfiReducedModulus a q
+  have hq : 0 < q := NeZero.pos q
+  have hg : R.gcd ≤ a := Nat.gcd_le_left q ha
+  have hrec : R.gcd * R.denominator = q := R.denominator_reconstruct
+  have hgR : (0 : ℝ) < R.gcd := by exact_mod_cast R.gcd_pos
+  have hEq : (q : ℝ) = R.gcd * R.denominator := by exact_mod_cast hrec.symm
+  calc
+    ((R.denominator : ℝ))⁻¹ = (R.gcd : ℝ) / q := by
+      rw [hEq]
+      field_simp
+    _ ≤ (a : ℝ) / q := by
+      gcongr
+
+/-- Exact first-power normalization, retained separately from the one-variable
+majorant so the product of the two source gcds remains available. -/
+theorem dfiReducedModulus_denominator_inv_eq
+    (a q : ℕ) [NeZero q] :
+    (((dfiReducedModulus a q).denominator : ℝ)⁻¹) =
+      (Nat.gcd a q : ℝ) / q := by
+  let R := dfiReducedModulus a q
+  have hEq : (q : ℝ) = R.gcd * R.denominator := by
+    exact_mod_cast R.denominator_reconstruct.symm
+  change ((R.denominator : ℝ))⁻¹ = (R.gcd : ℝ) / q
+  rw [hEq]
+  have hg : (R.gcd : ℝ) ≠ 0 := by exact_mod_cast R.gcd_pos.ne'
+  have hd : (R.denominator : ℝ) ≠ 0 := by exact_mod_cast R.denominator_pos.ne'
+  field_simp
+
 /-- The logarithm of a reduced denominator is uniformly bounded by the
 logarithm of the original positive modulus.  This is the exact uniformity
 needed when the two reduced Voronoi moduli occur in DFI equation (27). -/
