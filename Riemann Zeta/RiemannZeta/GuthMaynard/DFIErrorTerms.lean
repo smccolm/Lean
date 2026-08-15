@@ -1,7 +1,9 @@
 import RiemannZeta.GuthMaynard.DFIEquation24DoubleDual
+import Mathlib.Analysis.Analytic.IteratedFDeriv
 import RiemannZeta.GuthMaynard.DFIEquation29
 import RiemannZeta.GuthMaynard.DFIEquation30
 import RiemannZeta.GuthMaynard.KloostermanComposite
+import RiemannZeta.GuthMaynard.ArithmeticCoefficients
 
 /-!
 # DFI equations (24)--(30): quantitative error assembly
@@ -17,6 +19,76 @@ open scoped BigOperators Topology Interval ContDiff
 open Classical
 
 namespace RiemannZeta.GuthMaynard
+
+/-- The native divisor bound in the exact normed form required by the two
+Voronoi frequency sums in DFI equation (29). -/
+theorem exists_norm_divisorWeight_le_rpow
+    (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ n : ℕ, 0 < n →
+      ‖divisorWeight n‖ ≤ C * (n : ℝ) ^ ε := by
+  obtain ⟨C, hC, hdiv⟩ := divisorCountBound_native ε hε
+  refine ⟨C, hC, ?_⟩
+  intro n hn
+  simpa [divisorWeight] using hdiv n hn
+
+/-- Algebraic normalization of the divisor loss, the Voronoi quarter-power,
+and `k` integrations by parts into the frequency exponent used in the two
+tails of DFI equation (29). -/
+theorem rpow_mul_neg_quarter_mul_div_pow
+    {x z ε : ℝ} {k : ℕ} (hx : 0 < x) :
+    x ^ ε * x ^ (-(1 / 4 : ℝ)) * (z / x) ^ k =
+      z ^ k * x ^ (ε - 1 / 4 - k) := by
+  have hquarter :
+      x ^ ε * x ^ (-(1 / 4 : ℝ)) = x ^ (ε - 1 / 4) := by
+    rw [← Real.rpow_add hx]
+    ring
+  calc
+    x ^ ε * x ^ (-(1 / 4 : ℝ)) * (z / x) ^ k =
+        z ^ k * ((x ^ ε * x ^ (-(1 / 4 : ℝ))) / x ^ k) := by
+      rw [div_pow]
+      ring
+    _ = z ^ k * (x ^ (ε - 1 / 4) / x ^ k) := by
+      rw [hquarter]
+    _ = z ^ k * x ^ (ε - 1 / 4 - k) := by
+      congr 1
+      exact (Real.rpow_sub_natCast (ne_of_gt hx) (ε - 1 / 4) k).symm
+
+/-- One frequency of the full DFI equation-(29) recurrence, after inserting
+the native divisor bound.  This is the exact algebra used twice in the
+double-tail corner. -/
+theorem divisor_recurrence_frequency_le
+    {C ε R S D Z : ℝ} {n k : ℕ}
+    (hn : 0 < n) (hC : 0 ≤ C) (hR : 0 ≤ R) (hS : 0 ≤ S)
+    (hdiv : ‖divisorWeight n‖ ≤ C * (n : ℝ) ^ ε)
+    (hrec : R ^ k * S ^ k ≤
+      (4 * D) ^ k * (Z / (n : ℝ)) ^ k) :
+    ‖divisorWeight n‖ *
+        (R ^ k * (S ^ k * (n : ℝ) ^ (-(1 / 4 : ℝ)))) ≤
+      C * (4 * D) ^ k * Z ^ k *
+        (n : ℝ) ^ (ε - 1 / 4 - k) := by
+  have hnR : (0 : ℝ) < n := Nat.cast_pos.mpr hn
+  have hnε : 0 ≤ (n : ℝ) ^ ε := Real.rpow_nonneg hnR.le _
+  have hnq : 0 ≤ (n : ℝ) ^ (-(1 / 4 : ℝ)) :=
+    Real.rpow_nonneg hnR.le _
+  calc
+    ‖divisorWeight n‖ *
+        (R ^ k * (S ^ k * (n : ℝ) ^ (-(1 / 4 : ℝ)))) =
+      ‖divisorWeight n‖ *
+        ((R ^ k * S ^ k) * (n : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
+    _ ≤ (C * (n : ℝ) ^ ε) *
+        (((4 * D) ^ k * (Z / (n : ℝ)) ^ k) *
+          (n : ℝ) ^ (-(1 / 4 : ℝ))) := by
+      gcongr
+    _ = C * (4 * D) ^ k *
+        (((n : ℝ) ^ ε * (n : ℝ) ^ (-(1 / 4 : ℝ))) *
+          (Z / (n : ℝ)) ^ k) := by ring
+    _ = C * (4 * D) ^ k * Z ^ k *
+        (n : ℝ) ^ (ε - 1 / 4 - k) := by
+      rw [show (n : ℝ) ^ ε * (n : ℝ) ^ (-(1 / 4 : ℝ)) *
+          (Z / (n : ℝ)) ^ k =
+          Z ^ k * (n : ℝ) ^ (ε - 1 / 4 - k) by
+        exact rpow_mul_neg_quarter_mul_div_pow hnR]
+      ring
 
 /-- Explicit norm of the logarithmic main operator on a positive compact
 interval, in the form used for the mixed terms of DFI (24). -/
@@ -656,6 +728,182 @@ theorem integral_integral_norm_dfiLocalizedWeight_le_convolution
       intro r _hr
       ring
 
+/-- Fully mixed integrated equation-(21) Leibniz rule.  Unlike the
+one-coordinate specializations, this retains the sharp diagonal convolution
+mass while differentiating in both variables.  It is the literal integrated
+form of DFI (28) needed when both Voronoi frequencies lie outside (29). -/
+theorem integral_integral_norm_dfiLocalizedWeight_mixed_le_convolution
+    {G : ℝ → ℝ → ℂ} {δ : ℝ → ℝ} {X Y U h : ℝ}
+    (hG : ContDiff ℝ ∞ (Function.uncurry G))
+    (hSupport : Function.support (Function.uncurry G) ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y))
+    (hDifference : ∀ x y, G x y ≠ 0 → x - y - h ∈ Set.Icc (-U) U)
+    (hδ : ContDiff ℝ ∞ δ) (i j : ℕ) {C : ℕ → ℕ → ℝ}
+    (hC : ∀ r ≤ i, ∀ s ≤ j, 0 ≤ C r s)
+    (hBound : ∀ r ≤ i, ∀ s ≤ j, ∀ x y,
+      ‖dfiMixedDeriv r s G x y‖ ≤ C r s)
+    (hX : 0 ≤ X) (hY : 0 ≤ Y) :
+    (∫ x : ℝ, ∫ y : ℝ,
+      ‖dfiMixedDeriv i j
+        (dfiLocalizedWeight G (fun u => (δ u : ℂ)) h) x y‖) ≤
+      min X Y * ∑ s ∈ Finset.range (j + 1),
+        ∑ r ∈ Finset.range (i + 1),
+          (j.choose s : ℝ) * (i.choose r : ℝ) * C r s *
+            (∫ u : ℝ in Set.Icc (-U) U,
+              ‖iteratedDeriv ((i - r) + (j - s)) δ u‖) := by
+  let δc : ℝ → ℂ := fun u => (δ u : ℂ)
+  let S : Finset (ℕ × ℕ) :=
+    (Finset.range (j + 1)).product (Finset.range (i + 1))
+  let T : (ℕ × ℕ) → ℝ → ℝ → ℂ := fun p x y =>
+    (j.choose p.1 : ℂ) * (i.choose p.2 : ℂ) *
+      (((-1 : ℝ) ^ (j - p.1)) : ℂ) *
+      dfiMixedDeriv p.2 p.1 G x y *
+      iteratedDeriv ((i - p.2) + (j - p.1)) δc (x - y - h)
+  have hδc : ContDiff ℝ ∞ δc := Complex.ofRealCLM.contDiff.comp hδ
+  have hLeib (x y : ℝ) :
+      dfiMixedDeriv i j (dfiLocalizedWeight G δc h) x y =
+        ∑ p ∈ S, T p x y := by
+    rw [dfiEquation21Leibniz hG hδc]
+    change (∑ s ∈ Finset.range (j + 1), ∑ r ∈ Finset.range (i + 1),
+      T (s, r) x y) = ∑ p ∈ S, T p x y
+    dsimp only [S]
+    exact (Finset.sum_product (β := ℂ)
+      (Finset.range (j + 1)) (Finset.range (i + 1))
+      (fun p => T p x y)).symm
+  have hTsmooth (p : ℕ × ℕ) : Continuous (Function.uncurry (T p)) := by
+    dsimp only [T, Function.uncurry_apply_pair]
+    have hFr := (contDiff_uncurry_dfiMixedDeriv hG p.2 p.1).continuous
+    have hKr := (hδc.continuous_iteratedDeriv
+      ((i - p.2) + (j - p.1))
+      (WithTop.coe_le_coe.mpr
+        (le_of_lt (ENat.coe_lt_top ((i - p.2) + (j - p.1)))))).comp
+          (by fun_prop : Continuous (fun z : ℝ × ℝ => z.1 - z.2 - h))
+    exact ((((continuous_const.mul continuous_const).mul continuous_const).mul hFr).mul hKr)
+  have hTsupport (p : ℕ × ℕ) :
+      Function.support (Function.uncurry (T p)) ⊆
+        Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) := by
+    intro z hz
+    have hFrne : dfiMixedDeriv p.2 p.1 G z.1 z.2 ≠ 0 := by
+      intro hzero
+      apply hz
+      change T p z.1 z.2 = 0
+      simp [T, hzero]
+    exact ((support_dfiMixedDeriv_subset_tsupport hG p.2 p.1).trans
+      (closure_minimal hSupport (isClosed_Icc.prod isClosed_Icc))) (by
+        simpa only [Function.mem_support,
+          Function.uncurry_apply_pair] using hFrne)
+  change (∫ x : ℝ, ∫ y : ℝ,
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight G δc h) x y‖) ≤ _
+  have hrewrite : (∫ x : ℝ, ∫ y : ℝ,
+      ‖dfiMixedDeriv i j (dfiLocalizedWeight G δc h) x y‖) =
+      ∫ x : ℝ, ∫ y : ℝ, ‖∑ p ∈ S, T p x y‖ := by
+    apply integral_congr_ae
+    filter_upwards [] with x
+    apply integral_congr_ae
+    filter_upwards [] with y
+    rw [hLeib]
+  rw [hrewrite]
+  have htriangle := integral_integral_norm_finsetSum_le S T
+    (fun p _hp => hTsmooth p) (fun p _hp => hTsupport p)
+  apply htriangle.trans
+  calc
+    (∑ p ∈ S, ∫ x : ℝ, ∫ y : ℝ, ‖T p x y‖) ≤
+        ∑ p ∈ S,
+          (j.choose p.1 : ℝ) * (i.choose p.2 : ℝ) *
+            (min X Y * C p.2 p.1 *
+              (∫ u : ℝ in Set.Icc (-U) U,
+                ‖iteratedDeriv ((i - p.2) + (j - p.1)) δ u‖)) := by
+      apply Finset.sum_le_sum
+      intro p hp
+      have hp' : p ∈ (Finset.range (j + 1)).product
+          (Finset.range (i + 1)) := by simpa only [S] using hp
+      have hpmem := Finset.mem_product.mp hp'
+      have hsj : p.1 ≤ j := by simpa using hpmem.1
+      have hri : p.2 ≤ i := by simpa using hpmem.2
+      let Fp : ℝ → ℝ → ℂ := dfiMixedDeriv p.2 p.1 G
+      let Kp : ℝ → ℝ := iteratedDeriv ((i - p.2) + (j - p.1)) δ
+      have hFpCont : Continuous (Function.uncurry Fp) :=
+        (contDiff_uncurry_dfiMixedDeriv hG p.2 p.1).continuous
+      have hFpSupport : Function.support (Function.uncurry Fp) ⊆
+          Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
+        (support_dfiMixedDeriv_subset_tsupport hG p.2 p.1).trans
+          (closure_minimal hSupport (isClosed_Icc.prod isClosed_Icc))
+      have hDiffClosed : IsClosed {z : ℝ × ℝ |
+          z.1 - z.2 - h ∈ Set.Icc (-U) U} :=
+        isClosed_Icc.preimage (by fun_prop)
+      have hGDiffSupport : Function.support (Function.uncurry G) ⊆
+          {z : ℝ × ℝ | z.1 - z.2 - h ∈ Set.Icc (-U) U} := by
+        intro z hz
+        exact hDifference z.1 z.2 (by
+          simpa only [Function.mem_support,
+            Function.uncurry_apply_pair] using hz)
+      have hFpDiff : ∀ x y, Fp x y ≠ 0 →
+          x - y - h ∈ Set.Icc (-U) U := by
+        intro x y hne
+        exact (closure_minimal hGDiffSupport hDiffClosed)
+          (support_dfiMixedDeriv_subset_tsupport hG p.2 p.1 (show
+            (x, y) ∈ Function.support (Function.uncurry Fp) by
+              simpa only [Fp, Function.mem_support,
+                Function.uncurry_apply_pair] using hne))
+      have hKpCont : Continuous Kp :=
+        hδ.continuous_iteratedDeriv ((i - p.2) + (j - p.1))
+          (WithTop.coe_le_coe.mpr
+            (le_of_lt (ENat.coe_lt_top ((i - p.2) + (j - p.1)))))
+      have hconv := integral_integral_norm_mul_abs_difference_le_min
+        hFpCont hFpSupport (hC p.2 hri p.1 hsj)
+          (hBound p.2 hri p.1 hsj) hFpDiff hKpCont hX hY
+      have hNorm (x y : ℝ) :
+          ‖T p x y‖ = (j.choose p.1 : ℝ) * (i.choose p.2 : ℝ) *
+            (‖Fp x y‖ * |Kp (x - y - h)|) := by
+        dsimp only [T, Fp, Kp, δc]
+        rw [iteratedDeriv_ofReal_comp δ hδ
+          ((i - p.2) + (j - p.1)), norm_mul, norm_mul, norm_mul,
+          norm_mul, Complex.norm_real, Real.norm_eq_abs]
+        simp only [Complex.norm_natCast, norm_pow]
+        rw [show ‖(((-1 : ℝ) : ℂ))‖ = 1 by norm_num, one_pow]
+        simp only [mul_one]
+        rw [add_comm (i - p.2) (j - p.1)]
+        ring
+      calc
+        (∫ x : ℝ, ∫ y : ℝ, ‖T p x y‖) =
+            (j.choose p.1 : ℝ) * (i.choose p.2 : ℝ) *
+              (∫ x : ℝ, ∫ y : ℝ,
+                ‖Fp x y‖ * |Kp (x - y - h)|) := by
+          rw [integral_congr_ae (Filter.Eventually.of_forall fun x => by
+            rw [integral_congr_ae
+              (Filter.Eventually.of_forall fun y => hNorm x y),
+              integral_const_mul]), integral_const_mul]
+        _ ≤ (j.choose p.1 : ℝ) * (i.choose p.2 : ℝ) *
+            (min X Y * C p.2 p.1 *
+              (∫ u : ℝ in Set.Icc (-U) U, |Kp u|)) := by
+          exact mul_le_mul_of_nonneg_left hconv (by positivity)
+        _ = (j.choose p.1 : ℝ) * (i.choose p.2 : ℝ) *
+            (min X Y * C p.2 p.1 *
+              (∫ u : ℝ in Set.Icc (-U) U,
+                ‖iteratedDeriv ((i - p.2) + (j - p.1)) δ u‖)) := by
+          simp only [Kp, Real.norm_eq_abs]
+    _ = ∑ s ∈ Finset.range (j + 1),
+        ∑ r ∈ Finset.range (i + 1),
+          (j.choose s : ℝ) * (i.choose r : ℝ) *
+            (min X Y * C r s *
+              (∫ u : ℝ in Set.Icc (-U) U,
+                ‖iteratedDeriv ((i - r) + (j - s)) δ u‖)) := by
+      dsimp only [S]
+      exact Finset.sum_product (β := ℝ)
+        (Finset.range (j + 1)) (Finset.range (i + 1)) _
+    _ = min X Y * ∑ s ∈ Finset.range (j + 1),
+        ∑ r ∈ Finset.range (i + 1),
+          (j.choose s : ℝ) * (i.choose r : ℝ) * C r s *
+            (∫ u : ℝ in Set.Icc (-U) U,
+              ‖iteratedDeriv ((i - r) + (j - s)) δ u‖) := by
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro s _hs
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro r _hr
+      ring
+
 /-- Second-variable counterpart of the integrated equation-(21) Leibniz
 rule.  It is derived by an exact coordinate swap; evenness of the kernel
 removes the resulting sign in the displacement. -/
@@ -760,18 +1008,25 @@ theorem integral_integral_norm_dfiLocalizedWeight_second_le_convolution
   rw [hswap]
   simpa only [min_comm] using hraw
 
-/-- Uniform `L¹` derivative profile for the delta kernel on the full source
-displacement interval.  Order zero is equation (30); positive orders use the
-exact integrated summand scaling from equation (28), with the harmonic
-radius absorbed into the same logarithm. -/
-theorem exists_integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
+/-- The finite derivative-profile constant actually constructed in the proof
+of the delta-kernel `L¹` estimate.  Naming it prevents later DFI estimates
+from hiding a scale-dependent choice behind an existential quantifier. -/
+noncomputable def dfiDeltaKernelDerivativeFiniteConstant
+    (Dw : ℕ → ℝ) (J : ℕ) : ℝ :=
+  (24 * max (Dw 0) (Dw 1)) * (2 / Real.log 2 + 4) +
+    ∑ k ∈ Finset.range (J + 1),
+      4 * Dw k * (1 / Real.log 2 + 4)
+
+/-- Profile-explicit, scale-uniform delta-kernel derivative-mass estimate. -/
+theorem integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
     {Q U : ℝ} {w : DFIDeltaWeight Q} {Dw : ℕ → ℝ}
     (hw : DFIDeltaWeightProfile w Dw) (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
     (J : ℕ) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (q k : ℕ), 0 < q → k ≤ J →
+    ∀ (q k : ℕ), 0 < q → k ≤ J →
       (∫ u : ℝ in Set.Icc (-U) U,
         ‖iteratedDeriv k (dfiDeltaKernel w q) u‖) ≤
-      C * Real.log Q * ((((q : ℝ) * Q)⁻¹) ^ k) := by
+      dfiDeltaKernelDerivativeFiniteConstant Dw J * Real.log Q *
+        ((((q : ℝ) * Q)⁻¹) ^ k) := by
   let K0 : ℝ := (24 * max (Dw 0) (Dw 1)) * (2 / Real.log 2 + 4)
   let A : ℝ := 1 / Real.log 2 + 4
   let K : ℕ → ℝ := fun k => 4 * Dw k * A
@@ -791,8 +1046,10 @@ theorem exists_integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
     dsimp [C]
     exact add_pos_of_pos_of_nonneg hK0
       (Finset.sum_nonneg fun k _hk => (hK k).le)
-  refine ⟨C, hC, ?_⟩
   intro q k hq hkJ
+  change (∫ u : ℝ in Set.Icc (-U) U,
+      ‖iteratedDeriv k (dfiDeltaKernel w q) u‖) ≤
+    C * Real.log Q * ((((q : ℝ) * Q)⁻¹) ^ k)
   have hQpos : 0 < Q := by linarith
   have hlogQ : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
   by_cases hk0 : k = 0
@@ -872,6 +1129,36 @@ theorem exists_integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
             field_simp [hQpos.ne', show (q : ℝ) ≠ 0 by positivity]
       _ ≤ C * Real.log Q * ((((q : ℝ) * Q)⁻¹) ^ k) := by
             gcongr
+
+theorem dfiDeltaKernelDerivativeFiniteConstant_pos
+    {Q : ℝ} {w : DFIDeltaWeight Q} {Dw : ℕ → ℝ}
+    (hw : DFIDeltaWeightProfile w Dw) (J : ℕ) :
+    0 < dfiDeltaKernelDerivativeFiniteConstant Dw J := by
+  unfold dfiDeltaKernelDerivativeFiniteConstant
+  have hlog2 : 0 < Real.log 2 := Real.log_pos (by norm_num)
+  have hm : 0 < max (Dw 0) (Dw 1) :=
+    (hw.positive 0).trans_le (le_max_left _ _)
+  have hfirst : 0 < (24 * max (Dw 0) (Dw 1)) *
+      (2 / Real.log 2 + 4) := by positivity
+  exact add_pos_of_pos_of_nonneg hfirst
+    (Finset.sum_nonneg fun k _hk => by
+      have hk : 0 < Dw k := hw.positive k
+      positivity)
+
+/-- Existential compatibility wrapper for the profile-explicit delta-kernel
+estimate.  New source-uniform arguments should use the direct theorem above. -/
+theorem exists_integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
+    {Q U : ℝ} {w : DFIDeltaWeight Q} {Dw : ℕ → ℝ}
+    (hw : DFIDeltaWeightProfile w Dw) (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (J : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (q k : ℕ), 0 < q → k ≤ J →
+      (∫ u : ℝ in Set.Icc (-U) U,
+        ‖iteratedDeriv k (dfiDeltaKernel w q) u‖) ≤
+      C * Real.log Q * ((((q : ℝ) * Q)⁻¹) ^ k) := by
+  refine ⟨dfiDeltaKernelDerivativeFiniteConstant Dw J, ?_, ?_⟩
+  · exact dfiDeltaKernelDerivativeFiniteConstant_pos hw J
+  · exact integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
+      hw hQ hU J
 
 /-- Sharp physical `L¹` derivative profile for the complete equation-(23)
 weight before the divisor-coordinate rescaling.  The shorter support length
@@ -1201,6 +1488,423 @@ theorem exists_integral_integral_norm_dfiEquation23Physical_second_derivative_le
       exact mul_le_mul_of_nonneg_left hpow (by positivity)
     _ = C * min X Y * Real.log Q * B ^ j := by
       dsimp [C]
+      ring
+
+/-- The explicit finite source-profile constant used for all mixed physical
+derivatives through order `J` in DFI equation (23). -/
+noncomputable def dfiEquation23PhysicalMixedDerivativeFiniteConstant
+    (Cf : ℕ → ℕ → ℝ) (Cφ Cw : ℕ → ℝ) (J : ℕ) : ℝ :=
+  let A : ℕ → ℕ → ℝ := fun r s =>
+    dfiEquation2FiniteConstant Cf (max r s) *
+      dfiCutoffFiniteConstant Cφ (r + s) * 2 ^ (r + s)
+  let Asum : ℝ := ∑ r ∈ Finset.range (J + 1),
+    ∑ s ∈ Finset.range (J + 1), A r s
+  Asum * dfiDeltaKernelDerivativeFiniteConstant Cw (2 * J) * 2 ^ (4 * J)
+
+/-- The complete mixed sharp physical derivative profile for equation (23).
+The delta kernel is integrated before any support-length estimate, so the
+shorter physical length from DFI (30) survives simultaneously in both
+derivative directions. -/
+theorem integral_integral_norm_dfiEquation23Physical_mixed_derivative_le_of_profiles
+    {f : ℝ → ℝ → ℂ} {ψ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cψ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hψ : DFIRedundantCutoff ψ U) (hψC : DFIRedundantCutoffProfile hψ Cψ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2) (J : ℕ) :
+    ∀ (q : ℕ), 0 < q → (q : ℝ) ≤ 2 * Q →
+      ∀ (h : ℤ) (i j : ℕ), i ≤ J → j ≤ J →
+      (∫ x : ℝ, ∫ y : ℝ,
+        ‖dfiMixedDeriv i j
+          (dfiLocalizedWeight (dfiLocalizedWeight f ψ h)
+            (fun u => (dfiDeltaKernel w q u : ℂ)) h) x y‖) ≤
+        dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cψ Cw J *
+          min X Y * Real.log Q *
+          ((((q : ℝ) * Q)⁻¹) ^ (i + j)) := by
+  let Kδ := dfiDeltaKernelDerivativeFiniteConstant Cw (2 * J)
+  have hKδ : 0 < Kδ := by
+    dsimp [Kδ]
+    exact dfiDeltaKernelDerivativeFiniteConstant_pos hwC (2 * J)
+  have hδmass := integral_norm_iteratedDeriv_dfiDeltaKernel_le_log_profile
+    hwC hQ hU (2 * J)
+  let A : ℕ → ℕ → ℝ := fun r s =>
+    dfiEquation2FiniteConstant Cf (max r s) *
+      dfiCutoffFiniteConstant Cψ (r + s) * 2 ^ (r + s)
+  let Asum : ℝ := ∑ r ∈ Finset.range (J + 1),
+    ∑ s ∈ Finset.range (J + 1), A r s
+  let C : ℝ := Asum * Kδ * 2 ^ (4 * J)
+  have hA : ∀ r s, 0 < A r s := by
+    intro r s
+    dsimp [A]
+    have hcut : 0 < dfiCutoffFiniteConstant Cψ (r + s) := by
+      unfold dfiCutoffFiniteConstant
+      exact Finset.sum_pos (fun k _hk => hψC.positive k) ⟨0, by simp⟩
+    exact mul_pos (mul_pos (hfC.finiteConstant_pos (max r s)) hcut)
+      (pow_pos (by norm_num) _)
+  have hAsum : 0 < Asum := by
+    dsimp [Asum]
+    have hinner : ∀ r ∈ Finset.range (J + 1),
+        0 < ∑ s ∈ Finset.range (J + 1), A r s := by
+      intro r _hr
+      exact Finset.sum_pos (fun s _hs => hA r s) ⟨0, by simp⟩
+    exact Finset.sum_pos hinner ⟨0, by simp⟩
+  have hC : 0 < C := by dsimp [C]; positivity
+  intro q hq hqQ h i j hiJ hjJ
+  change (∫ x : ℝ, ∫ y : ℝ,
+      ‖dfiMixedDeriv i j
+        (dfiLocalizedWeight (dfiLocalizedWeight f ψ h)
+          (fun u => (dfiDeltaKernel w q u : ℂ)) h) x y‖) ≤
+    C * min X Y * Real.log Q * ((((q : ℝ) * Q)⁻¹) ^ (i + j))
+  let G : ℝ → ℝ → ℂ := dfiLocalizedWeight f ψ h
+  let δ : ℝ → ℝ := dfiDeltaKernel w q
+  let B : ℝ := ((q : ℝ) * Q)⁻¹
+  have hQpos : 0 < Q := by linarith
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq
+  have hB : 0 < B := by dsimp [B]; positivity
+  have hG : ContDiff ℝ ∞ (Function.uncurry G) := by
+    dsimp [G]
+    exact contDiff_uncurry_dfiLocalizedWeight hf hψ
+  have hSupport : Function.support (Function.uncurry G) ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) := by
+    dsimp [G]
+    exact support_uncurry_dfiLocalizedWeight_subset hbox
+  have hDifference : ∀ x y, G x y ≠ 0 →
+      x - y - (h : ℝ) ∈ Set.Icc (-U) U := by
+    intro x y hne
+    have hψne : ψ (x - y - (h : ℝ)) ≠ 0 := by
+      intro hz
+      exact hne (by simp [G, dfiLocalizedWeight, hz])
+    have hu := hψ.support_subset hψne
+    exact ⟨hu.1.le, hu.2.le⟩
+  have hδsmooth : ContDiff ℝ ∞ δ := by
+    dsimp [δ]
+    exact contDiff_dfiDeltaKernel w q hq
+  have hUinv : U⁻¹ ≤ 2 * B := by
+    have hqQpos : 0 < (q : ℝ) * Q := mul_pos hqR hQpos
+    have hqQle : (q : ℝ) * Q ≤ 2 * U := by
+      rw [hU]
+      nlinarith [mul_le_mul_of_nonneg_right hqQ hQpos.le]
+    have hhalf : 0 < ((q : ℝ) * Q) / 2 := by positivity
+    have hhalfU : ((q : ℝ) * Q) / 2 ≤ U := by linarith
+    calc
+      U⁻¹ ≤ (((q : ℝ) * Q) / 2)⁻¹ := inv_anti₀ hhalf hhalfU
+      _ = 2 * B := by dsimp [B]; field_simp [hqQpos.ne']
+  let Crs : ℕ → ℕ → ℝ := fun r s => Asum * (2 * B) ^ (r + s)
+  have hCrs : ∀ r ≤ i, ∀ s ≤ j, 0 ≤ Crs r s := by
+    intro r _hr s _hs
+    dsimp [Crs]
+    positivity
+  have hSource : ∀ r ≤ i, ∀ s ≤ j, ∀ x y,
+      ‖dfiMixedDeriv r s G x y‖ ≤ Crs r s := by
+    intro r hri s hsj x y
+    have hrJ : r ≤ J := hri.trans hiJ
+    have hsJ : s ≤ J := hsj.trans hjJ
+    have hrmem : r ∈ Finset.range (J + 1) := by simp [hrJ]
+    have hsmem : s ∈ Finset.range (J + 1) := by simp [hsJ]
+    have hAle : A r s ≤ Asum := by
+      dsimp [Asum]
+      exact (Finset.single_le_sum (fun t _ht => (hA r t).le) hsmem).trans
+        (Finset.single_le_sum
+          (fun t _ht => Finset.sum_nonneg (fun u _hu => (hA t u).le)) hrmem)
+    have hraw :=
+      (dfiEquation21_of_profiles_uniform_in_shift
+        hf hfC hbox hψ hψC hscale r s (h : ℝ) x y).2
+    calc
+      ‖dfiMixedDeriv r s G x y‖ ≤ A r s * U⁻¹ ^ (r + s) := by
+        simpa only [G, A] using hraw
+      _ ≤ Asum * U⁻¹ ^ (r + s) := by
+        exact mul_le_mul_of_nonneg_right hAle
+          (pow_nonneg (inv_nonneg.mpr hψ.U_pos.le) _)
+      _ ≤ Asum * (2 * B) ^ (r + s) := by
+        exact mul_le_mul_of_nonneg_left
+          (pow_le_pow_left₀ (inv_nonneg.mpr hψ.U_pos.le) hUinv _) hAsum.le
+      _ = Crs r s := rfl
+  have hphysical := integral_integral_norm_dfiLocalizedWeight_mixed_le_convolution
+    hG hSupport hDifference hδsmooth i j hCrs hSource
+      (zero_le_one.trans hf.one_le_X) (zero_le_one.trans hf.one_le_Y)
+  have hlogQ : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+  let Z : ℝ := Asum * Kδ * Real.log Q * (2 * B) ^ (i + j)
+  have hterm (s : ℕ) (hs : s ∈ Finset.range (j + 1))
+      (r : ℕ) (hr : r ∈ Finset.range (i + 1)) :
+      (j.choose s : ℝ) * (i.choose r : ℝ) * Crs r s *
+          (∫ u : ℝ in Set.Icc (-U) U,
+            ‖iteratedDeriv ((i - r) + (j - s)) δ u‖) ≤
+        (j.choose s : ℝ) * (i.choose r : ℝ) * Z := by
+    have hsj : s ≤ j := by simpa using hs
+    have hri : r ≤ i := by simpa using hr
+    have hkJ : (i - r) + (j - s) ≤ 2 * J := by omega
+    have hδb := hδmass q ((i - r) + (j - s)) hq hkJ
+    have hscalePow :
+        (2 * B) ^ (r + s) * B ^ ((i - r) + (j - s)) ≤
+          (2 * B) ^ (i + j) := by
+      calc
+        (2 * B) ^ (r + s) * B ^ ((i - r) + (j - s)) ≤
+            (2 * B) ^ (r + s) * (2 * B) ^ ((i - r) + (j - s)) := by
+          gcongr
+          have hBtwo : B ≤ 2 * B := by nlinarith [hB]
+          exact hBtwo
+        _ = (2 * B) ^ (i + j) := by
+          rw [← pow_add]
+          congr 1
+          omega
+    calc
+      (j.choose s : ℝ) * (i.choose r : ℝ) * Crs r s *
+          (∫ u : ℝ in Set.Icc (-U) U,
+            ‖iteratedDeriv ((i - r) + (j - s)) δ u‖) ≤
+          (j.choose s : ℝ) * (i.choose r : ℝ) * Crs r s *
+            (Kδ * Real.log Q * B ^ ((i - r) + (j - s))) := by
+        exact mul_le_mul_of_nonneg_left (by
+          simpa only [δ, B] using hδb) (by
+            exact mul_nonneg
+              (mul_nonneg (Nat.cast_nonneg _) (Nat.cast_nonneg _))
+              (hCrs r hri s hsj))
+      _ = (j.choose s : ℝ) * (i.choose r : ℝ) *
+          (Asum * Kδ * Real.log Q *
+            ((2 * B) ^ (r + s) * B ^ ((i - r) + (j - s)))) := by
+        dsimp [Crs]
+        ring
+      _ ≤ (j.choose s : ℝ) * (i.choose r : ℝ) * Z := by
+        dsimp [Z]
+        exact mul_le_mul_of_nonneg_left
+          (mul_le_mul_of_nonneg_left hscalePow
+            (mul_nonneg (mul_nonneg hAsum.le hKδ.le) hlogQ))
+          (mul_nonneg (Nat.cast_nonneg _) (Nat.cast_nonneg _))
+  have hchooseI : (∑ r ∈ Finset.range (i + 1), (i.choose r : ℝ)) =
+      (2 : ℝ) ^ i := by
+    exact_mod_cast Nat.sum_range_choose i
+  have hchooseJ : (∑ s ∈ Finset.range (j + 1), (j.choose s : ℝ)) =
+      (2 : ℝ) ^ j := by
+    exact_mod_cast Nat.sum_range_choose j
+  have hsum :
+      (∑ s ∈ Finset.range (j + 1), ∑ r ∈ Finset.range (i + 1),
+        (j.choose s : ℝ) * (i.choose r : ℝ) * Crs r s *
+          (∫ u : ℝ in Set.Icc (-U) U,
+            ‖iteratedDeriv ((i - r) + (j - s)) δ u‖)) ≤
+        (2 : ℝ) ^ (i + j) * Z := by
+    calc
+      _ ≤ ∑ s ∈ Finset.range (j + 1), ∑ r ∈ Finset.range (i + 1),
+          (j.choose s : ℝ) * (i.choose r : ℝ) * Z := by
+        apply Finset.sum_le_sum
+        intro s hs
+        apply Finset.sum_le_sum
+        intro r hr
+        exact hterm s hs r hr
+      _ = (2 : ℝ) ^ (i + j) * Z := by
+        rw [pow_add]
+        calc
+          (∑ s ∈ Finset.range (j + 1),
+              ∑ r ∈ Finset.range (i + 1),
+                (j.choose s : ℝ) * (i.choose r : ℝ) * Z) =
+              ∑ s ∈ Finset.range (j + 1),
+                (j.choose s : ℝ) *
+                  ((∑ r ∈ Finset.range (i + 1), (i.choose r : ℝ)) * Z) := by
+            apply Finset.sum_congr rfl
+            intro s _hs
+            calc
+              (∑ r ∈ Finset.range (i + 1),
+                  (j.choose s : ℝ) * (i.choose r : ℝ) * Z) =
+                  (j.choose s : ℝ) *
+                    (∑ r ∈ Finset.range (i + 1),
+                      (i.choose r : ℝ) * Z) := by
+                rw [Finset.mul_sum]
+                apply Finset.sum_congr rfl
+                intro r _hr
+                ring
+              _ = (j.choose s : ℝ) *
+                  ((∑ r ∈ Finset.range (i + 1), (i.choose r : ℝ)) * Z) := by
+                rw [Finset.sum_mul]
+          _ = (∑ s ∈ Finset.range (j + 1), (j.choose s : ℝ)) *
+              ((∑ r ∈ Finset.range (i + 1), (i.choose r : ℝ)) * Z) := by
+            exact (Finset.sum_mul (Finset.range (j + 1))
+              (fun s => (j.choose s : ℝ))
+              ((∑ r ∈ Finset.range (i + 1), (i.choose r : ℝ)) * Z)).symm
+          _ = (2 : ℝ) ^ j * ((2 : ℝ) ^ i * Z) := by
+            rw [hchooseI, hchooseJ]
+          _ = (2 : ℝ) ^ i * 2 ^ j * Z := by ring
+  have hpowIJ : (2 : ℝ) ^ (i + j) ≤ 2 ^ (2 * J) := by
+    exact pow_le_pow_right₀ (by norm_num) (by omega)
+  have hminXY : 0 ≤ min X Y := le_min
+    (zero_le_one.trans hf.one_le_X) (zero_le_one.trans hf.one_le_Y)
+  have hZ : 0 ≤ Z := by
+    dsimp [Z]
+    exact mul_nonneg
+      (mul_nonneg (mul_nonneg hAsum.le hKδ.le) hlogQ)
+      (pow_nonneg (mul_nonneg (by norm_num) hB.le) _)
+  let W0 : ℝ := min X Y * Asum * Kδ * Real.log Q * B ^ (i + j)
+  have hW0 : 0 ≤ W0 := by
+    dsimp [W0]
+    exact mul_nonneg
+      (mul_nonneg (mul_nonneg (mul_nonneg hminXY hAsum.le) hKδ.le) hlogQ)
+      (pow_nonneg hB.le _)
+  have hpowTotal :
+      (2 : ℝ) ^ (2 * J) * 2 ^ (i + j) ≤ 2 ^ (4 * J) := by
+    rw [← pow_add]
+    exact pow_le_pow_right₀ (by norm_num) (by omega)
+  calc
+    (∫ x : ℝ, ∫ y : ℝ,
+      ‖dfiMixedDeriv i j
+        (dfiLocalizedWeight G (fun u => (δ u : ℂ)) h) x y‖) ≤
+        min X Y * ∑ s ∈ Finset.range (j + 1),
+          ∑ r ∈ Finset.range (i + 1),
+            (j.choose s : ℝ) * (i.choose r : ℝ) * Crs r s *
+              (∫ u : ℝ in Set.Icc (-U) U,
+                ‖iteratedDeriv ((i - r) + (j - s)) δ u‖) := hphysical
+    _ ≤ min X Y * ((2 : ℝ) ^ (i + j) * Z) := by
+      exact mul_le_mul_of_nonneg_left hsum hminXY
+    _ ≤ min X Y * (2 ^ (2 * J) * Z) := by
+      exact mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_right hpowIJ hZ) hminXY
+    _ ≤ C * min X Y * Real.log Q * B ^ (i + j) := by
+      have hleft : min X Y * (2 ^ (2 * J) * Z) =
+          W0 * (2 ^ (2 * J) * 2 ^ (i + j)) := by
+        dsimp [W0, Z]
+        rw [mul_pow]
+        ring
+      have hright : C * min X Y * Real.log Q * B ^ (i + j) =
+          W0 * 2 ^ (4 * J) := by
+        dsimp [C, W0]
+        ring
+      rw [hleft, hright]
+      exact mul_le_mul_of_nonneg_left hpowTotal hW0
+
+/-- Existential compatibility wrapper for the source-uniform mixed derivative
+estimate. -/
+theorem exists_integral_integral_norm_dfiEquation23Physical_mixed_derivative_le
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2) (J : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (q : ℕ), 0 < q → (q : ℝ) ≤ 2 * Q →
+      ∀ (h : ℤ) (i j : ℕ), i ≤ J → j ≤ J →
+      (∫ x : ℝ, ∫ y : ℝ,
+        ‖dfiMixedDeriv i j
+          (dfiLocalizedWeight (dfiLocalizedWeight f φ h)
+            (fun u => (dfiDeltaKernel w q u : ℂ)) h) x y‖) ≤
+        C * min X Y * Real.log Q *
+          ((((q : ℝ) * Q)⁻¹) ^ (i + j)) := by
+  let C := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw J
+  have hC : 0 < C := by
+    dsimp [C, dfiEquation23PhysicalMixedDerivativeFiniteConstant]
+    let A : ℕ → ℕ → ℝ := fun r s =>
+      dfiEquation2FiniteConstant Cf (max r s) *
+        dfiCutoffFiniteConstant Cφ (r + s) * 2 ^ (r + s)
+    have hA : ∀ r s, 0 < A r s := by
+      intro r s
+      dsimp [A]
+      have hcut : 0 < dfiCutoffFiniteConstant Cφ (r + s) := by
+        unfold dfiCutoffFiniteConstant
+        exact Finset.sum_pos (fun k _hk => hφC.positive k) ⟨0, by simp⟩
+      exact mul_pos (mul_pos (hfC.finiteConstant_pos (max r s)) hcut)
+        (pow_pos (by norm_num) _)
+    have hAsum : 0 < ∑ r ∈ Finset.range (J + 1),
+        ∑ s ∈ Finset.range (J + 1), A r s := by
+      have hinner : ∀ r ∈ Finset.range (J + 1),
+          0 < ∑ s ∈ Finset.range (J + 1), A r s := by
+        intro r _hr
+        exact Finset.sum_pos (fun s _hs => hA r s) ⟨0, by simp⟩
+      exact Finset.sum_pos hinner ⟨0, by simp⟩
+    exact mul_pos (mul_pos hAsum
+      (dfiDeltaKernelDerivativeFiniteConstant_pos hwC (2 * J)))
+      (pow_pos (by norm_num) _)
+  refine ⟨C, hC, ?_⟩
+  simpa only [C] using
+    integral_integral_norm_dfiEquation23Physical_mixed_derivative_le_of_profiles
+      hf hfC hbox hφ hφC hscale w hwC hQ hU J
+
+/-- Divisor-coordinate form of the complete mixed equation-(28) profile.
+The affine Jacobian supplies `(ab)⁻¹`, while the two derivative families
+separately supply `a/(qQ)` and `b/(qQ)`. -/
+theorem exists_integral_integral_norm_dfiEquation23Weight_mixed_derivative_le
+    {f : ℝ → ℝ → ℂ} {ψ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cψ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hψ : DFIRedundantCutoff ψ U) (hψC : DFIRedundantCutoffProfile hψ Cψ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2) (J : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b →
+      ∀ (q : ℕ), 0 < q → (q : ℝ) ≤ 2 * Q →
+      ∀ (h : ℤ) (i j : ℕ), i ≤ J → j ≤ J →
+      (∫ x : ℝ, ∫ y : ℝ,
+        ‖dfiMixedDeriv i j
+          (dfiEquation23Weight w (dfiLocalizedWeight f ψ h)
+            a b h q) x y‖) ≤
+        C * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q *
+          (((a : ℝ) / ((q : ℝ) * Q)) ^ i) *
+          (((b : ℝ) / ((q : ℝ) * Q)) ^ j) := by
+  obtain ⟨C, hC, hmass⟩ :=
+    exists_integral_integral_norm_dfiEquation23Physical_mixed_derivative_le
+      hf hfC hbox hψ hψC hscale w hwC hQ hU J
+  refine ⟨C, hC, ?_⟩
+  intro a b ha hb q hq hqQ h i j hiJ hjJ
+  let H : ℝ → ℝ → ℂ :=
+    dfiLocalizedWeight (dfiLocalizedWeight f ψ h)
+      (fun u => (dfiDeltaKernel w q u : ℂ)) h
+  have hbaseSmooth : ContDiff ℝ ∞
+      (Function.uncurry (dfiLocalizedWeight f ψ h)) :=
+    contDiff_uncurry_dfiLocalizedWeight hf hψ
+  have hdeltaSmooth : ContDiff ℝ ∞
+      (fun u : ℝ => (dfiDeltaKernel w q u : ℂ)) :=
+    Complex.ofRealCLM.contDiff.comp (contDiff_dfiDeltaKernel w q hq)
+  have hH : ContDiff ℝ ∞ (Function.uncurry H) := by
+    dsimp only [H]
+    unfold dfiLocalizedWeight Function.uncurry
+    exact hbaseSmooth.mul (hdeltaSmooth.comp
+      ((contDiff_fst.sub contDiff_snd).sub contDiff_const))
+  have heq :
+      dfiEquation23Weight w (dfiLocalizedWeight f ψ h) a b h q =
+        fun x y => H ((a : ℝ) * x) ((b : ℝ) * y) := by
+    rfl
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hpoint (x y : ℝ) :
+      ‖dfiMixedDeriv i j
+          (dfiEquation23Weight w (dfiLocalizedWeight f ψ h)
+            a b h q) x y‖ =
+        (a : ℝ) ^ i * (b : ℝ) ^ j *
+          ‖dfiMixedDeriv i j H ((a : ℝ) * x) ((b : ℝ) * y)‖ := by
+    rw [heq, dfiMixedDeriv_affine_scale hH (a : ℝ) (b : ℝ) i j x y]
+    rw [norm_smul]
+    rw [Real.norm_eq_abs, abs_of_nonneg (by positivity)]
+  have hjac := integral_integral_norm_comp_mul_eq
+    (dfiMixedDeriv i j H) haR hbR
+  have hmassH := hmass q hq hqQ h i j hiJ hjJ
+  have habpow : 0 ≤ (a : ℝ) ^ i * (b : ℝ) ^ j := by positivity
+  calc
+    (∫ x : ℝ, ∫ y : ℝ,
+        ‖dfiMixedDeriv i j
+          (dfiEquation23Weight w (dfiLocalizedWeight f ψ h)
+            a b h q) x y‖) =
+        ((a : ℝ) ^ i * (b : ℝ) ^ j) *
+          (∫ x : ℝ, ∫ y : ℝ,
+            ‖dfiMixedDeriv i j H ((a : ℝ) * x) ((b : ℝ) * y)‖) := by
+      rw [integral_congr_ae (Filter.Eventually.of_forall fun x => by
+        rw [integral_congr_ae
+          (Filter.Eventually.of_forall fun y => hpoint x y),
+          integral_const_mul]), integral_const_mul]
+    _ = ((a : ℝ) ^ i * (b : ℝ) ^ j) * (((a : ℝ) * b)⁻¹ *
+          (∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv i j H x y‖)) := by
+      rw [hjac]
+    _ ≤ ((a : ℝ) ^ i * (b : ℝ) ^ j) * (((a : ℝ) * b)⁻¹ *
+          (C * min X Y * Real.log Q *
+            ((((q : ℝ) * Q)⁻¹) ^ (i + j)))) := by
+      exact mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_left hmassH
+          (inv_nonneg.mpr (mul_nonneg haR.le hbR.le))) habpow
+    _ = C * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q *
+          (((a : ℝ) / ((q : ℝ) * Q)) ^ i) *
+          (((b : ℝ) / ((q : ℝ) * Q)) ^ j) := by
+      rw [pow_add, div_pow, div_pow]
+      simp only [div_eq_mul_inv, ← inv_pow]
       ring
 
 /-- The sharp physical derivative mass in the divisor coordinates of
@@ -2130,6 +2834,66 @@ theorem DFIVoronoiTestFunction.norm_dfiEquation29InitialTransform_le_recurrence_
     hg.dfiBesselQuarterBaseNorm_besselRecurrenceIterate_le_of_l1
       hA hB hS hSB hSupport k hD hL1
   exact hRec.trans (by gcongr)
+
+/-- Finite normalized `L¹` envelope of the derivatives consumed by `k`
+complete Bessel recurrences.  Division by `B^r` makes every derivative
+order contribute on the same source scale. -/
+noncomputable def dfiDerivativeL1Envelope
+    (g : ℝ → ℂ) (S B : ℝ) (k : ℕ) : ℝ :=
+  ∑ r ∈ Finset.range (2 * k + 1),
+    (∫ x in Set.Icc S (2 * S), ‖iteratedDeriv r g x‖) / B ^ r
+
+theorem dfiDerivativeL1Envelope_nonneg
+    (g : ℝ → ℂ) (S : ℝ) {B : ℝ} (hB : 0 ≤ B) (k : ℕ) :
+    0 ≤ dfiDerivativeL1Envelope g S B k := by
+  apply Finset.sum_nonneg
+  intro r _hr
+  apply div_nonneg
+  · exact integral_nonneg fun _ ↦ norm_nonneg _
+  · exact pow_nonneg hB r
+
+/-- Every derivative represented in the finite envelope recovers its
+geometric `B^r` bound. -/
+theorem integral_norm_iteratedDeriv_le_envelope_mul_pow
+    (g : ℝ → ℂ) (S : ℝ) {B : ℝ} (hB : 0 < B) (k r : ℕ)
+    (hr : r ≤ 2 * k) :
+    (∫ x in Set.Icc S (2 * S), ‖iteratedDeriv r g x‖) ≤
+      dfiDerivativeL1Envelope g S B k * B ^ r := by
+  have hrMem : r ∈ Finset.range (2 * k + 1) := by simp [hr]
+  have hTerm :
+      (∫ x in Set.Icc S (2 * S), ‖iteratedDeriv r g x‖) / B ^ r ≤
+        dfiDerivativeL1Envelope g S B k := by
+    dsimp only [dfiDerivativeL1Envelope]
+    exact Finset.single_le_sum
+      (fun s (_hs : s ∈ Finset.range (2 * k + 1)) ↦
+        div_nonneg (integral_nonneg fun x : ℝ ↦
+          norm_nonneg (iteratedDeriv s g x))
+        (pow_nonneg hB.le s)) hrMem
+  exact (div_le_iff₀ (pow_pos hB r)).mp hTerm
+
+/-- Envelope form of the equation-(29) recurrence.  Unlike a supremum
+profile, this theorem is linear in each source derivative mass and can
+therefore be integrated through a second transform. -/
+theorem DFIVoronoiTestFunction.norm_dfiEquation29InitialTransform_le_recurrence_l1_envelope
+    {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    {B S D : ℝ} (hB : 0 < B) (hS : 0 < S)
+    (hSB : 1 ≤ S * B)
+    (hSupport : Function.support g ⊆ Set.Icc S (2 * S))
+    (q : ℕ) [NeZero q] (branch : DFIVoronoiDualBranch)
+    {n : ℕ} (hn : 0 < n) (k : ℕ)
+    (hD : (2 * k + 3 : ℕ) ≤ D) :
+    ‖dfiEquation29InitialTransform q branch g n‖ ≤
+      (((q : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+        ((14 * Real.pi + 8) / Real.sqrt q *
+          ((S ^ (-(1 / 4 : ℝ)) *
+            (dfiDerivativeL1Envelope g S B k *
+              (D * S * B ^ 2) ^ k)) *
+              (n : ℝ) ^ (-(1 / 4 : ℝ)))) := by
+  exact hg.norm_dfiEquation29InitialTransform_le_recurrence_l1_profile
+    (dfiDerivativeL1Envelope_nonneg g S hB.le k) hB.le hS hSB
+      hSupport q branch hn k hD
+      (fun r hr ↦ integral_norm_iteratedDeriv_le_envelope_mul_pow
+        g S hB k r hr)
 
 /-- Algebraic cancellation of the modulus between the contour multiplier
 and the derivative cost.  This is the exact calculation behind DFI's
@@ -6515,6 +7279,308 @@ noncomputable def dfiVoronoiDualTerm_family_testFunction
     exact hx rfl
 
 set_option maxHeartbeats 1000000 in
+/-- Differentiation in the untransformed parameter commutes exactly with a
+fixed-frequency dual Voronoi transform in the second variable.  This is the
+physical two-stage bridge needed to apply the equation-(29) Bessel recurrence
+twice while retaining a mixed `L¹` derivative profile. -/
+theorem iteratedDeriv_dfiVoronoiDualTerm_family
+    {E : ℝ → ℝ → ℂ} {A B C D : ℝ}
+    (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (hC : 0 < C) (hCD : C ≤ D)
+    (hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A B ×ˢ Set.Icc C D)
+    (q : ℕ) [NeZero q] (branch : DFIVoronoiDualBranch)
+    (n i : ℕ) (x : ℝ) :
+    iteratedDeriv i (fun x' ↦ dfiVoronoiDualTerm q branch (E x') n) x =
+      dfiVoronoiDualTerm q branch (fun y ↦ dfiMixedDeriv i 0 E x y) n := by
+  by_cases hn : n = 0
+  · subst n
+    simp only [dfiVoronoiDualTerm_zero]
+    simp
+  let P : ℝ → ℂ := fun u ↦
+    (n : ℂ) ^ (-(1 - (((-(1 / 2 : ℝ) : ℂ) + (u : ℂ) * I))))
+  let W : ℝ → ℂ := fun u ↦ divisorWeight n * P u *
+    dfiDualBranchMultiplier q branch
+      (((-(1 / 2 : ℝ) : ℂ) + (u : ℂ) * I))
+  let Cw : ℝ := ‖divisorWeight n‖ *
+    (32 * q * dfiArchimedeanScale q ^ 2)
+  have hnPos : (0 : ℝ) < n := by
+    exact_mod_cast Nat.pos_of_ne_zero hn
+  have hPcont : Continuous P := by
+    have hExponent : Continuous (fun u : ℝ ↦
+        -(1 - (((-(1 / 2 : ℝ) : ℂ) + (u : ℂ) * I)))) := by
+      fun_prop
+    exact hExponent.const_cpow (Or.inl (Nat.cast_ne_zero.mpr hn))
+  have hPnorm (u : ℝ) : ‖P u‖ ≤ 1 := by
+    dsimp [P]
+    rw [← Complex.ofReal_natCast]
+    rw [Complex.norm_cpow_eq_rpow_re_of_pos hnPos]
+    apply Real.rpow_le_one_of_one_le_of_nonpos
+    · exact_mod_cast Nat.one_le_iff_ne_zero.mpr hn
+    · norm_num
+  have hWcont : Continuous W := by
+    apply (continuous_const.mul hPcont).mul
+    simpa only [Complex.ofReal_neg, Complex.ofReal_div,
+      Complex.ofReal_one] using
+      (continuous_dfiDualBranchMultiplier_leftLine q branch)
+  have hCw : 0 ≤ Cw := by
+    dsimp [Cw]
+    positivity
+  have hWbound (u : ℝ) : ‖W u‖ ≤ Cw * (1 + |u|) ^ 2 := by
+    dsimp [W, Cw]
+    rw [norm_mul, norm_mul]
+    calc
+      ‖divisorWeight n‖ * ‖P u‖ *
+          ‖dfiDualBranchMultiplier q branch
+            (((-(1 / 2 : ℝ) : ℂ) + (u : ℂ) * I))‖ ≤
+          ‖divisorWeight n‖ * 1 *
+            (32 * q * dfiArchimedeanScale q ^ 2 * (1 + |u|) ^ 2) := by
+        gcongr
+        · exact hPnorm u
+        · simpa only [Complex.ofReal_neg, Complex.ofReal_div,
+            Complex.ofReal_one] using
+            (norm_dfiDualBranchMultiplier_le q branch u)
+      _ = (‖divisorWeight n‖ *
+          (32 * q * dfiArchimedeanScale q ^ 2)) * (1 + |u|) ^ 2 := by
+        ring
+  let V : ℕ → ℝ → ℂ := fun r ↦
+    dfiParametricVerticalIntegralDeriv r W (-(1 / 2 : ℝ)) E
+  have hVsmooth : ContDiff ℝ ∞ (V 0) := by
+    simpa only [V] using contDiff_dfiParametricVerticalIntegral
+      hE hC hCD hSupport hWcont hCw hWbound (-(1 / 2 : ℝ))
+  have hViter : iteratedDeriv i (V 0) = V i := by
+    induction i with
+    | zero => rfl
+    | succ i ih =>
+        rw [iteratedDeriv_succ, ih]
+        funext x'
+        simpa only [V, Nat.succ_eq_add_one] using
+          (hasDerivAt_dfiParametricVerticalIntegralDeriv
+            hE hC hCD hSupport hWcont hCw hWbound
+              i (-(1 / 2 : ℝ)) x').deriv
+  have hFamilyEq :
+      (fun x' ↦ dfiVoronoiDualTerm q branch (E x') n) =
+        fun x' ↦ (1 / (2 * Real.pi * I) : ℂ) * (I * V 0 x') := by
+    funext x'
+    rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial]
+    rw [← dfiEquation29TransformAt_initial]
+    dsimp only [V]
+    unfold dfiEquation29TransformAt VerticalIntegral' VerticalIntegral
+      dfiEquation29Integrand dfiEquation29Multiplier
+      dfiParametricVerticalIntegralDeriv W P
+    simp only [smul_eq_mul, iteratedDeriv_zero]
+    cases branch <;>
+      simp only [dfiDualBranchMultiplier,
+        Complex.ofReal_neg, Complex.ofReal_div, Complex.ofReal_one] <;>
+      simp_rw [← MeasureTheory.integral_const_mul] <;>
+      apply MeasureTheory.integral_congr_ae <;>
+      filter_upwards with u <;>
+      ring
+  have hMixedEq :
+      dfiVoronoiDualTerm q branch
+          (fun y ↦ dfiMixedDeriv i 0 E x y) n =
+        (1 / (2 * Real.pi * I) : ℂ) * (I * V i x) := by
+    rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial]
+    rw [← dfiEquation29TransformAt_initial]
+    dsimp only [V]
+    unfold dfiEquation29TransformAt VerticalIntegral' VerticalIntegral
+      dfiEquation29Integrand dfiEquation29Multiplier
+      dfiParametricVerticalIntegralDeriv W P
+    simp only [smul_eq_mul]
+    simp_rw [iteratedDeriv_mellin_slice hE hC hSupport i x]
+    cases branch <;>
+      simp only [dfiDualBranchMultiplier,
+        Complex.ofReal_neg, Complex.ofReal_div, Complex.ofReal_one] <;>
+      simp_rw [← MeasureTheory.integral_const_mul] <;>
+      apply MeasureTheory.integral_congr_ae <;>
+      filter_upwards with u <;>
+      ring
+  rw [hFamilyEq]
+  have hInnerSmooth : ContDiff ℝ ∞ (fun x' ↦ I * V 0 x') :=
+    contDiff_const.mul hVsmooth
+  rw [iteratedDeriv_const_mul (1 / (2 * Real.pi * I) : ℂ)
+    (hInnerSmooth.contDiffAt.of_le (by exact_mod_cast le_top))]
+  rw [iteratedDeriv_const_mul I
+    (hVsmooth.contDiffAt.of_le (by exact_mod_cast le_top))]
+  rw [hViter]
+  exact hMixedEq.symm
+
+/-- One `x`- and one `y`-directional derivative commute for a smooth
+two-variable function.  The proof invokes the symmetry of the full second
+Fréchet derivative rather than treating mixed partial commutation as a
+definitional simplification. -/
+theorem dfiPartialY_one_dfiPartialX_one_comm
+    {g : ℝ × ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (p : ℝ × ℝ) :
+    dfiPartialY 1 (dfiPartialX 1 g) p =
+      dfiPartialX 1 (dfiPartialY 1 g) p := by
+  let ex : ℝ × ℝ := (1, 0)
+  let ey : ℝ × ℝ := (0, 1)
+  have hTwoInf : (2 : ℕ∞ω) ≤ ∞ := by
+    exact WithTop.coe_le_coe.mpr le_top
+  have hfg : DifferentiableAt ℝ (fderiv ℝ g) p :=
+    ((hg.fderiv_right (m := 1) (by simpa using hTwoInf)).differentiable
+      one_ne_zero) p
+  have hex : DifferentiableAt ℝ (fun _ : ℝ × ℝ ↦ ex) p :=
+    differentiableAt_const ex
+  have hey : DifferentiableAt ℝ (fun _ : ℝ × ℝ ↦ ey) p :=
+    differentiableAt_const ey
+  change fderiv ℝ (fun z ↦ fderiv ℝ g z ex) p ey =
+    fderiv ℝ (fun z ↦ fderiv ℝ g z ey) p ex
+  rw [fderiv_clm_apply hfg hex, fderiv_clm_apply hfg hey]
+  simpa using
+    (hg.contDiffAt.isSymmSndFDerivAt (by simpa using hTwoInf)).eq ey ex
+
+/-- Any number of `y` derivatives commutes past one `x` derivative. -/
+theorem dfiPartialY_dfiPartialX_one_comm
+    {g : ℝ × ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (j : ℕ) :
+    dfiPartialY j (dfiPartialX 1 g) =
+      dfiPartialX 1 (dfiPartialY j g) := by
+  induction j with
+  | zero => rfl
+  | succ j ih =>
+      rw [show dfiPartialY (j + 1) (dfiPartialX 1 g) =
+          dfiPartialY 1 (dfiPartialY j (dfiPartialX 1 g)) by rfl]
+      rw [ih]
+      funext p
+      exact dfiPartialY_one_dfiPartialX_one_comm
+        (contDiff_dfiPartialY j hg) p
+
+/-- Arbitrary smooth coordinate derivatives commute. -/
+theorem dfiPartialY_dfiPartialX_comm
+    {g : ℝ × ℝ → ℂ} (hg : ContDiff ℝ ∞ g) (i j : ℕ) :
+    dfiPartialY j (dfiPartialX i g) =
+      dfiPartialX i (dfiPartialY j g) := by
+  induction i with
+  | zero => rfl
+  | succ i ih =>
+      rw [show dfiPartialX (i + 1) g =
+          dfiPartialX 1 (dfiPartialX i g) by rfl]
+      rw [dfiPartialY_dfiPartialX_one_comm (contDiff_dfiPartialX i hg) j]
+      rw [ih]
+      rfl
+
+/-- The derivative order naturally produced by differentiating a family of
+Voronoi transforms agrees with the project's equation-(2) mixed derivative
+convention. -/
+theorem iteratedDeriv_dfiMixedDeriv_zero_second
+    {E : ℝ → ℝ → ℂ} (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (i j : ℕ) (x y : ℝ) :
+    iteratedDeriv j (fun y' ↦ dfiMixedDeriv i 0 E x y') y =
+      dfiMixedDeriv i j E x y := by
+  have hleft :
+      iteratedDeriv j (fun y' ↦ dfiMixedDeriv i 0 E x y') y =
+        dfiPartialY j (dfiPartialX i (Function.uncurry E)) (x, y) := by
+    rw [dfiPartialY_apply j (contDiff_dfiPartialX i hE)]
+    congr 2
+    funext y'
+    rw [dfiMixedDeriv_eq_partialXY hE i 0]
+    rfl
+  rw [hleft, dfiPartialY_dfiPartialX_comm hE i j]
+  exact (dfiMixedDeriv_eq_partialXY hE i j x y).symm
+
+/-- Integrating the normalized derivative envelope of a source slice
+recovers the mixed two-variable `L¹` profile.  Each derivative order costs
+exactly one copy of the same normalized mass, so the only loss is the
+finite count `2k+1`. -/
+theorem integral_Icc_dfiDerivativeL1Envelope_mixed_le
+    {E : ℝ → ℝ → ℂ} (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    {Sx Sy Bx By M : ℝ} (hBy : 0 < By) (i k : ℕ)
+    (hMass : ∀ j ≤ 2 * k,
+      (∫ x in Set.Icc Sx (2 * Sx),
+        ∫ y in Set.Icc Sy (2 * Sy), ‖dfiMixedDeriv i j E x y‖) ≤
+          M * Bx ^ i * By ^ j) :
+    (∫ x in Set.Icc Sx (2 * Sx),
+      dfiDerivativeL1Envelope
+        (fun y ↦ dfiMixedDeriv i 0 E x y) Sy By k) ≤
+      (2 * k + 1 : ℝ) * (M * Bx ^ i) := by
+  have hCont (j : ℕ) : Continuous (fun x : ℝ ↦
+      (∫ y in Set.Icc Sy (2 * Sy), ‖dfiMixedDeriv i j E x y‖) /
+        By ^ j) := by
+    have hMixedSmooth : ContDiff ℝ ∞
+        (Function.uncurry (dfiMixedDeriv i j E)) :=
+      contDiff_uncurry_dfiMixedDeriv hE i j
+    exact (continuous_parametric_integral_of_continuous
+      hMixedSmooth.continuous.norm isCompact_Icc).div_const _
+  have hInt (j : ℕ) : IntegrableOn (fun x : ℝ ↦
+      (∫ y in Set.Icc Sy (2 * Sy), ‖dfiMixedDeriv i j E x y‖) /
+        By ^ j) (Set.Icc Sx (2 * Sx)) :=
+    (hCont j).continuousOn.integrableOn_compact isCompact_Icc
+  have hEach (j : ℕ) (hj : j ∈ Finset.range (2 * k + 1)) :
+      (∫ x in Set.Icc Sx (2 * Sx),
+        (∫ y in Set.Icc Sy (2 * Sy), ‖dfiMixedDeriv i j E x y‖) /
+          By ^ j) ≤ M * Bx ^ i := by
+    have hjk : j ≤ 2 * k := by simpa using hj
+    rw [MeasureTheory.integral_div]
+    have hraw := div_le_div_of_nonneg_right (hMass j hjk)
+      (pow_nonneg hBy.le j)
+    have hpow : By ^ j ≠ 0 := ne_of_gt (pow_pos hBy j)
+    calc
+      (∫ x in Set.Icc Sx (2 * Sx),
+          ∫ y in Set.Icc Sy (2 * Sy), ‖dfiMixedDeriv i j E x y‖) /
+            By ^ j ≤ (M * Bx ^ i * By ^ j) / By ^ j := hraw
+      _ = M * Bx ^ i := by field_simp
+  simp only [dfiDerivativeL1Envelope]
+  rw [MeasureTheory.integral_finsetSum (Finset.range (2 * k + 1)) (by
+    intro r hr
+    simpa only [iteratedDeriv_dfiMixedDeriv_zero_second hE] using hInt r)]
+  calc
+    (∑ r ∈ Finset.range (2 * k + 1),
+        ∫ x in Set.Icc Sx (2 * Sx),
+          (∫ y in Set.Icc Sy (2 * Sy),
+            ‖iteratedDeriv r (fun y ↦ dfiMixedDeriv i 0 E x y) y‖) /
+              By ^ r) ≤
+        ∑ _r ∈ Finset.range (2 * k + 1), M * Bx ^ i := by
+      apply Finset.sum_le_sum
+      intro r hr
+      simpa only [iteratedDeriv_dfiMixedDeriv_zero_second hE] using hEach r hr
+    _ = (2 * k + 1 : ℝ) * (M * Bx ^ i) := by simp
+
+/-- Restricting a smooth compactly supported mixed derivative to its
+source rectangle can only decrease its nonnegative two-variable `L¹`
+mass. -/
+theorem integral_Icc_integral_Icc_norm_dfiMixedDeriv_le
+    {E : ℝ → ℝ → ℂ} {A B C D : ℝ}
+    (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A B ×ˢ Set.Icc C D) (i j : ℕ) :
+    (∫ x in Set.Icc A B, ∫ y in Set.Icc C D,
+      ‖dfiMixedDeriv i j E x y‖) ≤
+      ∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv i j E x y‖ := by
+  let Er : ℝ → ℝ → ℂ := dfiMixedDeriv i j E
+  have hEr : ContDiff ℝ ∞ (Function.uncurry Er) := by
+    exact contDiff_uncurry_dfiMixedDeriv hE i j
+  have hErSupport : Function.support (Function.uncurry Er) ⊆
+      Set.Icc A B ×ˢ Set.Icc C D :=
+    (support_dfiMixedDeriv_subset_tsupport hE i j).trans
+      (closure_minimal hSupport (isClosed_Icc.prod isClosed_Icc))
+  have hErNorm : Integrable
+      (fun p : ℝ × ℝ ↦ ‖Er p.1 p.2‖) (volume.prod volume) :=
+    hEr.continuous.norm.integrable_of_hasCompactSupport
+      (HasCompactSupport.of_support_subset_isCompact
+        (isCompact_Icc.prod isCompact_Icc) (by
+          intro p hp
+          change ‖Er p.1 p.2‖ ≠ 0 at hp
+          exact hErSupport (by
+            simpa only [Function.mem_support,
+              Function.uncurry_apply_pair] using (norm_ne_zero_iff.mp hp))))
+  have hprod :
+      (∫ x in Set.Icc A B, ∫ y in Set.Icc C D, ‖Er x y‖) =
+        ∫ p in Set.Icc A B ×ˢ Set.Icc C D,
+          ‖Er p.1 p.2‖ ∂(volume.prod volume) := by
+    exact (MeasureTheory.setIntegral_prod
+      (fun p : ℝ × ℝ ↦ ‖Er p.1 p.2‖) hErNorm.integrableOn).symm
+  rw [hprod]
+  calc
+    (∫ p in Set.Icc A B ×ˢ Set.Icc C D,
+        ‖Er p.1 p.2‖ ∂(volume.prod volume)) ≤
+        ∫ p : ℝ × ℝ, ‖Er p.1 p.2‖ ∂(volume.prod volume) :=
+      MeasureTheory.integral_mono_measure Measure.restrict_le_self
+        (Filter.Eventually.of_forall fun p ↦ norm_nonneg (Er p.1 p.2)) hErNorm
+    _ = ∫ x : ℝ, ∫ y : ℝ, ‖Er x y‖ :=
+      MeasureTheory.integral_prod
+        (fun p : ℝ × ℝ ↦ ‖Er p.1 p.2‖) hErNorm
+
+set_option maxHeartbeats 1000000 in
 /-- The residue-independent double Mellin amplitude in DFI equation (24)
 is exactly the result of applying the two fixed-frequency Voronoi terms in
 source order.  This is the frequency-by-frequency bridge from the Mellin
@@ -6607,6 +7673,899 @@ theorem dfiEquation24DoubleDualMellinAmplitude_eq_iteratedDualTerm
     ring
 
 set_option maxHeartbeats 1000000 in
+/-- Applying the equation-(29) Bessel recurrence in both physical variables
+while retaining the mixed two-variable `L¹` mass.  This is the literal
+two-stage estimate required in the double-tail corner: unlike a pointwise
+slice estimate, it introduces no factor equal to either support length. -/
+theorem norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_recurrence
+    {E : ℝ → ℝ → ℂ} {A C Bx By M D : ℝ}
+    (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (hA : 0 < A) (hC : 0 < C) (hBx : 0 < Bx) (hBy : 0 < By)
+    (hABx : 1 ≤ A * Bx) (hCBy : 1 ≤ C * By)
+    (hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C))
+    (k : ℕ) (hD : (2 * k + 3 : ℕ) ≤ D)
+    (hMass : ∀ i ≤ 2 * k, ∀ j ≤ 2 * k,
+      (∫ x in Set.Icc A (2 * A),
+        ∫ y in Set.Icc C (2 * C), ‖dfiMixedDeriv i j E x y‖) ≤
+          M * Bx ^ i * By ^ j)
+    (qx qy : ℕ) [NeZero qx] [NeZero qy]
+    (xBranch yBranch : DFIVoronoiDualBranch) {m n : ℕ}
+    (hm : 0 < m) (hn : 0 < n) :
+    let Ty : ℝ :=
+      ‖divisorWeight n‖ *
+      ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+        ((14 * Real.pi + 8) / Real.sqrt qy *
+          (C ^ (-(1 / 4 : ℝ)) *
+            ((2 * (k : ℝ) + 1) * M *
+              (D * C * By ^ 2) ^ k) *
+            (n : ℝ) ^ (-(1 / 4 : ℝ)))))
+    ‖dfiEquation24DoubleDualMellinAmplitude
+        qx xBranch qy yBranch E m n‖ ≤
+      ‖divisorWeight m‖ *
+      ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)) ^ k *
+        ((14 * Real.pi + 8) / Real.sqrt qx *
+          (A ^ (-(1 / 4 : ℝ)) *
+            (Ty * (D * A * Bx ^ 2) ^ k) *
+            (m : ℝ) ^ (-(1 / 4 : ℝ))))) := by
+  dsimp only
+  let G : ℝ → ℂ := fun x ↦ dfiVoronoiDualTerm qy yBranch (E x) n
+  have hAA : A ≤ 2 * A := by linarith
+  have hCC : C ≤ 2 * C := by linarith
+  have hG : DFIVoronoiTestFunction G :=
+    dfiVoronoiDualTerm_family_testFunction
+      hE hA hAA hC hCC hSupport qy yBranch n
+  have hGSupport : Function.support G ⊆ Set.Icc A (2 * A) := by
+    intro x hx
+    by_contra hxnot
+    have hxE : E x = fun _ ↦ 0 := by
+      funext y
+      by_contra hne
+      exact hxnot (hSupport (show
+        (x, y) ∈ Function.support (Function.uncurry E) by
+          simpa only [Function.mem_support,
+            Function.uncurry_apply_pair] using hne)).1
+    change dfiVoronoiDualTerm qy yBranch (E x) n ≠ 0 at hx
+    rw [hxE, dfiVoronoiDualTerm_zero_function] at hx
+    exact hx rfl
+  let Fy : ℝ :=
+    ‖divisorWeight n‖ *
+    ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+      ((14 * Real.pi + 8) / Real.sqrt qy *
+        (C ^ (-(1 / 4 : ℝ)) * (D * C * By ^ 2) ^ k *
+          (n : ℝ) ^ (-(1 / 4 : ℝ)))))
+  have hFy : 0 ≤ Fy := by
+    dsimp [Fy]
+    have hpi : 0 < Real.pi := Real.pi_pos
+    have hD0 : 0 ≤ D := by
+      exact (show (0 : ℝ) ≤ ((2 * k + 3 : ℕ) : ℝ) by positivity).trans hD
+    positivity
+  have hEnvelope (i : ℕ) (hi : i ≤ 2 * k) :
+      (∫ x in Set.Icc A (2 * A),
+        dfiDerivativeL1Envelope
+          (fun y ↦ dfiMixedDeriv i 0 E x y) C By k) ≤
+        (2 * (k : ℝ) + 1) * (M * Bx ^ i) :=
+    integral_Icc_dfiDerivativeL1Envelope_mixed_le hE hBy i k
+      (fun j hj ↦ hMass i hi j hj)
+  have hDerivMass (i : ℕ) (hi : i ≤ 2 * k) :
+      (∫ x in Set.Icc A (2 * A), ‖iteratedDeriv i G x‖) ≤
+        Fy * ((2 * (k : ℝ) + 1) * (M * Bx ^ i)) := by
+    have hLeft : IntegrableOn (fun x ↦ ‖iteratedDeriv i G x‖)
+        (Set.Icc A (2 * A)) :=
+      (ContDiff.continuous_iteratedDeriv i hG.smooth
+        (by exact WithTop.coe_le_coe.mpr le_top)).norm.continuousOn
+        |>.integrableOn_compact isCompact_Icc
+    have hEnvCont : Continuous (fun x ↦
+        dfiDerivativeL1Envelope
+          (fun y ↦ dfiMixedDeriv i 0 E x y) C By k) := by
+      simp only [dfiDerivativeL1Envelope]
+      apply continuous_finsetSum
+      intro j _hj
+      apply Continuous.div_const
+      simpa only [iteratedDeriv_dfiMixedDeriv_zero_second hE] using
+        continuous_parametric_integral_of_continuous
+          (contDiff_uncurry_dfiMixedDeriv hE i j).continuous.norm
+            isCompact_Icc
+    have hRight : IntegrableOn (fun x ↦ Fy *
+        dfiDerivativeL1Envelope
+          (fun y ↦ dfiMixedDeriv i 0 E x y) C By k)
+        (Set.Icc A (2 * A)) :=
+      (hEnvCont.const_mul Fy).continuousOn.integrableOn_compact isCompact_Icc
+    have hPoint (x : ℝ) : ‖iteratedDeriv i G x‖ ≤ Fy *
+        dfiDerivativeL1Envelope
+          (fun y ↦ dfiMixedDeriv i 0 E x y) C By k := by
+      let gi : ℝ → ℂ := fun y ↦ dfiMixedDeriv i 0 E x y
+      have hgi : DFIVoronoiTestFunction gi := {
+        lower := C
+        upper := 2 * C
+        lower_pos := hC
+        lower_le_upper := hCC
+        smooth := by
+          simpa only [gi, Function.uncurry_apply_pair] using
+            (contDiff_uncurry_dfiMixedDeriv hE i 0).comp
+              (contDiff_prodMk_right x)
+        support_subset := support_dfiMixedDeriv_first_slice_subset
+          hSupport i x }
+      have hrec :=
+        hgi.norm_dfiEquation29InitialTransform_le_recurrence_l1_envelope
+          hBy hC hCBy
+            (support_dfiMixedDeriv_first_slice_subset hSupport i x)
+              qy yBranch hn k hD
+      rw [iteratedDeriv_dfiVoronoiDualTerm_family
+        hE hC hCC hSupport qy yBranch n i x]
+      rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial,
+        norm_mul]
+      calc
+        ‖divisorWeight n‖ *
+            ‖dfiEquation29InitialTransform qy yBranch gi n‖ ≤
+          ‖divisorWeight n‖ *
+            ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+              ((14 * Real.pi + 8) / Real.sqrt qy *
+                (C ^ (-(1 / 4 : ℝ)) *
+                  (dfiDerivativeL1Envelope gi C By k *
+                    (D * C * By ^ 2) ^ k) *
+                  (n : ℝ) ^ (-(1 / 4 : ℝ))))) := by gcongr
+        _ = Fy * dfiDerivativeL1Envelope gi C By k := by
+          dsimp only [Fy]
+          ring
+    calc
+      (∫ x in Set.Icc A (2 * A), ‖iteratedDeriv i G x‖) ≤
+          ∫ x in Set.Icc A (2 * A), Fy *
+            dfiDerivativeL1Envelope
+              (fun y ↦ dfiMixedDeriv i 0 E x y) C By k := by
+        apply integral_mono_ae hLeft hRight
+        filter_upwards with x
+        exact hPoint x
+      _ = Fy * (∫ x in Set.Icc A (2 * A),
+          dfiDerivativeL1Envelope
+            (fun y ↦ dfiMixedDeriv i 0 E x y) C By k) := by
+        rw [MeasureTheory.integral_const_mul]
+      _ ≤ Fy * ((2 * (k : ℝ) + 1) * (M * Bx ^ i)) := by
+        exact mul_le_mul_of_nonneg_left (hEnvelope i hi) hFy
+  have hOuter :=
+    hG.norm_dfiEquation29InitialTransform_le_recurrence_l1_profile
+      (A := Fy * ((2 * (k : ℝ) + 1) * M))
+      (B := Bx) (S := A) (D := D)
+      (mul_nonneg hFy (mul_nonneg (by positivity) (by
+        have h0 := hMass 0 (by omega) 0 (by omega)
+        have hnonneg : 0 ≤ (∫ x in Set.Icc A (2 * A),
+            ∫ y in Set.Icc C (2 * C), ‖dfiMixedDeriv 0 0 E x y‖) :=
+          integral_nonneg fun _ ↦ integral_nonneg fun _ ↦ norm_nonneg _
+        simpa using hnonneg.trans h0)))
+      hBx.le hA hABx hGSupport qx xBranch hm k hD
+      (fun i hi ↦ by
+        calc
+          (∫ x in Set.Icc A (2 * A), ‖iteratedDeriv i G x‖) ≤
+              Fy * ((2 * (k : ℝ) + 1) * (M * Bx ^ i)) :=
+            hDerivMass i hi
+          _ = (Fy * ((2 * (k : ℝ) + 1) * M)) * Bx ^ i := by ring)
+  rw [dfiEquation24DoubleDualMellinAmplitude_eq_iteratedDualTerm
+    hE hA hAA hC hCC hSupport qx qy xBranch yBranch m n]
+  rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial, norm_mul]
+  calc
+    ‖divisorWeight m‖ * ‖dfiEquation29InitialTransform qx xBranch G m‖ ≤
+        ‖divisorWeight m‖ *
+          ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)) ^ k *
+            ((14 * Real.pi + 8) / Real.sqrt qx *
+              (A ^ (-(1 / 4 : ℝ)) *
+                ((Fy * ((2 * (k : ℝ) + 1) * M)) *
+                  (D * A * Bx ^ 2) ^ k) *
+                (m : ℝ) ^ (-(1 / 4 : ℝ))))) := by gcongr
+    _ = _ := by dsimp only [Fy]; ring
+
+set_option maxHeartbeats 1000000 in
+/-- Asymmetric form of the mixed-`L¹` recurrence: the second Voronoi
+frequency is integrated by parts `k` times, while the first is retained on
+the physical quarter line.  Unlike the older uniform-slice estimate, this
+keeps the two-dimensional mass `M`, and hence preserves DFI equation
+(30)'s factor `(X+Y)⁻¹ XY log Q`. -/
+theorem norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_y_recurrence
+    {E : ℝ → ℝ → ℂ} {A C By M D : ℝ}
+    (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (hA : 0 < A) (hC : 0 < C) (hBy : 0 < By)
+    (hCBy : 1 ≤ C * By)
+    (hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C))
+    (k : ℕ) (hD : (2 * k + 3 : ℕ) ≤ D)
+    (hMass : ∀ j ≤ 2 * k,
+      (∫ x in Set.Icc A (2 * A),
+        ∫ y in Set.Icc C (2 * C), ‖dfiMixedDeriv 0 j E x y‖) ≤
+          M * By ^ j)
+    (qx qy : ℕ) [NeZero qx] [NeZero qy]
+    (xBranch yBranch : DFIVoronoiDualBranch) {m n : ℕ}
+    (hm : 0 < m) (hn : 0 < n) :
+    let Ty : ℝ :=
+      ‖divisorWeight n‖ *
+      ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+        ((14 * Real.pi + 8) / Real.sqrt qy *
+          (C ^ (-(1 / 4 : ℝ)) *
+            ((2 * (k : ℝ) + 1) * M * (D * C * By ^ 2) ^ k) *
+            (n : ℝ) ^ (-(1 / 4 : ℝ)))))
+    ‖dfiEquation24DoubleDualMellinAmplitude
+        qx xBranch qy yBranch E m n‖ ≤
+      ‖divisorWeight m‖ *
+        ((14 * Real.pi + 8) / Real.sqrt qx *
+          (A ^ (-(1 / 4 : ℝ)) * Ty *
+            (m : ℝ) ^ (-(1 / 4 : ℝ)))) := by
+  dsimp only
+  let G : ℝ → ℂ := fun x ↦ dfiVoronoiDualTerm qy yBranch (E x) n
+  have hAA : A ≤ 2 * A := by linarith
+  have hCC : C ≤ 2 * C := by linarith
+  have hG : DFIVoronoiTestFunction G :=
+    dfiVoronoiDualTerm_family_testFunction
+      hE hA hAA hC hCC hSupport qy yBranch n
+  have hGSupport : Function.support G ⊆ Set.Icc A (2 * A) := by
+    intro x hx
+    by_contra hxnot
+    have hxE : E x = fun _ ↦ 0 := by
+      funext y
+      by_contra hne
+      exact hxnot (hSupport (show
+        (x, y) ∈ Function.support (Function.uncurry E) by
+          simpa only [Function.mem_support,
+            Function.uncurry_apply_pair] using hne)).1
+    change dfiVoronoiDualTerm qy yBranch (E x) n ≠ 0 at hx
+    rw [hxE, dfiVoronoiDualTerm_zero_function] at hx
+    exact hx rfl
+  let Fy : ℝ :=
+    ‖divisorWeight n‖ *
+    ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+      ((14 * Real.pi + 8) / Real.sqrt qy *
+        (C ^ (-(1 / 4 : ℝ)) * (D * C * By ^ 2) ^ k *
+          (n : ℝ) ^ (-(1 / 4 : ℝ)))))
+  have hFy : 0 ≤ Fy := by
+    dsimp [Fy]
+    have hD0 : 0 ≤ D := by
+      exact (show (0 : ℝ) ≤ ((2 * k + 3 : ℕ) : ℝ) by positivity).trans hD
+    positivity
+  have hEnvelope :
+      (∫ x in Set.Icc A (2 * A),
+        dfiDerivativeL1Envelope
+          (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k) ≤
+        (2 * (k : ℝ) + 1) * M := by
+    simpa using integral_Icc_dfiDerivativeL1Envelope_mixed_le
+      (Bx := 1) hE hBy 0 k (fun j hj ↦ by simpa using hMass j hj)
+  have hLeft : IntegrableOn (fun x ↦ ‖G x‖) (Set.Icc A (2 * A)) :=
+    hG.continuous.norm.continuousOn.integrableOn_compact isCompact_Icc
+  have hEnvCont : Continuous (fun x ↦
+      dfiDerivativeL1Envelope
+        (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k) := by
+    simp only [dfiDerivativeL1Envelope]
+    apply continuous_finsetSum
+    intro j _hj
+    apply Continuous.div_const
+    simpa only [iteratedDeriv_dfiMixedDeriv_zero_second hE] using
+      continuous_parametric_integral_of_continuous
+        (contDiff_uncurry_dfiMixedDeriv hE 0 j).continuous.norm
+          isCompact_Icc
+  have hRight : IntegrableOn (fun x ↦ Fy *
+      dfiDerivativeL1Envelope
+        (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k)
+      (Set.Icc A (2 * A)) :=
+    (hEnvCont.const_mul Fy).continuousOn.integrableOn_compact isCompact_Icc
+  have hPoint (x : ℝ) : ‖G x‖ ≤ Fy *
+      dfiDerivativeL1Envelope
+        (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k := by
+    let g : ℝ → ℂ := fun y ↦ E x y
+    have hgSupport : Function.support g ⊆ Set.Icc C (2 * C) := by
+      intro y hy
+      exact (hSupport (show (x, y) ∈ Function.support (Function.uncurry E) by
+        simpa only [g, Function.mem_support,
+          Function.uncurry_apply_pair] using hy)).2
+    have hg : DFIVoronoiTestFunction g := {
+      lower := C
+      upper := 2 * C
+      lower_pos := hC
+      lower_le_upper := hCC
+      smooth := by
+        simpa only [g, Function.uncurry_apply_pair] using
+          hE.comp (contDiff_prodMk_right x)
+      support_subset := hgSupport }
+    have hrec :=
+      hg.norm_dfiEquation29InitialTransform_le_recurrence_l1_envelope
+        hBy hC hCBy hgSupport qy yBranch hn k hD
+    rw [show G x = dfiVoronoiDualTerm qy yBranch g n by rfl,
+      dfiVoronoiDualTerm_eq_divisorWeight_mul_initial, norm_mul]
+    calc
+      ‖divisorWeight n‖ * ‖dfiEquation29InitialTransform qy yBranch g n‖ ≤
+          ‖divisorWeight n‖ *
+            ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+              ((14 * Real.pi + 8) / Real.sqrt qy *
+                (C ^ (-(1 / 4 : ℝ)) *
+                  (dfiDerivativeL1Envelope g C By k *
+                    (D * C * By ^ 2) ^ k) *
+                  (n : ℝ) ^ (-(1 / 4 : ℝ))))) := by gcongr
+      _ = Fy * dfiDerivativeL1Envelope g C By k := by
+        dsimp only [Fy]
+        ring
+      _ = _ := by rfl
+  have hIntegral : (∫ x in Set.Icc A (2 * A), ‖G x‖) ≤
+      Fy * ((2 * (k : ℝ) + 1) * M) := by
+    calc
+      _ ≤ ∫ x in Set.Icc A (2 * A), Fy *
+          dfiDerivativeL1Envelope
+            (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k := by
+        apply integral_mono_ae hLeft hRight
+        filter_upwards with x
+        exact hPoint x
+      _ = Fy * (∫ x in Set.Icc A (2 * A),
+          dfiDerivativeL1Envelope
+            (fun y ↦ dfiMixedDeriv 0 0 E x y) C By k) := by
+        rw [MeasureTheory.integral_const_mul]
+      _ ≤ Fy * ((2 * (k : ℝ) + 1) * M) :=
+        mul_le_mul_of_nonneg_left hEnvelope hFy
+  have hBase : dfiBesselQuarterBaseNorm G ≤
+      A ^ (-(1 / 4 : ℝ)) * (Fy * ((2 * (k : ℝ) + 1) * M)) := by
+    calc
+      _ ≤ A ^ (-(1 / 4 : ℝ)) *
+          (∫ x in Set.Icc A (2 * A), ‖G x‖) :=
+        dfiBesselQuarterBaseNorm_le_lower_rpow_mul_integral_norm
+          hA hG hGSupport
+      _ ≤ _ := by gcongr
+  have hOuter :=
+    hG.norm_dfiEquation29InitialTransform_le_besselQuarterNorm
+      qx xBranch hm (hG.integrableOn_besselQuarterWeight_mul_nat m hm)
+  rw [dfiBesselQuarterNorm_eq_rpow_mul_base G m hm] at hOuter
+  rw [dfiEquation24DoubleDualMellinAmplitude_eq_iteratedDualTerm
+    hE hA hAA hC hCC hSupport qx qy xBranch yBranch m n]
+  rw [dfiVoronoiDualTerm_eq_divisorWeight_mul_initial, norm_mul]
+  calc
+    _ ≤ ‖divisorWeight m‖ *
+        ((14 * Real.pi + 8) / Real.sqrt qx *
+          (dfiBesselQuarterBaseNorm G *
+            (m : ℝ) ^ (-(1 / 4 : ℝ)))) := by
+      exact mul_le_mul_of_nonneg_left
+        (by simpa only [G, mul_comm] using hOuter) (norm_nonneg _)
+    _ ≤ ‖divisorWeight m‖ *
+        ((14 * Real.pi + 8) / Real.sqrt qx *
+          ((A ^ (-(1 / 4 : ℝ)) *
+            (Fy * ((2 * (k : ℝ) + 1) * M))) *
+            (m : ℝ) ^ (-(1 / 4 : ℝ)))) := by gcongr
+    _ = _ := by dsimp only [Fy]; ring
+
+/-- The reduced-modulus recurrence ratio is bounded by the literal DFI
+equation-(29) transition ratio.  The harmless factor `4D` records the
+doubled derivative scale used uniformly for all `q < 2Q`. -/
+theorem dfiReducedRecurrenceRatio_le_sourceTransitionRatio
+    {a q qx k : ℕ} {X Q D m : ℝ}
+    (ha : 0 < a) (hq : 0 < q) (hqx : (qx : ℝ) ≤ q)
+    (hX : 0 < X) (hQ : 0 < Q) (hD : 0 ≤ D) (hm : 0 < m) :
+    ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / m) ^ k) *
+        (D * (X / (a : ℝ)) *
+          (2 * ((a : ℝ) / ((q : ℝ) * Q))) ^ 2) ^ k ≤
+      (4 * D) ^ k * (((a : ℝ) * X / Q ^ 2) / m) ^ k := by
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq
+  have hpi : 1 ≤ 2 * Real.pi := by nlinarith [Real.pi_gt_three]
+  have hqx0 : (0 : ℝ) ≤ qx := Nat.cast_nonneg qx
+  have hfrac : (qx : ℝ) / (2 * Real.pi) ≤ q := by
+    calc
+      (qx : ℝ) / (2 * Real.pi) ≤ (qx : ℝ) :=
+        div_le_self hqx0 hpi
+      _ ≤ q := hqx
+  have hfrac0 : 0 ≤ (qx : ℝ) / (2 * Real.pi) := by positivity
+  have hbase :
+      (((qx : ℝ) / (2 * Real.pi)) ^ 2 / m) *
+          (D * (X / (a : ℝ)) *
+            (2 * ((a : ℝ) / ((q : ℝ) * Q))) ^ 2) ≤
+        (4 * D) * (((a : ℝ) * X / Q ^ 2) / m) := by
+    calc
+      _ ≤ (((q : ℝ) ^ 2) / m) *
+          (D * (X / (a : ℝ)) *
+            (2 * ((a : ℝ) / ((q : ℝ) * Q))) ^ 2) := by
+        gcongr
+      _ = (4 * D) * (((a : ℝ) * X / Q ^ 2) / m) := by
+        field_simp
+        ring
+  calc
+    ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / m) ^ k) *
+          (D * (X / (a : ℝ)) *
+            (2 * ((a : ℝ) / ((q : ℝ) * Q))) ^ 2) ^ k =
+        (((((qx : ℝ) / (2 * Real.pi)) ^ 2 / m) *
+          (D * (X / (a : ℝ)) *
+            (2 * ((a : ℝ) / ((q : ℝ) * Q))) ^ 2)) ^ k) := by
+          exact (mul_pow _ _ k).symm
+    _ ≤ (((4 * D) * (((a : ℝ) * X / Q ^ 2) / m)) ^ k) :=
+      pow_le_pow_left₀ (by positivity) hbase k
+    _ = (4 * D) ^ k * (((a : ℝ) * X / Q ^ 2) / m) ^ k := by
+      rw [mul_pow]
+
+/-- Source specialization of the two-stage mixed-`L¹` recurrence to the
+actual equation-(23) weight.  The derivative scales are the doubled
+source scales `2a/(qQ)` and `2b/(qQ)`; the factor two is exactly what is
+needed to cover every modulus `q < 2Q`. -/
+theorem exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_l1_recurrence
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hUQ : U = Q ^ 2) (k : ℕ) :
+    ∃ K : ℝ, 0 < K ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → (_hq : NeZero q) →
+      (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ)
+      (xBranch yBranch : DFIVoronoiDualBranch) (m n : ℕ),
+      0 < m → 0 < n →
+      let qx := (dfiReducedModulus a q).denominator
+      let qy := (dfiReducedModulus b q).denominator
+      let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+      let A := X / (a : ℝ)
+      let C := Y / (b : ℝ)
+      let Bx := 2 * ((a : ℝ) / ((q : ℝ) * Q))
+      let By := 2 * ((b : ℝ) / ((q : ℝ) * Q))
+      let M := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+      let D : ℝ := (2 * k + 3 : ℕ)
+      let Ty : ℝ :=
+        ‖divisorWeight n‖ *
+        ((((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)) ^ k *
+          ((14 * Real.pi + 8) / Real.sqrt qy *
+            (C ^ (-(1 / 4 : ℝ)) *
+              ((2 * (k : ℝ) + 1) * M *
+                (D * C * By ^ 2) ^ k) *
+              (n : ℝ) ^ (-(1 / 4 : ℝ)))))
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        ‖divisorWeight m‖ *
+        ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)) ^ k *
+          ((14 * Real.pi + 8) / Real.sqrt qx *
+            (A ^ (-(1 / 4 : ℝ)) *
+              (Ty * (D * A * Bx ^ 2) ^ k) *
+              (m : ℝ) ^ (-(1 / 4 : ℝ))))) := by
+  obtain ⟨K, hK, hMass⟩ :=
+    exists_integral_integral_norm_dfiEquation23Weight_mixed_derivative_le
+      hf hfC hbox hφ hφC hscale w hwC hQ hUQ (2 * k)
+  refine ⟨K, hK, ?_⟩
+  intro a b q ha hb hq hqQ h xBranch yBranch m n hm hn
+  dsimp only
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let A : ℝ := X / (a : ℝ)
+  let C : ℝ := Y / (b : ℝ)
+  let Bx : ℝ := 2 * ((a : ℝ) / ((q : ℝ) * Q))
+  let By : ℝ := 2 * ((b : ℝ) / ((q : ℝ) * Q))
+  let M : ℝ := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  let D : ℝ := (2 * k + 3 : ℕ)
+  have hq0 : 0 < q := NeZero.pos q
+  have hX : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQR : 0 < Q := by linarith
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq0
+  have hA : 0 < A := by dsimp [A]; positivity
+  have hC : 0 < C := by dsimp [C]; positivity
+  have hBx : 0 < Bx := by dsimp [Bx]; positivity
+  have hBy : 0 < By := by dsimp [By]; positivity
+  have hPinv : P⁻¹ ≤ 1 := by
+    rw [inv_le_one₀ (zero_lt_one.trans_le hf.one_le_P)]
+    exact hf.one_le_P
+  have hmin0 : 0 ≤ min X Y := le_min hX.le hY.le
+  have hUleX : U ≤ X :=
+    hscale.trans ((mul_le_of_le_one_left hmin0 hPinv).trans (min_le_left _ _))
+  have hUleY : U ≤ Y :=
+    hscale.trans ((mul_le_of_le_one_left hmin0 hPinv).trans (min_le_right _ _))
+  have hqQleX : (q : ℝ) * Q ≤ 2 * X := by
+    calc
+      (q : ℝ) * Q ≤ (2 * Q) * Q := by gcongr
+      _ = 2 * U := by rw [hUQ]; ring
+      _ ≤ 2 * X := by linarith
+  have hqQleY : (q : ℝ) * Q ≤ 2 * Y := by
+    calc
+      (q : ℝ) * Q ≤ (2 * Q) * Q := by gcongr
+      _ = 2 * U := by rw [hUQ]; ring
+      _ ≤ 2 * Y := by linarith
+  have hqQpos : 0 < (q : ℝ) * Q := mul_pos hqR hQR
+  have hABx : 1 ≤ A * Bx := by
+    rw [show A * Bx = 2 * X / ((q : ℝ) * Q) by
+      dsimp [A, Bx]; field_simp]
+    exact (le_div_iff₀ hqQpos).2 (by simpa [mul_comm] using hqQleX)
+  have hCBy : 1 ≤ C * By := by
+    rw [show C * By = 2 * Y / ((q : ℝ) * Q) by
+      dsimp [C, By]; field_simp]
+    exact (le_div_iff₀ hqQpos).2 (by simpa [mul_comm] using hqQleY)
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) := by
+    exact contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq0
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C) := by
+    simpa only [A, C, E, show 2 * (X / (a : ℝ)) = 2 * X / a by ring,
+      show 2 * (Y / (b : ℝ)) = 2 * Y / b by ring] using
+      dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have hMixedMass : ∀ i ≤ 2 * k, ∀ j ≤ 2 * k,
+      (∫ x in Set.Icc A (2 * A),
+        ∫ y in Set.Icc C (2 * C), ‖dfiMixedDeriv i j E x y‖) ≤
+          M * Bx ^ i * By ^ j := by
+    intro i hi j hj
+    have hRect := integral_Icc_integral_Icc_norm_dfiMixedDeriv_le
+      hE hSupport i j
+    have hRaw := hMass a b ha hb q hq0 hqQ h i j hi hj
+    have hxi : ((a : ℝ) / ((q : ℝ) * Q)) ^ i ≤ Bx ^ i := by
+      apply pow_le_pow_left₀ (by positivity)
+      · dsimp [Bx]; linarith [div_nonneg haR.le hqQpos.le]
+    have hyj : ((b : ℝ) / ((q : ℝ) * Q)) ^ j ≤ By ^ j := by
+      apply pow_le_pow_left₀ (by positivity)
+      · dsimp [By]; linarith [div_nonneg hbR.le hqQpos.le]
+    have hM0 : 0 ≤ M := by
+      dsimp [M]
+      have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+      positivity
+    calc
+      _ ≤ ∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv i j E x y‖ := hRect
+      _ ≤ K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q *
+          (((a : ℝ) / ((q : ℝ) * Q)) ^ i) *
+          (((b : ℝ) / ((q : ℝ) * Q)) ^ j) := by
+        simpa only [E] using hRaw
+      _ ≤ M * Bx ^ i * By ^ j := by
+        dsimp only [M]
+        gcongr
+  have hRec :=
+    norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_recurrence
+      hE hA hC hBx hBy hABx hCBy hSupport k
+        (by exact le_rfl) hMixedMass
+          qx qy xBranch yBranch hm hn
+  simpa only [A, C, Bx, By, M, D, E, qx, qy] using hRec
+
+/-- Frequency-independent coefficient obtained from the complete mixed-`L¹`
+recurrence after the reduced moduli have been replaced by the two literal
+DFI equation-(29) transition scales. -/
+noncomputable def dfiEquation29FullRecurrenceCoefficient
+    (K Cdiv : ℝ) (k : ℕ) (Q X Y : ℝ)
+    (a b qx qy : ℕ) : ℝ :=
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let M := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  (Cdiv * (4 * D) ^ k * (((a : ℝ) * X / Q ^ 2) ^ k)) *
+    (Cdiv * (4 * D) ^ k * (((b : ℝ) * Y / Q ^ 2) ^ k)) *
+    ((14 * Real.pi + 8) / Real.sqrt qx) *
+    ((14 * Real.pi + 8) / Real.sqrt qy) *
+    (X / (a : ℝ)) ^ (-(1 / 4 : ℝ)) *
+    (Y / (b : ℝ)) ^ (-(1 / 4 : ℝ)) *
+    ((2 * (k : ℝ) + 1) * M)
+
+theorem dfiEquation29FullRecurrenceCoefficient_nonneg
+    {K Cdiv Q X Y : ℝ} {k a b qx qy : ℕ}
+    (hK : 0 ≤ K) (hCdiv : 0 ≤ Cdiv) (hQ : 1 ≤ Q)
+    (hX : 0 ≤ X) (hY : 0 ≤ Y) (ha : 0 < a) (hb : 0 < b) :
+    0 ≤ dfiEquation29FullRecurrenceCoefficient
+      K Cdiv k Q X Y a b qx qy := by
+  have haR : (0 : ℝ) < a := Nat.cast_pos.mpr ha
+  have hbR : (0 : ℝ) < b := Nat.cast_pos.mpr hb
+  have hlog : 0 ≤ Real.log Q := Real.log_nonneg hQ
+  dsimp [dfiEquation29FullRecurrenceCoefficient]
+  positivity
+
+/-- Literal two-frequency pointwise form of DFI equation (29).  Both
+frequency exponents come from the same mixed derivative mass, so no
+geometric-mean half-recurrence is introduced. -/
+theorem exists_dfiEquation24DoubleDualMellinAmplitude_source_full_pointwise
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hUQ : U = Q ^ 2)
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) :
+    ∃ K Cdiv : ℝ, 0 < K ∧ 0 < Cdiv ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → (_hq : NeZero q) →
+      (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ)
+      (xBranch yBranch : DFIVoronoiDualBranch) (m n : ℕ),
+      0 < m → 0 < n →
+      let qx := (dfiReducedModulus a q).denominator
+      let qy := (dfiReducedModulus b q).denominator
+      let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        dfiEquation29FullRecurrenceCoefficient
+            K Cdiv k Q X Y a b qx qy *
+          (m : ℝ) ^ (ε - 1 / 4 - k) *
+          (n : ℝ) ^ (ε - 1 / 4 - k) := by
+  obtain ⟨K, hK, hRec⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_l1_recurrence
+      hf hfC hbox hφ hφC hscale w hwC hQ hUQ k
+  obtain ⟨Cdiv, hCdiv, hDiv⟩ :=
+    exists_norm_divisorWeight_le_rpow ε hε
+  refine ⟨K, Cdiv, hK, hCdiv, ?_⟩
+  intro a b q ha hb hq hqQ h xBranch yBranch m n hm hn
+  dsimp only
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let A : ℝ := X / (a : ℝ)
+  let C : ℝ := Y / (b : ℝ)
+  let Bx : ℝ := 2 * ((a : ℝ) / ((q : ℝ) * Q))
+  let By : ℝ := 2 * ((b : ℝ) / ((q : ℝ) * Q))
+  let M : ℝ := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let Rx : ℝ := ((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)
+  let Ry : ℝ := ((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)
+  let Sx : ℝ := D * A * Bx ^ 2
+  let Sy : ℝ := D * C * By ^ 2
+  let Zx : ℝ := (a : ℝ) * X / Q ^ 2
+  let Zy : ℝ := (b : ℝ) * Y / Q ^ 2
+  let Fx : ℝ := ‖divisorWeight m‖ *
+    (Rx ^ k * (Sx ^ k * (m : ℝ) ^ (-(1 / 4 : ℝ))))
+  let Fy : ℝ := ‖divisorWeight n‖ *
+    (Ry ^ k * (Sy ^ k * (n : ℝ) ^ (-(1 / 4 : ℝ))))
+  let Gx : ℝ := Cdiv * (4 * D) ^ k * Zx ^ k *
+    (m : ℝ) ^ (ε - 1 / 4 - k)
+  let Gy : ℝ := Cdiv * (4 * D) ^ k * Zy ^ k *
+    (n : ℝ) ^ (ε - 1 / 4 - k)
+  let Hx : ℝ := (14 * Real.pi + 8) / Real.sqrt qx
+  let Hy : ℝ := (14 * Real.pi + 8) / Real.sqrt qy
+  let Core : ℝ := (2 * (k : ℝ) + 1) * M
+  have hqpos : 0 < q := NeZero.pos q
+  have hX : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQpos : 0 < Q := lt_of_lt_of_le (by norm_num) hQ
+  have hD : 0 ≤ D := by dsimp [D]; positivity
+  have hqxle : (qx : ℝ) ≤ q := by
+    dsimp only [qx]
+    exact_mod_cast dfiReducedModulus_denominator_le a q
+  have hqyle : (qy : ℝ) ≤ q := by
+    dsimp only [qy]
+    exact_mod_cast dfiReducedModulus_denominator_le b q
+  have hxRatio : Rx ^ k * Sx ^ k ≤
+      (4 * D) ^ k * (Zx / (m : ℝ)) ^ k := by
+    simpa only [Rx, Sx, Zx, A, Bx, qx, D] using
+      dfiReducedRecurrenceRatio_le_sourceTransitionRatio
+        ha hqpos hqxle hX hQpos hD (Nat.cast_pos.mpr hm)
+  have hyRatio : Ry ^ k * Sy ^ k ≤
+      (4 * D) ^ k * (Zy / (n : ℝ)) ^ k := by
+    simpa only [Ry, Sy, Zy, C, By, qy, D] using
+      dfiReducedRecurrenceRatio_le_sourceTransitionRatio
+        hb hqpos hqyle hY hQpos hD (Nat.cast_pos.mpr hn)
+  have hFx : Fx ≤ Gx := by
+    simpa only [Fx, Gx] using
+      divisor_recurrence_frequency_le hm hCdiv.le
+        (by dsimp [Rx]; positivity) (by dsimp [Sx, D, A, Bx]; positivity)
+        (hDiv m hm) hxRatio
+  have hFy : Fy ≤ Gy := by
+    simpa only [Fy, Gy] using
+      divisor_recurrence_frequency_le hn hCdiv.le
+        (by dsimp [Ry]; positivity) (by dsimp [Sy, D, C, By]; positivity)
+        (hDiv n hn) hyRatio
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hRaw := hRec a b q ha hb hq hqQ h xBranch yBranch m n hm hn
+  have hRaw' :
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        Fx * Fy * Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+          C ^ (-(1 / 4 : ℝ)) * Core := by
+    calc
+      _ ≤ ‖divisorWeight m‖ *
+          (Rx ^ k *
+            (Hx * (A ^ (-(1 / 4 : ℝ)) *
+              ((‖divisorWeight n‖ *
+                (Ry ^ k *
+                  (Hy * (C ^ (-(1 / 4 : ℝ)) *
+                    (Core * Sy ^ k) *
+                    (n : ℝ) ^ (-(1 / 4 : ℝ)))))) * Sx ^ k) *
+              (m : ℝ) ^ (-(1 / 4 : ℝ))))) := by
+        simpa only [qx, qy, E, A, C, Bx, By, M, D, Rx, Ry, Sx, Sy,
+          Hx, Hy, Core] using hRaw
+      _ = Fx * Fy * Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+          C ^ (-(1 / 4 : ℝ)) * Core := by
+        dsimp only [Fx, Fy]
+        ring
+  have hFactors : 0 ≤ Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+      C ^ (-(1 / 4 : ℝ)) * Core := by
+    dsimp [Hx, Hy, A, C, Core]
+    positivity
+  calc
+    _ ≤ Fx * Fy * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by
+      simpa only [mul_assoc] using hRaw'
+    _ ≤ Gx * Gy * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by
+      gcongr
+    _ = dfiEquation29FullRecurrenceCoefficient
+          K Cdiv k Q X Y a b qx qy *
+        (m : ℝ) ^ (ε - 1 / 4 - k) *
+        (n : ℝ) ^ (ε - 1 / 4 - k) := by
+      dsimp [dfiEquation29FullRecurrenceCoefficient, Gx, Gy, Hx, Hy,
+        A, C, Core, M, D, Zx, Zy]
+      ring
+
+/-- Frequency-independent coefficient for the mixed-`L¹`, one-sided
+`y` recurrence.  Its mass is the physical equation-(30) mass rather than
+the older uniform-slice Jacobian. -/
+noncomputable def dfiEquation29MixedYTailCoefficient
+    (K Cdiv : ℝ) (k : ℕ) (Q X Y : ℝ)
+    (a b qx qy : ℕ) : ℝ :=
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let M := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  (Cdiv * (14 * Real.pi + 8) / Real.sqrt qx *
+      (X / (a : ℝ)) ^ (-(1 / 4 : ℝ))) *
+    (Cdiv * (4 * D) ^ k * (((b : ℝ) * Y / Q ^ 2) ^ k) *
+      ((14 * Real.pi + 8) / Real.sqrt qy) *
+      (Y / (b : ℝ)) ^ (-(1 / 4 : ℝ)) *
+      ((2 * (k : ℝ) + 1) * M))
+
+theorem dfiEquation29MixedYTailCoefficient_nonneg
+    {K Cdiv Q X Y : ℝ} {k a b qx qy : ℕ}
+    (hK : 0 ≤ K) (hCdiv : 0 ≤ Cdiv) (hQ : 1 ≤ Q)
+    (hX : 0 ≤ X) (hY : 0 ≤ Y) (ha : 0 < a) (hb : 0 < b) :
+    0 ≤ dfiEquation29MixedYTailCoefficient
+      K Cdiv k Q X Y a b qx qy := by
+  have hlog : 0 ≤ Real.log Q := Real.log_nonneg hQ
+  dsimp [dfiEquation29MixedYTailCoefficient]
+  positivity
+
+/-- Source-specialized asymmetric mixed-`L¹` recurrence in the second
+frequency.  This is the literal one-sided complement estimate required by
+DFI equation (29), with the equation-(30) physical mass retained. -/
+theorem exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_yTail_pointwise
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hUQ : U = Q ^ 2)
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) :
+    ∃ K Cdiv : ℝ, 0 < K ∧ 0 < Cdiv ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → (_hq : NeZero q) →
+      (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ)
+      (xBranch yBranch : DFIVoronoiDualBranch) (m n : ℕ),
+      0 < m → 0 < n →
+      let qx := (dfiReducedModulus a q).denominator
+      let qy := (dfiReducedModulus b q).denominator
+      let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        dfiEquation29MixedYTailCoefficient K Cdiv k Q X Y a b qx qy *
+          (m : ℝ) ^ (ε - 1 / 4) *
+          (n : ℝ) ^ (ε - 1 / 4 - k) := by
+  obtain ⟨K, hK, hMass⟩ :=
+    exists_integral_integral_norm_dfiEquation23Weight_mixed_derivative_le
+      hf hfC hbox hφ hφC hscale w hwC hQ hUQ (2 * k)
+  obtain ⟨Cdiv, hCdiv, hDiv⟩ := exists_norm_divisorWeight_le_rpow ε hε
+  refine ⟨K, Cdiv, hK, hCdiv, ?_⟩
+  intro a b q ha hb hq hqQ h xBranch yBranch m n hm hn
+  dsimp only
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let A : ℝ := X / (a : ℝ)
+  let C : ℝ := Y / (b : ℝ)
+  let By : ℝ := 2 * ((b : ℝ) / ((q : ℝ) * Q))
+  let M : ℝ := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let Ry : ℝ := ((qy : ℝ) / (2 * Real.pi)) ^ 2 / (n : ℝ)
+  let Sy : ℝ := D * C * By ^ 2
+  let Zy : ℝ := (b : ℝ) * Y / Q ^ 2
+  let Fm : ℝ := ‖divisorWeight m‖ * (m : ℝ) ^ (-(1 / 4 : ℝ))
+  let Fn : ℝ := ‖divisorWeight n‖ *
+    (Ry ^ k * (Sy ^ k * (n : ℝ) ^ (-(1 / 4 : ℝ))))
+  let Gm : ℝ := Cdiv * (m : ℝ) ^ (ε - 1 / 4)
+  let Gn : ℝ := Cdiv * (4 * D) ^ k * Zy ^ k *
+    (n : ℝ) ^ (ε - 1 / 4 - k)
+  let Hx : ℝ := (14 * Real.pi + 8) / Real.sqrt qx
+  let Hy : ℝ := (14 * Real.pi + 8) / Real.sqrt qy
+  let Core : ℝ := (2 * (k : ℝ) + 1) * M
+  have hq0 : 0 < q := NeZero.pos q
+  have hX0 : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY0 : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQR : 0 < Q := by linarith
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq0
+  have hA : 0 < A := by dsimp [A]; positivity
+  have hC : 0 < C := by dsimp [C]; positivity
+  have hBy : 0 < By := by dsimp [By]; positivity
+  have hPinv : P⁻¹ ≤ 1 := by
+    rw [inv_le_one₀ (zero_lt_one.trans_le hf.one_le_P)]
+    exact hf.one_le_P
+  have hmin0 : 0 ≤ min X Y := le_min hX0.le hY0.le
+  have hUleY : U ≤ Y :=
+    hscale.trans ((mul_le_of_le_one_left hmin0 hPinv).trans (min_le_right _ _))
+  have hqQleY : (q : ℝ) * Q ≤ 2 * Y := by
+    calc
+      (q : ℝ) * Q ≤ (2 * Q) * Q := by gcongr
+      _ = 2 * U := by rw [hUQ]; ring
+      _ ≤ 2 * Y := by linarith
+  have hqQpos : 0 < (q : ℝ) * Q := mul_pos hqR hQR
+  have hCBy : 1 ≤ C * By := by
+    rw [show C * By = 2 * Y / ((q : ℝ) * Q) by
+      dsimp [C, By]; field_simp]
+    exact (le_div_iff₀ hqQpos).2 (by simpa [mul_comm] using hqQleY)
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) :=
+    contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq0
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C) := by
+    simpa only [A, C, E, show 2 * (X / (a : ℝ)) = 2 * X / a by ring,
+      show 2 * (Y / (b : ℝ)) = 2 * Y / b by ring] using
+      dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have hMixedMass : ∀ j ≤ 2 * k,
+      (∫ x in Set.Icc A (2 * A),
+        ∫ y in Set.Icc C (2 * C), ‖dfiMixedDeriv 0 j E x y‖) ≤
+          M * By ^ j := by
+    intro j hj
+    have hRect := integral_Icc_integral_Icc_norm_dfiMixedDeriv_le
+      hE hSupport 0 j
+    have hRaw := hMass a b ha hb q hq0 hqQ h 0 j (by omega) hj
+    have hyj : ((b : ℝ) / ((q : ℝ) * Q)) ^ j ≤ By ^ j := by
+      apply pow_le_pow_left₀ (by positivity)
+      dsimp [By]
+      linarith [div_nonneg hbR.le hqQpos.le]
+    have hM0 : 0 ≤ M := by
+      dsimp [M]
+      have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+      positivity
+    calc
+      _ ≤ ∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv 0 j E x y‖ := hRect
+      _ ≤ K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q *
+          (((a : ℝ) / ((q : ℝ) * Q)) ^ 0) *
+          (((b : ℝ) / ((q : ℝ) * Q)) ^ j) := by
+        simpa only [E] using hRaw
+      _ ≤ M * By ^ j := by
+        dsimp only [M]
+        simp only [pow_zero, mul_one]
+        gcongr
+  have hRec := norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_y_recurrence
+    hE hA hC hBy hCBy hSupport k (by exact le_rfl) hMixedMass
+      qx qy xBranch yBranch hm hn
+  have hqyq : (qy : ℝ) ≤ q := by
+    exact_mod_cast dfiReducedModulus_denominator_le b q
+  have hD : 0 ≤ D := by dsimp [D]; positivity
+  have hyRatio : Ry ^ k * Sy ^ k ≤
+      (4 * D) ^ k * (Zy / (n : ℝ)) ^ k := by
+    simpa only [Ry, Sy, Zy, C, By, qy, D] using
+      dfiReducedRecurrenceRatio_le_sourceTransitionRatio
+        hb hq0 hqyq hY0 hQR hD (Nat.cast_pos.mpr hn)
+  have hFm : Fm ≤ Gm := by
+    have hmPow := hDiv m hm
+    dsimp only [Fm, Gm]
+    calc
+      ‖divisorWeight m‖ * (m : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+          (Cdiv * (m : ℝ) ^ ε) * (m : ℝ) ^ (-(1 / 4 : ℝ)) := by gcongr
+      _ = Cdiv * ((m : ℝ) ^ ε * (m : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
+      _ = Cdiv * (m : ℝ) ^ (ε - 1 / 4) := by
+        rw [← Real.rpow_add (Nat.cast_pos.mpr hm)]
+        congr 2
+  have hFn : Fn ≤ Gn := by
+    simpa only [Fn, Gn] using
+      divisor_recurrence_frequency_le hn hCdiv.le
+        (by dsimp [Ry]; positivity) (by dsimp [Sy, D, C, By]; positivity)
+        (hDiv n hn) hyRatio
+  have hCore0 : 0 ≤ Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+      C ^ (-(1 / 4 : ℝ)) * Core := by
+    dsimp [Hx, Hy, A, C, Core, M]
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hRec' :
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        Fm * Fn * Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+          C ^ (-(1 / 4 : ℝ)) * Core := by
+    dsimp only [A, C, By, M, D, Ry, Sy] at hRec
+    convert hRec using 1
+    all_goals dsimp [Fm, Fn, Hx, Hy, Core, M, D, A, C, Ry, Sy]; ring
+  calc
+    _ ≤ Fm * Fn * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by
+      simpa only [mul_assoc] using hRec'
+    _ ≤ Gm * Gn * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by gcongr
+    _ = dfiEquation29MixedYTailCoefficient
+          K Cdiv k Q X Y a b qx qy *
+        (m : ℝ) ^ (ε - 1 / 4) *
+        (n : ℝ) ^ (ε - 1 / 4 - k) := by
+      dsimp [dfiEquation29MixedYTailCoefficient, Gm, Gn, Hx, Hy,
+        A, C, Core, M, D, Zy]
+      ring
+
+set_option maxHeartbeats 1000000 in
 /-- The double-dual Mellin amplitude is invariant under simultaneously
 swapping the two physical variables, moduli, branches, and frequencies.
 This is the exact Fubini bridge needed to apply DFI (29) first in whichever
@@ -6640,6 +8599,299 @@ theorem dfiEquation24DoubleDualMellinAmplitude_swap
   unfold dfiEquation24DoubleDualAmplitudeIntegrand
   simp only [Prod.swap, hBi]
   ring
+
+set_option maxHeartbeats 1000000 in
+/-- Coordinate-swapped asymmetric mixed-`L¹` recurrence.  The first
+frequency is integrated by parts and the second remains on the physical
+quarter line. -/
+theorem norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_x_recurrence
+    {E : ℝ → ℝ → ℂ} {A C Bx M D : ℝ}
+    (hE : ContDiff ℝ ∞ (Function.uncurry E))
+    (hA : 0 < A) (hC : 0 < C) (hBx : 0 < Bx)
+    (hABx : 1 ≤ A * Bx)
+    (hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C))
+    (k : ℕ) (hD : (2 * k + 3 : ℕ) ≤ D)
+    (hMass : ∀ i ≤ 2 * k,
+      (∫ y in Set.Icc C (2 * C),
+        ∫ x in Set.Icc A (2 * A), ‖dfiMixedDeriv i 0 E x y‖) ≤
+          M * Bx ^ i)
+    (qx qy : ℕ) [NeZero qx] [NeZero qy]
+    (xBranch yBranch : DFIVoronoiDualBranch) {m n : ℕ}
+    (hm : 0 < m) (hn : 0 < n) :
+    let Tx : ℝ :=
+      ‖divisorWeight m‖ *
+      ((((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)) ^ k *
+        ((14 * Real.pi + 8) / Real.sqrt qx *
+          (A ^ (-(1 / 4 : ℝ)) *
+            ((2 * (k : ℝ) + 1) * M * (D * A * Bx ^ 2) ^ k) *
+            (m : ℝ) ^ (-(1 / 4 : ℝ)))))
+    ‖dfiEquation24DoubleDualMellinAmplitude
+        qx xBranch qy yBranch E m n‖ ≤
+      ‖divisorWeight n‖ *
+        ((14 * Real.pi + 8) / Real.sqrt qy *
+          (C ^ (-(1 / 4 : ℝ)) * Tx *
+            (n : ℝ) ^ (-(1 / 4 : ℝ)))) := by
+  dsimp only
+  let Eswap : ℝ → ℝ → ℂ := fun y x ↦ E x y
+  have hEswap : ContDiff ℝ ∞ (Function.uncurry Eswap) := by
+    simpa only [Eswap, Function.uncurry_apply_pair] using hE.comp
+      (by fun_prop : ContDiff ℝ ∞ (fun p : ℝ × ℝ ↦ (p.2, p.1)))
+  have hSupportSwap : Function.support (Function.uncurry Eswap) ⊆
+      Set.Icc C (2 * C) ×ˢ Set.Icc A (2 * A) := by
+    intro p hp
+    have hs := hSupport (show
+      (p.2, p.1) ∈ Function.support (Function.uncurry E) by
+        simpa only [Eswap, Function.mem_support,
+          Function.uncurry_apply_pair] using hp)
+    exact ⟨hs.2, hs.1⟩
+  have hMassSwap : ∀ j ≤ 2 * k,
+      (∫ y in Set.Icc C (2 * C),
+        ∫ x in Set.Icc A (2 * A), ‖dfiMixedDeriv 0 j Eswap y x‖) ≤
+          M * Bx ^ j := by
+    intro j hj
+    simpa only [Eswap, dfiMixedDeriv, iteratedDeriv_zero] using hMass j hj
+  have hrec :=
+    norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_y_recurrence
+      hEswap hC hA hBx hABx hSupportSwap k hD hMassSwap
+        qy qx yBranch xBranch hn hm
+  rw [dfiEquation24DoubleDualMellinAmplitude_swap
+    hE hA hC hSupport qx qy xBranch yBranch m n]
+  simpa only [Eswap, mul_assoc, mul_left_comm, mul_comm] using hrec
+
+/-- Coordinate-swapped physical one-sided recurrence coefficient. -/
+noncomputable def dfiEquation29MixedXTailCoefficient
+    (K Cdiv : ℝ) (k : ℕ) (Q X Y : ℝ)
+    (a b qx qy : ℕ) : ℝ :=
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let M := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  (Cdiv * (14 * Real.pi + 8) / Real.sqrt qy *
+      (Y / (b : ℝ)) ^ (-(1 / 4 : ℝ))) *
+    (Cdiv * (4 * D) ^ k * (((a : ℝ) * X / Q ^ 2) ^ k) *
+      ((14 * Real.pi + 8) / Real.sqrt qx) *
+      (X / (a : ℝ)) ^ (-(1 / 4 : ℝ)) *
+      ((2 * (k : ℝ) + 1) * M))
+
+theorem dfiEquation29MixedXTailCoefficient_nonneg
+    {K Cdiv Q X Y : ℝ} {k a b qx qy : ℕ}
+    (hK : 0 ≤ K) (hCdiv : 0 ≤ Cdiv) (hQ : 1 ≤ Q)
+    (hX : 0 ≤ X) (hY : 0 ≤ Y) (ha : 0 < a) (hb : 0 < b) :
+    0 ≤ dfiEquation29MixedXTailCoefficient
+      K Cdiv k Q X Y a b qx qy := by
+  have hlog : 0 ≤ Real.log Q := Real.log_nonneg hQ
+  dsimp [dfiEquation29MixedXTailCoefficient]
+  positivity
+
+/-- Source-specialized asymmetric mixed-`L¹` recurrence in the first
+frequency, including the compact-support Fubini bridge needed to preserve
+the equation-(30) physical mass. -/
+theorem exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_xTail_pointwise
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hUQ : U = Q ^ 2)
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) :
+    ∃ K Cdiv : ℝ, 0 < K ∧ 0 < Cdiv ∧
+      ∀ (a b q : ℕ), 0 < a → 0 < b → (_hq : NeZero q) →
+      (q : ℝ) ≤ 2 * Q → ∀ (h : ℤ)
+      (xBranch yBranch : DFIVoronoiDualBranch) (m n : ℕ),
+      0 < m → 0 < n →
+      let qx := (dfiReducedModulus a q).denominator
+      let qy := (dfiReducedModulus b q).denominator
+      let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        dfiEquation29MixedXTailCoefficient K Cdiv k Q X Y a b qx qy *
+          (m : ℝ) ^ (ε - 1 / 4 - k) *
+          (n : ℝ) ^ (ε - 1 / 4) := by
+  obtain ⟨K, hK, hMass⟩ :=
+    exists_integral_integral_norm_dfiEquation23Weight_mixed_derivative_le
+      hf hfC hbox hφ hφC hscale w hwC hQ hUQ (2 * k)
+  obtain ⟨Cdiv, hCdiv, hDiv⟩ := exists_norm_divisorWeight_le_rpow ε hε
+  refine ⟨K, Cdiv, hK, hCdiv, ?_⟩
+  intro a b q ha hb hq hqQ h xBranch yBranch m n hm hn
+  dsimp only
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let A : ℝ := X / (a : ℝ)
+  let C : ℝ := Y / (b : ℝ)
+  let Bx : ℝ := 2 * ((a : ℝ) / ((q : ℝ) * Q))
+  let M : ℝ := K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q
+  let D : ℝ := (2 * k + 3 : ℕ)
+  let Rx : ℝ := ((qx : ℝ) / (2 * Real.pi)) ^ 2 / (m : ℝ)
+  let Sx : ℝ := D * A * Bx ^ 2
+  let Zx : ℝ := (a : ℝ) * X / Q ^ 2
+  let Fm : ℝ := ‖divisorWeight m‖ *
+    (Rx ^ k * (Sx ^ k * (m : ℝ) ^ (-(1 / 4 : ℝ))))
+  let Fn : ℝ := ‖divisorWeight n‖ * (n : ℝ) ^ (-(1 / 4 : ℝ))
+  let Gm : ℝ := Cdiv * (4 * D) ^ k * Zx ^ k *
+    (m : ℝ) ^ (ε - 1 / 4 - k)
+  let Gn : ℝ := Cdiv * (n : ℝ) ^ (ε - 1 / 4)
+  let Hx : ℝ := (14 * Real.pi + 8) / Real.sqrt qx
+  let Hy : ℝ := (14 * Real.pi + 8) / Real.sqrt qy
+  let Core : ℝ := (2 * (k : ℝ) + 1) * M
+  have hq0 : 0 < q := NeZero.pos q
+  have hX0 : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY0 : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQR : 0 < Q := by linarith
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq0
+  have hA : 0 < A := by dsimp [A]; positivity
+  have hC : 0 < C := by dsimp [C]; positivity
+  have hBx : 0 < Bx := by dsimp [Bx]; positivity
+  have hPinv : P⁻¹ ≤ 1 := by
+    rw [inv_le_one₀ (zero_lt_one.trans_le hf.one_le_P)]
+    exact hf.one_le_P
+  have hmin0 : 0 ≤ min X Y := le_min hX0.le hY0.le
+  have hUleX : U ≤ X :=
+    hscale.trans ((mul_le_of_le_one_left hmin0 hPinv).trans (min_le_left _ _))
+  have hqQleX : (q : ℝ) * Q ≤ 2 * X := by
+    calc
+      (q : ℝ) * Q ≤ (2 * Q) * Q := by gcongr
+      _ = 2 * U := by rw [hUQ]; ring
+      _ ≤ 2 * X := by linarith
+  have hqQpos : 0 < (q : ℝ) * Q := mul_pos hqR hQR
+  have hABx : 1 ≤ A * Bx := by
+    rw [show A * Bx = 2 * X / ((q : ℝ) * Q) by
+      dsimp [A, Bx]; field_simp]
+    exact (le_div_iff₀ hqQpos).2 (by simpa [mul_comm] using hqQleX)
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) :=
+    contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq0
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C) := by
+    simpa only [A, C, E, show 2 * (X / (a : ℝ)) = 2 * X / a by ring,
+      show 2 * (Y / (b : ℝ)) = 2 * Y / b by ring] using
+      dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hMixedMass : ∀ i ≤ 2 * k,
+      (∫ y in Set.Icc C (2 * C),
+        ∫ x in Set.Icc A (2 * A), ‖dfiMixedDeriv i 0 E x y‖) ≤
+          M * Bx ^ i := by
+    intro i hi
+    let Eswap : ℝ → ℝ → ℂ := fun y x ↦ E x y
+    have hEswap : ContDiff ℝ ∞ (Function.uncurry Eswap) := by
+      simpa only [Eswap, Function.uncurry_apply_pair] using hE.comp
+        (by fun_prop : ContDiff ℝ ∞ (fun p : ℝ × ℝ ↦ (p.2, p.1)))
+    have hSupportSwap : Function.support (Function.uncurry Eswap) ⊆
+        Set.Icc C (2 * C) ×ˢ Set.Icc A (2 * A) := by
+      intro p hp
+      have hs := hSupport (show
+        (p.2, p.1) ∈ Function.support (Function.uncurry E) by
+          simpa only [Eswap, Function.mem_support,
+            Function.uncurry_apply_pair] using hp)
+      exact ⟨hs.2, hs.1⟩
+    have hRect := integral_Icc_integral_Icc_norm_dfiMixedDeriv_le
+      hEswap hSupportSwap 0 i
+    let F : ℝ → ℝ → ℝ := fun x y ↦ ‖dfiMixedDeriv i 0 E x y‖
+    have hDerivSmooth : ContDiff ℝ ∞
+        (Function.uncurry (dfiMixedDeriv i 0 E)) :=
+      contDiff_uncurry_dfiMixedDeriv hE i 0
+    have hDerivSupport :
+        Function.support (Function.uncurry (dfiMixedDeriv i 0 E)) ⊆
+          Set.Icc A (2 * A) ×ˢ Set.Icc C (2 * C) :=
+      (support_dfiMixedDeriv_subset_tsupport hE i 0).trans
+        (closure_minimal hSupport (isClosed_Icc.prod isClosed_Icc))
+    have hFint : Integrable (Function.uncurry F) (volume.prod volume) :=
+      hDerivSmooth.continuous.norm.integrable_of_hasCompactSupport
+        (HasCompactSupport.of_support_subset_isCompact
+          (isCompact_Icc.prod isCompact_Icc) (by
+            intro p hp
+            change ‖dfiMixedDeriv i 0 E p.1 p.2‖ ≠ 0 at hp
+            exact hDerivSupport (by
+              simpa only [Function.mem_support,
+                Function.uncurry_apply_pair] using (norm_ne_zero_iff.mp hp))))
+    have hswap :
+        (∫ y : ℝ, ∫ x : ℝ, ‖dfiMixedDeriv 0 i Eswap y x‖) =
+          ∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv i 0 E x y‖ := by
+      calc
+        _ = ∫ y : ℝ, ∫ x : ℝ, F x y := by
+          apply integral_congr_ae
+          filter_upwards [] with y
+          apply integral_congr_ae
+          filter_upwards [] with x
+          simp only [Eswap, F, dfiMixedDeriv, iteratedDeriv_zero]
+        _ = ∫ x : ℝ, ∫ y : ℝ, F x y :=
+          (MeasureTheory.integral_integral_swap hFint).symm
+        _ = _ := by rfl
+    have hRaw := hMass a b ha hb q hq0 hqQ h i 0 hi (by omega)
+    have hxi : ((a : ℝ) / ((q : ℝ) * Q)) ^ i ≤ Bx ^ i := by
+      apply pow_le_pow_left₀ (by positivity)
+      dsimp [Bx]
+      linarith [div_nonneg haR.le hqQpos.le]
+    calc
+      _ ≤ ∫ y : ℝ, ∫ x : ℝ, ‖dfiMixedDeriv 0 i Eswap y x‖ := by
+        simpa only [Eswap, dfiMixedDeriv, iteratedDeriv_zero] using hRect
+      _ = ∫ x : ℝ, ∫ y : ℝ, ‖dfiMixedDeriv i 0 E x y‖ := hswap
+      _ ≤ K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q *
+          (((a : ℝ) / ((q : ℝ) * Q)) ^ i) *
+          (((b : ℝ) / ((q : ℝ) * Q)) ^ 0) := by
+        simpa only [E] using hRaw
+      _ ≤ M * Bx ^ i := by
+        dsimp only [M]
+        simp only [pow_zero, mul_one]
+        exact mul_le_mul_of_nonneg_left hxi hM
+  have hRec := norm_dfiEquation24DoubleDualMellinAmplitude_le_mixed_l1_x_recurrence
+    hE hA hC hBx hABx hSupport k (by exact le_rfl) hMixedMass
+      qx qy xBranch yBranch hm hn
+  have hqxq : (qx : ℝ) ≤ q := by
+    exact_mod_cast dfiReducedModulus_denominator_le a q
+  have hD : 0 ≤ D := by dsimp [D]; positivity
+  have hxRatio : Rx ^ k * Sx ^ k ≤
+      (4 * D) ^ k * (Zx / (m : ℝ)) ^ k := by
+    simpa only [Rx, Sx, Zx, A, Bx, qx, D] using
+      dfiReducedRecurrenceRatio_le_sourceTransitionRatio
+        ha hq0 hqxq hX0 hQR hD (Nat.cast_pos.mpr hm)
+  have hFm : Fm ≤ Gm := by
+    simpa only [Fm, Gm] using
+      divisor_recurrence_frequency_le hm hCdiv.le
+        (by dsimp [Rx]; positivity) (by dsimp [Sx, D, A, Bx]; positivity)
+        (hDiv m hm) hxRatio
+  have hFn : Fn ≤ Gn := by
+    dsimp only [Fn, Gn]
+    calc
+      ‖divisorWeight n‖ * (n : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+          (Cdiv * (n : ℝ) ^ ε) * (n : ℝ) ^ (-(1 / 4 : ℝ)) :=
+        mul_le_mul_of_nonneg_right (hDiv n hn) (Real.rpow_nonneg (Nat.cast_nonneg n) _)
+      _ = Cdiv * ((n : ℝ) ^ ε * (n : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
+      _ = Cdiv * (n : ℝ) ^ (ε - 1 / 4) := by
+        rw [← Real.rpow_add (Nat.cast_pos.mpr hn)]
+        congr 2
+  have hCore0 : 0 ≤ Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+      C ^ (-(1 / 4 : ℝ)) * Core := by
+    dsimp [Hx, Hy, A, C, Core, M]
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hRec' :
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        Fm * Fn * Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+          C ^ (-(1 / 4 : ℝ)) * Core := by
+    dsimp only [A, C, Bx, M, D, Rx, Sx] at hRec
+    convert hRec using 1
+    all_goals dsimp [Fm, Fn, Hx, Hy, Core, M, D, A, C, Rx, Sx]; ring
+  calc
+    _ ≤ Fm * Fn * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by
+      simpa only [mul_assoc] using hRec'
+    _ ≤ Gm * Gn * (Hx * Hy * A ^ (-(1 / 4 : ℝ)) *
+        C ^ (-(1 / 4 : ℝ)) * Core) := by gcongr
+    _ = dfiEquation29MixedXTailCoefficient
+          K Cdiv k Q X Y a b qx qy *
+        (m : ℝ) ^ (ε - 1 / 4 - k) *
+        (n : ℝ) ^ (ε - 1 / 4) := by
+      dsimp [dfiEquation29MixedXTailCoefficient, Gm, Gn, Hx, Hy,
+        A, C, Core, M, D, Zx]
+      ring
 
 set_option maxHeartbeats 1000000 in
 /-- Swapped-order physical realization of the DFI (24) double-dual
@@ -8042,6 +10294,123 @@ theorem exists_dfiEquation29_xSingleDual_source_retained_bound_of_profiles
       dsimp [R, Kmass]
       ring
 
+/-- The retained `x`-dual source constant is uniform in all physical scales
+and arithmetic parameters.  Its only analytic dependence is the Mellin--
+Voronoi exponent `ε`; the fixed equation-(2), cutoff, and delta profiles
+remain visible in the bound rather than being absorbed into a scale-dependent
+choice. -/
+theorem exists_uniform_dfiEquation29_xSingleDual_source_retained_bound_of_profiles
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4) :
+    ∃ Kret : ℝ, 0 ≤ Kret ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U),
+        DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        2 ≤ Q → U = Q ^ 2 →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ)
+          (q : ℕ) (_hq0 : NeZero q) (branch : DFIVoronoiDualBranch),
+          let qx := (dfiReducedModulus a q).denominator
+          let qy := (dfiReducedModulus b q).denominator
+          let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+          (∑ n ∈ Finset.Icc 1 (dfiEquation29SourceXCutoff a X Q ε),
+            ‖dfiVoronoiDualTerm qx branch
+              (fun x ↦ dfiVoronoiMainTerm qy (E x)) n‖) ≤
+            (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+                dfiCutoffFiniteConstant Cφ 0) *
+              ((24 * max (Cw 0) (Cw 1)) *
+                (2 / Real.log 2 + 4)))) *
+              (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+              (X / a) ^ (-(1 / 4 : ℝ)) * (qy : ℝ)⁻¹ *
+              (|Real.log (Y / b)| + |Real.log (2 * Y / b)| +
+                2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+              (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+              (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^ (3 / 4 + ε) := by
+  obtain ⟨Kret, hKret, hRetained⟩ :=
+    exists_dfiEquation24XSingleDualAmplitude_retained_bound ε hε₀ hε
+  refine ⟨Kret, hKret, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hQ hU
+  let Kmass : ℝ := (dfiEquation2FiniteConstant Cf 0 *
+      dfiCutoffFiniteConstant Cφ 0) *
+    ((24 * max (Cw 0) (Cw 1)) * (2 / Real.log 2 + 4))
+  have hMassBound := dfiEquation30_uniform_all_of_profiles
+    hf hfC hbox hφ hφC hscale hwC hQ hU
+  intro a b ha hb h q hq0 branch
+  letI : NeZero q := hq0
+  have hq : 0 < q := NeZero.pos q
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) :=
+    contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc (X / a) (2 * X / a) ×ˢ Set.Icc (Y / b) (2 * Y / b) :=
+    dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hXA : 0 < X / (a : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_X) haR
+  have hXAB : X / (a : ℝ) ≤ 2 * X / a :=
+    (div_le_div_iff_of_pos_right haR).2 (by nlinarith [hf.one_le_X])
+  have hYC : 0 < Y / (b : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_Y) hbR
+  have hYCD : Y / (b : ℝ) ≤ 2 * Y / b :=
+    (div_le_div_iff_of_pos_right hbR).2 (by nlinarith [hf.one_le_Y])
+  have hLocalizedSupport : Function.support (Function.uncurry
+      (dfiLocalizedWeight f φ (h : ℝ))) ⊆
+      Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ) := by
+    intro p hp
+    have hm := support_uncurry_dfiLocalizedWeight_subset hbox hp
+    exact ⟨(zero_lt_one.trans_le hf.one_le_X).trans_le hm.1.1,
+      (zero_lt_one.trans_le hf.one_le_Y).trans_le hm.2.1⟩
+  have hMassEq :
+      (∫ x in Set.Icc (X / a) (2 * X / a),
+        ∫ y in Set.Icc (Y / b) (2 * Y / b), ‖E x y‖) =
+        dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+    calc
+      _ = ∫ x in Set.Ioi (0 : ℝ), ∫ y in Set.Ioi (0 : ℝ), ‖E x y‖ :=
+        integral_integral_norm_Icc_eq_Ioi hXA hYC hSupport
+      _ = dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+        simpa only [E] using
+          integral_norm_dfiEquation23Weight_Ioi_eq_equation30Divisor
+            w q a b ha hb (dfiLocalizedWeight f φ h) h hLocalizedSupport
+  have hRaw := hRetained hE hXA hXAB hYC hYCD hSupport qx qy
+    inferInstance inferInstance branch (dfiEquation29SourceXCutoff a X Q ε)
+  rw [hMassEq] at hRaw
+  have hMass := hMassBound (h : ℝ) a b ha hb q hq
+  let R : ℝ := Kret * (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+    (X / a) ^ (-(1 / 4 : ℝ)) * (qy : ℝ)⁻¹ *
+    (|Real.log (Y / b)| + |Real.log (2 * Y / b)| +
+      2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|)
+  have hR : 0 ≤ R := by dsimp [R]; positivity
+  calc
+    (∑ n ∈ Finset.Icc 1 (dfiEquation29SourceXCutoff a X Q ε),
+        ‖dfiVoronoiDualTerm qx branch
+          (fun x ↦ dfiVoronoiMainTerm qy (E x)) n‖) ≤
+      R * dfiEquation30DivisorAbsoluteIntegral w q a b
+        (dfiLocalizedWeight f φ h) h *
+        (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^ (3 / 4 + ε) := by
+          simpa only [R, mul_assoc] using hRaw
+    _ ≤ R * (Kmass * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+        (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^ (3 / 4 + ε) := by
+      gcongr
+    _ = (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+            dfiCutoffFiniteConstant Cφ 0) *
+          ((24 * max (Cw 0) (Cw 1)) *
+            (2 / Real.log 2 + 4)))) * (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (X / a) ^ (-(1 / 4 : ℝ)) * (qy : ℝ)⁻¹ *
+          (|Real.log (Y / b)| + |Real.log (2 * Y / b)| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+          (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+          (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^ (3 / 4 + ε) := by
+      dsimp [R, Kmass]
+      ring
+
 /-- Source-uniform retained `x`-dual bound for a fixed admissible weight. -/
 theorem exists_dfiEquation29_xSingleDual_source_retained_bound_uniform
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
@@ -8154,6 +10523,120 @@ theorem exists_dfiEquation29_ySingleDual_source_retained_bound_of_profiles
   have hMassBound := dfiEquation30_uniform_all_of_profiles
     hf hfC hbox hφ hφC hscale hwC hQ hU
   refine ⟨Kret, hKret, ?_⟩
+  intro a b ha hb h q hq0 branch
+  letI : NeZero q := hq0
+  have hq : 0 < q := NeZero.pos q
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) :=
+    contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc (X / a) (2 * X / a) ×ˢ Set.Icc (Y / b) (2 * Y / b) :=
+    dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hXA : 0 < X / (a : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_X) haR
+  have hXAB : X / (a : ℝ) ≤ 2 * X / a :=
+    (div_le_div_iff_of_pos_right haR).2 (by nlinarith [hf.one_le_X])
+  have hYC : 0 < Y / (b : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_Y) hbR
+  have hYCD : Y / (b : ℝ) ≤ 2 * Y / b :=
+    (div_le_div_iff_of_pos_right hbR).2 (by nlinarith [hf.one_le_Y])
+  have hLocalizedSupport : Function.support (Function.uncurry
+      (dfiLocalizedWeight f φ (h : ℝ))) ⊆
+      Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ) := by
+    intro p hp
+    have hm := support_uncurry_dfiLocalizedWeight_subset hbox hp
+    exact ⟨(zero_lt_one.trans_le hf.one_le_X).trans_le hm.1.1,
+      (zero_lt_one.trans_le hf.one_le_Y).trans_le hm.2.1⟩
+  have hMassEq :
+      (∫ x in Set.Icc (X / a) (2 * X / a),
+        ∫ y in Set.Icc (Y / b) (2 * Y / b), ‖E x y‖) =
+        dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+    calc
+      _ = ∫ x in Set.Ioi (0 : ℝ), ∫ y in Set.Ioi (0 : ℝ), ‖E x y‖ :=
+        integral_integral_norm_Icc_eq_Ioi hXA hYC hSupport
+      _ = dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+        simpa only [E] using
+          integral_norm_dfiEquation23Weight_Ioi_eq_equation30Divisor
+            w q a b ha hb (dfiLocalizedWeight f φ h) h hLocalizedSupport
+  have hRaw := hRetained hE hXA hXAB hYC hYCD hSupport qx qy
+    inferInstance inferInstance branch (dfiEquation29SourceYCutoff b Y Q ε)
+  rw [hMassEq] at hRaw
+  have hMass := hMassBound (h : ℝ) a b ha hb q hq
+  let R : ℝ := Kret * (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+    (Y / b) ^ (-(1 / 4 : ℝ)) * (qx : ℝ)⁻¹ *
+    (|Real.log (X / a)| + |Real.log (2 * X / a)| +
+      2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|)
+  have hR : 0 ≤ R := by dsimp [R]; positivity
+  calc
+    (∑ n ∈ Finset.Icc 1 (dfiEquation29SourceYCutoff b Y Q ε),
+        ‖dfiVoronoiDualTerm qy branch
+          (fun y ↦ dfiVoronoiMainTerm qx (fun x ↦ E x y)) n‖) ≤
+      R * dfiEquation30DivisorAbsoluteIntegral w q a b
+        (dfiLocalizedWeight f φ h) h *
+        (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^ (3 / 4 + ε) := by
+          simpa only [R, mul_assoc] using hRaw
+    _ ≤ R * (Kmass * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+        (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^ (3 / 4 + ε) := by
+      gcongr
+    _ = (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+            dfiCutoffFiniteConstant Cφ 0) *
+          ((24 * max (Cw 0) (Cw 1)) *
+            (2 / Real.log 2 + 4)))) * (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (Y / b) ^ (-(1 / 4 : ℝ)) * (qx : ℝ)⁻¹ *
+          (|Real.log (X / a)| + |Real.log (2 * X / a)| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+          (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+          (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^ (3 / 4 + ε) := by
+      dsimp [R, Kmass]
+      ring
+
+/-- The retained `y`-dual source constant is uniform in all physical scales
+and arithmetic parameters. -/
+theorem exists_uniform_dfiEquation29_ySingleDual_source_retained_bound_of_profiles
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4) :
+    ∃ Kret : ℝ, 0 ≤ Kret ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U),
+        DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        2 ≤ Q → U = Q ^ 2 →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ)
+          (q : ℕ) (_hq0 : NeZero q) (branch : DFIVoronoiDualBranch),
+          let qx := (dfiReducedModulus a q).denominator
+          let qy := (dfiReducedModulus b q).denominator
+          let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+          (∑ n ∈ Finset.Icc 1 (dfiEquation29SourceYCutoff b Y Q ε),
+            ‖dfiVoronoiDualTerm qy branch
+              (fun y ↦ dfiVoronoiMainTerm qx (fun x ↦ E x y)) n‖) ≤
+            (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+                dfiCutoffFiniteConstant Cφ 0) *
+              ((24 * max (Cw 0) (Cw 1)) *
+                (2 / Real.log 2 + 4)))) *
+              (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+              (Y / b) ^ (-(1 / 4 : ℝ)) * (qx : ℝ)⁻¹ *
+              (|Real.log (X / a)| + |Real.log (2 * X / a)| +
+                2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+              (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+              (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^ (3 / 4 + ε) := by
+  obtain ⟨Kret, hKret, hRetained⟩ :=
+    exists_dfiEquation24YSingleDualAmplitude_retained_bound ε hε₀ hε
+  refine ⟨Kret, hKret, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hQ hU
+  let Kmass : ℝ := (dfiEquation2FiniteConstant Cf 0 *
+      dfiCutoffFiniteConstant Cφ 0) *
+    ((24 * max (Cw 0) (Cw 1)) * (2 / Real.log 2 + 4))
+  have hMassBound := dfiEquation30_uniform_all_of_profiles
+    hf hfC hbox hφ hφC hscale hwC hQ hU
   intro a b ha hb h q hq0 branch
   letI : NeZero q := hq0
   have hq : 0 < q := NeZero.pos q
@@ -8343,6 +10826,134 @@ theorem exists_dfiEquation29_doubleDual_source_retained_bound_of_profiles
   have hMassBound := dfiEquation30_uniform_all_of_profiles
     hf hfC hbox hφ hφC hscale hwC hQ hU
   refine ⟨Kret, hKret, ?_⟩
+  intro a b ha hb h q hq0 xBranch yBranch
+  letI : NeZero q := hq0
+  have hq : 0 < q := NeZero.pos q
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  have hE : ContDiff ℝ ∞ (Function.uncurry E) :=
+    contDiff_uncurry_dfiEquation23Weight w hf hφ a b h q hq
+  have hSupport : Function.support (Function.uncurry E) ⊆
+      Set.Icc (X / a) (2 * X / a) ×ˢ Set.Icc (Y / b) (2 * Y / b) :=
+    dfiEquation23Weight_support_rectangle w hbox a b ha hb h q
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hXA : 0 < X / (a : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_X) haR
+  have hXAB : X / (a : ℝ) ≤ 2 * X / a :=
+    (div_le_div_iff_of_pos_right haR).2 (by nlinarith [hf.one_le_X])
+  have hYC : 0 < Y / (b : ℝ) :=
+    div_pos (zero_lt_one.trans_le hf.one_le_Y) hbR
+  have hYCD : Y / (b : ℝ) ≤ 2 * Y / b :=
+    (div_le_div_iff_of_pos_right hbR).2 (by nlinarith [hf.one_le_Y])
+  have hLocalizedSupport : Function.support (Function.uncurry
+      (dfiLocalizedWeight f φ (h : ℝ))) ⊆
+      Set.Ioi (0 : ℝ) ×ˢ Set.Ioi (0 : ℝ) := by
+    intro p hp
+    have hm := support_uncurry_dfiLocalizedWeight_subset hbox hp
+    exact ⟨(zero_lt_one.trans_le hf.one_le_X).trans_le hm.1.1,
+      (zero_lt_one.trans_le hf.one_le_Y).trans_le hm.2.1⟩
+  have hMassEq :
+      (∫ x in Set.Icc (X / a) (2 * X / a),
+        ∫ y in Set.Icc (Y / b) (2 * Y / b), ‖E x y‖) =
+        dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+    calc
+      _ = ∫ x in Set.Ioi (0 : ℝ), ∫ y in Set.Ioi (0 : ℝ), ‖E x y‖ :=
+        integral_integral_norm_Icc_eq_Ioi hXA hYC hSupport
+      _ = dfiEquation30DivisorAbsoluteIntegral w q a b
+          (dfiLocalizedWeight f φ h) h := by
+        simpa only [E] using
+          integral_norm_dfiEquation23Weight_Ioi_eq_equation30Divisor
+            w q a b ha hb (dfiLocalizedWeight f φ h) h hLocalizedSupport
+  have hRaw := hRetained hE hXA hXAB hYC hYCD hSupport qx qy
+    inferInstance inferInstance xBranch yBranch
+    (dfiEquation29SourceXCutoff a X Q ε)
+    (dfiEquation29SourceYCutoff b Y Q ε)
+  rw [hMassEq] at hRaw
+  have hMass := hMassBound (h : ℝ) a b ha hb q hq
+  let R : ℝ := Kret * (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+    (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+    (X / a) ^ (-(1 / 4 : ℝ)) * (Y / b) ^ (-(1 / 4 : ℝ))
+  have hR : 0 ≤ R := by dsimp [R]; positivity
+  calc
+    (∑ m ∈ Finset.Icc 1 (dfiEquation29SourceXCutoff a X Q ε),
+      ∑ n ∈ Finset.Icc 1 (dfiEquation29SourceYCutoff b Y Q ε),
+        ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖) ≤
+      R * dfiEquation30DivisorAbsoluteIntegral w q a b
+        (dfiLocalizedWeight f φ h) h *
+        (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^
+          (3 / 4 + ε / 2) *
+        (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^
+          (3 / 4 + ε / 2) := by
+      simpa only [R, mul_assoc] using hRaw
+    _ ≤ R * (Kmass * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+        (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^
+          (3 / 4 + ε / 2) *
+        (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^
+          (3 / 4 + ε / 2) := by
+      gcongr
+    _ = (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+            dfiCutoffFiniteConstant Cφ 0) *
+          ((24 * max (Cw 0) (Cw 1)) *
+            (2 / Real.log 2 + 4)))) * (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (X / a) ^ (-(1 / 4 : ℝ)) *
+          (Y / b) ^ (-(1 / 4 : ℝ)) *
+          (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+          (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^
+            (3 / 4 + ε / 2) *
+          (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^
+            (3 / 4 + ε / 2) := by
+      dsimp [R, Kmass]
+      ring
+
+/-- The retained double-dual source constant is uniform in all physical
+scales and arithmetic parameters. -/
+theorem exists_uniform_dfiEquation29_doubleDual_source_retained_bound_of_profiles
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 2) :
+    ∃ Kret : ℝ, 0 ≤ Kret ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U),
+        DFIRedundantCutoffProfile hφ Cφ → U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        2 ≤ Q → U = Q ^ 2 →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ)
+          (q : ℕ) (_hq0 : NeZero q)
+          (xBranch yBranch : DFIVoronoiDualBranch),
+          let qx := (dfiReducedModulus a q).denominator
+          let qy := (dfiReducedModulus b q).denominator
+          let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+          (∑ m ∈ Finset.Icc 1 (dfiEquation29SourceXCutoff a X Q ε),
+            ∑ n ∈ Finset.Icc 1 (dfiEquation29SourceYCutoff b Y Q ε),
+              ‖dfiEquation24DoubleDualMellinAmplitude
+                qx xBranch qy yBranch E m n‖) ≤
+            (Kret * ((dfiEquation2FiniteConstant Cf 0 *
+                dfiCutoffFiniteConstant Cφ 0) *
+              ((24 * max (Cw 0) (Cw 1)) *
+                (2 / Real.log 2 + 4)))) * (qx : ℝ) ^ (-(1 / 2 : ℝ)) *
+              (qy : ℝ) ^ (-(1 / 2 : ℝ)) *
+              (X / a) ^ (-(1 / 4 : ℝ)) *
+              (Y / b) ^ (-(1 / 4 : ℝ)) *
+              (((a : ℝ) * b)⁻¹ * min X Y * Real.log Q) *
+              (dfiEquation29SourceXCutoff a X Q ε : ℝ) ^
+                (3 / 4 + ε / 2) *
+              (dfiEquation29SourceYCutoff b Y Q ε : ℝ) ^
+                (3 / 4 + ε / 2) := by
+  obtain ⟨Kret, hKret, hRetained⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_retained_bound ε hε₀ hε
+  refine ⟨Kret, hKret, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hQ hU
+  let Kmass : ℝ := (dfiEquation2FiniteConstant Cf 0 *
+      dfiCutoffFiniteConstant Cφ 0) *
+    ((24 * max (Cw 0) (Cw 1)) * (2 / Real.log 2 + 4))
+  have hMassBound := dfiEquation30_uniform_all_of_profiles
+    hf hfC hbox hφ hφC hscale hwC hQ hU
   intro a b ha hb h q hq0 xBranch yBranch
   letI : NeZero q := hq0
   have hq : 0 < q := NeZero.pos q
@@ -13469,6 +16080,150 @@ theorem dfiEquation29DoubleTailXAllYMass_le_of_source_split
     _ ≤ Ax * Tx * Fy + Ag * Gx * Gy := by gcongr
     _ = _ := by rfl
 
+/-- Refined outer-tail estimate when the double-tail corner is controlled
+by a complete recurrence in each frequency.  In contrast with the
+geometric-mean form, both tail sums use the full exponent `k`. -/
+theorem dfiEquation29DoubleTailXAllYMass_le_of_source_full_recurrence
+    (qx : ℕ) [NeZero qx] (xBranch : DFIVoronoiDualBranch)
+    (qy : ℕ) [NeZero qy] (yBranch : DFIVoronoiDualBranch)
+    (E : ℝ → ℝ → ℂ) (Lx Ly k : ℕ)
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (hLx : 0 < Lx) (hLy : 0 < Ly)
+    (hk : ε + 3 / 4 < (k : ℝ))
+    (Ax Axy : ℝ) (hAx : 0 ≤ Ax) (hAxy : 0 ≤ Axy)
+    (hxPoint : ∀ m n : ℕ, 0 < m → 0 < n →
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        Ax * (m : ℝ) ^ (ε - 1 / 4 - k) *
+          (n : ℝ) ^ (ε - 1 / 4))
+    (hxyPoint : ∀ m n : ℕ, 0 < m → 0 < n →
+      ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖ ≤
+        Axy * (m : ℝ) ^ (ε - 1 / 4 - k) *
+          (n : ℝ) ^ (ε - 1 / 4 - k)) :
+    dfiEquation29DoubleTailXAllYMass
+        qx xBranch qy yBranch E Lx ≤
+      Ax * ((Lx : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)) *
+        ((3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)) +
+      Axy * ((Lx : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)) *
+        ((Ly : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)) := by
+  let e : ℝ := ε - 1 / 4
+  let s : ℝ := ε - 1 / 4 - k
+  let px : ℕ → ℝ := fun m ↦ (m : ℝ) ^ (e - k)
+  let pxy : ℕ → ℝ := fun m ↦ (m : ℝ) ^ s
+  let Fy : ℝ := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+  let Tx : ℝ := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  let Ty : ℝ := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  have hpx : Summable px := by
+    apply Real.summable_nat_rpow.mpr
+    dsimp [px, e]
+    linarith
+  have hpxy : Summable pxy := by
+    apply Real.summable_nat_rpow.mpr
+    dsimp [pxy, s]
+    linarith
+  have hpxTail : Summable (fun i : ℕ ↦ px (Lx + (i + 1))) := by
+    have hs := (summable_nat_add_iff (Lx + 1)).2 hpx
+    simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hs
+  have hpxyTail : Summable (fun i : ℕ ↦ pxy (Lx + (i + 1))) := by
+    have hs := (summable_nat_add_iff (Lx + 1)).2 hpxy
+    simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hs
+  have hpxyYTail : Summable (fun j : ℕ ↦
+      ((Ly + (j + 1) : ℕ) : ℝ) ^ s) := by
+    have hs : Summable (fun n : ℕ ↦ (n : ℝ) ^ s) := by
+      apply Real.summable_nat_rpow.mpr
+      dsimp [s]
+      linarith
+    have ht := (summable_nat_add_iff (Ly + 1)).2 hs
+    simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using ht
+  have hSumY : ∑ n ∈ Finset.Icc 1 Ly, (n : ℝ) ^ e ≤ Fy := by
+    simpa only [e, Fy] using
+      sum_Icc_natCast_rpow_sub_quarter_le hε₀.le hε Ly
+  have hTx : (∑' i : ℕ, px (Lx + (i + 1))) ≤ Tx := by
+    simpa only [px, e, Tx] using
+      tsum_nat_add_rpow_sub_quarter_sub_nat_le ε Lx k hLx hk
+  have hTy : (∑' j : ℕ,
+      ((Ly + (j + 1) : ℕ) : ℝ) ^ s) ≤ Ty := by
+    simpa only [s, Ty] using
+      tsum_nat_add_rpow_sub_quarter_sub_nat_le ε Ly k hLy hk
+  have hFy₀ : 0 ≤ Fy := by dsimp [Fy]; positivity
+  have hTx₀ : 0 ≤ Tx :=
+    (tsum_nonneg fun _ ↦ Real.rpow_nonneg (Nat.cast_nonneg _) _).trans hTx
+  have hTy₀ : 0 ≤ Ty :=
+    (tsum_nonneg fun _ ↦ Real.rpow_nonneg (Nat.cast_nonneg _) _).trans hTy
+  have hRow (m : ℕ) (hm : 0 < m) :
+      (∑' n : ℕ, ‖dfiEquation24DoubleDualMellinAmplitude
+          qx xBranch qy yBranch E m n‖) ≤
+        Ax * px m * Fy + Axy * pxy m * Ty := by
+    have hAmp := summable_norm_dfiEquation24DoubleDualMellinAmplitude_right
+      (E := E) qx xBranch qy yBranch m
+    have hzero : ‖dfiEquation24DoubleDualMellinAmplitude
+        qx xBranch qy yBranch E m 0‖ = 0 := by
+      simp [dfiEquation24DoubleDualMellinAmplitude,
+        dfiEquation24DoubleDualAmplitudeIntegrand, divisorWeight]
+    rw [Summable.tsum_eq_sum_Icc_add_tail_of_zero hAmp hzero Ly]
+    apply add_le_add
+    · calc
+        _ ≤ ∑ n ∈ Finset.Icc 1 Ly, Ax * px m * (n : ℝ) ^ e := by
+          apply Finset.sum_le_sum
+          intro n hnMem
+          have hn : 0 < n := (Finset.mem_Icc.mp hnMem).1
+          simpa only [px, e, mul_assoc] using hxPoint m n hm hn
+        _ = (Ax * px m) * ∑ n ∈ Finset.Icc 1 Ly, (n : ℝ) ^ e := by
+          rw [Finset.mul_sum]
+        _ ≤ Ax * px m * Fy := by gcongr
+    · have hAmpTail : Summable (fun j : ℕ ↦
+          ‖dfiEquation24DoubleDualMellinAmplitude
+            qx xBranch qy yBranch E m (Ly + (j + 1))‖) := by
+          have hs := (summable_nat_add_iff (Ly + 1)).2 hAmp
+          simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hs
+      calc
+        _ ≤ ∑' j : ℕ, (Axy * pxy m) *
+            ((Ly + (j + 1) : ℕ) : ℝ) ^ s :=
+          hAmpTail.tsum_le_tsum (fun j ↦ by
+            have hn : 0 < Ly + (j + 1) := by omega
+            simpa only [pxy, s, mul_assoc] using
+              hxyPoint m (Ly + (j + 1)) hm hn)
+            (hpxyYTail.mul_left (Axy * pxy m))
+        _ = (Axy * pxy m) * ∑' j : ℕ,
+            ((Ly + (j + 1) : ℕ) : ℝ) ^ s := by rw [tsum_mul_left]
+        _ ≤ Axy * pxy m * Ty := by gcongr
+  unfold dfiEquation29DoubleTailXAllYMass
+  have hAmpOuter := summable_tsum_norm_dfiEquation24DoubleDualMellinAmplitude
+    (E := E) qx xBranch qy yBranch
+  have hAmpTail : Summable (fun i : ℕ ↦
+      ∑' n : ℕ, ‖dfiEquation24DoubleDualMellinAmplitude
+        qx xBranch qy yBranch E (Lx + (i + 1)) n‖) := by
+    have hs := (summable_nat_add_iff (Lx + 1)).2 hAmpOuter
+    simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hs
+  have hMajorant : Summable (fun i : ℕ ↦
+      Ax * px (Lx + (i + 1)) * Fy +
+        Axy * pxy (Lx + (i + 1)) * Ty) :=
+    ((hpxTail.mul_left Ax).mul_right Fy).add
+      ((hpxyTail.mul_left Axy).mul_right Ty)
+  calc
+    _ ≤ ∑' i : ℕ, (Ax * px (Lx + (i + 1)) * Fy +
+          Axy * pxy (Lx + (i + 1)) * Ty) :=
+      hAmpTail.tsum_le_tsum
+        (fun i ↦ hRow (Lx + (i + 1)) (by omega)) hMajorant
+    _ = (Ax * (∑' i : ℕ, px (Lx + (i + 1))) * Fy) +
+        (Axy * (∑' i : ℕ, pxy (Lx + (i + 1))) * Ty) := by
+      rw [Summable.tsum_add ((hpxTail.mul_left Ax).mul_right Fy)
+        ((hpxyTail.mul_left Axy).mul_right Ty)]
+      rw [← tsum_mul_left, tsum_mul_right, ← tsum_mul_left, tsum_mul_right]
+    _ ≤ Ax * Tx * Fy + Axy * Tx * Ty := by
+      have hpxyEq : pxy = px := by
+        funext r
+        dsimp [pxy, px, s, e]
+      rw [hpxyEq]
+      gcongr
+    _ = _ := by rfl
+
 /-- Source-sharp equation-(29) estimate for one complete double-dual
 branch.  The retained rectangle and all three disjoint complement pieces
 are present, including the double-tail corner. -/
@@ -13737,6 +16492,398 @@ theorem exists_dfiEquation29_doubleTail_source_sharp_bound
   apply Finset.sum_le_sum
   intro yb _
   exact hEach xb yb
+
+/-- Tail-only source form of DFI equation (29) with the full mixed-derivative
+recurrence in the double-tail corner.  The corner therefore has `k`
+integrations by parts in each frequency, rather than the obsolete `k/2`
+geometric-mean loss. -/
+theorem exists_dfiEquation29_doubleTail_source_full_recurrence_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (k : ℕ) (hk : 2 * ε + 3 / 2 < (k : ℝ)) :
+    ∃ Cy Dy Ky Cx Dx Kx K Cdiv : ℝ,
+      0 < Cy ∧ 0 ≤ Dy ∧ 0 ≤ Ky ∧
+      0 < Cx ∧ 0 ≤ Dx ∧ 0 ≤ Kx ∧ 0 < K ∧ 0 < Cdiv ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ),
+      ∀ (q : ℕ) (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
+        let qx := (dfiReducedModulus a q).denominator
+        let qy := (dfiReducedModulus b q).denominator
+        let Lx := dfiEquation29SourceXCutoff a X Q ε
+        let Ly := dfiEquation29SourceYCutoff b Y Q ε
+        let W := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+          (q.divisors.card : ℝ)
+        let Ax := dfiEquation29XTailCoefficient
+          Cx Dx Kx k Q X Y a b q qx qy
+        let Ay := dfiEquation29YTailCoefficient
+          Cy Dy Ky k Q X Y a b q qx qy
+        let Axy := dfiEquation29FullRecurrenceCoefficient
+          K Cdiv k Q X Y a b qx qy
+        let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+        let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+        let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)
+        let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)
+        dfiEquation29DoubleTailWeilTotal X Y w
+            (dfiLocalizedWeight f φ h) a b h ε q ≤
+          W * (∑ _xb : DFIVoronoiDualBranch,
+            ∑ _yb : DFIVoronoiDualBranch,
+              (Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty)) := by
+  obtain ⟨Cy, Dy, Ky, hCy, hDy, hKy, hy⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_yTail_power_bound
+      hf hfC hbox hφ hφC hscale w hwC hU ε hε₀ k
+  obtain ⟨Cx, Dx, Kx, hCx, hDx, hKx, hx⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_xTail_power_bound
+      hf hfC hbox hφ hφC hscale w hwC hU ε hε₀ k
+  obtain ⟨K, Cdiv, hK, hCdiv, hxy⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_full_pointwise
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ k
+  refine ⟨Cy, Dy, Ky, Cx, Dx, Kx, K, Cdiv,
+    hCy, hDy, hKy, hCx, hDx, hKx, hK, hCdiv, ?_⟩
+  intro a b ha hb h q hq hqQ
+  dsimp only
+  letI : NeZero q := hq
+  have hqpos : 0 < q := NeZero.pos q
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let Lx := dfiEquation29SourceXCutoff a X Q ε
+  let Ly := dfiEquation29SourceYCutoff b Y Q ε
+  let W : ℝ := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+    (q.divisors.card : ℝ)
+  let Ax := dfiEquation29XTailCoefficient Cx Dx Kx k Q X Y a b q qx qy
+  let Ay := dfiEquation29YTailCoefficient Cy Dy Ky k Q X Y a b q qx qy
+  let Axy := dfiEquation29FullRecurrenceCoefficient
+    K Cdiv k Q X Y a b qx qy
+  let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+  let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+  let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  have hQpos : 0 < Q := lt_of_lt_of_le (by norm_num) hQ
+  have hLx : 0 < Lx := by
+    simpa only [Lx] using dfiEquation29SourceXCutoff_pos ha
+      (zero_lt_one.trans_le hf.one_le_X) hQpos ε
+  have hLy : 0 < Ly := by
+    simpa only [Ly] using dfiEquation29SourceYCutoff_pos hb
+      (zero_lt_one.trans_le hf.one_le_Y) hQpos ε
+  have hAx : 0 ≤ Ax := dfiEquation29XTailCoefficient_nonneg
+    hCx.le hDx hKx w.Q_pos
+      (zero_lt_one.trans_le hf.one_le_X) (zero_lt_one.trans_le hf.one_le_Y)
+      ha hb hqpos (NeZero.pos qx) (NeZero.pos qy)
+  have hAy : 0 ≤ Ay := dfiEquation29YTailCoefficient_nonneg
+    hCy.le hDy hKy w.Q_pos
+      (zero_lt_one.trans_le hf.one_le_X) (zero_lt_one.trans_le hf.one_le_Y)
+      ha hb hqpos (NeZero.pos qx) (NeZero.pos qy)
+  have hAxy : 0 ≤ Axy := by
+    dsimp only [Axy]
+    exact dfiEquation29FullRecurrenceCoefficient_nonneg
+      hK.le hCdiv.le (by linarith)
+        (zero_le_one.trans hf.one_le_X) (zero_le_one.trans hf.one_le_Y) ha hb
+  have hxPoint := hx a b q ha hb hq hqQ h
+  have hyPoint := hy a b q ha hb hq hqQ h
+  have hxyPoint := hxy a b q ha hb hq hqQ h
+  have hEach (xb yb : DFIVoronoiDualBranch) :
+      dfiEquation29DoubleRetainedXTailYMass qx xb qy yb E Lx Ly +
+          dfiEquation29DoubleTailXAllYMass qx xb qy yb E Lx ≤
+        Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty := by
+    have hTailY := dfiEquation29DoubleRetainedXTailYMass_le_of_source_bound
+      qx xb qy yb E Lx Ly k ε hε₀ hε hLy (by linarith)
+        Ay hAy (by
+          intro m n hm hn
+          simpa only [Ay, qx, qy, E] using hyPoint xb yb m n hm hn)
+    have hTailX := dfiEquation29DoubleTailXAllYMass_le_of_source_full_recurrence
+      qx xb qy yb E Lx Ly k ε hε₀ hε hLx hLy (by linarith)
+        Ax Axy hAx hAxy
+        (by
+          intro m n hm hn
+          simpa only [Ax, qx, qy, E] using hxPoint xb yb m n hm hn)
+        (by
+          intro m n hm hn
+          simpa only [Axy, qx, qy, E] using hxyPoint xb yb m n hm hn)
+    dsimp only [Sx, Sy, Tx, Ty]
+    linarith
+  have hW : 0 ≤ W := by dsimp [W]; positivity
+  rw [dfiEquation29DoubleTailWeilTotal, dif_neg hqpos.ne']
+  change W * (∑ xb : DFIVoronoiDualBranch,
+      ∑ yb : DFIVoronoiDualBranch,
+        (dfiEquation29DoubleRetainedXTailYMass qx xb qy yb E Lx Ly +
+          dfiEquation29DoubleTailXAllYMass qx xb qy yb E Lx)) ≤ _
+  apply mul_le_mul_of_nonneg_left _ hW
+  apply Finset.sum_le_sum
+  intro xb _
+  apply Finset.sum_le_sum
+  intro yb _
+  exact hEach xb yb
+
+/-- The full-recurrence equation-(29) double complement summed over the
+literal delta-method modulus set.  This is the direct modulus-sum consumer
+of the preceding pointwise theorem; no tail certificate is assumed. -/
+theorem exists_sum_dfiEquation29_doubleTail_source_full_recurrence_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (k : ℕ) (hk : 2 * ε + 3 / 2 < (k : ℝ)) :
+    ∃ Cy Dy Ky Cx Dx Kx K Cdiv : ℝ,
+      0 < Cy ∧ 0 ≤ Dy ∧ 0 ≤ Ky ∧
+      0 < Cx ∧ 0 ≤ Dx ∧ 0 ≤ Kx ∧ 0 < K ∧ 0 < Cdiv ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ),
+      (∑ q ∈ dfiEquation22Moduli Q,
+        dfiEquation29DoubleTailWeilTotal X Y w
+          (dfiLocalizedWeight f φ h) a b h ε q) ≤
+      ∑ q ∈ dfiEquation22Moduli Q,
+        if hq : q = 0 then 0 else
+          letI : NeZero q := ⟨hq⟩
+          let qx := (dfiReducedModulus a q).denominator
+          let qy := (dfiReducedModulus b q).denominator
+          let Lx := dfiEquation29SourceXCutoff a X Q ε
+          let Ly := dfiEquation29SourceYCutoff b Y Q ε
+          let W := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+            (q.divisors.card : ℝ)
+          let Ax := dfiEquation29XTailCoefficient
+            Cx Dx Kx k Q X Y a b q qx qy
+          let Ay := dfiEquation29YTailCoefficient
+            Cy Dy Ky k Q X Y a b q qx qy
+          let Axy := dfiEquation29FullRecurrenceCoefficient
+            K Cdiv k Q X Y a b qx qy
+          let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+          let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+          let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+            ((k : ℝ) - ε - 3 / 4)
+          let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+            ((k : ℝ) - ε - 3 / 4)
+          W * (4 * (Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty)) := by
+  obtain ⟨Cy, Dy, Ky, Cx, Dx, Kx, K, Cdiv,
+      hCy, hDy, hKy, hCx, hDx, hKx, hK, hCdiv, hPoint⟩ :=
+    exists_dfiEquation29_doubleTail_source_full_recurrence_bound
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ hε k hk
+  refine ⟨Cy, Dy, Ky, Cx, Dx, Kx, K, Cdiv,
+    hCy, hDy, hKy, hCx, hDx, hKx, hK, hCdiv, ?_⟩
+  intro a b ha hb h
+  apply Finset.sum_le_sum
+  intro q hqMem
+  have hqPos : 0 < q := (mem_dfiEquation22Moduli_iff q).1 hqMem |>.1
+  have hqQ : (q : ℝ) ≤ 2 * Q :=
+    (mem_dfiEquation22Moduli_iff q).1 hqMem |>.2.le
+  letI : NeZero q := ⟨hqPos.ne'⟩
+  have hp := hPoint a b ha hb h q inferInstance hqQ
+  rw [dif_neg hqPos.ne']
+  dsimp only at hp ⊢
+  have hcard : Fintype.card DFIVoronoiDualBranch = 2 := by decide
+  simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, hcard,
+    Nat.cast_ofNat] at hp
+  convert hp using 1
+  all_goals ring
+
+/-- Correct source form of the complement in DFI (29).  Both one-sided
+regions retain the physical equation-(30) mixed-`L¹` mass; only the corner
+uses recurrence in both frequencies. -/
+theorem exists_dfiEquation29_doubleTail_source_mixed_recurrence_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (k : ℕ) (hk : 2 * ε + 3 / 2 < (k : ℝ)) :
+    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
+      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
+      0 < Kxy ∧ 0 < Cdivxy ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ),
+      ∀ (q : ℕ) (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
+        let qx := (dfiReducedModulus a q).denominator
+        let qy := (dfiReducedModulus b q).denominator
+        let Lx := dfiEquation29SourceXCutoff a X Q ε
+        let Ly := dfiEquation29SourceYCutoff b Y Q ε
+        let W := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+          (q.divisors.card : ℝ)
+        let Ax := dfiEquation29MixedXTailCoefficient
+          Kx Cdivx k Q X Y a b qx qy
+        let Ay := dfiEquation29MixedYTailCoefficient
+          Ky Cdivy k Q X Y a b qx qy
+        let Axy := dfiEquation29FullRecurrenceCoefficient
+          Kxy Cdivxy k Q X Y a b qx qy
+        let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+        let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+        let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)
+        let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+          ((k : ℝ) - ε - 3 / 4)
+        dfiEquation29DoubleTailWeilTotal X Y w
+            (dfiLocalizedWeight f φ h) a b h ε q ≤
+          W * (∑ _xb : DFIVoronoiDualBranch,
+            ∑ _yb : DFIVoronoiDualBranch,
+              (Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty)) := by
+  obtain ⟨Ky, Cdivy, hKy, hCdivy, hy⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_yTail_pointwise
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ k
+  obtain ⟨Kx, Cdivx, hKx, hCdivx, hx⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_mixed_xTail_pointwise
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ k
+  obtain ⟨Kxy, Cdivxy, hKxy, hCdivxy, hxy⟩ :=
+    exists_dfiEquation24DoubleDualMellinAmplitude_source_full_pointwise
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ k
+  refine ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
+    hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, ?_⟩
+  intro a b ha hb h q hq hqQ
+  dsimp only
+  letI : NeZero q := hq
+  have hqpos : 0 < q := NeZero.pos q
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let E := dfiEquation23Weight w (dfiLocalizedWeight f φ h) a b h q
+  let Lx := dfiEquation29SourceXCutoff a X Q ε
+  let Ly := dfiEquation29SourceYCutoff b Y Q ε
+  let W : ℝ := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+    (q.divisors.card : ℝ)
+  let Ax := dfiEquation29MixedXTailCoefficient Kx Cdivx k Q X Y a b qx qy
+  let Ay := dfiEquation29MixedYTailCoefficient Ky Cdivy k Q X Y a b qx qy
+  let Axy := dfiEquation29FullRecurrenceCoefficient
+    Kxy Cdivxy k Q X Y a b qx qy
+  let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+  let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+  let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+    ((k : ℝ) - ε - 3 / 4)
+  have hQpos : 0 < Q := lt_of_lt_of_le (by norm_num) hQ
+  have hLx : 0 < Lx := by
+    simpa only [Lx] using dfiEquation29SourceXCutoff_pos ha
+      (zero_lt_one.trans_le hf.one_le_X) hQpos ε
+  have hLy : 0 < Ly := by
+    simpa only [Ly] using dfiEquation29SourceYCutoff_pos hb
+      (zero_lt_one.trans_le hf.one_le_Y) hQpos ε
+  have hAx : 0 ≤ Ax := by
+    dsimp only [Ax]
+    exact dfiEquation29MixedXTailCoefficient_nonneg hKx.le hCdivx.le
+      (by linarith) (zero_le_one.trans hf.one_le_X)
+        (zero_le_one.trans hf.one_le_Y) ha hb
+  have hAy : 0 ≤ Ay := by
+    dsimp only [Ay]
+    exact dfiEquation29MixedYTailCoefficient_nonneg hKy.le hCdivy.le
+      (by linarith) (zero_le_one.trans hf.one_le_X)
+        (zero_le_one.trans hf.one_le_Y) ha hb
+  have hAxy : 0 ≤ Axy := by
+    dsimp only [Axy]
+    exact dfiEquation29FullRecurrenceCoefficient_nonneg hKxy.le hCdivxy.le
+      (by linarith) (zero_le_one.trans hf.one_le_X)
+        (zero_le_one.trans hf.one_le_Y) ha hb
+  have hxPoint := hx a b q ha hb hq hqQ h
+  have hyPoint := hy a b q ha hb hq hqQ h
+  have hxyPoint := hxy a b q ha hb hq hqQ h
+  have hEach (xb yb : DFIVoronoiDualBranch) :
+      dfiEquation29DoubleRetainedXTailYMass qx xb qy yb E Lx Ly +
+          dfiEquation29DoubleTailXAllYMass qx xb qy yb E Lx ≤
+        Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty := by
+    have hTailY := dfiEquation29DoubleRetainedXTailYMass_le_of_source_bound
+      qx xb qy yb E Lx Ly k ε hε₀ hε hLy (by linarith)
+        Ay hAy (by
+          intro m n hm hn
+          simpa only [Ay, qx, qy, E] using hyPoint xb yb m n hm hn)
+    have hTailX := dfiEquation29DoubleTailXAllYMass_le_of_source_full_recurrence
+      qx xb qy yb E Lx Ly k ε hε₀ hε hLx hLy (by linarith)
+        Ax Axy hAx hAxy
+        (by
+          intro m n hm hn
+          simpa only [Ax, qx, qy, E] using hxPoint xb yb m n hm hn)
+        (by
+          intro m n hm hn
+          simpa only [Axy, qx, qy, E] using hxyPoint xb yb m n hm hn)
+    dsimp only [Sx, Sy, Tx, Ty]
+    linarith
+  have hW : 0 ≤ W := by dsimp [W]; positivity
+  rw [dfiEquation29DoubleTailWeilTotal, dif_neg hqpos.ne']
+  change W * (∑ xb : DFIVoronoiDualBranch,
+      ∑ yb : DFIVoronoiDualBranch,
+        (dfiEquation29DoubleRetainedXTailYMass qx xb qy yb E Lx Ly +
+          dfiEquation29DoubleTailXAllYMass qx xb qy yb E Lx)) ≤ _
+  apply mul_le_mul_of_nonneg_left _ hW
+  apply Finset.sum_le_sum
+  intro xb _
+  apply Finset.sum_le_sum
+  intro yb _
+  exact hEach xb yb
+
+/-- The corrected mixed-recurrence equation-(29) complement summed over the
+literal delta-method modulus set. -/
+theorem exists_sum_dfiEquation29_doubleTail_source_mixed_recurrence_bound
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (k : ℕ) (hk : 2 * ε + 3 / 2 < (k : ℝ)) :
+    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
+      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
+      0 < Kxy ∧ 0 < Cdivxy ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ),
+      (∑ q ∈ dfiEquation22Moduli Q,
+        dfiEquation29DoubleTailWeilTotal X Y w
+          (dfiLocalizedWeight f φ h) a b h ε q) ≤
+      ∑ q ∈ dfiEquation22Moduli Q,
+        if hq : q = 0 then 0 else
+          letI : NeZero q := ⟨hq⟩
+          let qx := (dfiReducedModulus a q).denominator
+          let qy := (dfiReducedModulus b q).denominator
+          let Lx := dfiEquation29SourceXCutoff a X Q ε
+          let Ly := dfiEquation29SourceYCutoff b Y Q ε
+          let W := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+            (q.divisors.card : ℝ)
+          let Ax := dfiEquation29MixedXTailCoefficient
+            Kx Cdivx k Q X Y a b qx qy
+          let Ay := dfiEquation29MixedYTailCoefficient
+            Ky Cdivy k Q X Y a b qx qy
+          let Axy := dfiEquation29FullRecurrenceCoefficient
+            Kxy Cdivxy k Q X Y a b qx qy
+          let Sx := (3 / 4 + ε)⁻¹ * (Lx : ℝ) ^ (3 / 4 + ε)
+          let Sy := (3 / 4 + ε)⁻¹ * (Ly : ℝ) ^ (3 / 4 + ε)
+          let Tx := (Lx : ℝ) ^ (ε + 3 / 4 - k) /
+            ((k : ℝ) - ε - 3 / 4)
+          let Ty := (Ly : ℝ) ^ (ε + 3 / 4 - k) /
+            ((k : ℝ) - ε - 3 / 4)
+          W * (4 * (Ay * Sx * Ty + Ax * Tx * Sy + Axy * Tx * Ty)) := by
+  obtain ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
+      hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, hPoint⟩ :=
+    exists_dfiEquation29_doubleTail_source_mixed_recurrence_bound
+      hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ hε k hk
+  refine ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
+    hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, ?_⟩
+  intro a b ha hb h
+  apply Finset.sum_le_sum
+  intro q hqMem
+  have hqPos : 0 < q := (mem_dfiEquation22Moduli_iff q).1 hqMem |>.1
+  have hqQ : (q : ℝ) ≤ 2 * Q :=
+    (mem_dfiEquation22Moduli_iff q).1 hqMem |>.2.le
+  letI : NeZero q := ⟨hqPos.ne'⟩
+  have hp := hPoint a b ha hb h q inferInstance hqQ
+  rw [dif_neg hqPos.ne']
+  dsimp only at hp ⊢
+  have hcard : Fintype.card DFIVoronoiDualBranch = 2 := by decide
+  simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, hcard,
+    Nat.cast_ofNat] at hp
+  convert hp using 1
+  all_goals ring
 
 /-- One complete double-dual branch at the literal source cutoffs: the
 retained rectangle is estimated on `Re s = Re t = 3/4`, and the exact two

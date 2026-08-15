@@ -1758,6 +1758,212 @@ theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le
     (by nlinarith [hf.one_le_X]) hHint hHsupport hHbound
   simpa only [H, g] using hraw.trans_eq (by ring)
 
+/-- A nonzero derivative of the affine equation-(27) slice retains all
+three pieces of source support geometry: the first physical coordinate is
+in its dyadic interval, the second physical coordinate is in its dyadic
+interval, and the displacement is in the redundant-cutoff interval.  The
+last two facts together give the second, `Y`-length, projection needed for
+the symmetric `min X Y` form of DFI's equation-(27) error. -/
+theorem dfiEquation27_sourceSlice_iteratedDeriv_support_geometry
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (a b qx qy j : ℕ) (h x u : ℝ)
+    (hne : iteratedDeriv j
+      (dfiEquation27SourceSliceFamily a b qx qy
+        (dfiLocalizedWeight f φ h) h x) u ≠ 0) :
+    x ∈ Set.Icc X (2 * X) ∧
+      x - h + u ∈ Set.Icc Y (2 * Y) ∧
+      u ∈ Set.Icc (-U) U := by
+  let G : ℝ × ℝ → ℂ := Function.uncurry
+    (dfiEquation27C a b qx qy (dfiLocalizedWeight f φ h))
+  let y : ℝ := x - h + u
+  have hGsmooth : ContDiff ℝ ∞ G := by
+    exact contDiff_uncurry_dfiEquation27C_source
+      (h := h) hf hbox hφ a b qx qy
+  have hshift :
+      iteratedDeriv j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) u =
+        iteratedDeriv j
+          (fun y' => dfiEquation27C a b qx qy
+            (dfiLocalizedWeight f φ h) x y') y := by
+    have ht := congrFun (iteratedDeriv_comp_const_add j
+      (fun y' => dfiEquation27C a b qx qy
+        (dfiLocalizedWeight f φ h) x y') (x - h)) u
+    simpa only [dfiEquation27SourceSliceFamily, dfiEquation27Slice, y] using ht
+  have hpartial : dfiPartialY j G (x, y) ≠ 0 := by
+    rw [dfiPartialY_apply j hGsmooth x y]
+    rw [hshift] at hne
+    simpa only [G, Function.uncurry_apply_pair] using hne
+  have hpDeriv : (x, y) ∈ tsupport (dfiPartialY j G) :=
+    subset_tsupport _ hpartial
+  have hpG : (x, y) ∈ tsupport G :=
+    tsupport_dfiPartialY_subset j G hpDeriv
+  have hsupport : Function.support G ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) := by
+    intro p hp
+    have hlocal : dfiLocalizedWeight f φ h p.1 p.2 ≠ 0 := by
+      intro hzero
+      apply hp
+      change dfiEquation27C a b qx qy
+        (dfiLocalizedWeight f φ h) p.1 p.2 = 0
+      rw [dfiEquation27C, hzero, mul_zero]
+    exact support_uncurry_dfiLocalizedWeight_subset hbox hlocal
+  have htsupport : tsupport G ⊆
+      Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
+    closure_minimal hsupport (isClosed_Icc.prod isClosed_Icc)
+  have hxy := htsupport hpG
+  have hu := support_iteratedDeriv_dfiEquation27_sourceSlice_subset
+    hφ a b qx qy j h x hne
+  exact ⟨hxy.1, hxy.2, hu⟩
+
+/-- Symmetric two-variable derivative mass for equation (27).  Besides the
+literal `x`-projection of length `X`, the affine relation
+`y = x - h + u`, with `y ∈ [Y,2Y]` and `|u| ≤ U`, supplies a second
+projection of length `Y + 2U`.  Since `U ≤ min X Y`, the outer mass is
+bounded by `6 * min X Y * U`, uniformly without ordering `X` and `Y`. -/
+theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy : ℕ),
+      (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) u‖) ≤
+        6 * min X Y * U *
+          ((1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+            C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
+  obtain ⟨C, hC, hinner⟩ :=
+    exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
+      hf hfC hbox hφ hφC hscale j
+  refine ⟨C, hC, ?_⟩
+  intro h a b qx qy
+  let g : ℝ → ℝ → ℂ := dfiEquation27SourceSliceFamily a b qx qy
+    (dfiLocalizedWeight f φ h) h
+  let H : ℝ → ℝ := fun x => ∫ u : ℝ, ‖iteratedDeriv j (g x) u‖
+  let B : ℝ :=
+    (1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+      (1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+      C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j
+  have hgSmooth : ContDiff ℝ ∞ (Function.uncurry g) :=
+    contDiff_uncurry_dfiEquation27_sourceSliceFamily
+      (h := h) hf hbox hφ a b qx qy
+  have hgCompact : HasCompactSupport (Function.uncurry g) :=
+    hasCompactSupport_uncurry_dfiEquation27_sourceSliceFamily
+      (h := h) hbox a b qx qy
+  have hpartialSmooth : ContDiff ℝ ∞
+      (dfiPartialY j (Function.uncurry g)) :=
+    contDiff_dfiPartialY j hgSmooth
+  have hpartialCompact : HasCompactSupport
+      (dfiPartialY j (Function.uncurry g)) :=
+    hasCompactSupport_dfiPartialY j hgCompact
+  have hpartialIntegrable : Integrable
+      (dfiPartialY j (Function.uncurry g)) :=
+    hpartialSmooth.continuous.integrable_of_hasCompactSupport hpartialCompact
+  have hHint : Integrable H := by
+    have hprod := hpartialIntegrable.integral_norm_prod_left
+    convert hprod using 1
+    funext x
+    apply integral_congr_ae
+    filter_upwards [] with u
+    rw [dfiPartialY_apply j hgSmooth x u]
+    rfl
+  have hHsupportX : Function.support H ⊆ Set.Icc X (2 * X) := by
+    intro x hx
+    by_contra hxmem
+    have hzero : ∀ u : ℝ, iteratedDeriv j (g x) u = 0 := by
+      intro u
+      by_contra hne
+      have hgeom := dfiEquation27_sourceSlice_iteratedDeriv_support_geometry
+        hf hbox hφ a b qx qy j h x u (by simpa only [g] using hne)
+      exact hxmem hgeom.1
+    apply hx
+    simp only [H, hzero, norm_zero, integral_zero]
+  have hHsupportY : Function.support H ⊆
+      Set.Icc (Y + h - U) (2 * Y + h + U) := by
+    intro x hx
+    by_contra hxmem
+    have hzero : ∀ u : ℝ, iteratedDeriv j (g x) u = 0 := by
+      intro u
+      by_contra hne
+      have hgeom := dfiEquation27_sourceSlice_iteratedDeriv_support_geometry
+        hf hbox hφ a b qx qy j h x u (by simpa only [g] using hne)
+      exact hxmem ⟨by linarith [hgeom.2.1.1, hgeom.2.2.2],
+        by linarith [hgeom.2.1.2, hgeom.2.2.1]⟩
+    apply hx
+    simp only [H, hzero, norm_zero, integral_zero]
+  have hHbound : ∀ x : ℝ, H x ≤ 2 * U * B := by
+    intro x
+    simpa only [H, g, B, mul_assoc] using hinner h a b qx qy x
+  have hrawX := integral_le_interval_length_mul H
+    (by nlinarith [hf.one_le_X]) hHint hHsupportX hHbound
+  have hrawY := integral_le_interval_length_mul H
+    (by nlinarith [hf.one_le_Y, hφ.U_pos]) hHint hHsupportY hHbound
+  have hPinv : P⁻¹ ≤ 1 :=
+    (inv_le_one₀ (zero_lt_one.trans_le hf.one_le_P)).2 hf.one_le_P
+  have hUleMin : U ≤ min X Y := by
+    calc
+      U ≤ P⁻¹ * min X Y := hscale
+      _ ≤ 1 * min X Y := by
+        gcongr
+        exact le_min (zero_le_one.trans hf.one_le_X)
+          (zero_le_one.trans hf.one_le_Y)
+      _ = min X Y := one_mul _
+  have hUleY : U ≤ Y := hUleMin.trans (min_le_right X Y)
+  have hB0 : 0 ≤ B := by
+    dsimp [B]
+    have hlogX : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    have hlogY : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    have hLX : 0 ≤ 1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx| := by
+      positivity
+    have hLY : 0 ≤ 1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy| := by
+      positivity
+    exact mul_nonneg
+      (mul_nonneg
+        (mul_nonneg (mul_nonneg hLX hLY) hC.le)
+          (dfiEquation27LogLeibnizConstant_pos j).le)
+      (pow_nonneg (inv_nonneg.mpr hφ.U_pos.le) _)
+  have hTwoUB0 : 0 ≤ 2 * U * B :=
+    mul_nonneg (mul_nonneg (by norm_num) hφ.U_pos.le) hB0
+  have hXbound : (∫ x : ℝ, H x) ≤ 2 * X * U * B := by
+    calc
+      _ ≤ (2 * X - X) * (2 * U * B) := hrawX
+      _ = 2 * X * U * B := by ring
+  have hYbound : (∫ x : ℝ, H x) ≤ 6 * Y * U * B := by
+    calc
+      _ ≤ ((2 * Y + h + U) - (Y + h - U)) * (2 * U * B) := hrawY
+      _ = (Y + 2 * U) * (2 * U * B) := by ring
+      _ ≤ (3 * Y) * (2 * U * B) := by
+        gcongr
+        linarith
+      _ = 6 * Y * U * B := by ring
+  by_cases hXY : X ≤ Y
+  · have hmin : min X Y = X := min_eq_left hXY
+    rw [hmin]
+    change (∫ x : ℝ, H x) ≤ 6 * X * U * B
+    exact hXbound.trans (by
+      have hUB0 : 0 ≤ U * B := mul_nonneg hφ.U_pos.le hB0
+      have hcoeff : 2 * X ≤ 6 * X := by nlinarith [hf.one_le_X]
+      simpa only [mul_assoc] using mul_le_mul_of_nonneg_right hcoeff hUB0)
+  · have hYX : Y ≤ X := le_of_not_ge hXY
+    rw [min_eq_right hYX]
+    change (∫ x : ℝ, H x) ≤ 6 * Y * U * B
+    exact hYbound
+
 /-- The abstract equation-(18) majorant integrated in the outer variable,
 now expressed entirely through the source scales and reduced-modulus
 logarithms.  This is the quantitative analytic input to the small-modulus
@@ -1776,23 +1982,23 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
         (dfiEquation27SourceSliceFamily a b qx qy
           (dfiLocalizedWeight f φ h) h x)) ≤
         ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) * C)) +
           ((q : ℝ) ^ j * Q ^ (j - 1)) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
                 C * U⁻¹ ^ j)) := by
   obtain ⟨C0, hC0, hmass0⟩ :=
-    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le
+    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
       hf hfC hbox hφ hφC hscale 0
   obtain ⟨Cj, hCj, hmassj⟩ :=
-    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le
+    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
       hf hfC hbox hφ hφC hscale j
   let C : ℝ := C0 * dfiEquation27LogLeibnizConstant 0 +
     Cj * dfiEquation27LogLeibnizConstant j
@@ -1819,10 +2025,12 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
       Real.log_nonneg (by nlinarith [hf.one_le_Y])
     positivity
   have hL : 0 ≤ L := mul_nonneg hLX hLY
-  have hbase : 0 ≤ 2 * X * U * L := by
+  have hbase : 0 ≤ 6 * min X Y * U * L := by
     exact mul_nonneg
-      (mul_nonneg (mul_nonneg (by norm_num) (zero_le_one.trans hf.one_le_X))
-        hφ.U_pos.le) hL
+      (mul_nonneg
+        (mul_nonneg (by norm_num)
+          (le_min (zero_le_one.trans hf.one_le_X)
+            (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le) hL
   have hC0le : C0 * dfiEquation27LogLeibnizConstant 0 ≤ C := by
     dsimp [C]
     linarith [mul_pos hCj (dfiEquation27LogLeibnizConstant_pos j)]
@@ -1833,13 +2041,13 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
       (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv 0
         (dfiEquation27SourceSliceFamily a b qx qy
           (dfiLocalizedWeight f φ h) h x) u‖) ≤
-        2 * X * U * (L * C) := by
+        6 * min X Y * U * (L * C) := by
     have hraw := hmass0 h a b qx qy
     have hraw' :
         (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv 0
           (dfiEquation27SourceSliceFamily a b qx qy
             (dfiLocalizedWeight f φ h) h x) u‖) ≤
-          2 * X * U * (L *
+          6 * min X Y * U * (L *
             (C0 * dfiEquation27LogLeibnizConstant 0)) := by
       simpa only [L, pow_zero, mul_one, mul_assoc] using hraw
     exact hraw'.trans (by
@@ -1849,13 +2057,13 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
       (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv j
         (dfiEquation27SourceSliceFamily a b qx qy
           (dfiLocalizedWeight f φ h) h x) u‖) ≤
-        2 * X * U * (L * C * U⁻¹ ^ j) := by
+        6 * min X Y * U * (L * C * U⁻¹ ^ j) := by
     have hraw := hmassj h a b qx qy
     have hraw' :
         (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv j
           (dfiEquation27SourceSliceFamily a b qx qy
             (dfiLocalizedWeight f φ h) h x) u‖) ≤
-          2 * X * U *
+          6 * min X Y * U *
             (L * (Cj * dfiEquation27LogLeibnizConstant j) * U⁻¹ ^ j) := by
       simpa only [L, mul_assoc] using hraw
     exact hraw'.trans (by
@@ -1876,7 +2084,7 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
       (∫ x : ℝ, ∫ u : ℝ,
         ‖dfiEquation27SourceSliceFamily a b qx qy
           (dfiLocalizedWeight f φ h) h x u‖) ≤
-        2 * X * U * (L * C) := by
+        6 * min X Y * U * (L * C) := by
     simpa using hmass0'
   unfold dfiEquation18ComplexMajorant
   rw [integral_add (hintbase.const_mul
@@ -1911,13 +2119,13 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
           (dfiReducedDenominator b q)
           (dfiLocalizedWeight f φ h) h x)) ≤
         ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) * C)) +
           ((q : ℝ) ^ j * Q ^ (j - 1)) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
@@ -1954,9 +2162,11 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
     have hlogY : 0 ≤ Real.log (2 * Y) :=
       Real.log_nonneg (by nlinarith [hf.one_le_Y])
     positivity
-  have hbase : 0 ≤ 2 * X * U := by
+  have hbase : 0 ≤ 6 * min X Y * U := by
     exact mul_nonneg
-      (mul_nonneg (by norm_num) (zero_le_one.trans hf.one_le_X)) hφ.U_pos.le
+      (mul_nonneg (by norm_num)
+        (le_min (zero_le_one.trans hf.one_le_X)
+          (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le
   refine (hsource h a b
     (dfiReducedDenominator a q)
     (dfiReducedDenominator b q) q).trans ?_
@@ -1984,13 +2194,13 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
           (dfiReducedDenominator a q) (dfiReducedDenominator b q)
           (dfiLocalizedWeight f φ h) h x)) ≤
         ((K : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) * C)) +
           ((K : ℝ) ^ j * Q ^ (j - 1)) *
-            (2 * X * U *
+            (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
@@ -2034,9 +2244,11 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
       Real.log_nonneg (by nlinarith [hf.one_le_Y])
     positivity
   refine (hsource h a b q hq).trans ?_
-  have hbase : 0 ≤ 2 * X * U := by
+  have hbase : 0 ≤ 6 * min X Y * U := by
     exact mul_nonneg
-      (mul_nonneg (by norm_num) (zero_le_one.trans hf.one_le_X)) hφ.U_pos.le
+      (mul_nonneg (by norm_num)
+        (le_min (zero_le_one.trans hf.one_le_X)
+          (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le
   have hQinv : 0 ≤ (Q ^ (j + 1))⁻¹ := by positivity
   have hQpow : 0 ≤ Q ^ (j - 1) := by positivity
   have hUpow : 0 ≤ U⁻¹ ^ j :=
@@ -2048,13 +2260,13 @@ DFI equation (27). -/
 noncomputable def dfiEquation27IntegratedErrorEnvelope
     (Q X Y U : ℝ) (a b K j : ℕ) : ℝ :=
   ((K : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
-      (2 * X * U *
+      (6 * min X Y * U *
         ((1 + Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log K))) +
     ((K : ℝ) ^ j * Q ^ (j - 1)) *
-      (2 * X * U *
+      (6 * min X Y * U *
         ((1 + Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
           (1 + Real.log (2 * Y) + |Real.log b| +
@@ -2080,7 +2292,10 @@ theorem dfiEquation27IntegratedErrorEnvelope_nonneg
   have hKpow : 0 ≤ (K : ℝ) ^ j := by positivity
   have hQinv : 0 ≤ (Q ^ (j + 1))⁻¹ := by positivity
   have hQpow : 0 ≤ Q ^ (j - 1) := by positivity
-  have hbase : 0 ≤ 2 * X * U := by positivity
+  have hbase : 0 ≤ 6 * min X Y * U := by
+    exact mul_nonneg
+      (mul_nonneg (by norm_num)
+        (le_min (zero_le_one.trans hX) (zero_le_one.trans hY))) hU.le
   have hlogs : 0 ≤
       (1 + Real.log (2 * X) + |Real.log a| +
         2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
@@ -2698,7 +2913,11 @@ theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le
     have hKpow : 0 ≤ (K : ℝ) ^ j := by positivity
     have hQinv : 0 ≤ (Q ^ (j + 1))⁻¹ := by positivity
     have hQpow : 0 ≤ Q ^ (j - 1) := by positivity
-    have hbase : 0 ≤ 2 * X * U := by positivity
+    have hbase : 0 ≤ 6 * min X Y * U := by
+      exact mul_nonneg
+        (mul_nonneg (by norm_num)
+          (le_min (zero_le_one.trans hf.one_le_X)
+            (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le
     have hlogs : 0 ≤
         (1 + Real.log (2 * X) + |Real.log a| +
           2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
