@@ -71,6 +71,24 @@ theorem riemannZeta_sq_eq_divisorLSeries {s : ℂ} (hs : 1 < s.re) :
       funext n
       simp [ArithmeticFunction.sigma_zero_apply]
 
+/-- Absolute summability of the divisor Dirichlet series on the same right
+half-plane on which `riemannZeta_sq_eq_divisorLSeries` opens the zeta square.
+This is the convergence datum needed for the Hughes--Young Fubini steps; the
+value identity alone is not enough to justify rearranging the two series. -/
+theorem divisorLSeries_summable {s : ℂ} (hs : 1 < s.re) :
+    LSeriesSummable (fun n : ℕ => (n.divisors.card : ℂ)) s := by
+  have hz : LSeriesSummable (⇑(ζ : ArithmeticFunction ℂ)) s :=
+    ArithmeticFunction.LSeriesSummable_zeta_iff.mpr hs
+  have hconv : LSeriesSummable (⇑((ζ : ArithmeticFunction ℂ) * ζ)) s :=
+    ArithmeticFunction.LSeriesSummable_mul hz hz
+  apply (LSeriesSummable_congr s (f := ⇑((ζ : ArithmeticFunction ℂ) * ζ))
+    (g := fun n : ℕ => (n.divisors.card : ℂ)) ?_).mp hconv
+  intro n hn
+  rw [← ArithmeticFunction.natCoe_mul]
+  change (((((ζ : ArithmeticFunction ℕ) * ζ) n : ℕ) : ℂ)) = _
+  rw [arithmeticZeta_mul_self_eq_sigma_zero]
+  simp [ArithmeticFunction.sigma_zero_apply]
+
 /-- The entire Riemann xi numerator, normalized so that away from the two
 poles it is `s * (1 - s) * completedRiemannZeta s`. -/
 noncomputable def completedXiNumerator (s : ℂ) : ℂ :=

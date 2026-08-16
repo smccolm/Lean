@@ -1431,6 +1431,172 @@ theorem exists_dfiEquation29_xSingleTail_l1_optimized_pointwise_le
       gcongr
     _ = _ := by dsimp [B, M]; ring
 
+/-- Uniform source-sharp pointwise form of the complete two-sign first
+one-sided tail in DFI equation (29).  Its only existential constant is
+selected from the divisor estimate before every source profile and scale. -/
+theorem exists_uniform_dfiEquation29_xSingleTail_l1_optimized_pointwise_le
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) (hk : ε + 3 / 4 < (k : ℝ)) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        U = Q ^ 2 → 1 ≤ P → 2 ≤ Q →
+        Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ) (q : ℕ)
+          (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
+          dfiEquation29XSingleTailWeilTotal X w
+              (dfiLocalizedWeight f φ h) a b h ε q ≤
+            2 * (dfiEquation23PhysicalMixedDerivativeFiniteConstant
+                Cf Cφ Cw (2 * k) * D * (14 * Real.pi + 8) *
+              dfiEquation29XSingleLogMajorant Q Y b /
+                ((k : ℝ) - ε - 3 / 4)) *
+            (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+              Q ^ (-ε * (k : ℝ))) *
+            (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
+              (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) *
+              (min X Y * Real.log Q) *
+              ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+                (Real.sqrt (Nat.gcd a q) / Real.sqrt q) *
+                (q.divisors.card : ℝ))) := by
+  obtain ⟨D, hD, hRaw⟩ :=
+    exists_uniform_dfiEquation29_xSingleTailWeilTotal_source_l1_bound_of_profiles
+      ε hε k hk
+  refine ⟨D, hD, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hU hP hQ
+    hQsq
+  let C := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw (2 * k)
+  have hC : 0 < C := by
+    dsimp [C]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos
+      hfC hφC hwC (2 * k)
+  intro a b ha hb h q hq hqQ
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let L : ℝ := dfiEquation29SourceXCutoff a X Q ε
+  let W : ℝ := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+    (q.divisors.card : ℝ)
+  let B : ℝ := C * D * (14 * Real.pi + 8) /
+    ((k : ℝ) - ε - 3 / 4)
+  let G : ℝ := |Real.log (Y / b)| + |Real.log (2 * Y / b)| +
+    2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|
+  let M : ℝ := min X Y * Real.log Q
+  have hqPos : 0 < q := NeZero.pos q
+  have hlogq : |Real.log (qy : ℝ)| ≤ Real.log (2 * Q) :=
+    (abs_log_dfiReducedModulus_denominator_le b q).trans
+      (Real.log_le_log (by exact_mod_cast hqPos) hqQ)
+  have hG : G ≤ dfiEquation29XSingleLogMajorant Q Y b := by
+    dsimp [G, dfiEquation29XSingleLogMajorant]
+    linarith
+  have hMaj : 0 ≤ dfiEquation29XSingleLogMajorant Q Y b := by
+    unfold dfiEquation29XSingleLogMajorant
+    have hlog : 0 ≤ Real.log (2 * Q) := Real.log_nonneg (by linarith)
+    positivity
+  have hden : 0 < (k : ℝ) - ε - 3 / 4 := by linarith
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hmin : 0 ≤ min X Y :=
+      le_min (zero_lt_one.trans_le hf.one_le_X).le
+        (zero_lt_one.trans_le hf.one_le_Y).le
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hCore := dfiEquation29_xSingle_tail_l1_source_core_le
+    (q := q) (k := k) (M := M) ha hb hP
+      (zero_lt_one.trans_le hf.one_le_X)
+      (zero_lt_one.trans_le hf.one_le_Y) (by linarith : 1 ≤ Q)
+      hε.le hM hQsq h
+  dsimp only at hCore
+  have hProfile := hRaw hf hfC hbox hφ hφC hscale w hwC hQ hU
+    a b q ha hb hq hqQ h
+  dsimp only at hProfile
+  have hFactor := dfiEquation29_xSingle_tail_l1_source_factorization
+    (a := a) (b := b) (q := q) (qx := qx) (qy := qy) (k := k)
+    (h := h) (C := C) (D := D) (Q := Q) (X := X) (Y := Y) (ε := ε)
+  dsimp only at hFactor
+  have hLpos : 0 < L := by
+    dsimp only [L]
+    exact_mod_cast dfiEquation29SourceXCutoff_pos ha
+      (zero_lt_one.trans_le hf.one_le_X) (by linarith : 0 < Q) ε
+  have hRawCore : 0 ≤ W * (qx : ℝ) ^ (-(1 / 2 : ℝ)) * (qy : ℝ)⁻¹ *
+      (X / a) ^ (-(1 / 4 : ℝ)) *
+      (((a : ℝ) * b)⁻¹ * M) *
+      (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+          (((a : ℝ) * X) / Q ^ 2)) ^ k *
+        L ^ (ε + 3 / 4 - k)) := by
+    have hW0 : 0 ≤ W := by dsimp [W]; positivity
+    have hqx0 : 0 ≤ (qx : ℝ) ^ (-(1 / 2 : ℝ)) :=
+      Real.rpow_nonneg (Nat.cast_nonneg qx) _
+    have hqy0 : 0 ≤ (qy : ℝ)⁻¹ := inv_nonneg.mpr (Nat.cast_nonneg qy)
+    have hXa0 : 0 ≤ (X / (a : ℝ)) ^ (-(1 / 4 : ℝ)) :=
+      Real.rpow_nonneg
+        (div_nonneg (zero_lt_one.trans_le hf.one_le_X).le
+          (Nat.cast_nonneg a)) _
+    have hab0 : 0 ≤ (((a : ℝ) * b)⁻¹) := by positivity
+    have hR0 : 0 ≤ ((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2 :=
+      div_nonneg (Nat.cast_nonneg _) (sq_nonneg Real.pi)
+    have hscale0 : 0 ≤ ((a : ℝ) * X) / Q ^ 2 :=
+      div_nonneg
+        (mul_nonneg (Nat.cast_nonneg a)
+          (zero_lt_one.trans_le hf.one_le_X).le) (sq_nonneg Q)
+    have hrec0 : 0 ≤ (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+        (((a : ℝ) * X) / Q ^ 2)) ^ k) :=
+      pow_nonneg (mul_nonneg hR0 hscale0) k
+    have hL0 : 0 ≤ L ^ (ε + 3 / 4 - k) :=
+      Real.rpow_nonneg hLpos.le _
+    exact mul_nonneg
+      (mul_nonneg
+        (mul_nonneg
+          (mul_nonneg
+            (mul_nonneg hW0 hqx0) hqy0) hXa0)
+          (mul_nonneg hab0 hM))
+      (mul_nonneg hrec0 hL0)
+  calc
+    _ ≤ W * (∑ _branch : DFIVoronoiDualBranch,
+        dfiEquation29XSingleMainTailL1Coefficient
+            C D k Q X Y a b qx qy *
+          (L ^ (ε + 3 / 4 - k) / ((k : ℝ) - ε - 3 / 4))) := by
+      simpa only [W, qx, qy, L] using hProfile
+    _ = 2 * (W * dfiEquation29XSingleMainTailL1Coefficient
+          C D k Q X Y a b qx qy *
+        (L ^ (ε + 3 / 4 - k) / ((k : ℝ) - ε - 3 / 4))) := by
+      have hcard : Fintype.card DFIVoronoiDualBranch = 2 := by decide
+      simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, hcard,
+        Nat.cast_ofNat]
+      ring
+    _ = 2 * ((B * G) *
+        (W * (qx : ℝ) ^ (-(1 / 2 : ℝ)) * (qy : ℝ)⁻¹ *
+          (X / a) ^ (-(1 / 4 : ℝ)) *
+          (((a : ℝ) * b)⁻¹ * M) *
+          (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+              (((a : ℝ) * X) / Q ^ 2)) ^ k *
+            L ^ (ε + 3 / 4 - k)))) := by
+      rw [hFactor]
+      dsimp [B, G, M]
+      ring
+    _ ≤ 2 * ((B * dfiEquation29XSingleLogMajorant Q Y b) *
+        (W * (qx : ℝ) ^ (-(1 / 2 : ℝ)) * (qy : ℝ)⁻¹ *
+          (X / a) ^ (-(1 / 4 : ℝ)) *
+          (((a : ℝ) * b)⁻¹ * M) *
+          (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+              (((a : ℝ) * X) / Q ^ 2)) ^ k *
+            L ^ (ε + 3 / 4 - k)))) := by
+      gcongr
+    _ ≤ 2 * ((B * dfiEquation29XSingleLogMajorant Q Y b) *
+        (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+          Q ^ (-ε * (k : ℝ)) *
+          (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
+            (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) * M *
+            ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+              (Real.sqrt (Nat.gcd a q) / Real.sqrt q) *
+              (q.divisors.card : ℝ))))) := by
+      gcongr
+    _ = _ := by dsimp [B, M]; ring
+
 /-- Source-profile pointwise form of the complete two-sign first
 one-sided tail in DFI equation (29).  No transformed-sum hypothesis is
 present: the constants come from the equation-(2), cutoff, and delta-weight
@@ -1717,6 +1883,172 @@ theorem exists_dfiEquation29_ySingleTail_l1_optimized_pointwise_le
       gcongr
     _ = _ := by dsimp [B, M]; ring
 
+/-- Uniform source-sharp pointwise form of the complete two-sign second
+one-sided tail in DFI equation (29). -/
+theorem exists_uniform_dfiEquation29_ySingleTail_l1_optimized_pointwise_le
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) (hk : ε + 3 / 4 < (k : ℝ)) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        U = Q ^ 2 → 1 ≤ P → 2 ≤ Q →
+        Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ) (q : ℕ)
+          (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
+          dfiEquation29YSingleTailWeilTotal Y w
+              (dfiLocalizedWeight f φ h) a b h ε q ≤
+            2 * (dfiEquation23PhysicalMixedDerivativeFiniteConstant
+                Cf Cφ Cw (2 * k) * D * (14 * Real.pi + 8) *
+              dfiEquation29YSingleLogMajorant Q X a /
+                ((k : ℝ) - ε - 3 / 4)) *
+            (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+              Q ^ (-ε * (k : ℝ))) *
+            (2 ^ (3 / 4 + ε) * Y ^ (1 / 2 + ε) *
+              (b : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) *
+              (min X Y * Real.log Q) *
+              ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+                (Real.sqrt (Nat.gcd b q) / Real.sqrt q) *
+                (q.divisors.card : ℝ))) := by
+  obtain ⟨D, hD, hRaw⟩ :=
+    exists_uniform_dfiEquation29_ySingleTailWeilTotal_source_l1_bound_of_profiles
+      ε hε k hk
+  refine ⟨D, hD, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hU hP hQ
+    hQsq
+  let C := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw (2 * k)
+  have hC : 0 < C := by
+    dsimp [C]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos
+      hfC hφC hwC (2 * k)
+  intro a b ha hb h q hq hqQ
+  letI : NeZero q := hq
+  let qx := (dfiReducedModulus a q).denominator
+  let qy := (dfiReducedModulus b q).denominator
+  let L : ℝ := dfiEquation29SourceYCutoff b Y Q ε
+  let W : ℝ := Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) * Real.sqrt q *
+    (q.divisors.card : ℝ)
+  let B : ℝ := C * D * (14 * Real.pi + 8) /
+    ((k : ℝ) - ε - 3 / 4)
+  let G : ℝ := |Real.log (X / a)| + |Real.log (2 * X / a)| +
+    2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|
+  let M : ℝ := min X Y * Real.log Q
+  have hqPos : 0 < q := NeZero.pos q
+  have hlogq : |Real.log (qx : ℝ)| ≤ Real.log (2 * Q) :=
+    (abs_log_dfiReducedModulus_denominator_le a q).trans
+      (Real.log_le_log (by exact_mod_cast hqPos) hqQ)
+  have hG : G ≤ dfiEquation29YSingleLogMajorant Q X a := by
+    dsimp [G, dfiEquation29YSingleLogMajorant]
+    linarith
+  have hMaj : 0 ≤ dfiEquation29YSingleLogMajorant Q X a := by
+    unfold dfiEquation29YSingleLogMajorant
+    have hlog : 0 ≤ Real.log (2 * Q) := Real.log_nonneg (by linarith)
+    positivity
+  have hden : 0 < (k : ℝ) - ε - 3 / 4 := by linarith
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hmin : 0 ≤ min X Y :=
+      le_min (zero_lt_one.trans_le hf.one_le_X).le
+        (zero_lt_one.trans_le hf.one_le_Y).le
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hCore := dfiEquation29_ySingle_tail_l1_source_core_le
+    (q := q) (k := k) (M := M) ha hb hP
+      (zero_lt_one.trans_le hf.one_le_X)
+      (zero_lt_one.trans_le hf.one_le_Y) (by linarith : 1 ≤ Q)
+      hε.le hM hQsq h
+  dsimp only at hCore
+  have hProfile := hRaw hf hfC hbox hφ hφC hscale w hwC hQ hU
+    a b q ha hb hq hqQ h
+  dsimp only at hProfile
+  have hFactor := dfiEquation29_ySingle_tail_l1_source_factorization
+    (a := a) (b := b) (q := q) (qx := qx) (qy := qy) (k := k)
+    (h := h) (C := C) (D := D) (Q := Q) (X := X) (Y := Y) (ε := ε)
+  dsimp only at hFactor
+  have hLpos : 0 < L := by
+    dsimp only [L]
+    exact_mod_cast dfiEquation29SourceYCutoff_pos hb
+      (zero_lt_one.trans_le hf.one_le_Y) (by linarith : 0 < Q) ε
+  have hRawCore : 0 ≤ W * (qy : ℝ) ^ (-(1 / 2 : ℝ)) * (qx : ℝ)⁻¹ *
+      (Y / b) ^ (-(1 / 4 : ℝ)) *
+      (((a : ℝ) * b)⁻¹ * M) *
+      (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+          (((b : ℝ) * Y) / Q ^ 2)) ^ k *
+        L ^ (ε + 3 / 4 - k)) := by
+    have hW0 : 0 ≤ W := by dsimp [W]; positivity
+    have hqy0 : 0 ≤ (qy : ℝ) ^ (-(1 / 2 : ℝ)) :=
+      Real.rpow_nonneg (Nat.cast_nonneg qy) _
+    have hqx0 : 0 ≤ (qx : ℝ)⁻¹ := inv_nonneg.mpr (Nat.cast_nonneg qx)
+    have hYb0 : 0 ≤ (Y / (b : ℝ)) ^ (-(1 / 4 : ℝ)) :=
+      Real.rpow_nonneg
+        (div_nonneg (zero_lt_one.trans_le hf.one_le_Y).le
+          (Nat.cast_nonneg b)) _
+    have hab0 : 0 ≤ (((a : ℝ) * b)⁻¹) := by positivity
+    have hR0 : 0 ≤ ((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2 :=
+      div_nonneg (Nat.cast_nonneg _) (sq_nonneg Real.pi)
+    have hscale0 : 0 ≤ ((b : ℝ) * Y) / Q ^ 2 :=
+      div_nonneg
+        (mul_nonneg (Nat.cast_nonneg b)
+          (zero_lt_one.trans_le hf.one_le_Y).le) (sq_nonneg Q)
+    have hrec0 : 0 ≤ (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+        (((b : ℝ) * Y) / Q ^ 2)) ^ k) :=
+      pow_nonneg (mul_nonneg hR0 hscale0) k
+    have hL0 : 0 ≤ L ^ (ε + 3 / 4 - k) :=
+      Real.rpow_nonneg hLpos.le _
+    exact mul_nonneg
+      (mul_nonneg
+        (mul_nonneg
+          (mul_nonneg
+            (mul_nonneg hW0 hqy0) hqx0) hYb0)
+          (mul_nonneg hab0 hM))
+      (mul_nonneg hrec0 hL0)
+  calc
+    _ ≤ W * (∑ _branch : DFIVoronoiDualBranch,
+        dfiEquation29YSingleMainTailL1Coefficient
+            C D k Q X Y a b qx qy *
+          (L ^ (ε + 3 / 4 - k) / ((k : ℝ) - ε - 3 / 4))) := by
+      simpa only [W, qx, qy, L] using hProfile
+    _ = 2 * (W * dfiEquation29YSingleMainTailL1Coefficient
+          C D k Q X Y a b qx qy *
+        (L ^ (ε + 3 / 4 - k) / ((k : ℝ) - ε - 3 / 4))) := by
+      have hcard : Fintype.card DFIVoronoiDualBranch = 2 := by decide
+      simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, hcard,
+        Nat.cast_ofNat]
+      ring
+    _ = 2 * ((B * G) *
+        (W * (qy : ℝ) ^ (-(1 / 2 : ℝ)) * (qx : ℝ)⁻¹ *
+          (Y / b) ^ (-(1 / 4 : ℝ)) *
+          (((a : ℝ) * b)⁻¹ * M) *
+          (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+              (((b : ℝ) * Y) / Q ^ 2)) ^ k *
+            L ^ (ε + 3 / 4 - k)))) := by
+      rw [hFactor]
+      dsimp [B, G, M]
+      ring
+    _ ≤ 2 * ((B * dfiEquation29YSingleLogMajorant Q X a) *
+        (W * (qy : ℝ) ^ (-(1 / 2 : ℝ)) * (qx : ℝ)⁻¹ *
+          (Y / b) ^ (-(1 / 4 : ℝ)) *
+          (((a : ℝ) * b)⁻¹ * M) *
+          (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) *
+              (((b : ℝ) * Y) / Q ^ 2)) ^ k *
+            L ^ (ε + 3 / 4 - k)))) := by
+      gcongr
+    _ ≤ 2 * ((B * dfiEquation29YSingleLogMajorant Q X a) *
+        (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+          Q ^ (-ε * (k : ℝ)) *
+          (2 ^ (3 / 4 + ε) * Y ^ (1 / 2 + ε) *
+            (b : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) * M *
+            ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+              (Real.sqrt (Nat.gcd b q) / Real.sqrt q) *
+              (q.divisors.card : ℝ))))) := by
+      gcongr
+    _ = _ := by dsimp [B, M]; ring
+
+
 /-- Symmetric source-profile pointwise form of the complete two-sign
 second one-sided tail in DFI equation (29). -/
 theorem exists_dfiEquation29_ySingleTail_optimized_pointwise_le
@@ -1952,6 +2284,122 @@ theorem exists_sum_dfiEquation29_xSingleTail_l1_optimized_le
           (Int.natAbs_ne_zero.mpr hh) ha.ne' δ hδ) hK
     _ = _ := by dsimp [K, A, M, Lmod]
 
+/-- Uniform source-sharp first one-sided tail summed over DFI's
+equation-(22) moduli. -/
+theorem exists_uniform_sum_dfiEquation29_xSingleTail_l1_optimized_le
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) (hk : ε + 3 / 4 < (k : ℝ))
+    (δ : ℝ) (hδ : 0 < δ) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        U = Q ^ 2 → 1 ≤ P → 2 ≤ Q →
+        Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ), h ≠ 0 →
+        (∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation29XSingleTailWeilTotal X w
+            (dfiLocalizedWeight f φ h) a b h ε q) ≤
+          (2 * (dfiEquation23PhysicalMixedDerivativeFiniteConstant
+              Cf Cφ Cw (2 * k) * D * (14 * Real.pi + 8) *
+              dfiEquation29XSingleLogMajorant Q Y b /
+                ((k : ℝ) - ε - 3 / 4)) *
+            (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+              Q ^ (-ε * (k : ℝ))) *
+            (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
+              (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε))) *
+            (min X Y * Real.log Q)) *
+            (divisorEpsilonConstant δ * max 1 ((⌈2 * Q⌉₊ : ℝ) ^ δ) *
+              (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
+                  (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))) *
+                Real.sqrt ((a.divisors.card : ℝ) *
+                  (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))))) := by
+  obtain ⟨D, hD, hPoint⟩ :=
+    exists_uniform_dfiEquation29_xSingleTail_l1_optimized_pointwise_le
+      ε hε k hk
+  refine ⟨D, hD, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hU hP hQ
+    hQsq
+  let C := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw (2 * k)
+  have hC : 0 < C := by
+    dsimp [C]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos
+      hfC hφC hwC (2 * k)
+  intro a b ha hb h hh
+  let A : ℝ := 2 * (C * D * (14 * Real.pi + 8) *
+      dfiEquation29XSingleLogMajorant Q Y b /
+        ((k : ℝ) - ε - 3 / 4)) *
+    (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+      Q ^ (-ε * (k : ℝ))) *
+    (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
+      (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)))
+  let M : ℝ := min X Y * Real.log Q
+  let K : ℝ := A * M
+  have hden : 0 < (k : ℝ) - ε - 3 / 4 := by linarith
+  have hX0 : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY0 : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQ0 : 0 < Q := by linarith
+  have hMaj : 0 ≤ dfiEquation29XSingleLogMajorant Q Y b := by
+    unfold dfiEquation29XSingleLogMajorant
+    have hlog : 0 ≤ Real.log (2 * Q) := Real.log_nonneg (by linarith)
+    positivity
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hmin : 0 ≤ min X Y :=
+      le_min (zero_lt_one.trans_le hf.one_le_X).le
+        (zero_lt_one.trans_le hf.one_le_Y).le
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hK : 0 ≤ K := mul_nonneg hA hM
+  let Lmod := ⌈2 * Q⌉₊
+  have hset : dfiEquation22Moduli Q = Finset.Ioo 0 Lmod := by
+    rw [dfiEquation22Moduli_eq_Ico]
+    ext q
+    simp only [Finset.mem_Ico, Finset.mem_Ioo]
+    omega
+  rw [hset]
+  calc
+    _ ≤ ∑ q ∈ Finset.Ioo 0 Lmod, K *
+        ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd a q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by
+      apply Finset.sum_le_sum
+      intro q hqMem
+      have hqPos : 0 < q := (Finset.mem_Ioo.mp hqMem).1
+      have hqMod : q ∈ dfiEquation22Moduli Q := by rw [hset]; exact hqMem
+      have hqQ : (q : ℝ) ≤ 2 * Q :=
+        (mem_dfiEquation22Moduli_iff q).1 hqMod |>.2.le
+      have hp := hPoint hf hfC hbox hφ hφC hscale w hwC hU hP hQ hQsq
+        a b ha hb h q ⟨hqPos.ne'⟩ hqQ
+      simpa only [K, A, M, mul_assoc] using hp
+    _ = K * ∑ q ∈ Finset.Ioo 0 Lmod,
+        ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd a q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by rw [Finset.mul_sum]
+    _ = K * ∑ q ∈ Finset.Ioo 0 Lmod,
+        ((Real.sqrt (Nat.gcd h.natAbs q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd a q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by
+      congr 1
+      apply Finset.sum_congr rfl
+      intro q hqMem
+      have hqPos : 0 < q := (Finset.mem_Ioo.mp hqMem).1
+      letI : NeZero q := ⟨hqPos.ne'⟩
+      rw [gcd_neg_intCast_zmod_val q h]
+    _ ≤ K * (divisorEpsilonConstant δ * max 1 ((Lmod : ℝ) ^ δ) *
+        (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
+            (((harmonic Lmod : ℚ) : ℝ))) *
+          Real.sqrt ((a.divisors.card : ℝ) *
+            (((harmonic Lmod : ℚ) : ℝ))))) := by
+      exact mul_le_mul_of_nonneg_left
+        (sum_Ioo_two_sqrt_gcd_mul_divisors_div_le 0 Lmod h.natAbs a
+          (Int.natAbs_ne_zero.mpr hh) ha.ne' δ hδ) hK
+    _ = _ := by dsimp [K, A, M, Lmod]
+
 /-- The source-sharp second one-sided tail summed over DFI's equation-(22)
 moduli. -/
 theorem exists_sum_dfiEquation29_ySingleTail_l1_optimized_le
@@ -2058,6 +2506,123 @@ theorem exists_sum_dfiEquation29_ySingleTail_l1_optimized_le
         (sum_Ioo_two_sqrt_gcd_mul_divisors_div_le 0 Lmod h.natAbs b
           (Int.natAbs_ne_zero.mpr hh) hb.ne' δ hδ) hK
     _ = _ := by dsimp [K, A, M, Lmod]
+
+/-- Uniform source-sharp second one-sided tail summed over DFI's
+equation-(22) moduli. -/
+theorem exists_uniform_sum_dfiEquation29_ySingleTail_l1_optimized_le
+    (ε : ℝ) (hε : 0 < ε) (k : ℕ) (hk : ε + 3 / 4 < (k : ℝ))
+    (δ : ℝ) (hδ : 0 < δ) :
+    ∃ D : ℝ, 0 ≤ D ∧
+      ∀ {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+        {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ},
+        DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+        DFILocalizedBox f X Y →
+        ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+        U ≤ P⁻¹ * min X Y →
+        ∀ (w : DFIDeltaWeight Q), DFIDeltaWeightProfile w Cw →
+        U = Q ^ 2 → 1 ≤ P → 2 ≤ Q →
+        Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+        ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ), h ≠ 0 →
+        (∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation29YSingleTailWeilTotal Y w
+            (dfiLocalizedWeight f φ h) a b h ε q) ≤
+          (2 * (dfiEquation23PhysicalMixedDerivativeFiniteConstant
+              Cf Cφ Cw (2 * k) * D * (14 * Real.pi + 8) *
+              dfiEquation29YSingleLogMajorant Q X a /
+                ((k : ℝ) - ε - 3 / 4)) *
+            (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+              Q ^ (-ε * (k : ℝ))) *
+            (2 ^ (3 / 4 + ε) * Y ^ (1 / 2 + ε) *
+              (b : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε))) *
+            (min X Y * Real.log Q)) *
+            (divisorEpsilonConstant δ * max 1 ((⌈2 * Q⌉₊ : ℝ) ^ δ) *
+              (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
+                  (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))) *
+                Real.sqrt ((b.divisors.card : ℝ) *
+                  (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))))) := by
+  obtain ⟨D, hD, hPoint⟩ :=
+    exists_uniform_dfiEquation29_ySingleTail_l1_optimized_pointwise_le
+      ε hε k hk
+  refine ⟨D, hD, ?_⟩
+  intro f φ P X Y U Q Cf Cφ Cw hf hfC hbox hφ hφC hscale w hwC hU hP hQ
+    hQsq
+  let C := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw (2 * k)
+  have hC : 0 < C := by
+    dsimp [C]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos
+      hfC hφC hwC (2 * k)
+  intro a b ha hb h hh
+  let A : ℝ := 2 * (C * D * (14 * Real.pi + 8) *
+      dfiEquation29YSingleLogMajorant Q X a /
+        ((k : ℝ) - ε - 3 / 4)) *
+    (((((2 * k + 3 : ℕ) : ℝ) / Real.pi ^ 2) ^ k) *
+      Q ^ (-ε * (k : ℝ))) *
+    (2 ^ (3 / 4 + ε) * Y ^ (1 / 2 + ε) *
+      (b : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)))
+  let M : ℝ := min X Y * Real.log Q
+  let K : ℝ := A * M
+  have hden : 0 < (k : ℝ) - ε - 3 / 4 := by linarith
+  have hX0 : 0 < X := zero_lt_one.trans_le hf.one_le_X
+  have hY0 : 0 < Y := zero_lt_one.trans_le hf.one_le_Y
+  have hQ0 : 0 < Q := by linarith
+  have hMaj : 0 ≤ dfiEquation29YSingleLogMajorant Q X a := by
+    unfold dfiEquation29YSingleLogMajorant
+    have hlog : 0 ≤ Real.log (2 * Q) := Real.log_nonneg (by linarith)
+    positivity
+  have hA : 0 ≤ A := by dsimp [A]; positivity
+  have hM : 0 ≤ M := by
+    dsimp [M]
+    have hmin : 0 ≤ min X Y :=
+      le_min (zero_lt_one.trans_le hf.one_le_X).le
+        (zero_lt_one.trans_le hf.one_le_Y).le
+    have hlog : 0 ≤ Real.log Q := Real.log_nonneg (by linarith)
+    positivity
+  have hK : 0 ≤ K := mul_nonneg hA hM
+  let Lmod := ⌈2 * Q⌉₊
+  have hset : dfiEquation22Moduli Q = Finset.Ioo 0 Lmod := by
+    rw [dfiEquation22Moduli_eq_Ico]
+    ext q
+    simp only [Finset.mem_Ico, Finset.mem_Ioo]
+    omega
+  rw [hset]
+  calc
+    _ ≤ ∑ q ∈ Finset.Ioo 0 Lmod, K *
+        ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd b q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by
+      apply Finset.sum_le_sum
+      intro q hqMem
+      have hqPos : 0 < q := (Finset.mem_Ioo.mp hqMem).1
+      have hqMod : q ∈ dfiEquation22Moduli Q := by rw [hset]; exact hqMem
+      have hqQ : (q : ℝ) ≤ 2 * Q :=
+        (mem_dfiEquation22Moduli_iff q).1 hqMod |>.2.le
+      have hp := hPoint hf hfC hbox hφ hφC hscale w hwC hU hP hQ hQsq
+        a b ha hb h q ⟨hqPos.ne'⟩ hqQ
+      simpa only [K, A, M, mul_assoc] using hp
+    _ = K * ∑ q ∈ Finset.Ioo 0 Lmod,
+        ((Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd b q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by rw [Finset.mul_sum]
+    _ = K * ∑ q ∈ Finset.Ioo 0 Lmod,
+        ((Real.sqrt (Nat.gcd h.natAbs q) / Real.sqrt q) *
+          (Real.sqrt (Nat.gcd b q) / Real.sqrt q) *
+          (q.divisors.card : ℝ)) := by
+      congr 1
+      apply Finset.sum_congr rfl
+      intro q hqMem
+      have hqPos : 0 < q := (Finset.mem_Ioo.mp hqMem).1
+      letI : NeZero q := ⟨hqPos.ne'⟩
+      rw [gcd_neg_intCast_zmod_val q h]
+    _ ≤ K * (divisorEpsilonConstant δ * max 1 ((Lmod : ℝ) ^ δ) *
+        (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
+            (((harmonic Lmod : ℚ) : ℝ))) *
+          Real.sqrt ((b.divisors.card : ℝ) *
+            (((harmonic Lmod : ℚ) : ℝ))))) := by
+      exact mul_le_mul_of_nonneg_left
+        (sum_Ioo_two_sqrt_gcd_mul_divisors_div_le 0 Lmod h.natAbs b
+          (Int.natAbs_ne_zero.mpr hh) hb.ne' δ hδ) hK
+    _ = _ := by dsimp [K, A, M, Lmod]
+
 
 /-- The complete first one-sided tail summed over DFI's equation-(22)
 moduli.  The extra `1/q` in the physical tail scale is discarded only
@@ -3799,7 +4364,7 @@ theorem exists_dfiEquation29_doubleTail_full_recurrence_optimized_pointwise_le
 /-- Pointwise optimized form of the corrected DFI (29) complement.  All
 three regions now carry the physical equation-(30) mass, and the two
 one-sided regions spend only one recurrence gain. -/
-theorem exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
+theorem dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le_of_profiles
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
@@ -3809,22 +4374,24 @@ theorem exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
     (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
     (hU : U = Q ^ 2) (hP : 1 ≤ P) (hQ : 2 ≤ Q)
     (hQsq : Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y))
-    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4) :
-    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
-      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
-      0 < Kxy ∧ 0 < Cdivxy ∧
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (Cdiv : ℝ) (hCdiv : 0 < Cdiv)
+    (hDiv : ∀ n : ℕ, 0 < n →
+      ‖divisorWeight n‖ ≤ Cdiv * (n : ℝ) ^ ε) :
       ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ) (q : ℕ)
         (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
         let α : ℝ := 3 / 4 + ε
         let R : ℝ := 44
+        let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant
+          Cf Cφ Cw 8
         let B₁ : ℝ :=
-          (Ky * Cdivy * Cdivy * (14 * Real.pi + 8) *
+          (K * Cdiv * Cdiv * (14 * Real.pi + 8) *
               (14 * Real.pi + 8) * 9 * α⁻¹ /
                 ((4 : ℝ) - ε - 3 / 4)) +
-          (Kx * Cdivx * Cdivx * (14 * Real.pi + 8) *
+          (K * Cdiv * Cdiv * (14 * Real.pi + 8) *
               (14 * Real.pi + 8) * 9 * α⁻¹ /
                 ((4 : ℝ) - ε - 3 / 4))
-        let B₂ : ℝ := Cdivxy * Cdivxy * (14 * Real.pi + 8) *
+        let B₂ : ℝ := Cdiv * Cdiv * (14 * Real.pi + 8) *
           (14 * Real.pi + 8) * 9 /
             (((4 : ℝ) - ε - 3 / 4) * ((4 : ℝ) - ε - 3 / 4))
         let G : ℝ :=
@@ -3842,14 +4409,29 @@ theorem exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
             4 * B₂ *
               ((R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
                 (R ^ 4 * Q ^ (-ε * (4 : ℝ)))) *
-              Source (Kxy * min X Y * Real.log Q) := by
+              Source (K * min X Y * Real.log Q) := by
   have hk : 2 * ε + 3 / 2 < (4 : ℝ) := by linarith
-  obtain ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
-      hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, hRaw⟩ :=
-    exists_dfiEquation29_doubleTail_source_mixed_recurrence_bound
+  let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw 8
+  have hK : 0 < K := by
+    dsimp [K]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos
+      hfC hφC hwC 8
+  let Ky := K
+  let Kx := K
+  let Kxy := K
+  let Cdivy := Cdiv
+  let Cdivx := Cdiv
+  let Cdivxy := Cdiv
+  have hKy : 0 < Ky := by simpa only [Ky] using hK
+  have hKx : 0 < Kx := by simpa only [Kx] using hK
+  have hKxy : 0 < Kxy := by simpa only [Kxy] using hK
+  have hCdivy : 0 < Cdivy := by simpa only [Cdivy] using hCdiv
+  have hCdivx : 0 < Cdivx := by simpa only [Cdivx] using hCdiv
+  have hCdivxy : 0 < Cdivxy := by simpa only [Cdivxy] using hCdiv
+  have hRaw :=
+    dfiEquation29_doubleTail_source_mixed_recurrence_bound_of_profiles
       hf hfC hbox hφ hφC hscale w hwC hQ hU ε hε₀ hε 4 hk
-  refine ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
-    hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, ?_⟩
+        Cdiv hCdiv hDiv
   intro a b ha hb h q hq hqQ
   dsimp only
   letI : NeZero q := hq
@@ -4013,6 +4595,63 @@ theorem exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
     _ = _ := by
       dsimp [By, Bx, Bxy, Core₁, Core₂, Source, R, M₁, M₂, G, α]
       ring
+
+/-- Existential compatibility form of the uniform optimized double tail. -/
+theorem exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hU : U = Q ^ 2) (hP : 1 ≤ P) (hQ : 2 ≤ Q)
+    (hQsq : Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y))
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4) :
+    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
+      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
+      0 < Kxy ∧ 0 < Cdivxy ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → ∀ (h : ℤ) (q : ℕ)
+        (_hq : NeZero q), (q : ℝ) ≤ 2 * Q →
+        let α : ℝ := 3 / 4 + ε
+        let R : ℝ := 44
+        let B₁ : ℝ :=
+          (Ky * Cdivy * Cdivy * (14 * Real.pi + 8) *
+              (14 * Real.pi + 8) * 9 * α⁻¹ /
+                ((4 : ℝ) - ε - 3 / 4)) +
+          (Kx * Cdivx * Cdivx * (14 * Real.pi + 8) *
+              (14 * Real.pi + 8) * 9 * α⁻¹ /
+                ((4 : ℝ) - ε - 3 / 4))
+        let B₂ : ℝ := Cdivxy * Cdivxy * (14 * Real.pi + 8) *
+          (14 * Real.pi + 8) * 9 /
+            (((4 : ℝ) - ε - 3 / 4) * ((4 : ℝ) - ε - 3 / 4))
+        let G : ℝ :=
+          (Real.sqrt (Nat.gcd ((-h : ZMod q).val) q) / Real.sqrt q) *
+            Real.sqrt (Nat.gcd a q * Nat.gcd b q) *
+            (q.divisors.card : ℝ)
+        let Source (M : ℝ) : ℝ :=
+          (2 ^ α * 2 ^ α) * X ^ (α - 1 / 4) * Y ^ (α - 1 / 4) *
+            (a : ℝ) ^ (α - 3 / 4) * (b : ℝ) ^ (α - 3 / 4) *
+            (Q ^ ((-2 + ε) * α) * Q ^ ((-2 + ε) * α)) * M * G
+        dfiEquation29DoubleTailWeilTotal X Y w
+            (dfiLocalizedWeight f φ h) a b h ε q ≤
+          4 * B₁ * (R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
+              Source (min X Y * Real.log Q) +
+            4 * B₂ *
+              ((R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
+                (R ^ 4 * Q ^ (-ε * (4 : ℝ)))) *
+              Source (Kxy * min X Y * Real.log Q) := by
+  obtain ⟨Cdiv, hCdiv, hDiv⟩ := exists_norm_divisorWeight_le_rpow ε hε₀
+  let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw 8
+  have hK : 0 < K := by
+    dsimp [K]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos hfC hφC hwC 8
+  refine ⟨K, Cdiv, K, Cdiv, K, Cdiv,
+    hK, hCdiv, hK, hCdiv, hK, hCdiv, ?_⟩
+  simpa only [K] using
+    (dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le_of_profiles
+      hf hfC hbox hφ hφC hscale w hwC hU hP hQ hQsq ε hε₀ hε
+        Cdiv hCdiv hDiv)
 
 /-- The retained `x`-dual source contribution at one delta modulus, now
 with the optimized transition substituted before the arithmetic estimate. -/
@@ -5829,7 +6468,7 @@ theorem exists_sum_dfiEquation29_doubleTail_full_recurrence_optimized_le
 /-- Corrected mixed-recurrence complement summed over all DFI moduli.  The
 three-gcd average is applied uniformly because the physical mixed-`L¹` mass
 has removed the spurious one-sided `1/q` normalization. -/
-theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
+theorem sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le_of_profiles
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
@@ -5840,22 +6479,24 @@ theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
     (hU : U = Q ^ 2) (hP : 1 ≤ P) (hQ : 2 ≤ Q)
     (hQsq : Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y))
     (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
-    (δ : ℝ) (hδ : 0 < δ) :
-    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
-      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
-      0 < Kxy ∧ 0 < Cdivxy ∧
+    (δ : ℝ) (hδ : 0 < δ)
+    (Cdiv : ℝ) (hCdiv : 0 < Cdiv)
+    (hDiv : ∀ n : ℕ, 0 < n →
+      ‖divisorWeight n‖ ≤ Cdiv * (n : ℝ) ^ ε) :
       ∀ (a b : ℕ), 0 < a → 0 < b → a.Coprime b →
       ∀ (h : ℤ), h ≠ 0 →
       let α : ℝ := 3 / 4 + ε
       let R : ℝ := 44
+      let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant
+        Cf Cφ Cw 8
       let B₁ : ℝ :=
-        (Ky * Cdivy * Cdivy * (14 * Real.pi + 8) *
+        (K * Cdiv * Cdiv * (14 * Real.pi + 8) *
             (14 * Real.pi + 8) * 9 * α⁻¹ /
               ((4 : ℝ) - ε - 3 / 4)) +
-        (Kx * Cdivx * Cdivx * (14 * Real.pi + 8) *
+        (K * Cdiv * Cdiv * (14 * Real.pi + 8) *
             (14 * Real.pi + 8) * 9 * α⁻¹ /
               ((4 : ℝ) - ε - 3 / 4))
-      let B₂ : ℝ := Cdivxy * Cdivxy * (14 * Real.pi + 8) *
+      let B₂ : ℝ := Cdiv * Cdiv * (14 * Real.pi + 8) *
         (14 * Real.pi + 8) * 9 /
           (((4 : ℝ) - ε - 3 / 4) * ((4 : ℝ) - ε - 3 / 4))
       let Base : ℝ :=
@@ -5868,7 +6509,7 @@ theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
           4 * B₂ *
             ((R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
               (R ^ 4 * Q ^ (-ε * (4 : ℝ)))) *
-            (Base * (Kxy * min X Y * Real.log Q))
+            (Base * (K * min X Y * Real.log Q))
       (∑ q ∈ dfiEquation22Moduli Q,
         dfiEquation29DoubleTailWeilTotal X Y w
           (dfiLocalizedWeight f φ h) a b h ε q) ≤
@@ -5877,12 +6518,26 @@ theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
             (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
                 (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))) *
               Real.sqrt (((a * b).divisors.card : ℝ) * ⌈2 * Q⌉₊))) := by
-  obtain ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
-      hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, hPoint⟩ :=
-    exists_dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le
+  let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw 8
+  have hK : 0 < K := by
+    dsimp [K]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos hfC hφC hwC 8
+  let Ky := K
+  let Kx := K
+  let Kxy := K
+  let Cdivy := Cdiv
+  let Cdivx := Cdiv
+  let Cdivxy := Cdiv
+  have hKy : 0 < Ky := by simpa only [Ky] using hK
+  have hKx : 0 < Kx := by simpa only [Kx] using hK
+  have hKxy : 0 < Kxy := by simpa only [Kxy] using hK
+  have hCdivy : 0 < Cdivy := by simpa only [Cdivy] using hCdiv
+  have hCdivx : 0 < Cdivx := by simpa only [Cdivx] using hCdiv
+  have hCdivxy : 0 < Cdivxy := by simpa only [Cdivxy] using hCdiv
+  have hPoint :=
+    dfiEquation29_doubleTail_mixed_recurrence_optimized_pointwise_le_of_profiles
       hf hfC hbox hφ hφC hscale w hwC hU hP hQ hQsq ε hε₀ hε
-  refine ⟨Ky, Cdivy, Kx, Cdivx, Kxy, Cdivxy,
-    hKy, hCdivy, hKx, hCdivx, hKxy, hCdivxy, ?_⟩
+        Cdiv hCdiv hDiv
   intro a b ha hb hab h hh
   dsimp only
   let α : ℝ := 3 / 4 + ε
@@ -5986,6 +6641,67 @@ theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
         (sum_Ioo_three_sqrt_gcd_mul_divisors_div_sqrt_le
           0 L h.natAbs a b (Int.natAbs_ne_zero.mpr hh) ha hb hab δ hδ) hKsum
     _ = _ := by rfl
+
+/-- Existential compatibility form of the profile-explicit optimized sum. -/
+theorem exists_sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q : ℝ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (w : DFIDeltaWeight Q) (hwC : DFIDeltaWeightProfile w Cw)
+    (hU : U = Q ^ 2) (hP : 1 ≤ P) (hQ : 2 ≤ Q)
+    (hQsq : Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y))
+    (ε : ℝ) (hε₀ : 0 < ε) (hε : ε < 1 / 4)
+    (δ : ℝ) (hδ : 0 < δ) :
+    ∃ Ky Cdivy Kx Cdivx Kxy Cdivxy : ℝ,
+      0 < Ky ∧ 0 < Cdivy ∧ 0 < Kx ∧ 0 < Cdivx ∧
+      0 < Kxy ∧ 0 < Cdivxy ∧
+      ∀ (a b : ℕ), 0 < a → 0 < b → a.Coprime b →
+      ∀ (h : ℤ), h ≠ 0 →
+      let α : ℝ := 3 / 4 + ε
+      let R : ℝ := 44
+      let B₁ : ℝ :=
+        (Ky * Cdivy * Cdivy * (14 * Real.pi + 8) *
+            (14 * Real.pi + 8) * 9 * α⁻¹ /
+              ((4 : ℝ) - ε - 3 / 4)) +
+        (Kx * Cdivx * Cdivx * (14 * Real.pi + 8) *
+            (14 * Real.pi + 8) * 9 * α⁻¹ /
+              ((4 : ℝ) - ε - 3 / 4))
+      let B₂ : ℝ := Cdivxy * Cdivxy * (14 * Real.pi + 8) *
+        (14 * Real.pi + 8) * 9 /
+          (((4 : ℝ) - ε - 3 / 4) * ((4 : ℝ) - ε - 3 / 4))
+      let Base : ℝ :=
+        (2 ^ α * 2 ^ α) * X ^ (α - 1 / 4) * Y ^ (α - 1 / 4) *
+          (a : ℝ) ^ (α - 3 / 4) * (b : ℝ) ^ (α - 3 / 4) *
+          (Q ^ ((-2 + ε) * α) * Q ^ ((-2 + ε) * α))
+      let Ksum : ℝ :=
+        4 * B₁ * (R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
+            (Base * (min X Y * Real.log Q)) +
+          4 * B₂ *
+            ((R ^ 4 * Q ^ (-ε * (4 : ℝ))) *
+              (R ^ 4 * Q ^ (-ε * (4 : ℝ)))) *
+            (Base * (Kxy * min X Y * Real.log Q))
+      (∑ q ∈ dfiEquation22Moduli Q,
+        dfiEquation29DoubleTailWeilTotal X Y w
+          (dfiLocalizedWeight f φ h) a b h ε q) ≤
+        Ksum *
+          (divisorEpsilonConstant δ * max 1 ((⌈2 * Q⌉₊ : ℝ) ^ δ) *
+            (Real.sqrt ((h.natAbs.divisors.card : ℝ) *
+                (((harmonic ⌈2 * Q⌉₊ : ℚ) : ℝ))) *
+              Real.sqrt (((a * b).divisors.card : ℝ) * ⌈2 * Q⌉₊))) := by
+  obtain ⟨Cdiv, hCdiv, hDiv⟩ := exists_norm_divisorWeight_le_rpow ε hε₀
+  let K := dfiEquation23PhysicalMixedDerivativeFiniteConstant Cf Cφ Cw 8
+  have hK : 0 < K := by
+    dsimp [K]
+    exact dfiEquation23PhysicalMixedDerivativeFiniteConstant_pos hfC hφC hwC 8
+  refine ⟨K, Cdiv, K, Cdiv, K, Cdiv,
+    hK, hCdiv, hK, hCdiv, hK, hCdiv, ?_⟩
+  simpa only [K] using
+    (sum_dfiEquation29_doubleTail_mixed_recurrence_optimized_le_of_profiles
+      hf hfC hbox hφ hφC hscale w hwC hU hP hQ hQsq ε hε₀ hε
+        δ hδ Cdiv hCdiv hDiv)
 
 /-- After the optimized DFI choice of `Q`, the second pre-optimized
 error term with `ε = 0` is exactly the published error scale. -/

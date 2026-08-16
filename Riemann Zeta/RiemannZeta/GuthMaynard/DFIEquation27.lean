@@ -229,6 +229,131 @@ theorem dfiEquation18_complex
     _ ≤ C₀ * E + C₀ * E := add_le_add hre him
     _ = (2 * C₀) * E := by ring
 
+/-- The profile-controlled real equation-(18) constant. -/
+noncomputable def dfiEquation18ProfileConstant
+    (D E : ℕ → ℝ) (j : ℕ) (Cpsi CpsiSucc : ℝ) : ℝ :=
+  (4 * CpsiSucc * D (j + 1)) * (2 + 2 * Real.pi) +
+    4 * Cpsi * E j + Cpsi * (4 * D 0 * 2 ^ j)
+
+theorem dfiEquation18ProfileConstant_pos
+    {D E : ℕ → ℝ} (hD : ∀ k, 0 < D k) (hE : ∀ k, 0 < E k)
+    (j : ℕ) {Cpsi CpsiSucc : ℝ}
+    (hCpsi : 0 < Cpsi) (hCpsiSucc : 0 < CpsiSucc) :
+    0 < dfiEquation18ProfileConstant D E j Cpsi CpsiSucc := by
+  unfold dfiEquation18ProfileConstant
+  have hpi : 0 < 2 + 2 * Real.pi := by positivity
+  have hDj : 0 < D (j + 1) := hD _
+  have hEj : 0 < E j := hE _
+  have hD0 : 0 < D 0 := hD _
+  positivity
+
+/-- Complex DFI equation (18) with the cutoff constants fixed by profiles
+before the physical scale. -/
+theorem dfiEquation18_complex_of_profiles
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    (U j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc) :
+    ∀ (q : ℕ), 0 < q → ∀ g : ℝ → ℂ,
+      ContDiff ℝ ∞ g → HasCompactSupport g →
+      tsupport g ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) →
+      ‖dfiEquation12LeftComplex w q g - g 0‖ ≤
+        (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+          ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, ‖g u‖) +
+            (q : ℝ) ^ j * Q ^ (j - 1) *
+              ∫ u : ℝ, ‖iteratedDeriv j g u‖) := by
+  intro q hq g hg hgc hsupp
+  let gr : ℝ → ℝ := fun u => (g u).re
+  let gi : ℝ → ℝ := fun u => (g u).im
+  have hgr : ContDiff ℝ ∞ gr := contDiff_complex_re hg
+  have hgi : ContDiff ℝ ∞ gi := contDiff_complex_im hg
+  have hgrc : HasCompactSupport gr := hasCompactSupport_complex_re hgc
+  have hgic : HasCompactSupport gi := hasCompactSupport_complex_im hgc
+  have hgrsupp : tsupport gr ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) := by
+    apply (closure_mono ?_).trans hsupp
+    intro u hu hzero
+    exact hu (by simp [gr, hzero])
+  have hgisupp : tsupport gi ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) := by
+    apply (closure_mono ?_).trans hsupp
+    intro u hu hzero
+    exact hu (by simp [gi, hzero])
+  have hr := dfiEquation18_of_profiles hD hEprofile U j hj
+    hCpsi hpsi hCpsiSucc hpsiSucc q hq gr hgr hgrc hgrsupp
+  have hi := dfiEquation18_of_profiles hD hEprofile U j hj
+    hCpsi hpsi hCpsiSucc hpsiSucc q hq gi hgi hgic hgisupp
+  let E : ℝ :=
+    (q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, ‖g u‖) +
+      (q : ℝ) ^ j * Q ^ (j - 1) *
+        ∫ u : ℝ, ‖iteratedDeriv j g u‖
+  have hderivSmooth : ContDiff ℝ ∞ (iteratedDeriv j g) :=
+    ContDiff.contDiff_iteratedDeriv_top hg j
+  have hderivCompact : HasCompactSupport (iteratedDeriv j g) := by
+    have haux : ∀ k : ℕ, HasCompactSupport (iteratedDeriv k g) := by
+      intro k
+      induction k with
+      | zero => simpa using hgc
+      | succ k ih => rw [iteratedDeriv_succ]; exact ih.deriv
+    exact haux j
+  have hmassRe : (∫ u : ℝ, |gr u|) ≤ ∫ u : ℝ, ‖g u‖ :=
+    integral_abs_re_le_integral_norm g hg hgc
+  have hmassIm : (∫ u : ℝ, |gi u|) ≤ ∫ u : ℝ, ‖g u‖ :=
+    integral_abs_im_le_integral_norm g hg hgc
+  have hderivRe : (∫ u : ℝ, |iteratedDeriv j gr u|) ≤
+      ∫ u : ℝ, ‖iteratedDeriv j g u‖ := by
+    rw [iteratedDeriv_complex_re g hg j]
+    exact integral_abs_re_le_integral_norm
+      (iteratedDeriv j g) hderivSmooth hderivCompact
+  have hderivIm : (∫ u : ℝ, |iteratedDeriv j gi u|) ≤
+      ∫ u : ℝ, ‖iteratedDeriv j g u‖ := by
+    rw [iteratedDeriv_complex_im g hg j]
+    exact integral_abs_im_le_integral_norm
+      (iteratedDeriv j g) hderivSmooth hderivCompact
+  have hqpow : 0 ≤ (q : ℝ) ^ j := by positivity
+  have hQinv : 0 ≤ (Q ^ (j + 1))⁻¹ :=
+    inv_nonneg.mpr (pow_nonneg w.Q_pos.le _)
+  have hQpow : 0 ≤ Q ^ (j - 1) := pow_nonneg w.Q_pos.le _
+  have hEr :
+      (q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, |gr u|) +
+        (q : ℝ) ^ j * Q ^ (j - 1) *
+          (∫ u : ℝ, |iteratedDeriv j gr u|) ≤ E := by
+    dsimp [E]
+    exact add_le_add
+      (mul_le_mul_of_nonneg_left hmassRe (mul_nonneg hqpow hQinv))
+      (mul_le_mul_of_nonneg_left hderivRe (mul_nonneg hqpow hQpow))
+  have hEi :
+      (q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, |gi u|) +
+        (q : ℝ) ^ j * Q ^ (j - 1) *
+          (∫ u : ℝ, |iteratedDeriv j gi u|) ≤ E := by
+    dsimp [E]
+    exact add_le_add
+      (mul_le_mul_of_nonneg_left hmassIm (mul_nonneg hqpow hQinv))
+      (mul_le_mul_of_nonneg_left hderivIm (mul_nonneg hqpow hQpow))
+  let C₀ := dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc
+  have hC₀ : 0 < C₀ := dfiEquation18ProfileConstant_pos
+    hD.positive hEprofile.positive j hCpsi hCpsiSucc
+  let z : ℂ := dfiEquation12LeftComplex w q g - g 0
+  have hzre : z.re = dfiEquation12Left w q gr - gr 0 := by
+    dsimp [z, gr]
+    rw [dfiEquation12LeftComplex_re w q hq g hg hgc]
+  have hzim : z.im = dfiEquation12Left w q gi - gi 0 := by
+    dsimp [z, gi]
+    rw [dfiEquation12LeftComplex_im w q hq g hg hgc]
+  have hre : |z.re| ≤ C₀ * E := by
+    rw [hzre]
+    exact hr.trans (mul_le_mul_of_nonneg_left hEr hC₀.le)
+  have him : |z.im| ≤ C₀ * E := by
+    rw [hzim]
+    exact hi.trans (mul_le_mul_of_nonneg_left hEi hC₀.le)
+  change ‖z‖ ≤ (2 * C₀) * E
+  calc
+    ‖z‖ ≤ |z.re| + |z.im| := Complex.norm_le_abs_re_add_abs_im z
+    _ ≤ C₀ * E + C₀ * E := add_le_add hre him
+    _ = (2 * C₀) * E := by ring
+
 /-- The scale expression on the right of complex DFI equation (18). -/
 noncomputable def dfiEquation18ComplexMajorant
     {Q : ℝ} (q j : ℕ) (g : ℝ → ℂ) : ℝ :=
@@ -266,6 +391,56 @@ theorem dfiEquation18_complex_family_integral
     intro x
     simpa [dfiEquation18ComplexMajorant] using
       hbound q hq (g x) (hsmooth x) (hcompact x) (hsupp x)
+  rw [← MeasureTheory.integral_sub hleft hcenter]
+  calc
+    ‖∫ x : ℝ, dfiEquation12LeftComplex w q (g x) - g x 0‖ ≤
+        ∫ x : ℝ, ‖dfiEquation12LeftComplex w q (g x) - g x 0‖ :=
+      MeasureTheory.norm_integral_le_integral_norm _
+    _ ≤ ∫ x : ℝ,
+        C * dfiEquation18ComplexMajorant (Q := Q) q j (g x) := by
+      exact MeasureTheory.integral_mono hdiff.norm (hmajor.const_mul C) hpoint
+    _ = C * ∫ x : ℝ,
+        dfiEquation18ComplexMajorant (Q := Q) q j (g x) := by
+      rw [MeasureTheory.integral_const_mul]
+
+/-- Family-integrated complex equation (18) with one profile-controlled
+constant fixed before the physical scale. -/
+theorem dfiEquation18_complex_family_integral_of_profiles
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    (U j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc)
+    (q : ℕ) (hq : 0 < q) (g : ℝ → ℝ → ℂ)
+    (hsmooth : ∀ x, ContDiff ℝ ∞ (g x))
+    (hcompact : ∀ x, HasCompactSupport (g x))
+    (hsupp : ∀ x, tsupport (g x) ⊆ Set.Icc (-(U : ℝ)) (U : ℝ))
+    (hleft : Integrable (fun x => dfiEquation12LeftComplex w q (g x)))
+    (hcenter : Integrable (fun x => g x 0))
+    (hmajor : Integrable (fun x => dfiEquation18ComplexMajorant
+      (Q := Q) q j (g x))) :
+    ‖(∫ x : ℝ, dfiEquation12LeftComplex w q (g x)) -
+        ∫ x : ℝ, g x 0‖ ≤
+      (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+        ∫ x : ℝ, dfiEquation18ComplexMajorant
+          (Q := Q) q j (g x) := by
+  let C := 2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc
+  have hC : 0 < C := mul_pos two_pos
+    (dfiEquation18ProfileConstant_pos hD.positive hEprofile.positive
+      j hCpsi hCpsiSucc)
+  have hdiff : Integrable (fun x =>
+      dfiEquation12LeftComplex w q (g x) - g x 0) := hleft.sub hcenter
+  have hpoint : ∀ x : ℝ,
+      ‖dfiEquation12LeftComplex w q (g x) - g x 0‖ ≤
+        C * dfiEquation18ComplexMajorant (Q := Q) q j (g x) := by
+    intro x
+    simpa only [C, dfiEquation18ComplexMajorant] using
+      dfiEquation18_complex_of_profiles hD hEprofile U j hj
+        hCpsi hpsi hCpsiSucc hpsiSucc q hq (g x)
+          (hsmooth x) (hcompact x) (hsupp x)
   rw [← MeasureTheory.integral_sub hleft hcenter]
   calc
     ‖∫ x : ℝ, dfiEquation12LeftComplex w q (g x) - g x 0‖ ≤
@@ -693,18 +868,43 @@ theorem norm_dfiEquation27C_source_le_of_profiles
         gcongr
       _ = _ := by rfl
 
+/-- The explicit source-profile constant controlling all derivatives needed
+in the logarithmically weighted equation-(27) source slice.  Its definition
+depends only on the two fixed derivative profiles and the derivative order,
+not on any physical or arithmetic scale. -/
+noncomputable def dfiEquation27SourceDerivativeConstant
+    (Cf : ℕ → ℕ → ℝ) (Cφ : ℕ → ℝ) (j : ℕ) : ℝ :=
+  ∑ k ∈ Finset.range (j + 1),
+    dfiEquation2FiniteConstant Cf k * dfiCutoffFiniteConstant Cφ k * 2 ^ k
+
+theorem dfiEquation27SourceDerivativeConstant_pos
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    {hφ : DFIRedundantCutoff φ U}
+    (hφC : DFIRedundantCutoffProfile hφ Cφ) (j : ℕ) :
+    0 < dfiEquation27SourceDerivativeConstant Cf Cφ j := by
+  unfold dfiEquation27SourceDerivativeConstant
+  apply Finset.sum_pos
+  · intro k hk
+    have hfpos := hfC.finiteConstant_pos k
+    have hφpos : 0 < dfiCutoffFiniteConstant Cφ k := by
+      dsimp [dfiCutoffFiniteConstant]
+      exact Finset.sum_pos (fun i _hi ↦ hφC.positive i) ⟨0, by simp⟩
+    positivity
+  · exact ⟨0, by simp⟩
+
 /-- Equation (21) and the explicit logarithmic derivatives give the full
 `y`-derivative bound required in DFI equation (27).  The constant is chosen
 before the shift and all arithmetic moduli; their logarithms remain in the
 displayed factors. -/
-theorem exists_norm_iteratedDeriv_dfiEquation27C_source_le
+theorem norm_iteratedDeriv_dfiEquation27C_source_le
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (h : ℝ) (a b qx qy : ℕ) (x y : ℝ),
       x ∈ Set.Icc X (2 * X) → y ∈ Set.Icc Y (2 * Y) →
       ‖iteratedDeriv j
@@ -714,7 +914,8 @@ theorem exists_norm_iteratedDeriv_dfiEquation27C_source_le
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-          C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
+          dfiEquation27SourceDerivativeConstant Cf Cφ j *
+            dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
   let C : ℕ → ℝ := fun k =>
     dfiEquation2FiniteConstant Cf k * dfiCutoffFiniteConstant Cφ k * 2 ^ k
   have hC : ∀ k, 0 < C k := by
@@ -739,8 +940,9 @@ theorem exists_norm_iteratedDeriv_dfiEquation27C_source_le
     · intro k hk
       exact hC k
     · exact ⟨0, by simp⟩
-  refine ⟨Csum, hCsum, ?_⟩
   intro h a b qx qy x y hx hy
+  have hCsum_eq : Csum = dfiEquation27SourceDerivativeConstant Cf Cφ j := by
+    simp only [Csum, C, dfiEquation27SourceDerivativeConstant]
   have hP : 0 < P := zero_lt_one.trans_le hf.one_le_P
   have hmin : 0 ≤ min X Y := by
     exact le_min (zero_le_one.trans hf.one_le_X)
@@ -890,7 +1092,33 @@ theorem exists_norm_iteratedDeriv_dfiEquation27C_source_le
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-          Csum * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := rfl
+          dfiEquation27SourceDerivativeConstant Cf Cφ j *
+            dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
+      rw [← hCsum_eq]
+
+/-- Compatibility form of the explicit source derivative estimate. -/
+theorem exists_norm_iteratedDeriv_dfiEquation27C_source_le
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy : ℕ) (x y : ℝ),
+      x ∈ Set.Icc X (2 * X) → y ∈ Set.Icc Y (2 * Y) →
+      ‖iteratedDeriv j
+          (fun y' => dfiEquation27C a b qx qy
+            (dfiLocalizedWeight f φ h) x y') y‖ ≤
+        (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+          C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
+  refine ⟨dfiEquation27SourceDerivativeConstant Cf Cφ j,
+    dfiEquation27SourceDerivativeConstant_pos hfC hφC j, ?_⟩
+  exact norm_iteratedDeriv_dfiEquation27C_source_le
+    hf hfC hbox hφ hφC hscale j
 
 /-- The affine family of one-variable slices occurring when equation (27)
 is integrated first in the displacement variable. -/
@@ -1195,14 +1423,13 @@ theorem contDiff_uncurry_dfiEquation27C_source
 equation (27).  Vanishing outside the dyadic source box is proved from
 topological support, so the logarithmic estimate is never applied at its
 singularity. -/
-theorem exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+theorem norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (h : ℝ) (a b qx qy : ℕ) (x u : ℝ),
       ‖iteratedDeriv j
           (dfiEquation27SourceSliceFamily a b qx qy
@@ -1211,11 +1438,11 @@ theorem exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-          C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
-  obtain ⟨C, hC, hbound⟩ :=
-    exists_norm_iteratedDeriv_dfiEquation27C_source_le
-      hf hfC hbox hφ hφC hscale j
-  refine ⟨C, hC, ?_⟩
+          dfiEquation27SourceDerivativeConstant Cf Cφ j *
+            dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
+  have hC := dfiEquation27SourceDerivativeConstant_pos hfC hφC j
+  have hbound := norm_iteratedDeriv_dfiEquation27C_source_le
+    hf hfC hbox hφ hφC hscale j
   intro h a b qx qy x u
   let G : ℝ × ℝ → ℂ := Function.uncurry
     (dfiEquation27C a b qx qy (dfiLocalizedWeight f φ h))
@@ -1274,6 +1501,29 @@ theorem exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
         Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
       closure_minimal hsupport (isClosed_Icc.prod isClosed_Icc)
     exact hbound h a b qx qy x y (htsupport hpG).1 (htsupport hpG).2
+
+/-- Compatibility form of the explicit affine-slice derivative estimate. -/
+theorem exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy : ℕ) (x u : ℝ),
+      ‖iteratedDeriv j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) u‖ ≤
+        (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+          C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j := by
+  refine ⟨dfiEquation27SourceDerivativeConstant Cf Cφ j,
+    dfiEquation27SourceDerivativeConstant_pos hfC hφC j, ?_⟩
+  exact norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+    hf hfC hbox hφ hφC hscale j
 
 /-- Joint smoothness of the affine slices used to turn the physical
 two-variable integral in equation (27) into an outer integral of equation
@@ -1602,14 +1852,13 @@ theorem integral_le_interval_length_mul
 
 /-- The inner derivative mass in DFI equation (27), with exact support
 length `2U` and the source-uniform `U⁻ʲ` derivative scale. -/
-theorem exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
+theorem integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (h : ℝ) (a b qx qy : ℕ) (x : ℝ),
       (∫ u : ℝ, ‖iteratedDeriv j
           (dfiEquation27SourceSliceFamily a b qx qy
@@ -1619,11 +1868,10 @@ theorem exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
               2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
             (1 + Real.log (2 * Y) + |Real.log b| +
               2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-            C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
-  obtain ⟨C, hC, hpoint⟩ :=
-    exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
-      hf hfC hbox hφ hφC hscale j
-  refine ⟨C, hC, ?_⟩
+            dfiEquation27SourceDerivativeConstant Cf Cφ j *
+              dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
+  have hpoint := norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+    hf hfC hbox hφ hφC hscale j
   intro h a b qx qy x
   let g : ℝ → ℂ := dfiEquation27SourceSliceFamily a b qx qy
     (dfiLocalizedWeight f φ h) h x
@@ -1643,6 +1891,30 @@ theorem exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
     (iteratedDeriv j g) (by linarith [hφ.U_pos]) hint hsupp
     (fun u => hpoint h a b qx qy x u)
   simpa only [g] using hraw.trans_eq (by ring)
+
+/-- Compatibility form of the explicit inner derivative-mass bound. -/
+theorem exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy : ℕ) (x : ℝ),
+      (∫ u : ℝ, ‖iteratedDeriv j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) u‖) ≤
+        2 * U *
+          ((1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+            C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
+  refine ⟨dfiEquation27SourceDerivativeConstant Cf Cφ j,
+    dfiEquation27SourceDerivativeConstant_pos hfC hφC j, ?_⟩
+  exact integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
+    hf hfC hbox hφ hφC hscale j
 
 /-- Outer integrability of the inner derivative mass for the literal
 equation-(27) source family. -/
@@ -1823,14 +2095,13 @@ literal `x`-projection of length `X`, the affine relation
 `y = x - h + u`, with `y ∈ [Y,2Y]` and `|u| ≤ U`, supplies a second
 projection of length `Y + 2U`.  Since `U ≤ min X Y`, the outer mass is
 bounded by `6 * min X Y * U`, uniformly without ordering `X` and `Y`. -/
-theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+theorem integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (h : ℝ) (a b qx qy : ℕ),
       (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv j
           (dfiEquation27SourceSliceFamily a b qx qy
@@ -1840,11 +2111,13 @@ theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
               2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
             (1 + Real.log (2 * Y) + |Real.log b| +
               2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-            C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
-  obtain ⟨C, hC, hinner⟩ :=
-    exists_integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
-      hf hfC hbox hφ hφC hscale j
-  refine ⟨C, hC, ?_⟩
+            dfiEquation27SourceDerivativeConstant Cf Cφ j *
+              dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
+  let C : ℝ := dfiEquation27SourceDerivativeConstant Cf Cφ j
+  have hC : 0 < C := by
+    simpa only [C] using dfiEquation27SourceDerivativeConstant_pos hfC hφC j
+  have hinner := integral_norm_iteratedDeriv_dfiEquation27_sourceSlice_le
+    hf hfC hbox hφ hφC hscale j
   intro h a b qx qy
   let g : ℝ → ℝ → ℂ := dfiEquation27SourceSliceFamily a b qx qy
     (dfiLocalizedWeight f φ h) h
@@ -1964,11 +2237,58 @@ theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
     change (∫ x : ℝ, H x) ≤ 6 * Y * U * B
     exact hYbound
 
+/-- Compatibility form of the explicit symmetric derivative-mass bound. -/
+theorem exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy : ℕ),
+      (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) u‖) ≤
+        6 * min X Y * U *
+          ((1 + Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+            (1 + Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+            C * dfiEquation27LogLeibnizConstant j * U⁻¹ ^ j) := by
+  refine ⟨dfiEquation27SourceDerivativeConstant Cf Cφ j,
+    dfiEquation27SourceDerivativeConstant_pos hfC hφC j, ?_⟩
+  exact integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+    hf hfC hbox hφ hφC hscale j
+
+/-- The scale-independent profile constant for the source-integrated
+equation-(18) majorant. -/
+noncomputable def dfiEquation27SourceMajorantConstant
+    (Cf : ℕ → ℕ → ℝ) (Cφ : ℕ → ℝ) (j : ℕ) : ℝ :=
+  dfiEquation27SourceDerivativeConstant Cf Cφ 0 *
+      dfiEquation27LogLeibnizConstant 0 +
+    dfiEquation27SourceDerivativeConstant Cf Cφ j *
+      dfiEquation27LogLeibnizConstant j
+
+theorem dfiEquation27SourceMajorantConstant_pos
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    {hφ : DFIRedundantCutoff φ U}
+    (hφC : DFIRedundantCutoffProfile hφ Cφ) (j : ℕ) :
+    0 < dfiEquation27SourceMajorantConstant Cf Cφ j := by
+  unfold dfiEquation27SourceMajorantConstant
+  exact add_pos
+    (mul_pos (dfiEquation27SourceDerivativeConstant_pos hfC hφC 0)
+      (dfiEquation27LogLeibnizConstant_pos 0))
+    (mul_pos (dfiEquation27SourceDerivativeConstant_pos hfC hφC j)
+      (dfiEquation27LogLeibnizConstant_pos j))
+
 /-- The abstract equation-(18) majorant integrated in the outer variable,
 now expressed entirely through the source scales and reduced-modulus
 logarithms.  This is the quantitative analytic input to the small-modulus
 part of DFI equation (27). -/
-theorem exists_integral_dfiEquation18ComplexMajorant_source_le
+theorem integral_dfiEquation18ComplexMajorant_source_le
     {Q P X Y U : ℝ} (hQ : 0 < Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
@@ -1976,7 +2296,6 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (h : ℝ) (a b qx qy q : ℕ),
       (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
         (dfiEquation27SourceSliceFamily a b qx qy
@@ -1986,28 +2305,30 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
-                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) * C)) +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+                  dfiEquation27SourceMajorantConstant Cf Cφ j)) +
           ((q : ℝ) ^ j * Q ^ (j - 1)) *
             (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
-                C * U⁻¹ ^ j)) := by
-  obtain ⟨C0, hC0, hmass0⟩ :=
-    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
-      hf hfC hbox hφ hφC hscale 0
-  obtain ⟨Cj, hCj, hmassj⟩ :=
-    exists_integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
-      hf hfC hbox hφ hφC hscale j
-  let C : ℝ := C0 * dfiEquation27LogLeibnizConstant 0 +
-    Cj * dfiEquation27LogLeibnizConstant j
+                dfiEquation27SourceMajorantConstant Cf Cφ j * U⁻¹ ^ j)) := by
+  let C0 : ℝ := dfiEquation27SourceDerivativeConstant Cf Cφ 0
+  let Cj : ℝ := dfiEquation27SourceDerivativeConstant Cf Cφ j
+  let C : ℝ := dfiEquation27SourceMajorantConstant Cf Cφ j
+  have hC0 : 0 < C0 := by
+    simpa only [C0] using dfiEquation27SourceDerivativeConstant_pos hfC hφC 0
+  have hCj : 0 < Cj := by
+    simpa only [Cj] using dfiEquation27SourceDerivativeConstant_pos hfC hφC j
   have hC : 0 < C := by
-    dsimp [C]
-    exact add_pos
-      (mul_pos hC0 (dfiEquation27LogLeibnizConstant_pos 0))
-      (mul_pos hCj (dfiEquation27LogLeibnizConstant_pos j))
-  refine ⟨C, hC, ?_⟩
+    simpa only [C] using dfiEquation27SourceMajorantConstant_pos hfC hφC j
+  have hmass0 :=
+    integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+      hf hfC hbox hφ hφC hscale 0
+  have hmassj :=
+    integral_integral_norm_iteratedDeriv_dfiEquation27_source_le_min
+      hf hfC hbox hφ hφC hscale j
   intro h a b qx qy q
   let L : ℝ :=
     (1 + Real.log (2 * X) + |Real.log a| +
@@ -2032,10 +2353,10 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
           (le_min (zero_le_one.trans hf.one_le_X)
             (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le) hL
   have hC0le : C0 * dfiEquation27LogLeibnizConstant 0 ≤ C := by
-    dsimp [C]
+    dsimp [C, C0, Cj, dfiEquation27SourceMajorantConstant]
     linarith [mul_pos hCj (dfiEquation27LogLeibnizConstant_pos j)]
   have hCjle : Cj * dfiEquation27LogLeibnizConstant j ≤ C := by
-    dsimp [C]
+    dsimp [C, C0, Cj, dfiEquation27SourceMajorantConstant]
     linarith [mul_pos hC0 (dfiEquation27LogLeibnizConstant_pos 0)]
   have hmass0' :
       (∫ x : ℝ, ∫ u : ℝ, ‖iteratedDeriv 0
@@ -2100,10 +2421,8 @@ theorem exists_integral_dfiEquation18ComplexMajorant_source_le
     (mul_le_mul_of_nonneg_left hmassbase hcoef0)
     (mul_le_mul_of_nonneg_left hmassj' hcoefj)
 
-/-- Equation (18) with the two reduced Voronoi denominators substituted.
-The denominator logarithms are bounded uniformly by the original modulus,
-so no reduced-modulus parameter remains in the quantitative estimate. -/
-theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
+/-- Compatibility form of the explicit source-majorant estimate. -/
+theorem exists_integral_dfiEquation18ComplexMajorant_source_le
     {Q P X Y U : ℝ} (hQ : 0 < Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
@@ -2112,6 +2431,39 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
     ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b qx qy q : ℕ),
+      (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+        (dfiEquation27SourceSliceFamily a b qx qy
+          (dfiLocalizedWeight f φ h) h x)) ≤
+        ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) * C)) +
+          ((q : ℝ) ^ j * Q ^ (j - 1)) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+                C * U⁻¹ ^ j)) := by
+  refine ⟨dfiEquation27SourceMajorantConstant Cf Cφ j,
+    dfiEquation27SourceMajorantConstant_pos hfC hφC j, ?_⟩
+  exact integral_dfiEquation18ComplexMajorant_source_le
+    hQ hf hfC hbox hφ hφC hscale j
+
+/-- Equation (18) with the two reduced Voronoi denominators substituted.
+The denominator logarithms are bounded uniformly by the original modulus,
+so no reduced-modulus parameter remains in the quantitative estimate. -/
+theorem integral_dfiEquation18ComplexMajorant_reduced_le
+    {Q P X Y U : ℝ} (hQ : 0 < Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
       ∀ (h : ℝ) (a b q : ℕ), 0 < q →
       (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
         (dfiEquation27SourceSliceFamily a b
@@ -2123,18 +2475,17 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
-                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) * C)) +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+                  dfiEquation27SourceMajorantConstant Cf Cφ j)) +
           ((q : ℝ) ^ j * Q ^ (j - 1)) *
             (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
-                C * U⁻¹ ^ j)) := by
-  obtain ⟨C, hC, hsource⟩ :=
-    exists_integral_dfiEquation18ComplexMajorant_source_le
-      hQ hf hfC hbox hφ hφC hscale j
-  refine ⟨C, hC, ?_⟩
+                  dfiEquation27SourceMajorantConstant Cf Cφ j * U⁻¹ ^ j)) := by
+  have hsource := integral_dfiEquation18ComplexMajorant_source_le
+    hQ hf hfC hbox hφ hφC hscale j
   intro h a b q hq
   have hqa := abs_log_dfiReducedDenominator_le a q hq
   have hqb := abs_log_dfiReducedDenominator_le b q hq
@@ -2174,12 +2525,12 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
   have hcoefj : 0 ≤ (q : ℝ) ^ j * Q ^ (j - 1) := by positivity
   have hpow : 0 ≤ U⁻¹ ^ j :=
     pow_nonneg (inv_nonneg.mpr hφ.U_pos.le) _
+  have hC : 0 ≤ dfiEquation27SourceMajorantConstant Cf Cφ j :=
+    (dfiEquation27SourceMajorantConstant_pos hfC hφC j).le
   gcongr
 
-/-- Uniform finite-modulus form of the reduced equation-(18) estimate.  For
-`1 ≤ q ≤ K`, every occurrence of `q` on the right is enlarged to `K`; this
-is the form that can be pulled through the equation-(27) modulus sum. -/
-theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+/-- Compatibility form of the explicit reduced-modulus majorant. -/
+theorem exists_integral_dfiEquation18ComplexMajorant_reduced_le
     {Q P X Y U : ℝ} (hQ : 0 < Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
@@ -2188,6 +2539,40 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
     ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b q : ℕ), 0 < q →
+      (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+        (dfiEquation27SourceSliceFamily a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h x)) ≤
+        ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) * C)) +
+          ((q : ℝ) ^ j * Q ^ (j - 1)) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+                C * U⁻¹ ^ j)) := by
+  refine ⟨dfiEquation27SourceMajorantConstant Cf Cφ j,
+    dfiEquation27SourceMajorantConstant_pos hfC hφC j, ?_⟩
+  exact integral_dfiEquation18ComplexMajorant_reduced_le
+    hQ hf hfC hbox hφ hφC hscale j
+
+/-- Uniform finite-modulus form of the reduced equation-(18) estimate.  For
+`1 ≤ q ≤ K`, every occurrence of `q` on the right is enlarged to `K`; this
+is the form that can be pulled through the equation-(27) modulus sum. -/
+theorem integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+    {Q P X Y U : ℝ} (hQ : 0 < Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
       ∀ (h : ℝ) (a b K q : ℕ), q ∈ Finset.Icc 1 K →
       (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
         (dfiEquation27SourceSliceFamily a b
@@ -2198,18 +2583,17 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
-                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) * C)) +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
+                  dfiEquation27SourceMajorantConstant Cf Cφ j)) +
           ((K : ℝ) ^ j * Q ^ (j - 1)) *
             (6 * min X Y * U *
               ((1 + Real.log (2 * X) + |Real.log a| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
                 (1 + Real.log (2 * Y) + |Real.log b| +
                   2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
-                C * U⁻¹ ^ j)) := by
-  obtain ⟨C, hC, hsource⟩ :=
-    exists_integral_dfiEquation18ComplexMajorant_reduced_le
-      hQ hf hfC hbox hφ hφC hscale j
-  refine ⟨C, hC, ?_⟩
+                dfiEquation27SourceMajorantConstant Cf Cφ j * U⁻¹ ^ j)) := by
+  have hsource := integral_dfiEquation18ComplexMajorant_reduced_le
+    hQ hf hfC hbox hφ hφC hscale j
   intro h a b K q hqmem
   have hqNat := (Finset.mem_Icc.mp hqmem).1
   have hqKnat := (Finset.mem_Icc.mp hqmem).2
@@ -2253,7 +2637,42 @@ theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
   have hQpow : 0 ≤ Q ^ (j - 1) := by positivity
   have hUpow : 0 ≤ U⁻¹ ^ j :=
     pow_nonneg (inv_nonneg.mpr hφ.U_pos.le) _
+  have hC : 0 ≤ dfiEquation27SourceMajorantConstant Cf Cφ j :=
+    (dfiEquation27SourceMajorantConstant_pos hfC hφC j).le
   gcongr
+
+/-- Compatibility form of the explicit finite-modulus majorant. -/
+theorem exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+    {Q P X Y U : ℝ} (hQ : 0 < Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (j : ℕ) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (h : ℝ) (a b K q : ℕ), q ∈ Finset.Icc 1 K →
+      (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+        (dfiEquation27SourceSliceFamily a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h x)) ≤
+        ((K : ℝ) ^ j * (Q ^ (j + 1))⁻¹) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) * C)) +
+          ((K : ℝ) ^ j * Q ^ (j - 1)) *
+            (6 * min X Y * U *
+              ((1 + Real.log (2 * X) + |Real.log a| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
+                (1 + Real.log (2 * Y) + |Real.log b| +
+                  2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
+                C * U⁻¹ ^ j)) := by
+  refine ⟨dfiEquation27SourceMajorantConstant Cf Cφ j,
+    dfiEquation27SourceMajorantConstant_pos hfC hφC j, ?_⟩
+  exact integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+    hQ hf hfC hbox hφ hφC hscale j
 
 /-- The common analytic envelope pulled out of the small-modulus sum in
 DFI equation (27). -/
@@ -2513,6 +2932,63 @@ theorem dfiEquation27_source_integrated_approximation
     w hf hbox a b qx qy q h]
   simpa [g, dfiEquation27SourceSliceFamily, dfiEquation27Slice] using
     hbound q hq g hsmooth hcompact hsupp hleft hcenter hmajor
+
+/-- Source-facing integrated equation (27) with the equation-(18) constant
+selected from scale-uniform cutoff profiles. -/
+theorem dfiEquation27_source_integrated_approximation_of_profiles
+    {Q P X Y U : ℝ} {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc)
+    (a b qx qy q : ℕ) (h : ℝ) (hq : 0 < q) :
+    ‖dfiEquation27PhysicalMainIntegral w q a b qx qy
+        (dfiLocalizedWeight f φ h) h -
+      ∫ x : ℝ, dfiEquation27C a b qx qy
+        (dfiLocalizedWeight f φ h) x (x - h)‖ ≤
+      (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+        ∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+          (dfiEquation27SourceSliceFamily a b qx qy
+            (dfiLocalizedWeight f φ h) h x) := by
+  let g : ℝ → ℝ → ℂ := dfiEquation27SourceSliceFamily a b qx qy
+    (dfiLocalizedWeight f φ h) h
+  have hsmooth : ∀ x, ContDiff ℝ ∞ (g x) := by
+    intro x
+    simpa [g, dfiEquation27SourceSliceFamily] using
+      contDiff_dfiEquation27_sourceSlice hf hbox hφ a b qx qy h x
+  have hcompact : ∀ x, HasCompactSupport (g x) := by
+    intro x
+    simpa [g, dfiEquation27SourceSliceFamily] using
+      hasCompactSupport_dfiEquation27_sourceSlice hφ a b qx qy h x
+  have hsupp : ∀ x, tsupport (g x) ⊆
+      Set.Icc (-((⌈U⌉₊ : ℕ) : ℝ)) (((⌈U⌉₊ : ℕ) : ℝ)) := by
+    intro x
+    simpa [g, dfiEquation27SourceSliceFamily] using
+      tsupport_dfiEquation27_sourceSlice_subset_natCeil
+        hφ a b qx qy h x
+  have hleft : Integrable (fun x => dfiEquation12LeftComplex w q (g x)) := by
+    simpa only [g] using integrable_dfiEquation27_source_left
+      w hf hbox hφ a b qx qy q hq
+  have hcenter : Integrable (fun x => g x 0) := by
+    simpa only [g] using integrable_dfiEquation27_source_center
+      hf hbox hφ a b qx qy
+  have hmajor : Integrable (fun x =>
+      dfiEquation18ComplexMajorant (Q := Q) q j (g x)) := by
+    simpa only [g] using integrable_dfiEquation27_source_majorant
+      hf hbox hφ a b qx qy q j
+  have hbound := dfiEquation18_complex_family_integral_of_profiles
+    hD hEprofile ⌈U⌉₊ j hj hCpsi hpsi hCpsiSucc hpsiSucc
+      q hq g hsmooth hcompact hsupp hleft hcenter hmajor
+  rw [dfiEquation27_physicalMainIntegral_eq_sliceIntegral
+    w hf hbox a b qx qy q h]
+  simpa [g, dfiEquation27SourceSliceFamily, dfiEquation27Slice] using hbound
 
 /-- Compatibility between the integer-frequency Ramanujan sum used by the
 delta symbol and the natural-frequency Kloosterman specialization used in
@@ -2796,6 +3272,76 @@ uniform in every active modulus.  This is the finite summation step that
 would be invalid if the equation-(18) constant were selected after `q`.
 The remaining right-hand side is exactly the integrated derivative
 majorant that equation (2) must make rapidly decreasing. -/
+theorem norm_sum_Icc_dfiEquation27_source_main_error_le_of_profiles
+    {Q P X Y U : ℝ} {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    (hf : DFIEquation2 f P X Y) (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc) :
+      ∀ (a b h K : ℕ) (qx qy : ℕ → ℕ),
+      ‖∑ q ∈ Finset.Icc 1 K,
+          dfiEquation27ArithmeticCoefficient a b h q *
+            (dfiEquation27PhysicalMainIntegral w q a b (qx q) (qy q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+              dfiEquation27CentralIntegral a b (qx q) (qy q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
+        (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+          ∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+            (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+              (dfiEquation27SourceSliceFamily a b (qx q) (qy q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) x)) := by
+  have happrox := dfiEquation27_source_integrated_approximation_of_profiles
+    hD hEprofile hf hbox hφ j hj hCpsi hpsi hCpsiSucc hpsiSucc
+  intro a b h K qx qy
+  calc
+    ‖∑ q ∈ Finset.Icc 1 K,
+        dfiEquation27ArithmeticCoefficient a b h q *
+          (dfiEquation27PhysicalMainIntegral w q a b (qx q) (qy q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+            dfiEquation27CentralIntegral a b (qx q) (qy q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
+        ∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q *
+            (dfiEquation27PhysicalMainIntegral w q a b (qx q) (qy q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+              dfiEquation27CentralIntegral a b (qx q) (qy q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ :=
+      norm_sum_le _ _
+    _ ≤ ∑ q ∈ Finset.Icc 1 K,
+        ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+          ((2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+            ∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+            (dfiEquation27SourceSliceFamily a b (qx q) (qy q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) x)) := by
+      apply Finset.sum_le_sum
+      intro q hq
+      have hqpos : 0 < q := (Finset.mem_Icc.mp hq).1
+      rw [norm_mul]
+      apply mul_le_mul_of_nonneg_left _ (norm_nonneg _)
+      simpa only [dfiEquation27CentralIntegral] using
+        happrox a b (qx q) (qy q) q (h : ℝ) hqpos
+    _ = (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+        ∑ q ∈ Finset.Icc 1 K,
+        ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+          (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+            (dfiEquation27SourceSliceFamily a b (qx q) (qy q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) x)) := by
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro q hq
+      ring
+
+/-- Compatibility form using the intrinsic compact-support constants of an
+arbitrary fixed delta weight.  Uniform family arguments should use the
+profile-controlled theorem above. -/
 theorem norm_sum_Icc_dfiEquation27_source_main_error_le
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -2860,16 +3406,23 @@ Both reduced denominators are the actual denominators of `a/q` and `b/q`,
 and the analytic envelope has been pulled outside the finite arithmetic
 sum.  The remaining coefficient sum is treated arithmetically by equation
 (26). -/
-theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le
-    {Q P X Y U : ℝ} (hQ : 0 < Q) (w : DFIDeltaWeight Q)
+theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le_of_profiles
+    {Q P X Y U : ℝ} (hQ : 0 < Q) {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y)
-    (j : ℕ) (hj : 2 ≤ j) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (a b h K : ℕ), 1 ≤ K →
+    (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc) :
+    ∀ (a b h K : ℕ), 1 ≤ K →
       ‖∑ q ∈ Finset.Icc 1 K,
           dfiEquation27ArithmeticCoefficient a b h q *
             (dfiEquation27PhysicalMainIntegral w q a b
@@ -2878,16 +3431,23 @@ theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le
               dfiEquation27CentralIntegral a b
                 (dfiReducedDenominator a q) (dfiReducedDenominator b q)
                 (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
-        C * (∑ q ∈ Finset.Icc 1 K,
+        ((2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+          dfiEquation27SourceMajorantConstant Cf Cφ j) *
+          (∑ q ∈ Finset.Icc 1 K,
           ‖dfiEquation27ArithmeticCoefficient a b h q‖) *
           dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
-  obtain ⟨Cδ, hCδ, hδ⟩ :=
-    norm_sum_Icc_dfiEquation27_source_main_error_le
-      w hf hbox hφ j hj
-  obtain ⟨Cs, hCs, hs⟩ :=
-    exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
-      hQ hf hfC hbox hφ hφC hscale j
-  refine ⟨Cδ * Cs, mul_pos hCδ hCs, ?_⟩
+  let Cδ : ℝ := 2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc
+  let Cs : ℝ := dfiEquation27SourceMajorantConstant Cf Cφ j
+  have hCδ : 0 < Cδ := by
+    dsimp [Cδ]
+    exact mul_pos two_pos (dfiEquation18ProfileConstant_pos
+      hD.positive hEprofile.positive j hCpsi hCpsiSucc)
+  have hCs : 0 < Cs := by
+    simpa only [Cs] using dfiEquation27SourceMajorantConstant_pos hfC hφC j
+  have hδ := norm_sum_Icc_dfiEquation27_source_main_error_le_of_profiles
+    hD hEprofile hf hbox hφ j hj hCpsi hpsi hCpsiSucc hpsiSucc
+  have hs := integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+    hQ hf hfC hbox hφ hφC hscale j
   intro a b h K hK
   have hraw := hδ a b h K
     (fun q => dfiReducedDenominator a q)
@@ -2926,6 +3486,124 @@ theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le
       mul_nonneg hLXK hLYK
     have hUpow : 0 ≤ U⁻¹ ^ j := by
       exact pow_nonneg (inv_nonneg.mpr hU) _
+    unfold dfiEquation27IntegratedErrorEnvelope
+    exact add_nonneg
+      (mul_nonneg (mul_nonneg hKpow hQinv) (mul_nonneg hbase hlogs))
+      (mul_nonneg (mul_nonneg hKpow hQpow)
+        (mul_nonneg hbase (mul_nonneg hlogs hUpow)))
+  have hpoint : ∀ q ∈ Finset.Icc 1 K,
+      (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+        (dfiEquation27SourceSliceFamily a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) x)) ≤
+        Cs * dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+    intro q hq
+    have hqbound := hs (h : ℝ) a b K q hq
+    unfold dfiEquation27IntegratedErrorEnvelope
+    exact hqbound.trans_eq (by ring)
+  calc
+    ‖∑ q ∈ Finset.Icc 1 K,
+        dfiEquation27ArithmeticCoefficient a b h q *
+          (dfiEquation27PhysicalMainIntegral w q a b
+              (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+            dfiEquation27CentralIntegral a b
+              (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
+        Cδ * ∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+            (∫ x : ℝ, dfiEquation18ComplexMajorant (Q := Q) q j
+              (dfiEquation27SourceSliceFamily a b
+                (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) x)) := hraw
+    _ ≤ Cδ * ∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+            (Cs * dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j) := by
+      apply mul_le_mul_of_nonneg_left _ hCδ.le
+      apply Finset.sum_le_sum
+      intro q hq
+      exact mul_le_mul_of_nonneg_left (hpoint q hq) (norm_nonneg _)
+    _ = ((2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+          dfiEquation27SourceMajorantConstant Cf Cφ j) *
+        (∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖) *
+          dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+      have hsum :
+          (∑ q ∈ Finset.Icc 1 K,
+              ‖dfiEquation27ArithmeticCoefficient a b h q‖ *
+                (Cs * dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j)) =
+            (∑ q ∈ Finset.Icc 1 K,
+              ‖dfiEquation27ArithmeticCoefficient a b h q‖) *
+                (Cs * dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j) := by
+        rw [Finset.sum_mul]
+      rw [hsum]
+      simp only [Cδ, Cs]
+      ring
+
+/-- Compatibility form for a fixed delta weight.  The profile-controlled
+variant above is the form used to obtain constants uniform in `Q`. -/
+theorem norm_sum_Icc_dfiEquation27_reduced_main_error_le
+    {Q P X Y U : ℝ} (hQ : 0 < Q) (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (j : ℕ) (hj : 2 ≤ j) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (a b h K : ℕ), 1 ≤ K →
+      ‖∑ q ∈ Finset.Icc 1 K,
+          dfiEquation27ArithmeticCoefficient a b h q *
+            (dfiEquation27PhysicalMainIntegral w q a b
+                (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+              dfiEquation27CentralIntegral a b
+                (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
+        C * (∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖) *
+          dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+  obtain ⟨Cδ, hCδ, hδ⟩ :=
+    norm_sum_Icc_dfiEquation27_source_main_error_le w hf hbox hφ j hj
+  obtain ⟨Cs, hCs, hs⟩ :=
+    exists_integral_dfiEquation18ComplexMajorant_reduced_Icc_le
+      hQ hf hfC hbox hφ hφC hscale j
+  refine ⟨Cδ * Cs, mul_pos hCδ hCs, ?_⟩
+  intro a b h K hK
+  have hraw := hδ a b h K
+    (fun q => dfiReducedDenominator a q)
+    (fun q => dfiReducedDenominator b q)
+  have henvNonneg :
+      0 ≤ dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+    have hlogK : 0 ≤ Real.log (K : ℝ) :=
+      Real.log_nonneg (by exact_mod_cast hK)
+    have hlogX : 0 ≤ Real.log (2 * X) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_X])
+    have hlogY : 0 ≤ Real.log (2 * Y) :=
+      Real.log_nonneg (by nlinarith [hf.one_le_Y])
+    have hLXK : 0 ≤ 1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 2 * Real.log K := by
+      positivity
+    have hLYK : 0 ≤ 1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 2 * Real.log K := by
+      positivity
+    have hU : 0 ≤ U := hφ.U_pos.le
+    have hKpow : 0 ≤ (K : ℝ) ^ j := by positivity
+    have hQinv : 0 ≤ (Q ^ (j + 1))⁻¹ := by positivity
+    have hQpow : 0 ≤ Q ^ (j - 1) := by positivity
+    have hbase : 0 ≤ 6 * min X Y * U := by
+      exact mul_nonneg
+        (mul_nonneg (by norm_num)
+          (le_min (zero_le_one.trans hf.one_le_X)
+            (zero_le_one.trans hf.one_le_Y))) hφ.U_pos.le
+    have hlogs : 0 ≤
+        (1 + Real.log (2 * X) + |Real.log a| +
+          2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) *
+        (1 + Real.log (2 * Y) + |Real.log b| +
+          2 * |Real.eulerMascheroniConstant| + 2 * Real.log K) :=
+      mul_nonneg hLXK hLYK
+    have hUpow : 0 ≤ U⁻¹ ^ j :=
+      pow_nonneg (inv_nonneg.mpr hU) _
     unfold dfiEquation27IntegratedErrorEnvelope
     exact add_nonneg
       (mul_nonneg (mul_nonneg hKpow hQinv) (mul_nonneg hbase hlogs))

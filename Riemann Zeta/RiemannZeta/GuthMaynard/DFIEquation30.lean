@@ -1884,10 +1884,35 @@ theorem dfiEquation30_physical_log_bound_of_profiles
       simp only [C, K]
       ring
 
+/-- Scale-independent constant for the physical double-main integral. -/
+noncomputable def dfiEquation27PhysicalMainProfileConstant
+    (Cf : ℕ → ℕ → ℝ) (Cφ Cw : ℕ → ℝ) : ℝ :=
+  (dfiEquation2FiniteConstant Cf 0 * dfiCutoffFiniteConstant Cφ 0) *
+    ((24 * max (Cw 0) (Cw 1)) * (2 / Real.log 2 + 4))
+
+theorem dfiEquation27PhysicalMainProfileConstant_pos
+    {P X Y U Q : ℝ} {w : DFIDeltaWeight Q}
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    {hφ : DFIRedundantCutoff φ U}
+    (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hwC : DFIDeltaWeightProfile w Cw) :
+    0 < dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw := by
+  have hf0 : 0 < dfiEquation2FiniteConstant Cf 0 := hfC.finiteConstant_pos 0
+  have hφ0 : 0 < dfiCutoffFiniteConstant Cφ 0 := by
+    simpa [dfiCutoffFiniteConstant] using hφC.positive 0
+  have hw0 : 0 < max (Cw 0) (Cw 1) :=
+    (hwC.positive 0).trans_le (le_max_left _ _)
+  have hlog2 : 0 < Real.log 2 := Real.log_pos one_lt_two
+  unfold dfiEquation27PhysicalMainProfileConstant
+  exact mul_pos (mul_pos hf0 hφ0)
+    (mul_pos (mul_pos (by norm_num) hw0) (by positivity))
+
 /-- The logarithmic double-main integral occurring in DFI equation (27) is
 bounded by the equation-(30) physical mass.  This is the missing norm bridge
 between the raw localized weight and the actual two Voronoi main terms. -/
-theorem exists_norm_dfiEquation27PhysicalMainIntegral_le
+theorem norm_dfiEquation27PhysicalMainIntegral_le_of_profiles
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
@@ -1896,33 +1921,22 @@ theorem exists_norm_dfiEquation27PhysicalMainIntegral_le
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
     (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
-    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ), 0 < q → ∀ qx qy : ℕ,
+    ∀ (h : ℝ) (a b q : ℕ), 0 < q → ∀ qx qy : ℕ,
       ‖dfiEquation27PhysicalMainIntegral w q a b qx qy
           (dfiLocalizedWeight f φ h) h‖ ≤
-        K *
+        dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw *
           (Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
           (Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
           min X Y * Real.log Q := by
-  let K₀ : ℝ :=
-    (dfiEquation2FiniteConstant Cf 0 * dfiCutoffFiniteConstant Cφ 0) *
-      ((24 * max (Cw 0) (Cw 1)) * (2 / Real.log 2 + 4))
+  let K₀ : ℝ := dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw
   have hK₀ : 0 < K₀ := by
-    have hf0 : 0 < dfiEquation2FiniteConstant Cf 0 :=
-      hfC.finiteConstant_pos 0
-    have hφ0 : 0 < dfiCutoffFiniteConstant Cφ 0 := by
-      simpa [dfiCutoffFiniteConstant] using hφC.positive 0
-    have hw0 : 0 < max (Cw 0) (Cw 1) :=
-      (hwC.positive 0).trans_le (le_max_left _ _)
-    have hlog2 : 0 < Real.log 2 := Real.log_pos one_lt_two
-    dsimp [K₀]
-    exact mul_pos (mul_pos hf0 hφ0)
-      (mul_pos (mul_pos (by norm_num) hw0) (by positivity))
+    simpa only [K₀] using
+      dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC
   have hphysical :=
     dfiEquation30_physical_log_bound_of_profiles
       hf hfC hbox hφ hφC hscale hwC hQ hU
-  refine ⟨K₀, hK₀, ?_⟩
   intro h a b q hq qx qy
   let F : ℝ → ℝ → ℂ := dfiLocalizedWeight f φ h
   let G : ℝ × ℝ → ℂ := fun p =>
@@ -2046,14 +2060,14 @@ theorem exists_norm_dfiEquation27PhysicalMainIntegral_le
     _ = B * dfiEquation30PhysicalAbsoluteIntegral w q F h := hmassRewrite
     _ ≤ B * (K₀ * min X Y * Real.log Q) :=
       mul_le_mul_of_nonneg_left (hphysical h q hq) hB
-    _ = K₀ * LX * LY * min X Y * Real.log Q := by
+    _ = dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw *
+        LX * LY * min X Y * Real.log Q := by
       dsimp [B]
+      simp only [K₀]
       ring
 
-/-- Uniform equation-(27) physical-main bound after substituting the two
-reduced Voronoi denominators.  For every retained delta modulus `q ≤ 2Q`,
-both reduced logarithms are absorbed into `log (2Q)`. -/
-theorem exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
+/-- Compatibility form of the explicit physical-main estimate. -/
+theorem exists_norm_dfiEquation27PhysicalMainIntegral_le
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
@@ -2062,21 +2076,45 @@ theorem exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
     (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
-    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ),
+    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ), 0 < q → ∀ qx qy : ℕ,
+      ‖dfiEquation27PhysicalMainIntegral w q a b qx qy
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qx|) *
+          (Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * |Real.log qy|) *
+          min X Y * Real.log Q := by
+  refine ⟨dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw,
+    dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC, ?_⟩
+  exact norm_dfiEquation27PhysicalMainIntegral_le_of_profiles
+    w hf hfC hbox hφ hφC hscale hwC hQ hU
+
+/-- Uniform equation-(27) physical-main bound after substituting the two
+reduced Voronoi denominators.  For every retained delta modulus `q ≤ 2Q`,
+both reduced logarithms are absorbed into `log (2Q)`. -/
+theorem norm_dfiEquation27PhysicalMainIntegral_reduced_le_of_profiles
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
+    ∀ (h : ℝ) (a b q : ℕ),
       0 < q → (q : ℝ) ≤ 2 * Q →
       ‖dfiEquation27PhysicalMainIntegral w q a b
           (dfiReducedDenominator a q) (dfiReducedDenominator b q)
           (dfiLocalizedWeight f φ h) h‖ ≤
-        K *
+        dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw *
           (Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
           (Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
           min X Y * Real.log Q := by
-  obtain ⟨K, hK, hmain⟩ :=
-    exists_norm_dfiEquation27PhysicalMainIntegral_le
-      w hf hfC hbox hφ hφC hscale hwC hQ hU
-  refine ⟨K, hK, ?_⟩
+  have hmain := norm_dfiEquation27PhysicalMainIntegral_le_of_profiles
+    w hf hfC hbox hφ hφC hscale hwC hQ hU
   intro h a b q hq hqQ
   have hqlog : Real.log (q : ℝ) ≤ Real.log (2 * Q) := by
     exact Real.log_le_log (by exact_mod_cast hq) hqQ
@@ -2119,7 +2157,35 @@ theorem exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
     have : 0 ≤ Real.log (2 * Y) :=
       Real.log_nonneg (by nlinarith [hf.one_le_Y])
     positivity
+  have hC : 0 ≤ dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw :=
+    (dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC).le
   gcongr
+
+/-- Compatibility form of the explicit reduced physical-main estimate. -/
+theorem exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ),
+      0 < q → (q : ℝ) ≤ 2 * Q →
+      ‖dfiEquation27PhysicalMainIntegral w q a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+          (Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+          min X Y * Real.log Q := by
+  refine ⟨dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw,
+    dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC, ?_⟩
+  exact norm_dfiEquation27PhysicalMainIntegral_reduced_le_of_profiles
+    w hf hfC hbox hφ hφC hscale hwC hQ hU
 
 /-- Large-modulus physical-main contribution in the source equation-(27)
 split.  The delta approximation is not used here: equation (30) supplies a
@@ -2208,7 +2274,7 @@ theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_epsilon
 factor kept inside the arithmetic summation.  Interpolating
 `gcd(ab,q)` prevents the logarithmic main kernels from introducing any
 dependence of the final DFI constant on `a` or `b`. -/
-theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated
+theorem norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated_of_profiles
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
@@ -2218,7 +2284,6 @@ theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated
     (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
     (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
     {delta : ℝ} (hdelta0 : 0 < delta) (hdelta1 : delta ≤ 1) :
-    ∃ C : ℝ, 0 < C ∧
       ∀ (hR : ℝ) (a b h K L : ℕ), 0 < a → 0 < b → 0 < h →
       (∀ q ∈ Finset.Ioo K L, (q : ℝ) ≤ 2 * Q) →
       ‖∑ q ∈ Finset.Ioo K L,
@@ -2230,16 +2295,17 @@ theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated
           (h.divisors.card : ℝ) *
           (((K + 1 : ℕ) : ℝ) ^ (-delta) *
             ((harmonic L : ℚ) : ℝ))) *
-          (C *
+          (dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw *
             (Real.log (2 * X) + |Real.log a| +
               2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
             (Real.log (2 * Y) + |Real.log b| +
               2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
             min X Y * Real.log Q) := by
-  obtain ⟨C, hC, hphysical⟩ :=
-    exists_norm_dfiEquation27PhysicalMainIntegral_reduced_le
-      w hf hfC hbox hφ hφC hscale hwC hQ hU
-  refine ⟨C, hC, ?_⟩
+  let C : ℝ := dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw
+  have hC : 0 < C := by
+    simpa only [C] using dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC
+  have hphysical := norm_dfiEquation27PhysicalMainIntegral_reduced_le_of_profiles
+    w hf hfC hbox hφ hφC hscale hwC hQ hU
   intro hR a b h K L ha hb hh hmod
   let I : ℕ → ℂ := fun q =>
     dfiEquation27PhysicalMainIntegral w q a b
@@ -2296,12 +2362,46 @@ theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated
           (h.divisors.card : ℝ) *
           (((K + 1 : ℕ) : ℝ) ^ (-delta) *
             ((harmonic L : ℚ) : ℝ))) *
+          (dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw *
+            (Real.log (2 * X) + |Real.log a| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+            (Real.log (2 * Y) + |Real.log b| +
+              2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
+            min X Y * Real.log Q) := rfl
+
+/-- Compatibility form of the explicit interpolated physical branch. -/
+theorem exists_norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated
+    {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    {delta : ℝ} (hdelta0 : 0 < delta) (hdelta1 : delta ≤ 1) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (hR : ℝ) (a b h K L : ℕ), 0 < a → 0 < b → 0 < h →
+      (∀ q ∈ Finset.Ioo K L, (q : ℝ) ≤ 2 * Q) →
+      ‖∑ q ∈ Finset.Ioo K L,
+          (((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b h q) *
+            dfiEquation27PhysicalMainIntegral w q a b
+              (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+              (dfiLocalizedWeight f φ hR) hR‖ ≤
+        ((((a * b : ℕ) : ℝ) ^ (-1 + delta)) *
+          (h.divisors.card : ℝ) *
+          (((K + 1 : ℕ) : ℝ) ^ (-delta) *
+            ((harmonic L : ℚ) : ℝ))) *
           (C *
             (Real.log (2 * X) + |Real.log a| +
               2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
             (Real.log (2 * Y) + |Real.log b| +
               2 * |Real.eulerMascheroniConstant| + 2 * Real.log (2 * Q)) *
-            min X Y * Real.log Q) := by rfl
+            min X Y * Real.log Q) := by
+  refine ⟨dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw,
+    dfiEquation27PhysicalMainProfileConstant_pos hfC hφC hwC, ?_⟩
+  exact norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated_of_profiles
+    w hf hfC hbox hφ hφC hscale hwC hQ hU hdelta0 hdelta1
 
 /-- Small-modulus delta-approximation error with the exact `(ab)⁻¹`
 Jacobian included before the equation-(26) summation.  The analytic
@@ -2409,34 +2509,195 @@ theorem exists_norm_sum_Icc_inv_ab_dfiEquation27_reduced_main_error_le_interpola
       gcongr
     _ = _ := by ring
 
+/-- Scale-independent small-modulus constant obtained from the delta-weight
+and source derivative profiles. -/
+noncomputable def dfiEquation27SmallProfileConstant
+    (D Eprofile : ℕ → ℝ) (j : ℕ) (Cpsi CpsiSucc : ℝ)
+    (Cf : ℕ → ℕ → ℝ) (Cφ : ℕ → ℝ) : ℝ :=
+  (2 * dfiEquation18ProfileConstant D Eprofile j Cpsi CpsiSucc) *
+    dfiEquation27SourceMajorantConstant Cf Cφ j
+
+theorem dfiEquation27SmallProfileConstant_pos
+    {Q P X Y U : ℝ} {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    {hφ : DFIRedundantCutoff φ U}
+    (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (j : ℕ) {Cpsi CpsiSucc : ℝ}
+    (hCpsi : 0 < Cpsi) (hCpsiSucc : 0 < CpsiSucc) :
+    0 < dfiEquation27SmallProfileConstant
+      D Eprofile j Cpsi CpsiSucc Cf Cφ := by
+  unfold dfiEquation27SmallProfileConstant
+  exact mul_pos
+    (mul_pos two_pos (dfiEquation18ProfileConstant_pos
+      hD.positive hEprofile.positive j hCpsi hCpsiSucc))
+    (dfiEquation27SourceMajorantConstant_pos hfC hφC j)
+
+/-- Uniform-in-scale form of the interpolated small-modulus branch of DFI
+equation (27). -/
+theorem norm_sum_Icc_inv_ab_dfiEquation27_reduced_main_error_le_interpolated_of_profiles
+    {Q P X Y U : ℝ} (hQ : 0 < Q) {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc)
+    {delta : ℝ} (hdelta0 : 0 < delta) (hdelta1 : delta ≤ 1) :
+    ∀ (a b h K : ℕ), 0 < a → 0 < b → 0 < h → 1 ≤ K →
+      ‖∑ q ∈ Finset.Icc 1 K,
+          ((((a : ℂ) * b)⁻¹) *
+            dfiEquation27ArithmeticCoefficient a b h q) *
+            (dfiEquation27PhysicalMainIntegral w q a b
+                (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+              dfiEquation27CentralIntegral a b
+                (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+                (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ))‖ ≤
+        dfiEquation27SmallProfileConstant
+          D Eprofile j Cpsi CpsiSucc Cf Cφ *
+          ((((a * b : ℕ) : ℝ) ^ (-1 + delta)) *
+            (h.divisors.card : ℝ) *
+            ((harmonic (K + 1) : ℚ) : ℝ)) *
+            dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+  have hmain := norm_sum_Icc_dfiEquation27_reduced_main_error_le_of_profiles
+    hQ hD hEprofile hf hfC hbox hφ hφC hscale j hj
+      hCpsi hpsi hCpsiSucc hpsiSucc
+  intro a b h K ha hb hh hK
+  let C : ℝ := dfiEquation27SmallProfileConstant
+    D Eprofile j Cpsi CpsiSucc Cf Cφ
+  let c : ℂ := ((a : ℂ) * b)⁻¹
+  let E : ℕ → ℂ := fun q =>
+    dfiEquation27PhysicalMainIntegral w q a b
+        (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+        (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) -
+      dfiEquation27CentralIntegral a b
+        (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+        (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ)
+  have hfactor :
+      (∑ q ∈ Finset.Icc 1 K,
+          (c * dfiEquation27ArithmeticCoefficient a b h q) * E q) =
+        c * ∑ q ∈ Finset.Icc 1 K,
+          dfiEquation27ArithmeticCoefficient a b h q * E q := by
+    rw [Finset.mul_sum]
+    apply Finset.sum_congr rfl
+    intro q hq
+    ring
+  have harithRaw :=
+    sum_Ioo_norm_inv_ab_mul_dfiEquation27ArithmeticCoefficient_le_interpolated
+      a b h 0 (K + 1) ha hb hh delta hdelta0 hdelta1
+  have hinterval : Finset.Ioo 0 (K + 1) = Finset.Icc 1 K := by
+    ext q
+    simp only [Finset.mem_Ioo, Finset.mem_Icc]
+    omega
+  rw [hinterval] at harithRaw
+  have harith :
+      ‖c‖ * (∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖) ≤
+        (((a * b : ℕ) : ℝ) ^ (-1 + delta)) *
+          (h.divisors.card : ℝ) *
+          ((harmonic (K + 1) : ℚ) : ℝ) := by
+    calc
+      ‖c‖ * (∑ q ∈ Finset.Icc 1 K,
+          ‖dfiEquation27ArithmeticCoefficient a b h q‖) =
+        ∑ q ∈ Finset.Icc 1 K,
+          ‖c * dfiEquation27ArithmeticCoefficient a b h q‖ := by
+          rw [Finset.mul_sum]
+          apply Finset.sum_congr rfl
+          intro q hq
+          rw [norm_mul]
+      _ ≤ (((a * b : ℕ) : ℝ) ^ (-1 + delta)) *
+          (h.divisors.card : ℝ) *
+          (((0 + 1 : ℕ) : ℝ) ^ (-delta) *
+            ((harmonic (K + 1) : ℚ) : ℝ)) := by
+        simpa only [c] using harithRaw
+      _ = _ := by norm_num
+  have henv := dfiEquation27IntegratedErrorEnvelope_nonneg
+    hQ hf.one_le_X hf.one_le_Y hφ.U_pos a b K j hK
+  change ‖∑ q ∈ Finset.Icc 1 K,
+      (c * dfiEquation27ArithmeticCoefficient a b h q) * E q‖ ≤ _
+  rw [hfactor, norm_mul]
+  have hbase := hmain a b h K hK
+  change ‖∑ q ∈ Finset.Icc 1 K,
+      dfiEquation27ArithmeticCoefficient a b h q * E q‖ ≤ _ at hbase
+  calc
+    ‖c‖ * ‖∑ q ∈ Finset.Icc 1 K,
+        dfiEquation27ArithmeticCoefficient a b h q * E q‖ ≤
+      ‖c‖ * (C * (∑ q ∈ Finset.Icc 1 K,
+        ‖dfiEquation27ArithmeticCoefficient a b h q‖) *
+        dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j) := by
+      exact mul_le_mul_of_nonneg_left (by simpa only [C,
+        dfiEquation27SmallProfileConstant] using hbase) (norm_nonneg c)
+    _ = C * (‖c‖ * (∑ q ∈ Finset.Icc 1 K,
+        ‖dfiEquation27ArithmeticCoefficient a b h q‖)) *
+        dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by ring
+    _ ≤ C * ((((a * b : ℕ) : ℝ) ^ (-1 + delta)) *
+        (h.divisors.card : ℝ) *
+        ((harmonic (K + 1) : ℚ) : ℝ)) *
+        dfiEquation27IntegratedErrorEnvelope Q X Y U a b K j := by
+      have hC : 0 ≤ C := (dfiEquation27SmallProfileConstant_pos
+        hD hEprofile hfC hφC j hCpsi hCpsiSucc).le
+      gcongr
+    _ = _ := by rfl
+
+/-- Scale-independent constant for the central integral in equation (27). -/
+noncomputable def dfiEquation27CentralProfileConstant
+    (Cf : ℕ → ℕ → ℝ) (Cφ : ℕ → ℝ) : ℝ :=
+  dfiEquation27SourceDerivativeConstant Cf Cφ 0 *
+    dfiEquation27LogLeibnizConstant 0
+
+theorem dfiEquation27CentralProfileConstant_pos
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    {hφ : DFIRedundantCutoff φ U}
+    (hφC : DFIRedundantCutoffProfile hφ Cφ) :
+    0 < dfiEquation27CentralProfileConstant Cf Cφ := by
+  unfold dfiEquation27CentralProfileConstant
+  exact mul_pos (dfiEquation27SourceDerivativeConstant_pos hfC hφC 0)
+    (dfiEquation27LogLeibnizConstant_pos 0)
+
 /-- The central integral in equation (27), with the reduced Voronoi
 denominators substituted, has the same logarithmic envelope as the physical
 main integral but no delta-kernel loss.  Both dyadic support projections are
 used, giving the sharp factor `min X Y`. -/
-theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le
+theorem norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le_of_profiles
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
     (hbox : DFILocalizedBox f X Y)
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y) :
-    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ), 0 < q →
+    ∀ (h : ℝ) (a b q : ℕ), 0 < q →
       ‖dfiEquation27CentralIntegral a b
           (dfiReducedDenominator a q) (dfiReducedDenominator b q)
           (dfiLocalizedWeight f φ h) h‖ ≤
-        K *
+        dfiEquation27CentralProfileConstant Cf Cφ *
           (1 + Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
           min X Y := by
-  obtain ⟨C, hC, hpoint⟩ :=
-    exists_norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
-      hf hfC hbox hφ hφC hscale 0
-  let K : ℝ := C * dfiEquation27LogLeibnizConstant 0
-  have hK : 0 < K :=
-    mul_pos hC (dfiEquation27LogLeibnizConstant_pos 0)
-  refine ⟨K, hK, ?_⟩
+  let C : ℝ := dfiEquation27SourceDerivativeConstant Cf Cφ 0
+  let K : ℝ := dfiEquation27CentralProfileConstant Cf Cφ
+  have hC : 0 < C := by
+    simpa only [C] using dfiEquation27SourceDerivativeConstant_pos hfC hφC 0
+  have hK : 0 < K := by
+    simpa only [K] using dfiEquation27CentralProfileConstant_pos hfC hφC
+  have hpoint := norm_iteratedDeriv_dfiEquation27_sourceSliceFamily_le
+    hf hfC hbox hφ hφC hscale 0
   intro h a b q hq
   let g : ℝ → ℂ := fun x =>
     dfiEquation27SourceSliceFamily a b
@@ -2562,7 +2823,32 @@ theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le
     ‖∫ x : ℝ, g x‖ ≤ ∫ x : ℝ, ‖g x‖ := hnorm
     _ ≤ min (X * B) (Y * B) := le_min hXbound hYbound
     _ = min X Y * B := (min_mul_of_nonneg X Y hB).symm
-    _ = K * LX * LY * min X Y := by ring
+    _ = dfiEquation27CentralProfileConstant Cf Cφ *
+        LX * LY * min X Y := by
+      ring
+
+/-- Compatibility form of the explicit central-integral estimate. -/
+theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (h : ℝ) (a b q : ℕ), 0 < q →
+      ‖dfiEquation27CentralIntegral a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 2 * Real.log q) *
+          min X Y := by
+  refine ⟨dfiEquation27CentralProfileConstant Cf Cφ,
+    dfiEquation27CentralProfileConstant_pos hfC hφC, ?_⟩
+  exact norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le_of_profiles
+    hf hfC hbox hφ hφC hscale
 
 /-- Fixed-shift projection of the uniform central-integral estimate. -/
 theorem exists_norm_dfiEquation27CentralIntegral_reduced_le
@@ -2679,7 +2965,7 @@ theorem exists_norm_dfiEquation27CentralIntegral_reduced_le_rpow
 The constant is selected before the arithmetic parameters; their logarithms
 remain explicit so that the negative `(ab)` power from equation (26) can
 absorb them in the final source theorem. -/
-theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow
+theorem norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow_of_profiles
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
@@ -2687,21 +2973,32 @@ theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow
     (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
     (hscale : U ≤ P⁻¹ * min X Y)
     {beta : ℝ} (hbeta : 0 < beta) :
-    ∃ K : ℝ, 0 < K ∧ ∀ (a b h q : ℕ), 0 < q →
+    ∀ (a b h q : ℕ), 0 < q →
       ‖dfiEquation27CentralIntegral a b
           (dfiReducedDenominator a q) (dfiReducedDenominator b q)
           (dfiLocalizedWeight f φ h) h‖ ≤
-        K *
+        dfiEquation27CentralProfileConstant Cf Cφ *
           (1 + Real.log (2 * X) + |Real.log a| +
             2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
           min X Y * (q : ℝ) ^ beta := by
-  obtain ⟨K, hK, hcentral⟩ :=
-    exists_norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le
+  let K : ℝ := dfiEquation27CentralProfileConstant Cf Cφ
+  have hK : 0 < K := by
+    simpa only [K] using dfiEquation27CentralProfileConstant_pos hfC hφC
+  have hcentral :=
+    norm_dfiEquation27CentralIntegral_reduced_uniform_shift_le_of_profiles
       hf hfC hbox hφ hφC hscale
-  refine ⟨K, hK, ?_⟩
   intro a b h q hq
+  change ‖dfiEquation27CentralIntegral a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) h‖ ≤
+    K *
+      (1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+      (1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+      min X Y * (q : ℝ) ^ beta
   let AX : ℝ := 1 + Real.log (2 * X) + |Real.log a| +
     2 * |Real.eulerMascheroniConstant|
   let AY : ℝ := 1 + Real.log (2 * Y) + |Real.log b| +
@@ -2768,6 +3065,30 @@ theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow
       dsimp [AX, AY, E]
       rw [← hrpow]
       ring
+
+/-- Compatibility form of the profile-uniform central-integral power bound. -/
+theorem exists_norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    {beta : ℝ} (hbeta : 0 < beta) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (a b h q : ℕ), 0 < q →
+      ‖dfiEquation27CentralIntegral a b
+          (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+          (dfiLocalizedWeight f φ h) h‖ ≤
+        K *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+          min X Y * (q : ℝ) ^ beta := by
+  refine ⟨dfiEquation27CentralProfileConstant Cf Cφ,
+    dfiEquation27CentralProfileConstant_pos hfC hφC, ?_⟩
+  exact norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow_of_profiles
+    hf hfC hbox hφ hφC hscale hbeta
 
 /-- The elementary comparison series used for the logarithmic equation-(27)
 tail is a `p`-series of exponent `3/2`. -/
@@ -3229,7 +3550,7 @@ theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_source_sharp
 /-- Source-uniform central-series tail with the exact external `(ab)⁻¹`
 factor incorporated before summation.  The constant is selected before
 `a,b,h`; all arithmetic dependence remains in the displayed expression. -/
-theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated
+theorem tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated_of_profiles
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
     {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
     (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
@@ -3240,11 +3561,11 @@ theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated
     (hrho0 : 0 < rho) (hrho1 : rho ≤ 1)
     (halpha : 0 < alpha) (htheta : 0 < theta) (hbeta : 0 < beta)
     (hexp : rho - beta = alpha + theta) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (a b h K : ℕ),
+    ∀ (a b h K : ℕ),
       0 < a → 0 < b → 0 < h →
       ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
           (dfiLocalizedWeight f φ h) (K + (j + 1))‖ ≤
-        C *
+        dfiEquation27CentralProfileConstant Cf Cφ *
           (((a * b : ℕ) : ℝ) ^ (-1 + rho)) *
           (h.divisors.card : ℝ) *
           (1 + Real.log (2 * X) + |Real.log a| +
@@ -3252,11 +3573,22 @@ theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated
           (1 + Real.log (2 * Y) + |Real.log b| +
             2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
           min X Y * ((K : ℝ) + 1) ^ (-alpha) * (1 + theta⁻¹) := by
-  obtain ⟨C, hC, hcentral⟩ :=
-    exists_norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow
+  let C : ℝ := dfiEquation27CentralProfileConstant Cf Cφ
+  have hC : 0 < C := by
+    simpa only [C] using dfiEquation27CentralProfileConstant_pos hfC hφC
+  have hcentral :=
+    norm_dfiEquation27CentralIntegral_reduced_uniform_ab_le_rpow_of_profiles
       hf hfC hbox hφ hφC hscale hbeta
-  refine ⟨C, hC, ?_⟩
   intro a b h K ha hb hh
+  change ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+      (dfiLocalizedWeight f φ h) (K + (j + 1))‖ ≤
+    C * (((a * b : ℕ) : ℝ) ^ (-1 + rho)) *
+      (h.divisors.card : ℝ) *
+      (1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+      (1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+      min X Y * ((K : ℝ) + 1) ^ (-alpha) * (1 + theta⁻¹)
   let c : ℂ := ((a : ℂ) * b)⁻¹
   let LX : ℝ := 1 + Real.log (2 * X) + |Real.log a| +
     2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹
@@ -3366,6 +3698,36 @@ theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated
           min X Y * ((K : ℝ) + 1) ^ (-alpha) * (1 + theta⁻¹) := by
         dsimp [D, LX, LY]
         ring
+
+/-- Compatibility form of the profile-uniform central-series tail bound. -/
+theorem exists_tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (rho alpha theta beta : ℝ)
+    (hrho0 : 0 < rho) (hrho1 : rho ≤ 1)
+    (halpha : 0 < alpha) (htheta : 0 < theta) (hbeta : 0 < beta)
+    (hexp : rho - beta = alpha + theta) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (a b h K : ℕ),
+      0 < a → 0 < b → 0 < h →
+      ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+          (dfiLocalizedWeight f φ h) (K + (j + 1))‖ ≤
+        C *
+          (((a * b : ℕ) : ℝ) ^ (-1 + rho)) *
+          (h.divisors.card : ℝ) *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 4 * beta⁻¹) *
+          min X Y * ((K : ℝ) + 1) ^ (-alpha) * (1 + theta⁻¹) := by
+  refine ⟨dfiEquation27CentralProfileConstant Cf Cφ,
+    dfiEquation27CentralProfileConstant_pos hfC hφC, ?_⟩
+  exact tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated_of_profiles
+    hf hfC hbox hφ hφC hscale rho alpha theta beta
+      hrho0 hrho1 halpha htheta hbeta hexp
 
 /-- The divisor-variable integral `||I||` of DFI equation (30), including
 the two positive scaling Jacobians. -/
@@ -3883,6 +4245,187 @@ theorem exists_norm_sum_dfiEquation24Main_sub_centralSeries_le_source_split_inte
       ‖∑' n : ℕ, G (K + (n + 1))‖ ≤
         dfiEquation27InterpolatedCentralTail
           Ct X Y rho alpha theta beta a b h K := by
+    exact htailNorm.trans (by
+      simpa only [dfiEquation27InterpolatedCentralTail,
+        G, c, central, dfiEquation27CentralSummand] using htail)
+  rw [hMain, hSeries, hdecomp]
+  calc
+    ‖(∑ q ∈ Finset.Icc 1 K, (F q - G q)) +
+        (∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q) -
+        ∑' n : ℕ, G (K + (n + 1))‖ ≤
+      ‖∑ q ∈ Finset.Icc 1 K, (F q - G q)‖ +
+        ‖∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q‖ +
+        ‖∑' n : ℕ, G (K + (n + 1))‖ := by
+      calc
+        ‖(∑ q ∈ Finset.Icc 1 K, (F q - G q)) +
+            (∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q) -
+            ∑' n : ℕ, G (K + (n + 1))‖ ≤
+          ‖(∑ q ∈ Finset.Icc 1 K, (F q - G q)) +
+            (∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q)‖ +
+            ‖∑' n : ℕ, G (K + (n + 1))‖ := by
+          simpa [sub_eq_add_neg] using
+            norm_add_le
+              ((∑ q ∈ Finset.Icc 1 K, (F q - G q)) +
+                ∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q)
+              (-∑' n : ℕ, G (K + (n + 1)))
+        _ ≤ _ := add_le_add
+          (norm_add_le
+            (∑ q ∈ Finset.Icc 1 K, (F q - G q))
+            (∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q)) le_rfl
+    _ ≤ _ := add_le_add (add_le_add hsmall' hlarge') htail'
+
+set_option maxHeartbeats 1000000 in
+/-- Profile-uniform source equation-(27) split.  Its three displayed
+constants depend only on the fixed delta, quotient, source, and cutoff
+profiles (and on the fixed differentiation order and Euler-factor bounds),
+not on any DFI physical scale or arithmetic variable. -/
+theorem norm_sum_dfiEquation24Main_sub_centralSeries_le_source_split_interpolated_of_profiles
+    {P X Y U Q : ℝ} {w : DFIDeltaWeight Q}
+    {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y) (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U) (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y) (hwC : DFIDeltaWeightProfile w Cw)
+    (hQ : 2 ≤ Q) (hU : U = Q ^ 2)
+    (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc)
+    (rho alpha theta beta : ℝ)
+    (hrho0 : 0 < rho) (hrho1 : rho ≤ 1)
+    (halpha : 0 < alpha) (htheta : 0 < theta) (hbeta : 0 < beta)
+    (hexp : rho - beta = alpha + theta) :
+    ∀ (a b h K : ℕ), 0 < a → 0 < b → 0 < h →
+      a.Coprime b → 1 ≤ K → K < ⌈2 * Q⌉₊ →
+      ‖(∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation24MainTotal q a b (h : ℤ)
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b (h : ℤ) q)) -
+          dfiEquation27CentralSeries a b h
+            (dfiLocalizedWeight f φ h)‖ ≤
+        dfiEquation27InterpolatedSmallError
+          (dfiEquation27SmallProfileConstant
+            D Eprofile j Cpsi CpsiSucc Cf Cφ)
+          Q X Y U rho a b h K j +
+        dfiEquation27InterpolatedPhysicalError
+          (dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw)
+          Q X Y rho a b h K +
+        dfiEquation27InterpolatedCentralTail
+          (dfiEquation27CentralProfileConstant Cf Cφ)
+          X Y rho alpha theta beta a b h K := by
+  have hQpos : 0 < Q := by linarith
+  have hsmallAll :=
+    norm_sum_Icc_inv_ab_dfiEquation27_reduced_main_error_le_interpolated_of_profiles
+      hQpos hD hEprofile hf hfC hbox hφ hφC hscale j hj
+        hCpsi hpsi hCpsiSucc hpsiSucc hrho0 hrho1
+  have hlargeAll :=
+    norm_sum_Ioo_dfiEquation27PhysicalMain_le_interpolated_of_profiles
+      w hf hfC hbox hφ hφC hscale hwC hQ hU hrho0 hrho1
+  have htailAll :=
+    tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated_of_profiles
+      hf hfC hbox hφ hφC hscale rho alpha theta beta
+        hrho0 hrho1 halpha htheta hbeta hexp
+  intro a b h K ha hb hh hab hK hKQ
+  have hsmall := hsmallAll a b h K ha hb hh hK
+  have hmod : ∀ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, (q : ℝ) ≤ 2 * Q := by
+    intro q hq
+    exact (Nat.lt_ceil.mp (Finset.mem_Ioo.mp hq).2).le
+  have hlarge := hlargeAll (h : ℝ) a b h K ⌈2 * Q⌉₊ ha hb hh hmod
+  have htail := htailAll a b h K ha hb hh
+  let c : ℂ := ((a : ℂ) * b)⁻¹
+  let physical : ℕ → ℂ := fun q =>
+    dfiEquation27PhysicalMainIntegral w q a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) (h : ℝ)
+  let central : ℕ → ℂ := fun q =>
+    dfiEquation27CentralIntegral a b
+      (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+      (dfiLocalizedWeight f φ h) (h : ℝ)
+  let F : ℕ → ℂ := fun q =>
+    ((((a : ℂ) * b)⁻¹) * dfiEquation27ArithmeticCoefficient a b h q) *
+      dfiEquation27PhysicalMainIntegral w q a b
+        (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+        (dfiLocalizedWeight f φ h) (h : ℝ)
+  let G : ℕ → ℂ := fun q =>
+    ((((a : ℂ) * b)⁻¹) * dfiEquation27ArithmeticCoefficient a b h q) *
+      dfiEquation27CentralIntegral a b
+        (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+        (dfiLocalizedWeight f φ h) (h : ℝ)
+  have hG : Summable G := by
+    simpa [G, c, central, dfiEquation27CentralSummand] using
+      summable_dfiEquation27CentralSummand
+        hf hfC hbox hφ hφC hscale a b h ha hb hh
+  have hG0 : G 0 = 0 := by
+    simp [G, dfiEquation27ArithmeticCoefficient]
+  have hset : dfiEquation22Moduli Q = Finset.Ioo 0 ⌈2 * Q⌉₊ := by
+    rw [dfiEquation22Moduli_eq_Ico]
+    ext q
+    simp only [Finset.mem_Ico, Finset.mem_Ioo]
+    omega
+  have hMain :
+      (∑ q ∈ dfiEquation22Moduli Q,
+          dfiEquation24MainTotal q a b (h : ℤ)
+            (dfiEquation23Weight w (dfiLocalizedWeight f φ h)
+              a b (h : ℤ) q)) =
+        ∑ q ∈ Finset.Ioo 0 ⌈2 * Q⌉₊, F q := by
+    rw [sum_dfiEquation24MainTotal_eq_sum_dfiEquation27Physical
+      w a b h ha hb hab (dfiLocalizedWeight f φ h), hset]
+  have hSeries : dfiEquation27CentralSeries a b h
+      (dfiLocalizedWeight f φ h) = ∑' q : ℕ, G q := by
+    rfl
+  have hdecomp :=
+    sum_Ioo_zero_sub_tsum_eq_small_error_add_large_sub_tail
+      F G K ⌈2 * Q⌉₊ hKQ hG hG0
+  have hsmall' :
+      ‖∑ q ∈ Finset.Icc 1 K, (F q - G q)‖ ≤
+        dfiEquation27InterpolatedSmallError
+          (dfiEquation27SmallProfileConstant
+            D Eprofile j Cpsi CpsiSucc Cf Cφ)
+          Q X Y U rho a b h K j := by
+    have heq :
+        (∑ q ∈ Finset.Icc 1 K, (F q - G q)) =
+          ∑ q ∈ Finset.Icc 1 K,
+            (c * dfiEquation27ArithmeticCoefficient a b h q) *
+              (physical q - central q) := by
+      apply Finset.sum_congr rfl
+      intro q hq
+      dsimp [F, G]
+      ring
+    rw [heq]
+    simpa only [dfiEquation27InterpolatedSmallError, c, physical, central]
+      using hsmall
+  have hlarge' :
+      ‖∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q‖ ≤
+        dfiEquation27InterpolatedPhysicalError
+          (dfiEquation27PhysicalMainProfileConstant Cf Cφ Cw)
+          Q X Y rho a b h K := by
+    have hFeq : (∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊, F q) =
+        ∑ q ∈ Finset.Ioo K ⌈2 * Q⌉₊,
+          (((a : ℂ) * b)⁻¹ *
+            dfiEquation27ArithmeticCoefficient a b h q) *
+            dfiEquation27PhysicalMainIntegral w q a b
+              (dfiReducedDenominator a q) (dfiReducedDenominator b q)
+              (dfiLocalizedWeight f φ (h : ℝ)) (h : ℝ) := by
+      rfl
+    rw [hFeq]
+    exact hlarge
+  have hGshift : Summable (fun n : ℕ => G (K + (n + 1))) := by
+    have hs := (summable_nat_add_iff (K + 1)).2 hG
+    simpa [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hs
+  have htailNorm :
+      ‖∑' n : ℕ, G (K + (n + 1))‖ ≤
+        ∑' n : ℕ, ‖G (K + (n + 1))‖ :=
+    norm_tsum_le_tsum_norm hGshift.norm
+  have htail' :
+      ‖∑' n : ℕ, G (K + (n + 1))‖ ≤
+        dfiEquation27InterpolatedCentralTail
+          (dfiEquation27CentralProfileConstant Cf Cφ)
+          X Y rho alpha theta beta a b h K := by
     exact htailNorm.trans (by
       simpa only [dfiEquation27InterpolatedCentralTail,
         G, c, central, dfiEquation27CentralSummand] using htail)

@@ -3,6 +3,7 @@ import Mathlib.Analysis.Calculus.Deriv.Support
 import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
 import Mathlib.Analysis.Normed.Group.Bounded
 import RiemannZeta.GuthMaynard.DFIDelta
+import RiemannZeta.GuthMaynard.DFIEstimates
 import RiemannZeta.GuthMaynard.DFIEquation21
 
 open Complex Set
@@ -841,5 +842,145 @@ theorem exists_dfiUniformDeltaWeight_profile :
       dsimp [D]
       rw [pow_succ, mul_inv_rev, inv_pow]
       ring
+
+/-! ## Uniform quotient profile for the canonical equation-(9) family -/
+
+/-- The fixed unit-scale removable quotient underlying every scaled
+`dfiUniformDeltaWeight`. -/
+noncomputable def dfiUnitDeltaQuotient (u : ℝ) : ℝ :=
+  dfiUnitDeltaProfile u / u
+
+theorem dfiUnitDeltaQuotient_eventuallyEq_zero_at_zero :
+    dfiUnitDeltaQuotient =ᶠ[𝓝 (0 : ℝ)] 0 := by
+  filter_upwards [Metric.ball_mem_nhds (0 : ℝ) (by norm_num : (0 : ℝ) < 1)]
+    with u hu
+  have habs : |u| < 1 := by
+    simpa [Metric.mem_ball, Real.dist_eq] using hu
+  have hprofile : dfiUnitDeltaProfile u = 0 := by
+    by_contra hne
+    have hs := dfiUnitDeltaProfile_support_annulus hne
+    change 1 ≤ |u| ∧ |u| ≤ 2 at hs
+    exact (not_lt_of_ge hs.1) habs
+  simp [dfiUnitDeltaQuotient, hprofile]
+
+theorem dfiUnitDeltaQuotient_smooth :
+    ContDiff ℝ ∞ dfiUnitDeltaQuotient := by
+  rw [contDiff_iff_contDiffAt]
+  intro u
+  by_cases hu : u = 0
+  · subst u
+    exact (contDiffAt_const (𝕜 := ℝ) (x := (0 : ℝ)) (c := (0 : ℝ))
+      (n := (∞ : WithTop ℕ∞))).congr_of_eventuallyEq
+        dfiUnitDeltaQuotient_eventuallyEq_zero_at_zero
+  · exact dfiUnitDeltaProfile_smooth.contDiffAt.div contDiffAt_id hu
+
+theorem dfiUnitDeltaQuotient_hasCompactSupport :
+    HasCompactSupport dfiUnitDeltaQuotient := by
+  have hunitCompact : HasCompactSupport dfiUnitDeltaProfile := by
+    have hp : HasCompactSupport (dfiUnitDeltaBump : ℝ → ℝ) :=
+      dfiUnitDeltaBump.hasCompactSupport
+    have hn : HasCompactSupport (fun x : ℝ ↦ dfiUnitDeltaBump (-x)) := by
+      convert hp.comp_smul (c := (-1 : ℝ)) (by norm_num) using 1
+      funext x
+      simp only [neg_one_smul]
+    simpa only [dfiUnitDeltaProfile] using hp.add hn
+  apply HasCompactSupport.mono hunitCompact
+  intro u hu
+  by_contra hprofile
+  have hz : dfiUnitDeltaProfile u = 0 := by
+    simpa [Function.mem_support] using hprofile
+  exact hu (by simp [dfiUnitDeltaQuotient, hz])
+
+/-- Exact scaling identity for the quotient in DFI equation (12). -/
+theorem dfiWeightQuotient_dfiUniformDeltaWeight
+    {Q : ℝ} (hQ : 8 ≤ Q) (u : ℝ) :
+    dfiWeightQuotient (dfiUniformDeltaWeight Q hQ) u =
+      (dfiUniformDeltaNormalizer Q)⁻¹ * Q⁻¹ *
+        dfiUnitDeltaQuotient (Q⁻¹ * u) := by
+  have hQ0 : Q ≠ 0 := by linarith
+  by_cases hu : u = 0
+  · subst u
+    simp [dfiWeightQuotient, dfiUnitDeltaQuotient]
+  · unfold dfiWeightQuotient dfiUnitDeltaQuotient
+    change ((dfiUniformDeltaNormalizer Q)⁻¹ *
+        dfiUnitDeltaProfile (Q⁻¹ * u)) / u = _
+    field_simp [hQ0, hu]
+
+theorem iteratedDeriv_dfiWeightQuotient_dfiUniformDeltaWeight
+    {Q : ℝ} (hQ : 8 ≤ Q) (j : ℕ) (u : ℝ) :
+    iteratedDeriv j (dfiWeightQuotient (dfiUniformDeltaWeight Q hQ)) u =
+      (dfiUniformDeltaNormalizer Q)⁻¹ * Q⁻¹ * Q⁻¹ ^ j *
+        iteratedDeriv j dfiUnitDeltaQuotient (Q⁻¹ * u) := by
+  let A : ℝ := (dfiUniformDeltaNormalizer Q)⁻¹ * Q⁻¹
+  have hfun : dfiWeightQuotient (dfiUniformDeltaWeight Q hQ) =
+      fun x : ℝ ↦ A * dfiUnitDeltaQuotient (Q⁻¹ * x) := by
+    funext x
+    simpa only [A] using dfiWeightQuotient_dfiUniformDeltaWeight hQ x
+  have hcomp : ContDiffAt ℝ j
+      (fun x : ℝ ↦ dfiUnitDeltaQuotient (Q⁻¹ * x)) u :=
+    (dfiUnitDeltaQuotient_smooth.comp
+      (contDiff_const.mul contDiff_id)).contDiffAt.of_le
+        (show (j : ℕ∞ω) ≤ ∞ from mod_cast le_top)
+  rw [hfun, iteratedDeriv_const_mul A hcomp]
+  have hchain := congrFun
+    (iteratedDeriv_comp_const_mul
+      (dfiUnitDeltaQuotient_smooth.of_le
+        (show (j : ℕ∞ω) ≤ ∞ from mod_cast le_top)) Q⁻¹) u
+  rw [hchain]
+  dsimp [A]
+  ring
+
+/-- One quotient-derivative profile works simultaneously for the canonical
+equation-(9) weights at every `Q ≥ 8`. -/
+theorem exists_dfiUniformDeltaWeight_quotient_profile :
+    ∃ E : ℕ → ℝ, ∀ (Q : ℝ) (hQ : 8 ≤ Q),
+      DFIWeightQuotientProfile (dfiUniformDeltaWeight Q hQ) E := by
+  choose B hB using fun j ↦
+    (dfiUnitDeltaQuotient_smooth.continuous_iteratedDeriv j
+      (show (j : ℕ∞ω) ≤ ∞ from mod_cast le_top)).bounded_above_of_compact_support
+      (hasCompactSupport_iteratedDeriv dfiUnitDeltaQuotient
+        dfiUnitDeltaQuotient_hasCompactSupport j)
+  let E : ℕ → ℝ := fun j ↦ 8 * (max (B j) 0 + 1)
+  have hE : ∀ j, 0 < E j := by
+    intro j
+    dsimp [E]
+    have := le_max_right (B j) 0
+    positivity
+  refine ⟨E, ?_⟩
+  intro Q hQ
+  refine ⟨hE, ?_⟩
+  intro j u
+  have hQpos : 0 < Q := by linarith
+  have hNormPos := dfiUniformDeltaNormalizer_pos hQ
+  have hNormLower := dfiUniformDeltaNormalizer_lower hQ
+  have hNormInv : (dfiUniformDeltaNormalizer Q)⁻¹ ≤ 8 * Q⁻¹ := by
+    calc
+      (dfiUniformDeltaNormalizer Q)⁻¹ ≤ (Q / 8)⁻¹ :=
+        (inv_le_inv₀ hNormPos (by positivity : 0 < Q / 8)).2 hNormLower
+      _ = 8 * Q⁻¹ := by field_simp [hQpos.ne']
+  have hB' : ‖iteratedDeriv j dfiUnitDeltaQuotient (Q⁻¹ * u)‖ ≤
+      max (B j) 0 + 1 :=
+    (hB j _).trans ((le_max_left (B j) 0).trans (by linarith))
+  rw [iteratedDeriv_dfiWeightQuotient_dfiUniformDeltaWeight hQ]
+  have hQinv : 0 ≤ Q⁻¹ := inv_nonneg.mpr hQpos.le
+  have hNormInvNonneg : 0 ≤ (dfiUniformDeltaNormalizer Q)⁻¹ :=
+    inv_nonneg.mpr hNormPos.le
+  calc
+    ‖(dfiUniformDeltaNormalizer Q)⁻¹ * Q⁻¹ * Q⁻¹ ^ j *
+        iteratedDeriv j dfiUnitDeltaQuotient (Q⁻¹ * u)‖ =
+      (dfiUniformDeltaNormalizer Q)⁻¹ * Q⁻¹ * Q⁻¹ ^ j *
+        ‖iteratedDeriv j dfiUnitDeltaQuotient (Q⁻¹ * u)‖ := by
+          rw [norm_mul, norm_mul, norm_mul, Real.norm_eq_abs,
+            Real.norm_eq_abs, Real.norm_eq_abs,
+            abs_of_nonneg hNormInvNonneg, abs_of_nonneg hQinv,
+            abs_of_nonneg (pow_nonneg hQinv j)]
+    _ ≤ (8 * Q⁻¹) * Q⁻¹ * Q⁻¹ ^ j * (max (B j) 0 + 1) := by
+      gcongr
+    _ = E j * (Q ^ (j + 2))⁻¹ := by
+      dsimp [E]
+      rw [show Q ^ (j + 2) = Q ^ j * Q * Q by
+        rw [show j + 2 = j + 1 + 1 by omega, pow_succ, pow_succ]]
+      rw [inv_pow]
+      field_simp [hQpos.ne']
 
 end RiemannZeta.GuthMaynard

@@ -185,6 +185,16 @@ theorem integral_abs_iteratedDeriv_dfiWeight_le_of_profile
         (2 * Q - -(2 * Q)) * (D j * (Q ^ (j + 1))⁻¹) := h
     _ = 4 * D j * Q * (Q ^ (j + 1))⁻¹ := by ring
 
+/-- A scale-uniform derivative profile for the removable quotient `w(r)/r`.
+This is the extra piece of equation-(13) data used by the first remainder in
+DFI equation (15).  Keeping it explicit prevents the equation-(18) constant
+from being selected separately after the physical scale `Q`. -/
+structure DFIWeightQuotientProfile {Q : ℝ} (w : DFIDeltaWeight Q)
+    (E : ℕ → ℝ) : Prop where
+  positive : ∀ j, 0 < E j
+  bound : ∀ j r, ‖iteratedDeriv j (dfiWeightQuotient w) r‖ ≤
+    E j * (Q ^ (j + 2))⁻¹
+
 /-- Every derivative of the removable quotient `w(r)/r` is supported in
 the same symmetric cutoff interval. -/
 theorem support_iteratedDeriv_dfiWeightQuotient_subset
@@ -203,6 +213,31 @@ theorem support_iteratedDeriv_dfiWeightQuotient_subset
     intro hzero
     exact hy (by simp [dfiWeightQuotient, hzero])
   exact abs_le.mp (w.support_annulus hwy).2
+
+/-- Integrated quotient-derivative estimate with the same scale-uniform
+profile entry as the pointwise estimate. -/
+theorem integral_abs_dfiWeightQuotient_derivative_le_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {E : ℕ → ℝ}
+    (hE : DFIWeightQuotientProfile w E) (j : ℕ) :
+    (∫ r : ℝ, |iteratedDeriv j (dfiWeightQuotient w) r|) ≤
+      4 * E j * Q * (Q ^ (j + 2))⁻¹ := by
+  have hcont : Continuous
+      (iteratedDeriv j (dfiWeightQuotient w)) :=
+    (contDiff_dfiWeightQuotient w).continuous_iteratedDeriv j
+      (WithTop.coe_le_coe.mpr (le_of_lt (ENat.coe_lt_top j)))
+  have hbound : ∀ r : ℝ,
+      |iteratedDeriv j (dfiWeightQuotient w) r| ≤
+        E j * (Q ^ (j + 2))⁻¹ := by
+    intro r
+    simpa [Real.norm_eq_abs] using hE.bound j r
+  have h := integral_abs_le_interval_length_mul
+    (iteratedDeriv j (dfiWeightQuotient w)) hcont
+    (show -(2 * Q) ≤ 2 * Q by nlinarith [w.Q_pos.le])
+    (support_iteratedDeriv_dfiWeightQuotient_subset w j) hbound
+  calc
+    (∫ r : ℝ, |iteratedDeriv j (dfiWeightQuotient w) r|) ≤
+        (2 * Q - -(2 * Q)) * (E j * (Q ^ (j + 2))⁻¹) := h
+    _ = 4 * E j * Q * (Q ^ (j + 2))⁻¹ := by ring
 
 /-- The scale bound for the derivatives of `w(r)/r`.  The constant is an
 explicit supremum on the compact support; the power `Q^(-j-2)` records the
@@ -366,6 +401,68 @@ theorem dfiEquation14
       rw [show j + 1 + 1 = (j + 1) + 1 by omega, pow_succ]
       field_simp
 
+/-- Profile-explicit DFI equation (14).  The periodic-factor bound and the
+cutoff derivative profile are chosen before the physical scale. -/
+theorem dfiEquation14_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ} (j : ℕ)
+    (hD : DFIDeltaWeightProfile w D)
+    {Cpsi : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ Cpsi) :
+    |(∫ r in Set.Ioi (0 : ℝ), w r) - 1| ≤
+      (4 * Cpsi * D (j + 1)) * (Q ^ (j + 1))⁻¹ := by
+  have hRnonneg : (0 : ℝ) ≤ dfiDeltaRadius Q 0 := Nat.cast_nonneg _
+  have htruncate :
+      (∫ r in (0 : ℝ)..(dfiDeltaRadius Q 0), w r) =
+        ∫ r in Set.Ioi (0 : ℝ), w r := by
+    apply intervalIntegral_eq_integral_Ioi_of_eq_zero_above _ hRnonneg
+    intro r hr
+    apply w.eq_zero_of_two_mul_lt_abs
+    have hR : 2 * Q < (dfiDeltaRadius Q 0 : ℝ) := by
+      simpa using dfiDeltaRadius_spec (Q := Q) (u := (0 : ℝ))
+    have hrpos : 0 < r := (mul_pos two_pos w.Q_pos).trans (hR.trans hr)
+    simpa [abs_of_pos hrpos] using hR.trans hr
+  have hidentity := dfiWeight_integral_eq_one_sub_remainder w (j + 1)
+    (Nat.succ_le_succ (Nat.zero_le j))
+  rw [htruncate] at hidentity
+  have hcont : Continuous (iteratedDeriv (j + 1) w.toFun) :=
+    w.smooth.continuous_iteratedDeriv (j + 1)
+      (WithTop.coe_le_coe.mpr (le_of_lt (ENat.coe_lt_top (j + 1))))
+  have hcomp : HasCompactSupport (iteratedDeriv (j + 1) w.toFun) := by
+    have haux : ∀ k : ℕ, HasCompactSupport (iteratedDeriv k w.toFun) := by
+      intro k
+      induction k with
+      | zero => simpa using w.hasCompactSupport
+      | succ k ih => rw [iteratedDeriv_succ]; exact ih.deriv
+    exact haux (j + 1)
+  have hrem := abs_intervalIntegral_dfiPsi_mul_le
+    (j + 1) (iteratedDeriv (j + 1) w.toFun) hcont hcomp
+    hRnonneg hCpsi.le hpsi
+  have hdiff :
+      |(∫ r in Set.Ioi (0 : ℝ), w r) - 1| =
+        |∫ r in (0 : ℝ)..(dfiDeltaRadius Q 0),
+          dfiPsi (j + 1) r * iteratedDeriv (j + 1) w.toFun r| := by
+    rw [hidentity]
+    simp only [sub_eq_add_neg]
+    rw [show 1 + -((-1 : ℝ) ^ (j + 1 + 1) *
+        ∫ r in (0 : ℝ)..(dfiDeltaRadius Q 0),
+          dfiPsi (j + 1) r * iteratedDeriv (j + 1) w.toFun r) + -1 =
+        -((-1 : ℝ) ^ (j + 2) *
+          ∫ r in (0 : ℝ)..(dfiDeltaRadius Q 0),
+            dfiPsi (j + 1) r * iteratedDeriv (j + 1) w.toFun r) by ring]
+    rw [abs_neg, abs_mul, abs_pow, abs_neg, abs_one, one_pow, one_mul]
+  rw [hdiff]
+  calc
+    _ ≤ Cpsi *
+        ∫ r : ℝ, |iteratedDeriv (j + 1) w.toFun r| := hrem
+    _ ≤ Cpsi * (4 * D (j + 1) * Q * (Q ^ (j + 1 + 1))⁻¹) :=
+      mul_le_mul_of_nonneg_left
+        (integral_abs_iteratedDeriv_dfiWeight_le_of_profile hD (j + 1))
+        hCpsi.le
+    _ = (4 * Cpsi * D (j + 1)) * (Q ^ (j + 1))⁻¹ := by
+      have hQ : Q ≠ 0 := w.Q_pos.ne'
+      rw [show j + 1 + 1 = (j + 1) + 1 by omega, pow_succ]
+      field_simp
+
 /-- The first Euler--Maclaurin remainder in DFI (12), before multiplication
 by the test-function mass, is controlled by the quotient-derivative `L¹`
 norm. -/
@@ -432,6 +529,66 @@ theorem abs_dfi_first_remainder_le
       dsimp [C]
       ring
 
+/-- Profile-explicit first Euler--Maclaurin remainder in DFI equation (15). -/
+theorem abs_dfi_first_remainder_le_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {E : ℕ → ℝ}
+    (hE : DFIWeightQuotientProfile w E) (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi) :
+    ∀ q : ℕ,
+      |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          iteratedDeriv j (dfiWeightQuotient w) r| ≤
+        (4 * Cpsi * E j) * Q * (Q ^ (j + 2))⁻¹ := by
+  intro q
+  have hrem := integrableOn_dfi_first_remainder w q j hj
+  have hderivcont : Continuous
+      (iteratedDeriv j (dfiWeightQuotient w)) :=
+    (contDiff_dfiWeightQuotient w).continuous_iteratedDeriv j
+      (WithTop.coe_le_coe.mpr (le_of_lt (ENat.coe_lt_top j)))
+  have hderivcomp : HasCompactSupport
+      (iteratedDeriv j (dfiWeightQuotient w)) := by
+    have haux : ∀ k : ℕ, HasCompactSupport
+        (iteratedDeriv k (dfiWeightQuotient w)) := by
+      intro k
+      induction k with
+      | zero => simpa using dfiWeightQuotient_hasCompactSupport w
+      | succ k ih => rw [iteratedDeriv_succ]; exact ih.deriv
+    exact haux j
+  have habsint : Integrable (fun r : ℝ =>
+      |iteratedDeriv j (dfiWeightQuotient w) r|) :=
+    hderivcont.abs.integrable_of_hasCompactSupport (by
+      change HasCompactSupport
+        (abs ∘ iteratedDeriv j (dfiWeightQuotient w))
+      exact hderivcomp.comp_left (by simp))
+  have hmajor : IntegrableOn (fun r : ℝ => Cpsi *
+      |iteratedDeriv j (dfiWeightQuotient w) r|) (Set.Ioi 0) :=
+    (habsint.const_mul Cpsi).integrableOn
+  calc
+    |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          iteratedDeriv j (dfiWeightQuotient w) r| ≤
+        ∫ r in Set.Ioi (0 : ℝ),
+          |dfiPsi j (r / q) *
+            iteratedDeriv j (dfiWeightQuotient w) r| :=
+      MeasureTheory.abs_integral_le_integral_abs
+    _ ≤ ∫ r in Set.Ioi (0 : ℝ), Cpsi *
+          |iteratedDeriv j (dfiWeightQuotient w) r| := by
+      apply MeasureTheory.setIntegral_mono_on hrem.norm hmajor measurableSet_Ioi
+      intro r _hr
+      rw [Real.norm_eq_abs, abs_mul]
+      exact mul_le_mul_of_nonneg_right (hpsi (r / q)) (abs_nonneg _)
+    _ ≤ ∫ r : ℝ, Cpsi *
+          |iteratedDeriv j (dfiWeightQuotient w) r| :=
+      setIntegral_le_integral_of_nonneg _ (habsint.const_mul Cpsi)
+        (fun r => mul_nonneg hCpsi.le (abs_nonneg _)) _
+    _ = Cpsi * ∫ r : ℝ,
+          |iteratedDeriv j (dfiWeightQuotient w) r| := by
+      rw [MeasureTheory.integral_const_mul]
+    _ ≤ Cpsi * (4 * E j * Q * (Q ^ (j + 2))⁻¹) :=
+      mul_le_mul_of_nonneg_left
+        (integral_abs_dfiWeightQuotient_derivative_le_of_profile hE j)
+        hCpsi.le
+    _ = (4 * Cpsi * E j) * Q * (Q ^ (j + 2))⁻¹ := by ring
+
 /-- DFI equation (15).  The exact identity supplies `q^(j-1)`; since
 `q ≥ 1`, this implies the paper's displayed (slightly weaker) `q^j` bound. -/
 theorem dfiEquation15
@@ -480,6 +637,58 @@ theorem dfiEquation15
             (C * (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u|) := by ring
         _ ≤ (q : ℝ) ^ j *
             (C * (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u|) :=
+          mul_le_mul_of_nonneg_right hqpow hfactor
+        _ = _ := by ring
+
+/-- Profile-explicit DFI equation (15), uniform in the physical scale. -/
+theorem dfiEquation15_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {E : ℕ → ℝ}
+    (hE : DFIWeightQuotientProfile w E) (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi) :
+    ∀ (q : ℕ), 0 < q → ∀ f : ℝ → ℝ,
+      |(q : ℝ) ^ (j - 1) * (∫ u : ℝ, f u) *
+          (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+            iteratedDeriv j (dfiWeightQuotient w) r)| ≤
+        (4 * Cpsi * E j) * (q : ℝ) ^ j *
+          (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u| := by
+  intro q hq f
+  have hrem := abs_dfi_first_remainder_le_of_profile hE j hj hCpsi hpsi q
+  have hqreal : (1 : ℝ) ≤ q := by exact_mod_cast hq
+  have hqpow : (q : ℝ) ^ (j - 1) ≤ (q : ℝ) ^ j := by
+    rw [show j = (j - 1) + 1 by omega, pow_succ]
+    exact le_mul_of_one_le_right (pow_nonneg (Nat.cast_nonneg q) _) hqreal
+  have hQ : Q ≠ 0 := w.Q_pos.ne'
+  rw [abs_mul, abs_mul,
+    abs_of_nonneg (pow_nonneg (Nat.cast_nonneg q) _)]
+  calc
+    (q : ℝ) ^ (j - 1) * |∫ u : ℝ, f u| *
+        |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          iteratedDeriv j (dfiWeightQuotient w) r| ≤
+      (q : ℝ) ^ (j - 1) * |∫ u : ℝ, f u| *
+        ((4 * Cpsi * E j) * Q * (Q ^ (j + 2))⁻¹) := by
+      gcongr
+    _ = (4 * Cpsi * E j) * (q : ℝ) ^ (j - 1) *
+        (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u| := by
+      rw [show j + 2 = (j + 1) + 1 by omega, pow_succ]
+      field_simp
+    _ ≤ (4 * Cpsi * E j) * (q : ℝ) ^ j *
+        (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u| := by
+      have hfactor : 0 ≤ (4 * Cpsi * E j) *
+          (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u| := by
+        have hEpos := hE.positive j
+        exact mul_nonneg
+          (mul_nonneg
+            (mul_nonneg (mul_nonneg (by norm_num) hCpsi.le) hEpos.le)
+            (inv_nonneg.mpr (pow_nonneg w.Q_pos.le _)))
+          (abs_nonneg _)
+      calc
+        (4 * Cpsi * E j) * (q : ℝ) ^ (j - 1) *
+            (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u| =
+          (q : ℝ) ^ (j - 1) * ((4 * Cpsi * E j) *
+            (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u|) := by ring
+        _ ≤ (q : ℝ) ^ j * ((4 * Cpsi * E j) *
+            (Q ^ (j + 1))⁻¹ * |∫ u : ℝ, f u|) :=
           mul_le_mul_of_nonneg_right hqpow hfactor
         _ = _ := by ring
 
@@ -734,6 +943,142 @@ theorem integral_Ioi_abs_weight_scaled_deriv_le
       field_simp [w.Q_pos.ne']
       ring
 
+/-- Profile-explicit absolute double-integral bound used in DFI equation
+(16).  Its constant depends only on the zeroth entry of the cutoff profile
+and the derivative order. -/
+theorem integral_Ioi_abs_weight_scaled_deriv_le_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {Dprofile : ℕ → ℝ}
+    (hDprofile : DFIDeltaWeightProfile w Dprofile) (j : ℕ)
+    (f : ℝ → ℝ) (U : ℕ)
+    (hf : ContDiff ℝ ∞ f) (hfc : HasCompactSupport f)
+    (hsupp : tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ)) (hj : 1 ≤ j) :
+    (∫ r in Set.Ioi (0 : ℝ), ∫ u : ℝ,
+      |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+      (4 * Dprofile 0 * 2 ^ j) * Q ^ (j - 1) *
+        ∫ v : ℝ, |iteratedDeriv j f v| := by
+  let Dmass : ℝ := ∫ v : ℝ, |iteratedDeriv j f v|
+  have hfdcont : Continuous (iteratedDeriv j f) :=
+    hf.continuous_iteratedDeriv j
+      (WithTop.coe_le_coe.mpr (le_of_lt (ENat.coe_lt_top j)))
+  have hfdcomp : HasCompactSupport (iteratedDeriv j f) := by
+    have haux : ∀ k : ℕ, HasCompactSupport (iteratedDeriv k f) := by
+      intro k
+      induction k with
+      | zero => simpa using hfc
+      | succ k ih => rw [iteratedDeriv_succ]; exact ih.deriv
+    exact haux j
+  have hfdint : Integrable (fun v : ℝ => |iteratedDeriv j f v|) :=
+    hfdcont.abs.integrable_of_hasCompactSupport (by
+      change HasCompactSupport (abs ∘ iteratedDeriv j f)
+      exact hfdcomp.comp_left (by simp))
+  have hDnonneg : 0 ≤ Dmass := integral_nonneg fun _ => abs_nonneg _
+  have hwcont : Continuous (fun u : ℝ => |w u|) := w.smooth.continuous.abs
+  have hwint : Integrable (fun u : ℝ => |w u|) :=
+    hwcont.integrable_of_hasCompactSupport (by
+      change HasCompactSupport (abs ∘ w.toFun)
+      exact w.hasCompactSupport.comp_left (by simp))
+  have hKint := integrable_dfi_abs_scaled_derivative_kernel
+    w f hf U j hsupp
+  have houterInt : Integrable (fun r : ℝ => ∫ u : ℝ,
+      |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) :=
+    hKint.integral_prod_right
+  have houterNonneg : ∀ r : ℝ, 0 ≤ ∫ u : ℝ,
+      |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|) := by
+    intro r
+    apply integral_nonneg
+    intro u
+    positivity
+  have hrestrict :
+      (∫ r in Set.Ioi (0 : ℝ), ∫ u : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+      ∫ r : ℝ, ∫ u : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|) :=
+    setIntegral_le_integral_of_nonneg _ houterInt houterNonneg _
+  have hpoint : ∀ u : ℝ,
+      (∫ r : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+      |w u| * ((2 * Q) ^ j * Q⁻¹ * Dmass) := by
+    intro u
+    by_cases hwu : w u = 0
+    · simp [hwu]
+    · have huann := w.support_annulus hwu
+      have huPos : 0 < |u| := w.Q_pos.trans_le huann.1
+      have huPow : |u| ^ j ≤ (2 * Q) ^ j :=
+        pow_le_pow_left₀ (abs_nonneg u) huann.2 j
+      have huInv : |u⁻¹| ≤ Q⁻¹ := by
+        rw [abs_inv]
+        exact (inv_le_inv₀ huPos w.Q_pos).2 huann.1
+      calc
+        (∫ r : ℝ,
+            |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) =
+          ∫ r : ℝ, (|w u| * |u| ^ j) *
+            |iteratedDeriv j f (r * u)| := by
+          apply MeasureTheory.integral_congr_ae
+          filter_upwards [] with r
+          ring
+        _ = (|w u| * |u| ^ j) *
+            (∫ r : ℝ, |iteratedDeriv j f (r * u)|) := by
+          rw [MeasureTheory.integral_const_mul]
+        _ = |w u| * |u| ^ j * (|u⁻¹| * Dmass) := by
+          rw [integral_abs_iteratedDeriv_mul_right]
+        _ ≤ |w u| * ((2 * Q) ^ j * Q⁻¹ * Dmass) := by
+          have hwuNonneg : 0 ≤ |w u| := abs_nonneg _
+          have hQinv : 0 ≤ Q⁻¹ := inv_nonneg.mpr w.Q_pos.le
+          calc
+            |w u| * |u| ^ j * (|u⁻¹| * Dmass) =
+                |w u| * (|u| ^ j * |u⁻¹| * Dmass) := by ring
+            _ ≤ |w u| * ((2 * Q) ^ j * Q⁻¹ * Dmass) := by
+              apply mul_le_mul_of_nonneg_left _ hwuNonneg
+              apply mul_le_mul_of_nonneg_right _ hDnonneg
+              exact mul_le_mul huPow huInv (abs_nonneg _)
+                (pow_nonneg (mul_nonneg zero_le_two w.Q_pos.le) _)
+  have hinnerInt : Integrable (fun u : ℝ => ∫ r : ℝ,
+      |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) :=
+    hKint.integral_prod_left
+  have hA : 0 ≤ (2 * Q) ^ j * Q⁻¹ * Dmass :=
+    mul_nonneg
+      (mul_nonneg (pow_nonneg (mul_nonneg zero_le_two w.Q_pos.le) _)
+        (inv_nonneg.mpr w.Q_pos.le))
+      hDnonneg
+  have hmajorInt : Integrable (fun u : ℝ =>
+      |w u| * ((2 * Q) ^ j * Q⁻¹ * Dmass)) :=
+    hwint.mul_const _
+  have hwhole :
+      (∫ r : ℝ, ∫ u : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+      (∫ u : ℝ, |w u|) * ((2 * Q) ^ j * Q⁻¹ * Dmass) := by
+    rw [dfi_abs_scaled_derivative_swap w f hf U j hsupp]
+    calc
+      (∫ u : ℝ, ∫ r : ℝ,
+          |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+        ∫ u : ℝ, |w u| * ((2 * Q) ^ j * Q⁻¹ * Dmass) := by
+          exact MeasureTheory.integral_mono hinnerInt hmajorInt hpoint
+      _ = _ := by rw [MeasureTheory.integral_mul_const]
+  have hwL1' : (∫ u : ℝ, |w u|) ≤ 4 * Dprofile 0 := by
+    calc
+      (∫ u : ℝ, |w u|) ≤
+          4 * Dprofile 0 * Q * (Q ^ (0 + 1))⁻¹ :=
+        integral_abs_iteratedDeriv_dfiWeight_le_of_profile hDprofile 0
+      _ = 4 * Dprofile 0 := by
+        simp only [zero_add, pow_one]
+        field_simp [w.Q_pos.ne']
+  calc
+    (∫ r in Set.Ioi (0 : ℝ), ∫ u : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)) ≤
+      ∫ r : ℝ, ∫ u : ℝ,
+        |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|) := hrestrict
+    _ ≤ (∫ u : ℝ, |w u|) * ((2 * Q) ^ j * Q⁻¹ * Dmass) := hwhole
+    _ ≤ (4 * Dprofile 0) * ((2 * Q) ^ j * Q⁻¹ * Dmass) :=
+      mul_le_mul_of_nonneg_right hwL1' hA
+    _ = (4 * Dprofile 0 * 2 ^ j) * Q ^ (j - 1) * Dmass := by
+      let k := j - 1
+      have hjk : j = k + 1 := by dsimp [k]; omega
+      rw [hjk]
+      simp only [Nat.add_sub_cancel]
+      rw [pow_succ, mul_pow]
+      field_simp [w.Q_pos.ne']
+      ring
+
 /-- The second Euler--Maclaurin remainder in DFI (12), before its exterior
 power of `q`, is bounded by the scale-sensitive absolute kernel. -/
 theorem abs_dfi_second_remainder_le
@@ -853,6 +1198,122 @@ theorem dfiEquation16
         (mul_nonneg hC.le (pow_nonneg w.Q_pos.le _))
         (integral_nonneg fun _ => abs_nonneg _)
     _ = C * (q : ℝ) ^ j * Q ^ (j - 1) *
+        ∫ v : ℝ, |iteratedDeriv j f v| := by ring
+
+/-- Profile-explicit second Euler--Maclaurin remainder in DFI equation (16). -/
+theorem abs_dfi_second_remainder_le_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (q : ℕ) (f : ℝ → ℝ) (U : ℕ)
+    (hf : ContDiff ℝ ∞ f) (hfc : HasCompactSupport f)
+    (hsupp : tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ)) :
+    |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+        ∫ u : ℝ, w u *
+          (u ^ j * iteratedDeriv j f (r * u))| ≤
+      (Cpsi * (4 * D 0 * 2 ^ j)) * Q ^ (j - 1) *
+        ∫ v : ℝ, |iteratedDeriv j f v| := by
+  have hkernel := integral_Ioi_abs_weight_scaled_deriv_le_of_profile
+    hD j f U hf hfc hsupp (by omega)
+  let Kouter : ℝ → ℝ := fun r => ∫ u : ℝ,
+    |w u| * (|u| ^ j * |iteratedDeriv j f (r * u)|)
+  have hKint := integrable_dfi_abs_scaled_derivative_kernel
+    w f hf U j hsupp
+  have hKouterInt : Integrable Kouter := by
+    simpa [Kouter] using hKint.integral_prod_right
+  have hmajor : IntegrableOn (fun r : ℝ => Cpsi * Kouter r)
+      (Set.Ioi 0) := (hKouterInt.const_mul Cpsi).integrableOn
+  have hrem := integrableOn_dfi_second_remainder
+    w f hf U hsupp q j hj
+  have hpoint : ∀ r : ℝ,
+      |dfiPsi j (r / q) *
+          (∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u)))| ≤
+        Cpsi * Kouter r := by
+    intro r
+    have hinner :
+        |∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u))| ≤ Kouter r := by
+      calc
+        |∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u))| ≤
+          ∫ u : ℝ, |w u *
+            (u ^ j * iteratedDeriv j f (r * u))| :=
+          MeasureTheory.abs_integral_le_integral_abs
+        _ = Kouter r := by
+          dsimp [Kouter]
+          apply MeasureTheory.integral_congr_ae
+          filter_upwards [] with u
+          rw [abs_mul, abs_mul, abs_pow]
+    rw [abs_mul]
+    exact mul_le_mul (hpsi (r / q)) hinner (abs_nonneg _) hCpsi.le
+  calc
+    |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          ∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u))| ≤
+      ∫ r in Set.Ioi (0 : ℝ),
+        |dfiPsi j (r / q) *
+          ∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u))| :=
+      MeasureTheory.abs_integral_le_integral_abs
+    _ ≤ ∫ r in Set.Ioi (0 : ℝ), Cpsi * Kouter r := by
+      apply MeasureTheory.setIntegral_mono_on hrem.norm hmajor measurableSet_Ioi
+      intro r _hr
+      exact hpoint r
+    _ = Cpsi * ∫ r in Set.Ioi (0 : ℝ), Kouter r := by
+      rw [MeasureTheory.integral_const_mul]
+    _ ≤ Cpsi * ((4 * D 0 * 2 ^ j) * Q ^ (j - 1) *
+          ∫ v : ℝ, |iteratedDeriv j f v|) :=
+      mul_le_mul_of_nonneg_left hkernel hCpsi.le
+    _ = (Cpsi * (4 * D 0 * 2 ^ j)) * Q ^ (j - 1) *
+          ∫ v : ℝ, |iteratedDeriv j f v| := by ring
+
+/-- Profile-explicit DFI equation (16), uniform in the physical scale. -/
+theorem dfiEquation16_of_profile
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D) (j : ℕ) (hj : 2 ≤ j)
+    {Cpsi : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (q : ℕ) (hq : 0 < q) (f : ℝ → ℝ) (U : ℕ)
+    (hf : ContDiff ℝ ∞ f) (hfc : HasCompactSupport f)
+    (hsupp : tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ)) :
+    |(q : ℝ) ^ (j - 1) *
+        (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          ∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u)))| ≤
+      (Cpsi * (4 * D 0 * 2 ^ j)) * (q : ℝ) ^ j * Q ^ (j - 1) *
+        ∫ v : ℝ, |iteratedDeriv j f v| := by
+  have hrem := abs_dfi_second_remainder_le_of_profile
+    hD j hj hCpsi hpsi q f U hf hfc hsupp
+  have hqreal : (1 : ℝ) ≤ q := by exact_mod_cast hq
+  have hqpow : (q : ℝ) ^ (j - 1) ≤ (q : ℝ) ^ j := by
+    rw [show j = (j - 1) + 1 by omega, pow_succ]
+    exact le_mul_of_one_le_right (pow_nonneg (Nat.cast_nonneg q) _) hqreal
+  rw [abs_mul, abs_of_nonneg (pow_nonneg (Nat.cast_nonneg q) _)]
+  calc
+    (q : ℝ) ^ (j - 1) *
+        |∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          ∫ u : ℝ, w u *
+            (u ^ j * iteratedDeriv j f (r * u))| ≤
+      (q : ℝ) ^ (j - 1) *
+        ((Cpsi * (4 * D 0 * 2 ^ j)) * Q ^ (j - 1) *
+          ∫ v : ℝ, |iteratedDeriv j f v|) :=
+      mul_le_mul_of_nonneg_left hrem
+        (pow_nonneg (Nat.cast_nonneg q) _)
+    _ ≤ (q : ℝ) ^ j *
+        ((Cpsi * (4 * D 0 * 2 ^ j)) * Q ^ (j - 1) *
+          ∫ v : ℝ, |iteratedDeriv j f v|) := by
+      apply mul_le_mul_of_nonneg_right hqpow
+      have hD0 := hD.positive 0
+      exact mul_nonneg
+        (mul_nonneg
+          (mul_nonneg hCpsi.le
+            (mul_nonneg (mul_nonneg (by norm_num) hD0.le)
+              (pow_nonneg (by norm_num) _)))
+          (pow_nonneg w.Q_pos.le _))
+        (integral_nonneg fun _ => abs_nonneg _)
+    _ = (Cpsi * (4 * D 0 * 2 ^ j)) * (q : ℝ) ^ j * Q ^ (j - 1) *
         ∫ v : ℝ, |iteratedDeriv j f v| := by ring
 
 /-- Real iterated derivatives commute with the canonical embedding into
@@ -1349,5 +1810,194 @@ theorem dfiEquation18
     _ = C * E := by dsimp [C]; ring
     _ = C * (p * x * A + p * y * B) := rfl
     _ = _ := by rfl
+
+/-- DFI equation (18) with one constant chosen from fixed cutoff profiles
+before the physical scale, modulus, support radius, and test function. -/
+theorem dfiEquation18_of_profiles
+    {Q : ℝ} {w : DFIDeltaWeight Q} {D Eprofile : ℕ → ℝ}
+    (hD : DFIDeltaWeightProfile w D)
+    (hEprofile : DFIWeightQuotientProfile w Eprofile)
+    (U j : ℕ) (hj : 2 ≤ j)
+    {Cpsi CpsiSucc : ℝ} (hCpsi : 0 < Cpsi)
+    (hpsi : ∀ x : ℝ, |dfiPsi j x| ≤ Cpsi)
+    (hCpsiSucc : 0 < CpsiSucc)
+    (hpsiSucc : ∀ x : ℝ, |dfiPsi (j + 1) x| ≤ CpsiSucc) :
+    ∀ (q : ℕ), 0 < q → ∀ f : ℝ → ℝ,
+      ContDiff ℝ ∞ f → HasCompactSupport f →
+      tsupport f ⊆ Set.Icc (-(U : ℝ)) (U : ℝ) →
+      |dfiEquation12Left w q f - f 0| ≤
+        ((4 * CpsiSucc * D (j + 1)) * (2 + 2 * Real.pi) +
+            4 * Cpsi * Eprofile j +
+            Cpsi * (4 * D 0 * 2 ^ j)) *
+          ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, |f u|) +
+            (q : ℝ) ^ j * Q ^ (j - 1) *
+              ∫ u : ℝ, |iteratedDeriv j f u|) := by
+  intro q hq f hf hfc hsupp
+  let Cmass : ℝ := 4 * CpsiSucc * D (j + 1)
+  let Cfirst : ℝ := 4 * Cpsi * Eprofile j
+  let Csecond : ℝ := Cpsi * (4 * D 0 * 2 ^ j)
+  let Cpoint : ℝ := 2 + 2 * Real.pi
+  let C : ℝ := Cmass * Cpoint + Cfirst + Csecond
+  have hCmass : 0 < Cmass := by
+    dsimp [Cmass]
+    have := hD.positive (j + 1)
+    positivity
+  have hCfirst : 0 < Cfirst := by
+    dsimp [Cfirst]
+    have := hEprofile.positive j
+    positivity
+  have hCsecond : 0 < Csecond := by
+    dsimp [Csecond]
+    have := hD.positive 0
+    positivity
+  have hmass := dfiEquation14_of_profile j hD hCpsiSucc hpsiSucc
+  have hfirst'raw := dfiEquation15_of_profile
+    hEprofile j hj hCpsi hpsi q hq f
+  have hsecond'raw := dfiEquation16_of_profile
+    hD j hj hCpsi hpsi q hq f U hf hfc hsupp
+  let A : ℝ := ∫ u : ℝ, |f u|
+  let B : ℝ := ∫ u : ℝ, |iteratedDeriv j f u|
+  let p : ℝ := (q : ℝ) ^ j
+  let x : ℝ := (Q ^ (j + 1))⁻¹
+  let y : ℝ := Q ^ (j - 1)
+  let mass : ℝ := ∫ r in Set.Ioi (0 : ℝ), w r
+  let R₁ : ℝ := (q : ℝ) ^ (j - 1) * (∫ u : ℝ, f u) *
+    (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+      iteratedDeriv j (dfiWeightQuotient w) r)
+  let R₂ : ℝ := (q : ℝ) ^ (j - 1) *
+    (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+      ∫ u : ℝ, w u * (u ^ j * iteratedDeriv j f (r * u)))
+  let Escale : ℝ := p * x * A + p * y * B
+  have hA : 0 ≤ A := integral_nonneg fun _ => abs_nonneg _
+  have hB : 0 ≤ B := integral_nonneg fun _ => abs_nonneg _
+  have hp : 0 ≤ p := pow_nonneg (Nat.cast_nonneg q) _
+  have hx : 0 ≤ x := inv_nonneg.mpr (pow_nonneg w.Q_pos.le _)
+  have hy : 0 ≤ y := pow_nonneg w.Q_pos.le _
+  have hEscale : 0 ≤ Escale := by
+    dsimp [Escale]
+    positivity
+  have hqone : (1 : ℝ) ≤ q := by exact_mod_cast hq
+  have hpone : (1 : ℝ) ≤ p := by
+    dsimp [p]
+    exact one_le_pow₀ hqone
+  have hxleone : x ≤ 1 := by
+    dsimp [x]
+    exact (inv_le_one₀ (pow_pos w.Q_pos _)).2 (one_le_pow₀ w.one_le_Q)
+  have honeley : (1 : ℝ) ≤ y := by
+    dsimp [y]
+    exact one_le_pow₀ w.one_le_Q
+  have hxley : x ≤ y := hxleone.trans honeley
+  have hxlepx : x ≤ p * x := le_mul_of_one_le_left hx hpone
+  have hxlepy : x ≤ p * y :=
+    hxley.trans (le_mul_of_one_le_left hy hpone)
+  have hmassScale : x * (A + B) ≤ Escale := by
+    calc
+      x * (A + B) = x * A + x * B := by ring
+      _ ≤ (p * x) * A + (p * y) * B :=
+        add_le_add (mul_le_mul_of_nonneg_right hxlepx hA)
+          (mul_le_mul_of_nonneg_right hxlepy hB)
+      _ = Escale := by rfl
+  have hpoint := dfiEquation17 f hf hfc U hsupp (show 1 ≤ j by omega)
+  have hpoint' : |f 0| ≤ Cpoint * (A + B) := by
+    simpa [Cpoint, A, B] using hpoint
+  have hmass' : |mass - 1| ≤ Cmass * x := by
+    simpa [mass, Cmass, x] using hmass
+  have hmassTerm : |f 0 * (mass - 1)| ≤ (Cmass * Cpoint) * Escale := by
+    rw [abs_mul]
+    calc
+      |f 0| * |mass - 1| ≤ (Cpoint * (A + B)) * (Cmass * x) :=
+        mul_le_mul hpoint' hmass' (abs_nonneg _) (by positivity)
+      _ = (Cmass * Cpoint) * (x * (A + B)) := by ring
+      _ ≤ (Cmass * Cpoint) * Escale :=
+        mul_le_mul_of_nonneg_left hmassScale (by positivity)
+  have habsInt : |∫ u : ℝ, f u| ≤ A := by
+    dsimp [A]
+    exact MeasureTheory.abs_integral_le_integral_abs
+  have hfirst' : |R₁| ≤ Cfirst * (p * x * A) := by
+    calc
+      |R₁| ≤ Cfirst * p * x * |∫ u : ℝ, f u| := by
+        simpa [R₁, Cfirst, p, x] using hfirst'raw
+      _ ≤ Cfirst * p * x * A :=
+        mul_le_mul_of_nonneg_left habsInt (by positivity)
+      _ = Cfirst * (p * x * A) := by ring
+  have hsecond' : |R₂| ≤ Csecond * (p * y * B) := by
+    calc
+      |R₂| ≤ Csecond * p * y * B := by
+        simpa [R₂, Csecond, p, y, B] using hsecond'raw
+      _ = Csecond * (p * y * B) := by ring
+  have hfirstE : |R₁| ≤ Cfirst * Escale := by
+    exact hfirst'.trans (mul_le_mul_of_nonneg_left
+      (le_add_of_nonneg_right (by positivity)) hCfirst.le)
+  have hsecondE : |R₂| ≤ Csecond * Escale := by
+    exact hsecond'.trans (mul_le_mul_of_nonneg_left
+      (le_add_of_nonneg_left (by positivity)) hCsecond.le)
+  have houter := dfiEquation12_outer w q hq f hf hfc U hsupp j hj
+  have hfirstInt := (integrableOn_dfi_first_remainder w q j hj).const_mul
+    (∫ u : ℝ, f u)
+  have hsecondInt := integrableOn_dfi_second_remainder
+    w f hf U hsupp q j hj
+  have hpack :
+      (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+          ((∫ u : ℝ, f u) * iteratedDeriv j (dfiWeightQuotient w) r -
+            ∫ u : ℝ, w u * (u ^ j * iteratedDeriv j f (r * u)))) =
+        (∫ u : ℝ, f u) *
+            (∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+              iteratedDeriv j (dfiWeightQuotient w) r) -
+          ∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+            ∫ u : ℝ, w u * (u ^ j * iteratedDeriv j f (r * u)) := by
+    calc
+      _ = ∫ r in Set.Ioi (0 : ℝ),
+          (∫ u : ℝ, f u) *
+              (dfiPsi j (r / q) *
+                iteratedDeriv j (dfiWeightQuotient w) r) -
+            dfiPsi j (r / q) *
+              (∫ u : ℝ, w u *
+                (u ^ j * iteratedDeriv j f (r * u))) := by
+          apply MeasureTheory.setIntegral_congr_fun measurableSet_Ioi
+          intro r _
+          ring
+      _ = (∫ r in Set.Ioi (0 : ℝ),
+            (∫ u : ℝ, f u) *
+              (dfiPsi j (r / q) *
+                iteratedDeriv j (dfiWeightQuotient w) r)) -
+          ∫ r in Set.Ioi (0 : ℝ), dfiPsi j (r / q) *
+            (∫ u : ℝ, w u *
+              (u ^ j * iteratedDeriv j f (r * u))) := by
+          exact MeasureTheory.integral_sub hfirstInt hsecondInt
+      _ = _ := by rw [MeasureTheory.integral_const_mul]
+  have hdecomp :
+      dfiEquation12Left w q f - f 0 =
+        f 0 * (mass - 1) + (-1 : ℝ) ^ (j + 1) * R₁ -
+          (-1 : ℝ) ^ (j + 1) * R₂ := by
+    rw [houter, hpack]
+    dsimp [mass, R₁, R₂]
+    ring
+  rw [hdecomp]
+  have htriangle :
+      |f 0 * (mass - 1) + (-1 : ℝ) ^ (j + 1) * R₁ -
+          (-1 : ℝ) ^ (j + 1) * R₂| ≤
+        |f 0 * (mass - 1)| + |R₁| + |R₂| := by
+    calc
+      _ ≤ |f 0 * (mass - 1) + (-1 : ℝ) ^ (j + 1) * R₁| +
+          |-((-1 : ℝ) ^ (j + 1) * R₂)| := by
+        simpa [sub_eq_add_neg] using abs_add_le
+          (f 0 * (mass - 1) + (-1 : ℝ) ^ (j + 1) * R₁)
+          (-((-1 : ℝ) ^ (j + 1) * R₂))
+      _ ≤ (|f 0 * (mass - 1)| +
+          |(-1 : ℝ) ^ (j + 1) * R₁|) +
+          |-((-1 : ℝ) ^ (j + 1) * R₂)| :=
+        add_le_add (abs_add_le _ _) (le_refl _)
+      _ = |f 0 * (mass - 1)| + |R₁| + |R₂| := by simp
+  calc
+    _ ≤ |f 0 * (mass - 1)| + |R₁| + |R₂| := htriangle
+    _ ≤ (Cmass * Cpoint) * Escale + Cfirst * Escale + Csecond * Escale :=
+      add_le_add (add_le_add hmassTerm hfirstE) hsecondE
+    _ = C * Escale := by dsimp [C]; ring
+    _ = ((4 * CpsiSucc * D (j + 1)) * (2 + 2 * Real.pi) +
+          4 * Cpsi * Eprofile j + Cpsi * (4 * D 0 * 2 ^ j)) *
+        ((q : ℝ) ^ j * (Q ^ (j + 1))⁻¹ * (∫ u : ℝ, |f u|) +
+          (q : ℝ) ^ j * Q ^ (j - 1) *
+            ∫ u : ℝ, |iteratedDeriv j f u|) := by
+      rfl
 
 end RiemannZeta.GuthMaynard
