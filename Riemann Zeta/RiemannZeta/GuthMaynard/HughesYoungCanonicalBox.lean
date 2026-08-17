@@ -234,7 +234,7 @@ theorem exists_hughesYoungCanonicalRegularBox_scale_split
             (hughesYoungFullDyadicScale (j + 1)) h k
             (hughesYoungFullDyadicBound (i + 1))
             (hughesYoungFullDyadicBound (j + 1))‖ ≤
-          hughesYoungFarBoxMajorant CwSmall Dsmall Lsmall 0 T
+          hughesYoungSmallBoxMajorant CwSmall Dsmall Lsmall q T
             (hughesYoungFullDyadicScale (i + 1))
             (hughesYoungFullDyadicScale (j + 1)) ε h k
             (hughesYoungFullDyadicBound (i + 1))

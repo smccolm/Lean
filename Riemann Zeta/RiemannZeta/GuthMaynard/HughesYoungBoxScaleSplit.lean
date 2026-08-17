@@ -68,7 +68,7 @@ theorem norm_hughesYoungLocalizedOffDiagonalBox_le_largeMajorant
       field_simp [hq.ne']
 
 /-- Every physical dyadic box is routed either to native DFI with the
-optimized scale, or to the zero-derivative equation-(65) estimate. -/
+optimized scale, or to the arbitrary-order equation-(65) estimate. -/
 theorem exists_hughesYoungLocalizedOffDiagonalBox_scale_split
     (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) (j : ℕ) :
     ∃ Cγnear Cnear Lnear Cγfar Dfar Lfar Cγsmall Dsmall Lsmall : ℝ,
@@ -95,15 +95,15 @@ theorem exists_hughesYoungLocalizedOffDiagonalBox_scale_split
       (hughesYoungDFIOptimalU P X Y < 64 ∧
         ‖hughesYoungLocalizedOffDiagonalBox T
             (hughesYoungSmallContour T) (T / 8) X Y h k M N‖ ≤
-          hughesYoungFarBoxMajorant CwSmall Dsmall Lsmall
-            0 T X Y ε h k M N) := by
+          hughesYoungSmallBoxMajorant CwSmall Dsmall Lsmall
+            j T X Y ε h k M N) := by
   obtain ⟨Cγnear, Cnear, Lnear, Cγfar, Dfar, Lfar,
       hCγnear, hCnear, hLnear, hCγfar, hDfar, hLfar,
       CwFar, hCwFar, hlarge⟩ :=
     exists_hughesYoungLocalizedOffDiagonalBox_full_consumer ε hε0 hε4 j
   obtain ⟨Cγsmall, Dsmall, Lsmall, hCγsmall, hDsmall, hLsmall,
       CwSmall, hCwSmall, hsmallBox⟩ :=
-    exists_hughesYoungLocalizedOffDiagonalBox_smallScale_bound ε hε0
+    exists_hughesYoungLocalizedOffDiagonalBox_smallScale_scaled_bound ε hε0 j
   refine ⟨Cγnear, Cnear, Lnear, Cγfar, Dfar, Lfar,
     Cγsmall, Dsmall, Lsmall,
     hCγnear, hCnear, hLnear, hCγfar, hDfar, hLfar,
@@ -128,7 +128,9 @@ theorem exists_hughesYoungLocalizedOffDiagonalBox_scale_split
       hT0 hP0 hscaled
   · right
     refine ⟨hughesYoungDFIOptimalU_lt_sixtyFour_of_not_large hU, ?_⟩
-    exact hsmallBox hTexp hT16 hsmallSmall (by positivity) le_rfl
-      (lt_of_lt_of_le zero_lt_one hX) hY hh hk
+    have hscaled := hsmallBox (M := M) (N := N) hTexp hT16 hsmallSmall
+      (by positivity) le_rfl (lt_of_lt_of_le zero_lt_one hX) hY hh hk
+    exact norm_hughesYoungLocalizedOffDiagonalBox_le_smallMajorant_of_scaled
+      hT0 (lt_of_lt_of_le zero_lt_one hY) hscaled
 
 end RiemannZeta.GuthMaynard

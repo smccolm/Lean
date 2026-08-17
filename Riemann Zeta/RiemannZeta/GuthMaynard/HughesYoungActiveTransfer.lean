@@ -128,11 +128,16 @@ theorem summable_hughesYoungActiveIntegratedHigh
       (summable_hughesYoungRightPair_restrict_norm t H hc)).summable
   apply Summable.of_norm_bounded hfull.norm
   intro p
+  by_cases hp1 : p.1 = 0
+  · simp [hughesYoungRightPairTerm_eq_zero_of_fst_eq_zero t (2 * q) _ hp1]
+  by_cases hp2 : p.2 = 0
+  · simp [hughesYoungRightPairTerm_eq_zero_of_snd_eq_zero t (2 * q) _ hp2]
+  have hp1pos : 0 < p.1 := Nat.pos_of_ne_zero hp1
+  have hp2pos : 0 < p.2 := Nat.pos_of_ne_zero hp2
   rw [norm_mul, norm_real, Real.norm_eq_abs,
     abs_of_nonneg (hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2)]
   exact mul_le_of_le_one_left (norm_nonneg _)
-    (hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2)
-    (hughesYoungActiveDyadicWeight_le_one ha hb a b R K p.1 p.2)
+    (hughesYoungActiveDyadicWeight_le_one ha hb hp1pos hp2pos)
 
 theorem summable_hughesYoungActiveIntegratedRemainder
     {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
@@ -149,14 +154,20 @@ theorem summable_hughesYoungActiveIntegratedRemainder
       (summable_hughesYoungRightPair_restrict_norm t H hc)).summable
   apply Summable.of_norm_bounded hfull.norm
   intro p
+  by_cases hp1 : p.1 = 0
+  · simp [hughesYoungRightPairTerm_eq_zero_of_fst_eq_zero t (2 * q) _ hp1]
+  by_cases hp2 : p.2 = 0
+  · simp [hughesYoungRightPairTerm_eq_zero_of_snd_eq_zero t (2 * q) _ hp2]
+  have hp1pos : 0 < p.1 := Nat.pos_of_ne_zero hp1
+  have hp2pos : 0 < p.2 := Nat.pos_of_ne_zero hp2
+  have hwle : hughesYoungActiveDyadicWeight a b R K p.1 p.2 ≤ 1 :=
+    hughesYoungActiveDyadicWeight_le_one ha hb hp1pos hp2pos
   rw [norm_mul, norm_real, Real.norm_eq_abs,
-    abs_of_nonneg (sub_nonneg.mpr
-      (hughesYoungActiveDyadicWeight_le_one ha hb a b R K p.1 p.2))]
+    abs_of_nonneg (sub_nonneg.mpr hwle)]
   exact mul_le_of_le_one_left (norm_nonneg _)
-    (sub_nonneg.mpr
-      (hughesYoungActiveDyadicWeight_le_one ha hb a b R K p.1 p.2))
-    (sub_le_one_of_le_zero
-      (hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2))
+    (by
+      have hw0 := hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2
+      linarith)
 
 theorem hughesYoungActiveIntegratedHigh_eq_tsum
     {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
@@ -179,11 +190,42 @@ theorem hughesYoungActiveIntegratedHigh_eq_tsum
     apply Summable.of_norm_bounded hfull
     intro p
     unfold F
-    rw [ContinuousMap.restrict_smul, norm_smul, norm_real, Real.norm_eq_abs,
+    rw [Real.norm_eq_abs, abs_of_nonneg (norm_nonneg _)]
+    have hrestrict :
+        (ContinuousMap.restrict
+            (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ)
+            ((hughesYoungActiveDyadicWeight a b R K p.1 p.2 : ℂ) •
+              hughesYoungRightPairContinuousMap t (2 * q) hc p)) =
+          (hughesYoungActiveDyadicWeight a b R K p.1 p.2 : ℂ) •
+            (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+              (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) := by
+      ext x
+      rfl
+    rw [hrestrict]
+    by_cases hp1 : p.1 = 0
+    · have hz :
+          (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+              (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) = 0 := by
+        ext x
+        exact hughesYoungRightPairTerm_eq_zero_of_fst_eq_zero t (2 * q) x hp1
+      rw [hz]
+      simp only [smul_zero, norm_zero]
+      exact le_rfl
+    by_cases hp2 : p.2 = 0
+    · have hz :
+          (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+              (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) = 0 := by
+        ext x
+        exact hughesYoungRightPairTerm_eq_zero_of_snd_eq_zero t (2 * q) x hp2
+      rw [hz]
+      simp only [smul_zero, norm_zero]
+      exact le_rfl
+    have hp1pos : 0 < p.1 := Nat.pos_of_ne_zero hp1
+    have hp2pos : 0 < p.2 := Nat.pos_of_ne_zero hp2
+    rw [norm_smul, norm_real, Real.norm_eq_abs,
       abs_of_nonneg (hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2)]
     exact mul_le_of_le_one_left (norm_nonneg _)
-      (hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2)
-      (hughesYoungActiveDyadicWeight_le_one ha hb a b R K p.1 p.2)
+      (hughesYoungActiveDyadicWeight_le_one ha hb hp1pos hp2pos)
   have hinterchange :=
     intervalIntegral.tsum_intervalIntegral_eq_of_summable_norm hsum
   calc
@@ -203,6 +245,7 @@ theorem hughesYoungActiveIntegratedHigh_eq_tsum
       simp only [ContinuousMap.smul_apply, smul_eq_mul,
         hughesYoungRightPairContinuousMap]
       rw [intervalIntegral.integral_const_mul]
+      rfl
 
 /-- Exact active/remainder decomposition of the finite-height opening. -/
 theorem hughesYoungFiniteZetaProduct_even_eq_active_add_remainder
@@ -214,8 +257,10 @@ theorem hughesYoungFiniteZetaProduct_even_eq_active_add_remainder
           hughesYoungActiveIntegratedRemainder q a b R K t H) := by
   unfold hughesYoungFiniteZetaProduct hughesYoungActiveIntegratedRemainder
   rw [hughesYoungActiveIntegratedHigh_eq_tsum hq ha hb]
-  have hactive := summable_hughesYoungActiveIntegratedHigh hq ha hb t H
-  have hrem := summable_hughesYoungActiveIntegratedRemainder hq ha hb t H
+  have hactive := summable_hughesYoungActiveIntegratedHigh
+    (R := R) (K := K) hq ha hb t H
+  have hrem := summable_hughesYoungActiveIntegratedRemainder
+    (R := R) (K := K) hq ha hb t H
   congr 1
   rw [← hactive.tsum_add hrem]
   apply tsum_congr
@@ -324,5 +369,337 @@ theorem tendsto_hughesYoungActiveIntegratedHigh_to_wholeSmall
   · funext H
     ring
   · simp
+
+noncomputable def hughesYoungActiveRemainderContinuousMap
+    (q a b R K : ℕ) (t : ℝ) (hc : (1 / 2 : ℝ) < 2 * q)
+    (p : ℕ × ℕ) : C(ℝ, ℂ) :=
+  ⟨fun u =>
+      ((1 - hughesYoungActiveDyadicWeight a b R K p.1 p.2 : ℝ) : ℂ) *
+        hughesYoungRightPairTerm t (2 * q) u p,
+    continuous_const.mul (continuous_hughesYoungRightPairTerm t hc p)⟩
+
+theorem summable_hughesYoungActiveRemainderContinuousMap_restrict_norm
+    {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
+    (t H : ℝ) :
+    let hc : (1 / 2 : ℝ) < 2 * q := by
+      have hqR : (1 : ℝ) ≤ q := by exact_mod_cast hq
+      linarith
+    Summable (fun p : ℕ × ℕ =>
+      ‖(hughesYoungActiveRemainderContinuousMap q a b R K t hc p).restrict
+        (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ)‖) := by
+  let hc : (1 / 2 : ℝ) < 2 * q := by
+    have hqR : (1 : ℝ) ≤ q := by exact_mod_cast hq
+    linarith
+  have hfull := summable_hughesYoungRightPair_restrict_norm t H hc
+  apply Summable.of_norm_bounded hfull
+  intro p
+  rw [Real.norm_eq_abs, abs_of_nonneg (norm_nonneg _)]
+  have hrestrict :
+      (hughesYoungActiveRemainderContinuousMap q a b R K t hc p).restrict
+          (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) =
+        ((1 - hughesYoungActiveDyadicWeight a b R K p.1 p.2 : ℝ) : ℂ) •
+          (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+            (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) := by
+    ext x
+    rfl
+  rw [hrestrict]
+  by_cases hp1 : p.1 = 0
+  · have hz :
+        (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+            (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) = 0 := by
+      ext x
+      exact hughesYoungRightPairTerm_eq_zero_of_fst_eq_zero t (2 * q) x hp1
+    rw [hz]
+    simp only [smul_zero, norm_zero]
+    exact le_rfl
+  by_cases hp2 : p.2 = 0
+  · have hz :
+        (hughesYoungRightPairContinuousMap t (2 * q) hc p).restrict
+            (⟨Set.uIcc (-H) H, isCompact_uIcc⟩ : TopologicalSpace.Compacts ℝ) = 0 := by
+      ext x
+      exact hughesYoungRightPairTerm_eq_zero_of_snd_eq_zero t (2 * q) x hp2
+    rw [hz]
+    simp only [smul_zero, norm_zero]
+    exact le_rfl
+  have hp1pos : 0 < p.1 := Nat.pos_of_ne_zero hp1
+  have hp2pos : 0 < p.2 := Nat.pos_of_ne_zero hp2
+  have hwle : hughesYoungActiveDyadicWeight a b R K p.1 p.2 ≤ 1 :=
+    hughesYoungActiveDyadicWeight_le_one ha hb hp1pos hp2pos
+  rw [norm_smul, norm_real, Real.norm_eq_abs,
+    abs_of_nonneg (sub_nonneg.mpr hwle)]
+  exact mul_le_of_le_one_left (norm_nonneg _) (by
+    have hw0 := hughesYoungActiveDyadicWeight_nonneg a b R K p.1 p.2
+    linarith)
+
+theorem hughesYoungActiveIntegratedRemainder_eq_intervalIntegral
+    {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
+    (t H : ℝ) :
+    hughesYoungActiveIntegratedRemainder q a b R K t H =
+      ∫ u in -H..H, hughesYoungActiveHighPairRemainder q a b R K t u := by
+  let hc : (1 / 2 : ℝ) < 2 * q := by
+    have hqR : (1 : ℝ) ≤ q := by exact_mod_cast hq
+    linarith
+  have hinterchange :=
+    intervalIntegral.tsum_intervalIntegral_eq_of_summable_norm
+      (summable_hughesYoungActiveRemainderContinuousMap_restrict_norm
+        (R := R) (K := K) hq ha hb t H)
+  calc
+    hughesYoungActiveIntegratedRemainder q a b R K t H =
+        ∑' p : ℕ × ℕ,
+          ∫ u in -H..H,
+            hughesYoungActiveRemainderContinuousMap q a b R K t hc p u := by
+      unfold hughesYoungActiveIntegratedRemainder
+      apply tsum_congr
+      intro p
+      simp only [hughesYoungActiveRemainderContinuousMap,
+        ContinuousMap.coe_mk]
+      rw [intervalIntegral.integral_const_mul]
+    _ = ∫ u in -H..H,
+        ∑' p : ℕ × ℕ,
+          hughesYoungActiveRemainderContinuousMap q a b R K t hc p u :=
+      hinterchange
+    _ = ∫ u in -H..H,
+        hughesYoungActiveHighPairRemainder q a b R K t u := by
+      apply intervalIntegral.integral_congr
+      intro u _hu
+      unfold hughesYoungActiveHighPairRemainder
+      apply tsum_congr
+      intro p
+      rfl
+
+theorem integrable_hughesYoungActiveHighPairRemainder
+    {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
+    (hR : 0 < R)
+    (hcover : ((a * b * R : ℕ) : ℝ) ≤
+      hughesYoungDyadicRatio ^ (K + 1))
+    (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2)
+    {T t : ℝ} (hT : 1 ≤ T) (ht : t ∈ Set.Icc (T / 4) (4 * T)) :
+    Integrable (fun u : ℝ =>
+      hughesYoungActiveHighPairRemainder q a b R K t u) := by
+  let C : ℝ := 256 * Real.exp (400 * (q : ℝ) ^ 2) *
+    ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+    (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+    hughesYoungReferenceDivisorPairMass η
+  let g : ℝ → ℝ := fun u =>
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+  have hg : Integrable g :=
+    integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)
+  have hmeas : AEStronglyMeasurable (fun u : ℝ =>
+      hughesYoungActiveHighPairRemainder q a b R K t u) := by
+    have hc : (1 / 2 : ℝ) < 2 * q := by
+      have hqR : (1 : ℝ) ≤ q := by exact_mod_cast hq
+      linarith
+    have hpmeas : ∀ p : ℕ × ℕ, AEMeasurable (fun u : ℝ =>
+        ((1 - hughesYoungActiveDyadicWeight a b R K p.1 p.2 : ℝ) : ℂ) *
+          hughesYoungRightPairTerm t (2 * q) u p) := by
+      intro p
+      exact (continuous_const.mul
+        (continuous_hughesYoungRightPairTerm t hc p)).aemeasurable
+    unfold hughesYoungActiveHighPairRemainder
+    exact (AEMeasurable.tsum hpmeas).aestronglyMeasurable
+  apply (hg.const_mul C).mono' hmeas
+  filter_upwards with u
+  have hweight :=
+    norm_hughesYoungRightContourWeight_even_le_on_height_support hT ht hq u
+  have htail := norm_hughesYoungActiveHighPairRemainder_le
+    hq ha hb hR hcover t u hη0 hη
+  have hexp :
+      Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) =
+        Real.exp (400 * (q : ℝ) ^ 2) * Real.exp (-84 * u ^ 2) := by
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  have hbasepow :
+      ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) =
+        ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+          (1 + |u|) ^ (4 * q + 8) := by
+    rw [mul_pow]
+  calc
+    ‖hughesYoungActiveHighPairRemainder q a b R K t u‖ ≤
+        ‖hughesYoungRightContourWeight t (2 * q) u‖ *
+          (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+          hughesYoungReferenceDivisorPairMass η := htail
+    _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+          ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+          (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+          hughesYoungReferenceDivisorPairMass η := by
+      gcongr
+      exact hughesYoungReferenceDivisorPairMass_nonneg η
+    _ = C * g u := by
+      rw [hexp, hbasepow]
+      unfold C g
+      ring
+
+noncomputable def hughesYoungActiveWholeHighRemainder
+    (q a b R K : ℕ) (t : ℝ) : ℂ :=
+  ∫ u : ℝ, hughesYoungActiveHighPairRemainder q a b R K t u
+
+theorem tendsto_hughesYoungActiveIntegratedRemainder
+    {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
+    (hR : 0 < R)
+    (hcover : ((a * b * R : ℕ) : ℝ) ≤
+      hughesYoungDyadicRatio ^ (K + 1))
+    (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2)
+    {T t : ℝ} (hT : 1 ≤ T) (ht : t ∈ Set.Icc (T / 4) (4 * T)) :
+    Tendsto (fun H : ℝ =>
+      hughesYoungActiveIntegratedRemainder q a b R K t H)
+      atTop (𝓝 (hughesYoungActiveWholeHighRemainder q a b R K t)) := by
+  rw [show (fun H : ℝ =>
+      hughesYoungActiveIntegratedRemainder q a b R K t H) =
+      (fun H : ℝ => ∫ u in -H..H,
+        hughesYoungActiveHighPairRemainder q a b R K t u) by
+    funext H
+    exact hughesYoungActiveIntegratedRemainder_eq_intervalIntegral
+      hq ha hb t H]
+  exact MeasureTheory.intervalIntegral_tendsto_integral
+    (integrable_hughesYoungActiveHighPairRemainder
+      hq ha hb hR hcover η hη0 hη hT ht)
+    tendsto_neg_atTop_atBot tendsto_id
+
+theorem exists_norm_hughesYoungActiveIntegratedRemainder_le
+    (q : ℕ) (hq : 0 < q) (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2) :
+    ∃ L : ℝ, 0 < L ∧ ∀ {a b R K : ℕ} {T t H : ℝ},
+      0 < a → 0 < b → 0 < R →
+      ((a * b * R : ℕ) : ℝ) ≤ hughesYoungDyadicRatio ^ (K + 1) →
+      1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) → 0 ≤ H →
+      ‖hughesYoungActiveIntegratedRemainder q a b R K t H‖ ≤
+        (256 * Real.exp (400 * (q : ℝ) ^ 2) *
+          ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+          (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+          hughesYoungReferenceDivisorPairMass η) * L := by
+  obtain ⟨L, hL, hmoment⟩ :=
+    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (4 * q + 8)
+  refine ⟨L, hL, ?_⟩
+  intro a b R K T t H ha hb hR hcover hT ht hH
+  let C : ℝ := 256 * Real.exp (400 * (q : ℝ) ^ 2) *
+    ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+    (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+    hughesYoungReferenceDivisorPairMass η
+  let g : ℝ → ℝ := fun u =>
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+  have hC0 : 0 ≤ C := by
+    unfold C
+    exact mul_nonneg (by positivity)
+      (hughesYoungReferenceDivisorPairMass_nonneg η)
+  have hg : IntervalIntegrable g volume (-H) H :=
+    (integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)).intervalIntegrable
+  have horder : -H ≤ H := by linarith
+  rw [hughesYoungActiveIntegratedRemainder_eq_intervalIntegral hq ha hb]
+  calc
+    ‖∫ u in -H..H,
+        hughesYoungActiveHighPairRemainder q a b R K t u‖ ≤
+        ∫ u in -H..H, C * g u := by
+      apply intervalIntegral.norm_integral_le_of_norm_le horder
+      · filter_upwards with u _hu
+        have hweight :=
+          norm_hughesYoungRightContourWeight_even_le_on_height_support
+            hT ht hq u
+        have htail := norm_hughesYoungActiveHighPairRemainder_le
+          hq ha hb hR hcover t u hη0 hη
+        have hexp :
+            Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) =
+              Real.exp (400 * (q : ℝ) ^ 2) *
+                Real.exp (-84 * u ^ 2) := by
+          rw [← Real.exp_add]
+          congr 1
+          ring
+        have hbasepow :
+            ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) =
+              ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+                (1 + |u|) ^ (4 * q + 8) := by
+          rw [mul_pow]
+        calc
+          ‖hughesYoungActiveHighPairRemainder q a b R K t u‖ ≤
+              ‖hughesYoungRightContourWeight t (2 * q) u‖ *
+                (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+                hughesYoungReferenceDivisorPairMass η := htail
+          _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+                ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+                (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+                hughesYoungReferenceDivisorPairMass η := by
+              gcongr
+              exact hughesYoungReferenceDivisorPairMass_nonneg η
+          _ = C * g u := by
+              rw [hexp, hbasepow]
+              unfold C g
+              ring
+      · exact hg.const_mul C
+    _ = C * (∫ u in -H..H, g u) := by
+      rw [intervalIntegral.integral_const_mul]
+    _ ≤ C * L := mul_le_mul_of_nonneg_left (hmoment hH) hC0
+    _ = _ := by rfl
+
+theorem exists_norm_hughesYoungActiveWholeHighRemainder_le
+    (q : ℕ) (hq : 0 < q) (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2) :
+    ∃ L : ℝ, 0 < L ∧ ∀ {a b R K : ℕ} {T t : ℝ},
+      0 < a → 0 < b → 0 < R →
+      ((a * b * R : ℕ) : ℝ) ≤ hughesYoungDyadicRatio ^ (K + 1) →
+      1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) →
+      ‖hughesYoungActiveWholeHighRemainder q a b R K t‖ ≤
+        (256 * Real.exp (400 * (q : ℝ) ^ 2) *
+          ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+          (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+          hughesYoungReferenceDivisorPairMass η) * L := by
+  obtain ⟨L, hL, hfinite⟩ :=
+    exists_norm_hughesYoungActiveIntegratedRemainder_le q hq η hη0 hη
+  refine ⟨L, hL, ?_⟩
+  intro a b R K T t ha hb hR hcover hT ht
+  let B : ℝ :=
+    (256 * Real.exp (400 * (q : ℝ) ^ 2) *
+      ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
+      (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
+      hughesYoungReferenceDivisorPairMass η) * L
+  have hlim := (tendsto_hughesYoungActiveIntegratedRemainder
+    hq ha hb hR hcover η hη0 hη hT ht).norm
+  have hevent : ∀ᶠ H : ℝ in atTop,
+      ‖hughesYoungActiveIntegratedRemainder q a b R K t H‖ ≤ B := by
+    filter_upwards [eventually_ge_atTop (0 : ℝ)] with H hH
+    exact hfinite ha hb hR hcover hT ht hH
+  have hclosed : IsClosed (Set.Iic B) := isClosed_Iic
+  have hmem : ‖hughesYoungActiveWholeHighRemainder q a b R K t‖ ∈ Set.Iic B :=
+    hclosed.mem_of_tendsto hlim hevent
+  simpa only [B] using hmem
+
+/-- The exact finite active contour identity after both vertical limits.
+The only discarded part is the explicitly named high-product remainder. -/
+theorem hughesYoungZetaProduct_eq_activeWholeSmall_add_remainder
+    {q a b R K : ℕ} (hq : 0 < q) (ha : 0 < a) (hb : 0 < b)
+    (hR : 0 < R)
+    (hcover : ((a * b * R : ℕ) : ℝ) ≤
+      hughesYoungDyadicRatio ^ (K + 1))
+    (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2)
+    {T t : ℝ} (hTexp : Real.exp 1 ≤ T)
+    (ht : t ∈ Set.Icc (T / 4) (4 * T)) :
+    (Real.pi : ℂ) *
+        (riemannZeta (afeCriticalPoint t) ^ 2 *
+          riemannZeta (afeCriticalPoint (-t)) ^ 2) =
+      hughesYoungActiveWholeSmall T a b R K t +
+        hughesYoungActiveWholeHighRemainder q a b R K t := by
+  have hT : (1 : ℝ) ≤ T := by linarith [Real.exp_one_gt_d9]
+  have hfull := (tendsto_hughesYoungFiniteZetaProduct
+      (c := 2 * (q : ℝ)) t (by
+    have hqR : (1 : ℝ) ≤ q := by exact_mod_cast hq
+    linarith)).const_mul (Real.pi : ℂ)
+  have hactive := tendsto_hughesYoungActiveIntegratedHigh_to_wholeSmall
+    hq hTexp ht a b R K
+  have hrem := tendsto_hughesYoungActiveIntegratedRemainder
+    hq ha hb hR hcover η hη0 hη hT ht
+  have hsum := hactive.add hrem
+  have heq : (fun H : ℝ =>
+      (Real.pi : ℂ) * hughesYoungFiniteZetaProduct t (2 * q) H) =
+      fun H : ℝ =>
+        hughesYoungActiveIntegratedHigh q a b R K t H +
+          hughesYoungActiveIntegratedRemainder q a b R K t H := by
+    funext H
+    rw [hughesYoungFiniteZetaProduct_even_eq_active_add_remainder hq ha hb]
+    have hpi : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
+    field_simp [hpi]
+  rw [heq] at hfull
+  exact tendsto_nhds_unique hfull hsum
 
 end RiemannZeta.GuthMaynard

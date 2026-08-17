@@ -128,6 +128,68 @@ theorem exists_uniform_norm_hughesYoungReducedCleanedShiftWeight_scaled_dfiError
   rw [hnormz] at hscaled
   simpa only [S, a, b] using hscaled
 
+/-! ## Finite reduced near-shift discrepancy -/
+
+/-- The exact finite-family DFI discrepancy in the coprime Hughes--Young
+coordinates.  The signed equation-(27) series is retained as the main term;
+only the literal DFI Theorem-1 remainder is estimated. -/
+theorem exists_uniform_norm_sum_hughesYoungReducedCleanedShiftWeight_dfiDiscrepancy
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ {T c u X Y P A U Q : ℝ} {h k : ℕ} {s : Finset ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 →
+      1 ≤ X → 1 ≤ Y → 0 < h → 0 < k →
+      1 ≤ P → 0 < A →
+      (∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A)) →
+      U ≤ P⁻¹ * min X Y → 8 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      ∀ (M N : ℕ),
+      2 * X / hughesYoungReducedLeft h k ≤ M →
+      2 * Y / hughesYoungReducedRight h k ≤ N →
+      ((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤ 2 * X →
+      ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤ 2 * Y →
+      (∀ r ∈ s,
+        r ≠ 0 ∧
+        |(r : ℝ)| ≤ Y / 2 ∧
+        T * (|(r : ℝ)| / Y) ≤ P ∧
+        (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) ∧
+        (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y)) →
+      ‖(∑ r ∈ s,
+          dfiDyadicShiftedDivisorSum
+            (hughesYoungReducedCleanedShiftWeight T c u X Y h k r)
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)
+            M N r) -
+        ∑ r ∈ s,
+          dfiSignedCentralSeries
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) r
+            (hughesYoungReducedCleanedShiftWeight T c u X Y h k r)‖ ≤
+        (s.card : ℝ) *
+          (‖hughesYoungLocalizedStaticScalar T h k‖ *
+            hughesYoungScaledDFINormalization c u X Y A
+              (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) *
+            (C * dfiTheorem1ErrorScale P X Y ε)) := by
+  obtain ⟨C, hC, hpoint⟩ :=
+    exists_uniform_norm_hughesYoungReducedCleanedShiftWeight_scaled_dfiError
+      ε hε0 hε4
+  refine ⟨C, hC, ?_⟩
+  intro T c u X Y P A U Q h k s hT hc hc1 hX hY hh hk hP hA
+    hheight hscale hQ hU hQsq M N hM hN haX hbY hs
+  apply norm_sum_sub_sum_le_card_mul_of_uniform_norm_sub_le
+    s
+    (fun r => dfiDyadicShiftedDivisorSum
+      (hughesYoungReducedCleanedShiftWeight T c u X Y h k r)
+      (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) M N r)
+    (fun r => dfiSignedCentralSeries
+      (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) r
+      (hughesYoungReducedCleanedShiftWeight T c u X Y h k r))
+  intro r hr
+  obtain ⟨hr0, hrY, hrP, hrPos, hrNeg⟩ := hs r hr
+  exact hpoint hT hc hc1 hX hY hh hk hrY hP hrP hA hheight
+    hscale hQ hU hQsq M N hM hN haX hbY hr0 hrPos hrNeg
+
 /-- The complete signed equation-(27) series for the reduced source weight. -/
 theorem exists_uniform_norm_hughesYoungReducedCleanedShiftWeight_signedCentralSeries :
     ∃ C : ℝ, 0 < C ∧
