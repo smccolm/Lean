@@ -103,6 +103,29 @@ theorem hughesYoungDyadicCutoff_eq_zero_of_two_le {x : ℝ} (hx : 2 ≤ x) :
     hughesYoungDyadicStep_eq_zero hx']
   ring
 
+/-- The fixed Hughes--Young cutoff is nonnegative on the positive axis. -/
+theorem hughesYoungDyadicCutoff_nonneg {x : ℝ} (hx : 0 ≤ x) :
+    0 ≤ hughesYoungDyadicCutoff x := by
+  unfold hughesYoungDyadicCutoff hughesYoungDyadicStep
+  apply sub_nonneg.mpr
+  apply Real.smoothTransition.monotone
+  apply div_le_div_of_nonneg_right _
+    (sub_nonneg.mpr one_lt_hughesYoungDyadicRatio.le)
+  have hratio : x / hughesYoungDyadicRatio ≤ x := by
+    exact div_le_self hx one_lt_hughesYoungDyadicRatio.le
+  linarith
+
+/-- The fixed Hughes--Young cutoff never exceeds one. -/
+theorem hughesYoungDyadicCutoff_le_one (x : ℝ) :
+    hughesYoungDyadicCutoff x ≤ 1 := by
+  unfold hughesYoungDyadicCutoff hughesYoungDyadicStep
+  linarith [Real.smoothTransition.le_one
+      ((hughesYoungDyadicRatio - x / hughesYoungDyadicRatio) /
+        (hughesYoungDyadicRatio - 1)),
+    Real.smoothTransition.nonneg
+      ((hughesYoungDyadicRatio - x) /
+        (hughesYoungDyadicRatio - 1))]
+
 theorem support_hughesYoungDyadicCutoff_subset :
     Function.support hughesYoungDyadicCutoff ⊆ Set.Icc 1 2 := by
   intro x hx
@@ -133,6 +156,42 @@ theorem hughesYoungDyadicScale_pos (j : ℕ) :
 /-- A copy of the fixed cutoff at physical scale `X`. -/
 noncomputable def hughesYoungDyadicCutoffAt (X x : ℝ) : ℝ :=
   hughesYoungDyadicCutoff (x / X)
+
+/-- Every positive-scale physical cutoff lies in `[0,1]` on positive input. -/
+theorem hughesYoungDyadicCutoffAt_mem_Icc {X x : ℝ}
+    (hX : 0 < X) (hx : 0 ≤ x) :
+    hughesYoungDyadicCutoffAt X x ∈ Set.Icc (0 : ℝ) 1 := by
+  unfold hughesYoungDyadicCutoffAt
+  exact ⟨hughesYoungDyadicCutoff_nonneg (div_nonneg hx hX.le),
+    hughesYoungDyadicCutoff_le_one _⟩
+
+theorem abs_hughesYoungDyadicCutoffAt_le_one {X x : ℝ}
+    (hX : 0 < X) (hx : 0 ≤ x) :
+    |hughesYoungDyadicCutoffAt X x| ≤ 1 := by
+  have hcut := hughesYoungDyadicCutoffAt_mem_Icc hX hx
+  rw [abs_of_nonneg hcut.1]
+  exact hcut.2
+
+theorem hughesYoungDyadicCutoff_eq_one_at_ratio :
+    hughesYoungDyadicCutoff hughesYoungDyadicRatio = 1 := by
+  unfold hughesYoungDyadicCutoff
+  rw [div_self hughesYoungDyadicRatio_pos.ne',
+    hughesYoungDyadicStep_eq_one (le_refl 1),
+    hughesYoungDyadicStep_eq_zero (le_refl hughesYoungDyadicRatio)]
+  ring
+
+/-- Centering a physical cutoff at `x / sqrt 2` makes its value at the
+positive point `x` exactly one.  This supplies a smooth local chart for the
+isolated endpoint terms without changing their value. -/
+theorem hughesYoungDyadicCutoffAt_eq_one_centered
+    {x : ℝ} (hx : 0 < x) :
+    hughesYoungDyadicCutoffAt (x / hughesYoungDyadicRatio) x = 1 := by
+  unfold hughesYoungDyadicCutoffAt
+  have hcenter : x / (x / hughesYoungDyadicRatio) =
+      hughesYoungDyadicRatio := by
+    field_simp [hx.ne', hughesYoungDyadicRatio_pos.ne']
+  rw [hcenter]
+  exact hughesYoungDyadicCutoff_eq_one_at_ratio
 
 theorem contDiff_hughesYoungDyadicCutoffAt (X : ℝ) :
     ContDiff ℝ ∞ (hughesYoungDyadicCutoffAt X) := by
