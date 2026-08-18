@@ -22,6 +22,14 @@ noncomputable def hughesYoungActiveDyadicBoxes
     (fun ij => hughesYoungFullDyadicScale ij.1 *
       hughesYoungFullDyadicScale ij.2 ≤ ((a * b * R : ℕ) : ℝ))
 
+/-- The active two-dimensional dyadic family has at most the square of the
+number of retained generations. -/
+theorem card_hughesYoungActiveDyadicBoxes_le (a b R K : ℕ) :
+    (hughesYoungActiveDyadicBoxes a b R K).card ≤ (K + 2) ^ 2 := by
+  unfold hughesYoungActiveDyadicBoxes
+  apply (Finset.card_filter_le _ _).trans_eq
+  simp [pow_two]
+
 noncomputable def hughesYoungActiveDyadicWeight
     (a b R K m n : ℕ) : ℝ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K,

@@ -47,6 +47,46 @@ theorem hughesYoungFullDyadicCutoff_succ (j : ℕ) (x : ℝ) :
       hughesYoungDyadicCutoffAt (hughesYoungDyadicScale j) x := by
   rfl
 
+/-- On the whole physical half-line `x ≥ 1`, the initial smooth box is
+exactly the lower telescoping step. -/
+theorem hughesYoungFullDyadicCutoff_zero_eq_step
+    {x : ℝ} (hx : 1 ≤ x) :
+    hughesYoungFullDyadicCutoff 0 x = hughesYoungDyadicStep x := by
+  have hρ : hughesYoungDyadicRatio ≠ 0 :=
+    hughesYoungDyadicRatio_pos.ne'
+  have hdivide : x / (1 / hughesYoungDyadicRatio) =
+      x * hughesYoungDyadicRatio := by
+    field_simp [hρ]
+  have hlarge : hughesYoungDyadicRatio ≤
+      x / (1 / hughesYoungDyadicRatio) := by
+    rw [hdivide]
+    exact le_mul_of_one_le_left hughesYoungDyadicRatio_pos.le hx
+  unfold hughesYoungFullDyadicCutoff hughesYoungFullDyadicScale
+    hughesYoungDyadicCutoffAt hughesYoungDyadicCutoff
+  have hcancel : x / (1 / hughesYoungDyadicRatio) /
+      hughesYoungDyadicRatio = x := by
+    field_simp [hρ]
+  rw [hcancel, hughesYoungDyadicStep_eq_zero hlarge]
+  ring
+
+/-- Exact initial-box identity at an arbitrary real point. -/
+theorem hughesYoungFullDyadicCutoff_zero_eq_step_sub_step
+    (x : ℝ) :
+    hughesYoungFullDyadicCutoff 0 x =
+      hughesYoungDyadicStep x -
+        hughesYoungDyadicStep (x * hughesYoungDyadicRatio) := by
+  have hρ : hughesYoungDyadicRatio ≠ 0 :=
+    hughesYoungDyadicRatio_pos.ne'
+  have hdivide : x / (1 / hughesYoungDyadicRatio) =
+      x * hughesYoungDyadicRatio := by
+    field_simp [hρ]
+  have hmulcancel : x * hughesYoungDyadicRatio /
+      hughesYoungDyadicRatio = x := by
+    field_simp [hρ]
+  unfold hughesYoungFullDyadicCutoff hughesYoungFullDyadicScale
+    hughesYoungDyadicCutoffAt hughesYoungDyadicCutoff
+  rw [hdivide, hmulcancel]
+
 theorem hughesYoungDyadicCutoffAt_eq_zero_of_le_scale
     {X x : ℝ} (hX : 0 < X) (hx : x ≤ X) :
     hughesYoungDyadicCutoffAt X x = 0 := by
@@ -69,6 +109,126 @@ theorem hughesYoungFullDyadicCutoff_eq_zero_of_cover
     unfold hughesYoungDyadicScale
     apply pow_le_pow_right₀ one_lt_hughesYoungDyadicRatio.le
     omega)
+
+/-- Real-variable local finiteness for the physical DFI integral. -/
+theorem hughesYoungFullDyadicCutoff_eq_zero_of_real_cover
+    {x : ℝ} {K j : ℕ}
+    (hx : x ≤ hughesYoungDyadicRatio ^ (K + 1))
+    (hj : K + 2 ≤ j) :
+    hughesYoungFullDyadicCutoff j x = 0 := by
+  obtain ⟨r, rfl⟩ := Nat.exists_eq_add_of_le hj
+  rw [show K + 2 + r = (K + 1 + r) + 1 by omega,
+    hughesYoungFullDyadicCutoff_succ]
+  apply hughesYoungDyadicCutoffAt_eq_zero_of_le_scale
+    (hughesYoungDyadicScale_pos (K + 1 + r))
+  exact hx.trans (by
+    unfold hughesYoungDyadicScale
+    apply pow_le_pow_right₀ one_lt_hughesYoungDyadicRatio.le
+    omega)
+
+/-- Exact finite endpoint formula for the complete Hughes--Young dyadic
+family.  The first term is the upper endpoint still represented at depth
+`K`; the second is the genuine lower-boundary correction introduced by the
+isolated zeroth box.  This identity does not require a support hypothesis. -/
+theorem sum_range_hughesYoungFullDyadicCutoff_eq
+    (K : ℕ) (x : ℝ) :
+    (∑ j ∈ Finset.range (K + 2),
+      hughesYoungFullDyadicCutoff j x) =
+      hughesYoungDyadicStep
+          (x / hughesYoungDyadicRatio ^ (K + 1)) -
+        hughesYoungDyadicStep (x * hughesYoungDyadicRatio) := by
+  rw [show K + 2 = (K + 1) + 1 by omega,
+    Finset.sum_range_succ']
+  rw [hughesYoungFullDyadicCutoff_zero_eq_step_sub_step]
+  simp_rw [hughesYoungFullDyadicCutoff_succ]
+  rw [sum_hughesYoungDyadicCutoff_eq]
+  ring
+
+/-- Complex-valued form of the exact finite endpoint formula. -/
+theorem sum_range_hughesYoungFullDyadicCutoff_cast_eq
+    (K : ℕ) (x : ℝ) :
+    (∑ j ∈ Finset.range (K + 2),
+      (hughesYoungFullDyadicCutoff j x : ℂ)) =
+      ((hughesYoungDyadicStep
+          (x / hughesYoungDyadicRatio ^ (K + 1)) -
+        hughesYoungDyadicStep
+          (x * hughesYoungDyadicRatio) : ℝ) : ℂ) := by
+  push_cast
+  exact_mod_cast sum_range_hughesYoungFullDyadicCutoff_eq K x
+
+/-- The finite complete family is already a partition of unity on the
+physical interval represented by its terminal scale. -/
+theorem sum_range_hughesYoungFullDyadicCutoff_eq_one
+    {K : ℕ} {x : ℝ} (hx : 1 ≤ x)
+    (hxUpper : x ≤ hughesYoungDyadicRatio ^ (K + 1)) :
+    (∑ j ∈ Finset.range (K + 2),
+      hughesYoungFullDyadicCutoff j x) = 1 := by
+  rw [sum_range_hughesYoungFullDyadicCutoff_eq]
+  have hpow : 0 < hughesYoungDyadicRatio ^ (K + 1) :=
+    pow_pos hughesYoungDyadicRatio_pos _
+  rw [hughesYoungDyadicStep_eq_one ((div_le_one hpow).2 hxUpper),
+    hughesYoungDyadicStep_eq_zero]
+  · ring
+  · exact le_mul_of_one_le_left hughesYoungDyadicRatio_pos.le hx
+
+theorem sum_range_hughesYoungFullDyadicCutoff_cast_eq_one
+    {K : ℕ} {x : ℝ} (hx : 1 ≤ x)
+    (hxUpper : x ≤ hughesYoungDyadicRatio ^ (K + 1)) :
+    (∑ j ∈ Finset.range (K + 2),
+      (hughesYoungFullDyadicCutoff j x : ℂ)) = 1 := by
+  rw [← Complex.ofReal_sum]
+  norm_cast
+  exact sum_range_hughesYoungFullDyadicCutoff_eq_one hx hxUpper
+
+/-- The complete smooth dyadic family sums exactly to one at every real
+physical coordinate `x ≥ 1`. -/
+theorem tsum_hughesYoungFullDyadicCutoff_eq_one
+    {x : ℝ} (hx : 1 ≤ x) :
+    (∑' j : ℕ, hughesYoungFullDyadicCutoff j x) = 1 := by
+  obtain ⟨K, hK⟩ := exists_hughesYoungDyadicCoverIndex x
+  rw [tsum_eq_sum (s := Finset.range (K + 2))]
+  · rw [show K + 2 = (K + 1) + 1 by omega,
+      Finset.sum_range_succ']
+    rw [hughesYoungFullDyadicCutoff_zero_eq_step hx]
+    simp_rw [hughesYoungFullDyadicCutoff_succ]
+    simpa only [add_comm] using
+      hughesYoungDyadicStep_add_sum_cutoff_eq_one hK
+  · intro j hj
+    rw [Finset.mem_range, not_lt] at hj
+    exact hughesYoungFullDyadicCutoff_eq_zero_of_real_cover hK hj
+
+/-- Exact locally finite partition at every real point.  Below the physical
+endpoint the full family equals the smooth lower cutoff
+`1 - step (x * sqrt 2)`; it becomes one exactly for `x ≥ 1`. -/
+theorem tsum_hughesYoungFullDyadicCutoff_eq_one_sub_step (x : ℝ) :
+    (∑' j : ℕ, hughesYoungFullDyadicCutoff j x) =
+      1 - hughesYoungDyadicStep (x * hughesYoungDyadicRatio) := by
+  obtain ⟨K, hK⟩ := exists_hughesYoungDyadicCoverIndex x
+  rw [tsum_eq_sum (s := Finset.range (K + 2))]
+  · rw [show K + 2 = (K + 1) + 1 by omega,
+      Finset.sum_range_succ']
+    rw [hughesYoungFullDyadicCutoff_zero_eq_step_sub_step]
+    simp_rw [hughesYoungFullDyadicCutoff_succ]
+    have hpartition := hughesYoungDyadicStep_add_sum_cutoff_eq_one hK
+    linarith
+  · intro j hj
+    rw [Finset.mem_range, not_lt] at hj
+    exact hughesYoungFullDyadicCutoff_eq_zero_of_real_cover hK hj
+
+theorem tsum_hughesYoungFullDyadicCutoff_cast_eq_one_sub_step (x : ℝ) :
+    (∑' j : ℕ, (hughesYoungFullDyadicCutoff j x : ℂ)) =
+      ((1 - hughesYoungDyadicStep
+        (x * hughesYoungDyadicRatio) : ℝ) : ℂ) := by
+  rw [← Complex.ofReal_tsum]
+  norm_cast
+  exact tsum_hughesYoungFullDyadicCutoff_eq_one_sub_step x
+
+theorem tsum_hughesYoungFullDyadicCutoff_cast_eq_one
+    {x : ℝ} (hx : 1 ≤ x) :
+    (∑' j : ℕ, (hughesYoungFullDyadicCutoff j x : ℂ)) = 1 := by
+  rw [← Complex.ofReal_tsum]
+  norm_cast
+  exact tsum_hughesYoungFullDyadicCutoff_eq_one hx
 
 /-- The complete smooth family is locally finite and sums exactly to one at
 every positive natural divisor coordinate.  This is the infinite-series

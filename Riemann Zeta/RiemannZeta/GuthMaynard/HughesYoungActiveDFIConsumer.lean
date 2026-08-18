@@ -23,20 +23,25 @@ noncomputable def hughesYoungCanonicalRegularDFIMajorant
     (Cγnear Cnear Lnear Dfar Lfar Dsmall Lsmall : ℝ)
     (CwFar CwSmall : ℕ → ℝ) (j : ℕ)
     (T P ε : ℝ) (h k i l : ℕ) : ℝ :=
-  max 0 <| if 64 ≤ hughesYoungDFIOptimalU P
-      (hughesYoungFullDyadicScale (i + 1))
-      (hughesYoungFullDyadicScale (l + 1)) then
-    hughesYoungLargeBoxMajorant Cγnear Cnear Lnear CwFar Dfar Lfar
-      j T P (hughesYoungFullDyadicScale (i + 1))
-      (hughesYoungFullDyadicScale (l + 1)) ε h k
-      (hughesYoungFullDyadicBound (i + 1))
-      (hughesYoungFullDyadicBound (l + 1))
-  else
-    hughesYoungSmallBoxMajorant CwSmall Dsmall Lsmall j T
-      (hughesYoungFullDyadicScale (i + 1))
-      (hughesYoungFullDyadicScale (l + 1)) ε h k
-      (hughesYoungFullDyadicBound (i + 1))
-      (hughesYoungFullDyadicBound (l + 1))
+  if ((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤
+        2 * hughesYoungFullDyadicScale (i + 1) ∧
+      ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤
+        2 * hughesYoungFullDyadicScale (l + 1) then
+    max 0 <| if 64 ≤ hughesYoungDFIOptimalU P
+        (hughesYoungFullDyadicScale (i + 1))
+        (hughesYoungFullDyadicScale (l + 1)) then
+      hughesYoungLargeBoxMajorant Cγnear Cnear Lnear CwFar Dfar Lfar
+        j T P (hughesYoungFullDyadicScale (i + 1))
+        (hughesYoungFullDyadicScale (l + 1)) ε h k
+        (hughesYoungFullDyadicBound (i + 1))
+        (hughesYoungFullDyadicBound (l + 1))
+    else
+      hughesYoungSmallBoxMajorant CwSmall Dsmall Lsmall j T
+        (hughesYoungFullDyadicScale (i + 1))
+        (hughesYoungFullDyadicScale (l + 1)) ε h k
+        (hughesYoungFullDyadicBound (i + 1))
+        (hughesYoungFullDyadicBound (l + 1))
+  else 0
 
 theorem hughesYoungCanonicalRegularDFIMajorant_nonneg
     (Cγnear Cnear Lnear Dfar Lfar Dsmall Lsmall : ℝ)
@@ -45,8 +50,14 @@ theorem hughesYoungCanonicalRegularDFIMajorant_nonneg
     0 ≤ hughesYoungCanonicalRegularDFIMajorant
       Cγnear Cnear Lnear Dfar Lfar Dsmall Lsmall
       CwFar CwSmall j T P ε h k i l := by
-  unfold hughesYoungCanonicalRegularDFIMajorant
-  exact le_max_left _ _
+  by_cases hvalid :
+      ((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤
+          2 * hughesYoungFullDyadicScale (i + 1) ∧
+        ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤
+          2 * hughesYoungFullDyadicScale (l + 1)
+  · rw [hughesYoungCanonicalRegularDFIMajorant, if_pos hvalid]
+    exact le_max_left _ _
+  · rw [hughesYoungCanonicalRegularDFIMajorant, if_neg hvalid]
 
 /-- Uniform regular-box consumer.  Its proof invokes the canonical scale
 split, whose large branch invokes the exact native DFI error theorem. -/
@@ -88,12 +99,12 @@ theorem exists_norm_hughesYoungCanonicalRegularBox_le_dfiMajorant
     (i := i) (j := l) hT hT16 hh hk hP hPT hfar hsmall
   unfold hughesYoungCanonicalRegularDFIMajorant
   rcases hraw with hzero | hlarge | hsmallBranch
-  · rw [hzero, norm_zero]
-    exact le_max_left _ _
-  · rw [if_pos hlarge.1]
-    exact hlarge.2.trans (le_max_right _ _)
-  · rw [if_neg (not_le_of_gt hsmallBranch.1)]
-    exact hsmallBranch.2.trans (le_max_right _ _)
+  · rw [if_neg hzero.1, hzero.2, norm_zero]
+  · rw [if_pos hlarge.1, if_pos hlarge.2.1]
+    exact hlarge.2.2.trans (le_max_right _ _)
+  · rw [if_pos hsmallBranch.1,
+      if_neg (not_le_of_gt hsmallBranch.2.1)]
+    exact hsmallBranch.2.2.trans (le_max_right _ _)
 
 /-- Active boxes with both coordinates in the ordinary geometric part of
 the partition. -/

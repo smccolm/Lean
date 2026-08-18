@@ -205,13 +205,21 @@ theorem exists_hughesYoungCanonicalRegularBox_scale_split
       1 ≤ P → P ≤ T →
       4 * Cγfar * hughesYoungSmallContour T ≤ 1 →
       4 * Cγsmall * hughesYoungSmallContour T ≤ 1 →
-      (hughesYoungLocalizedOffDiagonalBox T
+      ((¬ (((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (i + 1) ∧
+          ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (j + 1))) ∧
+        hughesYoungLocalizedOffDiagonalBox T
           (hughesYoungSmallContour T) (T / 8)
           (hughesYoungFullDyadicScale (i + 1))
           (hughesYoungFullDyadicScale (j + 1)) h k
           (hughesYoungFullDyadicBound (i + 1))
           (hughesYoungFullDyadicBound (j + 1)) = 0) ∨
-      ((64 ≤ hughesYoungDFIOptimalU P
+      (((((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (i + 1) ∧
+          ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (j + 1)) ∧
+        64 ≤ hughesYoungDFIOptimalU P
           (hughesYoungFullDyadicScale (i + 1))
           (hughesYoungFullDyadicScale (j + 1)) ∧
         ‖hughesYoungLocalizedOffDiagonalBox T
@@ -225,7 +233,11 @@ theorem exists_hughesYoungCanonicalRegularBox_scale_split
             (hughesYoungFullDyadicScale (j + 1)) ε h k
             (hughesYoungFullDyadicBound (i + 1))
             (hughesYoungFullDyadicBound (j + 1))) ∨
-       (hughesYoungDFIOptimalU P
+       ((((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (i + 1) ∧
+          ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤
+            2 * hughesYoungFullDyadicScale (j + 1)) ∧
+        hughesYoungDFIOptimalU P
           (hughesYoungFullDyadicScale (i + 1))
           (hughesYoungFullDyadicScale (j + 1)) < 64 ∧
         ‖hughesYoungLocalizedOffDiagonalBox T
@@ -256,23 +268,27 @@ theorem exists_hughesYoungCanonicalRegularBox_scale_split
   by_cases haX : ((hughesYoungReducedLeft h k : ℕ) : ℝ) ≤ 2 * X
   · by_cases hbY : ((hughesYoungReducedRight h k : ℕ) : ℝ) ≤ 2 * Y
     · right
-      exact hsplit hTexp hT16
+      rcases hsplit hTexp hT16
         (one_le_hughesYoungFullDyadicScale_succ i)
         (one_le_hughesYoungFullDyadicScale_succ j) hh hk hP hPT
         (two_mul_fullDyadicScale_div_le_bound
           (hughesYoungReducedLeft_pos hh))
         (two_mul_fullDyadicScale_div_le_bound
           (hughesYoungReducedRight_pos hh hk))
-        haX hbY hfar hsmall
+        haX hbY hfar hsmall with hlarge | hsmallScale
+      · exact Or.inl ⟨⟨haX, hbY⟩, hlarge⟩
+      · exact Or.inr ⟨⟨haX, hbY⟩, hsmallScale⟩
     · left
-      exact hughesYoungLocalizedOffDiagonalBox_eq_zero_of_right_scale
+      refine ⟨?_, hughesYoungLocalizedOffDiagonalBox_eq_zero_of_right_scale
         T (hughesYoungSmallContour T) (T / 8)
         (hughesYoungFullDyadicScale_pos (j + 1)) hh
-        (lt_of_not_ge hbY)
+        (lt_of_not_ge hbY)⟩
+      exact fun hvalid => hbY hvalid.2
   · left
-    exact hughesYoungLocalizedOffDiagonalBox_eq_zero_of_left_scale
+    refine ⟨?_, hughesYoungLocalizedOffDiagonalBox_eq_zero_of_left_scale
       T (hughesYoungSmallContour T) (T / 8)
       (hughesYoungFullDyadicScale_pos (i + 1)) hh
-      (lt_of_not_ge haX)
+      (lt_of_not_ge haX)⟩
+    exact fun hvalid => haX hvalid.1
 
 end RiemannZeta.GuthMaynard

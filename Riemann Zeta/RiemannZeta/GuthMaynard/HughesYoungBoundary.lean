@@ -115,6 +115,17 @@ theorem lt_of_hughesYoungDyadicCutoffAt_ne_zero
   apply hughesYoungDyadicCutoff_eq_zero_of_le_one
   exact (div_le_one hX).2 (le_of_not_gt hnot)
 
+/-- A nonzero physical dyadic cutoff lies strictly below twice its scale. -/
+theorem lt_two_mul_of_hughesYoungDyadicCutoffAt_ne_zero
+    {X x : ℝ} (hX : 0 < X)
+    (hne : hughesYoungDyadicCutoffAt X x ≠ 0) :
+    x < 2 * X := by
+  by_contra hnot
+  apply hne
+  unfold hughesYoungDyadicCutoffAt
+  apply hughesYoungDyadicCutoff_eq_zero_of_two_le
+  exact (le_div_iff₀ hX).2 (le_of_not_gt hnot)
+
 /-- A zero reduced left cutoff kills the exact gcd-scaled integrated source
 weight. -/
 theorem hughesYoungGCDReducedIntegratedBoxWeight_eq_zero_of_leftCutoff
@@ -143,6 +154,27 @@ theorem hughesYoungGCDReducedIntegratedBoxWeight_eq_zero_of_rightCutoff
       hughesYoungDyadicCutoffAt Y y from
         hughesYoungDyadicCutoffAt_mul_cancel hd, hzero]
   norm_num
+
+/-- Every nonzero gcd-reduced integrated box weight lies in the exact open
+dyadic rectangle selected by its two cutoff factors. -/
+theorem hughesYoungGCDReducedIntegratedBoxWeight_ne_zero_bounds
+    {T c H X Y : ℝ} {h k : ℕ} (hh : 0 < h) {x y : ℝ}
+    (hX : 0 < X) (hY : 0 < Y)
+    (hne : hughesYoungGCDReducedIntegratedBoxWeight
+      T c H X Y h k x y ≠ 0) :
+    X < x ∧ x < 2 * X ∧ Y < y ∧ y < 2 * Y := by
+  have hxcut : hughesYoungDyadicCutoffAt X x ≠ 0 := by
+    intro hzero
+    exact hne (hughesYoungGCDReducedIntegratedBoxWeight_eq_zero_of_leftCutoff
+      T c H X Y hh hzero)
+  have hycut : hughesYoungDyadicCutoffAt Y y ≠ 0 := by
+    intro hzero
+    exact hne (hughesYoungGCDReducedIntegratedBoxWeight_eq_zero_of_rightCutoff
+      T c H X Y hh hzero)
+  exact ⟨lt_of_hughesYoungDyadicCutoffAt_ne_zero hX hxcut,
+    lt_two_mul_of_hughesYoungDyadicCutoffAt_ne_zero hX hxcut,
+    lt_of_hughesYoungDyadicCutoffAt_ne_zero hY hycut,
+    lt_two_mul_of_hughesYoungDyadicCutoffAt_ne_zero hY hycut⟩
 
 /-- The gcd-scaled boundary cutoff in the left source coordinate agrees on
 the full positive arithmetic lattice with the initial smooth box at reduced

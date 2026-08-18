@@ -68,6 +68,84 @@ theorem mem_hughesYoungFarShifts_iff
         r ∉ hughesYoungNearShifts T P X Y a b M N := by
   simp only [hughesYoungFarShifts, Finset.mem_filter]
 
+/-- The DFI near range contains at most the integers in the symmetric
+interval determined by the height cutoff `T * |r| / Y ≤ P`.  This is the
+source-level counting input used when summing the pointwise DFI error. -/
+theorem card_hughesYoungNearShifts_le
+    {T P X Y : ℝ} {a b M N : ℕ}
+    (hT : 0 < T) (hY : 0 < Y) (hP : 0 ≤ P) :
+    (hughesYoungNearShifts T P X Y a b M N).card ≤
+      2 * ⌊P * Y / T⌋₊ + 1 := by
+  let K : ℕ := ⌊P * Y / T⌋₊
+  have hR : 0 ≤ P * Y / T := by positivity
+  have hsub : hughesYoungNearShifts T P X Y a b M N ⊆
+      Finset.Icc (-(K : ℤ)) (K : ℤ) := by
+    intro r hr
+    have hrange := (mem_hughesYoungNearShifts_iff.mp hr).2.2.2.1
+    have habs : |(r : ℝ)| ≤ P * Y / T := by
+      calc
+        |(r : ℝ)| = T * (|(r : ℝ)| / Y) * Y / T := by field_simp
+        _ ≤ P * Y / T := by gcongr
+    have hnat : r.natAbs ≤ K := by
+      dsimp only [K]
+      exact Nat.le_floor (by simpa using habs)
+    simp only [Finset.mem_Icc]
+    constructor <;> omega
+  calc
+    _ ≤ (Finset.Icc (-(K : ℤ)) (K : ℤ)).card := Finset.card_le_card hsub
+    _ = 2 * K + 1 := by
+      rw [Int.card_Icc]
+      have hform : (K : ℤ) + 1 - -(K : ℤ) = (K : ℤ) + 1 + (K : ℤ) := by ring
+      rw [hform]
+      have hnonneg : (0 : ℤ) ≤ (K : ℤ) + 1 + (K : ℤ) := by omega
+      apply Int.ofNat_inj.mp
+      rw [Int.toNat_of_nonneg hnonneg]
+      norm_num
+      ring
+    _ = _ := rfl
+
+/-- Because the near-shift family excludes zero, the sharp symmetric-interval
+count has no extraneous central point.  This factor is what cancels the
+physical height in the global DFI-error summation. -/
+theorem card_hughesYoungNearShifts_le_two_mul_floor
+    {T P X Y : ℝ} {a b M N : ℕ}
+    (hT : 0 < T) (hY : 0 < Y) :
+    (hughesYoungNearShifts T P X Y a b M N).card ≤
+      2 * ⌊P * Y / T⌋₊ := by
+  let K : ℕ := ⌊P * Y / T⌋₊
+  have hsub : hughesYoungNearShifts T P X Y a b M N ⊆
+      (Finset.Icc (-(K : ℤ)) (K : ℤ)).erase 0 := by
+    intro r hr
+    rw [Finset.mem_erase]
+    refine ⟨(mem_hughesYoungNearShifts_iff.mp hr).2.1, ?_⟩
+    have hrange := (mem_hughesYoungNearShifts_iff.mp hr).2.2.2.1
+    have habs : |(r : ℝ)| ≤ P * Y / T := by
+      calc
+        |(r : ℝ)| = T * (|(r : ℝ)| / Y) * Y / T := by field_simp
+        _ ≤ P * Y / T := by gcongr
+    have hnat : r.natAbs ≤ K := by
+      dsimp only [K]
+      exact Nat.le_floor (by simpa using habs)
+    simp only [Finset.mem_Icc]
+    constructor <;> omega
+  calc
+    _ ≤ ((Finset.Icc (-(K : ℤ)) (K : ℤ)).erase 0).card :=
+      Finset.card_le_card hsub
+    _ = (Finset.Icc (-(K : ℤ)) (K : ℤ)).card - 1 :=
+      Finset.card_erase_of_mem (by simp)
+    _ = (2 * K + 1) - 1 := by
+      congr 1
+      rw [Int.card_Icc]
+      have hform : (K : ℤ) + 1 - -(K : ℤ) = (K : ℤ) + 1 + (K : ℤ) := by ring
+      rw [hform]
+      have hnonneg : (0 : ℤ) ≤ (K : ℤ) + 1 + (K : ℤ) := by omega
+      apply Int.ofNat_inj.mp
+      rw [Int.toNat_of_nonneg hnonneg]
+      norm_num
+      ring
+    _ = 2 * K := by omega
+    _ = _ := rfl
+
 /-- Exact disjoint partition of every nonzero finite-box shift into the
 near and far families. -/
 theorem sum_shiftInterval_eq_near_add_far

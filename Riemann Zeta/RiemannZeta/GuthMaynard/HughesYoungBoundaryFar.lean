@@ -16,6 +16,79 @@ positive integral coordinate is `1`, every non-diagonal term in a mixed
 endpoint box is outside Hughes--Young's near-shift range.
 -/
 
+/-- If the right dyadic scale is more than four times the left scale, every
+near-shift source sum vanishes.  This is the exact support/comparability
+fact used in Hughes--Young before summing the DFI error over boxes. -/
+theorem sum_hughesYoungNearShifts_eq_zero_of_four_mul_left_lt_right
+    {T c H P X Y : ℝ} {h k a b M N : ℕ}
+    (hh : 0 < h) (hX : 0 < X) (hY : 0 < Y) (hXY : 4 * X < Y) :
+    (∑ r ∈ hughesYoungNearShifts T P X Y a b M N,
+      dfiDyadicShiftedDivisorSum
+        (hughesYoungGCDReducedIntegratedBoxWeight T c H X Y h k)
+        a b M N r) = 0 := by
+  classical
+  apply Finset.sum_eq_zero
+  intro r hr
+  unfold dfiDyadicShiftedDivisorSum
+  apply Finset.sum_eq_zero
+  intro m hm
+  apply Finset.sum_eq_zero
+  intro n hn
+  by_cases hs : quadraticDivisorShift a b m n = r
+  · rw [if_pos hs]
+    by_cases hw : hughesYoungGCDReducedIntegratedBoxWeight T c H X Y h k
+        (a * m) (b * n) = 0
+    · simp [hw]
+    · obtain ⟨_hxLower, hxUpper, hyLower, _hyUpper⟩ :=
+        hughesYoungGCDReducedIntegratedBoxWeight_ne_zero_bounds
+          hh hX hY hw
+      have hshift : ((a * m : ℕ) : ℝ) - ((b * n : ℕ) : ℝ) = (r : ℝ) := by
+        unfold quadraticDivisorShift at hs
+        exact_mod_cast hs
+      norm_num [Nat.cast_mul] at hshift
+      have hrneg : (r : ℝ) < 0 := by linarith
+      have hrsmall := (mem_hughesYoungNearShifts_iff.mp hr).2.2.1
+      rw [abs_of_neg hrneg] at hrsmall
+      exfalso
+      linarith
+  · simp [hs]
+
+/-- Symmetrically, if the left dyadic scale is more than four times the
+right scale, every near-shift source sum vanishes. -/
+theorem sum_hughesYoungNearShifts_eq_zero_of_four_mul_right_lt_left
+    {T c H P X Y : ℝ} {h k a b M N : ℕ}
+    (hh : 0 < h) (hX : 0 < X) (hY : 0 < Y) (hYX : 4 * Y < X) :
+    (∑ r ∈ hughesYoungNearShifts T P X Y a b M N,
+      dfiDyadicShiftedDivisorSum
+        (hughesYoungGCDReducedIntegratedBoxWeight T c H X Y h k)
+        a b M N r) = 0 := by
+  classical
+  apply Finset.sum_eq_zero
+  intro r hr
+  unfold dfiDyadicShiftedDivisorSum
+  apply Finset.sum_eq_zero
+  intro m hm
+  apply Finset.sum_eq_zero
+  intro n hn
+  by_cases hs : quadraticDivisorShift a b m n = r
+  · rw [if_pos hs]
+    by_cases hw : hughesYoungGCDReducedIntegratedBoxWeight T c H X Y h k
+        (a * m) (b * n) = 0
+    · simp [hw]
+    · obtain ⟨hxLower, _hxUpper, _hyLower, hyUpper⟩ :=
+        hughesYoungGCDReducedIntegratedBoxWeight_ne_zero_bounds
+          hh hX hY hw
+      have hshift : ((a * m : ℕ) : ℝ) - ((b * n : ℕ) : ℝ) = (r : ℝ) := by
+        unfold quadraticDivisorShift at hs
+        exact_mod_cast hs
+      norm_num [Nat.cast_mul] at hshift
+      have hrpos : 0 < (r : ℝ) := by linarith
+      have hrsmall := (mem_hughesYoungNearShifts_iff.mp hr).2.2.1
+      rw [abs_of_pos hrpos] at hrsmall
+      exfalso
+      linarith
+  · simp [hs]
+
 /-- No near shift survives when the left reduced coordinate is localized to
 the initial smooth box and the right scale is at least one. -/
 theorem sum_hughesYoungNearShifts_initial_left_eq_zero
