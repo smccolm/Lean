@@ -44,7 +44,8 @@ theorem iteratedDeriv_hughesYoungRightContourWeight_shift_eq
     (n : ℕ) {c : ℝ} (hc : 0 < c) (u t : ℝ) :
     iteratedDeriv n (fun x : ℝ =>
         hughesYoungRightContourWeight x c u) t =
-      (Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) /
+      ((Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+          hughesYoungAuxiliaryZero ((c : ℂ) + (u : ℂ) * I)) /
           ((c : ℂ) + (u : ℂ) * I)) *
         (∑ i ∈ Finset.range (n + 1),
           (n.choose i : ℂ) *
@@ -53,7 +54,8 @@ theorem iteratedDeriv_hughesYoungRightContourWeight_shift_eq
             iteratedDeriv (n - i) (fun x : ℝ =>
               hughesYoungGammaRatioShift x c u) t) := by
   let A : ℂ :=
-    Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) /
+    (Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+      hughesYoungAuxiliaryZero ((c : ℂ) + (u : ℂ) * I)) /
       ((c : ℂ) + (u : ℂ) * I)
   let P : ℝ → ℂ := fun x => hughesYoungPolynomialRatioShift x c u
   let G : ℝ → ℂ := fun x => hughesYoungGammaRatioShift x c u
@@ -72,10 +74,12 @@ theorem iteratedDeriv_hughesYoungRightContourWeight_shift_eq
       (by exact_mod_cast le_top))]
 
 private theorem norm_hughesYoungRightContour_constant_le
-    {c u : ℝ} (hc : 0 < c) :
-    ‖Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) /
+    {c u : ℝ} (hc : 0 < c) (hc1 : c ≤ 1) :
+    ‖(Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+        hughesYoungAuxiliaryZero ((c : ℂ) + (u : ℂ) * I)) /
         ((c : ℂ) + (u : ℂ) * I)‖ ≤
-      c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) := by
+      c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+        (25 + 8 * u ^ 2) ^ 4 := by
   let w : ℂ := (c : ℂ) + (u : ℂ) * I
   have hw : c ≤ ‖w‖ := by
     have hre := Complex.abs_re_le_norm w
@@ -87,16 +91,32 @@ private theorem norm_hughesYoungRightContour_constant_le
     congr 1
     simp [w, pow_two, Complex.mul_re]
     ring
-  change ‖Complex.exp (100 * w ^ 2) / w‖ ≤ _
-  rw [norm_div, hgauss]
+  have hwSq : ‖w‖ ^ 2 = c ^ 2 + u ^ 2 := by
+    rw [Complex.norm_def, Real.sq_sqrt (Complex.normSq_nonneg w)]
+    simp [w, Complex.normSq_add_mul_I]
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤ (25 + 8 * u ^ 2) ^ 4 := by
+    unfold hughesYoungAuxiliaryZero
+    rw [norm_pow]
+    have hbase : ‖1 - 4 * w ^ 2‖ ≤ 25 + 8 * u ^ 2 := by
+      calc
+        ‖1 - 4 * w ^ 2‖ ≤ ‖(1 : ℂ)‖ + ‖4 * w ^ 2‖ := norm_sub_le _ _
+        _ = 1 + 4 * ‖w‖ ^ 2 := by simp [norm_pow]
+        _ = 1 + 4 * (c ^ 2 + u ^ 2) := by rw [hwSq]
+        _ ≤ 25 + 8 * u ^ 2 := by nlinarith [sq_nonneg u]
+    gcongr
+  change ‖(Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w) / w‖ ≤ _
+  rw [norm_div, norm_mul, hgauss]
   have hinv : 1 / ‖w‖ ≤ c⁻¹ := by
     simpa only [one_div] using one_div_le_one_div_of_le hc hw
   calc
-    Real.exp (100 * c ^ 2 - 100 * u ^ 2) / ‖w‖ =
-        Real.exp (100 * c ^ 2 - 100 * u ^ 2) * (1 / ‖w‖) := by ring
-    _ ≤ Real.exp (100 * c ^ 2 - 100 * u ^ 2) * c⁻¹ := by
-      exact mul_le_mul_of_nonneg_left hinv (Real.exp_nonneg _)
-    _ = c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) := by ring
+    Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          ‖hughesYoungAuxiliaryZero w‖ / ‖w‖ ≤
+        Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          (25 + 8 * u ^ 2) ^ 4 * c⁻¹ := by
+      rw [div_eq_mul_inv]
+      gcongr
+    _ = c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+        (25 + 8 * u ^ 2) ^ 4 := by ring
 
 /-- Uniform all-orders physical-height derivative bound for the complete
 right-contour coefficient in the central Mellin range. -/
@@ -108,6 +128,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (|t| + |u| + 2)) *
+          (25 + 8 * u ^ 2) ^ 4 *
           hughesYoungRightContourDerivativeConstant n *
           (((T / 16)⁻¹ * (1 + |u|)) ^ n) := by
   obtain ⟨C, hC, hgamma⟩ :=
@@ -119,11 +140,12 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
     (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2)
   have hS : 0 ≤ S := by dsimp [S]; positivity
   have hE : 0 ≤ E := by dsimp [E]; positivity
-  have hA := norm_hughesYoungRightContour_constant_le (u := u) hc
+  have hA := norm_hughesYoungRightContour_constant_le (u := u) hc hc1
   rw [iteratedDeriv_hughesYoungRightContourWeight_shift_eq n hc u t,
     norm_mul]
   calc
-    ‖Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) /
+    ‖(Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+          hughesYoungAuxiliaryZero ((c : ℂ) + (u : ℂ) * I)) /
           ((c : ℂ) + (u : ℂ) * I)‖ *
         ‖∑ i ∈ Finset.range (n + 1),
           (n.choose i : ℂ) *
@@ -131,7 +153,8 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
               hughesYoungPolynomialRatioShift x c u) t *
             iteratedDeriv (n - i) (fun x : ℝ =>
               hughesYoungGammaRatioShift x c u) t‖ ≤
-        (c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2)) *
+        (c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          (25 + 8 * u ^ 2) ^ 4) *
           (∑ i ∈ Finset.range (n + 1),
             (n.choose i * (i.factorial * 6 ^ (8 : ℕ)) *
               hughesYoungGammaRatioBellConstant (n - i)) *
@@ -205,6 +228,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
     _ = c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (|t| + |u| + 2)) *
+          (25 + 8 * u ^ 2) ^ 4 *
           hughesYoungRightContourDerivativeConstant n * S ^ n := by
       have hsum :
           (∑ i ∈ Finset.range (n + 1),
@@ -229,15 +253,18 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
         rw [← Real.exp_add]
         congr 1
         ring
-      change c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+      change (c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          (25 + 8 * u ^ 2) ^ 4) *
           (D * Real.exp
             (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2) *
               S ^ n) =
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
-            4 * C * c * Real.log (|t| + |u| + 2)) * D * S ^ n
+            4 * C * c * Real.log (|t| + |u| + 2)) *
+          (25 + 8 * u ^ 2) ^ 4 * D * S ^ n
       calc
-        c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+        (c⁻¹ * Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+            (25 + 8 * u ^ 2) ^ 4) *
             (D * Real.exp
               (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2) *
                 S ^ n) =
@@ -245,7 +272,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungRightContourWeight_shift_le :
               (Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
                 Real.exp
                   (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2)) *
-              D * S ^ n := by ring
+              (25 + 8 * u ^ 2) ^ 4 * D * S ^ n := by ring
         _ = _ := by rw [hexp]
     _ = _ := rfl
 
@@ -314,6 +341,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+          (25 + 8 * u ^ 2) ^ 4 *
           hughesYoungHeightInputDerivativeConstant Cw n *
           (((T / 16)⁻¹ * (1 + |u|)) ^ n) := by
   obtain ⟨Cγ, hCγ, hright⟩ :=
@@ -326,7 +354,8 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
   let S : ℝ := (T / 16)⁻¹ * (1 + |u|)
   let A : ℝ := c⁻¹ * Real.exp
     (100 * c ^ 2 - 84 * u ^ 2 +
-      4 * Cγ * c * Real.log (4 * T + |u| + 2))
+      4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+    (25 + 8 * u ^ 2) ^ 4
   have hS : 0 ≤ S := by dsimp [S]; positivity
   have hA : 0 ≤ A := by dsimp [A]; positivity
   have hscale : T⁻¹ ≤ S := by
@@ -362,6 +391,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * Cγ * c * Real.log (|t| + |u| + 2)) *
+          (25 + 8 * u ^ 2) ^ 4 *
           hughesYoungRightContourDerivativeConstant j * S ^ j at hraw
       have ht0 : 0 ≤ t := by nlinarith [htmem.1]
       have habst : |t| ≤ 4 * T := by simpa [abs_of_nonneg ht0] using htmem.2
@@ -457,7 +487,9 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
     rw [hzero, norm_zero]
     exact mul_nonneg
       (mul_nonneg
-        (mul_nonneg (inv_nonneg.mpr hc.le) (Real.exp_nonneg _))
+        (mul_nonneg
+          (mul_nonneg (inv_nonneg.mpr hc.le) (Real.exp_nonneg _))
+          (pow_nonneg (by nlinarith [sq_nonneg u]) 4))
         (hughesYoungHeightInputDerivativeConstant_pos
           (fun i => (hCw i).1) n).le)
       (pow_nonneg hS _)
@@ -474,6 +506,7 @@ theorem exists_integral_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
           (c⁻¹ * Real.exp
             (100 * c ^ 2 - 84 * u ^ 2 +
               4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+            (25 + 8 * u ^ 2) ^ 4 *
             hughesYoungHeightInputDerivativeConstant Cw j *
             (((T / 16)⁻¹ * (1 + |u|)) ^ j)) := by
   obtain ⟨Cγ, hCγ, Cw, hCw, hpoint⟩ :=
@@ -486,6 +519,7 @@ theorem exists_integral_norm_iteratedDeriv_hughesYoungHeightFourierInput_le :
   let M : ℝ := c⁻¹ * Real.exp
     (100 * c ^ 2 - 84 * u ^ 2 +
       4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+    (25 + 8 * u ^ 2) ^ 4 *
     hughesYoungHeightInputDerivativeConstant Cw j *
     (((T / 16)⁻¹ * (1 + |u|)) ^ j)
   have hg : Integrable (fun t : ℝ => ‖g t‖) := by
@@ -514,6 +548,7 @@ theorem hughesYoung_equation65 :
           (c⁻¹ * Real.exp
             (100 * c ^ 2 - 84 * u ^ 2 +
               4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+            (25 + 8 * u ^ 2) ^ 4 *
             hughesYoungHeightInputDerivativeConstant Cw j *
             (((T / 16)⁻¹ * (1 + |u|)) ^ j)) := by
   obtain ⟨Cγ, hCγ, Cw, hCw, hmass⟩ :=

@@ -25,7 +25,7 @@ noncomputable def hughesYoungSmallLineEnvelope
     (Real.exp
       (100 * c ^ 2 - 84 * u ^ 2 +
         4 * C * c * Real.log (6 * (|u| + 1))) *
-      (25 + 8 * u ^ 2) ^ 4)
+      (25 + 8 * u ^ 2) ^ 8)
 
 theorem hughesYoungSmallLineEnvelope_pos
     {C T c : ℝ} (hT : 0 < T) (hc : 0 < c) (u : ℝ) :
@@ -45,7 +45,7 @@ theorem continuous_hughesYoungSmallLineEnvelope
         (continuous_const.mul (continuous_id.pow 2))).add
           (continuous_const.mul hlog)))).mul
       ((continuous_const.add
-        (continuous_const.mul (continuous_id.pow 2))).pow 4))
+        (continuous_const.mul (continuous_id.pow 2))).pow 8))
 
 /-- The ordinate-dependent part left after multiplying the small-line
 envelope by the Gaussian normalization in the scaled DFI consumer. -/
@@ -54,7 +54,7 @@ noncomputable def hughesYoungIntegratedOrdinateFactor
   Real.exp
       (100 * c ^ 2 - 82 * u ^ 2 +
         4 * C * c * Real.log (6 * (|u| + 1))) *
-    (25 + 8 * u ^ 2) ^ 4
+    (25 + 8 * u ^ 2) ^ 8
 
 theorem continuous_hughesYoungIntegratedOrdinateFactor
     (C c : ℝ) : Continuous (hughesYoungIntegratedOrdinateFactor C c) := by
@@ -68,7 +68,7 @@ theorem continuous_hughesYoungIntegratedOrdinateFactor
         (continuous_const.mul (continuous_id.pow 2))).add
           (continuous_const.mul hlog)))).mul
       ((continuous_const.add
-        (continuous_const.mul (continuous_id.pow 2))).pow 4)
+        (continuous_const.mul (continuous_id.pow 2))).pow 8)
 
 /-- Exact separation of the Hughes--Young small-line normalization into
 the scale variables and the single ordinate factor that is integrated
@@ -130,14 +130,14 @@ theorem exists_hughesYoungIntegratedOrdinateFactor_le_gaussian
   let n : ℕ := Nat.ceil (4 * C)
   let K : ℝ := Real.exp 100 *
     (6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n)) *
-    (33 ^ 4 * hughesYoungGaussianPowerConstant 4)
+    (33 ^ 8 * hughesYoungGaussianPowerConstant 8)
   have hK : 0 < K := by
     dsimp only [K]
     exact mul_pos
       (mul_pos (Real.exp_pos 100)
         (mul_pos (by positivity)
           (mul_pos (by positivity) (hughesYoungGaussianPowerConstant_pos n))))
-      (mul_pos (by positivity) (hughesYoungGaussianPowerConstant_pos 4))
+      (mul_pos (by positivity) (hughesYoungGaussianPowerConstant_pos 8))
   refine ⟨K, hK, ?_⟩
   intro c hc hc1 u
   let B : ℝ := 6 * (|u| + 1)
@@ -183,27 +183,27 @@ theorem exists_hughesYoungIntegratedOrdinateFactor_le_gaussian
     exact hBpow.trans hBnat
   have hpolybase : 25 + 8 * u ^ 2 ≤ 33 * (u ^ 2 + 1) := by
     nlinarith [sq_nonneg u]
-  have hpolyPow := pow_le_pow_left₀ (by positivity) hpolybase 4
+  have hpolyPow := pow_le_pow_left₀ (by positivity) hpolybase 8
   have hpolyGauss := pow_add_one_le_gaussianPowerConstant_mul_exp
-    (sq_nonneg u) 4
-  have hpoly : (25 + 8 * u ^ 2) ^ 4 ≤
-      (33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+    (sq_nonneg u) 8
+  have hpoly : (25 + 8 * u ^ 2) ^ 8 ≤
+      (33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
         Real.exp (u ^ 2) := by
     calc
-      (25 + 8 * u ^ 2) ^ 4 ≤ (33 * (u ^ 2 + 1)) ^ 4 := hpolyPow
-      _ = 33 ^ 4 * (u ^ 2 + 1) ^ 4 := by rw [mul_pow]
-      _ ≤ 33 ^ 4 *
-          (hughesYoungGaussianPowerConstant 4 * Real.exp (u ^ 2)) := by
+      (25 + 8 * u ^ 2) ^ 8 ≤ (33 * (u ^ 2 + 1)) ^ 8 := hpolyPow
+      _ = 33 ^ 8 * (u ^ 2 + 1) ^ 8 := by rw [mul_pow]
+      _ ≤ 33 ^ 8 *
+          (hughesYoungGaussianPowerConstant 8 * Real.exp (u ^ 2)) := by
         exact mul_le_mul_of_nonneg_left hpolyGauss (by positivity)
-      _ = (33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+      _ = (33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
           Real.exp (u ^ 2) := by ring
   have hcSq : c ^ 2 ≤ 1 := by nlinarith
   have hcExp : Real.exp (100 * c ^ 2) ≤ Real.exp 100 := by
     exact Real.exp_le_exp.mpr (by nlinarith)
   have hGn : 0 ≤ hughesYoungGaussianPowerConstant n :=
     (hughesYoungGaussianPowerConstant_pos n).le
-  have hG4 : 0 ≤ hughesYoungGaussianPowerConstant 4 :=
-    (hughesYoungGaussianPowerConstant_pos 4).le
+  have hG8 : 0 ≤ hughesYoungGaussianPowerConstant 8 :=
+    (hughesYoungGaussianPowerConstant_pos 8).le
   unfold hughesYoungIntegratedOrdinateFactor
   rw [show
       100 * c ^ 2 - 82 * u ^ 2 + 4 * C * c * Real.log (6 * (|u| + 1)) =
@@ -214,11 +214,11 @@ theorem exists_hughesYoungIntegratedOrdinateFactor_le_gaussian
   calc
     Real.exp (100 * c ^ 2) * Real.exp (-82 * u ^ 2) *
           Real.exp (4 * C * c * Real.log B) *
-          (25 + 8 * u ^ 2) ^ 4 ≤
+          (25 + 8 * u ^ 2) ^ 8 ≤
         Real.exp 100 * Real.exp (-82 * u ^ 2) *
           ((6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n)) *
             Real.exp (u ^ 2)) *
-          ((33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+          ((33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
             Real.exp (u ^ 2)) := by
       gcongr
     _ = K * Real.exp (-80 * u ^ 2) := by
@@ -240,18 +240,18 @@ theorem exists_hughesYoungIntegratedOrdinateFactor_le_gaussian
         Real.exp 100 * Real.exp (-82 * u ^ 2) *
               (6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n) *
                 Real.exp (u ^ 2)) *
-              (33 ^ 4 * hughesYoungGaussianPowerConstant 4 *
+              (33 ^ 8 * hughesYoungGaussianPowerConstant 8 *
                 Real.exp (u ^ 2)) =
             (6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n)) *
-              (33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+              (33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
               (Real.exp 100 * Real.exp (-82 * u ^ 2) *
                 Real.exp (u ^ 2) * Real.exp (u ^ 2)) := by ring
         _ = (6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n)) *
-              (33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+              (33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
               (Real.exp 100 * Real.exp (-80 * u ^ 2)) := by rw [hexp]
         _ = Real.exp 100 *
               (6 ^ n * (2 ^ n * hughesYoungGaussianPowerConstant n)) *
-              (33 ^ 4 * hughesYoungGaussianPowerConstant 4) *
+              (33 ^ 8 * hughesYoungGaussianPowerConstant 8) *
               Real.exp (-80 * u ^ 2) := by ring
 
 theorem integrable_hughesYoungIntegratedOrdinateFactor

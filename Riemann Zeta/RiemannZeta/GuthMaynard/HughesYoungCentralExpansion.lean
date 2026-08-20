@@ -38,6 +38,58 @@ noncomputable def hughesYoungEquation84Kernel11 (t : ℝ) (w : ℂ) : ℂ :=
     hughesYoungEquation84Kernel01 t w -
     hughesYoungEquation84Kernel00 t w
 
+noncomputable def hughesYoungEquation84KernelCore00 (t : ℝ) (w : ℂ) : ℂ :=
+  hughesYoungEquation84RegularizedContourKernelCore t w 0 0
+
+noncomputable def hughesYoungEquation84KernelCore10 (t : ℝ) (w : ℂ) : ℂ :=
+  hughesYoungEquation84RegularizedContourKernelCore t w 1 0 -
+    hughesYoungEquation84KernelCore00 t w
+
+noncomputable def hughesYoungEquation84KernelCore01 (t : ℝ) (w : ℂ) : ℂ :=
+  hughesYoungEquation84RegularizedContourKernelCore t w 0 1 -
+    hughesYoungEquation84KernelCore00 t w
+
+noncomputable def hughesYoungEquation84KernelCore11 (t : ℝ) (w : ℂ) : ℂ :=
+  hughesYoungEquation84RegularizedContourKernelCore t w 1 1 -
+    hughesYoungEquation84KernelCore10 t w -
+    hughesYoungEquation84KernelCore01 t w -
+    hughesYoungEquation84KernelCore00 t w
+
+theorem hughesYoungEquation84Kernel00_eq_auxiliary_mul_core
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel00 t w =
+      hughesYoungAuxiliaryZero w * hughesYoungEquation84KernelCore00 t w := by
+  rfl
+
+theorem hughesYoungEquation84Kernel10_eq_auxiliary_mul_core
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel10 t w =
+      hughesYoungAuxiliaryZero w * hughesYoungEquation84KernelCore10 t w := by
+  unfold hughesYoungEquation84Kernel10 hughesYoungEquation84KernelCore10
+    hughesYoungEquation84Kernel00 hughesYoungEquation84KernelCore00
+    hughesYoungEquation84RegularizedContourKernel
+  ring
+
+theorem hughesYoungEquation84Kernel01_eq_auxiliary_mul_core
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel01 t w =
+      hughesYoungAuxiliaryZero w * hughesYoungEquation84KernelCore01 t w := by
+  unfold hughesYoungEquation84Kernel01 hughesYoungEquation84KernelCore01
+    hughesYoungEquation84Kernel00 hughesYoungEquation84KernelCore00
+    hughesYoungEquation84RegularizedContourKernel
+  ring
+
+theorem hughesYoungEquation84Kernel11_eq_auxiliary_mul_core
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel11 t w =
+      hughesYoungAuxiliaryZero w * hughesYoungEquation84KernelCore11 t w := by
+  rw [hughesYoungEquation84Kernel11, hughesYoungEquation84KernelCore11,
+    hughesYoungEquation84Kernel10_eq_auxiliary_mul_core,
+    hughesYoungEquation84Kernel01_eq_auxiliary_mul_core,
+    hughesYoungEquation84Kernel00_eq_auxiliary_mul_core]
+  unfold hughesYoungEquation84RegularizedContourKernel
+  ring
+
 private theorem hughesYoungEquation84RegularizedBetaKernel_eq_fourTerm
     (t : ℝ) (w CX COne : ℂ) :
     hughesYoungEquation84RegularizedBetaKernel t w CX COne =
@@ -68,7 +120,8 @@ theorem hughesYoungEquation84RegularizedContourKernel_eq_fourTerm
       (CX * COne) * hughesYoungEquation84Kernel11 t w := by
   let p : ℂ := afeCriticalPoint t + w
   let q : ℂ := afeCriticalPoint (-t) + w
-  let O : ℂ := Complex.exp (100 * w ^ 2) * (p * (1 - p)) ^ 2 * q ^ 2 *
+  let O : ℂ := Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w *
+    (p * (1 - p)) ^ 2 * q ^ 2 *
     Complex.Gammaℝ p ^ 2 * Complex.Gammaℝ q ^ 2 /
     afePoleNormalization t / w / afeGammaNormalization t
   unfold hughesYoungEquation84Kernel00 hughesYoungEquation84Kernel10
@@ -418,6 +471,39 @@ theorem differentiableAt_hughesYoungEquation84Kernel00
   unfold hughesYoungEquation84Kernel00
   exact differentiableAt_hughesYoungEquation84RegularizedContourKernel
     (t := t) (w := w) (CX := 0) (COne := 0) hw₀ hw₁
+
+theorem differentiableAt_hughesYoungEquation84KernelCore00
+    (t : ℝ) {w : ℂ} (hw₀ : 0 < w.re) (hw₁ : w.re < 3 / 2) :
+    DifferentiableAt ℂ (hughesYoungEquation84KernelCore00 t) w := by
+  unfold hughesYoungEquation84KernelCore00
+  exact differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
+    (t := t) (w := w) (CX := 0) (COne := 0) hw₀ hw₁
+
+theorem differentiableAt_hughesYoungEquation84KernelCore10
+    (t : ℝ) {w : ℂ} (hw₀ : 0 < w.re) (hw₁ : w.re < 3 / 2) :
+    DifferentiableAt ℂ (hughesYoungEquation84KernelCore10 t) w := by
+  unfold hughesYoungEquation84KernelCore10
+  exact (differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
+    (t := t) (w := w) (CX := 1) (COne := 0) hw₀ hw₁).sub
+      (differentiableAt_hughesYoungEquation84KernelCore00 t hw₀ hw₁)
+
+theorem differentiableAt_hughesYoungEquation84KernelCore01
+    (t : ℝ) {w : ℂ} (hw₀ : 0 < w.re) (hw₁ : w.re < 3 / 2) :
+    DifferentiableAt ℂ (hughesYoungEquation84KernelCore01 t) w := by
+  unfold hughesYoungEquation84KernelCore01
+  exact (differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
+    (t := t) (w := w) (CX := 0) (COne := 1) hw₀ hw₁).sub
+      (differentiableAt_hughesYoungEquation84KernelCore00 t hw₀ hw₁)
+
+theorem differentiableAt_hughesYoungEquation84KernelCore11
+    (t : ℝ) {w : ℂ} (hw₀ : 0 < w.re) (hw₁ : w.re < 3 / 2) :
+    DifferentiableAt ℂ (hughesYoungEquation84KernelCore11 t) w := by
+  unfold hughesYoungEquation84KernelCore11
+  exact (((differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
+    (t := t) (w := w) (CX := 1) (COne := 1) hw₀ hw₁).sub
+      (differentiableAt_hughesYoungEquation84KernelCore10 t hw₀ hw₁)).sub
+      (differentiableAt_hughesYoungEquation84KernelCore01 t hw₀ hw₁)).sub
+      (differentiableAt_hughesYoungEquation84KernelCore00 t hw₀ hw₁)
 
 theorem differentiableAt_hughesYoungEquation84Kernel10
     (t : ℝ) {w : ℂ} (hw₀ : 0 < w.re) (hw₁ : w.re < 3 / 2) :

@@ -1590,7 +1590,8 @@ arbitrary positive line. -/
 theorem hughesYoungRightContourWeight_shift_eq
     (t c u : ℝ) :
     hughesYoungRightContourWeight t c u =
-      Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+      (Complex.exp (100 * (((c : ℂ) + (u : ℂ) * I) ^ 2)) *
+        hughesYoungAuxiliaryZero ((c : ℂ) + (u : ℂ) * I)) *
         hughesYoungPolynomialRatioShift t c u *
         hughesYoungGammaRatioShift t c u /
         ((c : ℂ) + (u : ℂ) * I) := by
@@ -1637,7 +1638,7 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le :
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (|t| + |u| + 2)) *
-          (25 + 8 * u ^ 2) ^ 4 := by
+          (25 + 8 * u ^ 2) ^ 8 := by
   obtain ⟨C, hC, hgamma⟩ := exists_norm_hughesYoungGammaRatioShift_le
   refine ⟨C, hC, ?_⟩
   intro t u c hc hc1
@@ -1652,23 +1653,38 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le :
     congr 1
     simp [w, pow_two, Complex.mul_re]
     ring
+  have hwSq : ‖w‖ ^ 2 = c ^ 2 + u ^ 2 := by
+    rw [Complex.norm_def, Real.sq_sqrt (Complex.normSq_nonneg w)]
+    simp [w, Complex.normSq_add_mul_I]
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤ (25 + 8 * u ^ 2) ^ 4 := by
+    unfold hughesYoungAuxiliaryZero
+    rw [norm_pow]
+    have hbase : ‖1 - 4 * w ^ 2‖ ≤ 25 + 8 * u ^ 2 := by
+      calc
+        ‖1 - 4 * w ^ 2‖ ≤ ‖(1 : ℂ)‖ + ‖4 * w ^ 2‖ := norm_sub_le _ _
+        _ = 1 + 4 * ‖w‖ ^ 2 := by simp [norm_pow]
+        _ = 1 + 4 * (c ^ 2 + u ^ 2) := by rw [hwSq]
+        _ ≤ 25 + 8 * u ^ 2 := by nlinarith [sq_nonneg u]
+    gcongr
   have hpoly := norm_hughesYoungPolynomialRatioShift_le t u c hc.le hc1
   have hgamma' := hgamma t u c hc.le hc1
   rw [hughesYoungRightContourWeight_shift_eq]
-  change ‖Complex.exp (100 * w ^ 2) *
+  change ‖(Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w) *
       hughesYoungPolynomialRatioShift t c u *
       hughesYoungGammaRatioShift t c u / w‖ ≤ _
-  rw [norm_div, norm_mul, norm_mul, hgauss]
+  rw [norm_div, norm_mul, norm_mul, norm_mul, hgauss]
   calc
-    Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+    Real.exp (100 * c ^ 2 - 100 * u ^ 2) * ‖hughesYoungAuxiliaryZero w‖ *
           ‖hughesYoungPolynomialRatioShift t c u‖ *
           ‖hughesYoungGammaRatioShift t c u‖ / ‖w‖
         ≤ Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          (25 + 8 * u ^ 2) ^ 4 *
           (25 + 8 * u ^ 2) ^ 4 *
           Real.exp
             (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2) /
           ‖w‖ := by gcongr
     _ ≤ Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+          (25 + 8 * u ^ 2) ^ 4 *
           (25 + 8 * u ^ 2) ^ 4 *
           Real.exp
             (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2) /
@@ -1677,10 +1693,11 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le :
     _ = c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (|t| + |u| + 2)) *
-          (25 + 8 * u ^ 2) ^ 4 := by
+          (25 + 8 * u ^ 2) ^ 8 := by
       rw [div_eq_mul_inv]
       calc
         Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
+              (25 + 8 * u ^ 2) ^ 4 *
               (25 + 8 * u ^ 2) ^ 4 *
               Real.exp
                 (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2) * c⁻¹ =
@@ -1688,11 +1705,11 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le :
               (Real.exp (100 * c ^ 2 - 100 * u ^ 2) *
                 Real.exp
                   (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2)) *
-              (25 + 8 * u ^ 2) ^ 4 := by ring
+              (25 + 8 * u ^ 2) ^ 8 := by ring
         _ = c⁻¹ * Real.exp
               ((100 * c ^ 2 - 100 * u ^ 2) +
                 (4 * C * c * Real.log (|t| + |u| + 2) + 16 * u ^ 2)) *
-              (25 + 8 * u ^ 2) ^ 4 := by
+              (25 + 8 * u ^ 2) ^ 8 := by
           rw [← Real.exp_add]
         _ = _ := by
           congr 2
@@ -1709,7 +1726,7 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le_on_height_support :
         c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (4 * T + |u| + 2)) *
-          (25 + 8 * u ^ 2) ^ 4 := by
+          (25 + 8 * u ^ 2) ^ 8 := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungRightContourWeight_shift_le
   refine ⟨C, hC, ?_⟩
@@ -1737,7 +1754,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightTransform_shift_le :
           (c⁻¹ * Real.exp
             (100 * c ^ 2 - 84 * u ^ 2 +
               4 * C * c * Real.log (4 * T + |u| + 2)) *
-            (25 + 8 * u ^ 2) ^ 4)) := by
+            (25 + 8 * u ^ 2) ^ 8)) := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungRightContourWeight_shift_le_on_height_support
   refine ⟨C, hC, ?_⟩
@@ -1779,7 +1796,7 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le_height_power :
           (Real.exp
             (100 * c ^ 2 - 84 * u ^ 2 +
               4 * C * c * Real.log (6 * (|u| + 1))) *
-            (25 + 8 * u ^ 2) ^ 4) := by
+            (25 + 8 * u ^ 2) ^ 8) := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungRightContourWeight_shift_le_on_height_support
   refine ⟨C, hC, ?_⟩
@@ -1804,18 +1821,18 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le_height_power :
     c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c * Real.log (4 * T + |u| + 2)) *
-          (25 + 8 * u ^ 2) ^ 4
+          (25 + 8 * u ^ 2) ^ 8
         ≤ c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 +
             4 * C * c *
               (Real.log T + Real.log (6 * (|u| + 1)))) *
-          (25 + 8 * u ^ 2) ^ 4 := by
+          (25 + 8 * u ^ 2) ^ 8 := by
       gcongr
     _ = c⁻¹ * T ^ (4 * C * c) *
           (Real.exp
             (100 * c ^ 2 - 84 * u ^ 2 +
               4 * C * c * Real.log (6 * (|u| + 1))) *
-            (25 + 8 * u ^ 2) ^ 4) := by
+            (25 + 8 * u ^ 2) ^ 8) := by
       have heq :
           Real.exp
               (100 * c ^ 2 - 84 * u ^ 2 +
@@ -1844,7 +1861,7 @@ theorem exists_norm_iteratedDeriv_hughesYoungHeightTransform_shift_le_height_pow
             (Real.exp
               (100 * c ^ 2 - 84 * u ^ 2 +
                 4 * C * c * Real.log (6 * (|u| + 1))) *
-              (25 + 8 * u ^ 2) ^ 4))) := by
+              (25 + 8 * u ^ 2) ^ 8))) := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungRightContourWeight_shift_le_height_power
   refine ⟨C, hC, ?_⟩
@@ -1867,7 +1884,7 @@ theorem exists_norm_one_div_mul_iteratedDeriv_hughesYoungHeightTransform_le :
             (Real.exp
               (100 * c ^ 2 - 84 * u ^ 2 +
                 4 * C * c * Real.log (6 * (|u| + 1))) *
-              (25 + 8 * u ^ 2) ^ 4))) := by
+              (25 + 8 * u ^ 2) ^ 8))) := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_iteratedDeriv_hughesYoungHeightTransform_shift_le_height_power
   refine ⟨C, hC, ?_⟩
@@ -1883,7 +1900,7 @@ theorem exists_norm_one_div_mul_iteratedDeriv_hughesYoungHeightTransform_le :
               (Real.exp
                 (100 * c ^ 2 - 84 * u ^ 2 +
                   4 * C * c * Real.log (6 * (|u| + 1))) *
-                (25 + 8 * u ^ 2) ^ 4)))) := by
+                (25 + 8 * u ^ 2) ^ 8)))) := by
       exact mul_le_mul_of_nonneg_left (hbound T u c hT hc hc1 j xi)
         (by positivity)
     _ = (15 / 4 : ℝ) * ((4 * T) ^ j *
@@ -1891,7 +1908,7 @@ theorem exists_norm_one_div_mul_iteratedDeriv_hughesYoungHeightTransform_le :
             (Real.exp
               (100 * c ^ 2 - 84 * u ^ 2 +
                 4 * C * c * Real.log (6 * (|u| + 1))) *
-              (25 + 8 * u ^ 2) ^ 4))) := by
+              (25 + 8 * u ^ 2) ^ 8))) := by
       field_simp [hTpos.ne']
 
 /-! ## Uniform Faà di Bruno control of the shifted height transform -/
@@ -2145,7 +2162,7 @@ theorem exists_norm_iteratedDeriv_hughesYoung_height_shift_le :
             (Real.exp
               (100 * c ^ 2 - 84 * u ^ 2 +
                 4 * C * c * Real.log (6 * (|u| + 1))) *
-              (25 + 8 * u ^ 2) ^ 4)) * P ^ n := by
+              (25 + 8 * u ^ 2) ^ 8)) * P ^ n := by
   obtain ⟨C, hC, hheight⟩ :=
     exists_norm_one_div_mul_iteratedDeriv_hughesYoungHeightTransform_le
   refine ⟨C, hC, ?_⟩
@@ -2154,7 +2171,7 @@ theorem exists_norm_iteratedDeriv_hughesYoung_height_shift_le :
     (Real.exp
       (100 * c ^ 2 - 84 * u ^ 2 +
         4 * C * c * Real.log (6 * (|u| + 1))) *
-      (25 + 8 * u ^ 2) ^ 4)
+      (25 + 8 * u ^ 2) ^ 8)
   have hA : 0 ≤ A := by
     dsimp only [A]
     positivity
@@ -3591,7 +3608,8 @@ theorem norm_hughesYoungPolynomialRatioTwo_le (t u : ℝ) :
 `Re w = 2` into its Gaussian, polynomial, and paired-Gamma quotients. -/
 theorem hughesYoungRightContourWeight_two_eq (t u : ℝ) :
     hughesYoungRightContourWeight t 2 u =
-      Complex.exp (100 * (((2 : ℂ) + (u : ℂ) * I) ^ 2)) *
+      (Complex.exp (100 * (((2 : ℂ) + (u : ℂ) * I) ^ 2)) *
+        hughesYoungAuxiliaryZero ((2 : ℂ) + (u : ℂ) * I)) *
         hughesYoungPolynomialRatioTwo t u *
         hughesYoungGammaRatioTwo t u /
         ((2 : ℂ) + (u : ℂ) * I) := by
@@ -3609,7 +3627,7 @@ theorem hughesYoungRightContourWeight_two_eq (t u : ℝ) :
     field_simp [hPN, hGN, hW]
   simpa only [hughesYoungRightContourWeight, hughesYoungPolynomialRatioTwo,
       hughesYoungGammaRatioTwo, w, s₁, s₂] using
-    hfactor (Complex.exp (100 * w ^ 2))
+    hfactor (Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w)
       ((s₁ * (1 - s₁)) ^ 2) ((s₂ * (1 - s₂)) ^ 2)
       (Complex.Gammaℝ s₁ ^ 2) (Complex.Gammaℝ s₂ ^ 2)
       (afePoleNormalization t) (afeGammaNormalization t) w
@@ -3622,7 +3640,7 @@ series. -/
 theorem norm_hughesYoungRightContourWeight_two_le (t u : ℝ) :
     ‖hughesYoungRightContourWeight t 2 u‖ ≤
       Real.exp (400 - 84 * u ^ 2) *
-        (25 + 8 * u ^ 2) ^ 6 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 := by
+        (25 + 8 * u ^ 2) ^ 10 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 := by
   let w : ℂ := (2 : ℂ) + (u : ℂ) * I
   let A : ℝ := (1 / 4 : ℝ) + t ^ 2
   let B : ℝ := 25 + 8 * u ^ 2
@@ -3637,6 +3655,20 @@ theorem norm_hughesYoungRightContourWeight_two_le (t u : ℝ) :
     congr 1
     simp [w, pow_two, Complex.mul_re]
     ring
+  have hwSq : ‖w‖ ^ 2 = 4 + u ^ 2 := by
+    rw [Complex.norm_def, Real.sq_sqrt (Complex.normSq_nonneg w)]
+    simp [w, Complex.normSq]
+    ring
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤ B ^ 4 := by
+    unfold hughesYoungAuxiliaryZero
+    rw [norm_pow]
+    have hbase : ‖1 - 4 * w ^ 2‖ ≤ B := by
+      calc
+        ‖1 - 4 * w ^ 2‖ ≤ ‖(1 : ℂ)‖ + ‖4 * w ^ 2‖ := norm_sub_le _ _
+        _ = 1 + 4 * ‖w‖ ^ 2 := by simp [norm_pow]
+        _ = 1 + 4 * (4 + u ^ 2) := by rw [hwSq]
+        _ ≤ B := by dsimp only [B]; nlinarith [sq_nonneg u]
+    gcongr
   have hpoly : ‖hughesYoungPolynomialRatioTwo t u‖ ≤ B ^ 4 := by
     simpa only [B] using norm_hughesYoungPolynomialRatioTwo_le t u
   have hgamma : ‖hughesYoungGammaRatioTwo t u‖ ≤
@@ -3644,40 +3676,45 @@ theorem norm_hughesYoungRightContourWeight_two_le (t u : ℝ) :
     simpa only [B, A] using norm_hughesYoungGammaRatioTwo_le t u
   have hnum :
       ‖Complex.exp (100 * w ^ 2)‖ *
+          ‖hughesYoungAuxiliaryZero w‖ *
           ‖hughesYoungPolynomialRatioTwo t u‖ *
           ‖hughesYoungGammaRatioTwo t u‖ ≤
-        Real.exp (400 - 84 * u ^ 2) * B ^ 6 * A ^ 2 := by
+        Real.exp (400 - 84 * u ^ 2) * B ^ 10 * A ^ 2 := by
     rw [hexp]
     calc
       Real.exp (400 - 100 * u ^ 2) *
+            ‖hughesYoungAuxiliaryZero w‖ *
             ‖hughesYoungPolynomialRatioTwo t u‖ *
             ‖hughesYoungGammaRatioTwo t u‖
-          ≤ Real.exp (400 - 100 * u ^ 2) * B ^ 4 *
+          ≤ Real.exp (400 - 100 * u ^ 2) * B ^ 4 * B ^ 4 *
               (Real.exp (16 * u ^ 2) * (B * A) ^ 2) := by
             gcongr
       _ = (Real.exp (400 - 100 * u ^ 2) * Real.exp (16 * u ^ 2)) *
-            (B ^ 4 * (B * A) ^ 2) := by ring
+            (B ^ 4 * B ^ 4 * (B * A) ^ 2) := by ring
       _ = Real.exp ((400 - 100 * u ^ 2) + 16 * u ^ 2) *
-            (B ^ 4 * (B * A) ^ 2) := by rw [Real.exp_add]
-      _ = Real.exp (400 - 84 * u ^ 2) * B ^ 6 * A ^ 2 := by
+            (B ^ 4 * B ^ 4 * (B * A) ^ 2) := by rw [Real.exp_add]
+      _ = Real.exp (400 - 84 * u ^ 2) * B ^ 10 * A ^ 2 := by
             rw [show (400 - 100 * u ^ 2) + 16 * u ^ 2 =
               400 - 84 * u ^ 2 by ring]
             ring
   rw [hughesYoungRightContourWeight_two_eq]
-  change ‖Complex.exp (100 * w ^ 2) * hughesYoungPolynomialRatioTwo t u *
+  change ‖(Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w) *
+      hughesYoungPolynomialRatioTwo t u *
       hughesYoungGammaRatioTwo t u / w‖ ≤ _
-  rw [norm_div, norm_mul, norm_mul]
+  rw [norm_div, norm_mul, norm_mul, norm_mul]
   calc
     ‖Complex.exp (100 * w ^ 2)‖ *
+          ‖hughesYoungAuxiliaryZero w‖ *
           ‖hughesYoungPolynomialRatioTwo t u‖ *
           ‖hughesYoungGammaRatioTwo t u‖ / ‖w‖
         ≤ ‖Complex.exp (100 * w ^ 2)‖ *
+          ‖hughesYoungAuxiliaryZero w‖ *
           ‖hughesYoungPolynomialRatioTwo t u‖ *
           ‖hughesYoungGammaRatioTwo t u‖ := by
             exact div_le_self (by positivity) hwNorm
-    _ ≤ Real.exp (400 - 84 * u ^ 2) * B ^ 6 * A ^ 2 := hnum
+    _ ≤ Real.exp (400 - 84 * u ^ 2) * B ^ 10 * A ^ 2 := hnum
     _ = Real.exp (400 - 84 * u ^ 2) *
-        (25 + 8 * u ^ 2) ^ 6 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 := by rfl
+        (25 + 8 * u ^ 2) ^ 10 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 := by rfl
 
 /-- Uniform height-support specialization of the right-contour bound. -/
 theorem norm_hughesYoungRightContourWeight_two_le_on_height_support
@@ -3685,7 +3722,7 @@ theorem norm_hughesYoungRightContourWeight_two_le_on_height_support
     (u : ℝ) :
     ‖hughesYoungRightContourWeight t 2 u‖ ≤
       289 * Real.exp (400 - 84 * u ^ 2) *
-        (25 + 8 * u ^ 2) ^ 6 * T ^ 4 := by
+        (25 + 8 * u ^ 2) ^ 10 * T ^ 4 := by
   have ht0 : 0 ≤ t := by linarith [ht.1]
   have htUpper : t ≤ 4 * T := ht.2
   have hT0 : 0 ≤ T := le_trans (by norm_num) hT
@@ -3699,13 +3736,13 @@ theorem norm_hughesYoungRightContourWeight_two_le_on_height_support
   calc
     ‖hughesYoungRightContourWeight t 2 u‖ ≤
         Real.exp (400 - 84 * u ^ 2) *
-          (25 + 8 * u ^ 2) ^ 6 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 :=
+          (25 + 8 * u ^ 2) ^ 10 * ((1 / 4 : ℝ) + t ^ 2) ^ 2 :=
       norm_hughesYoungRightContourWeight_two_le t u
     _ ≤ Real.exp (400 - 84 * u ^ 2) *
-          (25 + 8 * u ^ 2) ^ 6 * (17 * T ^ 2) ^ 2 := by
+          (25 + 8 * u ^ 2) ^ 10 * (17 * T ^ 2) ^ 2 := by
       gcongr
     _ = 289 * Real.exp (400 - 84 * u ^ 2) *
-          (25 + 8 * u ^ 2) ^ 6 * T ^ 4 := by ring
+          (25 + 8 * u ^ 2) ^ 10 * T ^ 4 := by ring
 
 /-- All logarithmic-frequency derivatives of the height transform on the
 absolutely convergent line carry an explicit, uniform Gaussian majorant. -/
@@ -3714,7 +3751,7 @@ theorem norm_iteratedDeriv_hughesYoungHeightTransform_two_le
     ‖iteratedDeriv j (hughesYoungHeightTransform T 2 u) xi‖ ≤
       (15 * T / 4) * ((4 * T) ^ j *
         (289 * Real.exp (400 - 84 * u ^ 2) *
-          (25 + 8 * u ^ 2) ^ 6 * T ^ 4)) := by
+          (25 + 8 * u ^ 2) ^ 10 * T ^ 4)) := by
   apply norm_iteratedDeriv_hughesYoungHeightTransform_le
     (lt_of_lt_of_le (by norm_num) hT) (by norm_num) u
   intro t ht
@@ -3724,7 +3761,7 @@ theorem norm_iteratedDeriv_hughesYoungHeightTransform_two_le
 Hughes--Young Mellin contour on `Re w = 2`. -/
 noncomputable def hughesYoungRightContourEnvelope (T u : ℝ) : ℝ :=
   289 * Real.exp (400 - 84 * u ^ 2) *
-    (25 + 8 * u ^ 2) ^ 6 * T ^ 4
+    (25 + 8 * u ^ 2) ^ 10 * T ^ 4
 
 theorem hughesYoungRightContourEnvelope_pos
     {T : ℝ} (hT : 0 < T) (u : ℝ) :

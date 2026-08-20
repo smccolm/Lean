@@ -63,6 +63,7 @@ noncomputable def hughesYoungRightContourWeight (t c u : ℝ) : ℂ :=
   let s₁ : ℂ := afeCriticalPoint t + w
   let s₂ : ℂ := afeCriticalPoint (-t) + w
   Complex.exp (100 * w ^ 2) *
+    hughesYoungAuxiliaryZero w *
     (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2 *
     Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2 /
     afePoleNormalization t / w / afeGammaNormalization t
@@ -195,6 +196,8 @@ theorem continuous_hughesYoungRightContourWeight
     simpa only [w] using hwne
   have hexp : Continuous (fun u => Complex.exp (100 * (w u) ^ 2)) :=
     Complex.continuous_exp.comp (continuous_const.mul (hw.pow 2))
+  have haux : Continuous (fun u => hughesYoungAuxiliaryZero (w u)) :=
+    differentiable_hughesYoungAuxiliaryZero.continuous.comp hw
   have hpoly₁ : Continuous (fun u => (s₁ u * (1 - s₁ u)) ^ 2) :=
     (hs₁.mul (continuous_const.sub hs₁)).pow 2
   have hpoly₂ : Continuous (fun u => (s₂ u * (1 - s₂ u)) ^ 2) :=
@@ -204,12 +207,13 @@ theorem continuous_hughesYoungRightContourWeight
     (hgammaPlus.pow 2).mul (hgammaMinus.pow 2)
   have hnum : Continuous (fun u =>
       Complex.exp (100 * (w u) ^ 2) *
+        hughesYoungAuxiliaryZero (w u) *
         (s₁ u * (1 - s₁ u)) ^ 2 *
         (s₂ u * (1 - s₂ u)) ^ 2 *
         Complex.Gammaℝ (s₁ u) ^ 2 *
         Complex.Gammaℝ (s₂ u) ^ 2) := by
     simpa only [mul_assoc] using
-      (((hexp.mul hpoly₁).mul hpoly₂).mul hgammaPair)
+      ((((hexp.mul haux).mul hpoly₁).mul hpoly₂).mul hgammaPair)
   have hweight := ((hnum.div_const (afePoleNormalization t)).div₀ hw hwne').div_const
     (afeGammaNormalization t)
   simpa only [hughesYoungRightContourWeight, w, s₁, s₂] using hweight

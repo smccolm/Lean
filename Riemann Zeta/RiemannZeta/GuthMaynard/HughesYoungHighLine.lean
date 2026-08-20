@@ -314,8 +314,10 @@ set_option maxRecDepth 10000 in
 theorem hughesYoungRightContourWeight_even_eq
     {q : ℕ} (hq : 0 < q) (t u : ℝ) :
     hughesYoungRightContourWeight t (2 * q) u =
-      Complex.exp (100 *
+      (Complex.exp (100 *
         ((((2 * q : ℕ) : ℂ) + (u : ℂ) * I) ^ 2)) *
+        hughesYoungAuxiliaryZero
+          (((2 * q : ℕ) : ℂ) + (u : ℂ) * I)) *
         hughesYoungPolynomialRatioEven q t u *
         hughesYoungGammaRatioEven q t u /
         (((2 * q : ℕ) : ℂ) + (u : ℂ) * I) := by
@@ -376,8 +378,10 @@ theorem norm_hughesYoungRightContourWeight_even_le_on_height_support
     (ht : t ∈ Set.Icc (T / 4) (4 * T))
     {q : ℕ} (hq : 0 < q) (u : ℝ) :
     ‖hughesYoungRightContourWeight t (2 * q) u‖ ≤
-      256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-        ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) := by
+      160000 * (2 * (q : ℝ) + 1) ^ 8 *
+        Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+        ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) *
+        (1 + |u|) ^ 8 := by
   let w : ℂ := ((2 * q : ℕ) : ℂ) + (u : ℂ) * I
   let B : ℝ := hughesYoungHighLineBase q t u
   let D : ℝ := (7 + 2 * (q : ℝ)) * T * (1 + |u|)
@@ -405,32 +409,63 @@ theorem norm_hughesYoungRightContourWeight_even_le_on_height_support
   have hgamma : ‖hughesYoungGammaRatioEven q t u‖ ≤
       Real.exp (16 * u ^ 2) * B ^ (4 * q) := by
     simpa only [B] using norm_hughesYoungGammaRatioEven_le q t u
+  have hwLe : ‖w‖ ≤ (2 * (q : ℝ) + 1) * (1 + |u|) := by
+    calc
+      ‖w‖ ≤ |w.re| + |w.im| := Complex.norm_le_abs_re_add_abs_im w
+      _ = 2 * (q : ℝ) + |u| := by simp [w]
+      _ ≤ (2 * (q : ℝ) + 1) * (1 + |u|) := by
+        have hq0 : 0 ≤ (q : ℝ) := Nat.cast_nonneg q
+        nlinarith [abs_nonneg u]
+  have hQ1 : 1 ≤ (2 * (q : ℝ) + 1) * (1 + |u|) := by
+    have hq0 : 0 ≤ (q : ℝ) := Nat.cast_nonneg q
+    nlinarith [abs_nonneg u]
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤
+      625 * (2 * (q : ℝ) + 1) ^ 8 * (1 + |u|) ^ 8 := by
+    unfold hughesYoungAuxiliaryZero
+    rw [norm_pow]
+    let Q : ℝ := (2 * (q : ℝ) + 1) * (1 + |u|)
+    have hbase : ‖1 - 4 * w ^ 2‖ ≤ 5 * Q ^ 2 := by
+      calc
+        ‖1 - 4 * w ^ 2‖ ≤ ‖(1 : ℂ)‖ + ‖4 * w ^ 2‖ := norm_sub_le _ _
+        _ = 1 + 4 * ‖w‖ ^ 2 := by simp [norm_pow]
+        _ ≤ 1 + 4 * Q ^ 2 := by dsimp only [Q]; gcongr
+        _ ≤ 5 * Q ^ 2 := by
+          have : 1 ≤ Q := by simpa only [Q] using hQ1
+          nlinarith [sq_nonneg Q]
+    calc
+      ‖1 - 4 * w ^ 2‖ ^ 4 ≤ (5 * Q ^ 2) ^ 4 := by gcongr
+      _ = 625 * (2 * (q : ℝ) + 1) ^ 8 * (1 + |u|) ^ 8 := by
+        dsimp only [Q]
+        ring
   rw [hughesYoungRightContourWeight_even_eq hq]
-  change ‖Complex.exp (100 * w ^ 2) *
+  change ‖(Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w) *
       hughesYoungPolynomialRatioEven q t u *
       hughesYoungGammaRatioEven q t u / w‖ ≤ _
-  rw [norm_div, norm_mul, norm_mul]
+  rw [norm_div, norm_mul, norm_mul, norm_mul]
   calc
-    ‖Complex.exp (100 * w ^ 2)‖ *
+    (‖Complex.exp (100 * w ^ 2)‖ * ‖hughesYoungAuxiliaryZero w‖) *
           ‖hughesYoungPolynomialRatioEven q t u‖ *
           ‖hughesYoungGammaRatioEven q t u‖ / ‖w‖ ≤
-        ‖Complex.exp (100 * w ^ 2)‖ *
+        (‖Complex.exp (100 * w ^ 2)‖ * ‖hughesYoungAuxiliaryZero w‖) *
           ‖hughesYoungPolynomialRatioEven q t u‖ *
           ‖hughesYoungGammaRatioEven q t u‖ := by
       exact div_le_self (by positivity) hwNorm
-    _ ≤ Real.exp (400 * (q : ℝ) ^ 2 - 100 * u ^ 2) *
+    _ ≤ (Real.exp (400 * (q : ℝ) ^ 2 - 100 * u ^ 2) *
+          (625 * (2 * (q : ℝ) + 1) ^ 8 * (1 + |u|) ^ 8)) *
           (256 * B ^ 8) *
           (Real.exp (16 * u ^ 2) * B ^ (4 * q)) := by
       rw [hexp]
       gcongr
-    _ = 256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-          B ^ (4 * q + 8) := by
+    _ = 160000 * (2 * (q : ℝ) + 1) ^ 8 *
+          Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+          B ^ (4 * q + 8) * (1 + |u|) ^ 8 := by
       rw [show 400 * (q : ℝ) ^ 2 - 84 * u ^ 2 =
         (400 * (q : ℝ) ^ 2 - 100 * u ^ 2) + 16 * u ^ 2 by ring,
         Real.exp_add]
       ring
-    _ ≤ 256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-          D ^ (4 * q + 8) := by
+    _ ≤ 160000 * (2 * (q : ℝ) + 1) ^ 8 *
+          Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+          D ^ (4 * q + 8) * (1 + |u|) ^ 8 := by
       gcongr
     _ = _ := by rfl
 

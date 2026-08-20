@@ -1159,11 +1159,10 @@ noncomputable def hughesYoungEquation84Negative
           ((Real.log r : ℂ) +
             dfiEquation27LogConstant b (dfiReducedDenominator b q)))
 
-/-- The complete pole-cancelled archimedean contour factor for the positive
-equation-(84) branch.  The factor `q^2` is what remains of
-`(q(1-q))^2` after its `(1-q)^2=(s-w)^2` zero has been absorbed into the
-regularized beta kernel. -/
-noncomputable def hughesYoungEquation84RegularizedContourKernel
+/-- The equation-(84) contour kernel with the Hughes--Young auxiliary
+factor omitted.  Naming this analytic core makes the prescribed zero of
+`G` visible to the later moving-pole cancellation proof. -/
+noncomputable def hughesYoungEquation84RegularizedContourKernelCore
     (t : ℝ) (w CX COne : ℂ) : ℂ :=
   let p := afeCriticalPoint t + w
   let q := afeCriticalPoint (-t) + w
@@ -1172,6 +1171,22 @@ noncomputable def hughesYoungEquation84RegularizedContourKernel
     Complex.Gammaℝ p ^ 2 * Complex.Gammaℝ q ^ 2 /
     afePoleNormalization t / w / afeGammaNormalization t *
     hughesYoungEquation84RegularizedBetaKernel t w CX COne
+
+/-- The complete pole-cancelled archimedean contour factor for the positive
+equation-(84) branch.  The factor `q^2` is what remains of
+`(q(1-q))^2` after its `(1-q)^2=(s-w)^2` zero has been absorbed into the
+regularized beta kernel. -/
+noncomputable def hughesYoungEquation84RegularizedContourKernel
+    (t : ℝ) (w CX COne : ℂ) : ℂ :=
+  hughesYoungAuxiliaryZero w *
+    hughesYoungEquation84RegularizedContourKernelCore t w CX COne
+
+theorem hughesYoungEquation84RegularizedContourKernel_eq_auxiliary_mul_core
+    (t : ℝ) (w CX COne : ℂ) :
+    hughesYoungEquation84RegularizedContourKernel t w CX COne =
+      hughesYoungAuxiliaryZero w *
+        hughesYoungEquation84RegularizedContourKernelCore t w CX COne := by
+  rfl
 
 set_option maxRecDepth 10000 in
 /-- On the original small contour the regularized contour kernel is
@@ -1201,6 +1216,7 @@ theorem hughesYoungRightContourWeightComplex_mul_equation84_eq_regularized
     simpa only [hughesYoungEquation84CriticalBetaKernel] using hreg
   unfold hughesYoungRightContourWeightComplex
     hughesYoungEquation84RegularizedContourKernel
+    hughesYoungEquation84RegularizedContourKernelCore
   dsimp only
   rw [hOne]
   rw [← hregNamed]
@@ -1209,11 +1225,11 @@ theorem hughesYoungRightContourWeightComplex_mul_equation84_eq_regularized
 /-- The complete pole-cancelled equation-(84) contour kernel is holomorphic
 throughout the rectangle used to move the central line from
 `0 < Re w < 1/2` to `Re w = 1`. -/
-theorem differentiableAt_hughesYoungEquation84RegularizedContourKernel
+theorem differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
     (t : ℝ) {w CX COne : ℂ}
     (hw : 0 < w.re) (hwUpper : w.re < 3 / 2) :
     DifferentiableAt ℂ
-      (fun z => hughesYoungEquation84RegularizedContourKernel
+      (fun z => hughesYoungEquation84RegularizedContourKernelCore
         t z CX COne) w := by
   let pfun : ℂ → ℂ := fun z => afeCriticalPoint t + z
   let qfun : ℂ → ℂ := fun z => afeCriticalPoint (-t) + z
@@ -1255,9 +1271,20 @@ theorem differentiableAt_hughesYoungEquation84RegularizedContourKernel
           afePoleNormalization t / z / afeGammaNormalization t) w := by
     fun_prop (disch := assumption)
   have hAll := hArch.mul hBeta
-  unfold hughesYoungEquation84RegularizedContourKernel
+  unfold hughesYoungEquation84RegularizedContourKernelCore
   dsimp only [pfun, qfun] at hAll ⊢
   exact hAll
+
+theorem differentiableAt_hughesYoungEquation84RegularizedContourKernel
+    (t : ℝ) {w CX COne : ℂ}
+    (hw : 0 < w.re) (hwUpper : w.re < 3 / 2) :
+    DifferentiableAt ℂ
+      (fun z => hughesYoungEquation84RegularizedContourKernel
+        t z CX COne) w := by
+  unfold hughesYoungEquation84RegularizedContourKernel
+  exact differentiable_hughesYoungAuxiliaryZero.differentiableAt.mul
+    (differentiableAt_hughesYoungEquation84RegularizedContourKernelCore
+      t hw hwUpper)
 
 /-- Exact source transition from the positive equation-(83) continuation
 to equation (84), valid on the original small contour. -/

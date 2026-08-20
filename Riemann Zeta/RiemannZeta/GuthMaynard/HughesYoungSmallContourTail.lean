@@ -70,7 +70,7 @@ theorem exists_norm_hughesYoungRightContourWeight_small_le_gaussian :
       Real.exp
           (100 * hughesYoungSmallContour T ^ 2 - 84 * u ^ 2 +
             4 * C * hughesYoungSmallContour T * Real.log (6 * (|u| + 1))) *
-          (25 + 8 * u ^ 2) ^ 4 ≤
+          (25 + 8 * u ^ 2) ^ 8 ≤
         hughesYoungIntegratedOrdinateFactor C (hughesYoungSmallContour T) u := by
     unfold hughesYoungIntegratedOrdinateFactor
     exact mul_le_mul_of_nonneg_right
@@ -83,7 +83,7 @@ theorem exists_norm_hughesYoungRightContourWeight_small_le_gaussian :
           (Real.exp
             (100 * hughesYoungSmallContour T ^ 2 - 84 * u ^ 2 +
               4 * C * hughesYoungSmallContour T * Real.log (6 * (|u| + 1))) *
-            (25 + 8 * u ^ 2) ^ 4) := hsource
+            (25 + 8 * u ^ 2) ^ 8) := hsource
     _ ≤ Real.log T * Real.exp (4 * C) *
           hughesYoungIntegratedOrdinateFactor C (hughesYoungSmallContour T) u := by
       exact mul_le_mul_of_nonneg_left hfactor hfront

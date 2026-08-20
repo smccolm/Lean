@@ -190,26 +190,28 @@ theorem exists_norm_hughesYoungIntegratedHighPairSquareTail_le
           (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η) * L := by
   obtain ⟨L, hL, hmoment⟩ :=
-    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (4 * q + 8)
-  refine ⟨L, hL, ?_⟩
+    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (4 * q + 16)
+  let K : ℝ := 625 * (2 * (q : ℝ) + 1) ^ 8
+  have hK : 0 < K := by dsimp only [K]; positivity
+  refine ⟨K * L, mul_pos hK hL, ?_⟩
   intro T t H M hT ht hM hH
   let C : ℝ := 256 * Real.exp (400 * (q : ℝ) ^ 2) *
     ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
     (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
     hughesYoungReferenceDivisorPairMass η
   let g : ℝ → ℝ := fun u =>
-    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 16)
   have hC0 : 0 ≤ C := by
     unfold C
     exact mul_nonneg (by positivity)
       (hughesYoungReferenceDivisorPairMass_nonneg η)
   have hg : IntervalIntegrable g volume (-H) H :=
-    (integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)).intervalIntegrable
+    (integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 16)).intervalIntegrable
   have horder : -H ≤ H := by linarith
   unfold hughesYoungIntegratedHighPairSquareTail
   calc
     ‖∫ u in -H..H, hughesYoungHighPairSquareTail q t u M‖ ≤
-        ∫ u in -H..H, C * g u := by
+        ∫ u in -H..H, (C * K) * g u := by
       apply intervalIntegral.norm_integral_le_of_norm_le horder
       · filter_upwards with u hu
         have hweight :=
@@ -234,20 +236,23 @@ theorem exists_norm_hughesYoungIntegratedHighPairSquareTail_le
               ‖hughesYoungRightContourWeight t (2 * q) u‖ *
                 (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
                 hughesYoungReferenceDivisorPairMass η := htail
-          _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-                ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+          _ ≤ (160000 * (2 * (q : ℝ) + 1) ^ 8 *
+                Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+                ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) *
+                (1 + |u|) ^ 8) *
                 (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
                 hughesYoungReferenceDivisorPairMass η := by
               gcongr
               exact hughesYoungReferenceDivisorPairMass_nonneg η
-          _ = C * g u := by
+          _ = (C * K) * g u := by
               rw [hexp, hbasepow]
               unfold C g
               ring
-      · exact hg.const_mul C
-    _ = C * (∫ u in -H..H, g u) := by
+      · exact hg.const_mul (C * K)
+    _ = (C * K) * (∫ u in -H..H, g u) := by
       rw [intervalIntegral.integral_const_mul]
-    _ ≤ C * L := mul_le_mul_of_nonneg_left (hmoment hH) hC0
-    _ = _ := by rfl
+    _ ≤ (C * K) * L :=
+      mul_le_mul_of_nonneg_left (hmoment hH) (mul_nonneg hC0 hK.le)
+    _ = _ := by ring
 
 end RiemannZeta.GuthMaynard

@@ -21,7 +21,7 @@ objects below are the absolutely convergent equation-(96) series, not a
 fixed-shift proxy.
 -/
 
-private theorem integrable_exp_sub_mul_sq_mul_add_abs_pow
+theorem integrable_exp_sub_mul_sq_mul_add_abs_pow
     (A : ℝ) {B C : ℝ} (hB : 0 < B) (j : ℕ) :
     Integrable (fun u : ℝ =>
       Real.exp (A - B * u ^ 2) * (C + |u|) ^ j) := by
@@ -487,7 +487,7 @@ private theorem continuous_hughesYoungReducedMellinStaticComplex_sourceLine
       ((1 : ℂ) + (u : ℂ) * I)).continuousAt hline
   simpa only [Function.comp_apply] using hcomp
 
-private theorem continuous_hughesYoungEquation84Kernel00_sourceLine
+theorem continuous_hughesYoungEquation84Kernel00_sourceLine
     (t : ℝ) : Continuous (fun u : ℝ =>
       hughesYoungEquation84Kernel00 t ((1 : ℂ) + (u : ℂ) * I)) := by
   rw [continuous_iff_continuousAt]
@@ -502,7 +502,7 @@ private theorem continuous_hughesYoungEquation84Kernel00_sourceLine
       (by norm_num) (by norm_num)).continuousAt hline
   simpa only [Function.comp_apply] using hcomp
 
-private theorem continuous_hughesYoungEquation84Kernel10_sourceLine
+theorem continuous_hughesYoungEquation84Kernel10_sourceLine
     (t : ℝ) : Continuous (fun u : ℝ =>
       hughesYoungEquation84Kernel10 t ((1 : ℂ) + (u : ℂ) * I)) := by
   rw [continuous_iff_continuousAt]
@@ -517,7 +517,7 @@ private theorem continuous_hughesYoungEquation84Kernel10_sourceLine
       (by norm_num) (by norm_num)).continuousAt hline
   simpa only [Function.comp_apply] using hcomp
 
-private theorem continuous_hughesYoungEquation84Kernel01_sourceLine
+theorem continuous_hughesYoungEquation84Kernel01_sourceLine
     (t : ℝ) : Continuous (fun u : ℝ =>
       hughesYoungEquation84Kernel01 t ((1 : ℂ) + (u : ℂ) * I)) := by
   rw [continuous_iff_continuousAt]
@@ -532,7 +532,7 @@ private theorem continuous_hughesYoungEquation84Kernel01_sourceLine
       (by norm_num) (by norm_num)).continuousAt hline
   simpa only [Function.comp_apply] using hcomp
 
-private theorem continuous_hughesYoungEquation84Kernel11_sourceLine
+theorem continuous_hughesYoungEquation84Kernel11_sourceLine
     (t : ℝ) : Continuous (fun u : ℝ =>
       hughesYoungEquation84Kernel11 t ((1 : ℂ) + (u : ℂ) * I)) := by
   rw [continuous_iff_continuousAt]

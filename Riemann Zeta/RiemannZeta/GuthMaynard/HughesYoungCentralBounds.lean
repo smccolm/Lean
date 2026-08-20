@@ -538,15 +538,27 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
       dsimp [C]
       ring
 
-set_option maxHeartbeats 1000000 in
-/-- The complete regularized equation-(84) archimedean kernel decays
-Gaussianly on both horizontal sides of the contour rectangle. -/
-theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
+/-- The polynomial part of the regularized equation-(84) core has degree six
+in a common norm majorant. -/
+theorem norm_hughesYoungEquation84CorePolynomial_le
+    {p q : ℂ} {R : ℝ} (hR : 0 ≤ R)
+    (hp : ‖p‖ ≤ R) (hOneP : ‖1 - p‖ ≤ R) (hq : ‖q‖ ≤ R) :
+    ‖(p * (1 - p)) ^ 2 * q ^ 2‖ ≤ R ^ 6 := by
+  simp only [norm_mul, norm_pow]
+  calc
+    (‖p‖ * ‖1 - p‖) ^ 2 * ‖q‖ ^ 2 ≤ (R * R) ^ 2 * R ^ 2 := by
+      gcongr
+    _ = R ^ 6 := by ring
+
+set_option maxHeartbeats 10000 in
+/-- The analytic core of the regularized equation-(84) archimedean kernel
+decays Gaussianly on both horizontal sides of the contour rectangle. -/
+theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal_le
     (t : ℝ) (CX COne : ℂ) {c₀ c₁ : ℝ}
     (hc₀ : 0 < c₀) (hc₁ : c₁ < 3 / 2) (hc : c₀ ≤ c₁) :
     ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ), 1 ≤ |y| → |t| + 1 ≤ |y| →
       ∀ x ∈ Set.Icc c₀ c₁,
-        ‖hughesYoungEquation84RegularizedContourKernel t
+        ‖hughesYoungEquation84RegularizedContourKernelCore t
             ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
             (2 + |t| + c₁ + |y|) ^ 9 := by
@@ -632,11 +644,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
     dsimp [w]
     exact norm_hughesYoungGaussian_horizontal_le hx0 hx.2
   have hPoly : ‖(p * (1 - p)) ^ 2 * q ^ 2‖ ≤ R ^ 6 := by
-    simp only [norm_mul, norm_pow]
-    calc
-      (‖p‖ * ‖1 - p‖) ^ 2 * ‖q‖ ^ 2 ≤ (R * R) ^ 2 * R ^ 2 := by
-        gcongr
-      _ = R ^ 6 := by ring
+    exact norm_hughesYoungEquation84CorePolynomial_le hR0 hpNorm hOneP hqNorm
   have htyOne : 1 ≤ |t + y| := by
     have hrev : |y| ≤ |t + y| + |t| := by
       have hraw := abs_add_le (t + y) (-t)
@@ -664,11 +672,19 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
       (abs_nonneg (Real.pi * (t + y))) habs
     have hleft : |Real.pi * (t + y)| * |Real.pi * (t + y)| =
         (Real.pi * (t + y)) ^ 2 := by
-      nlinarith [sq_abs (Real.pi * (t + y))]
+      calc
+        |Real.pi * (t + y)| * |Real.pi * (t + y)| =
+            |Real.pi * (t + y)| ^ 2 := by ring
+        _ = (Real.pi * (t + y)) ^ 2 := sq_abs _
     have hright : 8 * |y| * (8 * |y|) = 64 * y ^ 2 := by
-      nlinarith [sq_abs y]
+      calc
+        8 * |y| * (8 * |y|) = 64 * |y| ^ 2 := by ring
+        _ = 64 * y ^ 2 := by rw [sq_abs]
     rw [hleft, hright] at hsq
-    nlinarith [sq_nonneg y]
+    calc
+      ((Real.pi * (t + y)) ^ 2 + 1) / 2 ≤ (64 * y ^ 2 + 1) / 2 := by
+        gcongr
+      _ ≤ 40 * y ^ 2 + 1 / 2 := by nlinarith [sq_nonneg y]
   have hExpProduct :
       Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) *
           Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) ≤
@@ -711,6 +727,58 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
           R ^ 9 := by gcongr
     _ = C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9 := by
       dsimp [C]
+      ring
+
+/-- The complete regularized equation-(84) kernel is the analytic core times
+the prescribed degree-eight auxiliary zero, hence has the same Gaussian decay
+with polynomial degree seventeen. -/
+theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
+    (t : ℝ) (CX COne : ℂ) {c₀ c₁ : ℝ}
+    (hc₀ : 0 < c₀) (hc₁ : c₁ < 3 / 2) (hc : c₀ ≤ c₁) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ), 1 ≤ |y| → |t| + 1 ≤ |y| →
+      ∀ x ∈ Set.Icc c₀ c₁,
+        ‖hughesYoungEquation84RegularizedContourKernel t
+            ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
+          C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
+            (2 + |t| + c₁ + |y|) ^ 17 := by
+  obtain ⟨C, hC, hCore⟩ :=
+    exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal_le
+      t CX COne hc₀ hc₁ hc
+  refine ⟨625 * C, by positivity, ?_⟩
+  intro y hy hty x hx
+  let w : ℂ := (x : ℂ) + (y : ℂ) * I
+  let R : ℝ := 2 + |t| + c₁ + |y|
+  have hx0 : 0 ≤ x := hc₀.le.trans hx.1
+  have hR1 : 1 ≤ R := by
+    dsimp [R]
+    linarith [abs_nonneg t, abs_nonneg y, hc₀.le.trans hc]
+  have hwNormUpper : ‖w‖ ≤ R := by
+    calc
+      ‖w‖ ≤ ‖(x : ℂ)‖ + ‖(y : ℂ) * I‖ := by
+        dsimp [w]
+        exact norm_add_le _ _
+      _ = |x| + |y| := by simp [Real.norm_eq_abs]
+      _ = x + |y| := by rw [abs_of_nonneg hx0]
+      _ ≤ c₁ + |y| := by
+        simpa [add_comm] using add_le_add_right hx.2 |y|
+      _ ≤ R := by
+        dsimp [R]
+        linarith [abs_nonneg t]
+  have hAux : ‖hughesYoungAuxiliaryZero w‖ ≤ 625 * R ^ 8 :=
+    norm_hughesYoungAuxiliaryZero_le_polynomial hR1 hwNormUpper
+  have hCore' := hCore y hy hty x hx
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_auxiliary_mul_core,
+    norm_mul]
+  change ‖hughesYoungAuxiliaryZero w‖ *
+      ‖hughesYoungEquation84RegularizedContourKernelCore t w CX COne‖ ≤
+    (625 * C) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 17
+  change ‖hughesYoungEquation84RegularizedContourKernelCore t w CX COne‖ ≤
+      C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9 at hCore'
+  calc
+    _ ≤ (625 * R ^ 8) *
+        (C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9) := by
+      exact mul_le_mul hAux hCore' (norm_nonneg _) (by positivity)
+    _ = (625 * C) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 17 := by
       ring
 
 /-- The non-archimedean and reduced Mellin factors outside the regularized
@@ -774,7 +842,7 @@ theorem exists_norm_hughesYoungEquation84PositiveContourTerm_horizontal_le
         ‖hughesYoungEquation84PositiveContourTerm T t h k a b r q
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9 := by
+            (2 + |t| + c₁ + |y|) ^ 17 := by
   let CX : ℂ := (Real.log r : ℂ) +
     dfiEquation27LogConstant b (dfiReducedDenominator b q)
   let COne : ℂ := (Real.log r : ℂ) +
@@ -795,10 +863,10 @@ theorem exists_norm_hughesYoungEquation84PositiveContourTerm_horizontal_le
   rw [← mul_assoc, norm_mul]
   calc
     _ ≤ K * (B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9) :=
+        (2 + |t| + c₁ + |y|) ^ 17) :=
       mul_le_mul hO hA (by positivity) hK.le
     _ = (K * B) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9 := by ring
+        (2 + |t| + c₁ + |y|) ^ 17 := by ring
 
 set_option maxHeartbeats 1000000 in
 /-- The coordinate-swapped negative equation-(84) summand satisfies the
@@ -811,7 +879,7 @@ theorem exists_norm_hughesYoungEquation84NegativeContourTerm_horizontal_le
         ‖hughesYoungEquation84NegativeContourTerm T t h k a b r q
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9 := by
+            (2 + |t| + c₁ + |y|) ^ 17 := by
   let CX : ℂ := (Real.log r : ℂ) +
     dfiEquation27LogConstant a (dfiReducedDenominator a q)
   let COne : ℂ := (Real.log r : ℂ) +
@@ -832,52 +900,52 @@ theorem exists_norm_hughesYoungEquation84NegativeContourTerm_horizontal_le
   rw [← mul_assoc, norm_mul]
   calc
     _ ≤ K * (B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9) := by
+        (2 + |t| + c₁ + |y|) ^ 17) := by
       simpa only [abs_neg] using mul_le_mul hO hA (by positivity) hK.le
     _ = (K * B) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9 := by ring
+        (2 + |t| + c₁ + |y|) ^ 17 := by ring
 
-/-- A ninth-degree polynomial cannot overcome the Gaussian supplied by
+/-- A seventeenth-degree polynomial cannot overcome the Gaussian supplied by
 the completed-zeta test factor. -/
-theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nine
+theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_seventeen
     (C A B : ℝ) (hC : 0 ≤ C) (hB : 0 ≤ B) :
     Tendsto (fun H : ℝ =>
-      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 9) atTop (nhds 0) := by
+      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 17) atTop (nhds 0) := by
   have hExp : Tendsto (fun H : ℝ => Real.exp (-(1 / 2 : ℝ) * H))
       atTop (nhds 0) :=
     Real.tendsto_exp_atBot.comp
       (tendsto_id.const_mul_atTop_of_neg
         (by norm_num : (-(1 / 2 : ℝ)) < 0))
   have hbaseRpow : Tendsto (fun H : ℝ =>
-      H ^ (9 : ℝ) * Real.exp (-60 * H ^ 2)) atTop (nhds 0) :=
+      H ^ (17 : ℝ) * Real.exp (-60 * H ^ 2)) atTop (nhds 0) :=
     (rpow_mul_exp_neg_mul_sq_isLittleO_exp_neg
-      (by norm_num : (0 : ℝ) < 60) 9).tendsto_zero_of_tendsto hExp
+      (by norm_num : (0 : ℝ) < 60) 17).tendsto_zero_of_tendsto hExp
   have hbase : Tendsto (fun H : ℝ =>
-      H ^ 9 * Real.exp (-60 * H ^ 2)) atTop (nhds 0) := by
+      H ^ 17 * Real.exp (-60 * H ^ 2)) atTop (nhds 0) := by
     simpa only [← Real.rpow_natCast] using hbaseRpow
-  let D : ℝ := C * Real.exp A * 512
+  let D : ℝ := C * Real.exp A * 131072
   have hmajor : Tendsto (fun H : ℝ =>
-      D * (H ^ 9 * Real.exp (-60 * H ^ 2))) atTop (nhds 0) := by
+      D * (H ^ 17 * Real.exp (-60 * H ^ 2))) atTop (nhds 0) := by
     simpa only [mul_zero] using hbase.const_mul D
   apply squeeze_zero'
     (show ∀ᶠ H : ℝ in atTop,
-      0 ≤ C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 9 by
+      0 ≤ C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 17 by
       filter_upwards [eventually_ge_atTop (max 1 B)] with H hH
       have hH0 : 0 ≤ H := zero_le_one.trans ((le_max_left 1 B).trans hH)
       exact mul_nonneg (mul_nonneg hC (Real.exp_pos _).le)
-        (pow_nonneg (add_nonneg hB hH0) 9))
+        (pow_nonneg (add_nonneg hB hH0) 17))
     (show ∀ᶠ H : ℝ in atTop,
-      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 9 ≤
-        D * (H ^ 9 * Real.exp (-60 * H ^ 2)) by
+      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 17 ≤
+        D * (H ^ 17 * Real.exp (-60 * H ^ 2)) by
       filter_upwards [eventually_ge_atTop (max 1 B)] with H hH
       have hH1 : 1 ≤ H := (le_max_left 1 B).trans hH
       have hHB : B ≤ H := (le_max_right 1 B).trans hH
       have hH0 : 0 ≤ H := zero_le_one.trans hH1
       have hshift : B + H ≤ 2 * H := by linarith
-      have hpow : (B + H) ^ 9 ≤ 512 * H ^ 9 := by
+      have hpow : (B + H) ^ 17 ≤ 131072 * H ^ 17 := by
         calc
-          (B + H) ^ 9 ≤ (2 * H) ^ 9 := by gcongr
-          _ = 512 * H ^ 9 := by ring
+          (B + H) ^ 17 ≤ (2 * H) ^ 17 := by gcongr
+          _ = 131072 * H ^ 17 := by ring
       have hexp : Real.exp (A - 60 * H ^ 2) =
           Real.exp A * Real.exp (-60 * H ^ 2) := by
         rw [← Real.exp_add]
@@ -886,11 +954,11 @@ theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nine
       rw [hexp]
       dsimp [D]
       calc
-        C * (Real.exp A * Real.exp (-60 * H ^ 2)) * (B + H) ^ 9 ≤
+        C * (Real.exp A * Real.exp (-60 * H ^ 2)) * (B + H) ^ 17 ≤
             C * (Real.exp A * Real.exp (-60 * H ^ 2)) *
-              (512 * H ^ 9) := by gcongr
-        _ = C * Real.exp A * 512 *
-              (H ^ 9 * Real.exp (-60 * H ^ 2)) := by ring)
+              (131072 * H ^ 17) := by gcongr
+        _ = C * Real.exp A * 131072 *
+              (H ^ 17 * Real.exp (-60 * H ^ 2)) := by ring)
   exact hmajor
 
 /-- A common horizontal bound with absolute height makes the upper edge
@@ -901,14 +969,14 @@ theorem tendsto_HIntegral_top_zero_of_central_horizontal_bound
       1 ≤ |y| → |t| + 1 ≤ |y| → ∀ x ∈ Set.Icc c₀ c₁,
         ‖f ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9) :
+            (2 + |t| + c₁ + |y|) ^ 17) :
     Tendsto (fun H : ℝ => HIntegral f c₀ c₁ H) atTop (nhds 0) := by
   obtain ⟨C, hC, hCbound⟩ := hbound
   let envelope : ℝ → ℝ := fun H =>
     C * Real.exp (100 * c₁ ^ 2 - 60 * H ^ 2) *
-      (2 + |t| + c₁ + H) ^ 9
+      (2 + |t| + c₁ + H) ^ 17
   have henv : Tendsto envelope atTop (nhds 0) :=
-    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nine
+    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_seventeen
       C (100 * c₁ ^ 2) (2 + |t| + c₁) hC.le (by
         have hc₁ : 0 < c₁ := hc₀.trans_le hc
         positivity)
@@ -938,14 +1006,14 @@ theorem tendsto_HIntegral_bottom_zero_of_central_horizontal_bound
       1 ≤ |y| → |t| + 1 ≤ |y| → ∀ x ∈ Set.Icc c₀ c₁,
         ‖f ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9) :
+            (2 + |t| + c₁ + |y|) ^ 17) :
     Tendsto (fun H : ℝ => HIntegral f c₀ c₁ (-H)) atTop (nhds 0) := by
   obtain ⟨C, hC, hCbound⟩ := hbound
   let envelope : ℝ → ℝ := fun H =>
     C * Real.exp (100 * c₁ ^ 2 - 60 * H ^ 2) *
-      (2 + |t| + c₁ + H) ^ 9
+      (2 + |t| + c₁ + H) ^ 17
   have henv : Tendsto envelope atTop (nhds 0) :=
-    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nine
+    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_seventeen
       C (100 * c₁ ^ 2) (2 + |t| + c₁) hC.le (by
         have hc₁ : 0 < c₁ := hc₀.trans_le hc
         positivity)

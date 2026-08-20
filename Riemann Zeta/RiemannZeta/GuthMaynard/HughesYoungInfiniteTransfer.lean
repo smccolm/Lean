@@ -22,14 +22,15 @@ theorem integrable_hughesYoungHighPairSquareTail
     {T t : ℝ} (hT : 1 ≤ T) (ht : t ∈ Set.Icc (T / 4) (4 * T))
     {M : ℕ} (hM : 0 < M) :
     Integrable (fun u : ℝ => hughesYoungHighPairSquareTail q t u M) := by
-  let C : ℝ := 256 * Real.exp (400 * (q : ℝ) ^ 2) *
+  let C : ℝ := 160000 * (2 * (q : ℝ) + 1) ^ 8 *
+    Real.exp (400 * (q : ℝ) ^ 2) *
     ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
     (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
     hughesYoungReferenceDivisorPairMass η
   let g : ℝ → ℝ := fun u =>
-    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 16)
   have hg : Integrable g :=
-    integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)
+    integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 16)
   have hmeas : AEStronglyMeasurable
       (fun u : ℝ => hughesYoungHighPairSquareTail q t u M) := by
     have hc : (1 / 2 : ℝ) < 2 * q := by
@@ -68,8 +69,10 @@ theorem integrable_hughesYoungHighPairSquareTail
         ‖hughesYoungRightContourWeight t (2 * q) u‖ *
           (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η := htail
-    _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-          ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+    _ ≤ (160000 * (2 * (q : ℝ) + 1) ^ 8 *
+          Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+          ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) *
+          (1 + |u|) ^ 8) *
           (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η := by
       gcongr

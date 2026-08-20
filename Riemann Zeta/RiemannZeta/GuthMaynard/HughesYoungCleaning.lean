@@ -148,9 +148,10 @@ theorem continuous_hughesYoungRightContourWeight_height
       (continuous_GammaR_afe_height c u (by linarith)).comp continuous_neg
   have hnum : Continuous (fun t : ℝ =>
       Complex.exp (100 * w ^ 2) *
+        hughesYoungAuxiliaryZero w *
         (s₁ t * (1 - s₁ t)) ^ 2 * (s₂ t * (1 - s₂ t)) ^ 2 *
         Complex.Gammaℝ (s₁ t) ^ 2 * Complex.Gammaℝ (s₂ t) ^ 2) := by
-    exact ((((continuous_const.mul
+    exact (((((continuous_const.mul continuous_const).mul
       ((hs₁.mul (continuous_const.sub hs₁)).pow 2)).mul
       ((hs₂.mul (continuous_const.sub hs₂)).pow 2)).mul
       (hgamma₁.pow 2)).mul (hgamma₂.pow 2))
@@ -214,15 +215,19 @@ theorem continuous_uncurry_hughesYoungRightContourWeight
         linarith
   have hnum : Continuous (fun p : ℝ × ℝ =>
       Complex.exp (100 * w p ^ 2) *
+        hughesYoungAuxiliaryZero (w p) *
         (s₁ p * (1 - s₁ p)) ^ 2 * (s₂ p * (1 - s₂ p)) ^ 2 *
         Complex.Gammaℝ (s₁ p) ^ 2 * Complex.Gammaℝ (s₂ p) ^ 2) := by
     have hexp : Continuous (fun p : ℝ × ℝ =>
         Complex.exp (100 * w p ^ 2)) := by fun_prop
+    have haux : Continuous (fun p : ℝ × ℝ =>
+        hughesYoungAuxiliaryZero (w p)) :=
+      differentiable_hughesYoungAuxiliaryZero.continuous.comp hw
     have hpoly₁ : Continuous (fun p : ℝ × ℝ =>
         (s₁ p * (1 - s₁ p)) ^ 2) := by fun_prop
     have hpoly₂ : Continuous (fun p : ℝ × ℝ =>
         (s₂ p * (1 - s₂ p)) ^ 2) := by fun_prop
-    exact (((hexp.mul hpoly₁).mul hpoly₂).mul
+    exact ((((hexp.mul haux).mul hpoly₁).mul hpoly₂).mul
       (hgamma₁.pow 2)).mul (hgamma₂.pow 2)
   have hwne : ∀ p : ℝ × ℝ, w p ≠ 0 := by
     intro p hp
@@ -237,12 +242,14 @@ theorem continuous_uncurry_hughesYoungRightContourWeight
     continuous_afeGammaNormalization.comp continuous_fst
   have hdivPole : Continuous (fun p : ℝ × ℝ =>
       (Complex.exp (100 * w p ^ 2) *
+        hughesYoungAuxiliaryZero (w p) *
         (s₁ p * (1 - s₁ p)) ^ 2 * (s₂ p * (1 - s₂ p)) ^ 2 *
         Complex.Gammaℝ (s₁ p) ^ 2 * Complex.Gammaℝ (s₂ p) ^ 2) /
         afePoleNormalization p.1) :=
     hnum.div₀ hpole (fun p => afePoleNormalization_ne_zero p.1)
   have hdivW : Continuous (fun p : ℝ × ℝ =>
       (Complex.exp (100 * w p ^ 2) *
+        hughesYoungAuxiliaryZero (w p) *
         (s₁ p * (1 - s₁ p)) ^ 2 * (s₂ p * (1 - s₂ p)) ^ 2 *
         Complex.Gammaℝ (s₁ p) ^ 2 * Complex.Gammaℝ (s₂ p) ^ 2) /
         afePoleNormalization p.1 / w p) :=
@@ -276,9 +283,10 @@ theorem contDiff_hughesYoungRightContourWeight_height
       (contDiff_GammaR_afe_height c u (by linarith)).comp contDiff_neg
   have hnum : ContDiff ℝ ∞ (fun t : ℝ =>
       Complex.exp (100 * w ^ 2) *
+        hughesYoungAuxiliaryZero w *
         (s₁ t * (1 - s₁ t)) ^ 2 * (s₂ t * (1 - s₂ t)) ^ 2 *
         Complex.Gammaℝ (s₁ t) ^ 2 * Complex.Gammaℝ (s₂ t) ^ 2) := by
-    exact ((((contDiff_const.mul
+    exact (((((contDiff_const.mul contDiff_const).mul
       ((hs₁.mul (contDiff_const.sub hs₁)).pow 2)).mul
       ((hs₂.mul (contDiff_const.sub hs₂)).pow 2)).mul
       (hgamma₁.pow 2)).mul (hgamma₂.pow 2))

@@ -269,6 +269,7 @@ noncomputable def hughesYoungEquation65Bound
     (c⁻¹ * Real.exp
       (100 * c ^ 2 - 84 * u ^ 2 +
         4 * Cγ * c * Real.log (4 * T + |u| + 2)) *
+      (25 + 8 * u ^ 2) ^ 4 *
       hughesYoungHeightInputDerivativeConstant Cw j *
       (((T / 16)⁻¹ * (1 + |u|)) ^ j))
 
@@ -645,9 +646,10 @@ theorem hughesYoungEquation65Bound_le_gaussian
     (hsmall : 4 * Cγ * c ≤ 1) :
     hughesYoungEquation65Bound Cγ Cw j T c u ≤
       ((15 * T / 4) * c⁻¹ * Real.exp 100 * (6 * T) *
+        33 ^ 4 *
         hughesYoungHeightInputDerivativeConstant Cw j *
         ((T / 16)⁻¹) ^ j) *
-          (Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (j + 1)) := by
+          (Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (j + 9)) := by
   let B : ℝ := 4 * T + |u| + 2
   let a : ℝ := 4 * Cγ * c
   have hB1 : 1 ≤ B := by dsimp only [B]; linarith [abs_nonneg u]
@@ -680,10 +682,21 @@ theorem hughesYoungEquation65Bound_le_gaussian
           gcongr
       _ ≤ Real.exp 100 * Real.exp (-84 * u ^ 2) *
           (6 * T * (1 + |u|)) := by gcongr
+  have hpolyBase : 25 + 8 * u ^ 2 ≤ 33 * (1 + |u|) ^ 2 := by
+    rw [show u ^ 2 = |u| ^ 2 by exact (sq_abs u).symm]
+    nlinarith [abs_nonneg u]
+  have hpoly : (25 + 8 * u ^ 2) ^ 4 ≤
+      33 ^ 4 * (1 + |u|) ^ 8 := by
+    have hbaseNonneg : 0 ≤ 25 + 8 * u ^ 2 := by positivity
+    have hp := pow_le_pow_left₀ hbaseNonneg hpolyBase 4
+    rw [mul_pow, ← pow_mul] at hp
+    norm_num at hp ⊢
+    exact hp
   unfold hughesYoungEquation65Bound
   change (15 * T / 4) *
       (c⁻¹ * Real.exp
         (100 * c ^ 2 - 84 * u ^ 2 + a * Real.log B) *
+        (25 + 8 * u ^ 2) ^ 4 *
         hughesYoungHeightInputDerivativeConstant Cw j *
         (((T / 16)⁻¹ * (1 + |u|)) ^ j)) ≤ _
   have hfront : 0 ≤ (15 * T / 4) * c⁻¹ := by positivity
@@ -693,16 +706,19 @@ theorem hughesYoungEquation65Bound_le_gaussian
     (15 * T / 4) *
         (c⁻¹ * Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 + a * Real.log B) *
+          (25 + 8 * u ^ 2) ^ 4 *
           hughesYoungHeightInputDerivativeConstant Cw j *
           (((T / 16)⁻¹ * (1 + |u|)) ^ j)) =
       ((15 * T / 4) * c⁻¹) *
         Real.exp
           (100 * c ^ 2 - 84 * u ^ 2 + a * Real.log B) *
+        (25 + 8 * u ^ 2) ^ 4 *
         hughesYoungHeightInputDerivativeConstant Cw j *
         (((T / 16)⁻¹ * (1 + |u|)) ^ j) := by ring
     _ ≤ ((15 * T / 4) * c⁻¹) *
         (Real.exp 100 * Real.exp (-84 * u ^ 2) *
           (6 * T * (1 + |u|))) *
+        (33 ^ 4 * (1 + |u|) ^ 8) *
         hughesYoungHeightInputDerivativeConstant Cw j *
         (((T / 16)⁻¹ * (1 + |u|)) ^ j) := by
       gcongr
@@ -722,12 +738,12 @@ theorem exists_intervalIntegral_hughesYoungEquation65Bound_le
           hughesYoungHeightInputDerivativeConstant Cw j *
           ((T / 16)⁻¹) ^ j) * L := by
   obtain ⟨L, hL, hmoment⟩ :=
-    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (j + 1)
-  refine ⟨L, hL, ?_⟩
+    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (j + 9)
+  refine ⟨33 ^ 4 * L, by positivity, ?_⟩
   intro T c H hT hc hc1 hsmall hH
   let A : ℝ := (15 * T / 4) * c⁻¹ * Real.exp 100 * (6 * T) *
-    hughesYoungHeightInputDerivativeConstant Cw j * ((T / 16)⁻¹) ^ j
-  let g : ℝ → ℝ := fun u => Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (j + 1)
+    33 ^ 4 * hughesYoungHeightInputDerivativeConstant Cw j * ((T / 16)⁻¹) ^ j
+  let g : ℝ → ℝ := fun u => Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (j + 9)
   have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw j :=
     hughesYoungHeightInputDerivativeConstant_pos hCw j
   have hA : 0 ≤ A := by
@@ -744,7 +760,7 @@ theorem exists_intervalIntegral_hughesYoungEquation65Bound_le
   have hleftInt : IntervalIntegrable
       (fun u => hughesYoungEquation65Bound Cγ Cw j T c u) volume (-H) H :=
     hleftCont.intervalIntegrable _ _
-  have hg : Integrable g := integrable_exp_neg_84_mul_one_add_abs_pow (j + 1)
+  have hg : Integrable g := integrable_exp_neg_84_mul_one_add_abs_pow (j + 9)
   have hpoint : ∀ u ∈ Set.Icc (-H) H,
       hughesYoungEquation65Bound Cγ Cw j T c u ≤ A * g u := by
     intro u _hu
@@ -758,7 +774,9 @@ theorem exists_intervalIntegral_hughesYoungEquation65Bound_le
     _ = A * ∫ u in -H..H, g u := by
       rw [intervalIntegral.integral_const_mul]
     _ ≤ A * L := mul_le_mul_of_nonneg_left (hmoment hH) hA
-    _ = _ := by rfl
+    _ = _ := by
+      dsimp only [A]
+      ring
 
 theorem continuous_hughesYoungReducedLocalizedStaticWeight_ordinate
     (T c X Y : ℝ) (h k : ℕ) (x y : ℝ) :

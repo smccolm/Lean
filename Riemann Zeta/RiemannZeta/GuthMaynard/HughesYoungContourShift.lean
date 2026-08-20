@@ -26,6 +26,7 @@ noncomputable def hughesYoungRightContourWeightComplex
   let s₁ : ℂ := afeCriticalPoint t + w
   let s₂ : ℂ := afeCriticalPoint (-t) + w
   Complex.exp (100 * w ^ 2) *
+    hughesYoungAuxiliaryZero w *
     (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2 *
     Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2 /
     afePoleNormalization t / w / afeGammaNormalization t
@@ -283,10 +284,10 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_horizontal_le
       ‖hughesYoungRightContourWeightComplex t
           ((x : ℂ) + (H : ℂ) * I)‖ ≤
         K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
+          (2 + |t| + c₁ + H) ^ 16 := by
   obtain ⟨G, hGpos, hG⟩ :=
     exists_uniform_norm_GammaR_vertical_strip (c₀ := c₀) (c₁ := c₁) hc₀
-  let K : ℝ := G ^ 4 * ‖(afePoleNormalization t)⁻¹‖ *
+  let K : ℝ := 625 * G ^ 4 * ‖(afePoleNormalization t)⁻¹‖ *
     ‖(afeGammaNormalization t)⁻¹‖
   have hKpos : 0 < K := by
     dsimp [K]
@@ -304,11 +305,28 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_horizontal_le
   let s₁ : ℂ := afeCriticalPoint t + w
   let s₂ : ℂ := afeCriticalPoint (-t) + w
   let poly : ℂ := (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2
+  let R : ℝ := 2 + |t| + c₁ + H
   have hgauss : ‖Complex.exp (100 * w ^ 2)‖ ≤
       Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) := by
     exact norm_hughesYoungGaussian_horizontal_le hx0 hx.2
   have hpoly : ‖poly‖ ≤ (2 + |t| + c₁ + H) ^ 8 := by
     exact norm_hughesYoungPolynomialPair_horizontal_le t hc₁ hH0 hx0 hx.2
+  have hR : 1 ≤ R := by
+    dsimp [R]
+    linarith [abs_nonneg t]
+  have hwUpper : ‖w‖ ≤ R := by
+    calc
+      ‖w‖ ≤ ‖(x : ℂ)‖ + ‖(H : ℂ) * I‖ := by
+        dsimp [w]
+        exact norm_add_le _ _
+      _ = |x| + H := by simp [Real.norm_eq_abs, abs_of_nonneg hH0]
+      _ ≤ R := by
+        have habs : |x| ≤ c₁ := by simpa [abs_of_nonneg hx0] using hx.2
+        calc
+          |x| + H ≤ c₁ + H := by linarith
+          _ ≤ R := by dsimp [R]; linarith [abs_nonneg t]
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤ 625 * R ^ 8 :=
+    norm_hughesYoungAuxiliaryZero_le_polynomial hR hwUpper
   have hGamma₁ : ‖Complex.Gammaℝ s₁‖ ≤ G := by
     have h := hG x (t + H) hx
     have hs₁eq : s₁ =
@@ -337,7 +355,7 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_horizontal_le
     exact (inv_le_one₀ (zero_lt_one.trans_le hwNorm)).2 hwNorm
   have hfactor :
       hughesYoungRightContourWeightComplex t w =
-        Complex.exp (100 * w ^ 2) * poly *
+        Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w * poly *
           (Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2) *
           (afePoleNormalization t)⁻¹ * w⁻¹ *
           (afeGammaNormalization t)⁻¹ := by
@@ -349,13 +367,13 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_horizontal_le
   simp only [norm_mul, norm_pow]
   calc
     _ ≤ Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 *
+          (625 * R ^ 8) * (2 + |t| + c₁ + H) ^ 8 *
           (G ^ 2 * G ^ 2) * ‖(afePoleNormalization t)⁻¹‖ * 1 *
           ‖(afeGammaNormalization t)⁻¹‖ := by
       gcongr
     _ = K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
-      dsimp [K]
+          (2 + |t| + c₁ + H) ^ 16 := by
+      dsimp [K, R]
       ring
 
 /-- Uniform Gaussian-polynomial bound for one complete opened divisor
@@ -367,7 +385,7 @@ theorem exists_norm_hughesYoungPairContourTerm_horizontal_le
       ‖hughesYoungPairContourTerm t p
           ((x : ℂ) + (H : ℂ) * I)‖ ≤
         C * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
+          (2 + |t| + c₁ + H) ^ 16 := by
   obtain ⟨K, hKpos, hK⟩ :=
     exists_norm_hughesYoungRightContourWeightComplex_horizontal_le t hc₀ hc
   obtain ⟨L, hLpos, hL⟩ :=
@@ -391,46 +409,48 @@ theorem exists_norm_hughesYoungPairContourTerm_horizontal_le
   rw [hfactor, norm_mul]
   calc
     _ ≤ (K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8) * L := by
+          (2 + |t| + c₁ + H) ^ 16) * L := by
       exact mul_le_mul hweight harithmetic (norm_nonneg _) (by positivity)
     _ = (K * L) * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by ring
+          (2 + |t| + c₁ + H) ^ 16 := by ac_rfl
 
-/-- A fixed eighth-degree polynomial cannot overcome the quadratic
+/-- A fixed sixteenth-degree polynomial cannot overcome the quadratic
 Gaussian decay on the horizontal contour edges. -/
-theorem tendsto_const_mul_exp_sub_sq_mul_shift_pow_eight
+theorem tendsto_const_mul_exp_sub_sq_mul_shift_pow_sixteen
     (C A B : ℝ) (hC : 0 ≤ C) (hB : 0 ≤ B) :
     Tendsto (fun H : ℝ =>
-      C * Real.exp (A - 100 * H ^ 2) * (B + H) ^ 8) atTop (nhds 0) := by
+      C * Real.exp (A - 100 * H ^ 2) * (B + H) ^ 16) atTop (nhds 0) := by
   have hExp : Tendsto (fun H : ℝ => Real.exp (-(1 / 2 : ℝ) * H))
       atTop (nhds 0) :=
     Real.tendsto_exp_atBot.comp
       (tendsto_id.const_mul_atTop_of_neg
         (by norm_num : (-(1 / 2 : ℝ)) < 0))
   have hbaseRpow : Tendsto (fun H : ℝ =>
-      H ^ (8 : ℝ) * Real.exp (-100 * H ^ 2)) atTop (nhds 0) :=
+      H ^ (16 : ℝ) * Real.exp (-100 * H ^ 2)) atTop (nhds 0) :=
     (rpow_mul_exp_neg_mul_sq_isLittleO_exp_neg
-      (by norm_num : (0 : ℝ) < 100) 8).tendsto_zero_of_tendsto hExp
+      (by norm_num : (0 : ℝ) < 100) 16).tendsto_zero_of_tendsto hExp
   have hbase : Tendsto (fun H : ℝ =>
-      H ^ 8 * Real.exp (-100 * H ^ 2)) atTop (nhds 0) := by
+      H ^ 16 * Real.exp (-100 * H ^ 2)) atTop (nhds 0) := by
     simpa only [← Real.rpow_natCast] using hbaseRpow
-  let D : ℝ := C * Real.exp A * 256
+  let D : ℝ := C * Real.exp A * 65536
   have hmajor : Tendsto (fun H : ℝ =>
-      D * (H ^ 8 * Real.exp (-100 * H ^ 2))) atTop (nhds 0) := by
+      D * (H ^ 16 * Real.exp (-100 * H ^ 2))) atTop (nhds 0) := by
     simpa only [mul_zero] using hbase.const_mul D
   apply squeeze_zero' (Eventually.of_forall fun H => by positivity)
     (show ∀ᶠ H : ℝ in atTop,
-      C * Real.exp (A - 100 * H ^ 2) * (B + H) ^ 8 ≤
-        D * (H ^ 8 * Real.exp (-100 * H ^ 2)) by
+      C * Real.exp (A - 100 * H ^ 2) * (B + H) ^ 16 ≤
+        D * (H ^ 16 * Real.exp (-100 * H ^ 2)) by
       filter_upwards [eventually_ge_atTop (max 1 B)] with H hH
       have hH1 : 1 ≤ H := (le_max_left 1 B).trans hH
       have hHB : B ≤ H := (le_max_right 1 B).trans hH
       have hH0 : 0 ≤ H := zero_le_one.trans hH1
       have hshift : B + H ≤ 2 * H := by linarith
-      have hpow : (B + H) ^ 8 ≤ 256 * H ^ 8 := by
+      have hpow : (B + H) ^ 16 ≤ 65536 * H ^ 16 := by
         calc
-          (B + H) ^ 8 ≤ (2 * H) ^ 8 := by gcongr
-          _ = 256 * H ^ 8 := by ring
+          (B + H) ^ 16 ≤ (2 * H) ^ 16 := by gcongr
+          _ = 65536 * H ^ 16 := by
+            rw [mul_pow]
+            norm_num
       have hexp : Real.exp (A - 100 * H ^ 2) =
           Real.exp A * Real.exp (-100 * H ^ 2) := by
         rw [← Real.exp_add]
@@ -439,11 +459,11 @@ theorem tendsto_const_mul_exp_sub_sq_mul_shift_pow_eight
       rw [hexp]
       dsimp [D]
       calc
-        C * (Real.exp A * Real.exp (-100 * H ^ 2)) * (B + H) ^ 8 ≤
-            C * (Real.exp A * Real.exp (-100 * H ^ 2)) * (256 * H ^ 8) := by
+        C * (Real.exp A * Real.exp (-100 * H ^ 2)) * (B + H) ^ 16 ≤
+            C * (Real.exp A * Real.exp (-100 * H ^ 2)) * (65536 * H ^ 16) := by
           gcongr
-        _ = C * Real.exp A * 256 *
-              (H ^ 8 * Real.exp (-100 * H ^ 2)) := by ring)
+        _ = C * Real.exp A * 65536 *
+              (H ^ 16 * Real.exp (-100 * H ^ 2)) := by ring)
   exact hmajor
 
 /-- The elementary horizontal-size estimate with no sign restriction on
@@ -531,10 +551,10 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_bottom_le
       ‖hughesYoungRightContourWeightComplex t
           ((x : ℂ) + (-H : ℂ) * I)‖ ≤
         K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
+          (2 + |t| + c₁ + H) ^ 16 := by
   obtain ⟨G, hGpos, hG⟩ :=
     exists_uniform_norm_GammaR_vertical_strip (c₀ := c₀) (c₁ := c₁) hc₀
-  let K : ℝ := G ^ 4 * ‖(afePoleNormalization t)⁻¹‖ *
+  let K : ℝ := 625 * G ^ 4 * ‖(afePoleNormalization t)⁻¹‖ *
     ‖(afeGammaNormalization t)⁻¹‖
   have hKpos : 0 < K := by
     dsimp [K]
@@ -552,6 +572,7 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_bottom_le
   let s₁ : ℂ := afeCriticalPoint t + w
   let s₂ : ℂ := afeCriticalPoint (-t) + w
   let poly : ℂ := (s₁ * (1 - s₁)) ^ 2 * (s₂ * (1 - s₂)) ^ 2
+  let R : ℝ := 2 + |t| + c₁ + H
   have hgauss : ‖Complex.exp (100 * w ^ 2)‖ ≤
       Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) := by
     have h := norm_hughesYoungGaussian_horizontal_le
@@ -565,6 +586,22 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_bottom_le
     push_cast at h
     dsimp [poly, s₁, s₂, w]
     simpa only [abs_neg, abs_of_nonneg hH0] using h
+  have hR : 1 ≤ R := by
+    dsimp [R]
+    linarith [abs_nonneg t]
+  have hwUpper : ‖w‖ ≤ R := by
+    calc
+      ‖w‖ ≤ ‖(x : ℂ)‖ + ‖(-H : ℂ) * I‖ := by
+        dsimp [w]
+        exact norm_add_le _ _
+      _ = |x| + H := by simp [Real.norm_eq_abs, abs_of_nonneg hH0]
+      _ ≤ R := by
+        have habs : |x| ≤ c₁ := by simpa [abs_of_nonneg hx0] using hx.2
+        calc
+          |x| + H ≤ c₁ + H := by linarith
+          _ ≤ R := by dsimp [R]; linarith [abs_nonneg t]
+  have haux : ‖hughesYoungAuxiliaryZero w‖ ≤ 625 * R ^ 8 :=
+    norm_hughesYoungAuxiliaryZero_le_polynomial hR hwUpper
   have hGamma₁ : ‖Complex.Gammaℝ s₁‖ ≤ G := by
     have h := hG x (t - H) hx
     have hs₁eq : s₁ =
@@ -593,7 +630,7 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_bottom_le
     exact (inv_le_one₀ (zero_lt_one.trans_le hwNorm)).2 hwNorm
   have hfactor :
       hughesYoungRightContourWeightComplex t w =
-        Complex.exp (100 * w ^ 2) * poly *
+        Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w * poly *
           (Complex.Gammaℝ s₁ ^ 2 * Complex.Gammaℝ s₂ ^ 2) *
           (afePoleNormalization t)⁻¹ * w⁻¹ *
           (afeGammaNormalization t)⁻¹ := by
@@ -605,13 +642,13 @@ theorem exists_norm_hughesYoungRightContourWeightComplex_bottom_le
   simp only [norm_mul, norm_pow]
   calc
     _ ≤ Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 *
+          (625 * R ^ 8) * (2 + |t| + c₁ + H) ^ 8 *
           (G ^ 2 * G ^ 2) * ‖(afePoleNormalization t)⁻¹‖ * 1 *
           ‖(afeGammaNormalization t)⁻¹‖ := by
       gcongr
     _ = K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
-      dsimp [K]
+          (2 + |t| + c₁ + H) ^ 16 := by
+      dsimp [K, R]
       ring
 
 /-- Uniform Gaussian-polynomial bound for a complete opened divisor pair
@@ -623,7 +660,7 @@ theorem exists_norm_hughesYoungPairContourTerm_bottom_le
       ‖hughesYoungPairContourTerm t p
           ((x : ℂ) + (-H : ℂ) * I)‖ ≤
         C * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by
+          (2 + |t| + c₁ + H) ^ 16 := by
   obtain ⟨K, hKpos, hK⟩ :=
     exists_norm_hughesYoungRightContourWeightComplex_bottom_le t hc₀ hc
   obtain ⟨L, hLpos, hL⟩ :=
@@ -655,11 +692,12 @@ theorem exists_norm_hughesYoungPairContourTerm_bottom_le
   rw [hfactor, norm_mul]
   calc
     _ ≤ (K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8) * L := by
+          (2 + |t| + c₁ + H) ^ 16) * L := by
       exact mul_le_mul hweight harithmetic' (norm_nonneg _) (by positivity)
     _ = (K * L) * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-          (2 + |t| + c₁ + H) ^ 8 := by ring
+          (2 + |t| + c₁ + H) ^ 16 := by ac_rfl
 
+set_option maxHeartbeats 1000000 in
 /-- The complex contour coefficient has no singularity in `Re w > 0`.
 This is the exact analytic domain needed to move from the opening line to
 the Hughes--Young `ε` line without crossing the pole at zero. -/
@@ -689,9 +727,11 @@ theorem differentiableAt_hughesYoungRightContourWeightComplex
     have := congrArg Complex.re h
     simp at this
     linarith
+  have haux : DifferentiableAt ℂ hughesYoungAuxiliaryZero w :=
+    differentiable_hughesYoungAuxiliaryZero.differentiableAt
   unfold hughesYoungRightContourWeightComplex
   dsimp only [s₁, s₂]
-  fun_prop (disch := assumption)
+  fun_prop (disch := first | exact haux | assumption)
 
 /-- Every positive-index opened divisor term is holomorphic on the full
 open right half-plane. -/
@@ -763,10 +803,10 @@ theorem tendsto_hIntegral_hughesYoungPair_top_zero
     exists_norm_hughesYoungPairContourTerm_horizontal_le t p hc₀ hc
   let envelope : ℝ → ℝ := fun H =>
     C * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-      (2 + |t| + c₁ + H) ^ 8
+      (2 + |t| + c₁ + H) ^ 16
   have hc₁ : 0 ≤ c₁ := (hc₀.le.trans hc)
   have henv : Tendsto envelope atTop (nhds 0) := by
-    exact tendsto_const_mul_exp_sub_sq_mul_shift_pow_eight
+    exact tendsto_const_mul_exp_sub_sq_mul_shift_pow_sixteen
       C (100 * c₁ ^ 2) (2 + |t| + c₁) hCpos.le (by positivity)
   rw [tendsto_zero_iff_norm_tendsto_zero]
   apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
@@ -795,10 +835,10 @@ theorem tendsto_hIntegral_hughesYoungPair_bottom_zero
     exists_norm_hughesYoungPairContourTerm_bottom_le t p hc₀ hc
   let envelope : ℝ → ℝ := fun H =>
     C * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
-      (2 + |t| + c₁ + H) ^ 8
+      (2 + |t| + c₁ + H) ^ 16
   have hc₁ : 0 ≤ c₁ := hc₀.le.trans hc
   have henv : Tendsto envelope atTop (nhds 0) := by
-    exact tendsto_const_mul_exp_sub_sq_mul_shift_pow_eight
+    exact tendsto_const_mul_exp_sub_sq_mul_shift_pow_sixteen
       C (100 * c₁ ^ 2) (2 + |t| + c₁) hCpos.le (by positivity)
   rw [tendsto_zero_iff_norm_tendsto_zero]
   apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)

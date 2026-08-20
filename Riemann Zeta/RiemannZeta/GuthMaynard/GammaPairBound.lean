@@ -280,6 +280,113 @@ theorem norm_Gamma_symmetric_le (t u : ℝ) :
   rw [← hquarter]
   exact norm_GammaSeq_symmetric_le t u (n := n + 1) (by omega)
 
+/-- The symmetric vertical Gamma estimate is uniform on every line to the
+right of `Re z = 1/4`.  This strengthened form is used at the
+Hughes--Young moving residue, whose numerator lies on `Re z = 1/2`. -/
+theorem norm_Gamma_symmetric_le_of_quarter_le
+    {a : ℝ} (ha : 1 / 4 ≤ a) (t u : ℝ) :
+    ‖Complex.Gamma ((a : ℂ) + ((t + u : ℝ) : ℂ) * I)‖ *
+        ‖Complex.Gamma ((a : ℂ) + ((t - u : ℝ) : ℂ) * I)‖ ≤
+      Real.exp (32 * u ^ 2) *
+        ‖Complex.Gamma ((a : ℂ) + (t : ℂ) * I)‖ ^ 2 := by
+  have ha0 : 0 < a := lt_of_lt_of_le (by norm_num) ha
+  have hrec : ∀ n : ℕ,
+      ∑ j ∈ Finset.range (n + 1), 1 / (a + j) ^ 2 ≤ 32 := by
+    intro n
+    have hpoint : ∀ j : ℕ,
+        1 / (a + j) ^ 2 ≤ 1 / ((1 / 4 : ℝ) + j) ^ 2 := by
+      intro j
+      have hq : 0 < (1 / 4 : ℝ) + j := by positivity
+      have haj0 : 0 < a + j :=
+        ha0.trans_le (le_add_of_nonneg_right (Nat.cast_nonneg j))
+      have haj : (1 / 4 : ℝ) + j ≤ a + j := by linarith
+      rw [div_le_div_iff₀ (sq_pos_of_pos haj0) (sq_pos_of_pos hq)]
+      nlinarith [sq_nonneg ((1 / 4 : ℝ) + j), sq_nonneg (a + j)]
+    exact (Finset.sum_le_sum fun j _ => hpoint j).trans
+      (reciprocal_quarter_sum_le n)
+  have hratio : ∀ n : ℕ,
+      gammaDenom a t n ^ 2 /
+          (gammaDenom a (t + u) n * gammaDenom a (t - u) n) ≤
+        Real.exp (32 * u ^ 2) := by
+    intro n
+    have hsum :
+        2 * Real.log (gammaDenom a t n) -
+            Real.log (gammaDenom a (t + u) n) -
+            Real.log (gammaDenom a (t - u) n) ≤
+          32 * u ^ 2 := by
+      rw [log_gammaDenom ha0, log_gammaDenom ha0, log_gammaDenom ha0]
+      have hterm : ∀ j ∈ Finset.range (n + 1),
+          2 * Real.log ((a + j) ^ 2 + t ^ 2) -
+              Real.log ((a + j) ^ 2 + (t + u) ^ 2) -
+              Real.log ((a + j) ^ 2 + (t - u) ^ 2) ≤
+            2 * u ^ 2 / (a + j) ^ 2 := by
+        intro j _
+        exact logQuad_symmetric_difference_le (by positivity) t u
+      have hs := Finset.sum_le_sum hterm
+      simp_rw [Finset.sum_sub_distrib] at hs
+      rw [← Finset.mul_sum] at hs
+      have hrhs :
+          ∑ j ∈ Finset.range (n + 1), 2 * u ^ 2 / (a + j) ^ 2 =
+            2 * u ^ 2 *
+              ∑ j ∈ Finset.range (n + 1), 1 / (a + j) ^ 2 := by
+        rw [Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro j _
+        ring
+      rw [hrhs] at hs
+      nlinarith [mul_le_mul_of_nonneg_left (hrec n) (sq_nonneg u)]
+    have hpos0 := gammaDenom_pos ha0 t n
+    have hposp := gammaDenom_pos ha0 (t + u) n
+    have hposm := gammaDenom_pos ha0 (t - u) n
+    rw [← Real.exp_log (div_pos (sq_pos_of_pos hpos0) (mul_pos hposp hposm))]
+    apply Real.exp_le_exp.mpr
+    rw [Real.log_div (pow_ne_zero 2 hpos0.ne')
+      (mul_ne_zero hposp.ne' hposm.ne'), Real.log_pow,
+      Real.log_mul hposp.ne' hposm.ne']
+    ring_nf at hsum ⊢
+    exact hsum
+  have hseq : ∀ n : ℕ, 0 < n →
+      ‖Complex.GammaSeq ((a : ℂ) + ((t + u : ℝ) : ℂ) * I) n‖ *
+          ‖Complex.GammaSeq ((a : ℂ) + ((t - u : ℝ) : ℂ) * I) n‖ ≤
+        Real.exp (32 * u ^ 2) *
+          ‖Complex.GammaSeq ((a : ℂ) + (t : ℂ) * I) n‖ ^ 2 := by
+    intro n hn
+    rw [norm_GammaSeq_vertical hn, norm_GammaSeq_vertical hn,
+      norm_GammaSeq_vertical hn]
+    let C : ℝ := (n : ℝ) ^ a * (n.factorial : ℝ)
+    let D0 := gammaDenom a t n
+    let Dp := gammaDenom a (t + u) n
+    let Dm := gammaDenom a (t - u) n
+    have hC : 0 ≤ C := by dsimp only [C]; positivity
+    have hD0 : 0 < D0 := gammaDenom_pos ha0 t n
+    have hDp : 0 < Dp := gammaDenom_pos ha0 (t + u) n
+    have hDm : 0 < Dm := gammaDenom_pos ha0 (t - u) n
+    have hfactor : 0 ≤ C ^ 2 / D0 ^ 2 := by positivity
+    calc
+      C / Dp * (C / Dm) =
+          (C ^ 2 / D0 ^ 2) * (D0 ^ 2 / (Dp * Dm)) := by
+            field_simp [hD0.ne', hDp.ne', hDm.ne']
+      _ ≤ (C ^ 2 / D0 ^ 2) * Real.exp (32 * u ^ 2) :=
+        mul_le_mul_of_nonneg_left (by simpa only [D0, Dp, Dm] using hratio n)
+          hfactor
+      _ = Real.exp (32 * u ^ 2) * (C / D0) ^ 2 := by ring
+  let zp : ℂ := (a : ℂ) + ((t + u : ℝ) : ℂ) * I
+  let zm : ℂ := (a : ℂ) + ((t - u : ℝ) : ℂ) * I
+  let z0 : ℂ := (a : ℂ) + (t : ℂ) * I
+  have hp : Tendsto (fun n : ℕ => ‖Complex.GammaSeq zp (n + 1)‖) atTop
+      (nhds ‖Complex.Gamma zp‖) :=
+    (Complex.GammaSeq_tendsto_Gamma zp).norm.comp (tendsto_add_atTop_nat 1)
+  have hm : Tendsto (fun n : ℕ => ‖Complex.GammaSeq zm (n + 1)‖) atTop
+      (nhds ‖Complex.Gamma zm‖) :=
+    (Complex.GammaSeq_tendsto_Gamma zm).norm.comp (tendsto_add_atTop_nat 1)
+  have h0 : Tendsto (fun n : ℕ => ‖Complex.GammaSeq z0 (n + 1)‖) atTop
+      (nhds ‖Complex.Gamma z0‖) :=
+    (Complex.GammaSeq_tendsto_Gamma z0).norm.comp (tendsto_add_atTop_nat 1)
+  apply le_of_tendsto_of_tendsto' (hp.mul hm)
+    (tendsto_const_nhds.mul (h0.pow 2))
+  intro n
+  simpa only [zp, zm, z0] using hseq (n + 1) (by omega)
+
 private theorem norm_GammaR_critical (y : ℝ) :
     ‖Complex.Gammaℝ ((1 / 2 : ℂ) + (y : ℂ) * I)‖ =
       Real.pi ^ (-1 / 4 : ℝ) *
