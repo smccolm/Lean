@@ -242,7 +242,7 @@ theorem exists_norm_hughesYoungCentralReverseKernelPolynomial_horizontal_le
           ‖hughesYoungCentralReverseKernelPolynomial t
               ((x : ℂ) + (y : ℂ) * I) z w‖ ≤
             C * Real.exp (100 - 60 * y ^ 2) *
-              (3 + |t| + |y|) ^ 9 := by
+              (3 + |t| + |y|) ^ 17 := by
   obtain ⟨B, hB, hK⟩ :=
     exists_norm_hughesYoungEquation84KernelCoefficients_horizontal_le
       t hδ0 (by norm_num : (1 : ℝ) < 3 / 2) hδ1
@@ -253,12 +253,12 @@ theorem exists_norm_hughesYoungCentralReverseKernelPolynomial_horizontal_le
   intro z w hz hw y hy hty x hx
   rcases hK y hy hty x hx with ⟨h00, h10, h01, h11⟩
   let G : ℝ := Real.exp (100 - 60 * y ^ 2)
-  let R : ℝ := (3 + |t| + |y|) ^ 9
+  let R : ℝ := (3 + |t| + |y|) ^ 17
   have hG : 0 ≤ G := by dsimp [G]; positivity
   have hR : 0 ≤ R := by dsimp [R]; positivity
   have hbase :
       B * Real.exp (100 * (1 : ℝ) ^ 2 - 60 * y ^ 2) *
-          (2 + |t| + (1 : ℝ) + |y|) ^ 9 = B * G * R := by
+          (2 + |t| + (1 : ℝ) + |y|) ^ 17 = B * G * R := by
     dsimp [G, R]
     have he : 100 * (1 : ℝ) ^ 2 - 60 * y ^ 2 = 100 - 60 * y ^ 2 := by ring
     have hr : 2 + |t| + (1 : ℝ) + |y| = 3 + |t| + |y| := by ring
@@ -293,8 +293,9 @@ theorem exists_norm_hughesYoungCentralReverseKernelPolynomial_horizontal_le
         (δ / 4) * (B * G * R) +
           ((δ / 4) * (δ / 4)) * (B * G * R) := by
       gcongr
-    _ = C * Real.exp (100 - 60 * y ^ 2) * (3 + |t| + |y|) ^ 9 := by
-      dsimp [C, A, G, R]
+    _ = C * Real.exp (100 - 60 * y ^ 2) * (3 + |t| + |y|) ^ 17 := by
+      change _ = C * G * R
+      dsimp only [C, A]
       ring
 
 /-- The reduced Mellin and mollifier factor is independent of the vertical
@@ -325,7 +326,7 @@ theorem exists_uniform_norm_hughesYoungCompletePositiveCentralMeromorphic_horizo
         ‖hughesYoungCompletePositiveCentralMeromorphic
             T t h k a b z w ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 11 := by
+            (3 + |t| + |y|) ^ 19 := by
   have hδ1 : δ ≤ 1 := hδ4.le.trans (by norm_num)
   obtain ⟨K, hK, hStatic⟩ :=
     exists_uniform_norm_hughesYoungCompleteCentralStatic
@@ -465,7 +466,7 @@ theorem exists_uniform_norm_hughesYoungCompletePositiveCentralMeromorphic_horizo
       ‖hughesYoungReducedMellinStaticComplex T t h k W‖ ≤ K := by
     simpa only [norm_mul, W] using hStatic y x hx
   have hkernel : ‖hughesYoungCentralReverseKernelPolynomial t W z w‖ ≤
-      B * G * R ^ 9 := by
+      B * G * R ^ 17 := by
     simpa only [W, G, R] using hKernel hz hw y hy hty x hx
   have hexp : ‖Complex.exp
       (z * hughesYoungEquation96LeftConstant a +
@@ -509,10 +510,11 @@ theorem exists_uniform_norm_hughesYoungCompletePositiveCentralMeromorphic_horizo
   calc
     _ ≤ (4 * Z * R) *
         (K * (E * (((4 * Z * R) * D) * (A * Cb)) *
-          (B * G * R ^ 9))) := by gcongr
+          (B * G * R ^ 17))) := by gcongr
     _ = C * Real.exp (100 - 60 * y ^ 2) *
-        (3 + |t| + |y|) ^ 11 := by
-      dsimp [C, G, R]
+        (3 + |t| + |y|) ^ 19 := by
+      change _ = C * G * R ^ 19
+      dsimp only [C]
       ring
 
 /-- Fixed-shift specialization of the locally uniform bidisc estimate. -/
@@ -525,53 +527,53 @@ theorem exists_norm_hughesYoungCompletePositiveCentralMeromorphic_horizontal_le
         ‖hughesYoungCompletePositiveCentralMeromorphic
             T t h k a b z w ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 11 := by
+            (3 + |t| + |y|) ^ 19 := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_uniform_norm_hughesYoungCompletePositiveCentralMeromorphic_horizontal_le
       T t h k a b hδ0 hδ4
   exact ⟨C, hC, hbound hz hw⟩
 
-/-- An eleventh-degree polynomial is still dominated by the Gaussian
+/-- A nineteenth-degree polynomial is still dominated by the Gaussian
 appearing in the completed-zeta contour kernel. -/
-theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_eleven
+theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nineteen
     (C A B : ℝ) (hC : 0 ≤ C) (hB : 0 ≤ B) :
     Tendsto (fun H : ℝ =>
-      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 11) atTop (nhds 0) := by
+      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 19) atTop (nhds 0) := by
   have hExp : Tendsto (fun H : ℝ => Real.exp (-(1 / 2 : ℝ) * H))
       atTop (nhds 0) :=
     Real.tendsto_exp_atBot.comp
       (tendsto_id.const_mul_atTop_of_neg
         (by norm_num : (-(1 / 2 : ℝ)) < 0))
   have hbaseRpow : Tendsto (fun H : ℝ =>
-      H ^ (11 : ℝ) * Real.exp (-60 * H ^ 2)) atTop (nhds 0) :=
+      H ^ (19 : ℝ) * Real.exp (-60 * H ^ 2)) atTop (nhds 0) :=
     (rpow_mul_exp_neg_mul_sq_isLittleO_exp_neg
-      (by norm_num : (0 : ℝ) < 60) 11).tendsto_zero_of_tendsto hExp
+      (by norm_num : (0 : ℝ) < 60) 19).tendsto_zero_of_tendsto hExp
   have hbase : Tendsto (fun H : ℝ =>
-      H ^ 11 * Real.exp (-60 * H ^ 2)) atTop (nhds 0) := by
+      H ^ 19 * Real.exp (-60 * H ^ 2)) atTop (nhds 0) := by
     simpa only [← Real.rpow_natCast] using hbaseRpow
-  let D : ℝ := C * Real.exp A * 2048
+  let D : ℝ := C * Real.exp A * 524288
   have hmajor : Tendsto (fun H : ℝ =>
-      D * (H ^ 11 * Real.exp (-60 * H ^ 2))) atTop (nhds 0) := by
+      D * (H ^ 19 * Real.exp (-60 * H ^ 2))) atTop (nhds 0) := by
     simpa only [mul_zero] using hbase.const_mul D
   apply squeeze_zero'
     (show ∀ᶠ H : ℝ in atTop,
-      0 ≤ C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 11 by
+      0 ≤ C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 19 by
       filter_upwards [eventually_ge_atTop (max 1 B)] with H hH
       have hH0 : 0 ≤ H := zero_le_one.trans ((le_max_left 1 B).trans hH)
       exact mul_nonneg (mul_nonneg hC (Real.exp_pos _).le)
-        (pow_nonneg (add_nonneg hB hH0) 11))
+        (pow_nonneg (add_nonneg hB hH0) 19))
     (show ∀ᶠ H : ℝ in atTop,
-      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 11 ≤
-        D * (H ^ 11 * Real.exp (-60 * H ^ 2)) by
+      C * Real.exp (A - 60 * H ^ 2) * (B + H) ^ 19 ≤
+        D * (H ^ 19 * Real.exp (-60 * H ^ 2)) by
       filter_upwards [eventually_ge_atTop (max 1 B)] with H hH
       have hH1 : 1 ≤ H := (le_max_left 1 B).trans hH
       have hHB : B ≤ H := (le_max_right 1 B).trans hH
       have hH0 : 0 ≤ H := zero_le_one.trans hH1
       have hshift : B + H ≤ 2 * H := by linarith
-      have hpow : (B + H) ^ 11 ≤ 2048 * H ^ 11 := by
+      have hpow : (B + H) ^ 19 ≤ 524288 * H ^ 19 := by
         calc
-          (B + H) ^ 11 ≤ (2 * H) ^ 11 := by gcongr
-          _ = 2048 * H ^ 11 := by ring
+          (B + H) ^ 19 ≤ (2 * H) ^ 19 := by gcongr
+          _ = 524288 * H ^ 19 := by ring
       have hexp : Real.exp (A - 60 * H ^ 2) =
           Real.exp A * Real.exp (-60 * H ^ 2) := by
         rw [← Real.exp_add]
@@ -580,26 +582,26 @@ theorem tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_eleven
       rw [hexp]
       dsimp [D]
       calc
-        C * (Real.exp A * Real.exp (-60 * H ^ 2)) * (B + H) ^ 11 ≤
+        C * (Real.exp A * Real.exp (-60 * H ^ 2)) * (B + H) ^ 19 ≤
             C * (Real.exp A * Real.exp (-60 * H ^ 2)) *
-              (2048 * H ^ 11) := by gcongr
-        _ = C * Real.exp A * 2048 *
-              (H ^ 11 * Real.exp (-60 * H ^ 2)) := by ring)
+              (524288 * H ^ 19) := by gcongr
+        _ = C * Real.exp A * 524288 *
+              (H ^ 19 * Real.exp (-60 * H ^ 2)) := by ring)
   exact hmajor
 
-private theorem tendsto_HIntegral_top_zero_of_central_horizontal_bound_eleven
+private theorem tendsto_HIntegral_top_zero_of_central_horizontal_bound_nineteen
     (f : ℂ → ℂ) (t δ : ℝ) (hδ1 : δ ≤ 1)
     (hbound : ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ),
       1 ≤ |y| → |t| + 1 ≤ |y| → ∀ x ∈ Set.Icc δ 1,
         ‖f ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 11) :
+            (3 + |t| + |y|) ^ 19) :
     Tendsto (fun H : ℝ => HIntegral f δ 1 H) atTop (nhds 0) := by
   obtain ⟨C, hC, hCbound⟩ := hbound
   let envelope : ℝ → ℝ := fun H =>
-    C * Real.exp (100 - 60 * H ^ 2) * (3 + |t| + H) ^ 11
+    C * Real.exp (100 - 60 * H ^ 2) * (3 + |t| + H) ^ 19
   have henv : Tendsto envelope atTop (nhds 0) :=
-    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_eleven
+    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nineteen
       C 100 (3 + |t|) hC.le (by positivity)
   rw [tendsto_zero_iff_norm_tendsto_zero]
   apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
@@ -621,19 +623,19 @@ private theorem tendsto_HIntegral_top_zero_of_central_horizontal_bound_eleven
       simpa [envelope, abs_of_nonneg hH0, add_assoc] using hpoint)
   simpa using henv.mul_const |1 - δ|
 
-private theorem tendsto_HIntegral_bottom_zero_of_central_horizontal_bound_eleven
+private theorem tendsto_HIntegral_bottom_zero_of_central_horizontal_bound_nineteen
     (f : ℂ → ℂ) (t δ : ℝ) (hδ1 : δ ≤ 1)
     (hbound : ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ),
       1 ≤ |y| → |t| + 1 ≤ |y| → ∀ x ∈ Set.Icc δ 1,
         ‖f ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 11) :
+            (3 + |t| + |y|) ^ 19) :
     Tendsto (fun H : ℝ => HIntegral f δ 1 (-H)) atTop (nhds 0) := by
   obtain ⟨C, hC, hCbound⟩ := hbound
   let envelope : ℝ → ℝ := fun H =>
-    C * Real.exp (100 - 60 * H ^ 2) * (3 + |t| + H) ^ 11
+    C * Real.exp (100 - 60 * H ^ 2) * (3 + |t| + H) ^ 19
   have henv : Tendsto envelope atTop (nhds 0) :=
-    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_eleven
+    tendsto_const_mul_exp_sub_sixty_sq_mul_shift_pow_nineteen
       C 100 (3 + |t|) hC.le (by positivity)
   rw [tendsto_zero_iff_norm_tendsto_zero]
   apply squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _)
@@ -671,9 +673,9 @@ theorem tendsto_hughesYoungCompletePositiveCentralMeromorphic_horizontal_edges
       T t h k a b hδ0 hδ4 hz hw
   have hδ1 : δ ≤ 1 := hδ4.le.trans (by norm_num)
   exact ⟨
-    tendsto_HIntegral_top_zero_of_central_horizontal_bound_eleven
+    tendsto_HIntegral_top_zero_of_central_horizontal_bound_nineteen
       _ t δ hδ1 hbound,
-    tendsto_HIntegral_bottom_zero_of_central_horizontal_bound_eleven
+    tendsto_HIntegral_bottom_zero_of_central_horizontal_bound_nineteen
       _ t δ hδ1 hbound⟩
 
 /-- Infinite-height contour displacement in limit form.  The auxiliary
@@ -814,7 +816,7 @@ theorem integrable_hughesYoungCompletePositiveCentralMeromorphic_vertical
         ((c : ℂ) + (u : ℂ) * I))
     (continuous_hughesYoungCompletePositiveCentralMeromorphic_vertical
       T t h k a b hδ0 hδ4 hz hw hc)
-    (C := C) (A := 100) (B := 60) (D := 3 + |t|) (j := 11)
+    (C := C) (A := 100) (B := 60) (D := 3 + |t|) (j := 19)
     hL (by norm_num : (0 : ℝ) < 60)
   intro u hu
   have hu1 : 1 ≤ |u| := (le_max_left 1 (|t| + 1)).trans hu

@@ -96,6 +96,39 @@ noncomputable def hughesYoungEquation84NegativeContourTerm
         ((Real.log r : ℂ) +
           dfiEquation27LogConstant b (dfiReducedDenominator b q)))
 
+/-- Expose the positive contour summand as its height-independent outer
+factor times the regularized archimedean kernel, without unfolding that
+kernel. -/
+theorem hughesYoungEquation84PositiveContourTerm_eq_outer_mul_kernel
+    (T t : ℝ) (h k a b r q : ℕ) (w : ℂ) :
+    hughesYoungEquation84PositiveContourTerm T t h k a b r q w =
+      (((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b r q) *
+        (hughesYoungReducedMellinStaticComplex T t h k w *
+          hughesYoungCentralShiftPower r w) *
+        hughesYoungEquation84RegularizedContourKernel t w
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant b (dfiReducedDenominator b q))
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant a (dfiReducedDenominator a q)) := by
+  unfold hughesYoungEquation84PositiveContourTerm
+  rw [← mul_assoc]
+
+/-- The corresponding exact outer/kernel factorization for the
+coordinate-swapped negative summand. -/
+theorem hughesYoungEquation84NegativeContourTerm_eq_outer_mul_kernel
+    (T t : ℝ) (h k a b r q : ℕ) (w : ℂ) :
+    hughesYoungEquation84NegativeContourTerm T t h k a b r q w =
+      (((b : ℂ) * a)⁻¹ * dfiEquation27ArithmeticCoefficient b a r q) *
+        (hughesYoungReducedMellinStaticComplex T t h k w *
+          hughesYoungCentralShiftPower r w) *
+        hughesYoungEquation84RegularizedContourKernel (-t) w
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant a (dfiReducedDenominator a q))
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant b (dfiReducedDenominator b q)) := by
+  unfold hughesYoungEquation84NegativeContourTerm
+  rw [← mul_assoc]
+
 /-- Termwise identification of the positive equation-(84) summand with its
 pole-cancelled holomorphic contour representative. -/
 theorem hughesYoungEquation84Positive_summand_eq_contourTerm

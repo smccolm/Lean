@@ -60,19 +60,17 @@ theorem tendsto_hughesYoungIntegratedHighPairSet_sub_small_zero
 theorem tendsto_hughesYoungIntegratedSmallPairSet_to_whole
     {T t : ℝ} (hT : Real.exp 1 ≤ T)
     (ht : t ∈ Set.Icc (T / 4) (4 * T))
-    {M : ℕ} (hM : 0 < M) {S : Finset (ℕ × ℕ)}
-    (hS : ∀ p ∈ S,
-      0 < p.1 ∧ 0 < p.2 ∧ p.1 ≤ M ∧ p.2 ≤ M) :
+    {S : Finset (ℕ × ℕ)}
+    (hS : ∀ p ∈ S, 0 < p.1 ∧ 0 < p.2) :
     Tendsto (fun H : ℝ => hughesYoungIntegratedSmallPairSet T t H S)
       atTop (𝓝 (hughesYoungWholeSmallPairSet T t S)) := by
   classical
   unfold hughesYoungIntegratedSmallPairSet hughesYoungWholeSmallPairSet
   apply tendsto_finsetSum
   intro p hp
-  obtain ⟨hp₁, hp₂, hp₁M, hp₂M⟩ := hS p hp
+  obtain ⟨hp₁, hp₂⟩ := hS p hp
   exact MeasureTheory.intervalIntegral_tendsto_integral
-    (integrable_hughesYoungRightPairTerm_small
-      hT ht hM hp₁ hp₂ hp₁M hp₂M)
+    (integrable_hughesYoungRightPairTerm_small hT ht hp₁ hp₂)
     tendsto_neg_atTop_atBot tendsto_id
 
 /-- A finite positive pair family on the opening line converges to the exact
@@ -81,16 +79,15 @@ interchange is used. -/
 theorem tendsto_hughesYoungIntegratedHighPairSet_to_wholeSmall
     {q : ℕ} (hq : 0 < q) {T t : ℝ} (hT : Real.exp 1 ≤ T)
     (ht : t ∈ Set.Icc (T / 4) (4 * T))
-    {M : ℕ} (hM : 0 < M) {S : Finset (ℕ × ℕ)}
-    (hS : ∀ p ∈ S,
-      0 < p.1 ∧ 0 < p.2 ∧ p.1 ≤ M ∧ p.2 ≤ M) :
+    {S : Finset (ℕ × ℕ)}
+    (hS : ∀ p ∈ S, 0 < p.1 ∧ 0 < p.2) :
     Tendsto (fun H : ℝ => hughesYoungIntegratedHighPairSet q t H S)
       atTop (𝓝 (hughesYoungWholeSmallPairSet T t S)) := by
   have hsmall := tendsto_hughesYoungIntegratedSmallPairSet_to_whole
-    hT ht hM hS
+    hT ht hS
   have hdiff := tendsto_hughesYoungIntegratedHighPairSet_sub_small_zero
     hq hT (t := t) (S := S)
-      (fun p hp => ⟨(hS p hp).1, (hS p hp).2.1⟩)
+      hS
   have hadd := hsmall.add hdiff
   convert hadd using 1
   · funext H

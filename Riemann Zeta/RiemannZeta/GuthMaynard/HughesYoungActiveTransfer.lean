@@ -344,13 +344,10 @@ theorem tendsto_hughesYoungActiveIntegratedSmall_to_whole
   apply tendsto_finsetSum
   intro n hn
   apply Filter.Tendsto.const_mul
-  let B : ℕ := max m n
   have hm0 : 0 < m := by simpa using (Finset.mem_Icc.mp hm).1
   have hn0 : 0 < n := by simpa using (Finset.mem_Icc.mp hn).1
-  have hB : 0 < B := lt_of_lt_of_le hm0 (Nat.le_max_left m n)
   exact MeasureTheory.intervalIntegral_tendsto_integral
-    (integrable_hughesYoungRightPairTerm_small hT ht hB hm0 hn0
-      (Nat.le_max_left m n) (Nat.le_max_right m n))
+    (integrable_hughesYoungRightPairTerm_small hT ht hm0 hn0)
     tendsto_neg_atTop_atBot tendsto_id
 
 /-- Every finite active family on the absolutely convergent opening line
@@ -481,10 +478,11 @@ theorem integrable_hughesYoungActiveHighPairRemainder
     ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
     (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
     hughesYoungReferenceDivisorPairMass η
+  let K₀ : ℝ := 625 * (2 * (q : ℝ) + 1) ^ 8
   let g : ℝ → ℝ := fun u =>
-    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 16)
   have hg : Integrable g :=
-    integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)
+    integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 16)
   have hmeas : AEStronglyMeasurable (fun u : ℝ =>
       hughesYoungActiveHighPairRemainder q a b R K t u) := by
     have hc : (1 / 2 : ℝ) < 2 * q := by
@@ -498,7 +496,7 @@ theorem integrable_hughesYoungActiveHighPairRemainder
         (continuous_hughesYoungRightPairTerm t hc p)).aemeasurable
     unfold hughesYoungActiveHighPairRemainder
     exact (AEMeasurable.tsum hpmeas).aestronglyMeasurable
-  apply (hg.const_mul C).mono' hmeas
+  apply (hg.const_mul (C * K₀)).mono' hmeas
   filter_upwards with u
   have hweight :=
     norm_hughesYoungRightContourWeight_even_le_on_height_support hT ht hq u
@@ -520,15 +518,17 @@ theorem integrable_hughesYoungActiveHighPairRemainder
         ‖hughesYoungRightContourWeight t (2 * q) u‖ *
           (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η := htail
-    _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-          ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+    _ ≤ (160000 * (2 * (q : ℝ) + 1) ^ 8 *
+          Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+          ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) *
+          (1 + |u|) ^ 8) *
           (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η := by
       gcongr
       exact hughesYoungReferenceDivisorPairMass_nonneg η
-    _ = C * g u := by
+    _ = (C * K₀) * g u := by
       rw [hexp, hbasepow]
-      unfold C g
+      unfold C K₀ g
       ring
 
 noncomputable def hughesYoungActiveWholeHighRemainder
@@ -571,27 +571,29 @@ theorem exists_norm_hughesYoungActiveIntegratedRemainder_le
           (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
           hughesYoungReferenceDivisorPairMass η) * L := by
   obtain ⟨L, hL, hmoment⟩ :=
-    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (4 * q + 8)
-  refine ⟨L, hL, ?_⟩
+    exists_intervalIntegral_exp_neg_84_mul_one_add_abs_pow_le (4 * q + 16)
+  let K₀ : ℝ := 625 * (2 * (q : ℝ) + 1) ^ 8
+  have hK₀ : 0 < K₀ := by dsimp only [K₀]; positivity
+  refine ⟨K₀ * L, mul_pos hK₀ hL, ?_⟩
   intro a b R K T t H ha hb hR hcover hT ht hH
   let C : ℝ := 256 * Real.exp (400 * (q : ℝ) ^ 2) *
     ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
     (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
     hughesYoungReferenceDivisorPairMass η
   let g : ℝ → ℝ := fun u =>
-    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 8)
+    Real.exp (-84 * u ^ 2) * (1 + |u|) ^ (4 * q + 16)
   have hC0 : 0 ≤ C := by
     unfold C
     exact mul_nonneg (by positivity)
       (hughesYoungReferenceDivisorPairMass_nonneg η)
   have hg : IntervalIntegrable g volume (-H) H :=
-    (integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 8)).intervalIntegrable
+    (integrable_exp_neg_84_mul_one_add_abs_pow (4 * q + 16)).intervalIntegrable
   have horder : -H ≤ H := by linarith
   rw [hughesYoungActiveIntegratedRemainder_eq_intervalIntegral hq ha hb]
   calc
     ‖∫ u in -H..H,
         hughesYoungActiveHighPairRemainder q a b R K t u‖ ≤
-        ∫ u in -H..H, C * g u := by
+        ∫ u in -H..H, (C * K₀) * g u := by
       apply intervalIntegral.norm_integral_le_of_norm_le horder
       · filter_upwards with u _hu
         have hweight :=
@@ -616,20 +618,25 @@ theorem exists_norm_hughesYoungActiveIntegratedRemainder_le
               ‖hughesYoungRightContourWeight t (2 * q) u‖ *
                 (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
                 hughesYoungReferenceDivisorPairMass η := htail
-          _ ≤ (256 * Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
-                ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8)) *
+          _ ≤ (160000 * (2 * (q : ℝ) + 1) ^ 8 *
+                Real.exp (400 * (q : ℝ) ^ 2 - 84 * u ^ 2) *
+                ((7 + 2 * (q : ℝ)) * T * (1 + |u|)) ^ (4 * q + 8) *
+                (1 + |u|) ^ 8) *
                 (R : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
                 hughesYoungReferenceDivisorPairMass η := by
               gcongr
               exact hughesYoungReferenceDivisorPairMass_nonneg η
-          _ = C * g u := by
+          _ = (C * K₀) * g u := by
               rw [hexp, hbasepow]
-              unfold C g
+              unfold C K₀ g
               ring
-      · exact hg.const_mul C
-    _ = C * (∫ u in -H..H, g u) := by
+      · exact hg.const_mul (C * K₀)
+    _ = (C * K₀) * (∫ u in -H..H, g u) := by
       rw [intervalIntegral.integral_const_mul]
-    _ ≤ C * L := mul_le_mul_of_nonneg_left (hmoment hH) hC0
+    _ ≤ (C * K₀) * L :=
+      mul_le_mul_of_nonneg_left (hmoment hH)
+        (mul_nonneg hC0 hK₀.le)
+    _ = C * (K₀ * L) := by ring
     _ = _ := by rfl
 
 theorem exists_norm_hughesYoungActiveWholeHighRemainder_le

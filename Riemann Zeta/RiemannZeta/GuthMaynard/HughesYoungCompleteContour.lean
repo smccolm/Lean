@@ -74,7 +74,7 @@ theorem integrable_hughesYoungEquation84PositiveContourSeries_vertical
     (continuous_hughesYoungEquation84PositiveContourSeries_vertical
       T t h k a b r ha hb hr hc0 hc1)
     (C := C) (A := 100 * c ^ 2) (B := 60)
-    (D := 2 + |t| + c) (j := 9)
+    (D := 2 + |t| + c) (j := 17)
     hL (by norm_num : (0 : ℝ) < 60)
   intro u hu
   have hu1 : 1 ≤ |u| := (le_max_left 1 (|t| + 1)).trans hu
@@ -100,7 +100,7 @@ theorem integrable_hughesYoungEquation84NegativeContourSeries_vertical
     (continuous_hughesYoungEquation84NegativeContourSeries_vertical
       T t h k a b r ha hb hr hc0 hc1)
     (C := C) (A := 100 * c ^ 2) (B := 60)
-    (D := 2 + |t| + c) (j := 9)
+    (D := 2 + |t| + c) (j := 17)
     hL (by norm_num : (0 : ℝ) < 60)
   intro u hu
   have hu1 : 1 ≤ |u| := (le_max_left 1 (|t| + 1)).trans hu

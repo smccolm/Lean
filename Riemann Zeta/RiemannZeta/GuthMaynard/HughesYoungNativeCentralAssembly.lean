@@ -1,7 +1,8 @@
 import RiemannZeta.GuthMaynard.HughesYoungFiniteCentralSource
 import RiemannZeta.GuthMaynard.HughesYoungNative
+import RiemannZeta.GuthMaynard.HughesYoungQuantitativeCentral
 
-open Complex Finset MeasureTheory Set
+open Asymptotics Complex Filter Finset MeasureTheory Set
 open scoped BigOperators Interval
 
 noncomputable section
@@ -422,6 +423,128 @@ noncomputable def hughesYoungCompleteShiftedCentralAtHeight
         hughesYoungCompleteNegativeCentralContinuation T t h k a b
           ((15 / 16 : ℂ) + (u : ℂ) * I))
 
+/-- Uniform bound for the complete two-sign continued central source at
+one physical height.  Both source-line integrals are transported to the
+shifted line only after their quantitative estimates have been proved. -/
+theorem exists_norm_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+    (C : ℝ) (hC : 0 < C)
+    (hweight : ∀ (T t u c : ℝ), 1 ≤ T →
+      |t| ∈ Set.Icc (T / 4) (4 * T) → 0 < c → c ≤ 1 →
+      ‖hughesYoungRightContourWeight t c u‖ ≤
+        c⁻¹ * T ^ (4 * C * c) *
+          (Real.exp
+            (100 * c ^ 2 - 84 * u ^ 2 +
+              4 * C * c * Real.log (6 * (|u| + 1))) *
+            (25 + 8 * u ^ 2) ^ 8))
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ A : ℝ, 0 < A ∧ ∀ (T t : ℝ), 1 ≤ T →
+      t ∈ Set.Icc (T / 4) (4 * T) → ∀ {h k : ℕ}, 0 < h → 0 < k →
+      let a := hughesYoungReducedLeft h k
+      let b := hughesYoungReducedRight h k
+      ‖hughesYoungCompleteShiftedCentralAtHeight T t h k a b‖ ≤
+        2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+          ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+          (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+            ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c)) := by
+  obtain ⟨A, hA, hpositive⟩ :=
+    exists_norm_integral_hughesYoungCompletePositiveCentralContinuation_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  refine ⟨A, hA, ?_⟩
+  intro T t hT ht h k hh hk
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  have hT0 : 0 < T := zero_lt_one.trans_le hT
+  have ht0 : 0 ≤ t := by linarith [ht.1]
+  have htAbs : |t| ∈ Set.Icc (T / 4) (4 * T) := by
+    simpa only [abs_of_nonneg ht0] using ht
+  have ha : 0 < a := hughesYoungReducedLeft_pos hh
+  have hb : 0 < b := hughesYoungReducedRight_pos hh hk
+  let D : ℝ := A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+    ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+    (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+      ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+    (c⁻¹ ^ 5 * T ^ (4 * C * c))
+  have hD0 : 0 ≤ D := by
+    dsimp only [D]
+    positivity
+  have hposSource := hpositive T t hT htAbs hh hk
+  have hpos :
+      ‖∫ u : ℝ, hughesYoungCompletePositiveCentralContinuation
+          T t h k a b ((15 / 16 : ℂ) + (u : ℂ) * I)‖ ≤ D := by
+    rw [← integral_hughesYoungCompletePositiveCentralContinuation_vertical_eq
+      T t h k ha hb]
+    simpa only [a, b, D] using hposSource
+  have hnegSource := hpositive T (-t) hT
+    (by simpa only [abs_neg] using htAbs) hk hh
+  have hnegSource' :
+      ‖∫ u : ℝ, hughesYoungCompleteNegativeCentralContinuation
+          T t h k a b ((1 : ℂ) + (u : ℂ) * I)‖ ≤ D := by
+    rw [show (∫ u : ℝ, hughesYoungCompleteNegativeCentralContinuation
+        T t h k a b ((1 : ℂ) + (u : ℂ) * I)) =
+        ∫ u : ℝ, hughesYoungCompletePositiveCentralContinuation
+          T (-t) k h b a ((1 : ℂ) + (u : ℂ) * I) by
+      apply integral_congr_ae
+      filter_upwards [] with u
+      exact hughesYoungCompleteNegativeCentralContinuation_eq_swap
+        T t h k a b ((1 : ℂ) + (u : ℂ) * I)]
+    dsimp only at hnegSource ⊢
+    rw [hughesYoungReducedLeft_swap h k, hughesYoungReducedRight_swap h k,
+      hughesYoungLocalizedStaticScalar_swap T h k] at hnegSource
+    simpa only [a, b, D, mul_comm, mul_left_comm, mul_assoc] using hnegSource
+  have hneg :
+      ‖∫ u : ℝ, hughesYoungCompleteNegativeCentralContinuation
+          T t h k a b ((15 / 16 : ℂ) + (u : ℂ) * I)‖ ≤ D := by
+    rw [← integral_hughesYoungCompleteNegativeCentralContinuation_vertical_eq
+      T t h k ha hb]
+    exact hnegSource'
+  have hw0 := hughesYoungHeightWeight_nonneg T t
+  have hw1 := hughesYoungHeightWeight_le_one T t
+  dsimp only [a, b] at hpos hneg ⊢
+  unfold hughesYoungCompleteShiftedCentralAtHeight
+  rw [norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hw0]
+  calc
+    hughesYoungHeightWeight T t *
+        ‖(∫ u : ℝ, hughesYoungCompletePositiveCentralContinuation T t h k
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)
+              ((15 / 16 : ℂ) + (u : ℂ) * I)) +
+          ∫ u : ℝ, hughesYoungCompleteNegativeCentralContinuation T t h k
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)
+              ((15 / 16 : ℂ) + (u : ℂ) * I)‖
+        ≤ hughesYoungHeightWeight T t * (D + D) := by
+          gcongr
+          exact (norm_add_le _ _).trans (add_le_add hpos hneg)
+    _ ≤ 1 * (D + D) := mul_le_mul_of_nonneg_right hw1 (add_nonneg hD0 hD0)
+    _ = 2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+          ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+            (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+          (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+              (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+            ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+              (hughesYoungReducedRight h k : ℝ) ^ ε)) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c)) := by
+            dsimp only [D, a, b]
+            ring
+
+theorem exists_norm_hughesYoungCompleteShiftedCentralAtHeight_le
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ C A : ℝ, 0 < C ∧ 0 < A ∧ ∀ (T t : ℝ), 1 ≤ T →
+      t ∈ Set.Icc (T / 4) (4 * T) → ∀ {h k : ℕ}, 0 < h → 0 < k →
+      let a := hughesYoungReducedLeft h k
+      let b := hughesYoungReducedRight h k
+      ‖hughesYoungCompleteShiftedCentralAtHeight T t h k a b‖ ≤
+        2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+          ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+          (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+            ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c)) := by
+  obtain ⟨C, hC, hweight⟩ :=
+    exists_norm_hughesYoungRightContourWeight_shift_le_abs_height_power
+  obtain ⟨A, hA, hbound⟩ :=
+    exists_norm_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  exact ⟨C, A, hC, hA, hbound⟩
+
 /-- Exact complete-series continuation for the two signed branches. -/
 theorem hughesYoungCompleteEquation84SourceAtHeight_eq_shifted
     (T t : ℝ) {h k a b : ℕ}
@@ -463,6 +586,636 @@ noncomputable def hughesYoungCompleteShiftedIntegratedCentral
       ∫ t : ℝ,
         hughesYoungCompleteShiftedCentralAtHeight T t h k
           (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)
+
+/-- The exact arithmetic mass left by the low-contour central estimate
+before choosing `c = 1 / log T`. -/
+noncomputable def hughesYoungCompleteCentralArithmeticMass
+    (T c ε : ℝ) : ℝ :=
+  ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+    ∑ k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+      ‖hughesYoungLocalizedStaticScalar T h k‖ *
+        ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+          (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+        (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+            (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+          ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+            (hughesYoungReducedRight h k : ℝ) ^ ε))
+
+theorem hughesYoungCompleteCentralArithmeticMass_nonneg
+    (T c ε : ℝ) :
+    0 ≤ hughesYoungCompleteCentralArithmeticMass T c ε := by
+  unfold hughesYoungCompleteCentralArithmeticMass
+  positivity
+
+private theorem central_lowContour_rpow_reassociation
+    {a b c ε : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    (a ^ (c - 1 / 2) * b ^ (c - 1 / 2)) *
+        ((a ^ (c / 4) * a ^ ε) * (b ^ (c / 4) * b ^ ε)) =
+      (a * b) ^ (-(1 / 2 : ℝ)) *
+        (a ^ (5 * c / 4 + ε) * b ^ (5 * c / 4 + ε)) := by
+  have haPow :
+      a ^ (c - 1 / 2) * a ^ (c / 4) * a ^ ε =
+        a ^ (-(1 / 2 : ℝ)) * a ^ (5 * c / 4 + ε) := by
+    rw [← Real.rpow_add ha, ← Real.rpow_add ha,
+      ← Real.rpow_add ha]
+    congr 1
+    ring
+  have hbPow :
+      b ^ (c - 1 / 2) * b ^ (c / 4) * b ^ ε =
+        b ^ (-(1 / 2 : ℝ)) * b ^ (5 * c / 4 + ε) := by
+    rw [← Real.rpow_add hb, ← Real.rpow_add hb,
+      ← Real.rpow_add hb]
+    congr 1
+    ring
+  rw [show (a ^ (c - 1 / 2) * b ^ (c - 1 / 2)) *
+      ((a ^ (c / 4) * a ^ ε) * (b ^ (c / 4) * b ^ ε)) =
+      (a ^ (c - 1 / 2) * a ^ (c / 4) * a ^ ε) *
+        (b ^ (c - 1 / 2) * b ^ (c / 4) * b ^ ε) by ring,
+    haPow, hbPow, Real.mul_rpow ha.le hb.le]
+  ring
+
+private theorem completeCentralArithmeticSummand_smallContour_le
+    {ε T : ℝ} (hε : 0 < ε) (hT : Real.exp 5 ≤ T)
+    {h k : ℕ} (hh : 0 < h) (hk : 0 < k)
+    (hhT : (h : ℝ) ≤ T) (hkT : (k : ℝ) ≤ T) :
+    ‖hughesYoungLocalizedStaticScalar T h k‖ *
+        ((hughesYoungReducedLeft h k : ℝ) ^
+            (hughesYoungSmallContour T - 1 / 2) *
+          (hughesYoungReducedRight h k : ℝ) ^
+            (hughesYoungSmallContour T - 1 / 2)) *
+        (((hughesYoungReducedLeft h k : ℝ) ^
+              (hughesYoungSmallContour T / 4) *
+            (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+          ((hughesYoungReducedRight h k : ℝ) ^
+              (hughesYoungSmallContour T / 4) *
+            (hughesYoungReducedRight h k : ℝ) ^ ε)) ≤
+      Real.exp (5 / 2) * T ^ (2 * ε) *
+        (‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+          ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+          (1 / Real.pi)) := by
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  let c : ℝ := hughesYoungSmallContour T
+  let q : ℝ := 5 * c / 4 + ε
+  have hT1 : Real.exp 1 ≤ T :=
+    (Real.exp_le_exp.mpr (by norm_num : (1 : ℝ) ≤ 5)).trans hT
+  obtain ⟨hc, _hc1, _hcinv⟩ := hughesYoungSmallContour_spec hT1
+  have ha : 0 < a := hughesYoungReducedLeft_pos hh
+  have hb : 0 < b := hughesYoungReducedRight_pos hh hk
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hT0 : 0 < T := (Real.exp_pos 5).trans_le hT
+  have haT : (a : ℝ) ≤ T := by
+    have hah : a ≤ h := by
+      dsimp only [a, hughesYoungReducedLeft, hughesYoungCommonDivisor]
+      exact Nat.div_le_self h (Nat.gcd h k)
+    have hahR : (a : ℝ) ≤ h := by exact_mod_cast hah
+    exact hahR.trans hhT
+  have hbT : (b : ℝ) ≤ T := by
+    have hbk : b ≤ k := by
+      dsimp only [b, hughesYoungReducedRight, hughesYoungCommonDivisor]
+      exact Nat.div_le_self k (Nat.gcd h k)
+    have hbkR : (b : ℝ) ≤ k := by exact_mod_cast hbk
+    exact hbkR.trans hkT
+  have hq : 0 ≤ q := by dsimp only [q, c]; positivity
+  have haPow : (a : ℝ) ^ q ≤ T ^ q :=
+    Real.rpow_le_rpow haR.le haT hq
+  have hbPow : (b : ℝ) ^ q ≤ T ^ q :=
+    Real.rpow_le_rpow hbR.le hbT hq
+  have hsmall : T ^ (5 * c / 4) = Real.exp (5 / 4) := by
+    have h := rpow_smallContour_four_mul_eq (5 / 16 : ℝ) hT1
+    dsimp only [c]
+    convert h using 1 <;> ring_nf
+  have hTq : T ^ q = Real.exp (5 / 4) * T ^ ε := by
+    dsimp only [q]
+    rw [Real.rpow_add hT0, hsmall]
+  have hpair : (a : ℝ) ^ q * (b : ℝ) ^ q ≤
+      Real.exp (5 / 2) * T ^ (2 * ε) := by
+    calc
+      (a : ℝ) ^ q * (b : ℝ) ^ q ≤ T ^ q * T ^ q :=
+        mul_le_mul haPow hbPow (Real.rpow_nonneg hbR.le q)
+          (Real.rpow_nonneg hT0.le q)
+      _ = Real.exp (5 / 2) * T ^ (2 * ε) := by
+        rw [hTq]
+        rw [show (Real.exp (5 / 4) * T ^ ε) *
+            (Real.exp (5 / 4) * T ^ ε) =
+          (Real.exp (5 / 4) * Real.exp (5 / 4)) *
+            (T ^ ε * T ^ ε) by ring,
+          ← Real.exp_add, ← Real.rpow_add hT0]
+        congr 1 <;> ring_nf
+  have hbase := norm_hughesYoungLocalizedStaticScalar_mul_reduced_rpow_eq
+    (T := T) hh hk
+  change ‖hughesYoungLocalizedStaticScalar T h k‖ *
+      ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+      (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+        ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) ≤ _
+  have hreassoc :
+      ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+        (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+          ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) =
+      (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) *
+        ((a : ℝ) ^ q * (b : ℝ) ^ q) := by
+    simpa only [Nat.cast_mul, q] using
+      central_lowContour_rpow_reassociation haR hbR
+  have hfullReassoc : ‖hughesYoungLocalizedStaticScalar T h k‖ *
+      ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+        (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+          ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) =
+      ‖hughesYoungLocalizedStaticScalar T h k‖ *
+        ((((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) *
+          ((a : ℝ) ^ q * (b : ℝ) ^ q)) := by
+    rw [mul_assoc, hreassoc]
+  rw [hfullReassoc, ← mul_assoc]
+  have hbase' : ‖hughesYoungLocalizedStaticScalar T h k‖ *
+      (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) =
+      ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+        ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+        (1 / Real.pi) := by simpa only [a, b] using hbase
+  rw [hbase']
+  have hmul := mul_le_mul_of_nonneg_left hpair (show
+    0 ≤ ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+      ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+      (1 / Real.pi) by positivity)
+  exact hmul.trans_eq (by ring)
+
+/-- After the source choice `c = 1/log T`, the exact central arithmetic
+mass is the mollifier gcd mass times only the prescribed epsilon power. -/
+theorem eventually_hughesYoungCompleteCentralArithmeticMass_smallContour_le
+    {ε : ℝ} (hε : 0 < ε) :
+  ∀ᶠ T : ℝ in atTop,
+      hughesYoungCompleteCentralArithmeticMass T
+          (hughesYoungSmallContour T) ε ≤
+        Real.exp (5 / 2) * T ^ (2 * ε) *
+          (hughesYoungMollifierWeightedGCDMass T * (1 / Real.pi)) := by
+  filter_upwards [eventually_detectorCutoff_sq_le_rpow,
+      Filter.eventually_ge_atTop (Real.exp 5)] with T hcut hT
+  have hT1 : 1 ≤ T := by
+    rw [← Real.exp_zero]
+    exact (Real.exp_le_exp.mpr (by norm_num : (0 : ℝ) ≤ 5)).trans hT
+  have hL : (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ≤ T := by
+    calc
+      (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ≤ T ^ (1 / 22 : ℝ) := by
+        simpa only [Nat.cast_pow] using hcut
+      _ ≤ T ^ (1 : ℝ) :=
+        Real.rpow_le_rpow_of_exponent_le hT1 (by norm_num)
+      _ = T := Real.rpow_one T
+  unfold hughesYoungCompleteCentralArithmeticMass
+  calc
+    (∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+        ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+          ‖hughesYoungLocalizedStaticScalar T h k‖ *
+            ((hughesYoungReducedLeft h k : ℝ) ^
+                (hughesYoungSmallContour T - 1 / 2) *
+              (hughesYoungReducedRight h k : ℝ) ^
+                (hughesYoungSmallContour T - 1 / 2)) *
+            (((hughesYoungReducedLeft h k : ℝ) ^
+                  (hughesYoungSmallContour T / 4) *
+                (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+              ((hughesYoungReducedRight h k : ℝ) ^
+                  (hughesYoungSmallContour T / 4) *
+                (hughesYoungReducedRight h k : ℝ) ^ ε))) ≤
+      ∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+        ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+          Real.exp (5 / 2) * T ^ (2 * ε) *
+            (‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+              ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+              (1 / Real.pi)) := by
+        apply Finset.sum_le_sum
+        intro h hh
+        apply Finset.sum_le_sum
+        intro k hk
+        have hhL : (h : ℝ) ≤ ((detectorCutoff T) ^ 2 : ℕ) := by
+          exact_mod_cast (Finset.mem_Icc.mp hh).2
+        have hkL : (k : ℝ) ≤ ((detectorCutoff T) ^ 2 : ℕ) := by
+          exact_mod_cast (Finset.mem_Icc.mp hk).2
+        exact completeCentralArithmeticSummand_smallContour_le hε hT
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hh).1)
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hk).1)
+          (hhL.trans hL) (hkL.trans hL)
+    _ = Real.exp (5 / 2) * T ^ (2 * ε) *
+      (hughesYoungMollifierWeightedGCDMass T * (1 / Real.pi)) := by
+        unfold hughesYoungMollifierWeightedGCDMass
+        rw [Finset.sum_mul, Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro h _hh
+        rw [Finset.sum_mul, Finset.mul_sum]
+
+private theorem completeCentralArithmeticSummand_fixedContour_le
+    {c ε T : ℝ} (hc : 0 ≤ c) (hε : 0 < ε) (hT : 1 ≤ T)
+    {h k : ℕ} (hh : 0 < h) (hk : 0 < k)
+    (hhT : (h : ℝ) ≤ T) (hkT : (k : ℝ) ≤ T) :
+    ‖hughesYoungLocalizedStaticScalar T h k‖ *
+        ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+          (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+        (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+            (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+          ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+            (hughesYoungReducedRight h k : ℝ) ^ ε)) ≤
+      T ^ (5 * c / 2 + 2 * ε) *
+        (‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+          ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+          (1 / Real.pi)) := by
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  let q : ℝ := 5 * c / 4 + ε
+  have ha : 0 < a := hughesYoungReducedLeft_pos hh
+  have hb : 0 < b := hughesYoungReducedRight_pos hh hk
+  have haR : (0 : ℝ) < a := by exact_mod_cast ha
+  have hbR : (0 : ℝ) < b := by exact_mod_cast hb
+  have hT0 : 0 < T := zero_lt_one.trans_le hT
+  have haT : (a : ℝ) ≤ T := by
+    have hah : a ≤ h := by
+      dsimp only [a, hughesYoungReducedLeft, hughesYoungCommonDivisor]
+      exact Nat.div_le_self h (Nat.gcd h k)
+    have hahR : (a : ℝ) ≤ (h : ℝ) := by exact_mod_cast hah
+    exact hahR.trans hhT
+  have hbT : (b : ℝ) ≤ T := by
+    have hbk : b ≤ k := by
+      dsimp only [b, hughesYoungReducedRight, hughesYoungCommonDivisor]
+      exact Nat.div_le_self k (Nat.gcd h k)
+    have hbkR : (b : ℝ) ≤ (k : ℝ) := by exact_mod_cast hbk
+    exact hbkR.trans hkT
+  have hq : 0 ≤ q := by dsimp only [q]; positivity
+  have haPow : (a : ℝ) ^ q ≤ T ^ q := Real.rpow_le_rpow haR.le haT hq
+  have hbPow : (b : ℝ) ^ q ≤ T ^ q := Real.rpow_le_rpow hbR.le hbT hq
+  have hpair : (a : ℝ) ^ q * (b : ℝ) ^ q ≤ T ^ (5 * c / 2 + 2 * ε) := by
+    calc
+      (a : ℝ) ^ q * (b : ℝ) ^ q ≤ T ^ q * T ^ q :=
+        mul_le_mul haPow hbPow (Real.rpow_nonneg hbR.le q)
+          (Real.rpow_nonneg hT0.le q)
+      _ = T ^ (5 * c / 2 + 2 * ε) := by
+        rw [← Real.rpow_add hT0]
+        congr 1
+        dsimp only [q]
+        ring
+  have hbase := norm_hughesYoungLocalizedStaticScalar_mul_reduced_rpow_eq
+    (T := T) hh hk
+  have hreassoc :
+      ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+        (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+          ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) =
+      (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) *
+        ((a : ℝ) ^ q * (b : ℝ) ^ q) := by
+    simpa only [Nat.cast_mul, q] using
+      central_lowContour_rpow_reassociation haR hbR
+  rw [mul_assoc, hreassoc, ← mul_assoc]
+  have hbase' : ‖hughesYoungLocalizedStaticScalar T h k‖ *
+      (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) =
+      ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+        ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+        (1 / Real.pi) := by simpa only [a, b] using hbase
+  rw [hbase']
+  exact (mul_le_mul_of_nonneg_left hpair (by positivity)).trans_eq (by ring)
+
+theorem eventually_hughesYoungCompleteCentralArithmeticMass_fixedContour_le
+    {c ε : ℝ} (hc : 0 ≤ c) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in atTop,
+      hughesYoungCompleteCentralArithmeticMass T c ε ≤
+        T ^ (5 * c / 2 + 2 * ε) *
+          (hughesYoungMollifierWeightedGCDMass T * (1 / Real.pi)) := by
+  filter_upwards [eventually_detectorCutoff_sq_le_rpow,
+      Filter.eventually_ge_atTop (1 : ℝ)] with T hcut hT
+  have hL : (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ≤ T := by
+    calc
+      (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ≤ T ^ (1 / 22 : ℝ) := by
+        simpa only [Nat.cast_pow] using hcut
+      _ ≤ T ^ (1 : ℝ) :=
+        Real.rpow_le_rpow_of_exponent_le hT (by norm_num)
+      _ = T := Real.rpow_one T
+  unfold hughesYoungCompleteCentralArithmeticMass
+  calc
+    (∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+        ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+          ‖hughesYoungLocalizedStaticScalar T h k‖ *
+            ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+              (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+            (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+                (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+              ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+                (hughesYoungReducedRight h k : ℝ) ^ ε))) ≤
+      ∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+        ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+          T ^ (5 * c / 2 + 2 * ε) *
+            (‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
+              ((Nat.gcd h k : ℝ) / ((h : ℝ) * (k : ℝ))) *
+              (1 / Real.pi)) := by
+        apply Finset.sum_le_sum
+        intro h hh
+        apply Finset.sum_le_sum
+        intro k hk
+        have hhL : (h : ℝ) ≤ (((detectorCutoff T) ^ 2 : ℕ) : ℝ) := by
+          exact_mod_cast (Finset.mem_Icc.mp hh).2
+        have hkL : (k : ℝ) ≤ (((detectorCutoff T) ^ 2 : ℕ) : ℝ) := by
+          exact_mod_cast (Finset.mem_Icc.mp hk).2
+        exact completeCentralArithmeticSummand_fixedContour_le hc hε hT
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hh).1)
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hk).1)
+          (hhL.trans hL) (hkL.trans hL)
+    _ = T ^ (5 * c / 2 + 2 * ε) *
+        (hughesYoungMollifierWeightedGCDMass T * (1 / Real.pi)) := by
+      unfold hughesYoungMollifierWeightedGCDMass
+      rw [Finset.sum_mul, Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro h _hh
+      rw [Finset.sum_mul, Finset.mul_sum]
+
+/-- Physical-height integration costs exactly the length `15T/4` of the
+support interval. -/
+theorem exists_norm_integral_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+    (C : ℝ) (hC : 0 < C)
+    (hweight : ∀ (T t u c : ℝ), 1 ≤ T →
+      |t| ∈ Set.Icc (T / 4) (4 * T) → 0 < c → c ≤ 1 →
+      ‖hughesYoungRightContourWeight t c u‖ ≤
+        c⁻¹ * T ^ (4 * C * c) *
+          (Real.exp
+            (100 * c ^ 2 - 84 * u ^ 2 +
+              4 * C * c * Real.log (6 * (|u| + 1))) *
+            (25 + 8 * u ^ 2) ^ 8))
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ A : ℝ, 0 < A ∧ ∀ (T : ℝ), 1 ≤ T →
+      ∀ {h k : ℕ}, 0 < h → 0 < k →
+      let a := hughesYoungReducedLeft h k
+      let b := hughesYoungReducedRight h k
+      ‖∫ t : ℝ, hughesYoungCompleteShiftedCentralAtHeight T t h k a b‖ ≤
+        (15 * T / 4) *
+          (2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+            ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+            (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+              ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+            (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+  obtain ⟨A, hA, hpoint⟩ :=
+    exists_norm_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  refine ⟨A, hA, ?_⟩
+  intro T hT h k hh hk
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  let D : ℝ := 2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+    ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+    (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+      ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+    (c⁻¹ ^ 5 * T ^ (4 * C * c))
+  let B : ℝ → ℝ := Set.Icc (T / 4) (4 * T) |>.indicator (fun _ ↦ D)
+  have hT0 : 0 < T := zero_lt_one.trans_le hT
+  have hD0 : 0 ≤ D := by dsimp only [D]; positivity
+  have hBint : Integrable B := by
+    rw [integrable_indicator_iff measurableSet_Icc]
+    exact integrableOn_const isCompact_Icc.measure_ne_top
+  dsimp only
+  apply (norm_integral_le_of_norm_le hBint ?_).trans_eq
+  · rw [show (∫ t : ℝ, B t) =
+        ∫ _t in Set.Icc (T / 4) (4 * T), D by
+      exact MeasureTheory.integral_indicator measurableSet_Icc]
+    rw [MeasureTheory.setIntegral_const]
+    simp only [smul_eq_mul, measureReal_def, Real.volume_Icc]
+    rw [ENNReal.toReal_ofReal (by nlinarith : 0 ≤ 4 * T - T / 4)]
+    dsimp only [D, a, b]
+    ring
+  · filter_upwards with t
+    by_cases hw : hughesYoungHeightWeight T t = 0
+    · have hzero : hughesYoungCompleteShiftedCentralAtHeight T t h k a b = 0 := by
+        unfold hughesYoungCompleteShiftedCentralAtHeight
+        simp [hw]
+      rw [hzero, norm_zero]
+      exact Set.indicator_nonneg (fun _ _ ↦ hD0) t
+    · have ht := hughesYoungHeightWeight_support hT0 hw
+      have hbnd := hpoint T t hT ht hh hk
+      change ‖hughesYoungCompleteShiftedCentralAtHeight T t h k a b‖ ≤ B t
+      have hBt : B t = D := by
+        exact Set.indicator_of_mem ht _
+      rw [hBt]
+      dsimp only [D, a, b] at hbnd ⊢
+      exact hbnd
+
+theorem exists_norm_integral_hughesYoungCompleteShiftedCentralAtHeight_le
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ C A : ℝ, 0 < C ∧ 0 < A ∧ ∀ (T : ℝ), 1 ≤ T →
+      ∀ {h k : ℕ}, 0 < h → 0 < k →
+      let a := hughesYoungReducedLeft h k
+      let b := hughesYoungReducedRight h k
+      ‖∫ t : ℝ, hughesYoungCompleteShiftedCentralAtHeight T t h k a b‖ ≤
+        (15 * T / 4) *
+          (2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+            ((a : ℝ) ^ (c - 1 / 2) * (b : ℝ) ^ (c - 1 / 2)) *
+            (((a : ℝ) ^ (c / 4) * (a : ℝ) ^ ε) *
+              ((b : ℝ) ^ (c / 4) * (b : ℝ) ^ ε)) *
+            (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+  obtain ⟨C, hC, hweight⟩ :=
+    exists_norm_hughesYoungRightContourWeight_shift_le_abs_height_power
+  obtain ⟨A, hA, hbound⟩ :=
+    exists_norm_integral_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  exact ⟨C, A, hC, hA, hbound⟩
+
+/-- Finite mollifier summation of the complete continued central source. -/
+theorem exists_norm_hughesYoungCompleteShiftedIntegratedCentral_le_of_heightConstant
+    (C : ℝ) (hC : 0 < C)
+    (hweight : ∀ (T t u c : ℝ), 1 ≤ T →
+      |t| ∈ Set.Icc (T / 4) (4 * T) → 0 < c → c ≤ 1 →
+      ‖hughesYoungRightContourWeight t c u‖ ≤
+        c⁻¹ * T ^ (4 * C * c) *
+          (Real.exp
+            (100 * c ^ 2 - 84 * u ^ 2 +
+              4 * C * c * Real.log (6 * (|u| + 1))) *
+            (25 + 8 * u ^ 2) ^ 8))
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ A : ℝ, 0 < A ∧ ∀ (T : ℝ), 1 ≤ T →
+      ‖hughesYoungCompleteShiftedIntegratedCentral T‖ ≤
+        (15 * T / 4) * (2 * A *
+          hughesYoungCompleteCentralArithmeticMass T c ε *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+  obtain ⟨A, hA, hpair⟩ :=
+    exists_norm_integral_hughesYoungCompleteShiftedCentralAtHeight_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  refine ⟨A, hA, ?_⟩
+  intro T hT
+  classical
+  unfold hughesYoungCompleteShiftedIntegratedCentral
+  calc
+    ‖∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+        ∑ k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+          ∫ t : ℝ, hughesYoungCompleteShiftedCentralAtHeight T t h k
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)‖ ≤
+      ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+        ∑ k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+          ‖∫ t : ℝ, hughesYoungCompleteShiftedCentralAtHeight T t h k
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)‖ := by
+        exact (norm_sum_le _ _).trans
+          (Finset.sum_le_sum fun h _hh ↦ norm_sum_le _ _)
+    _ ≤ ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+        ∑ k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
+          (15 * T / 4) *
+            (2 * A * ‖hughesYoungLocalizedStaticScalar T h k‖ *
+              ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+                (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+              (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+                  (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+                ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+                  (hughesYoungReducedRight h k : ℝ) ^ ε)) *
+              (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+        gcongr with h hh k hk
+        exact hpair T hT
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hh).1)
+          (Nat.zero_lt_of_lt (Finset.mem_Icc.mp hk).1)
+    _ = (15 * T / 4) * (2 * A *
+          hughesYoungCompleteCentralArithmeticMass T c ε *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+        unfold hughesYoungCompleteCentralArithmeticMass
+        let P : ℝ := (15 * T / 4) * (2 * A) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))
+        rw [show (15 * T / 4) *
+            (2 * A *
+              (∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+                ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+                  ‖hughesYoungLocalizedStaticScalar T h k‖ *
+                    ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+                      (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+                    (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+                        (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+                      ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+                        (hughesYoungReducedRight h k : ℝ) ^ ε))) *
+              (c⁻¹ ^ 5 * T ^ (4 * C * c))) =
+            P * (∑ h ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+              ∑ k ∈ Finset.Icc 1 (detectorCutoff T ^ 2),
+                ‖hughesYoungLocalizedStaticScalar T h k‖ *
+                  ((hughesYoungReducedLeft h k : ℝ) ^ (c - 1 / 2) *
+                    (hughesYoungReducedRight h k : ℝ) ^ (c - 1 / 2)) *
+                  (((hughesYoungReducedLeft h k : ℝ) ^ (c / 4) *
+                      (hughesYoungReducedLeft h k : ℝ) ^ ε) *
+                    ((hughesYoungReducedRight h k : ℝ) ^ (c / 4) *
+                      (hughesYoungReducedRight h k : ℝ) ^ ε))) by
+              dsimp only [P]
+              ring]
+        rw [Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro h _hh
+        rw [Finset.mul_sum]
+        apply Finset.sum_congr rfl
+        intro k _hk
+        dsimp only [P]
+        ring
+
+theorem exists_norm_hughesYoungCompleteShiftedIntegratedCentral_le
+    {c ε : ℝ} (hc : 0 < c) (hc4 : c < 1 / 4) (hε : 0 < ε) :
+    ∃ C A : ℝ, 0 < C ∧ 0 < A ∧ ∀ (T : ℝ), 1 ≤ T →
+      ‖hughesYoungCompleteShiftedIntegratedCentral T‖ ≤
+        (15 * T / 4) * (2 * A *
+          hughesYoungCompleteCentralArithmeticMass T c ε *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by
+  obtain ⟨C, hC, hweight⟩ :=
+    exists_norm_hughesYoungRightContourWeight_shift_le_abs_height_power
+  obtain ⟨A, hA, hbound⟩ :=
+    exists_norm_hughesYoungCompleteShiftedIntegratedCentral_le_of_heightConstant
+      C hC hweight hc hc4 hε
+  exact ⟨C, A, hC, hA, hbound⟩
+
+/-- The complete cancellation-preserving Hughes--Young central source has
+the required native `T^(1+ε)` size.  The contour is fixed after choosing
+the single height-growth exponent, so all implicit constants are uniform
+in the physical height. -/
+theorem hughesYoungCompleteShiftedIntegratedCentral_epsilonPowerBound :
+    EpsilonPowerBound
+      (fun T => ‖hughesYoungCompleteShiftedIntegratedCentral T‖)
+      (fun T => T) := by
+  intro ε hε
+  obtain ⟨C, hC, hweight⟩ :=
+    exists_norm_hughesYoungRightContourWeight_shift_le_abs_height_power
+  let η : ℝ := ε / 20
+  let D : ℝ := 4 * C + 5 / 2
+  let c : ℝ := min (1 / 8) (ε / (2 * D))
+  have hη : 0 < η := by dsimp only [η]; positivity
+  have hD : 0 < D := by dsimp only [D]; positivity
+  have hc : 0 < c := by
+    dsimp only [c]
+    exact lt_min (by norm_num) (div_pos hε (by positivity))
+  have hc4 : c < 1 / 4 :=
+    (min_le_left (1 / 8 : ℝ) (ε / (2 * D))).trans_lt (by norm_num)
+  have hcD : D * c ≤ ε / 2 := by
+    have hcUpper : c ≤ ε / (2 * D) := min_le_right _ _
+    calc
+      D * c ≤ D * (ε / (2 * D)) := mul_le_mul_of_nonneg_left hcUpper hD.le
+      _ = ε / 2 := by field_simp [hD.ne']
+  obtain ⟨A, hA, hcentral⟩ :=
+    exists_norm_hughesYoungCompleteShiftedIntegratedCentral_le_of_heightConstant
+      C hC hweight hc hc4 hη
+  have hmass :=
+    eventually_hughesYoungCompleteCentralArithmeticMass_fixedContour_le
+      hc.le hη
+  have hG := hughesYoungMollifierWeightedGCDMass_epsilonPowerBound η hη
+  obtain ⟨K, hK0, hK⟩ := hG.exists_nonneg
+  have hKbound := hK.bound
+  let B : ℝ := (15 / 4) * (2 * A) * c⁻¹ ^ 5 * (1 / Real.pi) * K
+  have hB0 : 0 ≤ B := by dsimp only [B]; positivity
+  apply IsBigO.of_bound B
+  filter_upwards [hmass, hKbound, Filter.eventually_ge_atTop (1 : ℝ)] with
+      T hmassT hKT hT
+  have hT0 : 0 < T := zero_lt_one.trans_le hT
+  have hmass0 : 0 ≤ hughesYoungMollifierWeightedGCDMass T :=
+    hughesYoungMollifierWeightedGCDMass_nonneg T
+  have hKsimple : hughesYoungMollifierWeightedGCDMass T ≤ K * T ^ η := by
+    have hraw := hKT
+    simp only [Real.norm_eq_abs, abs_abs, abs_one, mul_one] at hraw
+    rw [abs_of_nonneg hmass0, abs_of_nonneg (Real.rpow_nonneg hT0.le η)] at hraw
+    exact hraw
+  have hexponent : 1 + (5 * c / 2 + 2 * η) + η + 4 * C * c ≤ 1 + ε := by
+    have hcontour : (4 * C + 5 / 2) * c ≤ ε / 2 := by
+      simpa only [D] using hcD
+    dsimp only [η]
+    linarith
+  have hpow : T ^ (1 + (5 * c / 2 + 2 * η) + η + 4 * C * c) ≤
+      T ^ (1 + ε) := Real.rpow_le_rpow_of_exponent_le hT hexponent
+  have hcentralT := hcentral T hT
+  have htarget : ‖T ^ ε * |T|‖ = T ^ (1 + ε) := by
+    rw [Real.norm_eq_abs, abs_of_nonneg
+      (mul_nonneg (Real.rpow_nonneg hT0.le _) (abs_nonneg T)), abs_of_pos hT0]
+    calc
+      T ^ ε * T = T ^ ε * T ^ (1 : ℝ) := by rw [Real.rpow_one]
+      _ = T ^ (ε + 1) := (Real.rpow_add hT0 ε 1).symm
+      _ = T ^ (1 + ε) := by ring_nf
+  have hpowProduct :
+      T ^ (5 * c / 2 + 2 * η) * T ^ η * T ^ (4 * C * c) =
+        T ^ ((5 * c / 2 + 2 * η) + η + 4 * C * c) := by
+    rw [← Real.rpow_add hT0, ← Real.rpow_add hT0]
+  have hheightProduct :
+      T * T ^ ((5 * c / 2 + 2 * η) + η + 4 * C * c) =
+        T ^ (1 + (5 * c / 2 + 2 * η) + η + 4 * C * c) := by
+    calc
+      T * T ^ ((5 * c / 2 + 2 * η) + η + 4 * C * c) =
+          T ^ (1 : ℝ) * T ^ ((5 * c / 2 + 2 * η) + η + 4 * C * c) := by
+            rw [Real.rpow_one]
+      _ = T ^ (1 + ((5 * c / 2 + 2 * η) + η + 4 * C * c)) :=
+        (Real.rpow_add hT0 _ _).symm
+      _ = T ^ (1 + (5 * c / 2 + 2 * η) + η + 4 * C * c) := by ring_nf
+  rw [Real.norm_eq_abs, abs_abs,
+    abs_of_nonneg (norm_nonneg (hughesYoungCompleteShiftedIntegratedCentral T)),
+    htarget]
+  calc
+    ‖hughesYoungCompleteShiftedIntegratedCentral T‖ ≤
+        (15 * T / 4) * (2 * A *
+          hughesYoungCompleteCentralArithmeticMass T c η *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := hcentralT
+    _ ≤ (15 * T / 4) * (2 * A *
+          (T ^ (5 * c / 2 + 2 * η) *
+            (hughesYoungMollifierWeightedGCDMass T * (1 / Real.pi))) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by gcongr
+    _ ≤ (15 * T / 4) * (2 * A *
+          (T ^ (5 * c / 2 + 2 * η) *
+            ((K * T ^ η) * (1 / Real.pi))) *
+          (c⁻¹ ^ 5 * T ^ (4 * C * c))) := by gcongr
+    _ = B * T ^ (1 + (5 * c / 2 + 2 * η) + η + 4 * C * c) := by
+      calc
+        (15 * T / 4) * (2 * A *
+            (T ^ (5 * c / 2 + 2 * η) * ((K * T ^ η) * (1 / Real.pi))) *
+            (c⁻¹ ^ 5 * T ^ (4 * C * c))) =
+            B * (T *
+              (T ^ (5 * c / 2 + 2 * η) * T ^ η * T ^ (4 * C * c))) := by
+                dsimp only [B]
+                ring
+        _ = B * (T * T ^ ((5 * c / 2 + 2 * η) + η + 4 * C * c)) := by
+          rw [hpowProduct]
+        _ = B * T ^ (1 + (5 * c / 2 + 2 * η) + η + 4 * C * c) := by
+          rw [hheightProduct]
+    _ ≤ B * T ^ (1 + ε) := mul_le_mul_of_nonneg_left hpow hB0
 
 /-- The global signed-shift completion error.  It is kept as the exact
 difference until joint integrability of the explicit pointwise tail has

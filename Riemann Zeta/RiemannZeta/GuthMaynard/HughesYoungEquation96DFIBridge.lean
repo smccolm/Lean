@@ -309,6 +309,37 @@ theorem hughesYoungEquation84CompletePositiveMomentAt_eq_equation96
   rw [hCX, hCOne]
   ring
 
+/-- Termwise vertical-line version of the equation-(96) selector bridge. -/
+theorem dfiEquation84PositiveMomentAtTerm_eq_equation96SelectorTerm
+    (i j : Bool) (u : ℝ) {h k : ℕ} (hhk : h.Coprime k)
+    (y : ℕ+ × ℕ+) :
+    (dfiEquation27ArithmeticCoefficient h k (y.2 : ℕ) (y.1 : ℕ) /
+        (((y.2 : ℕ) : ℂ) ^ ((2 : ℂ) + (2 * u : ℂ) * I))) *
+      (if i then hughesYoungEquation84PositiveCX k (y.2 : ℕ) (y.1 : ℕ) else 1) *
+      (if j then hughesYoungEquation84PositiveCOne h (y.2 : ℕ) (y.1 : ℕ) else 1) =
+      hughesYoungEquation96PositiveTerm h k 1 1
+          ((2 : ℂ) + (2 * u : ℂ) * I) y *
+        hughesYoungDFIPositiveLogSelectorLeft j h y *
+        hughesYoungDFIPositiveLogSelectorRight i k y := by
+  rw [dfiEquation27ArithmeticCoefficient_div_vertical_cpow_eq_equation96PositiveTerm
+    u hhk y]
+  have hCX :
+      (if i then hughesYoungEquation84PositiveCX k (y.2 : ℕ) (y.1 : ℕ) else 1) =
+        hughesYoungDFIPositiveLogSelectorRight i k y := by
+    cases i
+    · simp [hughesYoungDFIPositiveLogSelectorRight]
+    · simp [hughesYoungDFIPositiveLogSelectorRight,
+        hughesYoungEquation84PositiveCX_eq_dfiPositiveLogFactorRight k y]
+  have hCOne :
+      (if j then hughesYoungEquation84PositiveCOne h (y.2 : ℕ) (y.1 : ℕ) else 1) =
+        hughesYoungDFIPositiveLogSelectorLeft j h y := by
+    cases j
+    · simp [hughesYoungDFIPositiveLogSelectorLeft]
+    · simp [hughesYoungDFIPositiveLogSelectorLeft,
+        hughesYoungEquation84PositiveCOne_eq_dfiPositiveLogFactorLeft h y]
+  rw [hCX, hCOne]
+  ring
+
 theorem summable_dfiEquation84PositiveMomentAtTerm
     (i j : Bool) (u : ℝ) {h k : ℕ}
     (hh : 0 < h) (hk : 0 < k) (hhk : h.Coprime k)

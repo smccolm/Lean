@@ -248,18 +248,16 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_le_mul_logProf
         C * (1 + ‖CX‖ + ‖COne‖) ^ 2 := by
   obtain ⟨B, hB, hBeta⟩ :=
     exists_norm_hughesYoungEquation84RegularizedBetaKernel_le_mul_logProfile t w
-  let p : ℂ := afeCriticalPoint t + w
-  let q : ℂ := afeCriticalPoint (-t) + w
-  let A : ℂ := Complex.exp (100 * w ^ 2) * (p * (1 - p)) ^ 2 * q ^ 2 *
-    Complex.Gammaℝ p ^ 2 * Complex.Gammaℝ q ^ 2 /
-    afePoleNormalization t / w / afeGammaNormalization t
+  let A : ℂ := hughesYoungEquation84RegularizedContourPrefactor t w
   let C : ℝ := max 1 ‖A‖ * B
   have hmax : 0 < max 1 ‖A‖ := lt_of_lt_of_le zero_lt_one (le_max_left _ _)
   refine ⟨C, mul_pos hmax hB, ?_⟩
   intro CX COne
   have hA : ‖A‖ ≤ max 1 ‖A‖ := le_max_right _ _
-  unfold hughesYoungEquation84RegularizedContourKernel
-  dsimp only [A, p, q, C]
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta]
+  change ‖A * hughesYoungEquation84RegularizedBetaKernel t w CX COne‖ ≤
+    C * (1 + ‖CX‖ + ‖COne‖) ^ 2
+  dsimp only [C]
   rw [norm_mul]
   calc
     _ ≤ ‖A‖ * (B * (1 + ‖CX‖ + ‖COne‖) ^ 2) := by

@@ -45,7 +45,7 @@ theorem norm_deriv_le_div_halfRadius_of_differentiableOn_ball
 /-- Two successive complex derivatives commute with a whole-line integral
 when both differentiated families have uniform integrable majorants on one
 common neighbourhood. -/
-theorem deriv_right_deriv_left_integral_of_dominated
+theorem hasDerivAt_integral_two_aux_of_dominated
     (F Fz Fzw : ℂ → ℂ → ℝ → ℂ) {r : ℝ}
     (hr : 0 < r)
     (hFmeas : ∀ z ∈ ball (0 : ℂ) r, ∀ w ∈ ball (0 : ℂ) r,
@@ -65,8 +65,8 @@ theorem deriv_right_deriv_left_integral_of_dominated
       ‖Fzw 0 w u‖ ≤ g₂ u)
     (hFzw : ∀ u : ℝ, ∀ w ∈ ball (0 : ℂ) r,
       HasDerivAt (fun v => Fz 0 v u) (Fzw 0 w u) w) :
-    deriv (fun w => deriv (fun z => ∫ u : ℝ, F z w u) 0) 0 =
-      ∫ u : ℝ, Fzw 0 0 u := by
+    HasDerivAt (fun w => deriv (fun z => ∫ u : ℝ, F z w u) 0)
+      (∫ u : ℝ, Fzw 0 0 u) 0 := by
   have hzero : (0 : ℂ) ∈ ball 0 r := mem_ball_self hr
   have hfirst : ∀ w ∈ ball (0 : ℂ) r,
       Integrable (Fz 0 w) ∧
@@ -89,8 +89,7 @@ theorem deriv_right_deriv_left_integral_of_dominated
         fun w => ∫ u : ℝ, Fz 0 w u := by
     filter_upwards [ball_mem_nhds (0 : ℂ) hr] with w hw
     exact (hfirst w hw).2.deriv
-  rw [hfirstEq.deriv_eq]
-  exact (hasDerivAt_integral_of_dominated_loc_of_deriv_le
+  have houter := (hasDerivAt_integral_of_dominated_loc_of_deriv_le
     (s := ball (0 : ℂ) r) (x₀ := (0 : ℂ))
     (F := fun w u => Fz 0 w u) (bound := g₂)
     (F' := fun w u => Fzw 0 w u)
@@ -101,7 +100,36 @@ theorem deriv_right_deriv_left_integral_of_dominated
     (hfirst 0 hzero).1 hFzwmeas
     (Filter.Eventually.of_forall fun u w hw => hFzwbound u w hw)
     hg₂
-    (Filter.Eventually.of_forall fun u w hw => hFzw u w hw)).2.deriv
+    (Filter.Eventually.of_forall fun u w hw => hFzw u w hw)).2
+  exact houter.congr_of_eventuallyEq hfirstEq
+
+/-- Value form of
+`hasDerivAt_integral_two_aux_of_dominated`. -/
+theorem deriv_right_deriv_left_integral_of_dominated
+    (F Fz Fzw : ℂ → ℂ → ℝ → ℂ) {r : ℝ}
+    (hr : 0 < r)
+    (hFmeas : ∀ z ∈ ball (0 : ℂ) r, ∀ w ∈ ball (0 : ℂ) r,
+      AEStronglyMeasurable (F z w))
+    (hFint : ∀ w ∈ ball (0 : ℂ) r, Integrable (F 0 w))
+    (hFzmeas : ∀ w ∈ ball (0 : ℂ) r,
+      AEStronglyMeasurable (Fz 0 w))
+    (g₁ : ℝ → ℝ) (hg₁ : Integrable g₁)
+    (hFzbound : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) r,
+      ∀ w ∈ ball (0 : ℂ) r, ‖Fz z w u‖ ≤ g₁ u)
+    (hFz : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) r,
+      ∀ w ∈ ball (0 : ℂ) r,
+        HasDerivAt (fun v ↦ F v w u) (Fz z w u) z)
+    (hFzwmeas : AEStronglyMeasurable (Fzw 0 0))
+    (g₂ : ℝ → ℝ) (hg₂ : Integrable g₂)
+    (hFzwbound : ∀ u : ℝ, ∀ w ∈ ball (0 : ℂ) r,
+      ‖Fzw 0 w u‖ ≤ g₂ u)
+    (hFzw : ∀ u : ℝ, ∀ w ∈ ball (0 : ℂ) r,
+      HasDerivAt (fun v ↦ Fz 0 v u) (Fzw 0 w u) w) :
+    deriv (fun w ↦ deriv (fun z ↦ ∫ u : ℝ, F z w u) 0) 0 =
+      ∫ u : ℝ, Fzw 0 0 u :=
+  (hasDerivAt_integral_two_aux_of_dominated
+    F Fz Fzw hr hFmeas hFint hFzmeas g₁ hg₁ hFzbound hFz
+      hFzwmeas g₂ hg₂ hFzwbound hFzw).deriv
 
 private theorem analyticAt_auxiliary_fst (p : ℂ × ℂ) :
     AnalyticAt ℂ (fun x : ℂ × ℂ => x.1) p :=
@@ -156,6 +184,45 @@ theorem AnalyticAt.deriv_snd_curry {F : ℂ × ℂ → ℂ} {q : ℂ}
     have hcomp := hF.comp' (g := F) (f := swap) (x := (0, q)) hswap
     simpa only [G, swap] using hcomp
   simpa only [G, swap] using AnalyticAt.deriv_fst_curry hG
+
+/-- Two-variable Cauchy estimate on a common bidisc.  The asymmetric
+half/quarter radii are chosen so that the first derivative is controlled
+uniformly on the disc used for the second derivative. -/
+theorem norm_deriv_right_deriv_left_le_of_analyticOn_bidisc
+    (F : ℂ → ℂ → ℂ) {R C : ℝ} (hR : 0 < R)
+    (hAnalytic : ∀ z ∈ ball (0 : ℂ) R, ∀ w ∈ ball (0 : ℂ) R,
+      AnalyticAt ℂ (fun p : ℂ × ℂ => F p.1 p.2) (z, w))
+    (hbound : ∀ z ∈ ball (0 : ℂ) R, ∀ w ∈ ball (0 : ℂ) R,
+      ‖F z w‖ ≤ C) :
+    ‖deriv (fun w => deriv (fun z => F z w) 0) 0‖ ≤
+      (C / (R / 2)) / (R / 4) := by
+  have hhalf : 0 < R / 2 := by positivity
+  have hzeroR : (0 : ℂ) ∈ ball 0 R := mem_ball_self hR
+  have hzeroHalf : (0 : ℂ) ∈ ball 0 (R / 2) := mem_ball_self hhalf
+  let Fz : ℂ → ℂ := fun w => deriv (fun z => F z w) 0
+  have hFzDiff : DifferentiableOn ℂ Fz (ball 0 (R / 2)) := by
+    intro w hw
+    have hwR : w ∈ ball (0 : ℂ) R :=
+      (ball_subset_ball (by linarith)) hw
+    simpa only [Fz] using
+      (AnalyticAt.deriv_fst_curry
+        (hAnalytic 0 hzeroR w hwR)).differentiableAt.differentiableWithinAt
+  have hFzBound : ∀ w ∈ ball (0 : ℂ) (R / 2),
+      ‖Fz w‖ ≤ C / (R / 2) := by
+    intro w hw
+    have hwR : w ∈ ball (0 : ℂ) R :=
+      (ball_subset_ball (by linarith)) hw
+    have hslice : DifferentiableOn ℂ (fun z => F z w) (ball 0 R) := by
+      intro z hz
+      exact (hAnalytic z hz w hwR).curry_left.differentiableAt.differentiableWithinAt
+    simpa only [Fz] using
+      norm_deriv_le_div_halfRadius_of_differentiableOn_ball hR hslice
+        (fun z hz => hbound z hz w hwR) hzeroHalf
+  have hquarter : (R / 2) / 2 = R / 4 := by ring
+  simpa only [Fz, hquarter] using
+    norm_deriv_le_div_halfRadius_of_differentiableOn_ball hhalf hFzDiff
+      hFzBound (show (0 : ℂ) ∈ ball 0 ((R / 2) / 2) from
+        mem_ball_self (by positivity))
 
 /-- A fourth-order zero on the diagonal `z+w=0` kills the mixed auxiliary
 derivative.  The order four is deliberately stronger than the order-two
@@ -332,7 +399,7 @@ theorem continuous_deriv_left_hughesYoungCompletePositiveCentralMaster_source
 envelope may be differentiated twice under the whole-line integral.  The
 first- and mixed-derivative envelopes are consequences of Cauchy's estimate
 on nested discs. -/
-theorem deriv_right_deriv_left_integral_of_analytic_dominated
+theorem hasDerivAt_right_deriv_left_integral_of_analytic_dominated
     (F : ℂ → ℂ → ℝ → ℂ) {R : ℝ} (hR : 0 < R)
     (hAnalytic : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
       ∀ w ∈ ball (0 : ℂ) R,
@@ -347,8 +414,8 @@ theorem deriv_right_deriv_left_integral_of_analytic_dominated
     (g : ℝ → ℝ) (hg : Integrable g)
     (hbound : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
       ∀ w ∈ ball (0 : ℂ) R, ‖F z w u‖ ≤ g u) :
-    deriv (fun w => deriv (fun z => ∫ u : ℝ, F z w u) 0) 0 =
-      ∫ u : ℝ, deriv (fun w => deriv (fun z => F z w u) 0) 0 := by
+    HasDerivAt (fun w => deriv (fun z => ∫ u : ℝ, F z w u) 0)
+      (∫ u : ℝ, deriv (fun w => deriv (fun z => F z w u) 0) 0) 0 := by
   let r : ℝ := R / 4
   let Fz : ℂ → ℂ → ℝ → ℂ := fun z w u => deriv (fun v => F v w u) z
   let Fzw : ℂ → ℂ → ℝ → ℂ := fun z w u =>
@@ -435,7 +502,7 @@ theorem deriv_right_deriv_left_integral_of_analytic_dominated
     simpa only [Fzw, g₂, hradius] using
       norm_deriv_le_div_halfRadius_of_differentiableOn_ball hhalf hdiff
         hfirstBound hwQuarter
-  exact deriv_right_deriv_left_integral_of_dominated
+  exact hasDerivAt_integral_two_aux_of_dominated
     (F := F) (Fz := Fz) (Fzw := Fzw) (r := r) hr
     (by
       intro z hz w hw
@@ -448,6 +515,88 @@ theorem deriv_right_deriv_left_integral_of_analytic_dominated
     g₁ hg₁ hFzbound hFz
     (by simpa only [Fzw, Fz] using hFzwmeas)
     g₂ hg₂ hFzwbound hFzw
+
+/-- Value form of the analytic-family derivative-under-integral theorem. -/
+theorem deriv_right_deriv_left_integral_of_analytic_dominated
+    (F : ℂ → ℂ → ℝ → ℂ) {R : ℝ} (hR : 0 < R)
+    (hAnalytic : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
+      ∀ w ∈ ball (0 : ℂ) R,
+        AnalyticAt ℂ (fun p : ℂ × ℂ ↦ F p.1 p.2 u) (z, w))
+    (hFmeas : ∀ z ∈ ball (0 : ℂ) R, ∀ w ∈ ball (0 : ℂ) R,
+      AEStronglyMeasurable (F z w))
+    (hFzmeas : ∀ w ∈ ball (0 : ℂ) (R / 4),
+      AEStronglyMeasurable
+        (fun u ↦ deriv (fun z ↦ F z w u) 0))
+    (hFzwmeas : AEStronglyMeasurable
+      (fun u ↦ deriv (fun w ↦ deriv (fun z ↦ F z w u) 0) 0))
+    (g : ℝ → ℝ) (hg : Integrable g)
+    (hbound : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
+      ∀ w ∈ ball (0 : ℂ) R, ‖F z w u‖ ≤ g u) :
+    deriv (fun w ↦ deriv (fun z ↦ ∫ u : ℝ, F z w u) 0) 0 =
+      ∫ u : ℝ, deriv (fun w ↦ deriv (fun z ↦ F z w u) 0) 0 :=
+  (hasDerivAt_right_deriv_left_integral_of_analytic_dominated
+    F hR hAnalytic hFmeas hFzmeas hFzwmeas g hg hbound).deriv
+
+/-- The first auxiliary derivative exists throughout the smaller bidisc
+used by the two-derivative dominated theorem. -/
+theorem differentiableAt_left_integral_of_analytic_dominated
+    (F : ℂ → ℂ → ℝ → ℂ) {R : ℝ} (hR : 0 < R)
+    (hAnalytic : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
+      ∀ w ∈ ball (0 : ℂ) R,
+        AnalyticAt ℂ (fun p : ℂ × ℂ ↦ F p.1 p.2 u) (z, w))
+    (hFmeas : ∀ z ∈ ball (0 : ℂ) R, ∀ w ∈ ball (0 : ℂ) R,
+      AEStronglyMeasurable (F z w))
+    (hFzmeas : ∀ w ∈ ball (0 : ℂ) (R / 4),
+      AEStronglyMeasurable (fun u ↦ deriv (fun z ↦ F z w u) 0))
+    (g : ℝ → ℝ) (hg : Integrable g)
+    (hbound : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) R,
+      ∀ w ∈ ball (0 : ℂ) R, ‖F z w u‖ ≤ g u)
+    {w : ℂ} (hw : w ∈ ball (0 : ℂ) (R / 4)) :
+    DifferentiableAt ℂ (fun z ↦ ∫ u : ℝ, F z w u) 0 := by
+  let r : ℝ := R / 4
+  let Fz : ℂ → ℝ → ℂ := fun z u ↦ deriv (fun v ↦ F v w u) z
+  let g₁ : ℝ → ℝ := fun u ↦ g u / (R / 2)
+  have hr : 0 < r := by dsimp only [r]; positivity
+  have hhalf : 0 < R / 2 := by positivity
+  have hzeroR : (0 : ℂ) ∈ ball 0 R := mem_ball_self hR
+  have hzeroHalf : (0 : ℂ) ∈ ball 0 (R / 2) := mem_ball_self hhalf
+  have hrR : r < R := by dsimp only [r]; linarith
+  have hwR : w ∈ ball (0 : ℂ) R :=
+    (ball_subset_ball (le_of_lt hrR)) (by simpa only [r] using hw)
+  have hFint : Integrable (F 0 w) := by
+    refine hg.mono' (hFmeas 0 hzeroR w hwR) ?_
+    filter_upwards with u
+    exact hbound u 0 hzeroR w hwR
+  have hg₁ : Integrable g₁ := by
+    have h := hg.const_mul (R / 2)⁻¹
+    simpa only [g₁, div_eq_inv_mul] using h
+  have hFzbound : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) r,
+      ‖Fz z u‖ ≤ g₁ u := by
+    intro u z hz
+    have hzHalf : z ∈ ball (0 : ℂ) (R / 2) :=
+      (ball_subset_ball (by dsimp only [r]; linarith)) hz
+    have hdiff : DifferentiableOn ℂ (fun v ↦ F v w u) (ball 0 R) := by
+      intro v hv
+      exact (hAnalytic u v hv w hwR).curry_left.differentiableAt.differentiableWithinAt
+    simpa only [Fz, g₁] using
+      norm_deriv_le_div_halfRadius_of_differentiableOn_ball hR hdiff
+        (fun v hv ↦ hbound u v hv w hwR) hzHalf
+  have hFz : ∀ u : ℝ, ∀ z ∈ ball (0 : ℂ) r,
+      HasDerivAt (fun v ↦ F v w u) (Fz z u) z := by
+    intro u z hz
+    have hzR : z ∈ ball (0 : ℂ) R :=
+      (ball_subset_ball (le_of_lt hrR)) hz
+    exact (hAnalytic u z hzR w hwR).curry_left.differentiableAt.hasDerivAt
+  exact (hasDerivAt_integral_of_dominated_loc_of_deriv_le
+    (s := ball (0 : ℂ) r) (x₀ := (0 : ℂ))
+    (F := fun z u ↦ F z w u) (bound := g₁) (F' := Fz)
+    (ball_mem_nhds 0 hr)
+    (by
+      filter_upwards [ball_mem_nhds (0 : ℂ) hr] with z hz
+      exact hFmeas z ((ball_subset_ball (le_of_lt hrR)) hz) w hwR)
+    hFint (by simpa only [Fz, r] using hFzmeas w hw)
+    (Filter.Eventually.of_forall fun u z hz ↦ hFzbound u z hz)
+    hg₁ (Filter.Eventually.of_forall fun u z hz ↦ hFz u z hz)).2.differentiableAt
 
 /-- On a compact source-line ordinate interval the complete reverse kernel
 is uniformly bounded on the closed auxiliary-shift bidisc.  The constant is
@@ -630,7 +779,7 @@ theorem exists_integrable_uniform_hughesYoungCompletePositiveCentralMaster_sourc
     exists_uniform_norm_hughesYoungCompletePositiveCentralMaster_source_compact
       T t h k ha hb (L := L) hδ0 hδ4
   let gTail : ℝ → ℝ := fun u =>
-    Cₜ * Real.exp (100 - 60 * u ^ 2) * (3 + |t| + |u|) ^ 11
+    Cₜ * Real.exp (100 - 60 * u ^ 2) * (3 + |t| + |u|) ^ 19
   let gCompact : ℝ → ℝ :=
     (Set.Icc (-L) L).indicator (fun _ => C₀)
   let g : ℝ → ℝ := fun u => gTail u + gCompact u
@@ -638,7 +787,7 @@ theorem exists_integrable_uniform_hughesYoungCompletePositiveCentralMaster_sourc
     dsimp only [gTail]
     simpa only [mul_assoc] using
       (integrable_exp_sub_mul_sq_mul_add_abs_pow
-        (100 : ℝ) (C := 3 + |t|) (by norm_num : (0 : ℝ) < 60) 11).const_mul Cₜ
+        (100 : ℝ) (C := 3 + |t|) (by norm_num : (0 : ℝ) < 60) 19).const_mul Cₜ
   have hCompactInt : Integrable gCompact := by
     dsimp only [gCompact]
     rw [integrable_indicator_iff measurableSet_Icc]
@@ -706,6 +855,184 @@ theorem analyticAt_hughesYoungCompletePositiveCentralMaster_sourceAuxiliary
     (analyticAt_const.mul (hJ.mul hP))
   simpa only [O, J, P, W, hughesYoungCompletePositiveCentralMaster,
     hughesYoungCentralMasterJet] using hmaster
+
+/-- Joint holomorphy of the finite Hughes--Young Euler correction in the
+two auxiliary shifts.  Unlike the fixed-radius continuation lemma, this
+version records the exact two denominator conditions at the point.  It is
+therefore usable on an arbitrarily low positive `W`-line with a shift disc
+whose radius is proportional to `W.re`. -/
+theorem analyticAt_hughesYoungC_symmetric_auxiliary
+    (n : ℕ) {W z w : ℂ}
+    (hregular : (-2 - 2 * z - 2 * w : ℂ).re < 0)
+    (hcenter : (z - w - 2 * W : ℂ).re < 0) :
+    AnalyticAt ℂ
+      (fun p : ℂ × ℂ => hughesYoungC n (-p.1) p.1 (-p.2) p.2 W)
+      (z, w) := by
+  let f : Nat.Primes → (ℂ × ℂ → ℂ) := fun p x =>
+    hughesYoungCPrimeFactor (n.factorization p) p
+      (-x.1) x.1 (-x.2) x.2 W
+  unfold hughesYoungC
+  suffices AnalyticAt ℂ (∏ p ∈ hughesYoungPrimeFactors n, f p) (z, w) by
+    convert this using 1
+    funext x
+    simp [f]
+  apply Finset.prod_induction f (fun g => AnalyticAt ℂ g (z, w))
+    (fun _ _ hg₁ hg₂ => hg₁.mul hg₂) analyticAt_const
+  intro p hp
+  have hp0 : ((p : Nat.Primes) : ℂ) ≠ 0 := by
+    exact_mod_cast p.2.ne_zero
+  have hpSlit : ((p : Nat.Primes) : ℂ) ∈ Complex.slitPlane := by
+    exact Complex.natCast_mem_slitPlane.mpr p.2.ne_zero
+  have hreg :
+      1 - ((p : Nat.Primes) : ℂ) ^ (-2 - 2 * z - 2 * w) ≠ 0 := by
+    apply one_sub_prime_cpow_ne_zero_of_re_neg p
+    exact hregular
+  have hx :
+      1 - ((p : Nat.Primes) : ℂ) ^ (z - w - 2 * W) ≠ 0 := by
+    apply one_sub_prime_cpow_ne_zero_of_re_neg p
+    exact hcenter
+  have hden :
+      (1 - (p : ℂ) ^ (-2 + -z - z + -w - w)) *
+          (1 - (p : ℂ) ^ (- -z - w - 2 * W)) ≠ 0 := by
+    apply mul_ne_zero
+    · convert hreg using 1
+      ring_nf
+    · convert hx using 1
+      ring_nf
+  dsimp only [f]
+  unfold hughesYoungCPrimeFactor hughesYoungCPrimeNumerator
+    hughesYoungC0 hughesYoungC1 hughesYoungC2
+  dsimp only
+  fun_prop (disch := first | exact hden | exact Or.inl hp0 | exact hpSlit)
+
+/-- Joint holomorphy in the auxiliary shifts of the pole-free low-contour
+integrand.  The hypotheses are precisely the zeta and finite-Euler-factor
+nonvanishing regions used in the contour argument. -/
+theorem analyticAt_hughesYoungCompletePositiveCentralPoleFree_auxiliary
+    (T t : ℝ) (h k a b : ℕ) {W z w : ℂ}
+    (hzeta : (1 + 2 * W + z + w : ℂ) ≠ 1)
+    (hzetaDen : 1 < (2 + 2 * z + 2 * w : ℂ).re)
+    (hregular : (-2 - 2 * z - 2 * w : ℂ).re < 0)
+    (hleft : (z - w - 2 * W : ℂ).re < 0)
+    (hright : (w - z - 2 * W : ℂ).re < 0) :
+    AnalyticAt ℂ
+      (fun p : ℂ × ℂ =>
+        hughesYoungCompletePositiveCentralPoleFree T t h k a b W p.1 p.2)
+      (z, w) := by
+  have hdenNe : riemannZeta (2 + 2 * z + 2 * w) ≠ 0 :=
+    riemannZeta_ne_zero_of_one_le_re hzetaDen.le
+  have hzetaDen' : 1 < 2 + 2 * z.re + 2 * w.re := by
+    simpa [Complex.mul_re] using hzetaDen
+  have hZ : AnalyticAt ℂ
+      (fun p : ℂ × ℂ => riemannZeta (1 + 2 * W + p.1 + p.2))
+      (z, w) :=
+    (analyticAt_riemannZeta hzeta).comp'
+      (f := fun p : ℂ × ℂ => 1 + 2 * W + p.1 + p.2)
+      (x := (z, w)) (by fun_prop)
+  have hDen : AnalyticAt ℂ
+      (fun p : ℂ × ℂ => riemannZeta (2 + 2 * p.1 + 2 * p.2))
+      (z, w) :=
+    (analyticAt_riemannZeta (by
+      intro heq
+      have := congrArg Complex.re heq
+      norm_num at this
+      linarith [hzetaDen'])).comp'
+      (f := fun p : ℂ × ℂ => 2 + 2 * p.1 + 2 * p.2)
+      (x := (z, w)) (by fun_prop)
+  have hCa := analyticAt_hughesYoungC_symmetric_auxiliary
+    a hregular hleft
+  have hregularSwap : (-2 - 2 * w - 2 * z : ℂ).re < 0 := by
+    convert hregular using 1
+    ring
+  have hCbSwap := analyticAt_hughesYoungC_symmetric_auxiliary
+    b (W := W) (z := w) (w := z) hregularSwap hright
+  have hSwap : AnalyticAt ℂ (fun p : ℂ × ℂ => (p.2, p.1)) (z, w) := by
+    fun_prop
+  have hCb : AnalyticAt ℂ
+      (fun p : ℂ × ℂ => hughesYoungC b (-p.2) p.2 (-p.1) p.1 W)
+      (z, w) := hCbSwap.comp' (f := fun p : ℂ × ℂ => (p.2, p.1))
+        (x := (z, w)) hSwap
+  have hJet : AnalyticAt ℂ
+      (fun p : ℂ × ℂ => hughesYoungEquation96PoleFreeMasterJet a b W p.1 p.2)
+      (z, w) := by
+    unfold hughesYoungEquation96PoleFreeMasterJet
+    have hExp : AnalyticAt ℂ (fun p : ℂ × ℂ =>
+        Complex.exp (p.1 * hughesYoungEquation96LeftConstant a +
+          p.2 * hughesYoungEquation96RightConstant b)) (z, w) := by
+      fun_prop
+    exact hExp.mul ((hZ.div hDen hdenNe).mul (hCa.mul hCb))
+  have hKernel : AnalyticAt ℂ
+      (fun p : ℂ × ℂ =>
+        hughesYoungCentralReverseKernelPolynomial t W p.1 p.2) (z, w) := by
+    unfold hughesYoungCentralReverseKernelPolynomial
+    fun_prop
+  unfold hughesYoungCompletePositiveCentralPoleFree
+  exact analyticAt_const.mul (hJet.mul hKernel)
+
+/-- Joint holomorphy of the complete meromorphic low-contour integrand
+away from its single moving zeta pole. -/
+theorem analyticAt_hughesYoungCompletePositiveCentralMeromorphic_auxiliary
+    (T t : ℝ) (h k a b : ℕ) {W z w : ℂ}
+    (hmoving : (2 * W - z - w : ℂ) ≠ 1)
+    (hzeta : (1 + 2 * W + z + w : ℂ) ≠ 1)
+    (hzetaDen : 1 < (2 + 2 * z + 2 * w : ℂ).re)
+    (hregular : (-2 - 2 * z - 2 * w : ℂ).re < 0)
+    (hleft : (z - w - 2 * W : ℂ).re < 0)
+    (hright : (w - z - 2 * W : ℂ).re < 0) :
+    AnalyticAt ℂ
+      (fun p : ℂ × ℂ =>
+        hughesYoungCompletePositiveCentralMeromorphic T t h k a b p.1 p.2 W)
+      (z, w) := by
+  unfold hughesYoungCompletePositiveCentralMeromorphic
+  exact ((analyticAt_riemannZeta hmoving).comp'
+    (f := fun p : ℂ × ℂ => 2 * W - p.1 - p.2)
+    (x := (z, w)) (by fun_prop)).mul
+      (analyticAt_hughesYoungCompletePositiveCentralPoleFree_auxiliary
+        T t h k a b hzeta hzetaDen hregular hleft hright)
+
+/-- The complete meromorphic integrand is jointly holomorphic throughout
+the auxiliary bidisc on every positive low contour.  This is the
+parameter-sharp replacement for the old fixed `1/8` continuation disc. -/
+theorem analyticAt_hughesYoungCompletePositiveCentralMeromorphic_lowAuxiliary
+    (T t : ℝ) (h k a b : ℕ) {δ u : ℝ} {z w : ℂ}
+    (hδ0 : 0 < δ) (hδ4 : δ < 1 / 4)
+    (hz : ‖z‖ < δ / 4) (hw : ‖w‖ < δ / 4) :
+    AnalyticAt ℂ
+      (fun p : ℂ × ℂ =>
+        hughesYoungCompletePositiveCentralMeromorphic T t h k a b p.1 p.2
+          ((δ : ℂ) + (u : ℂ) * I)) (z, w) := by
+  let W : ℂ := (δ : ℂ) + (u : ℂ) * I
+  have hzRe : |z.re| < δ / 4 := (abs_re_le_norm z).trans_lt hz
+  have hwRe : |w.re| < δ / 4 := (abs_re_le_norm w).trans_lt hw
+  have hmoving : (2 * W - z - w : ℂ) ≠ 1 := by
+    intro heq
+    have hre := congrArg Complex.re heq
+    dsimp only [W] at hre
+    norm_num [Complex.mul_re] at hre
+    linarith [neg_abs_le z.re, neg_abs_le w.re]
+  have hzeta : (1 + 2 * W + z + w : ℂ) ≠ 1 := by
+    intro heq
+    have hre := congrArg Complex.re heq
+    dsimp only [W] at hre
+    norm_num [Complex.mul_re] at hre
+    linarith [neg_abs_le z.re, neg_abs_le w.re]
+  have hzetaDen : 1 < (2 + 2 * z + 2 * w : ℂ).re := by
+    norm_num [Complex.mul_re]
+    linarith [neg_abs_le z.re, neg_abs_le w.re]
+  have hregular : (-2 - 2 * z - 2 * w : ℂ).re < 0 := by
+    norm_num [Complex.mul_re]
+    linarith [neg_abs_le z.re, neg_abs_le w.re]
+  have hleft : (z - w - 2 * W : ℂ).re < 0 := by
+    dsimp only [W]
+    norm_num [Complex.mul_re]
+    linarith [le_abs_self z.re, neg_abs_le w.re]
+  have hright : (w - z - 2 * W : ℂ).re < 0 := by
+    dsimp only [W]
+    norm_num [Complex.mul_re]
+    linarith [le_abs_self w.re, neg_abs_le z.re]
+  simpa only [W] using
+    analyticAt_hughesYoungCompletePositiveCentralMeromorphic_auxiliary
+      T t h k a b hmoving hzeta hzetaDen hregular hleft hright
 
 /-- The two Hughes--Young auxiliary derivatives commute with the complete
 source-line contour integral.  The right-hand side is the actual continued
@@ -924,8 +1251,10 @@ theorem analyticAt_hughesYoungEquation96PoleFreeMasterJet_movingPole
   have hCbRaw := analyticAt_hughesYoungC_shiftedJet_all
     b (q := (-1 : ℂ)) (z := 0) (w := 0)
       (by norm_num) (by norm_num) (by norm_num)
-  have hCa := hCaRaw.comp' hemap
-  have hCb := hCbRaw.comp' heswap
+  have hCa := hCaRaw.comp_of_eq' hemap (by
+    norm_num [emap, qmap])
+  have hCb := hCbRaw.comp_of_eq' heswap (by
+    norm_num [eswap, qmap])
   have harg : AnalyticAt ℂ
       (fun p : ℂ × ℂ => 2 + 2 * p.1 + 2 * p.2) (0, 0) := by fun_prop
   have hzeta : AnalyticAt ℂ
@@ -933,17 +1262,36 @@ theorem analyticAt_hughesYoungEquation96PoleFreeMasterJet_movingPole
     (analyticAt_riemannZeta (by norm_num)).comp' harg
   have hzeta0 : riemannZeta (2 : ℂ) ≠ 0 :=
     riemannZeta_ne_zero_of_one_le_re (by norm_num)
-  have hquot := hzeta.div hzeta hzeta0
+  have hCaMoving : AnalyticAt ℂ (fun p : ℂ × ℂ =>
+      hughesYoungC a (-p.1) p.1 (-p.2) p.2
+        (hughesYoungCentralMovingPole p.1 p.2)) (0, 0) := by
+    convert hCa using 1
+    funext p
+    congr 1
+    dsimp only [emap, qmap, hughesYoungCentralMovingPole]
+    ring
+  have hCbMoving : AnalyticAt ℂ (fun p : ℂ × ℂ =>
+      hughesYoungC b (-p.2) p.2 (-p.1) p.1
+        (hughesYoungCentralMovingPole p.1 p.2)) (0, 0) := by
+    convert hCb using 1
+    funext p
+    congr 1
+    dsimp only [eswap, qmap, hughesYoungCentralMovingPole]
+    ring
+  have hnum : AnalyticAt ℂ (fun p : ℂ × ℂ =>
+      riemannZeta (1 + 2 * hughesYoungCentralMovingPole p.1 p.2 + p.1 + p.2))
+      (0, 0) := by
+    convert hzeta using 1
+    funext p
+    congr 1
+    unfold hughesYoungCentralMovingPole
+    ring
+  have hquot := hnum.div hzeta (by simpa using hzeta0)
   have hexp : AnalyticAt ℂ (fun p : ℂ × ℂ =>
       Complex.exp (p.1 * hughesYoungEquation96LeftConstant a +
         p.2 * hughesYoungEquation96RightConstant b)) (0, 0) := by fun_prop
-  have hall := hexp.mul (hquot.mul (hCa.mul hCb))
-  unfold hughesYoungEquation96PoleFreeMasterJet
-  convert hall using 1
-  · funext p
-    dsimp only [emap, eswap, qmap, hughesYoungCentralMovingPole] at hCa hCb ⊢
-    ring
-  · norm_num
+  simpa only [hughesYoungEquation96PoleFreeMasterJet] using
+    hexp.mul (hquot.mul (hCaMoving.mul hCbMoving))
 
 private theorem analyticAt_oneHalf_of_differentiableAt_centralStrip
     {f : ℂ → ℂ}
@@ -979,7 +1327,7 @@ theorem analyticAt_hughesYoungCompletePositiveCentralPoleFreeCore_movingPole
     fun W => differentiableAt_hughesYoungReducedMellinStaticComplex T t h k W
   have hMellin : AnalyticAt ℂ
       (fun p : ℂ × ℂ => hughesYoungReducedMellinStaticComplex T t h k (m p))
-      (0, 0) := hMellinAll.analyticAt.comp' hm
+      (0, 0) := (hMellinAll.analyticAt (m (0, 0))).comp' hm
   have hJet := analyticAt_hughesYoungEquation96PoleFreeMasterJet_movingPole a b
   have hK00 : AnalyticAt ℂ (hughesYoungEquation84KernelCore00 t) (1 / 2 : ℂ) :=
     analyticAt_oneHalf_of_differentiableAt_centralStrip
@@ -995,16 +1343,16 @@ theorem analyticAt_hughesYoungCompletePositiveCentralPoleFreeCore_movingPole
       (fun h0 h3 => differentiableAt_hughesYoungEquation84KernelCore11 t h0 h3)
   have h00 : AnalyticAt ℂ
       (fun p : ℂ × ℂ => hughesYoungEquation84KernelCore00 t (m p)) (0, 0) :=
-    hK00.comp' hm
+    hK00.comp_of_eq' hm (by norm_num [m, hughesYoungCentralMovingPole])
   have h10 : AnalyticAt ℂ
       (fun p : ℂ × ℂ => hughesYoungEquation84KernelCore10 t (m p)) (0, 0) :=
-    hK10.comp' hm
+    hK10.comp_of_eq' hm (by norm_num [m, hughesYoungCentralMovingPole])
   have h01 : AnalyticAt ℂ
       (fun p : ℂ × ℂ => hughesYoungEquation84KernelCore01 t (m p)) (0, 0) :=
-    hK01.comp' hm
+    hK01.comp_of_eq' hm (by norm_num [m, hughesYoungCentralMovingPole])
   have h11 : AnalyticAt ℂ
       (fun p : ℂ × ℂ => hughesYoungEquation84KernelCore11 t (m p)) (0, 0) :=
-    hK11.comp' hm
+    hK11.comp_of_eq' hm (by norm_num [m, hughesYoungCentralMovingPole])
   have hz : AnalyticAt ℂ (fun p : ℂ × ℂ => p.1) (0, 0) := by fun_prop
   have hw : AnalyticAt ℂ (fun p : ℂ × ℂ => p.2) (0, 0) := by fun_prop
   have hReverse : AnalyticAt ℂ
@@ -1015,9 +1363,41 @@ theorem analyticAt_hughesYoungCompletePositiveCentralPoleFreeCore_movingPole
       ((hz.mul hw).mul h00))
   have hscale : AnalyticAt ℂ (fun p : ℂ × ℂ => (2 + p.1 + p.2) ^ 4) (0, 0) := by
     fun_prop
-  have hall := hscale.mul ((analyticAt_const.mul hMellin).mul (hJet.mul hReverse))
+  have hconst : AnalyticAt ℂ
+      (fun _ : ℂ × ℂ => (((a : ℂ) * b)⁻¹)) (0, 0) := analyticAt_const
+  have hall := hscale.mul ((hconst.mul hMellin).mul (hJet.mul hReverse))
   simpa only [m, hughesYoungCompletePositiveCentralPoleFreeCore,
     mul_assoc] using hall
+
+/-- The complete moving-residue numerator is jointly analytic in the two
+auxiliary shifts at the origin.  The explicit fourth-order auxiliary zero
+removes the apparent denominator in the pole-free core. -/
+theorem analyticAt_hughesYoungCompletePositiveCentralPoleFree_movingPole
+    (T t : ℝ) (h k a b : ℕ) :
+    AnalyticAt ℂ (fun p : ℂ × ℂ ↦
+      hughesYoungCompletePositiveCentralPoleFree T t h k a b
+        (hughesYoungCentralMovingPole p.1 p.2) p.1 p.2) (0, 0) := by
+  let F : ℂ × ℂ → ℂ := fun p ↦
+    (2 + p.1 + p.2) ^ 4 *
+      hughesYoungCompletePositiveCentralPoleFreeCore T t h k a b
+        (hughesYoungCentralMovingPole p.1 p.2) p.1 p.2
+  have hF : AnalyticAt ℂ F (0, 0) := by
+    simpa only [F] using
+      analyticAt_hughesYoungCompletePositiveCentralPoleFreeCore_movingPole
+        T t h k a b
+  have hpoly : AnalyticAt ℂ (fun p : ℂ × ℂ ↦
+      (p.1 + p.2) ^ 4) (0, 0) := by fun_prop
+  have hEq : (fun p : ℂ × ℂ ↦
+      hughesYoungCompletePositiveCentralPoleFree T t h k a b
+        (hughesYoungCentralMovingPole p.1 p.2) p.1 p.2) =
+      fun p ↦ (p.1 + p.2) ^ 4 * F p := by
+    funext p
+    rw [hughesYoungCompletePositiveCentralPoleFree_eq_auxiliary_mul_core,
+      hughesYoungAuxiliaryZero_movingPole]
+    dsimp only [F]
+    ring
+  rw [hEq]
+  exact hpoly.mul hF
 
 /-- Once the analytic core of the moving residue is exposed, the prescribed
 fourth-order Hughes--Young auxiliary zero kills its mixed derivative. -/

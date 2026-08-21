@@ -1172,6 +1172,21 @@ noncomputable def hughesYoungEquation84RegularizedContourKernelCore
     afePoleNormalization t / w / afeGammaNormalization t *
     hughesYoungEquation84RegularizedBetaKernel t w CX COne
 
+/-- One-step expansion of the analytic equation-(84) contour core.  Using
+this theorem avoids asking later estimates to unfold the much larger beta
+kernel while solving a definitional-equality goal. -/
+theorem hughesYoungEquation84RegularizedContourKernelCore_eq_expanded
+    (t : ℝ) (w CX COne : ℂ) :
+    hughesYoungEquation84RegularizedContourKernelCore t w CX COne =
+      Complex.exp (100 * w ^ 2) *
+        ((afeCriticalPoint t + w) * (1 - (afeCriticalPoint t + w))) ^ 2 *
+        (afeCriticalPoint (-t) + w) ^ 2 *
+        Complex.Gammaℝ (afeCriticalPoint t + w) ^ 2 *
+        Complex.Gammaℝ (afeCriticalPoint (-t) + w) ^ 2 /
+        afePoleNormalization t / w / afeGammaNormalization t *
+        hughesYoungEquation84RegularizedBetaKernel t w CX COne := by
+  rfl
+
 /-- The complete pole-cancelled archimedean contour factor for the positive
 equation-(84) branch.  The factor `q^2` is what remains of
 `(q(1-q))^2` after its `(1-q)^2=(s-w)^2` zero has been absorbed into the
@@ -1187,6 +1202,30 @@ theorem hughesYoungEquation84RegularizedContourKernel_eq_auxiliary_mul_core
       hughesYoungAuxiliaryZero w *
         hughesYoungEquation84RegularizedContourKernelCore t w CX COne := by
   rfl
+
+/-- The auxiliary and archimedean factors in the regularized equation-(84)
+kernel that are independent of the two DFI logarithmic constants. -/
+noncomputable def hughesYoungEquation84RegularizedContourPrefactor
+    (t : ℝ) (w : ℂ) : ℂ :=
+  hughesYoungAuxiliaryZero w *
+    (Complex.exp (100 * w ^ 2) *
+      ((afeCriticalPoint t + w) * (1 - (afeCriticalPoint t + w))) ^ 2 *
+      (afeCriticalPoint (-t) + w) ^ 2 *
+      Complex.Gammaℝ (afeCriticalPoint t + w) ^ 2 *
+      Complex.Gammaℝ (afeCriticalPoint (-t) + w) ^ 2 /
+      afePoleNormalization t / w / afeGammaNormalization t)
+
+/-- At a fixed contour point, the complete equation-(84) kernel is a fixed
+auxiliary/archimedean prefactor times the logarithmic beta kernel. -/
+theorem hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta
+    (t : ℝ) (w CX COne : ℂ) :
+    hughesYoungEquation84RegularizedContourKernel t w CX COne =
+      hughesYoungEquation84RegularizedContourPrefactor t w *
+        hughesYoungEquation84RegularizedBetaKernel t w CX COne := by
+  unfold hughesYoungEquation84RegularizedContourPrefactor
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_auxiliary_mul_core,
+    hughesYoungEquation84RegularizedContourKernelCore_eq_expanded,
+    ← mul_assoc]
 
 set_option maxRecDepth 10000 in
 /-- On the original small contour the regularized contour kernel is

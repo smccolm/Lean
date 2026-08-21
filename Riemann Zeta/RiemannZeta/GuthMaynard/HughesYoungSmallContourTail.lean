@@ -1,6 +1,8 @@
-import RiemannZeta.GuthMaynard.HughesYoungFiniteSquareBridge
+import RiemannZeta.GuthMaynard.HughesYoungContourShift
+import RiemannZeta.GuthMaynard.HughesYoungIntegratedConsumer
+import RiemannZeta.GuthMaynard.HughesYoungDFIProfile
 
-open Complex Filter MeasureTheory Set Topology
+open Asymptotics Complex Filter Finset MeasureTheory Set Topology
 open scoped BigOperators Interval Topology
 
 noncomputable section
@@ -8,475 +10,431 @@ noncomputable section
 namespace RiemannZeta.GuthMaynard
 
 /-!
-# Quantitative removal of the small-contour ordinate tails
+# The finite Hughes--Young small-contour correction
+
+The native contour has real part `1 / log T` and height `T / 8`.  The
+older horizontal estimate in `HughesYoungCentralBounds` assumes that the
+Mellin ordinate dominates the physical height, so it cannot estimate this
+literal contour.  This file starts the required joint estimate by keeping
+the quotient of the two moving Gamma factors intact.
 -/
 
-theorem norm_divisorDirichletTerm_small_le_nat
-    {t c u : ℝ} (hc : 0 < c) {n : ℕ} (hn : 0 < n) :
-    ‖divisorDirichletTerm
-        (afeCriticalPoint t + ((c : ℂ) + (u : ℂ) * I)) n‖ ≤ n := by
-  rw [norm_divisorDirichletTerm_afe_vertical_eq t c u hn]
-  have hnR : (1 : ℝ) ≤ n := by exact_mod_cast hn
-  have hpow : (n : ℝ) ^ (-(1 / 2 + c : ℝ)) ≤ 1 := by
-    exact Real.rpow_le_one_of_one_le_of_nonpos hnR (by linarith)
-  have hcard : (n.divisors.card : ℝ) ≤ n := by
-    exact_mod_cast Nat.card_divisors_le_self n
+private theorem smallContour_cosh_add_le_exp_abs_mul_cosh (x d : ℝ) :
+    Real.cosh (x + d) ≤ Real.exp |d| * Real.cosh x := by
+  have hplus : Real.exp d ≤ Real.exp |d| :=
+    Real.exp_le_exp.mpr (le_abs_self d)
+  have hminus : Real.exp (-d) ≤ Real.exp |d| :=
+    Real.exp_le_exp.mpr (neg_le_abs d)
+  rw [Real.cosh_eq, Real.cosh_eq]
+  rw [Real.exp_add, show -(x + d) = -x + -d by ring, Real.exp_add]
+  have hx : 0 ≤ Real.exp x := (Real.exp_pos x).le
+  have hnx : 0 ≤ Real.exp (-x) := (Real.exp_pos (-x)).le
   calc
-    (n.divisors.card : ℝ) * (n : ℝ) ^ (-(1 / 2 + c : ℝ)) ≤
-        (n.divisors.card : ℝ) * 1 := by gcongr
-    _ ≤ n := by simpa using hcard
+    (Real.exp x * Real.exp d + Real.exp (-x) * Real.exp (-d)) / 2 ≤
+        (Real.exp x * Real.exp |d| + Real.exp (-x) * Real.exp |d|) / 2 := by
+          gcongr
+    _ = Real.exp |d| * ((Real.exp x + Real.exp (-x)) / 2) := by ring
 
-theorem norm_hughesYoungRightPairTerm_small_le
-    {t c u : ℝ} (hc : 0 < c) {M : ℕ} {p : ℕ × ℕ}
-    (hp₁ : 0 < p.1) (hp₂ : 0 < p.2)
-    (hp₁M : p.1 ≤ M) (hp₂M : p.2 ≤ M) :
-    ‖hughesYoungRightPairTerm t c u p‖ ≤
-      ‖hughesYoungRightContourWeight t c u‖ * (M : ℝ) ^ 2 := by
-  rw [hughesYoungRightPairTerm, norm_mul, norm_mul]
-  have h₁ := norm_divisorDirichletTerm_small_le_nat (t := t) (u := u) hc hp₁
-  have h₂ := norm_divisorDirichletTerm_small_le_nat (t := -t) (u := u) hc hp₂
-  have hp₁MR : (p.1 : ℝ) ≤ M := by exact_mod_cast hp₁M
-  have hp₂MR : (p.2 : ℝ) ≤ M := by exact_mod_cast hp₂M
-  calc
-    ‖hughesYoungRightContourWeight t c u‖ *
-          ‖divisorDirichletTerm
-            (afeCriticalPoint t + ((c : ℂ) + (u : ℂ) * I)) p.1‖ *
-          ‖divisorDirichletTerm
-            (afeCriticalPoint (-t) + ((c : ℂ) + (u : ℂ) * I)) p.2‖ ≤
-        ‖hughesYoungRightContourWeight t c u‖ * (p.1 : ℝ) * p.2 := by
-      gcongr
-    _ ≤ ‖hughesYoungRightContourWeight t c u‖ * (M : ℝ) * M := by
-      gcongr
-    _ = ‖hughesYoungRightContourWeight t c u‖ * (M : ℝ) ^ 2 := by ring
+/-- Moving Gamma to the left of `Re z = 1/2` by at most `1/3` costs only
+the exponential of the displacement times the logarithmic height.  The
+strip stays in `Re z ≥ 1/6`, so no Gamma pole is crossed. -/
+theorem exists_norm_Gamma_half_left_displacement_le :
+    ∃ C : ℝ, 0 < C ∧ ∀ (z : ℂ) (d : ℝ),
+      z.re = 1 / 2 → 0 ≤ d → d ≤ 1 / 3 →
+      ‖Complex.Gamma (z - (d : ℂ))‖ ≤
+        ‖Complex.Gamma z‖ *
+          Real.exp (C * d * Real.log (|z.im| + 2)) := by
+  obtain ⟨C, hC, hdigamma⟩ :=
+    Complex.exists_norm_digamma_le_log
+      (a := (1 / 6 : ℝ)) (b := (1 / 2 : ℝ)) (by norm_num)
+  refine ⟨C, hC, ?_⟩
+  intro z d hzre hd0 hdUpper
+  let f : ℝ → ℂ := fun x => Complex.Gamma (z - (x : ℂ))
+  let f' : ℝ → ℂ := fun x =>
+    -(Complex.Gamma (z - (x : ℂ)) * Complex.digamma (z - (x : ℂ)))
+  let K : ℝ := C * Real.log (|z.im| + 2)
+  have hlog : 0 ≤ Real.log (|z.im| + 2) :=
+    Real.log_nonneg (by linarith [abs_nonneg z.im])
+  have hK : 0 ≤ K := mul_nonneg hC.le hlog
+  have hzpos (x : ℝ) (hx : x ∈ Set.Icc 0 d) :
+      0 < (z - (x : ℂ)).re := by
+    simp only [sub_re, ofReal_re, hzre]
+    linarith [hx.2]
+  have hfderiv (x : ℝ) (hx : x ∈ Set.Icc 0 d) :
+      HasDerivAt f (f' x) x := by
+    have houter := hasDerivAt_Gamma_eq_mul_digamma_of_re_pos (hzpos x hx)
+    have hshift : HasDerivAt (fun w : ℂ => z - w) (-1) (x : ℂ) := by
+      simpa using
+        (hasDerivAt_const (x := (x : ℂ)) z).sub (hasDerivAt_id (x : ℂ))
+    convert (houter.comp (x : ℂ) hshift).comp_ofReal using 1
+    all_goals simp only [f']
+    all_goals ring
+  have hfcont : ContinuousOn f (Set.Icc 0 d) := by
+    intro x hx
+    exact (hfderiv x hx).continuousAt.continuousWithinAt
+  have hderivWithin : ∀ x ∈ Set.Ico 0 d,
+      HasDerivWithinAt f (f' x) (Set.Ici x) x := by
+    intro x hx
+    exact (hfderiv x ⟨hx.1, hx.2.le⟩).hasDerivWithinAt
+  have hbound : ∀ x ∈ Set.Ico 0 d,
+      ‖f' x‖ ≤ K * ‖f x‖ + 0 := by
+    intro x hx
+    have hxLower : (1 / 6 : ℝ) ≤ (z - (x : ℂ)).re := by
+      simp only [sub_re, ofReal_re, hzre]
+      linarith [hx.2.le]
+    have hxUpper : (z - (x : ℂ)).re ≤ (1 / 2 : ℝ) := by
+      simp only [sub_re, ofReal_re, hzre]
+      linarith [hx.1]
+    have him : (z - (x : ℂ)).im = z.im := by simp
+    have hpsi := hdigamma (z - (x : ℂ)) hxLower hxUpper
+    rw [him] at hpsi
+    simp only [f', f, norm_neg, norm_mul, add_zero]
+    calc
+      ‖Complex.Gamma (z - (x : ℂ))‖ *
+            ‖Complex.digamma (z - (x : ℂ))‖ ≤
+          ‖Complex.Gamma (z - (x : ℂ))‖ *
+            (C * Real.log (|z.im| + 2)) :=
+        mul_le_mul_of_nonneg_left hpsi (norm_nonneg _)
+      _ = K * ‖Complex.Gamma (z - (x : ℂ))‖ := by
+        dsimp only [K]
+        ring
+  have hgronwall := norm_le_gronwallBound_of_norm_deriv_right_le
+    hfcont hderivWithin (show ‖f 0‖ ≤ ‖f 0‖ by rfl) hbound d
+    (show d ∈ Set.Icc 0 d from ⟨hd0, le_rfl⟩)
+  rw [gronwallBound_ε0, sub_zero] at hgronwall
+  change ‖Complex.Gamma (z - (d : ℂ))‖ ≤
+    ‖Complex.Gamma z‖ *
+      Real.exp (C * d * Real.log (|z.im| + 2))
+  convert hgronwall using 1
+  all_goals simp only [f, ofReal_zero, sub_zero, K]
+  all_goals ring
 
-/-- On the source contour `1 / log T`, the complete Hughes--Young kernel is
-uniformly dominated by one logarithm times a fixed Gaussian. -/
-theorem exists_norm_hughesYoungRightContourWeight_small_le_gaussian :
-    ∃ C K : ℝ, 0 < C ∧ 0 < K ∧ ∀ {T t : ℝ},
-      Real.exp 1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) → ∀ u : ℝ,
-      ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖ ≤
-        Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2) := by
-  obtain ⟨C, hC, hraw⟩ :=
-    exists_norm_hughesYoungRightContourWeight_shift_le_height_power
-  obtain ⟨K, hK, hgauss⟩ :=
-    exists_hughesYoungIntegratedOrdinateFactor_le_gaussian hC
-  refine ⟨C, K, hC, hK, ?_⟩
-  intro T t hT ht u
-  obtain ⟨hc, hc1, hcinv⟩ := hughesYoungSmallContour_spec hT
-  have hT1 : 1 ≤ T := by linarith [Real.exp_one_gt_d9]
-  have hsource := hraw T t u (hughesYoungSmallContour T) hT1 ht hc hc1
-  rw [hcinv, rpow_smallContour_four_mul_eq C hT] at hsource
-  have hfactor :
-      Real.exp
-          (100 * hughesYoungSmallContour T ^ 2 - 84 * u ^ 2 +
-            4 * C * hughesYoungSmallContour T * Real.log (6 * (|u| + 1))) *
-          (25 + 8 * u ^ 2) ^ 8 ≤
-        hughesYoungIntegratedOrdinateFactor C (hughesYoungSmallContour T) u := by
-    unfold hughesYoungIntegratedOrdinateFactor
-    exact mul_le_mul_of_nonneg_right
-      (Real.exp_le_exp.mpr (by nlinarith [sq_nonneg u])) (by positivity)
-  have hfront : 0 ≤ Real.log T * Real.exp (4 * C) :=
-    mul_nonneg (Real.log_nonneg hT1) (Real.exp_pos _).le
-  calc
-    ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖ ≤
-        Real.log T * Real.exp (4 * C) *
-          (Real.exp
-            (100 * hughesYoungSmallContour T ^ 2 - 84 * u ^ 2 +
-              4 * C * hughesYoungSmallContour T * Real.log (6 * (|u| + 1))) *
-            (25 + 8 * u ^ 2) ^ 8) := hsource
-    _ ≤ Real.log T * Real.exp (4 * C) *
-          hughesYoungIntegratedOrdinateFactor C (hughesYoungSmallContour T) u := by
-      exact mul_le_mul_of_nonneg_left hfactor hfront
-    _ ≤ Real.log T * Real.exp (4 * C) *
-          (K * Real.exp (-80 * u ^ 2)) := by
-      exact mul_le_mul_of_nonneg_left (hgauss hc hc1 u) hfront
-    _ = Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2) := by ring
+/-- Reciprocal Gamma has the matching right-displacement estimate.  This
+is the lower-bound half of the moving Gamma quotient and is proved directly
+for the entire reciprocal-Gamma function rather than by separating a
+reflection-formula sine factor. -/
+theorem exists_norm_inv_Gamma_half_right_displacement_le :
+    ∃ C : ℝ, 0 < C ∧ ∀ (z : ℂ) (d : ℝ),
+      z.re = 1 / 2 → 0 ≤ d → d ≤ 1 / 3 →
+      ‖(Complex.Gamma (z + (d : ℂ)))⁻¹‖ ≤
+        ‖(Complex.Gamma z)⁻¹‖ *
+          Real.exp (C * d * Real.log (|z.im| + 2)) := by
+  obtain ⟨C, hC, hdigamma⟩ :=
+    Complex.exists_norm_digamma_le_log
+      (a := (1 / 2 : ℝ)) (b := (5 / 6 : ℝ)) (by norm_num)
+  refine ⟨C, hC, ?_⟩
+  intro z d hzre hd0 hdUpper
+  let f : ℝ → ℂ := fun x => (Complex.Gamma (z + (x : ℂ)))⁻¹
+  let f' : ℝ → ℂ := fun x =>
+    -((Complex.Gamma (z + (x : ℂ)))⁻¹ *
+      Complex.digamma (z + (x : ℂ)))
+  let K : ℝ := C * Real.log (|z.im| + 2)
+  have hlog : 0 ≤ Real.log (|z.im| + 2) :=
+    Real.log_nonneg (by linarith [abs_nonneg z.im])
+  have hK : 0 ≤ K := mul_nonneg hC.le hlog
+  have hzpos (x : ℝ) (hx : x ∈ Set.Icc 0 d) :
+      0 < (z + (x : ℂ)).re := by
+    simp only [add_re, ofReal_re, hzre]
+    linarith [hx.1]
+  have hGammaNe (x : ℝ) (hx : x ∈ Set.Icc 0 d) :
+      Complex.Gamma (z + (x : ℂ)) ≠ 0 := by
+    apply Complex.Gamma_ne_zero
+    intro n hn
+    have hre := congrArg Complex.re hn
+    simp only [add_re, ofReal_re, neg_re, natCast_re, hzre] at hre
+    have hn0 : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+    linarith [hx.1]
+  have hfderiv (x : ℝ) (hx : x ∈ Set.Icc 0 d) :
+      HasDerivAt f (f' x) x := by
+    have houter := hasDerivAt_Gamma_eq_mul_digamma_of_re_pos (hzpos x hx)
+    have hshift : HasDerivAt (fun w : ℂ => z + w) 1 (x : ℂ) :=
+      (hasDerivAt_id (x : ℂ)).const_add z
+    have hgamma := houter.comp (x : ℂ) hshift
+    have hinv := hgamma.inv (hGammaNe x hx)
+    convert hinv.comp_ofReal using 1
+    all_goals simp only [f', Function.comp_apply]
+    field_simp [hGammaNe x hx]
+  have hfcont : ContinuousOn f (Set.Icc 0 d) := by
+    intro x hx
+    exact (hfderiv x hx).continuousAt.continuousWithinAt
+  have hderivWithin : ∀ x ∈ Set.Ico 0 d,
+      HasDerivWithinAt f (f' x) (Set.Ici x) x := by
+    intro x hx
+    exact (hfderiv x ⟨hx.1, hx.2.le⟩).hasDerivWithinAt
+  have hbound : ∀ x ∈ Set.Ico 0 d,
+      ‖f' x‖ ≤ K * ‖f x‖ + 0 := by
+    intro x hx
+    have hxLower : (1 / 2 : ℝ) ≤ (z + (x : ℂ)).re := by
+      simp only [add_re, ofReal_re, hzre]
+      linarith [hx.1]
+    have hxUpper : (z + (x : ℂ)).re ≤ (5 / 6 : ℝ) := by
+      simp only [add_re, ofReal_re, hzre]
+      linarith [hx.2.le]
+    have him : (z + (x : ℂ)).im = z.im := by simp
+    have hpsi := hdigamma (z + (x : ℂ)) hxLower hxUpper
+    rw [him] at hpsi
+    simp only [f', f, norm_neg, norm_mul, add_zero]
+    calc
+      ‖(Complex.Gamma (z + (x : ℂ)))⁻¹‖ *
+            ‖Complex.digamma (z + (x : ℂ))‖ ≤
+          ‖(Complex.Gamma (z + (x : ℂ)))⁻¹‖ *
+            (C * Real.log (|z.im| + 2)) :=
+        mul_le_mul_of_nonneg_left hpsi (norm_nonneg _)
+      _ = K * ‖(Complex.Gamma (z + (x : ℂ)))⁻¹‖ := by
+        dsimp only [K]
+        ring
+  have hgronwall := norm_le_gronwallBound_of_norm_deriv_right_le
+    hfcont hderivWithin (show ‖f 0‖ ≤ ‖f 0‖ by rfl) hbound d
+    (show d ∈ Set.Icc 0 d from ⟨hd0, le_rfl⟩)
+  rw [gronwallBound_ε0, sub_zero] at hgronwall
+  change ‖(Complex.Gamma (z + (d : ℂ)))⁻¹‖ ≤
+    ‖(Complex.Gamma z)⁻¹‖ *
+      Real.exp (C * d * Real.log (|z.im| + 2))
+  rw [show C * d * Real.log (|z.im| + 2) =
+      (C * Real.log (|z.im| + 2)) * d by ring]
+  simpa only [f, ofReal_zero, add_zero, K] using hgronwall
 
+/-- The half-line Gamma quotient keeps the exponential cancellation between
+the two physical heights.  This is the `c = 0` quotient underlying the
+native small-contour estimate. -/
+theorem norm_Gamma_half_t_sub_u_div_half_t_add_u_le (t u : ℝ) :
+    ‖Complex.Gamma ((1 / 2 : ℂ) + ((t - u : ℝ) : ℂ) * I) /
+        Complex.Gamma ((1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I)‖ ≤
+      Real.exp (Real.pi * |u|) := by
+  let A : ℝ :=
+    ‖Complex.Gamma ((1 / 2 : ℂ) + ((t - u : ℝ) : ℂ) * I)‖
+  let B : ℝ :=
+    ‖Complex.Gamma ((1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I)‖
+  let X : ℝ := Real.cosh (Real.pi * (t - u))
+  let Y : ℝ := Real.cosh (Real.pi * (t + u))
+  let E : ℝ := Real.exp (2 * Real.pi * |u|)
+  have hA : 0 ≤ A := by dsimp only [A]; positivity
+  have hB : 0 < B := by
+    dsimp only [B]
+    rw [norm_pos_iff]
+    exact Complex.Gamma_ne_zero_of_re_pos (by norm_num)
+  have hX : 0 < X := by dsimp only [X]; exact Real.cosh_pos _
+  have hY : 0 < Y := by dsimp only [Y]; exact Real.cosh_pos _
+  have hA2 : A ^ 2 = Real.pi / X := by
+    simpa only [A, X] using Gamma_half_add_mul_I_norm_sq (t - u)
+  have hB2 : B ^ 2 = Real.pi / Y := by
+    simpa only [B, Y] using Gamma_half_add_mul_I_norm_sq (t + u)
+  have hShift := smallContour_cosh_add_le_exp_abs_mul_cosh
+    (Real.pi * (t - u)) (2 * Real.pi * u)
+  have hArg : Real.pi * (t - u) + 2 * Real.pi * u =
+      Real.pi * (t + u) := by ring
+  have hAbs : |2 * Real.pi * u| = 2 * Real.pi * |u| := by
+    rw [abs_mul, abs_mul, abs_of_pos (by norm_num : (0 : ℝ) < 2),
+      abs_of_pos Real.pi_pos]
+  rw [hArg, hAbs] at hShift
+  change Y ≤ E * X at hShift
+  have hInv : X⁻¹ ≤ E * Y⁻¹ := by
+    calc
+      X⁻¹ = Y * (X * Y)⁻¹ := by field_simp
+      _ ≤ (E * X) * (X * Y)⁻¹ := by
+        exact mul_le_mul_of_nonneg_right hShift
+          (inv_nonneg.mpr (mul_nonneg hX.le hY.le))
+      _ = E * Y⁻¹ := by field_simp
+  have hExpSq : Real.exp (Real.pi * |u|) ^ 2 = E := by
+    dsimp only [E]
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  have hSquare : A ^ 2 ≤ Real.exp (Real.pi * |u|) ^ 2 * B ^ 2 := by
+    rw [hA2, hB2, div_eq_mul_inv, div_eq_mul_inv, hExpSq]
+    calc
+      Real.pi * X⁻¹ ≤ Real.pi * (E * Y⁻¹) :=
+        mul_le_mul_of_nonneg_left hInv Real.pi_pos.le
+      _ = E * (Real.pi * Y⁻¹) := by ring
+  rw [norm_div]
+  exact (sq_le_sq₀ (div_nonneg hA hB.le) (Real.exp_pos _).le).mp (by
+    rw [div_pow, div_le_iff₀ (pow_pos hB 2)]
+    simpa only [A, B] using hSquare)
+
+/-- Cancellation-preserving Gamma quotient on the literal small contour.
+The Gaussian part of Hughes--Young's kernel will absorb the displayed
+polynomial and logarithmic-displacement costs. -/
+theorem exists_norm_Gamma_smallContour_movingQuotient_le :
+    ∃ C : ℝ, 0 < C ∧ ∀ (t u c : ℝ),
+      0 ≤ c → c ≤ 1 / 3 →
+      ‖Complex.Gamma
+          (((1 / 2 : ℝ) - c : ℝ) + ((t - u : ℝ) : ℂ) * I + 1) /
+          Complex.Gamma
+            (((1 / 2 : ℝ) + c : ℝ) + ((t + u : ℝ) : ℂ) * I)‖ ≤
+        (|t| + |u| + 2) * Real.exp (Real.pi * |u|) *
+          Real.exp (C * c *
+            (Real.log (|t - u| + 2) + Real.log (|t + u| + 2))) := by
+  obtain ⟨Cminus, hCminus, hleft⟩ := exists_norm_Gamma_half_left_displacement_le
+  obtain ⟨Cplus, hCplus, hright⟩ := exists_norm_inv_Gamma_half_right_displacement_le
+  let C : ℝ := Cminus + Cplus
+  have hC : 0 < C := add_pos hCminus hCplus
+  refine ⟨C, hC, ?_⟩
+  intro t u c hc0 hcUpper
+  let zminus : ℂ := (1 / 2 : ℂ) + ((t - u : ℝ) : ℂ) * I
+  let zplus : ℂ := (1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I
+  let Lminus : ℝ := Real.log (|t - u| + 2)
+  let Lplus : ℝ := Real.log (|t + u| + 2)
+  let R : ℝ := |t| + |u| + 2
+  have hzminusRe : zminus.re = 1 / 2 := by simp [zminus]
+  have hzplusRe : zplus.re = 1 / 2 := by simp [zplus]
+  have hLminus : 0 ≤ Lminus := by
+    dsimp only [Lminus]
+    exact Real.log_nonneg (by linarith [abs_nonneg (t - u)])
+  have hLplus : 0 ≤ Lplus := by
+    dsimp only [Lplus]
+    exact Real.log_nonneg (by linarith [abs_nonneg (t + u)])
+  have hzminusC : zminus - (c : ℂ) ≠ 0 := by
+    intro hzero
+    have hre := congrArg Complex.re hzero
+    simp only [sub_re, ofReal_re, zero_re, hzminusRe] at hre
+    linarith
+  have hrec : Complex.Gamma (zminus - (c : ℂ) + 1) =
+      (zminus - (c : ℂ)) * Complex.Gamma (zminus - (c : ℂ)) :=
+    Complex.Gamma_add_one (zminus - (c : ℂ)) hzminusC
+  have hzminusIm : zminus.im = t - u := by simp [zminus]
+  have hzplusIm : zplus.im = t + u := by simp [zplus]
+  have hleft' : ‖Complex.Gamma (zminus - (c : ℂ))‖ ≤
+      ‖Complex.Gamma zminus‖ * Real.exp (Cminus * c * Lminus) := by
+    have h := hleft zminus c hzminusRe hc0 hcUpper
+    rw [hzminusIm] at h
+    simpa only [Lminus] using h
+  have hright' : ‖(Complex.Gamma (zplus + (c : ℂ)))⁻¹‖ ≤
+      ‖(Complex.Gamma zplus)⁻¹‖ * Real.exp (Cplus * c * Lplus) := by
+    have h := hright zplus c hzplusRe hc0 hcUpper
+    rw [hzplusIm] at h
+    simpa only [Lplus] using h
+  have hzNorm : ‖zminus - (c : ℂ)‖ ≤ R := by
+    calc
+      ‖zminus - (c : ℂ)‖ ≤ |(zminus - (c : ℂ)).re| + |(zminus - (c : ℂ)).im| :=
+        Complex.norm_le_abs_re_add_abs_im _
+      _ = |(1 / 2 : ℝ) - c| + |t - u| := by simp [zminus]
+      _ ≤ (1 / 2 : ℝ) + (|t| + |u|) := by
+        have hcHalf : |(1 / 2 : ℝ) - c| ≤ 1 / 2 := by
+          rw [abs_le]
+          constructor <;> linarith
+        exact add_le_add hcHalf (by simpa using abs_sub_le t 0 u)
+      _ ≤ R := by dsimp only [R]; linarith
+  have hbase : ‖Complex.Gamma zminus‖ * ‖(Complex.Gamma zplus)⁻¹‖ ≤
+      Real.exp (Real.pi * |u|) := by
+    simpa only [zminus, zplus, norm_div, norm_inv] using
+      norm_Gamma_half_t_sub_u_div_half_t_add_u_le t u
+  have hExp :
+      Real.exp (Cminus * c * Lminus) * Real.exp (Cplus * c * Lplus) ≤
+        Real.exp (C * c * (Lminus + Lplus)) := by
+    rw [← Real.exp_add]
+    apply Real.exp_le_exp.mpr
+    have hcross : 0 ≤ Cplus * c * Lminus + Cminus * c * Lplus :=
+      add_nonneg (mul_nonneg (mul_nonneg hCplus.le hc0) hLminus)
+        (mul_nonneg (mul_nonneg hCminus.le hc0) hLplus)
+    dsimp only [C]
+    nlinarith
+  have hgoal : ‖Complex.Gamma (zminus - (c : ℂ) + 1) /
+        Complex.Gamma (zplus + (c : ℂ))‖ ≤
+      R * Real.exp (Real.pi * |u|) *
+        Real.exp (C * c * (Lminus + Lplus)) := by
+    rw [hrec, div_eq_mul_inv, norm_mul, norm_mul]
+    calc
+      ‖zminus - (c : ℂ)‖ * ‖Complex.Gamma (zminus - (c : ℂ))‖ *
+            ‖(Complex.Gamma (zplus + (c : ℂ)))⁻¹‖ ≤
+          R * (‖Complex.Gamma zminus‖ * Real.exp (Cminus * c * Lminus)) *
+            (‖(Complex.Gamma zplus)⁻¹‖ * Real.exp (Cplus * c * Lplus)) := by
+        gcongr
+      _ = R * (‖Complex.Gamma zminus‖ * ‖(Complex.Gamma zplus)⁻¹‖) *
+            (Real.exp (Cminus * c * Lminus) * Real.exp (Cplus * c * Lplus)) := by ring
+      _ ≤ R * Real.exp (Real.pi * |u|) *
+            Real.exp (C * c * (Lminus + Lplus)) := by
+        gcongr
+  have hnum :
+      (((1 / 2 : ℝ) - c : ℝ) : ℂ) + ((t - u : ℝ) : ℂ) * I + 1 =
+        zminus - (c : ℂ) + 1 := by
+    dsimp only [zminus]
+    push_cast
+    ring
+  have hden :
+      (((1 / 2 : ℝ) + c : ℝ) : ℂ) + ((t + u : ℝ) : ℂ) * I =
+        zplus + (c : ℂ) := by
+    dsimp only [zplus]
+    push_cast
+    ring
+  rw [hnum, hden]
+  simpa only [Lminus, Lplus, R] using hgoal
+
+set_option maxHeartbeats 1000000 in
+/-- Every positive pair term on the literal Hughes--Young small contour is
+Bochner integrable.  The proof uses the source small-line Gamma estimate and
+keeps the two divisor coefficients independent of the Mellin ordinate. -/
 theorem integrable_hughesYoungRightPairTerm_small
     {T t : ℝ} (hT : Real.exp 1 ≤ T)
-    (ht : t ∈ Set.Icc (T / 4) (4 * T)) {M : ℕ} (hM : 0 < M)
-    {p : ℕ × ℕ} (hp₁ : 0 < p.1) (hp₂ : 0 < p.2)
-    (hp₁M : p.1 ≤ M) (hp₂M : p.2 ≤ M) :
+    (ht : t ∈ Set.Icc (T / 4) (4 * T))
+    {m n : ℕ} (hm : 0 < m) (hn : 0 < n) :
     Integrable (fun u : ℝ =>
-      hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p) := by
-  obtain ⟨C, K, hC, hK, hweight⟩ :=
-    exists_norm_hughesYoungRightContourWeight_small_le_gaussian
-  let A : ℝ := Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 2
-  have hg : Integrable (fun u : ℝ => A * Real.exp (-80 * u ^ 2)) := by
-    apply Integrable.const_mul
-    simpa only [neg_mul] using
-      (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 80))
-  apply hg.mono'
-  · exact ((continuous_uncurry_hughesYoungRightPairTerm_height_ordinate
-        (p := p) (hughesYoungSmallContour_spec hT).1 hp₁ hp₂).comp
-      ((continuous_const : Continuous (fun _u : ℝ => t)).prodMk
-        continuous_id)).aestronglyMeasurable
-  · filter_upwards with u
-    calc
-      ‖hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p‖ ≤
-          ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖ *
-            (M : ℝ) ^ 2 :=
-        norm_hughesYoungRightPairTerm_small_le
-          (hughesYoungSmallContour_spec hT).1 hp₁ hp₂ hp₁M hp₂M
-      _ ≤ (Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2)) *
-            (M : ℝ) ^ 2 := by
-        gcongr
-        exact hweight hT ht u
-      _ = A * Real.exp (-80 * u ^ 2) := by
-        unfold A
-        ring
-
-theorem exists_uniform_intervalIntegral_norm_hughesYoungRightContourWeight_small_le :
-    ∃ C K : ℝ, 0 < C ∧ 0 < K ∧ ∀ {T t H : ℝ},
-      Real.exp 1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) → 0 ≤ H →
-      (∫ u in -H..H,
-        ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖) ≤
-        Real.log T * Real.exp (4 * C) * K *
-          Real.sqrt (Real.pi / 80) := by
-  obtain ⟨C, K, hC, hK, hpoint⟩ :=
-    exists_norm_hughesYoungRightContourWeight_small_le_gaussian
-  refine ⟨C, K, hC, hK, ?_⟩
-  intro T t H hT ht hH
-  have hT1 : 1 ≤ T := by linarith [Real.exp_one_gt_d9]
-  have hgauss : Integrable (fun u : ℝ =>
-      Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2)) := by
-    apply Integrable.const_mul
-    simpa only [neg_mul] using
-      (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 80))
-  have hcont : Continuous (fun u : ℝ =>
-      ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖) :=
-    ((continuous_uncurry_hughesYoungRightContourWeight
-      (hughesYoungSmallContour_spec hT).1).comp
-      ((continuous_const : Continuous (fun _u : ℝ => t)).prodMk
-        continuous_id)).norm
+      hughesYoungRightPairTerm t (hughesYoungSmallContour T) u (m, n)) := by
+  let c : ℝ := hughesYoungSmallContour T
+  obtain ⟨hc, hc1, _hcinv⟩ := hughesYoungSmallContour_spec hT
+  obtain ⟨C, hC, hweight⟩ :=
+    exists_norm_hughesYoungRightContourWeight_shift_le_height_power
+  let Dm : ℝ :=
+    ‖divisorDirichletTerm (afeCriticalPoint t + (c : ℂ)) m‖
+  let Dn : ℝ :=
+    ‖divisorDirichletTerm (afeCriticalPoint (-t) + (c : ℂ)) n‖
+  let K : ℝ := c⁻¹ * T ^ (4 * C * c) * Dm * Dn
+  have hT1 : 1 ≤ T := by
+    exact (Real.one_le_exp (by norm_num)).trans hT
+  have hfactor : Integrable (hughesYoungIntegratedOrdinateFactor C c) :=
+    integrable_hughesYoungIntegratedOrdinateFactor hC hc hc1
+  have hmajorant : Integrable (fun u : ℝ =>
+      K * hughesYoungIntegratedOrdinateFactor C c u) := by
+    exact hfactor.const_mul K
+  have hcontinuous : Continuous (fun u : ℝ =>
+      hughesYoungRightPairTerm t c u (m, n)) := by
+    have hline : Continuous (fun u : ℝ => (c : ℂ) + (u : ℂ) * I) := by
+      fun_prop
+    have hcomp : Continuous (fun u : ℝ =>
+        hughesYoungPairContourTerm t (m, n) ((c : ℂ) + (u : ℂ) * I)) := by
+      rw [continuous_iff_continuousAt]
+      intro u
+      exact (differentiableAt_hughesYoungPairContourTerm t (m, n)
+        (by simpa using hc)).continuousAt.comp hline.continuousAt
+    have heq : (fun u : ℝ =>
+        hughesYoungPairContourTerm t (m, n) ((c : ℂ) + (u : ℂ) * I)) =
+        fun u : ℝ => hughesYoungRightPairTerm t c u (m, n) := by
+      funext u
+      exact hughesYoungPairContourTerm_vertical t c u hm hn
+    rw [← heq]
+    exact hcomp
+  refine hmajorant.mono' hcontinuous.aestronglyMeasurable ?_
+  filter_upwards with u
+  have hweight' := hweight T t u c hT1 ht hc hc1
+  have hord :
+      Real.exp
+          (100 * c ^ 2 - 84 * u ^ 2 +
+            4 * C * c * Real.log (6 * (|u| + 1))) *
+          (25 + 8 * u ^ 2) ^ 8 ≤
+        hughesYoungIntegratedOrdinateFactor C c u := by
+    unfold hughesYoungIntegratedOrdinateFactor
+    gcongr
+    norm_num
+  have hpairNorm :
+      ‖hughesYoungRightPairTerm t c u (m, n)‖ =
+        ‖hughesYoungRightContourWeight t c u‖ * Dm * Dn := by
+    unfold hughesYoungRightPairTerm
+    rw [norm_mul, norm_mul,
+      norm_divisorDirichletTerm_afe_vertical,
+      norm_divisorDirichletTerm_afe_vertical]
+  rw [hpairNorm]
   calc
-    (∫ u in -H..H,
-        ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖) ≤
-      ∫ u in -H..H,
-        Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2) := by
-      apply intervalIntegral.integral_mono_on (by linarith)
-      · exact hcont.intervalIntegrable (a := -H) (b := H) (μ := volume)
-      · exact hgauss.intervalIntegrable
-      · intro u _hu
-        exact hpoint hT ht u
-    _ ≤ ∫ u : ℝ,
-        Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2) := by
-      rw [intervalIntegral.integral_of_le (by linarith)]
-      exact setIntegral_le_integral hgauss
-        (Eventually.of_forall fun u =>
-          mul_nonneg
-            (mul_nonneg
-              (mul_nonneg (Real.log_nonneg hT1) (Real.exp_pos _).le) hK.le)
-            (Real.exp_pos _).le)
-    _ = Real.log T * Real.exp (4 * C) * K *
-        Real.sqrt (Real.pi / 80) := by
-      rw [integral_const_mul, integral_gaussian]
-
-theorem norm_hughesYoungIntegratedSmallPairSquare_le
-    {T t H : ℝ} {M : ℕ} (hM : 0 < M)
-    (hH : 0 ≤ H)
-    (hc : 0 < hughesYoungSmallContour T) :
-    ‖hughesYoungIntegratedSmallPairSquare T t H M‖ ≤
-      (M : ℝ) ^ 4 *
-        (∫ u in -H..H,
-          ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖) := by
-  classical
-  unfold hughesYoungIntegratedSmallPairSquare
-  rw [Finset.Icc_prod_def, Finset.sum_product]
-  calc
-    ‖∑ m ∈ Finset.Icc 1 M, ∑ n ∈ Finset.Icc 1 M,
-        ∫ u in -H..H,
-          hughesYoungRightPairTerm t (hughesYoungSmallContour T) u (m, n)‖ ≤
-      ∑ m ∈ Finset.Icc 1 M, ∑ n ∈ Finset.Icc 1 M,
-        ‖∫ u in -H..H,
-          hughesYoungRightPairTerm t (hughesYoungSmallContour T) u (m, n)‖ :=
-      (norm_sum_le _ _).trans
-        (Finset.sum_le_sum fun _m _hm => norm_sum_le _ _)
-    _ ≤ ∑ _m ∈ Finset.Icc 1 M, ∑ _n ∈ Finset.Icc 1 M,
-        (M : ℝ) ^ 2 *
-          (∫ u in -H..H,
-            ‖hughesYoungRightContourWeight t
-              (hughesYoungSmallContour T) u‖) := by
-      apply Finset.sum_le_sum
-      intro m hm
-      apply Finset.sum_le_sum
-      intro n hn
-      have hm' := Finset.mem_Icc.mp hm
-      have hn' := Finset.mem_Icc.mp hn
-      calc
-        ‖∫ u in -H..H,
-            hughesYoungRightPairTerm t (hughesYoungSmallContour T) u (m, n)‖ ≤
-          ∫ u in -H..H,
-            ‖hughesYoungRightPairTerm t
-              (hughesYoungSmallContour T) u (m, n)‖ :=
-          intervalIntegral.norm_integral_le_integral_norm (by linarith)
-        _ ≤ ∫ u in -H..H,
-            ‖hughesYoungRightContourWeight t
-              (hughesYoungSmallContour T) u‖ * (M : ℝ) ^ 2 := by
-          apply intervalIntegral.integral_mono_on (by linarith)
-          · simpa only [Function.comp_apply, Function.uncurry, id_eq] using
-              (((continuous_uncurry_hughesYoungRightPairTerm_height_ordinate
-                    (p := (m, n)) hc
-                    (Nat.zero_lt_one.trans_le hm'.1)
-                    (Nat.zero_lt_one.trans_le hn'.1)).comp
-                  ((continuous_const : Continuous (fun _u : ℝ => t)).prodMk
-                    continuous_id)).norm.intervalIntegrable
-                (a := -H) (b := H) (μ := volume))
-          · simpa only [Function.comp_apply, Function.uncurry, id_eq] using
-              ((((continuous_uncurry_hughesYoungRightContourWeight hc).comp
-                    ((continuous_const : Continuous (fun _u : ℝ => t)).prodMk
-                      continuous_id)).norm.mul
-                  (continuous_const : Continuous (fun _u : ℝ => (M : ℝ) ^ 2))).intervalIntegrable
-                (a := -H) (b := H) (μ := volume))
-          · intro u _hu
-            exact norm_hughesYoungRightPairTerm_small_le hc
-              (Nat.zero_lt_one.trans_le hm'.1)
-              (Nat.zero_lt_one.trans_le hn'.1) hm'.2 hn'.2
-        _ = (M : ℝ) ^ 2 *
-            (∫ u in -H..H,
-              ‖hughesYoungRightContourWeight t
-                (hughesYoungSmallContour T) u‖) := by
-          rw [intervalIntegral.integral_mul_const]
-          ring
-    _ = (M : ℝ) ^ 4 *
-        (∫ u in -H..H,
-          ‖hughesYoungRightContourWeight t
-            (hughesYoungSmallContour T) u‖) := by
-      have hcard : (Finset.Icc 1 M).card = M := by
-        rw [Nat.card_Icc]
-        omega
-      simp [hcard]
+    ‖hughesYoungRightContourWeight t c u‖ * Dm * Dn ≤
+        (c⁻¹ * T ^ (4 * C * c) *
+          (Real.exp
+            (100 * c ^ 2 - 84 * u ^ 2 +
+              4 * C * c * Real.log (6 * (|u| + 1))) *
+            (25 + 8 * u ^ 2) ^ 8)) * Dm * Dn := by
+      gcongr
+    _ ≤ (c⁻¹ * T ^ (4 * C * c) *
+          hughesYoungIntegratedOrdinateFactor C c u) * Dm * Dn := by
+      gcongr
+    _ = K * hughesYoungIntegratedOrdinateFactor C c u := by
+      dsimp only [K]
       ring
-
-noncomputable def hughesYoungWholeSmallPairSquare
-    (T t : ℝ) (M : ℕ) : ℂ :=
-  ∑ p ∈ Finset.Icc (1, 1) (M, M),
-    ∫ u : ℝ, hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p
-
-theorem tendsto_hughesYoungIntegratedSmallPairSquare_to_whole
-    {T t : ℝ} (hT : Real.exp 1 ≤ T)
-    (ht : t ∈ Set.Icc (T / 4) (4 * T))
-    {M : ℕ} (hM : 0 < M) :
-    Tendsto (fun H : ℝ => hughesYoungIntegratedSmallPairSquare T t H M)
-      atTop (nhds (hughesYoungWholeSmallPairSquare T t M)) := by
-  classical
-  unfold hughesYoungIntegratedSmallPairSquare hughesYoungWholeSmallPairSquare
-  apply tendsto_finsetSum
-  intro p hp
-  have hp' := Finset.mem_Icc.mp hp
-  have hp₁ : 0 < p.1 :=
-    Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).1
-  have hp₂ : 0 < p.2 :=
-    Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).2
-  exact MeasureTheory.intervalIntegral_tendsto_integral
-    (integrable_hughesYoungRightPairTerm_small hT ht hM hp₁ hp₂
-      (Prod.le_def.mp hp'.2).1 (Prod.le_def.mp hp'.2).2)
-    tendsto_neg_atTop_atBot tendsto_id
-
-/-- Exact infinite-contour identity obtained by uniqueness of the limit of
-the finite square.  This is the source-faithful bridge from the shifted
-small line back to the actual zeta-square product. -/
-theorem hughesYoungWholeSmallPairSquare_eq_zetaSquare_sub_highTail
-    {q : ℕ} (hq : 0 < q) (η : ℝ) (hη0 : 0 < η)
-    (hη : η < 2 * (q : ℝ) - 1 / 2)
-    {T t : ℝ} (hT : Real.exp 1 ≤ T)
-    (ht : t ∈ Set.Icc (T / 4) (4 * T))
-    {M : ℕ} (hM : 0 < M) :
-    hughesYoungWholeSmallPairSquare T t M =
-      (Real.pi : ℂ) *
-          (riemannZeta (afeCriticalPoint t) ^ 2 *
-            riemannZeta (afeCriticalPoint (-t)) ^ 2) -
-        hughesYoungWholeHighPairSquareTail q t M := by
-  exact tendsto_nhds_unique
-    (tendsto_hughesYoungIntegratedSmallPairSquare_to_whole hT ht hM)
-    (tendsto_hughesYoungIntegratedSmallPairSquare
-      hq η hη0 hη hT ht hM)
-
-theorem exp_neg_eighty_sq_le_gaussian_tail
-    {H u : ℝ} (hH : 0 ≤ H) (hu : u ∈ (Set.Ioc (-H) H)ᶜ) :
-    Real.exp (-80 * u ^ 2) ≤
-      Real.exp (-40 * H ^ 2) * Real.exp (-40 * u ^ 2) := by
-  have hu' : u ≤ -H ∨ H < u := by
-    simpa only [Set.mem_compl_iff, Set.mem_Ioc, not_and_or, not_lt, not_le] using hu
-  have hsq : H ^ 2 ≤ u ^ 2 := by
-    rcases hu' with huLeft | huRight
-    · nlinarith [sq_nonneg (u + H)]
-    · nlinarith [sq_nonneg (u - H)]
-  rw [← Real.exp_add]
-  exact Real.exp_le_exp.mpr (by nlinarith)
-
-theorem integral_gaussian_tail_compl_Ioc_le
-    {H : ℝ} (hH : 0 ≤ H) :
-    (∫ u in (Set.Ioc (-H) H)ᶜ, Real.exp (-80 * u ^ 2)) ≤
-      Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40) := by
-  let g : ℝ → ℝ := fun u =>
-    Real.exp (-40 * H ^ 2) * Real.exp (-40 * u ^ 2)
-  have h80 : Integrable (fun u : ℝ => Real.exp (-80 * u ^ 2)) := by
-    simpa only [neg_mul] using
-      (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 80))
-  have h40 : Integrable (fun u : ℝ => Real.exp (-40 * u ^ 2)) := by
-    simpa only [neg_mul] using
-      (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 40))
-  have hg : Integrable g := h40.const_mul _
-  calc
-    (∫ u in (Set.Ioc (-H) H)ᶜ, Real.exp (-80 * u ^ 2)) ≤
-        ∫ u in (Set.Ioc (-H) H)ᶜ, g u := by
-      apply setIntegral_mono_on h80.integrableOn hg.integrableOn
-        measurableSet_Ioc.compl
-      intro u hu
-      exact exp_neg_eighty_sq_le_gaussian_tail hH hu
-    _ ≤ ∫ u : ℝ, g u := by
-      exact setIntegral_le_integral hg
-        (Eventually.of_forall fun u => mul_nonneg (Real.exp_pos _).le (Real.exp_pos _).le)
-    _ = Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40) := by
-      unfold g
-      rw [integral_const_mul, integral_gaussian]
-
-theorem norm_hughesYoungWholePairTerm_sub_interval_le
-    {C K T t H : ℝ} {M : ℕ} {p : ℕ × ℕ}
-    (hK : 0 < K)
-    (hweight : ∀ {T t : ℝ}, Real.exp 1 ≤ T →
-      t ∈ Set.Icc (T / 4) (4 * T) → ∀ u : ℝ,
-      ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖ ≤
-        Real.log T * Real.exp (4 * C) * K * Real.exp (-80 * u ^ 2))
-    (hT : Real.exp 1 ≤ T) (ht : t ∈ Set.Icc (T / 4) (4 * T))
-    (hH : 0 ≤ H) (hM : 0 < M)
-    (hp₁ : 0 < p.1) (hp₂ : 0 < p.2)
-    (hp₁M : p.1 ≤ M) (hp₂M : p.2 ≤ M) :
-    ‖(∫ u : ℝ,
-        hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p) -
-      ∫ u in -H..H,
-        hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p‖ ≤
-      (Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 2) *
-        (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-  let f : ℝ → ℂ := fun u =>
-    hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p
-  let A : ℝ := Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 2
-  let g : ℝ → ℝ := fun u => A * Real.exp (-80 * u ^ 2)
-  have hf : Integrable f :=
-    integrable_hughesYoungRightPairTerm_small hT ht hM hp₁ hp₂ hp₁M hp₂M
-  have hT1 : 1 ≤ T := by linarith [Real.exp_one_gt_d9]
-  have hA : 0 ≤ A := by
-    unfold A
-    exact mul_nonneg
-      (mul_nonneg
-        (mul_nonneg (Real.log_nonneg hT1) (Real.exp_pos _).le) hK.le)
-      (sq_nonneg (M : ℝ))
-  have hg : Integrable g := by
-    apply Integrable.const_mul
-    simpa only [neg_mul] using
-      (integrable_exp_neg_mul_sq (by norm_num : (0 : ℝ) < 80))
-  have hrepr :
-      (∫ u : ℝ, f u) - ∫ u in -H..H, f u =
-        ∫ u in (Set.Ioc (-H) H)ᶜ, f u := by
-    rw [intervalIntegral.integral_of_le (by linarith)]
-    exact (setIntegral_compl measurableSet_Ioc hf).symm
-  rw [hrepr]
-  calc
-    ‖∫ u in (Set.Ioc (-H) H)ᶜ, f u‖ ≤
-        ∫ u in (Set.Ioc (-H) H)ᶜ, g u := by
-      apply norm_integral_le_of_norm_le hg.integrableOn
-      filter_upwards [ae_restrict_mem measurableSet_Ioc.compl] with u hu
-      calc
-        ‖f u‖ ≤
-            ‖hughesYoungRightContourWeight t (hughesYoungSmallContour T) u‖ *
-              (M : ℝ) ^ 2 := by
-          exact norm_hughesYoungRightPairTerm_small_le
-            (hughesYoungSmallContour_spec hT).1 hp₁ hp₂ hp₁M hp₂M
-        _ ≤ (Real.log T * Real.exp (4 * C) * K *
-              Real.exp (-80 * u ^ 2)) * (M : ℝ) ^ 2 := by
-          gcongr
-          exact hweight hT ht u
-        _ = g u := by
-          unfold g A
-          ring
-    _ = A * (∫ u in (Set.Ioc (-H) H)ᶜ, Real.exp (-80 * u ^ 2)) := by
-      unfold g
-      rw [integral_const_mul]
-    _ ≤ A * (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-      exact mul_le_mul_of_nonneg_left (integral_gaussian_tail_compl_Ioc_le hH) hA
-    _ = (Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 2) *
-        (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-      rfl
-
-/-- Quantitative removal of the finite small-contour ordinate cutoff for the
-entire `M × M` arithmetic square. -/
-theorem exists_norm_hughesYoungWholeSmallPairSquare_sub_integrated_le :
-    ∃ C K : ℝ, 0 < C ∧ 0 < K ∧ ∀ {T t H : ℝ} {M : ℕ},
-      Real.exp 1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) →
-      0 ≤ H → 0 < M →
-      ‖hughesYoungWholeSmallPairSquare T t M -
-          hughesYoungIntegratedSmallPairSquare T t H M‖ ≤
-        Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 4 *
-          (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-  obtain ⟨C, K, hC, hK, hweight⟩ :=
-    exists_norm_hughesYoungRightContourWeight_small_le_gaussian
-  refine ⟨C, K, hC, hK, ?_⟩
-  intro T t H M hT ht hH hM
-  classical
-  unfold hughesYoungWholeSmallPairSquare
-    hughesYoungIntegratedSmallPairSquare
-  rw [← Finset.sum_sub_distrib]
-  calc
-    ‖∑ p ∈ Finset.Icc (1, 1) (M, M),
-        ((∫ u : ℝ,
-            hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p) -
-          ∫ u in -H..H,
-            hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p)‖ ≤
-      ∑ p ∈ Finset.Icc (1, 1) (M, M),
-        ‖(∫ u : ℝ,
-            hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p) -
-          ∫ u in -H..H,
-            hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p‖ :=
-      norm_sum_le _ _
-    _ ≤ ∑ _p ∈ Finset.Icc (1, 1) (M, M),
-        (Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 2) *
-          (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-      apply Finset.sum_le_sum
-      intro p hp
-      have hp' := Finset.mem_Icc.mp hp
-      exact norm_hughesYoungWholePairTerm_sub_interval_le hK hweight
-        hT ht hH hM
-        (Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).1)
-        (Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).2)
-        (Prod.le_def.mp hp'.2).1 (Prod.le_def.mp hp'.2).2
-    _ = Real.log T * Real.exp (4 * C) * K * (M : ℝ) ^ 4 *
-        (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40)) := by
-      have hcard : (Finset.Icc (1, 1) (M, M)).card = M ^ 2 := by
-        simp [Finset.Icc_prod_def, Nat.card_Icc, pow_two]
-      simp [hcard]
-      ring
-
-/-- The opening-line square tail satisfies the same uniform estimate after
-the finite ordinate cutoff is removed. -/
-theorem exists_norm_hughesYoungWholeHighPairSquareTail_le
-    (q : ℕ) (hq : 0 < q) (η : ℝ) (hη0 : 0 < η)
-    (hη : η < 2 * (q : ℝ) - 1 / 2) :
-    ∃ L : ℝ, 0 < L ∧ ∀ {T t : ℝ} {M : ℕ},
-      1 ≤ T → t ∈ Set.Icc (T / 4) (4 * T) → 0 < M →
-      ‖hughesYoungWholeHighPairSquareTail q t M‖ ≤
-        (256 * Real.exp (400 * (q : ℝ) ^ 2) *
-          ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
-          (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
-          hughesYoungReferenceDivisorPairMass η) * L := by
-  obtain ⟨L, hL, hfinite⟩ :=
-    exists_norm_hughesYoungIntegratedHighPairSquareTail_le q hq η hη0 hη
-  refine ⟨L, hL, ?_⟩
-  intro T t M hT ht hM
-  let B : ℝ :=
-    (256 * Real.exp (400 * (q : ℝ) ^ 2) *
-      ((7 + 2 * (q : ℝ)) * T) ^ (4 * q + 8) *
-      (M : ℝ) ^ (-(2 * (q : ℝ) - 1 / 2 - η)) *
-      hughesYoungReferenceDivisorPairMass η) * L
-  have hlim := (tendsto_hughesYoungIntegratedHighPairSquareTail
-    hq η hη0 hη hT ht hM).norm
-  have hevent : ∀ᶠ H : ℝ in atTop,
-      ‖hughesYoungIntegratedHighPairSquareTail q t H M‖ ≤ B := by
-    filter_upwards [eventually_ge_atTop (0 : ℝ)] with H hH
-    exact hfinite hT ht hM hH
-  have hclosed : IsClosed (Set.Iic B) := isClosed_Iic
-  have hmem : ‖hughesYoungWholeHighPairSquareTail q t M‖ ∈ Set.Iic B :=
-    hclosed.mem_of_tendsto hlim hevent
-  simpa only [B] using hmem
 
 end RiemannZeta.GuthMaynard

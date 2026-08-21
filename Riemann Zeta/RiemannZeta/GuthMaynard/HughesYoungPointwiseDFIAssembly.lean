@@ -255,6 +255,51 @@ noncomputable def hughesYoungActiveNonLargeDFIBoxes
       hughesYoungFullDyadicScale ij.2 ≤
         4 * hughesYoungFullDyadicScale ij.1)
 
+/-- Source-faithful exhaustion of the complement of the large-DFI range.
+Every complementary active box is an isolated endpoint, is empty for one
+of the two positive arithmetic coordinates, has genuinely small optimized
+DFI scale, or fails one of the two factor-four comparability inequalities.
+This disjunction is the routing interface used by the quantitative
+Hughes--Young consumer; in particular it prevents a noncomparable box from
+being sent to the small-box estimate merely because its harmonic-mean scale
+is small. -/
+theorem hughesYoungActiveNonLargeDFIBoxes_cases
+    {P : ℝ} {a b R K : ℕ} {ij : ℕ × ℕ}
+    (hij : ij ∈ hughesYoungActiveNonLargeDFIBoxes P a b R K) :
+    ij.1 = 0 ∨ ij.2 = 0 ∨
+      ¬ (a : ℝ) ≤ 2 * hughesYoungFullDyadicScale ij.1 ∨
+      ¬ (b : ℝ) ≤ 2 * hughesYoungFullDyadicScale ij.2 ∨
+      hughesYoungDFIOptimalU P
+          (hughesYoungFullDyadicScale ij.1)
+          (hughesYoungFullDyadicScale ij.2) < 64 ∨
+      4 * hughesYoungFullDyadicScale ij.2 <
+          hughesYoungFullDyadicScale ij.1 ∨
+      4 * hughesYoungFullDyadicScale ij.1 <
+          hughesYoungFullDyadicScale ij.2 := by
+  have hnot := (Finset.mem_filter.mp hij).2
+  by_cases hi : 0 < ij.1
+  · by_cases hj : 0 < ij.2
+    · by_cases ha : (a : ℝ) ≤ 2 * hughesYoungFullDyadicScale ij.1
+      · by_cases hb : (b : ℝ) ≤ 2 * hughesYoungFullDyadicScale ij.2
+        · by_cases hU : 64 ≤ hughesYoungDFIOptimalU P
+              (hughesYoungFullDyadicScale ij.1)
+              (hughesYoungFullDyadicScale ij.2)
+          · by_cases hXY : hughesYoungFullDyadicScale ij.1 ≤
+                4 * hughesYoungFullDyadicScale ij.2
+            · by_cases hYX : hughesYoungFullDyadicScale ij.2 ≤
+                  4 * hughesYoungFullDyadicScale ij.1
+              · exact False.elim (hnot ⟨hi, hj, ha, hb, hU, hXY, hYX⟩)
+              · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr
+                  (Or.inr (lt_of_not_ge hYX))))))
+            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr
+                (Or.inl (lt_of_not_ge hXY))))))
+          · exact Or.inr (Or.inr (Or.inr (Or.inr
+              (Or.inl (lt_of_not_ge hU)))))
+        · exact Or.inr (Or.inr (Or.inr (Or.inl hb)))
+      · exact Or.inr (Or.inr (Or.inl ha))
+    · exact Or.inr (Or.inl (Nat.eq_zero_of_not_pos hj))
+  · exact Or.inl (Nat.eq_zero_of_not_pos hi)
+
 /-- The concrete active off-diagonal restricted to boxes satisfying every
 large-DFI entry condition. -/
 noncomputable def hughesYoungActiveLargeDFIOffDiagonal

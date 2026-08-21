@@ -94,4 +94,51 @@ theorem hughesYoungDFIOptimalU_lt_sixtyFour_of_not_large
     hughesYoungDFIOptimalU P X Y < 64 :=
   lt_of_not_ge h
 
+/-- On the factor-four comparable range, failure of the optimized DFI
+scale forces the second physical scale into the equation-(65) range.  This
+is the quantitative harmonic-mean calculation used in the small-box branch
+of Hughes--Young: `XY/(P(X+Y)) < 64` and `Y ≤ 4X` imply `Y < 320P`. -/
+theorem hughesYoung_secondScale_lt_threeHundredTwenty_mul_of_optimalU_lt
+    {P X Y : ℝ} (hP : 0 < P) (hX : 0 < X) (hY : 0 < Y)
+    (hYX : Y ≤ 4 * X)
+    (hsmall : hughesYoungDFIOptimalU P X Y < 64) :
+    Y < 320 * P := by
+  have hsum : 0 < X + Y := add_pos hX hY
+  have hidentity :
+      hughesYoungDFIOptimalU P X Y * (P * (X + Y)) = X * Y := by
+    unfold hughesYoungDFIOptimalU
+    field_simp
+  have hsumBound : X + Y ≤ 5 * X := by linarith
+  have hUP : hughesYoungDFIOptimalU P X Y * P < 64 * P :=
+    mul_lt_mul_of_pos_right hsmall hP
+  by_contra hYP
+  have hYP' : 320 * P ≤ Y := le_of_not_gt hYP
+  have hU0 : 0 ≤ hughesYoungDFIOptimalU P X Y :=
+    hughesYoungDFIOptimalU_nonneg hP hX.le hY.le
+  have hleft :
+      hughesYoungDFIOptimalU P X Y * (P * (X + Y)) <
+        64 * P * (5 * X) := by
+    calc
+      hughesYoungDFIOptimalU P X Y * (P * (X + Y)) =
+          (hughesYoungDFIOptimalU P X Y * P) * (X + Y) := by ring
+      _ < (64 * P) * (X + Y) :=
+        mul_lt_mul_of_pos_right hUP hsum
+      _ ≤ (64 * P) * (5 * X) := by gcongr
+  rw [hidentity] at hleft
+  nlinarith
+
+/-- Symmetric first-coordinate form of the comparable small-scale bound. -/
+theorem hughesYoung_firstScale_lt_threeHundredTwenty_mul_of_optimalU_lt
+    {P X Y : ℝ} (hP : 0 < P) (hX : 0 < X) (hY : 0 < Y)
+    (hXY : X ≤ 4 * Y)
+    (hsmall : hughesYoungDFIOptimalU P X Y < 64) :
+    X < 320 * P := by
+  have hsymm : hughesYoungDFIOptimalU P X Y =
+      hughesYoungDFIOptimalU P Y X := by
+    unfold hughesYoungDFIOptimalU
+    ring
+  rw [hsymm] at hsmall
+  exact hughesYoung_secondScale_lt_threeHundredTwenty_mul_of_optimalU_lt
+    hP hY hX hXY hsmall
+
 end RiemannZeta.GuthMaynard

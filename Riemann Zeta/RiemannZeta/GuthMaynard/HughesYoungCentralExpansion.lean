@@ -7,6 +7,7 @@ open scoped BigOperators Interval Topology
 noncomputable section
 
 set_option maxHeartbeats 4000000
+set_option Elab.async false
 
 namespace RiemannZeta.GuthMaynard
 
@@ -109,6 +110,67 @@ private theorem hughesYoungEquation84RegularizedBetaKernel_eq_fourTerm
   dsimp only
   ring
 
+private theorem mul_bilinear_fourTerm
+    (O CX COne b b00 b10 b01 b11 : ℂ)
+    (hb : b =
+      b00 + CX * (b10 - b00) + COne * (b01 - b00) +
+        (CX * COne) * (b11 - (b10 - b00) - (b01 - b00) - b00)) :
+    O * b =
+      O * b00 + CX * (O * (b10 - b00)) +
+        COne * (O * (b01 - b00)) +
+        (CX * COne) *
+          (O * (b11 - (b10 - b00) - (b01 - b00) - b00)) := by
+  rw [hb]
+  ring
+
+private theorem hughesYoungEquation84Kernel00_eq_prefactor_mul_beta
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel00 t w =
+      hughesYoungEquation84RegularizedContourPrefactor t w *
+        hughesYoungEquation84RegularizedBetaKernel t w 0 0 := by
+  unfold hughesYoungEquation84Kernel00
+  exact hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta
+    t w 0 0
+
+private theorem hughesYoungEquation84Kernel10_eq_prefactor_mul_beta
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel10 t w =
+      hughesYoungEquation84RegularizedContourPrefactor t w *
+        (hughesYoungEquation84RegularizedBetaKernel t w 1 0 -
+          hughesYoungEquation84RegularizedBetaKernel t w 0 0) := by
+  unfold hughesYoungEquation84Kernel10
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel00_eq_prefactor_mul_beta]
+  ring
+
+private theorem hughesYoungEquation84Kernel01_eq_prefactor_mul_beta
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel01 t w =
+      hughesYoungEquation84RegularizedContourPrefactor t w *
+        (hughesYoungEquation84RegularizedBetaKernel t w 0 1 -
+          hughesYoungEquation84RegularizedBetaKernel t w 0 0) := by
+  unfold hughesYoungEquation84Kernel01
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel00_eq_prefactor_mul_beta]
+  ring
+
+private theorem hughesYoungEquation84Kernel11_eq_prefactor_mul_beta
+    (t : ℝ) (w : ℂ) :
+    hughesYoungEquation84Kernel11 t w =
+      hughesYoungEquation84RegularizedContourPrefactor t w *
+        (hughesYoungEquation84RegularizedBetaKernel t w 1 1 -
+          (hughesYoungEquation84RegularizedBetaKernel t w 1 0 -
+            hughesYoungEquation84RegularizedBetaKernel t w 0 0) -
+          (hughesYoungEquation84RegularizedBetaKernel t w 0 1 -
+            hughesYoungEquation84RegularizedBetaKernel t w 0 0) -
+          hughesYoungEquation84RegularizedBetaKernel t w 0 0) := by
+  unfold hughesYoungEquation84Kernel11
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel10_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel01_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel00_eq_prefactor_mul_beta]
+  ring
+
 /-- Exact bilinear four-coefficient expansion of the pole-cancelled
 equation-(84) kernel. -/
 theorem hughesYoungEquation84RegularizedContourKernel_eq_fourTerm
@@ -118,29 +180,13 @@ theorem hughesYoungEquation84RegularizedContourKernel_eq_fourTerm
       CX * hughesYoungEquation84Kernel10 t w +
       COne * hughesYoungEquation84Kernel01 t w +
       (CX * COne) * hughesYoungEquation84Kernel11 t w := by
-  let p : ℂ := afeCriticalPoint t + w
-  let q : ℂ := afeCriticalPoint (-t) + w
-  let O : ℂ := Complex.exp (100 * w ^ 2) * hughesYoungAuxiliaryZero w *
-    (p * (1 - p)) ^ 2 * q ^ 2 *
-    Complex.Gammaℝ p ^ 2 * Complex.Gammaℝ q ^ 2 /
-    afePoleNormalization t / w / afeGammaNormalization t
-  unfold hughesYoungEquation84Kernel00 hughesYoungEquation84Kernel10
-    hughesYoungEquation84Kernel01 hughesYoungEquation84Kernel11
-  change O * hughesYoungEquation84RegularizedBetaKernel t w CX COne =
-    O * hughesYoungEquation84RegularizedBetaKernel t w 0 0 +
-    CX * (O * hughesYoungEquation84RegularizedBetaKernel t w 1 0 -
-      O * hughesYoungEquation84RegularizedBetaKernel t w 0 0) +
-    COne * (O * hughesYoungEquation84RegularizedBetaKernel t w 0 1 -
-      O * hughesYoungEquation84RegularizedBetaKernel t w 0 0) +
-    CX * COne *
-      (O * hughesYoungEquation84RegularizedBetaKernel t w 1 1 -
-        (O * hughesYoungEquation84RegularizedBetaKernel t w 1 0 -
-          O * hughesYoungEquation84RegularizedBetaKernel t w 0 0) -
-        (O * hughesYoungEquation84RegularizedBetaKernel t w 0 1 -
-          O * hughesYoungEquation84RegularizedBetaKernel t w 0 0) -
-        O * hughesYoungEquation84RegularizedBetaKernel t w 0 0)
-  rw [hughesYoungEquation84RegularizedBetaKernel_eq_fourTerm]
-  ring
+  rw [hughesYoungEquation84RegularizedContourKernel_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel00_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel10_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel01_eq_prefactor_mul_beta,
+    hughesYoungEquation84Kernel11_eq_prefactor_mul_beta]
+  apply mul_bilinear_fourTerm
+  exact hughesYoungEquation84RegularizedBetaKernel_eq_fourTerm t w CX COne
 
 /-- Common nonnegative logarithmic budget for the two reduced DFI
 denominators in a fixed positive shift. -/
@@ -661,6 +707,81 @@ theorem hughesYoungEquation84NegativeContourSeries_boundaryRect_zero
     (fun w hw₀ hw₁ => differentiableAt_hughesYoungEquation84NegativeContourSeries
       T t h k a b r ha hb hr hw₀ hw₁)
 
+theorem fourFiniteDifference_norm_le
+    (z₀₀ z₁₀ z₀₁ z₁₁ : ℂ)
+    (B₀₀ B₁₀ B₀₁ B₁₁ E R : ℝ)
+    (hB₀₀ : 0 < B₀₀) (hB₁₀ : 0 < B₁₀)
+    (hB₀₁ : 0 < B₀₁) (hB₁₁ : 0 < B₁₁)
+    (hE : 0 ≤ E) (hR : 0 ≤ R)
+    (h₀₀ : ‖z₀₀‖ ≤ B₀₀ * E * R)
+    (h₁₀ : ‖z₁₀‖ ≤ B₁₀ * E * R)
+    (h₀₁ : ‖z₀₁‖ ≤ B₀₁ * E * R)
+    (h₁₁ : ‖z₁₁‖ ≤ B₁₁ * E * R) :
+    let B := B₁₁ + B₁₀ + B₀₁ + 3 * B₀₀
+    ‖z₀₀‖ ≤ B * E * R ∧
+      ‖z₁₀ - z₀₀‖ ≤ B * E * R ∧
+      ‖z₀₁ - z₀₀‖ ≤ B * E * R ∧
+      ‖z₁₁ - (z₁₀ - z₀₀) - (z₀₁ - z₀₀) - z₀₀‖ ≤
+        B * E * R := by
+  dsimp only
+  have h₀₀' : ‖z₀₀‖ ≤
+      (B₁₁ + B₁₀ + B₀₁ + 3 * B₀₀) * E * R := by
+    calc
+      _ ≤ B₀₀ * E * R := h₀₀
+      _ ≤ _ := by
+        apply mul_le_mul_of_nonneg_right _ hR
+        apply mul_le_mul_of_nonneg_right _ hE
+        linarith
+  have h₁₀small : ‖z₁₀ - z₀₀‖ ≤ (B₁₀ + B₀₀) * E * R := by
+    calc
+      _ ≤ ‖z₁₀‖ + ‖z₀₀‖ := norm_sub_le _ _
+      _ ≤ B₁₀ * E * R + B₀₀ * E * R := add_le_add h₁₀ h₀₀
+      _ = _ := by ring
+  have h₁₀' : ‖z₁₀ - z₀₀‖ ≤
+      (B₁₁ + B₁₀ + B₀₁ + 3 * B₀₀) * E * R := by
+    calc
+      _ ≤ (B₁₀ + B₀₀) * E * R := h₁₀small
+      _ ≤ _ := by
+        apply mul_le_mul_of_nonneg_right _ hR
+        apply mul_le_mul_of_nonneg_right _ hE
+        linarith
+  have h₀₁small : ‖z₀₁ - z₀₀‖ ≤ (B₀₁ + B₀₀) * E * R := by
+    calc
+      _ ≤ ‖z₀₁‖ + ‖z₀₀‖ := norm_sub_le _ _
+      _ ≤ B₀₁ * E * R + B₀₀ * E * R := add_le_add h₀₁ h₀₀
+      _ = _ := by ring
+  have h₀₁' : ‖z₀₁ - z₀₀‖ ≤
+      (B₁₁ + B₁₀ + B₀₁ + 3 * B₀₀) * E * R := by
+    calc
+      _ ≤ (B₀₁ + B₀₀) * E * R := h₀₁small
+      _ ≤ _ := by
+        apply mul_le_mul_of_nonneg_right _ hR
+        apply mul_le_mul_of_nonneg_right _ hE
+        linarith
+  have h₁₁' :
+      ‖z₁₁ - (z₁₀ - z₀₀) - (z₀₁ - z₀₀) - z₀₀‖ ≤
+        (B₁₁ + B₁₀ + B₀₁ + 3 * B₀₀) * E * R := by
+    calc
+      _ ≤ ‖z₁₁‖ + ‖z₁₀ - z₀₀‖ +
+          ‖z₀₁ - z₀₀‖ + ‖z₀₀‖ := by
+        calc
+          _ ≤ ‖z₁₁ - (z₁₀ - z₀₀) - (z₀₁ - z₀₀)‖ +
+              ‖z₀₀‖ := norm_sub_le _ _
+          _ ≤ (‖z₁₁ - (z₁₀ - z₀₀)‖ +
+              ‖z₀₁ - z₀₀‖) + ‖z₀₀‖ := by
+            gcongr
+            exact norm_sub_le _ _
+          _ ≤ ((‖z₁₁‖ + ‖z₁₀ - z₀₀‖) +
+              ‖z₀₁ - z₀₀‖) + ‖z₀₀‖ := by
+            gcongr
+            exact norm_sub_le _ _
+      _ ≤ B₁₁ * E * R + (B₁₀ + B₀₀) * E * R +
+          (B₀₁ + B₀₀) * E * R + B₀₀ * E * R := by
+        exact add_le_add (add_le_add (add_le_add h₁₁ h₁₀small)
+          h₀₁small) h₀₀
+      _ = _ := by ring
+  exact ⟨h₀₀', h₁₀', h₀₁', h₁₁'⟩
+
 set_option maxHeartbeats 2000000 in
 /-- All four finite-difference kernel coefficients share one Gaussian
 horizontal envelope on a fixed contour strip. -/
@@ -671,16 +792,16 @@ theorem exists_norm_hughesYoungEquation84KernelCoefficients_horizontal_le
       ∀ x ∈ Set.Icc c₀ c₁,
         ‖hughesYoungEquation84Kernel00 t ((x : ℂ) + (y : ℂ) * I)‖ ≤
             B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-              (2 + |t| + c₁ + |y|) ^ 9 ∧
+              (2 + |t| + c₁ + |y|) ^ 17 ∧
         ‖hughesYoungEquation84Kernel10 t ((x : ℂ) + (y : ℂ) * I)‖ ≤
             B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-              (2 + |t| + c₁ + |y|) ^ 9 ∧
+              (2 + |t| + c₁ + |y|) ^ 17 ∧
         ‖hughesYoungEquation84Kernel01 t ((x : ℂ) + (y : ℂ) * I)‖ ≤
             B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-              (2 + |t| + c₁ + |y|) ^ 9 ∧
+              (2 + |t| + c₁ + |y|) ^ 17 ∧
         ‖hughesYoungEquation84Kernel11 t ((x : ℂ) + (y : ℂ) * I)‖ ≤
             B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-              (2 + |t| + c₁ + |y|) ^ 9 := by
+              (2 + |t| + c₁ + |y|) ^ 17 := by
   obtain ⟨B₀₀, hB₀₀, hb₀₀⟩ :=
     exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
       t 0 0 hc₀ hc₁ hc
@@ -699,15 +820,44 @@ theorem exists_norm_hughesYoungEquation84KernelCoefficients_horizontal_le
     positivity
   refine ⟨B, hB, ?_⟩
   intro y hy hty x hx
-  let E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2)
-  let R : ℝ := (2 + |t| + c₁ + |y|) ^ 9
-  have hE : 0 ≤ E := by dsimp [E]; positivity
   have hc₁₀ : 0 ≤ c₁ := hc₀.le.trans hc
-  have hR : 0 ≤ R := by dsimp [R]; positivity
-  have h₀₀ := hb₀₀ y hy hty x hx
-  have h₁₀ := hb₁₀ y hy hty x hx
-  have h₀₁ := hb₀₁ y hy hty x hx
-  have h₁₁ := hb₁₁ y hy hty x hx
+  have hs := fourFiniteDifference_norm_le
+    (hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 0 0)
+    (hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 1 0)
+    (hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 0 1)
+    (hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 1 1)
+    B₀₀ B₁₀ B₀₁ B₁₁
+    (Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2))
+    ((2 + |t| + c₁ + |y|) ^ 17)
+    hB₀₀ hB₁₀ hB₀₁ hB₁₁
+    (by positivity) (pow_nonneg (by positivity) 17)
+    (hb₀₀ y hy hty x hx) (hb₁₀ y hy hty x hx)
+    (hb₀₁ y hy hty x hx) (hb₁₁ y hy hty x hx)
+  simpa only [B, hughesYoungEquation84Kernel00,
+    hughesYoungEquation84Kernel10, hughesYoungEquation84Kernel01,
+    hughesYoungEquation84Kernel11] using hs
+  /-
+  set E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) with hEdef
+  set R : ℝ := (2 + |t| + c₁ + |y|) ^ 17 with hRdef
+  have hE : 0 ≤ E := by rw [hEdef]; positivity
+  have hc₁₀ : 0 ≤ c₁ := hc₀.le.trans hc
+  have hR : 0 ≤ R := by rw [hRdef]; positivity
+  have h₀₀ : ‖hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 0 0‖ ≤ B₀₀ * E * R := by
+    simpa only [hEdef, hRdef] using hb₀₀ y hy hty x hx
+  have h₁₀ : ‖hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 1 0‖ ≤ B₁₀ * E * R := by
+    simpa only [hEdef, hRdef] using hb₁₀ y hy hty x hx
+  have h₀₁ : ‖hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 0 1‖ ≤ B₀₁ * E * R := by
+    simpa only [hEdef, hRdef] using hb₀₁ y hy hty x hx
+  have h₁₁ : ‖hughesYoungEquation84RegularizedContourKernel t
+      ((x : ℂ) + (y : ℂ) * I) 1 1‖ ≤ B₁₁ * E * R := by
+    simpa only [hEdef, hRdef] using hb₁₁ y hy hty x hx
   have hk₀₀ : ‖hughesYoungEquation84Kernel00 t ((x : ℂ) + (y : ℂ) * I)‖ ≤
       B * E * R := by
     unfold hughesYoungEquation84Kernel00
@@ -791,10 +941,50 @@ theorem exists_norm_hughesYoungEquation84KernelCoefficients_horizontal_le
       _ = B * E * R := by
         dsimp [B]
         ring
-  exact ⟨by simpa only [E, R] using hk₀₀,
-    by simpa only [E, R] using hk₁₀,
-    by simpa only [E, R] using hk₀₁,
-    by simpa only [E, R] using hk₁₁⟩
+  exact ⟨by simpa only [hEdef, hRdef] using hk₀₀,
+    by simpa only [hEdef, hRdef] using hk₁₀,
+    by simpa only [hEdef, hRdef] using hk₀₁,
+    by simpa only [hEdef, hRdef] using hk₁₁⟩
+  -/
+
+private theorem norm_mul_fourTerm_le
+    (P a₀₀ a₁₀ a₀₁ a₁₁ z₀₀ z₁₀ z₀₁ z₁₁ : ℂ)
+    (K B E R : ℝ) (hK : ‖P‖ ≤ K) (hK₀ : 0 ≤ K)
+    (hz₀₀ : ‖z₀₀‖ ≤ B * E * R) (hz₁₀ : ‖z₁₀‖ ≤ B * E * R)
+    (hz₀₁ : ‖z₀₁‖ ≤ B * E * R) (hz₁₁ : ‖z₁₁‖ ≤ B * E * R) :
+    ‖P * (a₀₀ * z₀₀ + a₁₀ * z₁₀ + a₀₁ * z₀₁ + a₁₁ * z₁₁)‖ ≤
+      (K * (1 + ‖a₀₀‖ + ‖a₁₀‖ + ‖a₀₁‖ + ‖a₁₁‖) * B) * E * R := by
+  rw [norm_mul]
+  have hinside :
+      ‖a₀₀ * z₀₀ + a₁₀ * z₁₀ + a₀₁ * z₀₁ + a₁₁ * z₁₁‖ ≤
+        (1 + ‖a₀₀‖ + ‖a₁₀‖ + ‖a₀₁‖ + ‖a₁₁‖) *
+          (B * E * R) := by
+    calc
+      _ ≤ ‖a₀₀‖ * ‖z₀₀‖ + ‖a₁₀‖ * ‖z₁₀‖ +
+          ‖a₀₁‖ * ‖z₀₁‖ + ‖a₁₁‖ * ‖z₁₁‖ := by
+        calc
+          _ ≤ ‖a₀₀ * z₀₀ + a₁₀ * z₁₀ + a₀₁ * z₀₁‖ +
+              ‖a₁₁ * z₁₁‖ := norm_add_le _ _
+          _ ≤ (‖a₀₀ * z₀₀ + a₁₀ * z₁₀‖ +
+              ‖a₀₁ * z₀₁‖) + ‖a₁₁ * z₁₁‖ := by
+            gcongr
+            exact norm_add_le _ _
+          _ ≤ ((‖a₀₀ * z₀₀‖ + ‖a₁₀ * z₁₀‖) +
+              ‖a₀₁ * z₀₁‖) + ‖a₁₁ * z₁₁‖ := by
+            gcongr
+            exact norm_add_le _ _
+          _ = _ := by simp only [norm_mul]
+      _ ≤ ‖a₀₀‖ * (B * E * R) + ‖a₁₀‖ * (B * E * R) +
+          ‖a₀₁‖ * (B * E * R) + ‖a₁₁‖ * (B * E * R) := by
+        gcongr
+      _ ≤ (1 + ‖a₀₀‖ + ‖a₁₀‖ + ‖a₀₁‖ + ‖a₁₁‖) *
+          (B * E * R) := by
+        have hBER : 0 ≤ B * E * R := le_trans (norm_nonneg _) hz₀₀
+        nlinarith
+  calc
+    _ ≤ K * ((1 + ‖a₀₀‖ + ‖a₁₀‖ + ‖a₀₁‖ + ‖a₁₁‖) *
+        (B * E * R)) := mul_le_mul hK hinside (norm_nonneg _) hK₀
+    _ = _ := by ring
 
 set_option maxHeartbeats 2000000 in
 theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
@@ -805,7 +995,7 @@ theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
         ‖hughesYoungEquation84PositiveContourSeries T t h k a b r
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9 := by
+            (2 + |t| + c₁ + |y|) ^ 17 := by
   obtain ⟨K, hK, hOuter⟩ := exists_uniform_norm_hughesYoungCentralOuterFactor
     T t h k r (((a : ℂ) * b)⁻¹) (c₀ := c₀) (c₁ := c₁)
   obtain ⟨B, hB, hCoeff⟩ :=
@@ -820,6 +1010,28 @@ theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
   have hM : 0 < M := by dsimp [M, m₀₀, m₁₀, m₀₁, m₁₁]; positivity
   refine ⟨C, mul_pos (mul_pos hK hM) hB, ?_⟩
   intro y hy hty x hx
+  have ho : ‖hughesYoungEquation84PositiveOuter T t h k a b r
+      ((x : ℂ) + (y : ℂ) * I)‖ ≤ K := by
+    simpa only [hughesYoungEquation84PositiveOuter] using hOuter y x hx
+  rcases hCoeff y hy hty x hx with ⟨hk₀₀, hk₁₀, hk₀₁, hk₁₁⟩
+  rw [hughesYoungEquation84PositiveContourSeries_eq_fourMoments
+    T t h k a b r ha hb hr]
+  have hbound := norm_mul_fourTerm_le
+    (hughesYoungEquation84PositiveOuter T t h k a b r
+      ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84PositiveArithmeticMoment a b r false false)
+    (hughesYoungEquation84PositiveArithmeticMoment a b r true false)
+    (hughesYoungEquation84PositiveArithmeticMoment a b r false true)
+    (hughesYoungEquation84PositiveArithmeticMoment a b r true true)
+    (hughesYoungEquation84Kernel00 t ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel10 t ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel01 t ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel11 t ((x : ℂ) + (y : ℂ) * I))
+    K B (Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2))
+    ((2 + |t| + c₁ + |y|) ^ 17) ho hK.le
+    hk₀₀ hk₁₀ hk₀₁ hk₁₁
+  simpa only [C, M, m₀₀, m₁₀, m₀₁, m₁₁] using hbound
+  /-
   have ho := hOuter y x hx
   have hk := hCoeff y hy hty x hx
   have heq := hughesYoungEquation84PositiveContourSeries_eq_fourMoments
@@ -828,13 +1040,13 @@ theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
   have ho' : ‖hughesYoungEquation84PositiveOuter T t h k a b r
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ K := by
     simpa only [hughesYoungEquation84PositiveOuter] using ho
-  let E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2)
-  let R : ℝ := (2 + |t| + c₁ + |y|) ^ 9
-  have hE : 0 ≤ E := by dsimp [E]; positivity
+  set E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) with hEdef
+  set R : ℝ := (2 + |t| + c₁ + |y|) ^ 17 with hRdef
+  have hE : 0 ≤ E := by rw [hEdef]; positivity
   have hc₁0 : 0 ≤ c₁ := hc₀.le.trans hc
   have hR : 0 ≤ R := by
-    dsimp [R]
-    exact pow_nonneg (by positivity) 9
+    rw [hRdef]
+    exact pow_nonneg (by positivity) 17
   have hinside :
       ‖hughesYoungEquation84PositiveArithmeticMoment a b r false false *
             hughesYoungEquation84Kernel00 t ((x : ℂ) + (y : ℂ) * I) +
@@ -858,6 +1070,7 @@ theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
               _ = _ := by simp only [norm_mul]
       _ ≤ (m₀₀ + m₁₀ + m₀₁ + m₁₁) * (B * E * R) := by
         rcases hk with ⟨hk₀₀, hk₁₀, hk₀₁, hk₁₁⟩
+        rw [← hEdef, ← hRdef] at hk₀₀ hk₁₀ hk₀₁ hk₁₁
         calc
           _ ≤ m₀₀ * (B * E * R) + m₁₀ * (B * E * R) +
               m₀₁ * (B * E * R) + m₁₁ * (B * E * R) := by gcongr
@@ -869,9 +1082,11 @@ theorem exists_norm_hughesYoungEquation84PositiveContourSeries_horizontal_le
   calc
     _ ≤ K * (M * (B * E * R)) := mul_le_mul ho' hinside (norm_nonneg _) hK.le
     _ = C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9 := by
-      dsimp [C, E, R]
+        (2 + |t| + c₁ + |y|) ^ 17 := by
+      rw [← hEdef, ← hRdef]
+      dsimp [C]
       ring
+  -/
 
 set_option maxHeartbeats 2000000 in
 theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
@@ -882,7 +1097,7 @@ theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
         ‖hughesYoungEquation84NegativeContourSeries T t h k a b r
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + c₁ + |y|) ^ 9 := by
+            (2 + |t| + c₁ + |y|) ^ 17 := by
   obtain ⟨K, hK, hOuter⟩ := exists_uniform_norm_hughesYoungCentralOuterFactor
     T t h k r (((b : ℂ) * a)⁻¹) (c₀ := c₀) (c₁ := c₁)
   obtain ⟨B, hB, hCoeff⟩ :=
@@ -897,6 +1112,30 @@ theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
   have hM : 0 < M := by dsimp [M, m₀₀, m₁₀, m₀₁, m₁₁]; positivity
   refine ⟨C, mul_pos (mul_pos hK hM) hB, ?_⟩
   intro y hy hty x hx
+  have ho : ‖hughesYoungEquation84NegativeOuter T t h k a b r
+      ((x : ℂ) + (y : ℂ) * I)‖ ≤ K := by
+    simpa only [hughesYoungEquation84NegativeOuter] using hOuter y x hx
+  rcases hCoeff y hy (by simpa only [abs_neg] using hty) x hx with
+    ⟨hk₀₀, hk₁₀, hk₀₁, hk₁₁⟩
+  simp only [abs_neg] at hk₀₀ hk₁₀ hk₀₁ hk₁₁
+  rw [hughesYoungEquation84NegativeContourSeries_eq_fourMoments
+    T t h k a b r ha hb hr]
+  have hbound := norm_mul_fourTerm_le
+    (hughesYoungEquation84NegativeOuter T t h k a b r
+      ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84PositiveArithmeticMoment b a r false false)
+    (hughesYoungEquation84PositiveArithmeticMoment b a r true false)
+    (hughesYoungEquation84PositiveArithmeticMoment b a r false true)
+    (hughesYoungEquation84PositiveArithmeticMoment b a r true true)
+    (hughesYoungEquation84Kernel00 (-t) ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel10 (-t) ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel01 (-t) ((x : ℂ) + (y : ℂ) * I))
+    (hughesYoungEquation84Kernel11 (-t) ((x : ℂ) + (y : ℂ) * I))
+    K B (Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2))
+    ((2 + |t| + c₁ + |y|) ^ 17) ho hK.le
+    hk₀₀ hk₁₀ hk₀₁ hk₁₁
+  simpa only [C, M, m₀₀, m₁₀, m₀₁, m₁₁] using hbound
+  /-
   have ho := hOuter y x hx
   have hk := hCoeff y hy (by simpa only [abs_neg] using hty) x hx
   have heq := hughesYoungEquation84NegativeContourSeries_eq_fourMoments
@@ -905,13 +1144,13 @@ theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
   have ho' : ‖hughesYoungEquation84NegativeOuter T t h k a b r
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ K := by
     simpa only [hughesYoungEquation84NegativeOuter] using ho
-  let E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2)
-  let R : ℝ := (2 + |t| + c₁ + |y|) ^ 9
-  have hE : 0 ≤ E := by dsimp [E]; positivity
+  set E : ℝ := Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) with hEdef
+  set R : ℝ := (2 + |t| + c₁ + |y|) ^ 17 with hRdef
+  have hE : 0 ≤ E := by rw [hEdef]; positivity
   have hc₁0 : 0 ≤ c₁ := hc₀.le.trans hc
   have hR : 0 ≤ R := by
-    dsimp [R]
-    exact pow_nonneg (by positivity) 9
+    rw [hRdef]
+    exact pow_nonneg (by positivity) 17
   have hinside :
       ‖hughesYoungEquation84PositiveArithmeticMoment b a r false false *
             hughesYoungEquation84Kernel00 (-t) ((x : ℂ) + (y : ℂ) * I) +
@@ -936,6 +1175,7 @@ theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
       _ ≤ (m₀₀ + m₁₀ + m₀₁ + m₁₁) * (B * E * R) := by
         rcases hk with ⟨hk₀₀, hk₁₀, hk₀₁, hk₁₁⟩
         simp only [abs_neg] at hk₀₀ hk₁₀ hk₀₁ hk₁₁
+        rw [← hEdef, ← hRdef] at hk₀₀ hk₁₀ hk₀₁ hk₁₁
         calc
           _ ≤ m₀₀ * (B * E * R) + m₁₀ * (B * E * R) +
               m₀₁ * (B * E * R) + m₁₁ * (B * E * R) := by gcongr
@@ -947,9 +1187,11 @@ theorem exists_norm_hughesYoungEquation84NegativeContourSeries_horizontal_le
   calc
     _ ≤ K * (M * (B * E * R)) := mul_le_mul ho' hinside (norm_nonneg _) hK.le
     _ = C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 9 := by
-      dsimp [C, E, R]
+        (2 + |t| + c₁ + |y|) ^ 17 := by
+      rw [← hEdef, ← hRdef]
+      dsimp [C]
       ring
+  -/
 
 theorem tendsto_hughesYoungEquation84PositiveContourSeries_top_zero
     (T t : ℝ) (h k a b r : ℕ) (ha : 0 < a) (hb : 0 < b) (hr : 0 < r)

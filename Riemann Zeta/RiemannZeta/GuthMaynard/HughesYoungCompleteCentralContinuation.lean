@@ -237,7 +237,7 @@ theorem exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
         ‖hughesYoungCompletePositiveCentralContinuation T t h k a b
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 9 := by
+            (2 + |t| + 1 + |y|) ^ 17 := by
   obtain ⟨K, hK, hOuter⟩ := exists_uniform_norm_hughesYoungCentralOuterFactor
     T t h k 1 (((a : ℂ) * b)⁻¹)
       (c₀ := (15 / 16 : ℝ)) (c₁ := (1 : ℝ))
@@ -275,29 +275,21 @@ theorem exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
     simpa [hughesYoungCentralShiftPower] using hraw
   rcases hKernels y hy hty x hx with ⟨hk₀₀, hk₁₀, hk₀₁, hk₁₁⟩
   let E : ℝ := Real.exp (100 - 60 * y ^ 2)
-  let R : ℝ := (3 + |t| + |y|) ^ 9
+  let R : ℝ := (2 + |t| + 1 + |y|) ^ 17
   have hE : 0 ≤ E := by dsimp [E]; positivity
   have hR : 0 ≤ R := by dsimp [R]; positivity
   have hk₀₀' : ‖hughesYoungEquation84Kernel00 t
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ B * E * R := by
-    convert hk₀₀ using 1
-    dsimp [E, R]
-    ring_nf
+    simpa only [E, R, one_pow, mul_one] using hk₀₀
   have hk₁₀' : ‖hughesYoungEquation84Kernel10 t
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ B * E * R := by
-    convert hk₁₀ using 1
-    dsimp [E, R]
-    ring_nf
+    simpa only [E, R, one_pow, mul_one] using hk₁₀
   have hk₀₁' : ‖hughesYoungEquation84Kernel01 t
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ B * E * R := by
-    convert hk₀₁ using 1
-    dsimp [E, R]
-    ring_nf
+    simpa only [E, R, one_pow, mul_one] using hk₀₁
   have hk₁₁' : ‖hughesYoungEquation84Kernel11 t
       ((x : ℂ) + (y : ℂ) * I)‖ ≤ B * E * R := by
-    convert hk₁₁ using 1
-    dsimp [E, R]
-    ring_nf
+    simpa only [E, R, one_pow, mul_one] using hk₁₁
   let q := hughesYoungEquation96ContourParameter
     ((x : ℂ) + (y : ℂ) * I)
   have hinside :
@@ -338,7 +330,8 @@ theorem exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
   calc
     _ ≤ K * (4 * M * (B * E * R)) :=
       mul_le_mul ho hinside (norm_nonneg _) hK.le
-    _ = C * Real.exp (100 - 60 * y ^ 2) * (3 + |t| + |y|) ^ 9 := by
+    _ = C * Real.exp (100 - 60 * y ^ 2) *
+        (2 + |t| + 1 + |y|) ^ 17 := by
       dsimp [C, E, R]
       ring
 
@@ -349,7 +342,7 @@ theorem exists_norm_hughesYoungCompleteNegativeCentralContinuation_horizontal_le
         ‖hughesYoungCompleteNegativeCentralContinuation T t h k a b
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 - 60 * y ^ 2) *
-            (3 + |t| + |y|) ^ 9 := by
+            (2 + |t| + 1 + |y|) ^ 17 := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
       T (-t) k h hb ha
@@ -365,15 +358,14 @@ private theorem completePositive_horizontal_bound_for_shift
         ‖hughesYoungCompletePositiveCentralContinuation T t h k a b
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * (1 : ℝ) ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + 1 + |y|) ^ 9 := by
+            (2 + |t| + 1 + |y|) ^ 17 := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
       T t h k ha hb
   refine ⟨C, hC, ?_⟩
   intro y hy hty x hx
   have h := hbound y hy hty x hx
-  convert h using 1
-  ring_nf
+  simpa only [one_pow, mul_one] using h
 
 private theorem completeNegative_horizontal_bound_for_shift
     (T t : ℝ) (h k : ℕ) {a b : ℕ} (ha : 0 < a) (hb : 0 < b) :
@@ -382,15 +374,14 @@ private theorem completeNegative_horizontal_bound_for_shift
         ‖hughesYoungCompleteNegativeCentralContinuation T t h k a b
             ((x : ℂ) + (y : ℂ) * I)‖ ≤
           C * Real.exp (100 * (1 : ℝ) ^ 2 - 60 * y ^ 2) *
-            (2 + |t| + 1 + |y|) ^ 9 := by
+            (2 + |t| + 1 + |y|) ^ 17 := by
   obtain ⟨C, hC, hbound⟩ :=
     exists_norm_hughesYoungCompleteNegativeCentralContinuation_horizontal_le
       T t h k ha hb
   refine ⟨C, hC, ?_⟩
   intro y hy hty x hx
   have h := hbound y hy hty x hx
-  convert h using 1
-  ring_nf
+  simpa only [one_pow, mul_one] using h
 
 theorem hughesYoungCompletePositiveCentralContinuation_boundaryRect_zero
     (T t : ℝ) (h k a b : ℕ) (H : ℝ) :
@@ -535,7 +526,7 @@ theorem integrable_hughesYoungCompletePositiveCentralContinuation_vertical
       ((c : ℂ) + (u : ℂ) * I))
     (continuous_hughesYoungCompletePositiveCentralContinuation_vertical
       T t h k a b hc)
-    (C := C) (A := 100) (B := 60) (D := 3 + |t|) (j := 9)
+    (C := C) (A := 100) (B := 60) (D := 2 + |t| + 1) (j := 17)
     hL (by norm_num : (0 : ℝ) < 60)
   intro u hu
   have hu1 : 1 ≤ |u| := (le_max_left 1 (|t| + 1)).trans hu

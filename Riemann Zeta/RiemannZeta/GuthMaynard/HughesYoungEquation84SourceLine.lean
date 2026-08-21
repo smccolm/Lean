@@ -125,14 +125,14 @@ noncomputable def hughesYoungEquation84CompletePositiveOuter
     hughesYoungReducedMellinStaticComplex T t h k
       ((1 : ℂ) + (u : ℂ) * I)
 
-private noncomputable def hughesYoungEquation84PositiveSourceArithmeticTerm
+noncomputable def hughesYoungEquation84PositiveSourceArithmeticTerm
     (a b : ℕ) (i j : Bool) (u : ℝ) (y : ℕ+ × ℕ+) : ℂ :=
   (dfiEquation27ArithmeticCoefficient a b (y.2 : ℕ) (y.1 : ℕ) /
       (((y.2 : ℕ) : ℂ) ^ ((2 : ℂ) + (2 * u : ℂ) * I))) *
     (if i then hughesYoungEquation84PositiveCX b (y.2 : ℕ) (y.1 : ℕ) else 1) *
     (if j then hughesYoungEquation84PositiveCOne a (y.2 : ℕ) (y.1 : ℕ) else 1)
 
-private theorem hughesYoungEquation84PositiveSourceTerm_eq_fourTerms
+theorem hughesYoungEquation84PositiveSourceTerm_eq_fourTerms
     (T t : ℝ) (h k a b : ℕ) (u : ℝ)
     (y : ℕ+ × ℕ+) :
     hughesYoungEquation84PositiveContourTerm T t h k a b
@@ -274,7 +274,7 @@ noncomputable def hughesYoungEquation84CompleteNegativeOuter
     hughesYoungReducedMellinStaticComplex T t h k
       ((1 : ℂ) + (u : ℂ) * I)
 
-private theorem hughesYoungEquation84NegativeSourceTerm_eq_fourTerms
+theorem hughesYoungEquation84NegativeSourceTerm_eq_fourTerms
     (T t : ℝ) (h k a b : ℕ) (u : ℝ)
     (y : ℕ+ × ℕ+) :
     hughesYoungEquation84NegativeContourTerm T t h k a b
@@ -471,7 +471,7 @@ theorem continuous_hughesYoungEquation84CompletePositiveMomentAt
       norm_hughesYoungEquation96VerticalTerm_mul_logSelectors_le
         j i u ha hb hη hη4 y
 
-private theorem continuous_hughesYoungReducedMellinStaticComplex_sourceLine
+theorem continuous_hughesYoungReducedMellinStaticComplex_sourceLine
     (T t : ℝ) (h k : ℕ) :
     Continuous (fun u : ℝ =>
       hughesYoungReducedMellinStaticComplex T t h k
@@ -774,7 +774,7 @@ theorem integrable_hughesYoungEquation84CompletePositiveSourceLine
   have hs := norm_hughesYoungEquation84CompletePositiveSourceLine_le
     T t h k ha hb hab u hη hη4
   let E : ℝ := Real.exp (100 - 60 * u ^ 2)
-  let R : ℝ := (2 + |t| + 1 + |u|) ^ 9
+  let R : ℝ := (2 + |t| + 1 + |u|) ^ 17
   have hE : 0 ≤ E := by dsimp [E]; positivity
   have hR : 0 ≤ R := by dsimp [R]; positivity
   have hc' :
@@ -795,7 +795,7 @@ theorem integrable_hughesYoungEquation84CompletePositiveSourceLine
       gcongr
       linarith [hc'.1, hc'.2.1, hc'.2.2.1, hc'.2.2.2]
     _ = (4 * K * M * B) * Real.exp (100 - 60 * u ^ 2) *
-          ((2 + |t| + 1) + |u|) ^ 9 := by
+          ((2 + |t| + 1) + |u|) ^ 17 := by
       dsimp [E, R]
       ring
 
@@ -837,7 +837,7 @@ theorem integrable_hughesYoungEquation84CompleteNegativeSourceLine
   have hs := norm_hughesYoungEquation84CompleteNegativeSourceLine_le
     T t h k ha hb hab u hη hη4
   let E : ℝ := Real.exp (100 - 60 * u ^ 2)
-  let R : ℝ := (2 + |t| + 1 + |u|) ^ 9
+  let R : ℝ := (2 + |t| + 1 + |u|) ^ 17
   have hE : 0 ≤ E := by dsimp [E]; positivity
   have hR : 0 ≤ R := by dsimp [R]; positivity
   have hc' :
@@ -858,7 +858,7 @@ theorem integrable_hughesYoungEquation84CompleteNegativeSourceLine
       gcongr
       linarith [hc'.1, hc'.2.1, hc'.2.2.1, hc'.2.2.2]
     _ = (4 * K * M * B) * Real.exp (100 - 60 * u ^ 2) *
-          ((2 + |t| + 1) + |u|) ^ 9 := by
+          ((2 + |t| + 1) + |u|) ^ 17 := by
       dsimp [E, R]
       ring
 

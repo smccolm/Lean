@@ -47,6 +47,36 @@ theorem gammaQuarterHalf_step_le
   ring_nf
   positivity
 
+/-- The corresponding one-step comparison for the full quarter-to-three-
+quarter displacement.  Squaring the quotient records the half-power
+conductor cost, while the same summable Euler-product loss is sufficient. -/
+theorem gammaQuarterThreeQuarter_step_le
+    {x y : ℝ} (hx : 1 ≤ x) :
+    ((((x + 1 / 4) ^ 2 + y ^ 2) /
+          ((x + 3 / 4) ^ 2 + y ^ 2)) ^ 2) ≤
+      ((x ^ 2 + y ^ 2) / ((x + 1) ^ 2 + y ^ 2)) *
+        (1 + x⁻¹ ^ 2) := by
+  have hx0 : 0 < x := zero_lt_one.trans_le hx
+  have hA : 0 < (x + 3 / 4) ^ 2 + y ^ 2 := by positivity
+  have hB : 0 < (x + 1) ^ 2 + y ^ 2 := by positivity
+  have hC : 0 < x ^ 2 := sq_pos_of_pos hx0
+  rw [div_pow]
+  rw [div_le_iff₀ (pow_pos hA 2)]
+  rw [mul_assoc, div_eq_mul_inv, inv_pow]
+  rw [show 1 + (x ^ 2)⁻¹ = (x ^ 2 + 1) / x ^ 2 by
+    field_simp [hx0.ne']]
+  rw [show
+      (x ^ 2 + y ^ 2) / ((x + 1) ^ 2 + y ^ 2) *
+          ((x ^ 2 + 1) / x ^ 2 * ((x + 3 / 4) ^ 2 + y ^ 2) ^ 2) =
+        ((x ^ 2 + y ^ 2) * (x ^ 2 + 1) *
+          ((x + 3 / 4) ^ 2 + y ^ 2) ^ 2) /
+            (((x + 1) ^ 2 + y ^ 2) * x ^ 2) by
+      field_simp [hx0.ne']]
+  rw [le_div_iff₀ (mul_pos hB hC)]
+  rw [← sub_nonneg]
+  ring_nf
+  positivity
+
 /-- The convergent loss in the one-step comparison is uniformly bounded.
 The deliberately generous constant keeps the later archimedean estimate
 independent of the truncation point. -/
@@ -154,11 +184,49 @@ theorem gammaQuarterHalf_product_le (n : ℕ) (y : ℝ) :
     _ = Real.exp 8 *
         ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by ring
 
+/-- Product form of the sharp quarter-to-three-quarter Gamma comparison. -/
+theorem gammaQuarterThreeQuarter_product_le (n : ℕ) (y : ℝ) :
+    (∏ j ∈ Finset.Icc 1 n,
+        ((((j : ℝ) + 1 / 4) ^ 2 + y ^ 2) /
+          (((j : ℝ) + 3 / 4) ^ 2 + y ^ 2)) ^ 2) ≤
+      Real.exp 8 *
+        ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by
+  have hstep : ∀ j ∈ Finset.Icc 1 n,
+      (((((j : ℝ) + 1 / 4) ^ 2 + y ^ 2) /
+          (((j : ℝ) + 3 / 4) ^ 2 + y ^ 2)) ^ 2) ≤
+        (((j : ℝ) ^ 2 + y ^ 2) /
+          (((j : ℝ) + 1) ^ 2 + y ^ 2)) *
+          (1 + ((j : ℝ)⁻¹) ^ 2) := by
+    intro j hj
+    exact gammaQuarterThreeQuarter_step_le (by
+      exact_mod_cast (Finset.mem_Icc.mp hj).1)
+  calc
+    _ ≤ ∏ j ∈ Finset.Icc 1 n,
+        ((((j : ℝ) ^ 2 + y ^ 2) /
+          (((j : ℝ) + 1) ^ 2 + y ^ 2)) *
+          (1 + ((j : ℝ)⁻¹) ^ 2)) := by
+            exact Finset.prod_le_prod (fun _ _ => by positivity) hstep
+    _ = ((∏ j ∈ Finset.Icc 1 n,
+          (((j : ℝ) ^ 2 + y ^ 2) /
+            (((j : ℝ) + 1) ^ 2 + y ^ 2))) *
+        (∏ j ∈ Finset.Icc 1 n, (1 + ((j : ℝ)⁻¹) ^ 2))) := by
+          simp only [Finset.prod_mul_distrib]
+    _ ≤ ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) *
+          Real.exp 8 := by
+          rw [gammaQuarterHalf_telescope]
+          exact mul_le_mul_of_nonneg_left (gammaQuarterHalf_errorProduct_le n)
+            (by positivity)
+    _ = Real.exp 8 *
+        ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by ring
+
 private noncomputable def gammaQuarterTerm (j : ℕ) (y : ℝ) : ℝ :=
   ((j : ℝ) + 1 / 4) ^ 2 + y ^ 2
 
 private noncomputable def gammaHalfTerm (j : ℕ) (y : ℝ) : ℝ :=
   ((j : ℝ) + 1 / 2) ^ 2 + y ^ 2
+
+private noncomputable def gammaThreeQuarterTerm (j : ℕ) (y : ℝ) : ℝ :=
+  ((j : ℝ) + 3 / 4) ^ 2 + y ^ 2
 
 private theorem gammaQuarterTerm_pos (j : ℕ) (y : ℝ) :
     0 < gammaQuarterTerm j y := by
@@ -168,6 +236,11 @@ private theorem gammaQuarterTerm_pos (j : ℕ) (y : ℝ) :
 private theorem gammaHalfTerm_pos (j : ℕ) (y : ℝ) :
     0 < gammaHalfTerm j y := by
   unfold gammaHalfTerm
+  positivity
+
+private theorem gammaThreeQuarterTerm_pos (j : ℕ) (y : ℝ) :
+    0 < gammaThreeQuarterTerm j y := by
+  unfold gammaThreeQuarterTerm
   positivity
 
 private theorem gamma_sqrt_product_ratio_pow_eight (n : ℕ) (y : ℝ) :
@@ -222,6 +295,66 @@ private theorem gammaQuarterHalf_rangeProduct_le (n : ℕ) (y : ℝ) :
           (gammaQuarterTerm j y / gammaHalfTerm j y) ^ 4
         ≤ 1 * ∏ j ∈ Finset.Icc 1 n,
           (gammaQuarterTerm j y / gammaHalfTerm j y) ^ 4 := by
+            gcongr
+    _ ≤ Real.exp 8 *
+          ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by
+            simpa using htail
+
+private theorem gamma_sqrt_product_ratio_quarter_threeQuarter_pow_four
+    (n : ℕ) (y : ℝ) :
+    ((∏ j ∈ Finset.range (n + 1), Real.sqrt (gammaQuarterTerm j y)) /
+        (∏ j ∈ Finset.range (n + 1),
+          Real.sqrt (gammaThreeQuarterTerm j y))) ^ 4 =
+      ∏ j ∈ Finset.range (n + 1),
+        (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2 := by
+  rw [div_pow]
+  simp_rw [← Finset.prod_pow]
+  rw [← Finset.prod_div_distrib]
+  apply Finset.prod_congr rfl
+  intro j hj
+  have hq := (gammaQuarterTerm_pos j y).le
+  have ht := (gammaThreeQuarterTerm_pos j y).le
+  rw [show Real.sqrt (gammaQuarterTerm j y) ^ 4 =
+      (Real.sqrt (gammaQuarterTerm j y) ^ 2) ^ 2 by ring,
+    show Real.sqrt (gammaThreeQuarterTerm j y) ^ 4 =
+      (Real.sqrt (gammaThreeQuarterTerm j y) ^ 2) ^ 2 by ring,
+    Real.sq_sqrt hq, Real.sq_sqrt ht, div_pow]
+
+private theorem gammaQuarterThreeQuarter_rangeProduct_le (n : ℕ) (y : ℝ) :
+    ∏ j ∈ Finset.range (n + 1),
+        (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2 ≤
+      Real.exp 8 *
+        ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by
+  have hsplit := Finset.prod_range_eq_mul_Ico
+    (f := fun j : ℕ =>
+      (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2)
+    (n := n + 1) (by omega)
+  rw [Finset.Ico_add_one_right_eq_Icc] at hsplit
+  rw [hsplit]
+  have hzero :
+      (gammaQuarterTerm 0 y / gammaThreeQuarterTerm 0 y) ^ 2 ≤ 1 := by
+    have hqt : gammaQuarterTerm 0 y ≤ gammaThreeQuarterTerm 0 y := by
+      unfold gammaQuarterTerm gammaThreeQuarterTerm
+      nlinarith
+    have hratio : gammaQuarterTerm 0 y / gammaThreeQuarterTerm 0 y ≤ 1 := by
+      rw [div_le_one (gammaThreeQuarterTerm_pos 0 y)]
+      exact hqt
+    exact pow_le_one₀
+      (div_nonneg (gammaQuarterTerm_pos 0 y).le
+        (gammaThreeQuarterTerm_pos 0 y).le) hratio
+  have htail :
+      ∏ j ∈ Finset.Icc 1 n,
+          (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2 ≤
+        Real.exp 8 *
+          ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by
+    simpa only [gammaQuarterTerm, gammaThreeQuarterTerm] using
+      gammaQuarterThreeQuarter_product_le n y
+  calc
+    (gammaQuarterTerm 0 y / gammaThreeQuarterTerm 0 y) ^ 2 *
+        ∏ j ∈ Finset.Icc 1 n,
+          (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2
+        ≤ 1 * ∏ j ∈ Finset.Icc 1 n,
+          (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2 := by
             gcongr
     _ ≤ Real.exp 8 *
           ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by
@@ -313,6 +446,94 @@ theorem norm_GammaSeq_half_div_quarter_pow_eight_le
     nlinarith [Real.exp_pos 8]
   exact (mul_le_mul_of_nonneg_left hprod (sq_nonneg N)).trans hscale
 
+/-- Finite Euler-product estimate for the full quarter-to-three-quarter
+Gamma quotient.  Its fourth power has exactly one quadratic conductor
+factor. -/
+theorem norm_GammaSeq_threeQuarter_div_quarter_pow_four_le
+    (y : ℝ) {n : ℕ} (hn : 0 < n) :
+    (‖Complex.GammaSeq ((3 / 4 : ℂ) + (y : ℂ) * I) n‖ /
+        ‖Complex.GammaSeq ((1 / 4 : ℂ) + (y : ℂ) * I) n‖) ^ 4 ≤
+      Real.exp 8 * (1 + y ^ 2) := by
+  let N : ℝ := n
+  let F : ℝ := n.factorial
+  let Dq : ℝ := ∏ j ∈ Finset.range (n + 1),
+    Real.sqrt (((1 / 4 : ℝ) + j) ^ 2 + y ^ 2)
+  let Dt : ℝ := ∏ j ∈ Finset.range (n + 1),
+    Real.sqrt (((3 / 4 : ℝ) + j) ^ 2 + y ^ 2)
+  have hN : 0 < N := by
+    dsimp [N]
+    exact_mod_cast hn
+  have hF : 0 < F := by
+    dsimp [F]
+    exact_mod_cast Nat.factorial_pos n
+  have hDq : 0 < Dq := by
+    dsimp [Dq]
+    apply Finset.prod_pos
+    intro j hj
+    exact Real.sqrt_pos.2 (by positivity)
+  have hDt : 0 < Dt := by
+    dsimp [Dt]
+    apply Finset.prod_pos
+    intro j hj
+    exact Real.sqrt_pos.2 (by positivity)
+  have hsqrt : (Dq / Dt) ^ 4 =
+      ∏ j ∈ Finset.range (n + 1),
+        (gammaQuarterTerm j y / gammaThreeQuarterTerm j y) ^ 2 := by
+    simpa only [Dq, Dt, gammaQuarterTerm, gammaThreeQuarterTerm, add_comm] using
+      gamma_sqrt_product_ratio_quarter_threeQuarter_pow_four n y
+  have hrpow :
+      ((N ^ (3 / 4 : ℝ)) / (N ^ (1 / 4 : ℝ))) ^ 4 = N ^ 2 := by
+    rw [← Real.rpow_sub hN]
+    norm_num
+    rw [← Real.rpow_mul_natCast hN.le]
+    norm_num [Real.rpow_two]
+  have hnormThreeQuarter :
+      ‖Complex.GammaSeq ((3 / 4 : ℂ) + (y : ℂ) * I) n‖ =
+        N ^ (3 / 4 : ℝ) * F / Dt := by
+    convert (norm_GammaSeq_vertical (a := (3 / 4 : ℝ)) (y := y) hn) using 1
+    all_goals norm_num [N, F, Dt]
+  have hnormQuarter :
+      ‖Complex.GammaSeq ((1 / 4 : ℂ) + (y : ℂ) * I) n‖ =
+        N ^ (1 / 4 : ℝ) * F / Dq := by
+    convert (norm_GammaSeq_vertical (a := (1 / 4 : ℝ)) (y := y) hn) using 1
+    all_goals norm_num [N, F, Dq]
+  rw [hnormThreeQuarter, hnormQuarter]
+  have halgebra :
+      ((N ^ (3 / 4 : ℝ) * F / Dt) /
+          (N ^ (1 / 4 : ℝ) * F / Dq)) ^ 4 =
+        N ^ 2 * (Dq / Dt) ^ 4 := by
+    have hNrq : 0 < N ^ (1 / 4 : ℝ) := Real.rpow_pos_of_pos hN _
+    rw [show
+        (N ^ (3 / 4 : ℝ) * F / Dt) /
+            (N ^ (1 / 4 : ℝ) * F / Dq) =
+          (N ^ (3 / 4 : ℝ) / N ^ (1 / 4 : ℝ)) * (Dq / Dt) by
+      field_simp [hF.ne', hDq.ne', hDt.ne', hNrq.ne']]
+    rw [mul_pow, hrpow]
+  rw [halgebra, hsqrt]
+  have hprod := gammaQuarterThreeQuarter_rangeProduct_le n y
+  have hscale :
+      N ^ 2 *
+          (Real.exp 8 *
+            ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2))) ≤
+        Real.exp 8 * (1 + y ^ 2) := by
+    have hNle : N ^ 2 ≤ ((n : ℝ) + 1) ^ 2 + y ^ 2 := by
+      dsimp [N]
+      nlinarith [sq_nonneg y]
+    have hden : 0 < ((n : ℝ) + 1) ^ 2 + y ^ 2 := by positivity
+    have hfrac : N ^ 2 *
+        ((1 + y ^ 2) / (((n : ℝ) + 1) ^ 2 + y ^ 2)) ≤
+          1 + y ^ 2 := by
+      calc
+        N ^ 2 * ((1 + y ^ 2) /
+            (((n : ℝ) + 1) ^ 2 + y ^ 2)) =
+          (1 + y ^ 2) *
+            (N ^ 2 / (((n : ℝ) + 1) ^ 2 + y ^ 2)) := by ring
+        _ ≤ (1 + y ^ 2) * 1 :=
+          mul_le_mul_of_nonneg_left ((div_le_one hden).2 hNle) (by positivity)
+        _ = 1 + y ^ 2 := by ring
+    nlinarith [Real.exp_pos 8]
+  exact (mul_le_mul_of_nonneg_left hprod (sq_nonneg N)).trans hscale
+
 /-- Passing Euler's finite products to the limit gives the sharp fixed-shift
 Gamma quotient. -/
 theorem norm_Gamma_half_div_quarter_pow_eight_le (y : ℝ) :
@@ -353,6 +574,48 @@ theorem norm_Gamma_half_div_quarter_pow_eight_le (y : ℝ) :
   intro n
   dsimp only [zh, zq]
   exact norm_GammaSeq_half_div_quarter_pow_eight_le y
+    (n := n + 1) (by omega)
+
+/-- Sharp quarter-to-three-quarter Gamma quotient.  This is the source-line
+archimedean estimate needed by the finite DFI shift completion. -/
+theorem norm_Gamma_threeQuarter_div_quarter_pow_four_le (y : ℝ) :
+    (‖Complex.Gamma ((3 / 4 : ℂ) + (y : ℂ) * I)‖ /
+        ‖Complex.Gamma ((1 / 4 : ℂ) + (y : ℂ) * I)‖) ^ 4 ≤
+      Real.exp 8 * (1 + y ^ 2) := by
+  let zt : ℂ := (3 / 4 : ℂ) + (y : ℂ) * I
+  let zq : ℂ := (1 / 4 : ℂ) + (y : ℂ) * I
+  have hqne : Complex.Gamma zq ≠ 0 := by
+    apply Complex.Gamma_ne_zero
+    intro n hn
+    have hre := congrArg Complex.re hn
+    dsimp [zq] at hre
+    simp at hre
+    norm_num at hre
+    have hn0 : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+    linarith
+  have hthreeQuarter : Tendsto
+      (fun n : ℕ => ‖Complex.GammaSeq zt (n + 1)‖) atTop
+      (𝓝 ‖Complex.Gamma zt‖) :=
+    (Complex.GammaSeq_tendsto_Gamma zt).norm.comp (tendsto_add_atTop_nat 1)
+  have hquarter : Tendsto
+      (fun n : ℕ => ‖Complex.GammaSeq zq (n + 1)‖) atTop
+      (𝓝 ‖Complex.Gamma zq‖) :=
+    (Complex.GammaSeq_tendsto_Gamma zq).norm.comp (tendsto_add_atTop_nat 1)
+  have hratio : Tendsto
+      (fun n : ℕ => ‖Complex.GammaSeq zt (n + 1)‖ /
+        ‖Complex.GammaSeq zq (n + 1)‖) atTop
+      (𝓝 (‖Complex.Gamma zt‖ / ‖Complex.Gamma zq‖)) :=
+    hthreeQuarter.div hquarter (norm_ne_zero_iff.mpr hqne)
+  have hleft := hratio.pow 4
+  have hright : Tendsto
+      (fun _ : ℕ => Real.exp 8 * (1 + y ^ 2)) atTop
+      (𝓝 (Real.exp 8 * (1 + y ^ 2))) := tendsto_const_nhds
+  change (‖Complex.Gamma zt‖ / ‖Complex.Gamma zq‖) ^ 4 ≤
+    Real.exp 8 * (1 + y ^ 2)
+  apply le_of_tendsto_of_tendsto' hleft hright
+  intro n
+  dsimp only [zt, zq]
+  exact norm_GammaSeq_threeQuarter_div_quarter_pow_four_le y
     (n := n + 1) (by omega)
 
 /-- Fourth-power form of the fixed-shift bound, matching the four Gamma
@@ -417,6 +680,256 @@ private theorem norm_GammaR_one_sharp (y : ℝ) :
   · congr 2
     push_cast
     ring
+
+private theorem norm_GammaR_threeHalf_sharp (y : ℝ) :
+    ‖Complex.Gammaℝ ((3 / 2 : ℂ) + (y : ℂ) * I)‖ =
+      Real.pi ^ (-3 / 4 : ℝ) *
+        ‖Complex.Gamma ((3 / 4 : ℂ) + ((y / 2 : ℝ) : ℂ) * I)‖ := by
+  rw [Complex.Gammaℝ_def, norm_mul,
+    Complex.norm_cpow_eq_rpow_re_of_pos Real.pi_pos]
+  congr 1
+  · congr 1
+    norm_num
+  · congr 2
+    push_cast
+    ring
+
+/-- One source-line real-Gamma quotient has exactly square-root conductor
+growth.  The fourth-power form is arranged for the four Gamma factors in
+the equation-(84) kernel. -/
+theorem norm_GammaR_threeHalf_div_critical_pow_four_le (y : ℝ) :
+    (‖Complex.Gammaℝ ((3 / 2 : ℂ) + (y : ℂ) * I)‖ /
+        ‖Complex.Gammaℝ ((1 / 2 : ℂ) + (y : ℂ) * I)‖) ^ 4 ≤
+      Real.pi⁻¹ ^ 2 * Real.exp 8 * (1 + (y / 2) ^ 2) := by
+  rw [norm_GammaR_threeHalf_sharp, norm_GammaR_critical_sharp]
+  let A := ‖Complex.Gamma ((3 / 4 : ℂ) + ((y / 2 : ℝ) : ℂ) * I)‖
+  let B := ‖Complex.Gamma ((1 / 4 : ℂ) + ((y / 2 : ℝ) : ℂ) * I)‖
+  have hpi := Real.pi_pos
+  have hB : 0 < B := by
+    dsimp [B]
+    rw [norm_pos_iff]
+    apply Complex.Gamma_ne_zero
+    intro n hn
+    have hre := congrArg Complex.re hn
+    norm_num at hre
+    have hn0 : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+    linarith
+  have hpower :
+      (Real.pi ^ (-3 / 4 : ℝ) / Real.pi ^ (-1 / 4 : ℝ)) ^ 4 =
+        Real.pi⁻¹ ^ 2 := by
+    rw [← Real.rpow_sub hpi]
+    norm_num
+    rw [← Real.rpow_mul_natCast hpi.le]
+    norm_num
+    rfl
+  have halgebra :
+      (Real.pi ^ (-3 / 4 : ℝ) * A /
+          (Real.pi ^ (-1 / 4 : ℝ) * B)) ^ 4 =
+        Real.pi⁻¹ ^ 2 * (A / B) ^ 4 := by
+    rw [show Real.pi ^ (-3 / 4 : ℝ) * A /
+        (Real.pi ^ (-1 / 4 : ℝ) * B) =
+      (Real.pi ^ (-3 / 4 : ℝ) / Real.pi ^ (-1 / 4 : ℝ)) * (A / B) by
+        field_simp [hB.ne', (Real.rpow_pos_of_pos hpi _).ne']]
+    rw [mul_pow, hpower]
+  change (Real.pi ^ (-3 / 4 : ℝ) * A /
+      (Real.pi ^ (-1 / 4 : ℝ) * B)) ^ 4 ≤ _
+  rw [halgebra]
+  have hgamma := norm_Gamma_threeQuarter_div_quarter_pow_four_le (y / 2)
+  change (A / B) ^ 4 ≤ _ at hgamma
+  calc
+    Real.pi⁻¹ ^ 2 * (A / B) ^ 4 ≤
+        Real.pi⁻¹ ^ 2 * (Real.exp 8 * (1 + (y / 2) ^ 2)) :=
+      mul_le_mul_of_nonneg_left hgamma (by positivity)
+    _ = Real.pi⁻¹ ^ 2 * Real.exp 8 * (1 + (y / 2) ^ 2) := by ring
+
+/-- On the source line `Re w = 1`, the Hughes--Young Gamma quotient has an
+explicit polynomial conductor cost.  This is the cancellation-preserving
+source-line estimate needed to sum the equation-(84) shift tail; in
+particular, it contains no unspecified `T ^ O(1)` exponent. -/
+theorem norm_hughesYoungGammaRatioShift_one_le (t u : ℝ) :
+    ‖hughesYoungGammaRatioShift t 1 u‖ ≤
+      Real.exp (16 * u ^ 2) *
+        (1 + Real.pi⁻¹ ^ 2 * Real.exp 8) ^ 2 *
+        (1 + |t + u|) * (1 + |-t + u|) := by
+  let Ap : ℝ :=
+    ‖Complex.Gammaℝ ((3 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I)‖
+  let Am : ℝ :=
+    ‖Complex.Gammaℝ ((3 / 2 : ℂ) + ((-t + u : ℝ) : ℂ) * I)‖
+  let Cp : ℝ :=
+    ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((t + u : ℝ) : ℂ) * I)‖
+  let Cm : ℝ :=
+    ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t + u : ℝ) : ℂ) * I)‖
+  let Bp : ℝ := ‖Complex.Gammaℝ ((1 / 2 : ℂ) + (t : ℂ) * I)‖
+  let Bm : ℝ :=
+    ‖Complex.Gammaℝ ((1 / 2 : ℂ) + ((-t : ℝ) : ℂ) * I)‖
+  let rp : ℝ := Ap / Cp
+  let rm : ℝ := Am / Cm
+  let Kp : ℝ := Real.pi⁻¹ ^ 2 * Real.exp 8 *
+    (1 + ((t + u) / 2) ^ 2)
+  let Km : ℝ := Real.pi⁻¹ ^ 2 * Real.exp 8 *
+    (1 + ((-t + u) / 2) ^ 2)
+  let C₀ : ℝ := 1 + Real.pi⁻¹ ^ 2 * Real.exp 8
+  have hCp : 0 < Cp := by
+    dsimp only [Cp]
+    exact norm_pos_iff.mpr (Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num))
+  have hCm : 0 < Cm := by
+    dsimp only [Cm]
+    exact norm_pos_iff.mpr (Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num))
+  have hBp : 0 < Bp := by
+    dsimp only [Bp]
+    exact norm_pos_iff.mpr (Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num))
+  have hBm : 0 < Bm := by
+    dsimp only [Bm]
+    exact norm_pos_iff.mpr (Complex.Gammaℝ_ne_zero_of_re_pos (by norm_num))
+  have hrp0 : 0 ≤ rp := by dsimp only [rp, Ap]; positivity
+  have hrm0 : 0 ≤ rm := by dsimp only [rm, Am]; positivity
+  have hKp0 : 0 ≤ Kp := by dsimp only [Kp]; positivity
+  have hKm0 : 0 ≤ Km := by dsimp only [Km]; positivity
+  have hC₀1 : 1 ≤ C₀ := by
+    dsimp only [C₀]
+    exact le_add_of_nonneg_right (by positivity)
+  have hp : rp ^ 4 ≤ Kp := by
+    simpa only [rp, Ap, Cp, Kp] using
+      norm_GammaR_threeHalf_div_critical_pow_four_le (t + u)
+  have hm : rm ^ 4 ≤ Km := by
+    simpa only [rm, Am, Cm, Km] using
+      norm_GammaR_threeHalf_div_critical_pow_four_le (-t + u)
+  have hp2 : rp ^ 2 ≤ C₀ * (1 + |t + u|) := by
+    apply (sq_le_sq₀ (sq_nonneg rp)
+      (mul_nonneg (zero_le_one.trans hC₀1) (by positivity))).mp
+    calc
+      (rp ^ 2) ^ 2 = rp ^ 4 := by ring
+      _ ≤ Kp := hp
+      _ ≤ (C₀ * (1 + |t + u|)) ^ 2 := by
+        dsimp only [Kp, C₀]
+        have hdiv : ((t + u) / 2) ^ 2 = |t + u| ^ 2 / 4 := by
+          rw [div_pow, ← sq_abs]
+          norm_num
+        rw [hdiv]
+        let A : ℝ := Real.pi⁻¹ ^ 2 * Real.exp 8
+        have hA : 0 ≤ A := by dsimp only [A]; positivity
+        have hcoef : A ≤ (1 + A) ^ 2 := by
+          nlinarith [sq_nonneg A]
+        have hshape : 1 + |t + u| ^ 2 / 4 ≤ (1 + |t + u|) ^ 2 := by
+          nlinarith [abs_nonneg (t + u), sq_nonneg |t + u|]
+        change A * (1 + |t + u| ^ 2 / 4) ≤
+          ((1 + A) * (1 + |t + u|)) ^ 2
+        rw [mul_pow]
+        exact mul_le_mul hcoef hshape (by positivity) (by positivity)
+  have hm2 : rm ^ 2 ≤ C₀ * (1 + |-t + u|) := by
+    apply (sq_le_sq₀ (sq_nonneg rm)
+      (mul_nonneg (zero_le_one.trans hC₀1) (by positivity))).mp
+    calc
+      (rm ^ 2) ^ 2 = rm ^ 4 := by ring
+      _ ≤ Km := hm
+      _ ≤ (C₀ * (1 + |-t + u|)) ^ 2 := by
+        dsimp only [Km, C₀]
+        have hdiv : ((-t + u) / 2) ^ 2 = |-t + u| ^ 2 / 4 := by
+          rw [div_pow, ← sq_abs]
+          norm_num
+        rw [hdiv]
+        let A : ℝ := Real.pi⁻¹ ^ 2 * Real.exp 8
+        have hA : 0 ≤ A := by dsimp only [A]; positivity
+        have hcoef : A ≤ (1 + A) ^ 2 := by
+          nlinarith [sq_nonneg A]
+        have hshape : 1 + |-t + u| ^ 2 / 4 ≤ (1 + |-t + u|) ^ 2 := by
+          nlinarith [abs_nonneg (-t + u), sq_nonneg |-t + u|]
+        change A * (1 + |-t + u| ^ 2 / 4) ≤
+          ((1 + A) * (1 + |-t + u|)) ^ 2
+        rw [mul_pow]
+        exact mul_le_mul hcoef hshape (by positivity) (by positivity)
+  have hcritical := norm_GammaR_critical_symmetric_le t u
+  change Cp * Cm ≤ Real.exp (8 * u ^ 2) * (Bp * Bm) at hcritical
+  have hbase : 0 < Bp * Bm := mul_pos hBp hBm
+  have hcriticalRatio : Cp * Cm / (Bp * Bm) ≤ Real.exp (8 * u ^ 2) := by
+    exact (div_le_iff₀ hbase).2 (by simpa only [mul_assoc] using hcritical)
+  have hcriticalRatio0 : 0 ≤ Cp * Cm / (Bp * Bm) := by positivity
+  have hcriticalSq : (Cp * Cm / (Bp * Bm)) ^ 2 ≤ Real.exp (16 * u ^ 2) := by
+    calc
+      (Cp * Cm / (Bp * Bm)) ^ 2 ≤ (Real.exp (8 * u ^ 2)) ^ 2 := by
+        exact (sq_le_sq₀ hcriticalRatio0 (Real.exp_pos _).le).2 hcriticalRatio
+      _ = Real.exp (16 * u ^ 2) := by
+        rw [← Real.exp_nat_mul]
+        congr 1
+        ring
+  have hApCast :
+      ‖Complex.Gammaℝ (((3 / 2 : ℝ) : ℂ) + ((t + u : ℝ) : ℂ) * I)‖ = Ap := by
+    dsimp only [Ap]
+    congr 2
+    norm_num
+  have hAmCast :
+      ‖Complex.Gammaℝ (((3 / 2 : ℝ) : ℂ) + ((-t + u : ℝ) : ℂ) * I)‖ = Am := by
+    dsimp only [Am]
+    congr 2
+    norm_num
+  have hnorm : ‖hughesYoungGammaRatioShift t 1 u‖ =
+      rp ^ 2 * rm ^ 2 * (Cp * Cm / (Bp * Bm)) ^ 2 := by
+    rw [hughesYoungGammaRatioShift, afeGammaNormalization, norm_div,
+      norm_mul, norm_pow, norm_pow, norm_mul, norm_pow, norm_pow]
+    simp only [afeCriticalPoint]
+    norm_num only [show (1 / 2 + 1 : ℝ) = 3 / 2 by norm_num]
+    rw [hApCast, hAmCast]
+    change Ap ^ 2 * Am ^ 2 / (Bp ^ 2 * Bm ^ 2) =
+      rp ^ 2 * rm ^ 2 * (Cp * Cm / (Bp * Bm)) ^ 2
+    dsimp only [rp, rm]
+    field_simp [hCp.ne', hCm.ne', hBp.ne', hBm.ne']
+  rw [hnorm]
+  calc
+    rp ^ 2 * rm ^ 2 * (Cp * Cm / (Bp * Bm)) ^ 2 ≤
+        (C₀ * (1 + |t + u|)) * (C₀ * (1 + |-t + u|)) *
+          Real.exp (16 * u ^ 2) := by gcongr
+    _ = Real.exp (16 * u ^ 2) * C₀ ^ 2 *
+        (1 + |t + u|) * (1 + |-t + u|) := by ring
+    _ = Real.exp (16 * u ^ 2) *
+        (1 + Real.pi⁻¹ ^ 2 * Real.exp 8) ^ 2 *
+        (1 + |t + u|) * (1 + |-t + u|) := by rfl
+
+/-- The completed-zeta pole normalization never creates conductor growth:
+its reciprocal is bounded by the absolute constant `256`. -/
+theorem norm_inv_afePoleNormalization_le (t : ℝ) :
+    ‖(afePoleNormalization t)⁻¹‖ ≤ 256 := by
+  have hfactor (v : ℝ) :
+      (1 / 2 : ℝ) ≤ ‖(1 / 2 : ℂ) + (v : ℂ) * I‖ := by
+    have h := Complex.abs_re_le_norm ((1 / 2 : ℂ) + (v : ℂ) * I)
+    norm_num at h ⊢
+    exact h
+  have hfactorOne (v : ℝ) :
+      (1 / 2 : ℝ) ≤ ‖1 - ((1 / 2 : ℂ) + (v : ℂ) * I)‖ := by
+    have h := Complex.abs_re_le_norm (1 - ((1 / 2 : ℂ) + (v : ℂ) * I))
+    norm_num at h ⊢
+    exact h
+  have hbase : (0 : ℝ) <
+      ‖afeCriticalPoint t * (1 - afeCriticalPoint t) *
+        afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ := by
+    rw [norm_pos_iff]
+    repeat' apply mul_ne_zero
+    · exact afeCriticalPoint_ne_zero t
+    · exact sub_ne_zero.mpr (afeCriticalPoint_ne_one t).symm
+    · exact afeCriticalPoint_ne_zero (-t)
+    · exact sub_ne_zero.mpr (afeCriticalPoint_ne_one (-t)).symm
+  have hprod : (1 / 16 : ℝ) ≤
+      ‖afeCriticalPoint t * (1 - afeCriticalPoint t) *
+        afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ := by
+    simp only [norm_mul]
+    have h₁ := hfactor t
+    have h₂ := hfactorOne t
+    have h₃ := hfactor (-t)
+    have h₄ := hfactorOne (-t)
+    simp only [afeCriticalPoint] at h₁ h₂ h₃ h₄ ⊢
+    calc
+      (1 / 16 : ℝ) = (1 / 2) * (1 / 2) * (1 / 2) * (1 / 2) := by norm_num
+      _ ≤ ‖1 / 2 + (t : ℂ) * I‖ * ‖1 - (1 / 2 + (t : ℂ) * I)‖ *
+          ‖1 / 2 + ((-t : ℝ) : ℂ) * I‖ *
+          ‖1 - (1 / 2 + ((-t : ℝ) : ℂ) * I)‖ := by gcongr
+  rw [norm_inv, afePoleNormalization, norm_pow]
+  have hsq : (1 / 256 : ℝ) ≤
+      ‖afeCriticalPoint t * (1 - afeCriticalPoint t) *
+        afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ ^ 2 := by
+    nlinarith [sq_nonneg
+      (‖afeCriticalPoint t * (1 - afeCriticalPoint t) *
+        afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t))‖ - 1 / 16)]
+  rw [inv_le_iff_one_le_mul₀' (pow_pos hbase 2)]
+  nlinarith
 
 /-- One real-Gamma quotient has the exact quarter-power conductor cost. -/
 theorem norm_GammaR_one_div_critical_pow_four_le (y : ℝ) :

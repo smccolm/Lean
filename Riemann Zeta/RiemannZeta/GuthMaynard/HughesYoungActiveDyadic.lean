@@ -1,5 +1,6 @@
 import RiemannZeta.GuthMaynard.HughesYoungFiniteContourSet
 import RiemannZeta.GuthMaynard.HughesYoungInfiniteBox
+import RiemannZeta.GuthMaynard.HughesYoungSquareTruncation
 
 open Complex Finset Filter MeasureTheory Set Topology
 open scoped BigOperators Interval Topology

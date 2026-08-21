@@ -124,9 +124,9 @@ theorem one_div_Gamma_eq_Gamma_three_sub_mul_sin
 the horizontal sides of the Hughes--Young rectangle.  This estimate is
 intentionally weaker than Stirling, but the `exp (100 w^2)` factor still
 dominates it by a wide margin. -/
-theorem exists_norm_inv_Gamma_critical_horizontal_le
-    (t : ℝ) {c₀ c₁ : ℝ} (hc₁ : c₁ < 3 / 2) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ), 1 ≤ |t + y| →
+theorem exists_norm_inv_Gamma_critical_horizontal_far_le
+    {c₀ c₁ : ℝ} (hc₁ : c₁ < 3 / 2) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (t y : ℝ), 1 ≤ |t + y| →
       ∀ x ∈ Set.Icc c₀ c₁,
         ‖(Complex.Gamma
             (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)))⁻¹‖ ≤
@@ -140,7 +140,7 @@ theorem exists_norm_inv_Gamma_critical_horizontal_le
     dsimp [C]
     positivity
   refine ⟨C, hC, ?_⟩
-  intro y hy x hx
+  intro t y hy x hx
   let p : ℂ := afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)
   have hpim : p.im ≠ 0 := by
     have hpimEq : p.im = t + y := by simp [p, afeCriticalPoint]
@@ -200,6 +200,62 @@ theorem exists_norm_inv_Gamma_critical_horizontal_le
           ‖((Real.pi : ℂ) * (2 - p) * (1 - p))‖ := by
       gcongr
 
+/-- Reciprocal Gamma admits the same coarse quadratic-exponential majorant
+on the whole horizontal strip.  The bounded-height part is obtained from
+compactness of the entire reciprocal-Gamma function; the unbounded part is
+the reflection-formula estimate above. -/
+theorem exists_norm_inv_Gamma_critical_horizontal_le
+    {c₀ c₁ : ℝ} (hc₁ : c₁ < 3 / 2) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (t y : ℝ),
+      ∀ x ∈ Set.Icc c₀ c₁,
+        ‖(Complex.Gamma
+            (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)))⁻¹‖ ≤
+          C * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) := by
+  obtain ⟨Cfar, hCfar, hfar⟩ :=
+    exists_norm_inv_Gamma_critical_horizontal_far_le
+      (c₀ := c₀) (c₁ := c₁) hc₁
+  let f : ℝ × ℝ → ℝ := fun z =>
+    ‖(Complex.Gamma
+      ((((1 / 2 : ℝ) + z.1 : ℝ) : ℂ) + (z.2 : ℂ) * I))⁻¹‖
+  have harg : Continuous (fun z : ℝ × ℝ =>
+      ((((1 / 2 : ℝ) + z.1 : ℝ) : ℂ) + (z.2 : ℂ) * I)) := by
+    fun_prop
+  have hf : Continuous f := by
+    exact (Complex.differentiable_one_div_Gamma.continuous.comp harg).norm
+  have hcompact : IsCompact (Set.Icc c₀ c₁ ×ˢ Set.Icc (-1 : ℝ) 1) :=
+    isCompact_Icc.prod isCompact_Icc
+  obtain ⟨Csmall, hCsmall⟩ := hcompact.bddAbove_image hf.continuousOn
+  let C : ℝ := max Cfar (max 1 Csmall)
+  have hC : 0 < C := hCfar.trans_le (le_max_left _ _)
+  refine ⟨C, hC, ?_⟩
+  intro t y x hx
+  let v : ℝ := t + y
+  by_cases hv : 1 ≤ |v|
+  · have h := hfar t y (by simpa only [v] using hv) x hx
+    exact h.trans <| mul_le_mul_of_nonneg_right
+      (le_max_left Cfar (max 1 Csmall)) (Real.exp_pos _).le
+  · have hvabs : |v| ≤ 1 := le_of_lt (lt_of_not_ge hv)
+    have hvMem : v ∈ Set.Icc (-1 : ℝ) 1 := (abs_le.mp hvabs)
+    have hsmall : f (x, v) ≤ Csmall :=
+      hCsmall ⟨(x, v), ⟨hx, hvMem⟩, rfl⟩
+    have hnorm :
+        ‖(Complex.Gamma
+          (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)))⁻¹‖ = f (x, v) := by
+      dsimp only [f, v, afeCriticalPoint]
+      congr 3
+      push_cast
+      ring
+    rw [hnorm]
+    calc
+      f (x, v) ≤ Csmall := hsmall
+      _ ≤ C := (le_max_right 1 Csmall).trans (le_max_right Cfar (max 1 Csmall))
+      _ ≤ C * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) := by
+        have hexp : 1 ≤ Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) := by
+          rw [← Real.exp_zero]
+          apply Real.exp_le_exp.mpr
+          positivity
+        exact le_mul_of_one_le_right hC.le hexp
+
 /-- A linear majorant for digamma on a compact positive real-part strip.
 The logarithmic source estimate is retained in the proof, while this weaker
 form is more convenient for the final Gaussian domination. -/
@@ -222,9 +278,9 @@ theorem exists_uniform_norm_digamma_vertical_strip_linear
 /-- The two pole-cancelled Gamma factors in equation (84) have uniform
 polynomial growth across the full contour-shift strip. -/
 theorem exists_norm_hughesYoungRegularizedGamma_pair_horizontal_le
-    (t : ℝ) {c₀ c₁ : ℝ} (hc₀ : 0 < c₀) (hc₁ : c₁ < 3 / 2)
+    {c₀ c₁ : ℝ} (hc₀ : 0 < c₀) (hc₁ : c₁ < 3 / 2)
     (hc : c₀ ≤ c₁) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (y x : ℝ), x ∈ Set.Icc c₀ c₁ →
+    ∃ C : ℝ, 0 < C ∧ ∀ (t y x : ℝ), x ∈ Set.Icc c₀ c₁ →
       let z := afeCriticalPoint t - ((x : ℂ) + (y : ℂ) * I)
       let R := 2 + |t| + c₁ + |y|
       ‖hughesYoungRegularizedGamma z‖ ≤ C * R ∧
@@ -240,7 +296,7 @@ theorem exists_norm_hughesYoungRegularizedGamma_pair_horizontal_le
     dsimp [C]
     positivity
   refine ⟨C, hC, ?_⟩
-  intro y x hx
+  intro t y x hx
   dsimp only
   let z : ℂ := afeCriticalPoint t - ((x : ℂ) + (y : ℂ) * I)
   let R : ℝ := 2 + |t| + c₁ + |y|
@@ -314,7 +370,7 @@ theorem exists_norm_hughesYoungRegularizedGamma_pair_horizontal_le
 
 /-- Uniform boundedness of the trigamma series on the horizontal edges of
 a positive strip. -/
-theorem exists_uniform_norm_hughesYoungPolygamma_one_horizontal_le
+theorem exists_uniform_norm_hughesYoungPolygamma_one_horizontal_far_le
     {c₀ c₁ : ℝ} (hc₀ : 0 < c₀) :
     ∃ P : ℝ, 0 < P ∧ ∀ (y x : ℝ), 1 ≤ |y| →
       x ∈ Set.Icc c₀ c₁ →
@@ -355,13 +411,57 @@ theorem exists_uniform_norm_hughesYoungPolygamma_one_horizontal_le
       simpa using himInv
     _ = P := by simp [P]
 
+/-- The trigamma factor is uniformly bounded on the entire horizontal strip.
+For small ordinate this is compactness of the holomorphic polygamma series;
+for large ordinate it is the explicit series estimate above. -/
+theorem exists_uniform_norm_hughesYoungPolygamma_one_horizontal_le
+    {c₀ c₁ : ℝ} (hc₀ : 0 < c₀) :
+    ∃ P : ℝ, 0 < P ∧ ∀ (y x : ℝ),
+      x ∈ Set.Icc c₀ c₁ →
+      ‖hughesYoungPolygammaSeries 1
+          (2 * ((x : ℂ) + (y : ℂ) * I))‖ ≤ P := by
+  obtain ⟨Pfar, hPfar, hfar⟩ :=
+    exists_uniform_norm_hughesYoungPolygamma_one_horizontal_far_le
+      (c₀ := c₀) (c₁ := c₁) hc₀
+  let arg : ℝ × ℝ → ℂ := fun z =>
+    2 * ((z.1 : ℂ) + (z.2 : ℂ) * I)
+  let f : ℝ × ℝ → ℝ := fun z =>
+    ‖hughesYoungPolygammaSeries 1 (arg z)‖
+  have harg : Continuous arg := by
+    dsimp only [arg]
+    fun_prop
+  have hf : ContinuousOn f (Set.Icc c₀ c₁ ×ˢ Set.Icc (-1 : ℝ) 1) := by
+    intro z hz
+    have hzre : 0 < (arg z).re := by
+      dsimp only [arg]
+      norm_num [mul_re, add_re]
+      nlinarith [hc₀, hz.1.1]
+    have hseries :=
+      (hasDerivAt_hughesYoungPolygammaSeries 1 (by norm_num) hzre).continuousAt
+    exact ((hseries.comp harg.continuousAt).norm).continuousWithinAt
+  have hcompact : IsCompact (Set.Icc c₀ c₁ ×ˢ Set.Icc (-1 : ℝ) 1) :=
+    isCompact_Icc.prod isCompact_Icc
+  obtain ⟨Psmall, hPsmall⟩ := hcompact.bddAbove_image hf
+  let P : ℝ := max Pfar (max 1 Psmall)
+  have hP : 0 < P := hPfar.trans_le (le_max_left _ _)
+  refine ⟨P, hP, ?_⟩
+  intro y x hx
+  by_cases hy : 1 ≤ |y|
+  · exact (hfar y x hy hx).trans (le_max_left _ _)
+  · have hyMem : y ∈ Set.Icc (-1 : ℝ) 1 :=
+      abs_le.mp (le_of_lt (lt_of_not_ge hy))
+    have hsmall : f (x, y) ≤ Psmall :=
+      hPsmall ⟨(x, y), ⟨hx, hyMem⟩, rfl⟩
+    exact hsmall.trans <|
+      (le_max_right 1 Psmall).trans (le_max_right Pfar (max 1 Psmall))
+
 set_option maxHeartbeats 1000000 in
 /-- Uniform horizontal growth bound for the complete pole-cancelled beta
 factor in equation (84). -/
 theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
-    (t : ℝ) (CX COne : ℂ) {c₀ c₁ : ℝ}
+    (CX COne : ℂ) {c₀ c₁ : ℝ}
     (hc₀ : 0 < c₀) (hc₁ : c₁ < 3 / 2) (hc : c₀ ≤ c₁) :
-    ∃ C : ℝ, 0 < C ∧ ∀ (y : ℝ), 1 ≤ |y| → 1 ≤ |t + y| →
+    ∃ C : ℝ, 0 < C ∧ ∀ (t y : ℝ),
       ∀ x ∈ Set.Icc c₀ c₁,
         ‖hughesYoungEquation84RegularizedBetaKernel t
             ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
@@ -370,7 +470,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
   obtain ⟨G₂, hG₂, hGamma₂⟩ := exists_uniform_norm_Gamma_vertical_strip
     (a := 2 * c₀) (b := 2 * c₁) (by positivity)
   obtain ⟨J, hJ, hInv⟩ :=
-    exists_norm_inv_Gamma_critical_horizontal_le t
+    exists_norm_inv_Gamma_critical_horizontal_le
       (c₀ := c₀) (c₁ := c₁) hc₁
   obtain ⟨Dₚ, hDₚ, hDigammaP⟩ :=
     exists_uniform_norm_digamma_vertical_strip_linear
@@ -383,7 +483,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
       (c₀ := c₀) (c₁ := c₁) hc₀
   obtain ⟨Gᵣ, hGᵣ, hReg⟩ :=
     exists_norm_hughesYoungRegularizedGamma_pair_horizontal_le
-      t hc₀ hc₁ hc
+      hc₀ hc₁ hc
   let K : ℝ := Dₚ + 2 * D₂ + ‖CX‖ + ‖COne‖ + 1
   let B : ℝ := Gᵣ * (K + K ^ 2 + P)
   let C : ℝ := G₂ * J * B
@@ -397,7 +497,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
     dsimp [C]
     positivity
   refine ⟨C, hC, ?_⟩
-  intro y hy htyOne x hx
+  intro t y x hx
   let w : ℂ := (x : ℂ) + (y : ℂ) * I
   let p : ℂ := afeCriticalPoint t + w
   let z : ℂ := afeCriticalPoint t - w
@@ -423,7 +523,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
   have hInvP : ‖(Complex.Gamma p)⁻¹‖ ≤
       J * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) := by
     dsimp [p, w]
-    exact hInv y htyOne x hx
+    exact hInv t y x hx
   have hDigP : ‖Complex.digamma p‖ ≤ Dₚ * R := by
     have hpEq : p = (((1 / 2 : ℝ) + x : ℝ) : ℂ) +
         ((t + y : ℝ) : ℂ) * I := by
@@ -448,7 +548,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
         rw [abs_mul, abs_of_pos (by norm_num : (0 : ℝ) < 2)]
         gcongr
       _ = 2 * D₂ * R := by ring
-  have hRegPair := hReg y x hx
+  have hRegPair := hReg t y x hx
   dsimp only [z, R] at hRegPair
   have hRegGamma : ‖hughesYoungRegularizedGamma z‖ ≤ Gᵣ * R := by
     simpa only [z, R] using hRegPair.1
@@ -457,7 +557,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
     simpa only [z, R] using hRegPair.2
   have hTrigamma : ‖hughesYoungPolygammaSeries 1 (2 * w)‖ ≤ P := by
     dsimp [w]
-    exact hPoly y x hy hx
+    exact hPoly y x hx
   let U : ℂ := -Complex.digamma (2 * w) + CX
   let V : ℂ := Complex.digamma p - Complex.digamma (2 * w) + COne
   have hU : ‖U‖ ≤ K * R := by
@@ -550,7 +650,7 @@ theorem norm_hughesYoungEquation84CorePolynomial_le
       gcongr
     _ = R ^ 6 := by ring
 
-set_option maxHeartbeats 10000 in
+set_option maxHeartbeats 1000000 in
 /-- The analytic core of the regularized equation-(84) archimedean kernel
 decays Gaussianly on both horizontal sides of the contour rectangle. -/
 theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal_le
@@ -564,7 +664,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal
             (2 + |t| + c₁ + |y|) ^ 9 := by
   obtain ⟨B, hB, hBeta⟩ :=
     exists_norm_hughesYoungEquation84RegularizedBetaKernel_horizontal_le
-      t CX COne hc₀ hc₁ hc
+      CX COne hc₀ hc₁ hc
   obtain ⟨G, hG, hGammaR⟩ :=
     exists_uniform_norm_GammaR_vertical_strip
       (c₀ := c₀) (c₁ := c₁) hc₀
@@ -655,7 +755,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal
       ‖hughesYoungEquation84RegularizedBetaKernel t w CX COne‖ ≤
         B * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) * R ^ 3 := by
     dsimp [w, R]
-    exact hBeta y hy htyOne x hx
+    exact hBeta t y x hx
   have hpi : Real.pi ≤ 4 := Real.pi_lt_four.le
   have htPlus : |t + y| ≤ 2 * |y| := by
     calc
@@ -692,31 +792,68 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal
     rw [← Real.exp_add, ← Real.exp_add]
     apply Real.exp_le_exp.mpr
     linarith
-  change ‖Complex.exp (100 * w ^ 2) * (p * (1 - p)) ^ 2 * q ^ 2 *
-      Complex.Gammaℝ p ^ 2 * Complex.Gammaℝ q ^ 2 /
-      afePoleNormalization t / w / afeGammaNormalization t *
-      hughesYoungEquation84RegularizedBetaKernel t w CX COne‖ ≤
-    C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9
+  rw [hughesYoungEquation84RegularizedContourKernelCore_eq_expanded]
   simp only [div_eq_mul_inv, norm_mul, norm_pow]
-  have hGaussPoly :
-      ‖Complex.exp (100 * w ^ 2)‖ *
-          ((‖p‖ * ‖1 - p‖) ^ 2 * ‖q‖ ^ 2) ≤
+  have hGauss' :
+      ‖Complex.exp (100 * (((x : ℂ) + (y : ℂ) * I) ^ 2))‖ ≤
+        Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) := by
+    simpa only [w] using hGauss
+  have hPoly' :
+      (‖afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)‖ *
+          ‖1 - (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖) ^ 2 *
+        ‖afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I)‖ ^ 2 ≤
+        R ^ 6 := by
+    simpa only [p, q, w, norm_mul, norm_pow] using hPoly
+  have hGammaP' :
+      ‖Complex.Gammaℝ (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖ ≤ G := by
+    simpa only [p, w] using hGammaP
+  have hGammaQ' :
+      ‖Complex.Gammaℝ (afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I))‖ ≤ G := by
+    simpa only [q, w] using hGammaQ
+  have hwInv' : ‖((x : ℂ) + (y : ℂ) * I)⁻¹‖ ≤ 1 := by
+    simpa only [w] using hwInv
+  have hBetaTerm' :
+      ‖hughesYoungEquation84RegularizedBetaKernel t
+          ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
+        B * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) * R ^ 3 := by
+    simpa only [w] using hBetaTerm
+  have hGaussPoly' :
+      (‖Complex.exp (100 * (((x : ℂ) + (y : ℂ) * I) ^ 2))‖ *
+          (‖afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)‖ *
+            ‖1 - (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖) ^ 2) *
+          ‖afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I)‖ ^ 2 ≤
         Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) * R ^ 6 := by
-    have hPoly' : (‖p‖ * ‖1 - p‖) ^ 2 * ‖q‖ ^ 2 ≤ R ^ 6 := by
-      simpa only [norm_mul, norm_pow] using hPoly
-    exact mul_le_mul hGauss hPoly' (by positivity) (Real.exp_pos _).le
-  calc
-    _ = (‖Complex.exp (100 * w ^ 2)‖ *
-          ((‖p‖ * ‖1 - p‖) ^ 2 * ‖q‖ ^ 2)) *
-        ‖Complex.Gammaℝ p‖ ^ 2 * ‖Complex.Gammaℝ q‖ ^ 2 *
-        ‖(afePoleNormalization t)⁻¹‖ * ‖w⁻¹‖ *
-        ‖(afeGammaNormalization t)⁻¹‖ *
-        ‖hughesYoungEquation84RegularizedBetaKernel t w CX COne‖ := by ring
-    _ ≤ Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) * R ^ 6 *
+    rw [mul_assoc]
+    exact mul_le_mul hGauss' hPoly' (by positivity) (Real.exp_pos _).le
+  have hRest :
+      ‖Complex.Gammaℝ (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖ ^ 2 *
+          ‖Complex.Gammaℝ (afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I))‖ ^ 2 *
+          ‖(afePoleNormalization t)⁻¹‖ *
+          ‖((x : ℂ) + (y : ℂ) * I)⁻¹‖ *
+          ‖(afeGammaNormalization t)⁻¹‖ *
+          ‖hughesYoungEquation84RegularizedBetaKernel t
+            ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
         G ^ 2 * G ^ 2 * ‖(afePoleNormalization t)⁻¹‖ * 1 *
-        ‖(afeGammaNormalization t)⁻¹‖ *
-        (B * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) * R ^ 3) := by
-      gcongr
+          ‖(afeGammaNormalization t)⁻¹‖ *
+          (B * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) * R ^ 3) := by
+    gcongr
+  calc
+    _ = ((‖Complex.exp (100 * (((x : ℂ) + (y : ℂ) * I) ^ 2))‖ *
+          (‖afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I)‖ *
+            ‖1 - (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖) ^ 2) *
+          ‖afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I)‖ ^ 2) *
+        (‖Complex.Gammaℝ (afeCriticalPoint t + ((x : ℂ) + (y : ℂ) * I))‖ ^ 2 *
+          ‖Complex.Gammaℝ (afeCriticalPoint (-t) + ((x : ℂ) + (y : ℂ) * I))‖ ^ 2 *
+          ‖(afePoleNormalization t)⁻¹‖ *
+          ‖((x : ℂ) + (y : ℂ) * I)⁻¹‖ *
+          ‖(afeGammaNormalization t)⁻¹‖ *
+          ‖hughesYoungEquation84RegularizedBetaKernel t
+            ((x : ℂ) + (y : ℂ) * I) CX COne‖) := by ac_rfl
+    _ ≤ (Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) * R ^ 6) *
+        (G ^ 2 * G ^ 2 * ‖(afePoleNormalization t)⁻¹‖ * 1 *
+          ‖(afeGammaNormalization t)⁻¹‖ *
+          (B * Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2) * R ^ 3)) := by
+      exact mul_le_mul hGaussPoly' hRest (by positivity) (by positivity)
     _ = G ^ 4 * A * B *
         (Real.exp (100 * c₁ ^ 2 - 100 * y ^ 2) *
           Real.exp (((Real.pi * (t + y)) ^ 2 + 1) / 2)) * R ^ 9 := by
@@ -728,6 +865,18 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernelCore_horizontal
     _ = C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9 := by
       dsimp [C]
       ring
+
+/-- Combining an eighth-degree auxiliary factor with a ninth-degree analytic
+core produces the seventeenth-degree horizontal envelope. -/
+theorem mul_le_hughesYoung_degree_seventeen
+    {a b C E R : ℝ}
+    (ha : a ≤ 625 * R ^ 8) (hb : b ≤ C * E * R ^ 9)
+    (hb0 : 0 ≤ b) :
+    a * b ≤ (625 * C) * E * R ^ 17 := by
+  calc
+    a * b ≤ (625 * R ^ 8) * (C * E * R ^ 9) :=
+      mul_le_mul ha hb hb0 (by positivity)
+    _ = (625 * C) * E * R ^ 17 := by ring
 
 /-- The complete regularized equation-(84) kernel is the analytic core times
 the prescribed degree-eight auxiliary zero, hence has the same Gaussian decay
@@ -766,20 +915,19 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_horizontal_le
         linarith [abs_nonneg t]
   have hAux : ‖hughesYoungAuxiliaryZero w‖ ≤ 625 * R ^ 8 :=
     norm_hughesYoungAuxiliaryZero_le_polynomial hR1 hwNormUpper
-  have hCore' := hCore y hy hty x hx
+  have hAux' :
+      ‖hughesYoungAuxiliaryZero ((x : ℂ) + (y : ℂ) * I)‖ ≤
+        625 * (2 + |t| + c₁ + |y|) ^ 8 := by
+    simpa only [w, R] using hAux
+  have hCore' :
+      ‖hughesYoungEquation84RegularizedContourKernelCore t
+          ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
+        C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
+          (2 + |t| + c₁ + |y|) ^ 9 := hCore y hy hty x hx
   rw [hughesYoungEquation84RegularizedContourKernel_eq_auxiliary_mul_core,
     norm_mul]
-  change ‖hughesYoungAuxiliaryZero w‖ *
-      ‖hughesYoungEquation84RegularizedContourKernelCore t w CX COne‖ ≤
-    (625 * C) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 17
-  change ‖hughesYoungEquation84RegularizedContourKernelCore t w CX COne‖ ≤
-      C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9 at hCore'
-  calc
-    _ ≤ (625 * R ^ 8) *
-        (C * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 9) := by
-      exact mul_le_mul hAux hCore' (norm_nonneg _) (by positivity)
-    _ = (625 * C) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) * R ^ 17 := by
-      ring
+  exact mul_le_hughesYoung_degree_seventeen
+    hAux' hCore' (norm_nonneg _)
 
 /-- The non-archimedean and reduced Mellin factors outside the regularized
 beta kernel have height-independent norm on a fixed compact real-part
@@ -858,15 +1006,29 @@ theorem exists_norm_hughesYoungEquation84PositiveContourTerm_horizontal_le
   intro y hy hty x hx
   have hO := hOuter y x hx
   have hA := hKernel y hy hty x hx
-  unfold hughesYoungEquation84PositiveContourTerm
-  dsimp only [A, CX, COne] at hO hA ⊢
-  rw [← mul_assoc, norm_mul]
+  have hO' :
+      ‖(((a : ℂ) * b)⁻¹ * dfiEquation27ArithmeticCoefficient a b r q) *
+          (hughesYoungReducedMellinStaticComplex T t h k
+              ((x : ℂ) + (y : ℂ) * I) *
+            hughesYoungCentralShiftPower r ((x : ℂ) + (y : ℂ) * I))‖ ≤ K := by
+    simpa only [A] using hO
+  have hA' :
+      ‖hughesYoungEquation84RegularizedContourKernel t
+          ((x : ℂ) + (y : ℂ) * I)
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant b (dfiReducedDenominator b q))
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant a (dfiReducedDenominator a q))‖ ≤
+        B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
+          (2 + |t| + c₁ + |y|) ^ 17 := by
+    simpa only [CX, COne] using hA
+  rw [hughesYoungEquation84PositiveContourTerm_eq_outer_mul_kernel, norm_mul]
   calc
     _ ≤ K * (B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
         (2 + |t| + c₁ + |y|) ^ 17) :=
-      mul_le_mul hO hA (by positivity) hK.le
+      mul_le_mul hO' hA' (by positivity) hK.le
     _ = (K * B) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 17 := by ring
+        (2 + |t| + c₁ + |y|) ^ 17 := by ac_rfl
 
 set_option maxHeartbeats 1000000 in
 /-- The coordinate-swapped negative equation-(84) summand satisfies the
@@ -894,16 +1056,36 @@ theorem exists_norm_hughesYoungEquation84NegativeContourTerm_horizontal_le
   refine ⟨K * B, mul_pos hK hB, ?_⟩
   intro y hy hty x hx
   have hO := hOuter y x hx
-  have hA := hKernel y hy (by simpa only [abs_neg] using hty) x hx
-  unfold hughesYoungEquation84NegativeContourTerm
-  dsimp only [A, CX, COne] at hO hA ⊢
-  rw [← mul_assoc, norm_mul]
+  have hA :
+      ‖hughesYoungEquation84RegularizedContourKernel (-t)
+          ((x : ℂ) + (y : ℂ) * I) CX COne‖ ≤
+        B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
+          (2 + |t| + c₁ + |y|) ^ 17 := by
+    simpa only [abs_neg] using
+      hKernel y hy (by simpa only [abs_neg] using hty) x hx
+  have hO' :
+      ‖(((b : ℂ) * a)⁻¹ * dfiEquation27ArithmeticCoefficient b a r q) *
+          (hughesYoungReducedMellinStaticComplex T t h k
+              ((x : ℂ) + (y : ℂ) * I) *
+            hughesYoungCentralShiftPower r ((x : ℂ) + (y : ℂ) * I))‖ ≤ K := by
+    simpa only [A] using hO
+  have hA' :
+      ‖hughesYoungEquation84RegularizedContourKernel (-t)
+          ((x : ℂ) + (y : ℂ) * I)
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant a (dfiReducedDenominator a q))
+          ((Real.log r : ℂ) +
+            dfiEquation27LogConstant b (dfiReducedDenominator b q))‖ ≤
+        B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
+          (2 + |t| + c₁ + |y|) ^ 17 := by
+    simpa only [CX, COne] using hA
+  rw [hughesYoungEquation84NegativeContourTerm_eq_outer_mul_kernel, norm_mul]
   calc
     _ ≤ K * (B * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
         (2 + |t| + c₁ + |y|) ^ 17) := by
-      simpa only [abs_neg] using mul_le_mul hO hA (by positivity) hK.le
+      exact mul_le_mul hO' hA' (by positivity) hK.le
     _ = (K * B) * Real.exp (100 * c₁ ^ 2 - 60 * y ^ 2) *
-        (2 + |t| + c₁ + |y|) ^ 17 := by ring
+        (2 + |t| + c₁ + |y|) ^ 17 := by ac_rfl
 
 /-- A seventeenth-degree polynomial cannot overcome the Gaussian supplied by
 the completed-zeta test factor. -/
