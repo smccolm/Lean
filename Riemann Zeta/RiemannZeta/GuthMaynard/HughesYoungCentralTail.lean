@@ -1452,8 +1452,6 @@ theorem intervalIntegrable_mul_hughesYoungNearSignedCentralBox
     {T c H P U X Y : ℝ} {h k M N : ℕ}
     (hT : 16 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y) (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hP : 1 ≤ P) (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
     IntervalIntegrable (fun u : ℝ => (T : ℂ) *
       ∑ r ∈ hughesYoungNearShifts T P X Y
@@ -1471,7 +1469,7 @@ theorem intervalIntegrable_mul_hughesYoungNearSignedCentralBox
     exact ⟨hr0, hrY, hrP⟩
   exact (continuous_const.mul
     (continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
-      (by linarith) hc hc1 hX hY hh hk haX hbY hP hU hscale hs)).intervalIntegrable _ _
+      (by linarith) hc hc1 hX hY hh hk hP hU hscale hs)).intervalIntegrable _ _
 
 /-- The full finite nonzero-shift central family is integrable because it
 is exactly the sum of the continuous near family and the measurable,
@@ -1482,8 +1480,6 @@ theorem intervalIntegrable_mul_hughesYoungFiniteCompleteSignedCentralBox
     (hH : 0 ≤ H) (hHT : H ≤ T / 8)
     (hP0 : 0 < P) (hPT : P ≤ T)
     (hX : 1 ≤ X) (hY : 1 ≤ Y) (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hP : 1 ≤ P) (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
     IntervalIntegrable (fun u : ℝ => (T : ℂ) *
       hughesYoungFiniteCompleteSignedCentralBox T c u X Y h k
@@ -1501,7 +1497,7 @@ theorem intervalIntegrable_mul_hughesYoungFiniteCompleteSignedCentralBox
   have hnear : IntervalIntegrable near volume (-H) H := by
     dsimp only [near]
     exact intervalIntegrable_mul_hughesYoungNearSignedCentralBox
-      hT hc hc1 hX hY hh hk haX hbY hP hU hscale
+      hT hc hc1 hX hY hh hk hP hU hscale
   have hfar : IntervalIntegrable far volume (-H) H := by
     dsimp only [far]
     exact intervalIntegrable_mul_hughesYoungFarSignedCentralBox
@@ -1527,8 +1523,6 @@ theorem hughesYoungNearPointwiseSignedCentralBox_eq_integratedComplete_sub_far
     (hH : 0 ≤ H) (hHT : H ≤ T / 8)
     (hP0 : 0 < P) (hPT : P ≤ T)
     (hX : 1 ≤ X) (hY : 1 ≤ Y) (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hP : 1 ≤ P) (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
     hughesYoungNearPointwiseSignedCentralBox T c H P X Y h k M N =
       hughesYoungIntegratedFiniteCompleteSignedCentralBox T c H X Y h k
@@ -1540,7 +1534,7 @@ theorem hughesYoungNearPointwiseSignedCentralBox_eq_integratedComplete_sub_far
   have hcomplete :=
     intervalIntegrable_mul_hughesYoungFiniteCompleteSignedCentralBox
       (M := M) (N := N) hT hc hc1 hH hHT hP0 hPT hX hY hh hk
-      haX hbY hP hU hscale
+      hP hU hscale
   have hfar := intervalIntegrable_mul_hughesYoungFarSignedCentralBox
     (M := M) (N := N) hT hc hc1 hH hHT hP0 hPT hX hY hh hk
   calc
@@ -1653,11 +1647,11 @@ theorem hughesYoungActiveLargeDFIPointwiseSignedCentral_eq_complete_sub_tail
   have hU : 0 < hughesYoungDFIOptimalU P
       (hughesYoungFullDyadicScale ij.1)
       (hughesYoungFullDyadicScale ij.2) := by
-    linarith [hbox.2.2.2.2.1]
+    linarith [hbox.2.2.1]
   exact hughesYoungNearPointwiseSignedCentralBox_eq_integratedComplete_sub_far
     hT16 hc hc1 (by positivity) le_rfl
       (lt_of_lt_of_le zero_lt_one hP) hPT hX hY hh hk
-      hbox.2.2.1 hbox.2.2.2.1 hP hU hscale
+      hP hU hscale
 
 /-- Integrated equation-(65) estimate for the omitted signed DFI central
 family.  This is the exact compact-Mellin object occurring in the

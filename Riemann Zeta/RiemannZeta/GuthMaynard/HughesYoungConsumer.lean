@@ -686,6 +686,155 @@ theorem hughesYoungScaledNormalizedDFICore_equation2Profile
           (1 + x / X)⁻¹ * (1 + y / Y)⁻¹ * P ^ (i + j) := by
         gcongr
 
+/-- The normalized Hughes--Young DFI core satisfies equation (2) without
+the auxiliary bounds `h ≤ 2X` and `k ≤ 2Y`.  Those bounds concern whether
+the original lattice box is nonempty; after the exact scale normalization
+they are not hypotheses of the smooth weight estimate in DFI equation (2). -/
+theorem hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+    (Ccut : ℕ → ℝ)
+    (hcut : ∀ n : ℕ, 0 < Ccut n ∧ ∀ (Z : ℝ), 0 < Z → ∀ z : ℝ,
+      |z| ^ n * ‖iteratedDeriv n (hughesYoungDyadicCutoffAt Z) z‖ ≤ Ccut n)
+    {T c u X Y P A : ℝ} {h k : ℕ} {r : ℤ}
+    (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
+    (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (hh : 0 < h) (hk : 0 < k)
+    (hr : |(r : ℝ)| ≤ Y / 2) (hP : 1 ≤ P)
+    (hTR : T * (|(r : ℝ)| / Y) ≤ P) (hA : 0 < A)
+    (hheight : ∀ (n : ℕ) (xi : ℝ),
+      ‖(1 / (T : ℂ)) *
+          iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+        (15 / 4 : ℝ) * ((4 * T) ^ n * A)) :
+    DFIEquation2Profile
+      (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) P X Y
+      (hughesYoungUniformDFIProfile Ccut) := by
+  have hsmoothCore := contDiff_uncurry_hughesYoungDFICore
+    (lt_of_lt_of_le zero_lt_one hT) hc u
+    (lt_of_lt_of_le zero_lt_one hX)
+    (lt_of_lt_of_le zero_lt_one hY) hh hk r (by linarith)
+  have hsmooth : ContDiff ℝ ∞ (Function.uncurry
+      (hughesYoungScaledNormalizedDFICore T c u X Y A h k r)) := by
+    change ContDiff ℝ ∞ (fun p : ℝ × ℝ =>
+      (((hughesYoungScaledDFINormalization c u X Y A h k : ℝ) : ℂ)⁻¹) *
+        hughesYoungDFICore T c u X Y h k r p.1 p.2)
+    exact contDiff_const.mul hsmoothCore
+  refine ⟨fun i j => hughesYoungUniformDFIProfile_pos Ccut
+    (fun n => (hcut n).1) i j, ?_⟩
+  intro i j x y hx hy
+  by_cases hd : dfiMixedDeriv i j
+      (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) x y = 0
+  · rw [hd, norm_zero, mul_zero]
+    exact mul_nonneg
+      (mul_nonneg
+        (mul_nonneg
+          (hughesYoungUniformDFIProfile_pos Ccut
+            (fun n => (hcut n).1) i j).le
+          (inv_nonneg.mpr (le_of_lt
+            (show 0 < 1 + x / X by positivity))))
+        (inv_nonneg.mpr (le_of_lt
+          (show 0 < 1 + y / Y by positivity))))
+      (pow_nonneg (zero_le_one.trans hP) _)
+  · have hmem : (x, y) ∈ Function.support
+        (Function.uncurry (dfiMixedDeriv i j
+          (hughesYoungScaledNormalizedDFICore T c u X Y A h k r))) := by
+      simpa only [Function.mem_support, Function.uncurry_apply_pair] using hd
+    have htsupport : tsupport (Function.uncurry
+        (hughesYoungScaledNormalizedDFICore T c u X Y A h k r)) ⊆
+          Set.Icc X (2 * X) ×ˢ Set.Icc Y (2 * Y) :=
+      closure_minimal
+        (support_uncurry_hughesYoungScaledNormalizedDFICore_subset
+          (lt_of_lt_of_le zero_lt_one hX)
+          (lt_of_lt_of_le zero_lt_one hY) h k r)
+        (isClosed_Icc.prod isClosed_Icc)
+    have hxy := htsupport
+      (support_dfiMixedDeriv_subset_tsupport hsmooth i j hmem)
+    have hraw :=
+      abs_pow_mul_abs_pow_mul_norm_dfiMixedDeriv_hughesYoungScaledNormalizedDFICore_le
+        Ccut hcut i j hT hc hc1
+        (lt_of_lt_of_le zero_lt_one hX) hxy.1.1
+        (lt_of_lt_of_le zero_lt_one hY) hxy.2.1 hxy.2.2
+        hh hk hr hP hTR hA hheight
+    have hxDenPos : 0 < 1 + x / X := by positivity
+    have hyDenPos : 0 < 1 + y / Y := by positivity
+    have hxInv : (3 : ℝ)⁻¹ ≤ (1 + x / X)⁻¹ := by
+      simpa only [one_div] using one_div_le_one_div_of_le hxDenPos
+        (by
+          have := (div_le_iff₀ (lt_of_lt_of_le zero_lt_one hX)).2 hxy.1.2
+          linarith : 1 + x / X ≤ 3)
+    have hyInv : (3 : ℝ)⁻¹ ≤ (1 + y / Y)⁻¹ := by
+      simpa only [one_div] using one_div_le_one_div_of_le hyDenPos
+        (by
+          have := (div_le_iff₀ (lt_of_lt_of_le zero_lt_one hY)).2 hxy.2.2
+          linarith : 1 + y / Y ≤ 3)
+    have hprofileNonneg :
+        0 ≤ hughesYoungUniformDFIProfile Ccut i j :=
+      (hughesYoungUniformDFIProfile_pos Ccut
+        (fun n => (hcut n).1) i j).le
+    calc
+      |x| ^ i * |y| ^ j *
+          ‖dfiMixedDeriv i j
+            (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) x y‖ ≤
+        hughesYoungGaussianOneFactorProfile Ccut i *
+          hughesYoungGaussianCoreYProfile Ccut j * P ^ (i + j) := hraw
+      _ = hughesYoungUniformDFIProfile Ccut i j *
+          (3 : ℝ)⁻¹ * (3 : ℝ)⁻¹ * P ^ (i + j) := by
+        unfold hughesYoungUniformDFIProfile
+        ring
+      _ ≤ hughesYoungUniformDFIProfile Ccut i j *
+          (1 + x / X)⁻¹ * (1 + y / Y)⁻¹ * P ^ (i + j) := by
+        gcongr
+
+/-- The unrestricted equation-(2) package for the normalized
+Hughes--Young weight. -/
+theorem hughesYoungScaledNormalizedDFICore_equation2_unrestricted
+    (Ccut : ℕ → ℝ)
+    (hcut : ∀ n : ℕ, 0 < Ccut n ∧ ∀ (Z : ℝ), 0 < Z → ∀ z : ℝ,
+      |z| ^ n * ‖iteratedDeriv n (hughesYoungDyadicCutoffAt Z) z‖ ≤ Ccut n)
+    {T c u X Y P A : ℝ} {h k : ℕ} {r : ℤ}
+    (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
+    (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (hh : 0 < h) (hk : 0 < k)
+    (hr : |(r : ℝ)| ≤ Y / 2) (hP : 1 ≤ P)
+    (hTR : T * (|(r : ℝ)| / Y) ≤ P) (hA : 0 < A)
+    (hheight : ∀ (n : ℕ) (xi : ℝ),
+      ‖(1 / (T : ℂ)) *
+          iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+        (15 / 4 : ℝ) * ((4 * T) ^ n * A)) :
+    DFIEquation2
+      (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) P X Y := by
+  have hprofile :=
+    hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted Ccut hcut
+      hT hc hc1 hX hY hh hk hr hP hTR hA hheight
+  have hsmoothCore := contDiff_uncurry_hughesYoungDFICore
+    (lt_of_lt_of_le zero_lt_one hT) hc u
+    (lt_of_lt_of_le zero_lt_one hX)
+    (lt_of_lt_of_le zero_lt_one hY) hh hk r (by linarith)
+  refine
+    { one_le_P := hP
+      one_le_X := hX
+      one_le_Y := hY
+      smooth := ?_
+      compactSupport := HasCompactSupport.of_support_subset_isCompact
+        (isCompact_Icc.prod isCompact_Icc)
+        (support_uncurry_hughesYoungScaledNormalizedDFICore_subset
+          (lt_of_lt_of_le zero_lt_one hX)
+          (lt_of_lt_of_le zero_lt_one hY) h k r)
+      support_pos := ?_
+      derivativeBound := ?_ }
+  · change ContDiff ℝ ∞ (fun p : ℝ × ℝ =>
+      (((hughesYoungScaledDFINormalization c u X Y A h k : ℝ) : ℂ)⁻¹) *
+        hughesYoungDFICore T c u X Y h k r p.1 p.2)
+    exact contDiff_const.mul hsmoothCore
+  · intro p hp
+    have hxy := support_uncurry_hughesYoungScaledNormalizedDFICore_subset
+      (lt_of_lt_of_le zero_lt_one hX)
+      (lt_of_lt_of_le zero_lt_one hY) h k r hp
+    exact ⟨(lt_of_lt_of_le zero_lt_one hX).trans_le hxy.1.1,
+      (lt_of_lt_of_le zero_lt_one hY).trans_le hxy.2.1⟩
+  · intro i j
+    refine ⟨hughesYoungUniformDFIProfile Ccut i j,
+      hprofile.positive i j, ?_⟩
+    exact hprofile.bound i j
+
 /-! ## Uniform DFI error with the dyadic scale retained -/
 
 theorem exists_uniform_norm_hughesYoungScaledNormalizedDFICore_dfiError
@@ -746,6 +895,67 @@ theorem exists_uniform_norm_hughesYoungScaledNormalizedDFICore_dfiError
     (by linarith) hU hQsq a b M N r ha hb hr0 hab hM hN haX hbY
     hrPos hrNeg
 
+/-- Hughes--Young's normalized one-shift consumer of the fully coefficient-
+unrestricted DFI Theorem 1.  The normalized equation-(2) profile has already
+removed the auxiliary `h ≤ 2X`, `k ≤ 2Y` hypotheses, and DFI Theorem 1 does
+not impose corresponding bounds on its coprime coefficients. -/
+theorem exists_uniform_norm_hughesYoungScaledNormalizedDFICore_dfiError_unrestricted
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ {T c u X Y P A U Q : ℝ} {h k : ℕ} {r : ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 →
+      1 ≤ X → 1 ≤ Y →
+      0 < h → 0 < k →
+      |(r : ℝ)| ≤ Y / 2 → 1 ≤ P →
+      T * (|(r : ℝ)| / Y) ≤ P → 0 < A →
+      (∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A)) →
+      U ≤ P⁻¹ * min X Y → 8 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      ∀ (a b M N : ℕ), 0 < a → 0 < b → r ≠ 0 → a.Coprime b →
+      2 * X / a ≤ M → 2 * Y / b ≤ N →
+      (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) →
+      (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y) →
+      ‖dfiDyadicShiftedDivisorSum
+          (hughesYoungScaledNormalizedDFICore T c u X Y A h k r)
+          a b M N r -
+        dfiSignedCentralSeries a b r
+          (hughesYoungScaledNormalizedDFICore T c u X Y A h k r)‖ ≤
+        C * dfiTheorem1ErrorScale P X Y ε := by
+  obtain ⟨Ccut, hCcut⟩ :=
+    exists_uniform_hughesYoungDyadicCutoffAt_derivativeProfile
+  obtain ⟨Cφ, hCφ⟩ := exists_dfiUniformRedundantCutoff_profile
+  obtain ⟨Cw, hCw⟩ := exists_dfiUniformDeltaWeight_profile
+  obtain ⟨E, hE⟩ := exists_dfiUniformDeltaWeight_quotient_profile
+  obtain ⟨C, hC, hBound⟩ :=
+    exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_signedCentralSeries_le_theorem1ErrorScale_unrestricted
+      Cw E (hughesYoungUniformDFIProfile Ccut)
+        (fun i j => hughesYoungUniformDFIProfile Ccut j i)
+        Cφ Cw ε hε0 hε4
+  refine ⟨C, hC, ?_⟩
+  intro T c u X Y P A U Q h k r hT hc hc1 hX hY hh hk
+    hr hP hTR hA hheight hscale hQ hU hQsq a b M N ha hb hr0 hab
+    hM hN hrPos hrNeg
+  have hf := hughesYoungScaledNormalizedDFICore_equation2_unrestricted Ccut hCcut
+    hT hc hc1 hX hY hh hk hr hP hTR hA hheight
+  have hfC :=
+    hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted Ccut hCcut
+      hT hc hc1 hX hY hh hk hr hP hTR hA hheight
+  have hbox := hughesYoungScaledNormalizedDFICore_localizedBox
+    (T := T) (c := c) (u := u) (A := A) (X := X) (Y := Y)
+    (lt_of_lt_of_le zero_lt_one hX)
+    (lt_of_lt_of_le zero_lt_one hY) h k r
+  have hU0 : 0 < U := by rw [hU]; positivity
+  let φ : ℝ → ℂ := dfiUniformRedundantCutoff U
+  let hφ : DFIRedundantCutoff φ U := dfiUniformRedundantCutoff_spec U hU0
+  let w : DFIDeltaWeight Q := dfiUniformDeltaWeight Q hQ
+  exact hBound hf hfC hbox hf.swap (hfC.swap hf) hbox.swap hφ
+    (hCφ U hU0) hscale (hCw Q hQ) (hCw Q hQ) (hE Q hQ)
+    (by linarith) hU hQsq a b M N r ha hb hr0 hab hM hN
+    hrPos hrNeg
+
 /-- Literal equation-(70) cleaned weight with the dyadically summable DFI
 error. The universal constant is independent of every Hughes--Young
 parameter, including the Mellin ordinate and both dyadic scales. -/
@@ -793,6 +1003,73 @@ theorem exists_uniform_norm_hughesYoungCleanedShiftWeight_scaled_dfiError
   have hnormalized := hBound hT hc hc1 hX hY hh hhX hk hkY hr hP
     hTR hA hheight hscale hQ hU hQsq a b M N ha hb hr0 hab hM hN
     haX hbY hrPos hrNeg
+  have hweight :
+      hughesYoungCleanedShiftWeight T c u X Y h k r =
+        dfiComplexScaleWeight z
+          (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) := by
+    funext x y
+    rw [hughesYoungCleanedShiftWeight_eq_staticScalar_mul_dfiCore]
+    rw [hughesYoungDFICore_eq_scaledNormalization_mul_normalized
+      (lt_of_lt_of_le zero_lt_one hX)
+      (lt_of_lt_of_le zero_lt_one hY) hA hh hk T u r]
+    unfold dfiComplexScaleWeight
+    dsimp only [z, S]
+    ring
+  rw [hweight]
+  have hscaled := norm_dfiSignedDiscrepancy_scale_le z
+    (hughesYoungScaledNormalizedDFICore T c u X Y A h k r)
+    a b M N r hnormalized
+  have hnormz : ‖z‖ =
+      ‖hughesYoungLocalizedStaticScalar T h k‖ * S := by
+    dsimp only [z]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_pos hS]
+  rw [hnormz] at hscaled
+  exact hscaled
+
+/-- Literal equation-(70) consumer of the coefficient-unrestricted DFI
+error theorem. -/
+theorem exists_uniform_norm_hughesYoungCleanedShiftWeight_scaled_dfiError_unrestricted
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ {T c u X Y P A U Q : ℝ} {h k : ℕ} {r : ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 →
+      1 ≤ X → 1 ≤ Y →
+      0 < h → 0 < k →
+      |(r : ℝ)| ≤ Y / 2 → 1 ≤ P →
+      T * (|(r : ℝ)| / Y) ≤ P → 0 < A →
+      (∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A)) →
+      U ≤ P⁻¹ * min X Y → 8 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      ∀ (a b M N : ℕ), 0 < a → 0 < b → r ≠ 0 → a.Coprime b →
+      2 * X / a ≤ M → 2 * Y / b ≤ N →
+      (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) →
+      (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y) →
+      ‖dfiDyadicShiftedDivisorSum
+          (hughesYoungCleanedShiftWeight T c u X Y h k r)
+          a b M N r -
+        dfiSignedCentralSeries a b r
+          (hughesYoungCleanedShiftWeight T c u X Y h k r)‖ ≤
+        ‖hughesYoungLocalizedStaticScalar T h k‖ *
+          hughesYoungScaledDFINormalization c u X Y A h k *
+          (C * dfiTheorem1ErrorScale P X Y ε) := by
+  obtain ⟨C, hC, hBound⟩ :=
+    exists_uniform_norm_hughesYoungScaledNormalizedDFICore_dfiError_unrestricted
+      ε hε0 hε4
+  refine ⟨C, hC, ?_⟩
+  intro T c u X Y P A U Q h k r hT hc hc1 hX hY hh hk
+    hr hP hTR hA hheight hscale hQ hU hQsq a b M N ha hb hr0 hab
+    hM hN hrPos hrNeg
+  let S : ℝ := hughesYoungScaledDFINormalization c u X Y A h k
+  let z : ℂ := hughesYoungLocalizedStaticScalar T h k * (S : ℂ)
+  have hS : 0 < S := hughesYoungScaledDFINormalization_pos
+    (c := c) (lt_of_lt_of_le zero_lt_one hX)
+    (lt_of_lt_of_le zero_lt_one hY) hA hh hk u
+  have hnormalized := hBound hT hc hc1 hX hY hh hk hr hP
+    hTR hA hheight hscale hQ hU hQsq a b M N ha hb hr0 hab hM hN
+    hrPos hrNeg
   have hweight :
       hughesYoungCleanedShiftWeight T c u X Y h k r =
         dfiComplexScaleWeight z
@@ -1085,6 +1362,112 @@ theorem exists_uniform_norm_hughesYoungScaledNormalizedDFICore_signedCentralSeri
               (hughesYoungCentralArithmeticScale_nonneg hX hY a b q))
             hC.le
 
+set_option maxHeartbeats 4000000 in
+/-- The central-series estimate with no lattice-nonemptiness assumptions on
+`h/X` or `k/Y`.  This is the form needed for the continuous main terms in
+the source dyadic partition, including boxes whose integer lattice sum is
+empty. -/
+theorem exists_uniform_norm_hughesYoungScaledNormalizedDFICore_signedCentralSeries_unrestricted
+    : ∃ C : ℝ, 0 < C ∧
+      ∀ {T c u X Y P A U : ℝ} {h k a b : ℕ} {r : ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 →
+      1 ≤ X → 1 ≤ Y →
+      0 < h → 0 < k →
+      r ≠ 0 → |(r : ℝ)| ≤ Y / 2 →
+      1 ≤ P → T * (|(r : ℝ)| / Y) ≤ P → 0 < A →
+      (∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A)) →
+      0 < U → U ≤ P⁻¹ * min X Y →
+      0 < a → 0 < b →
+      ‖dfiSignedCentralSeries a b r
+          (hughesYoungScaledNormalizedDFICore
+            T c u X Y A h k r)‖ ≤
+        C * (hughesYoungCentralArithmeticScale X Y a b r.natAbs +
+          hughesYoungCentralArithmeticScale Y X b a r.natAbs) := by
+  obtain ⟨Ccut, hCcut⟩ :=
+    exists_uniform_hughesYoungDyadicCutoffAt_derivativeProfile
+  obtain ⟨Cφ, hCφ⟩ := exists_dfiUniformRedundantCutoff_profile
+  let C : ℝ := dfiEquation27CentralProfileConstant
+    (hughesYoungUniformDFIProfile Ccut) Cφ
+  have hC : 0 < C := by
+    have hsource : 0 < dfiEquation27SourceDerivativeConstant
+        (hughesYoungUniformDFIProfile Ccut) Cφ 0 := by
+      simpa [dfiEquation27SourceDerivativeConstant,
+        dfiEquation2FiniteConstant, dfiCutoffFiniteConstant] using
+        mul_pos
+          (hughesYoungUniformDFIProfile_pos Ccut
+            (fun n => (hCcut n).1) 0 0)
+          ((hCφ 1 zero_lt_one).positive 0)
+    dsimp only [C, dfiEquation27CentralProfileConstant]
+    exact mul_pos hsource (dfiEquation27LogLeibnizConstant_pos 0)
+  refine ⟨C, hC, ?_⟩
+  intro T c u X Y P A U h k a b r hT hc hc1 hX hY hh hk
+    hr0 hrY hP hTR hA hheight hU hscale ha hb
+  let f : ℝ → ℝ → ℂ :=
+    hughesYoungScaledNormalizedDFICore T c u X Y A h k r
+  have hf : DFIEquation2 f P X Y := by
+    dsimp only [f]
+    exact hughesYoungScaledNormalizedDFICore_equation2_unrestricted Ccut hCcut
+      hT hc hc1 hX hY hh hk hrY hP hTR hA hheight
+  have hfC : DFIEquation2Profile f P X Y
+      (hughesYoungUniformDFIProfile Ccut) := by
+    dsimp only [f]
+    exact hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+      Ccut hCcut hT hc hc1 hX hY hh hk hrY hP hTR hA hheight
+  have hbox : DFILocalizedBox f X Y := by
+    dsimp only [f]
+    exact hughesYoungScaledNormalizedDFICore_localizedBox
+      (T := T) (c := c) (u := u) (A := A) (X := X) (Y := Y)
+      (lt_of_lt_of_le zero_lt_one hX)
+      (lt_of_lt_of_le zero_lt_one hY) h k r
+  let φ : ℝ → ℂ := dfiUniformRedundantCutoff U
+  let hφ : DFIRedundantCutoff φ U := dfiUniformRedundantCutoff_spec U hU
+  have hφC : DFIRedundantCutoffProfile hφ Cφ := hCφ U hU
+  cases r with
+  | ofNat n =>
+      have hn : 0 < n := by
+        by_contra hn0
+        have : n = 0 := Nat.eq_zero_of_not_pos hn0
+        exact hr0 (by simp [this])
+      change ‖dfiSignedCentralSeries a b (n : ℤ) f‖ ≤
+        C * (hughesYoungCentralArithmeticScale X Y a b n +
+          hughesYoungCentralArithmeticScale Y X b a n)
+      rw [dfiSignedCentralSeries_ofNat]
+      have hmain :=
+        norm_dfiEquation27CentralSeries_le_hughesYoungCentralArithmeticScale
+          hf hfC hbox hφ hφC hscale a b n ha hb hn
+      calc
+        ‖dfiEquation27CentralSeries a b n f‖ ≤
+            C * hughesYoungCentralArithmeticScale X Y a b n := by
+          simpa only [C] using hmain
+        _ ≤ C * (hughesYoungCentralArithmeticScale X Y a b n +
+            hughesYoungCentralArithmeticScale Y X b a n) := by
+          exact mul_le_mul_of_nonneg_left
+            (le_add_of_nonneg_right
+              (hughesYoungCentralArithmeticScale_nonneg hY hX b a n))
+            hC.le
+  | negSucc n =>
+      let q : ℕ := n + 1
+      have hq : 0 < q := by dsimp [q]; omega
+      have hscaleSwap : U ≤ P⁻¹ * min Y X := by
+        simpa [min_comm] using hscale
+      have hmain :=
+        norm_dfiEquation27CentralSeries_le_hughesYoungCentralArithmeticScale
+          hf.swap (hfC.swap hf) hbox.swap hφ hφC hscaleSwap
+          b a q hb ha hq
+      change ‖dfiEquation27CentralSeries b a q (dfiSwapWeight f)‖ ≤ _
+      calc
+        ‖dfiEquation27CentralSeries b a q (dfiSwapWeight f)‖ ≤
+            C * hughesYoungCentralArithmeticScale Y X b a q := by
+          simpa only [C] using hmain
+        _ ≤ C * (hughesYoungCentralArithmeticScale X Y a b q +
+            hughesYoungCentralArithmeticScale Y X b a q) := by
+          exact mul_le_mul_of_nonneg_left
+            (le_add_of_nonneg_left
+              (hughesYoungCentralArithmeticScale_nonneg hX hY a b q))
+            hC.le
 /-- Signed DFI central-series bound for the literal Hughes--Young
 equation-(70) weight.  This theorem restores both the static localization
 factor and the full dyadic normalization, so no physical scale is hidden in
@@ -1121,6 +1504,61 @@ theorem exists_uniform_norm_hughesYoungCleanedShiftWeight_signedCentralSeries
     (c := c) (lt_of_lt_of_le zero_lt_one hX)
     (lt_of_lt_of_le zero_lt_one hY) hA hh hk u
   have hnormalized := hBound hT hc hc1 hX hY hh hhX hk hkY hr0 hrY
+    hP hTR hA hheight hU hscale ha hb
+  have hweight :
+      hughesYoungCleanedShiftWeight T c u X Y h k r =
+        dfiComplexScaleWeight z
+          (hughesYoungScaledNormalizedDFICore T c u X Y A h k r) := by
+    funext x y
+    rw [hughesYoungCleanedShiftWeight_eq_staticScalar_mul_dfiCore]
+    rw [hughesYoungDFICore_eq_scaledNormalization_mul_normalized
+      (lt_of_lt_of_le zero_lt_one hX)
+      (lt_of_lt_of_le zero_lt_one hY) hA hh hk T u r]
+    unfold dfiComplexScaleWeight
+    dsimp only [z, S]
+    ring
+  rw [hweight, dfiSignedCentralSeries_scale, norm_mul]
+  have hnormz : ‖z‖ =
+      ‖hughesYoungLocalizedStaticScalar T h k‖ * S := by
+    dsimp only [z]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_pos hS]
+  rw [hnormz]
+  exact mul_le_mul_of_nonneg_left hnormalized
+    (mul_nonneg (norm_nonneg _) hS.le)
+
+/-- The literal cleaned-weight central-series bound for all positive
+arithmetic coefficients, including source-empty dyadic boxes. -/
+theorem exists_uniform_norm_hughesYoungCleanedShiftWeight_signedCentralSeries_unrestricted
+    : ∃ C : ℝ, 0 < C ∧
+      ∀ {T c u X Y P A U : ℝ} {h k a b : ℕ} {r : ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 →
+      1 ≤ X → 1 ≤ Y →
+      0 < h → 0 < k →
+      r ≠ 0 → |(r : ℝ)| ≤ Y / 2 →
+      1 ≤ P → T * (|(r : ℝ)| / Y) ≤ P → 0 < A →
+      (∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A)) →
+      0 < U → U ≤ P⁻¹ * min X Y →
+      0 < a → 0 < b →
+      ‖dfiSignedCentralSeries a b r
+          (hughesYoungCleanedShiftWeight T c u X Y h k r)‖ ≤
+        ‖hughesYoungLocalizedStaticScalar T h k‖ *
+          hughesYoungScaledDFINormalization c u X Y A h k *
+          (C * (hughesYoungCentralArithmeticScale X Y a b r.natAbs +
+            hughesYoungCentralArithmeticScale Y X b a r.natAbs)) := by
+  obtain ⟨C, hC, hBound⟩ :=
+    exists_uniform_norm_hughesYoungScaledNormalizedDFICore_signedCentralSeries_unrestricted
+  refine ⟨C, hC, ?_⟩
+  intro T c u X Y P A U h k a b r hT hc hc1 hX hY hh hk
+    hr0 hrY hP hTR hA hheight hU hscale ha hb
+  let S : ℝ := hughesYoungScaledDFINormalization c u X Y A h k
+  let z : ℂ := hughesYoungLocalizedStaticScalar T h k * (S : ℂ)
+  have hS : 0 < S := hughesYoungScaledDFINormalization_pos
+    (c := c) (lt_of_lt_of_le zero_lt_one hX)
+    (lt_of_lt_of_le zero_lt_one hY) hA hh hk u
+  have hnormalized := hBound hT hc hc1 hX hY hh hk hr0 hrY
     hP hTR hA hheight hU hscale ha hb
   have hweight :
       hughesYoungCleanedShiftWeight T c u X Y h k r =

@@ -165,6 +165,47 @@ theorem exists_uniform_norm_hughesYoungNearPointwiseDFIDiscrepancyBox
     hU0 hscale hQ hUQ hQsq hM hN haX hbY
     hughesYoungNearShifts_dfi_conditions
 
+/-- Exact large-box DFI discrepancy with no coefficient support
+restriction.  This is the literal DFI Theorem-1 range: positivity,
+coprimality, scale, and shift conditions remain, while an empty lattice
+box is handled by the same published error theorem. -/
+theorem exists_uniform_norm_hughesYoungNearPointwiseDFIDiscrepancyBox_unrestricted
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ Cγ C L : ℝ, 0 < Cγ ∧ 0 < C ∧ 0 < L ∧
+      ∀ {T X Y P : ℝ} {h k M N : ℕ},
+      Real.exp 1 ≤ T → 1 ≤ X → 1 ≤ Y → 0 < h → 0 < k →
+      1 ≤ P → 64 ≤ hughesYoungDFIOptimalU P X Y →
+      2 * X / hughesYoungReducedLeft h k ≤ M →
+      2 * Y / hughesYoungReducedRight h k ≤ N →
+      ‖hughesYoungNearPointwiseDFIDiscrepancyBox T
+          (hughesYoungSmallContour T) (T / 8) P X Y h k M N‖ ≤
+        (T * (Real.log T * Real.exp (4 * Cγ) *
+          ((hughesYoungReducedLeft h k : ℝ) / X) ^
+            ((1 / 2 : ℝ) + hughesYoungSmallContour T) *
+          ((hughesYoungReducedRight h k : ℝ) / Y) ^
+            ((1 / 2 : ℝ) + hughesYoungSmallContour T)) *
+          (((hughesYoungNearShifts T P X Y
+            (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k)
+            M N).card : ℝ) *
+            (‖hughesYoungLocalizedStaticScalar T h k‖ *
+              (C * dfiTheorem1ErrorScale P X Y ε)))) * L := by
+  obtain ⟨Cγ, C, L, hCγ, hC, hL, hsource⟩ :=
+    exists_uniform_norm_hughesYoungSmallContourPointwiseDFIDiscrepancy_unrestricted
+      ε hε0 hε4
+  refine ⟨Cγ, C, L, hCγ, hC, hL, ?_⟩
+  intro T X Y P h k M N hT hX hY hh hk hP hlarge hM hN
+  obtain ⟨hscale, hQ, hUQ, hQsq⟩ :=
+    hughesYoungDFIOptimalScale_spec
+      (lt_of_lt_of_le zero_lt_one hP)
+      (lt_of_lt_of_le zero_lt_one hX)
+      (lt_of_lt_of_le zero_lt_one hY) hlarge
+  have hT0 : 0 < T := (Real.exp_pos 1).trans_le hT
+  have hU0 : 0 < hughesYoungDFIOptimalU P X Y := by linarith
+  unfold hughesYoungNearPointwiseDFIDiscrepancyBox
+  exact hsource hT (by positivity) hX hY hh hk hP
+    hU0 hscale hQ hUQ hQsq hM hN
+    hughesYoungNearShifts_dfi_conditions
+
 /-- The explicit small-contour majorant for the signed equation-(27)
 contribution of one concrete near-shift box. -/
 noncomputable def hughesYoungPointwiseSignedCentralMajorant
@@ -192,8 +233,6 @@ theorem exists_uniform_norm_hughesYoungNearPointwiseSignedCentralBox :
       ∀ {T X Y P : ℝ} {h k M N : ℕ},
       Real.exp 1 ≤ T → 1 ≤ X → 1 ≤ Y → 0 < h → 0 < k →
       1 ≤ P → 64 ≤ hughesYoungDFIOptimalU P X Y →
-      (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X →
-      (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y →
       ‖hughesYoungNearPointwiseSignedCentralBox T
           (hughesYoungSmallContour T) (T / 8) P X Y h k M N‖ ≤
         hughesYoungPointwiseSignedCentralMajorant
@@ -201,7 +240,7 @@ theorem exists_uniform_norm_hughesYoungNearPointwiseSignedCentralBox :
   obtain ⟨Cγ, C, L, hCγ, hC, hL, hsource⟩ :=
     exists_uniform_norm_hughesYoungSmallContourPointwiseSignedCentral
   refine ⟨Cγ, C, L, hCγ, hC, hL, ?_⟩
-  intro T X Y P h k M N hT hX hY hh hk hP hlarge haX hbY
+  intro T X Y P h k M N hT hX hY hh hk hP hlarge
   obtain ⟨hscale, _hQ, _hUQ, _hQsq⟩ :=
     hughesYoungDFIOptimalScale_spec
       (lt_of_lt_of_le zero_lt_one hP)
@@ -219,13 +258,14 @@ theorem exists_uniform_norm_hughesYoungNearPointwiseSignedCentralBox :
     hughesYoungPointwiseSignedCentralMajorant
   have hT0 : 0 < T := (Real.exp_pos 1).trans_le hT
   exact hsource hT (div_nonneg hT0.le (by norm_num)) hX hY hh hk hP
-    hU0 hscale haX hbY hs
+    hU0 hscale hs
 
 /-- The active boxes on which the optimized DFI scale is genuinely
-available and the two physical dyadic scales have the comparability used
-before Hughes--Young (78).  Boundary, support-empty, noncomparable, and
-small-optimal-scale boxes are not silently passed through DFI; they remain
-in the complementary source sum. -/
+available, the shifted-divisor lattice is nonempty in both positive
+coordinates, and the two physical dyadic scales have the comparability used
+before Hughes--Young (78).  DFI Theorem 1 itself is available without the
+two support inequalities; retaining them in this partition separates the
+source-empty boxes so that their exact endpoint cancellation is preserved. -/
 noncomputable def hughesYoungActiveLargeDFIBoxes
     (P : ℝ) (a b R K : ℕ) : Finset (ℕ × ℕ) :=
   (hughesYoungActiveDyadicBoxes a b R K).filter fun ij =>
@@ -258,11 +298,7 @@ noncomputable def hughesYoungActiveNonLargeDFIBoxes
 /-- Source-faithful exhaustion of the complement of the large-DFI range.
 Every complementary active box is an isolated endpoint, is empty for one
 of the two positive arithmetic coordinates, has genuinely small optimized
-DFI scale, or fails one of the two factor-four comparability inequalities.
-This disjunction is the routing interface used by the quantitative
-Hughes--Young consumer; in particular it prevents a noncomparable box from
-being sent to the small-box estimate merely because its harmonic-mean scale
-is small. -/
+DFI scale, or fails one of the two factor-four comparability inequalities. -/
 theorem hughesYoungActiveNonLargeDFIBoxes_cases
     {P : ℝ} {a b R K : ℕ} {ij : ℕ × ℕ}
     (hij : ij ∈ hughesYoungActiveNonLargeDFIBoxes P a b R K) :
@@ -462,7 +498,7 @@ theorem exists_norm_hughesYoungActiveLargeDFIPointwiseSignedCentral_le :
         rw [hjEq]
         simpa only [Nat.succ_eq_add_one] using
           one_le_hughesYoungFullDyadicScale_succ j
-      exact hbox hT hX hY hh hk hP hp.2.2.2.2.1 hp.2.2.1 hp.2.2.2.1
+      exact hbox hT hX hY hh hk hP hp.2.2.2.2.1
 
 /-- The exact integrated DFI discrepancy over the large-DFI active boxes. -/
 noncomputable def hughesYoungActiveLargeDFIPointwiseDiscrepancy
@@ -655,7 +691,9 @@ noncomputable def hughesYoungEquation80BoxErrorMajorant
     ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
     (((hughesYoungReducedLeft h k * hughesYoungReducedRight h k : ℕ) : ℝ) ^
       (1 / 2 : ℝ)) *
-    P ^ (9 / 4 : ℝ) * (X * Y) ^ (3 / 8 + ε)
+    P ^ (9 / 4 : ℝ) * (X * Y) ^ (3 / 8 + ε) *
+    (((hughesYoungReducedLeft h k : ℝ) / X) ^ hughesYoungSmallContour T *
+      ((hughesYoungReducedRight h k : ℝ) / Y) ^ hughesYoungSmallContour T)
 
 /-- Boxwise Hughes--Young equation-(80) estimate.  Unlike a coarse bound
 on the normalized dyadic factors, this keeps their square-root
@@ -666,8 +704,6 @@ theorem hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
     (hT : Real.exp 1 ≤ T) (hP : 1 ≤ P) (hX : 0 < X) (hY : 0 < Y)
     (hh : 0 < h) (hk : 0 < k)
     (hC : 0 ≤ C) (hL : 0 ≤ L)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hXY : X ≤ 4 * Y) (hYX : Y ≤ 4 * X) :
     hughesYoungPointwiseDFIErrorMajorant Cγ C L ε T P X Y h k M N ≤
       hughesYoungEquation80BoxErrorMajorant Cγ C L ε T P X Y h k := by
@@ -683,31 +719,39 @@ theorem hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
   have hb : 0 < b := by
     dsimp only [b]
     exact_mod_cast hughesYoungReducedRight_pos hh hk
-  obtain ⟨hc0, hc1, _⟩ := hughesYoungSmallContour_spec hT
+  obtain ⟨hc0, _hc1, _⟩ := hughesYoungSmallContour_spec hT
   have haRatio : 0 < a / X := div_pos ha hX
   have hbRatio : 0 < b / Y := div_pos hb hY
-  have haRatioTwo : a / X ≤ 2 := (div_le_iff₀ hX).2 (by
-    simpa only [a] using haX)
-  have hbRatioTwo : b / Y ≤ 2 := (div_le_iff₀ hY).2 (by
-    simpa only [b] using hbY)
-  have haPow := rpow_half_add_le_two_mul_rpow_half
-    haRatio haRatioTwo hc0.le hc1
-  have hbPow := rpow_half_add_le_two_mul_rpow_half
-    hbRatio hbRatioTwo hc0.le hc1
+  have haPow : (a / X) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T) =
+      (a / X) ^ (1 / 2 : ℝ) * (a / X) ^ hughesYoungSmallContour T :=
+    Real.rpow_add haRatio _ _
+  have hbPow : (b / Y) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T) =
+      (b / Y) ^ (1 / 2 : ℝ) * (b / Y) ^ hughesYoungSmallContour T :=
+    Real.rpow_add hbRatio _ _
   have hRatio :
       (a / X) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T) *
           (b / Y) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T) ≤
         4 * (a * b) ^ (1 / 2 : ℝ) *
-          (X * Y) ^ (-(1 / 2 : ℝ)) := by
+          (X * Y) ^ (-(1 / 2 : ℝ)) *
+          ((a / X) ^ hughesYoungSmallContour T *
+            (b / Y) ^ hughesYoungSmallContour T) := by
     calc
-      _ ≤ (2 * (a / X) ^ (1 / 2 : ℝ)) *
-          (2 * (b / Y) ^ (1 / 2 : ℝ)) := by gcongr
-      _ = 4 * ((a / X) ^ (1 / 2 : ℝ) *
-          (b / Y) ^ (1 / 2 : ℝ)) := by ring
-      _ = _ := by
+      _ = ((a / X) ^ (1 / 2 : ℝ) *
+          (b / Y) ^ (1 / 2 : ℝ)) *
+          ((a / X) ^ hughesYoungSmallContour T *
+            (b / Y) ^ hughesYoungSmallContour T) := by
+        rw [haPow, hbPow]
+        ring
+      _ ≤ _ := by
         rw [mul_div_rpow_half_eq_mul_rpow_mul_product_rpow_neg_half
           ha hb hX hY]
-        ring
+        have hnonneg : 0 ≤ (a / X) ^ hughesYoungSmallContour T *
+            (b / Y) ^ hughesYoungSmallContour T := by positivity
+        have hbase : 0 ≤
+            (a * b) ^ (1 / 2 : ℝ) * (X * Y) ^ (-(1 / 2 : ℝ)) *
+              ((a / X) ^ hughesYoungSmallContour T *
+                (b / Y) ^ hughesYoungSmallContour T) := by positivity
+        nlinarith
   have hStatic := norm_hughesYoungLocalizedStaticScalar_le_coefficients
     (T := T) hh hk
   have hCard := cast_card_hughesYoungNearShifts_le_two_mul_div
@@ -763,7 +807,11 @@ theorem hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
       (Real.log T * Real.exp (4 * Cγ) * L) *
         (4 * ((hughesYoungReducedLeft h k : ℝ) *
           hughesYoungReducedRight h k) ^ (1 / 2 : ℝ) *
-          (X * Y) ^ (-(1 / 2 : ℝ))) *
+          (X * Y) ^ (-(1 / 2 : ℝ)) *
+          (((hughesYoungReducedLeft h k : ℝ) / X) ^
+              hughesYoungSmallContour T *
+            ((hughesYoungReducedRight h k : ℝ) / Y) ^
+              hughesYoungSmallContour T)) *
         (‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖) *
         C * (2 * P * Y) *
         (P ^ (5 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) *
@@ -788,14 +836,22 @@ theorem hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
           (P * P ^ (5 / 4 : ℝ))) *
         (Y * (X + Y) ^ (1 / 4 : ℝ) *
           ((X * Y) ^ (-(1 / 2 : ℝ)) *
-            (X * Y) ^ (1 / 4 + ε))) := by ring
+            (X * Y) ^ (1 / 4 + ε))) *
+        (((hughesYoungReducedLeft h k : ℝ) / X) ^
+            hughesYoungSmallContour T *
+          ((hughesYoungReducedRight h k : ℝ) / Y) ^
+            hughesYoungSmallContour T) := by ring
     _ = (8 * (Real.log T * Real.exp (4 * Cγ) * C * L) *
           ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
           (((hughesYoungReducedLeft h k : ℝ) *
             hughesYoungReducedRight h k) ^ (1 / 2 : ℝ)) *
           P ^ (9 / 4 : ℝ)) *
         (Y * (X + Y) ^ (1 / 4 : ℝ) *
-          (X * Y) ^ (-(1 / 4 : ℝ) + ε)) := by
+          (X * Y) ^ (-(1 / 4 : ℝ) + ε)) *
+        (((hughesYoungReducedLeft h k : ℝ) / X) ^
+            hughesYoungSmallContour T *
+          ((hughesYoungReducedRight h k : ℝ) / Y) ^
+            hughesYoungSmallContour T) := by
       rw [hPpow, hXYpow]
     _ ≤ (8 * (Real.log T * Real.exp (4 * Cγ) * C * L) *
           ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
@@ -803,7 +859,11 @@ theorem hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
             hughesYoungReducedRight h k) ^ (1 / 2 : ℝ)) *
           P ^ (9 / 4 : ℝ)) *
         ((2 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
-          (X * Y) ^ (3 / 8 + ε)) := by
+          (X * Y) ^ (3 / 8 + ε)) *
+        (((hughesYoungReducedLeft h k : ℝ) / X) ^
+            hughesYoungSmallContour T *
+          ((hughesYoungReducedRight h k : ℝ) / Y) ^
+            hughesYoungSmallContour T) := by
       gcongr
     _ = _ := by ring
 
@@ -831,7 +891,7 @@ theorem exists_norm_hughesYoungActiveLargeDFIPointwiseDiscrepancy_le
       ‖hughesYoungActiveLargeDFIPointwiseDiscrepancy T P R K‖ ≤
         hughesYoungActiveLargeDFIErrorMajorant Cγ C L ε T P R K := by
   obtain ⟨Cγ, C, L, hCγ, hC, hL, hbox⟩ :=
-    exists_uniform_norm_hughesYoungNearPointwiseDFIDiscrepancyBox
+    exists_uniform_norm_hughesYoungNearPointwiseDFIDiscrepancyBox_unrestricted
       ε hε0 hε4
   refine ⟨Cγ, C, L, hCγ, hC, hL, ?_⟩
   intro T P R K hT hP
@@ -903,7 +963,6 @@ theorem exists_norm_hughesYoungActiveLargeDFIPointwiseDiscrepancy_le
           (a := hughesYoungReducedRight h k) (i := ij.2)
           (hughesYoungReducedRight_pos hh hk)
       have hlocal := hbox hT hX hY hh hk hP hp.2.2.2.2.1 hM hN
-        hp.2.2.1 hp.2.2.2.1
       simpa only [hughesYoungPointwiseDFIErrorMajorant] using hlocal
 
 /-- Sum of the explicit Hughes--Young equation-(80) box errors over the
@@ -956,7 +1015,7 @@ theorem exists_norm_hughesYoungActiveLargeDFIPointwiseDiscrepancy_le_equation80
     hughesYoungFullDyadicScale_pos ij.2
   exact hughesYoungPointwiseDFIErrorMajorant_le_equation80Box
     hT hP hX hY hh hk hC.le hL.le
-    hp.2.2.1 hp.2.2.2.1 hp.2.2.2.2.2.1 hp.2.2.2.2.2.2
+    hp.2.2.2.2.2.1 hp.2.2.2.2.2.2
 
 /-- Reduced mollifier coordinates contribute at most one full detector
 index after taking the square root. -/
@@ -989,7 +1048,7 @@ finite cardinalities are exposed, so the later asymptotic proof only has to
 insert the concrete detector, conductor, and logarithmic-depth bounds. -/
 theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
     {Cγ C L ε T P A : ℝ} {R K : ℕ}
-    (hT : 1 ≤ T) (hP : 0 ≤ P) (hC : 0 ≤ C) (hL : 0 ≤ L)
+    (hT : Real.exp 1 ≤ T) (hP : 0 ≤ P) (hC : 0 ≤ C) (hL : 0 ≤ L)
     (hε : 0 ≤ ε) (hA : 0 ≤ A)
     (hcoeff : ∀ n ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
       ‖shortMobiusSquareCoeff T n‖ ≤ A) :
@@ -1002,17 +1061,19 @@ theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
           A ^ 2 * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) *
           P ^ (9 / 4 : ℝ) *
           (((((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2 * (R : ℝ)) ^
-            (3 / 8 + ε))) := by
+            (3 / 8 + ε)) *
+          (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2) := by
   classical
   let ell : ℕ := (detectorCutoff T) ^ 2
   let B : ℝ :=
     (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
       (Real.log T * Real.exp (4 * Cγ) * C * L) *
       A ^ 2 * (ell : ℝ) * P ^ (9 / 4 : ℝ) *
-      ((((ell : ℝ) ^ 2 * (R : ℝ)) ^ (3 / 8 + ε)))
+      ((((ell : ℝ) ^ 2 * (R : ℝ)) ^ (3 / 8 + ε))) * (ell : ℝ) ^ 2
   have hB : 0 ≤ B := by
     dsimp only [B]
-    have hlog : 0 ≤ Real.log T := Real.log_nonneg hT
+    have hT1 : 1 ≤ T := by linarith [Real.exp_one_gt_d9]
+    have hlog : 0 ≤ Real.log T := Real.log_nonneg hT1
     positivity
   have hbox : ∀ h ∈ Finset.Icc 1 ell, ∀ k ∈ Finset.Icc 1 ell,
       ∀ ij ∈ hughesYoungActiveLargeDFIBoxes P
@@ -1023,6 +1084,9 @@ theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
     intro h hhmem k hkmem ij hij
     have hijActive := (Finset.mem_filter.mp hij).1
     have hprod := (Finset.mem_filter.mp hijActive).2
+    have hijLarge := (Finset.mem_filter.mp hij).2
+    have hi : 0 < ij.1 := hijLarge.1
+    have hj : 0 < ij.2 := hijLarge.2.1
     have hhUpper : h ≤ ell := (Finset.mem_Icc.mp hhmem).2
     have hkUpper : k ≤ ell := (Finset.mem_Icc.mp hkmem).2
     have hred := reduced_product_rpow_half_le hhUpper hkUpper
@@ -1056,6 +1120,79 @@ theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
         (mul_nonneg (hughesYoungFullDyadicScale_pos ij.1).le
           (hughesYoungFullDyadicScale_pos ij.2).le)
         hscaleProd (by linarith)
+    have hXi : 1 ≤ hughesYoungFullDyadicScale ij.1 := by
+      obtain ⟨i, hiEq⟩ := Nat.exists_eq_succ_of_ne_zero (Nat.ne_of_gt hi)
+      rw [hiEq]
+      simpa only [Nat.succ_eq_add_one] using
+        one_le_hughesYoungFullDyadicScale_succ i
+    have hYj : 1 ≤ hughesYoungFullDyadicScale ij.2 := by
+      obtain ⟨j, hjEq⟩ := Nat.exists_eq_succ_of_ne_zero (Nat.ne_of_gt hj)
+      rw [hjEq]
+      simpa only [Nat.succ_eq_add_one] using
+        one_le_hughesYoungFullDyadicScale_succ j
+    have hellNat : 1 ≤ ell := by
+      have hcut : 1 ≤ detectorCutoff T := by
+        unfold detectorCutoff
+        omega
+      have hmul := Nat.mul_le_mul hcut hcut
+      simpa only [ell, pow_two, one_mul] using hmul
+    have hellOne : (1 : ℝ) ≤ ell := by exact_mod_cast hellNat
+    have haEllNat : hughesYoungReducedLeft h k ≤ ell :=
+      (hughesYoungReducedLeft_le h k).trans hhUpper
+    have hbEllNat : hughesYoungReducedRight h k ≤ ell :=
+      (hughesYoungReducedRight_le h k).trans hkUpper
+    have haRatioLe :
+        (hughesYoungReducedLeft h k : ℝ) /
+            hughesYoungFullDyadicScale ij.1 ≤ ell := by
+      calc
+        _ ≤ (hughesYoungReducedLeft h k : ℝ) :=
+          div_le_self (by positivity) hXi
+        _ ≤ (ell : ℝ) := by exact_mod_cast haEllNat
+    have hbRatioLe :
+        (hughesYoungReducedRight h k : ℝ) /
+            hughesYoungFullDyadicScale ij.2 ≤ ell := by
+      calc
+        _ ≤ (hughesYoungReducedRight h k : ℝ) :=
+          div_le_self (by positivity) hYj
+        _ ≤ (ell : ℝ) := by exact_mod_cast hbEllNat
+    obtain ⟨hc0, hc1, _⟩ := hughesYoungSmallContour_spec hT
+    have haRatio0 : 0 ≤
+        (hughesYoungReducedLeft h k : ℝ) /
+          hughesYoungFullDyadicScale ij.1 := by positivity
+    have hbRatio0 : 0 ≤
+        (hughesYoungReducedRight h k : ℝ) /
+          hughesYoungFullDyadicScale ij.2 := by positivity
+    have haContour :
+        ((hughesYoungReducedLeft h k : ℝ) /
+            hughesYoungFullDyadicScale ij.1) ^ hughesYoungSmallContour T ≤
+          ell := by
+      by_cases haOne :
+          (hughesYoungReducedLeft h k : ℝ) /
+              hughesYoungFullDyadicScale ij.1 ≤ 1
+      · exact (Real.rpow_le_one haRatio0 haOne hc0.le).trans hellOne
+      · exact (Real.rpow_le_self_of_one_le (le_of_not_ge haOne) hc1).trans
+          haRatioLe
+    have hbContour :
+        ((hughesYoungReducedRight h k : ℝ) /
+            hughesYoungFullDyadicScale ij.2) ^ hughesYoungSmallContour T ≤
+          ell := by
+      by_cases hbOne :
+          (hughesYoungReducedRight h k : ℝ) /
+              hughesYoungFullDyadicScale ij.2 ≤ 1
+      · exact (Real.rpow_le_one hbRatio0 hbOne hc0.le).trans hellOne
+      · exact (Real.rpow_le_self_of_one_le (le_of_not_ge hbOne) hc1).trans
+          hbRatioLe
+    let E : ℝ :=
+      ((hughesYoungReducedLeft h k : ℝ) /
+          hughesYoungFullDyadicScale ij.1) ^ hughesYoungSmallContour T *
+        ((hughesYoungReducedRight h k : ℝ) /
+          hughesYoungFullDyadicScale ij.2) ^ hughesYoungSmallContour T
+    have hE0 : 0 ≤ E := by dsimp only [E]; positivity
+    have hE : E ≤ (ell : ℝ) ^ 2 := by
+      dsimp only [E]
+      simpa only [pow_two] using
+        mul_le_mul haContour hbContour
+          (Real.rpow_nonneg hbRatio0 _) (Nat.cast_nonneg ell)
     unfold hughesYoungEquation80BoxErrorMajorant
     dsimp only [B, ell]
     have hcoeffPair :
@@ -1066,7 +1203,8 @@ theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
     have hfront : 0 ≤
         (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
           (Real.log T * Real.exp (4 * Cγ) * C * L) := by
-      have hlog : 0 ≤ Real.log T := Real.log_nonneg hT
+      have hT1 : 1 ≤ T := by linarith [Real.exp_one_gt_d9]
+      have hlog : 0 ≤ Real.log T := Real.log_nonneg hT1
       positivity
     let D : ℝ := (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
       (Real.log T * Real.exp (4 * Cγ) * C * L)
@@ -1088,39 +1226,61 @@ theorem hughesYoungActiveLargeDFIEquation80ErrorMajorant_le
           (((hughesYoungReducedLeft h k * hughesYoungReducedRight h k : ℕ) : ℝ) ^
             (1 / 2 : ℝ)) * P ^ (9 / 4 : ℝ) *
           (hughesYoungFullDyadicScale ij.1 *
-            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) := by
+            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) * E := by
+        dsimp only [E]
         dsimp only [D]
         ring
       _ ≤ D * (A * A) *
           (((hughesYoungReducedLeft h k * hughesYoungReducedRight h k : ℕ) : ℝ) ^
             (1 / 2 : ℝ)) * P ^ (9 / 4 : ℝ) *
           (hughesYoungFullDyadicScale ij.1 *
-            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) := by
-        exact mul_le_mul_of_nonneg_right
+            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) * E := by
+        exact mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_right
           (mul_le_mul_of_nonneg_right
             (mul_le_mul_of_nonneg_right
               (mul_le_mul_of_nonneg_left hcoeffPair hD) hred0) hPpow0)
-          hboxPow0
+          hboxPow0) hE0
       _ ≤ D * (A * A) * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) *
           P ^ (9 / 4 : ℝ) *
           (hughesYoungFullDyadicScale ij.1 *
-            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) := by
-        exact mul_le_mul_of_nonneg_right
+            hughesYoungFullDyadicScale ij.2) ^ (3 / 8 + ε) * E := by
+        exact mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_right
           (mul_le_mul_of_nonneg_right
             (mul_le_mul_of_nonneg_left hred
               (mul_nonneg hD (mul_nonneg hA hA))) hPpow0) hboxPow0
+          ) hE0
       _ ≤ (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
           (Real.log T * Real.exp (4 * Cγ) * C * L) *
           A * A * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) *
           P ^ (9 / 4 : ℝ) *
           (((((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2 * (R : ℝ)) ^
-            (3 / 8 + ε)) := by
+            (3 / 8 + ε)) * E := by
         dsimp only [D]
-        convert mul_le_mul_of_nonneg_left hscalePow
+        convert mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hscalePow
           (mul_nonneg
             (mul_nonneg
-              (mul_nonneg hfront (mul_nonneg hA hA)) hell0) hPpow0) using 1
+              (mul_nonneg hfront (mul_nonneg hA hA)) hell0) hPpow0)) hE0 using 1
         all_goals ring
+      _ ≤ (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
+          (Real.log T * Real.exp (4 * Cγ) * C * L) *
+          A * A * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) *
+          P ^ (9 / 4 : ℝ) *
+          (((((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2 * (R : ℝ)) ^
+            (3 / 8 + ε)) * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2 := by
+        have hlog0 : 0 ≤ Real.log T := by
+          apply Real.log_nonneg
+          linarith [Real.exp_one_gt_d9]
+        have hcore0 : 0 ≤
+            (16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
+              (Real.log T * Real.exp (4 * Cγ) * C * L) *
+              A * A * (((detectorCutoff T) ^ 2 : ℕ) : ℝ) *
+              P ^ (9 / 4 : ℝ) *
+              (((((detectorCutoff T) ^ 2 : ℕ) : ℝ) ^ 2 * (R : ℝ)) ^
+                (3 / 8 + ε)) := by
+          positivity
+        apply mul_le_mul_of_nonneg_left hE
+        exact hcore0
       _ = _ := by ring
   unfold hughesYoungActiveLargeDFIEquation80ErrorMajorant
   change (∑ h ∈ Finset.Icc 1 ell, ∑ k ∈ Finset.Icc 1 ell,

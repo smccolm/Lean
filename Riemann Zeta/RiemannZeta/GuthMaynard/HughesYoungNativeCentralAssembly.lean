@@ -1,5 +1,4 @@
 import RiemannZeta.GuthMaynard.HughesYoungFiniteCentralSource
-import RiemannZeta.GuthMaynard.HughesYoungNative
 import RiemannZeta.GuthMaynard.HughesYoungQuantitativeCentral
 
 open Asymptotics Complex Filter Finset MeasureTheory Set

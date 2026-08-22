@@ -161,6 +161,60 @@ theorem dfiDyadicShiftedDivisorSum_eq_zero_of_large_positive_shift
     simp [hfzero]
   · simp [hs]
 
+/-- If the first arithmetic coefficient already exceeds the complete
+`x`-support, every positive lattice point lies outside the localized box.
+This is the empty-source case suppressed by the earlier nonempty-box
+version of the dyadic DFI theorem. -/
+theorem dfiDyadicShiftedDivisorSum_eq_zero_of_left_coefficient_gt_support
+    {f : ℝ → ℝ → ℂ} {X Y : ℝ} (hbox : DFILocalizedBox f X Y)
+    (a : ℕ) (haX : 2 * X < a) (b M N : ℕ) (r : ℤ) :
+    dfiDyadicShiftedDivisorSum f a b M N r = 0 := by
+  unfold dfiDyadicShiftedDivisorSum
+  apply Finset.sum_eq_zero
+  intro m hm
+  have hm1 : 1 ≤ m := (Finset.mem_Icc.mp hm).1
+  apply Finset.sum_eq_zero
+  intro n hn
+  have houtside : 2 * X < (a : ℝ) * m := by
+    calc
+      2 * X < (a : ℝ) := haX
+      _ ≤ (a : ℝ) * m := by
+        have ha0 : 0 ≤ (a : ℝ) := by positivity
+        have hm1R : (1 : ℝ) ≤ m := by exact_mod_cast hm1
+        simpa using mul_le_mul_of_nonneg_left hm1R ha0
+  have hfzero : f ((a : ℝ) * m) ((b : ℝ) * n) = 0 := by
+    by_contra hne
+    have hs : ((a : ℝ) * m, (b : ℝ) * n) ∈
+        Function.support (Function.uncurry f) := hne
+    exact (not_lt_of_ge (hbox.support_subset hs).1.2) houtside
+  simp [hfzero]
+
+/-- Symmetric empty-source lemma for a second coefficient exceeding the
+complete `y`-support. -/
+theorem dfiDyadicShiftedDivisorSum_eq_zero_of_right_coefficient_gt_support
+    {f : ℝ → ℝ → ℂ} {X Y : ℝ} (hbox : DFILocalizedBox f X Y)
+    (b : ℕ) (hbY : 2 * Y < b) (a M N : ℕ) (r : ℤ) :
+    dfiDyadicShiftedDivisorSum f a b M N r = 0 := by
+  unfold dfiDyadicShiftedDivisorSum
+  apply Finset.sum_eq_zero
+  intro m hm
+  apply Finset.sum_eq_zero
+  intro n hn
+  have hn1 : 1 ≤ n := (Finset.mem_Icc.mp hn).1
+  have houtside : 2 * Y < (b : ℝ) * n := by
+    calc
+      2 * Y < (b : ℝ) := hbY
+      _ ≤ (b : ℝ) * n := by
+        have hb0 : 0 ≤ (b : ℝ) := by positivity
+        have hn1R : (1 : ℝ) ≤ n := by exact_mod_cast hn1
+        simpa using mul_le_mul_of_nonneg_left hn1R hb0
+  have hfzero : f ((a : ℝ) * m) ((b : ℝ) * n) = 0 := by
+    by_contra hne
+    have hs : ((a : ℝ) * m, (b : ℝ) * n) ∈
+        Function.support (Function.uncurry f) := hne
+    exact (not_lt_of_ge (hbox.support_subset hs).2.2) houtside
+  simp [hfzero]
+
 /-- The real source transition is below its natural-number ceiling. -/
 theorem dfiEquation29SourceXTransition_le_cutoff
     (a : ℕ) (X Q ε : ℝ) :

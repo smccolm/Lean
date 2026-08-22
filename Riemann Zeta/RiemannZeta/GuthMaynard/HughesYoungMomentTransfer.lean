@@ -1,5 +1,7 @@
 import RiemannZeta.GuthMaynard.HughesYoungSmallContourTail
 import RiemannZeta.GuthMaynard.HughesYoungMoment
+import RiemannZeta.GuthMaynard.HughesYoungFiniteSquareBridge
+import RiemannZeta.GuthMaynard.HughesYoungSmallSquareBounds
 
 open Complex Filter MeasureTheory Set Topology
 open scoped BigOperators Interval Topology
@@ -232,7 +234,7 @@ theorem integrable_weight_mul_hughesYoungFiniteSmallTwistedSquare
   rfl
 
 theorem tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare
-    {T t : ℝ} (hT : Real.exp 1 ≤ T) {M : ℕ} (hM : 0 < M) :
+    {T t : ℝ} (hT : Real.exp 1 ≤ T) (M : ℕ) :
     Tendsto (fun n : ℕ => (hughesYoungHeightWeight T t : ℂ) *
         hughesYoungFiniteSmallTwistedSquare T t (n : ℝ) M)
       atTop (𝓝 ((hughesYoungHeightWeight T t : ℂ) *
@@ -243,7 +245,7 @@ theorem tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare
       hughesYoungHeightWeight_support
         ((Real.exp_pos 1).trans_le hT) hw
     have hlim := tendsto_hughesYoungIntegratedSmallPairSquare_to_whole
-      hT ht hM
+      hT ht M
     have hmul := hlim.const_mul
       ((hughesYoungHeightWeight T t : ℂ) *
         ((1 / (Real.pi : ℂ)) *
@@ -318,7 +320,7 @@ theorem tendsto_integral_hughesYoungFiniteSmallTwistedSquare
             gcongr
         _ ≤ A := by simpa only [one_mul, A] using hsquare
   · filter_upwards with t
-    exact tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare hT hM
+    exact tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare hT M
 
 theorem integrable_weight_mul_hughesYoungWholeFiniteSmallTwistedSquare
     {T : ℝ} (hT : Real.exp 1 ≤ T) {M : ℕ} (hM : 0 < M) :
@@ -356,7 +358,7 @@ theorem integrable_weight_mul_hughesYoungWholeFiniteSmallTwistedSquare
       (fun n => (integrable_weight_mul_hughesYoungFiniteSmallTwistedSquare
         hT (n : ℝ) M).aestronglyMeasurable)
     filter_upwards with t
-    exact tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare hT hM
+    exact tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare hT M
   apply hBint.mono' hmeas
   filter_upwards with t
   by_cases hw : hughesYoungHeightWeight T t = 0
@@ -367,7 +369,7 @@ theorem integrable_weight_mul_hughesYoungWholeFiniteSmallTwistedSquare
       hughesYoungHeightWeight_support hT0 hw
     have hlim :=
       (tendsto_weight_mul_hughesYoungFiniteSmallTwistedSquare
-        (t := t) hT hM).norm
+        (t := t) hT M).norm
     have hevent : ∀ᶠ n : ℕ in atTop,
         ‖(hughesYoungHeightWeight T t : ℂ) *
           hughesYoungFiniteSmallTwistedSquare T t (n : ℝ) M‖ ≤ A := by

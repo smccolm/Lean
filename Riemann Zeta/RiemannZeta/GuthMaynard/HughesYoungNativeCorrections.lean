@@ -1,5 +1,6 @@
 import RiemannZeta.GuthMaynard.HughesYoungNonLargeBounds
 import RiemannZeta.GuthMaynard.HughesYoungNativeCentralAssembly
+import RiemannZeta.GuthMaynard.HughesYoungNative
 
 open Asymptotics Complex Filter Finset MeasureTheory Set Topology
 open scoped BigOperators ContDiff FourierTransform Interval Topology
@@ -55,7 +56,7 @@ theorem exists_uniform_norm_hughesYoungNearPointwiseSignedCentralBox_noLarge :
     hughesYoungPointwiseSignedCentralMajorant
   have hT0 : 0 < T := (Real.exp_pos 1).trans_le hT
   exact hsource hT (div_nonneg hT0.le (by norm_num))
-    hX hY hh hk hP hU le_rfl haX hbY hs
+    hX hY hh hk hP hU le_rfl hs
 
 theorem hughesYoungFarBoxMajorant_nonneg
     {Cw : ℕ → ℝ} {D L T X Y ε : ℝ} {j h k M N : ℕ}
@@ -541,6 +542,10 @@ theorem hughesYoungNonLargeBoxCaseMajorant_le_commonEnvelope
         · rw [if_pos hcomp]
           have ha := (not_or.mp hsupp).1
           have hb := (not_or.mp hsupp).2
+          have haX : (hughesYoungReducedLeft h k : ℝ) ≤
+              2 * hughesYoungFullDyadicScale ij.1 := not_not.mp ha
+          have hbY : (hughesYoungReducedRight h k : ℝ) ≤
+              2 * hughesYoungFullDyadicScale ij.2 := not_not.mp hb
           have hU : hughesYoungDFIOptimalU P
               (hughesYoungFullDyadicScale ij.1)
               (hughesYoungFullDyadicScale ij.2) < 64 := by
@@ -548,7 +553,7 @@ theorem hughesYoungNonLargeBoxCaseMajorant_le_commonEnvelope
             intro hUlarge
             exact (Finset.mem_filter.mp hij).2
               ⟨Nat.pos_of_ne_zero hi, Nat.pos_of_ne_zero hj,
-                not_not.mp ha, not_not.mp hb, hUlarge, hcomp.1, hcomp.2⟩
+                haX, hbY, hUlarge, hcomp.1, hcomp.2⟩
           have hYsmall :=
             hughesYoung_secondScale_lt_threeHundredTwenty_mul_of_optimalU_lt
               hP hX hY hcomp.2 hU

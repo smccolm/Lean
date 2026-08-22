@@ -1,4 +1,5 @@
 import RiemannZeta.GuthMaynard.HughesYoungSquareIntegral
+import RiemannZeta.GuthMaynard.HughesYoungFiniteContourSet
 
 open Complex Filter MeasureTheory Set Topology
 open scoped BigOperators Interval Topology
@@ -130,6 +131,31 @@ noncomputable def hughesYoungIntegratedSmallPairSquare
     ∫ u in -H..H,
       hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p
 
+/-- The literal whole-line small-contour integral over the finite square of
+positive divisor pairs.  This is an integral definition, not an alias for
+the zeta-product expression to which it will subsequently be proved equal. -/
+noncomputable def hughesYoungWholeSmallPairSquare
+    (T t : ℝ) (M : ℕ) : ℂ :=
+  hughesYoungWholeSmallPairSet T t (Finset.Icc (1, 1) (M, M))
+
+/-- The finite square of compact small-contour integrals converges to the
+literal whole-line integral of the same finite pair family. -/
+theorem tendsto_hughesYoungIntegratedSmallPairSquare_to_whole
+    {T t : ℝ} (hT : Real.exp 1 ≤ T)
+    (ht : t ∈ Set.Icc (T / 4) (4 * T)) (M : ℕ) :
+    Tendsto (fun H : ℝ => hughesYoungIntegratedSmallPairSquare T t H M)
+      atTop (𝓝 (hughesYoungWholeSmallPairSquare T t M)) := by
+  have hpositive : ∀ p ∈ Finset.Icc (1, 1) (M, M),
+      0 < p.1 ∧ 0 < p.2 := by
+    intro p hp
+    have hp' := Finset.mem_Icc.mp hp
+    exact ⟨Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).1,
+      Nat.zero_lt_one.trans_le (Prod.le_def.mp hp'.1).2⟩
+  simpa only [hughesYoungIntegratedSmallPairSquare,
+      hughesYoungWholeSmallPairSquare,
+      hughesYoungIntegratedSmallPairSet] using
+    (tendsto_hughesYoungIntegratedSmallPairSet_to_whole hT ht hpositive)
+
 theorem tendsto_hughesYoungHighSquare_sub_smallSquare_zero
     {q M : ℕ} (hq : 0 < q) {T t : ℝ} (hT : Real.exp 1 ≤ T)
     (hSmall : 0 < hughesYoungSmallContour T) :
@@ -180,5 +206,23 @@ theorem tendsto_hughesYoungIntegratedSmallPairSquare
     hq hTexp hSmall (t := t) (M := M)
   have hsub := hhigh.sub hdiff
   convert hsub using 1 <;> ring
+
+/-- Exact identification of the literal whole small-contour square with
+the finite zeta-square opening minus its integrable complementary tail. -/
+theorem hughesYoungWholeSmallPairSquare_eq_zetaSquare_sub_highTail
+    {q : ℕ} (hq : 0 < q) (η : ℝ) (hη0 : 0 < η)
+    (hη : η < 2 * (q : ℝ) - 1 / 2)
+    {T t : ℝ} (hTexp : Real.exp 1 ≤ T)
+    (ht : t ∈ Set.Icc (T / 4) (4 * T))
+    {M : ℕ} (hM : 0 < M) :
+    hughesYoungWholeSmallPairSquare T t M =
+      (Real.pi : ℂ) *
+          (riemannZeta (afeCriticalPoint t) ^ 2 *
+            riemannZeta (afeCriticalPoint (-t)) ^ 2) -
+        hughesYoungWholeHighPairSquareTail q t M := by
+  exact tendsto_nhds_unique
+    (tendsto_hughesYoungIntegratedSmallPairSquare_to_whole hTexp ht M)
+    (tendsto_hughesYoungIntegratedSmallPairSquare
+      hq η hη0 hη hTexp ht hM)
 
 end RiemannZeta.GuthMaynard

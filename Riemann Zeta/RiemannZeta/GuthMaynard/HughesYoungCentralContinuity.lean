@@ -587,8 +587,6 @@ theorem continuous_dfiEquation27CentralSeries_reducedCleaned_ordinate
     (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y)
     (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hr : 0 < r) (hrY : (r : ℝ) ≤ Y / 2)
     (hP : 1 ≤ P) (hTR : T * ((r : ℝ) / Y) ≤ P)
     (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
@@ -637,8 +635,8 @@ theorem continuous_dfiEquation27CentralSeries_reducedCleaned_ordinate
       have hfC0 : DFIEquation2Profile
           (hughesYoungScaledNormalizedDFICore T c 0 X Y (A 0) a b (r : ℤ))
           P X Y (hughesYoungUniformDFIProfile Ccut) := by
-        apply hughesYoungScaledNormalizedDFICore_equation2Profile Ccut hCcut
-          hT hc hc1 hX hY ha haX hb hbY
+        apply hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+          Ccut hCcut hT hc hc1 hX hY ha hb
         · simpa using hrY
         · exact hP
         · simpa using hTR
@@ -691,8 +689,8 @@ theorem continuous_dfiEquation27CentralSeries_reducedCleaned_ordinate
         hheight T u c hT hc hc1 n xi
     have hf : DFIEquation2 f P X Y := by
       dsimp only [f]
-      apply hughesYoungScaledNormalizedDFICore_equation2 Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2_unrestricted Ccut hCcut
+        hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa using hTR
@@ -700,8 +698,8 @@ theorem continuous_dfiEquation27CentralSeries_reducedCleaned_ordinate
       · exact hderiv
     have hfC : DFIEquation2Profile f P X Y Cf := by
       dsimp only [f, Cf]
-      apply hughesYoungScaledNormalizedDFICore_equation2Profile Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+        Ccut hCcut hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa using hTR
@@ -763,8 +761,6 @@ theorem continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
     (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y)
     (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hr : 0 < r) (hrY : (r : ℝ) ≤ Y / 2)
     (hP : 1 ≤ P) (hTR : T * ((r : ℝ) / Y) ≤ P)
     (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
@@ -816,8 +812,8 @@ theorem continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
       hughesYoungScaledNormalizedDFICore T c 0 X Y (A 0) a b (-(r : ℤ))
     have hf0 : DFIEquation2 f0 P X Y := by
       dsimp only [f0]
-      apply hughesYoungScaledNormalizedDFICore_equation2 Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2_unrestricted Ccut hCcut
+        hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa [abs_of_nonneg (show (0 : ℝ) ≤ (r : ℝ) by positivity)] using hTR
@@ -828,8 +824,8 @@ theorem continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
     have hfC0 : DFIEquation2Profile f0 P X Y
         (hughesYoungUniformDFIProfile Ccut) := by
       dsimp only [f0]
-      apply hughesYoungScaledNormalizedDFICore_equation2Profile Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+        Ccut hCcut hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa [abs_of_nonneg (show (0 : ℝ) ≤ (r : ℝ) by positivity)] using hTR
@@ -886,8 +882,8 @@ theorem continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
         hheight T u c hT hc hc1 n xi
     have hf : DFIEquation2 f P X Y := by
       dsimp only [f]
-      apply hughesYoungScaledNormalizedDFICore_equation2 Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2_unrestricted Ccut hCcut
+        hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa [abs_of_nonneg (show (0 : ℝ) ≤ (r : ℝ) by positivity)] using hTR
@@ -895,8 +891,8 @@ theorem continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
       · exact hderiv
     have hfC : DFIEquation2Profile f P X Y Cf := by
       dsimp only [f, Cf]
-      apply hughesYoungScaledNormalizedDFICore_equation2Profile Ccut hCcut
-        hT hc hc1 hX hY ha haX hb hbY
+      apply hughesYoungScaledNormalizedDFICore_equation2Profile_unrestricted
+        Ccut hCcut hT hc hc1 hX hY ha hb
       · simpa using hrY
       · exact hP
       · simpa [abs_of_nonneg (show (0 : ℝ) ≤ (r : ℝ) by positivity)] using hTR
@@ -967,8 +963,6 @@ theorem continuous_dfiSignedCentralSeries_reducedCleaned_ordinate
     (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y)
     (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hr0 : r ≠ 0) (hrY : |(r : ℝ)| ≤ Y / 2)
     (hP : 1 ≤ P) (hTR : T * (|(r : ℝ)| / Y) ≤ P)
     (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y) :
@@ -991,7 +985,7 @@ theorem continuous_dfiSignedCentralSeries_reducedCleaned_ordinate
         simpa only [abs_of_nonneg (show (0 : ℝ) ≤ (n : ℝ) by positivity)] using hTR
       simpa only [dfiSignedCentralSeries_ofNat] using
         continuous_dfiEquation27CentralSeries_reducedCleaned_ordinate
-          hT hc hc1 hX hY hh hk haX hbY hn hnY hP hnTR hU hscale
+          hT hc hc1 hX hY hh hk hn hnY hP hnTR hU hscale
   | negSucc n =>
       let q : ℕ := n + 1
       have hq : 0 < q := by dsimp only [q]; omega
@@ -1012,7 +1006,7 @@ theorem continuous_dfiSignedCentralSeries_reducedCleaned_ordinate
       simpa only [dfiSignedCentralSeries_neg_ofNat
         (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) q hq] using
         continuous_dfiEquation27CentralSeries_swappedReducedCleaned_ordinate
-          hT hc hc1 hX hY hh hk haX hbY hq hqY hP hqTR hU hscale
+          hT hc hc1 hX hY hh hk hq hqY hP hqTR hU hscale
 
 /-- A finite signed shift family retains continuity before the compact
 Mellin integral is taken.  This is the analytic regularity required by the
@@ -1022,8 +1016,6 @@ theorem continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
     (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y)
     (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hP : 1 ≤ P) (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y)
     (hs : ∀ r ∈ s,
       r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧ T * (|(r : ℝ)| / Y) ≤ P) :
@@ -1034,7 +1026,7 @@ theorem continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
           (hughesYoungReducedCleanedShiftWeight T c u X Y h k r)) := by
   exact continuous_finsetSum s fun r hr =>
     continuous_dfiSignedCentralSeries_reducedCleaned_ordinate
-      hT hc hc1 hX hY hh hk haX hbY
+      hT hc hc1 hX hY hh hk
       (hs r hr).1 (hs r hr).2.1 hP (hs r hr).2.2 hU hscale
 
 end RiemannZeta.GuthMaynard

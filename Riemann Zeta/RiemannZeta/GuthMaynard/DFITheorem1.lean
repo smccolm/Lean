@@ -4117,6 +4117,426 @@ theorem dfiTheorem1ErrorScale_mono_epsilon
       (Real.rpow_nonneg (add_nonneg (zero_le_one.trans hX)
         (zero_le_one.trans hY)) _))
 
+/-- The coefficient-weighted logarithmic factor occurring in DFI's
+Ramanujan main series.  One quarter-power of the coefficient is retained;
+this is precisely the saving that controls a dyadic box whose positive
+lattice source is empty because the coefficient exceeds its support. -/
+theorem dfiTheorem1_coefficientWeightedLogFactor_le
+    {X δ : ℝ} (hX : 1 ≤ X) (hδ : 0 < δ) (a : ℕ) (ha : 0 < a) :
+    (a : ℝ) ^ (-(1 / 2 : ℝ)) *
+        (1 + Real.log (2 * X) + |Real.log a| +
+          2 * |Real.eulerMascheroniConstant| + 32) ≤
+      (33 + 2 * |Real.eulerMascheroniConstant| +
+          2 ^ δ / δ + 4) * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+  have hA1 : (1 : ℝ) ≤ a := by exact_mod_cast ha
+  have hA0 : (0 : ℝ) ≤ a := by positivity
+  have hX0 : 0 ≤ X := zero_le_one.trans hX
+  have hpowA : (a : ℝ) ^ (-(1 / 2 : ℝ)) ≤
+      (a : ℝ) ^ (-(1 / 4 : ℝ)) :=
+    Real.rpow_le_rpow_of_exponent_le hA1 (by norm_num)
+  have hpowX : 1 ≤ X ^ δ := Real.one_le_rpow hX hδ.le
+  have hlogA0 : 0 ≤ Real.log (a : ℝ) := Real.log_nonneg hA1
+  have habsA : |Real.log (a : ℝ)| = Real.log (a : ℝ) :=
+    abs_of_nonneg hlogA0
+  have hlogA := Real.log_le_rpow_div hA0 (show (0 : ℝ) < 1 / 4 by norm_num)
+  have hlogA' : Real.log (a : ℝ) ≤
+      4 * (a : ℝ) ^ (1 / 4 : ℝ) := by
+    calc
+      _ ≤ (a : ℝ) ^ (1 / 4 : ℝ) / (1 / 4 : ℝ) := hlogA
+      _ = _ := by ring
+  have hhalfQuarter :
+      (a : ℝ) ^ (-(1 / 2 : ℝ)) * (a : ℝ) ^ (1 / 4 : ℝ) =
+        (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+    rw [← Real.rpow_add (lt_of_lt_of_le zero_lt_one hA1)]
+    norm_num
+  have hlogX0 : 0 ≤ Real.log (2 * X) :=
+    Real.log_nonneg (by nlinarith)
+  have hlogXraw := Real.log_le_rpow_div
+    (show 0 ≤ 2 * X by positivity) hδ
+  have hlogX : Real.log (2 * X) ≤ (2 ^ δ / δ) * X ^ δ := by
+    calc
+      Real.log (2 * X) ≤ (2 * X) ^ δ / δ := hlogXraw
+      _ = (2 ^ δ / δ) * X ^ δ := by
+        rw [Real.mul_rpow (by norm_num) hX0]
+        ring
+  have hconst0 : 0 ≤ 33 + 2 * |Real.eulerMascheroniConstant| := by positivity
+  have hcoeff0 : 0 ≤ (a : ℝ) ^ (-(1 / 2 : ℝ)) := Real.rpow_nonneg hA0 _
+  have hquarter0 : 0 ≤ (a : ℝ) ^ (-(1 / 4 : ℝ)) := Real.rpow_nonneg hA0 _
+  have hconstTerm :
+      (a : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (33 + 2 * |Real.eulerMascheroniConstant|) ≤
+        (33 + 2 * |Real.eulerMascheroniConstant|) * X ^ δ *
+          (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+    calc
+      _ ≤ (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+          (33 + 2 * |Real.eulerMascheroniConstant|) := by gcongr
+      _ ≤ (33 + 2 * |Real.eulerMascheroniConstant|) * X ^ δ *
+          (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+        have hmul := mul_le_mul_of_nonneg_left hpowX
+          (mul_nonneg hquarter0 hconst0)
+        nlinarith
+  have hXTerm :
+      (a : ℝ) ^ (-(1 / 2 : ℝ)) * Real.log (2 * X) ≤
+        (2 ^ δ / δ) * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+    calc
+      _ ≤ (a : ℝ) ^ (-(1 / 4 : ℝ)) * Real.log (2 * X) := by gcongr
+      _ ≤ (a : ℝ) ^ (-(1 / 4 : ℝ)) * ((2 ^ δ / δ) * X ^ δ) := by gcongr
+      _ = _ := by ring
+  have hATerm :
+      (a : ℝ) ^ (-(1 / 2 : ℝ)) * Real.log (a : ℝ) ≤
+        4 * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+    calc
+      _ ≤ (a : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (4 * (a : ℝ) ^ (1 / 4 : ℝ)) := by gcongr
+      _ = 4 * (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+        calc
+          _ = 4 * ((a : ℝ) ^ (-(1 / 2 : ℝ)) *
+              (a : ℝ) ^ (1 / 4 : ℝ)) := by ring
+          _ = _ := by rw [hhalfQuarter]
+      _ ≤ 4 * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ)) := by
+        nlinarith
+  rw [habsA]
+  nlinarith
+
+/-- Arithmetic scale of the complete equation-(27) central series, stated
+at the generic DFI layer rather than only in the Hughes--Young consumer. -/
+noncomputable def dfiTheorem1CentralArithmeticScale
+    (X Y : ℝ) (a b h : ℕ) : ℝ :=
+  (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) *
+    (h.divisors.card : ℝ) *
+    (1 + Real.log (2 * X) + |Real.log a| +
+      2 * |Real.eulerMascheroniConstant| + 32) *
+    (1 + Real.log (2 * Y) + |Real.log b| +
+      2 * |Real.eulerMascheroniConstant| + 32) *
+    min X Y * 5
+
+/-- The complete Ramanujan series is bounded by the generic arithmetic
+scale.  This is the `K=0`, `ρ=1/2` specialization of the already proved
+equation-(27) tail estimate. -/
+theorem norm_dfiEquation27CentralSeries_le_dfiTheorem1CentralArithmeticScale
+    {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
+    {Cf : ℕ → ℕ → ℝ} {Cφ : ℕ → ℝ}
+    (hf : DFIEquation2 f P X Y)
+    (hfC : DFIEquation2Profile f P X Y Cf)
+    (hbox : DFILocalizedBox f X Y)
+    (hφ : DFIRedundantCutoff φ U)
+    (hφC : DFIRedundantCutoffProfile hφ Cφ)
+    (hscale : U ≤ P⁻¹ * min X Y)
+    (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h) :
+    ‖dfiEquation27CentralSeries a b h f‖ ≤
+      dfiEquation27CentralProfileConstant Cf Cφ *
+        dfiTheorem1CentralArithmeticScale X Y a b h := by
+  have hs : Summable (fun q : ℕ =>
+      dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) q) :=
+    summable_dfiEquation27CentralSummand hf hfC hbox hφ hφC hscale
+      a b h ha hb hh
+  have htail :=
+    tsum_norm_dfiEquation27CentralSummand_tail_le_interpolated_of_profiles
+      hf hfC hbox hφ hφC hscale
+      (1 / 2 : ℝ) (1 / 8 : ℝ) (1 / 4 : ℝ) (1 / 8 : ℝ)
+      (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+      (by norm_num) (by norm_num)
+      a b h 0 ha hb hh
+  have htotal :
+      (∑' q : ℕ, ‖dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) q‖) =
+      ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) (j + 1)‖ := by
+    have hsplit := hs.norm.sum_add_tsum_nat_add 1
+    simpa [dfiEquation27CentralSummand,
+      dfiEquation27ArithmeticCoefficient, add_comm] using hsplit.symm
+  rw [← dfiEquation27CentralSeries_localizedWeight_eq hφ a b h]
+  calc
+    ‖dfiEquation27CentralSeries a b h
+        (dfiLocalizedWeight f φ h)‖ ≤
+      ∑' q : ℕ, ‖dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) q‖ := norm_tsum_le_tsum_norm hs.norm
+    _ = ∑' j : ℕ, ‖dfiEquation27CentralSummand a b h
+        (dfiLocalizedWeight f φ h) (j + 1)‖ := htotal
+    _ ≤ dfiEquation27CentralProfileConstant Cf Cφ *
+        dfiTheorem1CentralArithmeticScale X Y a b h := by
+      unfold dfiTheorem1CentralArithmeticScale
+      convert htail using 1
+      all_goals norm_num
+      all_goals ring
+
+/-- If the left coefficient is larger than the dyadic source support, the
+quarter-power retained by the two coefficient-weighted logarithmic factors
+converts the remaining line-integral length into exactly the geometric
+factor occurring in DFI Theorem 1. -/
+theorem dfiTheorem1_emptyLeftCoefficient_geometry
+    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (haX : 2 * X < a) :
+    min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+      (X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ) := by
+  have hX0 : 0 < X := zero_lt_one.trans_le hX
+  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hXY0 : 0 < X * Y := mul_pos hX0 hY0
+  have hA1 : (1 : ℝ) ≤ a := by exact_mod_cast ha
+  have hB1 : (1 : ℝ) ≤ b := by exact_mod_cast hb
+  have hXa : X ≤ (a : ℝ) := by
+    have haX' : 2 * X < (a : ℝ) := by exact_mod_cast haX
+    linarith
+  have haQuarter : (a : ℝ) ^ (-(1 / 4 : ℝ)) ≤ X ^ (-(1 / 4 : ℝ)) :=
+    Real.rpow_le_rpow_of_nonpos hX0 hXa (by norm_num)
+  have hbQuarter : (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤ 1 := by
+    simpa using Real.rpow_le_rpow_of_nonpos (show (0 : ℝ) < 1 by norm_num)
+      hB1 (show (-(1 / 4 : ℝ)) ≤ 0 by norm_num)
+  have hmin : min X Y ≤ (X * Y) ^ (1 / 2 : ℝ) := by
+    rw [← Real.sqrt_eq_rpow]
+    rcases le_total X Y with hXY | hYX
+    · rw [min_eq_left hXY]
+      have hsq : X ^ 2 ≤ X * Y := by nlinarith
+      nlinarith [Real.sq_sqrt hXY0.le, Real.sqrt_nonneg (X * Y)]
+    · rw [min_eq_right hYX]
+      have hsq : Y ^ 2 ≤ X * Y := by nlinarith
+      nlinarith [Real.sq_sqrt hXY0.le, Real.sqrt_nonneg (X * Y)]
+  have hquarterSum : Y ^ (1 / 4 : ℝ) ≤ (X + Y) ^ (1 / 4 : ℝ) :=
+    Real.rpow_le_rpow hY0.le (by linarith) (by norm_num)
+  calc
+    min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+      (X * Y) ^ (1 / 2 : ℝ) * X ^ (-(1 / 4 : ℝ)) * 1 := by
+        gcongr
+    _ = (X * Y) ^ (1 / 4 : ℝ) * Y ^ (1 / 4 : ℝ) := by
+      rw [Real.mul_rpow hX0.le hY0.le, Real.mul_rpow hX0.le hY0.le]
+      calc
+        X ^ (1 / 2 : ℝ) * Y ^ (1 / 2 : ℝ) *
+            X ^ (-(1 / 4 : ℝ)) * 1 =
+          (X ^ (1 / 2 : ℝ) * X ^ (-(1 / 4 : ℝ))) *
+            Y ^ (1 / 2 : ℝ) := by ring
+        _ = X ^ (1 / 4 : ℝ) * Y ^ (1 / 2 : ℝ) := by
+          rw [← Real.rpow_add hX0]
+          norm_num
+        _ = X ^ (1 / 4 : ℝ) *
+            (Y ^ (1 / 4 : ℝ) * Y ^ (1 / 4 : ℝ)) := by
+          rw [← Real.rpow_add hY0]
+          norm_num
+        _ = _ := by ring
+    _ ≤ (X * Y) ^ (1 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) := by
+      gcongr
+    _ = _ := by ring
+
+/-- Right-coefficient counterpart of
+`dfiTheorem1_emptyLeftCoefficient_geometry`. -/
+theorem dfiTheorem1_emptyRightCoefficient_geometry
+    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (hbY : 2 * Y < b) :
+    min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+      (X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ) := by
+  have hX0 : 0 < X := zero_lt_one.trans_le hX
+  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hXY0 : 0 < X * Y := mul_pos hX0 hY0
+  have hA1 : (1 : ℝ) ≤ a := by exact_mod_cast ha
+  have hB1 : (1 : ℝ) ≤ b := by exact_mod_cast hb
+  have hYb : Y ≤ (b : ℝ) := by
+    have hbY' : 2 * Y < (b : ℝ) := by exact_mod_cast hbY
+    linarith
+  have haQuarter : (a : ℝ) ^ (-(1 / 4 : ℝ)) ≤ 1 := by
+    simpa using Real.rpow_le_rpow_of_nonpos (show (0 : ℝ) < 1 by norm_num)
+      hA1 (show (-(1 / 4 : ℝ)) ≤ 0 by norm_num)
+  have hbQuarter : (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤ Y ^ (-(1 / 4 : ℝ)) :=
+    Real.rpow_le_rpow_of_nonpos hY0 hYb (by norm_num)
+  have hmin : min X Y ≤ (X * Y) ^ (1 / 2 : ℝ) := by
+    rw [← Real.sqrt_eq_rpow]
+    rcases le_total X Y with hXY | hYX
+    · rw [min_eq_left hXY]
+      have hsq : X ^ 2 ≤ X * Y := by nlinarith
+      nlinarith [Real.sq_sqrt hXY0.le, Real.sqrt_nonneg (X * Y)]
+    · rw [min_eq_right hYX]
+      have hsq : Y ^ 2 ≤ X * Y := by nlinarith
+      nlinarith [Real.sq_sqrt hXY0.le, Real.sqrt_nonneg (X * Y)]
+  have hquarterSum : X ^ (1 / 4 : ℝ) ≤ (X + Y) ^ (1 / 4 : ℝ) :=
+    Real.rpow_le_rpow hX0.le (by linarith) (by norm_num)
+  calc
+    min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+        (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+      (X * Y) ^ (1 / 2 : ℝ) * 1 * Y ^ (-(1 / 4 : ℝ)) := by
+        gcongr
+    _ = (X * Y) ^ (1 / 4 : ℝ) * X ^ (1 / 4 : ℝ) := by
+      rw [Real.mul_rpow hX0.le hY0.le, Real.mul_rpow hX0.le hY0.le]
+      calc
+        X ^ (1 / 2 : ℝ) * Y ^ (1 / 2 : ℝ) * 1 *
+            Y ^ (-(1 / 4 : ℝ)) =
+          X ^ (1 / 2 : ℝ) *
+            (Y ^ (1 / 2 : ℝ) * Y ^ (-(1 / 4 : ℝ))) := by ring
+        _ = X ^ (1 / 2 : ℝ) * Y ^ (1 / 4 : ℝ) := by
+          rw [← Real.rpow_add hY0]
+          norm_num
+        _ = (X ^ (1 / 4 : ℝ) * X ^ (1 / 4 : ℝ)) *
+            Y ^ (1 / 4 : ℝ) := by
+          rw [← Real.rpow_add hX0]
+          norm_num
+        _ = _ := by ring
+    _ ≤ (X * Y) ^ (1 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) := by
+      gcongr
+    _ = _ := by ring
+
+/-- A uniform constant for the coefficient-support-empty extension of DFI
+Theorem 1.  It depends only on the displayed epsilon (the source and cutoff
+profiles enter separately through `dfiEquation27CentralProfileConstant`). -/
+noncomputable def dfiTheorem1EmptyCoefficientConstant (ε : ℝ) : ℝ :=
+  let δ := ε / 2
+  let K := 33 + 2 * |Real.eulerMascheroniConstant| + 2 ^ δ / δ + 4
+  let D := divisorEpsilonConstant δ * 2 ^ δ
+  5 * K ^ 2 * D
+
+theorem dfiTheorem1EmptyCoefficientConstant_pos
+    {ε : ℝ} (hε : 0 < ε) : 0 < dfiTheorem1EmptyCoefficientConstant ε := by
+  unfold dfiTheorem1EmptyCoefficientConstant
+  dsimp only
+  have hδ : 0 < ε / 2 := by positivity
+  have hK : 0 < 33 + 2 * |Real.eulerMascheroniConstant| +
+      2 ^ (ε / 2) / (ε / 2) + 4 := by positivity
+  have hD : 0 < divisorEpsilonConstant (ε / 2) * 2 ^ (ε / 2) :=
+    mul_pos (divisorEpsilonConstant_pos _) (Real.rpow_pos_of_pos (by norm_num) _)
+  exact mul_pos (mul_pos (by norm_num) (sq_pos_of_pos hK)) hD
+
+/-- The full equation-(27) arithmetic scale is absorbed by the published
+DFI error whenever either positive lattice source is empty because its
+coefficient exceeds the corresponding dyadic support. -/
+theorem dfiTheorem1CentralArithmeticScale_le_errorScale_of_empty_coefficient
+    {P X Y ε : ℝ} (hP : 1 ≤ P) (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (hε : 0 < ε) (a b h : ℕ) (ha : 0 < a) (hb : 0 < b) (hh : 0 < h)
+    (hhX : (h : ℝ) ≤ 2 * X)
+    (hempty : 2 * X < (a : ℝ) ∨ 2 * Y < (b : ℝ)) :
+    dfiTheorem1CentralArithmeticScale X Y a b h ≤
+      dfiTheorem1EmptyCoefficientConstant ε *
+        dfiTheorem1ErrorScale P X Y ε := by
+  let δ : ℝ := ε / 2
+  let K : ℝ := 33 + 2 * |Real.eulerMascheroniConstant| + 2 ^ δ / δ + 4
+  let D : ℝ := divisorEpsilonConstant δ * 2 ^ δ
+  have hδ : 0 < δ := by dsimp [δ]; positivity
+  have hX0 : 0 < X := zero_lt_one.trans_le hX
+  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hS0 : 0 < X * Y := mul_pos hX0 hY0
+  have hK0 : 0 ≤ K := by dsimp [K]; positivity
+  have hD0 : 0 ≤ D := by
+    dsimp [D]
+    exact mul_nonneg (divisorEpsilonConstant_pos δ).le
+      (Real.rpow_nonneg (by norm_num) _)
+  have hA0 : 0 ≤ (a : ℝ) := Nat.cast_nonneg a
+  have hB0 : 0 ≤ (b : ℝ) := Nat.cast_nonneg b
+  have hABpow : (((a * b : ℕ) : ℝ) ^ (-(1 / 2 : ℝ))) =
+      (a : ℝ) ^ (-(1 / 2 : ℝ)) *
+        (b : ℝ) ^ (-(1 / 2 : ℝ)) := by
+    push_cast
+    exact Real.mul_rpow hA0 hB0
+  have hA := dfiTheorem1_coefficientWeightedLogFactor_le hX hδ a ha
+  have hB := dfiTheorem1_coefficientWeightedLogFactor_le hY hδ b hb
+  have hLA0 : 0 ≤ 1 + Real.log (2 * X) + |Real.log a| +
+      2 * |Real.eulerMascheroniConstant| + 32 := by
+    have : 0 ≤ Real.log (2 * X) := Real.log_nonneg (by nlinarith)
+    positivity
+  have hLB0 : 0 ≤ 1 + Real.log (2 * Y) + |Real.log b| +
+      2 * |Real.eulerMascheroniConstant| + 32 := by
+    have : 0 ≤ Real.log (2 * Y) := Real.log_nonneg (by nlinarith)
+    positivity
+  have hAw0 : 0 ≤ (a : ℝ) ^ (-(1 / 2 : ℝ)) *
+      (1 + Real.log (2 * X) + |Real.log a| +
+        2 * |Real.eulerMascheroniConstant| + 32) :=
+    mul_nonneg (Real.rpow_nonneg hA0 _) hLA0
+  have hBw0 : 0 ≤ (b : ℝ) ^ (-(1 / 2 : ℝ)) *
+      (1 + Real.log (2 * Y) + |Real.log b| +
+        2 * |Real.eulerMascheroniConstant| + 32) :=
+    mul_nonneg (Real.rpow_nonneg hB0 _) hLB0
+  have hDiv : (h.divisors.card : ℝ) ≤ D * (X * Y) ^ δ := by
+    simpa only [D] using
+      dfiEquation27_sourceDivisorCount_le_rpow hX hY hh hhX hδ
+  have hGeom :
+      min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+          (b : ℝ) ^ (-(1 / 4 : ℝ)) ≤
+        (X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ) := by
+    rcases hempty with haX | hbY
+    · exact dfiTheorem1_emptyLeftCoefficient_geometry hX hY a b ha hb haX
+    · exact dfiTheorem1_emptyRightCoefficient_geometry hX hY a b ha hb hbY
+  have hPow : X ^ δ * Y ^ δ * (X * Y) ^ δ = (X * Y) ^ ε := by
+    rw [← Real.mul_rpow hX0.le hY0.le, ← Real.rpow_add hS0]
+    congr 1
+    dsimp [δ]
+    ring
+  have hCore :
+      dfiTheorem1CentralArithmeticScale X Y a b h ≤
+        (5 * K ^ 2 * D) * (X * Y) ^ ε *
+          ((X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ)) := by
+    unfold dfiTheorem1CentralArithmeticScale
+    rw [hABpow]
+    calc
+      ((a : ℝ) ^ (-(1 / 2 : ℝ)) * (b : ℝ) ^ (-(1 / 2 : ℝ))) *
+          (h.divisors.card : ℝ) *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 32) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 32) * min X Y * 5 =
+        ((a : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (1 + Real.log (2 * X) + |Real.log a| +
+            2 * |Real.eulerMascheroniConstant| + 32)) *
+        ((b : ℝ) ^ (-(1 / 2 : ℝ)) *
+          (1 + Real.log (2 * Y) + |Real.log b| +
+            2 * |Real.eulerMascheroniConstant| + 32)) *
+        (h.divisors.card : ℝ) * min X Y * 5 := by ring
+      _ ≤ (K * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ))) *
+          (K * Y ^ δ * (b : ℝ) ^ (-(1 / 4 : ℝ))) *
+          (D * (X * Y) ^ δ) * min X Y * 5 := by
+        change _ ≤ K * X ^ δ * (a : ℝ) ^ (-(1 / 4 : ℝ)) at hA
+        change _ ≤ K * Y ^ δ * (b : ℝ) ^ (-(1 / 4 : ℝ)) at hB
+        gcongr
+      _ = (5 * K ^ 2 * D) *
+          (X ^ δ * Y ^ δ * (X * Y) ^ δ) *
+          (min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+            (b : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
+      _ = (5 * K ^ 2 * D) * (X * Y) ^ ε *
+          (min X Y * (a : ℝ) ^ (-(1 / 4 : ℝ)) *
+            (b : ℝ) ^ (-(1 / 4 : ℝ))) := by rw [hPow]
+      _ ≤ (5 * K ^ 2 * D) * (X * Y) ^ ε *
+          ((X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ)) := by
+        gcongr
+  have hPpow : 1 ≤ P ^ (5 / 4 : ℝ) :=
+    Real.one_le_rpow hP (by norm_num)
+  calc
+    dfiTheorem1CentralArithmeticScale X Y a b h ≤ _ := hCore
+    _ ≤ (5 * K ^ 2 * D) *
+        (P ^ (5 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) *
+          (X * Y) ^ (1 / 4 : ℝ) * (X * Y) ^ ε) := by
+      have hSε : 0 ≤ (X * Y) ^ ε := Real.rpow_nonneg hS0.le _
+      have hGeom0 : 0 ≤ (X + Y) ^ (1 / 4 : ℝ) *
+          (X * Y) ^ (1 / 4 : ℝ) := by positivity
+      have hC0 : 0 ≤ 5 * K ^ 2 * D := by positivity
+      calc
+        (5 * K ^ 2 * D) * (X * Y) ^ ε *
+            ((X + Y) ^ (1 / 4 : ℝ) * (X * Y) ^ (1 / 4 : ℝ)) =
+          (5 * K ^ 2 * D) *
+            ((X * Y) ^ ε * ((X + Y) ^ (1 / 4 : ℝ) *
+              (X * Y) ^ (1 / 4 : ℝ))) := by ring
+        _ ≤ (5 * K ^ 2 * D) *
+            (P ^ (5 / 4 : ℝ) * ((X * Y) ^ ε *
+              ((X + Y) ^ (1 / 4 : ℝ) *
+                (X * Y) ^ (1 / 4 : ℝ)))) := by
+          apply mul_le_mul_of_nonneg_left _ hC0
+          have hInner := mul_le_mul_of_nonneg_right hPpow
+            (mul_nonneg hSε hGeom0)
+          simpa only [one_mul] using hInner
+        _ = _ := by ring
+    _ = dfiTheorem1EmptyCoefficientConstant ε *
+        dfiTheorem1ErrorScale P X Y ε := by
+      have hCdef : dfiTheorem1EmptyCoefficientConstant ε = 5 * K ^ 2 * D := by
+        rfl
+      rw [hCdef]
+      unfold dfiTheorem1ErrorScale
+      calc
+        (5 * K ^ 2 * D) *
+            (P ^ (5 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) *
+              (X * Y) ^ (1 / 4 : ℝ) * (X * Y) ^ ε) =
+          (5 * K ^ 2 * D) *
+            (P ^ (5 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) *
+              ((X * Y) ^ (1 / 4 : ℝ) * (X * Y) ^ ε)) := by ring
+        _ = (5 * K ^ 2 * D) *
+            (P ^ (5 / 4 : ℝ) * (X + Y) ^ (1 / 4 : ℝ) *
+              (X * Y) ^ (1 / 4 + ε)) := by rw [Real.rpow_add hS0]
+
 set_option maxHeartbeats 4000000 in
 /-- The dyadic positive-shift form of DFI Theorem 1.  This theorem assembles
 the exact source identity, equations (27) and (29), at one common cutoff
@@ -4389,6 +4809,129 @@ theorem exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theo
       linarith
     _ = C * dfiTheorem1ErrorScale P X Y ε := by rfl
 
+set_option maxHeartbeats 4000000 in
+/-- DFI Theorem 1 with the coefficient range stated in the paper: the
+positive coprime coefficients are unrestricted.  If both coefficient
+supports are nonempty this is the equation-(9)--(30) theorem above.  If a
+coefficient exceeds its dyadic support, the lattice sum vanishes exactly
+and the equation-(27) central series is absorbed by the same published
+error through its retained coefficient quarter-power. -/
+theorem exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1ErrorScale_unrestricted
+    (D E : ℕ → ℝ) (Cf : ℕ → ℕ → ℝ) (Cφ Cw : ℕ → ℝ)
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ {P X Y U Q : ℝ} {w : DFIDeltaWeight Q}
+        {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ},
+      DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+      DFILocalizedBox f X Y →
+      ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+      U ≤ P⁻¹ * min X Y →
+      DFIDeltaWeightProfile w Cw → DFIDeltaWeightProfile w D →
+      DFIWeightQuotientProfile w E →
+      2 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      ∀ (a b M N h : ℕ), 0 < a → 0 < b → 0 < h → a.Coprime b →
+      2 * X / a ≤ M → 2 * Y / b ≤ N → (h : ℝ) ≤ 2 * X →
+      ‖dfiDyadicShiftedDivisorSum f a b M N (h : ℤ) -
+          dfiEquation27CentralSeries a b h f‖ ≤
+        C * dfiTheorem1ErrorScale P X Y ε := by
+  obtain ⟨C0, hC0, hOld⟩ :=
+    exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1ErrorScale
+      D E Cf Cφ Cw ε hε0 hε4
+  let K : ℝ := dfiEquation27CentralProfileConstant Cf Cφ
+  let A : ℝ := (|K| + 1) * dfiTheorem1EmptyCoefficientConstant ε
+  let C : ℝ := C0 + A
+  have hEmptyC : 0 < dfiTheorem1EmptyCoefficientConstant ε :=
+    dfiTheorem1EmptyCoefficientConstant_pos hε0
+  have hA : 0 < A := by dsimp [A]; positivity
+  have hC : 0 < C := by dsimp [C]; positivity
+  refine ⟨C, hC, ?_⟩
+  intro P X Y U Q w f φ hf hfC hbox hφ hφC hscale hwC hD hE hQ hU hQsq
+    a b M N h ha hb hh hab hM hN hhX
+  have hErr0 : 0 ≤ dfiTheorem1ErrorScale P X Y ε := by
+    unfold dfiTheorem1ErrorScale
+    exact mul_nonneg
+      (mul_nonneg
+        (Real.rpow_nonneg (zero_le_one.trans hf.one_le_P) _)
+        (Real.rpow_nonneg
+          (add_nonneg (zero_le_one.trans hf.one_le_X)
+            (zero_le_one.trans hf.one_le_Y)) _))
+      (Real.rpow_nonneg
+        (mul_nonneg (zero_le_one.trans hf.one_le_X)
+          (zero_le_one.trans hf.one_le_Y)) _)
+  by_cases haX : (a : ℝ) ≤ 2 * X
+  · by_cases hbY : (b : ℝ) ≤ 2 * Y
+    · have hBound := hOld hf hfC hbox hφ hφC hscale hwC hD hE hQ hU hQsq
+          a b M N h ha hb hh hab hM hN haX hbY hhX
+      exact hBound.trans (mul_le_mul_of_nonneg_right
+        (show C0 ≤ C by dsimp [C]; linarith [hA.le]) hErr0)
+    · have hempty : 2 * Y < (b : ℝ) := lt_of_not_ge hbY
+      have hzero :=
+        dfiDyadicShiftedDivisorSum_eq_zero_of_right_coefficient_gt_support
+          hbox b hempty a M N (h : ℤ)
+      have hCentral :=
+        norm_dfiEquation27CentralSeries_le_dfiTheorem1CentralArithmeticScale
+          hf hfC hbox hφ hφC hscale a b h ha hb hh
+      have hArith :=
+        dfiTheorem1CentralArithmeticScale_le_errorScale_of_empty_coefficient
+          hf.one_le_P hf.one_le_X hf.one_le_Y hε0 a b h ha hb hh hhX
+          (Or.inr hempty)
+      have hKpos : 0 < K := by
+        dsimp [K]
+        exact dfiEquation27CentralProfileConstant_pos hfC hφC
+      rw [hzero, zero_sub, norm_neg]
+      calc
+        ‖dfiEquation27CentralSeries a b h f‖ ≤
+            K * dfiTheorem1CentralArithmeticScale X Y a b h := by
+          simpa only [K] using hCentral
+        _ ≤ K * (dfiTheorem1EmptyCoefficientConstant ε *
+            dfiTheorem1ErrorScale P X Y ε) :=
+          mul_le_mul_of_nonneg_left hArith hKpos.le
+        _ ≤ A * dfiTheorem1ErrorScale P X Y ε := by
+          dsimp [A]
+          have hKle : K ≤ |K| + 1 := by linarith [le_abs_self K]
+          have hFactor0 : 0 ≤ dfiTheorem1EmptyCoefficientConstant ε *
+              dfiTheorem1ErrorScale P X Y ε :=
+            mul_nonneg hEmptyC.le hErr0
+          nlinarith
+        _ ≤ C * dfiTheorem1ErrorScale P X Y ε := by
+          apply mul_le_mul_of_nonneg_right _ hErr0
+          dsimp [C]
+          linarith [hC0.le]
+  · have hempty : 2 * X < (a : ℝ) := lt_of_not_ge haX
+    have hzero :=
+      dfiDyadicShiftedDivisorSum_eq_zero_of_left_coefficient_gt_support
+        hbox a hempty b M N (h : ℤ)
+    have hCentral :=
+      norm_dfiEquation27CentralSeries_le_dfiTheorem1CentralArithmeticScale
+        hf hfC hbox hφ hφC hscale a b h ha hb hh
+    have hArith :=
+      dfiTheorem1CentralArithmeticScale_le_errorScale_of_empty_coefficient
+        hf.one_le_P hf.one_le_X hf.one_le_Y hε0 a b h ha hb hh hhX
+        (Or.inl hempty)
+    have hKpos : 0 < K := by
+      dsimp [K]
+      exact dfiEquation27CentralProfileConstant_pos hfC hφC
+    rw [hzero, zero_sub, norm_neg]
+    calc
+      ‖dfiEquation27CentralSeries a b h f‖ ≤
+          K * dfiTheorem1CentralArithmeticScale X Y a b h := by
+        simpa only [K] using hCentral
+      _ ≤ K * (dfiTheorem1EmptyCoefficientConstant ε *
+          dfiTheorem1ErrorScale P X Y ε) :=
+        mul_le_mul_of_nonneg_left hArith hKpos.le
+      _ ≤ A * dfiTheorem1ErrorScale P X Y ε := by
+        dsimp [A]
+        have hKle : K ≤ |K| + 1 := by linarith [le_abs_self K]
+        have hFactor0 : 0 ≤ dfiTheorem1EmptyCoefficientConstant ε *
+            dfiTheorem1ErrorScale P X Y ε :=
+          mul_nonneg hEmptyC.le hErr0
+        nlinarith
+      _ ≤ C * dfiTheorem1ErrorScale P X Y ε := by
+        apply mul_le_mul_of_nonneg_right _ hErr0
+        dsimp [C]
+        linarith [hC0.le]
+
 /-- The optimized DFI error scale is invariant under exchanging the two
 physical variables. -/
 theorem dfiTheorem1ErrorScale_swap (P X Y ε : ℝ) :
@@ -4581,6 +5124,105 @@ theorem exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_signedCentralSeries_l
           · exact hErrNonneg
           · dsimp [C]
             linarith
+
+set_option maxHeartbeats 4000000 in
+/-- Signed, scale-uniform DFI Theorem 1 with unrestricted positive
+coefficients, matching the coefficient range of the published theorem. -/
+theorem exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_signedCentralSeries_le_theorem1ErrorScale_unrestricted
+    (D E : ℕ → ℝ) (Cf CfSwap : ℕ → ℕ → ℝ) (Cφ Cw : ℕ → ℝ)
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ {P X Y U Q : ℝ} {w : DFIDeltaWeight Q}
+        {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ},
+      DFIEquation2 f P X Y → DFIEquation2Profile f P X Y Cf →
+      DFILocalizedBox f X Y →
+      DFIEquation2 (dfiSwapWeight f) P Y X →
+      DFIEquation2Profile (dfiSwapWeight f) P Y X CfSwap →
+      DFILocalizedBox (dfiSwapWeight f) Y X →
+      ∀ (hφ : DFIRedundantCutoff φ U), DFIRedundantCutoffProfile hφ Cφ →
+      U ≤ P⁻¹ * min X Y →
+      DFIDeltaWeightProfile w Cw → DFIDeltaWeightProfile w D →
+      DFIWeightQuotientProfile w E →
+      2 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      ∀ (a b M N : ℕ) (r : ℤ), 0 < a → 0 < b → r ≠ 0 → a.Coprime b →
+      2 * X / a ≤ M → 2 * Y / b ≤ N →
+      (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) →
+      (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y) →
+      ‖dfiDyadicShiftedDivisorSum f a b M N r -
+          dfiSignedCentralSeries a b r f‖ ≤
+        C * dfiTheorem1ErrorScale P X Y ε := by
+  obtain ⟨Cpos, hCpos, hPos⟩ :=
+    exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1ErrorScale_unrestricted
+      D E Cf Cφ Cw ε hε0 hε4
+  obtain ⟨Cneg, hCneg, hNeg⟩ :=
+    exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1ErrorScale_unrestricted
+      D E CfSwap Cφ Cw ε hε0 hε4
+  let C : ℝ := Cpos + Cneg
+  have hC : 0 < C := by dsimp [C]; positivity
+  refine ⟨C, hC, ?_⟩
+  intro P X Y U Q w f φ hf hfC hbox hfSwap hfSwapC hboxSwap
+    hφ hφC hscale hwC hD hE hQ hU hQsq a b M N r ha hb hr hab
+    hM hN hrPos hrNeg
+  have hErrNonneg : 0 ≤ dfiTheorem1ErrorScale P X Y ε := by
+    unfold dfiTheorem1ErrorScale
+    exact mul_nonneg
+      (mul_nonneg
+        (Real.rpow_nonneg (zero_le_one.trans hf.one_le_P) _)
+        (Real.rpow_nonneg
+          (add_nonneg (zero_le_one.trans hf.one_le_X)
+            (zero_le_one.trans hf.one_le_Y)) _))
+      (Real.rpow_nonneg
+        (mul_nonneg (zero_le_one.trans hf.one_le_X)
+          (zero_le_one.trans hf.one_le_Y)) _)
+  cases r with
+  | ofNat h =>
+      have hh : 0 < h := by
+        by_contra hh
+        have : h = 0 := Nat.eq_zero_of_not_pos hh
+        exact hr (by simp [this])
+      have hhX : (h : ℝ) ≤ 2 * X := by
+        exact hrPos (by simp) |>.trans_eq (by simp)
+      have hBound := hPos hf hfC hbox hφ hφC hscale hwC hD hE hQ hU hQsq
+        a b M N h ha hb hh hab hM hN hhX
+      calc
+        ‖dfiDyadicShiftedDivisorSum f a b M N (h : ℤ) -
+            dfiSignedCentralSeries a b (h : ℤ) f‖ =
+          ‖dfiDyadicShiftedDivisorSum f a b M N (h : ℤ) -
+            dfiEquation27CentralSeries a b h f‖ := by
+              rw [dfiSignedCentralSeries_ofNat]
+        _ ≤ Cpos * dfiTheorem1ErrorScale P X Y ε := hBound
+        _ ≤ C * dfiTheorem1ErrorScale P X Y ε := by
+          apply mul_le_mul_of_nonneg_right _ hErrNonneg
+          dsimp [C]
+          linarith
+  | negSucc h =>
+      let k : ℕ := h + 1
+      have hk : 0 < k := by dsimp [k]; omega
+      have hkY : (k : ℝ) ≤ 2 * Y := by
+        simpa [k] using hrNeg (by simp)
+      have hscaleSwap : U ≤ P⁻¹ * min Y X := by
+        simpa [min_comm] using hscale
+      have hQsqSwap : Q ^ 2 = P⁻¹ * (Y + X)⁻¹ * (Y * X) := by
+        simpa [add_comm, mul_comm] using hQsq
+      have hBound := hNeg hfSwap hfSwapC hboxSwap hφ hφC hscaleSwap
+        hwC hD hE hQ hU hQsqSwap b a N M k hb ha hk hab.symm
+        hN hM hkY
+      have hSource := dfiDyadicShiftedDivisorSum_swap f a b M N (Int.negSucc h)
+      calc
+        ‖dfiDyadicShiftedDivisorSum f a b M N (Int.negSucc h) -
+            dfiSignedCentralSeries a b (Int.negSucc h) f‖ =
+          ‖dfiDyadicShiftedDivisorSum (dfiSwapWeight f) b a N M (k : ℤ) -
+            dfiEquation27CentralSeries b a k (dfiSwapWeight f)‖ := by
+              rw [hSource]
+              simp [dfiSignedCentralSeries, k]
+        _ ≤ Cneg * dfiTheorem1ErrorScale P Y X ε := hBound
+        _ = Cneg * dfiTheorem1ErrorScale P X Y ε := by
+          rw [dfiTheorem1ErrorScale_swap]
+        _ ≤ C * dfiTheorem1ErrorScale P X Y ε := by
+          apply mul_le_mul_of_nonneg_right _ hErrNonneg
+          dsimp [C]
+          linarith
 
 /-- The dyadic DFI estimate with the paper's auxiliary cutoffs constructed
 internally.  Thus the caller supplies only the equation-(2) source weight and

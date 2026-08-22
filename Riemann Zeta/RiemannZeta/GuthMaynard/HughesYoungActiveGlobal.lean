@@ -1,4 +1,5 @@
 import RiemannZeta.GuthMaynard.HughesYoungActiveMoment
+import RiemannZeta.GuthMaynard.HughesYoungFiniteSquareBridge
 
 open Complex Finset Filter MeasureTheory Set Topology
 open scoped BigOperators ContDiff FourierTransform Interval Topology

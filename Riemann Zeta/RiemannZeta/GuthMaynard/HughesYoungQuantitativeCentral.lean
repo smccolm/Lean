@@ -1,6 +1,6 @@
 import RiemannZeta.GuthMaynard.HughesYoungCentralDifferentiation
-import RiemannZeta.GuthMaynard.HughesYoungGlobalBounds
 import RiemannZeta.GuthMaynard.HughesYoungSharpGammaRatio
+import RiemannZeta.GuthMaynard.HughesYoungStaticScalarBound
 
 open Complex Filter MeasureTheory Metric Set
 open scoped BigOperators Topology

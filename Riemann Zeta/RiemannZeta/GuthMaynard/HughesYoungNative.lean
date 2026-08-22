@@ -945,14 +945,14 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
       δ hδ0 hδ4
   obtain ⟨ca, hca, hcoeff⟩ := shortMobiusSquareCoeff_bound δ hδ0
   let D : ℝ := 100 / δ + 3
-  let E : ℝ := 33159 / 40000 + (509 / 100) * δ
+  let E : ℝ := 34759 / 40000 + (509 / 100) * δ
   let A : ℝ :=
     81 * D ^ 2 *
       ((16 * (4 : ℝ) ^ (1 / 4 : ℝ)) *
         (δ⁻¹ * Real.exp (4 * Cγ) * C * L)) *
       (ca * (9 : ℝ) ^ δ) ^ 2 * 9 *
       (8 : ℝ) ^ (9 / 4 : ℝ) *
-      (162 : ℝ) ^ (3 / 8 + δ)
+      (162 : ℝ) ^ (3 / 8 + δ) * 81
   have hA : 0 ≤ A := by
     dsimp only [A, D]
     positivity
@@ -1050,9 +1050,9 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
     (Cγ := Cγ) (C := C) (L := L) (ε := δ) (T := T)
       (P := hughesYoungDFISmoothingScale T) (A := ca * ell ^ δ)
       (R := hughesYoungConductorRadius T) (K := hughesYoungGlobalDepth T)
-      hT1 (zero_le_one.trans hP1) hC.le hL.le hδ0.le
+      hT (zero_le_one.trans hP1) hC.le hL.le hδ0.le
       (mul_nonneg hca.le (Real.rpow_nonneg hell0 _)) hcoeffUniform
-  have hfixed : 33159 / 40000 + (509 / 100) * δ ≤
+  have hfixed : 34759 / 40000 + (509 / 100) * δ ≤
       9 / 10 + 6 * δ := by linarith
   have hδeps : 9 / 10 + 6 * δ ≤ 1 + ε := by
     have hd : δ ≤ ε / 100 := min_le_left _ _
@@ -1067,7 +1067,8 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
         (Real.log T * Real.exp (4 * Cγ) * C * L) *
         (ca * ell ^ δ) ^ 2 * ell *
         hughesYoungDFISmoothingScale T ^ (9 / 4 : ℝ) *
-        (ell ^ 2 * (hughesYoungConductorRadius T : ℝ)) ^ (3 / 8 + δ) := by
+        (ell ^ 2 * (hughesYoungConductorRadius T : ℝ)) ^ (3 / 8 + δ) *
+        ell ^ 2 := by
     have hlog0 : 0 ≤ Real.log T := Real.log_nonneg hT1
     positivity
   have hassembled :
@@ -1076,7 +1077,8 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
           (Real.log T * Real.exp (4 * Cγ) * C * L) *
           (ca * ell ^ δ) ^ 2 * ell *
           hughesYoungDFISmoothingScale T ^ (9 / 4 : ℝ) *
-          (ell ^ 2 * (hughesYoungConductorRadius T : ℝ)) ^ (3 / 8 + δ)) ≤
+          (ell ^ 2 * (hughesYoungConductorRadius T : ℝ)) ^ (3 / 8 + δ) *
+          ell ^ 2) ≤
         A * T ^ E := by
     calc
       _ ≤ (81 * T ^ (1 / 25 : ℝ)) *
@@ -1087,17 +1089,20 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
             (9 * T ^ (1 / 50 : ℝ)) *
             ((8 : ℝ) ^ (9 / 4 : ℝ) * T ^ (9 / 40000 : ℝ)) *
             ((162 : ℝ) ^ (3 / 8 + δ) *
-              T ^ ((41 / 20) * (3 / 8 + δ)))) := by gcongr
+              T ^ ((41 / 20) * (3 / 8 + δ))) *
+            (81 * T ^ (1 / 25 : ℝ))) := by gcongr
       _ = A * T ^ E := by
         dsimp only [A, E]
-        rw [show T ^ (33159 / 40000 + (509 / 100) * δ) =
+        rw [show T ^ (34759 / 40000 + (509 / 100) * δ) =
             T ^ (1 / 25 : ℝ) * T ^ (2 * δ) * T ^ δ *
               T ^ (δ / 25) * T ^ (1 / 50 : ℝ) *
               T ^ (9 / 40000 : ℝ) *
-              T ^ ((41 / 20) * (3 / 8 + δ)) by
+              T ^ ((41 / 20) * (3 / 8 + δ)) *
+              T ^ (1 / 25 : ℝ) by
           rw [← Real.rpow_add hT0, ← Real.rpow_add hT0,
             ← Real.rpow_add hT0, ← Real.rpow_add hT0,
-            ← Real.rpow_add hT0, ← Real.rpow_add hT0]
+            ← Real.rpow_add hT0, ← Real.rpow_add hT0,
+            ← Real.rpow_add hT0]
           congr 1
           ring]
         ring

@@ -1,4 +1,5 @@
 import RiemannZeta.GuthMaynard.HughesYoungParameterChoice
+import RiemannZeta.GuthMaynard.HughesYoungStaticScalarBound
 
 open Asymptotics Complex Finset Filter MeasureTheory Set Topology
 open scoped BigOperators Interval Topology
@@ -57,33 +58,6 @@ theorem norm_hughesYoungFullDyadicIntegratedTerm_le
             ((h * m : ℕ) : ℝ) ((k * n : ℕ) : ℝ)‖ := by
               gcongr
     _ = _ := by ring
-
-/-- The static Hughes--Young localization factor retains the two critical-line
-weights exactly.  Keeping these factors is essential when the DFI central term
-is summed over the mollifier variables: after gcd reduction they combine with
-the DFI factor `(ab)^(-1/2)` to give the summable weight `gcd(h,k)/(hk)`. -/
-theorem norm_hughesYoungLocalizedStaticScalar_eq_coefficients_mul_rpow
-    {T : ℝ} {h k : ℕ} (hh : 0 < h) (hk : 0 < k) :
-    ‖hughesYoungLocalizedStaticScalar T h k‖ =
-      ‖shortMobiusSquareCoeff T h‖ * ‖shortMobiusSquareCoeff T k‖ *
-        (h : ℝ) ^ (-(1 / 2 : ℝ)) * (k : ℝ) ^ (-(1 / 2 : ℝ)) *
-          (1 / Real.pi) := by
-  have hlogh :
-      ‖hughesYoungLogPower (1 / 2 : ℂ) (h : ℝ)‖ =
-        (h : ℝ) ^ (-(1 / 2 : ℝ)) := by
-    rw [hughesYoungLogPower_eq_cpow (by exact_mod_cast hh)]
-    rw [norm_cpow_eq_rpow_re_of_pos (by exact_mod_cast hh)]
-    norm_num
-  have hlogk :
-      ‖hughesYoungLogPower (1 / 2 : ℂ) (k : ℝ)‖ =
-        (k : ℝ) ^ (-(1 / 2 : ℝ)) := by
-    rw [hughesYoungLogPower_eq_cpow (by exact_mod_cast hk)]
-    rw [norm_cpow_eq_rpow_re_of_pos (by exact_mod_cast hk)]
-    norm_num
-  unfold hughesYoungLocalizedStaticScalar
-  simp only [norm_mul, hlogh, hlogk, norm_div, norm_one, norm_real,
-    Real.norm_eq_abs, abs_of_pos Real.pi_pos]
-  ring
 
 /-- Exact arithmetic simplification after Hughes--Young gcd reduction.  The
 two critical-line weights and DFI's reduced-coefficient square-root factor

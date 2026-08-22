@@ -63,8 +63,6 @@ theorem hughesYoungIntegratedPointwiseDFIDiscrepancy_eq_integral
     (hT : 1 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hX : 1 ≤ X) (hY : 1 ≤ Y)
     (hh : 0 < h) (hk : 0 < k)
-    (haX : (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X)
-    (hbY : (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y)
     (hP : 1 ≤ P) (hU : 0 < U) (hscale : U ≤ P⁻¹ * min X Y)
     (hs : ∀ r ∈ s,
       r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧ T * (|(r : ℝ)| / Y) ≤ P) :
@@ -104,7 +102,7 @@ theorem hughesYoungIntegratedPointwiseDFIDiscrepancy_eq_integral
       (by
         simpa only [a, b] using
           continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
-            hT hc hc1 hX hY hh hk haX hbY hP hU hscale hs)
+            hT hc hc1 hX hY hh hk hP hU hscale hs)
   unfold hughesYoungIntegratedPointwiseDFIDiscrepancy
     hughesYoungIntegratedPointwiseSignedCentral
   rw [sum_dfiDyadicShiftedDivisorSum_gcdReducedIntegratedBox_eq_integral
@@ -190,7 +188,7 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseDFIDiscrepancy
           hT0 hc X Y hh hk ha hb r
     · simpa only [a, b] using
         continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
-          hT hc hc1 hX hY hh hk haX hbY hP hU hscale hsCore
+          hT hc hc1 hX hY hh hk hP hU hscale hsCore
   have hGcont : Continuous G := by
     dsimp only [G]
     apply continuous_const.mul
@@ -215,7 +213,116 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseDFIDiscrepancy
     rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_pos hT0]
     exact mul_le_mul_of_nonneg_left hraw hT0.le
   rw [hughesYoungIntegratedPointwiseDFIDiscrepancy_eq_integral
-    hT hc hc1 hX hY hh hk haX hbY hP hU hscale hsCore]
+    hT hc hc1 hX hY hh hk hP hU hscale hsCore]
+  change ‖∫ u in -H..H, F u‖ ≤ ∫ u in -H..H, G u
+  have hHH : -H ≤ H := by linarith
+  calc
+    ‖∫ u in -H..H, F u‖ ≤ ∫ u in -H..H, ‖F u‖ :=
+      intervalIntegral.norm_integral_le_integral_norm hHH
+    _ ≤ ∫ u in -H..H, G u := by
+      apply intervalIntegral.integral_mono_on hHH
+        (hFcont.norm.intervalIntegrable (-H) H)
+        (hGcont.intervalIntegrable (-H) H)
+      intro u _hu
+      exact hpoint u
+
+/-- Compact Mellin integration of the coefficient-unrestricted DFI
+discrepancy.  The lattice coefficients may exceed their dyadic scales;
+the exact DFI error then absorbs the empty lattice sum against its signed
+Ramanujan main term. -/
+theorem exists_uniform_norm_hughesYoungIntegratedPointwiseDFIDiscrepancy_unrestricted
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ Cγ C : ℝ, 0 < Cγ ∧ 0 < C ∧
+      ∀ {T c H X Y P U Q : ℝ} {h k M N : ℕ} {s : Finset ℤ},
+      1 ≤ T → 0 < c → c ≤ 1 → 0 ≤ H →
+      1 ≤ X → 1 ≤ Y → 0 < h → 0 < k → 1 ≤ P → 0 < U →
+      U ≤ P⁻¹ * min X Y → 8 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      2 * X / hughesYoungReducedLeft h k ≤ M →
+      2 * Y / hughesYoungReducedRight h k ≤ N →
+      (∀ r ∈ s,
+        r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧
+        T * (|(r : ℝ)| / Y) ≤ P ∧
+        (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) ∧
+        (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y)) →
+      ‖hughesYoungIntegratedPointwiseDFIDiscrepancy
+          T c H X Y h k M N s‖ ≤
+        ∫ u in -H..H, T *
+          ((s.card : ℝ) *
+            (‖hughesYoungLocalizedStaticScalar T h k‖ *
+              hughesYoungScaledDFINormalization c u X Y
+                (hughesYoungSmallLineEnvelope Cγ T c u)
+                (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) *
+              (C * dfiTheorem1ErrorScale P X Y ε))) := by
+  obtain ⟨Cγ, hCγ, hheight⟩ :=
+    exists_norm_one_div_mul_iteratedDeriv_hughesYoungHeightTransform_le
+  obtain ⟨C, hC, hdfi⟩ :=
+    exists_uniform_norm_sum_hughesYoungReducedCleanedShiftWeight_dfiDiscrepancy_unrestricted
+      ε hε0 hε4
+  refine ⟨Cγ, C, hCγ, hC, ?_⟩
+  intro T c H X Y P U Q h k M N s hT hc hc1 hH hX hY hh hk hP hU
+    hscale hQ hUQ hQsq hM hN hs
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  let A : ℝ → ℝ := hughesYoungSmallLineEnvelope Cγ T c
+  let F : ℝ → ℂ := fun u => (T : ℂ) *
+    ((∑ r ∈ s,
+        dfiDyadicShiftedDivisorSum
+          (hughesYoungReducedCleanedShiftWeight T c u X Y h k r)
+          a b M N r) -
+      ∑ r ∈ s,
+        dfiSignedCentralSeries a b r
+          (hughesYoungReducedCleanedShiftWeight T c u X Y h k r))
+  let G : ℝ → ℝ := fun u => T *
+    ((s.card : ℝ) *
+      (‖hughesYoungLocalizedStaticScalar T h k‖ *
+        hughesYoungScaledDFINormalization c u X Y (A u) a b *
+        (C * dfiTheorem1ErrorScale P X Y ε)))
+  have hT0 : 0 < T := lt_of_lt_of_le zero_lt_one hT
+  have ha : 0 < a := hughesYoungReducedLeft_pos hh
+  have hb : 0 < b := hughesYoungReducedRight_pos hh hk
+  have hApos : ∀ u : ℝ, 0 < A u := fun u =>
+    hughesYoungSmallLineEnvelope_pos hT0 hc u
+  have hAcont : Continuous A :=
+    continuous_hughesYoungSmallLineEnvelope Cγ T c
+  have hsCore : ∀ r ∈ s,
+      r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧ T * (|(r : ℝ)| / Y) ≤ P := by
+    intro r hr
+    exact ⟨(hs r hr).1, (hs r hr).2.1, (hs r hr).2.2.1⟩
+  have hFcont : Continuous F := by
+    apply continuous_const.mul
+    apply Continuous.sub
+    · exact continuous_finsetSum s fun r _ =>
+        continuous_dfiDyadicShiftedDivisorSum_reducedCleaned_ordinate
+          hT0 hc X Y hh hk ha hb r
+    · simpa only [a, b] using
+        continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
+          hT hc hc1 hX hY hh hk hP hU hscale hsCore
+  have hGcont : Continuous G := by
+    dsimp only [G]
+    apply continuous_const.mul
+    apply continuous_const.mul
+    apply (continuous_const.mul ?_).mul continuous_const
+    exact (((hAcont.mul (Real.continuous_exp.comp
+      (continuous_const.mul (continuous_id.pow 2)))).mul_const
+        (((a : ℝ) / X) ^ ((1 / 2 : ℝ) + c))).mul_const
+          (((b : ℝ) / Y) ^ ((1 / 2 : ℝ) + c)))
+  have hpoint : ∀ u : ℝ, ‖F u‖ ≤ G u := by
+    intro u
+    have hderiv : ∀ (n : ℕ) (xi : ℝ),
+        ‖(1 / (T : ℂ)) *
+            iteratedDeriv n (hughesYoungHeightTransform T c u) xi‖ ≤
+          (15 / 4 : ℝ) * ((4 * T) ^ n * A u) := by
+      intro n xi
+      simpa only [A, hughesYoungSmallLineEnvelope] using
+        hheight T u c hT hc hc1 n xi
+    have hraw := hdfi hT hc hc1 hX hY hh hk hP (hApos u) hderiv
+      hscale hQ hUQ hQsq M N hM hN hs
+    dsimp only [F, G]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_pos hT0]
+    exact mul_le_mul_of_nonneg_left hraw hT0.le
+  rw [hughesYoungIntegratedPointwiseDFIDiscrepancy_eq_integral
+    hT hc hc1 hX hY hh hk hP hU hscale hsCore]
   change ‖∫ u in -H..H, F u‖ ≤ ∫ u in -H..H, G u
   have hHH : -H ≤ H := by linarith
   calc
@@ -239,8 +346,6 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseSignedCentral :
       1 ≤ T → 0 < c → c ≤ 1 → 0 ≤ H →
       1 ≤ X → 1 ≤ Y → 0 < h → 0 < k → 1 ≤ P → 0 < U →
       U ≤ P⁻¹ * min X Y →
-      (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X →
-      (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y →
       (∀ r ∈ s,
         r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧ T * (|(r : ℝ)| / Y) ≤ P) →
       ‖hughesYoungIntegratedPointwiseSignedCentral
@@ -263,7 +368,7 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseSignedCentral :
     exists_uniform_norm_hughesYoungReducedCleanedShiftWeight_signedCentralSeries
   refine ⟨Cγ, C, hCγ, hC, ?_⟩
   intro T c H X Y P U h k s hT hc hc1 hH hX hY hh hk hP hU hscale
-    haX hbY hs
+    hs
   let a : ℕ := hughesYoungReducedLeft h k
   let b : ℕ := hughesYoungReducedRight h k
   let A : ℝ → ℝ := hughesYoungSmallLineEnvelope Cγ T c
@@ -287,7 +392,7 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseSignedCentral :
     exact continuous_const.mul (by
       simpa only [a, b] using
         continuous_sum_dfiSignedCentralSeries_reducedCleaned_ordinate
-          hT hc hc1 hX hY hh hk haX hbY hP hU hscale hs)
+          hT hc hc1 hX hY hh hk hP hU hscale hs)
   have hGcont : Continuous G := by
     dsimp only [G]
     apply continuous_const.mul
@@ -327,7 +432,7 @@ theorem exists_uniform_norm_hughesYoungIntegratedPointwiseSignedCentral :
           obtain ⟨hr0, hrY, hrP⟩ := hs r hr
           simpa only [a, b] using
             hcentral hT hc hc1 hX hY hh hk hr0 hrY hP hrP
-              (hApos u) hderiv hU hscale haX hbY
+              (hApos u) hderiv hU hscale
     dsimp only [F, G]
     rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_pos hT0]
     exact mul_le_mul_of_nonneg_left hraw hT0.le
@@ -354,8 +459,6 @@ theorem exists_uniform_norm_hughesYoungSmallContourPointwiseSignedCentral :
       Real.exp 1 ≤ T → 0 ≤ H →
       1 ≤ X → 1 ≤ Y → 0 < h → 0 < k → 1 ≤ P → 0 < U →
       U ≤ P⁻¹ * min X Y →
-      (hughesYoungReducedLeft h k : ℝ) ≤ 2 * X →
-      (hughesYoungReducedRight h k : ℝ) ≤ 2 * Y →
       (∀ r ∈ s,
         r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧ T * (|(r : ℝ)| / Y) ≤ P) →
       ‖hughesYoungIntegratedPointwiseSignedCentral
@@ -378,12 +481,12 @@ theorem exists_uniform_norm_hughesYoungSmallContourPointwiseSignedCentral :
   obtain ⟨L, hL, hfactor⟩ :=
     exists_uniform_intervalIntegral_hughesYoungIntegratedOrdinateFactor_le hCγ
   refine ⟨Cγ, C, L, hCγ, hC, hL, ?_⟩
-  intro T H X Y P U h k s hT hH hX hY hh hk hP hU hscale haX hbY hs
+  intro T H X Y P U h k s hT hH hX hY hh hk hP hU hscale hs
   obtain ⟨hc, hc1, hcinv⟩ := hughesYoungSmallContour_spec hT
   have hT1 : 1 ≤ T :=
     (Real.one_le_exp (by norm_num : (0 : ℝ) ≤ 1)).trans hT
   have hfirst := hsource hT1 hc hc1 hH hX hY hh hk hP hU hscale
-    haX hbY hs
+    hs
   let a : ℕ := hughesYoungReducedLeft h k
   let b : ℕ := hughesYoungReducedRight h k
   let E : ℝ := ∑ r ∈ s,
@@ -535,6 +638,120 @@ theorem exists_uniform_norm_hughesYoungSmallContourPointwiseDFIDiscrepancy
     (Real.one_le_exp (by norm_num : (0 : ℝ) ≤ 1)).trans hT
   have hfirst := hsource hT1 hc hc1 hH hX hY hh hk hP hU hscale hQ
     hUQ hQsq hM hN haX hbY hs
+  let a : ℕ := hughesYoungReducedLeft h k
+  let b : ℕ := hughesYoungReducedRight h k
+  let E : ℝ := (s.card : ℝ) *
+    (‖hughesYoungLocalizedStaticScalar T h k‖ *
+      (C * dfiTheorem1ErrorScale P X Y ε))
+  let D : ℝ := T * (Real.log T * Real.exp (4 * Cγ) *
+    ((a : ℝ) / X) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T) *
+    ((b : ℝ) / Y) ^ ((1 / 2 : ℝ) + hughesYoungSmallContour T)) * E
+  have hE : 0 ≤ E := by
+    dsimp only [E]
+    unfold dfiTheorem1ErrorScale
+    positivity
+  have hD : 0 ≤ D := by
+    dsimp only [D]
+    have ha : 0 < a := hughesYoungReducedLeft_pos hh
+    have hb : 0 < b := hughesYoungReducedRight_pos hh hk
+    have haR : 0 < (a : ℝ) := by exact_mod_cast ha
+    have hbR : 0 < (b : ℝ) := by exact_mod_cast hb
+    have hX0 : 0 < X := zero_lt_one.trans_le hX
+    have hY0 : 0 < Y := zero_lt_one.trans_le hY
+    have hlog : 0 ≤ Real.log T := Real.log_nonneg hT1
+    positivity
+  have heq :
+      (∫ u in -H..H, T *
+        ((s.card : ℝ) *
+          (‖hughesYoungLocalizedStaticScalar T h k‖ *
+            hughesYoungScaledDFINormalization
+              (hughesYoungSmallContour T) u X Y
+              (hughesYoungSmallLineEnvelope Cγ T
+                (hughesYoungSmallContour T) u) a b *
+            (C * dfiTheorem1ErrorScale P X Y ε)))) =
+        D * (∫ u in -H..H,
+          hughesYoungIntegratedOrdinateFactor Cγ
+            (hughesYoungSmallContour T) u) := by
+    calc
+      (∫ u in -H..H, T *
+        ((s.card : ℝ) *
+          (‖hughesYoungLocalizedStaticScalar T h k‖ *
+            hughesYoungScaledDFINormalization
+              (hughesYoungSmallContour T) u X Y
+              (hughesYoungSmallLineEnvelope Cγ T
+                (hughesYoungSmallContour T) u) a b *
+            (C * dfiTheorem1ErrorScale P X Y ε)))) =
+          ∫ u in -H..H, D *
+            hughesYoungIntegratedOrdinateFactor Cγ
+              (hughesYoungSmallContour T) u := by
+        apply intervalIntegral.integral_congr
+        intro u _hu
+        simp_rw [hughesYoungScaledDFINormalization_smallLine_eq]
+        dsimp only [D, E]
+        rw [rpow_smallContour_four_mul_eq Cγ hT, hcinv]
+        ring
+      _ = D * (∫ u in -H..H,
+          hughesYoungIntegratedOrdinateFactor Cγ
+            (hughesYoungSmallContour T) u) := by
+        rw [intervalIntegral.integral_const_mul]
+  calc
+    ‖hughesYoungIntegratedPointwiseDFIDiscrepancy
+        T (hughesYoungSmallContour T) H X Y h k M N s‖ ≤
+        ∫ u in -H..H, T *
+          ((s.card : ℝ) *
+            (‖hughesYoungLocalizedStaticScalar T h k‖ *
+              hughesYoungScaledDFINormalization
+                (hughesYoungSmallContour T) u X Y
+                (hughesYoungSmallLineEnvelope Cγ T
+                  (hughesYoungSmallContour T) u) a b *
+              (C * dfiTheorem1ErrorScale P X Y ε))) := by
+          simpa only [a, b] using hfirst
+    _ = D * (∫ u in -H..H,
+          hughesYoungIntegratedOrdinateFactor Cγ
+            (hughesYoungSmallContour T) u) := heq
+    _ ≤ D * L := mul_le_mul_of_nonneg_left (hfactor hc hc1 hH) hD
+    _ = _ := by rfl
+
+/-- Small-contour specialization of the coefficient-unrestricted
+integrated DFI discrepancy. -/
+theorem exists_uniform_norm_hughesYoungSmallContourPointwiseDFIDiscrepancy_unrestricted
+    (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
+    ∃ Cγ C L : ℝ, 0 < Cγ ∧ 0 < C ∧ 0 < L ∧
+      ∀ {T H X Y P U Q : ℝ} {h k M N : ℕ} {s : Finset ℤ},
+      Real.exp 1 ≤ T → 0 ≤ H →
+      1 ≤ X → 1 ≤ Y → 0 < h → 0 < k → 1 ≤ P → 0 < U →
+      U ≤ P⁻¹ * min X Y → 8 ≤ Q → U = Q ^ 2 →
+      Q ^ 2 = P⁻¹ * (X + Y)⁻¹ * (X * Y) →
+      2 * X / hughesYoungReducedLeft h k ≤ M →
+      2 * Y / hughesYoungReducedRight h k ≤ N →
+      (∀ r ∈ s,
+        r ≠ 0 ∧ |(r : ℝ)| ≤ Y / 2 ∧
+        T * (|(r : ℝ)| / Y) ≤ P ∧
+        (0 ≤ r → (r.natAbs : ℝ) ≤ 2 * X) ∧
+        (r < 0 → (r.natAbs : ℝ) ≤ 2 * Y)) →
+      ‖hughesYoungIntegratedPointwiseDFIDiscrepancy
+          T (hughesYoungSmallContour T) H X Y h k M N s‖ ≤
+        (T * (Real.log T * Real.exp (4 * Cγ) *
+          ((hughesYoungReducedLeft h k : ℝ) / X) ^
+            ((1 / 2 : ℝ) + hughesYoungSmallContour T) *
+          ((hughesYoungReducedRight h k : ℝ) / Y) ^
+            ((1 / 2 : ℝ) + hughesYoungSmallContour T)) *
+          ((s.card : ℝ) *
+            (‖hughesYoungLocalizedStaticScalar T h k‖ *
+              (C * dfiTheorem1ErrorScale P X Y ε)))) * L := by
+  obtain ⟨Cγ, C, hCγ, hC, hsource⟩ :=
+    exists_uniform_norm_hughesYoungIntegratedPointwiseDFIDiscrepancy_unrestricted
+      ε hε0 hε4
+  obtain ⟨L, hL, hfactor⟩ :=
+    exists_uniform_intervalIntegral_hughesYoungIntegratedOrdinateFactor_le hCγ
+  refine ⟨Cγ, C, L, hCγ, hC, hL, ?_⟩
+  intro T H X Y P U Q h k M N s hT hH hX hY hh hk hP hU hscale hQ
+    hUQ hQsq hM hN hs
+  obtain ⟨hc, hc1, hcinv⟩ := hughesYoungSmallContour_spec hT
+  have hT1 : 1 ≤ T :=
+    (Real.one_le_exp (by norm_num : (0 : ℝ) ≤ 1)).trans hT
+  have hfirst := hsource hT1 hc hc1 hH hX hY hh hk hP hU hscale hQ
+    hUQ hQsq hM hN hs
   let a : ℕ := hughesYoungReducedLeft h k
   let b : ℕ := hughesYoungReducedRight h k
   let E : ℝ := (s.card : ℝ) *
