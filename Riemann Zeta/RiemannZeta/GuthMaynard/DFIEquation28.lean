@@ -402,7 +402,7 @@ theorem iteratedDeriv_dfiDeltaKernel
   simpa [fixed, R] using hsum
 
 /-- Uniform positive-order derivative bound for the DFI delta kernel.  The
-constant depends only on the derivative order and the normalized cutoff,
+The constant depends only on the derivative order and the normalized cutoff,
 while the complete `q`- and `Q`-dependence is explicit. -/
 theorem norm_iteratedDeriv_dfiDeltaKernel_le
     {Q : ℝ} (w : DFIDeltaWeight Q) (k : ℕ) (hk : 0 < k) :
@@ -833,7 +833,7 @@ theorem exists_uniform_norm_dfiMixedDeriv_affine_localized_all
 
 /-- Profile-explicit affine equation-(21) bound.  Unlike
 `exists_uniform_norm_dfiMixedDeriv_affine_localized_all`, every constituent
-constant is a finite expression in the profiles fixed before the physical
+The constant is a finite expression in the profiles fixed before the physical
 scales. -/
 theorem exists_uniform_norm_dfiMixedDeriv_affine_localized_all_of_profiles
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U : ℝ}

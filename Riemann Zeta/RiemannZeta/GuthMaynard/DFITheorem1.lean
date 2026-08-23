@@ -2025,7 +2025,7 @@ theorem dfiEquation29_xRetained_loss_bundle_le
 /-- The retained `x`-dual part of equation (29), summed over all delta
 moduli, already has DFI Theorem 1 strength in the nonempty source range.
 This theorem consumes the actual profile-derived retained estimate; its
-constant is selected before `a`, `b`, and the shift. -/
+The constant is selected before `a`, `b`, and the shift. -/
 theorem exists_sum_dfiEquation29_xSingleRetained_le_theorem1ErrorScale
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ} {P X Y U Q ε : ℝ}
     {Cf : ℕ → ℕ → ℝ} {Cφ Cw : ℕ → ℝ}
@@ -2191,7 +2191,7 @@ theorem exists_sum_dfiEquation29_xSingleRetained_le_theorem1ErrorScale
 
 /-- Uniform-in-scale DFI Theorem 1 estimate for the retained `x`-dual
 branch.  Once the three derivative profiles and `ε` are fixed, the witness
-constant is independent of every dyadic scale and arithmetic parameter. -/
+The constant is independent of every dyadic scale and arithmetic parameter. -/
 theorem exists_uniform_sum_dfiEquation29_xSingleRetained_le_theorem1ErrorScale
     (Cf : ℕ → ℕ → ℝ) (Cφ Cw : ℕ → ℝ)
     (ε : ℝ) (hε0 : 0 < ε) (hε2 : ε < 2) :
@@ -4672,7 +4672,7 @@ theorem exists_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1Erro
 
 set_option maxHeartbeats 4000000 in
 /-- Scale-uniform dyadic positive-shift DFI Theorem 1.  The witness
-constant is chosen from the fixed source and cutoff derivative profiles
+The constant is chosen from the fixed source and cutoff derivative profiles
 before any dyadic scale, source function, delta weight, or arithmetic
 parameter is introduced. -/
 theorem exists_uniform_norm_dfiDyadicShiftedDivisorSum_sub_centralSeries_le_theorem1ErrorScale

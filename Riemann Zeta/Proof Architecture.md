@@ -45,10 +45,10 @@ flowchart TD
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>DONE<br/>strengthened completed-xi AFE,<br/>paired Gamma ratio, integrable envelope<br/>and concrete weighted hm=kn bound"]
-    QD["#18 Quadratic-divisor off-diagonal<br/>OPEN - EXACT CONTOUR LAYER DONE<br/>finite shift/Fourier/Kloosterman L2 DONE;<br/>periodic Estermann continuation, double-pole<br/>residue and Mellin-Barnes Voronoi theorem DONE;<br/>source-weight tail discharge, delta localization,<br/>dual-transform estimates and DFI error OPEN"]
+    QD["#18 Quadratic-divisor off-diagonal<br/>DONE<br/>DFI equations (2) and (9)-(30),<br/>signed central series and optimized<br/>Theorem 1 error bound kernel-checked"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
-    TM["#18 Generic short-polynomial<br/>twisted fourth moment and native<br/>specialization<br/>OPEN"]
-    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>three native inputs remain open"]
+    TM["#18 Hughes-Young twisted fourth moment<br/>DONE<br/>DFI equation-(80) consumer,<br/>finite off-diagonal epsilon bound and<br/>twistedZetaFourthMoment_native"]
+    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>two native inputs remain open:<br/>Huxley and GM large values"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
@@ -74,8 +74,9 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Dependency and integrity layer<br/>DONE<br/>1296/1296 dependencies,<br/>zero warnings/axioms"]
-    QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density<br/>outputs missing; runner FAIL / 1"]
+    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>5694/5694 dependencies,<br/>zero warnings/project axioms in scope"]
+    VC["#19 Retained-file evaluation coverage<br/>OPEN<br/>47 top-level probes and 2 subordinate<br/>modules lie outside runner elaboration"]
+    QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density outputs<br/>plus retained-file coverage missing"]
 
     MZ --> ZB
     MZ --> CF
@@ -251,6 +252,7 @@ flowchart TD
 
     DR --> QA
     IG --> QA
+    VC --> QA
     GZD --> QA
     CZD --> QA
     ZB --> QA
@@ -262,7 +264,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,MS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
     class CT,TR,CB conditional;
-    class FR,ZD,QD,TM,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,QA open;
+    class FR,ZD,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

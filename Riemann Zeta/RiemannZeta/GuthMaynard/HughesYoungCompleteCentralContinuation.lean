@@ -228,7 +228,7 @@ theorem differentiableAt_hughesYoungCompleteNegativeCentralContinuation
 set_option maxHeartbeats 2000000 in
 /-- Uniform Gaussian horizontal control of the complete positive
 continuation on the pole-free rectangle `15/16 ≤ Re W ≤ 1`.  The
-constant may depend on the fixed arithmetic data, while the height
+The constant may depend on the fixed arithmetic data, while the height
 dependence is explicit. -/
 theorem exists_norm_hughesYoungCompletePositiveCentralContinuation_horizontal_le
     (T t : ℝ) (h k : ℕ) {a b : ℕ} (ha : 0 < a) (hb : 0 < b) :

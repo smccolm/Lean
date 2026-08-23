@@ -1834,7 +1834,7 @@ theorem dfiEquation30_physical_log_bound
       _ = K * min X Y * Real.log Q := by simp [K]; ring)
 
 /-- Scale-family-uniform logarithmic form of DFI equation (30).  Every
-constant is an explicit function of the three fixed derivative profiles. -/
+The constant is an explicit function of the three fixed derivative profiles. -/
 theorem dfiEquation30_physical_log_bound_of_profiles
     {Q P X Y U : ℝ} {w : DFIDeltaWeight Q}
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -3765,7 +3765,7 @@ theorem dfiEquation30
     _ = K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q := by ring
 
 /-- Source-uniform quantifier order for DFI equation (30).  The physical
-constant is chosen before the shift and both divisor dilations. -/
+The constant is chosen before the shift and both divisor dilations. -/
 theorem exists_dfiEquation30_uniform_all
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -3793,7 +3793,7 @@ theorem exists_dfiEquation30_uniform_all
     _ = K * ((a : ℝ) * b)⁻¹ * min X Y * Real.log Q := by ring
 
 /-- Profile-explicit source-uniform form of DFI equation (30), with the
-constant chosen before the physical scales, shift, divisor dilations, and
+The constant chosen before the physical scales, shift, divisor dilations, and
 delta modulus. -/
 theorem dfiEquation30_uniform_all_of_profiles
     {Q P X Y U : ℝ} {w : DFIDeltaWeight Q}

@@ -65,7 +65,7 @@ theorem integrableOn_dfiBesselK0_integrand {x : ℝ} (hx : 0 < x) :
     exact dfiBesselK0_integrand_le_gaussian hx.le t
 
 /-- DFI's source-strength trivial bound `K₀(x) ≪ x⁻¹ᐟ²`, with an explicit
-constant. -/
+The constant. -/
 theorem abs_dfiBesselK0_le {x : ℝ} (hx : 0 < x) :
     |dfiBesselK0 x| ≤ Real.sqrt (Real.pi / (x / 2)) / 2 := by
   have hInt := integrableOn_dfiBesselK0_integrand hx

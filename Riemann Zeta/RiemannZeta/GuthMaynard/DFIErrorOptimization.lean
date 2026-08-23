@@ -5136,7 +5136,7 @@ theorem exists_sum_dfiEquation29_xSingleRetained_optimized_le
     _ = _ := by rfl
 
 /-- Uniform-in-scale form of the retained `x`-dual modulus sum.  The
-constant depends only on the three fixed derivative profiles and the two
+The constant depends only on the three fixed derivative profiles and the two
 epsilon exponents; in particular it is chosen before the test function,
 dyadic scales, delta-symbol parameter, arithmetic coefficients, and shift. -/
 theorem exists_uniform_sum_dfiEquation29_xSingleRetained_optimized_le

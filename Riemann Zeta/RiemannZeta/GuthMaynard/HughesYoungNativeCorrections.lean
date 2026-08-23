@@ -1594,7 +1594,7 @@ theorem hughesYoungConductorActiveNonLargeDFIOffDiagonal_epsilonPowerBound :
 /-! ## The signed-central equation-(65) tail -/
 
 /-- The single universal convergent series used to make the modulus-profile
-constant uniform in every dyadic and mollifier parameter. -/
+The constant uniform in every dyadic and mollifier parameter. -/
 noncomputable def hughesYoungCentralTailSeriesConstant : ℝ :=
   ∑' q : ℕ, ((q : ℝ) ^ 2)⁻¹ * (q : ℝ) ^ (1 / 2 : ℝ)
 

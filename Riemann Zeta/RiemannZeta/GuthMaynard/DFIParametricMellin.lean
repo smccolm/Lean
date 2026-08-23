@@ -321,7 +321,7 @@ theorem abs_pow_mul_norm_fourier_complex_le
 /-- Quantitative Fourier decay for one compactly supported function.  Both
 derivative bounds are explicit, so this lemma can be used inside an
 arithmetic family without introducing a family-dependent compactness
-constant. -/
+The constant. -/
 theorem one_add_abs_fourier_decay_of_support_of_bounds
     {f : ℝ → ℂ} {C D K₀ K₆ : ℝ}
     (hf : ContDiff ℝ ∞ f) (hCD : C ≤ D)
@@ -1363,7 +1363,7 @@ theorem dfiMellinLogDerivativeIterate_six_threeQuarter
   norm_num
 
 /-- Explicit sixth-order kernel bound from physical Euler-basis bounds.  The
-constant `512` dominates the sum of the seven shifted-Stirling
+The constant `512` dominates the sum of the seven shifted-Stirling
 coefficients, while `(1+R)^6` simultaneously dominates every `R^j` for
 `j ≤ 6`. -/
 theorem norm_dfiMellinLogDerivativeIterate_six_half_le
@@ -2147,7 +2147,7 @@ theorem uniform_one_add_abs_fourier_decay_of_rectangular_support_of_bounds
         nlinarith
 
 /-- A smooth family supported in one fixed rectangle has a Fourier decay
-constant uniform in the retained parameter.  This is the uniformity needed
+The constant uniform in the retained parameter.  This is the uniformity needed
 before the two Voronoi transforms in DFI (24) may be separated. -/
 theorem exists_uniform_fourier_decay_of_rectangular_support
     {F : ℝ → ℝ → ℂ} {A B C D : ℝ}

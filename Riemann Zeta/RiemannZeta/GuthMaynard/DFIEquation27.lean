@@ -404,7 +404,7 @@ theorem dfiEquation18_complex_family_integral
       rw [MeasureTheory.integral_const_mul]
 
 /-- Family-integrated complex equation (18) with one profile-controlled
-constant fixed before the physical scale. -/
+The constant fixed before the physical scale. -/
 theorem dfiEquation18_complex_family_integral_of_profiles
     {Q : ℝ} {w : DFIDeltaWeight Q} {D Eprofile : ℕ → ℝ}
     (hD : DFIDeltaWeightProfile w D)
@@ -809,7 +809,7 @@ theorem exists_norm_dfiEquation27C_source_le
         gcongr
 
 /-- Profile-explicit order-zero equation-(27) kernel estimate.  The source
-constant is now a fixed expression in the equation-(2) and equation-(21)
+The constant is now a fixed expression in the equation-(2) and equation-(21)
 profiles rather than an existential selected after the scales. -/
 theorem norm_dfiEquation27C_source_le_of_profiles
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -2787,7 +2787,7 @@ theorem dfiEquation27_source_slice_approximation
       hφ a b qx qy h x) hj
 
 /-- Uniform source-facing form of the equation-(27) slice estimate.  The
-constant is chosen before the outer variable `x`, which is essential for the
+The constant is chosen before the outer variable `x`, which is essential for the
 subsequent integration in DFI section 6. -/
 theorem dfiEquation27_source_slice_approximation_uniform
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)

@@ -1692,7 +1692,7 @@ theorem exists_uniform_norm_hughesYoungCleanedShiftWeight_full_dfi
 near shifts in one literal Hughes--Young box.  The shift-dependent divisor
 and logarithmic factors are retained inside the finite sum, ready for the
 subsequent elementary shift summation rather than absorbed into an implicit
-constant. -/
+The constant. -/
 theorem exists_uniform_norm_sum_hughesYoungCleanedShiftWeight_full_dfi
     (ε : ℝ) (hε0 : 0 < ε) (hε4 : ε < 4) :
     ∃ C : ℝ, 0 < C ∧

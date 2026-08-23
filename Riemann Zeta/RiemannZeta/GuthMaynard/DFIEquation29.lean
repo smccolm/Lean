@@ -1321,7 +1321,7 @@ theorem exists_dfiEquation29Multiplier_threeQuarter_line_uniform_bound
 /-- Uniform-in-the-modulus version of the shifted-strip multiplier bound.
 The factor `q^(2+2k)` is the exact worst modulus power on the strip
 `-1/2-k ≤ Re z ≤ -1/2`; unlike the earlier fixed-`q` estimate, its
-constant is independent of `q`. -/
+The constant is independent of `q`. -/
 theorem exists_dfiEquation29Multiplier_explicit_modulus_bound
     (k : ℕ) (branch : DFIVoronoiDualBranch) :
     ∃ C : ℝ, 0 < C ∧ ∀ (q : ℕ) (_hq : NeZero q) (σ : ℝ),
@@ -2575,7 +2575,7 @@ theorem exists_dfiEquation29InitialTransform_retained_constant
       ring
 
 /-- Right-contour estimate with an explicit Mellin-decay input.  The output
-constant depends only on the fixed Voronoi branch and universal vertical
+The constant depends only on the fixed Voronoi branch and universal vertical
 integral, while all source dependence remains visible in `B`. -/
 theorem DFIVoronoiTestFunction.exists_dfiEquation29InitialTransform_retained_of_mellin_bound
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
@@ -3193,7 +3193,7 @@ theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_threeQuarter_bou
         (n : ℝ) ^ (ε - 1 / 4) := by ring
 
 /-- DFI (29) after inserting the native divisor-function estimate.  The
-constant remains uniform in the modulus and positive dual frequency. -/
+The constant remains uniform in the modulus and positive dual frequency. -/
 theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_decay
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
     (S : ℝ) (hS : 0 < S) (k : ℕ) (branch : DFIVoronoiDualBranch) :

@@ -98,7 +98,7 @@ theorem exists_uniform_norm_hughesYoungCentralHeightBase_le_on_ordinateInterval
     simpa only [B] using
       (mul_le_mul hstatic hheight (norm_nonneg _) hscale)
 
-/-- The complete positive equation-(27) height summands admit one summable
+/-- The complete positive equation-(27) height summands have one summable
 modulus majorant uniformly on a compact Mellin-ordinate interval. -/
 theorem exists_uniform_ordinate_norm_hughesYoungCentralSeriesHeightTerm_le
     {T : ℝ} (hT : 0 < T) {c : ℝ} (hc : 0 < c) (H : ℝ)

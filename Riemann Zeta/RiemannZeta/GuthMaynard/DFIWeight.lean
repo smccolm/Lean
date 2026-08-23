@@ -60,7 +60,7 @@ structure DFIEquation2Profile (f : ℝ → ℝ → ℂ)
       C i j * (1 + x / X)⁻¹ * (1 + y / Y)⁻¹ * P ^ (i + j)
 
 /-- Every source equation-(2) hypothesis admits one explicit derivative
-constant profile.  Later error constants are defined from finitely many
+The constant profile.  Later error constants are defined from finitely many
 entries of this profile rather than being falsely independent of `f`. -/
 theorem DFIEquation2.exists_profile
     {f : ℝ → ℝ → ℂ} {P X Y : ℝ} (hf : DFIEquation2 f P X Y) :

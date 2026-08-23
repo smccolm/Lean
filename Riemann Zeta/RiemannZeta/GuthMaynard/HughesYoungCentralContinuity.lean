@@ -505,7 +505,7 @@ theorem continuous_dfiEquation27CentralSummand_swappedReducedCleaned_ordinate
 /-- A source-uniform Weierstrass majorant for one equation-(27) summand.
 The `q⁻²` arithmetic decay is combined with the `q^(1/2)` cost of the two
 logarithms.  Unlike the existential convergence theorem, the displayed
-constant is fixed by the DFI derivative profiles and is therefore usable
+The constant is fixed by the DFI derivative profiles and is therefore usable
 uniformly in an external Mellin parameter. -/
 theorem norm_dfiEquation27CentralSummand_le_profile_pseries
     {P X Y U : ℝ} {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}

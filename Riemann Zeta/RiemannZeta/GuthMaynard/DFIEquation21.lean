@@ -793,7 +793,7 @@ theorem dfiEquation21_uniform_in_shift
         ring
 
 /-- Scale-uniform equation-(21) estimate with every implicit derivative
-constant replaced by a finite, explicit source profile aggregate.  This is
+The constant replaced by a finite, explicit source profile aggregate.  This is
 the form needed by the published DFI error theorem: its displayed constant
 does not arise from an existential chosen after `P`, `X`, `Y`, or `U`. -/
 theorem dfiEquation21_of_profiles_uniform_in_shift
