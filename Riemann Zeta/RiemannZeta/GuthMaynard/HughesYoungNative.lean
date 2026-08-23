@@ -129,6 +129,71 @@ theorem hughesYoungConductor_cover {T : ℝ} (hT : 2 ≤ T)
     ((oneHundredSixtyTwo_mul_rpow_seven_le_rpow_thirty hT).trans
       (rpow_thirty_le_globalDepth hT1))
 
+/-- The deliberately generous global dyadic depth covers one additional
+`sqrt 2` step beyond the conductor product.  This is the exact slack needed
+to convert product support of the lower-boundary-removed complement into
+separate upper bounds for its two continuous variables. -/
+theorem hughesYoungConductor_cover_with_ratio {T : ℝ} (hT : 2 ≤ T)
+    {h k : ℕ}
+    (hh : h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2))
+    (hk : k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2)) :
+    hughesYoungDyadicRatio *
+        ((((hughesYoungReducedLeft h k) *
+          (hughesYoungReducedRight h k) * hughesYoungConductorRadius T : ℕ) : ℝ)) ≤
+      hughesYoungDyadicRatio ^ (hughesYoungGlobalDepth T + 1) := by
+  have hT1 : 1 ≤ T := by linarith
+  have hcut := detectorCutoff_le_three_mul T hT1
+  have hrr := hughesYoungConductorRadius_le_two_mul_cube hT1
+  have hh' : (h : ℝ) ≤ (3 * T) ^ 2 := by
+    have hhcast : (h : ℝ) ≤ ((detectorCutoff T : ℝ) ^ 2) := by
+      exact_mod_cast (Finset.mem_Icc.mp hh).2
+    exact hhcast.trans (pow_le_pow_left₀ (by positivity) hcut 2)
+  have hk' : (k : ℝ) ≤ (3 * T) ^ 2 := by
+    have hkcast : (k : ℝ) ≤ ((detectorCutoff T : ℝ) ^ 2) := by
+      exact_mod_cast (Finset.mem_Icc.mp hk).2
+    exact hkcast.trans (pow_le_pow_left₀ (by positivity) hcut 2)
+  have ha : (hughesYoungReducedLeft h k : ℝ) ≤ h := by
+    exact_mod_cast hughesYoungReducedLeft_le h k
+  have hb : (hughesYoungReducedRight h k : ℝ) ≤ k := by
+    exact_mod_cast hughesYoungReducedRight_le h k
+  have hraw :
+      ((hughesYoungReducedLeft h k : ℝ) *
+        (hughesYoungReducedRight h k : ℝ) *
+          (hughesYoungConductorRadius T : ℝ)) ≤
+            162 * T ^ (7 : ℝ) := by
+    calc
+      _ ≤ ((3 * T) ^ 2) * ((3 * T) ^ 2) *
+          (2 * T ^ (3 : ℝ)) := by
+        gcongr
+        · exact ha.trans hh'
+        · exact hb.trans hk'
+      _ = 162 * T ^ (7 : ℝ) := by
+        simp only [Real.rpow_ofNat]
+        ring
+  have hratio : hughesYoungDyadicRatio ≤ 2 :=
+    hughesYoungDyadicRatio_lt_two.le
+  have hscaled :
+      hughesYoungDyadicRatio *
+          ((hughesYoungReducedLeft h k : ℝ) *
+            (hughesYoungReducedRight h k : ℝ) *
+              (hughesYoungConductorRadius T : ℝ)) ≤
+        324 * T ^ (7 : ℝ) := by
+    calc
+      _ ≤ 2 * (162 * T ^ (7 : ℝ)) := by gcongr
+      _ = 324 * T ^ (7 : ℝ) := by ring
+  have hpow : (324 : ℝ) * T ^ (7 : ℝ) ≤ T ^ (30 : ℝ) := by
+    have hcoef : (324 : ℝ) ≤ T ^ (23 : ℝ) := by
+      calc
+        (324 : ℝ) ≤ 2 ^ (23 : ℕ) := by norm_num
+        _ ≤ T ^ (23 : ℕ) := by gcongr
+        _ = T ^ (23 : ℝ) := by simp
+    rw [show T ^ (30 : ℝ) = T ^ (23 : ℝ) * T ^ (7 : ℝ) by
+      rw [← Real.rpow_add (by positivity)]
+      norm_num]
+    gcongr
+  simp only [Nat.cast_mul]
+  exact hscaled.trans (hpow.trans (rpow_thirty_le_globalDepth hT1))
+
 set_option maxRecDepth 100000 in
 /-- At order `1000`, the part of the opened zeta product beyond the
 conductor-scale radius is power-saving.  This is the quantitative replacement

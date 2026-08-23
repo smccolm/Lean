@@ -1605,8 +1605,8 @@ theorem hughesYoungCentralTailSeriesConstant_nonneg :
 
 /-- The logarithmic modulus profile has an explicit uniform quadratic
 majorant times one source-independent convergent series. -/
-theorem tsum_hughesYoungCentralModulusProfile_le
-    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y) (a b : ℕ) :
+theorem tsum_hughesYoungCentralModulusProfile_le_of_half
+    {X Y : ℝ} (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y) (a b : ℕ) :
     ∑' q : ℕ, hughesYoungCentralModulusProfile X Y a b q ≤
       (1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
           2 * |Real.eulerMascheroniConstant| + Real.log (2 * Y) +
@@ -1668,6 +1668,16 @@ theorem tsum_hughesYoungCentralModulusProfile_le
     _ = _ := by
       simp only [m, tsum_mul_left, hughesYoungCentralTailSeriesConstant, A]
 
+theorem tsum_hughesYoungCentralModulusProfile_le
+    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y) (a b : ℕ) :
+    ∑' q : ℕ, hughesYoungCentralModulusProfile X Y a b q ≤
+      (1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
+          2 * |Real.eulerMascheroniConstant| + Real.log (2 * Y) +
+          |Real.log (b : ℝ)| + 2 * |Real.eulerMascheroniConstant| + 8) ^ 2 *
+        hughesYoungCentralTailSeriesConstant := by
+  exact tsum_hughesYoungCentralModulusProfile_le_of_half
+    (by linarith) (by linarith) a b
+
 /-- A deliberately coarse uniform polynomial bound for the reduced static
 scale.  It retains the genuine mollifier coefficients and derives every
 ratio estimate from the source dyadic lower bounds. -/
@@ -1727,12 +1737,84 @@ theorem hughesYoungReducedStaticScale_le_power_six
       simp only [Real.rpow_two]
       ring
 
+/-- The corresponding bound at the isolated lower dyadic scale.  Allowing
+`X` or `Y` down to `1/2` costs only the explicit factor `16`. -/
+theorem hughesYoungReducedStaticScale_le_sixteen_mul_power_six_of_half
+    {T c X Y ell : ℝ} {h k : ℕ}
+    (hc0 : 0 ≤ c) (hc1 : c ≤ 1)
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
+    (hell1 : 1 ≤ ell) (hh : 0 < h) (hk : 0 < k)
+    (hhle : (h : ℝ) ≤ ell) (hkle : (k : ℝ) ≤ ell) :
+    hughesYoungReducedStaticScale T c X Y h k ≤
+      16 * ell ^ (6 : ℕ) := by
+  have hX0 : 0 < X := by linarith
+  have hY0 : 0 < Y := by linarith
+  have ha : (hughesYoungReducedLeft h k : ℝ) ≤ ell := by
+    exact (by exact_mod_cast hughesYoungReducedLeft_le h k :
+      (hughesYoungReducedLeft h k : ℝ) ≤ h).trans hhle
+  have hb : (hughesYoungReducedRight h k : ℝ) ≤ ell := by
+    exact (by exact_mod_cast hughesYoungReducedRight_le h k :
+      (hughesYoungReducedRight h k : ℝ) ≤ k).trans hkle
+  have hratioA0 : 0 ≤ (hughesYoungReducedLeft h k : ℝ) / X := by positivity
+  have hratioB0 : 0 ≤ (hughesYoungReducedRight h k : ℝ) / Y := by positivity
+  have hratioA : (hughesYoungReducedLeft h k : ℝ) / X ≤ 2 * ell := by
+    apply (div_le_iff₀ hX0).2
+    nlinarith
+  have hratioB : (hughesYoungReducedRight h k : ℝ) / Y ≤ 2 * ell := by
+    apply (div_le_iff₀ hY0).2
+    nlinarith
+  have hp0 : 0 ≤ (1 / 2 : ℝ) + c := by linarith
+  have hp2 : (1 / 2 : ℝ) + c ≤ 2 := by linarith
+  have hbase : 1 ≤ 2 * ell := by linarith
+  have hleft :
+      ((hughesYoungReducedLeft h k : ℝ) / X) ^ ((1 / 2 : ℝ) + c) ≤
+        4 * ell ^ (2 : ℝ) := by
+    calc
+      _ ≤ (2 * ell) ^ ((1 / 2 : ℝ) + c) :=
+        Real.rpow_le_rpow hratioA0 hratioA hp0
+      _ ≤ (2 * ell) ^ (2 : ℝ) :=
+        Real.rpow_le_rpow_of_exponent_le hbase hp2
+      _ = 4 * ell ^ (2 : ℝ) := by
+        rw [Real.rpow_two, Real.rpow_two]
+        ring
+  have hright :
+      ((hughesYoungReducedRight h k : ℝ) / Y) ^ ((1 / 2 : ℝ) + c) ≤
+        4 * ell ^ (2 : ℝ) := by
+    calc
+      _ ≤ (2 * ell) ^ ((1 / 2 : ℝ) + c) :=
+        Real.rpow_le_rpow hratioB0 hratioB hp0
+      _ ≤ (2 * ell) ^ (2 : ℝ) :=
+        Real.rpow_le_rpow_of_exponent_le hbase hp2
+      _ = 4 * ell ^ (2 : ℝ) := by
+        rw [Real.rpow_two, Real.rpow_two]
+        ring
+  have hscalar := norm_hughesYoungLocalizedStaticScalar_le_coefficients
+    (T := T) hh hk
+  have hdivh : ((h.divisors.card : ℕ) : ℝ) ≤ (h : ℝ) := by
+    exact_mod_cast Nat.card_divisors_le_self h
+  have hdivk : ((k.divisors.card : ℕ) : ℝ) ≤ (k : ℝ) := by
+    exact_mod_cast Nat.card_divisors_le_self k
+  have hcoeffh : ‖shortMobiusSquareCoeff T h‖ ≤ ell :=
+    (norm_shortMobiusSquareCoeff_le_divisors T hh).trans (hdivh.trans hhle)
+  have hcoeffk : ‖shortMobiusSquareCoeff T k‖ ≤ ell :=
+    (norm_shortMobiusSquareCoeff_le_divisors T hk).trans (hdivk.trans hkle)
+  unfold hughesYoungReducedStaticScale
+  calc
+    _ ≤ (ell * ell) * (4 * ell ^ (2 : ℝ)) *
+        (4 * ell ^ (2 : ℝ)) := by
+      gcongr
+      exact hscalar.trans (mul_le_mul hcoeffh hcoeffk (norm_nonneg _)
+        (zero_le_one.trans hell1))
+    _ = 16 * ell ^ (6 : ℕ) := by
+      simp only [Real.rpow_two]
+      ring
+
 /-- Every logarithm in the central modulus profile is polynomially bounded
 by one common source scale.  The fixed Euler constant remains visible in
 the uniform numerical coefficient. -/
-theorem hughesYoungCentralLogProfile_add_eight_le
+theorem hughesYoungCentralLogProfile_add_eight_le_of_half
     {X Y B : ℝ} {a b : ℕ}
-    (hX : 1 ≤ X) (hY : 1 ≤ Y) (ha : 0 < a) (hb : 0 < b)
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y) (ha : 0 < a) (hb : 0 < b)
     (hB : 1 ≤ B) (hXB : X ≤ B) (hYB : Y ≤ B)
     (haB : (a : ℝ) ≤ B) (hbB : (b : ℝ) ≤ B) :
     1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
@@ -1757,6 +1839,18 @@ theorem hughesYoungCentralLogProfile_add_eight_le
     exact (Real.log_le_sub_one_of_pos (by positivity)).trans (by linarith)
   have hgamma : 0 ≤ |Real.eulerMascheroniConstant| := abs_nonneg _
   nlinarith
+
+theorem hughesYoungCentralLogProfile_add_eight_le
+    {X Y B : ℝ} {a b : ℕ}
+    (hX : 1 ≤ X) (hY : 1 ≤ Y) (ha : 0 < a) (hb : 0 < b)
+    (hB : 1 ≤ B) (hXB : X ≤ B) (hYB : Y ≤ B)
+    (haB : (a : ℝ) ≤ B) (hbB : (b : ℝ) ≤ B) :
+    1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
+        2 * |Real.eulerMascheroniConstant| + Real.log (2 * Y) +
+        |Real.log (b : ℝ)| + 2 * |Real.eulerMascheroniConstant| + 8 ≤
+      (15 + 4 * |Real.eulerMascheroniConstant|) * B := by
+  exact hughesYoungCentralLogProfile_add_eight_le_of_half
+    (by linarith) (by linarith) ha hb hB hXB hYB haB hbB
 
 /-- One omitted signed central shift is bounded by a fixed polynomial in
 the mollifier scale and the active arithmetic cutoff.  Membership in the
@@ -1923,6 +2017,152 @@ theorem card_hughesYoungFarShifts_le_shift_rectangle
       push_cast
       ring
 
+set_option maxHeartbeats 800000 in
+/-- Polynomial static bound valid on the complete dyadic partition,
+including its isolated scale in `[1/2,1]`. -/
+theorem hughesYoungSignedFarCentralStaticBound_le_polynomial_of_half
+    {T c P X Y ell B : ℝ} {h k a b M N : ℕ} {r : ℤ}
+    (hT : 1 ≤ T) (hc0 : 0 ≤ c) (hc1 : c ≤ 1)
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
+    (hell : 1 ≤ ell) (hB : 1 ≤ B)
+    (hh : 0 < h) (hk : 0 < k) (ha : 0 < a) (hb : 0 < b)
+    (hhle : (h : ℝ) ≤ ell) (hkle : (k : ℝ) ≤ ell)
+    (haell : (a : ℝ) ≤ ell) (hbell : (b : ℝ) ≤ ell)
+    (hellB : ell ≤ B) (hXB : X ≤ B) (hYB : Y ≤ B)
+    (hMB : (M : ℝ) ≤ B) (hNB : (N : ℝ) ≤ B)
+    (hr : r ∈ hughesYoungFarShifts T P X Y a b M N) :
+    hughesYoungSignedFarCentralStaticBound T c X Y h k a b r ≤
+      16 * (15 + 4 * |Real.eulerMascheroniConstant|) ^ 2 *
+        hughesYoungCentralTailSeriesConstant * ell ^ (10 : ℕ) * B ^ (5 : ℕ) := by
+  have hT0 : 0 < T := zero_lt_one.trans_le hT
+  have hX0 : 0 ≤ X := by linarith
+  have hY0 : 0 ≤ Y := by linarith
+  have hscale := hughesYoungReducedStaticScale_le_sixteen_mul_power_six_of_half
+    (T := T) hc0 hc1 hX hY hell hh hk hhle hkle
+  have haB : (a : ℝ) ≤ B := haell.trans hellB
+  have hbB : (b : ℝ) ≤ B := hbell.trans hellB
+  have hprofileXY := tsum_hughesYoungCentralModulusProfile_le_of_half hX hY a b
+  have hprofileYX := tsum_hughesYoungCentralModulusProfile_le_of_half hY hX b a
+  have hlogXY := hughesYoungCentralLogProfile_add_eight_le_of_half
+    hX hY ha hb hB hXB hYB haB hbB
+  have hlogYX := hughesYoungCentralLogProfile_add_eight_le_of_half
+    hY hX hb ha hB hYB hXB hbB haB
+  have hbaseXY0 : 0 ≤ 1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
+      2 * |Real.eulerMascheroniConstant| + Real.log (2 * Y) +
+      |Real.log (b : ℝ)| + 2 * |Real.eulerMascheroniConstant| + 8 := by
+    have hxlog : 0 ≤ Real.log (2 * X) := Real.log_nonneg (by linarith)
+    have hylog : 0 ≤ Real.log (2 * Y) := Real.log_nonneg (by linarith)
+    positivity
+  have hbaseYX0 : 0 ≤ 1 + Real.log (2 * Y) + |Real.log (b : ℝ)| +
+      2 * |Real.eulerMascheroniConstant| + Real.log (2 * X) +
+      |Real.log (a : ℝ)| + 2 * |Real.eulerMascheroniConstant| + 8 := by
+    have hxlog : 0 ≤ Real.log (2 * X) := Real.log_nonneg (by linarith)
+    have hylog : 0 ≤ Real.log (2 * Y) := Real.log_nonneg (by linarith)
+    positivity
+  have hseries0 := hughesYoungCentralTailSeriesConstant_nonneg
+  have hprofileXY' :
+      ∑' q : ℕ, hughesYoungCentralModulusProfile X Y a b q ≤
+        ((15 + 4 * |Real.eulerMascheroniConstant|) * B) ^ 2 *
+          hughesYoungCentralTailSeriesConstant :=
+    hprofileXY.trans (mul_le_mul_of_nonneg_right
+      (pow_le_pow_left₀ hbaseXY0 hlogXY 2) hseries0)
+  have hprofileYX' :
+      ∑' q : ℕ, hughesYoungCentralModulusProfile Y X b a q ≤
+        ((15 + 4 * |Real.eulerMascheroniConstant|) * B) ^ 2 *
+          hughesYoungCentralTailSeriesConstant :=
+    hprofileYX.trans (mul_le_mul_of_nonneg_right
+      (pow_le_pow_left₀ hbaseYX0 hlogYX 2) hseries0)
+  have hinv : ‖(((a : ℂ) * b)⁻¹)‖ ≤ 1 := by
+    rw [norm_inv, norm_mul, Complex.norm_natCast, Complex.norm_natCast]
+    exact inv_le_one_of_one_le₀ (by
+      have ha1 : (1 : ℝ) ≤ a := by exact_mod_cast ha
+      have hb1 : (1 : ℝ) ≤ b := by exact_mod_cast hb
+      nlinarith)
+  have hinvSwap : ‖(((b : ℂ) * a)⁻¹)‖ ≤ 1 := by
+    rw [norm_inv, norm_mul, Complex.norm_natCast, Complex.norm_natCast]
+    exact inv_le_one_of_one_le₀ (by
+      have ha1 : (1 : ℝ) ≤ a := by exact_mod_cast ha
+      have hb1 : (1 : ℝ) ≤ b := by exact_mod_cast hb
+      nlinarith)
+  have hrange := Finset.mem_Icc.mp (mem_hughesYoungFarShifts_iff.mp hr).1
+  have hab : ((a * b : ℕ) : ℝ) ≤ ell * ell := by
+    push_cast
+    exact mul_le_mul haell hbell (by positivity) (by positivity)
+  have hba : ((b * a : ℕ) : ℝ) ≤ ell * ell := by
+    simpa [Nat.mul_comm] using hab
+  have habR : (a : ℝ) * b ≤ ell * ell := by
+    simpa only [Nat.cast_mul] using hab
+  have hbaR : (b : ℝ) * a ≤ ell * ell := by
+    simpa only [Nat.cast_mul] using hba
+  have hscaleT : (1 / T) * hughesYoungReducedStaticScale T c X Y h k ≤
+      16 * ell ^ (6 : ℕ) := by
+    calc
+      _ ≤ 1 * (16 * ell ^ (6 : ℕ)) := by
+        exact mul_le_mul ((div_le_one hT0).2 hT) hscale
+          (hughesYoungReducedStaticScale_nonneg T c
+            hX0 hY0 h k) (by norm_num)
+      _ = _ := one_mul _
+  unfold hughesYoungSignedFarCentralStaticBound
+  split_ifs with hsign
+  · have hto : ((r.toNat : ℕ) : ℤ) = r := Int.toNat_of_nonneg hsign
+    have hrInt : ((r.toNat : ℕ) : ℤ) ≤ (a * M : ℕ) := by
+      rw [hto]
+      exact hrange.2
+    have hrNat : r.toNat ≤ a * M := by exact_mod_cast hrInt
+    have hrR : (r.toNat : ℝ) ≤ ell * B := by
+      calc
+        (r.toNat : ℝ) ≤ ((a * M : ℕ) : ℝ) := by exact_mod_cast hrNat
+        _ = (a : ℝ) * M := by push_cast; ring
+        _ ≤ ell * B := mul_le_mul haell hMB (by positivity) (by positivity)
+    have hshift : ((a * b * r.toNat ^ 2 : ℕ) : ℝ) ≤
+        (ell * ell) * (ell * B) ^ 2 := by
+      push_cast
+      exact mul_le_mul habR (pow_le_pow_left₀ (by positivity) hrR 2)
+        (by positivity) (by positivity)
+    have hprofile0 : 0 ≤ ∑' q : ℕ,
+        hughesYoungCentralModulusProfile X Y a b q :=
+      tsum_nonneg fun q => hughesYoungCentralModulusProfile_nonneg X Y a b q
+    have hscaleT0 : 0 ≤ (1 / T) * hughesYoungReducedStaticScale T c X Y h k :=
+      mul_nonneg (by positivity)
+        (hughesYoungReducedStaticScale_nonneg T c
+          hX0 hY0 h k)
+    calc
+      _ ≤ 1 * ((ell * ell) * (ell * B) ^ 2) * B *
+          (16 * ell ^ (6 : ℕ)) *
+          (((15 + 4 * |Real.eulerMascheroniConstant|) * B) ^ 2 *
+            hughesYoungCentralTailSeriesConstant) := by gcongr
+      _ = _ := by ring
+  · have hrNeg : r < 0 := lt_of_not_ge hsign
+    have hneg : 0 ≤ -r := neg_nonneg.mpr (le_of_lt hrNeg)
+    have hto : (((-r).toNat : ℕ) : ℤ) = -r := Int.toNat_of_nonneg hneg
+    have hrInt : (((-r).toNat : ℕ) : ℤ) ≤ (b * N : ℕ) := by
+      rw [hto]
+      omega
+    have hrNat : (-r).toNat ≤ b * N := by exact_mod_cast hrInt
+    have hrR : ((-r).toNat : ℝ) ≤ ell * B := by
+      calc
+        ((-r).toNat : ℝ) ≤ ((b * N : ℕ) : ℝ) := by exact_mod_cast hrNat
+        _ = (b : ℝ) * N := by push_cast; ring
+        _ ≤ ell * B := mul_le_mul hbell hNB (by positivity) (by positivity)
+    have hshift : ((b * a * (-r).toNat ^ 2 : ℕ) : ℝ) ≤
+        (ell * ell) * (ell * B) ^ 2 := by
+      push_cast
+      exact mul_le_mul hbaR (pow_le_pow_left₀ (by positivity) hrR 2)
+        (by positivity) (by positivity)
+    have hprofile0 : 0 ≤ ∑' q : ℕ,
+        hughesYoungCentralModulusProfile Y X b a q :=
+      tsum_nonneg fun q => hughesYoungCentralModulusProfile_nonneg Y X b a q
+    have hscaleT0 : 0 ≤ (1 / T) * hughesYoungReducedStaticScale T c X Y h k :=
+      mul_nonneg (by positivity)
+        (hughesYoungReducedStaticScale_nonneg T c
+          hX0 hY0 h k)
+    calc
+      _ ≤ 1 * ((ell * ell) * (ell * B) ^ 2) * B *
+          (16 * ell ^ (6 : ℕ)) *
+          (((15 + 4 * |Real.eulerMascheroniConstant|) * B) ^ 2 *
+            hughesYoungCentralTailSeriesConstant) := by gcongr
+      _ = _ := by ring
+
 /-- The complete finite omitted-shift mass in one active dyadic box has a
 uniform polynomial majorant. -/
 theorem hughesYoungFarSignedCentralStaticMass_le_polynomial
@@ -1968,6 +2208,68 @@ theorem hughesYoungFarSignedCentralStaticMass_le_polynomial
       _ ≤ 3 * ell * B := by nlinarith [mul_le_mul hell hB]
   unfold hughesYoungFarSignedCentralStaticMass
   change ∑ r ∈ s, hughesYoungSignedFarCentralStaticBound T c X Y h k a b r ≤ _
+  calc
+    _ ≤ ∑ _r ∈ s, E := Finset.sum_le_sum hterm
+    _ = (s.card : ℝ) * E := by simp
+    _ ≤ (3 * ell * B) * E := mul_le_mul_of_nonneg_right hcard hE
+    _ = _ := by dsimp only [E]; ring
+
+/-- The complete finite omitted-shift mass at scales down to `1/2` has the
+same polynomial exponents, with the explicit lower-scale factor absorbed
+into the numerical coefficient. -/
+theorem hughesYoungFarSignedCentralStaticMass_le_polynomial_of_half
+    {T c P X Y ell B : ℝ} {h k a b M N : ℕ}
+    (hT : 1 ≤ T) (hc0 : 0 ≤ c) (hc1 : c ≤ 1)
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
+    (hell : 1 ≤ ell) (hB : 1 ≤ B)
+    (hh : 0 < h) (hk : 0 < k) (ha : 0 < a) (hb : 0 < b)
+    (hhle : (h : ℝ) ≤ ell) (hkle : (k : ℝ) ≤ ell)
+    (haell : (a : ℝ) ≤ ell) (hbell : (b : ℝ) ≤ ell)
+    (hellB : ell ≤ B) (hXB : X ≤ B) (hYB : Y ≤ B)
+    (hMB : (M : ℝ) ≤ B) (hNB : (N : ℝ) ≤ B) :
+    hughesYoungFarSignedCentralStaticMass T c P X Y h k a b M N ≤
+      48 * (15 + 4 * |Real.eulerMascheroniConstant|) ^ 2 *
+        hughesYoungCentralTailSeriesConstant * ell ^ (11 : ℕ) * B ^ (6 : ℕ) := by
+  let s := hughesYoungFarShifts T P X Y a b M N
+  let E : ℝ := 16 * (15 + 4 * |Real.eulerMascheroniConstant|) ^ 2 *
+    hughesYoungCentralTailSeriesConstant * ell ^ (10 : ℕ) * B ^ (5 : ℕ)
+  have hE : 0 ≤ E := by
+    dsimp only [E]
+    have hnum : 0 ≤ 16 *
+        (15 + 4 * |Real.eulerMascheroniConstant|) ^ 2 := by positivity
+    have hleft : 0 ≤ 16 *
+        (15 + 4 * |Real.eulerMascheroniConstant|) ^ 2 *
+          hughesYoungCentralTailSeriesConstant :=
+      mul_nonneg hnum hughesYoungCentralTailSeriesConstant_nonneg
+    exact mul_nonneg (mul_nonneg hleft (by positivity)) (by positivity)
+  have hterm : ∀ r ∈ s,
+      hughesYoungSignedFarCentralStaticBound T c X Y h k a b r ≤ E := by
+    intro r hr
+    simpa only [s, E] using
+      hughesYoungSignedFarCentralStaticBound_le_polynomial_of_half
+        hT hc0 hc1 hX hY hell hB hh hk ha hb hhle hkle haell hbell
+        hellB hXB hYB hMB hNB hr
+  have hcardNat := card_hughesYoungFarShifts_le_shift_rectangle
+    T P X Y a b M N
+  have haM : ((a * M : ℕ) : ℝ) ≤ ell * B := by
+    push_cast
+    exact mul_le_mul haell hMB (by positivity) (by positivity)
+  have hbN : ((b * N : ℕ) : ℝ) ≤ ell * B := by
+    push_cast
+    exact mul_le_mul hbell hNB (by positivity) (by positivity)
+  have hcard : (s.card : ℝ) ≤ 3 * ell * B := by
+    have hcast : (s.card : ℝ) ≤ ((a * M + b * N + 1 : ℕ) : ℝ) := by
+      exact_mod_cast hcardNat
+    calc
+      _ ≤ ((a * M + b * N + 1 : ℕ) : ℝ) := hcast
+      _ = ((a * M : ℕ) : ℝ) + ((b * N : ℕ) : ℝ) + 1 := by
+        push_cast
+        ring
+      _ ≤ ell * B + ell * B + 1 := by gcongr
+      _ ≤ 3 * ell * B := by nlinarith [mul_le_mul hell hB]
+  unfold hughesYoungFarSignedCentralStaticMass
+  change ∑ r ∈ s,
+      hughesYoungSignedFarCentralStaticBound T c X Y h k a b r ≤ _
   calc
     _ ≤ ∑ _r ∈ s, E := Finset.sum_le_sum hterm
     _ = (s.card : ℝ) * E := by simp
@@ -2231,7 +2533,7 @@ theorem exists_scaled_norm_hughesYoungActiveLargeDFIIntegratedCentralTail_le
       (M := hughesYoungFullDyadicBound ij.1)
       (N := hughesYoungFullDyadicBound ij.2)
       hT16 hc.1 hc.2.1 hsmall (by positivity) le_rfl
-      (lt_of_lt_of_le zero_lt_one hP) hPT hX hY hh hk
+      (lt_of_lt_of_le zero_lt_one hP) hPT (by linarith) (by linarith) hh hk
     have hmass := hughesYoungFarSignedCentralStaticMass_le_activeEnvelope
       hT hhmem hkmem hij
     have hfactor : 0 ≤ T *

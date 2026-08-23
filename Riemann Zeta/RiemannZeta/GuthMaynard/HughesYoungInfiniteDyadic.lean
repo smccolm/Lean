@@ -223,6 +223,32 @@ theorem tsum_hughesYoungFullDyadicCutoff_cast_eq_one_sub_step (x : ℝ) :
   norm_cast
   exact tsum_hughesYoungFullDyadicCutoff_eq_one_sub_step x
 
+/-- The real-variable dyadic family is locally finite.  This is the
+continuous counterpart of
+`finite_support_hughesYoungFullDyadicCutoff_nat`; it is needed when the
+DFI central integrals are reassembled before restricting their variables
+to the divisor lattice. -/
+theorem finite_support_hughesYoungFullDyadicCutoff (x : ℝ) :
+    Set.Finite (Function.support fun j : ℕ =>
+      hughesYoungFullDyadicCutoff j x) := by
+  obtain ⟨K, hK⟩ := exists_hughesYoungDyadicCoverIndex x
+  apply (Finset.finite_toSet (Finset.range (K + 2))).subset
+  intro j hj
+  by_contra hjRange
+  have hjLower : K + 2 ≤ j := by
+    apply Nat.le_of_not_gt
+    intro hjLt
+    exact hjRange (by simpa only [Finset.mem_coe, Finset.mem_range] using hjLt)
+  exact hj (hughesYoungFullDyadicCutoff_eq_zero_of_real_cover hK hjLower)
+
+/-- Consequently the full smooth dyadic family is summable at every real
+physical coordinate, including the continuous variables in DFI equation
+(27). -/
+theorem summable_hughesYoungFullDyadicCutoff (x : ℝ) :
+    Summable (fun j : ℕ => hughesYoungFullDyadicCutoff j x) :=
+  summable_of_hasFiniteSupport
+    (finite_support_hughesYoungFullDyadicCutoff x)
+
 theorem tsum_hughesYoungFullDyadicCutoff_cast_eq_one
     {x : ℝ} (hx : 1 ≤ x) :
     (∑' j : ℕ, (hughesYoungFullDyadicCutoff j x : ℂ)) = 1 := by

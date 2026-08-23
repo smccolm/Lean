@@ -2,6 +2,7 @@ import RiemannZeta.GuthMaynard.HughesYoungCentralSourceBridge
 import RiemannZeta.GuthMaynard.HughesYoungSignedCentralAssembly
 import RiemannZeta.GuthMaynard.HughesYoungFarShift
 import RiemannZeta.GuthMaynard.HughesYoungPointwiseDFIAssembly
+import RiemannZeta.GuthMaynard.HughesYoungPositiveScaleCentralSeries
 
 open Complex Finset MeasureTheory Set
 open scoped BigOperators Interval
@@ -47,7 +48,7 @@ or negative coordinate support.  This is the signed form of the exact
 support statement following DFI equation (2). -/
 theorem dfiSignedCentralSeries_eq_zero_of_outside_support
     {f : ℝ → ℝ → ℂ} {X Y : ℝ} (hbox : DFILocalizedBox f X Y)
-    (hX : 1 ≤ X) (hY : 1 ≤ Y) (a b : ℕ) {r : ℤ} (hr : r ≠ 0)
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y) (a b : ℕ) {r : ℤ} (hr : r ≠ 0)
     (hout : (0 ≤ r → 2 * X < (r.natAbs : ℝ)) ∧
       (r < 0 → 2 * Y < (r.natAbs : ℝ))) :
     dfiSignedCentralSeries a b r f = 0 := by
@@ -59,8 +60,8 @@ theorem dfiSignedCentralSeries_eq_zero_of_outside_support
         simp [Nat.eq_zero_of_not_pos hn]
       change dfiSignedCentralSeries a b (n : ℤ) f = 0
       rw [dfiSignedCentralSeries_ofNat]
-      apply dfiEquation27CentralSeries_eq_zero_of_large_positive_shift
-        hbox n hY
+      apply dfiEquation27CentralSeries_eq_zero_of_large_positive_shift_of_pos
+        hbox n (by linarith)
       simpa using hout.1 (by positivity : (0 : ℤ) ≤ (n : ℤ))
   | negSucc n =>
       let m : ℕ := n + 1
@@ -69,15 +70,15 @@ theorem dfiSignedCentralSeries_eq_zero_of_outside_support
         dsimp only [m]
         omega
       rw [hrEq, dfiSignedCentralSeries_neg_ofNat a b m hm]
-      apply dfiEquation27CentralSeries_eq_zero_of_large_positive_shift
-        hbox.swap m hX
+      apply dfiEquation27CentralSeries_eq_zero_of_large_positive_shift_of_pos
+        hbox.swap m (by linarith)
       have hneg : -(m : ℤ) < 0 := by omega
       simpa [m] using hout.2 hneg
 
 /-- Specialization of the signed support cutoff to the literal
 Hughes--Young reduced cleaned weight. -/
 theorem dfiSignedCentralSeries_reducedCleaned_eq_zero_of_outside_support
-    {T c u X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    {T c u X Y : ℝ} (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
     (h k : ℕ) (a b : ℕ) {r : ℤ} (hr : r ≠ 0)
     (hout : (0 ≤ r → 2 * X < (r.natAbs : ℝ)) ∧
       (r < 0 → 2 * Y < (r.natAbs : ℝ))) :
@@ -85,7 +86,7 @@ theorem dfiSignedCentralSeries_reducedCleaned_eq_zero_of_outside_support
         (hughesYoungReducedCleanedShiftWeight T c u X Y h k r) = 0 := by
   exact dfiSignedCentralSeries_eq_zero_of_outside_support
     (hughesYoungReducedCleanedShiftWeight_localizedBox
-      (zero_lt_one.trans_le hX) (zero_lt_one.trans_le hY) h k r)
+      (by linarith) (by linarith) h k r)
     hX hY a b hr hout
 
 /-- The complete signed central contribution on the literal finite divisor
@@ -273,7 +274,7 @@ noncomputable def hughesYoungCentralLogProfile
     2 * Real.log (q : ℝ)
 
 theorem hughesYoungCentralLogProfile_nonneg
-    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    {X Y : ℝ} (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
     (a b q : ℕ) (hq : 0 < q) :
     0 ≤ hughesYoungCentralLogProfile X Y a b q := by
   have hlogX : 0 ≤ Real.log (2 * X) := Real.log_nonneg (by linarith)
@@ -282,6 +283,58 @@ theorem hughesYoungCentralLogProfile_nonneg
   have hlogq : 0 ≤ Real.log (q : ℝ) := Real.log_nonneg hqOne
   unfold hughesYoungCentralLogProfile
   positivity
+
+/-- The equation-(27) logarithmic factor obeys the original central
+profile down to the genuine lower dyadic scale.  The spare leading `1`
+absorbs the possible negative logarithm on `[1/2,1]`. -/
+theorem norm_dfiEquation27LogFactor_reduced_le_centralProfile_of_half
+    {S R : ℝ} (hS : 1 / 2 ≤ S) (hR : 1 / 2 ≤ R)
+    (a b q : ℕ) (hq : 0 < q) {x : ℝ}
+    (hx : x ∈ Set.Icc S (2 * S)) :
+    ‖dfiEquation27LogFactor a (dfiReducedDenominator a q) x‖ ≤
+      1 + Real.log (2 * S) + |Real.log (a : ℝ)| +
+        2 * |Real.eulerMascheroniConstant| + Real.log (2 * R) +
+        |Real.log (b : ℝ)| + 2 * |Real.eulerMascheroniConstant| +
+        2 * Real.log (q : ℝ) := by
+  have hS0 : 0 < S := by linarith
+  have hx0 : 0 < x := hS0.trans_le hx.1
+  have hlogS : 0 ≤ Real.log (2 * S) :=
+    Real.log_nonneg (by linarith)
+  have hlogR : 0 ≤ Real.log (2 * R) :=
+    Real.log_nonneg (by linarith)
+  have hxlog : |Real.log x| ≤ 1 + Real.log (2 * S) := by
+    by_cases hx1 : 1 ≤ x
+    · rw [abs_of_nonneg (Real.log_nonneg hx1)]
+      have hlog := Real.log_le_log hx0 hx.2
+      linarith
+    · have hxlt : x < 1 := lt_of_not_ge hx1
+      rw [abs_of_nonpos (Real.log_nonpos hx0.le hxlt.le)]
+      have hlogLower := Real.log_le_log hS0 hx.1
+      have hlogHalf : Real.log (1 / 2 : ℝ) = -Real.log 2 := by
+        rw [Real.log_div (by norm_num : (1 : ℝ) ≠ 0) (by norm_num : (2 : ℝ) ≠ 0),
+          Real.log_one]
+        ring
+      have hhalfLog : -Real.log S ≤ Real.log 2 := by
+        have hslog := Real.log_le_log (by norm_num : 0 < (1 / 2 : ℝ)) hS
+        rw [hlogHalf] at hslog
+        linarith
+      have hTwo : Real.log 2 ≤ 1 :=
+        Real.log_two_lt_d9.le.trans (by norm_num)
+      linarith
+  have hred := abs_log_dfiReducedDenominator_le a q hq
+  have hbase := norm_dfiEquation27LogFactor_le
+    a (dfiReducedDenominator a q) x
+  calc
+    ‖dfiEquation27LogFactor a (dfiReducedDenominator a q) x‖ ≤
+        |Real.log x| + |Real.log (a : ℝ)| +
+          2 * |Real.eulerMascheroniConstant| +
+          2 * |Real.log (dfiReducedDenominator a q : ℝ)| := hbase
+    _ ≤ 1 + Real.log (2 * S) + |Real.log (a : ℝ)| +
+        2 * |Real.eulerMascheroniConstant| + Real.log (2 * R) +
+        |Real.log (b : ℝ)| + 2 * |Real.eulerMascheroniConstant| +
+        2 * Real.log (q : ℝ) := by
+      linarith [abs_nonneg (Real.log (b : ℝ)),
+        abs_nonneg Real.eulerMascheroniConstant]
 
 /-- Equation (65) controls the complete logarithmic kernel occurring in one
 positive-shift DFI central integral.  No derivative hypothesis from DFI is
@@ -292,7 +345,7 @@ theorem exists_farShift_norm_dfiEquation27C_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ} {x : ℝ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < a → 0 < b → 0 < r → 0 < q →
       (r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -311,8 +364,8 @@ theorem exists_farShift_norm_dfiEquation27C_reducedCleaned_le :
   intro j T c u P X Y h k a b M N r q x hT hc hc1 hu hP hPT
     hX hY ha hb hr hq hfar
   have hT0 : 0 < T := by linarith
-  have hX0 : 0 < X := zero_lt_one.trans_le hX
-  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hX0 : 0 < X := by linarith
+  have hY0 : 0 < Y := by linarith
   have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw j :=
     hughesYoungHeightInputDerivativeConstant_pos hCw j
   have h65nonneg : 0 ≤ hughesYoungEquation65Bound Cγ Cw j T c u := by
@@ -338,13 +391,13 @@ theorem exists_farShift_norm_dfiEquation27C_reducedCleaned_le :
       (M := M) (N := N) (r := (r : ℤ)) (x := x)
       (y := x - (r : ℝ)) hT hc hc1 hu hP hPT hX0 hY0 hx hy
       (by push_cast; ring) hfar
-    have hleft := norm_dfiEquation27LogFactor_reduced_le_centralProfile
+    have hleft := norm_dfiEquation27LogFactor_reduced_le_centralProfile_of_half
       hX hY a b q hq hmem.1
     have hleft' :
         ‖dfiEquation27LogFactor a (dfiReducedDenominator a q) x‖ ≤
           hughesYoungCentralLogProfile X Y a b q := by
       simpa only [hughesYoungCentralLogProfile] using hleft
-    have hrightRaw := norm_dfiEquation27LogFactor_reduced_le_centralProfile
+    have hrightRaw := norm_dfiEquation27LogFactor_reduced_le_centralProfile_of_half
       hY hX b a q hq hmem.2
     have hright :
         ‖dfiEquation27LogFactor b (dfiReducedDenominator b q)
@@ -411,7 +464,7 @@ theorem exists_farShift_norm_dfiEquation27CentralIntegral_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r → 0 < q →
       (r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -437,8 +490,8 @@ theorem exists_farShift_norm_dfiEquation27CentralIntegral_reducedCleaned_le :
     ((1 / T) * hughesYoungReducedStaticScale T c X Y h k *
       hughesYoungEquation65Bound Cγ Cw j T c u)
   have hT0 : 0 < T := by linarith
-  have hX0 : 0 < X := zero_lt_one.trans_le hX
-  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hX0 : 0 < X := by linarith
+  have hY0 : 0 < Y := by linarith
   have hA : 0 ≤ A := by dsimp only [A]; positivity
   have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw j :=
     hughesYoungHeightInputDerivativeConstant_pos hCw j
@@ -560,7 +613,7 @@ theorem exists_farShift_norm_dfiEquation27CentralSummand_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r →
       (r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -628,7 +681,7 @@ theorem exists_farShift_norm_dfiEquation27CentralSeries_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r →
       (r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -656,7 +709,7 @@ theorem exists_farShift_norm_dfiEquation27CentralSeries_reducedCleaned_le :
   have hD : 0 ≤ D := by
     dsimp only [D]
     exact hughesYoungFarCentralShiftScale_nonneg Cγ Cw j hT0 hc hCw
-      (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b r
+      (by linarith) (by linarith) h k a b r
   have hg : Summable g := by
     simpa only [g] using summable_hughesYoungCentralModulusProfile hX hY a b
   have hterm : ∀ q : ℕ, A * ‖f q‖ ≤ D * g q := by
@@ -698,7 +751,7 @@ theorem exists_negativeFarShift_norm_dfiEquation27C_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ} {y : ℝ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < a → 0 < b → 0 < r → 0 < q →
       -(r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -717,8 +770,8 @@ theorem exists_negativeFarShift_norm_dfiEquation27C_reducedCleaned_le :
   intro j T c u P X Y h k a b M N r q y hT hc hc1 hu hP hPT
     hX hY ha hb hr hq hfar
   have hT0 : 0 < T := by linarith
-  have hX0 : 0 < X := zero_lt_one.trans_le hX
-  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hX0 : 0 < X := by linarith
+  have hY0 : 0 < Y := by linarith
   have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw j :=
     hughesYoungHeightInputDerivativeConstant_pos hCw j
   have h65nonneg : 0 ≤ hughesYoungEquation65Bound Cγ Cw j T c u := by
@@ -744,13 +797,13 @@ theorem exists_negativeFarShift_norm_dfiEquation27C_reducedCleaned_le :
       (M := M) (N := N) (r := -(r : ℤ)) (x := y - (r : ℝ))
       (y := y) hT hc hc1 hu hP hPT hX0 hY0 hx hy
       (by push_cast; ring) hfar
-    have hleft := norm_dfiEquation27LogFactor_reduced_le_centralProfile
+    have hleft := norm_dfiEquation27LogFactor_reduced_le_centralProfile_of_half
       hY hX b a q hq hmem.2
     have hleft' :
         ‖dfiEquation27LogFactor b (dfiReducedDenominator b q) y‖ ≤
           hughesYoungCentralLogProfile Y X b a q := by
       simpa only [hughesYoungCentralLogProfile] using hleft
-    have hright := norm_dfiEquation27LogFactor_reduced_le_centralProfile
+    have hright := norm_dfiEquation27LogFactor_reduced_le_centralProfile_of_half
       hX hY a b q hq hmem.1
     have hright' :
         ‖dfiEquation27LogFactor a (dfiReducedDenominator a q)
@@ -824,7 +877,7 @@ theorem exists_negativeFarShift_norm_dfiEquation27CentralIntegral_reducedCleaned
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r → 0 < q →
       -(r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -850,8 +903,8 @@ theorem exists_negativeFarShift_norm_dfiEquation27CentralIntegral_reducedCleaned
     ((1 / T) * hughesYoungReducedStaticScale T c X Y h k *
       hughesYoungEquation65Bound Cγ Cw j T c u)
   have hT0 : 0 < T := by linarith
-  have hX0 : 0 < X := zero_lt_one.trans_le hX
-  have hY0 : 0 < Y := zero_lt_one.trans_le hY
+  have hX0 : 0 < X := by linarith
+  have hY0 : 0 < Y := by linarith
   have hA : 0 ≤ A := by dsimp only [A]; positivity
   have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw j :=
     hughesYoungHeightInputDerivativeConstant_pos hCw j
@@ -945,7 +998,7 @@ theorem exists_negativeFarShift_norm_dfiEquation27CentralSummand_reducedCleaned_
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r q : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r →
       -(r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -1011,7 +1064,7 @@ theorem exists_negativeFarShift_norm_dfiEquation27CentralSeries_reducedCleaned_l
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N r : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b → 0 < r →
       -(r : ℤ) ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -1040,7 +1093,7 @@ theorem exists_negativeFarShift_norm_dfiEquation27CentralSeries_reducedCleaned_l
   have hD : 0 ≤ D := by
     dsimp only [D]
     exact hughesYoungNegativeFarCentralShiftScale_nonneg Cγ Cw j hT0 hc hCw
-      (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b r
+      (by linarith) (by linarith) h k a b r
   have hg : Summable g := by
     simpa only [g] using summable_hughesYoungCentralModulusProfile hY hX b a
   have hterm : ∀ q : ℕ, A * ‖f q‖ ≤ D * g q := by
@@ -1087,7 +1140,7 @@ noncomputable def hughesYoungSignedFarCentralShiftBound
 theorem hughesYoungSignedFarCentralShiftBound_nonneg
     (Cγ : ℝ) (Cw : ℕ → ℝ) (j : ℕ)
     {T c u X Y : ℝ} (hT : 0 < T) (hc : 0 < c)
-    (hCw : ∀ i, 0 < Cw i) (hX : 1 ≤ X) (hY : 1 ≤ Y)
+    (hCw : ∀ i, 0 < Cw i) (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y)
     (h k a b : ℕ) (r : ℤ) :
     0 ≤ hughesYoungSignedFarCentralShiftBound
       Cγ Cw j T c u X Y h k a b r := by
@@ -1095,7 +1148,7 @@ theorem hughesYoungSignedFarCentralShiftBound_nonneg
   split_ifs with hr
   · exact mul_nonneg
       (hughesYoungFarCentralShiftScale_nonneg Cγ Cw j hT hc hCw
-        (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b r.toNat)
+        (by linarith) (by linarith) h k a b r.toNat)
       (tsum_nonneg fun q => by
         by_cases hq : q = 0
         · subst q
@@ -1104,7 +1157,7 @@ theorem hughesYoungSignedFarCentralShiftBound_nonneg
             (X := X) (Y := Y) (a := a) (b := b) (q := q))
   · exact mul_nonneg
       (hughesYoungNegativeFarCentralShiftScale_nonneg Cγ Cw j hT hc hCw
-        (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b (-r).toNat)
+        (by linarith) (by linarith) h k a b (-r).toNat)
       (tsum_nonneg fun q => by
         by_cases hq : q = 0
         · subst q
@@ -1145,7 +1198,7 @@ theorem exists_farShift_norm_dfiSignedCentralSeries_reducedCleaned_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N : ℕ} {r : ℤ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b →
       r ∈ hughesYoungFarShifts T P X Y a b M N →
       (P / (5 * T)) ^ j *
@@ -1189,7 +1242,7 @@ theorem exists_farShift_norm_dfiSignedCentralSeries_reducedCleaned_le :
             (1 / T) * hughesYoungReducedStaticScale T c X Y h k :=
           mul_nonneg (by positivity)
             (hughesYoungReducedStaticScale_nonneg T c
-              (zero_le_one.trans hX) (zero_le_one.trans hY) h k)
+              (by linarith) (by linarith) h k)
         unfold hughesYoungFarCentralShiftScale
         gcongr
       have hprofile : 0 ≤
@@ -1224,7 +1277,7 @@ theorem exists_farShift_norm_dfiSignedCentralSeries_reducedCleaned_le :
             (1 / T) * hughesYoungReducedStaticScale T c X Y h k :=
           mul_nonneg (by positivity)
             (hughesYoungReducedStaticScale_nonneg T c
-              (zero_le_one.trans hX) (zero_le_one.trans hY) h k)
+              (by linarith) (by linarith) h k)
         unfold hughesYoungNegativeFarCentralShiftScale
         gcongr
       have hprofile : 0 ≤
@@ -1246,7 +1299,7 @@ theorem exists_norm_hughesYoungFarSignedCentralBox_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b →
       (P / (5 * T)) ^ j *
           ‖hughesYoungFarSignedCentralBox
@@ -1320,7 +1373,7 @@ theorem exists_norm_hughesYoungFarSignedCentralBox_le_factored :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c u P X Y : ℝ} {h k a b M N : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → |u| ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k → 0 < a → 0 < b →
       (P / (5 * T)) ^ j *
           ‖hughesYoungFarSignedCentralBox
@@ -1379,7 +1432,7 @@ theorem intervalIntegrable_mul_hughesYoungFarSignedCentralBox
     (hT : 16 ≤ T) (hc : 0 < c) (hc1 : c ≤ 1)
     (hH : 0 ≤ H) (hHT : H ≤ T / 8)
     (hP : 0 < P) (hPT : P ≤ T)
-    (hX : 1 ≤ X) (hY : 1 ≤ Y) (hh : 0 < h) (hk : 0 < k) :
+    (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y) (hh : 0 < h) (hk : 0 < k) :
     IntervalIntegrable (fun u : ℝ => (T : ℂ) *
       hughesYoungFarSignedCentralBox T c u P X Y h k
         (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) M N)
@@ -1402,7 +1455,7 @@ theorem intervalIntegrable_mul_hughesYoungFarSignedCentralBox
   have hSmeas : AEStronglyMeasurable S := by
     dsimp only [S, a, b]
     exact aestronglyMeasurable_hughesYoungFarSignedCentralBox
-      hT0 hc (zero_lt_one.trans_le hX) (zero_lt_one.trans_le hY) hh hk M N
+      hT0 hc (by linarith) (by linarith) hh hk M N
   have hFmeas : AEStronglyMeasurable F := by
     dsimp only [F]
     exact hSmeas.const_mul (T : ℂ)
@@ -1430,7 +1483,7 @@ theorem intervalIntegrable_mul_hughesYoungFarSignedCentralBox
   have hK : 0 ≤ K := by
     dsimp only [K]
     exact hughesYoungFarSignedCentralStaticMass_nonneg hT0
-      (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b M N
+      (by linarith) (by linarith) h k a b M N
   have hE : 0 ≤ E u := by
     have hderiv : 0 < hughesYoungHeightInputDerivativeConstant Cw 0 :=
       hughesYoungHeightInputDerivativeConstant_pos hCw 0
@@ -1501,7 +1554,7 @@ theorem intervalIntegrable_mul_hughesYoungFiniteCompleteSignedCentralBox
   have hfar : IntervalIntegrable far volume (-H) H := by
     dsimp only [far]
     exact intervalIntegrable_mul_hughesYoungFarSignedCentralBox
-      hT hc hc1 hH hHT hP0 hPT hX hY hh hk
+      hT hc hc1 hH hHT hP0 hPT (by linarith) (by linarith) hh hk
   have heq : (fun u : ℝ => (T : ℂ) *
       hughesYoungFiniteCompleteSignedCentralBox T c u X Y h k
         (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) M N) =
@@ -1536,7 +1589,9 @@ theorem hughesYoungNearPointwiseSignedCentralBox_eq_integratedComplete_sub_far
       (M := M) (N := N) hT hc hc1 hH hHT hP0 hPT hX hY hh hk
       hP hU hscale
   have hfar := intervalIntegrable_mul_hughesYoungFarSignedCentralBox
-    (M := M) (N := N) hT hc hc1 hH hHT hP0 hPT hX hY hh hk
+    (T := T) (c := c) (H := H) (P := P) (X := X) (Y := Y)
+      (h := h) (k := k) (M := M) (N := N) hT hc hc1 hH hHT hP0 hPT
+      (by linarith) (by linarith) hh hk
   calc
     (∫ u in -H..H, (T : ℂ) *
         (hughesYoungFiniteCompleteSignedCentralBox T c u X Y h k
@@ -1642,7 +1697,7 @@ theorem hughesYoungActiveLargeDFIPointwiseSignedCentral_eq_complete_sub_tail
   obtain ⟨hscale, _hQ, _hUQ, _hQsq⟩ :=
     hughesYoungDFIOptimalScale_spec
       (lt_of_lt_of_le zero_lt_one hP)
-      (zero_lt_one.trans_le hX) (zero_lt_one.trans_le hY)
+      (by linarith) (by linarith)
       hbox.2.2.2.2.1
   have hU : 0 < hughesYoungDFIOptimalU P
       (hughesYoungFullDyadicScale ij.1)
@@ -1661,7 +1716,7 @@ theorem exists_norm_hughesYoungIntegratedFarSignedCentral_le :
       (∀ i, 0 < Cw i) ∧
       ∀ (j : ℕ) {T c H P X Y : ℝ} {h k M N : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → 0 ≤ H → H ≤ T / 8 →
-      0 < P → P ≤ T → 1 ≤ X → 1 ≤ Y →
+      0 < P → P ≤ T → 1 / 2 ≤ X → 1 / 2 ≤ Y →
       0 < h → 0 < k →
       (P / (5 * T)) ^ j *
           ‖hughesYoungIntegratedPointwiseSignedCentral T c H X Y h k
@@ -1693,7 +1748,7 @@ theorem exists_norm_hughesYoungIntegratedFarSignedCentral_le :
   have hK : 0 ≤ K := by
     dsimp only [K]
     exact hughesYoungFarSignedCentralStaticMass_nonneg hT0
-      (zero_le_one.trans hX) (zero_le_one.trans hY) h k a b M N
+      (by linarith) (by linarith) h k a b M N
   have hEcont : Continuous E := by
     dsimp only [E]
     exact continuous_hughesYoungEquation65Bound Cγ Cw j hT0.le c
@@ -1753,7 +1808,7 @@ theorem exists_norm_hughesYoungIntegratedFarSignedCentral_full_bound
       ∀ {T c H P X Y : ℝ} {h k M N : ℕ},
       16 ≤ T → 0 < c → c ≤ 1 → 4 * Cγ * c ≤ 1 →
       0 ≤ H → H ≤ T / 8 → 0 < P → P ≤ T →
-      1 ≤ X → 1 ≤ Y → 0 < h → 0 < k →
+      1 / 2 ≤ X → 1 / 2 ≤ Y → 0 < h → 0 < k →
       (P / (5 * T)) ^ j *
           ‖hughesYoungIntegratedPointwiseSignedCentral T c H X Y h k
             (hughesYoungFarShifts T P X Y
@@ -1775,7 +1830,7 @@ theorem exists_norm_hughesYoungIntegratedFarSignedCentral_full_bound
       (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) M N :=
     mul_nonneg hT0.le
       (hughesYoungFarSignedCentralStaticMass_nonneg hT0
-        (zero_le_one.trans hX) (zero_le_one.trans hY) h k
+        (by linarith) (by linarith) h k
         (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) M N)
   exact (hraw j hT hc hc1 hH hHT hP hPT hX hY hh hk).trans
     (mul_le_mul_of_nonneg_left

@@ -164,7 +164,7 @@ noncomputable def hughesYoungCentralModulusProfile
   ((q : ℝ) ^ 2)⁻¹ * (A + 2 * Real.log (q : ℝ)) ^ 2
 
 theorem summable_hughesYoungCentralModulusProfile
-    {X Y : ℝ} (hX : 1 ≤ X) (hY : 1 ≤ Y) (a b : ℕ) :
+    {X Y : ℝ} (hX : 1 / 2 ≤ X) (hY : 1 / 2 ≤ Y) (a b : ℕ) :
     Summable (hughesYoungCentralModulusProfile X Y a b) := by
   let A := 1 + Real.log (2 * X) + |Real.log (a : ℝ)| +
     2 * |Real.eulerMascheroniConstant| + Real.log (2 * Y) +
@@ -576,7 +576,8 @@ theorem tsum_lintegral_enorm_hughesYoungCentralSeriesHeightTerm_ne_top
     (g := fun q => D * hughesYoungCentralModulusProfile X Y a b q)
   · intro q
     exact mul_nonneg hD (hughesYoungCentralModulusProfile_nonneg X Y a b q)
-  · exact (summable_hughesYoungCentralModulusProfile hX hY a b).mul_left D
+  · exact (summable_hughesYoungCentralModulusProfile
+      (by linarith) (by linarith) a b).mul_left D
   · intro q
     exact support_hughesYoungCentralSeriesHeightTerm_subset
       hT c u X Y h k a b r q

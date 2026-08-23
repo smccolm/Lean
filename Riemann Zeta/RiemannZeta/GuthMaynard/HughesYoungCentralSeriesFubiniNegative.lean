@@ -717,7 +717,8 @@ theorem tsum_lintegral_enorm_hughesYoungNegativeCentralSeriesHeightTerm_ne_top
     (g := fun q => D * hughesYoungCentralModulusProfile Y X b a q)
   · intro q
     exact mul_nonneg hD (hughesYoungCentralModulusProfile_nonneg Y X b a q)
-  · exact (summable_hughesYoungCentralModulusProfile hY hX b a).mul_left D
+  · exact (summable_hughesYoungCentralModulusProfile
+      (by linarith) (by linarith) b a).mul_left D
   · intro q
     exact support_hughesYoungNegativeCentralSeriesHeightTerm_subset
       hT c u X Y h k a b r q

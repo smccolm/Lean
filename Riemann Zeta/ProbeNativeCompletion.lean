@@ -1,0 +1,15 @@
+import RiemannZeta.GuthMaynard.HughesYoungNativeCompletion
+
+open Asymptotics Complex Filter Finset MeasureTheory Set Topology
+open scoped BigOperators ContDiff FourierTransform Interval Topology
+
+open RiemannZeta.GuthMaynard
+
+#check hughesYoungFarSignedCentralStaticMass_le_polynomial
+#check exists_norm_hughesYoungIntegratedFarSignedCentral_full_bound
+#check hughesYoungNearPointwiseSignedCentralBox_eq_integratedComplete_sub_far
+#check hughesYoungActiveNonLargeDFIBoxes
+#check hughesYoungCentralRegularNonLargeBoxes
+#check hughesYoungFullDyadicScale_pos
+#check detectorCutoff_sq_le_nine_mul_rpow_one_fiftieth
+#check hughesYoungDFISmoothingScale

@@ -32,6 +32,174 @@ noncomputable def hughesYoungActiveContinuousDyadicWeight
     hughesYoungFullDyadicCutoff ij.1 x *
       hughesYoungFullDyadicCutoff ij.2 y
 
+/-- Every summand in the continuous active cutoff is nonnegative on the
+positive quadrant. -/
+theorem hughesYoungActiveContinuousDyadicWeight_nonneg
+    (a b R K : ℕ) {x y : ℝ} (hx : 0 ≤ x) (hy : 0 ≤ y) :
+    0 ≤ hughesYoungActiveContinuousDyadicWeight a b R K x y := by
+  unfold hughesYoungActiveContinuousDyadicWeight
+  apply Finset.sum_nonneg
+  intro ij _hij
+  exact mul_nonneg
+    (hughesYoungDyadicCutoffAt_mem_Icc
+      (hughesYoungFullDyadicScale_pos ij.1) hx).1
+    (hughesYoungDyadicCutoffAt_mem_Icc
+      (hughesYoungFullDyadicScale_pos ij.2) hy).1
+
+/-- The active continuous cutoff is a subpartition of the complete
+nonnegative-index dyadic family.  The right-hand side is exactly the
+two-variable multiplier in `hughesYoungLowerCompleteReducedMellinWeight`.
+This comparison is valid at the real variables of DFI equation (27), not
+only at positive integer divisor coordinates. -/
+theorem hughesYoungActiveContinuousDyadicWeight_le_lowerComplete
+    (a b R K : ℕ) {x y : ℝ} (hx : 0 ≤ x) (hy : 0 ≤ y) :
+    hughesYoungActiveContinuousDyadicWeight a b R K x y ≤
+      (1 - hughesYoungDyadicStep (x * hughesYoungDyadicRatio)) *
+        (1 - hughesYoungDyadicStep (y * hughesYoungDyadicRatio)) := by
+  let F : ℕ × ℕ → ℝ := fun ij =>
+    hughesYoungFullDyadicCutoff ij.1 x *
+      hughesYoungFullDyadicCutoff ij.2 y
+  have hsummable : Summable F :=
+    (summable_hughesYoungFullDyadicCutoff x).mul_of_nonneg
+      (summable_hughesYoungFullDyadicCutoff y)
+      (fun i => (hughesYoungDyadicCutoffAt_mem_Icc
+        (hughesYoungFullDyadicScale_pos i) hx).1)
+      (fun j => (hughesYoungDyadicCutoffAt_mem_Icc
+        (hughesYoungFullDyadicScale_pos j) hy).1)
+  have hpartial :
+      (∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K, F ij) ≤
+        ∑' ij : ℕ × ℕ, F ij :=
+    hsummable.sum_le_tsum _ (fun ij _hij => mul_nonneg
+      (hughesYoungDyadicCutoffAt_mem_Icc
+        (hughesYoungFullDyadicScale_pos ij.1) hx).1
+      (hughesYoungDyadicCutoffAt_mem_Icc
+        (hughesYoungFullDyadicScale_pos ij.2) hy).1)
+  have hfull : (∑' ij : ℕ × ℕ, F ij) =
+      (1 - hughesYoungDyadicStep (x * hughesYoungDyadicRatio)) *
+        (1 - hughesYoungDyadicStep (y * hughesYoungDyadicRatio)) := by
+    rw [hsummable.tsum_prod]
+    simp only [F]
+    simp_rw [tsum_mul_left]
+    rw [tsum_hughesYoungFullDyadicCutoff_eq_one_sub_step]
+    rw [tsum_mul_right]
+    rw [tsum_hughesYoungFullDyadicCutoff_eq_one_sub_step]
+  unfold hughesYoungActiveContinuousDyadicWeight
+  exact hpartial.trans_eq hfull
+
+/-- In particular the active continuous cutoff takes values in `[0,1]` on
+the positive quadrant. -/
+theorem hughesYoungActiveContinuousDyadicWeight_le_one
+    (a b R K : ℕ) {x y : ℝ} (hx : 0 ≤ x) (hy : 0 ≤ y) :
+    hughesYoungActiveContinuousDyadicWeight a b R K x y ≤ 1 := by
+  have hsub := hughesYoungActiveContinuousDyadicWeight_le_lowerComplete
+    a b R K hx hy
+  have hxStep : 0 ≤ hughesYoungDyadicStep
+      (x * hughesYoungDyadicRatio) := by
+    unfold hughesYoungDyadicStep
+    exact Real.smoothTransition.nonneg _
+  have hyStep : 0 ≤ hughesYoungDyadicStep
+      (y * hughesYoungDyadicRatio) := by
+    unfold hughesYoungDyadicStep
+    exact Real.smoothTransition.nonneg _
+  have hxOne : hughesYoungDyadicStep
+      (x * hughesYoungDyadicRatio) ≤ 1 := by
+    unfold hughesYoungDyadicStep
+    exact Real.smoothTransition.le_one _
+  have hyOne : hughesYoungDyadicStep
+      (y * hughesYoungDyadicRatio) ≤ 1 := by
+    unfold hughesYoungDyadicStep
+    exact Real.smoothTransition.le_one _
+  have hprod : 0 ≤
+      (1 - hughesYoungDyadicStep (x * hughesYoungDyadicRatio)) *
+        (1 - hughesYoungDyadicStep (y * hughesYoungDyadicRatio)) :=
+    mul_nonneg (sub_nonneg.mpr hxOne) (sub_nonneg.mpr hyOne)
+  calc
+    _ ≤ (1 - hughesYoungDyadicStep (x * hughesYoungDyadicRatio)) *
+        (1 - hughesYoungDyadicStep (y * hughesYoungDyadicRatio)) := hsub
+    _ ≤ 1 := by nlinarith
+
+/-- The continuous active cutoff is exactly one throughout the physical
+product range represented by the finite dyadic depth.  This is the
+source-line counterpart of `hughesYoungActiveDyadicWeight_eq_one`: it is
+stated for the real variables occurring in the DFI central integrals, not
+only for the original divisor lattice. -/
+theorem hughesYoungActiveContinuousDyadicWeight_eq_one
+    {a b R K : ℕ} {x y : ℝ}
+    (hx : 1 ≤ x) (hy : 1 ≤ y)
+    (hxy : x * y ≤ ((a * b * R : ℕ) : ℝ))
+    (hcover : ((a * b * R : ℕ) : ℝ) ≤
+      hughesYoungDyadicRatio ^ (K + 1)) :
+    hughesYoungActiveContinuousDyadicWeight a b R K x y = 1 := by
+  classical
+  let S := (Finset.range (K + 2)).product (Finset.range (K + 2))
+  let F : ℕ × ℕ → ℝ := fun ij =>
+    hughesYoungFullDyadicCutoff ij.1 x *
+      hughesYoungFullDyadicCutoff ij.2 y
+  have hxUpper : x ≤ hughesYoungDyadicRatio ^ (K + 1) := by
+    calc
+      x = x * 1 := by ring
+      _ ≤ x * y := mul_le_mul_of_nonneg_left hy (by linarith)
+      _ ≤ ((a * b * R : ℕ) : ℝ) := hxy
+      _ ≤ hughesYoungDyadicRatio ^ (K + 1) := hcover
+  have hyUpper : y ≤ hughesYoungDyadicRatio ^ (K + 1) := by
+    calc
+      y = 1 * y := by ring
+      _ ≤ x * y := mul_le_mul_of_nonneg_right hx (by linarith)
+      _ ≤ ((a * b * R : ℕ) : ℝ) := hxy
+      _ ≤ hughesYoungDyadicRatio ^ (K + 1) := hcover
+  have hsubset : hughesYoungActiveDyadicBoxes a b R K ⊆ S := by
+    intro ij hij
+    exact (Finset.mem_filter.mp hij).1
+  have houtside : ∀ ij ∈ S, ij ∉ hughesYoungActiveDyadicBoxes a b R K →
+      F ij = 0 := by
+    intro ij hijS hijActive
+    have hnotScale : ¬ (hughesYoungFullDyadicScale ij.1 *
+        hughesYoungFullDyadicScale ij.2 ≤ ((a * b * R : ℕ) : ℝ)) := by
+      intro hscale
+      apply hijActive
+      exact Finset.mem_filter.mpr ⟨hijS, hscale⟩
+    by_cases hcutX : hughesYoungFullDyadicCutoff ij.1 x = 0
+    · dsimp only [F]
+      rw [hcutX, zero_mul]
+    · by_cases hcutY : hughesYoungFullDyadicCutoff ij.2 y = 0
+      · dsimp only [F]
+        rw [hcutY, mul_zero]
+      · have hsuppX := support_hughesYoungDyadicCutoffAt_subset
+          (hughesYoungFullDyadicScale_pos ij.1) hcutX
+        have hsuppY := support_hughesYoungDyadicCutoffAt_subset
+          (hughesYoungFullDyadicScale_pos ij.2) hcutY
+        exact (hnotScale ((mul_le_mul hsuppX.1 hsuppY.1
+          (hughesYoungFullDyadicScale_pos ij.2).le (by linarith)).trans hxy)).elim
+  have hsum : (∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K, F ij) =
+      ∑ ij ∈ S, F ij := by
+    rw [Finset.sum_subset hsubset houtside]
+  have hfull : (∑ ij ∈ S, F ij) = 1 := by
+    dsimp only [S, F]
+    rw [Finset.product_eq_sprod, Finset.sum_product]
+    simp_rw [← Finset.mul_sum]
+    rw [← Finset.sum_mul]
+    rw [sum_range_hughesYoungFullDyadicCutoff_eq_one hx hxUpper,
+      sum_range_hughesYoungFullDyadicCutoff_eq_one hy hyUpper]
+    norm_num
+  unfold hughesYoungActiveContinuousDyadicWeight
+  exact hsum.trans hfull
+
+/-- Therefore a nonzero continuous complement must lie outside the retained
+physical product range (once both central variables are at least one and
+the finite depth covers that range). -/
+theorem hughesYoungActiveContinuousDyadicWeight_complement_support
+    {a b R K : ℕ} {x y : ℝ}
+    (hx : 1 ≤ x) (hy : 1 ≤ y)
+    (hcover : ((a * b * R : ℕ) : ℝ) ≤
+      hughesYoungDyadicRatio ^ (K + 1))
+    (hne : 1 - hughesYoungActiveContinuousDyadicWeight a b R K x y ≠ 0) :
+    ((a * b * R : ℕ) : ℝ) < x * y := by
+  by_contra hnot
+  apply hne
+  rw [hughesYoungActiveContinuousDyadicWeight_eq_one hx hy
+    (le_of_not_gt hnot) hcover]
+  ring
+
 /-- Exact factorization of the active reassembled Mellin source into its
 common Mellin monomial and the genuine smooth product-truncation cutoff. -/
 theorem hughesYoungActiveReassembledReducedMellinWeight_eq_scaled_powers

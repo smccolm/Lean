@@ -1130,7 +1130,7 @@ theorem exists_scaled_norm_hughesYoungSupportedRegularNonLargeIntegratedCentralT
       (M := hughesYoungFullDyadicBound ij.1)
       (N := hughesYoungFullDyadicBound ij.2)
       hT16 hc.1 hc.2.1 hcontour (by positivity) le_rfl
-      (lt_of_lt_of_le zero_lt_one hP) hPT hX hY hh hk
+      (lt_of_lt_of_le zero_lt_one hP) hPT (by linarith) (by linarith) hh hk
     have hmass := hughesYoungFarSignedCentralStaticMass_le_supportedRegularEnvelope
       hT hhmem hkmem hij
     have hfactor : 0 ≤ T *
