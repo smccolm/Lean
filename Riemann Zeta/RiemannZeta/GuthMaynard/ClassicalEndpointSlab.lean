@@ -3455,6 +3455,61 @@ theorem rpow_classicalMHHExponent_le_endpoint_target
     _ = T ^ (3 * (1 - σ) / τ₀) := by
       rw [rpow_typeILogarithmicScale_eq hT hQ]
 
+/-- Endpoint conversion when the physical logarithmic scale is slightly
+below the certificate window.  The comparison scale `τ'` is inside the
+exact window; monotonicity and `hLoss` charge the finite discrepancy to the
+explicit exponent budget `η`. -/
+theorem rpow_classicalMHHExponent_le_endpoint_target_of_augmented_scale
+    {σ τ₀ T τ' η : ℝ} {Q : ℕ}
+    (hσUpper : σ < 1)
+    (hcert : EndpointScaleCertificate σ τ₀)
+    (hT : 0 < T) (hQ : 1 < Q)
+    (hScaleLe : typeILogarithmicScale T Q ≤ τ')
+    (hτ'Lower : 2 * τ₀ / 3 ≤ τ')
+    (hτ'Upper : τ' ≤ τ₀)
+    (hLoss : (3 * (1 - σ) / τ₀) *
+        (τ' - typeILogarithmicScale T Q) ≤
+      η * typeILogarithmicScale T Q) :
+    (Q : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T Q) ≤
+      T ^ (3 * (1 - σ) / τ₀ + η) := by
+  let τ := typeILogarithmicScale T Q
+  let E := 3 * (1 - σ) / τ₀
+  have hEnvelope := classicalMHHExponent_le_corollary1110Envelope_of_certificate
+    hσUpper hcert (τ := τ')
+  have hTarget := hcert.subdivision_window τ' hτ'Lower hτ'Upper
+  have hAtAugmented : classicalMHHExponent σ τ' ≤ E * τ' := by
+    calc
+      classicalMHHExponent σ τ' ≤
+          corollary1110Envelope σ τ₀ τ' := hEnvelope
+      _ ≤ (3 - 3 * σ) * τ' / τ₀ := hTarget
+      _ = E * τ' := by
+        dsimp only [E]
+        field_simp [hcert.tau0_pos.ne']
+  have hExponent : classicalMHHExponent σ τ ≤ (E + η) * τ := by
+    have hMono : classicalMHHExponent σ τ ≤
+        classicalMHHExponent σ τ' := by
+      unfold classicalMHHExponent
+      gcongr
+    calc
+      classicalMHHExponent σ τ ≤ classicalMHHExponent σ τ' :=
+        hMono
+      _ ≤ E * τ' := hAtAugmented
+      _ = E * τ + E * (τ' - τ) := by ring
+      _ ≤ E * τ + η * τ := by
+        dsimp only [E, τ] at hLoss ⊢
+        linarith
+      _ = (E + η) * τ := by ring
+  have hQOne : (1 : ℝ) ≤ Q := by exact_mod_cast hQ.le
+  have hPower := Real.rpow_le_rpow_of_exponent_le hQOne hExponent
+  calc
+    (Q : ℝ) ^ classicalMHHExponent σ τ ≤
+        (Q : ℝ) ^ ((E + η) * τ) := hPower
+    _ = ((Q : ℝ) ^ τ) ^ (E + η) := by
+      rw [mul_comm, Real.rpow_mul (by positivity)]
+    _ = T ^ (3 * (1 - σ) / τ₀ + η) := by
+      dsimp only [τ, E]
+      rw [rpow_typeILogarithmicScale_eq hT hQ]
+
 lemma rpow_div_rpow_nat_eq (q σ a : ℝ) (n : ℕ) (hq : 0 < q) :
     q ^ a / (q ^ σ) ^ n = q ^ (a - n * σ) := by
   rw [div_eq_mul_inv, ← Real.rpow_natCast, ← Real.rpow_mul hq.le,
@@ -3802,13 +3857,15 @@ noncomputable def classicalEndpointLossParameter
   min (ε / 1000)
     (min (ε * τ₀ / 1000)
       (min ((σ - 1 / 2) / 1000)
-        (min (σ / 8) (1 / (1000 * (1 + τ₀))))))
+        (min ((1 - σ) / 1000)
+          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))
 
 theorem classicalEndpointLossParameter_spec
-    {σ τ₀ ε : ℝ} (hσ : 1 / 2 < σ) (hτ₀ : 0 < τ₀) (hε : 0 < ε) :
+    {σ τ₀ ε : ℝ} (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hτ₀ : 0 < τ₀) (hε : 0 < ε) :
     let d := classicalEndpointLossParameter σ τ₀ ε
     0 < d ∧ d ≤ ε / 1000 ∧ d ≤ ε * τ₀ / 1000 ∧
-      d ≤ (σ - 1 / 2) / 1000 ∧ d ≤ σ / 8 ∧
+      d ≤ (σ - 1 / 2) / 1000 ∧ d ≤ (1 - σ) / 1000 ∧ d ≤ σ / 8 ∧
       d ≤ 1 / (1000 * (1 + τ₀)) ∧
       d / 2 ≤ d ∧ d ≤ 1 ∧ d < σ := by
   dsimp [classicalEndpointLossParameter]
@@ -3817,40 +3874,56 @@ theorem classicalEndpointLossParameter_spec
   have hdPos : 0 < min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) := by positivity
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) := by positivity
   have hdEps : min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) ≤ ε / 1000 :=
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤ ε / 1000 :=
     min_le_left _ _
   have hdEpsTau : min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) ≤
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
         ε * τ₀ / 1000 :=
     (min_le_right _ _).trans (min_le_left _ _)
   have hdHalfGap : min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) ≤
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
         (σ - 1 / 2) / 1000 :=
     (min_le_right _ _).trans
       ((min_le_right _ _).trans (min_le_left _ _))
+  have hdUpperGap : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min ((σ - 1 / 2) / 1000)
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
+        (1 - σ) / 1000 :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _)))
   have hdSigma : min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) ≤ σ / 8 :=
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤ σ / 8 :=
     (min_le_right _ _).trans
-      ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _)))
+      ((min_le_right _ _).trans
+        ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _))))
   have hdTau : min (ε / 1000)
       (min (ε * τ₀ / 1000)
         (min ((σ - 1 / 2) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))) ≤
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
         1 / (1000 * (1 + τ₀)) :=
     (min_le_right _ _).trans
       ((min_le_right _ _).trans
-        ((min_le_right _ _).trans (min_le_right _ _)))
-  refine ⟨hdPos, hdEps, hdEpsTau, hdHalfGap, hdSigma, hdTau,
+        ((min_le_right _ _).trans
+          ((min_le_right _ _).trans (min_le_right _ _))))
+  refine ⟨hdPos, hdEps, hdEpsTau, hdHalfGap, hdUpperGap, hdSigma, hdTau,
     by linarith, ?_, by linarith⟩
   have hTauOne : 1 / (1000 * (1 + τ₀)) < 1 := by
     rw [div_lt_one hDen]
@@ -4327,6 +4400,91 @@ theorem dyadic_power_mhh_le_endpoint_with_factor
         _ = ((2 : ℝ) ^ B) ^ (2 : ℕ) := Real.rpow_natCast _ 2
     _ ≤ ((2 : ℝ) ^ B) ^ (2 : ℕ) *
         T ^ (3 * (1 - σ) / τ₀) := by gcongr
+
+/-- Dyadic powered extraction with a nearby augmented endpoint scale.  This
+is the finite transition-strip companion to
+`dyadic_power_mhh_le_endpoint_with_factor`: all losses are identical except
+for the explicitly supplied exponent charge `η`. -/
+theorem dyadic_power_mhh_le_endpoint_with_factor_of_augmented_scale
+    {σ τ₀ T τ' η : ℝ} {N k r B : ℕ}
+    (hσLower : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hcert : EndpointScaleCertificate σ τ₀)
+    (hT : 1 ≤ T) (hN : 1 < N) (hk : 0 < k) (hkB : k ≤ B)
+    (hr : r < k)
+    (hScaleLe : typeILogarithmicScale T N / k ≤ τ')
+    (hτ'Lower : 2 * τ₀ / 3 ≤ τ')
+    (hτ'Upper : τ' ≤ τ₀)
+    (hLoss : (3 * (1 - σ) / τ₀) *
+        (τ' - typeILogarithmicScale T N / k) ≤
+      η * (typeILogarithmicScale T N / k)) :
+    let Q := 2 ^ r * N ^ k
+    (Q : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T Q) ≤
+      ((2 : ℝ) ^ B) ^ (2 : ℕ) *
+        T ^ (3 * (1 - σ) / τ₀ + η) := by
+  dsimp only
+  let M : ℕ := N ^ k
+  let Q : ℕ := 2 ^ r * M
+  have hM : 1 < M := by
+    dsimp only [M]
+    exact one_lt_pow₀ hN hk.ne'
+  have hQ : 1 < Q := by
+    dsimp only [Q]
+    exact hM.trans_le (Nat.le_mul_of_pos_left M (pow_pos (by omega) r))
+  have hMQ : M ≤ Q := by
+    dsimp only [Q]
+    exact Nat.le_mul_of_pos_left M (pow_pos (by omega) r)
+  have hScaleM : typeILogarithmicScale T M =
+      typeILogarithmicScale T N / k := by
+    dsimp only [M]
+    exact typeILogarithmicScale_nat_pow hN hk
+  have hScaleQM : typeILogarithmicScale T Q ≤
+      typeILogarithmicScale T M :=
+    typeILogarithmicScale_antitone_length hT hM hMQ
+  have hExpMono : classicalMHHExponent σ (typeILogarithmicScale T Q) ≤
+      classicalMHHExponent σ (typeILogarithmicScale T M) :=
+    classicalMHHExponent_mono_tau hScaleQM
+  have hTauMTwo : typeILogarithmicScale T M ≤ 2 := by
+    rw [hScaleM]
+    exact hScaleLe.trans (hτ'Upper.trans
+      (endpointScaleCertificate_tau0_lt_two hσLower hσUpper hcert).le)
+  have hExpQ := classicalMHHExponent_mem_zero_two hσLower hσUpper
+    (hScaleQM.trans hTauMTwo)
+  have hExpM := classicalMHHExponent_mem_zero_two hσLower hσUpper hTauMTwo
+  have hEndpointM :=
+    rpow_classicalMHHExponent_le_endpoint_target_of_augmented_scale
+      hσUpper hcert (lt_of_lt_of_le (by norm_num) hT) hM
+      (by simpa only [hScaleM] using hScaleLe) hτ'Lower hτ'Upper
+      (by simpa only [hScaleM] using hLoss)
+  have hrB : r ≤ B := le_trans (Nat.le_of_lt hr) hkB
+  have hQFactor : (Q : ℝ) ≤ (2 : ℝ) ^ B * M := by
+    dsimp only [Q]
+    have hPow : 2 ^ r ≤ 2 ^ B :=
+      pow_le_pow_right₀ (by omega : (1 : ℕ) ≤ 2) hrB
+    exact_mod_cast Nat.mul_le_mul_right M hPow
+  have hFOne : (1 : ℝ) ≤ (2 : ℝ) ^ B := by
+    exact one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 2)
+  calc
+    (Q : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T Q) ≤
+        (Q : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T M) :=
+      Real.rpow_le_rpow_of_exponent_le (by exact_mod_cast hQ.le) hExpMono
+    _ ≤ ((2 : ℝ) ^ B * M) ^
+        classicalMHHExponent σ (typeILogarithmicScale T M) := by
+      exact Real.rpow_le_rpow (by positivity) hQFactor hExpM.1
+    _ = ((2 : ℝ) ^ B) ^
+          classicalMHHExponent σ (typeILogarithmicScale T M) *
+        (M : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T M) := by
+      rw [Real.mul_rpow (by positivity) (by positivity)]
+    _ ≤ ((2 : ℝ) ^ B) ^ (2 : ℕ) *
+        (M : ℝ) ^ classicalMHHExponent σ (typeILogarithmicScale T M) := by
+      gcongr
+      calc
+        ((2 : ℝ) ^ B) ^
+            classicalMHHExponent σ (typeILogarithmicScale T M) ≤
+            ((2 : ℝ) ^ B) ^ (2 : ℝ) :=
+          Real.rpow_le_rpow_of_exponent_le hFOne hExpM.2
+        _ = ((2 : ℝ) ^ B) ^ (2 : ℕ) := Real.rpow_natCast _ 2
+    _ ≤ ((2 : ℝ) ^ B) ^ (2 : ℕ) *
+        T ^ (3 * (1 - σ) / τ₀ + η) := by gcongr
 
 /-- At sufficiently large height, the bounded dyadic factor in powered
 extraction can lower the selected logarithmic scale by at most the fixed
@@ -5615,9 +5773,9 @@ theorem actual_typeI_basic_window_dichotomy_witness_consumer
   intro ε hε
   have hσ : 0 < σ := by linarith
   let d := classicalEndpointLossParameter σ τ₀ ε
-  have hdSpec := classicalEndpointLossParameter_spec hσLower hcert.tau0_pos hε
+  have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hε
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdSigma,
+  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, _hdOne, _hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
@@ -5790,9 +5948,9 @@ theorem actual_typeI_powered_window_dichotomy_witness_consumer
   let εs : ℝ := ε / 100
   let d := classicalEndpointLossParameter σ τ₀ εs
   have hεs : 0 < εs := by dsimp only [εs]; positivity
-  have hdSpec := classicalEndpointLossParameter_spec hσLower hcert.tau0_pos hεs
+  have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEpsSmall, hdEpsTauSmall, _hdHalfGap, _hdSigma,
+  rcases hdSpec with ⟨hd, hdEpsSmall, hdEpsTauSmall, _hdHalfGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, hdOne, _hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
@@ -6078,9 +6236,9 @@ theorem actual_typeI_low_window_dichotomy_witness_consumer
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
   have hεs : 0 < εs := by dsimp only [εs]; positivity
-  have hdSpec := classicalEndpointLossParameter_spec hσLower hcert.tau0_pos hεs
+  have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, hdGap, _hdSigma,
+  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, hdGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, hdOne, hdSigmaStrict⟩
   have hs : 0 < s := by dsimp only [s]; positivity
   have hu : 0 < u := by dsimp only [u]; positivity
@@ -6206,9 +6364,9 @@ theorem actual_typeII_dichotomy_witness_consumer
   intro ε hε
   have hσ : 0 < σ := by linarith
   let d := classicalEndpointLossParameter σ τ₀ ε
-  have hdSpec := classicalEndpointLossParameter_spec hσLower hcert.tau0_pos hε
+  have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hε
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, hdSigma, hdSmall,
+  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdUpperGap, hdSigma, hdSmall,
     hdHalf, hdOne, hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
