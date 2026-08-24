@@ -128,6 +128,44 @@ theorem finitePowCoeff_bound
     _ ≤ (target.card : ℝ) := by exact_mod_cast Finset.card_le_card hsource
     _ ≤ C * (m : ℝ) ^ ε := by simpa [target] using hFactor m hm
 
+/-- Quantifier-correct uniform form of `finitePowCoeff_bound`.  For a fixed
+power and epsilon, the factorization constant is chosen before the block
+length and coefficients, exactly as required by an eventual density bound. -/
+theorem finitePowCoeff_bound_uniform
+    (k : ℕ) (eps : ℝ) (heps : 0 < eps) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (a : ℕ → ℂ),
+      (∀ n ∈ Ioc N (2 * N), ‖a n‖ ≤ 1) →
+      ∀ m : ℕ, 0 < m →
+        ‖finitePowCoeff N k a m‖ ≤ C * (m : ℝ) ^ eps := by
+  obtain ⟨C, hC, hFactor⟩ := factorizationCountBound_native k eps heps
+  refine ⟨C, hC, ?_⟩
+  intro N a ha m hm
+  let source := (Fintype.piFinset (fun (_ : Fin k) => Ioc N (2 * N))).filter
+    (fun p => (∏ x : Fin k, p x) = m)
+  let target := (Fintype.piFinset (fun (_ : Fin k) => Ioc 1 m)).filter
+    (fun p => (∏ x : Fin k, p x) = m)
+  have hsource : source ⊆ target := by
+    simpa [source, target] using pow_coeff_subset N k m hm
+  have hterm : ∀ p ∈ source, ‖∏ x : Fin k, a (p x)‖ ≤ 1 := by
+    intro p hp
+    rw [norm_prod]
+    apply Finset.prod_le_one
+    · intro x _
+      exact norm_nonneg _
+    · intro x _
+      have hpSource := (Finset.mem_filter.mp hp).1
+      rw [Fintype.mem_piFinset] at hpSource
+      exact ha (p x) (hpSource x)
+  calc
+    ‖finitePowCoeff N k a m‖
+        ≤ ∑ p ∈ source, ‖∏ x : Fin k, a (p x)‖ := by
+          simpa only [finitePowCoeff, source] using
+            norm_sum_le source (fun p => ∏ x : Fin k, a (p x))
+    _ ≤ ∑ _p ∈ source, (1 : ℝ) := Finset.sum_le_sum hterm
+    _ = (source.card : ℝ) := by simp
+    _ ≤ (target.card : ℝ) := by exact_mod_cast Finset.card_le_card hsource
+    _ ≤ C * (m : ℝ) ^ eps := by simpa [target] using hFactor m hm
+
 /-- Fixed-line coefficients of an arbitrary powered block, scaled at the
 left endpoint. -/
 noncomputable def finitePoweredLineCoeffs

@@ -129,6 +129,39 @@ theorem continuous_typeIDyadicCutoffMellin :
   exact (𝓕 typeIDyadicMellinSchwartz).continuous.comp
     (continuous_id.div_const (2 * Real.pi))
 
+/-- The Mellin transform of the fixed Type-I dyadic cutoff has arbitrary
+polynomial decay, uniformly in its vertical ordinate. -/
+theorem typeIDyadicCutoffMellin_polynomial_decay (n : ℕ) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ r : ℝ,
+      |r| ^ n * ‖typeIDyadicCutoffMellin r‖ ≤ C := by
+  let F : 𝓢(ℝ, ℂ) := 𝓕 typeIDyadicMellinSchwartz
+  let C : ℝ := (2 * Real.pi) ^ n * SchwartzMap.seminorm ℝ n 0 F
+  have hC : 0 ≤ C := by
+    dsimp only [C]
+    positivity
+  refine ⟨C, hC, ?_⟩
+  intro r
+  have hSem := SchwartzMap.le_seminorm' (𝕜 := ℝ) n 0 F
+    (r / (2 * Real.pi))
+  rw [iteratedDeriv_zero] at hSem
+  have hSem' : ‖r / (2 * Real.pi)‖ ^ n *
+      ‖F (r / (2 * Real.pi))‖ ≤ SchwartzMap.seminorm ℝ n 0 F := hSem
+  rw [typeIDyadicCutoffMellin_eq_fourier]
+  change |r| ^ n * ‖F (r / (2 * Real.pi))‖ ≤ C
+  have hpi : 0 < 2 * Real.pi := by positivity
+  have hAbs : |r| = (2 * Real.pi) * ‖r / (2 * Real.pi)‖ := by
+    rw [Real.norm_eq_abs, abs_div, abs_of_pos hpi]
+    field_simp [hpi.ne']
+  rw [hAbs, mul_pow]
+  dsimp only [C]
+  calc
+    (2 * Real.pi) ^ n * ‖r / (2 * Real.pi)‖ ^ n *
+          ‖F (r / (2 * Real.pi))‖ =
+        (2 * Real.pi) ^ n *
+          (‖r / (2 * Real.pi)‖ ^ n * ‖F (r / (2 * Real.pi))‖) := by ring
+    _ ≤ (2 * Real.pi) ^ n * SchwartzMap.seminorm ℝ n 0 F :=
+      mul_le_mul_of_nonneg_left hSem' (pow_nonneg hpi.le n)
+
 theorem verticalIntegrable_typeIDyadicCutoffMellin :
     VerticalIntegrable (mellin typeIDyadicCutoffComplex) 1 := by
   rw [VerticalIntegrable]
@@ -1072,7 +1105,8 @@ noncomputable def typeINormalizedAmplitude (σ x : ℝ) : ℂ :=
   (typeIDyadicCutoff x : ℂ) *
     Complex.exp ((((-σ * Real.log x : ℝ) : ℂ)))
 
-private theorem contDiff_typeINormalizedAmplitude (σ : ℝ) :
+/-- The normalized Type-I amplitude is smooth to every order. -/
+theorem contDiff_typeINormalizedAmplitude (σ : ℝ) :
     ContDiff ℝ ∞ (typeINormalizedAmplitude σ) := by
   rw [contDiff_iff_contDiffAt]
   intro x
@@ -1667,6 +1701,125 @@ theorem typeINormalizedFarTail_bound (σ : ℝ) :
       rw [div_mul_eq_mul_div]
       apply (div_le_div_iff_of_pos_right hDen).2
       have hpowNonneg : 0 ≤ (1 + |t|) ^ 102 := by positivity
+      nlinarith
+
+/-- Arbitrary-order version of `typeINormalizedFarTail_bound`.  Keeping the
+order visible is essential in endpoint arguments: the physical cutoff may be
+only `T^d` beyond the stationary window, where `d` is chosen after the final
+epsilon. -/
+theorem typeINormalizedFarTail_bound_order (σ : ℝ) (n : ℕ) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (t : ℝ) (Q M : ℕ),
+      0 < Q → 0 < M →
+      ‖typeINormalizedFarTail σ t Q M‖ ≤
+        K * (1 + |t|) ^ (n + 2) /
+          ((Q : ℝ) ^ (n + 1) * (M : ℝ) ^ n) := by
+  obtain ⟨C₀, hC₀, hDecay⟩ :=
+    typeINormalizedFourier_uniform_decay σ (n + 2)
+  let C : ℝ := C₀ + 1
+  have hC : 0 < C := by dsimp only [C]; linarith
+  have hPSeries : Summable (fun m : ℤ => ‖1 / (m : ℂ) ^ 2‖) := by
+    have hNorm : (fun m : ℤ => ‖1 / (m : ℂ) ^ 2‖) =
+        fun m : ℤ => |1 / (m : ℝ) ^ 2| := by
+      funext m
+      simp only [norm_div, norm_one, norm_pow, Complex.norm_intCast,
+        abs_div, abs_one, pow_abs]
+    rw [hNorm, summable_abs_iff]
+    exact Real.summable_one_div_int_pow.mpr (by norm_num)
+  let B : ℝ := ∑' m : ℤ, ‖1 / (m : ℂ) ^ 2‖
+  have hB : 0 ≤ B := tsum_nonneg fun m => norm_nonneg _
+  refine ⟨C * B + 1, by positivity, ?_⟩
+  intro t Q M hQ hM
+  have hQr : 0 < (Q : ℝ) := by exact_mod_cast hQ
+  have hMr : 0 < (M : ℝ) := by exact_mod_cast hM
+  let scale : ℝ := C * (1 + |t|) ^ (n + 2) /
+    ((Q : ℝ) ^ (n + 1) * (M : ℝ) ^ n)
+  have hPointwise : ∀ m : ℤ, M < m.natAbs →
+      ‖(Q : ℂ) * typeINormalizedFourier σ t
+          ((Q : ℝ) * (m : ℝ))‖ ≤
+        scale * ‖1 / (m : ℂ) ^ 2‖ := by
+    intro m hm
+    have hmNatPos : 0 < m.natAbs := hM.trans hm
+    have hmNe : m ≠ 0 := Int.natAbs_ne_zero.mp hmNatPos.ne'
+    have hmReal : (m : ℝ) ≠ 0 := by exact_mod_cast hmNe
+    have hmAbsPos : 0 < |(m : ℝ)| := abs_pos.mpr hmReal
+    have hmAbs : (M : ℝ) ≤ |(m : ℝ)| := by
+      have hcast : (M : ℝ) ≤ (m.natAbs : ℝ) := by
+        exact_mod_cast (Nat.le_of_lt hm)
+      simpa using hcast
+    have hFreqAbs : |(Q : ℝ) * (m : ℝ)| =
+        (Q : ℝ) * |(m : ℝ)| := by
+      rw [abs_mul, abs_of_pos hQr]
+    have hFreqPos : 0 < |(Q : ℝ) * (m : ℝ)| := by
+      rw [hFreqAbs]
+      positivity
+    have hFourier :
+        ‖typeINormalizedFourier σ t ((Q : ℝ) * (m : ℝ))‖ ≤
+          C₀ * (1 + |t|) ^ (n + 2) /
+            |(Q : ℝ) * (m : ℝ)| ^ (n + 2) := by
+      rw [le_div_iff₀ (pow_pos hFreqPos (n + 2))]
+      simpa [mul_comm] using hDecay t ((Q : ℝ) * (m : ℝ))
+    have hpow : (M : ℝ) ^ n * |(m : ℝ)| ^ 2 ≤
+        |(m : ℝ)| ^ (n + 2) := by
+      calc
+        (M : ℝ) ^ n * |(m : ℝ)| ^ 2 ≤
+            |(m : ℝ)| ^ n * |(m : ℝ)| ^ 2 := by gcongr
+        _ = |(m : ℝ)| ^ (n + 2) := by rw [pow_add]
+    have hDenSmall : 0 < (Q : ℝ) ^ (n + 1) *
+        ((M : ℝ) ^ n * |(m : ℝ)| ^ 2) := by positivity
+    have hDenLarge : 0 < (Q : ℝ) ^ (n + 1) *
+        |(m : ℝ)| ^ (n + 2) := by positivity
+    rw [norm_mul, Complex.norm_natCast, norm_div, norm_one, norm_pow,
+      Complex.norm_intCast]
+    calc
+      (Q : ℝ) *
+          ‖typeINormalizedFourier σ t ((Q : ℝ) * (m : ℝ))‖ ≤
+        (Q : ℝ) * (C₀ * (1 + |t|) ^ (n + 2) /
+          |(Q : ℝ) * (m : ℝ)| ^ (n + 2)) := by gcongr
+      _ = C₀ * (1 + |t|) ^ (n + 2) /
+          ((Q : ℝ) ^ (n + 1) * |(m : ℝ)| ^ (n + 2)) := by
+        rw [hFreqAbs, mul_pow]
+        field_simp [hQr.ne']
+        rw [show n + 2 = (n + 1) + 1 by omega, pow_succ]
+        ring
+      _ ≤ C * (1 + |t|) ^ (n + 2) /
+          ((Q : ℝ) ^ (n + 1) * |(m : ℝ)| ^ (n + 2)) := by
+        exact div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_right (by dsimp only [C]; linarith)
+            (by positivity)) hDenLarge.le
+      _ ≤ C * (1 + |t|) ^ (n + 2) /
+          ((Q : ℝ) ^ (n + 1) *
+            ((M : ℝ) ^ n * |(m : ℝ)| ^ 2)) := by
+        exact div_le_div_of_nonneg_left (by positivity) hDenSmall
+          (mul_le_mul_of_nonneg_left hpow (by positivity))
+      _ = scale * (1 / |(m : ℝ)| ^ 2) := by
+        dsimp only [scale]
+        field_simp [hQr.ne', hMr.ne', hmAbsPos.ne']
+  have hComparison : ∀ m : ℤ,
+      ‖if M < m.natAbs then
+          (Q : ℂ) * typeINormalizedFourier σ t
+            ((Q : ℝ) * (m : ℝ)) else 0‖ ≤
+        scale * ‖1 / (m : ℂ) ^ 2‖ := by
+    intro m
+    by_cases hm : M < m.natAbs
+    · simpa only [if_pos hm] using hPointwise m hm
+    · have hscale : 0 ≤ scale := by dsimp only [scale]; positivity
+      rw [if_neg hm, norm_zero]
+      exact mul_nonneg hscale (norm_nonneg _)
+  have hScaledSummable : Summable
+      (fun m : ℤ => scale * ‖1 / (m : ℂ) ^ 2‖) :=
+    hPSeries.mul_left scale
+  have hBound := tsum_of_norm_bounded hScaledSummable.hasSum hComparison
+  rw [tsum_mul_left] at hBound
+  change ‖typeINormalizedFarTail σ t Q M‖ ≤ scale * B at hBound
+  have hDen : 0 < (Q : ℝ) ^ (n + 1) * (M : ℝ) ^ n := by positivity
+  calc
+    ‖typeINormalizedFarTail σ t Q M‖ ≤ scale * B := hBound
+    _ ≤ (C * B + 1) * (1 + |t|) ^ (n + 2) /
+          ((Q : ℝ) ^ (n + 1) * (M : ℝ) ^ n) := by
+      dsimp only [scale]
+      rw [div_mul_eq_mul_div]
+      apply (div_le_div_iff_of_pos_right hDen).2
+      have hpowNonneg : 0 ≤ (1 + |t|) ^ (n + 2) := by positivity
       nlinarith
 
 /-! ## Exact scaled Poisson assembly -/

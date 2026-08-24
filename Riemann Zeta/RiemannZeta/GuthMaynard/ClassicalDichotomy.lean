@@ -595,6 +595,10 @@ theorem extract_classical_dichotomy_of_scale_bounds :
                     Nat.clog 2 ⌊sharpZetaCutoff T⌋₊ ≤
                   ‖dirichletPoly (2 ^ r * Y)
                     (classicalZetaLongLineCoeff ⌊sharpZetaCutoff T⌋₊ σ) t‖) ∧
+              (∀ t ∈ W,
+                (3 / 4) * (T ^ (-D₁) / 2) ≤
+                  ‖classicalZetaLongTail Y ⌊sharpZetaCutoff T⌋₊
+                    ((σ : ℂ) + I * (t : ℂ))‖) ∧
               (∀ t ∈ W, T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ) ∧
               zeroCountRect σ 1 T (2 * T) ≤
                 4 * Nat.clog 2 ⌊sharpZetaCutoff T⌋₊ *
@@ -649,8 +653,11 @@ theorem extract_classical_dichotomy_of_scale_bounds :
           (T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ) ∧
           ∃ r ∈ Finset.range kI,
             ((3 / 4) * (q / 2)) / kI ≤
-              ‖dirichletPoly (2 ^ r * Y)
-                (classicalZetaLongLineCoeff A σ) t‖ := by
+                ‖dirichletPoly (2 ^ r * Y)
+                  (classicalZetaLongLineCoeff A σ) t‖ ∧
+            (3 / 4) * (q / 2) ≤
+              ‖classicalZetaLongTail Y A
+                ((σ : ℂ) + I * (t : ℂ))‖ := by
       intro ρ hρ hChoice
       have hSharp : ‖classicalZetaPartialSum A ρ‖ ≤ q / 2 := by
         have hBase := norm_zeta_zero_sharp_cutoff_sum_le
@@ -686,7 +693,8 @@ theorem extract_classical_dichotomy_of_scale_bounds :
       obtain ⟨r, hr, hrLarge⟩ := exists_classicalZetaLong_large_dyadic_block
         Y A σ t ((3 / 4) * (q / 2)) hY hA htLarge'
       exact ⟨t, by simpa [abs_sub_comm] using htShift, htInterval,
-        r, by simpa only [kI] using hr, by simpa only [kI] using hrLarge⟩
+        r, by simpa only [kI] using hr,
+        by simpa only [kI] using hrLarge, htLarge'⟩
     have hEachII : ∀ ρ ∈ S, ¬ ChoosesClassicalTypeI Y q ρ →
         ∃ t : ℝ, |ρ.im - t| ≤ T ^ δ ∧
           (T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ) ∧
@@ -728,17 +736,35 @@ theorem extract_classical_dichotomy_of_scale_bounds :
       intro z
       simpa only [S, zeroUnitBin] using
         zeroUnitBin_multiplicity_le_cap σ T z hσ.le hTEight
-    simpa only [A, S, q, kI, kII] using
-      finite_common_scale_binary_branch_extraction S
-        (analyticVanishingOrder riemannZeta) Complex.im
-        (ChoosesClassicalTypeI Y q) kI kII
-        (classicalLocalMultiplicityCap T) (T ^ δ)
-        (fun r t => ((3 / 4) * (q / 2)) / kI ≤
-          ‖dirichletPoly (2 ^ r * Y) (classicalZetaLongLineCoeff A σ) t‖)
-        (fun r t => ((3 / 4) * (3 / 4)) / kII ≤
-          ‖dirichletPoly (2 ^ r * X) (sharpMollifiedLineCoeff Y X σ) t‖)
-        (fun t => T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ)
-        hTotalPos hEachI hEachII hLocal
+    have hExtract := finite_common_scale_binary_branch_extraction S
+      (analyticVanishingOrder riemannZeta) Complex.im
+      (ChoosesClassicalTypeI Y q) kI kII
+      (classicalLocalMultiplicityCap T) (T ^ δ)
+      (fun r t =>
+        (((3 / 4) * (q / 2)) / kI ≤
+          ‖dirichletPoly (2 ^ r * Y) (classicalZetaLongLineCoeff A σ) t‖) ∧
+        (3 / 4) * (q / 2) ≤
+          ‖classicalZetaLongTail Y A
+            ((σ : ℂ) + I * (t : ℂ))‖)
+      (fun r t => ((3 / 4) * (3 / 4)) / kII ≤
+        ‖dirichletPoly (2 ^ r * X) (sharpMollifiedLineCoeff Y X σ) t‖)
+      (fun t => T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ)
+      hTotalPos hEachI hEachII hLocal
+    rcases hExtract with
+      ⟨r, hr, W, hSep, hBoth, hRange, hCount⟩ |
+      ⟨r, hr, W, hSep, hLarge, hRange, hCount⟩
+    · left
+      refine ⟨r, by simpa only [kI, A] using hr, W, hSep, ?_, ?_, hRange, ?_⟩
+      · intro t ht
+        simpa only [q, kI, A] using (hBoth t ht).1
+      · intro t ht
+        simpa only [q, A] using (hBoth t ht).2
+      · simpa only [S, zeroCountRect, kI, A] using hCount
+    · right
+      refine ⟨r, by simpa only [kII] using hr, W, hSep, ?_, hRange, ?_⟩
+      · intro t ht
+        simpa only [kII] using hLarge t ht
+      · simpa only [S, zeroCountRect, kII] using hCount
 
 /-- The two power cutoffs used in the classical dichotomy eventually have
 all required order, positivity, and ambient-length properties. -/
@@ -977,6 +1003,10 @@ def ClassicalTypeITypeIIDichotomyConclusion
         ((3 / 4) * (T ^ (-δ₂) / 2)) / Nat.clog 2 A ≤
           ‖dirichletPoly (2 ^ r * Y)
             (classicalZetaLongLineCoeff A σ) t‖) ∧
+      (∀ t ∈ W,
+        (3 / 4) * (T ^ (-δ₂) / 2) ≤
+          ‖classicalZetaLongTail Y A
+            ((σ : ℂ) + I * (t : ℂ))‖) ∧
       (∀ t ∈ W, T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ) ∧
       zeroCountRect σ 1 T (2 * T) ≤
         4 * Nat.clog 2 A *

@@ -237,6 +237,46 @@ theorem actual_typeI_dichotomy_witness_mhh_native :
     (norm_classicalZetaLongLineCoeff_le_one C N σ hσ)
     hSep hBase hLarge
 
+/-- Unrestricted MHH applied after the indispensable `N^σ` source
+normalization.  The conclusion retains the harmonic factor, but its
+threshold is the correctly normalized `N^σ V`; this is the form consumed
+by the endpoint branch-to-slab theorem. -/
+theorem actual_typeI_normalized_dichotomy_witness_mhh_native :
+    ∃ K : ℝ, 0 < K ∧
+      ∀ (C N : ℕ) (σ δ T V : ℝ) (W : Finset ℝ),
+        0 ≤ σ → 0 < N → 2 ≤ T → 0 < V →
+        T ^ δ ≤ T / 2 → IsSeparated 1 W →
+        (∀ t ∈ W, T - T ^ δ ≤ t ∧ t ≤ 2 * T + T ^ δ) →
+        (∀ t ∈ W,
+          V ≤ ‖dirichletPoly N (classicalZetaLongLineCoeff C σ) t‖) →
+        (W.card : ℝ) ≤
+          K * (1 + (((harmonic N : ℚ) : ℝ))) *
+            ((N : ℝ) ^ 2 / ((N : ℝ) ^ σ * V) ^ 2 +
+              (3 * T) * min
+                ((N : ℝ) / ((N : ℝ) ^ σ * V) ^ 2)
+                ((N : ℝ) ^ 4 / ((N : ℝ) ^ σ * V) ^ 6)) := by
+  obtain ⟨K, hK, hMHH⟩ := classical_large_values_with_harmonic_unrestricted
+  refine ⟨K, hK, ?_⟩
+  intro C N σ δ T V W hσ hN hT hV hShift hSep hInterval hLarge
+  have hBase : InBaseInterval (3 * T) W := by
+    intro t ht
+    rw [Set.mem_Icc]
+    have htRange := hInterval t ht
+    constructor
+    · calc
+        (0 : ℝ) ≤ T / 2 := by linarith
+        _ ≤ T - T ^ δ := by linarith
+        _ ≤ t := htRange.1
+    · calc
+        t ≤ 2 * T + T ^ δ := htRange.2
+        _ ≤ 3 * T := by linarith
+  have hThreshold : 0 < (N : ℝ) ^ σ * V := by positivity
+  exact hMHH N (3 * T) ((N : ℝ) ^ σ * V) W
+    (normalizedClassicalTypeICoeff C N σ) hN (by linarith) hThreshold
+    (norm_normalizedClassicalTypeICoeff_le_one C N σ hN hσ)
+    hSep hBase (fun t ht =>
+      normalizedClassicalTypeICoeff_large C N σ t V hN (hLarge t ht))
+
 /-- The epsilon-absorbed MHH estimate for the actual enlarged-interval
 Type-I witness, with the indispensable source normalization included.
 
@@ -338,6 +378,119 @@ theorem powered_actual_typeI_block_large_values_bound
       (norm_normalizedClassicalTypeICoeff_le_one C N σ hN hσ)
       hSep hBase hLargeNormalized η hη
   simpa only [Real.rpow_zero, one_mul] using hPowered
+
+/-- Uniform-constant powered Type-I estimate.  For fixed `k` and `η`, the
+coefficient normalization and MHH constants precede every actual detector
+scale and witness family. -/
+theorem powered_actual_typeI_block_large_values_bound_uniform
+    (k : ℕ) (η : ℝ) (hη : 0 < η) :
+    ∃ D : ℝ, 0 < D ∧ ∃ K : ℝ, 0 < K ∧
+      ∀ (C N : ℕ) (σ H V : ℝ) (W : Finset ℝ),
+        0 < N → 0 < k → 0 ≤ σ → 1 ≤ H → 0 < V →
+        IsSeparated 1 W → InBaseInterval H W →
+        (∀ t ∈ W,
+          V ≤ ‖dirichletPoly N (classicalZetaLongLineCoeff C σ) t‖) →
+        ∃ r ∈ Finset.range k, ∃ W' ⊆ W,
+          let Q := 2 ^ r * N ^ k
+          let L := (((N : ℝ) ^ σ * V) ^ k /
+              (D * ((2 ^ k * N ^ k : ℕ) : ℝ) ^ η)) / k
+          (W.card : ℝ) ≤ k * (W'.card : ℝ) ∧
+          IsSeparated 1 W' ∧ InBaseInterval H W' ∧
+          (∀ t ∈ W', L ≤
+            ‖dirichletPoly Q
+              (normalizedFinitePoweredCoeffs N k
+                (normalizedClassicalTypeICoeff C N σ) 0 D η) t‖) ∧
+          (W'.card : ℝ) ≤
+            K * (1 + (((harmonic Q : ℚ) : ℝ))) *
+              ((Q : ℝ) ^ 2 / L ^ 2 +
+                H * min ((Q : ℝ) / L ^ 2)
+                  ((Q : ℝ) ^ 4 / L ^ 6)) := by
+  obtain ⟨D, hD, K, hK, hPowered⟩ :=
+    powered_unit_block_large_values_bound_uniform k η hη
+  refine ⟨D, hD, K, hK, ?_⟩
+  intro C N σ H V W hN hk hσ hH hV hSep hBase hLarge
+  have hLargeNormalized : ∀ t ∈ W,
+      (N : ℝ) ^ σ * V ≤
+        ‖∑ n ∈ Finset.Ioc N (2 * N),
+          normalizedClassicalTypeICoeff C N σ n *
+            (n : ℂ) ^ (-(0 + Complex.I * t))‖ := by
+    intro t ht
+    have hEq :
+        ∑ n ∈ Finset.Ioc N (2 * N),
+            normalizedClassicalTypeICoeff C N σ n *
+              (n : ℂ) ^ (-(0 + Complex.I * t)) =
+          dirichletPoly N (normalizedClassicalTypeICoeff C N σ) t := by
+      unfold dirichletPoly dyadicInterval
+      apply Finset.sum_congr rfl
+      intro n _
+      congr 2
+      ring
+    rw [hEq]
+    exact normalizedClassicalTypeICoeff_large C N σ t V hN
+      (hLarge t ht)
+  obtain ⟨r, hr, W', hW', hCard, hSep', hBase', hLarge', hBound⟩ :=
+    hPowered N (normalizedClassicalTypeICoeff C N σ) 0 H
+      ((N : ℝ) ^ σ * V) W hN hk (by norm_num) hH (by positivity)
+      (norm_normalizedClassicalTypeICoeff_le_one C N σ hN hσ)
+      hSep hBase hLargeNormalized
+  refine ⟨r, hr, W', hW', hCard, hSep', hBase', ?_, ?_⟩
+  · simpa only [Real.rpow_zero, one_mul] using hLarge'
+  · simpa only [Real.rpow_zero, one_mul] using hBound
+
+/-- Bounded-power uniform form of the actual Type-I powered route. -/
+theorem powered_actual_typeI_block_large_values_bound_bounded_uniform
+    (B : ℕ) (η : ℝ) (hη : 0 < η) :
+    ∃ D : ℝ, 1 ≤ D ∧ ∃ K : ℝ, 0 < K ∧
+      ∀ (k C N : ℕ) (σ H V : ℝ) (W : Finset ℝ),
+        0 < k → k ≤ B → 0 < N → 0 ≤ σ → 1 ≤ H → 0 < V →
+        IsSeparated 1 W → InBaseInterval H W →
+        (∀ t ∈ W,
+          V ≤ ‖dirichletPoly N (classicalZetaLongLineCoeff C σ) t‖) →
+        ∃ r ∈ Finset.range k, ∃ W' ⊆ W,
+          let Q := 2 ^ r * N ^ k
+          let L := (((N : ℝ) ^ σ * V) ^ k /
+              (D * ((2 ^ k * N ^ k : ℕ) : ℝ) ^ η)) / k
+          (W.card : ℝ) ≤ k * (W'.card : ℝ) ∧
+          IsSeparated 1 W' ∧ InBaseInterval H W' ∧
+          (∀ t ∈ W', L ≤
+            ‖dirichletPoly Q
+              (normalizedFinitePoweredCoeffs N k
+                (normalizedClassicalTypeICoeff C N σ) 0 D η) t‖) ∧
+          (W'.card : ℝ) ≤
+            K * (1 + (((harmonic Q : ℚ) : ℝ))) *
+              ((Q : ℝ) ^ 2 / L ^ 2 +
+                H * min ((Q : ℝ) / L ^ 2)
+                  ((Q : ℝ) ^ 4 / L ^ 6)) := by
+  obtain ⟨D, hD, K, hK, hPowered⟩ :=
+    powered_unit_block_large_values_bound_bounded_uniform B η hη
+  refine ⟨D, hD, K, hK, ?_⟩
+  intro k C N σ H V W hk hkB hN hσ hH hV hSep hBase hLarge
+  have hLargeNormalized : ∀ t ∈ W,
+      (N : ℝ) ^ σ * V ≤
+        ‖∑ n ∈ Finset.Ioc N (2 * N),
+          normalizedClassicalTypeICoeff C N σ n *
+            (n : ℂ) ^ (-(0 + Complex.I * t))‖ := by
+    intro t ht
+    have hEq :
+        ∑ n ∈ Finset.Ioc N (2 * N),
+            normalizedClassicalTypeICoeff C N σ n *
+              (n : ℂ) ^ (-(0 + Complex.I * t)) =
+          dirichletPoly N (normalizedClassicalTypeICoeff C N σ) t := by
+      unfold dirichletPoly dyadicInterval
+      apply Finset.sum_congr rfl
+      intro n _
+      congr 2
+      ring
+    rw [hEq]
+    exact normalizedClassicalTypeICoeff_large C N σ t V hN (hLarge t ht)
+  obtain ⟨r, hr, W', hW', hCard, hSep', hBase', hLarge', hBound⟩ :=
+    hPowered k N (normalizedClassicalTypeICoeff C N σ) 0 H
+      ((N : ℝ) ^ σ * V) W hk hkB hN (by norm_num) hH (by positivity)
+      (norm_normalizedClassicalTypeICoeff_le_one C N σ hN hσ)
+      hSep hBase hLargeNormalized
+  refine ⟨r, hr, W', hW', hCard, hSep', hBase', ?_, ?_⟩
+  · simpa only [Real.rpow_zero, one_mul] using hLarge'
+  · simpa only [Real.rpow_zero, one_mul] using hBound
 
 /-- The exact direct-route obligation for an actual Type-I dichotomy witness,
 after the source normalization and harmonic-loss absorption. -/
