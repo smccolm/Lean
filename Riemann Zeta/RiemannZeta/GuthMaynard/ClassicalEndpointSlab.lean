@@ -3852,83 +3852,156 @@ theorem typeILogarithmicScale_mem_iff
 
 /-- One explicit epsilon budget shared by the detector displacement,
 multiplicity, coefficient normalization, powering and harmonic losses. -/
-noncomputable def classicalEndpointLossParameter
+noncomputable def classicalEndpointBaseLossParameter
     (σ τ₀ ε : ℝ) : ℝ :=
   min (ε / 1000)
     (min (ε * τ₀ / 1000)
-      (min ((σ - 1 / 2) / 1000)
-        (min ((1 - σ) / 1000)
-          (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))
+      (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+        (min ((σ - 1 / 2) / 1000)
+          (min ((1 - σ) / 1000)
+            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))))
+
+theorem classicalEndpointBaseLossParameter_spec
+    {σ τ₀ ε : ℝ} (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hτ₀ : 0 < τ₀) (hε : 0 < ε) :
+    let d := classicalEndpointBaseLossParameter σ τ₀ ε
+    0 < d ∧ d ≤ ε / 1000 ∧ d ≤ ε * τ₀ / 1000 ∧
+      d ≤ ε * τ₀ * (σ - 1 / 2) / 1000000 ∧
+      d ≤ (σ - 1 / 2) / 1000 ∧ d ≤ (1 - σ) / 1000 ∧ d ≤ σ / 8 ∧
+      d ≤ 1 / (1000 * (1 + τ₀)) ∧
+      d / 2 ≤ d ∧ d ≤ 1 ∧ d < σ := by
+  dsimp [classicalEndpointBaseLossParameter]
+  have hDen : 0 < 1000 * (1 + τ₀) := by positivity
+  have hLast : 0 < 1 / (1000 * (1 + τ₀)) := by positivity
+  have hdPos : 0 < min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) := by positivity
+  have hdEps : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤ ε / 1000 :=
+    min_le_left _ _
+  have hdEpsTau : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤
+        ε * τ₀ / 1000 :=
+    (min_le_right _ _).trans (min_le_left _ _)
+  have hdReflected : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤
+        ε * τ₀ * (σ - 1 / 2) / 1000000 :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans (min_le_left _ _))
+  have hdHalfGap : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤
+        (σ - 1 / 2) / 1000 :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans
+        ((min_le_right _ _).trans (min_le_left _ _)))
+  have hdUpperGap : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤
+        (1 - σ) / 1000 :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans
+        ((min_le_right _ _).trans
+          ((min_le_right _ _).trans (min_le_left _ _))))
+  have hdSigma : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤ σ / 8 :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans
+        ((min_le_right _ _).trans
+          ((min_le_right _ _).trans
+            ((min_le_right _ _).trans (min_le_left _ _)))))
+  have hdTau : min (ε / 1000)
+      (min (ε * τ₀ / 1000)
+        (min (ε * τ₀ * (σ - 1 / 2) / 1000000)
+          (min ((σ - 1 / 2) / 1000)
+            (min ((1 - σ) / 1000)
+              (min (σ / 8) (1 / (1000 * (1 + τ₀)))))))) ≤
+        1 / (1000 * (1 + τ₀)) :=
+    (min_le_right _ _).trans
+      ((min_le_right _ _).trans
+        ((min_le_right _ _).trans
+          ((min_le_right _ _).trans
+            ((min_le_right _ _).trans (min_le_right _ _)))))
+  refine ⟨hdPos, hdEps, hdEpsTau, hdReflected, hdHalfGap, hdUpperGap, hdSigma, hdTau,
+    by linarith, ?_, by linarith⟩
+  have hTauOne : 1 / (1000 * (1 + τ₀)) < 1 := by
+    rw [div_lt_one hDen]
+    nlinarith
+  exact hdTau.trans hTauOne.le
+
+/-- The common endpoint loss, with the additional strict Weyl margin that
+is active precisely when a medium source scale can reach `τ = 2`.  Below
+`σ = 5/6` that branch is arithmetically empty, so the original loss is kept
+unchanged. -/
+noncomputable def classicalEndpointLossParameter
+    (σ τ₀ ε : ℝ) : ℝ :=
+  min (classicalEndpointBaseLossParameter σ τ₀ ε)
+    (if 5 / 6 < σ then (σ - 5 / 6) / 1000
+      else classicalEndpointBaseLossParameter σ τ₀ ε)
 
 theorem classicalEndpointLossParameter_spec
     {σ τ₀ ε : ℝ} (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
     (hτ₀ : 0 < τ₀) (hε : 0 < ε) :
     let d := classicalEndpointLossParameter σ τ₀ ε
     0 < d ∧ d ≤ ε / 1000 ∧ d ≤ ε * τ₀ / 1000 ∧
+      d ≤ ε * τ₀ * (σ - 1 / 2) / 1000000 ∧
       d ≤ (σ - 1 / 2) / 1000 ∧ d ≤ (1 - σ) / 1000 ∧ d ≤ σ / 8 ∧
       d ≤ 1 / (1000 * (1 + τ₀)) ∧
       d / 2 ≤ d ∧ d ≤ 1 ∧ d < σ := by
-  dsimp [classicalEndpointLossParameter]
-  have hDen : 0 < 1000 * (1 + τ₀) := by positivity
-  have hLast : 0 < 1 / (1000 * (1 + τ₀)) := by positivity
-  have hdPos : 0 < min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) := by positivity
-  have hdEps : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤ ε / 1000 :=
-    min_le_left _ _
-  have hdEpsTau : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
-        ε * τ₀ / 1000 :=
-    (min_le_right _ _).trans (min_le_left _ _)
-  have hdHalfGap : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
-        (σ - 1 / 2) / 1000 :=
-    (min_le_right _ _).trans
-      ((min_le_right _ _).trans (min_le_left _ _))
-  have hdUpperGap : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
-        (1 - σ) / 1000 :=
-    (min_le_right _ _).trans
-      ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _)))
-  have hdSigma : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤ σ / 8 :=
-    (min_le_right _ _).trans
-      ((min_le_right _ _).trans
-        ((min_le_right _ _).trans ((min_le_right _ _).trans (min_le_left _ _))))
-  have hdTau : min (ε / 1000)
-      (min (ε * τ₀ / 1000)
-        (min ((σ - 1 / 2) / 1000)
-          (min ((1 - σ) / 1000)
-            (min (σ / 8) (1 / (1000 * (1 + τ₀))))))) ≤
-        1 / (1000 * (1 + τ₀)) :=
-    (min_le_right _ _).trans
-      ((min_le_right _ _).trans
-        ((min_le_right _ _).trans
-          ((min_le_right _ _).trans (min_le_right _ _))))
-  refine ⟨hdPos, hdEps, hdEpsTau, hdHalfGap, hdUpperGap, hdSigma, hdTau,
-    by linarith, ?_, by linarith⟩
-  have hTauOne : 1 / (1000 * (1 + τ₀)) < 1 := by
-    rw [div_lt_one hDen]
-    nlinarith
-  exact hdTau.trans hTauOne.le
+  have hbase := classicalEndpointBaseLossParameter_spec hσ hσUpper hτ₀ hε
+  dsimp only at hbase
+  by_cases hFiveSixths : 5 / 6 < σ
+  · have hcap : 0 < (σ - 5 / 6) / 1000 := by positivity
+    rcases hbase with ⟨hbPos, hbEps, hbEpsTau, hbReflected, hbHalfGap,
+      hbUpperGap, hbSigma, hbTau, _hbHalf, hbOne, hbSigmaStrict⟩
+    have hdBase : classicalEndpointLossParameter σ τ₀ ε ≤
+        classicalEndpointBaseLossParameter σ τ₀ ε := by
+      unfold classicalEndpointLossParameter
+      exact min_le_left _ _
+    have hdPos : 0 < classicalEndpointLossParameter σ τ₀ ε := by
+      unfold classicalEndpointLossParameter
+      rw [if_pos hFiveSixths]
+      exact lt_min hbPos hcap
+    refine ⟨hdPos, hdBase.trans hbEps, hdBase.trans hbEpsTau,
+      hdBase.trans hbReflected, hdBase.trans hbHalfGap,
+      hdBase.trans hbUpperGap, hdBase.trans hbSigma, hdBase.trans hbTau,
+      by linarith, hdBase.trans hbOne, hdBase.trans_lt hbSigmaStrict⟩
+  · simpa only [classicalEndpointLossParameter, if_neg hFiveSixths,
+      min_self] using hbase
+
+/-- In the only strip where a medium source scale can reach two, the common
+loss parameter is smaller than the available Weyl exponent margin. -/
+theorem classicalEndpointLossParameter_le_fiveSixthsGap
+    {σ τ₀ ε : ℝ} (hσ : 5 / 6 < σ) :
+    classicalEndpointLossParameter σ τ₀ ε ≤ (σ - 5 / 6) / 1000 := by
+  unfold classicalEndpointLossParameter
+  rw [if_pos hσ]
+  exact min_le_right _ _
 
 /-- Every Type-II witness produced with the common loss parameter has a
 physical scale between `T^(d/2)/2` and `T^(3d/2)`.  All natural floors and
@@ -5775,7 +5848,7 @@ theorem actual_typeI_basic_window_dichotomy_witness_consumer
   let d := classicalEndpointLossParameter σ τ₀ ε
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hε
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdUpperGap, _hdSigma,
+  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdReflected, _hdHalfGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, _hdOne, _hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
@@ -5950,7 +6023,7 @@ theorem actual_typeI_powered_window_dichotomy_witness_consumer
   have hεs : 0 < εs := by dsimp only [εs]; positivity
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEpsSmall, hdEpsTauSmall, _hdHalfGap, _hdUpperGap, _hdSigma,
+  rcases hdSpec with ⟨hd, hdEpsSmall, hdEpsTauSmall, _hdReflected, _hdHalfGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, hdOne, _hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
@@ -6238,7 +6311,7 @@ theorem actual_typeI_low_window_dichotomy_witness_consumer
   have hεs : 0 < εs := by dsimp only [εs]; positivity
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, hdGap, _hdUpperGap, _hdSigma,
+  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, _hdReflected, hdGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, hdOne, hdSigmaStrict⟩
   have hs : 0 < s := by dsimp only [s]; positivity
   have hu : 0 < u := by dsimp only [u]; positivity
@@ -6366,7 +6439,7 @@ theorem actual_typeII_dichotomy_witness_consumer
   let d := classicalEndpointLossParameter σ τ₀ ε
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hε
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdUpperGap, hdSigma, hdSmall,
+  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdReflected, _hdHalfGap, _hdUpperGap, hdSigma, hdSmall,
     hdHalf, hdOne, hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4

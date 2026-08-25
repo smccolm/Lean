@@ -28,7 +28,7 @@ flowchart TD
     IIE["#15 Actual Type-II powered MHH application<br/>DONE<br/>arbitrary-X detector normalization,<br/>exact powering, dyadic extraction and MHH"]
     TG["#15 Generic direct Type-I MHH helper<br/>DONE<br/>coefficient-uniform cardinality bound<br/>and abstract certificate projections"]
     ZR["#15 Actual Type-I branch resolution<br/>DONE<br/>N^sigma source normalization, harmonic-loss<br/>absorption, exact powered extraction,<br/>weighted Weyl and endpoint routing"]
-    FR["#15 Branch-to-slab density reduction<br/>OPEN<br/>consume the dichotomy, Type-I and Type-II<br/>cardinality bounds, multiplicity and certificates"]
+    FR["#15 Branch-to-slab density reduction<br/>DONE - SEMANTICALLY RE-AUDITED<br/>real zero/Type-I/Type-II dichotomy consumed;<br/>multiplicity, finite-power and epsilon losses<br/>assembled into the native positive-slab bound"]
     ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
 
     BR["#16 Beta removal<br/>DONE"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>5694/5694 dependencies,<br/>zero warnings/project axioms in scope"]
+    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>6028/6028 dependencies,<br/>zero warnings/project axioms in scope"]
     VC["#19 Retained-file evaluation coverage<br/>OPEN<br/>47 top-level probes and 2 subordinate<br/>modules lie outside runner elaboration"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density outputs<br/>plus retained-file coverage missing"]
 
@@ -264,7 +264,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
     class CT,TR,CB conditional;
-    class FR,ZD,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
+    class ZD,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

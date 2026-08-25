@@ -45,6 +45,7 @@ import RiemannZeta.GuthMaynard.ClassicalPowering
 import RiemannZeta.GuthMaynard.FiniteDensityEndpoint
 import RiemannZeta.GuthMaynard.FiniteDensityExponents
 import RiemannZeta.GuthMaynard.FiniteScaleAssembly
+import RiemannZeta.GuthMaynard.ClassicalEndpointDensity
 import RiemannZeta.GuthMaynard.MediumReflection
 import RiemannZeta.GuthMaynard.TerminalTypeI
 import RiemannZeta.GuthMaynard.TypeIFiniteEstimates

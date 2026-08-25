@@ -12,9 +12,9 @@ namespace RiemannZeta.GuthMaynard
 # Classical positive-slab endpoint density
 
 This module is the source-facing consumer of the finite classical detector.
-The only temporary interface isolated below is the genuinely narrower medium
-Type-I reflection case.  The final native theorem is exported only after that
-interface is discharged in this module.
+The only intermediate interface isolated below is the genuinely narrower
+medium Type-I reflection case.  The final native theorem is exported only
+after the imported native medium-consumer theorem discharges that interface.
 -/
 
 /-- The exact positive-slab endpoint density proposition. -/
@@ -248,6 +248,7 @@ theorem exists_separated_bounded_shift_image
 
 /-! ## The direct part of the apparent medium gap -/
 
+set_option maxHeartbeats 2000000 in
 /-- The actual Type-I dichotomy witness is still a direct MHH input when its
 physical scale is at most `11/10`, even if it lies just above `tau0`.  This
 consumer retains the original multiplicity bound and absorbs the literal
@@ -281,7 +282,7 @@ theorem actual_typeI_short_gap_dichotomy_witness_consumer
   let d := classicalEndpointLossParameter σ τ₀ εs
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdHalfGap, _hdUpperGap, _hdSigma,
+  rcases hdSpec with ⟨hd, hdEps, hdEpsTau, _hdReflected, _hdHalfGap, _hdUpperGap, _hdSigma,
     hdSmall, _hdHalf, hdOne, _hdSigmaStrict⟩
   let s : ℝ := d ^ 2
   let u : ℝ := d ^ 4
@@ -414,7 +415,7 @@ theorem actual_typeI_short_gap_dichotomy_witness_consumer
             ((2 * ⌈T ^ d⌉₊ + 1) * classicalLocalMultiplicityCap T) : ℕ) : ℝ) *
             1 * (K * (1 + (((harmonic N : ℚ) : ℝ)))) *
               (6 * P ^ (6 : ℕ) * T ^ (3 * (1 - σ) / τ₀)) := by
-      simpa only [A, d, P, s, Nat.cast_one] using hEndpoint
+      simpa only [A, d, εs, P, s, Nat.cast_one, one_mul, mul_one] using hEndpoint
     have hLossAt' :
         ((4 * Nat.clog 2 ⌊sharpZetaCutoff T⌋₊ *
             ((2 * ⌈T ^ d⌉₊ + 1) * classicalLocalMultiplicityCap T) : ℕ) : ℝ) *
@@ -457,7 +458,7 @@ theorem classical_endpoint_positive_slab_of_medium_native
   let d := classicalEndpointLossParameter σ τ₀ εs
   have hdSpec := classicalEndpointLossParameter_spec hσLower hσUpper hcert.tau0_pos hεs
   dsimp only at hdSpec
-  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, _hdGap, _hdUpperGap, _hdSigma,
+  rcases hdSpec with ⟨hd, _hdEps, _hdEpsTau, _hdReflected, _hdGap, _hdUpperGap, _hdSigma,
     _hdSmall, _hdHalf, hdOne, hdSigmaStrict⟩
   have hdTwo : 0 < d ^ 2 := by dsimp only [d]; positivity
   have hdFour : 0 < d ^ 4 := by dsimp only [d]; positivity
@@ -647,5 +648,34 @@ theorem classical_endpoint_positive_slab_of_medium_native
     rw [abs_of_nonneg hCountNonneg, abs_of_nonneg hTargetNonneg,
       abs_of_nonneg hPowerTargetNonneg]
     simpa only [mul_assoc] using hLiftConstant hCiC h'
+
+/-- Native classical endpoint density on the positive slab.  The proof term
+uses the actual detector dichotomy and the native medium Type-I consumer; the
+other Type-I and Type-II alternatives are consumed inside
+`classical_endpoint_positive_slab_of_medium_native`. -/
+theorem classical_endpoint_positive_slab_native
+    {σ τ₀ : ℝ}
+    (hσLower : 1 / 2 < σ)
+    (hσUpper : σ < 1)
+    (hcert : EndpointScaleCertificate σ τ₀) :
+    ClassicalEndpointPositiveSlabDensity σ τ₀ :=
+  classical_endpoint_positive_slab_of_medium_native
+    classical_medium_typeI_witness_consumer_native hσLower hσUpper hcert
+
+/-- Ingham endpoint specialization of the native positive-slab density
+theorem. -/
+theorem ingham_endpoint_positive_slab_native
+    {σ : ℝ} (hσLower : 1 / 2 < σ) (hσUpper : σ < 1) :
+    ClassicalEndpointPositiveSlabDensity σ (2 - σ) :=
+  classical_endpoint_positive_slab_native hσLower hσUpper
+    (ingham_endpoint_scale_certificate hσLower hσUpper)
+
+/-- Huxley endpoint specialization of the native positive-slab density
+theorem. -/
+theorem huxley_endpoint_positive_slab_native
+    {σ : ℝ} (hσLower : 3 / 4 < σ) (hσUpper : σ < 1) :
+    ClassicalEndpointPositiveSlabDensity σ (3 * σ - 1) :=
+  classical_endpoint_positive_slab_native (by linarith) hσUpper
+    (huxley_endpoint_scale_certificate hσLower hσUpper)
 
 end RiemannZeta.GuthMaynard
