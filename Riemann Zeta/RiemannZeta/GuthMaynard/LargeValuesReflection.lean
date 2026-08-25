@@ -1,3 +1,4 @@
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts
 import RiemannZeta.GuthMaynard.LargeValuesPoisson
 
@@ -1088,6 +1089,30 @@ theorem norm_gmReflectionIntegral_le_length_div {tau a b L : ℝ}
         L⁻¹ * (b - a) := hBound
     _ = (b - a) / L := by ring
 
+/-- Global logarithmic majorant for the reflection integral.  This is the
+nonoscillatory estimate used only on the omitted Mellin range in Lemma 6.2. -/
+theorem norm_gmReflectionIntegral_le_log {tau a b : ℝ}
+    (ha : 0 < a) (hab : a ≤ b) :
+    ‖gmReflectionIntegral tau a b‖ ≤ Real.log (b / a) := by
+  unfold gmReflectionIntegral
+  have hb : 0 < b := ha.trans_le hab
+  have hInv : IntervalIntegrable (fun v : ℝ => v⁻¹) volume a b := by
+    apply ContinuousOn.intervalIntegrable
+    apply continuousOn_inv₀.mono
+    intro v hv
+    rw [Set.uIcc_of_le hab] at hv
+    exact ne_of_gt (ha.trans_le hv.1)
+  calc
+    ‖∫ v in a..b,
+        (v : ℂ)⁻¹ * Complex.exp
+          ((((tau * Real.log v - 2 * Real.pi * v : ℝ) : ℂ) * I))‖ ≤
+        ∫ v in a..b, v⁻¹ := by
+      apply intervalIntegral.norm_integral_le_of_norm_le hab _ hInv
+      filter_upwards with v hv
+      have hvPos : 0 < v := ha.trans (Set.mem_Ioc.mp hv).1
+      rw [norm_gmReflectionIntegrand hvPos]
+    _ = Real.log (b / a) := integral_inv_of_pos ha hb
+
 theorem intervalIntegrable_gmReflectionIntegrand {tau a b : ℝ}
     (hab : a ≤ b) (ha : 0 < a) :
     IntervalIntegrable
@@ -1775,6 +1800,72 @@ noncomputable def gmPositiveDualDirichletPoly
   ∑ m ∈ Finset.Icc 1 M,
     ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))
 
+/-- The coefficient-one Dirichlet polynomial in Guth--Maynard Lemma 6.2. -/
+noncomputable def gmReflectionDirichletPoly
+    (t : ℝ) (M : ℕ) (u : ℝ) : ℂ :=
+  ∑ m ∈ Finset.Icc 1 M,
+    (m : ℂ) ^ (-((((t + u : ℝ) : ℂ) * I)))
+
+/-- Factoring the common physical scale out of the reflected polynomial.
+The equality is exact; no coefficient or cardinality estimate is used. -/
+theorem gmPositiveDualDirichletPoly_eq_scale_mul
+    (t r : ℝ) {N M : ℕ} (hN : 0 < N) :
+    gmPositiveDualDirichletPoly t N M r =
+      (N : ℂ) ^ ((((r - t : ℝ) : ℂ) * I)) *
+        gmReflectionDirichletPoly t M (-r) := by
+  rw [gmPositiveDualDirichletPoly, gmReflectionDirichletPoly,
+    Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro m hm
+  have hmPos : 0 < m := lt_of_lt_of_le Nat.zero_lt_one (Finset.mem_Icc.mp hm).1
+  have hExp : -((((t + -r : ℝ) : ℂ) * I)) =
+      (((r - t : ℝ) : ℂ) * I) := by
+    push_cast
+    ring
+  rw [hExp]
+  have hNr : 0 ≤ (N : ℝ) := by positivity
+  have hmr : 0 ≤ (m : ℝ) := by positivity
+  simpa only [Nat.cast_mul, Nat.cast_ofNat] using
+    (Complex.mul_cpow_ofReal_nonneg hNr hmr
+      ((((r - t : ℝ) : ℂ) * I)))
+
+/-- The common scale has unit modulus, so the exact source polynomial and
+the reflected physical polynomial have equal norms. -/
+theorem norm_gmPositiveDualDirichletPoly_eq
+    (t r : ℝ) {N M : ℕ} (hN : 0 < N) :
+    ‖gmPositiveDualDirichletPoly t N M r‖ =
+      ‖gmReflectionDirichletPoly t M (-r)‖ := by
+  rw [gmPositiveDualDirichletPoly_eq_scale_mul t r hN, norm_mul]
+  have hScale : ‖(N : ℂ) ^ ((((r - t : ℝ) : ℂ) * I))‖ = 1 := by
+    rw [Complex.norm_natCast_cpow_of_pos hN]
+    simp
+  rw [hScale, one_mul]
+
+/-- Conjugating the coefficient-one polynomial changes both signs and
+therefore preserves its norm. -/
+theorem norm_gmReflectionDirichletPoly_neg_time
+    (t u : ℝ) (M : ℕ) :
+    ‖gmReflectionDirichletPoly (-t) M u‖ =
+      ‖gmReflectionDirichletPoly t M (-u)‖ := by
+  have hstar : gmReflectionDirichletPoly (-t) M u =
+      star (gmReflectionDirichletPoly t M (-u)) := by
+    rw [gmReflectionDirichletPoly, gmReflectionDirichletPoly, star_sum]
+    apply Finset.sum_congr rfl
+    intro m hm
+    let z : ℂ := -((((t + -u : ℝ) : ℂ) * I))
+    have hmArg : Complex.arg (m : ℂ) ≠ Real.pi := by
+      rw [Complex.natCast_arg]
+      exact Real.pi_ne_zero.symm
+    have hExp : -((((-t + u : ℝ) : ℂ) * I)) = star z := by
+      dsimp only [z]
+      simp only [Complex.star_def, map_neg, map_mul, Complex.conj_ofReal,
+        Complex.conj_I]
+      push_cast
+      ring
+    rw [hExp]
+    simpa [z, Complex.star_def] using Complex.cpow_conj (m : ℂ) z hmArg
+  rw [hstar, norm_star]
+
 /-- The retained dual polynomial has the elementary cardinality bound.  The
 quantitative reflection theorem keeps the polynomial itself on the core
 Mellin range and uses this estimate only on the omitted tail. -/
@@ -1845,7 +1936,7 @@ theorem norm_gmReflectionIntegral_neg_core_le
     nlinarith [hSquare, Real.sqrt_nonneg (T₀ / 2)]
   exact hBase.trans (hFirst.trans hSecond)
 
-private theorem integrable_gmPositiveDualModeIntegrand
+theorem integrable_gmPositiveDualModeIntegrand
     (cutoff : GMSmoothCutoff) (t : ℝ) {N m M : ℕ}
     (hN : 0 < N) (hm : 1 ≤ m) (hmM : m ≤ M) :
     Integrable (gmPositiveDualModeIntegrand cutoff t N M m) := by
@@ -1960,6 +2051,31 @@ theorem sum_gmPositiveDualModeIntegrand_eq
             ((N * m : ℕ) : ℂ) ^ ((((r - t : ℝ) : ℂ) * I)))) := by
       rw [hqCancel, hpow]
       ring
+
+/-- Integrability of the exact cancellation-preserving aggregate integrand.
+This is the measurable input needed to split its Mellin integral into a core
+and a complementary tail. -/
+theorem integrable_norm_gmPositiveDualAggregate
+    (cutoff : GMSmoothCutoff) (t : ℝ) {N M : ℕ} (hN : 0 < N) :
+    Integrable (fun r : ℝ =>
+      (1 / (2 * Real.pi) : ℝ) * ‖gmCutoffMellin cutoff r‖ *
+        ‖gmReflectionIntegral (t - r) N (2 * N * M)‖ *
+          ‖gmPositiveDualDirichletPoly t N M r‖) := by
+  have hsum : Integrable (fun r : ℝ =>
+      ∑ m ∈ Finset.Icc 1 M,
+        gmPositiveDualModeIntegrand cutoff t N M m r) := by
+    apply integrable_finsetSum
+    intro m hm
+    have hmRange := Finset.mem_Icc.mp hm
+    exact integrable_gmPositiveDualModeIntegrand cutoff t hN
+      hmRange.1 hmRange.2
+  have hnorm := hsum.norm
+  apply hnorm.congr
+  filter_upwards with r
+  rw [sum_gmPositiveDualModeIntegrand_eq cutoff t r hN]
+  rw [norm_smul, Real.norm_eq_abs, abs_of_pos (by positivity :
+    0 < (1 / (2 * Real.pi) : ℝ)), norm_mul, norm_mul]
+  ring
 
 /-- Cancellation-preserving norm form of the positive half of Guth--Maynard
 Lemma 6.2.  No factor equal to the number of Fourier modes is introduced. -/

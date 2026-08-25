@@ -387,19 +387,39 @@ noncomputable def gmCubicS1 (cutoff : GMSmoothCutoff) (N : ℕ)
   ∑ t : GMRow W, ∑ u : GMRow W, ∑ v : GMRow W,
     gmCubicS1Summand cutoff N t u v
 
+/-- The first cyclic product contributing to `S₂`. -/
+noncomputable def gmCubicS2FirstSummand (cutoff : GMSmoothCutoff) (N : ℕ)
+    {W : Finset ℝ} (t u v : GMRow W) : ℂ :=
+  gmTraceNonzeroTailAt cutoff N ((t : ℝ) - (u : ℝ)) *
+    gmTraceNonzeroTailAt cutoff N ((u : ℝ) - (v : ℝ)) *
+      gmTraceZeroMode cutoff N ((v : ℝ) - (t : ℝ))
+
+/-- The second cyclic product contributing to `S₂`. -/
+noncomputable def gmCubicS2SecondSummand (cutoff : GMSmoothCutoff) (N : ℕ)
+    {W : Finset ℝ} (t u v : GMRow W) : ℂ :=
+  gmTraceNonzeroTailAt cutoff N ((t : ℝ) - (u : ℝ)) *
+    gmTraceZeroMode cutoff N ((u : ℝ) - (v : ℝ)) *
+      gmTraceNonzeroTailAt cutoff N ((v : ℝ) - (t : ℝ))
+
+/-- The third cyclic product contributing to `S₂`. -/
+noncomputable def gmCubicS2ThirdSummand (cutoff : GMSmoothCutoff) (N : ℕ)
+    {W : Finset ℝ} (t u v : GMRow W) : ℂ :=
+  gmTraceZeroMode cutoff N ((t : ℝ) - (u : ℝ)) *
+    gmTraceNonzeroTailAt cutoff N ((u : ℝ) - (v : ℝ)) *
+      gmTraceNonzeroTailAt cutoff N ((v : ℝ) - (t : ℝ))
+
+/-- The exact source summand with two nonzero Fourier frequencies. -/
+noncomputable def gmCubicS2Summand (cutoff : GMSmoothCutoff) (N : ℕ)
+    {W : Finset ℝ} (t u v : GMRow W) : ℂ :=
+  gmCubicS2FirstSummand cutoff N t u v +
+    gmCubicS2SecondSummand cutoff N t u v +
+      gmCubicS2ThirdSummand cutoff N t u v
+
 /-- The piece with exactly two nonzero Fourier frequencies. -/
 noncomputable def gmCubicS2 (cutoff : GMSmoothCutoff) (N : ℕ)
     (W : Finset ℝ) : ℂ :=
   ∑ t : GMRow W, ∑ u : GMRow W, ∑ v : GMRow W,
-    (gmTraceNonzeroTailAt cutoff N ((t : ℝ) - (u : ℝ)) *
-        gmTraceNonzeroTailAt cutoff N ((u : ℝ) - (v : ℝ)) *
-          gmTraceZeroMode cutoff N ((v : ℝ) - (t : ℝ)) +
-      gmTraceNonzeroTailAt cutoff N ((t : ℝ) - (u : ℝ)) *
-        gmTraceZeroMode cutoff N ((u : ℝ) - (v : ℝ)) *
-          gmTraceNonzeroTailAt cutoff N ((v : ℝ) - (t : ℝ)) +
-      gmTraceZeroMode cutoff N ((t : ℝ) - (u : ℝ)) *
-        gmTraceNonzeroTailAt cutoff N ((u : ℝ) - (v : ℝ)) *
-          gmTraceNonzeroTailAt cutoff N ((v : ℝ) - (t : ℝ)))
+    gmCubicS2Summand cutoff N t u v
 
 /-- The piece with all three Fourier frequencies nonzero. -/
 noncomputable def gmCubicS3 (cutoff : GMSmoothCutoff) (N : ℕ)
@@ -461,7 +481,9 @@ theorem gmMatrix_cubic_trace_split (cutoff : GMSmoothCutoff)
       gmCubicZeroMode cutoff N W + gmCubicS1 cutoff N W +
         gmCubicS2 cutoff N W + gmCubicS3 cutoff N W := by
   rw [gmMatrix_cubic_trace_poisson_expand cutoff N hN W]
-  unfold gmCubicZeroMode gmCubicS1 gmCubicS1Summand gmCubicS2 gmCubicS3
+  unfold gmCubicZeroMode gmCubicS1 gmCubicS1Summand gmCubicS2
+    gmCubicS2Summand gmCubicS2FirstSummand gmCubicS2SecondSummand
+    gmCubicS2ThirdSummand gmCubicS3
   simp_rw [← Finset.sum_add_distrib]
   apply Finset.sum_congr rfl
   intro t ht

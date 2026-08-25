@@ -62,7 +62,7 @@ flowchart TD
     CS["#19 Cubic trace split<br/>DONE<br/>exact Lemma 4.5 Poisson expansion,<br/>diagonal plus T^-100 remainder,<br/>and S1/S2/S3 partition"]
     S1["#19 S1 estimate<br/>DONE<br/>epsilon-separated GM Proposition 5.1<br/>with uniform T^-10 decay"]
     RI["#19 Exact smooth-reflection identities<br/>DONE<br/>signed finite modes, Mellin/Fubini formulas,<br/>and two-sign cancellation-preserving bounds"]
-    RF["#19 Quantitative smooth reflection / AFE<br/>OPEN<br/>Mellin decay, dual tail bound and uniform<br/>core T0^-1/2 bounds DONE; integrate tails<br/>and prove complete T^-100 remainder OPEN"]
+    RF["#19 Quantitative smooth reflection / AFE<br/>DONE - SEMANTICALLY RE-AUDITED<br/>complete nonzero integer-frequency sum,<br/>eta=min(epsilon/16,1/16), arbitrary T^-A,<br/>A=100 and scaled cubic-S2 consumer"]
     HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
     S2["#19 S2 estimate<br/>OPEN"]
     EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
@@ -74,7 +74,7 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>OPEN"]
     CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>6028/6028 dependencies,<br/>zero warnings/project axioms in scope"]
+    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>6066/6066 dependencies,<br/>zero warnings/project axioms in scope"]
     VC["#19 Retained-file evaluation coverage<br/>OPEN<br/>47 top-level probes and 2 subordinate<br/>modules lie outside runner elaboration"]
     QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density outputs<br/>plus retained-file coverage missing"]
 
@@ -264,7 +264,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,IG done;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,IG done;
     class CT,TR,CB conditional;
-    class ZD,GCS,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
+    class ZD,GCS,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

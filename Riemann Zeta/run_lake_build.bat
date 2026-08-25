@@ -59,7 +59,7 @@ echo Log: %LOG%
 echo.
 
 call :run_lake "1/5 Default project build" build RiemannZeta
-call :run_lake "2/5 Explicit production-module coverage" build RiemannZeta.GuthMaynard.DyadicTransfer RiemannZeta.GuthMaynard.CentralTypeI RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple RiemannZeta.GuthMaynard.TypeIFiniteWindow RiemannZeta.GuthMaynard.LargeValuesDefinitions RiemannZeta.GuthMaynard.LargeValuesMatrix RiemannZeta.GuthMaynard.LargeValuesLocalization RiemannZeta.GuthMaynard.LargeValuesReflection RiemannZeta.GuthMaynard.TraceDispersion RiemannZeta.GuthMaynard.LargeValues
+call :run_lake "2/5 Explicit production-module coverage" build RiemannZeta.GuthMaynard.DyadicTransfer RiemannZeta.GuthMaynard.CentralTypeI RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple RiemannZeta.GuthMaynard.TypeIFiniteWindow RiemannZeta.GuthMaynard.LargeValuesDefinitions RiemannZeta.GuthMaynard.LargeValuesMatrix RiemannZeta.GuthMaynard.LargeValuesLocalization RiemannZeta.GuthMaynard.LargeValuesReflection RiemannZeta.GuthMaynard.QuantitativeSmoothReflection RiemannZeta.GuthMaynard.TraceDispersion RiemannZeta.GuthMaynard.LargeValues
 call :run_lake "3/5 Retained example: complex exponential" env lean TestExp.lean
 call :run_lake "4/5 Retained example: separated selection" env lean test_separated.lean
 call :run_lake "5/5 Current Lean audit module" env lean RiemannZeta\Audit.lean
