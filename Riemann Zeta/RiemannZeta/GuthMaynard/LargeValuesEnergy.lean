@@ -4084,7 +4084,7 @@ used implicitly in Guth--Maynard Lemma 11.8. -/
 theorem card_filter_abs_sub_le_two_mul_ceil_add_one
     (S : Finset ℝ) {δ : ℝ} (hδ : 0 < δ)
     (hSep : ∀ x ∈ S, ∀ y ∈ S, x ≠ y → δ ≤ |x - y|)
-    (center r : ℝ) (hr : 0 ≤ r) :
+    (center r : ℝ) (_hr : 0 ≤ r) :
     (S.filter fun x => |x - center| ≤ r).card ≤
       2 * Nat.ceil (r / δ) + 1 := by
   let F := S.filter fun x => |x - center| ≤ r
@@ -4110,12 +4110,18 @@ theorem card_filter_abs_sub_le_two_mul_ceil_add_one
       · have h₁ : (y - center) / δ < (x - center) / δ + 1 := by
           linarith
         have h₂ : y - center < x - center + δ := by
-          exact (div_lt_iff₀ hδ).mp (by simpa [add_div] using h₁)
+          have h := (div_lt_iff₀ hδ).mp h₁
+          calc
+            y - center < ((x - center) / δ + 1) * δ := h
+            _ = x - center + δ := by field_simp
         linarith
       · have h₁ : (x - center) / δ < (y - center) / δ + 1 := by
           linarith
         have h₂ : x - center < y - center + δ := by
-          exact (div_lt_iff₀ hδ).mp (by simpa [add_div] using h₁)
+          have h := (div_lt_iff₀ hδ).mp h₁
+          calc
+            x - center < ((y - center) / δ + 1) * δ := h
+            _ = y - center + δ := by field_simp
         linarith
     exact (not_lt_of_ge hdist) hxylt
   have hcardImage : F.card = (F.image f).card := by
@@ -4144,7 +4150,7 @@ theorem card_filter_abs_sub_le_two_mul_ceil_add_one
       have hdiv : (x - center) / δ < (K : ℝ) + 1 := by
         have hxle : (x - center) / δ ≤ r / δ :=
           (div_le_div_iff_of_pos_right hδ).2 hxAbs.2
-        exact hxle.trans_lt (lt_add_one _)
+        exact hxle.trans_lt (hceil.trans_lt (lt_add_one _))
       exact_mod_cast hdiv
   calc
     F.card = (F.image f).card := hcardImage
@@ -4164,12 +4170,10 @@ theorem cast_card_filter_abs_sub_le_ratio
     S hδ hSep center r hr
   have hceil : (Nat.ceil (r / δ) : ℝ) < r / δ + 1 := by
     exact Nat.ceil_lt_add_one (div_nonneg hr hδ.le)
-  exact_mod_cast hcard.trans_lt (by
-    exact_mod_cast (show (2 * Nat.ceil (r / δ) + 1 : ℕ) <
-      Nat.ceil (2 * (r / δ) + 3) by
-        apply Nat.lt_ceil.mpr
-        push_cast
-        linarith)).le
+  have hcardR : ((S.filter fun x => |x - center| ≤ r).card : ℝ) ≤
+      2 * (Nat.ceil (r / δ) : ℝ) + 1 := by
+    exact_mod_cast hcard
+  exact hcardR.trans (by linarith)
 
 /-! ### Reduced rational slices -/
 
@@ -4188,35 +4192,38 @@ noncomputable def gmReducedLogRatios (N d : ℕ) : Finset ℝ :=
 theorem gmReducedRatioPairs_fst_pos
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmReducedRatioPairs N d) :
     0 < p.1 := by
-  have hprod := (Finset.mem_filter.mp hp).1
-  exact (Finset.mem_product.mp hprod).1.1
+  have hcond := (Finset.mem_filter.mp hp).2
+  exact Nat.pos_of_mul_pos_right (by
+    simpa [mul_comm] using (lt_of_le_of_lt (Nat.zero_le N) hcond.1))
 
 theorem gmReducedRatioPairs_snd_pos
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmReducedRatioPairs N d) :
     0 < p.2 := by
-  have hprod := (Finset.mem_filter.mp hp).1
-  exact (Finset.mem_product.mp hprod).2.1
+  have hcond := (Finset.mem_filter.mp hp).2
+  exact Nat.pos_of_mul_pos_right
+    (by simpa [mul_comm] using
+      (lt_of_le_of_lt (Nat.zero_le N) hcond.2.2.1))
 
 theorem gmReducedRatioPairs_coprime
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmReducedRatioPairs N d) :
     Nat.Coprime p.1 p.2 :=
-  (Finset.mem_filter.mp hp).2.2.2.2
+  (Finset.mem_filter.mp hp).2.2.2.2.2
 
 theorem gmReducedRatioPairs_dilate_snd_le
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmReducedRatioPairs N d) :
     d * p.2 ≤ 2 * N :=
-  (Finset.mem_filter.mp hp).2.2.2.1
+  (Finset.mem_filter.mp hp).2.2.2.2.1
 
 /-- A reduced positive fraction has a unique numerator/denominator pair. -/
 theorem reduced_nat_ratio_injective
-    {p q : ℕ × ℕ} (hp₁ : 0 < p.1) (hp₂ : 0 < p.2)
+    {p q : ℕ × ℕ} (_hp₁ : 0 < p.1) (hp₂ : 0 < p.2)
     (hq₁ : 0 < q.1) (hq₂ : 0 < q.2)
     (hpCoprime : Nat.Coprime p.1 p.2)
     (hqCoprime : Nat.Coprime q.1 q.2)
     (hratio : (p.1 : ℝ) / p.2 = (q.1 : ℝ) / q.2) : p = q := by
   have hcrossR : (p.1 : ℝ) * q.2 = (q.1 : ℝ) * p.2 := by
     field_simp at hratio
-    exact hratio
+    simpa [mul_comm] using hratio
   have hcross : p.1 * q.2 = q.1 * p.2 := by exact_mod_cast hcrossR
   have hpDvdQ : p.1 ∣ q.1 := by
     apply (hpCoprime.dvd_mul_right).mp
@@ -4227,7 +4234,7 @@ theorem reduced_nat_ratio_injective
   have hfst : p.1 = q.1 := Nat.dvd_antisymm hpDvdQ hqDvdP
   have hsnd : p.2 = q.2 := by
     rw [hfst] at hcross
-    omega
+    exact Nat.mul_left_cancel hq₁ hcross.symm
   exact Prod.ext hfst hsnd
 
 theorem gmReducedLogRatios_image_injective
@@ -4242,9 +4249,17 @@ theorem gmReducedLogRatios_image_injective
   have hratio : (p.1 : ℝ) / p.2 = (q.1 : ℝ) / q.2 := by
     have hlog : Real.log ((p.1 : ℝ) / p.2) =
         Real.log ((q.1 : ℝ) / q.2) := by
-      simpa [Real.log_div (by positivity) (by positivity)] using heq
+      rw [Real.log_div (by exact_mod_cast hp₁.ne')
+        (by exact_mod_cast hp₂.ne'),
+        Real.log_div (by exact_mod_cast hq₁.ne')
+          (by exact_mod_cast hq₂.ne')]
+      exact heq
+    have hp₁R : (0 : ℝ) < p.1 := by exact_mod_cast hp₁
+    have hp₂R : (0 : ℝ) < p.2 := by exact_mod_cast hp₂
+    have hq₁R : (0 : ℝ) < q.1 := by exact_mod_cast hq₁
+    have hq₂R : (0 : ℝ) < q.2 := by exact_mod_cast hq₂
     exact Real.strictMonoOn_log.injOn
-      (by positivity) (by positivity) hlog
+      (div_pos hp₁R hp₂R) (div_pos hq₁R hq₂R) hlog
   exact reduced_nat_ratio_injective hp₁ hp₂ hq₁ hq₂
     (gmReducedRatioPairs_coprime hp) (gmReducedRatioPairs_coprime hq) hratio
 
@@ -4263,8 +4278,10 @@ theorem half_abs_sub_le_abs_log_sub
     rw [Real.log_div hy.ne' hx.ne'] at hbase
     have hcompare : (y - x) / 2 ≤ 1 - (y / x)⁻¹ := by
       rw [inv_div]
+      have hid : 1 - x / y = (y - x) / y := by field_simp
+      rw [hid]
       apply (le_div_iff₀ hy).2
-      field_simp [hy.ne']
+      have hprod := mul_nonneg (sub_nonneg.mpr hxy) (sub_nonneg.mpr hyTwo)
       nlinarith
     linarith
   · have hlog : Real.log y ≤ Real.log x := Real.strictMonoOn_log.monotoneOn hy hx hyx
@@ -4273,13 +4290,15 @@ theorem half_abs_sub_le_abs_log_sub
     rw [Real.log_div hx.ne' hy.ne'] at hbase
     have hcompare : (x - y) / 2 ≤ 1 - (x / y)⁻¹ := by
       rw [inv_div]
+      have hid : 1 - y / x = (x - y) / x := by field_simp
+      rw [hid]
       apply (le_div_iff₀ hx).2
-      field_simp [hx.ne']
+      have hprod := mul_nonneg (sub_nonneg.mpr hyx) (sub_nonneg.mpr hxTwo)
       nlinarith
     linarith
 
 theorem gmReducedRatioPairs_ratio_bounds
-    {N d : ℕ} (hN : 0 < N) (hd : 0 < d) {p : ℕ × ℕ}
+    {N d : ℕ} (_hN : 0 < N) (hd : 0 < d) {p : ℕ × ℕ}
     (hp : p ∈ gmReducedRatioPairs N d) :
     (1 / 2 : ℝ) < (p.1 : ℝ) / p.2 ∧ (p.1 : ℝ) / p.2 < 2 := by
   have hcond := (Finset.mem_filter.mp hp).2
@@ -4290,11 +4309,24 @@ theorem gmReducedRatioPairs_ratio_bounds
   have haUpper : (d : ℝ) * p.1 ≤ 2 * N := by exact_mod_cast hcond.2.1
   have hbLower : (N : ℝ) < d * p.2 := by exact_mod_cast hcond.2.2.1
   have hbUpper : (d : ℝ) * p.2 ≤ 2 * N := by exact_mod_cast hcond.2.2.2.1
+  have hp₂R : (0 : ℝ) < p.2 := by exact_mod_cast hp₂
   constructor
-  · apply (div_lt_iff₀ (by exact_mod_cast hp₂)).2
-    nlinarith
-  · apply (div_lt_iff₀ (by exact_mod_cast hp₂)).2
-    nlinarith
+  · apply (lt_div_iff₀ hp₂R).2
+    have hmul : (d : ℝ) * p.2 < (d : ℝ) * (2 * p.1) := by
+      nlinarith
+    by_contra hnot
+    have hle : (2 : ℝ) * p.1 ≤ p.2 := by
+      have := le_of_not_gt hnot
+      nlinarith
+    have := mul_le_mul_of_nonneg_left hle hdR.le
+    linarith
+  · apply (div_lt_iff₀ hp₂R).2
+    have hmul : (d : ℝ) * p.1 < (d : ℝ) * (2 * p.2) := by
+      nlinarith
+    by_contra hnot
+    have hle : (2 : ℝ) * p.2 ≤ p.1 := le_of_not_gt hnot
+    have := mul_le_mul_of_nonneg_left hle hdR.le
+    linarith
 
 /-- Distinct reduced fractions in the `d`-slice are separated by
 `d²/(4N²)`.  This is the exact arithmetic spacing statement in the proof
@@ -4315,16 +4347,27 @@ theorem gmReducedRatioPairs_ratio_separated
     apply reduced_nat_ratio_injective hp₁ hp₂ hq₁ hq₂
       (gmReducedRatioPairs_coprime hp) (gmReducedRatioPairs_coprime hq)
     field_simp
-    exact_mod_cast hcross
-  have hdistNat : 1 ≤ Nat.dist (p.1 * q.2) (q.1 * p.2) := by omega
+    have hcrossR : (p.1 : ℝ) * q.2 = (q.1 : ℝ) * p.2 := by
+      exact_mod_cast hcross
+    simpa [mul_comm] using hcrossR
   have hnum : (1 : ℝ) ≤
       |(p.1 : ℝ) * q.2 - (q.1 : ℝ) * p.2| := by
-    calc
-      (1 : ℝ) ≤ (Nat.dist (p.1 * q.2) (q.1 * p.2) : ℝ) := by
-        exact_mod_cast hdistNat
-      _ = |(p.1 : ℝ) * q.2 - (q.1 : ℝ) * p.2| := by
-        rw [← Nat.dist_cast_real]
-        simp only [Nat.cast_mul, Real.dist_eq]
+    by_cases hle : p.1 * q.2 ≤ q.1 * p.2
+    · have hdiff : 1 ≤ q.1 * p.2 - p.1 * q.2 := by omega
+      have hdiffR : (1 : ℝ) ≤
+          (q.1 * p.2 - p.1 * q.2 : ℕ) := by exact_mod_cast hdiff
+      rw [Nat.cast_sub hle, Nat.cast_mul, Nat.cast_mul] at hdiffR
+      rw [abs_of_nonpos]
+      · linarith
+      · exact sub_nonpos.mpr (by exact_mod_cast hle)
+    · have hlt : q.1 * p.2 < p.1 * q.2 := lt_of_not_ge hle
+      have hdiff : 1 ≤ p.1 * q.2 - q.1 * p.2 := by omega
+      have hdiffR : (1 : ℝ) ≤
+          (p.1 * q.2 - q.1 * p.2 : ℕ) := by exact_mod_cast hdiff
+      rw [Nat.cast_sub hlt.le, Nat.cast_mul, Nat.cast_mul] at hdiffR
+      rw [abs_of_nonneg]
+      · exact hdiffR
+      · exact sub_nonneg.mpr (by exact_mod_cast hlt.le)
   have hpDen := gmReducedRatioPairs_dilate_snd_le hp
   have hqDen := gmReducedRatioPairs_dilate_snd_le hq
   have hpDenR : (d : ℝ) * p.2 ≤ 2 * N := by exact_mod_cast hpDen
@@ -4334,14 +4377,16 @@ theorem gmReducedRatioPairs_ratio_separated
   have hscale : (d : ℝ) ^ 2 / (4 * (N : ℝ) ^ 2) ≤
       1 / ((p.2 : ℝ) * q.2) := by
     apply (div_le_div_iff₀ (by positivity) hdenPos).2
-    nlinarith [mul_nonneg hpDenR hqDenR]
+    have hprod := mul_le_mul hpDenR hqDenR (by positivity) (by positivity)
+    nlinarith
   have hratio :
       |(p.1 : ℝ) / p.2 - (q.1 : ℝ) / q.2| =
         |(p.1 : ℝ) * q.2 - (q.1 : ℝ) * p.2| /
           ((p.2 : ℝ) * q.2) := by
-    rw [← abs_div]
-    congr 1
-    field_simp
+    rw [div_sub_div _ _ (by exact_mod_cast hp₂.ne')
+      (by exact_mod_cast hq₂.ne'), abs_div, abs_of_pos hdenPos]
+    congr 2
+    ring
   rw [hratio]
   exact hscale.trans (div_le_div_of_nonneg_right hnum hdenPos.le)
 
@@ -4370,14 +4415,19 @@ theorem gmReducedLogRatios_separated
   have hpq : p ≠ q := by
     intro hpq
     subst q
-    exact hne rfl
+    exact hne hlogNe
   have hratio := gmReducedRatioPairs_ratio_separated hN hd hp hq hpq
   have hlog := half_abs_sub_le_abs_log_sub
     (div_pos (by exact_mod_cast hp₁) (by exact_mod_cast hp₂))
     (div_pos (by exact_mod_cast hq₁) (by exact_mod_cast hq₂))
     hpBounds.2.le hqBounds.2.le
-  rw [hpLog, hqLog, ← hlogNe]
-  nlinarith
+  rw [hpLog]
+  have hyEq : y = Real.log ((q.1 : ℝ) / q.2) := hlogNe.symm.trans hqLog
+  rw [hyEq]
+  have hscaleEq : (d : ℝ) ^ 2 / (8 * (N : ℝ) ^ 2) =
+      ((d : ℝ) ^ 2 / (4 * (N : ℝ) ^ 2)) / 2 := by ring
+  rw [hscaleEq]
+  exact (div_le_div_of_nonneg_right hratio (by norm_num)).trans hlog
 
 /-- Finite Fubini plus the floor-bin packing bound.  This is the exact
 bounded-overlap statement needed to sum the local reproducing intervals in
@@ -4386,7 +4436,7 @@ theorem sum_setIntegral_Icc_le_packing_mul_setIntegral
     (S : Finset ℝ) {δ : ℝ} (hδ : 0 < δ)
     (hSep : ∀ x ∈ S, ∀ y ∈ S, x ≠ y → δ ≤ |x - y|)
     (f : ℝ → ℝ) (hf : Continuous f) (hf0 : ∀ y, 0 ≤ f y)
-    (A B r : ℝ) (hAB : A ≤ B) (hr : 0 ≤ r)
+    (A B r : ℝ) (_hAB : A ≤ B) (hr : 0 ≤ r)
     (hBounds : ∀ x ∈ S, A ≤ x ∧ x ≤ B) :
     (∑ x ∈ S, ∫ y in Set.Icc (x - r) (x + r), f y) ≤
       (2 * (r / δ) + 3) *
@@ -4402,19 +4452,24 @@ theorem sum_setIntegral_Icc_le_packing_mul_setIntegral
     rw [Set.mem_Icc] at hy ⊢
     have hxB := hBounds x hx
     constructor <;> linarith
-  have hIntIndicator (x : ℝ) : Integrable (I x).indicator f := by
+  have hIntIndicator (x : ℝ) : Integrable ((I x).indicator f) := by
     apply IntegrableOn.integrable_indicator
     · exact hf.continuousOn.integrableOn_Icc
     · exact measurableSet_Icc
   have hrewrite (x : ℝ) (hx : x ∈ S) :
       (∫ y in I x, f y) = ∫ y in G, (I x).indicator f y := by
-    rw [← MeasureTheory.integral_indicator measurableSet_Icc]
+    rw [← MeasureTheory.integral_indicator measurableSet_Icc,
+      ← MeasureTheory.integral_indicator measurableSet_Icc]
     apply integral_congr_ae
     filter_upwards with y
     by_cases hy : y ∈ I x
     · have hyG := hsub x hx hy
-      simp [hy, hyG]
-    · simp [hy]
+      rw [Set.indicator_of_mem hy, Set.indicator_of_mem hyG,
+        Set.indicator_of_mem hy]
+    · rw [Set.indicator_of_notMem hy]
+      by_cases hyG : y ∈ G
+      · rw [Set.indicator_of_mem hyG, Set.indicator_of_notMem hy]
+      · rw [Set.indicator_of_notMem hyG]
   have hsumInt :
       (∑ x ∈ S, ∫ y in G, (I x).indicator f y) =
         ∫ y in G, ∑ x ∈ S, (I x).indicator f y := by
@@ -4457,7 +4512,7 @@ theorem sum_setIntegral_Icc_le_packing_mul_setIntegral
       apply setIntegral_mono
       · exact MeasureTheory.integrable_finsetSum S fun x hx =>
           (hIntIndicator x).integrableOn
-      · exact (hf.const_mul K).integrableOn_compact isCompact_Icc
+      · exact (hf.const_mul K).continuousOn.integrableOn_Icc
       · exact hPoint
     _ = K * ∫ y in G, f y := by rw [integral_const_mul]
     _ = _ := rfl
@@ -4499,8 +4554,14 @@ theorem gmReducedThirdMoment_le_sqrt
     (gmReducedRatioPairs N d)
     (fun nm => ‖gmR W ((nm.1 : ℝ) / nm.2)‖)
     (fun nm => ‖gmR W ((nm.1 : ℝ) / nm.2)‖ ^ 2)
-  convert h using 1 <;>
-    apply Finset.sum_congr rfl <;> intro nm hnm <;> ring
+  convert h using 1
+  · apply Finset.sum_congr rfl
+    intro nm hnm
+    ring
+  · congr 2
+    apply Finset.sum_congr rfl
+    intro nm hnm
+    ring
 
 theorem gmReducedLogRatios_bounds
     {N d : ℕ} (hN : 0 < N) (hd : 0 < d) {x : ℝ}
@@ -4516,9 +4577,11 @@ theorem gmReducedLogRatios_bounds
       Real.log ((p.1 : ℝ) / p.2) := by
     rw [Real.log_div (by positivity) (by positivity)]
   rw [hlog]
+  have hhalfPos : (0 : ℝ) < 1 / 2 := by norm_num
+  have htwoPos : (0 : ℝ) < 2 := by norm_num
   constructor
-  · exact Real.strictMonoOn_log.monotoneOn (by positivity) hratioPos hb.1.le
-  · exact Real.strictMonoOn_log.monotoneOn hratioPos (by positivity) hb.2.le
+  · exact Real.strictMonoOn_log.monotoneOn hhalfPos hratioPos hb.1.le
+  · exact Real.strictMonoOn_log.monotoneOn hratioPos htwoPos hb.2.le
 
 /-- The exact pre-asymptotic second-moment estimate in the small-gcd
 argument.  Its two summands are respectively the packed local integral and
@@ -4551,7 +4614,7 @@ theorem gmReducedRatioMoment_two_le_local_raw
   have hr : 0 ≤ r := by dsimp only [r]; positivity
   have hAB : A ≤ B := by
     dsimp only [A, B]
-    exact Real.strictMonoOn_log.monotoneOn (by positivity) (by positivity) (by norm_num)
+    exact Real.strictMonoOn_log.monotoneOn (by norm_num) (by norm_num) (by norm_num)
   have hSepLog : ∀ x ∈ S, ∀ y ∈ S, x ≠ y → δ ≤ |x - y| := by
     intro x hx y hy hxy
     exact gmReducedLogRatios_separated hN hd hx hy hxy
@@ -4582,6 +4645,10 @@ theorem gmReducedRatioMoment_two_le_local_raw
     simpa only [f, C₀, tail, r] using
       norm_gmRPhase_sq_le_localIntegral_add_tail
         hTpos hBase x H hH q hq
+  have hC₀0 : 0 ≤ C₀ := by
+    dsimp only [C₀]
+    exact mul_nonneg gmAffineLocalBumpFourierSup_pos.le (div_nonneg hTpos.le (by positivity))
+  have hK0 : 0 ≤ 2 * (r / δ) + 3 := by positivity
   rw [gmReducedRatioMoment_eq_logSum]
   change (∑ x ∈ S, f x) ≤ _
   calc
@@ -4596,13 +4663,14 @@ theorem gmReducedRatioMoment_two_le_local_raw
     _ ≤ C₀ * ((2 * (r / δ) + 3) *
           ∫ y in Set.Icc (A - r) (B + r), f y) +
           (S.card : ℝ) * tail := by
-      gcongr
-      exact hpack
+      exact add_le_add (mul_le_mul_of_nonneg_left hpack hC₀0) (le_refl _)
     _ ≤ C₀ * ((2 * (r / δ) + 3) *
           ((|(B + r) - (A - r)| +
             4 * (1 + ε⁻¹) * 2 ^ ε * T ^ ε) * (W.card : ℝ))) +
           (S.card : ℝ) * tail := by
-      gcongr
+      have hscaled := mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_left hglobal hK0) hC₀0
+      linarith
     _ = _ := by
       rw [card_gmReducedLogRatios]
       dsimp only [C₀, tail, S, δ, r, A, B]
@@ -4638,7 +4706,7 @@ theorem gmReducedRatioMoment_four_le_local_raw
   have hr : 0 ≤ r := by dsimp only [r]; positivity
   have hAB : A ≤ B := by
     dsimp only [A, B]
-    exact Real.strictMonoOn_log.monotoneOn (by positivity) (by positivity) (by norm_num)
+    exact Real.strictMonoOn_log.monotoneOn (by norm_num) (by norm_num) (by norm_num)
   have hSepLog : ∀ x ∈ S, ∀ y ∈ S, x ≠ y → δ ≤ |x - y| := by
     intro x hx y hy hxy
     exact gmReducedLogRatios_separated hN hd hx hy hxy
@@ -4670,6 +4738,10 @@ theorem gmReducedRatioMoment_four_le_local_raw
     simpa only [f, C₀, tail, r] using
       norm_gmRPhase_fourth_le_localIntegral_add_tail
         hTpos hBase x H hH q hq
+  have hC₀0 : 0 ≤ C₀ := by
+    dsimp only [C₀]
+    exact mul_nonneg gmAffineLocalBumpFourierSup_pos.le (div_nonneg (by positivity) (by positivity))
+  have hK0 : 0 ≤ 2 * (r / δ) + 3 := by positivity
   rw [gmReducedRatioMoment_eq_logSum]
   change (∑ x ∈ S, f x) ≤ _
   calc
@@ -4684,14 +4756,15 @@ theorem gmReducedRatioMoment_four_le_local_raw
     _ ≤ C₀ * ((2 * (r / δ) + 3) *
           ∫ y in Set.Icc (A - r) (B + r), f y) +
           (S.card : ℝ) * tail := by
-      gcongr
-      exact hpack
+      exact add_le_add (mul_le_mul_of_nonneg_left hpack hC₀0) (le_refl _)
     _ ≤ C₀ * ((2 * (r / δ) + 3) *
           ((4 * |(B + r) - (A - r)| +
             8 * (1 + ε⁻¹) * 3 ^ ε) * T ^ ε *
               (ApproxAddEnergy 1 W : ℝ))) +
           (S.card : ℝ) * tail := by
-      gcongr
+      have hscaled := mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_left hglobal hK0) hC₀0
+      linarith
     _ = _ := by
       rw [card_gmReducedLogRatios]
       dsimp only [C₀, tail, S, δ, r, A, B]
@@ -4712,13 +4785,13 @@ theorem gmGcdSlice_fst_pos
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmGcdSlice N d) : 0 < p.1 := by
   have hp' := (Finset.mem_filter.mp hp).1
   rw [Finset.mem_product] at hp'
-  exact lt_trans (Nat.zero_le N) (Finset.mem_Ioc.mp hp'.1).1
+  exact Nat.zero_lt_of_lt (Finset.mem_Ioc.mp hp'.1).1
 
 theorem gmGcdSlice_snd_pos
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmGcdSlice N d) : 0 < p.2 := by
   have hp' := (Finset.mem_filter.mp hp).1
   rw [Finset.mem_product] at hp'
-  exact lt_trans (Nat.zero_le N) (Finset.mem_Ioc.mp hp'.2).1
+  exact Nat.zero_lt_of_lt (Finset.mem_Ioc.mp hp'.2).1
 
 theorem gmGcdSlice_index_pos
     {N d : ℕ} {p : ℕ × ℕ} (hp : p ∈ gmGcdSlice N d) : 0 < d := by
@@ -4744,11 +4817,19 @@ theorem gmGcdSlice_to_reduced_mem
   constructor
   · constructor <;> rw [Finset.mem_Icc]
     · constructor
-      · exact Nat.div_gcd_pos_of_pos_left p.2 hp₁
-      · omega
+      · apply Nat.one_le_iff_ne_zero.mpr
+        intro hz
+        change p.1 / d = 0 at hz
+        rw [hz, mul_zero] at hmul₁
+        omega
+      · exact (Nat.div_le_self p.1 d).trans hp₁I.2
     · constructor
-      · exact Nat.div_gcd_pos_of_pos_right p.1 hp₂
-      · omega
+      · apply Nat.one_le_iff_ne_zero.mpr
+        intro hz
+        change p.2 / d = 0 at hz
+        rw [hz, mul_zero] at hmul₂
+        omega
+      · exact (Nat.div_le_self p.2 d).trans hp₂I.2
   · refine ⟨?_, ?_, ?_, ?_, ?_⟩
     · simpa only [hmul₁] using hp₁I.1
     · simpa only [hmul₁] using hp₁I.2
@@ -4796,9 +4877,10 @@ theorem gmGcdSliceMoment_eq_reduced
       simpa [Nat.mul_div_cancel' hdDvdP₂, Nat.mul_div_cancel' hdDvdQ₂] using this
   · intro p hp
     refine ⟨(d * p.1, d * p.2), gmReducedRatioPairs_to_gcdSlice_mem hp, ?_⟩
-    have hd := by
+    have hd : 0 < d := by
       have hpCond := (Finset.mem_filter.mp hp).2
-      omega
+      exact Nat.pos_of_mul_pos_right
+        (lt_of_le_of_lt (Nat.zero_le N) hpCond.1)
     simp [Nat.mul_div_cancel_left _ hd]
   · intro p hp
     have hpGcd := (Finset.mem_filter.mp hp).2
@@ -4806,9 +4888,13 @@ theorem gmGcdSliceMoment_eq_reduced
     have hdDvd₂ : d ∣ p.2 := by rw [← hpGcd]; exact Nat.gcd_dvd_right _ _
     have hp₂ := gmGcdSlice_snd_pos hp
     have hcast₁ : ((p.1 / d : ℕ) : ℝ) = (p.1 : ℝ) / d := by
+      have hdPos := gmGcdSlice_index_pos hp
       rw [Nat.cast_div hdDvd₁]
+      exact_mod_cast hdPos.ne'
     have hcast₂ : ((p.2 / d : ℕ) : ℝ) = (p.2 : ℝ) / d := by
+      have hdPos := gmGcdSlice_index_pos hp
       rw [Nat.cast_div hdDvd₂]
+      exact_mod_cast hdPos.ne'
     congr 2
     rw [hcast₁, hcast₂]
     have hdR : (d : ℝ) ≠ 0 := by exact_mod_cast (gmGcdSlice_index_pos hp).ne'
@@ -4831,16 +4917,18 @@ theorem gmDiscreteRatioMoment_eq_sum_gcdSlices
   have hp₁ := Finset.mem_Ioc.mp hpI.1
   have hp₂ := Finset.mem_Ioc.mp hpI.2
   have hgPos : 0 < Nat.gcd p.1 p.2 :=
-    Nat.gcd_pos_of_pos_left p.2 (lt_trans (Nat.zero_le N) hp₁.1)
+    Nat.gcd_pos_of_pos_left p.2 (Nat.zero_lt_of_lt hp₁.1)
   have hgLe : Nat.gcd p.1 p.2 ≤ 2 * N :=
-    (Nat.gcd_le_left p.2 (lt_trans (Nat.zero_le N) hp₁.1)).trans hp₁.2
+    (Nat.gcd_le_left p.2 (Nat.zero_lt_of_lt hp₁.1)).trans hp₁.2
   have hgMem : Nat.gcd p.1 p.2 ∈ Finset.Icc 1 (2 * N) :=
     Finset.mem_Icc.mpr ⟨hgPos, hgLe⟩
   rw [Finset.sum_eq_single (Nat.gcd p.1 p.2)]
   · simp
   · intro d hd hdne
-    simp only [↓reduceIte, hdne.symm, if_false]
-  · exact hgMem
+    have hne : Nat.gcd p.1 p.2 ≠ d := Ne.symm hdne
+    simp [hne]
+  · intro hnot
+    exact (hnot hgMem).elim
 
 theorem gmDiscreteRatioMoment_eq_sum_reduced
     (k N : ℕ) (W : Finset ℝ) :
@@ -4864,10 +4952,13 @@ theorem sum_range_one_div_succ_sq_le (D : ℕ) :
       have hterm :
           (1 : ℝ) / ((D + 1 : ℕ) : ℝ) ^ 2 ≤
             2 / ((D + 1 : ℕ) : ℝ) - 2 / ((D + 2 : ℕ) : ℝ) := by
-        rw [div_sub_div_comm]
-        field_simp
-        norm_num
-        positivity
+        have hDone : (1 : ℝ) ≤ (D + 1 : ℕ) := by exact_mod_cast Nat.succ_le_succ (Nat.zero_le D)
+        have hDsEq : ((D + 2 : ℕ) : ℝ) = ((D + 1 : ℕ) : ℝ) + 1 := by
+          push_cast
+          ring
+        rw [hDsEq]
+        field_simp [hD.ne']
+        nlinarith
       rw [Finset.sum_range_succ]
       calc
         (∑ n ∈ Finset.range D, (1 : ℝ) / ((n + 1 : ℕ) : ℝ) ^ 2) +
@@ -4878,7 +4969,8 @@ theorem sum_range_one_div_succ_sq_le (D : ℕ) :
               (2 / ((D + 1 : ℕ) : ℝ) - 2 / ((D + 2 : ℕ) : ℝ)) := by
           gcongr
         _ = 2 - 2 / (((D + 1) + 1 : ℕ) : ℝ) := by
-          norm_num [Nat.cast_add, Nat.cast_one]
+          push_cast
+          ring
 
 theorem sum_Icc_one_div_sq_le_two (D : ℕ) :
     (∑ d ∈ Finset.Icc 1 D, (1 : ℝ) / (d : ℝ) ^ 2) ≤ 2 := by
@@ -4888,20 +4980,856 @@ theorem sum_Icc_one_div_sq_le_two (D : ℕ) :
   have hle :
       (∑ d ∈ Finset.Icc 1 D, (1 : ℝ) / (d : ℝ) ^ 2) ≤
         ∑ d ∈ Finset.range (D + 1), if d = 0 then 0 else (1 : ℝ) / (d : ℝ) ^ 2 := by
-    apply Finset.sum_le_sum_of_subset_of_nonneg hsub
-    · intro d hdRange hdNot
-      positivity
-    · intro d hd
-      have hdPos : 0 < d := (Finset.mem_Icc.mp hd).1
-      simp [hdPos.ne']
+    calc
+      (∑ d ∈ Finset.Icc 1 D, (1 : ℝ) / (d : ℝ) ^ 2) =
+          ∑ d ∈ Finset.Icc 1 D,
+            if d = 0 then 0 else (1 : ℝ) / (d : ℝ) ^ 2 := by
+        apply Finset.sum_congr rfl
+        intro d hd
+        have hdPos : 0 < d := (Finset.mem_Icc.mp hd).1
+        simp [hdPos.ne']
+      _ ≤ _ := by
+        apply Finset.sum_le_sum_of_subset_of_nonneg hsub
+        intro d hdRange hdNot
+        positivity
   have hshift :
       (∑ d ∈ Finset.range (D + 1), if d = 0 then 0 else (1 : ℝ) / (d : ℝ) ^ 2) =
         ∑ n ∈ Finset.range D, (1 : ℝ) / ((n + 1 : ℕ) : ℝ) ^ 2 := by
     rw [Finset.sum_range_succ']
-    simp only [↓reduceIte, zero_add]
-    rw [Finset.sum_range_succ]
-    simp only [Nat.succ_ne_zero, if_false]
+    simp
   rw [hshift] at hle
-  exact hle.trans ((sum_range_one_div_succ_sq_le D).trans (by positivity))
+  exact hle.trans ((sum_range_one_div_succ_sq_le D).trans (by
+    have : (0 : ℝ) ≤ 2 / ((D + 1 : ℕ) : ℝ) := by positivity
+    linarith))
+
+theorem card_gmReducedRatioPairs_le_four_mul_sq (N d : ℕ) :
+    (gmReducedRatioPairs N d).card ≤ 4 * N ^ 2 := by
+  unfold gmReducedRatioPairs
+  calc
+    (((Finset.Icc 1 (2 * N)) ×ˢ (Finset.Icc 1 (2 * N))).filter fun p =>
+        N < d * p.1 ∧ d * p.1 ≤ 2 * N ∧
+          N < d * p.2 ∧ d * p.2 ≤ 2 * N ∧ Nat.Coprime p.1 p.2).card ≤
+        ((Finset.Icc 1 (2 * N)) ×ˢ (Finset.Icc 1 (2 * N))).card :=
+      Finset.card_filter_le _ _
+    _ = (Finset.Icc 1 (2 * N)).card ^ 2 := by
+      simp only [Finset.card_product]
+      ring
+    _ ≤ (2 * N) ^ 2 := by
+      gcongr
+      rw [Nat.card_Icc]
+      omega
+    _ = 4 * N ^ 2 := by ring
+
+theorem cast_card_gmReducedRatioPairs_le_four_mul_sq (N d : ℕ) :
+    ((gmReducedRatioPairs N d).card : ℝ) ≤ 4 * (N : ℝ) ^ 2 := by
+  exact_mod_cast card_gmReducedRatioPairs_le_four_mul_sq N d
+
+theorem gmSecondLocalPackingPrefactor_le
+    {T H N d : ℝ} (hT : 1 ≤ T) (hH : 0 ≤ H)
+    (hN : 0 ≤ N) (hd : 0 < d) :
+    gmAffineLocalBumpFourierSup * (T / (2 * Real.pi)) *
+        (2 * ((2 * Real.pi * H / T) / (d ^ 2 / (8 * N ^ 2))) + 3) ≤
+      19 * gmAffineLocalBumpFourierSup * (T + H * N ^ 2 / d ^ 2) := by
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hpi : 0 < Real.pi := Real.pi_pos
+  have hSup : 0 ≤ gmAffineLocalBumpFourierSup :=
+    gmAffineLocalBumpFourierSup_pos.le
+  by_cases hNz : N = 0
+  · subst N
+    norm_num
+    have hpiHalf : (1 : ℝ) / (2 * Real.pi) ≤ 1 := by
+      apply (div_le_one (by positivity)).2
+      nlinarith [Real.pi_gt_three]
+    calc
+      gmAffineLocalBumpFourierSup * (T / (2 * Real.pi)) * 3 =
+          gmAffineLocalBumpFourierSup * (T / (2 * Real.pi) * 3) := by ring
+      _ ≤ gmAffineLocalBumpFourierSup * (19 * T) := by
+        apply mul_le_mul_of_nonneg_left _ hSup
+        calc
+          T / (2 * Real.pi) * 3 ≤ T * 3 := by
+            calc
+              T / (2 * Real.pi) * 3 = (T * 3) * (1 / (2 * Real.pi)) := by ring
+              _ ≤ (T * 3) * 1 :=
+                mul_le_mul_of_nonneg_left hpiHalf (by positivity)
+              _ = T * 3 := by ring
+          _ ≤ 19 * T := by nlinarith
+      _ = 19 * gmAffineLocalBumpFourierSup * T := by ring
+  · have hNpos : 0 < N := lt_of_le_of_ne hN (Ne.symm hNz)
+    have heq :
+        gmAffineLocalBumpFourierSup * (T / (2 * Real.pi)) *
+            (2 * ((2 * Real.pi * H / T) / (d ^ 2 / (8 * N ^ 2))) + 3) =
+          gmAffineLocalBumpFourierSup *
+            (16 * H * N ^ 2 / d ^ 2 + 3 * T / (2 * Real.pi)) := by
+      field_simp
+      ring
+    rw [heq]
+    have hpiHalf : (1 : ℝ) / (2 * Real.pi) ≤ 1 := by
+      apply (div_le_one (by positivity)).2
+      nlinarith [Real.pi_gt_three]
+    have hcore0 : 0 ≤ H * N ^ 2 / d ^ 2 := by positivity
+    have hfirst : 16 * H * N ^ 2 / d ^ 2 ≤
+        19 * (H * N ^ 2 / d ^ 2) := by
+      calc
+        16 * H * N ^ 2 / d ^ 2 = 16 * (H * N ^ 2 / d ^ 2) := by ring
+        _ ≤ 19 * (H * N ^ 2 / d ^ 2) := by gcongr; norm_num
+    have hsecond : 3 * T / (2 * Real.pi) ≤ 19 * T := by
+      calc
+        3 * T / (2 * Real.pi) = 3 * T * (1 / (2 * Real.pi)) := by ring
+        _ ≤ 3 * T * 1 := by gcongr
+        _ ≤ 19 * T := by nlinarith
+    calc
+      gmAffineLocalBumpFourierSup *
+          (16 * H * N ^ 2 / d ^ 2 + 3 * T / (2 * Real.pi)) ≤
+        gmAffineLocalBumpFourierSup *
+          (19 * (H * N ^ 2 / d ^ 2) + 19 * T) := by
+        exact mul_le_mul_of_nonneg_left (add_le_add hfirst hsecond) hSup
+      _ = 19 * gmAffineLocalBumpFourierSup *
+          (T + H * N ^ 2 / d ^ 2) := by ring
+
+theorem gmFourthLocalPackingPrefactor_le
+    {T H N d : ℝ} (hT : 1 ≤ T) (hH : 0 ≤ H)
+    (hN : 0 ≤ N) (hd : 0 < d) :
+    gmAffineLocalBumpFourierSup * (2 * T / (2 * Real.pi)) *
+        (2 * ((2 * Real.pi * H / (2 * T)) /
+          (d ^ 2 / (8 * N ^ 2))) + 3) ≤
+      19 * gmAffineLocalBumpFourierSup * (T + H * N ^ 2 / d ^ 2) := by
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hpi : 0 < Real.pi := Real.pi_pos
+  have hSup : 0 ≤ gmAffineLocalBumpFourierSup :=
+    gmAffineLocalBumpFourierSup_pos.le
+  by_cases hNz : N = 0
+  · subst N
+    norm_num
+    have hpiInv : (1 : ℝ) / Real.pi ≤ 1 := by
+      apply (div_le_one Real.pi_pos).2
+      nlinarith [Real.pi_gt_three]
+    calc
+      gmAffineLocalBumpFourierSup * (2 * T / (2 * Real.pi)) * 3 =
+          gmAffineLocalBumpFourierSup * (2 * T / (2 * Real.pi) * 3) := by ring
+      _ ≤ gmAffineLocalBumpFourierSup * (19 * T) := by
+        apply mul_le_mul_of_nonneg_left _ hSup
+        calc
+          2 * T / (2 * Real.pi) * 3 ≤ 2 * T / 2 * 3 := by
+            gcongr
+            nlinarith [Real.pi_gt_three]
+          _ ≤ 19 * T := by nlinarith
+      _ = 19 * gmAffineLocalBumpFourierSup * T := by ring
+  · have hNpos : 0 < N := lt_of_le_of_ne hN (Ne.symm hNz)
+    have heq :
+        gmAffineLocalBumpFourierSup * (2 * T / (2 * Real.pi)) *
+            (2 * ((2 * Real.pi * H / (2 * T)) /
+              (d ^ 2 / (8 * N ^ 2))) + 3) =
+          gmAffineLocalBumpFourierSup *
+            (16 * H * N ^ 2 / d ^ 2 + 3 * T / Real.pi) := by
+      field_simp
+      ring
+    rw [heq]
+    have hpiInv : (1 : ℝ) / Real.pi ≤ 1 := by
+      apply (div_le_one Real.pi_pos).2
+      nlinarith [Real.pi_gt_three]
+    have hcore0 : 0 ≤ H * N ^ 2 / d ^ 2 := by positivity
+    have hfirst : 16 * H * N ^ 2 / d ^ 2 ≤
+        19 * (H * N ^ 2 / d ^ 2) := by
+      calc
+        16 * H * N ^ 2 / d ^ 2 = 16 * (H * N ^ 2 / d ^ 2) := by ring
+        _ ≤ 19 * (H * N ^ 2 / d ^ 2) := by gcongr; norm_num
+    have hsecond : 3 * T / Real.pi ≤ 19 * T := by
+      calc
+        3 * T / Real.pi = 3 * T * (1 / Real.pi) := by ring
+        _ ≤ 3 * T * 1 := by gcongr
+        _ ≤ 19 * T := by nlinarith
+    calc
+      gmAffineLocalBumpFourierSup *
+          (16 * H * N ^ 2 / d ^ 2 + 3 * T / Real.pi) ≤
+        gmAffineLocalBumpFourierSup *
+          (19 * (H * N ^ 2 / d ^ 2) + 19 * T) := by
+        exact mul_le_mul_of_nonneg_left (add_le_add hfirst hsecond) hSup
+      _ = 19 * gmAffineLocalBumpFourierSup *
+          (T + H * N ^ 2 / d ^ 2) := by ring
+
+noncomputable def gmSmallGcdL2Constant (μ : ℝ) : ℝ :=
+  19 * gmAffineLocalBumpFourierSup *
+    (|Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi +
+      4 * (1 + μ⁻¹) * 2 ^ μ)
+
+noncomputable def gmSmallGcdL4Constant (μ : ℝ) : ℝ :=
+  19 * gmAffineLocalBumpFourierSup *
+    (4 * (|Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi) +
+      8 * (1 + μ⁻¹) * 3 ^ μ)
+
+theorem gmSmallGcdL2Constant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdL2Constant μ := by
+  unfold gmSmallGcdL2Constant
+  have hSup := gmAffineLocalBumpFourierSup_pos
+  positivity
+
+theorem gmSmallGcdL4Constant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdL4Constant μ := by
+  unfold gmSmallGcdL4Constant
+  have hSup := gmAffineLocalBumpFourierSup_pos
+  positivity
+
+theorem gmReducedRatioMoment_two_le_main_add_tail
+    {μ T H : ℝ} {N d q : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hSep : IsSeparated 1 W)
+    (hBase : InBaseInterval T W) (hN : 0 < N) (hd : 0 < d)
+    (hHOne : 1 ≤ H) (hHT : H ≤ T) (hq : 2 ≤ q) :
+    gmReducedRatioMoment 2 N d W ≤
+      gmSmallGcdL2Constant μ * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) +
+        4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 *
+          gmAffineLocalBumpFourierTailConstant q hq *
+            H ^ (1 - (q : ℝ)) := by
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hH0 : 0 ≤ H := zero_le_one.trans hHOne
+  have hN0 : (0 : ℝ) ≤ N := by positivity
+  have hdR : (0 : ℝ) < d := by exact_mod_cast hd
+  have hrLe : 2 * Real.pi * H / T ≤ 2 * Real.pi := by
+    rw [div_le_iff₀ hTpos]
+    nlinarith [Real.pi_pos]
+  have hlen :
+      |((Real.log 2 + 2 * Real.pi * H / T) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / T))| ≤
+        |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi := by
+    calc
+      |((Real.log 2 + 2 * Real.pi * H / T) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / T))| =
+          |(Real.log 2 - Real.log (1 / 2 : ℝ)) +
+            2 * (2 * Real.pi * H / T)| := by ring_nf
+      _ ≤ |Real.log 2 - Real.log (1 / 2 : ℝ)| +
+          |2 * (2 * Real.pi * H / T)| := abs_add_le _ _
+      _ = |Real.log 2 - Real.log (1 / 2 : ℝ)| +
+          2 * (2 * Real.pi * H / T) := by
+        rw [abs_of_nonneg (mul_nonneg (by norm_num)
+          (div_nonneg (mul_nonneg (mul_nonneg (by norm_num) Real.pi_pos.le) hH0)
+            hTpos.le))]
+      _ ≤ |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi := by
+        nlinarith
+  have hTpow : 1 ≤ T ^ μ := Real.one_le_rpow hT hμ.le
+  let L : ℝ := |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi
+  let A : ℝ := 4 * (1 + μ⁻¹) * 2 ^ μ
+  have hL0 : 0 ≤ L := by dsimp only [L]; positivity
+  have hA0 : 0 ≤ A := by dsimp only [A]; positivity
+  have hglobal :
+      (|((Real.log 2 + 2 * Real.pi * H / T) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / T))| +
+        4 * (1 + μ⁻¹) * 2 ^ μ * T ^ μ) * (W.card : ℝ) ≤
+        (L + A) * T ^ μ * (W.card : ℝ) := by
+    have hinside :
+        |((Real.log 2 + 2 * Real.pi * H / T) -
+            (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / T))| +
+          4 * (1 + μ⁻¹) * 2 ^ μ * T ^ μ ≤
+            (L + A) * T ^ μ := by
+      dsimp only [L, A]
+      nlinarith [mul_nonneg hL0 (sub_nonneg.mpr hTpow)]
+    gcongr
+  have hpref := gmSecondLocalPackingPrefactor_le
+    hT hH0 hN0 hdR
+  have hraw := gmReducedRatioMoment_two_le_local_raw
+    hμ hT hSep hBase hN hd hHOne hq
+  have hpair := cast_card_gmReducedRatioPairs_le_four_mul_sq N d
+  calc
+    gmReducedRatioMoment 2 N d W ≤ _ := hraw
+    _ ≤ (19 * gmAffineLocalBumpFourierSup *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) *
+          ((L + A) * T ^ μ * (W.card : ℝ)) +
+        (4 * (N : ℝ) ^ 2) * (W.card : ℝ) ^ 2 *
+          gmAffineLocalBumpFourierTailConstant q hq *
+            H ^ (1 - (q : ℝ)) := by
+      have hPref0 : 0 ≤ 19 * gmAffineLocalBumpFourierSup *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) := by
+        exact mul_nonneg (mul_nonneg (by norm_num) gmAffineLocalBumpFourierSup_pos.le)
+          (add_nonneg hTpos.le (by positivity))
+      have hTail0 := gmAffineLocalBumpFourierTailConstant_pos q hq
+      gcongr
+    _ = _ := by
+      dsimp only [gmSmallGcdL2Constant, L, A]
+      ring
+
+theorem gmReducedRatioMoment_four_le_main_add_tail
+    {μ T H : ℝ} {N d q : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hBase : InBaseInterval T W)
+    (hN : 0 < N) (hd : 0 < d) (hHOne : 1 ≤ H) (hHT : H ≤ T)
+    (hq : 2 ≤ q) :
+    gmReducedRatioMoment 4 N d W ≤
+      gmSmallGcdL4Constant μ * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            (ApproxAddEnergy 1 W : ℝ) +
+        4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 *
+          gmAffineLocalBumpFourierTailConstant q hq *
+            H ^ (1 - (q : ℝ)) := by
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hH0 : 0 ≤ H := zero_le_one.trans hHOne
+  have hN0 : (0 : ℝ) ≤ N := by positivity
+  have hdR : (0 : ℝ) < d := by exact_mod_cast hd
+  have hrLe : 2 * Real.pi * H / (2 * T) ≤ Real.pi := by
+    rw [div_le_iff₀ (by positivity : (0 : ℝ) < 2 * T)]
+    nlinarith [Real.pi_pos]
+  have hlen :
+      |((Real.log 2 + 2 * Real.pi * H / (2 * T)) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / (2 * T)))| ≤
+        |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi := by
+    calc
+      |((Real.log 2 + 2 * Real.pi * H / (2 * T)) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / (2 * T)))| =
+          |(Real.log 2 - Real.log (1 / 2 : ℝ)) +
+            2 * (2 * Real.pi * H / (2 * T))| := by ring_nf
+      _ ≤ |Real.log 2 - Real.log (1 / 2 : ℝ)| +
+          |2 * (2 * Real.pi * H / (2 * T))| := abs_add_le _ _
+      _ = |Real.log 2 - Real.log (1 / 2 : ℝ)| +
+          2 * (2 * Real.pi * H / (2 * T)) := by
+        rw [abs_of_nonneg (mul_nonneg (by norm_num)
+          (div_nonneg (mul_nonneg (mul_nonneg (by norm_num) Real.pi_pos.le) hH0)
+            (by positivity)))]
+      _ ≤ |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi := by
+        nlinarith [Real.pi_pos]
+  have hTpow : 1 ≤ T ^ μ := Real.one_le_rpow hT hμ.le
+  let L : ℝ := |Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi
+  let A : ℝ := 8 * (1 + μ⁻¹) * 3 ^ μ
+  have hL0 : 0 ≤ L := by dsimp only [L]; positivity
+  have hA0 : 0 ≤ A := by dsimp only [A]; positivity
+  have hglobal :
+      (4 * |((Real.log 2 + 2 * Real.pi * H / (2 * T)) -
+          (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / (2 * T)))| +
+        8 * (1 + μ⁻¹) * 3 ^ μ) * T ^ μ *
+          (ApproxAddEnergy 1 W : ℝ) ≤
+        (4 * L + A) * T ^ μ * (ApproxAddEnergy 1 W : ℝ) := by
+    have hinside :
+        4 * |((Real.log 2 + 2 * Real.pi * H / (2 * T)) -
+            (Real.log (1 / 2 : ℝ) - 2 * Real.pi * H / (2 * T)))| +
+          8 * (1 + μ⁻¹) * 3 ^ μ ≤ 4 * L + A := by
+      dsimp only [L, A]
+      nlinarith
+    exact mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_right hinside (Real.rpow_nonneg hTpos.le μ))
+      (by positivity)
+  have hpref := gmFourthLocalPackingPrefactor_le
+    hT hH0 hN0 hdR
+  have hraw := gmReducedRatioMoment_four_le_local_raw
+    hμ hT hBase hN hd hHOne hq
+  have hpair := cast_card_gmReducedRatioPairs_le_four_mul_sq N d
+  calc
+    gmReducedRatioMoment 4 N d W ≤ _ := hraw
+    _ ≤ (19 * gmAffineLocalBumpFourierSup *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) *
+          ((4 * L + A) * T ^ μ * (ApproxAddEnergy 1 W : ℝ)) +
+        (4 * (N : ℝ) ^ 2) * (W.card : ℝ) ^ 4 *
+          gmAffineLocalBumpFourierTailConstant q hq *
+            H ^ (1 - (q : ℝ)) := by
+      have hPref0 : 0 ≤ 19 * gmAffineLocalBumpFourierSup *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) := by
+        exact mul_nonneg (mul_nonneg (by norm_num) gmAffineLocalBumpFourierSup_pos.le)
+          (add_nonneg hTpos.le (by positivity))
+      have hTail0 := gmAffineLocalBumpFourierTailConstant_pos q hq
+      gcongr
+    _ = _ := by
+      dsimp only [gmSmallGcdL4Constant, L, A]
+      ring
+
+noncomputable def gmSmallGcdTailConstant (μ : ℝ) : ℝ :=
+  gmAffineLocalBumpFourierTailConstant
+    (gmReflectionDecayOrder 8 μ) (gmReflectionDecayOrder_two_le 8 μ)
+
+noncomputable def gmSmallGcdL2SliceConstant (μ : ℝ) : ℝ :=
+  gmSmallGcdL2Constant μ + 16 * gmSmallGcdTailConstant μ
+
+noncomputable def gmSmallGcdL4SliceConstant (μ : ℝ) : ℝ :=
+  gmSmallGcdL4Constant μ + 64 * gmSmallGcdTailConstant μ
+
+theorem gmSmallGcdL2SliceConstant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdL2SliceConstant μ := by
+  unfold gmSmallGcdL2SliceConstant gmSmallGcdTailConstant
+  have hmain := gmSmallGcdL2Constant_pos hμ
+  have htail := gmAffineLocalBumpFourierTailConstant_pos
+    (gmReflectionDecayOrder 8 μ) (gmReflectionDecayOrder_two_le 8 μ)
+  positivity
+
+theorem gmSmallGcdL4SliceConstant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdL4SliceConstant μ := by
+  unfold gmSmallGcdL4SliceConstant gmSmallGcdTailConstant
+  have hmain := gmSmallGcdL4Constant_pos hμ
+  have htail := gmAffineLocalBumpFourierTailConstant_pos
+    (gmReflectionDecayOrder 8 μ) (gmReflectionDecayOrder_two_le 8 μ)
+  positivity
+
+theorem gmReducedRatioMoment_two_le_epsilon
+    {μ T : ℝ} {N d : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hSep : IsSeparated 1 W)
+    (hBase : InBaseInterval T W) (hN : 0 < N) (hNT : (N : ℝ) ≤ T)
+    (hd : 0 < d) :
+    gmReducedRatioMoment 2 N d W ≤
+      gmSmallGcdL2SliceConstant μ * T ^ μ *
+        (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+          (W.card : ℝ) := by
+  let H := gmReflectionHeight T μ
+  let q := gmReflectionDecayOrder 8 μ
+  let Ctail := gmSmallGcdTailConstant μ
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hHOne : 1 ≤ H := by
+    dsimp only [H, gmReflectionHeight]
+    exact Real.one_le_rpow hT (gmReflectionEta_pos hμ).le
+  have hHT : H ≤ T := by
+    dsimp only [H, gmReflectionHeight]
+    simpa only [Real.rpow_one] using
+      Real.rpow_le_rpow_of_exponent_le hT gmReflectionEta_le_one
+  have hq : 2 ≤ q := gmReflectionDecayOrder_two_le 8 μ
+  have hCtail : 0 < Ctail := by
+    dsimp only [Ctail, gmSmallGcdTailConstant, q]
+    exact gmAffineLocalBumpFourierTailConstant_pos _ _
+  have hmain := gmReducedRatioMoment_two_le_main_add_tail
+    hμ hT hSep hBase hN hd hHOne hHT hq
+  by_cases hWzero : W.card = 0
+  · have hWempty : W = ∅ := Finset.card_eq_zero.mp hWzero
+    subst W
+    simp [gmReducedRatioMoment, gmR]
+  have hWposNat : 0 < W.card := Nat.pos_of_ne_zero hWzero
+  have hWone : (1 : ℝ) ≤ W.card := by exact_mod_cast hWposNat
+  have hCard := gmSeparated_card_le_two_height hT hSep hBase
+  have hTailBase :
+      Ctail * H ^ (1 - (q : ℝ)) ≤ Ctail / T ^ (8 : ℝ) := by
+    have h := gmLemma11ThreeFourierError_le
+      (A := (8 : ℝ)) (ε := μ) (C := Ctail) (T := T) (M := 1)
+      (by norm_num) hμ hCtail.le hT (by simpa using hT)
+    simpa only [Nat.cast_one, one_mul, H, q] using h
+  have hNsq : (N : ℝ) ^ 2 ≤ T ^ 2 :=
+    pow_le_pow_left₀ (by positivity) hNT 2
+  have hWsq : (W.card : ℝ) ^ 2 ≤ (2 * T) ^ 2 :=
+    pow_le_pow_left₀ (by positivity) hCard 2
+  have hpower : T ^ (4 : ℕ) * (Ctail / T ^ (8 : ℝ)) ≤ Ctail := by
+    have hpow : T ^ (4 : ℕ) ≤ T ^ (8 : ℝ) := by
+      rw [← Real.rpow_natCast]
+      exact Real.rpow_le_rpow_of_exponent_le hT (by norm_num)
+    calc
+      T ^ (4 : ℕ) * (Ctail / T ^ (8 : ℝ)) ≤
+          T ^ (8 : ℝ) * (Ctail / T ^ (8 : ℝ)) := by gcongr
+      _ = Ctail := by field_simp
+  have htail :
+      4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 * Ctail *
+          H ^ (1 - (q : ℝ)) ≤
+        16 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) := by
+    have hcore : 1 ≤ T ^ μ *
+        (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) := by
+      have hTpow : 1 ≤ T ^ μ := Real.one_le_rpow hT hμ.le
+      have hterm0 : 0 ≤ H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2 := by positivity
+      have hsum : 1 ≤ T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2 := by linarith
+      nlinarith [mul_le_mul hTpow hsum (by norm_num : (0 : ℝ) ≤ 1)
+        (Real.rpow_nonneg hTpos.le μ)]
+    have hpoly : 4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 ≤
+        16 * T ^ (4 : ℕ) := by
+      calc
+        4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 ≤
+            4 * T ^ 2 * (2 * T) ^ 2 := by gcongr
+        _ = 16 * T ^ (4 : ℕ) := by ring
+    have hTailNonneg : 0 ≤ Ctail * H ^ (1 - (q : ℝ)) := by positivity
+    calc
+      4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 * Ctail *
+          H ^ (1 - (q : ℝ)) =
+        (4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2) *
+          (Ctail * H ^ (1 - (q : ℝ))) := by ring
+      _ ≤ 16 * T ^ (4 : ℕ) * (Ctail * H ^ (1 - (q : ℝ))) :=
+        mul_le_mul_of_nonneg_right hpoly hTailNonneg
+      _ ≤ 16 * T ^ (4 : ℕ) * (Ctail / T ^ (8 : ℝ)) := by
+        exact mul_le_mul_of_nonneg_left hTailBase (by positivity)
+      _ = 16 * (T ^ (4 : ℕ) * (Ctail / T ^ (8 : ℝ))) := by ring
+      _ ≤ 16 * Ctail := mul_le_mul_of_nonneg_left hpower (by norm_num)
+      _ ≤ 16 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) := by
+        have := mul_le_mul_of_nonneg_left hcore (by positivity : 0 ≤ 16 * Ctail)
+        nlinarith
+  calc
+    gmReducedRatioMoment 2 N d W ≤ _ := hmain
+    _ ≤ gmSmallGcdL2Constant μ * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) +
+        16 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) := by
+      have htail' :
+          4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 2 *
+              gmAffineLocalBumpFourierTailConstant q hq * H ^ (1 - (q : ℝ)) ≤
+            16 * Ctail * T ^ μ *
+              (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) * (W.card : ℝ) := by
+        simpa only [Ctail] using htail
+      linarith
+    _ = _ := by
+      dsimp only [gmSmallGcdL2SliceConstant, Ctail, H]
+      ring
+
+theorem gmReducedRatioMoment_four_le_epsilon
+    {μ T : ℝ} {N d : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hSep : IsSeparated 1 W)
+    (hBase : InBaseInterval T W) (hN : 0 < N) (hNT : (N : ℝ) ≤ T)
+    (hd : 0 < d) :
+    gmReducedRatioMoment 4 N d W ≤
+      gmSmallGcdL4SliceConstant μ * T ^ μ *
+        (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+          (ApproxAddEnergy 1 W : ℝ) := by
+  let H := gmReflectionHeight T μ
+  let q := gmReflectionDecayOrder 8 μ
+  let Ctail := gmSmallGcdTailConstant μ
+  have hTpos : 0 < T := zero_lt_one.trans_le hT
+  have hHOne : 1 ≤ H := by
+    dsimp only [H, gmReflectionHeight]
+    exact Real.one_le_rpow hT (gmReflectionEta_pos hμ).le
+  have hHT : H ≤ T := by
+    dsimp only [H, gmReflectionHeight]
+    simpa only [Real.rpow_one] using
+      Real.rpow_le_rpow_of_exponent_le hT gmReflectionEta_le_one
+  have hq : 2 ≤ q := gmReflectionDecayOrder_two_le 8 μ
+  have hCtail : 0 < Ctail := by
+    dsimp only [Ctail, gmSmallGcdTailConstant, q]
+    exact gmAffineLocalBumpFourierTailConstant_pos _ _
+  have hmain := gmReducedRatioMoment_four_le_main_add_tail
+    hμ hT hBase hN hd hHOne hHT hq
+  by_cases hWzero : W.card = 0
+  · have hWempty : W = ∅ := Finset.card_eq_zero.mp hWzero
+    subst W
+    simp [gmReducedRatioMoment, gmR]
+  have hWposNat : 0 < W.card := Nat.pos_of_ne_zero hWzero
+  have hCard := gmSeparated_card_le_two_height hT hSep hBase
+  have hTailBase :
+      Ctail * H ^ (1 - (q : ℝ)) ≤ Ctail / T ^ (8 : ℝ) := by
+    have h := gmLemma11ThreeFourierError_le
+      (A := (8 : ℝ)) (ε := μ) (C := Ctail) (T := T) (M := 1)
+      (by norm_num) hμ hCtail.le hT (by simpa using hT)
+    simpa only [Nat.cast_one, one_mul, H, q] using h
+  have hNsq : (N : ℝ) ^ 2 ≤ T ^ 2 :=
+    pow_le_pow_left₀ (by positivity) hNT 2
+  have hWfour : (W.card : ℝ) ^ 4 ≤ (2 * T) ^ 4 :=
+    pow_le_pow_left₀ (by positivity) hCard 4
+  have hpower : T ^ (6 : ℕ) * (Ctail / T ^ (8 : ℝ)) ≤ Ctail := by
+    have hpow : T ^ (6 : ℕ) ≤ T ^ (8 : ℝ) := by
+      rw [← Real.rpow_natCast]
+      exact Real.rpow_le_rpow_of_exponent_le hT (by norm_num)
+    calc
+      T ^ (6 : ℕ) * (Ctail / T ^ (8 : ℝ)) ≤
+          T ^ (8 : ℝ) * (Ctail / T ^ (8 : ℝ)) := by gcongr
+      _ = Ctail := by field_simp
+  have henergyOne : (1 : ℝ) ≤ ApproxAddEnergy 1 W := by
+    have hdiag := card_sq_le_approxAddEnergy (by norm_num : (0 : ℝ) ≤ 1) W
+    have honeNat : 1 ≤ W.card ^ 2 := Nat.one_le_pow 2 W.card hWposNat
+    have honeR : (1 : ℝ) ≤ (W.card ^ 2 : ℕ) := by exact_mod_cast honeNat
+    have hdiagR : ((W.card ^ 2 : ℕ) : ℝ) ≤ ApproxAddEnergy 1 W := by
+      exact_mod_cast hdiag
+    exact honeR.trans hdiagR
+  have htail :
+      4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 * Ctail *
+          H ^ (1 - (q : ℝ)) ≤
+        64 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            (ApproxAddEnergy 1 W : ℝ) := by
+    have hTpow : 1 ≤ T ^ μ := Real.one_le_rpow hT hμ.le
+    have hterm0 : 0 ≤ H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2 := by positivity
+    have hsum : 1 ≤ T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2 := by linarith
+    have hcore : 1 ≤ T ^ μ *
+        (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+          (ApproxAddEnergy 1 W : ℝ) := by
+      have hmul := mul_le_mul hTpow hsum (by norm_num : (0 : ℝ) ≤ 1)
+        (Real.rpow_nonneg hTpos.le μ)
+      nlinarith
+    have hpoly : 4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 ≤
+        64 * T ^ (6 : ℕ) := by
+      calc
+        4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 ≤
+            4 * T ^ 2 * (2 * T) ^ 4 := by gcongr
+        _ = 64 * T ^ (6 : ℕ) := by ring
+    have hTailNonneg : 0 ≤ Ctail * H ^ (1 - (q : ℝ)) := by positivity
+    calc
+      4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 * Ctail *
+          H ^ (1 - (q : ℝ)) =
+        (4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4) *
+          (Ctail * H ^ (1 - (q : ℝ))) := by ring
+      _ ≤ 64 * T ^ (6 : ℕ) * (Ctail * H ^ (1 - (q : ℝ))) :=
+        mul_le_mul_of_nonneg_right hpoly hTailNonneg
+      _ ≤ 64 * T ^ (6 : ℕ) * (Ctail / T ^ (8 : ℝ)) := by
+        exact mul_le_mul_of_nonneg_left hTailBase (by positivity)
+      _ = 64 * (T ^ (6 : ℕ) * (Ctail / T ^ (8 : ℝ))) := by ring
+      _ ≤ 64 * Ctail := mul_le_mul_of_nonneg_left hpower (by norm_num)
+      _ ≤ 64 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            (ApproxAddEnergy 1 W : ℝ) := by
+        have := mul_le_mul_of_nonneg_left hcore (by positivity : 0 ≤ 64 * Ctail)
+        nlinarith
+  calc
+    gmReducedRatioMoment 4 N d W ≤ _ := hmain
+    _ ≤ gmSmallGcdL4Constant μ * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            (ApproxAddEnergy 1 W : ℝ) +
+        64 * Ctail * T ^ μ *
+          (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            (ApproxAddEnergy 1 W : ℝ) := by
+      have htail' :
+          4 * (N : ℝ) ^ 2 * (W.card : ℝ) ^ 4 *
+              gmAffineLocalBumpFourierTailConstant q hq * H ^ (1 - (q : ℝ)) ≤
+            64 * Ctail * T ^ μ *
+              (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+                (ApproxAddEnergy 1 W : ℝ) := by
+        simpa only [Ctail] using htail
+      linarith
+    _ = _ := by
+      dsimp only [gmSmallGcdL4SliceConstant, Ctail, H]
+      ring
+
+noncomputable def gmSmallGcdL3SliceConstant (μ : ℝ) : ℝ :=
+  Real.sqrt (gmSmallGcdL2SliceConstant μ) *
+    Real.sqrt (gmSmallGcdL4SliceConstant μ)
+
+theorem gmSmallGcdL3SliceConstant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdL3SliceConstant μ := by
+  unfold gmSmallGcdL3SliceConstant
+  exact mul_pos (Real.sqrt_pos.2 (gmSmallGcdL2SliceConstant_pos hμ))
+    (Real.sqrt_pos.2 (gmSmallGcdL4SliceConstant_pos hμ))
+
+theorem gmReducedRatioMoment_three_le_epsilon
+    {μ T : ℝ} {N d : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hSep : IsSeparated 1 W)
+    (hBase : InBaseInterval T W) (hN : 0 < N) (hNT : (N : ℝ) ≤ T)
+    (hd : 0 < d) :
+    gmReducedRatioMoment 3 N d W ≤
+      gmSmallGcdL3SliceConstant μ * T ^ μ *
+        (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+          Real.sqrt (W.card : ℝ) *
+            Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+  let P : ℝ := T ^ μ *
+    (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)
+  let C₂ := gmSmallGcdL2SliceConstant μ
+  let C₄ := gmSmallGcdL4SliceConstant μ
+  have hP : 0 ≤ P := by
+    dsimp only [P]
+    have hterm0 : 0 ≤
+        gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2 := by
+      exact div_nonneg (mul_nonneg
+        (Real.rpow_nonneg (zero_lt_one.trans_le hT).le _) (sq_nonneg _))
+        (sq_nonneg _)
+    exact mul_nonneg (Real.rpow_nonneg (zero_lt_one.trans_le hT).le μ)
+      (add_nonneg (zero_lt_one.trans_le hT).le hterm0)
+  have hC₂ : 0 ≤ C₂ := (gmSmallGcdL2SliceConstant_pos hμ).le
+  have hC₄ : 0 ≤ C₄ := (gmSmallGcdL4SliceConstant_pos hμ).le
+  have htwo := gmReducedRatioMoment_two_le_epsilon
+    hμ hT hSep hBase hN hNT hd
+  have hfour := gmReducedRatioMoment_four_le_epsilon
+    hμ hT hSep hBase hN hNT hd
+  have hthird := gmReducedThirdMoment_le_sqrt N d W
+  have htwoSqrt : Real.sqrt (gmReducedRatioMoment 2 N d W) ≤
+      Real.sqrt (C₂ * P * (W.card : ℝ)) := by
+    apply Real.sqrt_le_sqrt
+    simpa only [C₂, P, mul_assoc] using htwo
+  have hfourSqrt : Real.sqrt (gmReducedRatioMoment 4 N d W) ≤
+      Real.sqrt (C₄ * P * (ApproxAddEnergy 1 W : ℝ)) := by
+    apply Real.sqrt_le_sqrt
+    simpa only [C₄, P, mul_assoc] using hfour
+  calc
+    gmReducedRatioMoment 3 N d W ≤
+        Real.sqrt (gmReducedRatioMoment 2 N d W) *
+          Real.sqrt (gmReducedRatioMoment 4 N d W) := hthird
+    _ ≤ Real.sqrt (C₂ * P * (W.card : ℝ)) *
+          Real.sqrt (C₄ * P * (ApproxAddEnergy 1 W : ℝ)) := by
+      exact mul_le_mul htwoSqrt hfourSqrt (Real.sqrt_nonneg _)
+        (Real.sqrt_nonneg _)
+    _ = gmSmallGcdL3SliceConstant μ * T ^ μ *
+        (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+          Real.sqrt (W.card : ℝ) *
+            Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      rw [Real.sqrt_mul (mul_nonneg hC₂ hP), Real.sqrt_mul hC₂,
+        Real.sqrt_mul (mul_nonneg hC₄ hP), Real.sqrt_mul hC₄]
+      have hPsqrt : Real.sqrt P * Real.sqrt P = P := Real.mul_self_sqrt hP
+      have hPsqrt' :
+          Real.sqrt (T ^ μ *
+              (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) *
+              Real.sqrt (T ^ μ *
+                (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) =
+            T ^ μ *
+              (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) := by
+        simpa only [P] using hPsqrt
+      calc
+        _ = (Real.sqrt (gmSmallGcdL2SliceConstant μ) *
+              Real.sqrt (gmSmallGcdL4SliceConstant μ)) *
+              (Real.sqrt (T ^ μ *
+                  (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) *
+                Real.sqrt (T ^ μ *
+                  (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2))) *
+                Real.sqrt (W.card : ℝ) *
+                  Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by ring
+        _ = _ := by
+          rw [hPsqrt']
+          simp only [gmSmallGcdL3SliceConstant]
+          ring
+
+/-! ### Guth--Maynard Lemma 11.8: the summed small-gcd range -/
+
+/-- The part of the cubic ratio moment whose exact gcd is at most `D`. -/
+noncomputable def gmSmallGcdThirdMoment
+    (N D : ℕ) (W : Finset ℝ) : ℝ :=
+  ∑ d ∈ Finset.Icc 1 D, gmGcdSliceMoment 3 N d W
+
+theorem gmSmallGcdThirdMoment_eq_reduced
+    (N D : ℕ) (W : Finset ℝ) :
+    gmSmallGcdThirdMoment N D W =
+      ∑ d ∈ Finset.Icc 1 D, gmReducedRatioMoment 3 N d W := by
+  unfold gmSmallGcdThirdMoment
+  apply Finset.sum_congr rfl
+  intro d hd
+  exact gmGcdSliceMoment_eq_reduced 3 N d W
+
+theorem sum_smallGcd_local_scales_le
+    {T H : ℝ} {N D : ℕ} (hT : 0 ≤ T) (hH : 0 ≤ H) :
+    (∑ d ∈ Finset.Icc 1 D,
+        (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) ≤
+      (D : ℝ) * T + 2 * H * (N : ℝ) ^ 2 := by
+  have hrecip := sum_Icc_one_div_sq_le_two D
+  calc
+    (∑ d ∈ Finset.Icc 1 D,
+        (T + H * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) =
+        ((Finset.Icc 1 D).card : ℝ) * T +
+          H * (N : ℝ) ^ 2 *
+            (∑ d ∈ Finset.Icc 1 D, (1 : ℝ) / (d : ℝ) ^ 2) := by
+      simp only [Finset.sum_add_distrib, Finset.sum_const, nsmul_eq_mul]
+      rw [Finset.mul_sum]
+      apply congrArg₂ (· + ·) rfl
+      apply Finset.sum_congr rfl
+      intro d hd
+      ring
+    _ ≤ (D : ℝ) * T + H * (N : ℝ) ^ 2 * 2 := by
+      have hcard : ((Finset.Icc 1 D).card : ℝ) ≤ D := by
+        simp only [Nat.card_Icc]
+        norm_cast
+      gcongr
+    _ = (D : ℝ) * T + 2 * H * (N : ℝ) ^ 2 := by ring
+
+noncomputable def gmSmallGcdSumConstant (μ : ℝ) : ℝ :=
+  gmSmallGcdL3SliceConstant μ
+
+theorem gmSmallGcdSumConstant_pos {μ : ℝ} (hμ : 0 < μ) :
+    0 < gmSmallGcdSumConstant μ :=
+  gmSmallGcdL3SliceConstant_pos hμ
+
+/-- Lemma 11.8 before the harmless `T^ε` absorption.  The exact source
+factor `D*T + H*N^2` remains visible here. -/
+theorem gmSmallGcdThirdMoment_le_raw
+    {μ T : ℝ} {N D : ℕ} {W : Finset ℝ}
+    (hμ : 0 < μ) (hT : 1 ≤ T) (hSep : IsSeparated 1 W)
+    (hBase : InBaseInterval T W) (hN : 0 < N) (hNT : (N : ℝ) ≤ T) :
+    gmSmallGcdThirdMoment N D W ≤
+      gmSmallGcdSumConstant μ * T ^ μ *
+        ((D : ℝ) * T +
+          2 * gmReflectionHeight T μ * (N : ℝ) ^ 2) *
+            Real.sqrt (W.card : ℝ) *
+              Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+  rw [gmSmallGcdThirdMoment_eq_reduced]
+  have hSlice : ∀ d ∈ Finset.Icc 1 D,
+      gmReducedRatioMoment 3 N d W ≤
+        gmSmallGcdSumConstant μ * T ^ μ *
+          (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+            Real.sqrt (W.card : ℝ) *
+              Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+    intro d hd
+    exact gmReducedRatioMoment_three_le_epsilon hμ hT hSep hBase hN hNT
+      (Finset.mem_Icc.mp hd).1
+  calc
+    (∑ d ∈ Finset.Icc 1 D, gmReducedRatioMoment 3 N d W) ≤
+        ∑ d ∈ Finset.Icc 1 D,
+          gmSmallGcdSumConstant μ * T ^ μ *
+            (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2) *
+              Real.sqrt (W.card : ℝ) *
+                Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      exact Finset.sum_le_sum fun d hd => hSlice d hd
+    _ = gmSmallGcdSumConstant μ * T ^ μ *
+          (∑ d ∈ Finset.Icc 1 D,
+            (T + gmReflectionHeight T μ * (N : ℝ) ^ 2 / (d : ℝ) ^ 2)) *
+              Real.sqrt (W.card : ℝ) *
+                Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      simp only [Finset.mul_sum, Finset.sum_mul]
+    _ ≤ gmSmallGcdSumConstant μ * T ^ μ *
+          ((D : ℝ) * T +
+            2 * gmReflectionHeight T μ * (N : ℝ) ^ 2) *
+              Real.sqrt (W.card : ℝ) *
+                Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      have hsum := sum_smallGcd_local_scales_le
+        (H := gmReflectionHeight T μ) (N := N) (D := D)
+        (zero_le_one.trans hT)
+        (Real.rpow_nonneg (zero_le_one.trans hT) (gmReflectionEta μ))
+      have hpref : 0 ≤ gmSmallGcdSumConstant μ * T ^ μ :=
+        mul_nonneg (gmSmallGcdSumConstant_pos hμ).le
+          (Real.rpow_nonneg (zero_le_one.trans hT) μ)
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hsum hpref) (Real.sqrt_nonneg _))
+        (Real.sqrt_nonneg _)
+
+/-- Guth--Maynard Lemma 11.8 in the epsilon-uniform form used by
+Proposition 11.1. -/
+theorem gmSmallGcdThirdMoment_native
+    (ε : ℝ) (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧
+      ∀ {N D : ℕ} {T : ℝ} (W : Finset ℝ),
+        0 < N → T₀ ≤ T → (N : ℝ) ≤ T →
+        IsSeparated 1 W → InBaseInterval T W →
+        gmSmallGcdThirdMoment N D W ≤
+          C * T ^ ε * ((D : ℝ) * T + (N : ℝ) ^ 2) *
+            Real.sqrt (W.card : ℝ) *
+              Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+  let μ : ℝ := ε / 4
+  let C : ℝ := 2 * gmSmallGcdSumConstant μ
+  refine ⟨C, 1, ?_, by norm_num, ?_⟩
+  · dsimp only [C]
+    exact mul_pos (by norm_num) (gmSmallGcdSumConstant_pos (by dsimp only [μ]; positivity))
+  intro N D T W hN hT hNT hSep hBase
+  have hTOne : 1 ≤ T := hT
+  have hTPos : 0 < T := zero_lt_one.trans_le hTOne
+  have hμ : 0 < μ := by dsimp only [μ]; positivity
+  have hraw := gmSmallGcdThirdMoment_le_raw (D := D)
+    hμ hTOne hSep hBase hN hNT
+  have hEta : gmReflectionEta μ ≤ μ := (gmReflectionEta_lt_eps hμ).le
+  have hHeight : gmReflectionHeight T μ ≤ T ^ μ := by
+    unfold gmReflectionHeight
+    exact Real.rpow_le_rpow_of_exponent_le hTOne hEta
+  have hScale :
+      (D : ℝ) * T + 2 * gmReflectionHeight T μ * (N : ℝ) ^ 2 ≤
+        2 * T ^ μ * ((D : ℝ) * T + (N : ℝ) ^ 2) := by
+    have hDT : 0 ≤ (D : ℝ) * T := by positivity
+    have hN2 : 0 ≤ (N : ℝ) ^ 2 := sq_nonneg _
+    have hPowOne : 1 ≤ T ^ μ := Real.one_le_rpow hTOne hμ.le
+    calc
+      (D : ℝ) * T + 2 * gmReflectionHeight T μ * (N : ℝ) ^ 2 ≤
+          (D : ℝ) * T + 2 * T ^ μ * (N : ℝ) ^ 2 := by gcongr
+      _ ≤ 2 * T ^ μ * ((D : ℝ) * T + (N : ℝ) ^ 2) := by nlinarith
+  have hBudget : 2 * μ ≤ ε := by dsimp only [μ]; linarith
+  have hPowBudget : T ^ (2 * μ) ≤ T ^ ε :=
+    Real.rpow_le_rpow_of_exponent_le hTOne hBudget
+  calc
+    gmSmallGcdThirdMoment N D W ≤
+        gmSmallGcdSumConstant μ * T ^ μ *
+          ((D : ℝ) * T + 2 * gmReflectionHeight T μ * (N : ℝ) ^ 2) *
+            Real.sqrt (W.card : ℝ) *
+              Real.sqrt (ApproxAddEnergy 1 W : ℝ) := hraw
+    _ ≤ gmSmallGcdSumConstant μ * T ^ μ *
+          (2 * T ^ μ * ((D : ℝ) * T + (N : ℝ) ^ 2)) *
+            Real.sqrt (W.card : ℝ) *
+              Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      have hpref : 0 ≤ gmSmallGcdSumConstant μ * T ^ μ :=
+        mul_nonneg (gmSmallGcdSumConstant_pos hμ).le
+          (Real.rpow_nonneg hTPos.le μ)
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hScale hpref) (Real.sqrt_nonneg _))
+        (Real.sqrt_nonneg _)
+    _ = C * T ^ (2 * μ) * ((D : ℝ) * T + (N : ℝ) ^ 2) *
+          Real.sqrt (W.card : ℝ) *
+            Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      dsimp only [C]
+      rw [show 2 * μ = μ + μ by ring, Real.rpow_add hTPos]
+      ring
+    _ ≤ C * T ^ ε * ((D : ℝ) * T + (N : ℝ) ^ 2) *
+          Real.sqrt (W.card : ℝ) *
+            Real.sqrt (ApproxAddEnergy 1 W : ℝ) := by
+      have hC0 : 0 ≤ C := by
+        dsimp only [C]
+        exact mul_nonneg (by norm_num) (gmSmallGcdSumConstant_pos hμ).le
+      have hShape0 : 0 ≤ ((D : ℝ) * T + (N : ℝ) ^ 2) := by positivity
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_right
+            (mul_le_mul_of_nonneg_left hPowBudget hC0) hShape0)
+          (Real.sqrt_nonneg _))
+        (Real.sqrt_nonneg _)
 
 end RiemannZeta.GuthMaynard
