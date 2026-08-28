@@ -36,7 +36,7 @@ flowchart TD
     MV["Montgomery mean value<br/>DONE"]
     HM["Basic Halasz-Montgomery<br/>DONE"]
     EX["Separated Type-I extraction<br/>DONE"]
-    CT["#19-dependent Central Type I<br/>DONE CONDITIONALLY<br/>only GM large values remains"]
+    CT["#19-dependent Central Type I<br/>DONE<br/>native GM large-values input discharged"]
     DY["Slab to symmetric N<br/>DONE"]
 
     CI["#18 Coverage-range contract repair<br/>DONE<br/>source range Re rho >= 7/10"]
@@ -48,7 +48,7 @@ flowchart TD
     QD["#18 Quadratic-divisor off-diagonal<br/>DONE<br/>DFI equations (2) and (9)-(30),<br/>signed central series and optimized<br/>Theorem 1 error bound kernel-checked"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
     TM["#18 Hughes-Young twisted fourth moment<br/>DONE<br/>DFI equation-(80) consumer,<br/>finite off-diagonal epsilon bound and<br/>twistedZetaFourthMoment_native"]
-    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>two native inputs remain open:<br/>Huxley and GM large values"]
+    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>one native input remains open:<br/>Huxley"]
     GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
@@ -63,20 +63,20 @@ flowchart TD
     S1["#19 S1 estimate<br/>DONE<br/>epsilon-separated GM Proposition 5.1<br/>with uniform T^-10 decay"]
     RI["#19 Exact smooth-reflection identities<br/>DONE<br/>signed finite modes, Mellin/Fubini formulas,<br/>and two-sign cancellation-preserving bounds"]
     RF["#19 Quantitative smooth reflection / AFE<br/>DONE - SEMANTICALLY RE-AUDITED<br/>complete nonzero integer-frequency sum,<br/>eta=min(epsilon/16,1/16), arbitrary T^-A,<br/>A=100 and scaled cubic-S2 consumer"]
-    HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>OPEN"]
-    S2["#19 S2 estimate<br/>OPEN"]
-    EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>OPEN"]
-    SL["#19 S3 localization<br/>change of variables and tails<br/>OPEN"]
-    AT["#19 Affine-transformation estimate<br/>GM Proposition 9.1<br/>OPEN"]
-    S3["#19 Refined S3 estimate<br/>GM Proposition 10.1<br/>OPEN"]
-    EG["#19 GCD/spacing energy theorem<br/>GM Section 11<br/>OPEN"]
-    GM["#19 Exact Guth-Maynard large values<br/>Sections 3 and 12 assembly<br/>OPEN"]
+    HB["#19 Heath-Brown difference-set<br/>mean-square estimate<br/>DONE<br/>weighted and coefficient-one native forms"]
+    S2["#19 S2 estimate<br/>DONE<br/>complete cyclic Proposition 6.1<br/>with smoothing and epsilon assembly"]
+    EN["#19 Approximate-energy bridge<br/>and R-sum L2/L4 moments<br/>DONE<br/>second/fourth moments and dyadic blocks"]
+    SL["#19 S3 localization<br/>change of variables and tails<br/>DONE<br/>Proposition 8.1 physical source bound"]
+    AT["#19 Affine-transformation estimate<br/>GM Proposition 9.1<br/>DONE<br/>finite descent and uniform height family"]
+    S3["#19 Refined S3 estimate<br/>GM Proposition 10.1<br/>DONE<br/>selected and physical native forms"]
+    EG["#19 GCD/spacing energy theorem<br/>GM Section 11<br/>DONE<br/>Propositions 11.1 and 11.2"]
+    GM["#19 Exact Guth-Maynard large values<br/>DONE - SEMANTICALLY AUDITED AND RETESTED<br/>source localization, Sections 3-12,<br/>all complementary ranges and exact theorem"]
     GZD["#19 Concrete GM zero density<br/>OPEN"]
-    CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham and GM inputs open"]
+    CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham input remains open"]
     CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Imported-graph dependency integrity<br/>DONE<br/>6066/6066 dependencies,<br/>zero warnings/project axioms in scope"]
+    IG["#19 Imported-graph dependency integrity<br/>DONE - RETESTED 28 AUGUST<br/>7602/7602 dependencies,<br/>zero warnings/project axioms in scope"]
     VC["#19 Retained-file evaluation coverage<br/>OPEN<br/>47 top-level probes and 2 subordinate<br/>modules lie outside runner elaboration"]
-    QA["#19 Final theorem integration<br/>OPEN<br/>native GM and concrete density outputs<br/>plus retained-file coverage missing"]
+    QA["#19 Final theorem integration<br/>OPEN<br/>concrete density outputs and<br/>retained-file coverage missing"]
 
     MZ --> ZB
     MZ --> CF
@@ -264,7 +264,7 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,IG done;
-    class CT,TR,CB conditional;
-    class ZD,GCS,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CZD,VC,QA open;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,CT,IG done;
+    class TR,CB conditional;
+    class ZD,GCS,GZD,CZD,VC,QA open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

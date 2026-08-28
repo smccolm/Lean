@@ -7688,7 +7688,7 @@ theorem exists_heathBrownDyadicPairMoment_high_bound_physical
     simpa only [H] using hP₁
 
 /-- Cubic high-range arithmetic from Montgomery--Vaughan Lemma 29.10.  The
-constant is explicit and the smoothing height is still the actual rounded
+The constant is explicit and the smoothing height is still the actual rounded
 natural used by the reflection theorem. -/
 theorem heathBrown_high_physical_of_cube
     {η T : ℝ} {Q : ℕ} (hT : 1 ≤ T) (hQ : 0 < Q)

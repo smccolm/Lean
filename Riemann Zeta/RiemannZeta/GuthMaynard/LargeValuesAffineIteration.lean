@@ -53,7 +53,7 @@ theorem integral_gmAffineTildeSchwartz_eq_mul
       rw [integral_mul_const]
 
 /-- The source `L¹` estimate for the smoothed function, with the explicit
-constant supplied by the fixed compact cutoff. -/
+the constant supplied by the fixed compact cutoff. -/
 theorem integral_gmAffineTildeSchwartz_le
     (T : ℝ) (hT : 0 < T) (f : SchwartzMap ℝ ℝ)
     (hf : ∀ u, 0 ≤ f u) :
@@ -125,7 +125,7 @@ theorem norm_fourier_gmAffineSmoothingKernel_le_four
 
 /-- A single Section 9 smoothing increases every weighted zeroth-derivative
 Fourier seminorm by at most the fixed kernel mass bound `4`.  Crucially, the
-constant is independent of the smoothing scale. -/
+the constant is independent of the smoothing scale. -/
 theorem seminorm_fourier_gmAffineComplexify_tilde_le_four
     (T : ℝ) (hT : 0 < T) (f : SchwartzMap ℝ ℝ) (n : ℕ) :
     SchwartzMap.seminorm ℝ n 0
@@ -1773,7 +1773,7 @@ theorem card_gmAffineFirstPoissonProducts_real_le
     (card_gmAffineFirstPoissonProductRange_real_le hM₁ hM₃ hQ)
 
 /-- The complete retained-pair estimate after the divisor bound.  The
-constant depends only on `epsilon`; `B` is any uniform upper bound for
+The constant depends only on `epsilon`; `B` is any uniform upper bound for
 the absolute product variable. -/
 theorem exists_card_gmAffineFirstPoissonPairs_real_le
     {epsilon : ℝ} (hepsilon : 0 < epsilon)
@@ -5160,7 +5160,7 @@ theorem exists_integral_gmAffineMiddleTauWeightedBlockRealSq_le_source_decay
   · exact hell
 
 /-- The complete omitted first-frequency tail for one fixed uniform decay
-constant.  This is the form used to keep constants outside the physical
+the constant.  This is the form used to keep constants outside the physical
 height quantifier in Proposition 9.1. -/
 theorem sum_gmAffineMiddleTail_mass_le_source_decay_of_constant
     {T epsilon C : ℝ} (hT : 0 < T) (hC : 0 ≤ C) (n : ℕ)
@@ -8627,7 +8627,7 @@ theorem gmAffineIterationRegionIII_scale_le_one
     _ = 1 := by simp
 
 /-- Region III is therefore bounded by its fixed Fourier-envelope
-constant, uniformly in height and affine scale. -/
+the constant, uniformly in height and affine scale. -/
 theorem gmAffineRegionIIISourceBound_le_constant
     {delta T : ℝ} (hT : 1 ≤ T) (f : SchwartzMap ℝ ℝ)
     {M n : ℕ} (hMT : (M : ℝ) ≤ T ^ 4) (hn : 8 ≤ n) :
@@ -8877,7 +8877,7 @@ def GMAffineLemma92MassRecurrenceAt
 /-- Convert the raw Lemma 9.2 recurrence to its mass-normalized form after
 the recurrence has selected its Fourier order.  Keeping this conversion
 separate avoids the circular quantifier order in which a Fourier-to-mass
-constant would otherwise have to be fixed before the derivative order is
+The constant would otherwise have to be fixed before the derivative order is
 known. -/
 theorem GMAffineLemma92RecurrenceAt.toMassRecurrence
     {delta Cdiv Ctail D T : ℝ} {n M : ℕ} {hT : 0 < T}

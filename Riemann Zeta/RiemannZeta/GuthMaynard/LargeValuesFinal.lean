@@ -914,7 +914,7 @@ theorem gmSection12_eq12_1_roots
     exact hb.trans hrs.2.2.2.2.2.2.2
 
 /-- The eight physical roots in equation (12.1), with the common analytic
-constant removed. -/
+the constant removed. -/
 noncomputable def gmEquation12PhysicalRootShape
     (N : ℕ) (T V : ℝ) : ℝ :=
   let D := V ^ 6 / (N : ℝ) ^ 3

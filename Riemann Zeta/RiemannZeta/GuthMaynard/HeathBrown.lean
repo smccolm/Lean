@@ -1644,7 +1644,7 @@ theorem heathBrownTransferCoeff_eq_card_mul_halfWeight
       simp
 
 /-- Uniform divisor bound for the grouped transfer coefficient.  The
-constant depends only on the requested epsilon and is independent of both
+The constant depends only on the requested epsilon and is independent of both
 source scales and the auxiliary interval. -/
 theorem exists_heathBrownTransferCoeff_bound
     (η : ℝ) (hη : 0 < η) :

@@ -3447,7 +3447,7 @@ theorem setIntegral_gmCubicSelectedSmoothedBlock_holder
 
 /-- The two affine square integrals in the selected block are both
 absorbed by the single terminal-scale functional `J`.  The numerical
-constant is deliberately explicit, so no `\ll`-notation is hidden in
+The constant is deliberately explicit, so no `\ll`-notation is hidden in
 the Section 10 consumer. -/
 theorem setIntegral_gmCubicSelectedSmoothedBlock_le_six
     {η T : ℝ} {N M H r s : ℕ} (W : Finset ℝ)

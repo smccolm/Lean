@@ -735,7 +735,7 @@ theorem card_gmAffinePoissonNearSet_le
       ring
 
 /-- Real cardinality bound for the retained modes.  The harmless absolute
-constant five accounts exactly for the two endpoints and the ceiling. -/
+The constant five accounts exactly for the two endpoints and the ceiling. -/
 theorem card_gmAffinePoissonNearSet_real_le
     {M : ℕ} (hM : 0 < M) {alpha Q : ℝ} (hQ : 0 < Q) :
     ((gmAffinePoissonNearSet M alpha Q).card : ℝ) ≤
@@ -3270,7 +3270,7 @@ theorem integral_gmCubicLocalBump_le_four :
     _ = 4 := by norm_num
 
 /-- The paper's trivial estimate `|Z₁| ≪ 1`, with an explicit universal
-constant for the fixed cutoff. -/
+the constant for the fixed cutoff. -/
 theorem norm_gmAffineMiddleZ₁_le_four
     (A : ℝ) (m₂ m₂' : ℤ) (u u' : ℝ) :
     ‖gmAffineMiddleZ₁ A m₂ m₂' u u'‖ ≤ 4 := by

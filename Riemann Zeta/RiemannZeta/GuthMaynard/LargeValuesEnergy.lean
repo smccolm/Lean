@@ -543,7 +543,7 @@ theorem sourceDirichletPoly_norm_le_gmReflectionWindow_add_error
     exact gmLemma11ThreeFourierError_le hA hε hC.le hT hMT)
 
 /-- Uniform quantifier order for Lemma 11.3.  The same absolute tail
-constant works for every height, length, coefficient sequence, and
+The constant works for every height, length, coefficient sequence, and
 ordinate, which is essential before summing a dyadic multiplicity class. -/
 theorem sourceDirichletPoly_norm_le_gmReflectionWindow_add_error_uniform
     (A ε : ℝ) (hA : 0 < A) (hε : 0 < ε) :

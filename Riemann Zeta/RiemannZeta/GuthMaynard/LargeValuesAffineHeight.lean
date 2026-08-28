@@ -932,7 +932,7 @@ theorem exists_uniform_gmAffineJ_le_height_finite_descent
           rfl
 
 /-- Correct height-family form of Guth--Maynard Proposition 9.1.  One
-constant works simultaneously for every physical height and every source
+The constant works simultaneously for every physical height and every source
 in the family, provided Lemma 8.4 supplies a uniform coefficient profile.
 This is the quantifier order used by Proposition 10.1. -/
 theorem gmAffine_proposition9_1_height_family_native

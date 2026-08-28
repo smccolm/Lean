@@ -8075,7 +8075,7 @@ theorem gmCubicS3_prop8_1_physical_explicit
     _ ≤ _ := add_le_add (add_le_add hmain herr) (le_refl _)
 
 /-- Guth--Maynard Proposition 8.1 in its final epsilon-power form.  The
-constant is uniform in `T`, `N`, the coefficients encoded by the source
+The constant is uniform in `T`, `N`, the coefficients encoded by the source
 cutoff, and the separated set `W`; the residual `T⁻⁹⁰` term is the summed
 finite Poisson tail and is retained for the later cubic-trace assembly. -/
 theorem gmEventuallyLogNatPower_le_rpow
