@@ -482,7 +482,8 @@ theorem gmAffinePoissonFarMode_le_majorant
       unfold gmAffinePoissonFarMajorant
       rw [show ell + ⌊alpha⌋ = -1 from hjneg]
       have hmain0 : 0 ≤
-          4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n := by
+          4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+            Q ^ n := by
         positivity
       simpa [gmIntDecayProfile] using
         hex.trans (le_add_of_nonneg_left hmain0)
@@ -2894,7 +2895,8 @@ theorem norm_gmAffineScaledFarTerm
 after the second Poisson summation. -/
 noncomputable def gmAffineScaledFarMajorant
     (n : ℕ) (S alpha Q : ℝ) (j : ℤ) : ℝ :=
-  (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n) *
+  (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+      (S * Q ^ n)) *
       gmIntDecayProfile 2 (j + ⌊alpha⌋) +
     (if j + ⌊alpha⌋ = 0 then
       S * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
@@ -2904,11 +2906,12 @@ noncomputable def gmAffineScaledFarMajorant
         Q ^ (n + 2) else 0)
 
 theorem norm_gmAffineScaledFarTerm_le_profile
-    (n : ℕ) {S : ℝ} (hS : 0 < S) (hSone : 1 ≤ S)
+    (n : ℕ) {S : ℝ} (hS : 0 < S)
     {alpha Q : ℝ} (hQ : 0 < Q) (j : ℤ)
     (hk0 : j + ⌊alpha⌋ ≠ 0) (hkneg : j + ⌊alpha⌋ ≠ -1) :
     ‖gmAffineScaledFarTerm S hS alpha Q j‖ ≤
-      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n) *
+      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+        (S * Q ^ n)) *
         gmIntDecayProfile 2 (j + ⌊alpha⌋) := by
   rw [norm_gmAffineScaledFarTerm]
   split_ifs with hfar
@@ -2966,13 +2969,7 @@ theorem norm_gmAffineScaledFarTerm_le_profile
       _ = (4 * C / (S * Q ^ n)) * (1 / |(k : ℝ)| ^ 2) := by
         field_simp [hS.ne', hkabs.ne', hQ.ne']
         ring
-      _ ≤ (4 * C / Q ^ n) * (1 / |(k : ℝ)| ^ 2) := by
-        have hden : 0 < Q ^ n := pow_pos hQ n
-        have hleft : 4 * C / (S * Q ^ n) ≤ 4 * C / Q ^ n :=
-          div_le_div_of_nonneg_left (by positivity) hden
-            (by simpa only [one_mul] using
-              (mul_le_mul_of_nonneg_right hSone hden.le))
-        gcongr
+      _ = (4 * C / (S * Q ^ n)) * (1 / |(k : ℝ)| ^ 2) := rfl
   · exact mul_nonneg (by positivity) (by
       unfold gmIntDecayProfile
       split_ifs <;> positivity)
@@ -2997,7 +2994,7 @@ theorem norm_gmAffineScaledFarTerm_le_exception
   · positivity
 
 theorem norm_gmAffineScaledFarTerm_le_majorant
-    (n : ℕ) {S : ℝ} (hS : 0 < S) (hSone : 1 ≤ S)
+    (n : ℕ) {S : ℝ} (hS : 0 < S)
     {alpha Q : ℝ} (hQ : 0 < Q) (j : ℤ) :
     ‖gmAffineScaledFarTerm S hS alpha Q j‖ ≤
       gmAffineScaledFarMajorant n S alpha Q j := by
@@ -3017,11 +3014,12 @@ theorem norm_gmAffineScaledFarTerm_le_majorant
       unfold gmAffineScaledFarMajorant
       rw [show j + ⌊alpha⌋ = -1 from hkneg]
       have hmain0 : 0 ≤
-          4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n := by
+          4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+            (S * Q ^ n) := by
         positivity
       simpa [gmIntDecayProfile] using
         hex.trans (le_add_of_nonneg_left hmain0)
-    · have hmain := norm_gmAffineScaledFarTerm_le_profile n hS hSone hQ j hk0 hkneg
+    · have hmain := norm_gmAffineScaledFarTerm_le_profile n hS hQ j hk0 hkneg
       unfold gmAffineScaledFarMajorant
       rw [if_neg hk0, if_neg hkneg, add_zero, add_zero]
       exact hmain
@@ -3031,7 +3029,8 @@ theorem summable_gmAffineScaledFarMajorant
     Summable (gmAffineScaledFarMajorant n S alpha Q) := by
   unfold gmAffineScaledFarMajorant
   have hmain := (summable_gmIntDecayProfile_floorTranslate alpha).mul_left
-    (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n)
+    (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+      (S * Q ^ n))
   have hzero : Summable (fun j : ℤ =>
       if j + ⌊alpha⌋ = 0 then
         S * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
@@ -3055,11 +3054,13 @@ theorem summable_gmAffineScaledFarMajorant
 theorem tsum_gmAffineScaledFarMajorant
     (n : ℕ) (S alpha Q : ℝ) :
     (∑' j : ℤ, gmAffineScaledFarMajorant n S alpha Q j) =
-      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n) *
+      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+        (S * Q ^ n)) *
           (∑' k : ℤ, gmIntDecayProfile 2 k) +
         2 * (S * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
           Q ^ (n + 2)) := by
-  let A : ℝ := 4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n
+  let A : ℝ := 4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+    (S * Q ^ n)
   let D : ℝ := S * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
     Q ^ (n + 2)
   let F : ℤ → ℝ := fun j => A * gmIntDecayProfile 2 (j + ⌊alpha⌋)
@@ -3110,12 +3111,12 @@ theorem tsum_gmAffineScaledFarMajorant
   ring
 
 theorem summable_gmAffineScaledFarTerm
-    (n : ℕ) {S : ℝ} (hS : 0 < S) (hSone : 1 ≤ S)
+    (n : ℕ) {S : ℝ} (hS : 0 < S)
     {alpha Q : ℝ} (hQ : 0 < Q) :
     Summable (gmAffineScaledFarTerm S hS alpha Q) := by
   apply summable_norm_iff.mp
   apply Summable.of_nonneg_of_le (fun _ => norm_nonneg _)
-    (fun j => norm_gmAffineScaledFarTerm_le_majorant n hS hSone hQ j)
+    (fun j => norm_gmAffineScaledFarTerm_le_majorant n hS hQ j)
   exact summable_gmAffineScaledFarMajorant n S alpha Q
 
 noncomputable def gmAffineScaledFarSeries
@@ -3124,32 +3125,33 @@ noncomputable def gmAffineScaledFarSeries
 
 set_option maxHeartbeats 800000 in
 theorem norm_gmAffineScaledFarSeries_le
-    (n : ℕ) {S : ℝ} (hS : 0 < S) (hSone : 1 ≤ S)
+    (n : ℕ) {S : ℝ} (hS : 0 < S)
     {alpha Q : ℝ} (hQ : 0 < Q) :
     ‖gmAffineScaledFarSeries S hS alpha Q‖ ≤
-      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n) *
+      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+        (S * Q ^ n)) *
           (∑' k : ℤ, gmIntDecayProfile 2 k) +
         2 * (S * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
           Q ^ (n + 2)) := by
   unfold gmAffineScaledFarSeries
-  have hsum := summable_gmAffineScaledFarTerm n hS hSone (alpha := alpha) hQ
+  have hsum := summable_gmAffineScaledFarTerm n hS (alpha := alpha) hQ
   exact (norm_tsum_le_tsum_norm (summable_norm_iff.mpr hsum)).trans
     ((hsum.norm.tsum_le_tsum
-      (fun j => norm_gmAffineScaledFarTerm_le_majorant n hS hSone hQ j)
+      (fun j => norm_gmAffineScaledFarTerm_le_majorant n hS hQ j)
       (summable_gmAffineScaledFarMajorant n S alpha Q)).trans_eq
         (tsum_gmAffineScaledFarMajorant n S alpha Q))
 
 /-- Exact finite retained/omitted decomposition of the second Poisson
 lattice. -/
 theorem tsum_gmAffineScaledBumpDual_eq_near_add_far
-    (n : ℕ) {S : ℝ} (hS : 0 < S) (hSone : 1 ≤ S)
+    (n : ℕ) {S : ℝ} (hS : 0 < S)
     {alpha Q : ℝ} (hQ : 0 < Q) :
     (∑' j : ℤ, gmAffineScaledBumpDual S hS (alpha + j)) =
       (∑ j ∈ gmAffineScaledNearSet S alpha Q,
         gmAffineScaledBumpDual S hS (alpha + j)) +
           gmAffineScaledFarSeries S hS alpha Q := by
   have hnear := summable_gmAffineScaledNearTerm hS alpha Q
-  have hfar := summable_gmAffineScaledFarTerm n hS hSone (alpha := alpha) hQ
+  have hfar := summable_gmAffineScaledFarTerm n hS (alpha := alpha) hQ
   calc
     (∑' j : ℤ, gmAffineScaledBumpDual S hS (alpha + j)) =
         ∑' j : ℤ, (gmAffineScaledNearTerm S hS alpha Q j +
@@ -3170,7 +3172,7 @@ theorem tsum_gmAffineScaledBumpDual_eq_near_add_far
 stationary window and the complete omitted series. -/
 theorem gmAffineMiddleZ₂_eq_near_add_far
     (n : ℕ) {T : ℝ} (hT : 0 < T) {M₂ : ℕ} (hM₂ : 0 < M₂)
-    (hM₂T : (M₂ : ℝ) ≤ T) {Q : ℝ} (hQ : 0 < Q)
+    {Q : ℝ} (hQ : 0 < Q)
     (m₂ m₂' : ℤ) (u u' : ℝ) :
     gmAffineMiddleZ₂ T M₂ m₂ m₂' u u' =
       (∑ j ∈ gmAffineScaledNearSet (T / M₂)
@@ -3181,13 +3183,9 @@ theorem gmAffineMiddleZ₂_eq_near_add_far
           (-gmAffineMiddleDisplacement m₂ m₂' u u') Q := by
   let S : ℝ := T / M₂
   have hS : 0 < S := by dsimp only [S]; positivity
-  have hSone : 1 ≤ S := by
-    dsimp only [S]
-    rw [le_div_iff₀ (by positivity : (0 : ℝ) < M₂)]
-    simpa only [one_mul] using hM₂T
   rw [gmAffineMiddleZ₂_poisson hT hM₂]
   have hsplit := tsum_gmAffineScaledBumpDual_eq_near_add_far
-    n hS hSone (alpha := -gmAffineMiddleDisplacement m₂ m₂' u u') hQ
+    n hS (alpha := -gmAffineMiddleDisplacement m₂ m₂' u u') hQ
   simpa only [S, sub_eq_add_neg, neg_add_rev, neg_neg, add_comm] using hsplit
 
 /-- Uniform arbitrary-order bound for the complete omitted dual lattice in
@@ -3195,43 +3193,41 @@ the middle-frequency argument.  Choosing `Q=T^η` and `n` after the
 epsilon budget yields the paper's `O(T⁻¹⁰⁰)`. -/
 theorem norm_gmAffineMiddleZ₂_farSeries_le
     (n : ℕ) {T : ℝ} (hT : 0 < T) {M₂ : ℕ} (hM₂ : 0 < M₂)
-    (hM₂T : (M₂ : ℝ) ≤ T) {Q : ℝ} (hQ : 0 < Q)
+    {Q : ℝ} (hQ : 0 < Q)
     (m₂ m₂' : ℤ) (u u' : ℝ) :
     ‖gmAffineScaledFarSeries (T / M₂) (by positivity)
         (-gmAffineMiddleDisplacement m₂ m₂' u u') Q‖ ≤
-      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual / Q ^ n) *
+      (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
+        ((T / M₂) * Q ^ n)) *
           (∑' k : ℤ, gmIntDecayProfile 2 k) +
         2 * ((T / M₂) *
           SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
             Q ^ (n + 2)) := by
   have hS : 0 < T / (M₂ : ℝ) := by positivity
-  have hSone : 1 ≤ T / (M₂ : ℝ) := by
-    rw [le_div_iff₀ (by positivity : (0 : ℝ) < M₂)]
-    simpa only [one_mul] using hM₂T
-  exact norm_gmAffineScaledFarSeries_le n hS hSone hQ
+  exact norm_gmAffineScaledFarSeries_le n hS hQ
 
 /-- The compact `tau`-integral `Z₁` in equation (9.7), with the same fixed
 local bump used throughout the source-facing Section 9 argument. -/
 noncomputable def gmAffineMiddleTauPhase
-    (M₁ : ℕ) (m₂ m₂' : ℤ) (u u' tau : ℝ) : ℝ :=
+    (A : ℝ) (m₂ m₂' : ℤ) (u u' tau : ℝ) : ℝ :=
   2 * Real.pi * tau *
-    (((m₂' : ℝ) / M₁) * u' - ((m₂ : ℝ) / M₁) * u)
+    (((m₂' : ℝ) / A) * u' - ((m₂ : ℝ) / A) * u)
 
 noncomputable def gmAffineMiddleZ₁
-    (M₁ : ℕ) (m₂ m₂' : ℤ) (u u' : ℝ) : ℂ :=
+    (A : ℝ) (m₂ m₂' : ℤ) (u u' : ℝ) : ℂ :=
   ∫ tau : ℝ, (gmCubicLocalBump tau : ℂ) *
-    Complex.exp ((gmAffineMiddleTauPhase M₁ m₂ m₂' u u' tau : ℂ) * I)
+    Complex.exp ((gmAffineMiddleTauPhase A m₂ m₂' u u' tau : ℂ) * I)
 
 theorem integrable_gmAffineMiddleZ₁_integrand
-    (M₁ : ℕ) (m₂ m₂' : ℤ) (u u' : ℝ) :
+    (A : ℝ) (m₂ m₂' : ℤ) (u u' : ℝ) :
     Integrable (fun tau : ℝ => (gmCubicLocalBump tau : ℂ) *
-      Complex.exp ((gmAffineMiddleTauPhase M₁ m₂ m₂' u u' tau : ℂ) * I)) := by
+      Complex.exp ((gmAffineMiddleTauPhase A m₂ m₂' u u' tau : ℂ) * I)) := by
   have hb : Integrable (fun tau : ℝ => (gmCubicLocalBump tau : ℂ)) := by
     simpa only [gmAffineLocalBumpSchwartz_apply] using gmAffineLocalBumpSchwartz.integrable
   apply hb.norm.mono'
   · change AEStronglyMeasurable (fun tau : ℝ =>
         gmAffineLocalBumpSchwartz tau *
-          Complex.exp ((gmAffineMiddleTauPhase M₁ m₂ m₂' u u' tau : ℂ) * I))
+          Complex.exp ((gmAffineMiddleTauPhase A m₂ m₂' u u' tau : ℂ) * I))
     exact (gmAffineLocalBumpSchwartz.continuous.mul (by
       unfold gmAffineMiddleTauPhase
       fun_prop)).aestronglyMeasurable
@@ -3276,13 +3272,13 @@ theorem integral_gmCubicLocalBump_le_four :
 /-- The paper's trivial estimate `|Z₁| ≪ 1`, with an explicit universal
 constant for the fixed cutoff. -/
 theorem norm_gmAffineMiddleZ₁_le_four
-    (M₁ : ℕ) (m₂ m₂' : ℤ) (u u' : ℝ) :
-    ‖gmAffineMiddleZ₁ M₁ m₂ m₂' u u'‖ ≤ 4 := by
+    (A : ℝ) (m₂ m₂' : ℤ) (u u' : ℝ) :
+    ‖gmAffineMiddleZ₁ A m₂ m₂' u u'‖ ≤ 4 := by
   unfold gmAffineMiddleZ₁
   refine (norm_integral_le_integral_norm _).trans ?_
   calc
     (∫ tau : ℝ, ‖(gmCubicLocalBump tau : ℂ) *
-        Complex.exp ((gmAffineMiddleTauPhase M₁ m₂ m₂' u u' tau : ℂ) * I)‖) =
+        Complex.exp ((gmAffineMiddleTauPhase A m₂ m₂' u u' tau : ℂ) * I)‖) =
         ∫ tau : ℝ, gmCubicLocalBump tau := by
       apply integral_congr_ae
       filter_upwards with tau

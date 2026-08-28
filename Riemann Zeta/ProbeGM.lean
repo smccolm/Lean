@@ -5,6 +5,29 @@ open scoped ComplexConjugate ContDiff FourierTransform Topology
 
 namespace RiemannZeta.GuthMaynard
 
+example
+    (f : SchwartzMap ℝ ℝ) {M₁ M₂ M₃ : ℕ}
+    (hM₁ : 0 < M₁) (hM₃ : 0 < M₃)
+    {Q Y xi : ℝ} (hY : 0 ≤ Y) (hxi : |xi| ≤ Y) :
+    ∑ p ∈ gmAffineFirstPoissonPairs M₁ M₃ Q xi,
+        ‖gmAffineFirstPoissonPairTerm f M₂ M₃ hM₃ xi p‖ ^ 2 =
+      ∑ m₁ ∈ gmAffineSignedShell M₁,
+        ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+          gmAffineRetainedFirstPoissonPairSquare
+            f Q M₂ M₃ hM₃ (m₁, ell) xi := by
+  rw [sum_gmAffineFirstPoissonPairTerm_sq_eq_tsum_retained]
+  apply Finset.sum_congr rfl
+  intro m₁ hm₁
+  rw [tsum_eq_sum (s := gmAffineFirstPoissonEllRange M₁ M₃ Q Y)]
+  intro ell hell
+  unfold gmAffineRetainedFirstPoissonPairSquare
+  rw [if_neg]
+  intro htau
+  apply hell
+  apply mem_gmAffineFirstPoissonEllRange_of_pair
+    (Q := Q) (p := (m₁, ell)) hM₁ hM₃ hY hxi
+  exact mem_gmAffineFirstPoissonPairs.mpr
+    ⟨hm₁, (mem_gmAffinePoissonNearSet_iff_firstPoissonTau hM₃).mpr htau⟩
 
 noncomputable def testRadius (M₁ M₃ : ℕ) (Q : ℝ) : ℝ :=
   Q * (2 * M₁ : ℝ) / (8 * M₃ : ℝ)
@@ -401,8 +424,433 @@ example (f : SchwartzMap ℝ ℝ) (m₂ m₂' : ℤ) (xi xi' : ℝ) :
           ring
 
 end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example (n : ℕ) (f : SchwartzMap ℝ ℝ) {A Q : ℝ}
+    (hA : 0 < A) (hQ : 0 < Q)
+    {M₂ : ℕ} (hM₂ : 0 < M₂) {ell : ℤ} {tau : ℝ}
+    (htau : |tau| ≤ Q) (hell : 2 * Q / A ≤ |(ell : ℝ)|) :
+    ‖gmAffineMiddleFourierBlockReal f A M₂ ell tau‖ ≤
+      ((gmAffinePositiveShell M₂).card : ℝ) * (2 * M₂ : ℝ) *
+        (SchwartzMap.seminorm ℝ n 0 (fourier (gmAffineComplexify f)) /
+          ((M₂ : ℝ) * |(ell : ℝ)| / 2) ^ n) := by
+  let B : ℝ := (M₂ : ℝ) * |(ell : ℝ)| / 2
+  have hellpos : 0 < |(ell : ℝ)| := by
+    have hleft : 0 < 2 * Q / A := by positivity
+    exact hleft.trans_le hell
+  have hBpos : 0 < B := by
+    dsimp only [B]
+    positivity
+  apply norm_gmAffineMiddleFourierBlockReal_le_of_fourier_le
+    f hA hM₂ htau hell (B := B)
+  · exact le_rfl
+  · intro x hx
+    have hdecay := SchwartzMap.le_seminorm' ℝ n 0
+      (fourier (gmAffineComplexify f)) x
+    rw [iteratedDeriv_zero] at hdecay
+    rw [le_div_iff₀ (pow_pos hBpos n)]
+    have hp : B ^ n ≤ |x| ^ n := by gcongr
+    simpa only [mul_comm] using
+      ((mul_le_mul_of_nonneg_right hp (norm_nonneg _)).trans hdecay)
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example (f : SchwartzMap ℝ ℝ) {A Q B F : ℝ}
+    (hA : 0 < A) (hF : 0 ≤ F)
+    {M₂ : ℕ} (hM₂ : 0 < M₂) {ell : ℤ} {tau : ℝ}
+    (htau : |tau| ≤ Q) (hell : 2 * Q / A ≤ |(ell : ℝ)|)
+    (hB : B ≤ (M₂ : ℝ) * |(ell : ℝ)| / 2)
+    (hfourier : ∀ x : ℝ, B ≤ |x| →
+      ‖fourier (gmAffineComplexify f) x‖ ≤ F) :
+    ‖gmAffineMiddleFourierBlockReal f A M₂ ell tau‖ ≤
+      ((gmAffinePositiveShell M₂).card : ℝ) * (2 * M₂ : ℝ) * F := by
+  unfold gmAffineMiddleFourierBlockReal
+  calc
+    ‖∑ m₂ ∈ gmAffinePositiveShell M₂,
+        (m₂ : ℂ) * fourier (gmAffineComplexify f)
+          ((ell : ℝ) * (m₂ : ℝ) + ((m₂ : ℝ) / A) * tau)‖ ≤
+        ∑ m₂ ∈ gmAffinePositiveShell M₂,
+          ‖(m₂ : ℂ) * fourier (gmAffineComplexify f)
+            ((ell : ℝ) * (m₂ : ℝ) + ((m₂ : ℝ) / A) * tau)‖ :=
+      norm_sum_le _ _
+    _ ≤ ∑ _m₂ ∈ gmAffinePositiveShell M₂, (2 * M₂ : ℝ) * F := by
+      apply Finset.sum_le_sum
+      intro m₂ hm₂
+      rw [norm_mul, norm_intCast]
+      have harg := gmAffineMiddleFourierArgument_abs_lower
+        hA hm₂ htau hell
+      have hfour := hfourier _ (hB.trans harg)
+      exact mul_le_mul (abs_gmAffinePositiveShell_le_scale hm₂) hfour
+        (norm_nonneg _) (by positivity)
+    _ = ((gmAffinePositiveShell M₂).card : ℝ) * (2 * M₂ : ℝ) * F := by
+      simp
+      ring
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example {A Q : ℝ} (hA : 0 < A) (hQ : 0 ≤ Q)
+    {M₂ : ℕ} (hM₂ : 0 < M₂) {m₂ ell : ℤ}
+    (hm₂ : m₂ ∈ gmAffinePositiveShell M₂) {tau : ℝ}
+    (htau : |tau| ≤ Q) (hell : 2 * Q / A ≤ |(ell : ℝ)|) :
+    (M₂ : ℝ) * |(ell : ℝ)| / 2 ≤
+      |(ell : ℝ) * (m₂ : ℝ) + ((m₂ : ℝ) / A) * tau| := by
+  have hM₂r : (0 : ℝ) < M₂ := by exact_mod_cast hM₂
+  have hm₂lower : (M₂ : ℝ) ≤ |(m₂ : ℝ)| :=
+    gmAffinePositiveShell_scale_le_abs hm₂
+  have htauDiv : |tau / A| ≤ Q / A := by
+    rw [abs_div, abs_of_pos hA]
+    exact div_le_div_of_nonneg_right htau hA.le
+  have hrewrite : 2 * Q / A = 2 * (Q / A) := by ring
+  rw [hrewrite] at hell
+  have hhalf : Q / A ≤ |(ell : ℝ)| / 2 := by linarith
+  have hinner : |(ell : ℝ)| / 2 ≤ |(ell : ℝ) + tau / A| := by
+    have htri : |(ell : ℝ)| ≤ |(ell : ℝ) + tau / A| + |tau / A| := by
+      calc
+        |(ell : ℝ)| = |((ell : ℝ) + tau / A) - tau / A| := by ring_nf
+        _ ≤ _ := abs_sub _ _
+    linarith
+  calc
+    (M₂ : ℝ) * |(ell : ℝ)| / 2 = (M₂ : ℝ) * (|(ell : ℝ)| / 2) := by ring
+    _ ≤ |(m₂ : ℝ)| * |(ell : ℝ) + tau / A| := by gcongr
+    _ = |(ell : ℝ) * (m₂ : ℝ) + ((m₂ : ℝ) / A) * tau| := by
+      rw [← abs_mul]
+      congr 1
+      field_simp [hA.ne']
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example
+    (f : SchwartzMap ℝ ℝ) {M₁ M₂ M₃ : ℕ}
+    (hM₁ : 0 < M₁) (hM₂ : 0 < M₂) (hM₃ : 0 < M₃)
+    {Q Y : ℝ} (hQ : 0 < Q) :
+    (∑ m₁ ∈ gmAffineSignedShell M₁,
+      ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+        ∫ xi : ℝ, gmAffineRetainedFirstPoissonPairSquare
+          f Q M₂ M₃ hM₃ (m₁, ell) xi) ≤
+      (32 * M₃ : ℝ) * SchwartzMap.seminorm ℝ 0 0 gmAffineLocalBumpDual ^ 2 *
+        ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+          ∫ tau : ℝ, gmAffineMiddleTauWeight Q tau *
+            ‖gmAffineMiddleFourierBlock f (8 * M₃) M₂ (-ell) tau‖ ^ 2 := by
+  let A : ℝ := SchwartzMap.seminorm ℝ 0 0 gmAffineLocalBumpDual ^ 2
+  let I : ℤ → ℝ := fun ell =>
+    ∫ tau : ℝ, gmAffineMiddleTauWeight Q tau *
+      ‖gmAffineMiddleFourierBlock f (8 * M₃) M₂ (-ell) tau‖ ^ 2
+  have hM₁r : (0 : ℝ) < M₁ := by exact_mod_cast hM₁
+  have hI (ell : ℤ) : 0 ≤ I ell := by
+    dsimp only [I]
+    apply integral_nonneg
+    intro tau
+    exact mul_nonneg (gmAffineMiddleTauWeight_nonneg Q tau) (sq_nonneg _)
+  have hcoef {m₁ : ℤ} (hm₁ : m₁ ∈ gmAffineSignedShell M₁) :
+      (8 * M₃ : ℝ) / |(m₁ : ℝ)| ≤ (8 * M₃ : ℝ) / M₁ := by
+    exact div_le_div_of_nonneg_left (by positivity) hM₁r
+      (gmAffineSignedShell_scale_le_abs hm₁)
+  calc
+    (∑ m₁ ∈ gmAffineSignedShell M₁,
+      ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+        ∫ xi : ℝ, gmAffineRetainedFirstPoissonPairSquare
+          f Q M₂ M₃ hM₃ (m₁, ell) xi) ≤
+        ∑ _m₁ ∈ gmAffineSignedShell M₁,
+          ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+            ((8 * M₃ : ℝ) / M₁) * A * I ell := by
+      apply Finset.sum_le_sum
+      intro m₁ hm₁
+      apply Finset.sum_le_sum
+      intro ell hell
+      refine (integral_gmAffineRetainedFirstPoissonPairSquare_le
+        f hM₁ hM₂ hM₃ hm₁ hQ).trans ?_
+      dsimp only [A, I]
+      exact mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right (hcoef hm₁) (by positivity)) (hI ell)
+    _ = ((gmAffineSignedShell M₁).card : ℝ) *
+          (((8 * M₃ : ℝ) / M₁) * A *
+            ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell) := by
+      simp_rw [← Finset.mul_sum]
+      simp
+      ring
+    _ ≤ (32 * M₃ : ℝ) * A *
+          ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell := by
+      have hcardNat := card_gmAffineSignedShell_le M₁
+      have hcard : ((gmAffineSignedShell M₁).card : ℝ) ≤ 4 * M₁ := by
+        exact_mod_cast (hcardNat.trans (by omega : 2 * (M₁ + 1) ≤ 4 * M₁))
+      have hsum : 0 ≤ ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell := by
+        apply Finset.sum_nonneg
+        intro ell hell
+        exact hI ell
+      have hA : 0 ≤ A := by positivity
+      calc
+        ((gmAffineSignedShell M₁).card : ℝ) *
+            (((8 * M₃ : ℝ) / M₁) * A *
+              ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell) ≤
+            (4 * M₁ : ℝ) * (((8 * M₃ : ℝ) / M₁) * A *
+              ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell) := by
+          gcongr
+        _ = (32 * M₃ : ℝ) * A *
+              ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y, I ell := by
+          field_simp [hM₁r.ne']
+          ring
+    _ = _ := by rfl
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example
+    (f : SchwartzMap ℝ ℝ) {M₁ M₂ M₃ : ℕ}
+    (hM₁ : 0 < M₁) (hM₂ : 0 < M₂) (hM₃ : 0 < M₃)
+    {Q Y D : ℝ} (hY : 0 ≤ Y) (hD : 0 ≤ D)
+    (hcard : ∀ xi : ℝ,
+      gmAffineFirstPoissonRadius M₁ M₃ Q < |xi| → |xi| ≤ Y →
+      ((gmAffineFirstPoissonPairs M₁ M₃ Q xi).card : ℝ) ≤ D) :
+    (∫ xi in gmAffineMiddleFrequencyRegion
+        (gmAffineFirstPoissonRadius M₁ M₃ Q) Y,
+      ‖gmAffinePoissonMainFourier f M₁ M₂ M₃ hM₃ Q xi‖ ^ 2) ≤
+      D * ∑ m₁ ∈ gmAffineSignedShell M₁,
+        ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+          ∫ xi : ℝ, gmAffineRetainedFirstPoissonPairSquare
+            f Q M₂ M₃ hM₃ (m₁, ell) xi := by
+  let S : ℝ → ℝ := fun xi =>
+    ∑ m₁ ∈ gmAffineSignedShell M₁,
+      ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+        gmAffineRetainedFirstPoissonPairSquare
+          f Q M₂ M₃ hM₃ (m₁, ell) xi
+  have hterm (m₁ : ℤ) (hm₁ : m₁ ∈ gmAffineSignedShell M₁)
+      (ell : ℤ) (hell : ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y) :
+      Integrable (gmAffineRetainedFirstPoissonPairSquare
+        f Q M₂ M₃ hM₃ (m₁, ell)) :=
+    integrable_gmAffineRetainedFirstPoissonPairSquare
+      f hM₁ hM₂ hM₃ hm₁ Q
+  have hSint : Integrable S := by
+    dsimp only [S]
+    apply integrable_finsetSum
+    intro m₁ hm₁
+    apply integrable_finsetSum
+    intro ell hell
+    exact hterm m₁ hm₁ ell hell
+  have hDSint : Integrable (fun xi => D * S xi) := hSint.const_mul D
+  have hSnonneg (xi : ℝ) : 0 ≤ S xi := by
+    dsimp only [S]
+    apply Finset.sum_nonneg
+    intro m₁ hm₁
+    apply Finset.sum_nonneg
+    intro ell hell
+    unfold gmAffineRetainedFirstPoissonPairSquare
+    split_ifs <;> positivity
+  calc
+    (∫ xi in gmAffineMiddleFrequencyRegion
+        (gmAffineFirstPoissonRadius M₁ M₃ Q) Y,
+      ‖gmAffinePoissonMainFourier f M₁ M₂ M₃ hM₃ Q xi‖ ^ 2) ≤
+        ∫ xi in gmAffineMiddleFrequencyRegion
+          (gmAffineFirstPoissonRadius M₁ M₃ Q) Y, D * S xi := by
+      apply integral_mono_of_nonneg
+      · filter_upwards with xi
+        exact sq_nonneg _
+      · exact hDSint.integrableOn
+      · filter_upwards [self_mem_ae_restrict
+          (measurableSet_gmAffineMiddleFrequencyRegion
+            (gmAffineFirstPoissonRadius M₁ M₃ Q) Y)] with xi hxi
+        have hxi' := hxi
+        rw [gmAffineMiddleFrequencyRegion] at hxi'
+        have hmain := norm_gmAffinePoissonMainFourier_sq_le_pairs
+          f M₁ M₂ M₃ hM₃ Q xi
+        have hsum := sum_gmAffineFirstPoissonPairTerm_sq_eq_sum_retained_range
+          (M₂ := M₂) (Q := Q) f hM₁ hM₃ hY hxi'.2
+        rw [hsum] at hmain
+        change _ ≤ D * S xi
+        exact hmain.trans (mul_le_mul (hcard xi hxi'.1 hxi'.2) le_rfl
+          (hSnonneg xi) (by positivity))
+    _ ≤ ∫ xi : ℝ, D * S xi :=
+      setIntegral_le_integral hDSint
+        (Eventually.of_forall fun xi => mul_nonneg hD (hSnonneg xi))
+    _ = D * ∑ m₁ ∈ gmAffineSignedShell M₁,
+        ∑ ell ∈ gmAffineFirstPoissonEllRange M₁ M₃ Q Y,
+          ∫ xi : ℝ, gmAffineRetainedFirstPoissonPairSquare
+            f Q M₂ M₃ hM₃ (m₁, ell) xi := by
+      rw [integral_const_mul]
+      dsimp only [S]
+      rw [MeasureTheory.integral_finsetSum (gmAffineSignedShell M₁) (by
+        intro m₁ hm₁
+        apply integrable_finsetSum
+        intro ell hell
+        exact hterm m₁ hm₁ ell hell)]
+      apply congrArg (fun z : ℝ => D * z)
+      apply Finset.sum_congr rfl
+      intro m₁ hm₁
+      rw [MeasureTheory.integral_finsetSum
+        (gmAffineFirstPoissonEllRange M₁ M₃ Q Y) (hterm m₁ hm₁)]
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+example
+    (f : SchwartzMap ℝ ℝ) {Q : ℝ} (hQ : 0 < Q)
+    (M₂ M₃ : ℕ) (ell : ℤ) :
+    Integrable (gmAffineRetainedMiddleProfile f Q M₂ M₃ ell) := by
+  let H : ℝ → ℝ := fun tau =>
+    ‖gmAffineMiddleFourierBlock f (8 * M₃) M₂ (-ell) tau‖ ^ 2 *
+      ‖gmAffineLocalBumpDual tau‖ ^ 2
+  have hblock : Continuous (fun tau : ℝ =>
+      gmAffineMiddleFourierBlock f (8 * M₃) M₂ (-ell) tau) := by
+    unfold gmAffineMiddleFourierBlock
+    apply continuous_finset_sum
+    intro m₂ hm₂
+    exact continuous_const.mul
+      ((fourier (gmAffineComplexify f)).continuous.comp (by fun_prop))
+  have hHcont : Continuous H := by
+    dsimp only [H]
+    exact (continuous_norm.comp hblock).pow 2 |>.mul
+      ((continuous_norm.comp gmAffineLocalBumpDual.continuous).pow 2)
+  have hlocal : IntegrableOn H (Set.Ioo (-Q) Q) :=
+    (hHcont.continuousOn.integrableOn_Icc).mono_set Set.Ioo_subset_Icc_self
+  have hind : Integrable (Set.indicator (Set.Ioo (-Q) Q) H) :=
+    (integrable_indicator_iff measurableSet_Ioo).2 hlocal
+  apply hind.congr
+  filter_upwards with tau
+  unfold gmAffineRetainedMiddleProfile
+  by_cases htau : |tau| < Q
+  · rw [if_pos htau, Set.indicator_of_mem]
+    exact abs_lt.mp htau
+  · rw [if_neg htau, Set.indicator_of_notMem]
+    intro hmem
+    exact htau (abs_lt.mpr hmem)
+
+end RiemannZeta.GuthMaynard
+
+namespace RiemannZeta.GuthMaynard
+
+noncomputable def testEllRadius
+    (M₁ M₃ : ℕ) (Q Y : ℝ) : ℝ :=
+  Y / M₁ + Q / (8 * M₃ : ℝ)
+
+noncomputable def testEllRange
+    (M₁ M₃ : ℕ) (Q Y : ℝ) : Finset ℤ :=
+  Finset.Icc (-⌈testEllRadius M₁ M₃ Q Y⌉)
+    ⌈testEllRadius M₁ M₃ Q Y⌉
+
+example {M₁ M₃ : ℕ} (hM₁ : 0 < M₁) (hM₃ : 0 < M₃)
+    {Q Y xi : ℝ} (hQ : 0 < Q) (hY : 0 ≤ Y) (hxi : |xi| ≤ Y)
+    {p : ℤ × ℤ} (hp : p ∈ gmAffineFirstPoissonPairs M₁ M₃ Q xi) :
+    p.2 ∈ testEllRange M₁ M₃ Q Y := by
+  have htau : |gmAffineFirstPoissonTau M₃ p.1 p.2 xi| < Q :=
+    (mem_gmAffinePoissonNearSet_iff_firstPoissonTau hM₃).mp
+      (mem_gmAffineFirstPoissonPairs.mp hp).2
+  have hp₁ := (mem_gmAffineFirstPoissonPairs.mp hp).1
+  have hp₁ne : (p.1 : ℝ) ≠ 0 := by
+    exact_mod_cast gmAffineSignedShell_ne_zero hM₁ hp₁
+  have hp₁lower : (M₁ : ℝ) ≤ |(p.1 : ℝ)| :=
+    gmAffineSignedShell_scale_le_abs hp₁
+  have hA : (0 : ℝ) < 8 * M₃ := by positivity
+  have hnear : |xi / (p.1 : ℝ) + (p.2 : ℝ)| < Q / (8 * M₃ : ℝ) := by
+    unfold gmAffineFirstPoissonTau at htau
+    rw [abs_mul, abs_of_pos hA] at htau
+    apply (lt_div_iff₀ hA).2
+    simpa [mul_comm] using htau
+  have hxiDiv : |xi / (p.1 : ℝ)| ≤ Y / M₁ := by
+    rw [abs_div]
+    calc
+      |xi| / |(p.1 : ℝ)| ≤ Y / |(p.1 : ℝ)| :=
+        (div_le_div_iff_of_pos_right (abs_pos.mpr hp₁ne)).2 hxi
+      _ ≤ Y / M₁ :=
+        div_le_div_of_nonneg_left hY (by positivity) hp₁lower
+  have hellBound : |(p.2 : ℝ)| < testEllRadius M₁ M₃ Q Y := by
+    have htri : |(p.2 : ℝ)| ≤
+        |xi / (p.1 : ℝ) + (p.2 : ℝ)| + |xi / (p.1 : ℝ)| := by
+      calc
+        |(p.2 : ℝ)| =
+            |(xi / (p.1 : ℝ) + (p.2 : ℝ)) - xi / (p.1 : ℝ)| := by ring_nf
+        _ ≤ _ := abs_sub _ _
+    unfold testEllRadius
+    linarith
+  have hceil : |(p.2 : ℝ)| ≤
+      (⌈testEllRadius M₁ M₃ Q Y⌉ : ℝ) :=
+    hellBound.le.trans (Int.le_ceil _)
+  rw [testEllRange, Finset.mem_Icc]
+  constructor
+  · have hreal : (-(⌈testEllRadius M₁ M₃ Q Y⌉ : ℤ) : ℝ) ≤ (p.2 : ℝ) := by
+      exact (neg_le_neg hceil).trans (neg_abs_le (p.2 : ℝ))
+    exact_mod_cast hreal
+  · have hreal : (p.2 : ℝ) ≤ (⌈testEllRadius M₁ M₃ Q Y⌉ : ℝ) :=
+      (le_abs_self (p.2 : ℝ)).trans hceil
+    exact_mod_cast hreal
+
+end RiemannZeta.GuthMaynard
 #check MeasureTheory.integral_mono_ae
 #check MeasureTheory.integral_mono_of_nonneg
 #check MeasureTheory.integral_mono
 #check MeasureTheory.integral_add
 #check norm_integral_le_integral_norm
+#check Finset.sum_bij
+#check Finset.sum_bij'
+#check Finset.sum_le_sum_of_subset_of_nonneg
+
+namespace RiemannZeta.GuthMaynard
+
+example
+    (f : SchwartzMap ℝ ℝ) {M₁ M₂ M₃ : ℕ} (hM₃ : 0 < M₃)
+    (Q xi : ℝ) :
+    ∑ p ∈ gmAffineFirstPoissonPairs M₁ M₃ Q xi,
+        ‖gmAffineFirstPoissonPairTerm f M₂ M₃ hM₃ xi p‖ ^ 2 =
+      ∑ m₁ ∈ gmAffineSignedShell M₁,
+        ∑' ell : ℤ,
+          gmAffineRetainedFirstPoissonPairSquare
+            f Q M₂ M₃ hM₃ (m₁, ell) xi := by
+  rw [sum_gmAffineFirstPoissonPairs]
+  apply Finset.sum_congr rfl
+  intro m₁ hm₁
+  rw [tsum_eq_sum (s :=
+    gmAffinePoissonNearSet M₃ (xi / (m₁ : ℝ)) Q)]
+  · apply Finset.sum_congr rfl
+    intro ell hell
+    unfold gmAffineRetainedFirstPoissonPairSquare
+    rw [if_pos ((mem_gmAffinePoissonNearSet_iff_firstPoissonTau hM₃).mp hell)]
+  · intro ell hell
+    unfold gmAffineRetainedFirstPoissonPairSquare
+    rw [if_neg]
+    intro htau
+    exact hell ((mem_gmAffinePoissonNearSet_iff_firstPoissonTau hM₃).mpr htau)
+
+end RiemannZeta.GuthMaynard
+#check memLp_norm_rpow_iff
+#check MemLp.restrict
+#check Real.sqrt_eq_rpow
+#check Real.sum_sqrt_mul_sqrt_le
+#check Finset.sum_mul
+#check Finset.mul_sum
+#check MeasureTheory.integral_mono_measure
+
+theorem probe_memLp_sqrt_four_of_memLp_two
+    {α : Type*} [MeasurableSpace α] {μ : Measure α}
+    {f : α → ℝ} (hmeas : AEStronglyMeasurable f μ)
+    (hf0 : ∀ x, 0 ≤ f x) (hf : MemLp f (2 : ENNReal) μ) :
+    MemLp (fun x => Real.sqrt (f x)) (4 : ENNReal) μ := by
+  have hpow := (memLp_norm_rpow_iff
+    (p := (2 : ENNReal)) (q := (1 / 2 : ENNReal)) hmeas (by norm_num) (by norm_num)).2 hf
+  have heq : (fun x => Real.sqrt (f x)) =
+      (fun x => ‖f x‖ ^ (1 / 2 : ENNReal).toReal) := by
+    funext x
+    rw [Real.sqrt_eq_rpow, Real.norm_eq_abs, abs_of_nonneg (hf0 x)]
+    norm_num
+  rw [heq]
+  convert hpow using 1
+  rw [ENNReal.div_eq_inv_mul]
+  norm_num
+
+#check ContinuousOn.integrableOn_Icc
+#check ContinuousOn.integrableOn_compact
+#check Continuous.continuousOn
+#check ContinuousOn.sqrt
+#check MeasureTheory.MemLp.const_mul
+#check MeasureTheory.MemLp.mul
+#check Continuous.comp_continuousOn
+#check ContinuousOn.comp
+#check ContinuousOn.inv₀
+#check MeasureTheory.integral_finset_sum
+#check MeasureTheory.integral_finsetSum
