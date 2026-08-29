@@ -58,27 +58,33 @@ echo ============================================================
 echo Log: %LOG%
 echo.
 
-call :run_lake "1/5 Default project build" build RiemannZeta
-call :run_lake "2/5 Explicit production-module coverage" build RiemannZeta.GuthMaynard.DyadicTransfer RiemannZeta.GuthMaynard.CentralTypeI RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple RiemannZeta.GuthMaynard.TypeIFiniteWindow RiemannZeta.GuthMaynard.LargeValuesDefinitions RiemannZeta.GuthMaynard.LargeValuesMatrix RiemannZeta.GuthMaynard.LargeValuesLocalization RiemannZeta.GuthMaynard.LargeValuesReflection RiemannZeta.GuthMaynard.QuantitativeSmoothReflection RiemannZeta.GuthMaynard.TraceDispersion RiemannZeta.GuthMaynard.LargeValues
-call :run_lake "3/5 Retained example: complex exponential" env lean TestExp.lean
-call :run_lake "4/5 Retained example: separated selection" env lean test_separated.lean
-call :run_lake "5/5 Current Lean audit module" env lean RiemannZeta\Audit.lean
+call :run_lake "1/4 Default project build" "build RiemannZeta"
+call :run_lake "2/4 Explicit production-module coverage" "build RiemannZeta.GuthMaynard.DyadicTransfer RiemannZeta.GuthMaynard.CentralTypeI RiemannZeta.GuthMaynard.HalaszMontgomery RiemannZeta.GuthMaynard.ClassicalArgumentPrinciple RiemannZeta.GuthMaynard.TypeIFiniteWindow RiemannZeta.GuthMaynard.LargeValuesDefinitions RiemannZeta.GuthMaynard.LargeValuesMatrix RiemannZeta.GuthMaynard.LargeValuesLocalization RiemannZeta.GuthMaynard.LargeValuesReflection RiemannZeta.GuthMaynard.QuantitativeSmoothReflection RiemannZeta.GuthMaynard.TraceDispersion RiemannZeta.GuthMaynard.LargeValues RiemannZeta.GuthMaynard.HughesYoungEquation96CoprimeBound RiemannZeta.GuthMaynard.HughesYoungZeroShiftC RiemannZeta.GuthMaynard.NativeZeroDensity"
+for %%F in (*.lean) do if /I not "%%~nxF"=="RiemannZeta.lean" call :run_lake "3/4 Retained top-level: %%~nxF" "env lean %%~nxF"
+call :run_lake "4/4 Current Lean audit module" "env lean RiemannZeta\Audit.lean"
 
 echo.
 echo [INTEGRITY] Repository-wide prohibited-proof scan
 echo [INTEGRITY] Repository-wide prohibited-proof scan>> "%LOG%"
 
-where rg.exe >nul 2>&1
-if errorlevel 1 (
-  echo FAIL: rg.exe is required for the repository-wide integrity scan.
-  echo FAIL: rg.exe is required for the repository-wide integrity scan.>> "%LOG%"
-  set "FAILED=1"
+rem Prefer ripgrep, but do not make a human double-click depend on VS Code's
+rem private extension PATH.  The PowerShell fallback scans the same complete
+rem set of non-hidden Lean files as `rg --no-ignore`; generated dependencies
+rem under hidden directories such as .lake are deliberately out of scope.
+set "RG="
+for /f "delims=" %%I in ('where rg.exe 2^>nul') do if not defined RG set "RG=%%I"
+if /I "%RIEMANN_ZETA_FORCE_POWERSHELL_SCAN%"=="1" set "RG="
+if defined RG (
+  echo Integrity backend: %RG%
+  echo Integrity backend: %RG%>> "%LOG%"
 ) else (
-  call :scan_sorry
-  call :scan_axioms
-  call :scan_unsafe
-  call :scan_audit_quality
+  echo Integrity backend: PowerShell Select-String fallback
+  echo Integrity backend: PowerShell Select-String fallback>> "%LOG%"
 )
+call :scan_sorry
+call :scan_axioms
+call :scan_unsafe
+call :scan_audit_quality
 
 del "%STEP_LOG%" >nul 2>&1
 
@@ -123,7 +129,7 @@ echo [%STEP_NAME%]
 echo.>> "%LOG%"
 echo [%STEP_NAME%]>> "%LOG%"
 
-"%LAKE%" %2 %3 %4 %5 %6 > "%STEP_LOG%" 2>&1
+"%LAKE%" %~2 > "%STEP_LOG%" 2>&1
 set "STEP_EXIT=%ERRORLEVEL%"
 type "%STEP_LOG%"
 type "%STEP_LOG%" >> "%LOG%"
@@ -159,7 +165,11 @@ if "%STEP_EXIT%"=="0" (
 exit /b 0
 
 :scan_sorry
-rg --no-ignore -n "\b(sorry|admit)\b|sorryAx" -g "*.lean" . > "%STEP_LOG%" 2>&1
+if defined RG (
+  "%RG%" --no-ignore -n "\b(sorry|admit)\b|sorryAx" -g "*.lean" . > "%STEP_LOG%" 2>&1
+) else (
+  powershell -NoProfile -Command "$ErrorActionPreference='Stop'; try { $files = Get-ChildItem -LiteralPath . -Recurse -Force -File -Filter '*.lean' | Where-Object { $_.FullName -notmatch '\\\.' }; $hits = Select-String -LiteralPath $files.FullName -Pattern '\b(sorry|admit)\b|sorryAx'; if ($hits.Count -gt 0) { $hits; exit 0 } else { exit 1 } } catch { Write-Error $_; exit 2 }" > "%STEP_LOG%" 2>&1
+)
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no sorry, admit, or sorryAx text found in Lean files.
@@ -179,7 +189,11 @@ if "%SCAN_EXIT%"=="1" (
 exit /b 0
 
 :scan_axioms
-rg --no-ignore -n "^\s*(axiom|constant)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+if defined RG (
+  "%RG%" --no-ignore -n "^\s*(axiom|constant)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+) else (
+  powershell -NoProfile -Command "$ErrorActionPreference='Stop'; try { $files = Get-ChildItem -LiteralPath . -Recurse -Force -File -Filter '*.lean' | Where-Object { $_.FullName -notmatch '\\\.' }; $hits = Select-String -LiteralPath $files.FullName -Pattern '^\s*(axiom|constant)\b'; if ($hits.Count -gt 0) { $hits; exit 0 } else { exit 1 } } catch { Write-Error $_; exit 2 }" > "%STEP_LOG%" 2>&1
+)
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no project axiom or constant declarations found in Lean files.
@@ -199,7 +213,11 @@ if "%SCAN_EXIT%"=="1" (
 exit /b 0
 
 :scan_unsafe
-rg --no-ignore -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+if defined RG (
+  "%RG%" --no-ignore -n "\b(native_decide|implemented_by|unsafe)\b" -g "*.lean" . > "%STEP_LOG%" 2>&1
+) else (
+  powershell -NoProfile -Command "$ErrorActionPreference='Stop'; try { $files = Get-ChildItem -LiteralPath . -Recurse -Force -File -Filter '*.lean' | Where-Object { $_.FullName -notmatch '\\\.' }; $hits = Select-String -LiteralPath $files.FullName -Pattern '\b(native_decide|implemented_by|unsafe)\b'; if ($hits.Count -gt 0) { $hits; exit 0 } else { exit 1 } } catch { Write-Error $_; exit 2 }" > "%STEP_LOG%" 2>&1
+)
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="1" (
   echo PASS: no prohibited unsafe proof bypass found in Lean files.
@@ -219,7 +237,11 @@ if "%SCAN_EXIT%"=="1" (
 exit /b 0
 
 :scan_audit_quality
-rg -n "#print\s+axioms|collectAxioms|getAxioms" "RiemannZeta\Audit.lean" > "%STEP_LOG%" 2>&1
+if defined RG (
+  "%RG%" -n "#print\s+axioms|collectAxioms|getAxioms" "RiemannZeta\Audit.lean" > "%STEP_LOG%" 2>&1
+) else (
+  powershell -NoProfile -Command "$ErrorActionPreference='Stop'; try { $hits = Select-String -LiteralPath 'RiemannZeta\Audit.lean' -Pattern '#print\s+axioms|collectAxioms|getAxioms'; if ($hits.Count -gt 0) { $hits; exit 0 } else { exit 1 } } catch { Write-Error $_; exit 2 }" > "%STEP_LOG%" 2>&1
+)
 set "SCAN_EXIT=%ERRORLEVEL%"
 if "%SCAN_EXIT%"=="0" (
   echo PASS: Audit.lean contains an explicit axiom-dependency inspection mechanism.

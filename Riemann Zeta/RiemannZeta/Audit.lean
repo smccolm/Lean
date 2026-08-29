@@ -7659,14 +7659,47 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.twoPowSucc_sq_mul_dyadicClass_card_sq_le_card_four,
   ``RiemannZeta.GuthMaynard.volume_real_gmAffineLowFrequencyRegion,
   ``RiemannZeta.GuthMaynard.volume_real_gmCubicRatioSquare,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungEquation84CompletePositiveMomentAt_le_coprime,
+  ``RiemannZeta.GuthMaynard.hughesYoungCZeroMajorant_eq_primeFactors,
+  ``RiemannZeta.GuthMaynard.norm_tsum_hughesYoungEquation96VerticalTerm_mul_logSelectors_le_coprime,
+  ``RiemannZeta.GuthMaynard.combined_zero_density_native,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungC_zero_le_majorant,
+  ``RiemannZeta.GuthMaynard.guthMaynardZeroDensity_native,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungCPrimeZeroRegularized_le,
+  ``RiemannZeta.GuthMaynard.prime_cpow_neg_two_eq_inv_sq,
+  ``RiemannZeta.GuthMaynard.hughesYoungCZeroMajorant_le_divisorsCard_pow_four,
+  ``RiemannZeta.GuthMaynard.hughesYoungEquation98_zeroShifts,
+  ``RiemannZeta.GuthMaynard.summable_hughesYoungEquation96VerticalTerm_mul_logSelectors_coprime,
+  ``RiemannZeta.GuthMaynard.hughesYoungCPrimeFactor_zero_eq_regularized,
+  ``RiemannZeta.GuthMaynard.huxley_zero_density_native,
+  ``RiemannZeta.GuthMaynard.norm_geomSum_le_card,
+  ``RiemannZeta.GuthMaynard.gcd_mul_gcd_eq_gcd_mul_of_coprime,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungEquation96PositiveTerm_one_one_le_coprime,
+  ``RiemannZeta.GuthMaynard.guthMaynardZeroDensity_of_largeValues_native,
+  ``RiemannZeta.GuthMaynard.norm_prime_cpow_neg_two_mul_le_one,
+  ``RiemannZeta.GuthMaynard.ingham_zero_density_native,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungC_zero_le_const_mul_rpow,
+  ``RiemannZeta.GuthMaynard.norm_prime_cpow_neg_natCast_le_one,
+  ``RiemannZeta.GuthMaynard.hughesYoungCPrimeNumerator_zero_eq_one_sub_mul_regularizedNumerator,
+  ``RiemannZeta.GuthMaynard.hughesYoungCPrimeFactor_zero_ne_singular,
+  ``RiemannZeta.GuthMaynard.norm_prime_cpow_neg_two_mul_lt_one,
+  ``RiemannZeta.GuthMaynard.half_le_norm_one_sub_prime_cpow_neg_two,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungCPrimeFactor_zero_le,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungC_zero_le_divisorsCard_pow_four,
+  ``RiemannZeta.GuthMaynard.norm_hughesYoungEquation96VerticalTerm_mul_logSelectors_le_coprime,
 ]
 
 /-- The number printed by the audit, derived directly from its explicit list. -/
 def auditedDeclarationCount : Nat := auditedDeclarations.size
 
 /-- Named end theorems required before the human-facing runner may describe
-the research agenda as complete.  Names are checked dynamically so this audit
-continues to elaborate while an output is still under construction. -/
+the internal proof agenda as complete. Names are checked dynamically so this
+audit continues to elaborate while an output is still under construction.
+
+This gate establishes declaration existence and, through `runDependencyAudit`,
+permitted transitive dependencies. It does not establish source fidelity, adequate
+exposition, independent review, publication, or canonicalization; those
+distinct statuses are recorded in `Publication Readiness and Semantic Audit.md`. -/
 def requiredResearchOutputs : Array (Nat × Name) := #[
   (15, `RiemannZeta.GuthMaynard.classical_endpoint_positive_slab_native),
   (15, `RiemannZeta.GuthMaynard.ingham_zero_density_native),
@@ -7769,5 +7802,11 @@ def runDependencyAudit : CoreM Unit := do
     logInfo m!"AUDIT PASS: all {auditedDeclarationCount} declarations have permitted dependencies and every required research output exists."
   else
     throwError "AUDIT FAIL: {failures} dependency, synchronization, or required-output failure(s) across {auditedDeclarationCount} explicit declarations"
+
+#print axioms RiemannZeta.GuthMaynard.ingham_zero_density_native
+#print axioms RiemannZeta.GuthMaynard.huxley_zero_density_native
+#print axioms RiemannZeta.GuthMaynard.guthMaynardZeroDensity_of_largeValues_native
+#print axioms RiemannZeta.GuthMaynard.guthMaynardZeroDensity_native
+#print axioms RiemannZeta.GuthMaynard.combined_zero_density_native
 
 #eval runDependencyAudit

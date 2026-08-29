@@ -24,6 +24,8 @@ import RiemannZeta.GuthMaynard.GammaPairBound
 import RiemannZeta.GuthMaynard.GammaVerticalDecay
 import RiemannZeta.GuthMaynard.HalaszMontgomery
 import RiemannZeta.GuthMaynard.HughesYoungNativeCompletion
+import RiemannZeta.GuthMaynard.HughesYoungEquation96CoprimeBound
+import RiemannZeta.GuthMaynard.HughesYoungZeroShiftC
 import RiemannZeta.GuthMaynard.TypeIIZeros
 import RiemannZeta.GuthMaynard.InghamBound
 import RiemannZeta.GuthMaynard.LargeValues
@@ -101,3 +103,4 @@ import RiemannZeta.GuthMaynard.WeylZeta
 import RiemannZeta.GuthMaynard.ZeroCount
 import RiemannZeta.GuthMaynard.ZetaTruncation
 import RiemannZeta.GuthMaynard.ZeroDetector
+import RiemannZeta.GuthMaynard.NativeZeroDensity

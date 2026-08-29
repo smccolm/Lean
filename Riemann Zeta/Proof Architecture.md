@@ -29,7 +29,7 @@ flowchart TD
     TG["#15 Generic direct Type-I MHH helper<br/>DONE<br/>coefficient-uniform cardinality bound<br/>and abstract certificate projections"]
     ZR["#15 Actual Type-I branch resolution<br/>DONE<br/>N^sigma source normalization, harmonic-loss<br/>absorption, exact powered extraction,<br/>weighted Weyl and endpoint routing"]
     FR["#15 Branch-to-slab density reduction<br/>DONE - SEMANTICALLY RE-AUDITED<br/>real zero/Type-I/Type-II dichotomy consumed;<br/>multiplicity, finite-power and epsilon losses<br/>assembled into the native positive-slab bound"]
-    ZD["#15 Ingham and Huxley<br/>OPEN<br/>three boundary cases DONE"]
+    ZD["#15 Ingham and Huxley<br/>DONE<br/>native positive-slab endpoints,<br/>dyadic-to-symmetric conversion and<br/>full multiplicity-weighted bounds"]
 
     BR["#16 Beta removal<br/>DONE"]
     AC["#17 Coefficient bounds<br/>DONE"]
@@ -45,11 +45,11 @@ flowchart TD
     SS["#18 Scaled weighted separation<br/>and bounded overlap<br/>DONE"]
     CR["#18 Type-II fourth-moment reduction<br/>DONE<br/>Gamma tails, scaled overlap,<br/>and epsilon assembly proved"]
     AF["#18 Smooth zeta-squared AFE<br/>and diagonal bound<br/>DONE<br/>strengthened completed-xi AFE,<br/>paired Gamma ratio, integrable envelope<br/>and concrete weighted hm=kn bound"]
-    QD["#18 Quadratic-divisor off-diagonal<br/>DONE<br/>DFI equations (2) and (9)-(30),<br/>signed central series and optimized<br/>Theorem 1 error bound kernel-checked"]
+    QD["#18 Quadratic-divisor off-diagonal<br/>DONE - INTERNAL SEMANTIC AUDIT<br/>localized signed dyadic DFI specialization;<br/>equation-(2) weight and scale hypotheses<br/>remain explicit"]
     MS["#18 M-squared expansion, support,<br/>coefficient bound and moment identity<br/>DONE"]
-    TM["#18 Hughes-Young twisted fourth moment<br/>DONE<br/>DFI equation-(80) consumer,<br/>finite off-diagonal epsilon bound and<br/>twistedZetaFourthMoment_native"]
-    TR["#15/#18/#19 primitive-input transfer<br/>DONE CONDITIONALLY<br/>one native input remains open:<br/>Huxley"]
-    GCS["#18 Goal C specialization<br/>OPEN<br/>derive zero density from GM large values alone"]
+    TM["#18 Twisted-fourth-moment input bound<br/>DONE - INTERNAL SEMANTIC AUDIT<br/>mollifier-specific T^(1+epsilon) bound;<br/>not the full Hughes-Young asymptotic"]
+    TR["#15/#18/#19 primitive-input transfer<br/>DONE<br/>all ten native inputs discharged"]
+    GCS["#18 Goal C specialization<br/>DONE<br/>exact conditional consumer of the<br/>native Guth-Maynard large-values input"]
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
     SF["#19 Source-facing finite definitions<br/>DONE<br/>affine reindexing, scaling and<br/>seven-bin exact-energy bridge proved"]
@@ -71,12 +71,18 @@ flowchart TD
     S3["#19 Refined S3 estimate<br/>GM Proposition 10.1<br/>DONE<br/>selected and physical native forms"]
     EG["#19 GCD/spacing energy theorem<br/>GM Section 11<br/>DONE<br/>Propositions 11.1 and 11.2"]
     GM["#19 Exact Guth-Maynard large values<br/>DONE - SEMANTICALLY AUDITED AND RETESTED<br/>source localization, Sections 3-12,<br/>all complementary ranges and exact theorem"]
-    GZD["#19 Concrete GM zero density<br/>OPEN"]
-    CB["#15/#19 combined transfer<br/>DONE CONDITIONALLY<br/>native Ingham input remains open"]
-    CZD["#19 Combined zero density<br/>OPEN"]
-    IG["#19 Imported-graph dependency integrity<br/>DONE - RETESTED 28 AUGUST<br/>7602/7602 dependencies,<br/>zero warnings/project axioms in scope"]
-    VC["#19 Retained-file evaluation coverage<br/>OPEN<br/>47 top-level probes and 2 subordinate<br/>modules lie outside runner elaboration"]
-    QA["#19 Final theorem integration<br/>OPEN<br/>concrete density outputs and<br/>retained-file coverage missing"]
+    GZD["#19 Concrete GM zero density<br/>DONE<br/>conditional large-values consumer and<br/>unconditional native specialization"]
+    CB["#15/#19 combined transfer<br/>DONE<br/>native Ingham and Guth-Maynard<br/>density inputs discharged"]
+    CZD["#19 Combined zero density<br/>DONE<br/>exact native exponent 30(1-sigma)/13"]
+    IG["#19 Full dependency integrity<br/>DONE - INTERNAL GATE<br/>7630/7630 dependencies,<br/>zero warnings/project axioms"]
+    VC["#19 Retained-file evaluation coverage<br/>DONE<br/>two retained top-level examples and<br/>complete production graph elaborated"]
+    QA["#19 Final theorem integration<br/>DONE - KERNEL/PROJECT LAYER<br/>all five density outputs audited;<br/>principal runner PASS / 0"]
+
+    PR["#20 Publication-readiness package<br/>DONE INTERNALLY<br/>claim sheet, source crosswalk, exposition,<br/>dangerous bridges and reproduction guide"]
+    XR["#20 Expert exposition review<br/>OPEN - EXTERNAL<br/>independent expert must test whether<br/>the proof can be explained and challenged"]
+    SR["#20 Independent semantic review<br/>OPEN - EXTERNAL<br/>source statements, conventions and<br/>proof consumers require referee scrutiny"]
+    PP["#20 Public preprint / peer review<br/>OPEN - EXTERNAL<br/>no upload, submission, acceptance or<br/>publication is claimed"]
+    KN["#20 Canonicalization<br/>OPEN - COMMUNITY PROCESS<br/>natural formulation, reuse, adoption and<br/>integration into standard references"]
 
     MZ --> ZB
     MZ --> CF
@@ -259,12 +265,18 @@ flowchart TD
     BR --> QA
     GM --> QA
 
+    QA --> PR
+    PR --> XR
+    PR --> SR
+    XR --> PP
+    SR --> PP
+    PP --> KN
+
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
     classDef conditional fill:#fff2bf,stroke:#9a6a00,color:#332500,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,CT,IG done;
-    class TR,CB conditional;
-    class ZD,GCS,GZD,CZD,VC,QA open;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,ZD,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,TR,GCS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CT,CB,CZD,IG,VC,QA,PR done;
+    class XR,SR,PP,KN open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

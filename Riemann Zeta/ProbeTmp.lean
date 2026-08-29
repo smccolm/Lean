@@ -1,3 +1,0 @@
-import Mathlib
-#check div_le_div_of_nonneg_left
-#check one_div_le_one_div_of_le
