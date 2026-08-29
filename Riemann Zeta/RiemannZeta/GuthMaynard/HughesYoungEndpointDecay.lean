@@ -2045,6 +2045,7 @@ theorem dfiEquation27CentralIntegral_swappedLowerBoundaryHeightIntegrated_eq_hei
         exact hughesYoungLowerBoundaryReducedMellinCorrection_eq_zero_of_nonpos_left
           T t c u h k hy
 
+/-- The `hughesYoungSwappedLowerBoundaryCentralSeriesHeightTerm` definition used by the source-facing construction in `HughesYoungEndpointDecay`. -/
 noncomputable def hughesYoungSwappedLowerBoundaryCentralSeriesHeightTerm
     (T t c u : ℝ) (h k a b r q : ℕ) : ℂ :=
   (hughesYoungHeightWeight T t : ℂ) *

@@ -83,6 +83,7 @@ theorem integrable_hughesYoungHighPairSquareTail
       unfold C g
       ring
 
+/-- The `hughesYoungWholeHighPairSquareTail` definition used by the source-facing construction in `HughesYoungInfiniteTransfer`. -/
 noncomputable def hughesYoungWholeHighPairSquareTail
     (q : ℕ) (t : ℝ) (M : ℕ) : ℂ :=
   ∫ u : ℝ, hughesYoungHighPairSquareTail q t u M
@@ -125,6 +126,7 @@ theorem tendsto_hughesYoungIntegratedHighPairSquare
     field_simp [hpi]
     ring
 
+/-- The `hughesYoungIntegratedSmallPairSquare` definition used by the source-facing construction in `HughesYoungInfiniteTransfer`. -/
 noncomputable def hughesYoungIntegratedSmallPairSquare
     (T t H : ℝ) (M : ℕ) : ℂ :=
   ∑ p ∈ Finset.Icc (1, 1) (M, M),
@@ -205,7 +207,7 @@ theorem tendsto_hughesYoungIntegratedSmallPairSquare
   have hdiff := tendsto_hughesYoungHighSquare_sub_smallSquare_zero
     hq hTexp hSmall (t := t) (M := M)
   have hsub := hhigh.sub hdiff
-  convert hsub using 1 <;> ring
+  convert hsub using 1 <;> ring_nf
 
 /-- Exact identification of the literal whole small-contour square with
 the finite zeta-square opening minus its integrable complementary tail. -/

@@ -458,7 +458,7 @@ theorem norm_inv_ab_mul_dfiEquation27ArithmeticCoefficient_le_interpolated
         rw [← Real.rpow_add hAcast, ← Real.rpow_add hqR]
       _ = _ := by
         congr 1
-        all_goals ring
+        all_goals ring_nf
   calc
     (((a : ℝ) * b)⁻¹) *
         (((Nat.gcd (a * b) q : ℝ) / (q : ℝ) ^ 2) *

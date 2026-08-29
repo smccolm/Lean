@@ -632,6 +632,8 @@ theorem riemannZetaLogDerivResidueBigO :
   convert BddAbove_to_IsBigO hU bdd using 2
   rw [neg_div]
 
+/-- The `riemannZeta0` definition used by the source-facing construction in
+`ZetaBoundsUpstream`. -/
 @[blueprint
   (title := "riemannZeta0")
   (statement := /--
@@ -1257,6 +1259,7 @@ lemma hasDerivAt_Zeta0Integral {N : ℕ} (Npos : 0 < N) {s : ℂ} (hs : s ∈ {s
   · ext a; simp only [one_div, F, f]; ring_nf
   · simp only [one_div, mul_neg, neg_mul, neg_inj, F', f]; ring_nf
 
+/-- The `ζ₀'` definition used by the source-facing construction in `ZetaBoundsUpstream`. -/
 noncomputable def ζ₀' (N : ℕ) (s : ℂ) : ℂ :=
     ∑ n ∈ Finset.range (N + 1), -1 / (n : ℂ) ^ s * Real.log n +
     (-N ^ (1 - s) / (1 - s) ^ 2 + Real.log N * N ^ (1 - s) / (1 - s)) +

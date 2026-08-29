@@ -18,20 +18,25 @@ zero family.  The first layer below performs the multiplicity-preserving
 selection of separated ordinates.
 -/
 
+/-- The `contourTypeIIZeroSet` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def contourTypeIIZeroSet (σ T : ℝ) : Finset ℂ :=
   (dyadicZetaZeros σ T).filter (zetaIsContourTypeII T)
 
+/-- The `contourTypeIIOrdinates` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def contourTypeIIOrdinates (σ T : ℝ) : Finset ℝ :=
   (contourTypeIIZeroSet σ T).image Complex.im
 
+/-- The `contourTypeIIOrdinateWeight` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def contourTypeIIOrdinateWeight (σ T u : ℝ) : ℕ :=
   ∑ ρ ∈ (contourTypeIIZeroSet σ T).filter (fun z => z.im = u),
     analyticVanishingOrder riemannZeta ρ
 
+/-- The `zeroUnitJensenMajorant` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def zeroUnitJensenMajorant (T : ℝ) : ℝ :=
   Real.log ((100 * T ^ (3 : ℝ)) / (0.6 : ℝ)) /
     Real.log ((7 / 4 : ℝ) / (8 / 5 : ℝ))
 
+/-- The `zeroUnitJensenCeil` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def zeroUnitJensenCeil (T : ℝ) : ℕ :=
   ⌈zeroUnitJensenMajorant T⌉₊
 
@@ -287,6 +292,7 @@ theorem contourTypeIIRepresentative_spec {σ T u : ℝ}
   rw [contourTypeIIRepresentative, dif_pos hu]
   exact Classical.choose_spec (Finset.mem_image.mp hu)
 
+/-- The `criticalTwistedNorm` definition used by the source-facing construction in `TypeIIFourthMomentReduction`. -/
 noncomputable def criticalTwistedNorm (T t : ℝ) : ℝ :=
   ‖shortMobiusPolynomial T ((1 / 2 : ℂ) + (t : ℂ) * I) *
     riemannZeta ((1 / 2 : ℂ) + (t : ℂ) * I)‖

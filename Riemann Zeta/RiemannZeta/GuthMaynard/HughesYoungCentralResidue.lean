@@ -20,6 +20,7 @@ shifted.  Consequently the crossed singularity is the simple pole
 residue identity has been established.
 -/
 
+/-- The `hughesYoungCentralMovingPole` definition used by the source-facing construction in `HughesYoungCentralResidue`. -/
 noncomputable def hughesYoungCentralMovingPole (z w : ℂ) : ℂ :=
   (1 + z + w) / 2
 

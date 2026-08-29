@@ -308,6 +308,7 @@ theorem floor_injective_on_of_separated (W : Finset ℝ)
     linarith
   exact (not_lt_of_ge hsep) (abs_lt.mpr ⟨hyxlt, hxylt⟩)
 
+/-- The `floorAdditiveQuadruple` definition used by the source-facing construction in `LargeValuesLanguage`. -/
 noncomputable def floorAdditiveQuadruple
     (q : (ℝ × ℝ) × (ℝ × ℝ)) : (ℤ × ℤ) × (ℤ × ℤ) :=
   mapAdditiveQuadruple Int.floor q

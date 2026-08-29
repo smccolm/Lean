@@ -11,9 +11,11 @@ open Classical
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `periodicMean` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicMean (q : ℕ) [NeZero q] (Ψ : ZMod q → ℂ) : ℂ :=
   (q : ℂ)⁻¹ * ∑ a : ZMod q, Ψ a
 
+/-- The `periodicCentered` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicCentered (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) (a : ZMod q) : ℂ :=
   Ψ a - periodicMean q Ψ
@@ -81,6 +83,7 @@ theorem sum_Icc_one_eq_sum_range_succ_sub_zero
   rw [hset, sum_insert (by simp [Finset.mem_Icc])]
   ring
 
+/-- The `periodicCenteredBound` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicCenteredBound (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) : ℝ :=
   ∑ a : ZMod q, ‖periodicCentered q Ψ a‖
@@ -139,10 +142,12 @@ theorem sum_Icc_periodicCentered_isBigO (q : ℕ) [NeZero q]
   filter_upwards with n
   simpa using norm_sum_Icc_periodicCentered_le q Ψ n
 
+/-- The `periodicCenteredPartialSum` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicCenteredPartialSum (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) (n : ℕ) : ℂ :=
   ∑ k ∈ Icc 1 n, periodicCentered q Ψ (k : ZMod q)
 
+/-- The `periodicCenteredKernel` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicCenteredKernel (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) (x : ℝ) : ℂ :=
   if 1 < x then periodicCenteredPartialSum q Ψ ⌊x⌋₊ else 0
@@ -193,6 +198,7 @@ theorem periodicCenteredKernel_isBigO_zero (q : ℕ) [NeZero q]
   rw [periodicCenteredKernel_eq_zero_of_le_one q Ψ hx.2.le, norm_zero]
   positivity
 
+/-- The `periodicCenteredAbel` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicCenteredAbel (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) (s : ℂ) : ℂ :=
   s * mellin (periodicCenteredKernel q Ψ) (-s)
@@ -363,6 +369,7 @@ theorem ZMod.LFunction_eq_centered_add_mean_zeta
     ZMod.LFunction_one_eq_riemannZeta q hs]
   ring
 
+/-- The `periodicLFunctionRightGrowthConstant` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicLFunctionRightGrowthConstant
     (q : ℕ) [NeZero q] (Ψ : ZMod q → ℂ) : ℝ :=
   8 * periodicCenteredBound q Ψ + 5 * ‖periodicMean q Ψ‖
@@ -1037,6 +1044,7 @@ theorem periodicLFunctionDual_strip_bound
       gcongr
     _ = (A * B * 2 * (L₁ + L₂)) * (1 + |u|) ^ 2 := by ring
 
+/-- The `periodicLFunctionDualStripConstant` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicLFunctionDualStripConstant
     (q : ℕ) [NeZero q] (Ψ : ZMod q → ℂ) : ℝ :=
   Classical.choose (periodicLFunctionDual_strip_bound q Ψ)
@@ -1056,6 +1064,7 @@ theorem norm_periodicLFunctionDual_le_strip
   (Classical.choose_spec (periodicLFunctionDual_strip_bound q Ψ)).2
     a haLower haUpper u hu
 
+/-- The `periodicEstermannLeftStripConstant` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicEstermannLeftStripConstant
     (q : ℕ) [NeZero q] (Φ : ZMod q → ℂ) : ℝ :=
   ∑ a : ZMod q, ∑ b : ZMod q,
@@ -1161,6 +1170,7 @@ theorem norm_periodicEstermann_le_leftStrip
       intro a _ha
       rw [Finset.sum_mul]
 
+/-- The `periodicEstermannRightStripConstant` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicEstermannRightStripConstant
     (q : ℕ) [NeZero q] (Φ : ZMod q → ℂ) : ℝ :=
   4 * ∑ a : ZMod q, ∑ b : ZMod q,
@@ -1254,6 +1264,7 @@ theorem norm_periodicEstermann_le_rightStrip
       intro a _ha
       rw [Finset.mul_sum, Finset.sum_mul]
 
+/-- The `periodicEstermannStripConstant` definition used by the source-facing construction in `DFIPeriodicBounds`. -/
 noncomputable def periodicEstermannStripConstant
     (q : ℕ) [NeZero q] (Φ : ZMod q → ℂ) : ℝ :=
   periodicEstermannLeftStripConstant q Φ +

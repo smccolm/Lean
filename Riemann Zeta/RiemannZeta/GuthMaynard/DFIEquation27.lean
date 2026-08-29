@@ -604,7 +604,7 @@ theorem iteratedDeriv_ofReal_log_succ
       rw [hderiv]
       push_cast
       norm_num [pow_succ, Nat.factorial_succ]
-      ring
+      ring_nf
 
 /-- On a positive dyadic range, every positive-order logarithmic
 derivative is bounded at the localization scale. -/

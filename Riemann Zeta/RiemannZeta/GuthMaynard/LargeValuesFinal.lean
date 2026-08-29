@@ -16,6 +16,7 @@ mass explicit; this is the quantity whose cube cancels the diagonal zero mode
 in Proposition 4.6.
 -/
 
+/-- The `gmCutoffColumnMass` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmCutoffColumnMass (cutoff : GMSmoothCutoff) (N : ℕ) : ℝ :=
   ∑ n : GMColumn N, cutoff ((n : ℝ) / N) ^ 2
 
@@ -67,6 +68,7 @@ theorem gmMatrix_first_spectral_moment_le
   exact mul_le_mul_of_nonneg_left (gmCutoffColumnMass_le cutoff N)
     (Nat.cast_nonneg W.card)
 
+/-- The `gmCubicSpectralDispersion` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmCubicSpectralDispersion
     (cutoff : GMSmoothCutoff) (N : ℕ) (W : Finset ℝ) : ℝ :=
   (∑ i : GMRow W,
@@ -280,6 +282,7 @@ theorem gmCubicDiagonalMain_sub_spectralAverage_bounded
     _ = 3 * K₀ * L ^ 2 := by field_simp
     _ ≤ K := by dsimp only [K]; linarith
 
+/-- The `gmCutoffCoeffs` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmCutoffCoeffs (cutoff : GMSmoothCutoff) (N : ℕ)
     (b : ℕ → ℂ) (n : ℕ) : ℂ :=
   cutoff ((n : ℝ) / N) * b n
@@ -467,6 +470,7 @@ theorem gm_largeValues_raw_dispersion
           _ ≤ 4 * gmCubicSpectralDispersion cutoff N W + 8 * (N : ℝ) ^ 3 :=
             le_add_of_nonneg_left (mul_nonneg (by norm_num) hD0)
 
+/-- The `gmS3PhysicalShape` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmS3PhysicalShape
     (N : ℕ) (T V : ℝ) (W : Finset ℝ) : ℝ :=
   T ^ 2 * (W.card : ℝ) ^ (3 / 2 : ℝ) +
@@ -475,6 +479,7 @@ noncomputable def gmS3PhysicalShape
     T ^ (9 / 8 : ℝ) * (W.card : ℝ) ^ (29 / 16 : ℝ) *
       (N : ℝ) ^ (3 / 2 : ℝ) * V ^ (-1 : ℝ)
 
+/-- The `gmSection12RawShape` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmSection12RawShape
     (N : ℕ) (T V : ℝ) (W : Finset ℝ) : ℝ :=
   (N : ℝ) ^ 3 + gmS2PaperShape 4 N T W +
@@ -1138,7 +1143,7 @@ theorem gmEquation12PhysicalRootShape_specialize
   rw [gm_rpow_div_root hx, gm_rpow_div_root hx, gm_rpow_div_root hx,
     gm_rpow_div_root hx, gm_rpow_div_root hx, gm_rpow_div_root hx,
     ← Real.rpow_sub hx, ← Real.rpow_sub hx]
-  congr 1 <;> ring
+  congr 1 <;> ring_nf
 
 theorem gmEquation12PhysicalRootShape_specialize_le
     {N : ℕ} {σ : ℝ} (hN : 1 < N) (hσL : 7 / 10 ≤ σ) (hσU : σ ≤ 4 / 5) :
@@ -1288,6 +1293,7 @@ theorem gmProposition3_1_smooth_physical
 
 /-! ### The finite `T^η`-separation extraction used in Section 3 -/
 
+/-- The `gmScaleSet` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmScaleSet (δ : ℝ) (W : Finset ℝ) : Finset ℝ :=
   W.image fun t => t / δ
 
@@ -1452,6 +1458,7 @@ theorem gmProposition3_1_smooth_oneSeparated
         ((N : ℝ) ^ (6 / 5 : ℝ) * (N : ℝ) ^ (12 / 5 : ℝ) *
           V ^ (-4 : ℝ)) := by rfl
 
+/-- The `gmShiftCoeffs` definition used by the source-facing construction in `LargeValuesFinal`. -/
 noncomputable def gmShiftCoeffs (s : ℝ) (b : ℕ → ℂ) (n : ℕ) : ℂ :=
   b n * (n : ℂ) ^ ((s : ℂ) * I)
 

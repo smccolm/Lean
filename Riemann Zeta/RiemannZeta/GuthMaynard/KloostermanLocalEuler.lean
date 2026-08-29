@@ -8,6 +8,7 @@ namespace RiemannZeta.GuthMaynard
 noncomputable section
 
 
+/-- The `HarcosPrimeUpTo` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 def HarcosPrimeUpTo (p n : ℕ) [Fact p.Prime] :=
   {q : HarcosIrreducibleMonic p // q.1.natDegree ≤ n}
 
@@ -34,6 +35,7 @@ theorem harcosPrimeUpTo_degree_pos
     (p n : ℕ) [Fact p.Prime] (q : HarcosPrimeUpTo p n) :
     0 < q.1.1.natDegree := q.1.2.1.natDegree_pos
 
+/-- The `harcosPrimeGeometricSeries` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosPrimeGeometricSeries
     (p n : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (q : HarcosPrimeUpTo p n) : PowerSeries ℂ :=
@@ -51,11 +53,13 @@ noncomputable def harcosPrimeGeometricSeries
       else 0 := by
   simp [harcosPrimeGeometricSeries]
 
+/-- The `harcosFiniteEulerProduct` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosFiniteEulerProduct
     (p n : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : PowerSeries ℂ :=
   ∏ q : HarcosPrimeUpTo p n, harcosPrimeGeometricSeries p n a b q
 
+/-- The `harcosPrimeUpToOfFactor` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosPrimeUpToOfFactor
     (p n : ℕ) [Fact p.Prime] (s : HarcosFactorization p n)
     (q : HarcosIrreducibleMonic p) (hq : q ∈ s.1) :
@@ -105,11 +109,13 @@ theorem sum_harcosPrimeUpTo_count_mul_degree
       simp [mul_comm]
     _ = n := s.2
 
+/-- The `HarcosEulerAllocation` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 def HarcosEulerAllocation (p n : ℕ) [Fact p.Prime] :=
   {l : HarcosPrimeUpTo p n →₀ ℕ //
     l ∈ Finset.finsuppAntidiag Finset.univ n ∧
       ∀ q, q.1.1.natDegree ∣ l q}
 
+/-- The `harcosEulerAllocationOfFactorization` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosEulerAllocationOfFactorization
     (p n : ℕ) [Fact p.Prime] (s : HarcosFactorization p n) :
     HarcosEulerAllocation p n := by
@@ -125,6 +131,7 @@ noncomputable def harcosEulerAllocationOfFactorization
     change q.1.1.natDegree ∣ s.1.count q.1 * q.1.1.natDegree
     exact dvd_mul_left _ _
 
+/-- The `harcosFactorizationOfEulerAllocation` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosFactorizationOfEulerAllocation
     (p n : ℕ) [Fact p.Prime] (l : HarcosEulerAllocation p n) :
     HarcosFactorization p n := by
@@ -238,6 +245,7 @@ theorem harcosEulerAllocation_factorization_right
   rw [count_harcosFactorizationOfEulerAllocation, dif_pos q.2]
   exact Nat.div_mul_cancel (l.2.2 q)
 
+/-- The `harcosEulerAllocationEquiv` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 def harcosEulerAllocationEquiv
     (p n : ℕ) [Fact p.Prime] :
     HarcosFactorization p n ≃ HarcosEulerAllocation p n where
@@ -251,6 +259,7 @@ noncomputable instance harcosEulerAllocationFintype
   Fintype.ofEquiv (HarcosFactorization p n)
     (harcosEulerAllocationEquiv p n)
 
+/-- The `harcosEulerAllocationWeight` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 noncomputable def harcosEulerAllocationWeight
     (p n : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (l : HarcosEulerAllocation p n) : ℂ :=
@@ -305,6 +314,7 @@ theorem coeff_harcosFiniteEulerProduct_raw
   rw [PowerSeries.coeff_prod]
   simp only [coeff_harcosPrimeGeometricSeries]
 
+/-- The `harcosEulerAllocationFinset` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 def harcosEulerAllocationFinset
     (p n : ℕ) [Fact p.Prime] :
     Finset (HarcosPrimeUpTo p n →₀ ℕ) :=
@@ -312,6 +322,7 @@ def harcosEulerAllocationFinset
     (Finset.univ : Finset (HarcosPrimeUpTo p n)) n).filter
       (fun l ↦ ∀ q, q.1.1.natDegree ∣ l q)
 
+/-- The `harcosEulerAllocationSubtypeEquiv` definition used by the source-facing construction in `KloostermanLocalEuler`. -/
 def harcosEulerAllocationSubtypeEquiv
     (p n : ℕ) [Fact p.Prime] :
     {l // l ∈ harcosEulerAllocationFinset p n} ≃

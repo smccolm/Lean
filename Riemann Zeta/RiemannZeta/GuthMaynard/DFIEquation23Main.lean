@@ -256,6 +256,8 @@ theorem DFIVoronoiTestFunction.dualBranch_eq_weightedMellinIntegral
 /-- Parameter-smoothness and compact support of either individual dual
 Voronoi branch.  This is the analytic source-entry obligation that was
 missing from the earlier grouped equation-(23) proof. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23_dualBranchTestFunction
     {E : ℝ → ℝ → ℂ} {A B C D : ℝ}
     (hE : ContDiff ℝ ∞ (Function.uncurry E))
@@ -341,6 +343,8 @@ noncomputable def dfiEquation23_dualBranchTestFunction
 
 /-- The main/main entry of equation (23) has the exact test-function
 regularity required for the second Voronoi application. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_mainBranch
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -432,6 +436,8 @@ theorem dfiEquation23Weight_support_rectangle
 
 /-- Either individual transformed `y`-branch of the concrete source weight
 is a genuine test function in `x`. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_dualBranch
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -465,6 +471,8 @@ noncomputable def dfiEquation23Weight_dualBranch
 
 /-- The concrete equation-(23) source satisfies the full ungrouped
 three-by-three admissibility condition. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_admissible
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -523,6 +531,8 @@ theorem periodicDivisorWeightedSum_eq_range_of_support
 /-- The grouped transformed remainder is a test function because native
 Proposition 1 identifies it with the original finite divisor sum minus the
 already-controlled logarithmic main term. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_remainderBranch
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -602,6 +612,8 @@ noncomputable def dfiEquation23Weight_remainderBranch
 
 /-- The concrete localized equation-(21) weight satisfies every analytic
 condition needed by the grouped two-variable Voronoi expansion. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_groupedAdmissible
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}

@@ -14,6 +14,7 @@ namespace RiemannZeta.GuthMaynard
 # Transfer from the finite shifted square to the smooth twisted moment
 -/
 
+/-- The `hughesYoungWholeFiniteSmallTwistedSquare` definition used by the source-facing construction in `HughesYoungMomentTransfer`. -/
 noncomputable def hughesYoungWholeFiniteSmallTwistedSquare
     (T t : ℝ) (M : ℕ) : ℂ :=
   (1 / (Real.pi : ℂ)) *
@@ -21,6 +22,7 @@ noncomputable def hughesYoungWholeFiniteSmallTwistedSquare
     shortMobiusPolynomial T (afeCriticalPoint (-t)) ^ 2 *
     hughesYoungWholeSmallPairSquare T t M
 
+/-- The `hughesYoungWholeHighTwistedTail` definition used by the source-facing construction in `HughesYoungMomentTransfer`. -/
 noncomputable def hughesYoungWholeHighTwistedTail
     (q : ℕ) (T t : ℝ) (M : ℕ) : ℂ :=
   (1 / (Real.pi : ℂ)) *

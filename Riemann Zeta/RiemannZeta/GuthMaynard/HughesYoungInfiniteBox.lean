@@ -16,6 +16,7 @@ box of the infinite AFE series is literally a finite DFI box.  The natural
 bound below is deliberately independent of the reduced coefficients.
 -/
 
+/-- The `hughesYoungFullDyadicBound` definition used by the source-facing construction in `HughesYoungInfiniteBox`. -/
 noncomputable def hughesYoungFullDyadicBound (i : ℕ) : ℕ :=
   Nat.ceil (2 * hughesYoungFullDyadicScale i)
 
@@ -143,7 +144,7 @@ theorem hughesYoungFullDyadicCutoff_physical_left
     (d := (hughesYoungCommonDivisor h k : ℝ))
     (X := hughesYoungFullDyadicScale i)
     (x := (hughesYoungReducedLeft h k : ℝ) * (m : ℝ)) hd using 1
-  all_goals ring
+  all_goals ring_nf
 
 theorem hughesYoungFullDyadicCutoff_physical_right
     {h k n j : ℕ} (hh : 0 < h) :
@@ -165,7 +166,7 @@ theorem hughesYoungFullDyadicCutoff_physical_right
     (d := (hughesYoungCommonDivisor h k : ℝ))
     (X := hughesYoungFullDyadicScale j)
     (x := (hughesYoungReducedRight h k : ℝ) * (n : ℝ)) hd using 1
-  all_goals ring
+  all_goals ring_nf
 
 theorem hughesYoungFullDyadicIntegratedBox_eq_finiteSum
     (T c H : ℝ) {h k i j : ℕ} (hh : 0 < h) (hk : 0 < k) :

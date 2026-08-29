@@ -4,9 +4,11 @@ open Polynomial Classical
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `HarcosMonicDegree` definition used by the source-facing construction in `KloostermanFactorization`. -/
 def HarcosMonicDegree (p d : ℕ) [Fact p.Prime] :=
   {k : (ZMod p)[X] // k.Monic ∧ k.natDegree = d}
 
+/-- The `harcosMonicDegreeEquiv` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosMonicDegreeEquiv
     (p d : ℕ) [Fact p.Prime] :
     (Fin d → ZMod p) ≃ HarcosMonicDegree p d where
@@ -40,13 +42,16 @@ noncomputable def harcosMonicDegreeEquiv
           rw [k.2.2]
           exact hdi)).symm
 
+/-- The `HarcosIrreducibleMonic` definition used by the source-facing construction in `KloostermanFactorization`. -/
 def HarcosIrreducibleMonic (p : ℕ) [Fact p.Prime] :=
   {q : (ZMod p)[X] // Irreducible q ∧ q.Monic}
 
+/-- The `HarcosFactorization` definition used by the source-facing construction in `KloostermanFactorization`. -/
 def HarcosFactorization (p d : ℕ) [Fact p.Prime] :=
   {s : Multiset (HarcosIrreducibleMonic p) //
     (s.map (fun q ↦ q.1.natDegree)).sum = d}
 
+/-- The `harcosFactorizationOfMonicDegree` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosFactorizationOfMonicDegree
     (p d : ℕ) [Fact p.Prime] (k : HarcosMonicDegree p d) :
     HarcosFactorization p d := by
@@ -72,6 +77,7 @@ noncomputable def harcosFactorizationOfMonicDegree
     _ = k.1.natDegree := hdeg
     _ = d := k.2.2
 
+/-- The `harcosMonicDegreeOfFactorization` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosMonicDegreeOfFactorization
     (p d : ℕ) [Fact p.Prime] (s : HarcosFactorization p d) :
     HarcosMonicDegree p d := by
@@ -134,6 +140,7 @@ theorem harcosMonicDegree_factorization_right
   rw [Multiset.map_pmap, Multiset.pmap_eq_map]
   simpa [harcosMonicDegreeOfFactorization] using hnorm
 
+/-- The `harcosMonicFactorizationEquiv` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosMonicFactorizationEquiv
     (p d : ℕ) [Fact p.Prime] :
     HarcosMonicDegree p d ≃ HarcosFactorization p d where
@@ -142,6 +149,7 @@ noncomputable def harcosMonicFactorizationEquiv
   left_inv := harcosMonicDegree_factorization_left p d
   right_inv := harcosMonicDegree_factorization_right p d
 
+/-- The `harcosCoeffsFactorizationEquiv` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosCoeffsFactorizationEquiv
     (p d : ℕ) [Fact p.Prime] :
     (Fin d → ZMod p) ≃ HarcosFactorization p d :=
@@ -151,6 +159,7 @@ noncomputable instance harcosFactorizationFintype
     (p d : ℕ) [Fact p.Prime] : Fintype (HarcosFactorization p d) :=
   Fintype.ofEquiv (Fin d → ZMod p) (harcosCoeffsFactorizationEquiv p d)
 
+/-- The `harcosFactorizationWeight` definition used by the source-facing construction in `KloostermanFactorization`. -/
 noncomputable def harcosFactorizationWeight
     (p d : ℕ) [NeZero p] [Fact p.Prime] (a b : ZMod p)
     (s : HarcosFactorization p d) : ℂ :=

@@ -404,7 +404,7 @@ theorem hasDerivAt_hughesYoungLogXBetaIntegral
     intro x _hx
     simp only [hughesYoungBetaTail, smul_eq_mul]
     rw [Complex.real_smul]
-    ring
+    ring_nf
   rw [hsource, hderivative] at hcomp
   simpa only [mul_one] using hcomp
 
@@ -764,7 +764,7 @@ theorem hughesYoungBetaIntegral_eq_gammaBeta
   have h := hughesYoung_betaIntegral_Ioi_eq_gamma
     (u := A + 1) (v := -A - B - 1) hA hv
   unfold hughesYoungGammaBeta
-  convert h using 1 <;> ring
+  convert h using 1 <;> ring_nf
 
 theorem eventually_hughesYoungBetaIntegral_eq_gammaBeta_left
     {A B : ℂ} (hA : 0 < (A + 1).re) (hAB : (A + B + 1).re < 0) :

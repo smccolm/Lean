@@ -18,14 +18,17 @@ open scoped BigOperators
 open Classical
 open Polynomial
 
+/-- The `QuadraticArtinCurvePoints` definition used by the source-facing construction in `KloostermanCurveTrace`. -/
 abbrev QuadraticArtinCurvePoints {F : Type*} [Field F]
     (p : ℕ) (c : F) :=
   {z : F × F // z.2 ^ 2 = (z.1 ^ p - z.1) ^ 2 - 4 * c}
 
+/-- The `ArtinUnitPoints` definition used by the source-facing construction in `KloostermanCurveTrace`. -/
 abbrev ArtinUnitPoints {F : Type*} [Field F]
     (p : ℕ) (c : F) :=
   {z : F × Fˣ // z.1 ^ p - z.1 = (z.2 : F) + c / (z.2 : F)}
 
+/-- The `quadraticArtinCurveEquivUnitPoints` definition used by the source-facing construction in `KloostermanCurveTrace`. -/
 noncomputable def quadraticArtinCurveEquivUnitPoints
     {F : Type*} [Field F] (p : ℕ) (c : F) (hc : c ≠ 0)
     (h2 : (2 : F) ≠ 0) :
@@ -88,6 +91,7 @@ noncomputable def quadraticArtinCurveEquivUnitPoints
       field_simp [h2]
       ring
 
+/-- The `artinUnitEquivSigmaFiber` definition used by the source-facing construction in `KloostermanCurveTrace`. -/
 noncomputable def artinUnitEquivSigmaFiber
     (p n : ℕ) [Fact p.Prime] (c : GaloisField p n) :
     ArtinUnitPoints p c ≃
@@ -127,6 +131,7 @@ theorem sum_stdAddChar_mul (p : ℕ) [NeZero p] [Fact p.Prime]
     simpa [mul_comm] using
       (AddChar.sum_eq_zero_of_ne_one (ZMod.isPrimitive_stdAddChar p hA))
 
+/-- The `extensionKloostermanScalarSum` definition used by the source-facing construction in `KloostermanCurveTrace`. -/
 noncomputable def extensionKloostermanScalarSum
     (p n : ℕ) [Fact p.Prime] (c : GaloisField p n) (m : ZMod p) : ℂ :=
   by

@@ -136,6 +136,7 @@ theorem hasCompactSupport_gmAffineLocalBumpFunction :
   simp only [gmAffineLocalBumpFunction,
     gmCubicLocalBump_eq_zero_of_two_le_abs habs, Complex.ofReal_zero]
 
+/-- The `gmAffineLocalBumpSchwartz` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffineLocalBumpSchwartz : SchwartzMap ℝ ℂ :=
   hasCompactSupport_gmAffineLocalBumpFunction.toSchwartzMap
     contDiff_gmAffineLocalBumpFunction
@@ -2430,11 +2431,13 @@ theorem norm_gmAffinePoissonFarFourier_le_of_fourier_le
       simp only [Finset.sum_const, nsmul_eq_mul]
       ring
 
+/-- The `gmAffinePoissonNearKernelEnvelope` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffinePoissonNearKernelEnvelope
     (M : ℕ) (Q : ℝ) : ℝ :=
   (2 * (Q / (8 * M : ℝ)) + 5) *
     ((8 * M : ℝ) * SchwartzMap.seminorm ℝ 0 0 gmAffineLocalBumpDual)
 
+/-- The `gmAffinePoissonTailKernelEnvelope` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffinePoissonTailKernelEnvelope
     (n M : ℕ) (Q : ℝ) : ℝ :=
   (4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual /
@@ -2611,6 +2614,7 @@ theorem hasCompactSupport_gmAffineScaledBumpFunction
   simp only [gmAffineScaledBumpFunction,
     gmCubicLocalBump_eq_zero_of_two_le_abs habs, Complex.ofReal_zero]
 
+/-- The `gmAffineScaledBumpSchwartz` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffineScaledBumpSchwartz
     (S : ℝ) (hS : 0 < S) : SchwartzMap ℝ ℂ :=
   (hasCompactSupport_gmAffineScaledBumpFunction hS).toSchwartzMap
@@ -3119,6 +3123,7 @@ theorem summable_gmAffineScaledFarTerm
     (fun j => norm_gmAffineScaledFarTerm_le_majorant n hS hQ j)
   exact summable_gmAffineScaledFarMajorant n S alpha Q
 
+/-- The `gmAffineScaledFarSeries` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffineScaledFarSeries
     (S : ℝ) (hS : 0 < S) (alpha Q : ℝ) : ℂ :=
   ∑' j : ℤ, gmAffineScaledFarTerm S hS alpha Q j
@@ -3213,6 +3218,7 @@ noncomputable def gmAffineMiddleTauPhase
   2 * Real.pi * tau *
     (((m₂' : ℝ) / A) * u' - ((m₂ : ℝ) / A) * u)
 
+/-- The `gmAffineMiddleZ₁` definition used by the source-facing construction in `LargeValuesAffine`. -/
 noncomputable def gmAffineMiddleZ₁
     (A : ℝ) (m₂ m₂' : ℤ) (u u' : ℝ) : ℂ :=
   ∫ tau : ℝ, (gmCubicLocalBump tau : ℂ) *

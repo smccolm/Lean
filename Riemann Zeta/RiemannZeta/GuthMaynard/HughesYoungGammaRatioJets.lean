@@ -19,15 +19,19 @@ unshifted arguments paired is essential: their logarithmic derivatives differ
 by one small displacement and therefore gain an inverse power of the height.
 -/
 
+/-- The `hughesYoungGammaPlusCenter` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungGammaPlusCenter (t : ℝ) : ℂ :=
   (((1 / 2 : ℝ) : ℂ) + (t : ℂ) * I) / 2
 
+/-- The `hughesYoungGammaPlusShift` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungGammaPlusShift (t c u : ℝ) : ℂ :=
   (((1 / 2 + c : ℝ) : ℂ) + ((t + u : ℝ) : ℂ) * I) / 2
 
+/-- The `hughesYoungGammaMinusCenter` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungGammaMinusCenter (t : ℝ) : ℂ :=
   (((1 / 2 : ℝ) : ℂ) + ((-t : ℝ) : ℂ) * I) / 2
 
+/-- The `hughesYoungGammaMinusShift` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungGammaMinusShift (t c u : ℝ) : ℂ :=
   (((1 / 2 + c : ℝ) : ℂ) + ((-t + u : ℝ) : ℂ) * I) / 2
 
@@ -261,11 +265,13 @@ private theorem hasDerivAt_iteratedDeriv_digamma_all
   | succ n =>
       exact hasDerivAt_iteratedDeriv_digamma (j := n + 1) (by omega) hz
 
+/-- The `hughesYoungPlusDigammaDifference` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungPlusDigammaDifference
     (j : ℕ) (t c u : ℝ) : ℂ :=
   iteratedDeriv j Complex.digamma (hughesYoungGammaPlusShift t c u) -
     iteratedDeriv j Complex.digamma (hughesYoungGammaPlusCenter t)
 
+/-- The `hughesYoungMinusDigammaDifference` definition used by the source-facing construction in `HughesYoungGammaRatioJets`. -/
 noncomputable def hughesYoungMinusDigammaDifference
     (j : ℕ) (t c u : ℝ) : ℂ :=
   iteratedDeriv j Complex.digamma (hughesYoungGammaMinusShift t c u) -

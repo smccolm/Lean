@@ -22,34 +22,42 @@ the complete series rather than shifting its terms without a uniform
 summation argument.
 -/
 
+/-- The `hughesYoungEquation84Kernel00` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84Kernel00 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernel t w 0 0
 
+/-- The `hughesYoungEquation84Kernel10` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84Kernel10 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernel t w 1 0 -
     hughesYoungEquation84Kernel00 t w
 
+/-- The `hughesYoungEquation84Kernel01` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84Kernel01 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernel t w 0 1 -
     hughesYoungEquation84Kernel00 t w
 
+/-- The `hughesYoungEquation84Kernel11` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84Kernel11 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernel t w 1 1 -
     hughesYoungEquation84Kernel10 t w -
     hughesYoungEquation84Kernel01 t w -
     hughesYoungEquation84Kernel00 t w
 
+/-- The `hughesYoungEquation84KernelCore00` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84KernelCore00 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernelCore t w 0 0
 
+/-- The `hughesYoungEquation84KernelCore10` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84KernelCore10 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernelCore t w 1 0 -
     hughesYoungEquation84KernelCore00 t w
 
+/-- The `hughesYoungEquation84KernelCore01` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84KernelCore01 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernelCore t w 0 1 -
     hughesYoungEquation84KernelCore00 t w
 
+/-- The `hughesYoungEquation84KernelCore11` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84KernelCore11 (t : ℝ) (w : ℂ) : ℂ :=
   hughesYoungEquation84RegularizedContourKernelCore t w 1 1 -
     hughesYoungEquation84KernelCore10 t w -
@@ -200,10 +208,12 @@ theorem one_le_hughesYoungEquation84LogBudget (a b r : ℕ) :
   linarith [abs_nonneg (Real.log (r : ℝ)), abs_nonneg (Real.log (a : ℝ)),
     abs_nonneg (Real.log (b : ℝ)), abs_nonneg Real.eulerMascheroniConstant]
 
+/-- The `hughesYoungEquation84PositiveCX` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84PositiveCX (b r q : ℕ) : ℂ :=
   (Real.log r : ℂ) +
     dfiEquation27LogConstant b (dfiReducedDenominator b q)
 
+/-- The `hughesYoungEquation84PositiveCOne` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84PositiveCOne (a r q : ℕ) : ℂ :=
   (Real.log r : ℂ) +
     dfiEquation27LogConstant a (dfiReducedDenominator a q)
@@ -259,6 +269,7 @@ theorem summable_hughesYoungEquation84PositiveArithmeticMoment
     · exact norm_hughesYoungEquation84PositiveCOne_le_logBudget a b r q hq
     · simpa using one_le_hughesYoungEquation84LogBudget_add_four_log a b r q hq
 
+/-- The `hughesYoungEquation84PositiveArithmeticMoment` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84PositiveArithmeticMoment
     (a b r : ℕ) (i j : Bool) : ℂ :=
   ∑' q : ℕ,
@@ -266,6 +277,7 @@ noncomputable def hughesYoungEquation84PositiveArithmeticMoment
       (if i then hughesYoungEquation84PositiveCX b r q else 1) *
       (if j then hughesYoungEquation84PositiveCOne a r q else 1)
 
+/-- The `hughesYoungEquation84PositiveOuter` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84PositiveOuter
     (T t : ℝ) (h k a b r : ℕ) (w : ℂ) : ℂ :=
   ((a : ℂ) * b)⁻¹ *
@@ -386,6 +398,7 @@ theorem hughesYoungEquation84PositiveContourSeries_eq_fourMoments
   dsimp only [P]
   ring
 
+/-- The `hughesYoungEquation84NegativeOuter` definition used by the source-facing construction in `HughesYoungCentralExpansion`. -/
 noncomputable def hughesYoungEquation84NegativeOuter
     (T t : ℝ) (h k a b r : ℕ) (w : ℂ) : ℂ :=
   ((b : ℂ) * a)⁻¹ *

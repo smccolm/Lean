@@ -21,6 +21,7 @@ Hughes--Young Section 3.
 /-- A fixed source cutoff which is one on `[1/2,3]` and vanishes outside
 `[1/4,4]`. -/
 structure HughesYoungCutoff where
+  /-- The `toFun` component of `HughesYoungCutoff`. -/
   toFun : ℝ → ℝ
   smooth : ContDiff ℝ ∞ toFun
   nonneg : ∀ x, 0 ≤ toFun x

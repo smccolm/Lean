@@ -50,9 +50,11 @@ theorem gmSmoothDirichletPoly_restricted_eq_sum
 def gmSourceLeftPiece (N : ℕ) : Finset ℕ :=
   (dyadicInterval N).filter fun n => 5 * n ≤ 6 * N
 
+/-- The `gmSourceMiddlePiece` definition used by the source-facing construction in `LargeValuesLocalization`. -/
 def gmSourceMiddlePiece (N : ℕ) : Finset ℕ :=
   (dyadicInterval N).filter fun n => 6 * N < 5 * n ∧ 5 * n ≤ 9 * N
 
+/-- The `gmSourceRightPiece` definition used by the source-facing construction in `LargeValuesLocalization`. -/
 def gmSourceRightPiece (N : ℕ) : Finset ℕ :=
   (dyadicInterval N).filter fun n => 9 * N < 5 * n
 
@@ -60,6 +62,7 @@ def gmSourceRightPiece (N : ℕ) : Finset ℕ :=
 pieces.  The harmless `+5` and `+4` make the integer rounding one-sided. -/
 def gmSourceLeftScale (N : ℕ) : ℕ := (5 * N + 5) / 6
 
+/-- The `gmSourceRightScale` definition used by the source-facing construction in `LargeValuesLocalization`. -/
 def gmSourceRightScale (N : ℕ) : ℕ := (10 * N + 8) / 9
 
 theorem gmSourcePieces_partition (N : ℕ) (b : ℕ → ℂ) (t : ℝ) :

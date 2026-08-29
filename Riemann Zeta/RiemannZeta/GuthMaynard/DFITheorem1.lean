@@ -1444,7 +1444,7 @@ theorem dfiEquation29_doubleRetained_loss_bundle_le
           show (2 : ℝ) ^ (2 : ℕ) = (2 : ℝ) ^ (2 : ℝ) by norm_num,
           ← Real.rpow_mul (by norm_num : (0 : ℝ) ≤ 2)]
         congr 1
-        ring
+        ring_nf
   have hXYpow :
       X ^ (1 / 2 + η / 2) * Y ^ (1 / 2 + η / 2) =
         S ^ (1 / 2 : ℝ) * S ^ (η / 2) := by

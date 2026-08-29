@@ -17,18 +17,21 @@ box is split into its literal diagonal and its literal nonzero-shift DFI
 part.  There is no asymptotic estimate in this decomposition.
 -/
 
+/-- The `hughesYoungActiveDyadicMoment` definition used by the source-facing construction in `HughesYoungActiveMoment`. -/
 noncomputable def hughesYoungActiveDyadicMoment
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes
       (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K,
     hughesYoungFullDyadicIntegratedBox T c H h k ij.1 ij.2
 
+/-- The `hughesYoungActiveDyadicDiagonal` definition used by the source-facing construction in `HughesYoungActiveMoment`. -/
 noncomputable def hughesYoungActiveDyadicDiagonal
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes
       (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K,
     hughesYoungFullDyadicDiagonalBox T c H h k ij.1 ij.2
 
+/-- The `hughesYoungActiveDyadicOffDiagonal` definition used by the source-facing construction in `HughesYoungActiveMoment`. -/
 noncomputable def hughesYoungActiveDyadicOffDiagonal
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes

@@ -332,7 +332,7 @@ theorem hughesYoungEquations165_166
     funext z
     unfold hughesYoungZ hughesYoungA F
       hughesYoungEquation165RegularFunction
-    ring
+    ring_nf
   rw [hdecomp, hres]
   have hFvalue : F s0 =
       hughesYoungEquation166RegularFactor alpha beta gamma delta *
@@ -343,7 +343,7 @@ theorem hughesYoungEquations165_166
       simp only [s0]
       ring
     rw [hs]
-    congr 2 <;> ring
+    congr 2 <;> ring_nf
   rw [hFvalue]
   ring
 
@@ -549,6 +549,6 @@ theorem hughesYoungA_two_mul_regular_value
       hughesYoungEquation166RegularFactor alpha beta gamma delta := by
   dsimp only
   unfold hughesYoungEquation166RegularFactor
-  congr 1 <;> ring
+  congr 1 <;> ring_nf
 
 end RiemannZeta.GuthMaynard

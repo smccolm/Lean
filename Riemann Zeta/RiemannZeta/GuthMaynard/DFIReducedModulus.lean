@@ -18,8 +18,11 @@ def dfiReducedDenominator (a q : ℕ) : ℕ := q / a.gcd q
 
 /-- The reduced numerator and denominator of `a/q`. -/
 structure DFIReducedModulus (a q : ℕ) [NeZero q] where
+  /-- The `gcd` component of `DFIReducedModulus`. -/
   gcd : ℕ := a.gcd q
+  /-- The `numerator` component of `DFIReducedModulus`. -/
   numerator : ℕ := a / a.gcd q
+  /-- The `denominator` component of `DFIReducedModulus`. -/
   denominator : ℕ := q / a.gcd q
   gcd_pos : 0 < gcd
   denominator_pos : 0 < denominator
@@ -27,6 +30,7 @@ structure DFIReducedModulus (a q : ℕ) [NeZero q] where
   denominator_reconstruct : gcd * denominator = q
   coprime : numerator.Coprime denominator
 
+/-- The `dfiReducedModulus` definition used by the source-facing construction in `DFIReducedModulus`. -/
 noncomputable def dfiReducedModulus (a q : ℕ) [NeZero q] :
     DFIReducedModulus a q where
   gcd := a.gcd q
@@ -464,6 +468,7 @@ theorem dfiEquation23SourceLeft_eq_reduced
   intro n
   rw [periodicDivisorCoeff_neg_source_eq_reduced]
 
+/-- The `dfiEquation23ReducedGroupedRight` definition used by the source-facing construction in `DFIReducedModulus`. -/
 noncomputable def dfiEquation23ReducedGroupedRight
     (qₓ qᵧ : ℕ) [NeZero qₓ] [NeZero qᵧ]
     (dₓ : ZMod qₓ) (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) : ℂ :=
@@ -482,9 +487,12 @@ noncomputable def dfiEquation23ReducedRight
     dfiVoronoiBranchValue qₓ dₓ bxBranch
       (fun x => dfiVoronoiBranchValue qᵧ dᵧ byBranch (E x))
 
+/-- The `DFIEquation23ReducedFullAdmissible` definition used by the source-facing construction in `DFIReducedModulus`. -/
 structure DFIEquation23ReducedFullAdmissible
     (qᵧ : ℕ) [NeZero qᵧ] (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) where
+  /-- The `ySlice` component of `DFIEquation23ReducedFullAdmissible`. -/
   ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
+  /-- The `xAfterYBranch` component of `DFIEquation23ReducedFullAdmissible`. -/
   xAfterYBranch : ∀ branch : DFIVoronoiBranch,
     DFIVoronoiTestFunction
       (fun x => dfiVoronoiBranchValue qᵧ dᵧ branch (E x))
@@ -524,11 +532,15 @@ theorem dfiEquation23_reduced_of_fullAdmissible
   exact DFIVoronoiTestFunction.dfiProposition1_native_branch_sum
     (hE.xAfterYBranch branch) qₓ dₓ hdₓ
 
+/-- The `DFIEquation23ReducedAdmissible` definition used by the source-facing construction in `DFIReducedModulus`. -/
 structure DFIEquation23ReducedAdmissible
     (qᵧ : ℕ) [NeZero qᵧ] (dᵧ : ZMod qᵧ) (E : ℝ → ℝ → ℂ) where
+  /-- The `ySlice` component of `DFIEquation23ReducedAdmissible`. -/
   ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
+  /-- The `xMain` component of `DFIEquation23ReducedAdmissible`. -/
   xMain : DFIVoronoiTestFunction
     (fun x => dfiVoronoiBranchValue qᵧ dᵧ .mainTerm (E x))
+  /-- The `xRemainder` component of `DFIEquation23ReducedAdmissible`. -/
   xRemainder : DFIVoronoiTestFunction
     (fun x => dfiVoronoiRemainderValue qᵧ dᵧ (E x))
 
@@ -561,6 +573,8 @@ theorem dfiEquation23_reduced_grouped_of_admissible
 
 /-- The concrete equation-(21) weight is admissible for two independently
 reduced moduli. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_reducedAdmissible
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -577,6 +591,9 @@ noncomputable def dfiEquation23Weight_reducedAdmissible
   xRemainder := dfiEquation23Weight_remainderBranch
     w hf hbox hφ a b ha hb h q₀ hq₀ qᵧ dᵧ hdᵧ
 
+/-- The `dfiEquation23Weight_reducedFullAdmissible` definition used by the source-facing construction in `DFIReducedModulus`. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_reducedFullAdmissible
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}

@@ -43,9 +43,11 @@ theorem hughesYoungEquation96_eq_positiveTsum
     Nat.succ_eq_add_one, hughesYoungEquation96PositiveTerm,
     hughesYoungEquation96Term]
 
+/-- The `hughesYoungEquation96LeftConstant` definition used by the source-facing construction in `HughesYoungEquation96Jet`. -/
 noncomputable def hughesYoungEquation96LeftConstant (h : ℕ) : ℂ :=
   2 * Real.eulerMascheroniConstant - Complex.log (h : ℂ)
 
+/-- The `hughesYoungEquation96RightConstant` definition used by the source-facing construction in `HughesYoungEquation96Jet`. -/
 noncomputable def hughesYoungEquation96RightConstant (k : ℕ) : ℂ :=
   2 * Real.eulerMascheroniConstant - Complex.log (k : ℂ)
 
@@ -175,11 +177,11 @@ theorem hughesYoungEquation96Jet_eq_equation98
     (by
       intro p hp
       convert hhx p hp using 1
-      ring)
+      ring_nf)
     (by
       intro p hp
       convert hkx p hp using 1
-      ring)
+      ring_nf)
   have hEq' :
       hughesYoungEquation96 h k
           (1 + 2 * z) (1 + 2 * w) (2 + q - z - w) =
@@ -187,7 +189,7 @@ theorem hughesYoungEquation96Jet_eq_equation98
             riemannZeta (2 + 2 * z + 2 * w)) *
           (hughesYoungC h (-z) z (-w) w (1 + q / 2) *
             hughesYoungC k (-w) w (-z) z (1 + q / 2)) := by
-    convert hEq using 1 <;> ring
+    convert hEq using 1 <;> ring_nf
   rw [hEq']
 
 /-- A prime power with a strictly negative real exponent cannot equal one.

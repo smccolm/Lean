@@ -13,6 +13,7 @@ open Classical
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `extensionKloostermanSum` definition used by the source-facing construction in `KloostermanExtensionSum`. -/
 noncomputable def extensionKloostermanSum
     (p n : ℕ) [Fact p.Prime]
     (A B : GaloisField p n) : ℂ := by

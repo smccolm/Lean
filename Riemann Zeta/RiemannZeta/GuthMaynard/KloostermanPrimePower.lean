@@ -16,9 +16,11 @@ open Complex
 open scoped BigOperators
 open Classical
 
+/-- The `squareFiber` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 def squareFiber (G : Type*) [CommGroup G] (c : G) :=
   {x : G // x ^ 2 = c}
 
+/-- The `squareFiberEquivPowKer` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def squareFiberEquivPowKer
     {G : Type*} [CommGroup G] (c x : G) (hx : x ^ 2 = c) :
     squareFiber G c ≃ (powMonoidHom 2 : G →* G).ker := by
@@ -144,6 +146,7 @@ theorem card_squareFiber_zmod_two_pow_le_four
   (card_squareFiber_le_card_powMonoidHom_ker (ZMod (2 ^ r))ˣ c).trans
     (card_powMonoidHom_two_ker_zmod_two_pow_le_four r hr)
 
+/-- The `inverseStationaryFiber` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 def inverseStationaryFiber (G : Type*) [CommGroup G] (a b : G) :=
   {x : G // a * x = b * x⁻¹}
 
@@ -172,9 +175,11 @@ theorem card_inverseStationaryFiber_le_two
   rw [Nat.card_congr (inverseStationaryFiberEquivSquareFiber G a b)]
   exact card_squareFiber_le_two G (a⁻¹ * b)
 
+/-- The `zmodStationaryFiber` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 def zmodStationaryFiber (q : ℕ) (A B : ZMod q) :=
   {u : (ZMod q)ˣ // A * (u : ZMod q) - B * (↑(u⁻¹) : ZMod q) = 0}
 
+/-- The `zmodStationaryFiberEquivInverse` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def zmodStationaryFiberEquivInverse
     (q : ℕ) (A B : ZMod q) (hA : IsUnit A) (hB : IsUnit B) :
     zmodStationaryFiber q A B ≃
@@ -245,6 +250,7 @@ theorem zmodDigitEquiv_apply
   rw [ZMod.val_natCast_of_lt]
   nlinarith
 
+/-- The `differencePairEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 def differencePairEquiv (G : Type*) [AddGroup G] : G × G ≃ G × G where
   toFun xy := (xy.1 - xy.2, xy.2)
   invFun hy := (hy.1 + hy.2, hy.2)
@@ -268,6 +274,7 @@ theorem star_stdAddChar (q : ℕ) [NeZero q] (x : ZMod q) :
     _ = (ZMod.stdAddChar⁻¹) x := AddChar.starComp_apply hq x
     _ = ZMod.stdAddChar (-x) := AddChar.inv_apply _ _
 
+/-- The `quadraticGaussSum` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def quadraticGaussSum
     (p : ℕ) [NeZero p] (c d : ZMod p) : ℂ :=
   ∑ x : ZMod p, ZMod.stdAddChar (c * x + d * x ^ 2)
@@ -463,6 +470,7 @@ theorem stdAddChar_modulus_factor_left
   push_cast
   field_simp
 
+/-- The `quadraticLiftSum` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def quadraticLiftSum
     (q p : ℕ) [NeZero q] [NeZero p] (C D : ZMod (q * p)) : ℂ :=
   ∑ z : ZMod (q * p),
@@ -616,6 +624,7 @@ theorem norm_quadraticLiftSum_le_card
   · rw [quadraticLiftSum_eq_zero_of_cast_ne q p C D hC, norm_zero]
     positivity
 
+/-- The `quadraticLiftSumPrimePow` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def quadraticLiftSumPrimePow
     (p r : ℕ) [Fact p.Prime]
     (C D : ZMod (p ^ (r + 1))) : ℂ :=
@@ -811,6 +820,9 @@ theorem kloostermanSumZMod_primePower_lift
         exact card_ker_unitsMap_primePower_succ p k hk] at h
   simpa only [Nat.cast_mul] using h
 
+/-- The `primePowerKernelPerturb` definition used by the source-facing construction in `KloostermanPrimePower`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def primePowerKernelPerturb
     (p a b : ℕ) [Fact p.Prime] (ha : 0 < a) (z : ZMod (p ^ b)) :
     (ZMod (p ^ a * p ^ b))ˣ := by
@@ -908,6 +920,7 @@ theorem card_ker_unitsMap_primePower_split
     (Nat.eq_of_mul_eq_mul_right hcancel hrewrite).symm
   simpa [π, hdiv] using hker
 
+/-- The `primePowerKernelPerturbEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def primePowerKernelPerturbEquiv
     (p a b : ℕ) [Fact p.Prime] (ha : 0 < a) :
     ZMod (p ^ b) ≃
@@ -927,6 +940,7 @@ noncomputable def primePowerKernelPerturbEquiv
   · rw [← Nat.card_eq_fintype_card, ← Nat.card_eq_fintype_card,
       Nat.card_zmod, card_ker_unitsMap_primePower_split p a b ha]
 
+/-- The `primePowerUnitLift` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def primePowerUnitLift
     (p a b : ℕ) [Fact p.Prime] (u : (ZMod (p ^ a))ˣ) :
     (ZMod (p ^ a * p ^ b))ˣ :=
@@ -975,6 +989,7 @@ theorem primePowerKernelPerturbEquiv_apply_val
     (primePowerKernelPerturbEquiv p a b ha z).1 =
       primePowerKernelPerturb p a b ha z := rfl
 
+/-- The `primePowerUnitFiberEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def primePowerUnitFiberEquiv
     (p a b : ℕ) [Fact p.Prime] (ha : 0 < a)
     (u : (ZMod (p ^ a))ˣ) :
@@ -1007,6 +1022,7 @@ noncomputable def primePowerUnitFiberEquiv
         rw [K.apply_symm_apply]
         simp }
 
+/-- The `primePowerUnitsSigmaEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def primePowerUnitsSigmaEquiv
     (p a b : ℕ) [Fact p.Prime] (ha : 0 < a) :
     ((_u : (ZMod (p ^ a))ˣ) × ZMod (p ^ b)) ≃
@@ -1326,6 +1342,7 @@ theorem primePowerOddStationaryResidue
         ZMod.cast_natCast hdiv, ZMod.cast_natCast hdiv]
       rw [cast_primePowerUnitLift_val, cast_primePowerUnitLift_inv_val]
 
+/-- The `oddPrimePowerStationaryFiber` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def oddPrimePowerStationaryFiber
     (p r A B : ℕ) [Fact p.Prime] :=
   {u : (ZMod (p ^ r))ˣ //
@@ -1337,6 +1354,7 @@ noncomputable def oddPrimePowerStationaryFiber
           (↑(L⁻¹) : ZMod (p ^ r * p ^ (r + 1)))
     (((C.cast : ZMod (p ^ (r + 1))).cast) : ZMod (p ^ r)) = 0}
 
+/-- The `oddPrimePowerStationaryFiberEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def oddPrimePowerStationaryFiberEquiv
     (p r A B : ℕ) [Fact p.Prime] :
     oddPrimePowerStationaryFiber p r A B ≃
@@ -1877,6 +1895,7 @@ theorem primePowerStationaryResidue_even
     ZMod.cast_natCast hdiv, ZMod.cast_natCast hdiv]
   rw [cast_primePowerUnitLift_val, cast_primePowerUnitLift_inv_val]
 
+/-- The `evenPrimePowerStationaryFiber` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def evenPrimePowerStationaryFiber
     (p r A B : ℕ) [Fact p.Prime] :=
   {u : (ZMod (p ^ r))ˣ //
@@ -1886,6 +1905,7 @@ noncomputable def evenPrimePowerStationaryFiber
           (↑((primePowerUnitLift p r r u)⁻¹) :
             ZMod (p ^ r * p ^ r))).cast : ZMod (p ^ r)) = 0}
 
+/-- The `evenPrimePowerStationaryFiberEquiv` definition used by the source-facing construction in `KloostermanPrimePower`. -/
 noncomputable def evenPrimePowerStationaryFiberEquiv
     (p r A B : ℕ) [Fact p.Prime] :
     evenPrimePowerStationaryFiber p r A B ≃

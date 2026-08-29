@@ -204,7 +204,7 @@ theorem dfiTranslateByRadius_eventuallyEq_zero_at_two_mul
       (𝓝 (((2 * R : ℕ) : ℝ))) (𝓝 (R : ℝ)) := by
     convert htend0 using 1
     push_cast
-    ring
+    ring_nf
   have hcomp := hpos.comp_tendsto htend
   filter_upwards [hcomp] with x hx
   simpa [dfiTranslateByRadius] using hx
@@ -959,7 +959,7 @@ theorem dfi_weight_mul_tsum_sub_zero_eq_finite_sym
           ∑' n : ℕ, f (-((q : ℝ) * v * (n + 1 : ℕ)))) := by
       rw [hdecomp]
       rw [hnegCast]
-      ring
+      ring_nf
     _ = w v * (∑ r ∈ Finset.Icc 1 (dfiDeltaRadius Q U),
           f ((q * r : ℕ) * v)) +
         w v * (∑ r ∈ Finset.Icc 1 (dfiDeltaRadius Q U),

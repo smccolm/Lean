@@ -15,15 +15,18 @@ has been truncated to a finite family of positive divisor pairs.  This is the
 form needed for the finite dyadic family in Hughes--Young equation (69).
 -/
 
+/-- The `hughesYoungIntegratedHighPairSet` definition used by the source-facing construction in `HughesYoungFiniteContourSet`. -/
 noncomputable def hughesYoungIntegratedHighPairSet
     (q : ℕ) (t H : ℝ) (S : Finset (ℕ × ℕ)) : ℂ :=
   ∑ p ∈ S, ∫ u in -H..H, hughesYoungRightPairTerm t (2 * q) u p
 
+/-- The `hughesYoungIntegratedSmallPairSet` definition used by the source-facing construction in `HughesYoungFiniteContourSet`. -/
 noncomputable def hughesYoungIntegratedSmallPairSet
     (T t H : ℝ) (S : Finset (ℕ × ℕ)) : ℂ :=
   ∑ p ∈ S, ∫ u in -H..H,
     hughesYoungRightPairTerm t (hughesYoungSmallContour T) u p
 
+/-- The `hughesYoungWholeSmallPairSet` definition used by the source-facing construction in `HughesYoungFiniteContourSet`. -/
 noncomputable def hughesYoungWholeSmallPairSet
     (T t : ℝ) (S : Finset (ℕ × ℕ)) : ℂ :=
   ∑ p ∈ S, ∫ u : ℝ,

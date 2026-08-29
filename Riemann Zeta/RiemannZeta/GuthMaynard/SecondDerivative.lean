@@ -161,6 +161,7 @@ theorem kusminLandau_good_fiber (f : Nat -> Real) (N : Nat) (k : Int)
     simp only [Finset.sum_empty, norm_zero]
     positivity
 
+/-- The `periodIndex` definition used by the source-facing construction in `SecondDerivative`. -/
 noncomputable def periodIndex (theta : Real) : Int :=
   Int.floor (theta / (2 * Real.pi))
 

@@ -40,6 +40,7 @@ theorem norm_divisorDirichletTerm_vertical_eq_reference_mul
   congr 1
   ring
 
+/-- The `hughesYoungHighPairProductTail` definition used by the source-facing construction in `HughesYoungHighTail`. -/
 noncomputable def hughesYoungHighPairProductTail
     (q : ℕ) (t u R : ℝ) : ℂ :=
   ∑' p : ℕ × ℕ,

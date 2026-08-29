@@ -11,6 +11,7 @@ open scoped Interval ComplexConjugate
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `trigPoly` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def trigPoly (s : Finset ℤ) (a : ℤ → ℂ) (x : ℝ) : ℂ :=
   ∑ n ∈ s, a n * Complex.exp (Complex.I * (n : ℂ) * (x : ℂ))
 
@@ -220,6 +221,7 @@ lemma integral_sawtooth_cexp_all (k : ℤ) :
     ring_nf
   · simpa only [hk, if_false] using integral_sawtooth_cexp k hk
 
+/-- The `hilbertForm` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def hilbertForm (s : Finset ℤ) (a b : ℤ → ℂ) : ℂ :=
   ∑ m ∈ s, ∑ n ∈ s,
     if n = m then 0 else conj (a n) * b m / ((m - n : ℤ) : ℂ)
@@ -493,17 +495,20 @@ lemma norm_complex_log_kernel_error_le_one {n m : ℕ} (hn : 0 < n) (hm : 0 < m)
   rw [Complex.norm_real, Real.norm_eq_abs]
   norm_cast at hreal ⊢
 
+/-- The `logHilbertQuad` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def logHilbertQuad (N : ℕ) (a : ℕ → ℂ) : ℂ :=
   ∑ m ∈ Finset.Ioc N (2 * N), ∑ n ∈ Finset.Ioc N (2 * N),
     if n = m then 0 else
       conj (a n) * a m / (((Real.log m - Real.log n : ℝ) : ℂ))
 
+/-- The `natMainQuad` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def natMainQuad (N : ℕ) (a : ℕ → ℂ) : ℂ :=
   ∑ m ∈ Finset.Ioc N (2 * N), ∑ n ∈ Finset.Ioc N (2 * N),
     if n = m then 0 else
       conj (a n) * a m * (n : ℂ) /
         (((m : ℤ) - (n : ℤ) : ℤ) : ℂ)
 
+/-- The `logKernelErrorQuad` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def logKernelErrorQuad (N : ℕ) (a : ℕ → ℂ) : ℂ :=
   ∑ m ∈ Finset.Ioc N (2 * N), ∑ n ∈ Finset.Ioc N (2 * N),
     if n = m then 0 else conj (a n) * a m *
@@ -560,6 +565,7 @@ lemma logKernelErrorQuad_norm_le (N : ℕ) (a : ℕ → ℂ) (hN : 0 < N) :
         omega
       rw [hcard]
 
+/-- The `natScaledCoeff` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def natScaledCoeff (N : ℕ) (a : ℕ → ℂ) (n : ℕ) : ℂ :=
   (n : ℂ) / (N : ℂ) * a n
 
@@ -647,10 +653,12 @@ theorem logHilbertQuad_norm_le (N : ℕ) (a : ℕ → ℂ) (hN : 0 < N) :
     _ = (5 * Real.pi + 1) * (N : ℝ) *
         ∑ n ∈ Finset.Ioc N (2 * N), ‖a n‖ ^ 2 := by ring
 
+/-- The `dirichletTime` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def dirichletTime (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
   ∑ n ∈ Finset.Ioc N (2 * N),
     a n * Complex.exp (-(Complex.I * (t : ℂ) * (Real.log n : ℂ)))
 
+/-- The `endpointTwist` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def endpointTwist (T : ℝ) (a : ℕ → ℂ) (n : ℕ) : ℂ :=
   a n * Complex.exp (-(Complex.I * (T : ℂ) * (Real.log n : ℂ)))
 
@@ -1057,11 +1065,13 @@ lemma sum_local_intervalIntegrals_le (T : ℝ) (W : Finset ℝ) (q : ℝ → ℝ
     _ = ∫ x : ℝ in 0..T + 1, q x := by
       rw [intervalIntegral.integral_of_le (by linarith)]
 
+/-- The `centeredDirichletTime` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def centeredDirichletTime (N : ℕ) (a : ℕ → ℂ) (t : ℝ) : ℂ :=
   ∑ n ∈ Finset.Ioc N (2 * N),
     a n * Complex.exp
       (Complex.I * (t : ℂ) * ((Real.log N - Real.log n : ℝ) : ℂ))
 
+/-- The `centeredDerivCoeff` definition used by the source-facing construction in `MeanValueProof`. -/
 noncomputable def centeredDerivCoeff (N : ℕ) (a : ℕ → ℂ) (n : ℕ) : ℂ :=
   a n * (Complex.I * ((Real.log N - Real.log n : ℝ) : ℂ))
 

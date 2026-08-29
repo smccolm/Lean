@@ -17,6 +17,7 @@ of operations in the Hughes--Young argument: absolute opening first, finite
 truncation second, and contour displacement only after that truncation.
 -/
 
+/-- The `hughesYoungActiveIntegratedHigh` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveIntegratedHigh
     (q a b R K : ℕ) (t H : ℝ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K,
@@ -26,6 +27,7 @@ noncomputable def hughesYoungActiveIntegratedHigh
           (hughesYoungFullDyadicCutoff ij.2 ((b * n : ℕ) : ℝ) : ℂ) *
           ∫ u in -H..H, hughesYoungRightPairTerm t (2 * q) u (m, n)
 
+/-- The `hughesYoungActiveIntegratedSmall` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveIntegratedSmall
     (T : ℝ) (a b R K : ℕ) (t H : ℝ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K,
@@ -36,6 +38,7 @@ noncomputable def hughesYoungActiveIntegratedSmall
           ∫ u in -H..H,
             hughesYoungRightPairTerm t (hughesYoungSmallContour T) u (m, n)
 
+/-- The `hughesYoungActiveWholeSmall` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveWholeSmall
     (T : ℝ) (a b R K : ℕ) (t : ℝ) : ℂ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K,
@@ -107,6 +110,7 @@ theorem hughesYoungActiveIntegratedHigh_eq_intervalIntegral
             hq a b ij.1 ij.2 t (m, n)))
     exact hcont.intervalIntegrable (μ := volume) (-H) H
 
+/-- The `hughesYoungActiveIntegratedRemainder` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveIntegratedRemainder
     (q a b R K : ℕ) (t H : ℝ) : ℂ :=
   ∑' p : ℕ × ℕ,
@@ -367,6 +371,7 @@ theorem tendsto_hughesYoungActiveIntegratedHigh_to_wholeSmall
     ring
   · simp
 
+/-- The `hughesYoungActiveRemainderContinuousMap` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveRemainderContinuousMap
     (q a b R K : ℕ) (t : ℝ) (hc : (1 / 2 : ℝ) < 2 * q)
     (p : ℕ × ℕ) : C(ℝ, ℂ) :=
@@ -531,6 +536,7 @@ theorem integrable_hughesYoungActiveHighPairRemainder
       unfold C K₀ g
       ring
 
+/-- The `hughesYoungActiveWholeHighRemainder` definition used by the source-facing construction in `HughesYoungActiveTransfer`. -/
 noncomputable def hughesYoungActiveWholeHighRemainder
     (q a b R K : ℕ) (t : ℝ) : ℂ :=
   ∫ u : ℝ, hughesYoungActiveHighPairRemainder q a b R K t u

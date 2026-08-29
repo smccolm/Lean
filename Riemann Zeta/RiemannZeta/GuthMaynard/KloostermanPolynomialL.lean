@@ -7,6 +7,7 @@ open scoped BigOperators
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `monicPolynomialOfCoeffs` definition used by the source-facing construction in `KloostermanPolynomialL`. -/
 noncomputable def monicPolynomialOfCoeffs
     (p d : ℕ) [Fact p.Prime] (v : Fin d → ZMod p) : (ZMod p)[X] :=
   X ^ d + ofFn d v
@@ -30,6 +31,7 @@ theorem coeff_monicPolynomialOfCoeffs_self
     (monicPolynomialOfCoeffs p d v).coeff d = 1 := by
   simp [monicPolynomialOfCoeffs, ofFn_coeff_eq_zero_of_ge]
 
+/-- The `harcosEtaPolynomial` definition used by the source-facing construction in `KloostermanPolynomialL`. -/
 noncomputable def harcosEtaPolynomial
     (p : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (k : (ZMod p)[X]) : ℂ :=
@@ -64,6 +66,7 @@ theorem harcosEta_monic_degree_one
   rw [hl, coeff_monicPolynomialOfCoeffs_self]
   simp [div_eq_mul_inv]
 
+/-- The `harcosEtaDegreeSum` definition used by the source-facing construction in `KloostermanPolynomialL`. -/
 noncomputable def harcosEtaDegreeSum
     (p d : ℕ) [NeZero p] [Fact p.Prime] (a b : ZMod p) : ℂ :=
   ∑ v : Fin d → ZMod p,
@@ -224,6 +227,7 @@ theorem harcosEta_monic_degree_ge_three
     coeff_monicPolynomialOfCoeffs_of_lt p d 1 v (by omega)]
   simp
 
+/-- The `addOneAt` definition used by the source-facing construction in `KloostermanPolynomialL`. -/
 noncomputable def addOneAt (p d : ℕ) [Fact p.Prime] (j : Fin d) :
     (Fin d → ZMod p) ≃ (Fin d → ZMod p) where
   toFun v i := if i = j then v i + 1 else v i
@@ -335,6 +339,7 @@ theorem harcosEtaDegreeSum_eq
   · rw [harcosEtaDegreeSum_ge_three p (d + 3) a b ha (by omega)]
     simp
 
+/-- The `harcosLPolynomial` definition used by the source-facing construction in `KloostermanPolynomialL`. -/
 noncomputable def harcosLPolynomial
     (p : ℕ) [NeZero p] (a b : ZMod p) : ℂ[X] :=
   1 + C (kloostermanSumZMod p a b) * X + C (p : ℂ) * X ^ 2

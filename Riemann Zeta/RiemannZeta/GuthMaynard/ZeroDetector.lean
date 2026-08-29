@@ -46,9 +46,13 @@ lemma detectorDivisors_card_le_cutoff (n : ℕ) (T : ℝ) :
 
 /- Actual truncated Möbius divisor sum
    `∑_{d ∣ n, d ≤ 2 T^(1/100)} μ(d)`. -/
+/-- The `mobius_sum` definition used by the source-facing construction in `ZeroDetector`. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def mobius_sum (n : ℕ) (T : ℝ) : ℂ :=
   ∑ d ∈ detectorDivisors n T, (ArithmeticFunction.moebius d : ℂ)
 
+/-- The `detectorCoeff` definition used by the source-facing construction in `ZeroDetector`. -/
 noncomputable def detectorCoeff (n : ℕ) (T : ℝ) : ℂ :=
   (mobius_sum n T) * Real.exp (-(n : ℝ) / (T ^ (1/2 : ℝ)))
 

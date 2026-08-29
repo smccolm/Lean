@@ -1,8 +1,8 @@
 # Analytic Research Agenda: Riemann Zeta Guth-Maynard Proof
 
-The root-imported project graph has a warning-free compiling algebraic, combinatorial, asymptotic, classical-density, Type-II, and Guth–Maynard large-values layer. Beta removal, local zero multiplicity, Montgomery mean value, the finite Möbius mollifier algebra, the pole-free Ingham detector, the detector-to-Jensen divisor bridge, coefficient growth, DFI/Hughes–Young, and `guthMaynardLargeValues_native : GuthMaynardLargeValues` are proved. A fresh 28 August stress pass independently checked direct final-module elaboration, the focused final/energy/umbrella modules, the 8853-job root graph, all 7602 dependency audits, the named GM gate, and every integrity scan without a Lean warning. No direct project axiom remains. The unproved mathematical work is confined to the named #15, #18, and #19 density outputs; #19 final verification also owns the current 49-file runner-elaboration coverage gap.
+The root-imported project graph has a warning-free compiling algebraic, combinatorial, asymptotic, classical-density, Type-II, and Guth–Maynard large-values layer. Beta removal, local zero multiplicity, Montgomery mean value, coefficient growth, DFI/Hughes–Young consumers, native Ingham and Huxley, the exact publication-facing Guth–Maynard Theorems 1.1 and 1.2, and the combined `30/13` theorem are proved. The canonical verifier classifies all 303 project Lean modules, checks 7,636 registered declarations and all 14,290 discovered nonprivate theorems, and runs all default linters without a project diagnostic. No direct project axiom remains.
 
-The remaining assumptions are analytic inputs requiring advanced integration with Mathlib's measure theory, complex analysis, and Fourier-analysis libraries. The arithmetic coefficient inputs formerly assigned to #17 are complete.
+There is no remaining internal #15–#19 analytic obligation. The active work is the GM foundation release gate and external #20 review/digestion. No PostGM work is authorized by this agenda.
 
 ## Remaining Analytic Obligations
 
@@ -24,7 +24,7 @@ The remaining assumptions are analytic inputs requiring advanced integration wit
 - `ClassicalDensity.lean` now proves the exact finite Möbius convolution and cancellation, global analyticity of a pole-free Ingham detector, zeta-zero multiplicity inheritance, a general detector/Jensen divisor inequality, full unit-bin control down to `σ = 1/2`, dyadic `O(T log T)`, its symmetric exponent-one consequence, Ingham at `σ = 1/2,1`, and Huxley at `σ = 1`.
 - The unweighted multiplicity-aware rectangle argument principle is complete: the Apache-2.0 PNT+ rectangle/residue development has been ported to Lean 4.30, and `ClassicalArgumentPrinciple.lean` specializes it to the pole-free Ingham detector with finite-order and boundary-nonvanishing hypotheses explicit. The same module proves `‖ζ(s)‖ ≤ 20 |Im(s)|` on the classical strip at height at least one.
 - The detector-strength sharp truncation is complete: the pinned PNT+ Poisson/Euler–Maclaurin stack is vendored and audited, and `norm_zeta_zero_sharp_cutoff_sum_le` proves a length-`O(T)` partial-zeta bound `≤ 149 a⁻Re(ρ)` for positive-slab zeros.
-- Shitlist #15 remains open. The actual arbitrary-`X` Type-II MHH application, actual Type-I direct/powered/Weyl consumer, and multiplicity-aware branch-to-slab theorem are kernel-checked, including the `N^σ` normalization and `N^τ=T` bridge. The remaining work is the concrete symmetric Ingham/Huxley endpoint conversion.
+- Shitlist #15 is complete. The arbitrary-`X` Type-II MHH application, Type-I direct/powered/Weyl consumer, multiplicity-aware branch-to-slab theorem, and concrete symmetric Ingham/Huxley endpoint conversion are kernel-checked.
 - The #18 Gamma and convergence package is complete. `GammaVerticalDecay.lean` proves arbitrary polynomial decay on the full detector strip by recurrence, plus whole-line and linearly weighted integrability. `TypeIIContour.lean` proves a global critical-line zeta bound from the Abel formula and `integrable_typeIIContourIntegrand`, so the detector integral is no longer justified only by totalization.
 - The coverage contract is repaired to `TypeIContourTypeIICoverOnProp (7/10)` and the finite bridge consumes it. `TypeIICoverage.lean` now proves `typeIContourTypeIICoverOn_native`: the infinite smoothed detector, absolute convergence, Mathlib Mellin inversion, analytic removal of the apparent Gamma singularity at `s=0`, rectangle shifting, the residue at `s=1-ρ`, explicit tails, exact Möbius cancellation, and the dyadic detector dichotomy are complete.
 - `ScaledSeparated.lean` proves arbitrary-positive-width weighted extraction while retaining all fiber weights, plus bounded overlap when `G > 2H`. `TypeIIFourthMomentReduction.lean` completes the `G=(log T)³` specialization, Gamma truncation and tail absorption, Hölder, local analytic multiplicity, translated-window overlap, and epsilon-loss assembly. `typeIIFourthMomentReduction_native` discharges `TypeIIFourthMomentReductionProp` without an added mathematical premise.
@@ -34,15 +34,13 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 ## Next Steps
 
-The current closeout queue, from least to greatest estimated difficulty, is:
-
-1. **#15 symmetric endpoint conversion:** turn the completed positive-slab Ingham/Huxley specializations into the exact multiplicity-weighted full propositions.
-2. **#18/#19 concrete density consumers:** apply the now-native Guth–Maynard theorem and native Huxley endpoint to prove Goal C and the combined density theorem.
-3. **#19 final verification:** restore root/runner elaboration coverage for the 47 top-level probes and two retained subordinate modules, then close the final output gate.
+1. Finish the clean-candidate release-mode run and exact foundation tag.
+2. Preserve the commit-SHA-bound CI log/manifest artifact after the owner pushes.
+3. Seek independent exposition and source-to-Lean semantic review. Any preprint, peer-review, or canonicalization step requires separate human authorization and external action.
 
 Completed supporting layer: **#19 exact and quantitative smooth reflection.** `LargeValuesReflection.lean` proves signed finite formulas, uniform two-parameter decay, the pointwise `T₀⁻¹/²` reflection-integral bound, far-frequency decay, and cancellation-preserving aggregate estimates. `QuantitativeSmoothReflection.lean` proves uniform aggregate `T₀⁻¹/²` extraction, the complete two-sided `T⁻¹⁰⁰` omitted-mode remainder, and the scaled cubic-`S₂` consumer.
 
-The full #19 energy-moment node, `S₂`, refined `S₃`, Heath–Brown, Proposition 9.1, and native large values are complete. The final density theorems consume the still-open native Huxley endpoint and remain the mathematical closeouts. DFI and the Hughes–Young twisted moment likewise no longer belong to the open-source-theorem queue.
+The full #19 energy-moment node, `S₂`, refined `S₃`, Heath–Brown, Proposition 9.1, native large values, native Huxley endpoint, and final density theorems are complete. DFI and the Hughes–Young twisted-moment consumer likewise no longer belong to an open source-theorem queue.
 
 ## Primary Research Sources and Reusable Formal APIs
 
@@ -59,4 +57,4 @@ The full #19 energy-moment node, `S₂`, refined `S₃`, Heath–Brown, Proposit
 - [Duke–Friedlander–Iwaniec, *A quadratic divisor problem*](https://www.math.ucla.edu/~wdduke/preprints/quadraticdiv.pdf): the authoritative specification for the completed DFI layer. The formalization follows equations (2) and (9)–(30) through the smooth delta/Euler–Maclaurin reduction, divisor Voronoi, Kloosterman and Bessel/Mellin analysis, dyadic partitioning, and the optimized Theorem 1 error.
 - [Carleson van der Corput](https://github.com/fpvandoorn/carleson/blob/master/Carleson/Classical/VanDerCorput.lean): potentially reusable nonstationary-tail estimates, but no replacement for the #15 reflection or #19 smooth functional equation.
 
-No screened public Lean repository supplied the completed DFI/Hughes–Young or Guth–Maynard Sections 3–12 chain; those proofs are local and kernel-checked. The remaining #15, #18 Goal C, and #19 density/verification outputs are determined only by the pinned project build and transitive dependency audit.
+No screened public Lean repository supplied the completed DFI/Hughes–Young or Guth–Maynard Sections 3–12 chain; those proofs are local and kernel-checked. The exact source editions, conventions, and ANTEDB snapshot are frozen in `verification/SOURCE_FREEZE.md`; external semantic review remains open.

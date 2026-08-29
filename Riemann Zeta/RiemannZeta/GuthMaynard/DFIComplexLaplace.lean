@@ -35,6 +35,7 @@ theorem integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi
     simp only [neg_re, mul_re, ofReal_re, ofReal_im, mul_zero, sub_zero]
     exact le_rfl
 
+/-- The `dfiComplexLaplace` definition used by the source-facing construction in `DFIComplexLaplace`. -/
 noncomputable def dfiComplexLaplace (s a : ℂ) : ℂ :=
   ∫ x : ℝ in Set.Ioi 0, (x : ℂ) ^ (s - 1) * cexp (-(a * x))
 

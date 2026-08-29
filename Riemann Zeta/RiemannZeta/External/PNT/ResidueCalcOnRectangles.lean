@@ -19,15 +19,19 @@ open scoped Interval
 variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℂ E] {f g : ℂ → E} {z w p c A : ℂ}
   {x x₁ x₂ y y₁ y₂ σ : ℝ}
 
+/-- The `HIntegral` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def HIntegral (f : ℂ → E) (x₁ x₂ y : ℝ) : E :=
     ∫ x in x₁..x₂, f (x + y * I)
 
+/-- The `VIntegral` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def VIntegral (f : ℂ → E) (x y₁ y₂ : ℝ) : E :=
     I • ∫ y in y₁..y₂, f (x + y * I)
 
+/-- The `HIntegral'` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def HIntegral' (f : ℂ → E) (x₁ x₂ y : ℝ) : E :=
     (1 / (2 * π * I)) • HIntegral f x₁ x₂ y
 
+/-- The `VIntegral'` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def VIntegral' (f : ℂ → E) (x y₁ y₂ : ℝ) : E :=
     (1 / (2 * π * I)) • VIntegral f x y₁ y₂
 
@@ -50,20 +54,24 @@ noncomputable abbrev RectangleIntegral' (f : ℂ → E) (z w : ℂ) : E :=
     (1 / (2 * π * I)) • RectangleIntegral f z w
 
 /- An UpperUIntegral is the integral of a function over a |\_| shape. -/
+/-- The `UpperUIntegral` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def UpperUIntegral (f : ℂ → E) (σ σ' T : ℝ) : E :=
     HIntegral f σ σ' T +
     I • (∫ y : ℝ in Ici T, f (σ' + y * I)) -
     I • (∫ y : ℝ in Ici T, f (σ + y * I))
 
 /- A LowerUIntegral is the integral of a function over a |-| shape. -/
+/-- The `LowerUIntegral` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def LowerUIntegral (f : ℂ → E) (σ σ' T : ℝ) : E :=
     HIntegral f σ σ' (-T) -
     I • (∫ y : ℝ in Iic (-T), f (σ' + y * I)) +
     I • (∫ y : ℝ in Iic (-T), f (σ + y * I))
 
+/-- The `VerticalIntegral` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable def VerticalIntegral (f : ℂ → E) (σ : ℝ) : E :=
     I • ∫ t : ℝ, f (σ + t * I)
 
+/-- The `VerticalIntegral'` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 noncomputable abbrev VerticalIntegral' (f : ℂ → E) (σ : ℝ) : E :=
     (1 / (2 * π * I)) • VerticalIntegral f σ
 
@@ -139,6 +147,7 @@ theorem rectangleIntegral_symm_re (f : ℂ → E) (z w : ℂ) :
   rw [HIntegral_symm (y := z.im), HIntegral_symm (y := w.im)]
   abel
 
+/-- The `RectangleBorderIntegrable` definition used by the source-facing construction in `ResidueCalcOnRectangles`. -/
 def RectangleBorderIntegrable (f : ℂ → E) (z w : ℂ) : Prop :=
     IntervalIntegrable (fun x => f (x + z.im * I)) volume z.re w.re ∧
     IntervalIntegrable (fun x => f (x + w.im * I)) volume z.re w.re ∧

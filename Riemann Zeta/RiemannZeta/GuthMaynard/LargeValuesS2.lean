@@ -2306,7 +2306,7 @@ theorem gmRetainedSignedReflection_near_bound
         (2 * K₀) * (M : ℝ) ^ 2 * (N : ℝ) ^ (-4 : ℝ) := by
       have hPieces := add_le_add
         (add_le_add hCorePos hTailPos) (add_le_add hCoreNeg hTailNeg)
-      simpa only [fpos, fneg, Nat.cast_ofNat] using hPieces.trans_eq (by ring)
+      simpa only [fpos, fneg, Nat.cast_ofNat] using hPieces.trans_eq (by ring_nf)
     _ ≤ C * (M : ℝ) / (N : ℝ) +
         (2 * K₀) * (M : ℝ) ^ 2 * (N : ℝ) ^ (-4 : ℝ) := by
       have hCoeff : 2 * (L₁ / (2 * Real.pi)) ≤ C := by
@@ -3170,6 +3170,7 @@ theorem gmS2PhysicalBinMain_le_paperShape
       nlinarith [mul_nonneg (mul_nonneg hG0 (pow_nonneg hG0 7)) hP0,
         mul_nonneg hJ0 (mul_nonneg (pow_nonneg hG0 8) hP0)]
 
+/-- The `gmS2ScheduledMain` definition used by the source-facing construction in `LargeValuesS2`. -/
 noncomputable def gmS2ScheduledMain
     (A C : ℝ) (k : ℕ) (η : ℝ)
     (N : ℕ) (T : ℝ) (W : Finset ℝ) (H j : ℕ) : ℝ :=
@@ -3178,6 +3179,7 @@ noncomputable def gmS2ScheduledMain
     else gmS2PhysicalBinMain A C k η T W N H j
   else 0
 
+/-- The `gmS2ScheduledError` definition used by the source-facing construction in `LargeValuesS2`. -/
 noncomputable def gmS2ScheduledError
     (K L : ℝ) (q : ℕ)
     (N : ℕ) (W : Finset ℝ) (H j : ℕ) : ℝ :=

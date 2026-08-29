@@ -271,6 +271,7 @@ theorem dfiEquation27ArithmeticCoefficient_div_vertical_cpow_eq_equation96Positi
     Complex.cpow_ne_zero_iff.mpr (Or.inl (by exact_mod_cast y.2.2.ne'))
   field_simp [hq, hrpow]
 
+/-- The `hughesYoungEquation84CompletePositiveMomentAt` definition used by the source-facing construction in `HughesYoungEquation96DFIBridge`. -/
 noncomputable def hughesYoungEquation84CompletePositiveMomentAt
     (h k : ℕ) (i j : Bool) (u : ℝ) : ℂ :=
   ∑' y : ℕ+ × ℕ+,

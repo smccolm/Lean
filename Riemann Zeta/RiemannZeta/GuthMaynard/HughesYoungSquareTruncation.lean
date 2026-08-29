@@ -16,11 +16,13 @@ finite four-index expansion.  The complement of the square is contained in
 the already controlled product tail.
 -/
 
+/-- The `hughesYoungHighPairSquare` definition used by the source-facing construction in `HughesYoungSquareTruncation`. -/
 noncomputable def hughesYoungHighPairSquare
     (q : ℕ) (t u : ℝ) (M : ℕ) : ℂ :=
   ∑ p ∈ Finset.Icc (1, 1) (M, M),
     hughesYoungRightPairTerm t (2 * q) u p
 
+/-- The `hughesYoungHighPairSquareTail` definition used by the source-facing construction in `HughesYoungSquareTruncation`. -/
 noncomputable def hughesYoungHighPairSquareTail
     (q : ℕ) (t u : ℝ) (M : ℕ) : ℂ :=
   ∑' p : ℕ × ℕ,

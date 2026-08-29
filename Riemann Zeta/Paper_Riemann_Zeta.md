@@ -3,7 +3,7 @@ title: "A Lean 4 Formalization of the Guth--Maynard Large-Values and Zero-Densit
 author: "S. McColm"
 date: "August 3, 2026"
 abstract: |
-  We describe a Lean 4 project, pinned to Lean `v4.30.0` and Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, whose project-integrated declarations prove formal counterparts of the Guth--Maynard large-values estimate, the resulting multiplicity-weighted zero-density estimate, the classical Ingham and Huxley bounds used in the transfer, and the combined exponent `30(1-σ)/13`. The development includes a finite Type-I/Type-II detector, a contour-to-fourth-moment reduction, a smooth zeta-square approximate functional equation, a localized signed dyadic Duke--Friedlander--Iwaniec estimate, a mollifier-specific twisted-fourth-moment upper bound, and the Guth--Maynard matrix/Poisson/energy chain. Lean's kernel and the repository audit accept the named declarations with only permitted Lean/Mathlib logical axioms. This establishes formal derivability of the encoded statements, not independent semantic review, peer-reviewed publication, community acceptance, or canonicalization. A separate adversarial audit records the unfolded statements, source correspondences, convention bridges, and remaining external-review obligations.
+  We describe a Lean 4 project, pinned to Lean `v4.30.0` and Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, whose project-integrated declarations prove exact publication-facing contracts for the Guth--Maynard large-values estimate, the full-range multiplicity-weighted zero-density estimate, the classical Ingham and Huxley bounds, and the combined exponent `30(1-σ)/13`. The development includes a finite Type-I/Type-II detector, a contour-to-fourth-moment reduction, a smooth zeta-square approximate functional equation, a localized signed dyadic Duke--Friedlander--Iwaniec estimate, a mollifier-specific twisted-fourth-moment upper bound, and the Guth--Maynard matrix/Poisson/energy chain. Lean's kernel and the repository audit accept the named declarations with only permitted Lean/Mathlib logical axioms. This establishes formal derivability of the encoded statements, not independent semantic review, peer-reviewed publication, community acceptance, or canonicalization. A separate adversarial audit records the unfolded statements, frozen sources, convention bridges, and remaining external-review obligations.
 ---
 
 # 1. Introduction & Contextualization
@@ -139,6 +139,8 @@ $$\zeta(1 + i t) \neq 0$$
 
 The primary objective of this project is the zero-density bound of Guth and Maynard (2026). The conclusion-equivalent transfer axiom has been deleted. Its replacement `conditionalZeroDensityTransfer` derives separated extraction, powered-coefficient control, the complete central Type-I estimate, the residual Type-II estimate, the positive-slab partition, the F-01 dyadic-to-global reduction, and Huxley's high-$\sigma$ branch from individually named analytic/arithmetic inputs. All ten inputs are discharged by native theorems. `guthMaynardZeroDensity_of_largeValues_native` retains only the strictly upstream `GuthMaynardLargeValues` premise, while `guthMaynardZeroDensity_native` supplies `guthMaynardLargeValues_native`.
 
+`PublicationContract.lean` separates the paper-facing statements from those convenient internal interfaces. `PublishedGuthMaynardLargeValues` uses the displayed closed support $N\le n\le2N$, positive phase, one-separated ordinates in $[0,T]$, and the coefficient bound only on the actual support. Its native proof restricts coefficients and proves the endpoint bridge into the internal $(N,2N]$ theorem. `PublishedGuthMaynardZeroDensity` has the literal range $1/2\le\sigma\le1$; its native proof uses Ingham below $7/10$, the native Guth--Maynard transfer above $7/10$, and an explicit exponent comparison. Thus the internal high-range `GuthMaynardZeroDensity` is not presented as the whole of published Theorem 1.2.
+
 The detector layer implements the exact truncated Möbius divisor sum. In addition to the cutoff support and magnitude results, `detectorDivisors_subset_divisors`, `norm_mobius_sum_le_divisors_card`, and `norm_detectorCoeff_le_divisors_card` bound the construction by the full divisor count independently of `T`. `uniformDetectorCoeffBound_of_divisorCount` then proves the source-uniform `UniformDetectorCoeffBoundProp` from the explicit classical epsilon-power divisor estimate `DivisorCountBoundProp`, which is now proved by `divisorCountBound_native`.
 
 For polynomial powers, `FactorizationCountBoundProp` places its constant before the target integer `m`, and `PowCoeffBoundProp` places its constant before `N`, `m`, and `T`. The kernel-checked theorem `powCoeff_bound_of_uniform_detector_and_factorization` combines a `T`-uniform detector input with the uniform factorization-count input. `factorizationCountBound_native` bounds ordered factorizations by a power of the divisor count and invokes `divisorCountBound_native` at a divided epsilon; `powCoeffBound_native` then specializes the powered-coefficient result with no arithmetic premise. Independently of those estimates, `polynomial_power_identity` expands `powPoly` exactly as the finite sum of `powCoeff N k m T · m^{-s}` for `N^k ≤ m ≤ (2N)^k`. Its proof expands the finite power over `Fin k` tuples, proves the product support, uses natural-cast complex-power multiplicativity, and regroups by product fibers; it includes `k = 0`.
@@ -185,7 +187,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`RiemannZeta/Audit.lean` explicitly lists all 7630 exported source-level theorems in the root-imported production graph and computes their transitive axioms with `Lean.collectAxioms`. The explicit list matches the discovered theorem set, and every audited declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. The named-output gate passes all eleven #15/#18/#19 results, including the five final density theorems. No direct project axiom remains.
+`RiemannZeta/Audit.lean` explicitly registers 7,636 public declarations and separately discovers all 14,290 nonprivate project theorems, including generated declarations, then computes their transitive axioms with `Lean.collectAxioms`. Every audited declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. Exact-type gates inhabit the five publication contracts, so retaining a theorem name with a weaker type cannot satisfy the release audit. `RiemannZeta/Lint.lean` runs all 16 default linters with zero findings. No direct project axiom remains.
 
 The default `RiemannZeta` root includes the complete FR and endpoint chain, both retained Hughes–Young subordinate modules, quantitative reflection, native large values, and `NativeZeroDensity`. The runner also builds selected production modules explicitly and elaborates every retained top-level Lean file. The dependency and zero-warning claims therefore cover the complete retained repository.
 
@@ -256,6 +258,7 @@ The default `RiemannZeta` root includes the complete FR and endpoint chain, both
 | Native Ingham/Huxley | `ingham_zero_density_native`, `huxley_zero_density_native` | `GuthMaynard/NativeZeroDensity.lean` | Positive-slab endpoints, dyadic-to-symmetric transfer, exact boundary cases |
 | Zero-Density Deduction | `guthMaynardZeroDensity_of_largeValues_native`, `guthMaynardZeroDensity_native` | `GuthMaynard/NativeZeroDensity.lean` | Ten native transfer inputs and native large values |
 | Combined Exponent | `combined_zero_density_native` | `GuthMaynard/NativeZeroDensity.lean` | Native Ingham/Guth–Maynard transfer |
+| Frozen publication contracts | `guthMaynardLargeValues_published_native`, `guthMaynardZeroDensity_published_native`, `inghamZeroDensity_published_native`, `huxleyZeroDensity_published_native`, `combinedZeroDensity_published_native` | `PublicationContract.lean` | Exact source-facing types, endpoint/support bridge, low/high range assembly |
 
 ---
 
@@ -265,11 +268,11 @@ The formalization relies on the following exact environment:
 - **Lean Toolchain**: `leanprover/lean4:v4.30.0`
 - **Mathlib Revision**: `c5ea00351c28e24afc9f0f84379aa41082b1188f`
 - **Package Version**: `0.1.0`
-- **Principal Verification Command**: `run_lake_build.bat`
-- **Noninteractive Verification Command**: `run_lake_build.bat --no-pause`
-- **Principal Runner Coverage**: four warning-failing stages covering the default production graph, explicit production-module redundancy, every retained top-level Lean file, and the transitive axiom/output audit
-- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (7630/7630 dependency checks and all eleven research-output gates pass)
-- **Recorded Verification Evidence**: `logs/overall_proof_20260828_231911.log` (all stages, both retained regression-example elaborations, integrity scans, and output gates pass with zero Lean warnings; exit code `0`). A reader should rerun the command for the current checkout.
+- **Canonical Verification Command**: `pwsh -NoProfile -File scripts/verify_release.ps1 -Mode release` from a clean candidate checkout
+- **Windows Convenience Command**: `run_lake_build.bat --no-pause` (development mode; invokes the same verifier core)
+- **Verifier Coverage**: mechanical classification of all 303 project Lean modules; proof-integrity scans; root build; exact publication-contract build/type gates; both retained regressions; exhaustive transitive axiom/output audit; and all 16 default linters
+- **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (7,636 registered declarations and all 14,290 discovered nonprivate theorems)
+- **Release Evidence**: a clean release run emits `logs/foundation_freeze_*.log` and a matching JSON manifest bound to the candidate SHA, verifier hash, contract version, toolchain, and dependencies. CI invokes the same command and uploads both as a SHA-named artifact. An ignored local log is not publication evidence.
 
 ---
 
@@ -292,10 +295,11 @@ We have constructed a Lean 4 library whose project-integrated declarations encod
 2. David Loeffler and Michael Stoll, *"Formalizing zeta and L-functions in Lean,"* **Annals of Formalized Mathematics**, vol. 1, 2025. DOI: 10.46298/afm.15328. arXiv:2503.00959.
 3. The Lean Community, *"Mathlib 4: The Lean 4 Mathematical Library,"* 2026. Pinned commit `c5ea00351c28`. https://leanprover-community.github.io/mathlib4_docs/
 4. A. E. Ingham, *"On the Estimation of N(σ, T),"* **The Quarterly Journal of Mathematics**, os-11(1), pp. 201-202, 1940. DOI: 10.1093/qmath/os-11.1.201.
-5. James Maynard and Kyle Pratt, *"Half-isolated zeros and zero-density estimates,"* arXiv:2206.11729, 2022. https://arxiv.org/abs/2206.11729
+5. James Maynard and Kyle Pratt, *"Half-isolated zeros and zero-density estimates,"* **International Mathematics Research Notices**, 2024(19), pp. 12978-13014, 2024. DOI: 10.1093/imrn/rnae191; arXiv:2206.11729.
 6. C. P. Hughes and Matthew P. Young, *"The twisted fourth moment of the Riemann zeta function,"* **Journal für die reine und angewandte Mathematik**, vol. 641, pp. 203-236, 2010. DOI: 10.1515/CRELLE.2010.034; arXiv:0709.2345.
 7. W. Duke, J. B. Friedlander, and H. Iwaniec, *"A quadratic divisor problem,"* **Inventiones Mathematicae**, vol. 115, pp. 209-217, 1994. DOI: 10.1007/BF01231758.
-8. D. R. Heath-Brown, *"The fourth power moment of the Riemann zeta function,"* **Proceedings of the London Mathematical Society** (3), vol. 38, pp. 385-422, 1979.
-9. Terence Tao, *"Mathematics in the age of AI,"* arXiv:2608.16753, 2026.
-10. Terence Tao, *"What is good mathematics?"*, arXiv:math/0702396, 2007.
-11. *Leiden Declaration on AI and Mathematics*, 2026. https://leidendeclaration.ai/ ; DOI: 10.5281/zenodo.20302944.
+8. D. R. Heath-Brown, *"A large values estimate for Dirichlet polynomials,"* **Journal of the London Mathematical Society** (2), vol. 20, no. 1, pp. 8-18, 1979. DOI: 10.1112/jlms/s2-20.1.8.
+9. ANTEDB/Expdb, pinned source snapshot `2b1aea3de263996c4da3042c115126bff601c618`, using labels `thm:ingham_zero_density2`, `huxley-bound`, `guth-maynard-density`, `reflect`, `hb-double`, `guth-maynard-lvt`, and `huxley-lv`. https://github.com/teorth/expdb/tree/2b1aea3de263996c4da3042c115126bff601c618
+10. Terence Tao, *"Mathematics in the age of AI,"* arXiv:2608.16753, 2026.
+11. Terence Tao, *"What is good mathematics?"*, arXiv:math/0702396, 2007.
+12. *Leiden Declaration on AI and Mathematics*, 2026. https://leidendeclaration.ai/ ; DOI: 10.5281/zenodo.20302944.

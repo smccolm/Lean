@@ -172,7 +172,7 @@ theorem dfiBiMellin_eq_iterated_log_integral
   apply integral_congr_ae
   filter_upwards with s
   simp [dfiBiMellinKernelRaw]
-  ring
+  ring_nf
 
 /-- The two-dimensional Fourier transform of the logarithmic kernel is the
 iterated Mellin transform, with both source normalizations visible. -/

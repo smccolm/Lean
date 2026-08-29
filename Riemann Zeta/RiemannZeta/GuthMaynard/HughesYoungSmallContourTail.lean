@@ -107,7 +107,7 @@ theorem exists_norm_Gamma_half_left_displacement_le :
       Real.exp (C * d * Real.log (|z.im| + 2))
   convert hgronwall using 1
   all_goals simp only [f, ofReal_zero, sub_zero, K]
-  all_goals ring
+  all_goals ring_nf
 
 /-- Reciprocal Gamma has the matching right-displacement estimate.  This
 is the lower-bound half of the moving Gamma quotient and is proved directly

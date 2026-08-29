@@ -112,6 +112,7 @@ theorem integrable_weight_mul_hughesYoungFiniteArithmeticTerm
       simpa only [Function.mem_support, ne_eq, ofReal_eq_zero] using ht)
   exact hcontinuous.integrable_of_hasCompactSupport hweightCompactC.mul_right
 
+/-- The `hughesYoungFiniteSmallTwistedSquare` definition used by the source-facing construction in `HughesYoungFiniteSquareBridge`. -/
 noncomputable def hughesYoungFiniteSmallTwistedSquare
     (T t H : ℝ) (M : ℕ) : ℂ :=
   shortMobiusPolynomial T (afeCriticalPoint t) ^ 2 *

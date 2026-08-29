@@ -74,11 +74,13 @@ theorem harcosNormalizedFactors_degree_sum
       (natDegree_multiset_prod_of_monic _ hmonic).symm
     _ = k.natDegree := congrArg Polynomial.natDegree hprod
 
+/-- The `harcosLSeries` definition used by the source-facing construction in `KloostermanEulerProduct`. -/
 noncomputable def harcosLSeries
     (p : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : PowerSeries ℂ :=
   PowerSeries.mk (fun d ↦ harcosEtaDegreeSum p d a b)
 
+/-- The `harcosFactorizedLSeries` definition used by the source-facing construction in `KloostermanEulerProduct`. -/
 noncomputable def harcosFactorizedLSeries
     (p : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : PowerSeries ℂ :=

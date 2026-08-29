@@ -15,15 +15,18 @@ four-index moment.  The discarded pair family is retained as an explicit
 integrated tail and bounded on every finite Mellin segment.
 -/
 
+/-- The `hughesYoungIntegratedHighPairSquare` definition used by the source-facing construction in `HughesYoungSquareIntegral`. -/
 noncomputable def hughesYoungIntegratedHighPairSquare
     (q : ℕ) (t H : ℝ) (M : ℕ) : ℂ :=
   ∑ p ∈ Finset.Icc (1, 1) (M, M),
     ∫ u in -H..H, hughesYoungRightPairTerm t (2 * q) u p
 
+/-- The `hughesYoungIntegratedHighPairSquareTail` definition used by the source-facing construction in `HughesYoungSquareIntegral`. -/
 noncomputable def hughesYoungIntegratedHighPairSquareTail
     (q : ℕ) (t H : ℝ) (M : ℕ) : ℂ :=
   ∫ u in -H..H, hughesYoungHighPairSquareTail q t u M
 
+/-- The `hughesYoungHighPairSquareTailContinuousMap` definition used by the source-facing construction in `HughesYoungSquareIntegral`. -/
 noncomputable def hughesYoungHighPairSquareTailContinuousMap
     (q : ℕ) (t : ℝ) (M : ℕ) (hc : (1 / 2 : ℝ) < 2 * q)
     (p : ℕ × ℕ) : C(ℝ, ℂ) :=

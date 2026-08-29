@@ -14,6 +14,7 @@ open MeasureTheory
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `gmDyadicIntervalPlus` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 def gmDyadicIntervalPlus (M : ℕ) : Finset ℕ :=
   Finset.Ioc M (2 * M + 1)
 
@@ -24,6 +25,7 @@ theorem gmDyadicIntervalPlus_eq_insert (M : ℕ) :
     Finset.mem_insert]
   omega
 
+/-- The `gmDyadicPlusRatioMoment` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmDyadicPlusRatioMoment
     (k M : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ nm ∈ gmDyadicIntervalPlus M ×ˢ gmDyadicIntervalPlus M,
@@ -136,12 +138,14 @@ theorem gmReducedRatioMoment_le_plus
   · intro p hp hnot
     positivity
 
+/-- The `gmSecondMomentShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmSecondMomentShape
     (M : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 2 * M +
     (W.card : ℝ) * M ^ 2 +
     (W.card : ℝ) ^ (5 / 4 : ℝ) * T ^ (1 / 2 : ℝ) * M
 
+/-- The `gmFourthMomentShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmFourthMomentShape
     (M : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 4 * M +
@@ -373,6 +377,7 @@ theorem sum_Icc_natDiv_sq_le
       exact mul_le_mul_of_nonneg_left htail (sq_nonneg (N : ℝ))
     _ = 2 * (N : ℝ) ^ 2 / (D : ℝ) := by ring
 
+/-- The `gmLargeSecondAggregateShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmLargeSecondAggregateShape
     (N D : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 2 * (N : ℝ) * (((harmonic N : ℚ) : ℝ)) +
@@ -380,6 +385,7 @@ noncomputable def gmLargeSecondAggregateShape
     (W.card : ℝ) ^ (5 / 4 : ℝ) * T ^ (1 / 2 : ℝ) *
       (N : ℝ) * (((harmonic N : ℚ) : ℝ))
 
+/-- The `gmLargeFourthAggregateShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmLargeFourthAggregateShape
     (N D : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 4 * (N : ℝ) * (((harmonic N : ℚ) : ℝ)) +
@@ -498,6 +504,7 @@ theorem sum_gmFourthMomentShape_le
 
 /-! ### The summed large-gcd Cauchy--Schwarz estimate -/
 
+/-- The `gmMiddleGcdThirdMoment` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmMiddleGcdThirdMoment
     (N D : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ d ∈ Finset.Icc D N, gmGcdSliceMoment 3 N d W
@@ -721,6 +728,7 @@ theorem gmMiddleGcdThirdMoment_native
             ring
           rw [hp]
 
+/-- The `gmDiagonalGcdThirdMoment` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmDiagonalGcdThirdMoment
     (N : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ d ∈ Finset.Ioc N (2 * N), gmGcdSliceMoment 3 N d W
@@ -759,6 +767,7 @@ theorem gmDiagonalGcdThirdMoment_le
 
 /-! ### The physical cutoff `D = floor (N²/T)` and equation (11.4) -/
 
+/-- The `gmGcdCutoff` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmGcdCutoff (N : ℕ) (T : ℝ) : ℕ :=
   ⌊(N : ℝ) ^ 2 / T⌋₊
 
@@ -824,12 +833,14 @@ theorem two_le_sq_div_of_three_quarters_le
       _ ≤ (N : ℝ) ^ 2 := hsq
   exact (le_div_iff₀ hTpos).2 (by nlinarith)
 
+/-- The `gmLargeSecondPaperShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmLargeSecondPaperShape
     (N : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 2 * N +
     (W.card : ℝ) * T +
     (W.card : ℝ) ^ (5 / 4 : ℝ) * T ^ (1 / 2 : ℝ) * N
 
+/-- The `gmLargeFourthPaperShape` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmLargeFourthPaperShape
     (N : ℕ) (T : ℝ) (W : Finset ℝ) : ℝ :=
   (W.card : ℝ) ^ 4 * N +
@@ -1513,6 +1524,7 @@ theorem gmMiddleGcdThirdMoment_physical_native
               Real.sqrt (ApproxAddEnergy 1 W : ℝ) * Real.sqrt (W.card : ℝ) *
                 (N : ℝ) ^ 2) by ring, hp]
 
+/-- The `gmLargeGcdThirdMoment` definition used by the source-facing construction in `LargeValuesEnergyFinal`. -/
 noncomputable def gmLargeGcdThirdMoment
     (N D : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ d ∈ Finset.Icc D (2 * N), gmGcdSliceMoment 3 N d W
@@ -2457,7 +2469,7 @@ theorem gmCubicS3_prop11_2_native
       _ = w * n ^ (3 - 2 * σ) := by
         rw [show (1 / 2 : ℝ) + 1 / 2 = 1 by norm_num, Real.rpow_one]
         congr 1
-        ring
+        ring_nf
   have hroot₂ : n * Real.sqrt w * Real.sqrt X₂ =
       T ^ (1 / 8 : ℝ) * w ^ (29 / 16 : ℝ) * n ^ (3 / 2 - σ) := by
     have hr : Real.sqrt X₂ = w ^ (21 / 16 : ℝ) * T ^ (1 / 8 : ℝ) *
@@ -2478,7 +2490,7 @@ theorem gmCubicS3_prop11_2_native
       _ = T ^ (1 / 8 : ℝ) * w ^ ((1 / 2 : ℝ) + 21 / 16) *
           n ^ ((1 : ℝ) + (1 / 2 - σ)) := by
         rw [← Real.rpow_add hwpos, ← Real.rpow_add hnpos]
-      _ = _ := by congr 2 <;> ring
+      _ = _ := by congr 2 <;> ring_nf
   have hroot₃ : n * Real.sqrt w * Real.sqrt X₃ =
       w ^ 2 * n ^ (3 / 2 - σ) := by
     have hr : Real.sqrt X₃ = w ^ (3 / 2 : ℝ) * n ^ (1 / 2 - σ) := by

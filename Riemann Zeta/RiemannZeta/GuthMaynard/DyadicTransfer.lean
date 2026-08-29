@@ -6,6 +6,7 @@ open scoped BigOperators
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `dyadicHeightIndex` definition used by the source-facing construction in `DyadicTransfer`. -/
 noncomputable def dyadicHeightIndex (T : ℝ) : ℕ :=
   ⌈Real.logb 2 T⌉₊
 

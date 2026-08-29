@@ -448,6 +448,7 @@ theorem gmTraceFourier_neg_eq_conj (cutoff : GMSmoothCutoff) (t ξ : ℝ) :
   simp only [map_neg, map_mul, map_ofNat, conj_ofReal, conj_I]
   ring_nf
 
+/-- The `gmCutoffMellin` definition used by the source-facing construction in `LargeValuesReflection`. -/
 noncomputable def gmCutoffMellin
     (cutoff : GMSmoothCutoff) (r : ℝ) : ℂ :=
   mellin (fun y : ℝ => ((cutoff y : ℂ) ^ 2))

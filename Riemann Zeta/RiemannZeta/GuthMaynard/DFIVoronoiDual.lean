@@ -271,6 +271,8 @@ noncomputable def dfiFourierBranch (q : ℕ) [NeZero q]
 
 /-- The common Gamma and scaling factor in a periodic L-function's
 functional equation. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiPeriodicArchimedeanFactor (q : ℕ) [NeZero q]
     (s : ℂ) : ℂ :=
   (q : ℂ) ^ (s - 1) * (2 * Real.pi : ℂ) ^ (-s) * Gamma s

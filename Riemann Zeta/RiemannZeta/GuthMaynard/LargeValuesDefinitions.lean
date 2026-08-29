@@ -23,6 +23,7 @@ the project.  No analytic estimate is postulated in this file.
 bounds are recorded separately by the lemmas that consume a cutoff, so that
 their constant dependencies remain visible. -/
 structure GMSmoothCutoff where
+  /-- The `toFun` component of `GMSmoothCutoff`. -/
   toFun : ℝ → ℝ
   smooth : ContDiff ℝ ∞ toFun
   nonneg : ∀ x, 0 ≤ toFun x

@@ -266,7 +266,7 @@ theorem probe_tendsto_damped_dfiBesselY0_mellin
     have harg : Tendsto (fun n : ℕ => -(1 / ((n : ℝ) + 1)) * x) atTop
         (𝓝 0) := by
       convert heps.neg.mul_const x using 1
-      ring
+      ring_nf
     have hexp : Tendsto
         (fun n : ℕ => (Real.exp (-(1 / ((n : ℝ) + 1)) * x) : ℂ)) atTop
         (𝓝 1) := by
@@ -1297,7 +1297,7 @@ theorem probe_y0_beta_combination_eq_k0_beta
     field_simp [hG1ma, hGh, hsin]
     rw [hhalfSq]
     nth_rewrite 1 [← hrefAcleared]
-    ring
+    ring_nf
   have hthird :
       Complex.cos (Real.pi * a) *
           (Gamma (1 / 2 : ℂ) * Gamma a / Gamma (a + 1 / 2)) =

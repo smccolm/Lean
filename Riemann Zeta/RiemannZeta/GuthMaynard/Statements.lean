@@ -12,8 +12,11 @@ Suppose $b_n$ is a sequence of complex numbers with $|b_n| \le 1$, and $W$ is a 
 $1$-separated points in $[0, T]$ such that $|D_N(t)| \ge V$ for all $t \in W$.
 Then $|W| \lessapprox N^2 V^{-2} + N^{18/5} V^{-4} + T N^{12/5} V^{-4}$.
 
-We formulate $T^{o(1)}$ explicitly with $\varepsilon$.
-This is a conditional formulation of Theorem 1.1 representing the required algebraic input.
+We formulate $T^{o(1)}$ explicitly with $\varepsilon$.  This is the project's
+internal open-dyadic-support interface: it asks for a global coefficient bound
+because that is convenient for downstream consumers.  The literal published
+Theorem 1.1 contract (closed sum, support-only coefficient bound, and positive
+phase) and its native proof are in `RiemannZeta.PublicationContract`.
 -/
 def GuthMaynardLargeValues : Prop :=
   ∀ (ε : ℝ), ε > 0 →
@@ -57,10 +60,13 @@ theorem guthMaynardLargeValues_neg
     exact hValues t ht
 
 /--
-Theorem 1.2 (Zero density estimate).
+High-range zero-density interface used in the proof of Theorem 1.2.
 The number of zeros of $\zeta(s)$ with $\Re(s) \ge \sigma$ and $|\Im(s)| \le T$ is bounded by
 $N(\sigma, T) \le T^{\frac{15(1-\sigma)}{3+5\sigma} + o(1)}$ for $\sigma \ge 7/10$.
-This is the final goal specification.
+This is intentionally restricted to the range produced by the Section 13.1
+transfer.  The literal full-range published Theorem 1.2 contract on
+$1/2 \le \sigma \le 1$ is `PublishedGuthMaynardZeroDensity`; its native proof
+combines this interface with Ingham in `RiemannZeta.PublicationContract`.
 -/
 def GuthMaynardZeroDensity (zeroCount : ℝ → ℝ → ℕ) : Prop :=
   ∀ (σ : ℝ), 7/10 ≤ σ → σ ≤ 1 →

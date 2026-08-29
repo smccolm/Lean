@@ -18,6 +18,7 @@ It retains the source convention: a negative original shift of magnitude
 and the swapped physical weight.
 -/
 
+/-- The `hughesYoungNegativeCentralSeriesHeightTerm` definition used by the source-facing construction in `HughesYoungCentralSeriesFubiniNegative`. -/
 noncomputable def hughesYoungNegativeCentralSeriesHeightTerm
     (T t c u X Y : ℝ) (h k a b r q : ℕ) : ℂ :=
   (hughesYoungHeightWeight T t : ℂ) *
@@ -25,12 +26,14 @@ noncomputable def hughesYoungNegativeCentralSeriesHeightTerm
       (dfiSwapWeight
         (hughesYoungReducedLocalizedMellinWeight T t c u X Y h k)) q
 
+/-- The `hughesYoungNegativeCentralHeightBase` definition used by the source-facing construction in `HughesYoungCentralSeriesFubiniNegative`. -/
 noncomputable def hughesYoungNegativeCentralHeightBase
     (T t c u X Y : ℝ) (h k : ℕ) (r : ℤ) (x : ℝ) : ℂ :=
   (hughesYoungHeightWeight T t : ℂ) *
     hughesYoungReducedLocalizedMellinWeight T t c u X Y h k
       (x - (r : ℝ)) x
 
+/-- The `hughesYoungNegativeCentralHeightIntegrand` definition used by the source-facing construction in `HughesYoungCentralSeriesFubiniNegative`. -/
 noncomputable def hughesYoungNegativeCentralHeightIntegrand
     (T c u X Y : ℝ) (h k : ℕ) (r : ℕ)
     (a b qx qy : ℕ) (x t : ℝ) : ℂ :=
@@ -59,7 +62,7 @@ theorem continuous_uncurry_hughesYoungNegativeCentralHeightIntegrand
     hughesYoungNegativeCentralHeightIntegrand
     hughesYoungCentralHeightIntegrand dfiEquation27C dfiSwapWeight
   simp only [Int.cast_neg, Int.cast_natCast]
-  ring
+  ring_nf
 
 theorem support_uncurry_hughesYoungNegativeCentralHeightIntegrand_subset
     {T : ℝ} (hT : 0 < T) (c u : ℝ)
@@ -79,7 +82,7 @@ theorem support_uncurry_hughesYoungNegativeCentralHeightIntegrand_subset
     unfold hughesYoungNegativeCentralHeightIntegrand
       hughesYoungCentralHeightIntegrand dfiEquation27C dfiSwapWeight
     simp only [Int.cast_neg, Int.cast_natCast]
-    ring
+    ring_nf
   have hp' : hughesYoungCentralHeightIntegrand
       T c u X Y h k (-(r : ℤ)) a b qy qx
         (p.1 - (r : ℝ)) p.2 ≠ 0 := by
@@ -362,6 +365,7 @@ theorem exists_uniform_norm_hughesYoungNegativeCentralHeightBase_le
     simpa only [W, K, B, ContinuousMap.restrict_apply,
       Function.uncurry_apply_pair] using hraw
 
+/-- The `hughesYoungNegativeCentralHeightKernel` definition used by the source-facing construction in `HughesYoungCentralSeriesFubiniNegative`. -/
 noncomputable def hughesYoungNegativeCentralHeightKernel
     (T t c u X Y : ℝ) (h k a b r q : ℕ) (x : ℝ) : ℂ :=
   dfiEquation27LogFactor b (dfiReducedDenominator b q) x *
@@ -387,7 +391,7 @@ theorem continuous_uncurry_hughesYoungNegativeCentralHeightKernel
     hughesYoungNegativeCentralHeightBase hughesYoungCentralHeightIntegrand
     dfiEquation27C
   simp only [Int.cast_neg, Int.cast_natCast]
-  ring
+  ring_nf
 
 theorem hughesYoungNegativeCentralSeriesHeightTerm_eq_integral_heightKernel
     (T t c u X Y : ℝ) (h k a b r q : ℕ) :

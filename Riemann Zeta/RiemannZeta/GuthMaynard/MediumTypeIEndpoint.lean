@@ -398,7 +398,7 @@ theorem typeIReflectedIntervalFixedPolynomial_dyadic_normalized
   field_simp
   congr 1
   push_cast
-  ring
+  ring_nf
 
 /-- The coefficients in every normalized reflected dyadic block satisfy
 the exact unit bound required by the unrestricted MHH theorem. -/
@@ -500,7 +500,7 @@ theorem exists_large_normalized_reflected_interval_dyadic_block
         (2 ^ j * P) (2 * (2 ^ j * P))‖ := by
     convert hBlock using 2
     rw [pow_succ]
-    ring
+    ring_nf
   have hNorm := normalized_reflected_dyadic_large_of_fixed_le
     (sigma := sigma) (u := u) hPj hBlock'
   simpa only [pow_succ, Nat.cast_mul, Nat.cast_ofNat, mul_assoc,
@@ -1895,7 +1895,7 @@ theorem exists_large_stationary_reflected_interval_of_source
                 ((((P + 1 : ℕ) : ℝ) * (2 ^ r * Y : ℕ)) / 2)
                 (2 * ((2 ^ J * P : ℕ) : ℝ) * (2 ^ r * Y : ℕ))‖ := by
       convert hScaled using 1
-      ring
+      ring_nf
     nlinarith [Real.pi_pos]
   exact exists_large_typeIReflectedIntervalFixedPolynomial_of_integral
     hsigma (by exact_mod_cast hQ) hLU hH hR hKernel hIntegralLarge hTail hGap
@@ -4748,7 +4748,7 @@ theorem norm_phaseShifted_normalized_reflected_eq
   rw [← dirichletPoly_translate]
   convert norm_dirichletPoly_normalizedTypeIReflectedCoeff_neg
     sigma (3 * T - v) P M using 2
-  all_goals ring
+  all_goals ring_nf
 
 /-- One cancellation-safe interface for the two retained Poisson signs.
 The coefficient sequence is existential because the negative sign carries
@@ -6116,7 +6116,7 @@ theorem eventually_source_far_family_impossible
       _ = (Clog * Cw) * (T ^ v * T ^ (-q / 18)) := by ring
       _ = (Clog * Cw) * T ^ (v - q / 18) := by
         rw [← Real.rpow_add hTPos]
-        ring
+        ring_nf
   have hConstRaw := hTconst T hTConst
   change (8 / 3 : ℝ) * Clog * Cw + 1 ≤
     T ^ (q / 18 - u - v) at hConstRaw
@@ -6382,7 +6382,7 @@ theorem eventually_large_source_forces_complementary_margin
           _ = _ := by
             rw [← Real.rpow_add hTPos]
             congr 1
-            ring
+            ring_nf
   have hAOne : 1 < A := by
     dsimp only [A]
     apply lt_of_lt_of_le (by omega : 1 < (2 : ℕ))
@@ -10522,7 +10522,7 @@ theorem eventually_reflected_weyl_geometry
       _ = 4 * T ^ (1 + 2 * d) := by
         rw [← Real.rpow_natCast, ← Real.rpow_mul hTPos.le]
         congr 1
-        ring
+        ring_nf
       _ ≤ T ^ (2 * d) * T ^ (1 + 2 * d) := by gcongr
       _ = T ^ (1 + 4 * d) := by
         rw [← Real.rpow_add hTPos]
@@ -11186,7 +11186,7 @@ theorem actual_interior_reflected_near_endpoint_consumer
         simpa only [base, A, hA] using hBaseAt
       _ = Cmult * T ^ (3 * d) := by
         congr 1
-        ring
+        ring_nf
   have hLossAt' :
       (base : ℝ) * k * (K * (1 + (((harmonic Q : ℚ) : ℝ)))) *
           (6 * (1 + classicalTypeIIPowerLoss E d T k Q) ^ (6 : ℕ)) ≤

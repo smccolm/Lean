@@ -99,20 +99,24 @@ private lemma dfiEquation29_verticalIntegral_eq
   exact integral_boundary_rect_eq_zero_of_differentiableOn f _ _
     (hf.mono fun z hrect ↦ ⟨by simpa using hrect.1, trivial⟩)
 
+/-- The `dfiEquation29Multiplier` definition used by the source-facing construction in `DFIEquation29`. -/
 noncomputable def dfiEquation29Multiplier (q : ℕ) [NeZero q]
     (branch : DFIVoronoiDualBranch) : ℂ → ℂ :=
   match branch with
   | .minusTerm => dfiVoronoiMinusMultiplier q
   | .plusTerm => dfiVoronoiPlusMultiplier q
 
+/-- The `dfiEquation29Integrand` definition used by the source-facing construction in `DFIEquation29`. -/
 noncomputable def dfiEquation29Integrand (q : ℕ) [NeZero q]
     (branch : DFIVoronoiDualBranch) (g : ℝ → ℂ) (n : ℕ) (z : ℂ) : ℂ :=
   (n : ℂ) ^ (-(1 - z)) * dfiEquation29Multiplier q branch z * mellin g z
 
+/-- The `dfiEquation29TransformAt` definition used by the source-facing construction in `DFIEquation29`. -/
 noncomputable def dfiEquation29TransformAt (q : ℕ) [NeZero q]
     (branch : DFIVoronoiDualBranch) (g : ℝ → ℂ) (n : ℕ) (σ : ℝ) : ℂ :=
   VerticalIntegral' (dfiEquation29Integrand q branch g n) σ
 
+/-- The `dfiEquation29InitialTransform` definition used by the source-facing construction in `DFIEquation29`. -/
 noncomputable def dfiEquation29InitialTransform (q : ℕ) [NeZero q]
     (branch : DFIVoronoiDualBranch) (g : ℝ → ℂ) (n : ℕ) : ℂ :=
   match branch with
@@ -3190,7 +3194,7 @@ theorem DFIVoronoiTestFunction.exists_dfiVoronoiDualTerm_scaled_threeQuarter_bou
         (n : ℝ) ^ (ε + (-(1 / 4 : ℝ))) := by
       rw [Real.rpow_add (Nat.cast_pos.mpr hn)]
     _ = (D * A) * (q : ℝ) ^ (-(1 / 2 : ℝ)) * S ^ (3 / 4 : ℝ) *
-        (n : ℝ) ^ (ε - 1 / 4) := by ring
+        (n : ℝ) ^ (ε - 1 / 4) := by ring_nf
 
 /-- DFI (29) after inserting the native divisor-function estimate.  The
 The constant remains uniform in the modulus and positive dual frequency. -/

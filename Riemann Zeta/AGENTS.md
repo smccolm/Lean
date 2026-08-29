@@ -156,20 +156,22 @@ Rules for maintaining the runner:
 
 The current repository is expected to produce `FAIL` until the named research-output defects are repaired. The build, warning, dependency, and integrity gates currently pass; the output gate fails. That failure is useful evidence. Agents must preserve its honesty while progressively converting each missing theorem into a genuine pass.
 
-## Mandatory End-of-Turn Commit-Message Update: `push_to_github.bat`
+## Safe Repository Synchronization: `push_to_github.bat`
 
-`push_to_github.bat` is the project owner's repository-synchronization interface. The project owner runs this script; AI agents must not run it unless separately and explicitly instructed to do so.
+`push_to_github.bat` is the project owner's repository-synchronization interface.
+The project owner runs this script; AI agents must not run it unless separately
+and explicitly instructed to do so.
 
-On every turn in which an agent creates, edits, renames, or deletes any repository file, the agent must update the commit message in the script's `git commit -m "..."` command so that it accurately summarizes that turn's repository changes.
+The script must resolve and enter the Git repository root, stage repository-wide
+changes with `git add -A`, accept an explicit commit message or prompt for one,
+reject an empty message, check every Git exit code, and push with
+`git push origin main`. It must never force-push, conceal a failure, or print a
+success message after a failed operation.
 
-This requirement is permanent and has the following operational meaning:
-
-1. Complete all implementation, documentation synchronization, builds, audits, integrity scans, status inspection, and other repository work first.
-2. Make the commit-message edit in `push_to_github.bat` the final repository-file edit and final tool action of the turn.
-3. After updating that message, do not mutate or inspect files, run builds or audits, execute Git commands, or invoke another tool before the final user-facing response.
-4. A turn that makes no repository-file change does not require a commit-message update.
-5. Write a concise, specific message describing the substantive changes made during the turn; do not leave a stale or generic message.
-6. Do not execute `push_to_github.bat` as part of this rule. The project owner will review and run it.
+There is no hard-coded-message workflow. Agents must not edit the script merely
+to record a turn summary. Instead, report a proposed commit message in the final
+handoff; the owner supplies or confirms that message when deliberately running
+the synchronization script.
 
 ## Mandatory Checks
 

@@ -527,7 +527,7 @@ theorem exists_norm_hughesYoungActiveFiniteDiagonal_le :
       unfold hughesYoungFiniteDiagonalArithmeticMajorant
       dsimp only [A]
       simp_rw [Finset.mul_sum]
-      ring
+      ring_nf
     _ = _ := by
       simp only [ell, B, hughesYoungActiveArithmeticCutoff]
       ring
@@ -807,7 +807,7 @@ theorem hughesYoungActiveFiniteDiagonal_epsilonPowerBound_of_radius
       _ = (5841 : ℝ) ^ (7 * δ) * T ^ (77 * δ) := by
             rw [← Real.rpow_mul hT0.le]
             congr 1
-            ring
+            ring_nf
   have hQcombine : (Q : ℝ) ^ (6 * δ) *
       (((harmonic Q : ℚ) : ℝ)) ≤
         (1 + δ⁻¹) * (5841 : ℝ) ^ (7 * δ) * T ^ (77 * δ) := by
@@ -975,7 +975,7 @@ theorem detectorSquareProduct_mul_conductorRadius_le
         _ = 162 * T ^ (41 / 20 : ℝ) := by
           rw [← Real.rpow_add hT0]
           congr 1
-          ring
+          ring_nf
 
 theorem hughesYoungDFISmoothingScale_rpow_nine_fourths_le
     {T : ℝ} (hT : 1 ≤ T) :
@@ -987,7 +987,7 @@ theorem hughesYoungDFISmoothingScale_rpow_nine_fourths_le
   rw [← Real.rpow_mul hT0.le]
   apply le_of_eq
   congr 1
-  ring
+  ring_nf
 
 /-- Hughes--Young equation (80), after summing every large comparable DFI
 box at the actual mollifier cutoff and conductor radius.  The proof keeps
@@ -1049,7 +1049,7 @@ theorem hughesYoungConductorLargeDFIPointwiseDiscrepancy_epsilonPowerBound :
       _ = (9 : ℝ) ^ δ * T ^ (δ / 50) := by
         rw [← Real.rpow_mul hT0.le]
         congr 1
-        ring
+        ring_nf
   have hcoeffUniform : ∀ n ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
       ‖shortMobiusSquareCoeff T n‖ ≤ ca * ell ^ δ := by
     intro n hn

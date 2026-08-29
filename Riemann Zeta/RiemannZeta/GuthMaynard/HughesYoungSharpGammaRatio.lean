@@ -1015,7 +1015,7 @@ theorem norm_hughesYoungGammaRatioShift_half_zero_le (t : ℝ) :
     norm_num
     dsimp [rp, rm]
     field_simp [hcriticalPlus, hcriticalMinus]
-    ring
+    ring_nf
   rw [hnorm]
   apply hcombined.trans
   have hpiInv : Real.pi⁻¹ ≤ 1 := by
@@ -1099,7 +1099,7 @@ theorem norm_GammaR_one_symmetric_le (t u : ℝ) :
           ‖Complex.Gamma ((1 / 2 : ℂ) + (((t - u) / 2 : ℝ) : ℂ) * I)‖ ≤
         Real.exp (8 * u ^ 2) *
           ‖Complex.Gamma ((1 / 2 : ℂ) + ((t / 2 : ℝ) : ℂ) * I)‖ ^ 2 := by
-    convert hgamma using 1 <;> congr 2 <;> push_cast <;> ring
+    convert hgamma using 1 <;> congr 2 <;> push_cast <;> ring_nf
   let p : ℝ := Real.pi ^ (-1 / 2 : ℝ)
   have hp0 : 0 ≤ p := by dsimp only [p]; positivity
   calc
@@ -1246,7 +1246,7 @@ theorem exists_norm_Gamma_half_horizontal_displacement_le :
     rw [abs_of_nonneg hd0]
     convert hgronwall using 1
     all_goals simp only [f, ofReal_zero, add_zero, K]
-    all_goals ring
+    all_goals ring_nf
   · have hdneg : d < 0 := lt_of_not_ge hd0
     let e : ℝ := -d
     let f : ℝ → ℂ := fun x => Complex.Gamma (z - (x : ℂ))
@@ -1312,7 +1312,7 @@ theorem exists_norm_Gamma_half_horizontal_displacement_le :
     rw [hde, ← sub_eq_add_neg, abs_of_neg hdneg]
     convert hgronwall using 1
     all_goals simp only [f, ofReal_zero, sub_zero, K, e]
-    all_goals ring
+    all_goals ring_nf
 
 /-- The corresponding signed neighbourhood estimate for Deligne's real
 Gamma factor.  The harmless factor `4` bounds the variation of the real

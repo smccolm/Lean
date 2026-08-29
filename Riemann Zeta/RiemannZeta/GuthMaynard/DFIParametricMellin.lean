@@ -1070,6 +1070,7 @@ theorem contDiff_dfiMellinEulerBasis
   exact (Complex.ofRealCLM.contDiff.pow j).mul
     (ContDiff.contDiff_iteratedDeriv_top hg j)
 
+/-- The `dfiMellinEulerPolynomial6` definition used by the source-facing construction in `DFIParametricMellin`. -/
 noncomputable def dfiMellinEulerPolynomial6
     (c₀ c₁ c₂ c₃ c₄ c₅ c₆ : ℂ) (g : ℝ → ℂ) (x : ℝ) : ℂ :=
   c₀ * dfiMellinEulerBasis 0 g x +

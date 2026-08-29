@@ -8,6 +8,7 @@ namespace RiemannZeta.GuthMaynard
 
 noncomputable section
 
+/-- The `harcosPrimeUpToOfFactorAt` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosPrimeUpToOfFactorAt
     (p N d : ℕ) [Fact p.Prime] (hdN : d ≤ N)
     (s : HarcosFactorization p d)
@@ -59,12 +60,14 @@ theorem sum_harcosPrimeUpTo_count_mul_degree_at
       simp [mul_comm]
     _ = d := s.2
 
+/-- The `HarcosEulerAllocationAt` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def HarcosEulerAllocationAt
     (p N d : ℕ) [Fact p.Prime] :=
   {l : HarcosPrimeUpTo p N →₀ ℕ //
     l ∈ Finset.finsuppAntidiag Finset.univ d ∧
       ∀ q, q.1.1.natDegree ∣ l q}
 
+/-- The `harcosEulerAllocationAtOfFactorization` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosEulerAllocationAtOfFactorization
     (p N d : ℕ) [Fact p.Prime] (hdN : d ≤ N)
     (s : HarcosFactorization p d) :
@@ -81,6 +84,7 @@ noncomputable def harcosEulerAllocationAtOfFactorization
     change q.1.1.natDegree ∣ s.1.count q.1 * q.1.1.natDegree
     exact dvd_mul_left _ _
 
+/-- The `harcosFactorizationOfEulerAllocationAt` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosFactorizationOfEulerAllocationAt
     (p N d : ℕ) [Fact p.Prime]
     (l : HarcosEulerAllocationAt p N d) :
@@ -195,6 +199,7 @@ theorem harcosEulerAllocationAt_factorization_right
   rw [count_harcosFactorizationOfEulerAllocationAt, dif_pos q.2]
   exact Nat.div_mul_cancel (l.2.2 q)
 
+/-- The `harcosEulerAllocationAtEquiv` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def harcosEulerAllocationAtEquiv
     (p N d : ℕ) [Fact p.Prime] (hdN : d ≤ N) :
     HarcosFactorization p d ≃ HarcosEulerAllocationAt p N d where
@@ -203,6 +208,7 @@ def harcosEulerAllocationAtEquiv
   left_inv := harcosEulerAllocationAt_factorization_left p N d hdN
   right_inv := harcosEulerAllocationAt_factorization_right p N d hdN
 
+/-- The `harcosEulerAllocationAtWeight` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosEulerAllocationAtWeight
     (p N d : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (l : HarcosEulerAllocationAt p N d) : ℂ :=
@@ -225,6 +231,7 @@ theorem harcosFactorizationWeight_ofEulerAllocationAt
     (fun q ↦ q.1)
     (fun q ↦ harcosEtaPolynomial p a b q.1)
 
+/-- The `harcosEulerAllocationAtFinset` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def harcosEulerAllocationAtFinset
     (p N d : ℕ) [Fact p.Prime] :
     Finset (HarcosPrimeUpTo p N →₀ ℕ) :=
@@ -232,6 +239,7 @@ def harcosEulerAllocationAtFinset
     (Finset.univ : Finset (HarcosPrimeUpTo p N)) d).filter
       (fun l ↦ ∀ q, q.1.1.natDegree ∣ l q)
 
+/-- The `harcosEulerAllocationAtSubtypeEquiv` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def harcosEulerAllocationAtSubtypeEquiv
     (p N d : ℕ) [Fact p.Prime] :
     {l // l ∈ harcosEulerAllocationAtFinset p N d} ≃
@@ -389,6 +397,7 @@ theorem coeff_monomial_mul_nat
       rfl
     · simp [h]
 
+/-- The `harcosPrimeEulerDenominator` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosPrimeEulerDenominator
     (p N : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (q : HarcosPrimeUpTo p N) : PowerSeries ℂ :=
@@ -486,6 +495,7 @@ theorem derivative_harcosPrimeEulerDenominator
     rw [if_neg h, if_neg hj, if_neg (Nat.succ_ne_zero j)]
     ring
 
+/-- The `harcosPrimeLogDerivativeTerm` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosPrimeLogDerivativeTerm
     (p N : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) (q : HarcosPrimeUpTo p N) : PowerSeries ℂ :=
@@ -577,6 +587,7 @@ theorem X_derivative_finsetProd
         _ = (G i * ∏ x ∈ s, G x) * (B i + ∑ x ∈ s, B x) := by
           ring
 
+/-- The `harcosFinitePrimeLogDerivative` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosFinitePrimeLogDerivative
     (p N : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : PowerSeries ℂ :=
@@ -603,6 +614,7 @@ theorem harcosFiniteEulerProduct_logDerivative
   intro q _hq
   exact harcosPrime_logDerivative_identity p N a b q
 
+/-- The `harcosPrimePowerSum` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosPrimePowerSum
     (p N n : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : ℂ :=
@@ -878,6 +890,7 @@ theorem harcosPrimePowerSum_recurrence
           harcosPrimePowerSum p N (n - 1) a b -
         (p : ℂ) * harcosPrimePowerSum p N (n - 2) a b := by ring
 
+/-- The `harcosNegativeRootPower` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosNegativeRootPower
     (p n : ℕ) [NeZero p] (a b : ZMod p) : ℂ :=
   -(kloostermanAlpha p a b ^ n + kloostermanBeta p a b ^ n)
@@ -964,10 +977,12 @@ theorem harcosPrimePowerSum_eq_negativeRootPower
           rw [hsub1, hsub2] at hr
           simpa [show n + 3 = n + 1 + 1 + 1 by omega] using hr.symm
 
+/-- The `HarcosIrreducibleMonicDegree` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def HarcosIrreducibleMonicDegree
     (p d : ℕ) [Fact p.Prime] :=
   {q : HarcosIrreducibleMonic p // q.1.natDegree = d}
 
+/-- The `harcosIrreducibleMonicDegreeEquiv` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def harcosIrreducibleMonicDegreeEquiv
     (p d : ℕ) [Fact p.Prime] :
     HarcosIrreducibleMonicDegree p d ≃
@@ -983,10 +998,12 @@ noncomputable instance harcosIrreducibleMonicDegreeFintype
   Fintype.ofEquiv {q : HarcosPrimeUpTo p d // q.1.1.natDegree = d}
     (harcosIrreducibleMonicDegreeEquiv p d).symm
 
+/-- The `HarcosEquationTenIndex` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def HarcosEquationTenIndex
     (p n : ℕ) [Fact p.Prime] :=
   Σ d : {d // d ∈ n.divisors}, HarcosIrreducibleMonicDegree p d.1
 
+/-- The `HarcosPrimeDividingDegree` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def HarcosPrimeDividingDegree
     (p n : ℕ) [Fact p.Prime] :=
   {q : HarcosPrimeUpTo p n // q.1.1.natDegree ∣ n}
@@ -1002,6 +1019,7 @@ noncomputable instance harcosPrimeDividingDegreeFintype
   unfold HarcosPrimeDividingDegree
   infer_instance
 
+/-- The `harcosEquationTenIndexEquiv` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 def harcosEquationTenIndexEquiv
     (p n : ℕ) [Fact p.Prime] (hn : 0 < n) :
     HarcosEquationTenIndex p n ≃ HarcosPrimeDividingDegree p n where
@@ -1027,6 +1045,7 @@ def harcosEquationTenIndexEquiv
     apply Subtype.ext
     rfl
 
+/-- The `harcosEquationTenDivisorSum` definition used by the source-facing construction in `KloostermanEquationTen`. -/
 noncomputable def harcosEquationTenDivisorSum
     (p n : ℕ) [NeZero p] [Fact p.Prime]
     (a b : ZMod p) : ℂ :=

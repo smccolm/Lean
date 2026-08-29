@@ -288,6 +288,7 @@ theorem exists_norm_integral_hughesYoungFiniteArithmeticTerm_diagonal_le :
           unfold A
           ring
 
+/-- The `hughesYoungFiniteDiagonalArithmeticMajorant` definition used by the source-facing construction in `HughesYoungDiagonalConsumer`. -/
 noncomputable def hughesYoungFiniteDiagonalArithmeticMajorant
     (T : ℝ) (ell M : ℕ) : ℝ :=
   ∑ h ∈ Finset.Icc 1 ell, ∑ k ∈ Finset.Icc 1 ell,
@@ -299,6 +300,7 @@ noncomputable def hughesYoungFiniteDiagonalArithmeticMajorant
           (((h * m : ℕ) : ℝ))⁻¹
       else 0
 
+/-- The `hughesYoungRestrictedDiagonalFiber` definition used by the source-facing construction in `HughesYoungDiagonalConsumer`. -/
 noncomputable def hughesYoungRestrictedDiagonalFiber
     (T : ℝ) (ell M q : ℕ) : ℝ :=
   ∑ p ∈ (Finset.Icc 1 ell).product (Finset.Icc 1 M) with

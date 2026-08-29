@@ -1,6 +1,6 @@
 # Publication Readiness and Semantic Audit
 
-Status date: 28 August 2026
+Status date: 29 August 2026
 
 This document is the project's adversarial review packet. It records an internal source-to-Lean comparison, but it is not an independent referee report and does not claim publication, community acceptance, or canonicalization. The distinction is deliberate: the principal runner establishes that Lean accepts the declarations and that the repository's stated integrity gates pass. It cannot establish that the formal statements are the best, most natural, or universally accepted translations of the cited mathematics.
 
@@ -10,9 +10,9 @@ This document is the project's adversarial review packet. It records an internal
 
 - Lean 4, using the pinned toolchain and dependencies, accepts the public theorems listed below.
 - The public zero count is a finite sum of analytic vanishing orders of Mathlib's Riemann zeta function over closed rectangles. It therefore counts analytic multiplicity, not merely distinct zeros.
-- The project proves the formal large-values proposition `GuthMaynardLargeValues`, the classical Ingham and Huxley density propositions, the Guth--Maynard density proposition, and the combined exponent `30 * (1 - σ) / 13` for that zero count.
+- The project proves five frozen publication-facing contracts: the displayed form of Guth--Maynard Theorem 1.1, the full-range form of Theorem 1.2, the classical Ingham and Huxley bounds, and the combined exponent `30 * (1 - σ) / 13` for that zero count.
 - The conditional theorem `guthMaynardZeroDensity_of_largeValues_native` has exactly one visible premise, `GuthMaynardLargeValues`; its proof supplies the other nine inputs to the Section 13.1 transfer from named project theorems.
-- The root import graph contains the production modules, `RiemannZeta/Audit.lean` checks transitive axioms for the exported project theorems, and the principal runner covers retained Lean files and proof-integrity scans.
+- The root import graph contains 301 production modules; the two remaining Lean modules are explicit audit/lint regressions. `RiemannZeta/Audit.lean` checks 7,636 registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations.
 - The source correspondences in this document have been checked internally against the declarations and proof consumers named here. This is an **internal semantic audit**, not independent expert validation.
 
 ### What is not claimed
@@ -129,13 +129,27 @@ For a nonnegative shift the signed central term is `dfiEquation27CentralSeries a
 
 ## 4. Public theorem/source crosswalk
 
-All names below are in namespace `RiemannZeta.GuthMaynard`. In `logs/overall_proof_20260828_231911.log`, the environment-level transitive audit reports every one of the ten results below as `PASS` with exactly the dependency set
+All names below are in namespace `RiemannZeta.GuthMaynard`. The canonical verifier's environment-level transitive audit reports every result below as `PASS` with exactly the dependency set
 
 ```text
 [propext, Classical.choice, Quot.sound]
 ```
 
-and no project axiom or `sorryAx`. The final five density outputs also have explicit `#print axioms` lines in that log. This is not a claim that Lean is axiom-free. A future implementation refactor can change the harmless subset, so the executable audit remains authoritative.
+and no project axiom or `sorryAx`. The five publication contracts have exact-type gates and explicit `#print axioms` commands. This is not a claim that Lean is axiom-free. A future implementation refactor can change the harmless subset, so the executable audit remains authoritative.
+
+### 4.0 Frozen publication contracts
+
+`RiemannZeta/PublicationContract.lean` defines and proves:
+
+- `guthMaynardLargeValues_published_native : PublishedGuthMaynardLargeValues`;
+- `guthMaynardZeroDensity_published_native : PublishedGuthMaynardZeroDensity (fun sigma T => N sigma T)`;
+- `inghamZeroDensity_published_native : PublishedInghamZeroDensity (fun sigma T => N sigma T)`;
+- `huxleyZeroDensity_published_native : PublishedHuxleyZeroDensity (fun sigma T => N sigma T)`; and
+- `combinedZeroDensity_published_native : PublishedCombinedZeroDensity (fun sigma T => N sigma T)`.
+
+The first contract uses the closed displayed sum `N ≤ n ≤ 2N`, positive phase, one-separated ordinates in `[0,T]`, and the coefficient bound only on that support. Its proof restricts coefficients, proves the open/closed endpoint identity, handles the left endpoint by a triangle inequality, and absorbs the bounded-`V` case using separation. The second contract covers the literal range `1/2 ≤ sigma ≤ 1`; below `7/10` it consumes native Ingham plus `ingham_exponent_le_guthMaynard_exponent`, and above `7/10` it consumes the internal native Guth--Maynard theorem. Thus neither contract is a renamed internal proposition.
+
+The exact source editions and conventions are frozen in [`verification/SOURCE_FREEZE.md`](verification/SOURCE_FREEZE.md).
 
 ### 4.1 `ingham_zero_density_native`
 
@@ -188,7 +202,7 @@ and no project axiom or `sorryAx`. The final five density outputs also have expl
 - **Status:** kernel-checked, project-integrated, internally semantically audited.
 - **Source:** Guth--Maynard, *New large value estimates for Dirichlet polynomials*, Theorem 1.1, Annals of Mathematics 203 (2026), 623--675, DOI `10.4007/annals.2026.203.2.6`.
 - **Proof architecture:** sharp-to-smooth three-piece localization; matrix/trace reduction (Lemmas 4.1--4.2); Poisson and trace splitting; `S1`, `S2`, and `S3`; Lemma 6.2 reflection; affine localization; GCD/spacing energy; Sections 3 and 12 assembly; classical complementary ranges.
-- **Convention bridges:** source polynomial sign, endpoint convention `(N,2N]`, coefficient normalization, one-separated finite sets, physical height, and low/high/near-height ranges all have named consumers. The constant order matches the source asymptotic quantifier order.
+- **Convention bridges:** this internal theorem uses `(N,2N]` and a global coefficient bound. The published theorem display uses `[N,2N]` and a support-only coefficient bound; `guthMaynardLargeValues_published_native` proves the bridge. Source polynomial sign, coefficient normalization, one-separated finite sets, physical height, and low/high/near-height ranges all have named consumers. The constant order matches the source asymptotic quantifier order.
 - **Module/import path:** `LargeValuesFinal.lean` -> `LargeValues.lean`/`NativeZeroDensity.lean` -> root and audit.
 
 ### 4.5 `gmQuantitativeSmoothReflection_native`
@@ -256,7 +270,7 @@ and no project axiom or `sorryAx`. The final five density outputs also have expl
 - **Unfolded statement:** the same `7/10≤σ≤1` multiplicity-weighted estimate as §4.8, with no mathematical hypothesis.
 - **Status:** kernel-checked, project-integrated, internally semantically audited.
 - **Proof:** specializes the one-premise consumer with `guthMaynardLargeValues_native`.
-- **Source:** Guth--Maynard Theorem 1.2, with Section 13.1 providing the transfer.
+- **Source:** the high-range Section 13.1 component of Guth--Maynard Theorem 1.2. This restricted internal proposition is not the literal full-range published statement; §4.0 records the full-range consumer.
 - **Module/import path:** `NativeZeroDensity.lean` -> root and audit.
 
 ### 4.10 `combined_zero_density_native`
@@ -343,7 +357,7 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
 - Bibliographic page/equation mappings are stable for the cited versions; a later source edition may renumber them.
 - The audit checks declared dependencies, not naturalness of definitions or mathematical importance.
 - The formalization is large and sometimes proves strengthened technical interfaces. External reviewers should confirm that strengthening did not alter a source consumer's intended domain.
-- The project is Windows-oriented at the human runner layer. Lean modules themselves are portable, but the batch runner assumes `cmd.exe` and PowerShell.
+- The canonical verifier is a PowerShell script used identically by local Windows runs and Linux CI. The batch file is only a Windows convenience wrapper; a PowerShell 7 runtime is still required for the canonical verifier.
 - Upstreaming reusable lemmas to Mathlib/PNT and refactoring toward community-standard APIs remain future canonicalization work.
 - Open external gates: expert exposition review, independent semantic review, public preprint decision, peer-reviewed publication, and eventual canonicalization.
 
@@ -352,15 +366,16 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
 1. Clone the repository and enter the `Riemann Zeta` directory.
 2. Install `elan`; allow it to install the version in `lean-toolchain` (`v4.30.0`).
 3. Confirm that `lakefile.toml` pins Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f` and PNT+ revision `4ecb950126c4290293c5662dfe0e884123171df5`.
-4. On Windows run:
+4. On any supported platform with PowerShell 7 run:
 
    ```powershell
-   cmd /c run_lake_build.bat --no-pause
+   pwsh -NoProfile -File scripts/verify_release.ps1 -Mode release
    ```
 
-5. Preserve the emitted `logs/overall_proof_*.log`. A valid project PASS requires every build, retained-file, warning, dependency, output, and prohibited-proof gate to pass.
-6. Independently run `lake env lean RiemannZeta/Audit.lean` and inspect the five final `#print axioms` lines.
-7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`.
+   On Windows, `cmd /c run_lake_build.bat --no-pause` runs the same verifier in development mode.
+5. Release mode must report a clean tree. Preserve the emitted `logs/foundation_freeze_*.log` and matching JSON manifest. A valid PASS requires every classification, build, warning, dependency, exact-contract, output, linter, and prohibited-proof gate to pass.
+6. Independently run `lake env lean RiemannZeta/Audit.lean` and inspect the five publication-contract `#print axioms` lines.
+7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`. After a pushed release candidate, inspect the SHA-named CI artifact as separate evidence that the clean checkout passed.
 
 Reproduction proves acceptance of the checked declarations in that environment. It is not a substitute for reviewing this crosswalk or the cited mathematics.
 
@@ -417,21 +432,21 @@ This outline is preparation for Tao's “talk test”; it is not evidence that t
 - L. Guth and J. Maynard, “New large value estimates for Dirichlet polynomials,” *Annals of Mathematics* 203 (2026), 623--675. [DOI](https://doi.org/10.4007/annals.2026.203.2.6), [arXiv v2](https://arxiv.org/html/2405.20552v2).
 - C. P. Hughes and M. P. Young, “The twisted fourth moment of the Riemann zeta function,” *J. Reine Angew. Math.* 641 (2010), 203--236. [arXiv](https://arxiv.org/abs/0709.2345).
 - W. Duke, J. B. Friedlander, and H. Iwaniec, “A quadratic divisor problem,” *Inventiones Mathematicae* 115 (1994), 209--217. [DOI](https://doi.org/10.1007/BF01231758), [author-hosted PDF](https://www.math.ucla.edu/~wdduke/preprints/quadraticdiv.pdf).
-- D. R. Heath-Brown, “The fourth power moment of the Riemann zeta function,” *Proc. London Math. Soc.* (3) 38 (1979), 385--422. The exact difference-set mean-square attribution used by Guth--Maynard should be checked against their bibliography during external review.
-- J. Maynard and K. Pratt, Appendix C source used by the project. The repository agenda identifies the source role; stable journal metadata should be confirmed by an external bibliographic review before submission.
-- ANTEDB, classical zero-density chapter and Lemmas 11.5/11.10 as cited in project notes. This is an online reference corpus; section/version stability should be recorded before publication.
+- D. R. Heath-Brown, “A large values estimate for Dirichlet polynomials,” *J. London Math. Soc.* (2) 20 (1979), no. 1, 8--18. [DOI](https://doi.org/10.1112/jlms/s2-20.1.8). This is the `[HB]` source cited by Guth--Maynard for the difference-set double sum; the earlier fourth-moment attribution was incorrect.
+- J. Maynard and K. Pratt, “Half-isolated zeros and zero-density estimates,” *International Mathematics Research Notices* 2024 (2024), no. 19, 12978--13014. [DOI](https://doi.org/10.1093/imrn/rnae191), [arXiv](https://arxiv.org/abs/2206.11729).
+- ANTEDB/Expdb at commit [`2b1aea3de263996c4da3042c115126bff601c618`](https://github.com/teorth/expdb/tree/2b1aea3de263996c4da3042c115126bff601c618). Stable labels used by this project are `thm:ingham_zero_density2`, `huxley-bound`, `guth-maynard-density`, `reflect`, `hb-double`, `guth-maynard-lvt`, and `huxley-lv`; bare historical “Lemma 11.5/11.10” references are not used as frozen identifiers.
 - T. Tao, “Mathematics in the age of AI,” arXiv:2608.16753 (2026), especially the separation of verification, exposition, publication, community digestion, and canonicalization. [arXiv](https://arxiv.org/abs/2608.16753).
 - T. Tao, “What is good mathematics?”, arXiv:math/0702396. [arXiv](https://arxiv.org/abs/math/0702396).
 - [Leiden Declaration on AI and Mathematics](https://leidendeclaration.ai/), archived at [Zenodo](https://doi.org/10.5281/zenodo.20302944).
 - D. Loeffler and M. Stoll, “Formalizing zeta and L-functions in Lean,” arXiv:2503.00959. This describes relevant upstream formal infrastructure; it is not credited for project-specific density arguments.
 
-Any source label above that lacks stable page/equation metadata is explicitly a pre-submission bibliographic obligation, not an invitation to invent attribution.
+Full source/version details and convention decisions are in `verification/SOURCE_FREEZE.md`. Remaining historical-source questions, including the preferred primary Huxley edition, are explicit external-review obligations rather than invitations to invent attribution.
 
 ## 14. Tool and computational-resource disclosure
 
 The Lean development, proof search, refactoring, repository audits, and documentation were assisted by language-model coding agents, including OpenAI Codex and earlier Antigravity/Gemini sessions. AI assistance included generating candidate Lean terms, translating paper arguments into formal sublemmas, locating APIs and sources, reorganizing proof chains, drafting exposition, and identifying consistency defects. Generated material was accepted only when elaborated by Lean and passed the project checks; that does not make the AI output semantically self-validating.
 
-Lean 4 and Mathlib perform formal elaboration and kernel checking. The project uses Lean `v4.30.0`, Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, and pinned PNT+ revision `4ecb950126c4290293c5662dfe0e884123171df5`. The principal human-facing run assumes Windows `cmd.exe` and PowerShell. No AI system is listed as an author. S. McColm, as human project owner, retains responsibility for semantic fidelity, correct attribution, release decisions, and any publication claim.
+Lean 4 and Mathlib perform formal elaboration and kernel checking. The project uses Lean `v4.30.0`, Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, and pinned PNT+ revision `4ecb950126c4290293c5662dfe0e884123171df5`. The canonical verifier requires PowerShell and is invoked identically by the Windows wrapper and Linux CI. No AI system is listed as an author. S. McColm, as human project owner, retains responsibility for semantic fidelity, correct attribution, release decisions, and any publication claim.
 
 ## 15. External digestion ledger
 

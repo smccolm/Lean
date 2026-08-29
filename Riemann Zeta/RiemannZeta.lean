@@ -104,3 +104,4 @@ import RiemannZeta.GuthMaynard.ZeroCount
 import RiemannZeta.GuthMaynard.ZetaTruncation
 import RiemannZeta.GuthMaynard.ZeroDetector
 import RiemannZeta.GuthMaynard.NativeZeroDensity
+import RiemannZeta.PublicationContract

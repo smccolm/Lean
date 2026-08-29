@@ -279,7 +279,7 @@ theorem norm_iteratedDeriv_hughesYoungHeightTransform_le_moment
       fun x => FourierTransform.fourier f (a * x) by
     funext x
     unfold hughesYoungHeightTransform a f
-    ring]
+    ring_nf]
   rw [hcomp, hfreq, norm_smul, norm_pow]
   calc
     ‖(a : ℝ)‖ ^ j *
@@ -418,7 +418,7 @@ theorem exists_uniform_hughesYoungDyadicCutoffAt_derivativeProfile :
         fun y : ℝ => hughesYoungDyadicCutoff (X⁻¹ * y) by
       funext y
       simp only [hughesYoungDyadicCutoffAt]
-      ring]
+      ring_nf]
     exact hformula
   rw [hcutFormula, norm_mul, Real.norm_eq_abs, abs_pow, abs_inv,
     abs_of_pos hX]
@@ -859,7 +859,7 @@ theorem iteratedDeriv_real_log_succ
       rw [hderiv.deriv]
       push_cast
       norm_num [pow_succ, Nat.factorial_succ]
-      ring
+      ring_nf
 
 /-- On the positive fixed-shift range, Hughes--Young's phase is the
 difference of two logarithms. -/
@@ -1201,7 +1201,7 @@ theorem exists_norm_Gamma_quarter_horizontal_shift_le :
       Real.exp (C * d * Real.log (|z.im| + 2))
   convert hgronwall using 1
   all_goals simp only [f, ofReal_zero, add_zero, K]
-  all_goals ring
+  all_goals ring_nf
 
 /-- Deligne's real Gamma factor inherits the small horizontal-shift bound.
 This is the archimedean estimate used when the opened Hughes--Young pair is
@@ -1713,7 +1713,7 @@ theorem exists_norm_hughesYoungRightContourWeight_shift_le :
           rw [← Real.exp_add]
         _ = _ := by
           congr 2
-          ring
+          ring_nf
 
 /-- On the physical-height support the only occurrence of the height variable
 in the small-line bound may be replaced by the common dyadic height `T`.
@@ -3009,6 +3009,7 @@ theorem hughesYoungDFICore_eq_normalization_mul_normalized
   have hS := hughesYoungDFINormalization_pos u hA
   field_simp [hS.ne']
 
+/-- The `hughesYoungUniformDFIProfile` definition used by the source-facing construction in `HughesYoungDFIProfile`. -/
 noncomputable def hughesYoungUniformDFIProfile
     (Ccut : ℕ → ℝ) (i j : ℕ) : ℝ :=
   9 * hughesYoungGaussianOneFactorProfile Ccut i *

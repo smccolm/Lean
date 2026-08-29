@@ -7,13 +7,16 @@ open scoped ContDiff
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `dfiLocalizedWeight` definition used by the source-facing construction in `DFIEquation21`. -/
 noncomputable def dfiLocalizedWeight
     (f : ℝ → ℝ → ℂ) (φ : ℝ → ℂ) (h : ℝ) (x y : ℝ) : ℂ :=
   f x y * φ (x - y - h)
 
+/-- The `dfiPartialY` definition used by the source-facing construction in `DFIEquation21`. -/
 noncomputable def dfiPartialY (n : ℕ) (g : ℝ × ℝ → ℂ) : ℝ × ℝ → ℂ :=
   n.rec g (fun _ prior p => fderiv ℝ prior p (0, 1))
 
+/-- The `dfiPartialX` definition used by the source-facing construction in `DFIEquation21`. -/
 noncomputable def dfiPartialX (n : ℕ) (g : ℝ × ℝ → ℂ) : ℝ × ℝ → ℂ :=
   n.rec g (fun _ prior p => fderiv ℝ prior p (1, 0))
 
@@ -163,7 +166,7 @@ theorem iteratedDeriv_difference_cutoff_y
     congr 1
     ring
   rw [hfun, iteratedDeriv_comp_const_sub]
-  ring
+  ring_nf
 
 theorem iteratedDeriv_difference_cutoff_x
     (φ : ℝ → ℂ) (h y x : ℝ) (i : ℕ) :
@@ -175,7 +178,7 @@ theorem iteratedDeriv_difference_cutoff_x
     congr 1
     ring
   rw [hfun, iteratedDeriv_comp_sub_const]
-  ring
+  ring_nf
 
 theorem iteratedDeriv_iteratedDeriv (m n : ℕ) (φ : ℝ → ℂ) (x : ℝ) :
     iteratedDeriv m (iteratedDeriv n φ) x = iteratedDeriv (m + n) φ x := by
@@ -402,6 +405,7 @@ theorem DFIRedundantCutoff.exists_profile
   choose D hD hbound using hφ.derivativeBound
   exact ⟨D, hD, hbound⟩
 
+/-- The `dfiCutoffFiniteConstant` definition used by the source-facing construction in `DFIEquation21`. -/
 noncomputable def dfiCutoffFiniteConstant (D : ℕ → ℝ) (J : ℕ) : ℝ :=
   ∑ k ∈ Finset.range (J + 1), D k
 

@@ -17,6 +17,7 @@ decomposition of the source fourth-moment integrand; no estimate is used in
 this layer.
 -/
 
+/-- The `hughesYoungMollifierPairTerm` definition used by the source-facing construction in `HughesYoungActiveGlobal`. -/
 noncomputable def hughesYoungMollifierPairTerm
     (T t : ℝ) (h k : ℕ) : ℂ :=
   shortMobiusSquareCoeff T h * (h : ℂ) ^ (-afeCriticalPoint t) *
@@ -103,6 +104,7 @@ theorem aestronglyMeasurable_hughesYoungActiveWholeHighRemainder
   unfold hughesYoungActiveWholeHighRemainder
   exact hF.aestronglyMeasurable.integral_prod_right'
 
+/-- The `hughesYoungActiveWholeTwistedIntegrand` definition used by the source-facing construction in `HughesYoungActiveGlobal`. -/
 noncomputable def hughesYoungActiveWholeTwistedIntegrand
     (T : ℝ) (R K : ℕ) (t : ℝ) : ℂ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -111,6 +113,7 @@ noncomputable def hughesYoungActiveWholeTwistedIntegrand
         hughesYoungActiveWholeSmall T
           (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K t
 
+/-- The `hughesYoungActiveWholeTwistedRemainder` definition used by the source-facing construction in `HughesYoungActiveGlobal`. -/
 noncomputable def hughesYoungActiveWholeTwistedRemainder
     (q : ℕ) (T : ℝ) (R K : ℕ) (t : ℝ) : ℂ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -324,11 +327,13 @@ theorem ofReal_twistedZetaMomentIntegrand_eq_active_add_remainder
     _ = _ := by
       simp_rw [Finset.sum_add_distrib]
 
+/-- The `hughesYoungActiveWholeSmoothedRemainder` definition used by the source-facing construction in `HughesYoungActiveGlobal`. -/
 noncomputable def hughesYoungActiveWholeSmoothedRemainder
     (q : ℕ) (T : ℝ) (R K : ℕ) : ℂ :=
   ∫ t : ℝ, (hughesYoungHeightWeight T t : ℂ) *
     hughesYoungActiveWholeTwistedRemainder q T R K t
 
+/-- The `hughesYoungActiveWholeSmoothedMoment` definition used by the source-facing construction in `HughesYoungActiveGlobal`. -/
 noncomputable def hughesYoungActiveWholeSmoothedMoment
     (T : ℝ) (R K : ℕ) : ℂ :=
   ∫ t : ℝ, (hughesYoungHeightWeight T t : ℂ) *

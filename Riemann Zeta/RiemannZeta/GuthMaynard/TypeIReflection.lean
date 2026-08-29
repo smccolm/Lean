@@ -1188,6 +1188,7 @@ private theorem hasCompactSupport_typeINormalizedKernel (σ t : ℝ) :
       exact hx ⟨le_of_not_ge hhalf, le_of_not_ge htwo⟩
   simp [typeINormalizedKernel, typeINormalizedAmplitude, hcut]
 
+/-- The `typeINormalizedKernelSchwartz` definition used by the source-facing construction in `TypeIReflection`. -/
 noncomputable def typeINormalizedKernelSchwartz (σ t : ℝ) : 𝓢(ℝ, ℂ) :=
   (hasCompactSupport_typeINormalizedKernel σ t).toSchwartzMap
     (contDiff_typeINormalizedKernel σ t)
@@ -1196,6 +1197,7 @@ noncomputable def typeINormalizedKernelSchwartz (σ t : ℝ) : 𝓢(ℝ, ℂ) :=
 theorem typeINormalizedKernelSchwartz_apply (σ t x : ℝ) :
     typeINormalizedKernelSchwartz σ t x = typeINormalizedKernel σ t x := rfl
 
+/-- The `typeINormalizedFourier` definition used by the source-facing construction in `TypeIReflection`. -/
 noncomputable def typeINormalizedFourier (σ t ξ : ℝ) : ℂ :=
   𝓕 (typeINormalizedKernelSchwartz σ t) ξ
 
@@ -1824,6 +1826,7 @@ theorem typeINormalizedFarTail_bound_order (σ : ℝ) (n : ℕ) :
 
 /-! ## Exact scaled Poisson assembly -/
 
+/-- The `typeINormalizedScaledKernel` definition used by the source-facing construction in `TypeIReflection`. -/
 noncomputable def typeINormalizedScaledKernel
     (σ t Q x : ℝ) : ℂ :=
   typeINormalizedKernel σ t (x / Q)
@@ -1857,6 +1860,7 @@ private theorem hasCompactSupport_typeINormalizedScaledKernel
   simp [typeINormalizedScaledKernel, typeINormalizedKernel,
     typeINormalizedAmplitude, hcut]
 
+/-- The `typeINormalizedScaledKernelSchwartz` definition used by the source-facing construction in `TypeIReflection`. -/
 noncomputable def typeINormalizedScaledKernelSchwartz
     (σ t Q : ℝ) (hQ : 0 < Q) : 𝓢(ℝ, ℂ) :=
   (hasCompactSupport_typeINormalizedScaledKernel σ t Q hQ).toSchwartzMap

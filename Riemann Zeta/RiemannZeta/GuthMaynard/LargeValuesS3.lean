@@ -2531,6 +2531,7 @@ theorem hasCompactSupport_gmCubicCutoffSq (cutoff : GMSmoothCutoff) :
     exact hz (cutoff.support hne)
   simp [gmCubicCutoffSq, hcut]
 
+/-- The `gmCubicCutoffSqSchwartz` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicCutoffSqSchwartz (cutoff : GMSmoothCutoff) :
     𝓢(ℝ, ℂ) :=
   (hasCompactSupport_gmCubicCutoffSq cutoff).toSchwartzMap
@@ -2556,6 +2557,7 @@ theorem hasCompactSupport_gmCubicBaseWeight (cutoff : GMSmoothCutoff) :
     HasCompactSupport (gmCubicBaseWeight cutoff) := by
   apply (hasCompactSupport_gmCubicCutoffSq cutoff).mul_left
 
+/-- The `gmCubicBaseWeightSchwartz` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicBaseWeightSchwartz (cutoff : GMSmoothCutoff) :
     𝓢(ℝ, ℂ) :=
   (hasCompactSupport_gmCubicBaseWeight cutoff).toSchwartzMap
@@ -3229,12 +3231,14 @@ theorem gmCubicS3RatioIntegral_eq_fourierIntegral
 
 /-! ## Proposition 7.1: cancellation-slab localization -/
 
+/-- The `gmCubicRatioSquare` definition used by the source-facing construction in `LargeValuesS3`. -/
 def gmCubicRatioSquare : Set (ℝ × ℝ) :=
   Set.Icc (1 / 2 : ℝ) 2 ×ˢ Set.Icc (1 / 2 : ℝ) 2
 
 theorem measurableSet_gmCubicRatioSquare : MeasurableSet gmCubicRatioSquare :=
   measurableSet_Icc.prod measurableSet_Icc
 
+/-- The `gmCubicCancellationSlab` definition used by the source-facing construction in `LargeValuesS3`. -/
 def gmCubicCancellationSlab (η T : ℝ) (N : ℕ)
     (m : ℤ × (ℤ × ℤ)) : Set (ℝ × ℝ) :=
   gmCubicRatioSquare ∩
@@ -3250,6 +3254,7 @@ theorem measurableSet_gmCubicCancellationSlab
       (continuous_const.mul continuous_snd)).add continuous_const).abs.measurable
     measurable_const
 
+/-- The `gmCubicFourierIntegrand` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicFourierIntegrand (cutoff : GMSmoothCutoff)
     (N : ℕ) (W : Finset ℝ) (m : ℤ × (ℤ × ℤ)) (q : ℝ × ℝ) : ℂ :=
   gmCubicZFourier cutoff q.1 q.2
@@ -3349,6 +3354,7 @@ theorem integrableOn_gmCubicRAmplitude_ratioSquare (W : Finset ℝ) :
   (continuousOn_gmCubicRAmplitude W).integrableOn_compact
     (isCompact_Icc.prod isCompact_Icc)
 
+/-- The `gmCubicCancellationMass` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicCancellationMass (η T : ℝ) (N : ℕ)
     (W : Finset ℝ) (m : ℤ × (ℤ × ℤ)) : ℝ :=
   ∫ q in gmCubicCancellationSlab η T N m, gmCubicRAmplitude W q
@@ -6063,6 +6069,7 @@ theorem gmCubicLocalBump_eq_zero_of_two_le_abs
   rw [habs] at hsupp
   linarith
 
+/-- The `gmCubicSmoothingSupport` definition used by the source-facing construction in `LargeValuesS3`. -/
 def gmCubicSmoothingSupport (B v : ℝ) : Set ℝ :=
   Set.Icc (v - 2 / B) (v + 2 / B) ∩ Set.Icc (1 / 8 : ℝ) (33 / 8)
 
@@ -6256,6 +6263,7 @@ theorem gmCubicSmoothedRSq_sq_le_localFourth
       dsimp only [f, s, B]
       field_simp [hB.ne']
 
+/-- The `gmCubicSmoothingIncidence` definition used by the source-facing construction in `LargeValuesS3`. -/
 def gmCubicSmoothingIncidence (B : ℝ) : Set (ℝ × ℝ) :=
   {p | p.2 ∈ gmCubicSmoothingSupport B p.1}
 
@@ -6279,6 +6287,7 @@ theorem measurableSet_gmCubicSmoothingIncidence (B : ℝ) :
         (1 / 8 ≤ p.2 ∧ p.2 ≤ 33 / 8)} := (h₁.inter h₂).inter (h₃.inter h₄)
   simpa [gmCubicSmoothingIncidence, gmCubicSmoothingSupport] using h
 
+/-- The `gmCubicLocalFourthKernel` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicLocalFourthKernel
     (B : ℝ) (W : Finset ℝ) (p : ℝ × ℝ) : ℝ :=
   (gmCubicSmoothingIncidence B).indicator (fun q => ‖gmR W q.2‖ ^ 4) p
@@ -7377,6 +7386,7 @@ theorem gmCubicSmoothedModeIntegral_dyadic_simplified_le
 
 /-! ### Exact dyadic mode count -/
 
+/-- The `gmCubicDyadicBoundingBox` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicDyadicBoundingBox (r s : ℕ) :
     Finset (ℤ × (ℤ × ℤ)) :=
   let A : ℕ := 2 ^ (r + 1)
@@ -7578,10 +7588,12 @@ theorem sum_gmCubicSmoothedModeIntegral_dyadic_scale_le
     _ = _ := by
       dsimp only [B, L, G]
 
+/-- The `gmCubicL2Constant` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicL2Constant (ε : ℝ) : ℝ :=
   2 * (|Real.log 2 - Real.log (1 / 2 : ℝ)| +
     4 * (1 + ε⁻¹) * 2 ^ ε)
 
+/-- The `gmCubicFourthConstant` definition used by the source-facing construction in `LargeValuesS3`. -/
 noncomputable def gmCubicFourthConstant (ε : ℝ) : ℝ :=
   66 * (4 * |Real.log (33 / 8 : ℝ) - Real.log (1 / 8 : ℝ)| +
     8 * (1 + ε⁻¹) * 3 ^ ε)

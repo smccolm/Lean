@@ -296,6 +296,7 @@ theorem abs_log_le_two_mul_abs_sub_one
       nlinarith
     linarith
 
+/-- The `gmCubicCoherenceRadius` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicCoherenceRadius (T : ℝ) : ℝ := 1 / (16 * T)
 
 theorem gmCubicCoherenceRadius_pos {T : ℝ} (hT : 0 < T) :
@@ -401,6 +402,7 @@ theorem card_sq_div_sixteen_mul_le_integral_gmCubicRWeightSchwartz
 
 /-! ### Uniform derivatives of the compact Mellin source -/
 
+/-- The `gmCubicRatioBumpComplexFunction` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicRatioBumpComplexFunction (u : ℝ) : ℂ :=
   gmCubicRatioBump u
 
@@ -416,6 +418,7 @@ theorem hasCompactSupport_gmCubicRatioBumpComplexFunction :
   simp [gmCubicRatioBumpComplexFunction,
     gmCubicRatioBump_eq_zero_of_not_mem_Icc hu]
 
+/-- The `gmCubicRatioBumpComplexSchwartz` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicRatioBumpComplexSchwartz : SchwartzMap ℝ ℂ :=
   hasCompactSupport_gmCubicRatioBumpComplexFunction.toSchwartzMap
     contDiff_gmCubicRatioBumpComplexFunction
@@ -424,6 +427,7 @@ noncomputable def gmCubicRatioBumpComplexSchwartz : SchwartzMap ℝ ℂ :=
 theorem gmCubicRatioBumpComplexSchwartz_apply (u : ℝ) :
     gmCubicRatioBumpComplexSchwartz u = gmCubicRatioBump u := rfl
 
+/-- The `gmCubicPairMellinAtom` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicPairMellinAtom (d u : ℝ) : ℂ :=
   gmCubicRatioBumpComplexFunction u * (u : ℂ) ^ ((d : ℂ) * I)
 
@@ -517,6 +521,7 @@ theorem gmCubicMellinDerivativePower_le
       dsimp only [B]
       rw [mul_pow]
 
+/-- The `gmCubicPairMellinDerivativeConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicPairMellinDerivativeConstant (n : ℕ) : ℝ :=
   ∑ i ∈ Finset.range (n + 1),
     (n.choose i : ℝ) *
@@ -790,6 +795,7 @@ theorem integral_norm_iteratedFDeriv_gmAffineComplexify_cubicRWeight_le
           (2 * T) ^ p * W.card ^ 2) := by
       norm_num [max_eq_left]
 
+/-- The `gmCubicRWeightFourierConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicRWeightFourierConstant (n : ℕ) : ℝ :=
   2 ^ n * ∑ p ∈ Finset.range (n + 1),
     4 * gmCubicPairMellinDerivativeConstant p * 2 ^ p
@@ -951,6 +957,7 @@ theorem gmCubicPreSmoothingWindow_eq_zero_of_not_mem_Icc
   rcases abs_lt.mp hsupp with ⟨hleft, hright⟩
   constructor <;> linarith
 
+/-- The `gmCubicPreSmoothingWindowComplexFunction` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicPreSmoothingWindowComplexFunction (u : ℝ) : ℂ :=
   gmCubicPreSmoothingWindow u
 
@@ -966,6 +973,7 @@ theorem hasCompactSupport_gmCubicPreSmoothingWindowComplexFunction :
   simp [gmCubicPreSmoothingWindowComplexFunction,
     gmCubicPreSmoothingWindow_eq_zero_of_not_mem_Icc hu]
 
+/-- The `gmCubicPreSmoothingWindowComplexSchwartz` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicPreSmoothingWindowComplexSchwartz : SchwartzMap ℝ ℂ :=
   hasCompactSupport_gmCubicPreSmoothingWindowComplexFunction.toSchwartzMap
     contDiff_gmCubicPreSmoothingWindowComplexFunction
@@ -975,6 +983,7 @@ theorem gmCubicPreSmoothingWindowComplexSchwartz_apply (u : ℝ) :
     gmCubicPreSmoothingWindowComplexSchwartz u =
       gmCubicPreSmoothingWindow u := rfl
 
+/-- The `gmCubicTruncatedRWeightFunction` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicTruncatedRWeightFunction
     (W : Finset ℝ) (u : ℝ) : ℝ :=
   gmCubicPreSmoothingWindow u * gmCubicRWeightSchwartz W u
@@ -992,6 +1001,7 @@ theorem hasCompactSupport_gmCubicTruncatedRWeightFunction (W : Finset ℝ) :
   simp [gmCubicTruncatedRWeightFunction,
     gmCubicPreSmoothingWindow_eq_zero_of_not_mem_Icc hu]
 
+/-- The `gmCubicTruncatedRWeightSchwartz` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicTruncatedRWeightSchwartz
     (W : Finset ℝ) : SchwartzMap ℝ ℝ :=
   (hasCompactSupport_gmCubicTruncatedRWeightFunction W).toSchwartzMap
@@ -1019,6 +1029,7 @@ theorem gmAffineComplexify_truncatedRWeight_eq_mul (W : Finset ℝ) :
   push_cast
   rfl
 
+/-- The `gmCubicTruncatedRWeightDerivativeConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicTruncatedRWeightDerivativeConstant (n : ℕ) : ℝ :=
   ∑ i ∈ Finset.range (n + 1),
     (n.choose i : ℝ) *
@@ -1258,6 +1269,7 @@ theorem integral_norm_iteratedFDeriv_gmAffineComplexify_truncatedRWeight_le
             (pow_nonneg (by linarith) p))
           (sq_nonneg (W.card : ℝ)))
 
+/-- The `gmCubicTruncatedRWeightFourierConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicTruncatedRWeightFourierConstant (n : ℕ) : ℝ :=
   2 ^ n * ∑ p ∈ Finset.range (n + 1),
     2 * gmCubicTruncatedRWeightDerivativeConstant p * 2 ^ p
@@ -1384,6 +1396,9 @@ theorem card_sq_le_sixteen_mul_T_mul_integral_gmCubicTruncatedRWeightSchwartz
         (∫ u : ℝ, gmCubicTruncatedRWeightSchwartz W u) * (16 * T) := hmass
     _ = 16 * T * ∫ u : ℝ, gmCubicTruncatedRWeightSchwartz W u := by ring
 
+/-- The `gmCubicTruncatedHeightProfileConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def gmCubicTruncatedHeightProfileConstant
     (_epsilon : ℝ) (n : ℕ) : ℝ :=
   16 * gmCubicTruncatedRWeightFourierConstant n
@@ -1465,6 +1480,9 @@ theorem gmCubicNativeAffineSourceSchwartz_nonneg
     (gmCubicTruncatedRWeightSchwartz W)
     (gmCubicTruncatedRWeightSchwartz_nonneg W) u
 
+/-- The `gmCubicNativeHeightProfileConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def gmCubicNativeHeightProfileConstant
     (_epsilon : ℝ) (n : ℕ) : ℝ :=
   32 * gmCubicTruncatedRWeightFourierConstant n
@@ -1823,6 +1841,7 @@ theorem setIntegral_norm_gmR_sq_wide_eq_logWeighted (W : Finset ℝ) :
     ← intervalIntegral.integral_of_le (by norm_num : (1 / 8 : ℝ) ≤ 33 / 8)]
   simpa only [a, b] using hsub'.symm
 
+/-- The `gmCubicWideL2Constant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicWideL2Constant (ε : ℝ) : ℝ :=
   (33 / 8) *
     (|Real.log (33 / 8 : ℝ) - Real.log (1 / 8 : ℝ)| +
@@ -1890,6 +1909,7 @@ theorem setIntegral_norm_gmR_sq_wide_le_epsilon_budget
       dsimp only [gmCubicWideL2Constant, A, D, X, a, b]
       ring
 
+/-- The `gmCubicWideFourthConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicWideFourthConstant (ε : ℝ) : ℝ :=
   (33 / 8) *
     (4 * |Real.log (33 / 8 : ℝ) - Real.log (1 / 8 : ℝ)| +
@@ -1975,6 +1995,9 @@ theorem card_sq_le_fortyeight_mul_T_mul_integral_normalizedRWeight
   convert hbase using 1
   ring
 
+/-- The `gmCubicNormalizedHeightProfileConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def gmCubicNormalizedHeightProfileConstant
     (_epsilon : ℝ) (n : ℕ) : ℝ :=
   48 * 3 ^ n * gmCubicRWeightFourierConstant n
@@ -2163,6 +2186,9 @@ theorem gmCubicNormalizedAffineSource_eq_original
   change 3 * ((1 / 3 : ℝ) * ∫ x : ℝ, q x) = ∫ x : ℝ, q x
   ring
 
+/-- The `gmCubicNormalizedNativeHeightProfileConstant` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def gmCubicNormalizedNativeHeightProfileConstant
     (_epsilon : ℝ) (n : ℕ) : ℝ :=
   96 * 3 ^ n * gmCubicRWeightFourierConstant n
@@ -2408,13 +2434,16 @@ theorem abs_reflectedTriple_central_le
     _ = 16 * |(m.1 : ℝ)| + 11 * |(m.2.1 : ℝ)| := by
       simp [abs_mul]
 
+/-- The `gmCubicDirectAffineScales` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 def gmCubicDirectAffineScales (r s : ℕ) : ℕ × (ℕ × ℕ) :=
   (16 * 2 ^ r, 48 * 2 ^ s, 24 * 2 ^ s)
 
+/-- The `gmCubicReflectedAffineScales` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 def gmCubicReflectedAffineScales
     (m : ℤ × (ℤ × ℤ)) (s : ℕ) : ℕ × (ℕ × ℕ) :=
   (16 * 2 ^ (Nat.log 2 m.2.2.natAbs), 48 * 2 ^ s, 24 * 2 ^ s)
 
+/-- The `gmCubicAffineTerminalScale` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 def gmCubicAffineTerminalScale (s : ℕ) : ℕ := 128 * 2 ^ s
 
 theorem gmCubicNormalizedDirectTriple_mem_indexSet
@@ -2615,10 +2644,12 @@ theorem gmCubicReflectedAffineScales_mem_terminal
 
 /-! ## Two-sign injective reindexing of a selected frequency block -/
 
+/-- The `gmCubicPositiveDenominatorBlock` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicPositiveDenominatorBlock (H r s : ℕ) :
     Finset (ℤ × (ℤ × ℤ)) :=
   (gmCubicDyadicFrequencyBlock H r s).filter fun m => 0 < m.2.1
 
+/-- The `gmCubicNegativeDenominatorBlock` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicNegativeDenominatorBlock (H r s : ℕ) :
     Finset (ℤ × (ℤ × ℤ)) :=
   (gmCubicDyadicFrequencyBlock H r s).filter fun m => m.2.1 < 0
@@ -2873,12 +2904,14 @@ theorem log_natAbs_third_mem_Icc_of_mem_dyadicBlock
     omega
   exact Finset.mem_Icc.mpr ⟨hsLower, hsUpper⟩
 
+/-- The `gmCubicReflectedAffineIndexSet` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicReflectedAffineIndexSet (s : ℕ) :
     Finset (ℕ × (ℤ × (ℤ × ℤ))) :=
   (Finset.Icc s (s + 3)).biUnion fun q =>
     (gmAffineIndexSet (16 * 2 ^ q) (48 * 2 ^ s) (24 * 2 ^ s)).image
       fun p => (q, p)
 
+/-- The `gmCubicReflectedAffineAggregate` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicReflectedAffineAggregate
     (f : ℝ → ℝ) (s : ℕ) (u : ℝ) : ℝ :=
   ∑ qp ∈ gmCubicReflectedAffineIndexSet s,
@@ -3166,6 +3199,7 @@ theorem setIntegral_sq_gmCubicReflectedAffineAggregate_inv_le_sixtyfour_J
       gcongr
     _ = 64 * gmAffineJ f (gmCubicAffineTerminalScale s) := by ring
 
+/-- The `gmCubicSelectedSmoothedBlock` definition used by the source-facing construction in `LargeValuesS3Refined`. -/
 noncomputable def gmCubicSelectedSmoothedBlock
     (η T : ℝ) (N M H r s : ℕ) (W : Finset ℝ) (u : ℝ) : ℝ :=
   ∑ m ∈ gmCubicDyadicFrequencyBlock H r s,

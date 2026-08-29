@@ -17,6 +17,7 @@ is reconstructed by the finite collection of equation-(69) boxes whose
 physical scale product is at most `a*b*R`.
 -/
 
+/-- The `hughesYoungActiveDyadicBoxes` definition used by the source-facing construction in `HughesYoungActiveDyadic`. -/
 noncomputable def hughesYoungActiveDyadicBoxes
     (a b R K : ℕ) : Finset (ℕ × ℕ) :=
   ((Finset.range (K + 2)).product (Finset.range (K + 2))).filter
@@ -31,6 +32,7 @@ theorem card_hughesYoungActiveDyadicBoxes_le (a b R K : ℕ) :
   apply (Finset.card_filter_le _ _).trans_eq
   simp [pow_two]
 
+/-- The `hughesYoungActiveDyadicWeight` definition used by the source-facing construction in `HughesYoungActiveDyadic`. -/
 noncomputable def hughesYoungActiveDyadicWeight
     (a b R K m n : ℕ) : ℝ :=
   ∑ ij ∈ hughesYoungActiveDyadicBoxes a b R K,
@@ -364,6 +366,7 @@ theorem norm_hughesYoungActiveHighPairRemainder_le
               rw [tsum_mul_left]
               rfl)
 
+/-- The `hughesYoungFullDyadicHighPairTerm` definition used by the source-facing construction in `HughesYoungActiveDyadic`. -/
 noncomputable def hughesYoungFullDyadicHighPairTerm
     (q a b i j : ℕ) (t u : ℝ) (p : ℕ × ℕ) : ℂ :=
   (hughesYoungFullDyadicCutoff i ((a * p.1 : ℕ) : ℝ) : ℂ) *

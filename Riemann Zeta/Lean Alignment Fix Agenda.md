@@ -19,7 +19,7 @@ Deleting or downgrading an invalid theorem may restore integrity, but it does no
 
 All non-negotiable **internal proof** conditions below now pass. `NativeZeroDensity.lean` proves `ingham_zero_density_native`, `huxley_zero_density_native`, `guthMaynardZeroDensity_of_largeValues_native`, `guthMaynardZeroDensity_native`, and `combined_zero_density_native`. The conditional theorem consumes the ten actual native transfer inputs; the hypothesis-free project specialization supplies `guthMaynardLargeValues_native`; and the combined theorem consumes the native Ingham bound.
 
-The root graph now includes both formerly detached Hughes–Young modules and the final density module. The runner separately elaborates both retained top-level regression examples. `RiemannZeta/Audit.lean` synchronizes 7630 explicit and discovered source-level theorems, reports only `propext`, `Classical.choice`, and `Quot.sound`, and passes every #15/#18/#19 output gate. The post-cleanup run `logs/overall_proof_20260828_231911.log` records zero Lean warnings, clean prohibited-proof scans, and final `PASS`/`0` for its revision.
+The root graph now includes both formerly detached Hughes–Young modules, the final density module, and `PublicationContract.lean`. The canonical verifier classifies 301 root-graph modules and the two explicit audit/lint regressions, with zero exclusions or unclassified files. `RiemannZeta/Audit.lean` checks 7,636 explicitly registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations. It reports only `propext`, `Classical.choice`, and `Quot.sound` and passes the exact publication-contract and #15/#18/#19 output gates. `RiemannZeta/Lint.lean` runs all 16 default linters with zero findings.
 
 This audit establishes kernel checking and project integration. It does not establish independent semantic review, publication, community acceptance, or canonicalization. The adversarial source-to-Lean audit and claim controls are in [`Publication Readiness and Semantic Audit.md`](Publication%20Readiness%20and%20Semantic%20Audit.md).
 
@@ -38,6 +38,20 @@ The project owner has extended the completion contract beyond proof generation a
 | #20e Canonicalization | **Open — community process** | Natural refactoring, integration with neighboring theory, reuse, adoption, and recognition in standard references or libraries. |
 
 The DFI and Hughes--Young labels are narrowed accordingly: the public DFI theorem is the localized signed dyadic specialization consumed downstream, and `twistedZetaFourthMoment_native` is the mollifier-specific upper-bound input rather than the full Hughes--Young shifted asymptotic formula. These corrections do not reopen #18's stated consumer theorem, but they prohibit broader attribution.
+
+## GM Foundation Freeze Ledger — 29 August 2026
+
+This ledger is part of the existing #20 publication-readiness contract; it does not authorize PostGM work.
+
+| Freeze workstream | Status | Acceptance evidence |
+|---|---|---|
+| Exact publication contracts | **Complete internally** | `PublicationContract.lean` states and proves the displayed Guth–Maynard Theorem 1.1 contract, full-range Theorem 1.2, Ingham, Huxley, and combined `30/13` contracts. The low-range Theorem 1.2 proof consumes native Ingham and an explicit exponent comparison. |
+| Contract/filesystem audit | **Complete internally** | Exact-type gates prevent name-compatible weakening; all 303 project Lean modules are mechanically classified; the exhaustive theorem audit has no generated-name exclusion. |
+| Canonical quiet verifier | **Complete internally** | `scripts/verify_release.ps1` is shared by local and CI wrappers and fails on warnings, tactic suggestions, linter findings, proof escapes, contract mismatches, audit failures, and unclassified modules. |
+| Provenance and CI | **Complete as configuration; immutable remote artifact pending candidate push** | Release mode refuses dirty trees and records SHA, branch, paths, time/timezone, Lean/Lake/toolchain/dependencies, verifier hash, contract version, classifications, and stages. CI uses immutable action SHAs and a SHA-named artifact. |
+| Safe Git workflow | **Complete internally** | `push_to_github.bat` resolves the repository root, stages with `git add -A`, rejects empty messages, checks each command, and performs only non-force `git push origin main`. It has not been executed by the agent. |
+| Documentation/source freeze | **Complete internally, subject to final candidate evidence update** | Root/project README, comments, agendas, architecture, paper, semantic audit, citation metadata, and `verification/SOURCE_FREEZE.md` distinguish internal proof integrity from external review/publication/canonicalization. |
+| Clean-clone tagged release | **Pending final release gate** | Requires a committed candidate, a fresh-clone release-mode PASS, an exact local tag, and the SHA-bound CI artifact after the owner pushes. |
 
 ## Non-Negotiable Completion Conditions
 
@@ -150,7 +164,7 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 | 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
 | 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
 | 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
-| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed and extended:** transitive checks now synchronize all 7630 source-level theorems and every research-output gate passes. | Easy–moderate—complete |
+| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed and extended:** transitive checks cover 7,636 registered public declarations and all 14,290 discovered nonprivate theorems, including generated declarations; every publication/research-output gate passes. | Easy–moderate—complete |
 | 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | ~~Warning-producing files and `run_lake_build.bat`~~ | **Completed and extended:** four conceptual runner stages cover the root, explicit production modules, every retained top-level file, and the full audit; all warning and integrity gates pass. | Easy–moderate—complete |
 | 9 | ~~`RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed after re-audit 8 August 2026:** proved full-divisor-cardinality bounds independent of `T` and derived `UniformDetectorCoeffBoundProp` from the exact classical `DivisorCountBoundProp`. | Moderate—integrity/source reduction complete; divisor theorem remains Goal C |

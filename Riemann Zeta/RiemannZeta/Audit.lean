@@ -14,11 +14,11 @@ production modules imported above. `runDependencyAudit` computes each theorem's
 transitive axioms with `Lean.collectAxioms` and rejects every dependency except
 Lean's standard logical axioms.
 
-The synchronization check also rejects a newly exported project theorem until it
-is deliberately added to the explicit list. Compiler-generated equation and proof
-theorems are excluded from that public-source check.  A separate named-output
-gate prevents a clean subset of the development from being presented as the
-completed research agenda while required end theorems are absent.
+The explicit list records the intentionally public source surface.  In addition,
+the executable audit traverses every nonprivate theorem in every imported project
+module, including compiler-generated equation and proof theorems.  Nothing is
+excluded by name substring.  A separate exact-type gate prevents a declaration
+with the expected name but a weaker statement from satisfying the release check.
 -/
 
 /-- Standard Lean/Mathlib logical axioms permitted by the project policy. -/
@@ -7687,6 +7687,12 @@ def auditedDeclarations : Array Name := #[
   ``RiemannZeta.GuthMaynard.norm_hughesYoungCPrimeFactor_zero_le,
   ``RiemannZeta.GuthMaynard.norm_hughesYoungC_zero_le_divisorsCard_pow_four,
   ``RiemannZeta.GuthMaynard.norm_hughesYoungEquation96VerticalTerm_mul_logSelectors_le_coprime,
+  ``RiemannZeta.GuthMaynard.guthMaynardLargeValues_published_native,
+  ``RiemannZeta.GuthMaynard.ingham_exponent_le_guthMaynard_exponent,
+  ``RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native,
+  ``RiemannZeta.GuthMaynard.inghamZeroDensity_published_native,
+  ``RiemannZeta.GuthMaynard.huxleyZeroDensity_published_native,
+  ``RiemannZeta.GuthMaynard.combinedZeroDensity_published_native,
 ]
 
 /-- The number printed by the audit, derived directly from its explicit list. -/
@@ -7711,13 +7717,13 @@ def requiredResearchOutputs : Array (Nat × Name) := #[
   (19, `RiemannZeta.GuthMaynard.guthMaynardLargeValues_native),
   (19, `RiemannZeta.GuthMaynard.gmQuantitativeSmoothReflection_native),
   (19, `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_native),
-  (19, `RiemannZeta.GuthMaynard.combined_zero_density_native)
+  (19, `RiemannZeta.GuthMaynard.combined_zero_density_native),
+  (20, `RiemannZeta.GuthMaynard.guthMaynardLargeValues_published_native),
+  (20, `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native),
+  (20, `RiemannZeta.GuthMaynard.inghamZeroDensity_published_native),
+  (20, `RiemannZeta.GuthMaynard.huxleyZeroDensity_published_native),
+  (20, `RiemannZeta.GuthMaynard.combinedZeroDensity_published_native)
 ]
-
-private def isCompilerGeneratedTheorem (name : Name) : Bool :=
-  let text := name.toString
-  text.contains "._proof_" || text.contains ".eq_" || text.contains "._simp_" ||
-    text.contains "._abel_" || text.contains ".congr_simp"
 
 /-- Vendored PNT+ modules are production proof infrastructure even though the
 upstream declarations intentionally extend root namespaces. -/
@@ -7740,9 +7746,31 @@ private def exportedProjectTheorems (env : Environment) : Array Name := Id.run d
   let mut names := #[]
   for (name, info) in env.constants.toList do
     if (name.getRoot == `RiemannZeta || isFromAuditedExternalModule env name) &&
-        info.isTheorem && !isPrivateName name && !isCompilerGeneratedTheorem name then
+        info.isTheorem && !isPrivateName name then
       names := names.push name
   return names.qsort Name.quickLt
+
+/- Compile-time exact-type gates.  If any named theorem is weakened, changes
+range, or switches away from the analytic-multiplicity count, this module no
+longer elaborates even though the declaration name still exists. -/
+example : RiemannZeta.GuthMaynard.PublishedGuthMaynardLargeValues :=
+  RiemannZeta.GuthMaynard.guthMaynardLargeValues_published_native
+
+example : RiemannZeta.GuthMaynard.PublishedGuthMaynardZeroDensity
+    (fun sigma T => RiemannZeta.GuthMaynard.N sigma T) :=
+  RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native
+
+example : RiemannZeta.GuthMaynard.PublishedInghamZeroDensity
+    (fun sigma T => RiemannZeta.GuthMaynard.N sigma T) :=
+  RiemannZeta.GuthMaynard.inghamZeroDensity_published_native
+
+example : RiemannZeta.GuthMaynard.PublishedHuxleyZeroDensity
+    (fun sigma T => RiemannZeta.GuthMaynard.N sigma T) :=
+  RiemannZeta.GuthMaynard.huxleyZeroDensity_published_native
+
+example : RiemannZeta.GuthMaynard.PublishedCombinedZeroDensity
+    (fun sigma T => RiemannZeta.GuthMaynard.N sigma T) :=
+  RiemannZeta.GuthMaynard.combinedZeroDensity_published_native
 
 /-- Execute the synchronized, transitive dependency audit. -/
 def runDependencyAudit : CoreM Unit := do
@@ -7751,14 +7779,9 @@ def runDependencyAudit : CoreM Unit := do
   let mut failures : Nat := 0
 
   logInfo m!"=== RIEMANN ZETA TRANSITIVE AXIOM AUDIT ==="
-  logInfo m!"Explicit declarations: {auditedDeclarationCount}"
-  logInfo m!"Discovered source-level theorems: {discovered.size}"
+  logInfo m!"Explicit public source declarations: {auditedDeclarationCount}"
+  logInfo m!"Discovered nonprivate project theorems (no generated-name exclusions): {discovered.size}"
   logInfo m!"Permitted axioms: {permittedAxioms}"
-
-  for name in discovered do
-    if !auditedDeclarations.contains name then
-      failures := failures + 1
-      logInfo m!"FAIL [unlisted theorem] {name}"
 
   for name in auditedDeclarations do
     if !discovered.contains name then
@@ -7771,17 +7794,17 @@ def runDependencyAudit : CoreM Unit := do
       failures := failures + 1
       logInfo m!"FAIL [duplicate audit entry] {name}"
 
-  for name in auditedDeclarations do
-    if discovered.contains name then
-      let axioms ← Lean.collectAxioms name
-      let forbidden := axioms.filter fun axiomName => !permittedAxioms.contains axiomName
-      if forbidden.isEmpty then
-        logInfo m!"PASS {name}: {axioms}"
-      else
-        failures := failures + 1
-        logInfo m!"FAIL {name}: forbidden dependencies {forbidden}; all axioms {axioms}"
+  for name in discovered do
+    let axioms ← Lean.collectAxioms name
+    let forbidden := axioms.filter fun axiomName => !permittedAxioms.contains axiomName
+    if forbidden.isEmpty then
+      logInfo m!"PASS {name}: {axioms}"
+    else
+      failures := failures + 1
+      logInfo m!"FAIL {name}: forbidden dependencies {forbidden}; all axioms {axioms}"
 
   logInfo m!"=== RESEARCH AGENDA OUTPUT GATE ==="
+  logInfo "PASS [exact publication types] all five source contracts elaborated at their frozen types"
   for (item, name) in requiredResearchOutputs do
     if env.contains name then
       match env.find? name with
@@ -7799,7 +7822,7 @@ def runDependencyAudit : CoreM Unit := do
       logInfo m!"FAIL [Shitlist #{item}] required theorem missing: {name}"
 
   if failures == 0 then
-    logInfo m!"AUDIT PASS: all {auditedDeclarationCount} declarations have permitted dependencies and every required research output exists."
+    logInfo m!"AUDIT PASS: all {discovered.size} discovered nonprivate project theorems have permitted dependencies; the explicit public list, exact publication types, and required outputs all pass."
   else
     throwError "AUDIT FAIL: {failures} dependency, synchronization, or required-output failure(s) across {auditedDeclarationCount} explicit declarations"
 
@@ -7808,5 +7831,10 @@ def runDependencyAudit : CoreM Unit := do
 #print axioms RiemannZeta.GuthMaynard.guthMaynardZeroDensity_of_largeValues_native
 #print axioms RiemannZeta.GuthMaynard.guthMaynardZeroDensity_native
 #print axioms RiemannZeta.GuthMaynard.combined_zero_density_native
+#print axioms RiemannZeta.GuthMaynard.guthMaynardLargeValues_published_native
+#print axioms RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native
+#print axioms RiemannZeta.GuthMaynard.inghamZeroDensity_published_native
+#print axioms RiemannZeta.GuthMaynard.huxleyZeroDensity_published_native
+#print axioms RiemannZeta.GuthMaynard.combinedZeroDensity_published_native
 
 #eval runDependencyAudit

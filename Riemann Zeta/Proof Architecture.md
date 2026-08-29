@@ -8,6 +8,10 @@ flowchart TD
     GMR["Guth-Maynard Sections 3-12<br/>AVAILABLE AS REFERENCE"]
     HBR["Heath-Brown 1979<br/>difference-set mean square<br/>AVAILABLE AS REFERENCE"]
 
+    PC["#20 Exact publication contracts<br/>DONE INTERNALLY<br/>GM Theorems 1.1 and 1.2, Ingham,<br/>Huxley and combined 30/13"]
+    FV["#20 Canonical foundation verifier<br/>DONE INTERNALLY<br/>303/303 modules classified, exact-type audit,<br/>zero diagnostics and immutable CI pins"]
+    LR["#20 Clean-clone release evidence<br/>OPEN - RELEASE GATE<br/>commit, release-mode fresh-clone PASS,<br/>exact tag and SHA-bound CI artifact"]
+
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
     CF["Mollifier and contour foundations<br/>DONE"]
@@ -53,7 +57,7 @@ flowchart TD
 
     DR["#19 Delete false decoupling contracts<br/>DONE<br/>file, contracts and both axioms removed"]
     SF["#19 Source-facing finite definitions<br/>DONE<br/>affine reindexing, scaling and<br/>seven-bin exact-energy bridge proved"]
-    EC["#19 Source endpoint convention<br/>DONE<br/>published target is (N,2N];<br/>closed-interval compatibility also proved"]
+    EC["#19 Source endpoint convention<br/>DONE<br/>internal target is (N,2N];<br/>closed published-display bridge proved"]
     SM["#19 Source polynomial to smooth matrix<br/>DONE<br/>exact three-piece localization,<br/>common one-third subfamily and matrix bound"]
     MX["#19 Sampling matrix and trace reduction<br/>DONE<br/>exact Lemmas 4.1-4.2 and<br/>source-facing entry bridge"]
     PF["#19 Fourier/Poisson foundations<br/>DONE<br/>Schwartz kernels, zero-mode decay,<br/>dilation, Poisson and finite support"]
@@ -74,11 +78,11 @@ flowchart TD
     GZD["#19 Concrete GM zero density<br/>DONE<br/>conditional large-values consumer and<br/>unconditional native specialization"]
     CB["#15/#19 combined transfer<br/>DONE<br/>native Ingham and Guth-Maynard<br/>density inputs discharged"]
     CZD["#19 Combined zero density<br/>DONE<br/>exact native exponent 30(1-sigma)/13"]
-    IG["#19 Full dependency integrity<br/>DONE - INTERNAL GATE<br/>7630/7630 dependencies,<br/>zero warnings/project axioms"]
+    IG["#19/#20 Full dependency integrity<br/>DONE - INTERNAL GATE<br/>7636 registered and 14290 discovered theorems,<br/>zero warnings/project axioms"]
     VC["#19 Retained-file evaluation coverage<br/>DONE<br/>two retained top-level examples and<br/>complete production graph elaborated"]
     QA["#19 Final theorem integration<br/>DONE - KERNEL/PROJECT LAYER<br/>all five density outputs audited;<br/>principal runner PASS / 0"]
 
-    PR["#20 Publication-readiness package<br/>DONE INTERNALLY<br/>claim sheet, source crosswalk, exposition,<br/>dangerous bridges and reproduction guide"]
+    PR["#20 Publication-readiness package<br/>DONE INTERNALLY<br/>claim sheet, source freeze, crosswalk,<br/>exposition and reproduction guide"]
     XR["#20 Expert exposition review<br/>OPEN - EXTERNAL<br/>independent expert must test whether<br/>the proof can be explained and challenged"]
     SR["#20 Independent semantic review<br/>OPEN - EXTERNAL<br/>source statements, conventions and<br/>proof consumers require referee scrutiny"]
     PP["#20 Public preprint / peer review<br/>OPEN - EXTERNAL<br/>no upload, submission, acceptance or<br/>publication is claimed"]
@@ -252,9 +256,14 @@ flowchart TD
     GCS --> GZD
     GM --> GZD
 
+    GM --> PC
+    ZD --> PC
+    GZD --> PC
+
     ZD -->|Ingham| CB
     GZD --> CB
     CB --> CZD
+    CZD --> PC
 
     DR --> QA
     IG --> QA
@@ -265,18 +274,24 @@ flowchart TD
     BR --> QA
     GM --> QA
 
+    PC --> FV
+    IG --> FV
+    VC --> FV
+    FV --> LR
     QA --> PR
+    PC --> PR
     PR --> XR
     PR --> SR
     XR --> PP
     SR --> PP
     PP --> KN
 
+
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
     classDef conditional fill:#fff2bf,stroke:#9a6a00,color:#332500,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,ZD,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,TR,GCS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CT,CB,CZD,IG,VC,QA,PR done;
-    class XR,SR,PP,KN open;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,ZD,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,TR,GCS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CT,CB,CZD,IG,VC,QA,PR,PC,FV done;
+    class LR,XR,SR,PP,KN open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

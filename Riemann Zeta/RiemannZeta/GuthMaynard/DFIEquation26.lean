@@ -93,6 +93,7 @@ theorem sum_moebius_gcd_indicator_complex (x q : ℕ) :
       if Nat.Coprime x q then 1 else 0 := by
   exact_mod_cast sum_moebius_gcd_indicator x q
 
+/-- The `zmodMultiplesEquiv` definition used by the source-facing construction in `DFIEquation26`. -/
 noncomputable def zmodMultiplesEquiv
     (q d : ℕ) [NeZero q] [NeZero (q / d)] (hd : d ∣ q) (hd0 : 0 < d) :
     ZMod (q / d) ≃ {x : ZMod q // d ∣ x.val} where

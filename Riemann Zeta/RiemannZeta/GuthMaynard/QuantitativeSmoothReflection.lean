@@ -756,9 +756,11 @@ the caller supplies a large epsilon. -/
 noncomputable def gmReflectionEta (ε : ℝ) : ℝ :=
   min (ε / 16) (1 / 16)
 
+/-- The `gmReflectionHeight` definition used by the source-facing construction in `QuantitativeSmoothReflection`. -/
 noncomputable def gmReflectionHeight (T ε : ℝ) : ℝ :=
   T ^ gmReflectionEta ε
 
+/-- The `gmReflectionLength` definition used by the source-facing construction in `QuantitativeSmoothReflection`. -/
 noncomputable def gmReflectionLength (T ε : ℝ) (N : ℕ) (t : ℝ) : ℕ :=
   Nat.ceil (((1 + |t|) * gmReflectionHeight T ε) / (N : ℝ))
 
@@ -823,6 +825,7 @@ theorem gmReflectionLength_upper {T ε t : ℝ} {N : ℕ}
   dsimp only [gmReflectionLength] at hCeil ⊢
   linarith [show (1 : ℝ) ≤ T ^ 2 by nlinarith]
 
+/-- The `gmReflectionDecayOrder` definition used by the source-facing construction in `QuantitativeSmoothReflection`. -/
 noncomputable def gmReflectionDecayOrder (A ε : ℝ) : ℕ :=
   Nat.ceil ((A + 6) / gmReflectionEta ε) + 2
 

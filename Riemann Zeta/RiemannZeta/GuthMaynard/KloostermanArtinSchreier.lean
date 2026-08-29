@@ -14,6 +14,7 @@ open scoped BigOperators
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `artinSchreierLinear` definition used by the source-facing construction in `KloostermanArtinSchreier`. -/
 noncomputable def artinSchreierLinear (p n : ℕ) [Fact p.Prime] :
     GaloisField p n →ₗ[ZMod p] GaloisField p n :=
   (FiniteField.frobeniusAlgHom (ZMod p) (GaloisField p n)).toLinearMap -
@@ -54,6 +55,7 @@ theorem artin_trace_zero (p n : ℕ) [Fact p.Prime] (hn : n ≠ 0)
       Finset.sum_range_sub (fun i => x ^ (p ^ i)) n
     _ = 0 := by rw [hxp]; simp
 
+/-- The `artinKernelMap` definition used by the source-facing construction in `KloostermanArtinSchreier`. -/
 noncomputable def artinKernelMap (p n : ℕ) [Fact p.Prime] :
     ZMod p →ₗ[ZMod p] (artinSchreierLinear p n).ker :=
   LinearMap.codRestrict (artinSchreierLinear p n).ker
@@ -84,6 +86,7 @@ theorem artinKernelMap_bijective (p n : ℕ) [Fact p.Prime] :
     change algebraMap (ZMod p) (GaloisField p n) (z : ZMod p) = x
     simpa using hz
 
+/-- The `artinKernelEquiv` definition used by the source-facing construction in `KloostermanArtinSchreier`. -/
 noncomputable def artinKernelEquiv (p n : ℕ) [Fact p.Prime] :
     ZMod p ≃ₗ[ZMod p] (artinSchreierLinear p n).ker :=
   LinearEquiv.ofBijective (artinKernelMap p n)
@@ -116,10 +119,12 @@ theorem artin_range_eq_trace_ker (p n : ℕ) [Fact p.Prime]
     GaloisField.finrank p hn] at htr
   omega
 
+/-- The `ArtinSchreierFiber` definition used by the source-facing construction in `KloostermanArtinSchreier`. -/
 abbrev ArtinSchreierFiber (p n : ℕ) [Fact p.Prime]
     (b : GaloisField p n) :=
   {x : GaloisField p n // artinSchreierLinear p n x = b}
 
+/-- The `artinFiberEquivKernel` definition used by the source-facing construction in `KloostermanArtinSchreier`. -/
 noncomputable def artinFiberEquivKernel (p n : ℕ) [Fact p.Prime]
     (b x₀ : GaloisField p n) (hx₀ : artinSchreierLinear p n x₀ = b) :
     (artinSchreierLinear p n).ker ≃ ArtinSchreierFiber p n b where

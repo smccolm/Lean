@@ -13,11 +13,13 @@ namespace RiemannZeta.GuthMaynard
 theorem complex_sqrt_sq (z : ℂ) : Complex.sqrt z ^ 2 = z := by
   exact Complex.cpow_nat_inv_pow z (by norm_num)
 
+/-- The `kloostermanAlpha` definition used by the source-facing construction in `KloostermanRoots`. -/
 noncomputable def kloostermanAlpha (p : ℕ) [NeZero p]
     (A B : ZMod p) : ℂ :=
   let S := kloostermanSumZMod p A B
   (-S + Complex.sqrt (S ^ 2 - 4 * p)) / 2
 
+/-- The `kloostermanBeta` definition used by the source-facing construction in `KloostermanRoots`. -/
 noncomputable def kloostermanBeta (p : ℕ) [NeZero p]
     (A B : ZMod p) : ℂ :=
   let S := kloostermanSumZMod p A B

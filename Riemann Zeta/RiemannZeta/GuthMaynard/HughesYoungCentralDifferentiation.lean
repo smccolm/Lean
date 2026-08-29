@@ -943,7 +943,7 @@ theorem analyticAt_hughesYoungCompletePositiveCentralPoleFree_auxiliary
     a hregular hleft
   have hregularSwap : (-2 - 2 * w - 2 * z : ℂ).re < 0 := by
     convert hregular using 1
-    ring
+    ring_nf
   have hCbSwap := analyticAt_hughesYoungC_symmetric_auxiliary
     b (W := W) (z := w) (w := z) hregularSwap hright
   have hSwap : AnalyticAt ℂ (fun p : ℂ × ℂ => (p.2, p.1)) (z, w) := by

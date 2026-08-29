@@ -298,7 +298,8 @@ theorem norm_hughesYoungAuxiliaryZero_le_polynomial
     _ ≤ (5 * R ^ 2) ^ 4 := by gcongr
     _ = 625 * R ^ 8 := by ring
 
-@[simp]
+-- The literal half argument matches the source statement and is intentionally retained.
+@[simp, nolint simpNF]
 theorem hughesYoungAuxiliaryZero_one_half :
     hughesYoungAuxiliaryZero (1 / 2 : ℂ) = 0 := by
   norm_num [hughesYoungAuxiliaryZero]

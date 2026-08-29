@@ -24,22 +24,14 @@ Lean/
 ## 🧮 Subprojects & Formalizations
 
 ### 1. Riemann Zeta Formalization (`Riemann Zeta/`)
-Mechanized Lean 4 formalization of finite positive-index Dirichlet polynomial conjugation identities, coordinate packaging for Mathlib's completed Riemann Zeta functional equation, and complex-valued Hardy-type phase normalization.
+Mechanized Lean 4 formalization of the Guth--Maynard large-values and zero-density chain and its selected analytic inputs. The project contains frozen publication-facing contracts for Guth--Maynard Theorems 1.1 and 1.2, Ingham, Huxley, and the combined exponent $30(1-\sigma)/13$. It also retains the earlier finite Dirichlet-polynomial, completed-zeta, and Hardy-type infrastructure.
 
-**IMPORTANT NOTE**: This subproject has achieved **Goal B** (the conditional Section 13.1 proof chain), serving as a formalized research blueprint for the Guth-Maynard zero-density transfer, *not* a kernel-checked unconditional proof. The repository clearly distinguishes between:
-- **Proved Theorems & Reductions**: Structural implication chain of the transfer theorem, valid elementary reductions, translation of separated sets, convolution-support, coefficient normalization, and set monotonicity.
-- **Temporary Analytic Hypotheses**: Deductions assuming specific analytic properties (e.g., Fourier decay, localized pigeonholing).
-- **Outstanding Hypotheses**: Mathematical axioms provided as parameters for explicit evaluation (e.g., Halasz-Montgomery Type II exponents, specific dyadic block selection bounds).
+**Claim boundary:** the exact contracts are kernel-checked and project-integrated, with no project axiom or admitted proof in the audited tree. The DFI theorem is the localized signed dyadic specialization needed by the consumer, and the twisted-fourth-moment theorem is the mollifier-specific upper bound, not the full Hughes--Young asymptotic. Independent semantic review, publication of this formalization, and community canonicalization are not claimed.
 
-- **Toolchain**: Lean 4 `v4.30.0-rc2` & Mathlib `5450b53e5d`
-- **Submodules**:
-  - `FiniteDirichletPolynomial.lean`: Positive-index Dirichlet polynomials over $\mathbb{N}_+$, conjugation invariance $\overline{A(s)} = A^*(\overline{s})$, and two-way zero conjugation.
-  - `CrossNormProduct.lean`: Product-of-norms quantity $\text{crossNormProduct}(a, S, \sigma_1, \sigma_2, t) = \|A(\sigma_1+it)\| \cdot \|A^*(\sigma_2-it)\|$, factor swap invariance, and zero-factor characterization.
-  - `CompletedZetaSymmetry.lean`: Coordinate packaging of completed Zeta functional equation $\Lambda(\sigma+it) = \Lambda(1-\sigma-it)$ and fourfold zero orbit under two assumed conjugate zeros.
-  - `HardyZ.lean`: Complex-valued Hardy-type phase normalization $H(t) = e^{i\theta(t)}\zeta(1/2+it)$, norm equivalence $\|H(t)\| = \|\zeta(1/2+it)\|$, zero equivalence $H(t)=0 \iff \zeta(1/2+it)=0$, and conditional norm negation symmetry.
-  - `Nonvanishing.lean`: Classical boundary nonvanishing along $\mathrm{Re}(s) = 1$ for $t \neq 0$ with Mathlib totalization disclosure.
-  - `GuthMaynard/`: Conditional formalization of the Section 13.1 Guth-Maynard zero-density transfer logic, decomposing the problem into dyadic block extraction, explicit separated sets tied to Type I zeros, and bounding unproved axioms explicitly in parameter signatures.
-  - `Audit.lean`: Automated Meta script audit across all core declarations (ensures 0 `sorryAx` dependencies on proved lemmas and 0 global `axiom` declarations in the project namespace).
+- **Toolchain**: Lean 4 `v4.30.0`; Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`; PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
+- **Publication contracts**: `RiemannZeta/PublicationContract.lean` proves the exact five source-facing contracts, including the closed-support/source-only coefficient form of Theorem 1.1 and the full range $1/2\le\sigma\le1$ of Theorem 1.2.
+- **Verification**: `scripts/verify_release.ps1` is the canonical local/CI verifier. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper.
+- **Source freeze and review packet**: see `Riemann Zeta/verification/SOURCE_FREEZE.md` and `Riemann Zeta/Publication Readiness and Semantic Audit.md`.
 
 ### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/`)
 A mechanized Lean 4 proof of the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
@@ -77,8 +69,7 @@ python visualizer/server.py
 ```bash
 # Verify Riemann Zeta
 cd "Riemann Zeta"
-lake build
-lake env lean RiemannZeta/Audit.lean
+pwsh -NoProfile -File scripts/verify_release.ps1
 
 # Verify EllipsePerimeter
 cd "../EllipsePerimeter"

@@ -183,7 +183,7 @@ theorem exists_typeIInteriorFourier_tail_bound (σ : ℝ) :
           exact integral_mono_ae hFInt.integrableOn hDomInt hPoint
     _ = (2 * C₀ / 3) * H ^ (-3 : ℝ) := by
       rw [integral_const_mul, integral_abs_rpow_compl_Icc (by norm_num) hHPos]
-      ring
+      ring_nf
     _ ≤ C * H ^ (-3 : ℝ) := by
       exact mul_le_mul_of_nonneg_right (le_max_right _ _) (Real.rpow_nonneg hHPos.le _)
 

@@ -721,6 +721,7 @@ theorem integrable_hughesYoungInactiveHighPairSum
       unfold C K₀ g
       ring
 
+/-- The `hughesYoungInactiveWholeHigh` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveWholeHigh
     (q a b R K : ℕ) (t : ℝ) : ℂ :=
   ∫ u : ℝ, hughesYoungInactiveHighPairSum q a b R K t u
@@ -1056,18 +1057,21 @@ definitions retain the identical finite dyadic family on the small line, so
 that the off-diagonal projection used by the DFI assembly can be recovered
 without taking norms before the diagonal cancellation is exposed. -/
 
+/-- The `hughesYoungInactiveDyadicMoment` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveDyadicMoment
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungInactiveDyadicBoxes
       (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K,
     hughesYoungFullDyadicIntegratedBox T c H h k ij.1 ij.2
 
+/-- The `hughesYoungInactiveDyadicDiagonal` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveDyadicDiagonal
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungInactiveDyadicBoxes
       (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K,
     hughesYoungFullDyadicDiagonalBox T c H h k ij.1 ij.2
 
+/-- The `hughesYoungInactiveDyadicOffDiagonal` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveDyadicOffDiagonal
     (T c H : ℝ) (h k R K : ℕ) : ℂ :=
   ∑ ij ∈ hughesYoungInactiveDyadicBoxes
@@ -1224,6 +1228,7 @@ theorem integrable_weight_mul_mollifierPair_inactiveIntegratedSmall
     integrable_finsetSum _ (fun m hm =>
       integrable_finsetSum _ (fun n hn => hterm ij hij m hm n hn)))
 
+/-- The `hughesYoungInactiveFiniteTwistedIntegrand` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveFiniteTwistedIntegrand
     (T H : ℝ) (R K : ℕ) (t : ℝ) : ℂ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -1232,11 +1237,13 @@ noncomputable def hughesYoungInactiveFiniteTwistedIntegrand
         hughesYoungInactiveIntegratedSmall T
           (hughesYoungReducedLeft h k) (hughesYoungReducedRight h k) R K t H
 
+/-- The `hughesYoungInactiveFiniteSmoothedMoment` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveFiniteSmoothedMoment
     (T H : ℝ) (R K : ℕ) : ℂ :=
   ∫ t : ℝ, (hughesYoungHeightWeight T t : ℂ) *
     hughesYoungInactiveFiniteTwistedIntegrand T H R K t
 
+/-- The `hughesYoungInactiveFiniteDiagonal` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveFiniteDiagonal
     (T H : ℝ) (R K : ℕ) : ℂ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -1244,6 +1251,7 @@ noncomputable def hughesYoungInactiveFiniteDiagonal
       hughesYoungInactiveDyadicDiagonal T (hughesYoungSmallContour T)
         H h k R K
 
+/-- The `hughesYoungInactiveFiniteOffDiagonal` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveFiniteOffDiagonal
     (T H : ℝ) (R K : ℕ) : ℂ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -1417,6 +1425,7 @@ theorem exists_norm_hughesYoungInactiveWholeSmall_sub_integrated_le :
           simpa only [one_mul] using hpair
         _ = _ := by simp only [M, Nat.cast_max]
 
+/-- The `hughesYoungInactiveVerticalTailPairMajorant` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveVerticalTailPairMajorant
     (C D T H : ℝ) (a b R K : ℕ) : ℝ :=
   ∑ ij ∈ hughesYoungInactiveDyadicBoxes a b R K,
@@ -1427,6 +1436,7 @@ noncomputable def hughesYoungInactiveVerticalTailPairMajorant
               (hughesYoungFullDyadicBound ij.2) : ℝ) ^ 2) *
           (Real.exp (-40 * H ^ 2) * Real.sqrt (Real.pi / 40))
 
+/-- The `hughesYoungInactiveVerticalTailMajorant` definition used by the source-facing construction in `HughesYoungComplementContourTransfer`. -/
 noncomputable def hughesYoungInactiveVerticalTailMajorant
     (C D T H : ℝ) (R K : ℕ) : ℝ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
@@ -2503,7 +2513,7 @@ theorem exists_norm_hughesYoungInactiveFiniteDiagonal_le :
       unfold hughesYoungFiniteDiagonalArithmeticMajorant
       dsimp only [A]
       simp_rw [Finset.mul_sum]
-      ring
+      ring_nf
     _ = _ := by
       simp only [ell, B, F]
 
@@ -2655,7 +2665,7 @@ theorem hughesYoungConductorInactiveFiniteDiagonal_epsilonPowerBound :
       _ = (63 : ℝ) ^ (7 * δ) * T ^ (714 * δ) := by
             rw [← Real.rpow_mul hT0.le]
             congr 1
-            ring
+            ring_nf
   have hQcombine : (Q : ℝ) ^ (6 * δ) *
       (((harmonic Q : ℚ) : ℝ)) ≤
         (1 + δ⁻¹) * (63 : ℝ) ^ (7 * δ) * T ^ (714 * δ) := by

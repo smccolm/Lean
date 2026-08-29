@@ -32,6 +32,7 @@ def RectangleBorder (z w : ℂ) : Set ℂ :=
   [[z.re, w.re]] ×ℂ {z.im} ∪ {z.re} ×ℂ [[z.im, w.im]] ∪
     [[z.re, w.re]] ×ℂ {w.im} ∪ {w.re} ×ℂ [[z.im, w.im]]
 
+/-- The `Square` definition used by the source-facing construction in `Rectangle`. -/
 def Square (p : ℂ) (c : ℝ) : Set ℂ := Rectangle (-c - c * I + p) (c + c * I + p)
 
 lemma Square_apply (p : ℂ) (cpos : c > 0) :

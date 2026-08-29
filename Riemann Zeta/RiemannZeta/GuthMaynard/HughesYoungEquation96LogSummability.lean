@@ -23,23 +23,28 @@ an arbitrarily small loss in the two positive coordinates; no dyadic box is
 estimated separately.
 -/
 
+/-- The `hughesYoungEquation96PositiveLogA` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungEquation96PositiveLogA
     (h : ℕ) (l : ℕ+) : ℂ :=
   Complex.log (Nat.gcd h (l : ℕ) : ℂ) - Complex.log ((l : ℕ) : ℂ)
 
+/-- The `hughesYoungEquation96PositiveLogB` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungEquation96PositiveLogB
     (k : ℕ) (l : ℕ+) : ℂ :=
   Complex.log (Nat.gcd k (l : ℕ) : ℂ) - Complex.log ((l : ℕ) : ℂ)
 
+/-- The `hughesYoungEquation96PositiveLogR` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungEquation96PositiveLogR (r : ℕ+) : ℂ :=
   Complex.log ((r : ℕ) : ℂ)
 
+/-- The `hughesYoungDFIPositiveLogFactorLeft` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungDFIPositiveLogFactorLeft
     (h : ℕ) (y : ℕ+ × ℕ+) : ℂ :=
   hughesYoungEquation96PositiveLogR y.2 +
     2 * Real.eulerMascheroniConstant +
     2 * hughesYoungEquation96PositiveLogA h y.1 - Complex.log (h : ℂ)
 
+/-- The `hughesYoungDFIPositiveLogFactorRight` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungDFIPositiveLogFactorRight
     (k : ℕ) (y : ℕ+ × ℕ+) : ℂ :=
   hughesYoungEquation96PositiveLogR y.2 +
@@ -442,10 +447,12 @@ theorem norm_tsum_hughesYoungEquation96PositiveTerm_mul_dfiLogFactors_le
     _ = _ := by
       rw [tsum_mul_left]
 
+/-- The `hughesYoungDFIPositiveLogSelectorLeft` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungDFIPositiveLogSelectorLeft
     (i : Bool) (h : ℕ) (y : ℕ+ × ℕ+) : ℂ :=
   if i then hughesYoungDFIPositiveLogFactorLeft h y else 1
 
+/-- The `hughesYoungDFIPositiveLogSelectorRight` definition used by the source-facing construction in `HughesYoungEquation96LogSummability`. -/
 noncomputable def hughesYoungDFIPositiveLogSelectorRight
     (j : Bool) (k : ℕ) (y : ℕ+ × ℕ+) : ℂ :=
   if j then hughesYoungDFIPositiveLogFactorRight k y else 1

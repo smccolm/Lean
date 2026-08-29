@@ -42,7 +42,7 @@ theorem integrable_exp_sub_mul_sq_mul_add_abs_pow
   simp_rw [Finset.mul_sum]
   apply Finset.sum_congr rfl
   intro i _hi
-  ring
+  ring_nf
 
 theorem integrable_of_continuous_of_norm_le_gaussian_tail
     (f : ℝ → ℂ) (hf : Continuous f) {L C A B D : ℝ} {j : ℕ}
@@ -125,6 +125,7 @@ noncomputable def hughesYoungEquation84CompletePositiveOuter
     hughesYoungReducedMellinStaticComplex T t h k
       ((1 : ℂ) + (u : ℂ) * I)
 
+/-- The `hughesYoungEquation84PositiveSourceArithmeticTerm` definition used by the source-facing construction in `HughesYoungEquation84SourceLine`. -/
 noncomputable def hughesYoungEquation84PositiveSourceArithmeticTerm
     (a b : ℕ) (i j : Bool) (u : ℝ) (y : ℕ+ × ℕ+) : ℂ :=
   (dfiEquation27ArithmeticCoefficient a b (y.2 : ℕ) (y.1 : ℕ) /
@@ -268,6 +269,7 @@ noncomputable def hughesYoungEquation84CompleteNegativeSourceLine
     hughesYoungEquation84NegativeContourTerm T t h k a b
       (y.2 : ℕ) (y.1 : ℕ) ((1 : ℂ) + (u : ℂ) * I)
 
+/-- The `hughesYoungEquation84CompleteNegativeOuter` definition used by the source-facing construction in `HughesYoungEquation84SourceLine`. -/
 noncomputable def hughesYoungEquation84CompleteNegativeOuter
     (T t : ℝ) (h k a b : ℕ) (u : ℝ) : ℂ :=
   (((b : ℂ) * a)⁻¹) *

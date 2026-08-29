@@ -20,9 +20,11 @@ required by the native DFI theorem.  The condition `64 ≤ U` is exactly the
 large-box branch `8 ≤ Q`; its complement is the finite small-box branch.
 -/
 
+/-- The `hughesYoungDFIOptimalU` definition used by the source-facing construction in `HughesYoungScaleChoice`. -/
 noncomputable def hughesYoungDFIOptimalU (P X Y : ℝ) : ℝ :=
   P⁻¹ * (X + Y)⁻¹ * (X * Y)
 
+/-- The `hughesYoungDFIOptimalQ` definition used by the source-facing construction in `HughesYoungScaleChoice`. -/
 noncomputable def hughesYoungDFIOptimalQ (P X Y : ℝ) : ℝ :=
   Real.sqrt (hughesYoungDFIOptimalU P X Y)
 

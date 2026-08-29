@@ -544,7 +544,7 @@ theorem tendsto_hughesYoungFiniteTwistedIntegrand
     rfl]
   convert h using 1
   rw [ofReal_twistedZetaMomentIntegrand_eq_conjugate_product]
-  ring
+  ring_nf
 
 /-- One literal `h,k,m,n` term of the finite-height Hughes--Young expansion;
 the divisor pair `p=(m,n)` remains countably summed while the two mollifier

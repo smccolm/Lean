@@ -211,7 +211,7 @@ theorem sourceDirichletPoly_energyFourier_reproduction
       intro n hn
       congr 1
       push_cast
-      ring
+      ring_nf
 
 /-- Arbitrary polynomial decay of the fixed Fourier profile used in
 Guth--Maynard Lemma 11.3.  The constant is absolute because the bump itself
@@ -645,7 +645,7 @@ theorem sourceDirichletPoly_localFourier_le_commonInterval
     have := mul_le_mul_of_nonneg_right hw hn
     dsimp only [f]
     convert this using 1
-    all_goals ring
+    all_goals ring_nf
   have hFirst :
       (∫ ξ : ℝ in Set.Icc (-H) H,
           ‖𝓕 gmAffineLocalBumpSchwartz ξ‖ *
@@ -953,11 +953,13 @@ for the Heath--Brown consumer. -/
 noncomputable def gmHalfDifferenceBin (p : ℝ × ℝ) : ℤ :=
   ⌊(p.1 - p.2) + 1 / 2⌋
 
+/-- The `gmHalfDifferenceMatchedPairs` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmHalfDifferenceMatchedPairs (W : Finset ℝ) :
     Finset ((ℝ × ℝ) × (ℝ × ℝ)) :=
   ((W ×ˢ W) ×ˢ (W ×ˢ W)).filter fun q ↦
     gmHalfDifferenceBin q.1 = gmHalfDifferenceBin q.2
 
+/-- The `gmHalfMatchedToEnergy` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmHalfMatchedToEnergy
     (q : (ℝ × ℝ) × (ℝ × ℝ)) : (ℝ × ℝ) × (ℝ × ℝ) :=
   ((q.1.1, q.2.2), (q.1.2, q.2.1))
@@ -3473,7 +3475,7 @@ theorem approxAddEnergy_mul_largeValue_sq_le_thirdMoment_raw
         (q.2.2 - (q.1.1 + q.1.2 - q.2.1)) hs hb
     dsimp only [g, K, L, E]
     convert hRaw using 1
-    ring
+    ring_nf
   have hg : ∀ t₁ ∈ W, ∀ t₂ ∈ W, ∀ t₃ ∈ W, 0 ≤ g t₁ t₂ t₃ := by
     intro t₁ ht₁ t₂ ht₂ t₃ ht₃
     dsimp only [g]
@@ -3652,6 +3654,7 @@ theorem gmApproxAddEnergy_largeValues_native :
 
 /-! ## Local sampling for the small-GCD part of Section 11 -/
 
+/-- The `gmFiniteExpSum` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmFiniteExpSum
     {α : Type*} (S : Finset α) (c : α → ℂ) (freq : α → ℝ) (x : ℝ) : ℂ :=
   ∑ a ∈ S, c a * Complex.exp ((((freq a) * x : ℝ) : ℂ) * I)
@@ -3964,7 +3967,7 @@ theorem norm_gmFiniteExpSum_le_localIntegral_add_tail
           mul_ne_zero (by norm_num) Real.pi_ne_zero
         have hbt : B * T ≠ 0 := hBT.ne'
         field_simp [hpi, hbt]
-        ring
+        ring_nf
   have hRaw := norm_gmFiniteExpSum_le_localFourier_add_tail
     S c freq hBT hfreq x H hH q hq
   exact hRaw.trans (add_le_add hLocal le_rfl)
@@ -4185,6 +4188,7 @@ def gmReducedRatioPairs (N d : ℕ) : Finset (ℕ × ℕ) :=
     N < d * p.1 ∧ d * p.1 ≤ 2 * N ∧
       N < d * p.2 ∧ d * p.2 ≤ 2 * N ∧ Nat.Coprime p.1 p.2
 
+/-- The `gmReducedLogRatios` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmReducedLogRatios (N d : ℕ) : Finset ℝ :=
   (gmReducedRatioPairs N d).image fun p =>
     Real.log (p.1 : ℝ) - Real.log (p.2 : ℝ)
@@ -4517,6 +4521,7 @@ theorem sum_setIntegral_Icc_le_packing_mul_setIntegral
     _ = K * ∫ y in G, f y := by rw [integral_const_mul]
     _ = _ := rfl
 
+/-- The `gmReducedRatioMoment` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmReducedRatioMoment
     (p N d : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ nm ∈ gmReducedRatioPairs N d,
@@ -4772,10 +4777,12 @@ theorem gmReducedRatioMoment_four_le_local_raw
 
 /-! ### Exact gcd decomposition of the source ratio moment -/
 
+/-- The `gmGcdSlice` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 def gmGcdSlice (N d : ℕ) : Finset (ℕ × ℕ) :=
   (dyadicInterval N ×ˢ dyadicInterval N).filter fun p =>
     Nat.gcd p.1 p.2 = d
 
+/-- The `gmGcdSliceMoment` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmGcdSliceMoment
     (k N d : ℕ) (W : Finset ℝ) : ℝ :=
   ∑ nm ∈ gmGcdSlice N d,
@@ -5147,11 +5154,13 @@ theorem gmFourthLocalPackingPrefactor_le
       _ = 19 * gmAffineLocalBumpFourierSup *
           (T + H * N ^ 2 / d ^ 2) := by ring
 
+/-- The `gmSmallGcdL2Constant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdL2Constant (μ : ℝ) : ℝ :=
   19 * gmAffineLocalBumpFourierSup *
     (|Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi +
       4 * (1 + μ⁻¹) * 2 ^ μ)
 
+/-- The `gmSmallGcdL4Constant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdL4Constant (μ : ℝ) : ℝ :=
   19 * gmAffineLocalBumpFourierSup *
     (4 * (|Real.log 2 - Real.log (1 / 2 : ℝ)| + 4 * Real.pi) +
@@ -5326,13 +5335,16 @@ theorem gmReducedRatioMoment_four_le_main_add_tail
       dsimp only [gmSmallGcdL4Constant, L, A]
       ring
 
+/-- The `gmSmallGcdTailConstant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdTailConstant (μ : ℝ) : ℝ :=
   gmAffineLocalBumpFourierTailConstant
     (gmReflectionDecayOrder 8 μ) (gmReflectionDecayOrder_two_le 8 μ)
 
+/-- The `gmSmallGcdL2SliceConstant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdL2SliceConstant (μ : ℝ) : ℝ :=
   gmSmallGcdL2Constant μ + 16 * gmSmallGcdTailConstant μ
 
+/-- The `gmSmallGcdL4SliceConstant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdL4SliceConstant (μ : ℝ) : ℝ :=
   gmSmallGcdL4Constant μ + 64 * gmSmallGcdTailConstant μ
 
@@ -5569,6 +5581,7 @@ theorem gmReducedRatioMoment_four_le_epsilon
       dsimp only [gmSmallGcdL4SliceConstant, Ctail, H]
       ring
 
+/-- The `gmSmallGcdL3SliceConstant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdL3SliceConstant (μ : ℝ) : ℝ :=
   Real.sqrt (gmSmallGcdL2SliceConstant μ) *
     Real.sqrt (gmSmallGcdL4SliceConstant μ)
@@ -5695,6 +5708,7 @@ theorem sum_smallGcd_local_scales_le
       gcongr
     _ = (D : ℝ) * T + 2 * H * (N : ℝ) ^ 2 := by ring
 
+/-- The `gmSmallGcdSumConstant` definition used by the source-facing construction in `LargeValuesEnergy`. -/
 noncomputable def gmSmallGcdSumConstant (μ : ℝ) : ℝ :=
   gmSmallGcdL3SliceConstant μ
 

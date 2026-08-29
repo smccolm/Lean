@@ -1122,7 +1122,7 @@ theorem dfiEquation29_xSingle_tail_source_core_le
     _ = (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (W * (qx : ℝ) ^ (-(1 / 2 : ℝ)) * (qy : ℝ)⁻¹ *
           (X / a) ^ (-(1 / 4 : ℝ)) * (((a : ℝ) * b)⁻¹ * S) *
-          L ^ (3 / 4 + ε)) := by ring
+          L ^ (3 / 4 + ε)) := by ring_nf
     _ ≤ (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
           (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) * S *
@@ -1204,7 +1204,7 @@ theorem dfiEquation29_xSingle_tail_l1_source_core_le
     _ = (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (W * (qx : ℝ) ^ (-(1 / 2 : ℝ)) * (qy : ℝ)⁻¹ *
           (X / a) ^ (-(1 / 4 : ℝ)) * (((a : ℝ) * b)⁻¹ * M) *
-          L ^ (3 / 4 + ε)) := by ring
+          L ^ (3 / 4 + ε)) := by ring_nf
     _ ≤ (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (2 ^ (3 / 4 + ε) * X ^ (1 / 2 + ε) *
           (a : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) * M *
@@ -1287,7 +1287,7 @@ theorem dfiEquation29_ySingle_tail_source_core_le
     _ = (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (W * (qy : ℝ) ^ (-(1 / 2 : ℝ)) * (qx : ℝ)⁻¹ *
           (Y / b) ^ (-(1 / 4 : ℝ)) * (((a : ℝ) * b)⁻¹ * S) *
-          L ^ (3 / 4 + ε)) := by ring
+          L ^ (3 / 4 + ε)) := by ring_nf
     _ ≤ (R ^ k * Q ^ (-ε * (k : ℝ))) *
         (2 ^ (3 / 4 + ε) * Y ^ (1 / 2 + ε) *
           (b : ℝ) ^ ε * Q ^ ((-2 + ε) * (3 / 4 + ε)) * S *
@@ -3493,7 +3493,7 @@ theorem dfiEquation29_double_xTail_source_core_le
   unfold dfiEquation29SourceXCutoff dfiEquation29SourceYCutoff at hSwap ⊢
   unfold dfiEquation29SourceXTransition dfiEquation29SourceYTransition at hSwap ⊢
   simp only [mul_comm] at hSwap
-  convert hSwap using 1 <;> ring
+  convert hSwap using 1 <;> ring_nf
 
 /-- Simultaneous source-cutoff cancellation for the genuine double-tail
 corner.  The full mixed recurrence contributes `k` integrations by parts in
@@ -3938,7 +3938,7 @@ theorem dfiEquation29_halfTail_square_le_four_mul_split
         mul_le_mul_of_nonneg_right hcoeff hpow₀
       _ = _ := by ring
   dsimp only [α] at hmain
-  convert hmain using 1 <;> ring
+  convert hmain using 1 <;> ring_nf
 
 /-- The geometric double-tail corner is absorbed by the two one-sided
 complement regions at the fixed fourth-order shift. -/
@@ -6823,7 +6823,7 @@ theorem dfiEquation30_first_optimized_le
       Real.inv_rpow hP0.le, Real.inv_rpow hSum.le]
     rw [← Real.rpow_neg hP0.le, ← Real.rpow_neg hSum.le]
     congr 1
-    ring
+    ring_nf
   have hsumOne : 1 ≤ X + Y := by linarith
   have hxsum : X ≤ X + Y := by linarith
   have hysum : Y ≤ X + Y := by linarith
@@ -6873,7 +6873,7 @@ theorem dfiEquation30_first_optimized_le
       _ = _ := by
         rw [← Real.rpow_add hSum]
         congr 1
-        ring
+        ring_nf
   rw [hQinv]
   have habInv : (((a : ℝ) * b)⁻¹) ≤ 1 := by
     apply (inv_le_one₀ (by positivity : (0 : ℝ) < (a : ℝ) * b)).2

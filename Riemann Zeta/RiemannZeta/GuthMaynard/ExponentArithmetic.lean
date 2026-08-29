@@ -12,7 +12,11 @@ namespace RiemannZeta.GuthMaynard
 
 lemma denom_pos (σ : ℝ) (hσ : 7/10 ≤ σ) : 0 < 6 + 10 * σ := by linarith
 
+/-- The `alpha` definition used by the source-facing construction in `ExponentArithmetic`. -/
 noncomputable def alpha (σ : ℝ) : ℝ := 15 * (1 - σ) / ((3 + 5 * σ) * (18/5 - 4 * σ))
+/-- The `final_exponent` definition used by the source-facing construction in `ExponentArithmetic`. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def final_exponent (σ : ℝ) : ℝ := 15 * (1 - σ) / (3 + 5 * σ)
 
 /-- Complete equation (13.1) scale selection. The lower detector scale gives

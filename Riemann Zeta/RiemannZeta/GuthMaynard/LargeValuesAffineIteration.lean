@@ -436,6 +436,7 @@ def GMAffineFourierMassProfile
     (D : ℕ → ℝ) (f : SchwartzMap ℝ ℝ) : Prop :=
   ∀ n : ℕ, GMAffineFourierMassBound n (D n) f
 
+/-- The `GMAffineFourierMassProfileAtDepth` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 def GMAffineFourierMassProfileAtDepth
     (D : ℕ → ℝ) (depth : ℕ) (f : SchwartzMap ℝ ℝ) : Prop :=
   ∀ n : ℕ,
@@ -3954,6 +3955,7 @@ theorem norm_gmAffineSigmaII_le_physical_add_far
             le_rfl)
     _ = _ := integral_add hP hF
 
+/-- The `gmAffineSigmaIIFarCoefficient` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineSigmaIIFarCoefficient
     (n : ℕ) (T Q : ℝ) (M₂ : ℕ) : ℝ :=
   ∑ m₂' ∈ gmAffinePositiveShell M₂,
@@ -4982,6 +4984,7 @@ noncomputable def gmAffineMiddleCore
     (L : Finset ℤ) (B : ℝ) (M₂ : ℕ) : Finset ℤ :=
   L.filter fun ell => (M₂ : ℝ) * |(ell : ℝ)| ≤ B
 
+/-- The `gmAffineMiddleTail` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineMiddleTail
     (L : Finset ℤ) (B : ℝ) (M₂ : ℕ) : Finset ℤ :=
   L.filter fun ell => ¬(M₂ : ℝ) * |(ell : ℝ)| ≤ B
@@ -7059,6 +7062,7 @@ theorem gmAffineRegionIIRawBound_eq_core_add_tail
     gmAffineRegionIITailRawBound
   ring
 
+/-- The `gmAffineRegionIICoreConstant` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIICoreConstant : ℝ :=
   8192 * SchwartzMap.seminorm ℝ 0 0 gmAffineLocalBumpDual ^ 3
 
@@ -7160,6 +7164,7 @@ theorem gmAffineRegionIICoreRawBound_le_source
 
 /-! ### Quantitative Region-III collapse -/
 
+/-- The `gmAffineRegionIIIKernelConstant` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIIIKernelConstant (n : ℕ) : ℝ :=
   42 * SchwartzMap.seminorm ℝ 0 0 gmAffineLocalBumpDual +
     4 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual *
@@ -7248,6 +7253,7 @@ theorem gmAffineRegionIIIKernelEnvelope_le
           16 * SchwartzMap.seminorm ℝ (n + 2) 0 gmAffineLocalBumpDual) *
         Q * M₃ := by ring
 
+/-- The `gmAffineRegionIIIEnvelopeConstant` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIIIEnvelopeConstant
     (n : ℕ) (f : SchwartzMap ℝ ℝ) : ℝ :=
   16 * (2 : ℝ) ^ n *
@@ -7261,6 +7267,7 @@ theorem gmAffineRegionIIIEnvelopeConstant_nonneg
   have hkernel := gmAffineRegionIIIKernelConstant_nonneg n
   positivity
 
+/-- The `gmAffineRegionIIIEnvelopeMassConstant` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIIIEnvelopeMassConstant
     (n : ℕ) (D : ℝ) : ℝ :=
   16 * (2 : ℝ) ^ n * D * gmAffineRegionIIIKernelConstant n
@@ -7387,6 +7394,7 @@ theorem gmAffineFourierDecayEnvelope_le_source
       rw [mul_pow, pow_add]
       ring
 
+/-- The `gmAffineRegionIIIRawBound` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIIIRawBound
     (n : ℕ) (Y : ℝ) (f : SchwartzMap ℝ ℝ)
     (M₁ M₂ M₃ : ℕ) (Q : ℝ) : ℝ :=
@@ -7413,6 +7421,7 @@ theorem gmAffineHighFrequencyIntegralFactor_le
         ring]
   exact div_le_self (mul_nonneg (by norm_num) hpow) hden
 
+/-- The `gmAffineRegionIIISourceBound` definition used by the source-facing construction in `LargeValuesAffineIteration`. -/
 noncomputable def gmAffineRegionIIISourceBound
     (n : ℕ) (Y : ℝ) (f : SchwartzMap ℝ ℝ) (M : ℕ) (Q : ℝ) : ℝ :=
   (gmAffineRegionIIIEnvelopeConstant n f * Q * (M : ℝ) ^ (n + 3)) ^ 2 *
@@ -7973,7 +7982,7 @@ theorem rpow_div_sq_pow_rpow_le_one
     rw [pow_rpow_eq_rpow_mul_nat hTpos.le]
     rw [← Real.rpow_natCast, ← Real.rpow_mul hTpos.le]
     norm_num
-    ring
+    ring_nf
   rw [hden]
   exact (div_le_one (Real.rpow_pos_of_pos hTpos _)).2
     (Real.rpow_le_rpow_of_exponent_le hT hn)
@@ -8174,7 +8183,7 @@ theorem gmAffineIterationRegionIISecondTail_scale_le
             congr 1
             ring
       rw [hpower]
-      ring
+      ring_nf
 
 /-- The omitted first-Poisson high tail costs `T^30` before its two
 arbitrary negative powers of `Q`. -/

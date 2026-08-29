@@ -11,6 +11,7 @@ namespace RiemannZeta.GuthMaynard
 # Exact product truncation of the Hughes--Young opening
 -/
 
+/-- The `hughesYoungHighPairProductLow` definition used by the source-facing construction in `HughesYoungProductTruncation`. -/
 noncomputable def hughesYoungHighPairProductLow
     (q : ℕ) (t u R : ℝ) : ℂ :=
   ∑' p : ℕ × ℕ,
@@ -60,6 +61,7 @@ theorem tsum_hughesYoungRightPairTerm_eq_productLow_add_tail
   · have hp' : R < (p.1 : ℝ) * p.2 := lt_of_not_ge hp
     simp [hp, hp']
 
+/-- The `hughesYoungIntegratedProductLow` definition used by the source-facing construction in `HughesYoungProductTruncation`. -/
 noncomputable def hughesYoungIntegratedProductLow
     (q : ℕ) (t H R : ℝ) : ℂ :=
   ∑' p : ℕ × ℕ,
@@ -67,6 +69,7 @@ noncomputable def hughesYoungIntegratedProductLow
       ∫ u in -H..H, hughesYoungRightPairTerm t (2 * q) u p
     else 0
 
+/-- The `hughesYoungIntegratedProductTail` definition used by the source-facing construction in `HughesYoungProductTruncation`. -/
 noncomputable def hughesYoungIntegratedProductTail
     (q : ℕ) (t H R : ℝ) : ℂ :=
   ∑' p : ℕ × ℕ,
@@ -74,6 +77,7 @@ noncomputable def hughesYoungIntegratedProductTail
       ∫ u in -H..H, hughesYoungRightPairTerm t (2 * q) u p
     else 0
 
+/-- The `hughesYoungHighTailContinuousMap` definition used by the source-facing construction in `HughesYoungProductTruncation`. -/
 noncomputable def hughesYoungHighTailContinuousMap
     (q : ℕ) (t R : ℝ) (hc : (1 / 2 : ℝ) < 2 * q)
     (p : ℕ × ℕ) : C(ℝ, ℂ) :=

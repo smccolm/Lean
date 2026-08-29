@@ -95,6 +95,8 @@ theorem dfiEquation23Weight_support_subset
 
 /-- Every second-variable slice of the concrete equation-(23) weight is an
 admissible positive Voronoi test function. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_ySlice
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}
@@ -126,6 +128,8 @@ noncomputable def dfiEquation23Weight_ySlice
   · exact (le_div_iff₀ hbR).2 (by simpa [mul_comm] using hmem.2.2)
 
 /-- The symmetric first-variable slice theorem. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiEquation23Weight_xSlice
     {Q P X Y U : ℝ} (w : DFIDeltaWeight Q)
     {f : ℝ → ℝ → ℂ} {φ : ℝ → ℂ}

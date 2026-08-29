@@ -16,6 +16,7 @@ namespace RiemannZeta.GuthMaynard
 
 noncomputable section
 
+/-- The `galoisFieldFintype` definition used by the source-facing construction in `KloostermanEquationEight`. -/
 noncomputable local instance galoisFieldFintype
     (p n : ℕ) [Fact p.Prime] : Fintype (GaloisField p n) :=
   Fintype.ofFinite (GaloisField p n)
@@ -125,6 +126,7 @@ theorem harcosEta_closedPoint_pow_eq_zero_of_eq_zero
   rw [harcosEtaPolynomial, if_neg hdegpos.ne', if_pos hcoeff,
     zero_pow hpowpos.ne']
 
+/-- The `extensionKloostermanZeroExtendedSummand` definition used by the source-facing construction in `KloostermanEquationEight`. -/
 noncomputable def extensionKloostermanZeroExtendedSummand
     (p n : ℕ) [Fact p.Prime] (a b : ZMod p)
     (x : GaloisField p n) : ℂ :=

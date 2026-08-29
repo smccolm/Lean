@@ -11,11 +11,15 @@ namespace RiemannZeta.GuthMaynard
 
 /-- The `u`-independent norm of the two non-Gamma factors on the reflected
 line `Re s = 3/2`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiArchimedeanScale (q : ℕ) [NeZero q] : ℝ :=
   ‖(q : ℂ) ^ (1 / 2 : ℂ)‖ *
     ‖(2 * Real.pi : ℂ) ^ (-(3 / 2 : ℂ))‖
 
 /-- The non-Gamma scaling factor on a general reflected vertical line. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiArchimedeanScaleAt (q : ℕ) [NeZero q] (a : ℝ) : ℝ :=
   ‖(q : ℂ) ^ ((a : ℂ) - 1)‖ * ‖(2 * Real.pi : ℂ) ^ (-(a : ℂ))‖
 
@@ -593,6 +597,8 @@ theorem DFIVoronoiTestFunction.integrable_plusMultiplier_mul_mellin
 
 /-- One Dirichlet-series summand on DFI's reflected contour, before the
 normalizing vertical integral is taken. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiVoronoiMellinTerm (q : ℕ) [NeZero q]
     (Φ : ZMod q → ℂ) (M : ℂ → ℂ) (g : ℝ → ℂ) (n : ℕ) (u : ℝ) : ℂ :=
   LSeries.term (periodicDivisorCoeff q Φ)
@@ -857,11 +863,13 @@ theorem verticalIntegral'_add {f h : ℂ → ℂ} (σ : ℝ)
   rw [MeasureTheory.integral_add hf hh]
   ring
 
+/-- The `dfiMinusBranchIntegrand` definition used by the source-facing construction in `DFIProposition1Native`. -/
 noncomputable def dfiMinusBranchIntegrand (q : ℕ) [NeZero q]
     (d : ZMod q) (g : ℝ → ℂ) (z : ℂ) : ℂ :=
   periodicEstermann q (dfiVoronoiCharacter q (-d⁻¹)) (1 - z) *
     dfiVoronoiMinusMultiplier q z * mellin g z
 
+/-- The `dfiPlusBranchIntegrand` definition used by the source-facing construction in `DFIProposition1Native`. -/
 noncomputable def dfiPlusBranchIntegrand (q : ℕ) [NeZero q]
     (d : ZMod q) (g : ℝ → ℂ) (z : ℂ) : ℂ :=
   periodicEstermann q (dfiVoronoiCharacter q d⁻¹) (1 - z) *

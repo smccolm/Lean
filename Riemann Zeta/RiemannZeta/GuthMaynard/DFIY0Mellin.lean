@@ -95,7 +95,7 @@ theorem integral_cos_cpow_neg_eq_beta (s : ℂ) :
           (((1 - y ^ 2 : ℝ) : ℂ) ^ (-(s + 1) / 2)) := h.symm
     _ = (1 / 2 : ℂ) * Complex.betaIntegral (1 / 2) ((1 - s) / 2) := by
       convert integral_one_sub_sq_cpow_Ioo_eq_half_beta (w := (1 - s) / 2) using 1
-      ring
+      ring_nf
 
 theorem abs_two_mul_smul_sq_cpow_general
     (s : ℂ) {x : ℝ} (hx : x ∈ Set.Ioo (0 : ℝ) 1) :

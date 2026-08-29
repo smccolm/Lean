@@ -41,7 +41,7 @@ theorem rpow_mul_neg_quarter_mul_div_pow
   have hquarter :
       x ^ ε * x ^ (-(1 / 4 : ℝ)) = x ^ (ε - 1 / 4) := by
     rw [← Real.rpow_add hx]
-    ring
+    ring_nf
   calc
     x ^ ε * x ^ (-(1 / 4 : ℝ)) * (z / x) ^ k =
         z ^ k * ((x ^ ε * x ^ (-(1 / 4 : ℝ))) / x ^ k) := by
@@ -3234,7 +3234,7 @@ theorem dfiEquation29_frequency_power_normalization
           (n : ℝ) ^ (ε + -(1 / 4 : ℝ))) by ring]
   rw [← Real.rpow_add hnR]
   congr 1
-  ring
+  ring_nf
 
 /-- If the same nonnegative amplitude has an `m`-recurrence bound and an
 `n`-recurrence bound, their geometric mean shares half of the recurrence
@@ -3276,7 +3276,7 @@ theorem two_frequency_geometric_mean
       rw [← Real.rpow_add hm, ← Real.rpow_add hn]
       rw [Real.sqrt_eq_rpow]
       rw [← Real.rpow_mul hm.le, ← Real.rpow_mul hn.le]
-      congr 1 <;> ring
+      congr 1 <;> ring_nf
 
 /-- Source-specialized first-variable arbitrary-power tail from DFI (29).
 The displayed bound still shows both exact recurrence factors; the next
@@ -5616,7 +5616,7 @@ theorem integral_norm_dfiEquation23Weight_Ioi_eq_scaled_physical_Ioi
         H (x * (a : ℝ)) (y * (b : ℝ)) := by
     simp only [dfiEquation23Weight, H, norm_mul, Complex.norm_real,
       Real.norm_eq_abs]
-    congr 2 <;> ring
+    congr 2 <;> ring_nf
   have hInner (x : ℝ) :
       (∫ y in Set.Ioi (0 : ℝ),
           ‖dfiEquation23Weight w F a b h q x y‖) =
@@ -7673,6 +7673,8 @@ nonzero Voronoi frequency in the second variable remains a smooth compactly
 supported test function of the first variable.  This regularity permits the
 second physical Bessel transform to be applied without passing through the
 already summed dual branch. -/
+-- Source-equation compatibility keeps this established public name.
+@[nolint defsWithUnderscore]
 noncomputable def dfiVoronoiDualTerm_family_testFunction
     {E : ℝ → ℝ → ℂ} {A B C D : ℝ}
     (hE : ContDiff ℝ ∞ (Function.uncurry E))
@@ -13282,7 +13284,7 @@ theorem exists_dfiVoronoiDualMassUpTo_le_of_initial_threeQuarter
               (D * R) * ((n : ℝ) ^ ε * (n : ℝ) ^ (-(1 / 4 : ℝ))) := by ring
           _ = (D * R) * (n : ℝ) ^ (ε + (-(1 / 4 : ℝ))) := by
             rw [Real.rpow_add (Nat.cast_pos.mpr hn)]
-          _ = D * R * (n : ℝ) ^ (ε - 1 / 4) := by ring
+          _ = D * R * (n : ℝ) ^ (ε - 1 / 4) := by ring_nf
   unfold dfiVoronoiDualMassUpTo
   calc
     ∑ n ∈ Finset.Icc 1 L, ‖dfiVoronoiDualTerm q branch g n‖ ≤

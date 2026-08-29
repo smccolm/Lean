@@ -87,6 +87,7 @@ theorem half_le_norm_one_sub_prime_cpow_neg_two (p : Nat.Primes) :
   rw [abs_of_nonneg hnonneg]
   linarith
 
+/-- The `hughesYoungCPrimeZeroRegularized` definition used by the source-facing construction in `HughesYoungZeroShiftC`. -/
 def hughesYoungCPrimeZeroRegularized
     (e p : ℕ) (x : ℂ) : ℂ :=
   ((∑ j ∈ Finset.range (e + 1), x ^ j) -
@@ -216,6 +217,7 @@ theorem norm_hughesYoungCPrimeFactor_zero_le
   exact norm_hughesYoungCPrimeZeroRegularized_le p
     (norm_prime_cpow_neg_two_mul_le_one p hs.le)
 
+/-- The `hughesYoungCZeroMajorant` definition used by the source-facing construction in `HughesYoungZeroShiftC`. -/
 noncomputable def hughesYoungCZeroMajorant (h : ℕ) : ℝ :=
   ∏ p ∈ hughesYoungPrimeFactors h,
     8 * (((h.factorization p : ℕ) + 1 : ℕ) : ℝ)

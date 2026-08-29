@@ -1,13 +1,14 @@
-name: Riemann Zeta Lean CI
+name: Riemann Zeta GM Foundation Freeze
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    tags: ["gm-foundation-*"]
     paths:
       - "Riemann Zeta/**"
       - ".github/workflows/riemann-zeta-ci.yml"
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
       - "Riemann Zeta/**"
       - ".github/workflows/riemann-zeta-ci.yml"
@@ -17,31 +18,40 @@ permissions:
   contents: read
 
 jobs:
-  build-and-audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  verify-foundation-freeze:
+    name: Exact contracts, build, audit, and lint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
 
-      - name: Build package
-        uses: leanprover/lean-action@v1
+    steps:
+      - name: Check out the exact workflow SHA
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Install the pinned Lean toolchain and dependencies
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
         with:
           lake-package-directory: "Riemann Zeta"
-          build: true
+          auto-config: false
+          build: false
           lint: false
+          test: false
 
-      - name: Run no-sorry audit
+      - name: Run the canonical release verifier
         working-directory: "Riemann Zeta"
-        shell: bash
+        shell: pwsh
         run: |
-          set -o pipefail
-          lake env lean RiemannZeta/Audit.lean 2>&1 | tee audit.log
-          if grep -Fq "sorryAx" audit.log; then
-            echo "ERROR: sorryAx dependency detected in core declarations!"
-            exit 1
-          fi
+          ./scripts/verify_release.ps1 `
+            -Mode release `
+            -LogPath "logs/foundation_freeze_${{ github.sha }}.log" `
+            -ManifestPath "logs/foundation_freeze_${{ github.sha }}.json"
 
-      - name: Upload audit log artifact
-        uses: actions/upload-artifact@v4
+      - name: Preserve immutable verification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: riemann-zeta-audit-log
-          path: "Riemann Zeta/audit.log"
+          name: gm-foundation-freeze-${{ github.sha }}
+          path: |
+            Riemann Zeta/logs/foundation_freeze_${{ github.sha }}.log
+            Riemann Zeta/logs/foundation_freeze_${{ github.sha }}.json
+          if-no-files-found: error
+          retention-days: 90

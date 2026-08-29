@@ -418,6 +418,7 @@ theorem abs_pow_mul_abs_pow_mul_norm_dfiMixedDeriv_hughesYoungDFICore_scale_le
 
 /-! ## A normalization which preserves the summable box scale -/
 
+/-- The `hughesYoungScaledDFINormalization` definition used by the source-facing construction in `HughesYoungConsumer`. -/
 noncomputable def hughesYoungScaledDFINormalization
     (c u X Y A : ℝ) (h k : ℕ) : ℝ :=
   A * Real.exp (2 * u ^ 2) *
@@ -438,6 +439,7 @@ theorem hughesYoungScaledDFINormalization_pos
       (Real.rpow_pos_of_pos (div_pos hhR hX) _))
     (Real.rpow_pos_of_pos (div_pos hkR hY) _)
 
+/-- The `hughesYoungScaledNormalizedDFICore` definition used by the source-facing construction in `HughesYoungConsumer`. -/
 noncomputable def hughesYoungScaledNormalizedDFICore
     (T c u X Y A : ℝ) (h k : ℕ) (r : ℤ) : ℝ → ℝ → ℂ :=
   dfiComplexScaleWeight

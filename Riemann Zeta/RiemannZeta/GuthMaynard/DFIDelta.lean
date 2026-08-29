@@ -26,6 +26,7 @@ nonzero term; later identities can therefore use ordinary `Finset` algebra.
 
 /-- The source cutoff used in DFI equations (9)--(19). -/
 structure DFIDeltaWeight (Q : ℝ) where
+  /-- The `toFun` component of `DFIDeltaWeight`. -/
   toFun : ℝ → ℝ
   one_le_Q : 1 ≤ Q
   smooth : ContDiff ℝ ∞ toFun

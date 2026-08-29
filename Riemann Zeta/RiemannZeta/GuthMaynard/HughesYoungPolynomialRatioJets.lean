@@ -19,6 +19,7 @@ estimate on a disk of radius `t / 2` gives every real-height derivative with
 the required inverse-height scale.
 -/
 
+/-- The `hughesYoungPolynomialRatioShiftComplex` definition used by the source-facing construction in `HughesYoungPolynomialRatioJets`. -/
 noncomputable def hughesYoungPolynomialRatioShiftComplex
     (z : ℂ) (c u : ℝ) : ℂ :=
   let d : ℂ := (c : ℂ) + (u : ℂ) * I

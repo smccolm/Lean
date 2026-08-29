@@ -452,7 +452,7 @@ theorem dfiVoronoiBranchValue_dual_eq
     simp only [DFIVoronoiDualBranch.toBranch,
       DFIVoronoiDualBranch.xSign, dfiSignedFrequency,
       dfiVoronoiBranchValue, dfiVoronoiDualTerm] <;>
-    apply tsum_congr <;> intro n <;> ring
+    apply tsum_congr <;> intro n <;> ring_nf
 
 /-- The main Voronoi branch is complex-linear in the test function. -/
 theorem dfiVoronoiMainTerm_const_mul (q : ℕ) (c : ℂ) (g : ℝ → ℂ) :

@@ -16,19 +16,24 @@ records the exact termwise differential identities.  The signs matter:
 the `c` variable occurs in the denominator, so `-∂c` supplies `log r`.
 -/
 
+/-- The `hughesYoungEquation96LogA` definition used by the source-facing construction in `HughesYoungEquation96Derivatives`. -/
 noncomputable def hughesYoungEquation96LogA (h l : ℕ) : ℂ :=
   Complex.log (Nat.gcd h (l + 1) : ℂ) - Complex.log (l + 1 : ℂ)
 
+/-- The `hughesYoungEquation96LogB` definition used by the source-facing construction in `HughesYoungEquation96Derivatives`. -/
 noncomputable def hughesYoungEquation96LogB (k l : ℕ) : ℂ :=
   Complex.log (Nat.gcd k (l + 1) : ℂ) - Complex.log (l + 1 : ℂ)
 
+/-- The `hughesYoungEquation96LogR` definition used by the source-facing construction in `HughesYoungEquation96Derivatives`. -/
 noncomputable def hughesYoungEquation96LogR (r : ℕ) : ℂ :=
   Complex.log (r + 1 : ℂ)
 
+/-- The `hughesYoungDFILogFactorLeft` definition used by the source-facing construction in `HughesYoungEquation96Derivatives`. -/
 noncomputable def hughesYoungDFILogFactorLeft (h r l : ℕ) : ℂ :=
   hughesYoungEquation96LogR r + 2 * Real.eulerMascheroniConstant +
     2 * hughesYoungEquation96LogA h l - Complex.log (h : ℂ)
 
+/-- The `hughesYoungDFILogFactorRight` definition used by the source-facing construction in `HughesYoungEquation96Derivatives`. -/
 noncomputable def hughesYoungDFILogFactorRight (k r l : ℕ) : ℂ :=
   hughesYoungEquation96LogR r + 2 * Real.eulerMascheroniConstant +
     2 * hughesYoungEquation96LogB k l - Complex.log (k : ℂ)

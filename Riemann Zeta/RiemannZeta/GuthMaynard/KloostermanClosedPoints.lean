@@ -16,6 +16,7 @@ open Polynomial Classical
 
 namespace RiemannZeta.GuthMaynard
 
+/-- The `harcosRootEmbedding` definition used by the source-facing construction in `KloostermanClosedPoints`. -/
 noncomputable def harcosRootEmbedding
     (p n d : ℕ) [Fact p.Prime] (hn : n ≠ 0)
     (q : HarcosIrreducibleMonicDegree p d) (hd : d ∣ n) :
@@ -27,6 +28,7 @@ noncomputable def harcosRootEmbedding
     AdjoinRoot.powerBasis_dim, q.2, GaloisField.finrank p hn]
   exact hd
 
+/-- The `harcosChosenRoot` definition used by the source-facing construction in `KloostermanClosedPoints`. -/
 noncomputable def harcosChosenRoot
     (p n d : ℕ) [Fact p.Prime] (hn : n ≠ 0)
     (q : HarcosIrreducibleMonicDegree p d) (hd : d ∣ n) :
@@ -97,6 +99,7 @@ theorem minpoly_natDegree_le_galoisField_degree
         Module.finrank (ZMod p) (GaloisField p n) := minpoly.natDegree_le x
     _ = n := GaloisField.finrank p hn
 
+/-- The `HarcosClosedPointRoot` definition used by the source-facing construction in `KloostermanClosedPoints`. -/
 def HarcosClosedPointRoot
     (p n : ℕ) [Fact p.Prime] :=
   Σ q : HarcosPrimeDividingDegree p n,
@@ -108,6 +111,7 @@ noncomputable instance harcosClosedPointRootFintype
   unfold HarcosClosedPointRoot
   infer_instance
 
+/-- The `galoisFieldToClosedPoint` definition used by the source-facing construction in `KloostermanClosedPoints`. -/
 noncomputable def galoisFieldToClosedPoint
     (p n : ℕ) [Fact p.Prime] (hn : n ≠ 0)
     (x : GaloisField p n) :
@@ -124,6 +128,7 @@ noncomputable def galoisFieldToClosedPoint
     exact (minpoly.monic (Algebra.IsIntegral.isIntegral x)).mem_rootSet.mpr
       (minpoly.aeval (ZMod p) x)⟩⟩
 
+/-- The `harcosClosedPointEquiv` definition used by the source-facing construction in `KloostermanClosedPoints`. -/
 noncomputable def harcosClosedPointEquiv
     (p n : ℕ) [Fact p.Prime] (hn : n ≠ 0) :
     GaloisField p n ≃ HarcosClosedPointRoot p n where

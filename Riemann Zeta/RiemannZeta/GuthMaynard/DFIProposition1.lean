@@ -205,6 +205,8 @@ theorem norm_Gamma_mul_voronoiExp_neg_le (u : ℝ) :
 
 /-- The absolute Dirichlet-series majorant for a periodic coefficient on the
 fixed reflected line `Re s = 3/2`. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiPeriodicLSeriesNorm (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) : ℝ :=
   ∑' n : ℕ, ‖LSeries.term (fun m : ℕ => Ψ m) (3 / 2 : ℂ) n‖
@@ -341,6 +343,7 @@ theorem periodicLFunctionDual_three_half_sub_mul_I_bound
         exact mul_le_mul_of_nonneg_left hInside hA
       _ = (A * 4 * (B₁ + B₂)) * (1 + |u|) := by ring
 
+/-- The `dfiPeriodicDualGrowthConstant` definition used by the source-facing construction in `DFIProposition1`. -/
 noncomputable def dfiPeriodicDualGrowthConstant (q : ℕ) [NeZero q]
     (Ψ : ZMod q → ℂ) : ℝ :=
   Classical.choose (periodicLFunctionDual_three_half_sub_mul_I_bound q Ψ)
@@ -771,7 +774,9 @@ theorem periodicEstermannResidueCoeff_voronoiCharacter
 half-line, as required by DFI Proposition 1.  Explicit support endpoints
 make every Mellin convergence and tail assertion derivable. -/
 structure DFIVoronoiTestFunction (g : ℝ → ℂ) where
+  /-- The `lower` component of `DFIVoronoiTestFunction`. -/
   lower : ℝ
+  /-- The `upper` component of `DFIVoronoiTestFunction`. -/
   upper : ℝ
   lower_pos : 0 < lower
   lower_le_upper : lower ≤ upper
@@ -792,6 +797,7 @@ neighbourhood of zero.  This weight translates Mellin contours by one unit. -/
 noncomputable def dfiVoronoiInvWeight (g : ℝ → ℂ) (x : ℝ) : ℂ :=
   (x : ℂ)⁻¹ * g x
 
+/-- The `invWeight` definition used by the source-facing construction in `DFIProposition1`. -/
 noncomputable def DFIVoronoiTestFunction.invWeight
     {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) :
     DFIVoronoiTestFunction (dfiVoronoiInvWeight g) := by

@@ -336,6 +336,7 @@ theorem log_one_add_le_one_add_log
   rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) hx0.ne'] at hlogMono
   linarith [Real.log_le_sub_one_of_pos (show (0 : ℝ) < 2 by norm_num)]
 
+/-- The `hughesYoungCriticalAffineBetaIntegrand` definition used by the source-facing construction in `HughesYoungSmallContourQuantitative`. -/
 noncomputable def hughesYoungCriticalAffineBetaIntegrand
     (t u c x : ℝ) (CX COne : ℂ) : ℂ :=
   let w : ℂ := (c : ℂ) + (u : ℂ) * I
@@ -553,6 +554,7 @@ theorem norm_hughesYoungCriticalAffineBetaIntegrand_tail_le
     _ = 9 * (1 + ‖CX‖ + ‖COne‖) ^ 2 * c⁻¹ ^ 2 *
           x ^ (-1 - c) := by rfl
 
+/-- The `hughesYoungCriticalAffineBetaMajorant` definition used by the source-facing construction in `HughesYoungSmallContourQuantitative`. -/
 noncomputable def hughesYoungCriticalAffineBetaMajorant
     (c S x : ℝ) : ℝ :=
   (Set.Ioc (0 : ℝ) 1).indicator
@@ -2278,6 +2280,7 @@ theorem hughesYoungFiniteSmallContourShiftMass_le_polynomial
       dsimp only [E]
       ring
 
+/-- The `hughesYoungTerminalSmallContourTotalMass` definition used by the source-facing construction in `HughesYoungSmallContourQuantitative`. -/
 noncomputable def hughesYoungTerminalSmallContourTotalMass (T : ℝ) : ℝ :=
   ∑ h ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),
     ∑ k ∈ Finset.Icc 1 ((detectorCutoff T) ^ 2),

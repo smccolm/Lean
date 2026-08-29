@@ -3,7 +3,19 @@ message: "If you use this formalization in your work, please cite it as below."
 authors:
   - family-names: "McColm"
     given-names: "S."
-title: "Mechanized Formalization of Finite Dirichlet Polynomial Conjugation Dualities, Fourfold Completed Zeta Orbits, and Hardy Z-Function Identities in Lean 4"
+title: "A Lean 4 Formalization of the Guth–Maynard Zero-Density Argument and Its Analytic Inputs"
 version: "0.1.0"
-date-released: "2026-08-02"
+date-released: "2026-08-29"
 repository-code: "https://github.com/smccolm/Lean/tree/main/Riemann%20Zeta"
+abstract: >-
+  Kernel-checked Lean 4 formalization of the Guth–Maynard large-values and
+  zero-density chain, including exact publication-facing contracts, classical
+  density inputs, and the project-specific analytic consumers used by the
+  transfer. Independent semantic review and publication of the formalization
+  are not claimed.
+keywords:
+  - Lean 4
+  - formalized mathematics
+  - analytic number theory
+  - Riemann zeta function
+  - zero-density estimates

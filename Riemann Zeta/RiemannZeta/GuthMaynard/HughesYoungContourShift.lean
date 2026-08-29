@@ -405,7 +405,7 @@ theorem exists_norm_hughesYoungPairContourTerm_horizontal_le
             hughesYoungLogPower
               (afeCriticalPoint (-t) + (x : ℂ) + (H : ℂ) * I) p.2) := by
     unfold hughesYoungPairContourTerm
-    ring
+    ring_nf
   rw [hfactor, norm_mul]
   calc
     _ ≤ (K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *
@@ -688,7 +688,7 @@ theorem exists_norm_hughesYoungPairContourTerm_bottom_le
             hughesYoungLogPower
               (afeCriticalPoint (-t) + (x : ℂ) + (-H : ℂ) * I) p.2) := by
     unfold hughesYoungPairContourTerm
-    ring
+    ring_nf
   rw [hfactor, norm_mul]
   calc
     _ ≤ (K * Real.exp (100 * c₁ ^ 2 - 100 * H ^ 2) *

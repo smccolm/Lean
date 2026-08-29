@@ -38,7 +38,7 @@ theorem iteratedDeriv_dfiDeltaSummand
     rw [div_eq_mul_inv, mul_comm]
   rw [hfun, hcomp]
   rw [div_eq_mul_inv]
-  ring
+  ring_nf
 
 /-- The whole-line `L¹` norm of a positive derivative of one delta-kernel
 summand has the exact scaling predicted by DFI (28).  The factor

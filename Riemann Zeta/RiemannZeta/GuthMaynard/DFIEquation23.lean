@@ -122,7 +122,9 @@ noncomputable def dfiEquation23Right (q : ℕ) [NeZero q]
 Proposition 1 in DFI equation (23). -/
 structure DFIEquation23Admissible (q : ℕ) [NeZero q]
     (dy : ZMod q) (E : ℝ → ℝ → ℂ) where
+  /-- The `ySlice` component of `DFIEquation23GroupedAdmissible`. -/
   ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
+  /-- The `xAfterYBranch` component of `DFIEquation23Admissible`. -/
   xAfterYBranch : ∀ branch : DFIVoronoiBranch,
     DFIVoronoiTestFunction
       (fun x => dfiVoronoiBranchValue q dy branch (E x))
@@ -195,11 +197,15 @@ noncomputable def dfiEquation23GroupedRight (q : ℕ) [NeZero q]
       dfiVoronoiBranchValue q dx bx
         (fun x => dfiVoronoiRemainderValue q dy (E x))
 
+/-- The `DFIEquation23GroupedAdmissible` definition used by the source-facing construction in `DFIEquation23`. -/
 structure DFIEquation23GroupedAdmissible (q : ℕ) [NeZero q]
     (dy : ZMod q) (E : ℝ → ℝ → ℂ) where
+  /-- The `ySlice` component of `DFIEquation23Admissible`. -/
   ySlice : ∀ x : ℝ, DFIVoronoiTestFunction (E x)
+  /-- The `xMain` component of `DFIEquation23GroupedAdmissible`. -/
   xMain : DFIVoronoiTestFunction
     (fun x => dfiVoronoiBranchValue q dy .mainTerm (E x))
+  /-- The `xRemainder` component of `DFIEquation23GroupedAdmissible`. -/
   xRemainder : DFIVoronoiTestFunction
     (fun x => dfiVoronoiRemainderValue q dy (E x))
 

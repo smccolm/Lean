@@ -48,9 +48,11 @@ theorem eventually_kloostermanCurve_large
     _ < p ^ n * p ^ n := Nat.mul_lt_mul_of_pos_right hconst hpownz
     _ = p ^ (2 * n) := by rw [← pow_add]; congr 1; omega
 
+/-- The `KloostermanRootIndex` definition used by the source-facing construction in `KloostermanPrimeWeil`. -/
 abbrev KloostermanRootIndex (p : ℕ) :=
   {m : ZMod p // m ≠ 0} × Bool
 
+/-- The `normalizedKloostermanSquaredRoot` definition used by the source-facing construction in `KloostermanPrimeWeil`. -/
 noncomputable def normalizedKloostermanSquaredRoot
     (p : ℕ) [NeZero p] (c : ZMod p)
     (x : KloostermanRootIndex p) : ℂ :=

@@ -487,6 +487,7 @@ noncomputable def hughesYoungEquation84PositiveContourTermShiftTail
         (y.2 : ℕ) (y.1 : ℕ) ((1 : ℂ) + (u : ℂ) * I)
     else 0
 
+/-- The `hughesYoungEquation84PositiveContourTermPrefix` definition used by the source-facing construction in `HughesYoungShiftTail`. -/
 noncomputable def hughesYoungEquation84PositiveContourTermPrefix
     (T t : ℝ) (h k a b : ℕ) (u B : ℝ) : ℂ :=
   ∑' y : ℕ+ × ℕ+,
@@ -824,6 +825,7 @@ noncomputable def hughesYoungEquation84NegativeContourTermShiftTail
         (y.2 : ℕ) (y.1 : ℕ) ((1 : ℂ) + (u : ℂ) * I)
     else 0
 
+/-- The `hughesYoungEquation84NegativeContourTermPrefix` definition used by the source-facing construction in `HughesYoungShiftTail`. -/
 noncomputable def hughesYoungEquation84NegativeContourTermPrefix
     (T t : ℝ) (h k a b : ℕ) (u B : ℝ) : ℂ :=
   ∑' y : ℕ+ × ℕ+,

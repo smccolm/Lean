@@ -1878,7 +1878,7 @@ theorem integral_norm_gmReflectionPowerWeight_deriv_le
     sigma * ((B ^ (-sigma - 1 + 1) - A ^ (-sigma - 1 + 1)) /
         (-sigma - 1 + 1)) = A ^ (-sigma) - B ^ (-sigma) := by
           field_simp [hsigmaNe]
-          ring
+          ring_nf
     _ ≤ A ^ (-sigma) := by linarith
 
 /-- Nonstationary weighted reflection with its power variation absorbed. -/
@@ -2261,7 +2261,7 @@ theorem norm_typeIPowerReflectionIntegral_le_stationary
       have hInvSqrt : (Real.sqrt tau)⁻¹ = tau ^ (-1 / 2 : ℝ) := by
         rw [Real.sqrt_eq_rpow]
         convert (Real.rpow_neg htauPos.le (1 / 2 : ℝ)).symm using 1
-        ring
+        ring_nf
       calc
         ‖typeIPowerReflectionIntegral sigma tau l r‖ ≤
             (10 / Real.sqrt tau) *
@@ -2891,6 +2891,7 @@ threshold into the normalized `N^σ` threshold. -/
 noncomputable def typeIDirectThresholdLoss (T : ℝ) (A : ℕ) (d : ℝ) : ℝ :=
   1 + (8 / 3 : ℝ) * Nat.clog 2 A * T ^ d
 
+/-- The `typeIDirectPowerLossConstant` definition used by the source-facing construction in `ClassicalEndpointSlab`. -/
 noncomputable def typeIDirectPowerLossConstant : ℝ :=
   max 1 ((2 / 3 : ℝ) * (1 + 2 / Real.log 2))
 
@@ -5255,7 +5256,7 @@ theorem typeI_powered_threshold_loss_le_envelope
               (((N : ℝ) ^ σ)⁻¹ ^ k * (V ^ k)⁻¹)) =
           ((((2 ^ k * N ^ k : ℕ) : ℝ) ^ σ * ((N : ℝ) ^ σ)⁻¹ ^ k) *
             1 ^ k * (C * ((2 ^ k * N ^ k : ℕ) : ℝ) ^ e) *
-              (k : ℝ) * V⁻¹ ^ k) := by rw [inv_pow]; ring
+              (k : ℝ) * V⁻¹ ^ k) := by rw [inv_pow]; ring_nf
       _ = (((2 : ℝ) ^ k) ^ σ * 1 ^ k *
             (C * ((2 ^ k * N ^ k : ℕ) : ℝ) ^ e) * (k : ℝ) * V⁻¹ ^ k) := by
           rw [hIdentity']
@@ -5739,7 +5740,7 @@ theorem eventually_endpoint_loss_bundle_le
         (6 * (Cp * T ^ (18 * e / τ₀ + ε / 4))) := by
       gcongr
       convert hM using 1
-      ring
+      ring_nf
     _ = C * T ^
         (3 * dDisp + 3 * e / (2 * τ₀) + (18 * e / τ₀ + ε / 4)) := by
       dsimp only [C]

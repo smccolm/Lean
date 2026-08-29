@@ -1678,6 +1678,7 @@ noncomputable def heathBrownTraceSourceBound
       else
         ((heathBrownDifferenceBin W j).card : ℝ) * Q ^ 2
 
+/-- The `heathBrownSourceNearSum` definition used by the source-facing construction in `HeathBrownReflection`. -/
 noncomputable def heathBrownSourceNearSum
     (Cnear T : ℝ) (W : Finset ℝ) (Q : ℕ) : ℝ :=
   ∑ j ∈ Finset.range (Nat.log 2 (Nat.floor T) + 1),
@@ -1686,6 +1687,7 @@ noncomputable def heathBrownSourceNearSum
         ((2 ^ j : ℕ) : ℝ)
     else 0
 
+/-- The `heathBrownSourceTransitionSum` definition used by the source-facing construction in `HeathBrownReflection`. -/
 noncomputable def heathBrownSourceTransitionSum
     (T : ℝ) (W : Finset ℝ) (Q H : ℕ) : ℝ :=
   ∑ j ∈ Finset.range (Nat.log 2 (Nat.floor T) + 1),
@@ -1693,6 +1695,7 @@ noncomputable def heathBrownSourceTransitionSum
     else if 2 ≤ j ∧ 2 * H ≤ 2 ^ j then 0
     else ((heathBrownDifferenceBin W j).card : ℝ) * Q ^ 2
 
+/-- The `heathBrownSourceReflectedMainSum` definition used by the source-facing construction in `HeathBrownReflection`. -/
 noncomputable def heathBrownSourceReflectedMainSum
     (C T : ℝ) (W : Finset ℝ) (Q H : ℕ) : ℝ :=
   ∑ j ∈ Finset.range (Nat.log 2 (Nat.floor T) + 1),
@@ -1705,6 +1708,7 @@ noncomputable def heathBrownSourceReflectedMainSum
               (heathBrownFixedReflectionLength Q H j))
     else 0
 
+/-- The `heathBrownSourceReflectedErrorSum` definition used by the source-facing construction in `HeathBrownReflection`. -/
 noncomputable def heathBrownSourceReflectedErrorSum
     (K L D : ℝ) (q : ℕ) (T : ℝ) (W : Finset ℝ) (Q H : ℕ) : ℝ :=
   ∑ j ∈ Finset.range (Nat.log 2 (Nat.floor T) + 1),

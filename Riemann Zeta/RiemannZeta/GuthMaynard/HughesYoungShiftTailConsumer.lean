@@ -837,7 +837,7 @@ theorem exists_norm_hughesYoungEquation84RegularizedContourKernel_sourceLine_le
     unfold hughesYoungGammaRatioShift
     dsimp only
     simp only [div_eq_mul_inv]
-    ring
+    ring_nf
   have hInner :
       ‖Complex.exp (100 * w ^ 2) * (p * (1 - p)) ^ 2 * q ^ 2 *
           hughesYoungGammaRatioShift t 1 u * (afePoleNormalization t)⁻¹ * w⁻¹‖ ≤

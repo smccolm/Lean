@@ -1581,6 +1581,7 @@ theorem nonstationary_power_phase_expansion
       ‖E‖ ≤ s.re / (|ν - ϑ| ^ 2) + |ϑ| / (|ν - ϑ| ^ 3) := by
   simpa only [e] using lemma_aachfour s hsigma ν hν a b ha hb
 
+/-- The `IsHalfInteger` definition used by the source-facing construction in `ZetaAppendix`. -/
 def _root_.Real.IsHalfInteger (x : ℝ) : Prop := ∃ k : ℤ, x = k + 1 / 2
 
 private lemma _root_.Real.IsHalfInteger.not_isInteger {x : ℝ} (h : x.IsHalfInteger) : ¬∃ n : ℤ, x = ↑n := by

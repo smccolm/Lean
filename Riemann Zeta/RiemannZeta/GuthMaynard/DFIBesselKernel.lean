@@ -551,6 +551,8 @@ theorem abs_dfiBesselY0_scaled_le
     _ = 7 * Real.sqrt q / Real.sqrt (Real.sqrt (x * y)) := by ring
 
 /-- The literal positive-sign Bessel transform in DFI Proposition 1. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiVoronoiPlusBesselTransform
     (q : ℕ) [NeZero q] (g : ℝ → ℂ) (n : ℕ) : ℂ :=
   (4 / (q : ℂ)) * ∫ x in Set.Ioi (0 : ℝ),
@@ -558,6 +560,8 @@ noncomputable def dfiVoronoiPlusBesselTransform
       (4 * Real.pi * Real.sqrt (x * n) / q) : ℂ)
 
 /-- The literal equal-sign Bessel transform in DFI Proposition 1. -/
+-- The parameter records the source-domain or uniformity contract even though the body is independent of it.
+@[nolint unusedArguments]
 noncomputable def dfiVoronoiMinusBesselTransform
     (q : ℕ) [NeZero q] (g : ℝ → ℂ) (n : ℕ) : ℂ :=
   (-(2 * Real.pi) / (q : ℂ)) * ∫ x in Set.Ioi (0 : ℝ),

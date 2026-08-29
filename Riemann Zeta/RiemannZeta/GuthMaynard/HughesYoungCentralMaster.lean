@@ -27,6 +27,7 @@ noncomputable def hughesYoungCentralReverseKernelPolynomial
     w * hughesYoungEquation84Kernel01 t W +
     z * w * hughesYoungEquation84Kernel00 t W
 
+/-- The `hughesYoungCentralReverseKernelPolynomialCore` definition used by the source-facing construction in `HughesYoungCentralMaster`. -/
 noncomputable def hughesYoungCentralReverseKernelPolynomialCore
     (t : ℝ) (W z w : ℂ) : ℂ :=
   hughesYoungEquation84KernelCore11 t W +
@@ -259,7 +260,7 @@ theorem hughesYoungEquation96ContinuationJet_contourParameter_eq_pole_mul
   unfold hughesYoungEquation96ContinuationJet
     hughesYoungEquation96ContourParameter
     hughesYoungEquation96PoleFreeMasterJet
-  ring
+  ring_nf
 
 /-- The full pole-free numerator multiplying the moving zeta pole. -/
 noncomputable def hughesYoungCompletePositiveCentralPoleFree
@@ -269,6 +270,7 @@ noncomputable def hughesYoungCompletePositiveCentralPoleFree
       (hughesYoungEquation96PoleFreeMasterJet a b W z w *
         hughesYoungCentralReverseKernelPolynomial t W z w)
 
+/-- The `hughesYoungCompletePositiveCentralPoleFreeCore` definition used by the source-facing construction in `HughesYoungCentralMaster`. -/
 noncomputable def hughesYoungCompletePositiveCentralPoleFreeCore
     (T t : ℝ) (h k a b : ℕ) (W z w : ℂ) : ℂ :=
   (((a : ℂ) * b)⁻¹) *
@@ -359,7 +361,7 @@ theorem differentiableAt_hughesYoungEquation96PoleFreeMasterJet
     h hregular hleft
   have hregularSwap : (-2 - 2 * w - 2 * z : ℂ).re < 0 := by
     convert hregular using 1
-    ring
+    ring_nf
   have hCk := differentiableAt_hughesYoungC_symmetric_center
     k (z := w) (w := z) hregularSwap (by simpa [sub_eq_add_neg] using hright)
   unfold hughesYoungEquation96PoleFreeMasterJet
