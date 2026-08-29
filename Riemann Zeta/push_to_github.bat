@@ -33,7 +33,7 @@ if /I not "%CURRENT_BRANCH%"=="main" (
 
 set "COMMIT_MESSAGE=%~1"
 if not defined COMMIT_MESSAGE (
-  set "COMMIT_MESSAGE=Repair foundation CI resilience and release-tag publishing"
+  set "COMMIT_MESSAGE=Publish repaired foundation CI and verified v1.0.1 release tag"
   set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
 )
 set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
