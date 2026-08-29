@@ -2,64 +2,79 @@
 setlocal EnableExtensions DisableDelayedExpansion
 
 echo ====================================================================
-echo  Lean Workspace - reviewed commit and push to origin/main
+echo  Lean Workspace - complete repository sync to GitHub
 echo ====================================================================
 echo.
+
+set "SCRIPT_DIR=%~dp0"
+set "NO_PAUSE=0"
+if /I "%~1"=="--no-pause" (
+  set "NO_PAUSE=1"
+  shift
+)
+
+cd /d "%SCRIPT_DIR%"
+if errorlevel 1 (
+  echo ERROR: Could not change to the directory containing this script.
+  call :maybe_pause
+  exit /b 1
+)
 
 for /f "delims=" %%I in ('git rev-parse --show-toplevel 2^>nul') do set "REPO_ROOT=%%I"
 if not defined REPO_ROOT (
   echo ERROR: This script is not inside a Git repository.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 cd /d "%REPO_ROOT%"
 if errorlevel 1 (
   echo ERROR: Could not change to repository root "%REPO_ROOT%".
-  pause
+  call :maybe_pause
   exit /b 1
 )
 
 for /f "delims=" %%I in ('git branch --show-current 2^>nul') do set "CURRENT_BRANCH=%%I"
 if errorlevel 1 (
   echo ERROR: Could not determine the current branch.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 if /I not "%CURRENT_BRANCH%"=="main" (
   echo ERROR: Refusing to commit or push from branch "%CURRENT_BRANCH%"; expected "main".
-  pause
-  exit /b 1
-)
-
-set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE (
-  set "COMMIT_MESSAGE=Publish repaired foundation CI and verified v1.0.1 release tag"
-  set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
-)
-set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
-powershell -NoProfile -Command "if ([string]::IsNullOrWhiteSpace($env:PUSH_COMMIT_MESSAGE)) { exit 1 } else { exit 0 }"
-if errorlevel 1 (
-  echo ERROR: Commit message must not be empty or whitespace.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 
 echo Staging repository-wide changes from "%REPO_ROOT%"...
+echo This includes tracked changes, deletions, and all untracked non-ignored files.
 git add -A
 if errorlevel 1 (
   echo ERROR: git add -A failed. Nothing was pushed.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 
 git diff --cached --quiet
 if not errorlevel 1 (
   echo No staged changes; skipping the commit step.
-  goto push_main
+  goto verify_complete_commit
 )
 if errorlevel 2 (
   echo ERROR: Could not inspect the staged changes. Nothing was pushed.
-  pause
+  call :maybe_pause
+  exit /b 1
+)
+
+set "COMMIT_MESSAGE=%~1"
+if not defined COMMIT_MESSAGE (
+  set "COMMIT_MESSAGE=Make GitHub sync complete and keep CI non-blocking"
+  set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
+)
+set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
+powershell -NoProfile -Command "if ([string]::IsNullOrWhiteSpace($env:PUSH_COMMIT_MESSAGE)) { exit 1 } else { exit 0 }"
+if errorlevel 1 (
+  echo ERROR: Commit message must not be empty or whitespace.
+  call :maybe_pause
   exit /b 1
 )
 
@@ -67,49 +82,46 @@ echo Committing reviewed changes...
 git commit -m "%COMMIT_MESSAGE%"
 if errorlevel 1 (
   echo ERROR: git commit failed. Nothing was pushed.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 
-:push_main
+:verify_complete_commit
+set "REMAINING_CHANGE="
+for /f "delims=" %%S in ('git status --porcelain --untracked-files^=all') do set "REMAINING_CHANGE=%%S"
+if defined REMAINING_CHANGE (
+  echo ERROR: Non-ignored repository changes remain after the commit.
+  echo Nothing was pushed; review git status and rerun this script.
+  git status --short
+  call :maybe_pause
+  exit /b 1
+)
+
 echo Pushing main to origin without force...
 git push origin main
 if errorlevel 1 (
   echo ERROR: git push origin main failed.
-  pause
+  call :maybe_pause
   exit /b 1
 )
 
-echo Publishing reachable annotated GM foundation-freeze tags without force...
-for /f "delims=" %%T in ('git tag --list "gm-foundation-*" --merged HEAD') do (
-  call :push_foundation_tag "%%T"
-  if errorlevel 1 goto foundation_tag_failed
+echo Pushing every local tag to origin without force...
+git push origin --tags
+if errorlevel 1 (
+  echo ERROR: One or more local tags could not be pushed.
+  call :maybe_pause
+  exit /b 1
 )
-goto foundation_tags_done
-
-:foundation_tag_failed
-echo ERROR: A GM foundation-freeze tag could not be published safely.
-pause
-exit /b 1
-
-:foundation_tags_done
 
 echo.
 echo ====================================================================
-echo  Git sync completed successfully, including reachable release tags.
+echo  Git sync completed: main and all local tags are on origin.
 echo ====================================================================
-pause
+echo No build was run. GitHub CI, if triggered, runs asynchronously and
+echo is not checked or awaited by this script.
+call :maybe_pause
 exit /b 0
 
-:push_foundation_tag
-set "FOUNDATION_TAG=%~1"
-set "FOUNDATION_TAG_TYPE="
-for /f "delims=" %%Y in ('git cat-file -t "refs/tags/%FOUNDATION_TAG%" 2^>nul') do set "FOUNDATION_TAG_TYPE=%%Y"
-if /I not "%FOUNDATION_TAG_TYPE%"=="tag" (
-  echo ERROR: Refusing to publish lightweight or invalid tag "%FOUNDATION_TAG%".
-  exit /b 1
-)
-echo Pushing annotated tag "%FOUNDATION_TAG%"...
-git push origin "refs/tags/%FOUNDATION_TAG%:refs/tags/%FOUNDATION_TAG%"
-if errorlevel 1 exit /b 1
+:maybe_pause
+if "%NO_PAUSE%"=="0" pause
 exit /b 0
