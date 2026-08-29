@@ -33,7 +33,8 @@ if /I not "%CURRENT_BRANCH%"=="main" (
 
 set "COMMIT_MESSAGE=%~1"
 if not defined COMMIT_MESSAGE (
-  set /p "COMMIT_MESSAGE=Commit message: "
+  set "COMMIT_MESSAGE=Freeze exact GM publication contracts and release verification"
+  set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
 )
 set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
 powershell -NoProfile -Command "if ([string]::IsNullOrWhiteSpace($env:PUSH_COMMIT_MESSAGE)) { exit 1 } else { exit 0 }"
