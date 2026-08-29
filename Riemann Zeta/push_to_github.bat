@@ -33,7 +33,7 @@ if /I not "%CURRENT_BRANCH%"=="main" (
 
 set "COMMIT_MESSAGE=%~1"
 if not defined COMMIT_MESSAGE (
-  set "COMMIT_MESSAGE=Freeze exact GM publication contracts and release verification"
+  set "COMMIT_MESSAGE=Repair foundation CI resilience and release-tag publishing"
   set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
 )
 set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
@@ -54,9 +54,8 @@ if errorlevel 1 (
 
 git diff --cached --quiet
 if not errorlevel 1 (
-  echo ERROR: There are no staged changes to commit. Nothing was pushed.
-  pause
-  exit /b 1
+  echo No staged changes; skipping the commit step.
+  goto push_main
 )
 if errorlevel 2 (
   echo ERROR: Could not inspect the staged changes. Nothing was pushed.
@@ -72,6 +71,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
+:push_main
 echo Pushing main to origin without force...
 git push origin main
 if errorlevel 1 (
@@ -80,9 +80,36 @@ if errorlevel 1 (
   exit /b 1
 )
 
+echo Publishing reachable annotated GM foundation-freeze tags without force...
+for /f "delims=" %%T in ('git tag --list "gm-foundation-*" --merged HEAD') do (
+  call :push_foundation_tag "%%T"
+  if errorlevel 1 goto foundation_tag_failed
+)
+goto foundation_tags_done
+
+:foundation_tag_failed
+echo ERROR: A GM foundation-freeze tag could not be published safely.
+pause
+exit /b 1
+
+:foundation_tags_done
+
 echo.
 echo ====================================================================
-echo  Git sync completed successfully.
+echo  Git sync completed successfully, including reachable release tags.
 echo ====================================================================
 pause
+exit /b 0
+
+:push_foundation_tag
+set "FOUNDATION_TAG=%~1"
+set "FOUNDATION_TAG_TYPE="
+for /f "delims=" %%Y in ('git cat-file -t "refs/tags/%FOUNDATION_TAG%" 2^>nul') do set "FOUNDATION_TAG_TYPE=%%Y"
+if /I not "%FOUNDATION_TAG_TYPE%"=="tag" (
+  echo ERROR: Refusing to publish lightweight or invalid tag "%FOUNDATION_TAG%".
+  exit /b 1
+)
+echo Pushing annotated tag "%FOUNDATION_TAG%"...
+git push origin "refs/tags/%FOUNDATION_TAG%:refs/tags/%FOUNDATION_TAG%"
+if errorlevel 1 exit /b 1
 exit /b 0

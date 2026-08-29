@@ -81,7 +81,15 @@ than to an ANTEDB lemma. The relevant labels at this snapshot are:
 - PrimeNumberTheoremAnd:
   `4ecb950126c4290293c5662dfe0e884123171df5`.
 - GitHub Actions are pinned to immutable commit SHAs in
-  [`../../.github/workflows/riemann-zeta-ci.yml`](../../.github/workflows/riemann-zeta-ci.yml).
+  [`../../.github/workflows/riemann-zeta-ci.yml`](../../.github/workflows/riemann-zeta-ci.yml):
+  `actions/checkout` v7.0.1 at
+  `3d3c42e5aac5ba805825da76410c181273ba90b1`, `leanprover/lean-action`
+  v1.5.0 at `38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9`, and
+  `actions/upload-artifact` v7.0.1 at
+  `043fb46d1a93c77aae656e7c1c64a875d1fc6a0a`.
+- CI first primes the DFI-heavy proof prefix into the exact-SHA Lake cache and
+  then runs the unchanged canonical verifier in a dependent job. The split
+  addresses runner termination risk and does not weaken the verified scope.
 - The release verifier is `scripts/verify_release.ps1 -Mode release`; it writes
   a SHA-bound log and JSON manifest and refuses a dirty tree.
 

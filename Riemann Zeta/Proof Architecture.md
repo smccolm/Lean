@@ -10,7 +10,7 @@ flowchart TD
 
     PC["#20 Exact publication contracts<br/>DONE INTERNALLY<br/>GM Theorems 1.1 and 1.2, Ingham,<br/>Huxley and combined 30/13"]
     FV["#20 Canonical foundation verifier<br/>DONE INTERNALLY<br/>303/303 modules classified, exact-type audit,<br/>zero diagnostics and immutable CI pins"]
-    LR["#20 Clean-clone release evidence<br/>OPEN - RELEASE GATE<br/>commit, release-mode fresh-clone PASS,<br/>exact tag and SHA-bound CI artifact"]
+    LR["#20 Clean-clone release evidence<br/>OPEN - REMOTE CI RETRY<br/>local release-mode fresh-clone PASS and tag;<br/>first remote run SIGTERM, SHA artifact pending"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
