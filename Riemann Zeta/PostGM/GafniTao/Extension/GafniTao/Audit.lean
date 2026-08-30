@@ -1,0 +1,100 @@
+import GafniTao
+
+/-!
+# Isolated dependency audit
+
+This file is executed separately from the production root.  Every public and
+source-critical theorem is listed explicitly so that Lean prints its actual
+axiom dependencies.
+-/
+
+#print axioms GafniTao.zeroCount_eq_weighted_sum
+#print axioms GafniTao.frozen_guthMaynard_zero_density
+#print axioms GafniTao.leastFixedPowerExponent_eq_bot_of_eventually_zero
+#print axioms GafniTao.fixedPowerBound_of_leastFixedPowerExponent_lt
+#print axioms GafniTao.EpsilonExponentBound.mono_exponent
+#print axioms GafniTao.epsilonExponentBound_of_leastEpsilonExponent_lt
+#print axioms GafniTao.leastEpsilonExponent_lt_of_bound
+#print axioms GafniTao.EpsilonExponentBound.congr
+#print axioms GafniTao.mangoldtIntervalSum_eq_psi_sub
+#print axioms GafniTao.mem_mangoldtInterval
+#print axioms GafniTao.measurableSet_shortIntervalExceptionalSet
+#print axioms GafniTao.measure_shortIntervalExceptionalSet_lt_top
+#print axioms GafniTao.exceptionalExponentDelta_eq_bot_of_eventually_empty
+#print axioms GafniTao.exceptionalExponent_le_coe_iff
+#print axioms GafniTao.shortIntervalExceptionalSet_anti_delta
+#print axioms GafniTao.fixedPowerBound_exceptionalMeasure_anti_delta
+#print axioms GafniTao.exceptionalExponentDelta_anti
+#print axioms GafniTao.exceptionalExponent_eq_countable
+#print axioms GafniTao.mem_zeroQuadruples
+#print axioms GafniTao.mem_resonantZeroQuadruples
+#print axioms GafniTao.card_zeroOccurrence
+#print axioms GafniTao.zeroAdditiveEnergyOccurrenceCount_eq
+#print axioms GafniTao.zeroDensityExponent_le
+#print axioms GafniTao.guthMaynard_zeroDensityEnvelope
+#print axioms GafniTao.zeroDensityExponent_le_guthMaynard
+#print axioms GafniTao.frozen_uniform_thirty_thirteenths_zeroDensityEnvelope
+#print axioms GafniTao.zeroDensityExponent_le_thirty_thirteenths
+#print axioms GafniTao.seventeen_thirtieths_eq_uniform_all_threshold
+#print axioms GafniTao.two_fifteenths_eq_uniform_almost_all_threshold
+#print axioms GafniTao.zeroAdditiveEnergyExponent_le
+#print axioms GafniTao.zeroIncrementCoefficient_eq_integral
+#print axioms GafniTao.norm_zeroIncrementCoefficient_le
+#print axioms GafniTao.ne_zero_of_mem_zerosInRect_of_pos
+#print axioms GafniTao.zeroIncrementTerm_eq_cpow_mul_coefficient
+#print axioms GafniTao.norm_zeroIncrementTerm_le
+#print axioms GafniTao.zeroStripIncrementSum_eq_weighted_sum
+#print axioms GafniTao.zerosInRect_strip_subset_zeroSet
+#print axioms GafniTao.strip_multiplicity_sum_le_zeroCount
+#print axioms GafniTao.norm_zeroStripIncrementSum_le_count
+#print axioms GafniTao.explicitFormulaHeight_pos
+#print axioms GafniTao.tendsto_explicitFormulaHeight_atTop
+#print axioms GafniTao.eventually_log_sq_le_rpow
+#print axioms GafniTao.eventually_explicitFormulaHeight_le_rpow
+#print axioms GafniTao.zeroDensityEnvelope_at_explicitFormulaHeight
+#print axioms GafniTao.zeroStripPhysicalMajorant_epsilonBound
+#print axioms GafniTao.rpow_div_localTau
+#print axioms GafniTao.norm_zeroStripIncrementSum_le_physicalMajorant
+#print axioms GafniTao.zeroStripPhysicalSup_le_majorant
+#print axioms GafniTao.zeroStripPhysicalSup_epsilonBound
+#print axioms GafniTao.contDiff_logScaleBump
+#print axioms GafniTao.support_logScaleBump
+#print axioms GafniTao.hasCompactSupport_logScaleBump
+#print axioms GafniTao.logScaleBump_eq_one
+#print axioms GafniTao.one_le_logScaleBump
+#print axioms GafniTao.contDiff_logScaleBumpComplex
+#print axioms GafniTao.support_logScaleBumpComplex
+#print axioms GafniTao.hasCompactSupport_logScaleBumpComplex
+#print axioms GafniTao.logScaleBumpFourier_eq_fourierIntegral
+#print axioms GafniTao.logScaleBumpFourier_polynomial_decay
+#print axioms GafniTao.logScaleBumpFourier_tenfold_decay
+#print axioms GafniTao.localTau_pos
+#print axioms GafniTao.div_localTau_eq_rpow_mul_ratio
+#print axioms GafniTao.localScale_comparison
+#print axioms GafniTao.localScale_sub_nonneg
+#print axioms GafniTao.localScale_sub_le
+#print axioms GafniTao.localCoverLeft_ge
+#print axioms GafniTao.exists_local_multiplicative_cover
+#print axioms GafniTao.mangoldtIntervalSum_nonneg
+#print axioms GafniTao.mangoldtIntervalSum_sub_eq
+#print axioms GafniTao.rpow_inv_nat_sub_le
+#print axioms GafniTao.nat_root_interval_card_le
+#print axioms GafniTao.primePowerTailIntervalSum_eq_exponent_sum
+#print axioms GafniTao.primePowerExponentSlice_one
+#print axioms GafniTao.primePowerExponentSlice_le
+#print axioms GafniTao.primePowerTailIntervalSum_le
+#print axioms GafniTao.mangoldtIntervalSum_eq_prime_add_tail
+#print axioms GafniTao.prime_part_subset_primesBetween
+#print axioms GafniTao.primeMangoldtIntervalSum_le_brunTitchmarsh
+#print axioms GafniTao.mangoldtIntervalSum_le_brunTitchmarsh_local
+#print axioms GafniTao.one_lt_localReplacementZ
+#print axioms GafniTao.localMangoldtReplacementError_at_power
+#print axioms GafniTao.localMangoldtReplacementError_nonneg
+#print axioms GafniTao.localMangoldtSum_sub_short_eq
+#print axioms GafniTao.abs_localMangoldtSum_sub_short_le
+#print axioms GafniTao.abs_localMangoldtSum_sub_short_le_power_ledger
+#print axioms GafniTao.localReplacementRemainderEnvelope_isLittleO
+#print axioms GafniTao.localReplacementRemainder_le_envelope
+#print axioms GafniTao.eventually_abs_localMangoldtSum_sub_short_le
+#print axioms GafniTao.eventually_abs_localMangoldtSum_sub_short_le_relative
+#print axioms GafniTao.mangoldtIntervalSum_le_brunTitchmarsh
