@@ -12,9 +12,10 @@ Author: **S. McColm**
 Lean/
 ├── Riemann Zeta/        # Formalization of Dirichlet polynomials & completed Zeta symmetries
 ├── EllipsePerimeter/    # Formalized proof of complete elliptic perimeter series in Lean 4
-├── EllipseLab/          # Development laboratory and step-by-step proof iterations
+├── EllipseLab/          # Development laboratory and step-by-step proof iterations for the Ellipse project
 ├── Compacted Graphs/    # Subproject formalizing compactified graphs and cylindrical topology
-└── visualizer/          # Reusable 3D WebGL & 2D Python interactive visualization suite
+├── visualizer/          # Reusable 3D WebGL & 2D Python interactive visualization suite
+└── Article/             # Formal paper manuscripts and drafts (e.g., Ellipse Perimeter paper)
 ```
 
 ---
@@ -31,23 +32,27 @@ Mechanized Lean 4 formalization of the Guth--Maynard large-values and zero-densi
 - **Verification**: `scripts/verify_release.ps1` is the canonical verifier. Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed it from a fresh short-path clone. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper. Hosted CI is an optional mirror and has not produced a successful artifact.
 - **Source freeze and review packet**: see `Riemann Zeta/verification/SOURCE_FREEZE.md` and `Riemann Zeta/Publication Readiness and Semantic Audit.md`.
 
-### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/`)
+### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/` & `Article/`)
 A mechanized Lean 4 proof of the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
 
 $$P(a,b) = 4A E(e) = 2\pi A \sum_{n=0}^{\infty} \left(\frac{(2n)!}{2^{2n}(n!)^2}\right)^2 \frac{e^{2n}}{1-2n}, \qquad e = \sqrt{1 - \frac{B^2}{A^2}}$$
 
 - **Modules**:
-  - `Wallis.lean`: Combinatorics of Wallis sequences and ratio recurrences.
   - `Binomial.lean`: Real binomial expansion $\sqrt{1-x}$ and series summability.
+  - `Boundary.lean`: Endpoint evaluations and limit squeezes for the degenerate case $e=1$.
+  - `EllipticE.lean`: Definition and properties of the complete elliptic integral $E(e)$ and coefficient sequences.
+  - `Geometry.lean`: Full-loop parametric arc-length and its relationship to the quadrant integral.
+  - `Wallis.lean`: Combinatorics of Wallis sequences and ratio recurrences for the trigonometric integrals.
+- **Paper**: A draft manuscript detailing the derivation alongside the Lean formalization is available in the `Article/` directory. `EllipseLab/` contains the intermediate iterative states of the proof development.
 
 ### 3. Compacted Graphs (`Compacted Graphs/`)
-A dedicated Lean 4 project for formalizing compactified topological graphs, single-valued fiber bundle projections, and cylindrical coordinate mappings $(r, \theta, z)$.
+A dedicated Lean 4 project for formalizing compactified topological graphs, single-valued fiber bundle projections, and cylindrical coordinate mappings $(r, \theta, z)$. (Currently in early stages of development.)
 
 ---
 
 ## 🎨 Interactive 3D WebGL Visualization Suite (`visualizer/`)
 
-Includes a Python visualization engine for interactive 3D WebGL exploration in your browser:
+Includes a Python visualization engine for interactive 3D WebGL exploration in your browser via `dashboard.html`:
 - **3D Cylindrical Compactification**: Visualizes $3\text{D}$ cylindrical spirals $(r(\theta), \theta, z)$ alongside their compactified torus ($S^1 \times S^1$) embeddings.
 - **Riemann Zeta Critical Line Trajectory**: Animates $\zeta(\frac{1}{2} + it)$ for $t \in [0, 40]$, showing 3D spatial origin-axis collapses at nontrivial zeros and 2D complex plane origin-crossing loops.
 
