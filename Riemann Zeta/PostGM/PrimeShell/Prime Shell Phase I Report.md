@@ -4,7 +4,7 @@ Date: 2026-08-29
 
 ## Verdict
 
-Prime Shell Phase I (PSH-01 through PSH-06) is complete in the isolated subtree. The exact result is an **F1 FAIL for the collapsed Guth–Maynard shift-prefix interface**.
+Prime Shell Phase I (PSH-01 through PSH-06) is complete in the isolated subtree. The exact Phase-I result was an **F1 FAIL for the collapsed Guth–Maynard shift-prefix interface**. A later concrete theorem discharged the actual pinned-kernel row-variation premise. The full program has since terminated at a corrected, non-vacuous spectral no-go for the faithful separated-amplitude class. See [Prime Shell Final Report](Prime%20Shell%20Final%20Report.md).
 
 The source prime-prime term and its dyadic difference-frequency off-diagonal have been exposed exactly. The literal dyadic kernel is `K(N,T,n,h)`, not a scalar `K(N,T,h)`. Anchoring it produces a scalar prefix-consumable term plus an exact two-variable variation remainder. Lean proves:
 
@@ -14,7 +14,7 @@ The source prime-prime term and its dyadic difference-frequency off-diagonal hav
 
 Therefore GM Corollary 1.4, converted only into cumulative shift information, is not by itself a faithful input to this trace calculation. A direct bound for the exact variation remainder, or `n`-localized/rectangle-prefix correlation information, is required.
 
-This report does not claim that GM is useless, that the concrete AF kernel has been numerically proved nonconstant at a named tuple, that MRT already suffices, that the disconnected shell is admissible, or that any new zero theorem has been proved.
+This historical report does not claim that GM is useless, that MRT suffices, that the disconnected shell is admissible, or that any new zero theorem has been proved. Its earlier lack of a concrete AF-kernel witness is superseded by `exists_concrete_literal_kernel_row_variation`; no numerical oracle is used.
 
 ## Isolation boundary
 
@@ -144,9 +144,9 @@ Consequently:
 - **PASS:** scalar Abel transfer for the anchored term;
 - **FAIL:** a consumer whose only arithmetic input is the collapsed shift prefix, unless literal row constancy is additionally proved;
 - **missing faithful input:** direct control of the exact variation remainder or `n`-localized/rectangle-prefix correlation control;
-- **not claimed:** a concrete evaluated nonconstancy witness for the AF taper.
+- **later discharged:** `exists_concrete_literal_kernel_row_variation` and `concrete_literal_prefix_only_transfer_fails` now prove actual pinned-kernel row variation and the source-specific prefix-only failure.
 
-MRT's almost-all fixed-shift theorem is the next justified source to inspect because it retains more shift-local information than GM's collapsed cumulative route. It is not yet known to control the literal two-variable weight, so PSH-07 and later items remain open.
+MRT would have been the next justified source to inspect from F1 alone. The later F2 theorem instead proves the literal disconnected-shell admissible class empty, so no MRT consumer is required for this program.
 
 ## Strict scale consequences
 
@@ -168,7 +168,7 @@ lake build PrimeShell
 lake env lean PrimeShell/Audit.lean
 ```
 
-The build completed 8710 jobs with exit code 0 and no Lean warning output. The audit lists every new public theorem and reports only the permitted standard dependencies `propext`, `Classical.choice`, and `Quot.sound` (some theorems use a subset).
+The historical Phase-I build completed 8710 jobs with exit code 0. Current Lake builds may replay warning diagnostics from the immutable pinned Zeta23 dependency; direct Prime Shell elaboration is warning-free. The audit lists the public and agenda-critical theorems and reports only the permitted standard dependencies `propext`, `Classical.choice`, and `Quot.sound` (some theorems use a subset).
 
 Repository scans of the extension found no `sorry`, `admit`, `sorryAx`, project `axiom`/postulated `constant`, `native_decide`, `implemented_by`, or `unsafe` bypass.
 
@@ -188,4 +188,4 @@ The audit covered 14,290 discovered nonprivate project theorems and reported onl
 
 ## Scope and next decision
 
-Phase I closes the proposed GM-prefix route. It does not authorize disconnected-shell optimization, a full formalization of GM short intervals, or a zero-side theorem. The next rational research action is to test whether MRT-style fixed-shift information, or a direct source-specific variation estimate, controls the exact `K(N,T,n,h)` remainder. That is a new bounded goal, not part of this completion claim.
+Phase I closed the proposed collapsed GM-prefix route. Subsequent work proved the actual kernel variation, corrected the total-profile/zero-gap modeling error by constructing a genuine amplitude source, proved the faithful class nonempty, and then established the universal inequality `kappaXi > 3` for every separated amplitude in the full-chain range. The current endpoint and verification evidence are recorded in the final report; no zero-side success theorem is claimed.

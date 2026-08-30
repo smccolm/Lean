@@ -1,44 +1,51 @@
-﻿flowchart TD
-    S00["PSH-00 Isolation boundary<br/>DONE: research subtree only"]
-    S01["PSH-01 Pinned Zeta23 reproduction<br/>DONE WITH RECORDED UPSTREAM WARNINGS<br/>Comparator Windows replay accepted"]
-    S02["PSH-02 Exact paper-to-Lean crosswalk<br/>DONE<br/>specializations and nonmatches explicit"]
-    S03["PSH-03 Exact M[P_X,P_X] decomposition<br/>DONE<br/>source theorem recovered as regression"]
-    S04["PSH-04 Exact dyadic m=n+h rewrite<br/>DONE<br/>literal kernel is K_N,T(n,h), with<br/>anchor plus variation remainder"]
-    S05["PSH-05 Narrow GM finite interface<br/>DONE AS A SPECIFICATION<br/>not assumed and not proved from GM"]
-    F1{"PSH-06 F1 collapsed-prefix verdict<br/>FAIL - THEOREM LEVEL"}
-    N1["GM collapsed-prefix route killed<br/>exact decomposition preserved;<br/>n-local or direct variation input needed"]
-    S07["PSH-07 F2: disconnected-shell<br/>admissibility and cross terms<br/>OPEN"]
-    S08["PSH-08 Arithmetic-only<br/>oracle consumer<br/>OPEN"]
-    F3{"PSH-09 F3: certified pricing gives<br/>a meaningful new zero theorem?"}
-    N2["Stop shell route<br/>record strongest certified bound"]
-    S10["PSH-10 Complete informal proof<br/>with all constants and errors<br/>OPEN"]
-    S11["PSH-11 Select GM or MRT<br/>from proved gate verdicts<br/>OPEN"]
-    S12["PSH-12 Toolchain/integration decision<br/>without modifying frozen GM<br/>OPEN"]
-    S13["PSH-13 Formalize native arithmetic input<br/>OPEN"]
-    S14["PSH-14 Replace oracle in exact trace<br/>OPEN"]
-    S15["PSH-15 Spectral/inertia consumer<br/>OPEN"]
-    S16["PSH-16 New unconditional<br/>Prime Shell zero theorem<br/>OPEN"]
-    S17["PSH-17 Dependency audit<br/>OPEN"]
-    S18["PSH-18 Zero-warning clean build<br/>OPEN"]
-    S19["PSH-19 Trusted statement check<br/>OPEN"]
-    S20["PSH-20 Reproducible immutable release<br/>OPEN"]
-    S21["PSH-21 Independent expert review<br/>OPEN - EXTERNAL"]
-    MRT["Next justified source test: MRT<br/>almost-all fixed shifts; candidate<br/>threshold alpha > 33/25<br/>OPEN - Phase II not started"]
-    CEIL["PSH-C Optional ceiling audit<br/>reproduce EnclOK before using 0.6818287<br/>as a verified numerical comparator"]
+```mermaid
+flowchart TD
+    S00["PSH-00 Isolation boundary<br/>DONE: frozen GM and pinned Zeta23 unchanged"]
+    S01["PSH-01 Pinned Zeta23 reproduction<br/>DONE WITH IMMUTABLE UPSTREAM<br/>warnings recorded, not suppressed"]
+    S02["PSH-02 Exact source crosswalk<br/>DONE: paper statements, Lean declarations,<br/>normalizations and nonmatches explicit"]
+    S03["PSH-03 Exact prime-prime decomposition<br/>DONE: all frequency pieces accessible;<br/>published bound recovered as regression"]
+    S04["PSH-04 Exact dyadic shift kernel<br/>DONE: literal m=n+h rewrite,<br/>endpoints and variation retained"]
+    S05["PSH-05 Narrow finite arithmetic interfaces<br/>DONE AS SPECIFICATIONS AND CONSUMERS<br/>no arithmetic oracle postulated"]
+    S06["PSH-06 Concrete F1 verdict<br/>DONE: actual pinned PhiR rows vary;<br/>collapsed-prefix transfer fails"]
 
-    S00 --> S01 --> S02 --> S03 --> S04 --> S05 --> F1
-    F1 -->|NO| N1
-    F1 -->|YES| S07 --> S08 --> F3
-    F3 -->|NO| N2
-    F3 -->|YES| S10 --> S11 --> S12 --> S13 --> S14 --> S15 --> S16 --> S17 --> S18 --> S19 --> S20 --> S21
-    N1 --> MRT --> S07
-    CEIL -. optional scoreboard .-> F3
+    FIX["Correction of provisional F2 claim<br/>DONE: zero gap belongs to amplitude q,<br/>not to a strictly-positive WindowProfile v"]
+    AFE["Faithful amplitude source entry<br/>DONE: atV(q²), C³ even bounded q,<br/>extended FamilyHyps proved"]
+    BAND["Explicit two-band amplitude<br/>DONE: smooth, nonnegative, nonzero,<br/>exact difference-set support"]
+    NONEMPTY["PSH-07 Faithful shell admissibility<br/>DONE AND NONEMPTY<br/>concreteFaithfulAmplitudeShell"]
+    HOLDER["Exact spectral support-loss inequality<br/>DONE: Cauchy-Schwarz plus D1 nonnegativity"]
+    F3["PSH-09 F3 universal pricing verdict<br/>DONE: every faithful separated shell has<br/>kappaXi > 3 and no positive gain"]
+    TERM["TERMINAL B: ROUTE DISPROVED<br/>primeShell_universal_no_gain_native<br/>faithfulSeparatedAmplitudeGain_iff_false"]
+
+    S08["PSH-08 Exact arithmetic consumers<br/>PRESERVED: literal two-variable interfaces;<br/>irrelevant to terminal obstruction"]
+    MRT["Published arithmetic routes<br/>NOT FORMALIZED AS PROJECT AXIOMS<br/>full-chain/MRT scale overlap is nonempty"]
+    S10["PSH-10 Exposition<br/>DONE FOR THE NO-GO ENDPOINT"]
+    S11["PSH-11 Native arithmetic source<br/>CLOSED NOT REQUIRED BY TERMINAL B"]
+    S12["PSH-12 Integration architecture<br/>DONE: isolated Lean 4.33 extension;<br/>frozen Lean 4.30 GM root untouched"]
+    S13["PSH-13 Native arithmetic input<br/>CLOSED NOT REQUIRED BY TERMINAL B"]
+    S14["PSH-14 Native weighted trace<br/>CLOSED NOT REQUIRED BY TERMINAL B"]
+    S15["PSH-15 Native zero-side success chain<br/>CLOSED NOT REQUIRED; no zero theorem claimed"]
+    S16["PSH-16 Public terminal theorem<br/>DONE: non-vacuous universal no-gain"]
+    S17["PSH-17 Dependency audit<br/>DONE: permitted logical axioms only"]
+    S18["PSH-18 Project-source clean check<br/>DONE: zero Prime Shell diagnostics;<br/>immutable dependency warnings disclosed"]
+    S19["PSH-19 Trusted statement check<br/>DONE: gain existence iff False"]
+    S20["PSH-20 Reproduction candidate<br/>DONE: exact pins, isolated build,<br/>source SHA-256 manifest"]
+    S21["PSH-21 Independent expert review<br/>OPEN - EXTERNAL"]
+
+    S00 --> S01 --> S02 --> S03 --> S04 --> S05 --> S06 --> FIX
+    FIX --> AFE --> BAND --> NONEMPTY --> HOLDER --> F3 --> TERM
+    S04 --> S08
+    S08 --> MRT
+    TERM --> S10 --> S11 --> S12 --> S13 --> S14 --> S15 --> S16
+    S16 --> S17 --> S18 --> S19 --> S20 --> S21
 
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
-    classDef open fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
-    classDef gate fill:#fff2bf,stroke:#9a6a00,color:#332500,stroke-width:2px;
+    classDef closed fill:#ececec,stroke:#666,color:#222,stroke-width:2px;
     classDef stop fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
-    class S00,S01,S02,S03,S04,S05 done;
-    class S07,S08,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,MRT,CEIL open;
-    class F3 gate;
-    class F1,N1,N2 stop;
+    classDef external fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
+    class S00,S01,S02,S03,S04,S05,S06,FIX,AFE,BAND,NONEMPTY,HOLDER,F3,S08,MRT,S10,S12,S16,S17,S18,S19,S20 done;
+    class S11,S13,S14,S15 closed;
+    class TERM stop;
+    class S21 external;
+```
+
+The terminal theorem concerns the faithful separated-amplitude mechanism formalized here. It does not rule out connected positive-valley windows, a different source construction, or other approaches to zero statistics.

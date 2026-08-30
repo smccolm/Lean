@@ -1,6 +1,6 @@
 # Prime Shell Source Ledger
 
-Snapshot date: 2026-08-29. Remote commit identifiers were queried directly; mathematical claims below are tied to primary papers or upstream project documentation.
+Snapshot date: 2026-08-30. Remote commit identifiers were queried directly; mathematical claims below are tied to primary papers or upstream project documentation.
 
 ## Pinned Lean repositories
 
@@ -38,7 +38,7 @@ The completed declaration-level crosswalk is in [Prime Shell Phase I Report](Pri
 
 - The pinned Zeta23 checkout remained at exact commit `3635e748...` and was clean after reproduction.
 - Its documented `lake build` completed successfully, but the unchanged upstream source emitted 247 `warning:` lines. Prime Shell does not relabel that as a zero-warning upstream build.
-- The isolated `Extension/` build emits no warnings.
+- Direct elaboration of the Prime Shell extension source emits no warnings. `lake build PrimeShell` replays warnings stored in the immutable Zeta23 dependency; those are upstream diagnostics and are recorded rather than filtered or attributed to Prime Shell.
 - The official `landrun` binary could not run on Windows and no WSL distribution was installed. `nanoda` also failed to link because the Visual C runtime import library was unavailable. These are environment limitations, not successful trusted-sandbox checks.
 - Comparator's base, multiplicity, and XiPrime released topics all reported that Lean's default kernel accepted the solution and that the solution was okay in the Windows development replay.
 
@@ -49,3 +49,30 @@ The completed declaration-level crosswalk is in [Prime Shell Phase I Report](Pri
 - MRT gives almost-all fixed-shift asymptotics, but only at the farther `8/33` shift threshold.
 - The candidate support thresholds `15/13` and `33/25` are algebraic overlap points with the resonant scale, not proved trace ranges.
 - The `0.6818287` PairCeiling value depends on a displayed `EnclOK` enclosure input whose external certificate reproduction is not part of the release Comparator. It must not be described as an internally discharged unconditional ceiling.
+
+## Corrected structural analysis after Phase I
+
+The released `WindowProfile` strict-positivity field cannot itself be used as a universal no-go. It is an interface restriction on a total profile, whereas the physical family can be constructed faithfully from a smooth nonnegative amplitude `q` and the source parameter `v = q²`. Zeros of `q` then produce a genuine gap without requiring a nonsmooth square root. Prime Shell formalizes this correction in:
+
+- `AmplitudeProfile` and `amplitudeSq`;
+- `atAmplitude_phi`, the exact physical source identity;
+- `extendedFamilyHyps_atAmplitude`, the extended explicit-formula entry theorem in the exact range `3 * lambda < 4`; and
+- `twoBandAmplitude`, an explicit smooth disconnected example.
+
+The relevant source upper range is therefore `lambda < 4/3`, not the old released support-one condition `lambda < 1`. The strict MRT scale `33/25 < lambda` has a genuine overlap with it; `lambda = 199/150` is the formal concrete witness. No empty-scale claim is retained.
+
+The universal obstruction instead comes from the exact Zeta23 spectral functional. For every two-band amplitude whose cross frequencies begin strictly beyond support one, support loss and Cauchy–Schwarz give
+
+```text
+(∫ q²)² ≤ (1 - gap) ∫ q⁴.
+```
+
+Together with `1 < lambda * gap`, `lambda < 4/3`, and nonnegativity of the full D1 term, this forces
+
+```text
+3 < kappaXi lambda (q²).
+```
+
+The theorem `primeShell_universal_no_gain_native` therefore rules out positive gain through the exact `2 - kappaXi` certificate even under perfect arithmetic information. `faithfulAmplitudeShell_nonempty` proves that the quantified source class is inhabited, and `faithfulSeparatedAmplitudeGain_iff_false` supplies the direct two-sided statement check.
+
+This conclusion is specific to the faithful separated-amplitude mechanism. The source ledger does not claim that it rules out connected positive-valley windows, altered source families, or other zero-statistics arguments.

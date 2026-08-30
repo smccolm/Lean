@@ -175,6 +175,87 @@ theorem card_gmSimultaneousLambdaBadSet_le_sum_cards
   unfold gmSimultaneousLambdaBadSet
   exact Finset.card_biUnion_le
 
+/-- A finite family of lengths costs exactly its cardinality in the union
+bound.  This is the honest simultaneous form obtainable from the published
+fixed-length statement; no uniform-in-`H` exceptional set is asserted. -/
+theorem card_gmSimultaneousLambdaBadSet_le_of_corollary14
+    (hGM : GMCorollary14LambdaFinite)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ X₀ : ℕ, ∃ C : ℝ, 0 < C ∧ ∀ X : ℕ, ∀ lengths : Finset ℕ,
+      X₀ ≤ X → 2 ≤ X →
+      (∀ H ∈ lengths,
+        (X : ℝ) ^ (2 / 15 + ε) ≤ H ∧
+        (H : ℝ) ≤ (X : ℝ) ^ (99 / 100 : ℝ)) →
+      ((gmSimultaneousLambdaBadSet C X lengths).card : ℝ) ≤
+        (lengths.card : ℝ) * (C * X * gmDecay X) := by
+  obtain ⟨X₀, C, hC, hfixed⟩ := hGM ε hε
+  refine ⟨X₀, C, hC, ?_⟩
+  intro X lengths hX hXtwo hrange
+  calc
+    ((gmSimultaneousLambdaBadSet C X lengths).card : ℝ) ≤
+        (∑ H ∈ lengths, (gmLambdaBadSet C X H).card : ℕ) := by
+      exact_mod_cast card_gmSimultaneousLambdaBadSet_le_sum_cards C X lengths
+    _ ≤ ∑ _H ∈ lengths, C * X * gmDecay X := by
+      exact_mod_cast Finset.sum_le_sum fun H hH =>
+        hfixed X H hX hXtwo (hrange H hH).1 (hrange H hH).2
+    _ = (lengths.card : ℝ) * (C * X * gmDecay X) := by simp
+
+/-- Outside the literal fixed-length bad set, the defining `Λ` error has
+the advertised bound.  No asymptotic interface is used in this finite
+consumer. -/
+theorem abs_shortIntervalLambdaError_le_of_not_mem_badSet
+    {C : ℝ} {X H n : ℕ}
+    (hn : n ∈ Finset.Icc X (2 * X))
+    (hgood : n ∉ gmLambdaBadSet C X H) :
+    |shortIntervalLambdaError n H| ≤ C * H * gmDecay X := by
+  unfold gmLambdaBadSet at hgood
+  simp only [Finset.mem_filter, hn, true_and, not_lt] at hgood
+  exact hgood
+
+/-- A finite union of fixed-length exceptional sets gives simultaneous
+control at every explicitly listed endpoint length. -/
+theorem abs_shortIntervalLambdaError_le_of_not_mem_simultaneous
+    {C : ℝ} {X n : ℕ} {lengths : Finset ℕ}
+    (hn : n ∈ Finset.Icc X (2 * X))
+    (hgood : n ∉ gmSimultaneousLambdaBadSet C X lengths)
+    {H : ℕ} (hH : H ∈ lengths) :
+    |shortIntervalLambdaError n H| ≤ C * H * gmDecay X := by
+  apply abs_shortIntervalLambdaError_le_of_not_mem_badSet hn
+  intro hbad
+  apply hgood
+  unfold gmSimultaneousLambdaBadSet
+  exact Finset.mem_biUnion.mpr ⟨H, hH, hbad⟩
+
+/-- Simultaneous endpoint control yields the exact block-mass estimate.
+The loss is `J+K`, reflecting two independently controlled fixed lengths;
+there is no false claim of a single exceptional set uniform in all lengths. -/
+theorem abs_lambdaInterval_sub_sub_blockLength_le
+    {C : ℝ} {X n J K : ℕ} {lengths : Finset ℕ}
+    (hn : n ∈ Finset.Icc X (2 * X))
+    (hgood : n ∉ gmSimultaneousLambdaBadSet C X lengths)
+    (hJ : J ∈ lengths) (hK : K ∈ lengths) (hJK : J ≤ K) :
+    |(lambdaIntervalSum n K - lambdaIntervalSum n J) - (K - J : ℕ)| ≤
+      C * (K + J) * gmDecay X := by
+  have hJerr := abs_shortIntervalLambdaError_le_of_not_mem_simultaneous
+    hn hgood hJ
+  have hKerr := abs_shortIntervalLambdaError_le_of_not_mem_simultaneous
+    hn hgood hK
+  unfold shortIntervalLambdaError at hJerr hKerr
+  calc
+    |(lambdaIntervalSum n K - lambdaIntervalSum n J) - (K - J : ℕ)| =
+        |(lambdaIntervalSum n K - K) -
+          (lambdaIntervalSum n J - J)| := by
+      rw [Nat.cast_sub hJK]
+      congr 1
+      ring
+    _ ≤ |lambdaIntervalSum n K - K| +
+          |lambdaIntervalSum n J - J| := by
+      rw [sub_eq_add_neg]
+      simpa only [abs_neg] using abs_add_le
+        (lambdaIntervalSum n K - K) (-(lambdaIntervalSum n J - J))
+    _ ≤ C * K * gmDecay X + C * J * gmDecay X := add_le_add hKerr hJerr
+    _ = C * (K + J) * gmDecay X := by ring
+
 /-- Raw un-normalized von Mangoldt correlation at one positive shift. -/
 def rawDyadicLambdaCorrelation (N h : ℕ) : ℝ :=
   ∑ n ∈ Finset.Ioc N (2 * N),

@@ -1,6 +1,6 @@
 ﻿# Prime Shell Persistent Goal Prompt
 
-**Status: completed historical acceptance contract.** Phase I was executed from this prompt. The result is recorded in [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md). The text below is not the next-goal prompt.
+**Status: completed historical Phase-I acceptance contract.** Phase I was executed from this prompt. The later full-program work corrected the provisional total-profile argument, constructed a nonempty faithful amplitude class, and terminated in the universal spectral no-gain theorem recorded in [Prime Shell Final Report](Prime%20Shell%20Final%20Report.md). The text below is not a current goal prompt.
 
 ```text
 Create a persistent goal to complete Prime Shell Phase I (Prime Shell Shitlist PSH-01 through PSH-06) without modifying the frozen Guth-Maynard proof.

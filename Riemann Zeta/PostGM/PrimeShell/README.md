@@ -4,29 +4,36 @@ This directory is the isolated research and implementation area for the Prime Sh
 
 ## Boundary
 
-- Frozen GM source: commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, tag `gm-foundation-freeze-v1.0.1`, Lean `v4.30.0`.
-- Zeta23 source selected for reproduction: Anthropic `formal-math` tag `v1.0`, commit `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`, Lean `v4.33.0-rc2`, Mathlib `51e6992efd06126df61a496bebf8f49482a4e129`.
-- The two projects have different toolchains. Zeta23 must first be reproduced as its own Lake project. No Zeta23 import is to be added to `RiemannZeta.lean`, and no frozen GM Lean file is to be edited, until the analytic feasibility gates pass and an explicit integration decision is recorded.
-- `Extension/` is a separately pinned Zeta23-compatible Lake project. Its manifest fetches the exact Zeta23 commit into the ignored `.lake` dependency cache. It does not import the frozen GM project and is not imported by `RiemannZeta.lean`.
+- Frozen Guth–Maynard source: commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, tag `gm-foundation-freeze-v1.0.1`, Lean `v4.30.0`.
+- Pinned Zeta23 source: Anthropic `formal-math` tag `v1.0`, commit `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`, Lean `v4.33.0-rc2`, Mathlib `51e6992efd06126df61a496bebf8f49482a4e129`.
+- `Extension/` is a separate Zeta23-compatible Lake project. It neither imports the frozen GM project nor enters `RiemannZeta.lean`.
+- The immutable dependency may replay its own warnings during `lake build`; direct Prime Shell elaboration is used to distinguish project-source diagnostics from upstream diagnostics.
 
-## Program objective
+## Corrected program verdict
 
-Determine whether unconditional prime information beyond the classical support-one scale can be consumed by the exact Alpoge-Furman/Zeta23 prime-side trace calculation, initially through a disconnected high-frequency shell. The first candidate input is the Guth-Maynard almost-all short-interval prime theorem; the Matomaki-Radziwill-Tao almost-all shifted von Mangoldt theorem is the fallback.
+Prime Shell reached the permitted **ROUTE DISPROVED** endpoint. It proves no new theorem about zeta zeros.
 
-The objective is not described as a route to RH. Phase I is complete with a negative kernel-compatibility verdict for the proposed **collapsed GM-prefix interface**. This does not prove a new zero theorem and does not decide the later disconnected-shell question.
+The earlier claim that a disconnected shell was impossible because Zeta23 `WindowProfile` is strictly positive was not a faithful terminal model: the gap can be placed in a smooth amplitude `q`, and the actual source can be formed as `atV (q²)`. That correction is now formalized. The faithful class is nonempty; `concreteFaithfulAmplitudeShell` supplies an explicit smooth two-band member.
 
-The precise result is narrower than “GM cannot help.” The literal dyadic kernel depends on both the base point and the shift. A cumulative estimate after summing away the base point controls the anchored scalar part by Abel summation, but it does not control the separately exposed two-variable variation remainder. The extension proves the corresponding finite information-loss theorem and states the exact stronger remainder input that would suffice.
+The actual terminal obstruction is spectral. For every faithful separated amplitude in the full explicit-formula range, Lean proves
+
+```text
+3 < kappaXi lambda (q²).
+```
+
+Consequently the exact Zeta23 rank/inertia output `2 - kappaXi` cannot improve `2/3` by any positive amount, even if all prime-correlation errors were controlled perfectly. The public endpoint is `primeShell_universal_no_gain_native`, and `faithfulSeparatedAmplitudeGain_iff_false` is its two-sided trusted-statement comparator.
+
+This does not rule out connected positive-valley windows, a different source construction, or any approach outside the `FaithfulAmplitudeShell` mechanism.
 
 ## Documents
 
-- [Prime Shell Architecture](Prime%20Shell%20Architecture.md): dependency graph and numbered execution steps.
-- [Prime Shell Research Agenda](Prime%20Shell%20Research%20Agenda.md): corrected mathematical program, source analysis, scale ledger, and kill rules.
-- [Prime Shell Source Ledger](Prime%20Shell%20Sources.md): pinned repositories, primary papers, and the precise use of each source.
+- [Prime Shell Architecture](Prime%20Shell%20Architecture.md): corrected dependency graph and numbered status.
+- [Prime Shell Research Agenda](Prime%20Shell%20Research%20Agenda.md): mathematical program, source analysis, and terminal criterion.
+- [Prime Shell Source Ledger](Prime%20Shell%20Sources.md): pins, papers, code crosswalk, and source qualifications.
 - [Prime Shell Shitlist](Prime%20Shell%20Shitlist.md): exhaustive local acceptance checklist.
-- [Prime Shell Goal Prompt](Prime%20Shell%20Goal%20Prompt.md): exact bounded prompt for the next persistent goal.
-- [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md): pins, reproduction results, source crosswalk, theorem inventory, F1 verdict, and nonclaims.
-- `push_to_github.bat`: stages the repository, commits pending changes, and pushes `HEAD` directly to `origin/main`; it does not run builds or CI.
+- [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md): reproduction, exact kernel work, and F1 verdict.
+- [Prime Shell Final Report](Prime%20Shell%20Final%20Report.md): corrected non-vacuous terminal theorem, proof ledger, verification, and nonclaims.
+- [Prime Shell Candidate Manifest](Prime%20Shell%20Candidate%20Manifest.md): immutable pins and source hashes.
+- `push_to_github.bat`: owner-operated add/commit/push-to-main helper; it performs no build or CI work.
 
-Supply an explicit, current commit message when running the push script. Agents do not run it as part of verification.
-
-The local Shitlist is authoritative only for this subproject. It does not alter the completed theorem statuses in the frozen GM proof architecture.
+Supply an explicit current commit message when running the push script. Agents do not run it as part of verification. PSH-21 remains an external expert-review obligation.

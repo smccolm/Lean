@@ -1,47 +1,39 @@
-﻿# Prime Shell Shitlist
+# Prime Shell Shitlist
 
-This checklist is exhaustive for the isolated program. Checking an infrastructure item does not authorize checking a downstream theorem item. The frozen GM proof is an input and must remain unchanged.
+This checklist is exhaustive for the isolated Prime Shell program. The frozen Guth–Maynard proof remains an unchanged input. Prime Shell terminates in the permitted **ROUTE DISPROVED** state and proves no new zero-distribution theorem.
 
-## Phase I - Kernel feasibility
+## Source and kernel work
 
-- [x] **PSH-00 - Isolation boundary.** Create the `PostGM/PrimeShell/` program, identify the frozen GM commit, prohibit edits to frozen GM modules, and record the toolchain split.
-- [x] **PSH-01 - Pinned Zeta23 reproduction.** Reproduced tag `v1.0` / commit `3635e748...` with its pinned toolchain. The unchanged upstream build and solution builds pass; axiom probes expose only standard logical axioms. Comparator accepts all three released topics in a Windows development replay. The official Linux `landrun` sandbox was unavailable, and the unchanged upstream build emits warnings; both facts and all log hashes are recorded in the Phase I report.
-- [x] **PSH-02 - Exact source crosswalk.** Crosswalked paper equations (2.7), (5.10), (5.11), Proposition 5.4, Theorem 5.7, and Section 7.2 to exact declarations, including the places where Zeta23 uses a specialization rather than a verbatim formal statement. Normalizations, intervals, Fourier conventions, and endpoints are recorded.
-- [x] **PSH-03 - Exact prime-prime decomposition.** `primePrime_exact_decomposition` and `primePrime_exact_source_ledger` expose the diagonal, resonant and nonresonant difference-frequency terms, opposite-sign/sum-frequency term, diagonal boundary discrepancy, and remainder. `primePrime_bound_regression_from_exact_decomposition` recovers the existing Proposition 5.4 bound through that equality.
-- [x] **PSH-04 - Exact shift kernel.** `dyadicDifferenceOffDiagonal_eq_shiftSum` proves the exact `m=n+h` rewrite. The source kernel is actually `K_{N,T}(n,h)`, not a scalar `K_{N,T}(h)`. The extension proves the exact anchor-plus-variation ledger, endpoint support, zero tail, coefficient sign, literal size bound, resonance range, and an explicit variation-remainder bound retaining the source kernel.
-- [x] **PSH-05 - Honest GM arithmetic interface.** `GMCorollary14PiFinite` and `GMCorollary14LambdaFinite` are proposition specifications, not axioms or proved GM theorems. Exact pi-to-Lambda decomposition, prime-power term, endpoint bridge, finite simultaneous-length union cost, Lambda/acoef exceptional-mass losses, cumulative-correlation identity, and Section 13.2 dependency ledger are exposed.
-- [x] **PSH-06 - F1 kernel verdict: FAIL for collapsed prefixes.** `prefix_only_two_point_transfer_forces_row_constancy` proves that any universal collapsed-prefix consumer forces exact equality of every kernel row. `all_shift_prefixes_insufficient_for_nonconstant_two_variable_kernel` gives the finite counterexample, and `literal_prefix_only_transfer_fails_of_row_variation` specializes it to the literal source kernel when a row variation is witnessed. `finite_abel_identity` proves what prefixes *do* control, and `abs_dyadicShiftSum_le_of_prefix_and_variation` identifies the missing direct variation-remainder estimate. No concrete numerical row-variation witness for the AF taper is claimed.
+- [x] **PSH-00 — Isolation boundary.** All work is under `PostGM/PrimeShell/`; `RiemannZeta/` and `RiemannZeta.lean` are untouched by Prime Shell and no Prime Shell module enters the frozen root graph.
+- [x] **PSH-01 — Pinned Zeta23 reproduction.** Tag `v1.0`, commit `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`, Lean `v4.33.0-rc2`, and Mathlib `51e6992efd06126df61a496bebf8f49482a4e129` are fixed. Warnings replayed from the immutable dependency are reported, not suppressed or attributed to Prime Shell.
+- [x] **PSH-02 — Exact source crosswalk.** Alpoge–Furman equations (2.7), (5.10)–(5.11), Proposition 5.4, Theorem 5.7, and Section 7.2 are crosswalked to exact declarations, conventions, specializations, and nonmatches.
+- [x] **PSH-03 — Exact prime-prime decomposition.** `primePrime_exact_decomposition` and `primePrime_exact_source_ledger` expose the diagonal, same-sign resonant, opposite-sign, boundary, and remainder pieces and recover the pinned prime-term estimate as a regression result.
+- [x] **PSH-04 — Exact shift kernel.** `dyadicDifferenceOffDiagonal_eq_shiftSum` gives the literal `m=n+h` rewrite with the two-variable kernel, endpoints, support, resonant range, and variation remainder retained.
+- [x] **PSH-05 — Honest arithmetic interfaces.** The narrow finite GM and exact two-variable arithmetic controls are specifications and downstream consumers, never axioms. Prime powers, Lambda weights, endpoints, simultaneous ranges, and source dependencies remain visible.
+- [x] **PSH-06 — Concrete F1 verdict.** `exists_concrete_literal_kernel_row_variation` constructs actual pinned `Params.PhiR` rows in one admissible dyadic block; `concrete_literal_prefix_only_transfer_fails` proves that collapsed shift-prefix data alone cannot control the literal kernel.
 
-Phase I is complete. Its theorem-level verdict kills only the collapsed GM-prefix route. It preserves the exact decomposition and identifies an `n`-localized/rectangle-prefix estimate or direct kernel-variation bound as the weakest faithful replacement currently exposed. MRT fixed-shift information is the next justified arithmetic source to test, but Phase II has not begun.
+## Corrected admissibility and terminal mathematics
 
-## Phase II - Structural and value feasibility
+- [x] **PSH-07 — Faithful F2 admissibility.** The old total-profile contradiction is withdrawn as a terminal argument. A zero gap is imposed on a smooth amplitude `q`, while the actual source is `atV (q²)`. `extendedFamilyHyps_atAmplitude` proves the source-entry bridge. `twoBandAmplitude_profile`, its exact difference-set theorems, and `concreteFaithfulAmplitudeShell` construct a genuine separated shell. `faithfulAmplitudeShell_nonempty` proves the class is not vacuous.
+- [x] **PSH-08 — Arithmetic consumer boundary.** The exact trace decompositions and literal two-variable consumers remain kernel-checked. The terminal obstruction below is stronger than any failure of GM or MRT: it applies even if the arithmetic terms were controlled perfectly. Therefore no native arithmetic theorem is needed to decide this mechanism.
+- [x] **PSH-09 — F3 universal no-gain theorem.** `amplitudeSq_integral_cauchy_of_separated_support` proves the exact support-loss inequality for `q²`; `jWin_D1_nonneg_extended` proves the full D1 contribution is nonnegative. Combining strict cross separation with the full-chain bound `lambda < 4/3`, `FaithfulAmplitudeShell.kappaXi_gt_three` proves `3 < kappaXi` for every faithful shell. Hence `FaithfulAmplitudeShell.no_positive_gain` rules out every positive improvement over `2/3` through the exact Zeta23 `2 - kappaXi` certificate.
+- [x] **PSH-C — PairCeiling reproduction not invoked.** `EnclOK` and the decimal `0.6818287` are unnecessary for the universal no-gain theorem and are not claimed as unconditional Lean results.
+- [x] **PSH-10 — Exposition.** The final report records the corrected model, the exact inequality, the earlier F1 result, the terminal implication, and the limits of the conclusion.
+- [x] **PSH-11 — Arithmetic source selection closed by terminal B.** GM, MRT, and other fixed-shift inputs are not postulated or recursively formalized because the spectral obstruction survives the strongest possible arithmetic input. The scale overlap itself is not claimed empty: the concrete parameter `199/150` lies strictly between `33/25` and `4/3`.
+- [x] **PSH-12 — Toolchain architecture.** The result lives in the separately pinned Lean `v4.33.0-rc2` extension. The Lean `v4.30.0` frozen GM repository remains outside its import graph.
+- [x] **PSH-13 — Native arithmetic input closed by terminal B.** No oracle, theorem-equivalent hypothesis, or project axiom was introduced.
+- [x] **PSH-14 — Native weighted trace closed by terminal B.** Existing exact trace infrastructure is preserved; a success-chain trace theorem would not overcome `kappaXi > 3`.
+- [x] **PSH-15 — Native spectral/zero consumer closed by terminal B.** No positive certificate exists in the faithful separated class, so no zero-side success theorem is stated.
+- [x] **PSH-16 — Public terminal theorem.** `primeShell_universal_no_gain_native` quantifies over every `FaithfulAmplitudeShell` and every positive `delta`. `faithfulAmplitudeShell_nonempty` separately proves that this is a non-vacuous class. This is the full goal’s permitted universal no-go endpoint.
 
-- [ ] **PSH-07 - F2 disconnected-shell theorem.** Prove that the actual Zeta23 test family admits the low block plus high shell, or prove that its positivity/Fourier constraints forbid it. Evaluate every low-shell cross term.
-- [ ] **PSH-08 - Arithmetic-only oracle consumer.** Introduce only a narrow explicit theorem parameter about finite von Mangoldt sums; prove the full conditional trace and zero-side consumer rather than projecting the parameter.
-- [ ] **PSH-09 - F3 certified pricing.** Optimize the actual finite spectral problem, produce an exact-rational or interval-certified result, and decide CONTINUE/STOP. Separate internally checked results from external enclosure hypotheses.
-- [ ] **PSH-C - Optional PairCeiling reproduction.** Obtain and independently verify the `EnclOK` interval certificate before treating `0.6818287` as an unconditional numerical comparator. This is optional and is not allowed to block a structural Prime Shell theorem.
+## Verification and release evidence
 
-## Phase III - Analytic proof
-
-- [ ] **PSH-10 - Complete informal theorem.** Write a source-facing proof with no hidden uniformity, endpoint, smoothing, exceptional-set, or epsilon losses.
-- [ ] **PSH-11 - Source choice.** Select GM only if its cumulative information passed F1 and F3. Otherwise test MRT at `alpha > 33/25`. Record and kill routes that fail.
-- [ ] **PSH-12 - Toolchain architecture.** Choose a standalone Zeta23 extension or explicit cross-project statement bridge. Do not port the frozen GM repository wholesale and do not change its public proofs.
-
-## Phase IV - Formal theorem
-
-- [ ] **PSH-13 - Native arithmetic input.** Formalize the exact selected source theorem and every unavailable dependency, with no `sorry`, `admit`, project axiom, theorem-equivalent hypothesis, unsafe bypass, or toy object.
-- [ ] **PSH-14 - Native weighted trace.** Replace the arithmetic oracle and prove the complete prime-side trace theorem with all main terms and errors.
-- [ ] **PSH-15 - Native spectral consumer.** Consume the real trace through the finite compression, rank/inertia, zero counting, multiplicity, and window chain.
-- [ ] **PSH-16 - Public Prime Shell theorem.** State and prove a new unconditional zero-distribution theorem that transitively uses arithmetic information strictly beyond support one and is outside a precisely defined support-one certificate class.
-
-## Phase V - Verification and publication
-
-- [ ] **PSH-17 - Dependency audit.** Explicit `#print axioms` or environment-level audits for every public and critical theorem; only permitted Lean/Mathlib logical axioms may remain.
-- [ ] **PSH-18 - Clean build.** Zero Lean errors, zero warnings, zero linter diagnostics, and repository-wide integrity scans in the isolated project.
-- [ ] **PSH-19 - Trusted statement check.** Comparator or equivalent independent statement equality for the public result.
-- [ ] **PSH-20 - Reproduction release.** Fresh-clone build, immutable SHA/tag, manifests, commands, source crosswalk, and honest documentation.
-- [ ] **PSH-21 - External review.** Independent expert scrutiny of the arithmetic transfer, kernel analysis, and zero-side consumer. Kernel acceptance is not represented as peer review.
+- [x] **PSH-17 — Dependency audit.** `PrimeShell/Audit.lean` audits all public and agenda-critical declarations, including source entry, concrete non-vacuity, the exact support-loss inequality, and the terminal theorem. The outputs contain only `propext`, `Classical.choice`, and `Quot.sound`.
+- [x] **PSH-18 — Project-source clean check.** Direct elaboration of changed Prime Shell modules emits no warning or linter diagnostic, and forbidden-construct scans are empty. A Lake build may replay warnings from the immutable Zeta23 dependency; those are disclosed and are not hidden.
+- [x] **PSH-19 — Trusted statement check.** `FaithfulSeparatedAmplitudeGain` states positive gain directly, and `faithfulSeparatedAmplitudeGain_iff_false` proves the two-sided comparator.
+- [x] **PSH-20 — Reproduction candidate.** The isolated project fixes exact dependency pins and records its source files in the SHA-256 manifest. The owner-controlled commit/push is external; `push_to_github.bat` was not run.
+- [ ] **PSH-21 — External review.** Independent expert scrutiny remains open. Kernel checking and local reproduction are not peer review, publication, or community acceptance.
 
 ## Completion contract
 
-The program is not complete merely because a decomposition, conditional theorem, optimizer run, or focused build passes. Completion requires PSH-13 through PSH-20 and an exact public theorem at PSH-16. Phase I may be closed separately with a rigorous negative verdict; that closure must say the Prime Shell theorem remains unproved.
+Prime Shell has reached terminal state B: **ROUTE DISPROVED**. The proved result rules out the faithful separated-amplitude Zeta23 rank/inertia mechanism encoded by `FaithfulAmplitudeShell`, including its exact full-chain scale and cross-band separation conditions. It does not rule out connected positive-valley windows, a rebuilt source theory, or any other mechanism not represented by that structure.

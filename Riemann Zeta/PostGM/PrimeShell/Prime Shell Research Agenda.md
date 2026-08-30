@@ -1,211 +1,152 @@
 # Prime Shell Research Agenda
 
-## 1. Corrected objective
+Status date: 2026-08-30
 
-The Prime Shell objective is to determine whether known unconditional prime information beyond the classical length-`T` diagonal range can be inserted into the exact Alpoge-Furman/Zeta23 prime-side trace calculation and yield a genuinely new zero-distribution theorem.
+Prime Shell is an isolated post-Guth–Maynard experiment. Its frozen inputs are:
 
-The first proposed mechanism is a disconnected frequency region: retain the proved support-one block and add a high shell beginning only where a known arithmetic estimate reaches the resonant prime-pair shifts. This avoids pretending that every frequency immediately above one has been controlled.
+- Guth–Maynard project boundary: commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, tag `gm-foundation-freeze-v1.0.1`, Lean `v4.30.0`;
+- Zeta23 boundary: Anthropic `formal-math` tag `v1.0`, commit `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`, Lean `v4.33.0-rc2`, Mathlib `51e6992efd06126df61a496bebf8f49482a4e129`.
 
-The program is not a claim of progress toward RH. Even density one of simple critical-line zeros would leave open the possibility of infinitely many off-line zeros. Pair-correlation information beyond support one does not by itself supply an exceptional-zero rigidity theorem.
+Nothing under the frozen `RiemannZeta/` proof is modified or imported into this experiment. Prime Shell is not presented as a path to the Riemann Hypothesis.
 
-## 2. What is already known, and what is not
+## Question tested
 
-Alpoge-Furman define
+The proposed mechanism was to add a separated high-frequency shell to the source used by the Alpoge–Furman/Zeta23 rank/inertia argument, control its prime-pair contribution using unconditional arithmetic information, and test whether the exact spectral certificate improves the simple-critical-line proportion beyond `2/3`.
 
-\[
-\mathcal M[u_1,u_2]
-=
-\iint_{I\times I}\Phi(\tau-\tau')^2u_1(\tau)u_2(\tau')\,d\tau\,d\tau'
-\]
+The terminal result is **ROUTE DISPROVED** for the faithful separated-amplitude mechanism. It is a non-vacuous spectral no-go, not a failure of one taper or one arithmetic theorem.
 
-and decompose the full prime-side quantity in equation (5.10). Proposition 5.4 evaluates
+## Authoritative sources
 
-\[
-\mathcal M[P_X,P_X]
-=
-\frac{T}{\pi}\sum_{n\le X}\frac{\Lambda(n)^2}{n}g(\log n)
-+O_\chi(L^2X).
-\]
+1. Alpoge–Furman, arXiv:2608.13637v2, especially equation (2.7), equations (5.10)–(5.11), Proposition 5.4, Theorem 5.7, and Section 7.2.
+2. Guth–Maynard, arXiv:2405.20552v2, Corollary 1.4 and Section 13.2.
+3. Matomäki–Radziwiłł–Tao, arXiv:1707.01315, Theorem 1.3(i).
+4. The exact pinned Zeta23 release and its cited classical inputs.
 
-The paper explicitly identifies `X <= T` as the current boundary: when `X` is substantially larger than `T`, the off-diagonal prime sum is no longer dominated by the diagonal and prime-pair information is required.
+The detailed declaration-level source crosswalk and reproduction evidence are retained in the Phase-I report and source ledger.
 
-Guth-Maynard Corollary 1.4 gives an almost-all short-interval prime theorem for lengths
+## Phase I: exact source and arithmetic boundary
 
-\[
-y\in[X^{2/15+\varepsilon},X^{0.99}],
-\]
+### PSH-01 and PSH-02 — reproduction and crosswalk
 
-with an exponentially small exceptional set and error. It is not merely a consequence of the headline `30/13` exponent in the formal sense needed here. The published proof also invokes a near-one density estimate with logarithmic control, a Vinogradov-Korobov zero-free region, and explicit-formula/mean-square arguments. Those dependencies must remain visible if the source theorem is later formalized.
+The exact Zeta23 release was reproduced at immutable pins. The upstream project builds but emits its own warnings under the pinned release; these are disclosed. Direct Prime Shell source elaboration is evaluated separately and is warning-free.
 
-Matomaki-Radziwill-Tao Theorem 1.3 is a stronger fallback at a more distant scale: for almost all shifts in an interval of length `H >= X^(8/33+epsilon)`, it gives the expected singular-series asymptotic for `sum Lambda(n)Lambda(n+h)` with arbitrary logarithmic saving.
+The source crosswalk distinguishes equality, specialization, and nonmatch. In particular, the pinned `X ≤ T` theorem is not silently treated as an `X > T` theorem, and a displayed PairCeiling enclosure input is not treated as an internally proved unconditional bound.
 
-Phase I settles the first version of that question negatively. The exact dyadic source kernel is two-variable, depending on both `n` and `h`; it is not a scalar function of `h`. A collapsed prefix asymptotic can control an anchored scalar component, but not the separately exposed variation remainder without additional arithmetic information.
+### PSH-03 — exact prime-prime decomposition
 
-## 3. Exact first research question
+The actual `M[P_X,P_X]` source object is decomposed into diagonal and off-diagonal frequency pieces. Same-sign resonant, opposite-sign, boundary, and remainder pieces remain separately accessible. The existing pinned prime-term theorem is recovered from this decomposition as a regression theorem.
 
-After dyadically localizing `n,m` and setting `m=n+h`, the exact source contribution is
+### PSH-04 — exact shift kernel
 
-\[
-\sum_N\sum_h\sum_n K_{N,T}(n,h)a_n a_{n+h}.
-\]
+The dangerous contribution is dyadically localized and rewritten with the literal two-variable kernel under `m=n+h`. Endpoint restrictions, support, resonant range, coefficient weights, and the variation remainder are explicit; no unspecified bounded weight replaces the kernel.
 
-It retains the actual weights, endpoints, normalizations, orientations, and remainder inherited from the trace. Anchoring at `n=N+1` gives the exact identity
+### PSH-05 and PSH-06 — arithmetic interfaces and F1
 
-\[
-\sum_h K^*_{N,T}(h) C_N(h)+R_{\mathrm{var}},
-\]
+The narrow finite Guth–Maynard interface records the required pi-to-Lambda conversion, prime powers, exceptional-set weights, simultaneous intervals, dyadic subdivision, endpoints, epsilon margins, and the additional Section 13.2 inputs. It is a specification, not an axiom.
 
-where both `K*` and `R_var` are explicit. The second term is not a disposal error: it is the information discarded by collapsing the `n` coordinate.
+The actual pinned kernel has nonconstant rows in a common admissible dyadic block. `concrete_literal_prefix_only_transfer_fails` proves that collapsed shift-prefix information alone cannot furnish the proposed two-variable transfer. Abel identities and exact variation consumers remain available for genuinely stronger n-local arithmetic hypotheses.
 
-Define the cumulative correlation
+## Correction of the original F2 model
 
-\[
-A_N(H)=\sum_{1\le h\le H}C_N(h).
-\]
+The earlier terminal claim combined a strictly positive total `WindowProfile v` with an imposed zero gap and proved that class empty. That was a useful interface diagnostic but not a faithful no-go: the gap may be placed in an amplitude `q`, with the source constructed from `v = q²`.
 
-The Phase I question was:
+The corrected source layer is now formalized:
 
-> Are the size, variation, and localization properties of `K_{N,T}` strong enough that a uniform asymptotic for `A_N(H)` on the relevant range determines the weighted sum to the error demanded by the spectral consumer?
+- `AmplitudeProfile q` requires evenness, `C³` regularity, nonnegativity, a unit bound, and uniform derivative bounds, but permits zeros.
+- `atAmplitude_phi` proves the literal physical identity `q(u/L(T)) * phi(u)` for `atV (q²)`.
+- `extendedFamilyHyps_atAmplitude` proves the extended explicit-formula family contract from the actual amplitude and taper assumptions in the full range `3 * lambda < 4`.
+- `twoBandAmplitude` is an explicit compactly supported two-bump amplitude. Its source autocorrelation and difference-set support are proved exactly.
+- `concreteFaithfulAmplitudeShell` packages the real source, strict separated geometry, same-band support-one blocks, cross-band frequencies beyond support one, and positive mass.
+- `faithfulAmplitudeShell_nonempty` proves the corrected admissible class inhabited.
 
-It has been settled by both sides of the ledger. `finite_abel_identity` and `abs_weighted_sum_le_of_prefix_bound` prove the scalar Abel transfer. `all_shift_prefixes_insufficient_for_nonconstant_two_variable_kernel` proves that all collapsed prefixes can vanish while a two-row kernel functional is nonzero whenever the rows differ. Thus the collapsed-prefix route fails unless one additionally proves exact row constancy, an `n`-localized/rectangle-prefix correlation estimate, or a direct bound on `R_var`.
+This also corrects the scale ledger. The MRT threshold `33/25` and the explicit-formula upper endpoint `4/3` overlap strictly. The formal concrete value `199/150` witnesses that overlap.
 
-This verdict does **not** include a concrete theorem that the AF taper's kernel differs at a named numerical tuple. Instead, the unconditional necessary-condition theorem makes the burden exact: a prefix-only consumer would have to prove row constancy. No such source identity is present in AF or Zeta23, and the source decomposition retains the variation term explicitly.
+## F3: exact universal pricing verdict
 
-## 4. Arithmetic transfer ledger
+### Faithful class
 
-The identity behind the GM route is, subject to an explicit endpoint convention,
+`FaithfulAmplitudeShell` contains:
 
-\[
-\sum_{1\le h\le H} C_N(h)
-=
-\sum_{N<n\le 2N}\Lambda(n)\bigl(\psi(n+H)-\psi(n)\bigr).
-\]
+- a `PrimeShellFullChainAdmissible` source parameter and taper;
+- a real amplitude `q` with `AmplitudeProfile q`;
+- two ordered symmetric band edges inside `[-1/2,1/2]`;
+- exact support localization to the two closed bands;
+- witnesses that both bands are present;
+- same-band support-one bounds;
+- strict cross separation `1 < lambda * (rightEdge - leftEdge)`; and
+- positive integral mass.
 
-Turning GM Corollary 1.4 into a usable bound requires each of the following:
+The arithmetic estimate is deliberately absent: the final obstruction is independent of it.
 
-1. convert the published `pi` statement to the required `psi`/von Mangoldt statement;
-2. bound prime powers uniformly;
-3. translate real/integer interval endpoints exactly;
-4. apply the almost-all statement at the required family of lengths, not just one fixed length;
-5. control the contribution of exceptional `n` after weighting by `Lambda(n)`;
-6. make all dyadic and smoothing losses explicit;
-7. preserve an error strong enough for the trace normalization;
-8. prove the scale relation with a strict epsilon margin.
+### Support-loss theorem
 
-None of these is discharged by naming the GM zero-density theorem.
+Let `gap = rightEdge - leftEdge`, `v = q²`,
 
-## 5. Scale ledger
+```text
+I = ∫ v,    J = ∫ v²,    W = jWin D1 lambda v.
+```
 
-For `n ~ N`, the phase difference behaves as
+The exact permitted support has Lebesgue measure `1 - gap`. A set-integral Hölder/Cauchy argument proves
 
-\[
-T\log(1+h/n)\asymp Th/N.
-\]
+```text
+I² ≤ (1 - gap) J.
+```
 
-Thus the resonant length is `H_res ~ N/T`. If `N=T^alpha`, then
+Strict cross separation and `lambda < 4/3` imply
 
-\[
-H_{res}=N^{1-1/\alpha}.
-\]
+```text
+3 lambda (1 - gap) < 1.
+```
 
-For GM, require
+Positive mass implies `I>0` and hence `J>0`; the exact D1 kernel gives `W≥0`. Unfolding the pinned spectral definition yields
 
-\[
-1-1/\alpha > 2/15,
-\]
+```text
+kappaXi lambda v = (J + lambda W) / (lambda I²) > 3.
+```
 
-with room for all epsilons, so the candidate shell begins strictly beyond `alpha=15/13`.
+This is `FaithfulAmplitudeShell.kappaXi_gt_three`.
 
-For MRT, require
+### Terminal theorem
 
-\[
-1-1/\alpha > 8/33,
-\]
+The exact Zeta23 rank/inertia output is `2 - kappaXi`. Therefore every faithful separated shell satisfies a value below `-1`, and in particular cannot exceed `2/3` by a positive amount. The public theorem is `primeShell_universal_no_gain_native`.
 
-so the fallback shell begins strictly beyond `alpha=33/25`.
+The direct success proposition
 
-These computations locate candidate scales only. They neither prove that the disconnected shell is admissible nor evaluate the trace.
+```lean
+def FaithfulSeparatedAmplitudeGain : Prop :=
+  ∃ S : FaithfulAmplitudeShell, ∃ delta : ℝ, 0 < delta ∧
+    (2 / 3 : ℝ) + delta < 2 - kappaXi ...
+```
 
-## 6. Three feasibility gates
+is proved equivalent to `False` by `faithfulSeparatedAmplitudeGain_iff_false`. This is the trusted-statement check. The explicit inhabitant prevents vacuous quantification.
 
-### F1 - Kernel compatibility — Phase I verdict: FAIL for collapsed prefixes
+## Why native GM/MRT formalization stops here
 
-The proposed cumulative interface does not control the exact two-variable trace kernel by itself. The weakest stronger input currently isolated is a direct bound for `dyadicKernelVariationRemainder`; an `n`-localized/rectangle-prefix estimate is a more arithmetic alternative. MRT's almost-all fixed-shift theorem is therefore the next justified source to test, but it has not yet been shown to meet this exact weighted consumer.
+The full-goal contract permits terminal B when every faithful admissible construction is ruled out or the complete admissible class cannot yield positive improvement. `primeShell_universal_no_gain_native` supplies the latter verdict and is stronger than failure of GM, MRT, any particular fixed-shift theorem, or any numerical candidate: it survives perfect arithmetic input.
 
-### F2 - Disconnected-shell admissibility
+Consequently the success-branch obligations to formalize an external prime-correlation theorem, prove a native positive trace, and derive a new zero theorem are not required and would not change the verdict. Existing exact arithmetic consumers are preserved as reusable infrastructure, but are not relabelled unconditional arithmetic theorems.
 
-Pass only if a low block plus separated high shell is realized by the actual test-function/Gram construction, all positivity and Fourier constraints survive, and every cross term is evaluated or bounded. Frequency separation alone is not a proof that the cross term is negligible.
+## Verification and integrity contract
 
-### F3 - Consumer value
+Completion requires all of the following:
 
-Pass only if a narrowly stated arithmetic hypothesis, inserted into the actual trace and inertia consumer, yields a mathematically meaningful theorem outside a precisely defined support-one certificate class. Formalizing GM short intervals or MRT is unauthorized until this price test passes.
+- the isolated root and every changed module elaborate at exact pins;
+- direct Prime Shell elaboration emits no project warning or linter diagnostic;
+- explicit axiom audits list only `propext`, `Classical.choice`, and `Quot.sound`;
+- scans find no `sorry`, `admit`, `sorryAx`, project `axiom`/`constant`, `unsafe`, `native_decide`, or `implemented_by` in Prime Shell source;
+- the frozen GM verifier still passes and no frozen source is modified;
+- the two-sided gain comparator elaborates;
+- the source manifest records every production file by SHA-256; and
+- architecture, Shitlist, agenda, source ledger, README, reports, audit, and reproduction instructions agree.
 
-## 7. Numerical benchmark correction
+The immutable Zeta23 dependency’s own warning output remains disclosed. It is not suppressed and is not described as a zero-warning upstream build.
 
-The Zeta23 `PairCeiling` files establish a kernel-checked implication from a displayed `EnclOK` enclosure hypothesis. The repository explains that the concrete enclosures for the 256-periodic law came from external interval arithmetic. The cited certificate data and reproduction path are not part of the released Comparator topic.
+## Completion levels and nonclaims
 
-Therefore `0.6818287...` may be used as:
+- **Kernel-checked terminal theorem:** achieved internally for the faithful separated-amplitude mechanism.
+- **Independent expert review (PSH-21):** open and external.
+- **Peer review, publication, community acceptance:** not claimed.
+- **New zero theorem or positive Prime Shell constant:** not claimed.
+- **No-go for connected windows or other source mechanisms:** not claimed.
 
-- a conditional or externally certified comparison target;
-- a heuristic optimization target; or
-- an unconditional benchmark only after the exact `EnclOK` certificate is independently reproduced or a new internal proof is supplied.
-
-The primary success criterion is consequently structural: a new unconditional theorem must use arithmetic information outside support one and lie outside an explicitly defined support-one certificate class. A promised decimal is not part of the initial contract.
-
-## 8. Formalization architecture
-
-### Stage A - Separate reproduction
-
-Reproduce Zeta23 `v1.0` at commit `3635e748...` using its Lean `v4.33.0-rc2` toolchain. Preserve its Comparator statement surface. Record the fact that the frozen GM project uses Lean `v4.30.0` and a different Mathlib commit.
-
-### Stage B - Source-faithful decomposition
-
-Work in a separate Zeta23-compatible extension. Add no import to the GM root. Expose the exact prime-prime term and recover the existing theorem as a regression test.
-
-### Stage C - Conditional feasibility theorem
-
-A conditional theorem may accept a narrowly stated finite arithmetic estimate if it is visibly weaker than the zero conclusion and the proof genuinely transforms it through the kernel. Do not declare an axiom. Do not use a hypothesis that mentions zero counts or the desired trace bound itself.
-
-### Stage D - Native arithmetic proof
-
-Only after F1-F3 pass, formalize the selected source input. If the GM route is selected, the implementation lives in this post-GM program or a separate library and consumes the frozen GM release as an input boundary; it does not rewrite the frozen proof.
-
-### Stage E - Audited consumer and release
-
-Replace the conditional input, run explicit axiom audits, ensure zero warnings, reproduce trusted statements through Comparator or an equivalent two-sided statement check, and tie the result to an immutable commit.
-
-## 9. Repositories and reusable resources
-
-The detailed pins and links are in [Prime Shell Sources](Prime%20Shell%20Sources.md). The most relevant code is:
-
-- Anthropic `formal-math/zeta23`: exact prime side, finite compression, inertia/rank assembly, and Comparator contracts;
-- PrimeNumberTheoremAnd: explicit formula, Mellin, zeta, and zero-free/PNT infrastructure already familiar to the GM project;
-- Mathlib: measure/integration, Fourier analysis, finite sums, linear algebra, asymptotics, and arithmetic support;
-- Lean Comparator: independent statement-equivalence and permitted-axiom checking;
-- Palomar conventions: a public challenge/solution boundary for future release.
-
-No public Lean repository located in this audit already proves the desired Prime Shell prime-pair consumer or formalizes the GM/MRT transfer required here. Existing repositories reduce infrastructure cost, not the research obligation.
-
-## 10. Kill rules
-
-Terminate the current route, while preserving proved decompositions, if:
-
-1. F1 proves that the exact kernel requires fixed-shift Hardy-Littlewood or comparably strong phase information;
-2. F2 proves that the disconnected shell cannot be represented by the actual test family;
-3. the strongest plausible arithmetic oracle yields no meaningful theorem in F3;
-4. the required source error is stronger than GM or MRT supplies;
-5. a toolchain port becomes the dominant cost before consumer value is established;
-6. the result merely repackages support-one information;
-7. the proposed theorem assumes zero statistics or the desired zero conclusion.
-
-A killed route must record the exact obstruction, strongest theorem reached, and conditions under which reconsideration would be rational.
-
-## 11. Completion levels
-
-- **Phase I complete:** pinned reproduction, exact crosswalk, exact kernel, exact arithmetic interface, and rigorous F1 PASS/FAIL.
-- **Feasibility complete:** F1, F2, and F3 have rigorous verdicts.
-- **Analytic route complete:** a full source-faithful informal proof meets the consumer budget.
-- **Formal theorem complete:** the native arithmetic input, trace theorem, spectral consumer, and zero theorem are kernel-checked with clean audits.
-- **Publication complete:** immutable release, independent statement verification, exposition, and external mathematical review exist.
-
-Phase I is complete with the negative verdict above. No feasibility, analytic-route, formal-zero-theorem, or publication completion is claimed.
+The research program is complete at terminal state B only in the precise formal sense above.
