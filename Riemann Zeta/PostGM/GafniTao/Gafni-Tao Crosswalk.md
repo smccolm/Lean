@@ -25,8 +25,8 @@ by a declaration with a similar name.
 | Equation (2.6), label `eta-vanish` | VK zero-free region at `T=X^(1-theta+o(1))` | No public theorem yet | OPEN (GT-09) |
 | Lemma 2.1 | Uniform exponential right-edge decay; uses a logarithmic near-one density theorem, not a generic `T^epsilon` bound | No public theorem yet | OPEN (GT-10--GT-11) |
 | Lemma 2.2 | Exact `L-infinity` exponent with physical `X,T,tau` relations and actual `A(sigma_-)` | No public theorem yet | OPEN (GT-12) |
-| Lemma 2.3 | Smoothed log-variable second moment; complex Fourier transform and exact `c_rho` | No public theorem yet | OPEN (GT-13--GT-14) |
-| Lemma 2.4 | Smoothed fourth moment; pair-count `F`, Schur test, and actual `N*` | No public theorem yet | OPEN (GT-15--GT-16) |
+| Lemma 2.3 | Smoothed log-variable second moment; complex Fourier transform and exact `c_rho` | `exists_complexifiedLogScaleBumpFourier_tenfold_decay`, `logarithmicZeroStripSecondMoment_eq_pair_sum`, `zeroStripPhysicalSecondMoment_epsilonBound` | DONE (GT-13--GT-14); exact physical exponent and actual multiplicity-weighted zero count |
+| Lemma 2.4 | Smoothed fourth moment; pair-count `F`, Schur test, and actual `N*` | `zeroPairBinKernelSum_eq_differenceSum`, `zeroPairPairDecaySum_le_zeroAdditiveEnergyCount`, `logarithmicZeroStripFourthMoment_eq_pair_sum`, `zeroStripPhysicalFourthMoment_epsilonBound` | DONE (GT-15--GT-16); exact physical exponent and actual tolerance-one product-multiplicity `N*` |
 | Equation (2.7), label `targ-2` | Half-open strips `[j/J,(j+1)/J)`; line `Re rho=1` excluded; right-edge, small-`A`, `L2`, and `L4` branches | No public theorem yet | OPEN (GT-17) |
 | Section 3 first sample | `theta=17/30`, limiting `sigma=7/10`, Heath--Brown `A* -> 235/39`, conclusion `mu(17/30)<=7/12` | No public theorem yet | OPEN (GT-22--GT-23) |
 | Section 3 second sample | sufficiently small quantified `Delta>0`; Pintz gives cutoff `sigma<=23/24`; conclusion `mu(2/15+Delta)<=1-9Delta/13` | No public theorem yet | OPEN (GT-22--GT-23) |

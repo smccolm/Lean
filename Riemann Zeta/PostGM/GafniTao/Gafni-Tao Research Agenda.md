@@ -2,7 +2,7 @@
 
 Status: research and execution plan, not a proof claim.
 
-Suggested commit message: `PostGM Gafni-Tao: add source-faithful architecture and whole-proof contract`
+Suggested commit message: `PostGM Gafni-Tao: prove exact second and fourth zero-strip moment bounds`
 
 Update that line after every substantive proof milestone. Do not hard-code it
 inside `push_to_github.bat`.
@@ -214,3 +214,22 @@ The isolated package needs its own warning-failing runner. Completion requires:
 The simple `push_to_github.bat` is not a verifier. It must never be inserted
 into an automated build and must not be run by an agent without explicit
 permission.
+
+## 6. Kernel-checked progress
+
+GT-13 through GT-16 are complete in the isolated package. The public endpoints
+are `zeroStripPhysicalSecondMoment_epsilonBound` and
+`zeroStripPhysicalFourthMoment_epsilonBound`. Their proof chains expand the
+actual finite multiplicity-weighted zero sums, use uniform complexified
+Fourier decay, and terminate respectively in `ZeroDensityEnvelope` and the
+actual product-multiplicity `ZeroAdditiveEnergyEnvelope`. The finite quartic
+bridge `zeroPairPairDecaySum_le_zeroAdditiveEnergyCount` proves the complete
+decaying-kernel comparison with the tolerance-one count; it does not introduce
+an abstract energy parameter. The isolated root build and explicit axiom audit
+accept these declarations with only `propext`, `Classical.choice`, and
+`Quot.sound`.
+
+GT-17 remains open because equation (2.7) also consumes the still-open sharp
+explicit-formula and right-edge branches GT-08 through GT-12. Half-open strip
+partition, threshold-union, and Markov components are the next independent
+assembly obligations.

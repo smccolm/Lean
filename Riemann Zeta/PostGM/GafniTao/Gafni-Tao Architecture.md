@@ -1,11 +1,3 @@
-# Gafni-Tao Lean architecture
-
-Status: proposed architecture. Every numbered `GT-*` proof node is open.
-
-The graph is ordered by proof dependency, not by estimated difficulty. The
-frozen Guth-Maynard package is an imported dependency and remains read-only.
-
-```mermaid
 flowchart TD
     SRC["SOURCE PIN<br/>Gafni-Tao arXiv:2505.24017v1<br/>Guth-Maynard, Heath-Brown, Ford,<br/>Tao-Trudgian-Yang"]
     GM["FROZEN GM FOUNDATION<br/>tag gm-foundation-freeze-v1.0.1<br/>read-only"]
@@ -25,10 +17,10 @@ flowchart TD
     G10["GT-10 Near-one logarithmic zero density<br/>no T^epsilon substitute<br/>OPEN"]
     G11["GT-11 Lemma 2.1 right-edge decay<br/>OPEN"]
     G12["GT-12 Lemma 2.2 L-infinity bound<br/>OPEN"]
-    G13["GT-13 Complex Fourier bump and c_rho<br/>decay, normalization and Fubini<br/>OPEN"]
-    G14["GT-14 Lemma 2.3 L2 bound<br/>unit local zero count<br/>OPEN"]
-    G15["GT-15 Schur/double-counting energy bridge<br/>smoothed quadruple sum to N*<br/>OPEN"]
-    G16["GT-16 Lemma 2.4 L4 bound<br/>OPEN"]
+    G13["GT-13 Complex Fourier bump and c_rho<br/>DONE<br/>uniform tenfold decay, exact normalization,<br/>coefficient bounds and finite Fubini"]
+    G14["GT-14 Lemma 2.3 L2 bound<br/>DONE<br/>physical moment, unit local-zero count<br/>and exact epsilon exponent"]
+    G15["GT-15 Schur/double-counting energy bridge<br/>DONE<br/>integer-bin autocorrelation and complete<br/>smoothed-pair transfer to actual N*"]
+    G16["GT-16 Lemma 2.4 L4 bound<br/>DONE<br/>exact quartic expansion, Jacobian and<br/>multiplicity-weighted A* exponent"]
     G17["GT-17 Finite J-strip assembly<br/>pigeonhole, Markov and Eq. (2.7)<br/>OPEN"]
     G18["GT-18 Limit and envelope assembly<br/>epsilon then J; no continuity shortcut<br/>OPEN"]
     G19["GT-19 Gafni-Tao Theorem 1.3<br/>exact refined bound<br/>OPEN"]
@@ -103,57 +95,9 @@ flowchart TD
     G24 --> G25
     G25 --> G26
 
+    classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
     class SRC,GM,ML,DB available;
-    class G00,G01,G02,G03,G04,G05,G06,G07,G08,G09,G10,G11,G12,G13,G14,G15,G16,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26 open;
-```
-
-## Proposed isolated Lean modules
-
-The implementation should be a separate package at
-`PostGM/GafniTao/Extension/`, pinned to the frozen foundation rather than the
-moving workspace root.
-
-| Module | Owns |
-| --- | --- |
-| `GafniTao.Asymptotics` | parameter-dependent big-O, epsilon-power bounds, `EReal` exponent infima/suprema and limiting bridges |
-| `GafniTao.ExceptionalSet` | exact `(x,x+x^theta]` Mangoldt discrepancy, measurable exceptional set, `mu_delta`, `mu` |
-| `GafniTao.Zeros` | frozen `N` bridge, multiplicity-weighted finite zero sums, real-part strips |
-| `GafniTao.ZeroEnergy` | exact `N*`, `A*`, monotonicity and finite-energy bridges |
-| `GafniTao.ChebyshevIntervals` | `psi` difference identity, floor/endpoints and prime powers |
-| `GafniTao.BrunTitchmarsh` | local replacement of `x^theta` by `x/tau` and finite covering |
-| `GafniTao.ExplicitFormula` | sharp truncated formula and all boundary/error terms |
-| `GafniTao.NearOne` | Vinogradov-Korobov region, logarithmic density, Lemma 2.1 |
-| `GafniTao.ZeroSumSup` | equation (2.4) and Lemma 2.2 |
-| `GafniTao.ZeroSumL2` | complex Fourier bump, coefficient bounds, local zero count, Lemma 2.3 |
-| `GafniTao.ZeroSumL4` | pair-count function, Schur test, `N*` bridge, Lemma 2.4 |
-| `GafniTao.RefinedBound` | equations (2.1)-(2.7), strip split, Markov, limits, Theorems 1.2-1.3 |
-| `GafniTao.NativeInputs` | actual frozen GM and published Pintz/Heath-Brown/TT-Y consumers |
-| `GafniTao.Corollaries` | Theorem 1.1 thresholds and exact Section 3 sample bounds |
-| `GafniTao.Optimizer` | optional exact rational certification of the complete Section 3 table/figure envelope |
-| `GafniTao.Audit` | explicit `#print axioms` list for every public and agenda-critical theorem |
-| `GafniTao.lean` | imports every production module in the isolated package |
-
-## Public acceptance layer
-
-Names may change after exact type design, but the final public layer must contain
-the following mathematical objects rather than theorem-equivalent hypotheses:
-
-- `shortIntervalExceptionalSet delta X theta` with Lebesgue measure;
-- `exceptionalExponentDelta delta theta` and `exceptionalExponent theta`, with
-  the paper's empty-set/`-infinity` convention;
-- `zeroDensityExponent sigma` for the actual multiplicity count `N`;
-- `zeroAdditiveEnergyCount sigma T` and `zeroAdditiveEnergyExponent sigma` for
-  the actual four-zero count;
-- `gafniTao_refined_bound_native`, equivalent to Theorem 1.3;
-- `gafniTao_general_bound_native`, equivalent to Theorem 1.2;
-- `gafniTao_zero_density_short_intervals_native`, equivalent to Theorem 1.1;
-- `gafniTao_seventeen_thirtieth_native` proving
-  `mu(17/30) <= 7/12`;
-- `gafniTao_near_two_fifteenths_native` proving the quantified small-positive-
-  `Delta` bound `mu(2/15+Delta) <= 1-9 Delta/13`.
-
-A theorem parameter may expose a narrower source estimate while developing a
-consumer, but a node is not done until the final native theorem derives that
-estimate from the actual formalized source input.
+    class G13,G14,G15,G16 done;
+    class G00,G01,G02,G03,G04,G05,G06,G07,G08,G09,G10,G11,G12,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26 open;

@@ -1,0 +1,315 @@
+flowchart LR
+
+    RH(("RIEMANN HYPOTHESIS"))
+
+    LINE["Positive proportion of zeros<br/>on critical line"]
+    DENS1["Density one simple + critical zeros<br/>still NOT RH"]
+    ZD["Zero-density control"]
+    PCC{{"Pair Correlation Conjecture"}}
+    PRIMES["Prime distribution<br/>short intervals / error terms"]
+    PEXC["Exceptional short-interval control"]
+    WEILPOS["Weil explicit-formula<br/>positivity criterion"]
+    HP["Hilbert-Polya type<br/>spectral realization"]
+    RMT["GUE / random-matrix<br/>zero statistics"]
+    DBN["de Bruijn-Newman<br/>Lambda = 0 target"]
+    FFRH["Finite-field RH analogue<br/>purity / Frobenius"]
+    COMP["Finite zero verification"]
+
+    subgraph CLASSICAL["Classical analytic foundations"]
+        N01["01 Riemann, 1859"]
+        N02["02 Hadamard, 1896"]
+        N03["03 de la Vallee Poussin, 1896"]
+        N09["09 Selberg, 1946"]
+        N13["13 Weil, 1952"]
+    end
+
+    subgraph CRITICAL["Critical line, mollifiers and proportions"]
+        N04["04 Hardy, 1914"]
+        N05["05 Hardy-Littlewood, 1921"]
+        N08["08 Selberg, 1942"]
+        N17["17 Levinson, 1974"]
+        N28["28 Conrey, 1989"]
+        N46["46 Bui-Conrey-Young, 2011"]
+        N47["47 Feng, 2012"]
+        N54["54 Pratt et al., 2020"]
+        N67["67 Conrey et al., 2025"]
+    end
+
+    subgraph ZERODENS["Zero density, large values and prime transfer"]
+        N07["07 Ingham, 1940"]
+        N19["19 Huxley, 1975"]
+        N22["22 Heath-Brown, 1979"]
+        N24["24 Ivic, 1984"]
+        N36["36 Bazzanella-Perelli, 2000"]
+        N51["51 Kerr, 2019"]
+        N58["58 Mossinghoff et al., 2024"]
+        N63["63 Tao-Trudgian-Yang, 2025"]
+        N69["69 Matomaki et al., 2026"]
+        N71["71 Guth-Maynard, 2026"]
+        N73["73 Tao, 2026"]
+        N74["74 Gafni-Tao, 2026"]
+    end
+
+    subgraph PAIR["Pair correlation, zero statistics and Weil-form methods"]
+        N16["16 Montgomery, 1973"]
+        N21["21 Gallagher-Mueller, 1978"]
+        N26["26 Goldston-Montgomery, 1987"]
+        N37["37 Goldston et al., 2000"]
+        N41["41 Chan, 2003"]
+        N53["53 Chirre et al., 2020"]
+        N57["57 Aryan, 2022"]
+        N62["62 Baluyot et al., 2024"]
+        N64["64 Baluyot et al., 2025"]
+        N65["65 Goldston et al., 2025<br/>PCC I"]
+        N66["66 Goldston et al., 2025<br/>PCC II"]
+        N68["68 Goldston-Suriajaya, 2025"]
+        N72["72 Goldston-Suriajaya, 2026"]
+        N76["76 Alpoge-Furman, 2026"]
+    end
+
+    subgraph CRITERIA["Equivalent criteria and functional-analytic reformulations"]
+        N06["06 Speiser, 1934"]
+        N11["11 Nyman, 1950"]
+        N15["15 Beurling, 1955"]
+        N23["23 Robin, 1984"]
+        N31["31 Li, 1997"]
+        N32["32 Balazard-Saias-Yor, 1999"]
+        N35["35 Bombieri-Lagarias, 1999"]
+        N40["40 Lagarias, 2002"]
+        N42["42 Baez-Duarte, 2003"]
+        N44["44 Burnol, 2004"]
+        N60["60 Conrey, 2024"]
+    end
+
+    subgraph HEAT["de Bruijn-Newman heat-flow route"]
+        N12["12 de Bruijn, 1950"]
+        N20["20 Newman, 1976"]
+        N30["30 Csordas-Smith-Varga, 1994"]
+        N45["45 Ki-Kim-Lee, 2009"]
+        N52["52 D.H.J. Polymath, 2019"]
+        N55["55 Rodgers-Tao, 2020"]
+    end
+
+    subgraph GEOMETRY["Weil, arithmetic geometry and noncommutative geometry"]
+        N10["10 Weil, 1949"]
+        N18["18 Deligne, 1974"]
+        N29["29 Deninger, 1992"]
+        N34["34 Connes, 1999"]
+        N39["39 Bombieri, 2000"]
+        N43["43 Bombieri, 2003"]
+        N48["48 Connes-Consani, 2014"]
+        N70["70 Connes, 2026"]
+    end
+
+    subgraph PHYSICS["Quantum chaos, random matrices and spectral physics"]
+        N25["25 Berry, 1986"]
+        N27["27 Odlyzko, 1987"]
+        N33["33 Berry-Keating, 1999"]
+        N38["38 Keating-Snaith, 2000"]
+        N49["49 Fyodorov-Keating, 2014"]
+        N50["50 Bender-Brody-Muller, 2017"]
+        N59["59 Kapustin, 2024"]
+        N61["61 LeClair-Mussardo, 2024"]
+        N75["75 Hedenmalm, 2026"]
+    end
+
+    subgraph COMPUTATION["Computation and explicit zero-free control"]
+        N14["14 Turing, 1953"]
+        N56["56 Platt-Trudgian, 2021"]
+    end
+
+    %% Classical foundation
+    N01 --> N02
+    N01 --> N03
+    N01 --> N04
+    N01 --> N13
+    N02 --> PRIMES
+    N03 --> PRIMES
+    N09 --> PRIMES
+
+    %% Critical-line lineage
+    N04 --> N05
+    N05 --> N08
+    N08 --> N17
+    N17 --> N28
+    N28 --> N46
+    N28 --> N47
+    N46 --> N54
+    N47 --> N54
+    N17 --> N67
+    N28 --> N67
+    N54 --> LINE
+    N67 --> LINE
+    LINE -.-> RH
+
+    %% Zero density / large values
+    N07 --> N19
+    N19 --> N22
+    N22 --> N24
+    N07 --> ZD
+    N19 --> ZD
+    N22 --> ZD
+    N24 --> ZD
+    N51 --> ZD
+    N63 --> ZD
+    N71 --> ZD
+
+    N07 --> N71
+    N19 --> N71
+    N51 -.-> N71
+
+    N36 --> N74
+    N22 --> N74
+    N63 --> N74
+    N71 --> N74
+    N74 --> PEXC
+    N69 --> PEXC
+    PEXC --> PRIMES
+
+    N71 --> PRIMES
+    N71 --> N73
+    N74 --> N73
+    N58 --> PRIMES
+
+    RH ==>|strong prime error consequences| PRIMES
+
+    %% Pair-correlation line
+    N16 --> PCC
+    N16 --> N21
+    N21 --> N26
+    N26 --> PRIMES
+    N16 --> N37
+    N37 --> N41
+    N37 --> N62
+    N16 --> N53
+    N16 --> N62
+
+    N62 --> N64
+    N64 --> N72
+    N68 --> N72
+    N72 --> LINE
+
+    N21 --> N65
+    PCC --> N65
+    N65 ==>|PCC implies| DENS1
+    N66 ==>|alternative pair law implies| DENS1
+
+    N57 --> N76
+    N62 --> N76
+    N53 -.-> N76
+    N13 --> N76
+    N76 --> LINE
+
+    DENS1 -.-> RH
+
+    %% Weil positivity
+    N13 --> WEILPOS
+    N39 --> WEILPOS
+    N43 --> WEILPOS
+    WEILPOS ==>|iff| RH
+
+    %% Equivalent criteria
+    N06 ==>|iff| RH
+    N11 --> N15
+    N15 --> N42
+    N42 ==>|iff| RH
+
+    N23 --> N40
+    N40 ==>|iff| RH
+
+    N31 --> N35
+    N35 ==>|Li-type iff| RH
+
+    N32 ==>|iff| RH
+
+    N15 -.-> N44
+    N44 -.-> HP
+
+    N60 ==>|specific character-sum inequality implies| RH
+
+    %% de Bruijn-Newman
+    N12 --> N20
+    N20 --> N30
+    N30 --> N45
+    N45 --> N52
+    N20 --> N55
+    N52 --> DBN
+    N55 --> DBN
+    DBN ==>|with Lambda >= 0, RH iff Lambda = 0| RH
+
+    %% Finite fields / geometry
+    N10 --> N18
+    N18 --> FFRH
+    FFRH -.-> WEILPOS
+    FFRH -.-> HP
+
+    N18 -.-> N29
+    N29 --> N34
+    N34 --> N48
+    N34 --> N70
+    N39 -.-> N70
+    N13 --> N34
+    N34 -.-> HP
+    N48 -.-> HP
+    N70 -.-> HP
+
+    %% Physics / random matrices
+    N16 -.-> N25
+    N25 --> N33
+    N27 --> RMT
+    N25 --> RMT
+    N33 --> N38
+    N38 --> RMT
+    N38 --> N49
+    RMT -.-> RH
+
+    N33 --> N50
+    N33 -.-> N59
+    N33 --> N61
+    N50 --> HP
+    N59 -.-> HP
+    N61 -.-> HP
+    N75 --> HP
+    N34 -.-> HP
+
+    HP ==>|if correct positive self-adjoint realization exists| RH
+
+    %% Computation
+    N14 --> N27
+    N14 --> N56
+    N56 --> COMP
+    COMP -.-> RH
+    N56 --> N58
+    N03 --> N58
+
+    %% Cross-corridors
+    N16 -.-> RMT
+    N27 -.-> N33
+    N26 -.-> N41
+    N63 --> N74
+    N71 --> N74
+    N65 -.-> N76
+
+    classDef classical fill:#e7edf3,stroke:#455a64,color:#111;
+    classDef critical fill:#dff3e4,stroke:#347a47,color:#111;
+    classDef zd fill:#dceeff,stroke:#2f6f9f,color:#111;
+    classDef pair fill:#e9ddf7,stroke:#7651a8,color:#111;
+    classDef criteria fill:#f3e4f4,stroke:#8e4f91,color:#111;
+    classDef heat fill:#ffe2eb,stroke:#a64b68,color:#111;
+    classDef geom fill:#daf2ef,stroke:#347d75,color:#111;
+    classDef physics fill:#ffe6c9,stroke:#a66b28,color:#111;
+    classDef compute fill:#ececec,stroke:#666,color:#111;
+    classDef hub fill:#fff4b8,stroke:#8a7400,stroke-width:2px,color:#111;
+    classDef target fill:#f6b5b5,stroke:#8b1e1e,stroke-width:4px,color:#111;
+
+    class N01,N02,N03,N09,N13 classical;
+    class N04,N05,N08,N17,N28,N46,N47,N54,N67 critical;
+    class N07,N19,N22,N24,N36,N51,N58,N63,N69,N71,N73,N74 zd;
+    class N16,N21,N26,N37,N41,N53,N57,N62,N64,N65,N66,N68,N72,N76 pair;
+    class N06,N11,N15,N23,N31,N32,N35,N40,N42,N44,N60 criteria;
+    class N12,N20,N30,N45,N52,N55 heat;
+    class N10,N18,N29,N34,N39,N43,N48,N70 geom;
+    class N25,N27,N33,N38,N49,N50,N59,N61,N75 physics;
+    class N14,N56 compute;
+    class LINE,DENS1,ZD,PCC,PRIMES,PEXC,WEILPOS,HP,RMT,DBN,FFRH,COMP hub;
+    class RH target;

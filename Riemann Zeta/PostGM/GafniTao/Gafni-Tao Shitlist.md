@@ -71,20 +71,20 @@ and the isolated warning-failing runner covers its module.
   `[sigma_-,sigma_+]`, consuming the actual zero count and physical
   `T,tau,X` relations.
 
-- [ ] **GT-13 — Fourier-bump infrastructure.** Construct the fixed
+- [x] **GT-13 — Fourier-bump infrastructure.** Construct the fixed
   nonnegative bump, lower bound it on `[0,log 2]`, define its complexified
   Fourier transform, prove uniform tenfold decay, and prove the exact
   `c_rho` bound and expansion.
 
-- [ ] **GT-14 — Lemma 2.3.** Prove the normalized `L2` integral estimate via
+- [x] **GT-14 — Lemma 2.3.** Prove the normalized `L2` integral estimate via
   GT-13, local zero counts, and `A(sigma_-)`, with all multiplicities and
   `o(1)`/epsilon losses explicit.
 
-- [ ] **GT-15 — Smoothed quadruple-to-energy bridge.** Define `F(t)`, prove
+- [x] **GT-15 — Smoothed quadruple-to-energy bridge.** Define `F(t)`, prove
   the double-counting identities and Schur estimate, and bound the integral by
   the actual GT-05 `N*` with exact tolerance and constants.
 
-- [ ] **GT-16 — Lemma 2.4.** Prove the normalized `L4` integral estimate,
+- [x] **GT-16 — Lemma 2.4.** Prove the normalized `L4` integral estimate,
   consuming GT-15 and `A*(sigma_-)` rather than an abstract energy variable.
 
 - [ ] **GT-17 — Equation (2.7).** Prove the exact finite `J` strip

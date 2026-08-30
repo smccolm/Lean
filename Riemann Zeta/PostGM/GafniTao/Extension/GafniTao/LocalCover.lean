@@ -141,6 +141,45 @@ theorem exists_local_multiplicative_cover
     unfold localCoverLeft at hleft ⊢
     nlinarith
 
+/-- Half-open strengthening of the finite multiplicative cover.  The strict
+right endpoint is what permits an exact set inclusion into the source's
+half-open local events without adding a finite endpoint exceptional set. -/
+theorem exists_local_multiplicative_cover_Ico
+    {X x u : ℝ} (hX : 0 < X) (hu : 0 < u)
+    (hx : x ∈ Set.Icc X (2 * X)) :
+    ∃ k : ℕ, k ≤ ⌈1 / u⌉₊ ∧
+      localCoverLeft X u k ≤ x ∧
+      x < (1 + u) * localCoverLeft X u k := by
+  let a : ℝ := (x - X) / (u * X)
+  have hden : 0 < u * X := mul_pos hu hX
+  have haNonneg : 0 ≤ a :=
+    div_nonneg (sub_nonneg.mpr hx.1) hden.le
+  let k : ℕ := ⌊a⌋₊
+  have hkLower : (k : ℝ) ≤ a := Nat.floor_le haNonneg
+  have hkUpper : a < (k : ℝ) + 1 := Nat.lt_floor_add_one a
+  have haBound : a ≤ 1 / u := by
+    rw [div_le_iff₀ hden]
+    have hxBound : x - X ≤ X := by linarith [hx.2]
+    calc
+      x - X ≤ X := hxBound
+      _ = (1 / u) * (u * X) := by field_simp
+  have hkCeil : k ≤ ⌈1 / u⌉₊ := by
+    have hceil : 1 / u ≤ (⌈1 / u⌉₊ : ℝ) := Nat.le_ceil (1 / u)
+    exact_mod_cast (hkLower.trans haBound).trans hceil
+  refine ⟨k, hkCeil, ?_, ?_⟩
+  · unfold localCoverLeft
+    have hkScaled : (k : ℝ) * (u * X) ≤ x - X :=
+      (le_div_iff₀ hden).mp (by simpa [a] using hkLower)
+    nlinarith
+  · have hstep : x < X + ((k : ℝ) + 1) * (u * X) := by
+      have hkScaled : x - X < ((k : ℝ) + 1) * (u * X) :=
+        (div_lt_iff₀ hden).mp (by simpa [a] using hkUpper)
+      linarith
+    have hleft : X ≤ localCoverLeft X u k :=
+      localCoverLeft_ge hX.le hu.le k
+    unfold localCoverLeft at hleft ⊢
+    nlinarith
+
 /-- The Mangoldt interval sum is nonnegative term by term. -/
 theorem mangoldtIntervalSum_nonneg (x y : ℝ) :
     0 ≤ mangoldtIntervalSum x y := by

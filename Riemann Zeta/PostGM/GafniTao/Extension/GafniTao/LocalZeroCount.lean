@@ -1,4 +1,4 @@
-import GafniTao.ZeroEnergy
+import GafniTao.CriticalStripReflection
 
 /-!
 # Unit-window zeta-zero multiplicity
@@ -372,11 +372,221 @@ theorem zeroLocalUnitBin_multiplicity_le_log
         ≤ (zeroCount 0 8 : ℝ) + localZeroJensenMajorant T := hRaw
     _ ≤ (zeroCount 0 8 : ℝ) * Real.log T +
           (100 / Real.log ((7 / 4 : ℝ) / (8 / 5 : ℝ))) * Real.log T := by
-      gcongr
-      · exact le_mul_of_one_le_right (by positivity) hLogOne
-      · exact hJensen
+      exact add_le_add (le_mul_of_one_le_right (by positivity) hLogOne) hJensen
     _ = localZeroLogConstant * Real.log T := by
       unfold localZeroLogConstant
       ring
+
+/-- A left-half zero in a local unit bin reflects into the critical-line
+zero set, with its analytic multiplicity unchanged. -/
+theorem zeroLocalUnitBin_reflect_data
+    {sigma T : ℝ} {z : ℤ} {rho : ℂ}
+    (hsigma : 0 ≤ sigma)
+    (hrho : rho ∈ zeroLocalUnitBin sigma T z)
+    (hrhoLeft : rho.re < 1 / 2) :
+    criticalStripReflect rho ∈ zeroSet (1 / 2) T ∧
+      zeroMultiplicity (criticalStripReflect rho) = zeroMultiplicity rho := by
+  have hrhoData := Finset.mem_filter.mp hrho
+  have hrhoRect : rho ∈ zerosInRect sigma 1 (-T) T := hrhoData.1
+  rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff,
+    mem_ZeroRectangle] at hrhoRect
+  rcases hrhoRect with ⟨hrhoRect, hrhoZero⟩
+  have hrhoNonneg : 0 ≤ rho.re := hsigma.trans hrhoRect.1
+  have hrhoPos := zero_re_pos_of_nonneg hrhoNonneg hrhoRect.2.1 hrhoZero
+  have hrhoLtOne := zero_re_lt_one_of_le_one hrhoRect.2.1 hrhoZero
+  constructor
+  · change criticalStripReflect rho ∈ zerosInRect (1 / 2) 1 (-T) T
+    rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff,
+      mem_ZeroRectangle]
+    refine ⟨⟨?_, ?_, ?_, ?_⟩,
+      riemannZeta_criticalStripReflect_eq_zero hrhoPos hrhoLtOne hrhoZero⟩
+    · simp [criticalStripReflect]
+      linarith
+    · simp [criticalStripReflect]
+      linarith
+    · simp [criticalStripReflect]
+      linarith [hrhoRect.2.2.2]
+    · simp [criticalStripReflect]
+      linarith [hrhoRect.2.2.1]
+  · exact zeroMultiplicity_criticalStripReflect hrhoPos hrhoLtOne
+
+/-- Every unit ordinate window in the whole closed source strip
+`0 ≤ Re s ≤ 1` contains `O(log T)` zeros with analytic multiplicity.  The
+factor three is the exact bookkeeping cost here: one right-half bin and the
+two half-open bins needed for the reflected interval `(-z-1,-z]`. -/
+theorem zeroLocalUnitBin_multiplicity_le_three_mul_log
+    (sigma T : ℝ) (z : ℤ)
+    (hsigma : 0 ≤ sigma)
+    (hT : max (Real.exp 2) 8 ≤ T) :
+    ((∑ rho ∈ zeroLocalUnitBin sigma T z,
+        analyticVanishingOrder riemannZeta rho : ℕ) : ℝ) ≤
+      3 * (localZeroLogConstant * Real.log T) := by
+  classical
+  let S := zeroLocalUnitBin sigma T z
+  let U := S.filter fun rho => (1 / 2 : ℝ) ≤ rho.re
+  let L := S.filter fun rho => ¬(1 / 2 : ℝ) ≤ rho.re
+  let L₁ := L.filter fun rho =>
+    (criticalStripReflect rho).im < ((-z : ℤ) : ℝ)
+  let L₂ := L.filter fun rho =>
+    ¬(criticalStripReflect rho).im < ((-z : ℤ) : ℝ)
+  let H₀ := zeroLocalUnitBin (1 / 2) T z
+  let H₁ := zeroLocalUnitBin (1 / 2) T (-z - 1)
+  let H₂ := zeroLocalUnitBin (1 / 2) T (-z)
+  have hUpperSubset : U ⊆ H₀ := by
+    intro rho hrho
+    rcases Finset.mem_filter.mp hrho with ⟨hrhoS, hrhoHalf⟩
+    have hrhoData := Finset.mem_filter.mp hrhoS
+    change rho ∈ zeroLocalUnitBin (1 / 2) T z
+    rw [zeroLocalUnitBin, Finset.mem_filter]
+    refine ⟨?_, hrhoData.2⟩
+    change rho ∈ zerosInRect (1 / 2) 1 (-T) T
+    have hrhoRect : rho ∈ zerosInRect sigma 1 (-T) T := hrhoData.1
+    rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff,
+      mem_ZeroRectangle] at hrhoRect ⊢
+    exact ⟨⟨hrhoHalf, hrhoRect.1.2.1, hrhoRect.1.2.2.1,
+      hrhoRect.1.2.2.2⟩, hrhoRect.2⟩
+  have hReflectInjective : Function.Injective criticalStripReflect := by
+    intro rho rho' h
+    unfold criticalStripReflect at h
+    linear_combination -h
+  have hL₁Subset : L₁.image criticalStripReflect ⊆ H₁ := by
+    intro w hw
+    rw [Finset.mem_image] at hw
+    obtain ⟨rho, hrho, rfl⟩ := hw
+    rcases Finset.mem_filter.mp hrho with ⟨hrhoL, hrefUpper⟩
+    rcases Finset.mem_filter.mp hrhoL with ⟨hrhoS, hrhoLeft⟩
+    have hrhoData := Finset.mem_filter.mp hrhoS
+    change criticalStripReflect rho ∈ zeroLocalUnitBin (1 / 2) T (-z - 1)
+    rw [zeroLocalUnitBin, Finset.mem_filter]
+    refine ⟨(zeroLocalUnitBin_reflect_data hsigma hrhoS
+      (lt_of_not_ge hrhoLeft)).1, ?_⟩
+    simp only [criticalStripReflect, sub_im, one_im, zero_sub]
+    change (((-z - 1 : ℤ) : ℝ) ≤ -(rho.im)) ∧
+      -(rho.im) < ((-z - 1 : ℤ) : ℝ) + 1
+    simp only [criticalStripReflect, sub_im, one_im, zero_sub] at hrefUpper
+    rcases hrhoData.2 with ⟨hrhoLower, hrhoUpper⟩
+    push_cast at hrefUpper ⊢
+    constructor <;> linarith
+  have hL₂Subset : L₂.image criticalStripReflect ⊆ H₂ := by
+    intro w hw
+    rw [Finset.mem_image] at hw
+    obtain ⟨rho, hrho, rfl⟩ := hw
+    rcases Finset.mem_filter.mp hrho with ⟨hrhoL, hrefLower⟩
+    rcases Finset.mem_filter.mp hrhoL with ⟨hrhoS, hrhoLeft⟩
+    have hrhoData := Finset.mem_filter.mp hrhoS
+    change criticalStripReflect rho ∈ zeroLocalUnitBin (1 / 2) T (-z)
+    rw [zeroLocalUnitBin, Finset.mem_filter]
+    refine ⟨(zeroLocalUnitBin_reflect_data hsigma hrhoS
+      (lt_of_not_ge hrhoLeft)).1, ?_⟩
+    simp only [criticalStripReflect, sub_im, one_im, zero_sub]
+    change (((-z : ℤ) : ℝ) ≤ -(rho.im)) ∧
+      -(rho.im) < ((-z : ℤ) : ℝ) + 1
+    simp only [criticalStripReflect, sub_im, one_im, zero_sub] at hrefLower
+    push Not at hrefLower
+    rcases hrhoData.2 with ⟨hrhoLower, _hrhoUpper⟩
+    push_cast at hrefLower ⊢
+    constructor <;> linarith
+  have hUpperLe :
+      ∑ rho ∈ U, zeroMultiplicity rho ≤
+        ∑ rho ∈ H₀, zeroMultiplicity rho :=
+    Finset.sum_le_sum_of_subset_of_nonneg hUpperSubset
+      (fun _ _ _ => Nat.zero_le _)
+  have hL₁Multiplicity : ∀ rho ∈ L₁,
+      zeroMultiplicity (criticalStripReflect rho) = zeroMultiplicity rho := by
+    intro rho hrho
+    rcases Finset.mem_filter.mp hrho with ⟨hrhoL, _⟩
+    rcases Finset.mem_filter.mp hrhoL with ⟨hrhoS, hrhoLeft⟩
+    exact (zeroLocalUnitBin_reflect_data hsigma hrhoS
+      (lt_of_not_ge hrhoLeft)).2
+  have hL₂Multiplicity : ∀ rho ∈ L₂,
+      zeroMultiplicity (criticalStripReflect rho) = zeroMultiplicity rho := by
+    intro rho hrho
+    rcases Finset.mem_filter.mp hrho with ⟨hrhoL, _⟩
+    rcases Finset.mem_filter.mp hrhoL with ⟨hrhoS, hrhoLeft⟩
+    exact (zeroLocalUnitBin_reflect_data hsigma hrhoS
+      (lt_of_not_ge hrhoLeft)).2
+  have hL₁SumEq :
+      ∑ rho ∈ L₁, zeroMultiplicity rho =
+        ∑ rho ∈ L₁.image criticalStripReflect, zeroMultiplicity rho := by
+    rw [Finset.sum_image hReflectInjective.injOn]
+    exact Finset.sum_congr rfl fun rho hrho => (hL₁Multiplicity rho hrho).symm
+  have hL₂SumEq :
+      ∑ rho ∈ L₂, zeroMultiplicity rho =
+        ∑ rho ∈ L₂.image criticalStripReflect, zeroMultiplicity rho := by
+    rw [Finset.sum_image hReflectInjective.injOn]
+    exact Finset.sum_congr rfl fun rho hrho => (hL₂Multiplicity rho hrho).symm
+  have hL₁Le :
+      ∑ rho ∈ L₁, zeroMultiplicity rho ≤
+        ∑ rho ∈ H₁, zeroMultiplicity rho := by
+    rw [hL₁SumEq]
+    exact Finset.sum_le_sum_of_subset_of_nonneg hL₁Subset
+      (fun _ _ _ => Nat.zero_le _)
+  have hL₂Le :
+      ∑ rho ∈ L₂, zeroMultiplicity rho ≤
+        ∑ rho ∈ H₂, zeroMultiplicity rho := by
+    rw [hL₂SumEq]
+    exact Finset.sum_le_sum_of_subset_of_nonneg hL₂Subset
+      (fun _ _ _ => Nat.zero_le _)
+  have hPartitionS :
+      ∑ rho ∈ S, zeroMultiplicity rho =
+        (∑ rho ∈ U, zeroMultiplicity rho) +
+          ∑ rho ∈ L, zeroMultiplicity rho := by
+    simpa [U, L] using (Finset.sum_filter_add_sum_filter_not S
+      (fun rho => (1 / 2 : ℝ) ≤ rho.re) zeroMultiplicity).symm
+  have hPartitionL :
+      ∑ rho ∈ L, zeroMultiplicity rho =
+        (∑ rho ∈ L₁, zeroMultiplicity rho) +
+          ∑ rho ∈ L₂, zeroMultiplicity rho := by
+    simpa [L₁, L₂] using (Finset.sum_filter_add_sum_filter_not L
+      (fun rho => (criticalStripReflect rho).im < ((-z : ℤ) : ℝ))
+      zeroMultiplicity).symm
+  have hNat :
+      ∑ rho ∈ S, zeroMultiplicity rho ≤
+        (∑ rho ∈ H₀, zeroMultiplicity rho) +
+          (∑ rho ∈ H₁, zeroMultiplicity rho) +
+            ∑ rho ∈ H₂, zeroMultiplicity rho := by
+    rw [hPartitionS, hPartitionL]
+    omega
+  have hReal :
+      ((∑ rho ∈ S, zeroMultiplicity rho : ℕ) : ℝ) ≤
+        ((∑ rho ∈ H₀, zeroMultiplicity rho : ℕ) : ℝ) +
+          ((∑ rho ∈ H₁, zeroMultiplicity rho : ℕ) : ℝ) +
+            ((∑ rho ∈ H₂, zeroMultiplicity rho : ℕ) : ℝ) := by
+    exact_mod_cast hNat
+  have h₀ := zeroLocalUnitBin_multiplicity_le_log (1 / 2) T z (by norm_num) hT
+  have h₁ := zeroLocalUnitBin_multiplicity_le_log
+    (1 / 2) T (-z - 1) (by norm_num) hT
+  have h₂ := zeroLocalUnitBin_multiplicity_le_log (1 / 2) T (-z) (by norm_num) hT
+  change ((∑ rho ∈ S, zeroMultiplicity rho : ℕ) : ℝ) ≤ _
+  calc
+    ((∑ rho ∈ S, zeroMultiplicity rho : ℕ) : ℝ) ≤
+        ((∑ rho ∈ H₀, zeroMultiplicity rho : ℕ) : ℝ) +
+          ((∑ rho ∈ H₁, zeroMultiplicity rho : ℕ) : ℝ) +
+            ((∑ rho ∈ H₂, zeroMultiplicity rho : ℕ) : ℝ) := hReal
+    _ ≤ (localZeroLogConstant * Real.log T) +
+          (localZeroLogConstant * Real.log T) +
+            (localZeroLogConstant * Real.log T) := by
+      gcongr
+    _ = 3 * (localZeroLogConstant * Real.log T) := by ring
+
+/-- The whole-critical-strip local-zero constant used by the moment
+consumers. -/
+noncomputable def globalLocalZeroLogConstant : ℝ :=
+  3 * localZeroLogConstant
+
+theorem globalLocalZeroLogConstant_pos : 0 < globalLocalZeroLogConstant := by
+  unfold globalLocalZeroLogConstant
+  exact mul_pos (by norm_num) localZeroLogConstant_pos
+
+/-- Source-facing whole-strip version of the unit-window estimate. -/
+theorem zeroLocalUnitBin_multiplicity_le_global_log
+    (sigma T : ℝ) (z : ℤ)
+    (hsigma : 0 ≤ sigma)
+    (hT : max (Real.exp 2) 8 ≤ T) :
+    ((∑ rho ∈ zeroLocalUnitBin sigma T z,
+        analyticVanishingOrder riemannZeta rho : ℕ) : ℝ) ≤
+      globalLocalZeroLogConstant * Real.log T := by
+  simpa [globalLocalZeroLogConstant, mul_assoc] using
+    zeroLocalUnitBin_multiplicity_le_three_mul_log sigma T z hsigma hT
 
 end GafniTao
