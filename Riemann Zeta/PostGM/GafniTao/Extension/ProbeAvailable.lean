@@ -11,3 +11,6 @@ import GafniTao.SharpPerronSeries
 #check Complex.ofReal_mem_slitPlane
 #check mem_uIoo
 #check Set.uIoo_of_le
+#check Real.continuous_const_rpow
+#check Real.continuousAt_const_rpow
+#check div_le_div_iff_of_pos_right

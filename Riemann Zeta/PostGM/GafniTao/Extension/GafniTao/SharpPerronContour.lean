@@ -142,7 +142,7 @@ other three oriented edges.  This is the contour identity used when `q < 1`.
 -/
 theorem sharpPerronRatioKernel_eq_edges_of_right_shift
     {q c right T : ℝ} (hq : 0 < q) (hc : 0 < c)
-    (hcr : c < right) (hT : 0 < T) :
+    (hcr : c < right) :
     sharpPerronRatioKernel c T q =
       HIntegral' (fun s : ℂ => (q : ℂ) ^ s / s) c right (-T) -
         HIntegral' (fun s : ℂ => (q : ℂ) ^ s / s) c right T +
@@ -164,8 +164,7 @@ theorem sharpPerronRatioKernel_eq_edges_of_right_shift
     apply DifferentiableOn.div
     · exact differentiableOn_id.const_cpow (.inl hq0)
     · exact differentiableOn_id
-    · intro s hs
-      intro hs0
+    · intro s hs hs0
       exact hzeroNot (hs0 ▸ hs)
   have hrect : RectangleIntegral'
       (fun s : ℂ => (q : ℂ) ^ s / s) z w = 0 := by
