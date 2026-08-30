@@ -2,7 +2,7 @@
 
 The root-imported project graph has a warning-free compiling algebraic, combinatorial, asymptotic, classical-density, Type-II, and Guth–Maynard large-values layer. Beta removal, local zero multiplicity, Montgomery mean value, coefficient growth, DFI/Hughes–Young consumers, native Ingham and Huxley, the exact publication-facing Guth–Maynard Theorems 1.1 and 1.2, and the combined `30/13` theorem are proved. The canonical verifier classifies all 303 project Lean modules, checks 7,636 registered declarations and all 14,290 discovered nonprivate theorems, and runs all default linters without a project diagnostic. No direct project axiom remains.
 
-There is no remaining internal #15–#19 analytic obligation. The active work is the GM foundation release gate and external #20 review/digestion. No PostGM work is authorized by this agenda.
+There is no remaining internal #15–#19 analytic obligation. The GM foundation is frozen at exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, on the strength of its exact-SHA fresh-clone local release PASS. Hosted CI is supplemental and non-blocking. The owner has authorized PostGM work alongside the still-open external #20 review, publication, and canonicalization processes.
 
 ## Remaining Analytic Obligations
 
@@ -34,9 +34,13 @@ The former `typeII_bound_unconditional` and its misleading Halász–Montgomery 
 
 ## Next Steps
 
-1. Finish the clean-candidate release-mode run and exact foundation tag.
-2. Preserve the commit-SHA-bound CI log/manifest artifact after the owner pushes.
-3. Seek independent exposition and source-to-Lean semantic review. Any preprint, peer-review, or canonicalization step requires separate human authorization and external action.
+1. Select the first exact PostGM theorem, its authoritative mathematical source, and its public Lean contract.
+2. Build above the frozen `gm-foundation-freeze-v1.0.1` dependency boundary without rewriting or silently weakening the frozen contracts.
+3. Seek independent exposition and source-to-Lean semantic review in parallel. Any preprint, peer-review, or canonicalization step requires separate human authorization and external action; hosted CI remains off the completion-critical path.
+
+## PostGM Handoff
+
+PostGM work is authorized. No first target is selected by this document. Candidate tracks include downstream zero-density applications, reusable analytic-number-theory abstractions, and publication-oriented refactoring; choosing among them requires an exact theorem-level goal and acceptance contract.
 
 Completed supporting layer: **#19 exact and quantitative smooth reflection.** `LargeValuesReflection.lean` proves signed finite formulas, uniform two-parameter decay, the pointwise `T₀⁻¹/²` reflection-integral bound, far-frequency decay, and cancellation-preserving aggregate estimates. `QuantitativeSmoothReflection.lean` proves uniform aggregate `T₀⁻¹/²` extraction, the complete two-sided `T⁻¹⁰⁰` omitted-mode remainder, and the scaled cubic-`S₂` consumer.
 

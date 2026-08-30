@@ -92,6 +92,12 @@ than to an ANTEDB lemma. The relevant labels at this snapshot are:
   addresses runner termination risk and does not weaken the verified scope.
 - The release verifier is `scripts/verify_release.ps1 -Mode release`; it writes
   a SHA-bound log and JSON manifest and refuses a dirty tree.
+- Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated
+  tag `gm-foundation-freeze-v1.0.1`, passed that verifier from a fresh
+  short-path clone. This is the accepted internal freeze evidence.
+- Hosted runs `33258211182` and `33278864901` ended with external exit `143`
+  before artifact upload. No hosted PASS is claimed; CI is supplemental and
+  non-blocking.
 
 ## Claim boundary
 

@@ -10,7 +10,7 @@ flowchart TD
 
     PC["#20 Exact publication contracts<br/>DONE INTERNALLY<br/>GM Theorems 1.1 and 1.2, Ingham,<br/>Huxley and combined 30/13"]
     FV["#20 Canonical foundation verifier<br/>DONE INTERNALLY<br/>303/303 modules classified, exact-type audit,<br/>zero diagnostics and immutable CI pins"]
-    LR["#20 Clean-clone release evidence<br/>OPEN - REMOTE CI RETRY<br/>local release-mode fresh-clone PASS and tag;<br/>first remote run SIGTERM, SHA artifact pending"]
+    LR["#20 Clean-clone release evidence<br/>DONE - LOCAL RELEASE GATE<br/>v1.0.1 exact-SHA fresh-clone PASS and tag published;<br/>hosted CI SIGTERM recorded as non-blocking"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]
@@ -292,6 +292,6 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
 
-    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,ZD,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,TR,GCS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CT,CB,CZD,IG,VC,QA,PR,PC,FV done;
-    class LR,XR,SR,PP,KN open;
+    class ZB,LZ,CF,ZT,ST,VD,CLV,FDT,PW,RA,DI,FA,TE,PS,MR,FD,PB,IIE,TG,ZR,FR,ZD,BR,AC,MV,HM,EX,DY,CI,GD,CV,SS,CR,AF,QD,MS,TM,TR,GCS,DR,SF,EC,SM,MX,PF,HT,UF,CS,S1,RI,RF,HB,S2,EN,SL,AT,S3,EG,GM,GZD,CT,CB,CZD,IG,VC,QA,PR,PC,FV,LR done;
+    class XR,SR,PP,KN open;
     class MZ,PZ,ER,MP,HY,DFI,GMR,HBR available;

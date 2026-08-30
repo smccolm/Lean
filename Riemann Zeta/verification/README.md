@@ -5,11 +5,12 @@ Guth--Maynard foundation. It produces a complete log and a JSON manifest tied
 to the tested Git commit, verifier hash, contract version, toolchain, and
 dependency revisions.
 
-Local development runs write ignored evidence under `logs/`. Release evidence
-is produced by CI from a clean checkout of an exact commit and uploaded as an
-artifact named with that commit SHA. This directory stores the contract-version
-identifier and the reproduction instructions, not a self-referential manifest
-that would alter the commit it claims to describe.
+Local development runs write ignored evidence under `logs/`. The accepted
+internal freeze evidence is a release-mode run from a clean checkout of exact
+commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published as annotated tag
+`gm-foundation-freeze-v1.0.1`. This directory stores the contract-version
+identifier and reproduction instructions, not a self-referential manifest that
+would alter the commit it claims to describe.
 
 The fixed paper editions, theorem-display conventions, classical citations,
 ANTEDB snapshot, dependency revisions, and the boundary between internal
@@ -35,13 +36,11 @@ both retained regressions, executes the exhaustive dependency audit, and runs
 all project linters. Any Lean warning, tactic suggestion, linter finding,
 unclassified file, failed output gate, or nonzero stage fails the run.
 
-The CI workflow uses two `ubuntu-24.04` jobs with actions pinned to immutable
-commits. The first builds the DFI-heavy prefix and saves `.lake` under the
-exact commit-SHA cache key. The dependent job restores that exact cache and
-invokes this same, unchanged release script; it then uploads the log and JSON
-manifest under an artifact name containing `${{ github.sha }}`. This split is
-an execution-resource measure, not a reduction of the verifier's stages. A
-local tag is not evidence that CI ran; the SHA-bound CI artifact and successful
-workflow must be inspected after the candidate is pushed. The initial remote
-attempt of 29 August 2026 ended with runner exit `143` before artifact upload
-and is not release evidence.
+The optional CI workflow uses two `ubuntu-24.04` jobs with actions pinned to
+immutable commits. The first builds the DFI-heavy prefix under an exact-SHA
+cache key; the dependent job is intended to invoke the same release script and
+upload a SHA-named log and JSON manifest. Runs `33258211182` and `33278864901`
+both ended with external exit `143` before artifact upload. No hosted PASS or
+artifact is claimed. This missing supplemental evidence does not change the
+exact-SHA local verifier result, and hosted CI is not a prerequisite for the
+internal foundation freeze or PostGM work.

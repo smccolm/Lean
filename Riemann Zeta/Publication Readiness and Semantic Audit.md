@@ -357,7 +357,7 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
 - Bibliographic page/equation mappings are stable for the cited versions; a later source edition may renumber them.
 - The audit checks declared dependencies, not naturalness of definitions or mathematical importance.
 - The formalization is large and sometimes proves strengthened technical interfaces. External reviewers should confirm that strengthening did not alter a source consumer's intended domain.
-- The canonical verifier is a PowerShell script used identically by local Windows runs and Linux CI. The batch file is only a Windows convenience wrapper; a PowerShell 7 runtime is still required for the canonical verifier.
+- The canonical verifier is a PowerShell script used by local Windows runs and available to the optional Linux CI mirror. The batch file is only a Windows convenience wrapper; a PowerShell 7 runtime is still required for the canonical verifier.
 - Upstreaming reusable lemmas to Mathlib/PNT and refactoring toward community-standard APIs remain future canonicalization work.
 - Open external gates: expert exposition review, independent semantic review, public preprint decision, peer-reviewed publication, and eventual canonicalization.
 
@@ -375,7 +375,7 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
    On Windows, `cmd /c run_lake_build.bat --no-pause` runs the same verifier in development mode.
 5. Release mode must report a clean tree. Preserve the emitted `logs/foundation_freeze_*.log` and matching JSON manifest. A valid PASS requires every classification, build, warning, dependency, exact-contract, output, linter, and prohibited-proof gate to pass.
 6. Independently run `lake env lean RiemannZeta/Audit.lean` and inspect the five publication-contract `#print axioms` lines.
-7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`. After a pushed release candidate, inspect the SHA-named CI artifact as separate evidence that the clean checkout passed.
+7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`. If optional hosted CI succeeds, inspect its SHA-named artifact as supplemental evidence rather than substituting it for the local verifier or semantic review.
 
 Reproduction proves acceptance of the checked declarations in that environment. It is not a substitute for reviewing this crosswalk or the cited mathematics.
 
@@ -446,7 +446,7 @@ Full source/version details and convention decisions are in `verification/SOURCE
 
 The Lean development, proof search, refactoring, repository audits, and documentation were assisted by language-model coding agents, including OpenAI Codex and earlier Antigravity/Gemini sessions. AI assistance included generating candidate Lean terms, translating paper arguments into formal sublemmas, locating APIs and sources, reorganizing proof chains, drafting exposition, and identifying consistency defects. Generated material was accepted only when elaborated by Lean and passed the project checks; that does not make the AI output semantically self-validating.
 
-Lean 4 and Mathlib perform formal elaboration and kernel checking. The project uses Lean `v4.30.0`, Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, and pinned PNT+ revision `4ecb950126c4290293c5662dfe0e884123171df5`. The canonical verifier requires PowerShell and is invoked identically by the Windows wrapper and Linux CI. No AI system is listed as an author. S. McColm, as human project owner, retains responsibility for semantic fidelity, correct attribution, release decisions, and any publication claim.
+Lean 4 and Mathlib perform formal elaboration and kernel checking. The project uses Lean `v4.30.0`, Mathlib revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`, and pinned PNT+ revision `4ecb950126c4290293c5662dfe0e884123171df5`. The canonical verifier requires PowerShell; the Windows wrapper invokes it locally and the optional Linux workflow attempts to mirror it. No AI system is listed as an author. S. McColm, as human project owner, retains responsibility for semantic fidelity, correct attribution, release decisions, and any publication claim.
 
 ## 15. External digestion ledger
 

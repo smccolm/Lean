@@ -272,7 +272,7 @@ The formalization relies on the following exact environment:
 - **Windows Convenience Command**: `run_lake_build.bat --no-pause` (development mode; invokes the same verifier core)
 - **Verifier Coverage**: mechanical classification of all 303 project Lean modules; proof-integrity scans; root build; exact publication-contract build/type gates; both retained regressions; exhaustive transitive axiom/output audit; and all 16 default linters
 - **Focused Axiom/Output Audit Command**: `lake env lean RiemannZeta/Audit.lean` (7,636 registered declarations and all 14,290 discovered nonprivate theorems)
-- **Release Evidence**: a clean release run emits `logs/foundation_freeze_*.log` and a matching JSON manifest bound to the candidate SHA, verifier hash, contract version, toolchain, and dependencies. CI primes only an exact-SHA build cache in a predecessor job, then invokes the same complete verifier and uploads both outputs as a SHA-named artifact. An ignored local log, a terminated CI attempt, or a tag without a successful artifact is not publication evidence.
+- **Internal Freeze Evidence**: exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed the complete release verifier from a fresh short-path clone. The run emits a SHA-, verifier-, contract-, toolchain-, and dependency-bound log/manifest. Hosted CI is supplemental; its terminated attempts produced no hosted PASS or artifact. Neither the local PASS nor a future CI artifact constitutes independent semantic review, preprint release, or publication evidence.
 
 ---
 

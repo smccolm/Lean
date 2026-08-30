@@ -1,7 +1,5 @@
 # Lean 4 Mathematical Formalizations Workspace
 
-[![Riemann Zeta Lean CI](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml/badge.svg)](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml)
-
 Welcome to the **Lean 4** research workspace! This repository contains Lean 4 formalizations of classical mathematical theorems, Dirichlet polynomial dualities, completed Riemann Zeta symmetries, compactified graph theory subprojects, interactive 3D WebGL visualization tools, and formal paper manuscripts.
 
 Author: **S. McColm**
@@ -30,7 +28,7 @@ Mechanized Lean 4 formalization of the Guth--Maynard large-values and zero-densi
 
 - **Toolchain**: Lean 4 `v4.30.0`; Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`; PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
 - **Publication contracts**: `RiemannZeta/PublicationContract.lean` proves the exact five source-facing contracts, including the closed-support/source-only coefficient form of Theorem 1.1 and the full range $1/2\le\sigma\le1$ of Theorem 1.2.
-- **Verification**: `scripts/verify_release.ps1` is the canonical local/CI verifier. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper.
+- **Verification**: `scripts/verify_release.ps1` is the canonical verifier. Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed it from a fresh short-path clone. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper. Hosted CI is an optional mirror and has not produced a successful artifact.
 - **Source freeze and review packet**: see `Riemann Zeta/verification/SOURCE_FREEZE.md` and `Riemann Zeta/Publication Readiness and Semantic Audit.md`.
 
 ### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/`)

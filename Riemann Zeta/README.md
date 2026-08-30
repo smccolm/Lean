@@ -1,8 +1,8 @@
 # Riemann Zeta Formalization in Lean 4
 
-[![Riemann Zeta Lean CI](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml/badge.svg)](https://github.com/smccolm/Lean/actions/workflows/riemann-zeta-ci.yml)
-
 Mechanized formalization of finite Dirichlet polynomial identities, analytic zero-count infrastructure, and the Guth–Maynard zero-density argument in **Lean 4** (pinned to toolchain `leanprover/lean4:v4.30.0`, package version `0.1.0`). The project-integrated theorem chain includes exact publication-facing contracts for Guth–Maynard Theorems 1.1 and 1.2, multiplicity-weighted Ingham and Huxley bounds, the mollifier-specific twisted-fourth-moment input, and the combined exponent `30 * (1 - σ) / 13`. The DFI result used in that chain is a localized signed dyadic specialization with its source-weight and scale hypotheses visible; the fourth-moment result is the upper bound required by the transfer, not the full Hughes–Young asymptotic formula.
+
+The internally frozen foundation is exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, which passed the canonical release verifier from a fresh short-path clone. Hosted CI has not produced a successful artifact and is treated as optional supplemental evidence, not as an internal completion gate.
 
 The principal runner establishes Lean elaboration, permitted transitive axioms, retained-file coverage, zero project warnings, and the repository's integrity/output gates. It does **not** establish independent semantic review, peer-reviewed publication, community acceptance, or canonicalization. The detailed claim sheet, unfolded theorem statements, source crosswalk, dangerous bridges, reproduction protocol, talk outline, and external-review ledger are in **[Publication Readiness and Semantic Audit.md](Publication%20Readiness%20and%20Semantic%20Audit.md)**.
 
@@ -74,9 +74,9 @@ Ensure you have Lean `v4.30.0` installed. On Windows, the principal human-facing
 run_lake_build.bat
 ```
 
-For CI or a terminal session, use `run_lake_build.bat --no-pause`. This is a thin Windows wrapper around the platform-neutral PowerShell verifier `scripts/verify_release.ps1`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
+For a noninteractive terminal session, use `run_lake_build.bat --no-pause`. This is a thin Windows wrapper around the platform-neutral PowerShell verifier `scripts/verify_release.ps1`. The audit can also be run directly with `lake env lean RiemannZeta/Audit.lean`.
 
-The verifier mechanically classifies all 303 project Lean modules (301 in the root graph and two explicit audit/lint regressions), scans the entire Lean tree for prohibited proof shortcuts, builds the root, elaborates the exact publication contract and both retained regressions, executes the exhaustive dependency audit, and runs all project linters. Any project warning, tactic suggestion, linter finding, unclassified module, failed output gate, or nonzero stage fails the run. Development evidence is written under `logs/`; release mode refuses a dirty tree. CI primes the DFI-heavy build prefix in an exact-SHA cache job, then runs the unchanged verifier and uploads a commit-SHA-bound log and JSON manifest. The source editions and conventions are frozen in **[`verification/SOURCE_FREEZE.md`](verification/SOURCE_FREEZE.md)**. Re-run the verifier for the current checkout: a historical PASS is evidence only for the recorded commit.
+The verifier mechanically classifies all 303 project Lean modules (301 in the root graph and two explicit audit/lint regressions), scans the entire Lean tree for prohibited proof shortcuts, builds the root, elaborates the exact publication contract and both retained regressions, executes the exhaustive dependency audit, and runs all project linters. Any project warning, tactic suggestion, linter finding, unclassified module, failed output gate, or nonzero stage fails the run. Development evidence is written under `logs/`; release mode refuses a dirty tree. Optional CI is intended to mirror the unchanged verifier and upload commit-SHA-bound evidence, but no hosted PASS is currently claimed. The source editions and conventions are frozen in **[`verification/SOURCE_FREEZE.md`](verification/SOURCE_FREEZE.md)**. Re-run the verifier for the current checkout: a historical PASS is evidence only for the recorded commit.
 
 ---
 

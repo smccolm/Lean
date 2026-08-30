@@ -67,7 +67,7 @@ if errorlevel 2 (
 
 set "COMMIT_MESSAGE=%~1"
 if not defined COMMIT_MESSAGE (
-  set "COMMIT_MESSAGE=Make GitHub sync complete and keep CI non-blocking"
+  set "COMMIT_MESSAGE=Rename post-GM research program and files to Prime Shell"
   set /p "COMMIT_MESSAGE=Commit message [%COMMIT_MESSAGE%]: "
 )
 set "PUSH_COMMIT_MESSAGE=%COMMIT_MESSAGE%"
