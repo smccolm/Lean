@@ -1,0 +1,40 @@
+import PrimeShell
+
+/-! Explicit dependency audit for every public Prime Shell Phase-I theorem. -/
+
+#print axioms PrimeShell.primeDifferenceOffDiagonal_eq_resonant_add_nonresonant
+#print axioms PrimeShell.primePrime_exact_decomposition
+#print axioms PrimeShell.primePrime_exact_source_ledger
+#print axioms PrimeShell.primePrime_sub_main_exact
+#print axioms PrimeShell.primePrime_bound_regression_from_exact_decomposition
+
+#print axioms PrimeShell.dyadicShiftSum_eq_kernel_mul_correlation_add_remainder
+#print axioms PrimeShell.abs_dyadicKernelVariationRemainder_le_literal_sum
+#print axioms PrimeShell.dyadicLambdaCorrelation_eq_zero_of_N_le_h
+#print axioms PrimeShell.dyadicShiftSum_eq_of_N_le_H
+#print axioms PrimeShell.dyadicLambdaWeight_nonneg
+#print axioms PrimeShell.abs_Aminus_le
+#print axioms PrimeShell.abs_dyadicShiftKernel_le
+#print axioms PrimeShell.offDiagonal_eq_strictUpperTriangle
+#print axioms PrimeShell.dyadicDifferenceOffDiagonal_eq_shiftSum
+
+#print axioms PrimeShell.lambdaIntervalSum_eq_prime_log_add_primePowerEndpointError
+#print axioms PrimeShell.closedLambdaIntervalSum_eq_leftEndpoint_add_open
+#print axioms PrimeShell.gmExceptionalLambdaMass_le_card_mul_log
+#print axioms PrimeShell.gmExceptionalAcoefMass_le_card_mul_log_div_sqrt
+#print axioms PrimeShell.card_gmSimultaneousLambdaBadSet_le_sum_cards
+#print axioms PrimeShell.rawDyadicLambdaPrefix_eq_weighted_shortIntervals
+
+#print axioms PrimeShell.all_shift_prefixes_insufficient_for_nonconstant_two_variable_kernel
+#print axioms PrimeShell.literal_dyadic_kernel_prefix_no_go
+#print axioms PrimeShell.prefix_only_two_point_transfer_forces_row_constancy
+#print axioms PrimeShell.literal_prefix_only_transfer_forces_kernel_row_constancy
+#print axioms PrimeShell.literal_prefix_only_transfer_fails_of_row_variation
+#print axioms PrimeShell.finite_abel_identity
+#print axioms PrimeShell.abs_weighted_sum_le_of_prefix_bound
+#print axioms PrimeShell.abs_dyadicShiftSum_le_of_prefix_and_variation
+#print axioms PrimeShell.final_prefix_information_insufficient
+#print axioms PrimeShell.gm_overlap_iff_alpha_gt_fifteen_thirteenths
+#print axioms PrimeShell.resonant_scale_of_power
+#print axioms PrimeShell.resonant_log_shift_implies_range
+#print axioms PrimeShell.exists_strict_gm_margin_iff_alpha_gt_fifteen_thirteenths

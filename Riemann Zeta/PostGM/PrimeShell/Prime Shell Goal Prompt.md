@@ -1,6 +1,6 @@
 ﻿# Prime Shell Persistent Goal Prompt
 
-Use the following prompt for the next turn.
+**Status: completed historical acceptance contract.** Phase I was executed from this prompt. The result is recorded in [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md). The text below is not the next-goal prompt.
 
 ```text
 Create a persistent goal to complete Prime Shell Phase I (Prime Shell Shitlist PSH-01 through PSH-06) without modifying the frozen Guth-Maynard proof.

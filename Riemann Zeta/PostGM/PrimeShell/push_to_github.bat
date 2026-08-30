@@ -9,11 +9,13 @@ if not defined REPO_ROOT (
   exit /b 1
 )
 
-rem Keep this message current: update it periodically to describe the work being pushed.
-set "DEFAULT_COMMIT_MESSAGE=Advance Prime Shell research"
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set /p "COMMIT_MESSAGE=Commit message [%DEFAULT_COMMIT_MESSAGE%]: "
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=%DEFAULT_COMMIT_MESSAGE%"
+if not defined COMMIT_MESSAGE set /p "COMMIT_MESSAGE=Commit message: "
+if not defined COMMIT_MESSAGE (
+  echo ERROR: Commit message cannot be empty.
+  pause
+  exit /b 1
+)
 
 git -C "%REPO_ROOT%" add -A
 if errorlevel 1 goto :fail

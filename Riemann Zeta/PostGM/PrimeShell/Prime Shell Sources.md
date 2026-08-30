@@ -7,7 +7,7 @@ Snapshot date: 2026-08-29. Remote commit identifiers were queried directly; math
 | Resource | Pin / toolchain | Use | Caveat |
 |---|---|---|---|
 | [Anthropic formal-math / Zeta23](https://github.com/anthropics/formal-math/tree/main/zeta23) | release tag `v1.0`; tag object `82ee6340d6fb15d51fc73ba1ba7b8cac672a7bba`; commit `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`; Lean `v4.33.0-rc2`; Mathlib `51e6992efd06126df61a496bebf8f49482a4e129` | Exact prime-side trace, Weil-form compression, linear algebra, zero-side assembly, and Comparator contracts | Static artifact; do not work from moving `main` (`2bafb8c88f177284a2123b5fefa2ff84e2365eb6` at snapshot). PairCeiling has no Comparator topic and carries displayed enclosure input. |
-| [Lean Comparator](https://github.com/leanprover/comparator) | `master` at `8d84e678dc9954b12db91f7f3167a169b309e0c8` at snapshot | Independent statement-equivalence and permitted-axiom checks | Pin before use; Comparator verifies the supplied statement boundary, not source-theorem semantics by itself. |
+| [Lean Comparator](https://github.com/leanprover/comparator) | reproduced at `71b52ec29e06d4b7d882726553b1ceb99a2499e0` | Independent statement-equivalence and permitted-axiom checks | The released topics were accepted in an unsandboxed Windows development replay. Official `landrun` is Linux-only and was unavailable on this host; Comparator verifies the supplied statement boundary, not source-theorem semantics by itself. |
 | [PrimeNumberTheoremAnd](https://github.com/AlexKontorovich/PrimeNumberTheoremAnd) | upstream `main` at `47fa48680663df41146704d02a5b092d792bd5b9`; frozen GM project uses older pin `4ecb950126c4290293c5662dfe0e884123171df5` | Zeta, explicit formula, Mellin, PNT and zero-free infrastructure | The Prime Shell arithmetic transfer is not present and must be proved. Do not silently change the frozen project's pin. |
 | [Mathlib](https://github.com/leanprover-community/mathlib4) | frozen GM pin `c5ea00351c28e24afc9f0f84379aa41082b1188f`; Zeta23 pin `51e6992efd06126df61a496bebf8f49482a4e129` | Analysis, finite sums, asymptotics, Fourier and linear algebra APIs | The pin mismatch is real; a cross-toolchain bridge or later port requires an explicit decision. |
 | [Palomar](https://palomar-registry.org/) | pin the evaluator/template when release work begins | Public challenge/solution packaging | Publication tooling, not mathematical evidence. |
@@ -32,7 +32,15 @@ Snapshot date: 2026-08-29. Remote commit identifiers were queried directly; math
 - `Zeta23/PairCeiling/`
 - `Challenge.lean`, `Solution.lean`, and Comparator configurations
 
-The paper's labels in Zeta23 docstrings are intended as a source crosswalk. The next goal must replace this directory-level list with exact declaration names and theorem types.
+The completed declaration-level crosswalk is in [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md).
+
+## Reproduction qualifications
+
+- The pinned Zeta23 checkout remained at exact commit `3635e748...` and was clean after reproduction.
+- Its documented `lake build` completed successfully, but the unchanged upstream source emitted 247 `warning:` lines. Prime Shell does not relabel that as a zero-warning upstream build.
+- The isolated `Extension/` build emits no warnings.
+- The official `landrun` binary could not run on Windows and no WSL distribution was installed. `nanoda` also failed to link because the Visual C runtime import library was unavailable. These are environment limitations, not successful trusted-sandbox checks.
+- Comparator's base, multiplicity, and XiPrime released topics all reported that Lean's default kernel accepted the solution and that the solution was okay in the Windows development replay.
 
 ## Research findings that constrain the plan
 

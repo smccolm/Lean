@@ -39,19 +39,23 @@ with an exponentially small exceptional set and error. It is not merely a conseq
 
 Matomaki-Radziwill-Tao Theorem 1.3 is a stronger fallback at a more distant scale: for almost all shifts in an interval of length `H >= X^(8/33+epsilon)`, it gives the expected singular-series asymptotic for `sum Lambda(n)Lambda(n+h)` with arbitrary logarithmic saving.
 
-What is not known at the outset is whether either theorem controls the exact Zeta23 trace kernel. A prefix asymptotic does not automatically control a sharply oscillatory weighted sum.
+Phase I settles the first version of that question negatively. The exact dyadic source kernel is two-variable, depending on both `n` and `h`; it is not a scalar function of `h`. A collapsed prefix asymptotic can control an anchored scalar component, but not the separately exposed variation remainder without additional arithmetic information.
 
 ## 3. Exact first research question
 
-After dyadically localizing `n,m` and setting `m=n+h`, write the resonant prime contribution exactly as
+After dyadically localizing `n,m` and setting `m=n+h`, the exact source contribution is
 
 \[
-\sum_N\sum_h K_{N,T}(h)C_N(h)+R,
-\qquad
-C_N(h)=\sum_{N<n\le 2N}\Lambda(n)\Lambda(n+h),
+\sum_N\sum_h\sum_n K_{N,T}(n,h)a_n a_{n+h}.
 \]
 
-with the actual smooth weights, endpoints, normalizations, signs, and remainder inherited from the trace.
+It retains the actual weights, endpoints, normalizations, orientations, and remainder inherited from the trace. Anchoring at `n=N+1` gives the exact identity
+
+\[
+\sum_h K^*_{N,T}(h) C_N(h)+R_{\mathrm{var}},
+\]
+
+where both `K*` and `R_var` are explicit. The second term is not a disposal error: it is the information discarded by collapsing the `n` coordinate.
 
 Define the cumulative correlation
 
@@ -59,11 +63,13 @@ Define the cumulative correlation
 A_N(H)=\sum_{1\le h\le H}C_N(h).
 \]
 
-The decisive question is:
+The Phase I question was:
 
 > Are the size, variation, and localization properties of `K_{N,T}` strong enough that a uniform asymptotic for `A_N(H)` on the relevant range determines the weighted sum to the error demanded by the spectral consumer?
 
-This must be settled by an exact summation-by-parts theorem or an exact counterexample. It must not be answered by analogy.
+It has been settled by both sides of the ledger. `finite_abel_identity` and `abs_weighted_sum_le_of_prefix_bound` prove the scalar Abel transfer. `all_shift_prefixes_insufficient_for_nonconstant_two_variable_kernel` proves that all collapsed prefixes can vanish while a two-row kernel functional is nonzero whenever the rows differ. Thus the collapsed-prefix route fails unless one additionally proves exact row constancy, an `n`-localized/rectangle-prefix correlation estimate, or a direct bound on `R_var`.
+
+This verdict does **not** include a concrete theorem that the AF taper's kernel differs at a named numerical tuple. Instead, the unconditional necessary-condition theorem makes the burden exact: a prefix-only consumer would have to prove row constancy. No such source identity is present in AF or Zeta23, and the source decomposition retains the variation term explicitly.
 
 ## 4. Arithmetic transfer ledger
 
@@ -122,9 +128,9 @@ These computations locate candidate scales only. They neither prove that the dis
 
 ## 6. Three feasibility gates
 
-### F1 - Kernel compatibility
+### F1 - Kernel compatibility — Phase I verdict: FAIL for collapsed prefixes
 
-Pass only if the exact cumulative arithmetic input controls the exact trace kernel with a proved error budget. Fail if fixed-shift singular-series information, short subinterval control, or phase-uniform information is genuinely necessary.
+The proposed cumulative interface does not control the exact two-variable trace kernel by itself. The weakest stronger input currently isolated is a direct bound for `dyadicKernelVariationRemainder`; an `n`-localized/rectangle-prefix estimate is a more arithmetic alternative. MRT's almost-all fixed-shift theorem is therefore the next justified source to test, but it has not yet been shown to meet this exact weighted consumer.
 
 ### F2 - Disconnected-shell admissibility
 
@@ -202,4 +208,4 @@ A killed route must record the exact obstruction, strongest theorem reached, and
 - **Formal theorem complete:** the native arithmetic input, trace theorem, spectral consumer, and zero theorem are kernel-checked with clean audits.
 - **Publication complete:** immutable release, independent statement verification, exposition, and external mathematical review exist.
 
-Only the first of these is the next goal.
+Phase I is complete with the negative verdict above. No feasibility, analytic-route, formal-zero-theorem, or publication completion is claimed.
