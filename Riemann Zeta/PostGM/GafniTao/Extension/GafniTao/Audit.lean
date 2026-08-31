@@ -125,6 +125,11 @@ axiom dependencies.
 #print axioms GafniTao.ford_re_cot_formula
 #print axioms GafniTao.ford_re_cot_nonneg
 #print axioms GafniTao.fordCotKernel_re_nonneg
+#print axioms GafniTao.fordDetector_rightEdge_pointwise
+#print axioms GafniTao.fordDetector_leftEdge_pointwise
+#print axioms GafniTao.fordDetector_rightEdge_integral
+#print axioms GafniTao.fordDetector_leftEdge_integral
+#print axioms GafniTao.fordDetector_leftEdge_down_integral
 #print axioms GafniTao.re_bounds_of_mem_rightEdgeZeros
 #print axioms GafniTao.rightEdgeCumulativeCount_le_zeroCount
 #print axioms GafniTao.rightEdgeCumulativeCount_eq_zero_of_zeroCount_eq_zero

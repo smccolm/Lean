@@ -14,6 +14,7 @@ import GafniTao.FordZetaBasic
 import GafniTao.FordZeroDetectorKernel
 import GafniTao.FordZeroDetectorResidues
 import GafniTao.FordCotangentPositivity
+import GafniTao.FordZeroDetectorEdges
 import GafniTao.ExplicitFormulaSetup
 import GafniTao.SharpExplicitFormula
 import GafniTao.SharpPerron

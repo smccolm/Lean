@@ -45,48 +45,48 @@ This work does not prove the Riemann Hypothesis, and nothing in this directory s
 
 The implemented proof architecture is now approximately:
 
-```math
+$$
 \text{zeta zeros}
 \longrightarrow
 N(\sigma,T),\,N^*(\sigma,T)
 \longrightarrow
 A(\sigma),\,A^*(\sigma)
-```
+$$
 
-```math
+$$
 \longrightarrow
 L^\infty,\ L^2,\ L^4
 \text{ zero-sum bounds}
-```
+$$
 
-```math
+$$
 \longrightarrow
 \text{equation (2.7) large-value set}
-```
+$$
 
-```math
+$$
 \longrightarrow
 \text{local exceptional-measure bounds}
-```
+$$
 
-```math
+$$
 \longrightarrow
 \text{finite-strip and }\varepsilon\text{ limits}
-```
+$$
 
-```math
+$$
 \longrightarrow
-\operatorname{meas} E_\delta(X,\theta)
+\mathrm{meas}\,E_\delta(X,\theta)
 \ll
 X^\xi
-```
+$$
 
-```math
+$$
 \longrightarrow
 \mu_\delta(\theta)
 \longrightarrow
 \mu(\theta).
-```
+$$
 
 Most of this transfer machinery now exists as Lean theorems.
 
@@ -102,7 +102,7 @@ The formalization defines the actual Mangoldt short-interval exceptional set rat
 
 The basic object has the mathematical form
 
-```math
+$$
 E_\delta(X,\theta)
 =
 \left\{
@@ -113,19 +113,19 @@ x\in[X,2X]:
 \ge
 \delta x^\theta
 \right\}.
-```
+$$
 
 The project then defines the corresponding measure exponent
 
-```math
+$$
 \mu_\delta(\theta)
-```
+$$
 
 and the limiting exceptional exponent
 
-```math
+$$
 \mu(\theta).
-```
+$$
 
 The implementation includes measurability, finite-measure facts, monotonicity in the exceptional threshold, fixed-power bounds, and the countable reduction needed to pass from the threshold-dependent exponent to the final exceptional exponent.
 
@@ -137,15 +137,15 @@ The project contains native infrastructure for the nontrivial zeros of the Riema
 
 This includes the formal counterparts of quantities such as
 
-```math
+$$
 N(\sigma,T)
-```
+$$
 
 and the four-zero additive-energy count
 
-```math
+$$
 N^*(\sigma,T).
-```
+$$
 
 The four-zero object is treated with zero occurrences and multiplicity rather than silently replacing the paper's quantity by a set cardinality.
 
@@ -188,9 +188,9 @@ The supporting development includes a substantial sharp-Perron chain:
 
 The target range includes arbitrary real endpoints and the full regime
 
-```math
+$$
 2 \le T \le x.
-```
+$$
 
 This means the sharp explicit formula should no longer be regarded as one of the principal unresolved source inputs.
 
@@ -255,7 +255,7 @@ GafniTao.gafniTaoTheorem13_max_conditional
 
 It yields a bound of the schematic form
 
-```math
+$$
 \mu(\theta)
 \le
 \max
@@ -263,9 +263,9 @@ It yields a bound of the schematic form
 1-\theta,\,
 \mathcal R(\theta)
 \right\},
-```
+$$
 
-where `\mathcal R(\theta)` is the refined expression obtained from the zero-density and four-zero additive-energy exponents after the epsilon and strip limits.
+where $\mathcal R(\theta)$ is the refined expression obtained from the zero-density and four-zero additive-energy exponents after the epsilon and strip limits.
 
 This is a genuine assembled theorem, but it remains conditional on named analytic source inputs.
 
@@ -287,7 +287,7 @@ This follows from the refined theorem by replacing the fourth-moment improvement
 
 Schematically,
 
-```math
+$$
 \mu(\theta)
 \le
 \max
@@ -295,7 +295,7 @@ Schematically,
 1-\theta,\,
 \mathcal O(\theta)
 \right\}.
-```
+$$
 
 Again, this theorem is real Lean output, but it remains conditional and should not yet be labelled as the final unconditional source theorem.
 
@@ -311,12 +311,12 @@ The project exposes a source-facing proposition representing the required Ford-t
 
 The normalization layer converts the source estimate into the downstream form required by the Gafni-Tao proof, including a bound of the shape
 
-```math
+$$
 N(1-\eta,T)
 \le
 T^{58.05\,\eta^{3/2}}
 (\log T)^{16}.
-```
+$$
 
 The normalization and consumer bridge exist.
 
@@ -349,33 +349,33 @@ It is to construct the required zero-free theorem from the accepted source mathe
 
 The desired dependency direction is:
 
-```math
+$$
 \text{Vinogradov-Korobov source theorem}
-```
+$$
 
-```math
+$$
 \Downarrow
-```
+$$
 
-```math
+$$
 \text{rectangle zero-free statement}
-```
+$$
 
-```math
+$$
 \Downarrow
-```
+$$
 
-```math
-\texttt{VinogradovKorobovCountVanishing}
-```
+$$
+\mathrm{VinogradovKorobovCountVanishing}
+$$
 
-```math
+$$
 \Downarrow
-```
+$$
 
-```math
+$$
 \text{Gafni-Tao near-one machinery}.
-```
+$$
 
 ---
 
@@ -440,17 +440,17 @@ The later numerical consequences of the paper are not yet complete.
 
 Outstanding work includes the relevant published numerical inputs and optimization steps associated with results such as
 
-```math
+$$
 \theta > \frac{17}{30}
-```
+$$
 
 and the short-interval threshold
 
-```math
+$$
 \theta > \frac{7}{12}.
-```
+$$
 
-The project also still needs the appropriate Pintz and Heath-Brown source inputs, the required small-`\Delta` arguments, and a certified optimization layer where numerical minimization or maximization enters the final result.
+The project also still needs the appropriate Pintz and Heath-Brown source inputs, the required small-$\Delta$ arguments, and a certified optimization layer where numerical minimization or maximization enters the final result.
 
 These numerical consumers should remain downstream work.
 
@@ -713,7 +713,7 @@ Only then should Theorems 1.2 and 1.3 be marked DONE in the project crosswalk.
 
 ## 5. Complete the numerical consumers
 
-After the general theorem is unconditional, formalize the remaining Pintz, Heath-Brown, small-`\Delta`, and optimization inputs required for the paper's explicit numerical corollaries.
+After the general theorem is unconditional, formalize the remaining Pintz, Heath-Brown, small-$\Delta$, and optimization inputs required for the paper's explicit numerical corollaries.
 
 ## 6. Final audit
 
