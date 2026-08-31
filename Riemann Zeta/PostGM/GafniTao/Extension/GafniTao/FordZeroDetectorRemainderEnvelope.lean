@@ -121,9 +121,12 @@ theorem tendsto_fordDetector_poly_exp_envelope
     positivity
   have hbase :=
     tendsto_rpow_mul_exp_neg_mul_atTop_nhds_zero (2 : ℝ) b hb
-  have hmul :=
-    tendsto_const_nhds.mul hbase
-      (c := 8 * Real.pi * C * Real.exp (b * t))
+  have hconst : Tendsto
+      (fun _x : ℝ => 8 * Real.pi * C * Real.exp (b * t))
+      atTop (𝓝 (8 * Real.pi * C * Real.exp (b * t))) :=
+    tendsto_const_nhds
+  have hmul := hconst.mul hbase
+  simp only [mul_zero] at hmul
   apply hmul.congr'
   filter_upwards with T
   rw [Real.rpow_two]

@@ -83,7 +83,7 @@ theorem VIntegral'_eq_scaled_physical_param
       apply intervalIntegral.integral_congr
       intro y _hy
       dsimp only [f]
-      ring
+      ring_nf
     _ = (scale : ℂ) *
         ∫ u in (yLower - t) / scale..(yUpper - t) / scale,
           f (scale * u + t) := by
@@ -103,7 +103,7 @@ theorem VIntegral'_eq_scaled_physical_param
       intro u _hu
       dsimp only [f]
       push_cast
-      ring
+      ring_nf
 
 theorem re_VIntegral'_eq_integral_re_scaled_physical_param
     (F : ℂ → ℂ) {x t yLower yUpper scale : ℝ} (hscale : scale ≠ 0)

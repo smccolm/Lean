@@ -221,7 +221,7 @@ theorem integral_re_fordDetector_verticalParam_eq
     dsimp only [q', scale]
     simp [Complex.mul_re, Complex.tanh_ofReal_re]
     field_simp [heta.ne', Real.pi_ne_zero]
-    ring
+    ring_nf
   rw [show (∫ u in a..b,
       ((1 / (2 * (Real.pi : ℂ) * I)) *
         (I * ((2 * eta / Real.pi : ℝ) : ℂ)) *
@@ -241,7 +241,7 @@ theorem integral_re_fordDetector_verticalParam_eq
     dsimp only [q, scale]
     congr 2
     push_cast
-    ring
+    ring_nf
   calc
     (∫ u in a..b, (-1 / (4 * eta)) * Real.tanh u * q' u) =
         (-1 / (4 * eta)) *

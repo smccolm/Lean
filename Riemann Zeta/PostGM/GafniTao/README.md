@@ -4,22 +4,30 @@
 
 **Active isolated formalization.**
 
-The project has progressed beyond foundational scaffolding. The main Section 2 zero-density-to-exceptional-set transfer mechanism is now implemented in Lean, including:
+The project has progressed well beyond foundational scaffolding.
+
+The main Section 2 zero-density-to-exceptional-set transfer mechanism is now implemented in Lean, including:
 
 - the exact Mangoldt short-interval exceptional set;
 - Lebesgue-measure exceptional exponents;
-- zero counting with multiplicity;
-- the multiplicity-weighted four-zero quantity `N*` and exponent `A*`;
-- second- and fourth-moment zero-sum estimates;
-- finite zero strips;
-- Markov conversion;
-- the equation (2.7) exceptional-set reduction;
-- epsilon and finite-strip limiting machinery;
-- finite multiplicative covering from local intervals back to the global exceptional set;
+- multiplicity-weighted zero counting;
+- the four-zero additive-energy quantity `N*` and exponent `A*`;
+- the local multiplicative cover;
+- Brun-Titchmarsh localization and replacement estimates;
 - a native sharp truncated explicit formula;
-- conditional assembled forms of Gafni-Tao Theorems 1.2 and 1.3.
+- finite zero strips;
+- the physical `L-infinity`, `L2`, and `L4` zero-sum estimates;
+- Markov conversion;
+- the equation (2.7) strip decomposition;
+- the right-edge, small-density, second-moment, and fourth-moment branches;
+- epsilon and finite-strip limiting machinery;
+- local-to-global exceptional-measure assembly;
+- conditional assembled forms of Gafni-Tao Theorems 1.2 and 1.3;
+- the frozen Guth-Maynard `30/13` ordinary-density envelope and associated threshold arithmetic.
 
-The principal remaining analytic frontier is the unconditional construction of the published near-one zero-density and Vinogradov-Korobov zero-free inputs required by the Gafni-Tao argument.
+The active mathematical frontier is now much narrower.
+
+The principal unresolved work is to derive the published Ford near-one zero-density and Vinogradov-Korobov zero-free inputs from the growing native Ford source development, then remove those assumptions from the final Gafni-Tao theorem interface.
 
 The complete Gafni-Tao formalization is **not yet claimed**.
 
@@ -33,9 +41,9 @@ This directory is the isolated post-Guth-Maynard program for formalizing Ayla Ga
 
 arXiv:2505.24017v1.
 
-The target is the paper's actual zero-density-to-exceptional-set argument, including the fourth-moment refinement and the numerical consequences obtained after supplying the required density and additive-energy inputs.
+The target is the paper's actual zero-density-to-exceptional-set argument, including the fourth-moment refinement and its published numerical consequences.
 
-The intended endpoint is not merely a theorem with the same numerical shape. The goal is to formalize the mathematical dependency chain used by the paper closely enough that the final public theorem can be audited against the source argument.
+The intended endpoint is not merely a theorem with the same numerical shape. The objective is to formalize the mathematical dependency chain used by the paper closely enough that the final public theorem can be audited directly against the source argument.
 
 This work does not prove the Riemann Hypothesis, and nothing in this directory should be described as doing so.
 
@@ -43,7 +51,7 @@ This work does not prove the Riemann Hypothesis, and nothing in this directory s
 
 # Current mathematical state
 
-The implemented proof architecture is now approximately:
+The implemented downstream architecture is approximately:
 
 ```math
 \mathrm{zeta\ zeros}
@@ -61,7 +69,7 @@ L^{\infty},\,L^{2},\,L^{4}
 
 ```math
 \longrightarrow
-\mathrm{equation\ (2.7)\ large\text{-}value\ set}
+\mathrm{equation\ (2.7)\ strip\ alternatives}
 ```
 
 ```math
@@ -88,9 +96,45 @@ X^{\xi}
 \mu(\theta)
 ```
 
-Most of this transfer machinery now exists as Lean theorems.
+Most of this transfer machinery is now represented by Lean theorems on the isolated audit surface.
 
-The major remaining conditionality lies upstream in the published near-one analytic inputs.
+The remaining conditionality is concentrated primarily in the near-one analytic source inputs.
+
+---
+
+# Current status by proof layer
+
+| Proof layer | Current state |
+|---|---|
+| Exact exceptional set | Implemented |
+| `mu_delta` / `mu` framework | Implemented through the current downstream consumer interfaces |
+| Multiplicity-weighted `N` | Implemented |
+| Multiplicity-weighted `N*` | Implemented |
+| `A` / `A*` exponent machinery | Implemented through the current consumer interfaces |
+| Chebyshev/Mangoldt interval identities | Implemented |
+| Local multiplicative cover | Implemented |
+| Brun-Titchmarsh replacement | Implemented |
+| Sharp truncated explicit formula | Native theorem implemented |
+| Complex Fourier bump | Implemented |
+| Second moment | Implemented |
+| Fourth moment | Implemented |
+| Finite half-open strip assembly | Implemented |
+| Equation (2.7) | Implemented |
+| Right-edge consumer | Implemented conditional on near-one source inputs |
+| Limit assembly | Implemented |
+| Global exceptional cover | Implemented |
+| Refined Theorem 1.3 max-form | Implemented conditionally |
+| Ordinary Theorem 1.2 max-form | Implemented conditionally |
+| Frozen GM `30/13` consumer | Implemented |
+| Ford source theorem closure | Active |
+| Vinogradov-Korobov source theorem closure | Active |
+| Exact unconditional Theorem 1.3 | Open |
+| Exact unconditional Theorem 1.2 | Open |
+| Theorem 1.1 | Open |
+| Pintz / Heath-Brown Section 3 inputs | Open |
+| Published sample bounds | Open |
+| Certified Section 3 optimizer | Open |
+| Final release audit | Open |
 
 ---
 
@@ -98,9 +142,9 @@ The major remaining conditionality lies upstream in the published near-one analy
 
 ## 1. Exceptional sets
 
-The formalization defines the actual Mangoldt short-interval exceptional set rather than a proxy quantity.
+The formalization defines the actual Mangoldt short-interval exceptional set rather than a sampled or finite proxy.
 
-The basic object has the mathematical form:
+The mathematical object is:
 
 ```math
 E_{\delta}(X,\theta)
@@ -115,19 +159,19 @@ x\in[X,2X]:
 \right\}
 ```
 
-The project then defines the corresponding measure exponent:
+The project then defines the corresponding fixed-threshold exceptional exponent:
 
 ```math
 \mu_{\delta}(\theta)
 ```
 
-and the limiting exceptional exponent:
+and the global exceptional exponent:
 
 ```math
 \mu(\theta)
 ```
 
-The implementation includes measurability, finite-measure facts, monotonicity in the exceptional threshold, fixed-power bounds, and the countable reduction needed to pass from the threshold-dependent exponent to the final exceptional exponent.
+The implementation includes measurability, finite-measure facts, threshold monotonicity, fixed-power bounds, and countable positive-threshold reduction.
 
 ---
 
@@ -135,115 +179,140 @@ The implementation includes measurability, finite-measure facts, monotonicity in
 
 The project contains native infrastructure for the nontrivial zeros of the Riemann zeta function and the multiplicity-weighted zero counts required by the paper.
 
-This includes the formal counterparts of quantities such as:
+This includes:
 
 ```math
 N(\sigma,T)
 ```
 
-and the four-zero additive-energy count:
+and the four-zero additive-energy quantity:
 
 ```math
 N^{\ast}(\sigma,T)
 ```
 
-The four-zero object is treated with zero occurrences and multiplicity rather than silently replacing the paper's quantity by a set cardinality.
+The four-zero object uses ordered zero occurrences with analytic multiplicity.
 
-The associated exponent interfaces `A` and `A*` provide the bridge from zero-density estimates to the moment calculations used later in the proof.
+It is not replaced by the additive energy of a set of distinct ordinates.
 
----
-
-## 3. Second and fourth moments
-
-The Section 2 second- and fourth-moment branches have been formalized at the intended multiplicity-sensitive level.
-
-The fourth-moment route feeds the `A*` contribution into the refined exceptional exponent, rather than reducing the argument to the ordinary zero-density exponent `A`.
-
-This is the branch responsible for the refinement distinguishing Theorem 1.3 from the ordinary second-moment envelope.
+The associated exponent interfaces `A` and `A*` feed the ordinary and refined moment arguments.
 
 ---
 
-## 4. Sharp truncated explicit formula
+## 3. Local arithmetic entry
 
-A native sharp explicit-formula branch is now present.
+The local entry into the Gafni-Tao argument now includes:
 
-The main endpoint is:
+- the Mangoldt interval identity;
+- decomposition of prime and prime-power contributions;
+- local Brun-Titchmarsh control;
+- replacement of the variable interval length by the local `x/tau` scale;
+- explicit error ledgers;
+- the finite multiplicative cover of `[X,2X]`.
+
+The local cover and replacement machinery now connects directly to the later equation (2.7) exceptional event.
+
+---
+
+## 4. Native sharp truncated explicit formula
+
+The sharp explicit-formula branch has a native endpoint:
 
 ```lean
 GafniTao.sharpTruncatedExplicitFormulaBound_native
 ```
 
-The supporting development includes a substantial sharp-Perron chain:
+The supporting sharp-Perron development includes:
 
 - finite Mangoldt Perron identities;
 - logarithmic derivative expansions;
-- Perron kernels;
+- scalar Perron kernels;
 - contour decomposition;
-- horizontal and vertical edge estimates;
-- residue contributions;
-- cutoff-error estimates;
-- treatment of integral and half-integral endpoint geometry;
+- residue assembly;
+- zero shells with analytic multiplicity;
+- right, left, upper, and lower contour estimates;
 - selected good heights;
-- conversion to the sharp truncation estimate.
+- low-height handling;
+- arbitrary real endpoints;
+- transition terms near integral cutoffs;
+- the full physical range required downstream.
 
-The target range includes arbitrary real endpoints and the full regime:
+The target range includes:
 
 ```math
 2 \le T \le x
 ```
 
-This means the sharp explicit formula should no longer be regarded as one of the principal unresolved source inputs.
+The sharp explicit formula is therefore no longer part of the main unresolved analytic frontier.
+
+One remaining cleanup item is to stop exposing an explicit-formula hypothesis in final public Gafni-Tao wrappers when the native theorem can be supplied internally.
 
 ---
 
-## 5. Equation (2.7) reduction
+## 5. Second and fourth moments
 
-The formalization now contains the actual exceptional-set reduction corresponding to the central large-zero-sum step in Section 2.
+The second- and fourth-moment branches are implemented at the intended multiplicity-sensitive level.
 
-The theorem chain includes results of the form:
+The second moment uses the actual zero count.
+
+The fourth moment uses the actual tolerance-one four-zero additive-energy count and therefore genuinely retains the `A*` improvement.
+
+The audit surface includes the physical moment bounds and the exact epsilon-exponent versions consumed by the strip argument.
+
+---
+
+## 6. Equation (2.7)
+
+The half-open strip decomposition is implemented.
+
+The relevant development includes:
+
+- exact strip indexing;
+- treatment of upper strip boundaries;
+- exclusion of zeros on the line `Re rho = 1`;
+- full-zero-sum reconstruction from half-open strips;
+- large-set covering by strip large sets;
+- the small-`A` eventually-empty branch;
+- second-moment Markov bounds;
+- fourth-moment Markov bounds;
+- right-edge bounds;
+- assembly of the complete equation (2.7) exceptional measure.
+
+Representative audit entries include:
 
 ```lean
-eventually_localExceptionalSet_subset_equation27
-eventually_localExceptionalMeasure_le_equation27
-localExceptionalMeasure_fixedPowerBound_of_equation27
+GafniTao.zerosInRect_eq_halfOpen_union_upperBoundary
+GafniTao.sum_halfOpenStripIncrementSum_eq_full
+GafniTao.equation27StripMeasure_second_epsilonBound
+GafniTao.equation27StripMeasure_fourth_epsilonBound
+GafniTao.eventually_equation27StripLargeSet_eq_empty_of_rightEdge
+GafniTao.equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs
 ```
 
-This connects failure of the prime number theorem in a short interval to an appropriately large truncated zero sum.
-
-This is an important transition in the formalization because the measure-theoretic exceptional set is no longer disconnected from the zero-density machinery.
+Equation (2.7) should therefore no longer be described as merely planned.
 
 ---
 
-## 6. Local-to-global assembly
+## 7. Limit and local-to-global assembly
 
-The project now contains the finite multiplicative covering argument required to pass from local exceptional-set estimates to the full interval.
+The project now contains the limiting machinery needed to move from finite strips and epsilon-dependent estimates to fixed-power exceptional-measure bounds.
 
-Relevant theorems include:
+Representative theorems include:
 
 ```lean
-shortIntervalExceptionalSet_subset_local_union
-exceptionalMeasure_le_sum_local
-exceptionalMeasure_fixedPowerBound_of_local
-exceptionalMeasure_fixedPowerBound_of_source_inputs
+GafniTao.exists_refined_limit_witness
+GafniTao.equation27FullZeroMeasure_fixedPowerBound_of_refined_lt
+GafniTao.localExceptionalMeasure_fixedPowerBound_of_source_inputs
+GafniTao.exceptionalMeasure_fixedPowerBound_of_source_inputs
 ```
 
-The local source estimates therefore feed an actual fixed-power bound for the measure of the original short-interval exceptional set.
+The local result is then promoted through the finite multiplicative cover to the original exceptional set on `[X,2X]`.
+
+This means the downstream Section 2 transfer mechanism now reaches the actual exceptional exponent.
 
 ---
 
-## 7. Finite strips and limiting argument
-
-The finite-strip decomposition and limiting machinery needed to remove the auxiliary discretization parameters are implemented.
-
-This includes the selection of sufficiently fine strip parameters relative to the competing exponent margins and the conversion from epsilon-dependent bounds to fixed-power measure estimates.
-
-The resulting machinery feeds directly into the exceptional exponent.
-
-This part of the proof should now be regarded as implemented rather than merely planned.
-
----
-
-# Conditional Gafni-Tao theorem interfaces
+# Conditional Gafni-Tao endpoints
 
 ## Refined theorem
 
@@ -253,7 +322,7 @@ The current assembled refined endpoint is:
 GafniTao.gafniTaoTheorem13_max_conditional
 ```
 
-It yields a bound of the schematic form:
+It proves a bound of the form:
 
 ```math
 \mu(\theta)
@@ -265,13 +334,18 @@ It yields a bound of the schematic form:
 \right\}
 ```
 
-where `R(theta)` denotes the refined expression obtained from the zero-density and four-zero additive-energy exponents after the epsilon and strip limits.
+where the refined term retains both `A` and `A*`.
 
-This is a genuine assembled theorem, but it remains conditional on named analytic source inputs.
+The theorem currently accepts:
 
-It must therefore **not** yet be advertised as an unconditional formalization of Gafni-Tao Theorem 1.3.
+- a Guth-Maynard smooth cutoff object;
+- a sharp explicit-formula hypothesis;
+- a near-one logarithmic density bound;
+- a Vinogradov-Korobov count-vanishing input.
 
-There is also a theorem-statement issue still to close: the exact relation between this `max` formulation and the principal formulation stated in the source paper must be made explicit before the corresponding acceptance item is closed.
+The downstream exceptional-set deduction is therefore assembled, but the theorem is still conditional.
+
+The exact source formulation of Theorem 1.3 remains to be exported without unnecessary already-proved premises and with the source epsilon-infimum statement matched exactly.
 
 ---
 
@@ -283,7 +357,7 @@ The current ordinary endpoint is:
 GafniTao.gafniTaoTheorem12_max_conditional
 ```
 
-This follows from the refined theorem by replacing the fourth-moment improvement by the ordinary density envelope.
+It follows from the refined theorem by discarding the fourth-moment improvement.
 
 Schematically:
 
@@ -297,19 +371,56 @@ Schematically:
 \right\}
 ```
 
-Again, this theorem is real Lean output, but it remains conditional and should not yet be labelled as the final unconditional source theorem.
+The ordinary epsilon-infimum expression itself is represented in Lean by:
+
+```lean
+GafniTao.ordinaryExceptionalUpperExponent
+```
+
+The exact unconditional source theorem and Theorem 1.1 remain open.
 
 ---
 
-# Remaining analytic frontier
+# Frozen Guth-Maynard consumer
 
-The largest unresolved mathematical work is now concentrated in the near-one zero theory required by Lemma 2.1 and related arguments.
+The frozen Guth-Maynard density theorem is now connected to the Gafni-Tao exponent language.
 
-## Ford near-one zero density
+The audit surface includes:
 
-The project exposes a source-facing proposition representing the required Ford-type near-one zero-density estimate.
+```lean
+GafniTao.guthMaynard_zeroDensityEnvelope
+GafniTao.zeroDensityExponent_le_guthMaynard
+GafniTao.frozen_uniform_thirty_thirteenths_zeroDensityEnvelope
+GafniTao.zeroDensityExponent_le_thirty_thirteenths
+GafniTao.seventeen_thirtieths_eq_uniform_all_threshold
+GafniTao.two_fifteenths_eq_uniform_almost_all_threshold
+```
 
-The normalization layer converts the source estimate into the downstream form required by the Gafni-Tao proof, including a bound of the shape:
+Thus the ordinary `A0 = 30/13` bridge and the corresponding threshold arithmetic are no longer merely future tasks.
+
+The later Section 3 numerical conclusions still require their additional published inputs.
+
+---
+
+# Active analytic frontier
+
+## Ford source closure
+
+`FordSource.lean` currently records three source-facing propositions:
+
+```lean
+GafniTao.FordZetaGrowthBound
+GafniTao.FordNearOneDensityEstimate
+GafniTao.FordAsymptoticZeroFree
+```
+
+It already proves the normalization bridge:
+
+```lean
+GafniTao.nearOneLogDensityBound_of_fordNearOneDensityEstimate
+```
+
+which converts the coefficient-bearing estimate into the exact downstream logarithmic-density input:
 
 ```math
 N(1-\eta,T)
@@ -318,143 +429,117 @@ T^{58.05\,\eta^{3/2}}
 (\log T)^{16}
 ```
 
-The normalization and consumer bridge exist.
+without spending a `T^epsilon` loss.
 
-What remains is to derive the required source theorem itself from sufficiently primitive analytic results inside the trusted Lean dependency chain.
+It also proves:
 
-The active Ford development already includes substantial supporting infrastructure, including:
+```lean
+GafniTao.exists_nearOne_inputs_of_ford_outputs
+```
 
-- trigonometric identities and positivity;
+which packages genuine Ford zero-free and density outputs into the pair consumed by the Gafni-Tao right-edge argument.
+
+The missing step is therefore no longer the downstream normalization.
+
+The missing step is to prove the Ford source propositions themselves.
+
+---
+
+## Native Ford development now present
+
+The imported Ford development has grown into a substantial analytic branch.
+
+The isolated root currently imports modules covering, among other things:
+
+- Ford trigonometric positivity;
 - Fourier kernels;
-- beta and hyperbolic-function integral identities;
-- Euler-product and logarithmic zeta expansions;
-- prime-power series;
-- integral and summability arguments;
-- Ford Lemma 5.1 infrastructure;
+- Euler-product and prime-power expansions;
+- Ford Lemma 5.1;
+- basic explicit zeta bounds;
 - logarithmic-derivative estimates;
-- right-edge zero weights and cumulative zero counts;
-- zero-detection machinery.
+- cotangent detector kernels;
+- cotangent corrections;
+- zero-detector residues;
+- finite detector rectangles;
+- detector edge identities;
+- left-line estimates;
+- Laplace inversion;
+- K-function finite rectangles;
+- K-function zero series;
+- infinite-rectangle limits;
+- left-line bounds;
+- native K-formula assembly.
 
-The intended endpoint is an unconditional Lean witness for the near-one density input consumed by the Gafni-Tao theorem spine.
+The audit surface includes native results such as:
+
+```lean
+GafniTao.ford_lemma_5_1
+GafniTao.ford_zeta_basic_upper
+GafniTao.ford_zeta_basic_logDerivative
+GafniTao.fordK_infinite_rectangle_native
+GafniTao.fordK_formula_native
+GafniTao.fordK_formula_with_log_error_native
+GafniTao.fordZetaDetector_rectangleIntegral_eq_residue_sum
+GafniTao.fordZetaDetector_rightEdge_eq_explicit_add_edges
+```
+
+This is now the active source-theorem construction program.
+
+The existence of supporting lemmas is not itself a proof of `FordNearOneDensityEstimate` or `FordAsymptoticZeroFree`.
+
+Those source statements remain the acceptance boundary.
 
 ---
 
-## Vinogradov-Korobov zero-free region
+## Vinogradov-Korobov consumer bridge
 
-The project contains the consumer-facing Vinogradov-Korobov interface and proves the bridge from a suitable rectangle zero-free theorem to the exact count-level vanishing statement used downstream.
+The source-facing Vinogradov-Korobov layer is already structured correctly.
 
-The remaining task is therefore not to invent the downstream interface.
+The project defines a pointwise zero-free region, proves the required denominator monotonicity, upgrades the pointwise statement to a rectangle-uniform statement, and converts that into the multiplicity-weighted zero-count vanishing used downstream.
 
-It is to construct the required zero-free theorem from the accepted source mathematics.
-
-The desired dependency direction is:
-
-```math
-\mathrm{Vinogradov\text{-}Korobov\ source\ theorem}
-```
-
-```math
-\Downarrow
-```
-
-```math
-\mathrm{rectangle\ zero\text{-}free\ statement}
-```
-
-```math
-\Downarrow
-```
-
-```math
-\mathrm{VinogradovKorobovCountVanishing}
-```
-
-```math
-\Downarrow
-```
-
-```math
-\mathrm{Gafni\text{-}Tao\ near\text{-}one\ machinery}
-```
-
----
-
-# Present dependency frontier
-
-At a high level, the project is approaching the following structure:
+The dependency shape is:
 
 ```text
-FROZEN GUTH-MAYNARD FOUNDATION
-             |
-             v
-     zero-density inputs
-             |
-             +----------------------+
-             |                      |
-             v                      v
-       second moment          fourth moment / N*
-             |                      |
-             +----------+-----------+
-                        |
-                        v
-                equation (2.7)
-                        |
-                        v
-              finite-strip bounds
-                        |
-                        v
-              local exceptional set
-                        |
-                        v
-             multiplicative covering
-                        |
-                        v
-                 mu_delta(theta)
-                        |
-                        v
-                    mu(theta)
+pointwise Vinogradov-Korobov theorem
+                |
+                v
+rectangle-uniform zero-free region
+                |
+                v
+VinogradovKorobovCountVanishing
+                |
+                v
+Gafni-Tao right-edge argument
 ```
 
-with a second analytic branch:
-
-```text
-Ford near-one density --------+
-                              |
-Vinogradov-Korobov ------------+--> near-one source inputs
-                              |
-native sharp explicit formula -+
-                              |
-                              v
-                   assembled GT theorem
-```
-
-The sharp explicit-formula branch is now implemented.
-
-The main open source branches are Ford near-one density and Vinogradov-Korobov.
+What remains is the native proof of the actual source theorem feeding the first node.
 
 ---
 
 # Section 3 and numerical consequences
 
-The later numerical consequences of the paper are not yet complete.
+The later published numerical consequences are not yet complete.
 
-Outstanding work includes the relevant published numerical inputs and optimization steps associated with results such as:
-
-```math
-\theta > \frac{17}{30}
-```
-
-and the short-interval threshold:
+The first principal target is:
 
 ```math
-\theta > \frac{7}{12}
+\mu\!\left(\frac{17}{30}\right)
+\le
+\frac{7}{12}
 ```
 
-The project also still needs the appropriate Pintz and Heath-Brown source inputs, the required small-Delta arguments, and a certified optimization layer where numerical minimization or maximization enters the final result.
+The second is the quantified sufficiently-small-Delta result corresponding to the paper's second displayed sample bound.
 
-These numerical consumers should remain downstream work.
+These require additional published analytic inputs, including the relevant:
 
-The current priority is to close the analytic inputs to the general Gafni-Tao transfer theorem before building additional conditional numerical layers on top of it.
+- Pintz ordinary zero-density segment;
+- Heath-Brown four-zero additive-energy segment;
+- endpoint and normalization compatibility;
+- exact limiting arithmetic.
+
+The full Figure 4 envelope, if pursued, also requires a certified finite optimizer over the pinned source tables.
+
+Floating-point numerical plots may be used for checking but not as the proof of the final Lean theorem.
 
 ---
 
@@ -466,38 +551,35 @@ The isolated package contains:
 Extension/GafniTao/Audit.lean
 ```
 
-`Audit.lean` explicitly lists the public and source-sensitive theorem surface using `#print axioms`.
+`Audit.lean` explicitly lists source-sensitive and public theorem dependencies using `#print axioms`.
 
-The audit currently covers, among many other results:
+The audit surface now includes:
 
-```lean
-GafniTao.sharpPsiTruncationBound_native
-GafniTao.sharpTruncatedExplicitFormulaBound_native
+- exceptional-set definitions;
+- `EReal` exponent machinery;
+- multiplicity bridges;
+- Ford source infrastructure;
+- Vinogradov-Korobov consumer bridges;
+- right-edge decay machinery;
+- local cover and Brun-Titchmarsh localization;
+- second and fourth moments;
+- finite half-open strips;
+- equation (2.7);
+- refined limiting assembly;
+- local-to-global exceptional cover;
+- conditional Theorems 1.2 and 1.3;
+- the complete native sharp-Perron branch;
+- the frozen GM consumer.
 
-GafniTao.eventually_localExceptionalSet_subset_equation27
-GafniTao.localExceptionalMeasure_fixedPowerBound_of_source_inputs
-GafniTao.exceptionalMeasure_fixedPowerBound_of_source_inputs
+A declaration appearing in `Audit.lean` means it has been placed on the explicit dependency-audit surface.
 
-GafniTao.exceptionalExponentDelta_le_refined_max_of_source_inputs
-GafniTao.gafniTaoTheorem13_max_conditional
-GafniTao.gafniTaoTheorem12_max_conditional
-
-GafniTao.nearOneLogDensityBound_of_fordNearOneDensityEstimate
-GafniTao.vinogradovKorobovCountVanishing_of_rectangleZeroFree
-GafniTao.exists_nearOne_inputs_of_ford_outputs
-```
-
-and the growing Ford source-development theorem surface.
-
-The existence of a theorem in `Audit.lean` means it has been placed on the explicit dependency-audit surface. It does **not**, by itself, certify that the complete isolated release audit has been freshly executed successfully.
-
-Before any final release claim, run the isolated package and inspect the actual axiom output.
+It does **not** by itself prove that the complete isolated release audit has been freshly executed and inspected.
 
 ---
 
 # Verification
 
-Run commands from:
+Run from:
 
 ```text
 Riemann Zeta/PostGM/GafniTao/Extension
@@ -505,26 +587,24 @@ Riemann Zeta/PostGM/GafniTao/Extension
 
 The package is intentionally separate from the frozen Guth-Maynard source tree.
 
-A release-quality verification should include at least:
+A release-quality verification should include:
 
 ```bash
 lake build
 lake env lean GafniTao/Audit.lean
 ```
 
-and a source scan for unfinished or unsafe declarations.
-
-For example:
+and a scan for unfinished or unsafe declarations:
 
 ```bash
 rg -n '\bsorry\b|\badmit\b|\bnative_decide\b|^\s*(axiom|opaque|unsafe)\b' --glob '*.lean' .
 ```
 
-Interpret the results carefully.
+The actual `#print axioms` output must be inspected.
 
-A source-level `axiom` or opaque placeholder in the project is not acceptable merely because downstream theorems compile.
+Compilation alone is not sufficient evidence that the intended dependency boundary has been respected.
 
-Likewise, the output of `#print axioms` must be inspected rather than assuming that compilation implies the intended dependency boundary.
+Files that merely exist in the working tree do not count as integrated proof infrastructure unless they are brought into the intended root dependency graph and, where source-sensitive, onto the audit surface.
 
 ---
 
@@ -544,25 +624,19 @@ This project is intentionally isolated from the completed Guth-Maynard foundatio
 gm-foundation-freeze-v1.0.1
 ```
 
-- Foundation Lean version:
+- Lean version:
 
 ```text
 v4.30.0
 ```
 
-- Planning commit at creation of this directory:
-
-```text
-3e1eff79810846335386c2f4bc0ec1957272e301
-```
+The isolated extension also pins its external analytic dependencies in `lakefile.toml`.
 
 All Gafni-Tao Lean development belongs below:
 
 ```text
 PostGM/GafniTao/Extension/
 ```
-
-in its separate Lake package pinned to the frozen foundation.
 
 Do not modify the frozen `RiemannZeta/` foundation merely to make the Gafni-Tao extension easier to prove.
 
@@ -589,30 +663,32 @@ not the reverse.
 
 # Acceptance standard
 
-A theorem is not considered complete merely because a downstream implication has been formalized.
+A source theorem is not DONE merely because a downstream implication has been formalized.
 
-For a source result to be marked DONE, the project should establish all of the following where applicable:
+For a source result to be accepted, establish all applicable items below:
 
-1. The statement matches the source theorem with the required parameter range.
-2. Multiplicities are represented correctly.
-3. Endpoint conventions match the source argument.
+1. The statement matches the pinned source theorem and parameter range.
+2. Analytic multiplicities are represented correctly.
+3. Endpoint conventions match the source.
 4. Constants and logarithmic factors are accounted for.
-5. The proof does not rely on a project-level `axiom`, `sorry`, `admit`, unsafe shortcut, or disguised restatement of the desired result.
-6. The theorem appears on the audit surface.
-7. The isolated package builds.
-8. The actual `#print axioms` output is inspected.
-9. The crosswalk and architecture documents are synchronized with the implementation.
-10. The public README describes the theorem no more strongly than the Lean development warrants.
+5. No prohibited `T^epsilon` loss is inserted into the near-one density estimate.
+6. No project-level `axiom`, `sorry`, `admit`, unsafe shortcut, or disguised restatement supplies the intended result.
+7. The theorem is integrated into the intended root import graph.
+8. The theorem appears on the audit surface where appropriate.
+9. The isolated package builds.
+10. The actual axiom output is inspected.
+11. The Crosswalk, Architecture, Research Agenda, and README agree with the Lean source.
+12. Public theorem names do not claim more than their hypotheses justify.
 
 ---
 
 # Claim discipline
 
-The strongest truthful summary of the repository at present is:
+The strongest safe summary of the repository at present is:
 
-> A substantial part of the Gafni-Tao exceptional-interval argument has been formalized in Lean. The exact exceptional-set framework, multiplicity-sensitive zero counts, second- and fourth-moment machinery, equation (2.7) reduction, finite-strip and limiting assembly, local-to-global covering argument, and a native sharp truncated explicit formula are implemented. Conditional assembled forms of Theorems 1.2 and 1.3 exist. The full Gafni-Tao theorem is not yet claimed because the required published near-one zero-density and Vinogradov-Korobov source inputs, exact final theorem closure, later numerical consumers, and final isolated audit remain unfinished.
+> A substantial part of the Gafni-Tao exceptional-interval argument has been formalized in Lean. The exact exceptional-set framework, multiplicity-sensitive zero counts, local arithmetic entry, native sharp truncated explicit formula, second- and fourth-moment machinery, equation (2.7), limiting assembly, local-to-global covering argument, frozen Guth-Maynard consumer, and conditional max-forms of Theorems 1.2 and 1.3 are implemented. A large native Ford source-development branch is also present. The complete Gafni-Tao theorem is not yet claimed because the Ford near-one zero-density and Vinogradov-Korobov source outputs have not yet been discharged, the exact unconditional theorem interfaces remain open, and the later Section 3 published inputs and sample bounds remain unfinished.
 
-Do not shorten that to:
+Do not shorten this to:
 
 ```text
 Gafni-Tao is proved in Lean.
@@ -620,24 +696,24 @@ Gafni-Tao is proved in Lean.
 
 That statement is not currently justified.
 
-Likewise, do not describe the conditional theorems
+Likewise, do not describe:
 
 ```lean
-gafniTaoTheorem13_max_conditional
-gafniTaoTheorem12_max_conditional
+GafniTao.gafniTaoTheorem13_max_conditional
+GafniTao.gafniTaoTheorem12_max_conditional
 ```
 
-as the final source theorems without stating their remaining hypotheses.
+as unconditional final source theorems.
 
 ---
 
 # Documents
 
-The directory contains the project-control documents used to keep the formalization synchronized with the paper.
+The directory contains the project-control documents used to keep the formalization synchronized with the source.
 
 - [Gafni-Tao Sources.md](Gafni-Tao%20Sources.md)
 
-  Authoritative source references, reusable Lean infrastructure, and identified source gaps.
+  Source references, hashes, external inputs, and reusable Lean infrastructure.
 
 - [Gafni-Tao Architecture.md](Gafni-Tao%20Architecture.md)
 
@@ -645,11 +721,11 @@ The directory contains the project-control documents used to keep the formalizat
 
 - [Gafni-Tao Research Agenda.md](Gafni-Tao%20Research%20Agenda.md)
 
-  Mathematical execution route and active implementation order.
+  Current execution plan and acceptance order.
 
 - [Gafni-Tao Crosswalk.md](Gafni-Tao%20Crosswalk.md)
 
-  Source-to-Lean theorem mapping and implementation status.
+  Source-to-Lean theorem mapping.
 
 - [Gafni-Tao Shitlist.md](Gafni-Tao%20Shitlist.md)
 
@@ -661,63 +737,57 @@ The directory contains the project-control documents used to keep the formalizat
 
 These documents are project-control artifacts, not proof objects.
 
-When documentation and Lean disagree about implementation status, inspect the Lean source and audit surface and then repair the documentation.
+When documentation and Lean disagree about implementation status, inspect the Lean source and audit surface, then update the documentation.
 
 ---
 
 # Near-term execution order
 
-The recommended order from the current state is:
+## 1. Close the Ford source statements
 
-## 1. Close the Ford source theorem
+Convert the existing Ford analytic development into native proofs of the source-facing propositions required by `FordSource.lean`.
 
-Continue the active Ford development until the project can construct the near-one logarithmic density input without assuming the source estimate as a hypothesis.
-
-Target direction:
+The desired endpoint is structurally:
 
 ```text
-Ford analytic lemmas
-        |
-        v
-FordNearOneDensityEstimate
-        |
-        v
-NearOneLogDensityBound
+native Ford analytic machinery
+              |
+              +--------------------+
+              |                    |
+              v                    v
+FordNearOneDensityEstimate   FordAsymptoticZeroFree
+              |                    |
+              +---------+----------+
+                        |
+                        v
+             exact near-one inputs
 ```
 
-## 2. Close Vinogradov-Korobov
+## 2. Remove resolved premises from top-level consumers
 
-Construct the required zero-free region internally and feed it through the already implemented bridge:
+Use the native sharp explicit formula internally.
 
-```text
-Vinogradov-Korobov theorem
-        |
-        v
-rectangle zero-free
-        |
-        v
-VinogradovKorobovCountVanishing
-```
+Construct or supply the required cutoff internally where the frozen foundation already provides the necessary object.
 
-## 3. Remove resolved hypotheses from the public GT endpoint
+The public Gafni-Tao wrapper should expose only genuinely unresolved source assumptions.
 
-The native sharp explicit formula already exists.
+## 3. Export the exact source Theorem 1.3
 
-The final theorem interface should therefore be refactored so that an analytic hypothesis that has already been proved internally does not remain exposed unnecessarily at the top level.
+Prove the exact refined epsilon-infimum statement required by the paper.
 
-## 4. Close the exact theorem-statement correspondence
+Keep the alternate `max(1-theta, ...)` theorem as a separate corollary.
 
-Prove the exact relation between the current `max` formulations and the principal Gafni-Tao theorem statements.
+## 4. Export exact Theorem 1.2 and Theorem 1.1
 
-Only then should Theorems 1.2 and 1.3 be marked DONE in the project crosswalk.
+Derive the ordinary second-moment theorem and then the all-interval / almost-all interval consequences.
 
-## 5. Complete the numerical consumers
+## 5. Complete Section 3
 
-After the general theorem is unconditional, formalize the remaining Pintz, Heath-Brown, small-Delta, and optimization inputs required for the paper's explicit numerical corollaries.
+Formalize the Pintz and Heath-Brown source segments and prove the paper's displayed sample bounds.
 
-## 6. Final audit
+## 6. Complete final audit and documentation synchronization
 
-Run the isolated build, execute `Audit.lean`, inspect every nonstandard axiom dependency, scan for unfinished declarations, synchronize the project documents, and only then make a completion claim.
+Run the isolated package, inspect every source-sensitive axiom dependency, update the Architecture and Crosswalk to match the actual proof state, and make the final completion claim only after all release gates pass.
 
 ---
 
@@ -725,62 +795,61 @@ Run the isolated build, execute `Audit.lean`, inspect every nonstandard axiom de
 
 `push_to_github.bat` is an owner-operated publication step.
 
-It is deliberately separate from proof verification.
+It is separate from proof verification.
 
-A GitHub push means that a chosen local snapshot was published. It does not, by itself, mean that the Gafni-Tao package was freshly built or audited.
-
-The project owner controls pushes.
+A GitHub push means a selected local snapshot was published. It does not by itself establish that the isolated package was freshly built or audited.
 
 Agents must not push unless separately instructed.
 
-After a substantive milestone, update the suggested commit message in the research agenda and pass an appropriate message to the push script, for example:
+After a substantive milestone, update the suggested commit message in the Research Agenda and pass an appropriate message to the push script, for example:
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: close Ford near-one density input"
+push_to_github.bat "PostGM Gafni-Tao: close Ford near-one source inputs"
 ```
 
 ---
 
 # Completion condition
 
-This project should be considered a completed formalization of the intended Gafni-Tao result only when the dependency graph has the form:
+The project should be called a completed formalization of the intended Gafni-Tao theorem only when the dependency graph has the form:
 
 ```text
 accepted Lean / Mathlib foundation
              |
              v
-frozen Guth-Maynard results
+frozen Guth-Maynard foundation
              |
-             v
-native explicit formula
-             |
-             +-----------------------------+
-             |                             |
-             v                             v
-Ford near-one density          Vinogradov-Korobov
-             |                             |
-             +--------------+--------------+
-                            |
-                            v
-                 Section 2 moment machinery
-                            |
-                            v
-                    equation (2.7)
-                            |
-                            v
-                  exceptional measure
-                            |
-                            v
-                  exceptional exponent
-                            |
-                            v
-             exact Gafni-Tao theorem
+             +------------------------------+
+             |                              |
+             v                              v
+native sharp explicit formula      native Ford/VK source inputs
+             |                              |
+             +---------------+--------------+
+                             |
+                             v
+                  Section 2 moment machinery
+                             |
+                             v
+                     equation (2.7)
+                             |
+                             v
+                  exceptional-set measure
+                             |
+                             v
+                   exceptional exponent
+                             |
+                             v
+               exact Gafni-Tao Theorem 1.3
+                             |
+                             v
+               Theorems 1.2 and 1.1
+                             |
+                             v
+              published numerical consumers
 ```
 
-with no unresolved project-level analytic assumptions hiding inside that path.
-
-After that, the numerical consequences can be audited as consumers of the completed general theorem.
+with no unresolved project-level analytic assumptions hidden inside the claimed dependency path.
 
 Until then:
 
-**formalization in progress, with the principal Section 2 transfer mechanism already substantially implemented.**
+**formalization in progress, with most of the Section 2 transfer mechanism implemented and the active mathematical front concentrated in native Ford/Vinogradov-Korobov source closure.**

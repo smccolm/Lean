@@ -48,7 +48,7 @@ theorem VIntegral'_eq_scaled_param
       apply intervalIntegral.integral_congr
       intro y _hy
       dsimp only [f]
-      ring
+      ring_nf
     _ = (scale : ℂ) *
         ∫ u in (-R / scale)..(R / scale), f (scale * u + t) := by
       rw [hchange, Complex.real_smul]
@@ -67,7 +67,7 @@ theorem VIntegral'_eq_scaled_param
       intro u _hu
       dsimp only [f]
       push_cast
-      ring
+      ring_nf
 
 theorem intervalIntegrable_fordDetector_verticalParam
     {eta a b : ℝ} (z₀ : ℂ) (side : ℝ)
