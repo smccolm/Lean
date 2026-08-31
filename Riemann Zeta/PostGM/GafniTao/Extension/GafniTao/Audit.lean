@@ -122,6 +122,9 @@ axiom dependencies.
 #print axioms GafniTao.residue_weightedLogDeriv_eq
 #print axioms GafniTao.residue_fordCotKernel_mul_eq
 #print axioms GafniTao.residue_fordCotKernel_mul_logDeriv_eq
+#print axioms GafniTao.ford_re_cot_formula
+#print axioms GafniTao.ford_re_cot_nonneg
+#print axioms GafniTao.fordCotKernel_re_nonneg
 #print axioms GafniTao.re_bounds_of_mem_rightEdgeZeros
 #print axioms GafniTao.rightEdgeCumulativeCount_le_zeroCount
 #print axioms GafniTao.rightEdgeCumulativeCount_eq_zero_of_zeroCount_eq_zero
