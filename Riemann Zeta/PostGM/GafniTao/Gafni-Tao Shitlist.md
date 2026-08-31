@@ -1,6 +1,6 @@
 # Gafni-Tao Shitlist
 
-Status: all proof items open. This list is the exhaustive completion contract
+Status: implementation in progress. This list is the exhaustive completion contract
 for the isolated Gafni-Tao program.
 
 An item may be crossed out only when its exact public theorem is kernel-checked,
@@ -49,7 +49,7 @@ and the isolated warning-failing runner covers its module.
   finite cover of `[X,2X]`, `tau=X^(1-theta)`, replacement of `x^theta` by
   `x/tau`, and the uniform `delta/J` loss.
 
-- [ ] **GT-08 — Sharp truncated explicit formula.** Prove the paper's exact
+- [x] **GT-08 — Sharp truncated explicit formula.** Prove the paper's exact
   formula at `T=J log(X)^2 tau`, including nontrivial-zero multiplicities,
   sign convention, pole/trivial-zero/boundary terms, and
   `O(x log^2(x)/T)`. Derive equations (2.3)-(2.4) with the real exceptional

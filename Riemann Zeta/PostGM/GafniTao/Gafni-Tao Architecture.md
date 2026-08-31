@@ -12,7 +12,7 @@ flowchart TD
     G05["GT-05 Zero additive energy N*<br/>quadruple multiplicities and A*<br/>OPEN"]
     G06["GT-06 Chebyshev interval identity<br/>(x,x+y], endpoints and prime powers<br/>OPEN"]
     G07["GT-07 Brun-Titchmarsh localization<br/>tau=X^(1-theta), local covering and losses<br/>OPEN"]
-    G08["GT-08 Sharp truncated explicit formula<br/>T=J log(X)^2 tau and full error ledger<br/>OPEN"]
+    G08["GT-08 Sharp truncated explicit formula<br/>DONE<br/>arbitrary real endpoints, all 2<=T<=x,<br/>selected-height contour and exact zero shell"]
     G09["GT-09 Vinogradov-Korobov zero-free region<br/>OPEN"]
     G10["GT-10 Near-one logarithmic zero density<br/>no T^epsilon substitute<br/>OPEN"]
     G11["GT-11 Lemma 2.1 right-edge decay<br/>OPEN"]
@@ -99,5 +99,5 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
     class SRC,GM,ML,DB available;
-    class G13,G14,G15,G16 done;
-    class G00,G01,G02,G03,G04,G05,G06,G07,G08,G09,G10,G11,G12,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26 open;
+    class G08,G13,G14,G15,G16 done;
+    class G00,G01,G02,G03,G04,G05,G06,G07,G09,G10,G11,G12,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26 open;

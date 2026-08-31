@@ -3,7 +3,8 @@
 - Gafni--Tao: arXiv `2505.24017v1` (PDF and source archive saved locally).
 - Guth--Maynard: arXiv `2405.20552v2` (PDF saved locally).
 - Tao--Trudgian--Yang: arXiv `2501.16779v1` (PDF saved locally).
-- Ford: author PDF `zetabd.pdf` (saved locally).
+- Ford zeta-growth bound: author PDF `zetabd.pdf` (saved locally).
+- Ford zero-free region: arXiv `1910.08205v4` (PDF and TeX source saved locally).
 - ANTEDB/expdb: commit `2b1aea3de263996c4da3042c115126bff601c618`
   (repository archive saved locally).
 - Frozen Lean foundation: tag `gm-foundation-freeze-v1.0.1`, peeled commit

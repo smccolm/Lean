@@ -58,7 +58,7 @@ theorem sharpPerronKernel_eq_ratioKernel
   rw [hmul, hncast, Complex.mul_cpow_ofReal_nonneg hratio hnnonneg]
   field_simp [hnpow]
 
-private theorem sharpPerronMonomial_near_zero
+theorem sharpPerronMonomial_near_zero
     {q : ℝ} (hq : 0 < q) :
     ((fun s : ℂ => (q : ℂ) ^ s / s) - (fun s : ℂ => 1 / (s - 0)))
       =O[nhdsWithin (0 : ℂ) {0}ᶜ] (1 : ℂ → ℂ) := by

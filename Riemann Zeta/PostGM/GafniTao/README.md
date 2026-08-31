@@ -1,7 +1,8 @@
 # Gafni-Tao exceptional intervals
 
-Status: architecture and research contract only. No Gafni-Tao theorem is yet
-claimed in Lean.
+Status: isolated formalization in progress. The sharp explicit-formula input
+and the second/fourth zero-strip moment branches are kernel-checked; the
+near-one published inputs and final Gafni--Tao theorems remain open.
 
 This directory is the isolated post-Guth-Maynard program for formalizing Ayla
 Gafni and Terence Tao's paper *On the number of exceptional intervals to the
@@ -55,8 +56,10 @@ Guth-Maynard density bound. A clean implementation must still formalize:
 6. the finite-strip, Markov, and limiting assembly of Theorems 1.2 and 1.3;
 7. the native Guth-Maynard and Heath-Brown numerical consumers.
 
-Until the exact public theorems, audits, and isolated runner pass, the correct
-status is **planned**, not **formalized**.
+The theorem `sharpTruncatedExplicitFormulaBound_native` now supplies item 2
+with arbitrary real endpoints and the full `2 <= T <= x` range. Until the
+remaining exact public theorems, audits, and isolated runner pass, the complete
+Gafni--Tao formalization is not claimed.
 
 ## Commit-message practice
 

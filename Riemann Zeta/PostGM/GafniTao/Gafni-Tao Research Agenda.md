@@ -2,7 +2,7 @@
 
 Status: research and execution plan, not a proof claim.
 
-Suggested commit message: `PostGM Gafni-Tao: prove exact second and fourth zero-strip moment bounds`
+Suggested commit message: `PostGM Gafni-Tao: prove endpoint-uniform sharp explicit formula`
 
 Update that line after every substantive proof milestone. Do not hard-code it
 inside `push_to_github.bat`.
@@ -169,12 +169,16 @@ Vinogradov-Korobov theorem or the logarithmic near-one density estimate. Its
 contains a blueprint statement rather than the needed proved declaration.
 Begin GT-09 and GT-10 immediately after the basic source-entry definitions.
 
-### High risk: sharp explicit formula
+### Completed: sharp explicit formula
 
-Existing contour and Mellin machinery is substantial, but the exact sharp
-truncation used here has real endpoints and a uniform height depending on
-`X,theta,J`. A smoothed or sign-changed formula is only useful after Lean proves
-the complete transfer and error.
+The public theorems `sharpPsiTruncationBound_native` and
+`sharpTruncatedExplicitFormulaBound_native` now prove the exact real-endpoint
+contract for every `2 <= T <= x`. The chain includes the right-line Perron
+series, arbitrary-endpoint transition and harmonic terms, good-height contour
+shift, pole and zero residues, selected-to-requested zero shell with analytic
+multiplicity, the compact range `2 <= T < 8`, and exact endpoint subtraction.
+The isolated root imports every new module, and the explicit axiom audit reports
+only `propext`, `Classical.choice`, and `Quot.sound`.
 
 ### High risk: multiplicity in `N*`
 
@@ -217,7 +221,9 @@ permission.
 
 ## 6. Kernel-checked progress
 
-GT-13 through GT-16 are complete in the isolated package. The public endpoints
+GT-08 and GT-13 through GT-16 are complete in the isolated package. The GT-08
+public endpoints are `sharpPsiTruncationBound_native` and
+`sharpTruncatedExplicitFormulaBound_native`. The moment public endpoints
 are `zeroStripPhysicalSecondMoment_epsilonBound` and
 `zeroStripPhysicalFourthMoment_epsilonBound`. Their proof chains expand the
 actual finite multiplicity-weighted zero sums, use uniform complexified
@@ -229,7 +235,7 @@ an abstract energy parameter. The isolated root build and explicit axiom audit
 accept these declarations with only `propext`, `Classical.choice`, and
 `Quot.sound`.
 
-GT-17 remains open because equation (2.7) also consumes the still-open sharp
-explicit-formula and right-edge branches GT-08 through GT-12. Half-open strip
+GT-17 remains open because equation (2.7) still consumes the open right-edge
+branches GT-09 through GT-12. Half-open strip
 partition, threshold-union, and Markov components are the next independent
 assembly obligations.
