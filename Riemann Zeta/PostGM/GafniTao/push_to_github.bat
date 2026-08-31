@@ -17,27 +17,56 @@ if not defined COMMIT_MESSAGE (
   exit /b 1
 )
 
+echo.
+echo Staging changes...
 git -C "%REPO_ROOT%" add -A
 if errorlevel 1 goto :fail
 
 git -C "%REPO_ROOT%" diff --cached --quiet
 if errorlevel 1 (
+  echo.
+  echo Committing changes...
   git -C "%REPO_ROOT%" commit -m "%COMMIT_MESSAGE%"
   if errorlevel 1 goto :fail
 ) else (
   echo No new changes to commit.
 )
 
+echo.
+echo Updating local main from origin/main...
+git -C "%REPO_ROOT%" pull --rebase origin main
+if errorlevel 1 goto :rebasefail
+
+echo.
+echo Pushing to origin/main...
 git -C "%REPO_ROOT%" push origin main
 if errorlevel 1 goto :fail
 
 echo.
-echo Pushed to origin/main.
+echo ============================================================
+echo Git sync completed successfully.
+echo ============================================================
 pause
 exit /b 0
 
+:rebasefail
+echo.
+echo ============================================================
+echo REBASE FAILED.
+echo Your commit is safe, but Git found a conflict while syncing.
+echo Resolve the conflict, then run:
+echo.
+echo   git -C "%REPO_ROOT%" rebase --continue
+echo.
+echo After the rebase finishes, run this BAT again.
+echo ============================================================
+pause
+exit /b 1
+
 :fail
 echo.
-echo Push failed. Review the Git output above.
+echo ============================================================
+echo Git sync failed. Review the Git output above.
+echo ============================================================
 pause
 exit /b 1

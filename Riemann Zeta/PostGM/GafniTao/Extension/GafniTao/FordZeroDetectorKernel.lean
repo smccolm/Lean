@@ -171,11 +171,22 @@ theorem tendsto_mul_fordCotKernel_zero {eta : ℝ} (heta : 0 < eta) :
         (nhdsWithin 0 {0}ᶜ) (𝓝 1) := by
     refine hsinSlope.congr' ?_
     filter_upwards [self_mem_nhdsWithin] with w hw
-    simp [slope, hw]
+    rw [show slope Complex.sin 0 w = w⁻¹ * Complex.sin w by
+      simp [slope]]
+    rw [div_eq_mul_inv]
+    ring
   have hcomp : Tendsto (fun z : ℂ => c * z)
       (nhdsWithin 0 {0}ᶜ) (nhdsWithin 0 {0}ᶜ) := by
-    exact (tendsto_const_nhds.mul tendsto_id).nhdsWithin_of_mapsTo
-      (fun z hz => mul_ne_zero hc hz)
+    rw [tendsto_nhdsWithin_iff]
+    constructor
+    · have hcT : Tendsto (fun _ : ℂ => c) (nhdsWithin 0 {0}ᶜ) (𝓝 c) :=
+        tendsto_const_nhds
+      have hid : Tendsto (fun z : ℂ => z) (nhdsWithin 0 {0}ᶜ) (𝓝 0) :=
+        Filter.tendsto_id.mono_left nhdsWithin_le_nhds
+      simpa using hcT.mul hid
+    ·
+      filter_upwards [self_mem_nhdsWithin] with z hz
+      exact mul_ne_zero hc hz
   have hratio :
       Tendsto (fun z : ℂ => (c * z) / Complex.sin (c * z))
         (nhdsWithin 0 {0}ᶜ) (𝓝 1) := by
@@ -184,18 +195,24 @@ theorem tendsto_mul_fordCotKernel_zero {eta : ℝ} (heta : 0 < eta) :
     simpa [div_eq_mul_inv] using hinv
   have hcos : Tendsto (fun z : ℂ => Complex.cos (c * z))
       (nhdsWithin 0 {0}ᶜ) (𝓝 1) := by
-    simpa using (Complex.continuous_cos.tendsto 0).comp
-      ((tendsto_const_nhds.mul tendsto_id).mono_left nhdsWithin_le_nhds)
+    have hlin : Tendsto (fun z : ℂ => c * z)
+        (nhdsWithin 0 {0}ᶜ) (𝓝 0) := by
+      have hcT : Tendsto (fun _ : ℂ => c) (nhdsWithin 0 {0}ᶜ) (𝓝 c) :=
+        tendsto_const_nhds
+      have hid : Tendsto (fun z : ℂ => z) (nhdsWithin 0 {0}ᶜ) (𝓝 0) :=
+        Filter.tendsto_id.mono_left nhdsWithin_le_nhds
+      simpa using hcT.mul hid
+    simpa using (Complex.continuous_cos.tendsto 0).comp hlin
   have hmul := hcos.mul hratio
-  refine hmul.congr' ?_
-  filter_upwards [self_mem_nhdsWithin] with z hz
-  have hcz : c * z ≠ 0 := mul_ne_zero hc hz
-  simp only [fordCotKernel, Complex.cot, c]
-  field_simp [hc, hz, hcz]
-  ring
+  simpa only [mul_one] using hmul.congr' (by
+    filter_upwards [self_mem_nhdsWithin] with z hz
+    have hcz : c * z ≠ 0 := mul_ne_zero hc hz
+    simp only [fordCotKernel, Complex.cot, c]
+    field_simp [hc, hz, hcz])
 
 theorem residue_fordCotKernel_zero {eta : ℝ} (heta : 0 < eta) :
     residue (fordCotKernel eta) 0 = 1 := by
-  exact residue_eq_of_tendsto (tendsto_mul_fordCotKernel_zero heta)
+  exact residue_eq_of_tendsto (by
+    simpa only [sub_zero] using tendsto_mul_fordCotKernel_zero heta)
 
 end GafniTao

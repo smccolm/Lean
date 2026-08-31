@@ -116,6 +116,12 @@ axiom dependencies.
 #print axioms GafniTao.hasDerivAt_fordCotKernel
 #print axioms GafniTao.deriv_fordCotKernel_pos_vertical
 #print axioms GafniTao.deriv_fordCotKernel_neg_vertical
+#print axioms GafniTao.tendsto_mul_fordCotKernel_zero
+#print axioms GafniTao.residue_fordCotKernel_zero
+#print axioms GafniTao.residue_eq_of_sub_principal_isBigO_one
+#print axioms GafniTao.residue_weightedLogDeriv_eq
+#print axioms GafniTao.residue_fordCotKernel_mul_eq
+#print axioms GafniTao.residue_fordCotKernel_mul_logDeriv_eq
 #print axioms GafniTao.re_bounds_of_mem_rightEdgeZeros
 #print axioms GafniTao.rightEdgeCumulativeCount_le_zeroCount
 #print axioms GafniTao.rightEdgeCumulativeCount_eq_zero_of_zeroCount_eq_zero

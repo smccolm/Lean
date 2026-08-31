@@ -12,6 +12,7 @@ import GafniTao.FordEulerProduct
 import GafniTao.FordLemma51
 import GafniTao.FordZetaBasic
 import GafniTao.FordZeroDetectorKernel
+import GafniTao.FordZeroDetectorResidues
 import GafniTao.ExplicitFormulaSetup
 import GafniTao.SharpExplicitFormula
 import GafniTao.SharpPerron
