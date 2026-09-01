@@ -1,0 +1,51 @@
+% curly.tex version 1.01, last modified 12 July 1993 by A. Lewenberg.
+%
+% This file defines the Formal Script family of fonts based on the 
+% Formal Script Math Symbols 10 point fonts by Ralph A. Smith. 
+% It uses a \newfam, so use with caution. It is compatible with PLAIN
+% and AMSTEX 2.1: in PLAIN it functions in the same way as \cal; in
+% AMSTEX it functions the same way as \Cal. Note that, just like \cal
+% and \Cal, the command \curly only works in math mode.
+%
+% To use, put an `\input curly` somewhere in your file.
+% The command \curly changes to the curly script family. For
+% example, $a={\curly a}$.
+% Note: You must have the fonts rsfs10, rsfs7 and rsfs5.
+%                Adam H. Lewenberg adam@symcom.math.uiuc.edu
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Because the following code uses a \newfam,
+% make sure to load the file only once. 
+%
+\ifx\curlyloaded\relax\let\next\endinput
+  \else\let\curlyloaded\relax\let\next\relax
+\fi
+\next
+%
+% Save the catcode of @
+\xdef\recoveratcodezqrz{\catcode`\noexpand\@=\the\catcode`\@}
+\catcode`\@=11
+%
+\edef\innernewfam{\expandafter\noexpand\csname newfam\endcsname}
+%
+% Define the font family. Do different things if AMSTEX loaded. 
+\ifx\amstexloaded@\relax
+% AMSTEX loaded
+  \loadmathfont{rsfs}
+  \def\curly{\mathfont@\curly}
+  \def\curlyfam{\rsfsfam}
+\else
+% AMSTEX not loaded; assume PLAIN and act like \cal
+  \font\tenrsfs=rsfs10
+  \font\sevenrsfs=rsfs7
+  \font\fiversfs=rsfs5
+  \innernewfam\rsfsfam \def\curly{\fam\rsfsfam\tenrsfs}
+  \textfont\rsfsfam=\tenrsfs  \scriptfont\rsfsfam=\sevenrsfs 
+  \scriptscriptfont\rsfsfam=\fiversfs
+  \def\curly{\fam\rsfsfam}
+\fi
+\let\innernewfam\undefined
+\recoveratcodezqrz
+\endinput%
+\endinput%
