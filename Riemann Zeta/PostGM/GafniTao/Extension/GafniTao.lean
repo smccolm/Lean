@@ -43,6 +43,8 @@ import GafniTao.FordIntegerPolynomialSystem
 import GafniTao.FordCompleteCounts
 import GafniTao.FordPrimeSelection
 import GafniTao.FordNewtonCongruence
+import GafniTao.FordPowerResidueFiber
+import GafniTao.FordJacobianAvoidance
 import GafniTao.FordTrigonometric
 import GafniTao.FordFourierKernel
 import GafniTao.FordEulerProduct
