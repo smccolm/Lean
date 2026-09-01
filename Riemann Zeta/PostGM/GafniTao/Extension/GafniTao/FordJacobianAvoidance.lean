@@ -28,12 +28,10 @@ theorem int_natAbs_natCast_sub_lt
     Int.natAbs ((a : ℤ) - (b : ℤ)) < P := by
   by_cases hle : a ≤ b
   · have hlt : a < b := lt_of_le_of_ne hle hab
-    rw [Int.natAbs_of_nonpos (by exact_mod_cast hle)]
-    norm_cast
+    rw [Int.natAbs_natCast_sub_natCast_of_le hle]
     omega
   · have hlt : b < a := Nat.lt_of_not_ge hle
-    rw [Int.natAbs_of_nonneg (by exact_mod_cast hlt.le)]
-    norm_cast
+    rw [Int.natAbs_natCast_sub_natCast_of_ge hlt.le]
     omega
 
 theorem ford_vandermonde_factor_lt
@@ -41,19 +39,39 @@ theorem ford_vandermonde_factor_lt
     {i j : Fin n} (hij : i < j) :
     Int.natAbs ((fordBoxValue z j : ℤ) - (fordBoxValue z i : ℤ)) < P := by
   apply int_natAbs_natCast_sub_lt
-  · exact (fordBoxValue_mem_Icc z j).1
-  · exact (fordBoxValue_mem_Icc z i).1
-  · exact (fordBoxValue_mem_Icc z j).2
-  · exact (fordBoxValue_mem_Icc z i).2
+  · simp [fordBoxValue]
+  · simp [fordBoxValue]
+  · simp [fordBoxValue, (z j).isLt]
+  · simp [fordBoxValue, (z i).isLt]
   · intro h
-    apply hz (Fin.ext ?_)
-    simpa [fordBoxValue] using h
+    have hzi : z j = z i := Fin.ext (by simpa [fordBoxValue] using h)
+    exact (ne_of_gt hij) (hz hzi)
 
 theorem ford_sum_card_Ioi (n : ℕ) :
     (∑ i : Fin n, (Finset.Ioi i).card) = n * (n - 1) / 2 := by
-  rw [Fin.sum_univ_eq_sum_range]
-  simp_rw [Fin.card_Ioi]
-  rw [Finset.sum_range_reflect (fun i => i) n, Finset.sum_range_id]
+  induction n with
+  | zero => simp
+  | succ n ih =>
+      rw [Fin.sum_univ_succ]
+      have htail :
+          (∑ i : Fin n, (Finset.Ioi i.succ).card) =
+            ∑ i : Fin n, (Finset.Ioi i).card := by
+        apply Finset.sum_congr rfl
+        intro i hi
+        simp only [Fin.card_Ioi, Fin.val_succ]
+        clear ih
+        omega
+      rw [htail, ih]
+      have htri :
+          n + n * (n - 1) / 2 = (n + 1) * (n + 1 - 1) / 2 := by
+        calc
+          n + n * (n - 1) / 2 = (∑ i ∈ Finset.range n, i) + n := by
+            rw [Finset.sum_range_id]
+            omega
+          _ = ∑ i ∈ Finset.range (n + 1), i := by
+            rw [Finset.sum_range_succ]
+          _ = (n + 1) * (n + 1 - 1) / 2 := Finset.sum_range_id (n + 1)
+      simpa [Fin.card_Ioi] using htri
 
 theorem ford_vandermondeNatAbs_le
     {n P : ℕ} (z : FordBox n P) (hz : FordTuplePairwiseDistinct z) :
@@ -64,13 +82,17 @@ theorem ford_vandermondeNatAbs_le
         Int.natAbs ((fordBoxValue z j : ℤ) - (fordBoxValue z i : ℤ))) ≤
         ∏ i : Fin n, ∏ _j ∈ Finset.Ioi i, P := by
       apply Finset.prod_le_prod
+      · intro i hi
+        exact Nat.zero_le _
       intro i hi
       apply Finset.prod_le_prod
+      · intro j hj
+        exact Nat.zero_le _
       intro j hj
       exact (ford_vandermonde_factor_lt z hz (Finset.mem_Ioi.mp hj)).le
     _ = P ^ (n * (n - 1) / 2) := by
-      simp only [Finset.prod_const, nsmul_eq_mul]
-      rw [← Finset.prod_pow_eq_pow_sum, ford_sum_card_Ioi]
+      simp only [Finset.prod_const]
+      rw [Finset.prod_pow_eq_pow_sum, ford_sum_card_Ioi]
 
 def fordJacobianAvoidanceNat
     {k d T P : ℕ} (z w : FordBox (k - d) P) : ℕ :=
@@ -90,16 +112,20 @@ theorem fordJacobianAvoidanceNat_pos
     intro j hj
     rw [Int.natAbs_pos]
     intro h
-    apply hz (Fin.ext ?_)
-    exact_mod_cast sub_eq_zero.mp h
+    have hval : fordBoxValue z j = fordBoxValue z i := by
+      exact_mod_cast sub_eq_zero.mp h
+    have hzi : z j = z i := Fin.ext (by simpa [fordBoxValue] using hval)
+    exact (Finset.mem_Ioi.mp hj).ne (hz hzi).symm
   · apply Finset.prod_pos
     intro i hi
     apply Finset.prod_pos
     intro j hj
     rw [Int.natAbs_pos]
     intro h
-    apply hw (Fin.ext ?_)
-    exact_mod_cast sub_eq_zero.mp h
+    have hval : fordBoxValue w j = fordBoxValue w i := by
+      exact_mod_cast sub_eq_zero.mp h
+    have hwi : w j = w i := Fin.ext (by simpa [fordBoxValue] using hval)
+    exact (Finset.mem_Ioi.mp hj).ne (hw hwi).symm
 
 theorem fordJacobianAvoidanceNat_le_source_power
     {k d T P : ℕ} (hT : T ≤ P ^ d)
