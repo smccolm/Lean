@@ -29,7 +29,7 @@ example : positiveEqualityBundle.source = positiveEqualityBundle.explicit := by
   rw [positiveEqualityBundle.source_eq, positiveEqualityBundle.explicit_eq]
   rw [positiveEval_eq, positiveEval_eq]
   rw [fordPositiveIntegralFormula_eval]
-  norm_num [fordPositivePrimitiveCandidateValue,
+  norm_num (config := { maxSteps := 10000000 }) [fordPositivePrimitiveCandidateValue,
     fordPositiveTaylorPower11, fordPositiveAtThreeHalvesExplicit,
     Finset.sum_range_succ]
   ring

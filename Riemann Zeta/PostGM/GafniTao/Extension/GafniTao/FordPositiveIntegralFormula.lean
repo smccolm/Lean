@@ -333,6 +333,67 @@ theorem fordPositiveIntegralFormula_eval (p : Polynomial ℚ) (y : ℚ) :
   rw [map_fordBiIntegralPositiveLiftTerm,
     eval_fordPositivePrimitiveCandidate]
 
+def fordPositiveIntegralPolynomialFormula (p : Polynomial ℚ) : Polynomial ℚ :=
+  ∑ k ∈ Finset.range 67,
+    ∑ m ∈ Finset.range (k + 1),
+      Polynomial.C
+        (p.coeff k * (k.choose m : ℚ) * 3 ^ m *
+          (3 / 2 : ℚ) ^ (3 * k - m + 1) /
+            (3 * k - m + 1 : ℚ)) * Polynomial.X ^ m
+
+theorem eval_fordPositiveIntegralPolynomialFormula
+    (p : Polynomial ℚ) (y : ℚ) :
+    Polynomial.eval y (fordPositiveIntegralPolynomialFormula p) =
+      ∑ k ∈ Finset.range 67,
+        fordPositivePrimitiveCandidateValue (p.coeff k) y k := by
+  unfold fordPositiveIntegralPolynomialFormula
+  simp only [Polynomial.eval_finsetSum]
+  apply Finset.sum_congr rfl
+  intro k hk
+  unfold fordPositivePrimitiveCandidateValue
+  apply Finset.sum_congr rfl
+  intro m hm
+  simp
+  ring
+
+theorem fordPositiveIntegralFormula_eq_polynomialFormula (p : Polynomial ℚ) :
+    fordPositiveIntegralFormula p =
+      fordPositiveIntegralPolynomialFormula p := by
+  apply Polynomial.funext
+  intro y
+  rw [fordPositiveIntegralFormula_eval,
+    eval_fordPositiveIntegralPolynomialFormula]
+
+theorem fordPositiveIntegralPolynomialFormula_coeff
+    (p : Polynomial ℚ) (n : ℕ) :
+    (fordPositiveIntegralPolynomialFormula p).coeff n =
+      ∑ k ∈ Finset.range 67,
+        if n < k + 1 then
+          p.coeff k * (k.choose n : ℚ) * 3 ^ n *
+            (3 / 2 : ℚ) ^ (3 * k - n + 1) /
+              (3 * k - n + 1 : ℚ)
+        else 0 := by
+  unfold fordPositiveIntegralPolynomialFormula
+  rw [Polynomial.finsetSum_coeff]
+  apply Finset.sum_congr rfl
+  intro k hk
+  by_cases hn : n < k + 1
+  · rw [if_pos hn, Polynomial.finsetSum_coeff]
+    rw [Finset.sum_eq_single n]
+    · simp
+    · intro m hm hmn
+      simp [Polynomial.coeff_C_mul, hmn.symm]
+    · exact fun h => (h (Finset.mem_range.mpr hn)).elim
+  · rw [if_neg hn, Polynomial.finsetSum_coeff]
+    apply Finset.sum_eq_zero
+    intro m hm
+    have hmn : m ≠ n := by
+      intro h
+      subst m
+      exact hn (Finset.mem_range.mp hm)
+    have hnm : n ≠ m := Ne.symm hmn
+    simp [Polynomial.coeff_C_mul, hnm]
+
 end
 
 end GafniTao

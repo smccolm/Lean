@@ -1,41 +1,109 @@
 flowchart TD
-    SRC["SOURCE PIN<br/>Gafni-Tao arXiv:2505.24017v1<br/>Guth-Maynard, Heath-Brown, Ford,<br/>Tao-Trudgian-Yang"]
-    GM["FROZEN GM FOUNDATION<br/>tag gm-foundation-freeze-v1.0.1<br/>read-only"]
-    ML["PINNED MATHLIB / PNT+ APIs<br/>measure, Chebyshev psi, zeta,<br/>Mellin, Fourier, contour"]
-    DB["ANTEDB SNAPSHOT<br/>formula/optimizer cross-check only"]
 
-    G00["GT-00 Isolation and source freeze<br/>OPEN"]
-    G01["GT-01 Exact paper-to-Lean crosswalk<br/>OPEN"]
-    G02["GT-02 Asymptotic and exponent language<br/>EReal infimum/supremum plus epsilon bridges<br/>OPEN"]
-    G03["GT-03 Exact exceptional set<br/>Lebesgue measure and measurability<br/>OPEN"]
-    G04["GT-04 Multiplicity-weighted zero model<br/>N bridge and strip localization<br/>OPEN"]
-    G05["GT-05 Zero additive energy N*<br/>quadruple multiplicities and A*<br/>OPEN"]
-    G06["GT-06 Chebyshev interval identity<br/>(x,x+y], endpoints and prime powers<br/>OPEN"]
-    G07["GT-07 Brun-Titchmarsh localization<br/>tau=X^(1-theta), local covering and losses<br/>OPEN"]
-    G08["GT-08 Sharp truncated explicit formula<br/>DONE<br/>arbitrary real endpoints, all 2<=T<=x,<br/>selected-height contour and exact zero shell"]
-    G09["GT-09 Vinogradov-Korobov zero-free region<br/>OPEN"]
-    G10["GT-10 Near-one logarithmic zero density<br/>no T^epsilon substitute<br/>OPEN"]
-    G11["GT-11 Lemma 2.1 right-edge decay<br/>OPEN"]
-    G12["GT-12 Lemma 2.2 L-infinity bound<br/>OPEN"]
-    G13["GT-13 Complex Fourier bump and c_rho<br/>DONE<br/>uniform tenfold decay, exact normalization,<br/>coefficient bounds and finite Fubini"]
-    G14["GT-14 Lemma 2.3 L2 bound<br/>DONE<br/>physical moment, unit local-zero count<br/>and exact epsilon exponent"]
-    G15["GT-15 Schur/double-counting energy bridge<br/>DONE<br/>integer-bin autocorrelation and complete<br/>smoothed-pair transfer to actual N*"]
-    G16["GT-16 Lemma 2.4 L4 bound<br/>DONE<br/>exact quartic expansion, Jacobian and<br/>multiplicity-weighted A* exponent"]
-    G17["GT-17 Finite J-strip assembly<br/>pigeonhole, Markov and Eq. (2.7)<br/>OPEN"]
-    G18["GT-18 Limit and envelope assembly<br/>epsilon then J; no continuity shortcut<br/>OPEN"]
-    G19["GT-19 Gafni-Tao Theorem 1.3<br/>exact refined bound<br/>OPEN"]
-    G20["GT-20 Theorem 1.2 and Theorem 1.1<br/>exact corollaries<br/>OPEN"]
-    G21["GT-21 Native ordinary-density consumer<br/>GM A0=30/13, 17/30 and 2/15 thresholds<br/>OPEN"]
-    G22["GT-22 Published exponent inputs<br/>Pintz ordinary and Heath-Brown A* segments;<br/>optional full TT-Y table<br/>OPEN"]
-    G23["GT-23 Exact sample bounds<br/>mu(17/30)<=7/12 and<br/>mu(2/15+Delta)<=1-9Delta/13<br/>OPEN"]
-    G24["GT-24 Certified Section 3 optimizer<br/>exact rational cells and source table checks<br/>OPEN"]
-    G25["GT-25 Root imports, audits and runner<br/>zero warnings / no forbidden dependencies<br/>OPEN"]
-    G26["GT-26 Publication synchronization<br/>crosswalk, exposition and reproduction log<br/>OPEN"]
+    SRC["SOURCE PIN<br/>Gafni-Tao arXiv:2505.24017v1<br/>Ford, Guth-Maynard, Pintz, Heath-Brown,<br/>Tao-Trudgian-Yang"]
+
+    GM["FROZEN GM FOUNDATION<br/>tag gm-foundation-freeze-v1.0.1<br/>read-only"]
+
+    ML["PINNED MATHLIB / ANALYTIC APIS<br/>measure, Chebyshev psi, zeta,<br/>Fourier, contour, asymptotics"]
+
+    DB["ANTEDB / NUMERICAL SOURCES<br/>Section 3 source tables and<br/>optimizer cross-check only"]
+
+
+    G00["GT-00 Isolation and source freeze<br/>DONE"]
+
+    G01["GT-01 Exact paper-to-Lean crosswalk<br/>SYNC REQUIRED<br/>Lean has moved ahead of documentation"]
+
+    G02["GT-02 Asymptotic and exponent language<br/>EReal infimum / supremum,<br/>fixed-power and epsilon bridges<br/>SUBSTANTIALLY IMPLEMENTED"]
+
+    G03["GT-03 Exact exceptional set<br/>Lebesgue measure, measurability,<br/>mu_delta and mu machinery<br/>DONE"]
+
+    G04["GT-04 Multiplicity-weighted zero model<br/>zero count, occurrences,<br/>strip localization<br/>DONE"]
+
+    G05["GT-05 Zero additive energy N*<br/>ordered quadruples, multiplicities,<br/>A* exponent machinery<br/>DONE"]
+
+    G06["GT-06 Chebyshev / Mangoldt interval identity<br/>endpoint conventions and prime powers<br/>DONE"]
+
+    G07["GT-07 Brun-Titchmarsh localization<br/>local scale, replacement errors,<br/>finite multiplicative cover<br/>DONE"]
+
+    G08["GT-08 Sharp truncated explicit formula<br/>NATIVE DONE<br/>arbitrary real endpoints, all 2 <= T <= x,<br/>selected-height contour and exact zero shell"]
+
+
+    F0["FORD SOURCE CONTRACTS<br/>OPEN"]
+
+    F1["FordZetaGrowthBound<br/>Theorem 1 source contract<br/>OPEN"]
+
+    F2["FordNearOneDensityEstimate<br/>58.05 eta^(3/2), log^15<br/>OPEN"]
+
+    F3["FordAsymptoticZeroFree<br/>VK-width source output<br/>OPEN"]
+
+    F4["FordTheorem2<br/>shifted exponential-sum estimate<br/>constants 9.463 and 133.66<br/>OPEN"]
+
+
+    FI["INTEGRATED FORD SOURCE CHAIN<br/>ROOT + CENTRAL AUDIT"]
+
+    FI1["Trigonometric positivity<br/>Fourier kernel<br/>Euler product / prime powers<br/>Ford Lemma 5.1<br/>DONE"]
+
+    FI2["Cotangent detector kernel<br/>residues and corrections<br/>finite detector rectangles and edges<br/>DONE"]
+
+    FI3["Left-line analysis<br/>Laplace inversion<br/>K finite rectangles / edges<br/>DONE"]
+
+    FI4["K zero series and limits<br/>K-formula native<br/>explicit zeta bounds<br/>log-derivative infrastructure<br/>DONE"]
+
+
+    FD["NEW FORD DEVELOPMENT WORKBENCH<br/>PRESENT IN REPOSITORY<br/>NOT YET ROOT-INTEGRATED"]
+
+    FD1["Shifted detector rectangles<br/>selected shifts / heights<br/>pole and edge corrections<br/>ACTIVE"]
+
+    FD2["Local zero-disk detector<br/>multiplicity-weighted local count<br/>growth-bound assembly<br/>ACTIVE"]
+
+    FD3["Ford Theorem 2 machinery<br/>dyadic decomposition<br/>cubic exponent and scaling<br/>ACTIVE"]
+
+    FD4["Exact numerical certification<br/>polynomial / Taylor / Bernstein<br/>Lean checks certificate data<br/>ACTIVE"]
+
+
+    G09["GT-09 Vinogradov-Korobov zero-free input<br/>consumer bridge DONE<br/>SOURCE THEOREM OPEN"]
+
+    G10["GT-10 Near-one logarithmic zero density<br/>normalization bridge DONE<br/>SOURCE THEOREM OPEN"]
+
+    G11["GT-11 Lemma 2.1 right-edge decay<br/>downstream machinery implemented<br/>CONDITIONAL on GT-09 and GT-10"]
+
+    G12["GT-12 Lemma 2.2 L-infinity bound<br/>physical zero-sum supremum<br/>DONE"]
+
+    G13["GT-13 Complex Fourier bump and c_rho<br/>uniform tenfold decay,<br/>coefficient bounds and finite Fubini<br/>DONE"]
+
+    G14["GT-14 Lemma 2.3 L2 bound<br/>physical second moment<br/>exact epsilon exponent<br/>DONE"]
+
+    G15["GT-15 Schur / energy bridge<br/>pair autocorrelation to actual N*<br/>DONE"]
+
+    G16["GT-16 Lemma 2.4 L4 bound<br/>quartic expansion and<br/>multiplicity-weighted A* exponent<br/>DONE"]
+
+    G17["GT-17 Finite J-strip assembly<br/>half-open strips, pigeonhole,<br/>Markov and equation (2.7)<br/>DONE"]
+
+    G18["GT-18 Limit and envelope assembly<br/>epsilon then J,<br/>no continuity shortcut<br/>DONE"]
+
+    G19["GT-19 Gafni-Tao Theorem 1.3<br/>conditional max-form implemented<br/>exact unconditional source theorem OPEN"]
+
+    G20["GT-20 Theorem 1.2 and Theorem 1.1<br/>conditional Theorem 1.2 max-form exists<br/>exact 1.2 and 1.1 OPEN"]
+
+    G21["GT-21 Native ordinary-density consumer<br/>GM A0 = 30/13<br/>17/30 and 2/15 threshold arithmetic<br/>DONE"]
+
+    G22["GT-22 Published Section 3 inputs<br/>Pintz ordinary density<br/>Heath-Brown A* segment<br/>OPEN"]
+
+    G23["GT-23 Exact published sample bounds<br/>mu(17/30) <= 7/12<br/>small-Delta bound<br/>OPEN"]
+
+    G24["GT-24 Certified Section 3 optimizer<br/>exact finite cells and source tables<br/>OPEN"]
+
+    G25["GT-25 Root imports, audit and release runner<br/>central Audit.lean exists<br/>new Ford workbench integration pending<br/>ACTIVE"]
+
+    G26["GT-26 Publication synchronization<br/>README / agenda / architecture / crosswalk<br/>SYNC REQUIRED"]
+
 
     SRC --> G00
     GM --> G00
     ML --> G00
+
     G00 --> G01
+
     G01 --> G02
     G01 --> G03
     G01 --> G04
@@ -43,16 +111,52 @@ flowchart TD
 
     GM --> G04
     G04 --> G05
+
     ML --> G06
     G03 --> G07
     G06 --> G07
+
     G07 --> G08
     ML --> G08
 
-    SRC --> G09
-    SRC --> G10
+
+    SRC --> FI
+    ML --> FI
+
+    FI --> FI1
+    FI1 --> FI2
+    FI2 --> FI3
+    FI3 --> FI4
+
+    FI4 -. source closure work .-> F1
+    FI4 -. source closure work .-> F3
+
+    SRC --> F0
+    F0 --> F1
+    F0 --> F2
+    F0 --> F3
+    F0 --> F4
+
+    SRC --> FD
+    FI4 --> FD
+
+    FD --> FD1
+    FD1 --> FD2
+    FD --> FD3
+    FD3 --> FD4
+
+    FD2 -. intended source closure .-> F2
+    FD2 -. still consumes growth input .-> F1
+    FD3 -. intended proof path .-> F4
+    F4 -. likely density input path .-> F2
+
+
+    F3 --> G09
     ML --> G09
+
+    F2 --> G10
     G04 --> G10
+
     G08 --> G11
     G09 --> G11
     G10 --> G11
@@ -60,12 +164,16 @@ flowchart TD
     G02 --> G12
     G04 --> G12
     G08 --> G12
+
     ML --> G13
     G08 --> G13
+
     G13 --> G14
     G04 --> G14
+
     G05 --> G15
     G13 --> G15
+
     G15 --> G16
 
     G03 --> G17
@@ -73,17 +181,25 @@ flowchart TD
     G12 --> G17
     G14 --> G17
     G16 --> G17
+
     G02 --> G18
     G17 --> G18
+
     G18 --> G19
+
     G19 --> G20
+
 
     GM --> G21
     G20 --> G21
+
     SRC --> G22
     G05 --> G22
+
+    G19 --> G23
     G21 --> G23
     G22 --> G23
+
     DB --> G24
     G19 --> G24
     G22 --> G24
@@ -93,11 +209,32 @@ flowchart TD
     G21 --> G25
     G23 --> G25
     G24 --> G25
+    FD --> G25
+
     G25 --> G26
 
+
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
+    classDef conditional fill:#fff0bf,stroke:#9b6a00,color:#3d2900,stroke-width:2px;
+    classDef active fill:#ffe4bf,stroke:#b35a00,color:#452000,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
+    classDef dev fill:#eadcff,stroke:#6840a0,color:#281441,stroke-width:2px;
+    classDef sync fill:#f3e4ff,stroke:#7b3ba3,color:#321443,stroke-width:2px;
+
     class SRC,GM,ML,DB available;
-    class G08,G13,G14,G15,G16 done;
-    class G00,G01,G02,G03,G04,G05,G06,G07,G09,G10,G11,G12,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26 open;
+
+    class G00,G03,G04,G05,G06,G07,G08,G12,G13,G14,G15,G16,G17,G18,G21 done;
+
+    class G02 conditional;
+    class G11,G19,G20 conditional;
+
+    class G09,G10,G22,G23,G24,F0,F1,F2,F3,F4 open;
+
+    class FI,FI1,FI2,FI3,FI4 done;
+
+    class FD,FD1,FD2,FD3,FD4 dev;
+
+    class G25 active;
+
+    class G01,G26 sync;

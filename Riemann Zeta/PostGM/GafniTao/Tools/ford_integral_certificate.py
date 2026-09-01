@@ -522,6 +522,46 @@ def write_lean_primitives(path: Path) -> None:
             data_directory / f"PositivePower{exponent}.lean", "\n".join(power_lines)
         )
 
+    power11_coefficient_modules: list[str] = []
+    power11 = positive_powers[-1]
+    for shard, start in enumerate(range(0, 67, 12)):
+        module_name = f"GafniTao.FordExplicitData.PositivePower11Coeff{shard}"
+        power11_coefficient_modules.append(module_name)
+        lines = [
+            "import GafniTao.FordExplicitData.PositivePower11",
+            "",
+            "namespace GafniTao",
+            "",
+            "noncomputable section",
+            "",
+            "set_option maxRecDepth 100000000",
+            "set_option maxHeartbeats 0",
+            "",
+        ]
+        for degree in range(start, min(start + 12, 67)):
+            lines += [
+                "@[simp] theorem "
+                f"fordPositiveTaylorPower11_coeff_{degree} :",
+                f"    fordPositiveTaylorPower11.coeff {degree} =",
+                f"      {lean_rat(power11.get(degree, Q(0)))} := by",
+                "  norm_num [fordPositiveTaylorPower11, Polynomial.coeff_one]",
+                "",
+            ]
+        lines += ["end", "", "end GafniTao", ""]
+        write_text_if_changed(
+            data_directory / f"PositivePower11Coeff{shard}.lean",
+            "\n".join(lines),
+        )
+
+    power11_coefficient_root = [
+        *(f"import {module_name}" for module_name in power11_coefficient_modules),
+        "",
+    ]
+    write_text_if_changed(
+        data_directory / "PositivePower11Coefficients.lean",
+        "\n".join(power11_coefficient_root),
+    )
+
     factor_lines = [
         "import GafniTao.FordExplicitData.PositivePower11",
         "",

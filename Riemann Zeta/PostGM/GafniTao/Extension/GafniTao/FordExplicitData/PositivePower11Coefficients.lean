@@ -1,0 +1,6 @@
+import GafniTao.FordExplicitData.PositivePower11Coeff0
+import GafniTao.FordExplicitData.PositivePower11Coeff1
+import GafniTao.FordExplicitData.PositivePower11Coeff2
+import GafniTao.FordExplicitData.PositivePower11Coeff3
+import GafniTao.FordExplicitData.PositivePower11Coeff4
+import GafniTao.FordExplicitData.PositivePower11Coeff5
