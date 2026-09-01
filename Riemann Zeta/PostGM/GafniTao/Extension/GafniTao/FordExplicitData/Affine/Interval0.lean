@@ -1,0 +1,12 @@
+import GafniTao.FordExplicitData.Affine.Interval0Coeff0
+import GafniTao.FordExplicitData.Affine.Interval0Coeff1
+import GafniTao.FordExplicitData.Affine.Interval0Coeff2
+import GafniTao.FordExplicitData.Affine.Interval0Coeff3
+import GafniTao.FordExplicitData.Affine.Interval0Coeff4
+import GafniTao.FordExplicitData.Affine.Interval0Coeff5
+import GafniTao.FordExplicitData.Affine.Interval0Coeff6
+import GafniTao.FordExplicitData.Affine.Interval0Coeff7
+import GafniTao.FordExplicitData.Affine.Interval0Coeff8
+import GafniTao.FordExplicitData.Affine.Interval0Coeff9
+import GafniTao.FordExplicitData.Affine.Interval0Coeff10
+import GafniTao.FordExplicitData.Affine.Interval0Coeff11

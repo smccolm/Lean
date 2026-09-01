@@ -1,4 +1,5 @@
 import GafniTao.FordPositiveIntegralFormula
+import GafniTao.FordExplicitData.PositivePower11Coefficients
 
 open GafniTao
 
@@ -12,7 +13,14 @@ example :
       fordPositiveAtThreeHalvesValueCoeff0 := by
   rw [fordPositiveIntegralPolynomialFormula_coeff]
   norm_num (config := { maxSteps := 10000000 })
-    [fordPositiveTaylorPower11, Finset.sum_range_succ]
+    [Finset.sum_range_succ]
+
+example :
+    (fordPositiveIntegralPolynomialFormula fordPositiveTaylorPower11).coeff 1 =
+      fordPositiveAtThreeHalvesValueCoeff1 := by
+  rw [fordPositiveIntegralPolynomialFormula_coeff]
+  norm_num (config := { maxSteps := 10000000 })
+    [Finset.sum_range_succ, Nat.choose]
 
 example : fordPositiveAtThreeHalvesExplicit.coeff 0 =
     fordPositiveAtThreeHalvesValueCoeff0 := by

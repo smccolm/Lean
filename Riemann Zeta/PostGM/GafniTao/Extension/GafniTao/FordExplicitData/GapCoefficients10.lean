@@ -1,0 +1,116 @@
+import GafniTao.FordExplicitData.Values
+
+namespace GafniTao
+
+noncomputable section
+
+set_option maxRecDepth 10000000
+set_option maxHeartbeats 0
+
+@[simp] theorem fordNumericalGapExplicit_coeff_80 :
+    fordNumericalGapExplicit.coeff 80 = (-5568389052116696088695990562943752050149774040048848728693161783641904331709933633473290555014065242569864349857218263421514135498791417027 / 1752398133018359149185706211253275635981184406052067195425518149171028931522632595526167773348654312099563654687496011723395228559299329807102898115380123107276907638696683763079000883200000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_81 :
+    fordNumericalGapExplicit.coeff 81 = (16381513562787257185552771571612039207562750405487167093695151656806048987282882666382213619059251762369513751385756885239742655486903917 / 109524883313647446824106638203329727248824025378254199714094884323189308220164537220385485834290894506222728417968500732712201784956208112943931132211257694204806727418542735192437555200000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_82 :
+    fordNumericalGapExplicit.coeff 82 = (-713056580142867423750608456201053424179142116686111252399566428508104492296034770486385781898320671959001241786326736557642394935769277 / 109524883313647446824106638203329727248824025378254199714094884323189308220164537220385485834290894506222728417968500732712201784956208112943931132211257694204806727418542735192437555200000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_83 :
+    fordNumericalGapExplicit.coeff 83 = (7081593231574885636904028175713567818665160692567476525685389500466822817222685461922409531295680723806298282253943654417130195469491 / 27381220828411861706026659550832431812206006344563549928523721080797327055041134305096371458572723626555682104492125183178050446239052028235982783052814423551201681854635683798109388800000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_84 :
+    fordNumericalGapExplicit.coeff 84 = (-705618568918610959869849683972109079942712011664587480789115512957269010639345376949796830737362801682654036460707319685445106079791 / 76667418319553212776874646742330809074176817764777939799866419026232515754115176054269840084003626154355909892577950512898541249469345679060751792547880385943364709192979914634706288640000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_85 :
+    fordNumericalGapExplicit.coeff 85 = (13670886170555935663180114834507230097493605974149632277448715205876813000651844110132856704777873648635535039332252107321889567233 / 47917136449720757985546654213956755671360511102986212374916511891395322346321985033918650052502266346472443682861219070561588280918341049412969870342425241214602943245612446646691430400000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_86 :
+    fordNumericalGapExplicit.coeff 86 = (-352555816297975247146259370027538316229128524370378824703868666608977466961850209388546703294813762369750984204845148933502330423 / 47917136449720757985546654213956755671360511102986212374916511891395322346321985033918650052502266346472443682861219070561588280918341049412969870342425241214602943245612446646691430400000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+@[simp] theorem fordNumericalGapExplicit_coeff_87 :
+    fordNumericalGapExplicit.coeff 87 = (1730238206738320488725205526170914239862682036013762180581505249680658996022702828157649020661202309717989800983212151273929887 / 11979284112430189496386663553489188917840127775746553093729127972848830586580496258479662513125566586618110920715304767640397070229585262353242467585606310303650735811403111661672857600000000000 : ℚ) := by
+  simp [fordNumericalGapExplicit,
+    fordNumericalGapValueBlock0,
+    fordNumericalGapValueBlock1,
+    fordNumericalGapValueBlock2,
+    fordNumericalGapValueBlock3,
+    fordNumericalGapValueBlock4,
+    fordNumericalGapValueBlock5,
+    fordNumericalGapValueBlock6,
+    fordNumericalGapValueBlock7
+  ]
+
+end
+
+end GafniTao

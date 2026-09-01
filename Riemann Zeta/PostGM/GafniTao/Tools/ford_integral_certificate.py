@@ -222,7 +222,7 @@ def lean_bipoly_coefficients(
         names.append(name)
         lines.extend(
             [
-                f"abbrev {name} : Polynomial ℚ :=",
+                f"def {name} : Polynomial ℚ :=",
                 f"  {lean_poly_horner(coefficient)}",
                 "",
             ]
@@ -449,6 +449,58 @@ def write_lean_primitives(path: Path) -> None:
     ]
     write_text_if_changed(data_directory / "Values.lean", "\n".join(value_lines))
 
+    # Small, reusable coefficient facts for the exact gap polynomial.  These
+    # keep later affine/Bernstein checks numeric: no consumer has to unfold all
+    # eight sparse value blocks merely to recover one coefficient.
+    gap_coefficient_modules: list[str] = []
+    gap_degrees = list(range(max(data["gap"]) + 1))
+    gap_value_block_names = [
+        f"fordNumericalGapValueBlock{i}"
+        for i in range((max(data["gap"]) // 12) + 1)
+    ]
+    for shard, start in enumerate(range(0, len(gap_degrees), 8)):
+        selected = gap_degrees[start : start + 8]
+        module_name = f"GafniTao.FordExplicitData.GapCoefficients{shard}"
+        gap_coefficient_modules.append(module_name)
+        lines = [
+            "import GafniTao.FordExplicitData.Values",
+            "",
+            "namespace GafniTao",
+            "",
+            "noncomputable section",
+            "",
+            "set_option maxRecDepth 10000000",
+            "set_option maxHeartbeats 0",
+            "",
+        ]
+        for degree in selected:
+            lines += [
+                "@[simp] theorem "
+                f"fordNumericalGapExplicit_coeff_{degree} :",
+                f"    fordNumericalGapExplicit.coeff {degree} = "
+                f"{lean_rat(data['gap'].get(degree, Q(0)))} := by",
+                "  simp [fordNumericalGapExplicit,",
+                *[
+                    f"    {block_name}{',' if index + 1 < len(gap_value_block_names) else ''}"
+                    for index, block_name in enumerate(gap_value_block_names)
+                ],
+                "  ]",
+                "",
+            ]
+        lines += ["end", "", "end GafniTao", ""]
+        write_text_if_changed(
+            data_directory / f"GapCoefficients{shard}.lean", "\n".join(lines)
+        )
+
+    gap_coefficient_root = [
+        *(f"import {module_name}" for module_name in gap_coefficient_modules),
+        "",
+    ]
+    write_text_if_changed(
+        data_directory / "GapCoefficients.lean",
+        "\n".join(gap_coefficient_root),
+    )
+
     gap_lines = [
         "import GafniTao.FordNumericalGap",
         "import GafniTao.FordExplicitData.Values",
@@ -560,6 +612,201 @@ def write_lean_primitives(path: Path) -> None:
     write_text_if_changed(
         data_directory / "PositivePower11Coefficients.lean",
         "\n".join(power11_coefficient_root),
+    )
+
+    positive_formula_coefficient_modules: list[str] = []
+    positive_value_block_names = [
+        f"fordPositiveAtThreeHalvesValueBlock{i}"
+        for i in range((max(data["positive_at_three_halves"]) // 12) + 1)
+    ]
+    for shard, start in enumerate(range(0, 67, 12)):
+        module_name = (
+            f"GafniTao.FordExplicitData.PositiveIntegralFormulaCoeff{shard}"
+        )
+        positive_formula_coefficient_modules.append(module_name)
+        lines = [
+            "import GafniTao.FordPositiveIntegralFormula",
+            "import GafniTao.FordExplicitData.PositivePower11Coefficients",
+            "import GafniTao.FordExplicitData.Values",
+            "",
+            "namespace GafniTao",
+            "",
+            "noncomputable section",
+            "",
+            "set_option maxRecDepth 100000000",
+            "set_option maxHeartbeats 0",
+            "",
+        ]
+        for degree in range(start, min(start + 12, 67)):
+            lines += [
+                "@[simp] theorem "
+                f"fordPositiveIntegralPolynomialFormula_coeff_{degree} :",
+                "    (fordPositiveIntegralPolynomialFormula "
+                f"fordPositiveTaylorPower11).coeff {degree} =",
+                f"      fordPositiveAtThreeHalvesValueCoeff{degree} := by",
+                "  rw [fordPositiveIntegralPolynomialFormula_coeff]",
+                "  norm_num (config := { maxSteps := 10000000 })",
+                "    [Finset.sum_range_succ, Nat.choose]",
+                "",
+                "@[simp] theorem "
+                f"fordPositiveAtThreeHalvesExplicit_coeff_{degree} :",
+                f"    fordPositiveAtThreeHalvesExplicit.coeff {degree} =",
+                f"      fordPositiveAtThreeHalvesValueCoeff{degree} := by",
+                "  norm_num [fordPositiveAtThreeHalvesExplicit,",
+                *[
+                    f"    {block_name}{',' if i + 1 < len(positive_value_block_names) else ''}"
+                    for i, block_name in enumerate(positive_value_block_names)
+                ],
+                "  ]",
+                "",
+            ]
+        lines += ["end", "", "end GafniTao", ""]
+        write_text_if_changed(
+            data_directory / f"PositiveIntegralFormulaCoeff{shard}.lean",
+            "\n".join(lines),
+        )
+
+    positive_formula_coefficient_root = [
+        *(f"import {module_name}" for module_name in positive_formula_coefficient_modules),
+        "",
+    ]
+    write_text_if_changed(
+        data_directory / "PositiveIntegralFormulaCoefficients.lean",
+        "\n".join(positive_formula_coefficient_root),
+    )
+
+    negative_primitive_coefficient_modules: list[str] = []
+    negative_primitive_block_names = [
+        f"fordNegativePrimitiveBlock{i}"
+        for i in range((len(negative_names) + 19) // 20)
+    ]
+    for shard, start in enumerate(range(0, len(negative_names), 12)):
+        module_name = (
+            f"GafniTao.FordExplicitData.NegativePrimitiveCoeff{shard}"
+        )
+        negative_primitive_coefficient_modules.append(module_name)
+        lines = [
+            "import GafniTao.FordNegativeIntegralFormula",
+            "",
+            "namespace GafniTao",
+            "",
+            "noncomputable section",
+            "",
+            "set_option maxRecDepth 100000000",
+            "set_option maxHeartbeats 0",
+            "",
+        ]
+        for degree in range(start, min(start + 12, len(negative_names))):
+            outer_degree = degree + 1
+            lines += [
+                "@[simp] theorem "
+                f"fordNegativePrimitiveExplicit_coeff_{outer_degree} :",
+                f"    fordNegativePrimitiveExplicit.coeff {outer_degree} =",
+                f"      Polynomial.C (1 / ({outer_degree} : ℚ)) *",
+                f"        fordNegativeUpperExplicit.coeff {degree} := by",
+                "  simp only [fordNegativePrimitiveExplicit,",
+                *[
+                    f"    {block_name},"
+                    for block_name in negative_primitive_block_names
+                ],
+                "    fordNegativeUpperExplicit,",
+                *[
+                    f"    {block_name},"
+                    for block_name in negative_upper_block_names
+                ],
+                "    Polynomial.coeff_add, Polynomial.coeff_C_mul_X_pow]",
+                "  norm_num",
+                "",
+            ]
+        lines += ["end", "", "end GafniTao", ""]
+        write_text_if_changed(
+            data_directory / f"NegativePrimitiveCoeff{shard}.lean",
+            "\n".join(lines),
+        )
+
+    negative_primitive_coefficient_root = [
+        *(f"import {module_name}" for module_name in negative_primitive_coefficient_modules),
+        "",
+    ]
+    write_text_if_changed(
+        data_directory / "NegativePrimitiveCoefficients.lean",
+        "\n".join(negative_primitive_coefficient_root),
+    )
+
+    # Exact Bernstein data for the eight equal subintervals of [0, 11/10].
+    # These values are certificate data only: the consumer proves both the
+    # polynomial identity and every sign in Lean.
+    bernstein_directory = data_directory / "Bernstein"
+    bernstein_directory.mkdir(parents=True, exist_ok=True)
+    gap_block_names = [
+        f"fordNumericalGapValueBlock{i}"
+        for i in range((max(data["gap"]) // 12) + 1)
+    ]
+    for interval in range(8):
+        left = Q(11 * interval, 80)
+        right = Q(11 * (interval + 1), 80)
+        coefficients = bernstein_coefficients(data["gap"], left, right)
+        lines = [
+            "import GafniTao.FordGapExplicitIdentity",
+            "",
+            "namespace GafniTao",
+            "",
+            "noncomputable section",
+            "",
+            "set_option maxRecDepth 100000000",
+            "set_option maxHeartbeats 0",
+            "",
+            f"def fordGapBernsteinCoeff{interval} : ℕ → ℚ",
+        ]
+        for k, coefficient in enumerate(coefficients):
+            separator = "  |" if k == 0 else "  |"
+            lines.append(f"{separator} {k} => {lean_rat(coefficient)}")
+        lines += [
+            "  | _ => 0",
+            "",
+            f"def fordGapBernsteinExpansion{interval} : Polynomial ℚ :=",
+            "  ∑ k ∈ Finset.range 89,",
+            f"    Polynomial.C (fordGapBernsteinCoeff{interval} k) *",
+            "      bernsteinPolynomial ℚ 88 k",
+            "",
+            f"theorem fordGapBernsteinCoeff{interval}_nonneg",
+            f"    {{k : ℕ}} (hk : k < 89) : 0 ≤ fordGapBernsteinCoeff{interval} k := by",
+            "  interval_cases k <;>",
+            f"    norm_num [fordGapBernsteinCoeff{interval}]",
+            "",
+            f"theorem fordGapAffine{interval}_eq_bernstein :",
+            "    fordNumericalGapExplicit.comp",
+            f"        (Polynomial.C {lean_rat(left)} +",
+            "          Polynomial.C (11 / 80 : ℚ) * Polynomial.X) =",
+            f"      fordGapBernsteinExpansion{interval} := by",
+            "  apply Polynomial.funext",
+            "  intro x",
+            "  norm_num [Polynomial.eval_comp,",
+            f"    fordGapBernsteinExpansion{interval},",
+            f"    fordGapBernsteinCoeff{interval}, Finset.sum_range_succ,",
+            "    bernsteinPolynomial, Nat.choose, fordNumericalGapExplicit,",
+            *[
+                f"    {block_name}{',' if i + 1 < len(gap_block_names) else ''}"
+                for i, block_name in enumerate(gap_block_names)
+            ],
+            "  ]",
+            "  ring",
+            "",
+            "end",
+            "",
+            "end GafniTao",
+            "",
+        ]
+        write_text_if_changed(
+            bernstein_directory / f"Interval{interval}.lean", "\n".join(lines)
+        )
+
+    bernstein_root = [
+        *(f"import GafniTao.FordExplicitData.Bernstein.Interval{i}" for i in range(8)),
+        "",
+    ]
+    write_text_if_changed(
+        data_directory / "BernsteinIntervals.lean", "\n".join(bernstein_root)
     )
 
     factor_lines = [

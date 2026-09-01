@@ -1,0 +1,5 @@
+import GafniTao.FordExplicitData.NegativePrimitiveCoeff0
+import GafniTao.FordExplicitData.NegativePrimitiveCoeff1
+import GafniTao.FordExplicitData.NegativePrimitiveCoeff2
+import GafniTao.FordExplicitData.NegativePrimitiveCoeff3
+import GafniTao.FordExplicitData.NegativePrimitiveCoeff4
