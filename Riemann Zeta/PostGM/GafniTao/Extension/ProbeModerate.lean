@@ -1,0 +1,9 @@
+import GafniTao.FordLemma65Iteration
+import Mathlib.Analysis.Complex.ExponentialBounds
+#check one_add_mul_le_pow
+#check Real.exp_nat_mul
+#check Real.log_pow
+#check Real.exp_log
+#check Real.exp_le_exp
+#check Real.log_le_sub_one_of_pos
+#check Real.exp_neg_one_lt_half

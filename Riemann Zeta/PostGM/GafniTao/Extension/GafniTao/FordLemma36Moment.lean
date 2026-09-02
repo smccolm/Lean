@@ -36,7 +36,6 @@ theorem fordLemma35Admissible_below
     nlinarith
   have hden : 0 < 2 * (k : ℝ) * k +
       (2 * delta - ((k : ℝ) - k) * ((k : ℝ) - k + 1)) := by
-    push_cast
     nlinarith
   have hstar : 1 / (((k + 1 : ℕ) : ℝ)) ≤
       fordPhiStar35 k (fordR36 k delta) delta := by
@@ -60,9 +59,11 @@ theorem fordDeltaSequence36_pos_le_initial
     have hkSq : (0 : ℝ) < (k : ℝ) ^ 2 := by positivity
     constructor
     · unfold fordDSequence36 at hnorm
-      exact (div_pos_iff.mp hnorm.1).resolve_right (not_lt_of_ge hkSq.le)
+      rcases div_pos_iff.mp hnorm.1 with hpos | hneg
+      · exact hpos.1
+      · exact False.elim ((not_lt_of_ge hkSq.le) hneg.2)
     · unfold fordDSequence36 at hnorm
-      rw [fordDSequence36_zero, fordDeltaInitial35] at hnorm
+      rw [fordDeltaSequence36_zero] at hnorm
       exact (div_le_div_iff_of_pos_right hkSq).mp hnorm.2
   · have hex : ∃ m, m < n ∧ fordDeltaSequence36 k m ≤ (k : ℝ) := by
       rw [not_forall] at habove
@@ -81,7 +82,9 @@ theorem fordDeltaSequence36_pos_le_initial
     have hkSq : (0 : ℝ) < (k : ℝ) ^ 2 := by positivity
     have hmPos : 0 < fordDeltaSequence36 k m := by
       unfold fordDSequence36 at hmNorm
-      exact (div_pos_iff.mp hmNorm.1).resolve_right (not_lt_of_ge hkSq.le)
+      rcases div_pos_iff.mp hmNorm.1 with hpos | hneg
+      · exact hpos.1
+      · exact False.elim ((not_lt_of_ge hkSq.le) hneg.2)
     have hmn : m ≤ n := hmSpec.1.le
     have hn := fordDeltaSequence36_pos_le_of_pos_le
       hk hmn hmPos hmSpec.2
@@ -139,14 +142,56 @@ theorem fordLemma36_moment_and_exponent
           (1 / 2 - 2 * (n : ℝ) / (k : ℝ) + 169 / (100 * (k : ℝ))) := by
   obtain ⟨C, hC⟩ := fordLemma36_moment_bound_exists hk (by omega) hnRecursion
   refine ⟨C, hC, ?_⟩
-  simpa [show n - 1 + 1 = n by omega] using
-    (fordLemma36_delta_exponent hk (n := n - 1) (by omega) (by simpa using hnSource))
+  have hindex : n - 1 + 1 = n := by omega
+  have hsource : ((((n - 1) + 1 : ℕ) : ℝ)) ≤
+      (k : ℝ) / 2 * (1 / 2 + Real.log (3 * (k : ℝ) / 8)) + 1 := by
+    rw [hindex]
+    exact hnSource
+  simpa [hindex] using
+    (fordLemma36_delta_exponent hk (n := n - 1) (by omega) hsource)
+
+/-- Ford's printed upper range is automatically contained in the recursion
+range `n ≤ k²`; this removes a formal-only premise from the public form. -/
+theorem fordLemma36_source_range_le_square
+    {k n : ℕ} (hk : 1000 ≤ k)
+    (hnSource : (n : ℝ) ≤
+      (k : ℝ) / 2 * (1 / 2 + Real.log (3 * (k : ℝ) / 8)) + 1) :
+    n ≤ k ^ 2 := by
+  have hk0 : (0 : ℝ) < k := by positivity
+  have harg : 0 < 3 * (k : ℝ) / 8 := by positivity
+  have hlog := Real.log_le_sub_one_of_pos harg
+  have hsourceUpper :
+      (k : ℝ) / 2 * (1 / 2 + Real.log (3 * (k : ℝ) / 8)) + 1 ≤
+        (k : ℝ) ^ 2 := by
+    have hkR : (1000 : ℝ) ≤ k := by exact_mod_cast hk
+    nlinarith [sq_nonneg (k : ℝ)]
+  have hnReal : (n : ℝ) ≤ ((k ^ 2 : ℕ) : ℝ) := by
+    norm_num [Nat.cast_pow]
+    exact hnSource.trans hsourceUpper
+  exact_mod_cast hnReal
+
+/-- Source-faithful `k ≥ 1000` form of Ford Lemma 3.6, with no auxiliary
+recursion-range hypothesis. -/
+theorem fordLemma36_native
+    {k n : ℕ} (hk : 1000 ≤ k) (hnLower : 2 * k ≤ n)
+    (hnSource : (n : ℝ) ≤
+      (k : ℝ) / 2 * (1 / 2 + Real.log (3 * (k : ℝ) / 8)) + 1) :
+    ∃ C : ℝ,
+      FordVinogradovMomentBound (n * k) k C
+        (fordDeltaSequence36 k (n - 1)) ∧
+      fordDeltaSequence36 k (n - 1) ≤
+        (3 / 8 : ℝ) * (k : ℝ) ^ 2 * Real.exp
+          (1 / 2 - 2 * (n : ℝ) / (k : ℝ) + 169 / (100 * (k : ℝ))) :=
+  fordLemma36_moment_and_exponent hk hnLower
+    (fordLemma36_source_range_le_square hk hnSource) hnSource
 
 #print axioms fordLemma35Admissible_below
 #print axioms fordDeltaSequence36_pos_le_initial
 #print axioms fordLemma35AdmissibleAt_rounded_all
 #print axioms fordLemma36_moment_bound_exists
 #print axioms fordLemma36_moment_and_exponent
+#print axioms fordLemma36_source_range_le_square
+#print axioms fordLemma36_native
 
 end
 
