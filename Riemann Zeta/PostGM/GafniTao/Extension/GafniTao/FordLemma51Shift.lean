@@ -137,6 +137,54 @@ theorem norm_sum_Ioc_sub_translated_le
       norm_cast
       omega
 
+/-- The exact boundary count behind the preceding convenient `2*q` bound:
+the left edge contributes at most `q` terms and the right edge at most
+`q-1`.  This sharper form is needed when the source uses a real Weyl-shift
+length and the actual finite sum is cut off at its floor. -/
+theorem norm_sum_Ioc_sub_translated_le_sharp
+    (f : ℕ → ℂ) (hf : ∀ n, ‖f n‖ = 1)
+    {N R q : ℕ} (hR : 1 ≤ R) (hq : 1 ≤ q) :
+    ‖(∑ n ∈ Finset.Ioc N R, f n) -
+        ∑ m ∈ Finset.Ioc (N + q) (R - 1 + q), f m‖ ≤
+      2 * (q : ℝ) - 1 := by
+  let A := Finset.Ioc N R
+  let B := Finset.Ioc (N + q) (R - 1 + q)
+  have hsplit :
+      (∑ n ∈ A, f n) - ∑ n ∈ B, f n =
+        (∑ n ∈ A \ B, f n) - ∑ n ∈ B \ A, f n := by
+    rw [← A.sum_inter_add_sum_diff B f,
+      ← B.sum_inter_add_sum_diff A f]
+    rw [Finset.inter_comm B A]
+    abel
+  rw [hsplit]
+  calc
+    ‖(∑ n ∈ A \ B, f n) - ∑ n ∈ B \ A, f n‖ ≤
+        ‖∑ n ∈ A \ B, f n‖ + ‖∑ n ∈ B \ A, f n‖ := norm_sub_le _ _
+    _ ≤ (A \ B).card + (B \ A).card := by
+      gcongr
+      · calc
+          ‖∑ n ∈ A \ B, f n‖ ≤ ∑ n ∈ A \ B, ‖f n‖ := norm_sum_le _ _
+          _ = (A \ B).card := by simp [hf]
+      · calc
+          ‖∑ n ∈ B \ A, f n‖ ≤ ∑ n ∈ B \ A, ‖f n‖ := norm_sum_le _ _
+          _ = (B \ A).card := by simp [hf]
+    _ ≤ (Finset.Ioc N (N + q)).card +
+          (Finset.Ioc R (R - 1 + q)).card := by
+      norm_cast
+      exact Nat.add_le_add
+        (Finset.card_le_card (ford_Ioc_sdiff_shifted_subset_left hq))
+        (Finset.card_le_card (ford_shifted_Ioc_sdiff_subset_right hq))
+    _ = 2 * (q : ℝ) - 1 := by
+      have hleft : (Finset.Ioc N (N + q)).card = q := by
+        rw [Nat.card_Ioc]
+        omega
+      have hright : (Finset.Ioc R (R - 1 + q)).card = q - 1 := by
+        rw [Nat.card_Ioc]
+        omega
+      rw [hleft, hright]
+      push_cast [Nat.cast_sub hq]
+      ring
+
 /-- The source sum and one common translated block differ by at most the
 literal `2q` boundary allowance. -/
 theorem norm_fordShiftedExponentialSum_sub_common_shift_le
@@ -152,10 +200,26 @@ theorem norm_fordShiftedExponentialSum_sub_common_shift_le
     (fun n => fordShiftedLogPhase n u t)
     (fun n => norm_fordShiftedLogPhase n u t) hq
 
+/-- Sharp `2*q-1` version of the source/common-block translation bound. -/
+theorem norm_fordShiftedExponentialSum_sub_common_shift_le_sharp
+    {N R q : ℕ} {u t : ℝ} (hR : 1 ≤ R) (hq : 1 ≤ q) :
+    ‖fordShiftedExponentialSum N R u t -
+        ∑ n ∈ Finset.Ioc N (R - 1),
+          fordShiftedLogPhase (n + q) u t‖ ≤
+      2 * (q : ℝ) - 1 := by
+  unfold fordShiftedExponentialSum
+  rw [ford_sum_common_shift_eq_translated
+    (fun n => fordShiftedLogPhase n u t) N R q]
+  exact norm_sum_Ioc_sub_translated_le_sharp
+    (fun n => fordShiftedLogPhase n u t)
+    (fun n => norm_fordShiftedLogPhase n u t) hR hq
+
 #print axioms fordShiftedLogPhase_add_factor
 #print axioms ford_sum_common_shift_eq_translated
 #print axioms norm_sum_Ioc_sub_translated_le
 #print axioms norm_fordShiftedExponentialSum_sub_common_shift_le
+#print axioms norm_sum_Ioc_sub_translated_le_sharp
+#print axioms norm_fordShiftedExponentialSum_sub_common_shift_le_sharp
 
 end
 

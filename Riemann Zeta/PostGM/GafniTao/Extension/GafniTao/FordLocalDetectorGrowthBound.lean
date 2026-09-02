@@ -1,5 +1,6 @@
 import GafniTao.FordShiftedLeftIntegrability
 import GafniTao.FordShiftedPoleBound
+import GafniTao.FordGeneralShiftedLeft
 
 /-!
 # Ford's local detector with every contour term bounded
@@ -30,8 +31,9 @@ private theorem fordPhysicalScale_mono
 set_option maxHeartbeats 1200000 in
 /-- Conditional on Ford's published zeta-growth theorem, the selected local
 detector has no remaining contour integral or horizontal-remainder term. -/
-theorem eventually_exists_fordLocalDisk_detector_growthBound
-    (hFord : FordZetaGrowthBound)
+theorem eventually_exists_fordLocalDisk_detector_general_growthBound
+    {A B : ℝ} (hFord : FordGeneralZetaGrowthBound A B)
+    (hA : 1 ≤ A) (hB : 0 ≤ B)
     {t R : ℝ} (ht : 3 ≤ t) (hR : 0 < R) (hRUpper : R ≤ 1 / 4) :
     ∀ ε : ℝ, 0 < ε →
       ∃ T0 : ℝ, ∀ {T : ℝ}, T0 ≤ T → 8 ≤ T →
@@ -47,7 +49,7 @@ theorem eventually_exists_fordLocalDisk_detector_growthBound
               (fordLocalCotUniformLowerConstant / R)) +
             eta' / (Real.pi * t ^ 2) +
             Real.log (1 + 1 / (3 * R)) / (2 * eta') +
-            2 * fordShiftedLeftHighMajorant eta'
+            2 * fordGeneralShiftedLeftHighMajorant A B eta'
               (1 + (6421 / 10000 : ℝ) * R) t +
             fordShiftedLeftLowMajorant eta' t
               (eta' - (6421 / 10000 : ℝ) * R) + ε := by
@@ -140,8 +142,8 @@ theorem eventually_exists_fordLocalDisk_detector_growthBound
     (uIcc_subset_uIcc hnegMem hposMem)
   have hintPos := hintFull.mono_set
     (uIcc_subset_uIcc hposMem right_mem_uIcc)
-  have hleft := fordShiftedDetectorPhysicalVerticalBulk_left_full_bound
-    hFord hetaPos hetaUpperPi hd hleftLower hleftUpper ht
+  have hleft := fordShiftedDetectorPhysicalVerticalBulk_left_general_full_bound
+    hFord hA hB hetaPos hetaUpperPi hd hleftLower hleftUpper ht
     hyLower hyUpper hintNeg hintLow hintPos
   have hsubset : fordLocalDiskZeros t R ⊆
       fordShiftedDetectorPhysicalZeros sigma eta' (-RLower) RUpper := by
@@ -208,6 +210,56 @@ theorem eventually_exists_fordLocalDisk_detector_growthBound
   dsimp only [sigma] at hdet hpole hleft ⊢
   linarith
 
+/-- The original numerical consumer is recovered by specializing the general
+left-edge theorem to Ford's published constants. -/
+theorem eventually_exists_fordLocalDisk_detector_growthBound
+    (hFord : FordZetaGrowthBound)
+    {t R : ℝ} (ht : 3 ≤ t) (hR : 0 < R) (hRUpper : R ≤ 1 / 4) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ T0 : ℝ, ∀ {T : ℝ}, T0 ≤ T → 8 ≤ T →
+        t + 2 * (3 * R) / Real.pi ≤ T →
+        ∃ eta' RUpper RLower : ℝ,
+          (5 / 2 : ℝ) * R < eta' ∧ eta' < (51 / 20 : ℝ) * R ∧
+          RUpper ∈ Set.Icc T (T + 1) ∧
+          RLower ∈ Set.Icc T (T + 1) ∧
+          -(fordDetectorZetaLogDeriv
+              (fordShiftedDetectorCenter
+                (1 + (6421 / 10000 : ℝ) * R) t)).re <
+            -((fordLocalDiskZeroCount t R : ℝ) *
+              (fordLocalCotUniformLowerConstant / R)) +
+            eta' / (Real.pi * t ^ 2) +
+            Real.log (1 + 1 / (3 * R)) / (2 * eta') +
+            2 * fordShiftedLeftHighMajorant eta'
+              (1 + (6421 / 10000 : ℝ) * R) t +
+            fordShiftedLeftLowMajorant eta' t
+              (eta' - (6421 / 10000 : ℝ) * R) + ε := by
+  have hGeneral : FordGeneralZetaGrowthBound 76.2 4.45 := by
+    exact hFord
+  intro ε hε
+  obtain ⟨T0, hT0⟩ :=
+    eventually_exists_fordLocalDisk_detector_general_growthBound
+      hGeneral (by norm_num) (by norm_num) ht hR hRUpper ε hε
+  refine ⟨T0, ?_⟩
+  intro T hT0T hT hTlarge
+  obtain ⟨eta', RUpper, RLower, hetaLow, hetaHigh,
+      hRU, hRL, hdet⟩ := hT0 hT0T hT hTlarge
+  have hetaPos : 0 < eta' := by nlinarith
+  have hmajor := fordGeneralShiftedLeftHighMajorant_le_coarse
+    (A := (76.2 : ℝ)) (B := (4.45 : ℝ))
+    (sigma := 1 + (6421 / 10000 : ℝ) * R)
+    (t := t) hetaPos ht
+  have hmajor' :
+      fordGeneralShiftedLeftHighMajorant 76.2 4.45 eta'
+          (1 + (6421 / 10000 : ℝ) * R) t ≤
+        fordShiftedLeftHighMajorant eta'
+          (1 + (6421 / 10000 : ℝ) * R) t := by
+    simpa [fordShiftedLeftHighMajorant,
+      fordGeneralAffineGrowthCoefficient, fordAffineGrowthCoefficient]
+      using hmajor
+  refine ⟨eta', RUpper, RLower, hetaLow, hetaHigh, hRU, hRL, ?_⟩
+  linarith
+
+#print axioms eventually_exists_fordLocalDisk_detector_general_growthBound
 #print axioms eventually_exists_fordLocalDisk_detector_growthBound
 
 end

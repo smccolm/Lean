@@ -29,6 +29,7 @@ theorem ford_one_sub_inv_pow_le_half
   have hright : (k : ℝ) * (q - 1) = -1 := by
     dsimp [q]
     field_simp
+    ring
   have hexp : Real.exp ((k : ℝ) * Real.log q) ≤ Real.exp (-1) := by
     rw [Real.exp_le_exp]
     linarith
@@ -59,8 +60,12 @@ theorem fordModerateMomentDelta_nonneg
     {k : ℕ} (hk : 4 ≤ k) :
     0 ≤ fordModerateMomentDelta k := by
   unfold fordModerateMomentDelta fordDeltaInitial35
-  have hkR : (0 : ℝ) ≤ k := by positivity
-  positivity
+  have hkR : (4 : ℝ) ≤ k := by exact_mod_cast hk
+  have hdelta : 0 ≤ ((k : ℝ) ^ 2 - k) / 2 := by nlinarith
+  have hq : 0 ≤ 1 - 1 / (k : ℝ) := by
+    rw [sub_nonneg, div_le_one (by positivity)]
+    linarith
+  exact mul_nonneg hdelta (pow_nonneg hq _)
 
 theorem fordModerateMomentDelta_le
     {k : ℕ} (hk : 4 ≤ k) :
