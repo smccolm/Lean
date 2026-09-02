@@ -243,9 +243,22 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
     exact (hLowCompare.trans hstd).trans hInvR
   unfold fordGeneralDetectorMajorant fordVKMajorantCoefficient
   dsimp [C0] at hHigh
-  nlinarith [mul_nonneg
-    (by positivity : 0 ≤ (2 * Real.log A + 18 * B + 4 / 3 +
-      (9 * B + 2 / 3) * fordSechLogMoment) / 5) hD.le]
+  calc
+    eta / (Real.pi * t ^ 2) +
+          Real.log (1 + 1 / (1 + lambda + eta - 1)) / (2 * eta) +
+          2 * fordGeneralShiftedLeftHighMajorant A B eta (1 + lambda) t +
+          fordShiftedLeftLowMajorant eta t (eta - (1 + lambda - 1)) ≤
+        vinogradovKorobovDenominator t +
+          vinogradovKorobovDenominator t +
+          ((2 * Real.log A + 18 * B + 4 / 3 +
+            (9 * B + 2 / 3) * fordSechLogMoment) / 5) *
+              vinogradovKorobovDenominator t +
+          vinogradovKorobovDenominator t := by
+      exact add_le_add (add_le_add (add_le_add hPole hRight) hHigh)
+        (by simpa using hLow)
+    _ = (3 + (2 * Real.log A + 18 * B + 4 / 3 +
+          (9 * B + 2 / 3) * fordSechLogMoment) / 5) *
+            vinogradovKorobovDenominator t := by ring
 
 #print axioms fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
 
