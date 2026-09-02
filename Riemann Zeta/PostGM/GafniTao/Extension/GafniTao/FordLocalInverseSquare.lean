@@ -405,7 +405,6 @@ theorem fordLocalAnnularInverseSquare_le_general_integral
           (analyticVanishingOrder riemannZeta rho : ℝ)) / q ^ 2 ≤
           (fordLocalDiskZeroCount t q : ℝ) / q ^ 2 := by
         gcongr
-        exact hcountReal
       _ ≤ fordGeneralLocalCountConstant *
           fordGeneralLocalCountScale A B t q / q ^ 2 := by
         exact div_le_div_of_nonneg_right hlocal.le hqSq
@@ -427,7 +426,6 @@ theorem fordLocalAnnularInverseSquare_le_general_integral
       (2 / u ^ 3) * (fordLocalAnnulusCumulative t v q u : ℝ) ≤
           (2 / u ^ 3) * (fordLocalDiskZeroCount t u : ℝ) := by
         gcongr
-        exact_mod_cast hcount
       _ ≤ (2 / u ^ 3) *
           (fordGeneralLocalCountConstant *
             fordGeneralLocalCountScale A B t u) := by
@@ -435,8 +433,136 @@ theorem fordLocalAnnularInverseSquare_le_general_integral
       _ = (2 / u ^ 3) * fordGeneralLocalCountConstant *
           fordGeneralLocalCountScale A B t u := by ring
 
+/-- Radius-uniform version of the Richert local-count scale on `[v,q]`. -/
+noncomputable def fordGeneralLocalCountScaleUpper
+    (A B t v q : ℝ) : ℝ :=
+  1 + Real.log A - Real.log v + Real.log (Real.log t) +
+    B * (2 * q) ^ (3 / 2 : ℝ) * Real.log t
+
+theorem fordGeneralLocalCountScale_le_upper
+    {A B t v q u : ℝ} (hB : 0 ≤ B) (ht : 100 ≤ t)
+    (hv : 0 < v) (hu : u ∈ Set.Icc v q) :
+    fordGeneralLocalCountScale A B t u ≤
+      fordGeneralLocalCountScaleUpper A B t v q := by
+  have huPos : 0 < u := hv.trans_le hu.1
+  have hqPos : 0 < q := huPos.trans_le hu.2
+  have hlog : Real.log v ≤ Real.log u :=
+    Real.strictMonoOn_log.monotoneOn hv huPos hu.1
+  have hbase : 2 * u ≤ 2 * q :=
+    mul_le_mul_of_nonneg_left hu.2 (by norm_num)
+  have hpow : (2 * u) ^ (3 / 2 : ℝ) ≤
+      (2 * q) ^ (3 / 2 : ℝ) :=
+    Real.rpow_le_rpow (by positivity) hbase (by norm_num)
+  have hlogt : 0 ≤ Real.log t := Real.log_nonneg (by linarith)
+  have hmain : B * (2 * u) ^ (3 / 2 : ℝ) * Real.log t ≤
+      B * (2 * q) ^ (3 / 2 : ℝ) * Real.log t := by
+    gcongr
+  unfold fordGeneralLocalCountScale fordGeneralLocalCountScaleUpper
+  linarith
+
+theorem fordGeneralLocalCountScaleUpper_nonneg
+    {A B t v q : ℝ} (hA : 1 ≤ A) (hB : 0 ≤ B)
+    (ht : 100 ≤ t) (hv : 0 < v) (hvq : v ≤ q)
+    (hq : q ≤ 1 / 4) :
+    0 ≤ fordGeneralLocalCountScaleUpper A B t v q := by
+  have hscale := fordGeneralLocalCountScale_nonneg
+    hA hB ht hv (hvq.trans hq)
+  exact hscale.trans (fordGeneralLocalCountScale_le_upper
+    hB ht hv ⟨le_rfl, hvq⟩)
+
+theorem integral_fordGeneralLocalInverseSquareIntegrand_le
+    {A B t v q : ℝ} (hA : 1 ≤ A) (hB : 0 ≤ B)
+    (ht : 100 ≤ t) (hv : 0 < v) (hvq : v ≤ q)
+    (hq : q ≤ 1 / 4) :
+    (∫ u : ℝ in v..q,
+      fordGeneralLocalInverseSquareIntegrand A B t u) ≤
+      fordGeneralLocalCountConstant *
+        fordGeneralLocalCountScaleUpper A B t v q *
+          (1 / v ^ 2 - 1 / q ^ 2) := by
+  let K := fordGeneralLocalCountConstant *
+    fordGeneralLocalCountScaleUpper A B t v q
+  have hK : 0 ≤ K := mul_nonneg fordGeneralLocalCountConstant_pos.le
+    (fordGeneralLocalCountScaleUpper_nonneg hA hB ht hv hvq hq)
+  have hkernelInt : IntervalIntegrable (fun u : ℝ => 2 / u ^ 3)
+      volume v q := by
+    apply ContinuousOn.intervalIntegrable
+    apply ContinuousOn.div continuousOn_const
+    · fun_prop
+    · intro u hu
+      rw [uIcc_of_le hvq] at hu
+      exact pow_ne_zero 3 (ne_of_gt (hv.trans_le hu.1))
+  have hcomparison :
+      (∫ u : ℝ in v..q,
+        fordGeneralLocalInverseSquareIntegrand A B t u) ≤
+        ∫ u : ℝ in v..q, K * (2 / u ^ 3) := by
+    refine intervalIntegral.integral_mono_on hvq
+      (intervalIntegrable_fordGeneralLocalInverseSquareIntegrand
+        (A := A) (B := B) (t := t) hv hvq)
+      (hkernelInt.const_mul K) ?_
+    intro u hu
+    have huPos : 0 < u := hv.trans_le hu.1
+    have hkernel : 0 ≤ 2 / u ^ 3 := by positivity
+    have hscale := fordGeneralLocalCountScale_le_upper
+      (A := A) hB ht hv hu
+    unfold fordGeneralLocalInverseSquareIntegrand
+    dsimp [K]
+    have hC := fordGeneralLocalCountConstant_pos.le
+    nlinarith [mul_le_mul_of_nonneg_left hscale
+      (mul_nonneg hkernel hC)]
+  have hIntValue :
+      (∫ u : ℝ in v..q, 2 / u ^ 3) =
+        1 / v ^ 2 - 1 / q ^ 2 := by
+    have h := inv_sq_eq_endpoint_add_integral hv hvq
+    linarith
+  calc
+    (∫ u : ℝ in v..q,
+      fordGeneralLocalInverseSquareIntegrand A B t u) ≤
+        ∫ u : ℝ in v..q, K * (2 / u ^ 3) := hcomparison
+    _ = K * (∫ u : ℝ in v..q, 2 / u ^ 3) := by
+      rw [intervalIntegral.integral_const_mul]
+    _ = fordGeneralLocalCountConstant *
+        fordGeneralLocalCountScaleUpper A B t v q *
+          (1 / v ^ 2 - 1 / q ^ 2) := by rw [hIntValue]
+
+/-- Closed source-scale form of the local annular inverse-square estimate.
+The `v⁻²` factor and all logarithmic dependences are explicit. -/
+theorem fordLocalAnnularInverseSquare_le_general_scale
+    {A B t v q : ℝ} (hFord : FordGeneralZetaGrowthBound A B)
+    (hA : 1 ≤ A) (hB : 0 ≤ B) (ht : 100 ≤ t)
+    (hv : 0 < v) (hvq : v ≤ q) (hq : q ≤ 1 / 4) :
+    fordLocalAnnularInverseSquare t v q ≤
+      fordGeneralLocalCountConstant *
+        fordGeneralLocalCountScaleUpper A B t v q / v ^ 2 := by
+  have hbase := fordLocalAnnularInverseSquare_le_general_integral
+    hFord hA hB ht hv hvq hq
+  have hint := integral_fordGeneralLocalInverseSquareIntegrand_le
+    hA hB ht hv hvq hq
+  have hscale := fordGeneralLocalCountScale_le_upper
+    (A := A) hB ht hv ⟨hvq, le_rfl⟩
+  have hC : 0 ≤ fordGeneralLocalCountConstant :=
+    fordGeneralLocalCountConstant_pos.le
+  have hqSq : 0 ≤ q ^ 2 := sq_nonneg q
+  calc
+    fordLocalAnnularInverseSquare t v q ≤
+        fordGeneralLocalCountConstant *
+            fordGeneralLocalCountScale A B t q / q ^ 2 +
+          ∫ u : ℝ in v..q,
+            fordGeneralLocalInverseSquareIntegrand A B t u := hbase
+    _ ≤ fordGeneralLocalCountConstant *
+            fordGeneralLocalCountScaleUpper A B t v q / q ^ 2 +
+          fordGeneralLocalCountConstant *
+            fordGeneralLocalCountScaleUpper A B t v q *
+              (1 / v ^ 2 - 1 / q ^ 2) := by
+      apply add_le_add
+      · exact div_le_div_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hscale hC) hqSq
+      · exact hint
+    _ = fordGeneralLocalCountConstant *
+        fordGeneralLocalCountScaleUpper A B t v q / v ^ 2 := by ring
+
 #print axioms fordLocalAnnularInverseSquare_eq_cumulative_integral
 #print axioms fordLocalAnnularInverseSquare_le_general_integral
+#print axioms fordLocalAnnularInverseSquare_le_general_scale
 
 end
 

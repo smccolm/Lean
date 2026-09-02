@@ -65,7 +65,7 @@ theorem fordKZeroNatShell_half_le_norm_sub
 unit shell. -/
 theorem norm_fordKZeroTerm_le_shell
     {F₀ : ℂ → ℂ} {s rho : ℂ} {D eta : ℝ} {n : ℕ}
-    (hs : 1 < s.re) (hD : 0 ≤ D)
+    (hs : 1 ≤ s.re) (hD : 0 ≤ D)
     (hn : 2 * (|s.im| + max eta 0 + 1) ≤ (n : ℝ))
     (hF₀ : ∀ z : ℂ, 0 ≤ z.re → eta ≤ ‖z‖ →
       ‖F₀ z‖ ≤ D / ‖z‖ ^ 2)
@@ -103,7 +103,7 @@ theorem norm_fordKZeroTerm_le_shell
 /-- A literal shell has the summable `log(n)/n²` majorant. -/
 theorem norm_fordKZeroShellSum_le
     {F₀ : ℂ → ℂ} {s : ℂ} {D eta : ℝ} {n : ℕ}
-    (hs : 1 < s.re) (hD : 0 ≤ D) (hnEight : 8 ≤ n)
+    (hs : 1 ≤ s.re) (hD : 0 ≤ D) (hnEight : 8 ≤ n)
     (hnFar : 2 * (|s.im| + max eta 0 + 1) ≤ (n : ℝ))
     (hF₀ : ∀ z : ℂ, 0 ≤ z.re → eta ≤ ‖z‖ →
       ‖F₀ z‖ ≤ D / ‖z‖ ^ 2) :
@@ -186,7 +186,7 @@ theorem summable_ford_log_nat_add_two_div_sq :
 shells. -/
 theorem summable_fordKZeroShellSum
     {F₀ : ℂ → ℂ} {s : ℂ} {D eta : ℝ}
-    (hs : 1 < s.re) (hD : 0 ≤ D)
+    (hs : 1 ≤ s.re) (hD : 0 ≤ D)
     (hF₀ : ∀ z : ℂ, 0 ≤ z.re → eta ≤ ‖z‖ →
       ‖F₀ z‖ ≤ D / ‖z‖ ^ 2) :
     Summable (fordKZeroShellSum F₀ s) := by
@@ -241,7 +241,7 @@ theorem sum_zeroSet_nat_eq_sum_fordKZeroShellSum
 complete zero series along integral heights. -/
 theorem tendsto_sum_zeroSet_nat_fordKZeroTerm
     {F₀ : ℂ → ℂ} {s : ℂ} {D eta : ℝ}
-    (hs : 1 < s.re) (hD : 0 ≤ D)
+    (hs : 1 ≤ s.re) (hD : 0 ≤ D)
     (hF₀ : ∀ z : ℂ, 0 ≤ z.re → eta ≤ ‖z‖ →
       ‖F₀ z‖ ≤ D / ‖z‖ ^ 2) :
     Tendsto

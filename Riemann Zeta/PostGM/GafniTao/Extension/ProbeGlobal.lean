@@ -13,3 +13,8 @@ import GafniTao.FordBoundedHeight
 #check map_sub
 #check star_add
 #check star_mul
+#check Nat.le_ceil
+#check Nat.ceil_le
+#check Nat.cast_le
+#check Filter.eventually_atTop
+#check Filter.eventually_atTop.2

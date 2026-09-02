@@ -60,7 +60,7 @@ theorem tendsto_sum_zeroSet_selected_fordKZeroTerm
     Tendsto
       (fun n : ℕ => ∑ rho ∈ zeroSet 0 (R n), fordKZeroTerm F₀ s rho)
       atTop (nhds (fordKZeroSeries F₀ s)) := by
-  have hint := tendsto_sum_zeroSet_nat_fordKZeroTerm hs hD hF₀
+  have hint := tendsto_sum_zeroSet_nat_fordKZeroTerm hs.le hD hF₀
   let E : ℕ → ℂ := fun n =>
     ∑ rho ∈ sharpPerronZeroShell (n : ℝ) (R n), fordKZeroTerm F₀ s rho
   have hmajor : Tendsto (fun n : ℕ =>
