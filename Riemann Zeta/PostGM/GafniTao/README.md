@@ -25,32 +25,67 @@ Most of the downstream Section 2 zero-density-to-exceptional-set mechanism is no
 - conditional assembled max-forms of Gafni-Tao Theorems 1.2 and 1.3;
 - the frozen Guth-Maynard `30/13` ordinary-density consumer and associated threshold arithmetic.
 
-The main mathematical frontier has moved upstream into the source analytic estimates needed by the near-one argument.
+The main mathematical frontier has moved upstream into Ford's source analysis.
 
-A substantial Ford source-development program is now root-integrated. The root contains not only the previously integrated trigonometric, Euler-product, detector, left-line, Laplace, K-formula, and logarithmic-derivative branches, but also a newer source-faithful Vinogradov/Lemma-5.1/combinatorial chain covering:
+There are now three distinct Ford layers:
 
-- Vinogradov moment and counting identities;
-- power interpolation and logarithmic Taylor control;
-- the entry into Ford Lemma 5.1;
-- first and second Holder steps;
-- fiber decompositions;
-- equations (5.2), (5.3), and (5.4);
-- spacing counts;
-- tent weights and tent series;
-- resonance counting;
-- shift and averaging arguments;
-- exponential normalization;
-- the real-parameter Ford Lemma 5.1 interface;
-- Vandermonde determinants;
-- polynomial systems;
-- finite differences;
-- complete counts;
-- prime selection;
-- Newton congruence machinery.
+1. a large **root-integrated analytic and combinatorial source chain**;
+2. a **partially synchronized central audit** covering substantial pieces of that chain;
+3. a still-unintegrated **development workbench** that now proves qualitative versions of Ford's exponential-sum and zeta-growth conclusions.
 
-This newer chain is **root-integrated**, but its principal new endpoints have not yet been synchronized into the central `Audit.lean`.
+The strongest new development result is no longer merely infrastructure.
 
-A still newer Ford workbench also exists in the repository and remains outside the package root. It includes shifted zero-detector machinery, local zero-disk detector estimates, Ford Theorem 2 / exponential-sum analysis, cubic sum-to-integral estimates, and exact numerical certificate machinery.
+The workbench contains a proved qualitative exponential-sum theorem:
+
+```lean
+GafniTao.ford_exponential_sum_qualitative
+```
+
+of the form:
+
+```math
+\left\|
+\sum_{N<n\le R}
+(n+u)^{-it}
+\right\|
+\le
+C
+N^{1-\frac{1}{3000000\lambda^{2}}}
+```
+
+for an explicit internally constructed coefficient `C`.
+
+It also contains a proved qualitative Richert-Ford zeta-growth theorem:
+
+```lean
+GafniTao.ford_qualitative_general_zeta_growth
+```
+
+realizing:
+
+```math
+\left|
+\zeta(\sigma+it)
+\right|
+\le
+A
+|t|^{B(1-\sigma)^{3/2}}
+(\log |t|)^{2/3}
+```
+
+for explicit positive internally constructed constants `A` and `B`.
+
+A further development theorem:
+
+```lean
+GafniTao.fordLocalDiskZeroCount_le_general_majorant
+```
+
+turns such a general zeta-growth estimate into an explicit multiplicity-weighted local zero-count bound of the form needed by the Vinogradov-Korobov argument.
+
+These results show that the qualitative Ford method has now been carried through a substantial analytic path in Lean.
+
+They are **not yet part of the package root or central audit**, and they do **not** yet discharge the optimized source contracts used by the current Gafni-Tao endpoint.
 
 The principal source contracts remain open:
 
@@ -60,13 +95,11 @@ GafniTao.FordNearOneDensityEstimate
 GafniTao.FordAsymptoticZeroFree
 ```
 
-The unintegrated exponential-sum development also defines:
+The optimized exponential-sum contract also remains open:
 
 ```lean
 GafniTao.FordTheorem2
 ```
-
-as a source contract.
 
 The complete Gafni-Tao formalization is therefore **not yet claimed**.
 
@@ -149,261 +182,28 @@ Most of this transfer chain now exists as Lean theorems.
 The unresolved dependency is primarily upstream:
 
 ```text
-Ford / Vinogradov-Korobov source mathematics
-                    |
-                    v
-          near-one source outputs
-                    |
-                    v
-      already-built right-edge branch
-                    |
-                    v
-       already-built GT transfer chain
-                    |
-                    v
-      unconditional source theorem
+Ford source analysis
+        |
+        +---------------------+
+        |                     |
+        v                     v
+zero-free region        near-one density
+        |                     |
+        +----------+----------+
+                   |
+                   v
+          right-edge decay
+                   |
+                   v
+      existing GT Section 2 chain
+                   |
+                   v
+       unconditional GT theorem
 ```
 
 ---
 
-# Ford development frontiers
-
-There are now three distinct Ford frontiers.
-
-They must not be conflated.
-
----
-
-## 1. Root-integrated and centrally audited Ford chain
-
-The package root imports a substantial Ford analytic chain whose established source-sensitive endpoints are already represented in the central audit.
-
-This includes:
-
-```text
-FordTrigonometric
-FordFourierKernel
-FordEulerProduct
-FordLemma51
-FordZetaBasic
-
-FordZeroDetectorKernel
-FordZeroDetectorResidues
-FordCotangentPositivity
-FordCotangentCorrection
-FordZeroDetectorCenter
-FordZeroDetectorZetaResidues
-FordZeroDetectorDifferentiability
-FordZeroDetectorRectangle
-FordZeroDetectorFinite
-FordZeroDetectorFiniteEdges
-FordZeroDetectorHorizontalDecay
-FordLogNormDerivative
-FordZeroDetectorVerticalParts
-FordZeroDetectorVerticalLog
-FordZeroDetectorPhysicalEdges
-
-FordLeftLine
-FordLeftLineIntegral
-
-FordKFiniteResidues
-FordKFiniteRectangle
-FordLaplaceInversion
-FordLaplaceSource
-FordKFiniteEdges
-FordKHorizontal
-FordKRightLine
-FordKSourceSeries
-FordKZeroSeries
-FordKInfiniteRectangle
-FordKLeftBound
-FordKFormula
-
-FordZeroDetectorEdges
-FordZetaConvex
-FordZetaBasicExplicit
-FordLogDerivative
-```
-
-Representative audited endpoints include:
-
-```lean
-GafniTao.ford_lemma_5_1
-
-GafniTao.ford_zeta_basic_upper
-GafniTao.ford_zeta_basic_reciprocal_lower
-GafniTao.ford_zeta_basic_logDerivative
-
-GafniTao.fordZetaDetector_rectangleIntegral_eq_residue_sum
-GafniTao.fordZetaDetector_rectangleIntegral_eq_explicit_sum
-
-GafniTao.fordK_infinite_rectangle_native
-GafniTao.fordK_formula_native
-GafniTao.fordK_formula_with_log_error_native
-```
-
-This is integrated proof infrastructure.
-
-It does not yet discharge the final Ford source contracts.
-
----
-
-## 2. Newly root-integrated Ford source chain, central-audit sync pending
-
-The package root now also imports:
-
-```text
-FordVinogradovIntegral
-FordPowerInterpolation
-FordLogTaylor
-FordTaylorPhase
-FordLemma51Entry
-FordFiniteHolder
-FordLemma51Holder
-FordSecondHolder
-FordLemma51Fibers
-FordLemma51Equation53
-FordIntegerInterval
-FordSpacingCount
-FordTentWeights
-FordTentSeries
-FordEquation54Setup
-FordEquation54Expansion
-FordEquation54Fourier
-FordEquation54Interchange
-FordEquation54Bound
-FordEquation54Resonance
-FordEquation54Counting
-FordEquation54Window
-FordLemma51Spacing
-FordLemma51W
-FordLemma51Shift
-FordLemma51Average
-FordEquation52
-FordLemma51Exponential
-FordLemma51Normalize
-FordLemma51Real
-FordVandermondeDeterminant
-FordPolynomialSystem
-FordFiniteDifference
-FordIntegerPolynomialSystem
-FordCompleteCounts
-FordPrimeSelection
-FordNewtonCongruence
-```
-
-This is no longer merely a collection of experimental files.
-
-It is part of the package root.
-
-The newly integrated chain contains source-oriented mathematics including:
-
-- Ford's Vinogradov moment/counting setup;
-- torus Fourier orthogonality;
-- the source-equation route into Lemma 5.1;
-- Holder and fiber decompositions;
-- spacing and resonance estimates;
-- equations (5.2), (5.3), and (5.4);
-- real-valued source normalization;
-- polynomial and congruence infrastructure.
-
-Representative results include the Vinogradov torus mean identity:
-
-```lean
-GafniTao.ford_vinogradov_torus_mean_eq
-GafniTao.ford_vinogradov_torus_real_mean_eq
-```
-
-the real-parameter Lemma 5.1 bridge:
-
-```lean
-GafniTao.fordLemma51SourceCore_eq_separated
-GafniTao.fordLemma51_centralTerm_le_sourceCore
-```
-
-and the Newton-congruence conclusion:
-
-```lean
-GafniTao.ford_multiset_eq_of_powerSums_eq
-```
-
-These newer root-integrated theorem families are not yet represented in the central `Audit.lean`.
-
-That audit synchronization is now an explicit project task.
-
----
-
-## 3. Development workbench still outside the package root
-
-A further Ford development layer exists under:
-
-```text
-Extension/GafniTao/
-```
-
-but remains outside `GafniTao.lean`.
-
-It includes substantial work on:
-
-- shifted zero-detector rectangles;
-- asymmetric detector edges;
-- selected shifts and heights;
-- shifted detector limits;
-- explicit pole corrections;
-- local zero disks;
-- local cotangent lower bounds;
-- local detector assembly;
-- local detector growth bounds;
-- Ford's shifted exponential sum;
-- dyadic decomposition;
-- the literal cubic exponent;
-- cubic scaling and unimodality;
-- normalized integrals;
-- exact polynomial certificates;
-- exact Bernstein certificates.
-
-Representative files include:
-
-```text
-FordShiftedZeroDetectorRectangle.lean
-FordShiftedZeroDetectorAsymmetricRectangle.lean
-FordShiftedZeroDetectorAsymmetricEdges.lean
-FordShiftedZeroDetectorFinite.lean
-FordShiftedZeroDetectorHorizontalBound.lean
-FordShiftedZeroDetectorVerticalEdges.lean
-FordShiftedZeroDetectorAssembly.lean
-FordShiftedZeroDetectorInequality.lean
-FordShiftedZeroDetectorLimit.lean
-
-FordLocalDiskZeros.lean
-FordLocalCotangentLower.lean
-FordLocalCotangentUniform.lean
-FordLocalCotangentSelected.lean
-FordLocalDetectorAssembly.lean
-FordLocalDetectorGrowthBound.lean
-
-FordExponentialSum.lean
-FordExponentialSumAbel.lean
-FordDyadicDecomposition.lean
-FordDyadicExponent.lean
-FordCubicExponent.lean
-FordCubicScaling.lean
-FordCubicIntegral.lean
-FordNormalizedIntegral.lean
-FordNumericalIntegralUpper.lean
-
-FordPolynomialCertificate.lean
-FordBernsteinCertificate.lean
-FordBernsteinDirect.lean
-```
-
-This development is mathematically significant.
-
-It does not count as integrated proof infrastructure until deliberately imported through the root and included in the source-sensitive audit where appropriate.
-
----
-
-# Current status by proof layer
+# Current status
 
 | Proof layer | Current state |
 |---|---|
@@ -427,34 +227,26 @@ It does not count as integrated proof infrastructure until deliberately imported
 | Refined Theorem 1.3 max-form | Implemented conditionally |
 | Ordinary Theorem 1.2 max-form | Implemented conditionally |
 | Frozen GM `30/13` consumer | Implemented |
-| Ford trigonometric source infrastructure | Root-integrated and audited |
-| Ford Fourier-kernel infrastructure | Root-integrated and audited |
-| Ford Euler-product infrastructure | Root-integrated and audited |
-| Ford source Lemma 5.1 | Root-integrated and audited |
-| Ford detector kernel/residue chain | Root-integrated and audited |
-| Ford finite detector rectangles and edges | Root-integrated and audited |
-| Ford left-line / Laplace chain | Root-integrated and audited |
-| Ford K-formula | Root-integrated and audited |
-| Basic explicit Ford zeta bounds | Root-integrated and audited |
-| Ford logarithmic-derivative infrastructure | Root-integrated and audited |
-| Vinogradov moment/counting chain | Root-integrated, central-audit sync pending |
-| Source-equation Lemma 5.1 derivation | Root-integrated, central-audit sync pending |
-| Spacing / tent / resonance chain | Root-integrated, central-audit sync pending |
-| Vandermonde / polynomial-system chain | Root-integrated, central-audit sync pending |
-| Complete counts / prime selection / Newton congruence | Root-integrated, central-audit sync pending |
-| Shifted detector workbench | Present, not root-integrated |
-| Local zero-disk detector workbench | Present, not root-integrated |
-| Ford Theorem 2 workbench | Present, not root-integrated |
-| Exact numerical certificate workbench | Present, not root-integrated |
-| `FordZetaGrowthBound` | Source contract still open |
+| Ford analytic detector / K-formula chain | Root-integrated |
+| Ford Vinogradov / Lemma 5.1 source chain | Root-integrated |
+| Ford Lemma 3.2 source chain | Root-integrated |
+| Ford Lemma 3.3 finite source theorem | Root-integrated and centrally audited |
+| Ford Lemma 3.4 arithmetic / scheduling machinery | Substantially centrally audited |
+| Effective canonical prime packet | Centrally audited |
+| Ford count monotonicity | Root-integrated and centrally audited |
+| Ford Lemma 6.3 moment-integral entry | Root-integrated |
+| Qualitative Ford exponential-sum theorem | Proved in workbench, not root-integrated |
+| Qualitative Ford zeta-growth theorem | Proved in workbench, not root-integrated |
+| Qualitative local zero-count theorem | Proved in workbench, not root-integrated |
+| Optimized `FordTheorem2` | Source contract still open |
+| Optimized `FordZetaGrowthBound` | Source contract still open |
 | `FordNearOneDensityEstimate` | Source contract still open |
 | `FordAsymptoticZeroFree` | Source contract still open |
-| `FordTheorem2` | Source contract still open |
 | Exact unconditional Theorem 1.3 | Open |
 | Exact unconditional Theorem 1.2 | Open |
 | Theorem 1.1 | Open |
 | Pintz / Heath-Brown Section 3 inputs | Open |
-| Published sample bounds | Open |
+| Published numerical sample bounds | Open |
 | Certified full Section 3 optimizer | Open |
 | Final isolated release audit | Open |
 
@@ -481,17 +273,19 @@ x\in[X,2X]:
 \right\}
 ```
 
-The project defines the fixed-threshold exceptional exponent:
+The project defines:
 
 ```math
 \mu_{\delta}(\theta)
 ```
 
-and the global exceptional exponent:
+and:
 
 ```math
 \mu(\theta)
 ```
+
+with the required measure-theoretic and extended-real infrastructure.
 
 The implementation includes:
 
@@ -500,39 +294,36 @@ The implementation includes:
 - threshold monotonicity;
 - fixed-power bounds;
 - epsilon-exponent bounds;
-- extended-real exponent machinery;
 - eventual-empty behavior;
 - countable positive-threshold reduction.
 
 ---
 
-## 2. Zero counting and multiplicity
+## 2. Zero counting and additive energy
 
-The project contains native infrastructure for the nontrivial zeros of the Riemann zeta function and the multiplicity-weighted zero counts required by the paper.
+The project contains multiplicity-sensitive infrastructure for the nontrivial zeros of the Riemann zeta function.
 
-This includes:
+The ordinary count is represented by:
 
 ```math
 N(\sigma,T)
 ```
 
-and:
+and the four-zero additive-energy quantity by:
 
 ```math
 N^{\ast}(\sigma,T)
 ```
 
-The four-zero quantity uses ordered zero occurrences with analytic multiplicity.
+The four-zero quantity counts ordered zero occurrences with analytic multiplicity.
 
-It is not replaced by an unweighted additive energy of distinct ordinates.
-
-The associated exponent interfaces `A` and `A*` feed the ordinary and refined moment arguments.
+The associated exponent interfaces `A` and `A*` feed the second- and fourth-moment branches.
 
 ---
 
 ## 3. Local arithmetic entry
 
-The local arithmetic chain includes:
+The local arithmetic chain contains:
 
 - the Mangoldt interval identity;
 - prime and prime-power decomposition;
@@ -554,24 +345,21 @@ The explicit-formula branch has a native endpoint:
 GafniTao.sharpTruncatedExplicitFormulaBound_native
 ```
 
-The supporting sharp-Perron chain includes:
+The supporting sharp-Perron chain handles:
 
 - finite Mangoldt Perron identities;
 - logarithmic-derivative expansions;
-- Perron kernels;
 - contour rectangles;
 - residue calculations;
-- analytic multiplicity in the zero shell;
-- right-edge estimates;
-- horizontal-edge estimates;
-- left-edge estimates;
+- analytic zero multiplicity;
+- right, horizontal, and left edges;
 - functional-equation input;
 - selected good heights;
 - low-height treatment;
 - arbitrary real endpoints;
 - endpoint-uniform cutoff estimates.
 
-The physical parameter range includes:
+The physical range includes:
 
 ```math
 2 \le T \le x
@@ -584,9 +372,7 @@ GafniTao.sharpPsiTruncationBound_native
 GafniTao.sharpTruncatedExplicitFormulaBound_native
 ```
 
-The sharp explicit formula is no longer a principal unresolved analytic source input.
-
-A remaining interface task is to stop exposing it as a premise in public wrappers when the native theorem can be supplied internally.
+The sharp explicit formula is no longer one of the principal unresolved analytic inputs.
 
 ---
 
@@ -594,33 +380,17 @@ A remaining interface task is to stop exposing it as a premise in public wrapper
 
 The second- and fourth-moment branches are implemented at the multiplicity-sensitive level required by the source argument.
 
-The second moment consumes the actual zero count.
+The second moment consumes the ordinary zero count.
 
 The fourth moment consumes the actual multiplicity-weighted four-zero energy.
 
-The refined route therefore genuinely retains the `A*` contribution.
+The refined route therefore retains the `A*` contribution.
 
 ---
 
-## 6. Finite half-open strips
+## 6. Equation (2.7)
 
-The finite-strip layer includes:
-
-- half-open strip indexing;
-- upper-boundary treatment;
-- reconstruction of the full zero sum;
-- exclusion of zeros on `Re rho = 1`;
-- strip-wise second-moment estimates;
-- strip-wise fourth-moment estimates;
-- right-edge strip handling.
-
-This machinery feeds the equation (2.7) argument.
-
----
-
-## 7. Equation (2.7)
-
-The equation (2.7) branch is implemented downstream.
+The finite half-open strip decomposition and equation (2.7) machinery are implemented.
 
 The strip alternatives are:
 
@@ -628,7 +398,7 @@ The strip alternatives are:
 small-density strip
         |
         v
-eventually empty event
+eventually empty
 ```
 
 ```text
@@ -639,7 +409,7 @@ near-one density + zero-free input
 ```
 
 ```text
-ordinary strip
+remaining strip
         |
         +----------+
         |          |
@@ -652,8 +422,6 @@ ordinary strip
           Markov
 ```
 
-These strip estimates are assembled into a measure bound for the full zero-large-value event.
-
 Representative results include:
 
 ```lean
@@ -665,9 +433,9 @@ GafniTao.equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs
 
 ---
 
-## 8. Limit assembly
+## 7. Limit and global-cover assembly
 
-The project contains the limiting machinery needed to move from finite strips and epsilon-dependent estimates to fixed-power exceptional-measure bounds.
+The project contains the limiting machinery required to pass from finite strips and epsilon-dependent estimates to fixed-power exceptional-measure bounds.
 
 Representative theorems include:
 
@@ -675,29 +443,10 @@ Representative theorems include:
 GafniTao.exists_refined_limit_witness
 GafniTao.equation27FullZeroMeasure_fixedPowerBound_of_refined_lt
 GafniTao.localExceptionalMeasure_fixedPowerBound_of_source_inputs
-```
-
-The strip resolution and epsilon margins are selected relative to the candidate exponent.
-
-The result is a fixed-power local exceptional-measure bound.
-
----
-
-## 9. Local-to-global exceptional cover
-
-The local result is promoted through the finite multiplicative cover to the original exceptional set.
-
-The central audit contains:
-
-```lean
-GafniTao.shortIntervalExceptionalSet_subset_local_union
-GafniTao.localShortIntervalExceptionalSet_subset_sourceInterval
-GafniTao.exceptionalMeasure_le_sum_local
-GafniTao.exceptionalMeasure_fixedPowerBound_of_local
 GafniTao.exceptionalMeasure_fixedPowerBound_of_source_inputs
 ```
 
-The downstream proof therefore reaches the actual exceptional exponent.
+The downstream argument therefore reaches the actual global exceptional exponent.
 
 ---
 
@@ -723,11 +472,11 @@ Schematically:
 \right\}
 ```
 
-where the refined term retains both the ordinary density exponent and the four-zero energy exponent.
+where the refined term retains both ordinary zero density and four-zero additive energy.
 
-This is a genuine Lean theorem on the central audit surface.
+This is a genuine Lean theorem.
 
-It remains conditional on named analytic inputs.
+It remains conditional on named source inputs.
 
 It is not yet the completed unconditional source Theorem 1.3.
 
@@ -755,15 +504,13 @@ Schematically:
 
 It is also conditional.
 
-The exact unconditional source statement remains open.
-
 ---
 
-# Exact theorem-statement closure
+# Exact source-theorem closure
 
-The current max-form results are not automatically identical to the principal statements in the source paper.
+The principal refined source target retains the epsilon infimum.
 
-The refined source target retains the epsilon infimum:
+Schematically:
 
 ```math
 \mu(\theta)
@@ -823,21 +570,362 @@ A_{0}
 
 and its elementary threshold arithmetic are already represented in Lean.
 
-The later Section 3 numerical results require additional source inputs.
+---
+
+# Ford source program
+
+## Layer A: integrated analytic machinery
+
+The root-integrated Ford analytic branch contains substantial source analysis through:
+
+```text
+trigonometric positivity
+Fourier kernels
+Euler products and prime-power expansions
+Ford Lemma 5.1
+cotangent detector kernels
+detector residues
+finite detector rectangles
+physical detector edges
+left-line analysis
+Laplace inversion
+K-function residues and contours
+K zero series
+infinite-rectangle limits
+native K-formula
+explicit zeta estimates
+logarithmic-derivative infrastructure
+```
+
+Representative audited endpoints include:
+
+```lean
+GafniTao.ford_lemma_5_1
+GafniTao.fordZetaDetector_rectangleIntegral_eq_residue_sum
+GafniTao.fordZetaDetector_rectangleIntegral_eq_explicit_sum
+GafniTao.fordK_infinite_rectangle_native
+GafniTao.fordK_formula_native
+GafniTao.fordK_formula_with_log_error_native
+```
+
+This is genuine integrated Ford analysis.
+
+It does not by itself discharge the optimized source contracts.
 
 ---
 
-# Ford source contracts
+# Ford Vinogradov and Lemma 5.1 derivation
 
-## Ford zeta-growth theorem
+The root also contains a source-faithful derivation chain covering:
 
-The source contract is:
+```text
+Vinogradov moments
+power interpolation
+logarithmic Taylor estimates
+phase estimates
+Holder steps
+fiber decompositions
+equations (5.2), (5.3), and (5.4)
+spacing counts
+tent weights and tent series
+resonance counting
+shift and averaging
+exponential normalization
+real-parameter source interface
+```
+
+The source-scale real-parameter layer is important because Ford's published parameters are not all naturally integral.
+
+The root also contains the algebraic branch:
+
+```text
+Vandermonde determinant
+polynomial systems
+finite differences
+integer polynomial systems
+complete counts
+prime selection
+Newton congruence
+```
+
+---
+
+# Ford Lemma 3.2
+
+Ford Lemma 3.2 has advanced from infrastructure to a root-integrated source assembly.
+
+The chain now contains:
+
+```text
+power-residue fibres
+        |
+        v
+Jacobian prime avoidance
+        |
+        v
+prime-power Newton systems
+        |
+        v
+prime-power lifts
+        |
+        v
+B-star bounds
+        |
+        v
+collision counts
+        |
+        v
+S3 / S4 / S6 analysis
+        |
+        v
+equation (3.4)
+        |
+        v
+equation (3.7)
+        |
+        v
+maximal K and repeated-coordinate control
+        |
+        v
+good-prime equation (3.3)
+        |
+        v
+finite Lemma 3.2 core
+        |
+        v
+source-scale Lemma 3.2
+```
+
+The root imports:
+
+```text
+FordPowerResidueFiber
+FordJacobianAvoidance
+FordLemma32Arithmetic
+FordPrimePowerNewton
+FordPrimePowerTriangular
+FordSourcePrimePowerSystem
+FordPrimePowerLifts
+FordBStarBound
+FordBStarSource
+FordBStarCongruence
+FordFiniteCollision
+FordBStarCollision
+FordS6Setup
+FordS6Signature
+FordS6Cauchy
+FordS6ToL
+FordEquation37S6
+FordEquation34AMGM
+FordEquation34Fourier
+FordFourierCollision
+FordEquation34Count
+FordEquation34S3Count
+FordEquation34SourceS3
+FordS4ToS6
+FordS4BoundaryRange
+FordS4Diagonal
+FordS4Resolution
+FordEquation37Source
+FordEquation33Source
+FordKMaximal
+FordKRepeatedCover
+FordKRepeatedBound
+FordKContradiction
+FordEquation33GoodPrime
+FordLemma32Finite
+FordLemma32Source
+FordPrimeSet
+```
+
+The source-level chain includes a canonical prime-packet formulation.
+
+The previous prime-packet placement gap has also moved forward: the central audit now includes effective estimates showing that the canonical Ford prime packet eventually lies in the required relative interval, including:
+
+```lean
+GafniTao.eventually_fordPrimeInterval_card_ge
+GafniTao.fordPrimeSet_le_of_interval_card
+GafniTao.eventually_fordPrimeSet_le_relative
+GafniTao.eventually_fordPrimeSet_le_two_mul
+GafniTao.exists_fordPrimeSet_relative_threshold
+```
+
+Thus the old standalone assumption that the selected packet lies below `2 * M` is no longer the only route available.
+
+---
+
+# Beyond Lemma 3.2
+
+The root has now moved into later Ford source mathematics.
+
+It imports:
+
+```text
+FordLemma33Finite
+FordCountMonotone
+FordLemma63MomentIntegral
+```
+
+The central audit explicitly includes:
+
+```lean
+GafniTao.ford_lemma_3_3_finite_source
+```
+
+along with substantial Lemma 3.4 exponent and scheduling arithmetic:
+
+```lean
+GafniTao.FordPhiSchedule.le_inv_r
+GafniTao.ford_lemma_3_4_inner_exponent_eq
+GafniTao.ford_lemma_3_4_exponent_cancellation
+GafniTao.ford_lemma_3_4_final_exponent_eq
+GafniTao.ford_lemma_3_4_terminal_constant
+GafniTao.ford_lemma_3_4_terminal_power
+GafniTao.ford_lemma_3_4_canonical_terminal_constant
+```
+
+The central audit also contains monotonicity of the complete Ford counts:
+
+```lean
+GafniTao.fordKCount_mono_Q
+GafniTao.fordLCount_mono_Q
+```
+
+The root's `FordLemma63MomentIntegral` branch connects the Vinogradov moment machinery to the later exponential-sum analysis.
+
+This means the formal source campaign has moved materially beyond Lemma 3.2.
+
+---
+
+# Qualitative Ford breakthrough in the development workbench
+
+A still-unintegrated workbench now proves a complete qualitative exponential-sum theorem.
+
+The theorem is:
+
+```lean
+GafniTao.ford_exponential_sum_qualitative
+```
+
+with:
+
+```lean
+FordExponentialSumEstimate
+  fordQualitativeCoefficient
+  3000000
+```
+
+The proof assembles six logarithmic-scale regimes and handles small integer endpoints.
+
+The exponent has the Vinogradov-Korobov form:
+
+```math
+1-\frac{1}{3000000\lambda^{2}}
+```
+
+This does **not** identify the coefficient with Ford's optimized source constants.
+
+It is nevertheless a complete proved qualitative exponential-sum estimate.
+
+---
+
+# Qualitative Richert-Ford zeta growth
+
+The workbench also defines the general interface:
+
+```lean
+GafniTao.FordGeneralZetaGrowthBound
+```
+
+and proves:
+
+```lean
+GafniTao.ford_qualitative_general_zeta_growth
+```
+
+for explicit internally constructed positive constants.
+
+The theorem has the source-shaped form:
+
+```math
+\left|
+\zeta(\sigma+it)
+\right|
+\le
+A
+|t|^{B(1-\sigma)^{3/2}}
+(\log |t|)^{2/3}
+```
+
+This is a major proof-of-method milestone.
+
+It establishes the qualitative Richert-Ford growth shape natively without relabeling it as the optimized Ford source contract.
+
+---
+
+# Qualitative local zero count
+
+The workbench further proves:
+
+```lean
+GafniTao.fordLocalDiskZeroCount_le_general_majorant
+```
+
+which turns any:
+
+```lean
+FordGeneralZetaGrowthBound A B
+```
+
+into an explicit multiplicity-weighted local zero-count majorant.
+
+The majorant visibly contains the expected terms:
+
+```text
+B * R^(3/2) * log t
+log A
+log(1/R)
+log log t
+```
+
+together with explicit detector-kernel constants.
+
+This moves the qualitative Ford chain toward the zero-free side of the Gafni-Tao near-one input.
+
+---
+
+# What remains open in Ford
+
+## Optimized Ford Theorem 2
+
+The source contract:
+
+```lean
+GafniTao.FordTheorem2
+```
+
+uses Ford's optimized constants:
+
+```text
+9.463
+133.66
+```
+
+The qualitative theorem does not prove this optimized statement.
+
+The exact source constants therefore remain open.
+
+---
+
+## Optimized Ford zeta-growth theorem
+
+The source contract:
 
 ```lean
 GafniTao.FordZetaGrowthBound
 ```
 
-It records:
+records the optimized estimate:
 
 ```math
 \left|
@@ -849,26 +937,26 @@ It records:
 (\log |t|)^{2/3}
 ```
 
-in the source range.
+The qualitative general-growth theorem proves the correct analytic shape, but not these optimized constants.
 
-This remains a proposition to be discharged by the native Ford source chain or by an explicitly accepted pinned theorem.
+The optimized contract remains open.
 
 ---
 
-## Ford near-one density theorem
+## Near-one density
 
-The source contract is:
+The source contract:
 
 ```lean
 GafniTao.FordNearOneDensityEstimate
 ```
 
-with the form:
+has the form:
 
 ```math
 N(1-\eta,T)
 \le
-K\,
+K
 T^{58.05\,\eta^{3/2}}
 (\log T)^{15}
 ```
@@ -881,7 +969,7 @@ The normalization bridge is already proved:
 GafniTao.nearOneLogDensityBound_of_fordNearOneDensityEstimate
 ```
 
-It yields:
+and yields:
 
 ```math
 N(1-\eta,T)
@@ -890,304 +978,130 @@ T^{58.05\,\eta^{3/2}}
 (\log T)^{16}
 ```
 
-after enlarging the lower height threshold.
+after increasing the lower height threshold.
 
-No `T^{\varepsilon}` loss is used in this conversion.
-
-The missing work is the source density theorem itself.
+The exact `58.05` density source theorem remains open.
 
 ---
 
-## Ford asymptotic zero-free theorem
+## Asymptotic zero-free region
 
-The source contract is:
+The source contract:
 
 ```lean
 GafniTao.FordAsymptoticZeroFree
 ```
 
-It supplies a positive Vinogradov-Korobov width above a sufficiently large height.
+remains open.
 
-The consumer bridge is already implemented:
+The qualitative growth and local zero-count developments now make this a particularly natural next target because the downstream Gafni-Tao interface only requires some positive Vinogradov-Korobov width, not Ford's fully optimized numerical width.
+
+The existing consumer chain is:
 
 ```text
 pointwise zero-free theorem
-          |
-          v
+        |
+        v
 rectangle-uniform zero-free theorem
-          |
-          v
+        |
+        v
 VinogradovKorobovCountVanishing
-          |
-          v
+        |
+        v
 Gafni-Tao right-edge branch
 ```
 
-The source theorem feeding the first node remains open.
+---
+
+# Integration frontier
+
+The distinction between a theorem proved in a development file and a theorem integrated into the release dependency path is intentional.
+
+A source theorem counts as integrated only when:
+
+1. its module is imported by `Extension/GafniTao.lean`;
+2. the isolated package builds through that root;
+3. source-sensitive endpoints are represented appropriately in `Audit.lean`;
+4. the actual axiom output is inspected;
+5. the result feeds the intended dependency path.
+
+At the current snapshot:
+
+```text
+Ford Lemma 3.2 chain
+Ford Lemma 3.3
+Ford count monotonicity
+Ford Lemma 6.3 moment-integral entry
+```
+
+are root-integrated.
+
+The qualitative exponential-sum, qualitative zeta-growth, and qualitative local-zero-count theorems exist in the repository but remain outside the package root.
+
+That is the next integration boundary.
 
 ---
 
-## Near-one packaging bridge
+# Central audit
 
-Once the density and zero-free source outputs are proved, the project already has:
-
-```lean
-GafniTao.exists_nearOne_inputs_of_ford_outputs
-```
-
-which packages them into:
-
-```text
-VinogradovKorobovCountVanishing
-```
-
-and:
-
-```text
-NearOneLogDensityBound 58.05 16
-```
-
-for direct use by the right-edge machinery.
-
-The downstream normalization and packaging problem is already solved.
-
----
-
-# Root-integrated Vinogradov and Lemma 5.1 source chain
-
-The newer root-integrated source chain represents a significant architectural advance.
-
-## Vinogradov moment identity
-
-`FordVinogradovIntegral.lean` formalizes the finite counting and Fourier-orthogonality side of Ford's Vinogradov-system input.
-
-Representative endpoints include:
-
-```lean
-GafniTao.ford_vinogradov_torus_mean_eq
-GafniTao.ford_vinogradov_torus_real_mean_eq
-```
-
-These identify the appropriate torus mean of the Weyl sum with the finite Vinogradov moment count.
-
----
-
-## Source-faithful Lemma 5.1 route
-
-The imported chain now contains dedicated modules for:
-
-```text
-entry
-first Holder step
-second Holder step
-fiber decomposition
-equation (5.3)
-integer intervals
-spacing
-tent weights
-tent series
-equation (5.4)
-resonance
-counting
-window estimates
-shift
-averaging
-equation (5.2)
-exponential form
-normalization
-real-parameter endpoint
-```
-
-The real-valued endpoint layer includes source-scale statements such as:
-
-```lean
-GafniTao.fordLemma51SourceCore_eq_separated
-GafniTao.fordLemma51_centralTerm_le_sourceCore
-```
-
-This matters because the paper's parameters are real-valued, while several internal combinatorial cutoffs are natural numbers.
-
-The bridge handles that distinction explicitly rather than treating the natural-number version as the final source statement.
-
----
-
-## Polynomial and congruence branch
-
-The root also imports:
-
-```text
-FordVandermondeDeterminant
-FordPolynomialSystem
-FordFiniteDifference
-FordIntegerPolynomialSystem
-FordCompleteCounts
-FordPrimeSelection
-FordNewtonCongruence
-```
-
-This develops the algebraic/combinatorial machinery needed for the source argument.
-
-A representative Newton-congruence endpoint is:
-
-```lean
-GafniTao.ford_multiset_eq_of_powerSums_eq
-```
-
-which proves that equality of the first `d` power sums modulo a prime `p > d` forces equality of the corresponding residue multisets.
-
----
-
-# Central audit synchronization
-
-The root import has moved ahead of the central audit.
-
-The new Vinogradov/Lemma-5.1/combinatorial theorem families are imported by:
-
-```text
-Extension/GafniTao.lean
-```
-
-but are not yet represented by corresponding `#print axioms` entries in:
+The isolated dependency audit is:
 
 ```text
 Extension/GafniTao/Audit.lean
 ```
 
-This is now an explicit synchronization task.
-
-The immediate audit candidates include representative endpoints from:
-
-```text
-FordVinogradovIntegral
-FordLemma51Equation53
-FordEquation54Bound
-FordLemma51Average
-FordEquation52
-FordLemma51Real
-FordVandermondeDeterminant
-FordCompleteCounts
-FordPrimeSelection
-FordNewtonCongruence
-```
-
-The audit should not mechanically print every helper theorem.
-
-It should include enough source-sensitive endpoints to make the trusted dependency path visible.
-
----
-
-# Shifted detector development
-
-The still-unintegrated Ford workbench goes further toward the local zero-density argument.
-
-It contains shifted detector machinery in which:
-
-- detector zeros retain analytic multiplicity;
-- the zeta pole contribution remains explicit;
-- right- and left-edge terms remain visible;
-- horizontal remainders are controlled;
-- selected heights remove public boundary nonvanishing assumptions.
-
-The local detector layer specializes this machinery to Ford's local zero disk.
-
-Representative development endpoints include:
+It imports:
 
 ```lean
-GafniTao.exists_fordShiftedDetector_selected_subset_inequality
-GafniTao.eventually_exists_fordLocalDisk_detector_inequality
-GafniTao.eventually_exists_fordLocalDisk_detector_growthBound
+import GafniTao
 ```
 
-The local growth-bound theorem still consumes:
+and explicitly runs `#print axioms` on public and source-sensitive results.
+
+The central audit now contains more than 600 explicit dependency checks.
+
+It covers major parts of:
+
+- exceptional-set measure theory;
+- extended-real exponent machinery;
+- multiplicity bridges;
+- zero additive energy;
+- near-one consumer bridges;
+- frozen Guth-Maynard input;
+- integrated Ford analytic infrastructure;
+- Ford detector and K-formula infrastructure;
+- local arithmetic entry;
+- second and fourth moments;
+- strip assembly;
+- equation (2.7);
+- limiting assembly;
+- global exceptional cover;
+- conditional Theorems 1.2 and 1.3;
+- the native sharp-Perron chain;
+- Ford Lemma 3.3;
+- substantial Lemma 3.4 arithmetic;
+- effective canonical prime-packet bounds;
+- complete-count monotonicity.
+
+Representative newer audit entries include:
 
 ```lean
-hFord : FordZetaGrowthBound
+GafniTao.ford_lemma_3_3_finite_source
+GafniTao.ford_lemma_3_4_inner_exponent_eq
+GafniTao.ford_lemma_3_4_exponent_cancellation
+GafniTao.ford_lemma_3_4_final_exponent_eq
+GafniTao.ford_lemma_3_4_terminal_constant
+GafniTao.ford_lemma_3_4_terminal_power
+GafniTao.eventually_fordPrimeSet_le_relative
+GafniTao.eventually_fordPrimeSet_le_two_mul
+GafniTao.exists_fordPrimeSet_relative_threshold
+GafniTao.fordKCount_mono_Q
+GafniTao.fordLCount_mono_Q
 ```
 
-so it does not yet discharge Ford Theorem 1.
+Some root-integrated source families still require additional representative audit entries, including the Lemma 3.2 source assembly and the Lemma 6.3 moment-integral endpoint.
 
-These files remain outside the package root at the current public snapshot.
-
----
-
-# Ford Theorem 2 development
-
-The unintegrated exponential-sum branch defines the shifted logarithmic exponential sum used in Ford's source argument.
-
-The source contract is:
-
-```lean
-GafniTao.FordTheorem2
-```
-
-defined as:
-
-```lean
-FordExponentialSumEstimate 9.463 133.66
-```
-
-The surrounding development includes:
-
-- finite-sum bounds;
-- Abel-style transformations;
-- dyadic decomposition;
-- exponent normalization;
-- the literal cubic exponent;
-- turning-point analysis;
-- unimodality;
-- cubic scaling;
-- normalized integrals;
-- exact numerical bounds;
-- polynomial and Bernstein certificate machinery.
-
-`FordTheorem2` is still a proposition.
-
-The project must not move an unresolved source assumption from Ford Theorem 1 to Ford Theorem 2 and then describe the source layer as closed.
-
----
-
-# Exact numerical certification
-
-The newer Ford workbench includes an exact-certification branch.
-
-The trust model should remain:
-
-```text
-external generator
-      |
-      v
-candidate certificate data
-      |
-      v
-Lean exact arithmetic
-      |
-      v
-proved inequality
-```
-
-External scripts may generate candidate rational data.
-
-They are not proof oracles.
-
-The final Lean theorem checking the certificate is the proof evidence.
-
----
-
-# Integration criteria
-
-A file does not count as integrated proof infrastructure merely because it exists under `Extension/GafniTao/`.
-
-For a source module to count as integrated:
-
-1. it is imported through the intended package root;
-2. the isolated package builds with it;
-3. public or source-sensitive endpoints are considered for the central audit;
-4. the actual axiom output is inspected;
-5. the theorem feeds the intended dependency chain or is clearly identified as reusable infrastructure.
-
-The current root-integrated Vinogradov/Lemma-5.1 chain satisfies step 1.
-
-Central-audit synchronization remains to be done for its new source-sensitive endpoints.
+The qualitative workbench results also require audit entries if and when they are promoted into the root.
 
 ---
 
@@ -1239,7 +1153,7 @@ The first principal sample target is:
 \frac{7}{12}
 ```
 
-The second is the quantified sufficiently-small-Delta result from the source paper.
+The second is the quantified sufficiently-small-Delta result from the paper.
 
 Closing these requires additional published analytic inputs, including:
 
@@ -1255,73 +1169,6 @@ A full Figure 4 envelope, if pursued, additionally requires a certified finite o
 Floating-point calculations may be used for exploration and checking.
 
 They must not establish the final theorem.
-
----
-
-# Audit surface
-
-The isolated dependency audit is:
-
-```text
-Extension/GafniTao/Audit.lean
-```
-
-It imports:
-
-```lean
-import GafniTao
-```
-
-and explicitly runs `#print axioms` on public and source-sensitive results.
-
-The current central audit covers major parts of:
-
-- exceptional-set measure theory;
-- extended-real exponent machinery;
-- multiplicity bridges;
-- zero additive energy;
-- Vinogradov-Korobov consumer bridges;
-- near-one normalization;
-- frozen Guth-Maynard input;
-- Ford trigonometric infrastructure;
-- Ford Fourier analysis;
-- Euler-product and prime-power expansions;
-- Ford Lemma 5.1;
-- Ford zero-detector infrastructure;
-- Ford left-line analysis;
-- Ford K-formula infrastructure;
-- explicit zeta and logarithmic-derivative estimates;
-- local arithmetic entry;
-- second and fourth moments;
-- strip assembly;
-- equation (2.7);
-- limit assembly;
-- global exceptional cover;
-- conditional Theorems 1.2 and 1.3;
-- the native sharp-Perron chain;
-- the native sharp truncated explicit formula.
-
-Representative final entries include:
-
-```lean
-GafniTao.exceptionalMeasure_fixedPowerBound_of_source_inputs
-GafniTao.exceptionalExponentDelta_le_refined_max_of_source_inputs
-GafniTao.gafniTaoTheorem13_max_conditional
-GafniTao.gafniTaoTheorem12_max_conditional
-
-GafniTao.sharpPsiTruncationBound_native
-GafniTao.sharpTruncatedExplicitFormulaBound_native
-
-GafniTao.fordK_infinite_rectangle_native
-GafniTao.fordK_formula_native
-GafniTao.fordK_formula_with_log_error_native
-```
-
-The newly root-integrated Vinogradov/Lemma-5.1/combinatorial chain now needs to be added to this audit at suitable endpoints.
-
-A declaration appearing in `Audit.lean` means it is on the explicit dependency-audit surface.
-
-It does not by itself establish that a fresh release audit has been executed and inspected successfully.
 
 ---
 
@@ -1350,17 +1197,17 @@ Interpret the results carefully.
 
 Compilation alone is not enough.
 
-A source proposition that merely restates a desired theorem is not a proof of that theorem.
+A source proposition that restates the desired theorem is not a proof of that theorem.
 
-A theorem being present in an unimported file is not evidence that it belongs to the final dependency path.
+A theorem in a workbench file is not part of the release dependency path until it is deliberately integrated.
 
 The actual `#print axioms` output must be inspected.
 
 ---
 
-# Source and workbench hygiene
+# Source and certificate discipline
 
-The Ford development contains multiple kinds of artifacts:
+The Ford development contains several artifact classes:
 
 ```text
 source reference
@@ -1371,13 +1218,15 @@ temporary probe
 development artifact
 ```
 
-They should not be treated as equivalent.
+They must not be treated as equivalent.
 
-Generated certificate data is acceptable when Lean independently verifies the certificate.
+Generated certificate data is acceptable when Lean independently verifies it.
 
-External scripts are not theorem oracles.
+External scripts may generate candidate certificates.
 
-Temporary probes and cache artifacts should not be part of the claimed final proof dependency.
+They are not theorem oracles.
+
+Temporary probes and cache artifacts should not be part of the claimed final dependency path.
 
 ---
 
@@ -1458,7 +1307,7 @@ For a source result to be accepted, establish every applicable item below:
 
 The strongest safe summary of the current repository is:
 
-> Most of the downstream Gafni-Tao exceptional-interval transfer mechanism has been formalized in Lean. The exact exceptional-set framework, multiplicity-sensitive zero counts, local arithmetic entry, native sharp truncated explicit formula, second- and fourth-moment machinery, equation (2.7), limiting assembly, local-to-global covering argument, frozen Guth-Maynard consumer, and conditional max-forms of Theorems 1.2 and 1.3 are implemented. A substantial Ford analytic source chain is root-integrated and centrally audited through detector, left-line, K-formula, explicit-zeta, and logarithmic-derivative infrastructure. A newer Vinogradov/Lemma-5.1/combinatorial source chain is now also root-integrated, although its new source-sensitive endpoints still require central-audit synchronization. A further shifted-detector, local-zero-disk, Ford-Theorem-2, cubic-integral, and exact-certificate workbench remains outside the root. The complete Gafni-Tao theorem is not yet claimed because the Ford near-one density and asymptotic zero-free outputs remain source contracts, Ford Theorem 2 remains a source contract where used, the exact unconditional source theorem interfaces remain open, and the later Section 3 inputs and numerical conclusions remain unfinished.
+> Most of the downstream Gafni-Tao exceptional-interval transfer mechanism has been formalized in Lean. The exact exceptional-set framework, multiplicity-sensitive zero counts, local arithmetic entry, native sharp truncated explicit formula, second- and fourth-moment machinery, equation (2.7), limiting assembly, local-to-global covering argument, frozen Guth-Maynard consumer, and conditional max-forms of Theorems 1.2 and 1.3 are implemented. The Ford source campaign has advanced through a large root-integrated analytic chain, a source-scale Lemma 3.2 chain, a root-integrated Lemma 3.3 theorem, substantial Lemma 3.4 arithmetic, effective canonical prime-packet control, count monotonicity, and the opening of the Lemma 6.3 moment argument. Separately, the development workbench now proves a complete qualitative Ford exponential-sum estimate, a qualitative Richert-Ford zeta-growth theorem, and a qualitative local zero-count theorem. Those qualitative results are not yet root-integrated and do not supply Ford's optimized constants. The complete Gafni-Tao theorem is not yet claimed because the optimized Ford near-one density and asymptotic zero-free outputs remain open, the exact unconditional source theorem interfaces remain open, and the later Section 3 source inputs and numerical conclusions remain unfinished.
 
 Do not shorten this to:
 
@@ -1521,118 +1370,108 @@ actual theorem dependencies
 
 take precedence.
 
-Then repair the documentation.
+Then update the documentation.
 
 ---
 
 # Near-term execution order
 
-## 1. Synchronize the central audit with the new root imports
+## 1. Integrate the qualitative Ford theorem chain
 
-The Vinogradov/Lemma-5.1/combinatorial chain is already root-integrated.
+The development workbench now contains actual qualitative analytic theorems, not merely scaffolding.
 
-Add representative source-sensitive endpoints from the new chain to `Audit.lean`.
-
-Do not wait until final release to make this dependency visible.
-
----
-
-## 2. Continue the source-faithful Ford chain
-
-Use the now-integrated:
+The next integration candidate is:
 
 ```text
-Vinogradov moments
-Lemma 5.1 source derivation
-spacing and averaging
-polynomial systems
-complete counts
-prime selection
-Newton congruence
+Ford exponential-sum qualitative theorem
+                |
+                v
+qualitative global zeta growth
+                |
+                v
+general local zero-count theorem
 ```
 
-as upstream infrastructure for the remaining Ford source theorems.
+Bring this chain into the root only when the intended dependency path builds cleanly.
 
-Avoid adding downstream Gafni-Tao wrappers unless they close an actual interface gap.
+Add representative source-sensitive endpoints to `Audit.lean`.
 
 ---
 
-## 3. Integrate the mature shifted-detector chain
+## 2. Attempt qualitative zero-free closure
 
-The next development branch closest to the density theorem is:
+The qualitative zeta-growth and local-zero-count machinery has the right Vinogradov-Korobov shape.
 
-```text
-shifted detector
-      |
-      v
-selected finite-subset inequality
-      |
-      v
-local zero-disk detector inequality
-      |
-      v
-local detector growth bound
-```
-
-Bring this chain into the root only when the intended imported path builds cleanly.
-
-Add its source-sensitive endpoints to the central audit.
-
----
-
-## 4. Close `FordZetaGrowthBound`
-
-The local growth-bound branch still depends on:
+The next major target should be an unconditional existential zero-free theorem strong enough to discharge:
 
 ```lean
-FordZetaGrowthBound
+GafniTao.FordAsymptoticZeroFree
 ```
 
-The source program must turn that contract into an actual theorem or an explicitly accepted pinned input.
+or a theorem immediately implying it.
+
+This source contract does not require the fully optimized Ford constants.
 
 ---
 
-## 5. Close `FordTheorem2`
+## 3. Continue optimized Ford Theorem 2
 
-If the exponential-sum theorem is required by the final density proof, discharge:
+In parallel, continue the exact source-constant branch toward:
 
 ```lean
 GafniTao.FordTheorem2
 ```
 
-through the native exponential-sum/cubic/certificate development or explicitly classify it as a trusted pinned external theorem.
+with the published constants:
 
-Do not leave it as an invisible assumption.
+```text
+9.463
+133.66
+```
+
+The qualitative theorem is a proof that the method closes.
+
+It is not a proof of the optimized source theorem.
 
 ---
 
-## 6. Prove `FordNearOneDensityEstimate`
+## 4. Close optimized `FordZetaGrowthBound`
 
-The detector, Vinogradov, Lemma-5.1, congruence, and exponential-sum branches should eventually meet at:
+Use the optimized exponential-sum path and existing detector/growth infrastructure to prove:
+
+```lean
+GafniTao.FordZetaGrowthBound
+```
+
+with:
+
+```text
+76.2
+4.45
+2/3
+```
+
+as required by the pinned source contract.
+
+---
+
+## 5. Prove `FordNearOneDensityEstimate`
+
+The final near-one density target remains:
 
 ```lean
 FordNearOneDensityEstimate K T0
 ```
 
-for explicit witnesses `K` and `T0`.
+with the exact `58.05` exponent coefficient.
 
-Immediately consume the existing normalization theorem after closure.
-
----
-
-## 7. Prove `FordAsymptoticZeroFree`
-
-Close the source zero-free theorem and consume the already-built route to:
-
-```lean
-VinogradovKorobovCountVanishing
-```
+Immediately consume the already-proved normalization theorem once this closes.
 
 ---
 
-## 8. Package unconditional near-one inputs
+## 6. Package unconditional near-one inputs
 
-Once the density and zero-free contracts are genuine theorems, instantiate:
+Once the density and zero-free source contracts are genuine theorems, instantiate:
 
 ```lean
 GafniTao.exists_nearOne_inputs_of_ford_outputs
@@ -1642,7 +1481,7 @@ The right-edge branch can then stop accepting these inputs externally.
 
 ---
 
-## 9. Remove already-resolved top-level premises
+## 7. Remove already-resolved top-level premises
 
 The native sharp truncated explicit formula already exists.
 
@@ -1652,7 +1491,7 @@ Do the same for any cutoff or auxiliary object already constructible from the fr
 
 ---
 
-## 10. Export exact Theorem 1.3
+## 8. Export exact Theorem 1.3
 
 Prove the exact source epsilon-infimum formulation.
 
@@ -1660,7 +1499,7 @@ Retain the current max-form as a separate corollary.
 
 ---
 
-## 11. Export exact Theorem 1.2 and Theorem 1.1
+## 9. Export exact Theorem 1.2 and Theorem 1.1
 
 Derive the ordinary theorem and the all-interval / almost-all threshold consequences.
 
@@ -1668,7 +1507,7 @@ Consume the existing frozen GM `30/13` bridge.
 
 ---
 
-## 12. Complete Section 3
+## 10. Complete Section 3
 
 Formalize the exact Pintz and Heath-Brown source segments.
 
@@ -1678,7 +1517,7 @@ Only after that should the optional full piecewise optimizer become a priority.
 
 ---
 
-## 13. Final release audit
+## 11. Final release audit
 
 Run the isolated package.
 
@@ -1713,16 +1552,14 @@ After a substantive mathematical milestone, use a commit message describing the 
 For example, only after the corresponding theorem has genuinely been proved:
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: close Ford near-one density input"
+push_to_github.bat "PostGM Gafni-Tao: close Ford asymptotic zero-free input"
 ```
 
 or:
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: close Ford asymptotic zero-free input"
+push_to_github.bat "PostGM Gafni-Tao: close Ford near-one density input"
 ```
-
-Do not use completion-language commit messages before the corresponding source contract is actually discharged.
 
 ---
 
@@ -1769,4 +1606,4 @@ with no unresolved project-level analytic assumptions hidden inside the claimed 
 
 Until then:
 
-**formalization in progress, with most of the downstream Gafni-Tao transfer mechanism implemented, a large Ford analytic source chain centrally audited, a newer Vinogradov/Lemma-5.1/combinatorial chain now root-integrated, and the active mathematical work concentrated on turning the remaining Ford detector and exponential-sum developments into audited source theorems.**
+**formalization in progress, with most of the downstream Gafni-Tao transfer mechanism implemented, Ford's source combinatorics now extending well beyond Lemma 3.2, and a complete qualitative Ford exponential-sum-to-zeta-growth chain proved in the development workbench. The immediate task is to integrate that qualitative chain and convert it into an unconditional zero-free input while the optimized numerical Ford branch continues toward the exact near-one density theorem.**

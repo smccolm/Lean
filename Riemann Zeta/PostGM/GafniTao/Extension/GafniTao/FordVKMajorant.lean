@@ -10,7 +10,7 @@ namespace GafniTao
 noncomputable section
 
 noncomputable def fordVKMajorantCoefficient (A B : ℝ) : ℝ :=
-  2 + (2 * Real.log A + 18 * B + 4 / 3 +
+  3 + (2 * Real.log A + 18 * B + 4 / 3 +
     (9 * B + 2 / 3) * fordSechLogMoment) / 5
 
 theorem fordVKMajorantCoefficient_pos
@@ -24,12 +24,11 @@ theorem fordVKMajorantCoefficient_pos
 private theorem fordVK_lowMajorant_le_standard
     {eta t R lambda : ℝ} (hR : 0 < R)
     (heta : (5 / 2 : ℝ) * R < eta)
-    (hlambda : 0 ≤ lambda)
     (hlambdaUpper : lambda ≤ (6421 / 10000 : ℝ) * R) :
     fordShiftedLeftLowMajorant eta t (eta - lambda) ≤
       fordShiftedLeftLowMajorant eta t
         (eta - (6421 / 10000 : ℝ) * R) := by
-  have hetaPos : 0 < eta := by positivity
+  have hetaPos : 0 < eta := by nlinarith
   have hdStd : 0 < eta - (6421 / 10000 : ℝ) * R := by
     nlinarith
   have hdActual : 0 < eta - lambda :=
@@ -84,7 +83,7 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
   have hInvR : 1 / R ≤ vinogradovKorobovDenominator t := by
     apply (div_le_iff₀ hR).mpr
     nlinarith
-  have hetaPos : 0 < eta := by positivity
+  have hetaPos : 0 < eta := by nlinarith
   have hetaUpper : eta ≤ 3 * R := by linarith
   have hlambdaStd : lambda ≤ (6421 / 10000 : ℝ) * R := by
     nlinarith
@@ -100,7 +99,9 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
   have hthreePow : (3 : ℝ) ^ (3 / 2 : ℝ) ≤ 9 := by
     have := Real.rpow_le_rpow_of_exponent_le (by norm_num : (1 : ℝ) ≤ 3)
       (by norm_num : (3 / 2 : ℝ) ≤ 2)
-    simpa [Real.rpow_two] using this
+    calc
+      (3 : ℝ) ^ (3 / 2 : ℝ) ≤ (3 : ℝ) ^ (2 : ℝ) := this
+      _ = 9 := by norm_num [Real.rpow_two]
   have hbalanced := fordVKRadius_rpow_three_halves_mul_log hbase
   rw [← hRDef] at hbalanced
   have hthreeR :
@@ -108,7 +109,7 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
         9 * fordVKLogLog t := by
     rw [Real.mul_rpow (by norm_num : (0 : ℝ) ≤ 3) hR.le]
     nlinarith [mul_le_mul_of_nonneg_right hthreePow
-      (mul_nonneg (Real.rpow_nonneg hR.le _) hlogtPos.le)]
+      (mul_nonneg (Real.rpow_nonneg hR.le (3 / 2 : ℝ)) hlogtPos.le)]
   have hdMain :
       (eta - lambda) ^ (3 / 2 : ℝ) * Real.log t ≤
         9 * fordVKLogLog t :=
@@ -151,7 +152,7 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
       apply one_div_le_one_div_of_le (by positivity)
       nlinarith
     have hRightNonneg : 0 ≤ C0 * fordVKLogLog t :=
-      mul_nonneg hC0 huOne.le
+      mul_nonneg hC0 (by linarith)
     calc
       2 * ((1 / (4 * eta)) *
           (2 * (Real.log A +
@@ -164,7 +165,7 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
               (B * (eta - lambda) ^ (3 / 2 : ℝ)) * Real.log t +
               (2 / 3 : ℝ) * Real.log (Real.log t)) +
             (B * (eta - lambda) ^ (3 / 2 : ℝ) + 2 / 3) *
-              fordSechLogMoment) := by ring
+              fordSechLogMoment) := by ring_nf
       _ ≤ (1 / (2 * eta)) *
             (C0 * fordVKLogLog t) :=
         mul_le_mul_of_nonneg_left hbracket (by positivity)
@@ -172,9 +173,8 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
             (C0 * fordVKLogLog t) :=
         mul_le_mul_of_nonneg_right hInv hRightNonneg
       _ = (C0 / 5) * vinogradovKorobovDenominator t := by
-        rw [huDiv]
+        rw [← huDiv]
         field_simp [hR.ne']
-        ring
   have hPole : eta / (Real.pi * t ^ 2) ≤
       vinogradovKorobovDenominator t := by
     have hden : 1 ≤ Real.pi * t ^ 2 := by
@@ -198,10 +198,12 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
     have hRone : R ≤ 1 := hRUpper.trans (by norm_num)
     have hargBound : 1 + 1 / R ≤ 2 / R := by
       apply (le_div_iff₀ hR).mpr
-      nlinarith
+      field_simp [hR.ne']
+      linarith
     have hlogMono : Real.log (1 + 1 / (1 + lambda + eta - 1)) ≤
         Real.log (2 / R) := by
-      apply Real.strictMonoOn_log.monotoneOn hargPos (by positivity)
+      apply Real.strictMonoOn_log.monotoneOn hargPos
+        (div_pos (by norm_num) hR)
       linarith
     have hlogTwo : Real.log 2 ≤ 1 := by
       exact (Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)).trans_eq
@@ -217,16 +219,19 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
         fordVKLogLog t := hlogMono.trans hlogBound
     have hnumNonneg : 0 ≤
         Real.log (1 + 1 / (1 + lambda + eta - 1)) :=
-      Real.log_nonneg (by positivity)
+      Real.log_nonneg (by
+        have : 0 ≤ 1 / (1 + lambda + eta - 1) := by positivity
+        linarith)
     calc
       Real.log (1 + 1 / (1 + lambda + eta - 1)) / (2 * eta) ≤
           fordVKLogLog t / (2 * eta) :=
-        div_le_div_of_nonneg_right hnum (by positivity)
+        div_le_div_of_nonneg_right hnum (by nlinarith)
       _ ≤ fordVKLogLog t / R := by
-        apply div_le_div_of_nonneg_left huOne.le hR
+        apply div_le_div_of_nonneg_left (by linarith) hR
         nlinarith
       _ = vinogradovKorobovDenominator t := huDiv
-  have hLowCompare := fordVK_lowMajorant_le_standard hR hetaLow hlambda hlambdaStd
+  have hLowCompare := fordVK_lowMajorant_le_standard
+    (t := t) hR hetaLow hlambdaStd
   have hLowStd := fordShiftedLeftLowMajorant_mul_R_le_one
     ht hR hRUpper hetaLow hetaHigh
   have hLow : fordShiftedLeftLowMajorant eta t (eta - lambda) ≤
@@ -235,7 +240,7 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
         (eta - (6421 / 10000 : ℝ) * R) ≤ 1 / R := by
       apply (le_div_iff₀ hR).mpr
       simpa [mul_comm] using hLowStd
-    exact hLowCompare.trans hstd |>.trans hInvR
+    exact (hLowCompare.trans hstd).trans hInvR
   unfold fordGeneralDetectorMajorant fordVKMajorantCoefficient
   dsimp [C0] at hHigh
   nlinarith [mul_nonneg
