@@ -43,6 +43,7 @@ theorem fordLFixedPolynomial_characterSum
       | empty =>
           change UnitAddTorus.mFourier (0 : Fin k → ℤ) α = 1
           rw [UnitAddTorus.mFourier_zero]
+          rfl
       | @insert i t hi ih =>
           rw [Finset.sum_insert hi, UnitAddTorus.mFourier_add,
             Finset.prod_insert hi, ih]

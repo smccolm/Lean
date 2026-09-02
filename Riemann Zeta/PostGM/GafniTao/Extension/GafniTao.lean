@@ -213,6 +213,8 @@ import GafniTao.LimitAssembly
 import GafniTao.ExceptionalCover
 import GafniTao.ExceptionalExponent
 import GafniTao.GeneralEnvelope
+import GafniTao.FordLemma33Finite
+import GafniTao.FordCountMonotone
 
 /-!
 # Gafni--Tao exceptional intervals
