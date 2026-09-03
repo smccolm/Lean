@@ -616,7 +616,7 @@ unrelated boundary density hypothesis is introduced. -/
 theorem norm_halfOpenZeroStripIncrementSum_le_physicalMajorant
     {J theta sigmaLower sigmaUpper X x : ℝ}
     (hX : 1 ≤ X) (hxLower : X ≤ x) (hxUpper : x ≤ 2 * X)
-    (hsigmaLowerPos : 0 < sigmaLower)
+    (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1) :
     ‖halfOpenZeroStripIncrementSum sigmaLower sigmaUpper
@@ -624,16 +624,16 @@ theorem norm_halfOpenZeroStripIncrementSum_le_physicalMajorant
       2 * 2 ^ sigmaUpper *
         zeroStripPhysicalMajorant J theta sigmaLower sigmaUpper X := by
   have hsigmaUpperNonneg : 0 ≤ sigmaUpper :=
-    hsigmaLowerPos.le.trans hsigmaOrder
+    hsigmaLowerNonneg.trans hsigmaOrder
   rw [halfOpenZeroStripIncrementSum_eq_sub_upperBoundary
-    hsigmaLowerPos.le hsigmaOrder hsigmaUpper]
+    hsigmaLowerNonneg hsigmaOrder hsigmaUpper]
   have hClosed := norm_zeroStripIncrementSum_le_physicalMajorant
-    (J := J) (theta := theta) hX hxLower hxUpper hsigmaLowerPos
+    (J := J) (theta := theta) hX hxLower hxUpper hsigmaLowerNonneg
       hsigmaUpperNonneg hsigmaUpper
   have hBoundary := norm_zeroStripIncrementSum_le_physicalMajorant
     (J := J) (theta := theta) (sigmaLower := sigmaUpper)
       (sigmaUpper := sigmaUpper) hX hxLower hxUpper
-      (hsigmaLowerPos.trans_le hsigmaOrder) hsigmaUpperNonneg hsigmaUpper
+      (hsigmaLowerNonneg.trans hsigmaOrder) hsigmaUpperNonneg hsigmaUpper
   have hMajorantMono :
       zeroStripPhysicalMajorant J theta sigmaUpper sigmaUpper X ≤
         zeroStripPhysicalMajorant J theta sigmaLower sigmaUpper X := by
@@ -677,7 +677,7 @@ noncomputable def halfOpenZeroStripPhysicalSup
 
 theorem halfOpenZeroStripPhysicalSup_le_majorant
     {J theta sigmaLower sigmaUpper X : ℝ}
-    (hX : 1 ≤ X) (hsigmaLowerPos : 0 < sigmaLower)
+    (hX : 1 ≤ X) (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1) :
     halfOpenZeroStripPhysicalSup J theta sigmaLower sigmaUpper X ≤
@@ -691,12 +691,12 @@ theorem halfOpenZeroStripPhysicalSup_le_majorant
   · intro y hy
     rcases hy with ⟨x, hx, rfl⟩
     exact norm_halfOpenZeroStripIncrementSum_le_physicalMajorant
-      hX hx.1 hx.2 hsigmaLowerPos hsigmaOrder hsigmaUpper
+      hX hx.1 hx.2 hsigmaLowerNonneg hsigmaOrder hsigmaUpper
 
 theorem norm_halfOpenZeroStripIncrementSum_le_physicalSup
     {J theta sigmaLower sigmaUpper X x : ℝ}
     (hX : 1 ≤ X) (hxLower : X ≤ x) (hxUpper : x ≤ 2 * X)
-    (hsigmaLowerPos : 0 < sigmaLower)
+    (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1) :
     ‖halfOpenZeroStripIncrementSum sigmaLower sigmaUpper
@@ -709,7 +709,7 @@ theorem norm_halfOpenZeroStripIncrementSum_le_physicalSup
     intro y hy
     rcases hy with ⟨z, hz, rfl⟩
     exact norm_halfOpenZeroStripIncrementSum_le_physicalMajorant
-      (J := J) (theta := theta) hX hz.1 hz.2 hsigmaLowerPos
+      (J := J) (theta := theta) hX hz.1 hz.2 hsigmaLowerNonneg
         hsigmaOrder hsigmaUpper
   · exact ⟨x, ⟨hxLower, hxUpper⟩, rfl⟩
 
@@ -718,7 +718,7 @@ sum and only the actual density envelope at the strip's lower edge. -/
 theorem halfOpenZeroStripPhysicalSup_epsilonBound
     {J theta sigmaLower sigmaUpper a : ℝ}
     (hJ : 0 < J) (hthetaUpper : theta < 1)
-    (ha : 0 ≤ a) (hsigmaLowerPos : 0 < sigmaLower)
+    (ha : 0 ≤ a) (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hDensity : ZeroDensityEnvelope sigmaLower a) :
@@ -741,7 +741,7 @@ theorem halfOpenZeroStripPhysicalSup_epsilonBound
       apply IsBigO.of_bound (2 * 2 ^ sigmaUpper)
       filter_upwards [eventually_ge_atTop (1 : ℝ)] with X hX
       have hSupLe := halfOpenZeroStripPhysicalSup_le_majorant
-        (J := J) (theta := theta) hX hsigmaLowerPos hsigmaOrder hsigmaUpper
+        (J := J) (theta := theta) hX hsigmaLowerNonneg hsigmaOrder hsigmaUpper
       have hMajorantNonneg :
           0 ≤ zeroStripPhysicalMajorant J theta sigmaLower sigmaUpper X := by
         unfold zeroStripPhysicalMajorant
@@ -756,7 +756,7 @@ theorem halfOpenZeroStripPhysicalSup_epsilonBound
         intro y hy
         rcases hy with ⟨x, hx, rfl⟩
         exact norm_halfOpenZeroStripIncrementSum_le_physicalMajorant
-          (J := J) (theta := theta) hX hx.1 hx.2 hsigmaLowerPos
+          (J := J) (theta := theta) hX hx.1 hx.2 hsigmaLowerNonneg
             hsigmaOrder hsigmaUpper
       have hSupNonneg :
           0 ≤ halfOpenZeroStripPhysicalSup
@@ -895,7 +895,7 @@ theorem halfOpenZeroStripPhysicalFourthMoment_le_count
         ‖complexifiedLogScaleBumpFourier cutoff
           ((d : ℂ) - I * (s : ℂ))‖ ≤ K)
     {sigmaLower sigmaUpper T tau X : ℝ}
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (htau : 0 < tau) (hX : 1 ≤ X) :
@@ -913,7 +913,7 @@ theorem halfOpenZeroStripPhysicalFourthMoment_le_count
       (zeroAdditiveEnergyCount sigmaLower T : ℝ))
   have hLower := zeroStripPhysicalFourthMoment_le_count (T := T)
     cutoff hK hDecay hsigmaLower hsigmaUpper htau hX
-  have hsigmaUpperLower : 1 / 2 ≤ sigmaUpper :=
+  have hsigmaUpperLower : 0 ≤ sigmaUpper :=
     hsigmaLower.trans hsigmaOrder
   have hBoundary := zeroStripPhysicalFourthMoment_le_count (T := T)
     cutoff hK hDecay hsigmaUpperLower hsigmaUpper htau hX
@@ -1098,7 +1098,7 @@ theorem halfOpenZeroStripPhysicalFourthMoment_le_majorant
         ‖complexifiedLogScaleBumpFourier cutoff
           ((d : ℂ) - I * (s : ℂ))‖ ≤ K)
     {J theta sigmaLower sigmaUpper X : ℝ}
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hX : 1 ≤ X) :
@@ -1139,7 +1139,7 @@ theorem halfOpenZeroStripPhysicalFourthMoment_epsilonBound
     (cutoff : GMSmoothCutoff)
     {J theta sigmaLower sigmaUpper a : ℝ}
     (hJ : 0 < J) (htheta : theta < 1) (ha : 0 ≤ a)
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hEnergy : ZeroAdditiveEnergyEnvelope sigmaLower a) :
@@ -1476,7 +1476,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_density
     {J : ℕ} (hJ : 0 < J) {j : ℕ} {theta delta a : ℝ}
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (ha : 0 ≤ a)
-    (hsigmaLowerPos : 0 < (j : ℝ) / J)
+    (hsigmaLowerNonneg : 0 ≤ (j : ℝ) / J)
     (hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1)
     (hDensity : ZeroDensityEnvelope ((j : ℝ) / J) a)
     (hExponent :
@@ -1496,7 +1496,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_density
       (halfOpenZeroStripPhysicalSup J theta sigmaLower sigmaUpper) exponent := by
     dsimp [sigmaLower, sigmaUpper, exponent]
     exact halfOpenZeroStripPhysicalSup_epsilonBound
-      hJr htheta ha hsigmaLowerPos hsigmaOrder hsigmaUpper hDensity
+      hJr htheta ha hsigmaLowerNonneg hsigmaOrder hsigmaUpper hDensity
   have hExponent' : exponent < theta := by
     simpa [exponent, sigmaLower, sigmaUpper] using hExponent
   have hLittle := hSup.isLittleO_rpow hExponent'
@@ -1519,7 +1519,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_density
       have hAtX := norm_halfOpenZeroStripIncrementSum_le_physicalSup
         (J := J) (theta := theta) (sigmaLower := sigmaLower)
         (sigmaUpper := sigmaUpper) hX le_rfl (by nlinarith)
-        hsigmaLowerPos hsigmaOrder hsigmaUpper
+        hsigmaLowerNonneg hsigmaOrder hsigmaUpper
       exact (norm_nonneg _).trans hAtX
     have hPowPos : 0 < X ^ theta := Real.rpow_pos_of_pos hXPos _
     have hSmallX' :
@@ -1534,7 +1534,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_density
   have hxSup := norm_halfOpenZeroStripIncrementSum_le_physicalSup
     (J := J) (theta := theta) (sigmaLower := sigmaLower)
     (sigmaUpper := sigmaUpper) hX hx.1.1
-      (hx.1.2.le.trans hsourceUpper) hsigmaLowerPos hsigmaOrder hsigmaUpper
+      (hx.1.2.le.trans hsourceUpper) hsigmaLowerNonneg hsigmaOrder hsigmaUpper
   have hxLarge : c * X ^ theta ≤
       ‖halfOpenZeroStripIncrementSum sigmaLower sigmaUpper
         (explicitFormulaHeight J theta X) (localTau X theta) x‖ := by
@@ -1555,7 +1555,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_small_A
     {J : ℕ} (hJ : 0 < J) {j : ℕ} {theta delta epsA : ℝ}
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (ha : 0 ≤ 1 / (1 - theta) - epsA)
-    (hsigmaLowerPos : 0 < (j : ℝ) / J)
+    (hsigmaLowerNonneg : 0 ≤ (j : ℝ) / J)
     (hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1)
     (hA : zeroDensityExponent ((j : ℝ) / J) <
       ((1 / (1 - theta) - epsA : ℝ) : EReal))
@@ -1569,7 +1569,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_small_A
         exact (div_le_div_iff_of_pos_right (by exact_mod_cast hJ)).2
           (by exact_mod_cast Nat.le_succ j)).trans hsigmaUpper) hA
   apply eventually_equation27StripLargeSet_eq_empty_of_density
-    hJ htheta hdelta hdeltaOne ha hsigmaLowerPos hsigmaUpper hDensity
+    hJ htheta hdelta hdeltaOne ha hsigmaLowerNonneg hsigmaUpper hDensity
   have hthetaGap : 0 < 1 - theta := by linarith
   have hJr : (0 : ℝ) < J := by exact_mod_cast hJ
   have hStep :
@@ -1594,7 +1594,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_small_A_le
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (hepsA : 0 < epsA)
     (ha : 0 ≤ 1 / (1 - theta) - epsA / 2)
-    (hsigmaLowerPos : 0 < (j : ℝ) / J)
+    (hsigmaLowerNonneg : 0 ≤ (j : ℝ) / J)
     (hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1)
     (hA : zeroDensityExponent ((j : ℝ) / J) ≤
       ((1 / (1 - theta) - epsA : ℝ) : EReal))
@@ -1602,7 +1602,7 @@ theorem eventually_equation27StripLargeSet_eq_empty_of_small_A_le
       (epsA / 2) * (1 - theta) * (1 - (j : ℝ) / J)) :
     ∀ᶠ X in atTop, equation27StripLargeSet J j theta delta X = ∅ := by
   apply eventually_equation27StripLargeSet_eq_empty_of_small_A
-    hJ htheta hdelta hdeltaOne ha hsigmaLowerPos hsigmaUpper
+    hJ htheta hdelta hdeltaOne ha hsigmaLowerNonneg hsigmaUpper
       (hA.trans_lt (by exact_mod_cast (show
         1 / (1 - theta) - epsA < 1 / (1 - theta) - epsA / 2 by linarith)))
       hJMargin
@@ -2011,7 +2011,7 @@ theorem equation27StripMeasure_fourth_epsilonBound
     {J : ℕ} (hJ : 0 < J) {j : ℕ} {theta delta a : ℝ}
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (ha : 0 ≤ a)
-    (hsigmaLower : 1 / 2 ≤ (j : ℝ) / J)
+    (hsigmaLower : 0 ≤ (j : ℝ) / J)
     (hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1)
     (hEnergy : ZeroAdditiveEnergyEnvelope ((j : ℝ) / J) a) :
     EpsilonExponentBound
@@ -2103,7 +2103,7 @@ theorem equation27StripMeasure_epsilonBound_of_second_or_fourth
     {theta delta aOrd aEnergy mu : ℝ}
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (haOrd : 0 ≤ aOrd) (haEnergy : 0 ≤ aEnergy)
-    (hsigmaLower : 1 / 2 ≤ (j : ℝ) / J)
+    (hsigmaLower : 0 ≤ (j : ℝ) / J)
     (hDensity : ZeroDensityEnvelope ((j : ℝ) / J) aOrd)
     (hEnergy : ZeroAdditiveEnergyEnvelope ((j : ℝ) / J) aEnergy)
     (hAlternative :
@@ -2118,8 +2118,7 @@ theorem equation27StripMeasure_epsilonBound_of_second_or_fourth
   have hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1 := by
     rw [div_le_one hJr]
     exact_mod_cast Nat.succ_le_iff.mpr hj
-  have hsigmaNonneg : 0 ≤ (j : ℝ) / J :=
-    le_trans (by norm_num : (0 : ℝ) ≤ 1 / 2) hsigmaLower
+  have hsigmaNonneg : 0 ≤ (j : ℝ) / J := hsigmaLower
   rcases hAlternative with hSecond | hFourth
   · have hBound := equation27StripMeasure_second_epsilonBound cutoff
       hJ htheta hdelta hdeltaOne haOrd hsigmaNonneg hsigmaUpper hDensity
@@ -2158,7 +2157,7 @@ theorem equation27StripMeasure_epsilonBound_of_exponent_upper_bounds
     {theta delta aOrd aEnergy mu : ℝ}
     (htheta : theta < 1) (hdelta : 0 < delta) (hdeltaOne : delta < 1)
     (haOrd : 0 ≤ aOrd) (haEnergy : 0 ≤ aEnergy)
-    (hsigmaLower : 1 / 2 ≤ (j : ℝ) / J)
+    (hsigmaLower : 0 ≤ (j : ℝ) / J)
     (hOrdinaryExponent : zeroDensityExponent ((j : ℝ) / J) < (aOrd : EReal))
     (hEnergyExponent :
       zeroAdditiveEnergyExponent ((j : ℝ) / J) < (aEnergy : EReal))

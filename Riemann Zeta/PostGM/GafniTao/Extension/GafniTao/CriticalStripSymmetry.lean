@@ -144,4 +144,22 @@ theorem zeroDensityExponent_le_lowerHalf
     zeroDensityExponent sigma ≤ ((1 / (1 - sigma) : ℝ) : EReal) :=
   zeroDensityExponent_le (lowerHalf_zeroDensityEnvelope hsigma hsigmaHalf)
 
+/-- A single finite ordinary-density envelope on the whole source strip.
+On the lower half this is the elementary reflected Jensen count; on the
+upper half it is the actual frozen Ingham/Guth--Maynard consumer. -/
+theorem uniform_thirty_thirteenths_zeroDensityEnvelope_nonnegative
+    {sigma : ℝ} (hsigmaLower : 0 ≤ sigma) (hsigmaUpper : sigma ≤ 1) :
+    ZeroDensityEnvelope sigma (30 / 13) := by
+  by_cases hsigmaHalf : sigma ≤ 1 / 2
+  · have hLower := lowerHalf_zeroDensityEnvelope hsigmaLower hsigmaHalf
+    unfold ZeroDensityEnvelope at hLower ⊢
+    apply hLower.mono_exponent
+    have hden : 0 < 1 - sigma := by linarith
+    have hCoeff : 1 / (1 - sigma) ≤ (30 / 13 : ℝ) := by
+      rw [div_le_iff₀ hden]
+      nlinarith
+    exact mul_le_mul_of_nonneg_right hCoeff hden.le
+  · exact frozen_uniform_thirty_thirteenths_zeroDensityEnvelope
+      (le_of_not_ge hsigmaHalf) hsigmaUpper
+
 end GafniTao

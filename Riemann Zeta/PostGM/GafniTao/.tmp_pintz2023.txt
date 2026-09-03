@@ -1,0 +1,1214 @@
+
+Density theorems for Riemann’s zeta-function
+
+                           near the line Re s = 1
+
+                                                  by
+                                                              ∗
+                                           J´anos Pintz
+
+        To G´abor Hal´asz on the occasion of his 80th birthday
+
+
+                                              Abstract
+            We prove a series of density theorems for Riemann’s zeta-function
+       for the number of zeros lying near the boundary line Re s = 1 of the
+       critical strip. In particular, we improve the constant appearing in the
+       exponent of the Hal´asz–Tur´an density theorem. The proof uses the
+       relatively recent strong estimate for the zeta-function near the line
+       Re s = 1 showed by Heath-Brown. The necessary exponential sums
+       were estimated by Heath-Brown via the new results of Wooley and of
+       Bourgain, Demeter and Guth on Vinogradov’s mean value integral.
+
+
+1      Introduction
+
+In a recent work [Pin2] we gave a relatively simple alternative proof for the
+density theorem of G. Hal´asz and P. Tur´an [HT] which was the first time
+when (about fifty years ago) the density hypothesis
+                                           �                �                   �
+                                                                2(1−σ)      c
+(1.1)                  N(σ, T) :=                  1 = O      T         log   T
+                                       ζ(β+iγ)=0
+                                       β≥σ, |γ|≤T
+   ∗
+    Supported by the National Research Development and Innovation Office, NKFIH,
+K 119528 and KKP 133819.
+    Keywords and phrases: Riemann’s zeta function, density hypothesis, density theorems.
+    2020 Mathematics Subject Classification: Primary 11M26, Secondary 11M06.
+
+                                                    1
+
+was proved for a fixed half-plane σ > 1 −                              c  , c    > 0 (absolute constant) of
+                                                                         0    0
+the critical strip.
+
+     Their result, in a slightly improved form, presented as Theorem 38.2 of
+
+Tur´an’s book [Tur] was
+
+                                                       3/2
+                                              A(1−σ)            c
+(1.2)                   N(σ, T) ≪          T                log   T with A = 12,000.
+
+     Their method used besides the estimate of Korobov–Vinogradov for the
+
+zeta-function Tur´an’s power sum method [Tur] and a simple but ingenious
+
+idea of Hal´asz [Hal].
+
+     Improved explicit forms of Vinogradov’s method by Richert [Ric], Ford
+
+[For] and in the last years by Bourgain–Demeter–Guth [BGD] and Heath-
+
+Brown [Hea] led to a very substantial improvement of the constant A in (1.2)
+
+yielding ([Hea])
+
+                                                             3/2
+                                                 6.42(1−σ)      +ε
+(1.3)                    N(σ, T) ≪ε T                                  for 9/10 ≤         σ ≤     1
+
+and with an unspecified σ                    very near 1
+                                           0
+
+                                                                  3/2
+                                                      5.03(1−σ)       +ε
+(1.4)                          N(σ, T) ≪           T                        for σ > σ        .
+                                                 ε                                          0
+
+     In our recent work [Pin2] our main goal was to provide a simple alter-
+
+native proof avoiding both Tur´an’s method and the more advanced form of
+
+the zero-detection method developed by Montgomery [Mon] using the large
+
+sieve [Bom2]. We used also a very restricted part of the theory of complex
+
+functions and in particular only some very basic properties of the Riemann
+
+zeta-function. Our proof used naturally Vinogradov’s estimate for the zeta-
+
+function and the mentioned ingenious idea of Hal´asz [Hal].
+
+     The original ideas of Hal´asz, Tur´an, Bombieri [Bom1], [Bom2] and Mont-
+
+gomery [Mon] were followed by new ones of mainly Huxley, Jutila, Ivi´c and
+
+Heath-Brown in the 1970’s and 1980’s, leading to many density results in the
+                                                                                                              ε
+half-plane σ > 3/4 and extending (1.1) or its analogue form with T                                               in place
+         c
+of log     T to the half-plane σ > σ                     with some σ            ∈   (3/4, 4/5). Many of these
+                                                      0                      0
+results are contained in the book of Ivi´c [Ivi], for example, the above with
+
+σ   = 11/14 = 0.7857 . . . (see (11.82) of Theorem 11.4). This last result was
+  0
+improved by Bourgain [Bou2] to σ                            = 25/32 = 0.78125. The other direction
+                                                         0
+was to show strong explicit density theorems for σ > σ0 where σ0 was near
+
+1, like Theorems 11.2 and 11.3 of [Ivi]. They were written in the form
+
+                                                              A(σ)(1−σ)          c
+(1.5)                                   N(σ, T) ≪          T                log    T
+
+
+                                                              2
+
+                      ε                   c
+(or again with T        in place of log     T) with a possibly small A(σ), for example,
+(11.34) of Theorem 11.3 of [Ivi]:
+
+(1.6)        A(σ) ≤     35/36 for 152/155 ≤            σ ≤   1 (152/155 = 0.9806 . . .).
+
+
+2
+
+Our present goal is to prove a full series of explicit density theorems for
+σ ≥    11/12 with A(σ) →            0 as σ →      1, where, as the limiting case, we get
+further improvements of Heath-Brown’s results (1.3)–(1.4) with respect to the
+constants in the exponent. These results (being valid in individual intervals
+of the form σ      ≤  σ ≤    σ  < 1) will provide in some sense a bridge between the
+                 0            1
+Hal´asz–Tur´an density theorem and density theorems similar to (1.5)–(1.6) of
+Ivi´c. The main result, making this possible, is a relatively new general result
+for exponential sums, proved by Heath-Brown [Hea], which is based on the
+result of Bourgain, Demeter and Guth [BGD]. Apart from this, we will use
+very limited properties of the zeta-function and we use the method of [Pin1]
+thereby avoiding both the large sieve and Tur´an’s method. However, we will
+use the mentioned idea of [Hal] which appears in some form in practically all
+stronger density theorems in the half-plane σ > 3/4.
+    Since the used version of Vinogradov’s mean-value theorem produces re-
+                                               ε
+sults of type with an extra factor T             and we are interested in the case σ close
+to 1 we shall look for estimates of type
+
+                                                            B(η)η+ε
+(2.1)                             N(1 −    η, T) ≪       T
+                                                      ε,η
+
+with B(η) as small as possible.
+    We will deal with the case
+
+(2.2)                                        η < 1/12,
+
+but actually our results will be weaker than that of Bourgain [Bou2] for
+η ≥   1/24. We will dissect the interval (0, 1/12) into a two-parameter family
+of disjoint intervals by the defni         itions of k = k(η) and ℓ         = ℓ(η):
+
+(2.3)       k(η) : = max{j : j(j −1)η < 1}, ℓ(η) := max{2j(j −1)η < 1}
+                            +                                           +
+                        j∈Z                                         j∈Z
+         I(k, ℓ) : ={η : k = k(η), ℓ        = ℓ(η)}
+                    = [1/k(k + 1), 1/k(k −          1)) ∩  [1/2ℓ(ℓ   + 1), 1/2ℓ(ℓ     −  1)).
+
+                                                  3
+
+In other words we suppose for a given pair of integers k ≥                        4, ℓ  ≥  3
+
+(2.4)        ηk(k −1) < 1 ≤          η(k + 1)k and 2ηℓ(ℓ           −1) < 1 ≤        2η(ℓ   + 1)ℓ.
+
+We remark that for a given k ≥                   4 there are just a few numbers ℓ                   with
+I(k, ℓ)̸ = ∅   and vice versa for ℓ        ≥   3. Due to η < 1/12 we have, as mentioned
+above,
+
+(2.5)                                   k ≥   4 and ℓ      ≥   3.
+
+    Now we can state our first result with the notation (2.1)–(2.5).
+
+Theorem 1. (2.1) is valid for η ∈                I(k, ℓ) with
+                              �                                               �
+                                           3                       4                             1
+(2.6)      B(η) := max                                 ,                            for η <         .
+                                ℓ(1 −    2(ℓ  −  1)η)    k(1 −   (k −   1)η)                    12
+
+Remark 1. This result is for η < 1/24 stronger than that of Bourgain [Bou1]
+                 5
+and for η <         stronger than all the 12 inequalities of Theorems 11.1–11.5 of
+                 66
+[Ivi] referring for various parts of the interval (3/4, 1). We have to mention,
+however, that several of his results were aimed to be stronger near 3/4 (ex-
+tending the range of validity of the density hypothesis) than in the vicinity
+of 1. The author did not find other results better than (2.6) for η < 1/24.
+
+Remark 2. The following version follows immediately from (2.6) which is
+only slightly weaker than (2.6) for small η.
+
+Theorem 1’. (2.1) is valid for η ∈                I(k, ℓ) with
+                                                         �                  �
+                                                              3        4
+                                        ′
+(2.7)                    B(η) := B       (η) := max                ,           .
+                                                           ℓ−1      k −1
+
+    Thus, (2.6) gives a stronger form of the Hal´asz–Tur´an density theorem
+                                                               �        √                        �
+than the improvement (1.4) of Heath-Brown                       4 < 3     2 < 4.25 = 17/4         :
+
+Theorem 2. For any ε > 0 there exists a σ                      (ε) < 1 such that for σ > σ            (ε)
+                                                             0                                       0
+we have
+                                                     √
+                                                                  3/2
+                                                   (3  2+ε)(1−σ)      +ε
+                                N(σ, T) ≪ε T                             .
+
+Remark 3. An easy argument shows (for ℓ                       ≥   15 “theoretical”, for ℓ          < 15
+“computational”) B(η) = 4/k(1 −                 (k −    1)η) in case of η ≤        1/12 if and only
+          ∗
+if η ∈  I   = I(6, 5) = [1/42, 1/40). This means that
+
+           B(η) = 3/ℓ(1 −         2(ℓ  −  1)η) for η ∈        (0, 1/12) \ [1/42, 1/40).
+
+                                                    4
+
+    For completeness we will show the “theoretical” part for ℓ                        ≥  15, i.e.
+
+(2.8)                     4ℓ(1 −    2(ℓ  −  1)η) < 3k(1 −       (k −   1)η),
+
+that is,
+
+(2.9)                       3k(k −1)η −8ℓ(ℓ−1)η < 3k −4ℓ.
+
+First we note that by (2.4) we have for ℓ                ≥  15
+                                                                          �         �
+                                                                             ℓ−1                7
+(2.10)       3k(k −    1)η −    8ℓ(ℓ  −  1)η ≤    3 −   4 · 2ηℓ(ℓ  + 1)                ≤   3 −    .
+                                                                             ℓ+ 1               2
+
+On the other hand we have by (2.4) again
+
+(2.11)                            k(k + 1) ≥     1/η > 2ℓ(ℓ      −1)
+
+which implies 4ℓ       ≤  3k for ℓ   ≥  15. Namely, the indirect supposition k < (4/3)ℓ
+would yield for ℓ      ≥   15
+
+                                             16         4
+                                                  2               2
+(2.12)                       k(k + 1) ≤          ℓ  +    ℓ  ≤  2ℓ   −2ℓ,
+                                              9         3
+                2
+since (2/9)ℓ      ≥  (10/3)ℓ     for ℓ  ≥  15.
+
+Remark 4. The above can also be stated as follows: if
+                                                                  �                            �
+                                                                          1             1
+(2.13)         η < 1/12, η ∈/      [1/42, 1/40) and η ∈                          ,
+                                                                    2ℓ(ℓ   + 1)    2ℓ(ℓ  −  1)
+
+then the density estimate (2.1) holds with
+                                                 �                  �
+(2.14)                           B(η) = 3/ℓ       1 −   2(ℓ  −  1)η   .
+
+    Now a simple calculation shows in case of η ≤                    1/18
+
+(2.15)
+                          3                   3                  3                       3
+     B(η) =                            ≤           =                         <      √
+                ℓ(1 −   2(ℓ  −  1)η)       ℓ−   1      (ℓ+ 1/2) −      3/2       1/    2η −   3/2
+                       √
+                                         �      �       �      �      �
+                      3   2η
+             =               √      ≤   3   2η   1 + 3      2η   = 3     2η + 18η.
+                1 −   (3/2)     2η
+
+    So we get a slightly weaker but simpler form of Theorem 2 as
+
+                                                   5
+
+Theorem 2’. For η ≤1/18 we have
+
+                                                                √
+                                                                     3/2      2
+                                                               3  2η     +18η   +ε
+(2.16)                           N(1 −      η, T) ≪         T                      .
+                                                        ε,η
+
+Remark 5. As mentioned in Section 1 we use in all our results the estimates
+
+on exponential sums which led to (1.3)–(1.4) of [Hea].
+
+     To be more explicit we list here the needed Theorems 1 and 5 of [Hea].
+
+Theorem 1 of [Hea]. Let k ≥                      3 be an integer, f(x) : [0, N] →                      R having
+continuous derivatives of order up to k on (0, N) with
+
+                                              (k)
+(2.17)                       0 < λk ≤       f     (x) ≤    Aλk,        x ∈    (0, N).
+
+                               2πix
+Then (with e(x) = e                 )
+(2.18)
+                                        �                                                                       �
+      �
+  1                                                                                                     2
+                                      ε      1/k(k−1)          −1/k(k−1)           −2/k(k−1)      −2/k    (k−1)
+            e(f  (n)) ≪            N      λ             + N                  + N                λ                  .
+                            A,k,ε            k                                                    k
+N
+     n≤N
+
+Theorem 5 of [Hea]. For t ≥                 1 and 0 ≤        σ ≤    1 we have
+
+                                                                    3/2
+                                                             (1−σ)     /2+ε
+(2.19)                                 ζ(σ + it) ≪          t                .
+                                                         ε
+
+
+3       Preparation. Auxiliary theorems
+
+                                                                                         −(1−ξ)−it
+In all of the results mentioned below we choose h(n) := n                                             , t ≥   3, an
+integer r ≥       2, an interval I(N) with
+
+                               �
+(3.1)        H   (N) :=               h(n),       I(N) ⊂       (N, 2N],         ξ ≤    1/r(r −      1) −   6ε.
+                ξ
+                             n∈I(N)
+
+     The first corollary follows by partial summation immediately from The-
+orem 1 of [Hea]. Corollaries 2 and 3 follow from Corollary 1. The value of r
+
+will be k or ℓ, ξ will be η              or η    + η      in the proof of Theorem 1.
+                                      j        ν       κ
+
+Corollary 1. We have for r ≥3
+
+                                                                                                      2
+                                    ξ−1/(r−1)+3ε        1/r(r−1)          −3ε          ξ+3ε     −2/r   (r−1)
+(3.2)         Hξ(N     ) ≪r,ε N                      |t|            + N         + N          |t|              .
+
+                                      2/r
+Corollary 2. If N ≪                |t|      then the third term above can be deleted.
+
+
+                                                          6
+
+                                                                                         1/r(1−(r−1)ξ−6rε)                                           2/r
+Corollary 3. If N ≥                                  N(r; ξ, T) := T                                                        , N ≪               |t|        , |t| ≤          T  ,
+
+then
+
+                                                                                                     −3ε
+(3.3)                                                              H      (N     ) ≪            N           .
+                                                                        ξ                 ε,r
+
+        The following is a variant of Theorem II.2 of [Mon], Appendix II.
+
+Lemma. If s = σ + it, σ ≥                                         1 −       ξ, ξ > 0, 0 < θ ≤                         1 then
+
+               ∞
+             �                                                                                                              �                        �
+                     �                                     �
+                          −n/2N                 −n/N            −s                 θ−1+ξ                                              ′          ′                ξ   −|t|
+                                                                                                                            �                        �
+(3.4)                   e               −    e               n         ≪      N                          max                  ζ(σ       + it      )    + N          e        .
+                                                                                                  ′              ′
+                                                                                                σ  ≥θ, 1<|t       |≤2|t|
+              n=1
+
+        The simple proof of the Lemma is essentially the same as that of Theorem
+
+II.2 in [Mon]. According to this we will just sketch the proof of it and refer
+
+to [Mon] for more details.
+
+        Similarly to [Mon] it is sufficient to consider the case σ = 1 −                                                                              ξ. We write
+
+                               ∞
+                             �
+                                     �                                     �
+                                          −n/2N                 −n/N            −(1−ξ)−it
+(3.5)                                  e                −e                   n
+
+                             n=1
+                                              2+i∞
+                                               �
+                                                                                                           �                               �
+                                      1
+                                                                                                                          w             w
+                              =                         ζ(w + 1 −                ξ + it)Γ(w)                  (2N      )      −    N          dw
+                                    2πi
+                                            2−i∞
+
+and take the contour to (θ −                                         1 + ξ) making a detour around w = ξ −                                                          it if θ
+                                                                                                                                                           ξ   −|t|
+is near 1. The residue from the pole of ζ(s) at w = ξ −                                                                            it is ≪            N      e        . For
+
+|Im w| ≤              t the integrand is
+
+                                                                                                            �                        �
+                                                     θ−1+ξ         −|Im w|                                  �         ′          ′   �
+(3.6)                                    ≪      N               e                         max                 ζ(σ       + it      )   ,
+                                                                                    ′             ′
+                                                                                  σ   ≥θ,1<t       ≤2|t|
+
+while for |Im w| ≥                          t it is
+
+                                                                        θ−1+ξ         −|Im w|
+(3.7)                                                       ≪      N                e               |Im w|.
+
+Remark 6. The role of the general variable r will be played either by k or
+
+ℓ, depending whether in the corresponding exponential sum the variable ξ
+
+satisfies ξ ≤                η or ξ ≤             2η, resp.
+
+        Finally we state and prove an easy proposition.
+
+Proposition. Let k = k(η) and ℓ                                                 = ℓ(η) (see (2.3)). Then
+
+                                          1/ℓ(1 −            2η(ℓ       −     1)) > 1/k(1 −                     η(k −         1)).
+
+
+                                                                                       7
+
+Proof. By 2η(ℓ                    + 1)ℓ        ≥    1 and ηk(k −                   1) ≤       1, k ≥          4, ℓ     ≥    3 we have
+
+
+(3.8)                     k(1 −         η(k −         1)) ≥        k −      1,
+                                                                      �                              �
+                                                                                      ℓ−1                               ℓ−1                         1
+(3.9)                    ℓ(1 −        2η(ℓ       −    1)) ≤        ℓ      1 −                             = ℓ      −                 ≤     ℓ  −        .
+                                                                                   ℓ(ℓ     + 1)                         ℓ   + 1                     2
+
+
+Since 1 > 2ℓ(ℓ                     −     1)η ≥           ℓ(ℓ     + 1)η and k(k + 1)η ≥                                    1 we have k > ℓ                          so
+
+k −1 > ℓ−1/2, hence the Proposition is true.
+
+
+
+4           Proof of Theorem 1
+
+
+Let us consider the zeros ϱ                                    = β        + iγ         = 1 −          η     + iγ         with β            ≥    σ := 1 −             η
+                                                           j           j            j                   j            j                 j
+
+(η      ≤      η), 2 log T < |γ                     | ≤        T (j = 1, 2, . . . , K), and let us choose with a
+    j                                             j
+                                                     �                      �
+sufficiently small ε > 0                                ε < ε0(η)             , T > T0(ε)
+
+
+
+                                   ε/10ℓ                          2/k                            3
+(4.1)              X := T                   ,     Y := T                ,    Y      := Y e         ,     λ = log Y, L = log T,
+                                                                                1
+
+                               �
+                                         µ(n)
+         M       (s) :=                            ,
+              X
+                                              s
+                                           n
+                               n≤X
+                                  �
+                                                                 ∗                                                  ∗
+                  a      :=                  µ(d),          N      (T    )=     XN(ℓ; ξ; T              ),     N      (T    )=     XN(k; ξ; T              ).
+                     n                                          ℓ                                                  k
+
+                               d|n,d≤X
+
+
+Let further similarly to [Pin2]
+
+
+
+(4.2)
+
+                    �      ∞                      2                               �                                                  2
+                         �                       s  /λ+λs                                                                           s  /λ+λs
+              1                      a        e                              1                                                   e
+                                        n
+I   : =                                                         ds=                    M        (s+ϱ         )ζ(s+ϱ            )                 ds
+  j                                                                                         X              j                 j
+                                     s+ϱ
+                                           j
+            2πi                   n                  s                    2πi                                                           s
+                         n=1
+                   (3)                                                           (3)
+
+                       �                                                                                     �                         �
+                                                                                                                      η
+               1                                        ζ(s + ϱj)               2                                 Y              2
+                                                                               s  /λ+λs                                     −γ     /λ
+                                                                                                                                 j
+       =                      MX(s + ϱj)                                    e                ds + O                      e
+             2πi                                                 s                                                |γ   |
+                                                                                                                      j
+                    (−η)
+
+                      ∞
+                     �
+              1                                                                 ζ(1−η−η                 +i(γ        +t))                      2
+                                                                                                     j            j              (−η+it)        /λ      −η+it
+       =                  M       (1−η−η               +i(γ          + t))                                                     e                    Y              dt
+                              X                      j            j
+             2π                                                                                −η + it
+                   −∞
+
+                                −3
+                 + O(Y               )
+
+
+
+                                                                                  8
+
+                 2λ
+                �
+
+            1                                                    ζ(1−η−η            +i(γ       +t))                 2
+                                                                                  j          j           (−η+it)     /λ     −η+it
+      =              M      (1−η−η           +i(γ       + t))                                          e                Y           dt
+                         X                 j         j
+          2π                                                                 −η + it
+
+              −2λ
+
+                      �        �
+                           −3
+              + O       Y        .
+
+
+      It is possible to evaluate I                    in a different way, cutting the defining integral
+                                                   j
+
+I   into three parts according to the value of n. Using the trivial bound |a                                                      | ≤
+j                                                                                                                               n
+
+                    δ
+τ(n) ≪δ n              for any fixed δ > 0 we can shift first the part of the series
+�
+           −(s+ϱj)
+     a   n              with n ≥          Y    (i.e. λ −       log n ≤        −3) from Re s = 3 to Re s = λ.
+       n                                    1
+
+n
+
+Writing s = λ + it we obtain
+
+            �                   �
+              �                         �              δ            �
+            �                   �
+                        a                           n                                1
+                           n
+            �                   �
+(4.3)                             ≪                            =
+            �           s+ϱ     �                 λ+1−η                       log Y +1−η      −δ
+                              j                             j                               j
+                      n                         n                           n
+             n≥Y1                      n≥Y1                        n≥Y1
+
+                                         1           1                              1                            2
+                                                                                                             −λ       −4+ηj+δ
+                                  ≪                              =                                   ≪     e      Y               .
+                                                log Y −ηj−δ                  3  log Y +1−ηj−δ
+                                        Y1                            (Y e     )
+                                             Y
+                                               1
+
+
+Then we estimate
+
+(4.4)
+
+                                  �                            �                            ∞
+                     �                       2                                             �               2
+                                  �  (λ+it)    /λ+λ(λ+it)�                                             −λ
+                                   e                                                                                    2
+                               2                                                                     e                 t      2
+       −4+η     +δ         −λ                                                −4+η     +δ                           λ−     +λ
+               j                                                                    j                                   λ
+    Y                     e              √                      dt = Y                           √               e              dt
+                                               2       2                                               2       2
+                                            λ    + t                                                λ    + t
+
+                    (λ)                                                                  −∞
+
+
+which is equal to
+
+
+                                                       2λ             2
+                                                     �               t
+                                                                λ−
+                                                                     λ                 �        �
+                                                              e
+                                       −4+ηj+δ                                               −6
+(4.5)                               Y                      √               dt + O        Y        .
+                                                                 2       2
+                                                               λ    + t
+
+                                                    −2λ
+
+
+This quantity is
+
+
+                                                     2λ
+                                                    �
+                                     −3+ηj+δ                   2               −3+ηj+δ
+                                  Y                           t             Y
+                                                           −                                          −2
+                                                              λ
+(4.6)                       ≪                            e       dt ≪            √           ≪     Y      .
+
+                                         λ
+                                                                                    λ
+
+                                                  −2λ
+
+
+      Further, shifting the finite part n ∈                            (X, Y      ) to Re s = 1/λ, and the term
+                                                                                1
+
+n = 1 to Re s = −4 we obtain similarly to the estimation of the infinite part
+
+
+above
+
+
+                                                                 1/λ+2iλ
+                                                                    �                                             �        �
+                                                                                2
+                                   �                                          s  /λ+(λ−log n)s
+                                                           1                e                                          1
+                                                   −ϱj
+(4.7)           I   = 1 +                    a   n                                                   ds + O                    .
+                  j                            n
+                                                                                                                         2
+                                                         2πi                            s                             Y
+                                X<n<Y1
+                                                               1/λ−2iλ
+
+
+
+                                                                   9
+
+       On the other hand the expression on the RHS of (4.2) can be estimated
+
+as follows:
+
+(4.8)
+
+�                                                          �         �
+          �                                             �                            1                                                               1              ε
+                                                                                                              η+η                  2η
+�                                                          �                                                         j
+M           1−η −η                +i(γ          +t)           ≪                                  ≪       X              ≪      X         ≪      X6 = T            60ℓ.
+      X                        j             j                                                        η
+                                                                                 1−η−ηj
+                                                                              n
+                                                                    n≤X
+
+
+Next, by (2.19) and (γ                               + t) ≪           T,
+                                                  j
+
+                                                                                                                                             √      3
+                      �   �                                                 ��
+                                                                                                                    3/2
+                                                                                                        (η+η      )      /2+ε                   2η2 +ε
+                      �                                                       �                                  j
+(4.9)                  ζ    1 −      η −      η     + i(γ          + t)          ≪      (γ     + t)                                ≪     T                  .
+                                                 j              j                           j
+
+
+Hence the last member of (4.2) is
+
+
+                                                                            2λ            2    2
+                                                                          �             η  −t
+                                        √      3                                                                      √       3
+                                                                                           λ
+                                                           ε                         e                                                   ε
+                                           2η2 +ε+                 −η                                                    2η2 +ε+                 −η
+                                                          60ℓ                    �                                                      60ℓ
+(4.10)                        ≪     T                          Y                                      dt ≪        T                          Y        .
+                                                                                         2         2
+                                                                                      η     + t
+
+                                                                        −2λ
+
+
+       From this we obtain
+
+                                                     √                                         √
+                                                            3/2                                       3/2                             3/2
+                                              2ε+       2η               −η             2ε+       2η       −2η/k                 −η        /4+2ε
+(4.11)                        I     ≪      T                      · Y          = T                                     ≪      T                       ,
+                                 j
+
+                                                                                                            √
+                                                                      2
+since by η < 1/k(k −1) ≤                                   4/3k          we have 2/k >                          3η.
+
+       An easy calculation shows that the integral in (4.3) is ≪                                                                    log λ. Hence, the
+
+                                                                                                                             ∗
+formulae (4.1)–(4.4) imply that with a suitable choice of γ                                                                      ∈    (γ    −2λ, γ           +2λ)
+                                                                                                                             j            j                j
+
+                                 ∗                                                   ∗
+we have with ϱ                       = 1 −         (ηj −        1/λ) + iγ
+                                 j                                                  j
+
+                                         �                               �
+                                              �
+                                         �                             ∗�
+                              ∗                                    −ϱ
+                                                                       j
+(4.12)                      I     :=     �                a     n        �   > c/ log λ                  (j = 1, 2, . . . K),
+                              j                              n
+
+                                          X<n<Y
+                                                        1
+
+                                                                                                                                         ∗                      ′
+since I            = o(1) by (4.1)–(4.4). We will select a subset of {ϱ                                                                    } with K                 ≫
+               j                                                                                                                         j
+
+                                                   ∗           ∗
+K/λL elements and |γ                                  −γ         | > 2λ. Furthermore, we divide an for all n ∈
+                                                   ν          κ
+
+(X, Y        ) into two parts with N                                (T) = N(k; ξ; T) (for N(k, η, T) see Corollary
+           1                                                     k
+
+3):
+
+                                              �                                             �
+                                ′                                             ′′                                                         ′          ′′
+(4.13)                       a      =                      µ(d),            a     =                      µ(d),            an = a            + a        .
+                                n                                             n                                                          n          n
+
+                                              d,m                                            d,m
+
+                                            dm=n                                           dm=n
+                                         m>Nk(T)                                        m≤Nk(T)
+
+                                             d≤X                                            d≤X
+
+
+By (3.3) we obtain by r = k ≥                                        4
+
+                                     �                                 �                                    �
+                                                              ∗                                  ∗                                   ∗
+                                                    ′    −ϱ                                 −ϱ                                   −ϱ
+                                                              j                                  j                                   j
+(4.14)                                           a    n          =              µ(d)d                                       m
+                                                    n
+
+                                 X<n<Y                                 d≤X                          X/d<m<Y/d
+                                              1                                                                       1
+
+                                                                                                       m>Nk(T)
+
+
+
+                                                                                  10
+
+                                                                                         η                −3ε                −2ε/k
+                                                                     ≪           λX        N      (T    )         ≪      T              .
+                                                                          k,ε                  k
+
+
+In the above estimation we used a dyadic subdivision of the interval
+
+(X/d, Y            /d) and afterwards (3.3) for the inner sum and the trivial estimate
+                 1
+�          �
+    −ϱ
+�        j�
+d              ≤      1. Using a dyadic subdivision of (X, Y                                                       ), by (4.12) and (4.14) we
+                                                                                                                 1
+
+                                           ∗                                                                                                                            ′′
+have a U ∈                   (X, N           (T    )) such that for some I(U                                     ) ⊂        [U, 2U        ] and with a                       in
+                                          k                                                                                                                             n
+                                              −2ε/k
+(4.13) we have by T                                        = o(1/ log λ)
+
+
+                                            �        ′   �                              �
+                                                                                                       ′                                                 ′
+                                                  K           ∗              −2ε/k                  K                                                 K
+                             ′                                                                            �                               �                 �           �
+                                                                                                  ��                                                ��
+                        K                                  I     −     cT
+                                                  j=1        j                                            �                            ∗�                   �           �
+                                                                                                                             ′′   −ϱ
+                                                                                                                                       ν
+(4.15)                              ≪                                                       ≤             �               a    n          �  =:             �           �.
+                                                                                                                             n
+                   λ log λ                                        λ                                                                                                   ν
+                                                                                                   ν=1      n∈I(U)                                   ν=1
+
+
+
+        The case log U/ log T =: u ≥                                       1/ℓ(1−2η(ℓ−1)−6ℓε)+ε/10ℓ                                                  would imply
+
+                                                                     ∗
+by the choice of X that U > N                                           (T   ) (cf. (4.1)). If 2u > 1/ℓ(1−2η(ℓ−1)−6ℓε)+
+                                                                     ℓ
+                                                                            �
+                                                                                                                      ′                     nd
+ε/10ℓ         we raise all Dirichlet sums                                             (ν = 1, . . . , K                ) to the 2                 power. If this
+                                                                                  ν
+                                                                                                                                                  th
+condition is not satisfied then we can raise them to a suitable h                                                                                      power such
+
+
+that hu∈(1/ℓ(1−2η(ℓ−1) −                                         6ℓε), 3/2ℓ(1 −                    2η(ℓ      −    1) −       6ℓε) + ε/20ℓ) =: Jℓ(η).
+
+                                                                                                                                             h
+Denoting the beginning of the resulting interval by A                                                                              = U          , the endpoint
+                                                                                                                              h
+
+                                          h
+will be B                ≤     (2U)           where h ≤                 20/ε by ℓ              ≤     k,
+                     h
+
+
+                                                                      ε/10ℓ                                        2/k
+                                                      X = T                      ≤     U ≪         Y = T                 .
+
+
+
+We further note that in case of h = 2, i.e., 2u > 1/ℓ(1−2η(ℓ−1)−6ℓε)+ε/10ℓ,
+                                                                                                �                 �
+                                                                                                                    2
+                                                                                                       ∗                                       ∗
+the endpoint after squaring will be B                                                   ≤    4     N      (T   )        by U ≤            N      (T    ), while our
+                                                                                    2                  k                                      k
+
+                                                                                                                                                                       ∗
+Proposition in Section 3 shows that the beginning point will be A                                                                                           > N          (T    )
+                                                                                                                                                        h             ℓ
+
+                                                                                                                                                       th
+for h ≥           2. We will denote the resulting coefficients after taking h                                                                                power of
+�                                             �            �
+                                                      20                  (h)
+         (where now h ∈                          2,          ) by an             = b         and using again a dyadic subdivision
+                                                                                         n
+     ν                                                 ε
+
+we find an interval I(N) ⊂                                      [N, 2N] ⊂                [Ah, Bh] with
+
+
+                                   ′  �              �               ′  �                              �
+                                K                                K
+                              �         �                       �           �                                                       ′
+                                      �         (h)�                    �                              �
+                                                                                                     ∗                         K
+                                                                                                −ϱ
+                                      �              �                  �                            ν�
+(4.16)                                                   :=                             b    n             ≫                                     .
+                                                                                          n                     ε
+                                      �              �                  �                              �               h+1                    h
+                                                ν                                                                   λ          (log λ)
+                               ν=1      n∈I(N)                  ν=1       n∈I(N)
+
+
+                                                                                                                                                                              ′
+        From now on the interval I(N) will be fixed. We choose α                                                                              (ν = 1, . . . , K                )
+                                                                                                                                          ν
+
+in such a way that
+
+                                                                                             �              �
+                                                                        �                    ��             �
+                                                                                (h)                    (h)
+                                                                                             �              �
+(4.17)                                                             α                   =
+                                                                      ν
+                                                                                             �              �
+                                                                                ν                      ν
+
+                                                                        n∈I(N)                 n∈I(N)
+
+
+
+should hold. Using Hal´asz’ idea we square the LHS of (4.16), interchange the
+
+order of summation over ν and n, and use a Cauchy–Schwarz inequality for
+
+
+
+
+                                                                                      11
+
+the sum when n runs through elements of I(N) with
+
+
+                                                               �                       �
+                                                                                         1/2
+                                                                  −n/2N         −n/N
+                             ∗                                  e          −e
+                          −ϱ            (ν)           (ν)
+                             ν
+(4.18)               bnn        = dne       ,       e     =                                  ,
+                                        n             n                                ∗
+                                                                     1/2−2η−ην+iγ
+                                                                                      ν
+                                                                   n
+
+
+                                   �                        �
+                                                              −1/2
+                                       −n/2N          −n/N
+                              bn     e          −e
+
+                                                                         if n ∈     I(N),
+                     d    =                  1/2+2η+1/λ
+                       n
+                                          n
+                              
+
+                                 0                                       if n ∈/    I(N).
+
+
+So we obtain from (4.16)–(4.18)
+
+
+
+(4.19)
+
+                   �     ′�          ��       �     ′              �
+                       K                2         K                   2
+      ′2              �     �                    �         �
+                           �     (h)�                           (h)
+(K)
+                           �         �
+           ≪                               =           α
+              k,h                                        ν
+     4h                    �         �
+   L                             ν                              ν
+                      ν=1   n∈I(N)               ν=1       n∈I(N)
+
+              �                  ′            �        �               ′          �
+                               K                 2         ∞         K               2
+                   �          �                           ��
+                                             ∗
+                                          −ϱ                                   (ν)
+                                             ν
+           =              bn        ανn            =           dn        ανe
+                                                                               n
+
+                 n∈I(N)       ν=1                         n=1       ν=1
+
+                 �                                            ��            ′                                  �
+                                                                    ∞     K
+                     �           2   −n/2N        −n/N     −1     �      �                −n/2N        −n/N
+                            |bn|  (e          −e         )                     ανακ(e             −e          )
+
+           ≪ε
+                                                                                                       ∗    ∗
+                                        1+4η+2/λ                                   1−ην−ηκ−4η+i(γ       −γ   )
+                                                                                                       ν   κ
+                                      n                                         n
+                   n∈I(N)                                          n=1  ν,κ=1
+
+                       �                                        �
+                  C(ε)      ′    ′          −ε/k         ′   2η
+           ≪   L         K   (K    −  1)T          + K    B      ,
+                                                             h
+
+
+                                                                                                       2        −2
+where the last line is obtained as follows (with a C(ε), a constant ≪                                h    ≪   ε
+
+by the relation
+                              �                  �
+                                                                                  2
+                                      2                                         h
+                                    τ (n) =            τ  2(n) ≤     x(log x)      ,
+                                      h                 h
+
+                               n≤x               n≤x
+
+
+where τ      (n) is the generalized divisor function, see e.g. Lemma 3 of [GPY]).
+           h
+                             C(ε)    2η
+     The estimate L               B      for an arbitrary diagonal term follows if we use
+                                     h
+                                                                                    2                  2
+that the total contribution of the terms with n > N log                               N ≍     B    log   B    are
+                                                                                                h           h
+                                             �                �                       �      �
+                                                 C(ε)    −4η                              6η
+negligible, the first factor is O              L      B         , the second O         B      . To show the
+                                                         h                                h
+                             C(ε)    −ε/k
+required estimate L               T         for an arbitrary non-diagonal term with indices
+                                                                                                   �          �
+                                                                                                   �  ∗      ∗�
+ν and κ we have to distinguish two cases according to the size t =                                  γ   −γ      >
+                                                                                                      ν      k
+
+2λ compared with N ≍                Bh. If t is “small” we use the Lemma together with
+
+the deep estimate (2.19) of Heath-Brown for ζ(s) (see (4.20)). If t is “large”
+                                         �                      �
+                                                          2
+then for the interval N ∈                  A   , B   log    B      we might use Corollary 3 since
+                                             h     h          h
+
+the power h was defined in such a way that A                              ≫    N(ℓ, 2η, T) should hold
+                                                                        h
+
+and thereby all conditions of Corollary 3 are satisfied (for the result see
+
+
+
+
+                                                        12
+
+(4.20)). Additionally, for small values of n the decay of the kernel function
+
+−n/2N           −n/N
+e          −   e         for decreasing n →              1 (see (4.22)) and Corollary 2 (with
+
+r = ℓ, ξ = 2η, n ∈          [Nj, 2Nj], Nj < N) ensure the same estimate (4.21) as for
+            �                      �
+                             2
+I(N) ⊂       A    , B   log    B    .
+                h     h          h
+
+                                                                         −ε/k
+     According to the above the crucial estimate T                              follows in case of Bh ≫
+
+1.9/ℓ                                                                                                      2
+t       from the Lemma with the choice ξ = 6η, θ = 1 −                            6η since η < 1/ℓ           and
+
+so by (2.19)
+
+                                    √                    √
+                                         3/2                        3/2            3/2
+                             −4η   6  6η    /2         (3  6−7.6)η              −η    /4
+(4.20)                    N      t              ≪   T                    ≪   T
+
+                                                                          √
+                                             2
+as by 2η < 1/ℓ(ℓ           −   1) < 2/ℓ         we have 2/ℓ         > 2      η and N ≫           B    . On the
+                                                                                                    h
+                                   1.9/ℓ
+other hand, if B             ≪    t        then we obtain from Corollary 3 that for any
+                         h
+            �                      �
+                             2
+I(N) ⊂       A    , B   log    B
+                h     h          h
+
+                           �
+                                               1
+                                                                     −3ε         −3ε/ℓ
+(4.21)                                                       ≪    B       ≪    T        .
+                                                     ∗    ∗          h
+                                     1−ην−ηκ+i(γ      −γ   )
+                                                     ν   k
+                                   n
+                         n∈I(N)
+
+
+                                                                                ξ  −|t|           2  6η  −2λ
+(The second term in (3.4) can be neglected since N                                e      ≪    (Y    )   e      ≪
+
+1/Y .)
+
+     If we have an interval I(N               ) with N        < A    , then by Corollary 2 and
+                                             j             j        h
+
+                                  −n/2N         −n/N
+(4.22)                          e          −e           ≪    n/N ≪       N   /N
+                                                                            j
+
+
+we obtain
+
+                                                                             �                      �
+                       �         −n/2N          −n/N                                      1/r(r−1)
+                                e          −e                 Nj                      |t|
+                                                                        −3ε
+(4.23)                                                   ≪         · N          1 +
+                                                 ∗   ∗                  j
+                                 1−η   −η  +i(γ   −γ   )                                     1/r
+                                     ν    k     ν    κ
+                               n                              N
+                                                                                          N
+                    n∈I(N    )                                                              j
+                            j
+
+
+which is monotonically increasing in N                      .
+                                                           j
+
+     So the same estimate as in (4.21) follows too. Hence, using B                                              ≤
+                                                                                                            2
+�            �
+              2
+      ∗
+4  N   (T  )     and hu ∈       J  (η) we obtain
+      k                           ℓ
+
+                              ′
+                   ′        C  (ε,η)   2η         η(max(3/ℓ(1−2η(ℓ−1)−6ℓε),4/k(1−(k−1)η)−6kε))
+(4.24)          K    ≪    L         B      ≪   T                                                          .
+                                       h
+
+
+Consequently,
+
+
+                                                             B(η)η+ε
+(4.25)                                           K ≪      T           .                              □
+
+
+
+Acknowledgement. The author would like to thank the anonymous referee
+
+for many helpful suggestions.
+
+
+
+                                                        13
+
+References
+
+[Bom1] E. Bombieri, Density theorems for the zeta function, in: Proceedings
+       of the Stony Brook Number Theory Conference, 1969, pp. 352–358,
+       AMS, Providence, RI.
+
+[Bom2] E. Bombieri, On the large sieve, Mathematika 12 (1965), 201–225.
+
+[Bou1] J. Bourgain, Remarks on Hal´asz–Montgomery type inequalities, in:
+       Geometric aspects of functional analysis (Israel, 1992–1994), Oper.
+       Theory Adv. Appl. 77, Birkh¨auser, Basel, 1995, 25–39.
+
+[Bou2] J. Bourgain, On large values estimates for Dirichlet polynomials and
+       the density hypothesis for the Riemann zeta function, Internat. Math.
+       Res. Notices (2000), no. 3, 133–146.
+
+[BGD] J. Bourgain, C. Demeter, L. Guth, Proof of the main conjecture in
+       Vinogradov’s mean value theorem for degrees higher than three, Ann.
+       of Math. (2) 184 (2016), no. 2, 633-–682.
+
+[For]  K. Ford, Vinogradov’s integral and bounds for the Riemann zeta func-
+       tion, Proc. London Math. Soc. (3) 85 (2002), no. 2, 565–633.
+
+[GPY] D. A. Goldston, J. Pintz, C. Y. Yıldırım, Primes in tuples II, Acta
+       Math. 204 (2010), 1–47.
+                     ¨
+[Hal]  G. Hal´asz, Uber die Mittelwerte multiplikativer zahlentheoretischer
+       Funktionen, Acta Math. Hungar. 19 (1968), No. 3-4, 365–404.
+
+[Hea] D. R. Heath-Brown, A new kth derivative estimate for a trigonomet-
+       ric sum via Vinogradov’s integral (in Russian). English version pub-
+       lished in Proc. Steklov Inst. Math. 296 (2017), no. 1, 88–103. Tr. Mat.
+       Inst. Steklova 296 (2017), Analiticheskaya i Kombinatornaya Teoriya
+       Chisel, 95–110.
+
+[HT]   G. Hal´asz and P. Tur´an, On the distribution of roots of Riemann zeta
+       and allied functions, I, Journal of Number Theory 1 (1969), 121–137.
+
+[Ivi]  Ivi´c, Aleksandar, The Riemann zeta-function. The theory of the Rie-
+       mann zeta-function with applications. A Wiley-Interscience Publica-
+       tion. John Wiley & Sons, Inc., New York, 1985.
+
+                                        14
+
+[Mon] H. L. Montgomery, Topics in multiplicative number theory, Lecture
+       Notes in Mathematics, No. 227, Springer, 1971.
+                                                        �
+[Pin1] J. Pintz, Oscillatory properties of M(x) =          µ(n), I, Acta Arith. 42
+                                                       n≤x
+       (1982), 49–55.
+[Pin2] J. Pintz, On the density theorem of Hal´asz and Tur´an, Acta Math.
+       Hungar. 166 (2021), no. 1, 48–56.
+[Ric]  H.-E. Richert, Zur Absch¨atzung der Riemannschen Zetafunktion in
+       der N¨ahe der Vertikalen σ = 1, Math. Ann. 169 (1967), 97–101.
+[Tur]  P. Tur´an, On a new method of analysis and its applications. With the
+       assistance of G. Hal´asz and J. Pintz, with a foreword by Vera T. S´os,
+       Pure and Applied Mathematics, John Wiley & Sons, Inc., New York,
+       1984. xvi+584 pp.
+J´anos Pintz
+ELKH Alfr´ed R´enyi Mathematical Institute
+H-1053 Budapest
+Rea´ltanoda u. 13–15.
+Hungary
+e-mail: pintz@renyi.hu
+
+
+
+
+
+
+
+                                         15
+

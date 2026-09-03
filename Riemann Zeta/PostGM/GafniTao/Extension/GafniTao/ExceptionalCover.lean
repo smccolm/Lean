@@ -183,4 +183,24 @@ theorem exceptionalMeasure_fixedPowerBound_of_source_inputs
         hsource
   exact exceptionalMeasure_fixedPowerBound_of_local hJ hdelta hLocal
 
+/-- Principal-form global exceptional-set bound, preserving the exact
+refined source exponent with no auxiliary baseline maximum. -/
+theorem exceptionalMeasure_fixedPowerBound_of_source_inputs_exact
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    (hFormula : SharpTruncatedExplicitFormulaBound)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta delta xi : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1)
+    (hsource : refinedExceptionalUpperExponent theta < (xi : EReal)) :
+    FixedPowerBound (fun X => exceptionalMeasure delta X theta) xi := by
+  obtain ⟨J, hJ, hLocal⟩ :=
+    localExceptionalMeasure_fixedPowerBound_of_source_inputs_exact cutoff
+      hFormula hDensity hZeroFree hC hc hthetaLower hthetaUpper hdelta
+        hdeltaOne hsource
+  exact exceptionalMeasure_fixedPowerBound_of_local hJ hdelta hLocal
+
 end GafniTao

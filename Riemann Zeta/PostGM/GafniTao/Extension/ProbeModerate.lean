@@ -1,31 +1,27 @@
-import GafniTao.FordLemma65Iteration
-import Mathlib.Analysis.Complex.ExponentialBounds
-#check one_add_mul_le_pow
-#check Real.exp_nat_mul
-#check Real.log_pow
-#check Real.exp_log
-#check Real.exp_le_exp
-#check Real.log_le_sub_one_of_pos
-#check Real.exp_neg_one_lt_half
-#check one_div_le_one_div_of_le
-#check Finset.sum_Icc_succ_top
-#check Finset.sum_Icc_succ_bot
-#check Finset.sum_Icc_eq_sum_range
-#check Finset.sum_range_id
-#check HasDerivAt.const_mul
-#check HasDerivAt.mul_const
-#check HasDerivAt.fun_sum
-#check HasDerivAt.sum
-#check abs_sum_le_sum_abs
-#check abs_add_le
-#check Fin.sum_univ_eq_sum_range
-#check Convex.norm_image_sub_le_of_norm_hasDerivWithin_le
-#check Convex.norm_image_sub_le_of_norm_deriv_le
-#check Real.norm_exp_I_mul_ofReal_sub_one_le
-#check HasDerivAt.cexp
-#check HasDerivAt.clog
-#check Nat.le_div_iff_mul_le
-#check Nat.le_div_iff_mul_le'
-#check Nat.div_le_iff_le_mul
-#check Nat.mul_div_cancel_left
-#check pow_div
+import GafniTao.PintzGaussianKernel
+
+open Complex MeasureTheory
+
+noncomputable def num (lambda : ℝ) (s : ℂ) : ℂ :=
+  Complex.exp (s ^ 2 / (lambda : ℂ) + (lambda : ℂ) * s)
+
+example (lambda c t : ℝ) (hlambda : 0 < lambda) :
+    ‖num lambda ((c : ℂ) + Complex.I * t)‖ =
+      Real.exp ((c ^ 2 - t ^ 2) / lambda + lambda * c) := by
+  rw [num, Complex.norm_exp]
+  congr 1
+  have hlambdaNe : lambda ≠ 0 := ne_of_gt hlambda
+  rw [add_re]
+  rw [div_re]
+  simp [Complex.normSq_apply, pow_two]
+  field_simp
+
+#check ContinuousAt.comp
+#check ContinuousAt.comp_of_eq
+#check DifferentiableAt.isBigO_sub
+#check Asymptotics.IsBigO.div
+#check Asymptotics.IsBigO.div_isBigO
+#check Asymptotics.IsBigOWith.div
+#check Asymptotics.IsBigOWith.of_bound
+#check Asymptotics.isBigO_iff
+#check Asymptotics.isBigO_iff_isBoundedUnder_le

@@ -92,4 +92,68 @@ theorem gafniTaoTheorem13_max_conditional
   exact exceptionalExponentDelta_le_refined_max_of_source_inputs_all cutoff
     hFormula hDensity hZeroFree hC hc hthetaLower hthetaUpper hdelta
 
+/-- Exact principal-form bound for one discrepancy threshold. -/
+theorem exceptionalExponentDelta_le_refined_of_source_inputs
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    (hFormula : SharpTruncatedExplicitFormulaBound)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta delta : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1) :
+    exceptionalExponentDelta delta theta ≤
+      refinedExceptionalUpperExponent theta := by
+  apply ereal_le_of_le_coe_of_gt
+  intro xi hxi
+  exact exceptionalExponentDelta_le
+    (exceptionalMeasure_fixedPowerBound_of_source_inputs_exact cutoff hFormula
+      hDensity hZeroFree hC hc hthetaLower hthetaUpper hdelta hdeltaOne hxi)
+
+/-- Exact principal-form threshold bound for every positive discrepancy
+parameter, using antitonicity only to remove the auxiliary `delta < 1`
+restriction. -/
+theorem exceptionalExponentDelta_le_refined_of_source_inputs_all
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    (hFormula : SharpTruncatedExplicitFormulaBound)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta delta : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (hdelta : 0 < delta) :
+    exceptionalExponentDelta delta theta ≤
+      refinedExceptionalUpperExponent theta := by
+  by_cases hdeltaOne : delta < 1
+  · exact exceptionalExponentDelta_le_refined_of_source_inputs cutoff
+      hFormula hDensity hZeroFree hC hc hthetaLower hthetaUpper hdelta
+        hdeltaOne
+  · have hhalfPos : (0 : ℝ) < 1 / 2 := by norm_num
+    have hhalfOne : (1 / 2 : ℝ) < 1 := by norm_num
+    have hhalfDelta : (1 / 2 : ℝ) ≤ delta := by
+      have : 1 ≤ delta := le_of_not_gt hdeltaOne
+      linarith
+    exact (exceptionalExponentDelta_anti hhalfDelta).trans
+      (exceptionalExponentDelta_le_refined_of_source_inputs cutoff hFormula
+        hDensity hZeroFree hC hc hthetaLower hthetaUpper hhalfPos hhalfOne)
+
+/-- Conditional exact Gafni--Tao Theorem 1.3.  Its premises are the literal
+upstream analytic inputs; the conclusion is the source infimum--supremum
+formula, not the alternate max form. -/
+theorem gafniTaoTheorem13_conditional
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    (hFormula : SharpTruncatedExplicitFormulaBound)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta : ℝ} (hthetaLower : 0 < theta) (hthetaUpper : theta < 1) :
+    exceptionalExponent theta ≤ refinedExceptionalUpperExponent theta := by
+  apply exceptionalExponent_le
+  intro delta hdelta
+  exact exceptionalExponentDelta_le_refined_of_source_inputs_all cutoff
+    hFormula hDensity hZeroFree hC hc hthetaLower hthetaUpper hdelta
+
 end GafniTao

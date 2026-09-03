@@ -1,5 +1,6 @@
 import GafniTao.FordLogDerivativeTrigonometric
 import GafniTao.FordLocalDetectorGrowthBound
+import GafniTao.FordEmptyDetector
 
 /-!
 # Height-free forms of the selected Ford detector bounds
@@ -160,8 +161,77 @@ theorem exists_fordVK_singleZero_detector_general_growthBound
     unfold fordGeneralDetectorMajorant
     simpa only [sigma, add_assoc] using hdet
 
+/-- Height-free selected-zero contour at an arbitrary Euler-half-plane
+centre and arbitrary admissible radius interval. -/
+theorem exists_fordSingleZero_detector_general_growthBound
+    {A B sigma eta etaMax t : ℝ} {rho : ℂ}
+    (hFord : FordGeneralZetaGrowthBound A B)
+    (hA : 1 ≤ A) (hB : 0 ≤ B)
+    (hsigmaStrict : 1 < sigma)
+    (heta : 0 < eta) (hetaMax : eta < etaMax)
+    (hPole : sigma - 1 ≤ eta)
+    (hleftLowerMax : 1 / 2 ≤ sigma - etaMax)
+    (hetaMaxUpper : etaMax ≤ Real.pi / 4)
+    (ht : 3 ≤ t)
+    (hrhoZero : riemannZeta rho = 0)
+    (hrhoUpper : rho.re ≤ 1)
+    (hrhoIm : rho.im = t)
+    (hrhoNear : sigma - rho.re ≤ eta)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ eta' : ℝ, eta < eta' ∧ eta' < etaMax ∧
+      fordRealLogDerivative sigma t <
+        ((analyticVanishingOrder riemannZeta rho : ℂ) *
+          fordCotKernel eta'
+            (rho - fordShiftedDetectorCenter sigma t)).re +
+        fordGeneralDetectorMajorant A B eta' sigma t + ε := by
+  obtain ⟨T0, hT0⟩ :=
+    eventually_exists_fordSingleZero_detector_general_growthBound
+      hFord hA hB hsigmaStrict.le heta hetaMax hPole hleftLowerMax hetaMaxUpper
+      ht hrhoZero hrhoUpper hrhoIm hrhoNear ε hε
+  let T : ℝ := max (max T0 8) (t + 2 * etaMax / Real.pi)
+  obtain ⟨hT0T, hT8, hTlarge⟩ := fordChooseContourHeight T0 t etaMax
+  obtain ⟨eta', RUpper, RLower, hetaLow, hetaHigh, _hRU, _hRL, hdet⟩ :=
+    hT0 (T := T) hT0T hT8 hTlarge
+  have hEq := fordRealLogDerivative_eq_neg_detector
+    (sigma := sigma) (t := t) hsigmaStrict
+  refine ⟨eta', hetaLow, hetaHigh, ?_⟩
+  rw [hEq]
+  unfold fordGeneralDetectorMajorant
+  simpa only [add_assoc] using hdet
+
+/-- Height-free empty-subset contour at an arbitrary admissible centre. -/
+theorem exists_fordEmpty_detector_general_growthBound
+    {A B sigma eta etaMax t : ℝ}
+    (hFord : FordGeneralZetaGrowthBound A B)
+    (hA : 1 ≤ A) (hB : 0 ≤ B)
+    (hsigmaStrict : 1 < sigma)
+    (heta : 0 < eta) (hetaMax : eta < etaMax)
+    (hPole : sigma - 1 ≤ eta)
+    (hleftLowerMax : 1 / 2 ≤ sigma - etaMax)
+    (hetaMaxUpper : etaMax ≤ Real.pi / 4)
+    (ht : 3 ≤ t) {ε : ℝ} (hε : 0 < ε) :
+    ∃ eta' : ℝ, eta < eta' ∧ eta' < etaMax ∧
+      fordRealLogDerivative sigma t <
+        fordGeneralDetectorMajorant A B eta' sigma t + ε := by
+  obtain ⟨T0, hT0⟩ :=
+    eventually_exists_fordEmpty_detector_general_growthBound
+      hFord hA hB hsigmaStrict.le heta hetaMax hPole hleftLowerMax
+      hetaMaxUpper ht ε hε
+  let T : ℝ := max (max T0 8) (t + 2 * etaMax / Real.pi)
+  obtain ⟨hT0T, hT8, hTlarge⟩ := fordChooseContourHeight T0 t etaMax
+  obtain ⟨eta', RUpper, RLower, hetaLow, hetaHigh, _hRU, _hRL, hdet⟩ :=
+    hT0 (T := T) hT0T hT8 hTlarge
+  have hEq := fordRealLogDerivative_eq_neg_detector
+    (sigma := sigma) (t := t) hsigmaStrict
+  refine ⟨eta', hetaLow, hetaHigh, ?_⟩
+  rw [hEq]
+  unfold fordGeneralDetectorMajorant
+  simpa only [add_assoc] using hdet
+
 #print axioms exists_fordVK_empty_detector_general_growthBound
 #print axioms exists_fordVK_singleZero_detector_general_growthBound
+#print axioms exists_fordSingleZero_detector_general_growthBound
+#print axioms exists_fordEmpty_detector_general_growthBound
 
 end
 

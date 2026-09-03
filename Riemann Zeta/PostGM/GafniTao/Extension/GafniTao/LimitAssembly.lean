@@ -212,4 +212,88 @@ theorem localExceptionalMeasure_fixedPowerBound_of_source_inputs
   exact hTransfer hJ hthetaLower hthetaUpper hdelta hdeltaOne hJLocal
     hJFormula hEquationFixed
 
+/-- Principal-form equation-(2.7) limit: a strict real upper approximant to
+the literal refined infimum gives a genuine fixed-power bound without an
+inserted lower-half baseline. -/
+theorem equation27FullZeroMeasure_fixedPowerBound_of_refined_lt_exact
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta delta xi : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1)
+    (hsource : refinedExceptionalUpperExponent theta < (xi : EReal)) :
+    ∃ J : ℕ, 0 < J ∧
+      FixedPowerBound
+        (fun X => equation27FullZeroMeasure J theta delta X) xi := by
+  obtain ⟨eps, mu, heps, hthreshold, hfixed, hmuXi⟩ :=
+    exists_refined_limit_witness hthetaUpper hsource
+  have hrightMargin :
+      0 < eps * (1 - theta) * nearOneRightEdgeWidth C 2 := by
+    exact mul_pos (mul_pos heps (sub_pos.mpr hthetaUpper))
+      (nearOneRightEdgeWidth_pos hC (by norm_num))
+  have hpowerMargin : 0 < xi - mu := sub_pos.mpr hmuXi
+  obtain ⟨J, hJ, hJRight, hJPower⟩ :=
+    exists_positive_nat_with_inverse_margins hrightMargin hpowerMargin
+  refine ⟨J, hJ, ?_⟩
+  have hEpsilon :=
+    equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs_exact
+      cutoff hDensity hZeroFree hC hc hJ hthetaLower hthetaUpper heps
+        hthreshold hdelta hdeltaOne hJRight hfixed
+  apply fixedPowerBound_of_epsilonExponentBound_lt hEpsilon
+  linarith
+
+/-- Exact local exceptional-measure consumer for the principal refined
+exponent.  The native explicit formula transfer and every finite `J` loss are
+assembled here. -/
+theorem localExceptionalMeasure_fixedPowerBound_of_source_inputs_exact
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    (hFormula : SharpTruncatedExplicitFormulaBound)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {theta delta xi : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1)
+    (hsource : refinedExceptionalUpperExponent theta < (xi : EReal)) :
+    ∃ J : ℕ, 0 < J ∧
+      FixedPowerBound
+        (fun X => localShortIntervalExceptionalMeasure J theta delta X) xi := by
+  obtain ⟨CFormula, hCFormula, hTransfer⟩ :=
+    localExceptionalMeasure_fixedPowerBound_of_equation27 hFormula
+  obtain ⟨eps, mu, heps, hthreshold, hfixed, hmuXi⟩ :=
+    exists_refined_limit_witness hthetaUpper hsource
+  obtain ⟨J₀, hJ₀⟩ := exists_nat_gt
+    (max (6 * (8 / theta + 2)) (24 * CFormula / delta))
+  have hrightMargin :
+      0 < eps * (1 - theta) * nearOneRightEdgeWidth C 2 := by
+    exact mul_pos (mul_pos heps (sub_pos.mpr hthetaUpper))
+      (nearOneRightEdgeWidth_pos hC (by norm_num))
+  have hpowerMargin : 0 < xi - mu := sub_pos.mpr hmuXi
+  obtain ⟨J, hJ₀J, hJ, hJRight, hJPower⟩ :=
+    exists_nat_ge_with_inverse_margins J₀ hrightMargin hpowerMargin
+  have hJLowerReal : (J₀ : ℝ) ≤ J := by exact_mod_cast hJ₀J
+  have hJLocal : 6 * (8 / theta + 2) ≤ (J : ℝ) := by
+    exact (le_max_left _ _).trans (hJ₀.le.trans hJLowerReal)
+  have hJFormula : 24 * CFormula ≤ delta * (J : ℝ) := by
+    have hRatio : 24 * CFormula / delta ≤ (J : ℝ) :=
+      (le_max_right _ _).trans (hJ₀.le.trans hJLowerReal)
+    have hRaw : 24 * CFormula ≤ (J : ℝ) * delta :=
+      (div_le_iff₀ hdelta).mp hRatio
+    simpa [mul_comm] using hRaw
+  have hEquationEpsilon :=
+    equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs_exact
+      cutoff hDensity hZeroFree hC hc hJ hthetaLower hthetaUpper heps
+        hthreshold hdelta hdeltaOne hJRight hfixed
+  have hEquationFixed :
+      FixedPowerBound
+        (fun X => equation27FullZeroMeasure J theta delta X) xi :=
+    fixedPowerBound_of_epsilonExponentBound_lt hEquationEpsilon (by linarith)
+  refine ⟨J, hJ, ?_⟩
+  exact hTransfer hJ hthetaLower hthetaUpper hdelta hdeltaOne hJLocal
+    hJFormula hEquationFixed
+
 end GafniTao

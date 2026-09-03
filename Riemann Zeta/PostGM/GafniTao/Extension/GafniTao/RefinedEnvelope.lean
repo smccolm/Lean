@@ -41,6 +41,37 @@ noncomputable def refinedExceptionalUpperExponent (theta : ℝ) : EReal :=
   sInf {x | ∃ eps : ℝ, 0 < eps ∧
     x = refinedFixedEpsilonExponent theta eps}
 
+/-- The strict upper-half admissibility condition used in the alternate
+display following Gafni--Tao Theorem 1.3. -/
+def UpperHalfRefinedSigmaAdmissible (theta eps sigma : ℝ) : Prop :=
+  1 / 2 < sigma ∧ sigma < 1 ∧
+    ((1 / (1 - theta) - eps : ℝ) : EReal) ≤ zeroDensityExponent sigma
+
+/-- The fixed-`epsilon` supremum in the source's alternate upper-half
+formula.  The strict lower endpoint is retained literally. -/
+noncomputable def upperHalfRefinedFixedEpsilonExponent
+    (theta eps : ℝ) : EReal :=
+  sSup {x | ∃ sigma : ℝ,
+    UpperHalfRefinedSigmaAdmissible theta eps sigma ∧
+    x = min (ordinaryMomentExponent theta sigma)
+      (additiveEnergyMomentExponent theta sigma)}
+
+/-- The upper-half infimum occurring inside the source's alternate
+`max (1-theta, ·)` formulation. -/
+noncomputable def upperHalfRefinedExceptionalUpperExponent
+    (theta : ℝ) : EReal :=
+  sInf {x | ∃ eps : ℝ, 0 < eps ∧
+    x = upperHalfRefinedFixedEpsilonExponent theta eps}
+
+theorem upperHalfRefinedCandidate_le_fixedEpsilon
+    {theta eps sigma : ℝ}
+    (h : UpperHalfRefinedSigmaAdmissible theta eps sigma) :
+    min (ordinaryMomentExponent theta sigma)
+        (additiveEnergyMomentExponent theta sigma) ≤
+      upperHalfRefinedFixedEpsilonExponent theta eps := by
+  apply le_sSup
+  exact ⟨sigma, h, rfl⟩
+
 theorem refinedCandidate_le_fixedEpsilon
     {theta eps sigma : ℝ}
     (h : RefinedSigmaAdmissible theta eps sigma) :
@@ -134,6 +165,31 @@ theorem zeroAdditiveEnergyExponent_ne_top_of_half_le
   rw [htop] at hle
   exact (not_le_of_gt (EReal.coe_lt_top (4 * (30 / 13) : ℝ))) hle
 
+/-- The genuine ordinary density exponent is finite throughout the closed
+source strip.  This is the finiteness input needed to treat the lower-half
+strips by their actual source exponent rather than by a baseline surrogate. -/
+theorem zeroDensityExponent_ne_top_of_nonnegative
+    {sigma : ℝ} (hsigmaLower : 0 ≤ sigma) (hsigmaUpper : sigma ≤ 1) :
+    zeroDensityExponent sigma ≠ ⊤ := by
+  intro htop
+  have hle := zeroDensityExponent_le
+    (uniform_thirty_thirteenths_zeroDensityEnvelope_nonnegative
+      hsigmaLower hsigmaUpper)
+  rw [htop] at hle
+  exact (not_le_of_gt (EReal.coe_lt_top (30 / 13 : ℝ))) hle
+
+/-- The genuine four-zero energy exponent is finite throughout the closed
+source strip, by the fourth-power comparison with the ordinary count. -/
+theorem zeroAdditiveEnergyExponent_ne_top_of_nonnegative
+    {sigma : ℝ} (hsigmaLower : 0 ≤ sigma) (hsigmaUpper : sigma ≤ 1) :
+    zeroAdditiveEnergyExponent sigma ≠ ⊤ := by
+  intro htop
+  have hle := zeroAdditiveEnergyExponent_le_four_mul_of_zeroDensityEnvelope
+    (uniform_thirty_thirteenths_zeroDensityEnvelope_nonnegative
+      hsigmaLower hsigmaUpper)
+  rw [htop] at hle
+  exact (not_le_of_gt (EReal.coe_lt_top (4 * (30 / 13) : ℝ))) hle
+
 theorem zeroAdditiveEnergyExponent_ne_bot_of_density_coe_le
     {sigma lower : ℝ}
     (hlower : (lower : EReal) ≤ zeroDensityExponent sigma) :
@@ -200,14 +256,14 @@ theorem exists_nonnegative_strict_upper_preserving_affine
   linarith
 
 /-- If the fixed-`epsilon` source supremum lies strictly below a real `mu`,
-then every admissible sigma in the upper half of the critical strip admits
+then every admissible sigma in the full source strip admits
 genuine finite envelope coefficients for which one of the two paper
 alternatives is at most `mu`. -/
 theorem exists_exponent_approximants_of_refinedFixedEpsilon_lt
     {theta eps sigma mu : ℝ}
     (htheta : theta < 1)
     (hthreshold : 0 < 1 / (1 - theta) - eps)
-    (hsigmaLower : 1 / 2 ≤ sigma)
+    (hsigmaLower : 0 ≤ sigma)
     (hsigmaUpper : sigma < 1)
     (hadmissible : RefinedSigmaAdmissible theta eps sigma)
     (hfixed : refinedFixedEpsilonExponent theta eps < (mu : EReal)) :
@@ -219,20 +275,21 @@ theorem exists_exponent_approximants_of_refinedFixedEpsilon_lt
        (1 - theta) * (aEnergy * (1 - sigma)) + 4 * sigma - 3 ≤ mu) := by
   have hDensityLower := hadmissible.2.2
   have hSigmaUpperLe : sigma ≤ 1 := hsigmaUpper.le
-  have hATop := zeroDensityExponent_ne_top_of_half_le
+  have hATop := zeroDensityExponent_ne_top_of_nonnegative
     hsigmaLower hSigmaUpperLe
   have hABot := zeroDensityExponent_ne_bot_of_coe_le hDensityLower
-  have hETop := zeroAdditiveEnergyExponent_ne_top_of_half_le
+  have hETop := zeroAdditiveEnergyExponent_ne_top_of_nonnegative
     hsigmaLower hSigmaUpperLe
   have hEBot := zeroAdditiveEnergyExponent_ne_bot_of_density_coe_le hDensityLower
   have hCandidate :
       min (ordinaryMomentExponent theta sigma)
           (additiveEnergyMomentExponent theta sigma) < (mu : EReal) :=
     (refinedCandidate_le_fixedEpsilon hadmissible).trans_lt hfixed
-  have hAUpper := zeroDensityExponent_le_thirty_thirteenths
-    hsigmaLower hSigmaUpperLe
+  have hAUpper := zeroDensityExponent_le
+    (uniform_thirty_thirteenths_zeroDensityEnvelope_nonnegative
+      hsigmaLower hSigmaUpperLe)
   have hEUpper := zeroAdditiveEnergyExponent_le_four_mul_of_zeroDensityEnvelope
-    (frozen_uniform_thirty_thirteenths_zeroDensityEnvelope
+    (uniform_thirty_thirteenths_zeroDensityEnvelope_nonnegative
       hsigmaLower hSigmaUpperLe)
   have hxA : 0 ≤ (zeroDensityExponent sigma).toReal := by
     have hreal := EReal.toReal_le_toReal hDensityLower
@@ -287,7 +344,8 @@ theorem exists_exponent_approximants_of_refinedFixedEpsilon_lt
     · convert hAlternative using 1
       all_goals ring_nf
 
-/-- Exact fixed-`epsilon` source consumer for one upper-half strip.  It starts
+/-- Exact fixed-`epsilon` source consumer for one strip in the full source
+range.  It starts
 from membership in the literal supremum and ends at the literal
 equation-(2.7) strip measure, deriving both analytic envelopes internally. -/
 theorem equation27StripMeasure_epsilonBound_of_refinedFixedEpsilon_lt
@@ -297,7 +355,7 @@ theorem equation27StripMeasure_epsilonBound_of_refinedFixedEpsilon_lt
     (htheta : theta < 1)
     (hthreshold : 0 < 1 / (1 - theta) - eps)
     (hdelta : 0 < delta) (hdeltaOne : delta < 1)
-    (hsigmaLower : 1 / 2 ≤ (j : ℝ) / J)
+    (hsigmaLower : 0 ≤ (j : ℝ) / J)
     (hadmissible :
       RefinedSigmaAdmissible theta eps ((j : ℝ) / J))
     (hfixed : refinedFixedEpsilonExponent theta eps < (mu : EReal)) :
@@ -403,8 +461,9 @@ theorem equation27FullZeroMeasure_epsilonBound_of_refinedFixedEpsilon_lt
       by_cases hAdmissible :
           RefinedSigmaAdmissible theta eps ((j : ℝ) / J)
       · have hBound :=
-          equation27StripMeasure_epsilonBound_of_refinedFixedEpsilon_lt
-            cutoff hJ hjLt htheta hthreshold hdelta hdeltaOne hsigmaHalf
+            equation27StripMeasure_epsilonBound_of_refinedFixedEpsilon_lt
+            cutoff hJ hjLt htheta hthreshold hdelta hdeltaOne
+              (le_trans (by norm_num : (0 : ℝ) ≤ 1 / 2) hsigmaHalf)
               hAdmissible hfixed
         apply hBound.mono_exponent
         linarith [le_max_right (1 - theta) mu]
@@ -426,8 +485,142 @@ theorem equation27FullZeroMeasure_epsilonBound_of_refinedFixedEpsilon_lt
           exact hJMargin.trans_le
             (mul_le_mul_of_nonneg_left hInteriorGap hCoeff.le)
         have hEmpty := eventually_equation27StripLargeSet_eq_empty_of_small_A
-          hJ htheta hdelta hdeltaOne hthreshold.le hsigmaPos hsigmaUpper
+          hJ htheta hdelta hdeltaOne hthreshold.le hsigmaPos.le hsigmaUpper
             hA hMargin
         exact equation27StripMeasure_epsilonBound_of_eventually_empty hEmpty
+
+/-- The source-faithful fixed-epsilon assembly over the full strip.  Unlike
+the alternate max-form theorem above, admissible lower-half strips are sent
+through their actual `A`/`A*` moment alternative.  The lower-half baseline is
+therefore not inserted into the exponent. -/
+theorem equation27FullZeroMeasure_epsilonBound_of_refinedFixedEpsilon_lt_exact
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    {J : ℕ} (hJ : 0 < J)
+    {theta eps delta mu eta : ℝ}
+    (htheta : theta < 1)
+    (heps : 0 < eps)
+    (hthreshold : 0 < 1 / (1 - theta) - eps)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1)
+    (hJMargin : 1 / (J : ℝ) < eps * (1 - theta) * eta)
+    (hfixed : refinedFixedEpsilonExponent theta eps < (mu : EReal))
+    (hRight : ∀ j ∈ Finset.range J,
+      1 - eta < (j : ℝ) / J →
+      EpsilonExponentBound
+        (fun X => equation27StripMeasure J j theta delta X)
+        (mu + 4 / J)) :
+    EpsilonExponentBound
+      (fun X => equation27FullZeroMeasure J theta delta X)
+      (mu + 4 / J) := by
+  have hJr : (0 : ℝ) < J := by exact_mod_cast hJ
+  apply equation27FullZeroMeasure_epsilonBound hJ hdelta
+  intro j hj
+  have hjLt : j < J := Finset.mem_range.mp hj
+  have hsigmaNonneg : 0 ≤ (j : ℝ) / J := by positivity
+  have hsigmaLtOne : (j : ℝ) / J < 1 := by
+    rw [div_lt_one hJr]
+    exact_mod_cast hjLt
+  have hsigmaUpper : ((j + 1 : ℕ) : ℝ) / J ≤ 1 := by
+    rw [div_le_one hJr]
+    exact_mod_cast Nat.succ_le_iff.mpr hjLt
+  by_cases hAtRight : 1 - eta < (j : ℝ) / J
+  · exact hRight j hj hAtRight
+  · have hInterior : (j : ℝ) / J ≤ 1 - eta := le_of_not_gt hAtRight
+    by_cases hAdmissible :
+        RefinedSigmaAdmissible theta eps ((j : ℝ) / J)
+    · exact equation27StripMeasure_epsilonBound_of_refinedFixedEpsilon_lt
+        cutoff hJ hjLt htheta hthreshold hdelta hdeltaOne hsigmaNonneg
+          hAdmissible hfixed
+    · have hANot : ¬(((1 / (1 - theta) - eps : ℝ) : EReal) ≤
+          zeroDensityExponent ((j : ℝ) / J)) := by
+        intro hA
+        exact hAdmissible ⟨hsigmaNonneg, hsigmaLtOne, hA⟩
+      have hA : zeroDensityExponent ((j : ℝ) / J) <
+          (((1 / (1 - theta) - eps : ℝ) : EReal)) :=
+        lt_of_not_ge hANot
+      have hGap : 0 < 1 - theta := by linarith
+      have hInteriorGap : eta ≤ 1 - (j : ℝ) / J := by linarith
+      have hMargin : 1 / (J : ℝ) <
+          eps * (1 - theta) * (1 - (j : ℝ) / J) := by
+        have hCoeff : 0 < eps * (1 - theta) := mul_pos heps hGap
+        exact hJMargin.trans_le
+          (mul_le_mul_of_nonneg_left hInteriorGap hCoeff.le)
+      have hEmpty := eventually_equation27StripLargeSet_eq_empty_of_small_A
+        hJ htheta hdelta hdeltaOne hthreshold.le hsigmaNonneg hsigmaUpper
+          hA hMargin
+      exact equation27StripMeasure_epsilonBound_of_eventually_empty hEmpty
+
+/-- On the lower half of the critical strip, the ordinary-moment candidate
+is at most the source baseline `1-theta`.  This is the exact comparison that
+permits the alternate formula to discard lower-half candidates. -/
+theorem ordinaryMomentExponent_le_one_sub_theta_of_lowerHalf
+    {theta sigma : ℝ} (htheta : theta < 1)
+    (hsigma : 0 ≤ sigma) (hsigmaHalf : sigma ≤ 1 / 2) :
+    ordinaryMomentExponent theta sigma ≤ ((1 - theta : ℝ) : EReal) := by
+  unfold ordinaryMomentExponent
+  have hcoef : 0 ≤ (1 - theta) * (1 - sigma) := by
+    have hthetaGap : 0 < 1 - theta := by linarith
+    have hsigmaGap : 0 < 1 - sigma := by linarith
+    positivity
+  calc
+    (((1 - theta) * (1 - sigma) : ℝ) : EReal) *
+          zeroDensityExponent sigma + ((2 * sigma - 1 : ℝ) : EReal) ≤
+        (((1 - theta) * (1 - sigma) : ℝ) : EReal) *
+          ((1 / (1 - sigma) : ℝ) : EReal) +
+            ((2 * sigma - 1 : ℝ) : EReal) := by
+      gcongr
+      exact zeroDensityExponent_le_lowerHalf hsigma hsigmaHalf
+    _ = (((1 - theta) + 2 * sigma - 1 : ℝ) : EReal) := by
+      rw [← EReal.coe_mul, ← EReal.coe_add]
+      congr 1
+      field_simp [show 1 - sigma ≠ 0 by linarith]
+      ring
+    _ ≤ ((1 - theta : ℝ) : EReal) := by
+      exact_mod_cast
+        (show 1 - theta + 2 * sigma - 1 ≤ 1 - theta by linarith)
+
+/-- At each fixed source epsilon, the full-strip supremum is controlled by
+the lower-half baseline and the strict upper-half supremum. -/
+theorem refinedFixedEpsilonExponent_le_upperHalf_max
+    {theta eps : ℝ} (htheta : theta < 1) :
+    refinedFixedEpsilonExponent theta eps ≤
+      max (((1 - theta : ℝ) : EReal))
+        (upperHalfRefinedFixedEpsilonExponent theta eps) := by
+  unfold refinedFixedEpsilonExponent
+  apply sSup_le
+  rintro x ⟨sigma, hsigma, rfl⟩
+  by_cases hhalf : sigma ≤ 1 / 2
+  · exact (min_le_left _ _).trans
+      ((ordinaryMomentExponent_le_one_sub_theta_of_lowerHalf
+          htheta hsigma.1 hhalf).trans (le_max_left _ _))
+  · exact (upperHalfRefinedCandidate_le_fixedEpsilon
+      ⟨lt_of_not_ge hhalf, hsigma.2.1, hsigma.2.2⟩).trans
+        (le_max_right _ _)
+
+/-- Complete-lattice comparison between the exact principal formula and the
+source's alternate strict-upper-half formula.  The proof uses the infimum
+property directly and assumes no continuity or attainment in epsilon. -/
+theorem refinedExceptionalUpperExponent_le_upperHalf_max
+    {theta : ℝ} (htheta : theta < 1) :
+    refinedExceptionalUpperExponent theta ≤
+      max (((1 - theta : ℝ) : EReal))
+        (upperHalfRefinedExceptionalUpperExponent theta) := by
+  apply le_of_not_gt
+  intro hbad
+  have hupper : upperHalfRefinedExceptionalUpperExponent theta <
+      refinedExceptionalUpperExponent theta :=
+    (le_max_right _ _).trans_lt hbad
+  obtain ⟨x, hx, hxlt⟩ := sInf_lt_iff.mp hupper
+  rcases hx with ⟨eps, heps, rfl⟩
+  have hbase : ((1 - theta : ℝ) : EReal) <
+      refinedExceptionalUpperExponent theta :=
+    (le_max_left _ _).trans_lt hbad
+  have hfixed : max (((1 - theta : ℝ) : EReal))
+        (upperHalfRefinedFixedEpsilonExponent theta eps) <
+      refinedExceptionalUpperExponent theta := max_lt hbase hxlt
+  have hinf : refinedExceptionalUpperExponent theta ≤
+      refinedFixedEpsilonExponent theta eps :=
+    refinedExceptionalUpperExponent_le_fixedEpsilon heps
+  exact (not_lt_of_ge hinf)
+    ((refinedFixedEpsilonExponent_le_upperHalf_max htheta).trans_lt hfixed)
 
 end GafniTao

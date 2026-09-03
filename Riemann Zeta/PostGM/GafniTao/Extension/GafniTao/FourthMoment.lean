@@ -1121,7 +1121,7 @@ theorem norm_logarithmicZeroStripFourthMoment_le
         ‖complexifiedLogScaleBumpFourier cutoff
           ((d : ℂ) - I * (s : ℂ))‖ ≤ K)
     {sigmaLower sigmaUpper T tau X : ℝ}
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (htau : 0 < tau) (hX : 1 ≤ X) :
     ‖logarithmicZeroStripFourthMoment cutoff
@@ -1135,8 +1135,6 @@ theorem norm_logarithmicZeroStripFourthMoment_le
   let pairs := strip ×ˢ strip
   let R : ℝ := X ^ sigmaUpper / tau
   let R2 : ℝ := R * R
-  have hsigmaLowerPos : 0 < sigmaLower :=
-    lt_of_lt_of_le (by norm_num) hsigmaLower
   have hR : 0 ≤ R :=
     div_nonneg (Real.rpow_nonneg (by positivity) _) htau.le
   rw [logarithmicZeroStripFourthMoment_eq_pair_sum]
@@ -1175,8 +1173,16 @@ theorem norm_logarithmicZeroStripFourthMoment_le
       have hq1Bounds := rectBounds hqMem.1
       have hq2Bounds := rectBounds hqMem.2
       have nonzero {rho : ℂ} (hrho : rho ∈ strip) : rho ≠ 0 := by
-        apply ne_zero_of_mem_zerosInRect_of_pos hsigmaLowerPos
-        simpa [strip] using hrho
+        have hmem : rho ∈ zerosInRect sigmaLower sigmaUpper (-T) T := by
+          simpa [strip] using hrho
+        rw [zerosInRect, Set.Finite.mem_toFinset, Set.mem_inter_iff] at hmem
+        have hb := (RiemannZeta.GuthMaynard.mem_ZeroRectangle
+          sigmaLower sigmaUpper (-T) T rho).mp hmem.1
+        have hrePos := zero_re_pos_of_nonneg
+          (hsigmaLower.trans hb.1) (hb.2.1.trans hsigmaUpper) hmem.2
+        intro hrhoZero
+        subst rho
+        norm_num at hrePos
       have hpCoeff := norm_stripZeroPairCoefficient_le htau hX
         (nonzero hpMem.1) (nonzero hpMem.2)
         hp1Bounds.2 hp2Bounds.2 hsigmaUpper
@@ -1184,13 +1190,13 @@ theorem norm_logarithmicZeroStripFourthMoment_le
         (nonzero hqMem.1) (nonzero hqMem.2)
         hq1Bounds.2 hq2Bounds.2 hsigmaUpper
       have hKernel := norm_zeroPairPairFourierKernel_le cutoff hDecay
-        (hsigmaLowerPos.le.trans hp1Bounds.1)
+        (hsigmaLower.trans hp1Bounds.1)
         (hp1Bounds.2.trans hsigmaUpper)
-        (hsigmaLowerPos.le.trans hp2Bounds.1)
+        (hsigmaLower.trans hp2Bounds.1)
         (hp2Bounds.2.trans hsigmaUpper)
-        (hsigmaLowerPos.le.trans hq1Bounds.1)
+        (hsigmaLower.trans hq1Bounds.1)
         (hq1Bounds.2.trans hsigmaUpper)
-        (hsigmaLowerPos.le.trans hq2Bounds.1)
+        (hsigmaLower.trans hq2Bounds.1)
         (hq2Bounds.2.trans hsigmaUpper)
       have hStarNorm :
           ‖starRingEnd ℂ (stripZeroPairCoefficient tau X q)‖ =
@@ -1447,7 +1453,7 @@ theorem zeroStripPhysicalFourthMoment_le_count
         ‖complexifiedLogScaleBumpFourier cutoff
           ((d : ℂ) - I * (s : ℂ))‖ ≤ K)
     {sigmaLower sigmaUpper T tau X : ℝ}
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (htau : 0 < tau) (hX : 1 ≤ X) :
     zeroStripPhysicalFourthMoment sigmaLower sigmaUpper T tau X ≤
@@ -1536,7 +1542,7 @@ theorem zeroStripPhysicalFourthMoment_le_majorant
         ‖complexifiedLogScaleBumpFourier cutoff
           ((d : ℂ) - I * (s : ℂ))‖ ≤ K)
     {J theta sigmaLower sigmaUpper X : ℝ}
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hX : 1 ≤ X) :
     zeroStripPhysicalFourthMoment sigmaLower sigmaUpper
@@ -1572,7 +1578,7 @@ theorem zeroStripPhysicalFourthMoment_epsilonBound
     (cutoff : GMSmoothCutoff)
     {J theta sigmaLower sigmaUpper a : ℝ}
     (hJ : 0 < J) (htheta : theta < 1) (ha : 0 ≤ a)
-    (hsigmaLower : 1 / 2 ≤ sigmaLower)
+    (hsigmaLower : 0 ≤ sigmaLower)
     (hsigmaOrder : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hEnergy : ZeroAdditiveEnergyEnvelope sigmaLower a) :

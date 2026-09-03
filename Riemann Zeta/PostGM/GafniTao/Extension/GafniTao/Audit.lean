@@ -354,6 +354,12 @@ axiom dependencies.
 #print axioms GafniTao.zeroLocalUnitBin_multiplicity_le_three_mul_log
 #print axioms GafniTao.globalLocalZeroLogConstant_pos
 #print axioms GafniTao.zeroLocalUnitBin_multiplicity_le_global_log
+#print axioms GafniTao.resonantFourthZeroFiber_subset_three_bins
+#print axioms GafniTao.resonantFourthZeroFiber_multiplicity_le
+#print axioms GafniTao.zeroAdditiveEnergyCount_eq_sum_resonantFourthZeroFiber
+#print axioms GafniTao.zeroAdditiveEnergyCount_le_three_local_mul_zeroCount_cube
+#print axioms GafniTao.zeroAdditiveEnergyEnvelope_three_mul_of_zeroDensityEnvelope
+#print axioms GafniTao.zeroAdditiveEnergyExponent_le_three_mul_of_zeroDensityEnvelope
 #print axioms GafniTao.zeroPairDecay_row_sum_le
 #print axioms GafniTao.zeroPairDecaySum_le
 #print axioms GafniTao.exists_complexifiedLogScaleBumpFourier_tenfold_decay

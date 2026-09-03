@@ -1,5 +1,6 @@
 import GafniTao.ExplicitFormulaSetup
 import GafniTao.LocalCover
+import GafniTao.CriticalStripReflection
 import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-!
@@ -45,7 +46,7 @@ Every zero is counted with analytic multiplicity and every summand is the
 literal short-increment coefficient from equation (2.4). -/
 theorem norm_zeroStripIncrementSum_le_count
     {sigmaLower sigmaUpper T tau x : ℝ}
-    (hsigmaLowerPos : 0 < sigmaLower)
+    (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (htau : 0 < tau) (hx : 1 ≤ x) :
     ‖zeroStripIncrementSum sigmaLower sigmaUpper T tau x‖ ≤
@@ -75,8 +76,19 @@ theorem norm_zeroStripIncrementSum_le_count
       have hrhoRe : rho.re ≤ sigmaUpper :=
         (RiemannZeta.GuthMaynard.mem_ZeroRectangle
           sigmaLower sigmaUpper (-T) T rho).mp hrhoRect |>.2.1
-      have hrhoNe : rho ≠ 0 :=
-        ne_zero_of_mem_zerosInRect_of_pos hsigmaLowerPos hrhoMem
+      have hrhoMem' := hrhoMem
+      rw [RiemannZeta.GuthMaynard.zerosInRect,
+        Set.Finite.mem_toFinset, Set.mem_inter_iff] at hrhoMem'
+      have hrhoBounds :=
+        (RiemannZeta.GuthMaynard.mem_ZeroRectangle
+          sigmaLower sigmaUpper (-T) T rho).mp hrhoMem'.1
+      have hrhoRePos := zero_re_pos_of_nonneg
+        (hsigmaLowerNonneg.trans hrhoBounds.1)
+        (hrhoBounds.2.1.trans hsigmaUpper) hrhoMem'.2
+      have hrhoNe : rho ≠ 0 := by
+        intro hrhoZero
+        subst rho
+        norm_num at hrhoRePos
       rw [norm_mul, RCLike.norm_natCast]
       gcongr
       calc
@@ -294,7 +306,7 @@ visible in the conclusion. -/
 theorem norm_zeroStripIncrementSum_le_physicalMajorant
     {J theta sigmaLower sigmaUpper X x : ℝ}
     (hX : 1 ≤ X) (hxLower : X ≤ x)
-    (hxUpper : x ≤ 2 * X) (hsigmaLowerPos : 0 < sigmaLower)
+    (hxUpper : x ≤ 2 * X) (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaUpperNonneg : 0 ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1) :
     ‖zeroStripIncrementSum sigmaLower sigmaUpper
@@ -306,7 +318,7 @@ theorem norm_zeroStripIncrementSum_le_physicalMajorant
   have htau : 0 < localTau X theta := localTau_pos hXPos
   have hFinite := norm_zeroStripIncrementSum_le_count
     (T := explicitFormulaHeight J theta X)
-    hsigmaLowerPos hsigmaUpper htau (hX.trans hxLower)
+    hsigmaLowerNonneg hsigmaUpper htau (hX.trans hxLower)
   refine hFinite.trans ?_
   have hxPow : x ^ sigmaUpper ≤ (2 * X) ^ sigmaUpper :=
     Real.rpow_le_rpow hxPos.le hxUpper hsigmaUpperNonneg
@@ -346,7 +358,7 @@ noncomputable def zeroStripPhysicalSup
 /-- Exact finite supremum inequality underlying Gafni--Tao Lemma 2.2. -/
 theorem zeroStripPhysicalSup_le_majorant
     {J theta sigmaLower sigmaUpper X : ℝ}
-    (hX : 1 ≤ X) (hsigmaLowerPos : 0 < sigmaLower)
+    (hX : 1 ≤ X) (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaUpperNonneg : 0 ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1) :
     zeroStripPhysicalSup J theta sigmaLower sigmaUpper X ≤
@@ -360,7 +372,7 @@ theorem zeroStripPhysicalSup_le_majorant
   · intro y hy
     rcases hy with ⟨x, hx, rfl⟩
     exact norm_zeroStripIncrementSum_le_physicalMajorant
-      hX hx.1 hx.2 hsigmaLowerPos hsigmaUpperNonneg hsigmaUpper
+      hX hx.1 hx.2 hsigmaLowerNonneg hsigmaUpperNonneg hsigmaUpper
 
 /-- Full source-form Lemma 2.2: the `L∞` supremum satisfies the exact
 epsilon exponent, and the proof term consumes both the literal strip sum and
@@ -368,7 +380,7 @@ the actual ordinary zero-density envelope. -/
 theorem zeroStripPhysicalSup_epsilonBound
     {J theta sigmaLower sigmaUpper a : ℝ}
     (hJ : 0 < J) (hthetaUpper : theta < 1)
-    (ha : 0 ≤ a) (hsigmaLowerPos : 0 < sigmaLower)
+    (ha : 0 ≤ a) (hsigmaLowerNonneg : 0 ≤ sigmaLower)
     (hsigmaLowerUpper : sigmaLower ≤ sigmaUpper)
     (hsigmaUpper : sigmaUpper ≤ 1)
     (hDensity : ZeroDensityEnvelope sigmaLower a) :
@@ -376,7 +388,7 @@ theorem zeroStripPhysicalSup_epsilonBound
       (zeroStripPhysicalSup J theta sigmaLower sigmaUpper)
       ((1 - theta) * (a * (1 - sigmaLower)) + theta + sigmaUpper - 1) := by
   have hsigmaUpperNonneg : 0 ≤ sigmaUpper :=
-    hsigmaLowerPos.le.trans hsigmaLowerUpper
+    hsigmaLowerNonneg.trans hsigmaLowerUpper
   have hMajorant := zeroStripPhysicalMajorant_epsilonBound
     (sigmaUpper := sigmaUpper) hJ hthetaUpper ha
       (hsigmaLowerUpper.trans hsigmaUpper) hDensity
@@ -393,7 +405,7 @@ theorem zeroStripPhysicalSup_epsilonBound
       apply IsBigO.of_bound (2 ^ sigmaUpper)
       filter_upwards [eventually_ge_atTop (1 : ℝ)] with X hX
       have hSupLe := zeroStripPhysicalSup_le_majorant
-        (J := J) (theta := theta) hX hsigmaLowerPos
+        (J := J) (theta := theta) hX hsigmaLowerNonneg
           hsigmaUpperNonneg hsigmaUpper
       have hMajorantNonneg :
           0 ≤ zeroStripPhysicalMajorant J theta sigmaLower sigmaUpper X := by
@@ -409,7 +421,7 @@ theorem zeroStripPhysicalSup_epsilonBound
         intro y hy
         rcases hy with ⟨x, hx, rfl⟩
         exact norm_zeroStripIncrementSum_le_physicalMajorant
-          (J := J) (theta := theta) hX hx.1 hx.2 hsigmaLowerPos
+          (J := J) (theta := theta) hX hx.1 hx.2 hsigmaLowerNonneg
             hsigmaUpperNonneg hsigmaUpper
       have hSupNonneg :
           0 ≤ zeroStripPhysicalSup J theta sigmaLower sigmaUpper X := by

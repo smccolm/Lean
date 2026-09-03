@@ -40,4 +40,32 @@ theorem equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs
     hDensity hZeroFree hC hc hJ hthetaLower hthetaUpper hdelta hdeltaOne
       hAtRight.le
 
+/-- Exact principal-form equation-(2.7) bound.  Every admissible strip uses
+the corresponding actual moment exponent, so the output contains no added
+`max (1-theta, ·)` baseline. -/
+theorem equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs_exact
+    (cutoff : RiemannZeta.GuthMaynard.GMSmoothCutoff)
+    {C B T₀ c T₁ : ℝ}
+    (hDensity : NearOneLogDensityBound C B T₀)
+    (hZeroFree : VinogradovKorobovCountVanishing c T₁)
+    (hC : 0 < C) (hc : 0 < c)
+    {J : ℕ} (hJ : 0 < J)
+    {theta eps delta mu : ℝ}
+    (hthetaLower : 0 < theta) (hthetaUpper : theta < 1)
+    (heps : 0 < eps)
+    (hthreshold : 0 < 1 / (1 - theta) - eps)
+    (hdelta : 0 < delta) (hdeltaOne : delta < 1)
+    (hJMargin : 1 / (J : ℝ) <
+      eps * (1 - theta) * nearOneRightEdgeWidth C 2)
+    (hfixed : refinedFixedEpsilonExponent theta eps < (mu : EReal)) :
+    EpsilonExponentBound
+      (fun X => equation27FullZeroMeasure J theta delta X)
+      (mu + 4 / J) := by
+  apply equation27FullZeroMeasure_epsilonBound_of_refinedFixedEpsilon_lt_exact
+    cutoff hJ hthetaUpper heps hthreshold hdelta hdeltaOne hJMargin hfixed
+  intro j hj hAtRight
+  exact equation27StripMeasure_epsilonBound_of_rightEdge
+    hDensity hZeroFree hC hc hJ hthetaLower hthetaUpper hdelta hdeltaOne
+      hAtRight.le
+
 end GafniTao

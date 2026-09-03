@@ -216,6 +216,7 @@ import GafniTao.GeneralEnvelope
 import GafniTao.FordLemma33Finite
 import GafniTao.FordCountMonotone
 import GafniTao.FordLemma63MomentIntegral
+import GafniTao.ZeroEnergyLocal
 
 /-!
 # Gafni--Tao exceptional intervals

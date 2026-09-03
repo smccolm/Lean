@@ -60,7 +60,6 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
     (hRDef : R = fordVKRadius t)
     (hbase : Real.exp (Real.exp 1) ≤ t)
     (hu : 6 ≤ fordVKLogLog t)
-    (hlogu : 2 * Real.log (fordVKLogLog t) ≤ fordVKLogLog t)
     (hRUpper : R ≤ 1 / 4)
     (hetaLow : (5 / 2 : ℝ) * R < eta)
     (hetaHigh : eta < (51 / 20 : ℝ) * R)

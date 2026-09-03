@@ -5,6 +5,10 @@
 - Tao--Trudgian--Yang: arXiv `2501.16779v1` (PDF saved locally).
 - Ford zeta-growth bound: author PDF `zetabd.pdf` (saved locally).
 - Ford zero-free region: arXiv `1910.08205v4` (PDF and TeX source saved locally).
+- Pintz, *On the density theorem of Halasz and Turan*, Acta Mathematica
+  Hungarica 166 (2022), 48--56, DOI `10.1007/s10474-021-01204-z`
+  (author manuscript `PJ_Halasz_Turan0505.pdf` saved locally from the
+  Hungarian Academy of Sciences repository).
 - ANTEDB/expdb: commit `2b1aea3de263996c4da3042c115126bff601c618`
   (repository archive saved locally).
 - Frozen Lean foundation: tag `gm-foundation-freeze-v1.0.1`, peeled commit
