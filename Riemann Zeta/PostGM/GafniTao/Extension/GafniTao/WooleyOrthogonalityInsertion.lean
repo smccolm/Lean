@@ -30,9 +30,32 @@ theorem wooley_normalized_grid_character
     field_simp
   · simp
 
+private theorem finite_weighted_filter
+    {I Ω : Type*} [Fintype I] [Fintype Ω]
+    (A : ℂ) (weight : Ω → ℂ) (character : I → Ω → ℂ)
+    (P : Ω → Prop) [DecidablePred P]
+    (hcharacter : ∀ omega,
+      A * ∑ i : I, character i omega = if P omega then 1 else 0) :
+    A * ∑ i : I, ∑ omega : Ω, weight omega * character i omega =
+      ∑ omega : Ω, if P omega then weight omega else 0 := by
+  rw [Finset.mul_sum]
+  simp_rw [Finset.mul_sum]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro omega homega
+  calc
+    (∑ i : I, A * (weight omega * character i omega)) =
+        weight omega * (A * ∑ i : I, character i omega) := by
+      rw [Finset.mul_sum, Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro i hi
+      ring
+    _ = if P omega then weight omega else 0 := by
+      rw [hcharacter]
+      split_ifs <;> simp
+
 /-- Weighted orthogonality: a normalized Fourier grid average retains
 exactly those terms whose complete displacement is zero. -/
-set_option maxHeartbeats 800000 in
 theorem wooley_weighted_grid_average_eq_filter
     {Ω : Type*} [Fintype Ω] (q k : ℕ) [NeZero q]
     (weight : Ω → ℂ) (disp : Ω → Fin k → ZMod q) :
@@ -41,49 +64,82 @@ theorem wooley_weighted_grid_average_eq_filter
           ∑ omega : Ω, weight omega *
             ∏ j, ZMod.stdAddChar (alpha j * disp omega j) =
       ∑ omega : Ω, if disp omega = 0 then weight omega else 0 := by
-  let A : ℂ := (((q ^ k : ℕ) : ℂ))⁻¹
-  change A * (∑ alpha, ∑ omega, weight omega *
-    ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) = _
+  apply finite_weighted_filter
+  intro omega
+  exact wooley_normalized_grid_character q k (disp omega)
+
+private theorem finite_insert_redundant_average
+    {I J Ω : Type*} [Fintype I] [Fintype J] [Fintype Ω]
+    (A E : ℂ) (weight : Ω → ℂ)
+    (first : I → Ω → ℂ) (second : J → Ω → ℂ)
+    (P Q : Ω → Prop) [DecidablePred P] [DecidablePred Q]
+    (hfirst : ∀ omega,
+      A * ∑ i : I, first i omega = if P omega then 1 else 0)
+    (hsecond : ∀ omega,
+      E * ∑ j : J, second j omega = if Q omega then 1 else 0)
+    (hforced : ∀ omega, P omega → Q omega) :
+    A * ∑ i : I, ∑ omega : Ω, weight omega * first i omega =
+      A * (E * ∑ i : I, ∑ j : J, ∑ omega : Ω,
+        weight omega * first i omega * second j omega) := by
+  have hleft :
+      A * ∑ i : I, ∑ omega : Ω, weight omega * first i omega =
+        ∑ omega : Ω, if P omega then weight omega else 0 :=
+    finite_weighted_filter A weight first P hfirst
+  have hinner (i : I) :
+      E * ∑ j : J, ∑ omega : Ω,
+          (weight omega * first i omega) * second j omega =
+        ∑ omega : Ω,
+          if Q omega then weight omega * first i omega else 0 :=
+    finite_weighted_filter E (fun omega => weight omega * first i omega)
+      second Q hsecond
+  have hright :
+      A * (E * ∑ i : I, ∑ j : J, ∑ omega : Ω,
+          weight omega * first i omega * second j omega) =
+        ∑ omega : Ω,
+          if P omega then (if Q omega then weight omega else 0) else 0 := by
+    calc
+      A * (E * ∑ i : I, ∑ j : J, ∑ omega : Ω,
+          weight omega * first i omega * second j omega) =
+        A * ∑ i : I, E * ∑ j : J, ∑ omega : Ω,
+          weight omega * first i omega * second j omega := by
+            rw [Finset.mul_sum]
+      _ = A * ∑ i : I, ∑ omega : Ω,
+          if Q omega then weight omega * first i omega else 0 := by
+            apply congrArg (A * ·)
+            apply Finset.sum_congr rfl
+            intro i hi
+            exact hinner i
+      _ = A * ∑ i : I, ∑ omega : Ω,
+          (if Q omega then weight omega else 0) * first i omega := by
+            apply congrArg (A * ·)
+            apply Finset.sum_congr rfl
+            intro i hi
+            apply Finset.sum_congr rfl
+            intro omega homega
+            by_cases hQ : Q omega
+            · simp only [if_pos hQ]
+            · simp only [if_neg hQ, zero_mul]
+      _ = ∑ omega : Ω,
+          if P omega then (if Q omega then weight omega else 0) else 0 :=
+            finite_weighted_filter A
+              (fun omega => if Q omega then weight omega else 0)
+              first P hfirst
   calc
-    A * (∑ alpha : Fin k → ZMod q,
-        ∑ omega : Ω, weight omega *
-          ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) =
-        ∑ alpha : Fin k → ZMod q,
-          ∑ omega : Ω, A * (weight omega *
-            ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) := by
-      rw [Finset.mul_sum]
-      apply Finset.sum_congr rfl
-      intro alpha halpha
-      rw [Finset.mul_sum]
+    A * ∑ i : I, ∑ omega : Ω, weight omega * first i omega =
+        ∑ omega : Ω, if P omega then weight omega else 0 := hleft
     _ = ∑ omega : Ω,
-        ∑ alpha : Fin k → ZMod q,
-          A * (weight omega *
-            ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) :=
-      Finset.sum_comm
-    _ = ∑ omega : Ω,
-          weight omega *
-            (A * ∑ alpha : Fin k → ZMod q,
-              ∏ j, ZMod.stdAddChar
-                (alpha j * disp omega j)) := by
-      apply Finset.sum_congr rfl
-      intro omega homega
-      rw [Finset.mul_sum]
-      apply Finset.sum_congr rfl
-      intro alpha halpha
-      ring
-    _ = _ := by
-      apply Finset.sum_congr rfl
-      intro omega homega
-      change weight omega *
-        (((((q ^ k : ℕ) : ℂ))⁻¹) * ∑ alpha,
-          ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) = _
-      rw [wooley_normalized_grid_character]
-      split_ifs <;> simp_all
+        if P omega then (if Q omega then weight omega else 0) else 0 := by
+          apply Finset.sum_congr rfl
+          intro omega homega
+          by_cases hP : P omega
+          · rw [if_pos hP, if_pos hP, if_pos (hforced omega hP)]
+          · rw [if_neg hP, if_neg hP]
+    _ = A * (E * ∑ i : I, ∑ j : J, ∑ omega : Ω,
+        weight omega * first i omega * second j omega) := hright.symm
 
 /-- A second normalized Fourier grid may be inserted without changing a
 weighted average when its zero condition is implied by the first grid's
 zero condition.  This is the abstract, exact form of Wooley (7.17). -/
-set_option maxHeartbeats 1200000 in
 theorem wooley_insert_redundant_grid_average
     {Ω : Type*} [Fintype Ω]
     (q k qPrime r : ℕ) [NeZero q] [NeZero qPrime]
@@ -102,61 +158,19 @@ theorem wooley_insert_redundant_grid_average
               ∑ omega : Ω, weight omega *
                 (∏ j, ZMod.stdAddChar (alpha j * disp omega j)) *
                 ∏ l, ZMod.stdAddChar (beta l * extra omega l) := by
-  let A : ℂ := (((q ^ k : ℕ) : ℂ))⁻¹
-  let E : ℂ := (((qPrime ^ r : ℕ) : ℂ))⁻¹
-  change A * (∑ alpha, ∑ omega, weight omega *
-      ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) =
-    A * (E * ∑ alpha, ∑ beta, ∑ omega,
-      weight omega *
-        (∏ j, ZMod.stdAddChar (alpha j * disp omega j)) *
+  simpa only [mul_assoc] using
+    (finite_insert_redundant_average
+      ((((q ^ k : ℕ) : ℂ))⁻¹)
+      ((((qPrime ^ r : ℕ) : ℂ))⁻¹)
+      weight
+      (fun alpha omega =>
+        ∏ j, ZMod.stdAddChar (alpha j * disp omega j))
+      (fun beta omega =>
         ∏ l, ZMod.stdAddChar (beta l * extra omega l))
-  rw [wooley_weighted_grid_average_eq_filter]
-  symm
-  calc
-    A * (E *
-        ∑ alpha : Fin k → ZMod q,
-          ∑ beta : Fin r → ZMod qPrime,
-            ∑ omega : Ω, weight omega *
-              (∏ j, ZMod.stdAddChar (alpha j * disp omega j)) *
-              ∏ l, ZMod.stdAddChar (beta l * extra omega l)) =
-      A *
-        ∑ alpha : Fin k → ZMod q,
-          E *
-            ∑ beta : Fin r → ZMod qPrime,
-              ∑ omega : Ω, weight omega *
-                (∏ j, ZMod.stdAddChar (alpha j * disp omega j)) *
-                ∏ l, ZMod.stdAddChar (beta l * extra omega l) := by
-      rw [Finset.mul_sum]
-    _ = A *
-        ∑ alpha : Fin k → ZMod q,
-          ∑ omega : Ω,
-            if extra omega = 0 then
-              weight omega *
-                ∏ j, ZMod.stdAddChar (alpha j * disp omega j)
-            else 0 := by
-      apply congrArg (A * ·)
-      apply Finset.sum_congr rfl
-      intro alpha halpha
-      change ((((qPrime ^ r : ℕ) : ℂ))⁻¹) * _ = _
-      simpa only [mul_assoc] using
-        wooley_weighted_grid_average_eq_filter qPrime r
-          (fun omega => weight omega *
-            ∏ j, ZMod.stdAddChar (alpha j * disp omega j)) extra
-    _ = ∑ omega : Ω,
-        if disp omega = 0 then
-          (if extra omega = 0 then weight omega else 0)
-        else 0 := by
-      change ((((q ^ k : ℕ) : ℂ))⁻¹) * _ = _
-      simpa only [ite_mul, zero_mul] using
-        wooley_weighted_grid_average_eq_filter q k
-          (fun omega => if extra omega = 0 then weight omega else 0) disp
-    _ = ∑ omega : Ω,
-        if disp omega = 0 then weight omega else 0 := by
-      apply Finset.sum_congr rfl
-      intro omega homega
-      by_cases hdisp : disp omega = 0
-      · rw [if_pos hdisp, if_pos (hforced omega hdisp)]
-      · rw [if_neg hdisp, if_neg hdisp]
+      (fun omega => disp omega = 0) (fun omega => extra omega = 0)
+      (fun omega => wooley_normalized_grid_character q k (disp omega))
+      (fun omega => wooley_normalized_grid_character qPrime r (extra omega))
+      hforced)
 
 #print axioms wooley_normalized_grid_character
 #print axioms wooley_weighted_grid_average_eq_filter
