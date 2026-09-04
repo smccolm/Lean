@@ -44,12 +44,51 @@ theorem wooley_section7_BPrimeNat_pos
   exact_mod_cast (show (0 : ℤ) <
     (wooleySection7BPrimeNat k r a b gamma : ℤ) by simpa [hcast] using hpos)
 
+theorem wooley_section7_BPrimeNat_le_zero
+    {k r a b gamma : ℕ} :
+    wooleySection7BPrimeNat k r a b gamma ≤
+      wooleySection7BPrimeNat k r a b 0 := by
+  unfold wooleySection7BPrimeNat wooleySection7BPrimeInt
+  apply Int.toNat_le_toNat
+  omega
+
 /-- The defining lower ceiling inequality `B' ≤ r H'`. -/
 theorem wooley_section7_BPrime_le_mul_HPrime
     {k r a b gamma : ℕ} (hr : 1 ≤ r) :
     wooleySection7BPrimeNat k r a b gamma ≤
       r * wooleySection7HPrime k r a b gamma := by
   exact le_smul_ceilDiv (by omega : 0 < r)
+
+/-- The refinement depth in (7.22) is ordered correctly:
+`a + H' ≤ b'`.  This follows from the two literal ceiling definitions and
+the signed identity (7.3); no real-valued rounding argument is used. -/
+theorem wooley_section7_a_add_HPrime_le_nextB
+    {k r a b gamma nu : ℕ}
+    (hr : 1 ≤ r)
+    (hBPrime : (nu : ℤ) < wooleySection7BPrimeInt k r a b gamma) :
+    a + wooleySection7HPrime k r a b gamma ≤
+      wooleySection7NextB k r b := by
+  let bp := wooleySection7BPrimeNat k r a b gamma
+  let hp := wooleySection7HPrime k r a b gamma
+  let nb := wooleySection7NextB k r b
+  let n := (k - r + 1) * b
+  have hid := wooley_section7_BPrimeNat_add hBPrime
+  change bp + r * a + (k - r) * gamma = n at hid
+  have hncover : n ≤ r * nb := by
+    dsimp only [n, nb, wooleySection7NextB]
+    exact le_smul_ceilDiv (by omega : 0 < r)
+  have hra : r * a ≤ r * nb := by
+    omega
+  have ha : a ≤ nb := by
+    exact Nat.le_of_mul_le_mul_left hra (by omega)
+  have hbp : bp ≤ r * (nb - a) := by
+    rw [Nat.mul_sub_left_distrib]
+    omega
+  have hH : hp ≤ nb - a := by
+    dsimp only [hp, wooleySection7HPrime]
+    exact (ceilDiv_le_iff_le_mul (by omega : 0 < r)).2 hbp
+  change a + hp ≤ nb
+  omega
 
 /-- Equation (7.13), with all ceiling losses explicit. -/
 theorem wooley_equation_7_13
@@ -191,7 +230,9 @@ theorem wooley_section7_hard_exponent_loss
 
 #print axioms wooley_section7_BPrimeNat_add
 #print axioms wooley_section7_BPrimeNat_pos
+#print axioms wooley_section7_BPrimeNat_le_zero
 #print axioms wooley_section7_BPrime_le_mul_HPrime
+#print axioms wooley_section7_a_add_HPrime_le_nextB
 #print axioms wooley_equation_7_13
 #print axioms wooley_section7_hard_triangular_loss
 #print axioms wooley_section7_hard_exponent_loss

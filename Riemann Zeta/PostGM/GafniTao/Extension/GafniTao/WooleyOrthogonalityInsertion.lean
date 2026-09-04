@@ -158,19 +158,27 @@ theorem wooley_insert_redundant_grid_average
               ∑ omega : Ω, weight omega *
                 (∏ j, ZMod.stdAddChar (alpha j * disp omega j)) *
                 ∏ l, ZMod.stdAddChar (beta l * extra omega l) := by
-  simpa only [mul_assoc] using
-    (finite_insert_redundant_average
-      ((((q ^ k : ℕ) : ℂ))⁻¹)
-      ((((qPrime ^ r : ℕ) : ℂ))⁻¹)
-      weight
-      (fun alpha omega =>
-        ∏ j, ZMod.stdAddChar (alpha j * disp omega j))
-      (fun beta omega =>
-        ∏ l, ZMod.stdAddChar (beta l * extra omega l))
-      (fun omega => disp omega = 0) (fun omega => extra omega = 0)
-      (fun omega => wooley_normalized_grid_character q k (disp omega))
-      (fun omega => wooley_normalized_grid_character qPrime r (extra omega))
-      hforced)
+  let A : ℂ := (((q ^ k : ℕ) : ℂ))⁻¹
+  let E : ℂ := (((qPrime ^ r : ℕ) : ℂ))⁻¹
+  let first : (Fin k → ZMod q) → Ω → ℂ := fun alpha omega =>
+    ∏ j, ZMod.stdAddChar (alpha j * disp omega j)
+  let second : (Fin r → ZMod qPrime) → Ω → ℂ := fun beta omega =>
+    ∏ l, ZMod.stdAddChar (beta l * extra omega l)
+  have hfirst : ∀ omega,
+      A * ∑ alpha, first alpha omega = if disp omega = 0 then 1 else 0 := by
+    intro omega
+    exact wooley_normalized_grid_character q k (disp omega)
+  have hsecond : ∀ omega,
+      E * ∑ beta, second beta omega = if extra omega = 0 then 1 else 0 := by
+    intro omega
+    exact wooley_normalized_grid_character qPrime r (extra omega)
+  change A * ∑ alpha, ∑ omega, weight omega * first alpha omega =
+    A * E * ∑ alpha, ∑ beta, ∑ omega,
+      weight omega * first alpha omega * second beta omega
+  rw [mul_assoc]
+  exact finite_insert_redundant_average A E weight first second
+    (fun omega => disp omega = 0) (fun omega => extra omega = 0)
+    hfirst hsecond hforced
 
 #print axioms wooley_normalized_grid_character
 #print axioms wooley_weighted_grid_average_eq_filter
