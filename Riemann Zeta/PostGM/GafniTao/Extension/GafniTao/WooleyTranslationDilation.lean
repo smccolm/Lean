@@ -1,4 +1,4 @@
-import GafniTao.WooleyPadicToCritical
+import GafniTao.WooleyPolynomialSystem
 
 /-!
 # Exact translation--dilation algebra for the Vinogradov system

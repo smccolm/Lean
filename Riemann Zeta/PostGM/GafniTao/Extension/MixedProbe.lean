@@ -1,0 +1,12 @@
+import GafniTao.WooleySourceMixed
+#check ZMod.castHom_apply
+#check ZMod.cast_eq_val
+#check ZMod.val_cast_of_dvd
+#check ZMod.val_cast
+#check ZMod.val_natCast
+#check ZMod.natCast_eq_natCast_iff
+#check ZMod.natCast_eq_natCast_iff_dvd
+#check ZMod.val_injective
+#check Equiv.addRight
+#check Equiv.sum_comp
+#check Equiv.prodCongr

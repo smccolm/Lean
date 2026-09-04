@@ -820,12 +820,504 @@ theorem wooley_equation_6_6 {Q : ℕ}
           · intro eta heta
             ring
 
+/-- The elementary convexity estimate used when equation (6.6) is raised
+to the `s`-th power.  The constant is retained explicitly. -/
+theorem wooley_add_pow_le_two_pow_pred_mul
+    {a b : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b)
+    {s : ℕ} (hs : 1 ≤ s) :
+    (a + b) ^ s ≤ 2 ^ (s - 1) * (a ^ s + b ^ s) := by
+  let aa : NNReal := ⟨a, ha⟩
+  let bb : NNReal := ⟨b, hb⟩
+  have h := NNReal.rpow_add_le_mul_rpow_add_rpow aa bb
+    (p := (s : ℝ)) (by exact_mod_cast hs)
+  norm_cast at h
+  simpa [aa, bb, Real.rpow_natCast] using h
+
+/-- The pointwise estimate integrated in Wooley equation (6.9).  Both
+terms on the right are the literal normalized diagonal and mixed sums. -/
+theorem wooley_equation_6_9_pointwise {Q : ℕ}
+    (p B nu k s : ℕ) [NeZero p] [NeZero (p ^ B)]
+    (gamma : Fin Q → ℂ) (alpha : Fin k → ZMod (p ^ B))
+    (hs : 2 ≤ s) :
+    ‖wooleyWeightedNormalizedGridSum (p ^ B) k gamma alpha‖ ^ (2 * s) ≤
+      2 ^ (s - 1) *
+        ((wooleyWeightedMassSq gamma)⁻¹ *
+            ∑ xi : ZMod (p ^ nu),
+              wooleyWeightedResidueMassSq gamma xi *
+                ‖wooleyWeightedNormalizedResidueGridSum
+                  (p ^ B) k gamma alpha xi‖ ^ (2 * s) +
+          (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+            (p ^ nu : ℝ) ^ s *
+              wooleyInitialMixedForward p B nu k s gamma alpha) := by
+  let D := wooleyInitialDiagonal p B nu k gamma alpha
+  let O := wooleyInitialOffDiagonal p B nu k gamma alpha
+  have hsplit := wooley_equation_6_6 p B nu k gamma alpha
+  have hpow :
+      (‖wooleyWeightedNormalizedGridSum (p ^ B) k gamma alpha‖ ^ 2) ^ s ≤
+        (D + O) ^ s := by
+    exact pow_le_pow_left₀ (sq_nonneg _) hsplit s
+  have hconv : (D + O) ^ s ≤
+      2 ^ (s - 1) * (D ^ s + O ^ s) :=
+    wooley_add_pow_le_two_pow_pred_mul
+      (wooleyInitialDiagonal_nonneg p B nu k gamma alpha)
+      (wooleyInitialOffDiagonal_nonneg p B nu k gamma alpha)
+      (by omega)
+  have hdiag := wooley_equation_6_7 p B nu k s gamma alpha (by omega)
+  have hoff := wooley_equation_6_8 p B nu k s gamma alpha hs
+  calc
+    ‖wooleyWeightedNormalizedGridSum (p ^ B) k gamma alpha‖ ^ (2 * s) =
+        (‖wooleyWeightedNormalizedGridSum (p ^ B) k gamma alpha‖ ^ 2) ^ s := by
+      rw [pow_mul]
+    _ ≤ (D + O) ^ s := hpow
+    _ ≤ 2 ^ (s - 1) * (D ^ s + O ^ s) := hconv
+    _ ≤ 2 ^ (s - 1) *
+        ((wooleyWeightedMassSq gamma)⁻¹ *
+            ∑ xi : ZMod (p ^ nu),
+              wooleyWeightedResidueMassSq gamma xi *
+                ‖wooleyWeightedNormalizedResidueGridSum
+                  (p ^ B) k gamma alpha xi‖ ^ (2 * s) +
+          (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+            (p ^ nu : ℝ) ^ s *
+              wooleyInitialMixedForward p B nu k s gamma alpha) := by
+      gcongr
+
+/-- Averaging the literal diagonal integrand gives exactly the conditioned
+mean in equation (3.8). -/
+theorem wooley_initial_diagonal_average {Q : ℕ}
+    (p B nu k s : ℕ) [NeZero p] [NeZero (p ^ B)] [NeZero (p ^ nu)]
+    (gamma : Fin Q → ℂ) :
+    ((((p ^ B) ^ k : ℕ) : ℝ))⁻¹ *
+        ∑ alpha : Fin k → ZMod (p ^ B),
+          (wooleyWeightedMassSq gamma)⁻¹ *
+            ∑ xi : ZMod (p ^ nu),
+              wooleyWeightedResidueMassSq gamma xi *
+                ‖wooleyWeightedNormalizedResidueGridSum
+                  (p ^ B) k gamma alpha xi‖ ^ (2 * s) =
+      wooleyWeightedConditionedGridMean
+        s k (p ^ B) (p ^ nu) gamma := by
+  unfold wooleyWeightedConditionedGridMean
+  split_ifs with hmass
+  · simp [hmass]
+  · simp_rw [Finset.mul_sum]
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro xi hxi
+    apply Finset.sum_congr rfl
+    intro alpha halpha
+    ac_rfl
+
+/-- Averaging the literal mixed integrand in (6.8) gives exactly
+`K^1_{nu,nu}` with the normalization from (3.19)--(3.20). -/
+theorem wooley_initial_mixed_average {Q : ℕ}
+    (p B nu k s : ℕ) [NeZero p] [NeZero (p ^ B)]
+    (gamma : Fin Q → ℂ) :
+    ((((p ^ B) ^ k : ℕ) : ℝ))⁻¹ *
+        ∑ alpha : Fin k → ZMod (p ^ B),
+          (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+            wooleyInitialMixedForward p B nu k s gamma alpha =
+      wooleyMixedGridMean s k 1 p B nu nu nu gamma := by
+  unfold wooleyMixedGridMean
+  split_ifs with hmass
+  · simp [hmass]
+  · simp only [wooleyMixedResidueGridMoment,
+      wooleyTriangular_one, Nat.mul_one]
+    unfold wooleyInitialMixedForward
+    simp_rw [Finset.mul_sum]
+    rw [show
+      (∑ alpha : Fin k → ZMod (p ^ B),
+        ∑ xi : ZMod (p ^ nu),
+          ∑ eta : ZMod (p ^ nu) with wooleyResiduesSeparated nu xi eta,
+            ((((p ^ B) ^ k : ℕ) : ℝ))⁻¹ *
+              ((wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+                (wooleyWeightedResidueMassSq gamma xi *
+                  wooleyWeightedResidueMassSq gamma eta *
+                  ‖wooleyWeightedNormalizedResidueGridSum
+                    (p ^ B) k gamma alpha xi‖ ^ 2 *
+                  ‖wooleyWeightedNormalizedResidueGridSum
+                    (p ^ B) k gamma alpha eta‖ ^ (2 * (s - 1))))) =
+        ∑ xi : ZMod (p ^ nu),
+          ∑ eta : ZMod (p ^ nu) with wooleyResiduesSeparated nu xi eta,
+            ∑ alpha : Fin k → ZMod (p ^ B),
+              ((((p ^ B) ^ k : ℕ) : ℝ))⁻¹ *
+                ((wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+                  (wooleyWeightedResidueMassSq gamma xi *
+                    wooleyWeightedResidueMassSq gamma eta *
+                    ‖wooleyWeightedNormalizedResidueGridSum
+                      (p ^ B) k gamma alpha xi‖ ^ 2 *
+                    ‖wooleyWeightedNormalizedResidueGridSum
+                      (p ^ B) k gamma alpha eta‖ ^ (2 * (s - 1)))) by
+        rw [Finset.sum_comm]
+        apply Finset.sum_congr rfl
+        intro xi hxi
+        rw [Finset.sum_comm]]
+    apply Finset.sum_congr rfl
+    intro xi hxi
+    apply Finset.sum_congr rfl
+    intro eta heta
+    apply Finset.sum_congr rfl
+    intro alpha halpha
+    ac_rfl
+
+/-- Wooley equation (6.9), as an exact finite-grid inequality.  Its
+implicit Vinogradov constant is displayed here as `2^(s-1)`. -/
+theorem wooley_equation_6_9 {Q : ℕ}
+    (p B nu k s : ℕ) [NeZero p] [NeZero (p ^ B)] [NeZero (p ^ nu)]
+    (gamma : Fin Q → ℂ) (hs : 2 ≤ s) :
+    wooleyWeightedGridMean s k (p ^ B) gamma ≤
+      2 ^ (s - 1) *
+        (wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ nu) gamma +
+          (p ^ nu : ℝ) ^ s *
+            wooleyMixedGridMean s k 1 p B nu nu nu gamma) := by
+  let c : ℝ := 2 ^ (s - 1)
+  let scale : ℝ := ((((p ^ B) ^ k : ℕ) : ℝ))⁻¹
+  have hscale : 0 ≤ scale := by positivity
+  have hsum :
+      scale *
+          ∑ alpha : Fin k → ZMod (p ^ B),
+            ‖wooleyWeightedNormalizedGridSum
+              (p ^ B) k gamma alpha‖ ^ (2 * s) ≤
+        scale *
+          ∑ alpha : Fin k → ZMod (p ^ B),
+            c *
+              ((wooleyWeightedMassSq gamma)⁻¹ *
+                  ∑ xi : ZMod (p ^ nu),
+                    wooleyWeightedResidueMassSq gamma xi *
+                      ‖wooleyWeightedNormalizedResidueGridSum
+                        (p ^ B) k gamma alpha xi‖ ^ (2 * s) +
+                (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+                  (p ^ nu : ℝ) ^ s *
+                    wooleyInitialMixedForward
+                      p B nu k s gamma alpha) := by
+    apply mul_le_mul_of_nonneg_left _ hscale
+    apply Finset.sum_le_sum
+    intro alpha halpha
+    exact wooley_equation_6_9_pointwise p B nu k s gamma alpha hs
+  unfold wooleyWeightedGridMean
+  change scale *
+      ∑ alpha : Fin k → ZMod (p ^ B),
+        ‖wooleyWeightedNormalizedGridSum
+          (p ^ B) k gamma alpha‖ ^ (2 * s) ≤ _
+  calc
+    scale *
+        ∑ alpha : Fin k → ZMod (p ^ B),
+          ‖wooleyWeightedNormalizedGridSum
+            (p ^ B) k gamma alpha‖ ^ (2 * s) ≤
+      scale *
+        ∑ alpha : Fin k → ZMod (p ^ B),
+          c *
+            ((wooleyWeightedMassSq gamma)⁻¹ *
+                ∑ xi : ZMod (p ^ nu),
+                  wooleyWeightedResidueMassSq gamma xi *
+                    ‖wooleyWeightedNormalizedResidueGridSum
+                      (p ^ B) k gamma alpha xi‖ ^ (2 * s) +
+              (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+                (p ^ nu : ℝ) ^ s *
+                  wooleyInitialMixedForward
+                    p B nu k s gamma alpha) := hsum
+    _ = c *
+        (wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ nu) gamma +
+          (p ^ nu : ℝ) ^ s *
+            wooleyMixedGridMean s k 1 p B nu nu nu gamma) := by
+      let A : (Fin k → ZMod (p ^ B)) → ℝ := fun alpha =>
+        (wooleyWeightedMassSq gamma)⁻¹ *
+          ∑ xi : ZMod (p ^ nu),
+            wooleyWeightedResidueMassSq gamma xi *
+              ‖wooleyWeightedNormalizedResidueGridSum
+                (p ^ B) k gamma alpha xi‖ ^ (2 * s)
+      let F : (Fin k → ZMod (p ^ B)) → ℝ := fun alpha =>
+        (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+          wooleyInitialMixedForward p B nu k s gamma alpha
+      have hA : scale * ∑ alpha, A alpha =
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ nu) gamma := by
+        exact wooley_initial_diagonal_average p B nu k s gamma
+      have hF : scale * ∑ alpha, F alpha =
+          wooleyMixedGridMean s k 1 p B nu nu nu gamma := by
+        exact wooley_initial_mixed_average p B nu k s gamma
+      have hsumF :
+          (∑ alpha, (p ^ nu : ℝ) ^ s * F alpha) =
+            (p ^ nu : ℝ) ^ s * ∑ alpha, F alpha := by
+        rw [Finset.mul_sum]
+      have hbody (alpha : Fin k → ZMod (p ^ B)) :
+          (wooleyWeightedMassSq gamma)⁻¹ *
+                ∑ xi : ZMod (p ^ nu),
+                  wooleyWeightedResidueMassSq gamma xi *
+                    ‖wooleyWeightedNormalizedResidueGridSum
+                      (p ^ B) k gamma alpha xi‖ ^ (2 * s) +
+              (wooleyWeightedMassSq gamma)⁻¹ ^ 2 *
+                (p ^ nu : ℝ) ^ s *
+                  wooleyInitialMixedForward p B nu k s gamma alpha =
+            A alpha + (p ^ nu : ℝ) ^ s * F alpha := by
+        dsimp [A, F]
+        ring
+      simp_rw [hbody]
+      change scale * ∑ alpha, c *
+          (A alpha + (p ^ nu : ℝ) ^ s * F alpha) = _
+      rw [← Finset.mul_sum, Finset.sum_add_distrib, hsumF]
+      rw [mul_add]
+      calc
+        scale * (c * (∑ x, A x) +
+            c * ((p ^ nu : ℝ) ^ s * ∑ x, F x)) =
+            c * (scale * ∑ x, A x) +
+              c * ((p ^ nu : ℝ) ^ s * (scale * ∑ x, F x)) := by
+          ring
+        _ = _ := by rw [hA, hF]; ring
+    _ = _ := by rfl
+
+/-- Wooley's choice (6.5), using the natural ceiling convention. -/
+def wooleyInitialNu (epsilon Lambda : ℝ) (H : ℕ) : ℕ :=
+  ⌈4 * epsilon * (H : ℝ) / Lambda⌉₊
+
+theorem wooley_initialNu_lower
+    {epsilon Lambda : ℝ} {H : ℕ} :
+    4 * epsilon * (H : ℝ) / Lambda ≤
+      (wooleyInitialNu epsilon Lambda H : ℝ) := by
+  exact Nat.le_ceil _
+
+/-- The displayed exponent calculation following (6.9).  The natural
+subtraction `H - nu` is justified by the source hierarchy `nu ≤ H`. -/
+theorem wooley_initial_conditioning_exponent
+    {epsilon Lambda : ℝ} {H nu : ℕ}
+    (hepsilon : 0 < epsilon) (hLambda : 0 < Lambda)
+    (hnuH : nu ≤ H)
+    (hnu : 4 * epsilon * (H : ℝ) / Lambda ≤ (nu : ℝ)) :
+    (Lambda + epsilon) * ((H - nu : ℕ) : ℝ) -
+        (Lambda - epsilon) * (H : ℝ) ≤
+      -2 * epsilon * (H : ℝ) := by
+  rw [Nat.cast_sub hnuH]
+  have hLambdaNu : 4 * epsilon * (H : ℝ) ≤
+      Lambda * (nu : ℝ) := by
+    rw [div_le_iff₀ hLambda] at hnu
+    simpa [mul_assoc, mul_comm] using hnu
+  have hnuNonneg : (0 : ℝ) ≤ nu := by positivity
+  nlinarith
+
+/-- Equations (6.3) and (6.4), together with the exponent comparison,
+give the exact contraction used in Lemma 6.1. -/
+theorem wooley_conditioned_mean_le_decay {Q : ℕ}
+    (p B nu H k s : ℕ) [NeZero p] [NeZero (p ^ B)] [NeZero (p ^ nu)]
+    (gamma : Fin Q → ℂ) {epsilon Lambda : ℝ}
+    (hp : 2 ≤ p) (hepsilon : 0 < epsilon) (hLambda : 0 < Lambda)
+    (hnuH : nu ≤ H)
+    (hnu : 4 * epsilon * (H : ℝ) / Lambda ≤ (nu : ℝ))
+    (hlower :
+      (p : ℝ) ^ ((H : ℝ) * (Lambda - epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma ≤
+        wooleyWeightedGridMean s k (p ^ B) gamma)
+    (hupper :
+      wooleyWeightedConditionedGridMean
+          s k (p ^ B) (p ^ nu) gamma ≤
+        (p : ℝ) ^ (((H - nu : ℕ) : ℝ) * (Lambda + epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma) :
+    wooleyWeightedConditionedGridMean
+        s k (p ^ B) (p ^ nu) gamma ≤
+      (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) *
+        wooleyWeightedGridMean s k (p ^ B) gamma := by
+  let VH := wooleyWeightedConditionedGridMean
+    s k (p ^ B) (p ^ H) gamma
+  have hVH : 0 ≤ VH := by
+    unfold VH wooleyWeightedConditionedGridMean
+    split_ifs with hmass
+    · exact le_rfl
+    · apply mul_nonneg
+      · exact inv_nonneg.mpr (wooleyWeightedMassSq_nonneg gamma)
+      · apply Finset.sum_nonneg
+        intro xi hxi
+        apply mul_nonneg (wooleyWeightedResidueMassSq_nonneg gamma xi)
+        apply mul_nonneg
+        · positivity
+        · exact Finset.sum_nonneg fun alpha halpha => pow_nonneg (norm_nonneg _) _
+  have hpReal : (1 : ℝ) ≤ p := by exact_mod_cast (by omega : 1 ≤ p)
+  have hexp := wooley_initial_conditioning_exponent
+    hepsilon hLambda hnuH hnu
+  have hpow :
+      (p : ℝ) ^ (((H - nu : ℕ) : ℝ) * (Lambda + epsilon)) ≤
+        (p : ℝ) ^
+          ((H : ℝ) * (Lambda - epsilon) +
+            (-2 * epsilon * (H : ℝ))) := by
+    apply Real.rpow_le_rpow_of_exponent_le hpReal
+    nlinarith
+  calc
+    wooleyWeightedConditionedGridMean
+        s k (p ^ B) (p ^ nu) gamma ≤
+      (p : ℝ) ^ (((H - nu : ℕ) : ℝ) * (Lambda + epsilon)) * VH :=
+        hupper
+    _ ≤ (p : ℝ) ^
+          ((H : ℝ) * (Lambda - epsilon) +
+            (-2 * epsilon * (H : ℝ))) * VH := by
+      gcongr
+    _ = (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) *
+          ((p : ℝ) ^ ((H : ℝ) * (Lambda - epsilon)) * VH) := by
+      rw [Real.rpow_add (by positivity : (0 : ℝ) < p)]
+      ring
+    _ ≤ (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) *
+          wooleyWeightedGridMean s k (p ^ B) gamma := by
+      gcongr
+
+/-- Quantitative absorption of the contracted copy of `U`. -/
+theorem wooley_absorb_contraction
+    {U K c a : ℝ} (hU : 0 ≤ U)
+    (hmain : U ≤ c * (a * U + K))
+    (hsmall : 2 * c * a ≤ 1) :
+    U ≤ 2 * c * K := by
+  have hca : c * a ≤ (1 : ℝ) / 2 := by nlinarith
+  have hcontract : c * a * U ≤ ((1 : ℝ) / 2) * U :=
+    mul_le_mul_of_nonneg_right hca hU
+  have hmain' : U ≤ c * a * U + c * K := by
+    calc
+      U ≤ c * (a * U + K) := hmain
+      _ = c * a * U + c * K := by ring
+  nlinarith
+
+/-- A concrete sufficient-size condition implying the absorption inequality
+used after (6.9).  Thus the source phrase "epsilon H sufficiently large"
+can be discharged by an ordinary scale comparison. -/
+theorem wooley_initial_absorption_of_scale
+    {p s H : ℕ} {epsilon : ℝ}
+    (hp : 2 ≤ p) (hs : 1 ≤ s)
+    (hscale : (s : ℝ) ≤ 2 * epsilon * (H : ℝ)) :
+    2 * 2 ^ (s - 1) *
+        (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) ≤ 1 := by
+  have hx : 0 ≤ 2 * epsilon * (H : ℝ) :=
+    le_trans (by positivity : (0 : ℝ) ≤ s) hscale
+  have hpReal : (2 : ℝ) ≤ p := by exact_mod_cast hp
+  have htwo : (2 : ℝ) * 2 ^ (s - 1) = 2 ^ s := by
+    rw [← pow_succ']
+    congr
+    omega
+  have hbound : (2 : ℝ) ^ s ≤
+      (p : ℝ) ^ (2 * epsilon * (H : ℝ)) := by
+    calc
+      (2 : ℝ) ^ s = (2 : ℝ) ^ (s : ℝ) := by
+        rw [Real.rpow_natCast]
+      _ ≤ (2 : ℝ) ^ (2 * epsilon * (H : ℝ)) :=
+        Real.rpow_le_rpow_of_exponent_le (by norm_num) hscale
+      _ ≤ (p : ℝ) ^ (2 * epsilon * (H : ℝ)) :=
+        Real.rpow_le_rpow (by norm_num) hpReal hx
+  have hpPow : 0 < (p : ℝ) ^ (2 * epsilon * (H : ℝ)) :=
+    Real.rpow_pos_of_pos (by positivity) _
+  have hneg : -2 * epsilon * (H : ℝ) =
+      -(2 * epsilon * (H : ℝ)) := by ring
+  rw [htwo]
+  rw [hneg]
+  rw [Real.rpow_neg (by positivity : (0 : ℝ) ≤ p),
+    ← div_eq_mul_inv, div_le_one hpPow]
+  exact hbound
+
+/-- Wooley Lemma 6.1 with every source hypothesis and the sufficiently-large
+absorption inequality displayed. -/
+theorem wooley_lemma_6_1 {Q : ℕ}
+    (p B nu H k s : ℕ) [NeZero p] [NeZero (p ^ B)] [NeZero (p ^ nu)]
+    (gamma : Fin Q → ℂ) {epsilon Lambda : ℝ}
+    (hp : 2 ≤ p) (hs : 2 ≤ s)
+    (hepsilon : 0 < epsilon) (hLambda : 0 < Lambda)
+    (hnuH : nu ≤ H)
+    (hnu : 4 * epsilon * (H : ℝ) / Lambda ≤ (nu : ℝ))
+    (hlower :
+      (p : ℝ) ^ ((H : ℝ) * (Lambda - epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma ≤
+        wooleyWeightedGridMean s k (p ^ B) gamma)
+    (hupper :
+      wooleyWeightedConditionedGridMean
+          s k (p ^ B) (p ^ nu) gamma ≤
+        (p : ℝ) ^ (((H - nu : ℕ) : ℝ) * (Lambda + epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma)
+    (hlarge :
+      2 * 2 ^ (s - 1) *
+          (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) ≤ 1) :
+    wooleyWeightedGridMean s k (p ^ B) gamma ≤
+      (2 * 2 ^ (s - 1)) * (p ^ nu : ℝ) ^ s *
+        wooleyMixedGridMean s k 1 p B nu nu nu gamma := by
+  have h69 := wooley_equation_6_9 p B nu k s gamma hs
+  have hdecay := wooley_conditioned_mean_le_decay
+    p B nu H k s gamma hp hepsilon hLambda hnuH hnu hlower hupper
+  have hU : 0 ≤ wooleyWeightedGridMean s k (p ^ B) gamma := by
+    unfold wooleyWeightedGridMean
+    positivity
+  have hmain :
+      wooleyWeightedGridMean s k (p ^ B) gamma ≤
+        2 ^ (s - 1) *
+          ((p : ℝ) ^ (-2 * epsilon * (H : ℝ)) *
+              wooleyWeightedGridMean s k (p ^ B) gamma +
+            (p ^ nu : ℝ) ^ s *
+              wooleyMixedGridMean s k 1 p B nu nu nu gamma) := by
+    calc
+      wooleyWeightedGridMean s k (p ^ B) gamma ≤
+        2 ^ (s - 1) *
+          (wooleyWeightedConditionedGridMean
+              s k (p ^ B) (p ^ nu) gamma +
+            (p ^ nu : ℝ) ^ s *
+              wooleyMixedGridMean s k 1 p B nu nu nu gamma) := h69
+      _ ≤ 2 ^ (s - 1) *
+          ((p : ℝ) ^ (-2 * epsilon * (H : ℝ)) *
+              wooleyWeightedGridMean s k (p ^ B) gamma +
+            (p ^ nu : ℝ) ^ s *
+              wooleyMixedGridMean s k 1 p B nu nu nu gamma) := by
+        gcongr
+  have habs := wooley_absorb_contraction
+    (U := wooleyWeightedGridMean s k (p ^ B) gamma)
+    (K := (p ^ nu : ℝ) ^ s *
+      wooleyMixedGridMean s k 1 p B nu nu nu gamma)
+    hU hmain hlarge
+  simpa [mul_assoc] using habs
+
+/-- Wooley Lemma 6.3, now discharged from the exact Lemma 6.1 proof and
+the residue-refinement estimate rather than an assumed initial bound. -/
+theorem wooley_lemma_6_3 {Q : ℕ}
+    (p B nu theta H k s : ℕ)
+    [NeZero p] [NeZero (p ^ B)] [NeZero (p ^ nu)]
+    (gamma : Fin Q → ℂ) {epsilon Lambda : ℝ}
+    (hp : 2 ≤ p) (hs : 2 ≤ s)
+    (hepsilon : 0 < epsilon) (hLambda : 0 < Lambda)
+    (hnuH : nu ≤ H) (hnuTheta : nu ≤ theta)
+    (hnu : 4 * epsilon * (H : ℝ) / Lambda ≤ (nu : ℝ))
+    (hlower :
+      (p : ℝ) ^ ((H : ℝ) * (Lambda - epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma ≤
+        wooleyWeightedGridMean s k (p ^ B) gamma)
+    (hupper :
+      wooleyWeightedConditionedGridMean
+          s k (p ^ B) (p ^ nu) gamma ≤
+        (p : ℝ) ^ (((H - nu : ℕ) : ℝ) * (Lambda + epsilon)) *
+          wooleyWeightedConditionedGridMean
+            s k (p ^ B) (p ^ H) gamma)
+    (hlarge :
+      2 * 2 ^ (s - 1) *
+          (p : ℝ) ^ (-2 * epsilon * (H : ℝ)) ≤ 1) :
+    wooleyWeightedGridMean s k (p ^ B) gamma ≤
+      (2 * 2 ^ (s - 1)) * (p ^ theta : ℝ) ^ s *
+        wooleyMixedGridMean s k 1 p B theta theta nu gamma := by
+  have hinitial := wooley_lemma_6_1 p B nu H k s gamma hp hs
+    hepsilon hLambda hnuH hnu hlower hupper hlarge
+  exact wooley_lemma_6_3_of_initial_conditioning
+    (C := 2 * 2 ^ (s - 1)) (by positivity) hnuTheta hs gamma hinitial
+
 #print axioms wooley_critical_interpolation_term
 #print axioms wooley_pair_mixed_holder
 #print axioms wooleyResiduesSeparated_same_iff_ne
 #print axioms wooley_norm_sum_sq_le_diagonal_add_offDiagonal
 #print axioms wooley_equation_6_6
 #print axioms wooley_equation_6_7
+#print axioms wooley_equation_6_8
+#print axioms wooley_add_pow_le_two_pow_pred_mul
+#print axioms wooley_equation_6_9_pointwise
+#print axioms wooley_initial_diagonal_average
+#print axioms wooley_initial_mixed_average
+#print axioms wooley_equation_6_9
+#print axioms wooley_initialNu_lower
+#print axioms wooley_initial_conditioning_exponent
+#print axioms wooley_conditioned_mean_le_decay
+#print axioms wooley_absorb_contraction
+#print axioms wooley_initial_absorption_of_scale
+#print axioms wooley_lemma_6_1
+#print axioms wooley_lemma_6_3
 
 end
 
