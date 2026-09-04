@@ -53,7 +53,7 @@ noncomputable def heathBrownPairCountTwo
     (N k H K : ℕ) (f : ℝ → ℝ) : Finset (ℕ × ℕ) := by
   classical
   exact ((Finset.Icc 1 N).product (Finset.Icc 1 N)).filter fun p =>
-      |(p.1 : ℤ) - (p.2 : ℤ)| ≤ ((1 + N / K : ℕ) : ℤ) ∧
+      Nat.dist p.1 p.2 ≤ 1 + N / K ∧
       heathBrownDistanceToInteger
           (heathBrownDerivativeCoordinate f (k - 2) p.1 -
             heathBrownDerivativeCoordinate f (k - 2) p.2) ≤
@@ -92,7 +92,7 @@ theorem mem_heathBrownPairCountTwo
     {N k H K : ℕ} {f : ℝ → ℝ} {m n : ℕ} :
     (m, n) ∈ heathBrownPairCountTwo N k H K f ↔
       1 ≤ m ∧ m ≤ N ∧ 1 ≤ n ∧ n ≤ N ∧
-      |(m : ℤ) - (n : ℤ)| ≤ ((1 + N / K : ℕ) : ℤ) ∧
+      Nat.dist m n ≤ 1 + N / K ∧
       heathBrownDistanceToInteger
           (heathBrownDerivativeCoordinate f (k - 2) m -
             heathBrownDerivativeCoordinate f (k - 2) n) ≤
@@ -120,8 +120,8 @@ theorem heathBrownPairCount_card_le_pairCountOne_card
       (heathBrownPairCountOne N k H f).card :=
   Finset.card_le_card (heathBrownPairCount_subset_pairCountOne hk)
 
-/-- All diagonal pairs occur in each of the three counts when `H > 0` and
-`K > 0`; this records the source diagonal contribution exactly. -/
+/-- All diagonal pairs occur in each of the three counts when `H > 0`;
+this records the source diagonal contribution exactly. -/
 theorem diagonal_mem_heathBrownPairCountTwo
     {N k H K n : ℕ} {f : ℝ → ℝ}
     (hn : n ∈ Finset.Icc 1 N) (hH : 0 < H) :
@@ -130,9 +130,7 @@ theorem diagonal_mem_heathBrownPairCountTwo
   have hpowNonneg (j : ℕ) : 0 ≤ (((H : ℝ) ^ j)⁻¹) := by positivity
   refine ⟨(Finset.mem_Icc.mp hn).1, (Finset.mem_Icc.mp hn).2,
     (Finset.mem_Icc.mp hn).1, (Finset.mem_Icc.mp hn).2, ?_, ?_, ?_⟩
-  · have hnonneg : (0 : ℤ) ≤ ((1 + N / K : ℕ) : ℤ) := by
-      exact_mod_cast (Nat.zero_le (1 + N / K))
-    simpa using hnonneg
+  · simp [Nat.dist]
   · simp [heathBrownDerivativeCoordinate, heathBrownDistanceToInteger,
       hpowNonneg (k - 2)]
   · simp [heathBrownDerivativeCoordinate, heathBrownDistanceToInteger,

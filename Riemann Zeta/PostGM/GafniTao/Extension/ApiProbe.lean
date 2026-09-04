@@ -1,0 +1,12 @@
+﻿import GafniTao.WooleyPadicToCritical
+#check Finset.sum_range_succ
+#check Finset.sum_range_succ_comm
+#check dvd_add_iff_left
+#check dvd_add_iff_right
+#check Dvd.dvd.add
+#check dvd_add
+#check dvd_add_left
+#check dvd_add_right
+#check mul_dvd_mul_left
+#check Associated.dvd_iff_dvd_left
+#check dvd_mul_of_dvd_right

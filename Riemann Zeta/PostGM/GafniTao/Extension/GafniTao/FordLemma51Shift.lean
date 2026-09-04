@@ -214,13 +214,6 @@ theorem norm_fordShiftedExponentialSum_sub_common_shift_le_sharp
     (fun n => fordShiftedLogPhase n u t)
     (fun n => norm_fordShiftedLogPhase n u t) hR hq
 
-#print axioms fordShiftedLogPhase_add_factor
-#print axioms ford_sum_common_shift_eq_translated
-#print axioms norm_sum_Ioc_sub_translated_le
-#print axioms norm_fordShiftedExponentialSum_sub_common_shift_le
-#print axioms norm_sum_Ioc_sub_translated_le_sharp
-#print axioms norm_fordShiftedExponentialSum_sub_common_shift_le_sharp
-
 end
 
 end GafniTao

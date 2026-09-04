@@ -5,6 +5,16 @@
 - Tao--Trudgian--Yang: arXiv `2501.16779v1` (PDF saved locally).
 - Ford zeta-growth bound: author PDF `zetabd.pdf` (saved locally).
 - Ford zero-free region: arXiv `1910.08205v4` (PDF and TeX source saved locally).
+- Bourgain--Demeter--Guth, *Proof of the main conjecture in Vinogradov's
+  mean value theorem for degrees higher than three*: arXiv `1512.01565v2`
+  (PDF and TeX source saved locally).  This is the exact deep input cited by
+  Heath--Brown's derivative estimate; the local proof branch targets its
+  critical-endpoint consequence rather than treating the citation as proof.
+- Wooley, *Nested efficient congruencing and relatives of Vinogradov's mean
+  value theorem*: arXiv `1708.01220v2` (PDF and the arXiv gzip-compressed TeX
+  source saved locally).  This is the arithmetic proof selected for the
+  all-degree critical VMVT dependency; Bourgain--Demeter--Guth remains the
+  independently pinned proof cited by Heath--Brown and Pintz.
 - Pintz, *On the density theorem of Halasz and Turan*, Acta Mathematica
   Hungarica 166 (2022), 48--56, DOI `10.1007/s10474-021-01204-z`
   (author manuscript `PJ_Halasz_Turan0505.pdf` saved locally from the
@@ -17,6 +27,6 @@
 - Foundation PNT+: `4ecb950126c4290293c5662dfe0e884123171df5`.
 - Lean: `v4.30.0`.
 
-`SHA256SUMS.txt` records the bytes downloaded on 30 August 2026. Davenport,
+`SHA256SUMS.txt` records the pinned downloaded bytes. Davenport,
 Turán, Pintz, and Heath-Brown are bibliographic dependencies but are not
 redistributed here until a legally accessible versioned artifact is located.
