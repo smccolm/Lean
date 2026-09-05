@@ -118,7 +118,7 @@ theorem wooley_equation_7_20_expansion
       rw [Finset.mul_sum]
       apply Finset.sum_congr rfl
       intro alpha halpha
-      ring
+      ring_nf
     _ = ((((q ^ k : ℕ) : ℝ))⁻¹) *
         ∑ alpha : Fin k → ZMod q,
           (∑ zeta : ZMod qH,
@@ -147,7 +147,7 @@ theorem wooley_equation_7_20_expansion
       rw [Finset.sum_comm]
       apply Finset.sum_congr rfl
       intro zeta hzeta
-      ring
+      ring_nf
 
 #print axioms wooleySourcePolynomialConditionedMean_polynomialTwist_expand
 #print axioms wooley_equation_7_20_expansion

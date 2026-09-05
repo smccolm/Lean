@@ -32,7 +32,7 @@ theorem fordQualitativeCoefficient_nonneg :
   have hcor := fordCor64AbsoluteCoefficient_nonneg
   have hmoderate := fordModerateAbsoluteConstant_nonneg
   have hlarge := fordLemma51AbsoluteConstant_nonneg
-  positivity
+  linarith
 
 theorem fordQualitativeCoefficient_ge_1024 :
     (1024 : ℝ) ≤ fordQualitativeCoefficient := by

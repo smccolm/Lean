@@ -57,6 +57,7 @@ theorem heathBrown_cellVolume_ne_top (k H : ℕ) :
       ((2 : ℝ) ^ (k - 1) * (((H : ℝ) ^ heathBrownCriticalMoment k)⁻¹)) ≠ ∞ :=
   ENNReal.ofReal_ne_top
 
+set_option maxHeartbeats 800000 in
 /-- Division of the compact-interior assembled inequality by the exact
 nonzero cell-volume and averaging factor. -/
 theorem heathBrown_lemma_one_raw_of_source

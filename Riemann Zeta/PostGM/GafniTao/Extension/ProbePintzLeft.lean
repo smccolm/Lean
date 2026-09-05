@@ -1,0 +1,12 @@
+import GafniTao.Pintz2023Equation42RightIntegrable
+#check RiemannZeta.GuthMaynard.integrable_abs_pow_mul_exp_neg_mul_sq
+#check RiemannZeta.GuthMaynard.integrable_of_continuous_of_norm_le_gaussian_tail
+#check Complex.norm_le_abs_re_add_abs_im
+#check abs_sub_abs_le_abs_sub
+#check abs_sub_comm
+#check ContinuousAt.comp
+#check differentiableAt_riemannZeta
+#check rpow_mul_exp_neg_mul_sq_isLittleO_exp_neg
+#check squeeze_zero'
+#check sq_le_sq0
+#check mul_le_mul

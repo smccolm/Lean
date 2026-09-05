@@ -18,7 +18,7 @@ product weight, accumulated constant, and accumulated decay. -/
 theorem WooleyIterationChain.composed_bound
     {k p n a b r : ℕ} {Lambda D delta theta : ℝ}
     {K : ℕ → ℕ → ℕ → ℝ}
-    (hp : 2 ≤ p) (hD : 0 < D) (hK : ∀ r a b, 0 ≤ K r a b)
+    (hp : 2 ≤ p) (hD : 1 ≤ D) (hK : ∀ r a b, 0 ≤ K r a b)
     (hchain : WooleyIterationChain
       k p Lambda D delta theta K n a b r) :
     ∃ aFinal bFinal rFinal : ℕ, ∃ R Cacc E : ℝ,
@@ -29,7 +29,7 @@ theorem WooleyIterationChain.composed_bound
       0 < R ∧ R ≤ 1 ∧
       (b : ℝ) ≤ R * (bFinal : ℝ) ∧
       bFinal ≤ k ^ (2 * n) * b ∧
-      0 < Cacc ∧
+      1 ≤ Cacc ∧ Cacc ≤ D ^ n ∧
       (n : ℝ) * (b : ℝ) ≤ E ∧
       K r a b ≤
         Cacc * (K rFinal aFinal bFinal) ^ R *
@@ -37,7 +37,7 @@ theorem WooleyIterationChain.composed_bound
   induction hchain with
   | nil a b r ha hb hrel hr hrk =>
       refine ⟨a, b, r, 1, 1, 0, ha, hb, hrel, hr, hrk,
-        by norm_num, le_rfl, ?_, ?_, by norm_num, ?_, ?_⟩
+        by norm_num, le_rfl, ?_, ?_, by norm_num, by simp, ?_, ?_⟩
       · simp
       · simp
       · simp
@@ -49,7 +49,7 @@ theorem WooleyIterationChain.composed_bound
       obtain ⟨aFinal, bFinal, rFinal, R, Ctail, Etail,
         haFinal, hbFinal, hrelFinal, hrFinal, hrFinalTop,
         hRpos, hRone, hweightedTail, hscaleTail,
-        hCtail, hEtail, htailBound⟩ := ih
+        hCtail, hCtailUpper, hEtail, htailBound⟩ := ih
       let R' : ℝ := rho * R
       let Cacc : ℝ := D * Ctail ^ rho
       let E : ℝ := (b : ℝ) + rho * Etail
@@ -58,9 +58,22 @@ theorem WooleyIterationChain.composed_bound
       have hR'one : R' ≤ 1 := by
         dsimp [R']
         nlinarith
-      have hCacc : 0 < Cacc := by
+      have hCacc : 1 ≤ Cacc := by
         dsimp [Cacc]
-        exact mul_pos hD (Real.rpow_pos_of_pos hCtail rho)
+        have hpowOne : 1 ≤ Ctail ^ rho :=
+          Real.one_le_rpow hCtail hrhoNonneg
+        nlinarith
+      have hCaccUpper : Cacc ≤ D ^ (n + 1) := by
+        have hpowLe : Ctail ^ rho ≤ Ctail :=
+          Real.rpow_le_self_of_one_le hCtail hrhoOne.le
+        dsimp [Cacc]
+        calc
+          D * Ctail ^ rho ≤ D * Ctail :=
+            mul_le_mul_of_nonneg_left hpowLe (le_trans (by norm_num) hD)
+          _ ≤ D * D ^ n :=
+            mul_le_mul_of_nonneg_left hCtailUpper
+              (le_trans (by norm_num) hD)
+          _ = D ^ (n + 1) := by rw [pow_succ']
       have hE : ((n + 1 : ℕ) : ℝ) * (b : ℝ) ≤ E := by
         have hEtail' : (n : ℝ) * (bPrime : ℝ) ≤ Etail := hEtail
         have hmul := mul_le_mul_of_nonneg_left hEtail' hrhoNonneg
@@ -129,11 +142,12 @@ theorem WooleyIterationChain.composed_bound
                   (-Etail * Lambda / (2 * (k : ℝ)))) ^ rho) *
               (p : ℝ) ^ (-(b : ℝ) * Lambda /
                 (2 * (k : ℝ))) := by
-              rw [Real.mul_rpow (mul_nonneg hCtail.le
+              rw [Real.mul_rpow (mul_nonneg (le_trans (by norm_num) hCtail)
                     (Real.rpow_nonneg hKFinal R))
                   (Real.rpow_nonneg hpReal.le
                     (-Etail * Lambda / (2 * (k : ℝ)))),
-                Real.mul_rpow hCtail.le (Real.rpow_nonneg hKFinal R)]
+                Real.mul_rpow (le_trans (by norm_num) hCtail)
+                  (Real.rpow_nonneg hKFinal R)]
           _ = D * Ctail ^ rho *
                 (K rFinal aFinal bFinal) ^ (rho * R) *
               (((p : ℝ) ^
@@ -147,7 +161,7 @@ theorem WooleyIterationChain.composed_bound
                   (2 * (k : ℝ))) := by rw [hPpow]
       refine ⟨aFinal, bFinal, rFinal, R', Cacc, E,
         haFinal, hbFinal, hrelFinal, hrFinal, hrFinalTop,
-        hR'pos, hR'one, ?_, ?_, hCacc, hE, ?_⟩
+        hR'pos, hR'one, ?_, ?_, hCacc, hCaccUpper, hE, ?_⟩
       · calc
           (b : ℝ) ≤ rho * (bPrime : ℝ) := hweighted
           _ ≤ rho * (R * (bFinal : ℝ)) :=

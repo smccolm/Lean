@@ -59,6 +59,49 @@ theorem wooley_iterationChain_exists
           hrho, hrhoOne, hgrowth, hupper, hceil, hweighted, hbound⟩
         (ih haPrime hbPrime hrelPrime hrPrime hrPrimeTop)
 
+/-- Bounded form of the finite recursion.  At recursion depth `m`, the
+source inequality `b' <= k^2 b` keeps the selected scale below
+`k^(2m) q`; this supplies the upper-scale hypotheses needed by the analytic
+transition without postulating a globally available step. -/
+theorem wooley_iterationChain_exists_bounded
+    {k p N m n q a b r : ℕ} {Lambda D delta theta : ℝ}
+    {K : ℕ → ℕ → ℕ → ℝ}
+    (hmn : m + n ≤ N)
+    (hstep : ∀ (m a b r : ℕ), m < N →
+      b ≤ k ^ (2 * m) * q →
+      delta * theta ≤ (a : ℝ) →
+      (k : ℝ) ^ 2 * (delta * theta) ≤ (b : ℝ) →
+      r * a ≤ (k - r + 1) * b →
+      1 ≤ r → r ≤ k - 1 →
+      WooleyIterationStep k p Lambda D delta theta K a b r)
+    (hbUpper : b ≤ k ^ (2 * m) * q)
+    (ha : delta * theta ≤ (a : ℝ))
+    (hb : (k : ℝ) ^ 2 * (delta * theta) ≤ (b : ℝ))
+    (hrel : r * a ≤ (k - r + 1) * b)
+    (hr : 1 ≤ r) (hrk : r ≤ k - 1) :
+    WooleyIterationChain k p Lambda D delta theta K n a b r := by
+  induction n generalizing m a b r with
+  | zero => exact .nil a b r ha hb hrel hr hrk
+  | succ n ih =>
+      have hmN : m < N := by omega
+      obtain ⟨aPrime, bPrime, rPrime, rho,
+        haPrime, hbPrime, hrelPrime, hrPrime, hrPrimeTop,
+        hrho, hrhoOne, hgrowth, hupper, hceil, hweighted, hbound⟩ :=
+        hstep m a b r hmN hbUpper ha hb hrel hr hrk
+      have hbPrimeUpper : bPrime ≤ k ^ (2 * (m + 1)) * q := by
+        calc
+          bPrime ≤ k ^ 2 * b := hupper
+          _ ≤ k ^ 2 * (k ^ (2 * m) * q) :=
+            Nat.mul_le_mul_left (k ^ 2) hbUpper
+          _ = k ^ (2 * (m + 1)) * q := by
+            rw [show 2 * (m + 1) = 2 + 2 * m by omega, pow_add]
+            ring
+      exact .cons
+        ⟨haPrime, hbPrime, hrelPrime, hrPrime, hrPrimeTop,
+          hrho, hrhoOne, hgrowth, hupper, hceil, hweighted, hbound⟩
+        (ih (m := m + 1) (by omega) hbPrimeUpper haPrime hbPrime
+          hrelPrime hrPrime hrPrimeTop)
+
 /-- Endpoint and accumulated-weight ledger for (10.3)--(10.5).  The
 quantity `R` is the product of the selected `rho` values. -/
 theorem WooleyIterationChain.endpoint
@@ -105,6 +148,7 @@ theorem WooleyIterationChain.endpoint
             simp only [mul_assoc]
 
 #print axioms wooley_iterationChain_exists
+#print axioms wooley_iterationChain_exists_bounded
 #print axioms WooleyIterationChain.endpoint
 
 end

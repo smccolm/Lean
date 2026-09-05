@@ -1,4 +1,3 @@
-import GafniTao.Pintz2023Arithmetic
 import RiemannZeta.GuthMaynard.ClassicalDensity
 import RiemannZeta.GuthMaynard.PolynomialPowers
 import RiemannZeta.GuthMaynard.ArithmeticCoefficients

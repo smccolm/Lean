@@ -1,50 +1,73 @@
-# Gafni--Tao v1 paper-to-Lean crosswalk
+# Gafni-Tao v1 paper-to-Lean crosswalk
 
-Authoritative target: `Exceptional_Intervals.tex` from arXiv:2505.24017v1,
-SHA-256 recorded in `Sources/SHA256SUMS.txt`. This crosswalk distinguishes a
-source statement from a kernel-checked consumer. An `OPEN` row is not supplied
-by a declaration with a similar name.
+Authoritative target: `Exceptional_Intervals.tex` from arXiv:2505.24017v1.
+
+The source hash is recorded in `Sources/SHA256SUMS.txt`.
+
+This crosswalk distinguishes four states:
+
+- `DONE`: implemented in the release-root dependency path and represented on the central audit surface where source-sensitive.
+- `CONDITIONAL`: the paper-level consumer is implemented, but it accepts named analytic inputs.
+- `WORKBENCH PROVED`: a native theorem exists in Lean, but its module has not yet been promoted into `Extension/GafniTao.lean` and the central `Audit.lean`.
+- `OPEN`: the required mathematical source input or publication-facing theorem has not yet been proved.
+
+A declaration with a similar name does not close a source item unless its statement and dependency path match the source contract.
 
 | Source item | Exact convention in the paper | Isolated Lean object | Status |
 |---|---|---|---|
-| Definition 1.1, `E_delta(X,theta)` | Lebesgue-measurable real `x in [X,2X]`; literal `x<n<=x+x^theta`; `Lambda` includes every prime power; discrepancy threshold `>= delta*x^theta` | `GafniTao.shortIntervalExceptionalSet`, `mangoldtShortSum`, `shortIntervalDiscrepancy`, and `measurableSet_shortIntervalExceptionalSet` in `Extension/GafniTao/ExceptionalSet.lean` | Kernel-checked definition and measurability |
-| `mu_delta(theta)` | Infimum of fixed exponents `xi` with one eventual `O_{delta,theta}(X^xi)` bound; no epsilon; value `-infinity` if eventually empty | `FixedPowerBound`, `leastFixedPowerExponent`, `exceptionalExponentDelta`; empty case `exceptionalExponentDelta_eq_bot_of_eventually_empty` | Kernel-checked interfaces; further limiting interfaces remain OPEN |
-| `mu(theta)` | `sup_{delta>0} mu_delta(theta)` | `exceptionalExponent`; countable family `countableExceptionalExponent`; equality `exceptionalExponent_eq_countable` | Kernel-checked exact positive-threshold diagonal family; construction of the global exceptional set remains OPEN |
-| `A(sigma)` | Least `a` such that for every epsilon, `N(sigma,T) << T^(a(1-sigma)+epsilon)`; multiplicity counted | `ZeroDensityEnvelope`, `zeroDensityExponent` in `Extension/GafniTao/ZeroEnergy.lean`; `zeroCount` and `zeroCount_eq_weighted_sum` in `SourceConventions.lean` | Kernel-checked definition and upper-bound interface; complete EReal converse/limit interface remains OPEN |
-| `N*(sigma,T)` | Ordered four-tuples from `Z(sigma,T)^4`, product multiplicity, `|gamma1+gamma2-gamma3-gamma4|<=1` | `zeroAdditiveEnergyCount`, `resonantZeroQuadruples`, `zeroQuadrupleWeight`; exact membership theorem `mem_resonantZeroQuadruples` | Kernel-checked finite formulation; explicit multiset-equivalence theorem remains OPEN |
-| `A*(sigma)` | Least epsilon-loss exponent for `N*` normalized by `1-sigma` | `ZeroAdditiveEnergyEnvelope`, `zeroAdditiveEnergyExponent` | Kernel-checked definition and upper-bound interface; complete EReal converse/limit interface remains OPEN |
-| Theorem 1.1 (`folklore`) | Uniform `A(sigma)<=A0`; all intervals for `theta>1-1/A0`; almost all for `theta>1-2/A0` | No public theorem yet | OPEN (GT-20) |
-| Theorem 1.2, equation `muth` | `inf_{epsilon>0}` of an empty-supremum-aware constraint using the actual `A`; no continuity assumption | No public theorem yet | OPEN (GT-18--GT-20) |
-| Alternate equation `muth-12` | `max(1-theta, ...)`, restricting the inner supremum to `1/2<sigma<1` | No public theorem yet | OPEN (GT-20) |
-| Theorem 1.3 (`refined-bound`) | Same mandatory epsilon infimum, with `min(mu_2,mu_4)` using actual `A,A*` | No public theorem yet | OPEN (GT-19) |
-| Section 2 local cover | Cover `[X,2X]` by `O_delta(1)` intervals `[Y,(1+delta/J)Y]` | No public theorem yet | OPEN (GT-07) |
-| Brun--Titchmarsh replacement | `tau=X^(1-theta)`; replace `x^theta` by `x/tau`, with both length and Mangoldt-sum error `O((delta/J)x^theta)` | No public theorem yet | OPEN (GT-07) |
-| Explicit formula before (2.3) | `T=J(log X)^2 tau`; paper prints a positive zero sum. The conventional formula has a negative zero sum, and the downstream absolute value is sign invariant. | `sharpPsiTruncationBound_native`, `sharpTruncatedExplicitFormulaBound_native`; exact contour identity in `SharpPerronGeneralPsiAssembly.lean`, requested-cutoff shell in `SharpPerronGeneralZeroShell.lean`, compact heights in `SharpPerronLowHeight.lean` | DONE (GT-08): arbitrary real endpoints, analytic multiplicity, pole/residue and contour edges, boundary transition, all `2<=T<=x` |
-| Equation (2.3), label `targ` | Exceptional measure reduced to `|S_[0,1](x)| >= delta X/(3 tau)` | `eventually_localExceptionalSet_subset_equation27`, consuming `sharpTruncatedExplicitFormulaBound_native` through the physical error ledger | Kernel-checked GT-08 entry; final union assembly remains GT-17 |
-| Equation (2.4), label `six` | Sum over nontrivial zeros with multiplicity and real part in `I`; coefficient `((x+x/tau)^rho-x^rho)/rho` | `fullZeroIncrementSum`, `zeroStripIncrementSum`, and `truncatedPsiZeroSum_sub_eq_fullZeroIncrementSum` | DONE (GT-08) exact sign/subtraction and multiplicity bridge |
-| Equation (2.6), label `eta-vanish` | VK zero-free region at `T=X^(1-theta+o(1))` | No public theorem yet | OPEN (GT-09) |
-| Lemma 2.1 | Uniform exponential right-edge decay; uses a logarithmic near-one density theorem, not a generic `T^epsilon` bound | No public theorem yet | OPEN (GT-10--GT-11) |
-| Lemma 2.2 | Exact `L-infinity` exponent with physical `X,T,tau` relations and actual `A(sigma_-)` | No public theorem yet | OPEN (GT-12) |
-| Lemma 2.3 | Smoothed log-variable second moment; complex Fourier transform and exact `c_rho` | `exists_complexifiedLogScaleBumpFourier_tenfold_decay`, `logarithmicZeroStripSecondMoment_eq_pair_sum`, `zeroStripPhysicalSecondMoment_epsilonBound` | DONE (GT-13--GT-14); exact physical exponent and actual multiplicity-weighted zero count |
-| Lemma 2.4 | Smoothed fourth moment; pair-count `F`, Schur test, and actual `N*` | `zeroPairBinKernelSum_eq_differenceSum`, `zeroPairPairDecaySum_le_zeroAdditiveEnergyCount`, `logarithmicZeroStripFourthMoment_eq_pair_sum`, `zeroStripPhysicalFourthMoment_epsilonBound` | DONE (GT-15--GT-16); exact physical exponent and actual tolerance-one product-multiplicity `N*` |
-| Equation (2.7), label `targ-2` | Half-open strips `[j/J,(j+1)/J)`; line `Re rho=1` excluded; right-edge, small-`A`, `L2`, and `L4` branches | No public theorem yet | OPEN (GT-17) |
-| Section 3 first sample | `theta=17/30`, limiting `sigma=7/10`, Heath--Brown `A* -> 235/39`, conclusion `mu(17/30)<=7/12` | No public theorem yet | OPEN (GT-22--GT-23) |
-| Section 3 second sample | sufficiently small quantified `Delta>0`; Pintz gives cutoff `sigma<=23/24`; conclusion `mu(2/15+Delta)<=1-9Delta/13` | No public theorem yet | OPEN (GT-22--GT-23) |
-| Frozen Guth--Maynard input | Published full-range exponent `15/(3+5 sigma)`, and hence uniform `30/13` | `frozen_guthMaynard_zero_density`, `guthMaynard_zeroDensityEnvelope`, `zeroDensityExponent_le_guthMaynard` | Kernel-checked direct consumer; uniform `30/13` and threshold arithmetic remain OPEN |
+| Definition 1.1, `E_delta(X,theta)` | Lebesgue-measurable real `x in [X,2X]`; literal `x<n<=x+x^theta`; `Lambda` includes prime powers; discrepancy threshold `>= delta*x^theta` | `shortIntervalExceptionalSet`, `mangoldtShortSum`, `shortIntervalDiscrepancy`, `measurableSet_shortIntervalExceptionalSet` | DONE |
+| `mu_delta(theta)` | Infimum of fixed exponents `xi` for one eventual `O_{delta,theta}(X^xi)` bound; no epsilon in the definition; value `-infinity` if eventually empty | `FixedPowerBound`, `leastFixedPowerExponent`, `exceptionalExponentDelta`, `exceptionalExponentDelta_eq_bot_of_eventually_empty` | DONE for the release-used interfaces |
+| `mu(theta)` | Supremum over all positive exceptional thresholds | `exceptionalExponent`, `countableExceptionalExponent`, `exceptionalExponent_eq_countable` | DONE |
+| `A(sigma)` | Least ordinary zero-density exponent in the epsilon-loss sense, with zero multiplicity | `ZeroDensityEnvelope`, `zeroDensityExponent`, `zeroCount`, `zeroCount_eq_weighted_sum` | DONE for the release-used source interfaces |
+| `N*(sigma,T)` | Ordered four-tuples of zero occurrences with product analytic multiplicity and tolerance `|gamma1+gamma2-gamma3-gamma4|<=1` | `zeroAdditiveEnergyCount`, `resonantZeroQuadruples`, `zeroQuadrupleWeight`, `zeroAdditiveEnergyOccurrenceCount_eq` | DONE |
+| `A*(sigma)` | Least epsilon-loss exponent for the actual multiplicity-weighted `N*` | `ZeroAdditiveEnergyEnvelope`, `zeroAdditiveEnergyExponent`, `zeroAdditiveEnergyExponent_le`, `zeroAdditiveEnergyEnvelope_of_zeroAdditiveEnergyExponent_lt` | DONE for the release-used source interfaces |
+| Theorem 1.1, folklore theorem | Uniform ordinary density coefficient `A0`; all intervals for `theta>1-1/A0`; almost all for `theta>1-2/A0` | `gafniTaoTheorem11`, `GafniTaoTheorem11Conclusion`; native GM specialization `gafniTaoTheorem11_guthMaynard_native` in `Theorem11.lean` | WORKBENCH PROVED; release integration pending |
+| Theorem 1.1, all-interval GM specialization | `A0=30/13`, hence threshold `theta>17/30` | `gafniTaoTheorem11_guthMaynard_allIntervals_regression` | WORKBENCH PROVED; release integration pending |
+| Theorem 1.1, almost-all GM specialization | `A0=30/13`, hence threshold `theta>2/15`; one measurable exceptional set of natural density zero | `gafniTaoTheorem11_almostAll_guthMaynard_singleSet_native`, `gafniTaoTheorem11_guthMaynard_almostAll_regression` | WORKBENCH PROVED; release integration pending |
+| Theorem 1.2, equation `muth` | Mandatory `inf_{epsilon>0}` over the ordinary density constraint; empty supremum handled literally; no continuity assumption | `ordinaryExceptionalUpperExponent`; native theorem `gafniTaoTheorem12_native` | WORKBENCH PROVED; release integration pending |
+| Alternate ordinary upper-half form | `max(1-theta,...)` with the inner optimization restricted to the strict upper half strip | `upperHalfOrdinaryExceptionalUpperExponent`, `gafniTaoTheorem12_max_native`; conditional release theorem `gafniTaoTheorem12_max_conditional` | WORKBENCH PROVED natively; conditional form DONE in release root |
+| Theorem 1.3, refined bound | Mandatory epsilon infimum with `min(mu_2,mu_4)` using the actual `A` and `A*` | `refinedExceptionalUpperExponent`, `refinedExceptionalUpperExponent_eq_source_formula`; native theorem `gafniTaoTheorem13_native` | WORKBENCH PROVED; release integration pending |
+| Alternate refined upper-half form | `max(1-theta,...)` with strict-upper-half refined optimization | `upperHalfRefinedExceptionalUpperExponent`, `gafniTaoTheorem13_max_native`; conditional release theorem `gafniTaoTheorem13_max_conditional` | WORKBENCH PROVED natively; conditional form DONE in release root |
+| Section 2 local cover | Cover `[X,2X]` by finitely many multiplicative local intervals at scale `delta/J` | `exists_local_multiplicative_cover_Ico`, `shortIntervalExceptionalSet_subset_local_union` | DONE |
+| Brun-Titchmarsh replacement | `tau=X^(1-theta)`; replace `x^theta` by `x/tau` while controlling both length and Mangoldt-sum errors at the required local scale | local-entry and replacement chain in `ExceptionalEntry.lean` / `LocalCover.lean`; `eventually_local_replacement_total_le_third` | DONE |
+| Explicit formula before equation (2.3) | `T=J(log X)^2 tau`; conventional zero-sum sign is harmless after absolute values | `sharpPsiTruncationBound_native`, `sharpTruncatedExplicitFormulaBound_native` | DONE |
+| Equation (2.3), `targ` | Local exceptional event implies a large full zero-sum event | `eventually_localExceptionalSet_subset_equation27`, `eventually_localExceptionalMeasure_le_equation27` | DONE |
+| Equation (2.4), `six` | Zero increment sum with analytic multiplicity and exact endpoint convention | `fullZeroIncrementSum`, `zeroStripIncrementSum`, `truncatedPsiZeroSum_sub_eq_fullZeroIncrementSum` | DONE |
+| Equation (2.6), `eta-vanish` | Vinogradov-Korobov zero-free region at the physical height | Consumer bridge `vinogradovKorobovCountVanishing_of_rectangleZeroFree`; native source theorem `ford_asymptotic_zero_free_native` | WORKBENCH PROVED; release integration pending |
+| Lemma 2.1 | Exponential right-edge decay using a logarithmic near-one density estimate and VK zero-free region | integrated `RightEdge.lean`, `RightEdgePhysical.lean`, `RightEdgeStrip.lean`; native near-one package in `PintzNearOneNative.lean` | CONDITIONAL consumer DONE; native inputs WORKBENCH PROVED |
+| Lemma 2.2 | Exact physical `L-infinity` strip exponent using the actual zero count | `zeroStripPhysicalMajorant_epsilonBound`, `zeroStripPhysicalSup_le_majorant`, `zeroStripPhysicalSup_epsilonBound` | DONE |
+| Lemma 2.3 | Smoothed logarithmic-variable second moment with complex Fourier transform and exact zero coefficients | `exists_complexifiedLogScaleBumpFourier_tenfold_decay`, `logarithmicZeroStripSecondMoment_eq_pair_sum`, `zeroStripPhysicalSecondMoment_epsilonBound` | DONE |
+| Lemma 2.4 | Smoothed fourth moment using pair counting, Schur-type control, and the actual multiplicity-weighted `N*` | `zeroPairBinKernelSum_eq_differenceSum`, `zeroPairPairDecaySum_le_zeroAdditiveEnergyCount`, `logarithmicZeroStripFourthMoment_eq_pair_sum`, `zeroStripPhysicalFourthMoment_epsilonBound` | DONE |
+| Equation (2.7), `targ-2` | Half-open strips; no zero on `Re rho=1`; right-edge, small-density, second-moment, and fourth-moment branches | `sum_halfOpenStripIncrementSum_eq_full`, `equation27StripMeasure_epsilonBound_of_second_or_fourth`, `equation27StripMeasure_epsilonBound_of_exponent_upper_bounds`, `equation27FullZeroMeasure_epsilonBound_of_nearOne_inputs` | DONE as conditional release machinery |
+| Section 2 epsilon/J limit | Remove finite-strip resolution and epsilon in the correct order; no continuity shortcut | `refinedExceptionalUpperExponent_eq_source_formula`, `exists_refined_limit_witness`, `equation27FullZeroMeasure_fixedPowerBound_of_refined_lt` | DONE |
+| Section 2 local-to-global exceptional cover | Promote the local source-interval estimate to the actual exceptional set on `[X,2X]` | `localExceptionalMeasure_fixedPowerBound_of_source_inputs`, `exceptionalMeasure_le_sum_local`, `exceptionalMeasure_fixedPowerBound_of_source_inputs` | DONE |
+| Frozen Guth-Maynard ordinary density input | Published exponent `15/(3+5 sigma)` and uniform coefficient `30/13` | `frozen_guthMaynard_zero_density`, `guthMaynard_zeroDensityEnvelope`, `frozen_uniform_thirty_thirteenths_zeroDensityEnvelope`, `zeroDensityExponent_le_thirty_thirteenths` | DONE |
+| GM threshold arithmetic | `1-13/30=17/30` and `1-26/30=2/15` | `seventeen_thirtieths_eq_uniform_all_threshold`, `two_fifteenths_eq_uniform_almost_all_threshold` | DONE |
+| Native VK source closure | Some positive Vinogradov-Korobov width is sufficient for the general GT theorem | `ford_asymptotic_zero_free_native : FordAsymptoticZeroFree` | WORKBENCH PROVED; release integration pending |
+| Native sufficient near-one density | A logarithmic density theorem sufficient for the GT right-edge argument; exact optimized Ford `58.05/log^16` is not required for core closure | `exists_pintz_nearOne_log_density_native`; produces a native density package with log power `524` | WORKBENCH PROVED; release integration pending |
+| Optimized Ford near-one density | Ford source-fidelity target with coefficient `58.05` and the older optimized logarithmic factor | `FordNearOneDensityEstimate` | OPEN as optimized/source-fidelity objective; no longer a blocker to native Theorem 1.3 |
+| Optimized Ford zeta growth | Ford source theorem with constants `76.2`, `4.45`, and logarithmic exponent `2/3` | `FordZetaGrowthBound` | OPEN as optimized/source-fidelity objective |
+| Optimized Ford Theorem 2 | Shifted exponential-sum theorem with constants `9.463` and `133.66` | `FordTheorem2` | OPEN as optimized/source-fidelity objective |
+| Section 3 first source input | Heath-Brown three-cell four-zero energy envelope with exact endpoints | `HeathBrownZeroEnergyBounds` | OPEN |
+| Section 3 first sample algebra | `theta=17/30`, critical `sigma=7/10`, Heath-Brown coefficient `235/39`, conclusion `7/12` | `heathBrown_second_at_seven_tenths`, `gafniTao_first_sample_arithmetic`, `refinedExceptionalUpperExponent_seventeen_thirtieths_le` | CONDITIONAL algebra PROVED; Heath-Brown source input OPEN |
+| Section 3 second source input | Pintz cutoff forcing admissible `sigma<=23/24` in the sufficiently-small-Delta argument | `PintzTwentyThreeTwentyFourCutoff` | OPEN |
+| Section 3 second sample algebra | Explicit sufficiently-small range and conclusion `mu(2/15+Delta)<=1-9Delta/13` | `second_sample_fixed_epsilon_bound`, `refinedExceptionalUpperExponent_two_fifteenths_add_le`; current explicit range `0<Delta<=1/100` | CONDITIONAL algebra PROVED; Pintz source cutoff OPEN |
+| Full Section 3 best-known envelope | Exact source tables and finite optimization, if the full published curve is claimed | future certified optimizer and pinned source-table consumers | OPEN |
 
 ## Boundary and normalization ledger
 
 - `zeroSet sigma T` is the frozen rectangle `zerosInRect sigma 1 (-T) T`.
-  Distinct representatives are weighted by `analyticVanishingOrder`; neither
-  `N` nor `N*` is a distinct-zero count.
-- The exceptional interval is closed in `x` at both `X` and `2X`, while the
-  arithmetic interval is half-open: `x<n<=x+x^theta`. The source proof later
-  works on `[X,(1+delta/J)X)`; that is a derived localization, not a change to
-  Definition 1.1.
-- `mu_delta` uses fixed-power eventual bounds. `A` and `A*` use epsilon-power
-  bounds. These notions are deliberately separate in Lean.
-- All exponent infima/suprema live in `EReal`, so the paper's empty supremum
-  is literally `bot` rather than an arbitrary real default.
-- A frozen theorem is credited only where the new proof term consumes it.
-  Currently the direct GM density consumer is the only completed post-freeze
-  analytic edge in this table.
+- Distinct zero representatives are weighted by `analyticVanishingOrder`.
+- Neither `N` nor `N*` is a distinct-zero count.
+- The exceptional interval is closed at the global endpoints `X` and `2X`.
+- The arithmetic interval is half-open: `x<n<=x+x^theta`.
+- The local intervals introduced in Section 2 are derived localization objects and do not change Definition 1.1.
+- `mu_delta` uses fixed-power eventual bounds.
+- `A` and `A*` use epsilon-power bounds.
+- These exponent notions remain deliberately distinct in Lean.
+- Source exponent infima and suprema are represented in `EReal`, so an empty supremum is literally `bot`.
+- No continuity assumption on `A` is used to remove the epsilon infimum.
+- Analytic input status and release-integration status are separate.
+- A theorem proved in a standalone workbench module is not described as release-complete until the module is imported through `GafniTao.lean` and represented in central `Audit.lean`.
+- The optimized Ford contracts remain useful source-fidelity objectives, but the native Pintz/VK route now supplies sufficient inputs for the exact general Gafni-Tao theorem.
+- The current publication-facing mathematical frontier is Section 3 source closure, principally `HeathBrownZeroEnergyBounds` and `PintzTwentyThreeTwentyFourCutoff`.

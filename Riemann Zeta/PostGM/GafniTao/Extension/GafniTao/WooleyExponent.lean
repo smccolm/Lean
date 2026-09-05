@@ -156,6 +156,72 @@ theorem wooley_counterexample_below_critical
   exact (notMem_of_lt_csInf hLambda
     (wooleyUniformExponentSet_bddBelow k p)) hmem
 
+/-- A below-critical exponent supplies one fixed source `tau` and defeats
+every constant and starting modulus.  This is the form needed when the small
+iteration parameter `epsilon` is chosen only after that `tau` is known. -/
+theorem wooley_arbitrarilyLarge_counterexamples_below
+    {k p : ℕ} [NeZero p]
+    {Lambda : ℝ} (hLambda0 : 0 ≤ Lambda)
+    (hLambda : Lambda < wooleyCriticalExponent k p) :
+    ∃ tau : ℝ, 0 < tau ∧
+      ∀ C : ℝ, 0 < C → ∀ B0 : ℕ,
+        ∃ (B : ℕ) (phi : WooleyPolynomialSystem k)
+          (gamma : WooleySourceSequence),
+          B0 ≤ B ∧ phi.InPhiTau p B tau ∧ gamma.Admissible ∧
+          C * (((p ^ (B ⌈/⌉ k) : ℕ) : ℝ) ^ Lambda) *
+              wooleySourcePolynomialConditionedMean
+                (wooleyTriangular k) (p ^ B) (p ^ (B ⌈/⌉ k)) phi gamma <
+            wooleySourcePolynomialMean (wooleyTriangular k) (p ^ B)
+              phi gamma := by
+  have hnot := wooley_counterexample_below_critical hLambda0 hLambda
+  unfold WooleyUniformExponentBoundAt at hnot
+  push Not at hnot
+  obtain ⟨tau, htau, hfail⟩ := hnot
+  exact ⟨tau, htau, hfail⟩
+
+/-- Membership in `Phi_tau(B)` is monotone when the lower spacing parameter
+is decreased. -/
+theorem WooleyPolynomialSystem.InPhiTau.mono
+    {k p B : ℕ} {phi : WooleyPolynomialSystem k} {tau tau' : ℝ}
+    (hphi : phi.InPhiTau p B tau) (htau' : tau' ≤ tau) :
+    phi.InPhiTau p B tau' := by
+  obtain ⟨c, hc, hscale⟩ := hphi
+  refine ⟨c, hc, ?_⟩
+  exact (mul_le_mul_of_nonneg_right htau' (Nat.cast_nonneg B)).trans hscale
+
+/-- Operational source form of equations (6.2)--(6.3): if the critical
+exponent is positive, lowering it by a smaller positive `epsilon` produces
+actual counterexamples at arbitrarily large moduli, for one fixed positive
+`tau`. -/
+theorem wooley_arbitrarilyLarge_counterexamples
+    {k p : ℕ} [NeZero p]
+    {epsilon : ℝ} (hepsilon : 0 < epsilon)
+    (hepsilonCritical : epsilon < wooleyCriticalExponent k p) :
+    ∃ tau : ℝ, 0 < tau ∧
+      ∀ C : ℝ, 0 < C → ∀ B0 : ℕ,
+        ∃ (B : ℕ) (phi : WooleyPolynomialSystem k)
+          (gamma : WooleySourceSequence),
+          B0 ≤ B ∧ phi.InPhiTau p B tau ∧ gamma.Admissible ∧
+          C * (((p ^ (B ⌈/⌉ k) : ℕ) : ℝ) ^
+              (wooleyCriticalExponent k p - epsilon)) *
+              wooleySourcePolynomialConditionedMean
+                (wooleyTriangular k) (p ^ B) (p ^ (B ⌈/⌉ k)) phi gamma <
+            wooleySourcePolynomialMean (wooleyTriangular k) (p ^ B)
+              phi gamma := by
+  have hnonneg : 0 ≤ wooleyCriticalExponent k p - epsilon :=
+    sub_nonneg.mpr hepsilonCritical.le
+  have hbelow : wooleyCriticalExponent k p - epsilon <
+      wooleyCriticalExponent k p := by linarith
+  have hnot := wooley_counterexample_below_critical hnonneg hbelow
+  unfold WooleyUniformExponentBoundAt at hnot
+  push Not at hnot
+  obtain ⟨tau, htau, hfail⟩ := hnot
+  refine ⟨tau, htau, ?_⟩
+  intro C hC B0
+  obtain ⟨B, phi, gamma, hB, hphi, hgamma, hstrict⟩ :=
+    hfail C hC B0
+  exact ⟨B, phi, gamma, hB, hphi, hgamma, hstrict⟩
+
 #print axioms wooleySourcePolynomial_equation_3_10
 #print axioms wooley_uniformExponentBound_trivial
 #print axioms WooleyUniformExponentBoundAt.mono
@@ -163,6 +229,9 @@ theorem wooley_counterexample_below_critical
 #print axioms wooleyCriticalExponent_le_triangular
 #print axioms wooley_uniformExponentBound_above_critical
 #print axioms wooley_counterexample_below_critical
+#print axioms wooley_arbitrarilyLarge_counterexamples_below
+#print axioms WooleyPolynomialSystem.InPhiTau.mono
+#print axioms wooley_arbitrarilyLarge_counterexamples
 
 end
 
