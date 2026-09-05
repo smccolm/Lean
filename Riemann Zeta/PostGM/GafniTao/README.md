@@ -4,40 +4,48 @@
 
 **Active isolated formalization.**
 
-The project has crossed an important boundary.
+The project has crossed several major mathematical boundaries.
 
-Most of the downstream Gafni-Tao Section 2 transfer mechanism is already integrated into the isolated package root and central audit.
+Most of the downstream Gafni-Tao Section 2 transfer mechanism is already integrated into the isolated release root and central audit.
 
-Separately, the development workbench now contains native Lean theorems that close the remaining analytic inputs required for the general Gafni-Tao exceptional-exponent theorem and then prove:
+Separately, the development workbench now contains native Lean proofs of:
 
 ```lean
+GafniTao.ford_asymptotic_zero_free_native
+GafniTao.exists_pintz_nearOne_log_density_native
+
 GafniTao.gafniTaoTheorem13_native
 GafniTao.gafniTaoTheorem12_native
 GafniTao.gafniTaoTheorem13_max_native
 GafniTao.gafniTaoTheorem12_max_native
-```
 
-The workbench also contains the full frozen Guth-Maynard `A0 = 30/13` specialization of Theorem 1.1:
-
-```lean
 GafniTao.gafniTaoTheorem11_guthMaynard_native
 ```
 
-including:
+The workbench also now closes the Wooley / VMVT dependency chain:
 
-- the all-interval threshold `theta > 17/30`;
-- the almost-all threshold `theta > 2/15`;
-- a single measurable exceptional set of ordinary natural density zero for the almost-all statement.
+```lean
+GafniTao.wooleyPolynomialCorollary32_native
+GafniTao.heathBrownVMVTMainConjecture_native
+GafniTao.heathBrownKthDerivativeTheorem_native
+```
 
-These native theorem files are **not yet imported by the release root `Extension/GafniTao.lean` or represented in the central `Audit.lean`**.
+Thus the source-level Wooley Corollary 3.2 target, the corresponding VMVT main-conjecture input, and Heath-Brown's kth-derivative theorem are now mathematically proved in Lean.
 
-The correct current claim is therefore:
+These newer theorem files are **not yet imported by the release root `Extension/GafniTao.lean` or represented in the central `Audit.lean`**.
 
-> **The general Gafni-Tao theorem has been proved in the development workbench, while release-root integration and central dependency audit remain pending.**
+The current publication-facing mathematical frontier is narrower:
 
-The active mathematical frontier has moved to the published Section 3 inputs and numerical consequences, especially the Heath-Brown four-zero energy input and the Pintz `23/24` cutoff.
+```lean
+GafniTao.HeathBrownZeroEnergyBounds
+GafniTao.PintzTwentyThreeTwentyFourCutoff
+```
 
-The newest development also contains a large source-faithful Wooley / VMVT program intended to close the analytic mean-value inputs required by that campaign.
+remain open source inputs for the two displayed Section 3 sample results.
+
+The correct current claim is:
+
+> **The core Gafni-Tao theorem and the Wooley-to-Heath-Brown VMVT dependency are proved in the development workbench. Release-root integration, central audit promotion, and the remaining Section 3 source inputs are still active.**
 
 The complete publication-facing project is therefore **not yet claimed complete**.
 
@@ -56,11 +64,11 @@ The project targets the actual mathematical dependency chain used in the paper:
 - exceptional-set measure theory;
 - multiplicity-weighted zero density;
 - four-zero additive energy;
-- the explicit formula;
+- the sharp explicit formula;
 - second and fourth moments;
 - the equation (2.7) strip argument;
-- limiting assembly;
-- the near-one zero-free and density inputs;
+- finite-strip and epsilon limiting;
+- near-one zero-free and density inputs;
 - Theorems 1.3, 1.2, and 1.1;
 - the published Section 3 numerical consequences.
 
@@ -117,9 +125,9 @@ X^{\xi}
 \mu(\theta)
 ```
 
-That downstream machine is substantially root-integrated.
+That downstream machine is substantially release-root integrated.
 
-The newer native source-input route is:
+The native source-input route is now:
 
 ```text
 qualitative Ford exponential sum
@@ -153,13 +161,48 @@ VK count vanishing       Pintz near-one detector
              Guth-Maynard Theorem 1.1
 ```
 
-This second route currently exists in workbench files rather than the release root.
+The major Wooley / Heath-Brown dependency route is now:
+
+```text
+Wooley source means
+        |
+        v
+conditioning and p-adic descent
+        |
+        v
+Sections 6 through 10
+        |
+        v
+WooleyPolynomialCorollary32
+        |
+        v
+monomial p-adic concentration
+        |
+        v
+VMVT main conjecture
+        |
+        v
+Heath-Brown kth-derivative theorem
+        |
+        v
+Heath-Brown pair-count machinery
+        |
+        v
+HeathBrownZeroEnergyBounds
+        |
+        v
+first published Gafni-Tao sample
+```
+
+The chain is proved through the kth-derivative theorem.
+
+The final energy-envelope step remains open.
 
 ---
 
 # Release root versus development workbench
 
-The distinction is now important enough to be explicit.
+The distinction between mathematical proof state and release integration is intentional.
 
 ## Release root
 
@@ -169,7 +212,7 @@ The production-style root is:
 Extension/GafniTao.lean
 ```
 
-It currently imports the established downstream Gafni-Tao mechanism and the older Ford analytic/combinatorial source campaign through:
+It currently imports the established downstream Gafni-Tao mechanism and the older Ford analytic/combinatorial chain through:
 
 ```text
 FordLemma33Finite
@@ -178,24 +221,29 @@ FordLemma63MomentIntegral
 ZeroEnergyLocal
 ```
 
-It does **not yet** import:
+It does **not yet** import the newer native theorem suite:
 
 ```text
 FordAsymptoticZeroFree
 PintzNearOneNative
 NativeTheorems
 Theorem11
+
 PublishedExponentInputs
 Section3Algebra
+
+WooleySourceCriticalBase
+WooleyNative
+
 HeathBrown...
-Wooley...
+Pintz2023...
 ```
 
 ## Development workbench
 
-The repository nevertheless contains substantial additional Lean mathematics beyond the release root.
+The repository contains substantial proved mathematics beyond the release root.
 
-The most important development endpoints now include:
+Important native workbench endpoints now include:
 
 ```lean
 GafniTao.ford_asymptotic_zero_free_native
@@ -207,9 +255,13 @@ GafniTao.gafniTaoTheorem13_max_native
 GafniTao.gafniTaoTheorem12_max_native
 
 GafniTao.gafniTaoTheorem11_guthMaynard_native
+
+GafniTao.wooleyPolynomialCorollary32_native
+GafniTao.heathBrownVMVTMainConjecture_native
+GafniTao.heathBrownKthDerivativeTheorem_native
 ```
 
-These must be promoted deliberately into the root and central audit before they become publication-facing release claims.
+These theorems must be promoted deliberately into the release root and central audit before they become publication-facing release claims.
 
 ---
 
@@ -217,24 +269,24 @@ These must be promoted deliberately into the root and central audit before they 
 
 | Proof layer | Mathematical state | Release-root state |
 |---|---|---|
-| Exact exceptional set | Implemented | Integrated |
-| `mu_delta` / `mu` machinery | Implemented | Integrated |
-| Multiplicity-weighted `N` | Implemented | Integrated |
-| Multiplicity-weighted `N*` | Implemented | Integrated |
-| `A` / `A*` exponent machinery | Implemented | Integrated |
-| Local arithmetic entry | Implemented | Integrated |
-| Brun-Titchmarsh localization | Implemented | Integrated |
-| Native sharp explicit formula | Implemented | Integrated |
-| Complex Fourier bump | Implemented | Integrated |
-| Second moment | Implemented | Integrated |
-| Fourth moment | Implemented | Integrated |
-| Finite half-open strips | Implemented | Integrated |
-| Equation (2.7) | Implemented | Integrated |
-| Limit assembly | Implemented | Integrated |
-| Global exceptional cover | Implemented | Integrated |
-| Conditional Theorem 1.3 | Implemented | Integrated |
-| Conditional Theorem 1.2 | Implemented | Integrated |
-| Frozen GM `30/13` consumer | Implemented | Integrated |
+| Exact exceptional set | Proved | Integrated |
+| `mu_delta` / `mu` machinery | Proved | Integrated |
+| Multiplicity-weighted `N` | Proved | Integrated |
+| Multiplicity-weighted `N*` | Proved | Integrated |
+| `A` / `A*` exponent machinery | Proved | Integrated |
+| Local arithmetic entry | Proved | Integrated |
+| Brun-Titchmarsh localization | Proved | Integrated |
+| Native sharp explicit formula | Proved | Integrated |
+| Complex Fourier bump | Proved | Integrated |
+| Second moment | Proved | Integrated |
+| Fourth moment | Proved | Integrated |
+| Finite half-open strips | Proved | Integrated |
+| Equation (2.7) | Proved | Integrated |
+| Limit assembly | Proved | Integrated |
+| Global exceptional cover | Proved | Integrated |
+| Conditional Theorem 1.3 | Proved | Integrated |
+| Conditional Theorem 1.2 | Proved | Integrated |
+| Frozen GM `30/13` consumer | Proved | Integrated |
 | Qualitative Ford exponential sum | Proved | Workbench |
 | Qualitative Ford zeta growth | Proved | Workbench |
 | Native Ford asymptotic zero-free region | Proved | Workbench |
@@ -243,16 +295,22 @@ These must be promoted deliberately into the root and central audit before they 
 | Exact unconditional Theorem 1.2 | Proved | Workbench |
 | Theorem 1.1, GM `30/13` specialization | Proved | Workbench |
 | Section 3 epsilon-removal algebra | Proved | Workbench |
-| First sample exponent algebra | Proved conditional on Heath-Brown input | Workbench |
+| First sample exponent algebra | Proved conditional on Heath-Brown energy | Workbench |
 | Second sample exponent algebra | Proved conditional on Pintz cutoff | Workbench |
+| Wooley source Corollary 3.2 | Proved | Workbench |
+| Wooley p-adic concentration bridge | Proved | Workbench |
+| VMVT main conjecture input | Proved | Workbench |
+| Heath-Brown kth-derivative theorem | Proved | Workbench |
 | Heath-Brown finite Lemma 2 | Substantially proved | Workbench |
-| Heath-Brown zero-energy envelope | Source closure still open | Workbench |
-| Pintz `23/24` cutoff | Source closure still open | Workbench |
-| Wooley source / VMVT campaign | Active, substantial | Workbench |
-| Published first sample | Awaiting Heath-Brown input | Open |
+| Heath-Brown zero-energy envelope | Open | Workbench |
+| Pintz Corollaries 1-3 source chain | Substantially proved | Workbench |
+| Pintz Theorem 1' to `23/24` bridge | Proved | Workbench |
+| Pintz `23/24` source cutoff | Open | Workbench |
+| Published first sample | Awaiting Heath-Brown energy input | Open |
 | Published small-Delta sample | Awaiting Pintz cutoff | Open |
 | Full Section 3 optimizer | Open | Open |
-| Final release audit | Open | Open |
+| Native-core release promotion | Pending | Open |
+| Final release audit | Pending | Open |
 
 ---
 
@@ -276,7 +334,7 @@ x\in[X,2X]:
 \right\}
 ```
 
-It defines:
+The project defines:
 
 ```math
 \mu_{\delta}(\theta)
@@ -337,7 +395,7 @@ GafniTao.sharpTruncatedExplicitFormulaBound_native
 The sharp-Perron development handles:
 
 - finite Mangoldt Perron identities;
-- logarithmic derivative expansions;
+- logarithmic-derivative expansions;
 - contour rectangles;
 - residues;
 - analytic zero multiplicity;
@@ -400,7 +458,7 @@ remaining strip
           Markov
 ```
 
-These are assembled into a bound for the complete large-zero-sum event.
+These are assembled into a measure bound for the complete large-zero-sum event.
 
 ---
 
@@ -423,7 +481,7 @@ The proof chain therefore reaches the actual global exceptional exponent.
 
 # Native Vinogradov-Korobov zero-free theorem
 
-The workbench now contains:
+The workbench contains:
 
 ```lean
 GafniTao.ford_asymptotic_zero_free_native
@@ -435,7 +493,7 @@ with type:
 FordAsymptoticZeroFree
 ```
 
-This is a genuine discharge of the earlier existential zero-free source contract.
+This discharges the earlier existential zero-free source contract.
 
 The proof uses:
 
@@ -443,11 +501,11 @@ The proof uses:
 - the Vinogradov-Korobov scale;
 - the five-frequency trigonometric detector;
 - an explicit positive zero-free constant;
-- conjugation symmetry for negative zero ordinates.
+- conjugation symmetry.
 
-Thus the zero-free branch is no longer an open mathematical prerequisite for the general Gafni-Tao theorem.
+Thus the zero-free branch is no longer a mathematical prerequisite for the general Gafni-Tao theorem.
 
-It remains an integration prerequisite for the release package.
+It remains a release-integration task.
 
 ---
 
@@ -492,17 +550,17 @@ eta <= 1/8
 
 The logarithmic power `524` is intentional.
 
-This route is sufficient for the general Gafni-Tao theorem.
+This route is sufficient for the exact general Gafni-Tao theorem.
 
-It does **not** reproduce Ford's older optimized `58.05` / `log^16` source package.
+It does not reproduce the older optimized Ford `58.05 / log^16` package.
 
-That optimized contract may remain of independent source-fidelity interest, but it is no longer a blocker for the native general theorem.
+That optimized package remains a source-fidelity objective rather than a blocker.
 
 ---
 
 # Exact native Theorems 1.3 and 1.2
 
-The workbench now contains:
+The workbench contains:
 
 ```lean
 GafniTao.gafniTaoTheorem13_native
@@ -519,15 +577,15 @@ with theorem statement:
 for:
 
 ```math
-0 < \theta < 1
+0<\theta<1
 ```
 
 It supplies internally:
 
 - the frozen Guth-Maynard smooth cutoff;
 - the native sharp explicit formula;
-- the native Pintz/Ford near-one package;
-- the native zero-free input.
+- the native Pintz near-one package;
+- the native VK zero-free theorem.
 
 The ordinary theorem:
 
@@ -535,7 +593,7 @@ The ordinary theorem:
 GafniTao.gafniTaoTheorem12_native
 ```
 
-then proves:
+proves:
 
 ```math
 \mu(\theta)
@@ -543,26 +601,26 @@ then proves:
 \mathrm{ordinaryExceptionalUpperExponent}(\theta)
 ```
 
-The workbench also contains the alternate upper-half max formulations:
+The workbench also contains:
 
 ```lean
 GafniTao.gafniTaoTheorem13_max_native
 GafniTao.gafniTaoTheorem12_max_native
 ```
 
-The project should preserve the distinction between the exact source exponent theorem and the alternate max-form statements.
+The exact source exponent theorem and the alternate max-form theorem remain separately named.
 
 ---
 
 # Native Theorem 1.1
 
-The workbench now contains the complete frozen Guth-Maynard specialization:
+The workbench contains:
 
 ```lean
 GafniTao.gafniTaoTheorem11_guthMaynard_native
 ```
 
-with:
+using:
 
 ```math
 A_{0}
@@ -586,15 +644,15 @@ The almost-all threshold is:
 \frac{2}{15}
 ```
 
-The almost-all branch has been strengthened to produce a **single measurable exceptional set** `E` such that:
+The almost-all branch produces a single measurable exceptional set `E` satisfying:
 
 ```text
 NaturalDensityZero E
 ```
 
-and the short-interval PNT holds outside `E`.
+outside which the short-interval prime number theorem holds.
 
-Representative endpoints are:
+Representative endpoints include:
 
 ```lean
 GafniTao.gafniTaoTheorem11_almostAll_guthMaynard_singleSet_native
@@ -605,13 +663,11 @@ GafniTao.gafniTaoTheorem11_guthMaynard_native
 
 # Section 3
 
-The active mathematical frontier is now Section 3.
+The active mathematical frontier is now concentrated in two source predicates.
 
 ## Published source interfaces
 
-`PublishedExponentInputs.lean` records the exact source-facing inputs still required for the displayed sample bounds.
-
-These include:
+`PublishedExponentInputs.lean` records:
 
 ```lean
 GafniTao.PintzFirstDensitySegment
@@ -619,9 +675,9 @@ GafniTao.PintzTwentyThreeTwentyFourCutoff
 GafniTao.HeathBrownZeroEnergyBounds
 ```
 
-These are predicates on the genuine project zero-count and zero-energy objects.
+These predicates are defined using the genuine project zero-count and zero-energy objects.
 
-No separate numerical surrogate exponent has been introduced.
+No separate numerical surrogate exponent is used.
 
 ---
 
@@ -649,7 +705,9 @@ with assumption:
 hHeathBrown : HeathBrownZeroEnergyBounds
 ```
 
-Thus the remaining mathematical task for this sample is the source closure of the Heath-Brown four-zero energy input, not the Gafni-Tao optimization algebra.
+Thus the remaining mathematical task for the first sample is the source closure of the Heath-Brown four-zero energy envelope.
+
+The Gafni-Tao optimization algebra is already complete.
 
 ---
 
@@ -684,23 +742,118 @@ assuming:
 PintzTwentyThreeTwentyFourCutoff
 ```
 
-The sufficiently-small range is therefore already explicit.
+The sufficiently-small range is already explicit.
 
-The outstanding task is to discharge the Pintz cutoff source predicate.
+The remaining task is to discharge the Pintz cutoff source predicate.
 
 ---
 
-# Heath-Brown source campaign
+# Wooley / VMVT source theorem
 
-The repository now contains a large Heath-Brown kth-derivative and refined-counting development.
+The Wooley source campaign has now crossed its main mathematical endpoint.
 
-A source-shaped finite form of Heath-Brown Lemma 2 has already been obtained:
+The source target:
+
+```lean
+GafniTao.WooleyPolynomialCorollary32
+```
+
+is proved by:
+
+```lean
+GafniTao.wooleyPolynomialCorollary32_native
+```
+
+The proof uses:
+
+- the degree-one collision identity;
+- strong induction on degree;
+- lower-degree source Corollary 3.2 inputs;
+- the source-faithful Sections 7 through 10 descent;
+- the vanishing of the operational critical exponent;
+- the infimum-to-eventual-bound bridge.
+
+The proof file places the native endpoint on its local `#print axioms` surface.
+
+The exact downstream specialization:
+
+```lean
+GafniTao.wooleyMonomialPadicConcentration_of_polynomialCorollary32
+```
+
+then consumes the native source theorem.
+
+Thus the former chain:
+
+```text
+WooleyPolynomialCorollary32
+        |
+        v
+p-adic concentration
+```
+
+is no longer conditional.
+
+---
+
+# Native VMVT and Heath-Brown kth-derivative theorem
+
+`WooleyNative.lean` now proves:
+
+```lean
+GafniTao.heathBrownVMVTMainConjecture_native
+```
+
+directly from:
+
+```lean
+GafniTao.wooleyPolynomialCorollary32_native
+```
+
+through the existing p-adic concentration bridge.
+
+It then proves:
+
+```lean
+GafniTao.heathBrownKthDerivativeTheorem_native
+```
+
+by feeding the native VMVT theorem into the already constructed Heath-Brown consumer.
+
+The resulting chain is now:
+
+```text
+WooleyPolynomialCorollary32
+        |
+        v
+p-adic concentration
+        |
+        v
+VMVT main conjecture
+        |
+        v
+Heath-Brown kth-derivative theorem
+```
+
+with all four stages proved in the development workbench.
+
+This closes the previously open Wooley / VMVT dependency.
+
+---
+
+# Heath-Brown energy campaign
+
+The remaining Heath-Brown problem is no longer the kth-derivative theorem itself.
+
+That dependency is now natively proved.
+
+The workbench also contains a source-shaped finite form of Heath-Brown Lemma 2:
 
 ```lean
 GafniTao.heathBrownPairCount_card_cast_le_lemma_two
 ```
 
-with bound of the form:
+with a bound of the form:
 
 ```math
 \#\mathrm{Pairs}
@@ -714,84 +867,99 @@ N+\lambda N^{2}+\lambda^{-2/k}
 \right)
 ```
 
-under the expected differentiability and kth-derivative hypotheses.
+under the expected derivative hypotheses.
 
-This is substantial progress toward the Section 3 energy input.
-
-It does not yet prove:
+The open target is:
 
 ```lean
 GafniTao.HeathBrownZeroEnergyBounds
 ```
 
-The remaining work is to connect the derivative/counting machinery to the actual multiplicity-weighted four-zero energy envelope used by Gafni-Tao.
+The remaining task is to connect the now-native kth-derivative theorem and pair-count machinery to the three-cell multiplicity-weighted four-zero energy envelope used by Gafni-Tao.
+
+The chain is now:
+
+```text
+Wooley source theorem
+        |
+        v
+VMVT
+        |
+        v
+Heath-Brown kth derivative
+        |
+        v
+finite pair-count bounds
+        |
+        v
+HeathBrownZeroEnergyBounds
+        |
+        v
+mu(17/30) <= 7/12
+```
+
+Only the final energy-envelope conversion remains mathematically open in this branch.
 
 ---
 
-# Wooley / VMVT source campaign
+# Pintz Section 3 campaign
 
-The latest public progress commit substantially expands the Wooley branch.
+The Pintz campaign has also narrowed substantially.
 
-The development now contains source-level infrastructure for:
+The workbench contains a large native Pintz source chain, including source-scale detector, Mellin, Halasz, and corollary machinery.
 
-- finitely supported integer coefficient sequences;
-- exact normalized polynomial means;
-- conditioned polynomial means;
-- source boxing and unboxing;
-- coefficient-one specialization;
-- translation-dilation invariance;
-- initial conditioning;
-- p-adic separation;
-- polynomial-system refinement;
-- Sections 6, 7, and 8 arithmetic;
-- source-to-p-adic specialization.
-
-The source target is represented by:
+The source-facing theorem:
 
 ```lean
-GafniTao.WooleyPolynomialCorollary32
+PintzTheoremOnePrime
 ```
 
-This remains a target proposition.
+is defined using the genuine analytic-multiplicity zero count and the source exponent structure.
 
-The workbench already contains source-sequence consumers for substantial pieces of Wooley Sections 6 through 8.
-
-For example:
+The workbench proves:
 
 ```lean
-GafniTao.wooleySourcePolynomial_lemma_6_3
+GafniTao.pintzTwentyThreeTwentyFourCutoff_of_theoremOnePrime
 ```
 
-is a source-sequence form of Wooley Lemma 6.3.
-
-The exact downstream specialization is also already formalized:
+which shows that:
 
 ```lean
-GafniTao.wooleyMonomialPadicConcentration_of_polynomialCorollary32
+PintzTheoremOnePrime
 ```
 
-which proves that the full source-faithful polynomial Corollary 3.2 implies the precise coefficient-one p-adic concentration statement needed by the critical VMVT consumer.
+implies exactly:
 
-Thus the current Wooley problem is sharply isolated:
+```lean
+PintzTwentyThreeTwentyFourCutoff
+```
+
+The remaining mathematical gap is therefore upstream of the cutoff itself.
+
+The current chain is:
 
 ```text
-prove source Corollary 3.2
+native Pintz source machinery
         |
         v
-existing source-to-p-adic bridge
+PintzTheoremOnePrime
         |
         v
-critical VMVT consumer
+PintzTwentyThreeTwentyFourCutoff
         |
         v
-Section 3 source campaign
+small-Delta Gafni-Tao sample
 ```
+
+The implication from `PintzTheoremOnePrime` to the published `23/24` cutoff is already proved.
+
+`PintzTheoremOnePrime` itself remains a source theorem interface at the current snapshot.
 
 ---
 
 # Older optimized Ford contracts
 
-The repository still contains the source-facing contracts:
+The repository still contains:
 
 ```lean
 GafniTao.FordZetaGrowthBound
@@ -801,7 +969,7 @@ GafniTao.FordTheorem2
 
 with the published optimized constants.
 
-These are no longer required to close the general Gafni-Tao theorem because the native Pintz/Ford route supplies sufficient near-one inputs by a different proved path.
+These are no longer required to close the general Gafni-Tao theorem because the native Pintz/VK route supplies sufficient near-one inputs.
 
 They should therefore be classified as:
 
@@ -812,10 +980,8 @@ source-fidelity / optimized Ford objectives
 rather than:
 
 ```text
-blockers to the general Gafni-Tao theorem
+blockers to the core Gafni-Tao theorem
 ```
-
-The distinction matters.
 
 `FordAsymptoticZeroFree`, by contrast, now has the native proof:
 
@@ -827,9 +993,9 @@ GafniTao.ford_asymptotic_zero_free_native
 
 # Integration frontier
 
-The largest immediate non-mathematical task is now release integration.
+The largest non-mathematical task remains release promotion.
 
-The following major files exist outside the current release root:
+The following major theorem families remain outside the current release root:
 
 ```text
 FordAsymptoticZeroFree
@@ -840,17 +1006,18 @@ Theorem11
 PublishedExponentInputs
 Section3Algebra
 
-HeathBrown...
-Wooley...
-```
+WooleySourceCriticalBase
+WooleyNative
 
-Before any publication-facing completion claim, the intended theorem path must be deliberately promoted.
+HeathBrown...
+Pintz2023...
+```
 
 A theorem counts as release-integrated only when:
 
 1. its module is imported by `Extension/GafniTao.lean`;
 2. the isolated package builds through that root;
-3. its public/source-sensitive endpoints are represented in `Audit.lean`;
+3. its public or source-sensitive endpoints are represented in `Audit.lean`;
 4. the actual `#print axioms` output is inspected;
 5. the theorem is reachable through the intended final dependency path.
 
@@ -870,9 +1037,9 @@ It imports:
 import GafniTao
 ```
 
-and therefore currently audits only the existing release root.
+and therefore audits only the current release root.
 
-It does **not yet** centrally audit:
+It does **not yet** centrally audit the newer native endpoints:
 
 ```lean
 ford_asymptotic_zero_free_native
@@ -885,18 +1052,19 @@ gafniTaoTheorem12_max_native
 
 gafniTaoTheorem11_guthMaynard_native
 
+wooleyPolynomialCorollary32_native
+heathBrownVMVTMainConjecture_native
+heathBrownKthDerivativeTheorem_native
+
 refinedExceptionalUpperExponent_seventeen_thirtieths_le
 refinedExceptionalUpperExponent_two_fifteenths_add_le
-
-Heath-Brown workbench endpoints
-Wooley workbench endpoints
 ```
 
-Some of those individual files contain their own `#print axioms` commands.
+Individual workbench files may contain local `#print axioms` commands.
 
-That is useful local dependency checking.
+Those local checks are useful.
 
-It does not replace promotion into the central audit.
+They do not replace central audit promotion.
 
 ---
 
@@ -908,7 +1076,7 @@ Run from:
 Riemann Zeta/PostGM/GafniTao/Extension
 ```
 
-The release verification should include:
+Release verification should include:
 
 ```bash
 lake build
@@ -935,7 +1103,7 @@ The actual Lean dependency output must be inspected.
 
 # Source and certificate discipline
 
-The repository contains:
+The repository contains several artifact classes:
 
 ```text
 source references
@@ -948,9 +1116,13 @@ development artifacts
 
 These categories must remain distinct.
 
-Generated data is acceptable when Lean independently verifies the certificate.
+Generated certificate data is acceptable when Lean independently verifies the certificate.
 
-Temporary probes and cache artifacts should not be part of the publication-facing dependency path.
+External scripts may generate candidate certificate data.
+
+They are not theorem oracles.
+
+Temporary probes, Python environments, caches, compiled files, and extraction debris should not be part of the publication-facing dependency path.
 
 ---
 
@@ -1011,7 +1183,7 @@ A publication-facing theorem is accepted only when all applicable conditions hol
 2. Source parameter ranges and endpoints are correct.
 3. Analytic multiplicities are represented correctly.
 4. Constants and logarithmic factors are accounted for.
-5. No hidden continuity assumptions are introduced.
+5. No hidden continuity assumption is introduced.
 6. No unauthorized epsilon loss is inserted.
 7. No project-level `axiom`, `sorry`, `admit`, unsafe shortcut, or disguised restatement supplies the theorem.
 8. The theorem is imported through the intended release root.
@@ -1027,7 +1199,7 @@ A publication-facing theorem is accepted only when all applicable conditions hol
 
 The strongest safe summary of the repository at present is:
 
-> Most of the downstream Gafni-Tao Section 2 mechanism is already integrated and centrally audited. Beyond that release root, the repository now contains native Lean proofs of a Vinogradov-Korobov zero-free region, a sufficient Pintz near-one logarithmic density package, exact unconditional Gafni-Tao Theorems 1.3 and 1.2, and the frozen Guth-Maynard `30/13` specialization of Theorem 1.1. These newer theorem files have not yet been promoted into the release root and central audit. The mathematical frontier has moved to the Section 3 source inputs: the first sample algebra is complete conditional on the Heath-Brown four-zero energy envelope, and the second sample algebra is complete conditional on the Pintz `23/24` cutoff. A large Heath-Brown derivative/counting campaign and an expanding source-faithful Wooley / VMVT campaign are actively attacking those remaining inputs.
+> Most of the downstream Gafni-Tao Section 2 mechanism is already release-root integrated and centrally audited. Beyond that release root, the repository contains native Lean proofs of a Vinogradov-Korobov zero-free region, a sufficient Pintz near-one logarithmic density package, exact unconditional Gafni-Tao Theorems 1.3 and 1.2, and the frozen Guth-Maynard `30/13` specialization of Theorem 1.1. The Wooley source Corollary 3.2 target is now also natively proved, and its existing consumer chain yields the VMVT main conjecture input and Heath-Brown's kth-derivative theorem. These newer theorem files have not yet been promoted into the release root and central audit. The mathematical frontier is now concentrated in the Section 3 source inputs: `HeathBrownZeroEnergyBounds` and `PintzTwentyThreeTwentyFourCutoff`.
 
 Do not currently shorten this to:
 
@@ -1040,7 +1212,8 @@ That is not yet justified.
 A more precise short claim is:
 
 ```text
-Core Gafni-Tao theorem proved in the workbench; release integration and Section 3 remain active.
+Core Gafni-Tao and Wooley/VMVT source chain proved in the workbench;
+release integration and two Section 3 source gates remain active.
 ```
 
 ---
@@ -1093,17 +1266,44 @@ Add the appropriate endpoints to the central audit.
 
 Run the full isolated build and inspect dependencies.
 
-This is now the shortest route to turning the workbench core theorem into a release theorem.
+---
+
+## 2. Promote the completed Wooley / VMVT chain
+
+The former Wooley source target is now proved.
+
+Integrate the intended publication dependency path containing:
+
+```text
+WooleySourceCriticalBase
+WooleyNative
+```
+
+and the required dependencies.
+
+Add representative central-audit endpoints:
+
+```lean
+wooleyPolynomialCorollary32_native
+heathBrownVMVTMainConjecture_native
+heathBrownKthDerivativeTheorem_native
+```
+
+Do not continue treating Wooley Corollary 3.2 as an open mathematical target.
 
 ---
 
-## 2. Close the Heath-Brown energy input
+## 3. Close the Heath-Brown energy envelope
 
-Continue from the source-scale finite Lemma 2 development toward:
+Use the now-native kth-derivative theorem together with the existing Heath-Brown pair-count chain to prove:
 
 ```lean
 HeathBrownZeroEnergyBounds
 ```
+
+The former VMVT dependency is no longer open.
+
+The remaining task is the passage from the derivative/counting machinery to the actual multiplicity-weighted three-cell zero-energy envelope.
 
 Once that predicate is discharged, combine:
 
@@ -1117,29 +1317,32 @@ with:
 refinedExceptionalUpperExponent_seventeen_thirtieths_le
 ```
 
-to obtain the first published sample:
+to obtain:
 
 ```math
 \mu\!\left(\frac{17}{30}\right)
 \le
-\frac{7}{12}
+\frac{7}{12}.
 ```
-
-without external analytic assumptions.
 
 ---
 
-## 3. Close the Pintz Section 3 cutoff
+## 4. Close the Pintz Section 3 cutoff
 
-Prove:
+The implication:
 
-```lean
+```text
+PintzTheoremOnePrime
+        |
+        v
 PintzTwentyThreeTwentyFourCutoff
 ```
 
-from the pinned Pintz source argument.
+is already proved.
 
-Then combine it with:
+The immediate mathematical target is therefore the source theorem feeding that implication.
+
+Once the source theorem is discharged, combine the resulting cutoff with:
 
 ```lean
 refinedExceptionalUpperExponent_two_fifteenths_add_le
@@ -1147,7 +1350,7 @@ refinedExceptionalUpperExponent_two_fifteenths_add_le
 
 and the native general theorem.
 
-This closes the sufficiently-small-Delta sample on the already formalized range:
+This closes the sufficiently-small-Delta sample on the formalized range:
 
 ```math
 0<\Delta\le\frac{1}{100}.
@@ -1155,43 +1358,15 @@ This closes the sufficiently-small-Delta sample on the already formalized range:
 
 ---
 
-## 4. Continue the Wooley source theorem
-
-The current target is:
-
-```lean
-WooleyPolynomialCorollary32
-```
-
-The repository already has:
-
-- source means;
-- boxing;
-- coefficient specialization;
-- source Sections 6 through 8;
-- the source-to-p-adic consumer.
-
-Complete the remaining Wooley source sections needed to prove Corollary 3.2.
-
-Then consume the already-proved:
-
-```lean
-wooleyMonomialPadicConcentration_of_polynomialCorollary32
-```
-
-bridge.
-
----
-
 ## 5. Synchronize Section 3 integration
 
-After each source input closes:
+After each remaining source input closes:
 
-1. import the corresponding chain into the release root;
+1. import the source chain into the release root;
 2. add central audit entries;
 3. connect the source input to `Section3Algebra`;
 4. create the unconditional sample theorem;
-5. update the Crosswalk and Architecture.
+5. update the Crosswalk, Shitlist, Architecture, and README.
 
 ---
 
@@ -1203,7 +1378,7 @@ Pin all numerical source tables.
 
 Reduce the optimization to finitely many exact cells.
 
-Certify the cells in Lean.
+Certify those cells in Lean.
 
 Do not use floating-point output as proof evidence.
 
@@ -1217,7 +1392,7 @@ Before the final completion claim:
 2. run `Audit.lean`;
 3. inspect all nonstandard axiom dependencies;
 4. scan for unfinished declarations;
-5. remove or classify temporary probes and caches;
+5. remove or classify temporary probes, Python environments, and caches;
 6. synchronize all project-control documentation;
 7. confirm that the public theorem path is reachable from the root.
 
@@ -1238,11 +1413,15 @@ Use milestone commit messages only after the stated theorem is genuinely closed.
 Examples:
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: integrate native Theorems 1.3, 1.2 and 1.1"
+push_to_github.bat "PostGM Gafni-Tao: integrate native core and Wooley VMVT chain"
 ```
 
 ```bat
 push_to_github.bat "PostGM Gafni-Tao: close Heath-Brown Section 3 energy input"
+```
+
+```bat
+push_to_github.bat "PostGM Gafni-Tao: close Pintz 23-24 cutoff"
 ```
 
 ```bat
@@ -1253,7 +1432,7 @@ push_to_github.bat "PostGM Gafni-Tao: close first published Section 3 sample"
 
 # Completion condition
 
-The core theorem phase is release-complete when the dependency graph is:
+The core theorem phase is release-complete when:
 
 ```text
 frozen Guth-Maynard foundation
@@ -1278,12 +1457,32 @@ native sharp explicit formula     native near-one package
            Guth-Maynard Theorem 1.1
 ```
 
-and that path is imported, built, and centrally audited.
+is imported, built, and centrally audited.
+
+The Wooley / VMVT dependency phase is mathematically closed when:
+
+```text
+Wooley Corollary 3.2
+        |
+        v
+p-adic concentration
+        |
+        v
+VMVT main conjecture
+        |
+        v
+Heath-Brown kth derivative
+```
+
+is promoted into the same release dependency path.
 
 The full paper-facing phase additionally requires:
 
 ```text
-Heath-Brown source input
+native Heath-Brown kth derivative
+             |
+             v
+HeathBrownZeroEnergyBounds
              |
              v
 mu(17/30) <= 7/12
@@ -1292,7 +1491,10 @@ mu(17/30) <= 7/12
 and:
 
 ```text
-Pintz 23/24 source cutoff
+Pintz source theorem
+             |
+             v
+Pintz 23/24 cutoff
              |
              v
 small-Delta published bound
@@ -1302,4 +1504,4 @@ together with any claimed full numerical optimizer.
 
 Until then:
 
-**the core Gafni-Tao theorem is proved in the development workbench; release integration and the published Section 3 source inputs are the active front.**
+**the core Gafni-Tao theorem and Wooley/VMVT source chain are proved in the development workbench; release integration and the two published Section 3 source gates are the active front.**

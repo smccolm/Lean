@@ -40,7 +40,13 @@ theorem pintz2023ComplexWeightedBlock_eq
               pintz2023_factorized_term hnPos (1 - xi) t
     _ = (((n : ℝ) ^ (-(1 - xi)) : ℝ) : ℂ) *
           (n : ℂ) ^ (-(t : ℂ) * I) := by
-            rw [Complex.ofReal_cpow (by positivity : (0 : ℝ) ≤ n)]
+            have hcast : -((1 - xi : ℝ) : ℂ) =
+                ((-(1 - xi) : ℝ) : ℂ) := by
+              push_cast
+              ring
+            have hbase : (n : ℂ) = ((n : ℝ) : ℂ) := by norm_num
+            rw [hcast, hbase, ← Complex.ofReal_cpow
+              (by positivity : (0 : ℝ) ≤ n)]
     _ = (n : ℝ) ^ (-(1 - xi)) •
           (n : ℂ) ^ (-(t : ℂ) * I) := by
             rw [Complex.real_smul]

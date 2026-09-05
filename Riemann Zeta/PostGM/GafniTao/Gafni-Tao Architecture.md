@@ -21,7 +21,7 @@ flowchart TD
 
     A1["Current release-root theorem surface<br/>AUDITED"]
 
-    A2["Native core and Section 3 workbench<br/>CENTRAL AUDIT PENDING"]
+    A2["Native core, Wooley, and Section 3 workbench<br/>CENTRAL AUDIT PENDING"]
 
 
     FQ0["QUALITATIVE FORD CHAIN<br/>WORKBENCH"]
@@ -77,39 +77,49 @@ flowchart TD
     S4["Second sample algebra<br/>2/15 + Delta<br/>Delta <= 1/100<br/>CONDITIONAL"]
 
 
-    HB0["HEATH-BROWN CAMPAIGN<br/>WORKBENCH"]
+    W0["WOOLEY SOURCE CAMPAIGN<br/>WORKBENCH"]
 
-    HB1["k-th derivative and pair-count machinery<br/>SUBSTANTIAL"]
+    W1["Source integer sequences and means<br/>boxing and coefficient bridges<br/>PROVED"]
 
-    HB2["heathBrownPairCount_card_cast_le_lemma_two<br/>source-scale finite Lemma 2<br/>PROVED"]
+    W2["Translation-dilation and conditioning<br/>p-adic separation<br/>PROVED"]
 
-    HB3["HeathBrownZeroEnergyBounds<br/>source energy envelope<br/>OPEN"]
+    W3["Source Sections 6 through 10<br/>critical-exponent descent<br/>PROVED"]
 
-    HB4["Unconditional first sample<br/>mu(17/30) <= 7/12<br/>OPEN"]
+    W4["wooleyPolynomialCorollary32_native<br/>Wooley Corollary 3.2<br/>PROVED"]
+
+    W5["wooleyMonomialPadicConcentration<br/>source-to-p-adic bridge<br/>PROVED"]
+
+    W6["heathBrownVMVTMainConjecture_native<br/>VMVT main conjecture input<br/>PROVED"]
+
+    W7["heathBrownKthDerivativeTheorem_native<br/>Heath-Brown kth derivative<br/>PROVED"]
+
+    WI["Wooley and VMVT release integration<br/>PENDING"]
 
 
-    P30["PINTZ SECTION 3 CAMPAIGN"]
+    HB0["HEATH-BROWN ENERGY CAMPAIGN<br/>WORKBENCH"]
 
-    P31["PintzFirstDensitySegment<br/>SOURCE PREDICATE"]
+    HB1["Native kth-derivative input<br/>PROVED"]
 
-    P32["PintzTwentyThreeTwentyFourCutoff<br/>SOURCE PREDICATE OPEN"]
+    HB2["Pair-count and refined-count machinery<br/>SUBSTANTIAL"]
 
-    P33["Unconditional small-Delta sample<br/>OPEN"]
+    HB3["heathBrownPairCount_card_cast_le_lemma_two<br/>source-scale finite Lemma 2<br/>PROVED"]
+
+    HB4["HeathBrownZeroEnergyBounds<br/>three-cell zero-energy envelope<br/>OPEN"]
+
+    HB5["Unconditional first sample<br/>mu(17/30) <= 7/12<br/>OPEN"]
 
 
-    W0["WOOLEY VMVT CAMPAIGN<br/>WORKBENCH"]
+    P30["PINTZ SECTION 3 CAMPAIGN<br/>WORKBENCH"]
 
-    W1["Source integer sequences and means<br/>boxing and coefficient bridges<br/>PROVED INFRASTRUCTURE"]
+    P31["Native Pintz 2023 source machinery<br/>SUBSTANTIAL"]
 
-    W2["Translation-dilation and conditioning<br/>p-adic separation<br/>PROVED INFRASTRUCTURE"]
+    P32["PintzTheoremOnePrime<br/>SOURCE THEOREM OPEN"]
 
-    W3["Source Sections 6 through 8<br/>polynomial refinements and arithmetic<br/>ACTIVE"]
+    P33["Theorem One Prime implies<br/>Pintz 23/24 cutoff<br/>PROVED"]
 
-    W4["WooleyPolynomialCorollary32<br/>SOURCE TARGET OPEN"]
+    P34["PintzTwentyThreeTwentyFourCutoff<br/>OPEN"]
 
-    W5["wooleyMonomialPadicConcentration<br/>of polynomial Corollary 3.2<br/>BRIDGE PROVED"]
-
-    W6["Critical VMVT consumer<br/>SOURCE CLOSURE ACTIVE"]
+    P35["Unconditional small-Delta sample<br/>OPEN"]
 
 
     OF0["OPTIMIZED FORD OBJECTIVES<br/>NOT CORE BLOCKERS"]
@@ -121,7 +131,7 @@ flowchart TD
     OF3["FordNearOneDensityEstimate<br/>optimized 58.05 and log 15<br/>OPEN"]
 
 
-    G22["GT-22 Published Section 3 inputs<br/>ACTIVE"]
+    G22["GT-22 Published Section 3 inputs<br/>TWO MAIN GATES OPEN"]
 
     G23["GT-23 Published sample bounds<br/>ALGEBRA DONE<br/>SOURCE CLOSURE OPEN"]
 
@@ -138,7 +148,6 @@ flowchart TD
 
     R0 --> R1
     R0 --> R3
-
     R1 --> R2
 
     R0 --> A0
@@ -185,7 +194,6 @@ flowchart TD
     I2 --> I3
 
     I2 --> A2
-
     I3 --> G25
 
 
@@ -199,30 +207,6 @@ flowchart TD
     S2 --> S4
 
 
-    SRC --> HB0
-    ML --> HB0
-
-    HB0 --> HB1
-    HB1 --> HB2
-    HB2 --> HB3
-
-    HB3 --> S3
-    S3 --> HB4
-
-    HB4 --> G23
-
-
-    SRC --> P30
-
-    P30 --> P31
-    P31 --> P32
-
-    P32 --> S4
-    S4 --> P33
-
-    P33 --> G23
-
-
     SRC --> W0
     ML --> W0
 
@@ -233,8 +217,39 @@ flowchart TD
 
     W4 --> W5
     W5 --> W6
+    W6 --> W7
 
-    W6 -. supports Section 3 source campaign .-> HB3
+    W7 --> WI
+    WI --> G25
+
+
+    SRC --> HB0
+    ML --> HB0
+
+    W7 --> HB1
+    HB0 --> HB2
+    HB1 --> HB2
+
+    HB2 --> HB3
+    HB3 --> HB4
+
+    HB4 --> S3
+    S3 --> HB5
+
+    HB5 --> G23
+
+
+    SRC --> P30
+
+    P30 --> P31
+    P31 --> P32
+    P32 --> P33
+    P33 --> P34
+
+    P34 --> S4
+    S4 --> P35
+
+    P35 --> G23
 
 
     SRC --> OF0
@@ -247,9 +262,8 @@ flowchart TD
     OF3 -. optimized alternate route .-> PN0
 
 
-    HB3 --> G22
-    P32 --> G22
-    W6 --> G22
+    HB4 --> G22
+    P34 --> G22
 
     G22 --> G23
 
@@ -276,31 +290,29 @@ flowchart TD
 
     class R0,R1,R2,R3,A0,A1 integrated;
 
-    class FQ0,PN0,N0 dev;
+    class FQ0,PN0,N0,W0,HB0,P30 dev;
 
     class FQ1,FQ2,FQ3,FQ4 breakthrough;
     class PN1,PN2 breakthrough;
 
     class N1,N2,N3,N4,N5,N6 breakthrough;
 
-    class I0,I1,I2,I3,G25,G26 active;
+    class W1,W2,W3,W4,W5,W6,W7 breakthrough;
+
+    class HB1,HB3 breakthrough;
+    class HB2 active;
+    class HB4,HB5 open;
+
+    class P31 active;
+    class P32,P34,P35 open;
+    class P33 breakthrough;
+
+    class I0,I1,I2,I3,WI,G25,G26 active;
     class A2 sync;
 
     class S0,S1 integrated;
     class S2 done;
     class S3,S4 conditional;
-
-    class HB0,HB1 dev;
-    class HB2 breakthrough;
-    class HB3,HB4 open;
-
-    class P30 dev;
-    class P31 integrated;
-    class P32,P33 open;
-
-    class W0,W1,W2,W3 dev;
-    class W4,W6 open;
-    class W5 breakthrough;
 
     class OF0 active;
     class OF1,OF2,OF3 open;

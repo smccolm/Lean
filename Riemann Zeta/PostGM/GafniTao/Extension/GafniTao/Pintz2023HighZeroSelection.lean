@@ -104,9 +104,14 @@ theorem eventually_exists_pintz2023_highZero_detected_family
       exact hdata.2.2.2.2
     exact hDetectorT (1 - rho.re) rho.im hetaRho hetaRhoUpper
       hrhoHigh.2 himUpper hzero
-  simpa only [S] using
+  obtain ⟨W, etaAt, hSep, hCount, hEtaAt, _hLower, hUpper, hLarge⟩ :=
     exists_pintz2023_source_order_variable_selection_subset
-      S hS hsigma hT hlambda hDetected
+      S hS (by
+        intro rho hrho
+        exact (Finset.mem_filter.mp hrho).2)
+      hsigma hT hlambda hDetected
+  exact ⟨W, etaAt, hSep, by simpa only [S] using hCount,
+    hEtaAt, hUpper, hLarge⟩
 
 #print axioms pintz2023HighZeroSet_subset
 #print axioms eventually_exists_pintz2023_highZero_detected_family

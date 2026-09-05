@@ -71,8 +71,9 @@ ordinates are extracted at spacing `7 lambda`, then displaced by at most
 displayed loss has one, and only one, factor of order `lambda` in addition
 to the local-zero `log T` factor. -/
 theorem exists_pintz2023_source_order_variable_selection_subset
-    {xi T V lambda : ℝ} {X Y : ℕ} (S : Finset ℂ)
+    {xi T V lambda H : ℝ} {X Y : ℕ} (S : Finset ℂ)
     (hS : S ⊆ zeroSet (1 - xi) T)
+    (hSourceLower : ∀ rho ∈ S, H < |rho.im|)
     (hsigma : 0 ≤ 1 - xi)
     (hT : max (Real.exp 2) 8 ≤ T)
     (hlambda : 0 < lambda)
@@ -86,6 +87,7 @@ theorem exists_pintz2023_source_order_variable_selection_subset
         (2 * Nat.ceil (globalLocalZeroLogConstant * Real.log T)) *
           (2 * (2 * Nat.ceil (7 * lambda) + 1)) * W.card ∧
       (∀ u ∈ W, etaAt u ∈ Set.Icc 0 xi) ∧
+      (∀ u ∈ W, H - 2 * lambda < |u|) ∧
       (∀ u ∈ W, |u| ≤ T + 2 * lambda) ∧
       ∀ u ∈ W,
         V ≤ ‖pintz2023TruncatedPolynomial X Y
@@ -219,6 +221,21 @@ theorem exists_pintz2023_source_order_variable_selection_subset
       |w| = |u + (w - u)| := by congr 1; ring
       _ ≤ |u| + |w - u| := abs_add_le _ _
       _ ≤ T + 2 * lambda := add_le_add huHeight hwDisp
+  have hHeightLower : ∀ w ∈ W, H - 2 * lambda < |w| := by
+    intro w hw
+    let u := original w
+    have hu : u ∈ U := hOriginalMem w hw
+    have hsourceLower := hSourceLower (source u) (hSourceMem u hu)
+    have hdisp := hShift u hu
+    have hwShift : shift u = w := hOriginalShift w hw
+    have hsourceDisp : |(source u).im - w| ≤ 2 * lambda := by
+      rw [hSourceIm u hu, ← hwShift]
+      exact hdisp
+    have htriangle : |(source u).im| ≤ |w| + |(source u).im - w| := by
+      calc
+        |(source u).im| = |w + ((source u).im - w)| := by congr 1; ring
+        _ ≤ |w| + |(source u).im - w| := abs_add_le _ _
+    linarith
   have hLarge : ∀ w ∈ W,
       V ≤ ‖pintz2023TruncatedPolynomial X Y
         (1 - etaAt w + 1 / lambda) w‖ := by
@@ -226,7 +243,7 @@ theorem exists_pintz2023_source_order_variable_selection_subset
     have h := hLargeU (original w) (hOriginalMem w hw)
     rw [hOriginalShift w hw] at h
     simpa only [etaAt] using h
-  refine ⟨W, etaAt, hSepCard.1, ?_, hEta, hHeight, hLarge⟩
+  refine ⟨W, etaAt, hSepCard.1, ?_, hEta, hHeightLower, hHeight, hLarge⟩
   have hCard : W.card = U.card := hSepCard.2
   dsimp only [L] at hCountU
   simpa [W, hCard] using hCountU
