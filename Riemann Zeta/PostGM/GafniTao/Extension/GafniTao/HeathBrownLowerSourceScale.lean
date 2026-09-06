@@ -66,7 +66,7 @@ theorem eventually_heathBrown_lower_source_scale
     have hYFourPReal : (Y : Real) < 4 * (P : Real) := by exact_mod_cast hYFourP
     linarith
   have hPOne : 1 < P := by
-    have hPowOne : (1 : Real) < U ^ (delta2 / 4) :=
+    have hPowOne : (1 : Real) < U ^ (delta1 / 2) :=
       Real.one_lt_rpow (by linarith) (by positivity)
     exact_mod_cast hPowOne.trans_le hPLowerReal
   have hrLe : r <= 1 := by omega

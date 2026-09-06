@@ -21,8 +21,8 @@ noncomputable section
 open RiemannZeta.GuthMaynard
 
 noncomputable def heathBrownLowerSourceEffectiveSigma
-    (sigma u eta zetaLog zetaPower zetaDil delta2 : Real) : Real :=
-  sigma - 2 * eta - (u + zetaLog + zetaPower) / (delta2 / 4) - zetaDil
+    (sigma u eta zetaLog zetaPower zetaDil delta1 : Real) : Real :=
+  sigma - 2 * eta - (u + zetaLog + zetaPower) / (delta1 / 2) - zetaDil
 
 theorem eventually_lower_source_dyadic_physical_cell
     {sigma delta delta1 delta2 u eta epsilon zetaLog zetaPower zetaDil
@@ -42,7 +42,7 @@ theorem eventually_lower_source_dyadic_physical_cell
     (hC0 : 0 < C0) (hC2 : 0 < C2) (hC4 : 0 < C4)
     (hsigma0Lower : 1 / 2 <= sigma0)
     (hsigma0Eff : sigma0 <= heathBrownLowerSourceEffectiveSigma
-      sigma u eta zetaLog zetaPower zetaDil delta2)
+      sigma u eta zetaLog zetaPower zetaDil delta1)
     (hsigma0Upper : sigma0 <= 3 / 4) :
     ∀ᶠ U : Real in atTop,
       let Y := Nat.floor (U ^ delta1)
@@ -69,11 +69,11 @@ theorem eventually_lower_source_dyadic_physical_cell
     (D := Cp * ((Pcap + 1 : Nat) : Real) *
       (2 : Real) ^ (((Pcap + 1 : Nat) : Real) * eta)) hzetaPower
   let sigmaRaw := sigma - 2 * eta -
-    (u + zetaLog + zetaPower) / (delta2 / 4)
+    (u + zetaLog + zetaPower) / (delta1 / 2)
   have hRawUpper : sigmaRaw <= 1 := by
     dsimp only [sigmaRaw]
     have hLoss : 0 <= 2 * eta +
-        (u + zetaLog + zetaPower) / (delta2 / 4) := by positivity
+        (u + zetaLog + zetaPower) / (delta1 / 2) := by positivity
     linarith
   have hCommon := eventually_common_base_threshold
     (D := (2 : Real) ^ Pcap) (one_le_pow₀ (by norm_num)) hRawUpper hzetaDil
@@ -114,18 +114,18 @@ theorem eventually_lower_source_dyadic_physical_cell
     rw [hLEq]
     exact lower_source_dyadic_threshold hUPos hsigmaNonneg heta.le hAOne
       hPPos hPUpper (by simpa only [A] using hLogU)
-  have hLower : U ^ (delta2 / 4) <= (P : Real) := hScaleData.2.1
+  have hLower : U ^ (delta1 / 2) <= (P : Real) := hScaleData.2.1
   have hThresholdRaw : ((P ^ p : Nat) : Real) ^ sigmaRaw <=
       heathBrownPoweredThreshold P p L Cp eta := by
     simpa only [sigmaRaw, add_assoc] using
       heathBrownTypeIPoweredThreshold_lower_on_power_scale hUOne hPPos hpPos
-        heta (by positivity : 0 < delta2 / 4)
+        heta (by positivity : 0 < delta1 / 2)
         (add_nonneg hu hzetaLog.le) hzetaPower.le hCp hSource hDenMain hLower
   have hThresholdNextRaw : ((P ^ (p + 1) : Nat) : Real) ^ sigmaRaw <=
       heathBrownPoweredThreshold P (p + 1) L Cp eta := by
     simpa only [sigmaRaw, add_assoc] using
       heathBrownTypeIPoweredThreshold_lower_on_power_scale hUOne hPPos
-        (by omega : 0 < p + 1) heta (by positivity : 0 < delta2 / 4)
+        (by omega : 0 < p + 1) heta (by positivity : 0 < delta1 / 2)
         (add_nonneg hu hzetaLog.le) hzetaPower.le hCp hSource hDenNext hLower
   have hCubeMain : U ^ 2 <= ((P ^ p : Nat) : Real) ^ 3 := by
     simpa only [p, Nat.cast_pow] using hScaleData.2.2.2.2.2.1
@@ -141,7 +141,7 @@ theorem eventually_lower_source_dyadic_physical_cell
   have hLowerNext := rpow_two_thirds_le_of_sq_le_cube (zero_le_one.trans hUOne)
     (Nat.cast_nonneg (P ^ (p + 1))) hCubeNext
   let sigmaEff := heathBrownLowerSourceEffectiveSigma
-    sigma u eta zetaLog zetaPower zetaDil delta2
+    sigma u eta zetaLog zetaPower zetaDil delta1
   have hThreshold : ((2 ^ Pcap * P ^ p : Nat) : Real) ^ sigmaEff <=
       heathBrownPoweredThreshold P p L Cp eta := by
     have h := hCommonU ((P ^ p : Nat) : Real)

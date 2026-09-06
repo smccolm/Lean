@@ -71,7 +71,7 @@ theorem eventually_classified_source_family_physical_bound
     (hC0 : 0 < C0) (hC2 : 0 < C2) (hC4 : 0 < C4)
     (hsigma0Lower : 1 / 2 <= sigma0)
     (hsigma0Eff : sigma0 <= heathBrownLowerSourceEffectiveSigma
-      sigma u eta zetaLog zetaPower zetaDil delta2)
+      sigma u eta zetaLog zetaPower zetaDil delta1)
     (hsigma0Wide : sigma0 <= heathBrownWideSourceEffectiveSigma
       sigma u eta zetaLog zetaPower zetaScale zetaDil)
     (hsigma0Upper : sigma0 <= 3 / 4)
@@ -142,11 +142,11 @@ theorem eventually_classified_source_family_physical_bound
       hWideRelMargin hPcapOne hCp hCmv hC0 hC2 hC4
       hsigma0Lower hsigma0Wide hsigma0Upper
   have hSquareCell := eventually_square_source_dyadic_physical_cell
-    (delta := d) hdelta2 hsigmaNonneg hsigmaOne hu heta hzetaLog hzetaPower
-      hzetaDil hzetaRel hzetaCard hRelMargin hPcap hCp hCmv hC0 hC2 hC4
-      hsigma0Lower hsigma0Eff hsigma0Upper
+    (delta := d) hdelta1 hdelta2 hdeltaOrder hsigmaNonneg hsigmaOne hu heta
+      hzetaLog hzetaPower hzetaDil hzetaRel hzetaCard hRelMargin hPcap hCp
+      hCmv hC0 hC2 hC4 hsigma0Lower hsigma0Eff hsigma0Upper
   have hTransitionCell := eventually_transition_source_dyadic_physical_cell
-    (delta := d) hdelta2 hdelta2Upper hsigmaNonneg hsigmaOne hu heta
+    (delta := d) hdelta1 hdelta2 hdelta2Upper hsigmaNonneg hsigmaOne hu heta
       hzetaLog hzetaPower hzetaDil hzetaRel hzetaCard hRelMargin hPcap
       hCp hCmv hC0 hC2 hC4 hsigma0Lower hsigma0Eff hsigma0Upper
   have hReflected := eventually_interior_source_family_reflected_physical_bound
@@ -155,7 +155,7 @@ theorem eventually_classified_source_family_physical_bound
       hsigma0Lower hsigma0Upper hv hzetaExtract hBudget hEffective
   have hLowerScale := eventually_heathBrown_lower_source_scale hdelta1
     hdelta2 hdeltaOrder hCube
-  have hDyadicLower := eventually_source_dyadic_lower_scale hdelta2 hdeltaOrder
+  have hDyadicLower := eventually_source_dyadic_lower_scale hdelta1
   obtain ⟨Uterminal, hUterminal, hTerminal⟩ :=
     eventually_no_terminal_classified_source (d := d) hsigma huTerminal
   filter_upwards [hLowerCell, hWideCell, hSquareCell, hTransitionCell,
@@ -317,11 +317,14 @@ theorem eventually_classified_source_family_physical_bound
     let p := heathBrownSourcePower P U
     have hPLowerScale := hDyadicLowerU hPLower
     have hPOne : 1 < P := by
-      have hone : 1 < U ^ (delta2 / 4) := Real.one_lt_rpow hUOne (by positivity)
+      have hone : 1 < U ^ (delta1 / 2) := Real.one_lt_rpow hUOne (by positivity)
       exact_mod_cast hone.trans_le hPLowerScale
     have hPower := heathBrownSourcePower_spec_two hPOne hUPos hPsq
+    have hPLowerOld : U ^ (delta2 / 4) <= (P : Real) := by
+      exact (Real.rpow_le_rpow_of_exponent_le hUOne (by
+        nlinarith [hdeltaOrder] : delta2 / 4 <= delta1 / 2)).trans hPLowerScale
     have hpCap := heathBrownSourcePower_le_ceil_of_rpow_le hPOne hUOne
-      hdelta2 hPLowerScale
+      hdelta2 hPLowerOld
     have hL : 0 < L := by simpa only [L] using hThresholdPos r
     have hCoeff : ∀ n ∈ dyadicInterval P, ‖a n‖ <= 1 := by
       intro n _hn
