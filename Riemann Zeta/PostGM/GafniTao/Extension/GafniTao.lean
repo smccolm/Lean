@@ -217,6 +217,14 @@ import GafniTao.FordLemma33Finite
 import GafniTao.FordCountMonotone
 import GafniTao.FordLemma63MomentIntegral
 import GafniTao.ZeroEnergyLocal
+import GafniTao.FordAsymptoticZeroFree
+import GafniTao.PintzNearOneNative
+import GafniTao.NativeTheorems
+import GafniTao.Theorem11
+import GafniTao.PintzPublishedCutoffNative
+import GafniTao.WooleyNative
+import GafniTao.EnergyDetectorTranslation
+import GafniTao.EnergyDetectorPoweredTranslation
 
 /-!
 # Gafni--Tao exceptional intervals

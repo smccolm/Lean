@@ -162,6 +162,8 @@ theorem exists_norm_pintz2023Equation42_left_le
   have hd : 0 < d := by dsimp only [d]; linarith
   have hdUpper : d ≤ 1 / 12 := by dsimp only [d]; linarith
   have hsigmaLower : 11 / 12 ≤ 1 - d := by linarith
+  have hsigmaLowerGlobal : 3 / 4 ≤ 1 - d := by
+    linarith [hsigmaLower]
   have hsigmaUpper : 1 - d < 1 := by linarith
   have hp : 0 < p := by dsimp only [p]; positivity
   have hpUpper : p ≤ 2 := by
@@ -189,7 +191,7 @@ theorem exists_norm_pintz2023Equation42_left_le
     intro u
     have hmoll := norm_zetaMollifier_pintz2023_left_le
       (X := X) (eta := eta) (etaJ := etaJ) (gamma := gamma) (t := u) hd.le
-    have hzeta := hZeta (1 - d) (gamma + u) hsigmaLower hsigmaUpper
+    have hzeta := hZeta (1 - d) (gamma + u) hsigmaLowerGlobal hsigmaUpper
     have hkernel := norm_pintzGaussianKernel_vertical_le
       (lambda := lambda) (left := -eta) (u := u) (by linarith) (by linarith)
     have hheight := abs_add_three_le_product_left gamma u

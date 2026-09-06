@@ -156,15 +156,16 @@ theorem fordRealLogDerivative_le_zero
     fordRealLogDerivative sigma t ≤ fordRealLogDerivative sigma 0 := by
   rw [fordRealLogDerivative_eq_tsum hsigma,
     fordRealLogDerivative_eq_tsum hsigma]
-  apply tsum_le_tsum
-  · intro n
-    unfold fordRealLogDerivativeTerm
-    have hcoeff : 0 ≤ ArithmeticFunction.vonMangoldt n *
-        Real.exp (-sigma * Real.log n) := by positivity
-    have hcos : Real.cos (t * Real.log n) ≤ 1 := Real.cos_le_one _
-    simpa using mul_le_mul_of_nonneg_left hcos hcoeff
-  · exact summable_fordRealLogDerivativeTerm hsigma
-  · exact summable_fordRealLogDerivativeTerm hsigma
+  exact Summable.tsum_le_tsum
+    (fun n => by
+      unfold fordRealLogDerivativeTerm
+      have hcoeff : 0 ≤ ArithmeticFunction.vonMangoldt n *
+          Real.exp (-sigma * Real.log n) :=
+        mul_nonneg ArithmeticFunction.vonMangoldt_nonneg (Real.exp_pos _).le
+      have hcos : Real.cos (t * Real.log n) ≤ 1 := Real.cos_le_one _
+      simpa using mul_le_mul_of_nonneg_left hcos hcoeff)
+    (summable_fordRealLogDerivativeTerm hsigma)
+    (summable_fordRealLogDerivativeTerm hsigma)
 
 #print axioms ford_logDerivative_trigonometric_nonneg
 #print axioms fordRealLogDerivative_zero_lt_inv
