@@ -45,7 +45,7 @@ to the global high-zero selection, the conclusion records the lower physical
 height needed by Corollary 3. -/
 theorem eventually_exists_pintz2023_shell_detected_family
     {eta epsilon : ℝ} {k ell : ℕ}
-    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 32)
+    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 24)
     (hepsilon : 0 < epsilon) (hepsilonUpper : epsilon ≤ 1)
     (hkTwo : 2 ≤ k) (hell : 0 < ell)
     (hcutoffExponent : epsilon / (10 * (ell : ℝ)) ≤ 2 / (k : ℝ))
@@ -60,6 +60,9 @@ theorem eventually_exists_pintz2023_shell_detected_family
             (2 * (2 * Nat.ceil
               (7 * pintz2023SourceLambda T k) + 1)) * W.card ∧
         (∀ u ∈ W, etaAt u ∈ Set.Icc 0 eta) ∧
+        (∀ u ∈ W, ∃ rho ∈ pintz2023DyadicHeightShell eta T,
+          etaAt u = 1 - rho.re ∧
+            |rho.im - u| ≤ 2 * pintz2023SourceLambda T k) ∧
         (∀ u ∈ W, T / 4 < |u|) ∧
         (∀ u ∈ W,
           |u| ≤ T + 2 * pintz2023SourceLambda T k) ∧
@@ -119,7 +122,8 @@ theorem eventually_exists_pintz2023_shell_detected_family
       exact hdata.2.2.2.2
     exact hDetectorT (1 - rho.re) rho.im hetaRho hetaRhoUpper
       hgammaLow himUpper hzero
-  obtain ⟨W, etaAt, hSep, hCount, hEtaAt, hLower, hUpper, hLarge⟩ :=
+  obtain ⟨W, etaAt, hSep, hCount, hEtaAt, hProvenance,
+      hLower, hUpper, hLarge⟩ :=
     exists_pintz2023_source_order_variable_selection_subset
       S hS (by
         intro rho hrho
@@ -139,7 +143,8 @@ theorem eventually_exists_pintz2023_shell_detected_family
     have := hLower u hu
     linarith
   exact ⟨W, etaAt, hSep, by simpa only [S] using hCount,
-    hEtaAt, hPhysicalLower, hUpper, hLarge⟩
+    hEtaAt, by simpa only [S] using hProvenance,
+    hPhysicalLower, hUpper, hLarge⟩
 
 #print axioms pintz2023DyadicHeightShell_subset
 #print axioms eventually_eight_mul_log_le_identity

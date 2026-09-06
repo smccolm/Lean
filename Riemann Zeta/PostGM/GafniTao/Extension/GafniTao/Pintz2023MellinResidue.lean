@@ -49,7 +49,7 @@ theorem norm_pintz2023MellinPowerDiff_nearOne_le
 
 private theorem exists_norm_Gamma_nearOne_vertical_le :
     ∃ C : ℝ, 0 < C ∧ ∀ (d t : ℝ),
-      0 < d → d ≤ 1 / 12 → 1 ≤ |t| →
+      0 < d → d ≤ 1 / 4 → 1 ≤ |t| →
       ‖Complex.Gamma ((d : ℂ) - I * (t : ℂ))‖ ≤
         C * d⁻¹ * (|t| + 2) *
           Real.exp (-(Real.pi * |t|) / 2) := by
@@ -140,7 +140,7 @@ private theorem exists_norm_Gamma_nearOne_vertical_le :
 /-- Uniform bound for the literal pole residue in Pintz (3.4). -/
 theorem exists_norm_pintz2023Mellin_residue_nearOne_le :
     ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (sigma t : ℝ),
-      0 < N → 11 / 12 ≤ sigma → sigma < 1 → 1 ≤ |t| →
+      0 < N → 3 / 4 ≤ sigma → sigma < 1 → 1 ≤ |t| →
       ‖pintz2023MellinWeight N
           (1 - ((sigma : ℂ) + I * (t : ℂ)))‖ ≤
         C * (1 - sigma)⁻¹ * (N : ℝ) ^ (1 - sigma) *
@@ -151,7 +151,7 @@ theorem exists_norm_pintz2023Mellin_residue_nearOne_le :
   intro N sigma t hN hsigmaLower hsigmaUpper ht
   let d : ℝ := 1 - sigma
   have hd : 0 < d := by dsimp only [d]; linarith
-  have hdUpper : d ≤ 1 / 12 := by dsimp only [d]; linarith
+  have hdUpper : d ≤ 1 / 4 := by dsimp only [d]; linarith
   have hw : (1 : ℂ) - ((sigma : ℂ) + I * (t : ℂ)) =
       (d : ℂ) - I * (t : ℂ) := by
     apply Complex.ext <;> simp [d]
@@ -181,7 +181,7 @@ near-one strip.  The zeta contribution and moving-pole residue are separate. -/
 theorem exists_norm_pintz2023SmoothedZetaSum_nearOne_le
     {epsilon : ℝ} (hepsilon : 0 < epsilon) (hepsilonUpper : epsilon ≤ 1) :
     ∃ B R : ℝ, 0 < B ∧ 0 < R ∧ ∀ (N : ℕ) (sigma t : ℝ),
-      0 < N → 11 / 12 ≤ sigma → sigma < 1 → 1 ≤ |t| →
+      0 < N → 3 / 4 ≤ sigma → sigma < 1 → 1 ≤ |t| →
       ‖pintz2023SmoothedZetaSum N ((sigma : ℂ) + I * (t : ℂ))‖ ≤
         B * (1 - sigma)⁻¹ *
             (|t| + 3) ^ ((1 / 2 : ℝ) *

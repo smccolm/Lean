@@ -38,7 +38,7 @@ bounded heights with the distance from the pole displayed explicitly. -/
 theorem exists_norm_riemannZeta_le_pintz_nearOne_global
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ),
-      11 / 12 ≤ sigma → sigma < 1 →
+      3 / 4 ≤ sigma → sigma < 1 →
       ‖riemannZeta ((sigma : ℂ) + I * (t : ℂ))‖ ≤
         C * (1 - sigma)⁻¹ *
           (|t| + 3) ^ ((1 / 2 : ℝ) *

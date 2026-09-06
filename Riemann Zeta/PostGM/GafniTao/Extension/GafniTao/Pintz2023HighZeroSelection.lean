@@ -33,7 +33,7 @@ theorem pintz2023HighZeroSet_subset
 the exact source-order multiplicity loss. -/
 theorem eventually_exists_pintz2023_highZero_detected_family
     {eta epsilon : ℝ} {k ell : ℕ}
-    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 32)
+    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 24)
     (hepsilon : 0 < epsilon) (hepsilonUpper : epsilon ≤ 1)
     (hkTwo : 2 ≤ k) (hell : 0 < ell)
     (hcutoffExponent : epsilon / (10 * (ell : ℝ)) ≤ 2 / (k : ℝ))
@@ -104,7 +104,8 @@ theorem eventually_exists_pintz2023_highZero_detected_family
       exact hdata.2.2.2.2
     exact hDetectorT (1 - rho.re) rho.im hetaRho hetaRhoUpper
       hrhoHigh.2 himUpper hzero
-  obtain ⟨W, etaAt, hSep, hCount, hEtaAt, _hLower, hUpper, hLarge⟩ :=
+  obtain ⟨W, etaAt, hSep, hCount, hEtaAt, _hProvenance,
+      _hLower, hUpper, hLarge⟩ :=
     exists_pintz2023_source_order_variable_selection_subset
       S hS (by
         intro rho hrho

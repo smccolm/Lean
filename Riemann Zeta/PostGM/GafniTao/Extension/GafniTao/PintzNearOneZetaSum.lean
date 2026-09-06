@@ -23,7 +23,7 @@ open RiemannZeta.GuthMaynard
 theorem norm_fordDyadicWeightedShellSum_zero_le_pintz_nearOne
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (M : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma → 1 ≤ t →
+      sigma ≤ 1 → 3 / 4 ≤ sigma → 1 ≤ t →
       1 ≤ M → M ≤ fordFiniteEndpoint t + 1 →
       ‖fordDyadicWeightedShellSum sigma (Nat.clog 2 M) M 0 t‖ ≤
         (Nat.clog 2 M : ℝ) *
@@ -72,7 +72,7 @@ theorem norm_fordDyadicWeightedShellSum_zero_le_pintz_nearOne
 theorem norm_fordHurwitzFiniteApproximation_one_le_pintz_nearOne
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma → 3 ≤ t →
+      sigma ≤ 1 → 3 / 4 ≤ sigma → 3 ≤ t →
       ‖fordHurwitzFiniteApproximation sigma 1 t‖ ≤
         1 + (Nat.clog 2 (fordFiniteEndpoint t + 1) : ℝ) *
           (C * t ^ ((1 / 2 : ℝ) *
@@ -105,7 +105,7 @@ strict `23/24` zero-density cutoff. -/
 theorem norm_riemannZeta_le_pintz_nearOne
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma → 3 ≤ t →
+      sigma ≤ 1 → 3 / 4 ≤ sigma → 3 ≤ t →
       ‖riemannZeta (fordComplexHeight sigma t)‖ ≤
         C * t ^ ((1 / 2 : ℝ) *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := by

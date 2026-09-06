@@ -33,8 +33,8 @@ noncomputable def pintz2023NearOneOffDiagonalMajorant
     (C : ℝ) (N : ℕ) (xi eta epsilon T G : ℝ) : ℝ :=
   C * (4 * eta)⁻¹ *
     ((2 * T + 3) ^ pintz2023NearOneGramExponent xi eta epsilon +
-      (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-        (2 * T + 2) * Real.exp (-(Real.pi * G) / 2))
+      3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+        Real.exp (-G))
 
 private theorem abs_sub_le_two_mul_of_abs_le
     {x y T : ℝ} (hx : |x| ≤ T) (hy : |y| ≤ T) :
@@ -44,12 +44,39 @@ private theorem abs_sub_le_two_mul_of_abs_le
     _ ≤ T + T := add_le_add hy hx
     _ = 2 * T := by ring
 
+private theorem add_two_mul_exp_neg_pi_half_le
+    {x : ℝ} (hx : 0 ≤ x) :
+    (x + 2) * Real.exp (-(Real.pi * x) / 2) ≤
+      3 * Real.exp (-x) := by
+  have hpi : (3 : ℝ) < Real.pi := Real.pi_gt_three
+  have hexponent : -(Real.pi * x) / 2 ≤ -(3 * x) / 2 := by
+    nlinarith
+  have hexpPi : Real.exp (-(Real.pi * x) / 2) ≤
+      Real.exp (-(3 * x) / 2) := Real.exp_le_exp.mpr hexponent
+  have hlinear : 1 + x / 2 ≤ Real.exp (x / 2) :=
+    by simpa [add_comm] using Real.add_one_le_exp (x / 2)
+  have hpoly : x + 2 ≤ 3 * Real.exp (x / 2) := by
+    nlinarith [Real.exp_pos (x / 2)]
+  calc
+    (x + 2) * Real.exp (-(Real.pi * x) / 2) ≤
+        (x + 2) * Real.exp (-(3 * x) / 2) := by
+      gcongr
+    _ ≤ (3 * Real.exp (x / 2)) * Real.exp (-(3 * x) / 2) := by
+      gcongr
+    _ = 3 * Real.exp (-x) := by
+      calc
+        (3 * Real.exp (x / 2)) * Real.exp (-(3 * x) / 2) =
+            3 * (Real.exp (x / 2) * Real.exp (-(3 * x) / 2)) := by ring
+        _ = 3 * Real.exp (x / 2 + (-(3 * x) / 2)) := by
+          rw [Real.exp_add]
+        _ = 3 * Real.exp (-x) := by ring_nf
+
 /-- Uniform diagonal bound for all zero distances in `[0,xi]`. -/
 theorem exists_pintz2023NearOneDiagonalMajorant :
     ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (xi eta etaJ gamma : ℝ),
       0 < N → 0 < eta →
       etaJ ∈ Set.Icc 0 xi →
-      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 12 →
+      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 4 →
       ‖pintz2023SmoothedZetaSum N
           (((1 - etaJ - etaJ - 4 * eta : ℝ) : ℂ) +
             I * (((gamma - gamma : ℝ) : ℂ)))‖ ≤
@@ -91,7 +118,7 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
       ∀ (N : ℕ) (xi eta etaJ etaK gamma delta T G : ℝ),
       0 < N → 0 < eta →
       etaJ ∈ Set.Icc 0 xi → etaK ∈ Set.Icc 0 xi →
-      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 12 →
+      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 4 →
       1 ≤ T → 1 ≤ G → |gamma| ≤ T → |delta| ≤ T →
       G ≤ |delta - gamma| →
       ‖pintz2023SmoothedZetaSum N
@@ -118,7 +145,7 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
     dsimp only [d]
     unfold pintz2023NearOneGramMaxDistance
     nlinarith [hetaJ.2, hetaK.2]
-  have hsigmaLower : 11 / 12 ≤ 1 - d := by linarith
+  have hsigmaLower : 3 / 4 ≤ 1 - d := by linarith
   have hsigmaUpper : 1 - d < 1 := by linarith
   have htAbs : |delta - gamma| ≤ 2 * T :=
     abs_sub_le_two_mul_of_abs_le hgamma hdelta
@@ -158,13 +185,18 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
       (N : ℝ) ^ d ≤
         (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta :=
     Real.rpow_le_rpow_of_exponent_le hNOne hdUpper
-  have hHeightTwo : |delta - gamma| + 2 ≤ 2 * T + 2 := by linarith
-  have hExp :
-      Real.exp (-(Real.pi * |delta - gamma|) / 2) ≤
-        Real.exp (-(Real.pi * G) / 2) := by
-    apply Real.exp_le_exp.mpr
-    have hpi : 0 < Real.pi := Real.pi_pos
-    nlinarith
+  have hTail :
+      (|delta - gamma| + 2) *
+          Real.exp (-(Real.pi * |delta - gamma|) / 2) ≤
+        3 * Real.exp (-G) := by
+    calc
+      (|delta - gamma| + 2) *
+          Real.exp (-(Real.pi * |delta - gamma|) / 2) ≤
+        3 * Real.exp (-|delta - gamma|) :=
+          add_two_mul_exp_neg_pi_half_le (abs_nonneg _)
+      _ ≤ 3 * Real.exp (-G) := by
+        exact mul_le_mul_of_nonneg_left
+          (Real.exp_le_exp.mpr (by linarith)) (by norm_num)
   have hBC : B ≤ C := le_max_left _ _
   have hRC : R ≤ C := le_max_right _ _
   have hMain :
@@ -175,8 +207,8 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
       R * d⁻¹ * (N : ℝ) ^ d * (|delta - gamma| + 2) *
           Real.exp (-(Real.pi * |delta - gamma|) / 2) ≤
         C * (4 * eta)⁻¹ *
-          ((N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-            (2 * T + 2) * Real.exp (-(Real.pi * G) / 2)) := by
+          (3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+            Real.exp (-G)) := by
     have hCoeff : R * d⁻¹ ≤ C * (4 * eta)⁻¹ := by
       exact mul_le_mul hRC hInv (by positivity) hC.le
     calc
@@ -188,11 +220,26 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
         gcongr
       _ ≤ (C * (4 * eta)⁻¹) *
           (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-            (2 * T + 2) * Real.exp (-(Real.pi * G) / 2) := by
-        gcongr
+            (3 * Real.exp (-G)) := by
+        have hCoeffNonneg : 0 ≤ C * (4 * eta)⁻¹ := by positivity
+        have hPowNonneg : 0 ≤
+            (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta :=
+          Real.rpow_nonneg (by positivity) _
+        calc
+          (C * (4 * eta)⁻¹) * (N : ℝ) ^ d *
+                (|delta - gamma| + 2) *
+              Real.exp (-(Real.pi * |delta - gamma|) / 2) =
+            ((C * (4 * eta)⁻¹) * (N : ℝ) ^ d) *
+              ((|delta - gamma| + 2) *
+                Real.exp (-(Real.pi * |delta - gamma|) / 2)) := by ring
+          _ ≤ ((C * (4 * eta)⁻¹) *
+                (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta) *
+              (3 * Real.exp (-G)) := by
+            gcongr
+          _ = _ := by ring
       _ = C * (4 * eta)⁻¹ *
-          ((N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-            (2 * T + 2) * Real.exp (-(Real.pi * G) / 2)) := by ring
+          (3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+            Real.exp (-G)) := by ring
   unfold pintz2023NearOneOffDiagonalMajorant
   have hRaw' :
       ‖pintz2023SmoothedZetaSum N
@@ -207,13 +254,13 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
             Real.exp (-(Real.pi * |delta - gamma|) / 2) := hRaw'
     _ ≤ C * (4 * eta)⁻¹ * (2 * T + 3) ^ pMax +
           C * (4 * eta)⁻¹ *
-            ((N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-              (2 * T + 2) * Real.exp (-(Real.pi * G) / 2)) :=
+            (3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+              Real.exp (-G)) :=
       add_le_add hMain hResidue
     _ = C * (4 * eta)⁻¹ *
         ((2 * T + 3) ^ pintz2023NearOneGramExponent xi eta epsilon +
-          (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-            (2 * T + 2) * Real.exp (-(Real.pi * G) / 2)) := by
+          3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+            Real.exp (-G)) := by
       dsimp only [pMax]
       ring
 

@@ -1,4 +1,5 @@
-import GafniTao.PintzNearOneZetaMiddle
+import GafniTao.Pintz2023ThreeQuarterMiddle
+import GafniTao.PintzNearOneZetaBlock
 import GafniTao.FordQualitativeFiniteZeta
 
 /-!
@@ -21,15 +22,17 @@ satisfies the coefficient-one-half Pintz estimate. -/
 theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_hybrid
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (N R : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma →
+      sigma ≤ 1 → 3 / 4 ≤ sigma →
       1024 ≤ N → N < R → R ≤ 2 * N → (N : ℝ) ≤ t →
       ‖fordShiftedWeightedBlock sigma N R 0 t‖ ≤
         C * t ^ ((1 / 2 : ℝ) *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := by
   obtain ⟨Cshort, hCshort, hshort⟩ :=
     norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne hepsilon
-  let C : ℝ := Cshort + 130
-  have hC : 0 < C := by dsimp only [C]; linarith
+  obtain ⟨Cmiddle, hCmiddle, hmiddle⟩ :=
+    norm_fordShiftedWeightedBlock_zero_le_threeQuarter_middle hepsilon
+  let C : ℝ := Cshort + Cmiddle
+  have hC : 0 < C := by dsimp only [C]; positivity
   refine ⟨C, hC, ?_⟩
   intro sigma t N R hsigmaUpper hsigmaLower hN hNR hR hNt
   have htNonneg : 0 ≤ t := by
@@ -44,11 +47,9 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_hybrid
     exact hraw.trans (mul_le_mul_of_nonneg_right (by
       dsimp only [C]
       linarith) hpow)
-  · have hmiddle :=
-      norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle
-        hepsilon hsigmaUpper hsigmaLower hN hNt
-          (le_of_not_ge hshortRange) hNR hR
-    exact hmiddle.trans (mul_le_mul_of_nonneg_right (by
+  · have hraw := hmiddle sigma t N R hsigmaUpper hsigmaLower
+      hN hNR hR hNt (le_of_not_ge hshortRange)
+    exact hraw.trans (mul_le_mul_of_nonneg_right (by
       dsimp only [C]
       linarith) hpow)
 
@@ -56,7 +57,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_hybrid
 theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_all
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (N R : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma →
+      sigma ≤ 1 → 3 / 4 ≤ sigma →
       0 < N → N < R → R ≤ 2 * N → (N : ℝ) ≤ t →
       ‖fordShiftedWeightedBlock sigma N R 0 t‖ ≤
         C * t ^ ((1 / 2 : ℝ) *

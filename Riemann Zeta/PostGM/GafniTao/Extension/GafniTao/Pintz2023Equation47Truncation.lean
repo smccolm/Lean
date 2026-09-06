@@ -47,7 +47,7 @@ noncomputable def pintz2023Equation47TruncatedRemainder
 theorem pintz2023_equation_4_7_exact
     {X : ℕ} {rho : ℂ} {lambda eta : ℝ}
     (hrho : 1 - eta ≤ rho.re) (hlambda : 8 ≤ lambda)
-    (heta : eta ≤ 1 / 32) (hX : 1 ≤ X)
+    (heta : eta ≤ 1 / 24) (hX : 1 ≤ X)
     (hXC : X ≤ pintz2023Cutoff lambda) :
     pintz2023Equation42Integral X rho lambda =
       1 +

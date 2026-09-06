@@ -246,11 +246,11 @@ required in Pintz (4.7). -/
 theorem pintz2023SmallLineTailMass_le_exp :
     ∃ C : ℝ, 0 < C ∧
       ∀ {X : ℕ} {rho : ℂ} {eta lambda : ℝ},
-        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 32 →
+        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 24 →
         pintz2023SmallLineTailMass X rho lambda ≤
           C * lambda * Real.exp (lambda + 5) := by
   obtain ⟨C₀, hC₀, hdiv⟩ :=
-    divisorCountBound_native (1 / 32 : ℝ) (by norm_num)
+    divisorCountBound_native (1 / 48 : ℝ) (by norm_num)
   refine ⟨2 * C₀, mul_pos (by norm_num) hC₀, ?_⟩
   intro X rho eta lambda hrho hlambda heta
   have hlambdaPos : 0 < lambda := by linarith
@@ -268,8 +268,8 @@ theorem pintz2023SmallLineTailMass_le_exp :
     have hcoeff := norm_pintz2023_LSeries_term_le
       (X := X) (n := n) hrho hn
     have hdivn := hdiv n hn
-    have hexponents : (1 / 32 : ℝ) ≤ 1 - eta := by linarith
-    have hpowers : (n : ℝ) ^ (1 / 32 : ℝ) ≤
+    have hexponents : (1 / 48 : ℝ) ≤ 1 - eta := by linarith
+    have hpowers : (n : ℝ) ^ (1 / 48 : ℝ) ≤
         (n : ℝ) ^ (1 - eta) :=
       Real.rpow_le_rpow_of_exponent_le hnOne hexponents
     have hdenPos : 0 < (n : ℝ) ^ (1 - eta) := by positivity
@@ -277,7 +277,7 @@ theorem pintz2023SmallLineTailMass_le_exp :
       calc
         ‖LSeries.term (pintz2023Coeff X) rho n‖ ≤
             (n.divisors.card : ℝ) / (n : ℝ) ^ (1 - eta) := hcoeff
-        _ ≤ (C₀ * (n : ℝ) ^ (1 / 32 : ℝ)) /
+        _ ≤ (C₀ * (n : ℝ) ^ (1 / 48 : ℝ)) /
             (n : ℝ) ^ (1 - eta) :=
           div_le_div_of_nonneg_right hdivn hdenPos.le
         _ ≤ (C₀ * (n : ℝ) ^ (1 - eta)) /
@@ -346,7 +346,7 @@ parameter. -/
 theorem norm_sum_pintz2023SmallLineTailTerm_le_exp_neg_two :
     ∃ K : ℝ, 0 < K ∧
       ∀ {X : ℕ} {rho : ℂ} {eta lambda : ℝ},
-        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 32 →
+        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 24 →
         ‖∑ n ∈ Finset.Ioc X (pintz2023Cutoff lambda),
             pintz2023SmallLineTailTerm X rho lambda n‖ ≤
           K * Real.exp (-2 * lambda) := by
@@ -412,7 +412,7 @@ right-line tail and both small-line ordinate tails, has the source's uniform
 theorem norm_pintz2023Equation47TruncatedRemainder_le_exp_neg_two :
     ∃ K : ℝ, 0 < K ∧
       ∀ {X : ℕ} {rho : ℂ} {eta lambda : ℝ},
-        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 32 →
+        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 24 →
         ‖pintz2023Equation47TruncatedRemainder X rho lambda‖ ≤
           K * Real.exp (-2 * lambda) := by
   obtain ⟨K₁, hK₁, hcomplete⟩ :=

@@ -138,7 +138,7 @@ theorem exists_norm_pintz2023Equation42_left_le
     ∃ C : ℝ, 0 < C ∧
       ∀ (X : ℕ) (eta etaJ gamma lambda : ℝ),
         0 < X → 0 < eta → 0 < etaJ → etaJ ≤ eta →
-        eta ≤ 1 / 32 → 1 ≤ lambda →
+        eta ≤ 1 / 24 → 1 ≤ lambda →
         ‖VerticalIntegral'
             (pintz2023Equation42Integrand X
               (pintz2023Rho etaJ gamma) lambda) (-eta)‖ ≤
@@ -160,7 +160,7 @@ theorem exists_norm_pintz2023Equation42_left_le
   let q : ℝ → ℝ := fun u =>
     (|u| + 1) ^ (2 : ℕ) * Real.exp (-(1 / lambda) * u ^ 2)
   have hd : 0 < d := by dsimp only [d]; linarith
-  have hdUpper : d ≤ 1 / 16 := by dsimp only [d]; linarith
+  have hdUpper : d ≤ 1 / 12 := by dsimp only [d]; linarith
   have hsigmaLower : 11 / 12 ≤ 1 - d := by linarith
   have hsigmaUpper : 1 - d < 1 := by linarith
   have hp : 0 < p := by dsimp only [p]; positivity

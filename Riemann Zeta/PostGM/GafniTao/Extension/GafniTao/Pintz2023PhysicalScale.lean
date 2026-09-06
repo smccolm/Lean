@@ -17,7 +17,7 @@ namespace GafniTao
 noncomputable section
 
 noncomputable def pintz2023CorThreePhysicalConstant : ℝ :=
-  4 * (Real.exp 3 + 2)
+  8 * (Real.exp 3 + 2)
 
 theorem pintz2023CriticalScaleExponent_lt_two_div
     {k : ℕ} {eta xi epsilon : ℝ}
@@ -115,29 +115,47 @@ theorem pintz2023_source_power_le_four_mul_displaced_power
   exact hpow.trans
     (mul_le_mul_of_nonneg_right hfour (Real.rpow_nonneg (abs_nonneg t) _))
 
+theorem pintz2023_source_power_le_eight_mul_displaced_power
+    {k : ℕ} {T t : ℝ} (hk : 2 ≤ k) (hT : 0 ≤ T)
+    (hPhysical : T / 8 ≤ |t|) :
+    T ^ (2 / (k : ℝ)) ≤ 8 * |t| ^ (2 / (k : ℝ)) := by
+  have hkReal : (2 : ℝ) ≤ k := by exact_mod_cast hk
+  have hkPos : (0 : ℝ) < k := by linarith
+  have hexpNonneg : 0 ≤ 2 / (k : ℝ) := by positivity
+  have hexpOne : 2 / (k : ℝ) ≤ 1 :=
+    (div_le_one hkPos).2 hkReal
+  have hbase : T ≤ 8 * |t| := by linarith
+  have hpow := Real.rpow_le_rpow hT hbase hexpNonneg
+  rw [Real.mul_rpow (by norm_num : (0 : ℝ) ≤ 8) (abs_nonneg t)] at hpow
+  have height : (8 : ℝ) ^ (2 / (k : ℝ)) ≤ 8 := by
+    simpa only [Real.rpow_one] using
+      Real.rpow_le_rpow_of_exponent_le (by norm_num : (1 : ℝ) ≤ 8) hexpOne
+  exact hpow.trans
+    (mul_le_mul_of_nonneg_right height (Real.rpow_nonneg (abs_nonneg t) _))
+
 theorem pintz2023_localized_physical_scale
-    {k q X d : ℕ} {T eta epsilon t : ℝ}
-    (hk : 4 ≤ k) (hT : 4 ≤ T) (heta : 0 ≤ eta)
+    {k q X d : ℕ} {T U eta epsilon t : ℝ}
+    (hk : 4 ≤ k) (hT : 1 ≤ T) (hU : 4 ≤ U) (hTU : T ≤ U)
+    (heta : 0 ≤ eta)
     (hAlpha : eta + 6 * epsilon < pintz2023HBAlpha k)
-    (hNonempty : 2 ^ q * X ≤
-      min (2 * (2 ^ q * X))
-        (pintz2023Cutoff (pintz2023SourceLambda T k)) + 1)
-    (hd : 0 < d) (hdX : d ≤ X) (hPhysical : T / 4 ≤ |t|) :
+    (hA : 2 ^ q * X ≤
+      pintz2023Cutoff (pintz2023SourceLambda T k) + 1)
+    (hPhysical : U / 8 ≤ |t|) :
     ((max ((2 ^ q * X) / d)
-        (Nat.ceil (pintz2023CriticalScale k eta epsilon T)) : ℕ) : ℝ) ≤
+        (Nat.ceil (pintz2023CriticalScale k eta epsilon U)) : ℕ) : ℝ) ≤
       pintz2023CorThreePhysicalConstant * |t| ^ (2 / (k : ℝ)) := by
-  have hTPos : 0 < T := by linarith
-  have hTOne : 1 < T := by linarith
-  have hpowOne : 1 ≤ T ^ (2 / (k : ℝ)) := by
+  have hTPos : 0 < T := zero_lt_one.trans_le hT
+  have hUPos : 0 < U := by linarith
+  have hUOne : 1 < U := by linarith
+  have hpowOne : 1 ≤ U ^ (2 / (k : ℝ)) := by
     have hkPos : (0 : ℝ) < k := by exact_mod_cast (lt_of_lt_of_le (by omega) hk)
-    exact Real.one_le_rpow hTOne.le (by positivity)
+    exact Real.one_le_rpow hUOne.le (by positivity)
   have hcutoff := pintz2023Cutoff_cast_lt_source_power
-    (k := k) hTOne.le hTPos
-  have hA : 2 ^ q * X ≤
-      pintz2023Cutoff (pintz2023SourceLambda T k) + 1 := by
-    omega
+    (k := k) hT hTPos
+  have hSourcePower : T ^ (2 / (k : ℝ)) ≤ U ^ (2 / (k : ℝ)) := by
+    exact Real.rpow_le_rpow hTPos.le hTU (by positivity)
   have hACast : ((2 ^ q * X : ℕ) : ℝ) <
-      (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
+      (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
     have hACastLe : ((2 ^ q * X : ℕ) : ℝ) ≤
         (pintz2023Cutoff (pintz2023SourceLambda T k) : ℝ) + 1 := by
       exact_mod_cast hA
@@ -145,56 +163,61 @@ theorem pintz2023_localized_physical_scale
       ((2 ^ q * X : ℕ) : ℝ) ≤
           (pintz2023Cutoff (pintz2023SourceLambda T k) : ℝ) + 1 := hACastLe
       _ < (Real.exp 3 + 1) * T ^ (2 / (k : ℝ)) + 1 := by linarith
-      _ ≤ (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
+      _ ≤ (Real.exp 3 + 1) * U ^ (2 / (k : ℝ)) + 1 := by
+        gcongr
+      _ ≤ (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
         nlinarith [hpowOne]
   have hDiv : (((2 ^ q * X) / d : ℕ) : ℝ) ≤
-      (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
+      (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
     have : (2 ^ q * X) / d ≤ 2 ^ q * X := Nat.div_le_self _ _
     have hcast : (((2 ^ q * X) / d : ℕ) : ℝ) ≤
         ((2 ^ q * X : ℕ) : ℝ) := by exact_mod_cast this
     exact hcast.trans hACast.le
   have hcritical := pintz2023CriticalScale_lt_source_power
-    hk hTOne heta le_rfl hAlpha
+    hk hUOne heta le_rfl hAlpha
   have hceil :
-      (Nat.ceil (pintz2023CriticalScale k eta epsilon T) : ℝ) <
-        pintz2023CriticalScale k eta epsilon T + 1 := by
+      (Nat.ceil (pintz2023CriticalScale k eta epsilon U) : ℝ) <
+        pintz2023CriticalScale k eta epsilon U + 1 := by
     exact Nat.ceil_lt_add_one
-      (Real.rpow_nonneg hTPos.le _)
+      (Real.rpow_nonneg hUPos.le _)
   have hceilBound :
-      (Nat.ceil (pintz2023CriticalScale k eta epsilon T) : ℝ) ≤
-        (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
+      (Nat.ceil (pintz2023CriticalScale k eta epsilon U) : ℝ) ≤
+        (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
     have hExpThree : 1 ≤ Real.exp 3 := by
       rw [← Real.exp_zero]
       exact (Real.exp_lt_exp.mpr (by norm_num)).le
-    calc
-      (Nat.ceil (pintz2023CriticalScale k eta epsilon T) : ℝ) <
-          pintz2023CriticalScale k eta epsilon T + 1 := hceil
-      _ < T ^ (2 / (k : ℝ)) + 1 := by linarith
-      _ ≤ (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
-        nlinarith [hpowOne]
-    exact this.le
+    have hlt :
+        (Nat.ceil (pintz2023CriticalScale k eta epsilon U) : ℝ) <
+          (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
+      calc
+        (Nat.ceil (pintz2023CriticalScale k eta epsilon U) : ℝ) <
+            pintz2023CriticalScale k eta epsilon U + 1 := hceil
+        _ < U ^ (2 / (k : ℝ)) + 1 := by linarith
+        _ ≤ (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
+          nlinarith [hpowOne]
+    exact hlt.le
   have hMax :
       ((max ((2 ^ q * X) / d)
-          (Nat.ceil (pintz2023CriticalScale k eta epsilon T)) : ℕ) : ℝ) ≤
-        (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := by
+          (Nat.ceil (pintz2023CriticalScale k eta epsilon U)) : ℕ) : ℝ) ≤
+        (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := by
     rw [Nat.cast_max]
     exact max_le hDiv hceilBound
-  have hHeight := pintz2023_source_power_le_four_mul_displaced_power
-    (show 2 ≤ k by omega) hTPos.le hPhysical
+  have hHeight := pintz2023_source_power_le_eight_mul_displaced_power
+    (show 2 ≤ k by omega) hUPos.le hPhysical
   unfold pintz2023CorThreePhysicalConstant
   calc
     ((max ((2 ^ q * X) / d)
-        (Nat.ceil (pintz2023CriticalScale k eta epsilon T)) : ℕ) : ℝ) ≤
-        (Real.exp 3 + 2) * T ^ (2 / (k : ℝ)) := hMax
-    _ ≤ (Real.exp 3 + 2) * (4 * |t| ^ (2 / (k : ℝ))) := by
+        (Nat.ceil (pintz2023CriticalScale k eta epsilon U)) : ℕ) : ℝ) ≤
+        (Real.exp 3 + 2) * U ^ (2 / (k : ℝ)) := hMax
+    _ ≤ (Real.exp 3 + 2) * (8 * |t| ^ (2 / (k : ℝ))) := by
       gcongr
-      positivity
-    _ = 4 * (Real.exp 3 + 2) * |t| ^ (2 / (k : ℝ)) := by ring
+    _ = 8 * (Real.exp 3 + 2) * |t| ^ (2 / (k : ℝ)) := by ring
 
 #print axioms pintz2023CriticalScaleExponent_lt_two_div
 #print axioms pintz2023CriticalScale_lt_source_power
 #print axioms pintz2023Cutoff_cast_lt_source_power
 #print axioms pintz2023_source_power_le_four_mul_displaced_power
+#print axioms pintz2023_source_power_le_eight_mul_displaced_power
 #print axioms pintz2023_localized_physical_scale
 
 end

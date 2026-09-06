@@ -1,0 +1,5 @@
+﻿import GafniTao.Pintz2023Equation419Absorption
+#check div_le_div_iff₀
+#check div_le_div_of_nonneg_left
+#check one_div_le_one_div_of_le
+#check inv_le_inv₀

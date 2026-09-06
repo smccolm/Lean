@@ -15,7 +15,7 @@ noncomputable section
 
 theorem eventually_exists_pintz2023Equation412_source_detector
     {eta epsilonX epsilonZeta : ℝ} {k ell : ℕ}
-    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 32)
+    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 24)
     (hepsilonX : 0 < epsilonX)
     (hepsilonZeta : 0 < epsilonZeta) (hepsilonZetaUpper : epsilonZeta ≤ 1)
     (hkTwo : 2 ≤ k) (hell : 0 < ell)

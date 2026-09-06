@@ -22,7 +22,7 @@ private theorem abs_add_three_le_product
 
 private theorem pintz_nearOne_mellin_exponent_le_two
     {sigma epsilon : ℝ}
-    (hsigmaLower : 11 / 12 ≤ sigma) (hsigmaUpper : sigma < 1)
+    (hsigmaLower : 3 / 4 ≤ sigma) (hsigmaUpper : sigma < 1)
     (hepsilonUpper : epsilon ≤ 1) :
     (1 / 2 : ℝ) * (1 - sigma) ^ (3 / 2 : ℝ) + epsilon ≤ 2 := by
   have hdNonneg : 0 ≤ 1 - sigma := by linarith
@@ -36,7 +36,7 @@ analytic estimate which turns the exact contour shift into Pintz (3.5). -/
 theorem exists_norm_pintz2023MellinContourIntegral_nearOne_le
     {epsilon : ℝ} (hepsilon : 0 < epsilon) (hepsilonUpper : epsilon ≤ 1) :
     ∃ B : ℝ, 0 < B ∧ ∀ (N : ℕ) (sigma t : ℝ),
-      0 < N → 11 / 12 ≤ sigma → sigma < 1 →
+      0 < N → 3 / 4 ≤ sigma → sigma < 1 →
       ‖∫ u : ℝ, pintz2023MellinContourIntegrand N
           ((sigma : ℂ) + I * (t : ℂ)) ((u : ℂ) * I)‖ ≤
         B * (1 - sigma)⁻¹ *
@@ -128,7 +128,7 @@ theorem exists_norm_pintz2023MellinContourIntegral_nearOne_le
 theorem exists_norm_pintz2023SmoothedZetaSum_sub_residue_nearOne_le
     {epsilon : ℝ} (hepsilon : 0 < epsilon) (hepsilonUpper : epsilon ≤ 1) :
     ∃ B : ℝ, 0 < B ∧ ∀ (N : ℕ) (sigma t : ℝ),
-      0 < N → 11 / 12 ≤ sigma → sigma < 1 →
+      0 < N → 3 / 4 ≤ sigma → sigma < 1 →
       ‖pintz2023SmoothedZetaSum N ((sigma : ℂ) + I * (t : ℂ)) -
           pintz2023MellinWeight N
             (1 - ((sigma : ℂ) + I * (t : ℂ)))‖ ≤

@@ -23,7 +23,7 @@ theorem exists_pintz2023Equation412_detector_constants
       0 < Cleft ∧ 0 < Kremainder ∧
       ∀ (X : ℕ) (eta etaJ gamma lambda : ℝ),
         0 < X → 0 < eta → 0 < etaJ → etaJ ≤ eta →
-        eta ≤ 1 / 32 → 8 ≤ lambda →
+        eta ≤ 1 / 24 → 8 ≤ lambda →
         X ≤ pintz2023Cutoff lambda →
         riemannZeta (pintz2023Rho etaJ gamma) = 0 →
         gamma ≠ 0 →

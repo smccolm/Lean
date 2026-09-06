@@ -1,4 +1,4 @@
-import GafniTao.PintzNearOneExponentialSum
+import GafniTao.Pintz2023ThreeQuarterExponentialSum
 
 /-!
 # Exact Abel transfer to Pintz's near-one zeta block
@@ -19,13 +19,13 @@ noncomputable section
 theorem norm_pintz2023ExponentialBlock_le_nearOne_physical
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (N R : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma →
+      sigma ≤ 1 → 3 / 4 ≤ sigma →
       1024 ≤ N → N < R → R ≤ 2 * N → (N : ℝ) ^ 2 ≤ t →
       ‖pintz2023ExponentialBlock N R t‖ ≤
         C * (N : ℝ) ^
           pintzNearOneUnweightedTarget sigma epsilon (fordLambda N t) := by
   obtain ⟨C, hC, hbound⟩ :=
-    norm_pintz2023ExponentialBlock_le_nearOne_target hepsilon
+    norm_pintz2023ExponentialBlock_le_threeQuarter_target hepsilon
   refine ⟨C, hC, ?_⟩
   intro sigma t N R hsigmaUpper hsigmaLower hN hNR hR hNt
   have hNOne : 1 < N := by omega
@@ -42,7 +42,7 @@ near-one exponential-sum theorem. -/
 theorem norm_fordShiftedWeightedBlock_zero_le_nearOne_physical
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (N R : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma →
+      sigma ≤ 1 → 3 / 4 ≤ sigma →
       1024 ≤ N → N < R → R ≤ 2 * N →
       (N : ℝ) ^ 2 ≤ t →
       ‖fordShiftedWeightedBlock sigma N R 0 t‖ ≤
@@ -84,7 +84,7 @@ strict `23/24` segment. -/
 theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne
     {epsilon : ℝ} (hepsilon : 0 < epsilon) :
     ∃ C : ℝ, 0 < C ∧ ∀ (sigma t : ℝ) (N R : ℕ),
-      sigma ≤ 1 → 11 / 12 ≤ sigma →
+      sigma ≤ 1 → 3 / 4 ≤ sigma →
       1024 ≤ N → N < R → R ≤ 2 * N →
       (N : ℝ) ^ 2 ≤ t →
       ‖fordShiftedWeightedBlock sigma N R 0 t‖ ≤

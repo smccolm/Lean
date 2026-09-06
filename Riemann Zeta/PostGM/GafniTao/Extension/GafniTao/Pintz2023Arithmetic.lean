@@ -250,12 +250,38 @@ theorem exists_positive_nat_power_in_window
     norm_num at this ⊢
     nlinarith
 
+/-- The least Archimedean power above `lower` overshoots by at most one
+copy of `u`.  This quantitative form is what yields Pintz's `h < 20/epsilon`
+bound in equation (4.16). -/
+theorem exists_positive_nat_power_minimal
+    {lower u : ℝ} (hlower : 0 ≤ lower) (hu : 0 < u) :
+    ∃ h : ℕ, 1 ≤ h ∧ lower < (h : ℝ) * u ∧
+      (h : ℝ) * u ≤ lower + u := by
+  let h : ℕ := ⌊lower / u⌋₊ + 1
+  have hquot : 0 ≤ lower / u := div_nonneg hlower hu.le
+  have hfloorLower : ((⌊lower / u⌋₊ : ℕ) : ℝ) ≤ lower / u :=
+    Nat.floor_le hquot
+  have hfloorUpper : lower / u < ((⌊lower / u⌋₊ : ℕ) : ℝ) + 1 :=
+    Nat.lt_floor_add_one _
+  refine ⟨h, by dsimp only [h]; omega, ?_, ?_⟩
+  · dsimp only [h]
+    have := mul_lt_mul_of_pos_right hfloorUpper hu
+    rw [div_mul_cancel₀ lower hu.ne'] at this
+    norm_num at this ⊢
+    linarith
+  · dsimp only [h]
+    have := mul_le_mul_of_nonneg_right hfloorLower hu.le
+    rw [div_mul_cancel₀ lower hu.ne'] at this
+    norm_num at this ⊢
+    nlinarith
+
 #print axioms pintzCell_threshold_order
 #print axioms pintzKDenominator_pos
 #print axioms pintzEllDenominator_pos
 #print axioms tendsto_pintzPerturbedCoefficient_zero
 #print axioms exists_pintz_perturbation
 #print axioms exists_positive_nat_power_in_window
+#print axioms exists_positive_nat_power_minimal
 
 end
 

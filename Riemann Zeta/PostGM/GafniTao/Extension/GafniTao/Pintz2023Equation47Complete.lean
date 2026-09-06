@@ -48,7 +48,7 @@ noncomputable def pintz2023Equation47Remainder
 theorem pintz2023_equation_4_7_completeLine
     {X : ℕ} {rho : ℂ} {lambda eta : ℝ}
     (hrho : 1 - eta ≤ rho.re) (hlambda : 8 ≤ lambda)
-    (heta : eta ≤ 1 / 32) (hX : 1 ≤ X)
+    (heta : eta ≤ 1 / 24) (hX : 1 ≤ X)
     (hXC : X ≤ pintz2023Cutoff lambda) :
     pintz2023Equation42Integral X rho lambda =
       1 +
@@ -68,7 +68,7 @@ parameters. -/
 theorem norm_pintz2023Equation47Remainder_le_exp_neg_two :
     ∃ K : ℝ, 0 < K ∧
       ∀ {X : ℕ} {rho : ℂ} {eta lambda : ℝ},
-        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 32 →
+        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 24 →
         ‖pintz2023Equation47Remainder X rho lambda‖ ≤
           K * Real.exp (-2 * lambda) := by
   obtain ⟨Ktail, hKtail, htail⟩ :=

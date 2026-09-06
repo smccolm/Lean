@@ -231,7 +231,7 @@ theorem exists_large_pintz2023Equation47Polynomial_log
     {X : ℕ} {eta etaJ gamma lambda : ℝ}
     (hrhoZero : riemannZeta (pintz2023Rho etaJ gamma) = 0)
     (hetaJPos : 0 < etaJ) (hetaJ : etaJ ≤ eta)
-    (hlambda : 8 ≤ lambda) (hetaUpper : eta ≤ 1 / 32)
+    (hlambda : 8 ≤ lambda) (hetaUpper : eta ≤ 1 / 24)
     (hX : 1 ≤ X) (hXC : X ≤ pintz2023Cutoff lambda)
     (hleft :
       ‖VerticalIntegral'

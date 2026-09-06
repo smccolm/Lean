@@ -103,7 +103,7 @@ theorem pintz2023_pole_scale_le_source_envelope
     {T eta gamma epsilonX : ℝ} {k ell : ℕ}
     (hT : Real.exp 1 ≤ T) (hepsilonX : 0 ≤ epsilonX)
     (hk : 0 < k) (hell : 0 < ell)
-    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 32)
+    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 24)
     (hlambda : 8 ≤ pintz2023SourceLambda T k)
     (hgammaOne : 1 ≤ |gamma|)
     (hgammaLambda : 2 * pintz2023SourceLambda T k ≤ |gamma|) :
@@ -169,7 +169,7 @@ theorem pintz2023_pole_scale_le_source_envelope
 
 theorem eventually_pintz2023_pole_scale_le_eighth
     {eta epsilonX : ℝ} {k ell : ℕ}
-    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 32)
+    (heta : 0 < eta) (hetaUpper : eta ≤ 1 / 24)
     (hepsilonX : 0 ≤ epsilonX) (hk : 0 < k) (hell : 0 < ell) :
     ∀ᶠ T : ℝ in atTop,
       Real.exp 1 ≤ T ∧ 8 ≤ pintz2023SourceLambda T k ∧

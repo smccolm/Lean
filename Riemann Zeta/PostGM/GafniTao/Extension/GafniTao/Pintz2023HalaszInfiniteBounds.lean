@@ -21,7 +21,7 @@ noncomputable section
 the residue estimate in `Pintz2023MellinResidue`, whose exponential version
 is stated only for nonzero height. -/
 theorem norm_pintz2023MellinWeight_real_nearOne_le
-    {N : ℕ} (hN : 0 < N) {d : ℝ} (hd : 0 < d) (hdUpper : d ≤ 1 / 12) :
+    {N : ℕ} (hN : 0 < N) {d : ℝ} (hd : 0 < d) (hdUpper : d ≤ 1 / 4) :
     ‖pintz2023MellinWeight N (d : ℂ)‖ ≤
       3 * d⁻¹ * (N : ℝ) ^ d := by
   have hdC : (d : ℂ) ≠ 0 := by exact_mod_cast hd.ne'
@@ -54,7 +54,7 @@ the preliminary finite-cutoff estimate, this theorem has no divergent
 ambient cutoff. -/
 theorem exists_norm_pintz2023SmoothedZetaSum_real_nearOne_le :
     ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (d : ℝ),
-      0 < N → 0 < d → d ≤ 1 / 12 →
+      0 < N → 0 < d → d ≤ 1 / 4 →
       ‖pintz2023SmoothedZetaSum N ((1 - d : ℝ) : ℂ)‖ ≤
         C * d⁻¹ * (N : ℝ) ^ d := by
   obtain ⟨B, hB, hMain⟩ :=
@@ -67,7 +67,7 @@ theorem exists_norm_pintz2023SmoothedZetaSum_real_nearOne_le :
   refine ⟨C, hC, ?_⟩
   intro N d hN hd hdUpper
   let sigma : ℝ := 1 - d
-  have hsigmaLower : 11 / 12 ≤ sigma := by
+  have hsigmaLower : 3 / 4 ≤ sigma := by
     dsimp only [sigma]
     linarith
   have hsigmaUpper : sigma < 1 := by
@@ -127,7 +127,7 @@ theorem exists_norm_pintz2023SmoothedZetaSum_real_nearOne_le :
 theorem exists_norm_pintz2023HalaszGram_diagonal_infinite_le :
     ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (eta etaJ gamma : ℝ),
       0 < N → 0 < 2 * etaJ + 4 * eta →
-      2 * etaJ + 4 * eta ≤ 1 / 12 →
+      2 * etaJ + 4 * eta ≤ 1 / 4 →
       ‖pintz2023SmoothedZetaSum N
           (((1 - etaJ - etaJ - 4 * eta : ℝ) : ℂ) +
             I * (((gamma - gamma : ℝ) : ℂ)))‖ ≤

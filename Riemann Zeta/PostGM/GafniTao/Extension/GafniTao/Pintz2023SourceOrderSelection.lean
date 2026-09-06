@@ -87,6 +87,8 @@ theorem exists_pintz2023_source_order_variable_selection_subset
         (2 * Nat.ceil (globalLocalZeroLogConstant * Real.log T)) *
           (2 * (2 * Nat.ceil (7 * lambda) + 1)) * W.card ∧
       (∀ u ∈ W, etaAt u ∈ Set.Icc 0 xi) ∧
+      (∀ u ∈ W, ∃ rho ∈ S,
+        etaAt u = 1 - rho.re ∧ |rho.im - u| ≤ 2 * lambda) ∧
       (∀ u ∈ W, H - 2 * lambda < |u|) ∧
       (∀ u ∈ W, |u| ≤ T + 2 * lambda) ∧
       ∀ u ∈ W,
@@ -243,7 +245,15 @@ theorem exists_pintz2023_source_order_variable_selection_subset
     have h := hLargeU (original w) (hOriginalMem w hw)
     rw [hOriginalShift w hw] at h
     simpa only [etaAt] using h
-  refine ⟨W, etaAt, hSepCard.1, ?_, hEta, hHeightLower, hHeight, hLarge⟩
+  have hProvenance : ∀ w ∈ W, ∃ rho ∈ S,
+      etaAt w = 1 - rho.re ∧ |rho.im - w| ≤ 2 * lambda := by
+    intro w hw
+    let u := original w
+    refine ⟨source u, hSourceMem u (hOriginalMem w hw), rfl, ?_⟩
+    rw [hSourceIm u (hOriginalMem w hw), ← hOriginalShift w hw]
+    exact hShift u (hOriginalMem w hw)
+  refine ⟨W, etaAt, hSepCard.1, ?_, hEta, hProvenance,
+    hHeightLower, hHeight, hLarge⟩
   have hCard : W.card = U.card := hSepCard.2
   dsimp only [L] at hCountU
   simpa [W, hCard] using hCountU

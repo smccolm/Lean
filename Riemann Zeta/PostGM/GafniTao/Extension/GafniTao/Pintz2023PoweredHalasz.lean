@@ -40,13 +40,13 @@ theorem exists_pintz2023_intervalPower_halasz_cardinality
       let Omain := Co * (4 * eta)⁻¹ *
         (2 * T + 3) ^ pintz2023NearOneGramExponent xi eta epsilonZeta
       let Ores := Co * (4 * eta)⁻¹ *
-        ((N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-          (2 * T + 2) * Real.exp (-(Real.pi * G) / 2))
+        (3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+          Real.exp (-G))
       baseI ⊆ Finset.Ioc U (2 * U) → 0 < U → 0 < N →
       Iset ⊆ Finset.Ioc N (2 * N) →
       -1 - 4 * eta - 2 / lambda + 2 * epsilonCoeff ≤ 0 →
       0 < eta →
-      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 12 →
+      pintz2023NearOneGramMaxDistance xi eta ≤ 1 / 4 →
       1 ≤ T → 1 ≤ G →
       0 ≤ A →
       (∀ t ∈ W, etaAt t ∈ Set.Icc 0 xi) →
@@ -80,8 +80,8 @@ theorem exists_pintz2023_intervalPower_halasz_cardinality
   let Omain : ℝ := Co * (4 * eta)⁻¹ *
     (2 * T + 3) ^ pintz2023NearOneGramExponent xi eta epsilonZeta
   let Ores : ℝ := Co * (4 * eta)⁻¹ *
-    ((N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
-      (2 * T + 2) * Real.exp (-(Real.pi * G) / 2))
+    (3 * (N : ℝ) ^ pintz2023NearOneGramMaxDistance xi eta *
+      Real.exp (-G))
   let O : ℝ := Omain + Ores
   have hPositive : ∀ n ∈ Iset, 0 < n := by
     intro n hn

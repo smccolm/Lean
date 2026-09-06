@@ -15,6 +15,8 @@ open scoped ArithmeticFunction.Moebius BigOperators
 
 namespace GafniTao
 
+open RiemannZeta.GuthMaynard
+
 noncomputable section
 
 /-- The `a'_n` portion of Pintz (4.13), with `m > R`. -/
@@ -32,6 +34,60 @@ noncomputable def pintz2023SmallMCoeff
     if (n / d : ℕ) ≤ R then
       ((ArithmeticFunction.moebius d : ℤ) : ℂ)
     else 0
+
+/-- The small-`m` portion inherits the same elementary divisor-count
+majorant as the unsplit coefficient.  This is a pointwise statement about
+the literal finite sum in (4.13), not an asymptotic divisor estimate. -/
+theorem norm_pintz2023SmallMCoeff_le_divisors_card
+    (X n : ℕ) (R : ℝ) :
+    ‖pintz2023SmallMCoeff X n R‖ ≤ n.divisors.card := by
+  classical
+  unfold pintz2023SmallMCoeff
+  calc
+    ‖∑ d ∈ n.divisors.filter (fun d => d ≤ X),
+        if (n / d : ℕ) ≤ R then
+          ((ArithmeticFunction.moebius d : ℤ) : ℂ)
+        else 0‖ ≤
+        ∑ d ∈ n.divisors.filter (fun d => d ≤ X),
+          ‖if (n / d : ℕ) ≤ R then
+            ((ArithmeticFunction.moebius d : ℤ) : ℂ)
+          else 0‖ := norm_sum_le _ _
+    _ ≤ ∑ _d ∈ n.divisors.filter (fun d => d ≤ X), (1 : ℝ) := by
+      apply Finset.sum_le_sum
+      intro d hd
+      split_ifs
+      · simpa using moebius_coeff_norm_le_one d
+      · simp
+    _ = ((n.divisors.filter (fun d => d ≤ X)).card : ℝ) := by simp
+    _ ≤ (n.divisors.card : ℝ) := by
+      exact_mod_cast Finset.card_le_card (Finset.filter_subset _ _)
+
+/-- Literal support of the small-`m` coefficient: if `d ≤ X` and
+`m = n/d ≤ R`, then `n = d*m ≤ X*R`. -/
+theorem pintz2023SmallMCoeff_eq_zero_of_scale_lt
+    {X n : ℕ} {R : ℝ} (hR : 0 ≤ R)
+    (hscale : (X : ℝ) * R < n) :
+    pintz2023SmallMCoeff X n R = 0 := by
+  classical
+  unfold pintz2023SmallMCoeff
+  apply Finset.sum_eq_zero
+  intro d hd
+  rw [Finset.mem_filter] at hd
+  rw [if_neg]
+  intro hm
+  have hnPos : 0 < n := by
+    have hleft : 0 ≤ (X : ℝ) * R := mul_nonneg (by positivity) hR
+    exact_mod_cast hleft.trans_lt hscale
+  have hdDiv : d ∣ n := (Nat.mem_divisors.mp hd.1).1
+  have hfactor : d * (n / d) = n := Nat.mul_div_cancel' hdDiv
+  have hdReal : (d : ℝ) ≤ X := by exact_mod_cast hd.2
+  have hmReal : ((n / d : ℕ) : ℝ) ≤ R := hm
+  have hnonneg : (0 : ℝ) ≤ ((n / d : ℕ) : ℝ) := by positivity
+  have hproduct : (d : ℝ) * (n / d : ℕ) ≤ (X : ℝ) * R :=
+    mul_le_mul hdReal hmReal hnonneg (by positivity)
+  have hfactorReal : (d : ℝ) * (n / d : ℕ) = (n : ℝ) := by
+    exact_mod_cast hfactor
+  linarith
 
 /-- Exact coefficient identity `a_n = a'_n + a''_n` in (4.13). -/
 theorem pintz2023Coeff_eq_largeM_add_smallM
@@ -89,6 +145,8 @@ theorem pintz2023LargeMCoeff_eq_antidiagonal
   · simp only [hdLe, false_and, if_false]
 
 #print axioms pintz2023Coeff_eq_largeM_add_smallM
+#print axioms norm_pintz2023SmallMCoeff_le_divisors_card
+#print axioms pintz2023SmallMCoeff_eq_zero_of_scale_lt
 #print axioms pintz2023IntervalBlock_eq_largeM_add_smallM
 #print axioms pintz2023LargeMCoeff_eq_antidiagonal
 

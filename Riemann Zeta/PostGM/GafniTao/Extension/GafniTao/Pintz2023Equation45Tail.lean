@@ -222,23 +222,23 @@ theorem pintz2023_optimized_line_sqrt_factor_le_one
     _ = 1 := by field_simp
 
 theorem pintz2023_optimized_line_exponent_le
-    {lambda eta : ℝ} (hlambda : 8 ≤ lambda) (heta : eta ≤ 1 / 32) :
+    {lambda eta : ℝ} (hlambda : 8 ≤ lambda) (heta : eta ≤ 1 / 24) :
     (3 * lambda / 2) ^ 2 / lambda + lambda * (3 * lambda / 2) -
         (lambda + 3) *
-          (3 * lambda / 2 + 1 - eta - 1 / 32 - 9 / 8) ≤
+          (3 * lambda / 2 + 1 - eta - 1 / 48 - 9 / 8) ≤
       -2 * lambda + 1 / 16 := by
-  have hprod : eta * (lambda + 3) ≤ (1 / 32) * (lambda + 3) :=
+  have hprod : eta * (lambda + 3) ≤ (1 / 24) * (lambda + 3) :=
     mul_le_mul_of_nonneg_right heta (by linarith)
   have hlambdaNe : lambda ≠ 0 := by linarith
   field_simp [hlambdaNe]
   nlinarith
 
 theorem pintz2023_optimized_line_exponential_le
-    {lambda eta : ℝ} (hlambda : 8 ≤ lambda) (heta : eta ≤ 1 / 32) :
+    {lambda eta : ℝ} (hlambda : 8 ≤ lambda) (heta : eta ≤ 1 / 24) :
     Real.exp ((3 * lambda / 2) ^ 2 / lambda +
         lambda * (3 * lambda / 2)) *
       Real.exp (-(lambda + 3) *
-        (3 * lambda / 2 + 1 - eta - 1 / 32 - 9 / 8)) ≤
+        (3 * lambda / 2 + 1 - eta - 1 / 48 - 9 / 8)) ≤
       Real.exp (1 / 16) * Real.exp (-2 * lambda) := by
   rw [← Real.exp_add, ← Real.exp_add]
   apply Real.exp_le_exp.mpr
@@ -261,16 +261,16 @@ theorem pintz2023NineEighthMass_nonneg :
 
 /-- Pintz equation (4.6), for the literal finite-mollifier tail.  The
 constant is uniform in `X`, the zero `rho`, `eta`, and `lambda`; its only
-arithmetic input is the fixed `1/32` divisor bound. -/
+arithmetic input is the fixed `1/48` divisor bound. -/
 theorem norm_tsum_pintz2023TailTerm_le_exp_neg_two
     : ∃ K : ℝ, 0 < K ∧
       ∀ {X : ℕ} {rho : ℂ} {eta lambda : ℝ},
-        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 32 →
+        1 - eta ≤ rho.re → 8 ≤ lambda → eta ≤ 1 / 24 →
         ‖∑' n : ℕ, pintz2023TailTerm X rho lambda n‖ ≤
           K * Real.exp (-2 * lambda) := by
   obtain ⟨C, hC, hline⟩ :=
     norm_pintz2023WeightedTerm_le_pseries_on_line
-      (delta := 1 / 32) (by norm_num)
+      (delta := 1 / 48) (by norm_num)
   let K : ℝ := C * Real.exp (1 / 16) *
     (pintz2023NineEighthMass + 1)
   have hK : 0 < K := by
@@ -290,7 +290,7 @@ theorem norm_tsum_pintz2023TailTerm_le_exp_neg_two
   have hexp :
       Real.exp (q ^ 2 / lambda + lambda * q) *
           Real.exp (-(lambda + 3) *
-            (q + 1 - eta - 1 / 32 - 9 / 8)) ≤
+            (q + 1 - eta - 1 / 48 - 9 / 8)) ≤
         Real.exp (1 / 16) * Real.exp (-2 * lambda) := by
     simpa [q] using pintz2023_optimized_line_exponential_le hlambda heta
   have hmajor := summable_norm_nine_eighth_LSeries_term.mul_left D
@@ -303,22 +303,22 @@ theorem norm_tsum_pintz2023TailTerm_le_exp_neg_two
       have hraw := hline (X := X) (n := n) (rho := rho)
         (eta := eta) (lambda := lambda) (q := q)
         hrho hlambdaPos hq hnPos
-      have hgap : 0 ≤ q + 1 - eta - 1 / 32 - 9 / 8 := by
+      have hgap : 0 ≤ q + 1 - eta - 1 / 48 - 9 / 8 := by
         dsimp [q]
         linarith
       have hp := pintz2023_tail_pseries_pointwise_nine_eighth
-        (lambda := lambda) (q := q) (eta := eta) (delta := 1 / 32)
+        (lambda := lambda) (q := q) (eta := eta) (delta := 1 / 48)
         hgap hn
       rw [pintz2023TailTerm, if_pos hn]
       calc
         ‖pintz2023WeightedTerm X rho lambda n‖ ≤
             ((C / q) * Real.exp (q ^ 2 / lambda + lambda * q) *
               Real.sqrt (Real.pi / (1 / lambda))) *
-                (1 / (n : ℝ) ^ (q + 1 - eta - 1 / 32)) := hraw
+                (1 / (n : ℝ) ^ (q + 1 - eta - 1 / 48)) := hraw
         _ ≤ ((C / q) * Real.exp (q ^ 2 / lambda + lambda * q) *
               Real.sqrt (Real.pi / (1 / lambda))) *
             (Real.exp (-(lambda + 3) *
-                (q + 1 - eta - 1 / 32 - 9 / 8)) *
+                (q + 1 - eta - 1 / 48 - 9 / 8)) *
               ‖LSeries.term (fun _ : ℕ => (1 : ℂ))
                 (9 / 8 : ℂ) n‖) :=
           mul_le_mul_of_nonneg_left hp (by positivity)
@@ -326,7 +326,7 @@ theorem norm_tsum_pintz2023TailTerm_le_exp_neg_two
               Real.sqrt (Real.pi / (1 / lambda))) *
             (Real.exp (q ^ 2 / lambda + lambda * q) *
               Real.exp (-(lambda + 3) *
-                (q + 1 - eta - 1 / 32 - 9 / 8)))) *
+                (q + 1 - eta - 1 / 48 - 9 / 8)))) *
               ‖LSeries.term (fun _ : ℕ => (1 : ℂ))
                 (9 / 8 : ℂ) n‖ := by ring
         _ ≤ (C * 1 *
