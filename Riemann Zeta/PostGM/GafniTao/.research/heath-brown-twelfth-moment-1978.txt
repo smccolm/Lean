@@ -1,0 +1,863 @@
+
+   THE       TWELFTH              POWER            MOMENT              OF     THE
+                       RIEMANN-FUNCTION
+
+                          By   D. R.    HEATH-BROWN
+
+                               [Received 13 January 1978]
+
+1. Introduction
+THE classical mean-value theorems for the Riemann Zeta-function,                     due
+to Hardy and Littlewood [3] and Ingham [5] respectively, state that
+                       T
+                                   2
+                      J|£(2+i')|    df~TlogT,            (T-»»),                      (1)
+                      o
+and
+                    T
+                                                           (T   >00)                (2)
+                    jj                                       ~      -
+
+The problem of establishing similar asymptotic formulae for the mean-
+value of the sixth or higher powers of          |£(i+if)| appears to be extremely
+difficult; indeed no such formula has been proved, even on the assump-
+tion of   the   Riemann      hypothesis.    However      for many     applications    an
+estimate of the form
+
+                                                                                      (3)
+
+where    e is any positive number, is as useful          as an asymptotic      formula.
+The   estimate    (3), for    all ks»0,     follows   trivially from     the   lindelof
+hypothesis,    (that   £Q+it)«-t'),     and   so   a fortiori from      the   Riemann
+hypothesis, but no unconditional bound of the form (3) is known, except
+for k=s4 when the estimate          follows from     Ingham's result     (2). It is thus
+natural to ask how good a bound can be given for
+
+                                             W    dt                                  (4)
+                                   o
+It follows from    (2) and   Kolesnik's estimate [6], namely
+                        {(i + it)« t#*> (log f)»,          (r > 2),                     (5)
+Quart. J. Math. Oxford (2), 29 (1978), 443-462
+
+444                              D. R. HEATH-BROWN
+
+that
+
+                                    1+173(k  4)/1067         2k
+                                  T        -         (log T)   ,     (k
+
+If we regard      this as the     'trivial estimate'    for (4), then     no   non-trivial
+estimate, for fc > 4, has been found to date. The object of this paper is to
+give such an estimate.
+
+  THEOREM       1.
+
+
+  As a very simple application of Theorem 1 we note that certain results
+of Titchmarsh       [8], Chapter      12, on    the   generalized     Dirichlet    divisor
+problem, may now be improved. In particular Titchmarsh's Theorem 12.3
+(due   originally   to Hardy      and Iittlewood),       may be sharpened,         in the
+obvious manner, to give
+                                   k/(4+k)+
+                        Ak(x)«x            ",
+
+the exponent in Titchmarsh's theorem being (k -              l)/(k + 2) + e, for fc 2= 4.
+   Theorem     1 will be deduced from the following result, which is stronger
+than Theorem       1 when    |£(J+ it)\ is sufficiently   large.
+
+   THEOREM 2. Let tu X^,...,         tR be real numbers      such   that
+
+and
+
+Then
+                      4         5
+            R«TV-      (IogT)     ,         (V>0),                                      (6)
+                                  16
+            J^TV-^OogT)              ,      (V>0),                                      (7)
+                 S      32          40
+            R«T      V'    (log T)    ,     (T* (log T)tts= V s* T* (log T)»),          (8)
+                     6           8
+            R«    TV     (log T)  ,         (V> T* (log T)tt).                          (9)
+
+  We note that (9) yields
+
+           TWELFTH        POWER MOMENT OF RIEMANN                          ZETA-FUNCTION                    445
+
+so that Theorem 2 almost contains the estimate
+
+                                            £($+it)«t         log t
+
+obtained      from     van der       Corput's       method,       (see Titchmarsh           [8], Theorem
+12.5).
+   From      Theorem          2   and    Kolesnik's        estimate       (5)   we    may      deduce       the
+following bound for the integral (4).
+
+   COROLLARY. Let k s» 15.                Then
+
+                                         k          1+17  k6  1067                   2k
+                                     it)\  dt«     T    *  -»            (log     T)   .
+
+
+   The     asymptotic         formulae        (1)   and     (2)   are    proved       by    the    termwise
+                                                                                         2                      4
+integration       of   Dirichlet      series corresponding to               |£(i+i"0|       and    If^+iOl
+respectively. By careful analysis of this process the formulae (1) and (2)
+can     be     replaced        by     more       precise      expressions,          with     error       terms
+                                       /B+
+    346/i067       ')   and     OCr        '),    respectively;        details      may      be    found      in
+o(T               +
+Balasubramanian             [2] and       Heath-Brown            [4]. However            such    a   method
+appears      to   fail   completely         when      we consider          powers       higher     than     the
+fourth.     Our     treatment,        in   contrast,      is motivated          by   van     der    Corput's
+method; we postpone a description of the ideas involved to the relevent
+sections.
+   It will be       convenient         in the proofs         to   use the symbol             A    to   denote
+certain     positive      numerical        constants,       not   necessarily        the   same      at   each
+occurence, arising from               the «      (or O( • • •)) notation. We shall also use
+Q, Ci,...,         to denote positive numerical constants. Other notation will
+be: d(n) for the number of positive divisors of the natural number n; \Sf\
+for the number of elements of the set if; [a, b] for the set of real numbers
+x satisfying      a <s x as b; y for Euler's constant; e (in §2 only) may be taken
+as j&j.
+
+2. The preliminary             integration
+
+   In this section we prove the following mean-value estimate.
+                                     2
+   LEMMA 1. Let (log T)                «s G =£ T*. Then
+
+T+a
+                    2
+   f   \&+      it)\  dt« G log T+G                          X                (TK)-i(|S(X)|
+                                                      t  n            k  2  t
+  J                                                T        *   K   -
+T-C
+                                                                                    K
+                                                                                  1                       1   T
+                                                                          + K-     j|S(x)|dx)e-°           "    ,
+
+446                              D. R. HEATH-BROWN
+
+where
+
+              S(x) = S(x,K,T)      =      X      (-D"<*(n)exp (if(T, n))
+                                      K<n*JC+x
+and
+                                    1            1/2      22               in
+              f(T, n) = 2T sinlT      ((Tm/2T)     ) + (n  n   + 2<imT)      .
+
+  Lemma 1 already contains the most important new ideas in the proof of
+our results. The estimate should be regarded as a precise form of van der
+Corput's    method     applied   to f(s). The usual       form   of van der Corput's
+inequality states that
+
+    X    exp(i/(n))
+
+                           1
+                 + 4NJT        £    (1-fc/H)       X      cos (/(n + h)-/(*)).        (10)
+                            0h< h<H            l
+However      one may, in general,        look   on the inequality        as bounding a
+mean-value; for by Lemma              1.9 of Montgomery         [7], (a result     due to
+Gallagher), we have
+
+          X    exp (iff (n))
+       l«n«N
+1-8
+                                                                                      (ID
+where the sum on the right is for l=sm, n^N,              8 |/(m)-/(n)|=el; and this
+corresponds to the inequality (10) with 8 for N/H and N\f(n +                     h)-f(n)\
+for h. Then Lemma 1 corresponds to (11) with the double exponential
+sum 'dualized' by taking the Fourier transform with respect to n, for fixed
+h = m — n, to produce         S(x), the latter     process being the one given by
+Theorem 4.9 of Titchmarsh [8]. The procedure sketched above would be
+difficult to carry out in practice, and we save a considerable amount of
+work    by appealing      to the following       theorem     of Atkinson      [1], which
+already contains the important features of Lemma 1.
+
+  Let T&2,       T/10«N=sl0T,
+
+                                               N
+                           '-    >(T\-—
+
+Then
+     T
+
+
+                                                                                       (12)
+
+                  TWELFTH                 POWER              MOMENT                 OF RIEMANN                       ZETA-FUNCTION                                   447
+
+where
+
+                                                                                        4
+
+
+                                            = -2 £                 d(n)n-i(log-^)                                   sin (g(T, n)),
+                                                                                      \          Z     i    /
+
+                                                                                                      2
+                                                                    E(T)«(logT)                         .
+
+     This theorem will be the starting point for the proof of Lemma 1. Let
+H=GlogTand
+
+
+                                                                           0
+then integration by parts yields
+               H                                                                        H
+                                                    2        2/O2                                                    2/a2           2
+               f     |f($+i(T+0)|                      e-'            dr = 2 f                I(T+ t)e-                     tG-           dt+ O(l), (13)
+            -H                                                                        -H
+
+                                            2
+since I(T±H)«                           T     , by (1). We now apply the formula (12) with                                                                       N=T.
+Then
+                                                H
+                                                                              2/a             2                                2
+                                          2 |        E(T+1) e-                     *tG-              dt« (log T)                 .                                (14)
+                                             -H
+I2 also makes a negligible contribution, as we proceed to show. We have
+N'(7+0 = N'(7) + O(|*|), so that
+
+                                                                                       (
+2,(7+0 =-2                             I         d(n)n-* (log                            -^)            'sin (g(T+t, n)) + O(HT-l);
+
+here we use the observation that
+
+                                                             T« N'C
+
+448                                              D. R. HEATH-BROWN
+whence
+
+Moreover
+
+and, writing            g = g(T, n), g' = g'(T, re), g"= g"(T, n), we have by Taylor's
+Theorem both
+
+and
+                      sin
+Hence
+                                                                          'sin
+                                                                                                                               (15)
+since      |f|ssH«T*.              Thus to calculate                  the contribution                of Sj to (13)               we
+consider
+       f        .+(li -/2-,i/o>           -2             f     1 '+U* •      -rVO»          -2                 -IP G*
+     -H
+To evaluate the integral on the right we use the formula
+
+                      j\e— ^dr^Tri^exp^),                                                 (RcO)>0),
+
+whence
+                                          >+        2   1/ol         2                            2
+                                J    e*       "V'     -       rG-       dt«aq>(-AG                  ),                        (17)
+                               —oo
+                                    1                       2
+since g'» 1, g"« T"                    and (log T)            « G« T*. The estimates (15), (16) and
+
+             TWELFTH          POWER        MOMENT          OF    RIEMANN          ZETA-FUNCTION                      449
+(17) now yield
+    H
+                                       2                                                                        z
+2       ^(T+Oe"             '    tG ~    dt«HT'~*              +    ^     d{n)n       'exp (-(log          T)    )«l.
+   J                                                             it«AT
+  -H
+                                                                                                                    (18)
+
+   There remains the term
+
+                H
+                                          v       /                                          1/o         2
+            2       l(T+f)       (lloogg    ^'   '  + 2   7  -  l| +    2i(T+f))e~'              'fG"      dt.
+              -H
+This we integrate by parts to give
+             H                                                    H
+
+           -H                                                   -H
+here we have used the trivial estimate
+
+                                     (T    ±H  )
+                             (log
+                                         2
+
+to   obtain       the error        term       O(l). For         the first integral             in   (19) we have
+immediately
+
+                                                                     /01
+                               J   (log^y^+2-yW"                          dr«GlogT.                                 (20)
+                             -H
+To bound the second integral in (19) we must first replace Xj(T+1) by a
+                                                                                    1
+simpler expression. We note that f (t, n) = 2 sinh"                                    ((.imjlifi), whence
+
+
+
+
+for    |r-T|*H             Moreover,          writing       f = f(T,n),         f' = f'(T,n),          f" = f(T,         n),
+we have, by Taylor's Theorem,
+                    ~*         fir     .._            ,\     /    T       IN"*
+                                                                                             +     +
+                                                                          4)      «»(4          '      ^       2")
+
+450                                             D. R. HEATH-BROWN
+
+Hence
+
+
+
+We readily see that the error term above is
+
+for |r|«H; the contribution to (19) is therefore
+                                                        «GlogT.                                                            (21)
+We must now consider
+
+                   f    ur+u*rn-t*/o*                          f  ur+ti*rn-*io*                             -     o^                    )
+                       e                             dt =         t                           d( +   O  (e     W                   (22
+                 -H                                     -00
+To evaluate the integral on the right we use the formula
+
+                                      1
+                              e-"         dt = (I)* exp (^),                             (Re 0) > 0),
+
+which shows that
+
+                                    [ e^V/a-wo*                    ,«           _          ^2)                                   )
+                                                                d       exp (      (log                                    (23
+
+                       2              3
+for n > TG"               (log T)       , and that
+
+          f eV«Tfl-«o. d                ,   =
+                                                               (^°^)                                                      (24)
+
+                         2              3
+for      n«2TG"            (logT)         .   The error           term       in (22) and the integral (23)
+contribute a total
+                                                              2                      1
+                                   « exp (-(log T)) X d(n)n"                           r~i« 1                                (25)
+
+to (19), and the error term of (24) contributes
+                                                      3          +m
+                                                                              3   1+2M
+                                 «    I    d(n)G        nlT-i         «    G   T             « G                             (26)
+
+               TWELFTH              POWER MOMENT OF RIEMANN                                        ZETA-FUNCTION                            451
+to (19). The estimates (13), (14), (18), (20), (21), (24), (25) and (26) yield
+  H
+
+-H
+                                                                              2               1               2
+                       X COS        ?+f(T, n))exp(-G                             (sinlT          ((£)))        )         + O(G log T).
+                                                                               k+1                   2                3       k
+where          the summation                    is for       n«=2\           2        =£ TG~            Oog T)          <2      . We now
+observe that
+
+
+
+
+                                                                                                         -»j     |S(x)|dxle-
+                                                                                  \                          0                   '
+
+by partial summation. Moreover S(x)« JC log T trivially, whence
+
+                                                                          1                                llc/T
+              G         Y          (TAT* (|S(10| + K"                         f |S(x)| dx|e-°                      « G log T.
+                 K-2      «T                      \                        Q                     /
+Lemma 1 now follows, since
+                           o                                            H
+
+                        -O                                            -H
+
+3.    Large values of S(x, K, T)
+     In this section we apply Halasz' method to investigate the frequency of
+large values of S(x, K, T).
+     LEMMA 2. Let if be a set of real numbers t, such that
+
+                           I^^^T;                   K-f,|^J;                 K-«,|>G,                        (r* s).
+
+Then, if             K^Ti(logT),
+                                              2                       3
+                   X |S(x, K, 0|                « XOog T)               (K+ G-^KT^log T+ A
+
+452                                     D. R.    HEATH-BROWN
+
+where
+
+
+
+    Our starting point is the inequality
+
+                                                                 X   *  .)   !,                            (27)
+valid in any inner product space; this is due to Bombieri, and may be
+found in Montgomery [7], Lemma 1.5. We apply this to the space of finite
+complex-valued sequences, with the inner product
+
+
+We     take     £ to     be   the    sequence        whose       n-th    element       is (-l)"d(n)         for
+K<n*£K+x,              and 0 otherwise, and               <f>      to be the sequence whose                   n-th
+                                                                r
+element is exp (ifit^ n)) for K < n « 2K, and 0 otherwise. It follows from
+(27) that
+
+                                 I       (d(n)A
+                            1C<II«K+I                /
+                                                                                                           (28)
+
+   We must now bound
+                                       S=        I       exp(i/(n)),
+                                             JC<n«2JC
+where f(n) = f(t           n)-f(t,,      n). We shall use only the simplest techniques; it
+                        n
+is therefore quite possible that Lemma 2, and hence Theorem 2, might be
+sharpened by giving more refined                      estimates for S, but the improvement
+would probably be very small.
+                                                                             (0
+   We shall require estimates for the derivatives /                             (u). We write
+
+Then g(z), regarded as a function                      of a complex variable, is regular                    for
+|z|<l,     and may therefore             be expanded           as a power series
+
+                                      m-0
+
+              TWELFTH POWER MOMENT OF RIEMANN ZETA-FUNCTION                                                                       453
+
+with
+                                                                      m
+                                                             am«2       .                                                         (29)
+Thus
+
+
+By (29) we may differentiate                             termwise / times, if u =e2K and
+
+
+and this conditions holds, for large enough T, since K«s T/(log T). From
+the First Mean-Value Theorem we have
+
+
+for some t between £. and L, whence
+                                                                                                       -m/2
+                                  m
+                                                                                                              ,                   (30)
+
+where A = |tr-^|.                  We now have, by (29) and (30), if K=su=s2X,
+
+                A   M    ) =      (2n)iQ(ti-              jj)u«-' + O(AK"' I                        ^(D"^),                      (31)
+                               ai
+for some numerical constant                             Q. By (30) with m = 1 we have
+
+                                                                                                               1          1
+for     K^u^2K,                 whereas          the     error       term       of    (31)     is    «AK        ~'T~       .   Since
+X« T/Oog T) we conclude that
+
+    We       are      now       ready        to     estimate          S.    We       first     apply        Lemma            4.8     of
+Titchmarsh [8], which yields
+                                                   2K
+                                          S=           exp (if(u))du             + O(l),
+
+providing that
+                                                          A=sA(KT)*.                                                              (33)
+Lemma 4.2 of [8] then yields
+                                                                                                                                  (34)
+
+454                              D. R.   HEATH-BROWN
+
+Secondly we may apply Theorem 5.9 of [8], whence, by (32) with I = 2,
+                                S«AiK*T-*+A-*K:*:rl.                                   (35)
+Finally we may use Theorem 5.11 of [8], which yields, by (32) with I = 3,
+                               S«AiKAT-A+A-iK«T*.                                      (36)
+    The right hand side of (28) can now be estimated. For those terms for
+which (33) holds we have
+
+                                                                   1            1
+             Z       Z     exp («(/U, n)-f{t,,n)))       «(KT)       1 k - U",
+              i   K<n«2K                                            ,
+where the summations are for s satisfying 0<|t                - t,\^A(KT)K       From the
+                                                             r
+                                 1
+condition \t,-1,\~»G,(s¥-s        ),   we have
+
+
+whence
+
+                                                                                  T, (37)
+                 K<n«2K
+
+since the term       S = T contributes     «K. In case
+                                                                                    we use
+(35), which immediately yields
+
+                   exp(i(fU,n)-/U,ri)))                                                (38)
+          JC<n«2K
+
+and for A ss XT* we use (36), whence
+
+                      I,    exp («(/(*„ n)                                             (39)
+
+The estimates (37), (38) and (39) yield
+
+                    exp(>(/(r     n)-/a,n)))
+                                 n
+          K<n«2K
+where the summation is now over all values of s, and Lemma 2 follows
+from (28), on noting that
+
+                                               2             3
+                                       (d(n))    «K(logD       .
+
+             TWELFTH POWER MOMENT OF RIEMANN                                               ZETA-FUNCTION                          455
+
+4.   Preparation for the proof                     of Theorem            2
+    In     order       to relate          the discrete             set occurring               in Theorem               2 to the
+integral in Lemma 1, we shall require the following lemma.
+    LEMMA 3. Let (5*10. Then
+                                                               0°«0*
+                                                       1+        f
+                                                    (
+                                                             -Oott?
+
+                                                             -Oott?
+                                                                       1
+     Let s=i+8 + ir, where 8 = (logr)"                                   , {/2«T«3I/2;                 then, by termwise
+integration we have
+
+The integrand has poles at w = 0 and w = l-s; at w = 0 the residue is
+           2
+(£(s))      , and at          w = 1 - s          the residue is O(l). Thus, moving the line of
+integration to Re (w) = -S, we have
+
+
+
+since
+                                                                      |o|                 1
+                                           r(±8 + it;)«e-                (8 + |t;|)-        .                                   (41)
+Moreover, by the functional equation for £(s),
+                                                                                                 2
+                                     l  ^  -  S    + i   T    ^   T   ^   G     + S + iT)!         ,
+so that (40) holds for s = $- 8 + IT also. By the residue theorem we have
+
+
+                                                                                                                                      2
+where s0 = | + it, and the path P is the rectangle with corners so±S±i                                                     (log t)      ,
+described in the positive direction. Since
+                                                                                                     2
+                               Gfao + z)f          « U            T(z)« exp (-(log 0                  ),
+on the two shorter sides, the corresponding contribution is O(l); and the
+two longer sides contribute
+
+456                                                          D. R. HEATH-BROWN
+
+by (40) and (41). We have trivially
+
+
+                                                             1
+                                                 -flog I)
+and for the remaining part of (42) we have, after changing the order of
+integration,
+
+                                                                                                                                                \
+                                                                                                      1                               1
+                                                                                             w|)-       (S + |u-w|)-                     dwJ
+
+
+
+To complete the proof of Lemma 3 we have only to note that
+
+                                     -OogrP                  „     .
+
+                                (
+                                                       (logi)
+                                          f        +         f      )k(|+i(f + u
+                                                2
+since |£@ + i(t + u))\                            « l + |f + u\.
+                                                                1
+                                       —               (logi)      I
+     We now let ifx be a set of points satisfying the conditions of Theorem
+2, but lying in the interval                                          [To, T0 + f\,                  where            2T/3=eT0                  and T0 + J*z
+5T/6. We define G by
+                                                                                            2         2
+                                                                 BG (log T)                   =V        ,                                                          (43)
+
+where B is a positive numerical constant which we shall specify later. Let
+
+
+Then by Lemma 3
+                                                                                     +G
+                                                                                                                     2
+                                                                   \n+               {      \S(\k+(it)\                 (^    ^'   e'-'-)'-'A) dA(44)
+                                                                                                                          C
+                                                                                 T-G                                  *~      '                         '
+                                                                                2
+providing that                      G/2 + (log (T+G))                              «G;         a sufficient                condition is
+                                                                                                  3
+                                                                        G>(logT)                    .                                                              (45)
+
+Now since Ik -1^| > 1 for m # n,
+
+                   TWELFTH                    POWER MOMENT OF RIEMANN                                                            ZETA-FUNCTION                                            457
+
+and (44) simplifies to
+                                                                                                                           T+O                                     \
+                                                                                                     (
+                                                                                                                                                             2
+                                                                                                         \y'i\+              }      \& + it)\                  dt\.
+                                                                                                                         T-G                                        '
+                                                                          :
+If we assume that                                 7T/12«T                   S11T/12,                     then Lemma                           1 applies,                  providing
+that
+                                                                                           3
+                                                                       (log T)                 «G^T*;                                                                                   (46)
+this includes the condition (45). Thus, writing
+
+
+                                                                                                                               l                                                    G3K/T
+                                                                                I \S(K, K,                   )| + K~               |    |S(x, K, T)| dx)e-                                        ,
+                                                                                                           T
+
+we have
+                                                          2
+                            BG (log T)                       |y(|« C                  (log T)(|SPJ| + G log T+ ^                                            (T)).
+                                                                                  3
+
+We choose B = 2C3, whence
+
+                                         4
+Thus, if (log T)                            > 2,
+
+
+Cauchy's inequality yields
+
+
+
+
+and, since
+                                                                              W
+                                                                     l                   (        |       )        °                                                                     (47)
+
+458                                      D. R.    HEATH-BROWN
+
+for any constant a > 0, we have
+
+                                                              2
+                                                          )        i   i     (log
+
+                                                                 K
+                                                     2         1                    2       a7KJT
+                                x (\S(K, K, T)|        + X"      1 \S(x, K, T)|       d  y-        .     (48)
+                                                                                        x
+                                                                o
+
+   We now let Sf            run over numbers             T = T     + G/2+ nG, where Sf[(r) * 0,
+                          2                                      o
+and the integer n is such that                  T   «  T  «T     + J+G/2.        Lemma 2 applied to
+                                                   0           0
+y   , and the estimate (48), then yield
+  2
+
+
+                                                                                                           (49)
+
+where      AK is the         value      of   A corresponding             to    K. By (47) we have
+immediately
+
+                                                                    JK/T              3            2
+                                             (KT)* log 7>-°                 « TG~        (log T)     .    (50)
+                        K
+
+To estimate
+
+
+                                                 K
+we consider two cases. According to Lemma 2 we have AK=sJ*JC*T~* for
+all K. Hence, by (47),
+
+                                                                                  .                        (51)
+                                      K
+                                          2
+Now suppose that JT'^T/G                   .       Then, by Lemma 2,
+
+
+for K^TTK             and by (47),
+
+                                                        a2K/T
+                                  X       J^KiT-^-             «jiT^G-i.                                   (52)
+
+                                 2           3
+For JT~*s£JC*:TG~                 (log T)       Lemma 2 gives A             K  ^  /^  T"  *  , whence
+
+                              1          2|t/T                        2
+                    X      K    AKe-°          « JT"iexp (-G           JI1*)«            fil^G^,           (53)
+                          1
+                KW/T"
+
+             TWELFTH           POWER MOMENT OF RIEMANN                                 ZETA-FUNCTION                         459
+
+since
+
+
+                       2                                               2
+for K^»         T/G     ,   and e"" « 0~* for 0 = G                     J/T*s= 1. From (52) and (53) we
+deduce
+
+
+                            2
+when J3= T*G~                . In conjunction with (49), (50) and (51) this yields
+
+                                                                     3             2
+                                X    |^(T)| *£ C           (TG~        (log T)       + p. \Sf      \),
+                                                         4                                        2
+
+where
+
+                                  'ilog      T,
+
+
+                                    w  e
+By definition            of Sf2
+
+
+Hence if
+                                                           **C     «:i                                                     (54)
+                                                                  4
+then
+
+                                                                              3              2
+                                   l^,|«        I    I^IWI« TG"                  (log T)      .                            (55)
+                                              Tfi5T,
+The condition (54) will be satisfied                             for
+                                                             3
+                                                J^C      G        (log T)~\                                                 (56)
+                                                       5
+or   for
+                                               2                  13       3                6
+                                    T*G-         «J«C6G               T-      (log T)-       .                              (57)
+
+5. Proofs of Theorems 1, 2 and the corollary
+We first prove Theorem 2. Take 5^3 to be any set satisfying the conditions
+of Theorem 2, but contained in [2T/3, 5T/6]. We divide the interval into
+N subintervals of length / = T/6N, and Sf3 into N subsets satisfying the
+
+460                              D. R. HEATH-BROWN
+
+conditions for 5^, one contained in each subinterval. Then, applying (55)
+to each subset, we have
+                                                          2
+                                                         ),                           (58)
+providing    that
+                                           3
+                                £}*C    G      (log T)~\                             (59)
+                                       5
+
+or
+                                               13    3           6
+                                 ;^  ss   C  G   T~     (log T)-  .                   (60)
+                                            6
+
+We consider two cases. Suppose firstly that
+                                   2        13     3           6
+                           T^G-     ^iQG       T-    (log T)-   .
+
+In this case we define N by
+
+
+
+so that (59) holds. Then
+                                                3         2
+                                JV« 1 + TG~       (log T)
+
+and (58) yields
+                                    3         2     2    6         4
+                      \Sf\« TG~      (log T)   + T   G~    Oog T)    .                (61)
+                         3
+                             2       13   3               6
+Alternatively let T^G~        ^C   G   T-       (log T)"   , that is
+                                  6
+
+                                  G^QTAOogT)*.                                        (62)
+
+We now define N by
+
+
+
+Then, if N&2,       we have
+
+
+                                    2
+while if N= 1, 776N>T*G-              by (62). Thus (60) holds, and (58) may be
+applied with
+                                          4    13          6
+                              N«l + T       G-    (logT)    ;
+
+this yields
+                                   3         2    5   16            8
+                     \Sf  \« TG~    Oog T)    +T   G-      Gog T)    .                (63)
+                         3
+
+Using (43) we see that (61) and (63) imply the estimates (7), (8) and (9),
+
+          TWELFTH POWER MOMENT OF RIEMANN                          ZETA-FUNCTION                 461
+
+                                             3
+for the set Sf3. Note that (log T)            =s V=s T* suffices for (46) and that (7),
+(8) and (9) are trivial if the former condition does not hold.
+   If V>T*then
+
+We may therefore suppose, without loss of generality, that T*s£ ^ =e T for
+the proof of (7), (8) and (9). We cover the interval [T*, T] with subinter-
+                 n+1
+vals [(J)", (f)     ]. Then (7), (8) and (9) may be applied to each subinterval,
+and, on summing for n, we obtain the full result. We note finally that (6)
+follows from Theorem 10.3 of Montgomery [7], and that (6) implies (7),
+for V=£T*.
+   To prove Theorem            1 we write
+
+
+                                             0«m«T
+                     0
+Let the maximum over              mast =sm +1        occur at    <„. Then     |tj   - ^J ss 1 for
+                                                                                  m
+      n. We write &         for the set of t          for which
+                          v                      2m
+
+Then (7) applies, with          V = 2°, and yields
+                                                  12
+                              I    l£(*+«0|         «T
+
+We sum for 0 ^ v «£ 2 log T, whence
+
+                         0«f2««T+l
+since the contribution         in case |f(i+it2m)|^l           is O(T).     Similarly we have
+
+
+and Theorem         1 follows.
+   The proof of the corollary is similar to that given for Theorem 1, except
+that we also use (8) and (9), for              the ranges of        V given in Theorem 2.
+Noting that
+                                      2°«
+by Kolesnik's estimate (5), we deduce                  that
+
+                            k           i3k+4  /20      1+173   k6)/1067              2k
+                \{<k+ it)\     dr«   (T      >     + T        <  -       ) (log    T)   ,
+
+for k 5» 12, and the corollary follows.
+
+462                                   D. R. HEATH-BROWN
+
+                                            REFERENCES
+
+1. F. V. Atkinson, The mean value of the Riemann zeta function', Acta                Math., 81 (1949),
+   353-376.
+2. R. Balasubramanian, 'An improvement on a theorem of Titchmarsh on the mean square
+   of |f(i + iOI\ Pmc.   London Math, Soc., (3) 36 (1978),       540-576.
+3. G. H.   Hardy and J. E. Littlewood,       The   Riemann     Zeta-function    and the theory of    the
+   distribution of primes', Acta      Math., 41 (1918),    119-196.
+4. D.   R. Heath-Brown,       The   fourth   power   moment     of the   Riemann    zeta function',    to
+   appear.
+5. A. E. Ingham, 'Mean-value theorems in the theory of the Riemann zeta-function',                  Proc
+   London    Math.   Soc, (2) 27 (1926),     273-300.
+6. G. A. Kolesnik, 'On the estimation of some trigonometric sums', Acta              Aritk, 25 (1973),
+   7-30.
+7. H. L. Montgomery,       Topics in multipticative   number theory, Springer, Berlin, 1971.
+8. E. C   Titchmarsh,    The theory of the Riemann       Zeta-function,   Oxford,    1951.
+
+Trinity College
+Cambridge CB2 1TQ
+

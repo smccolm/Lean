@@ -19,6 +19,10 @@
   Hungarica 166 (2022), 48--56, DOI `10.1007/s10474-021-01204-z`
   (author manuscript `PJ_Halasz_Turan0505.pdf` saved locally from the
   Hungarian Academy of Sciences repository).
+- D. R. Heath--Brown, *The twelfth power moment of the Riemann-function*,
+  Quarterly Journal of Mathematics 29 (1978), 443--462, DOI
+  `10.1093/qmath/29.4.443` (publicly accessible scan saved locally from the
+  Norwegian University of Science and Technology course archive).
 - ANTEDB/expdb: commit `2b1aea3de263996c4da3042c115126bff601c618`
   (repository archive saved locally).
 - Frozen Lean foundation: tag `gm-foundation-freeze-v1.0.1`, peeled commit
@@ -27,6 +31,7 @@
 - Foundation PNT+: `4ecb950126c4290293c5662dfe0e884123171df5`.
 - Lean: `v4.30.0`.
 
-`SHA256SUMS.txt` records the pinned downloaded bytes. Davenport,
-Turán, Pintz, and Heath-Brown are bibliographic dependencies but are not
-redistributed here until a legally accessible versioned artifact is located.
+`SHA256SUMS.txt` records the pinned downloaded bytes. The 1978 Heath--Brown
+twelfth-moment scan is now pinned above. Davenport, Turán, and the 1979
+Heath--Brown paper remain bibliographic dependencies not redistributed here
+until legally accessible versioned artifacts are located.
