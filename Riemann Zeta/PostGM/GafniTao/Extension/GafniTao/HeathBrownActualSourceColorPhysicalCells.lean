@@ -73,7 +73,7 @@ theorem eventually_actual_source_color_physical_low_cells
     (hC0 : 0 < C0) (hC2 : 0 < C2) (hC4 : 0 < C4)
     (hsigma0Lower : 1 / 2 <= sigma0)
     (hsigma0Eff : sigma0 <= heathBrownLowerSourceEffectiveSigma
-      sigma delta2 eta zetaLog zetaPower zetaDil delta2)
+      sigma delta2 eta zetaLog zetaPower zetaDil delta1)
     (hsigma0Wide : sigma0 <= heathBrownWideSourceEffectiveSigma
       sigma delta2 eta zetaLog zetaPower zetaScale zetaDil)
     (hsigma0Upper : sigma0 <= 3 / 4)

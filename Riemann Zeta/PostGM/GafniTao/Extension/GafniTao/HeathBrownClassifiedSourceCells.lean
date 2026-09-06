@@ -321,8 +321,8 @@ theorem eventually_classified_source_family_physical_bound
       exact_mod_cast hone.trans_le hPLowerScale
     have hPower := heathBrownSourcePower_spec_two hPOne hUPos hPsq
     have hPLowerOld : U ^ (delta2 / 4) <= (P : Real) := by
-      exact (Real.rpow_le_rpow_of_exponent_le hUOne (by
-        nlinarith [hdeltaOrder] : delta2 / 4 <= delta1 / 2)).trans hPLowerScale
+      exact (Real.rpow_le_rpow_of_exponent_le hUOne.le (by
+        linarith [hdeltaOrder] : delta2 / 4 <= delta1 / 2)).trans hPLowerScale
     have hpCap := heathBrownSourcePower_le_ceil_of_rpow_le hPOne hUOne
       hdelta2 hPLowerOld
     have hL : 0 < L := by simpa only [L] using hThresholdPos r
