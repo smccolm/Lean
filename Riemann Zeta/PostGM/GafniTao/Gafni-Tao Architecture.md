@@ -6,7 +6,7 @@ flowchart TD
 
     ML["PINNED MATHLIB AND ANALYTIC APIS<br/>measure, zeta, Fourier, contour,<br/>asymptotics, finite combinatorics"]
 
-    DB["SECTION 3 NUMERICAL SOURCES<br/>ANTEDB and pinned source tables"]
+    DB["OPTIONAL SECTION 3 NUMERICAL SOURCES<br/>ANTEDB and pinned source tables"]
 
 
     R0["RELEASE ROOT<br/>Extension/GafniTao.lean"]
@@ -21,7 +21,7 @@ flowchart TD
 
     A1["Native core theorem surface<br/>AUDIT ENTRIES PRESENT"]
 
-    A2["Final audit execution and inspection<br/>FINAL RELEASE GATE"]
+    A2["Final build and axiom-output inspection<br/>FINAL RELEASE GATE"]
 
 
     FQ0["NATIVE NEAR-ONE CHAIN<br/>ROOT INTEGRATED"]
@@ -43,7 +43,7 @@ flowchart TD
 
     N2["gafniTaoTheorem12_native<br/>exact Theorem 1.2<br/>PROVED AND AUDITED"]
 
-    N3["native max-form corollaries<br/>PROVED AND AUDITED"]
+    N3["Native max-form corollaries<br/>PROVED AND AUDITED"]
 
     N4["gafniTaoTheorem11_guthMaynard_native<br/>PROVED AND AUDITED"]
 
@@ -54,11 +54,11 @@ flowchart TD
 
     W0["WOOLEY TO HEATH-BROWN CHAIN"]
 
-    W1["Wooley source machinery<br/>PROVED"]
+    W1["Wooley source Corollary 3.2<br/>PROVED"]
 
-    W2["wooleyPolynomialCorollary32_native<br/>PROVED"]
+    W2["p-adic concentration bridge<br/>PROVED"]
 
-    W3["p-adic concentration bridge<br/>PROVED"]
+    W3["VMVT main conjecture<br/>PROVED"]
 
     W4["heathBrownVMVTMainConjecture_native<br/>PROVED AND AUDITED"]
 
@@ -73,35 +73,52 @@ flowchart TD
 
     P3["Second-sample exponent algebra<br/>PROVED"]
 
-    P4["Public unconditional small-Delta theorem<br/>COMPOSITION PENDING"]
+    P4["exceptionalExponent_two_fifteenths_add_le_native<br/>PROVED IN WORKBENCH"]
+
+    P5["Second-sample release promotion<br/>PENDING"]
 
 
-    HB0["HEATH-BROWN ENERGY CAMPAIGN"]
+    HB0["HEATH-BROWN ENERGY CHAIN"]
 
     HB1["Native kth-derivative theorem<br/>PROVED"]
 
-    HB2["Finite pair-count machinery<br/>PROVED / SUBSTANTIAL"]
+    HB2["Pair-count and zero-shell machinery<br/>PROVED / SUBSTANTIAL"]
 
-    HB3["Signed zero-shell energy extraction<br/>PROVED INFRASTRUCTURE"]
+    HB3["Exact GM interval translation<br/>PROVED AND AUDITED"]
 
-    HB4["Exact translation into GM base interval<br/>PROVED AND AUDITED"]
+    HB4["Powered GM energy bridge<br/>PROVED AND AUDITED"]
 
-    HB5["Powered GM energy bridge<br/>PROVED AND AUDITED"]
+    HB5["First HB energy cell<br/>1/2 <= sigma <= 2/3<br/>PROVED IN WORKBENCH"]
 
-    HB6["HeathBrownZeroEnergyBounds<br/>THREE-CELL ENERGY ENVELOPE<br/>OPEN"]
+    HB6["Second HB energy cell<br/>2/3 < sigma <= 3/4<br/>PROVED IN WORKBENCH"]
 
-    HB7["First published sample<br/>mu(17/30) <= 7/12<br/>OPEN"]
+    HB7["Full third high-range cell<br/>OPEN / ACTIVE"]
+
+    HB8["Full HeathBrownZeroEnergyBounds<br/>STRONGER OPTIONAL TARGET"]
 
 
-    S0["SECTION 3 ALGEBRA"]
+    S0["FIRST PUBLISHED SAMPLE"]
 
-    S1["First-sample algebra<br/>PROVED CONDITIONAL ON HB ENERGY"]
+    S1["Optimizer confined near 7/10<br/>hence below 3/4<br/>PROVED"]
 
-    S2["Second-sample algebra<br/>PROVED"]
+    S2["first_sample_fixed_epsilon_bound_native<br/>PROVED"]
 
-    S3["Pintz source gate<br/>CLOSED"]
+    S3["refinedExceptionalUpperExponent<br/>17/30 <= 7/12<br/>PROVED"]
 
-    S4["Heath-Brown source gate<br/>OPEN"]
+    S4["exceptionalExponent_seventeen_thirtieths_le_native<br/>mu(17/30) <= 7/12<br/>PROVED IN WORKBENCH"]
+
+    S5["First-sample release promotion<br/>PENDING"]
+
+
+    RI0["SECTION 3 RELEASE GATE"]
+
+    RI1["Import HeathBrownZeroEnergyLowNative<br/>PENDING"]
+
+    RI2["Import Section3NativeSamples<br/>PENDING"]
+
+    RI3["Add sample endpoints to central Audit.lean<br/>PENDING"]
+
+    RI4["Build and inspect dependency output<br/>PENDING"]
 
 
     OF0["OPTIONAL OPTIMIZED FORD OBJECTIVES"]
@@ -112,18 +129,29 @@ flowchart TD
 
     OF3["FordNearOneDensityEstimate<br/>optimized constants<br/>OPEN"]
 
-    OF4["Not blockers to native GT core"]
+    OF4["Not blockers to current GT results"]
 
 
-    G22["GT-22 Published Section 3 inputs<br/>ONE MAIN MATHEMATICAL GATE OPEN"]
+    OPT0["OPTIONAL FULL SECTION 3 ENVELOPE"]
 
-    G23["GT-23 Published sample bounds<br/>SECOND SOURCE GATE CLOSED<br/>FIRST SOURCE GATE OPEN"]
+    OPT1["Complete high HB energy cell<br/>OPEN"]
 
-    G24["GT-24 Full certified optimizer<br/>OPEN"]
+    OPT2["Full three-cell HB envelope<br/>OPEN"]
 
-    G25["GT-25 Final integration and audit<br/>ACTIVE"]
+    OPT3["Pinned numerical source tables<br/>OPEN"]
 
-    G26["GT-26 Publication synchronization<br/>ACTIVE"]
+    OPT4["Certified finite optimizer<br/>OPEN"]
+
+
+    G22["GT-22 Published source inputs<br/>DISPLAYED SAMPLE INPUTS CLOSED"]
+
+    G23["GT-23 Published sample bounds<br/>BOTH PROVED IN WORKBENCH"]
+
+    G24["GT-24 Full certified optimizer<br/>OPTIONAL / OPEN"]
+
+    G25["GT-25 Section 3 release integration<br/>ACTIVE"]
+
+    G26["GT-26 Final publication synchronization<br/>ACTIVE"]
 
 
     SRC --> R0
@@ -173,44 +201,67 @@ flowchart TD
     W4 --> W5
 
 
-    SRC --> P0
-
-    P0 --> P1
-    P1 --> P2
-
-    P2 --> S3
-    P2 --> P3
-    P3 --> P4
-
-    N1 --> P4
-
-
     SRC --> HB0
     ML --> HB0
 
     W5 --> HB1
-    HB0 --> HB2
     HB1 --> HB2
-
     HB2 --> HB3
     HB3 --> HB4
-    HB4 --> HB5
-    HB5 --> HB6
 
-    HB6 --> S4
+    HB4 --> HB5
+    HB4 --> HB6
+
+    HB6 --> HB7
+
+    HB5 --> HB8
+    HB6 --> HB8
+    HB7 --> HB8
+
+
+    HB5 --> S1
     HB6 --> S1
 
-    S1 --> HB7
-    N1 --> HB7
+    S1 --> S2
+    S2 --> S3
+
+    N1 --> S4
+    S3 --> S4
 
 
-    S3 --> S2
-    S2 --> P4
+    SRC --> P0
 
-    S4 --> G22
+    P0 --> P1
+    P1 --> P2
+    P2 --> P3
 
-    HB7 --> G23
+    N1 --> P4
+    P3 --> P4
+
+
+    HB5 --> G22
+    HB6 --> G22
+    P2 --> G22
+
+    S4 --> G23
     P4 --> G23
+
+
+    S4 --> RI0
+    P4 --> RI0
+
+    RI0 --> RI1
+    RI1 --> RI2
+    RI2 --> RI3
+    RI3 --> RI4
+
+    RI4 --> G25
+
+    S5 --> G25
+    P5 --> G25
+
+    RI2 --> S5
+    RI2 --> P5
 
 
     SRC --> OF0
@@ -220,17 +271,23 @@ flowchart TD
     OF3 --> OF4
 
 
+    SRC --> OPT0
+    DB --> OPT0
+
+    HB7 --> OPT1
+    OPT1 --> OPT2
+    OPT2 --> OPT3
+    OPT3 --> OPT4
+
+    OPT4 --> G24
+
+
     G22 --> G23
-
-    DB --> G24
-    G23 --> G24
-
-    R0 --> G25
-    A2 --> G25
     G23 --> G25
 
     G25 --> G26
     G24 --> G26
+    A2 --> G26
 
 
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;
@@ -254,22 +311,24 @@ flowchart TD
 
     class W0,W1,W2,W3,W4,W5 breakthrough;
 
-    class P0,P1,P2 breakthrough;
-    class P3,S2,S3 done;
-    class P4 conditional;
+    class P0,P1,P2,P3,P4 breakthrough;
+    class P5 active;
 
-    class HB0 active;
-    class HB1,HB2,HB3,HB4,HB5 breakthrough;
-    class HB6,HB7 open;
+    class HB0,HB1,HB2,HB3,HB4 breakthrough;
+    class HB5,HB6 breakthrough;
+    class HB7 open;
+    class HB8 optional;
 
-    class S0 integrated;
-    class S1 conditional;
-    class S4 open;
+    class S0,S1,S2,S3,S4 breakthrough;
+    class S5 active;
+
+    class RI0,RI1,RI2,RI3,RI4 active;
 
     class OF0,OF1,OF2,OF3,OF4 optional;
+    class OPT0,OPT1,OPT2,OPT3,OPT4 optional;
 
-    class G22 active;
-    class G23 conditional;
-    class G24 open;
+    class G22 done;
+    class G23 breakthrough;
+    class G24 optional;
 
-    class A2,G25,G26 active;
+    class G25,G26,A2 active;

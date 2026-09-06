@@ -4,34 +4,21 @@
 
 **Active isolated formalization.**
 
-The project has now crossed the release-integration boundary for the native Gafni-Tao core.
+The project has crossed another major mathematical boundary.
 
-The isolated root:
+The core Gafni-Tao theorem path is already imported through the isolated release root:
 
 ```text
 Extension/GafniTao.lean
 ```
 
-now imports the native analytic source inputs and native theorem suite:
-
-```text
-FordAsymptoticZeroFree
-PintzNearOneNative
-NativeTheorems
-Theorem11
-PintzPublishedCutoffNative
-WooleyNative
-EnergyDetectorTranslation
-EnergyDetectorPoweredTranslation
-```
-
-The central audit:
+and represented on the central dependency-audit surface:
 
 ```text
 Extension/GafniTao/Audit.lean
 ```
 
-now explicitly audits the corresponding native endpoints, including:
+That release-integrated core includes:
 
 ```lean
 GafniTao.ford_asymptotic_zero_free_native
@@ -50,27 +37,62 @@ GafniTao.heathBrownVMVTMainConjecture_native
 GafniTao.heathBrownKthDerivativeTheorem_native
 ```
 
-The core Gafni-Tao theorem is therefore no longer merely a workbench result.
+The development workbench has now gone further.
 
-It is now part of the intended isolated root and central dependency-audit surface.
+It proves the first two native Heath-Brown four-zero energy cells:
 
-The remaining mathematical frontier has contracted primarily to the Heath-Brown four-zero energy envelope required for the first published Section 3 sample:
+```lean
+GafniTao.heathBrown_zeroAdditiveEnergy_first_native
+GafniTao.heathBrown_zeroAdditiveEnergy_second_native
+```
+
+and then proves both displayed Gafni-Tao Section 3 sample bounds:
+
+```lean
+GafniTao.exceptionalExponent_seventeen_thirtieths_le_native
+
+GafniTao.exceptionalExponent_two_fifteenths_add_le_native
+```
+
+The first theorem is exactly:
+
+```math
+\mu\!\left(\frac{17}{30}\right)
+\le
+\frac{7}{12}.
+```
+
+The second theorem proves, for:
+
+```math
+0<\Delta\le\frac{1}{100},
+```
+
+that:
+
+```math
+\mu\!\left(\frac{2}{15}+\Delta\right)
+\le
+1-\frac{9\Delta}{13}.
+```
+
+These two Section 3 sample modules are **not yet imported by `Extension/GafniTao.lean` and are not yet on the central `Audit.lean` surface**.
+
+The mathematical status is therefore:
+
+> **The core Gafni-Tao theorem is release-integrated and centrally audited. Both displayed Section 3 sample bounds are now proved in the development workbench and await release-root and central-audit promotion.**
+
+The stronger full three-cell predicate:
 
 ```lean
 GafniTao.HeathBrownZeroEnergyBounds
 ```
 
-The Pintz `23/24` cutoff needed for the second published sample is now proved natively:
+remains open.
 
-```lean
-GafniTao.pintzTwentyThreeTwentyFourCutoff_native
-```
+It is no longer required for the first displayed sample, because the native first-sample proof confines the optimizing parameter to the range covered by the first two proved Heath-Brown cells.
 
-The exact second-sample exponent algebra is already proved in `Section3Algebra.lean`.
-
-Thus the second sample has no remaining Pintz source-theorem gap. Its remaining work is publication-facing composition and release integration of the Section 3 result.
-
-The complete paper-facing project is **not yet claimed complete**.
+The complete publication-facing project is therefore **very near completion but not yet claimed complete**.
 
 ---
 
@@ -94,8 +116,8 @@ The project targets the actual mathematical dependency chain used in the paper:
 - finite-strip and epsilon limiting;
 - near-one zero-free and density inputs;
 - Theorems 1.3, 1.2, and 1.1;
-- the two displayed Section 3 consequences;
-- any later certified numerical envelope that is explicitly claimed.
+- the displayed Section 3 numerical consequences;
+- optional stronger source-fidelity and optimizer results where explicitly pursued.
 
 This work does not prove the Riemann Hypothesis.
 
@@ -147,7 +169,7 @@ X^{\xi}
 \longrightarrow
 \mu_{\delta}(\theta)
 \longrightarrow
-\mu(\theta)
+\mu(\theta).
 ```
 
 This chain is release-root integrated.
@@ -186,9 +208,9 @@ VK count vanishing       Pintz near-one detector
              Guth-Maynard Theorem 1.1
 ```
 
-That chain is now also release-root integrated and centrally audited.
+That chain is also release-root integrated and centrally audited.
 
-The Section 3 dependency graph is currently:
+The first displayed Section 3 sample now follows:
 
 ```text
 Wooley Corollary 3.2
@@ -203,39 +225,57 @@ VMVT main conjecture
 Heath-Brown kth derivative
         |
         v
-pair-count / detector / energy extraction
+zero-shell and energy extraction
         |
         v
-HeathBrownZeroEnergyBounds
+native first HB energy cell
+        +
+native second HB energy cell
+        |
+        v
+optimizer confined below 3/4
+        |
+        v
+refined exponent <= 7/12
+        |
+        v
+native Theorem 1.3
         |
         v
 mu(17/30) <= 7/12
 ```
 
-and:
+The second displayed sample follows:
 
 ```text
-native Pintz 2023 source chain
+native Pintz source chain
         |
         v
-Pintz 23/24 cutoff
+native 23/24 cutoff
         |
         v
 second-sample exponent algebra
         |
         v
-small-Delta published result
+native Theorem 1.3
+        |
+        v
+mu(2/15 + Delta) <= 1 - 9 Delta / 13
 ```
 
-The second chain has reached the cutoff theorem.
+for the explicit formalized range:
 
-The first chain remains open at the final zero-energy envelope.
+```math
+0<\Delta\le\frac{1}{100}.
+```
+
+Both final sample theorems currently remain outside the release root and central audit.
 
 ---
 
-# Current status
+# Current status table
 
-| Proof layer | Mathematical state | Root / audit state |
+| Proof layer | Mathematical state | Release / audit state |
 |---|---|---|
 | Exact exceptional set | Proved | Integrated and audited |
 | `mu_delta` / `mu` machinery | Proved | Integrated and audited |
@@ -256,22 +296,24 @@ The first chain remains open at the final zero-energy envelope.
 | Native Pintz near-one package | Proved | Integrated and audited |
 | Exact native Theorem 1.3 | Proved | Integrated and audited |
 | Exact native Theorem 1.2 | Proved | Integrated and audited |
-| Native Theorem 1.1, GM `30/13` | Proved | Integrated and audited |
-| Wooley source Corollary 3.2 | Proved | Consumer chain integrated |
-| VMVT main conjecture | Proved | Integrated and audited |
-| Heath-Brown kth derivative theorem | Proved | Integrated and audited |
+| Native Theorem 1.1 | Proved | Integrated and audited |
 | Pintz `23/24` cutoff | Proved | Integrated and audited |
-| Signed-shell energy extraction | Proved infrastructure | Integrated and audited |
-| Translation into GM base interval | Proved | Integrated and audited |
+| Wooley Corollary 3.2 | Proved | Integrated transitively |
+| VMVT main conjecture | Proved | Integrated and audited |
+| Heath-Brown kth derivative | Proved | Integrated and audited |
+| GM energy translation bridge | Proved | Integrated and audited |
 | Powered GM energy bridge | Proved | Integrated and audited |
-| Heath-Brown zero-energy envelope | Open | Active |
-| First published sample algebra | Proved conditionally | Section 3 workbench |
-| First published sample | Awaiting Heath-Brown energy envelope | Open |
-| Second published sample algebra | Proved | Section 3 workbench |
-| Pintz source gate for second sample | Closed | Integrated and audited |
-| Final second-sample wrapper | Composition / promotion pending | Active |
-| Full certified Section 3 optimizer | Open | Optional later phase |
-| Final audit execution and inspection | Pending final release pass | Active |
+| Heath-Brown first energy cell | Proved | Workbench, local audit |
+| Heath-Brown second energy cell | Proved | Workbench, local audit |
+| First published sample | Proved | Workbench, local audit |
+| Second published sample | Proved | Workbench, local audit |
+| Full three-cell `HeathBrownZeroEnergyBounds` | Open | Optional stronger target |
+| Optimized Ford source constants | Open | Optional source-fidelity targets |
+| Full certified Section 3 envelope | Open | Optional later phase |
+| Final sample root integration | Pending | Active |
+| Final central audit promotion | Pending | Active |
+| Final release execution / inspection | Pending | Active |
+| Repository cleanup | Pending | Active |
 
 ---
 
@@ -308,21 +350,21 @@ and:
 The development includes:
 
 - measurability;
-- finite-measure facts;
+- finite measure;
 - threshold monotonicity;
 - fixed-power eventual bounds;
-- epsilon-exponent machinery where appropriate;
+- epsilon-exponent machinery where required;
 - eventual-empty behavior;
 - countable positive-threshold reduction;
 - exact `EReal` infimum and supremum behavior.
 
-The arithmetic interval convention remains:
+The arithmetic interval convention is:
 
 ```text
 x < n <= x + x^theta
 ```
 
-and the outer exceptional interval remains:
+and the outer exceptional interval is:
 
 ```text
 X <= x <= 2X.
@@ -344,28 +386,30 @@ and the four-zero additive-energy quantity is:
 N^{\ast}(\sigma,T).
 ```
 
-The latter counts ordered four-tuples of zero occurrences with analytic multiplicity and the source tolerance:
+The four-zero object counts ordered zero occurrences with analytic multiplicity and source tolerance:
 
 ```math
-|\gamma_{1}+\gamma_{2}-\gamma_{3}-\gamma_{4}|
+\left|
+\gamma_{1}+\gamma_{2}-\gamma_{3}-\gamma_{4}
+\right|
 \le 1.
 ```
 
-The project does not replace the source object by an unweighted set of distinct ordinates.
+The project does not replace this quantity by an unweighted energy of distinct ordinates.
 
-The associated exponent interfaces `A` and `A*` feed the second- and fourth-moment arguments.
+The exponent interfaces `A` and `A*` feed the second- and fourth-moment branches.
 
 ---
 
 # Native sharp truncated explicit formula
 
-The root-integrated native endpoint is:
+The root-integrated endpoint is:
 
 ```lean
 GafniTao.sharpTruncatedExplicitFormulaBound_native
 ```
 
-The supporting sharp-Perron development handles:
+The supporting sharp-Perron chain handles:
 
 - finite Mangoldt Perron identities;
 - logarithmic-derivative expansions;
@@ -373,20 +417,19 @@ The supporting sharp-Perron development handles:
 - residues;
 - analytic zero multiplicity;
 - selected good heights;
-- horizontal and vertical edges;
-- left-edge estimates;
+- right, horizontal, and left edges;
 - functional-equation input;
 - low heights;
 - arbitrary real endpoints;
-- endpoint-uniform cutoff estimates.
+- endpoint-uniform estimates.
 
 The physical range includes:
 
 ```math
-2 \le T \le x.
+2\le T\le x.
 ```
 
-This analytic input is internally supplied by the native Gafni-Tao theorem.
+This analytic input is supplied internally by the native Gafni-Tao theorem.
 
 ---
 
@@ -426,86 +469,38 @@ remaining strip
           Markov
 ```
 
-These strip estimates are assembled into the full large-zero-sum measure estimate.
+These strip estimates are assembled into the complete large-zero-sum measure estimate.
 
 The finite strip count and epsilon are then removed by the exact limiting argument without imposing continuity on the density exponent.
 
 ---
 
-# Native Vinogradov-Korobov theorem
+# Native Gafni-Tao core
 
-The root now imports:
+The release root imports:
 
 ```text
 FordAsymptoticZeroFree
+PintzNearOneNative
+NativeTheorems
+Theorem11
 ```
 
-and the central audit contains:
+The central audit contains:
 
 ```lean
 GafniTao.ford_asymptotic_zero_free_native
-```
-
-with type:
-
-```lean
-FordAsymptoticZeroFree
-```
-
-This closes the existential zero-free input needed by the core Gafni-Tao theorem.
-
-The proof uses the qualitative Richert-Ford growth machinery together with the five-frequency Vinogradov-Korobov detector.
-
-The older fully optimized Ford constants are not required for this core theorem route.
-
----
-
-# Native near-one density package
-
-The root now imports:
-
-```text
-PintzNearOneNative
-```
-
-and the central audit contains:
-
-```lean
 GafniTao.exists_pintz_nearOne_log_density_native
-```
 
-The theorem supplies:
-
-```text
-a positive VK width
-a count-vanishing threshold
-a sufficient logarithmic near-one density bound
-```
-
-The logarithmic density input uses the proved Pintz route rather than requiring the older optimized Ford `58.05 / log^16` package.
-
-This native input is sufficient for the exact Gafni-Tao theorem.
-
----
-
-# Exact native Theorems 1.3 and 1.2
-
-The root now imports:
-
-```text
-NativeTheorems
-```
-
-and the central audit explicitly contains:
-
-```lean
 GafniTao.gafniTaoTheorem13_native
 GafniTao.gafniTaoTheorem12_native
 GafniTao.gafniTaoTheorem13_max_native
 GafniTao.gafniTaoTheorem12_max_native
+
+GafniTao.gafniTaoTheorem11_guthMaynard_native
 ```
 
-The refined theorem proves:
+The refined native theorem proves:
 
 ```math
 \mu(\theta)
@@ -527,36 +522,22 @@ The ordinary theorem proves:
 \mathrm{ordinaryExceptionalUpperExponent}(\theta).
 ```
 
-The exact source-exponent forms and alternate upper-half max forms remain separately named.
-
 The native theorem supplies internally:
 
 - the frozen Guth-Maynard smooth cutoff;
 - the native sharp explicit formula;
-- the native near-one density input;
-- the native VK zero-free theorem.
+- the native near-one density package;
+- the native Vinogradov-Korobov zero-free theorem.
 
-There is no longer a project-level source assumption at the top of the native general theorem.
+The core theorem therefore no longer accepts project-level analytic source assumptions.
 
 ---
 
 # Native Theorem 1.1
 
-The root now imports:
+The release root imports `Theorem11`.
 
-```text
-Theorem11
-```
-
-and the central audit contains:
-
-```lean
-GafniTao.gafniTaoTheorem11_guthMaynard_native
-GafniTao.gafniTaoTheorem11_guthMaynard_allIntervals_regression
-GafniTao.gafniTaoTheorem11_guthMaynard_almostAll_regression
-```
-
-using the frozen Guth-Maynard density coefficient:
+The central audit contains the native Guth-Maynard specialization using:
 
 ```math
 A_{0}
@@ -576,15 +557,13 @@ The almost-all threshold is:
 \theta>\frac{2}{15}.
 ```
 
-The almost-all result is represented using a single measurable exceptional set of ordinary natural density zero.
+The almost-all theorem produces one measurable exceptional set of ordinary natural density zero.
 
 ---
 
-# Pintz Section 3 cutoff
+# Native Pintz Section 3 cutoff
 
-The previous Section 3 Pintz gate has now been closed.
-
-The root imports:
+The release root imports:
 
 ```text
 PintzPublishedCutoffNative
@@ -596,83 +575,19 @@ and the central audit contains:
 GafniTao.pintzTwentyThreeTwentyFourCutoff_native
 ```
 
-with exact type:
+which proves:
 
 ```lean
 PintzTwentyThreeTwentyFourCutoff
 ```
 
-The theorem proves that for:
+for the actual multiplicity-weighted zero-count model.
 
-```math
-\frac{23}{24}<\sigma<1,
-```
-
-the ordinary zero-density envelope has coefficient at most one.
-
-It does so using the actual native Pintz cell machinery and the project's symmetric multiplicity-weighted zero count.
-
-Thus the source assumption required by the second Section 3 sample has been eliminated.
+The Pintz source gate required for the second Section 3 sample is therefore closed.
 
 ---
 
-# Second published Section 3 sample
-
-`Section3Algebra.lean` already proves:
-
-```lean
-GafniTao.refinedExceptionalUpperExponent_two_fifteenths_add_le
-```
-
-from:
-
-```lean
-PintzTwentyThreeTwentyFourCutoff.
-```
-
-The theorem states, for:
-
-```math
-0<\Delta\le\frac{1}{100},
-```
-
-that:
-
-```math
-\mathrm{refinedExceptionalUpperExponent}
-\left(
-\frac{2}{15}+\Delta
-\right)
-\le
-1-\frac{9\Delta}{13}.
-```
-
-Since:
-
-```lean
-GafniTao.pintzTwentyThreeTwentyFourCutoff_native
-```
-
-is now proved, the mathematical source gate for this sample is closed.
-
-The remaining task is to create or promote the publication-facing unconditional composition with:
-
-```lean
-GafniTao.gafniTaoTheorem13_native.
-```
-
-The second sample should therefore be described as:
-
-```text
-source mathematics closed;
-final public composition and release promotion pending.
-```
-
----
-
-# Wooley / VMVT chain
-
-The Wooley source campaign has reached its intended theorem.
+# Wooley / VMVT / Heath-Brown derivative chain
 
 The source target:
 
@@ -680,125 +595,122 @@ The source target:
 GafniTao.WooleyPolynomialCorollary32
 ```
 
-is proved by:
+has a native proof.
 
-```lean
-GafniTao.wooleyPolynomialCorollary32_native.
-```
-
-The downstream bridge then yields the native VMVT main-conjecture input:
+The downstream chain then proves:
 
 ```lean
 GafniTao.heathBrownVMVTMainConjecture_native
-```
-
-and the native Heath-Brown kth-derivative theorem:
-
-```lean
 GafniTao.heathBrownKthDerivativeTheorem_native.
 ```
 
-`WooleyNative` is now imported by the root, and the latter two endpoints are explicitly present in the central audit.
+The latter two endpoints are root-integrated and centrally audited.
 
-Thus the former Wooley / VMVT branch is no longer an open mathematical dependency.
+Thus the former Wooley / VMVT dependency is no longer an open mathematical branch.
 
 ---
 
-# Heath-Brown energy campaign
+# Native low-range Heath-Brown energy bounds
 
-This is now the main mathematical frontier.
+The workbench now proves the first two source energy cells directly against the genuine multiplicity-weighted zero additive energy.
 
-The target is:
+## First cell
 
-```lean
-GafniTao.HeathBrownZeroEnergyBounds
+For:
+
+```math
+\frac{1}{2}\le\sigma\le\frac{2}{3},
 ```
 
-which requires the three source cells:
+the theorem:
+
+```lean
+GafniTao.heathBrown_zeroAdditiveEnergy_first_native
+```
+
+proves:
 
 ```math
 A^{\ast}(\sigma)
 \le
 \frac{10-11\sigma}
-{(2-\sigma)(1-\sigma)}
+{(2-\sigma)(1-\sigma)}.
 ```
 
-on the first range,
+The left endpoint is handled explicitly through the Ingham density theorem and a zero-energy comparison.
+
+It is not obtained by assuming continuity of the exponent infimum.
+
+## Second cell
+
+For:
+
+```math
+\frac{2}{3}<\sigma\le\frac{3}{4},
+```
+
+the theorem:
+
+```lean
+GafniTao.heathBrown_zeroAdditiveEnergy_second_native
+```
+
+proves:
 
 ```math
 A^{\ast}(\sigma)
 \le
 \frac{18-19\sigma}
-{(4-2\sigma)(1-\sigma)}
+{(4-2\sigma)(1-\sigma)}.
 ```
 
-on the middle range, and:
-
-```math
-A^{\ast}(\sigma)
-\le
-\frac{12}{4\sigma-1}
-```
-
-on the upper range.
-
-The native kth-derivative theorem and source-shaped finite pair-count machinery already exist.
-
-The current campaign is now attacking the convention and extraction problem between zeta-zero energy and the frozen Guth-Maynard large-values machinery.
-
----
-
-# New energy-detector bridge
-
-The root now imports:
+These two theorems are locally audited inside:
 
 ```text
-EnergyDetectorTranslation
-EnergyDetectorPoweredTranslation
+HeathBrownZeroEnergyLowNative.lean
 ```
 
-and the central audit contains representative endpoints from these modules.
-
-The translation layer proves exact identities for:
-
-- translating a symmetric ordinate set into the frozen GM base interval;
-- preserving cardinality;
-- preserving separation;
-- translating Dirichlet-polynomial values by an exact unimodular phase twist;
-- preserving coefficient norm bounds;
-- transporting approximate additive energy by equality.
-
-The powered-energy layer then proves:
-
-```lean
-GafniTao.finite_symmetric_source_powered_energy_gm_bound
-```
-
-which starts with a separated symmetric large-value set and:
-
-1. translates it into the frozen GM interval;
-2. applies the exact phase twist;
-3. raises the polynomial to a controlled power;
-4. normalizes the powered coefficients;
-5. splits the energy into four coordinate classes;
-6. feeds those classes into the frozen Guth-Maynard energy theorem;
-7. transfers the resulting energy bound back to the original symmetric set.
-
-This is now part of the root and central audit.
-
-It is a direct bridge toward:
-
-```lean
-HeathBrownZeroEnergyBounds.
-```
-
-The bridge is not yet the final three-cell zero-energy theorem.
+They are not yet imported through the central release root.
 
 ---
 
 # First published Section 3 sample
 
-The target remains:
+The first displayed sample no longer requires the full three-cell Heath-Brown package.
+
+The native proof observes that the frozen Guth-Maynard density constraint forces the optimizing parameter into an arbitrarily small neighborhood of:
+
+```math
+\frac{7}{10},
+```
+
+and therefore below:
+
+```math
+\frac{3}{4}.
+```
+
+Only the first two native Heath-Brown cells are required.
+
+The workbench proves:
+
+```lean
+GafniTao.first_sample_fixed_epsilon_bound_native
+```
+
+and then:
+
+```lean
+GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le_native.
+```
+
+The publication-facing theorem is:
+
+```lean
+GafniTao.exceptionalExponent_seventeen_thirtieths_le_native
+```
+
+with exact conclusion:
 
 ```math
 \mu\!\left(\frac{17}{30}\right)
@@ -806,44 +718,191 @@ The target remains:
 \frac{7}{12}.
 ```
 
-The exact exponent algebra is already proved in:
+This theorem directly composes the native Section 3 exponent bound with:
 
 ```lean
-GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le
+GafniTao.gafniTaoTheorem13_native.
 ```
 
-conditional only on:
+No `HeathBrownZeroEnergyBounds` assumption appears in the final theorem.
+
+---
+
+# Second published Section 3 sample
+
+The workbench now also proves the final second displayed sample:
 
 ```lean
-HeathBrownZeroEnergyBounds.
+GafniTao.exceptionalExponent_two_fifteenths_add_le_native
 ```
 
-Therefore the remaining mathematical source task for the first sample is sharply isolated:
+for:
+
+```math
+0<\Delta\le\frac{1}{100}.
+```
+
+Its conclusion is:
+
+```math
+\mu\!\left(
+\frac{2}{15}+\Delta
+\right)
+\le
+1-\frac{9\Delta}{13}.
+```
+
+The proof directly composes:
+
+```lean
+GafniTao.gafniTaoTheorem13_native
+```
+
+with:
+
+```lean
+GafniTao.refinedExceptionalUpperExponent_two_fifteenths_add_le
+```
+
+using:
+
+```lean
+GafniTao.pintzTwentyThreeTwentyFourCutoff_native.
+```
+
+Thus both the source input and final mathematical composition are now proved.
+
+---
+
+# Section 3 release status
+
+The two final sample theorems exist in:
 
 ```text
-native kth-derivative theorem
-        |
-        v
-zero-shell / large-value extraction
-        |
-        v
-powered GM energy bridge
-        |
-        v
-HeathBrownZeroEnergyBounds
-        |
-        v
-existing Section 3 algebra
-        |
-        v
-mu(17/30) <= 7/12
+Section3NativeSamples.lean
+```
+
+which imports:
+
+```text
+HeathBrownZeroEnergyLowNative
+PintzPublishedCutoffNative
+Section3Algebra
+```
+
+That module locally checks:
+
+```lean
+first_sample_fixed_epsilon_bound_native
+refinedExceptionalUpperExponent_seventeen_thirtieths_le_native
+exceptionalExponent_seventeen_thirtieths_le_native
+exceptionalExponent_two_fifteenths_add_le_native
+```
+
+with `#print axioms`.
+
+However:
+
+```text
+HeathBrownZeroEnergyLowNative
+Section3NativeSamples
+```
+
+are not yet imported by the central release root.
+
+Their endpoints do not yet appear in central `Audit.lean`.
+
+Therefore the two published samples should currently be described as:
+
+```text
+mathematically proved
+locally dependency-audited
+release promotion pending
+```
+
+rather than:
+
+```text
+fully release-certified.
 ```
 
 ---
 
-# Older optimized Ford objectives
+# Stronger full Heath-Brown envelope
 
-The repository still contains source-facing objectives such as:
+The source-facing predicate:
+
+```lean
+GafniTao.HeathBrownZeroEnergyBounds
+```
+
+contains three piecewise cells.
+
+The first two are now proved natively.
+
+The third high-range cell remains active.
+
+The full three-cell package is stronger than what is required for the first displayed Gafni-Tao sample.
+
+It therefore belongs in the remaining program as:
+
+```text
+stronger Section 3 source theorem
+full-envelope / source-fidelity target
+```
+
+rather than as a blocker to:
+
+```math
+\mu\!\left(\frac{17}{30}\right)
+\le
+\frac{7}{12}.
+```
+
+The ongoing high-cell development remains useful for:
+
+- the full published energy envelope;
+- broader Section 3 optimization;
+- reusable four-zero energy theory;
+- source fidelity.
+
+---
+
+# Energy-detector bridge
+
+The release root already imports:
+
+```text
+EnergyDetectorTranslation
+EnergyDetectorPoweredTranslation
+```
+
+and central `Audit.lean` contains representative endpoints from this chain.
+
+The bridge proves exact operations for:
+
+- translating symmetric ordinate sets into the frozen GM interval;
+- preserving cardinality and separation;
+- translating the Dirichlet polynomial by an exact phase twist;
+- preserving coefficient norm bounds;
+- powering the polynomial;
+- splitting approximate additive energy into color classes;
+- feeding those classes into the frozen Guth-Maynard energy theorem;
+- transporting the resulting energy estimate back to the original set.
+
+A representative endpoint is:
+
+```lean
+GafniTao.finite_symmetric_source_powered_energy_gm_bound.
+```
+
+This machinery feeds the native low-range Heath-Brown energy results and the remaining high-cell program.
+
+---
+
+# Optional optimized Ford objectives
+
+The repository still contains source-facing targets such as:
 
 ```lean
 GafniTao.FordTheorem2
@@ -853,63 +912,57 @@ GafniTao.FordNearOneDensityEstimate
 
 with the original optimized Ford constants.
 
-These are no longer blockers to the native core Gafni-Tao theorem.
+These are not blockers to:
 
-The native Pintz/VK route already supplies sufficient analytic inputs.
+- native Theorem 1.3;
+- native Theorem 1.2;
+- native Theorem 1.1;
+- either displayed Section 3 sample.
 
-They should therefore be classified as:
+The native Pintz/VK path already supplies the analytic inputs required for those results.
+
+The optimized Ford contracts should therefore be classified as:
 
 ```text
-source-fidelity / optimization objectives
+optional source-fidelity and reusable-analysis objectives.
 ```
-
-rather than:
-
-```text
-core theorem blockers.
-```
-
-They may still be worth completing independently.
 
 ---
 
-# Release integration state
+# Optional full Section 3 optimizer
 
-The native core integration gate has substantially closed.
+The displayed samples are now mathematically proved.
 
-The root now contains:
+A larger optional target is the full piecewise Section 3 envelope.
 
-```text
-FordAsymptoticZeroFree
-PintzNearOneNative
-NativeTheorems
-Theorem11
-PintzPublishedCutoffNative
-WooleyNative
-EnergyDetectorTranslation
-EnergyDetectorPoweredTranslation
-```
+If pursued, it should:
 
-The central audit explicitly lists the major native endpoints from these branches.
+1. pin the exact source tables;
+2. state every piecewise input explicitly;
+3. prove endpoint compatibility;
+4. reduce the optimization to finitely many exact cells;
+5. certify the cells in Lean;
+6. use floating-point calculations only for exploration and checking.
 
-What remains for final release certification is not merely import wiring.
-
-It is the final execution and inspection step:
-
-1. build the isolated package;
-2. run the central audit;
-3. inspect the actual `#print axioms` output;
-4. run the forbidden-token/source scan;
-5. remove or classify development debris;
-6. synchronize all public documentation.
-
-The existence of `#print axioms` commands in `Audit.lean` does not by itself certify that their output has been freshly inspected.
+The still-open high Heath-Brown cell may matter for this stronger objective even though it is unnecessary for the first displayed sample.
 
 ---
 
-# Central audit
+# Central audit status
 
-The central audit now includes, among many others:
+The central audit is:
+
+```text
+Extension/GafniTao/Audit.lean
+```
+
+and imports:
+
+```lean
+import GafniTao.
+```
+
+It already covers the native core, including:
 
 ```lean
 GafniTao.ford_asymptotic_zero_free_native
@@ -926,18 +979,23 @@ GafniTao.pintzTwentyThreeTwentyFourCutoff_native
 
 GafniTao.heathBrownVMVTMainConjecture_native
 GafniTao.heathBrownKthDerivativeTheorem_native
-
-GafniTao.absoluteSlab_sharpMollified_energy_extraction
-GafniTao.sourceDirichletPoly_translate
-GafniTao.sourceDirichletPoly_large_on_gmTranslate
-GafniTao.exists_source_powered_dyadic_index
-GafniTao.exists_source_normalized_powered_block
-GafniTao.exists_real_energy_color_classes
-GafniTao.finite_source_powered_energy_gm_bound
-GafniTao.finite_symmetric_source_powered_energy_gm_bound
 ```
 
-This is now a much better reflection of the current mathematical frontier.
+It also covers major energy-translation endpoints.
+
+It does not yet centrally audit:
+
+```lean
+GafniTao.heathBrown_zeroAdditiveEnergy_first_native
+GafniTao.heathBrown_zeroAdditiveEnergy_second_native
+
+GafniTao.first_sample_fixed_epsilon_bound_native
+GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le_native
+GafniTao.exceptionalExponent_seventeen_thirtieths_le_native
+GafniTao.exceptionalExponent_two_fifteenths_add_le_native
+```
+
+because the corresponding modules have not yet been promoted into the release root.
 
 ---
 
@@ -966,11 +1024,9 @@ Interpret the results carefully.
 
 Compilation alone is not enough.
 
-A `Prop` that restates a source theorem is not a proof of that theorem.
+A local `#print axioms` check does not replace central release-audit promotion.
 
-An audit source file containing `#print axioms` commands is not equivalent to inspection of their actual output.
-
-Generated certificate data is acceptable only when Lean independently verifies it.
+A theorem is publication-facing only after the intended dependency path is imported, built, and inspected.
 
 ---
 
@@ -989,15 +1045,15 @@ compiled caches
 extraction artifacts
 ```
 
-These must remain distinct.
-
 Before final release:
 
-- remove accidental temporary environments and caches;
-- keep source references intentionally;
-- retain certificate generators only where useful for reproduction;
+- remove accidental temporary Python environments;
+- remove compiled caches;
+- remove obsolete extraction debris;
+- keep intentionally pinned source material;
+- keep certificate generators only where useful for reproduction;
 - ensure generated certificate data is independently checked by Lean;
-- keep temporary probes out of the publication-facing dependency path.
+- keep temporary probes outside the publication-facing dependency graph.
 
 ---
 
@@ -1074,20 +1130,20 @@ A publication-facing theorem is accepted only when every applicable condition ho
 
 The strongest safe summary of the repository at present is:
 
-> The core Gafni-Tao formalization is now root-integrated and represented on the central audit surface. This includes the native Vinogradov-Korobov zero-free theorem, a sufficient native Pintz near-one density package, exact native Theorems 1.3 and 1.2, and the Guth-Maynard `30/13` specialization of Theorem 1.1. The Wooley-to-VMVT-to-Heath-Brown kth-derivative chain is also proved and integrated. Pintz's `23/24` Section 3 cutoff is now proved natively, root-integrated, and centrally audited. The remaining major mathematical source gate is the Heath-Brown multiplicity-weighted four-zero energy envelope needed for the first published sample. A new root-integrated energy-detector translation and powered Guth-Maynard bridge directly attacks that remaining gap. The second sample's Pintz source gate is closed, with final publication-facing composition still to be promoted.
+> The core Gafni-Tao formalization is root-integrated and represented on the central audit surface. This includes the native Vinogradov-Korobov zero-free theorem, a sufficient native Pintz near-one density package, exact native Theorems 1.3 and 1.2, the Guth-Maynard `30/13` specialization of Theorem 1.1, the native Pintz `23/24` cutoff, and the Wooley-to-VMVT-to-Heath-Brown kth-derivative chain. Beyond that release root, the development workbench now proves the first two Heath-Brown four-zero energy cells and both displayed Section 3 sample results. Those final sample modules remain to be imported into the release root and added to the central audit. The stronger third Heath-Brown energy cell, full three-cell envelope, optimized Ford constants, and full certified Section 3 optimizer remain optional or broader continuation targets.
 
-Do not currently claim:
+Do not yet claim:
 
 ```text
-The complete Gafni-Tao paper formalization is finished.
+The entire isolated package has completed its final release certification.
 ```
 
 A concise current claim is:
 
 ```text
 Core Gafni-Tao release path integrated;
-Pintz Section 3 cutoff closed;
-Heath-Brown zero-energy envelope remains the main mathematical gate.
+both displayed Section 3 samples proved;
+final sample promotion and release certification pending.
 ```
 
 ---
@@ -1121,118 +1177,81 @@ Then update the documentation.
 
 # Near-term execution order
 
-## 1. Close `HeathBrownZeroEnergyBounds`
+## 1. Promote the native Section 3 sample chain
 
-This is now the principal mathematical source gate.
-
-Use the existing chain:
+Import:
 
 ```text
-native Heath-Brown kth derivative
-        |
-        v
-finite pair-count estimates
-        |
-        v
-signed zero-shell extraction
-        |
-        v
-exact symmetric-set translation
-        |
-        v
-powered GM large-values bridge
-        |
-        v
-three-cell zero-energy envelope
+HeathBrownZeroEnergyLowNative
+Section3NativeSamples
 ```
 
-The final target is:
+through:
+
+```text
+Extension/GafniTao.lean.
+```
+
+Then add the public endpoints to central `Audit.lean`:
 
 ```lean
-GafniTao.HeathBrownZeroEnergyBounds
+GafniTao.heathBrown_zeroAdditiveEnergy_first_native
+GafniTao.heathBrown_zeroAdditiveEnergy_second_native
+
+GafniTao.first_sample_fixed_epsilon_bound_native
+GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le_native
+GafniTao.exceptionalExponent_seventeen_thirtieths_le_native
+GafniTao.exceptionalExponent_two_fifteenths_add_le_native
 ```
 
-on the genuine multiplicity-weighted `N*` object.
+Run the complete isolated build and inspect actual dependency output.
 
 ---
 
-## 2. Close the first published sample
+## 2. Synchronize the public project-control documents
 
-Once the energy envelope is proved, combine it with:
+Once the sample modules are promoted, update:
 
-```lean
-GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le
+```text
+README.md
+Gafni-Tao Architecture.md
+Gafni-Tao Crosswalk.md
+Gafni-Tao Shitlist.md
+Gafni-Tao Research Agenda.md
 ```
 
-and:
-
-```lean
-GafniTao.gafniTaoTheorem13_native
-```
-
-to prove the publication-facing theorem:
-
-```math
-\mu\!\left(\frac{17}{30}\right)
-\le
-\frac{7}{12}.
-```
+so the displayed samples are no longer described as pending mathematical results.
 
 ---
 
-## 3. Promote the second published sample
+## 3. Decide the scope of the stronger Heath-Brown program
 
-The Pintz `23/24` cutoff is now native.
+The first two cells suffice for the first displayed sample.
 
-Use:
-
-```lean
-GafniTao.pintzTwentyThreeTwentyFourCutoff_native
-```
-
-with:
+Decide whether to continue immediately toward:
 
 ```lean
-GafniTao.refinedExceptionalUpperExponent_two_fifteenths_add_le
+HeathBrownZeroEnergyBounds
 ```
 
-and:
+including the third high-range cell.
 
-```lean
-GafniTao.gafniTaoTheorem13_native
-```
+Reasons to continue include:
 
-to construct the unconditional public theorem on the already formalized range:
+- source fidelity;
+- the full Section 3 envelope;
+- reusable energy machinery;
+- future downstream consumers.
 
-```math
-0<\Delta\le\frac{1}{100}.
-```
-
-The target conclusion is:
-
-```math
-\mu\!\left(\frac{2}{15}+\Delta\right)
-\le
-1-\frac{9\Delta}{13}.
-```
+It is no longer required to claim the first displayed sample.
 
 ---
 
-## 4. Promote Section 3 modules into the release path
+## 4. Decide whether to finish the optimized Ford objectives
 
-After the public sample theorems exist:
+The optimized Ford contracts are not needed for the native Gafni-Tao results already proved.
 
-- import the intended Section 3 modules through `GafniTao.lean`;
-- add their public endpoints to `Audit.lean`;
-- inspect actual dependency output.
-
----
-
-## 5. Decide whether to finish optimized Ford objectives
-
-The optimized Ford contracts are no longer needed by the core Gafni-Tao proof.
-
-Decide separately whether the project should also close:
+Possible continuation targets are:
 
 ```lean
 FordTheorem2
@@ -1240,35 +1259,35 @@ FordZetaGrowthBound
 FordNearOneDensityEstimate
 ```
 
-for source fidelity and reusable analytic value.
+Treat these as independent analytic formalization goals rather than blockers.
 
 ---
 
-## 6. Full certified Section 3 optimizer
+## 5. Full certified Section 3 optimizer
 
-Only after the displayed sample bounds are complete should the optional full numerical envelope become the main task.
+If the full numerical envelope is in project scope:
 
-Pin the exact source tables.
+- pin all source tables;
+- formalize each source segment;
+- prove endpoint compatibility;
+- reduce optimization to exact finite cells;
+- certify every cell in Lean.
 
-Reduce the optimization to finitely many exact cells.
-
-Certify the cells in Lean.
-
-Do not use floating-point calculations as proof evidence.
+Do this after the displayed sample theorems are release-integrated.
 
 ---
 
-## 7. Final release audit
+## 6. Final release pass
 
-Before the final completion claim:
+Before declaring the current scoped project complete:
 
-1. run `lake build`;
-2. execute the central `Audit.lean`;
-3. inspect every nonstandard axiom dependency;
-4. scan for unfinished declarations;
-5. clean temporary environments, caches, and probes;
-6. synchronize all public documentation;
-7. confirm the final theorem path is reachable from the isolated root.
+1. run the complete isolated build;
+2. execute central `Audit.lean`;
+3. inspect the actual axiom output;
+4. run the forbidden-token scan;
+5. remove temporary environments, caches, and probes;
+6. synchronize documentation;
+7. verify that both public sample theorems are reachable from `GafniTao.lean`.
 
 ---
 
@@ -1282,27 +1301,27 @@ It is not proof verification.
 
 Agents must not push unless separately instructed.
 
-Use completion-language commit messages only after the corresponding theorem is actually closed.
+Use completion-language commit messages only after the corresponding release step is actually finished.
 
 Examples:
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: close Heath-Brown zero-energy envelope"
+push_to_github.bat "PostGM Gafni-Tao: integrate both native Section 3 sample theorems"
 ```
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: close first published Section 3 sample"
+push_to_github.bat "PostGM Gafni-Tao: complete central audit of published sample bounds"
 ```
 
 ```bat
-push_to_github.bat "PostGM Gafni-Tao: integrate second published Section 3 sample"
+push_to_github.bat "PostGM Gafni-Tao: close full Heath-Brown three-cell energy envelope"
 ```
 
 ---
 
 # Completion condition
 
-The core theorem path is now structurally:
+The core theorem path is already:
 
 ```text
 frozen Guth-Maynard foundation
@@ -1327,18 +1346,15 @@ native sharp explicit formula     native near-one package
            Guth-Maynard Theorem 1.1
 ```
 
-and is imported through the isolated root and represented on the central audit surface.
+and is release-root integrated.
 
-The full paper-facing phase additionally requires:
+The two displayed Section 3 mathematical paths are now:
 
 ```text
-native Heath-Brown kth derivative
+native HB first and second cells
              |
              v
-energy extraction and GM bridge
-             |
-             v
-HeathBrownZeroEnergyBounds
+first-sample optimizer
              |
              v
 mu(17/30) <= 7/12
@@ -1350,14 +1366,38 @@ and:
 native Pintz 23/24 cutoff
              |
              v
-existing second-sample algebra
+second-sample algebra
              |
              v
-small-Delta public theorem
+mu(2/15 + Delta) <= 1 - 9 Delta / 13
 ```
 
-The Pintz source gate in the second branch is now closed.
+for:
 
-Until the remaining composition and Heath-Brown energy theorem are finished:
+```math
+0<\Delta\le\frac{1}{100}.
+```
 
-**the core Gafni-Tao release path is integrated, the Pintz Section 3 cutoff is closed, and the Heath-Brown zero-energy envelope is the main remaining mathematical gate.**
+Both final theorems exist.
+
+The immediate completion gate is now:
+
+```text
+Section3NativeSamples
+        |
+        v
+release-root import
+        |
+        v
+central Audit.lean
+        |
+        v
+full build and dependency inspection
+        |
+        v
+publication-facing release
+```
+
+Until that promotion is complete:
+
+**the core Gafni-Tao theorem is release-integrated, both displayed Section 3 sample bounds are mathematically proved, and final Section 3 release promotion is the immediate gate.**
