@@ -16,7 +16,7 @@ Each corridor contains numbered node directories matching the map. These are sta
 
 ## Current formalizations
 
-- The frozen [Guth--Maynard foundation](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md) occupies node 71. Its local `RiemannZeta/` directory preserves the established module layout, while the project-root Lake package and verifier point to that node.
+- The frozen [Guth--Maynard foundation](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md) occupies node 71. Its `GuthMaynard/`, collision-safe `GuthMaynardExternal/`, and support modules sit directly in that node, while the project-root Lake package and verifier use it as their source root.
 - The isolated [Gafni--Tao release](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md) occupies node 74 in the same corridor.
 
 ## Investigations outside the map

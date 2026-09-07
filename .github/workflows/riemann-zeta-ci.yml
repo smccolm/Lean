@@ -33,7 +33,7 @@ jobs:
           lake-package-directory: "Riemann Zeta"
           auto-config: false
           build: true
-          build-args: "RiemannZeta.GuthMaynard.DFITheorem1"
+          build-args: "GuthMaynard.DFITheorem1"
           lint: false
           test: false
 

@@ -4,7 +4,7 @@ Status date: 29 August 2026
 Contract identifier: `GM-PUBLICATION-CONTRACT-v1`
 
 This file fixes the source editions and statement conventions used by
-`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/PublicationContract.lean`. It is a reproducibility record, not an
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/PublicationContract.lean`. It is a reproducibility record, not an
 independent referee report. The exact Lean declarations and the canonical
 verifier remain authoritative for what the repository proves.
 

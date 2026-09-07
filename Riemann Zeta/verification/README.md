@@ -29,8 +29,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_release.ps1 -
 ```
 
 Release mode must be run from a clean checkout of the exact candidate commit.
-It classifies every `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/**/*.lean` file mechanically as root-graph or
-explicit regression coverage, scans the full Lean tree for prohibited proof
+It classifies every non-root `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/**/*.lean` file mechanically as root-graph or
+explicit regression coverage, treats `RiemannZeta.lean` as the seeded package root, scans the full Lean tree for prohibited proof
 shortcuts, builds the root, checks the five exact publication contracts, runs
 both retained regressions, executes the exhaustive dependency audit, and runs
 all project linters. Any Lean warning, tactic suggestion, linter finding,

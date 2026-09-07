@@ -215,8 +215,9 @@ function Test-ModuleClosure {
   $LocalModules = @{}
   $RootFile = Join-Path $FoundationRoot "RiemannZeta.lean"
   $LocalModules["RiemannZeta"] = $RootFile
-  $SourceRoot = Join-Path $FoundationRoot "RiemannZeta"
+  $SourceRoot = $FoundationRoot
   foreach ($File in Get-ChildItem -LiteralPath $SourceRoot -Recurse -File -Filter "*.lean") {
+    if ($File.FullName -eq $RootFile) { continue }
     $Relative = $File.FullName.Substring($FoundationRoot.Length + 1)
     $Module = ($Relative -replace "\.lean$", "") -replace "[\\/]", "."
     $LocalModules[$Module] = $File.FullName
@@ -236,7 +237,7 @@ function Test-ModuleClosure {
     }
   }
 
-  $ExplicitRegression = @("RiemannZeta.Audit", "RiemannZeta.Lint")
+  $ExplicitRegression = @("Audit", "Lint")
   $Rows = New-Object System.Collections.Generic.List[object]
   $Unclassified = New-Object System.Collections.Generic.List[string]
   foreach ($Module in ($LocalModules.Keys | Where-Object { $_ -ne "RiemannZeta" } | Sort-Object)) {
@@ -263,7 +264,7 @@ function Test-ModuleClosure {
     $Failures.Add("filesystem/import closure")
     return $false
   }
-  Write-VerificationLine "PASS: every $FoundationRelative/RiemannZeta/**/*.lean file has exactly one mechanical classification"
+  Write-VerificationLine "PASS: every non-root $FoundationRelative/**/*.lean file has exactly one mechanical classification"
   return $true
 }
 
@@ -304,11 +305,11 @@ function Test-ProhibitedProofText {
 Test-ModuleClosure | Out-Null
 Test-ProhibitedProofText | Out-Null
 Invoke-LakeStage "Root/default production build" @("build", "RiemannZeta")
-Invoke-LakeStage "Exact publication contract" @("env", "lean", "$FoundationRelative/RiemannZeta/PublicationContract.lean")
+Invoke-LakeStage "Exact publication contract" @("env", "lean", "$FoundationRelative/PublicationContract.lean")
 Invoke-LakeStage "Retained regression TestExp" @("env", "lean", "TestExp.lean")
 Invoke-LakeStage "Retained regression test_separated" @("env", "lean", "test_separated.lean")
-Invoke-LakeStage "Transitive axiom and exact-output audit" @("env", "lean", "$FoundationRelative/RiemannZeta/Audit.lean") -AllowAuditInfo
-Invoke-LakeStage "Declaration linter gate" @("env", "lean", "$FoundationRelative/RiemannZeta/Lint.lean") -AllowLintInfo
+Invoke-LakeStage "Transitive axiom and exact-output audit" @("env", "lean", "$FoundationRelative/Audit.lean") -AllowAuditInfo
+Invoke-LakeStage "Declaration linter gate" @("env", "lean", "$FoundationRelative/Lint.lean") -AllowLintInfo
 
 $FinalStatus = if ($Failures.Count -eq 0) { "PASS" } else { "FAIL" }
 $LogHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $LogPath).Hash.ToLowerInvariant()

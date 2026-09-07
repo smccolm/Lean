@@ -1,4 +1,4 @@
-import RiemannZeta.GuthMaynard.Separated
+import GuthMaynard.Separated
 
 example (S : Finset ℝ) (L : ℕ)
     (hlocal : ∀ (x : ℤ), (S.filter (fun t => (x : ℝ) ≤ t ∧ t < (x : ℝ) + 1)).card ≤ L) :

@@ -12,7 +12,7 @@ This document is the project's adversarial review packet. It records an internal
 - The public zero count is a finite sum of analytic vanishing orders of Mathlib's Riemann zeta function over closed rectangles. It therefore counts analytic multiplicity, not merely distinct zeros.
 - The project proves five frozen publication-facing contracts: the displayed form of Guth--Maynard Theorem 1.1, the full-range form of Theorem 1.2, the classical Ingham and Huxley bounds, and the combined exponent `30 * (1 - σ) / 13` for that zero count.
 - The conditional theorem `guthMaynardZeroDensity_of_largeValues_native` has exactly one visible premise, `GuthMaynardLargeValues`; its proof supplies the other nine inputs to the Section 13.1 transfer from named project theorems.
-- The root import graph contains 301 production modules; the two remaining Lean modules are explicit audit/lint regressions. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` checks 7,636 registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations.
+- The root import graph contains 301 production modules; the two remaining Lean modules are explicit audit/lint regressions. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean` checks 7,636 registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations.
 - The source correspondences in this document have been checked internally against the declarations and proof consumers named here. This is an **internal semantic audit**, not independent expert validation.
 
 ### What is not claimed
@@ -139,7 +139,7 @@ and no project axiom or `sorryAx`. The five publication contracts have exact-typ
 
 ### 4.0 Frozen publication contracts
 
-`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/PublicationContract.lean` defines and proves:
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/PublicationContract.lean` defines and proves:
 
 - `guthMaynardLargeValues_published_native : PublishedGuthMaynardLargeValues`;
 - `guthMaynardZeroDensity_published_native : PublishedGuthMaynardZeroDensity (fun sigma T => N sigma T)`;
@@ -374,7 +374,7 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
 
    On Windows, `cmd /c run_lake_build.bat --no-pause` runs the same verifier in development mode.
 5. Release mode must report a clean tree. Preserve the emitted `logs/foundation_freeze_*.log` and matching JSON manifest. A valid PASS requires every classification, build, warning, dependency, exact-contract, output, linter, and prohibited-proof gate to pass.
-6. Independently run `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean"` and inspect the five publication-contract `#print axioms` lines.
+6. Independently run `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean"` and inspect the five publication-contract `#print axioms` lines.
 7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`. If optional hosted CI succeeds, inspect its SHA-named artifact as supplemental evidence rather than substituting it for the local verifier or semantic review.
 
 Reproduction proves acceptance of the checked declarations in that environment. It is not a substitute for reviewing this crosswalk or the cited mathematics.

@@ -187,7 +187,7 @@ $$ N(\sigma, T) = O_\varepsilon\left(T^{\frac{30(1-\sigma)}{13} + \varepsilon}\r
 
 # 7. Audited Declarations & Mathlib Dependencies
 
-`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` explicitly registers 7,636 public declarations and separately discovers all 14,290 nonprivate project theorems, including generated declarations, then computes their transitive axioms with `Lean.collectAxioms`. Every audited declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. Exact-type gates inhabit the five publication contracts, so retaining a theorem name with a weaker type cannot satisfy the release audit. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Lint.lean` runs all 16 default linters with zero findings. No direct project axiom remains.
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean` explicitly registers 7,636 public declarations and separately discovers all 14,290 nonprivate project theorems, including generated declarations, then computes their transitive axioms with `Lean.collectAxioms`. Every audited declaration passes with only `propext`, `Classical.choice`, and `Quot.sound`. Exact-type gates inhabit the five publication contracts, so retaining a theorem name with a weaker type cannot satisfy the release audit. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Lint.lean` runs all 16 default linters with zero findings. No direct project axiom remains.
 
 The default `RiemannZeta` root includes the complete FR and endpoint chain, both retained Hughes–Young subordinate modules, quantitative reflection, native large values, and `NativeZeroDensity`. The runner also builds selected production modules explicitly and elaborates every retained top-level Lean file. The dependency and zero-warning claims therefore cover the complete retained repository.
 
@@ -271,7 +271,7 @@ The formalization relies on the following exact environment:
 - **Canonical Verification Command**: `pwsh -NoProfile -File scripts/verify_release.ps1 -Mode release` from a clean candidate checkout
 - **Windows Convenience Command**: `run_lake_build.bat --no-pause` (development mode; invokes the same verifier core)
 - **Verifier Coverage**: mechanical classification of all 303 project Lean modules; proof-integrity scans; root build; exact publication-contract build/type gates; both retained regressions; exhaustive transitive axiom/output audit; and all 16 default linters
-- **Focused Axiom/Output Audit Command**: `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean"` (7,636 registered declarations and all 14,290 discovered nonprivate theorems)
+- **Focused Axiom/Output Audit Command**: `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean"` (7,636 registered declarations and all 14,290 discovered nonprivate theorems)
 - **Internal Freeze Evidence**: exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed the complete release verifier from a fresh short-path clone. The run emits a SHA-, verifier-, contract-, toolchain-, and dependency-bound log/manifest. Hosted CI is supplemental; its terminated attempts produced no hosted PASS or artifact. Neither the local PASS nor a future CI artifact constitutes independent semantic review, preprint release, or publication evidence.
 
 ---
