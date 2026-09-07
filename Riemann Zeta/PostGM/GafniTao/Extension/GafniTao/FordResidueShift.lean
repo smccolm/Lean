@@ -132,7 +132,6 @@ def fordResidueShiftEquiv {Q p : ℕ} [NeZero p] (c : ZMod p) :
     rw [Nat.mul_div_cancel_left (u.1 + 1) (NeZero.pos p)]
     omega
 
-#print axioms fordResidueShiftEquiv
 
 end
 

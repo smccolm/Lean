@@ -111,10 +111,6 @@ theorem norm_pintz2023PoleResidue_le_eta
     (Real.exp_le_exp.mpr hexp)
     (mul_nonneg hHarmonic (inv_nonneg.mpr (abs_nonneg gamma))))
 
-#print axioms norm_zetaMollifier_one_le_harmonic
-#print axioms one_sub_pintzRho
-#print axioms norm_pintz2023PoleResidue_le
-#print axioms norm_pintz2023PoleResidue_le_eta
 
 end
 

@@ -228,10 +228,6 @@ theorem exists_fordEmpty_detector_general_growthBound
   unfold fordGeneralDetectorMajorant
   simpa only [add_assoc] using hdet
 
-#print axioms exists_fordVK_empty_detector_general_growthBound
-#print axioms exists_fordVK_singleZero_detector_general_growthBound
-#print axioms exists_fordSingleZero_detector_general_growthBound
-#print axioms exists_fordEmpty_detector_general_growthBound
 
 end
 

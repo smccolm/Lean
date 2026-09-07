@@ -121,10 +121,6 @@ theorem fordLemma51WindowMoment_full_eq_vinogradov
   rw [Nat.card_congr (fordFullWindowSolutionEquiv k s Q)]
   exact card_fordPowerSolution s k Q
 
-#print axioms fordIccOneEquivFin
-#print axioms fordFullWindow_sourcePower_eq_vinogradov
-#print axioms fordFullWindowSolutionEquiv
-#print axioms fordLemma51WindowMoment_full_eq_vinogradov
 
 end
 

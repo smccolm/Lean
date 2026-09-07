@@ -182,12 +182,6 @@ theorem heathBrown_shifted_source_sum_norm_le_partial
         exact norm_heathBrownTaylorError_weight_succ_sub_le_source
           hk hfat hfd hfon hderiv hj))
 
-#print axioms heathBrownPhase_taylorError_mul_polynomial
-#print axioms heathBrown_shifted_source_sum_eq_weighted_polynomial
-#print axioms heathBrown_shifted_source_sum_norm_le_of_variation
-#print axioms heathBrown_shifted_source_sum_norm_le
-#print axioms norm_heathBrownTaylorError_weight_succ_sub_le_source
-#print axioms heathBrown_shifted_source_sum_norm_le_partial
 
 end
 

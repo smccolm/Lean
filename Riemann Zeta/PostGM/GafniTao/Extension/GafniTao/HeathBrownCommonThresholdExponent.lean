@@ -72,7 +72,7 @@ theorem eventually_common_base_threshold
 dyadically dilated bases.  The dilation loss is displayed separately from
 the detector, shell, and coefficient losses in `heathBrownEffectiveSigma`. -/
 theorem eventually_actualTypeII_commonThresholds
-    {delta1 delta2 eta zetaShell zetaConst zetaDil C Cp : Real}
+    {sigma delta delta1 delta2 eta zetaShell zetaConst zetaDil C Cp : Real}
     (hdelta1 : 0 < delta1) (hdelta2 : 0 < delta2)
     (hCube : 3 * (delta1 + delta2 / 2) <= 1)
     (hsigmaUpper : sigma <= 1)
@@ -158,8 +158,6 @@ theorem eventually_actualTypeII_commonThresholds
       hU hLowerNext hData.2.2.2.2.2.2
     simpa only [P, Nat.cast_mul, Nat.cast_pow] using h
 
-#print axioms eventually_common_base_threshold
-#print axioms eventually_actualTypeII_commonThresholds
 
 end
 

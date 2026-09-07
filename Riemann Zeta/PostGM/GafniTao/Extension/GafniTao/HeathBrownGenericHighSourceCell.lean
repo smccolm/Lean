@@ -199,7 +199,6 @@ theorem eventually_generic_powered_physical_high_source_cell
   exact heathBrown_physical_of_packet_bound hx hEnergy
     (by positivity) hxB (by positivity) rfl rfl hCell
 
-#print axioms eventually_generic_powered_physical_high_source_cell
 
 end
 end GafniTao

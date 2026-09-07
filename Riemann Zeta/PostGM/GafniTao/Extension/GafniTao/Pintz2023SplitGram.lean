@@ -117,7 +117,6 @@ theorem exists_pintz2023_split_offDiagonal_gram_native
       hSeparated
     exact hLargeEntry.trans (le_add_of_nonneg_left (by positivity))
 
-#print axioms exists_pintz2023_split_offDiagonal_gram_native
 
 end
 

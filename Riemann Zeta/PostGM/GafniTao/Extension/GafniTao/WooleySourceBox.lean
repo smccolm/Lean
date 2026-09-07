@@ -331,24 +331,6 @@ theorem wooleySourcePolynomialConditionedMean_box_monomial
   · simp_rw [wooleySourceResidueMassSq_box,
       wooleySourceNormalizedPolynomialResidueSum_box_monomial]
 
-#print axioms wooleyBoxSourceSequence_apply_index
-#print axioms wooleyBoxSourceSequence_support
-#print axioms wooleyBoxSourceSequence_massSq
-#print axioms wooleySourcePolynomialPhase_box_monomial
-#print axioms wooleySourcePolynomialPhase_box
-#print axioms wooleySourcePolynomialSum_box
-#print axioms wooleySourcePolynomialResidueSum_box
-#print axioms wooleySourceNormalizedPolynomialSum_box
-#print axioms wooleySourceNormalizedPolynomialResidueSum_box
-#print axioms wooleySourcePolynomialMean_box
-#print axioms wooleySourcePolynomialConditionedMean_box
-#print axioms wooleySourcePolynomialSum_box_monomial
-#print axioms wooleySourceResidueMassSq_box
-#print axioms wooleySourcePolynomialResidueSum_box_monomial
-#print axioms wooleySourceNormalizedPolynomialSum_box_monomial
-#print axioms wooleySourceNormalizedPolynomialResidueSum_box_monomial
-#print axioms wooleySourcePolynomialMean_box_monomial
-#print axioms wooleySourcePolynomialConditionedMean_box_monomial
 
 end
 

@@ -189,15 +189,6 @@ theorem fordLemma51_sum_representationCount_sq (r k M : ℕ) :
         (Finset.univ : Finset (FordVinogradovTuple r M))
         (fordVinogradovPowerVector r k M)).symm
 
-#print axioms ford_sum_Icc_one_eq_fin
-#print axioms fordAdditiveCharacter_sum
-#print axioms fordLemma51InnerSum_pow_eq_tuple_sum
-#print axioms fordLemma51_tuple_phase_eq_fiber_phase
-#print axioms fordLemma51_tuple_character_eq_fiber_character
-#print axioms fordLemma51_tuple_sum_eq_fiber_sum
-#print axioms fordLemma51InnerSum_pow_eq_fiber_sum
-#print axioms fordLemma51_sum_representationCount
-#print axioms fordLemma51_sum_representationCount_sq
 
 end
 

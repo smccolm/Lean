@@ -512,12 +512,6 @@ theorem exists_norm_pintzZetaAFETerm_dual_all_height_le
         ring_nf
       _ ≤ _ := le_add_of_nonneg_left (by positivity)
 
-#print axioms exists_norm_pintzZetaAFETerm_original_global_le
-#print axioms exists_norm_pintzZetaAFETerm_dual_global_le
-#print axioms pintzZetaAFEFarEnvelope_le
-#print axioms pintzZetaAFECentralGaussian_le
-#print axioms exists_norm_pintzZetaAFETerm_original_all_height_le
-#print axioms exists_norm_pintzZetaAFETerm_dual_all_height_le
 
 end
 

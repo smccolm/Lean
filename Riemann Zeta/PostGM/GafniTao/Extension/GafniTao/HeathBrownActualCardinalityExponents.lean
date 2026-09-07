@@ -122,7 +122,6 @@ theorem HeathBrownFullyUniformOutputs.common_cardinality_exponents
         gcongr
   exact ⟨hTauLower, hTauUpper, hTauNext, hRhoMain, hRhoComp⟩
 
-#print axioms HeathBrownFullyUniformOutputs.common_cardinality_exponents
 
 end
 

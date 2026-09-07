@@ -209,9 +209,5 @@ theorem heathBrown_low_scale_second_cell
 
 end
 
-#print axioms simplifiedHeathBrownExponentRelation_of_relation
-#print axioms heathBrown_low_scale_energy_slope
-#print axioms heathBrown_low_scale_first_cell
-#print axioms heathBrown_low_scale_second_cell
 
 end GafniTao

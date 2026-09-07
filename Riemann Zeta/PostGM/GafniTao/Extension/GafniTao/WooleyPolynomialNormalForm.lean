@@ -125,12 +125,6 @@ theorem WooleyPolynomialSystem.Spaced.constant_eq_mul
   rw [if_neg hne, coeff_C_mul]
   ring
 
-#print axioms wooleyPolynomial_low_add_tail
-#print axioms wooleyPolynomialLowPart_natDegree_lt
-#print axioms wooleyPolynomialLowPart_coeff
-#print axioms wooleyPolynomialSystem_normalForm
-#print axioms WooleyPolynomialSystem.Spaced.lowMatrix_eq_identity_add
-#print axioms WooleyPolynomialSystem.Spaced.constant_eq_mul
 
 end
 

@@ -204,10 +204,6 @@ theorem ford_shifted_weyl_above_square
   rw [hNL] at hcore
   exact hcore
 
-#print axioms fordCubeRoot_cube
-#print axioms ford_integerLogarithmicPrefix_eq_source
-#print axioms ford_shifted_weyl_below_square
-#print axioms ford_shifted_weyl_above_square
 
 end
 

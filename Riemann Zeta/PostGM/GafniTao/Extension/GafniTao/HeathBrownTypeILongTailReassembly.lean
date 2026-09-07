@@ -70,7 +70,6 @@ theorem ClassicalBinaryTypeIOutput.energy_le_of_classified_sources
     label.1 (classicalBinaryColorFamily d label)
   simpa only [Wpos, k, hOrientation] using hReassembled
 
-#print axioms ClassicalBinaryTypeIOutput.energy_le_of_classified_sources
 
 end
 

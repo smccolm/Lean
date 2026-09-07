@@ -149,9 +149,6 @@ theorem fordS4InteriorCount_le_S6
     (fordS4InteriorCollisionToS6 Ψ hdk hr c)
     (fordS4InteriorCollisionToS6_injective Ψ hdk hr c)
 
-#print axioms fordPrimeReduction_natCast
-#print axioms fordS4InteriorHalfToS6_moment
-#print axioms fordS4InteriorCount_le_S6
 
 end
 

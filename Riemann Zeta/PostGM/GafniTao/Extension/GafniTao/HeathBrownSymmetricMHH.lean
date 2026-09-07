@@ -70,7 +70,6 @@ theorem finite_symmetric_source_cardinality_mhh_native
     hBaseT hNegativeLarge
   simpa only [WT, card_gmTranslate] using hBound
 
-#print axioms finite_symmetric_source_cardinality_mhh_native
 
 end
 

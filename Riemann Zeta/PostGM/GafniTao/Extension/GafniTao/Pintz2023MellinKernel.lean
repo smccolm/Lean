@@ -71,8 +71,6 @@ theorem pintz2023HalaszKernel_eq_mellin
   push_cast
   congr 1 <;> ring_nf
 
-#print axioms integrable_pintz2023MellinExpIntegrand
-#print axioms pintz2023HalaszKernel_eq_mellin
 
 end
 

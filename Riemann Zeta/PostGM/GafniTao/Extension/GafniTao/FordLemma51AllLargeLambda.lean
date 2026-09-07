@@ -63,7 +63,6 @@ theorem ford_exponential_lemma_5_1_all_large_degrees
     _ = fordLemma51AbsoluteConstant * (N : ℝ) ^
         (1 - 1 / ((1091200 : ℝ) * (k : ℝ) ^ 2)) := rfl
 
-#print axioms ford_exponential_lemma_5_1_all_large_degrees
 
 end
 

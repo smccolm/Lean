@@ -105,9 +105,6 @@ theorem fordLemma63_sum_setIntegral_le_W_mul
     _ = fordLemma63W N k M t * ∫ α, F α ∂μ :=
       integral_const_mul (fordLemma63W N k M t) F
 
-#print axioms fordLemma63_sum_indicators_eq_card_mul
-#print axioms fordLemma63_sum_indicators_le_W_mul
-#print axioms fordLemma63_sum_setIntegral_le_W_mul
 
 end
 

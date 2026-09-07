@@ -150,7 +150,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_half_zeta
       _ = C * (N : ℝ) ^
           (u - 1 / (2 * tau ^ 2) + epsilon) := by
             unfold heathBrownHalfTarget u
-            ring
+            ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have hNsqOne : (1 : ℝ) < (N : ℝ) ^ 2 := by nlinarith
   have hlogt : 0 < Real.log t := Real.log_pos (hNsqOne.trans_le hNt)
@@ -199,11 +199,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_half_zeta
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := by
       rfl
 
-#print axioms rpow_fordLambda_eq
-#print axioms two_le_fordLambda_of_sq_le
-#print axioms norm_pintz2023ExponentialBlock_le_half_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_half_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_half_zeta
 
 end
 

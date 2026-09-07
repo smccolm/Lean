@@ -182,10 +182,6 @@ theorem norm_pintz2023_normalized_powered_coeff_le_one
     div_le_one hC]
   exact hBound
 
-#print axioms pintz2023SelectedPowerCoeff_eq_interval
-#print axioms norm_pintz2023SelectedPoweredLineCoeff_le_rpow
-#print axioms norm_pintz2023SelectedPoweredLineCoeff_le
-#print axioms norm_pintz2023_normalized_powered_coeff_le_one
 
 end
 

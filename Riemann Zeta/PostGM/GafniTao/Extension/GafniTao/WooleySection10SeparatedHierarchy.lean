@@ -204,13 +204,6 @@ theorem wooley_le_ceilDiv_of_mul_le
     le_smul_ceilDiv (by omega : 0 < k)
   exact Nat.le_of_mul_le_mul_left (hB.trans hBceil) (by omega)
 
-#print axioms wooley_section10_separatedHierarchy_exists
-#print axioms wooley_initialNu_twoLoss_lower
-#print axioms wooley_iterationTheta_eventually_ge
-#print axioms wooley_initialNu_eventually_ge
-#print axioms wooley_initial_twoLoss_absorption_eventually
-#print axioms wooley_constant_le_prime_pow_iterationTheta_eventually
-#print axioms wooley_le_ceilDiv_of_mul_le
 
 end
 

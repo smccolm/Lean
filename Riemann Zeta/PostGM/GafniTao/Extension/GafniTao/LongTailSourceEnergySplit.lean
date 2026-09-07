@@ -179,9 +179,6 @@ theorem longTail_source_energy_split
             (ApproxAddEnergy 1 (Ws 3) : Real)) := by ring
   exact ⟨⟨scale, Ws, hSub, hSep, hBlock, hClass, hFinal⟩⟩
 
-#print axioms exists_pointwise_classified_source_of_longTail_large
-#print axioms LongTailSourceEnergyOutput
-#print axioms longTail_source_energy_split
 
 end
 

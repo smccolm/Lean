@@ -592,16 +592,6 @@ theorem norm_pintzEquation46ContourError_le
         (by simpa [pintzEquation46HorizontalBound] using hminus))
         (by simpa [pintzEquation46HorizontalBound] using hplus)
 
-#print axioms norm_pintzFiniteMobiusPolynomial_le_partialSum
-#print axioms norm_pintzFiniteMobiusPolynomial_le_sqrt_harmonic
-#print axioms norm_pintzGaussianNumerator_horizontal_two_lambda_le
-#print axioms norm_pintzFiniteContourIntegrand_horizontal_two_lambda_le
-#print axioms norm_pintzFiniteContour_HIntegral'_two_lambda_le
-#print axioms norm_pintzFiniteContourIntegrand_three_le
-#print axioms integrable_pintzFiniteContourIntegrand_three
-#print axioms integral_compl_Ioc_exp_neg_inv_lambda_sq_le
-#print axioms norm_pintzMobiusFiniteHead_sub_rightSegment_le
-#print axioms norm_pintzEquation46ContourError_le
 
 end
 

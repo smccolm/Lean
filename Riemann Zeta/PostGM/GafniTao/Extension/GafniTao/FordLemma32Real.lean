@@ -120,10 +120,6 @@ theorem ford_lemma_3_2_real_endpoints
   refine ⟨Ψ, p, hpS, c, ?_⟩
   simpa [fordKCountReal, fordLCountReal, S, fordPrimeSet_card] using hbound
 
-#print axioms fordPrimeSet_gt_real
-#print axioms ford_real_prime_product_gt_scale_power
-#print axioms ford_lemma_3_2_real_source_product
-#print axioms ford_lemma_3_2_real_endpoints
 
 end
 

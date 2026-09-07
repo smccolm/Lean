@@ -96,9 +96,6 @@ def fordS6FineMap
     (fordS6FineMap (p := p) (q := q) Φ z).2 =
       fordS6HalfResidue z := rfl
 
-#print axioms fordJoinSplitResidue_split
-#print axioms fordS6FineMap_moment
-#print axioms fordS6FineMap_residue
 
 end
 

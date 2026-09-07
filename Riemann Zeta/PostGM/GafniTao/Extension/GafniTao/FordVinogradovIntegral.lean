@@ -687,19 +687,6 @@ theorem ford_shifted_integral_identity
       simpa only [f, Complex.ofReal_pow, ford_pow_mul_conj_pow] using
         ford_vinogradov_shifted_torus_mean_eq s k Q h
 
-#print axioms card_le_fordRepresentationCount_zero
-#print axioms card_sq_le_displacementImage_mul_fordRepresentationCount_zero
-#print axioms fordVinogradovShiftedCountNat_le
-#print axioms ford_vinogradov_total_count_le
-#print axioms fordVinogradovLowerTerm_le_moment
-#print axioms ford_equation_1_5
-#print axioms ford_floor_pow_le_vinogradovMoment
-#print axioms ford_integral_fourier_haar_eq
-#print axioms ford_integral_mFourier_pi_haar_eq
-#print axioms ford_vinogradov_torus_mean_eq
-#print axioms ford_equation_1_3
-#print axioms ford_vinogradov_shifted_torus_mean_eq
-#print axioms ford_shifted_integral_identity
 
 end
 

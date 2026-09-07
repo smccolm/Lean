@@ -71,9 +71,6 @@ theorem fordPrimePowerLiftFiber_card
   rw [hpow] at htotal
   exact Nat.eq_of_mul_eq_mul_left (pow_pos hp.pos e) htotal.symm
 
-#print axioms fordTypeEquivSigmaFiber
-#print axioms fordPrimePowerLiftFiberEquiv
-#print axioms fordPrimePowerLiftFiber_card
 
 end
 

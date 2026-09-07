@@ -141,10 +141,6 @@ theorem ford_lemma_3_4_scale_cancellation
     nlinarith
   rw [hexp', Real.rpow_zero]
 
-#print axioms fordLemma34PrimeExponent_cast_le_source
-#print axioms ford_lemma_3_4_sqrt_coefficient
-#print axioms ford_lemma_3_4_max_absorption
-#print axioms ford_lemma_3_4_scale_cancellation
 
 end
 

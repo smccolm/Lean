@@ -93,7 +93,7 @@ theorem fordShiftedRealPhase_secondDifference_bounds
           fordShiftedRealPhase N n u t) := by
     norm_num [x, fordShiftedRealPhase] at hxiEq ⊢
     rw [hxiEq]
-    ring
+    ring_nf
   exact ⟨hlower.trans_eq hEq, hEq.symm.trans_le hupper⟩
 
 def fordShiftedBMajorant (N L : ℕ) (t : ℝ) : ℝ :=
@@ -208,9 +208,6 @@ theorem ford_shifted_exponential_sum_B_process
   rw [hpred, hsum] at hB
   exact hB.trans (fordShiftedBMajorant_le (by omega) hLle hNt htN)
 
-#print axioms fordShiftedRealPhase_secondDifference_bounds
-#print axioms fordShiftedBMajorant_le
-#print axioms ford_shifted_exponential_sum_B_process
 
 end
 

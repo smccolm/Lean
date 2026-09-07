@@ -124,11 +124,6 @@ def fordDifferenceSystem
     apply ne_of_gt
     exact_mod_cast Nat.sub_pos_of_lt hjd
 
-#print axioms fordFiniteDifference_eval
-#print axioms fordFiniteDifference_coeff
-#print axioms fordFiniteDifference_natDegree
-#print axioms fordFiniteDifference_leadingCoeff
-#print axioms fordDifferenceSystem
 
 end
 

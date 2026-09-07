@@ -87,9 +87,6 @@ theorem fordPolynomialSumInt_translate
   intro l _
   rw [← Finset.mul_sum]
 
-#print axioms fordMomentBinomialTransform_injective
-#print axioms fordMomentBinomialTransformHom
-#print axioms fordPolynomialSumInt_translate
 
 end
 

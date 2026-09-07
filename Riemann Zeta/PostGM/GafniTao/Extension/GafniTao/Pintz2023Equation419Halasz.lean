@@ -228,7 +228,6 @@ theorem exists_eventually_pintz2023_equation419_halasz_native
     eta (pintz2023SourceLambda T k) A E D O etaAt id hN hA hE hD hO
     hPositive hReal hLarge hEnergy hDiagonal hOffDiagonal hAbsorbEO
 
-#print axioms exists_eventually_pintz2023_equation419_halasz_native
 
 end
 

@@ -237,8 +237,6 @@ theorem classicalBinaryColorFamily_powerWindow_heathBrown_native
       hUnit, hPowered, hMean⟩
   exact ⟨⟨hEnergyPacket⟩, ⟨⟨hBaseCardPacket⟩, ⟨hCardPacket⟩⟩⟩
 
-#print axioms classicalBinaryColorFamily_in_symmetric_shell
-#print axioms classicalBinaryColorFamily_powerWindow_heathBrown_native
 
 end
 

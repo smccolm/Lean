@@ -240,13 +240,6 @@ theorem wooleySourcePolynomialConditionedMean_power_tower
     (wooleySourcePolynomialConditionedMean_tower
       (q₁ := p ^ h) (q₂ := p ^ (H - h)) phi gamma)
 
-#print axioms wooleySourceMassSq_mul_conditionedMean
-#print axioms wooleySourcePolynomialMean_affinePullback
-#print axioms wooleySourceMassSq_mul_conditionedMean_eq_affineSum
-#print axioms wooleySourceResidueMassSq_affinePullback_mixedRadix
-#print axioms wooleySourcePolynomialResidueMean_affinePullback_mixedRadix
-#print axioms wooleySourcePolynomialConditionedMean_tower
-#print axioms wooleySourcePolynomialConditionedMean_power_tower
 
 end
 

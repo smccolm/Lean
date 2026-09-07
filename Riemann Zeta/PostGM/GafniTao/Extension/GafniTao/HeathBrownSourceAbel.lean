@@ -120,9 +120,6 @@ theorem heathBrown_norm_source_weighted_le_partial
             exact mul_le_mul_of_nonneg_right (hedge j hj) (norm_nonneg _)
     _ = _ := by rw [← Finset.mul_sum]
 
-#print axioms heathBrown_source_abel_identity
-#print axioms heathBrown_norm_source_weighted_le
-#print axioms heathBrown_norm_source_weighted_le_partial
 
 end
 

@@ -77,8 +77,6 @@ theorem pintzGaussian_rightVertical_eq_one_add_edges
   rw [hreLeft, hreRight, himLeft, himRight] at hrect
   linear_combination hrect
 
-#print axioms pintzGaussian_rectangleIntegral_eq_one
-#print axioms pintzGaussian_rightVertical_eq_one_add_edges
 
 end
 

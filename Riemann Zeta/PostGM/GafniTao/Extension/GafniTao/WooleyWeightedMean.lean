@@ -156,13 +156,6 @@ theorem wooley_weighted_normalizedGridSum_decomposition
   rw [wooley_sum_weightedResidueGridSum]
   simp [wooleyWeightedNormalizedGridSum, hmass]
 
-#print axioms wooleyWeightedMassSq_nonneg
-#print axioms wooleyWeightedResidueMassSq_nonneg
-#print axioms wooley_sum_weightedResidueMassSq
-#print axioms wooleyWeightedResidueGridSum_eq_zero_of_massSq_eq_zero
-#print axioms wooley_sqrt_mass_mul_normalizedResidueGridSum
-#print axioms wooley_sum_weightedResidueGridSum
-#print axioms wooley_weighted_normalizedGridSum_decomposition
 
 end
 

@@ -98,10 +98,6 @@ theorem fordLemma51_norm_power_sum_eq_epsilon_sum
   intro b hb
   simpa using (fordLemma51Epsilon_mul_pow k M₁ r t z b).symm
 
-#print axioms fordTaylorDoubleSum_eq_fordLemma51U
-#print axioms fordLemma51U_pow_le
-#print axioms fordUnitNormalizer_mul_pow
-#print axioms fordLemma51_norm_power_sum_eq_epsilon_sum
 
 end
 

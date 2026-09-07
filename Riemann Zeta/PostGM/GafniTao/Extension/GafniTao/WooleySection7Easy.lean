@@ -444,13 +444,6 @@ theorem wooleyPolynomial_section7_easy
     wooleyPolynomialMixedGridMean_nonneg phi gamma
   exact hrefine.trans (mul_le_mul_of_nonneg_right hpow hmean)
 
-#print axioms wooley_refinement_val_mod_of_le
-#print axioms wooley_sum_left_refinement
-#print axioms wooleyPolynomial_mixed_left_point_refinement
-#print axioms wooleyPolynomial_section7_easy_refinement
-#print axioms wooley_section7_easy_exponent_nat
-#print axioms wooleyPolynomialMixedGridMean_nonneg
-#print axioms wooleyPolynomial_section7_easy
 
 end
 

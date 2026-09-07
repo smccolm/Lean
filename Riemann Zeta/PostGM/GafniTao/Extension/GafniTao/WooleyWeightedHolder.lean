@@ -51,7 +51,6 @@ theorem wooley_weighted_rpow_sum_le
     _ = (∑ i ∈ t, w i) ^ (p - 1) *
         ∑ i ∈ t, w i * f i ^ p := by rfl
 
-#print axioms wooley_weighted_rpow_sum_le
 
 end
 

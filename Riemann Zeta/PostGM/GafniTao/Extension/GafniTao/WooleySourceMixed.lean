@@ -250,15 +250,6 @@ theorem wooleySourcePolynomialMixedMean_eq_boxed
       rw [wooleyBoxSourceSequence_boxCoefficients]
     _ = _ := wooleySourcePolynomialMixedMean_box _ _ _ _ _ _ _ _ _
 
-#print axioms wooleySourcePolynomialMixedResidueMoment_nonneg
-#print axioms wooleySourcePolynomialMixedMean_nonneg
-#print axioms wooleySourcePolynomialMixedResidueMoment_box
-#print axioms wooleySourcePolynomialMixedMean_box
-#print axioms wooleyResiduesSeparated_iff_cast_ne
-#print axioms wooleyResiduesSeparated_add_iff
-#print axioms wooleySourcePolynomialMixedResidueMoment_affinePullback_one
-#print axioms wooleySourcePolynomialMixedMean_affinePullback_one
-#print axioms wooleySourcePolynomialMixedMean_eq_boxed
 
 end
 

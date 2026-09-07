@@ -110,8 +110,6 @@ theorem ford_S6_moment_collision_le_residue_diagonal
       (p := p) (q := q) (r := r) (hdk := hdk)
       (fordBinomialTranslateSystem Ψ c))
 
-#print axioms fordS6MomentCollisionEquivCoarsened
-#print axioms ford_S6_moment_collision_le_residue_diagonal
 
 end
 

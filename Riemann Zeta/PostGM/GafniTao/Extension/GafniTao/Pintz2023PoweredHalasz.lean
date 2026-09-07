@@ -152,8 +152,6 @@ theorem exists_pintz2023_intervalPower_halasz_cardinality
     hDiagonal hOffDiagonal hAbsorb
   simpa only [E, D] using hResult
 
-#print axioms pintz2023HalaszKernelConstant_pos
-#print axioms exists_pintz2023_intervalPower_halasz_cardinality
 
 end
 

@@ -147,9 +147,6 @@ theorem fordOffDiagonalShiftCoordinate_injective
     apply Subtype.ext
     exact Prod.ext hfirst hsecond
 
-#print axioms ford_modEq_positive_shift
-#print axioms fordOffDiagonalShiftCoordinate_spec
-#print axioms fordOffDiagonalShiftCoordinate_injective
 
 end
 

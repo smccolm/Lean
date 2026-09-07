@@ -155,11 +155,5 @@ theorem four_mul_sqrt_cube_factorial_le_two_pow_inv_mul_self_pow
       congr 1
       omega
 
-#print axioms four_mul_cube_mul_factorial_le_self_pow
-#print axioms four_mul_cube_mul_factorial_cast_le_self_pow
-#print axioms two_mul_self_pow_le_succ_pow
-#print axioms four_mul_lower_power_le_succ_power
-#print axioms sixteen_mul_four_pow_cube_factorial_le_square_pow
-#print axioms four_mul_sqrt_cube_factorial_le_two_pow_inv_mul_self_pow
 
 end GafniTao

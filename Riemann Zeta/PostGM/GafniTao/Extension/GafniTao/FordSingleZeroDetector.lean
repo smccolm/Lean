@@ -175,7 +175,6 @@ theorem eventually_exists_fordSingleZero_detector_general_growthBound
   simp only [Finset.sum_singleton] at hdet
   linarith
 
-#print axioms eventually_exists_fordSingleZero_detector_general_growthBound
 
 end
 

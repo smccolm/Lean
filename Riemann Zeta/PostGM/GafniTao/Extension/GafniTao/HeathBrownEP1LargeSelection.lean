@@ -98,7 +98,6 @@ theorem heathBrownEP1LargeOrder_mem_strip
     · exact hmUpper.le.trans
         (heathBrownEP1_cast_succ_le_stripUpper_succ_succ m)
 
-#print axioms heathBrownEP1LargeOrder_mem_strip
 
 end
 

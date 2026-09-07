@@ -173,8 +173,6 @@ theorem integerPhaseSum_eq_range (F : ℝ → ℝ) (N : ℕ) :
     have hcast : ((Int.toNat n : ℕ) : ℤ) = n := Int.toNat_of_nonneg hn0
     exact_mod_cast hcast.symm
 
-#print axioms padded_phase_correlation_eq
-#print axioms integerPhaseSum_eq_range
 
 end
 

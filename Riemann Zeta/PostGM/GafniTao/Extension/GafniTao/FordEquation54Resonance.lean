@@ -275,17 +275,7 @@ theorem fordLemma51TuplePairTentSum_le_card_resonantPairs
     _ = (fordLemma51ResonantTuplePairs (k := k) s M₂ r M B t z).card := by
       simp [fordLemma51ResonantTuplePairs]
 
-#print axioms exists_int_abs_mul_abs_lt_of_unit_norm_lt
-#print axioms mem_fordLemma51ResonantSet
-#print axioms fordLemma51_difference_mem_resonantSet_of_tent_ne_zero
-#print axioms fordLemma51_tent_eq_zero_of_difference_not_mem_resonantSet
-#print axioms fordLemma51TuplePairTentProduct_eq_zero_of_not_resonant
-#print axioms fordLemma51TuplePairTentSum_le_card_resonantPairs
 
-#print axioms fordLemma51TupleToVinogradov_value
-#print axioms fordLemma51DifferenceVector_eq_vinogradovSub
-#print axioms fordLemma51DifferenceVector_mem_vinogradovBox
-#print axioms fordLemma51DifferenceVector_abs_lt_sourceRadius
 
 end
 

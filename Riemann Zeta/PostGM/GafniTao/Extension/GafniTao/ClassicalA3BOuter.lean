@@ -291,13 +291,7 @@ theorem logarithmic_weyl_A3B_process_summed
     t A N H₁ H₂ H₃ ht hA hH₃pos
   exact hraw.trans (by gcongr)
 
-#print axioms logarithmicA3BCorrelationBound_le_uniform_raw
-#print axioms A3_outer_last_term_factor
-#print axioms sum_logarithmicA3BCorrelationBound_le
-#print axioms logarithmic_weyl_A3B_process_summed
 
-#print axioms padded_logarithmic_correlation_norm_le_A3_of_lt
-#print axioms logarithmic_weyl_A3B_process_raw
 
 end
 

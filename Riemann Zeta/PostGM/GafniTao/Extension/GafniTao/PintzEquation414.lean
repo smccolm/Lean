@@ -56,8 +56,6 @@ theorem pintz_equation_4_14
   exact pintz_equation_4_14_algebra (by positivity) hH hD h412
     hOffDiagonalHalf
 
-#print axioms pintz_equation_4_14_algebra
-#print axioms pintz_equation_4_14
 
 end
 

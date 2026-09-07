@@ -90,7 +90,6 @@ theorem reflection_sign_energy_split
           (ApproxAddEnergy 1 (Ws 2) : Real) +
           (ApproxAddEnergy 1 (Ws 3) : Real)) := by ring
 
-#print axioms reflection_sign_energy_split
 
 end
 

@@ -240,9 +240,6 @@ theorem norm_riemannZeta_le_heathBrown_source
       dsimp only [C, q]
       ring
 
-#print axioms norm_fordDyadicWeightedShellSum_zero_le_source
-#print axioms norm_fordHurwitzFiniteApproximation_one_le_source
-#print axioms norm_riemannZeta_le_heathBrown_source
 
 end
 

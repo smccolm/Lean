@@ -145,10 +145,6 @@ theorem ford_lemma_3_4_final_exponent_eq
   unfold fordLambda34 fordDeltaPrime34
   ring
 
-#print axioms ford_lemma_3_4_inner_exponent_eq
-#print axioms FordPhiSchedule.le_inv_r
-#print axioms ford_lemma_3_4_exponent_cancellation
-#print axioms ford_lemma_3_4_final_exponent_eq
 
 end
 

@@ -584,13 +584,6 @@ theorem exists_heathBrown_mixed_selection_loss_cutoff
       congr 1
       ring
 
-#print axioms eventually_sharpShellLocalMultiplicityCap_cast_le_rpow
-#print axioms eventually_classicalBinary_color_count_cast_le_general
-#print axioms detector_displacement_window_cast_le
-#print axioms heathBrownUniformMixedSelectionLoss_le_physical
-#print axioms clog_two_add_one_le_succ_clog
-#print axioms eventually_heathBrown_reassembly_factors_le_rpow
-#print axioms exists_heathBrown_mixed_selection_loss_cutoff
 
 end
 

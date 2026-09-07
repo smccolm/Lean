@@ -110,9 +110,6 @@ theorem EpsilonExponentBound.dyadic_shell_four_loss
       congr 2
       ring
 
-#print axioms dyadicZeroShellCount_isBigO_log
-#print axioms dyadicZeroShellCount_pow_four_isBigO_rpow
-#print axioms EpsilonExponentBound.dyadic_shell_four_loss
 
 end
 

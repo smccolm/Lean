@@ -746,27 +746,6 @@ theorem WooleySection10GlobalHierarchy.mono_tau
           ((k * nu : ℕ) : ℝ) := by gcongr
       _ ≤ (k : ℝ) ^ 2 * (delta * (thetaNat : ℝ)) := hsecond
 
-#print axioms wooleyIterationTheta
-#print axioms wooley_iterationTheta_lower
-#print axioms wooley_iterationTheta_lt_add_one
-#print axioms wooley_initialNu_lt_add_one
-#print axioms wooley_eventually_linear_gap
-#print axioms wooley_eventually_linear_gap_strict
-#print axioms wooley_initialNu_le_iterationTheta_eventually
-#print axioms wooley_H_mul_epsilon_le_iterationTheta
-#print axioms wooley_iterationTheta_scale_eventually
-#print axioms wooley_iterationTheta_scale_succ_eventually
-#print axioms wooley_iterationTheta_double_scale_succ_eventually
-#print axioms wooley_theta_nu_linear_eventually
-#print axioms wooley_theta_epsilon_sq_lt_nu_eventually
-#print axioms WooleySection10GlobalHierarchy
-#print axioms wooley_section10_globalHierarchy_eventually
-#print axioms wooley_section10_slopeHierarchy_exists
-#print axioms wooley_section10_hierarchy_exists
-#print axioms WooleySection10GlobalHierarchy.physical_scales
-#print axioms wooley_section10_nodes_of_globalHierarchy
-#print axioms WooleySection10GlobalHierarchy.mono_epsilon
-#print axioms WooleySection10GlobalHierarchy.mono_tau
 
 end
 

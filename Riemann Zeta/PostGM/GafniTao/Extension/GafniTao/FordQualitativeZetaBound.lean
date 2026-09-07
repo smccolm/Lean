@@ -150,8 +150,6 @@ theorem norm_riemannZeta_le_ford_qualitative
         t ^ (fordSourceB 3000000 * (1 - sigma) ^ (3 / 2 : ℝ)) *
         Real.log t ^ ((2 : ℝ) / 3) := by ring
 
-#print axioms norm_riemannZeta_le_ford_qualitative_expanded
-#print axioms norm_riemannZeta_le_ford_qualitative
 
 end
 

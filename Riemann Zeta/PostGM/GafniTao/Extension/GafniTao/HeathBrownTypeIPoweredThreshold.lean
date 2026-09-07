@@ -117,9 +117,6 @@ theorem heathBrownTypeIPoweredThreshold_lower_on_power_scale
       simpa only [Nat.cast_pow] using hHeight
     _ <= heathBrownPoweredThreshold N p L Cp eta := hExact
 
-#print axioms heathBrownPoweredThreshold_lower_of_source_exact_power
-#print axioms rpow_power_scale_loss_le_of_height_lower
-#print axioms heathBrownTypeIPoweredThreshold_lower_on_power_scale
 
 end
 

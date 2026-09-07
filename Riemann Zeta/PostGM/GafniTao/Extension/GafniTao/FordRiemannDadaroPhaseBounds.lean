@@ -155,8 +155,6 @@ theorem fordRiemannDadaroErrorCoeff_le_nine
   norm_num at hTotal
   simpa [fordComplexHeight, theta] using hTotal
 
-#print axioms fordRiemannDadaroBoundaryCoeff_le_four
-#print axioms fordRiemannDadaroErrorCoeff_le_nine
 
 end
 

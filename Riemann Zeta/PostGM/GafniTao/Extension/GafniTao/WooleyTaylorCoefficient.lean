@@ -197,13 +197,6 @@ theorem wooley_taylorOmega_mod_prime
   rw [← Int.cast_natCast, ZMod.intCast_eq_intCast_iff]
   exact hOmega.of_dvd hpdiv
 
-#print axioms wooley_X_pow_sub_dvd_hasseDeriv_X_pow_mul
-#print axioms wooleyTaylorDifference_coeff_zero
-#print axioms wooleyTaylorDifference_eq_low_sum_add_tail
-#print axioms wooley_taylorCoefficient_exists_omega
-#print axioms wooley_taylorCoefficient_eq_monomial_add_spacing
-#print axioms wooley_taylorCoefficient_exists_laurent_omega
-#print axioms wooley_taylorOmega_mod_prime
 
 end
 

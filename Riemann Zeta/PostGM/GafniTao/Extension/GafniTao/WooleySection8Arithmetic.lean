@@ -92,11 +92,6 @@ theorem wooley_section8_weight_complement
   rw [Nat.cast_sub hrk.le]
   ring
 
-#print axioms wooleyTriangular_cast
-#print axioms wooleyTriangular_mono
-#print axioms wooley_section8_left_exponent
-#print axioms wooley_section8_right_exponent
-#print axioms wooley_section8_weight_complement
 
 end
 

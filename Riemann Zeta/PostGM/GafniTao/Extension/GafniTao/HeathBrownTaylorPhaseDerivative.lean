@@ -106,11 +106,6 @@ theorem norm_deriv_heathBrownTaylorError_le_scale
   exact norm_heathBrown_deriv_taylor_remainder_le_scale
     hk hx hxH hfon hderiv
 
-#print axioms hasDerivAt_heathBrownTaylorPolynomial
-#print axioms hasDerivAt_heathBrownTaylorError
-#print axioms deriv_heathBrownTaylorError
-#print axioms norm_heathBrownTaylorError_derivative_le
-#print axioms norm_deriv_heathBrownTaylorError_le_scale
 
 end
 

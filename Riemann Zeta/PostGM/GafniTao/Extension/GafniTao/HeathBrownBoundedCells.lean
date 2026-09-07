@@ -111,10 +111,6 @@ theorem heathBrownBoundedShellMajorant_third_cell
         (heathBrown_bounded_third_coefficient hsigmaLower.le hsigmaUpper)
         (by linarith)
 
-#print axioms huxley_zeroDensityEnvelope
-#print axioms heathBrownBoundedShellMajorant_first_cell
-#print axioms heathBrownBoundedShellMajorant_second_cell
-#print axioms heathBrownBoundedShellMajorant_third_cell
 
 end
 

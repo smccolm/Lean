@@ -211,17 +211,6 @@ theorem wooley_normalized_two_factor
       rw [Real.rpow_mul (div_nonneg hX hZ.le),
         Real.rpow_mul (div_nonneg hY hZ.le)]
 
-#print axioms wooleyNormalizationExponent_pos
-#print axioms wooleyNormalizationExponent_le_one
-#print axioms wooleyNormalizationExponent_symm
-#print axioms wooleyNormalizationExponent_one
-#print axioms wooleyNormalizationExponent_pred
-#print axioms wooley_normalization_pred_exponent
-#print axioms wooley_section8_raw_complement
-#print axioms wooleySourceNormalizationScale_nonneg
-#print axioms wooleySourcePolynomialConditionedMean_nonneg
-#print axioms wooleySourceNormalizedMixedMean_nonneg
-#print axioms wooley_normalized_two_factor
 
 end
 

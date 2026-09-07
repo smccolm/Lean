@@ -252,9 +252,6 @@ theorem exists_norm_pintzZetaAFETermContourIntegrand_dual_central_le
       dsimp only [C]
       ring
 
-#print axioms norm_pintzZetaAFE_dual_polynomial_ratio_le_four
-#print axioms exists_norm_GammaR_dual_displaced_le
-#print axioms exists_norm_pintzZetaAFETermContourIntegrand_dual_central_le
 
 end
 

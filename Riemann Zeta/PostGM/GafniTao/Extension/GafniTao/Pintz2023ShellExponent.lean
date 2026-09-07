@@ -111,8 +111,6 @@ theorem pintz2023_powered_block_rpow_le_shellCore
       (pintz2023ShellBlockExponent eta epsilon k *
         pintz2023EllPowerWindowUpper eta epsilon ell)]
 
-#print axioms pintz2023_equation419_exponent_le_blockExponent
-#print axioms pintz2023_powered_block_rpow_le_shellCore
 
 end
 

@@ -151,8 +151,6 @@ theorem fordK_le_two_distinct_of_maximal
     exact (not_lt_of_ge hPJ) this
   exact (not_lt_of_ge (by exact_mod_cast hbase)) hP
 
-#print axioms ford_self_holder_bound
-#print axioms fordK_le_two_distinct_of_maximal
 
 end
 

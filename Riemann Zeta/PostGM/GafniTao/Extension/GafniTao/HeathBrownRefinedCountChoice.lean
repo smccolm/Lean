@@ -56,7 +56,6 @@ theorem heathBrownPairCount_card_cast_le_at_chosen_scale
     hA.le hlambda hsmall hwidth.1 hwidth.2 hcoordLow hcoordLowD
     hcoordLast hcoordLastD hraw hrawd hkBounds
 
-#print axioms heathBrownPairCount_card_cast_le_at_chosen_scale
 
 end
 

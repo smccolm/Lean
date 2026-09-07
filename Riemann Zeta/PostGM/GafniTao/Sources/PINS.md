@@ -23,6 +23,13 @@
   Quarterly Journal of Mathematics 29 (1978), 443--462, DOI
   `10.1093/qmath/29.4.443` (publicly accessible scan saved locally from the
   Norwegian University of Science and Technology course archive).
+- D. R. Heath--Brown, *A new k-th derivative estimate for exponential sums
+  via Vinogradov's mean value*, arXiv `1601.04493v3` (PDF and source archive
+  saved locally).
+- J. Pintz, 2023 near-one zero-density manuscript used for the
+  `sigma <= 23/24` cutoff (downloaded PDF saved as
+  `pintz-density-near-one-2023.pdf`; bibliographic identification and theorem
+  crosswalk are recorded in `Gafni-Tao Sources.md`).
 - ANTEDB/expdb: commit `2b1aea3de263996c4da3042c115126bff601c618`
   (repository archive saved locally).
 - Frozen Lean foundation: tag `gm-foundation-freeze-v1.0.1`, peeled commit
@@ -30,6 +37,12 @@
 - Foundation Mathlib: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - Foundation PNT+: `4ecb950126c4290293c5662dfe0e884123171df5`.
 - Lean: `v4.30.0`.
+
+The build uses `Dependencies/PrimeNumberTheoremAndClean`, a source-derived
+83-file transitive closure of that exact PNT+ revision. Its
+`SOURCE_SHA256SUMS.txt` records upstream and retained hashes: 82 source files
+are byte-identical, while `Wiener.lean` differs only by deletion of an
+unreachable four-declaration block containing two admitted declarations.
 
 `SHA256SUMS.txt` records the pinned downloaded bytes. The 1978 Heath--Brown
 twelfth-moment scan is now pinned above. Davenport, Turán, and the 1979

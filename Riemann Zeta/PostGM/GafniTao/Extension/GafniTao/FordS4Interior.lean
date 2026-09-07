@@ -190,7 +190,6 @@ theorem fordS4Shifted_card_eq_interior_add_boundary
     Nat.card_eq_fintype_card, Fintype.card_subtype_compl]
   exact (Nat.add_sub_of_le (Fintype.card_subtype_le good)).symm
 
-#print axioms fordS4Shifted_card_eq_interior_add_boundary
 
 end
 

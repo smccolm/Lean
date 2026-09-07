@@ -68,9 +68,6 @@ theorem image_filter_absoluteDyadicZeroSlab_card_le_zeroCount
     _ ≤ zeroCount sigma (2 * U) :=
       absoluteDyadicZeroSlab_card_le_zeroCount sigma U hU
 
-#print axioms absoluteDyadicZeroSlab_card_le_weighted_sum
-#print axioms absoluteDyadicZeroSlab_card_le_zeroCount
-#print axioms image_filter_absoluteDyadicZeroSlab_card_le_zeroCount
 
 end
 

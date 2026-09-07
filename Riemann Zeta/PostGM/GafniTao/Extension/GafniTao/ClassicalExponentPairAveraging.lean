@@ -258,9 +258,6 @@ theorem sum_shiftDistance_le_two_mul_sum
       (fun d _hd _ => hC d)
   linarith
 
-#print axioms finite_weyl_differencing_row
-#print axioms interval_weyl_differencing_row_complex
-#print axioms sum_shiftDistance_le_two_mul_sum
 
 end
 

@@ -113,9 +113,6 @@ theorem pintzEquation46ErrorBound_le_uniform
   unfold pintzEquation46ErrorBound pintzUniformEquation46ErrorBound
   linarith
 
-#print axioms pintzRightCoefficientMass_le_halfPlaneMajorant
-#print axioms pintzEquation46RightTailBound_le_uniform
-#print axioms pintzEquation46ErrorBound_le_uniform
 
 end
 

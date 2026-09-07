@@ -84,8 +84,6 @@ theorem fordLOffDiagonalCount_le_aggregateIntegral
       filter_upwards [] with α
       exact fordL_sum_fixedMajorant Ψ (p ^ r) p q s Q α
 
-#print axioms fordL_sum_fixedMajorant
-#print axioms fordLOffDiagonalCount_le_aggregateIntegral
 
 end
 

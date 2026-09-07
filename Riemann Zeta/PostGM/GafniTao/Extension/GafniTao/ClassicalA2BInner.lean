@@ -222,9 +222,6 @@ theorem logarithmicDifference_weyl_AB_process
           (fun s => logarithmicSecondCorrelationBound_nonneg
             t A N r s ht hA hr) (Finset.mem_range.mp hh)
 
-#print axioms logarithmicSecondDifference_B_process
-#print axioms padded_logarithmicDifference_correlation_eq
-#print axioms logarithmicDifference_weyl_AB_process
 
 end
 

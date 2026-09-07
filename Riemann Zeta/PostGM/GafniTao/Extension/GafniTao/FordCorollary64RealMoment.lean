@@ -71,8 +71,6 @@ theorem fordCorollary64_real_moment_factor_le
         P ^ (2 * (s : ℝ) + 1 + delta) := by
       rw [fordCorollary64_real_scale_power_identity hPpos]
 
-#print axioms fordCorollary64_real_scale_power_identity
-#print axioms fordCorollary64_real_moment_factor_le
 
 end
 

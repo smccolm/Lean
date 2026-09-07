@@ -133,9 +133,6 @@ theorem riemannZeta_eq_fordFiniteApproximation_sub_terms
     simpa [fordComplexHeight] using hEq
   · simpa [fordComplexHeight] using hE
 
-#print axioms fordDadaroCutoff_floor
-#print axioms fordHurwitzFiniteApproximation_one_eq_partial_sum
-#print axioms riemannZeta_eq_fordFiniteApproximation_sub_terms
 
 end
 

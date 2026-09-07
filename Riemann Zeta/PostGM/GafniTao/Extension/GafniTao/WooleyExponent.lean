@@ -222,16 +222,6 @@ theorem wooley_arbitrarilyLarge_counterexamples
     hfail C hC B0
   exact ⟨B, phi, gamma, hB, hphi, hgamma, hstrict⟩
 
-#print axioms wooleySourcePolynomial_equation_3_10
-#print axioms wooley_uniformExponentBound_trivial
-#print axioms WooleyUniformExponentBoundAt.mono
-#print axioms wooleyCriticalExponent_nonneg
-#print axioms wooleyCriticalExponent_le_triangular
-#print axioms wooley_uniformExponentBound_above_critical
-#print axioms wooley_counterexample_below_critical
-#print axioms wooley_arbitrarilyLarge_counterexamples_below
-#print axioms WooleyPolynomialSystem.InPhiTau.mono
-#print axioms wooley_arbitrarilyLarge_counterexamples
 
 end
 

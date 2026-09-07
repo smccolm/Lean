@@ -79,12 +79,6 @@ theorem fordLemma65_selected_power_bound
   rw [Nat.cast_pow, ← mul_pow]
   exact pow_le_pow_left₀ (by positivity) hp _
 
-#print axioms fordLemma65_source_exponent_eq
-#print axioms fordLemma65PrimeExponent_cast
-#print axioms fordLemma65_exponent_identity
-#print axioms fordLemma65_scale_prime_power_identity
-#print axioms fordLemma65_power_identity
-#print axioms fordLemma65_selected_power_bound
 
 end
 

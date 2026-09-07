@@ -135,7 +135,6 @@ theorem HeathBrownPoweredCardinalityPacket.card_le_mhh_common_generic
       _ = p * Cmhh * B ^ epsilonMHH *
           (Q ^ 2 / V ^ 2 + B * Q ^ 4 / V ^ 6) := by ring)
 
-#print axioms HeathBrownPoweredCardinalityPacket.card_le_mhh_common_generic
 
 end
 end GafniTao

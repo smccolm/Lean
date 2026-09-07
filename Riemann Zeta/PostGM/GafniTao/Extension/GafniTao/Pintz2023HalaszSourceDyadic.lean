@@ -173,10 +173,6 @@ theorem norm_pintz2023SmoothedZetaSum_le_source_dyadic
       dsimp only [s] at this ⊢
       nlinarith [hshell]
 
-#print axioms pintz2023HalaszRelativeDyadicShellSum_eq_block
-#print axioms pintz2023HalaszRelativeDyadicShellSum_eq_full_block
-#print axioms sum_Icc_pintz2023SmoothedZetaTerm_eq_source_dyadic
-#print axioms norm_pintz2023SmoothedZetaSum_le_source_dyadic
 
 end
 

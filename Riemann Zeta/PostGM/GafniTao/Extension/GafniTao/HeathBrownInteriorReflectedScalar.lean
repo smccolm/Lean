@@ -172,7 +172,6 @@ theorem eventually_interior_reflected_dyadic_scalar_data
     by simpa only [L, S, Rdet, V, Q, M] using hThresholdExact,
     by simpa only [g, Cref, L, S, Rdet, V, Q, M] using hThreshold⟩
 
-#print axioms eventually_interior_reflected_dyadic_scalar_data
 
 end
 

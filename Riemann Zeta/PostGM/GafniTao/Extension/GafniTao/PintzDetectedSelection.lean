@@ -150,8 +150,6 @@ theorem exists_pintz_zero_detected_selection_subset
       _ ≤ |rho.im| + |rho.im - shift rho| := abs_sub _ _
       _ ≤ T + H := add_le_add him (hShift rho hrho)
 
-#print axioms exists_pintz_zero_detected_selection
-#print axioms exists_pintz_zero_detected_selection_subset
 
 end
 

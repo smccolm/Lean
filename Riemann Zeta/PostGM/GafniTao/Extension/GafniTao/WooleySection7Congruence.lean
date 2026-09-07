@@ -425,17 +425,6 @@ theorem wooleySection7_top_congruences_imply_equation_7_12
     (p ^ bp) r R (fun x j => (Psi j).eval (point x)) xy i] at hz
   simpa only [bp] using hz
 
-#print axioms wooleyIntegerTupleDisplacement_add
-#print axioms wooleyIntegerTupleDisplacement_smul
-#print axioms wooleyIntegerTupleDisplacement_sum
-#print axioms wooleyIntegerTupleDisplacement_polynomial_add
-#print axioms wooleyIntegerTupleDisplacement_polynomial_C_mul
-#print axioms wooleySection7_top_implies_normalized_column
-#print axioms wooleySection7_normalized_columns_imply_transformed
-#print axioms wooleySection7_transformed_implies_lower_displacement
-#print axioms wooleySection7_top_congruences_exist_lower_system
-#print axioms wooley_section7_common_depth_eq_BPrimeNat
-#print axioms wooleySection7_top_congruences_imply_equation_7_12
 
 end
 

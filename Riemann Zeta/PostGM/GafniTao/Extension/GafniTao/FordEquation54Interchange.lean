@@ -138,12 +138,6 @@ theorem norm_fordLemma51TupleCoefficient
   simp only [norm_prod, norm_fordLemma51Epsilon,
     prod_const_one, one_mul]
 
-#print axioms hasSum_fordLemma51TuplePairLatticeTerm
-#print axioms hasSum_fordLemma51AllTuplePairLatticeTerms
-#print axioms fordLemma51WeightedLatticeTerm_eq_tuplePairSum
-#print axioms hasSum_fordLemma51WeightedLatticeMoment_complex
-#print axioms fordLemma51WeightedLatticeTsum_eq_tupleTentSum
-#print axioms norm_fordLemma51TupleCoefficient
 
 end
 

@@ -68,8 +68,6 @@ theorem ford_shifted_exponential_sum_medium_lambda
       hN hNR hR hu0 hu1 hNt hN2t hHigh
     exact hbase.trans (mul_le_mul_of_nonneg_left hpow (by norm_num))
 
-#print axioms ford_medium_target_exponent_lower
-#print axioms ford_shifted_exponential_sum_medium_lambda
 
 end
 

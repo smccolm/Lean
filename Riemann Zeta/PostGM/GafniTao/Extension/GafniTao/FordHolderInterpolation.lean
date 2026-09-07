@@ -128,9 +128,6 @@ theorem ford_lintegral_weighted_interpolation_pow
       rw [mul_comm p, hnp, mul_comm q, hnq, ← hcast,
         ENNReal.rpow_natCast, ENNReal.rpow_one]
 
-#print axioms ford_ennreal_interpolation_point
-#print axioms ford_lintegral_weighted_interpolation
-#print axioms ford_lintegral_weighted_interpolation_pow
 
 end
 

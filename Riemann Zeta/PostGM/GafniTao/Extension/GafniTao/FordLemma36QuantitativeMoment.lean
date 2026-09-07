@@ -67,8 +67,6 @@ theorem fordLemma36_moment_bound_quantitative
     (fordDeltaSequence36_moment_bound_quantitative
       (k := k) (n := n - 1) hk (by omega))
 
-#print axioms fordDeltaSequence36_moment_bound_quantitative
-#print axioms fordLemma36_moment_bound_quantitative
 
 end
 

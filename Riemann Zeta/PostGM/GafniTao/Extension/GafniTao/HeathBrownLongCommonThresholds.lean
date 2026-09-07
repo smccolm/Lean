@@ -30,7 +30,8 @@ noncomputable def heathBrownLongEffectiveSigma
 /-- Consecutive common-base threshold bounds attached to an actual long
 detector-colour output. -/
 theorem eventually_heathBrownLong_commonThresholds
-    {delta1 delta2 eta zetaShell zetaConst zetaDil C Cp : Real}
+    {sigma delta delta1 delta2 eta epsilon zetaShell zetaConst zetaDil
+      C Cp Cmv C0 C2 C4 : Real}
     (hdelta1 : 0 < delta1) (hdelta2 : 0 < delta2)
     (hsigmaUpper : sigma <= 1) (heta : 0 < eta)
     (hzetaShell : 0 < zetaShell) (hzetaConst : 0 < zetaConst)
@@ -159,8 +160,6 @@ theorem eventually_heathBrownLong_commonThresholds
     simpa only [N, p, P, L, heathBrownLongEffectiveSigma,
       Nat.cast_mul, Nat.cast_pow] using h
 
-#print axioms heathBrownLongEffectiveSigma
-#print axioms eventually_heathBrownLong_commonThresholds
 
 end
 

@@ -150,7 +150,6 @@ theorem weighted_quadruple_sum_le_fourth_power_mul_card
         _ = L ^ 4 := by ring
     _ = L ^ 4 * U.card := by simp [mul_comm]
 
-#print axioms weighted_quadruple_sum_le_fourth_power_mul_card
 
 end
 

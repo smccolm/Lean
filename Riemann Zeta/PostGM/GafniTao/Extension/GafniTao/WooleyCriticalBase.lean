@@ -75,10 +75,6 @@ theorem vinogradovCriticalEndpoint_degree_one
   simpa [fordVinogradovKappa] using
     fordVinogradovMomentBound_critical_one hepsilon
 
-#print axioms fordVinogradovPowerVector_one_one_injective
-#print axioms fordVinogradovMomentNat_one_one
-#print axioms fordVinogradovMomentBound_critical_one
-#print axioms vinogradovCriticalEndpoint_degree_one
 
 end
 

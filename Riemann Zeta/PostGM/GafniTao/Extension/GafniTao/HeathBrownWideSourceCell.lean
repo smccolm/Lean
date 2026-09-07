@@ -302,8 +302,6 @@ theorem eventually_wide_source_dyadic_physical_cell
   exact heathBrown_physical_of_packet_bound hx hEnergy hBPos hxB
     (by positivity) rfl rfl hCell
 
-#print axioms heathBrownWideSourceEffectiveSigma
-#print axioms eventually_wide_source_dyadic_physical_cell
 
 end
 

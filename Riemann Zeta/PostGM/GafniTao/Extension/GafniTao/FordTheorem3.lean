@@ -7,7 +7,7 @@ The published theorem records an explicit coefficient.  For the Gafni--Tao
 right-edge argument only finiteness of a coefficient depending on the fixed
 moment parameters is used.  The theorem below therefore preserves Ford's
 literal range and exponent while existentially absorbing the finite leading
-constant supplied by the audited PNT prime packet.
+The constant supplied by the audited PNT prime packet.
 -/
 
 namespace GafniTao
@@ -108,8 +108,6 @@ theorem ford_theorem_3_native
   rw [hdecomp] at hC
   exact ⟨C, hC⟩
 
-#print axioms ford_theorem_3_decomposed
-#print axioms ford_theorem_3_native
 
 end
 

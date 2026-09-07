@@ -167,9 +167,6 @@ theorem heathBrownPairCountTwo_card_cast_le_harmonic
     (mul_le_mul_of_nonneg_left hsum (by norm_num : (0 : ℝ) ≤ 2)) (N : ℝ)
   simpa only [D] using hcount.trans hsum'
 
-#print axioms heathBrownPositiveShiftFiber_card_cast_le_harmonic_total
-#print axioms heathBrown_positiveShiftFiber_sum_cast_le_harmonic
-#print axioms heathBrownPairCountTwo_card_cast_le_harmonic
 
 end
 

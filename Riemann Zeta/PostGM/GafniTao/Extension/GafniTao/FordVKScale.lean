@@ -190,10 +190,6 @@ theorem vinogradovKorobovDenominator_mul_le_four
     _ = 4 * (Real.log t ^ (2 / 3 : ℝ) *
         Real.log (Real.log t) ^ (1 / 3 : ℝ)) := by ring
 
-#print axioms fordVKRadius_mul_denominator
-#print axioms fordVKRadius_rpow_three_halves_mul_log
-#print axioms eventually_fordVK_scale_data
-#print axioms vinogradovKorobovDenominator_mul_le_four
 
 end
 

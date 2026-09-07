@@ -119,11 +119,6 @@ theorem heathBrownPositiveShiftFiber_card_le_exact
     (heathBrown_fixedShift_spacing_exact hk hN hd hdN hlambda
       hcoord hcoordd hraw hrawd hkBounds))
 
-#print axioms mem_heathBrownPositiveShiftFiber
-#print axioms heathBrownPositiveShiftFiber_subset_spacingSet
-#print axioms heathBrownPositiveShiftFiber_card_le_spacingSet
-#print axioms heathBrown_fixedShift_spacing_exact
-#print axioms heathBrownPositiveShiftFiber_card_le_exact
 
 end
 

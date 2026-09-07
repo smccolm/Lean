@@ -38,7 +38,6 @@ theorem fordSourceB_three_million_pos :
     0 < fordSourceB 3000000 :=
   lt_of_lt_of_le (by norm_num) four_le_fordSourceB_three_million
 
-#print axioms ford_qualitative_general_zeta_growth
 
 end
 

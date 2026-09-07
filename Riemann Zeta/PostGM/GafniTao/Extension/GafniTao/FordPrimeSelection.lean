@@ -54,8 +54,5 @@ theorem exists_prime_not_dvd_of_lt_prod
   apply hp
   exact Int.natCast_dvd_natCast.mpr hpa
 
-#print axioms ford_prime_set_pairwise_coprime
-#print axioms exists_prime_not_dvd_of_lt_prod
-#print axioms exists_prime_not_dvd_int_of_natAbs_lt_prod
 
 end GafniTao

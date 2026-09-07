@@ -168,7 +168,6 @@ theorem pintz2023_dyadicHeightShell_epsilonExponentBound
   rw [hLeftNorm, one_mul, hRightNorm]
   exact hCountPower
 
-#print axioms pintz2023_dyadicHeightShell_epsilonExponentBound
 
 end
 

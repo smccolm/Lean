@@ -30,8 +30,6 @@ theorem heathBrownKthDerivativeTheorem_native :
   heathBrownKthDerivativeTheorem_of_vmvt
     heathBrownVMVTMainConjecture_native
 
-#print axioms heathBrownVMVTMainConjecture_native
-#print axioms heathBrownKthDerivativeTheorem_native
 
 end
 

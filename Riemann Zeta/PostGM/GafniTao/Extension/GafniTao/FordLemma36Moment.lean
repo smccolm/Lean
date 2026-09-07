@@ -185,13 +185,6 @@ theorem fordLemma36_native
   fordLemma36_moment_and_exponent hk hnLower
     (fordLemma36_source_range_le_square hk hnSource) hnSource
 
-#print axioms fordLemma35Admissible_below
-#print axioms fordDeltaSequence36_pos_le_initial
-#print axioms fordLemma35AdmissibleAt_rounded_all
-#print axioms fordLemma36_moment_bound_exists
-#print axioms fordLemma36_moment_and_exponent
-#print axioms fordLemma36_source_range_le_square
-#print axioms fordLemma36_native
 
 end
 

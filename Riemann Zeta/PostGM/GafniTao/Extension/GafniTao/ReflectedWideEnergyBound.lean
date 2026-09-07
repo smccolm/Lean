@@ -64,8 +64,6 @@ theorem ReflectedWideEnergyOutput.energy_le_of_all_cells
   dsimp only [F] at hOuter ⊢
   nlinarith
 
-#print axioms reflectedDyadicExtractionFactor
-#print axioms ReflectedWideEnergyOutput.energy_le_of_all_cells
 
 end
 

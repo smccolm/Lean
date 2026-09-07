@@ -99,10 +99,6 @@ theorem norm_heathBrownExponentialSum_neg
       ‖heathBrownExponentialSum N f‖ := by
   rw [heathBrownExponentialSum_neg, norm_star]
 
-#print axioms pintz2023LogPhase_contDiffOn
-#print axioms iteratedDeriv_pintz2023LogPhase
-#print axioms heathBrownPhase_pintz2023LogPhase
-#print axioms norm_heathBrownExponentialSum_neg
 
 end
 

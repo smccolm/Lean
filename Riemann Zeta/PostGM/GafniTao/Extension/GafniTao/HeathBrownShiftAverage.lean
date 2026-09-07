@@ -150,13 +150,6 @@ theorem norm_heathBrown_translation_average_sub_le
           push_cast
           ring
 
-#print axioms heathBrownShiftedExponentialSum_zero
-#print axioms heathBrownShiftedExponentialSum_eq_interval
-#print axioms heathBrownShiftedExponentialSum_succ_sub
-#print axioms norm_heathBrownShiftedExponentialSum_succ_sub_le_two
-#print axioms norm_heathBrownShiftedExponentialSum_sub_le
-#print axioms heathBrown_translation_average_sub_eq
-#print axioms norm_heathBrown_translation_average_sub_le
 
 end
 

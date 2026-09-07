@@ -117,10 +117,6 @@ theorem integral_heathBrownNu_sq_le_pairCount
   · exact_mod_cast card_heathBrownOverlappingCellPairs_le_pairCount f
   · exact measureReal_nonneg
 
-#print axioms unitAddCircle_dist_real_coe
-#print axioms heathBrown_cell_intersection_coordinate_bound
-#print axioms heathBrownOverlappingCellPairs_subset_pairCount
-#print axioms integral_heathBrownNu_sq_le_pairCount
 
 end
 

@@ -326,9 +326,6 @@ theorem wooley_equation_7_17_shifted_spaced_positive_native
   have hins := hnormalForced swapped hnormal
   simpa only [swapped, wooleyEquation717InsertedDisplacement] using hins
 
-#print axioms wooleySection7PositiveDisplacementShifted_eq_intCast
-#print axioms wooleySection7_exists_uniform_shifted_forcing
-#print axioms wooley_equation_7_17_shifted_spaced_positive_native
 
 end
 

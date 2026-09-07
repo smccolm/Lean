@@ -254,11 +254,6 @@ theorem classicalA2B_curvature_small
         pow_le_pow_left₀ (show (0 : ℝ) ≤ N by positivity)
           (show (N : ℝ) ≤ N + 1 by linarith) 4)
 
-#print axioms half_le_natFloor
-#print axioms base_sq_div_classicalA2BScale
-#print axioms classicalA2B_height_scale_identity
-#print axioms classicalA2B_shift_sum_le
-#print axioms classicalA2B_curvature_small
 
 end
 

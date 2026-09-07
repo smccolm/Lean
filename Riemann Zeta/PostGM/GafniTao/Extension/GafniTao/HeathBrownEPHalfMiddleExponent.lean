@@ -108,9 +108,6 @@ theorem heathBrownHalf_middle_Weyl_exponent_le
     linarith
   exact hmono.trans (heathBrownHalf_middle_transition_exponent_le hu0 hu6)
 
-#print axioms heathBrownHalf_middle_transition_exponent_le
-#print axioms heathBrownHalf_middle_B_exponent_le
-#print axioms heathBrownHalf_middle_Weyl_exponent_le
 
 end
 

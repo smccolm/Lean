@@ -120,9 +120,6 @@ theorem pintz2023_halasz_gram_ambient
   exact (sum_conj_pintz2023HalaszE_mul ambient eta (etaAt t) (etaAt u)
     (gammaAt t) (gammaAt u) hN hpositive).symm
 
-#print axioms sum_pintz2023HalaszDSupported_mul_E
-#print axioms sum_conj_pintz2023HalaszE_mul
-#print axioms pintz2023_halasz_gram_ambient
 
 end
 

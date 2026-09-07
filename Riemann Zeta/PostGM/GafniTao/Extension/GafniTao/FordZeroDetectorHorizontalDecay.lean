@@ -6,7 +6,7 @@ import GafniTao.SharpPerronHorizontalAll
 
 The finite residue identity cannot be sent to infinite height using the
 cotangent kernel itself: the cotangent approaches a nonzero imaginary
-constant.  Ford first integrates by parts.  The derivative of the kernel is
+The constant.  Ford first integrates by parts.  The derivative of the kernel is
 quadratically reciprocal to a complex sine and therefore decays
 exponentially on the horizontal edges.  This file proves that exact analytic
 fact, independently of the later logarithm-branch construction.

@@ -28,7 +28,7 @@ noncomputable def heathBrownEffectiveSigma
 second bound uses `P+1`; no uniformity in the power is inferred after the
 constants have been selected. -/
 theorem eventually_actualTypeII_consecutiveThresholds
-    {delta1 delta2 eta zetaShell zetaConst C Cp : Real}
+    {sigma delta delta1 delta2 eta zetaShell zetaConst C Cp : Real}
     (hdelta1 : 0 < delta1) (hdelta2 : 0 < delta2)
     (hCube : 3 * (delta1 + delta2 / 2) ≤ 1)
     (heta : 0 < eta) (hzetaShell : 0 < zetaShell)
@@ -122,8 +122,6 @@ theorem eventually_actualTypeII_consecutiveThresholds
   · simpa only [N, p, P, heathBrownEffectiveSigma] using hMainThreshold
   · simpa only [N, p, P, heathBrownEffectiveSigma] using hNextThreshold
 
-#print axioms heathBrownEffectiveSigma
-#print axioms eventually_actualTypeII_consecutiveThresholds
 
 end
 

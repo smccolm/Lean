@@ -72,8 +72,6 @@ theorem pintz2023_corollary_three_abs
   exact hbound xi N R |t| T hxi hden hN hNR hR ht htT hT
     hcritical hscale
 
-#print axioms pintz2023ComplexWeightedBlock_eq
-#print axioms pintz2023_corollary_three_abs
 
 end
 

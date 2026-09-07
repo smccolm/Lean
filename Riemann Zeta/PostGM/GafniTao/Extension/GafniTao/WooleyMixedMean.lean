@@ -90,10 +90,6 @@ theorem wooleyMixedGridMean_nonneg {Q : ℕ}
       (wooleyMixedResidueGridMoment_nonneg
         s k r p B a b gamma xi eta)
 
-#print axioms wooleyTriangular_zero
-#print axioms wooleyTriangular_one
-#print axioms wooleyMixedResidueGridMoment_nonneg
-#print axioms wooleyMixedGridMean_nonneg
 
 end
 

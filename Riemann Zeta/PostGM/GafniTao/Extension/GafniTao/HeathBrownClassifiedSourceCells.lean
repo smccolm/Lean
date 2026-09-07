@@ -405,8 +405,6 @@ theorem eventually_classified_source_family_physical_bound
       exact_mod_cast hProductOne
     exact hRawM.trans (by nlinarith only [hFactorOne, hMNonneg])
 
-#print axioms heathBrownLowCellExponent_nonneg
-#print axioms eventually_classified_source_family_physical_bound
 
 end
 

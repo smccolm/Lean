@@ -214,10 +214,6 @@ theorem exists_pintz_source_perturbation
   exact ⟨epsilon, hepsilon, hepsilonOne, hcutoff, hdecay,
     hkAlphaMargin, hellAlphaMargin, hkMargin, hellMargin, hCoeff⟩
 
-#print axioms pintzCell_detector_base_exponent_neg
-#print axioms pintz2023DetectorExponent_eq_base_add
-#print axioms pintzPerturbedCoefficient_mono_epsilon
-#print axioms exists_pintz_source_perturbation
 
 end
 

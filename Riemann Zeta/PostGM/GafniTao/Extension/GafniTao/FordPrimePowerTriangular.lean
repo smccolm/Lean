@@ -130,9 +130,6 @@ theorem ford_primePowerNonsingularTriangularFiber_card_le_factorial
     rw [Nat.card_eq_zero.mpr (Or.inl inferInstance)]
     exact Nat.zero_le _
 
-#print axioms ford_powerSum_eq_of_evalSum_eq_of_isUnit
-#print axioms fordPrimePowerTriangularFiber_powerSums_eq
-#print axioms ford_primePowerNonsingularTriangularFiber_card_le_factorial
 
 end
 

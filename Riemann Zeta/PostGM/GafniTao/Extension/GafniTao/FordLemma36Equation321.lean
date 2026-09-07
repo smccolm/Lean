@@ -131,8 +131,6 @@ theorem fordEquation321_sequence
   simpa [fordDSequence36, fordDeltaSequence36_succ, fordRSequence36] using
     fordEquation321 hk hiLower hiUpper
 
-#print axioms fordEquation321
-#print axioms fordEquation321_sequence
 
 end
 

@@ -94,8 +94,6 @@ theorem fordS4_diagonal_lower
     (fordPolynomialDiagonalToShifted Ψ hdk c)
     (fordPolynomialDiagonalToShifted_injective Ψ hdk c)
 
-#print axioms fordPolynomialFourier_eq_collisionCount
-#print axioms fordS4_diagonal_lower
 
 end
 

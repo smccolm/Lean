@@ -142,9 +142,6 @@ theorem eventually_heathBrown_high_cardinality_coefficients
   exact ⟨hMainK.trans (hLift hBaseMain (by positivity)),
     hLift hBaseNext (by positivity)⟩
 
-#print axioms rpow_one_half_le_of_le_sq
-#print axioms eventually_heathBrown_high_finite_loss_le_power
-#print axioms eventually_heathBrown_high_cardinality_coefficients
 
 end
 end GafniTao

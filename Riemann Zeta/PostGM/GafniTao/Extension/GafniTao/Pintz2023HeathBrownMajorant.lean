@@ -205,10 +205,6 @@ theorem norm_pintz2023WeightedBlock_le_heathBrown
       rw [← pintz2023ExponentialBlock_eq_sum_range]
       exact hprefix N (N + j) t hN (by omega) (by omega) ht
 
-#print axioms heathBrownKthDerivative_length_monotone
-#print axioms norm_pintz2023ExponentialBlock_prefix_le
-#print axioms pintz2023ExponentialBlock_eq_sum_range
-#print axioms norm_pintz2023WeightedBlock_le_heathBrown
 
 end
 

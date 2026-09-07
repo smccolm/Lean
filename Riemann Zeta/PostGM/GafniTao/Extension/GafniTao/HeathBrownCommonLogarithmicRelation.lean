@@ -187,10 +187,6 @@ theorem HeathBrownFullyUniformOutputs.logarithmic_relation_common
     (by simpa only [F, x] using hLoss)
   simpa only [x, V, E] using hResult
 
-#print axioms heathBrownLogExponent_one_le
-#print axioms heathBrownLogExponent_le_three_halves
-#print axioms heathBrown_common_logarithmic_scale
-#print axioms HeathBrownFullyUniformOutputs.logarithmic_relation_common
 
 end
 

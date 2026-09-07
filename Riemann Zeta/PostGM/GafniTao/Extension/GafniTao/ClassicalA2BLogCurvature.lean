@@ -183,8 +183,6 @@ theorem logarithmicSecondDifference_secondDifference_bounds
   convert hmul using 1
   all_goals ring_nf
 
-#print axioms reciprocalSquareGap_difference_bounds
-#print axioms logarithmicSecondDifference_secondDifference_bounds
 
 end
 

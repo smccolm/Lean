@@ -138,16 +138,6 @@ theorem wooleySourceNormalizedPolynomialSum_zero
     intro n hn
     rw [wooleySourcePolynomialPhase_zero, mul_one]
 
-#print axioms wooleySourceTwist_apply
-#print axioms wooleySourceTwist_support
-#print axioms wooleySourceMassSq_twist
-#print axioms wooleySourceResidueMassSq_twist
-#print axioms WooleySourceSequence.Admissible.twist
-#print axioms wooleySourcePolynomialPhase_norm
-#print axioms wooleySourcePolynomialPhase_ne_zero
-#print axioms wooleySourcePolynomialPhase_zero
-#print axioms wooleySource_sum_twist_eq_polynomialSum
-#print axioms wooleySourceNormalizedPolynomialSum_zero
 
 end
 

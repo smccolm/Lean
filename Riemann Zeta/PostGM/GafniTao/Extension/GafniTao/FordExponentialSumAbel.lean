@@ -155,10 +155,6 @@ theorem norm_fordShiftedWeightedBlock_le_of_fordTheorem2
   intro Q hNQ hQR
   exact hFord hN hNt hu huOne hNQ (hQR.trans hR)
 
-#print axioms fordShiftedExponentialSum_eq_sum_range
-#print axioms fordShiftedWeightedTerm_eq_cpow
-#print axioms norm_fordShiftedWeightedBlock_le
-#print axioms norm_fordShiftedWeightedBlock_le_of_fordTheorem2
 
 end
 

@@ -100,14 +100,6 @@ theorem wooleyWeightedGridMean_one
   rw [Finsupp.embDomain_apply]
   split_ifs <;> norm_num
 
-#print axioms wooleyWeightedMassSq_one
-#print axioms wooleyWeightedResidueMassSq_one
-#print axioms wooleyWeightedGridSum_one
-#print axioms wooleyWeightedResidueGridSum_one
-#print axioms wooleyWeightedNormalizedResidueGridSum_one
-#print axioms wooleyWeightedConditionedGridMean_one
-#print axioms wooleyWeightedGridMean_one
-#print axioms wooleyBoxSourceSequence_one_admissible
 
 end
 

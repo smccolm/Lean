@@ -252,8 +252,6 @@ theorem norm_fordBoundaryTupleWeylSum_le
   exact mul_le_of_le_one_left (by positivity)
     (norm_fordBoundaryResidueWeylSum_le_one k Q q p c α)
 
-#print axioms fordResidueFamilyCharacterSum_eq_pow_card
-#print axioms norm_fordBoundaryTupleWeylSum_le
 
 end
 

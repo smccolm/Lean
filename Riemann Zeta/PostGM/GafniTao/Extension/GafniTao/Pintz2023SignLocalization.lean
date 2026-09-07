@@ -75,7 +75,6 @@ theorem exists_pintz2023_sameSign_subfamily
       rw [abs_le]
       constructor <;> linarith
 
-#print axioms exists_pintz2023_sameSign_subfamily
 
 end
 

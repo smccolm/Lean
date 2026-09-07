@@ -144,10 +144,6 @@ theorem fordReciprocalError36_bound
     _ = fordReciprocalCoeff36 k * (k : ℝ) / fordAlpha36 k := by ring
     _ ≤ 67 / (50 * (k : ℝ)) := fordReciprocalCoeff36_ratio_bound hk
 
-#print axioms reciprocal_sum_of_contraction
-#print axioms fordDSequence36_reciprocal_sum
-#print axioms fordReciprocalCoeff36_ratio_bound
-#print axioms fordReciprocalError36_bound
 
 end
 

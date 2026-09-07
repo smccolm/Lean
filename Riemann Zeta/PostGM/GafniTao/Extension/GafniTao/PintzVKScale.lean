@@ -151,9 +151,6 @@ theorem pintzDensityLambda_le_log_sq
   unfold pintzDensityLambda pintzDensityLambdaLogCoefficient
   linarith
 
-#print axioms vinogradovKorobovDenominator_le_log
-#print axioms pintz_eta_reciprocal_le_log
-#print axioms pintzDensityLambda_le_log_sq
 
 end
 

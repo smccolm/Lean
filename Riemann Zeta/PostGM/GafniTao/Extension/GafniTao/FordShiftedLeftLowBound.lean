@@ -227,8 +227,6 @@ theorem fordShiftedDetectorPhysicalVerticalBulk_left_low_bound
   rw [hMEq] at hmono
   exact mul_le_mul_of_nonneg_left hmono hcoeff
 
-#print axioms norm_riemannZeta_low_height_le
-#print axioms fordShiftedDetectorPhysicalVerticalBulk_left_low_bound
 
 end
 

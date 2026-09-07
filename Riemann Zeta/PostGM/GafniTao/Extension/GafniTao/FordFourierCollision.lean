@@ -155,7 +155,6 @@ theorem ford_character_collision_mean_eq
       exact fun hz => h (sub_eq_zero.mp hz)
     simp [h, hz]
 
-#print axioms ford_character_collision_mean_eq
 
 end
 

@@ -479,12 +479,6 @@ theorem ford_double_square_moment_quantitative
   rw [hsEq] at hmoment'
   exact ⟨hmoment', hcoeff⟩
 
-#print axioms fordPrimePacketScaleThreshold_le_coefficientBase
-#print axioms fordLemma34UniformBase_le_coefficientBase
-#print axioms fordLemma34Endpoint_le_coefficientBase_pow
-#print axioms fordStepGlobalCoefficient_le_power
-#print axioms fordMomentCoefficient36_le_power
-#print axioms ford_double_square_moment_quantitative
 
 end
 

@@ -256,10 +256,6 @@ theorem isSeparated_detectorRepresentative_color
     rw [abs_of_nonneg (sub_nonneg.mpr (by linarith))]
     linarith
 
-#print axioms intParity_eq_intParity_iff_emod_two_eq
-#print axioms detectorRepresentative_spec
-#print axioms detectorRepresentative_fiber_weight_le
-#print axioms isSeparated_detectorRepresentative_color
 
 end
 

@@ -112,7 +112,6 @@ theorem pintz2023_equation420_exponent_margin
       _ = 75 * eta / 19 := by field_simp; ring
   nlinarith
 
-#print axioms pintz2023_equation420_exponent_margin
 
 end
 

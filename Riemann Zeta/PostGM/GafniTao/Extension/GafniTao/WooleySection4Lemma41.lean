@@ -252,8 +252,6 @@ theorem wooleySourcePolynomial_lemma_4_1
     exact le_of_mul_le_mul_left hmul
       (lt_of_le_of_ne (wooleySourceMassSq_nonneg gamma) (Ne.symm hmass))
 
-#print axioms wooleySourcePolynomial_lemma_4_1_local
-#print axioms wooleySourcePolynomial_lemma_4_1
 
 end
 

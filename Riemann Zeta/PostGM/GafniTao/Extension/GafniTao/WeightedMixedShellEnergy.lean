@@ -146,12 +146,6 @@ theorem exists_zero_energy_mixed_cover
   exact hlabel.trans (by
     simpa only [Fintype.card_fin] using Nat.mul_le_mul_left (m ^ 4) hmono)
 
-#print axioms resonantQuadruplesOnFour
-#print axioms weightedMixedAdditiveEnergyOn
-#print axioms mem_resonantQuadruplesOnFour
-#print axioms exists_zero_energy_mixed_color_fiber
-#print axioms weightedMixedAdditiveEnergyOn_mono
-#print axioms exists_zero_energy_mixed_cover
 
 end
 

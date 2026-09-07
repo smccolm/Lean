@@ -130,9 +130,6 @@ theorem fordCorollary64_root_factor_le
       · exact hq
     _ = _ := by rfl
 
-#print axioms fordCorollary64_root_cancel
-#print axioms fordCorollary64_scale_tail_le
-#print axioms fordCorollary64_root_factor_le
 
 end
 

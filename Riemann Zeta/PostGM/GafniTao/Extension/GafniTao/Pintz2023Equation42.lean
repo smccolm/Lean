@@ -78,8 +78,6 @@ theorem pintz2023_equation_4_2
     exact pintz2023_equation42_integrand_eq_series hrho
   rw [hfunctions]
 
-#print axioms pintz2023_equation42_integrand_eq_series
-#print axioms pintz2023_equation_4_2
 
 end
 

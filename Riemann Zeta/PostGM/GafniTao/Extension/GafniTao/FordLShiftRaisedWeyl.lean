@@ -51,8 +51,6 @@ theorem norm_fordLShiftedWeylSum_true_eq_raised
   rw [fordLShiftedWeylSum_true_eq_phase_mul_raised Ψ hT m hm h,
     norm_mul, norm_mFourier_apply, one_mul]
 
-#print axioms fordLShiftedWeylSum_true_eq_phase_mul_raised
-#print axioms norm_fordLShiftedWeylSum_true_eq_raised
 
 end
 

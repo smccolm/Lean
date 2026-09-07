@@ -195,8 +195,6 @@ theorem wooleySourcePolynomial_section7_hard
     hpPrime hc hr hrk hkp hnu hnua hMB hgammaK hBPrime phi hphi gamma
     hgamma tau epsilon C hC B0 hcor hPhiTau hEpsilonZero hB0
 
-#print axioms wooleySourcePolynomial_section7_hard_of_lower_bound
-#print axioms wooleySourcePolynomial_section7_hard
 
 end
 

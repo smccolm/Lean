@@ -124,9 +124,6 @@ theorem conj_pintz2023HalaszE_mul
       rw [hsqrtC, ← Complex.cpow_add _ _ hnC]
     _ = _ := by rw [hexponent]
 
-#print axioms pintz2023HalaszKernel_pos
-#print axioms pintz2023HalaszD_mul_E
-#print axioms conj_pintz2023HalaszE_mul
 
 end
 

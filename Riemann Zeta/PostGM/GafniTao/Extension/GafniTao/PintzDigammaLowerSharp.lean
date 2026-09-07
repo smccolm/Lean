@@ -248,7 +248,6 @@ theorem exists_log_sub_le_re_digamma {a b : ℝ} (ha : 0 < a) :
   dsimp only [y] at hseriesRe ⊢
   linarith
 
-#print axioms exists_log_sub_le_re_digamma
 
 set_option maxHeartbeats 200000
 

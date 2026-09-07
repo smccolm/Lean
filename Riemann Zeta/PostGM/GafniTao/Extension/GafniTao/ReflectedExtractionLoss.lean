@@ -138,9 +138,6 @@ theorem eventually_reflectedExtractionLoss_le_rpow
       congr 1
       ring
 
-#print axioms doubleFloorDefectWindow_card_cast_le
-#print axioms reflectedDyadicExtractionFactor_le
-#print axioms eventually_reflectedExtractionLoss_le_rpow
 
 end
 

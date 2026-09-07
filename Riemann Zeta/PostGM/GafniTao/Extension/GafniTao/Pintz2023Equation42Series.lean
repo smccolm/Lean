@@ -272,8 +272,6 @@ theorem pintz2023_equation_4_2_complete
     normalized_integral_pintz2023Equation42VerticalTerm_eq
       X rho lambda n
 
-#print axioms summable_integral_norm_pintz2023Equation42VerticalTerm
-#print axioms pintz2023_equation_4_2_complete
 
 end
 

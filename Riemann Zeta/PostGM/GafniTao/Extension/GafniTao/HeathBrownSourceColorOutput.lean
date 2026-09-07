@@ -102,7 +102,6 @@ theorem eventually_heathBrownSourceColorOutput
     hOutput U hU d label hW
   exact ⟨⟨K, C, hK, hC, hN, hCoeff, hLarge, hBranch⟩⟩
 
-#print axioms eventually_heathBrownSourceColorOutput
 
 end
 

@@ -138,10 +138,6 @@ theorem norm_heathBrownExponentialSum_le_factor_good_of_vmvt
         rw [hscaleIdentity]
         ring
 
-#print axioms heathBrownThirdTerm_le_threeTerm
-#print axioms heathBrownFourTerm_le_two_threeTerm
-#print axioms heathBrownLemmaOneGoodConstant_pos
-#print axioms norm_heathBrownExponentialSum_le_factor_good_of_vmvt
 
 end
 

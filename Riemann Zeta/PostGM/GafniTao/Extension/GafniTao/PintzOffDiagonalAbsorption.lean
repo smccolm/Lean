@@ -145,8 +145,6 @@ theorem pintz_off_diagonal_absorption
     _ ≤ pintzDetectedLowerBound eta (pintzDensityLambda eta T) T ^ 2 :=
       hLower
 
-#print axioms pintz_terminal_absorbed_by_adaptive_separation
-#print axioms pintz_off_diagonal_absorption
 
 end
 

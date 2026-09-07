@@ -652,16 +652,6 @@ theorem norm_pintz2023ExponentialBlock_le_A3B_power
   · exact norm_pintz2023ExponentialBlock_le_A3B_power_of_short
       hN hNR htauLow htauFive (by omega)
 
-#print axioms classicalA3B_selected_nested_curvature_le
-#print axioms classicalA3B_outer_first_term_le
-#print axioms classicalA3B_outer_second_term_le
-#print axioms classicalA3B_outer_third_term_le
-#print axioms classicalA3B_phase_curvature_sq_lower
-#print axioms classicalA3B_inverse_outer_factor_le
-#print axioms classicalA3B_outer_fourth_term_le
-#print axioms classicalA3B_outer_sum_le
-#print axioms norm_pintz2023ExponentialBlock_sq_le_A3B_power
-#print axioms norm_pintz2023ExponentialBlock_le_A3B_power
 
 end
 

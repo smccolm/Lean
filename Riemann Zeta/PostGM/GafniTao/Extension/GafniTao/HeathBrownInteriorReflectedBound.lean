@@ -178,7 +178,6 @@ theorem eventually_interior_source_family_reflected_physical_bound
             T ^ reflectedPhysicalBeta d) ^ e := by
       exact mul_le_mul_of_nonneg_right hLoss hEnergyNonneg
 
-#print axioms eventually_interior_source_family_reflected_physical_bound
 
 end
 

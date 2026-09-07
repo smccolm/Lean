@@ -223,10 +223,6 @@ theorem exists_sum_norm_pintz2023IntervalPowerHalaszD_sq_le
   intro n hn
   exact hCoeff X U n baseI hbaseI hU (hpositive n (hIambient hn))
 
-#print axioms norm_pintz2023HalaszD_sq
-#print axioms sum_norm_pintz2023HalaszDSupported_sq
-#print axioms sum_norm_pintz2023HalaszDSupported_sq_le
-#print axioms exists_sum_norm_pintz2023IntervalPowerHalaszD_sq_le
 
 end
 

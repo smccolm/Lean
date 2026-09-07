@@ -91,11 +91,6 @@ theorem eventually_fixed_dilation_rpow_le_rpow
   rw [Real.mul_rpow hD hU]
   exact hSmallU
 
-#print axioms rpow_le_rpow_of_heathBrownLogExponent_le
-#print axioms physical_rpow_bound_of_heathBrownLogExponent_le
-#print axioms physical_rpow_bound_recombine
-#print axioms heathBrown_physical_of_packet_bound
-#print axioms eventually_fixed_dilation_rpow_le_rpow
 
 end
 

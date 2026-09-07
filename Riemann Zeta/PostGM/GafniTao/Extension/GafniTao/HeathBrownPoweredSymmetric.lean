@@ -82,7 +82,6 @@ theorem finite_symmetric_source_powered_energy_heathBrown_native
   rw [← approxAddEnergy_translate 1 R W]
   exact hEnergy
 
-#print axioms finite_symmetric_source_powered_energy_heathBrown_native
 
 end
 

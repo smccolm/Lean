@@ -128,9 +128,6 @@ theorem fordS4InteriorMoment_transform
   intro i _
   exact fordS4InteriorPointMoment_transform q c (u i) j
 
-#print axioms ford_shifted_base_add_translation
-#print axioms ford_shifted_scalar_binomial
-#print axioms fordS4InteriorMoment_transform
 
 end
 

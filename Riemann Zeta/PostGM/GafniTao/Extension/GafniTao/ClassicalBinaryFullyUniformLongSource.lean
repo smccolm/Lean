@@ -201,9 +201,6 @@ theorem eventually_heathBrownFullyUniformLongSourceColorOutput
           hScaleData.2.2.2.2.1, hScaleData.2.2.2.2.2.1, hpP0⟩
     · simpa only [N, a, L, p, P, R] using hOutputs
 
-#print axioms heathBrownLongPowerCap
-#print axioms HeathBrownFullyUniformLongSourceColorOutput
-#print axioms eventually_heathBrownFullyUniformLongSourceColorOutput
 
 end
 

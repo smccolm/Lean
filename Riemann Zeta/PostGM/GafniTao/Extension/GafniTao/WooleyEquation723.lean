@@ -160,7 +160,6 @@ theorem wooley_equation_7_23_native
     _ = _ := by
       rfl
 
-#print axioms wooley_equation_7_23_native
 
 end
 

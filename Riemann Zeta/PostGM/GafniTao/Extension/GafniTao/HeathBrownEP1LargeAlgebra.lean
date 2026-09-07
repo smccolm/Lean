@@ -252,10 +252,6 @@ theorem heathBrown_EP1_large_three_savings
       rw [div_le_div_iff₀ hden3 hden2]
       nlinarith
 
-#print axioms heathBrown_EP1_lower_breakpoint
-#print axioms heathBrown_EP1_large_constant
-#print axioms heathBrown_EP1_large_sloping
-#print axioms heathBrown_EP1_large_three_savings
 
 end
 

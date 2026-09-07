@@ -152,7 +152,6 @@ theorem heathBrown_high_companion_exponent_cap
         (zetaNext + 2 * epsilonMHH + 2 - 2 * sigmaNext) := by
       gcongr
 
-#print axioms heathBrown_high_companion_exponent_cap
 
 end
 end GafniTao

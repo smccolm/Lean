@@ -484,13 +484,6 @@ theorem norm_pintz2023ExponentialBlock_le_A2B_power
   · exact norm_pintz2023ExponentialBlock_le_A2B_power_of_short
       hN hNR htauLow (by omega)
 
-#print axioms classicalA2B_inner_first_le
-#print axioms classicalA2B_nested_curvature_le
-#print axioms classicalA2B_inner_second_le
-#print axioms classicalA2B_inverse_curvature_factor_le
-#print axioms classicalA2B_inner_sum_le
-#print axioms norm_pintz2023ExponentialBlock_sq_le_A2B_power
-#print axioms norm_pintz2023ExponentialBlock_le_A2B_power
 
 end
 

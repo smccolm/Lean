@@ -210,8 +210,6 @@ theorem pintz_core_absorbed_by_detector_square
       rw [← Real.rpow_add hlogPos]
       norm_num
 
-#print axioms pintz_core_absorption_log_budget
-#print axioms pintz_core_absorbed_by_detector_square
 
 end
 

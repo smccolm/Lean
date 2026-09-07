@@ -236,11 +236,6 @@ theorem norm_pintz2023ExponentialBlock_le_heathBrown
       hNR.le] at hbound
     simpa [Nat.cast_sub hNR.le] using hbound
 
-#print axioms iteratedDeriv_pintz2023LogPhase_of_even
-#print axioms iteratedDeriv_neg_pintz2023LogPhase_of_odd
-#print axioms heathBrownExponentialSum_shifted_eq_pintz2023Block
-#print axioms norm_heathBrownExponentialSum_neg_shifted_eq_pintz2023Block
-#print axioms norm_pintz2023ExponentialBlock_le_heathBrown
 
 end
 

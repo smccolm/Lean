@@ -59,8 +59,6 @@ theorem pintz2023LargeMInnerBlock_corollary_three
   exact hrounded xi Q t T (A / d) (B / d) hxi hden hxiOne hQ
     hcritical ht htT hT hAdiv hBdiv hphysical
 
-#print axioms nat_div_two_mul_le_two_mul_div_add_one
-#print axioms pintz2023LargeMInnerBlock_corollary_three
 
 end
 

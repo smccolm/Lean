@@ -155,8 +155,6 @@ theorem pintz_finite_subset_density
         (2 * (harmonic Y : ℝ) *
           ((Y : ℝ) ^ (2 * xi) * (harmonic Y : ℝ))) := by rfl
 
-#print axioms pintz_finite_zero_density
-#print axioms pintz_finite_subset_density
 
 end
 

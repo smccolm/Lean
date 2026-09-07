@@ -132,7 +132,6 @@ theorem eventually_actualTypeI_long_physical_low_cells
   exact heathBrown_physical_of_packet_bound hx hE hB hxB
     (by unfold heathBrownCardinalityShift; positivity) rfl rfl hCell
 
-#print axioms eventually_actualTypeI_long_physical_low_cells
 
 end
 

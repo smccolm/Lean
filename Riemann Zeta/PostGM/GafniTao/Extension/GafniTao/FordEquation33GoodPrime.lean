@@ -135,7 +135,6 @@ theorem ford_equation_3_3_distinct_good_prime
     _ ≤ S.card * fordS3Count (P := P) (p := p.1) Ψ hdk s Q q := by
       exact Nat.mul_le_mul_right _ (card_fordGoodPrime_le S T)
 
-#print axioms ford_equation_3_3_distinct_good_prime
 
 end
 

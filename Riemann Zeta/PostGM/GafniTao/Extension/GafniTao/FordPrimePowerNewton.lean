@@ -200,16 +200,6 @@ theorem ford_primePowerPowerSumFiber_card_le_factorial
       Nat.card_le_card_of_surjective orbit horbit
     _ = Nat.factorial d := by rw [Nat.card_perm, Nat.card_fin]
 
-#print axioms ford_elementary_eq_of_powerSums_eq_of_isUnit
-#print axioms ford_natCast_isUnit_zmod_prime_pow
-#print axioms ford_elementary_eq_of_powerSums_eq_prime_pow
-#print axioms fordRootPolynomial_eq_of_powerSums_eq_prime_pow
-#print axioms fordRootPolynomial_eval
-#print axioms fordPrimeReduction_map_powerSum
-#print axioms ford_isUnit_of_primeReduction_ne_zero
-#print axioms ford_exists_reduction_perm_of_powerSums_eq_prime_pow
-#print axioms ford_eq_comp_perm_of_powerSums_eq_prime_pow
-#print axioms ford_primePowerPowerSumFiber_card_le_factorial
 
 end
 

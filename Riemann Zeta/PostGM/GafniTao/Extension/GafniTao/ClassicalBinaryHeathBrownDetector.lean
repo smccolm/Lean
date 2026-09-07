@@ -128,8 +128,6 @@ theorem exists_heathBrown_classicalBinaryShellDetectorData
   · exact hMassII
   · exact hThresholdII
 
-#print axioms eventually_threshold_mul_heathBrownCutoff_le_quarter
-#print axioms exists_heathBrown_classicalBinaryShellDetectorData
 
 end
 

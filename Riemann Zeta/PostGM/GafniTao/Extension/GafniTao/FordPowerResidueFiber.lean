@@ -110,9 +110,6 @@ theorem fordBResidueClass_card_le
         Nat.factorial d * p ^ (s - d)
       rw [htails, Nat.mul_comm]
 
-#print axioms fordB_head_powerSums_eq
-#print axioms fordB_headFiber_card_le_factorial
-#print axioms fordBResidueClass_card_le
 
 end
 

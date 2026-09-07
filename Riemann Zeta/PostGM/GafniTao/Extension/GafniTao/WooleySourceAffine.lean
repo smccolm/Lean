@@ -265,21 +265,6 @@ theorem wooleySourcePolynomialConditionedMean_affinePullback_one
               phi gamma alpha z‖ ^ (2 * s)))
     exact congrArg (fun x : ℝ => (wooleySourceMassSq gamma)⁻¹ * x) hsum
 
-#print axioms wooleyAffineEmbedding_apply
-#print axioms mem_range_wooleyAffineEmbedding_iff
-#print axioms wooleyAffinePullback_apply
-#print axioms WooleySourceSequence.Admissible.affinePullback
-#print axioms wooleyAffineEmbedding_bijOn_support
-#print axioms wooleySourceMassSq_affinePullback
-#print axioms wooleyAffinePolynomialSystem_eval
-#print axioms wooleySourcePolynomialPhase_affine
-#print axioms wooleySourcePolynomialSum_affinePullback
-#print axioms wooleySourceNormalizedPolynomialSum_affinePullback
-#print axioms wooleySourceResidueSequence_affinePullback_one
-#print axioms wooleySourceResidueMassSq_affinePullback_one
-#print axioms wooleySourceNormalizedPolynomialResidueSum_affinePullback_one
-#print axioms wooleySourceMassSq_affinePullback_one
-#print axioms wooleySourcePolynomialConditionedMean_affinePullback_one
 
 end
 

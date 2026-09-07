@@ -78,10 +78,6 @@ theorem taylorWithinEval_deriv_eq_heathBrownTaylorDerivativePolynomial_of_pos
       heathBrownTaylorDerivativePolynomial k f n x :=
   taylorWithinEval_deriv_eq_heathBrownTaylorDerivativePolynomial hk hx hf
 
-#print axioms iteratedDeriv_deriv_eq_succ
-#print axioms taylorWithinEval_univ_eq_heathBrownTaylorPolynomial
-#print axioms taylorWithinEval_deriv_eq_heathBrownTaylorDerivativePolynomial
-#print axioms taylorWithinEval_deriv_eq_heathBrownTaylorDerivativePolynomial_of_pos
 
 end
 

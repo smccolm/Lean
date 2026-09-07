@@ -99,8 +99,6 @@ theorem ford_shifted_exponential_sum_large_lambda
         fordAbsoluteCoefficientConstant
       positivity))
 
-#print axioms fordDegreeFromLambda_band
-#print axioms ford_shifted_exponential_sum_large_lambda
 
 end
 

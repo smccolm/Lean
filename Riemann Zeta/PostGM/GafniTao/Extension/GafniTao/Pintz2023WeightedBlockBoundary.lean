@@ -85,9 +85,6 @@ theorem norm_pintz2023ComplexWeightedBlock_boundary
       exact_mod_cast hcard
     _ = Q ^ (-3 * epsilon) := one_mul _
 
-#print axioms pintz2023ComplexWeightedBlock_add
-#print axioms norm_pintz2023_complex_weighted_term
-#print axioms norm_pintz2023ComplexWeightedBlock_boundary
 
 end
 

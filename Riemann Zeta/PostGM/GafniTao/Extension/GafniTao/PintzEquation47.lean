@@ -152,10 +152,6 @@ theorem pintz_equation_4_6_exact
   rw [← hhead]
   linear_combination -hshift'
 
-#print axioms pintz_rho_add_leftLine
-#print axioms pintzFiniteContourIntegrand_left_eq_polynomial_mul_f_source
-#print axioms pintzEquation46Integral_eq_source
-#print axioms pintz_equation_4_6_exact
 
 end
 

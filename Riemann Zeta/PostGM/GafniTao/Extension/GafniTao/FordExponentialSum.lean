@@ -88,8 +88,6 @@ theorem fordTheorem2_exponent_eq
   unfold fordLambda
   field_simp [hlogN, hlogt, hD]
 
-#print axioms norm_fordShiftedExponentialSum_le_N
-#print axioms fordTheorem2_exponent_eq
 
 end
 

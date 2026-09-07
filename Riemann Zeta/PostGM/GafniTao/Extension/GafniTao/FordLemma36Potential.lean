@@ -145,9 +145,6 @@ theorem fordPotential36_model_step
       linarith
     _ ≤ fordPotential36 d - b - (2 / 5) * b ^ 2 := by linarith
 
-#print axioms fordPotential36_mono
-#print axioms fordPotential36_quadratic_coefficient
-#print axioms fordPotential36_model_step
 
 end
 

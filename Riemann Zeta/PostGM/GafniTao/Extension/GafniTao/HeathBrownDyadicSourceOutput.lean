@@ -138,8 +138,6 @@ theorem exists_heathBrownDyadicSourceCutoff
       d0 d1 d2 d3
     exact ⟨⟨hNoncentral, d0, d1, d2, d3, mixed⟩⟩
 
-#print axioms HeathBrownDyadicSourceOutput.shell_eq
-#print axioms exists_heathBrownDyadicSourceCutoff
 
 end
 

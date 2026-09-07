@@ -231,9 +231,6 @@ theorem pintz2023_corollary_one_native
       linarith
     _ = (C₀ * D) * pintz2023CorollaryOneMajorant r N epsilon xi t := by ring
 
-#print axioms pintz2023_abel_endpoint_scaled_le
-#print axioms norm_pintz2023WeightedBlock_le_heathBrown_uniform
-#print axioms pintz2023_corollary_one_native
 
 end
 

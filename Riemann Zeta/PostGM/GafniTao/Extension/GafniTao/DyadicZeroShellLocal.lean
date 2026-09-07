@@ -120,11 +120,6 @@ theorem weightedMixed_dyadicZeroShells_le_of_central
     exact weightedMixedAdditiveEnergyOn_le_central_first hsigma hT
       (by rw [hEq]) (hSub 2) (hSub 0) (hSub 1)
 
-#print axioms zeroSet_mono_height_sigma
-#print axioms zeroCount_mono_height_sigma
-#print axioms dyadicZeroShell_subset_common_zeroSet
-#print axioms dyadicZeroShell_eq_central
-#print axioms weightedMixed_dyadicZeroShells_le_of_central
 
 end
 

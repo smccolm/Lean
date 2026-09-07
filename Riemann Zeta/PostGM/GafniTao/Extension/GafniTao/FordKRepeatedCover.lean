@@ -179,8 +179,6 @@ theorem fordK_count_eq_distinct_add_repeated
       Nat.card_congr (fordKDistinctRepeatedEquiv Ψ)
     _ = _ := Nat.card_sum
 
-#print axioms fordK_repeated_card_le_pair_sum
-#print axioms fordK_count_eq_distinct_add_repeated
 
 end
 

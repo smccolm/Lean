@@ -84,9 +84,6 @@ theorem ford_lemma_3_4_canonical_terminal_constant
   apply ford_lemma_3_4_terminal_constant hk heta
   exact fordCanonicalE_zero_le_source_bound (by omega) heta hj
 
-#print axioms ford_lemma_3_4_terminal_constant
-#print axioms ford_lemma_3_4_terminal_power
-#print axioms ford_lemma_3_4_canonical_terminal_constant
 
 end
 

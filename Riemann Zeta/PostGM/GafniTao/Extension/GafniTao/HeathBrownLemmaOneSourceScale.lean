@@ -221,11 +221,6 @@ theorem heathBrownLemmaOneNormalized_le_sourceScale
         ring
   exact hcore.trans (add_le_add hMain le_rfl)
 
-#print axioms heathBrown_vmvt_epsilon_identity
-#print axioms heathBrown_H_vmvt_loss_le
-#print axioms heathBrown_epsilon_halves
-#print axioms heathBrownLemmaOneSourceConstant_pos
-#print axioms heathBrownLemmaOneNormalized_le_sourceScale
 
 end
 

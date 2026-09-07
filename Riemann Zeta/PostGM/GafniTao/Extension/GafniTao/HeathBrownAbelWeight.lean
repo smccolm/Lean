@@ -112,10 +112,6 @@ theorem sum_norm_heathBrownTaylorError_phase_succ_sub_le
       have hcard : (Finset.Ico 1 H).card ≤ H := by simp
       exact mul_le_mul_of_nonneg_right (by exact_mod_cast hcard) (by positivity)
 
-#print axioms norm_heathBrownPhase_sub_le
-#print axioms norm_image_sub_le_of_hasDerivAt_bound
-#print axioms norm_heathBrownTaylorError_phase_succ_sub_le
-#print axioms sum_norm_heathBrownTaylorError_phase_succ_sub_le
 
 end
 

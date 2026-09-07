@@ -256,11 +256,6 @@ theorem pintz2023PowerCoeff_bound_native
           dsimp only [delta]
           ring
 
-#print axioms pintz2023Coeff_eq_zero
-#print axioms norm_pintz2023Coeff_le_divisors_card
-#print axioms pintz2023_block_power_identity
-#print axioms pintz2023_block_power_identity_Ioc
-#print axioms pintz2023PowerCoeff_bound_native
 
 end
 

@@ -81,7 +81,6 @@ theorem pintz2023_halasz_gram_infinite
     simpa only [E, G, pintz2023HalaszFiniteGram] using hFinite
   simpa only [E, Ginf] using hLimitIneq
 
-#print axioms pintz2023_halasz_gram_infinite
 
 end
 

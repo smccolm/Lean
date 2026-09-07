@@ -133,11 +133,6 @@ theorem wooley_conditioned_grid_mean_eq_one
   have hQR : (Q : ℝ) ≠ 0 := by positivity
   field_simp
 
-#print axioms wooley_sourceValue_cast_injective
-#print axioms wooleyResidueClass_card_le_one
-#print axioms wooley_sum_residueMassSq
-#print axioms wooleyResidueRawMoment_eq_modulusPow_mul_mass
-#print axioms wooley_conditioned_grid_mean_eq_one
 
 end
 

@@ -110,9 +110,6 @@ theorem heathBrownVMVTMainConjecture_of_wooleyPadic
   heathBrownVMVTMainConjecture_of_critical
     (vinogradovCriticalEndpoint_of_wooleyPadic hconc)
 
-#print axioms fordLambda34_critical
-#print axioms vinogradovCriticalEndpoint_of_wooleyPadic
-#print axioms heathBrownVMVTMainConjecture_of_wooleyPadic
 
 end
 

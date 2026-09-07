@@ -259,8 +259,6 @@ theorem sum_fordInverseSquareBinDecay_mul_adaptiveLog_le
             (fordAdaptiveZeroBinHeight_ge_eight _))))).trans_eq
               (tsum_fordInverseSquareBinLogWeight_sub a)
 
-#print axioms summable_fordInverseSquareBinLogWeight
-#print axioms sum_fordInverseSquareBinDecay_mul_adaptiveLog_le
 
 end
 

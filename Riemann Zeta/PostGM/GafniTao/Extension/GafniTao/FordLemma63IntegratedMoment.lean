@@ -133,12 +133,6 @@ theorem fordLemma63_integral_SZero_power_le_sharp
   exact setIntegral_mono_on hf hg (measurableSet_fordUnitCube k)
     (fun β hβ => fordLemma63SZero_power_le_sharp hM hr)
 
-#print axioms fordUnitCube_subset_closed
-#print axioms isCompact_fordClosedUnitCube
-#print axioms continuous_fordLemma63PolynomialSum
-#print axioms integrableOn_fordLemma63SZero_pow
-#print axioms fordLemma63_integral_SZero_power_le
-#print axioms fordLemma63_integral_SZero_power_le_sharp
 
 end
 

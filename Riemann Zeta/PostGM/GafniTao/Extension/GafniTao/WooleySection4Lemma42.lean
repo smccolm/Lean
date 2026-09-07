@@ -399,10 +399,6 @@ theorem wooleySourcePolynomial_lemma_4_2
       rw [wooley_natPrimePower_rpow p (B ⌈/⌉ k)
         (wooleyCriticalExponent k p + epsilon) hpPos]
 
-#print axioms wooleySourcePolynomial_lemma_4_2_of_conditioned_bounds_with_constant
-#print axioms wooleySourcePolynomial_lemma_4_2_of_conditioned_bounds
-#print axioms wooley_natPrimePower_rpow
-#print axioms wooleySourcePolynomial_lemma_4_2
 
 end
 

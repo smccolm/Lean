@@ -302,10 +302,6 @@ theorem abs_fordLemma63DeltaDeriv_le
       exact add_le_add (hrem.trans hfirst) hbeta
     _ = 1 / (Real.pi * M) := by ring
 
-#print axioms hasDerivAt_fordLemma63Delta
-#print axioms ford_geometric_derivative_remainder
-#print axioms fordLemma63_exact_derivative_remainder
-#print axioms abs_fordLemma63DeltaDeriv_le
 
 end
 

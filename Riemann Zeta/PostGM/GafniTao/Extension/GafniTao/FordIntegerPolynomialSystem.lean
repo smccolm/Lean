@@ -80,9 +80,6 @@ theorem ford_lemma_3_1_integer_source
   exact ford_lemma_3_1_source (fordRationalizeSystem ψ) hT hdk
     (fun i => (z i : ℚ))
 
-#print axioms fordInitialIntegerPowerSystem
-#print axioms fordRationalizeSystem
-#print axioms ford_lemma_3_1_integer_source
 
 end
 

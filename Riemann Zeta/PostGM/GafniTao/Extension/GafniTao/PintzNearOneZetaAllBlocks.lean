@@ -140,8 +140,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_all
       _ = C * t ^ ((1 / 2 : ℝ) *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := rfl
 
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_hybrid
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_all
 
 end
 

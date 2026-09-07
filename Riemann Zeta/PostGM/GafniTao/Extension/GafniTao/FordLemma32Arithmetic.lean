@@ -30,7 +30,5 @@ theorem ford_factorial_mul_factorial_sub_le_factorial
   exact Nat.le_of_dvd (Nat.factorial_pos k)
     (Nat.factorial_mul_factorial_dvd_factorial hdk)
 
-#print axioms ford_lemma_3_2_exponent_identity
-#print axioms ford_factorial_mul_factorial_sub_le_factorial
 
 end GafniTao

@@ -127,10 +127,6 @@ theorem ford_qualitative_global_zeta_growth :
   exact norm_riemannZeta_le_ford_qualitative_positive
     hsigmaLower hsigmaUpper hpos
 
-#print axioms four_le_fordSourceB_three_million
-#print axioms norm_riemannZeta_le_ford_qualitative_positive
-#print axioms norm_riemannZeta_height_abs
-#print axioms ford_qualitative_global_zeta_growth
 
 end
 

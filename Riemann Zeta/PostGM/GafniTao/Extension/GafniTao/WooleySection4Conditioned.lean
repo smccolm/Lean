@@ -216,9 +216,6 @@ theorem wooleySection4_conditionedInsertedAverage_eq
       (B := B) (h := h) (H := H) (s := s)
       (wooleyAffinePolynomialSystem phi (p ^ h) xi) Psi h412⟩
 
-#print axioms wooleySection4ConditionedInsertedAverage_expand
-#print axioms wooleySection4_conditionedInsertedAverage_eq_of_equation_4_12
-#print axioms wooleySection4_conditionedInsertedAverage_eq
 
 end
 

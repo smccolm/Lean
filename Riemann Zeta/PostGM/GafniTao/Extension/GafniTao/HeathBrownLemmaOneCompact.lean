@@ -40,7 +40,6 @@ theorem norm_heathBrownExponentialSum_le_sourceScale_of_vmvt
   exact hsum.trans (heathBrownLemmaOneNormalized_le_sourceScale
     hk hN hA hlambda hepsilon hsmall hHN hC)
 
-#print axioms norm_heathBrownExponentialSum_le_sourceScale_of_vmvt
 
 end
 

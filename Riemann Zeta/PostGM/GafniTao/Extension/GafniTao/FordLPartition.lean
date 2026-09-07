@@ -87,8 +87,6 @@ theorem fordLCount_le_two_mul_max_partition
   rw [fordLCount_eq_diagonal_add_offDiagonal]
   omega
 
-#print axioms fordLCount_eq_diagonal_add_offDiagonal
-#print axioms fordLCount_le_two_mul_max_partition
 
 end
 

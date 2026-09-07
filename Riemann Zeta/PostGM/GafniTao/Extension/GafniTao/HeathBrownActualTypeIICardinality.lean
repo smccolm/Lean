@@ -98,7 +98,6 @@ theorem eventually_actualTypeII_cardinalityBounds
     full.next_le_physical hData.1 hData.2.2.1 hCmv.le hB
       hData.2.2.2.2.2.2, full.card_Cmv, full.next_Cmv⟩
 
-#print axioms eventually_actualTypeII_cardinalityBounds
 
 end
 

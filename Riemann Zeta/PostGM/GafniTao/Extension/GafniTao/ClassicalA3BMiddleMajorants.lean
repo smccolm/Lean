@@ -217,10 +217,6 @@ theorem norm_logarithmicDifference_sum_sq_le_A3_compact
   apply le_of_mul_le_mul_left (by simpa [mul_assoc] using hsq)
   exact sq_pos_of_pos hH₂R
 
-#print axioms separated_A3_second_inverse_factor
-#print axioms sum_logarithmicA3SecondCorrelationBound_le
-#print axioms logarithmicDifference_weyl_A2B_process_A3_summed
-#print axioms norm_logarithmicDifference_sum_sq_le_A3_compact
 
 end
 

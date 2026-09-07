@@ -21,7 +21,7 @@ flowchart TD
 
     A1["Native core theorem surface<br/>AUDIT ENTRIES PRESENT"]
 
-    A2["Final build and axiom-output inspection<br/>FINAL RELEASE GATE"]
+    A2["Isolated build, source hashes,<br/>axiom audit and integrity scan<br/>RELEASE VERIFIED"]
 
 
     FQ0["NATIVE NEAR-ONE CHAIN<br/>ROOT INTEGRATED"]
@@ -73,9 +73,9 @@ flowchart TD
 
     P3["Second-sample exponent algebra<br/>PROVED"]
 
-    P4["exceptionalExponent_two_fifteenths_add_le_native<br/>PROVED IN WORKBENCH"]
+    P4["exceptionalExponent_two_fifteenths_add_le_native<br/>PROVED AND AUDITED"]
 
-    P5["Second-sample release promotion<br/>PENDING"]
+    P5["Second-sample release promotion<br/>DONE"]
 
 
     HB0["HEATH-BROWN ENERGY CHAIN"]
@@ -88,11 +88,11 @@ flowchart TD
 
     HB4["Powered GM energy bridge<br/>PROVED AND AUDITED"]
 
-    HB5["First HB energy cell<br/>1/2 <= sigma <= 2/3<br/>PROVED IN WORKBENCH"]
+    HB5["First HB energy cell<br/>1/2 <= sigma <= 2/3<br/>PROVED AND AUDITED"]
 
-    HB6["Second HB energy cell<br/>2/3 < sigma <= 3/4<br/>PROVED IN WORKBENCH"]
+    HB6["Second HB energy cell<br/>2/3 < sigma <= 3/4<br/>PROVED AND AUDITED"]
 
-    HB7["Full third high-range cell<br/>OPEN / ACTIVE"]
+    HB7["Full third high-range cell<br/>OPTIONAL / NOT CLAIMED"]
 
     HB8["Full HeathBrownZeroEnergyBounds<br/>STRONGER OPTIONAL TARGET"]
 
@@ -105,53 +105,53 @@ flowchart TD
 
     S3["refinedExceptionalUpperExponent<br/>17/30 <= 7/12<br/>PROVED"]
 
-    S4["exceptionalExponent_seventeen_thirtieths_le_native<br/>mu(17/30) <= 7/12<br/>PROVED IN WORKBENCH"]
+    S4["exceptionalExponent_seventeen_thirtieths_le_native<br/>mu(17/30) <= 7/12<br/>PROVED AND AUDITED"]
 
-    S5["First-sample release promotion<br/>PENDING"]
+    S5["First-sample release promotion<br/>DONE"]
 
 
-    RI0["SECTION 3 RELEASE GATE"]
+    RI0["SECTION 3 RELEASE CHAIN"]
 
-    RI1["Import HeathBrownZeroEnergyLowNative<br/>PENDING"]
+    RI1["Import HeathBrownZeroEnergyLowNative<br/>DONE"]
 
-    RI2["Import Section3NativeSamples<br/>PENDING"]
+    RI2["Import Section3NativeSamples<br/>DONE"]
 
-    RI3["Add sample endpoints to central Audit.lean<br/>PENDING"]
+    RI3["Add sample endpoints to central Audit.lean<br/>DONE"]
 
-    RI4["Build and inspect dependency output<br/>PENDING"]
+    RI4["Build and inspect dependency output<br/>DONE"]
 
 
     OF0["OPTIONAL OPTIMIZED FORD OBJECTIVES"]
 
-    OF1["FordTheorem2<br/>optimized constants<br/>OPEN"]
+    OF1["FordTheorem2<br/>optimized constants<br/>OPTIONAL / NOT CLAIMED"]
 
-    OF2["FordZetaGrowthBound<br/>optimized constants<br/>OPEN"]
+    OF2["FordZetaGrowthBound<br/>optimized constants<br/>OPTIONAL / NOT CLAIMED"]
 
-    OF3["FordNearOneDensityEstimate<br/>optimized constants<br/>OPEN"]
+    OF3["FordNearOneDensityEstimate<br/>optimized constants<br/>OPTIONAL / NOT CLAIMED"]
 
     OF4["Not blockers to current GT results"]
 
 
     OPT0["OPTIONAL FULL SECTION 3 ENVELOPE"]
 
-    OPT1["Complete high HB energy cell<br/>OPEN"]
+    OPT1["Complete high HB energy cell<br/>OPTIONAL / NOT CLAIMED"]
 
-    OPT2["Full three-cell HB envelope<br/>OPEN"]
+    OPT2["Full three-cell HB envelope<br/>OPTIONAL / NOT CLAIMED"]
 
-    OPT3["Pinned numerical source tables<br/>OPEN"]
+    OPT3["Pinned numerical source tables<br/>OPTIONAL / NOT CLAIMED"]
 
-    OPT4["Certified finite optimizer<br/>OPEN"]
+    OPT4["Certified finite optimizer<br/>OPTIONAL / NOT CLAIMED"]
 
 
     G22["GT-22 Published source inputs<br/>DISPLAYED SAMPLE INPUTS CLOSED"]
 
-    G23["GT-23 Published sample bounds<br/>BOTH PROVED IN WORKBENCH"]
+    G23["GT-23 Published sample bounds<br/>BOTH RELEASE COMPLETE"]
 
-    G24["GT-24 Full certified optimizer<br/>OPTIONAL / OPEN"]
+    G24["GT-24 Full certified optimizer<br/>OPTIONAL / NOT CLAIMED"]
 
-    G25["GT-25 Section 3 release integration<br/>ACTIVE"]
+    G25["GT-25 Integrity and release integration<br/>DONE<br/>warning-free pinned PNT closure,<br/>central audit and zero-diagnostic runner"]
 
-    G26["GT-26 Final publication synchronization<br/>ACTIVE"]
+    G26["GT-26 Documentation and reproduction<br/>DONE<br/>source/retained hashes and exact pins"]
 
 
     SRC --> R0
@@ -286,7 +286,6 @@ flowchart TD
     G23 --> G25
 
     G25 --> G26
-    G24 --> G26
     A2 --> G26
 
 
@@ -311,24 +310,22 @@ flowchart TD
 
     class W0,W1,W2,W3,W4,W5 breakthrough;
 
-    class P0,P1,P2,P3,P4 breakthrough;
-    class P5 active;
+    class P0,P1,P2,P3,P4,P5 breakthrough;
 
     class HB0,HB1,HB2,HB3,HB4 breakthrough;
     class HB5,HB6 breakthrough;
-    class HB7 open;
+    class HB7 optional;
     class HB8 optional;
 
-    class S0,S1,S2,S3,S4 breakthrough;
-    class S5 active;
+    class S0,S1,S2,S3,S4,S5 breakthrough;
 
-    class RI0,RI1,RI2,RI3,RI4 active;
+    class RI0,RI1,RI2,RI3,RI4 done;
 
     class OF0,OF1,OF2,OF3,OF4 optional;
     class OPT0,OPT1,OPT2,OPT3,OPT4 optional;
 
     class G22 done;
-    class G23 breakthrough;
+    class G23 done;
     class G24 optional;
 
-    class G25,G26,A2 active;
+    class G25,G26,A2 done;

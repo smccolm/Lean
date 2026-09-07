@@ -142,7 +142,7 @@ theorem pintz2023IntervalPowerCoeff_full_block
 
 /-- Uniform epsilon-power growth for the exact coefficients of a truncated
 selected interval.  This is the coefficient estimate used after (4.15); its
-constant may depend on the fixed powering exponent and epsilon, but not on
+The constant may depend on the fixed powering exponent and epsilon, but not on
 the mollifier length, selected block, truncation, or product. -/
 theorem pintz2023IntervalPowerCoeff_bound_native
     (h : ℕ) (epsilon : ℝ) (hepsilon : 0 < epsilon) :
@@ -248,10 +248,6 @@ theorem pintz2023IntervalPowerCoeff_bound_native
           dsimp only [delta]
           ring
 
-#print axioms pintz2023_interval_power_identity
-#print axioms pintz2023_interval_power_identity_Ioc
-#print axioms pintz2023IntervalPowerCoeff_full_block
-#print axioms pintz2023IntervalPowerCoeff_bound_native
 
 end
 

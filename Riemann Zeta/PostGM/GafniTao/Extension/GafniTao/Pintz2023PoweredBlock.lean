@@ -104,11 +104,6 @@ theorem exists_pintz2023_powered_dyadic_block_and_subset
     (pintz2023SelectedPoweredLineCoeff X Y U h beta)
     W (V ^ h) hh hwide
 
-#print axioms pintz2023SelectedPoweredLineCoeff_eq
-#print axioms pintz2023_finitePowPoly_eq_selected_block_power
-#print axioms wideDirichletPoly_pintz2023SelectedPoweredLineCoeff
-#print axioms pintz2023_selected_block_power_lower
-#print axioms exists_pintz2023_powered_dyadic_block_and_subset
 
 end
 

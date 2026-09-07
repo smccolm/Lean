@@ -131,7 +131,7 @@ theorem integral_norm_pintzGaussianKernel_equation47_symmetric
 
 /-- Exact logarithmic mass estimate used in Pintz (4.12).  Constants are
 kept explicit; `8 * exp 2` is harmless but avoids any hidden Vinogradov
-constant. -/
+The constant. -/
 theorem integral_norm_pintzGaussianKernel_equation47_le_log
     {lambda : ℝ} (hlambda : 8 ≤ lambda) :
     (∫ t in (-2 * lambda)..(2 * lambda),
@@ -316,9 +316,6 @@ theorem exists_large_pintz2023Equation47Polynomial_log
         norm_num
   linarith
 
-#print axioms norm_pintzGaussianKernel_equation47_le_inv_abs
-#print axioms integral_norm_pintzGaussianKernel_equation47_le_log
-#print axioms exists_large_pintz2023Equation47Polynomial_log
 
 end
 

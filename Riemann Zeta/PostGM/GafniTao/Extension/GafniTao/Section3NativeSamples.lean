@@ -82,10 +82,6 @@ theorem exceptionalExponent_two_fifteenths_add_le_native
     (refinedExceptionalUpperExponent_two_fifteenths_add_le
       pintzTwentyThreeTwentyFourCutoff_native hDelta hDeltaUpper)
 
-#print axioms first_sample_fixed_epsilon_bound_native
-#print axioms refinedExceptionalUpperExponent_seventeen_thirtieths_le_native
-#print axioms exceptionalExponent_seventeen_thirtieths_le_native
-#print axioms exceptionalExponent_two_fifteenths_add_le_native
 
 end
 

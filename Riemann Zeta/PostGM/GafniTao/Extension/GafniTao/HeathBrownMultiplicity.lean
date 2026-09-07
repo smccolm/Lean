@@ -104,10 +104,6 @@ theorem integral_heathBrownNu
   rw [Finset.sum_const, card_heathBrownInteriorIndices]
   simp [nsmul_eq_mul]
 
-#print axioms card_heathBrownInteriorIndices
-#print axioms heathBrownCellIndicator_eq_one_iff
-#print axioms heathBrownNu_nonneg
-#print axioms integral_heathBrownNu
 
 end
 

@@ -231,9 +231,6 @@ theorem eventually_ford_lemma_3_4
       (hlower 1 (by omega) (by omega)))
     heta hP (hmoment.one_le_coefficient.trans' zero_le_one))
 
-#print axioms ford_lemma_3_4_initial_scale_power
-#print axioms ford_lemma_3_4_initial_K_bound_le
-#print axioms eventually_ford_lemma_3_4
 
 end
 

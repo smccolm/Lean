@@ -165,10 +165,6 @@ theorem fordTriangularFiber_card_le_factorial
     rw [Nat.card_eq_zero.mpr (Or.inl inferInstance)]
     exact Nat.zero_le _
 
-#print axioms fordPolynomialEvalSum_eq_coeff_powerSums
-#print axioms ford_powerSum_eq_of_evalSum_eq
-#print axioms fordTriangularFiber_powerSums_eq
-#print axioms fordTriangularFiber_card_le_factorial
 
 end
 

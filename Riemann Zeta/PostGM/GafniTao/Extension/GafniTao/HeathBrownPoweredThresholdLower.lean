@@ -6,7 +6,7 @@ import GafniTao.HeathBrownSourceLossAbsorption
 This is the quantitative bridge from the detector threshold to the scale
 used in Heath--Brown's second- and fourth-moment relation.  It retains both
 normalization losses and bounds the finite source power before absorbing its
-constant denominator.
+The constant denominator.
 -/
 
 open Filter
@@ -53,7 +53,7 @@ theorem powered_normalization_denominator_le
 /-- Exact finite lower bound after both the shell normalization and the
 powered-coefficient normalization have been absorbed. -/
 theorem heathBrownPoweredThreshold_lower_of_source
-    {U sigma eta zetaShell zetaConst Cp : Real} {N p P : Nat}
+    {U sigma eta zetaShell zetaConst Cp L : Real} {N p P : Nat}
     (hU : 1 ≤ U) (hN : 0 < N) (hp : 0 < p) (hpP : p ≤ P)
     (heta : 0 < eta) (hzetaShell : 0 ≤ zetaShell)
     (hCp : 0 < Cp)
@@ -223,13 +223,6 @@ theorem eventually_typeII_poweredThreshold_lower_on_power_scale
     hU hN hp hpP heta hzetaShell.le hzetaConst.le hCp
     hThreshold hDenomU hScale
 
-#print axioms heathBrownPoweredThreshold_mono
-#print axioms eventually_const_le_rpow
-#print axioms powered_normalization_denominator_le
-#print axioms heathBrownPoweredThreshold_lower_of_source
-#print axioms rpow_three_halves_loss_le_of_sq_le_cube
-#print axioms heathBrownPoweredThreshold_lower_on_power_scale
-#print axioms eventually_typeII_poweredThreshold_lower_on_power_scale
 
 end
 

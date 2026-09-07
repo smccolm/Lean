@@ -41,7 +41,6 @@ theorem ford_character_sum_mean_eq_zero_count
   push_cast
   rw [Finset.sum_filter]
 
-#print axioms ford_character_sum_mean_eq_zero_count
 
 end
 

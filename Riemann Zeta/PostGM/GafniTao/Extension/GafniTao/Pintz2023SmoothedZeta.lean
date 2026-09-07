@@ -126,9 +126,6 @@ theorem tendsto_pintz2023HalaszFiniteGram
   rw [pintz2023SmoothedZetaTerm_eq
     (lt_of_lt_of_le Nat.zero_lt_one (Finset.mem_Icc.mp hn).1)]
 
-#print axioms summable_pintz2023SmoothedZetaTerm
-#print axioms tendsto_sum_Icc_pintz2023SmoothedZetaTerm
-#print axioms tendsto_pintz2023HalaszFiniteGram
 
 end
 

@@ -149,10 +149,6 @@ theorem pintz2023_dyadicHeightShell_native
   exact (pintz2023_dyadicHeightShell_epsilonExponentBound hcell data).mono_exponent
     hbudget.le
 
-#print axioms pintz2023ShellEnvelopeMap_zero
-#print axioms exists_pintz2023_power_margin_data_shell_budget
-#print axioms epsilonExponentBound_of_forall_add
-#print axioms pintz2023_dyadicHeightShell_native
 
 end
 

@@ -209,7 +209,6 @@ theorem eventually_actualTypeI_long_exponentPacket
     ⟨hSigmaMain, hSigmaNext, hCaps.1, hCaps.2.1, hCaps.2.2.2.1,
       hCaps.2.2.2.2, hRelation⟩
 
-#print axioms eventually_actualTypeI_long_exponentPacket
 
 end
 

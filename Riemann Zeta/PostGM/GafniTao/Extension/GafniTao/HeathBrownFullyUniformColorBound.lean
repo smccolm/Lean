@@ -126,8 +126,6 @@ theorem HeathBrownFullyUniformSourceColorOutput.energy_branch_bound
     rw [full.energy_Cp] at hRaw
     exact hRaw
 
-#print axioms ClassicalBinaryTypeIOutput.energy_le_majorant
-#print axioms HeathBrownFullyUniformSourceColorOutput.energy_branch_bound
 
 end
 

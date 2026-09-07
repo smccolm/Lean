@@ -179,8 +179,6 @@ theorem pintzPhysicalZetaMajorant_le_power_log
     nlinarith
   linarith
 
-#print axioms four_mul_rpow_three_halves
-#print axioms pintzPhysicalZetaMajorant_le_power_log
 
 end
 

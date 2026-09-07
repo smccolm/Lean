@@ -186,8 +186,6 @@ theorem heathBrownFiniteSymmetricEnergyRelation_native :
   simpa only [WT, bT, approxAddEnergy_translate, card_gmTranslate,
     heathBrownSecondMomentShape, heathBrownFourthMomentShape] using h
 
-#print axioms heathBrownFiniteEnergyRelation_native
-#print axioms heathBrownFiniteSymmetricEnergyRelation_native
 
 end
 

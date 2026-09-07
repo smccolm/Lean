@@ -327,7 +327,6 @@ theorem exists_classicalBinaryShellDetectorData
   · simpa only [H, representative] using hRepRadial
   · simpa only [H, representative] using hRepOriented
 
-#print axioms exists_classicalBinaryShellDetectorData
 
 end
 

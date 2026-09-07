@@ -212,7 +212,6 @@ theorem exists_pintz2023_power_margin_data
     hequation420Small, hdelta,
     hdeltaTarget, hscale, hbudget⟩⟩
 
-#print axioms exists_pintz2023_power_margin_data
 
 end
 

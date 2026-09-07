@@ -61,9 +61,6 @@ theorem norm_riemannZeta_sub_fordFiniteApproximation_le_tiny
       (by linarith) hsigmaUpper htThree).trans
     (fifteen_mul_rpow_neg_le_fordTinyRemainder hsigmaLower ht)
 
-#print axioms ten_pow_hundred_rpow_nine_tenths
-#print axioms fifteen_mul_rpow_neg_le_fordTinyRemainder
-#print axioms norm_riemannZeta_sub_fordFiniteApproximation_le_tiny
 
 end
 

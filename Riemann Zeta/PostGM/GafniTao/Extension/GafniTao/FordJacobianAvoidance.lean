@@ -162,11 +162,6 @@ theorem exists_ford_prime_avoiding_jacobian
     (fordJacobianAvoidanceNat_pos hTpos z w hz hw)
   exact (fordJacobianAvoidanceNat_le_source_power hT z w hz hw).trans_lt hsource
 
-#print axioms int_natAbs_natCast_sub_lt
-#print axioms ford_sum_card_Ioi
-#print axioms ford_vandermondeNatAbs_le
-#print axioms fordJacobianAvoidanceNat_le_source_power
-#print axioms exists_ford_prime_avoiding_jacobian
 
 end
 

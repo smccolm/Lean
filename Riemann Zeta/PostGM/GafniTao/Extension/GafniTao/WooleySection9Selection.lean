@@ -171,14 +171,6 @@ theorem wooley_section9_loss_absorption
   convert h using 1
   all_goals ring
 
-#print axioms wooleyGradeRange_card
-#print axioms wooleyRho_one
-#print axioms wooleyGradeRange_nonempty
-#print axioms wooley_grade_geometric_le_average
-#print axioms exists_wooley_grade_ge_geometric
-#print axioms exists_wooley_grade_for_weighted_product
-#print axioms wooley_section9_decay_exponent
-#print axioms wooley_section9_loss_absorption
 
 end
 

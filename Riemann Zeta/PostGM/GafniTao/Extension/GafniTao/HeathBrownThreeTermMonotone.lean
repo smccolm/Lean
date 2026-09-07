@@ -63,8 +63,6 @@ theorem heathBrown_sourceScale_main_mono
     (mul_le_mul_of_nonneg_left
       (mul_le_mul hpow hthree hthreeM0 (by positivity)) hconstant)
 
-#print axioms heathBrownThreeTerm_mono
-#print axioms heathBrown_sourceScale_main_mono
 
 end
 

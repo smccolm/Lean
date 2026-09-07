@@ -168,7 +168,6 @@ theorem eventually_square_source_dyadic_physical_cell
   exact hGenericU W a _full hUOne hPOne hp hpCap hL hW hBase hNext hCube
     hThreshold hThresholdNext hsigma0Eff hsigma0Eff
 
-#print axioms eventually_square_source_dyadic_physical_cell
 
 end
 

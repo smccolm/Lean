@@ -100,10 +100,6 @@ def fordIntegerSystemAboveModPrimePower
       (Int.castRingHom (ZMod (p ^ s))) hunit.ne_zero]
     exact hunit
 
-#print axioms fordIntegerPolynomialSystem_above_lc
-#print axioms fordSourceLeadingNat_not_dvd
-#print axioms fordIntegerPolynomialSystem_above_lc_isUnit
-#print axioms fordIntegerSystemAboveModPrimePower
 
 end
 

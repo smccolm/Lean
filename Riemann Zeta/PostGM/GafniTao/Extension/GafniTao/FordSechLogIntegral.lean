@@ -157,9 +157,6 @@ theorem intervalIntegral_log_abs_add_two_div_cosh_sq_le
     (Real.log_nonneg (by linarith [abs_nonneg u]))
     (sq_nonneg _)
 
-#print axioms integrable_log_abs_add_two_div_cosh_sq
-#print axioms fordSechLogMoment_nonneg
-#print axioms intervalIntegral_log_abs_add_two_div_cosh_sq_le
 
 end
 

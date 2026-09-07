@@ -199,9 +199,6 @@ theorem fordLemma36_delta_exponent_of_previous_above
         field_simp [hk0.ne']
         nlinarith
 
-#print axioms fordReciprocalFactor36_crossing_bound
-#print axioms fordLemma36_normalized_target_ge_crossing_cutoff
-#print axioms fordLemma36_delta_exponent_of_previous_above
 
 end
 

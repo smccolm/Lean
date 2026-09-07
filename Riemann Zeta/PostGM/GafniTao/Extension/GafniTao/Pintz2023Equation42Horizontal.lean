@@ -253,11 +253,6 @@ theorem tendsto_pintz2023Equation42_HIntegral'_neg_zero
       ring_nf
     · simp
 
-#print axioms norm_pintz2023Equation42Integrand_horizontal_le
-#print axioms norm_pintz2023Equation42_HIntegral'_le
-#print axioms tendsto_pintz2023HorizontalMajorant_zero
-#print axioms tendsto_pintz2023Equation42_HIntegral'_zero
-#print axioms tendsto_pintz2023Equation42_HIntegral'_neg_zero
 
 end
 

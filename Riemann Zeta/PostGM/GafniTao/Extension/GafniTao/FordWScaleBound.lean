@@ -345,14 +345,6 @@ theorem fordLemma51WReal_scaled_prod_le
   exact fordWNormalizedFactor_good_le hk6 hx ht htBottom htTop hfloor
     hrsOne hrsOne hj
 
-#print axioms ford_one_div_fifth_scale_pow
-#print axioms ford_tenth_scale_pow
-#print axioms ford_W_first_term_le
-#print axioms ford_W_second_term_le
-#print axioms ford_W_fourth_term_le
-#print axioms ford_W_third_term_le
-#print axioms fordWNormalizedFactor_good_le
-#print axioms fordLemma51WReal_scaled_prod_le
 
 end
 

@@ -164,11 +164,6 @@ theorem norm_heathBrownExponentialSum_le_small_N_factor
         heathBrownKthDerivativeFactor k N lambda) := by nlinarith
     _ = _ := by ring
 
-#print axioms heathBrown_lambda_component_le_factor
-#print axioms norm_heathBrownExponentialSum_le_of_lambda_lower
-#print axioms norm_heathBrownExponentialSum_le_of_third_lower
-#print axioms one_le_heathBrown_scaled_factor
-#print axioms norm_heathBrownExponentialSum_le_small_N_factor
 
 end
 

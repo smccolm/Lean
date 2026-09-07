@@ -54,8 +54,6 @@ theorem fordLemma63WReal_le_source_scale
   rw [hpow]
   nlinarith
 
-#print axioms fordLemma63WReal_eq_of_exact_scale
-#print axioms fordLemma63WReal_le_source_scale
 
 end
 

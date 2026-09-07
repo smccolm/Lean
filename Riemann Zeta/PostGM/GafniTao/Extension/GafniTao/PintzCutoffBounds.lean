@@ -64,11 +64,6 @@ theorem pintzMobiusCutoff_rpow_le
   exact Real.rpow_le_rpow (Nat.cast_nonneg _)
     (pintzMobiusCutoff_cast_lt_two_exp hlambda).le ha
 
-#print axioms pintzMobiusCutoff_cast_lt_two_exp
-#print axioms pintzMobiusCutoff_log_le
-#print axioms pintzMobiusCutoff_harmonic_le
-#print axioms pintzMobiusCutoff_clog_le
-#print axioms pintzMobiusCutoff_rpow_le
 
 end
 

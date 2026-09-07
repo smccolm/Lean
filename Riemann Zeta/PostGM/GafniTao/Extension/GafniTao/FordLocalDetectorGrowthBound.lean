@@ -259,8 +259,6 @@ theorem eventually_exists_fordLocalDisk_detector_growthBound
   refine ⟨eta', RUpper, RLower, hetaLow, hetaHigh, hRU, hRL, ?_⟩
   linarith
 
-#print axioms eventually_exists_fordLocalDisk_detector_general_growthBound
-#print axioms eventually_exists_fordLocalDisk_detector_growthBound
 
 end
 

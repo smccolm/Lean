@@ -175,7 +175,6 @@ theorem exists_sharpShellDetectorData
   · simpa only [A, k, large, representative] using hRepLarge
   · simpa only [H, representative] using hRepInterval
 
-#print axioms exists_sharpShellDetectorData
 
 end
 

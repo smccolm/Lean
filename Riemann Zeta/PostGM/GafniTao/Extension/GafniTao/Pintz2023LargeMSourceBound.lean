@@ -88,7 +88,6 @@ theorem pintz2023_largeM_localized_source_bound
     (by linarith : T ≤ 2 * T) heta hAlpha hA
     (by nlinarith [hPhysical])
 
-#print axioms pintz2023_largeM_localized_source_bound
 
 end
 

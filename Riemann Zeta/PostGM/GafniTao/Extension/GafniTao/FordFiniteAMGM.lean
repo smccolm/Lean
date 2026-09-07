@@ -151,9 +151,6 @@ theorem ford_residue_fiber_cauchy_amgm
         ∑ c : FordBResidueClass p d s v,
           ∑ i : Fin s, ‖g (fordBJoin hds c.1 i)‖ ^ (2 * s) := by simp [B]
 
-#print axioms ford_fin_prod_amgm
-#print axioms ford_norm_sum_sq_le_card_mul_sum_norm_sq
-#print axioms ford_residue_fiber_cauchy_amgm
 
 end
 

@@ -114,8 +114,6 @@ theorem eventually_exists_pintz2023_highZero_detected_family
   exact ⟨W, etaAt, hSep, by simpa only [S] using hCount,
     hEtaAt, hUpper, hLarge⟩
 
-#print axioms pintz2023HighZeroSet_subset
-#print axioms eventually_exists_pintz2023_highZero_detected_family
 
 end
 

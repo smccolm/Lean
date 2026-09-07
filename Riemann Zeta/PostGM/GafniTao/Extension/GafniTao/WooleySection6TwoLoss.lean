@@ -310,12 +310,6 @@ theorem wooleySourceNormalizedMixedMean_initial_twoLoss
   simpa only [C, H, s, K, Z, wooleySourceNormalizationScale,
     mul_comm (Lambda : ℝ) (H : ℝ)] using halgebra
 
-#print axioms wooley_initial_conditioning_exponent_twoLoss
-#print axioms wooleyPolynomial_conditioned_mean_le_decay_twoLoss
-#print axioms wooleyPolynomial_lemma_6_1_twoLoss
-#print axioms wooleyPolynomial_lemma_6_3_twoLoss
-#print axioms wooleySourcePolynomial_lemma_6_3_twoLoss
-#print axioms wooleySourceNormalizedMixedMean_initial_twoLoss
 
 end
 

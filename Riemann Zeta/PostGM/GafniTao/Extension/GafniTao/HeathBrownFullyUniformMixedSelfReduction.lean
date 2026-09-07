@@ -49,7 +49,6 @@ theorem HeathBrownFullyUniformMixedSourceOutput.energy_le_sum_self
   simpa only [HeathBrownFullyUniformMixedSourceOutput.toUniform] using
     (output.toUniform hK hC).energy_le_sum_self
 
-#print axioms HeathBrownFullyUniformMixedSourceOutput.energy_le_sum_self
 
 end
 

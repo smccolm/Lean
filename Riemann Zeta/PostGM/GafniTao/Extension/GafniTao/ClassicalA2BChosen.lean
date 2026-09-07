@@ -98,9 +98,6 @@ theorem norm_pintz2023ExponentialBlock_sq_le_A2B_selected
     hNPos hNR.le ((N : ℝ) ^ tau)]
   simpa only [L, H₁, H₂, Nat.cast_add, Nat.cast_one] using hraw
 
-#print axioms pintz2023ExponentialBlock_eq_integerLogarithmicPrefix
-#print axioms norm_pintz2023ExponentialBlock_le_length
-#print axioms norm_pintz2023ExponentialBlock_sq_le_A2B_selected
 
 end
 

@@ -53,7 +53,6 @@ theorem ford_equation_3_10_backward_combinatorial
             _ = ⌊P⌋₊ ^ (d + 1) := by rw [← pow_succ']) hmoment hIH)
   exact hraw.trans (habsorb p hp)
 
-#print axioms ford_equation_3_10_backward_combinatorial
 
 end
 

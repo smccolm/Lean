@@ -95,7 +95,6 @@ theorem eventually_heathBrown_selected_scale_two
   exact ⟨hNOne, hNLower, hPower.1, hPower.2.1, hPower.2.2.1,
     hPower.2.2.2, hpBound⟩
 
-#print axioms eventually_heathBrown_selected_scale_two
 
 end
 

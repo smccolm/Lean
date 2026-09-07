@@ -52,8 +52,6 @@ theorem fordCorollary64_remainders_le_corrected
     (fordCorollary64_div_scale_le hN hupper hMscale)
     (fordCorollary64_scale_le_two hN hlower hupper hMscale)
 
-#print axioms fordCorollary64_div_scale_le
-#print axioms fordCorollary64_remainders_le_corrected
 
 end
 

@@ -187,8 +187,6 @@ theorem exists_large_pintzDetectedPolynomial_of_mem_zeroSet
     rw [← hxiEq]
     simpa [pintzDetectedLowerBound, F, Z] using hlarge
 
-#print axioms mem_zeroSet_data
-#print axioms exists_large_pintzDetectedPolynomial_of_mem_zeroSet
 
 end
 

@@ -102,11 +102,6 @@ theorem wooley_equation_7_17_tuple
       psi qPrime R S left right)
     h712
 
-#print axioms wooleySourceMixedTupleCoefficient
-#print axioms wooleySourceTuplePolynomialDisplacement
-#print axioms wooleyEquation717OriginalDisplacement
-#print axioms wooleyEquation717InsertedDisplacement
-#print axioms wooley_equation_7_17_tuple
 
 end
 

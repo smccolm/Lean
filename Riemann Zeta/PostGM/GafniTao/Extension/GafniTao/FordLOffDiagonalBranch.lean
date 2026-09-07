@@ -132,9 +132,6 @@ theorem exists_fordLOffDiagonalCount_le_source_sqrt
         exact mul_le_mul_of_nonneg_right hcoeff hroot
     _ = _ := by ring
 
-#print axioms exists_fordLOffDiagonalCount_le_oneShift_sqrt
-#print axioms ford_natural_shift_coefficient_le_source
-#print axioms exists_fordLOffDiagonalCount_le_source_sqrt
 
 end
 

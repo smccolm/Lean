@@ -154,7 +154,7 @@ theorem pintzMobiusTailBound_le_exp_neg_half
       ring
 
 /-- The explicit real threshold which absorbs the sole fixed Dirichlet-series
-constant in Pintz's finite Möbius detector. -/
+The constant in Pintz's finite Möbius detector. -/
 noncomputable def pintzMobiusLambdaThreshold : ℝ :=
   max 8 (4 *
     (Real.log (max 1 (hughesYoungZetaHalfPlaneMajorant ^ 2)) + 9 / 4))
@@ -235,12 +235,6 @@ theorem one_half_le_norm_pintzMobiusFiniteHead_of_large
     (pintzMobiusLambdaThreshold_ge_eight.trans hlambda) heta
     (pintzMobius_total_error_le_one_half hlambda heta)
 
-#print axioms pintzMobius_complete_eq_finiteHead_add_tail
-#print axioms norm_pintzMobiusFiniteHead_sub_one_le
-#print axioms one_half_le_norm_pintzMobiusFiniteHead
-#print axioms pintzMobiusTailBound_le_explicit
-#print axioms pintzMobius_total_error_le_one_half
-#print axioms one_half_le_norm_pintzMobiusFiniteHead_of_large
 
 end
 

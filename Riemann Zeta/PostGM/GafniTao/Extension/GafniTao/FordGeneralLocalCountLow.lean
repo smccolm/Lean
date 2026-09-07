@@ -118,8 +118,6 @@ theorem fordShiftedLeftLowMajorant_mul_R_le_one
       field_simp [hR.ne']
       nlinarith
 
-#print axioms real_exp_neg_le_256_div_pow_four
-#print axioms fordShiftedLeftLowMajorant_mul_R_le_one
 
 end
 

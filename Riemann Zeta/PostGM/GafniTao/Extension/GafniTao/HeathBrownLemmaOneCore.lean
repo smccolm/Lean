@@ -127,10 +127,6 @@ theorem heathBrownLemmaOneNormalized_le_core
       gcongr
     _ = _ := by ring
 
-#print axioms heathBrown_first_Abel_factor_le
-#print axioms heathBrown_second_Abel_factor_eq
-#print axioms heathBrownLemmaOneCoreConstant_pos
-#print axioms heathBrownLemmaOneNormalized_le_core
 
 end
 

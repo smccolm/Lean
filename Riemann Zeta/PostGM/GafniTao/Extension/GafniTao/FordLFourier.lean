@@ -173,11 +173,6 @@ theorem fordL_character_mean_eq_count
   exact (fordLTotal_characterSum (P := P) (p := p) (r := r)
     Ψ s Q q α).symm
 
-#print axioms fordLSolutionEquivCharacterZero
-#print axioms fordLCount_eq_characterZero
-#print axioms fordLPolynomialTuple_characterSum
-#print axioms fordLPowerPair_characterSum
-#print axioms fordL_character_mean_eq_count
 
 end
 

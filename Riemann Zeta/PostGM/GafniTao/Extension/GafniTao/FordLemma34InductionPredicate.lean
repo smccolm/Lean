@@ -67,7 +67,6 @@ theorem ford_equation_3_10_terminal
     (fun R hR => hmoment.real_endpoint hR)
   simpa [hindex, Esch.terminal] using hterminal
 
-#print axioms ford_equation_3_10_terminal
 
 end
 

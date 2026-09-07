@@ -256,7 +256,6 @@ theorem fordS3Count_le_residueCollisionSum
       rw [Nat.card_sigma]
     _ = _ := rfl
 
-#print axioms fordS3Count_le_residueCollisionSum
 
 theorem fordS3Count_cast_le_residueMajorant
     {k d T P p s Q q : ℕ} [NeZero p]
@@ -283,7 +282,6 @@ theorem ford_equation_3_4_source
   rw [fordS4Fourier_eq_count] at hc
   exact hc
 
-#print axioms ford_equation_3_4_source
 
 end
 

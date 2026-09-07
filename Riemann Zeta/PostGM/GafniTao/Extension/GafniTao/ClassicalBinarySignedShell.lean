@@ -200,7 +200,6 @@ theorem absoluteSlab_classical_binary_pointwise_witness
           simp [signedSharpMollifiedLineCoeff]]
         simpa only [norm_sourceDirichletPoly_conjugateCoeffs] using hrLarge
 
-#print axioms absoluteSlab_classical_binary_pointwise_witness
 
 end
 

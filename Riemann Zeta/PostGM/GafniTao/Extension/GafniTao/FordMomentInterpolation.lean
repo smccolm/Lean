@@ -257,13 +257,6 @@ theorem FordVinogradovMomentBound.interpolate
             (p * delta₀ + q * delta₁) := by
       rw [fordLambda34_interpolation hk]
 
-#print axioms continuous_fordVinogradovWeylSum
-#print axioms ford_vinogradov_lintegral_mean_eq
-#print axioms ford_moment_interpolation_point
-#print axioms ford_vinogradov_moment_interpolation
-#print axioms ford_vinogradov_moment_interpolation_real
-#print axioms fordLambda34_interpolation
-#print axioms FordVinogradovMomentBound.interpolate
 
 end
 

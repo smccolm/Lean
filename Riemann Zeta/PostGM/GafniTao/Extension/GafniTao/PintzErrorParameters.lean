@@ -312,8 +312,6 @@ theorem pintz_uniform_contour_error_le_quarter
       rw [← div_eq_mul_inv]
       exact (div_le_iff₀ (by linarith : 0 < Real.log T)).2 (by linarith)
 
-#print axioms pintz_error_exponent_le
-#print axioms pintz_uniform_contour_error_le_quarter
 
 end
 

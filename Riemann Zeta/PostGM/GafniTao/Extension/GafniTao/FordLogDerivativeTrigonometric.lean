@@ -167,9 +167,6 @@ theorem fordRealLogDerivative_le_zero
     (summable_fordRealLogDerivativeTerm hsigma)
     (summable_fordRealLogDerivativeTerm hsigma)
 
-#print axioms ford_logDerivative_trigonometric_nonneg
-#print axioms fordRealLogDerivative_zero_lt_inv
-#print axioms fordRealLogDerivative_le_zero
 
 end
 

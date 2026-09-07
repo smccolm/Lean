@@ -549,17 +549,6 @@ theorem norm_partialZeta_le_correctedEnvelope
     (pintzCorrectedPartialZetaMajorant_le_envelope
       hsigma hsigmaUpper ht)
 
-#print axioms fordShiftedWeightedTerm_zero_eq_cpow
-#print axioms fordShiftedWeightedBlock_eq_finite_sub
-#print axioms norm_fordShiftedWeightedBlock_zero_le_of_fordTheorem2
-#print axioms norm_fordShiftedWeightedBlock_zero_le_general
-#print axioms norm_fordShiftedWeightedBlock_zero_le_terminal
-#print axioms norm_fordShiftedWeightedBlock_zero_dyadic_le
-#print axioms partialZeta_eq_one_add_fordDyadic
-#print axioms norm_partialZeta_le_correctedMajorant
-#print axioms fordGeneralDyadicRawMajorant_zero_le_source
-#print axioms dyadic_terminal_weight_le_endpoint
-#print axioms norm_partialZeta_le_correctedEnvelope
 
 end
 

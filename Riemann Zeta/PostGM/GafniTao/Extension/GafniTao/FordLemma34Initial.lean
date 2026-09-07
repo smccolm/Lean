@@ -134,10 +134,6 @@ theorem fordKCountReal_initial_eq_vinogradov
   unfold fordKCountReal fordVinogradovMoment
   exact fordKCount_initial_eq_vinogradov k s ⌊P⌋₊
 
-#print axioms fordInitialKEquation_iff
-#print axioms fordInitialSolutionEquiv
-#print axioms fordKCount_initial_eq_vinogradov
-#print axioms fordKCountReal_initial_eq_vinogradov
 
 end
 

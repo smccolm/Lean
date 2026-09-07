@@ -54,9 +54,6 @@ theorem zeroOccurrenceAdditiveEnergyCount_eq
       zeroAdditiveEnergyCount sigma T := by
   exact zeroAdditiveEnergyOccurrenceCount_eq sigma T
 
-#print axioms zeroOccurrenceAdditiveEnergyCount_eq
-#print axioms ResonantZeroOccurrenceQuadruple.coord_mem_zeroSet
-#print axioms ResonantZeroOccurrenceQuadruple.resonant
 
 end
 

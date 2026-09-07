@@ -79,10 +79,6 @@ theorem pintz2023LocalizedInterval_left_le_right_add_one_of_nonempty
   rw [Finset.mem_filter, Finset.mem_Ioc, Finset.mem_Ioc] at hn
   omega
 
-#print axioms pintz2023_smallM_survives_largeM_subtraction
-#print axioms pintz2023_smallM_survives_half
-#print axioms pintz2023LocalizedInterval_nonempty_of_positive_block
-#print axioms pintz2023LocalizedInterval_left_le_right_add_one_of_nonempty
 
 end
 

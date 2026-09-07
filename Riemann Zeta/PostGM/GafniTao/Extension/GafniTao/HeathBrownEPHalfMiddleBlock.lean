@@ -192,7 +192,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_middle_B_zeta
             (N : ℝ) ^ (tau / 2)) := by ring
       _ = 130 * (N : ℝ) ^ (-sigma + tau / 2) := by
         rw [← Real.rpow_add hNpos]
-      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring
+      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have htauLog : tau * Real.log (N : ℝ) = Real.log t := by
     dsimp only [tau, fordLambda]
@@ -313,7 +313,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_middle_Weyl_zeta
         rw [← Real.rpow_add hNpos]
       _ = 90 * (N : ℝ) ^ (u + 1 / 2 - tau / 3) := by
         dsimp only [u]
-        ring
+        ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have htauLog : tau * Real.log (N : ℝ) = Real.log t := by
     dsimp only [tau, fordLambda]
@@ -373,10 +373,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_middle_zeta
           exact this) hNt) _
     exact hweyl.trans (by nlinarith)
 
-#print axioms ford_shifted_weyl_below_square_lambda_power
-#print axioms norm_fordShiftedWeightedBlock_zero_le_middle_B_zeta
-#print axioms norm_fordShiftedWeightedBlock_zero_le_middle_Weyl_zeta
-#print axioms norm_fordShiftedWeightedBlock_zero_le_middle_zeta
 
 end
 

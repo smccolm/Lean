@@ -124,9 +124,6 @@ theorem heathBrownTune_shell_mul_power_succ
     by positivity
   field_simp [hpos.ne']
 
-#print axioms heathBrownTuneQ_pos
-#print axioms heathBrownTuneQ_le_gap
-#print axioms heathBrownTune_shell_mul_power_succ
 
 end
 

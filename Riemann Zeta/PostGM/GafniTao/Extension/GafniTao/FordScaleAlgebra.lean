@@ -132,11 +132,6 @@ theorem ford_basic_scale_data {x : ℝ} (hx : 1024 ≤ x) :
   exact ⟨hfifth, htenth, hfloorF, hfloorFone, hfloorTone,
     hfifthTop', htenthTop', hprodTop⟩
 
-#print axioms ford_natFloor_ge_half
-#print axioms ford_rpow_lambda_eq
-#print axioms ford_lambda_band_t_bounds
-#print axioms fordGoodDegree_third_exponent
-#print axioms ford_basic_scale_data
 
 end
 

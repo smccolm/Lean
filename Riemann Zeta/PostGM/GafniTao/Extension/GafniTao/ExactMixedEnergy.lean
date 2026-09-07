@@ -449,13 +449,7 @@ theorem four_mul_exactMixedShiftCount_le_sum_self_energies
     two_mul_le_add_of_sq_le_mul (Nat.cast_nonneg _) (Nat.cast_nonneg _) hBD
   linarith
 
-#print axioms selfDifferenceCorrelation_eq_addEnergy
-#print axioms selfDifferenceCorrelation_eq_sum_counts
-#print axioms sq_addEnergy_le_mul_self
-#print axioms sq_exactMixedShiftCount_le_cross_energies
-#print axioms four_mul_exactMixedShiftCount_le_sum_self_energies
 
-#print axioms differenceSquareSum_eq_addEnergy
 
 end
 

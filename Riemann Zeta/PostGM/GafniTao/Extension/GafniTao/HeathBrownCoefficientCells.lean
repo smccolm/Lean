@@ -75,8 +75,6 @@ theorem measure_heathBrownCoefficientCell
   rw [AddCircle.volume_closedBall]
   rw [min_eq_right (two_mul_heathBrownCellRadius_le_one hH j)]
 
-#print axioms measurableSet_heathBrownCoefficientCell
-#print axioms measure_heathBrownCoefficientCell
 
 end
 

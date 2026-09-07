@@ -187,10 +187,6 @@ theorem absoluteSlab_sharpMollified_energy_extraction
     _ = (P : Real) *
         (doubleFloorDefectWindow (1 + 4 * (H + 1))).card * S := by ring
 
-#print axioms sharpShellScalePair
-#print axioms sharpShellScaleN
-#print axioms sharpShellScaleCoeff
-#print axioms absoluteSlab_sharpMollified_energy_extraction
 
 end
 

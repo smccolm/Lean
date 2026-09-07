@@ -136,7 +136,6 @@ theorem eventually_heathBrownMixedSourceOutput
   · exact fun hW => hOutput U2 hU2 d2 label2 hW
   · exact fun hW => hOutput U3 hU3 d3 label3 hW
 
-#print axioms eventually_heathBrownMixedSourceOutput
 
 end
 

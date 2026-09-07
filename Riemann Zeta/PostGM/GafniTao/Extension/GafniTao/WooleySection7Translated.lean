@@ -77,7 +77,7 @@ theorem wooleySection7TranslatedDilatedPolynomial_tupleDisplacement
   simp only [wooleyIntegerTupleDisplacement,
     wooleySection7TranslatedDilatedPolynomial_eval]
   simp_rw [sum_sub_distrib]
-  ring
+  ring_nf
 
 /-- Exact low-degree plus tail decomposition of a translated top equation.
 No asymptotic or unspecified remainder is introduced. -/
@@ -180,7 +180,7 @@ theorem wooleySection7TranslatedTop_coeff_rat
         ((((i : ℕ) + 1 : ℕ) : ℤ))) =
       (wooleySection7Node k r l : ℤ) - (i : ℤ) by omega]
   simp only [wooleySection7OmegaMatrix]
-  ring
+  ring_nf
 
 /-- Full translated-and-dilated top equation in the coefficient form used
 immediately after (7.10), including the literal high-degree polynomial tail. -/
@@ -223,16 +223,7 @@ theorem wooleySection7TranslatedTop_expansion_rat
     (p := p) (c := c) hrk h hh psi i l).1]
   simp only [wooleySection7OmegaMatrix]
 
-#print axioms wooleySection7TranslatedTop_coeff_rat
-#print axioms wooleySection7TranslatedTop_expansion_rat
-#print axioms wooleySection7TranslatedDilatedPolynomial_eq_comp
-#print axioms wooleySection7TranslatedDilatedPolynomial_tail_factorization
 
-#print axioms wooleySection7TranslatedDilatedPolynomial_eval
-#print axioms wooleySection7TranslatedDilatedPolynomial_coeff_zero
-#print axioms wooleySection7TranslatedDilatedPolynomial_coeff_succ
-#print axioms wooleySection7TranslatedDilatedPolynomial_tupleDisplacement
-#print axioms wooleySection7TranslatedDilatedPolynomial_decomposition
 
 end
 

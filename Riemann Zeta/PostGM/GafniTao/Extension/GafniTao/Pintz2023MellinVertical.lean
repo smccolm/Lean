@@ -237,9 +237,6 @@ theorem integrable_pintz2023MellinContourIntegrand_left
     exact le_or_gt u B
   rwa [hAllSet] at hAll
 
-#print axioms integrable_pintz2023MellinContourIntegrand_right
-#print axioms norm_pintz2023MellinContourIntegrand_left_far_le
-#print axioms integrable_pintz2023MellinContourIntegrand_left
 
 end
 

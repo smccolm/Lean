@@ -181,11 +181,6 @@ theorem heathBrown_shiftedDifference_deriv_bounds
       (0 : ℝ) < (k - 2).factorial)).2
     simpa only [hxdiff] using hupper
 
-#print axioms heathBrownShiftedDifference_nat
-#print axioms deriv_heathBrownShiftedDifference
-#print axioms heathBrown_shiftedDifference_continuousOn
-#print axioms heathBrown_shiftedDifference_differentiableOn
-#print axioms heathBrown_shiftedDifference_deriv_bounds
 
 end
 

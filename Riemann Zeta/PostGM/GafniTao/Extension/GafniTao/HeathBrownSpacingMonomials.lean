@@ -132,10 +132,6 @@ theorem heathBrownThreeTerm_pos
   unfold heathBrownThreeTerm
   positivity
 
-#print axioms heathBrown_three_sum_rpow_le
-#print axioms heathBrownSpacingBase_rpow_le
-#print axioms heathBrown_spacing_monomial_identity
-#print axioms heathBrownThreeTerm_pos
 
 end
 

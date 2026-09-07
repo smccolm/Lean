@@ -230,18 +230,6 @@ theorem fordLemma51MomentT_le_fiveScalar_tupleTentSum
         (by positivity)
     _ = _ := by ring
 
-#print axioms fordLemma51CoordinateTentFactor_nonneg
-#print axioms norm_fordLemma51CoordinateTentValue
-#print axioms fordLemma51TuplePairTentMajorant_nonneg
-#print axioms norm_fordLemma51TuplePairTentTerm
-#print axioms fordLemma51TuplePairTentMajorant_eq_scalar_mul
-#print axioms ford_pi_sq_div_two_le_five
-#print axioms fordLemma51PiScalarPow_le
-#print axioms fordLemma51TuplePairTentProduct_nonneg
-#print axioms fordLemma51TuplePairTentProduct_le_one
-#print axioms fordLemma51WeightedLatticeTsum_le_tupleTentMajorantSum
-#print axioms fordLemma51MomentT_le_tupleTentMajorantSum
-#print axioms fordLemma51MomentT_le_fiveScalar_tupleTentSum
 
 end
 

@@ -121,12 +121,6 @@ theorem norm_heathBrown_source_average_sub_le
       rw [Finset.sum_const, nsmul_eq_mul]
       simp [Nat.card_Icc, pow_two]
 
-#print axioms heathBrownSourceShiftSum_eq_interval
-#print axioms heathBrown_source_shift_interval_subset
-#print axioms heathBrown_source_shift_omitted_card
-#print axioms norm_heathBrownExponentialSum_sub_sourceShift_le
-#print axioms heathBrown_source_average_sub_eq
-#print axioms norm_heathBrown_source_average_sub_le
 
 end
 

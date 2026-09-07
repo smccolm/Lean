@@ -91,9 +91,6 @@ theorem tendsto_pintzZetaAFETerm_vertical_difference_finset
     tendsto_pintzZetaAFETerm_vertical_difference
       s base (hS n hn) hq hc hbase)
 
-#print axioms pintzZetaAFETerm_RectangleIntegral'_eq_edges
-#print axioms tendsto_pintzZetaAFETerm_vertical_difference
-#print axioms tendsto_pintzZetaAFETerm_vertical_difference_finset
 
 end
 

@@ -145,11 +145,6 @@ theorem heathBrown_b_plus_aD_le
   rw [hsimplify] at haD
   exact add_le_add hb haD
 
-#print axioms heathBrownShiftBound_cast_le
-#print axioms inv_pow_succ_le_inv_pow
-#print axioms heathBrownShiftBound_cast_le_previous_power
-#print axioms heathBrown_shift_plus_c_le
-#print axioms heathBrown_b_plus_aD_le
 
 end
 

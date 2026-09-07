@@ -110,8 +110,6 @@ theorem fordLCount_mono_Q
   exact Fintype.card_le_of_injective (fordLSolutionCastQLE Ψ hQR)
     (fordLSolutionCastQLE Ψ hQR).injective
 
-#print axioms fordKCount_mono_Q
-#print axioms fordLCount_mono_Q
 
 end
 

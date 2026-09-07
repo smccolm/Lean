@@ -200,7 +200,6 @@ theorem finite_source_powered_energy_gm_bound
           gcongr <;> apply hEachGM
         _ = _ := by ring
 
-#print axioms finite_source_powered_energy_gm_bound
 
 end
 

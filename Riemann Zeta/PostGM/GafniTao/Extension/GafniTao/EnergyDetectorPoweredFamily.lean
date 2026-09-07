@@ -96,7 +96,6 @@ theorem finite_four_symmetric_source_powered_energy_gm_bound
   intro i
   exact Classical.choose_spec (Classical.choose_spec (hSelected i))
 
-#print axioms finite_four_symmetric_source_powered_energy_gm_bound
 
 end
 

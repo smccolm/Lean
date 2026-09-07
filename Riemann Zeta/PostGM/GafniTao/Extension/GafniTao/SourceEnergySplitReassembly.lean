@@ -74,8 +74,6 @@ theorem LongTailSourceEnergyOutput.energy_le_of_all_sources
   change (ApproxAddEnergy 1 W : Real) <= F * M
   nlinarith
 
-#print axioms SourceSmoothDyadicEnergyOutput.energy_le_of_all_cells
-#print axioms LongTailSourceEnergyOutput.energy_le_of_all_sources
 
 end
 

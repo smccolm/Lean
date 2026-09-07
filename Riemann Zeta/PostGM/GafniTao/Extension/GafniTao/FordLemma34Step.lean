@@ -92,7 +92,6 @@ theorem ford_lemma_3_4_one_step
       exact mul_le_mul_of_nonneg_right
         (mul_le_mul_of_nonneg_left hpow hcoeff) hLBound
 
-#print axioms ford_lemma_3_4_one_step
 
 end
 

@@ -66,7 +66,7 @@ theorem fordDeltaSequence35_moment_bound
 /-- Consequence in the source's one-based notation: for every admissible
 recursive exponent through `Delta_n`, a fixed coefficient exists for
 `J_{nk,k}`.  This is the exponent content of Lemma 3.5 with the finite-prefix
-constant honestly enlarged. -/
+The constant honestly enlarged. -/
 theorem ford_lemma_3_5_exponent_recursion
     {k n : ℕ} {r : ℕ → ℕ} {eta omega : ℝ}
     (hk : 26 ≤ k) (hnLower : 1 ≤ n) (hnUpper : n ≤ k ^ 2)
@@ -81,8 +81,6 @@ theorem ford_lemma_3_5_exponent_recursion
     (k := k) (n := n - 1) (r := r) (eta := eta) (omega := omega)
     hk (by omega) hadm homegaLower homegaUpper hetaEq
 
-#print axioms fordDeltaSequence35_moment_bound
-#print axioms ford_lemma_3_5_exponent_recursion
 
 end
 

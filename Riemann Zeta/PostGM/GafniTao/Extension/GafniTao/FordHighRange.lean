@@ -56,9 +56,6 @@ theorem norm_riemannZeta_le_ford_highRange
       (mul_le_mul_of_nonneg_left hpow (by norm_num)) hlogPower
   simpa [fordComplexHeight, mul_comm] using h73.trans hmajor
 
-#print axioms fordSourceB_133_66_le_4_45
-#print axioms fordSourceExponent_le_4_45
-#print axioms norm_riemannZeta_le_ford_highRange
 
 end
 

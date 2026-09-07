@@ -452,9 +452,6 @@ theorem heathBrownFiniteFamilyBound_le_relation_rpow
                       (3 * rhoStar / 4 + rho + tau / 2)) := by ring
           rw [hExponent]
 
-#print axioms heathBrownSecondShape_le_three_rpow
-#print axioms heathBrownFourthShape_le_three_rpow
-#print axioms heathBrownFiniteFamilyBound_le_relation_rpow
 
 end
 

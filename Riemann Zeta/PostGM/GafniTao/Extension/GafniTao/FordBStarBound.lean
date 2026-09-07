@@ -206,9 +206,6 @@ theorem fordResolvedBStar_card_le
       rw [pow_add]
       ac_rfl
 
-#print axioms fordBStarLiftFamily_card
-#print axioms fordBStarLiftExponent_eq
-#print axioms fordResolvedBStar_card_le
 
 end
 

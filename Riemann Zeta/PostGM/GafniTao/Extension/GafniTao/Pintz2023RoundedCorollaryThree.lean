@@ -145,7 +145,6 @@ theorem pintz2023_corollary_three_rounded
           Q ^ (-3 * epsilon) := by gcongr
       _ = (C₀ + 2) * Q ^ (-3 * epsilon) := by ring
 
-#print axioms pintz2023_corollary_three_rounded
 
 end
 

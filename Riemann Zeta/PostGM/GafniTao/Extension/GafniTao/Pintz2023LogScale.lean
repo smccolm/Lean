@@ -142,9 +142,6 @@ theorem eventually_two_rpow_lt_rpow
     ∀ᶠ T : ℝ in atTop, (2 : ℝ) ^ c < T ^ delta :=
   (tendsto_rpow_atTop hdelta).eventually (eventually_gt_atTop ((2 : ℝ) ^ c))
 
-#print axioms eventually_pintz2023_dyadic_logScale_lower
-#print axioms pintz2023_logScale_upper_of_support
-#print axioms eventually_two_rpow_lt_rpow
 
 end
 

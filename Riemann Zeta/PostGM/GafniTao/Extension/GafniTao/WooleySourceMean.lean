@@ -159,10 +159,6 @@ theorem wooleySource_sum_residuePolynomialSum {k q qH : ℕ}
     (f := fun n : ℤ =>
       gamma n * wooleySourcePolynomialPhase phi alpha n)]
 
-#print axioms wooleySourceMassSq_nonneg
-#print axioms wooleySourceResidueMassSq_nonneg
-#print axioms wooleySource_sum_residueMassSq
-#print axioms wooleySource_sum_residuePolynomialSum
 
 end
 

@@ -206,11 +206,8 @@ theorem wooley_three_factor_holder_critical_real
       (sub_nonneg.mpr hsTwo), hsum f₀ hf₀, hsum f₁ hf₁, hsum f₂ hf₂]
   exact hholder
 
-#print axioms wooley_three_factor_holder_critical_ennreal
 
-#print axioms wooley_three_factor_holder_critical_real
 
-#print axioms wooley_three_factor_holder_ennreal
 
 end
 

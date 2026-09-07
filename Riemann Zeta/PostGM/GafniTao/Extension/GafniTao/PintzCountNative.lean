@@ -141,8 +141,6 @@ theorem pintz_zeroCount_native_bound
       dsimp [C₀, R]
       ring
 
-#print axioms four_le_pintzDetectorSquareLower
-#print axioms pintz_zeroCount_native_bound
 
 end
 

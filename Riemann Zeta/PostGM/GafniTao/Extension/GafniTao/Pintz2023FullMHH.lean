@@ -142,8 +142,6 @@ theorem exists_pintz2023_full_powered_scaled_mhh_bound
   exact ⟨B, hB, K, hK, q, hq, W₀, hW₀, hCard₀,
     r, hr, W₁, hW₁, hCard₁, hCombined, hMHH⟩
 
-#print axioms exists_pintz2023_full_powered_mhh_bound
-#print axioms exists_pintz2023_full_powered_scaled_mhh_bound
 
 end
 

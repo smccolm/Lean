@@ -100,10 +100,6 @@ theorem fordCubicExpSum_le_normalized
   rw [hscale] at hfinite
   linarith
 
-#print axioms fordCubicScale_mul_y_eq_turningPoint
-#print axioms fordCubicPeak_eq_two_mul_y_cubed
-#print axioms integrableOn_fordNormalizedCubicExp_Ioi
-#print axioms fordCubicExpSum_le_normalized
 
 end
 

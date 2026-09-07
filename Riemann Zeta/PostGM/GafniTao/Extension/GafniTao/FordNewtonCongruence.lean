@@ -179,13 +179,6 @@ theorem ford_powerSumFiber_card_le_factorial
       Nat.card_le_card_of_surjective orbit horbit
     _ = Nat.factorial d := by rw [Nat.card_perm, Nat.card_fin]
 
-#print axioms ford_aeval_psum
-#print axioms ford_newton_identity
-#print axioms ford_elementary_eq_of_powerSums_eq
-#print axioms fordRootPolynomial_eq_of_elementary_eq
-#print axioms ford_multiset_eq_of_powerSums_eq
-#print axioms ford_exists_perm_of_multiset_eq
-#print axioms ford_powerSumFiber_card_le_factorial
 
 end
 

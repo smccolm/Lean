@@ -187,10 +187,6 @@ theorem pintz2023_scaled_derivative_factor_eq
               ring
     _ = _ := by rw [hpowFirst, hpowSecond, hpowCancel]; ring
 
-#print axioms pintz2023DerivativeLambda_eq
-#print axioms pintz2023DerivativeLambda_rpow_alpha
-#print axioms pintz2023DerivativeLambda_rpow_neg_gamma
-#print axioms pintz2023_scaled_derivative_factor_eq
 
 end
 

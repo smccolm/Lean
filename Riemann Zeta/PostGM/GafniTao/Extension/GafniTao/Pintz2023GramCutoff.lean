@@ -214,11 +214,6 @@ theorem eventually_pintz2023GramCutoff_tail_le (K : ℝ) :
       rw [show -(K + 1) = -K - 1 by ring, Real.rpow_sub_one hApos.ne']
       field_simp
 
-#print axioms le_pintz2023GramCutoff
-#print axioms pintz2023GramCutoff_cast_le_four_mul_log_sq
-#print axioms eventually_pintz2023GramCutoff_le_smallB_scale
-#print axioms four_mul_inv_le_one_sub_exp_neg_half_inv
-#print axioms eventually_pintz2023GramCutoff_tail_le
 
 end
 

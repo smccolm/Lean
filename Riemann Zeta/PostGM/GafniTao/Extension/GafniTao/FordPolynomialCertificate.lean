@@ -274,10 +274,6 @@ theorem intervalIntegral_fordBiPolynomialEval
     exact hasDerivAt_fordBiPrimitiveValue p y v
   · exact (continuous_fordBiPolynomialEval p y).intervalIntegrable _ _
 
-#print axioms real_exp_neg_le_fordScaledTaylorPolynomial
-#print axioms fordBiIntegralPolynomial_eval
-#print axioms hasDerivAt_fordBiPrimitiveValue
-#print axioms intervalIntegral_fordBiPolynomialEval
 
 end
 

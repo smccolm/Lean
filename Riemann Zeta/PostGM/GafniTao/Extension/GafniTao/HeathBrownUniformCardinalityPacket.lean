@@ -76,7 +76,6 @@ theorem finite_symmetric_source_powered_cardinality_of_constants
       hUnit, hPowered, hMean'⟩
   exact ⟨packet, rfl, rfl⟩
 
-#print axioms finite_symmetric_source_powered_cardinality_of_constants
 
 end
 

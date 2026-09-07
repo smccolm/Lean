@@ -191,7 +191,6 @@ theorem wooley_equation_7_22_integrated_native
       ring_nf
       rw [Finset.sum_comm]
 
-#print axioms wooley_equation_7_22_integrated_native
 
 end
 

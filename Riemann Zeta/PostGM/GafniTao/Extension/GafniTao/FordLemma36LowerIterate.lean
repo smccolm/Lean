@@ -151,13 +151,6 @@ theorem fordDSequence36_source_predecessor_lower
       gcongr
     _ ≤ fordDSequence36 k (n - 2) := hgeom
 
-#print axioms fordDSequence36_ge_geometric
-#print axioms fordDSequence36_ge_half_geometric
-#print axioms ford_one_sub_two_div_pow_ge_exp
-#print axioms ford_exp_1970_div_499_upper
-#print axioms ford_half_exp_neg_1970_div_499_lower
-#print axioms ford_exponent_range_197
-#print axioms fordDSequence36_source_predecessor_lower
 
 end
 

@@ -165,13 +165,6 @@ theorem norm_heathBrownExponentialSum_le (N : ℕ) (f : ℝ → ℝ) :
     _ ≤ N := by
       simp [Nat.card_Icc]
 
-#print axioms heathBrownCriticalMoment_degree_identity
-#print axioms heathBrownCriticalMoment_lambda
-#print axioms HeathBrownVMVTMainConjecture.critical
-#print axioms norm_heathBrownPhase
-#print axioms heathBrown_lower_slope
-#print axioms heathBrown_upper_slope
-#print axioms norm_heathBrownExponentialSum_le
 
 end
 

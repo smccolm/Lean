@@ -167,8 +167,6 @@ theorem pintzGramTerminalCoefficient_nonneg
   unfold pintzGramTerminalCoefficient
   positivity
 
-#print axioms pintzCorrectedPhysicalGramMajorant_eq
-#print axioms pintzGramCore_le_power_log
 
 end
 

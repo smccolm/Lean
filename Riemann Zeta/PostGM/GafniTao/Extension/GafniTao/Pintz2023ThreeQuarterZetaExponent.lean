@@ -192,9 +192,6 @@ theorem pintz_threeQuarter_A3B_exponent_le
   dsimp only [u, a, b] at hcomb
   nlinarith
 
-#print axioms pintz_threeQuarter_AB_exponent_le
-#print axioms pintz_threeQuarter_A2B_exponent_le
-#print axioms pintz_threeQuarter_A3B_exponent_le
 
 end
 

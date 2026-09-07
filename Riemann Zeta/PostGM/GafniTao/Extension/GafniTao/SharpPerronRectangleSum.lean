@@ -23,7 +23,7 @@ theorem one_not_mem_zeroSet (R : ℝ) : (1 : ℂ) ∉ zeroSet 0 R := by
   exact riemannZeta_one_ne_zero hd.2.2.2.2
 
 /-- The finite coefficient sum is the pole term, the literal origin
-constant, and the multiplicity-weighted zero sum with the classical minus
+The constant, and the multiplicity-weighted zero sum with the classical minus
 sign. -/
 theorem sum_sharpZetaPerronResidueCoefficient
     (y R : ℝ) :

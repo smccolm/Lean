@@ -168,10 +168,6 @@ theorem norm_heathBrownCoefficientWeight_succ_sub_le
       gcongr
       exact abs_heathBrownDisplacementPolynomial_succ_sub_le hH hα hqH
 
-#print axioms abs_natCast_succ_pow_sub_pow_le
-#print axioms cell_displacement_mul_powerDifference_le
-#print axioms abs_heathBrownDisplacementPolynomial_succ_sub_le
-#print axioms norm_heathBrownCoefficientWeight_succ_sub_le
 
 end
 

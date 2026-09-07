@@ -137,8 +137,6 @@ theorem HeathBrownFullyUniformOutputs.next_le_common
             (heathBrownPoweredThreshold N (p + 1) L Cp eta) ^ 2) := by
       gcongr
 
-#print axioms HeathBrownFullyUniformOutputs.card_le_common
-#print axioms HeathBrownFullyUniformOutputs.next_le_common
 
 end
 

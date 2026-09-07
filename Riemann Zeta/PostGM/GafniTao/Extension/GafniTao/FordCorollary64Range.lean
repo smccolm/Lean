@@ -234,9 +234,6 @@ theorem ford_shifted_exponential_sum_cor64_range
         (N : ℝ) ^ (1 - 1 / (100 * lambda ^ 2)) := by gcongr
     _ = _ := by rfl
 
-#print axioms fordCor64Degree_bounds
-#print axioms fordCor64_saving_bounds
-#print axioms ford_shifted_exponential_sum_cor64_range
 
 end
 

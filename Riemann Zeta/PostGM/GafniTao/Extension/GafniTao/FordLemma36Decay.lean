@@ -140,12 +140,6 @@ theorem fordDSequence36_small_after_two_k
       mul_lt_mul_of_pos_left hneg (by norm_num)
     _ = 1 / 50 := by norm_num
 
-#print axioms fordPotentialLoss36_lower
-#print axioms fordDSequence36_exp_contraction
-#print axioms fordAlpha36_two_k_lower
-#print axioms fordAlpha36_two_k_sub_one_lower
-#print axioms exp_seventeen_fifths_gt_twenty_five
-#print axioms fordDSequence36_small_after_two_k
 
 end
 

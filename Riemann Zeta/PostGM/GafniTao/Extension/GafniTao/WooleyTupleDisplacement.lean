@@ -97,10 +97,6 @@ theorem wooley_source_polynomial_tuple_pair_character
   exact wooley_tuple_pair_character q k s
     (wooleyPolynomialValue phi q) alpha xy
 
-#print axioms wooley_tuple_point_character
-#print axioms wooley_tuple_pair_character
-#print axioms wooleySourcePolynomialPhase_eq_pointCharacter
-#print axioms wooley_source_polynomial_tuple_pair_character
 
 end
 

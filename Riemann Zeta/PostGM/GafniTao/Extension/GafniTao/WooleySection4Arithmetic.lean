@@ -61,8 +61,5 @@ theorem wooley_section4_depth_margin
     nlinarith
   nlinarith
 
-#print axioms wooley_ceilDiv_sub_mul
-#print axioms wooley_mul_ceilDiv_lt_add
-#print axioms wooley_section4_depth_margin
 
 end GafniTao

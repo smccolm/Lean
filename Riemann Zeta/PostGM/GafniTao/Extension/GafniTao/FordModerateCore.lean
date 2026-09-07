@@ -257,11 +257,6 @@ theorem fordLemma51SourceCore_moderate_linear_le
   · exact hlower
   · exact hupper
 
-#print axioms fordWGoodEnvelope_pow_card_le_nonempty
-#print axioms fordWGoodEnvelope_pow_card_le_moderate
-#print axioms fordLemma51SourceCore_moderate_le_of_envelope
-#print axioms fordLemma51SourceCore_moderate_le
-#print axioms fordLemma51SourceCore_moderate_linear_le
 
 end
 

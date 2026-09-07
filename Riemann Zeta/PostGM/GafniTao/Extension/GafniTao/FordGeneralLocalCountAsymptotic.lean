@@ -146,7 +146,6 @@ theorem fordLocalDiskZeroCount_le_general_scale
           fordLocalCotUniformLowerConstant *
             fordGeneralLocalCountScale A B t R := by ring
 
-#print axioms fordLocalDiskZeroCount_le_general_scale
 
 end
 

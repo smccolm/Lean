@@ -482,17 +482,6 @@ theorem wooley_equation_7_17_normal_native
     Psi (p ^ B) (p ^ wooleySection7BPrimeNat k r a b gamma)
     R S left right hforced
 
-#print axioms wooleySection7NormalSystem_top
-#print axioms wooleySection7NormalSystem_eval_progression_dvd
-#print axioms wooleySection7NormalSystem_right_displacement_dvd
-#print axioms wooleyIntegerTupleDisplacement_polynomial_neg
-#print axioms wooleySection7_original_implies_top_congruences
-#print axioms wooleySection7OriginalDisplacement_eq_intCast
-#print axioms wooleySection7_original_implies_equation_7_12
-#print axioms wooleySection7_equation_7_12_forced
-#print axioms wooleySection7_exists_uniform_equation_7_12
-#print axioms WooleyEquation717FiniteIdentity
-#print axioms wooley_equation_7_17_normal_native
 
 end
 

@@ -195,9 +195,6 @@ theorem heathBrown_source_shift_double_sum_preVMVT
           (2 * Real.pi * ((k : ℝ) ^ 2 / H)) * H) * B := by ring
     _ = _ := by rfl
 
-#print axioms heathBrown_source_shift_double_sum
-#print axioms norm_heathBrown_source_shift_double_sum_le
-#print axioms heathBrown_source_shift_double_sum_preVMVT
 
 end
 

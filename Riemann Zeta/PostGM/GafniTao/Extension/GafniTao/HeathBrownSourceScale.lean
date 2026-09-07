@@ -151,8 +151,6 @@ theorem eventually_heathBrown_source_typeII_scale
   exact ⟨hNOne, hNLower, hNUpper, hCube, hPower.1, hPower.2.1,
     hPower.2.2.1, hPower.2.2.2, hpBound⟩
 
-#print axioms eventually_rpow_le_natFloor_rpow
-#print axioms eventually_heathBrown_source_typeII_scale
 
 end
 

@@ -129,10 +129,6 @@ theorem heathBrown_integratedWeyl_le_source_moments
       gcongr
       · exact_mod_cast fordVinogradovMomentNat_mono s (k - 1) hQH
 
-#print axioms integrable_heathBrownNu_sq
-#print axioms lintegral_heathBrownNu_eq
-#print axioms lintegral_heathBrownNu_sq_le
-#print axioms heathBrown_integratedWeyl_le_source_moments
 
 end
 

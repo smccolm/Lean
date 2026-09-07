@@ -234,8 +234,6 @@ theorem finite_source_powered_energy_heathBrown_native
     epsilon B N p a Cp eta L W C0 C2 C4 B0 hN hp hCp heta hL
       hC0 hB0 hHB hSep hBase hPow hLarge
 
-#print axioms finite_source_powered_energy_heathBrown_of_relation
-#print axioms finite_source_powered_energy_heathBrown_native
 
 end
 

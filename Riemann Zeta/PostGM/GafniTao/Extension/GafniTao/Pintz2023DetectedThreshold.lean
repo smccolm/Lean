@@ -195,7 +195,6 @@ theorem eventually_pintz2023_detected_threshold_sq_lower
       ring
     _ ≤ _ := hsq
 
-#print axioms eventually_pintz2023_detected_threshold_sq_lower
 
 end
 

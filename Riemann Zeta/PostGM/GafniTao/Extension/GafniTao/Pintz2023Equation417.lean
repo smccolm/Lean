@@ -38,7 +38,6 @@ theorem dirichletPoly_pintz2023SmallMPoweredLineCoeff_eq_equation417
   congr 2
   ring
 
-#print axioms dirichletPoly_pintz2023SmallMPoweredLineCoeff_eq_equation417
 
 end
 

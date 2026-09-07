@@ -95,12 +95,6 @@ theorem norm_phaseShiftCoeffs_le_one_on
   rw [norm_phaseShiftCoeffs]
   exact ha n hn
 
-#print axioms sourceDirichletPoly_translate
-#print axioms card_gmTranslate
-#print axioms isSeparated_gmTranslate
-#print axioms inBaseInterval_gmTranslate_of_symmetric
-#print axioms sourceDirichletPoly_large_on_gmTranslate
-#print axioms norm_phaseShiftCoeffs_le_one_on
 
 end
 

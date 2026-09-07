@@ -130,9 +130,6 @@ theorem ford_collision_comp_le
           Nat.card (FordMapFiber g z.2.1) ^ 2)
         (fun a => rfl)
 
-#print axioms fordCollisionPairs_card_eq_sum_sq
-#print axioms fordCompFiber_card_eq_sum
-#print axioms ford_collision_comp_le
 
 end
 

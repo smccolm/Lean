@@ -260,7 +260,7 @@ theorem pintz2023NineEighthMass_nonneg :
   tsum_nonneg (fun _ => norm_nonneg _)
 
 /-- Pintz equation (4.6), for the literal finite-mollifier tail.  The
-constant is uniform in `X`, the zero `rho`, `eta`, and `lambda`; its only
+The constant is uniform in `X`, the zero `rho`, `eta`, and `lambda`; its only
 arithmetic input is the fixed `1/48` divisor bound. -/
 theorem norm_tsum_pintz2023TailTerm_le_exp_neg_two
     : ∃ K : ℝ, 0 < K ∧
@@ -385,12 +385,6 @@ theorem summable_norm_pintz2023TailTerm
   · rw [pintz2023TailTerm, if_neg hn, norm_zero]
     positivity
 
-#print axioms norm_pintz2023_LSeries_term_le
-#print axioms norm_pintz2023WeightedTerm_le_pseries
-#print axioms norm_pintz2023WeightedTerm_le_pseries_on_line
-#print axioms pintz2023_tail_pseries_pointwise_nine_eighth
-#print axioms summable_norm_pintz2023TailTerm
-#print axioms norm_tsum_pintz2023TailTerm_le_exp_neg_two
 
 end
 

@@ -107,12 +107,6 @@ theorem heathBrown_block_sum_eq
   rw [← Finset.sum_filter]
   rfl
 
-#print axioms heathBrownBlockIndex_lt
-#print axioms mem_heathBrownBlock
-#print axioms heathBrownBlock_pair_distance
-#print axioms heathBrownBlock_pair_source_distance
-#print axioms heathBrown_sum_over_blocks
-#print axioms heathBrown_block_sum_eq
 
 end
 

@@ -133,8 +133,6 @@ theorem ford_shifted_exponential_sum_direct_range
   dsimp [fordDirectCoefficient, s, C]
   exact mul_le_mul_of_nonneg_left hpow fordDirectCoefficient_nonneg
 
-#print axioms ford_direct_saving_bounds
-#print axioms ford_shifted_exponential_sum_direct_range
 
 end
 

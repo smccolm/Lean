@@ -172,12 +172,6 @@ theorem heathBrownFrequencyEnergy_nonneg
     (heathBrownTriangularFourierCoefficient_nonneg hB hC rs.1 rs.2)
     (sq_nonneg _)
 
-#print axioms heathBrownFourierAtom_mul_conj
-#print axioms hasSum_heathBrownPairKernelFourier
-#print axioms hasSum_heathBrownFinitePairKernelFourier
-#print axioms heathBrownFinitePairLatticeTerm_eq_energy
-#print axioms hasSum_heathBrownFrequencyEnergy
-#print axioms heathBrownFrequencyEnergy_nonneg
 
 end
 

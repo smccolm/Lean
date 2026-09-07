@@ -160,9 +160,6 @@ theorem ford_equation_6_1
     simpa using hMNreal
   linarith
 
-#print axioms fordEquation61Average_eq
-#print axioms norm_fordEquation61_discrepancy_le
-#print axioms ford_equation_6_1
 
 end
 

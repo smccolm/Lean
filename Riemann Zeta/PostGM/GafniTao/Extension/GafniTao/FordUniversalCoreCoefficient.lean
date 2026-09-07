@@ -238,9 +238,6 @@ theorem fordScaledCoreCoefficient_root_le_absolute
         norm_num
     _ = fordUniversalRootCoefficient := rfl
 
-#print axioms fordDoubleSquareCoefficient_le_universal_power
-#print axioms fordScaledCoreCoefficient_root_le_universalBase
-#print axioms fordScaledCoreCoefficient_root_le_absolute
 
 end
 

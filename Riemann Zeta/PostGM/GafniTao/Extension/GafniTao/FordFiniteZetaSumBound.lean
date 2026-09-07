@@ -75,8 +75,6 @@ theorem norm_fordFiniteHurwitzSum_le_source
             Real.log t ^ ((2 : ℝ) / 3))) := by
       gcongr
 
-#print axioms fordFiniteHurwitzSum_eq_weighted
-#print axioms norm_fordFiniteHurwitzSum_le_source
 
 end
 

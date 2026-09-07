@@ -182,12 +182,6 @@ theorem eventually_pintz2023_source_powered_block_lt_cube
     huUpperReserve.trans data.scale_separation
   exact hcubeT hU hq hhBound huUpper hcase
 
-#print axioms pintz2023EllThreshold_lt_one
-#print axioms pintz2023EllPowerWindowUpper_lt_one
-#print axioms pintz2023_power_choice_log_scale_lt_two
-#print axioms pintz2023_powered_dyadic_cast_lt_cube
-#print axioms eventually_pintz2023_powered_dyadic_cast_lt_cube
-#print axioms eventually_pintz2023_source_powered_block_lt_cube
 
 end
 

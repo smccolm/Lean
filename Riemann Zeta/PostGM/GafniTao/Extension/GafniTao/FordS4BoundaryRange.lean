@@ -49,8 +49,6 @@ theorem ford_shiftedResidueIndex_boundary_unique
   rw [(ford_shiftedResidueIndex_not_interior_iff c u).mp hu,
     (ford_shiftedResidueIndex_not_interior_iff c v).mp hv]
 
-#print axioms ford_shiftedResidue_length_le_succ
-#print axioms ford_shiftedResidueIndex_boundary_unique
 
 end
 

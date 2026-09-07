@@ -150,9 +150,6 @@ theorem ford_asymptotic_zero_free_native : FordAsymptoticZeroFree := by
     have h := hpositive hconjZero hconjHeight
     simpa [abs_of_nonpos himNonpos] using h
 
-#print axioms fordVKZeroFreeConstant_pos
-#print axioms fordVKZeroFreeConstant_domination
-#print axioms ford_asymptotic_zero_free_native
 
 end
 

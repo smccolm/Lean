@@ -95,9 +95,6 @@ theorem wooley_source_two_step_compose
         (p : ℝ) ^ (-(b : ℝ) * Lambda / (2 * (k : ℝ))) := by
       simp only [wooleyTwoStepWeight, mul_one]
 
-#print axioms wooley_monograde_two_step_compose
-#print axioms wooley_second_decay_rpow_le_one
-#print axioms wooley_source_two_step_compose
 
 end
 

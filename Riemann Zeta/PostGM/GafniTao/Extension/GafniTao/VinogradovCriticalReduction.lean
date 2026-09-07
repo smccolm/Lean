@@ -137,10 +137,6 @@ theorem heathBrownVMVTMainConjecture_of_critical
   obtain ⟨C, hC, hmoment⟩ := hcritical l epsilon hl hepsilon
   exact ⟨C, hC, hmoment.of_critical hs⟩
 
-#print axioms norm_fordVinogradovWeylSum_le
-#print axioms fordVinogradovMomentNat_le_trivial_power_mul
-#print axioms FordVinogradovMomentBound.of_critical
-#print axioms heathBrownVMVTMainConjecture_of_critical
 
 end
 

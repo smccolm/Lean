@@ -170,10 +170,6 @@ theorem ford_theorem3_weighted_delta_le
           17 / (10 * (k : ℝ))) := by
       gcongr
 
-#print axioms FordVinogradovMomentBound.mono_delta
-#print axioms ford_exp_neg_le_one_sub_add_sq
-#print axioms ford_theorem3_interpolation_bracket
-#print axioms ford_theorem3_weighted_delta_le
 
 end
 

@@ -12,7 +12,7 @@ namespace GafniTao
 
 noncomputable section
 
-/-- The two implicit constants in the proof of Lemma 9.3 admit one uniform
+/-- The two implicit constants in the proof of Lemma 9.3 have one uniform
 bound depending only on `k` and the Section-7 constant. -/
 theorem wooley_lemma_9_3_constant_le
     {C : ℝ} {k r r₁ : ℕ}
@@ -37,7 +37,7 @@ theorem wooley_lemma_9_3_constant_le
 /-- The exact two-selection conclusion of Wooley Lemma 9.3.  The hypotheses
 `hfirst` and `hsecond` are precisely the two instances of the already proved
 Lemma 9.2; the conclusion records all of (9.6)--(9.9), with the harmless
-constant in (9.6) exposed. -/
+The constant in (9.6) exposed. -/
 theorem wooleySourcePolynomial_lemma_9_3_of_lemma_9_2
     {k p B H r a b nu : ℕ} [NeZero p] [NeZero (p ^ B)]
     (phi : WooleyPolynomialSystem k) (gamma : WooleySourceSequence)
@@ -250,9 +250,6 @@ theorem wooleySourcePolynomial_lemma_9_3_of_lemma_9_1
   exact wooleySourcePolynomial_lemma_9_3_of_lemma_9_2
     phi gamma C Lambda delta theta hp hk hrk hC hLambda hdt hb hfirst hsecond
 
-#print axioms wooleySourcePolynomial_lemma_9_3_of_lemma_9_2
-#print axioms wooleySourcePolynomial_lemma_9_3_of_lemma_9_1
-#print axioms wooley_lemma_9_3_constant_le
 
 end
 

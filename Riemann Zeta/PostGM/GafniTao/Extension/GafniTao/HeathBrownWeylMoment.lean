@@ -37,8 +37,6 @@ theorem integral_heathBrownWeylSum_pow_le
   rw [integral_heathBrownWeylSum_pow]
   exact_mod_cast fordVinogradovMomentNat_mono s (k - 1) hQH
 
-#print axioms integral_heathBrownWeylSum_pow
-#print axioms integral_heathBrownWeylSum_pow_le
 
 end
 

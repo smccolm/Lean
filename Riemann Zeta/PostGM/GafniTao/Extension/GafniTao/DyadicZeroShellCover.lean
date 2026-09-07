@@ -147,12 +147,6 @@ theorem exists_zero_energy_dyadic_shells
     (dyadicZeroShellCount_pos T) (dyadicZeroShell sigma T)
     (fun rho hrho => exists_mem_dyadicZeroShell hrho)
 
-#print axioms dyadicZeroShellCount
-#print axioms dyadicZeroShell
-#print axioms mem_zeroSet_sigma_data
-#print axioms mem_absoluteDyadicZeroSlab_of_abs_bounds
-#print axioms exists_mem_dyadicZeroShell
-#print axioms exists_zero_energy_dyadic_shells
 
 end
 

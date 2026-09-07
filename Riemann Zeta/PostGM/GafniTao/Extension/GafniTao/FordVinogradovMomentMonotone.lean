@@ -57,9 +57,6 @@ theorem fordVinogradovMomentNat_mono
     have he := fordVinogradovTupleInclude_injective (s := s) hQM
     exact Prod.ext (he hF.1) (he hF.2)
 
-#print axioms fordVinogradovTupleInclude_injective
-#print axioms fordVinogradovPowerVector_include
-#print axioms fordVinogradovMomentNat_mono
 
 end
 

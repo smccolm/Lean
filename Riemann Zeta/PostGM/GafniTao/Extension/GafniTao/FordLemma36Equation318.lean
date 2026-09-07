@@ -105,8 +105,6 @@ theorem fordEquation318
     _ ≤ d * (1 - fordAlpha36 k) := by
       exact mul_le_mul_of_nonneg_left (sub_le_sub_left hproduct 1) hd0.le
 
-#print axioms fordAlpha36_bounds
-#print axioms fordEquation318
 
 end
 

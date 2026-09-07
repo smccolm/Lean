@@ -396,14 +396,6 @@ theorem pintz_mobius_equation_4_5_exact
         rw [pintzMobiusHeadTerm, if_neg]
         omega
 
-#print axioms norm_pintzMobius_coefficient_le
-#print axioms norm_pintzMobiusWeight_le_rpow
-#print axioms norm_pintzMobius_weightedTerm_le
-#print axioms norm_pintzMobius_weightedTerm_le_pseries
-#print axioms pintz_tail_pseries_pointwise
-#print axioms summable_norm_pintzMobiusTailTerm
-#print axioms norm_tsum_pintzMobiusTailTerm_le
-#print axioms pintz_mobius_equation_4_5_exact
 
 end
 

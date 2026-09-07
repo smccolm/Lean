@@ -6,7 +6,7 @@ import GafniTao.HeathBrownLowerSourceScale
 The lower bound for a dyadically extracted source length uses only the
 physical lower cutoff `Y = floor(U^delta1)` and `Q < 4P`; it is independent
 of the source classification index.  Isolating it here lets the square and
-constant-factor transition cells use the same literal dyadic output.
+The constant-factor transition cells use the same literal dyadic output.
 -/
 
 open Filter
@@ -44,7 +44,6 @@ theorem eventually_source_dyadic_lower_scale
     hAbsorbU.trans hYLower
   linarith
 
-#print axioms eventually_source_dyadic_lower_scale
 
 end
 

@@ -141,7 +141,6 @@ theorem eventually_exists_fordEmpty_detector_general_growthBound
   simp only [Finset.sum_empty] at hdet
   linarith
 
-#print axioms eventually_exists_fordEmpty_detector_general_growthBound
 
 end
 

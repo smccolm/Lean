@@ -512,12 +512,6 @@ theorem wooleySourcePolynomial_iterationChain_of_hierarchy_ledger
   · omega
   · omega
 
-#print axioms wooley_section10_first_loss_from_global
-#print axioms wooley_section10_second_loss_from_global
-#print axioms wooleySourcePolynomial_iterationStep_of_scale_hierarchy
-#print axioms WooleySection10NodeHierarchy
-#print axioms wooleySection10NodeHierarchy_of_global
-#print axioms wooleySourcePolynomial_iterationChain_of_hierarchy_ledger
 
 end
 

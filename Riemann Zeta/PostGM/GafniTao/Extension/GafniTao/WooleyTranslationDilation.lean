@@ -158,10 +158,6 @@ theorem wooley_translation_dilation
   exact Int.modEq_iff_dvd.mpr (by
     simpa only [neg_sub] using (dvd_neg.mpr hdiv))
 
-#print axioms wooleyPowerSum_affine
-#print axioms dvd_top_powerSum_term_of_affine
-#print axioms pow_dvd_of_mul_pow_dvd
-#print axioms wooley_translation_dilation
 
 end
 

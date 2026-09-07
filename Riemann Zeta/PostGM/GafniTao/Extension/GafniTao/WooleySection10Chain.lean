@@ -147,9 +147,6 @@ theorem WooleyIterationChain.endpoint
             rw [show 2 * (n + 1) = 2 * n + 2 by omega, pow_add]
             simp only [mul_assoc]
 
-#print axioms wooley_iterationChain_exists
-#print axioms wooley_iterationChain_exists_bounded
-#print axioms WooleyIterationChain.endpoint
 
 end
 

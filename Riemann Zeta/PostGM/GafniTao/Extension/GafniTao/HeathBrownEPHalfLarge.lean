@@ -205,10 +205,6 @@ theorem norm_pintz2023ExponentialBlock_le_half_large
           (mul_le_mul_of_nonneg_right (le_max_right C₀ 1)
             (Real.rpow_nonneg (by positivity : (0 : ℝ) ≤ N) _)))
 
-#print axioms norm_pintz2023ExponentialBlock_le_half_large_order
-#print axioms norm_pintz2023ExponentialBlock_le_half_large_compact
-#print axioms norm_pintz2023ExponentialBlock_le_half_large_trivial
-#print axioms norm_pintz2023ExponentialBlock_le_half_large
 
 end
 

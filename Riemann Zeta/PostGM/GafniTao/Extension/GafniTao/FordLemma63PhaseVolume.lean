@@ -135,9 +135,6 @@ theorem fordLemma63Omega_volume_exact
   rw [fordLemma63Omega_volume_toReal,
     fordLemma63_prod_two_mul_radius hk hM]
 
-#print axioms fordLemma63Omega_eq_Icc
-#print axioms fordLemma63Omega_volume_toReal
-#print axioms fordLemma63Omega_volume_exact
 
 end
 

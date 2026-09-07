@@ -177,17 +177,6 @@ theorem eventually_fordLemma65_packet_real
     exact_mod_cast hpNat
   exact hpReal.trans (by gcongr)
 
-#print axioms fordLemma65Scale_pos
-#print axioms fordLemma65Scale_pow
-#print axioms fordLemma65Scale_one_le
-#print axioms fordLemma65_source_scale
-#print axioms fordLemma65_div_scale
-#print axioms fordLemma65_next_scale_one_le
-#print axioms fordLemma65_terminal_power
-#print axioms tendsto_fordLemma65Scale_nat_atTop
-#print axioms fordLemma65_rounded_box
-#print axioms eventually_fordLemma65_inputs
-#print axioms eventually_fordLemma65_packet_real
 
 end
 

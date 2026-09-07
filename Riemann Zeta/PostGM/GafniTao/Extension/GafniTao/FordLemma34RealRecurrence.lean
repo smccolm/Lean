@@ -31,7 +31,6 @@ theorem ford_lemma_3_3_consume_uniform_K_bound_real
     ford_lemma_3_3_consume_uniform_K_bound Ψ hsd hr2 hrk hdk hq hp hT hP
       hJ hK hJBound
 
-#print axioms ford_lemma_3_3_consume_uniform_K_bound_real
 
 end
 

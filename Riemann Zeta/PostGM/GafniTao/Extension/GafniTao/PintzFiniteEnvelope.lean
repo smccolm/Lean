@@ -340,7 +340,6 @@ theorem pintz_zeroCount_native_envelope
         T ^ (8 * pintzDensityLambdaCoefficient * eta ^ (3 / 2 : ℝ)) *
         Real.log T ^ (523 : ℝ) := by ring
 
-#print axioms pintz_zeroCount_native_envelope
 
 end
 

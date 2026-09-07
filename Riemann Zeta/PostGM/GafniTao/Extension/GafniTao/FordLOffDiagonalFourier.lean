@@ -144,9 +144,6 @@ theorem fordLFixed_card_le_integral_majorant
       filter_upwards [] with α
       exact hnorm α
 
-#print axioms fordLFixedPolynomial_characterSum
-#print axioms fordLFixed_character_mean_eq_count
-#print axioms fordLFixed_card_le_integral_majorant
 
 end
 

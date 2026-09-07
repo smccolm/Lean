@@ -160,11 +160,6 @@ theorem pintz2023Equation42Integral_eq_regularized
   have hre := congrArg Complex.re hs
   norm_num at hre
 
-#print axioms pintz2023ContourIntegrand_eq_source
-#print axioms differentiableOn_pintz2023ContourIntegrand
-#print axioms pintz2023Contour_rectangle_vanishes
-#print axioms pintz2023Contour_finite_vertical_shift
-#print axioms pintz2023Equation42Integral_eq_regularized
 
 end
 

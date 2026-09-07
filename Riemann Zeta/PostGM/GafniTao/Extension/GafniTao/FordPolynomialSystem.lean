@@ -155,13 +155,6 @@ theorem ford_lemma_3_1_source
   simp only [Finset.prod_const, Finset.card_univ, Fintype.card_fin]
   ring
 
-#print axioms fordInitialPowerSystem
-#print axioms fordPolynomialSystem_above_degree
-#print axioms fordPolynomialSystem_above_lc
-#print axioms fordPolynomialSystem_above_lc_ne_zero
-#print axioms ford_lemma_3_1_system
-#print axioms ford_above_derivative_lc_source
-#print axioms ford_lemma_3_1_source
 
 end
 

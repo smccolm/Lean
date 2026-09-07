@@ -150,10 +150,6 @@ theorem fordCanonicalTheta_one_le
     _ = (1 / (r : ℝ)) / (2 : ℝ) ^ (j - 1) +
         2 * fordPhiStar35 k r delta / ((k : ℝ) * r) := by ring
 
-#print axioms fordQuadraticHalfSum_formula
-#print axioms ford_half_recurrence_unroll
-#print axioms fordCanonicalTheta_recurrence
-#print axioms fordCanonicalTheta_one_le
 
 end
 

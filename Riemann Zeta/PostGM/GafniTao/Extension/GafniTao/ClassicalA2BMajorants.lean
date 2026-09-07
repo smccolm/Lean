@@ -851,21 +851,6 @@ theorem norm_logarithmic_sum_sq_le_A2B_compact
     (by simpa [mul_assoc] using hsq)
   exact sq_pos_of_pos (by exact_mod_cast hH₁pos : (0 : ℝ) < H₁)
 
-#print axioms sqrt_div_sixteen
-#print axioms sum_Icc_one_div_sqrt_le_two_sqrt
-#print axioms logarithmicSecondCorrelationBound_le_homogeneous
-#print axioms logarithmicSecondCorrelationBound_le_simple
-#print axioms sum_logarithmicSecondCorrelationBound_le
-#print axioms logarithmicDifferenceA2Majorant_le_simple
-#print axioms logarithmicDifferenceA2Bound_le_raw
-#print axioms logarithmic_weyl_A2B_process_raw
-#print axioms logarithmicDifferenceA2RawBound_le_uniform
-#print axioms logarithmicDifferenceA2UniformBound_le_separated
-#print axioms sum_Icc_sqrt_one_div_sqrt_le
-#print axioms separated_inverse_shift_factor
-#print axioms sum_logarithmicDifferenceA2SeparatedBound_le
-#print axioms logarithmic_weyl_A2B_process_summed
-#print axioms norm_logarithmic_sum_sq_le_A2B_compact
 
 end
 

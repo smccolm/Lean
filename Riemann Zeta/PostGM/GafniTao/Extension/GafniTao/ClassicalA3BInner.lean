@@ -217,9 +217,6 @@ theorem logarithmicSecondDifference_weyl_AB_process
           (fun q => logarithmicThirdCorrelationBound_nonneg
             t A N r s q ht hA hr hs) (Finset.mem_range.mp hh)
 
-#print axioms logarithmicThirdDifference_B_process
-#print axioms padded_logarithmicSecondDifference_correlation_eq
-#print axioms logarithmicSecondDifference_weyl_AB_process
 
 end
 

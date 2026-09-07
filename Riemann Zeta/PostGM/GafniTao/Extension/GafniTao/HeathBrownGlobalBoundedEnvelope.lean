@@ -89,10 +89,6 @@ theorem heathBrownGlobalBoundedMajorant_third_cell
   (heathBrownBoundedShellMajorant_third_cell
     (R0 := R0) hsigmaLower hsigmaUpper).dyadic_shell_four_loss
 
-#print axioms zeroAdditiveEnergyCount_le_globalBoundedMajorant
-#print axioms heathBrownGlobalBoundedMajorant_first_cell
-#print axioms heathBrownGlobalBoundedMajorant_second_cell
-#print axioms heathBrownGlobalBoundedMajorant_third_cell
 
 end
 

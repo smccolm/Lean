@@ -294,8 +294,6 @@ theorem wooleySourcePolynomial_equation_4_15
       _ = _ := by
         rw [hsumA, hsumB]
 
-#print axioms wooley_equation_4_15_integrand
-#print axioms wooleySourcePolynomial_equation_4_15
 
 end
 

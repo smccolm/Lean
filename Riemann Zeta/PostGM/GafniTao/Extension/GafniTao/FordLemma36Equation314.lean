@@ -128,7 +128,6 @@ theorem fordEquation314
       field_simp
       ring
 
-#print axioms fordEquation314
 
 end
 

@@ -170,11 +170,6 @@ theorem wooley_sum_refinement_tower
       · rw [if_neg hzk]
     · rw [if_neg hkm]
 
-#print axioms wooleyResidueLift_mem
-#print axioms wooleyResidueLift_eq_section7
-#print axioms wooleyResidueLift_injective
-#print axioms wooley_sum_residueLift
-#print axioms wooley_sum_refinement_tower
 
 end
 

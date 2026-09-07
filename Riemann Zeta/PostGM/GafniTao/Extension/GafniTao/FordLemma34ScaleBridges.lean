@@ -112,12 +112,6 @@ theorem ford_MScale_pow_le_P
   simpa only [Real.rpow_one] using
     Real.rpow_le_rpow_of_exponent_le hP hexp
 
-#print axioms ford_nat_lt_floor_of_succ_le
-#print axioms ford_floor_Q_box
-#print axioms ford_floor_div_prime_le_next_scale
-#print axioms fordPrimeSet_upper_box_of_relative
-#print axioms ford_P_le_MScale_pow
-#print axioms ford_MScale_pow_le_P
 
 end
 

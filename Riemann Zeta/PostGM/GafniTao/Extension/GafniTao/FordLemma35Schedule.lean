@@ -42,7 +42,6 @@ def fordCanonicalPhiSchedule
     (fordCanonicalPhiSchedule k r j delta).phi J =
       fordPhiBackwardAux k r j delta (j - J) := rfl
 
-#print axioms fordCanonicalPhiSchedule_apply
 
 end
 

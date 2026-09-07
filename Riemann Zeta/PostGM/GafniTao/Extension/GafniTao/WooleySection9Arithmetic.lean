@@ -377,17 +377,6 @@ theorem wooley_twoStep_admissible
         exact Nat.mul_le_mul_right _ (by omega)
   exact ⟨ha, hb', hrel, hindices.1, hindices.2⟩
 
-#print axioms wooley_nextB_pos
-#print axioms wooley_nextB_ge_divisor_scale
-#print axioms wooley_twoStep_indices
-#print axioms wooley_twoStep_upper
-#print axioms wooley_twoStep_growth
-#print axioms wooley_twoStep_defining_ceiling
-#print axioms wooley_twoStep_weight_pos
-#print axioms wooley_twoStep_weight_mul_scale
-#print axioms wooley_twoStep_weight_lt
-#print axioms wooley_twoStep_weight_lt_one
-#print axioms wooley_twoStep_admissible
 
 end
 

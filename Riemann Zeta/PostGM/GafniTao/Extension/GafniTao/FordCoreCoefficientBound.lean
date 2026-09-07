@@ -133,7 +133,7 @@ theorem fordScaledCoreCoefficient_le_base_power
     _ = B ^ (84 * k ^ 4) := by
       rw [← pow_add, ← pow_add]
       congr 1
-      ring
+      ring_nf
 
 theorem fordScaledCoreCoefficient_root_le
     {k : ℕ} (hk : fordCoefficientKThreshold ≤ k) :
@@ -161,13 +161,10 @@ theorem fordScaledCoreCoefficient_root_le
       rw [← Real.rpow_natCast, ← Real.rpow_mul hB0]
       push_cast
       field_simp
-      ring
+      ring_nf
     _ ≤ B ^ (11 : ℝ) := Real.rpow_le_rpow_of_exponent_le hBOne (by norm_num)
     _ = B ^ 11 := by norm_num
 
-#print axioms fordDoubleSquareCoefficient_le_base_power
-#print axioms fordScaledCoreCoefficient_le_base_power
-#print axioms fordScaledCoreCoefficient_root_le
 
 end
 

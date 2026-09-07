@@ -57,8 +57,6 @@ theorem exists_large_pintzDetectedPolynomial
   · rw [← pintzFiniteMobiusPolynomial_leftLine_eq]
     exact hlarge
 
-#print axioms pintzFiniteMobiusPolynomial_leftLine_eq
-#print axioms exists_large_pintzDetectedPolynomial
 
 end
 

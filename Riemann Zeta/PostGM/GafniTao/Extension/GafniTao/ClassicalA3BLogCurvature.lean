@@ -166,7 +166,7 @@ theorem hasDerivAt_logarithmicThirdDifferencePhase_deriv
     simp only [Pi.sub_apply, Function.comp_apply, id_eq]
     ring
   · unfold reciprocalSquareSecondGap
-    ring
+    ring_nf
 
 theorem logarithmicThirdDifferencePhase_secondDifference
     (t A : ℝ) (r s q n : ℕ) (hA : 0 < A) :
@@ -261,8 +261,6 @@ theorem logarithmicThirdDifference_secondDifference_bounds
         mul_le_mul_of_nonneg_left hgap.2 ht.le
       _ = 192 * t * (r : ℝ) * s * q / A ^ 5 := by ring
 
-#print axioms reciprocalSquareSecondGap_difference_bounds
-#print axioms logarithmicThirdDifference_secondDifference_bounds
 
 end
 

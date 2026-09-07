@@ -58,8 +58,6 @@ theorem real_exp_neg_le_scaledTaylor
       Real.exp_nat_mul (-z / (m : ℝ)) m
     _ ≤ fordExpTaylorUpper n (-z / (m : ℝ)) ^ m := hpow
 
-#print axioms real_exp_le_fordExpTaylorUpper
-#print axioms real_exp_neg_le_scaledTaylor
 
 end
 

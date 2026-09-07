@@ -151,10 +151,6 @@ theorem ford_sourceBStar_collision_le
     (ford_sourceBStarCoarsening_fiber_card_le
       Ψ c hp hr hk2 hkp hdk hdr hrk hpT)
 
-#print axioms fordSourceBStarFiberEquiv
-#print axioms fordSourceBStarCoarseningFiberEquiv
-#print axioms ford_sourceBStarCoarsening_fiber_card_le
-#print axioms ford_sourceBStar_collision_le
 
 end
 

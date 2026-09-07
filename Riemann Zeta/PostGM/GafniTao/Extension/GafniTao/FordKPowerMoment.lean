@@ -146,9 +146,6 @@ theorem fordK_repeated_integral_holder_real
         ENNReal.ofReal_rpow_of_nonneg (by positivity) hr,
         ENNReal.ofReal_rpow_of_nonneg (by positivity) hr]
 
-#print axioms card_fordScaledPowerSolution
-#print axioms fordPowerMomentIntegral_eq_vinogradov
-#print axioms fordK_repeated_integral_holder_real
 
 end
 

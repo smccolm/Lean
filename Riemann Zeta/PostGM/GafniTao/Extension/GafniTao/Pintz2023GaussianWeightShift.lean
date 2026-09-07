@@ -705,15 +705,6 @@ theorem norm_pintz2023GaussianWeight_le_on_line_div
   rw [pintz2023_shifted_exponential_to_eq_rpow hn] at h
   exact h
 
-#print axioms pintz2023GaussianWeight_eq_bare
-#print axioms integrable_pintz2023BareWeightIntegrand_vertical
-#print axioms norm_pintz2023BareWeightIntegrand_horizontal_le
-#print axioms pintz2023BareWeight_rectangle_vanishes
-#print axioms pintz2023BareWeight_complete_vertical_shift
-#print axioms norm_pintz2023GaussianWeight_le
-#print axioms pintz2023BareWeight_complete_vertical_shift_to
-#print axioms norm_pintz2023GaussianWeight_le_on_line
-#print axioms norm_pintz2023GaussianWeight_le_on_line_div
 
 end
 

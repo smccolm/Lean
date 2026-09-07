@@ -169,9 +169,6 @@ theorem norm_pintzGramCorrelation_le_correctedPhysicalMajorant
         exact pintzCorrectedPartialZetaEnvelope_le_uniform
           hsigmaUpper (by linarith) hdiff hdiffOne hdiffUpper)
 
-#print axioms pintzCorrectedPartialZetaEnvelope_le_uniform
-#print axioms pintzMobiusCutoff_one_le
-#print axioms norm_pintzGramCorrelation_le_correctedPhysicalMajorant
 
 end
 

@@ -154,9 +154,6 @@ theorem norm_pintz2023ExponentialBlock_le_target_of_exponents
       dsimp only [C]
       ring
 
-#print axioms pintz2023_scaled_derivative_factor_at_rpow
-#print axioms norm_pintz2023ExponentialBlock_le_log_powers
-#print axioms norm_pintz2023ExponentialBlock_le_target_of_exponents
 
 end
 

@@ -110,9 +110,6 @@ theorem wooleySection7BPrimeNat_cast
   exact Int.toNat_of_nonneg
     (wooley_section7_BPrimeInt_pos_toNat hBPrime).le
 
-#print axioms wooley_section7_nextB_mul_upper
-#print axioms wooley_equation_7_4
-#print axioms wooleySection7BPrimeNat_cast
 
 end
 

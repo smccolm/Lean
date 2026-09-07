@@ -264,8 +264,6 @@ theorem exists_pintz2023NearOneOffDiagonalMajorant
       dsimp only [pMax]
       ring
 
-#print axioms exists_pintz2023NearOneDiagonalMajorant
-#print axioms exists_pintz2023NearOneOffDiagonalMajorant
 
 end
 

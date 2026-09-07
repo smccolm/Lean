@@ -7,7 +7,7 @@ import Mathlib.Algebra.BigOperators.Module
 
 Ford writes the partial-summation remainder as an integral in `w`.  On the
 integer sum the equivalent Abel identity is exact and gives the same source
-constant: the variation of the phase multiplier is at most `2/M` per step.
+The constant: the variation of the phase multiplier is at most `2/M` per step.
 All partial sums remain the literal complete Vinogradov Weyl sums.
 -/
 
@@ -302,12 +302,6 @@ theorem fordLemma63PolynomialSum_unitCube_mean_eq
   rw [hfun]
   exact ford_equation_1_3 s k Q
 
-#print axioms fordLemma63_log_phase_factorization
-#print axioms abs_fordLemma63Delta_sub_le
-#print axioms norm_fordLemma63DeltaCharacter_sub_le
-#print axioms fordLemma63T_abel_identity
-#print axioms norm_fordLemma63T_le_SZero
-#print axioms fordLemma63PolynomialSum_unitCube_mean_eq
 
 end
 

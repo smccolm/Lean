@@ -110,8 +110,6 @@ theorem exists_physical_classicalBinaryShellDetectorData
   · exact hMassII
   · exact hThresholdII
 
-#print axioms eventually_threshold_mul_physicalCutoff_le_quarter
-#print axioms exists_physical_classicalBinaryShellDetectorData
 
 end
 

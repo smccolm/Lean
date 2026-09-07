@@ -244,11 +244,6 @@ theorem heathBrown_zeroAdditiveEnergy_first_native
   · exact heathBrown_zeroAdditiveEnergy_first_left_endpoint_native
   · exact heathBrown_zeroAdditiveEnergy_first_open_native hsigma hsigmaUpper
 
-#print axioms EpsilonExponentBound.mono_eventually_nonneg
-#print axioms epsilonExponentBound_of_all_positive_margin
-#print axioms heathBrown_zeroAdditiveEnergy_low_max_native
-#print axioms heathBrown_zeroAdditiveEnergy_first_native
-#print axioms heathBrown_zeroAdditiveEnergy_second_native
 
 end
 

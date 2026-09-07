@@ -122,10 +122,6 @@ theorem fordLemma73_coefficient_le_76_2
         exact ford_source_cube_root_le
     _ ≤ 76.2 := by norm_num
 
-#print axioms twenty_three_tenths_lt_log_ten
-#print axioms thirty_seven_le_log_rpow_two_thirds
-#print axioms ford_source_cube_root_le
-#print axioms fordLemma73_coefficient_le_76_2
 
 end
 

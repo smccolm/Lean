@@ -226,11 +226,6 @@ theorem heathBrown_cellwise_center_lintegral_le
   rw [hright] at hmono
   simpa only [c] using hmono
 
-#print axioms heathBrown_cellwise_center_le
-#print axioms measurable_heathBrownCellIndicator
-#print axioms measurable_heathBrownNu
-#print axioms lintegral_heathBrownCellIndicator_mul_const
-#print axioms heathBrown_cellwise_center_lintegral_le
 
 end
 

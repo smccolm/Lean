@@ -147,10 +147,6 @@ theorem riemannZeta_eq_fordPartialSum_sub_terms
     simpa [fordComplexHeight] using hEq
   · simpa [fordComplexHeight] using hE
 
-#print axioms fordRiemannDadaroCutoff_floor
-#print axioms fordRiemannDadaroPhase_mem_Icc
-#print axioms one_fourth_le_sin_of_mem_rpow_phase
-#print axioms riemannZeta_eq_fordPartialSum_sub_terms
 
 end
 

@@ -96,8 +96,6 @@ theorem fordSingleZero_cotangentContribution_le
     nlinarith
   exact hmult.trans (by simpa [x] using hkernelNeg)
 
-#print axioms one_le_analyticVanishingOrder_riemannZeta
-#print axioms fordSingleZero_cotangentContribution_le
 
 end
 

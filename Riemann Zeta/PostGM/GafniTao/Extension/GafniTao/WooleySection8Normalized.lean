@@ -243,10 +243,6 @@ theorem wooleySourcePolynomial_equation_8_5_of_ratio
       (wooleySourceNormalizedMixedMean_nonneg
         phi p B H (wooleyTriangular k) (k - 1) b (k * b) nu Delta gamma) _)))
 
-#print axioms wooleySourcePolynomial_equation_8_4_quotient
-#print axioms wooleySourcePolynomial_equation_8_4
-#print axioms wooleySourcePolynomial_equation_8_5_pre
-#print axioms wooleySourcePolynomial_equation_8_5_of_ratio
 
 end
 

@@ -143,10 +143,6 @@ theorem heathBrown_gm_card_log_le
   apply (Real.strictMono_rpow_of_base_gt_one hx).le_iff_le.mp
   simpa only [hExact] using hPower
 
-#print axioms rpow_mul_threshold_neg_four_le
-#print axioms rpow_two_mul_threshold_neg_two_le
-#print axioms add_three_rpow_le_three_mul_max
-#print axioms heathBrown_gm_card_log_le
 
 end
 

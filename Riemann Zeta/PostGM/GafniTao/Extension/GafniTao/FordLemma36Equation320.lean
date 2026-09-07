@@ -211,18 +211,6 @@ theorem fordEquation320_native
   have hm1 : m + 1 ≤ n - 1 := by omega
   omega
 
-#print axioms ford_exp_sixty_nine_tenths_lt_thousand
-#print axioms ford_log_thousand_lower
-#print axioms ford_log_k_lower
-#print axioms ford_log_one_point_zero_six_upper
-#print axioms fordEquation320_eta_exponent
-#print axioms fordEquation320_eta_power
-#print axioms fordEquation320_k_power
-#print axioms fordEquation320_rhs_upper
-#print axioms fordEquation320_lhs_lower
-#print axioms fordEquation320
-#print axioms fordDeltaSequence36_above_through_197
-#print axioms fordEquation320_native
 
 end
 

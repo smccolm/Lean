@@ -144,11 +144,6 @@ theorem pintz2023LargeMCoeff_eq_antidiagonal
   · simp only [hdLe, true_and, if_true]
   · simp only [hdLe, false_and, if_false]
 
-#print axioms pintz2023Coeff_eq_largeM_add_smallM
-#print axioms norm_pintz2023SmallMCoeff_le_divisors_card
-#print axioms pintz2023SmallMCoeff_eq_zero_of_scale_lt
-#print axioms pintz2023IntervalBlock_eq_largeM_add_smallM
-#print axioms pintz2023LargeMCoeff_eq_antidiagonal
 
 end
 

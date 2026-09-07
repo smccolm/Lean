@@ -67,7 +67,6 @@ theorem ford_equation_3_4_pointwise
             ∑ a : ZMod p, ‖g a‖ ^ (2 * s)) := by ring
   exact le_of_mul_le_mul_left hmul hsR
 
-#print axioms ford_equation_3_4_pointwise
 
 end
 

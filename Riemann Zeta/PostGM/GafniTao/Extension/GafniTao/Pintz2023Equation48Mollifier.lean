@@ -55,8 +55,6 @@ theorem norm_zetaMollifier_pintz2023_left_le
   rw [hre] at hraw
   exact hraw.trans (sum_rpow_sub_one_le_rpow_mul_harmonic hetaSum)
 
-#print axioms sum_rpow_sub_one_le_rpow_mul_harmonic
-#print axioms norm_zetaMollifier_pintz2023_left_le
 
 end
 

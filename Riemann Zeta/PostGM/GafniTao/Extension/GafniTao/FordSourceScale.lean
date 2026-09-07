@@ -126,9 +126,6 @@ theorem fordCubicY_eq_sourceY
     positivity
   nlinarith
 
-#print axioms fordCubicB_mul_sourceScaleCore_cubed
-#print axioms fordCubicScale_eq_sourceScale
-#print axioms fordCubicY_eq_sourceY
 
 end
 

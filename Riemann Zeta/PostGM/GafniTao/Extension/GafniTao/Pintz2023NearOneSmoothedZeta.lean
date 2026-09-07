@@ -169,8 +169,6 @@ theorem exists_norm_pintz2023SmoothedZetaSum_sub_residue_nearOne_le
       dsimp only [B]
       ring
 
-#print axioms exists_norm_pintz2023MellinContourIntegral_nearOne_le
-#print axioms exists_norm_pintz2023SmoothedZetaSum_sub_residue_nearOne_le
 
 end
 

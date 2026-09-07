@@ -355,12 +355,6 @@ theorem pintz2023Equation42_complete_shift
   rw [← mul_assoc, hc, ← mul_assoc, hc]
   linear_combination heq
 
-#print axioms pintz2023PoleNumerator_div_eq_source
-#print axioms differentiableAt_pintz2023PoleNumerator
-#print axioms pintz2023PoleNumerator_at_pole
-#print axioms pintz2023Equation42_finite_rectangle_residue
-#print axioms pintz2023Equation42_finite_source_rectangle
-#print axioms pintz2023Equation42_complete_shift
 
 end
 

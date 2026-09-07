@@ -43,8 +43,6 @@ theorem exists_prime_strictly_above (k : ℕ) :
   obtain ⟨p, hkp, hp⟩ := Nat.exists_infinite_primes (k + 1)
   exact ⟨p, hp, by omega⟩
 
-#print axioms WooleyMonomialPadicConcentration.specialize
-#print axioms exists_prime_strictly_above
 
 end
 

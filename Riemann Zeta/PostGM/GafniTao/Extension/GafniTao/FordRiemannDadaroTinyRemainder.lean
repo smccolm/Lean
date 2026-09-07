@@ -52,8 +52,6 @@ theorem norm_riemannZeta_sub_fordPartialSum_le_tiny
       (by linarith) hsigmaUpper htThree).trans
     (thirty_mul_rpow_neg_le_fordTinyRemainder hsigmaLower ht)
 
-#print axioms thirty_mul_rpow_neg_le_fordTinyRemainder
-#print axioms norm_riemannZeta_sub_fordPartialSum_le_tiny
 
 end
 

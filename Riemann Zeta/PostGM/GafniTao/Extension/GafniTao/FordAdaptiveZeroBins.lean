@@ -109,7 +109,6 @@ theorem floorFiber_multiplicity_le_adaptive_log
       0 (fordAdaptiveZeroBinHeight z) z (by norm_num)
         (fordAdaptiveZeroBinHeight_data z))
 
-#print axioms floorFiber_multiplicity_le_adaptive_log
 
 end
 

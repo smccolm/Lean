@@ -57,9 +57,6 @@ theorem fordLemma35AdmissibleAt_rounded
   simpa [FordLemma35AdmissibleAt, fordRSequence36,
     fordDeltaSequence35_rounded_eq] using h
 
-#print axioms fordLemma35Admissible_rounded
-#print axioms fordDeltaSequence35_rounded_eq
-#print axioms fordLemma35AdmissibleAt_rounded
 
 end
 

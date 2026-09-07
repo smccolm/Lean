@@ -156,10 +156,6 @@ theorem wooleySourcePolynomial_equation_8_1_of_section7
       phi p B r bPrime b nu (by omega) hrk hnuPrime hnub gamma)
     (by positivity))
 
-#print axioms wooleySourcePolynomial_lemma_6_3
-#print axioms wooleySourcePolynomial_section7_easy
-#print axioms wooleySourcePolynomial_equation_8_3
-#print axioms wooleySourcePolynomial_equation_8_1_of_section7
 
 end
 

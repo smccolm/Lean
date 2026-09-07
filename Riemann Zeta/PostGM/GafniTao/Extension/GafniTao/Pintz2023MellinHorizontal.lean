@@ -297,11 +297,6 @@ theorem tendsto_pintz2023Mellin_HIntegral'_neg_zero
   · have hConst : Tendsto (fun _ : ℝ => C) atTop (nhds C) := tendsto_const_nhds
     simpa using hConst.mul (tendsto_inv_atTop_zero.pow 2)
 
-#print axioms pintz2023_Gamma_positive_strip_decay
-#print axioms norm_pintz2023MellinPowerDiff_horizontal_le
-#print axioms norm_pintz2023MellinContourIntegrand_horizontal_le
-#print axioms tendsto_pintz2023Mellin_HIntegral'_zero
-#print axioms tendsto_pintz2023Mellin_HIntegral'_neg_zero
 
 end
 

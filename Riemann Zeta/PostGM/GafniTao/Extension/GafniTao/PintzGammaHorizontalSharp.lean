@@ -102,7 +102,6 @@ theorem exists_norm_Gamma_sq_right_displacement_le {a b : ℝ} (ha : 0 < a) :
   convert hgronwall using 1
   all_goals simp only [g, f, ofReal_zero, add_zero, K]
 
-#print axioms exists_norm_Gamma_sq_right_displacement_le
 
 /-- Norm form of the sharp horizontal Gamma estimate. -/
 theorem exists_norm_Gamma_right_displacement_le {a b : ℝ} (ha : 0 < a) :
@@ -130,7 +129,6 @@ theorem exists_norm_Gamma_right_displacement_le {a b : ℝ} (ha : 0 < a) :
       congr 1
       ring
 
-#print axioms exists_norm_Gamma_right_displacement_le
 
 end
 

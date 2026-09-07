@@ -108,8 +108,5 @@ theorem gafniTao_second_sample_arithmetic (Delta : ℝ) :
         2 * (7 / 10) - 1 = 1 - 9 * Delta / 13 := by
   ring
 
-#print axioms zeroDensityExponent_le_pintzFirstSegment
-#print axioms zeroAdditiveEnergyExponent_le_heathBrown_second
-#print axioms gafniTao_first_sample_arithmetic
 
 end GafniTao

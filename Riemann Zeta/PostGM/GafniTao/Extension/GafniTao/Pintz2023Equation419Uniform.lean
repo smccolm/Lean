@@ -93,8 +93,6 @@ theorem eventually_forall_pintz2023_equation419_halasz_at
   exact (Finset.eventually_all
     (Finset.range (⌈20 / data.epsilon⌉₊ + 1))).2 hEach
 
-#print axioms eventually_pintz2023_equation419_halasz_at
-#print axioms eventually_forall_pintz2023_equation419_halasz_at
 
 end
 

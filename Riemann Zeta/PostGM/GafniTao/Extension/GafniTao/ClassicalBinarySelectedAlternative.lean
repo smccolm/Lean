@@ -111,8 +111,6 @@ theorem classicalBinarySelected_powerWindow_or_longTypeI
   · left
     exact powerWindow hXN hNX.le
 
-#print axioms classicalBinarySelectedFamily_alternative
-#print axioms classicalBinarySelected_powerWindow_or_longTypeI
 
 end
 

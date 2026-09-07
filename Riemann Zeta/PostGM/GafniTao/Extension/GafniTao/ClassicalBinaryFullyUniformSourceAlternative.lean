@@ -6,7 +6,7 @@ import GafniTao.HeathBrownFullyUniformOutputs
 
 All analytic constants in this version are selected before the physical
 height.  In particular, the mollified-coefficient constant, the Type-I MHH
-constant, the finite-power constant, and the mean-value constant cannot vary
+The constant, the finite-power constant, and the mean-value constant cannot vary
 with a detector colour or height.
 -/
 
@@ -464,8 +464,6 @@ theorem eventually_heathBrownFullyUniformSourceColorOutput
         hData.2.1 hData.2.2.1 hAmbientCutoff
       exact ⟨r, hrLabel, by simpa only [N, p, P, R] using hOutputs⟩
 
-#print axioms HeathBrownFullyUniformSourceColorOutput
-#print axioms eventually_heathBrownFullyUniformSourceColorOutput
 
 end
 

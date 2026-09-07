@@ -78,7 +78,6 @@ theorem pintz2023_finite_halasz_gram
           ‖∑ n ∈ s, conj (e t n) * e u n‖) :=
       mul_le_mul_of_nonneg_left hgram henergy
 
-#print axioms pintz2023_finite_halasz_gram
 
 end
 

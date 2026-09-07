@@ -252,9 +252,6 @@ theorem wooleySourcePolynomial_iterationChain_contradict
     (by simpa only [K] using hinitial)
     hiterated hCaccUpper hE hterminal hHepsilon hconstants
 
-#print axioms wooley_section10_force_final_bound
-#print axioms wooley_section10_bounds_contradict
-#print axioms wooleySourcePolynomial_iterationChain_contradict
 
 end
 

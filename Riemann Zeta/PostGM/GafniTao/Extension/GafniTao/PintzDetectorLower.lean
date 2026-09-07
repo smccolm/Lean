@@ -70,9 +70,6 @@ theorem pintz_exp_shift_lower
       congr 1
       ring
 
-#print axioms pintz_exp_two_lambda_eta_lower
-#print axioms pintz_eta_sq_lower
-#print axioms pintz_exp_shift_lower
 
 end
 

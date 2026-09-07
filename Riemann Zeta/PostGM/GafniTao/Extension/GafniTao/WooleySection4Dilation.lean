@@ -90,8 +90,6 @@ theorem wooleySection7NormalSystem_eval_dilation
   rw [htail]
   ring
 
-#print axioms wooleySection4DilatedSystem_spaced
-#print axioms wooleySection7NormalSystem_eval_dilation
 
 end
 

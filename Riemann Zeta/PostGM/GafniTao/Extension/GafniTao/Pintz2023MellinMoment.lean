@@ -177,7 +177,6 @@ theorem exists_pintz2023MellinWeight_imaginary_quadratic_moment :
   dsimp only [L]
   exact hIntegral.trans (le_add_of_nonneg_right zero_le_one)
 
-#print axioms exists_pintz2023MellinWeight_imaginary_quadratic_moment
 
 end
 

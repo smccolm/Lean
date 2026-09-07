@@ -122,7 +122,6 @@ theorem eventually_pintz2023_smallB_complete_gram_native
   dsimp only [s] at hOneFinal
   exact hAssembly.trans (by nlinarith)
 
-#print axioms eventually_pintz2023_smallB_complete_gram_native
 
 end
 

@@ -98,11 +98,6 @@ theorem typeISourceSmoothBlock_eq_interior_zetaPrefix
     typeISourceSmoothBlock_eq_interior_fourier_deweight
       hY hLower hUpper
 
-#print axioms heathBrownZetaIntervalSum_dyadic
-#print axioms heathBrownZetaIntervalSum_dyadic_neg
-#print axioms heathBrownZetaPrefixSum_eq_interval
-#print axioms typeISourceSmoothBlock_fourierDeweight_zetaPrefix
-#print axioms typeISourceSmoothBlock_eq_interior_zetaPrefix
 
 end
 

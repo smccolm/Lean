@@ -161,9 +161,6 @@ theorem pintz2023_nearOneDensity_native
     (mul_nonneg (pintzCell_eta_pos hcell).le
       (pintzTheoremOneCoefficient_pos hcell).le) hSlab
 
-#print axioms pintz2023_positive_slab_le_two_shells
-#print axioms EpsilonExponentBound.two_mul_arg
-#print axioms pintz2023_nearOneDensity_native
 
 end
 

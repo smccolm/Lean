@@ -6,7 +6,7 @@ import GafniTao.HeathBrownUniformGlobalSourceAlternative
 
 The actual multiplicity-weighted four-zero count is reduced either to a
 bounded shell or to four source detector colours sharing every analytic
-constant used later in exponent bookkeeping.
+The constant used later in exponent bookkeeping.
 -/
 
 namespace GafniTao
@@ -66,7 +66,6 @@ theorem exists_heathBrownFullyUniformGlobalSourceAlternative
       (by linarith) hTCeil hT coverLabel hBounded
   · exact Or.inr hOutput
 
-#print axioms exists_heathBrownFullyUniformGlobalSourceAlternative
 
 end
 

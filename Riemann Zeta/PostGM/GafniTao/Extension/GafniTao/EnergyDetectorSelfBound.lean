@@ -98,7 +98,6 @@ theorem finite_shifted_dyadic_zero_energy_to_self_energies
     _ = (P : Real) *
         (doubleFloorDefectWindow (1 + 4 * (H + 1))).card * S := by ring
 
-#print axioms finite_shifted_dyadic_zero_energy_to_self_energies
 
 end
 

@@ -22,7 +22,7 @@ open RiemannZeta.GuthMaynard
 /-- The exact actual-Type-II packet implies a physical self-energy bound in
 the unified low Heath--Brown cells. -/
 theorem eventually_actualTypeII_physical_low_cells
-    {delta1 delta2 eta epsilon zetaShell zetaConst zetaDil zetaRel zetaCard
+    {sigma delta delta1 delta2 eta epsilon zetaShell zetaConst zetaDil zetaRel zetaCard
       C Cp Cmv C0 C2 C4 : Real}
     (hdelta1 : 0 < delta1) (hdelta2 : 0 < delta2)
     (hCube : 3 * (delta1 + delta2 / 2) <= 1)
@@ -155,7 +155,6 @@ theorem eventually_actualTypeII_physical_low_cells
   exact heathBrown_physical_of_packet_bound hx hE hB hxB
     (by unfold heathBrownCardinalityShift; positivity) rfl rfl hCell
 
-#print axioms eventually_actualTypeII_physical_low_cells
 
 end
 

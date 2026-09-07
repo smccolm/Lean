@@ -196,9 +196,6 @@ theorem ford_exponential_sum_qualitative :
             (1 - 1 / (3000000 * fordLambda N t ^ 2)) := by
           nlinarith [fordQualitativeCoefficient_nonneg]
 
-#print axioms ford_qualitative_exponent_mono
-#print axioms ford_shifted_exponential_sum_qualitative_large_N
-#print axioms ford_exponential_sum_qualitative
 
 end
 

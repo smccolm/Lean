@@ -204,10 +204,6 @@ theorem wooley_exists_uniform_shifted_normalized_identity
     _ _ Psi _ _ _ _ left right hleft hright]
   rw [hrawReal]
 
-#print axioms wooley_equation_7_17_shifted_raw_native
-#print axioms wooley_equation_7_17_shifted_raw_real_native
-#print axioms wooley_equation_7_17_shifted_normalized_nonzero_native
-#print axioms wooley_exists_uniform_shifted_normalized_identity
 
 end
 

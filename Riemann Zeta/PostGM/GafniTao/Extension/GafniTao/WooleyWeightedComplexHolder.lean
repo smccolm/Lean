@@ -85,7 +85,6 @@ theorem wooley_weighted_complex_sum_pow_le
     _ = (#t : ℝ) ^ s * (∑ i ∈ t, w i) ^ (s - 1) *
         ∑ i ∈ t, w i * ‖z i‖ ^ (2 * s) := by ring
 
-#print axioms wooley_weighted_complex_sum_pow_le
 
 end
 

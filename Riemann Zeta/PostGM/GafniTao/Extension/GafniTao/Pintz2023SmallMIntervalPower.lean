@@ -255,10 +255,6 @@ theorem exists_sum_norm_pintz2023SmallMIntervalPowerHalaszD_sq_le
   exact hCoeff X U n R baseI hbaseI hU
     (hpositive n (hIambient hn))
 
-#print axioms pintz2023_smallM_interval_power_identity
-#print axioms pintz2023_smallM_interval_power_identity_Ioc
-#print axioms pintz2023SmallMIntervalPowerCoeff_bound_native
-#print axioms exists_sum_norm_pintz2023SmallMIntervalPowerHalaszD_sq_le
 
 end
 

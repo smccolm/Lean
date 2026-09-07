@@ -268,10 +268,6 @@ theorem wooleySourcePolynomial_lemma_9_1_of_scale_hierarchy
   · exact hupper
   · exact hloss
 
-#print axioms wooleySection7BPrimeNat_le_k_mul
-#print axioms wooleySection9Admissible_of_scale_hierarchy
-#print axioms wooleySection9Admissible_predecessor
-#print axioms wooleySourcePolynomial_lemma_9_1_of_scale_hierarchy
 
 end
 

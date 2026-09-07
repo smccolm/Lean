@@ -348,9 +348,6 @@ theorem pintz_equation_4_1
   rw [pintzGaussian_complete_vertical_shift (by linarith : 0 < lambda)]
   simpa using norm_pintzGaussian_leftVertical_le_exp_neg_two hlambda
 
-#print axioms norm_pintzGaussian_HIntegral'_le
-#print axioms pintzGaussian_complete_vertical_shift
-#print axioms pintz_equation_4_1
 
 end
 

@@ -93,8 +93,5 @@ theorem pintzZetaAFE_finiteRectangle (s : ℂ) {c H : ℝ}
     hzero hdslope hprincipal
   simpa [F, z, w, pintzZetaAFEContourIntegrand] using hrect
 
-#print axioms differentiable_pintzZetaAFEContourNumerator
-#print axioms pintzZetaAFEContourIntegrand_neg
-#print axioms pintzZetaAFE_finiteRectangle
 
 end GafniTao

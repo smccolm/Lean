@@ -5,7 +5,7 @@ import GafniTao.HeathBrownEP1Algebra
 
 Pintz's use of Heath--Brown Theorem 5 only needs an exponential-sum
 saving strong enough to make the shifted zeta integral negligible.  The
-constant `1/2` is sufficient.  These lemmas verify a covering of every
+The constant `1/2` is sufficient.  These lemmas verify a covering of every
 logarithmic scale `tau >= 2` by the frozen `AB` estimate and the already
 native Heath--Brown k-th derivative theorem.
 
@@ -176,12 +176,6 @@ theorem heathBrown_half_large_third
     (mul_pos (sq_pos_of_pos hkPos) hkOnePos)]
   nlinarith
 
-#print axioms heathBrown_half_AB_range
-#print axioms heathBrown_half_kfour_first
-#print axioms heathBrown_half_kfive_first
-#print axioms heathBrownHalfOrder_bounds
-#print axioms heathBrown_half_large_first_second
-#print axioms heathBrown_half_large_third
 
 end
 

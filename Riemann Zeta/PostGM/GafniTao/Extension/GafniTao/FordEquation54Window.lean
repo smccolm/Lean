@@ -178,12 +178,6 @@ theorem fordLemma51ResonantPairs_card_le_windowMoment_mul
   (fordLemma51ResonantPairs_card_le_windowPairs_card B t z).trans
     (fordLemma51WindowResonantPairs_card_le B t z)
 
-#print axioms fordLemma51WindowShiftedCount_le_moment
-#print axioms fordLemma51ResonantPairs_card_le_windowPairs_card
-#print axioms fordLemma51WindowDifference_eq_power_sub
-#print axioms fordLemma51WindowResonantPairs_card_eq_sum_shifted
-#print axioms fordLemma51WindowResonantPairs_card_le
-#print axioms fordLemma51ResonantPairs_card_le_windowMoment_mul
 
 end
 

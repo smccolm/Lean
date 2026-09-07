@@ -36,8 +36,6 @@ theorem integral_heathBrownNu_sq_source_bound
   rw [measureReal_heathBrownCoefficientCell_exact hH] at h
   exact h
 
-#print axioms integral_heathBrownNu_exact
-#print axioms integral_heathBrownNu_sq_source_bound
 
 end
 

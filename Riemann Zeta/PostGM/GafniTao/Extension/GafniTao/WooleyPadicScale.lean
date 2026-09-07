@@ -79,8 +79,6 @@ theorem exists_wooleyPadicScale
     _ = 1 * h := by simp
     _ ≤ k * h := Nat.mul_le_mul_right h hk
 
-#print axioms fordVinogradovKappa_pos
-#print axioms exists_wooleyPadicScale
 
 end
 

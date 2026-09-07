@@ -147,12 +147,6 @@ theorem ford_lemma_3_2_nat_endpoints
   refine ⟨Ψ, p, hpS, c, ?_⟩
   simpa only [hcard] using hbound
 
-#print axioms ford_prime_interval_card_le
-#print axioms ford_prime_product_gt_base_power
-#print axioms ford_lemma_3_2_source_exponent_le
-#print axioms ford_lemma_3_2_four_k_four_lt
-#print axioms ford_lemma_3_2_source_product
-#print axioms ford_lemma_3_2_nat_endpoints
 
 end
 

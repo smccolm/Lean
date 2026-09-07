@@ -151,10 +151,6 @@ theorem exists_pintz2023_dyadic_block_and_subset
     (pintz2023LocalizedLineCoeff X Y beta) W V
     (pintz2023DyadicDepth_pos Y) hWide
 
-#print axioms pintz2023_dyadic_cover
-#print axioms pintz2023_truncated_eq_wide
-#print axioms pintz2023_truncated_eq_complex_power
-#print axioms exists_pintz2023_dyadic_block_and_subset
 
 end
 

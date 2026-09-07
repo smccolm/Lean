@@ -180,8 +180,6 @@ theorem sum_range_le_peak_add_integral_of_unimodal
       norm_num [Nat.cast_add, Nat.cast_one] at hleft hcross htail hadd₁ hadd₂ ⊢
       linarith
 
-#print axioms unimodal_crossing_pair_le_peak_add_integral
-#print axioms sum_range_le_peak_add_integral_of_unimodal
 
 end
 

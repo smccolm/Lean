@@ -293,10 +293,5 @@ theorem pintzTwentyThreeTwentyFourCutoff_of_theoremOnePrime
     hEnvelope.mono_exponent
       (mul_le_mul_of_nonneg_right hCoeff heta.le)
 
-#print axioms pintzTheoremOnePrimeCoefficient_le_one
-#print axioms pintzCell_ell_lt_k
-#print axioms pintzCell_threshold_order
-#print axioms pintzTheoremOnePrime_of_theoremOne
-#print axioms pintzTwentyThreeTwentyFourCutoff_of_theoremOnePrime
 
 end GafniTao

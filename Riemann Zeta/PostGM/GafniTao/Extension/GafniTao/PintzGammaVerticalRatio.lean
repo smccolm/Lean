@@ -143,7 +143,6 @@ theorem exists_norm_Gamma_vertical_ratio_same_re_le
       dsimp only [C]
       linarith
 
-#print axioms exists_norm_Gamma_vertical_ratio_same_re_le
 
 /-- The central-range Gamma quotient after a left displacement `q` of the
 physical complex variable.  The displayed negative logarithm is the exact
@@ -255,7 +254,6 @@ theorem exists_norm_Gamma_left_vertical_ratio_le
     _ = Real.exp (C + Real.pi * |u| / 4 -
         Real.log (t / 4 + 2) * (q / 2)) := by rfl
 
-#print axioms exists_norm_Gamma_left_vertical_ratio_le
 
 /-- Exact norm expansion of Deligne's real Gamma factor at physical real and
 imaginary coordinates. -/
@@ -360,8 +358,6 @@ theorem exists_norm_GammaR_left_vertical_ratio_le
       dsimp only [C]
       linarith
 
-#print axioms norm_GammaR_real_im
-#print axioms exists_norm_GammaR_left_vertical_ratio_le
 
 end
 

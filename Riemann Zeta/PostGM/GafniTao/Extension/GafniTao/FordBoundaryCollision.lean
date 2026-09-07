@@ -202,8 +202,6 @@ theorem ford_left_boundary_card_le_odd_integral
       unfold fordS4OddIntegral
       exact integral_mono hintH (integrable_fordS4Odd_integrand Ψ hdk s Q q c) hpoint
 
-#print axioms ford_left_boundary_cross_mean_eq
-#print axioms ford_left_boundary_card_le_odd_integral
 
 end
 

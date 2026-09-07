@@ -92,13 +92,6 @@ theorem wooley_nextB_le_k_mul
   exact hb.trans (by
     simpa only [one_mul] using Nat.mul_le_mul_right (k * b) hr)
 
-#print axioms wooley_iteration_length_lower
-#print axioms wooley_iteration_length_pos
-#print axioms wooley_iteration_final_bounds_contradict
-#print axioms wooley_iteration_length_final_bound_impossible
-#print axioms wooleyRho_pos
-#print axioms wooley_nextB_lower
-#print axioms wooley_nextB_le_k_mul
 
 end
 

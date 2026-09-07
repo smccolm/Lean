@@ -82,7 +82,6 @@ theorem fordLSignedShiftMoment_encoded
     push_cast
     simp only [u]
 
-#print axioms fordLSignedShiftMoment_encoded
 
 end
 

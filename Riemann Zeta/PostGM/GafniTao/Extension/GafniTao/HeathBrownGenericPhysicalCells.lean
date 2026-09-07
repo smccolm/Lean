@@ -155,7 +155,6 @@ theorem eventually_generic_powered_physical_low_cells
     (by positivity) hxB
     (by unfold heathBrownCardinalityShift; positivity) rfl rfl hCell
 
-#print axioms eventually_generic_powered_physical_low_cells
 
 end
 

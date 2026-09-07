@@ -122,9 +122,6 @@ theorem norm_pintz2023SmoothedZetaSum_le_of_shell_majorants
     hN hM hreal).trans ?_
   gcongr
 
-#print axioms norm_pintz2023HalaszDyadicShellSum_le
-#print axioms norm_pintz2023SmoothedZetaSum_le_one_shells_tail
-#print axioms norm_pintz2023SmoothedZetaSum_le_of_shell_majorants
 
 end
 

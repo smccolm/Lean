@@ -171,7 +171,6 @@ theorem eventually_exists_pintz2023_equation416_shell_family
     · intro u hu
       simpa only [U, R, V, baseI] using hSecond u hu
 
-#print axioms eventually_exists_pintz2023_equation416_shell_family
 
 end
 

@@ -71,8 +71,6 @@ theorem fordTheorem2_unshifted
     · exact hNR
     · exact hR
 
-#print axioms continuousAt_fordShiftedExponentialSum_zero
-#print axioms fordTheorem2_unshifted
 
 end
 

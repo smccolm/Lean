@@ -175,9 +175,6 @@ theorem source_smooth_dyadic_energy_split
       exact (hSpec i t ht).2.2,
     hFinal⟩⟩
 
-#print axioms exists_pointwise_normalized_source_dyadic_block
-#print axioms SourceSmoothDyadicEnergyOutput
-#print axioms source_smooth_dyadic_energy_split
 
 end
 

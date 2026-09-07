@@ -59,8 +59,6 @@ theorem fordGoodDegree_mem_bounds
       100 * ((j : ℕ) + 1) ≤ 87 * k := by
   simpa [fordGoodDegreeSet] using hj
 
-#print axioms fordGoodDegreeSet_card_lower
-#print axioms fordGoodDegree_mem_bounds
 
 end
 

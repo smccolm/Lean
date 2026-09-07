@@ -109,8 +109,6 @@ theorem tendsto_pintzZetaAFEHybridApprox
   unfold pintzZetaAFEHybridApprox
   ring_nf
 
-#print axioms pintzZetaAFERightSeries_eq_verticalTrunc
-#print axioms tendsto_pintzZetaAFEHybridApprox
 
 end
 

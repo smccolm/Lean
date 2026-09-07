@@ -16,7 +16,7 @@ noncomputable section
 
 /-- Ford's equation (6.6).  A trivial bound `F N ≤ N` and a power-saving
 bound `F N ≤ C N^(1-c)` imply every weaker saving `d < c`, with the exact
-constant `C^(d/c)`. -/
+The constant `C^(d/c)`. -/
 theorem ford_equation_6_6
     {F : ℝ → ℝ} {C c d : ℝ}
     (hC : 1 ≤ C) (hc : 0 < c) (hd : 0 < d) (hdc : d < c)
@@ -76,7 +76,6 @@ theorem ford_equation_6_6
             field_simp [hc0]
             ring_nf
 
-#print axioms ford_equation_6_6
 
 end
 

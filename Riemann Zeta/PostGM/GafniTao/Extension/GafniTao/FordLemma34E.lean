@@ -197,14 +197,6 @@ theorem fordCanonicalE_zero_le_source_bound
   simpa [fordCanonicalESchedule_apply] using
     (fordCanonicalESchedule s k j eta hk heta).zero_le_source_bound hk heta hj
 
-#print axioms fordELogMajorant_step
-#print axioms fordEBackwardAux_pos
-#print axioms fordCanonicalESchedule_apply
-#print axioms FordESchedule.log_recurrence
-#print axioms FordESchedule.log_le_majorant
-#print axioms fordELogMajorant_zero
-#print axioms FordESchedule.zero_le_source_bound
-#print axioms fordCanonicalE_zero_le_source_bound
 
 end
 

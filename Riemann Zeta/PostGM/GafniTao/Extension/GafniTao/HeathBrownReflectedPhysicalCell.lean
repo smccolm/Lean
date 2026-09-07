@@ -361,11 +361,6 @@ theorem eventually_interior_reflected_physical_cell
       exact hLpos) hW hBase hNext hCube hThreshold hThresholdNext
         hSigma0 hSigma0
 
-#print axioms reflectedPhysicalBeta
-#print axioms reflectedPhysicalAlpha
-#print axioms reflectedPhysicalPowerCap
-#print axioms reflectedPhysicalEffectiveSigma
-#print axioms eventually_interior_reflected_physical_cell
 
 end
 

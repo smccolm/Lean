@@ -98,8 +98,6 @@ theorem fordLSignedShiftMoment_true_eq_phase_add_raised
     simp only [zero_add]
     rw [fordIntegerFiniteDifference_eval]
 
-#print axioms fordIntegerFiniteDifference_eval_constant_below_succ
-#print axioms fordLSignedShiftMoment_true_eq_phase_add_raised
 
 end
 

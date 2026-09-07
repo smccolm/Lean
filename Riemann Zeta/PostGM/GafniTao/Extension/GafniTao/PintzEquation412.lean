@@ -425,19 +425,6 @@ theorem pintz_equation_4_12_bounded
           push_cast
           positivity)
 
-#print axioms pintzDetectedPolynomial_eq_Icc
-#print axioms pintz_sum_detectedPolynomial_eq_sqrt_split
-#print axioms pintz_equation_4_12_cauchy
-#print axioms pintzGramCorrelation_eq_shifted_sum
-#print axioms pintz_equation_4_12_gram_identity
-#print axioms pintz_equation_4_12_gram_real
-#print axioms pintz_gram_aggregate_nonneg
-#print axioms pintz_equation_4_12_gram
-#print axioms pintz_equation_4_12
-#print axioms pintzMobiusSqrtCoefficient_mass_le_harmonic
-#print axioms norm_pintzGramCorrelation_self_le
-#print axioms pintzGram_double_sum_le
-#print axioms pintz_equation_4_12_bounded
 
 end
 

@@ -48,7 +48,6 @@ theorem pintzGaussianKernel_sub_principal_isBigO_one
       div_le_div_of_nonneg_right hnum hsNorm.le
     _ = C * 1 := by field_simp
 
-#print axioms pintzGaussianKernel_sub_principal_isBigO_one
 
 end
 

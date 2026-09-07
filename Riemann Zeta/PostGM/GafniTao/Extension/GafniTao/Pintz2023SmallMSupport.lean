@@ -44,7 +44,6 @@ theorem pintz2023LocalizedSmallMBlock_left_lt_scale
   rw [hzero, norm_zero] at hBlock
   linarith
 
-#print axioms pintz2023LocalizedSmallMBlock_left_lt_scale
 
 end
 

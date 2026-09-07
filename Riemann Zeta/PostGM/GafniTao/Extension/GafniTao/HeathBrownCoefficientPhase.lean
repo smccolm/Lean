@@ -105,10 +105,6 @@ theorem heathBrownCoefficientWeight_mul_monomial
       ring
     _ = fordVinogradovMonomial h c := by rw [hcancel, mul_one]
 
-#print axioms fourier_add_point
-#print axioms fordVinogradovMonomial_eq_center_mul_displacementPhase
-#print axioms norm_heathBrownCoefficientWeight
-#print axioms heathBrownCoefficientWeight_mul_monomial
 
 end
 

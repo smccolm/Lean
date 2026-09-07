@@ -148,9 +148,6 @@ theorem exists_norm_pintz2023HalaszGram_diagonal_infinite_le :
   rw [hArg]
   exact hBound N (2 * etaJ + 4 * eta) hN hd hdUpper
 
-#print axioms norm_pintz2023MellinWeight_real_nearOne_le
-#print axioms exists_norm_pintz2023SmoothedZetaSum_real_nearOne_le
-#print axioms exists_norm_pintz2023HalaszGram_diagonal_infinite_le
 
 end
 

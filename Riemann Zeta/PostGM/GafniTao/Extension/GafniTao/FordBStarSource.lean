@@ -67,10 +67,6 @@ theorem ford_prime_avoiding_jacobian_implies_not_dvd_T
   intro hpT
   exact havoid (dvd_mul_of_dvd_left (dvd_mul_of_dvd_left hpT A) B)
 
-#print axioms fordTranslatedSystemAboveModPrimePower
-#print axioms fordSourceBStarTarget
-#print axioms ford_source_resolvedBStar_card_le
-#print axioms ford_prime_avoiding_jacobian_implies_not_dvd_T
 
 end
 

@@ -235,7 +235,6 @@ theorem fordNonlocalInverseSquare_le
         (mul_nonneg (by norm_num) globalLocalZeroLogConstant_pos.le)
     _ = _ := by rfl
 
-#print axioms fordNonlocalInverseSquare_le
 
 end
 

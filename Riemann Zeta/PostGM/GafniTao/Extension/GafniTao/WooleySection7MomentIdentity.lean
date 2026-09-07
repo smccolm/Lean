@@ -581,19 +581,6 @@ theorem wooley_equation_7_17_normalized_nonzero_native
     _ _ Psi _ _ _ _ left right hleft hright]
   rw [hraw]
 
-#print axioms wooleyTuplePhase_mul
-#print axioms wooleySource_support_tuple_pair_character
-#print axioms wooleySourceRawMixedComplexAverage_eq_tuple
-#print axioms wooleySection7AuxiliaryRawSum_eq_twistedPolynomialSum
-#print axioms wooleySourceInsertedComplexAverage_eq_tuple
-#print axioms wooley_equation_7_17_raw_native
-#print axioms wooleySourceRawMixedComplexAverage_eq_ofReal
-#print axioms wooleySourceInsertedComplexAverage_eq_ofReal
-#print axioms wooley_equation_7_17_raw_real_native
-#print axioms norm_wooleySourceNormalizedPolynomialSum_pow_even
-#print axioms wooleySourceNormalizedMixedRealAverage_eq_mass_mul_raw
-#print axioms wooleySourceInsertedNormalizedRealAverage_eq_mass_mul_raw
-#print axioms wooley_equation_7_17_normalized_nonzero_native
 
 end
 

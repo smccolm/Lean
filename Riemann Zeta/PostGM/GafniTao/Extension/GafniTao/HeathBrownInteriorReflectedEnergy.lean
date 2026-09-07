@@ -117,7 +117,6 @@ theorem eventually_interior_source_family_reflected_energy
       (Nat.clog 2 M) hk (normalizedTypeIReflectedCoeff sigma M)
       negative positive hAlternative hNegative hPositive)
 
-#print axioms eventually_interior_source_family_reflected_energy
 
 end
 

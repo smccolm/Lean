@@ -72,10 +72,6 @@ theorem ford_lemma_3_2_canonical_prime_set
     (fun p hp => fordPrimeSet_prime hp)
     (fun p hp => ⟨fordPrimeSet_gt hp, hpacket p hp⟩)
 
-#print axioms fordPrimeAbove_infinite
-#print axioms fordPrimeSet_card
-#print axioms fordPrimeSet_mem_source
-#print axioms ford_lemma_3_2_canonical_prime_set
 
 end
 

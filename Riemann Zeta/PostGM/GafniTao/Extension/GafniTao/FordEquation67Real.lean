@@ -70,7 +70,6 @@ theorem ford_equation_6_7_real_cutoff
           (N : ℝ) / P + P := by gcongr
     _ = _ := by ring
 
-#print axioms ford_equation_6_7_real_cutoff
 
 end
 

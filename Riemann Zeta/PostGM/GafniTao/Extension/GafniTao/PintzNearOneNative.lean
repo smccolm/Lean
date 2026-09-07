@@ -219,9 +219,6 @@ theorem exists_pintz_nearOne_log_density_native :
             (0 : ℝ) ≤ 523)))]
       _ = _ := by rw [hlogSplit]
 
-#print axioms two_le_pintzNearOne_exponent_of_one_eighth_lt
-#print axioms zeroCount_anti_sigma_native
-#print axioms exists_pintz_nearOne_log_density_native
 
 end
 

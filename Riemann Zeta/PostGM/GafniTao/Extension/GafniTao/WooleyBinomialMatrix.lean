@@ -286,18 +286,6 @@ theorem wooleySection7_sourceMatrix_transpose_mulVec_eq_zero_iff
   · rintro rfl
     exact Matrix.mulVec_zero _
 
-#print axioms wooleySection7_binomial_factorization
-#print axioms wooleySection7_nodes_injective_mod_prime
-#print axioms wooleySection7_node_succ_ne_zero
-#print axioms wooleySection7_binomialMatrix_det_ne_zero
-#print axioms wooleySection7_binomialMatrix_isUnit
-#print axioms wooleyIntMatrixMod_det
-#print axioms wooleySection7_sourceMatrix_det_mod_prime_ne_zero
-#print axioms wooleySection7_sourceMatrix_isUnit_primePower
-#print axioms wooleySection7_sourceMatrix_exists_leftInverse_primePower
-#print axioms wooleySection7_sourceMatrix_transpose_exists_leftInverse_primePower
-#print axioms wooleySection7_sourceMatrix_mulVec_eq_zero_iff
-#print axioms wooleySection7_sourceMatrix_transpose_mulVec_eq_zero_iff
 
 end
 

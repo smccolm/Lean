@@ -211,9 +211,6 @@ theorem fordLemma36_delta_exponent_above
       field_simp [hk0.ne']
       nlinarith
 
-#print axioms fordInitialFactor36_bound
-#print axioms fordReciprocalFactor36_bound
-#print axioms fordLemma36_delta_exponent_above
 
 end
 

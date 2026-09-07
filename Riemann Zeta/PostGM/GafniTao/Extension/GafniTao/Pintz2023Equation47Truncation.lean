@@ -198,9 +198,6 @@ theorem pintz2023_truncated_sum_eq_source_integral
   intro t ht
   exact pintz2023_vertical_sum_eq_polynomial_mul_kernel rho lambda t
 
-#print axioms pintz2023_equation_4_7_exact
-#print axioms pintz2023_truncated_sum_eq_integral_sum
-#print axioms pintz2023_truncated_sum_eq_source_integral
 
 end
 

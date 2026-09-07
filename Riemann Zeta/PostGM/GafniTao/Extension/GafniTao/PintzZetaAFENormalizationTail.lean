@@ -149,8 +149,6 @@ theorem exists_norm_pintzZetaAFENormalization_inv_le
           (1 + Real.cosh (Real.pi * (t / 2)) / Real.pi) := by
       simpa only [one_mul, mul_assoc] using hgammaR
 
-#print axioms exists_norm_Gamma_halfstrip_inv_le
-#print axioms exists_norm_pintzZetaAFENormalization_inv_le
 
 end
 

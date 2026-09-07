@@ -237,19 +237,6 @@ theorem WooleySourceSequence.Admissible.boxCoefficients
   unfold wooleySourceBoxCoefficients
   exact hgamma.affinePullback 1 (by norm_num) _ _
 
-#print axioms wooleySource_natAbs_le_radius
-#print axioms wooleySource_neg_radius_le
-#print axioms wooleySource_le_radius
-#print axioms mem_range_wooleyBoxIndexEmbedding_iff
-#print axioms wooleyBoxedSourceSequence_support_subset
-#print axioms wooleyBoxSourceSequence_boxCoefficients
-#print axioms wooleyBoxedSourceSequence_apply_shift
-#print axioms wooleySourceNormalizedPolynomialSum_boxing_translation
-#print axioms wooleySourcePolynomialMean_boxing_translation
-#print axioms wooleySourcePolynomialMean_eq_boxed
-#print axioms wooleySourcePolynomialConditionedMean_boxing_translation
-#print axioms wooleySourcePolynomialConditionedMean_eq_boxed
-#print axioms WooleySourceSequence.Admissible.boxCoefficients
 
 end
 

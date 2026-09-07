@@ -105,9 +105,6 @@ theorem meanValueShape_le_two_mul_length
     simpa [pow_two] using hMul
   linarith
 
-#print axioms quotient_sq_le_rpow_sub
-#print axioms meanValueShape_le_two_mul_height
-#print axioms meanValueShape_le_two_mul_length
 
 end
 

@@ -128,7 +128,6 @@ theorem pintz2023SmoothedZetaSum_eq_left_contour_add_residue
   dsimp only [right, left, c] at hShift ⊢
   linear_combination hShift
 
-#print axioms pintz2023SmoothedZetaSum_eq_left_contour_add_residue
 
 end
 

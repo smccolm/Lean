@@ -193,14 +193,6 @@ theorem wooleySection7_transformed_congruences_imply_7_12_source
   intro l
   exact hresult l
 
-#print axioms wooleySection7_unit_isUnit_primePower
-#print axioms wooleySection7_primePower_unit_cancel_dvd
-#print axioms wooleySection7_primePower_unit_cancel_zmod
-#print axioms wooleySection7_primePower_unit_cancel_to_common
-#print axioms wooleyIntegerTupleDisplacement_cast
-#print axioms wooleySection7LowerSystem_spaced
-#print axioms wooleySection7_transformed_congruences_imply_7_12
-#print axioms wooleySection7_transformed_congruences_imply_7_12_source
 
 end
 

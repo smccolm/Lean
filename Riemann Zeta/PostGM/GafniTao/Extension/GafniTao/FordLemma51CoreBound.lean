@@ -47,7 +47,6 @@ theorem fordLemma51SourceCore_full_le
       fordLemma51WReal_nonneg hs hM₂.le hr (by omega) hN ht j.1
   gcongr
 
-#print axioms fordLemma51SourceCore_full_le
 
 end
 

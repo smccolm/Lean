@@ -159,8 +159,6 @@ theorem logarithmicDifference_weyl_A2B_process_A3
           (fun s => logarithmicA3SecondCorrelationBound_nonneg
             t A N r H₃ s hH₃pos) (Finset.mem_range.mp hh)
 
-#print axioms padded_logarithmicDifference_correlation_norm_le_A3_of_lt
-#print axioms logarithmicDifference_weyl_A2B_process_A3
 
 end
 

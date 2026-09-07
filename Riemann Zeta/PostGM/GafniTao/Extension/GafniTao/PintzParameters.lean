@@ -119,9 +119,6 @@ theorem pintzDensitySeparation_pos
     0 < pintzDensitySeparation eta T :=
   lt_of_lt_of_le (by norm_num) (pintzDensitySeparation_ge_three hT)
 
-#print axioms pintzDensityLambda_mul_eta
-#print axioms pintzDensityLambda_ge_threshold
-#print axioms pintzDensitySeparation_ge_three
 
 end
 

@@ -84,7 +84,6 @@ theorem exists_pintz2023Equation412_detector_constants
     rw [hidentity] at hlarge
     simpa only [pintz2023DetectedBeta, u] using hlarge
 
-#print axioms exists_pintz2023Equation412_detector_constants
 
 end
 

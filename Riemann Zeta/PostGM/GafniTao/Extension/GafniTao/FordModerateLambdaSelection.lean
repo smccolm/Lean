@@ -223,10 +223,6 @@ theorem ford_shifted_exponential_sum_moderate_lambda
       exact mul_le_mul_of_nonneg_left hpow fordModerateAbsoluteConstant_nonneg
     _ = _ := by rfl
 
-#print axioms fordModerateMomentCoefficientChosen_bound
-#print axioms fordModerateDegreeConstant_le_absolute
-#print axioms fordDegreeFromLambda_moderate_band
-#print axioms ford_shifted_exponential_sum_moderate_lambda
 
 end
 

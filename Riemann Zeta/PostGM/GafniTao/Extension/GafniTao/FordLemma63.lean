@@ -97,7 +97,6 @@ theorem fordLemma63_native
     _ = _ := by
       dsimp [D, W, J]
 
-#print axioms fordLemma63_native
 
 end
 

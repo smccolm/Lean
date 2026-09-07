@@ -114,13 +114,6 @@ theorem heathBrownDivisorCoefficient_le_self (n : Nat) :
     heathBrownDivisorCoefficient n ≤ n := by
   exact Nat.card_divisors_le_self n
 
-#print axioms heathBrownAtkinsonSum_zero
-#print axioms heathBrownAtkinsonSum_nat_terminal
-#print axioms heathBrownAtkinsonSum_eq_floor
-#print axioms norm_heathBrownAtkinsonOscillation
-#print axioms norm_heathBrownAtkinsonSummand
-#print axioms norm_heathBrownAtkinsonSum_le_divisorSum
-#print axioms heathBrownDivisorCoefficient_le_self
 
 end
 

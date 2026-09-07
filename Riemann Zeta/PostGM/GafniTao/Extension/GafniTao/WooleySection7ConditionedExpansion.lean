@@ -149,8 +149,6 @@ theorem wooley_equation_7_20_expansion
       intro zeta hzeta
       ring_nf
 
-#print axioms wooleySourcePolynomialConditionedMean_polynomialTwist_expand
-#print axioms wooley_equation_7_20_expansion
 
 end
 

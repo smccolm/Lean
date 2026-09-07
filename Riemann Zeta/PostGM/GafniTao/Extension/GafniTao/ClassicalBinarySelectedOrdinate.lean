@@ -248,14 +248,6 @@ theorem classicalTypeIShellScaleLarge_false_of_terminal_medium
     hNs.le (by simpa only [N, s] using hSquare)
     (by simpa only [L, N, s] using hMedium) hLarge'
 
-#print axioms classicalBinaryOrientedOrdinate_mem_physical_interval
-#print axioms card_classicalBinaryOrientedFamily
-#print axioms isSeparated_classicalBinaryOrientedFamily
-#print axioms classicalBinaryOrientedFamily_in_physical_interval
-#print axioms classicalBinaryOrientedFamily_inBaseInterval
-#print axioms classicalTypeIShellScaleLarge_oriented
-#print axioms classicalTypeIShellScaleLarge_on_orientedFamily
-#print axioms classicalTypeIShellScaleLarge_false_of_terminal_medium
 
 end
 

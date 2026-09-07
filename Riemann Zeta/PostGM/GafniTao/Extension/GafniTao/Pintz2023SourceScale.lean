@@ -104,14 +104,6 @@ theorem pintz2023SourceX_le_cutoff
   exact_mod_cast (pintz2023SourceX_cast_le hpowNonneg).trans
     (hpowMono.trans (hExp.le.trans (hThree.trans hCeil)))
 
-#print axioms pintz2023SourceX_cast_le
-#print axioms pintz2023SourceX_pos
-#print axioms pintz2023SourceLambda_pos
-#print axioms exp_pintz2023SourceLambda
-#print axioms exp_neg_pintz2023SourceLambda_mul
-#print axioms exp_neg_two_pintz2023SourceLambda
-#print axioms exp_neg_three_pintz2023SourceLambda
-#print axioms pintz2023SourceX_le_cutoff
 
 end
 

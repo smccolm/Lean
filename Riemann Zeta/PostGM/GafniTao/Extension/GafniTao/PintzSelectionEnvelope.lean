@@ -178,7 +178,6 @@ theorem pintz_selectionLoss_le_envelope
             Real.log T ^ (260 : ℝ)) by ring]
       rw [hlogCombine]
 
-#print axioms pintz_selectionLoss_le_envelope
 
 end
 

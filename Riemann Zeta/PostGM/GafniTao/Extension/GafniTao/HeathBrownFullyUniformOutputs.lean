@@ -86,7 +86,7 @@ theorem finite_symmetric_source_powered_energy_of_constants
   exact ⟨output, rfl⟩
 
 /-- Three actual packets sharing a single globally selected factorization
-constant and a single mean-value constant. -/
+The constant and a single mean-value constant. -/
 structure HeathBrownFullyUniformOutputs
     (epsilon B R : Real) (N p : Nat) (eta L : Real)
     (W : Finset Real) (a : Nat → Complex)
@@ -165,9 +165,6 @@ theorem finite_source_arbitrary_power_outputs_fully_uniform_native
   exact ⟨⟨energy, card, next, hEnergyCp, hCardCp, hNextCp,
     hCardCmv, hNextCmv⟩⟩
 
-#print axioms finite_symmetric_source_powered_energy_of_constants
-#print axioms HeathBrownFullyUniformOutputs
-#print axioms finite_source_arbitrary_power_outputs_fully_uniform_native
 
 end
 

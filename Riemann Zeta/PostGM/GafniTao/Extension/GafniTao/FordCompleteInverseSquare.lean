@@ -129,7 +129,6 @@ theorem fordFiniteInverseSquareOutside_le_general
     (t := t) (T := T) (q := (1 / 4 : ℝ)) le_rfl
   linarith
 
-#print axioms fordFiniteInverseSquareOutside_le_general
 
 end
 

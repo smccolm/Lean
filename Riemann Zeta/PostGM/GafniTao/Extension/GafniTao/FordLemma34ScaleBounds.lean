@@ -37,8 +37,6 @@ theorem fordQScale_terminal_one_le
     1 ≤ fordQScale P Φ j :=
   fordQScale_one_le_of_ten_index_le_nine_r Φ hP hr le_rfl hupper hjUpper
 
-#print axioms fordQScale_one_le_of_ten_index_le_nine_r
-#print axioms fordQScale_terminal_one_le
 
 end
 

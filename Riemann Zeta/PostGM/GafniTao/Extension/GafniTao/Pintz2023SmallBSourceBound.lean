@@ -180,9 +180,6 @@ theorem pintz2023_smallB_source_gram_native
     hT hcritical hscale
   exact hAssembly.trans (by nlinarith)
 
-#print axioms pintz2023_low_block_equation423_native
-#print axioms pintz2023_middle_block_equation421_native
-#print axioms pintz2023_smallB_source_gram_native
 
 end
 

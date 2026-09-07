@@ -82,8 +82,6 @@ theorem exists_real_energy_color_classes
         MixedApproxAddEnergy eta (Wi 0) (Wi 1) (Wi 2) (Wi 3) := by
       exact Nat.mul_le_mul_left _ (Finset.card_le_card hSubset)
 
-#print axioms realQuadrupleCoord
-#print axioms exists_real_energy_color_classes
 
 end
 

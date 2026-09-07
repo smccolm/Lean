@@ -69,7 +69,6 @@ theorem exists_pintz2023_equation420_gram_native
           ((4 ^ pintz2023NearOneGramExponent eta eta data.epsilon + 3) *
             T ^ (-data.epsilon / (k : ℝ))) := by ring_nf
 
-#print axioms exists_pintz2023_equation420_gram_native
 
 end
 

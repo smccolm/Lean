@@ -252,12 +252,6 @@ theorem fordLemma63TorusOmegaFiber_card_le_W
   exact hcardR.trans
     (fordLemma63PeriodicTopFiber_card_le_W hk hM hN hu0 hu1 ht htN)
 
-#print axioms fordLemma63SZero_eq_torus
-#print axioms fordLemma63_integral_SZeroTorus_two_s_le
-#print axioms measurableSet_fordLemma63TorusOmega
-#print axioms fordLemma63_two_radius_lt_one
-#print axioms fordLemma63TorusOmega_measure_exact
-#print axioms fordLemma63TorusOmegaFiber_card_le_W
 
 end
 

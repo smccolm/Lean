@@ -382,7 +382,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_threeQuarter_middle_B
             (N : ℝ) ^ (tau / 2)) := by ring
       _ = 130 * (N : ℝ) ^ (-sigma + tau / 2) := by
         rw [← Real.rpow_add hNpos]
-      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring
+      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have htauLog : tau * Real.log (N : ℝ) = Real.log t := by
     dsimp only [tau, fordLambda]
@@ -482,13 +482,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_threeQuarter_middle
       _ = C * t ^ ((1 / 2 : ℝ) *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := rfl
 
-#print axioms pintz2023WeightedBlock_one_sub_eq_ford
-#print axioms pintz_threeQuarter_orderThree_core
-#print axioms pintz_threeQuarter_orderThree_exponents
-#print axioms norm_fordShiftedWeightedBlock_zero_le_threeQuarter_orderThree
-#print axioms pintz_threeQuarter_middle_B_exponent_nonpos
-#print axioms norm_fordShiftedWeightedBlock_zero_le_threeQuarter_middle_B
-#print axioms norm_fordShiftedWeightedBlock_zero_le_threeQuarter_middle
 
 end
 

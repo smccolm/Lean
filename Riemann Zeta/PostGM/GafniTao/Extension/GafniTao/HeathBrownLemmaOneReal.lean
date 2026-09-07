@@ -128,10 +128,6 @@ theorem norm_heathBrownExponentialSum_le_expanded_of_source
   rw [ENNReal.toReal_ofReal (norm_nonneg _)] at htoReal
   exact htoReal
 
-#print axioms heathBrownLemmaTwoConstant_pos
-#print axioms heathBrownLemmaOne_source_P_pos
-#print axioms heathBrownLemmaOneRawBound_toReal
-#print axioms norm_heathBrownExponentialSum_le_expanded_of_source
 
 end
 

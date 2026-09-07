@@ -112,7 +112,6 @@ theorem eventually_tuned_actual_source_color_physical_low_cells
     (hTypeIILower := hTypeII.1)
     (hTypeIIUpper := hTypeII.2.2.trans hsigmaUpper)
 
-#print axioms eventually_tuned_actual_source_color_physical_low_cells
 
 end
 

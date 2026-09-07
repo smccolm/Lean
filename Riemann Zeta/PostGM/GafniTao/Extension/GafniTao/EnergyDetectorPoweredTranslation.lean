@@ -95,7 +95,6 @@ theorem finite_symmetric_source_powered_energy_gm_bound
   rw [← approxAddEnergy_translate 1 R W]
   exact hEnergy
 
-#print axioms finite_symmetric_source_powered_energy_gm_bound
 
 end
 

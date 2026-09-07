@@ -240,10 +240,6 @@ theorem base_sq_div_classicalA3BScale
   congr 1
   ring
 
-#print axioms classicalA3B_shift_sum_le
-#print axioms classicalA3B_height_scale_identity
-#print axioms classicalA3B_curvature_small
-#print axioms base_sq_div_classicalA3BScale
 
 end
 

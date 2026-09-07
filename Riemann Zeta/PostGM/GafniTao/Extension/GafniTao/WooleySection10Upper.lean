@@ -179,10 +179,6 @@ theorem wooleySourcePolynomial_lemma_4_1_coefficientOne_half
     habsorb (B ⌈/⌉ k) hH0
   exact wooley_lemma41_absorb_constant hp hepsilon hhalf hCscale hraw'
 
-#print axioms wooley_constant_le_primePower_rpow_eventually
-#print axioms wooley_constant_absorbed_below_half
-#print axioms wooley_lemma41_absorb_constant
-#print axioms wooleySourcePolynomial_lemma_4_1_coefficientOne_half
 
 end
 

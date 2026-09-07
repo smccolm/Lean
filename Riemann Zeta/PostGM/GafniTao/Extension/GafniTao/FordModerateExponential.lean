@@ -193,8 +193,6 @@ theorem ford_shifted_exponential_sum_moderate_degree
     (3 + 2 * A') * P
   nlinarith
 
-#print axioms ford_exponential_lemma_5_1_moderate
-#print axioms ford_shifted_exponential_sum_moderate_degree
 
 end
 

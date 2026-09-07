@@ -133,8 +133,6 @@ theorem pintzZetaAFETerm_finiteRectangle
     hzero hdslope hprincipal
   simpa [F, z, w, pintzZetaAFETermContourIntegrand] using hrect
 
-#print axioms differentiableOn_pintzZetaAFETermNumerator_rectangle
-#print axioms pintzZetaAFETerm_finiteRectangle
 
 set_option maxHeartbeats 200000
 

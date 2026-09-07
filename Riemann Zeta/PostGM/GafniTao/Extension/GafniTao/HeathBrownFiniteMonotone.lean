@@ -79,8 +79,6 @@ theorem heathBrownFiniteFamilyBound_mono
   have hFourth'Nonneg := heathBrownFourthMomentShape_nonneg B M' W' hB
   gcongr
 
-#print axioms approxAddEnergy_mono_family
-#print axioms heathBrownFiniteFamilyBound_mono
 
 end
 

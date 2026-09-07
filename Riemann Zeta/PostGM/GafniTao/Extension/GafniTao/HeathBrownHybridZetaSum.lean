@@ -246,9 +246,6 @@ theorem norm_riemannZeta_le_heathBrownHybrid
       dsimp only [C, q]
       ring
 
-#print axioms norm_fordDyadicWeightedShellSum_zero_le_hybrid
-#print axioms norm_fordHurwitzFiniteApproximation_one_le_hybrid
-#print axioms norm_riemannZeta_le_heathBrownHybrid
 
 end
 

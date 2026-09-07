@@ -142,9 +142,6 @@ theorem HeathBrownPoweredEnergyPacket.energy_le_common
     nlinarith [hEach 0, hEach 1, hEach 2, hEach 3]
   exact hEnergy.trans (mul_le_mul_of_nonneg_left hSum (by positivity))
 
-#print axioms HeathBrownPoweredCardinalityPacket.card_le_meanValue
-#print axioms HeathBrownPoweredEnergyPacket.energy_le_common_power
-#print axioms HeathBrownPoweredEnergyPacket.energy_le_common
 
 end
 

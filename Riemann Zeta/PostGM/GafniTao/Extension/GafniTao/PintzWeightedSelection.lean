@@ -139,9 +139,6 @@ theorem exists_pintz_zero_selection
   rw [zeroCount_eq_weighted_sum]
   simpa only [L] using hWeight
 
-#print axioms exists_oneSeparated_shifted_weighted
-#print axioms exists_pintz_scaledSeparated_shifted_weighted
-#print axioms exists_pintz_zero_selection
 
 end
 

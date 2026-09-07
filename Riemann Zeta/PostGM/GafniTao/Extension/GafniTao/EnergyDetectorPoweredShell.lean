@@ -213,7 +213,6 @@ theorem absoluteSlab_powered_gm_energy_bound
           dsimp only [P, D]
           positivity)
 
-#print axioms absoluteSlab_powered_gm_energy_bound
 
 end
 

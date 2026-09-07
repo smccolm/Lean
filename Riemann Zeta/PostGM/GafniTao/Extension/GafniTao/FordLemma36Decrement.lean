@@ -156,11 +156,6 @@ theorem fordDeltaSequence36_source_decrement
     _ = fordDeltaSequence36 k (n - 2) -
         fordDeltaSequence36 k (n - 1) := by field_simp
 
-#print axioms fordDecrementShape36_mono_on_half
-#print axioms fordDecrementShape36_at_cutoff
-#print axioms fordDecrementShape36_source_predecessor
-#print axioms fordDSequence36_source_decrement
-#print axioms fordDeltaSequence36_source_decrement
 
 end
 

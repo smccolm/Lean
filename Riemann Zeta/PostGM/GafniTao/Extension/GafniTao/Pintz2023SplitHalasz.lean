@@ -150,7 +150,6 @@ theorem exists_pintz2023_split_intervalPower_halasz_cardinality
     hDiagonal hOffDiagonal hAbsorb
   simpa only [E, D] using hResult
 
-#print axioms exists_pintz2023_split_intervalPower_halasz_cardinality
 
 end
 

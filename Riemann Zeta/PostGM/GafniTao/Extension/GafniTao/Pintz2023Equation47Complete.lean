@@ -88,8 +88,6 @@ theorem norm_pintz2023Equation47Remainder_le_exp_neg_two :
         Ktail * Real.exp (-2 * lambda) := add_le_add hbare htail'
     _ = (Ktail + 1) * Real.exp (-2 * lambda) := by ring
 
-#print axioms pintz2023_equation_4_7_completeLine
-#print axioms norm_pintz2023Equation47Remainder_le_exp_neg_two
 
 end
 

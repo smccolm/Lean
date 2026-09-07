@@ -100,9 +100,6 @@ theorem fordDSequence36_lower_step
   simpa [fordDSequence36, fordRSequence36] using
     fordDeltaZero35_normalized_lower hk (habove n le_rfl) hdeltaUpper
 
-#print axioms fordDSequence36_bounds_of_above
-#print axioms fordDSequence36_contraction
-#print axioms fordDSequence36_lower_step
 
 end
 

@@ -222,9 +222,6 @@ theorem ford_exponential_lemma_5_1_quantitative
               (1 / (((8 * k ^ 4 : ℕ) : ℝ))) *
             (N : ℝ) ^ (-(1 / ((1091200 : ℝ) * (k : ℝ) ^ 2))) := by ring
 
-#print axioms ford_complete_window_ratio_le_two
-#print axioms ford_taylor_boundary_term_le
-#print axioms ford_exponential_lemma_5_1_quantitative
 
 end
 

@@ -96,10 +96,6 @@ theorem ford_moderate_moment_bound
   simpa [fordModerateMomentDegree, fordModerateMomentDelta,
     fordDeltaSequence65_closed, Nat.add_mul] using hC
 
-#print axioms ford_one_sub_inv_pow_le_half
-#print axioms ford_one_sub_inv_pow_fifteen_blocks
-#print axioms fordModerateMomentDelta_le
-#print axioms ford_moderate_moment_bound
 
 end
 

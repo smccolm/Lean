@@ -131,7 +131,6 @@ theorem wooley_equation_7_24_of_local
         mul_le_mul_of_nonneg_left hsum hinv
       _ = D * ((wooleySourceMassSq gamma)⁻¹ ^ 2 * _) := by ring
 
-#print axioms wooley_equation_7_24_of_local
 
 end
 

@@ -208,15 +208,6 @@ theorem integral_fordNormalizedRatio_eq_centered
   rw [intervalIntegral_fordCenteredPositive_neg_eq] at hsplit
   exact hsplit.symm
 
-#print axioms fordNormalizedRatio_add_center
-#print axioms fordNormalizedRatio_sub_center
-#print axioms fordCenteredPositive_antitoneOn
-#print axioms fordCenteredNegative_antitoneOn
-#print axioms fordCenteredPositive_antitone_y
-#print axioms fordCenteredNegative_antitone_y
-#print axioms integral_fordNormalizedRatio_shift
-#print axioms integrableOn_fordCenteredPositive_Ioi
-#print axioms integral_fordNormalizedRatio_eq_centered
 
 end
 

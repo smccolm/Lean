@@ -189,9 +189,6 @@ theorem pintz2023Mellin_finite_rectangle
     hzRe hzIm hpInterior hgHolo hPrincipal
   simpa [z, w, p] using hResidue
 
-#print axioms pintz2023MellinWeight_eq
-#print axioms pintz2023MellinContourIntegrand_eq_poleFree_div
-#print axioms pintz2023Mellin_finite_rectangle
 
 end
 

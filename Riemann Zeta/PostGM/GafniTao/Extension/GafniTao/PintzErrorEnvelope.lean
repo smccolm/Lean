@@ -223,7 +223,6 @@ theorem pintzUniformEquation46ErrorBound_le_errorEnvelope
       simp only [R, H]
       ring
 
-#print axioms pintzUniformEquation46ErrorBound_le_errorEnvelope
 
 end
 

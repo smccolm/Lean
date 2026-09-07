@@ -97,9 +97,6 @@ theorem intervalIntegral_fordCubicExp_le_Ioi
   filter_upwards [ae_restrict_mem measurableSet_Ioi] with x hx
   exact (Real.exp_pos _).le
 
-#print axioms fordCubicExponent_le_neg_of_tail
-#print axioms integrableOn_fordCubicExp_Ioi
-#print axioms intervalIntegral_fordCubicExp_le_Ioi
 
 end
 

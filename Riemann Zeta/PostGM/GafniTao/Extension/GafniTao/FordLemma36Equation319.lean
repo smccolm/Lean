@@ -83,9 +83,6 @@ theorem fordEquation319
         Real.exp (-(n : ℝ) * fordPotentialLoss36 k +
           67 / (50 * (k : ℝ))) := by ring
 
-#print axioms fordPotential36_exp
-#print axioms fordPotential36_iterated_numeric
-#print axioms fordEquation319
 
 end
 

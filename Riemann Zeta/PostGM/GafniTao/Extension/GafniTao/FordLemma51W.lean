@@ -182,12 +182,6 @@ theorem fordLemma51MomentT_le_windowMoment_mul_W
               fordLemma51W s M₂ r M N t j.1 := by
       gcongr
 
-#print axioms abs_fordTaylorGamma_eq
-#print axioms fordLemma51RawSpacingBound_eq_expanded
-#print axioms fordLemma51RawSpacingBound_le_displayed
-#print axioms fordLemma51RawW_le_W
-#print axioms fordLemma51ResonantSet_card_le_W
-#print axioms fordLemma51MomentT_le_windowMoment_mul_W
 
 end
 

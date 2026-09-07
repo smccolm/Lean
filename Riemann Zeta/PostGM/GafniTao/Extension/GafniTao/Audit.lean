@@ -5,7 +5,7 @@ import GafniTao
 
 This file is executed separately from the production root.  Every public and
 source-critical theorem is listed explicitly so that Lean prints its actual
-axiom dependencies.
+logical dependencies.
 -/
 
 #print axioms GafniTao.zeroCount_eq_weighted_sum
@@ -653,6 +653,15 @@ axiom dependencies.
 #print axioms GafniTao.gafniTaoTheorem11_guthMaynard_allIntervals_regression
 #print axioms GafniTao.gafniTaoTheorem11_guthMaynard_almostAll_regression
 #print axioms GafniTao.pintzTwentyThreeTwentyFourCutoff_native
+#print axioms GafniTao.first_sample_fixed_epsilon_bound_native
+#print axioms GafniTao.refinedExceptionalUpperExponent_seventeen_thirtieths_le_native
+#print axioms GafniTao.exceptionalExponent_seventeen_thirtieths_le_native
+#print axioms GafniTao.exceptionalExponent_two_fifteenths_add_le_native
+#print axioms GafniTao.heathBrown_zeroAdditiveEnergy_first_native
+#print axioms GafniTao.heathBrown_zeroAdditiveEnergy_second_native
+#print axioms GafniTao.gafniTaoTheorem11_almostAll_guthMaynard_singleSet_native
+#print axioms GafniTao.heathBrownLemmaThree_native
+#print axioms GafniTao.heathBrown_equation44_native
 #print axioms GafniTao.heathBrownVMVTMainConjecture_native
 #print axioms GafniTao.heathBrownKthDerivativeTheorem_native
 #print axioms GafniTao.absoluteDyadicZeroSlab_subset_zeroSet

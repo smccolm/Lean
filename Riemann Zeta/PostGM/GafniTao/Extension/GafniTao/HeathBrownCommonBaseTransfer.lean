@@ -104,9 +104,6 @@ theorem heathBrown_common_cardinality_base_transfer
   · exact hcard
   · exact heathBrown_consecutive_common_base_sq_le_cube hNpos hp
 
-#print axioms heathBrown_consecutive_common_base_sq_le_cube
-#print axioms heathBrown_logExponent_transfer_three_halves
-#print axioms heathBrown_common_cardinality_base_transfer
 
 end
 

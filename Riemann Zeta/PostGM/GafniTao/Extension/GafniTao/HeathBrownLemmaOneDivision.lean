@@ -93,9 +93,6 @@ theorem heathBrown_lemma_one_raw_of_source
   simpa only [heathBrownLemmaOneRawBound, heathBrownLemmaOneInsertedTerm,
     H, s, V, mul_comm, mul_left_comm, mul_assoc] using hassembled
 
-#print axioms heathBrown_cellVolume_pos
-#print axioms heathBrown_cellVolume_ne_top
-#print axioms heathBrown_lemma_one_raw_of_source
 
 end
 

@@ -81,7 +81,6 @@ theorem fordS4_strict_upper_of_interior_lt_boundary
   rw [hfactor] at hmain
   exact lt_of_mul_lt_mul_left hmain (pow_pos hSpos (2 * s - 1)).le
 
-#print axioms fordS4_strict_upper_of_interior_lt_boundary
 
 end
 

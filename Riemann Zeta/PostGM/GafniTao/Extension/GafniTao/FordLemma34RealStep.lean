@@ -87,7 +87,6 @@ theorem ford_lemma_3_4_real_one_step
       exact mul_le_mul_of_nonneg_right
         (mul_le_mul_of_nonneg_left hpow (by positivity)) hLBound
 
-#print axioms ford_lemma_3_4_real_one_step
 
 end
 

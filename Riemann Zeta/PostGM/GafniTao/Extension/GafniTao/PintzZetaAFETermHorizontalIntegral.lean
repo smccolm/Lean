@@ -108,10 +108,6 @@ theorem tendsto_pintzZetaAFETerm_HIntegral'_neg_zero
     (tendsto_pintzZetaAFETerm_HIntegral_neg_zero s base hn hq hc hbase).const_smul
       (1 / (2 * Real.pi * I))
 
-#print axioms tendsto_pintzZetaAFETerm_HIntegral_zero
-#print axioms tendsto_pintzZetaAFETerm_HIntegral_neg_zero
-#print axioms tendsto_pintzZetaAFETerm_HIntegral'_zero
-#print axioms tendsto_pintzZetaAFETerm_HIntegral'_neg_zero
 
 end
 

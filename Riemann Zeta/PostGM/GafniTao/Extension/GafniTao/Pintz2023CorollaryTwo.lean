@@ -4,8 +4,8 @@ import GafniTao.Pintz2023CorollaryOne
 # Pintz (2023), Corollary 2
 
 The source condition `N \ll |t|^(2/r)` is represented by an explicit positive
-constant `B`.  The resulting implied constant may depend on `B`; no scale
-constant is silently normalized to one.
+The constant `B`.  The resulting implied constant may depend on `B`; no scale
+The constant is silently normalized to one.
 -/
 
 namespace GafniTao
@@ -127,8 +127,6 @@ theorem pintz2023_corollary_two_native
       mul_le_mul_of_nonneg_left hmaj hC₀.le
     _ = (C₀ * D) * pintz2023CorollaryTwoMajorant r N epsilon xi t := by ring
 
-#print axioms pintz2023_negative_height_le_of_scale
-#print axioms pintz2023_corollary_two_native
 
 end
 

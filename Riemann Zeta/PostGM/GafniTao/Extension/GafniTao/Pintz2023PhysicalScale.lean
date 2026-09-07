@@ -213,12 +213,6 @@ theorem pintz2023_localized_physical_scale
       gcongr
     _ = 8 * (Real.exp 3 + 2) * |t| ^ (2 / (k : ℝ)) := by ring
 
-#print axioms pintz2023CriticalScaleExponent_lt_two_div
-#print axioms pintz2023CriticalScale_lt_source_power
-#print axioms pintz2023Cutoff_cast_lt_source_power
-#print axioms pintz2023_source_power_le_four_mul_displaced_power
-#print axioms pintz2023_source_power_le_eight_mul_displaced_power
-#print axioms pintz2023_localized_physical_scale
 
 end
 

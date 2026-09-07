@@ -112,11 +112,6 @@ theorem wooley_padic_separation
   simpa [wooleyResidueUnit, wooleyResidueUnitNat,
     Int.natAbs_mul, Int.natAbs_sign, hd] using hcop
 
-#print axioms wooleyResidueDifference_ne_zero_of_separated
-#print axioms wooleyResidueDifference_factorization
-#print axioms wooleyResidueUnitNat_coprime
-#print axioms wooleyResidueValuation_lt
-#print axioms wooley_padic_separation
 
 end
 

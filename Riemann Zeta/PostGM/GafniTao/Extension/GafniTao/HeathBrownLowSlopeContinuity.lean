@@ -102,9 +102,6 @@ theorem heathBrownLowMaxSlope_lipschitz
       rw [heathBrownLowSlopes_at_transition] at hleft
       linarith
 
-#print axioms heathBrownLowFirstSlope_lipschitz
-#print axioms heathBrownLowSecondSlope_lipschitz
-#print axioms heathBrownLowMaxSlope_lipschitz
 
 end
 

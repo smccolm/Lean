@@ -304,15 +304,6 @@ theorem ford_exponential_lemma_5_1
       positivity
     exact htrivial.trans (by linarith)
 
-#print axioms fordLemma51WReal_nonneg
-#print axioms fordLemma51W_le_real
-#print axioms fordLemma51AnalyticCoreRealW_nonneg
-#print axioms fordLemma51AnalyticCore_le_realW
-#print axioms fordLemma51SourceCore_eq_separated
-#print axioms fordLemma51_centralTerm_eq_real_second_scale
-#print axioms fordLemma51SourceCore_nonneg
-#print axioms fordLemma51_centralTerm_le_sourceCore
-#print axioms ford_exponential_lemma_5_1
 
 end
 

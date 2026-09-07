@@ -211,11 +211,6 @@ theorem fordLemma51_nnnorm_pow_eq_differenceTupleSum
       intro y _hy
       exact fordLemma51_pair_oscillatoryTerm k M r s B t z c x y
 
-#print axioms fordLemma51FiberOscillatorySum_eq_subtypeSum
-#print axioms conj_fordAdditiveCharacter
-#print axioms fordLemma51TuplePhase_eq_differencePhase
-#print axioms fordLemma51_pair_oscillatoryTerm
-#print axioms fordLemma51_nnnorm_pow_eq_differenceTupleSum
 
 end
 

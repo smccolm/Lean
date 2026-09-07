@@ -318,11 +318,7 @@ theorem ford_equation_3_3_distinct
     (fordS3Count (P := P) (p := p) Ψ hdk s Q q)
     (fun a ha ↦ hpmax a ha)
 
-#print axioms ford_equation_3_3_distinct
 
-#print axioms ford_prime_dvd_vandermonde_of_residue_collision
-#print axioms ford_head_residue_injective_of_not_dvd_vandermonde
-#print axioms fordKDistinctToS3At
 
 end
 

@@ -120,8 +120,6 @@ theorem reflected_wide_energy_to_dyadic_self
   exact ⟨⟨sign, Ws, hSub, hSep, hCommon, hSignEnergy,
     label, U, hSepU, hRangeU, hLargeU, hEnergyU⟩⟩
 
-#print axioms ReflectedWideEnergyOutput
-#print axioms reflected_wide_energy_to_dyadic_self
 
 end
 

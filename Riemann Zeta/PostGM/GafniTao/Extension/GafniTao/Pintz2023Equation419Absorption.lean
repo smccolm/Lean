@@ -278,7 +278,6 @@ theorem eventually_pintz2023_equation419_absorption
   exact hOff.trans (hSmall'.trans
     (div_le_div_of_nonneg_right hThresholdT (by norm_num)))
 
-#print axioms eventually_pintz2023_equation419_absorption
 
 end
 

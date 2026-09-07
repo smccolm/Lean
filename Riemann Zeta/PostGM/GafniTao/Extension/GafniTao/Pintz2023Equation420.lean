@@ -126,7 +126,6 @@ theorem exists_pintz2023_equation420_weighted_gram_native
           (N : ℝ) ^ (2 * eta) * (|delta - gamma| + 2) *
             Real.exp (-(Real.pi * |delta - gamma|) / 2)) := by rfl
 
-#print axioms exists_pintz2023_equation420_weighted_gram_native
 
 end
 

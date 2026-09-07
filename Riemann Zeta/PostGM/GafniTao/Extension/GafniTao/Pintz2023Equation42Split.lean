@@ -238,10 +238,6 @@ theorem pintz2023_equation_4_2_source_split
   rw [pintz2023_equation_4_5_exact hrho hlambda]
   rw [pintz2023_head_eq_one_add_source_interval rho lambda hX hXC]
 
-#print axioms pintz2023_equation_4_5_exact
-#print axioms pintz2023WeightedTerm_eq_zero_of_middle
-#print axioms pintz2023_head_eq_one_add_source_interval
-#print axioms pintz2023_equation_4_2_source_split
 
 end
 

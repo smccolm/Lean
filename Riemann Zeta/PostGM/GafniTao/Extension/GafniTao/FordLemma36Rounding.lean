@@ -142,11 +142,6 @@ theorem fordPhiStar35_rounded_lower
   push_cast
   simpa [r] using hdenUpper
 
-#print axioms fordR36_real_bounds
-#print axioms fordR36_bounds
-#print axioms fordY35_rounded_bounds
-#print axioms fordY35_rounded_nonneg
-#print axioms fordPhiStar35_rounded_lower
 
 end
 

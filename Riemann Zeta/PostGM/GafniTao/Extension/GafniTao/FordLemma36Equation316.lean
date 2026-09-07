@@ -199,8 +199,6 @@ theorem fordEquation316
         16 * (1 - delta / (k : ℝ) ^ 2) / (7 * k) := by
       gcongr
 
-#print axioms fordRoundedRemainder36
-#print axioms fordEquation316
 
 end
 

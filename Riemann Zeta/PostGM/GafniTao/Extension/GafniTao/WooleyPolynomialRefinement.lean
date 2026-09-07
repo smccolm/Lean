@@ -144,9 +144,6 @@ theorem wooleyPolynomial_lemma_6_2
         _ = M ^ (w - 1) * ((p ^ (b - a) : ℝ) ^ w * R) := by ring
     exact le_of_mul_le_mul_left hfactored hfactorPos
 
-#print axioms wooleyPolynomial_sum_refined_residue_grid
-#print axioms wooleyPolynomial_refined_normalized_residue_decomposition
-#print axioms wooleyPolynomial_lemma_6_2
 
 end
 

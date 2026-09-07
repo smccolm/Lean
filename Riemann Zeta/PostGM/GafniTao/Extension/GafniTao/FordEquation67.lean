@@ -121,8 +121,6 @@ theorem ford_equation_6_7
           (N : ℝ) / M + M := by gcongr
     _ = _ := by ring
 
-#print axioms ford_sum_le_card_rpow_mul_moment_root
-#print axioms ford_equation_6_7
 
 end
 

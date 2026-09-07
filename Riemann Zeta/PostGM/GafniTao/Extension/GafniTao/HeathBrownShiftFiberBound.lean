@@ -146,8 +146,6 @@ theorem heathBrownPositiveShiftFiber_card_cast_le_harmonic
     _ ≤ ((D : ℝ) + c) / d * (b + a * D) := hthird
     _ = ((D : ℝ) + c) * (b + a * D) / d := by ring
 
-#print axioms heathBrownPositiveShiftFiber_card_cast_le_raw
-#print axioms heathBrownPositiveShiftFiber_card_cast_le_harmonic
 
 end
 

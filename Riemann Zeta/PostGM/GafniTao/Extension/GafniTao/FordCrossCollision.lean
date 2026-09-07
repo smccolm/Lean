@@ -75,7 +75,6 @@ theorem ford_cross_character_mean_eq
     exact integrable_finsetSum Finset.univ fun b _ ↦
       ford_integrable_mFourier_pi_haar _
 
-#print axioms ford_cross_character_mean_eq
 
 end
 

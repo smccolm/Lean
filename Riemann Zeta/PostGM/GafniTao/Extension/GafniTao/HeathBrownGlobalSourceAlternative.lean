@@ -62,7 +62,6 @@ theorem exists_heathBrownGlobalSourceAlternative
       (by linarith) hTCeil hT coverLabel hBounded
   · exact Or.inr hOutput
 
-#print axioms exists_heathBrownGlobalSourceAlternative
 
 end
 

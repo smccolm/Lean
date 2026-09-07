@@ -79,7 +79,6 @@ theorem norm_pintz2023ExponentialBlock_sq_le_A3B_selected
       using hsq)
   exact sq_pos_of_pos hH₁R
 
-#print axioms norm_pintz2023ExponentialBlock_sq_le_A3B_selected
 
 end
 

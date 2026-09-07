@@ -114,10 +114,6 @@ theorem HeathBrownFullyUniformOutputs.next_le_physical
     (mul_le_mul_of_nonneg_left hPhysical
       (mul_nonneg (Nat.cast_nonneg (P + 1)) hCmv))
 
-#print axioms quotient_linear_le_rpow_sub
-#print axioms scaledMeanValueExpression_le_physical
-#print axioms HeathBrownFullyUniformOutputs.card_le_physical
-#print axioms HeathBrownFullyUniformOutputs.next_le_physical
 
 end
 

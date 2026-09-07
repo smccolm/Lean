@@ -131,9 +131,6 @@ theorem eventually_heathBrown_finite_loss_le_power
     _ <= U ^ ((2 / 3 : Real) * zeta) := hSmallU
     _ <= ((2 ^ p * N ^ p : Nat) : Real) ^ zeta := hPower
 
-#print axioms eventually_const_mul_rpow_le_rpow
-#print axioms rpow_two_thirds_le_of_sq_le_cube
-#print axioms eventually_heathBrown_finite_loss_le_power
 
 end
 

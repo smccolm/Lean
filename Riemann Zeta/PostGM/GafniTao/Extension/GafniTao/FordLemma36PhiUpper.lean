@@ -188,9 +188,6 @@ theorem fordCanonicalTheta_one_rounded
       have hcdiv := div_le_div_of_nonneg_right hc hdenPos.le
       linarith
 
-#print axioms fordPhiStar35_rounded_upper_basic
-#print axioms fordPhiStar35_rounded_upper
-#print axioms fordCanonicalTheta_one_rounded
 
 end
 

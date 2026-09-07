@@ -158,9 +158,6 @@ theorem wooleySection4_exists_dilated_system
     omega
   exact (pow_dvd_pow (p : ℤ) hexp).trans hcancel
 
-#print axioms wooleyIntegerTupleDisplacement_polynomial_C
-#print axioms wooleyNormalFormCombination_displacement_dvd
-#print axioms wooleySection4_exists_dilated_system
 
 end
 

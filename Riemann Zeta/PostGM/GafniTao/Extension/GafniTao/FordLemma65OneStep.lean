@@ -149,8 +149,6 @@ theorem ford_lemma_6_5_one_step_global
       FordVinogradovMomentBound (s + k) k C' (fordDelta65 k delta) := by
   exact (eventually_ford_lemma_6_5_one_step hk hs hmoment).exists_global_coefficient
 
-#print axioms eventually_ford_lemma_6_5_one_step
-#print axioms ford_lemma_6_5_one_step_global
 
 end
 

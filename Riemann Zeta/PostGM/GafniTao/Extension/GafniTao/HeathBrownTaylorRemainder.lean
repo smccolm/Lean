@@ -109,10 +109,6 @@ theorem norm_heathBrown_deriv_taylor_remainder_le_scale
     _ ≤ A * lambda * H ^ (k - 1) := by
       gcongr
 
-#print axioms iteratedDeriv_pred_deriv
-#print axioms exists_heathBrown_deriv_taylor_remainder
-#print axioms norm_heathBrown_deriv_taylor_remainder_le
-#print axioms norm_heathBrown_deriv_taylor_remainder_le_scale
 
 end
 

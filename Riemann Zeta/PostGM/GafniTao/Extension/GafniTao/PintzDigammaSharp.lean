@@ -165,7 +165,6 @@ theorem exists_re_digamma_le_log_add {a b : ℝ} (ha : 0 < a) :
   dsimp only [D]
   linarith
 
-#print axioms exists_re_digamma_le_log_add
 
 set_option maxHeartbeats 200000
 

@@ -185,9 +185,6 @@ theorem heathBrownBoundedShellMajorant_envelope
     ring
   · exact Filter.Eventually.of_forall fun _ => rfl
 
-#print axioms EpsilonExponentBound.const_mul_arg
-#print axioms zeroDensityEnvelope_at_two_ceil
-#print axioms heathBrownBoundedShellMajorant_envelope
 
 end
 

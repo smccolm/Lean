@@ -177,9 +177,6 @@ theorem logarithmic_weyl_A2B_process
           (fun r => logarithmicA2BCorrelationBound_nonneg t A N H₂ r hH₂pos)
           (Finset.mem_range.mp hh)
 
-#print axioms norm_logarithmicDifferenceSum_le_A2Bound
-#print axioms padded_logarithmic_correlation_norm_le_A2_of_lt
-#print axioms logarithmic_weyl_A2B_process
 
 end
 

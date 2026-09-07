@@ -174,9 +174,6 @@ theorem pintz2023_halasz_cardinality_of_infinite_gram
     nlinarith [hCore, hAbsorbK]
   nlinarith [mul_nonneg hE hD]
 
-#print axioms pintz2023_infinite_gram_eq_diagonal_add_offDiagonal
-#print axioms pintz2023_infinite_gram_le_cardinality_majorant
-#print axioms pintz2023_halasz_cardinality_of_infinite_gram
 
 end
 

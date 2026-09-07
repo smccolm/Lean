@@ -306,18 +306,6 @@ theorem wooley_equations_3_5_to_3_7
   rw [wooleyMonomialNormalizedGridMean_eq_count hQ,
     wooleyModularCount_primePower_eq_padic]
 
-#print axioms wooley_sum_stdAddChar_mul
-#print axioms wooley_sum_grid_character
-#print axioms wooleyMonomialTuplePhase_eq
-#print axioms wooleyMonomialGridSum_pow
-#print axioms wooley_conj_monomialGridSum_pow
-#print axioms wooley_pair_grid_character
-#print axioms wooleyModularDisplacement_eq_zero_iff
-#print axioms wooleyModularCount_cast_complex
-#print axioms wooleyMonomialComplexGridMoment_eq_count
-#print axioms wooleyMonomialRawGridMoment_eq_count
-#print axioms wooleyMonomialNormalizedGridMean_eq_count
-#print axioms wooley_equations_3_5_to_3_7
 
 end
 

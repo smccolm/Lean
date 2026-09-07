@@ -126,9 +126,6 @@ theorem wooleySourcePolynomial_equation_8_2_of_section7_mul
     (mul_le_mul_of_nonneg_left hzeroPow hfirstNonneg)
   exact hsection7.trans (mul_le_mul_of_nonneg_left hinside hD)
 
-#print axioms wooleySourcePolynomialMixedMean_zero_le_conditioned
-#print axioms wooleySourcePolynomial_equation_8_1_of_section7_mul
-#print axioms wooleySourcePolynomial_equation_8_2_of_section7_mul
 
 end
 

@@ -224,8 +224,6 @@ theorem integral_fordNormalizedRatio_le_numericalPolynomialUpper
   unfold fordNumericalPolynomialUpper
   linarith
 
-#print axioms fordCenteredPositive_tail_integral_le
-#print axioms integral_fordNormalizedRatio_le_numericalPolynomialUpper
 
 end
 

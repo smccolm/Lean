@@ -79,10 +79,6 @@ theorem tendsto_pintzZetaAFERightSeries_displaced_finset
   rw [Finset.sum_sub_distrib]
   linear_combination hsplit
 
-#print axioms pintzZetaAFETermVerticalTrunc_eq_rightTerm
-#print axioms summable_pintzZetaAFETermVerticalTrunc
-#print axioms pintzZetaAFETermVerticalTrunc_sum_add_compl
-#print axioms tendsto_pintzZetaAFERightSeries_displaced_finset
 
 end
 

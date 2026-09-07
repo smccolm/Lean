@@ -235,11 +235,6 @@ theorem fordDeltaSequence36_pos_le_of_pos_le
             nlinarith [mul_nonneg ih.1.le hfactor.1]
       exact ⟨hnextPos, hnextUpperPrev.trans ih.2⟩
 
-#print axioms fordR36_eq_k_of_pos_le
-#print axioms fordDeltaZero35_below_contracts
-#print axioms fordLemma36_target_ge_contracted_k
-#print axioms fordLemma36_delta_exponent_of_prev_below
-#print axioms fordDeltaSequence36_pos_le_of_pos_le
 
 end
 

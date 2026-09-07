@@ -186,9 +186,6 @@ theorem integrable_pintz2023Equation42Integrand_left
         simp only [C, A, B, pow_one]
         ring
 
-#print axioms continuous_pintz2023Equation42Integrand_vertical
-#print axioms norm_pintzGaussianKernel_vertical_le
-#print axioms integrable_pintz2023Equation42Integrand_left
 
 end
 

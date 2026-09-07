@@ -121,11 +121,6 @@ theorem fordMScale_mono_exponent
     fordMScale P Φ a ≤ fordMScale P Φ b := by
   exact Real.rpow_le_rpow_of_exponent_le hP hab
 
-#print axioms fordPhiPrefix_succ
-#print axioms fordQScale_div_MScale
-#print axioms fordQScale_eq_MScale_mul_succ
-#print axioms fordPhiPrefix_le_index_div_r
-#print axioms fordMScale_terminal_rpow
 
 end
 

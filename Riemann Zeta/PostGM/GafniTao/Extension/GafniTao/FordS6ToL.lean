@@ -107,9 +107,6 @@ theorem fordS6FineCollision_card_le_L
       rw [Nat.card_eq_fintype_card]
       rfl
 
-#print axioms fordS6FineCollisionToL
-#print axioms fordS6FineCollisionToL_injective
-#print axioms fordS6FineCollision_card_le_L
 
 end
 

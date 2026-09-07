@@ -255,11 +255,6 @@ theorem eventually_pintz2023_largeM_localized_le
     hShiftUpper hPhysical hUpper hX hNonempty
   exact hraw.trans (hEnvelopeT xi hxi hxiEta)
 
-#print axioms pintzCell_sourceX_exponent_le
-#print axioms pintz2023_sourceX_rpow_single_le
-#print axioms pintz2023CriticalScale_neg_three_le
-#print axioms eventually_pintz2023_largeM_envelope
-#print axioms eventually_pintz2023_largeM_localized_le
 
 end
 

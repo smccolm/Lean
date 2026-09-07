@@ -275,13 +275,6 @@ theorem exists_positive_nat_power_minimal
     norm_num at this ⊢
     nlinarith
 
-#print axioms pintzCell_threshold_order
-#print axioms pintzKDenominator_pos
-#print axioms pintzEllDenominator_pos
-#print axioms tendsto_pintzPerturbedCoefficient_zero
-#print axioms exists_pintz_perturbation
-#print axioms exists_positive_nat_power_in_window
-#print axioms exists_positive_nat_power_minimal
 
 end
 

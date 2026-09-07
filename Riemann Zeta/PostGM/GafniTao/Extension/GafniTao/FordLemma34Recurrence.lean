@@ -55,7 +55,6 @@ theorem ford_lemma_3_3_consume_uniform_K_bound
   exact hL.trans (mul_le_mul_of_nonneg_left
     (max_le_max hdiag hoff) (by positivity))
 
-#print axioms ford_lemma_3_3_consume_uniform_K_bound
 
 end
 

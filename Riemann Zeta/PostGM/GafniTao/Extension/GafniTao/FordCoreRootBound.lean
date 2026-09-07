@@ -99,9 +99,6 @@ theorem fordLemma51SourceCore_root_le
         (N : ℝ) ^ (-(1 / ((1091200 : ℝ) * (k : ℝ) ^ 2))) := by
       rw [← Real.rpow_mul hN0, ford_double_square_root_exponent hk1]
 
-#print axioms fordLemma51SourceCore_le_power_saving
-#print axioms ford_double_square_root_exponent
-#print axioms fordLemma51SourceCore_root_le
 
 end
 

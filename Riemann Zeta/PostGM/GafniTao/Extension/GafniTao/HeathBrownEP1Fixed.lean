@@ -145,8 +145,6 @@ theorem norm_pintz2023ExponentialBlock_le_EP1_kfive_sloping
   intro N R tau hN hNR hR htauLow htauHigh
   exact hbound N R tau hN hNR hR ⟨htauLow, htauHigh⟩
 
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_kfive_constant
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_kfive_sloping
 
 end
 

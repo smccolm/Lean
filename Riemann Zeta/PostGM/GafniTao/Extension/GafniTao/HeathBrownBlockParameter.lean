@@ -120,12 +120,6 @@ theorem heathBrown_pairCountTwo_index_le_block_length
       gcongr
       exact Nat.cast_div_le
 
-#print axioms heathBrownBlockParameter_pos
-#print axioms heathBrown_scale_lt_blockParameter
-#print axioms heathBrown_block_scale_lt_half
-#print axioms heathBrown_block_scale_le_half
-#print axioms heathBrown_abs_difference_le_deriv_bound
-#print axioms heathBrown_pairCountTwo_index_le_block_length
 
 end
 

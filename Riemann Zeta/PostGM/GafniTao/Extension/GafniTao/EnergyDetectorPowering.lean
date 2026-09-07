@@ -200,10 +200,6 @@ theorem exists_source_normalized_powered_block
     rw [hSource]
     simpa using hPowered t ht
 
-#print axioms sourcePoweredDyadicBlock_subset
-#print axioms norm_sourceNormalizedFinitePoweredCoeffs_le_one
-#print axioms exists_source_powered_dyadic_index
-#print axioms exists_source_normalized_powered_block
 
 end
 

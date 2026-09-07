@@ -71,8 +71,6 @@ theorem classicalBinarySelectedN_typeII_equal_cutoff_range
   have h := classicalBinarySelectedN_typeII_range hX hkII q r hq
   simpa only [pow_two] using h
 
-#print axioms eventually_classicalBinaryPhysicalCutoff_spec
-#print axioms classicalBinarySelectedN_typeII_equal_cutoff_range
 
 end
 

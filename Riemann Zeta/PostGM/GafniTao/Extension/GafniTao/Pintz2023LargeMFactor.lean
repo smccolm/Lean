@@ -77,8 +77,6 @@ theorem pintz2023SplitLargeM_eq_factorized
   rw [pintz2023SplitLargeM_eq_rectangle hIset,
     pintz2023LargeMRectangleBlock_eq_factorized]
 
-#print axioms pintz2023LargeMRectangleBlock_eq_factorized
-#print axioms pintz2023SplitLargeM_eq_factorized
 
 end
 

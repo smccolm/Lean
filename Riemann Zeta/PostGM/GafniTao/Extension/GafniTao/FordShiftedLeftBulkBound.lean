@@ -200,7 +200,6 @@ theorem fordShiftedDetectorPhysicalVerticalBulk_left_high_bound
   have hcoeff : 0 ≤ 1 / (4 * eta) := by positivity
   exact mul_le_mul_of_nonneg_left (hmono.trans henv) hcoeff
 
-#print axioms fordShiftedDetectorPhysicalVerticalBulk_left_high_bound
 
 end
 

@@ -191,12 +191,6 @@ theorem fordLemma51MomentT_le_windowMoment_mul_rawW
       simp only [C]
       ring
 
-#print axioms fordLemma51SourceRadius_pos
-#print axioms abs_fordTaylorGamma_pos
-#print axioms fordLemma51ResonantSet_card_le_rawSpacingBound
-#print axioms fordLemma51ResonantSet_card_le_trivial
-#print axioms fordLemma51ResonantSet_card_le_rawW
-#print axioms fordLemma51MomentT_le_windowMoment_mul_rawW
 
 end
 

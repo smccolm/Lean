@@ -179,13 +179,6 @@ theorem heathBrown_low_max_eq_second
   rw [div_le_div_iff₀ hdenTwo hdenFour]
   nlinarith
 
-#print axioms heathBrown_low_first_term
-#print axioms heathBrown_antedb_low_third_intermediate_counterexample
-#print axioms heathBrown_low_second_term
-#print axioms heathBrown_low_third_term
-#print axioms heathBrown_low_auxiliary_slope_le
-#print axioms heathBrown_low_max_eq_first
-#print axioms heathBrown_low_max_eq_second
 
 end
 

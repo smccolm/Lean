@@ -274,9 +274,6 @@ theorem pintz_physical_finite_density
               (harmonic (pintzMobiusCutoff lambda) : ℝ))) := by
       ring
 
-#print axioms pintz_low_zero_weight_le
-#print axioms pintz_physical_high_density
-#print axioms pintz_physical_finite_density
 
 end
 

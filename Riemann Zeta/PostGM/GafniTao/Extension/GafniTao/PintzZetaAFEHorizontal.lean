@@ -137,7 +137,5 @@ theorem tendsto_hIntegral'_pintzZetaAFE_top_zero
     (tendsto_hIntegral_pintzZetaAFE_top_zero s c hc).const_smul
       (1 / (2 * Real.pi * I))
 
-#print axioms exists_pintzZetaAFEContourIntegrand_horizontal_bound
-#print axioms tendsto_hIntegral'_pintzZetaAFE_top_zero
 
 end GafniTao

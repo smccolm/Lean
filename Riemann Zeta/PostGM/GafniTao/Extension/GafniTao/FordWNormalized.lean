@@ -141,8 +141,6 @@ theorem fordLemma51WReal_full_prod_le
         rw [← Finset.prod_filter]
         simp [fordGoodDegreeSet]]
 
-#print axioms fordWReal_secondBranch_eq_normalized
-#print axioms fordLemma51WReal_full_prod_le
 
 end
 

@@ -121,11 +121,6 @@ theorem ford_equation_5_4
             fordLemma51ShiftedCount k s B d) := by
       rw [ford_equation_5_5]
 
-#print axioms fordLemma51DifferenceVector_eq_sourcePower_sub
-#print axioms mem_fordLemma51ResonantDisplacementBox
-#print axioms card_fordLemma51ResonantDisplacementBox
-#print axioms ford_equation_5_5
-#print axioms ford_equation_5_4
 
 end
 

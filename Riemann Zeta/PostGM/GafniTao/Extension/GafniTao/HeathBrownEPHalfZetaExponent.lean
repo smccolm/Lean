@@ -145,8 +145,6 @@ theorem heathBrownHalfZetaKappa_lt_inv_sqrt_three :
   have hprodNonneg : 0 ≤ 2 * Real.sqrt 6 * Real.sqrt 3 := by positivity
   nlinarith
 
-#print axioms heathBrownHalf_zeta_exponent_le
-#print axioms heathBrownHalfZetaKappa_lt_inv_sqrt_three
 
 end
 

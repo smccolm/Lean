@@ -155,13 +155,6 @@ theorem norm_heathBrownExponentialSum_le_interior_add_two
       rw [norm_heathBrownPhase, norm_heathBrownPhase]
       ring
 
-#print axioms iteratedDeriv_heathBrownInteriorShift
-#print axioms heathBrownInteriorShift_contDiffOn
-#print axioms heathBrownInteriorCompact_subset
-#print axioms heathBrownInteriorShift_deriv_bounds
-#print axioms sum_Icc_two_sub_one_eq_shifted
-#print axioms heathBrownExponentialSum_interior_identity
-#print axioms norm_heathBrownExponentialSum_le_interior_add_two
 
 end
 

@@ -154,8 +154,6 @@ theorem norm_riemannZeta_sub_fordPartialSum_le_thirty
       have hp := Real.rpow_nonneg htPos.le (-sigma)
       nlinarith
 
-#print axioms fordRiemannDadaroCutoff_negPower_le_two_mul
-#print axioms norm_riemannZeta_sub_fordPartialSum_le_thirty
 
 end
 

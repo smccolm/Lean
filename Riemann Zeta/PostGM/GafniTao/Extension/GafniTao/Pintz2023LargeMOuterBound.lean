@@ -140,9 +140,6 @@ theorem pintz2023LargeMFactorizedBlock_corollary_three
     _ = C * (X : ℝ) ^ xi * ((harmonic X : ℚ) : ℝ) *
           Q ^ (-3 * epsilon) := by ring
 
-#print axioms pintz2023LargeMFactorizedBlock_eq_sum_Icc
-#print axioms sum_Icc_rpow_sub_one_le_rpow_mul_harmonic
-#print axioms pintz2023LargeMFactorizedBlock_corollary_three
 
 end
 

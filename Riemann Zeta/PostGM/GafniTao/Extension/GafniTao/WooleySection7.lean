@@ -114,7 +114,6 @@ theorem wooleySourcePolynomial_lemma_7_1
             wooleySourcePolynomialMixedMean phi s r p B
               (wooleySection7NextB k r b) b nu gamma := by ring
 
-#print axioms wooleySourcePolynomial_lemma_7_1
 
 end
 

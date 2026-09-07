@@ -142,8 +142,6 @@ theorem integrable_pintzGaussianKernel_vertical
             rw [div_eq_mul_inv]
             nlinarith [inv_nonneg.mpr hcabs.le]
 
-#print axioms norm_pintzGaussianNumerator_vertical
-#print axioms integrable_pintzGaussianKernel_vertical
 
 end
 

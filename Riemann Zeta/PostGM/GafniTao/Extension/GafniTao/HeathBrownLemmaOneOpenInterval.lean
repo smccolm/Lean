@@ -74,7 +74,6 @@ theorem norm_heathBrownExponentialSum_le_sourceScale_open_of_vmvt
         heathBrownHChoice k A lambda) + 2 := by gcongr
     _ = _ := by ring
 
-#print axioms norm_heathBrownExponentialSum_le_sourceScale_open_of_vmvt
 
 end
 

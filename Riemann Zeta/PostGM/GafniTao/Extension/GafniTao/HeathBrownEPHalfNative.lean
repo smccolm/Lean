@@ -65,7 +65,6 @@ theorem heathBrownHalfExponentialSumBound_native :
             (le_max_of_le_right (le_max_right _ _))
         exact hraw.trans (mul_le_mul_of_nonneg_right hcoeff hpowNonneg)
 
-#print axioms heathBrownHalfExponentialSumBound_native
 
 end
 

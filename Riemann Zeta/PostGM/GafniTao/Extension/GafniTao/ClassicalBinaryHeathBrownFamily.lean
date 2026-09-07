@@ -125,8 +125,6 @@ theorem classicalBinaryColorFamily_powerWindow_or_longTypeI
     label.1 hAlt.2.2.2
   simpa only [classicalBinaryHeathBrownHeight] using hWindow
 
-#print axioms classicalBinaryColorFamily_oriented_data
-#print axioms classicalBinaryColorFamily_powerWindow_or_longTypeI
 
 end
 

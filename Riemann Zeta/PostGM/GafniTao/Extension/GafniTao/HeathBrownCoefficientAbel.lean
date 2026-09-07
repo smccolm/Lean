@@ -167,11 +167,6 @@ theorem norm_heathBrown_centerWeyl_le
               ((Finset.mem_Ico.mp hj).2.trans_le hQH)
     _ = _ := by rw [← Finset.mul_sum]
 
-#print axioms heathBrownWeylSum_eq_natural_sum
-#print axioms heathBrownNaturalMonomial_eq_center_mul_displacementPhase
-#print axioms heathBrownCoefficientWeight_mul_naturalMonomial
-#print axioms heathBrown_centerWeyl_abel_identity
-#print axioms norm_heathBrown_centerWeyl_le
 
 end
 

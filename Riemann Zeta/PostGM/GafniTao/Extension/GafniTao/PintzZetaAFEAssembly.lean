@@ -139,9 +139,5 @@ theorem pintzZetaAFE_vertical_limit_native (s : ℂ) {c : ℝ}
   have hfinite := pintzZetaAFE_truncated_native s hc hH
   linear_combination hfinite
 
-#print axioms hIntegral_pintzZetaAFE_bottom
-#print axioms vIntegral_pintzZetaAFE_left
-#print axioms pintzZetaAFE_truncated_native
-#print axioms pintzZetaAFE_vertical_limit_native
 
 end GafniTao

@@ -103,10 +103,6 @@ theorem fordIntegerDifferenceSystem_T_bounds
   · exact Nat.le_mul_of_pos_left T hy
   · exact Nat.mul_le_mul_right T hyP
 
-#print axioms fordIntegerFiniteDifference_eval
-#print axioms fordIntegerFiniteDifference_map
-#print axioms fordIntegerDifferenceSystem
-#print axioms fordIntegerDifferenceSystem_T_bounds
 
 end
 

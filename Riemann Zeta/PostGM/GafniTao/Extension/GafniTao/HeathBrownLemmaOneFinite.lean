@@ -84,8 +84,6 @@ theorem heathBrown_lemma_one_finite_preVMVT
         heathBrownIntegratedMajorant N k H s f +
       V * ENNReal.ofReal ((H : ℝ) ^ 2) := by gcongr
 
-#print axioms heathBrown_H_mul_exponentialSum_norm_le
-#print axioms heathBrown_lemma_one_finite_preVMVT
 
 end
 

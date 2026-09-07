@@ -78,9 +78,6 @@ theorem wooleyMonomialPadicConcentration_of_polynomialCorollary32
     have hmul := (div_le_iff₀ hQpowPos).mp hbound
     simpa only [Nat.cast_pow, mul_assoc] using hmul
 
-#print axioms wooleyPadicCount_degree_zero
-#print axioms wooley_mul_ceilDiv_self
-#print axioms wooleyMonomialPadicConcentration_of_polynomialCorollary32
 
 end
 

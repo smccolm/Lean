@@ -32,7 +32,7 @@ def HeathBrownTwelfthPacket
   (∀ t ∈ W, V ≤ heathBrownCriticalZetaNorm t)
 
 /-- Heath--Brown (1978), Theorem 2, equation (7), with the Vinogradov
-constant exposed.  The theorem is deliberately a proposition until its
+The constant exposed.  The theorem is deliberately a proposition until its
 analytic proof is assembled in the subsequent modules. -/
 def HeathBrownDiscreteTwelfthMoment : Prop :=
   ∃ C : Real, 0 < C ∧
@@ -86,9 +86,6 @@ theorem heathBrownTwelfthPacket_subset
   · intro t ht
     exact hpacket.2.2 t (hSW ht)
 
-#print axioms heathBrownDiscreteTwelfthMoment_dyadic
-#print axioms heathBrownTwelfthMajorant_nonneg
-#print axioms heathBrownTwelfthPacket_subset
 
 end
 

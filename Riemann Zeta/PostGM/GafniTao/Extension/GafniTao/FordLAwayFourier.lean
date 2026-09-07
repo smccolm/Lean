@@ -111,10 +111,6 @@ theorem fordL_diagonal_le_k_mul_P_mul_reduced
   (fordL_diagonal_le_marked Ψ s P Q p q r).trans
     (fordL_marked_card_le Ψ s P Q p q r)
 
-#print axioms fordLAway_character_mean_eq_count
-#print axioms fordLAway_card_eq_reduced
-#print axioms fordL_marked_card_le
-#print axioms fordL_diagonal_le_k_mul_P_mul_reduced
 
 end
 

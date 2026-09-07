@@ -41,7 +41,6 @@ theorem pintz2023Equation47Polynomial_eq_truncated
   push_cast
   ring
 
-#print axioms pintz2023Equation47Polynomial_eq_truncated
 
 end
 

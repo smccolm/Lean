@@ -110,9 +110,6 @@ theorem fordLCount_le_trivial
         FordLEquation ψ p q r v)
     _ = P ^ (2 * k) * Q ^ (2 * s) := fintype_card_fordKVariables k s P Q
 
-#print axioms fordBoxValue_mem_Icc
-#print axioms fordKCount_le_trivial
-#print axioms fordLCount_le_trivial
 
 end
 

@@ -184,9 +184,6 @@ theorem pintz2023_inverseMellin_exp_neg {x : ℝ} (hx : 0 < x) :
           (((2 : ℝ) : ℂ) + (t : ℂ) * I))) = Real.exp (-x) at hInv
   simpa only [hMellinEq] using hInv
 
-#print axioms pintz2023_Gamma_two_vertical_decay
-#print axioms integrable_pintz2023_Gamma_two_vertical
-#print axioms pintz2023_inverseMellin_exp_neg
 
 end
 

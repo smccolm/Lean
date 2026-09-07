@@ -560,9 +560,6 @@ theorem fordLocalAnnularInverseSquare_le_general_scale
     _ = fordGeneralLocalCountConstant *
         fordGeneralLocalCountScaleUpper A B t v q / v ^ 2 := by ring
 
-#print axioms fordLocalAnnularInverseSquare_eq_cumulative_integral
-#print axioms fordLocalAnnularInverseSquare_le_general_integral
-#print axioms fordLocalAnnularInverseSquare_le_general_scale
 
 end
 

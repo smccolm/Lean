@@ -5,7 +5,7 @@ import GafniTao.FordDadaroPhaseBounds
 
 The exact formula is converted to a single `15 * t^(-sigma)` norm bound.
 The subsequent large-height module will absorb this into Ford's `10^-80`
-constant.
+The constant.
 -/
 
 open Complex
@@ -121,7 +121,6 @@ theorem norm_riemannZeta_sub_fordFiniteApproximation_le_fifteen
       norm_num
     _ ≤ 15 * t ^ (-sigma) := by gcongr
 
-#print axioms norm_riemannZeta_sub_fordFiniteApproximation_le_fifteen
 
 end
 

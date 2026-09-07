@@ -56,9 +56,6 @@ theorem ford_shifted_exponential_sum_small_lambda_physical
   exact ford_shifted_exponential_sum_small_lambda
     hN hNR hR hu0 hu1 hNt htN hlambdaLower hlambdaUpper
 
-#print axioms one_le_fordLambda
-#print axioms ford_height_le_square_of_lambda_le_two
-#print axioms ford_shifted_exponential_sum_small_lambda_physical
 
 end
 

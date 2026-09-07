@@ -605,13 +605,6 @@ theorem heathBrownTune_physical_exponents_le
     hsigma0Lower hsigma0Order hTypeIReserve hReflectedReserve hII.1 hII.2.2
     hTypeIIReserve
 
-#print axioms heathBrownTuneCube
-#print axioms heathBrownTuneSigma0_lower
-#print axioms heathBrownTune_sigma0_le_lower_effective
-#print axioms heathBrownTune_typeII_effective_between
-#print axioms heathBrownTune_reflected_budget
-#print axioms heathBrownTune_sigma0_le_reflected_effective
-#print axioms heathBrownTune_physical_exponents_le
 
 end
 

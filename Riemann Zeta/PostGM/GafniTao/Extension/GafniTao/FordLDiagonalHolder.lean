@@ -150,9 +150,6 @@ theorem fordL_reduced_holder
   rw [hleft, hrightA, hrightB] at hholder
   simpa [a, b] using hholder
 
-#print axioms ford_lintegral_two_holder
-#print axioms ford_diagonal_holder_point
-#print axioms fordL_reduced_holder
 
 end
 

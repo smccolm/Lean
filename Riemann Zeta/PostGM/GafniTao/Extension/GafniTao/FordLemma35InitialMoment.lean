@@ -139,11 +139,6 @@ theorem fordVinogradovMomentBound_initial (k : ℕ) :
   rw [fordLambda34_initial]
   exact_mod_cast h
 
-#print axioms ford_elementary_eq_of_powerSums_eq_rat
-#print axioms ford_multiset_eq_of_powerSums_eq_rat
-#print axioms ford_power_solution_exists_perm
-#print axioms fordVinogradovMomentNat_initial_le
-#print axioms fordVinogradovMomentBound_initial
 
 end
 

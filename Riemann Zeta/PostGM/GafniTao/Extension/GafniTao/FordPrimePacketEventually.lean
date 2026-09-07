@@ -291,15 +291,6 @@ theorem exists_fordPrimeSet_relative_threshold
   have hpFloor := hM₀ M hM p hp
   exact (Nat.cast_le.mpr hpFloor).trans (Nat.floor_le (by positivity))
 
-#print axioms eventually_abs_chebyshev_error_le
-#print axioms eventually_chebyshev_relative_interval_lower
-#print axioms eventually_nat_mul_log_relative_le
-#print axioms eventually_fordPrimeInterval_card_ge
-#print axioms fordPrimeSet_le_of_interval_card
-#print axioms eventually_fordPrimeSet_le_relative
-#print axioms eventually_fordPrimeSet_le_two_mul
-#print axioms exists_fordPrimeSet_two_mul_threshold
-#print axioms exists_fordPrimeSet_relative_threshold
 
 end
 

@@ -267,12 +267,6 @@ theorem absoluteSlab_sharpMollified_energy_witness
       dsimp only [N]
       simpa only [N, A, k] using hrLarge
 
-#print axioms norm_conjugate_normalizedSharpMollifiedLineCoeff_le_one
-#print axioms positiveSlab_sharpMollified_energy_witness
-#print axioms conj_mem_positiveSlab_of_mem_negativeSlab
-#print axioms signedNormalizedSharpCoeff_zero
-#print axioms signedNormalizedSharpCoeff_one
-#print axioms absoluteSlab_sharpMollified_energy_witness
 
 end
 

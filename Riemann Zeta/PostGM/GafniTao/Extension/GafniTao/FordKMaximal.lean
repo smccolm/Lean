@@ -89,9 +89,6 @@ theorem fordKMaximal_double
       fordKCount Ψ s P Q q :=
   hmax _
 
-#print axioms exists_fordKMaximal
-#print axioms fordDoubleIntegerPolynomialSystem
-#print axioms fordKMaximal_double
 
 end
 

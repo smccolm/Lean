@@ -112,8 +112,6 @@ theorem fordPotential36_iterated
           push_cast
           ring
 
-#print axioms fordPotential36_sequence_step
-#print axioms fordPotential36_iterated
 
 end
 

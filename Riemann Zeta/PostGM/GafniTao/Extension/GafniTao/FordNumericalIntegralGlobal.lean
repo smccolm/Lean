@@ -151,9 +151,6 @@ theorem integral_fordNormalizedRatio_le_source_constant_global
   · exact integral_fordNormalizedRatio_le_source_constant_large
       (le_of_lt (lt_of_not_ge hsmall))
 
-#print axioms integral_fordNormalizedRatio_le_gaussians
-#print axioms integral_fordNormalizedRatio_le_source_constant_large
-#print axioms integral_fordNormalizedRatio_le_source_constant_global
 
 end
 

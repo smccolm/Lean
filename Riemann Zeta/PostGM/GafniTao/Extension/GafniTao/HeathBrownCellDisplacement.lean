@@ -72,11 +72,6 @@ theorem abs_heathBrownCoefficientDisplacement_le_radius
   have hj := hα j (Set.mem_univ j)
   simpa only [mem_closedBall, dist_comm] using hj
 
-#print axioms exists_unitAddCircle_centeredLift
-#print axioms coe_unitAddCircleCenteredLift
-#print axioms abs_unitAddCircleCenteredLift
-#print axioms coe_heathBrownCoefficientDisplacement
-#print axioms abs_heathBrownCoefficientDisplacement_le_radius
 
 end
 

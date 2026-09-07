@@ -344,7 +344,6 @@ theorem fordLocalAnnularInverseSquare_le_general_sharp
         (fordGeneralLocalCountBase A t v / v ^ 2 +
           20 * B * Real.log t * v ^ (-1 / 2 : ℝ)) := by ring
 
-#print axioms fordLocalAnnularInverseSquare_le_general_sharp
 
 end
 

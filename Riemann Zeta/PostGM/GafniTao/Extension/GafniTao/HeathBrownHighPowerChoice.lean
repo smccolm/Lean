@@ -125,11 +125,6 @@ theorem heathBrownHighPower_is_first
     norm_num
     linarith
 
-#print axioms heathBrownHighPower_scale_window
-#print axioms heathBrownHighPower_companion_scale
-#print axioms heathBrownHighPower_companion_scale_strong
-#print axioms heathBrownHighPower_companion_huxley_range
-#print axioms heathBrownHighPower_is_first
 
 end
 

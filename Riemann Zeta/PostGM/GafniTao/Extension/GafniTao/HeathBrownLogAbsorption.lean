@@ -70,9 +70,6 @@ theorem heathBrown_one_add_log_rpow_le
     exact Real.rpow_le_rpow_of_exponent_le hNReal hexponent
   exact hmain.trans (mul_le_mul_of_nonneg_left hpower (by positivity))
 
-#print axioms heathBrownLogConstant_pos
-#print axioms heathBrown_one_add_log_le
-#print axioms heathBrown_one_add_log_rpow_le
 
 end
 

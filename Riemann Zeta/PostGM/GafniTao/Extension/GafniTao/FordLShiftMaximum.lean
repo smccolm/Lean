@@ -194,8 +194,6 @@ theorem exists_fordL_aggregateIntegral_le_oneShift
       rw [hpow]
       ring
 
-#print axioms fordL_aggregateIntegral_le_signedSum
-#print axioms exists_fordL_aggregateIntegral_le_oneShift
 
 end
 

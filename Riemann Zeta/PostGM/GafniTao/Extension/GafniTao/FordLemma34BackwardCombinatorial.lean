@@ -74,7 +74,6 @@ theorem ford_equation_3_10_K_bound
     exact hIH Θ hT hTbound p hp q hq
   · exact hLnonneg
 
-#print axioms ford_equation_3_10_K_bound
 
 end
 

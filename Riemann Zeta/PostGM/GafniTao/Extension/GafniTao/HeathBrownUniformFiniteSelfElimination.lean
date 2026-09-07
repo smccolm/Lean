@@ -78,8 +78,6 @@ theorem HeathBrownUniformPoweredEnergyOutput.energy_le_two_cardinality_bounds
   apply energyOutput.energy_le_scalar hC0 hC2 hC4 hB hSep
   exact le_min cardPacket.card_le_bound nextPacket.card_le_bound
 
-#print axioms HeathBrownUniformPoweredEnergyOutput.energy_le_scalar
-#print axioms HeathBrownUniformPoweredEnergyOutput.energy_le_two_cardinality_bounds
 
 end
 

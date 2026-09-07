@@ -102,7 +102,7 @@ theorem reflected_source_exponent_le
 /-- Exact conversion of a literal reflected threshold into the source
 threshold used by the powered Heath--Brown machinery. -/
 theorem reflected_source_threshold_on_expanded_height
-    {T tau theta Uscale d u beta zetaShell zetaConst loss eta C L : Real}
+    {T sigma tau theta Uscale d u beta zetaShell zetaConst loss eta C L : Real}
     {P : Nat}
     (hT : 1 <= T) (hP : 1 < P)
     (hTheta : theta = typeILogarithmicScale T P)
@@ -235,11 +235,6 @@ theorem reflected_expanded_height_lower_scale
   field_simp [hbeta.ne', hUscale.ne']
   nlinarith
 
-#print axioms reflected_source_exponent_le
-#print axioms reflected_source_threshold_on_expanded_height
-#print axioms reflected_dyadic_expanded_power_window
-#print axioms reflected_dyadic_reciprocal_scale_le
-#print axioms reflected_expanded_height_lower_scale
 
 end
 

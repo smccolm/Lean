@@ -169,11 +169,6 @@ theorem wooleyPolynomialMixedGridMean_monomial {Q : ℕ}
     wooleyWeightedResidueGridSum
   simp_rw [wooleyPolynomialGridPhase_monomial]
 
-#print axioms wooleyMonomialPolynomialSystem_spaced
-#print axioms wooleyPolynomialGridPhase_monomial
-#print axioms wooleyPolynomialWeightedGridMean_monomial
-#print axioms wooleyPolynomialConditionedGridMean_monomial
-#print axioms wooleyPolynomialMixedGridMean_monomial
 
 end
 

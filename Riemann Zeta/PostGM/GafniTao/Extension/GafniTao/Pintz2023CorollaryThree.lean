@@ -134,9 +134,6 @@ theorem pintz2023_corollary_three_native
       linarith
     _ = (2 * C₀) * (N : ℝ) ^ (-3 * epsilon) := by ring
 
-#print axioms pintz2023_height_power_le_of_critical_scale
-#print axioms pintz2023_first_term_le_of_critical_scale
-#print axioms pintz2023_corollary_three_native
 
 end
 

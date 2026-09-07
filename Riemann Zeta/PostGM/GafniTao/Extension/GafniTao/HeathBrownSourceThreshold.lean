@@ -6,7 +6,7 @@ import GafniTao.HeathBrownPoweredEnergy
 
 The Type-II alternative initially carries the normalization used by the
 sharp-mollifier detector.  This file rewrites that literal quotient into a
-constant times the expected power `N ^ (sigma - eta)`.  Keeping the equality
+The constant times the expected power `N ^ (sigma - eta)`.  Keeping the equality
 exact avoids hiding the coefficient, dyadic, or mollifier losses when the
 finite cardinality estimates are converted to logarithmic exponents.
 -/
@@ -133,11 +133,6 @@ theorem heathBrownPoweredThreshold_normalized
   congr 1
   ring
 
-#print axioms classicalBinarySelectedN_typeII_eq
-#print axioms classicalBinarySelectedThreshold_typeII_eq
-#print axioms classicalBinarySelectedThreshold_typeII_normalized
-#print axioms classicalBinarySelectedThreshold_typeII_selected_normalized
-#print axioms heathBrownPoweredThreshold_normalized
 
 end
 

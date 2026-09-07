@@ -119,7 +119,6 @@ theorem pintz2023_equation420_residue_decay
       exact mul_le_mul_of_nonneg_left
         (Real.rpow_le_rpow_of_exponent_le hT hexponent) (by norm_num)
 
-#print axioms pintz2023_equation420_residue_decay
 
 end
 

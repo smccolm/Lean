@@ -90,9 +90,6 @@ theorem fordCorollary64_scale_le_sqrt
       rw [div_le_div_iff₀ hden (by norm_num : (0 : ℝ) < 2)]
       nlinarith
 
-#print axioms fordCorollary64Mu_bounds
-#print axioms fordCorollary64_height_mul_scale
-#print axioms fordCorollary64_height_le_degree
 
 end
 

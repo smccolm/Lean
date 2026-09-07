@@ -228,14 +228,6 @@ theorem wooley_section7_hard_exponent_loss
     nlinarith [show (2 : ℝ) ≤ k by exact_mod_cast hk]
   nlinarith
 
-#print axioms wooley_section7_BPrimeNat_add
-#print axioms wooley_section7_BPrimeNat_pos
-#print axioms wooley_section7_BPrimeNat_le_zero
-#print axioms wooley_section7_BPrime_le_mul_HPrime
-#print axioms wooley_section7_a_add_HPrime_le_nextB
-#print axioms wooley_equation_7_13
-#print axioms wooley_section7_hard_triangular_loss
-#print axioms wooley_section7_hard_exponent_loss
 
 end
 

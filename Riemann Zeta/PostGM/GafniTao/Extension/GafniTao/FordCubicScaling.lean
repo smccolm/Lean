@@ -111,9 +111,6 @@ theorem integral_fordCubicExp_Ioi_eq_scaled
   rw [hchange]
   simp [smul_eq_mul, hL.ne']
 
-#print axioms fordCubicB_mul_scale_cubed
-#print axioms fordCubicExponent_scale
-#print axioms integral_fordCubicExp_Ioi_eq_scaled
 
 end
 

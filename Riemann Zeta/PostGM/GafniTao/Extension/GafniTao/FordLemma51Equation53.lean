@@ -198,11 +198,6 @@ theorem ford_equation_5_3
       rw [← pow_mul, hMexp]
       ring
 
-#print axioms fordLemma51_epsilon_sum_eq_weighted_fiber_sum
-#print axioms fordLemma51_weighted_fiber_power_bound
-#print axioms fordLemma51U_nnnorm_pow_le
-#print axioms fordLemma51_nnnorm_epsilon_sum_eq_norm_power_sum
-#print axioms ford_equation_5_3
 
 end
 

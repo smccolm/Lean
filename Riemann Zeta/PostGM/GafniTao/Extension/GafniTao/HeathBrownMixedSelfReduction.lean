@@ -134,7 +134,6 @@ theorem HeathBrownMixedSourceOutput.energy_le_sum_self
           (ApproxAddEnergy 1 (classicalBinaryColorFamily d3 output.label3) : Real)) := by
         simp only [heathBrownMixedSelectionLoss, Q, D, Nat.cast_mul]
 
-#print axioms HeathBrownMixedSourceOutput.energy_le_sum_self
 
 end
 

@@ -90,7 +90,6 @@ theorem heathBrown_physical_majorant_exponents_le
     exact max_le hDirect hReflected
   · simpa only [heathBrownTypeIIEnvelopeExponent, sigmaII, LII] using hII
 
-#print axioms heathBrown_physical_majorant_exponents_le
 
 end
 

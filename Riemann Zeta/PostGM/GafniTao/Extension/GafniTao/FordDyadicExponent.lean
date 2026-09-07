@@ -106,10 +106,6 @@ theorem norm_fordDyadicWeightedShellSum_le_exponent_sum
         Real.exp (fordDyadicExponent 133.66 sigma t j) := by
       rw [Finset.mul_sum]
 
-#print axioms log_two_pow
-#print axioms fordTheorem2_dyadic_power_eq_exp
-#print axioms fordDyadicRawMajorant_le_source
-#print axioms norm_fordDyadicWeightedShellSum_le_exponent_sum
 
 end
 

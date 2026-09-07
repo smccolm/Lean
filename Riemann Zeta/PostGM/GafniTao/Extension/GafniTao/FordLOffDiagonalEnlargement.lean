@@ -158,10 +158,6 @@ theorem fordLOffDiagonalCount_le_fixedSigma
   exact Nat.card_le_card_of_injective _
     (fordLOffDiagonalToFixedSigma_injective Ψ)
 
-#print axioms fordLOffDiagonalCodeOf_injective
-#print axioms fordLFixedSolutionOf
-#print axioms fordLOffDiagonalToFixedSigma_injective
-#print axioms fordLOffDiagonalCount_le_fixedSigma
 
 end
 

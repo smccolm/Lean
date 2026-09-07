@@ -154,8 +154,6 @@ theorem eventually_actualTypeI_selectedThreshold_lower
         (((3 / 4 : Real) * (U ^ (-delta2) / 2)) / (d.kI : Real)) := by
       rw [hNeq]
 
-#print axioms eventually_const_mul_sharp_cutoff_clog_le_rpow
-#print axioms eventually_actualTypeI_selectedThreshold_lower
 
 end
 

@@ -153,9 +153,6 @@ theorem exists_pintz2023_variable_dyadic_block_and_subset
       dirichletPoly_pintz2023LocalizedLineCoeff_eq_intervalBlock]
       using hBlock
 
-#print axioms pintz2023LocalizedInterval_subset_dyadic
-#print axioms dirichletPoly_pintz2023LocalizedLineCoeff_eq_intervalBlock
-#print axioms exists_pintz2023_variable_dyadic_block_and_subset
 
 end
 

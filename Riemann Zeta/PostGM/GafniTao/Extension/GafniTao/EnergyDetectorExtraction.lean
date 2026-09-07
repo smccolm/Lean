@@ -133,7 +133,6 @@ theorem finite_shifted_dyadic_energy_extraction
     simp [mul_comm]
   simpa only [hCard, Lrep, W, color, representative, scale, shift] using hEnergy
 
-#print axioms finite_shifted_dyadic_energy_extraction
 
 end
 

@@ -175,11 +175,6 @@ theorem fordScaledCoreCoefficient_root_le_uniform
       field_simp
       norm_num
 
-#print axioms fordMomentCoefficient36_le_sharp_power
-#print axioms fordDoubleSquareCoefficient_le_sharp_base_power
-#print axioms fordScaledCoreCoefficient_le_sharp_base_power
-#print axioms fordScaledCoreCoefficient_root_le_sharp
-#print axioms fordScaledCoreCoefficient_root_le_uniform
 
 end
 

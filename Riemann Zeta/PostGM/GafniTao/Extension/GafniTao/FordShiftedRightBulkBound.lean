@@ -202,7 +202,6 @@ theorem fordShiftedDetectorPhysicalVerticalBulk_right_lower
     _ ≤ (1 / (4 * eta)) * ∫ u in a..b, f u :=
       mul_le_mul_of_nonneg_left hlower hcoeff.le
 
-#print axioms fordShiftedDetectorPhysicalVerticalBulk_right_lower
 
 end
 

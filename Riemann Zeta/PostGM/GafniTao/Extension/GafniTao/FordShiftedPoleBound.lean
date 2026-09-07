@@ -129,8 +129,6 @@ theorem eventually_exists_fordLocalDisk_detector_rightPoleBound
   refine ⟨eta', RUpper, RLower, hetaLower, hetaUpper, hRU, hRL, ?_⟩
   exact hdet.trans_le (by linarith [hpole])
 
-#print axioms fordShiftedDetector_poleCorrection_le_inv_sq
-#print axioms eventually_exists_fordLocalDisk_detector_rightPoleBound
 
 end
 

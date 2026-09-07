@@ -136,11 +136,6 @@ theorem heathBrownPairCountTwo_card_le_restricted_shift_sum
   exact heathBrownPairCountTwo_card_le_shift_sum N k H
     (heathBrownBlockParameter A lambda N) f
 
-#print axioms heathBrownShiftBound_le_N
-#print axioms heathBrownPositiveShiftFiber_shift_le
-#print axioms heathBrownPositiveShiftFiber_eq_empty_of_shiftBound_lt
-#print axioms heathBrown_positiveShift_sum_restrict
-#print axioms heathBrownPairCountTwo_card_le_restricted_shift_sum
 
 end
 

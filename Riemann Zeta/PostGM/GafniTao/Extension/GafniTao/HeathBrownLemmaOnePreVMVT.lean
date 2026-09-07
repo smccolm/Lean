@@ -90,9 +90,6 @@ theorem heathBrown_centerWeyl_sum_preVMVT
     _ = (1 + ENNReal.ofReal (2 * Real.pi * ((k : ℝ) ^ 2 / H)) * Q) *
         heathBrownIntegratedMajorant N k H s f := by ring
 
-#print axioms heathBrownIntegratedWeyl_le_majorant
-#print axioms card_Ico_one_le
-#print axioms heathBrown_centerWeyl_sum_preVMVT
 
 end
 

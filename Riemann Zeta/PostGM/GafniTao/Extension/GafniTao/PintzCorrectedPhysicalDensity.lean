@@ -155,8 +155,6 @@ theorem pintz_corrected_physical_finite_density
       add_le_add hhigh hlowMul
     _ = _ := by ring
 
-#print axioms pintz_corrected_physical_high_density
-#print axioms pintz_corrected_physical_finite_density
 
 end
 

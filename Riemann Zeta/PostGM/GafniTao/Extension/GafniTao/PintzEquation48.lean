@@ -228,9 +228,6 @@ theorem exists_large_pintzFiniteMobiusPolynomial
     nlinarith [Real.pi_gt_three]
   linarith
 
-#print axioms norm_pintzF_le
-#print axioms integral_norm_pintzF_le_equation48Majorant
-#print axioms exists_large_pintzFiniteMobiusPolynomial
 
 end
 

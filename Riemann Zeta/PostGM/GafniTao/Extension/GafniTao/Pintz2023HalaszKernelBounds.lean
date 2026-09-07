@@ -122,10 +122,6 @@ theorem pintz2023HalaszKernel_uniform_lower_pos :
   rw [sub_pos]
   exact Real.exp_lt_one_iff.mpr (by norm_num)
 
-#print axioms pintz2023HalaszKernel_factor
-#print axioms pintz2023HalaszKernel_le_div
-#print axioms pintz2023HalaszKernel_le_one
-#print axioms pintz2023HalaszKernel_lower_Ioc
 
 end
 

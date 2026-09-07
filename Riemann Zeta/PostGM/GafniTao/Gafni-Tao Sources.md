@@ -155,7 +155,13 @@ theorem in the isolated extension.
     `exp(-c log(x)^(1/10))` error. In the pinned revision the advertised
     `StrongPNT` conclusion remains a blueprint comment rather than a theorem.
     Neither fact supplies the Vinogradov-Korobov/near-one input automatically.
-    Import only audited modules without admitted experimental dependencies.
+    The release imports `chebyshev_asymptotic` from `Consequences.lean`. The
+    exact upstream closure contains two unrelated admitted Fourier-decay
+    declarations in `Wiener.lean`. The isolated package retains the exact
+    83-file transitive closure jointly used by the frozen foundation and
+    Gafni-Tao, deleting only the unreachable four-declaration block containing
+    those declarations. The remaining 82 files are byte-identical to the pinned
+    revision, and the local manifest records both hashes of the edited file.
 
 14. **ANTEDB.** [repository](https://github.com/teorth/expdb),
     [generated blueprint](https://teorth.github.io/expdb/blueprint.pdf).

@@ -172,8 +172,6 @@ theorem classicalBinarySelected_typeII_heathBrown_powerWindow
       exact_mod_cast hRange.1
     exact pow_le_pow_left₀ (by positivity) hLower 4
 
-#print axioms eventually_classicalBinaryHeathBrownCutoff_spec
-#print axioms classicalBinarySelected_typeII_heathBrown_powerWindow
 
 end
 

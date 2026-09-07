@@ -72,7 +72,6 @@ theorem exists_heathBrown_source_classicalBinaryShellDetectorData
   · exact hMassII
   · exact hThresholdII
 
-#print axioms exists_heathBrown_source_classicalBinaryShellDetectorData
 
 end
 

@@ -146,9 +146,6 @@ theorem eventually_exists_pintz2023_shell_detected_family
     hEtaAt, by simpa only [S] using hProvenance,
     hPhysicalLower, hUpper, hLarge⟩
 
-#print axioms pintz2023DyadicHeightShell_subset
-#print axioms eventually_eight_mul_log_le_identity
-#print axioms eventually_exists_pintz2023_shell_detected_family
 
 end
 

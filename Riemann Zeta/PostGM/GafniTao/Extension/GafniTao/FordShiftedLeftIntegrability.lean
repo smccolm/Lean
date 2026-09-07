@@ -75,8 +75,6 @@ theorem intervalIntegrable_fordShiftedLeftCoordinateIntegrand_mono
       (fordShiftedLeftCoordinateIntegrand eta sigma t) volume c d :=
   hint.mono_set hsub
 
-#print axioms intervalIntegrable_fordShiftedLeftCoordinateIntegrand
-#print axioms intervalIntegrable_fordShiftedLeftCoordinateIntegrand_mono
 
 end
 

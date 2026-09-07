@@ -113,7 +113,6 @@ theorem heathBrown_lintegral_mul_le_three_moments
   simp only [heathBrownHolderFunction, heathBrownHolderExponent]
   ring
 
-#print axioms heathBrown_lintegral_mul_le_three_moments
 
 end
 

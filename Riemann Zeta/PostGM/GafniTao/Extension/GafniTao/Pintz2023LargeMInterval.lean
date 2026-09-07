@@ -113,11 +113,6 @@ theorem pintz2023LargeMInnerBlock_localized_eq_weighted
   rw [pintz2023LocalizedInterval_eq_Ioc]
   exact pintz2023LargeMInnerBlock_source_interval_eq_weighted hd hR
 
-#print axioms pintz2023_largeM_inner_index_set
-#print axioms pintz2023LocalizedInterval_eq_Ioc
-#print axioms pintz2023LargeMInnerBlock_source_interval
-#print axioms pintz2023LargeMInnerBlock_source_interval_eq_weighted
-#print axioms pintz2023LargeMInnerBlock_localized_eq_weighted
 
 end
 

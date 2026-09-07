@@ -130,9 +130,6 @@ theorem fordL_diagonal_branch_bound
         ring
   exact_mod_cast hclosed'
 
-#print axioms fordL_reduced_holder_real
-#print axioms ford_self_holder_bound_k
-#print axioms fordL_diagonal_branch_bound
 
 end
 

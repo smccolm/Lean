@@ -80,7 +80,6 @@ theorem finite_source_arbitrary_power_packets_native
       WNext, hWNext, hCardNext, hUnitNext, hPoweredNext, hMeanNext⟩
   exact ⟨⟨hEnergyPacket⟩, ⟨hBasePacket⟩, ⟨hNextPacket⟩⟩
 
-#print axioms finite_source_arbitrary_power_packets_native
 
 end
 

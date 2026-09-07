@@ -133,12 +133,6 @@ theorem fordBinomialTranslateSystem_jacobian
     ford_lemma_3_1_integer_source ψ hT hdk z]
   rfl
 
-#print axioms fordBinomialLower_eq_zero_of_below
-#print axioms fordBinomialLower_natDegree_lt
-#print axioms fordBinomialTranslatePoly_degree
-#print axioms fordBinomialTranslatePoly_leadingCoeff
-#print axioms fordBinomialTranslateSystem
-#print axioms fordBinomialTranslateSystem_jacobian
 
 end
 

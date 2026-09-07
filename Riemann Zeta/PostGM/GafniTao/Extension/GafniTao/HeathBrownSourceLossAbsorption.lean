@@ -154,9 +154,6 @@ theorem eventually_typeII_selectedThreshold_lower
     hq hN hkIIPos hC]
   exact mul_le_mul_of_nonneg_right hCoefficient hNPower
 
-#print axioms eventually_const_mul_clog_floor_rpow_le_rpow
-#print axioms rpow_neg_le_typeII_normalization_coefficient
-#print axioms eventually_typeII_selectedThreshold_lower
 
 end
 

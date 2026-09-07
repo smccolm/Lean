@@ -44,8 +44,6 @@ theorem norm_fordFiniteHurwitzSum_floor_le_source
     (fordFiniteEndpoint_pos ht) (fordFiniteEndpoint_le ht)
     (fordFiniteEndpoint_le_two_pow_shellCount t)
 
-#print axioms fordFiniteEndpoint_le_two_pow_shellCount
-#print axioms norm_fordFiniteHurwitzSum_floor_le_source
 
 end
 

@@ -138,8 +138,6 @@ theorem ford_equation_5_6
         field_simp [hgamma.ne']
         ring
 
-#print axioms mem_fordSpacingSet
-#print axioms ford_equation_5_6
 
 end
 

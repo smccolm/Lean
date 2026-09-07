@@ -110,10 +110,6 @@ theorem signed_reflected_wide_energy_to_dyadic_self
   rw [approxAddEnergy_signedReflectionFamily] at hEnergy
   exact hEnergy
 
-#print axioms signedReflectionBase_injective
-#print axioms signedReflectionFamily_separated
-#print axioms approxAddEnergy_signedReflectionFamily
-#print axioms signed_reflected_wide_energy_to_dyadic_self
 
 end
 

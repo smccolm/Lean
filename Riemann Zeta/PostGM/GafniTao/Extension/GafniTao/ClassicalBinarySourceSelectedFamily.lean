@@ -71,7 +71,6 @@ theorem classicalBinarySourceSelectedFamily_alternative
       exact classicalBinarySelectedN_typeII_range hX
         (by rw [d.hkII_eq]) label.1 r hlabel
 
-#print axioms classicalBinarySourceSelectedFamily_alternative
 
 end
 

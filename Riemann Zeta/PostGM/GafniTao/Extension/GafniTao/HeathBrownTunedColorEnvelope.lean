@@ -189,7 +189,6 @@ theorem eventually_tuned_actual_source_color_energy_envelope
       apply Real.rpow_le_rpow_of_exponent_le hU
       linarith
 
-#print axioms eventually_tuned_actual_source_color_energy_envelope
 
 end
 

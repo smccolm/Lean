@@ -276,7 +276,7 @@ theorem wooleySourcePolynomial_lemma_9_1_of_section7
 
 /-- Exact constant-and-`p` loss absorption used after the finite grade
 selection in Lemma 9.2.  Unlike Vinogradov notation, the surviving uniform
-constant is displayed. -/
+The constant is displayed. -/
 theorem wooley_section9_constant_loss_absorption
     {p k r b nu : ℕ} {C Lambda : ℝ}
     (hp : 2 ≤ p) (hk : 2 ≤ k) (hr : 1 ≤ r) (hrk : r ≤ k - 1)
@@ -401,13 +401,6 @@ theorem wooleySourcePolynomial_lemma_9_2_of_lemma_9_1
           (p : ℝ) ^ (-(b : ℝ) * Lambda / (2 * (k : ℝ))) := by ring_nf
   exact h91.trans (by simpa only [X] using hselected)
 
-#print axioms wooley_section7_multiplier_rpow_le
-#print axioms wooley_section9_base_coefficient
-#print axioms wooley_section8_exponent_eq_rho_div
-#print axioms wooleyNextB_one
-#print axioms wooleySourcePolynomial_lemma_9_1_of_section7
-#print axioms wooley_section9_constant_loss_absorption
-#print axioms wooleySourcePolynomial_lemma_9_2_of_lemma_9_1
 
 end
 

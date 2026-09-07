@@ -188,8 +188,6 @@ theorem eventually_classicalBinaryColorFamily_source_heathBrown_alternative_nati
       hData.2.1 hData.2.2.1
     simpa only [N, p, P, R] using hPackets
 
-#print axioms eventually_rpow_le_half_self
-#print axioms eventually_classicalBinaryColorFamily_source_heathBrown_alternative_native
 
 end
 

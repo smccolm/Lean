@@ -188,19 +188,6 @@ theorem heathBrownPairCountOne_quarter_le_kernel_sum
       · intro p hp _
         exact heathBrownPairKernel_nonneg k H f p
 
-#print axioms heathBrownHat_nonneg
-#print axioms heathBrownHat_le_one
-#print axioms heathBrownHat_eq_zero_of_le_distance
-#print axioms one_half_le_heathBrownHat
-#print axioms one_quarter_le_heathBrownTriangularKernel
-#print axioms heathBrownTriangularKernel_nonneg
-#print axioms heathBrownTriangularKernel_le_one
-#print axioms heathBrownHatFourierCoefficient_zero
-#print axioms heathBrownHatFourierCoefficient_nonneg
-#print axioms heathBrownTriangularFourierCoefficient_nonneg
-#print axioms one_quarter_le_heathBrownPairKernel_of_mem
-#print axioms heathBrownPairKernel_nonneg
-#print axioms heathBrownPairCountOne_quarter_le_kernel_sum
 
 end
 

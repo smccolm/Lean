@@ -104,12 +104,6 @@ theorem hasSum_heathBrownTriangularFourierSeries
     push_cast
     rfl
 
-#print axioms heathBrownDistanceToInteger_eq_unitAddCircle_norm
-#print axioms heathBrownHat_eq_fordTent
-#print axioms heathBrownHatFourierCoefficient_eq_fordTent
-#print axioms hasSum_heathBrownHatFourierSeries
-#print axioms summable_norm_heathBrownHatFourierTerm
-#print axioms hasSum_heathBrownTriangularFourierSeries
 
 end
 

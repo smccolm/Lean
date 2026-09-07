@@ -169,9 +169,6 @@ theorem integral_heathBrownNu_sq_le_overlap_count
       rw [Finset.inter_eq_right.mpr hPS]
       simp [nsmul_eq_mul]
 
-#print axioms heathBrownNu_sq_eq_pair_sum
-#print axioms integral_heathBrownNu_sq_eq_intersections
-#print axioms integral_heathBrownNu_sq_le_overlap_count
 
 end
 

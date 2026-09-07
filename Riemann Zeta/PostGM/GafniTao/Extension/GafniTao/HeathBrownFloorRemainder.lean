@@ -113,10 +113,6 @@ theorem norm_heathBrownExponentialSum_le_fourTerm_open_of_vmvt
       nlinarith [mul_nonneg hS0 hP0, mul_nonneg hR0 hP0,
         mul_nonneg hP0 hL0, mul_nonneg hP0 hQ0]
 
-#print axioms heathBrownHChoice_cast_le_separated_scale
-#print axioms heathBrown_floor_endpoint_remainder_le
-#print axioms heathBrownLemmaOneFourTermConstant_pos
-#print axioms norm_heathBrownExponentialSum_le_fourTerm_open_of_vmvt
 
 end
 

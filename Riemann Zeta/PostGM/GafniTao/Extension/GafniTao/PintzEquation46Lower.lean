@@ -80,7 +80,6 @@ theorem one_quarter_le_norm_pintzEquation46Integral
     exact norm_add_le _ _
   linarith
 
-#print axioms one_quarter_le_norm_pintzEquation46Integral
 
 end
 

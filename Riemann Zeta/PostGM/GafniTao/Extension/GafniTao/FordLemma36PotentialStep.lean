@@ -162,9 +162,6 @@ theorem fordPotential36_actual_step
     linarith [hmono, hmodelStep, hreplace]
   simpa [d', d, beta, c] using hfinal
 
-#print axioms fordBeta36_bounds
-#print axioms fordBetaPrime36_bounds
-#print axioms fordPotential36_actual_step
 
 end
 

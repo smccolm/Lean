@@ -248,7 +248,6 @@ theorem eventually_heathBrownLong_exponentPacket
     ⟨hSigmaMain, hSigmaNext, hCaps.1, hCaps.2.1, hCaps.2.2.2.1,
       hCaps.2.2.2.2, hRelation⟩
 
-#print axioms eventually_heathBrownLong_exponentPacket
 
 end
 

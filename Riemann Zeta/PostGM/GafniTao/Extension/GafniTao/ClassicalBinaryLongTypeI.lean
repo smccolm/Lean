@@ -69,7 +69,6 @@ theorem classicalBinaryColorFamily_typeI_mhh_native :
     Wpos hsigma hN hU hV hShift hSep hBaseShell hLarge
   simpa only [Wpos, W, card_classicalBinaryOrientedFamily] using hBound
 
-#print axioms classicalBinaryColorFamily_typeI_mhh_native
 
 end
 

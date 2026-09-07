@@ -1299,25 +1299,6 @@ theorem wooley_lemma_6_3 {Q : ℕ}
   exact wooley_lemma_6_3_of_initial_conditioning
     (C := 2 * 2 ^ (s - 1)) (by positivity) hnuTheta hs gamma hinitial
 
-#print axioms wooley_critical_interpolation_term
-#print axioms wooley_pair_mixed_holder
-#print axioms wooleyResiduesSeparated_same_iff_ne
-#print axioms wooley_norm_sum_sq_le_diagonal_add_offDiagonal
-#print axioms wooley_equation_6_6
-#print axioms wooley_equation_6_7
-#print axioms wooley_equation_6_8
-#print axioms wooley_add_pow_le_two_pow_pred_mul
-#print axioms wooley_equation_6_9_pointwise
-#print axioms wooley_initial_diagonal_average
-#print axioms wooley_initial_mixed_average
-#print axioms wooley_equation_6_9
-#print axioms wooley_initialNu_lower
-#print axioms wooley_initial_conditioning_exponent
-#print axioms wooley_conditioned_mean_le_decay
-#print axioms wooley_absorb_contraction
-#print axioms wooley_initial_absorption_of_scale
-#print axioms wooley_lemma_6_1
-#print axioms wooley_lemma_6_3
 
 end
 

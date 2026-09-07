@@ -130,12 +130,6 @@ theorem ford_lemma_3_1_jacobian
   rw [hprod] at h
   exact h
 
-#print axioms fordMonicNormalize_natDegree
-#print axioms fordMonicNormalize_monic
-#print axioms ford_det_eval_polynomials
-#print axioms ford_derivative_natDegree
-#print axioms ford_derivative_leadingCoeff
-#print axioms ford_lemma_3_1_jacobian
 
 end
 

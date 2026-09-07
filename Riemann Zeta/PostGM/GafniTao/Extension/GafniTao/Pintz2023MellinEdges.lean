@@ -57,8 +57,6 @@ theorem pintz2023SmoothedZetaSum_eq_right_contour
   filter_upwards with t
   exact (pintz2023MellinContourIntegrand_right s t).symm
 
-#print axioms pintz2023_RectangleIntegral'_eq_edges
-#print axioms pintz2023SmoothedZetaSum_eq_right_contour
 
 end
 

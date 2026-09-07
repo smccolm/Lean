@@ -25,6 +25,5 @@ theorem ford_finite_holder_power
   rw [Nat.sub_add_cancel hr] at hj
   exact hp.trans hj
 
-#print axioms ford_finite_holder_power
 
 end GafniTao

@@ -172,7 +172,6 @@ theorem mixed_absoluteSlabs_sharp_detector_extraction
           5 + U0 ^ delta + U1 ^ delta + U2 ^ delta + U3 ^ delta by ring]
       using hEnergy
 
-#print axioms mixed_absoluteSlabs_sharp_detector_extraction
 
 end
 

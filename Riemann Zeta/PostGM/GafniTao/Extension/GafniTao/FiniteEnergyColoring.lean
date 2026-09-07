@@ -141,12 +141,6 @@ theorem ResonantZeroOccurrenceQuadruple.shifted_defect_le
   rw [abs_le] at h0 h1 h2 h3 hRes ⊢
   constructor <;> linarith
 
-#print axioms exists_four_coordinate_color_fiber
-#print axioms exists_four_coordinate_weighted_color_fiber
-#print axioms exists_four_coordinate_weighted_color_fiber_of_pos
-#print axioms exists_four_coordinate_weighted_color_fiber_type
-#print axioms exists_resonant_zero_occurrence_color_fiber
-#print axioms ResonantZeroOccurrenceQuadruple.shifted_defect_le
 
 end
 

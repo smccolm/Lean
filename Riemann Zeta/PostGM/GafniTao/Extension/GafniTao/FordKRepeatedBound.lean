@@ -85,8 +85,6 @@ theorem fordK_repeated_card_le_k_sq_integral
           fordKRepeatedIntegral Ψ s P Q q := by ring
     _ ≤ (k : ℝ) ^ 2 * fordKRepeatedIntegral Ψ s P Q q := by gcongr
 
-#print axioms two_mul_card_fordIndexPair_le_sq
-#print axioms fordK_repeated_card_le_k_sq_integral
 
 end
 

@@ -102,7 +102,6 @@ theorem fordCorollary64_corrected_integral_scale
   dsimp [X, Y] at hlead
   exact h63.trans (by linarith)
 
-#print axioms fordCorollary64_corrected_integral_scale
 
 end
 

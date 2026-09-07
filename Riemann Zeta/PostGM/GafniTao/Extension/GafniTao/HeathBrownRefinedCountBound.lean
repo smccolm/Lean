@@ -94,7 +94,6 @@ theorem heathBrownPairCount_card_cast_le_refined_raw
   exact hpair.trans (hlocal.trans
     (mul_le_mul_of_nonneg_left htwo' (by positivity)))
 
-#print axioms heathBrownPairCount_card_cast_le_refined_raw
 
 end
 

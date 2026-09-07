@@ -320,11 +320,6 @@ theorem fordScaledCoreDecayExponent_le
   unfold fordScaledCoreDecayExponent
   nlinarith
 
-#print axioms fordVinogradovKappa_cast
-#print axioms ford_scaled_core_power_cancellation
-#print axioms fordScaledSourceCoreMajorant_le_compact
-#print axioms fordScaledSourceCoreMajorant_le_decay
-#print axioms fordScaledCoreDecayExponent_le
 
 end
 

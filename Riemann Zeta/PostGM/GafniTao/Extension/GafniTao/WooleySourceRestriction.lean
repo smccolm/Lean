@@ -167,17 +167,6 @@ theorem wooleySourceNormalizedPolynomialResidueSum_mod_one
   rw [wooleySourceResidueMassSq_mod_one,
     wooleySourcePolynomialResidueSum_mod_one]
 
-#print axioms wooleySourceResidueSequence_apply
-#print axioms wooleySourceResidueSequence_support
-#print axioms WooleySourceSequence.Admissible.residueSequence
-#print axioms wooleySourceMassSq_residueSequence
-#print axioms wooleySourcePolynomialSum_residueSequence
-#print axioms wooleySourceNormalizedPolynomialSum_residueSequence
-#print axioms wooleySourceResidueSequence_filter
-#print axioms wooleySourceResidueSequence_eq_zero_iff
-#print axioms wooleySourceResidueMassSq_mod_one
-#print axioms wooleySourcePolynomialResidueSum_mod_one
-#print axioms wooleySourceNormalizedPolynomialResidueSum_mod_one
 
 end
 

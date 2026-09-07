@@ -53,7 +53,5 @@ theorem heathBrownLowPower_companion_pos (tau : Real) :
     0 < heathBrownLowPower tau + 1 := by
   omega
 
-#print axioms heathBrownLowPower_scale_window
-#print axioms heathBrownLowPower_companion_scale
 
 end GafniTao

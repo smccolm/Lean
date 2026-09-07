@@ -235,13 +235,6 @@ theorem ford_exponential_lemma_5_1_natural_source_denominator
     hr hs hM hM₂ hBne hBpos hBtop hMN hR hu huOne ht).trans ?_
   gcongr
 
-#print axioms fordLemma51_prefactor_normalization
-#print axioms fordLemma51W_nonneg
-#print axioms fordLemma51AnalyticCore_nonneg
-#print axioms fordLemma51DisplayedCore_eq_separated
-#print axioms fordLemma51_centralTerm_eq_displayed
-#print axioms ford_exponential_lemma_5_1_natural
-#print axioms ford_exponential_lemma_5_1_natural_source_denominator
 
 end
 

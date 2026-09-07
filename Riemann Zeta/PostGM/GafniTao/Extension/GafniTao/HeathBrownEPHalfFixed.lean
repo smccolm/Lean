@@ -93,8 +93,6 @@ theorem norm_pintz2023ExponentialBlock_le_half_kfive
   intro N R tau hN hNR hR htauLow htauHigh
   exact hbound N R tau hN hNR hR ⟨htauLow, htauHigh⟩
 
-#print axioms norm_pintz2023ExponentialBlock_le_half_kfour
-#print axioms norm_pintz2023ExponentialBlock_le_half_kfive
 
 end
 

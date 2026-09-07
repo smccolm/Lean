@@ -72,8 +72,6 @@ theorem norm_pintzGramCorrelation_le_majorant
   exact norm_partialZeta_le_pintzMajorant
     hsigmaLower hsigmaUpper hsep hY
 
-#print axioms norm_partialZeta_le_pintzMajorant
-#print axioms norm_pintzGramCorrelation_le_majorant
 
 end
 

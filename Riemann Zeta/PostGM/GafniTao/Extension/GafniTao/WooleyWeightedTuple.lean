@@ -62,8 +62,6 @@ theorem wooleySource_sum_eq_support_subtype
   exact (Finset.sum_attach gamma.support
     (fun n => gamma n * f n)).symm
 
-#print axioms wooley_weighted_sum_abs_pow_expand
-#print axioms wooleySource_sum_eq_support_subtype
 
 end
 

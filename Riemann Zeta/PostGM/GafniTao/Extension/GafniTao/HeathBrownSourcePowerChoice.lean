@@ -208,9 +208,6 @@ theorem heathBrownSourcePower_le_ceil_of_rpow_le
     exact (Nat.floor_le hRatioNonneg).trans hRatio
   exact_mod_cast hFloor.trans (Nat.le_ceil (4 / delta))
 
-#print axioms heathBrownSourcePower_spec
-#print axioms heathBrownSourcePower_spec_two
-#print axioms heathBrownSourcePower_le_ceil_of_rpow_le
 
 end
 

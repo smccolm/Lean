@@ -289,7 +289,6 @@ theorem mixedSharpShell_heathBrownFiniteEnergy_native
       simp [Q, W, M, B, V, Fin.sum_univ_four]
       ring
 
-#print axioms mixedSharpShell_heathBrownFiniteEnergy_native
 
 end
 

@@ -342,10 +342,5 @@ theorem tendsto_pintzZetaAFERightSeries
       vIntegral_pintzZetaAFE_div_normalization_eq_tsum s s c H hc₁ hc0,
       vIntegral_pintzZetaAFE_div_normalization_eq_tsum s (1 - s) c H hc₂ hc0]
 
-#print axioms pintzZetaAFEContourIntegrand_eq_opened
-#print axioms completedXiNumerator_div_normalization
-#print axioms pintzZetaAFEOpened_div_normalization_eq_tsum
-#print axioms vIntegral_pintzZetaAFE_div_normalization_eq_tsum
-#print axioms tendsto_pintzZetaAFERightSeries
 
 end GafniTao

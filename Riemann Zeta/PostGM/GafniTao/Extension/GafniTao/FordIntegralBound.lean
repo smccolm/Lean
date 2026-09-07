@@ -67,8 +67,6 @@ theorem fordCubicExpSum_le_certified
     _ = Real.exp (2 * fordCubicY D sigma t ^ 3) *
           (1 + fordCubicScale D t * (108754 / 100000 : ℝ)) := by ring
 
-#print axioms integral_fordNormalizedCubicExp_le_source_constant
-#print axioms fordCubicExpSum_le_certified
 
 end
 

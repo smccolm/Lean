@@ -263,16 +263,6 @@ theorem heathBrown_spacing_card_le_exact
   · intro q hq
     exact heathBrown_spacing_fiber_card_le hmuPos hg hgd hderivLower q
 
-#print axioms heathBrownDistanceToInteger_eq_min_fract
-#print axioms heathBrownDistanceToInteger_eq_abs_of_abs_le_half
-#print axioms abs_le_of_heathBrownDistanceToInteger_le_of_abs_le_half
-#print axioms mem_heathBrownSpacingSet
-#print axioms heathBrown_same_round_upper_difference
-#print axioms heathBrown_same_round_index_separation
-#print axioms heathBrown_index_upper_difference
-#print axioms heathBrown_spacing_fiber_card_le
-#print axioms heathBrown_spacing_round_mem_endpoint_interval
-#print axioms heathBrown_spacing_card_le_exact
 
 end
 

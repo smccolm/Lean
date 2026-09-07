@@ -34,7 +34,6 @@ theorem fordCubicExpSum_le_peak_add_integral
     r
   simpa only [fordDyadicExponent_eq_cubic] using h
 
-#print axioms fordCubicExpSum_le_peak_add_integral
 
 end
 

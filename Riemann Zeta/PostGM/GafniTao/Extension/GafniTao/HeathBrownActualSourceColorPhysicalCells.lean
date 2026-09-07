@@ -227,7 +227,6 @@ theorem eventually_actual_source_color_physical_low_cells
       nlinarith only [hFactorOne, hMIINonneg]).trans
         (mul_le_mul_of_nonneg_left hIImax (zero_le_one.trans hFactorOne)))
 
-#print axioms eventually_actual_source_color_physical_low_cells
 
 end
 

@@ -58,8 +58,6 @@ theorem one_le_pintz2023CriticalScale
   simpa only [Real.one_rpow] using
     Real.rpow_le_rpow (by norm_num : (0 : ℝ) ≤ 1) hT hexp
 
-#print axioms pintz2023CriticalScale_mono_xi
-#print axioms one_le_pintz2023CriticalScale
 
 end
 

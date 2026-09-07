@@ -157,8 +157,6 @@ theorem wooleySourceNormalizedMixedMean_initial
   simpa only [C, H, s, K, Z, wooleySourceNormalizationScale,
     mul_comm (Lambda : ℝ) (H : ℝ)] using halgebra
 
-#print axioms wooley_initial_normalization_algebra
-#print axioms wooleySourceNormalizedMixedMean_initial
 
 end
 

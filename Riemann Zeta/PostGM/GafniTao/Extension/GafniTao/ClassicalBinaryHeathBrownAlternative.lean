@@ -119,7 +119,6 @@ theorem classicalBinaryColorFamily_heathBrown_alternative_native
       (show 1 ≤ U by linarith) hX hdelta heta hepsilon hC hBLower
       hData.1 hData.2.1 hData.2.2.1 hWindow
 
-#print axioms classicalBinaryColorFamily_heathBrown_alternative_native
 
 end
 

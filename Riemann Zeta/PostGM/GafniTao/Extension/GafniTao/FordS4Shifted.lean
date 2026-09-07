@@ -161,7 +161,6 @@ theorem fordS4Count_eq_shiftedCount
       fordS4ShiftedCount (P := P) Ψ hdk s Q q c := by
   exact Nat.card_congr (fordS4CollisionShiftEquiv Ψ hdk c)
 
-#print axioms fordS4Count_eq_shiftedCount
 
 end
 

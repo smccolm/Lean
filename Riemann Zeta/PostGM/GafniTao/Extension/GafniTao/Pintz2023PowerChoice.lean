@@ -164,8 +164,6 @@ theorem exists_pintz2023_power_choice
       nlinarith
     exact ⟨h, hhTwo, hhBound, hhLower, Or.inr hhWindow⟩
 
-#print axioms pintz2023EllThreshold_lt_five_thirds
-#print axioms exists_pintz2023_power_choice
 
 end
 

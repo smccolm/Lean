@@ -275,9 +275,6 @@ theorem ford_double_square_moment_bound_universal
   rw [hsEq] at hmoment'
   exact hmoment'
 
-#print axioms fordLemma34Endpoint_le_universalBase_pow
-#print axioms fordMomentCoefficient36_le_universal_sharp_power
-#print axioms ford_double_square_moment_bound_universal
 
 end
 

@@ -127,7 +127,6 @@ theorem exists_norm_riemannZeta_le_pintz_nearOne_global
       _ ≤ C * d⁻¹ * (|t| + 3) ^ p := by
         exact le_mul_of_one_le_right (by positivity) hbasePow
 
-#print axioms exists_norm_riemannZeta_le_pintz_nearOne_global
 
 end
 

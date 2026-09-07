@@ -164,10 +164,6 @@ theorem heathBrownChosenShiftFactor_le_source_sum
       add_le_add hterm₁ (hterm₂a.trans hterm₂b)
     _ = heathBrownChosenTotalConstant k A * (L + N) := by ring
 
-#print axioms heathBrownChosenFirstFactor_eq
-#print axioms heathBrownChosenSecondFactor_eq
-#print axioms heathBrownChosenShiftFactor_eq_source
-#print axioms heathBrownChosenShiftFactor_le_source_sum
 
 end
 

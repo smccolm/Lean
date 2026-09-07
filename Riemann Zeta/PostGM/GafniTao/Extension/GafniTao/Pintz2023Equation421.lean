@@ -95,7 +95,6 @@ theorem pintz2023_equation421_kernel_block_native
     _ = (4 * C₀) * (R : ℝ) ^ (4 * eta) *
         (L : ℝ) ^ (-3 * epsilon) := by ring
 
-#print axioms pintz2023_equation421_kernel_block_native
 
 end
 

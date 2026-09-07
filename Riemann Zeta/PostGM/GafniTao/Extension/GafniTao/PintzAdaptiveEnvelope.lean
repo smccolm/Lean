@@ -297,8 +297,6 @@ theorem pintz_adaptiveSeparation_le_envelope
         (pintzHarmonicEnvelopeCoefficient_pos hc).le
         (pintzTerminalEnvelopeCoefficient_pos hc).le]
 
-#print axioms pintz_terminal_coefficient_le_envelope
-#print axioms pintz_adaptiveSeparation_le_envelope
 
 end
 

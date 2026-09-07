@@ -87,7 +87,6 @@ theorem ford_equation_5_2
       _ ≤ _ := by linarith
   linarith
 
-#print axioms ford_equation_5_2
 
 end
 

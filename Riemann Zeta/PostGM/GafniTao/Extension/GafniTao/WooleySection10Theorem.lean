@@ -275,7 +275,6 @@ theorem wooleyCriticalExponent_eq_zero_of_lower
       (by simpa only [C0, H, thetaNat] using hinitial)
       (by simpa only [D, N, s] using hchain) hterminal hHeta hHepsilon hconstants
 
-#print axioms wooleyCriticalExponent_eq_zero_of_lower
 
 end
 

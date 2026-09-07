@@ -254,15 +254,6 @@ theorem wooleySection7OmegaMatrix_exists_leftInverse
   apply wooleySection7_sourceMatrix_exists_leftInverse_primePower hp hrk hkp
   exact wooleySection7OmegaMatrix_mod_prime (p := p) hc hrk h hh psi
 
-#print axioms wooleySection7Node_succ_le
-#print axioms wooleySection7OmegaEntry_spec
-#print axioms wooleySection7OmegaMatrix_mod_prime
-#print axioms wooleySection7_taylor_laurent_expansion
-#print axioms wooleySection7_row_valuation_factor
-#print axioms wooleySection7_column_valuation_factor
-#print axioms wooleySection7_dilatedCoefficientMatrix_factorization
-#print axioms wooleySection7_dilatedCoefficientMatrix_factorization_of_separation
-#print axioms wooleySection7OmegaMatrix_exists_leftInverse
 
 end
 

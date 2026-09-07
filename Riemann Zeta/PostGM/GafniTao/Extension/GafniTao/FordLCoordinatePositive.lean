@@ -104,10 +104,6 @@ theorem fordLCoordinateWeylSum_re_nonneg
   rw [fordLCoordinateWeylSum_eq_energy]
   exact fordLCoordinateEnergy_nonneg Ψ α
 
-#print axioms fordLCongruentCoordinateEquivSigma
-#print axioms fordLCoordinateWeylSum_eq_energy
-#print axioms fordLCoordinateEnergy_nonneg
-#print axioms fordLCoordinateWeylSum_re_nonneg
 
 end
 

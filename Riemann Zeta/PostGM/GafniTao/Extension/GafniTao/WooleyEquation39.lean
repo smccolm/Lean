@@ -179,9 +179,6 @@ theorem wooley_equation_3_10
             simp_rw [← Finset.mul_sum]
             ring_nf
 
-#print axioms wooley_sqrt_inverse_power_mul
-#print axioms wooley_equation_3_9
-#print axioms wooley_equation_3_10
 
 end
 

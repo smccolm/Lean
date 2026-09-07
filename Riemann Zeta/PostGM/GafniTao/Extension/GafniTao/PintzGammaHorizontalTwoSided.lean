@@ -127,8 +127,6 @@ theorem exists_norm_Gamma_left_displacement_le {a b : ℝ} (ha : 0 < a) :
       congr 1
       ring
 
-#print axioms exists_norm_Gamma_sq_left_displacement_le
-#print axioms exists_norm_Gamma_left_displacement_le
 
 end
 

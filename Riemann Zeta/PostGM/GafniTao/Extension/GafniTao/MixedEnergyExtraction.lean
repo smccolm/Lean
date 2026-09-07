@@ -159,8 +159,6 @@ theorem exists_mixed_energy_color_classes
         MixedApproxAddEnergy (1 + 4 * H) (W 0) (W 1) (W 2) (W 3) := by
       simp only [U, MixedApproxAddEnergy, mul_assoc]
 
-#print axioms shifted_zero_quadruple_defect_le
-#print axioms exists_mixed_energy_color_classes
 
 end
 

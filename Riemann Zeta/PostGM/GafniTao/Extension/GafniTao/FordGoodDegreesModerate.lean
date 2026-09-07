@@ -80,9 +80,6 @@ theorem fordGoodDegreeSet_card_real_lower_moderate
   exact hreal.trans (by
     exact_mod_cast fordGoodDegreeSet_card_lower_moderate hk)
 
-#print axioms fordGoodDegreeSet_nonempty
-#print axioms fordGoodDegreeSet_card_lower_moderate
-#print axioms fordGoodDegreeSet_card_real_lower_moderate
 
 end
 

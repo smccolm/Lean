@@ -221,14 +221,6 @@ theorem heathBrownKthDerivativeTheorem_of_vmvt
   exact norm_heathBrownExponentialSum_le_factor_of_critical_vmvt
     hk hN hA hlambda hepsilon hfContinuous hfDiff hkBounds hC hcritical
 
-#print axioms heathBrownQuarterLambdaBase_pos
-#print axioms heathBrownSmallHBase_pos
-#print axioms heathBrownLongHBase_pos
-#print axioms heathBrownKthDerivativeFactor_nonneg
-#print axioms heathBrown_scaled_factor_nonneg
-#print axioms heathBrownGlobalConstant_pos
-#print axioms norm_heathBrownExponentialSum_le_factor_of_critical_vmvt
-#print axioms heathBrownKthDerivativeTheorem_of_vmvt
 
 end
 

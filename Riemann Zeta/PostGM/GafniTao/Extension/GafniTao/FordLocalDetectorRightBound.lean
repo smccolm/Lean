@@ -75,7 +75,6 @@ theorem eventually_exists_fordLocalDisk_detector_rightBound
   refine ⟨eta', RUpper, RLower, hetaLower, hetaUpper, hRU, hRL, ?_⟩
   exact hdet.trans_le (by linarith [hright'])
 
-#print axioms eventually_exists_fordLocalDisk_detector_rightBound
 
 end
 

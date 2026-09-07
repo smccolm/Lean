@@ -153,9 +153,6 @@ theorem fordRepeatedPolynomialCharacterSum_eq
   exact fordCharacterSum_familyMoment_eq_pow_card
     (fordPolynomialSingleMoment (P := P) Ψ) a
 
-#print axioms fordRepeatedBoxParamEquiv
-#print axioms fordPolynomialMoment_assemble_eq
-#print axioms fordRepeatedPolynomialCharacterSum_eq
 
 end
 

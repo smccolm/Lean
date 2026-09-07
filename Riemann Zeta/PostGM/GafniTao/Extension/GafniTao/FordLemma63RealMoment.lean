@@ -136,8 +136,6 @@ theorem ford_equation_6_9_real_cutoff
   dsimp [A, Q] at hDW ⊢
   exact mul_le_mul_of_nonneg_right hDW htail
 
-#print axioms fordLemma63_volume_overlap_mono
-#print axioms ford_equation_6_9_real_cutoff
 
 end
 

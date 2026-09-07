@@ -132,10 +132,6 @@ theorem fordS6_signature_eq_moment_cast
   push_cast
   rw [hterm, add_zero]
 
-#print axioms fordPolynomialEvalSum_map_split
-#print axioms fordSourceBStarSignature_split_eq_cast
-#print axioms fordS6_power_term_cast_eq_zero
-#print axioms fordS6_signature_eq_moment_cast
 
 end
 

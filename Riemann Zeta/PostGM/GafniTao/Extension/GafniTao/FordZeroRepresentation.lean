@@ -189,9 +189,6 @@ theorem ford_zeroRepresentationDominates_integerFamily
       fordRepresentationCount B (fun x j => f j x) 0 := by
   exact ford_zeroRepresentationDominates B (fun x j => f j x) w
 
-#print axioms fordRepresentationCount_eq_sum_fibers
-#print axioms ford_zeroRepresentationDominates
-#print axioms ford_zeroRepresentationDominates_integerFamily
 
 end
 

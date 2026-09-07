@@ -500,12 +500,7 @@ theorem norm_pintzSourceWeight_le_rightLine
           Real.sqrt (Real.pi / (1 / lambda)) := by
       rw [integral_const_mul, integral_gaussian]
 
-#print axioms pintzSourceWeight_complete_vertical_shift
-#print axioms pintzSourceWeight_eq_rightLine
-#print axioms norm_pintzSourceWeight_le_rightLine
 
-#print axioms norm_pintzSourceWeightNumerator_vertical
-#print axioms integrable_pintzSourceWeightIntegrand_vertical
 
 end
 

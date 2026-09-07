@@ -274,11 +274,6 @@ theorem exists_pintz2023_powered_scaled_mhh_bound
     hQ hT (hScale r hr) hL hUnit hSep' hBase' hLargeNorm
   exact ⟨B, hB, K, hK, r, hr, W', hW', hCard, hBound⟩
 
-#print axioms dirichletPoly_pintz2023NormalizedSelectedPoweredCoeff
-#print axioms dirichletPoly_pintz2023ScaledNormalizedPoweredCoeff
-#print axioms norm_pintz2023ScaledNormalizedPoweredCoeff_le_one
-#print axioms exists_pintz2023_powered_mhh_bound
-#print axioms exists_pintz2023_powered_scaled_mhh_bound
 
 end
 

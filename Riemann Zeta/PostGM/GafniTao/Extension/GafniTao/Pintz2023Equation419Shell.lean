@@ -24,7 +24,7 @@ open RiemannZeta.GuthMaynard
 noncomputable section
 
 /-- Source-facing multiplicity estimate on one dyadic height shell. The
-constant is uniform in the physical height and in the power selected by
+The constant is uniform in the physical height and in the power selected by
 equation (4.16). -/
 theorem exists_eventually_pintz2023_equation419_shell_bound
     {eta target : ℝ} {k ell : ℕ}
@@ -247,7 +247,6 @@ theorem exists_eventually_pintz2023_equation419_shell_bound
                   2 * epsilonCoeff)) := hUseHZ
       _ = _ := by ring
 
-#print axioms exists_eventually_pintz2023_equation419_shell_bound
 
 end
 

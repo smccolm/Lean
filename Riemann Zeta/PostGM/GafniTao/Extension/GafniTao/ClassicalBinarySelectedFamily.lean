@@ -150,10 +150,6 @@ theorem classicalBinarySelectedCoeff_large
         (classicalTypeIIShellScalePair r).2
         (Nat.mul_pos (pow_pos (by omega) _) hX) hC hLarge
 
-#print axioms classicalBinarySelectedN_pos
-#print axioms classicalBinarySelectedThreshold_pos
-#print axioms norm_classicalBinarySelectedCoeff_le_one
-#print axioms classicalBinarySelectedCoeff_large
 
 end
 

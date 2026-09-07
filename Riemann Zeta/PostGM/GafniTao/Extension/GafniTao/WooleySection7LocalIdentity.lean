@@ -234,10 +234,6 @@ theorem wooley_equation_7_19_outer_native
               ‖wooleySourceNormalizedPolynomialSum rightPhi right alpha‖ ^
                 (2 * S)) := by ring
 
-#print axioms wooleySourcePolynomialMixedResidueMoment_eq_pullbackAverage
-#print axioms wooley_equation_7_18_local_native
-#print axioms wooley_equation_7_19_pointwise_native
-#print axioms wooley_equation_7_19_outer_native
 
 end
 

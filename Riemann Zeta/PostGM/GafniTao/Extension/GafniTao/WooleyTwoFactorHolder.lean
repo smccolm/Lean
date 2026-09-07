@@ -95,8 +95,6 @@ theorem wooley_two_factor_holder_real
     hsum f hf, hsum g hg]
   exact hholder
 
-#print axioms wooley_two_factor_holder_ennreal
-#print axioms wooley_two_factor_holder_real
 
 end
 

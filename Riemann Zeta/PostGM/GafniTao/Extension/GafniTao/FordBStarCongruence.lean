@@ -114,8 +114,6 @@ theorem ford_sourceBStarCongruence_card_le
     (ford_source_resolvedBStar_card_le
       ψ c hp hr hk2 hkp hdk hdr hrk hpT m)
 
-#print axioms fordSourceBStarToResolved_injective
-#print axioms ford_sourceBStarCongruence_card_le
 
 end
 

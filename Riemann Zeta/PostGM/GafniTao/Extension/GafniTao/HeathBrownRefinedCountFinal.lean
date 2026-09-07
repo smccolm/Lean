@@ -6,7 +6,7 @@ import GafniTao.HeathBrownChosenAlgebra
 This module completes the algebraic part of the refined counting lemma.  Its
 public theorem has the source factors
 `(1 + A * lambda * N)`, `N + lambda^(-2/k)`, and `1 + log N`, with an explicit
-constant depending only on `A` and `k`.
+The constant depending only on `A` and `k`.
 -/
 
 namespace GafniTao
@@ -238,10 +238,6 @@ theorem heathBrownPairCount_card_cast_le_lemma_two
       dsimp only [B, P]
       ring
 
-#print axioms heathBrownRefinedCountConstant_pos
-#print axioms heathBrownBlockParameter_cast_le
-#print axioms heathBrownPairCount_card_cast_le_source_scale
-#print axioms heathBrownPairCount_card_cast_le_lemma_two
 
 end
 

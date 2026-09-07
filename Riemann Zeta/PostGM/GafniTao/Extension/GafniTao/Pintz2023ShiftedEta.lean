@@ -103,9 +103,6 @@ theorem eventually_pintz2023_shifted_eta_pos_on_shell_of_le_half
   rw [Finset.mem_filter] at hrho ⊢
   exact ⟨zeroSet_subset_of_sigma_le (by linarith) hrho.1, hrho.2⟩
 
-#print axioms vinogradovKorobovDenominator_isLittleO_log
-#print axioms eventually_pintz2023_shifted_eta_pos_on_shell
-#print axioms eventually_pintz2023_shifted_eta_pos_on_shell_of_le_half
 
 end
 

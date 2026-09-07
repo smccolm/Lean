@@ -202,11 +202,6 @@ theorem wooleySourcePolynomial_equation_4_12
     rw [wooleySourceInsertedNormalizedRealAverage_self_zero] at hnormalized
     simpa only [theta] using hnormalized
 
-#print axioms wooleySourceNormalizedMixedRealAverage_self_zero
-#print axioms wooleySourceInsertedNormalizedRealAverage_self_zero
-#print axioms wooleySourcePolynomialMean_eq_zero_of_massSq_eq_zero
-#print axioms wooleySection4_originalDisplacement_forces_inserted
-#print axioms wooleySourcePolynomial_equation_4_12
 
 end
 

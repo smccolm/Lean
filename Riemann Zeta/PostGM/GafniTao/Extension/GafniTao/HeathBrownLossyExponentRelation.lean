@@ -153,9 +153,6 @@ theorem HeathBrownExponentRelation.mono_rho
     gcongr
   exact hrel.trans (by gcongr)
 
-#print axioms heathBrownExponentRelation_of_lossy_relation
-#print axioms HeathBrownExponentRelation.mono_sigma
-#print axioms HeathBrownExponentRelation.mono_rho
 
 end
 

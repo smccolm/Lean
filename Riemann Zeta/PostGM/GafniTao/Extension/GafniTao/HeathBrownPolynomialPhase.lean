@@ -113,14 +113,6 @@ theorem heathBrownPhase_polynomial_add_integer
     rfl
   rw [← hcast, heathBrownPhase_add_int]
 
-#print axioms heathBrownPhase_eq_fordAdditiveCharacter
-#print axioms heathBrownPhase_add
-#print axioms heathBrownPhase_int
-#print axioms heathBrownPhase_add_int
-#print axioms heathBrownTaylorPolynomial_eq_constant_add_reduced
-#print axioms heathBrownTaylorPolynomialSum_eq_phase_mul_reduced
-#print axioms norm_heathBrownTaylorPolynomialSum_eq_reduced
-#print axioms heathBrownPhase_polynomial_add_integer
 
 end
 

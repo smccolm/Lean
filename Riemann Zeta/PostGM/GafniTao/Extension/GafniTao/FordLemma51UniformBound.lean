@@ -80,7 +80,6 @@ theorem ford_exponential_lemma_5_1_uniform
     _ = fordLemma51UniformConstant * (N : ℝ) ^
         (1 - 1 / ((1091200 : ℝ) * (k : ℝ) ^ 2)) := rfl
 
-#print axioms ford_exponential_lemma_5_1_uniform
 
 end
 

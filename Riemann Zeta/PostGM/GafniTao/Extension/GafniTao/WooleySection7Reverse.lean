@@ -146,7 +146,6 @@ theorem wooley_equation_7_21_native
   simp_rw [wooleySourceNormalizedPolynomialSum_affinePullback]
   rw [pow_add]
 
-#print axioms wooley_equation_7_21_native
 
 end
 

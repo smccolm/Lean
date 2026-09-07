@@ -4,7 +4,7 @@ import GafniTao.WooleySection10Chain
 # Composing the Section 10 analytic recurrence
 
 The source uses Vinogradov notation in (10.6).  Here the accumulated
-constant `Cacc` and accumulated decay scale `E` are retained.  In particular,
+The constant `Cacc` and accumulated decay scale `E` are retained.  In particular,
 `E ≥ n b₀` is proved from the exact inequalities `rho b' ≥ b` rather
 than folded into asymptotic notation.
 -/
@@ -176,7 +176,6 @@ theorem WooleyIterationChain.composed_bound
             simp only [mul_assoc]
       · exact hsubstitute.trans_eq hrearrange
 
-#print axioms WooleyIterationChain.composed_bound
 
 end
 

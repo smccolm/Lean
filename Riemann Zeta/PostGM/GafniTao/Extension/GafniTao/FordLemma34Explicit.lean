@@ -105,8 +105,6 @@ theorem ford_lemma_3_4_explicit
     heta hP (hmoment.one_le_coefficient.trans' zero_le_one)
   simpa [fordStepCoefficient35] using hK.trans hfinal
 
-#print axioms ford_equation_3_10_all_indices_explicit
-#print axioms ford_lemma_3_4_explicit
 
 end
 

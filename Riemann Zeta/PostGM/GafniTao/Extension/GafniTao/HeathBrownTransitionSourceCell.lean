@@ -200,7 +200,6 @@ theorem eventually_transition_source_dyadic_physical_cell
     hPOne (by norm_num) hPcapTwo hL hW
     hBase hNext hCube hThreshold hThresholdNext hsigma0Eff hsigma0Eff
 
-#print axioms eventually_transition_source_dyadic_physical_cell
 
 end
 

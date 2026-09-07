@@ -236,9 +236,6 @@ theorem fordK_repeated_integral_holder
   rw [hleft, hAI, hBI, hCI] at hholder
   exact hholder
 
-#print axioms ford_three_holder_point
-#print axioms ford_lintegral_three_holder
-#print axioms fordK_repeated_integral_holder
 
 end
 

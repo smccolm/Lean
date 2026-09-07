@@ -111,7 +111,6 @@ theorem HeathBrownFullyUniformOutputs.logarithmic_relation
     (by simpa only [F, x] using hLoss)
   simpa only [x, V, E] using hResult
 
-#print axioms HeathBrownFullyUniformOutputs.logarithmic_relation
 
 end
 

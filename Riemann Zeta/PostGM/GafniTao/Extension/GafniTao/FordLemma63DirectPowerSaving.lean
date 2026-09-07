@@ -156,7 +156,6 @@ theorem fordLemma63_direct_le_power_saving
       exact add_le_add (add_le_add hlead hdiv) hPbound
     _ = (4 * A ^ q + 2) * (N : ℝ) ^ (1 - c) := by ring
 
-#print axioms fordLemma63_direct_le_power_saving
 
 end
 

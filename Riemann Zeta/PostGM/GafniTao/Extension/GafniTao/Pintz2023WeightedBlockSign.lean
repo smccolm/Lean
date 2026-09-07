@@ -60,9 +60,6 @@ theorem norm_pintz2023WeightedBlock_abs
     congr 2
     linarith
 
-#print axioms pintz2023WeightedBlock_neg_eq_conj
-#print axioms norm_pintz2023WeightedBlock_neg
-#print axioms norm_pintz2023WeightedBlock_abs
 
 end
 

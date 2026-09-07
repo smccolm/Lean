@@ -46,7 +46,6 @@ theorem pintz_physical_contour_error_le_quarter
   exact huniform.trans
     (pintz_uniform_contour_error_le_quarter hc heta hetaUpper hT hetaAbove)
 
-#print axioms pintz_physical_contour_error_le_quarter
 
 end
 

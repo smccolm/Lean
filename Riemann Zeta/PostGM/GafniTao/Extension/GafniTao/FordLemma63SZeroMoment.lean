@@ -162,10 +162,6 @@ theorem fordLemma63SZero_power_le_sharp
       gcongr
     _ = _ := by ring
 
-#print axioms fordLemma63SZero_power_prebound
-#print axioms fordLemma63_tail_coefficient_le
-#print axioms fordLemma63SZero_power_le
-#print axioms fordLemma63SZero_power_le_sharp
 
 end
 

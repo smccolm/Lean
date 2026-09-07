@@ -254,12 +254,6 @@ theorem norm_partialZeta_le_ford_add_endpoint
         4 * (M : ℝ) ^ (1 - sigma) := by gcongr
     _ = _ := by ring
 
-#print axioms fordFiniteHurwitzSum_zero_eq_partialSum_general
-#print axioms norm_fordPartialSum_le_qualitative_general
-#print axioms norm_partialZeta_height_abs
-#print axioms norm_fordPartialSum_le_qualitative_general_abs
-#print axioms norm_partialZeta_le_zeta_add_euler
-#print axioms norm_partialZeta_le_ford_add_endpoint
 
 end
 

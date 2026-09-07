@@ -116,8 +116,6 @@ theorem finite_symmetric_source_powered_cardinality_meanValue_native
     (sourceNormalizedFinitePoweredCoeffs N p a Cp eta)
     hM hB hV hRB hSep' hSymm' hUnit hPowered
 
-#print axioms finite_symmetric_source_cardinality_meanValue_native
-#print axioms finite_symmetric_source_powered_cardinality_meanValue_native
 
 end
 

@@ -5,7 +5,7 @@ import GafniTao.FordSmallLambdaB
 
 The B-process gives square-root-in-height cancellation.  This file converts
 that physical estimate to the common `N^(1-c/lambda^2)` normalization.  The
-constant `3000000` is deliberately shared with the large-lambda theorem; no
+The constant `3000000` is deliberately shared with the large-lambda theorem; no
 claim is made that it is Ford's optimized `133.66`.
 -/
 
@@ -75,9 +75,6 @@ theorem ford_shifted_exponential_sum_small_lambda
       ford_small_lambda_exponent_compare hlambdaLower hlambdaUpper)
     (by norm_num))
 
-#print axioms ford_rpow_lambda_eq_height
-#print axioms ford_small_lambda_exponent_compare
-#print axioms ford_shifted_exponential_sum_small_lambda
 
 end
 

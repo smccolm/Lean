@@ -336,10 +336,6 @@ theorem weightedMixedAdditiveEnergyOn_le_central_first
         (3 * globalLocalZeroLogConstant * Real.log T) := by
   exact weightedMixedAdditiveEnergyOn_le_bounded_first hsigma hT h0 h1 h2 h3
 
-#print axioms weightedMixedAdditiveEnergyOn_le_three_masses_mul_fiber
-#print axioms subfamily_multiplicity_sum_le_zeroCount
-#print axioms weightedMixedAdditiveEnergyOn_le_bounded_first
-#print axioms weightedMixedAdditiveEnergyOn_le_central_first
 
 end
 

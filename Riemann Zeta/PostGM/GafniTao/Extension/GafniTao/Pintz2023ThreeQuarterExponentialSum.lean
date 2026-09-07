@@ -127,7 +127,6 @@ theorem norm_pintz2023ExponentialBlock_le_threeQuarter_target
                 dsimp only [C]
                 nlinarith
 
-#print axioms norm_pintz2023ExponentialBlock_le_threeQuarter_target
 
 end
 

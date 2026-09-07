@@ -153,10 +153,6 @@ theorem heathBrown_lambda_term_le_third_of_third_le_N
         lambda ^ (-2 * r / (k : ℝ)) := by rw [hlambdaPower]
     _ = _ := by rfl
 
-#print axioms heathBrownKthDerivativeFactor_eq_critical
-#print axioms heathBrownThreeTerm_scaled_identity
-#print axioms heathBrown_lambda_power_identity
-#print axioms heathBrown_lambda_term_le_third_of_third_le_N
 
 end
 

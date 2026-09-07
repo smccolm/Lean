@@ -156,7 +156,6 @@ theorem positiveSlab_classical_binary_pointwise_witness
     refine ⟨t, by simpa [abs_sub_comm] using htShift, htInterval, rf, ?_⟩
     simpa only [rf, kII] using hrLarge
 
-#print axioms positiveSlab_classical_binary_pointwise_witness
 
 end
 

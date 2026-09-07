@@ -185,9 +185,6 @@ theorem wooleySourcePolynomial_iterationChain_contradict_twoLoss
     (by simpa only [K] using hinitial) hiterated hCaccUpper hE
     hterminal hHeta hHepsilon hconstants
 
-#print axioms wooley_section10_force_final_bound_twoLoss
-#print axioms wooley_section10_bounds_contradict_twoLoss
-#print axioms wooleySourcePolynomial_iterationChain_contradict_twoLoss
 
 end
 

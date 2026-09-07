@@ -94,7 +94,6 @@ theorem fordLemma51SourceCore_scaled_le
     (by positivity) ht hC hmoment' hmoment' hgood
   simpa [fordScaledSourceCoreMajorant, s, M₁, M₂, M, Q, C, delta] using hcore
 
-#print axioms fordLemma51SourceCore_scaled_le
 
 end
 

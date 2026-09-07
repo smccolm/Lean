@@ -154,8 +154,6 @@ theorem eventually_actualTypeI_long_commonThresholds
     simpa only [N, p, P, L, heathBrownTypeIEffectiveSigma,
       Nat.cast_mul, Nat.cast_pow, add_assoc] using h
 
-#print axioms heathBrownTypeIEffectiveSigma
-#print axioms eventually_actualTypeI_long_commonThresholds
 
 end
 

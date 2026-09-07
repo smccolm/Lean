@@ -227,11 +227,6 @@ theorem norm_riemannZeta_le_ford_lowSigma
     nlinarith
   simpa [fordComplexHeight, mul_comm] using hcore.trans hmajor
 
-#print axioms ford_rpow_partial_sum_le_integral
-#print axioms ford_rpow_partial_sum_le_seventeen
-#print axioms norm_fordPartialSum_le_seventeen
-#print axioms one_sub_sigma_le_four_mul_three_halves
-#print axioms norm_riemannZeta_le_ford_lowSigma
 
 end
 

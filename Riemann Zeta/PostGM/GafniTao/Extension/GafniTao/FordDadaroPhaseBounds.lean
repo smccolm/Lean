@@ -199,10 +199,6 @@ theorem fordDadaroErrorCoeff_le_nine
   norm_num at hTotal
   simpa [fordComplexHeight, theta] using hTotal
 
-#print axioms fordDadaroPhase_mem_Icc
-#print axioms one_fourth_le_sin_of_mem_fordDadaroPhase
-#print axioms fordDadaroBoundaryCoeff_le_four
-#print axioms fordDadaroErrorCoeff_le_nine
 
 end
 

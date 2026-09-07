@@ -187,8 +187,6 @@ theorem log_norm_riemannZeta_affine_le_fordGeneralEnvelope
       unfold fordGeneralAffineGrowthCoefficient
       ring
 
-#print axioms log_norm_riemannZeta_le_fordGeneral
-#print axioms log_norm_riemannZeta_affine_le_fordGeneralEnvelope
 
 end
 

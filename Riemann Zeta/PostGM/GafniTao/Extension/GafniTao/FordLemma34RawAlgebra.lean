@@ -146,7 +146,7 @@ theorem ford_consecutive_Q_half_powers
   rw [show M ^ lambda * Qnext ^ lambda * M ^ (-lambda / 2) =
       (M ^ lambda * M ^ (-lambda / 2)) * Qnext ^ lambda by ring,
     ← Real.rpow_add hM]
-  congr 1 <;> ring
+  congr 1 <;> ring_nf
 
 /-- The square root of the integral prime-scale factor is controlled by the
 half of Ford's real exponent. -/
@@ -448,20 +448,6 @@ theorem ford_lemma_3_4_raw_absorption
           unfold fordLemma34JBound
           ring
 
-#print axioms FordESchedule.one_le
-#print axioms ford_sqrt_rpow
-#print axioms ford_sqrt_nat_pow
-#print axioms ford_lemma_3_4_sqrt_numeric_factor
-#print axioms ford_sqrt_repeated_coefficient_product
-#print axioms ford_prime_inverse_power_le_scale
-#print axioms ford_prime_scale_exponent_inflation
-#print axioms ford_consecutive_Q_half_powers
-#print axioms ford_sqrt_prime_scale_exponent_inflation
-#print axioms ford_lemma_3_4_eta_exponent_le
-#print axioms ford_lemma_3_4_expanded_scale_cancellation
-#print axioms ford_lemma_3_4_off_diagonal_normalized
-#print axioms ford_lemma_3_4_outer_box_bound
-#print axioms ford_lemma_3_4_raw_absorption
 
 end
 

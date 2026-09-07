@@ -82,7 +82,6 @@ theorem eventually_exists_pintz2023Equation412_source_detector
     (pintz2023SourceLambda T k) hX heta hetaJ hetaJLe hetaUpper
     hLeftT.2.1 hCutoff hzero hgammaNe hleftScale hpoleScale hRemainderT
 
-#print axioms eventually_exists_pintz2023Equation412_source_detector
 
 end
 

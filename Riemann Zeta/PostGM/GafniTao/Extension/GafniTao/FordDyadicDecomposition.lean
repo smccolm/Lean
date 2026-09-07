@@ -141,11 +141,6 @@ theorem ford_sum_Icc_eq_first_add_dyadic
   rw [fordDyadicWeightedShellSum_eq_full_block sigma u t hM]
   simp only [fordShiftedWeightedBlock, Nat.cast_one]
 
-#print axioms fordShiftedWeightedBlock_add
-#print axioms norm_fordShiftedWeightedBlock_dyadic_le_raw
-#print axioms norm_fordDyadicWeightedShellSum_le_raw_sum
-#print axioms fordDyadicWeightedShellSum_eq_block
-#print axioms ford_sum_Icc_eq_first_add_dyadic
 
 end
 

@@ -67,8 +67,6 @@ theorem norm_pintz2023SmoothedZetaSum_abs_im
     rw [abs_of_neg ht']
     exact norm_pintz2023SmoothedZetaSum_neg_im N a t
 
-#print axioms conj_pintz2023SmoothedZetaTerm
-#print axioms norm_pintz2023SmoothedZetaSum_abs_im
 
 end
 

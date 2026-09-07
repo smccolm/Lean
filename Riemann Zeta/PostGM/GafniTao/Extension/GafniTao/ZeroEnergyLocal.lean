@@ -296,11 +296,5 @@ theorem zeroAdditiveEnergyExponent_le_three_mul_of_zeroDensityEnvelope
     (zeroAdditiveEnergyEnvelope_three_mul_of_zeroDensityEnvelope
       hsigma hDensity)
 
-#print axioms resonantFourthZeroFiber_subset_three_bins
-#print axioms resonantFourthZeroFiber_multiplicity_le
-#print axioms zeroAdditiveEnergyCount_eq_sum_resonantFourthZeroFiber
-#print axioms zeroAdditiveEnergyCount_le_three_local_mul_zeroCount_cube
-#print axioms zeroAdditiveEnergyEnvelope_three_mul_of_zeroDensityEnvelope
-#print axioms zeroAdditiveEnergyExponent_le_three_mul_of_zeroDensityEnvelope
 
 end GafniTao

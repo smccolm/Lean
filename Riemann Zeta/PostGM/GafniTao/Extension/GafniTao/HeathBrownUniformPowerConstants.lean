@@ -133,8 +133,6 @@ theorem exists_source_normalized_powered_block_of_bound
     simpa only [heathBrownPoweredThreshold, Real.rpow_zero, one_mul] using
       hPowered t ht
 
-#print axioms finitePowCoeff_bound_uniform_up_to
-#print axioms exists_source_normalized_powered_block_of_bound
 
 end
 

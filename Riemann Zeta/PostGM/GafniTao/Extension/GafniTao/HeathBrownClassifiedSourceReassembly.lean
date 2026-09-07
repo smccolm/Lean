@@ -213,7 +213,6 @@ theorem classified_source_family_energy_le
             rw [hEmpty]
             simpa [ApproxAddEnergy, approximateAdditiveQuadruples] using hM
 
-#print axioms classified_source_family_energy_le
 
 end
 

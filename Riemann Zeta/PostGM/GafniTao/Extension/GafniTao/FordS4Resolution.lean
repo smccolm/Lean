@@ -109,10 +109,6 @@ theorem fordS4Count_le_two_S6
         s P (Q / p) p q r hdk :=
       Nat.mul_le_mul_left 2 (fordS4InteriorCount_le_S6 Ψ hdk hr c)
 
-#print axioms ford_sixteen_s_sq_le_div
-#print axioms ford_four_s_pow_le_div_pow
-#print axioms fordS4Count_le_two_interior
-#print axioms fordS4Count_le_two_S6
 
 end
 

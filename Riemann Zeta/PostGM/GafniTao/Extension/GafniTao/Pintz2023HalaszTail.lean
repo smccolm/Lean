@@ -106,8 +106,6 @@ theorem norm_pintz2023SmoothedZetaSum_sub_sum_Icc_le
       rw [tsum_mul_left, tsum_geometric_of_norm_lt_one hqNorm]
     _ = _ := by rfl
 
-#print axioms norm_pintz2023SmoothedZetaTerm_le_exp
-#print axioms norm_pintz2023SmoothedZetaSum_sub_sum_Icc_le
 
 end
 

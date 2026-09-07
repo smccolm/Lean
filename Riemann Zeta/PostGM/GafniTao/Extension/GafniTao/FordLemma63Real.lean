@@ -96,7 +96,6 @@ theorem fordLemma63_real_cutoff
       ring
     _ = _ := by dsimp [D, W, J]
 
-#print axioms fordLemma63_real_cutoff
 
 end
 

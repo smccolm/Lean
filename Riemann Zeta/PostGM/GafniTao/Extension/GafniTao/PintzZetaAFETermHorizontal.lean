@@ -272,11 +272,6 @@ theorem exists_pintzZetaAFETerm_horizontal_neg_bound
   simpa only [ofReal_neg, neg_mul, sub_eq_add_neg, abs_neg, abs_of_nonneg hH0,
     neg_sq] using hbound (-H) (by simpa [abs_of_nonneg hH0]) x hx
 
-#print axioms exists_uniform_norm_GammaR_positive_strip
-#print axioms norm_pintzZetaDirichletTerm_le_one
-#print axioms exists_pintzZetaAFETerm_horizontal_abs_bound
-#print axioms exists_pintzZetaAFETerm_horizontal_bound
-#print axioms exists_pintzZetaAFETerm_horizontal_neg_bound
 
 end
 

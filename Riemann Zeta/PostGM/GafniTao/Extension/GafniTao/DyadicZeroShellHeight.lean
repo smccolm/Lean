@@ -47,8 +47,6 @@ theorem dyadicZeroShellInnerHeight_le_two_mul
     linarith
   exact (dyadicZeroShellInnerHeight_le_ceil hT i).trans hCeil
 
-#print axioms dyadicZeroShellInnerHeight_le_ceil
-#print axioms dyadicZeroShellInnerHeight_le_two_mul
 
 end
 

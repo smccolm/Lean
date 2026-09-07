@@ -91,8 +91,6 @@ theorem fordDeltaZero35_normalized_lower
     _ ≤ d - 2 / (k : ℝ) + 4 * ((r : ℝ) / D) := by linarith
     _ ≤ fordDeltaZero35 k r delta / (k : ℝ) ^ 2 := hscaled
 
-#print axioms fordDeltaZero35_lower316
-#print axioms fordDeltaZero35_normalized_lower
 
 end
 

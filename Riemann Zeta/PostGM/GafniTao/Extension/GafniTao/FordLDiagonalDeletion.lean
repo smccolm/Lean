@@ -139,10 +139,6 @@ theorem fordL_diagonal_le_marked
       Nat.card (FordLMarkedDiagonalSolution Ψ s P Q p q r) := by
   exact Nat.card_le_card_of_injective _ fordLDiagonalToMarked_injective
 
-#print axioms fordLDiagonalToMarked_injective
-#print axioms fordLMarkedToAway
-#print axioms fordLMarkedToAway_injective
-#print axioms fordL_diagonal_le_marked
 
 end
 

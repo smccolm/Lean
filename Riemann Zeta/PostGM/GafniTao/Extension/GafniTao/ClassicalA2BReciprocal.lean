@@ -128,9 +128,6 @@ theorem reciprocalSquareGap_neg_deriv_bounds
     convert this using 1
     all_goals ring
 
-#print axioms hasDerivAt_reciprocalSquareGap
-#print axioms reciprocal_cube_gap_bounds
-#print axioms reciprocalSquareGap_neg_deriv_bounds
 
 end
 

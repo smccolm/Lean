@@ -69,9 +69,6 @@ theorem integrable_pintz2023Equation42Integrand_three
     (pintz2023_equation42_integrand_eq_series
       (X := X) (rho := rho) (lambda := lambda) hrho).symm)
 
-#print axioms pintz2023Equation42SeriesIntegrand_eq_tsum
-#print axioms integrable_pintz2023Equation42SeriesIntegrand_three
-#print axioms integrable_pintz2023Equation42Integrand_three
 
 end
 

@@ -98,7 +98,6 @@ theorem shifted_wide_energy_to_dyadic_self
         push_cast
         ring
 
-#print axioms shifted_wide_energy_to_dyadic_self
 
 end
 

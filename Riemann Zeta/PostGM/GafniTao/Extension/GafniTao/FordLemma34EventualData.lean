@@ -195,12 +195,6 @@ theorem eventually_ford_equation_3_10_all_indices
     hlower hP hPbig homegaLower homegaUpper hetaEq hMlarge
       (fun i _hi hij => hQbox i hij) hpacket hmoment
 
-#print axioms fordMScale_ge_uniform_base
-#print axioms fordQScale_ge_tenth_power
-#print axioms ford_equation_3_9_rounded
-#print axioms eventually_ford_lemma_3_4_uniform_powers
-#print axioms eventually_ford_equation_3_10_inputs
-#print axioms eventually_ford_equation_3_10_all_indices
 
 end
 

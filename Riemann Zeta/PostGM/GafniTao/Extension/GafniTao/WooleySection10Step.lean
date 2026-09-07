@@ -136,7 +136,6 @@ theorem wooleySourcePolynomial_iterationStep_of_lemma_9_1
   exact ⟨aPrime, bPrime, rPrime, rho, ha, hb', hrel, hr', hr'top,
     hrho, hrhoOne, hgrowth, hupper, hceil, hweighted, huniform⟩
 
-#print axioms wooleySourcePolynomial_iterationStep_of_lemma_9_1
 
 end
 

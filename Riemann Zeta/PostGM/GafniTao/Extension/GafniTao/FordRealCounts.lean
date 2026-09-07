@@ -82,10 +82,6 @@ theorem fordLCountReal_terminal_le_moment_bound
       exact mul_le_mul_of_nonneg_left hmomentQ hPpowNonneg
     _ = C * P ^ k * Q ^ fordLambda34 s k delta := by ring
 
-#print axioms fordKCountReal_mono_Q
-#print axioms fordLCountReal_mono_Q
-#print axioms fordLCountReal_terminal_le
-#print axioms fordLCountReal_terminal_le_moment_bound
 
 end
 

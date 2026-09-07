@@ -144,8 +144,6 @@ theorem ford_lemma_3_3_finite_source
           gcongr
           exact le_max_right _ _
 
-#print axioms ford_offDiagonal_positive_implies_shift_range
-#print axioms ford_lemma_3_3_finite_source
 
 end
 

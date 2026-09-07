@@ -217,12 +217,6 @@ theorem eventually_pintz2023_remainder_scale_le_eighth
   simpa only [Real.rpow_zero, mul_one,
     show -(4 / (k : ℝ)) = -4 / (k : ℝ) by ring] using hSmallT
 
-#print axioms eventually_const_mul_log_rpow_mul_negative_rpow_le
-#print axioms eventually_pintz2023_detector_envelope_le_eighth
-#print axioms eventually_pintz2023_left_scale_le_eighth
-#print axioms pintz2023_pole_scale_le_source_envelope
-#print axioms eventually_pintz2023_pole_scale_le_eighth
-#print axioms eventually_pintz2023_remainder_scale_le_eighth
 
 end
 

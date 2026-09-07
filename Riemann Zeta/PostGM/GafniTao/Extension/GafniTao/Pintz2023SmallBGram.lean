@@ -119,7 +119,6 @@ theorem pintz2023_smallB_complete_gram_native
       gcongr
       exact le_max_right Csmall Cmiddle)
 
-#print axioms pintz2023_smallB_complete_gram_native
 
 end
 

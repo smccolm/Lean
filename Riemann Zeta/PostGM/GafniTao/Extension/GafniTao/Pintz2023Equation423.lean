@@ -252,10 +252,6 @@ theorem pintz2023_equation423_shift_four_eta_native
             (1 + t ^ pintz2023HBAlpha r /
               (L : ℝ) ^ (1 / (r : ℝ))) := by ring
 
-#print axioms pintz2023CorollaryTwoMajorant_le_equation423
-#print axioms pintz2023_equation423_native
-#print axioms pintz2023_equation423_shift_four_eta_raw_native
-#print axioms pintz2023_equation423_shift_four_eta_native
 
 end
 

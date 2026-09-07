@@ -95,8 +95,6 @@ theorem heathBrownPairCountTwo_index_separation
     have hinvPos : 0 < mu⁻¹ := inv_pos.mpr hmuPos
     nlinarith [mul_le_mul_of_nonneg_right hslope hinvPos.le]
 
-#print axioms heathBrownPairCountTwo_last_coordinate_abs_le
-#print axioms heathBrownPairCountTwo_index_separation
 
 end
 

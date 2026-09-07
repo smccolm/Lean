@@ -88,7 +88,6 @@ theorem norm_pintz2023HalaszFiniteGram_diagonal_le
       push_cast
       congr 2
 
-#print axioms norm_pintz2023HalaszFiniteGram_diagonal_le
 
 end
 

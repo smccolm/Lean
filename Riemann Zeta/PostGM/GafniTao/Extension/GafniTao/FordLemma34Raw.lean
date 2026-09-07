@@ -33,7 +33,6 @@ theorem ford_equation_3_10_L_raw
     (show 1 ≤ q by omega) hp hT (Nat.floor_pos.mpr hP) hJactual
     hK hJnonneg
 
-#print axioms ford_equation_3_10_L_raw
 
 end
 

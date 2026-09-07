@@ -204,13 +204,6 @@ theorem heathBrownPairCountTwo_card_le_shift_sum
       rw [heathBrownAllPositiveShiftFibers_card]
       omega
 
-#print axioms heathBrownPairCountTwo_subset_three_parts
-#print axioms heathBrownDistanceToInteger_neg
-#print axioms heathBrownPairCountTwoDiagonal_card_le
-#print axioms heathBrownPairCountTwoPositive_subset_shiftImage
-#print axioms heathBrownPairCountTwoNegative_subset_shiftImage
-#print axioms heathBrownAllPositiveShiftFibers_card
-#print axioms heathBrownPairCountTwo_card_le_shift_sum
 
 end
 

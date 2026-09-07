@@ -137,8 +137,6 @@ theorem exists_heathBrownFullyUniformDyadicSourceCutoff
       d0 d1 d2 d3
     exact ⟨⟨hNoncentral, d0, d1, d2, d3, mixed⟩⟩
 
-#print axioms HeathBrownFullyUniformDyadicSourceOutput.shell_eq
-#print axioms exists_heathBrownFullyUniformDyadicSourceCutoff
 
 end
 

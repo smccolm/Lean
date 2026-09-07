@@ -52,8 +52,6 @@ theorem pintz2023_equation416_critical_scale_lt
       ((2 ^ q * U ^ h : ℕ) : ℝ) :=
   pintz2023_critical_rpow_lt_powered_dyadic hT hU hScale
 
-#print axioms pintz2023_critical_rpow_lt_powered_dyadic
-#print axioms pintz2023_equation416_critical_scale_lt
 
 end
 

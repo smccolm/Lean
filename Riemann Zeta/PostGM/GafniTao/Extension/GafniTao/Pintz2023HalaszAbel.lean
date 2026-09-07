@@ -368,16 +368,6 @@ theorem norm_pintz2023HalaszKernelWeightedBlock_le_exp_of_prefix
       add_le_add hFirst hSecond
     _ = _ := by ring
 
-#print axioms pintz2023WeightedBlock_eq_shifted_range
-#print axioms pintz2023_weighted_term_shift
-#print axioms norm_pintz2023WeightedBlock_shift_le_of_prefix
-#print axioms pintz2023_corollary_three_shift_four_eta
-#print axioms pintz2023HalaszKernel_mono_of_succ_le
-#print axioms norm_pintz2023HalaszKernelWeightedBlock_le_div_of_prefix
-#print axioms norm_pintz2023HalaszKernelWeightedBlock_shift_le_of_prefix
-#print axioms norm_pintz2023ExponentialWeightedBlock_le_of_prefix
-#print axioms pintz2023HalaszKernelWeightedBlock_eq_exp_sub_exp
-#print axioms norm_pintz2023HalaszKernelWeightedBlock_le_exp_of_prefix
 
 end
 

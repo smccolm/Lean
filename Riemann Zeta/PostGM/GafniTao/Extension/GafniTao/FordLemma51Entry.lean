@@ -87,8 +87,6 @@ theorem ford_equation_5_2_normalized_taylor_error
   push_cast
   ring
 
-#print axioms ford_equation_5_2_taylor_error
-#print axioms ford_equation_5_2_normalized_taylor_error
 
 end
 

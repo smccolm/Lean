@@ -120,10 +120,6 @@ theorem wooleyPadicCount_eq_fordVinogradovMomentNat
     left_inv := fun z => Subtype.ext rfl
     right_inv := fun z => Subtype.ext rfl }
 
-#print axioms fordVinogradovMomentNat_le_wooleyPadicCount
-#print axioms fordVinogradovPowerVector_le_top_degree
-#print axioms wooleyPadicSolution_powerVector_eq
-#print axioms wooleyPadicCount_eq_fordVinogradovMomentNat
 
 end
 

@@ -96,8 +96,6 @@ theorem exp_two_mul_fordCubicY_cubed_eq_sourcePower
   rw [Real.rpow_def_of_pos (zero_lt_one.trans ht)]
   ring_nf
 
-#print axioms two_mul_fordCubicY_cubed_eq_sourcePeak
-#print axioms exp_two_mul_fordCubicY_cubed_eq_sourcePower
 
 end
 

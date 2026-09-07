@@ -188,8 +188,6 @@ theorem log_norm_riemannZeta_affine_le_fordEnvelope
         (4.45 * (1 - sigma) ^ (3 / 2 : ℝ) + 2 / 3) *
           (Real.log t + Real.log (|u| + 2)) := by ring
 
-#print axioms log_norm_riemannZeta_le_ford
-#print axioms log_norm_riemannZeta_affine_le_fordEnvelope
 
 end
 

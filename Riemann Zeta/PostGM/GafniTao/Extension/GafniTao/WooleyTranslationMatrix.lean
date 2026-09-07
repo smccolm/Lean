@@ -164,14 +164,6 @@ theorem WooleyPolynomialSystem.Spaced.affine_one_high_coeff_dvd
   refine ⟨((tail j).comp (X + C eta)).coeff n, ?_⟩
   ring
 
-#print axioms wooleyPolynomialTranslationMatrix_blockTriangular
-#print axioms wooleyPolynomialTranslationMatrix_det
-#print axioms wooleyPolynomialTranslationMatrix_isUnit
-#print axioms wooleyAffinePolynomialSystem_lowMatrixMod_prime
-#print axioms wooleyAffinePolynomialSystem_lowMatrixMod_prime_isUnit
-#print axioms wooleyAffinePolynomialSystem_lowMatrixMod_primePower_isUnit
-#print axioms wooleyAffinePolynomialSystem_exists_lowMatrix_leftInverse
-#print axioms WooleyPolynomialSystem.Spaced.affine_one_high_coeff_dvd
 
 end
 

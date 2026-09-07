@@ -51,7 +51,6 @@ theorem pintz2023Equation42_complete_source_shift
   · exact tendsto_pintz2023Equation42_HIntegral'_zero hlambda
       hleftLower hleftUpper hsigmaLower
 
-#print axioms pintz2023Equation42_complete_source_shift
 
 end
 

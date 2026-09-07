@@ -221,8 +221,6 @@ theorem ford_equation_3_10_inputs_explicit
         norm_num
   exact ⟨hP, hPfloor, hMlarge, hQbox, hpacket⟩
 
-#print axioms fordLemma34ExplicitThreshold_powers
-#print axioms ford_equation_3_10_inputs_explicit
 
 end
 

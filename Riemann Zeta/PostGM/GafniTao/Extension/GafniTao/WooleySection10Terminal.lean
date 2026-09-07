@@ -98,7 +98,6 @@ theorem wooleySourceNormalizedMixedMean_terminal
     (Real.rpow_le_rpow_of_exponent_le
       (by exact_mod_cast (show 1 ≤ p by omega)) hexponent) hD
 
-#print axioms wooleySourceNormalizedMixedMean_terminal
 
 end
 

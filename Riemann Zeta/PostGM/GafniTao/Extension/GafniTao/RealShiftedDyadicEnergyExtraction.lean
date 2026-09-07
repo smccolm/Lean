@@ -241,10 +241,6 @@ theorem finite_shifted_dyadic_real_energy_extraction
   simpa only [hCard, Lrep, Wi, color, representative, scale, shift, add_assoc]
     using hEnergy
 
-#print axioms shifted_real_quadruple_defect_le
-#print axioms exists_mixed_real_energy_color_classes_with_representative
-#print axioms unit_bin_card_le_one_of_one_separated
-#print axioms finite_shifted_dyadic_real_energy_extraction
 
 end
 

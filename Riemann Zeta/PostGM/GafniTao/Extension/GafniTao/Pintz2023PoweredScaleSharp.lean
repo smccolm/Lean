@@ -107,8 +107,6 @@ theorem eventually_pintz2023_equation416_powered_scale_split
     have hWindow := hhCase.resolve_left hh
     exact pintz2023_powered_dyadic_cast_lt_rpow hT hU hq hWindow hDyadic
 
-#print axioms pintz2023_powered_dyadic_cast_lt_rpow
-#print axioms eventually_pintz2023_equation416_powered_scale_split
 
 end
 

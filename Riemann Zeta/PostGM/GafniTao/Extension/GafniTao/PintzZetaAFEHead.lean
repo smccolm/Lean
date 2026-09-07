@@ -332,15 +332,6 @@ theorem norm_pintzZetaAFEHeadResidue_dual_le
   rw [abs_neg, abs_of_nonneg (by linarith : 0 ≤ t)]
   exact mul_le_mul hgammaBound hsum (norm_nonneg _) (Real.exp_pos _).le
 
-#print axioms pintzZetaDirichletTerm_eq_cpow
-#print axioms pintzZetaAFETermNumerator_zero_original
-#print axioms pintzZetaAFETermNumerator_zero_dual
-#print axioms pintzZetaAFEHeadResidue_original_eq
-#print axioms pintzZetaAFEHeadResidue_dual_eq
-#print axioms norm_fordShiftedWeightedBlock_zero_le_all_short_zeta
-#print axioms norm_pintzZeta_short_head_le
-#print axioms norm_pintzZetaAFEHeadResidue_original_le
-#print axioms norm_pintzZetaAFEHeadResidue_dual_le
 
 end
 

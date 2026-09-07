@@ -187,8 +187,6 @@ theorem ford_shifted_weyl_above_square_power
     simpa only [A, Y, Z] using hsqrt
   exact hraw.trans (by nlinarith)
 
-#print axioms ford_shifted_weyl_below_square_power
-#print axioms ford_shifted_weyl_above_square_power
 
 end
 

@@ -244,11 +244,6 @@ theorem exists_pintz2023MellinWeight_imaginary_integral_bound :
   dsimp only [L]
   exact hIntegral.trans (le_add_of_nonneg_right zero_le_one)
 
-#print axioms norm_pintz2023MellinPowerDiff_imaginary_le_two
-#print axioms norm_pintz2023MellinPowerDiff_imaginary_le_log
-#print axioms norm_pintz2023MellinWeight_imaginary_le_log
-#print axioms exists_norm_pintz2023MellinWeight_imaginary_tail_le
-#print axioms exists_pintz2023MellinWeight_imaginary_integral_bound
 
 end
 

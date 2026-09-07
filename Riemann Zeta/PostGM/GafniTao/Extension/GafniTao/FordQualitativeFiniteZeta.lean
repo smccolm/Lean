@@ -215,10 +215,6 @@ theorem norm_fordPartialSum_le_qualitative
   exact norm_fordPartialSum_le_general ford_exponential_sum_qualitative
     fordQualitativeCoefficient_nonneg (by norm_num) hsigmaLower hsigmaUpper ht
 
-#print axioms norm_fordShiftedWeightedBlock_le_general
-#print axioms norm_fordFiniteHurwitzSum_le_general
-#print axioms norm_fordPartialSum_le_general
-#print axioms norm_fordPartialSum_le_qualitative
 
 end
 

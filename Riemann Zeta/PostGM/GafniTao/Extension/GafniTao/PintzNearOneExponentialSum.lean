@@ -135,7 +135,6 @@ theorem norm_pintz2023ExponentialBlock_le_nearOne_target
               dsimp only [C]
               nlinarith
 
-#print axioms norm_pintz2023ExponentialBlock_le_nearOne_target
 
 end
 

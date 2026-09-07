@@ -78,8 +78,6 @@ theorem absoluteDyadicZeroSlab_unitBin_multiplicity_le
     exact_mod_cast hFullReal.trans hCeil
   exact hSum.trans hFull
 
-#print axioms absoluteDyadicZeroSlab_subset_zeroSet
-#print axioms absoluteDyadicZeroSlab_unitBin_multiplicity_le
 
 end
 

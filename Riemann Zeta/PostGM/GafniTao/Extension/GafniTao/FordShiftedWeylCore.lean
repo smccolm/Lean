@@ -263,9 +263,6 @@ theorem ford_real_base_weyl_prefix
     nlinarith [hsqrtNonneg, norm_nonneg (∑ n ∈ Finset.Ico (0 : ℤ) L,
       integerLogarithmicTerm (Y ^ 3) A n)]
 
-#print axioms fordRealWeylShiftLength_spec
-#print axioms ford_simpleLogarithmicCorrelationBound_le
-#print axioms ford_real_base_weyl_prefix
 
 end
 

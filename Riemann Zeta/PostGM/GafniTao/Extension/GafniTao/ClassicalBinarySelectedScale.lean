@@ -113,10 +113,6 @@ theorem classicalBinarySelectedN_lt_cutoff_of_typeI_large
         (by simpa only [dirichletPoly_neg_eq_sourceDirichletPoly] using hRaw)
   simpa [classicalBinarySelectedN, hq] using hNA
 
-#print axioms le_classicalBinarySelectedN
-#print axioms le_classicalBinarySelectedN_of_typeI
-#print axioms classicalBinarySelectedN_typeII_range
-#print axioms classicalBinarySelectedN_lt_cutoff_of_typeI_large
 
 end
 

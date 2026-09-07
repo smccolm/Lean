@@ -346,9 +346,6 @@ theorem refinedExceptionalUpperExponent_two_fifteenths_add_le
     exact second_sample_fixed_epsilon_bound hPintz hDelta hDeltaUpper
       heps hepsUpper
 
-#print axioms refinedExceptionalUpperExponent_le_of_eventually_fixed_le
-#print axioms refinedExceptionalUpperExponent_seventeen_thirtieths_le
-#print axioms refinedExceptionalUpperExponent_two_fifteenths_add_le
 
 end
 

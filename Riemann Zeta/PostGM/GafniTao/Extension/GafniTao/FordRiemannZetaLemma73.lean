@@ -128,9 +128,6 @@ theorem norm_riemannZeta_le_76_2
     exact this.trans ht)
   exact h73.trans (by gcongr)
 
-#print axioms norm_riemannZeta_le_fordLemma73_expanded
-#print axioms norm_riemannZeta_le_fordLemma73
-#print axioms norm_riemannZeta_le_76_2
 
 end
 

@@ -146,7 +146,6 @@ theorem exists_pintz2023_zero_detected_variable_selection_subset
     simpa only [etaAt] using h
   exact ⟨W, etaAt, hSep, hCount, hEtaRange, hHeight, hLarge⟩
 
-#print axioms exists_pintz2023_zero_detected_variable_selection_subset
 
 end
 

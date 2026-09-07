@@ -179,14 +179,6 @@ theorem hasSum_fordLemma51DifferenceLattice
   intro c
   rw [fordLemma51DifferencePhase_eq_coordinateSum]
 
-#print axioms hasSum_fin_pi_prod_complex
-#print axioms hasSum_fordLemma51CoordinateFourierTerm
-#print axioms summable_norm_fordLemma51CoordinateFourierTerm
-#print axioms hasSum_fordLemma51CoordinateFourierProduct
-#print axioms fordLemma51CoordinateFourierProduct_eq
-#print axioms hasSum_fordLemma51WeightProduct_character
-#print axioms fordLemma51DifferencePhase_eq_coordinateSum
-#print axioms hasSum_fordLemma51DifferenceLattice
 
 end
 

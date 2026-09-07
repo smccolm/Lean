@@ -7,7 +7,7 @@ The earlier global theorem used an existential maximum over an unspecified
 eventual endpoint.  This file replaces it by the ceiling of the quantitative
 Lemma 3.4 endpoint.  Consequently every later recurrence coefficient is a
 literal expression in the previous coefficient, `s`, `k`, and one fixed PNT
-constant.
+The constant.
 -/
 
 namespace GafniTao
@@ -116,9 +116,6 @@ theorem ford_lemma_3_5_one_step_global_quantitative
             (Q : ℝ) ^ fordLambda34 (s + k) k
               (fordDeltaZero35 k r delta) := by gcongr)
 
-#print axioms fordLemma34Threshold_le_endpoint
-#print axioms ford_lemma_3_5_one_step_above_endpoint
-#print axioms ford_lemma_3_5_one_step_global_quantitative
 
 end
 

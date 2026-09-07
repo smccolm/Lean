@@ -252,11 +252,6 @@ theorem wooley_multigrade_to_monograde
             exact hX j hjBounds.1 (by omega))
         exact hbound.trans (by simpa only [P, v, hprod] using henv)
 
-#print axioms wooleyMonogradeProduct_nonneg
-#print axioms wooleyMonogradeProduct_one
-#print axioms wooleyMonogradeProduct_step
-#print axioms wooley_monograde_envelope_step
-#print axioms wooley_multigrade_to_monograde
 
 end
 

@@ -110,11 +110,6 @@ theorem WooleySourceSequence.Admissible.section7Coefficient
   intro y
   rw [wooleySourcePolynomialPhase_norm]
 
-#print axioms wooleySection7Coefficient_apply
-#print axioms wooley_equation_7_15
-#print axioms wooleySection7Coefficient_sum
-#print axioms wooley_equations_7_14_7_16
-#print axioms WooleySourceSequence.Admissible.section7Coefficient
 
 end
 

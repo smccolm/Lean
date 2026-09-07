@@ -81,7 +81,6 @@ theorem finite_source_arbitrary_power_outputs_uniform_native
       WNext, hWNext, hCardNext, hUnitNext, hPoweredNext, hMeanNext⟩
   exact ⟨hEnergy, ⟨hBasePacket⟩, ⟨hNextPacket⟩⟩
 
-#print axioms finite_source_arbitrary_power_outputs_uniform_native
 
 end
 

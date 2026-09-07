@@ -132,10 +132,6 @@ theorem heathBrown_full_kernel_sum_le_blocks
   rw [hfull.tsum_eq, hscaled.tsum_eq] at htsum
   exact htsum
 
-#print axioms heathBrownFourierAtom_sum_eq_block_sums
-#print axioms heathBrownFrequencyEnergy_le_block_energies
-#print axioms hasSum_heathBrownBlockFrequencyEnergy
-#print axioms heathBrown_full_kernel_sum_le_blocks
 
 end
 

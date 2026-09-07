@@ -140,7 +140,6 @@ theorem mixed_weighted_energy_detector_extraction
       simp only [K, Fintype.card_prod, U, MixedApproxAddEnergy]
       ring
 
-#print axioms mixed_weighted_energy_detector_extraction
 
 end
 

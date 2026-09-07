@@ -99,7 +99,6 @@ theorem finite_binary_shifted_energy_extraction_on
       (Finset.card_le_card (Finset.filter_subset _ _)))
   · simpa only [W, representative, scale, shift] using hEnergy
 
-#print axioms finite_binary_shifted_energy_extraction_on
 
 end
 

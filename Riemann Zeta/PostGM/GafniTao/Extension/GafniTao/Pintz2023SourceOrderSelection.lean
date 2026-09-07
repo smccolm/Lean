@@ -258,8 +258,6 @@ theorem exists_pintz2023_source_order_variable_selection_subset
   dsimp only [L] at hCountU
   simpa [W, hCard] using hCountU
 
-#print axioms pintz2023_separation_after_detector_shift
-#print axioms exists_pintz2023_source_order_variable_selection_subset
 
 end
 

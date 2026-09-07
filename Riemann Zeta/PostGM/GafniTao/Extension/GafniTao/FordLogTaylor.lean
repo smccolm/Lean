@@ -142,8 +142,6 @@ theorem ford_equation_5_1
       abs_of_nonneg (fordLogRemainderIntegral_nonneg hx.1)
     _ ≤ x ^ (k + 1) / (k + 1) := fordLogRemainderIntegral_le hx.1
 
-#print axioms ford_log_remainder_integral_representation
-#print axioms ford_equation_5_1
 
 end
 

@@ -165,9 +165,6 @@ theorem sharp_typeI_smooth_energy_split
   exact ⟨⟨fun i ↦ (pair i).1, fun i ↦ (pair i).2, Ws,
     hSub, hSep, hSmooth, hFinal⟩⟩
 
-#print axioms exists_pointwise_typeISourceSmoothBlock_of_sharp_large
-#print axioms SharpTypeISmoothEnergyOutput
-#print axioms sharp_typeI_smooth_energy_split
 
 end
 

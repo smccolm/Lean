@@ -485,12 +485,6 @@ theorem wooleyPolynomial_lemma_6_3 {Q k : ℕ}
     (C := 2 * 2 ^ (s - 1)) phi (by positivity)
       hnuTheta hs gamma hinitial
 
-#print axioms wooleyPolynomial_mixed_one_point_refinement
-#print axioms wooleyPolynomial_mixed_one_refinement
-#print axioms wooleyPolynomial_lemma_6_3_of_initial_conditioning
-#print axioms wooleyPolynomial_conditioned_mean_le_decay
-#print axioms wooleyPolynomial_lemma_6_1
-#print axioms wooleyPolynomial_lemma_6_3
 
 end
 

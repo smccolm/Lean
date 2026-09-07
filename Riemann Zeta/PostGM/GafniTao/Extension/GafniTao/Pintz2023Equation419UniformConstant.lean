@@ -20,7 +20,7 @@ open RiemannZeta.GuthMaynard
 noncomputable section
 
 /-- Height-local normalized form of equation (4.19), with its analytic
-constant supplied independently of the height. -/
+The constant supplied independently of the height. -/
 def Pintz2023Equation419NormalizedAt
     {eta target : ℝ} {k ell : ℕ}
     (data : Pintz2023PowerMarginData eta target k ell)
@@ -181,8 +181,6 @@ theorem exists_eventually_forall_pintz2023_equation419_normalized_at
   exact hBound.trans (mul_le_mul_of_nonneg_right hcC
     (Real.rpow_nonneg (by exact_mod_cast hN.le) _))
 
-#print axioms exists_eventually_pintz2023_equation419_normalized_at
-#print axioms exists_eventually_forall_pintz2023_equation419_normalized_at
 
 end
 

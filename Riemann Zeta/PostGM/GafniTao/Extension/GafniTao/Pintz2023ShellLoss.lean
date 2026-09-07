@@ -282,7 +282,6 @@ theorem exists_eventually_pintz2023_equation419_remove_threshold
                 2 * (data.epsilon / (100 * (k : ℝ)))) by ring]
       rw [hLogs]
 
-#print axioms exists_eventually_pintz2023_equation419_remove_threshold
 
 end
 

@@ -137,8 +137,6 @@ theorem exists_norm_Gamma_imaginary_le_exp :
       exact le_mul_of_one_le_left (norm_nonneg _) hu
     _ ≤ C * (|u| + 2) * Real.exp (-(Real.pi * |u|) / 2) := hupper
 
-#print axioms norm_Gamma_half_vertical_le_exp
-#print axioms exists_norm_Gamma_imaginary_le_exp
 
 end
 

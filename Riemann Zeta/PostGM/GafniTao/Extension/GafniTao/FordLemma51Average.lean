@@ -244,10 +244,6 @@ theorem exists_fordLemma51LogU_controls_average
       exact mul_nonneg (Nat.cast_nonneg N)
         (norm_nonneg (fordLemma51LogU M₁ B t (N : ℝ)))
 
-#print axioms fordLemma51CommonShiftAverage_eq
-#print axioms norm_fordLemma51_average_discrepancy_le
-#print axioms norm_fordShiftedExponentialSum_le_average
-#print axioms exists_fordLemma51LogU_controls_average
 
 end
 

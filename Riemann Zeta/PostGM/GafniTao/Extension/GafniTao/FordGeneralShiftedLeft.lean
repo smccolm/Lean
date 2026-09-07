@@ -361,8 +361,6 @@ theorem fordShiftedDetectorPhysicalVerticalBulk_left_general_full_bound
   rw [hsplitAll, hsplitNegLow]
   linarith
 
-#print axioms fordShiftedDetectorPhysicalVerticalBulk_left_general_high_bound
-#print axioms fordShiftedDetectorPhysicalVerticalBulk_left_general_full_bound
 
 end
 

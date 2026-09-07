@@ -71,7 +71,6 @@ theorem ford_equation_3_7_source
       exact Nat.mul_le_mul_right _
         (Nat.mul_le_mul_right _ (Nat.mul_le_mul_left 2 hfactorial))
 
-#print axioms ford_equation_3_7_source
 
 end
 

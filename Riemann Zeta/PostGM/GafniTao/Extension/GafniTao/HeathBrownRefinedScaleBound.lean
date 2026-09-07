@@ -159,9 +159,6 @@ theorem heathBrownPairCount_card_cast_le_chosen_factor
   exact hcount.trans
     (mul_le_mul_of_nonneg_left hinside (by positivity))
 
-#print axioms heathBrown_shift_factor_le
-#print axioms heathBrown_shift_factor_le_chosen
-#print axioms heathBrownPairCount_card_cast_le_chosen_factor
 
 end
 

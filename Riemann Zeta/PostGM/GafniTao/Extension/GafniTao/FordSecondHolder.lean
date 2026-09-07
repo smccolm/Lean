@@ -90,8 +90,6 @@ theorem ford_second_holder_power
   rw [hw2] at h
   simpa only [hTwoS, NNReal.rpow_natCast, NNReal.rpow_one] using h
 
-#print axioms ford_second_holder_root
-#print axioms ford_second_holder_power
 
 end
 

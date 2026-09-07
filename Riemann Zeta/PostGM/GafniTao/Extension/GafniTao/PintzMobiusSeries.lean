@@ -282,8 +282,6 @@ theorem pintzMobius_verticalIntegral_eq_tsum
   funext n
   ring
 
-#print axioms summable_integral_norm_pintzMobiusVerticalTerm
-#print axioms pintzMobius_verticalIntegral_eq_tsum
 
 end
 

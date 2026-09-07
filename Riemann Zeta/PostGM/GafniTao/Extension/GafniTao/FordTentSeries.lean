@@ -413,17 +413,6 @@ theorem tsum_fordSincSquareWeight_character
         fordTent y (1 / (2 * ((r * M ^ j : ℕ) : ℝ))) : ℝ) : ℂ) :=
   (hasSum_fordSincSquareWeight_character hr hM y).tsum_eq
 
-#print axioms fordTentFourierCoefficient_of_ne_zero
-#print axioms summable_fordTentFourierCoefficient
-#print axioms ford_integral_linear_tent_cos
-#print axioms fordAdditiveCharacter_pair_eq_cos
-#print axioms ford_integral_symmetric_tent_character
-#print axioms ford_integral_symmetric_tent_character_eq_coefficient
-#print axioms fourierCoeff_fordTentCircle
-#print axioms hasSum_fordTentFourierSeries
-#print axioms fordSincSquareWeight_eq_tentCoefficient
-#print axioms hasSum_fordSincSquareWeight_character
-#print axioms tsum_fordSincSquareWeight_character
 
 end
 

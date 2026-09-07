@@ -115,11 +115,6 @@ theorem weightedMixed_dyadicZeroShells_le_of_bounded
     exact weightedMixedAdditiveEnergyOn_le_bounded_first hsigma hT
       hSmall (hSub 2) (hSub 0) (hSub 1)
 
-#print axioms dyadicZeroShell_subset_own_zeroSet
-#print axioms dyadicZeroShell_subset_bounded_zeroSet
-#print axioms dyadicZeroShell_eq_absolute_of_ne_zero
-#print axioms le_dyadicZeroShellInnerHeight_of_two_mul_lt_outer
-#print axioms weightedMixed_dyadicZeroShells_le_of_bounded
 
 end
 

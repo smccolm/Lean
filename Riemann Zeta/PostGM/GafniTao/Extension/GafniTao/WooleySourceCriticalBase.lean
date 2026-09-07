@@ -527,15 +527,6 @@ theorem wooleyPolynomialCorollary32_native :
         exact wooleyPolynomialCorollary32At_of_criticalExponent_eq_zero hk
           (wooleyCriticalExponent_eq_zero_of_lower hpPrime hkTwo hkp hlower)
 
-#print axioms wooley_spaced_degree_one_value_eq_iff
-#print axioms wooley_degree_one_phase_mul_conj
-#print axioms wooley_degree_one_raw_average_eq_collision
-#print axioms wooley_degree_one_sourceMean_eq_residueCollision
-#print axioms wooley_degree_one_conditionedMean_eq_residueCollision
-#print axioms wooley_degree_one_sourceMean_eq_conditionedMean
-#print axioms wooleyPolynomialCorollary32At_degree_one
-#print axioms wooleyPolynomialCorollary32At_of_criticalExponent_eq_zero
-#print axioms wooleyPolynomialCorollary32_native
 
 end
 

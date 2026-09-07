@@ -112,8 +112,6 @@ theorem ford_equation_3_10_all_indices
     exact (ford_equation_3_10_terminal Φ Esch (show 1 ≤ r by omega)
       hj hP hQj hmoment) Ψ hT hTbound p hp q hq
 
-#print axioms fordPrimeSet_upper_box_of_real_relative
-#print axioms ford_equation_3_10_all_indices
 
 end
 

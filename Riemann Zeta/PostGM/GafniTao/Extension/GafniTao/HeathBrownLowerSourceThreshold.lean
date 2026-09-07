@@ -120,8 +120,6 @@ theorem lower_source_dyadic_threshold
           ((Nat.clog 2 A + 1 : Nat) : Real))) /
         (Nat.clog 2 (A + 1) : Real) := by ring
 
-#print axioms eventually_lower_source_log_loss
-#print axioms lower_source_dyadic_threshold
 
 end
 

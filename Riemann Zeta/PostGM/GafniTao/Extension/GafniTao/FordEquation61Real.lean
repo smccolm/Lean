@@ -184,8 +184,6 @@ theorem ford_equation_6_1_real_cutoff
       dsimp [Q]
       field_simp
 
-#print axioms norm_fordEquation61_discrepancy_le_sq
-#print axioms ford_equation_6_1_real_cutoff
 
 end
 

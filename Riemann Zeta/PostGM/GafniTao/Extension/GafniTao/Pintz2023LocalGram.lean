@@ -130,7 +130,6 @@ theorem exists_pintz2023LocalOffDiagonalMajorant
       dsimp only [dMax, pMax]
       ring
 
-#print axioms exists_pintz2023LocalOffDiagonalMajorant
 
 end
 

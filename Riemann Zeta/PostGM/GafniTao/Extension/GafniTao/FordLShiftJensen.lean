@@ -89,9 +89,6 @@ theorem fordL_signed_power_sum_eq_two_mul_positive
   simp_rw [norm_fordLShiftedWeylSum_sign]
   simp
 
-#print axioms fordLShiftedWeylSum_false_eq_conj_true
-#print axioms fordLShiftAmplitude_jensen
-#print axioms fordL_signed_power_sum_eq_two_mul_positive
 
 end
 

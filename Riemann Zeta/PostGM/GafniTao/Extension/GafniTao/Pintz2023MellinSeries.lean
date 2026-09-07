@@ -256,10 +256,6 @@ theorem pintz2023SmoothedZetaSum_eq_right_mellin
   filter_upwards with t
   exact tsum_pintz2023MellinSeriesTerm_eq hN hs t
 
-#print axioms pintz2023_cpow_div_neg
-#print axioms summable_integral_norm_pintz2023MellinSeriesTerm
-#print axioms tsum_pintz2023MellinSeriesTerm_eq
-#print axioms pintz2023SmoothedZetaSum_eq_right_mellin
 
 end
 

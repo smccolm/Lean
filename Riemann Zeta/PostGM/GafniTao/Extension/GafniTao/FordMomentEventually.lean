@@ -112,10 +112,6 @@ theorem FordVinogradovMomentBoundEventually.exists_global_coefficient
         C' = C' * 1 := by ring
         _ ≤ C' * (Q : ℝ) ^ fordLambda34 s k delta := by gcongr)
 
-#print axioms fordVinogradovMomentNat_le_trivial
-#print axioms FordVinogradovMomentBound.toEventually
-#print axioms FordVinogradovMomentBoundEventually.lambda_nonneg
-#print axioms FordVinogradovMomentBoundEventually.exists_global_coefficient
 
 end
 

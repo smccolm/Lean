@@ -112,9 +112,6 @@ theorem WooleyPolynomialSystem.Spaced.exists_translated_tail_normal_change
       (fun j n hn => hphi.affine_one_high_coeff_dvd eta j n hn) hp
   exact ⟨G, psi, Error, hchange⟩
 
-#print axioms wooleyNormalFormCombination_high_coeff_dvd_of_each
-#print axioms wooley_exists_tail_normal_change_of_leftInverse_high
-#print axioms WooleyPolynomialSystem.Spaced.exists_translated_tail_normal_change
 
 end
 

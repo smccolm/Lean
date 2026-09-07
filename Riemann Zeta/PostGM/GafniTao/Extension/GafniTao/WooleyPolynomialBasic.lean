@@ -181,10 +181,6 @@ theorem wooleyPolynomial_equation_3_10
         intro alpha halpha
         ac_rfl
 
-#print axioms wooleyPolynomialResidueGridSum_eq_zero_of_massSq_eq_zero
-#print axioms wooleyPolynomial_normalizedGridSum_decomposition
-#print axioms wooleyPolynomial_equation_3_9
-#print axioms wooleyPolynomial_equation_3_10
 
 end
 

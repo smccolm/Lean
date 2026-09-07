@@ -95,8 +95,6 @@ theorem heathBrown_actualBlock_pair_source_separation
   exact heathBrown_actualBlock_last_coordinate_spread
     hk hA hlambda hsmall hg hgd hkBounds hp
 
-#print axioms heathBrown_actualBlock_last_coordinate_spread
-#print axioms heathBrown_actualBlock_pair_source_separation
 
 end
 

@@ -209,11 +209,6 @@ theorem eventually_pintz2023_largeM_error_le_half_localized_threshold
       simp only [div_eq_mul_inv, mul_inv_rev]
       ring
 
-#print axioms pintz2023Cutoff_cast_le_two_exp
-#print axioms log_pintz2023Cutoff_le
-#print axioms pintz2023DyadicDepth_cutoff_cast_lt
-#print axioms pintz2023DyadicDepth_cutoff_cast_le_affine
-#print axioms eventually_pintz2023_largeM_error_le_half_localized_threshold
 
 end
 

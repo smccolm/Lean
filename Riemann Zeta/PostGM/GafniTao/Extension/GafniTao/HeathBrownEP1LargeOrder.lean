@@ -74,7 +74,6 @@ theorem norm_pintz2023ExponentialBlock_le_EP1_large_order
   intro N R tau hN hNR hR hlower hupper
   exact hbound N R tau hN hNR hR ⟨hlower, hupper⟩
 
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_large_order
 
 end
 

@@ -230,8 +230,6 @@ theorem continuous_fordPowerFullWeylSum (k Q q : ℕ) :
   unfold fordPowerFullWeylSum fordCharacterSum
   fun_prop
 
-#print axioms fordKFourier_eq_count
-#print axioms fordCharacterSum_familyMoment_eq_pow_card
 
 end
 

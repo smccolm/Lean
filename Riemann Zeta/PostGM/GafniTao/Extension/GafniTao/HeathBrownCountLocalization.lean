@@ -183,13 +183,6 @@ theorem heathBrownPairCountOne_card_le_four_mul_block_mul_pairCountTwo
         mul_le_mul_of_nonneg_left hsame (Nat.cast_nonneg K)
   nlinarith
 
-#print axioms heathBrownBlockProducts_pairwiseDisjoint
-#print axioms heathBrown_sameBlock_kernel_sum_eq
-#print axioms heathBrownDistanceToInteger_lt_of_hat_pos
-#print axioms heathBrown_kernel_support
-#print axioms heathBrown_sameBlock_mem_pairCountTwo_of_kernel_ne_zero
-#print axioms heathBrown_sameBlock_kernel_sum_le_pairCountTwo
-#print axioms heathBrownPairCountOne_card_le_four_mul_block_mul_pairCountTwo
 
 end
 

@@ -144,9 +144,6 @@ theorem eventually_heathBrown_physical_majorants_le
   · exact hIIU.trans (Real.rpow_le_rpow_of_exponent_le hU
       (le_max_right _ _))
 
-#print axioms eventually_heathBrownTypeIPhysicalMajorant_le
-#print axioms eventually_heathBrownTypeIIPhysicalMajorant_le
-#print axioms eventually_heathBrown_physical_majorants_le
 
 end
 

@@ -203,11 +203,6 @@ theorem pintzFiniteContour_verticalIntegral_three_eq_head
   · intro n hn
     exact integrable_pintzMobiusVerticalTerm hrhoHalf hlambda n
 
-#print axioms pintzFiniteContourIntegrand_eq_div
-#print axioms differentiableOn_pintzFiniteContourIntegrand
-#print axioms pintzFiniteContour_rectangle_vanishes
-#print axioms pintzFiniteContour_finite_vertical_shift
-#print axioms pintzFiniteContour_verticalIntegral_three_eq_head
 
 end
 

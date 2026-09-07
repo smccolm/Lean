@@ -133,7 +133,6 @@ theorem heathBrown_zeta_exponent_le
     exact nonneg_of_mul_nonneg_left hprod hfactor
   linarith
 
-#print axioms heathBrown_zeta_exponent_le
 
 end
 

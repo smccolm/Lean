@@ -99,8 +99,6 @@ theorem heathBrown_mhh_card_log_le
   apply (Real.strictMono_rpow_of_base_gt_one hx).le_iff_le.mp
   simpa only [hExact] using hPower
 
-#print axioms quotient_four_six_le_rpow_sub
-#print axioms heathBrown_mhh_card_log_le
 
 end
 

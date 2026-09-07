@@ -179,10 +179,6 @@ theorem fordLReduced_real_mean_eq_count
         (P := P) (p := p) (r := r) Ψ s Q q
     _ = _ := by norm_num
 
-#print axioms fordLReduced_character_mean_eq_count
-#print axioms continuous_fordLCoordinateEnergy
-#print axioms fordL_real_mean_eq_count
-#print axioms fordLReduced_real_mean_eq_count
 
 end
 

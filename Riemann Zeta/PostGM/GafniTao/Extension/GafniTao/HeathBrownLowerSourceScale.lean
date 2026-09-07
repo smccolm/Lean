@@ -135,7 +135,6 @@ theorem eventually_heathBrown_lower_source_scale
   exact ⟨hPOne, hPLowerReal, hPower.1, hPower.2.1,
     hPower.2.2.1, hPower.2.2.2, hpBound⟩
 
-#print axioms eventually_heathBrown_lower_source_scale
 
 end
 

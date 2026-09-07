@@ -174,8 +174,6 @@ theorem ford_exponential_lemma_5_1_large_scale
     _ = 5 * (N : ℝ) ^
           (1 - 1 / ((2182400 : ℝ) * (k : ℝ) ^ 2)) := by ring
 
-#print axioms ford_coefficient_absorbed
-#print axioms ford_exponential_lemma_5_1_large_scale
 
 end
 

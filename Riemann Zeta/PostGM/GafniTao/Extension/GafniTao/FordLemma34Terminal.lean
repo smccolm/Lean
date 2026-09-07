@@ -144,10 +144,6 @@ theorem fordLCount_terminal_le_moment_bound
     _ = C * (P : ℝ) ^ k *
         (Q : ℝ) ^ fordLambda34 s k delta := by ring
 
-#print axioms fordL_terminal_polynomial_coordinates_eq
-#print axioms fordL_terminal_power_solution
-#print axioms fordLCount_terminal_le
-#print axioms fordLCount_terminal_le_moment_bound
 
 end
 

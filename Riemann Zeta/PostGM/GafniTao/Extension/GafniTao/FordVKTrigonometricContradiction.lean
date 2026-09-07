@@ -319,8 +319,6 @@ theorem fordVK_no_positive_height_zero
     nlinarith
   linarith
 
-#print axioms fordVKTrigGap_pos
-#print axioms fordVK_no_positive_height_zero
 
 end
 

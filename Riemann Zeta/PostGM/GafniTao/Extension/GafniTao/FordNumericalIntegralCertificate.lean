@@ -42,9 +42,6 @@ theorem integral_fordNormalizedRatio_le_source_constant
   (integral_fordNormalizedRatio_le_numericalPolynomialUpper hy0 hy).trans
     (fordNumericalPolynomialUpper_le_source_constant hy0 hy)
 
-#print axioms fordNumericalGap_nonneg
-#print axioms fordNumericalPolynomialUpper_le_source_constant
-#print axioms integral_fordNormalizedRatio_le_source_constant
 
 end
 

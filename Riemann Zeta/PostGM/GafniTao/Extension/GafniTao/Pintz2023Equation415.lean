@@ -201,7 +201,6 @@ theorem eventually_exists_pintz2023_equation415_shell_family
     · positivity
     · simpa only [Iset] using hSmall
 
-#print axioms eventually_exists_pintz2023_equation415_shell_family
 
 end
 

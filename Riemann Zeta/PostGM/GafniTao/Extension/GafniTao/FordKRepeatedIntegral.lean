@@ -207,8 +207,6 @@ theorem fordPolynomialDoubleWeylSum_eq_doubleSystem
   funext j
   simp [fordPolynomialSingleMoment, fordDoubleIntegerPolynomialSystem_eval]
 
-#print axioms fordK_left_repeat_card_le_integral
-#print axioms fordPolynomialDoubleWeylSum_eq_doubleSystem
 
 end
 

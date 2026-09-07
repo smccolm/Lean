@@ -140,10 +140,6 @@ theorem exists_norm_pintzZetaAFETermVerticalTrunc_dual_left_le
   exact mul_le_mul_of_nonneg_left (by simpa only [A, B, mul_assoc] using hIntegral)
     (by positivity)
 
-#print axioms intervalIntegral_exp_neg_mul_sq_le_gaussian
-#print axioms norm_intervalIntegral_le_gaussian_pair
-#print axioms exists_norm_pintzZetaAFETermVerticalTrunc_original_left_le
-#print axioms exists_norm_pintzZetaAFETermVerticalTrunc_dual_left_le
 
 end
 

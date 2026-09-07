@@ -76,8 +76,6 @@ theorem log_one_add_le_cubic {x : ℝ} (hx0 : 0 ≤ x) :
     (show x ∈ Set.Icc (0 : ℝ) x by exact ⟨hx0, le_rfl⟩) hx0
   simpa [f] using h
 
-#print axioms log_one_sub_le_cubic
-#print axioms log_one_add_le_cubic
 
 end
 

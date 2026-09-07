@@ -153,7 +153,6 @@ theorem finite_shifted_dyadic_zero_energy_gm_bound
       dsimp only [P]
       positivity))
 
-#print axioms finite_shifted_dyadic_zero_energy_gm_bound
 
 end
 

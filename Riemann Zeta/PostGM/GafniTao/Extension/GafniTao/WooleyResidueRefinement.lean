@@ -229,11 +229,6 @@ theorem wooley_lemma_6_2
         _ = M ^ (w - 1) * ((p ^ (b - a) : ℝ) ^ w * R) := by ring
     exact le_of_mul_le_mul_left hfactored hfactorPos
 
-#print axioms wooleyResidueRefinementFiber_card
-#print axioms wooley_sum_refined_residue_mass
-#print axioms wooley_sum_refined_residue_grid
-#print axioms wooley_refined_normalized_residue_decomposition
-#print axioms wooley_lemma_6_2
 
 end
 

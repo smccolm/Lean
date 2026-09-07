@@ -611,22 +611,6 @@ theorem norm_riemannZeta_le_ford_lemma71_unconditional_ranges
     · exact norm_riemannZeta_le_ford_boundedHeight
         (le_of_not_ge hsigmaCase) hsigmaUpper ht htBounded
 
-#print axioms ford_harmonic_tail_le_log
-#print axioms ford_rpow_tail_le_power_mul_harmonic
-#print axioms ford_rpow_partial_sum_le_one_add_power_log
-#print axioms norm_fordPartialSum_le_one_add_power_log
-#print axioms log_ten_lt_seven_thirds
-#print axioms norm_riemannZeta_le_ford_boundedHeight_small
-#print axioms ford_exponent_gap_le
-#print axioms exp_one_hundred_seventy_five_over_eighty_one_le_nine
-#print axioms t_rpow_ford_exponent_gap_le_nine
-#print axioms log_rpow_one_third_le_thirty_one_fifths
-#print axioms five_le_log_rpow_two_thirds_of_ten_pow_six_lt
-#print axioms ford_main_term_le_large
-#print axioms t_rpow_neg_sigma_le_one_thousandth
-#print axioms norm_riemannZeta_le_ford_boundedHeight_large
-#print axioms norm_riemannZeta_le_ford_boundedHeight
-#print axioms norm_riemannZeta_le_ford_lemma71_unconditional_ranges
 
 end
 

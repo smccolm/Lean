@@ -493,14 +493,6 @@ theorem fordLemma63PeriodicTopFiber_card_le_W
     exact hcardReal.trans
       (fordLemma63TopFiber_card_le_W (by omega) hN hu0 hu1 ht)
 
-#print axioms hasDerivAt_fordLemma63TopAmplitude
-#print axioms fordLemma63TopAmplitude_consecutive_gap
-#print axioms abs_fordLemma63TopGamma_consecutive_gap
-#print axioms ford_finset_card_le_of_ordered_spacing
-#print axioms fordLemma63TopFiber_card_le_W
-#print axioms abs_fordLemma63TopGamma_sub_lt_half
-#print axioms fordLemma63_integer_translate_unique
-#print axioms fordLemma63PeriodicTopFiber_card_le_W
 
 end
 

@@ -462,12 +462,6 @@ theorem logarithmicSecondDifferenceA3RawBound_le_separated
         _ = 21316 * (N : ℝ) * (H₃ : ℝ) * Real.sqrt (H₃ : ℝ) / z := by ring
   linarith
 
-#print axioms logarithmicThirdCorrelationBound_le_homogeneous
-#print axioms logarithmicThirdCorrelationBound_le_simple
-#print axioms sum_logarithmicThirdCorrelationBound_le
-#print axioms norm_logarithmicSecondDifferenceSum_le_A3Bound
-#print axioms logarithmicSecondDifferenceA3Bound_le_raw
-#print axioms logarithmicSecondDifferenceA3RawBound_le_separated
 
 end
 

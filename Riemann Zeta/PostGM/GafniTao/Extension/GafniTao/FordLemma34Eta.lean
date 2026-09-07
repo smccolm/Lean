@@ -194,12 +194,6 @@ theorem two_pow_le_ford_eta_absorption
     _ ≤ eta ^ e := Real.rpow_le_rpow_of_exponent_le heta1 hae
     _ = eta ^ ((s : ℝ) + ((k : ℝ) ^ 2 - k) / 4) := rfl
 
-#print axioms fordEtaCore_step
-#print axioms fordEtaCore_monotone_from_26
-#print axioms log_two_le_fordEtaCore_26
-#print axioms log_two_le_ford_eta_power_log
-#print axioms two_le_ford_eta_base_power
-#print axioms two_pow_le_ford_eta_absorption
 
 end
 

@@ -109,9 +109,6 @@ theorem norm_riemannZeta_sub_head_le_lemma73
         Real.log t ^ ((2 : ℝ) / 3) := by
       field_simp [hlogPow.ne']
 
-#print axioms riemannZeta_sub_head_eq_finite_add_dadaroRemainder
-#print axioms norm_riemannZeta_sub_head_le_expanded
-#print axioms norm_riemannZeta_sub_head_le_lemma73
 
 end
 

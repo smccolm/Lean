@@ -106,7 +106,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle_B
             (N : ℝ) ^ (tau / 2)) := by ring
       _ = 130 * (N : ℝ) ^ (-sigma + tau / 2) := by
         rw [← Real.rpow_add hNpos]
-      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring
+      _ = 130 * (N : ℝ) ^ (tau / 2 - sigma) := by ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have htauLog : tau * Real.log (N : ℝ) = Real.log t := by
     dsimp only [tau, fordLambda]
@@ -220,7 +220,7 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle_Weyl
         rw [← Real.rpow_add hNpos]
       _ = 90 * (N : ℝ) ^ (u + 1 / 2 - tau / 3) := by
         dsimp only [u]
-        ring
+        ring_nf
   have hlogN : 0 < Real.log (N : ℝ) := Real.log_pos hNRealOne
   have htauLog : tau * Real.log (N : ℝ) = Real.log t := by
     dsimp only [tau, fordLambda]
@@ -280,9 +280,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle
         exact hNpos.trans hNt) _
     exact hweyl.trans (by nlinarith)
 
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle_B
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle_Weyl
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne_middle
 
 end
 

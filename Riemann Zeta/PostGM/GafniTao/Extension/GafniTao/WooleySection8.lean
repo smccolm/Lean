@@ -66,9 +66,6 @@ theorem wooley_sum_separatedResiduePairsAt_swap
   · rw [if_pos h, if_pos (hsep.mp h)]
   · rw [if_neg h, if_neg (fun hs => h (hsep.mpr hs))]
 
-#print axioms wooleyResiduesSeparated_symm
-#print axioms wooley_sum_separatedResiduePairsAt
-#print axioms wooley_sum_separatedResiduePairsAt_swap
 
 /-- Hölder interpolation with the common finite-average normalizer retained.
 This is the exact form needed for the `∮_{p^B}` normalization. -/
@@ -138,8 +135,6 @@ theorem wooley_scaled_weighted_two_factor_holder_real
     simpa only [F, G] using
       wooley_scaled_two_factor_holder_real t F G hF hG hu0 hu1 hc)
 
-#print axioms wooley_scaled_two_factor_holder_real
-#print axioms wooley_scaled_weighted_two_factor_holder_real
 
 /-- The pointwise exponent identity used in the first Hölder application in
 Wooley (8.3).  Here `x` is the `b'`-residue sum and `y` the `b`-residue sum. -/
@@ -689,13 +684,6 @@ theorem wooleyPolynomial_equation_8_2_of_section7
   exact hsection7.trans
     (mul_le_mul_of_nonneg_left hinside (by positivity))
 
-#print axioms wooley_section8_integrand_identity
-#print axioms wooleyPolynomial_section8_local_holder
-#print axioms wooleyPolynomial_equation_8_3
-#print axioms wooleyPolynomialMixedResidueGridMoment_zero
-#print axioms wooleyPolynomialMixedGridMean_zero_le_conditioned
-#print axioms wooleyPolynomial_equation_8_1_of_section7
-#print axioms wooleyPolynomial_equation_8_2_of_section7
 
 end
 

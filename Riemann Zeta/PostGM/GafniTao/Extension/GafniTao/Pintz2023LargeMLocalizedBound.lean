@@ -69,8 +69,6 @@ theorem pintz2023SplitLargeM_localized_corollary_three
         _ ≤ 2 ^ q * X := Nat.mul_le_mul_right X hpow)
     hnonempty (min_le_left _ _) hphysical
 
-#print axioms pintz2023SplitLargeM_localized_eq_factorized
-#print axioms pintz2023SplitLargeM_localized_corollary_three
 
 end
 

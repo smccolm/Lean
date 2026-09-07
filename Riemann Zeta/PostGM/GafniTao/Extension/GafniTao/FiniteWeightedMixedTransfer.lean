@@ -144,8 +144,6 @@ theorem weighted_mixed_quadruple_sum_le_fiber_product_mul_card
     _ = (L0 * L1 * L2 * L3) * U.card := by
       simp [mul_comm]
 
-#print axioms mappedQuadrupleOf
-#print axioms weighted_mixed_quadruple_sum_le_fiber_product_mul_card
 
 end
 

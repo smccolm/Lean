@@ -138,9 +138,6 @@ theorem heathBrownEP1ExponentialSumBound_of_exponentPairs
           ((le_max_right C₂ _).trans (le_max_right C₁ _)))
     exact hraw.trans (mul_le_mul_of_nonneg_right hC₅le hpowNonneg)
 
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_low
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_middle
-#print axioms heathBrownEP1ExponentialSumBound_of_exponentPairs
 
 end
 

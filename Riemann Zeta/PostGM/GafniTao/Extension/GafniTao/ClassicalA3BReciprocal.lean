@@ -190,8 +190,6 @@ theorem reciprocalCubeGap_difference_bounds
     convert hmul using 1
     · ring
 
-#print axioms reciprocal_fourth_gap_bounds
-#print axioms reciprocalCubeGap_difference_bounds
 
 end
 

@@ -99,10 +99,6 @@ theorem heathBrownPhysicalLowPower_selected_length_le
   exact mul_le_mul hTwoRReal hBase (pow_nonneg (by positivity) _)
     (by norm_num)
 
-#print axioms heathBrownPhysicalLowPower_base_le_height
-#print axioms heathBrownPhysicalLowPower_height_le_companion
-#print axioms heathBrownPhysicalLowPower_height_sq_le_base_cube
-#print axioms heathBrownPhysicalLowPower_selected_length_le
 
 end
 

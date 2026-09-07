@@ -71,9 +71,6 @@ theorem ford_lemma_6_5_iterated
   refine ⟨C, ?_⟩
   simpa [hindex, fordDeltaSequence65_closed] using hC
 
-#print axioms fordDeltaSequence65_closed
-#print axioms fordDeltaSequence65_moment_bound
-#print axioms ford_lemma_6_5_iterated
 
 end
 

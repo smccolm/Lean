@@ -128,7 +128,6 @@ theorem HeathBrownUniformMixedSourceOutput.energy_le_sum_self
           (ApproxAddEnergy 1 (classicalBinaryColorFamily d3 output.label3) : Real)) := by
       simp only [heathBrownUniformMixedSelectionLoss, Q, D, Nat.cast_mul]
 
-#print axioms HeathBrownUniformMixedSourceOutput.energy_le_sum_self
 
 end
 

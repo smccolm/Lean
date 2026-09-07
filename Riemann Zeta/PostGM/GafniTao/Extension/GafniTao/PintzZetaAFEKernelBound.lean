@@ -274,14 +274,6 @@ theorem exists_norm_pintzZetaAFETermContourIntegrand_left_central_le
       dsimp only [C]
       ring
 
-#print axioms norm_pintzZetaAFE_gaussian_vertical
-#print axioms norm_pintzZetaAFE_polynomial_ratio_le_four
-#print axioms pintzZetaAFETermContourIntegrand_factor
-#print axioms norm_pintzZetaDirichletTerm_of_ne_zero
-#print axioms norm_inv_neg_real_add_im_le
-#print axioms norm_GammaR_real_neg_im_eq
-#print axioms exists_norm_GammaR_dual_ratio_le
-#print axioms exists_norm_pintzZetaAFETermContourIntegrand_left_central_le
 
 end
 

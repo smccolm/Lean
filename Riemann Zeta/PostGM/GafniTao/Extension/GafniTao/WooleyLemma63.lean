@@ -483,11 +483,6 @@ theorem wooley_lemma_6_3_of_initial_conditioning
               wooleyMixedGridMean s k 1 p B theta theta nu gamma := by
             rw [hpowers]
 
-#print axioms wooley_refinement_val_mod
-#print axioms wooley_refinements_separated
-#print axioms wooley_mixed_one_point_refinement
-#print axioms wooley_mixed_one_refinement
-#print axioms wooley_lemma_6_3_of_initial_conditioning
 
 end
 

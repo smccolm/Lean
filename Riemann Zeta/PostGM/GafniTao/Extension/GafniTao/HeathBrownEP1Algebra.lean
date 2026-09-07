@@ -144,11 +144,6 @@ theorem heathBrown_EP1_large_breakpoint
     (mul_pos hkPos (pow_pos hkOnePos 3))]
   nlinarith
 
-#print axioms heathBrown_EP1_low_range
-#print axioms heathBrown_EP1_middle_exponent_pair_range
-#print axioms heathBrown_EP1_kfive_constant_range
-#print axioms heathBrown_EP1_kfive_sloping_range
-#print axioms heathBrown_EP1_large_breakpoint
 
 end
 

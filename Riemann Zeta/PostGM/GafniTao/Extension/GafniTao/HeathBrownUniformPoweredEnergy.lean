@@ -152,9 +152,6 @@ theorem HeathBrownUniformPoweredEnergyOutput.energy_le_common_power
   exact output.hEnergy.trans
     (mul_le_mul_of_nonneg_left hSum (by positivity))
 
-#print axioms HeathBrownUniformPoweredEnergyOutput
-#print axioms finite_symmetric_source_powered_energy_heathBrown_uniform_native
-#print axioms HeathBrownUniformPoweredEnergyOutput.energy_le_common_power
 
 end
 

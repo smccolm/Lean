@@ -66,8 +66,6 @@ theorem pintz_mobius_equation_4_1
   rw [pintzMobius_verticalIntegral_right_eq hrho]
   exact pintz_equation_4_1 hlambda
 
-#print axioms riemannZeta_mul_pintzMoebiusSeries
-#print axioms pintz_mobius_equation_4_1
 
 end
 

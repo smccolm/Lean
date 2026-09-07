@@ -39,7 +39,6 @@ theorem ford_S6_le_L
         (s := s) (P := P) (Q := Q) (p := p) (q := q) (r := r)
         (fordBinomialTranslateSystem Ψ c) hdk))
 
-#print axioms ford_S6_le_L
 
 end
 

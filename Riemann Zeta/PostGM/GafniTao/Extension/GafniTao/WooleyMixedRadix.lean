@@ -60,9 +60,6 @@ theorem wooley_sum_mixedRadix
   rw [← Fintype.sum_prod_type']
   exact Fintype.sum_equiv (wooleyMixedRadixEquiv q₁ q₂) _ _ (fun _ => rfl)
 
-#print axioms wooleyMixedRadixEquiv_val
-#print axioms wooleyMixedRadixEquiv_apply
-#print axioms wooley_sum_mixedRadix
 
 end
 

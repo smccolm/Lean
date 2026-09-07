@@ -361,12 +361,6 @@ theorem four_mul_mixedApproxAddEnergy_le_window_mul_sum_self
         ((ApproxAddEnergy 1 W0 : Real) + (ApproxAddEnergy 1 W1 : Real) +
           (ApproxAddEnergy 1 W2 : Real) + (ApproxAddEnergy 1 W3 : Real)) := rfl
 
-#print axioms doubleFloor_injective_on_of_separated
-#print axioms doubleFloorDefect_mem_window
-#print axioms card_integerMixedWindowQuadruples_eq_sum
-#print axioms mixedApproxAddEnergy_le_sum_exactMixedShiftCount
-#print axioms addEnergy_doubleFloorImage_le_approxAddEnergy_one
-#print axioms four_mul_mixedApproxAddEnergy_le_window_mul_sum_self
 
 end
 

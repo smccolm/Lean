@@ -190,8 +190,6 @@ theorem pintzDetectorSquareLower_le_detected
             pintzPhysicalZetaMajorant eta T) ^ 2 :=
       div_le_div_of_nonneg_left hActualNumNonneg hActualDenPos hDen
 
-#print axioms pintzDetectedLowerBound_sq_eq
-#print axioms pintzDetectorSquareLower_le_detected
 
 end
 

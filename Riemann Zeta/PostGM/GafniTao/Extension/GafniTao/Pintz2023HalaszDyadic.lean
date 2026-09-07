@@ -108,9 +108,6 @@ theorem sum_Icc_pintz2023SmoothedZetaTerm_eq_one_add_dyadic
       (-(1 - xi))).symm
   rw [hpow]
 
-#print axioms pintz2023HalaszKernelWeightedBlock_add
-#print axioms pintz2023HalaszDyadicShellSum_eq_block
-#print axioms sum_Icc_pintz2023SmoothedZetaTerm_eq_one_add_dyadic
 
 end
 

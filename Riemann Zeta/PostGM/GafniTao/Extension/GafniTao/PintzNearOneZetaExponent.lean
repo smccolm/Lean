@@ -253,13 +253,6 @@ theorem pintz_nearOne_EP1_exponent_le
   have htauOne : 1 ≤ tau := by linarith
   nlinarith
 
-#print axioms pintz_nearOne_kfour_endpoint
-#print axioms pintz_nearOne_AB_exponent_le
-#print axioms pintz_nearOne_kfour_first_exponent_le
-#print axioms pintz_nearOne_kfour_second_exponent_le
-#print axioms pintz_nearOne_kfour_third_exponent_le
-#print axioms pintzNearOneUnweightedTarget_lower_endpoint_le
-#print axioms pintz_nearOne_EP1_exponent_le
 
 end
 

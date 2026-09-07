@@ -200,7 +200,6 @@ theorem ford_equation_3_4_sum
           Ψ hdk s Q q c)]
       rfl
 
-#print axioms ford_equation_3_4_sum
 
 /-- The finite residue-class maximum in Ford's equation (3.4), before
 combining its three powers of `p`. -/
@@ -267,7 +266,6 @@ theorem ford_equation_3_4
             fordS4Fourier (P := P) (p := p) Ψ hdk s Q q c := by ring
     _ = _ := by rw [ford_equation_3_4_power_identity hs hds]
 
-#print axioms ford_equation_3_4
 
 end
 

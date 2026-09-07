@@ -175,7 +175,6 @@ theorem exists_heathBrown_powered_cardinality_gm_common
           Q ^ (18 / 5 : Real) * V ^ (-4 : Real) +
           B * Q ^ (12 / 5 : Real) * V ^ (-4 : Real)) := by ring
 
-#print axioms exists_heathBrown_powered_cardinality_gm_common
 
 end
 

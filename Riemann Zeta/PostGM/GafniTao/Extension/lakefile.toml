@@ -16,8 +16,7 @@ autoImplicit = false
 
 [[require]]
 name = "PrimeNumberTheoremAnd"
-git = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
-rev = "4ecb950126c4290293c5662dfe0e884123171df5"
+path = "../Dependencies/PrimeNumberTheoremAndClean"
 
 [[require]]
 name = "mathlib"

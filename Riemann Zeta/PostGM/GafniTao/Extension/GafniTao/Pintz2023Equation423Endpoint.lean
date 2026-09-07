@@ -251,12 +251,6 @@ theorem pintz2023_middle_gram_shell_sum_le
       exact pintz2023_middle_gram_shell_majorant_le hC heta hepsilon hA
     _ = _ := by simp
 
-#print axioms pintz2023_low_block_equation423_raw_native
-#print axioms pintz2023_corollaryTwoMajorant_at_critical_le
-#print axioms pintz2023_low_raw_shell_majorant_le_endpoint
-#print axioms pintz2023_low_raw_shell_sum_le_endpoint
-#print axioms pintz2023_middle_gram_shell_majorant_le
-#print axioms pintz2023_middle_gram_shell_sum_le
 
 end
 

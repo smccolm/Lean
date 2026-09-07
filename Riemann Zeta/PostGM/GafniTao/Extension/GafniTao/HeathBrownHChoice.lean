@@ -163,17 +163,6 @@ theorem heathBrown_width_le_half_of_eight_le
     nlinarith
   exact ⟨bound (k - 2) (by omega), bound (k - 1) (by omega)⟩
 
-#print axioms heathBrownHChoice_rpow_one_le
-#print axioms heathBrownHChoice_pos
-#print axioms heathBrownHChoice_cast_le_rpow
-#print axioms heathBrownHChoice_rpow_lt_cast_add_one
-#print axioms heathBrownHChoice_rpow_le_two_mul
-#print axioms heathBrownHChoice_rpow_pow_k
-#print axioms heathBrownHChoice_scale_pow_le_one
-#print axioms heathBrownHChoice_inv_pow_le
-#print axioms heathBrownHChoice_half_rpow_neg_eq
-#print axioms heathBrownHChoice_inv_pow_le_source
-#print axioms heathBrown_width_le_half_of_eight_le
 
 end
 

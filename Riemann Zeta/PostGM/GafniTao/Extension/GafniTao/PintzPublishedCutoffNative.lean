@@ -36,7 +36,6 @@ theorem pintzTwentyThreeTwentyFourCutoff_native :
     hEnvelope.mono_exponent
       (mul_le_mul_of_nonneg_left hCoeff heta.le)
 
-#print axioms pintzTwentyThreeTwentyFourCutoff_native
 
 end
 

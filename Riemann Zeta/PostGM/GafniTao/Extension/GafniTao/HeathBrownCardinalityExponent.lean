@@ -109,10 +109,6 @@ theorem heathBrown_card_log_le_companion
     2 - 2 * sigma)] at h
   linarith
 
-#print axioms add_two_rpow_le_two_mul_max
-#print axioms heathBrown_card_log_le
-#print axioms heathBrown_card_log_le_main
-#print axioms heathBrown_card_log_le_companion
 
 end
 

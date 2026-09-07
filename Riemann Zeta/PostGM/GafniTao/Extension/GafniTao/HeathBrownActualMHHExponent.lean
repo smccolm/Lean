@@ -180,7 +180,6 @@ theorem eventually_actualTypeII_mhhExponentCap
   dsimp only [rho, sigmaMain, tau] at hLog ⊢
   nlinarith
 
-#print axioms eventually_actualTypeII_mhhExponentCap
 
 end
 

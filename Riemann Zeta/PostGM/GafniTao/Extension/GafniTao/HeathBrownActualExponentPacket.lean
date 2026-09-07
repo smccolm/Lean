@@ -71,7 +71,7 @@ theorem eventually_heathBrown_cardinality_coefficients
 colour.  It is the finite source object consumed by the subsequent
 Heath--Brown algebra. -/
 theorem eventually_actualTypeII_exponentPacket
-    {delta1 delta2 eta epsilon zetaShell zetaConst zetaDil zetaRel zetaCard
+    {sigma delta delta1 delta2 eta epsilon zetaShell zetaConst zetaDil zetaRel zetaCard
       C Cp Cmv C0 C2 C4 : Real}
     (hdelta1 : 0 < delta1) (hdelta2 : 0 < delta2)
     (hCube : 3 * (delta1 + delta2 / 2) <= 1)
@@ -215,7 +215,8 @@ theorem eventually_actualTypeII_exponentPacket
         zetaDil)).trans_le hThresholdData.2
   have hCaps := full.common_cardinality_exponents
     (sigmaMain := sigmaMain) (sigmaNext := sigmaNext)
-    hNOne hp hpP (zero_lt_one.trans_le hU) hCmv hW rfl hBase hNext
+    hNOne (by simpa only [N, p] using (show 2 <= p by omega)) hpP
+    (zero_lt_one.trans_le hU) hCmv hW rfl hBase hNext
     hCubeMain
     (by
       exact le_of_eq (by simpa only [sigmaMain, x, V] using
@@ -272,8 +273,6 @@ theorem eventually_actualTypeII_exponentPacket
     ⟨full.energy_Cp, hSigmaMain, hSigmaNext, hCaps.1, hCaps.2.1, hCaps.2.2.2.1,
       hCaps.2.2.2.2, hRelation⟩
 
-#print axioms eventually_heathBrown_cardinality_coefficients
-#print axioms eventually_actualTypeII_exponentPacket
 
 end
 

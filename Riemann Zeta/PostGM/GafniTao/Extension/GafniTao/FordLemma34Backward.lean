@@ -43,7 +43,6 @@ theorem ford_equation_3_10_backward
     homega hetaEq hM.le hmoment hp
   simpa only [Nat.add_sub_cancel] using habs
 
-#print axioms ford_equation_3_10_backward
 
 end
 

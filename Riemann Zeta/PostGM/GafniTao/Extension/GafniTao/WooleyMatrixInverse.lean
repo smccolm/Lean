@@ -159,16 +159,6 @@ theorem WooleyPolynomialSystem.Spaced.exists_lowMatrixMod_transpose_leftInverse
   rw [hM]
   exact wooley_identity_add_primePower_matrix_has_leftInverse p c B hc M
 
-#print axioms wooley_geomSum_mul_one_sub_of_pow_eq_zero
-#print axioms wooley_one_sub_mul_eq_zero_of_pow_eq_zero
-#print axioms wooley_primePowerScalar_pow_succ_eq_zero
-#print axioms wooley_primePower_smul_matrix_pow_succ_eq_zero
-#print axioms wooley_identity_add_primePower_matrix_has_leftInverse
-#print axioms wooley_identity_add_primePower_mulVec_eq_zero_iff
-#print axioms WooleyPolynomialSystem.Spaced.lowMatrixMod_eq_identity_add
-#print axioms WooleyPolynomialSystem.Spaced.lowMatrixMod_transpose_eq_identity_add
-#print axioms WooleyPolynomialSystem.Spaced.lowMatrixMod_transpose_mulVec_eq_zero_iff
-#print axioms WooleyPolynomialSystem.Spaced.exists_lowMatrixMod_transpose_leftInverse
 
 end
 

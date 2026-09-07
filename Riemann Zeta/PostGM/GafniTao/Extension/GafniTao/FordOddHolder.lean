@@ -115,7 +115,6 @@ theorem ford_odd_integral_pow_le
   exact (ENNReal.ofReal_le_ofReal_iff
     (mul_nonneg (by positivity) (by positivity))).mp hconverted
 
-#print axioms ford_odd_integral_pow_le
 
 end
 

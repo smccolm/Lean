@@ -73,7 +73,6 @@ theorem ford_lemma_3_2_finite_core
       exact Nat.mul_le_mul_left 2 (Nat.mul_le_mul_left S.card hS3)
     _ = 4 * S.card * k.factorial * p ^ E * L := by ring
 
-#print axioms ford_lemma_3_2_finite_core
 
 end
 

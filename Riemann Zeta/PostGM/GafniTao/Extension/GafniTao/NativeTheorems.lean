@@ -55,8 +55,6 @@ theorem gafniTaoTheorem12_max_native
     (max_le_max_left _
       (upperHalfRefinedExceptionalUpperExponent_le_ordinary theta))
 
-#print axioms gafniTaoTheorem13_native
-#print axioms gafniTaoTheorem12_native
 
 end
 

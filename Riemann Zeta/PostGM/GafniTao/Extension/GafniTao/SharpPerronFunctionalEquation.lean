@@ -260,7 +260,5 @@ theorem sharpPerron_zeta_logDeriv_functional_eq {s : ℂ}
     (sharp_zetaGammaFactor_shift_avoid_of_not_zero
       (by simpa [riemannZeta.zeroes] using hζ1s))
 
-#print axioms sharpPerron_zeta_logDeriv_functional_eq
-#print axioms Complex.exists_norm_digamma_div_two_le_log
 
 end GafniTao

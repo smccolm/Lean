@@ -194,11 +194,6 @@ theorem heathBrown_lemma_one_assembled_of_source
     hcoord.2.2.2.2.2
     (fun x hx => hkBounds x (hsub ⟨hx.1.le, hx.2.le⟩))
 
-#print axioms continuousOn_iteratedDeriv_of_contDiffOn_isOpen
-#print axioms differentiableOn_iteratedDeriv_of_contDiffOn_isOpen
-#print axioms heathBrown_coordinate_data_of_source
-#print axioms heathBrown_local_data_of_source
-#print axioms heathBrown_lemma_one_assembled_of_source
 
 end
 

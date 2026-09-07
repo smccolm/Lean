@@ -102,7 +102,7 @@ theorem norm_fordLemma63T_le_SZeroTorus_on_box
       exact hβcoe j
 
 /-- Ford's equation (6.9), with the exact phase-volume denominator, overlap
-constant, and Vinogradov moment retained. -/
+The constant, and Vinogradov moment retained. -/
 theorem ford_equation_6_9
     {s k M N : ℕ} {u t : ℝ}
     (hs : 1 ≤ s) (hk : 2 ≤ k) (hM : 1 ≤ M) (hN : 1 ≤ N)
@@ -188,12 +188,6 @@ theorem ford_equation_6_9
       dsimp [D]
       ring
 
-#print axioms continuous_fordLemma63SZeroTorus
-#print axioms integrable_fordLemma63SZeroTorus_pow
-#print axioms exists_real_lift_mem_closedBall
-#print axioms exists_real_lift_mem_fordLemma63Omega
-#print axioms norm_fordLemma63T_le_SZeroTorus_on_box
-#print axioms ford_equation_6_9
 
 end
 

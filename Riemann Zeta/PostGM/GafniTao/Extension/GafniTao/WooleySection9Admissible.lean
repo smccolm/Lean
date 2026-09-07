@@ -371,10 +371,6 @@ theorem wooleySourcePolynomial_lemma_9_1_of_admissible_hierarchy
   · exact hupper
   · exact hloss
 
-#print axioms wooleySourcePolynomial_lemma_7_1_of_admissible
-#print axioms wooleySourcePolynomial_lemma_7_1_uniform_global
-#print axioms wooleySourcePolynomial_lemma_7_1_uniform_grades
-#print axioms wooleySourcePolynomial_lemma_9_1_of_admissible_hierarchy
 
 end
 

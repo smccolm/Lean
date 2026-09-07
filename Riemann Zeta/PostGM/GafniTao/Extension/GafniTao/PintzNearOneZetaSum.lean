@@ -232,9 +232,6 @@ theorem norm_riemannZeta_le_pintz_nearOne
       dsimp only [C, q]
       ring
 
-#print axioms norm_fordDyadicWeightedShellSum_zero_le_pintz_nearOne
-#print axioms norm_fordHurwitzFiniteApproximation_one_le_pintz_nearOne
-#print axioms norm_riemannZeta_le_pintz_nearOne
 
 end
 

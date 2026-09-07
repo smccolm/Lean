@@ -176,11 +176,6 @@ theorem fordCanonicalPhiSchedule_lower
   exact hstar.trans (fordCanonicalPhiSchedule_phiStar_le
     hk hr h38 hdelta i hi hij)
 
-#print axioms ford_phi_step_sub_phiStar35
-#print axioms ford_theta_coefficient35_nonneg
-#print axioms ford_theta_coefficient35_le_half
-#print axioms fordCanonicalPhiSchedule_phiStar_le
-#print axioms fordCanonicalPhiSchedule_lower
 
 end
 

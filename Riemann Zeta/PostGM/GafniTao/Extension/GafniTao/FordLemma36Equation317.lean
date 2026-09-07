@@ -243,7 +243,6 @@ theorem fordEquation317
     rw [hinterp]
     positivity
 
-#print axioms fordEquation317
 
 end
 

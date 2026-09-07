@@ -188,7 +188,6 @@ theorem wooley_equations_7_18_to_7_21_local_bound
         simp
       · rw [hmass, hreverse zeta hkappa, hetaInt]
   
-#print axioms wooley_equations_7_18_to_7_21_local_bound
 
 end
 

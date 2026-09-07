@@ -208,8 +208,6 @@ theorem exists_fordShiftedDetector_selected_finite_abel :
   exact ⟨eta', RUpper, RLower, hetaLow, hetaHigh, hRU, hRL,
     habel, hremUpper, hremLower⟩
 
-#print axioms exists_fordShiftedDetector_selected_finite_abel_with_left_nonvanishing
-#print axioms exists_fordShiftedDetector_selected_finite_abel
 
 end
 

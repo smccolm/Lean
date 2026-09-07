@@ -230,15 +230,6 @@ theorem fordLemma51MomentT_le_weightedLatticeMoment
   exact (summable_fordLemma51WeightedLatticeMoment hr hM B t z).sum_le_tsum
     (fordLemma51FiberSet r k M) (fun _ _ => bot_le)
 
-#print axioms one_le_fordLemma51CoordinateWeight
-#print axioms one_le_fordLemma51WeightProduct
-#print axioms fordLemma51MomentT_le_weightedFiberMoment
-#print axioms summable_fordLemma51CoordinateWeight
-#print axioms summable_fin_pi_prod_nnnreal
-#print axioms summable_fordLemma51WeightProduct
-#print axioms fordLemma51FiberOscillatorySum_nnnorm_le_card
-#print axioms summable_fordLemma51WeightedLatticeMoment
-#print axioms fordLemma51MomentT_le_weightedLatticeMoment
 
 end
 

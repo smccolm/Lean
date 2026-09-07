@@ -64,9 +64,6 @@ theorem fordCubicExpSum_le_source
     (add_le_add (le_refl 1) (fordSourceScale_mul_integral_constant_le hD ht))
     hpower)
 
-#print axioms ford_integral_constant_div_log_two_le
-#print axioms fordSourceScale_mul_integral_constant_le
-#print axioms fordCubicExpSum_le_source
 
 end
 

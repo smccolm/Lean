@@ -172,10 +172,6 @@ theorem sum_Icc_eighth_root_le (H : ℕ) :
         Real.sqrt (Real.sqrt (H : ℝ) *
           Real.sqrt (2 * Real.sqrt (H : ℝ))) := by gcongr
 
-#print axioms logarithmicDifference_A3_compact_eq_squaredMajorant
-#print axioms norm_logarithmicDifference_sum_le_A3_raw
-#print axioms separated_A3_outer_inverse_factor
-#print axioms sum_Icc_eighth_root_le
 
 end
 

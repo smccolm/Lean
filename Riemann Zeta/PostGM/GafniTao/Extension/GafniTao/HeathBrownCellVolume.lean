@@ -77,12 +77,6 @@ theorem measureReal_heathBrownCoefficientCell_exact
   rw [ENNReal.toReal_ofReal]
   exact mul_nonneg (by positivity) (by positivity)
 
-#print axioms sum_range_succ_eq_heathBrownCriticalMoment
-#print axioms sum_fin_succ_eq_heathBrownCriticalMoment
-#print axioms prod_heathBrownCellRadius
-#print axioms prod_two_mul_heathBrownCellRadius
-#print axioms measure_heathBrownCoefficientCell_exact
-#print axioms measureReal_heathBrownCoefficientCell_exact
 
 end
 

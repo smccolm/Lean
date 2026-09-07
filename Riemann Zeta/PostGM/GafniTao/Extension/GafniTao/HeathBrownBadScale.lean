@@ -139,11 +139,6 @@ theorem heathBrown_third_lower_of_H_gt_N_sub_two
     _ = (N : ℝ) ^ (1 - 2 * r) *
         lambda ^ (-2 * r / (k : ℝ)) := by rw [hlambdaPower]
 
-#print axioms heathBrown_source_scale_neg_k
-#print axioms heathBrown_lambda_lower_of_H_lt_eight
-#print axioms heathBrown_source_scale_separated
-#print axioms heathBrown_lambda_scale_lower_of_H_gt_N_sub_two
-#print axioms heathBrown_third_lower_of_H_gt_N_sub_two
 
 end
 

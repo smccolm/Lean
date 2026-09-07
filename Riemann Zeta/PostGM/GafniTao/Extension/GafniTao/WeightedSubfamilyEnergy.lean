@@ -237,10 +237,6 @@ theorem finite_shifted_dyadic_energy_extraction_on
   simpa only [hCard, Lrep, W, color, representative, scale, shift, add_assoc]
     using hEnergy
 
-#print axioms mem_resonantQuadruplesOn
-#print axioms shifted_subfamily_quadruple_defect_le
-#print axioms exists_mixed_energy_color_classes_on
-#print axioms finite_shifted_dyadic_energy_extraction_on
 
 end
 

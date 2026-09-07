@@ -124,9 +124,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_middle
       mul_le_mul_of_nonneg_left hpow fordQualitativeCoefficient_nonneg
     _ = fordQualitativeCoefficient := mul_one _
 
-#print axioms fordLambda_le_two_of_le_sq
-#print axioms one_div_twelveMillion_le_fordSaving
-#print axioms norm_fordShiftedWeightedBlock_zero_le_middle
 
 end
 

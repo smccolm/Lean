@@ -149,9 +149,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne
     _ = C * t ^ ((1 / 2 : ℝ) *
         (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := rfl
 
-#print axioms norm_pintz2023ExponentialBlock_le_nearOne_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_nearOne_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_pintz_nearOne
 
 end
 

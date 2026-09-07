@@ -113,8 +113,6 @@ theorem wooleySourcePolynomial_equation_8_5
     phi p B H b (wooleyTriangular k) nu Lambda epsilon gamma
       hp hbH hscale hupper hloss
 
-#print axioms wooleySourcePolynomial_equation_8_7_ratio
-#print axioms wooleySourcePolynomial_equation_8_5
 
 end
 

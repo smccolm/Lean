@@ -87,10 +87,6 @@ theorem fordDeltaZero35_eq
       fordDeltaPrime34 k r delta
         ((fordCanonicalPhiSchedule k r (fordJ35 k r delta) delta).phi 1) := rfl
 
-#print axioms fordJ35_admissible
-#print axioms fordJ35_equation_3_8
-#print axioms fordJ35_maximal
-#print axioms fordDeltaZero35_eq
 
 end
 

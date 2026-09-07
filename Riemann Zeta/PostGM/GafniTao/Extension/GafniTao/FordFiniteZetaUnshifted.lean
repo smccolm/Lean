@@ -103,10 +103,6 @@ theorem norm_fordPartialSum_le_source
   exact norm_fordFiniteHurwitzSum_floor_zero_le_source hFord
     hsigmaLower hsigmaUpper ht
 
-#print axioms continuousAt_fordFiniteHurwitzSum_zero
-#print axioms norm_fordFiniteHurwitzSum_floor_zero_le_source
-#print axioms fordFiniteHurwitzSum_zero_eq_partialSum
-#print axioms norm_fordPartialSum_le_source
 
 end
 

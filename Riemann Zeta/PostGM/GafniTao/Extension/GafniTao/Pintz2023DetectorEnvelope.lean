@@ -311,11 +311,6 @@ theorem pintz2023_left_scale_le_detector_envelope
           ring
         _ = _ := by congr 3 <;> ring
 
-#print axioms harmonic_pintz2023SourceX_le
-#print axioms pintz2023_sourceX_rpow_le
-#print axioms pintz2023_gamma_factor_le
-#print axioms pintz2023_lambda_gaussian_factor_le
-#print axioms pintz2023_left_scale_le_detector_envelope
 
 end
 

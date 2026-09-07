@@ -173,7 +173,6 @@ theorem ford_shifted_boundary_card_le_two_s_odd
       simp
       ring
 
-#print axioms ford_shifted_boundary_card_le_two_s_odd
 
 end
 

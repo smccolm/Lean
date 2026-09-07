@@ -98,8 +98,6 @@ theorem pintz_physical_finite_density_native
   · exact pintz_off_diagonal_absorption hc heta (by linarith)
       hBase hCoreHeight hetaAbove
 
-#print axioms eventually_two_pintzDensityLambda_le_height
-#print axioms pintz_physical_finite_density_native
 
 end
 

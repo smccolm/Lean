@@ -263,10 +263,6 @@ theorem eventually_pintz2023_middle_shell_endpoint_absorbed
     _ ≤ 1 * (A : ℝ) ^ (4 * eta - 2 * epsilon) := by gcongr
     _ = _ := one_mul _
 
-#print axioms eventually_clog_two_le_two_inv_log_mul_log
-#print axioms eventually_clog_two_gramCutoff_le_eight_inv_log_mul_log
-#print axioms eventually_pintz2023_low_shell_endpoint_absorbed
-#print axioms eventually_pintz2023_middle_shell_endpoint_absorbed
 
 end
 

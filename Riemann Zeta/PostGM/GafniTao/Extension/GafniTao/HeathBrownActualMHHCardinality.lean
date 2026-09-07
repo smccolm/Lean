@@ -136,7 +136,6 @@ theorem HeathBrownFullyUniformOutputs.card_le_mhh_common
       _ = p * Cmhh * B ^ epsilonMHH *
           (Q ^ 2 / V ^ 2 + B * Q ^ 4 / V ^ 6) := by ring)
 
-#print axioms HeathBrownFullyUniformOutputs.card_le_mhh_common
 
 end
 

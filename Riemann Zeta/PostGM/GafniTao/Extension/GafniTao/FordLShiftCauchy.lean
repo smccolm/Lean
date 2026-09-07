@@ -123,8 +123,6 @@ theorem fordLPositiveShiftIntegral_le_count_sqrt
     fordPowerMomentIntegral_eq_vinogradov hpq] using
       fordLPositiveShiftIntegral_le_fourier_sqrt Ψ hT m hm p q s Q h
 
-#print axioms integral_mul_le_sqrt_mul_sqrt_of_continuous_nonneg
-#print axioms fordLPositiveShiftIntegral_le_count_sqrt
 
 end
 

@@ -208,8 +208,6 @@ theorem eventually_heathBrownUniformSourceColorOutput
         hData.2.1 hData.2.2.1 hAmbientCutoff
       simpa only [N, p, P, R] using hOutputs
 
-#print axioms HeathBrownUniformSourceColorOutput
-#print axioms eventually_heathBrownUniformSourceColorOutput
 
 end
 

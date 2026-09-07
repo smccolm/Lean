@@ -259,7 +259,6 @@ theorem fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
           (9 * B + 2 / 3) * fordSechLogMoment) / 5) *
             vinogradovKorobovDenominator t := by ring
 
-#print axioms fordGeneralDetectorMajorant_le_vinogradovKorobovDenominator
 
 end
 

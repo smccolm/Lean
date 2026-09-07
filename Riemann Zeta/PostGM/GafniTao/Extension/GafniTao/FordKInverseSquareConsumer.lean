@@ -213,12 +213,6 @@ theorem norm_fordKZeroOutside_le_general
     norm_fordFiniteKZeroOutside_le_general
       hFord hA hB hD ht hv hvUpper hF₀
 
-#print axioms norm_fordFiniteKZeroOutside_le_inverseSquare
-#print axioms norm_fordFiniteKZeroOutside_le_general
-#print axioms fordFiniteKZeroInside_eq_fixed
-#print axioms sum_zeroSet_fordKZeroTerm_eq_inside_add_outside
-#print axioms tendsto_fordFiniteKZeroOutside
-#print axioms norm_fordKZeroOutside_le_general
 
 end
 

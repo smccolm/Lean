@@ -125,8 +125,6 @@ theorem pintz_mobius_complete_series_ne_one
   rw [← pintz_mobius_equation_4_2_complete hrho (by linarith)]
   exact pintz_mobius_equation_4_1 (by linarith) hlambda
 
-#print axioms pintz_mobius_equation_4_2_complete
-#print axioms pintz_mobius_complete_series_ne_one
 
 end
 

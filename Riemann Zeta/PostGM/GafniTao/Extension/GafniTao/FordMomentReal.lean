@@ -78,10 +78,6 @@ theorem FordVinogradovMomentBound.real_endpoint
   have hC : 0 ≤ C := (hmoment.one_le_coefficient).trans' zero_le_one
   exact hsource.trans (mul_le_mul_of_nonneg_left hpow hC)
 
-#print axioms fordVinogradovMoment_one_le
-#print axioms FordVinogradovMomentBound.one_le_coefficient
-#print axioms FordVinogradovMomentBound.lambda_nonneg
-#print axioms FordVinogradovMomentBound.real_endpoint
 
 end
 

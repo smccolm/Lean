@@ -135,7 +135,6 @@ theorem fordS3ResidueMajorant_eq_collisionSum
     (fordS3ResidueMoment (k := k) hds q v :
       FordS3ResidueTuple d s Q p hds v → Fin k → ℤ)
 
-#print axioms fordS3ResidueMajorant_eq_collisionSum
 
 end
 

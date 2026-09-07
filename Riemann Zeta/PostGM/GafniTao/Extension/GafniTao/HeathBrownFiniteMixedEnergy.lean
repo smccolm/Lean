@@ -98,8 +98,6 @@ theorem heathBrownFiniteMixedEnergyRelation_native :
       rw [Fin.sum_univ_four]
       gcongr <;> apply hEach
 
-#print axioms heathBrownFiniteFamilyBound_nonneg
-#print axioms heathBrownFiniteMixedEnergyRelation_native
 
 end
 

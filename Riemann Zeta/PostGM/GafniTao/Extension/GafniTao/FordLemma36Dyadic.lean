@@ -201,9 +201,6 @@ theorem fordDyadicTerm36
       field_simp
       nlinarith
 
-#print axioms fordJ35_rounded_sqrt_lower
-#print axioms fordDyadicPolynomial36
-#print axioms fordDyadicTerm36
 
 end
 

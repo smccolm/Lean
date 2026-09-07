@@ -74,7 +74,6 @@ theorem fordK_diagonal_lower
       rw [Nat.card_eq_fintype_card]
       rfl
 
-#print axioms fordK_diagonal_lower
 
 end
 

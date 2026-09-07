@@ -180,9 +180,6 @@ theorem wooley_insert_redundant_grid_average
     (fun omega => disp omega = 0) (fun omega => extra omega = 0)
     hfirst hsecond hforced
 
-#print axioms wooley_normalized_grid_character
-#print axioms wooley_weighted_grid_average_eq_filter
-#print axioms wooley_insert_redundant_grid_average
 
 end
 

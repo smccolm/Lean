@@ -126,10 +126,6 @@ theorem fordLemma63_integral_SZero_two_s_le
       mul_le_mul_of_nonneg_right hconst hJ
     _ = _ := rfl
 
-#print axioms fordLemma63PolynomialSum_unitCube_moment
-#print axioms fordLemma63_integral_prefix_sum_eq
-#print axioms fordLemma63_integral_sharp_rhs_eq
-#print axioms fordLemma63_integral_SZero_two_s_le
 
 end
 

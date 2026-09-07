@@ -188,8 +188,6 @@ theorem pintz2023_equation420_two_scale_decay
     (by simpa only [a] using hCritical)
     (by simpa only [b] using hFrequency) hexponent)
 
-#print axioms two_scale_rpow_decay
-#print axioms pintz2023_equation420_two_scale_decay
 
 end
 

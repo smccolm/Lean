@@ -21,7 +21,7 @@ open RiemannZeta.GuthMaynard
 noncomputable section
 
 /-- The pinned PNT theorem supplies a fixed positive logarithmic zeta
-constant throughout the middle portion of Pintz's contour. -/
+The constant throughout the middle portion of Pintz's contour. -/
 theorem exists_pintzLogZetaConstant :
     ∃ C : ℝ, 0 < C ∧ ∀ {sigma t : ℝ}, 3 < |t| →
       1 ≤ sigma → sigma ≤ 3 / 2 →
@@ -190,8 +190,6 @@ theorem norm_riemannZeta_le_pintzHorizontalZetaMajorant
         unfold pintzHorizontalZetaMajorant
         linarith)
 
-#print axioms norm_riemannZeta_le_pintzLogZeta
-#print axioms norm_riemannZeta_le_pintzHorizontalZetaMajorant
 
 end
 

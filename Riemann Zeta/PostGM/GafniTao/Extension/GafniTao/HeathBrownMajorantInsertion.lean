@@ -233,10 +233,6 @@ theorem heathBrown_lemma_one_assembled_critical
           ENNReal.ofReal ((heathBrownHChoice k A lambda : ℝ) ^ 2) := hpre
     _ ≤ _ := by gcongr
 
-#print axioms heathBrownIntegratedMajorant_le_of_bounds
-#print axioms heathBrownCriticalMoment_bound
-#print axioms heathBrownIntegratedMajorant_le_critical
-#print axioms heathBrown_lemma_one_assembled_critical
 
 end
 

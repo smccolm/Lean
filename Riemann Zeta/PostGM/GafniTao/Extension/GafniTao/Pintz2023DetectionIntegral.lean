@@ -187,9 +187,6 @@ theorem exists_large_pintz2023Equation47Polynomial
         ring
   linarith
 
-#print axioms norm_pintz2023TruncatedSmallLineSum_ge_half
-#print axioms norm_pintzGaussianKernel_equation47_le
-#print axioms exists_large_pintz2023Equation47Polynomial
 
 end
 

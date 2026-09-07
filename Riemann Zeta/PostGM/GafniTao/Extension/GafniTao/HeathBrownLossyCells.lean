@@ -158,10 +158,6 @@ theorem heathBrown_lossy_low_cells
         gcongr
         exact le_max_right _ _
 
-#print axioms heathBrown_lossy_packet_reduction
-#print axioms heathBrown_lossy_first_cell
-#print axioms heathBrown_lossy_second_cell
-#print axioms heathBrown_lossy_low_cells
 
 end
 

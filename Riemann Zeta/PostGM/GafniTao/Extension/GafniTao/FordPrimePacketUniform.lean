@@ -209,10 +209,6 @@ theorem fordPrimeSet_le_fixedWidth
   fordPrimeSet_le_of_interval_card
     (fordPrimeInterval_fixedWidth_card_ge hM) hp
 
-#print axioms fordUniformPrimeMassThreshold_spec
-#print axioms fordUniformPrimeLogThreshold_spec
-#print axioms fordPrimeInterval_fixedWidth_card_ge
-#print axioms fordPrimeSet_le_fixedWidth
 
 end
 

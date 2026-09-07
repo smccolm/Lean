@@ -171,7 +171,6 @@ theorem exists_pintz2023_equation419_offDiagonal_gram_native
       hCritical hFrequency hNUpper hSelectedSep).trans
         (le_add_of_nonneg_left hSmallTermNonneg)
 
-#print axioms exists_pintz2023_equation419_offDiagonal_gram_native
 
 end
 

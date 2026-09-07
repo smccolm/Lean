@@ -120,8 +120,6 @@ theorem exists_pintz2023_smallM_powered_block_and_subset
     rw [Finset.mem_filter] at ht
     simpa [ht.2] using hIndexLarge t ht.1
 
-#print axioms wideDirichletPoly_pintz2023SmallMPoweredLineCoeff
-#print axioms exists_pintz2023_smallM_powered_block_and_subset
 
 end
 

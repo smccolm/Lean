@@ -160,8 +160,6 @@ theorem eventually_lower_source_dyadic_physical_cell
     (by simpa only [p, Nat.cast_pow] using hScaleData.2.2.2.2.1.le)
     hCubeMain hThreshold hThresholdNext hsigma0Eff hsigma0Eff
 
-#print axioms heathBrownLowerSourceEffectiveSigma
-#print axioms eventually_lower_source_dyadic_physical_cell
 
 end
 

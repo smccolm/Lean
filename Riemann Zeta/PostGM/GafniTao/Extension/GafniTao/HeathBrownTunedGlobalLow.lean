@@ -314,7 +314,6 @@ theorem exists_eventual_heathBrown_tuned_global_low_majorant
         (show 0 <= sigma by linarith) hTCeil hTone coverLabel hSmall).trans
           (le_max_left _ _)
 
-#print axioms exists_eventual_heathBrown_tuned_global_low_majorant
 
 end
 

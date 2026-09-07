@@ -35,7 +35,7 @@ private theorem pintz2023_left_zeta_exponent_le_two
   linarith
 
 /-- A deliberately elementary quadratic Gaussian moment.  The coarse
-constant is harmless, while the displayed `lambda^(3/2)` scale is needed in
+The constant is harmless, while the displayed `lambda^(3/2)` scale is needed in
 the later exponent ledger. -/
 theorem integral_abs_add_one_sq_mul_pintz_gaussian_le
     {lambda : ℝ} (hlambda : 1 ≤ lambda) :
@@ -320,8 +320,6 @@ theorem exists_norm_pintz2023Equation42_left_le
             dsimp only [A, d, p]
             ring
 
-#print axioms integral_abs_add_one_sq_mul_pintz_gaussian_le
-#print axioms exists_norm_pintz2023Equation42_left_le
 
 end
 

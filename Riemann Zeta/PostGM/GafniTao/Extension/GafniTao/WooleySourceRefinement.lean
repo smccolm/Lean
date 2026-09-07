@@ -242,13 +242,6 @@ theorem wooley_equation_7_22_native
       apply (Nat.le_div_iff_mul_le (by norm_num : 0 < 2)).2
       nlinarith) gamma alpha kappa
 
-#print axioms wooleySource_sum_refined_residue_mass
-#print axioms wooleySource_sum_refined_polynomialResidueSum
-#print axioms wooleySourcePolynomialResidueSum_eq_zero_of_massSq_eq_zero
-#print axioms wooleySource_sqrt_mass_mul_normalizedResidueSum
-#print axioms wooleySource_refined_normalized_residue_decomposition
-#print axioms wooleySourcePolynomial_lemma_6_2
-#print axioms wooley_equation_7_22_native
 
 end
 

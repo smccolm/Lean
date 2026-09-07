@@ -136,12 +136,6 @@ theorem diagonal_mem_heathBrownPairCountTwo
   · simp [heathBrownDerivativeCoordinate, heathBrownDistanceToInteger,
       hpowNonneg (k - 1)]
 
-#print axioms mem_heathBrownPairCount
-#print axioms mem_heathBrownPairCountOne
-#print axioms mem_heathBrownPairCountTwo
-#print axioms heathBrownPairCount_subset_pairCountOne
-#print axioms heathBrownPairCount_card_le_pairCountOne_card
-#print axioms diagonal_mem_heathBrownPairCountTwo
 
 end
 

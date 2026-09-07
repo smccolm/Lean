@@ -183,8 +183,6 @@ theorem norm_pintzGramCorrelation_le_physicalMajorant
     exact pintzPartialZetaMajorant_le_uniform
       hsigmaUpper hsep hdiffUpper)
 
-#print axioms pintzPartialZetaMajorant_le_uniform
-#print axioms norm_pintzGramCorrelation_le_physicalMajorant
 
 end
 

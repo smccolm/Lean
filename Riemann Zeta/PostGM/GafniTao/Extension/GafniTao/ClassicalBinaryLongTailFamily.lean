@@ -60,8 +60,6 @@ theorem classicalBinaryColorFamily_longTail_on_oriented
   have hLong := d.hLong rho hm.1 r (by simpa only [hscale] using hlabel)
   simpa only [classicalBinaryOrientedOrdinate, hscale] using hLong
 
-#print axioms approxAddEnergy_classicalBinaryOrientedFamily
-#print axioms classicalBinaryColorFamily_longTail_on_oriented
 
 end
 

@@ -201,10 +201,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_EP1_zeta
     _ = C * t ^ (heathBrownZetaKappa *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := by rfl
 
-#print axioms heathBrownZetaKappa_lt_half
-#print axioms norm_pintz2023ExponentialBlock_le_EP1_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_EP1_physical
-#print axioms norm_fordShiftedWeightedBlock_zero_le_EP1_zeta
 
 end
 

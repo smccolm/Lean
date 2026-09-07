@@ -605,11 +605,6 @@ theorem wooleyPolynomial_equation_6_9 {Q k : ℕ}
         _ = _ := by rw [hA, hF]; ring
     _ = _ := by rfl
 
-#print axioms wooleyPolynomial_equation_6_6
-#print axioms wooleyPolynomial_equation_6_7
-#print axioms wooleyPolynomial_equation_6_8
-#print axioms wooleyPolynomial_equation_6_9_pointwise
-#print axioms wooleyPolynomial_equation_6_9
 
 end
 

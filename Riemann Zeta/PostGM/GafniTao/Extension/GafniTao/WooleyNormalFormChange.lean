@@ -650,20 +650,6 @@ theorem wooley_equation_7_17_spaced_positive_native
   have hins := hnormalForced swapped hnormal
   simpa only [swapped, wooleyEquation717InsertedDisplacement] using hins
 
-#print axioms wooleyNormalFormPositiveLow_map_eq_monomial
-#print axioms wooleyNormalFormPositiveLow_exists_error
-#print axioms WooleyPolynomialSystem.Spaced.high_coeff_dvd
-#print axioms wooleyNormalFormCombination_high_coeff_dvd
-#print axioms wooleyPolynomial_exists_positiveLow_add_scalar_X_tail
-#print axioms WooleyPolynomialSystem.Spaced.exists_tail_normal_change
-#print axioms wooleyIntegerMixedPolynomialDisplacement_sum
-#print axioms wooleyNormalFormCombination_mixed_displacement
-#print axioms wooleyTailNormalChange_mixed_displacement_dvd
-#print axioms wooleySection7OriginalDisplacementOf_eq_intCast
-#print axioms wooley_equation_7_17_spaced_native
-#print axioms wooleyIntegerTupleDisplacement_swap
-#print axioms wooleySection7PositiveDisplacementOf_eq_intCast
-#print axioms wooley_equation_7_17_spaced_positive_native
 
 end
 

@@ -141,9 +141,9 @@ theorem absoluteSlab_classical_binary_energy_extraction
     intro rho hrho hb
     obtain ⟨t, ht, htI, r, _hrOriented, hr⟩ := (hEach rho hrho).1 hb
     refine ⟨t, ht, htI, r, ?_⟩
-    simpa [largeI, ClassicalTypeIShellScaleLarge,
+    simpa [largeI, A, q0, kI, ClassicalTypeIShellScaleLarge,
       classicalTypeIShellScaleN, classicalTypeIShellScaleCoeff,
-      classicalTypeIShellScalePair] using hr
+      classicalTypeIShellScalePair] using hr.1
   have hEachII : ∀ rho, rho ∈ absoluteDyadicZeroSlab sigma U →
       ∀ hb : ¬ signedChoosesClassicalTypeI Y q0 rho,
         ∃ t : Real, |rho.im - t| ≤ H ∧ inInterval t ∧
@@ -151,7 +151,7 @@ theorem absoluteSlab_classical_binary_energy_extraction
     intro rho hrho hb
     obtain ⟨t, ht, htI, r, _hrOriented, hr⟩ := (hEach rho hrho).2 hb
     refine ⟨t, ht, htI, r, ?_⟩
-    simpa [largeII, ClassicalTypeIIShellScaleLarge,
+    simpa [largeII, kII, ClassicalTypeIIShellScaleLarge,
       classicalTypeIIShellScaleN, classicalTypeIIShellScaleCoeff,
       classicalTypeIIShellScalePair] using hr
   have hLocalHeight : max (Real.exp 2) 8 ≤ 2 * U := by
@@ -179,7 +179,6 @@ theorem absoluteSlab_classical_binary_energy_extraction
       (absoluteDyadicZeroSlab_card_le_zeroCount sigma U
         (by linarith [hT₀.trans hU]))
 
-#print axioms absoluteSlab_classical_binary_energy_extraction
 
 end
 

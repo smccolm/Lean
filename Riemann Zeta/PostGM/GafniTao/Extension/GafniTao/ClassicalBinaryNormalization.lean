@@ -154,10 +154,6 @@ theorem signedNormalizedClassicalTypeIICoeff_large
     norm_div, Complex.norm_real, Real.norm_eq_abs, abs_of_pos hScale]
   exact div_le_div_of_nonneg_right hLarge hScale.le
 
-#print axioms norm_signedNormalizedClassicalTypeICoeff_le_one
-#print axioms signedNormalizedClassicalTypeICoeff_large
-#print axioms norm_signedNormalizedClassicalTypeIICoeff_le_one
-#print axioms signedNormalizedClassicalTypeIICoeff_large
 
 end
 

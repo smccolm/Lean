@@ -36,8 +36,6 @@ theorem heathBrownShiftBound_harmonic_le
   harmonic_cast_le_one_add_log_of_le
     (heathBrownShiftBound_le_N N k H lambda) hN
 
-#print axioms harmonic_cast_le_one_add_log_of_le
-#print axioms heathBrownShiftBound_harmonic_le
 
 end
 

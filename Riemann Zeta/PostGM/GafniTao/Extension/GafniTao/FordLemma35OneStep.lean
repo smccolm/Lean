@@ -66,8 +66,6 @@ theorem ford_lemma_3_5_one_step_global
   exact (eventually_ford_lemma_3_5_one_step hk hr hrk hks hy hdelta hstar
     homegaLower homegaUpper hetaEq hmoment).exists_global_coefficient
 
-#print axioms eventually_ford_lemma_3_5_one_step
-#print axioms ford_lemma_3_5_one_step_global
 
 end
 

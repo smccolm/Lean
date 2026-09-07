@@ -139,11 +139,6 @@ theorem ford_taylor_phase_double_sum_uniform
       exact hE a ha b hb
     _ = (A.card : ℝ) * B.card * (t * (E / (k + 1))) := by simp; ring
 
-#print axioms ford_taylor_phase_difference
-#print axioms ford_taylor_gamma_normalization
-#print axioms fordTaylorOscillation_eq_additiveCharacter
-#print axioms ford_taylor_phase_double_sum_difference
-#print axioms ford_taylor_phase_double_sum_uniform
 
 end
 

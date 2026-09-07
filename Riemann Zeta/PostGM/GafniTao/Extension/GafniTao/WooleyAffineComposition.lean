@@ -111,12 +111,6 @@ theorem wooleySourceResidueMassSq_polynomialTwist
   exact wooleySourceResidueMassSq_twist gamma _
     (wooleySourcePolynomialPhase_norm phi alpha) h zeta
 
-#print axioms wooleyAffinePullback_comp
-#print axioms wooleyAffinePolynomialSystem_comp
-#print axioms wooleySourceResidueMassSq_affinePullback
-#print axioms wooleySourceNormalizedPolynomialResidueSum_affinePullback
-#print axioms wooleySourceResidueSequence_twist
-#print axioms wooleySourceResidueMassSq_polynomialTwist
 
 end
 

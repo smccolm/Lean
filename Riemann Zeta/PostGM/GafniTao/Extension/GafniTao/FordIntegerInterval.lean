@@ -62,8 +62,6 @@ theorem fordIntegerOpenInterval_card_cast_le {a b : ℝ} (hab : a ≤ b) :
     exact_mod_cast hcard
   exact hcardReal.trans (card_int_Icc_ceil_floor_cast_le hab)
 
-#print axioms mem_fordIntegerOpenInterval
-#print axioms fordIntegerOpenInterval_card_cast_le
 
 end
 

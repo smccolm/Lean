@@ -52,7 +52,6 @@ theorem heathBrown_lossy_low_cells_of_main
   dsimp only [rhoStar0] at hCell
   linarith
 
-#print axioms heathBrown_lossy_low_cells_of_main
 
 end
 

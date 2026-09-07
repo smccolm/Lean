@@ -112,9 +112,6 @@ theorem one_le_fordSincSquareWeight
   change 1 ≤ (A * Real.sin y / x) ^ 2
   nlinarith [sq_nonneg (A * Real.sin y / x - 1)]
 
-#print axioms fordTent_eq_zero_of_le_norm
-#print axioms fordSincSquareWeight_eq_source
-#print axioms one_le_fordSincSquareWeight
 
 end
 

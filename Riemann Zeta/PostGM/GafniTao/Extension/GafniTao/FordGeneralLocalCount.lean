@@ -103,8 +103,6 @@ theorem exists_fordLocalDiskZeroCount_general_raw_bound
   refine ⟨eta', hetaLow, hetaHigh, ?_⟩
   linarith
 
-#print axioms fordDetectorZetaLogDeriv_center_norm_lt
-#print axioms exists_fordLocalDiskZeroCount_general_raw_bound
 
 end
 

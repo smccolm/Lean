@@ -85,14 +85,6 @@ theorem heathBrown_critical_core_exponent
       1 - 2 * heathBrownCriticalReciprocal k := by
   rw [heathBrown_inverse_critical_eq_two_reciprocal hk]
 
-#print axioms heathBrownCriticalMoment_cast
-#print axioms heathBrownCriticalMoment_pos
-#print axioms heathBrownCriticalReciprocal_pos
-#print axioms heathBrownCriticalReciprocal_le_half
-#print axioms heathBrown_two_mul_criticalMoment
-#print axioms heathBrown_half_critical_eq_reciprocal
-#print axioms heathBrown_inverse_critical_eq_two_reciprocal
-#print axioms heathBrown_critical_core_exponent
 
 end
 

@@ -164,9 +164,6 @@ theorem fordCorollary64_interpolated
   exact ford_equation_6_6_pointwise (by exact_mod_cast hN)
     hB hcPos hdPos hdc htrivial hstrong
 
-#print axioms fordCorollary64_le_power_saving
-#print axioms ford_equation_6_6_pointwise
-#print axioms fordCorollary64_interpolated
 
 end
 

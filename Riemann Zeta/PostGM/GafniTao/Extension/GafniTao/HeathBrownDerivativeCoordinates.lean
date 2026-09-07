@@ -76,11 +76,6 @@ theorem heathBrownPairCountTwo_source_separation
         (lambda * (H : ℝ) ^ (k - 1)) := by
       field_simp
 
-#print axioms deriv_heathBrownDerivativeCoordinate
-#print axioms deriv_heathBrownDerivativeCoordinate_last
-#print axioms heathBrownDerivativeCoordinate_last_lower
-#print axioms heathBrownDerivativeCoordinate_last_upper
-#print axioms heathBrownPairCountTwo_source_separation
 
 end
 

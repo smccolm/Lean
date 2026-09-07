@@ -132,8 +132,6 @@ theorem heathBrown_lossy_high_generic_cell
     htauLower htauUpper hReduced.1 hReduced.2.1 hReduced.2.2
   linarith
 
-#print axioms heathBrown_lossy_high_packet_reduction
-#print axioms heathBrown_lossy_high_generic_cell
 
 end
 

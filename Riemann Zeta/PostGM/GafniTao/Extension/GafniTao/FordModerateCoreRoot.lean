@@ -219,11 +219,6 @@ theorem fordLemma51SourceCore_moderate_root_le
       gcongr
     _ = _ := by rfl
 
-#print axioms fordModerateMomentDegree_le
-#print axioms ford_moderate_root_exponent_le
-#print axioms ford_moderate_small_root_exponent_le
-#print axioms fordLemma51SourceCore_moderate_power_saving
-#print axioms fordLemma51SourceCore_moderate_root_le
 
 end
 

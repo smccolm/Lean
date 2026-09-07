@@ -89,8 +89,6 @@ theorem heathBrown_spacing_card_cast_le
     _ = (2 * theta / mu + 1) * (M * N + 2 * theta + 3) := by
       dsimp [z]
 
-#print axioms int_Icc_floor_ceil_card_cast_le
-#print axioms heathBrown_spacing_card_cast_le
 
 end
 

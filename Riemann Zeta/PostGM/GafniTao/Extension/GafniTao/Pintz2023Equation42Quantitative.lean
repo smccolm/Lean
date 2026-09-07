@@ -102,10 +102,6 @@ theorem norm_pintz2023Equation42_sub_left_le_sourceY
       rw [pintz2023_residue_exponential_eq]
       ring
 
-#print axioms pintz2023Equation42_source_shift
-#print axioms norm_pintz2023Equation42_sub_left_le
-#print axioms pintz2023_residue_exponential_eq
-#print axioms norm_pintz2023Equation42_sub_left_le_sourceY
 
 end
 

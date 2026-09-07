@@ -272,8 +272,6 @@ theorem pintz2023GaussianWeight_eq_smallLine
       norm_num at hInv ⊢
       linarith)
 
-#print axioms pintz2023BareWeight_complete_vertical_shift_left
-#print axioms pintz2023GaussianWeight_eq_smallLine
 
 end
 

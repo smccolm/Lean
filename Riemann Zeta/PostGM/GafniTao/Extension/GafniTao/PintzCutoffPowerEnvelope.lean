@@ -88,7 +88,6 @@ theorem pintz_cutoff_rpow_four_eta_le
       unfold pintzCutoffPowerCoefficient
       ring
 
-#print axioms pintz_cutoff_rpow_four_eta_le
 
 end
 

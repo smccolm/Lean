@@ -74,10 +74,6 @@ theorem norm_heathBrownWeylSum_center_eq_TaylorPolynomialSum
   rw [heathBrownWeylSum_center_eq_reducedTaylorPolynomialSum hk]
   exact (norm_heathBrownTaylorPolynomialSum_eq_reduced hk H f n).symm
 
-#print axioms heathBrownReducedTaylorPolynomial_eq_fin_sum
-#print axioms fordVinogradovMonomial_center_eq_phase
-#print axioms heathBrownWeylSum_center_eq_reducedTaylorPolynomialSum
-#print axioms norm_heathBrownWeylSum_center_eq_TaylorPolynomialSum
 
 end
 

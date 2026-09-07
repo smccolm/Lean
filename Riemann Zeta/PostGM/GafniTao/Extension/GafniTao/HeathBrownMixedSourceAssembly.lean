@@ -63,7 +63,6 @@ theorem HeathBrownFullyUniformMixedSourceOutput.energy_le_selection_mul
   have hScaled := mul_le_mul_of_nonneg_left hSum hLoss
   nlinarith
 
-#print axioms HeathBrownFullyUniformMixedSourceOutput.energy_le_selection_mul
 
 end
 

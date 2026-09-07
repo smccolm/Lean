@@ -201,11 +201,6 @@ theorem fordCubicExp_le_turningPoint
   Real.exp_le_exp.mpr
     (fordCubicExponent_le_turningPoint hsigma hD ht hx)
 
-#print axioms fordCubicTurningPoint_sq
-#print axioms fordCubicExponent_turningPoint
-#print axioms fordCubicExponent_monotoneOn_left
-#print axioms fordCubicExponent_antitoneOn_right
-#print axioms fordCubicExponent_le_turningPoint
 
 end
 

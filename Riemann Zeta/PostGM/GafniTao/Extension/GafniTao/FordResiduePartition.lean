@@ -155,9 +155,6 @@ theorem ford_sum_BResidueClass_coordinates
   simp
   ring
 
-#print axioms ford_sum_BResidueClass
-#print axioms ford_sum_residue_tuple_coordinate
-#print axioms ford_sum_BResidueClass_coordinates
 
 end
 

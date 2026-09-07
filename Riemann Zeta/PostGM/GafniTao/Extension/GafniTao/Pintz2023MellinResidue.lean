@@ -212,9 +212,6 @@ theorem exists_norm_pintz2023SmoothedZetaSum_nearOne_le
       · simpa only [s, residue] using
           hResidue N sigma t hN hsigmaLower hsigmaUpper ht
 
-#print axioms exists_norm_pintz2023Mellin_residue_nearOne_le
-#print axioms exists_norm_pintz2023SmoothedZetaSum_nearOne_le
-#print axioms norm_pintz2023MellinPowerDiff_nearOne_le
 
 end
 

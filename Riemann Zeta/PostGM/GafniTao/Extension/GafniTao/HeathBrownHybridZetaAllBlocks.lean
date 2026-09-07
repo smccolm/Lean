@@ -300,10 +300,6 @@ theorem norm_fordShiftedWeightedBlock_zero_le_all_zeta_source
       _ = C * t ^ (heathBrownHalfZetaKappa *
           (1 - sigma) ^ (3 / 2 : ℝ) + epsilon) := rfl
 
-#print axioms norm_fordShiftedWeightedBlock_zero_le_hybrid_zeta
-#print axioms norm_fordShiftedWeightedBlock_zero_le_all_zeta
-#print axioms norm_fordShiftedWeightedBlock_zero_le_hybrid_zeta_source
-#print axioms norm_fordShiftedWeightedBlock_zero_le_all_zeta_source
 
 end
 

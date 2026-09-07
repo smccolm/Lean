@@ -434,11 +434,6 @@ theorem norm_pintz2023Equation47TruncatedRemainder_le_exp_neg_two :
       add_le_add (hcomplete hrho hlambda heta) (hsmall hrho hlambda heta)
     _ = (K₁ + K₂) * Real.exp (-2 * lambda) := by ring
 
-#print axioms norm_pintz2023BareWeight_sub_truncated_le
-#print axioms norm_sum_pintz2023SmallLineTailTerm_le
-#print axioms pintz2023SmallLineTailMass_le_exp
-#print axioms norm_sum_pintz2023SmallLineTailTerm_le_exp_neg_two
-#print axioms norm_pintz2023Equation47TruncatedRemainder_le_exp_neg_two
 
 end
 

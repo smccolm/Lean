@@ -62,8 +62,6 @@ theorem pintzMobiusWeight_eq_sourceWeight
   rw [mul_assoc, pintz_mobius_kernel_eq_source_kernel hn]
   ring_nf
 
-#print axioms pintz_mobius_kernel_eq_source_kernel
-#print axioms pintzMobiusWeight_eq_sourceWeight
 
 end
 

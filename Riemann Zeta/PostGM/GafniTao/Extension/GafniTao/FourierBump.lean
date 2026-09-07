@@ -130,7 +130,7 @@ theorem logScaleBumpFourier_polynomial_decay
       (FourierTransform.fourier (logScaleBumpSchwartz cutoff)) xi
 
 /-- The tenfold `(1+|xi|)^{-10}` decay used in Lemma 2.3, with a literal
-constant determined by the fixed cutoff. -/
+The constant determined by the fixed cutoff. -/
 theorem logScaleBumpFourier_tenfold_decay
     (cutoff : GMSmoothCutoff) (xi : ℝ) :
     (1 + |xi|) ^ 10 * ‖logScaleBumpFourier cutoff xi‖ ≤

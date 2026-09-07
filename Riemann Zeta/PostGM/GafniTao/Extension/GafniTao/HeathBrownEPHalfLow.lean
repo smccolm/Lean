@@ -130,9 +130,6 @@ theorem norm_pintz2023ExponentialBlock_le_half_low
   have hpow := Real.rpow_le_rpow_of_exponent_le hNOne hexponent
   exact hraw.trans (mul_le_mul_of_nonneg_left hpow (by norm_num))
 
-#print axioms pintz2023ExponentialBlock_eq_fordShiftedExponentialSum
-#print axioms norm_pintz2023ExponentialBlock_le_AB_log_power
-#print axioms norm_pintz2023ExponentialBlock_le_half_low
 
 end
 

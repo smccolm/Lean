@@ -137,9 +137,6 @@ theorem pintz2023SplitLargeM_eq_rectangle
       pintz2023LargeMCoeff X k R * (k : ℂ) ^ (-s)) = _
   rw [← hOuter, ← hRegroup]
 
-#print axioms pintz2023_largeM_antidiagonal_term
-#print axioms pintz2023_largeM_antidiagonal_term_of_not_mem
-#print axioms pintz2023SplitLargeM_eq_rectangle
 
 end
 

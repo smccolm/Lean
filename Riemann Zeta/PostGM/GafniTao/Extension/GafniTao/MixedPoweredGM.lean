@@ -126,7 +126,6 @@ theorem finite_mixed_four_symmetric_source_powered_energy_gm_bound
             linarith
           _ <= _ := hEach i
 
-#print axioms finite_mixed_four_symmetric_source_powered_energy_gm_bound
 
 end
 

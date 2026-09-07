@@ -123,9 +123,6 @@ theorem heathBrownExponentRelation_of_logarithmic_relation_zero
     HeathBrownExponentRelation sigma tau rho rhoStar := by
   simpa only [zero_add, HeathBrownExponentRelation] using h
 
-#print axioms rpow_heathBrownLogExponent
-#print axioms heathBrown_logarithmic_relation_of_family_bound
-#print axioms heathBrownExponentRelation_of_logarithmic_relation_zero
 
 end
 

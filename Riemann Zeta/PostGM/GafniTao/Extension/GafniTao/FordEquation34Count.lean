@@ -114,7 +114,6 @@ theorem fordS4Fourier_eq_count
   congr 2
   omega
 
-#print axioms fordS4Fourier_eq_count
 
 end
 

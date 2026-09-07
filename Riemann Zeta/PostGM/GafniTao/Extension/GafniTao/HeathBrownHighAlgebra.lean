@@ -187,10 +187,6 @@ theorem heathBrown_high_generic_cell
       exact hsolved.trans (max_le (hTargetIff _ h1)
         (max_le (hTargetIff _ h2) (hTargetIff _ h3)))
 
-#print axioms heathBrown_high_zeta_short_scale
-#print axioms heathBrown_high_first_branch_relation
-#print axioms heathBrown_high_second_branch_relation
-#print axioms heathBrown_high_generic_cell
 
 end
 

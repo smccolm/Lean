@@ -237,7 +237,6 @@ theorem fordLocalDiskZeroCount_le_general_majorant
   rw [lt_div_iff₀ fordLocalCotUniformLowerConstant_pos]
   simpa [mul_comm] using hscaled
 
-#print axioms fordLocalDiskZeroCount_le_general_majorant
 
 end
 

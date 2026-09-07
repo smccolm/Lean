@@ -225,11 +225,6 @@ theorem HeathBrownPoweredEnergyPacket.energy_le_two_cardinality_bounds
   apply energyPacket.energy_le_scalar hB hThreshold hSep
   exact le_min cardPacket.card_le_bound nextPacket.card_le_bound
 
-#print axioms heathBrownFourthMomentShape_le_scalar
-#print axioms heathBrownFiniteFamilyBound_le_scalar
-#print axioms heathBrownFiniteScalarBound_mono
-#print axioms HeathBrownPoweredEnergyPacket.energy_le_scalar
-#print axioms HeathBrownPoweredEnergyPacket.energy_le_two_cardinality_bounds
 
 end
 

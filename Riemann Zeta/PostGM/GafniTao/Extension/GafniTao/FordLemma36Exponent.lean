@@ -57,7 +57,6 @@ theorem fordLemma36_delta_exponent
     simpa [show n - 1 + 1 = n by omega,
       show n - 1 + 2 = n + 1 by omega] using hbelow
 
-#print axioms fordLemma36_delta_exponent
 
 end
 

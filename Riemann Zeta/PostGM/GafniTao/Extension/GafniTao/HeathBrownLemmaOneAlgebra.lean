@@ -141,8 +141,6 @@ theorem heathBrownLemmaOneExpanded_eq_normalized
   rw [← Real.rpow_neg hH.le]
   exact heathBrown_normalization_algebra hH hs hD hC hP hNreal
 
-#print axioms heathBrownLemmaOneExpanded_eq_normalized
-#print axioms heathBrown_normalization_algebra
 
 end
 

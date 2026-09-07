@@ -113,9 +113,6 @@ theorem ford_exponential_lemma_5_1_raw
           2 * (M : ℝ) * (M₂ : ℝ) := by
       gcongr
 
-#print axioms fordLemma51U_pow_le_momentMajorant
-#print axioms fordLemma51U_le_momentMajorant_rpow
-#print axioms ford_exponential_lemma_5_1_raw
 
 end
 
