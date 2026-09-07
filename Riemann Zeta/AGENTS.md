@@ -70,7 +70,7 @@ Fix the cause of each diagnostic. Do not hide it with `set_option linter... fals
 
 Before editing:
 
-1. Read `Guth_Maynard_Formalization_Research_Agenda.docx`, `Research Agenda Progress.MD`, `Lean Alignment Fix Agenda.md`, `Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task.
+1. Read `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Research Agenda Progress.MD`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Lean Alignment Fix Agenda.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `Publication Readiness and Semantic Audit.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task. The original August 2026 operating directive is retained under `archive/` as history and is not a current authority.
 2. Inspect the current working tree and preserve all user changes. Do not overwrite or revert unrelated work.
 3. Identify whether the target is a definition, a formal statement, a conditional theorem, or an unconditional theorem. State that status accurately.
 4. Inspect the exact source theorem and existing Mathlib APIs before designing the Lean signature.
@@ -154,7 +154,7 @@ Rules for maintaining the runner:
 10. Report the runner's final exit code, final status, log path, every remaining failed stage, and every remaining warning in the handoff.
 11. If the runner itself is broken or cannot be executed, the task is not fully verified. Repair it or report the exact environmental blocker; do not substitute an unaudited success claim.
 
-The current repository is expected to produce `FAIL` until the named research-output defects are repaired. The build, warning, dependency, and integrity gates currently pass; the output gate fails. That failure is useful evidence. Agents must preserve its honesty while progressively converting each missing theorem into a genuine pass.
+The current repository is expected to produce `PASS` when evaluated at a verified clean revision. The #15, #18, and #19 research-output gates are complete; the build, warning, dependency, integrity, and output gates all pass in the recorded foundation-freeze evidence. A future failure is evidence about the checkout being tested and must be investigated rather than normalized as an expected baseline.
 
 ## Safe Repository Synchronization: `push_to_github.bat`
 
@@ -297,20 +297,20 @@ A `DONE` status requires both answers to be yes.
 
 ## Mandatory Proof-Architecture Synchronization
 
-`Proof Architecture.md` is the canonical Mermaid view of the logical proof dependencies and completion status. `Lean Alignment Fix Agenda.md` remains the authority for Shitlist task numbers and acceptance tests, while `Research Agenda Progress.MD` remains the evidence-based status report.
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md` is the canonical Mermaid view of the Guth–Maynard logical proof dependencies and completion status. The adjacent `Lean Alignment Fix Agenda.md` remains the authority for Shitlist task numbers and acceptance tests, while the adjacent `Research Agenda Progress.MD` remains the evidence-based status report.
 
 Whenever a change alters a theorem's proof status, an open obligation, a dependency edge, or a Shitlist assignment, update all three documents in the same change. Every unfinished Mermaid node must name its owning Shitlist number. A crossed-out Shitlist item must have no unfinished node in the diagram, and a newly discovered obligation must be assigned to an existing open item unless the project owner explicitly changes the exhaustive completion contract. Before handoff, verify that the diagram, Shitlist, and progress report make identical claims about what is done and what remains.
 
-## Handling the Current Incomplete Baseline
+## Handling the Current Complete Internal Baseline
 
-The repository currently has no project axiom, `sorryAx` dependency, admitted proof, excluded Lean file, or warning-producing declaration in the principal evaluation scope. It remains mathematically incomplete because the named #15, #18, and #19 output theorems are absent and the principal runner therefore returns `FAIL`. Preserve the clean integrity baseline while completing those outputs.
+The repository currently has no project axiom, `sorryAx` dependency, admitted proof, excluded Lean file, or warning-producing declaration in the principal evaluation scope. The named #15, #18, and #19 output theorems are present, the exhaustive audit passes, and the principal runner returns `PASS` for the recorded foundation-freeze revision. This is an internal kernel/project completion claim only; independent semantic review, peer review, publication, community acceptance, and canonicalization remain external.
 
-While research outputs remain incomplete, the agent must:
+When extending or maintaining the repository, the agent must:
 
-- introduce no new violation;
-- reduce or preserve, never increase, the set of existing violations;
-- state exactly which violations remain;
-- avoid describing the repository as globally compliant; and
+- introduce no new integrity violation;
+- preserve the exact publication contracts and complete module classification;
+- report any newly discovered failure or semantic discrepancy precisely;
+- distinguish current-checkout evidence from historical PASS logs; and
 - refuse any shortcut that merely renames, wraps, or relocates an unproved assumption.
 
 If a requested theorem reaches a legitimate impasse under the persistence rules above, preserve only faithful statements and theorems with legitimate explicit upstream parameters. Record the precise missing lemma and leave the code kernel-checkable. This is a fallback after exhaustive work, not permission to stop when an implementable next step remains. An honest, narrow obstruction is a valid research result; an admitted theorem is not.

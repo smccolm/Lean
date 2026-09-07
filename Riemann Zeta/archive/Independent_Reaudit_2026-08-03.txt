@@ -1,0 +1,278 @@
+1: Independent Re-audit of the Current Riemann Zeta Lean Revision
+2: Live repository state at commit 6ec3d022579369844ac8ac488552fb797ec5f148
+3: Audit date: August 3, 2026
+Scope: Lean sources, manuscript, Word artifact, build metadata, audit logic, GitHub Actions, citation metadata, and repository hygiene
+4: Method limitation. This audit inspected the exact public files at commit 6ec3d02 and the public GitHub Actions record. The current environment did not contain Lean or a Mathlib cache, so I did not claim an independent local compilation. That limitation makes the absence of a successful public CI run more serious, not less.
+6: 1. Executive Assessment
+7: The mathematical source files are now mostly clean, modest wrappers and finite-sum identities rather than the inflated analytic theory claimed in the earliest version.
+8: The current manuscript still makes claims that its own Lean declarations do not support, particularly the one-zero fourfold orbit claim and the unconditional Hardy norm symmetry claim.
+9: The manuscript states 0 errors, 0 warnings, and no sorryAx dependencies, but the public Actions page exposes no run for the current commit. The latest visible runs are for the older 9295e56 commit and both failed.
+10: The audit checks 21 selected theorem declarations, not the complete library. The source contains 34 theorem or lemma declarations across the five mathematical modules.
+11: The Word publication artifact is not professionally typeset. Its theorem table is cramped, split across pages, and contains identifiers and equations that are visibly broken into unreadable fragments.
+12: The package metadata still contains the misspelling ReimannZeta in lake-manifest.json, directly contradicting lakefile.toml and the package title.
+13: 2. Repairs Successfully Made Since the Earlier Version
+14: Positive indices: The finite Dirichlet polynomial now uses positive naturals ℕ+, removing the earlier n = 0 mismatch.
+15: Neutral cross-norm terminology: The paper no longer sells elementary products of norms as a universal zero locator.
+16: Pole disclosure: The manuscript now admits that Mathlib totalizes zeta at s = 1 and that the classical function has a pole there.
+17: Hardy normalization caveat: The abstract now admits that the complex-valued normalization is not proved real-valued.
+18: Pinned toolchain: The paper, toolchain file, and Mathlib input revision now consistently identify Lean v4.30.0-rc2.
+19: Dedicated package workflow: A package-specific workflow now points Lean Action at the Riemann Zeta subdirectory and disables the missing linter.
+20: Axiom audit file: Audit.lean now prints the axioms of 21 selected theorem declarations.
+21: License and citation metadata: The project now contains an MIT license and a CITATION.cff file.
+22: 3. Verification, CI, and Audit Failures
+23: 1. The clean-build claim has no current public evidence
+24: Severity: BLOCKER
+25: Evidence: Paper_Riemann_Zeta.md lines 107-110 claims 0 errors and 0 warnings. The current commit is 6ec3d02. The public Actions page lists its latest visible run at commit 9295e56, not 6ec3d02.
+26: Assessment. A manuscript cannot call a build clean when its current commit has no publicly visible successful run. A local claim may be true, but the repository does not presently demonstrate it.
+27: Repair. Run the package workflow on the exact release commit, require a green result, link the run in the paper, and replace the absolute wording with a dated, commit-specific statement.
+28: 2. Both latest visible workflows failed
+29: Severity: BLOCKER
+30: Evidence: GitHub run 30790420344 reports Status Failure, exit code 1, a missing lint driver, and a Node warning. Run 30790420384 reports Status Failure and lake build failed.
+31: Assessment. The public record directly contradicts the impression of a verified release. Later workflow edits do not retroactively turn failed runs into evidence.
+32: Repair. Trigger both workflows after the repair, remove or scope the generic workflow, and do not publish a verification claim until all required checks pass.
+33: 3. The generic root workflow is still misconfigured for this subproject
+34: Severity: MAJOR
+35: Evidence: .github/workflows/lean_action_ci.yml runs on every push and pull request, invokes lean-action without lake-package-directory, then invokes docgen. The Riemann Zeta package lives in a subdirectory.
+36: Assessment. This workflow is structurally unrelated to the package layout and has already produced a lake build failure. It also creates a second, confusing source of build status.
+37: Repair. Delete it if it is obsolete, or add path filters and lake-package-directory: "Riemann Zeta". Keep documentation generation in a separate release workflow.
+38: 4. The generic workflow requests unnecessary permissions
+39: Severity: MODERATE
+40: Evidence: The root workflow grants pages: write and id-token: write even though its build step does not need those permissions.
+41: Assessment. Excess permissions violate least-privilege practice and make the workflow harder to defend during review.
+42: Repair. Use contents: read for build jobs. Grant Pages permissions only to a separate deploy job that actually publishes documentation.
+43: 5. The paper claims 0 warnings, but the workflow does not enforce warning-free builds
+44: Severity: MAJOR
+45: Evidence: The package workflow runs lake build and an axiom grep. It does not fail on Lean warnings. The latest visible package run also shows a Node deprecation warning.
+46: Assessment. Zero warnings is a stronger statement than successful compilation. The workflow as written does not prove it.
+47: Repair. Either remove the 0 warnings claim or add a warning gate that captures build output and fails on relevant Lean warnings. Upgrade actions/checkout from v4 to v5 to remove the visible Node warning.
+48: 6. The audit checks selected declarations, not the whole library
+49: Severity: MAJOR
+50: Evidence: Audit.lean prints axioms for 21 declarations. The five mathematical modules contain 34 theorem or lemma declarations in total.
+51: Assessment. Calling this a complete audit is false. Unlisted declarations can contain sorryAx or other unwanted dependencies without being detected by the current file.
+52: Repair. Audit every public theorem and lemma, or rename the claim to selected core declaration audit and publish the selection rule.
+53: 7. The audit section count is internally wrong
+54: Severity: MINOR
+55: Evidence: Audit.lean comments Cross-Norm Product Declarations (6), but lines 16-22 print seven declarations.
+56: Assessment. A counting error in an audit file is small, but it damages confidence in the larger 21-declaration claim.
+57: Repair. Change the comment to (7) and generate counts automatically rather than maintaining them by hand.
+58: 8. The no-sorry check is narrow and fragile
+59: Severity: MAJOR
+60: Evidence: The workflow greps audit.log for the literal string sorryAx after running #print axioms on a hand-maintained list.
+61: Assessment. This catches sorryAx only for declarations that were selected. It does not guarantee that every source declaration was audited, nor does it reject undeclared axioms, warnings, or stale generated output.
+62: Repair. Use Mathlib.Util.PrintSorries as intended or a repository-wide check, audit all declarations, preserve the log as an artifact, and specify the allowed axiom set explicitly.
+63: 9. The Mathlib audit import is unused
+64: Severity: MINOR
+65: Evidence: Audit.lean imports Mathlib.Util.PrintSorries but never invokes its commands.
+66: Assessment. The import gives the appearance of a stronger audit than the file actually performs.
+67: Repair. Either use the utility or remove the import. Do not retain decorative verification machinery.
+68: 10. Verification is tied to a stale commit
+69: Severity: MAJOR
+70: Evidence: The abstract says verification is tied to local commit d6c7c51, while the published state is commit 6ec3d02.
+71: Assessment. Even when later commits are documentation-only, a release claim should refer to the exact tree readers receive. The word local is also wrong for a public Git commit.
+72: Repair. Replace the sentence with the exact release commit and a public workflow-run identifier. Tag the release and cite the tag plus commit hash.
+73: 4. Mathematical and Lean Statement Problems
+74: 11. The README falsely claims one zero produces all four completed-zeta evaluations
+75: Severity: BLOCKER
+76: Evidence: README.md line 6 says Λ(s) = 0 implies vanishing at all four symmetry evaluations. The Lean theorem completedRiemannZeta_fourfold_zero_orbit takes two hypotheses: a zero at σ + it and a zero at σ - it.
+77: Assessment. The implication in the README is strictly stronger than the theorem. The theorem proves two functional-equation reflections after assuming both members of the conjugate pair. It does not derive the conjugate zero from the first zero.
+78: Repair. Either prove completed-zeta conjugation symmetry and derive the four points from one zero, or rename the theorem to completedRiemannZeta_two_reflection_pairs and state both assumptions everywhere.
+79: 12. Full Fourfold Zero Orbit is an inflated theorem name
+80: Severity: MAJOR
+81: Evidence: CompletedZetaSymmetry.lean lines 47-68 calls the result Full Fourfold Zero Orbit while assuming two of the four zero statements and returning them unchanged as the first and fourth conjuncts.
+82: Assessment. Half of the conclusion is copied directly from the assumptions. The only derived content is one reflection from each assumed zero.
+83: Repair. Use a literal name such as completedRiemannZeta_two_zero_reflections, or add a genuine conjugation theorem and derive the full orbit from one hypothesis.
+84: 13. The paper describes parameter negation as if it were a derivation
+85: Severity: MODERATE
+86: Evidence: Theorem 6 lists σ - it as arising via parameter negation, but the Lean theorem receives that zero as h_zero_neg.
+87: Assessment. Parameter negation changes an argument. It does not prove that a function remains zero at the new argument.
+88: Repair. State that σ - it is a second assumption, not a consequence. Use conjugation symmetry if a consequence is intended.
+89: 14. Hardy norm parameter symmetry is conditional, not proved
+90: Severity: BLOCKER
+91: Evidence: hardyZ_neg_norm takes h_symm as an explicit hypothesis that already states the needed zeta norm equality. The proof only rewrites both Hardy norms and applies h_symm.
+92: Assessment. This is a transport lemma, not an independent symmetry theorem. The README and theorem mapping present the result without its hypothesis.
+93: Repair. Rename it hardyZ_neg_norm_of_riemannZeta_norm_eq and print the hypothesis in the paper. Better, import the Mathlib conjugation theorem and prove the critical-line zeta norm equality first.
+94: 15. The theorem dependency row for hardyZ_neg_norm is false
+95: Severity: MAJOR
+96: Evidence: The paper says the theorem is based on riemannZeta_conj and norm_star. The actual proof cites neither; it uses hardyZ_norm_eq_riemannZeta_norm and the supplied h_symm assumption.
+97: Assessment. A formal mapping table that misstates proof dependencies is not a reliable audit table.
+98: Repair. Generate dependency information from Lean output or manually correct the row to show the actual helper theorem and hypothesis.
+99: 16. The title still calls the construction Hardy Z while the paper admits it is not proved real-valued
+100: Severity: MAJOR
+101: Evidence: The title and Section 4 use Hardy Z-Function. The abstract says the normalization is complex-valued and does not establish real-valuedness.
+102: Assessment. The classical Hardy Z function is real-valued on real inputs. A complex phase multiple with only norm and zero equivalence proved is not yet the classical object promised by the title.
+103: Repair. Rename the object and paper to complex critical-line phase normalization, or prove real-valuedness with a correctly normalized continuous theta function.
+104: 17. The Riemann-Siegel theta definition is not proved to be the classical global theta
+105: Severity: MAJOR
+106: Evidence: riemannSiegelTheta uses the imaginary part of Mathlib principal Complex.log applied to Gamma. No continuity, branch normalization, parity, or agreement with the standard continuous theta is proved.
+107: Assessment. The principal argument can jump by multiples of 2π. Naming it the classical Riemann-Siegel theta without branch analysis is unjustified.
+108: Repair. Rename it principalGammaPhase until branch agreement is proved. For the classical function, construct or import a continuous argument with a stated normalization and prove equivalence on the intended domain.
+109: 18. The introduction contradicts the abstract about the Hardy object
+110: Severity: MODERATE
+111: Evidence: The abstract calls H complex-valued and disclaims real-valuedness. The introduction says the library covers the classical Hardy Z-function.
+112: Assessment. The same manuscript cannot both disclaim and assert the defining property of the classical object.
+113: Repair. Use complex Hardy-type normalization consistently in the title, introduction, section heading, README, code comments, and citation title.
+114: 19. The classical nonvanishing hypotheses are unused
+115: Severity: MAJOR
+116: Evidence: Nonvanishing.lean names the hypotheses _hne : s ≠ 1 and _ht : t ≠ 0, signaling that they are intentionally unused. The proofs ignore both and directly apply Mathlib totalized nonvanishing.
+117: Assessment. The statements are logically valid, but the proofs do not formalize the claimed exclusion of the pole. They merely specialize a totalized theorem that also holds at the junk value.
+118: Repair. Prove s ≠ 1 from t ≠ 0 and use a theorem or definition whose classical interpretation requires that side condition. At minimum, state that the side condition is interpretive and not used by the totalized proof.
+119: 20. The classical and totalized one-line theorems collapse to the same proof
+120: Severity: MODERATE
+121: Evidence: riemannZeta_ne_zero_on_one_line and riemannZeta_ne_zero_totalized have the same conclusion and both apply riemannZeta_ne_zero_of_one_le_re; only the first carries an ignored t ≠ 0 assumption.
+122: Assessment. The source does not encode the conceptual distinction that the paper emphasizes.
+123: Repair. Keep one totalized theorem. Add a separate theorem about a pole-free domain or an explicitly partial/classical wrapper if the distinction is meant to exist formally.
+124: 21. The completed-zeta fourfold result ignores available zeta conjugation infrastructure
+125: Severity: MODERATE
+126: Evidence: Pinned Mathlib documents riemannZeta_conj for all complex inputs. The local project does not build a corresponding completed-zeta conjugation theorem and instead assumes both conjugate zeros.
+127: Assessment. The result is weaker than the mathematical orbit language suggests and leaves the core missing step outside the formalization.
+128: Repair. Prove the completed object respects conjugation away from exceptional points, with explicit endpoint handling, then derive the orbit under the correct hypotheses.
+129: 22. The cross-norm theory remains elementary API packaging
+130: Severity: MODERATE
+131: Evidence: crossNormProduct_nonneg is mul_nonneg, swap is mul_comm after double conjugation, the real-part bound is abs_re_le_norm plus norm_mul, and zero characterization is mul_eq_zero plus norm_eq_zero.
+132: Assessment. These are correct but generic norm identities. They do not constitute a new analytic number-theory theory.
+133: Repair. Describe this section as a convenience API for later work. Remove novelty language unless later theorems use it to prove a nontrivial analytic estimate.
+134: 23. The Guth-Maynard discussion remains technically disconnected
+135: Severity: MODERATE
+136: Evidence: The paper cites the 2026 large-value theorem, but none of its formal statements, bounds, measures, exponents, or methods appear in the Lean library.
+137: Assessment. The reference currently functions as prestige context rather than mathematical dependency.
+138: Repair. Reduce it to a brief motivation sentence and explicitly say the current library does not formalize or advance that result. Add a concrete roadmap showing what additional analytic infrastructure would be required.
+139: 24. Foundational library is too grand for the current content
+140: Severity: MODERATE
+141: Evidence: Most completed-zeta theorems are coordinate wrappers around Mathlib, and the finite-polynomial and cross-norm results are direct algebraic consequences.
+142: Assessment. The library may be useful as scaffolding, but the manuscript repeatedly gives routine wrappers the rhetoric of a research contribution.
+143: Repair. Present the work as a small verified example library or formalization note. Demonstrate reuse in a theorem not already immediate from Mathlib before claiming a foundation for analytic work.
+144: 25. Module dependencies are conceptually tangled
+145: Severity: MODERATE
+146: Evidence: FiniteDirichletPolynomial imports CompletedZetaSymmetry only to obtain point and star_point. CrossNormProduct also imports completed-zeta code for the same coordinate helper.
+147: Assessment. Finite Dirichlet polynomial algebra should not depend on completed-zeta symmetry. The current layering makes unrelated modules appear mathematically dependent.
+148: Repair. Move point, star_point, and coordinate lemmas into a small Coordinates.lean module imported by both branches.
+149: 5. Manuscript, Mapping, and Metadata Defects
+150: 26. Complete Formalization Mapping is not complete
+151: Severity: MAJOR
+152: Evidence: Section 6 lists 21 selected declarations. The mathematical modules contain 34 theorem or lemma declarations, including coordinate lemmas, completed-zeta norm reflection, critical-line symmetry, and the unused-hypothesis wrapper.
+153: Assessment. The heading and prose imply exhaustive coverage while omitting 13 declarations.
+154: Repair. Rename the section Selected Audited Declarations, or list every public theorem and lemma.
+155: 27. The audit-status column overstates what was verified
+156: Severity: MAJOR
+157: Evidence: Every row says Verified (No sorryAx), while there is no visible current CI artifact for commit 6ec3d02 and the workflow only audits a hand-selected list.
+158: Assessment. A table cannot convert an unobserved or local run into public evidence by repeating the word verified.
+159: Repair. Use Audited locally at commit X until a green public run exists. Add a link to the exact artifact and record its checksum.
+160: 28. The package name remains misspelled in the manifest
+161: Severity: MAJOR
+162: Evidence: lakefile.toml names the package RiemannZeta. lake-manifest.json line 93 names it ReimannZeta.
+163: Assessment. This is a direct metadata contradiction in the files meant to make the project reproducible.
+164: Repair. Regenerate lake-manifest.json using the pinned toolchain and commit the corrected manifest. Add a CI check that lakefile and manifest package names agree.
+165: 29. The authorship change removed the AI-assistance disclosure
+166: Severity: MAJOR
+167: Evidence: Commit 6ec3d02 changes the author line from Scott McColm (with AI Proof Assistance) to S. McColm, and makes the corresponding CITATION.cff change.
+168: Assessment. An author-name abbreviation is legitimate. Removing the only visible description of substantial AI assistance is a disclosure regression, especially for a paper whose development history openly relied on AI-generated proofs and revisions.
+169: Repair. Add a contributions and tool-use statement that names the systems used, describes their role, and states which human performed mathematical review and accepts responsibility.
+170: 30. CITATION.cff is too thin for a scholarly release
+171: Severity: MODERATE
+172: Evidence: The citation file has only author initials, title, version, date, and repository URL. It has no commit, release URL, license, abstract, keywords, or preferred citation type.
+173: Assessment. The metadata does not identify the exact audited artifact and is not enough to make the version reproducible.
+174: Repair. Add license, type, abstract, keywords, repository-artifact or release URL, and a version tag. Use a full author name unless there is a reason not to.
+175: 31. The Mathlib citation is not reproducible
+176: Severity: MODERATE
+177: Evidence: Reference 3 cites Mathlib generically as 2026 and links current online docs, while the package pins Mathlib commit 5450b53e5ddc75d46418fabb605edbf36bd0beb6.
+178: Assessment. Current documentation can change after publication and may no longer match the theorem signatures used by the paper.
+179: Repair. Cite the Mathlib paper or repository plus the exact pinned revision and retrieval date.
+180: 32. The paper lacks a real conclusion
+181: Severity: MODERATE
+182: Evidence: The manuscript ends after the mapping table and references. There is no conclusion that states the actual contribution, limitations, and next technical step.
+183: Assessment. The absence makes the document read like generated project notes rather than a finished formalization paper.
+184: Repair. Add a restrained conclusion that identifies what was encoded, what was inherited from Mathlib, what remains unproved, and what result would justify a future research claim.
+185: 33. The paper lacks a clear originality and dependency statement
+186: Severity: MAJOR
+187: Evidence: The mapping table names local wrappers and some Mathlib dependencies, but the prose does not systematically separate new definitions, direct wrappers, generic algebra, and imported analytic theorems.
+188: Assessment. Readers cannot tell which mathematical content is original and which is already in Mathlib.
+189: Repair. Add a contribution taxonomy for each theorem: new definition, coordinate wrapper, generic algebraic corollary, or substantive new theorem. State that the functional equation and nonvanishing theorem are inherited.
+190: 6. Word Artifact and Repository Hygiene
+191: 34. The published Word theorem table is visibly broken
+192: Severity: BLOCKER
+193: Evidence: Rendered pages 5-7 show equations colliding with adjacent columns, Lean identifiers split into fragments, module names broken across lines, and the final row stranded at the top of page 7.
+194: Assessment. The table is not reliably readable. This is a publication artifact failure, not a cosmetic preference.
+195: Repair. Use landscape orientation for the mapping appendix, reduce columns, place code identifiers in a monospaced style, allow rows to remain together, and move detailed dependencies to a separate appendix or machine-readable CSV.
+196: 35. The Word artifact wastes a page and exposes a bad table split
+197: Severity: MODERATE
+198: Evidence: Page 7 contains one continuation row, a stray punctuation mark, the references, and a large blank area.
+199: Assessment. The layout advertises that the document was not reviewed after export.
+200: Repair. Set keep-with-next and row-splitting rules, move references to a clean page, and rerender every page before release.
+201: 36. The repository contains a Microsoft Word lock file
+202: Severity: MAJOR
+203: Evidence: The project root includes ~$per_Riemann_Zeta_v7.docx, a 162-byte temporary Word owner/lock file.
+204: Assessment. Temporary lock files can expose workstation metadata and are never part of a clean source release.
+205: Repair. Delete the file from history if practical and add ~$*.docx to .gitignore.
+206: 37. Four competing Word manuscripts make the release ambiguous
+207: Severity: MAJOR
+208: Evidence: The root contains v5, v6, v7, and v7_final Word files, plus archived materials.
+209: Assessment. Readers cannot know which binary manuscript is authoritative without guessing. Stale binaries also preserve corrected errors indefinitely.
+210: Repair. Keep one canonical manuscript under releases or docs, move old versions to tagged Git history or an archive outside the release tree, and name the current file without final-final versioning.
+211: 38. Generated critique documents are mixed with source-release material
+212: Severity: MODERATE
+213: Evidence: Commit 6ec3d02 lists a re-audit DOCX among manuscript changes, and the repository has accumulated review artifacts beside the code.
+214: Assessment. A release directory should separate source, paper, audit evidence, and private review products.
+215: Repair. Create docs/, paper/, audit/, and archive/ directories. Exclude private critique drafts from the release tag unless they are intentionally part of the scholarly record.
+216: 39. The README has no status badge or exact release pointer
+217: Severity: MODERATE
+218: Evidence: The README states audit results but provides no badge, workflow run, release tag, or audit artifact link.
+219: Assessment. Readers are asked to trust prose rather than inspect evidence.
+220: Repair. Add a package-specific status badge, exact release tag, commit hash, and link to the audit artifact. Do not show a green badge until the workflow is green.
+221: 40. The current release claim is stronger than the repository’s quality controls
+222: Severity: MAJOR
+223: Evidence: The project has no visible test cases beyond compilation and axiom printing, no style or formatting checks, no generated declaration inventory, and no manuscript consistency check.
+224: Assessment. The recurring mismatches in theorem counts, dependencies, hypotheses, and names are exactly the errors automation should prevent.
+225: Repair. Generate the theorem mapping from source metadata, lint unused hypotheses and stale names, validate CITATION.cff, check the manifest name, and render the manuscript in CI.
+226: 7. Ordered Repair Plan
+227: 1. Stop making release claims. Temporarily remove 0 errors, 0 warnings, verified, full fourfold orbit, and unconditional Hardy symmetry wording from the README and paper.
+228: 2. Fix CI. Delete or scope the root workflow, upgrade checkout, run the package workflow on the exact commit, and retain build and axiom logs.
+229: 3. Repair theorem statements. Either prove conjugation to get a one-hypothesis orbit or rename the two-hypothesis theorem. Rename and restate the conditional Hardy norm lemma.
+230: 4. Correct nonvanishing semantics. Remove ignored hypotheses or formalize a pole-free classical domain so the distinction exists in Lean rather than prose only.
+231: 5. Rename the Hardy construction. Use complex critical-line phase normalization unless real-valuedness and correct theta branch normalization are proved.
+232: 6. Make the audit exhaustive. Inventory and audit all public theorem and lemma declarations. State the allowed axiom set and fail CI on deviations.
+233: 7. Regenerate metadata. Fix ReimannZeta in the manifest, strengthen CITATION.cff, tag the release, and cite the exact Mathlib commit.
+234: 8. Restore transparent contribution disclosure. Add an AI/tool-use and human-verification statement.
+235: 9. Clean the repository. Delete the Word lock file, remove duplicate current manuscripts, separate archives and review products, and update .gitignore.
+236: 10. Rebuild the paper artifact. Use a readable appendix layout, repair the theorem table, add a conclusion and contribution taxonomy, then render and inspect every page.
+237: 8. Suggested Corrected Core Wording
+238: Replacement abstract
+239: We present a small Lean 4 library, pinned to Lean v4.30.0-rc2 and a fixed Mathlib revision, containing finite positive-index Dirichlet-polynomial conjugation lemmas, elementary products-of-norms identities, and coordinate wrappers for existing Mathlib theorems about the completed Riemann zeta function. We also define a complex critical-line phase normalization and prove norm and zero equivalence with the Riemann zeta function. A two-reflection theorem packages the functional-equation images of two assumed conjugate zeros. The library does not prove zero-density estimates, a one-zero fourfold orbit, real-valuedness of the classical Hardy Z function, or new zero-free regions. Verification claims refer only to the exact release commit and its public continuous-integration artifact.
+240: Replacement fourfold wording
+241: If completed zeta vanishes at both σ + it and σ - it, then the functional equation supplies zeros at (1 - σ) - it and (1 - σ) + it. This theorem packages two reflection pairs; it does not derive conjugate symmetry from one zero.
+242: Replacement Hardy wording
+243: Define H(t) as a complex phase multiple of ζ(1/2 + it). The formalization proves |H(t)| = |ζ(1/2 + it)| and H(t) = 0 iff ζ(1/2 + it) = 0. The present library does not prove that H is real-valued or that the chosen principal-branch phase equals the globally normalized classical Riemann-Siegel theta function.
+244: Replacement verification wording
+245: At release commit <SHA>, GitHub Actions run <RUN-ID> completed lake build and audited the listed declarations for sorryAx dependencies. The audit log is attached to that run. Claims about warnings or all declarations are made only when separately enforced by CI.
+246: 9. Publication Gate
+247: ☐ A successful public CI run exists for the exact release commit.
+248: ☐ The generic failing workflow is removed or repaired.
+249: ☐ The README and paper state both hypotheses of the completed-zeta reflection-pair theorem.
+250: ☐ The Hardy norm negation result is either proved without an assumed symmetry or clearly labeled conditional.
+251: ☐ The title no longer calls the complex normalization classical Hardy Z unless real-valuedness is proved.
+252: ☐ Every public theorem and lemma is included in the declaration inventory and axiom audit.
+253: ☐ The manifest package name matches lakefile.toml.
+254: ☐ The Word table is readable at 100 percent zoom and no row is split into fragments.
+255: ☐ Temporary and duplicate manuscript files are removed from the release tree.
+256: ☐ An explicit AI/tool-use and human-review statement is present.
+257: ☐ The paper has a contribution taxonomy and a restrained conclusion.
+258: Final judgment. The revision has moved from mathematically misleading promotion toward a defensible small Lean library. It has not yet completed that transition. The code is more credible than the manuscript, while the public verification record and Word artifact are weaker than both. Publishing it now would invite reviewers to discover obvious contradictions that the repository itself already exposes.
+259: 10. Sources Consulted
+260: S1. Current manuscript source at commit 6ec3d02: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/Paper_Riemann_Zeta.md
+261: S2. Current README at commit 6ec3d02: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/README.md
+262: S3. FiniteDirichletPolynomial.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/FiniteDirichletPolynomial.lean
+263: S4. CrossNormProduct.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/CrossNormProduct.lean
+264: S5. CompletedZetaSymmetry.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/CompletedZetaSymmetry.lean
+265: S6. HardyZ.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/HardyZ.lean
+266: S7. Nonvanishing.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/Nonvanishing.lean
+267: S8. Audit.lean: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta/RiemannZeta/Audit.lean
+268: S9. Package-specific GitHub Actions workflow: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/.github/workflows/riemann-zeta-ci.yml
+269: S10. Generic GitHub Actions workflow: https://raw.githubusercontent.com/smccolm/Lean/6ec3d022579369844ac8ac488552fb797ec5f148/.github/workflows/lean_action_ci.yml
+270: S11. Public GitHub Actions page: https://github.com/smccolm/Lean/actions
+271: S12. Failed package workflow run 30790420344: https://github.com/smccolm/Lean/actions/runs/30790420344
+272: S13. Failed generic workflow run 30790420384: https://github.com/smccolm/Lean/actions/runs/30790420384
+273: S14. Mathlib Riemann zeta documentation: https://leanprover-community.github.io/mathlib4_docs/Mathlib/NumberTheory/LSeries/RiemannZeta.html
+274: S15. Mathlib nonvanishing documentation: https://leanprover-community.github.io/mathlib4_docs/Mathlib/NumberTheory/LSeries/Nonvanishing.html
+275: S16. Mathlib zeta asymptotics and conjugation documentation: https://leanprover-community.github.io/mathlib4_docs/Mathlib/NumberTheory/Harmonic/ZetaAsymp.html
+276: S17. Current repository tree at commit 6ec3d02: https://github.com/smccolm/Lean/tree/6ec3d022579369844ac8ac488552fb797ec5f148/Riemann%20Zeta
+277: S18. Commit removing the AI-assistance author wording: https://github.com/smccolm/Lean/commit/6ec3d022579369844ac8ac488552fb797ec5f148
+TABLE: VERDICT: NOT READY FOR SCHOLARLY PUBLICATION OR A FORMAL RELEASE CLAIM The revision is far more honest and technically coherent than the first release. It is still undermined by unsupported verification claims, material statement mismatches, a weak audit design, misleading theorem names, stale metadata, and a visibly broken publication artifact.

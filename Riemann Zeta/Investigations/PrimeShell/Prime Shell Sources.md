@@ -21,6 +21,15 @@ Snapshot date: 2026-08-30. Remote commit identifiers were queried directly; math
 5. [Goldston-Montgomery, *Pair correlation of zeros and primes in short intervals* (1987)](https://www.impan.pl/shop/en/publication/transaction/download/product/83512). Source context for the prime-pair/zero-pair equivalence and scale interpretation.
 6. [Baluyot-Goldston-Suriajaya-Turnage-Butterbaugh, *An unconditional Montgomery theorem for pair correlation of zeros of the Riemann zeta-function*](https://doi.org/10.4064/aa230612-20-3), Acta Arithmetica 214 (2024). Relevant to the existing support-one input cited by Alpoge-Furman; it does not supply the proposed Prime Shell input.
 
+### Local source captures
+
+The tracked Matomäki--Radziwiłł--Tao source captures are reproducibility aids for item 3 above:
+
+- `mrt-source.pdf`: SHA-256 `e93924c5a97b7813320ca84dcbf4619a958b47781e2e7ab36f6e2fd11a9493a1`
+- `mrt-source.html`: SHA-256 `b6a9ee867977f4570400acb6d9ff78db82c8cb4bac15908d50967aeef1c8f74f`
+
+These byte hashes identify the local captures; the paper citation and version remain authoritative for the mathematical source.
+
 ## Exact upstream code areas to inspect
 
 - `Zeta23/PrimeSideA/`

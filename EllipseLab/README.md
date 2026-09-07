@@ -1,13 +1,25 @@
 # EllipseLab
 
-## GitHub configuration
+This is the current complete Lean 4 ellipse-perimeter formalization. Despite the historical “Lab” name, the package root imports the integrated proof in `EllipseLab/Shape.lean`.
 
-To set up your new GitHub repository, follow these steps:
+The principal result is:
 
-* Under your repository name, click **Settings**.
-* In the **Actions** section of the sidebar, click "General".
-* Check the box **Allow GitHub Actions to create and approve pull requests**.
-* Click the **Pages** section of the settings sidebar.
-* In the **Source** dropdown menu, select "GitHub Actions".
+```lean
+EllipseOmega.ellipse_perimeter_series
+```
 
-After following the steps above, you can remove this section from the README file.
+It connects the full-loop parametric arc length to the complete elliptic integral, proves the open-interval series, handles the degenerate endpoint, and states the symmetric result for nonnegative semiaxes.
+
+## Build
+
+From this directory:
+
+```powershell
+lake build
+```
+
+The project is pinned by `lean-toolchain` and `lake-manifest.json`. `EllipseLab.lean` is the production root and imports both `EllipseLab.Basic` and `EllipseLab.Shape`.
+
+## Historical files
+
+The `Intermediate state *.txt` files and `Cop-out.txt` record development attempts. They are not imported production modules and should not be used as evidence for the final theorem. The manuscripts under `../Article/` describe the completed `Shape.lean` theorem chain.

@@ -1,6 +1,6 @@
-# Whole-proof goal prompt
+# Whole-proof goal prompt (historical)
 
-Copy the text below into the next turn.
+**Status: completed release-scope acceptance contract.** GT-00 through GT-26 were completed and the isolated verifier passed. The text below is retained as the original execution contract; it is not a current instruction to restart the formalization. Current status is recorded in `Gafni-Tao Research Agenda.md`, `Gafni-Tao Shitlist.md`, `Reproduction Manifest.md`, and `README.md`.
 
 ---
 

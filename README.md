@@ -20,10 +20,11 @@ Lean/
 │   ├── 7. Weil, Arithmetic Geometry and Noncommutative Geometry/
 │   ├── 8. Pair Correlation, Zero Statistics and Weil-Form Methods/
 │   ├── 9. Zero Density, Large Values and Prime Transfer/
-│   │   └── 71 Guth-Maynard, 2026/ # Frozen foundation source root
+│   │   ├── 71 Guth-Maynard, 2026/ # Frozen foundation source root
+│   │   └── 74 Gafni-Tao, 2026/    # Isolated follow-on release
 │   └── Investigations/  # Cross-node inference and route experiments
-├── EllipsePerimeter/    # Formalized proof of complete elliptic perimeter series in Lean 4
-├── EllipseLab/          # Development laboratory and step-by-step proof iterations for the Ellipse project
+├── EllipseLab/          # Current complete ellipse proof and its development history
+├── EllipsePerimeter/    # Earlier partial extraction of the ellipse library
 ├── Compacted Graphs/    # Subproject formalizing compactified graphs and cylindrical topology
 ├── visualizer/          # Reusable 3D WebGL & 2D Python interactive visualization suite
 └── Article/             # Formal paper manuscripts and drafts (e.g., Ellipse Perimeter paper)
@@ -50,18 +51,15 @@ The numbered research tree follows the corridors and nodes in [`The RH Map - Aug
 - **[74 Gafni--Tao, 2026](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md)**: A kernel-checked formalization of the release-scope results in Gafni--Tao, *Primes in almost all short intervals* (`arXiv:2505.24017v1`). The public root proves the general Theorems 1.1--1.3 and the two displayed Section 3 sample inequalities, including the specialization of Theorem 1.1 using the frozen Guth--Maynard density theorem. The latest recorded isolated run passed on 2026-09-07: all 3,592 local PNT+ jobs and 10,344 Gafni--Tao jobs completed with zero diagnostics, and the audit reported only `propext`, `Classical.choice`, and `Quot.sound`. The release does not claim the full best-known numerical curve, Ford's optimized constants, external review, or new mathematics.
 - **[Prime Shell investigation](Riemann%20Zeta/Investigations/PrimeShell/README.md)**: This completed experiment reached its permitted **ROUTE DISPROVED** endpoint. Lean proves that every faithful separated amplitude in the modeled explicit-formula range has `3 < kappaXi`, so the exact Zeta23 output `2 - kappaXi` cannot improve `2/3` by any positive amount, even under perfect arithmetic control. The endpoint `primeShell_universal_no_gain_native` is non-vacuous and its audit reports only the standard logical dependencies above. It proves no new theorem about zeta zeros and does not rule out connected positive-valley windows, other source constructions, or approaches outside `FaithfulAmplitudeShell`.
 
-### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/` & `Article/`)
-A mechanized Lean 4 proof of the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
+### 2. Ellipse Perimeter Formalization (`EllipseLab/`, `EllipsePerimeter/`, and `Article/`)
+The complete current Lean theorem is `EllipseOmega.ellipse_perimeter_series` in `EllipseLab/EllipseLab/Shape.lean`. It proves the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
 
 $$P(a,b) = 4A E(e) = 2\pi A \sum_{n=0}^{\infty} \left(\frac{(2n)!}{2^{2n}(n!)^2}\right)^2 \frac{e^{2n}}{1-2n}, \qquad e = \sqrt{1 - \frac{B^2}{A^2}}$$
 
-- **Modules**:
-  - `Binomial.lean`: Real binomial expansion $\sqrt{1-x}$ and series summability.
-  - `Boundary.lean`: Endpoint evaluations and limit squeezes for the degenerate case $e=1$.
-  - `EllipticE.lean`: Definition and properties of the complete elliptic integral $E(e)$ and coefficient sequences.
-  - `Geometry.lean`: Full-loop parametric arc-length and its relationship to the quadrant integral.
-  - `Wallis.lean`: Combinatorics of Wallis sequences and ratio recurrences for the trigonometric integrals.
-- **Paper**: A draft manuscript detailing the derivation alongside the Lean formalization is available in the `Article/` directory. `EllipseLab/` contains the intermediate iterative states of the proof development.
+- **Canonical implementation**: `EllipseLab/EllipseLab/Shape.lean` contains the integrated geometric, elliptic-integral, endpoint, Wallis, and series proof. `EllipseLab.lean` imports it into the package root.
+- **Development history**: the numbered `EllipseLab/EllipseLab/Intermediate state *.txt` files preserve earlier proof iterations; they are not production Lean modules.
+- **Earlier partial extraction**: `EllipsePerimeter/` contains proved Wallis and open-interval binomial-series components. Its `Boundary.lean`, `EllipticE.lean`, and `Geometry.lean` files are currently empty, so that package must not be cited as containing the complete theorem.
+- **Paper**: Draft manuscripts aligned with the complete theorem are available in `Article/`; see its README for version roles.
 
 ### 3. Compacted Graphs (`Compacted Graphs/`)
 A dedicated Lean 4 project for formalizing compactified topological graphs, single-valued fiber bundle projections, and cylindrical coordinate mappings $(r, \theta, z)$. (Currently in early stages of development.)
@@ -102,8 +100,12 @@ lake update
 lake build
 lake env lean PrimeShell/Audit.lean
 
-# Verify EllipsePerimeter
-cd "../../../../EllipsePerimeter"
+# Verify the complete ellipse formalization
+cd "../../../../EllipseLab"
+lake build
+
+# Optionally build the earlier partial extraction
+cd "../EllipsePerimeter"
 lake build
 
 # Verify Compacted Graphs

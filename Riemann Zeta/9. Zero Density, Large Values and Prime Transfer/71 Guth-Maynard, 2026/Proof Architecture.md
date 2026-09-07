@@ -83,10 +83,6 @@ flowchart TD
     QA["#19 Final theorem integration<br/>DONE - KERNEL/PROJECT LAYER<br/>all five density outputs audited;<br/>principal runner PASS / 0"]
 
     PR["#20 Publication-readiness package<br/>DONE INTERNALLY<br/>claim sheet, source freeze, crosswalk,<br/>exposition and reproduction guide"]
-    XR["#20 Expert exposition review<br/>OPEN - EXTERNAL<br/>independent expert must test whether<br/>the proof can be explained and challenged"]
-    SR["#20 Independent semantic review<br/>OPEN - EXTERNAL<br/>source statements, conventions and<br/>proof consumers require referee scrutiny"]
-    PP["#20 Public preprint / peer review<br/>OPEN - EXTERNAL<br/>no upload, submission, acceptance or<br/>publication is claimed"]
-    KN["#20 Canonicalization<br/>OPEN - COMMUNITY PROCESS<br/>natural formulation, reuse, adoption and<br/>integration into standard references"]
 
     MZ --> ZB
     MZ --> CF
@@ -280,11 +276,8 @@ flowchart TD
     FV --> LR
     QA --> PR
     PC --> PR
-    PR --> XR
-    PR --> SR
-    XR --> PP
-    SR --> PP
-    PP --> KN
+
+
 
 
     classDef done fill:#d7f5dd,stroke:#187a2f,color:#102814,stroke-width:2px;

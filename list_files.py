@@ -9,8 +9,15 @@ except NameError:
 # Define the output file name
 output_file = os.path.join(start_path, "directory_tree.txt")
 
-# List of directories to completely ignore.
-ignored_dirs = {'__pycache__', '.git', '.vscode', '.idea', 'runs'}
+# Generated, dependency, editor, and cache directories do not belong in the
+# project-owned source tree snapshot.
+ignored_dirs = {
+    '__pycache__', '.git', '.lake', '.antigravity', '.research',
+    '.vscode', '.idea', '.venv', 'venv', 'node_modules', 'runs', 'logs'
+}
+
+# Do not include the generated output file inside its own listing.
+ignored_files = {'directory_tree.txt'}
 
 # --- Script Logic (ASCII-Safe) ---
 def create_directory_tree_safe(startpath, file_handle):
@@ -36,6 +43,7 @@ def create_directory_tree_safe(startpath, file_handle):
         sub_indent = '|   ' * level
         
         # Combine and sort all items for consistent output
+        files = [f for f in files if f not in ignored_files]
         all_items = sorted(dirs + files)
         
         for i, name in enumerate(all_items):

@@ -335,7 +335,7 @@ Mathlib + pinned PNT analytic infrastructure
        -> combined exponent 30(1-σ)/13
 ```
 
-The machine-readable dependency view is `Proof Architecture.md`. It is a project-maintained map, not a community-canonical proof organization.
+The machine-readable dependency view is `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md`. It is a project-maintained map, not a community-canonical proof organization.
 
 ## 7. Ten semantically dangerous bridges
 
