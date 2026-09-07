@@ -2,7 +2,7 @@
 
 ## PrimeNumberTheoremAnd (PNT+)
 
-The files under `RiemannZeta/External/PNT/` are adapted from
+The files under `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/External/PNT/` are adapted from
 [AlexKontorovich/PrimeNumberTheoremAnd](https://github.com/AlexKontorovich/PrimeNumberTheoremAnd).
 The upstream work is distributed under the Apache License 2.0. Copyright remains
 with the upstream contributors.

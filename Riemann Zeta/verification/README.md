@@ -29,7 +29,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_release.ps1 -
 ```
 
 Release mode must be run from a clean checkout of the exact candidate commit.
-It classifies every `RiemannZeta/**/*.lean` file mechanically as root-graph or
+It classifies every `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/**/*.lean` file mechanically as root-graph or
 explicit regression coverage, scans the full Lean tree for prohibited proof
 shortcuts, builds the root, checks the five exact publication contracts, runs
 both retained regressions, executes the exhaustive dependency audit, and runs
@@ -43,4 +43,4 @@ upload a SHA-named log and JSON manifest. Runs `33258211182` and `33278864901`
 both ended with external exit `143` before artifact upload. No hosted PASS or
 artifact is claimed. This missing supplemental evidence does not change the
 exact-SHA local verifier result, and hosted CI is not a prerequisite for the
-internal foundation freeze or PostGM work.
+internal foundation freeze or map-organized follow-on work.

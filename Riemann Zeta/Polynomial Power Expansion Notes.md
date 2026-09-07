@@ -1,6 +1,6 @@
 # Polynomial Power Expansion Proof Notes
 
-This note records the completed implementation of the finite coefficient expansion in `RiemannZeta/GuthMaynard/PolynomialPowers.lean`. It originated as the useful part of the removed `scratch_pow.lean` experiment; the canonical result is now a kernel-checked production theorem.
+This note records the completed implementation of the finite coefficient expansion in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/PolynomialPowers.lean`. It originated as the useful part of the removed `scratch_pow.lean` experiment; the canonical result is now a kernel-checked production theorem.
 
 ## Canonical Definitions
 

@@ -19,7 +19,7 @@ Deleting or downgrading an invalid theorem may restore integrity, but it does no
 
 All non-negotiable **internal proof** conditions below now pass. `NativeZeroDensity.lean` proves `ingham_zero_density_native`, `huxley_zero_density_native`, `guthMaynardZeroDensity_of_largeValues_native`, `guthMaynardZeroDensity_native`, and `combined_zero_density_native`. The conditional theorem consumes the ten actual native transfer inputs; the hypothesis-free project specialization supplies `guthMaynardLargeValues_native`; and the combined theorem consumes the native Ingham bound.
 
-The root graph now includes both formerly detached Hughes–Young modules, the final density module, and `PublicationContract.lean`. The canonical verifier classifies 301 root-graph modules and the two explicit audit/lint regressions, with zero exclusions or unclassified files. `RiemannZeta/Audit.lean` checks 7,636 explicitly registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations. It reports only `propext`, `Classical.choice`, and `Quot.sound` and passes the exact publication-contract and #15/#18/#19 output gates. `RiemannZeta/Lint.lean` runs all 16 default linters with zero findings.
+The root graph now includes both formerly detached Hughes–Young modules, the final density module, and `PublicationContract.lean`. The canonical verifier classifies 301 root-graph modules and the two explicit audit/lint regressions, with zero exclusions or unclassified files. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` checks 7,636 explicitly registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations. It reports only `propext`, `Classical.choice`, and `Quot.sound` and passes the exact publication-contract and #15/#18/#19 output gates. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Lint.lean` runs all 16 default linters with zero findings.
 
 This audit establishes kernel checking and project integration. It does not establish independent semantic review, publication, community acceptance, or canonicalization. The adversarial source-to-Lean audit and claim controls are in [`Publication Readiness and Semantic Audit.md`](Publication%20Readiness%20and%20Semantic%20Audit.md).
 
@@ -41,7 +41,7 @@ The DFI and Hughes--Young labels are narrowed accordingly: the public DFI theore
 
 ## GM Foundation Freeze Ledger — 29 August 2026
 
-This ledger records the owner-approved local foundation freeze. The earlier goal that made a hosted CI artifact a mandatory completion condition was cancelled as overcoupled to an unreliable external runner. PostGM work is now authorized, but no first PostGM theorem has yet been selected.
+This ledger records the owner-approved local foundation freeze. The earlier goal that made a hosted CI artifact a mandatory completion condition was cancelled as overcoupled to an unreliable external runner. Follow-on work is organized by the RH-map corridors and the separate `Investigations/` area described in `Research Organization.md`; it remains outside the frozen foundation.
 
 | Freeze workstream | Status | Acceptance evidence |
 |---|---|---|
@@ -97,7 +97,7 @@ The earlier completion labels were re-checked against every Lean file on disk, t
 | Finding | Affected Shitlist items | Corrected assessment |
 |---|---|---|
 | The default production build was not a repository-wide build: 32 of 60 Lean files were outside the 28-file production/audit perimeter. | #2, #6, #8 | **Resolved:** successive audited cleanup passes removed 82 obsolete auxiliary/probe Lean files in total; #8 now runs both retained anonymous examples as separate warning-failing stages. |
-| Five retained auxiliary files failed standalone elaboration: `RiemannZeta/GuthMaynard/test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean`. | #2 | **Resolved:** all five were unreferenced duplicates, broken API probes, or stale experiments and have been deleted. |
+| Five retained auxiliary files failed standalone elaboration: `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/test_pow.lean`, `test_le_floor.lean`, `TestCauchy.lean`, `test7.lean`, and `test8.lean`. | #2 | **Resolved:** all five were unreferenced duplicates, broken API probes, or stale experiments and have been deleted. |
 | `clean_cache.lean` deleted `.lake/build` through elaboration-time `#eval`; `build_it.lean` invoked a hard-coded user-specific Lake path through `#eval`. | #2, #8 | **Resolved by deletion:** neither utility was imported or needed by the principal runner. |
 | Several files historically described as deleted remained as empty or comment-only tombstones. | #2 | **Resolved:** every empty/tombstone Lean file has been deleted; no zero-byte Lean file remains. |
 | `Audit.lean` checks transitive dependencies for 194 synchronized production theorems. | #6 | **Complete for the cleaned tree's named public theorems:** the only auxiliary Lean declarations are anonymous examples, and both are covered by the runner. The audit correctly remains red on four project-axiom-dependent declarations. |
@@ -159,20 +159,20 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 | Rank | File or group | Required repair | Estimated difficulty |
 |---:|---|---|---|
-| 1 | ~~`RiemannZeta/GuthMaynard/TestAxiom.lean`~~ | **Completed 8 August 2026:** deleted the isolated file containing the deliberately false axiom and its dependent theorem. | Trivial—complete |
+| 1 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/TestAxiom.lean`~~ | **Completed 8 August 2026:** deleted the isolated file containing the deliberately false axiom and its dependent theorem. | Trivial—complete |
 | 2 | ~~Auxiliary tests, scratch files, tombstones, and side-effect utilities~~ | **Completed after re-audit and repository cleanup:** the initial pass removed 30 unreferenced obsolete Lean files and the later root cleanup removed 52 additional standalone probes/checks. The useful power-expansion idea remains as Markdown, and both retained anonymous examples elaborate without warnings. | Easy–moderate—complete |
 | 3 | ~~`TestExp.lean`, `test_separated.lean`, `test_zeta.lean`~~ | **Completed 8 August 2026:** converted the exponential and separation checks into complete examples and deleted the unproved Euler-product experiment. | Easy—complete |
-| 4 | ~~`RiemannZeta/GuthMaynard/test_fourier.lean`, `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
-| 5 | ~~`RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
-| 6 | ~~`RiemannZeta/Audit.lean`~~ | **Completed and extended:** transitive checks cover 7,636 registered public declarations and all 14,290 discovered nonprivate theorems, including generated declarations; every publication/research-output gate passes. | Easy–moderate—complete |
-| 7 | ~~`RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
+| 4 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/test_fourier.lean`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroCountScratch.lean`~~ | **Completed 8 August 2026:** deleted the isolated zero-valued Fourier toy and unused module-level symmetry assumption. | Easy—complete |
+| 5 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean`~~ | **Completed 8 August 2026:** removed the unused Huxley premise so the statement matches the two-bound proof; deleted the stale, unreferenced `ScratchTransfer.lean` duplicate. | Easy—complete |
+| 6 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`~~ | **Completed and extended:** transitive checks cover 7,636 registered public declarations and all 14,290 discovered nonprivate theorems, including generated declarations; every publication/research-output gate passes. | Easy–moderate—complete |
+| 7 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`~~ | **Completed 8 August 2026:** imported `HalaszMontgomery`, `Decoupling`, and `LargeValues` into the default root graph and bound the audit to that graph. | Easy—complete |
 | 8 | ~~Warning-producing files and `run_lake_build.bat`~~ | **Completed and extended:** four conceptual runner stages cover the root, explicit production modules, every retained top-level file, and the full audit; all warning and integrity gates pass. | Easy–moderate—complete |
-| 9 | ~~`RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed after re-audit 8 August 2026:** proved full-divisor-cardinality bounds independent of `T` and derived `UniformDetectorCoeffBoundProp` from the exact classical `DivisorCountBoundProp`. | Moderate—integrity/source reduction complete; divisor theorem remains Goal C |
-| 10 | ~~`RiemannZeta/GuthMaynard/PolynomialPowers.lean`~~ | **Finite/conditional layer completed:** `polynomial_power_identity` proves the exact `powCoeff` expansion, and `powCoeff_bound_of_divisor_and_factorization` exposes `DivisorCountBoundProp` and `FactorizationCountBoundProp` directly. The two classical inputs remain Goal C obligations. | Moderate–hard—finite/conditional layer complete |
-| 11 | ~~`RiemannZeta/GuthMaynard/MeanValue.lean`~~ | **Finite/conditional layer completed 8 August 2026:** removed the Montgomery mean-value axiom, proved the finite consequence from an explicit input, and repaired the interval convention to `[0,T]`, consumable by #13 at height `3T`. The analytic mean-value proposition remains unproved. | Hard—finite/conditional layer complete; analytic theorem open |
-| 12 | ~~`RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, `ZeroDetector.lean`, and `TypeIIZeros.lean`~~ | **Conditional/concrete layer completed:** coverage is eventual in height and source-range restricted; the generic count is identified with the concrete analytic-multiplicity residual count; and the concrete `ResidualZeroBoundProp` follows from the three explicit analytic inputs. Proving those inputs remains Goal C. | Very hard—conditional/concrete layer complete |
-| 13 | ~~`RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `DirichletPolynomial.lean`, `Separated.lean`, `ZeroDetector.lean`, and `ZeroCount.lean`~~ | **Conditional/normalized layer completed 8 August 2026:** the local input is now an unshifted unit-zero multiplicity estimate; shifted-bin covering, raw loss accounting, `[0,3T]` translation, coefficient phase twisting with norm preservation, and pure epsilon-power normalization are kernel-checked. `DetectorBetaShiftProp` and the unit-zero estimate remain explicit #16/#15 analytic obligations. | Very hard—conditional/normalized layer complete |
-| 14 | ~~`RiemannZeta/GuthMaynard/Transfer.lean` and prerequisites~~ | **Completed at the primitive-input conditional boundary 8 August 2026:** F-01 through F-10, the central Type-I estimate, dyadic-to-global reduction, residual assembly, and high-`σ` branch are kernel-checked. | Very hard—complete |
+| 9 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean`~~ | **Completed after re-audit 8 August 2026:** proved full-divisor-cardinality bounds independent of `T` and derived `UniformDetectorCoeffBoundProp` from the exact classical `DivisorCountBoundProp`. | Moderate—integrity/source reduction complete; divisor theorem remains Goal C |
+| 10 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/PolynomialPowers.lean`~~ | **Finite/conditional layer completed:** `polynomial_power_identity` proves the exact `powCoeff` expansion, and `powCoeff_bound_of_divisor_and_factorization` exposes `DivisorCountBoundProp` and `FactorizationCountBoundProp` directly. The two classical inputs remain Goal C obligations. | Moderate–hard—finite/conditional layer complete |
+| 11 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/MeanValue.lean`~~ | **Finite/conditional layer completed 8 August 2026:** removed the Montgomery mean-value axiom, proved the finite consequence from an explicit input, and repaired the interval convention to `[0,T]`, consumable by #13 at height `3T`. The analytic mean-value proposition remains unproved. | Hard—finite/conditional layer complete; analytic theorem open |
+| 12 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, `ZeroDetector.lean`, and `TypeIIZeros.lean`~~ | **Conditional/concrete layer completed:** coverage is eventual in height and source-range restricted; the generic count is identified with the concrete analytic-multiplicity residual count; and the concrete `ResidualZeroBoundProp` follows from the three explicit analytic inputs. Proving those inputs remains Goal C. | Very hard—conditional/concrete layer complete |
+| 13 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `DirichletPolynomial.lean`, `Separated.lean`, `ZeroDetector.lean`, and `ZeroCount.lean`~~ | **Conditional/normalized layer completed 8 August 2026:** the local input is now an unshifted unit-zero multiplicity estimate; shifted-bin covering, raw loss accounting, `[0,3T]` translation, coefficient phase twisting with norm preservation, and pure epsilon-power normalization are kernel-checked. `DetectorBetaShiftProp` and the unit-zero estimate remain explicit #16/#15 analytic obligations. | Very hard—conditional/normalized layer complete |
+| 14 | ~~`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/Transfer.lean` and prerequisites~~ | **Completed at the primitive-input conditional boundary 8 August 2026:** F-01 through F-10, the central Type-I estimate, dyadic-to-global reduction, residual assembly, and high-`σ` branch are kernel-checked. | Very hard—complete |
 | 15 | ~~Zero-count foundations~~ | **Completed:** native Ingham and Huxley endpoint theorems close the full symmetric multiplicity-weighted targets. | Very hard—complete |
 | 16 | ~~Beta removal~~ | **Completed:** the native beta-removal and extraction chain has no postulate or malformed placeholder. | Very hard—complete |
 | 17 | ~~Arithmetic coefficients and Montgomery mean value~~ | **Completed:** every uniform arithmetic and mean-value proposition has a native witness. | Very hard—complete |
@@ -185,10 +185,10 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 **Files:**
 
-- [x] `RiemannZeta/GuthMaynard/TestAxiom.lean` — deleted 8 August 2026 after confirming that no module imported or referenced its declarations
+- [x] `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/TestAxiom.lean` — deleted 8 August 2026 after confirming that no module imported or referenced its declarations
 - [x] Auxiliary scratch/test cleanup — **completed after re-audit 8 August 2026:** removed all obsolete, failing, empty, tombstone, duplicate, and side-effectful Lean files; retained only two compiling anonymous examples
 - [x] `TestExp.lean` and `test_separated.lean` — converted to complete examples on 8 August 2026; `test_zeta.lean` — deleted rather than retaining an admitted Euler-product theorem
-- [x] `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` — deleted 8 August 2026 after confirming that canonical code did not import or use them
+- [x] `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/test_fourier.lean` and `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroCountScratch.lean` — deleted 8 August 2026 after confirming that canonical code did not import or use them
 
 **Required actions:**
 
@@ -210,9 +210,9 @@ This ordering estimates the difficulty of producing a genuine, mathematically fa
 
 **Files:**
 
-- `RiemannZeta/Audit.lean`
-- `RiemannZeta.lean`
-- `RiemannZeta/GuthMaynard/InghamBound.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean`
 
 **Required actions:**
 
@@ -238,17 +238,17 @@ The synchronized audit covers every named public theorem in the cleaned tree. Th
 
 **Files:**
 
-- `RiemannZeta/GuthMaynard/ZeroCount.lean`
-- `RiemannZeta/GuthMaynard/ZeroDetector.lean`
-- `RiemannZeta/GuthMaynard/Decoupling.lean`
-- `RiemannZeta/GuthMaynard/DirichletPolynomial.lean`
-- `RiemannZeta/GuthMaynard/ExponentArithmetic.lean`
-- `RiemannZeta/GuthMaynard/ExtractSeparated.lean`
-- `RiemannZeta/GuthMaynard/MeanValue.lean`
-- `RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
-- `RiemannZeta/GuthMaynard/InghamBound.lean`
-- `RiemannZeta/GuthMaynard/Pigeonhole.lean`
-- `RiemannZeta/GuthMaynard/PolynomialPowers.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroCount.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/Decoupling.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/DirichletPolynomial.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExponentArithmetic.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExtractSeparated.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/MeanValue.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/Pigeonhole.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/PolynomialPowers.lean`
 - `run_lake_build.bat`
 
 **Required actions:**
@@ -274,8 +274,8 @@ The synchronized audit covers every named public theorem in the cleaned tree. Th
 
 **Files:**
 
-- `RiemannZeta/GuthMaynard/ZeroDetector.lean`
-- `RiemannZeta/GuthMaynard/PolynomialPowers.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/PolynomialPowers.lean`
 
 **Required actions:**
 
@@ -303,10 +303,10 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 
 **Files:**
 
-- `RiemannZeta/GuthMaynard/MeanValue.lean`
-- `RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
-- `RiemannZeta/GuthMaynard/ExtractSeparated.lean`
-- `RiemannZeta/GuthMaynard/BetaDependence.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/MeanValue.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/HalaszMontgomery.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExtractSeparated.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/BetaDependence.lean`
 
 **Required actions:**
 
@@ -333,7 +333,7 @@ The first three exit conditions hold for these two modules. The fourth is a docu
 
 ### Phase 4: Goal B—the conditional Section 13.1 transfer (completed at the primitive-input boundary)
 
-**File:** `RiemannZeta/GuthMaynard/Transfer.lean`
+**File:** `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/Transfer.lean`
 
 **Required actions:**
 
@@ -372,8 +372,8 @@ This phase is exactly Shitlist #15–#18:
 
 **Files:**
 
-- `RiemannZeta/GuthMaynard/Decoupling.lean`
-- `RiemannZeta/GuthMaynard/LargeValues.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/Decoupling.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/LargeValues.lean`
 - additional focused modules introduced only when they represent real mathematical responsibilities
 
 **Required actions—Shitlist #19:**
@@ -395,8 +395,8 @@ This phase is exactly Shitlist #15–#18:
 
 **Files:**
 
-- `RiemannZeta.lean`
-- `RiemannZeta/Audit.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`
+- `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`
 - `README.md`
 - `Paper_Riemann_Zeta.md`
 - `Research Agenda Progress.MD`
@@ -441,7 +441,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/TestAxiom.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/TestAxiom.lean` |
 | Mathematical source | None; this was an isolated negative test, not project mathematics. |
 | Previous defect | The file declared `axiom my_unproven_theorem (x : ℝ) : x = x + 1` and used it to prove the false theorem `my_test`. |
 | Result | Deleted the file. No replacement theorem was introduced. |
@@ -474,43 +474,43 @@ Every completed repair iteration must record:
 | Dependencies | `TestExp.lean` uses Mathlib complex exponential facts. `test_separated.lean` imports `RiemannZeta.GuthMaynard.Separated` and applies its axiom-clean selection theorem. |
 | Verification | `lake env lean TestExp.lean` and `lake env lean test_separated.lean` both completed successfully. `#print axioms separated_selection` reports only `propext`, `Classical.choice`, and `Quot.sound`. A code-level scan now finds exactly two remaining `sorry` proof terms, both in `PolynomialPowers.lean`; `test_zeta.lean` is absent. The principal runner logged to `logs/overall_proof_20260808_042042.log`: the default build passed, the known omitted production modules failed, the current audit module executed, and the global result correctly remained `FAIL` because of later Shitlist defects. |
 | Documentation | Marked rank 3 and its Phase 0 entry complete in this agenda. |
-| Remaining obstruction | Proceed to Shitlist #4: remove or repair `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean`. |
+| Remaining obstruction | Proceed to Shitlist #4: remove or repair `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/test_fourier.lean` and `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroCountScratch.lean`. |
 
 ### Completed Iteration: Shitlist #4
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/test_fourier.lean` and `RiemannZeta/GuthMaynard/ZeroCountScratch.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/test_fourier.lean` and `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroCountScratch.lean` |
 | Mathematical source | The canonical `BetaDependence.lean` already contains the non-toy Fourier-transform definition and its integrand-norm lemma. A future zero-count symmetry theorem must be proved from zeta symmetry and multiplicity preservation rather than introduced as an unused module variable. |
 | Previous defect | `test_fourier.lean` defined `fourierTransformΦ` to be the constant `0`, making its test mathematically vacuous. `ZeroCountScratch.lean` introduced an unused module-level parameter asserting the desired zero-count symmetry. Both files were outside the production import graph. |
 | Result | Deleted both isolated scratch files. No theorem, assumption, or claimed mathematical result replaced them. |
 | Dependencies | None. Repository search confirmed that no canonical Lean module imported either file or used `zeroCountRect_symm`; the only other `fourier_inversion_integrand_bound` is the canonical declaration in `BetaDependence.lean`. |
 | Verification | Confirmed both paths are absent, no Lean file references either scratch module or `zeroCountRect_symm`, and no zero-valued `fourierTransformΦ` definition remains. The code-level `sorry` scan still finds only the two terms in `PolynomialPowers.lean`. The principal runner logged to `logs/overall_proof_20260808_042738.log`: the default build passed; omitted production modules, prohibited-proof/axiom gates, and audit-quality gate correctly failed for later Shitlist items; the overall result remained `FAIL`. |
 | Documentation | Marked rank 4 and its Phase 0 entry complete in this agenda. |
-| Remaining obstruction | Proceed to Shitlist #5: align the unused Huxley premise and documentation in `RiemannZeta/GuthMaynard/InghamBound.lean`. |
+| Remaining obstruction | Proceed to Shitlist #5: align the unused Huxley premise and documentation in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean`. |
 
 ### Completed Iteration: Shitlist #5
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/InghamBound.lean`; obsolete duplicate `RiemannZeta/GuthMaynard/ScratchTransfer.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean`; obsolete duplicate `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ScratchTransfer.lean` |
 | Mathematical source | The exponent comparison used by the proof splits at `σ = 7/10`: Ingham supplies the low-σ range and Guth–Maynard supplies the high-σ range. Huxley's estimate is not required for this combined `30(1-σ)/13` implication. |
 | Previous defect | `CombinedZeroDensityTransfer` required `HuxleyZeroDensity`, but `combined_zero_density_transfer_native` ignored that premise. The comments incorrectly described a three-bound combination. |
 | Result | Removed the Huxley premise from the canonical combined-transfer proposition, updated its proof to accept exactly the two used hypotheses, and rewrote its documentation as a kernel-checked conditional implication. Deleted the unimported `ScratchTransfer.lean`, which redundantly redeclared the transfer framework and had become incompatible with current Mathlib. The standalone canonical `HuxleyZeroDensity` specification remains available but is not presented as a dependency of this theorem. |
 | Dependencies | Explicit `InghamZeroDensity` and `GuthMaynardZeroDensity` hypotheses plus the axiom-clean exponent comparison and `EpsilonPowerBound_mono`. |
-| Verification | `lake env lean RiemannZeta/GuthMaynard/InghamBound.lean` completed successfully (with only deprecation/style warnings). `#print axioms RiemannZeta.GuthMaynard.combined_zero_density_transfer_native` reports only `propext`, `Classical.choice`, and `Quot.sound`. Repository search confirmed that no code references the deleted scratch module and no documentation still describes the transfer as using three bounds. The principal runner logged to `logs/overall_proof_20260808_043258.log`: the default build and current audit-module execution passed; omitted production modules, the global `sorry`/axiom gates, and the audit-quality gate correctly failed for later Shitlist items; the overall result remained `FAIL`. |
+| Verification | `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/InghamBound.lean"` completed successfully (with only deprecation/style warnings). `#print axioms RiemannZeta.GuthMaynard.combined_zero_density_transfer_native` reports only `propext`, `Classical.choice`, and `Quot.sound`. Repository search confirmed that no code references the deleted scratch module and no documentation still describes the transfer as using three bounds. The principal runner logged to `logs/overall_proof_20260808_043258.log`: the default build and current audit-module execution passed; omitted production modules, the global `sorry`/axiom gates, and the audit-quality gate correctly failed for later Shitlist items; the overall result remained `FAIL`. |
 | Documentation | Updated `Research Agenda Progress.MD`, rank 5, and the Phase 1 action in this agenda. |
-| Remaining obstruction | Proceed to Shitlist #6: replace `RiemannZeta/Audit.lean` with a genuine dependency audit. |
+| Remaining obstruction | Proceed to Shitlist #6: replace `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` with a genuine dependency audit. |
 
 ### Completed Iteration: Shitlist #6
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/Audit.lean`, with compilation-enabling repairs in `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` required for complete import coverage |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`, with compilation-enabling repairs in `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` required for complete import coverage |
 | Previous defect | The audit categorized declarations by spelling and `isTheorem`, omitted production modules, did not inspect transitive dependencies, and always exited successfully despite known project axioms and `sorryAx`. |
 | Result | Replaced the categorizer with an explicit list of 110 exported source-level theorems. The audit imports the root plus all three non-root production modules, checks its list against discovered public theorems, detects duplicates and stale entries, computes dependencies with `Lean.collectAxioms`, permits only `propext`, `Classical.choice`, and `Quot.sound`, and exits nonzero on any violation. It currently reports 22 dependency failures rather than concealing them. |
 | Supporting repairs | Corrected multiplication grouping and real-power cancellation in `halasz_montgomery_lemma_native`; added the required real/complex power imports and casts in `Decoupling.lean`; converted its unused block-decomposition module parameter into a proposition specification; removed the dangling `LargeValues.lean` variable that merely assumed the target. These changes make all three modules compile but do not discharge their analytic axioms or placeholder obligations. |
-| Verification | Direct builds of `HalaszMontgomery`, `Decoupling`, and `LargeValues` succeed with warnings. Direct execution of `RiemannZeta/Audit.lean` finds exactly 110 listed and 110 discovered source-level theorems, then exits `1` after reporting 22 theorems with forbidden transitive dependencies. The principal runner logged to `logs/overall_proof_20260808_044517.log`: the default build, all three formerly omitted production-module builds, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
+| Verification | Direct builds of `HalaszMontgomery`, `Decoupling`, and `LargeValues` succeed with warnings. Direct execution of `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` finds exactly 110 listed and 110 discovered source-level theorems, then exits `1` after reporting 22 theorems with forbidden transitive dependencies. The principal runner logged to `logs/overall_proof_20260808_044517.log`: the default build, all three formerly omitted production-module builds, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 6, and the Phase 1 audit actions in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #7: add the now-compiling production modules to the default `RiemannZeta` root import graph. |
 
@@ -518,10 +518,10 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta.lean`, `RiemannZeta/Audit.lean`, and the production-coverage stage in `run_lake_build.bat` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`, and the production-coverage stage in `run_lake_build.bat` |
 | Previous defect | `HalaszMontgomery.lean`, `Decoupling.lean`, and `LargeValues.lean` compiled only through the runner's supplemental stage and were absent from the default library root. The audit redundantly imported them itself instead of proving that the root covered them. |
-| Result | Added all three modules to `RiemannZeta.lean`; simplified `Audit.lean` to obtain the entire production environment from the root import; retained the runner's explicit module builds as a redundant coverage check and renamed that stage accurately. |
-| Verification | `lake build RiemannZeta` succeeds with warnings and compiles all three newly imported modules. Direct audit execution through the root finds exactly 110 listed and 110 discovered theorems, then correctly exits `1` on the same 22 dependency failures. Repository search confirms all three imports are explicit in `RiemannZeta.lean`. The principal runner logged to `logs/overall_proof_20260808_045030.log`: the default build, redundant explicit production coverage, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
+| Result | Added all three modules to `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`; simplified `Audit.lean` to obtain the entire production environment from the root import; retained the runner's explicit module builds as a redundant coverage check and renamed that stage accurately. |
+| Verification | `lake build RiemannZeta` succeeds with warnings and compiles all three newly imported modules. Direct audit execution through the root finds exactly 110 listed and 110 discovered theorems, then correctly exits `1` on the same 22 dependency failures. Repository search confirms all three imports are explicit in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`. The principal runner logged to `logs/overall_proof_20260808_045030.log`: the default build, redundant explicit production coverage, unsafe-bypass scan, and audit-quality gate passed; the genuine audit, existing `sorry` scan, and existing project-axiom scan failed; overall exit code `1`. |
 | Documentation | Updated `README.md`, `Paper_Riemann_Zeta.md`, `Research Agenda Progress.MD`, rank 7, and the Phase 1 root-coverage action in this agenda. |
 | Remaining obstruction | Proceed to Shitlist #8: eliminate all Lean warnings and enforce the runner's zero-warning gate. |
 
@@ -529,7 +529,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | Eleven warning-producing production modules, `RiemannZeta/Audit.lean`, retained `scratch_pow.lean`, and `run_lake_build.bat` |
+| Target | Eleven warning-producing production modules, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`, retained `scratch_pow.lean`, and `run_lake_build.bat` |
 | Previous defect | The principal run emitted 31 distinct Lean warning lines. The runner treated warning-producing builds as passes; warning sources included unused hypotheses, deprecated tactics, vacuous `True` lemmas, a constant detector toy, and the admitted `powCoeffBound_native` declaration. |
 | Result | Removed unused hypotheses, replaced deprecated tactics, deleted four vacuous `True` declarations and one unused malformed broad–narrow axiom, implemented the actual truncated Möbius divisor sum, and deleted the admitted coefficient theorem plus its unused standalone axiom. Updated the retained polynomial-power scratch file to the faithful `T`-dependent detector interface and removed its unfinished regrouping claim. The exact detector and coefficient bounds remain unproved specifications. The runner now rejects any build/audit stage containing a line beginning `warning:` even if Lean exits `0`. |
 | Audit impact | The synchronized public-theorem list changed from 110 to 102 after removing invalid declarations. Direct audit execution reports 102 listed and 102 discovered theorems, with 21 project-axiom dependency failures and no `sorryAx`. Direct project-axiom declarations decreased from 28 to 26. |
@@ -542,7 +542,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/ZeroDetector.lean` and its synchronized entries in `RiemannZeta/Audit.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean` and its synchronized entries in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` |
 | Previous defect | The truncated Möbius formula was defined, but its exact divisor-variable support, cutoff cardinality, smoothing zero behavior, and `DetectorCoeffBoundProp` magnitude theorem were unproved. |
 | Result | Added `detectorCutoff` and `detectorDivisors`; proved exact membership, range support, and cutoff cardinality. Bounded each complex-cast Möbius value by one, bounded the full truncated sum and smoothed coefficient by `detectorCutoff T`, proved that exponential smoothing introduces no new zeros, and proved `detectorCoeff_bound : DetectorCoeffBoundProp`. The proof uses the explicit cutoff and Mathlib's `abs_moebius_le_one`; it introduces no assumption. |
 | Constant dependency | The existing proposition orders its quantifiers as `∀ ε, ∀ T, ∃ C, ∀ n`, so the proved constant is uniform in positive `n` for each fixed `T` and may depend on `T`. A stronger constant uniform in `T` is not claimed and is tied to the general divisor-function obligation in Shitlist #10. |
@@ -555,7 +555,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/PolynomialPowers.lean`, its synchronized entries in `RiemannZeta/Audit.lean`, and the polynomial-power documentation. |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/PolynomialPowers.lean`, its synchronized entries in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`, and the polynomial-power documentation. |
 | Previous defect | The original coefficient bounds had incorrect constant order and depended on a divisor axiom. After the conditional estimate was repaired, `polynomial_power_identity` still proved only a reflexive structural identity, the explicit `powCoeff` expansion was absent, and `k_divisor_function_bound_one` checked only the irrelevant target `m = 1`. |
 | Result | Corrected the coefficient-bound quantifiers and proved `powCoeff_bound_of_uniform_detector_and_factorization` plus `powCoeff_bound_of_divisor_and_factorization` from explicit narrower arithmetic inputs. Added `prod_natCast_cpow_eq` and `powCoeff_product_mem_support`, then replaced the reflexive `polynomial_power_identity` with the exact expansion `powPoly N k s T = ∑ m ∈ Icc (N^k) ((2*N)^k), powCoeff N k m T * m^(-s)`. The proof expands over `Fin k` tuples and regroups finite fibers by product. |
 | Integrity change | Deleted the divisor axiom and its wrapper in the original repair, and removed the later boundary-only `k_divisor_function_bound_one` rather than presenting `m = 1` as progress on the general theorem. No replacement axiom, admitted proof, target-equivalent hypothesis, or toy model was introduced. |
@@ -569,7 +569,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/MeanValue.lean`, the mean-value-dependent theorem in `RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, and their synchronized audit entries |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/MeanValue.lean`, the mean-value-dependent theorem in `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/HalaszMontgomery.lean`, and their synchronized audit entries |
 | Previous defect | `MontgomeryMeanValue` silently fixed the paper's implied constant to one. `montgomery_mean_value_unconditional` postulated that malformed statement, `montgomery_mean_value_native` merely returned the postulate, and `halasz_montgomery_lemma_native` depended on the same hidden module-level assumption. |
 | Result | Restated `MontgomeryMeanValue` with one positive absolute constant chosen before `N`, `T`, the separated set, and the coefficients. Removed the project axiom and its wrapper without replacement. Restated the finite large-value cardinality consequence with the same constant and proved `halasz_montgomery_lemma_of_mean_value` from an explicit `MontgomeryMeanValue` parameter by squaring and summing the pointwise lower bounds, applying the supplied estimate, and cancelling the positive threshold. |
 | Source and library check | Guth–Maynard Section 13.1 invokes the usual mean-value theorem with `≲`, so an absolute constant is required. A search of the pinned Mathlib source found no matching discrete Dirichlet-polynomial mean-value or large-sieve theorem. The analytic proof therefore remains the explicit `MontgomeryMeanValue` obligation rather than being claimed unconditionally. |
@@ -595,7 +595,7 @@ Every completed repair iteration must record:
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/ZeroDetector.lean`, `ExtractSeparated.lean`, `HalaszMontgomery.lean`, `TypeIIZeros.lean`, `RiemannZeta.lean`, and `RiemannZeta/Audit.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean`, `ExtractSeparated.lean`, `HalaszMontgomery.lean`, `TypeIIZeros.lean`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`, and `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` |
 | Previous defect | The original project called the complement of Type I “Type II,” postulated the complete residual-zero estimate, and falsely attributed the postulate to Halász–Montgomery. The first repair separated those semantics and proved a generic conditional deduction, but its `FiniteTypeICoverProp` demanded coverage for every height and every σ, so the eventual source coverage could not instantiate it; no theorem reached the concrete `ResidualZeroBoundProp`. |
 | Semantic repair | Renamed the complement predicate and count to `IsResidualZero` and `residualZeroCount`, and defined the source-facing short Möbius polynomial, Gamma–zeta contour integral, and `IsContourTypeIIZero`. Corrected `FiniteTypeICoverProp` to require coverage eventually in height and only for `7/10 ≤ σ ≤ 4/5`, matching both the source statement and `EpsilonPowerBound`. |
 | Conditional proof | Retained the audit-clean generic comparison and exponent composition. Added `finiteTypeICover_of_typeIContourTypeII`, which specializes source coverage to `zerosInRect σ 1 T (2*T)`; proved `weightedResidualCount_dyadicZetaZeros_eq`, including analytic multiplicity; and proved `residualZeroBound_of_contourTypeII_reduction_and_fourthMoment : ResidualZeroBoundProp` from the three explicit analytic inputs. |
@@ -628,7 +628,7 @@ Every completed repair iteration must record:
 
 | Field | Completed result |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `Separated.lean`, `ZeroDetector.lean`, `ZeroCount.lean`, and `Audit.lean` |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExtractSeparated.lean`, with supporting changes in `Separated.lean`, `ZeroDetector.lean`, `ZeroCount.lean`, and `Audit.lean` |
 | Zero-set repair | Proved `isCompact_ZeroRectangle` and derived `riemannZeta_finite_zeros_in_rect` from Mathlib's `IsCompact.inter_riemannZetaZeros_finite`. The concrete finite zeta-zero and multiplicity counts no longer inherit a project finiteness axiom. |
 | Dyadic repair | Added `IsAdmissibleDyadicScale`, finite `admissibleDyadicIndices`, exact membership and cardinality lemmas, an `O(log T)` scale-count bound, `IsTypeIZeroAtScale`, and chosen-scale witnesses. Proved exact natural-weight pigeonholing across the scale fibers. |
 | Separation repair | Proved `weighted_separated_selection` by the even/odd unit-bin construction, preserving arbitrary natural weights and the necessary local-occupancy factor. Added shifted-multiplicity aggregation and the generic `finite_weighted_extract_separated` theorem. |
@@ -661,7 +661,7 @@ The implementation record above remains accurate history, but the stronger compl
 
 | Field | Completed result |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/ExtractSeparated.lean`, `DirichletPolynomial.lean`, `Audit.lean`, and synchronized project documentation. |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ExtractSeparated.lean`, `DirichletPolynomial.lean`, `Audit.lean`, and synchronized project documentation. |
 | Local interface repair | Restated `LocalZeroMultiplicityBoundProp` as a uniform multiplicity-weighted `O(log T)` estimate for ordinary unshifted unit intervals of `typeIZeroSet`. It no longer quantifies over an arbitrary displacement or assumes a selected detector scale. |
 | Shifted covering | Proved `shifted_bin_weight_le_of_unit_bin_weight`. Fiber decomposition converts the shifted-bin multiplicity sum back to original points; floors place those points in an integer interval of exactly `2⌈H⌉+1` unit bins; the input bound is then summed over that finite cover. |
 | Raw theorem | Added `RawExtractSeparatedTarget` and proved `rawExtractSeparated_of_beta_shift_and_local_multiplicity`. It exposes the actual displacement exponent `δ`, interval `[T-T^δ,2T+T^δ]`, and loss `C T^δ (log T)^2 |W|` before normalization. |
@@ -679,7 +679,7 @@ The implementation record above remains accurate history, but the stronger compl
 | Target | All 32 Lean files that lay outside the 28-file production/audit perimeter at the highly critical re-audit. |
 | Previous defect | Five auxiliary files failed elaboration; 18 files were zero-byte or comment-only tombstones; several remaining files duplicated canonical theorems or stale APIs; `clean_cache.lean` and `build_it.lean` performed filesystem/process actions through `#eval`; and `scratch_pow.lean` contained a useful but unaudited proof plan. |
 | Reference check | Repository-wide import and reference searches found no production import or canonical theorem dependency on any deletion target. `TestExp.lean` and `test_separated.lean` were the only useful theorem-free regression examples. |
-| Result | Deleted 30 obsolete auxiliary Lean files: 21 under `RiemannZeta/GuthMaynard`, eight tracked root utilities/tests, and the ignored stale `scratch/Test.lean`. Retained only `TestExp.lean` and `test_separated.lean`. The tree now contains 30 Lean files total and no zero-byte Lean file. |
+| Result | Deleted 30 obsolete auxiliary Lean files: 21 under `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard`, eight tracked root utilities/tests, and the ignored stale `scratch/Test.lean`. Retained only `TestExp.lean` and `test_separated.lean`. The tree now contains 30 Lean files total and no zero-byte Lean file. |
 | Knowledge preservation | Converted the substantive `scratch_pow.lean` idea into `Polynomial Power Expansion Notes.md`, including the intended expansion statement, the distinction from the reflexive structural identity, boundary concerns, and a likely finite-fiber proof route. No theorem is claimed in that note. |
 | Verification | Direct `lake env lean TestExp.lean` and `lake env lean test_separated.lean` each exited 0 with no warning or error output. Repository inventory confirms 30 Lean files total, exactly two auxiliaries, and no empty Lean files. Repository-wide scans report zero `sorry`/`admit`/`sorryAx` matches, zero unsafe-bypass matches, and the unchanged 14 direct project axioms. The principal runner logged to `logs/overall_proof_20260808_111318.log`: both production build stages passed warning-free, the audit synchronized 123/123 declarations and reported the same 6 axiom-dependent failures, and overall exit code remained honestly `1`. |
 | Audit impact | The synchronized audit remains correctly scoped to 123 named production theorems. The retained auxiliary files contain anonymous `example` declarations only, so the cleaned tree has no named auxiliary theorem omitted from the audit. |
@@ -702,7 +702,7 @@ The implementation record above remains accurate history, but the stronger compl
 
 | Field | Record |
 |---|---|
-| Target | `RiemannZeta/GuthMaynard/ZeroDetector.lean`, `PolynomialPowers.lean`, and their synchronized audit/documentation entries. |
+| Target | `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/GuthMaynard/ZeroDetector.lean`, `PolynomialPowers.lean`, and their synchronized audit/documentation entries. |
 | Previous defect | `detectorCoeff_bound` proved only `∀ ε, ∀ T, ∃ C, ∀ n`; its constant could depend on `T`. The source-facing powered-polynomial step requires `∀ ε, ∃ C, ∀ n, ∀ T`. `UniformDetectorCoeffBoundProp` was merely stated in `PolynomialPowers.lean` and treated as an independent unproved input. |
 | Mathlib check | The pinned Mathlib provides the coarse `Nat.card_divisors_le_self` but no epsilon-power theorem for `n.divisors.card`. The classical estimate therefore remains an explicit proposition rather than being claimed from a nonexistent library result. |
 | Exact finite proof | Proved `detectorDivisors_subset_divisors`, `norm_mobius_sum_le_divisors_card`, and `norm_detectorCoeff_le_divisors_card`. These results discard the `T`-dependent cutoff in favor of the full positive-divisor set and use the exponential smoothing bound, so their right-hand side is independent of `T`. |

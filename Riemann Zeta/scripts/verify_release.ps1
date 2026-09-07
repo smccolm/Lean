@@ -10,6 +10,8 @@ Set-StrictMode -Version Latest
 
 $VerifierVersion = "gm-foundation-freeze-v1"
 $ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$FoundationRelative = "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026"
+$FoundationRoot = (Resolve-Path (Join-Path $ProjectRoot $FoundationRelative)).Path
 $GitRoot = (& git -C $ProjectRoot rev-parse --show-toplevel 2>$null)
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($GitRoot)) {
   throw "Cannot resolve the Git repository root from $ProjectRoot"
@@ -211,11 +213,11 @@ function Test-ModuleClosure {
   Write-VerificationLine ""
   Write-VerificationLine "[Filesystem/import closure]"
   $LocalModules = @{}
-  $RootFile = Join-Path $ProjectRoot "RiemannZeta.lean"
+  $RootFile = Join-Path $FoundationRoot "RiemannZeta.lean"
   $LocalModules["RiemannZeta"] = $RootFile
-  $SourceRoot = Join-Path $ProjectRoot "RiemannZeta"
+  $SourceRoot = Join-Path $FoundationRoot "RiemannZeta"
   foreach ($File in Get-ChildItem -LiteralPath $SourceRoot -Recurse -File -Filter "*.lean") {
-    $Relative = $File.FullName.Substring($ProjectRoot.Length + 1)
+    $Relative = $File.FullName.Substring($FoundationRoot.Length + 1)
     $Module = ($Relative -replace "\.lean$", "") -replace "[\\/]", "."
     $LocalModules[$Module] = $File.FullName
   }
@@ -261,7 +263,7 @@ function Test-ModuleClosure {
     $Failures.Add("filesystem/import closure")
     return $false
   }
-  Write-VerificationLine "PASS: every RiemannZeta/**/*.lean file has exactly one mechanical classification"
+  Write-VerificationLine "PASS: every $FoundationRelative/RiemannZeta/**/*.lean file has exactly one mechanical classification"
   return $true
 }
 
@@ -302,11 +304,11 @@ function Test-ProhibitedProofText {
 Test-ModuleClosure | Out-Null
 Test-ProhibitedProofText | Out-Null
 Invoke-LakeStage "Root/default production build" @("build", "RiemannZeta")
-Invoke-LakeStage "Exact publication contract" @("env", "lean", "RiemannZeta/PublicationContract.lean")
+Invoke-LakeStage "Exact publication contract" @("env", "lean", "$FoundationRelative/RiemannZeta/PublicationContract.lean")
 Invoke-LakeStage "Retained regression TestExp" @("env", "lean", "TestExp.lean")
 Invoke-LakeStage "Retained regression test_separated" @("env", "lean", "test_separated.lean")
-Invoke-LakeStage "Transitive axiom and exact-output audit" @("env", "lean", "RiemannZeta/Audit.lean") -AllowAuditInfo
-Invoke-LakeStage "Declaration linter gate" @("env", "lean", "RiemannZeta/Lint.lean") -AllowLintInfo
+Invoke-LakeStage "Transitive axiom and exact-output audit" @("env", "lean", "$FoundationRelative/RiemannZeta/Audit.lean") -AllowAuditInfo
+Invoke-LakeStage "Declaration linter gate" @("env", "lean", "$FoundationRelative/RiemannZeta/Lint.lean") -AllowLintInfo
 
 $FinalStatus = if ($Failures.Count -eq 0) { "PASS" } else { "FAIL" }
 $LogHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $LogPath).Hash.ToLowerInvariant()

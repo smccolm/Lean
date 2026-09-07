@@ -5,6 +5,7 @@ defaultTargets = ["RiemannZeta"]
 
 [[lean_lib]]
 name = "RiemannZeta"
+srcDir = "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026"
 
 [leanOptions]
 pp.unicode.fun = true

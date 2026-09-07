@@ -70,7 +70,7 @@ Fix the cause of each diagnostic. Do not hide it with `set_option linter... fals
 
 Before editing:
 
-1. Read `Guth_Maynard_Formalization_Research_Agenda.docx`, `Research Agenda Progress.MD`, `Lean Alignment Fix Agenda.md`, `Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `RiemannZeta/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task.
+1. Read `Guth_Maynard_Formalization_Research_Agenda.docx`, `Research Agenda Progress.MD`, `Lean Alignment Fix Agenda.md`, `Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task.
 2. Inspect the current working tree and preserve all user changes. Do not overwrite or revert unrelated work.
 3. Identify whether the target is a definition, a formal statement, a conditional theorem, or an unconditional theorem. State that status accurately.
 4. Inspect the exact source theorem and existing Mathlib APIs before designing the Lean signature.
@@ -139,7 +139,7 @@ Rules for maintaining the runner:
 
 1. Do not delete, rename, bypass, or materially narrow `run_lake_build.bat` without the project owner's explicit permission.
 2. Keep its production-module target list synchronized with the actual project. Adding a production module requires adding it to the root import graph or to the runner's explicit coverage until the root graph is repaired.
-3. Keep its integrity scans synchronized with `AGENTS.md` and its audit stage synchronized with `RiemannZeta/Audit.lean`.
+3. Keep its integrity scans synchronized with `AGENTS.md` and its audit stage synchronized with `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean`.
 4. Never make the runner return success by excluding a failing module, ignoring a nonzero exit code, filtering an error from the log, weakening a scan, or relabeling a failed stage.
 5. A successful default `lake build` alone must not be presented as an overall pass when the runner reports failure.
 6. A runner `PASS` is valid only when the audit is a genuine dependency audit and all intended production modules are included.
@@ -211,7 +211,7 @@ Acceptable output may include standard Lean/Mathlib logical axioms. It must not 
 
 ## Audit File Requirements
 
-`RiemannZeta/Audit.lean` must be an actual dependency audit, not a categorization by declaration name or declaration kind.
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` must be an actual dependency audit, not a categorization by declaration name or declaration kind.
 
 - Maintain an explicit list of all public and agenda-critical theorems.
 - Run `#print axioms` or an equivalent environment-level dependency inspection for each listed theorem.

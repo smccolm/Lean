@@ -12,7 +12,7 @@ This document is the project's adversarial review packet. It records an internal
 - The public zero count is a finite sum of analytic vanishing orders of Mathlib's Riemann zeta function over closed rectangles. It therefore counts analytic multiplicity, not merely distinct zeros.
 - The project proves five frozen publication-facing contracts: the displayed form of Guth--Maynard Theorem 1.1, the full-range form of Theorem 1.2, the classical Ingham and Huxley bounds, and the combined exponent `30 * (1 - σ) / 13` for that zero count.
 - The conditional theorem `guthMaynardZeroDensity_of_largeValues_native` has exactly one visible premise, `GuthMaynardLargeValues`; its proof supplies the other nine inputs to the Section 13.1 transfer from named project theorems.
-- The root import graph contains 301 production modules; the two remaining Lean modules are explicit audit/lint regressions. `RiemannZeta/Audit.lean` checks 7,636 registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations.
+- The root import graph contains 301 production modules; the two remaining Lean modules are explicit audit/lint regressions. `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean` checks 7,636 registered public declarations and all 14,290 discovered nonprivate project theorems, including generated declarations.
 - The source correspondences in this document have been checked internally against the declarations and proof consumers named here. This is an **internal semantic audit**, not independent expert validation.
 
 ### What is not claimed
@@ -139,7 +139,7 @@ and no project axiom or `sorryAx`. The five publication contracts have exact-typ
 
 ### 4.0 Frozen publication contracts
 
-`RiemannZeta/PublicationContract.lean` defines and proves:
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/PublicationContract.lean` defines and proves:
 
 - `guthMaynardLargeValues_published_native : PublishedGuthMaynardLargeValues`;
 - `guthMaynardZeroDensity_published_native : PublishedGuthMaynardZeroDensity (fun sigma T => N sigma T)`;
@@ -164,7 +164,7 @@ The exact source editions and conventions are frozen in [`verification/SOURCE_FR
 - **Bridges:** exact endpoint theorems at `σ=1/2,1`; `ingham_endpoint_positive_slab_native` for the strict interior; nonnegative-exponent arithmetic; `dyadicToGlobalZeroCount` for positive-slab to symmetric height.
 - **Dependencies:** `classical_endpoint_positive_slab_native`, the Ingham endpoint scale certificate, endpoint lemmas, zeta conjugation with analytic order, and dyadic summation.
 - **Convention differences:** the source's `T^{o(1)}` is `EpsilonPowerBound`; rectangles are closed and multiplicity-weighted; all endpoint cases are explicit.
-- **Module/import path:** `NativeZeroDensity.lean`, imported by `RiemannZeta.lean`; listed and axiom-printed in `Audit.lean`.
+- **Module/import path:** `NativeZeroDensity.lean`, imported by `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`; listed and axiom-printed in `Audit.lean`.
 
 ### 4.2 `huxley_zero_density_native`
 
@@ -177,7 +177,7 @@ The exact source editions and conventions are frozen in [`verification/SOURCE_FR
 - **Source:** Huxley's classical zero-density exponent, used by Guth--Maynard for the high-`σ` range.
 - **Bridges:** `σ=3/4` is inherited from the already proved Ingham theorem because the exponents agree; `σ=1` is separate; the strict interior uses the Huxley endpoint certificate and the same positive-slab/symmetric-count bridge.
 - **Dependencies:** `ingham_zero_density_native`, `huxley_endpoint_positive_slab_native`, endpoint and dyadic-transfer lemmas.
-- **Module/import path:** `NativeZeroDensity.lean` -> `RiemannZeta.lean` -> `Audit.lean`.
+- **Module/import path:** `NativeZeroDensity.lean` -> `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean` -> `Audit.lean`.
 
 ### 4.3 `classical_endpoint_positive_slab_native`
 
@@ -283,7 +283,7 @@ The exact source editions and conventions are frozen in [`verification/SOURCE_FR
 - **Status:** kernel-checked, project-integrated, internally semantically audited.
 - **Source:** Guth--Maynard equation (1.4), obtained by combining their new density estimate with Ingham's classical estimate.
 - **Actual consumer:** `combined_zero_density_transfer_native` branches on `σ≤7/10`; it proves both exponent comparisons and consumes `ingham_zero_density_native` and `guthMaynardZeroDensity_native`.
-- **Module/import path:** `NativeZeroDensity.lean` -> `RiemannZeta.lean`; explicit audit and output gate.
+- **Module/import path:** `NativeZeroDensity.lean` -> `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta.lean`; explicit audit and output gate.
 
 ## 5. Human-readable proof guide
 
@@ -374,7 +374,7 @@ The machine-readable dependency view is `Proof Architecture.md`. It is a project
 
    On Windows, `cmd /c run_lake_build.bat --no-pause` runs the same verifier in development mode.
 5. Release mode must report a clean tree. Preserve the emitted `logs/foundation_freeze_*.log` and matching JSON manifest. A valid PASS requires every classification, build, warning, dependency, exact-contract, output, linter, and prohibited-proof gate to pass.
-6. Independently run `lake env lean RiemannZeta/Audit.lean` and inspect the five publication-contract `#print axioms` lines.
+6. Independently run `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/RiemannZeta/Audit.lean"` and inspect the five publication-contract `#print axioms` lines.
 7. Run the repository scans listed in `AGENTS.md`; do not rely only on `lake build`. If optional hosted CI succeeds, inspect its SHA-named artifact as supplemental evidence rather than substituting it for the local verifier or semantic review.
 
 Reproduction proves acceptance of the checked declarations in that environment. It is not a substitute for reviewing this crosswalk or the cited mathematics.
