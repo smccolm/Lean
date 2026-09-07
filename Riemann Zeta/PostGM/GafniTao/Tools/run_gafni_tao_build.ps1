@@ -238,10 +238,46 @@ function Test-ForbiddenLeanTokens {
     '\b(native_decide|implemented_by|unsafe)\b'
   )
   $matches = @()
-  foreach ($pattern in $patterns) {
-    & rg -n --glob '*.lean' $pattern @targets 2>&1 | ForEach-Object { $matches += $_.ToString() }
-    if ($LASTEXITCODE -gt 1) {
-      Write-ReleaseLine ("FAIL: rg failed while scanning pattern {0}." -f $pattern)
+
+  # Ripgrep is convenient but is not part of Lean or Windows PowerShell.  Keep
+  # the human-facing verifier runnable on a clean machine by falling back to
+  # Select-String over the exact same set of Lean source files.
+  $rgCommand = Get-Command -Name 'rg' -CommandType Application -ErrorAction SilentlyContinue
+  if ($null -ne $rgCommand) {
+    foreach ($pattern in $patterns) {
+      & $rgCommand.Source -n --glob '*.lean' $pattern @targets 2>&1 |
+        ForEach-Object { $matches += $_.ToString() }
+      if ($LASTEXITCODE -gt 1) {
+        Write-ReleaseLine ("FAIL: rg failed while scanning pattern {0}." -f $pattern)
+        $script:failed = $true
+      }
+    }
+  } else {
+    Write-ReleaseLine 'ripgrep was not found; using the built-in PowerShell scanner.'
+    $leanFiles = @()
+    foreach ($target in $targets) {
+      if (Test-Path -LiteralPath $target -PathType Leaf) {
+        if ([System.IO.Path]::GetExtension($target) -eq '.lean') {
+          $leanFiles += (Get-Item -LiteralPath $target)
+        }
+      } elseif (Test-Path -LiteralPath $target -PathType Container) {
+        $leanFiles += @(Get-ChildItem -LiteralPath $target -Filter '*.lean' -File -Recurse)
+      } else {
+        Write-ReleaseLine ("FAIL: forbidden-token scan target is missing: {0}" -f $target)
+        $script:failed = $true
+      }
+    }
+    $leanFiles = @($leanFiles | Sort-Object -Property FullName -Unique)
+    try {
+      foreach ($pattern in $patterns) {
+        foreach ($file in $leanFiles) {
+          Select-String -LiteralPath $file.FullName -Pattern $pattern | ForEach-Object {
+            $matches += ("{0}:{1}:{2}" -f $_.Path, $_.LineNumber, $_.Line)
+          }
+        }
+      }
+    } catch {
+      Write-ReleaseLine ("FAIL: built-in PowerShell forbidden-token scan failed: {0}" -f $_.Exception.Message)
       $script:failed = $true
     }
   }

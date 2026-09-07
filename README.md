@@ -1,6 +1,6 @@
 # Lean 4 Mathematical Formalizations Workspace
 
-Welcome to the **Lean 4** research workspace! This repository contains Lean 4 formalizations of classical mathematical theorems, Dirichlet polynomial dualities, completed Riemann Zeta symmetries, compactified graph theory subprojects, interactive 3D WebGL visualization tools, and formal paper manuscripts.
+Welcome to the **Lean 4** research workspace! This repository contains Lean 4 formalizations of classical mathematical theorems, Dirichlet polynomial dualities, completed Riemann Zeta symmetries, post-Guth--Maynard exceptional-interval results and route analyses, compactified graph theory subprojects, interactive 3D WebGL visualization tools, and formal paper manuscripts.
 
 Author: **S. McColm**
 
@@ -10,7 +10,8 @@ Author: **S. McColm**
 
 ```text
 Lean/
-├── Riemann Zeta/        # Formalization of Dirichlet polynomials & completed Zeta symmetries
+├── Riemann Zeta/        # Frozen Guth--Maynard foundation and earlier zeta infrastructure
+│   └── PostGM/          # Isolated Gafni--Tao and Prime Shell projects
 ├── EllipsePerimeter/    # Formalized proof of complete elliptic perimeter series in Lean 4
 ├── EllipseLab/          # Development laboratory and step-by-step proof iterations for the Ellipse project
 ├── Compacted Graphs/    # Subproject formalizing compactified graphs and cylindrical topology
@@ -31,6 +32,13 @@ Mechanized Lean 4 formalization of the Guth--Maynard large-values and zero-densi
 - **Publication contracts**: `RiemannZeta/PublicationContract.lean` proves the exact five source-facing contracts, including the closed-support/source-only coefficient form of Theorem 1.1 and the full range $1/2\le\sigma\le1$ of Theorem 1.2.
 - **Verification**: `scripts/verify_release.ps1` is the canonical verifier. Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed it from a fresh short-path clone. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper. Hosted CI is an optional mirror and has not produced a successful artifact.
 - **Source freeze and review packet**: see `Riemann Zeta/verification/SOURCE_FREEZE.md` and `Riemann Zeta/Publication Readiness and Semantic Audit.md`.
+
+#### Isolated post-Guth--Maynard work (`Riemann Zeta/PostGM/`)
+
+The post-GM projects remain outside the frozen foundation's import graph and use their own pinned packages and verification procedures.
+
+- **[Gafni--Tao exceptional intervals](Riemann%20Zeta/PostGM/GafniTao/README.md)**: A kernel-checked formalization of the release-scope results in Gafni--Tao, *Primes in almost all short intervals* (`arXiv:2505.24017v1`). The public root proves the general Theorems 1.1--1.3 and the two displayed Section 3 sample inequalities, including the specialization of Theorem 1.1 using the frozen Guth--Maynard density theorem. The latest recorded isolated run passed on 2026-09-07: all 3,592 local PNT+ jobs and 10,344 Gafni--Tao jobs completed with zero diagnostics, and the audit reported only `propext`, `Classical.choice`, and `Quot.sound`. The release does not claim the full best-known numerical curve, Ford's optimized constants, external review, or new mathematics.
+- **[Prime Shell](Riemann%20Zeta/PostGM/PrimeShell/README.md)**: This completed experiment reached its permitted **ROUTE DISPROVED** endpoint. Lean proves that every faithful separated amplitude in the modeled explicit-formula range has `3 < kappaXi`, so the exact Zeta23 output `2 - kappaXi` cannot improve `2/3` by any positive amount, even under perfect arithmetic control. The endpoint `primeShell_universal_no_gain_native` is non-vacuous and its audit reports only the standard logical dependencies above. It proves no new theorem about zeta zeros and does not rule out connected positive-valley windows, other source constructions, or approaches outside `FaithfulAmplitudeShell`.
 
 ### 2. Ellipse Perimeter Formalization (`EllipsePerimeter/` & `Article/`)
 A mechanized Lean 4 proof of the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
@@ -74,8 +82,18 @@ python visualizer/server.py
 cd "Riemann Zeta"
 pwsh -NoProfile -File scripts/verify_release.ps1
 
+# Verify the isolated Gafni--Tao release
+cd "PostGM/GafniTao"
+cmd /c run_gafni_tao_build.bat --no-pause
+
+# Reproduce the isolated Prime Shell project
+cd "../PrimeShell/Extension"
+lake update
+lake build
+lake env lean PrimeShell/Audit.lean
+
 # Verify EllipsePerimeter
-cd "../EllipsePerimeter"
+cd "../../../../EllipsePerimeter"
 lake build
 
 # Verify Compacted Graphs
