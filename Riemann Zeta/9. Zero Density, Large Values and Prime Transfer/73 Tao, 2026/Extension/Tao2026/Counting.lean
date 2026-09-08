@@ -64,4 +64,53 @@ theorem factorialThreeOneTermCount_le_factorialThreeCount (x : ℕ) :
     factorialThreeOneTermCount x ≤ factorialThreeCount x :=
   countUpTo_mono factorialThreeOneTermSet_subset_factorialThreeSet x
 
+/-- If `T ⊆ S`, the literal value count of `S` splits exactly into the
+non-`T` part and the `T` part. -/
+theorem countUpTo_sdiff_add_countUpTo_of_subset {S T : Set ℕ}
+    (hTS : T ⊆ S) (x : ℕ) :
+    countUpTo (S \ T) x + countUpTo T x = countUpTo S x := by
+  classical
+  let sFin := (Finset.Icc 1 x).filter fun n => n ∈ S
+  let tFin := (Finset.Icc 1 x).filter fun n => n ∈ T
+  let dFin := (Finset.Icc 1 x).filter fun n => n ∈ S \ T
+  have hsub : tFin ⊆ sFin := by
+    intro n hn
+    simp only [tFin, sFin, Finset.mem_filter] at hn ⊢
+    exact ⟨hn.1, hTS hn.2⟩
+  have hdiff : sFin \ tFin = dFin := by
+    ext n
+    simp only [sFin, tFin, dFin, Finset.mem_sdiff, Finset.mem_filter,
+      Set.mem_diff]
+    tauto
+  have hcard : dFin.card + tFin.card = sFin.card := by
+    rw [← hdiff]
+    exact Finset.card_sdiff_add_card_eq_card hsub
+  have hdCount : countUpTo (S \ T) x = dFin.card := by
+    unfold countUpTo
+    congr 1
+    ext n
+    simp only [dFin, Finset.mem_filter]
+  have htCount : countUpTo T x = tFin.card := by
+    unfold countUpTo
+    congr 1
+  have hsCount : countUpTo S x = sFin.card := by
+    unfold countUpTo
+    congr 1
+  rw [hdCount, htCount, hsCount]
+  exact hcard
+
+theorem nontrivialBadCount_add_badOneTermCount (x : ℕ) :
+    nontrivialBadCount x + badOneTermCount x = badCount x :=
+  countUpTo_sdiff_add_countUpTo_of_subset badOneTermSet_subset_badSet x
+
+theorem nontrivialVeryBadCount_add_veryBadOneTermCount (x : ℕ) :
+    nontrivialVeryBadCount x + veryBadOneTermCount x = veryBadCount x :=
+  countUpTo_sdiff_add_countUpTo_of_subset veryBadOneTermSet_subset_veryBadSet x
+
+theorem nontrivialFactorialThreeCount_add_factorialThreeOneTermCount (x : ℕ) :
+    nontrivialFactorialThreeCount x + factorialThreeOneTermCount x =
+      factorialThreeCount x :=
+  countUpTo_sdiff_add_countUpTo_of_subset
+    factorialThreeOneTermSet_subset_factorialThreeSet x
+
 end Tao2026

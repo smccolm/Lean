@@ -28,15 +28,26 @@ try {
         'Extension\Tao2026\Anatomy.lean',
         'Extension\Tao2026\Asymptotics.lean',
         'Extension\Tao2026\Audit.lean',
+        'Extension\Tao2026\CoefficientBounds.lean',
+        'Extension\Tao2026\CoefficientProduct.lean',
+        'Extension\Tao2026\CoefficientSelection.lean',
         'Extension\Tao2026\Counting.lean',
         'Extension\Tao2026\FactorialAsymptotics.lean',
+        'Extension\Tao2026\FactorialFibers.lean',
         'Extension\Tao2026\FactorialIntervals.lean',
         'Extension\Tao2026\FactorialOneTerm.lean',
         'Extension\Tao2026\Intervals.lean',
+        'Extension\Tao2026\IntervalMultiples.lean',
         'Extension\Tao2026\PrimeIntervals.lean',
+        'Extension\Tao2026\PowerfulAsymptotics.lean',
+        'Extension\Tao2026\PowerfulExtraction.lean',
+        'Extension\Tao2026\PowerfulLimit.lean',
         'Extension\Tao2026\PowerfulNumbers.lean',
+        'Extension\Tao2026\PowerfulRelations.lean',
+        'Extension\Tao2026\SquareRelations.lean',
         'Extension\Tao2026\PublicStatements.lean',
         'Extension\Tao2026\SmoothNumbers.lean',
+        'Extension\Tao2026\VeryBadIntervals.lean',
         'Sources\PINS.md',
         'Sources\SHA256SUMS.txt',
         'Sources\baker-harman-pintz-2001.pdf',
@@ -227,7 +238,7 @@ try {
         throw 'The canonical Tao2026 build emitted a warning or tactic diagnostic.'
     }
 
-    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, and the complete factorial square-family lower-asymptotic milestone; no main-theorem release is claimed.'
+    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemma 3.2, and Lemma 2.10 groundwork through the signed split branch, concrete quadratic maximal order, finite ideal-divisor map, and prime splitting; no main-theorem release is claimed.'
     exit 0
 }
 catch {

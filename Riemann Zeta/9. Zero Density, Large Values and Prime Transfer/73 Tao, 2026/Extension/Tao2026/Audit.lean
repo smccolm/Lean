@@ -1,20 +1,32 @@
 import Tao2026.Anatomy
 import Tao2026.Asymptotics
+import Tao2026.CoefficientBounds
+import Tao2026.CoefficientProduct
+import Tao2026.CoefficientSelection
 import Tao2026.Counting
 import Tao2026.FactorialIntervals
 import Tao2026.FactorialOneTerm
 import Tao2026.FactorialAsymptotics
+import Tao2026.FactorialFibers
 import Tao2026.Intervals
+import Tao2026.IntervalMultiples
 import Tao2026.PrimeIntervals
 import Tao2026.PowerfulNumbers
+import Tao2026.PowerfulAsymptotics
+import Tao2026.PowerfulExtraction
+import Tao2026.PowerfulLimit
+import Tao2026.PowerfulRelations
+import Tao2026.SquareRelations
 import Tao2026.SmoothNumbers
+import Tao2026.VeryBadIntervals
 
 /-!
 # Development dependency audit
 
-This audit grows with the project. At the current Proposition 2.3(i),(iii)
-milestone it covers every nontrivial proved interface theorem. None of the
-four main Tao theorems exists yet to audit.
+This audit grows with the project. At the current Proposition 2.3(i),(iii),
+exact one-term zeta-asymptotic, and complete Lemma 3.2 milestone it covers
+every nontrivial proved interface theorem. None of the four main Tao theorems
+exists yet to audit.
 -/
 
 #print axioms Tao2026.largestPrimeFactor_eq_none_iff
@@ -79,6 +91,10 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.countUpTo_zero
 #print axioms Tao2026.countUpTo_mono
 #print axioms Tao2026.factorialThreeOneTermCount_le_factorialThreeCount
+#print axioms Tao2026.countUpTo_sdiff_add_countUpTo_of_subset
+#print axioms Tao2026.nontrivialBadCount_add_badOneTermCount
+#print axioms Tao2026.nontrivialVeryBadCount_add_veryBadOneTermCount
+#print axioms Tao2026.nontrivialFactorialThreeCount_add_factorialThreeOneTermCount
 #print axioms Tao2026.isSmooth_iff
 #print axioms Tao2026.psiNat_eq_card
 #print axioms Tao2026.mem_smoothNumbersUpTo_source
@@ -96,6 +112,139 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.injOn_powerfulOneTermRepresentationValue
 #print axioms Tao2026.card_powerfulOneTermRepresentations
 #print axioms Tao2026.veryBadOneTermCount_eq_sum_sqrt_div_cube
+#print axioms Tao2026.sqrt_le_veryBadOneTermCount
+#print axioms Tao2026.sqrt_le_veryBadCount
+#print axioms Tao2026.veryBadOneTermCount_powerScale_lower
+#print axioms Tao2026.veryBadCount_powerScale_lower
+#print axioms Tao2026.summable_powerfulPSeries
+#print axioms Tao2026.powerfulPSeriesConstant_nonneg
+#print axioms Tao2026.cast_sqrt_div_cube_le
+#print axioms Tao2026.veryBadOneTermCount_le_sqrt_mul_pSeries
+#print axioms Tao2026.veryBadOneTermCount_isBigO_sqrt
+#print axioms Tao2026.veryBadOneTermCount_powerUpperBound
+#print axioms Tao2026.veryBadOneTermCount_powerScale
+#print axioms Tao2026.summable_squarefreePSeriesSummand
+#print axioms Tao2026.normalizedPowerfulSummand_tendsto
+#print axioms Tao2026.norm_normalizedPowerfulSummand_le
+#print axioms Tao2026.tsum_normalizedPowerfulSummand
+#print axioms Tao2026.veryBadOneTermCount_normalized_tendsto
+#print axioms Tao2026.squarefreePSeriesConstant_pos
+#print axioms Tao2026.veryBadOneTermCount_asymptotic_squarefreePSeries
+#print axioms Tao2026.squarePart_spec
+#print axioms Tao2026.squarePart_pos
+#print axioms Tao2026.squarefreeComponent_pos_of_positive
+#print axioms Tao2026.squareTimesSquarefreeEquiv
+#print axioms Tao2026.summable_positiveNatRpow
+#print axioms Tao2026.summable_positiveSquarefreeRpow
+#print axioms Tao2026.tsum_positiveNatRpow
+#print axioms Tao2026.tsum_positiveSquarefreeRpow_neg_three_halves
+#print axioms Tao2026.squareTimesSquarefree_rpow_identity
+#print axioms Tao2026.squarefreePSeries_product_identity
+#print axioms Tao2026.tsum_nat_rpow_neg_eq_riemannZeta_re
+#print axioms Tao2026.squarefreePSeriesConstant_eq_powerfulNumberConstant
+#print axioms Tao2026.veryBadOneTermCount_asymptotic_powerfulNumberConstant
+#print axioms Tao2026.prime_dvd_consecutiveProduct_exactly_once
+#print axioms Tao2026.IsVeryBadInterval.length_lt_start_of_pos
+#print axioms Tao2026.mem_intervalMultiples
+#print axioms Tao2026.card_intervalMultiples_le
+#print axioms Tao2026.singleExponentFactorization_add_powerfulCoreFactorization
+#print axioms Tao2026.factorization_singleExponentPart
+#print axioms Tao2026.factorization_powerfulCore
+#print axioms Tao2026.singleExponentPart_mul_powerfulCore
+#print axioms Tao2026.prime_dvd_singleExponentPart_iff
+#print axioms Tao2026.squarefree_singleExponentPart
+#print axioms Tao2026.powerful_powerfulCore
+#print axioms Tao2026.eq_of_mem_consecutiveInterval_of_prime_dvd
+#print axioms Tao2026.factorization_consecutiveProduct_eq_one_of_mem_singleExponent
+#print axioms Tao2026.prime_dvd_singleExponentPart_le_length_of_veryBad
+#print axioms Tao2026.intervalElement_eq_smallSquarefree_mul_powerfulCore
+#print axioms Tao2026.singleExponentPart_dvd_factorial_length_of_veryBad
+#print axioms Tao2026.veryBadInterval_twoPosition_powerfulRelation
+#print axioms Tao2026.intervalCoefficientProduct_pos
+#print axioms Tao2026.smallPrimeCoefficientEnvelope_pos
+#print axioms Tao2026.intervalCoefficientProduct_dvd_smallPrimeEnvelope
+#print axioms Tao2026.sum_range_primeLog
+#print axioms Tao2026.weightedPrimeLogSum_eq_sum_Ioc
+#print axioms Tao2026.weightedPrimeLogSum_abel
+#print axioms Tao2026.weightedPrimeLogSum_le
+#print axioms Tao2026.log_smallPrimeCoefficientEnvelope
+#print axioms Tao2026.log_smallPrimeCoefficientEnvelope_le
+#print axioms Tao2026.log_smallPrimeCoefficientEnvelope_le_explicit
+#print axioms Tao2026.coefficientExponentConstant_pos
+#print axioms Tao2026.log_smallPrimeCoefficientEnvelope_le_polynomial
+#print axioms Tao2026.card_leftCoefficientHalf
+#print axioms Tao2026.card_rightCoefficientHalf
+#print axioms Tao2026.log_intervalCoefficientProduct
+#print axioms Tao2026.log_intervalCoefficientProduct_le_polynomial
+#print axioms Tao2026.exists_two_polynomially_bounded_coefficients
+#print axioms Tao2026.veryBadInterval_exists_polynomial_powerfulRelation
+#print axioms Tao2026.mem_powerfulRelationPairsUpTo
+#print axioms Tao2026.mem_powerfulRelationRepresentationsUpTo_iff
+#print axioms Tao2026.image_powerfulRelationRepresentationsUpTo
+#print axioms Tao2026.injOn_powerfulRelationRepresentationValue
+#print axioms Tao2026.card_powerfulRelationRepresentationsUpTo
+#print axioms Tao2026.card_powerfulRelationPairsUpTo_le_left
+#print axioms Tao2026.card_powerfulRelationPairsUpTo_le_right
+#print axioms Tao2026.powerfulRelationPairsUpTo_isBigO_veryBadOneTermCount
+#print axioms Tao2026.powerfulRelationPairsUpTo_powerUpperBound_half
+#print axioms Tao2026.mem_squareRelationSolutionsBox
+#print axioms Tao2026.exists_squarefree_discriminant
+#print axioms Tao2026.squareRelation_norm_equation
+#print axioms Tao2026.squareRelationNormPoint_re
+#print axioms Tao2026.squareRelationNormPoint_im
+#print axioms Tao2026.squareRelationNormPoint_norm
+#print axioms Tao2026.norm_coe_pellSolution
+#print axioms Tao2026.pellActOnNormFiber_one
+#print axioms Tao2026.pellActOnNormFiber_mul
+#print axioms Tao2026.instMulActionPellSolutionZsqrtdNormFiber
+#print axioms Tao2026.mem_zsqrtdNormOrbit_iff
+#print axioms Tao2026.two_pow_le_fundamental_x_pow
+#print axioms Tao2026.fundamental_exponent_le_log_two_of_x_pow_le
+#print axioms Tao2026.fundamental_x_zpow_eq_x_pow_natAbs
+#print axioms Tao2026.two_pow_natAbs_le_fundamental_x_zpow
+#print axioms Tao2026.mem_fundamentalExponentsUpTo_iff
+#print axioms Tao2026.mem_fundamentalExponentsUpTo_of_x_zpow_le
+#print axioms Tao2026.card_fundamentalExponentsUpTo
+#print axioms Tao2026.fundamental_zpow_injective
+#print axioms Tao2026.fundamental_zpow_mem_powersUpTo_of_x_le
+#print axioms Tao2026.card_fundamentalUnitPowersUpTo
+#print axioms Tao2026.not_isSquare_intCast_of_squarefree_of_one_lt
+#print axioms Tao2026.exists_fundamental_pell_solution_of_squarefree_of_one_lt
+#print axioms Tao2026.zsqrtdNonsquareOfSquarefreeOfOneLt
+#print axioms Tao2026.quadraticPolynomial_monic
+#print axioms Tao2026.quadraticPolynomial_natDegree
+#print axioms Tao2026.quadraticPolynomial_not_isRoot_of_not_isSquare
+#print axioms Tao2026.quadraticPolynomial_irreducible_of_not_isSquare
+#print axioms Tao2026.quadraticFieldFactIrreducible
+#print axioms Tao2026.quadraticFieldNumberField
+#print axioms Tao2026.quadraticFieldIsQuadraticExtension
+#print axioms Tao2026.quadraticSqrt_sq
+#print axioms Tao2026.quadraticSqrt_isIntegral
+#print axioms Tao2026.quadraticSqrtRingOfIntegers_sq
+#print axioms Tao2026.quadraticOrderToRingOfIntegers
+#print axioms Tao2026.quadraticOrderToRingOfIntegers_injective
+#print axioms Tao2026.quadraticOrderToRingOfIntegers_mul_conj
+#print axioms Tao2026.maximalOrderNormFiberIdealDivisor
+#print axioms Tao2026.maximalOrderNormFiberIdealDivisor_eq_iff_associated
+#print axioms Tao2026.maximalOrderIdealDivisors
+#print axioms Tao2026.mem_maximalOrderIdealDivisors
+#print axioms Tao2026.maximalOrderNormFiberIdealDivisor_mem
+#print axioms Tao2026.quadraticField_galoisGroup_card
+#print axioms Tao2026.span_singleton_eq_iff_mem_zsqrtdNormOrbit
+#print axioms Tao2026.span_singleton_eq_iff_mem_zsqrtdNormOrbit_of_squarefree
+#print axioms Tao2026.span_singleton_dvd_span_norm
+#print axioms Tao2026.normFiberPrincipalIdealDivisor
+#print axioms Tao2026.normFiberPrincipalIdealDivisor_eq_iff_orbit
+#print axioms Tao2026.ncard_primesOver_le_two_of_galois_group_card_two
+#print axioms Tao2026.quadraticField_ncard_primesOver_le_two
+#print axioms Tao2026.squareRelationNormPoint_injective
+#print axioms Tao2026.maximalOrderNormPoint_injective
+#print axioms Tao2026.mem_squareRelationSolutionsBoxInt
+#print axioms Tao2026.card_int_divisors
+#print axioms Tao2026.card_squareRelationSolutionsBoxInt_le_two_mul_divisors_of_mul_isSquare
+#print axioms Tao2026.card_squareRelationSolutionsBoxInt_le_const_mul_rpow_of_mul_isSquare
+#print axioms Tao2026.card_squareRelationSolutionsBox_le_divisors_of_mul_isSquare
+#print axioms Tao2026.card_squareRelationSolutionsBox_le_const_mul_rpow_of_mul_isSquare
 #print axioms Tao2026.squarefreeComponent_eq_iff_mul_eq_sq
 #print axioms Tao2026.exists_eq_sq_of_sq_mul_eq_sq
 #print axioms Tao2026.isFactorialThreeInterval_iff_factorialSquare
@@ -117,3 +266,5 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.factorialThreeOneTermCount_powerScale_lower
 #print axioms Tao2026.factorialThreeCount_powerScale_lower
 #print axioms Tao2026.factorialSquareTripleCount_powerScale_lower
+#print axioms Tao2026.squarefreeComponent_factorial_eq_iff_consecutiveProduct_square
+#print axioms Tao2026.squarefreeComponent_factorial_succ_eq_iff_square

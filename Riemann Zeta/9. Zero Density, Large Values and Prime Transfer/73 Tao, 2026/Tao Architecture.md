@@ -27,16 +27,18 @@ flowchart TD
         ASYM["Precise O, o(1), x^o(1), and ~ APIs<br/>initial quantified definitions compile"]
         ANATOMY["PROVED anatomy interfaces<br/>largest prime, squarefree component,<br/>unique powerful a²b³ decomposition"]
         INTERVALS["PROVED interval interfaces<br/>H≥1 enforced + factorial product identity"]
-        SETS["Literal B, VB, F3 unions/endpoints<br/>and one-term subsets compile"]
+        SETS["PROVED literal B, VB, F3 interfaces<br/>one-term subsets + exact count splits"]
         FACTEQ["PROVED factorial bridge<br/>ordered triples, root uniqueness,<br/>exact F3 endpoint image + count inequality"]
         F31["PROVED F3 one-term bridge<br/>square-multiple characterization<br/>and floor(sqrt x)-1 lower family"]
         F3LOWER["PROVED square-root lower asymptotics<br/>reverse-big-O for F3 and triples"]
+        FIBERRED["PROVED factorial-fiber reduction<br/>equal components iff interval square"]
         ASYM --> SETS
         ANATOMY --> INTERVALS
         INTERVALS --> SETS
         ANATOMY --> FACTEQ
         FACTEQ --> F31
         F31 --> F3LOWER
+        FACTEQ --> FIBERRED
     end
 
     CONTRACTS --> ASYM
@@ -48,6 +50,9 @@ flowchart TD
         ONETERMID["PROVED: exact B1 identity<br/>unique p²m representation + finite Psi sum"]
         ONETERM["Lemma 1.6<br/>x/z^(2+o(1)) asymptotic absent"]
         VBONETERM["PROVED: exact VB1 identity<br/>unique a²b³ + finite squarefree-cube sum"]
+        VBLOWER["PROVED VB square-family lower bounds<br/>reverse-big-O square-root scale"]
+        VBONESCALE["PROVED complete VB1 square-root scale<br/>convergent b^-3/2 majorant + lower family"]
+        VBONEZETA["PROVED exact VB1 asymptotic<br/>dominated limit + zeta(3/2)/zeta(3) identity"]
         PRIMEI["PROVED: Proposition 2.3(i)<br/>exact Bertrand endpoints"]
         PRIMEII["Proposition 2.3(ii)<br/>BHP source pinned; Lean proof absent"]
         PRIMEIII["PROVED: Proposition 2.3(iii)<br/>global prime-free measure power saving"]
@@ -57,7 +62,7 @@ flowchart TD
         VINO["Theorem 2.5<br/>two-variable prime equidistribution"]
         UNCERT["Lemma 2.6<br/>Montgomery uncertainty principle"]
         LSIEVE["Corollaries 2.8--2.9<br/>large sieve with exact residue exclusions"]
-        PELL["Lemma 2.10<br/>generalized Pell square-solution count"]
+        PELL["Lemma 2.10 in progress<br/>concrete maximal order + finite ideal map proved;<br/>d(N)^2 and unit-height bounds open"]
         POWERREL["Corollary 2.11<br/>powerful linear-relation count x^(2/5+o(1))"]
         SMOOTH --> ONETERM
         ONETERMID --> ONETERM
@@ -74,11 +79,14 @@ flowchart TD
     GT --> GTPOWER
     ANATOMY --> PELL
     ANATOMY --> VBONETERM
+    VBONETERM --> VBLOWER
+    VBLOWER --> VBONESCALE
+    VBONESCALE --> VBONEZETA
 
     subgraph SECTION3["Section 3: very bad intervals"]
         direction TB
-        VBSHORT["Lemma 3.1<br/>H <= exp(log(N)^(2/3+o(1)))"]
-        VBEXTRACT["Lemma 3.2<br/>extract powerful relation a*n+h=b*m"]
+        VBSHORT["Lemma 3.1<br/>H&lt;N proved for N>=1; subexponential bound open"]
+        VBEXTRACT["PROVED Lemma 3.2<br/>polynomial coefficients + powerful relation"]
         T18["PUBLIC: Theorem 1.8<br/>nontrivial VB bound + zeta asymptotic"]
         VBSHORT --> VBEXTRACT
         VBEXTRACT --> T18
@@ -87,6 +95,8 @@ flowchart TD
     VINO --> VBSHORT
     POWERREL --> T18
     VBONETERM --> T18
+    VBLOWER --> T18
+    VBONEZETA --> T18
     SETS --> T18
 
     subgraph SECTION4["Section 4: type F3 and factorial equation"]
@@ -160,7 +170,7 @@ flowchart TD
 
     DOCS["Goal Prompt complete<br/>Checklist / Crosswalk / Manifest continuously updated"] --> CROSSWALK
     SHELL["Extension/Tao2026<br/>active pinned Mathlib package builds"] --> CONTRACTS
-    MILESTONE["Proposition 2.3(i),(iii), exact one-term sums,<br/>factorial lower-asymptotic verifier PASS"] --> SHELL
+    MILESTONE["Proposition 2.3(i),(iii), exact one-term sums,<br/>VB1 zeta asymptotic + factorial lower-asymptotic verifier PASS"] --> SHELL
 
     LEGEND["Status: green = verified groundwork<br/>blue = inspected candidate/ready shell<br/>yellow = specified but unproved<br/>red = major unformalized input or endpoint"]
 
@@ -170,7 +180,7 @@ flowchart TD
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,AUDIT,RUNNER complete
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,AUDIT,RUNNER complete
     class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
     class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
     class SMOOTH,PRIMEII,VINO,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent

@@ -79,6 +79,40 @@ Section 3/4/6 consumer that does not presuppose this missing theorem. A
 density-zero statement remains an inadequate replacement for the proved fixed
 power saving.
 
+The exact `VB¹` squarefree-cube sum now has its full source asymptotic.
+Termwise domination controls the accumulated floor error, dominated
+convergence produces the squarefree `b⁻³ᐟ²` limit, and the unique
+square-times-squarefree decomposition identifies its constant as
+`ζ(3/2)/ζ(3)`. The remaining Theorem 1.8 work is the nontrivial-`VB` upper
+bound through Theorem 2.5, Lemmas 2.10--2.11, and Lemmas 3.1--3.2.
+The first, elementary `H<N` clause of Lemma 3.1 is now proved for `N≥1`.
+The positive-start hypothesis is necessary under the literal definitions:
+`{1}` (`N=0,H=1`) is powerful. The remaining subexponential length estimate
+is the first consumer of the still-unformalized Theorem 2.5.
+Lemma 3.2's arithmetic extraction is now formalized independently: removing
+exactly the exponent-one primes leaves a powerful core, and global
+powerfulness forces every removed prime to be at most `H`. The coefficient is
+squarefree and divides `H!`; any two positions yield the exact relation
+`an+h=bm`. Its quantitative step is now formalized too: the coefficient
+product divides an explicit small-prime envelope, finite Abel summation plus
+Chebyshev bounds its logarithm by `C H log H`, and averaging separately on two
+interval halves selects distinct coefficients at most `H^(3C)`. Lemma 3.2 is
+therefore complete. The exact finite reindexing for Corollary 2.11 is also
+complete. Lemma 2.10 now has its squarefree-discriminant reduction, literal
+quadratic norm encoding, the full square-discriminant divisor bound, and the
+norm-one Pell action on fixed-norm fibers. Exponential growth and the exact
+logarithmic count of coordinate-bounded fundamental-unit powers are now
+proved. Equality of principal ideals is also proved equivalent to norm-one
+orbit membership on each nonzero `ℤ[√D]` norm fiber. The first
+maximal-order comparison is now complete: the concrete quadratic field and its maximal
+order are constructed, `ℤ[√D]` embeds injectively, fixed-norm points map to a
+finite ideal-divisor set whose fibers are maximal-order unit classes, and the
+degree-two at-most-two prime-splitting estimate is instantiated for every
+rational prime. The next honest boundary is the multiplicative `d(|N|)²` cardinal bound
+and quantitative height control for the full maximal-order unit group. Theorem 1.8
+additionally still needs Theorem 2.5 and the
+remaining Corollary 2.11 dyadic/interpolation count.
+
 The other newly isolated dependency is Erdős--Selfridge Theorem 1, whose
 square case controls the factorial-squarefree-component fibers in Theorem
 1.10. Its original 1975 paper is pinned and hashed. No completed Lean proof

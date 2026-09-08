@@ -153,4 +153,29 @@ theorem veryBadOneTermCount_eq_sum_sqrt_div_cube (x : ℕ) :
     Finset.card_image_iff.mpr (injOn_powerfulOneTermRepresentationValue x),
     card_powerfulOneTermRepresentations]
 
+/-- The `b=1` term in the squarefree-cube parameterization is the full family
+of positive squares, giving the sharp elementary lower bound. -/
+theorem sqrt_le_veryBadOneTermCount (x : ℕ) :
+    Nat.sqrt x ≤ veryBadOneTermCount x := by
+  rw [veryBadOneTermCount_eq_sum_sqrt_div_cube]
+  by_cases hx : x = 0
+  · subst x
+    simp
+  · have hxOne : 1 ≤ x := Nat.one_le_iff_ne_zero.mpr hx
+    have hmem : 1 ∈ (Finset.Icc 1 x).filter Squarefree := by
+      simp [hxOne]
+    calc
+      Nat.sqrt x = (x / 1 ^ 3).sqrt := by norm_num
+      _ ≤ ∑ b ∈ (Finset.Icc 1 x).filter Squarefree,
+          (x / b ^ 3).sqrt :=
+        Finset.single_le_sum
+          (s := (Finset.Icc 1 x).filter Squarefree)
+          (f := fun b => (x / b ^ 3).sqrt)
+          (fun _ _ => Nat.zero_le _) hmem
+
+/-- The positive-square family transfers from `VB¹` to all very-bad values. -/
+theorem sqrt_le_veryBadCount (x : ℕ) : Nat.sqrt x ≤ veryBadCount x :=
+  le_trans (sqrt_le_veryBadOneTermCount x)
+    (countUpTo_mono veryBadOneTermSet_subset_veryBadSet x)
+
 end Tao2026
