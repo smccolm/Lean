@@ -1,7 +1,8 @@
 ---
 title: "A Lean-Verified Derivation of the Complete Elliptic Series for the Perimeter of an Ellipse"
 author: "S. McColm"
-date: "Draft v1"
+date: "Sept 07, 2026"
+state: "Draft v1"
 ---
 
 # Abstract

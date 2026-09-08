@@ -142,7 +142,6 @@
 |   +-- AGENTS.md
 |   +-- Analytic Research Agenda.md
 |   +-- CITATION.cff
-|   +-- LICENSE
 |   +-- Paper_Riemann_Zeta.md
 |   +-- Polynomial Power Expansion Notes.md
 |   +-- Publication Readiness and Semantic Audit.md
@@ -639,7 +638,33 @@
 |   |   |   |   |   +-- ZetaAppendix.lean
 |   |   |   |   |   L-- ZetaBoundsUpstream.lean
 |   |   +-- 73 Tao, 2026/
-|   |   |   L-- .gitkeep
+|   |   |   +-- README.md
+|   |   |   +-- Tao Architecture.md
+|   |   |   +-- Tao Checklist.md
+|   |   |   +-- Tao Crosswalk.md
+|   |   |   +-- Tao Goal Prompt.md
+|   |   |   +-- Tao Reproduction Manifest.md
+|   |   |   +-- Tao Research Agenda.md
+|   |   |   +-- Tao Sources.md
+|   |   |   +-- push_to_github.bat
+|   |   |   L-- run_tao_build.bat
+|   |   |   +-- Dependencies/
+|   |   |   |   L-- README.md
+|   |   |   +-- Extension/
+|   |   |   |   +-- .gitignore
+|   |   |   |   +-- README.md
+|   |   |   |   +-- Tao2026.lean
+|   |   |   |   +-- lake-manifest.json
+|   |   |   |   +-- lakefile.toml
+|   |   |   |   L-- lean-toolchain
+|   |   |   +-- Sources/
+|   |   |   |   +-- PINS.md
+|   |   |   |   +-- SHA256SUMS.txt
+|   |   |   |   +-- tao-unusual-anatomy-2603.27990v2.pdf
+|   |   |   |   L-- tao-unusual-anatomy-2603.27990v2.tar
+|   |   |   +-- Tools/
+|   |   |   |   +-- README.md
+|   |   |   |   L-- run_tao_scaffold_check.ps1
 |   |   +-- 74 Gafni-Tao, 2026/
 |   |   |   +-- Gafni-Tao Architecture.md
 |   |   |   +-- Gafni-Tao Checklist.md

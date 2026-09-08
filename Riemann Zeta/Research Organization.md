@@ -14,9 +14,10 @@ The research tree mirrors the nine corridors in [`The RH Map - Aug 30, 2026 - Me
 
 Each corridor contains numbered node directories matching the map. These are stable homes for source material, research notes, and Lean packages as each line of work matures. The placeholders do not claim that their corresponding results have been formalized.
 
-## Current formalizations
+## Current formalizations and groundwork
 
 - The frozen [Guth--Maynard foundation](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/README.md) occupies node 71. Its `GuthMaynard/`, collision-safe `GuthMaynardExternal/`, and support modules sit directly in that node, while the project-root Lake package and verifier use it as their source root.
+- The [Tao 2026 groundwork](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/73%20Tao,%202026/README.md) occupies node 73. It pins the paper and reserves an isolated package structure, but contains no formalized paper theorem yet.
 - The isolated [Gafni--Tao release](9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md) occupies node 74 in the same corridor.
 
 ## Investigations outside the map

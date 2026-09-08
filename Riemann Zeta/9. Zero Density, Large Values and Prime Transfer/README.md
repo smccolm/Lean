@@ -15,4 +15,4 @@ This directory mirrors the corresponding corridor in `The RH Map - Aug 30, 2026 
 - `73 Tao, 2026/`
 - `74 Gafni-Tao, 2026/`
 
-Node 74 contains the isolated Gafni--Tao release. Node 71 points to the frozen Guth--Maynard foundation, whose current build layout remains at the project root.
+Node 74 contains the isolated Gafni--Tao release. Node 71 contains the frozen Guth--Maynard foundation. Node 73 now contains a source-pinned, pre-formalization scaffold for Tao's 2026 paper; it makes no theorem or release claim.
