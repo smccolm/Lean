@@ -71,16 +71,18 @@ lake env lean PrimeShell\Audit.lean
 
 All three commands exited `0`. `lake update` checked out the exact Zeta23 and Mathlib revisions recorded above. After the root-import closure check, the fresh build completed all 8984 jobs. It replayed warnings and informational linter output from the unchanged pinned Zeta23 dependency; those diagnostics are disclosed and were not filtered. Every `PrimeShell.*` build line succeeded without a Prime Shell warning, every one of the 31 non-audit submodules has a fresh `.olean`, and direct Prime Shell root/audit elaboration succeeded. The audit reported only `propext`, `Classical.choice`, and `Quot.sound`.
 
-The terminal replay output is preserved verbatim in:
+The historical terminal replay digests were:
 
-- `reproduction-logs/14-terminal-clean-copy-build.log`, SHA-256 `A7994C286ACCDB36D8A5D801CE03149DFF6788800394E92C9FEBD04BBC14CACB`
-- `reproduction-logs/15-terminal-clean-copy-audit.log`, SHA-256 `77C19917C5DE2955135B818FC2FFD3A3F11536FC462EDDB66E545B8C766CAED3`
+- clean-copy build: SHA-256 `A7994C286ACCDB36D8A5D801CE03149DFF6788800394E92C9FEBD04BBC14CACB`
+- clean-copy audit: SHA-256 `77C19917C5DE2955135B818FC2FFD3A3F11536FC462EDDB66E545B8C766CAED3`
+
+The raw transient logs are not retained in the repository; reproduce current
+evidence with the commands above.
 
 The final audit contains 145 declaration records, zero warnings, zero errors, and exactly the axiom set `{propext, Classical.choice, Quot.sound}`.
 
-The frozen GM verifier separately returned `FINAL RESULT: PASS` under Lean `v4.30.0`. Evidence:
-
-- `logs/foundation_freeze_20260830_040456.log`
-- `logs/foundation_freeze_20260830_040456.json`
+The frozen GM verifier separately returned `FINAL RESULT: PASS` under Lean
+`v4.30.0`. Its transient log and JSON evidence were removed during repository
+sanitation; the result is reproducible with the frozen foundation verifier.
 
 No Git push was run.

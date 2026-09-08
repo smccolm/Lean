@@ -70,7 +70,7 @@ Fix the cause of each diagnostic. Do not hide it with `set_option linter... fals
 
 Before editing:
 
-1. Read `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Research Agenda Progress.MD`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Lean Alignment Fix Agenda.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `Publication Readiness and Semantic Audit.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task. The original August 2026 operating directive is retained under `archive/` as history and is not a current authority.
+1. Read `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Research Agenda Progress.MD`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Lean Alignment Checklist.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md`, `README.md`, `Paper_Riemann_Zeta.md`, `Publication Readiness and Semantic Audit.md`, `9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean`, `lakefile.toml`, and `lean-toolchain` as relevant to the task. The original August 2026 operating directive is retained under `archive/` as history and is not a current authority.
 2. Inspect the current working tree and preserve all user changes. Do not overwrite or revert unrelated work.
 3. Identify whether the target is a definition, a formal statement, a conditional theorem, or an unconditional theorem. State that status accurately.
 4. Inspect the exact source theorem and existing Mathlib APIs before designing the Lean signature.
@@ -85,13 +85,13 @@ During implementation:
 
 ## Persistence and Legitimate Stopping Conditions
 
-A request to **prove**, **fix**, **complete**, **fully implement**, or **do** a Shitlist item binds the agent to the requested end theorem and its stated acceptance test. Supporting lemmas and successful checks are implementation milestones, not substitutes for that deliverable.
+A request to **prove**, **fix**, **complete**, **fully implement**, or **do** a Checklist item binds the agent to the requested end theorem and its stated acceptance test. Supporting lemmas and successful checks are implementation milestones, not substitutes for that deliverable.
 
 1. **Do not stop at an intermediate lemma.** A new definition, derivative formula, finite reduction, conditional theorem, focused build, or audit-clean helper is not a stopping condition while the requested theorem remains unproved.
 2. **Do not convert unfinished implementation into a planning handoff.** Isolating the next subproblem, writing a list of remaining steps, or updating the documentation does not satisfy a request to perform those steps.
 3. **If a safe in-scope next step exists, take it.** Continue from one lemma to the next, including through difficult analytic, combinatorial, and integration work. Difficulty, proof length, slow elaboration, failed first approaches, and the need for additional research are expected parts of the task rather than reasons to end the turn.
 4. **Treat verification as a gate, not an exit ramp.** Passing a focused build or axiom audit authorizes continuation to the next obligation. Run final verification only after the requested mathematical output exists, while still using incremental checks during development.
-5. **Documentation must follow proof status, not replace proof work.** Synchronize the Shitlist, progress report, and proof architecture when status changes, but then continue implementing if the user's requested acceptance condition is still open.
+5. **Documentation must follow proof status, not replace proof work.** Synchronize the Checklist, progress report, and proof architecture when status changes, but then continue implementing if the user's requested acceptance condition is still open.
 6. **Do not manufacture a blocker.** “This is substantial,” “this requires many lemmas,” “no existing repository proves it,” “the remaining step is now precisely isolated,” or “this would take another iteration” are not blockers.
 7. **A legitimate stop before completion requires an actual impasse:**
    - a necessary action requires new user authority or an external credential;
@@ -102,7 +102,7 @@ A request to **prove**, **fix**, **complete**, **fully implement**, or **do** a 
 9. **Never describe partial progress as completion.** If a legitimate impasse remains, say explicitly that the requested item is incomplete, identify the exact acceptance clause still failing, and distinguish proved infrastructure from the missing end theorem.
 10. **Explicit persistence language has force.** When the user says “fully,” “completely,” “do it,” “do not stop,” or objects to previous stopping, continue until the requested acceptance test passes or one of the legitimate impasses above is established. Do not end merely to provide a progress report.
 
-The operational test is simple: before ending an implementation turn, ask whether the user could truthfully cross out the requested Shitlist item under its existing completion test. If not, and a safe in-scope proof step remains, continue working.
+The operational test is simple: before ending an implementation turn, ask whether the user could truthfully cross out the requested Checklist item under its existing completion test. If not, and a safe in-scope proof step remains, continue working.
 
 Before declaring completion:
 
@@ -112,7 +112,7 @@ Before declaring completion:
 4. Verify that no new theorem depends on `sorryAx` or a project-specific axiom.
 5. Confirm that the default root module imports every intended production module. A successful default build is insufficient if substantive files are outside the import graph.
 6. Confirm that focused builds and the principal runner emit no Lean warning or linter diagnostic from project source.
-7. Update the README, paper, audit file, Shitlist, research-progress document, and canonical proof-architecture diagram when proof status or dependencies change.
+7. Update the README, paper, audit file, Checklist, research-progress document, and canonical proof-architecture diagram when proof status or dependencies change.
 8. Report exact commands, results, remaining assumptions, warnings, and failures. Do not summarize a warning-producing or partial build as “clean.”
 
 ## Principal Human-Facing Evaluation: `run_lake_build.bat`
@@ -244,7 +244,7 @@ Every substantive iteration must leave:
 
 A clean build and axiom audit establish kernel integrity only. They do not establish
 that a declaration proves the source theorem named in documentation. Before marking
-any Shitlist subtask, Mermaid node, source lemma, proposition, or theorem as `DONE`,
+any Checklist subtask, Mermaid node, source lemma, proposition, or theorem as `DONE`,
 perform and record the following semantic checks:
 
 1. **The public theorem must consume the real upstream object.** A generic theorem
@@ -291,15 +291,15 @@ The final pre-handoff audit must therefore answer two independent questions:
 
 - Does Lean accept the existing declarations without prohibited dependencies?
 - Do the public consumer theorems exactly realize the mathematical dependency edges
-  and source conclusions claimed by the Shitlist, progress report, paper, and diagram?
+  and source conclusions claimed by the Checklist, progress report, paper, and diagram?
 
 A `DONE` status requires both answers to be yes.
 
 ## Mandatory Proof-Architecture Synchronization
 
-`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md` is the canonical Mermaid view of the Guth–Maynard logical proof dependencies and completion status. The adjacent `Lean Alignment Fix Agenda.md` remains the authority for Shitlist task numbers and acceptance tests, while the adjacent `Research Agenda Progress.MD` remains the evidence-based status report.
+`9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Proof Architecture.md` is the canonical Mermaid view of the Guth–Maynard logical proof dependencies and completion status. The adjacent `Lean Alignment Checklist.md` remains the authority for checklist task numbers and acceptance tests, while the adjacent `Research Agenda Progress.MD` remains the evidence-based status report.
 
-Whenever a change alters a theorem's proof status, an open obligation, a dependency edge, or a Shitlist assignment, update all three documents in the same change. Every unfinished Mermaid node must name its owning Shitlist number. A crossed-out Shitlist item must have no unfinished node in the diagram, and a newly discovered obligation must be assigned to an existing open item unless the project owner explicitly changes the exhaustive completion contract. Before handoff, verify that the diagram, Shitlist, and progress report make identical claims about what is done and what remains.
+Whenever a change alters a theorem's proof status, an open obligation, a dependency edge, or a Checklist assignment, update all three documents in the same change. Every unfinished Mermaid node must name its owning Checklist number. A crossed-out Checklist item must have no unfinished node in the diagram, and a newly discovered obligation must be assigned to an existing open item unless the project owner explicitly changes the exhaustive completion contract. Before handoff, verify that the diagram, Checklist, and progress report make identical claims about what is done and what remains.
 
 ## Handling the Current Complete Internal Baseline
 

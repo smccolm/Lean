@@ -30,6 +30,10 @@
   `sigma <= 23/24` cutoff (downloaded PDF saved as
   `pintz-density-near-one-2023.pdf`; bibliographic identification and theorem
   crosswalk are recorded in `Gafni-Tao Sources.md`).
+- Aleksandar Ivić source scans used during the zero-density source audit:
+  `ivic-zero-density-1984.pdf` and `ivic-zeta-book-scan.pdf`. These are
+  intentional research-source captures; extracted page images and temporary
+  PDF tooling are not retained.
 - ANTEDB/expdb: commit `2b1aea3de263996c4da3042c115126bff601c618`
   (repository archive saved locally).
 - Frozen Lean foundation: tag `gm-foundation-freeze-v1.0.1`, peeled commit
@@ -45,6 +49,6 @@ are byte-identical, while `Wiener.lean` differs only by deletion of an
 unreachable four-declaration block containing two admitted declarations.
 
 `SHA256SUMS.txt` records the pinned downloaded bytes. The 1978 Heath--Brown
-twelfth-moment scan is now pinned above. Davenport, Turán, and the 1979
+twelfth-moment and Ivić scans are pinned above. Davenport, Turán, and the 1979
 Heath--Brown paper remain bibliographic dependencies not redistributed here
 until legally accessible versioned artifacts are located.

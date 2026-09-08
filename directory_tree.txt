@@ -1,30 +1,12 @@
---- Project Structure for: E:\Lean ---
+--- Generated repository tree (run python list_files.py) ---
 
-Lean/
+./
 +-- .gitignore
-+-- EllipsePerimeter.lean
++-- LICENSE
 +-- README.md
-+-- lake-manifest.json
-+-- lakefile.toml
-+-- lean-toolchain
++-- THIRD_PARTY_NOTICES.md
 +-- list_files.py
 +-- push_to_github.bat
-+-- .github/
-|   +-- workflows/
-|   |   +-- create-release.yml
-|   |   +-- riemann-zeta-ci.yml
-|   |   L-- update.yml
-+-- Article/
-|   +-- Abstract v1.docx
-|   +-- Ellipse Perimeter v1.docx
-|   +-- Ellipse Perimeter v2.docx
-|   +-- README.md
-|   +-- Two Endpoint Normalizations v1.docx
-|   +-- Two Endpoint Normalizations v1.md
-|   +-- build-docx.bat
-|   +-- input - Paper v1.md
-|   +-- input - Paper v2.md
-|   L-- input - abstract.md
 +-- Compacted Graphs/
 |   +-- .gitignore
 |   +-- CompactedGraphs.lean
@@ -32,121 +14,8 @@ Lean/
 |   +-- lake-manifest.json
 |   +-- lakefile.toml
 |   L-- lean-toolchain
-|   +-- .github/
-|   |   +-- workflows/
-|   |   |   L-- lean_action_ci.yml
 |   +-- CompactedGraphs/
 |   |   L-- Basic.lean
-+-- EllipseLab/
-|   +-- .gitignore
-|   +-- EllipseLab.lean
-|   +-- README.md
-|   +-- build.log
-|   +-- lake-manifest.json
-|   +-- lakefile.toml
-|   +-- lean-toolchain
-|   L-- lean_build_diag.cmd
-|   +-- .github/
-|   |   +-- workflows/
-|   |   |   +-- create-release.yml
-|   |   |   +-- lean_action_ci.yml
-|   |   |   L-- update.yml
-|   +-- EllipseLab/
-|   |   +-- Basic.lean
-|   |   +-- Cop-out.txt
-|   |   +-- Intermediate state 001.txt
-|   |   +-- Intermediate state 002.txt
-|   |   +-- Intermediate state 003.txt
-|   |   +-- Intermediate state 004.txt
-|   |   +-- Intermediate state 005.txt
-|   |   +-- Intermediate state 006a - Chat-GPT.txt
-|   |   +-- Intermediate state 006b - Grok.txt
-|   |   +-- Intermediate state 007.txt
-|   |   +-- Intermediate state 008.txt
-|   |   +-- Intermediate state 009.txt
-|   |   +-- Intermediate state 010.txt
-|   |   +-- Intermediate state 011.txt
-|   |   +-- Intermediate state 012.txt
-|   |   +-- Intermediate state 013.txt
-|   |   +-- Intermediate state 014.txt
-|   |   +-- Intermediate state 015.txt
-|   |   +-- Intermediate state 016.txt
-|   |   +-- Intermediate state 017.txt
-|   |   +-- Intermediate state 018.txt
-|   |   +-- Intermediate state 019.txt
-|   |   +-- Intermediate state 020.txt
-|   |   +-- Intermediate state 021.txt
-|   |   +-- Intermediate state 022.txt
-|   |   +-- Intermediate state 023.txt
-|   |   +-- Intermediate state 024b.txt
-|   |   +-- Intermediate state 025.txt
-|   |   +-- Intermediate state 026.txt
-|   |   +-- Intermediate state 027.txt
-|   |   +-- Intermediate state 028.txt
-|   |   +-- Intermediate state 029.txt
-|   |   +-- Intermediate state 030.txt
-|   |   +-- Intermediate state 031.txt
-|   |   +-- Intermediate state 032.txt
-|   |   +-- Intermediate state 033.txt
-|   |   +-- Intermediate state 034.txt
-|   |   +-- Intermediate state 035.txt
-|   |   +-- Intermediate state 036 - has an axiom.txt
-|   |   +-- Intermediate state 037 - errors and warnings.txt
-|   |   +-- Intermediate state 038 - errors.txt
-|   |   +-- Intermediate state 039.txt
-|   |   +-- Intermediate state 040.txt
-|   |   +-- Intermediate state 041 - Error.txt
-|   |   +-- Intermediate state 042.txt
-|   |   +-- Intermediate state 043 - Cleaned up.txt
-|   |   +-- Intermediate state 044.txt
-|   |   +-- Intermediate state 045.txt
-|   |   +-- Intermediate state 046.txt
-|   |   +-- Intermediate state 047.txt
-|   |   +-- Intermediate state 048.txt
-|   |   +-- Intermediate state 049.txt
-|   |   +-- Intermediate state 050.txt
-|   |   +-- Intermediate state 051.txt
-|   |   +-- Intermediate state 052.txt
-|   |   +-- Intermediate state 053.txt
-|   |   +-- Intermediate state 054.txt
-|   |   +-- Intermediate state 055 - errors.txt
-|   |   +-- Intermediate state 056.txt
-|   |   +-- Intermediate state 057 - Errors and Warnings.txt
-|   |   +-- Intermediate state 058 - Error.txt
-|   |   +-- Intermediate state 059.txt
-|   |   +-- Intermediate state 060.txt
-|   |   +-- Intermediate state 061 - Rough Draft - Complete.txt
-|   |   +-- Intermediate state 062 - So many errors and warnings.txt
-|   |   +-- Intermediate state 063.txt
-|   |   +-- Intermediate state 064.txt
-|   |   +-- Intermediate state 065.txt
-|   |   +-- Intermediate state 066 - Audit.txt
-|   |   +-- Intermediate state 067.txt
-|   |   +-- Intermediate state 068.txt
-|   |   +-- Intermediate state 069.txt
-|   |   +-- Intermediate state 070.txt
-|   |   +-- Intermediate state 071.txt
-|   |   +-- Intermediate state 072.txt
-|   |   +-- Intermediate state 073.txt
-|   |   +-- Intermediate state 074.txt
-|   |   +-- Intermediate state 075.txt
-|   |   +-- Intermediate state 076.txt
-|   |   +-- Intermediate state 077.txt
-|   |   +-- Intermediate state 078 - errors and warnings.txt
-|   |   +-- Intermediate state 079.txt
-|   |   +-- Intermediate state 080.txt
-|   |   +-- Intermediate state 081 - errors.txt
-|   |   +-- Intermediate state 082.txt
-|   |   +-- Intermediate state 083.txt
-|   |   +-- Intermediate state 084.txt
-|   |   +-- Intermediate state 085.txt
-|   |   +-- Intermediate state 086.txt
-|   |   +-- Intermediate state 087.txt
-|   |   +-- Intermediate state 088.txt
-|   |   +-- Intermediate state 089 - Highly refined.txt
-|   |   +-- Intermediate state 090.txt
-|   |   +-- Intermediate state 091-now with content.txt
-|   |   L-- Shape.lean
 +-- EllipsePerimeter/
 |   +-- .gitignore
 |   +-- EllipsePerimeter.lean
@@ -154,19 +23,120 @@ Lean/
 |   +-- lake-manifest.json
 |   +-- lakefile.toml
 |   +-- lean-toolchain
-|   L-- lean_build_diag.cmd
-|   +-- .github/
-|   |   +-- workflows/
-|   |   |   +-- create-release.yml
-|   |   |   +-- lean_action_ci.yml
-|   |   |   L-- update.yml
 |   +-- EllipsePerimeter/
-|   |   +-- Binomial.lean
-|   |   +-- Boundary.lean
-|   |   +-- EllipticE.lean
-|   |   +-- Geometry.lean
-|   |   +-- Wallis.lean
-|   |   L-- Wallis.txt
+|   |   +-- Basic.lean
+|   |   L-- Shape.lean
+|   +-- archive/
+|   |   +-- README.md
+|   |   +-- development-history/
+|   |   |   +-- Cop-out.txt
+|   |   |   +-- Intermediate state 001.txt
+|   |   |   +-- Intermediate state 002.txt
+|   |   |   +-- Intermediate state 003.txt
+|   |   |   +-- Intermediate state 004.txt
+|   |   |   +-- Intermediate state 005.txt
+|   |   |   +-- Intermediate state 006a - Chat-GPT.txt
+|   |   |   +-- Intermediate state 006b - Grok.txt
+|   |   |   +-- Intermediate state 007.txt
+|   |   |   +-- Intermediate state 008.txt
+|   |   |   +-- Intermediate state 009.txt
+|   |   |   +-- Intermediate state 010.txt
+|   |   |   +-- Intermediate state 011.txt
+|   |   |   +-- Intermediate state 012.txt
+|   |   |   +-- Intermediate state 013.txt
+|   |   |   +-- Intermediate state 014.txt
+|   |   |   +-- Intermediate state 015.txt
+|   |   |   +-- Intermediate state 016.txt
+|   |   |   +-- Intermediate state 017.txt
+|   |   |   +-- Intermediate state 018.txt
+|   |   |   +-- Intermediate state 019.txt
+|   |   |   +-- Intermediate state 020.txt
+|   |   |   +-- Intermediate state 021.txt
+|   |   |   +-- Intermediate state 022.txt
+|   |   |   +-- Intermediate state 023.txt
+|   |   |   +-- Intermediate state 024b.txt
+|   |   |   +-- Intermediate state 025.txt
+|   |   |   +-- Intermediate state 026.txt
+|   |   |   +-- Intermediate state 027.txt
+|   |   |   +-- Intermediate state 028.txt
+|   |   |   +-- Intermediate state 029.txt
+|   |   |   +-- Intermediate state 030.txt
+|   |   |   +-- Intermediate state 031.txt
+|   |   |   +-- Intermediate state 032.txt
+|   |   |   +-- Intermediate state 033.txt
+|   |   |   +-- Intermediate state 034.txt
+|   |   |   +-- Intermediate state 035.txt
+|   |   |   +-- Intermediate state 036 - has an axiom.txt
+|   |   |   +-- Intermediate state 037 - errors and warnings.txt
+|   |   |   +-- Intermediate state 038 - errors.txt
+|   |   |   +-- Intermediate state 039.txt
+|   |   |   +-- Intermediate state 040.txt
+|   |   |   +-- Intermediate state 041 - Error.txt
+|   |   |   +-- Intermediate state 042.txt
+|   |   |   +-- Intermediate state 043 - Cleaned up.txt
+|   |   |   +-- Intermediate state 044.txt
+|   |   |   +-- Intermediate state 045.txt
+|   |   |   +-- Intermediate state 046.txt
+|   |   |   +-- Intermediate state 047.txt
+|   |   |   +-- Intermediate state 048.txt
+|   |   |   +-- Intermediate state 049.txt
+|   |   |   +-- Intermediate state 050.txt
+|   |   |   +-- Intermediate state 051.txt
+|   |   |   +-- Intermediate state 052.txt
+|   |   |   +-- Intermediate state 053.txt
+|   |   |   +-- Intermediate state 054.txt
+|   |   |   +-- Intermediate state 055 - errors.txt
+|   |   |   +-- Intermediate state 056.txt
+|   |   |   +-- Intermediate state 057 - Errors and Warnings.txt
+|   |   |   +-- Intermediate state 058 - Error.txt
+|   |   |   +-- Intermediate state 059.txt
+|   |   |   +-- Intermediate state 060.txt
+|   |   |   +-- Intermediate state 061 - Rough Draft - Complete.txt
+|   |   |   +-- Intermediate state 062 - So many errors and warnings.txt
+|   |   |   +-- Intermediate state 063.txt
+|   |   |   +-- Intermediate state 064.txt
+|   |   |   +-- Intermediate state 065.txt
+|   |   |   +-- Intermediate state 066 - Audit.txt
+|   |   |   +-- Intermediate state 067.txt
+|   |   |   +-- Intermediate state 068.txt
+|   |   |   +-- Intermediate state 069.txt
+|   |   |   +-- Intermediate state 070.txt
+|   |   |   +-- Intermediate state 071.txt
+|   |   |   +-- Intermediate state 072.txt
+|   |   |   +-- Intermediate state 073.txt
+|   |   |   +-- Intermediate state 074.txt
+|   |   |   +-- Intermediate state 075.txt
+|   |   |   +-- Intermediate state 076.txt
+|   |   |   +-- Intermediate state 077.txt
+|   |   |   +-- Intermediate state 078 - errors and warnings.txt
+|   |   |   +-- Intermediate state 079.txt
+|   |   |   +-- Intermediate state 080.txt
+|   |   |   +-- Intermediate state 081 - errors.txt
+|   |   |   +-- Intermediate state 082.txt
+|   |   |   +-- Intermediate state 083.txt
+|   |   |   +-- Intermediate state 084.txt
+|   |   |   +-- Intermediate state 085.txt
+|   |   |   +-- Intermediate state 086.txt
+|   |   |   +-- Intermediate state 087.txt
+|   |   |   +-- Intermediate state 088.txt
+|   |   |   +-- Intermediate state 089 - Highly refined.txt
+|   |   |   +-- Intermediate state 090.txt
+|   |   |   L-- Intermediate state 091-now with content.txt
+|   |   +-- early-extraction/
+|   |   |   +-- Binomial.lean.txt
+|   |   |   +-- EllipsePerimeter-root.lean.txt
+|   |   |   L-- Wallis.lean.txt
+|   +-- paper/
+|   |   +-- Abstract v1.docx
+|   |   +-- Ellipse Perimeter v1.docx
+|   |   +-- Ellipse Perimeter v2.docx
+|   |   +-- README.md
+|   |   +-- Two Endpoint Normalizations v1.docx
+|   |   +-- Two Endpoint Normalizations v1.md
+|   |   +-- build-docx.bat
+|   |   +-- input - Paper v1.md
+|   |   +-- input - Paper v2.md
+|   |   L-- input - abstract.md
 +-- Riemann Zeta/
 |   +-- .gitignore
 |   +-- AGENTS.md
@@ -360,7 +330,7 @@ Lean/
 |   |   |   +-- CrossNormProduct.lean
 |   |   |   +-- FiniteDirichletPolynomial.lean
 |   |   |   +-- HardyZ.lean
-|   |   |   +-- Lean Alignment Fix Agenda.md
+|   |   |   +-- Lean Alignment Checklist.md
 |   |   |   +-- Lint.lean
 |   |   |   +-- Nonvanishing.lean
 |   |   |   +-- Proof Architecture.md
@@ -635,7 +605,6 @@ Lean/
 |   |   |   |   +-- SecondDerivative.lean
 |   |   |   |   +-- SecondOrderMeanValue.lean
 |   |   |   |   +-- Separated.lean
-|   |   |   |   +-- Separated.lean.bak
 |   |   |   |   +-- SmoothZetaAFE.lean
 |   |   |   |   +-- Statements.lean
 |   |   |   |   +-- SymmetryTransfer.lean
@@ -672,232 +641,16 @@ Lean/
 |   |   +-- 73 Tao, 2026/
 |   |   |   L-- .gitkeep
 |   |   +-- 74 Gafni-Tao, 2026/
-|   |   |   +-- .tmp_kthvin2.tex
-|   |   |   +-- .tmp_pintz2023.txt
-|   |   |   +-- .tmp_pintz_page11.png
-|   |   |   +-- .tmp_pintz_page12.png
-|   |   |   +-- .tmp_pintz_page13.png
-|   |   |   +-- .tmp_pintz_page3.png
 |   |   |   +-- Gafni-Tao Architecture.md
+|   |   |   +-- Gafni-Tao Checklist.md
 |   |   |   +-- Gafni-Tao Crosswalk.md
 |   |   |   +-- Gafni-Tao Goal Prompt.md
+|   |   |   +-- Gafni-Tao Reproduction Manifest.md
 |   |   |   +-- Gafni-Tao Research Agenda.md
-|   |   |   +-- Gafni-Tao Shitlist.md
 |   |   |   +-- Gafni-Tao Sources.md
 |   |   |   +-- README.md
-|   |   |   +-- Reproduction Manifest.md
 |   |   |   +-- push_to_github.bat
 |   |   |   L-- run_gafni_tao_build.bat
-|   |   |   +-- .tmp_expdb_latest/
-|   |   |   +-- .tmp_hb_source/
-|   |   |   +-- .tmp_pdf_tools/
-|   |   |   |   +-- bin/
-|   |   |   |   |   L-- pymupdf.exe
-|   |   |   |   +-- fitz/
-|   |   |   |   |   +-- __init__.py
-|   |   |   |   |   +-- table.py
-|   |   |   |   |   L-- utils.py
-|   |   |   |   +-- pymupdf/
-|   |   |   |   |   +-- __init__.py
-|   |   |   |   |   +-- __main__.py
-|   |   |   |   |   +-- _apply_pages.py
-|   |   |   |   |   +-- _build.py
-|   |   |   |   |   +-- _extra.pyd
-|   |   |   |   |   +-- _mupdf.pyd
-|   |   |   |   |   +-- _table_headers.py
-|   |   |   |   |   +-- _table_refine.py
-|   |   |   |   |   +-- _table_spans.py
-|   |   |   |   |   +-- _table_union.py
-|   |   |   |   |   +-- _wxcolors.py
-|   |   |   |   |   +-- extra.py
-|   |   |   |   |   +-- mupdf.py
-|   |   |   |   |   +-- mupdfcpp64.dll
-|   |   |   |   |   +-- py.typed
-|   |   |   |   |   +-- pymupdf.py
-|   |   |   |   |   +-- table.py
-|   |   |   |   |   L-- utils.py
-|   |   |   |   |   +-- mupdf-devel/
-|   |   |   |   |   |   +-- include/
-|   |   |   |   |   |   |   +-- mupdf/
-|   |   |   |   |   |   |   |   +-- classes.h
-|   |   |   |   |   |   |   |   +-- classes2.h
-|   |   |   |   |   |   |   |   +-- exceptions.h
-|   |   |   |   |   |   |   |   +-- extra.h
-|   |   |   |   |   |   |   |   +-- fitz.h
-|   |   |   |   |   |   |   |   +-- functions.h
-|   |   |   |   |   |   |   |   +-- html.h
-|   |   |   |   |   |   |   |   +-- internal.h
-|   |   |   |   |   |   |   |   +-- memento.h
-|   |   |   |   |   |   |   |   +-- pdf.h
-|   |   |   |   |   |   |   |   L-- ucdn.h
-|   |   |   |   |   |   |   |   +-- fitz/
-|   |   |   |   |   |   |   |   |   +-- archive.h
-|   |   |   |   |   |   |   |   |   +-- band-writer.h
-|   |   |   |   |   |   |   |   |   +-- barcode.h
-|   |   |   |   |   |   |   |   |   +-- bidi.h
-|   |   |   |   |   |   |   |   |   +-- bitmap.h
-|   |   |   |   |   |   |   |   |   +-- buffer.h
-|   |   |   |   |   |   |   |   |   +-- color.h
-|   |   |   |   |   |   |   |   |   +-- compress.h
-|   |   |   |   |   |   |   |   |   +-- compressed-buffer.h
-|   |   |   |   |   |   |   |   |   +-- config.h
-|   |   |   |   |   |   |   |   |   +-- context.h
-|   |   |   |   |   |   |   |   |   +-- crypt.h
-|   |   |   |   |   |   |   |   |   +-- deskew.h
-|   |   |   |   |   |   |   |   |   +-- device.h
-|   |   |   |   |   |   |   |   |   +-- display-list.h
-|   |   |   |   |   |   |   |   |   +-- document.h
-|   |   |   |   |   |   |   |   |   +-- export.h
-|   |   |   |   |   |   |   |   |   +-- filter.h
-|   |   |   |   |   |   |   |   |   +-- font.h
-|   |   |   |   |   |   |   |   |   +-- geometry.h
-|   |   |   |   |   |   |   |   |   +-- getopt.h
-|   |   |   |   |   |   |   |   |   +-- glyph-cache.h
-|   |   |   |   |   |   |   |   |   +-- glyph.h
-|   |   |   |   |   |   |   |   |   +-- hash.h
-|   |   |   |   |   |   |   |   |   +-- heap-imp.h
-|   |   |   |   |   |   |   |   |   +-- heap.h
-|   |   |   |   |   |   |   |   |   +-- hyphen.h
-|   |   |   |   |   |   |   |   |   +-- image.h
-|   |   |   |   |   |   |   |   |   +-- json.h
-|   |   |   |   |   |   |   |   |   +-- link.h
-|   |   |   |   |   |   |   |   |   +-- log.h
-|   |   |   |   |   |   |   |   |   +-- options.h
-|   |   |   |   |   |   |   |   |   +-- outline.h
-|   |   |   |   |   |   |   |   |   +-- output-svg.h
-|   |   |   |   |   |   |   |   |   +-- output.h
-|   |   |   |   |   |   |   |   |   +-- path.h
-|   |   |   |   |   |   |   |   |   +-- pixmap.h
-|   |   |   |   |   |   |   |   |   +-- pool.h
-|   |   |   |   |   |   |   |   |   +-- separation.h
-|   |   |   |   |   |   |   |   |   +-- shade.h
-|   |   |   |   |   |   |   |   |   +-- store.h
-|   |   |   |   |   |   |   |   |   +-- story-writer.h
-|   |   |   |   |   |   |   |   |   +-- story.h
-|   |   |   |   |   |   |   |   |   +-- stream.h
-|   |   |   |   |   |   |   |   |   +-- string-util.h
-|   |   |   |   |   |   |   |   |   +-- structured-text.h
-|   |   |   |   |   |   |   |   |   +-- system.h
-|   |   |   |   |   |   |   |   |   +-- text.h
-|   |   |   |   |   |   |   |   |   +-- track-usage.h
-|   |   |   |   |   |   |   |   |   +-- transition.h
-|   |   |   |   |   |   |   |   |   +-- tree.h
-|   |   |   |   |   |   |   |   |   +-- types.h
-|   |   |   |   |   |   |   |   |   +-- util.h
-|   |   |   |   |   |   |   |   |   +-- version.h
-|   |   |   |   |   |   |   |   |   +-- write-pixmap.h
-|   |   |   |   |   |   |   |   |   +-- writer.h
-|   |   |   |   |   |   |   |   |   L-- xml.h
-|   |   |   |   |   |   |   |   +-- helpers/
-|   |   |   |   |   |   |   |   |   +-- mu-office-lib.h
-|   |   |   |   |   |   |   |   |   +-- mu-threads.h
-|   |   |   |   |   |   |   |   |   L-- pkcs7-openssl.h
-|   |   |   |   |   |   |   |   +-- pdf/
-|   |   |   |   |   |   |   |   |   +-- annot.h
-|   |   |   |   |   |   |   |   |   +-- clean.h
-|   |   |   |   |   |   |   |   |   +-- cmap.h
-|   |   |   |   |   |   |   |   |   +-- crypt.h
-|   |   |   |   |   |   |   |   |   +-- document.h
-|   |   |   |   |   |   |   |   |   +-- event.h
-|   |   |   |   |   |   |   |   |   +-- font.h
-|   |   |   |   |   |   |   |   |   +-- form.h
-|   |   |   |   |   |   |   |   |   +-- image-rewriter.h
-|   |   |   |   |   |   |   |   |   +-- interpret.h
-|   |   |   |   |   |   |   |   |   +-- javascript.h
-|   |   |   |   |   |   |   |   |   +-- name-table.h
-|   |   |   |   |   |   |   |   |   +-- object.h
-|   |   |   |   |   |   |   |   |   +-- page.h
-|   |   |   |   |   |   |   |   |   +-- parse.h
-|   |   |   |   |   |   |   |   |   +-- recolor.h
-|   |   |   |   |   |   |   |   |   +-- resource.h
-|   |   |   |   |   |   |   |   |   +-- xref.h
-|   |   |   |   |   |   |   |   |   L-- zugferd.h
-|   |   |   |   |   |   +-- lib/
-|   |   |   |   |   |   |   +-- libmuthreads.lib
-|   |   |   |   |   |   |   L-- mupdfcpp64.lib
-|   |   |   |   +-- pymupdf-1.28.2.dist-info/
-|   |   |   |   |   +-- COPYING
-|   |   |   |   |   +-- INSTALLER
-|   |   |   |   |   +-- METADATA
-|   |   |   |   |   +-- README.md
-|   |   |   |   |   +-- RECORD
-|   |   |   |   |   +-- REQUESTED
-|   |   |   |   |   +-- WHEEL
-|   |   |   |   |   L-- entry_points.txt
-|   |   |   |   +-- pypdf/
-|   |   |   |   |   +-- __init__.py
-|   |   |   |   |   +-- _cmap.py
-|   |   |   |   |   +-- _doc_common.py
-|   |   |   |   |   +-- _encryption.py
-|   |   |   |   |   +-- _font.py
-|   |   |   |   |   +-- _page.py
-|   |   |   |   |   +-- _page_labels.py
-|   |   |   |   |   +-- _protocols.py
-|   |   |   |   |   +-- _reader.py
-|   |   |   |   |   +-- _utils.py
-|   |   |   |   |   +-- _version.py
-|   |   |   |   |   +-- _writer.py
-|   |   |   |   |   +-- constants.py
-|   |   |   |   |   +-- errors.py
-|   |   |   |   |   +-- filters.py
-|   |   |   |   |   +-- pagerange.py
-|   |   |   |   |   +-- papersizes.py
-|   |   |   |   |   +-- py.typed
-|   |   |   |   |   +-- types.py
-|   |   |   |   |   L-- xmp.py
-|   |   |   |   |   +-- _codecs/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   +-- _codecs.py
-|   |   |   |   |   |   +-- adobe_glyphs.py
-|   |   |   |   |   |   +-- core_font_metrics.py
-|   |   |   |   |   |   +-- pdfdoc.py
-|   |   |   |   |   |   +-- std.py
-|   |   |   |   |   |   +-- symbol.py
-|   |   |   |   |   |   L-- zapfding.py
-|   |   |   |   |   +-- _crypt_providers/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   +-- _cryptography.py
-|   |   |   |   |   |   +-- _fallback.py
-|   |   |   |   |   |   L-- _pycryptodome.py
-|   |   |   |   |   +-- _text_extraction/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   L-- _text_extractor.py
-|   |   |   |   |   |   +-- _layout_mode/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   +-- _fixed_width_page.py
-|   |   |   |   |   |   |   +-- _text_state_manager.py
-|   |   |   |   |   |   |   L-- _text_state_params.py
-|   |   |   |   |   +-- actions/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   L-- _actions.py
-|   |   |   |   |   +-- annotations/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   +-- _markup_annotations.py
-|   |   |   |   |   |   L-- _non_markup_annotations.py
-|   |   |   |   |   +-- generic/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   +-- _appearance_stream.py
-|   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   +-- _data_structures.py
-|   |   |   |   |   |   +-- _files.py
-|   |   |   |   |   |   +-- _fit.py
-|   |   |   |   |   |   +-- _image_inline.py
-|   |   |   |   |   |   +-- _image_xobject.py
-|   |   |   |   |   |   +-- _link.py
-|   |   |   |   |   |   +-- _outline.py
-|   |   |   |   |   |   +-- _rectangle.py
-|   |   |   |   |   |   +-- _utils.py
-|   |   |   |   |   |   L-- _viewerpref.py
-|   |   |   |   +-- pypdf-6.16.2.dist-info/
-|   |   |   |   |   +-- INSTALLER
-|   |   |   |   |   +-- METADATA
-|   |   |   |   |   +-- RECORD
-|   |   |   |   |   +-- REQUESTED
-|   |   |   |   |   +-- WHEEL
-|   |   |   |   |   +-- licenses/
-|   |   |   |   |   |   L-- LICENSE
 |   |   |   +-- Dependencies/
 |   |   |   |   +-- PrimeNumberTheoremAndClean/
 |   |   |   |   |   +-- PrimeNumberTheoremAnd.lean
@@ -1068,81 +821,6 @@ Lean/
 |   |   |   |   +-- lake-manifest.json
 |   |   |   |   +-- lakefile.toml
 |   |   |   |   L-- lean-toolchain
-|   |   |   |   +-- .tmp_pdf_extract/
-|   |   |   |   |   +-- pypdf/
-|   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   +-- _cmap.py
-|   |   |   |   |   |   +-- _doc_common.py
-|   |   |   |   |   |   +-- _encryption.py
-|   |   |   |   |   |   +-- _font.py
-|   |   |   |   |   |   +-- _page.py
-|   |   |   |   |   |   +-- _page_labels.py
-|   |   |   |   |   |   +-- _protocols.py
-|   |   |   |   |   |   +-- _reader.py
-|   |   |   |   |   |   +-- _utils.py
-|   |   |   |   |   |   +-- _version.py
-|   |   |   |   |   |   +-- _writer.py
-|   |   |   |   |   |   +-- constants.py
-|   |   |   |   |   |   +-- errors.py
-|   |   |   |   |   |   +-- filters.py
-|   |   |   |   |   |   +-- pagerange.py
-|   |   |   |   |   |   +-- papersizes.py
-|   |   |   |   |   |   +-- py.typed
-|   |   |   |   |   |   +-- types.py
-|   |   |   |   |   |   L-- xmp.py
-|   |   |   |   |   |   +-- _codecs/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   +-- _codecs.py
-|   |   |   |   |   |   |   +-- adobe_glyphs.py
-|   |   |   |   |   |   |   +-- core_font_metrics.py
-|   |   |   |   |   |   |   +-- pdfdoc.py
-|   |   |   |   |   |   |   +-- std.py
-|   |   |   |   |   |   |   +-- symbol.py
-|   |   |   |   |   |   |   L-- zapfding.py
-|   |   |   |   |   |   +-- _crypt_providers/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   |   +-- _cryptography.py
-|   |   |   |   |   |   |   +-- _fallback.py
-|   |   |   |   |   |   |   L-- _pycryptodome.py
-|   |   |   |   |   |   +-- _text_extraction/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   L-- _text_extractor.py
-|   |   |   |   |   |   |   +-- _layout_mode/
-|   |   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   |   +-- _fixed_width_page.py
-|   |   |   |   |   |   |   |   +-- _text_state_manager.py
-|   |   |   |   |   |   |   |   L-- _text_state_params.py
-|   |   |   |   |   |   +-- actions/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   L-- _actions.py
-|   |   |   |   |   |   +-- annotations/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   |   +-- _markup_annotations.py
-|   |   |   |   |   |   |   L-- _non_markup_annotations.py
-|   |   |   |   |   |   +-- generic/
-|   |   |   |   |   |   |   +-- __init__.py
-|   |   |   |   |   |   |   +-- _appearance_stream.py
-|   |   |   |   |   |   |   +-- _base.py
-|   |   |   |   |   |   |   +-- _data_structures.py
-|   |   |   |   |   |   |   +-- _files.py
-|   |   |   |   |   |   |   +-- _fit.py
-|   |   |   |   |   |   |   +-- _image_inline.py
-|   |   |   |   |   |   |   +-- _image_xobject.py
-|   |   |   |   |   |   |   +-- _link.py
-|   |   |   |   |   |   |   +-- _outline.py
-|   |   |   |   |   |   |   +-- _rectangle.py
-|   |   |   |   |   |   |   +-- _utils.py
-|   |   |   |   |   |   |   L-- _viewerpref.py
-|   |   |   |   |   +-- pypdf-6.17.0.dist-info/
-|   |   |   |   |   |   +-- INSTALLER
-|   |   |   |   |   |   +-- METADATA
-|   |   |   |   |   |   +-- RECORD
-|   |   |   |   |   |   +-- REQUESTED
-|   |   |   |   |   |   +-- WHEEL
-|   |   |   |   |   |   +-- licenses/
-|   |   |   |   |   |   |   L-- LICENSE
 |   |   |   |   +-- FrozenFoundation/
 |   |   |   |   |   +-- RiemannZeta.lean
 |   |   |   |   |   +-- SHA256SUMS.txt
@@ -3014,6 +2692,8 @@ Lean/
 |   |   |   |   +-- heath-brown-kth-derivative-1601.04493v3.pdf
 |   |   |   |   +-- heath-brown-kth-derivative-1601.04493v3.tar.gz
 |   |   |   |   +-- heath-brown-twelfth-moment-1978.pdf
+|   |   |   |   +-- ivic-zero-density-1984.pdf
+|   |   |   |   +-- ivic-zeta-book-scan.pdf
 |   |   |   |   +-- pintz-density-near-one-2023.pdf
 |   |   |   |   +-- pintz-halasz-turan-2022.pdf
 |   |   |   |   +-- tao-trudgian-yang-2501.16779v1.pdf
@@ -3051,11 +2731,11 @@ Lean/
 |   |   |   +-- .gitignore
 |   |   |   +-- Prime Shell Architecture.md
 |   |   |   +-- Prime Shell Candidate Manifest.md
+|   |   |   +-- Prime Shell Checklist.md
 |   |   |   +-- Prime Shell Final Report.md
 |   |   |   +-- Prime Shell Goal Prompt.md
 |   |   |   +-- Prime Shell Phase I Report.md
 |   |   |   +-- Prime Shell Research Agenda.md
-|   |   |   +-- Prime Shell Shitlist.md
 |   |   |   +-- Prime Shell Sources.md
 |   |   |   +-- README.md
 |   |   |   +-- mrt-source.html
@@ -3099,23 +2779,6 @@ Lean/
 |   |   |   |   |   +-- XiPrimeOracleConsumer.lean
 |   |   |   |   |   +-- XiShiftKernel.lean
 |   |   |   |   |   L-- XiSourceBoundary.lean
-|   |   |   +-- reproduction-logs/
-|   |   |   |   +-- 00-lake-version.log
-|   |   |   |   +-- 01-cache-get.log
-|   |   |   |   +-- 02-lake-build.log
-|   |   |   |   +-- 03-solution-builds.log
-|   |   |   |   +-- 04-axioms-base.log
-|   |   |   |   +-- 05-axioms-multiplicity.log
-|   |   |   |   +-- 06-axioms-xiprime.log
-|   |   |   |   +-- 07-axioms-pairceiling.log
-|   |   |   |   +-- 08-comparator-base-windows-trial.log
-|   |   |   |   +-- 09-comparator-base-windows-trial.log
-|   |   |   |   +-- 10-comparator-base-windows-trial.log
-|   |   |   |   +-- 11-comparator-base-windows-trial.log
-|   |   |   |   +-- 12-comparator-multiplicity-windows-trial.log
-|   |   |   |   +-- 13-comparator-xiprime-windows-trial.log
-|   |   |   |   +-- 14-terminal-clean-copy-build.log
-|   |   |   |   L-- 15-terminal-clean-copy-audit.log
 |   |   |   +-- upstream/
 |   +-- archive/
 |   |   +-- 15 Finite scale exponent assembly - Gemini 3.1 pro.docx

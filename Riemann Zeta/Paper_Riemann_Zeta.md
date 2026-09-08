@@ -272,7 +272,7 @@ The formalization relies on the following exact environment:
 - **Windows Convenience Command**: `run_lake_build.bat --no-pause` (development mode; invokes the same verifier core)
 - **Verifier Coverage**: mechanical classification of all 303 project Lean modules; proof-integrity scans; root build; exact publication-contract build/type gates; both retained regressions; exhaustive transitive axiom/output audit; and all 16 default linters
 - **Focused Axiom/Output Audit Command**: `lake env lean "9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/Audit.lean"` (7,636 registered declarations and all 14,290 discovered nonprivate theorems)
-- **Internal Freeze Evidence**: exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed the complete release verifier from a fresh short-path clone. The run emits a SHA-, verifier-, contract-, toolchain-, and dependency-bound log/manifest. Hosted CI is supplemental; its terminated attempts produced no hosted PASS or artifact. Neither the local PASS nor a future CI artifact constitutes independent semantic review, preprint release, or publication evidence.
+- **Internal Freeze Evidence**: exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed the complete release verifier from a fresh short-path clone. The run emits a SHA-, verifier-, contract-, toolchain-, and dependency-bound log/manifest. Historical hosted attempts produced no PASS or artifact, and those workflows have since been retired. The local PASS does not constitute independent semantic review, preprint release, or publication evidence.
 
 ---
 

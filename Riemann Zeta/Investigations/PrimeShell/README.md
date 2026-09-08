@@ -30,7 +30,7 @@ This does not rule out connected positive-valley windows, a different source con
 - [Prime Shell Architecture](Prime%20Shell%20Architecture.md): corrected dependency graph and numbered status.
 - [Prime Shell Research Agenda](Prime%20Shell%20Research%20Agenda.md): mathematical program, source analysis, and terminal criterion.
 - [Prime Shell Source Ledger](Prime%20Shell%20Sources.md): pins, papers, code crosswalk, and source qualifications.
-- [Prime Shell Shitlist](Prime%20Shell%20Shitlist.md): exhaustive local acceptance checklist.
+- [Prime Shell Checklist](Prime%20Shell%20Checklist.md): exhaustive local acceptance checklist.
 - [Prime Shell Phase I Report](Prime%20Shell%20Phase%20I%20Report.md): reproduction, exact kernel work, and F1 verdict.
 - [Prime Shell Final Report](Prime%20Shell%20Final%20Report.md): corrected non-vacuous terminal theorem, proof ledger, verification, and nonclaims.
 - [Prime Shell Candidate Manifest](Prime%20Shell%20Candidate%20Manifest.md): immutable pins and source hashes.

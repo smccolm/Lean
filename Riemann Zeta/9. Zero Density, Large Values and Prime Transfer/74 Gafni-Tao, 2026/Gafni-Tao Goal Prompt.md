@@ -1,11 +1,16 @@
-# Whole-proof goal prompt (historical)
+# Whole-proof operational goal prompt
 
-**Status: completed release-scope acceptance contract.** GT-00 through GT-26 were completed and the isolated verifier passed. The text below is retained as the original execution contract; it is not a current instruction to restart the formalization. Current status is recorded in `Gafni-Tao Research Agenda.md`, `Gafni-Tao Shitlist.md`, `Reproduction Manifest.md`, and `README.md`.
+**Use:** this is the operational kickoff contract for an agent resuming
+Gafni--Tao work. GT-00 through GT-26 are complete in the current release scope
+and the isolated verifier has passed. On reuse, audit that baseline first and
+continue only owner-requested maintenance or extensions; do not duplicate
+completed work. Current status is recorded in `Gafni-Tao Research Agenda.md`,
+`Gafni-Tao Checklist.md`, `Gafni-Tao Reproduction Manifest.md`, and `README.md`.
 
 ---
 
 Your goal is to complete the entire Gafni-Tao exceptional-interval
-formalization, Shitlist GT-00 through GT-26, without modifying the frozen
+formalization, Checklist GT-00 through GT-26, without modifying the frozen
 Guth-Maynard proof. The frozen boundary is tag
 `gm-foundation-freeze-v1.0.1`, commit
 `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, Lean `v4.30.0`. Treat every
@@ -109,7 +114,7 @@ arithmetic comparisons, and final consumers. Do not end the goal after a
 definition, conditional interface, infrastructure lemma, source crosswalk,
 focused build, axiom audit, numerical experiment, documentation update, or
 one corollary. Do not convert remaining implementation into another plan or
-phase. The exact Shitlist acceptance theorem remains the stopping criterion.
+phase. The exact Checklist acceptance theorem remains the stopping criterion.
 
 Completion requires all of GT-00 through GT-26: exact public Theorems 1.1-1.3;
 the two native Section 3 bounds; actual consumption of frozen GM and the
@@ -120,7 +125,7 @@ Lean/Mathlib logical axioms; every production module imported by the isolated
 root; zero Lean warnings and linter diagnostics; a warning-failing isolated
 principal runner; forbidden-token and dependency scans; exact source hashes
 and reproduction logs; and synchronized updates to the Gafni-Tao architecture,
-research agenda, Shitlist, README, crosswalk, and audit only after the
+research agenda, Checklist, README, crosswalk, and audit only after the
 corresponding theorem is genuinely proved.
 
 Do not modify the frozen GM proof, do not run `push_to_github.bat`, and do not

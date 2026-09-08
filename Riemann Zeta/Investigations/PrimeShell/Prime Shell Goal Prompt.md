@@ -3,7 +3,7 @@
 **Status: completed historical Phase-I acceptance contract.** Phase I was executed from this prompt. The later full-program work corrected the provisional total-profile argument, constructed a nonempty faithful amplitude class, and terminated in the universal spectral no-gain theorem recorded in [Prime Shell Final Report](Prime%20Shell%20Final%20Report.md). The text below is not a current goal prompt.
 
 ```text
-Create a persistent goal to complete Prime Shell Phase I (Prime Shell Shitlist PSH-01 through PSH-06) without modifying the frozen Guth-Maynard proof.
+Create a persistent goal to complete Prime Shell Phase I (Prime Shell Checklist PSH-01 through PSH-06) without modifying the frozen Guth-Maynard proof.
 
 The frozen GM boundary is commit 2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be, tag gm-foundation-freeze-v1.0.1, Lean v4.30.0. Treat every existing RiemannZeta/ Lean module and its GM public theorem chain as read-only. All new code, patches, manifests, logs, and research notes must live under `Investigations/PrimeShell/` or in a separately pinned temporary checkout whose exact state is recorded. Do not import the experiment into RiemannZeta.lean.
 

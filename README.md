@@ -1,120 +1,117 @@
-# Lean 4 Mathematical Formalizations Workspace
+# Lean Mathematics Monorepo
 
-Welcome to the **Lean 4** research workspace! This repository contains Lean 4 formalizations of classical mathematical theorems, Dirichlet polynomial dualities, completed Riemann Zeta symmetries, post-Guth--Maynard exceptional-interval results and route analyses, compactified graph theory subprojects, interactive 3D WebGL visualization tools, and formal paper manuscripts.
+This repository is a workspace for independent Lean 4 mathematics projects,
+research-source archives, and a small visualization utility. Each Lean project
+owns its own toolchain, Lake manifest, build instructions, and claim boundary;
+the repository root is documentation and coordination space, not a Lake
+package.
 
 Author: **S. McColm**
 
----
+## Start here
 
-## 📁 Repository Overview
+| Area | Role | Entry point |
+|---|---|---|
+| [`Riemann Zeta/`](Riemann%20Zeta/) | RH-map research tree, frozen Guth--Maynard foundation, and isolated follow-on projects | [`Riemann Zeta/README.md`](Riemann%20Zeta/README.md) |
+| [`EllipsePerimeter/`](EllipsePerimeter/) | Canonical complete ellipse-perimeter formalization, paper, and archived development history | [`EllipsePerimeter/README.md`](EllipsePerimeter/README.md) |
+| [`Compacted Graphs/`](Compacted%20Graphs/) | Early-stage compactified-graph and cylindrical-topology formalization | [`Compacted Graphs/README.md`](Compacted%20Graphs/README.md) |
+| [`visualizer/`](visualizer/) | Standalone Python/WebGL mathematical visualizations | [`visualizer/README.md`](visualizer/README.md) |
 
-```text
-Lean/
-├── Riemann Zeta/        # RH-map-oriented research tree and formalizations
-│   ├── 1. Classical Analytic Foundations/
-│   ├── 2. Computation and Explicit Zero-Free Control/
-│   ├── 3. Quantum Chaos, Random Matrices and Spectral Physics/
-│   ├── 4. Equivalent Criteria and Functional-Analytic Reformulations/
-│   ├── 5. Critical Line, Mollifiers and Proportions/
-│   ├── 6. de Bruijn-Newman Heat-Flow Route/
-│   ├── 7. Weil, Arithmetic Geometry and Noncommutative Geometry/
-│   ├── 8. Pair Correlation, Zero Statistics and Weil-Form Methods/
-│   ├── 9. Zero Density, Large Values and Prime Transfer/
-│   │   ├── 71 Guth-Maynard, 2026/ # Frozen foundation source root
-│   │   └── 74 Gafni-Tao, 2026/    # Isolated follow-on release
-│   └── Investigations/  # Cross-node inference and route experiments
-├── EllipseLab/          # Current complete ellipse proof and its development history
-├── EllipsePerimeter/    # Earlier partial extraction of the ellipse library
-├── Compacted Graphs/    # Subproject formalizing compactified graphs and cylindrical topology
-├── visualizer/          # Reusable 3D WebGL & 2D Python interactive visualization suite
-└── Article/             # Formal paper manuscripts and drafts (e.g., Ellipse Perimeter paper)
+The human-readable numbered directory names under `Riemann Zeta/` intentionally
+mirror the research map and are stable navigation labels. Lean module names and
+package roots are documented inside the relevant projects.
+
+## Principal formal projects
+
+### Guth--Maynard foundation
+
+The frozen foundation source and its colocated control documents are under
+[`71 Guth-Maynard, 2026/`](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/71%20Guth-Maynard,%202026/).
+The repository records an internally kernel-checked release boundary without
+claiming independent semantic review, publication, or canonical status.
+
+From `Riemann Zeta/`:
+
+```powershell
+cmd /c run_lake_build.bat --no-pause
 ```
 
----
+### Gafni--Tao follow-on
 
-## 🧮 Subprojects & Formalizations
+The isolated project under
+[`74 Gafni-Tao, 2026/`](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/)
+has its own frozen dependency, source ledger, documentation controls, audit, and
+human-facing runner.
 
-### 1. Riemann Zeta Formalization (`Riemann Zeta/`)
-Mechanized Lean 4 formalization of the Guth--Maynard large-values and zero-density chain and its selected analytic inputs. The project contains frozen publication-facing contracts for Guth--Maynard Theorems 1.1 and 1.2, Ingham, Huxley, and the combined exponent $30(1-\sigma)/13$. It also retains the earlier finite Dirichlet-polynomial, completed-zeta, and Hardy-type infrastructure.
+From that directory:
 
-**Claim boundary:** the exact contracts are kernel-checked and project-integrated, with no project axiom or admitted proof in the audited tree. The DFI theorem is the localized signed dyadic specialization needed by the consumer, and the twisted-fourth-moment theorem is the mollifier-specific upper bound, not the full Hughes--Young asymptotic. Independent semantic review, publication of this formalization, and community canonicalization are not claimed.
-
-- **Toolchain**: Lean 4 `v4.30.0`; Mathlib `c5ea00351c28e24afc9f0f84379aa41082b1188f`; PNT+ `4ecb950126c4290293c5662dfe0e884123171df5`.
-- **Publication contracts**: `Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/PublicationContract.lean` proves the exact five source-facing contracts, including the closed-support/source-only coefficient form of Theorem 1.1 and the full range $1/2\le\sigma\le1$ of Theorem 1.2.
-- **Verification**: `scripts/verify_release.ps1` is the canonical verifier. Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated tag `gm-foundation-freeze-v1.0.1`, passed it from a fresh short-path clone. It classifies every project Lean file, enforces exact theorem types, builds the full graph, runs the exhaustive axiom audit and all linters, scans for proof escapes, records provenance, and fails on project diagnostics. `run_lake_build.bat` is its Windows wrapper. Hosted CI is an optional mirror and has not produced a successful artifact.
-- **Source freeze and review packet**: see `Riemann Zeta/verification/SOURCE_FREEZE.md` and `Riemann Zeta/Publication Readiness and Semantic Audit.md`.
-
-#### RH-map organization and isolated follow-on work
-
-The numbered research tree follows the corridors and nodes in [`The RH Map - Aug 30, 2026 - Mermaid Diagram.txt`](Riemann%20Zeta/The%20RH%20Map%20-%20Aug%2030,%202026%20-%20Mermaid%20Diagram.txt); see the [research-organization guide](Riemann%20Zeta/Research%20Organization.md). Numbered placeholders reserve stable locations without claiming that every map node has been formalized. Cross-node work and route experiments live under `Investigations/`. Follow-on Lean projects remain outside the frozen foundation's import graph and use their own pinned packages and verification procedures.
-
-- **[74 Gafni--Tao, 2026](Riemann%20Zeta/9.%20Zero%20Density,%20Large%20Values%20and%20Prime%20Transfer/74%20Gafni-Tao,%202026/README.md)**: A kernel-checked formalization of the release-scope results in Gafni--Tao, *Primes in almost all short intervals* (`arXiv:2505.24017v1`). The public root proves the general Theorems 1.1--1.3 and the two displayed Section 3 sample inequalities, including the specialization of Theorem 1.1 using the frozen Guth--Maynard density theorem. The latest recorded isolated run passed on 2026-09-07: all 3,592 local PNT+ jobs and 10,344 Gafni--Tao jobs completed with zero diagnostics, and the audit reported only `propext`, `Classical.choice`, and `Quot.sound`. The release does not claim the full best-known numerical curve, Ford's optimized constants, external review, or new mathematics.
-- **[Prime Shell investigation](Riemann%20Zeta/Investigations/PrimeShell/README.md)**: This completed experiment reached its permitted **ROUTE DISPROVED** endpoint. Lean proves that every faithful separated amplitude in the modeled explicit-formula range has `3 < kappaXi`, so the exact Zeta23 output `2 - kappaXi` cannot improve `2/3` by any positive amount, even under perfect arithmetic control. The endpoint `primeShell_universal_no_gain_native` is non-vacuous and its audit reports only the standard logical dependencies above. It proves no new theorem about zeta zeros and does not rule out connected positive-valley windows, other source constructions, or approaches outside `FaithfulAmplitudeShell`.
-
-### 2. Ellipse Perimeter Formalization (`EllipseLab/`, `EllipsePerimeter/`, and `Article/`)
-The complete current Lean theorem is `EllipseOmega.ellipse_perimeter_series` in `EllipseLab/EllipseLab/Shape.lean`. It proves the classical infinite-series formula for the perimeter of an ellipse with semiaxes $A = \max(a,b)$ and $B = \min(a,b)$:
-
-$$P(a,b) = 4A E(e) = 2\pi A \sum_{n=0}^{\infty} \left(\frac{(2n)!}{2^{2n}(n!)^2}\right)^2 \frac{e^{2n}}{1-2n}, \qquad e = \sqrt{1 - \frac{B^2}{A^2}}$$
-
-- **Canonical implementation**: `EllipseLab/EllipseLab/Shape.lean` contains the integrated geometric, elliptic-integral, endpoint, Wallis, and series proof. `EllipseLab.lean` imports it into the package root.
-- **Development history**: the numbered `EllipseLab/EllipseLab/Intermediate state *.txt` files preserve earlier proof iterations; they are not production Lean modules.
-- **Earlier partial extraction**: `EllipsePerimeter/` contains proved Wallis and open-interval binomial-series components. Its `Boundary.lean`, `EllipticE.lean`, and `Geometry.lean` files are currently empty, so that package must not be cited as containing the complete theorem.
-- **Paper**: Draft manuscripts aligned with the complete theorem are available in `Article/`; see its README for version roles.
-
-### 3. Compacted Graphs (`Compacted Graphs/`)
-A dedicated Lean 4 project for formalizing compactified topological graphs, single-valued fiber bundle projections, and cylindrical coordinate mappings $(r, \theta, z)$. (Currently in early stages of development.)
-
----
-
-## 🎨 Interactive 3D WebGL Visualization Suite (`visualizer/`)
-
-Includes a Python visualization engine for interactive 3D WebGL exploration in your browser via `dashboard.html`:
-- **3D Cylindrical Compactification**: Visualizes $3\text{D}$ cylindrical spirals $(r(\theta), \theta, z)$ alongside their compactified torus ($S^1 \times S^1$) embeddings.
-- **Riemann Zeta Critical Line Trajectory**: Animates $\zeta(\frac{1}{2} + it)$ for $t \in [0, 40]$, showing 3D spatial origin-axis collapses at nontrivial zeros and 2D complex plane origin-crossing loops.
-
-### Running the Visualizer
-```bash
-python visualizer/visualizer.py
-```
-Or start the local server:
-```bash
-python visualizer/server.py
-```
-
----
-
-## 🛠️ Local Build & Verification
-
-```bash
-# Verify Riemann Zeta
-cd "Riemann Zeta"
-pwsh -NoProfile -File scripts/verify_release.ps1
-
-# Verify the isolated Gafni--Tao release
-cd "9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026"
+```powershell
 cmd /c run_gafni_tao_build.bat --no-pause
+```
 
-# Reproduce the isolated Prime Shell project
-cd "../../Investigations/PrimeShell/Extension"
+### Prime Shell investigation
+
+[`Riemann Zeta/Investigations/PrimeShell/`](Riemann%20Zeta/Investigations/PrimeShell/)
+is an isolated route-analysis project. Its documented endpoint is route-specific
+and is not a new theorem about zeta zeros.
+
+From `Riemann Zeta/Investigations/PrimeShell/Extension/`:
+
+```powershell
 lake update
 lake build
 lake env lean PrimeShell/Audit.lean
+```
 
-# Verify the complete ellipse formalization
-cd "../../../../EllipseLab"
-lake build
+### Ellipse perimeter
 
-# Optionally build the earlier partial extraction
-cd "../EllipsePerimeter"
-lake build
+`EllipsePerimeter/` is the sole production package for the ellipse theorem. The
+former EllipseLab proof has been consolidated into it; historical iterations
+are inert records under `EllipsePerimeter/archive/`, and the associated article
+files are under `EllipsePerimeter/paper/`.
 
-# Verify Compacted Graphs
-cd "../Compacted Graphs"
+From `EllipsePerimeter/`:
+
+```powershell
 lake build
 ```
 
----
+### Compacted Graphs
 
-## 📄 License
+From `Compacted Graphs/`:
 
-This repository is licensed under the MIT License - see the [LICENSE](Riemann%20Zeta/LICENSE) file for details.
+```powershell
+lake build
+```
+
+## Verification policy
+
+Formal builds are intentionally local. Heavyweight GitHub Actions workflows
+were removed because they duplicated project-owned verifiers without providing
+reliable evidence. Use each project's pinned local command and consult its audit
+and reproduction documents for the exact verification scope.
+
+`push_to_github.bat` is an owner-operated synchronization helper. It is not a
+build command and is not invoked by project verification.
+
+## Sources, archives, and generated files
+
+Pinned papers, TeX/source archives, database snapshots, and upstream source
+captures are intentional research artifacts. Their provenance and hashes live
+beside the projects that consume them. Temporary extraction tools, caches,
+logs, backups, and generated page images are excluded from version control.
+
+[`directory_tree.txt`](directory_tree.txt) is a generated, repository-relative
+inventory. Regenerate it from the root with:
+
+```powershell
+python list_files.py
+```
+
+## License and third-party material
+
+Original repository material is offered under
+[MIT No Attribution (MIT-0)](LICENSE). Vendored or captured third-party material
+retains its original copyright and license; see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and the project-local source
+ledgers.

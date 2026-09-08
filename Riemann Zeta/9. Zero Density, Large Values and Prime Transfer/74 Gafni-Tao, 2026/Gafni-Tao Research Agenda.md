@@ -171,11 +171,12 @@ revision `4ecb950126c4290293c5662dfe0e884123171df5`; the sole edit deletes four
 unreachable declarations from `Wiener.lean`, including the two admitted
 Fourier-decay declarations. Their absence changes no retained theorem. The
 runner validates that provenance and rejects every diagnostic. See
-`Reproduction Manifest.md` for the full ledger.
+`Gafni-Tao Reproduction Manifest.md` for the full ledger.
 
-The recorded release run passed on 2026-09-07 at 03:32:47 -07:00. It built
-3,592 local PNT+ jobs and 10,344 Gafni-Tao jobs with zero diagnostics and saved
-the complete output as `logs/gafni_tao_release_20260907_033222.log`.
+The recorded release run passed on 2026-09-07 at 03:32:47 -07:00. It built the
+complete local PNT+ and Gafni-Tao roots with zero diagnostics. Raw runner logs
+are transient ignored evidence; rerun the principal command for the current
+checkout.
 
 ## 8. Source and theorem audit discipline
 
@@ -187,7 +188,7 @@ The following tests remain distinct:
 3. **Release test:** the theorem is reachable from the root, centrally audited,
    reproducible from pinned inputs, and documented without overclaim.
 
-All three are required for a checked Shitlist theorem item.
+All three are required for a checked Checklist theorem item.
 
 ## 9. Explicitly optional continuation
 
@@ -209,7 +210,7 @@ same revision:
 
 - `Gafni-Tao Architecture.md`;
 - `Gafni-Tao Crosswalk.md`;
-- `Gafni-Tao Shitlist.md`;
+- `Gafni-Tao Checklist.md`;
 - this agenda;
 - `README.md`;
 - `Extension/GafniTao/Audit.lean`; and

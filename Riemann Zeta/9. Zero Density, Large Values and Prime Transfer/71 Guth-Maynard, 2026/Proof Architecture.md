@@ -9,8 +9,8 @@ flowchart TD
     HBR["Heath-Brown 1979<br/>difference-set mean square<br/>AVAILABLE AS REFERENCE"]
 
     PC["#20 Exact publication contracts<br/>DONE INTERNALLY<br/>GM Theorems 1.1 and 1.2, Ingham,<br/>Huxley and combined 30/13"]
-    FV["#20 Canonical foundation verifier<br/>DONE INTERNALLY<br/>303/303 modules classified, exact-type audit,<br/>zero diagnostics and immutable CI pins"]
-    LR["#20 Clean-clone release evidence<br/>DONE - LOCAL RELEASE GATE<br/>v1.0.1 exact-SHA fresh-clone PASS and tag published;<br/>hosted CI SIGTERM recorded as non-blocking"]
+    FV["#20 Canonical foundation verifier<br/>DONE INTERNALLY<br/>303/303 modules classified, exact-type audit,<br/>zero diagnostics; local verifier maintained"]
+    LR["#20 Clean-clone release evidence<br/>DONE - LOCAL RELEASE GATE<br/>v1.0.1 exact-SHA fresh-clone PASS and tag published;<br/>historical hosted CI retired"]
 
     ZB["Zeta analytic foundations<br/>DONE"]
     LZ["Local zero count<br/>DONE"]

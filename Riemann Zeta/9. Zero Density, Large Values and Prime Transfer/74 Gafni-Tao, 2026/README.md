@@ -209,25 +209,42 @@ The runner verifies the upstream and retained SHA-256 values, exact closure
 size, sole permitted divergence, absence of the removed declarations, and zero
 Lean diagnostics. This is an auditable local derivative of the pinned source,
 not a claim that the upstream repository itself is warning-free. See
-`Reproduction Manifest.md`.
+`Gafni-Tao Reproduction Manifest.md`.
 
 The latest recorded isolated run passed after the map-oriented move on
-2026-09-07, built all 3,592 local PNT+ jobs and all 10,344 Gafni-Tao root jobs
-with zero diagnostics, and is preserved in
-[`logs/gafni_tao_release_20260907_075754.log`](logs/gafni_tao_release_20260907_075754.log).
+2026-09-07, building the complete local PNT+ and Gafni-Tao roots with zero
+diagnostics. Runner logs are transient ignored evidence; rerun the command
+above to produce evidence for the current checkout.
 
-## Documentation map
+## Project-control documents
 
-- `Gafni-Tao Architecture.md`: Mermaid dependency graph.
-- `Gafni-Tao Crosswalk.md`: source-to-declaration table and conventions.
-- `Gafni-Tao Research Agenda.md`: mathematical scope and maintenance rules.
-- `Gafni-Tao Shitlist.md`: GT-00 through GT-26 acceptance ledger.
-- `Gafni-Tao Sources.md`: source research and provenance.
-- `Reproduction Manifest.md`: exact pins, commands, hashes, and local PNT+
-  derivation.
+These files have distinct roles and should not be merged:
+
+- `README.md` (this file): concise project status, entry points, and verification
+  instructions.
+- `Gafni-Tao Architecture.md`: the canonical raw-Mermaid dependency and status
+  dashboard. It deliberately contains Mermaid source only.
+- `Gafni-Tao Checklist.md`: the detailed GT-00 through GT-26 acceptance ledger.
+- `Gafni-Tao Goal Prompt.md`: the operational kickoff contract for an agent
+  resuming work within the frozen-foundation boundary.
+- `Gafni-Tao Research Agenda.md`: mathematical scope, strategy, non-claims, and
+  maintenance rules.
+- `Gafni-Tao Crosswalk.md`: source-to-declaration map and specification
+  conventions.
+- `Gafni-Tao Reproduction Manifest.md`: exact pins, commands, hashes, and the
+  local PNT+ derivation.
+- `Gafni-Tao Sources.md` and `Sources/`: source research, provenance, and pinned
+  source artifacts.
+- `Extension/GafniTao/Audit.lean`: executable theorem-dependency audit.
 - `Dependencies/PrimeNumberTheoremAndClean/README.md`: exact minimal PNT+
-  closure and the sole source edit.
-- `Extension/GafniTao/Audit.lean`: executable dependency audit.
+  closure and its sole source edit.
+
+Root-level Lean files under `Extension/` whose names begin with `Probe` (plus
+the similarly named API/check experiments) are unimported legacy development
+probes, not production theorem modules. They remain adjacent to the frozen
+release because the release-integrity scan covers the entire Extension Lean
+tree; relocating or deleting them is deferred to a deliberately versioned
+release-boundary change.
 
 ## Deliberate non-claims
 

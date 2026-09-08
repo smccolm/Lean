@@ -184,7 +184,7 @@ Declaration linter gate: PASS
 Found 0 errors in 9402 declarations (plus 7925 automatically generated ones)
 ```
 
-The audit covered 14,290 discovered nonprivate project theorems and reported only the permitted dependencies `propext`, `Classical.choice`, and `Quot.sound`. The timestamped verifier evidence is `logs/foundation_freeze_20260829_194359.log` with manifest `logs/foundation_freeze_20260829_194359.json`. This verifies that the Prime Shell subtree did not disturb the frozen GM build; it is not semantic evidence beyond the theorem-level claims itemized above.
+The audit covered 14,290 discovered nonprivate project theorems and reported only the permitted dependencies `propext`, `Classical.choice`, and `Quot.sound`. The historical timestamped log and manifest were transient and are not retained; rerun the frozen foundation verifier for current evidence. This verifies that the Prime Shell subtree did not disturb the frozen GM build; it is not semantic evidence beyond the theorem-level claims itemized above.
 
 ## Scope and next decision
 

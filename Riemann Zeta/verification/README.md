@@ -36,11 +36,8 @@ both retained regressions, executes the exhaustive dependency audit, and runs
 all project linters. Any Lean warning, tactic suggestion, linter finding,
 unclassified file, failed output gate, or nonzero stage fails the run.
 
-The optional CI workflow uses two `ubuntu-24.04` jobs with actions pinned to
-immutable commits. The first builds the DFI-heavy prefix under an exact-SHA
-cache key; the dependent job is intended to invoke the same release script and
-upload a SHA-named log and JSON manifest. Runs `33258211182` and `33278864901`
-both ended with external exit `143` before artifact upload. No hosted PASS or
-artifact is claimed. This missing supplemental evidence does not change the
-exact-SHA local verifier result, and hosted CI is not a prerequisite for the
-internal foundation freeze or map-organized follow-on work.
+The former hosted workflow was retired during repository consolidation after
+historical runs `33258211182` and `33278864901` ended with external exit `143`
+before artifact upload. No hosted PASS or artifact is claimed. Local execution
+of the canonical verifier is the maintained authority for the internal
+foundation freeze and map-organized follow-on work.

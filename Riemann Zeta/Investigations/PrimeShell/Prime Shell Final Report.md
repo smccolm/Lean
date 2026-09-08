@@ -95,7 +95,7 @@ The isolated root, changed modules, and `PrimeShell/Audit.lean` must elaborate a
 
 The immutable pinned Zeta23 source emits pre-existing warning and linter diagnostics when Lake replays it. Prime Shell does not suppress these or call the upstream build warning-free. Direct elaboration of Prime Shell source emits no project warning.
 
-The frozen GM verifier is a separate check under Lean `v4.30.0`; it returned `FINAL RESULT: PASS`. Its evidence is `logs/foundation_freeze_20260830_040456.log` and `.json`. Prime Shell remains absent from `RiemannZeta.lean`. The owner-operated `push_to_github.bat` is not part of verification and was not run.
+The frozen GM verifier is a separate check under Lean `v4.30.0`; it returned `FINAL RESULT: PASS`. Raw transient logs are not retained and the result should be reproduced with the frozen foundation verifier. Prime Shell remains absent from `RiemannZeta.lean`. The owner-operated `push_to_github.bat` is not part of verification and was not run.
 
 ## External status
 

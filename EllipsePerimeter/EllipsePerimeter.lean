@@ -1,5 +1,2 @@
-import EllipsePerimeter.Wallis
-import EllipsePerimeter.Binomial
-import EllipsePerimeter.EllipticE
-import EllipsePerimeter.Boundary
-import EllipsePerimeter.Geometry
+import EllipsePerimeter.Basic
+import EllipsePerimeter.Shape

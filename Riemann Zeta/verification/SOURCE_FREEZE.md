@@ -80,24 +80,16 @@ than to an ANTEDB lemma. The relevant labels at this snapshot are:
 - Mathlib: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - PrimeNumberTheoremAnd:
   `4ecb950126c4290293c5662dfe0e884123171df5`.
-- GitHub Actions are pinned to immutable commit SHAs in
-  [`../../.github/workflows/riemann-zeta-ci.yml`](../../.github/workflows/riemann-zeta-ci.yml):
-  `actions/checkout` v7.0.1 at
-  `3d3c42e5aac5ba805825da76410c181273ba90b1`, `leanprover/lean-action`
-  v1.5.0 at `38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9`, and
-  `actions/upload-artifact` v7.0.1 at
-  `043fb46d1a93c77aae656e7c1c64a875d1fc6a0a`.
-- CI first primes the DFI-heavy proof prefix into the exact-SHA Lake cache and
-  then runs the unchanged canonical verifier in a dependent job. The split
-  addresses runner termination risk and does not weaken the verified scope.
+- The former GitHub Actions mirror used immutable action pins, but its
+  heavyweight workflows were retired during repository consolidation. The
+  local canonical verifier is the maintained verification interface.
 - The release verifier is `scripts/verify_release.ps1 -Mode release`; it writes
   a SHA-bound log and JSON manifest and refuses a dirty tree.
 - Exact commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`, published annotated
   tag `gm-foundation-freeze-v1.0.1`, passed that verifier from a fresh
   short-path clone. This is the accepted internal freeze evidence.
-- Hosted runs `33258211182` and `33278864901` ended with external exit `143`
-  before artifact upload. No hosted PASS is claimed; CI is supplemental and
-  non-blocking.
+- Historical hosted runs `33258211182` and `33278864901` ended with external
+  exit `143` before artifact upload. No hosted PASS is claimed.
 
 ## Claim boundary
 

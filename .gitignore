@@ -1,4 +1,4 @@
-# Lean 4 & Lake build directories
+# Lean 4 and Lake build directories
 .lake/
 build/
 logs/
@@ -7,14 +7,34 @@ logs/
 *.c
 *.log
 
-# Temporary Word & OS files
+# Temporary tooling and extraction environments
+.tmp_*/
+**/.tmp_*/
+.research/
+**/.research/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.dll
+.venv/
+.venv*/
+venv/
+env/
+
+# Temporary documents, backups, and operating-system files
 ~$*.docx
 *.tmp
 *.bak
+.tmp_*.png
+*.swp
 Thumbs.db
 .DS_Store
 
-# Scratch files
+# Editor and scratch directories
+.vscode/
+.idea/
 scratch/
 rewrite_env.sh
 review_text.txt

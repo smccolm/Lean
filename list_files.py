@@ -25,7 +25,7 @@ def create_directory_tree_safe(startpath, file_handle):
     Generates a visual directory tree structure using only basic ASCII characters
     and writes it to the provided file handle.
     """
-    file_handle.write(f"--- Project Structure for: {startpath} ---\n\n")
+    file_handle.write("--- Generated repository tree (run python list_files.py) ---\n\n")
     
     for root, dirs, files in os.walk(startpath, topdown=True):
         # In-place modification of dirs to prune the walk
@@ -37,7 +37,8 @@ def create_directory_tree_safe(startpath, file_handle):
         indent = '|   ' * (level - 1) + '+-- ' if level > 0 else ''
         
         # Write the current directory name
-        file_handle.write(f'{indent}{os.path.basename(root) or start_path}/\n')
+        display_name = './' if root == startpath else os.path.basename(root) + '/'
+        file_handle.write(f'{indent}{display_name}\n')
         
         # ASCII-safe sub-indentation for files
         sub_indent = '|   ' * level

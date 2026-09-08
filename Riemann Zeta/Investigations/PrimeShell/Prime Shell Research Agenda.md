@@ -137,7 +137,7 @@ Completion requires all of the following:
 - the frozen GM verifier still passes and no frozen source is modified;
 - the two-sided gain comparator elaborates;
 - the source manifest records every production file by SHA-256; and
-- architecture, Shitlist, agenda, source ledger, README, reports, audit, and reproduction instructions agree.
+- architecture, checklist, agenda, source ledger, README, reports, audit, and reproduction instructions agree.
 
 The immutable Zeta23 dependency’s own warning output remains disclosed. It is not suppressed and is not described as a zero-warning upstream build.
 

@@ -1,16 +1,14 @@
 # EllipsePerimeter
 
-This package is an earlier, incomplete extraction of the ellipse-perimeter development. It is retained because its Wallis-coefficient and open-interval binomial-series modules contain useful proved components, but it is not the canonical home of the completed perimeter theorem.
+This is the canonical Lean 4 ellipse-perimeter formalization. The complete proof formerly developed under the `EllipseLab` project name now lives here under the stable `EllipsePerimeter` package name.
 
-Current module status:
+The principal result is:
 
-- `EllipsePerimeter/Wallis.lean`: Wallis and elliptic-series coefficient definitions and recurrences.
-- `EllipsePerimeter/Binomial.lean`: summability and the identity for the square-root series on `|x| < 1`.
-- `EllipsePerimeter/Boundary.lean`: empty placeholder.
-- `EllipsePerimeter/EllipticE.lean`: empty placeholder.
-- `EllipsePerimeter/Geometry.lean`: empty placeholder.
+```lean
+EllipseOmega.ellipse_perimeter_series
+```
 
-The complete theorem `EllipseOmega.ellipse_perimeter_series` is instead in `../EllipseLab/EllipseLab/Shape.lean` and is imported by the `EllipseLab` package root.
+`EllipsePerimeter/Shape.lean` connects the full-loop parametric arc length to the complete elliptic integral, proves the open-interval series, handles the degenerate endpoint, and states the symmetric result for nonnegative semiaxes. `EllipsePerimeter.lean` is the package root and imports the complete proof.
 
 ## Build
 
@@ -20,6 +18,12 @@ From this directory:
 lake build
 ```
 
-A successful build here verifies only the partial modules listed above. It must not be reported as verification of the complete geometric perimeter formula.
+A successful build verifies the complete geometric perimeter theorem and its supporting declarations.
 
-The current build also emits a style-whitespace linter warning from the package root import file. This does not prevent elaboration, but this partial package is not documented as warning-free.
+## Papers and history
+
+- `paper/` contains the associated manuscripts and Word artifacts.
+- `archive/development-history/` preserves the numbered intermediate proof states outside the production Lean namespace.
+- `archive/early-extraction/` preserves the useful source from the older partial `EllipsePerimeter` extraction as inert `.lean.txt` records.
+
+The archived files are historical evidence, not imported Lean modules.
