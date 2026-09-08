@@ -2,7 +2,8 @@
 
 `Sources/` is the provenance authority for node 73. It currently contains the
 exact v2 PDF and TeX source archive for the target paper, the Baker--Harman--
-Pintz paper used in Proposition 2.3(ii), plus pin and hash records.
+Pintz paper used in Proposition 2.3(ii), the Erdős--Selfridge paper used in
+Theorem 1.10, plus pin and hash records.
 
 ## Primary paper
 
@@ -31,6 +32,19 @@ Primes, II*, *Proceedings of the London Mathematical Society* 83 (2001),
   and numerical loss estimates. No local Lean theorem currently discharges
   this dependency.
 
+## Erdős--Selfridge input
+
+P. Erdős and J. L. Selfridge, *The Product of Consecutive Integers Is Never a
+Power*, *Illinois Journal of Mathematics* 19 (1975), 292--301.
+
+- `Sources/erdos-selfridge-1975.pdf`
+- Required result: Theorem 1, specialized to squares.
+- Tao-facing use: equality of two factorial squarefree components would make
+  a product of at least two consecutive positive integers a square; excluding
+  that case leaves at most two consecutive factorial indices in each fiber.
+- Formalization warning: the online `formal-conjectures` declaration is
+  explicitly unfinished (`sorry`) and cannot be imported or copied as proof.
+
 ## Source policy
 
 - Pin an explicit version; never silently replace these files with a later
@@ -49,5 +63,6 @@ Primes, II*, *Proceedings of the London Mathematical Society* 83 (2001),
 The source archive has been validated as readable but not extracted into the
 repository. An initial theorem-number and dependency survey is recorded in
 `Tao Goal Prompt.md` and `Tao Architecture.md`; it is not yet the authoritative
-row-by-row source crosswalk. The Baker--Harman--Pintz artifact is pinned, but
-pinning a paper is not a Lean proof of Proposition 2.3(ii).
+row-by-row source crosswalk. The Baker--Harman--Pintz and Erdős--Selfridge
+artifacts are pinned, but pinning papers is not a Lean proof of either missing
+dependency.

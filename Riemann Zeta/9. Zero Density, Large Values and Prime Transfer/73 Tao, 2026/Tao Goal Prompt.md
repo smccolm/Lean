@@ -2,8 +2,11 @@
 
 **Use:** this is the active completion contract for the Tao 2026
 formalization. The owner activated it on 8 September 2026. The current verified
-stop line is the Proposition 2.3(i),(iii) milestone: the source
-definitions and public conclusion contracts compile, the exact
+stop line is the Proposition 2.3(i),(iii), exact one-term sums, factorial-
+endpoint/counting bridge, and square-family lower-asymptotic milestone,
+including the reverse-big-O half of the `F₃` and factorial-triple square-root
+scale contracts. The source definitions and public conclusion contracts
+compile, the exact
 `GafniTao.Theorem11` closure is frozen, and its fixed-power dyadic bridge has
 been transferred, with the full prime-power tail and finite prefix assembly,
 to Tao's literal global prime-free endpoint measure. Keep going until the exact public theorems and

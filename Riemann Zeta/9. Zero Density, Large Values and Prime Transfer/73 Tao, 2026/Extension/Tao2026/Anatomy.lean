@@ -213,20 +213,26 @@ theorem squarefreeComponent_eq_iff_mul_eq_sq {a b : ℕ} (ha : a ≠ 0)
     obtain ⟨u, hu⟩ := exists_sq_mul_squarefreeComponent ha.bot_lt
     obtain ⟨v, hv⟩ := exists_sq_mul_squarefreeComponent hb.bot_lt
     refine ⟨u * v * squarefreeComponent a, ?_⟩
-    rw [← hu, ← hv, ← hcomponents]
-    ring
+    calc
+      a * b = (u ^ 2 * squarefreeComponent a) *
+          (v ^ 2 * squarefreeComponent b) :=
+        congrArg₂ (· * ·) hu.symm hv.symm
+      _ = (u * v * squarefreeComponent a) ^ 2 := by
+        rw [← hcomponents]
+        ring
   · rintro ⟨m, hm⟩
     have hm0 : m ≠ 0 := by
       intro hmzero
-      subst m
-      simp at hm
-      exact (mul_ne_zero ha hb) hm
+      apply mul_ne_zero ha hb
+      simpa [hmzero] using hm
     have hparity (p : ℕ) :
         Odd (a.factorization p) ↔ Odd (b.factorization p) := by
       have hfactorization :
           a.factorization p + b.factorization p = 2 * m.factorization p := by
-        rw [← Nat.factorization_mul ha hb, hm, Nat.factorization_pow]
-        simp
+        have hfac := congrArg (fun n : ℕ => n.factorization p) hm
+        change (a * b).factorization p = (m ^ 2).factorization p at hfac
+        rw [Nat.factorization_mul ha hb, Nat.factorization_pow] at hfac
+        simpa only [Pi.add_apply, Nat.cast_ofNat, Nat.mul_comm] using hfac
       rw [Nat.odd_iff, Nat.odd_iff]
       omega
     have hprimeFactors :

@@ -50,4 +50,18 @@ theorem countUpTo_zero (S : Set ℕ) : countUpTo S 0 = 0 := by
   classical
   simp [countUpTo]
 
+/-- Literal value counts are monotone under inclusion of sets. -/
+theorem countUpTo_mono {S T : Set ℕ} (hST : S ⊆ T) (x : ℕ) :
+    countUpTo S x ≤ countUpTo T x := by
+  classical
+  unfold countUpTo
+  apply Finset.card_le_card
+  intro n hn
+  rw [Finset.mem_filter] at hn ⊢
+  exact ⟨hn.1, hST hn.2⟩
+
+theorem factorialThreeOneTermCount_le_factorialThreeCount (x : ℕ) :
+    factorialThreeOneTermCount x ≤ factorialThreeCount x :=
+  countUpTo_mono factorialThreeOneTermSet_subset_factorialThreeSet x
+
 end Tao2026

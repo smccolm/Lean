@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `one-term-exact-sums-0.8`. It
+This is a development manifest, version `erdos-selfridge-source-pin-0.13`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -15,6 +15,8 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 - Provenance and download URLs: `Sources/PINS.md`.
 - Baker--Harman--Pintz 2001 PDF: pinned by SHA-256 with DOI, mirror origin,
   and theorem/page locators; this is source provenance, not a formal proof.
+- Erdős--Selfridge 1975 PDF: pinned by SHA-256 with archival origin and exact
+  theorem locator; this is source provenance, not yet a formal proof.
 
 ## Lean package
 
@@ -23,8 +25,9 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 - Lean toolchain: `leanprover/lean4:v4.30.0`.
 - Mathlib commit: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - Production modules: `Anatomy`, `Intervals`, `Asymptotics`, `Counting`,
-  `PrimeIntervals`, `PowerfulNumbers`, `SmoothNumbers`, `PublicStatements`,
-  and `Audit`.
+  `FactorialAsymptotics`, `FactorialIntervals`, `FactorialOneTerm`,
+  `PrimeIntervals`, `PowerfulNumbers`, `SmoothNumbers`,
+  `PublicStatements`, and `Audit`.
 - Frozen theorem dependency: the exact 1,226-module import closure of
   `GafniTao.Theorem11`, with 852 `GafniTao`, 291 `RiemannZeta`, and 83
   `PrimeNumberTheoremAnd` source modules.
@@ -45,7 +48,14 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   number `a²b³` parameterization with squarefree `b`, including uniqueness,
   is proved and audited as elementary infrastructure for Corollary 2.11. It
   also yields the exact finite squarefree-cube sum for `VB¹`; the zeta-constant
-  asymptotic remains open.
+  asymptotic remains open. All interval predicates now carry the source's
+  `H≥1` convention, and the exact type-`F₃`/factorial-square endpoint
+  correspondence is proved and audited. On finite ranges, largest-index
+  projection is proved to have image exactly `F₃∩[1,x]`, giving the audited
+  inequality `factorialThreeCount x ≤ factorialSquareTripleCount x`. The
+  one-term set is characterized by square multiples of `s(a!)`; the square
+  subfamily gives audited `⌊√x⌋-1` lower bounds for endpoints and triples and
+  the full reverse-big-O half of their `x^(1/2+o(1))` scale contracts.
 
 ## Reproduction command
 

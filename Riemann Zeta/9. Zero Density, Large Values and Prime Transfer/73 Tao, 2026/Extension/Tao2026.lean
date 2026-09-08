@@ -2,6 +2,10 @@ import Tao2026.Anatomy
 import Tao2026.Asymptotics
 import Tao2026.Audit
 import Tao2026.Counting
+import Tao2026.FactorialIntervals
+import Tao2026.FactorialOneTerm
+import Tao2026.FactorialAsymptotics
+import Tao2026.FactorialFibers
 import Tao2026.Intervals
 import Tao2026.PrimeIntervals
 import Tao2026.PowerfulNumbers

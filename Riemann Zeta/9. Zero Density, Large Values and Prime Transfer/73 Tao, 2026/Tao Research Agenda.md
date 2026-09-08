@@ -79,6 +79,13 @@ Section 3/4/6 consumer that does not presuppose this missing theorem. A
 density-zero statement remains an inadequate replacement for the proved fixed
 power saving.
 
+The other newly isolated dependency is Erdős--Selfridge Theorem 1, whose
+square case controls the factorial-squarefree-component fibers in Theorem
+1.10. Its original 1975 paper is pinned and hashed. No completed Lean proof
+was found: the otherwise relevant `formal-conjectures` declaration contains
+`sorry`, so this theorem must be recursively formalized here (or imported only
+from a future immutable, audited proof release).
+
 ## Phase 5 - release engineering
 
 When real endpoints exist, add:

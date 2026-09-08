@@ -26,13 +26,17 @@ flowchart TD
         direction TB
         ASYM["Precise O, o(1), x^o(1), and ~ APIs<br/>initial quantified definitions compile"]
         ANATOMY["PROVED anatomy interfaces<br/>largest prime, squarefree component,<br/>unique powerful a²b³ decomposition"]
-        INTERVALS["Consecutive interval product;<br/>bad, very bad, and type-F3 predicates compile"]
+        INTERVALS["PROVED interval interfaces<br/>H≥1 enforced + factorial product identity"]
         SETS["Literal B, VB, F3 unions/endpoints<br/>and one-term subsets compile"]
-        FACTEQ["Ordered factorial-equation solution set,<br/>finite count, and root uniqueness compile"]
+        FACTEQ["PROVED factorial bridge<br/>ordered triples, root uniqueness,<br/>exact F3 endpoint image + count inequality"]
+        F31["PROVED F3 one-term bridge<br/>square-multiple characterization<br/>and floor(sqrt x)-1 lower family"]
+        F3LOWER["PROVED square-root lower asymptotics<br/>reverse-big-O for F3 and triples"]
         ASYM --> SETS
         ANATOMY --> INTERVALS
         INTERVALS --> SETS
         ANATOMY --> FACTEQ
+        FACTEQ --> F31
+        F31 --> F3LOWER
     end
 
     CONTRACTS --> ASYM
@@ -156,7 +160,7 @@ flowchart TD
 
     DOCS["Goal Prompt complete<br/>Checklist / Crosswalk / Manifest continuously updated"] --> CROSSWALK
     SHELL["Extension/Tao2026<br/>active pinned Mathlib package builds"] --> CONTRACTS
-    MILESTONE["Proposition 2.3(i),(iii) verifier<br/>current development milestone PASS"] --> SHELL
+    MILESTONE["Proposition 2.3(i),(iii), exact one-term sums,<br/>factorial lower-asymptotic verifier PASS"] --> SHELL
 
     LEGEND["Status: green = verified groundwork<br/>blue = inspected candidate/ready shell<br/>yellow = specified but unproved<br/>red = major unformalized input or endpoint"]
 
@@ -166,8 +170,8 @@ flowchart TD
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,ANATOMY,AUDIT,RUNNER complete
-    class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,INTERVALS,SETS,FACTEQ,CONTRACTS ready
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,AUDIT,RUNNER complete
+    class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
     class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
     class SMOOTH,PRIMEII,VINO,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent
     class LEGEND note

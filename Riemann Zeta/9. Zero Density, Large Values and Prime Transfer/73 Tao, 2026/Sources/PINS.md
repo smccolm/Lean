@@ -34,6 +34,27 @@ local artifact is therefore the byte-identical identity recorded here from the
 accessible University of Maryland archival mirror; the DOI above remains the
 bibliographic authority.
 
+## Erdős--Selfridge factorial-fiber input
+
+- Authors: P. Erdős and J. L. Selfridge
+- Title: *The Product of Consecutive Integers Is Never a Power*
+- Journal: *Illinois Journal of Mathematics* 19 (1975), 292--301
+- MR: `MR51 #12692`
+- Archived PDF origin: <https://combinatorica.hu/~p_erdos/1975-46.pdf>
+- Bibliographic authority: <https://renyi.hu/en/node/4094>
+- Retrieved: 8 September 2026
+- Local artifact: `erdos-selfridge-1975.pdf`
+- Source locator: Theorem 1 is the full assertion that
+  `(n+1)⋯(n+k)=x^l` has no solutions for `n≥0`, `k≥2`, and `l≥2`.
+  Tao uses its square case after Theorem 1.10 to show that, for fixed
+  `(a₂,a₃)`, at most two values of `a₁` share the required factorial
+  squarefree component.
+
+No completed Lean proof was located. The Google DeepMind
+`formal-conjectures` entry for the corresponding consecutive-integer theorem
+contains a `sorry` body and is research metadata only; it is not a permissible
+dependency for this project.
+
 The local filenames and SHA-256 values are authoritative in
 `SHA256SUMS.txt`. These third-party artifacts retain their original rights and
 are not covered by the repository's MIT-0 grant.

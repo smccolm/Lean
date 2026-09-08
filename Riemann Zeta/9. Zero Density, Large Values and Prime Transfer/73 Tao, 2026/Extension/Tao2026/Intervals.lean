@@ -133,6 +133,15 @@ theorem factorial_mul_consecutiveProduct (N H : ℕ) :
       rw [← mul_assoc, ih, Nat.factorial_succ]
       ring
 
+/-- A product of positive consecutive naturals is nonzero, including the
+empty-product case. -/
+theorem consecutiveProduct_ne_zero (N H : ℕ) :
+    consecutiveProduct N H ≠ 0 := by
+  rw [consecutiveProduct, Finset.prod_ne_zero_iff]
+  intro n hn
+  have hn' := (Finset.mem_Ioc.mp hn).1
+  omega
+
 theorem not_isBadInterval_zero_length (N : ℕ) : ¬IsBadInterval N 0 := by
   simp [IsBadInterval]
 

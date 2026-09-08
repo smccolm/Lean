@@ -15,6 +15,15 @@ proves the exact unique `p²m` representation of `B¹` and Tao's finite
 prime-indexed smooth-number sum. It also proves the unique `a²b³`
 representation of positive powerful numbers and the exact finite squarefree-
 cube sum for `VB¹`; neither one-term asymptotic is claimed yet.
+The source's `H≥1` convention is enforced in every interval predicate, and the
+exact type-`F₃` right-endpoint correspondence with the three-factorial square
+equation is proved. The finite largest-index projection is also proved to hit
+exactly `F₃∩[1,x]`, yielding the lower cardinal direction for Theorem 1.10.
+The one-term `F₃¹` square-multiple characterization and its distinct-square
+subfamily give an unconditional `⌊√x⌋-1` lower bound first for `F₃¹`, then
+for `F₃` and factorial solutions; the corresponding triple is explicit.
+These finite bounds have been lifted to the complete reverse-big-O half of
+the square-root `PowerScale` contracts for Theorems 1.9 and 1.10.
 
 Node 73 keeps the human-readable location assigned by the RH Map. The exact
 1,226-module Lean import closure of `GafniTao.Theorem11` is frozen under this
@@ -49,7 +58,8 @@ The runner checks all pinned source hashes, all 1,226 frozen dependency hashes a
 frozen file set, the raw Mermaid contract, toolchain/dependency pins, direct
 production-root coverage, forbidden proof shortcuts in both production and
 frozen source, the axiom audit, and the warning-free Lake build. Its current
-success certifies only the Proposition 2.3(i),(iii) milestone.
+success certifies Proposition 2.3(i),(iii), the exact one-term sums, and the
+factorial endpoint/counting bridges; it does not certify a main theorem.
 
 ## Project-control documents
 

@@ -61,6 +61,20 @@ paper has been formalized.
   cube parameterization of powerful numbers used before Corollary 2.11.
 - [x] Prove the exact finite `VB¹` identity
   `∑_{b≤x, squarefree} ⌊√(x/b³)⌋`, with representation injectivity.
+- [x] Enforce `H≥1` in all interval predicates and prove zero-length
+  exclusion; this prevents spurious `F₃` endpoints at `H=0`.
+- [x] Prove the exact equivalence between type-`F₃` intervals and the
+  three-factorial square equation, and the corresponding right-endpoint
+  characterization of `F₃`.
+- [x] Prove that largest-index projection maps the finite factorial-square
+  triple set exactly onto `F₃∩[1,x]`, yielding the lower-count transfer
+  `#F₃(x) ≤ #triples(x)` used in Theorem 1.10.
+- [x] Characterize `F₃¹` as square multiples of factorial squarefree
+  components and prove the unconditional `⌊√x⌋-1` lower bounds for both
+  `F₃¹`, `F₃` endpoints, and factorial-square triples, including the explicit
+  triple `1! (q²-1)! (q²)! = (q (q²-1)!)²`.
+- [x] Lift the finite square-family bounds to the reverse-big-O half of the
+  `x^(1/2+o(1))` contracts for `F₃¹`, `F₃`, and Theorem 1.10's triple count.
 - [ ] Derive the `ζ(3/2)/ζ(3) √x` asymptotic for `VB¹` from the exact sum.
 - [x] Prove and audit a uniform fixed-power bound below one for the frozen
   dyadic Gafni--Tao discrepancy exceptional measures when `2/15 < θ < 1`.

@@ -1,6 +1,9 @@
 import Tao2026.Anatomy
 import Tao2026.Asymptotics
 import Tao2026.Counting
+import Tao2026.FactorialIntervals
+import Tao2026.FactorialOneTerm
+import Tao2026.FactorialAsymptotics
 import Tao2026.Intervals
 import Tao2026.PrimeIntervals
 import Tao2026.PowerfulNumbers
@@ -30,7 +33,14 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.consecutiveProduct_zero
 #print axioms Tao2026.consecutiveInterval_one
 #print axioms Tao2026.consecutiveProduct_one
+#print axioms Tao2026.IsBadInterval.length_pos
+#print axioms Tao2026.IsVeryBadInterval.length_pos
+#print axioms Tao2026.IsFactorialThreeInterval.length_pos
+#print axioms Tao2026.factorial_mul_consecutiveProduct
+#print axioms Tao2026.consecutiveProduct_ne_zero
 #print axioms Tao2026.not_isBadInterval_zero_length
+#print axioms Tao2026.not_isVeryBadInterval_zero_length
+#print axioms Tao2026.not_isFactorialThreeInterval_zero_length
 #print axioms Tao2026.badOneTermSet_subset_badSet
 #print axioms Tao2026.veryBadOneTermSet_subset_veryBadSet
 #print axioms Tao2026.factorialThreeOneTermSet_subset_factorialThreeSet
@@ -67,6 +77,8 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.taoProposition23iii_of_lt_one
 #print axioms Tao2026.taoProposition23iii_guthMaynard
 #print axioms Tao2026.countUpTo_zero
+#print axioms Tao2026.countUpTo_mono
+#print axioms Tao2026.factorialThreeOneTermCount_le_factorialThreeCount
 #print axioms Tao2026.isSmooth_iff
 #print axioms Tao2026.psiNat_eq_card
 #print axioms Tao2026.mem_smoothNumbersUpTo_source
@@ -84,3 +96,24 @@ four main Tao theorems exists yet to audit.
 #print axioms Tao2026.injOn_powerfulOneTermRepresentationValue
 #print axioms Tao2026.card_powerfulOneTermRepresentations
 #print axioms Tao2026.veryBadOneTermCount_eq_sum_sqrt_div_cube
+#print axioms Tao2026.squarefreeComponent_eq_iff_mul_eq_sq
+#print axioms Tao2026.exists_eq_sq_of_sq_mul_eq_sq
+#print axioms Tao2026.isFactorialThreeInterval_iff_factorialSquare
+#print axioms Tao2026.mem_factorialThreeSet_iff_exists_factorialSquare
+#print axioms Tao2026.mem_factorialThreeSet_iff_exists_triple
+#print axioms Tao2026.mem_factorialThreeNumbersUpTo
+#print axioms Tao2026.image_factorialSquareTriplesUpTo_endpoint
+#print axioms Tao2026.factorialThreeCount_le_factorialSquareTripleCount
+#print axioms Tao2026.mem_factorialThreeOneTermSet_iff
+#print axioms Tao2026.mem_factorialThreeOneTermSet_iff_exists_sq_mul
+#print axioms Tao2026.square_mem_factorialThreeOneTermSet
+#print axioms Tao2026.card_nontrivialSquaresUpTo
+#print axioms Tao2026.nontrivialSquaresUpTo_subset_factorialThreeNumbersUpTo
+#print axioms Tao2026.nontrivialSquaresUpTo_mem_factorialThreeOneTerm
+#print axioms Tao2026.sqrt_sub_one_le_factorialThreeOneTermCount
+#print axioms Tao2026.sqrt_sub_one_le_factorialThreeCount
+#print axioms Tao2026.square_factorialSquareTriple
+#print axioms Tao2026.sqrt_sub_one_le_factorialSquareTripleCount
+#print axioms Tao2026.factorialThreeOneTermCount_powerScale_lower
+#print axioms Tao2026.factorialThreeCount_powerScale_lower
+#print axioms Tao2026.factorialSquareTripleCount_powerScale_lower
