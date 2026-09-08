@@ -14,6 +14,13 @@ try {
         'Tao Research Agenda.md',
         'Tao Sources.md',
         'Dependencies\README.md',
+        'Dependencies\GafniTaoFrozen\README.md',
+        'Dependencies\GafniTaoFrozen\SOURCE_SHA256SUMS.txt',
+        'Dependencies\GafniTaoFrozen\lake-manifest.json',
+        'Dependencies\GafniTaoFrozen\lakefile.toml',
+        'Dependencies\GafniTaoFrozen\lean-toolchain',
+        'Dependencies\GafniTaoFrozen\GafniTao\Theorem11.lean',
+        'Dependencies\GafniTaoFrozen\PrimeNumberTheoremAndClean\lakefile.toml',
         'Extension\lake-manifest.json',
         'Extension\lakefile.toml',
         'Extension\lean-toolchain',
@@ -23,11 +30,17 @@ try {
         'Extension\Tao2026\Audit.lean',
         'Extension\Tao2026\Counting.lean',
         'Extension\Tao2026\Intervals.lean',
+        'Extension\Tao2026\PrimeIntervals.lean',
+        'Extension\Tao2026\PowerfulNumbers.lean',
+        'Extension\Tao2026\PublicStatements.lean',
+        'Extension\Tao2026\SmoothNumbers.lean',
         'Sources\PINS.md',
         'Sources\SHA256SUMS.txt',
+        'Sources\baker-harman-pintz-2001.pdf',
         'Sources\tao-unusual-anatomy-2603.27990v2.pdf',
         'Sources\tao-unusual-anatomy-2603.27990v2.tar',
         'Tools\README.md',
+        'Tools\refresh_gafnitao_snapshot.ps1',
         'Tools\run_tao_build.ps1',
         'run_tao_build.bat',
         'push_to_github.bat'
@@ -55,8 +68,8 @@ try {
         Get-Content -LiteralPath (Join-Path $nodeRoot 'Sources\SHA256SUMS.txt') |
             Where-Object { $_.Trim() }
     )
-    if ($hashLines.Count -ne 2) {
-        throw 'SHA256SUMS.txt must contain exactly the pinned PDF and TeX archive.'
+    if ($hashLines.Count -ne 3) {
+        throw 'SHA256SUMS.txt must contain exactly the Tao PDF, Tao TeX archive, and Baker-Harman-Pintz PDF.'
     }
     foreach ($line in $hashLines) {
         if ($line -notmatch '^([0-9A-Fa-f]{64})\s{2}(.+)$') {
@@ -73,6 +86,52 @@ try {
         }
     }
 
+    $frozenRoot = Join-Path $nodeRoot 'Dependencies\GafniTaoFrozen'
+    Write-Host 'Checking frozen Gafni-Tao source closure...'
+    $frozenHashLines = @(
+        Get-Content -LiteralPath (Join-Path $frozenRoot 'SOURCE_SHA256SUMS.txt') |
+            Where-Object { $_.Trim() }
+    )
+    if ($frozenHashLines.Count -ne 1226) {
+        throw "Frozen source manifest must contain exactly 1226 modules; found $($frozenHashLines.Count)."
+    }
+    $manifestFiles = [System.Collections.Generic.HashSet[string]]::new(
+        [System.StringComparer]::OrdinalIgnoreCase)
+    $frozenPrefix = [System.IO.Path]::GetFullPath($frozenRoot).TrimEnd('\') + '\'
+    foreach ($line in $frozenHashLines) {
+        if ($line -notmatch '^([0-9A-Fa-f]{64})\s{2}(.+\.lean)$') {
+            throw "Malformed frozen SHA-256 manifest line: $line"
+        }
+        $expectedHash = $Matches[1].ToUpperInvariant()
+        $relativePath = $Matches[2].Replace('/', '\')
+        $sourcePath = [System.IO.Path]::GetFullPath((Join-Path $frozenRoot $relativePath))
+        if (-not $sourcePath.StartsWith($frozenPrefix,
+                [System.StringComparison]::OrdinalIgnoreCase)) {
+            throw "Frozen manifest path escapes dependency root: $relativePath"
+        }
+        if (-not $manifestFiles.Add($relativePath)) {
+            throw "Duplicate frozen manifest entry: $relativePath"
+        }
+        if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) {
+            throw "Frozen source is missing: $relativePath"
+        }
+        if ((Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash -ne $expectedHash) {
+            throw "Frozen source SHA-256 mismatch: $relativePath"
+        }
+    }
+    $actualFrozenFiles = @(
+        Get-ChildItem -LiteralPath $frozenRoot -Recurse -File -Filter '*.lean' |
+            ForEach-Object { $_.FullName.Substring($frozenRoot.Length + 1) }
+    )
+    if ($actualFrozenFiles.Count -ne 1226) {
+        throw "Frozen dependency must contain exactly 1226 Lean modules; found $($actualFrozenFiles.Count)."
+    }
+    foreach ($relativePath in $actualFrozenFiles) {
+        if (-not $manifestFiles.Contains($relativePath)) {
+            throw "Unmanifested frozen Lean source: $relativePath"
+        }
+    }
+
     Write-Host 'Checking Lean and Mathlib pins...'
     $toolchain = (Get-Content -LiteralPath (Join-Path $extensionRoot 'lean-toolchain') -Raw).Trim()
     if ($toolchain -ne 'leanprover/lean4:v4.30.0') {
@@ -84,6 +143,23 @@ try {
     if ($mathlib.Count -ne 1 -or
         $mathlib[0].rev -ne 'c5ea00351c28e24afc9f0f84379aa41082b1188f') {
         throw 'The resolved Mathlib dependency does not match the frozen commit.'
+    }
+    $frozenToolchain = (Get-Content -LiteralPath (Join-Path $frozenRoot 'lean-toolchain') -Raw).Trim()
+    if ($frozenToolchain -ne 'leanprover/lean4:v4.30.0') {
+        throw "Unexpected frozen dependency Lean toolchain: $frozenToolchain"
+    }
+    $frozenManifest = Get-Content -LiteralPath (Join-Path $frozenRoot 'lake-manifest.json') -Raw |
+        ConvertFrom-Json
+    $frozenMathlib = @($frozenManifest.packages | Where-Object { $_.name -eq 'mathlib' })
+    if ($frozenMathlib.Count -ne 1 -or
+        $frozenMathlib[0].rev -ne 'c5ea00351c28e24afc9f0f84379aa41082b1188f') {
+        throw 'The frozen dependency Mathlib resolution does not match the frozen commit.'
+    }
+    $leanArchitect = @($frozenManifest.packages |
+        Where-Object { $_.name -eq 'LeanArchitect' })
+    if ($leanArchitect.Count -ne 1 -or
+        $leanArchitect[0].rev -ne 'b72ae37b08d264cf371f164f4ba60c5257c17727') {
+        throw 'The frozen dependency LeanArchitect resolution does not match its pin.'
     }
 
     Write-Host 'Checking production-root coverage and forbidden proof shortcuts...'
@@ -101,6 +177,13 @@ try {
         }
     }
     $forbiddenPattern = '(?m)(^\s*(axiom|constant)\s+|\bsorry\b|\badmit\b|\bnative_decide\b|\bimplemented_by\b|^\s*unsafe\s+)'
+    foreach ($source in Get-ChildItem -LiteralPath $frozenRoot -Recurse -File -Filter '*.lean') {
+        $matches = Select-String -LiteralPath $source.FullName -Pattern $forbiddenPattern
+        if ($matches) {
+            $first = $matches | Select-Object -First 1
+            throw "Forbidden proof shortcut in frozen dependency $($source.FullName):$($first.LineNumber)"
+        }
+    }
     foreach ($source in $leanFiles) {
         $matches = Select-String -LiteralPath $source.FullName -Pattern $forbiddenPattern
         if ($matches) {
@@ -140,7 +223,7 @@ try {
         throw 'The canonical Tao2026 build emitted a warning or tactic diagnostic.'
     }
 
-    Write-Host 'FINAL RESULT: PASS - initial definitions milestone; no Tao theorem release is claimed.'
+    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, and powerful-decomposition milestone; no main-theorem release is claimed.'
     exit 0
 }
 catch {

@@ -24,17 +24,18 @@ def consecutiveProduct (N H : ℕ) : ℕ := ∏ n ∈ consecutiveInterval N H, n
 /-- Tao Definition 1.2(i). The option-valued largest prime factor makes the
 product `1` case false, as required by the source footnote. -/
 def IsBadInterval (N H : ℕ) : Prop :=
-  ∃ p : ℕ, largestPrimeFactor (consecutiveProduct N H) = some p ∧
-    p ^ 2 ∣ consecutiveProduct N H
+  1 ≤ H ∧ ∃ p : ℕ, largestPrimeFactor (consecutiveProduct N H) = some p ∧
+      p ^ 2 ∣ consecutiveProduct N H
 
 /-- Tao Definition 1.2(ii). -/
-def IsVeryBadInterval (N H : ℕ) : Prop := Powerful (consecutiveProduct N H)
+def IsVeryBadInterval (N H : ℕ) : Prop :=
+  1 ≤ H ∧ Powerful (consecutiveProduct N H)
 
 /-- Tao Definition 1.2(iii). -/
 def IsFactorialThreeInterval (N H : ℕ) : Prop :=
-  ∃ a : ℕ, 1 ≤ a ∧ a < N ∧
-    squarefreeComponent (consecutiveProduct N H) =
-      squarefreeComponent a.factorial
+  1 ≤ H ∧ ∃ a : ℕ, 1 ≤ a ∧ a < N ∧
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial
 
 /-- Tao Definition 1.3(i): all naturals contained in a bad interval. -/
 def badSet : Set ℕ :=
@@ -72,6 +73,23 @@ noncomputable def factorialSquareTriplesUpTo (x : ℕ) : Finset (ℕ × ℕ × �
     ((Finset.Icc 1 x).product ((Finset.Icc 1 x).product (Finset.Icc 1 x))).filter
       fun t => IsFactorialSquareTriple t.1 t.2.1 t.2.2
 
+theorem mem_factorialSquareTriplesUpTo {x : ℕ} {t : ℕ × ℕ × ℕ} :
+    t ∈ factorialSquareTriplesUpTo x ↔
+      t.1 ∈ Finset.Icc 1 x ∧ t.2.1 ∈ Finset.Icc 1 x ∧
+        t.2.2 ∈ Finset.Icc 1 x ∧
+          IsFactorialSquareTriple t.1 t.2.1 t.2.2 := by
+  classical
+  simp [factorialSquareTriplesUpTo]
+  tauto
+
+/-- The square root in the factorial equation is unique over naturals, so the
+finite triple count agrees with the source's count of solutions including
+`m`. -/
+theorem factorialSquareRoot_unique {a₁ a₂ a₃ m₁ m₂ : ℕ}
+    (h₁ : a₁.factorial * a₂.factorial * a₃.factorial = m₁ ^ 2)
+    (h₂ : a₁.factorial * a₂.factorial * a₃.factorial = m₂ ^ 2) : m₁ = m₂ :=
+  Nat.pow_left_injective (by decide : 2 ≠ 0) (h₁.symm.trans h₂)
+
 @[simp]
 theorem consecutiveInterval_zero (N : ℕ) : consecutiveInterval N 0 = ∅ := by
   simp [consecutiveInterval]
@@ -89,13 +107,42 @@ theorem consecutiveInterval_one (N : ℕ) : consecutiveInterval N 1 = {N + 1} :=
 theorem consecutiveProduct_one (N : ℕ) : consecutiveProduct N 1 = N + 1 := by
   simp [consecutiveProduct]
 
+/-- The positivity condition carried by every source interval predicate. -/
+theorem IsBadInterval.length_pos {N H : ℕ} (h : IsBadInterval N H) : 1 ≤ H := h.1
+
+/-- The positivity condition carried by every source interval predicate. -/
+theorem IsVeryBadInterval.length_pos {N H : ℕ}
+    (h : IsVeryBadInterval N H) : 1 ≤ H := h.1
+
+/-- The positivity condition carried by every source interval predicate. -/
+theorem IsFactorialThreeInterval.length_pos {N H : ℕ}
+    (h : IsFactorialThreeInterval N H) : 1 ≤ H := h.1
+
+/-- Multiplying the interval product by `N!` gives `(N+H)!`; this is the
+exact factorial identity behind the type-`F₃` correspondence. -/
+theorem factorial_mul_consecutiveProduct (N H : ℕ) :
+    N.factorial * consecutiveProduct N H = (N + H).factorial := by
+  induction H with
+  | zero => simp
+  | succ H ih =>
+      change N.factorial * (∏ n ∈ Finset.Ioc N (N + H + 1), n) =
+        (N + H + 1).factorial
+      rw [Finset.prod_Ioc_succ_top (Nat.le_add_right N H)]
+      change N.factorial *
+          (consecutiveProduct N H * (N + H + 1)) = (N + H + 1).factorial
+      rw [← mul_assoc, ih, Nat.factorial_succ]
+      ring
+
 theorem not_isBadInterval_zero_length (N : ℕ) : ¬IsBadInterval N 0 := by
-  rw [IsBadInterval, consecutiveProduct_zero]
-  rintro ⟨p, hp, _⟩
-  have hnone : largestPrimeFactor 1 = none :=
-    largestPrimeFactor_eq_none_iff.mpr (Or.inr rfl)
-  rw [hnone] at hp
-  cases hp
+  simp [IsBadInterval]
+
+theorem not_isVeryBadInterval_zero_length (N : ℕ) :
+    ¬IsVeryBadInterval N 0 := by
+  simp [IsVeryBadInterval]
+
+theorem not_isFactorialThreeInterval_zero_length (N : ℕ) :
+    ¬IsFactorialThreeInterval N 0 := by
+  simp [IsFactorialThreeInterval]
 
 theorem badOneTermSet_subset_badSet : badOneTermSet ⊆ badSet := by
   intro n hn

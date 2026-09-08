@@ -1,13 +1,22 @@
 # Dependencies
 
-This directory is reserved for intentional, immutable dependency material for
-the future Tao 2026 formalization.
+This directory contains intentional, immutable dependency material for the
+Tao 2026 formalization.
 
-It deliberately contains no copied proof source yet. The RH Map suggests nodes
-71 and 74 as upstream inputs, but the exact theorem-level boundary has not been
-established. Do not copy either complete project here merely to make imports
-convenient.
+`GafniTaoFrozen/` is the exact recursive Lean import closure of
+`GafniTao.Theorem11`: 852 Gafni--Tao modules, 291 frozen Guth--Maynard
+foundation modules, and 83 PNT+ modules, for 1,226 source files total. Every
+copied Lean source is recorded in `GafniTaoFrozen/SOURCE_SHA256SUMS.txt`.
+Upstream provenance files, package pins, and licenses are retained in the
+snapshot.
 
-Before adding a dependency, record its repository, commit or tag, retained
-file closure, license, source hashes, and exact declarations consumed by node
-73. A mutable sibling-path import is not a release boundary.
+`Tools/refresh_gafnitao_snapshot.ps1` deterministically reconstructs this
+closure from node 74 and handles both ordinary and `public import`
+declarations. Regeneration is a deliberate review operation; production code
+imports the frozen package, never the mutable sibling node. The canonical
+verifier checks the manifest count, paths, hashes, exact file set, pins, and
+forbidden proof shortcuts.
+
+Any future dependency must meet the same standard: repository and immutable
+revision, retained closure, license and provenance, source hashes, and exact
+declarations consumed by node 73.

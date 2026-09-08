@@ -2,16 +2,16 @@ flowchart TD
     MAP["RH Map node 73<br/>Tao, 2026"] --> PAPER["Tao: Products of consecutive integers<br/>with unusual anatomy"]
     PAPER --> SOURCE["arXiv 2603.27990v2<br/>PDF and TeX pinned + SHA-256 verified"]
     SOURCE --> PLAN["Whole-proof contract researched<br/>Theorems 1.7--1.10 fixed as release scope"]
-    PLAN --> CROSSWALK["Tao Crosswalk<br/>exact source rows still to populate"]
+    PLAN --> CROSSWALK["Tao Crosswalk<br/>principal objects and endpoints mapped;<br/>Section 2--6 ledger still expanding"]
 
     subgraph FOUNDATION["Immutable foundation boundary"]
         direction TB
         MATHLIB["Mathlib c5ea0035...<br/>factorization, squarefree, smooth numbers,<br/>Dirichlet-character infrastructure inspected"]
-        PNT["PNT+ 4ecb9501...<br/>audited Selberg-sieve infrastructure candidate"]
+        PNT["PNT+ 4ecb9501...<br/>83 reachable modules frozen"]
         GM["Node 71 Guth--Maynard<br/>frozen commit 2ace9e7c..."]
         GT["Node 74 Gafni--Tao<br/>2/15 almost-all short-interval PNT available"]
         E137["scottdhughes/erdos137<br/>commit 3027d9a...; partial elementary reuse candidate"]
-        FREEZE["Node-73 immutable snapshots + hashes<br/>not yet assembled"]
+        FREEZE["Exact GafniTao.Theorem11 closure<br/>1,226 Lean sources frozen + SHA-256 verified"]
         MATHLIB --> FREEZE
         PNT --> FREEZE
         GM --> GT
@@ -19,16 +19,16 @@ flowchart TD
         E137 --> FREEZE
     end
 
-    CROSSWALK --> CONTRACTS["Exact Lean statement contracts<br/>not yet frozen"]
+    CROSSWALK --> CONTRACTS["Exact Lean conclusion contracts<br/>Theorems 1.7--1.10 compile"]
     FREEZE --> CONTRACTS
 
     subgraph OBJECTS["Source objects and asymptotic language"]
         direction TB
         ASYM["Precise O, o(1), x^o(1), and ~ APIs<br/>initial quantified definitions compile"]
-        ANATOMY["Largest prime factor, powerful,<br/>squarefree component definitions compile"]
+        ANATOMY["PROVED anatomy interfaces<br/>largest prime, squarefree component,<br/>unique powerful a²b³ decomposition"]
         INTERVALS["Consecutive interval product;<br/>bad, very bad, and type-F3 predicates compile"]
         SETS["Literal B, VB, F3 unions/endpoints<br/>and one-term subsets compile"]
-        FACTEQ["Ordered factorial-equation solution set<br/>and finite count compile"]
+        FACTEQ["Ordered factorial-equation solution set,<br/>finite count, and root uniqueness compile"]
         ASYM --> SETS
         ANATOMY --> INTERVALS
         INTERVALS --> SETS
@@ -41,26 +41,35 @@ flowchart TD
     subgraph SECTION2["Section 2 common inputs"]
         direction TB
         SMOOTH["Proposition 2.1<br/>smooth-number asymptotics + stability"]
-        ONETERM["Lemma 1.6<br/>B1 exact sum and x/z^(2+o(1))"]
-        PRIME["Proposition 2.3<br/>Bertrand + BHP 0.525 + 2/15 almost-all PNT"]
-        GTBRIDGE["Node-74 exceptional-measure bridge<br/>density zero alone is insufficient"]
+        ONETERMID["PROVED: exact B1 identity<br/>unique p²m representation + finite Psi sum"]
+        ONETERM["Lemma 1.6<br/>x/z^(2+o(1)) asymptotic absent"]
+        VBONETERM["PROVED: exact VB1 identity<br/>unique a²b³ + finite squarefree-cube sum"]
+        PRIMEI["PROVED: Proposition 2.3(i)<br/>exact Bertrand endpoints"]
+        PRIMEII["Proposition 2.3(ii)<br/>BHP source pinned; Lean proof absent"]
+        PRIMEIII["PROVED: Proposition 2.3(iii)<br/>global prime-free measure power saving"]
+        GTPOWER["Compiled quantitative bridge<br/>uniform dyadic discrepancy power xi < 1"]
+        DYADICFREE["Compiled dyadic prime-free bridge<br/>prime-power tail retained and absorbed"]
+        PREFIX["Compiled constant-length endpoint measure<br/>finite dyadic assembly + full theta range"]
         VINO["Theorem 2.5<br/>two-variable prime equidistribution"]
         UNCERT["Lemma 2.6<br/>Montgomery uncertainty principle"]
         LSIEVE["Corollaries 2.8--2.9<br/>large sieve with exact residue exclusions"]
         PELL["Lemma 2.10<br/>generalized Pell square-solution count"]
         POWERREL["Corollary 2.11<br/>powerful linear-relation count x^(2/5+o(1))"]
         SMOOTH --> ONETERM
-        GTBRIDGE --> PRIME
-        PRIME --> VINO
+        ONETERMID --> ONETERM
+        GTPOWER --> DYADICFREE
+        DYADICFREE --> PREFIX
+        PREFIX --> PRIMEIII
         UNCERT --> LSIEVE
         PELL --> POWERREL
     end
 
     ASYM --> SMOOTH
     ANATOMY --> SMOOTH
-    SETS --> ONETERM
-    GT --> GTBRIDGE
+    SETS --> ONETERMID
+    GT --> GTPOWER
     ANATOMY --> PELL
+    ANATOMY --> VBONETERM
 
     subgraph SECTION3["Section 3: very bad intervals"]
         direction TB
@@ -73,6 +82,7 @@ flowchart TD
 
     VINO --> VBSHORT
     POWERREL --> T18
+    VBONETERM --> T18
     SETS --> T18
 
     subgraph SECTION4["Section 4: type F3 and factorial equation"]
@@ -88,7 +98,8 @@ flowchart TD
         T19 --> T110
     end
 
-    PRIME --> FBOUNDS
+    PRIMEII --> FBOUNDS
+    PRIMEIII --> FBOUNDS
     VINO --> FBOUNDS
     PELL --> FCASES
     LSIEVE --> FCASES
@@ -128,7 +139,7 @@ flowchart TD
     end
 
     ONETERM --> NORMALIZE
-    PRIME --> ATYPICAL
+    PRIMEIII --> ATYPICAL
     SMOOTH --> ATYPICAL
     LSIEVE --> ATYPICAL
     EXCHAR --> MOMENTS
@@ -140,12 +151,12 @@ flowchart TD
     T19 --> PUBLIC
     T110 --> PUBLIC
     PUBLIC --> AUDIT["Tao2026/Audit.lean<br/>transitive #print axioms coverage"]
-    AUDIT --> RUNNER["run_tao_build.bat<br/>evolving warning-failing verifier"]
+    AUDIT --> RUNNER["run_tao_build.bat<br/>hash/file-set/pin/shortcut/audit/build PASS"]
     RUNNER --> RELEASE["Tao 2026 formal proof release<br/>not achieved"]
 
     DOCS["Goal Prompt complete<br/>Checklist / Crosswalk / Manifest continuously updated"] --> CROSSWALK
     SHELL["Extension/Tao2026<br/>active pinned Mathlib package builds"] --> CONTRACTS
-    SCAFFOLD["Current definitions verifier<br/>pins + imports + shortcut scan + build PASS"] --> SHELL
+    MILESTONE["Proposition 2.3(i),(iii) verifier<br/>current development milestone PASS"] --> SHELL
 
     LEGEND["Status: green = verified groundwork<br/>blue = inspected candidate/ready shell<br/>yellow = specified but unproved<br/>red = major unformalized input or endpoint"]
 
@@ -155,8 +166,8 @@ flowchart TD
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,SCAFFOLD complete
-    class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,ANATOMY,INTERVALS,SETS,FACTEQ ready
-    class CROSSWALK,FREEZE,CONTRACTS,ONETERM,PRIME,GTBRIDGE,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS,AUDIT,RUNNER pending
-    class SMOOTH,VINO,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,ANATOMY,AUDIT,RUNNER complete
+    class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,INTERVALS,SETS,FACTEQ,CONTRACTS ready
+    class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
+    class SMOOTH,PRIMEII,VINO,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent
     class LEGEND note

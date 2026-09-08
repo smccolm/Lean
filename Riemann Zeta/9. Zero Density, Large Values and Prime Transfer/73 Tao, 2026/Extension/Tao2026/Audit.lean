@@ -2,13 +2,16 @@ import Tao2026.Anatomy
 import Tao2026.Asymptotics
 import Tao2026.Counting
 import Tao2026.Intervals
+import Tao2026.PrimeIntervals
+import Tao2026.PowerfulNumbers
+import Tao2026.SmoothNumbers
 
 /-!
-# Initial dependency audit
+# Development dependency audit
 
-This audit grows with the project. At the current definitions milestone it
-covers every nontrivial proved interface theorem; no Tao paper theorem exists
-yet to audit.
+This audit grows with the project. At the current Proposition 2.3(i),(iii)
+milestone it covers every nontrivial proved interface theorem. None of the
+four main Tao theorems exists yet to audit.
 -/
 
 #print axioms Tao2026.largestPrimeFactor_eq_none_iff
@@ -19,6 +22,10 @@ yet to audit.
 #print axioms Tao2026.squarefreeComponent_dvd
 #print axioms Tao2026.mem_primeFactors_squarefreeComponent_iff
 #print axioms Tao2026.powerful_iff_factorization_two_le
+#print axioms Tao2026.exists_sq_mul_squarefreeComponent
+#print axioms Tao2026.eq_squarefreeComponent_of_sq_mul
+#print axioms Tao2026.powerful_iff_exists_sq_mul_cube_squarefree
+#print axioms Tao2026.sq_mul_cube_squarefree_unique
 #print axioms Tao2026.consecutiveInterval_zero
 #print axioms Tao2026.consecutiveProduct_zero
 #print axioms Tao2026.consecutiveInterval_one
@@ -27,4 +34,53 @@ yet to audit.
 #print axioms Tao2026.badOneTermSet_subset_badSet
 #print axioms Tao2026.veryBadOneTermSet_subset_veryBadSet
 #print axioms Tao2026.factorialThreeOneTermSet_subset_factorialThreeSet
+#print axioms Tao2026.mem_factorialSquareTriplesUpTo
+#print axioms Tao2026.factorialSquareRoot_unique
+#print axioms Tao2026.taoProposition23i
+#print axioms Tao2026.mem_primeFreeEndpointSet
+#print axioms Tao2026.measurableSet_primeFreeEndpointSet
+#print axioms Tao2026.primeFreeEndpointSet_subset_Icc
+#print axioms Tao2026.measure_primeFreeEndpointSet_lt_top
+#print axioms Tao2026.primeMangoldtIntervalSum_eq_zero_of_primeFree
+#print axioms Tao2026.primePowerTailIntervalSum_nonneg
+#print axioms Tao2026.primePowerTailIntervalSum_le_remainderEnvelope
+#print axioms Tao2026.eventually_primePowerTailIntervalSum_le_half
+#print axioms Tao2026.mangoldtIntervalSum_eq_primePowerTail_of_primeFree
+#print axioms Tao2026.mem_shortIntervalExceptionalSet_half_of_primeFree
+#print axioms Tao2026.mem_dyadicPrimeFreeShortSet
+#print axioms Tao2026.measurableSet_dyadicPrimeFreeShortSet
+#print axioms Tao2026.dyadicPrimeFreeShortSet_subset_Icc
+#print axioms Tao2026.dyadicPrimeFreeMeasure_le_scale
+#print axioms Tao2026.uniform_dyadicPrimeFreeMeasure_bound_of_fixedPower
+#print axioms Tao2026.two_pow_rpow_eq_rpow_pow
+#print axioms Tao2026.primeFreeEndpointSet_subset_unit_union_dyadic
+#print axioms Tao2026.primeFreeEndpointMeasure_le_one_add_dyadic_sum
+#print axioms Tao2026.eventually_dyadicPrimeFreeShortSet_subset_exceptional
+#print axioms Tao2026.fixedPowerBound_dyadicPrimeFreeMeasure
+#print axioms Tao2026.fixedPowerBound_primeFreeEndpointMeasure_of_dyadic
+#print axioms Tao2026.epsilonExponentBound_of_fixedPowerBound
+#print axioms Tao2026.primeFreeEndpointSet_anti_theta
+#print axioms Tao2026.primeFreeEndpointMeasure_anti_theta
+#print axioms Tao2026.fixedPowerBound_primeFreeEndpointMeasure_anti_theta
+#print axioms Tao2026.exists_uniform_dyadic_exceptional_power_guthMaynard
+#print axioms Tao2026.exists_dyadic_primeFree_power_guthMaynard
+#print axioms Tao2026.taoProposition23iii_of_lt_one
+#print axioms Tao2026.taoProposition23iii_guthMaynard
 #print axioms Tao2026.countUpTo_zero
+#print axioms Tao2026.isSmooth_iff
+#print axioms Tao2026.psiNat_eq_card
+#print axioms Tao2026.mem_smoothNumbersUpTo_source
+#print axioms Tao2026.mem_badOneTermSet_iff_exists_prime_sq_mul_smooth
+#print axioms Tao2026.prime_unique_of_sq_mul_smooth
+#print axioms Tao2026.mem_badOneTermRepresentations_iff
+#print axioms Tao2026.image_badOneTermRepresentations
+#print axioms Tao2026.injOn_badOneTermRepresentationValue
+#print axioms Tao2026.card_badOneTermRepresentations
+#print axioms Tao2026.badOneTermCount_eq_sum_psiNat
+#print axioms Tao2026.mem_veryBadOneTermSet_iff
+#print axioms Tao2026.mem_veryBadOneTermSet_iff_exists_sq_mul_cube_squarefree
+#print axioms Tao2026.mem_powerfulOneTermRepresentations_iff
+#print axioms Tao2026.image_powerfulOneTermRepresentations
+#print axioms Tao2026.injOn_powerfulOneTermRepresentationValue
+#print axioms Tao2026.card_powerfulOneTermRepresentations
+#print axioms Tao2026.veryBadOneTermCount_eq_sum_sqrt_div_cube

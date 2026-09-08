@@ -1,0 +1,8 @@
+import GafniTao.FordExplicitData.Bernstein.Interval0
+import GafniTao.FordExplicitData.Bernstein.Interval1
+import GafniTao.FordExplicitData.Bernstein.Interval2
+import GafniTao.FordExplicitData.Bernstein.Interval3
+import GafniTao.FordExplicitData.Bernstein.Interval4
+import GafniTao.FordExplicitData.Bernstein.Interval5
+import GafniTao.FordExplicitData.Bernstein.Interval6
+import GafniTao.FordExplicitData.Bernstein.Interval7

@@ -1,0 +1,12 @@
+import GafniTao.FordExplicitData.GapCoefficients0
+import GafniTao.FordExplicitData.GapCoefficients1
+import GafniTao.FordExplicitData.GapCoefficients2
+import GafniTao.FordExplicitData.GapCoefficients3
+import GafniTao.FordExplicitData.GapCoefficients4
+import GafniTao.FordExplicitData.GapCoefficients5
+import GafniTao.FordExplicitData.GapCoefficients6
+import GafniTao.FordExplicitData.GapCoefficients7
+import GafniTao.FordExplicitData.GapCoefficients8
+import GafniTao.FordExplicitData.GapCoefficients9
+import GafniTao.FordExplicitData.GapCoefficients10
+import GafniTao.FordExplicitData.GapCoefficients11

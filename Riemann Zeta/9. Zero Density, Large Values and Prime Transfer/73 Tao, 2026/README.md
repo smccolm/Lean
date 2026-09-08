@@ -4,27 +4,38 @@ This directory is the active formalization project for Terence Tao,
 *Products of consecutive integers with unusual anatomy*, arXiv
 `2603.27990v2`. The paper and its TeX source are pinned under `Sources/`.
 
-**Status:** initial definitions milestone. No theorem from the paper has been
-proved or claimed here. The isolated `Extension/` package now contains the
-compiled arithmetic-anatomy, interval, counting, and asymptotic-language
-definitions required to state the source results.
+**Status:** Proposition 2.3(i),(iii) milestone. Bertrand's clause (i) and the
+exact Guth--Maynard application in clause (iii) are proved and audited; none of the four main
+Theorems 1.7--1.10 is proved or claimed. The isolated `Extension/` package
+contains the compiled arithmetic-anatomy, interval, counting, and
+asymptotic-language definitions required to state the source results, plus a
+kernel-checked proof of Tao's global constant-length prime-free endpoint
+measure bound, derived from the frozen Guth--Maynard/Gafni--Tao chain. It also
+proves the exact unique `p²m` representation of `B¹` and Tao's finite
+prime-indexed smooth-number sum. It also proves the unique `a²b³`
+representation of positive powerful numbers and the exact finite squarefree-
+cube sum for `VB¹`; neither one-term asymptotic is claimed yet.
 
-Node 73 keeps the human-readable location assigned by the RH Map. An initial
-source and local-library survey confirms that node 74 contains the intended
-Guth--Maynard-driven almost-all short-interval PNT input. The exact node-73
-snapshot and the bridge to Tao's exceptional-measure formulation remain to be
-frozen and proved.
+Node 73 keeps the human-readable location assigned by the RH Map. The exact
+1,226-module Lean import closure of `GafniTao.Theorem11` is frozen under this
+node with per-file SHA-256 hashes. The first Tao-facing quantitative bridge is
+proved. The literal variable-length dyadic prime-free set has now been shown
+measurable and eventually contained in Gafni--Tao's discrepancy exceptional
+set, with the higher-prime-power tail retained and bounded. The finite dyadic
+assembly and the `theta >= 1` monotonicity case are also proved, yielding the
+full source range `theta > 2/15`.
 
 ## Layout
 
 - `Sources/`: exact paper artifacts, version pins, provenance, and hashes.
-- `Dependencies/`: reserved for deliberate, immutable dependency snapshots.
-  It is intentionally empty of code until the required node-71/node-74
-  theorem boundary has been established.
+- `Dependencies/GafniTaoFrozen/`: immutable, hashed source closure of the
+  Gafni--Tao theorem input, including its frozen Guth--Maynard foundation and
+  PNT+ dependencies.
 - `Extension/`: isolated Lean package named `Tao2026`, pinned to the exact
   Mathlib revision used by node 74.
-- `Tools/`: evolving warning-failing project verification. It is not yet the
-  final proof-release verifier.
+- `Tools/`: reproducible snapshot refresh tooling and the evolving
+  warning-failing project verifier. It is not yet the final proof-release
+  verifier.
 
 ## Current verification
 
@@ -34,10 +45,11 @@ From this directory, run:
 cmd /c run_tao_build.bat --no-pause
 ```
 
-The runner checks source hashes, the raw Mermaid contract, Lean and Mathlib
-pins, direct production-root coverage, forbidden proof shortcuts, and the
-warning-free Lake build. Its current success certifies only the initial
-definitions milestone.
+The runner checks all pinned source hashes, all 1,226 frozen dependency hashes and the exact
+frozen file set, the raw Mermaid contract, toolchain/dependency pins, direct
+production-root coverage, forbidden proof shortcuts in both production and
+frozen source, the axiom audit, and the warning-free Lake build. Its current
+success certifies only the Proposition 2.3(i),(iii) milestone.
 
 ## Project-control documents
 
@@ -55,18 +67,20 @@ The node follows the useful role separation established in node 74:
 
 ## Next legitimate step
 
-Turn the initial source study recorded in `Tao Goal Prompt.md` and
-`Tao Architecture.md` into authoritative row-by-row entries in
-`Tao Crosswalk.md`, then freeze the exact dependency snapshots and Lean
-statement contracts before starting proof modules.
+The Baker--Harman--Pintz paper and exact theorem locator are now pinned and
+hashed, but its analytic proof is not formalized. Formalize that input in
+Proposition 2.3(ii) and proceed to
+the earliest downstream Section 3/4/6 consumer of clause (iii), recording its exact source
+statement in the crosswalk before implementation.
 
 ## Deliberate non-claims
 
-This scaffold does not claim a proof of any result in the paper, a formal
-connection to nodes 71 or 74, publication readiness, external review, or a
-route to the Riemann Hypothesis.
+This development milestone does not claim any of Theorems 1.7--1.10,
+publication readiness, external review, or a route to the Riemann Hypothesis.
+The formal connection to nodes 71 and 74 is limited to the frozen, hashed
+dependency closure and the audited quantitative bridge described above.
 
 ## Repository synchronization
 
 `push_to_github.bat` is the existing owner-operated repository synchronization
-script. It is not called by the build or scaffold verifier.
+script. It is not called by the build or development verifier.

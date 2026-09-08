@@ -5,9 +5,12 @@
 Primary source: Terence Tao, *Products of consecutive integers with unusual
 anatomy*, arXiv `2603.27990v2`, pinned under `Sources/`.
 
-This is now an active crosswalk. Rows marked **definition compiled** identify
-kernel-checked source objects, not proofs of any paper theorem. The complete
-Section 2--6 lemma ledger and immutable node-74 snapshot remain open.
+This is an active crosswalk. Rows marked **definition compiled** identify
+kernel-checked source objects, not proofs of any paper theorem. The immutable
+1,226-module `GafniTao.Theorem11` closure, its Tao-facing dyadic prime-free
+measure bridge, exact Proposition 2.3(iii), and the exact finite `B¹` smooth-
+number sum are complete; the analytic smooth-number estimates and the full
+Section 2--6 lemma ledger remain open.
 
 ## Source conventions
 
@@ -17,15 +20,18 @@ Section 2--6 lemma ledger and immutable node-74 snapshot remain open.
 | Consecutive product | Display (1.1) | `Tao2026.consecutiveProduct` | Finite product over the literal interval | Definition compiled |
 | Largest prime factor | Definition 1.2(i), including footnote | `Tao2026.largestPrimeFactor` | `Option ℕ`; `0` and `1` return `none`, so `1` gets no fictitious factor | Definition plus basic interface compiled |
 | Bad interval | Definition 1.2(i) | `Tao2026.IsBadInterval` | Requires the square of the actual maximum prime factor to divide the product | Definition compiled |
-| Powerful/squarefull | Definition 1.2(ii) | `Tao2026.Powerful` | Literal prime-divisor-square divisibility predicate | Definition compiled |
+| Powerful/squarefull | Definition 1.2(ii); square-times-cube reduction before Corollary 2.11 | `Tao2026.Powerful`, `powerful_iff_exists_sq_mul_cube_squarefree`, `sq_mul_cube_squarefree_unique` | Literal prime-divisor-square divisibility predicate; every positive powerful number has a unique positive `a²b³` form with squarefree `b` | Definition and complete decomposition interface proved and audited |
 | Very bad interval | Definition 1.2(ii) | `Tao2026.IsVeryBadInterval` | Applied to the literal consecutive product | Definition compiled |
-| Squarefree component `s(n)` | Definition 1.2(iii), footnote | `Tao2026.squarefreeComponent` | Product of primes having odd factorization exponent; squarefreeness, divisibility, and exact prime support are proved; maximal-square characterization remains | Definition and partial interface compiled |
+| Squarefree component `s(n)` | Definition 1.2(iii), footnote | `Tao2026.squarefreeComponent` | Product of primes having odd factorization exponent; squarefreeness, divisibility, exact prime support, and the existence/uniqueness decomposition after removal of a square are proved | Definition and required decomposition interface compiled |
 | Type `F₃` interval | Definition 1.2(iii) | `Tao2026.IsFactorialThreeInterval` | Preserves `1 ≤ a < N` and equality of squarefree components | Definition compiled |
 | Bad set `B` | Definition 1.3(i) | `Tao2026.badSet` | Union of interval elements, not a count of intervals | Definition compiled |
 | Very bad set `VB` | Definition 1.3(ii) | `Tao2026.veryBadSet` | Union of interval elements | Definition compiled |
 | Type-`F₃` set | Definition 1.3(iii) | `Tao2026.factorialThreeSet` | Right endpoints `N+H`, not all interval elements | Definition compiled |
 | One-term sets | Definition 1.3, following clauses `(i)₁`--`(iii)₁` | `badOneTermSet`, `veryBadOneTermSet`, `factorialThreeOneTermSet` | Defined through the literal `H=1` interval predicates with positivity explicit | Definitions and all three subset bridges compiled |
-| Factorial-square triple | Equation labelled `f3-eq`; Theorem 1.10 | `IsFactorialSquareTriple` | Counts ordered triples; the existential nonnegative square root is unique when it exists | Definition compiled; uniqueness bridge open |
+| Inclusive `y`-smooth natural and `Ψ` | Before Proposition 2.1 | `IsSmooth n y`, `psiNat x y` | Bridges Tao's `≤ y` convention to Mathlib's strict `Nat.smoothNumbers (y+1)` convention | Definition and membership interface compiled |
+| Exact `B¹` representation and sum | Display `box` following Proposition 2.1 | `mem_badOneTermSet_iff_exists_prime_sq_mul_smooth`, `prime_unique_of_sq_mul_smooth`, `badOneTermCount_eq_sum_psiNat` | Proves the unique `n=p²m` representation and the literal natural-division identity over primes `2≤p≤√x`; counts values only after injectivity | Proved, warning-free, and axiom-audited |
+| Exact `VB¹` representation and sum | One-term powerful-number discussion used for the Theorem 1.8 main term | `mem_veryBadOneTermSet_iff_exists_sq_mul_cube_squarefree`, `veryBadOneTermCount_eq_sum_sqrt_div_cube` | Proves `VB¹` is exactly the positive powerful numbers, uses the unique `a²b³` form with squarefree `b`, and counts values as `∑_{b≤x, squarefree} ⌊√(x/b³)⌋` | Proved, warning-free, and axiom-audited; zeta asymptotic remains open |
+| Factorial-square triple | Equation labelled `f3-eq`; Theorem 1.10 | `IsFactorialSquareTriple` | Counts ordered triples; the existential nonnegative square root is proved unique when it exists | Definition and uniqueness bridge compiled |
 | Values in `[1,x]` | Theorems 1.7--1.9 | `countUpTo`, specialized count functions | Counts literal values, not representations | Definitions compiled |
 | Factorial solutions up to `x` | Theorem 1.10 | `factorialSquareTriplesUpTo`, `factorialSquareTripleCount` | Finite nested product filtered by strict order and the square equation | Definition compiled |
 
@@ -43,19 +49,30 @@ Section 2--6 lemma ledger and immutable node-74 snapshot remain open.
 
 | Paper item | Exact source conclusion | Principal imported inputs | Lean endpoint | Status |
 |---|---|---|---|---|
-| Theorem 1.7, bad sets | `#((B \ B¹)∩[1,x]) ≪ #(B¹∩[1,x])/log^(1-o(1))x`; hence `#(B∩[1,x])=x/z^(2+o(1))` | Proposition 2.1, Lemma 1.6, Proposition 2.3(iii), large sieve, Lemma 5.1, Propositions 6.5--6.8 | Not declared | Not started |
-| Theorem 1.8, very bad sets | `#((VB \ VB¹)∩[1,x]) ≪ x^(2/5+o(1))`; hence zeta-ratio asymptotic | Theorem 2.5, Lemmas 2.10--2.11 and 3.1--3.2 | Not declared | Not started |
-| Theorem 1.9, type `F₃` | `#((F₃ \ F₃¹)∩[1,x]) ≪ x^(1/2+o(1))`; hence `#(F₃∩[1,x])=x^(1/2+o(1))` | Proposition 2.3, Theorem 2.5, large sieve, Lemmas 4.1--4.3 | Not declared | Not started |
-| Theorem 1.10, factorial equation | Number of `1≤a₁<a₂<a₃≤x` solutions is `x^(1/2+o(1))` | Theorem 1.9 plus representation and lower-bound arguments | Not declared | Not started |
+| Theorem 1.7, bad sets | `#((B \ B¹)∩[1,x]) ≪ #(B¹∩[1,x])/log^(1-o(1))x`; hence `#(B∩[1,x])=x/z^(2+o(1))` | Proposition 2.1, Lemma 1.6, Proposition 2.3(iii), large sieve, Lemma 5.1, Propositions 6.5--6.8 | `TaoTheorem17Conclusion` | Contract compiled; proof not started |
+| Theorem 1.8, very bad sets | `#((VB \ VB¹)∩[1,x]) ≪ x^(2/5+o(1))`; hence zeta-ratio asymptotic | Theorem 2.5, Lemmas 2.10--2.11 and 3.1--3.2 | `TaoTheorem18Conclusion` | Contract compiled; proof not started |
+| Theorem 1.9, type `F₃` | `#((F₃ \ F₃¹)∩[1,x]) ≪ x^(1/2+o(1))`; hence `#(F₃∩[1,x])=x^(1/2+o(1))` | Proposition 2.3, Theorem 2.5, large sieve, Lemmas 4.1--4.3 | `TaoTheorem19Conclusion` | Contract compiled; proof not started |
+| Theorem 1.10, factorial equation | Number of `1≤a₁<a₂<a₃≤x` solutions is `x^(1/2+o(1))` | Theorem 1.9 plus representation and lower-bound arguments | `TaoTheorem110Conclusion` | Contract compiled; proof not started |
+
+## Supporting theorem ledger
+
+| Paper item | Exact source conclusion | Lean endpoint | Status |
+|---|---|---|---|
+| Proposition 2.3(i) | If `N >= 2`, there is a prime `p` with `N/2 < p <= N` | `Tao2026.taoProposition23i` | Proved from Mathlib's kernel-checked Bertrand theorem and axiom-audited |
+| Proposition 2.3(ii) | If `N >= 0`, `H >= 1`, and `{N+1,...,N+H}` has no prime, then `H ≪ N^0.525` | No Lean endpoint | Primary source pinned as `Sources/baker-harman-pintz-2001.pdf`, SHA-256 `D3B6011255C49E52B002E08FAEBB7D252CA1027E545B72FA097176E6285443A2`; Baker--Harman--Pintz Theorem 1, journal p. 532/PDF p. 1, gives the sufficiently-large backward prime interval; journal p. 561/PDF p. 30 gives the final positive lower bound. The natural-endpoint and small-value transfer, and the full analytic proof, remain open. |
+| Proposition 2.3(iii) | If `theta > 2/15`, there is `c>0` such that the real `0<=x'<=X` for which the closed interval `[x',x'+X^theta]` contains no prime have measure `O(X^(1-c+o(1)))` | `Tao2026.taoProposition23iii_guthMaynard` | Proved, warning-free, and axiom-audited |
+| Exact one-term bad-set identity | `#(B¹∩[1,x]) = ∑_{p≤√x} Ψ(x/p²,p)` | `Tao2026.badOneTermCount_eq_sum_psiNat` | Proved with floor encoded by natural division, a prime-restricted finite sum, and an injectivity proof for the unique representation |
+| Exact one-term very-bad-set identity | Positive powerful integers are uniquely `a²b³` with squarefree `b`; hence `#(VB¹∩[1,x]) = ∑_{b≤x, squarefree} ⌊√(x/b³)⌋` | `Tao2026.veryBadOneTermCount_eq_sum_sqrt_div_cube` | Proved with a literal finite representation space and injectivity; the `ζ(3/2)/ζ(3) √x` asymptotic is not claimed |
 
 ## Verified and candidate upstream boundaries
 
 | Input | Evidence and exact declaration | Node-73 status |
 |---|---|---|
 | Mathlib | Commit `c5ea00351c28e24afc9f0f84379aa41082b1188f`; resolved in `Extension/lake-manifest.json` | Active pinned dependency |
-| Node 71 Guth--Maynard | Frozen commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`; publication theorem `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native` | Indirect source through node 74; no mutable import permitted |
-| Node 74 Gafni--Tao | `GafniTao.gafniTaoTheorem11_almostAll_guthMaynard_native` proves the dyadic exceptional-density conclusion for `θ>2/15`; `gafniTaoTheorem11_almostAll_guthMaynard_singleSet_native` supplies a single density-zero set | Exact exceptional-measure bridge and immutable source snapshot pending |
-| PNT+ | Revision `4ecb950126c4290293c5662dfe0e884123171df5`; node 74 has an audited 83-file closure | Candidate only; exact needed closure pending |
+| Node 71 Guth--Maynard | Frozen tag `gm-foundation-freeze-v1.0.1`, commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be`; publication theorem `RiemannZeta.GuthMaynard.guthMaynardZeroDensity_published_native` | Included transitively in the frozen node-73 source closure; no mutable import |
+| Node 74 Gafni--Tao | Source closure rooted at `GafniTao.Theorem11`; its native density chain yields `Tao2026.exists_uniform_dyadic_exceptional_power_guthMaynard` for `2/15 < θ < 1` | Exact 852-module Gafni--Tao closure frozen and hashed; prime-power tail, dyadic measure bridge, constant-length prefix assembly, and full-range Proposition 2.3(iii) compiled and audited |
+| PNT+ | Revision `4ecb950126c4290293c5662dfe0e884123171df5`; exact 83-module reachable closure | Included transitively in the frozen node-73 package and hash manifest |
+| Baker--Harman--Pintz | R. C. Baker, G. Harman, J. Pintz, *The Difference Between Consecutive Primes, II*, PLMS 83 (2001), Theorem 1; DOI `10.1112/plms/83.3.532` | Exact PDF pinned and hashed; source statement inspected; no Lean formalization found or claimed |
 | `scottdhughes/erdos137` | Apache-2.0 commit `3027d9add77a1f2b203977501987c7def955475d` | Reviewed candidate for elementary lemmas only; not imported |
 
 ## Crosswalk completion rule

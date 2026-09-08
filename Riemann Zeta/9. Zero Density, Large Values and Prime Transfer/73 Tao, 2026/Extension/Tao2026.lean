@@ -3,6 +3,10 @@ import Tao2026.Asymptotics
 import Tao2026.Audit
 import Tao2026.Counting
 import Tao2026.Intervals
+import Tao2026.PrimeIntervals
+import Tao2026.PowerfulNumbers
+import Tao2026.PublicStatements
+import Tao2026.SmoothNumbers
 
 /-!
 # Tao 2026

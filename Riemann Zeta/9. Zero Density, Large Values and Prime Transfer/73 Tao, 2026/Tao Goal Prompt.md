@@ -1,12 +1,15 @@
 # Whole-proof operational goal prompt
 
-**Use:** this is the activation and completion contract for the Tao 2026
-formalization. The current node is only a source-pinned, declaration-free
-scaffold. When the owner explicitly starts the proof project, audit that
-baseline, execute the work below, and keep going until the exact public
-theorems and release gates are complete. Do not mark a mathematical item done
-because its definition, interface, conditional version, or surrounding
-infrastructure exists.
+**Use:** this is the active completion contract for the Tao 2026
+formalization. The owner activated it on 8 September 2026. The current verified
+stop line is the Proposition 2.3(i),(iii) milestone: the source
+definitions and public conclusion contracts compile, the exact
+`GafniTao.Theorem11` closure is frozen, and its fixed-power dyadic bridge has
+been transferred, with the full prime-power tail and finite prefix assembly,
+to Tao's literal global prime-free endpoint measure. Keep going until the exact public theorems and
+release gates are complete. Do not mark a mathematical item done because its
+definition, interface, conditional version, or surrounding infrastructure
+exists.
 
 ---
 
@@ -27,8 +30,9 @@ or make either older project depend on node 73.
 
 ## Frozen source and dependency boundary
 
-Before adding production declarations, turn the following researched baseline
-into an immutable, machine-checked manifest:
+Maintain and extend the immutable, machine-checked baseline below. The
+Gafni--Tao theorem closure is already frozen; later sources enter only when an
+exact crosswalk row requires them:
 
 - Tao source: arXiv `2603.27990v2`, last revised 22 April 2026. The PDF and TeX
   archive are already pinned in `Sources/` and recorded in
@@ -373,8 +377,8 @@ using asymptotic notation outside its eventual range.
 
 ## Release acceptance gates
 
-Replace the scaffold checker with a warning-failing principal verifier while
-preserving the owner-facing command:
+Continue extending the warning-failing principal verifier while preserving the
+owner-facing command:
 
 ```powershell
 cmd /c run_tao_build.bat --no-pause
@@ -398,7 +402,7 @@ Completion requires one successful run which, for the current checkout:
 8. writes an unsuppressed reproducibility log whose exact status is recorded
    in `Tao Reproduction Manifest.md`.
 
-Synchronize `README.md`, `Proof Architecture.md`, `Tao Checklist.md`,
+Synchronize `README.md`, `Tao Architecture.md`, `Tao Checklist.md`,
 `Tao Research Agenda.md`, `Tao Crosswalk.md`, `Tao Sources.md`, and
 `Tao Reproduction Manifest.md` only after the matching Lean gates pass. The
 architecture must distinguish proved, conditional, dependency-supplied, and
