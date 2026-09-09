@@ -176,12 +176,26 @@ integrability without an extra caller assumption; retained square modes have
 exact count `(2R+1)²` and an explicit uniform-envelope assembly bound. The
 uniform approximation is now propagated to the original continuous weight
 with explicit costs `(2P+1)δ` for the prime sum and `Pδ/log P` for the
-integral. The remaining Fourier work is the analytic coefficient decay, tail
-estimate for the infinite series, and construction of the required uniform
-approximation for a smooth periodic complex weight. The finite analogue is
-complete: nested mode truncations differ uniformly by at most the exact `ℓ¹`
-norm of their discarded coefficients, and that tail is propagated through
-the prime/integral discrepancy.
+integral. The source radial envelope `(1+|n|+|m|)^(-3)` is now proved
+summable on `ℤ²` by a separable `3/2`-power majorant. The square frequency
+boxes exhaust all modes, their exact outer `ℓ¹` tail tends to zero, and any
+coefficient family obeying the envelope yields uniform convergence of its
+finite square Fourier polynomials to the infinite series. A continuous
+`ℤ²`-periodic plane weight is descended to Mathlib's unit two-torus through
+an open quotient map, the torus monomials are proved equal to the project's
+plane characters, and Mathlib's reconstruction theorem identifies that
+summable series with the original weight. Nested finite mode
+truncations still have their exact discarded `ℓ¹` control through the full
+prime/integral discrepancy. The remaining Fourier work is to derive the
+source radial coefficient envelope from the third derivatives of the smooth
+periodic complex weight. The one-dimensional analytic core is proved: three
+periodic integrations by parts on `[0,1]` give the exact multiplier and a
+cubic frequency bound by the uniform third-derivative norm. The actual
+two-torus coefficient is now factored by Fubini in either coordinate order,
+its real slices are identified with those unit-interval coefficients, and
+cubic decay is obtained in either nonzero coordinate. What remains is the
+elementary radial-envelope combination and the comparison of the concrete
+derivative chains with `taoC3Norm`.
 The source's initial reduction from `j=1` to `j=2` is also exact: replace
 `N` by `N+M` and set the higher reciprocal coefficient to zero.
 The reusable finite core of the shorter-than-dyadic decomposition is now
@@ -220,14 +234,14 @@ loss: fixed natural-distance fibers have at most two points, exact fiberwise
 regrouping holds, and nonnegative kernels cost only the sharp factor two. The
 real-power sum `(1 + d*F/N_r)^(-c)` is now bounded by an evaluated affine-rpow
 integral and normalized to the source scale. Under `D≤N_r`, `F≥1`, `0≤c<1`,
-and the explicit endpoint condition `1≤N_r F^(-c)`, the pure bound is
-`(1+2^(1-c)/(1-c))N_r F^(-c)`; the full finite-support distance sum has only
-the additional factor two. It remains to derive the endpoint condition from
-the source's eventual quantitative parameter choices and feed the result into
-the analytic Type II estimate. Without that condition, the audited uniform
-statement retains the necessary additive `1`: the zero-distance summand is
-exactly one, and a separate theorem shows that any proposed pure
-`C N_r F^(-c)` majorant must dominate this endpoint.
+and the explicit endpoint condition `1≤N_r F^(-c)`, the all-support pure bound
+is `(1+2^(1-c)/(1-c))N_r F^(-c)`. The actual Type II correlation sum is
+off-diagonal, however: its support is `S.erase n`, whose zero-distance fiber is
+proved empty. Its positive-distance sum is bounded directly by the integral,
+giving a pure `N_r F^(-c)` bound with no endpoint assumption; this stronger
+form is propagated through the complete squared-inner-sum reduction, the
+actual short block, and the exact Vaughan double blocks. The all-support
+theorem still correctly retains the necessary additive `1`.
 This decay estimate is no longer isolated from the Type II algebra: a
 pointwise `Q(A·kernel(|n-n'|)+E)` hypothesis is summed over the exact ordered
 off-diagonal pairs, and the result is substituted into the literal
@@ -237,8 +251,9 @@ the paper's concrete logarithmic factors. The finite theorem is specialized
 to the actual inner quotient block and exact Vaughan double-block geometry;
 the block diameter and nonzero reciprocal indices are now discharged
 internally rather than left as interface assumptions. The exact bound
-`#block≤q` is proved and substituted for both supports, leaving the final
-squared-sum inequality in the source-facing block lengths alone.
+`#block≤q` is proved and substituted for both supports in the endpoint-free
+form as well, leaving a pure source-scale squared-sum inequality in the
+source-facing block lengths alone.
 The high-frequency exponent conversion is also exact: under `P≥e`, a source
 lower bound `(log P)^d≤F` converts `(log P)^b F^(-c)` into
 `(log P)^(-t)` whenever `b+t≤dc`. What remains is to instantiate `b,d,t`

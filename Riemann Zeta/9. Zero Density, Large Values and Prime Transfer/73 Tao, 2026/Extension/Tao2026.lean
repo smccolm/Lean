@@ -13,6 +13,10 @@ import Tao2026.FactorialAsymptotics
 import Tao2026.FactorialFibers
 import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation
+import Tao2026.FourierDecay
+import Tao2026.FourierIntegrationByParts
+import Tao2026.FourierSlices
+import Tao2026.TorusFourier
 import Tao2026.Intervals
 import Tao2026.IntervalMultiples
 import Tao2026.LowFrequency

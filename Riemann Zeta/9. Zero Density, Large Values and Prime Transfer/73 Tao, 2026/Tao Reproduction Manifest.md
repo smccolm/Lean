@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-0.74`. It
+This is a development manifest, version `prime-equidistribution-0.80`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -30,14 +30,14 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 - Mathlib commit: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - Production modules: `Anatomy`, `Intervals`, `Asymptotics`, `Counting`,
   `CoefficientBounds`, `CoefficientProduct`, `CoefficientSelection`, `CriticalIntervals`,
-  `FactorialAsymptotics`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FourierAssembly`, `FourierApproximation`,
+  `FactorialAsymptotics`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FourierAssembly`, `FourierApproximation`, `FourierDecay`, `FourierIntegrationByParts`, `FourierSlices`,
   `IntervalMultiples`, `PrimeIntervals`, `PrimeEquidistribution`,
   `PrimePowerReduction`, `PartialSummation`, `PhaseVariation`, `LowFrequency`, `PowerfulAsymptotics`, `PowerfulExtraction`,
   `PowerfulLimit`, `PowerfulNumbers`,
   `PowerfulRelations`, `PowerfulRelationCounting`, `SquareRelations`, `ConvolutionRearrangement`,
   `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`,
   `PublicStatements`, `TypeIReduction`, `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `VeryBadIntervals`,
-  `VinogradovPhase`, `VaughanIdentity`, and `Audit`.
+  `TorusFourier`, `VinogradovPhase`, `VaughanIdentity`, and `Audit`.
 - Frozen theorem dependency: the exact 1,226-module import closure of
   `GafniTao.Theorem11`, with 852 `GafniTao`, 291 `RiemannZeta`, and 83
   `PrimeNumberTheoremAnd` source modules.
@@ -198,9 +198,24 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `(2P+1)δ` in the prime sum and `Pδ/log P` in the integral; continuous
   source weights are proved integrable automatically. Fourier coefficient
   tails between nested finite mode sets are bounded uniformly by their exact
-  discarded `ℓ¹` norm and propagated through the full discrepancy. Fourier
-  coefficient decay and construction of the infinite-to-finite uniform
-  approximation remain open.
+  discarded `ℓ¹` norm and propagated through the full discrepancy. The
+  source's cubic envelope `(1+|n|+|m|)^(-3)` is proved summable on `ℤ²`; the
+  square frequency boxes exhaust `ℤ²`, their outer `ℓ¹` tail tends to zero,
+  and coefficients under this envelope generate uniformly convergent finite
+  square Fourier polynomials. A continuous `ℤ²`-periodic plane weight is now
+  descended through the open quotient `ℝ² → (ℝ/ℤ)²`; Mathlib's torus
+  characters are identified with the source's `fourierMode2D`, and its
+  Fourier coefficients are identified with their literal fundamental-square
+  integrals. Mathlib's reconstruction theorem proves that coefficients satisfying the
+  cubic envelope give square partial sums converging uniformly to the
+  original `W`. The exact unit-interval integration-by-parts identity is now
+  iterated three times and gives a cubic frequency bound by the norm of the
+  third derivative. Fubini factorization of the actual two-torus coefficient
+  is proved in both coordinate orders, the torus slices are identified with
+  unit-interval coefficients, and the cubic derivative bound is propagated
+  to either nonzero coordinate frequency. Combining those directional bounds
+  into the source radial envelope and comparing the derivative hypotheses
+  with `taoC3Norm` remain open.
   The `j=1` phase and its finite prime sums are proved exactly equal to the
   `j=2, M=0` case after absorbing `M` into `N`.
   The finite core of the shorter-than-dyadic decomposition is proved: exact
@@ -209,8 +224,9 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   interval is also decomposed exactly, pointwise and in arbitrary finite
   weighted sums, into block restrictions that preserve uniform norm bounds.
   Concrete instantiation for every Vaughan coefficient family, the Vinogradov/Weyl
-  cancellation, Type I/II estimates, and Fourier coefficient
-  decay/truncation beyond the proved finite assembly remain open.
+  cancellation, Type I/II estimates, and the derivative-to-Fourier-coefficient
+  decay estimate remain
+  open.
   Independently, every finite weighted divisor-antidiagonal convolution is
   reindexed exactly into a bounded product box with the literal condition
   `m*n∈I`. Reassociation of the nested terms puts all three convolution terms
@@ -227,15 +243,14 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `c≥0`. The discrete distance sum is bounded by one plus the corresponding
   real integral, which is evaluated exactly using a proved affine-rpow
   antiderivative, yielding a closed-form finite-sum bound. The bound is
-  normalized exactly to `N_r F^{-c}` and, under the explicit endpoint
-  condition `1≤N_r F^{-c}`, the endpoint is absorbed with constant
-  `1+2^(1-c)/(1-c)`. Combining this with the sharp distance-fiber result gives
-  the full finite-support correlation-kernel bound with only an additional
-  factor two. The unconditional version retaining `1 + O(N_r F^{-c})` is
-  proved too. Since the distance-zero summand is exactly one, a further
-  audited lower bound shows that any pure `C N_r F^{-c}` majorant must dominate
-  one; deriving this endpoint condition from the source's later quantitative
-  parameter choices remains open.
+  normalized exactly to `N_r F^{-c}`. The all-support theorem correctly
+  retains `1 + O(N_r F^{-c})`, and its distance-zero lower bound shows why.
+  In the actual off-diagonal use the center is erased first; the zero-distance
+  fiber is proved empty, so the positive-distance sum is bounded directly by
+  the integral and has a pure `N_r F^{-c}` bound with no endpoint condition.
+  This strengthened estimate is propagated through the complete
+  product-restricted squared-inner-sum reduction, its actual short-block
+  specialization, and the exact Vaughan outer/inner double blocks.
   A pointwise restricted-correlation estimate of the exact source shape
   `Q(A·kernel(|n-n'|)+E)` is now summed over the ordered off-diagonal pairs,
   preserving the decay and counting the additive error exactly. This estimate
@@ -247,8 +262,10 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   decomposition. Since those blocks begin at one, membership also supplies
   every nonzero reciprocal-phase index required by the rearrangement.
   Each quotient block is proved to have cardinality at most its chosen length.
-  Both support cardinalities are then eliminated from the final double-block
-  estimate in favor of the explicit lengths `qouter` and `qinner`.
+  Both support cardinalities are then eliminated from both the conservative
+  and endpoint-free double-block estimates in favor of the explicit lengths
+  `qouter` and `qinner`; the source-facing endpoint-free theorem contains no
+  artificial additive `1`.
   The high-frequency logarithmic arithmetic is formalized exactly: if
   `ℓ≥1`, `ℓ^d≤F`, and `b+t≤dc`, then `ℓ^b F^(-c)≤ℓ^(-t)`. Direct corollaries
   use `ℓ=log P`, the explicit threshold `P≥e`, and the source's strict

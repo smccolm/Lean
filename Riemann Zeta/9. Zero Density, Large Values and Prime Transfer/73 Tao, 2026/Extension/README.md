@@ -49,7 +49,11 @@ the corresponding finite-support correlation estimate with factor two. The
 unconditional factor-two estimate retaining `1 + O(R * F^(-c))` is proved as
 well, together with the lower bound `1 ≤ ∑d kernel(d)` showing why that
 endpoint cannot be discarded without an additional hypothesis.
-The pointwise source-shaped correlation majorant
+For the actual off-diagonal support `S.erase n`, the zero-distance fiber is
+proved empty. Its positive-distance sum therefore has a pure
+`R * F^(-c)` bound without the endpoint condition, and this stronger result
+is propagated through the complete squared-inner-sum reduction, actual
+short-block specialization, and exact Vaughan double blocks. The pointwise source-shaped correlation majorant
 `Q * (A * kernel(|n-n'|) + E)` is now summed over the exact ordered
 off-diagonal support and substituted into the product-restricted
 squared-inner-sum reduction, without replacing the kernel by a uniform bound.
@@ -57,8 +61,8 @@ Specializations to one quotient block and to the exact outer/inner double
 blocks prove their distance and positive-index side conditions directly from
 the shorter-than-dyadic construction.
 Every quotient block has cardinality at most its length `q`; substituting both
-outer and inner bounds gives a final source-facing squared-sum estimate in
-`qouter` and `qinner` alone.
+outer and inner bounds gives an endpoint-free source-facing squared-sum
+estimate in `qouter` and `qinner` alone.
 The exact high-frequency arithmetic is compiled separately: for a base
 `ℓ≥1`, the hypotheses `ℓ^d≤F` and `b+t≤dc` yield
 `ℓ^b F^(-c)≤ℓ^(-t)`, with direct specializations to `ℓ=log P` and the source's
@@ -92,8 +96,20 @@ internally from the source interval assumptions, while the retained square
 frequency box is counted exactly by `(2R+1)²`.
 Continuous weights are also proved integrable on the source interval, and a
 uniform approximation `‖W-V‖∞≤δ` transfers with explicit prime-sum cost
-`(2P+1)δ` and integral cost `Pδ/log P`. Thus the remaining Fourier obligation
-is the analytic construction and decay of the approximating polynomial.
+`(2P+1)δ` and integral cost `Pδ/log P`. The source cubic coefficient envelope
+is summable on `ℤ²`; the square boxes exhaust all frequencies, their outer
+`ℓ¹` tails vanish, and the associated finite polynomials converge uniformly
+to the infinite series. `TorusFourier` descends a continuous periodic plane
+weight to Mathlib's unit two-torus, identifies the torus characters with
+`fourierMode2D`, and proves that the same partial sums converge uniformly to
+the original `W` once the cubic coefficient estimate is available. Thus the
+remaining Fourier obligation is to derive that envelope from `W`'s third
+derivatives. Its one-dimensional core is complete: the exact periodic
+integration-by-parts formula is iterated three times and bounded by the
+uniform norm of the third derivative. `FourierSlices` factors the actual
+two-torus coefficient in both Fubini orders, identifies its real slices with
+unit-interval coefficients, and obtains cubic decay in either nonzero
+coordinate. The radial comparison and `taoC3Norm` bridge remain.
 Nested finite truncations are already controlled uniformly by the exact
 discarded coefficient `ℓ¹` norm and transferred to the full discrepancy.
 The source's `j=1` case is exactly absorbed into the `j=2, M=0` phase, both
@@ -105,7 +121,9 @@ interval is decomposed pointwise, and in every finite weighted sum, into its
 short-block restrictions; those restrictions preserve uniform norm bounds.
 The bounded product form of every Vaughan convolution term is then decomposed
 exactly into outer blocks, and into double blocks when both coefficients must
-be localized, without dropping `m*n ∈ I`. Establishing the paper's precise
+be localized, without dropping `m*n ∈ I`. The endpoint-free Type II kernel
+bound is carried through these exact double blocks and their explicit lengths.
+Establishing the paper's precise
 polylogarithmic scale/count envelopes and the analytic cancellation theorem
 remain open.
 The prime/Mangoldt conversion is exact: the prime-logarithm phase sum and

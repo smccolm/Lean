@@ -46,6 +46,16 @@ continuous-weight integrability and the explicit uniform-approximation
 transfer costs for both the prime sum and logarithmic integral.
 Nested finite Fourier truncations are audited through their exact discarded
 coefficient `ℓ¹` tail and the resulting full discrepancy bound.
+The audit also covers summability of the source cubic `ℤ²` coefficient
+envelope, exhaustion by square frequency boxes, vanishing outer-box tails,
+and uniform convergence of finite polynomials to their infinite series. It
+also checks the open-quotient descent of continuous periodic plane weights,
+compatibility of the plane and torus character conventions, and conditional
+uniform Fourier reconstruction of the original weight. The axiom audit also
+covers the exact one-step and three-step periodic integration-by-parts
+identities, both Fubini factorizations of the actual torus coefficient, both
+real-slice coefficient identities, and the resulting directional cubic
+coefficient estimates.
 It audits the finite shorter-than-dyadic quotient-block sum identity, ceiling
 block-count estimate, strict within-block diameter, supported-coefficient
 restriction, exact pointwise and finite weighted-sum decompositions, and
@@ -73,10 +83,15 @@ evaluation, exact source-scale normalization, endpoint absorption under
 `1 ≤ R * F^(-c)`, and final factor-two finite-support correlation bound are
 audited as well. The unconditional `1 + O(R * F^(-c))` form and the
 distance-zero lower-bound obstruction to dropping the endpoint are audited.
-The audit also checks the source-shaped kernel-plus-error summation over exact
+For the actual erased-center off-diagonal support, it additionally audits the
+empty zero-distance fiber, direct positive-distance integral bound, pure
+`R * F^(-c)` estimate without an endpoint hypothesis, and propagation through
+the full and short-block squared-inner-sum reductions. The audit also checks
+the source-shaped kernel-plus-error summation over exact
 ordered off-diagonal pairs and its final propagation into the
 product-restricted squared-inner-sum inequality.
-The actual short-inner-block and exact Vaughan double-block specializations,
+The actual short-inner-block and exact Vaughan double-block specializations of
+the endpoint-free source-scale estimate,
 including automatic distance and nonzero-index side conditions, are audited.
 The quotient-block cardinality bound and the resulting final estimate with
 both support sizes replaced by their explicit block lengths are audited too.

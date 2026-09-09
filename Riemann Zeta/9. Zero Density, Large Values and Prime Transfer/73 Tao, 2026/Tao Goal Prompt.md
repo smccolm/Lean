@@ -19,7 +19,12 @@ integer-frequency parameter rescaling, automatic source-interval mode
 integrability, and the exact `(2R+1)²` retained-box count and uniform-envelope
 bound, plus continuous-weight integrability and the explicit uniform-Fourier-
 approximation transfer to the full discrepancy together with exact finite
-discarded-mode `ℓ¹` truncation control, the exact `j=1` absorption,
+discarded-mode `ℓ¹` truncation control, summability of the source cubic
+`ℤ²` coefficient envelope, vanishing square-box tails, and uniform convergence
+of the corresponding finite Fourier polynomials to their series, together
+with an exact descent of continuous periodic weights to Mathlib's unit
+two-torus and conditional uniform reconstruction of the original weight from
+those coefficients, the exact `j=1` absorption,
 Type II diagonal split,
 transformed-parameter size bounds, and literal product-restricted correlation
 rearrangement. The divisor-antidiagonal Vaughan sums are now reindexed exactly
@@ -28,22 +33,26 @@ shorter-than-dyadic decomposition. Supported coefficient sequences now have
 exact pointwise and finite weighted-sum block decompositions with preserved
 norm bounds. The product-restricted Vaughan terms now also have exact outer
 and double coefficient-block decompositions. The paper's quantitative
-polylogarithmic family/count envelopes, Fourier coefficient decay and
-infinite reconstruction, and the analytic cancellation estimate remain open.
+polylogarithmic family/count envelopes, the radial and `taoC3Norm` closure of
+Fourier coefficient decay from `W` beyond the now-proved one-dimensional
+threefold integration-by-parts and two-dimensional Fubini/slice directional
+bounds, and the analytic
+cancellation estimate remain open.
 The Type II correlation kernel is already regrouped exactly by
 natural distance with multiplicity at most two. Its one-dimensional
 real-power sum is bounded by an exact affine-rpow calculation and has the pure
-`N_r F^(-c)` source scale under the explicit endpoint condition
-`1 ≤ N_r F^(-c)`; deriving that condition from the paper's quantitative
-parameter regime and using the bound in the analytic Type II chain remain
-open. The unconditional audited form retains `1 + O(N_r F^(-c))`, and the
-zero-distance lower bound proves that this endpoint cannot be discarded
-uniformly without an additional hypothesis. The pointwise source-shaped
+`N_r F^(-c)` source scale under the explicit endpoint condition for a support
+that includes the center. The actual correlation support erases the center;
+its zero-distance fiber is proved empty, yielding the pure source scale with
+no endpoint hypothesis and propagating it through the complete and actual
+short-block squared-inner-sum reductions and the exact Vaughan double blocks.
+The all-support audited form still
+retains the necessary `1 + O(N_r F^(-c))`. The pointwise source-shaped
 kernel-plus-error correlation estimate now feeds through the exact ordered
 off-diagonal sum and product-restricted squared-inner-sum reduction, including
 specializations to the actual shorter-than-dyadic and Vaughan double blocks.
 Their cardinalities are bounded by their chosen block lengths and substituted
-into the final squared-sum estimate.
+into both the conservative and endpoint-free squared-sum estimates.
 The high-frequency exponent arithmetic is explicit: a lower bound
 `(log P)^d≤F` absorbs `(log P)^b F^(-c)` to `(log P)^(-t)` whenever
 `b+t≤dc`.

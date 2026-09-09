@@ -119,8 +119,9 @@ envelope. The exact divisor-antidiagonal-to-product-box rearrangement and
 outer/double coefficient-block decompositions now connect the weighted
 Vaughan identity to literal `m*n∈I` Type I/II sums. This is proof
 infrastructure only; the paper's quantitative polylogarithmic family
-envelopes, Vinogradov/Weyl cancellation, Type I/II estimates, and infinite
-Fourier reconstruction remain open. The finite Abel-summation identity and its explicit
+envelopes, Vinogradov/Weyl cancellation, Type I/II estimates, and the
+derivative-to-Fourier-coefficient estimate remain open. Conditional Fourier
+reconstruction is now proved. The finite Abel-summation identity and its explicit
 `2 log b` bound are proved, so the source's logarithm-weighted alternate Type I
 form follows once the corresponding unweighted prefix estimates are supplied.
 The reverse prime partial-summation bridge is also proved, with the explicit
@@ -142,11 +143,21 @@ coefficient `ℓ¹` norm times a uniform mode error. The source contract now use
 the correct complex-valued weight and sum-of-orders `C³` norm. The source
 interval hypotheses prove every mode integrable automatically, and a retained
 square box has exactly `(2R+1)²` modes, giving an explicit finite assembly
-bound from uniform coefficient and mode-error envelopes. A separate stability
+bound from uniform coefficient and mode-error envelopes. The source cubic
+coefficient envelope `(1+|n|+|m|)^(-3)` is summable on `ℤ²`; the square boxes
+exhaust all modes, their outer `ℓ¹` tails vanish, and the associated finite
+Fourier polynomials converge uniformly to their infinite series. Continuous
+periodic weights are now descended through `ℝ² → (ℝ/ℤ)²`, the torus and plane
+character conventions are identified, and the torus Fourier theorem upgrades
+that convergence to uniform convergence to the original weight whenever the
+cubic coefficient estimate holds. A separate stability
 theorem transfers any continuous uniform
 approximation `‖W-V‖∞≤δ` to the full discrepancy, with explicit perturbation
-cost `(2P+1)δ + Pδ/log P`; only the construction and decay estimate for the
-required Fourier approximation remain. For nested finite mode sets, the
+cost `(2P+1)δ + Pδ/log P`; the actual two-torus coefficient is now factored
+by Fubini in either coordinate order and the threefold periodic
+integration-by-parts estimate gives cubic decay along either nonzero
+frequency. Combining these directional bounds into the radial envelope and
+relating the concrete derivative chains to `taoC3Norm` remain. For nested finite mode sets, the
 uniform error is now discharged explicitly by the `ℓ¹` norm of the discarded
 coefficients and propagated through the same stability theorem.
 The preliminary `j=1` reduction is kernel-checked as exact equality with the
@@ -171,11 +182,13 @@ each distance fiber has at most two points, reducing any nonnegative kernel
 to a one-dimensional sum with only that sharp factor. The real-power sum is
 now evaluated through an explicit antiderivative and bounded by
 `1+(2^(1-c)/(1-c)) N_r F^(-c)` unconditionally in the stated finite regime.
-The corresponding finite-support correlation bound, including the factor
-two, is proved. The zero-distance term also proves that every pure
-`C N_r F^(-c)` bound must dominate `1`; the paper-regime proof of such
-endpoint absorption (or retention of the additive diagonal term) and the
-analytic cancellation input remain open. A source-shaped pointwise
+The all-support zero-distance term proves that every pure `C N_r F^(-c)`
+bound must dominate `1`. In the actual off-diagonal correlation sum the
+center is erased, its zero-distance fiber is empty, and the positive-distance
+sum has a pure `N_r F^(-c)` bound without an endpoint assumption. That
+stronger bound is propagated through the squared-inner-sum reduction and an
+actual short block. The analytic cancellation input remains open. A
+source-shaped pointwise
 correlation estimate now propagates through the ordered off-diagonal pairs
 and the exact product-restricted Cauchy--Schwarz identity to a final
 squared-inner-sum bound, retaining the kernel decay and additive error
@@ -183,7 +196,8 @@ separately. This is specialized to the actual shorter-than-dyadic inner block
 and then to the exact outer/inner double blocks produced by Vaughan; block
 membership discharges the diameter and nonzero-index obligations. Each block
 is also proved to contain at most its chosen length, so the final estimate is
-now stated directly in `q_outer` and `q_inner`, ready for logarithmic exponent
+now stated directly in `q_outer` and `q_inner` in the endpoint-free
+source-scale form, ready for logarithmic exponent
 bookkeeping. The high-frequency implication is also formalized exactly:
 `(log P)^d ≤ F` and `b+t ≤ dc` imply
 `(log P)^b F^(-c) ≤ (log P)^(-t)` once `P≥e`. Theorem 2.5 is not claimed.
@@ -247,7 +261,9 @@ The node follows the useful role separation established in node 74:
 For Theorem 1.8, continue Theorem 2.5 from its compiled exact contract and
 phase calculus and exact product-restricted, block-decomposed weighted Vaughan
 identity through the Vinogradov/Weyl estimate, quantitative Vaughan family
-envelopes, Type I/II bounds, and Fourier coefficient decay/reconstruction.
+envelopes, Type I/II bounds, and the derivative-to-coefficient decay step of
+the Fourier argument; the subsequent weight reconstruction is already
+formalized conditional on that decay.
 Then prove the
 subexponential second clause of Lemma 3.1 and combine it with the now-complete
 Lemma 3.2 and Corollary 2.11.

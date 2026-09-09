@@ -103,7 +103,7 @@ theorem natDistFiber_erase_center_zero (S : Finset ℕ) (center : ℕ) :
   rw [mem_natDistFiber, Finset.mem_erase]
   constructor
   · rintro ⟨⟨hne, _hnS⟩, hdist⟩
-    exact (hne (Nat.dist_eq_zero.mp hdist)).elim
+    exact (hne (Nat.eq_of_dist_eq_zero hdist)).elim
   · intro hn
     simp at hn
 
@@ -214,6 +214,21 @@ theorem sum_typeIIDecayKernel_le_one_add_integral
       apply add_le_add_right
       simpa only [typeIIDecayKernel_eq_real, Nat.cast_zero, zero_add,
         Nat.cast_add, Nat.cast_one] using hint
+
+/-- The positive-distance kernel sum has no endpoint term and is bounded
+directly by the matching integral. -/
+theorem sum_typeIIDecayKernel_pos_le_integral
+    {R F c : ℝ} (D : ℕ) (hR : 0 < R) (hF : 0 ≤ F) (hc : 0 ≤ c) :
+    ∑ k ∈ Finset.range D, typeIIDecayKernel R F c (k + 1) ≤
+      ∫ x in (0 : ℝ)..D, typeIIDecayKernelReal R F c x := by
+  have hanti : AntitoneOn (typeIIDecayKernelReal R F c)
+      (Set.Icc (0 : ℝ) D) :=
+    (antitoneOn_typeIIDecayKernelReal hR hF hc).mono Set.Icc_subset_Ici_self
+  have hanti' : AntitoneOn (typeIIDecayKernelReal R F c)
+      (Set.Icc (0 : ℝ) (0 + (D : ℝ))) := by
+    simpa using hanti
+  simpa only [typeIIDecayKernel_eq_real, Nat.cast_zero, zero_add,
+    Nat.cast_add, Nat.cast_one] using hanti'.sum_le_integral
 
 /-- Closed-form antiderivative used to evaluate the Type II decay-kernel
 integral when `F>0` and `c≠1`. -/
@@ -342,6 +357,39 @@ theorem typeIIDecay_scale_identity
       rw [← Real.rpow_sub_one hF.ne' (1 - c)]
       congr 2
       ring
+
+/-- The actual off-diagonal kernel sum has the pure source scale without any
+endpoint hypothesis: erasing the center removes distance zero before the
+sum--integral comparison. -/
+theorem sum_typeIIDecayKernel_erase_le_sourceScale
+    (S : Finset ℕ) (center D : ℕ) {R F c : ℝ}
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hDnat : ∀ n ∈ S, Nat.dist n center ≤ D) (hD : (D : ℝ) ≤ R) :
+    ∑ n ∈ S.erase center,
+        typeIIDecayKernel R F c (Nat.dist n center) ≤
+      2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c)) := by
+  have hFpos : 0 < F := zero_lt_one.trans_le hF
+  calc
+    ∑ n ∈ S.erase center,
+        typeIIDecayKernel R F c (Nat.dist n center) ≤
+        2 * ∑ k ∈ Finset.range D, typeIIDecayKernel R F c (k + 1) :=
+      sum_natDistKernel_erase_le_two_mul_sum_pos S center D
+        (typeIIDecayKernel R F c)
+        (fun d => typeIIDecayKernel_nonneg c d hR hFpos.le) hDnat
+    _ ≤ 2 * (∫ x in (0 : ℝ)..D, typeIIDecayKernelReal R F c x) :=
+      mul_le_mul_of_nonneg_left
+        (sum_typeIIDecayKernel_pos_le_integral D hR hFpos.le hc0) (by norm_num)
+    _ = 2 * (typeIIDecayAntiderivative R F c D -
+        typeIIDecayAntiderivative R F c 0) := by
+      rw [integral_typeIIDecayKernelReal hR hFpos hc0 hc (Nat.cast_nonneg D)]
+    _ ≤ 2 * typeIIDecayAntiderivative R F c D := by
+      have hzero := typeIIDecayAntiderivative_zero_nonneg hR hFpos hc
+      linarith
+    _ ≤ 2 * (R / (F * (1 - c)) * (2 * F) ^ (1 - c)) := by
+      gcongr
+      exact typeIIDecayAntiderivative_le_two_mul_frequency D hR hF hc hD
+    _ = 2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c)) := by
+      rw [typeIIDecay_scale_identity hFpos]
 
 /-- The finite source kernel sum has the required `R * F^(-c)` scale, up to
 the endpoint `1` and an explicit constant depending only on `c`. -/
@@ -504,6 +552,65 @@ theorem sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_decayKerne
       Finset.sum_le_sum hinner
     _ = _ := by simp
 
+/-- Strengthened off-diagonal correlation sum. Because the center is erased
+before the kernel is summed, the decay term has the pure `R * F^(-c)` source
+scale with no endpoint-absorption hypothesis. -/
+theorem sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_sourceScale
+    (I K S : Finset ℕ) (N M : ℝ) (j D : ℕ) {Q A E R F c : ℝ}
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hDnat : ∀ n ∈ S, ∀ n' ∈ S, Nat.dist n' n ≤ D)
+    (hD : (D : ℝ) ≤ R)
+    (hX : ∀ n ∈ S, ∀ n' ∈ S, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ n ∈ S, ∑ n' ∈ S.erase n,
+        ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+      (S.card : ℝ) *
+        (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+          ((S.card - 1 : ℕ) : ℝ) * E)) := by
+  have hinner : ∀ n ∈ S,
+      ∑ n' ∈ S.erase n,
+          ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+        Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+          ((S.card - 1 : ℕ) : ℝ) * E) := by
+    intro n hn
+    calc
+      ∑ n' ∈ S.erase n,
+          ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+          ∑ n' ∈ S.erase n,
+          Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E) := by
+        apply Finset.sum_le_sum
+        intro n' hn'
+        have hn'data := Finset.mem_erase.mp hn'
+        exact hX n hn n' hn'data.2 hn'data.1.symm
+      _ = Q * (A * (∑ n' ∈ S.erase n,
+            typeIIDecayKernel R F c (Nat.dist n' n)) +
+          (((S.erase n).card : ℕ) : ℝ) * E) := by
+        simp_rw [mul_add]
+        rw [Finset.sum_add_distrib]
+        simp only [Finset.sum_const, nsmul_eq_mul]
+        rw [← Finset.mul_sum, ← Finset.mul_sum]
+        ring
+      _ ≤ Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+          (((S.erase n).card : ℕ) : ℝ) * E) := by
+        apply mul_le_mul_of_nonneg_left _ hQ
+        apply add_le_add_left
+        exact mul_le_mul_of_nonneg_left
+          (sum_typeIIDecayKernel_erase_le_sourceScale
+            S n D hR hF hc0 hc (hDnat n hn) hD) hA
+      _ = Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+          ((S.card - 1 : ℕ) : ℝ) * E) := by
+        rw [Finset.card_erase_of_mem hn]
+  calc
+    ∑ n ∈ S, ∑ n' ∈ S.erase n,
+        ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+        ∑ _n ∈ S,
+          Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            ((S.card - 1 : ℕ) : ℝ) * E) :=
+      Finset.sum_le_sum hinner
+    _ = _ := by simp
+
 /-- The complete product-restricted Type II finite reduction with a
 source-shaped decay estimate substituted for every off-diagonal correlation.
 No uniform worst-case replacement and no unjustified endpoint absorption are
@@ -539,6 +646,44 @@ theorem sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_decayKernel
       add_le_add_right
         (mul_le_mul_of_nonneg_left
           (sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_decayKernel
+            I K S N M j D hQ hA hR hF hc0 hc hDnat hD hX)
+          (sq_nonneg L))
+        ((K.card : ℝ) * (S.card : ℝ) * L ^ 2)
+
+/-- Complete product-restricted Type II reduction with the strengthened pure
+off-diagonal source scale. The diagonal remains explicit in the first term,
+so no zero-distance endpoint is duplicated in the correlation term. -/
+theorem sum_typeIIProductRestrictedInnerSum_norm_sq_le_sourceScale
+    (I K S : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ) (j D : ℕ)
+    {L Q A E R F c : ℝ}
+    (hK : ∀ m ∈ K, m ≠ 0) (hS : ∀ n ∈ S, n ≠ 0)
+    (hL : 0 ≤ L) (hγ : ∀ n ∈ S, ‖γ n‖ ≤ L)
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hDnat : ∀ n ∈ S, ∀ n' ∈ S, Nat.dist n' n ≤ D)
+    (hD : (D : ℝ) ≤ R)
+    (hX : ∀ n ∈ S, ∀ n' ∈ S, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ m ∈ K, ‖typeIIProductRestrictedInnerSum I S γ N M j m‖ ^ 2 ≤
+      (K.card : ℝ) * (S.card : ℝ) * L ^ 2 +
+        L ^ 2 * ((S.card : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            ((S.card - 1 : ℕ) : ℝ) * E))) := by
+  calc
+    ∑ m ∈ K, ‖typeIIProductRestrictedInnerSum I S γ N M j m‖ ^ 2 ≤
+        (K.card : ℝ) * (S.card : ℝ) * L ^ 2 +
+          L ^ 2 * ∑ n ∈ S, ∑ n' ∈ S.erase n,
+            ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ :=
+      sum_typeIIProductRestrictedInnerSum_norm_sq_le
+        I K S γ N M j hK hS hL hγ
+    _ ≤ (K.card : ℝ) * (S.card : ℝ) * L ^ 2 +
+        L ^ 2 * ((S.card : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            ((S.card - 1 : ℕ) : ℝ) * E))) :=
+      add_le_add_right
+        (mul_le_mul_of_nonneg_left
+          (sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_sourceScale
             I K S N M j D hQ hA hR hF hc0 hc hDnat hD hX)
           (sq_nonneg L))
         ((K.card : ℝ) * (S.card : ℝ) * L ^ 2)
@@ -599,6 +744,37 @@ theorem sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_of_dec
         Nat.le_of_lt (natDist_lt_of_mem_same_shortIntervalBlock hq hn' hn))
       hqR hX
 
+/-- Endpoint-free source-scale version on an actual shorter-than-dyadic
+coefficient block. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale
+    (I K : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ) (j a b q k : ℕ)
+    {L Q A E R F c : ℝ}
+    (hq : 0 < q) (hK : ∀ m ∈ K, m ≠ 0)
+    (hS : ∀ n ∈ shortIntervalBlock a b q k, n ≠ 0)
+    (hL : 0 ≤ L)
+    (hγ : ∀ n ∈ shortIntervalBlock a b q k, ‖γ n‖ ≤ L)
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hqR : (q : ℝ) ≤ R)
+    (hX : ∀ n ∈ shortIntervalBlock a b q k,
+      ∀ n' ∈ shortIntervalBlock a b q k, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ m ∈ K,
+        ‖typeIIProductRestrictedInnerSum I (shortIntervalBlock a b q k)
+          γ N M j m‖ ^ 2 ≤
+      (K.card : ℝ) * ((shortIntervalBlock a b q k).card : ℝ) * L ^ 2 +
+        L ^ 2 * (((shortIntervalBlock a b q k).card : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            (((shortIntervalBlock a b q k).card - 1 : ℕ) : ℝ) * E))) := by
+  exact
+    sum_typeIIProductRestrictedInnerSum_norm_sq_le_sourceScale
+      I K (shortIntervalBlock a b q k) γ N M j q hK hS hL hγ
+      hQ hA hR hF hc0 hc
+      (fun n hn n' hn' =>
+        Nat.le_of_lt (natDist_lt_of_mem_same_shortIntervalBlock hq hn' hn))
+      hqR hX
+
 /-- Exact double-block specialization used by the product-box Vaughan
 decomposition.  Both natural supports begin at `1`, so all reciprocal-phase
 indices are proved nonzero from block membership. -/
@@ -630,6 +806,56 @@ theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_of_decayKerne
                 E))) := by
   apply
     sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_of_decayKernel
+      I (shortIntervalBlock 1 (Bouter + 1) qouter kouter) γ N M j
+      1 (Binner + 1) qinner kinner hqinner
+  · intro m hm
+    rw [mem_shortIntervalBlock] at hm
+    omega
+  · intro n hn
+    rw [mem_shortIntervalBlock] at hn
+    omega
+  · exact hL
+  · exact fun n _hn => hγ n
+  · exact hQ
+  · exact hA
+  · exact hR
+  · exact hF
+  · exact hc0
+  · exact hc
+  · exact hqinnerR
+  · exact hX
+
+/-- Endpoint-free source-scale estimate on the exact double-block geometry used
+by the product-box Vaughan decomposition.  The inner correlation support is an
+erased-center off-diagonal set, so no zero-distance endpoint term occurs. -/
+theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale
+    (I : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ)
+    (j Bouter Binner qouter qinner kouter kinner : ℕ)
+    {L Q A E R F c : ℝ}
+    (hqinner : 0 < qinner) (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hqinnerR : (qinner : ℝ) ≤ R)
+    (hX : ∀ n ∈ shortIntervalBlock 1 (Binner + 1) qinner kinner,
+      ∀ n' ∈ shortIntervalBlock 1 (Binner + 1) qinner kinner, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I
+          (shortIntervalBlock 1 (Bouter + 1) qouter kouter)
+          N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ m ∈ shortIntervalBlock 1 (Bouter + 1) qouter kouter,
+        ‖typeIIProductRestrictedInnerSum I
+          (shortIntervalBlock 1 (Binner + 1) qinner kinner)
+          γ N M j m‖ ^ 2 ≤
+      ((shortIntervalBlock 1 (Bouter + 1) qouter kouter).card : ℝ) *
+          ((shortIntervalBlock 1 (Binner + 1) qinner kinner).card : ℝ) * L ^ 2 +
+        L ^ 2 *
+          (((shortIntervalBlock 1 (Binner + 1) qinner kinner).card : ℝ) *
+            (Q * (A *
+                (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+              (((shortIntervalBlock 1 (Binner + 1) qinner kinner).card - 1 : ℕ) : ℝ) *
+                E))) := by
+  apply
+    sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale
       I (shortIntervalBlock 1 (Bouter + 1) qouter kouter) γ N M j
       1 (Binner + 1) qinner kinner hqinner
   · intro m hm
@@ -713,6 +939,73 @@ theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_blockLengths
     gcongr
   exact
     (sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_of_decayKernel
+      I γ N M j Bouter Binner qouter qinner kouter kinner hqinner hL hγ
+      hQ hA hR hF hc0 hc hqinnerR hX).trans (add_le_add hdiag hoff)
+
+/-- Endpoint-free source-facing estimate with both exact Vaughan block
+cardinalities replaced by their chosen lengths. -/
+theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale_blockLengths
+    (I : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ)
+    (j Bouter Binner qouter qinner kouter kinner : ℕ)
+    {L Q A E R F c : ℝ}
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A) (hE : 0 ≤ E)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hqinnerR : (qinner : ℝ) ≤ R)
+    (hX : ∀ n ∈ shortIntervalBlock 1 (Binner + 1) qinner kinner,
+      ∀ n' ∈ shortIntervalBlock 1 (Binner + 1) qinner kinner, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I
+          (shortIntervalBlock 1 (Bouter + 1) qouter kouter)
+          N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ m ∈ shortIntervalBlock 1 (Bouter + 1) qouter kouter,
+        ‖typeIIProductRestrictedInnerSum I
+          (shortIntervalBlock 1 (Binner + 1) qinner kinner)
+          γ N M j m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            (qinner : ℝ) * E))) := by
+  have hKcardNat := card_shortIntervalBlock_le
+    1 (Bouter + 1) qouter kouter hqouter
+  have hScardNat := card_shortIntervalBlock_le
+    1 (Binner + 1) qinner kinner hqinner
+  have hKcard :
+      ((shortIntervalBlock 1 (Bouter + 1) qouter kouter).card : ℝ) ≤ qouter := by
+    exact_mod_cast hKcardNat
+  have hScard :
+      ((shortIntervalBlock 1 (Binner + 1) qinner kinner).card : ℝ) ≤ qinner := by
+    exact_mod_cast hScardNat
+  have hSsubCard :
+      ((((shortIntervalBlock 1 (Binner + 1) qinner kinner).card - 1 : ℕ) : ℝ)) ≤
+        qinner := by
+    exact_mod_cast (Nat.sub_le _ _).trans hScardNat
+  have hdecay :
+      0 ≤ 2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c)) := by
+    have hconstant : 0 ≤ 2 ^ (1 - c) / (1 - c) :=
+      div_nonneg (Real.rpow_nonneg (by norm_num) _) (sub_nonneg.mpr hc.le)
+    have hscale : 0 ≤ R * F ^ (-c) :=
+      mul_nonneg hR.le (Real.rpow_nonneg (zero_le_one.trans hF) _)
+    positivity
+  have hdiag :
+      ((shortIntervalBlock 1 (Bouter + 1) qouter kouter).card : ℝ) *
+          ((shortIntervalBlock 1 (Binner + 1) qinner kinner).card : ℝ) * L ^ 2 ≤
+        (qouter : ℝ) * (qinner : ℝ) * L ^ 2 := by
+    gcongr
+  have hoff :
+      L ^ 2 *
+          (((shortIntervalBlock 1 (Binner + 1) qinner kinner).card : ℝ) *
+            (Q * (A *
+                (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+              (((shortIntervalBlock 1 (Binner + 1) qinner kinner).card - 1 : ℕ) : ℝ) *
+                E))) ≤
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            (qinner : ℝ) * E))) := by
+    gcongr
+  exact
+    (sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale
       I γ N M j Bouter Binner qouter qinner kouter kinner hqinner hL hγ
       hQ hA hR hF hc0 hc hqinnerR hX).trans (add_le_add hdiag hoff)
 

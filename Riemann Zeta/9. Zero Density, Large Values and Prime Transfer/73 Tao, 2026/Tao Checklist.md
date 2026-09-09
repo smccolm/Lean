@@ -223,6 +223,23 @@ paper has been formalized.
 - [x] Prove the exact finite Fourier truncation identity and uniform discarded
   coefficient `ℓ¹` bound, then propagate that tail through the full
   prime/integral discrepancy.
+- [x] Prove the source cubic envelope `(1+|n|+|m|)^(-3)` is summable on
+  `ℤ²`, that square frequency boxes exhaust all modes and have vanishing
+  outer `ℓ¹` tails, and that coefficients under this envelope give uniform
+  convergence of the finite square Fourier polynomials to their series.
+- [x] Descend every continuous `ℤ²`-periodic weight through the open quotient
+  `ℝ² → (ℝ/ℤ)²`, identify Mathlib's torus monomials with `fourierMode2D`,
+  identify its coefficients with the literal fundamental-square integral,
+  and use torus Fourier reconstruction to prove that the cubic coefficient
+  estimate makes the square partial sums converge uniformly to the original
+  weight `W`.
+- [x] Prove the exact unit-interval Fourier integration-by-parts identity,
+  iterate it three times for periodic derivatives, and derive the resulting
+  one-dimensional cubic coefficient bound by a uniform third-derivative
+  bound.
+- [x] Factor the actual two-torus coefficient by Fubini in both coordinate
+  orders, identify real-coordinate torus slices with unit-interval Fourier
+  coefficients, and propagate the cubic bound along either nonzero frequency.
 - [x] Prove the exact source reduction of `j=1` to `j=2, M=0` after absorbing
   `M` into `N`, pointwise and for the relevant finite prime sums.
 - [x] Prove the generic finite shorter-than-dyadic quotient-block
@@ -264,12 +281,18 @@ paper has been formalized.
 - [x] Formalize the high-frequency logarithmic absorption
   `(log P)^d≤F`, `b+t≤dc` ⇒ `(log P)^b F^(-c)≤(log P)^(-t)`, including the
   source's strict-frequency variant.
-- [ ] Derive the endpoint-absorption condition from the paper's eventual
-  quantitative `N_r` and `F` parameter regime.
+- [x] Remove the spurious Type II endpoint-absorption obligation at its actual
+  off-diagonal use: prove the zero-distance fiber vanishes after erasing the
+  center, obtain a pure `N_r F^(-c)` kernel bound without extra assumptions,
+  and propagate it through the complete squared-inner-sum reduction, the
+  exact Vaughan double blocks, and their source-facing block-length bound.
 - [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl
   cancellation, the paper's precise polylogarithmic Vaughan family/count and
-  coefficient envelopes, quantitative Type I/II estimates, Fourier
-  coefficient decay/truncation, and infinite Fourier reconstruction. The
+  coefficient envelopes, quantitative Type I/II estimates, and the Fourier
+  radial-envelope arithmetic and comparison with `taoC3Norm` needed to close
+  the derivative-to-coefficient decay estimate. The two-dimensional
+  slice/Fubini assembly and directional bounds are now proved. Identification of the summable
+  Fourier series with the original periodic weight is now proved. The
   compiled contract and exact weighted
   Vaughan identity are not proof of this estimate.
 - [ ] Prove Lemma 3.1's subexponential bound

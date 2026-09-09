@@ -12,6 +12,10 @@ import Tao2026.FactorialAsymptotics
 import Tao2026.FactorialFibers
 import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation
+import Tao2026.FourierDecay
+import Tao2026.FourierIntegrationByParts
+import Tao2026.FourierSlices
+import Tao2026.TorusFourier
 import Tao2026.Intervals
 import Tao2026.IntervalMultiples
 import Tao2026.LowFrequency
@@ -514,6 +518,49 @@ exists yet to audit.
 #print axioms Tao2026.norm_primeEquidistributionDiscrepancy_le_of_approx
 #print axioms Tao2026.norm_primeEquidistributionDiscrepancy_le_of_finiteFourierApprox
 #print axioms Tao2026.norm_primeEquidistributionDiscrepancy_le_of_finiteFourierTruncation
+#print axioms Tao2026.fourierDecayWeight
+#print axioms Tao2026.intFourierDecayWeight
+#print axioms Tao2026.summable_intFourierDecayWeight
+#print axioms Tao2026.fourierDecayWeight_le_mul
+#print axioms Tao2026.summable_fourierDecayWeight
+#print axioms Tao2026.summable_norm_of_fourierDecay
+#print axioms Tao2026.summable_of_fourierDecay
+#print axioms Tao2026.tendsto_fourierFrequencyBox_atTop
+#print axioms Tao2026.tendsto_fourierCoefficientTail_zero
+#print axioms Tao2026.sum_fourierFrequencyBox_add_tail
+#print axioms Tao2026.tendstoUniformly_finiteFourierPolynomial
+#print axioms Tao2026.realPairToUnitTorus
+#print axioms Tao2026.isOpenQuotientMap_realPairToUnitTorus
+#print axioms Tao2026.periodic_second_of_isZ2Periodic
+#print axioms Tao2026.torusLiftSecond
+#print axioms Tao2026.periodic_first_torusLiftSecond
+#print axioms Tao2026.torusLift
+#print axioms Tao2026.torusLift_realPairToUnitTorus
+#print axioms Tao2026.continuous_torusLift
+#print axioms Tao2026.torusContinuousMap
+#print axioms Tao2026.pairFrequency
+#print axioms Tao2026.pairFrequencyEquiv
+#print axioms Tao2026.mFourier_pairFrequency_realPairToUnitTorus
+#print axioms Tao2026.taoFourierCoeff
+#print axioms Tao2026.taoFourierCoeff_eq_integral_fin2
+#print axioms Tao2026.summable_mFourierCoeff_of_taoFourierDecay
+#print axioms Tao2026.hasSum_taoFourierSeries_of_decay
+#print axioms Tao2026.tendstoUniformly_taoFourierPolynomial_of_decay
+#print axioms Tao2026.fourierCoeffOn_zero_one_eq_deriv
+#print axioms Tao2026.norm_fourierCoeffOn_zero_one_le
+#print axioms Tao2026.norm_fourierDerivativeMultiplier
+#print axioms Tao2026.fourierCoeffOn_zero_one_eq_thirdDeriv
+#print axioms Tao2026.norm_fourierCoeffOn_zero_one_le_thirdDeriv
+#print axioms Tao2026.norm_fourierCoeffOn_zero_one_le_thirdDeriv_explicit
+#print axioms Tao2026.iteratedTaoFourierCoeff
+#print axioms Tao2026.iteratedTaoFourierCoeffSecond
+#print axioms Tao2026.taoFourierCoeff_eq_iterated
+#print axioms Tao2026.taoFourierCoeff_eq_iterated_second
+#print axioms Tao2026.norm_fourierCoeff_le_of_norm_le
+#print axioms Tao2026.fourierCoeff_torusSlice_first_eq_fourierCoeffOn
+#print axioms Tao2026.fourierCoeff_torusSlice_second_eq_fourierCoeffOn
+#print axioms Tao2026.norm_taoFourierCoeff_le_first_thirdDerivative
+#print axioms Tao2026.norm_taoFourierCoeff_le_second_thirdDerivative
 #print axioms Tao2026.standardAdditiveCharacter
 #print axioms Tao2026.continuous_standardAdditiveCharacter
 #print axioms Tao2026.norm_standardAdditiveCharacter
@@ -740,6 +787,8 @@ exists yet to audit.
 #print axioms Tao2026.card_natDistFiber_le_two
 #print axioms Tao2026.sum_eq_sum_natDistFibers
 #print axioms Tao2026.sum_natDistKernel_le_two_mul_sum
+#print axioms Tao2026.natDistFiber_erase_center_zero
+#print axioms Tao2026.sum_natDistKernel_erase_le_two_mul_sum_pos
 #print axioms Tao2026.typeIIDecayKernel
 #print axioms Tao2026.typeIIDecayKernel_nonneg
 #print axioms Tao2026.typeIIDecayKernel_zero
@@ -748,6 +797,7 @@ exists yet to audit.
 #print axioms Tao2026.typeIIDecayKernel_eq_real
 #print axioms Tao2026.antitoneOn_typeIIDecayKernelReal
 #print axioms Tao2026.sum_typeIIDecayKernel_le_one_add_integral
+#print axioms Tao2026.sum_typeIIDecayKernel_pos_le_integral
 #print axioms Tao2026.typeIIDecayAntiderivative
 #print axioms Tao2026.hasDerivAt_typeIIDecayAntiderivative
 #print axioms Tao2026.integral_typeIIDecayKernelReal
@@ -757,6 +807,7 @@ exists yet to audit.
 #print axioms Tao2026.typeIIDecayAntiderivative_eq_scale
 #print axioms Tao2026.typeIIDecayAntiderivative_le_two_mul_frequency
 #print axioms Tao2026.typeIIDecay_scale_identity
+#print axioms Tao2026.sum_typeIIDecayKernel_erase_le_sourceScale
 #print axioms Tao2026.sum_typeIIDecayKernel_le_one_add_sourceScale
 #print axioms Tao2026.one_le_sum_typeIIDecayKernel
 #print axioms Tao2026.sum_typeIIDecayKernel_natDist_le_one_add_sourceScale
@@ -764,11 +815,16 @@ exists yet to audit.
 #print axioms Tao2026.sum_typeIIDecayKernel_le_sourceScale
 #print axioms Tao2026.sum_typeIIDecayKernel_natDist_le_sourceScale
 #print axioms Tao2026.sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_decayKernel
+#print axioms Tao2026.sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_sourceScale
 #print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_decayKernel
+#print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_norm_sq_le_sourceScale
 #print axioms Tao2026.sum_norm_typeIIProductRestrictedCorrelationSum_shortIntervalBlock_le_decayKernel
 #print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_of_decayKernel
+#print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale
 #print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_of_decayKernel
+#print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale
 #print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_blockLengths
+#print axioms Tao2026.sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale_blockLengths
 #print axioms Tao2026.rpow_mul_frequencyDecay_le
 #print axioms Tao2026.rpow_mul_rpow_neg_le
 #print axioms Tao2026.rpow_mul_frequencyDecay_le_of_lt
