@@ -34,6 +34,36 @@ local artifact is therefore the byte-identical identity recorded here from the
 accessible University of Maryland archival mirror; the DOI above remains the
 bibliographic authority.
 
+## Matomäki--Radziwiłł--Shao--Tao--Teräväinen prime-equidistribution input
+
+- Authors: Kaisa Matomäki, Maksym Radziwiłł, Xuancheng Shao, Terence Tao, and
+  Joni Teräväinen
+- Title: *Singmaster's conjecture in the interior of Pascal's triangle*
+- arXiv: `2106.03335v1` (the sole arXiv version)
+- Version date: 7 June 2021
+- Journal: *The Quarterly Journal of Mathematics* 73 (2022), 1137--1177
+- DOI: <https://doi.org/10.1093/qmath/haac006>
+- Abstract record: <https://arxiv.org/abs/2106.03335v1>
+- PDF origin: <https://arxiv.org/pdf/2106.03335v1>
+- TeX source origin: <https://arxiv.org/e-print/2106.03335v1>
+- Retrieved: 8 September 2026
+- Local artifacts: `singmaster-2106.03335v1.pdf` and
+  `singmaster-2106.03335v1.tar`
+- Source locator: Proposition 1.12(i)--(ii) in `main.tex`. Part (i) gives the
+  prime exponential-sum estimate for the phase `N/p + M/p^j`; part (ii)
+  obtains the smooth two-periodic weight estimate by Fourier expansion. Tao's
+  Theorem 2.5 restates part (ii), and the later argument only consumes its
+  specialization `M=N`, `j=2`.
+- Proof locator: the proof of Proposition 1.12 in `main.tex` reduces the
+  periodic-weight statement to the exponential-sum statement, treats small
+  frequencies by the prime number theorem, and treats the remaining
+  frequencies through Vaughan's identity, the paper's Vinogradov derivative
+  estimate, and its Type I/II bounds.
+
+This pin establishes the exact cited source and statement. It does not import
+the paper as a Lean dependency or claim that Proposition 1.12 has already been
+formalized.
+
 ## Erdős--Selfridge factorial-fiber input
 
 - Authors: P. Erdős and J. L. Selfridge

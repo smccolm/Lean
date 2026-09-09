@@ -84,7 +84,8 @@ Termwise domination controls the accumulated floor error, dominated
 convergence produces the squarefree `b⁻³ᐟ²` limit, and the unique
 square-times-squarefree decomposition identifies its constant as
 `ζ(3/2)/ζ(3)`. The remaining Theorem 1.8 work is the nontrivial-`VB` upper
-bound through Theorem 2.5, Lemmas 2.10--2.11, and Lemmas 3.1--3.2.
+bound through Theorem 2.5, the second clause of Lemma 3.1, and the final
+assembly from the now-complete Lemma 3.2 and Corollary 2.11.
 The first, elementary `H<N` clause of Lemma 3.1 is now proved for `N≥1`.
 The positive-start hypothesis is necessary under the literal definitions:
 `{1}` (`N=0,H=1`) is powerful. The remaining subexponential length estimate
@@ -108,10 +109,144 @@ maximal-order comparison is now complete: the concrete quadratic field and its m
 order are constructed, `ℤ[√D]` embeds injectively, fixed-norm points map to a
 finite ideal-divisor set whose fibers are maximal-order unit classes, and the
 degree-two at-most-two prime-splitting estimate is instantiated for every
-rational prime. The next honest boundary is the multiplicative `d(|N|)²` cardinal bound
-and quantitative height control for the full maximal-order unit group. Theorem 1.8
-additionally still needs Theorem 2.5 and the
-remaining Corollary 2.11 dyadic/interpolation count.
+rational prime. Dirichlet's unit theorem is now specialized to this concrete
+field: it is totally real of signature `(2,0)`, has unit rank one and torsion
+exactly `{±1}`, and every maximal-order unit has a unique torsion-times-power
+decomposition. Orienting the generator at a nontrivial real place gives a
+growth base `λ_D>1`; a `B log λ_D` cutoff leaves at most `2(2B+1)` units.
+The multiplicative `d(|N|)^2` ideal-divisor bound, boxed-point-to-place-height
+bridge, and uniform lower bound for `λ_D` are now complete. They close the
+literal signed, polynomial-family form of Lemma 2.10. Corollary 2.11 is also
+complete: its exact dyadic fibers, three estimates, `2/5,2/5,1/5`
+interpolation, logarithmic absorption, signed-shift symmetry, and uniform
+linear-family theorem are all proved and audited. The next honest Theorem 1.8
+boundary is Theorem 2.5 and its Lemma 3.1 consumer.
+
+The cited source of Theorem 2.5 is now pinned exactly: Proposition 1.12(ii) of
+Matomäki--Radziwiłł--Shao--Tao--Teräväinen, arXiv `2106.03335v1`, with both
+the PDF and TeX archive hashed. The source proof exposes the real recursive
+boundary: Fourier reduction to prime exponential sums, a prime-number-theorem
+minor-frequency regime, Vaughan's identity, a Vinogradov derivative estimate,
+and Type I/II estimates. The implementation may specialize to `M=N`, `j=2`
+only if the resulting theorem is proved to supply every Tao consumer; it may
+not replace this estimate by an assumed equidistribution contract.
+The exact contract and that specialization bridge now compile. The reciprocal
+phase's all-orders derivative identity, signed-factorial form, binomial
+coefficient, normalized absolute form, coefficient-growth bounds, and the
+upper/reverse-triangle/dominant-term derivative inequalities are also proved.
+The critical-expression argument is now carried through exact pairwise
+diameter bounds, a one-interval cover of length at most `16Xq` for each
+derivative order, and a finite-union Lebesgue-measure estimate. The remaining
+integer-point bookkeeping is now closed as well, with the exact finite-union
+bound `#orders·(16Xq+1)`. The next proof boundary is therefore the
+cancellation argument itself. The exact four-term
+Vaughan convolution identity now also compiles, pointwise as nested finite
+divisor sums and after weighting by the reciprocal phase. Next it must be
+refined into the source's shorter-than-dyadic supported Type I/II pieces
+before those estimates are proved.
+The finite convolution-to-bilinear bridge is now exact: a weighted sum over
+divisor antidiagonals is reindexed into a bounded product box with the literal
+condition `m*n∈I`. Reassociating each nested Vaughan term through the
+convolution of its first two factors puts all three convolution terms of the
+Mangoldt reciprocal-phase identity into this same product-restricted form.
+What remains here is the quantitative coefficient-support decomposition into
+the source's polylogarithmically many multiplicative short intervals.
+The intervening Abel-summation step is now kernel-checked: an exact finite
+identity and explicit `2 log b` estimate reduce the alternate logarithmic
+Type I form to uniform bounds for the unweighted initial subintervals.
+The reverse prime-specific bridge is proved too: prime-log prefix bounds imply
+the unweighted prime reciprocal-phase bound with factor `1/log a`.
+For the low-frequency PNT branch, the phase derivative is now bounded by
+`(j+1)F/X` on `[X,2X]`; a mean-value argument gives dyadic oscillation at most
+`(j+1)F`. The additive character has a proved `2π` Lipschitz constant, so its
+finite total variation is at most `2π(j+1)F`. Complex finite Abel summation
+then proves the precise comparison with the integer phase sum from a uniform
+initial-subinterval bound for `Λ-1`. The frozen qualitative `WeakPNT` has now
+been connected to that interface: it yields global `o(k)` discrepancy,
+uniform `o(P)` discrepancy on all subintervals of `[P,2P]`, and an `o(P)`
+phase comparison for every fixed reciprocal-phase scale bound. The remaining
+low-frequency input is the quantitative classical PNT discrepancy strong
+enough for arbitrary logarithmic saving when that scale grows
+polylogarithmically.
+For the reduction of Proposition 1.12(ii) to (i), finite Fourier polynomials
+are now complete: mode evaluation, prime-sum and integral interchange,
+coefficient-weighted error aggregation, and bounded-frequency parameter
+rescaling are proved. The actual source interval hypotheses now supply
+integrability without an extra caller assumption; retained square modes have
+exact count `(2R+1)²` and an explicit uniform-envelope assembly bound. The
+uniform approximation is now propagated to the original continuous weight
+with explicit costs `(2P+1)δ` for the prime sum and `Pδ/log P` for the
+integral. The remaining Fourier work is the analytic coefficient decay, tail
+estimate for the infinite series, and construction of the required uniform
+approximation for a smooth periodic complex weight. The finite analogue is
+complete: nested mode truncations differ uniformly by at most the exact `ℓ¹`
+norm of their discarded coefficients, and that tail is propagated through
+the prime/integral discrepancy.
+The source's initial reduction from `j=1` to `j=2` is also exact: replace
+`N` by `N+M` and set the higher reciprocal coefficient to zero.
+The reusable finite core of the shorter-than-dyadic decomposition is now
+proved. Quotient blocks regroup an interval sum exactly, their number is
+bounded by the relevant ceiling quotient, and any two entries in one block
+have natural distance strictly below the chosen block length. Coefficients
+supported on the original interval now decompose exactly into block
+restrictions, both pointwise and inside arbitrary finite weighted sums, and
+each restriction preserves the original norm bound. The bounded product form
+now decomposes exactly into short outer blocks and, for Type II, short blocks
+in both variables while retaining `m*n∈I`. What remains is to derive the
+source's precise polylogarithmic number of nonzero families and logarithmic
+coefficient bounds at its chosen scales; the analytic cancellation estimate
+remains separate and open.
+The Type II correlation expression now has an exact diagonal/off-diagonal
+split. The diagonal identity `X_{n,n}=#K` gives the explicit bound
+`#K·#S·L²`, leaving only off-diagonal `X_{n,n'}` norms for the analytic
+cancellation estimate. One uniform off-diagonal estimate is then propagated
+over the exact ordered-pair envelope `#S(#S-1)`.
+The transformed linear and higher reciprocal coefficients are nonzero for
+every distinct positive pair whenever the corresponding original coefficient
+is nonzero; this discharges the nonvanishing premise of critical deletion.
+Their absolute sizes are controlled with exact denominators and the
+mean-value numerator bound `|n'^j-n^j| ≤ |n'-n|·j·B^(j-1)`; explicit positive
+lower support bounds then control those denominators. Normalization at product
+scale `KR` gives precisely `|n'-n|/R`, with higher loss `j(B/R)^(j-1)` and
+the explicit dyadic specialization `j·2^(j-1)`. The source's product
+restriction is also retained literally: summing the restricted inner squares
+produces correlations supported on `K ∩ (1/n)I ∩ (1/n')I`, and the restricted
+diagonal is its exact support cardinality, hence at most `#K`. The restricted
+expression has an exact diagonal/off-diagonal split; a uniform off-diagonal
+bound propagates over `#S(#S-1)` and yields the required real squared-inner-sum
+inequality.
+The next decay-kernel sum is reduced to one dimension without a cardinality
+loss: fixed natural-distance fibers have at most two points, exact fiberwise
+regrouping holds, and nonnegative kernels cost only the sharp factor two. The
+real-power sum `(1 + d*F/N_r)^(-c)` is now bounded by an evaluated affine-rpow
+integral and normalized to the source scale. Under `D≤N_r`, `F≥1`, `0≤c<1`,
+and the explicit endpoint condition `1≤N_r F^(-c)`, the pure bound is
+`(1+2^(1-c)/(1-c))N_r F^(-c)`; the full finite-support distance sum has only
+the additional factor two. It remains to derive the endpoint condition from
+the source's eventual quantitative parameter choices and feed the result into
+the analytic Type II estimate. Without that condition, the audited uniform
+statement retains the necessary additive `1`: the zero-distance summand is
+exactly one, and a separate theorem shows that any proposed pure
+`C N_r F^(-c)` majorant must dominate this endpoint.
+This decay estimate is no longer isolated from the Type II algebra: a
+pointwise `Q(A·kernel(|n-n'|)+E)` hypothesis is summed over the exact ordered
+off-diagonal pairs, and the result is substituted into the literal
+product-restricted squared-inner-sum reduction. The remaining input at this
+interface is the analytic proof of that pointwise correlation hypothesis with
+the paper's concrete logarithmic factors. The finite theorem is specialized
+to the actual inner quotient block and exact Vaughan double-block geometry;
+the block diameter and nonzero reciprocal indices are now discharged
+internally rather than left as interface assumptions. The exact bound
+`#block≤q` is proved and substituted for both supports, leaving the final
+squared-sum inequality in the source-facing block lengths alone.
+The high-frequency exponent conversion is also exact: under `P≥e`, a source
+lower bound `(log P)^d≤F` converts `(log P)^b F^(-c)` into
+`(log P)^(-t)` whenever `b+t≤dc`. What remains is to instantiate `b,d,t`
+from the quantitative Vaughan and exponential-sum constants rather than an
+informal `O(A)` exponent.
+The preceding prime/Mangoldt replacement is no longer implicit: the exact
+prime-logarithm plus higher-prime-power decomposition compiles, and the
+oscillatory tail is controlled by the frozen local prime-power majorant.
 
 The other newly isolated dependency is Erdős--Selfridge Theorem 1, whose
 square case controls the factorial-squarefree-component fibers in Theorem

@@ -89,9 +89,18 @@ paper has been formalized.
   maximal-order unit association class.
 - [x] Instantiate the at-most-two primes-above theorem for every rational prime
   in the concrete maximal order of `ℚ(√D)`.
-- [ ] Prove the sharp `d(|N|)²` bound for the finite maximal-order ideal-divisor
-  set and the bounded-height count within each maximal-order unit orbit. This
-  is the open nonsquare branch of Lemma 2.10.
+- [x] Specialize Dirichlet's unit theorem to the concrete positive real
+  quadratic field: prove signature `(2,0)`, unit rank one, torsion exactly
+  `{±1}`, unique torsion-times-power decomposition, and the explicit
+  `2(2B+1)` count under a `B log λ_D` place-height cutoff.
+- [x] Prove the sharp `d(|N|)^2` bound for the finite maximal-order ideal-divisor
+  set; derive the required place-height cutoff from the boxed norm points and
+  make the growth-base bound uniform, completing both discriminant branches
+  and the polynomial-family form of Lemma 2.10.
+- [x] Prove Corollary 2.11 for the literal signed-shift powerful relation:
+  exact dyadic partition, both coordinate bounds, Lemma 2.10 cube fibers,
+  `2/5,2/5,1/5` interpolation, logarithmic absorption, and uniform
+  `a,b,|h| ≪ x` family quantifiers.
 - [x] Prove the exact finite `VB¹` identity
   `∑_{b≤x, squarefree} ⌊√(x/b³)⌋`, with representation injectivity.
 - [x] Extract the `b=1` square family to prove `⌊√x⌋ ≤ #VB¹(x) ≤ #VB(x)`
@@ -125,6 +134,144 @@ paper has been formalized.
   extracting a Bertrand prime that divides the interval product exactly once;
   record that the literal `N=0,H=1` interval is an exception to the paper's
   unrestricted natural-number wording.
+- [x] Pin and hash both the PDF and TeX archive of the exact source cited for
+  Theorem 2.5, with the Proposition 1.12 statement and proof locator.
+- [x] Compile the exact Theorem 2.5 finite prime sum, logarithmic integral,
+  complex-valued periodicity, and sum-of-derivative-orders `C³`-norm contract,
+  and derive the `M=N,j=2` consumer from the full contract.
+- [x] Formalize the reciprocal additive character and prove the source's
+  all-orders reciprocal-phase derivative identity, including its binomial
+  `M_r` coefficient and normalized absolute form; prove `1 ≤ binom ≤ (r+j)^r`
+  and the resulting upper, reverse-triangle, and dominant-term derivative
+  bounds. Prove the exact Type I product rescaling and Type II conjugate
+  correlation-phase identities.
+- [x] Define exact arithmetic-function cutoffs and tails and prove the
+  four-term Vaughan convolution identity used by Proposition 1.12, its
+  pointwise nested-divisor expansion, and its finite complex-weighted
+  reciprocal-phase summation form.
+- [x] Prove the exact Type II Cauchy--Schwarz correlation algebra: expand the
+  finite inner sum times its conjugate and identify every transformed phase
+  with the source's displayed `X_{n,n'}` phase. Sum the squared norms over the
+  outer support, interchange the finite sums exactly, and prove the outer
+  coefficient-bounded Cauchy--Schwarz inequality.
+- [x] Split the Type II correlation expression exactly into diagonal and
+  off-diagonal parts, evaluate `X_{n,n}=#K`, bound the diagonal by
+  `#K·#S·L²`, and isolate the remaining off-diagonal correlation norms.
+- [x] Propagate one uniform off-diagonal `X_{n,n'}` estimate through the exact
+  ordered-pair count `#S(#S-1)`.
+- [x] Prove nonvanishing of both transformed Type II reciprocal coefficients
+  for distinct positive indices and nonzero original coefficients.
+- [x] Prove exact and support-uniform absolute-size bounds for both transformed
+  coefficients, including
+  `|n'^j-n^j| ≤ |n'-n|·j·B^(j-1)` and lower-support denominator bounds.
+- [x] Normalize the full transformed scale at product scale `KR`, exposing
+  `|n'-n|/R` with higher loss `j(B/R)^(j-1)`, and specialize it to the
+  dyadic factor `j·2^(j-1)`.
+- [x] Retain the literal Type II product restriction `mn∈I`, rearrange the
+  squared inner sums into correlations on `K ∩ (1/n)I ∩ (1/n')I`, and
+  evaluate and bound the restricted diagonal.
+- [x] Split the literal restricted correlation expression, propagate a
+  uniform off-diagonal estimate through `#S(#S-1)`, and derive the final
+  real squared-inner-sum bound used after Cauchy--Schwarz.
+- [x] Prove the exact Type I finite reduction with variable inner supports:
+  rescale the phase to `N/m, M/m^j` and remove the outer coefficients using
+  an explicit uniform-envelope triangle bound.
+- [x] Isolate the exact critical expression `N+M_r/t^(j-1)` controlling
+  derivative cancellation and prove its two-point sublevel and
+  power-difference separation inequalities.
+- [x] Convert the critical-expression algebra into an explicit quotient
+  diameter bound, a single closed-interval cover of length at most `16Xq`
+  under the source's `t^(j-1) ≤ 2X^(j-1)` condition, and a finite-union
+  Lebesgue-measure bound for all selected derivative orders.
+- [x] Prove the discrete critical-set deletion bound: one derivative order
+  contains at most `16Xq+1` natural summation points, and a finite order set
+  contains at most `#orders·(16Xq+1)` points.
+- [x] Prove the exact prime-logarithm/Mangoldt phase-sum decomposition and
+  bound its oscillatory higher-prime-power tail by the explicit frozen local
+  prime-power majorant.
+- [x] Prove the exact finite Abel-summation identity on natural intervals and
+  the explicit `2 log b` norm loss used to reduce the alternate
+  logarithm-weighted Type I form to uniform unweighted prefix bounds.
+- [x] Prove the reverse prime partial-summation bridge from uniform prime-log
+  prefix bounds to the unweighted prime reciprocal-phase sum, with explicit
+  factor `1/log a`.
+- [x] Prove the low-frequency reciprocal-phase derivative and dyadic
+  oscillation bounds `|f'| ≤ (j+1)F/X` and `osc(f) ≤ (j+1)F`.
+- [x] Prove the additive-character Lipschitz and dyadic total-variation
+  bounds, complex-coefficient finite Abel summation, and the exact
+  low-frequency reduction
+  `‖Σ(Λ(n)-1)e(f(n))‖ ≤ (1+2π(j+1)F)B` from uniform initial-subinterval
+  `Λ-1` discrepancy bound `B`.
+- [x] Connect the frozen qualitative `WeakPNT` to the exact discrepancy:
+  prove global `o(k)`, uniform `o(P)` on every subinterval of `[P,2P]`, and
+  the resulting `o(P)` Mangoldt-to-integer phase comparison for each fixed
+  reciprocal-phase scale bound.
+- [x] Prove the exact finite Fourier-mode assembly: two-dimensional integer
+  characters become reciprocal phases with rescaled parameters, finite prime
+  sums and logarithmic integrals interchange with the mode sum, and modewise
+  errors aggregate with the Fourier-coefficient `ℓ¹` norm. Propagate bounded
+  integer frequencies through `VinogradovParameterBound`.
+- [x] Discharge Fourier-mode integrability from `P≥2` and `I⊆[P,2P]`; define
+  the retained square frequency box, prove its exact `(2R+1)²` cardinality,
+  and derive the explicit mode-count × coefficient-envelope × uniform-error
+  estimate. Prove both rescaled mode parameters share the positive uniform
+  Vinogradov constant `(R+1)K`.
+- [x] Prove continuous-weight integrability and the uniform-approximation
+  transfer from a Fourier polynomial to the source weight, with explicit
+  perturbation costs `(2P+1)δ` in the prime sum and `Pδ/log P` in the
+  logarithmic integral.
+- [x] Prove the exact finite Fourier truncation identity and uniform discarded
+  coefficient `ℓ¹` bound, then propagate that tail through the full
+  prime/integral discrepancy.
+- [x] Prove the exact source reduction of `j=1` to `j=2, M=0` after absorbing
+  `M` into `N`, pointwise and for the relevant finite prime sums.
+- [x] Prove the generic finite shorter-than-dyadic quotient-block
+  decomposition: exact sum regrouping, a ceiling block-count bound, and
+  strict within-block diameter.
+- [x] Lift the quotient blocks to coefficient sequences: prove exact
+  pointwise and arbitrary finite weighted-sum decompositions for coefficients
+  supported on the original interval, with uniform norm bounds preserved by
+  every block restriction.
+- [x] Reindex finite divisor-antidiagonal convolution sums into bounded
+  product boxes with the literal condition `m*n ∈ I`, and apply this to all
+  three convolution terms of the reciprocal-phase Vaughan identity.
+- [x] Decompose each bounded product convolution exactly into short outer
+  coefficient blocks (Type I) and short double coefficient blocks (Type II),
+  retaining the literal product restriction in every summand.
+- [x] Regroup the Type II correlation decay exactly by natural distance and
+  prove the sharp at-most-two multiplicity bound for every distance fiber.
+- [x] Define the resulting real-power decay kernel and prove its
+  nonnegativity, value at zero, and antitonicity in distance.
+- [x] Reduce its finite one-dimensional sum to one plus the matching real
+  integral by the antitone sum--integral comparison.
+- [x] Prove the affine-rpow antiderivative, evaluate the kernel integral
+  exactly, and obtain the closed-form finite-sum bound.
+- [x] Normalize that bound to the source scale `N_r F^(-c)`, absorb the
+  zero-distance endpoint under the explicit condition `1 ≤ N_r F^(-c)`, and
+  combine it with the sharp distance-fiber bound.
+- [x] Prove the unconditional finite-support `1 + O(N_r F^(-c))` form and the
+  diagonal lower bound showing that any pure source-scale majorant must itself
+  dominate `1`.
+- [x] Propagate a pointwise `Q(A·kernel(|n-n'|)+E)` correlation estimate over
+  the exact ordered off-diagonal support and substitute it into the literal
+  product-restricted squared-inner-sum reduction.
+- [x] Specialize the resulting estimate to the actual inner quotient block
+  and exact Vaughan outer/inner double blocks, discharging block diameter and
+  nonzero reciprocal-index hypotheses from membership.
+- [x] Prove every quotient block has cardinality at most its chosen length and
+  replace both double-block support cardinalities by `q_outer` and `q_inner`
+  in the final squared-sum estimate.
+- [x] Formalize the high-frequency logarithmic absorption
+  `(log P)^d≤F`, `b+t≤dc` ⇒ `(log P)^b F^(-c)≤(log P)^(-t)`, including the
+  source's strict-frequency variant.
+- [ ] Derive the endpoint-absorption condition from the paper's eventual
+  quantitative `N_r` and `F` parameter regime.
+- [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl
+  cancellation, the paper's precise polylogarithmic Vaughan family/count and
+  coefficient envelopes, quantitative Type I/II estimates, Fourier
+  coefficient decay/truncation, and infinite Fourier reconstruction. The
+  compiled contract and exact weighted
+  Vaughan identity are not proof of this estimate.
 - [ ] Prove Lemma 3.1's subexponential bound
   `H ≤ exp(log^(2/3+o(1)) N)` from Theorem 2.5.
 - [x] Build Lemma 3.2's canonical exponent-one/powerful-core factorization;
@@ -175,6 +322,12 @@ paper has been formalized.
 
 The verified stop line includes Proposition 2.3(i),(iii), the exact `VB¹`
 zeta-ratio asymptotic, the positive-start elementary clause of Lemma 3.1, and
-the complete polynomial-coefficient relation of Lemma 3.2.
+the complete polynomial-coefficient relation of Lemma 3.2. It also includes
+the exact Theorem 2.5 interface, reciprocal-phase calculus and character
+variation, bidirectional finite partial-summation/log-weight reductions, and
+the low-frequency Abel reduction and the frozen qualitative PNT's uniform
+dyadic and fixed-bounded-frequency `o(P)` consequences, but not the stronger
+arbitrary-logarithmic-saving PNT bound or the full prime exponential-sum
+estimate.
 It does not prove any of Theorems 1.7--1.10. Do not mark a later crosswalk,
 proof, or release item complete merely because one of its inputs builds.

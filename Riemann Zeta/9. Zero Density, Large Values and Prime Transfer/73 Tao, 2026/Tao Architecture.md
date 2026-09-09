@@ -59,11 +59,11 @@ flowchart TD
         GTPOWER["Compiled quantitative bridge<br/>uniform dyadic discrepancy power xi < 1"]
         DYADICFREE["Compiled dyadic prime-free bridge<br/>prime-power tail retained and absorbed"]
         PREFIX["Compiled constant-length endpoint measure<br/>finite dyadic assembly + full theta range"]
-        VINO["Theorem 2.5<br/>two-variable prime equidistribution"]
+        VINO["Theorem 2.5 partial<br/>j=1 absorption + phase/character variation + low-frequency complex Abel/PNT-discrepancy reduction + qualitative-PNT uniform dyadic and fixed-bounded-frequency o(P) consequences + finite Fourier assembly with automatic integrability, exact retained-box count, uniform-approximation transfer, and exact finite ℓ¹ truncation tails + product-restricted Vaughan + exact outer/double coefficient blocks + prime-power + Abel + Type I + product-restricted Type II + source-scale distance-kernel bound (necessary +1 retained) + exact double-block squared-sum propagation with explicit block lengths + high-frequency log absorption + normalized parameter bounds + critical deletion<br/>quantitative arbitrary-log-saving PNT + polylog envelopes / cancellation / infinite Fourier approximation construction and decay open"]
         UNCERT["Lemma 2.6<br/>Montgomery uncertainty principle"]
         LSIEVE["Corollaries 2.8--2.9<br/>large sieve with exact residue exclusions"]
-        PELL["Lemma 2.10 in progress<br/>concrete maximal order + finite ideal map proved;<br/>d(N)^2 and unit-height bounds open"]
-        POWERREL["Corollary 2.11<br/>powerful linear-relation count x^(2/5+o(1))"]
+        PELL["PROVED Lemma 2.10<br/>signed square relations x^o(1)<br/>uniform polynomial parameters"]
+        POWERREL["PROVED Corollary 2.11<br/>signed powerful relations x^(2/5+o(1))<br/>uniform linear parameters"]
         SMOOTH --> ONETERM
         ONETERMID --> ONETERM
         GTPOWER --> DYADICFREE
@@ -182,6 +182,6 @@ flowchart TD
 
     class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,AUDIT,RUNNER complete
     class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
-    class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
-    class SMOOTH,PRIMEII,VINO,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent
+    class CROSSWALK,ONETERM,VINO,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,FBOUNDS,FEXTRACT,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
+    class SMOOTH,PRIMEII,PELL,BURGESS,FUND,T17,T18,T19,T110,PUBLIC,RELEASE absent
     class LEGEND note

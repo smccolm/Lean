@@ -5,7 +5,50 @@ formalization. The owner activated it on 8 September 2026. The current verified
 stop line is Proposition 2.3(i),(iii), exact one-term sums, the complete
 `ζ(3/2)/ζ(3) √x` asymptotic for `VB¹`, the factorial endpoint/counting bridge,
 the complete polynomial-coefficient powerful relation from Lemma 3.2, and
-the square-family lower-asymptotic milestone. This includes the reverse-big-O half of the
+the square-family lower-asymptotic milestone. The verified Theorem 2.5
+groundwork now also includes its exact contract, reciprocal-phase derivative
+formula and elementary size bounds, the exact weighted Vaughan identity, and
+the source-scale one-interval/finite-union critical-set measure bounds, plus
+the exact bidirectional finite Abel/log-weight reductions for the alternate
+Type I form and prime-weight removal, and the low-frequency phase-variation
+bounds together with the complex Abel reduction to uniform `Λ-1` discrepancy
+bounds, the frozen qualitative PNT bridge giving global `o(k)`, uniform
+dyadic-subinterval `o(P)`, and fixed-bounded-frequency `o(P)` phase
+comparison, the exact finite Fourier-mode prime-sum/integral assembly and
+integer-frequency parameter rescaling, automatic source-interval mode
+integrability, and the exact `(2R+1)²` retained-box count and uniform-envelope
+bound, plus continuous-weight integrability and the explicit uniform-Fourier-
+approximation transfer to the full discrepancy together with exact finite
+discarded-mode `ℓ¹` truncation control, the exact `j=1` absorption,
+Type II diagonal split,
+transformed-parameter size bounds, and literal product-restricted correlation
+rearrangement. The divisor-antidiagonal Vaughan sums are now reindexed exactly
+into the same literal product-restricted form, as well as the exact finite quotient-block core of the
+shorter-than-dyadic decomposition. Supported coefficient sequences now have
+exact pointwise and finite weighted-sum block decompositions with preserved
+norm bounds. The product-restricted Vaughan terms now also have exact outer
+and double coefficient-block decompositions. The paper's quantitative
+polylogarithmic family/count envelopes, Fourier coefficient decay and
+infinite reconstruction, and the analytic cancellation estimate remain open.
+The Type II correlation kernel is already regrouped exactly by
+natural distance with multiplicity at most two. Its one-dimensional
+real-power sum is bounded by an exact affine-rpow calculation and has the pure
+`N_r F^(-c)` source scale under the explicit endpoint condition
+`1 ≤ N_r F^(-c)`; deriving that condition from the paper's quantitative
+parameter regime and using the bound in the analytic Type II chain remain
+open. The unconditional audited form retains `1 + O(N_r F^(-c))`, and the
+zero-distance lower bound proves that this endpoint cannot be discarded
+uniformly without an additional hypothesis. The pointwise source-shaped
+kernel-plus-error correlation estimate now feeds through the exact ordered
+off-diagonal sum and product-restricted squared-inner-sum reduction, including
+specializations to the actual shorter-than-dyadic and Vaughan double blocks.
+Their cardinalities are bounded by their chosen block lengths and substituted
+into the final squared-sum estimate.
+The high-frequency exponent arithmetic is explicit: a lower bound
+`(log P)^d≤F` absorbs `(log P)^b F^(-c)` to `(log P)^(-t)` whenever
+`b+t≤dc`.
+This includes
+the reverse-big-O half of the
 `F₃` and factorial-triple square-root scale contracts. The source definitions and public conclusion contracts
 compile, the exact
 `GafniTao.Theorem11` closure is frozen, and its fixed-power dyadic bridge has

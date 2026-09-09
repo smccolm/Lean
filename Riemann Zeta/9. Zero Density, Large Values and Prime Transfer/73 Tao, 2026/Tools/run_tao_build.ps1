@@ -31,7 +31,9 @@ try {
         'Extension\Tao2026\CoefficientBounds.lean',
         'Extension\Tao2026\CoefficientProduct.lean',
         'Extension\Tao2026\CoefficientSelection.lean',
+        'Extension\Tao2026\ConvolutionRearrangement.lean',
         'Extension\Tao2026\Counting.lean',
+        'Extension\Tao2026\CriticalIntervals.lean',
         'Extension\Tao2026\FactorialAsymptotics.lean',
         'Extension\Tao2026\FactorialFibers.lean',
         'Extension\Tao2026\FactorialIntervals.lean',
@@ -39,19 +41,35 @@ try {
         'Extension\Tao2026\Intervals.lean',
         'Extension\Tao2026\IntervalMultiples.lean',
         'Extension\Tao2026\PrimeIntervals.lean',
+        'Extension\Tao2026\PrimeEquidistribution.lean',
+        'Extension\Tao2026\PrimePowerReduction.lean',
+        'Extension\Tao2026\PartialSummation.lean',
+        'Extension\Tao2026\PhaseVariation.lean',
         'Extension\Tao2026\PowerfulAsymptotics.lean',
         'Extension\Tao2026\PowerfulExtraction.lean',
         'Extension\Tao2026\PowerfulLimit.lean',
         'Extension\Tao2026\PowerfulNumbers.lean',
-        'Extension\Tao2026\PowerfulRelations.lean',
-        'Extension\Tao2026\SquareRelations.lean',
-        'Extension\Tao2026\PublicStatements.lean',
+          'Extension\Tao2026\PowerfulRelations.lean',
+          'Extension\Tao2026\PowerfulRelationCounting.lean',
+          'Extension\Tao2026\SquareRelations.lean',
+          'Extension\Tao2026\QuadraticUnits.lean',
+          'Extension\Tao2026\QuadraticIdealDivisors.lean',
+          'Extension\Tao2026\QuadraticSolutionCount.lean',
+          'Extension\Tao2026\PublicStatements.lean',
         'Extension\Tao2026\SmoothNumbers.lean',
+        'Extension\Tao2026\ShortIntervalDecomposition.lean',
+        'Extension\Tao2026\TypeIReduction.lean',
+        'Extension\Tao2026\TypeIIReduction.lean',
+        'Extension\Tao2026\TypeIIKernel.lean',
         'Extension\Tao2026\VeryBadIntervals.lean',
+        'Extension\Tao2026\VinogradovPhase.lean',
+        'Extension\Tao2026\VaughanIdentity.lean',
         'Sources\PINS.md',
         'Sources\SHA256SUMS.txt',
         'Sources\baker-harman-pintz-2001.pdf',
         'Sources\erdos-selfridge-1975.pdf',
+        'Sources\singmaster-2106.03335v1.pdf',
+        'Sources\singmaster-2106.03335v1.tar',
         'Sources\tao-unusual-anatomy-2603.27990v2.pdf',
         'Sources\tao-unusual-anatomy-2603.27990v2.tar',
         'Tools\README.md',
@@ -83,8 +101,8 @@ try {
         Get-Content -LiteralPath (Join-Path $nodeRoot 'Sources\SHA256SUMS.txt') |
             Where-Object { $_.Trim() }
     )
-    if ($hashLines.Count -ne 4) {
-        throw 'SHA256SUMS.txt must contain exactly the Tao PDF, Tao TeX archive, Baker-Harman-Pintz PDF, and Erdos-Selfridge PDF.'
+    if ($hashLines.Count -ne 6) {
+        throw 'SHA256SUMS.txt must contain exactly the Tao PDF and TeX archive, Baker-Harman-Pintz PDF, Erdos-Selfridge PDF, and Singmaster PDF and TeX archive.'
     }
     foreach ($line in $hashLines) {
         if ($line -notmatch '^([0-9A-Fa-f]{64})\s{2}(.+)$') {
@@ -178,9 +196,14 @@ try {
     }
 
     Write-Host 'Checking production-root coverage and forbidden proof shortcuts...'
+    $developmentOnlyLeanFiles = @('ProbeBase.lean', 'ProbeRam.lean')
     $leanFiles = @(
         Get-ChildItem -LiteralPath $extensionRoot -Recurse -File -Filter '*.lean' |
-            Where-Object { $_.FullName -notmatch '[\\/]\.lake[\\/]' }
+            Where-Object { $_.FullName -notmatch '[\\/]\.lake[\\/]' } |
+            Where-Object {
+                -not ($_.DirectoryName -eq $extensionRoot -and
+                    $_.Name -in $developmentOnlyLeanFiles)
+            }
     )
     $rootText = Get-Content -LiteralPath (Join-Path $extensionRoot 'Tao2026.lean') -Raw
     foreach ($source in $leanFiles) {
@@ -238,7 +261,7 @@ try {
         throw 'The canonical Tao2026 build emitted a warning or tactic diagnostic.'
     }
 
-    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemma 3.2, and Lemma 2.10 groundwork through the signed split branch, concrete quadratic maximal order, finite ideal-divisor map, and prime splitting; no main-theorem release is claimed.'
+    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemmas 2.10 and 3.2, complete signed uniform Corollary 2.11, and audited Theorem 2.5 complex source contract/j1-absorption/phase-character-variation/qualitative-PNT dyadic and bounded-frequency consequences/low-frequency Abel-PNT reduction/finite Fourier assembly, uniform-approximation transfer, and finite l1 truncation tails/Vaughan/product-restricted-convolution/outer-and-double-coefficient-blocks/prime-power/Abel/Type-I/complete-finite-product-restricted-Type-II/source-scale-distance-kernel-with-endpoint-and-explicit-block-length-squared-sum-propagation/high-frequency-log-absorption/normalized-parameter-bounds/critical-deletion groundwork; no main-theorem release is claimed.'
     exit 0
 }
 catch {
