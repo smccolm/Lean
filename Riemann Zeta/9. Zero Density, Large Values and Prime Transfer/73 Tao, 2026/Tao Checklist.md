@@ -149,6 +149,10 @@ paper has been formalized.
   four-term Vaughan convolution identity used by Proposition 1.12, its
   pointwise nested-divisor expansion, and its finite complex-weighted
   reciprocal-phase summation form.
+- [x] Reassociate Vaughan's identity into the source's canonical Type I and
+  Type II coefficient pairs. Prove their exact cutoff/tail supports and the
+  absolute envelopes `1`, `log P`, `1`, `log P` on positive arguments at
+  most `P`, and reindex that source-oriented identity with literal `m*n∈I`.
 - [x] Prove the exact Type II Cauchy--Schwarz correlation algebra: expand the
   finite inner sum times its conjugate and identify every transformed phase
   with the source's displayed `X_{n,n'}` phase. Sum the squared norms over the
@@ -240,6 +244,11 @@ paper has been formalized.
 - [x] Factor the actual two-torus coefficient by Fubini in both coordinate
   orders, identify real-coordinate torus slices with unit-interval Fourier
   coefficients, and propagate the cubic bound along either nonzero frequency.
+- [x] Combine the zero mode and both directional cubic bounds into the exact
+  radial envelope with constant `27`; prove smooth periodicity bounds all four
+  derivative ranges on a compact fundamental square; construct the pure
+  coordinate derivative chains automatically; and close the unconditional
+  `taoC3Norm` coefficient estimate from the public hypotheses.
 - [x] Prove the exact source reduction of `j=1` to `j=2, M=0` after absorbing
   `M` into `N`, pointwise and for the relevant finite prime sums.
 - [x] Prove the generic finite shorter-than-dyadic quotient-block
@@ -287,11 +296,12 @@ paper has been formalized.
   and propagate it through the complete squared-inner-sum reduction, the
   exact Vaughan double blocks, and their source-facing block-length bound.
 - [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl
-  cancellation, the paper's precise polylogarithmic Vaughan family/count and
-  coefficient envelopes, quantitative Type I/II estimates, and the Fourier
-  radial-envelope arithmetic and comparison with `taoC3Norm` needed to close
-  the derivative-to-coefficient decay estimate. The two-dimensional
-  slice/Fubini assembly and directional bounds are now proved. Identification of the summable
+  cancellation, the paper's precise polylogarithmic Vaughan family count, and
+  quantitative Type I/II estimates. The canonical Vaughan coefficient
+  envelopes and their support cutoffs are now proved. The
+  two-dimensional slice/Fubini assembly, directional bounds, radial arithmetic,
+  automatic smooth-periodic derivative chains, and unconditional `taoC3Norm`
+  coefficient estimate are now proved. Identification of the summable
   Fourier series with the original periodic weight is now proved. The
   compiled contract and exact weighted
   Vaughan identity are not proof of this estimate.

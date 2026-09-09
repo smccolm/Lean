@@ -15,6 +15,7 @@ import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation
 import Tao2026.FourierDecay
 import Tao2026.FourierIntegrationByParts
+import Tao2026.FourierRadial
 import Tao2026.FourierSlices
 import Tao2026.TorusFourier
 import Tao2026.Intervals
@@ -44,6 +45,7 @@ import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
 import Tao2026.VinogradovPhase
+import Tao2026.VaughanCoefficients
 import Tao2026.VaughanIdentity
 
 /-!

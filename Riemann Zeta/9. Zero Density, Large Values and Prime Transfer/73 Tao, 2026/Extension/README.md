@@ -109,7 +109,11 @@ integration-by-parts formula is iterated three times and bounded by the
 uniform norm of the third derivative. `FourierSlices` factors the actual
 two-torus coefficient in both Fubini orders, identifies its real slices with
 unit-interval coefficients, and obtains cubic decay in either nonzero
-coordinate. The radial comparison and `taoC3Norm` bridge remain.
+coordinate. `FourierRadial` combines these estimates and the zero mode into
+the radial envelope with constant `27`, proves smooth periodicity bounds the
+derivative ranges on the compact fundamental square, constructs the pure
+coordinate derivative chains, and derives the unconditional `taoC3Norm`
+coefficient estimate from the public smooth-periodic hypotheses.
 Nested finite truncations are already controlled uniformly by the exact
 discarded coefficient `ℓ¹` norm and transferred to the full discrepancy.
 The source's `j=1` case is exactly absorbed into the `j=2, M=0` phase, both
@@ -123,8 +127,11 @@ The bounded product form of every Vaughan convolution term is then decomposed
 exactly into outer blocks, and into double blocks when both coefficients must
 be localized, without dropping `m*n ∈ I`. The endpoint-free Type II kernel
 bound is carried through these exact double blocks and their explicit lengths.
-Establishing the paper's precise
-polylogarithmic scale/count envelopes and the analytic cancellation theorem
+`VaughanCoefficients` reassociates the identity into the source's actual Type I
+and Type II pairs, proves their cutoff/tail supports, and derives the absolute
+coefficient envelopes `1`, `log P`, `1`, `log P` from `|μ|≤1` and
+`Λ*ζ=log`. Establishing the precise polylogarithmic family count at the
+paper's chosen relative-width scale and the analytic cancellation theorem
 remain open.
 The prime/Mangoldt conversion is exact: the prime-logarithm phase sum and
 higher-prime-power tail are split in `PrimePowerReduction`, and unit modulus

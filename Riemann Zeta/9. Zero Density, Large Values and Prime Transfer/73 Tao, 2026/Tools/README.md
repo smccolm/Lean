@@ -1,5 +1,9 @@
 # Tao 2026 build tools
 
+`Probes/` is reserved for non-production API experiments. Such files are
+excluded from the production import graph; any result used by the formalization
+must be promoted to `Extension/Tao2026/` and audited there.
+
 `run_tao_build.ps1` verifies the pinned Tao source artifacts, all 1,226 frozen
 dependency hashes and their exact file set, the raw Mermaid contract, Lean and
 dependency pins, direct production-root coverage, forbidden proof shortcuts,
@@ -55,7 +59,9 @@ uniform Fourier reconstruction of the original weight. The axiom audit also
 covers the exact one-step and three-step periodic integration-by-parts
 identities, both Fubini factorizations of the actual torus coefficient, both
 real-slice coefficient identities, and the resulting directional cubic
-coefficient estimates.
+coefficient estimates. It also audits derivative periodicity and compact-square
+boundedness, the automatically generated pure coordinate chains, and the
+unconditional radial `taoC3Norm` coefficient estimate with constant `27`.
 It audits the finite shorter-than-dyadic quotient-block sum identity, ceiling
 block-count estimate, strict within-block diameter, supported-coefficient
 restriction, exact pointwise and finite weighted-sum decompositions, and

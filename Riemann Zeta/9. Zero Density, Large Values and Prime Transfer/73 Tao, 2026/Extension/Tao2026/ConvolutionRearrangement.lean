@@ -1,4 +1,4 @@
-import Tao2026.VaughanIdentity
+import Tao2026.VaughanCoefficients
 import Tao2026.ShortIntervalDecomposition
 
 /-!
@@ -192,6 +192,17 @@ theorem weightedRealArithmeticSum_dirichletPairSum_eq_productSum
   exact weightedRealArithmeticSum_dirichletPairSum_eq_product_filter
     S B w f g hpos hB
 
+/-- Product-sum rearrangement stated directly for Dirichlet convolution. -/
+theorem weightedRealArithmeticSum_dirichletConvolution_eq_productSum
+    (S : Finset ℕ) (B : ℕ) (w : ℕ → ℂ)
+    (f g : ArithmeticFunction ℝ)
+    (hpos : ∀ x ∈ S, x ≠ 0) (hB : ∀ x ∈ S, x ≤ B) :
+    weightedRealArithmeticSum S w ((f * g) : ArithmeticFunction ℝ) =
+      weightedConvolutionProductSum S B w f g := by
+  change weightedRealArithmeticSum S w (dirichletPairSum f g) = _
+  exact weightedRealArithmeticSum_dirichletPairSum_eq_productSum
+    S B w f g hpos hB
+
 /-- The nested triple sum in Vaughan's identity is definitionally the pair
 sum whose first coefficient is the convolution of the first two factors. -/
 theorem dirichletTripleSum_eq_pairSum_convolution
@@ -262,5 +273,33 @@ theorem mangoldtReciprocalPhaseSum_vaughan_product_restricted
   rw [weightedRealArithmeticSum_dirichletTripleSum_Ico ha]
   rw [weightedRealArithmeticSum_dirichletTripleSum_Ico ha]
   rfl
+
+/-- The source-oriented Vaughan decomposition, with the actual Type I and
+Type II coefficient pairs and the literal restriction `m*n ∈ [a,b)`. -/
+theorem mangoldtReciprocalPhaseSum_vaughan_source_product_restricted
+    (N M : ℝ) (j : ℕ) {a b : ℕ} (ha : 0 < a) (U V : ℕ) :
+    mangoldtReciprocalPhaseSum N M j a b =
+      weightedRealArithmeticSum (Finset.Ico a b)
+        (fun n => standardAdditiveCharacter (reciprocalPhase N M j n))
+        (arithmeticFunctionCutoff Λ V) +
+      weightedConvolutionProductSum (Finset.Ico a b) b
+        (fun n => standardAdditiveCharacter (reciprocalPhase N M j n))
+        (vaughanTypeICoefficient U) log -
+      weightedConvolutionProductSum (Finset.Ico a b) b
+        (fun n => standardAdditiveCharacter (reciprocalPhase N M j n))
+        (vaughanTypeIPrimeCoefficient U V) (ζ : ArithmeticFunction ℝ) +
+      weightedConvolutionProductSum (Finset.Ico a b) b
+        (fun n => standardAdditiveCharacter (reciprocalPhase N M j n))
+        (vaughanTypeIIBetaCoefficient U)
+        (vaughanTypeIIGammaCoefficient V) := by
+  unfold mangoldtReciprocalPhaseSum
+  rw [weightedVaughanIdentity_sourceCoefficients]
+  rw [weightedRealArithmeticSum_dirichletConvolution_eq_productSum]
+  rw [weightedRealArithmeticSum_dirichletConvolution_eq_productSum]
+  rw [weightedRealArithmeticSum_dirichletConvolution_eq_productSum]
+  all_goals
+    intro x hx
+    rw [Finset.mem_Ico] at hx
+    omega
 
 end Tao2026

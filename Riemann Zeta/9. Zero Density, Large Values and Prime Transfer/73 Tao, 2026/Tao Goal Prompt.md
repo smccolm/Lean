@@ -32,12 +32,10 @@ into the same literal product-restricted form, as well as the exact finite quoti
 shorter-than-dyadic decomposition. Supported coefficient sequences now have
 exact pointwise and finite weighted-sum block decompositions with preserved
 norm bounds. The product-restricted Vaughan terms now also have exact outer
-and double coefficient-block decompositions. The paper's quantitative
-polylogarithmic family/count envelopes, the radial and `taoC3Norm` closure of
-Fourier coefficient decay from `W` beyond the now-proved one-dimensional
-threefold integration-by-parts and two-dimensional Fubini/slice directional
-bounds, and the analytic
-cancellation estimate remain open.
+and double coefficient-block decompositions. The unconditional radial
+`taoC3Norm` Fourier coefficient-decay theorem now follows directly from the
+public smooth-periodic hypotheses. The paper's quantitative polylogarithmic
+family/count envelopes and analytic cancellation estimate remain open.
 The Type II correlation kernel is already regrouped exactly by
 natural distance with multiplicity at most two. Its one-dimensional
 real-power sum is bounded by an exact affine-rpow calculation and has the pure

@@ -117,10 +117,12 @@ The Type I variable-support sum is also reduced exactly to the rescaled
 integer phases with parameters `N/m, M/m^j`, under an explicit coefficient
 envelope. The exact divisor-antidiagonal-to-product-box rearrangement and
 outer/double coefficient-block decompositions now connect the weighted
-Vaughan identity to literal `m*n∈I` Type I/II sums. This is proof
-infrastructure only; the paper's quantitative polylogarithmic family
-envelopes, Vinogradov/Weyl cancellation, Type I/II estimates, and the
-derivative-to-Fourier-coefficient estimate remain open. Conditional Fourier
+Vaughan identity to literal `m*n∈I` Type I/II sums. The source-oriented
+reassociation now identifies the canonical Type I/II coefficient pairs and
+proves their exact support conditions and `1`, `log P`, `1`, `log P`
+envelopes. This is proof infrastructure only; the paper's quantitative
+polylogarithmic family count, Vinogradov/Weyl cancellation, and Type I/II
+estimates remain open. Conditional Fourier
 reconstruction is now proved. The finite Abel-summation identity and its explicit
 `2 log b` bound are proved, so the source's logarithm-weighted alternate Type I
 form follows once the corresponding unweighted prefix estimates are supplied.
@@ -156,8 +158,11 @@ approximation `‖W-V‖∞≤δ` to the full discrepancy, with explicit perturb
 cost `(2P+1)δ + Pδ/log P`; the actual two-torus coefficient is now factored
 by Fubini in either coordinate order and the threefold periodic
 integration-by-parts estimate gives cubic decay along either nonzero
-frequency. Combining these directional bounds into the radial envelope and
-relating the concrete derivative chains to `taoC3Norm` remain. For nested finite mode sets, the
+frequency. These estimates and the zero mode are now combined into the radial
+envelope with constant `27`. Iterated derivatives inherit periodicity, their
+norm ranges reduce to the compact fundamental square, and the pure coordinate
+chains are constructed automatically, yielding the unconditional source-facing
+`taoC3Norm` coefficient estimate. For nested finite mode sets, the
 uniform error is now discharged explicitly by the `ℓ¹` norm of the discarded
 coefficients and propagated through the same stability theorem.
 The preliminary `j=1` reduction is kernel-checked as exact equality with the

@@ -30,7 +30,7 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 - Mathlib commit: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - Production modules: `Anatomy`, `Intervals`, `Asymptotics`, `Counting`,
   `CoefficientBounds`, `CoefficientProduct`, `CoefficientSelection`, `CriticalIntervals`,
-  `FactorialAsymptotics`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FourierAssembly`, `FourierApproximation`, `FourierDecay`, `FourierIntegrationByParts`, `FourierSlices`,
+  `FactorialAsymptotics`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FourierAssembly`, `FourierApproximation`, `FourierDecay`, `FourierIntegrationByParts`, `FourierRadial`, `FourierSlices`,
   `IntervalMultiples`, `PrimeIntervals`, `PrimeEquidistribution`,
   `PrimePowerReduction`, `PartialSummation`, `PhaseVariation`, `LowFrequency`, `PowerfulAsymptotics`, `PowerfulExtraction`,
   `PowerfulLimit`, `PowerfulNumbers`,
@@ -213,9 +213,11 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   third derivative. Fubini factorization of the actual two-torus coefficient
   is proved in both coordinate orders, the torus slices are identified with
   unit-interval coefficients, and the cubic derivative bound is propagated
-  to either nonzero coordinate frequency. Combining those directional bounds
-  into the source radial envelope and comparing the derivative hypotheses
-  with `taoC3Norm` remain open.
+  to either nonzero coordinate frequency. The zero mode and directional bounds
+  are combined into the source radial envelope with constant `27`. Iterated
+  derivatives inherit periodicity, their norm ranges are bounded on the compact
+  fundamental square, and automatically constructed pure coordinate chains
+  give the unconditional `taoC3Norm` coefficient estimate.
   The `j=1` phase and its finite prime sums are proved exactly equal to the
   `j=2, M=0` case after absorbing `M` into `N`.
   The finite core of the shorter-than-dyadic decomposition is proved: exact

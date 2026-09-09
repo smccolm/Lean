@@ -186,16 +186,21 @@ an open quotient map, the torus monomials are proved equal to the project's
 plane characters, and Mathlib's reconstruction theorem identifies that
 summable series with the original weight. Nested finite mode
 truncations still have their exact discarded `ℓ¹` control through the full
-prime/integral discrepancy. The remaining Fourier work is to derive the
-source radial coefficient envelope from the third derivatives of the smooth
-periodic complex weight. The one-dimensional analytic core is proved: three
+prime/integral discrepancy. The one-dimensional analytic core is proved: three
 periodic integrations by parts on `[0,1]` give the exact multiplier and a
 cubic frequency bound by the uniform third-derivative norm. The actual
 two-torus coefficient is now factored by Fubini in either coordinate order,
 its real slices are identified with those unit-interval coefficients, and
-cubic decay is obtained in either nonzero coordinate. What remains is the
-elementary radial-envelope combination and the comparison of the concrete
-derivative chains with `taoC3Norm`.
+cubic decay is obtained in either nonzero coordinate. The zero mode and both
+directional estimates are now combined into the source radial envelope with
+explicit constant `27`. Smooth periodicity propagates to every iterated
+Fréchet derivative and reduces every derivative-norm range to the compact
+fundamental square. The pure coordinate chains are constructed automatically,
+so the unconditional source-facing bound
+`|c_(n,m)| ≤ 27 * taoC3Norm W * (1+|n|+|m|)^(-3)` is proved from
+`ContDiff ℝ ⊤ W` and `IsZ2Periodic W`. No Fourier coefficient-decay gap
+remains; the unresolved Theorem 2.5 work is the quantitative prime-exponential
+sum cancellation and its precise Vaughan family/count envelopes.
 The source's initial reduction from `j=1` to `j=2` is also exact: replace
 `N` by `N+M` and set the higher reciprocal coefficient to zero.
 The reusable finite core of the shorter-than-dyadic decomposition is now

@@ -14,6 +14,7 @@ import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation
 import Tao2026.FourierDecay
 import Tao2026.FourierIntegrationByParts
+import Tao2026.FourierRadial
 import Tao2026.FourierSlices
 import Tao2026.TorusFourier
 import Tao2026.Intervals
@@ -42,6 +43,7 @@ import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
 import Tao2026.VinogradovPhase
+import Tao2026.VaughanCoefficients
 import Tao2026.VaughanIdentity
 
 /-!
@@ -618,6 +620,30 @@ exists yet to audit.
 #print axioms Tao2026.weightedVaughanIdentity
 #print axioms Tao2026.mangoldtReciprocalPhaseSum
 #print axioms Tao2026.mangoldtReciprocalPhaseSum_vaughan
+#print axioms Tao2026.vaughanTypeICoefficient
+#print axioms Tao2026.vaughanTypeIPrimeCoefficient
+#print axioms Tao2026.vaughanTypeIIBetaCoefficient
+#print axioms Tao2026.vaughanTypeIIGammaCoefficient
+#print axioms Tao2026.vaughanIdentity_sourceCoefficients
+#print axioms Tao2026.weightedVaughanIdentity_sourceCoefficients
+#print axioms Tao2026.arithmeticFunctionTail_apply
+#print axioms Tao2026.arithmeticFunctionTail_vonMangoldt_nonneg
+#print axioms Tao2026.arithmeticFunctionTail_vonMangoldt_le
+#print axioms Tao2026.abs_arithmeticFunctionCutoff_moebius_le_one
+#print axioms Tao2026.arithmeticFunctionCutoff_vonMangoldt_nonneg
+#print axioms Tao2026.arithmeticFunctionCutoff_vonMangoldt_le
+#print axioms Tao2026.abs_vaughanTypeIPrimeCoefficient_le_log
+#print axioms Tao2026.vaughanTypeIIGammaCoefficient_nonneg
+#print axioms Tao2026.vaughanTypeIIGammaCoefficient_le_log
+#print axioms Tao2026.log_natCast_mono
+#print axioms Tao2026.abs_vaughanTypeICoefficient_le_one
+#print axioms Tao2026.abs_vaughanTypeIPrimeCoefficient_le_log_scale
+#print axioms Tao2026.abs_vaughanTypeIIBetaCoefficient_le_one
+#print axioms Tao2026.abs_vaughanTypeIIGammaCoefficient_le_log_scale
+#print axioms Tao2026.vaughanTypeICoefficient_eq_zero_of_lt
+#print axioms Tao2026.vaughanTypeIPrimeCoefficient_eq_zero_of_mul_lt
+#print axioms Tao2026.vaughanTypeIIBetaCoefficient_eq_zero_of_le
+#print axioms Tao2026.vaughanTypeIIGammaCoefficient_eq_zero_of_le
 #print axioms Tao2026.sum_mul_conj_sum_eq_doubleSum
 #print axioms Tao2026.norm_sum_sq_le_card_mul_sum_norm_sq
 #print axioms Tao2026.typeIIInnerSum
@@ -778,10 +804,12 @@ exists yet to audit.
 #print axioms Tao2026.sum_divisorsAntidiagonal_eq_sum_product_filter
 #print axioms Tao2026.weightedRealArithmeticSum_dirichletPairSum_eq_product_filter
 #print axioms Tao2026.weightedRealArithmeticSum_dirichletPairSum_eq_productSum
+#print axioms Tao2026.weightedRealArithmeticSum_dirichletConvolution_eq_productSum
 #print axioms Tao2026.dirichletTripleSum_eq_pairSum_convolution
 #print axioms Tao2026.weightedRealArithmeticSum_dirichletPairSum_Ico
 #print axioms Tao2026.weightedRealArithmeticSum_dirichletTripleSum_Ico
 #print axioms Tao2026.mangoldtReciprocalPhaseSum_vaughan_product_restricted
+#print axioms Tao2026.mangoldtReciprocalPhaseSum_vaughan_source_product_restricted
 #print axioms Tao2026.natDistFiber
 #print axioms Tao2026.mem_natDistFiber
 #print axioms Tao2026.card_natDistFiber_le_two
@@ -830,3 +858,19 @@ exists yet to audit.
 #print axioms Tao2026.rpow_mul_frequencyDecay_le_of_lt
 #print axioms Tao2026.log_rpow_mul_frequencyDecay_le
 #print axioms Tao2026.log_rpow_mul_frequencyDecay_le_of_lt
+#print axioms Tao2026.fourierDerivativeMultiplier_cube_le_radial
+#print axioms Tao2026.iteratedFDeriv_isZ2Periodic
+#print axioms Tao2026.bddAbove_iteratedFDeriv_norm_range
+#print axioms Tao2026.pureCoordinateIteratedFDeriv
+#print axioms Tao2026.pureCoordinateIteratedFDeriv_isZ2Periodic
+#print axioms Tao2026.continuous_pureCoordinateIteratedFDeriv
+#print axioms Tao2026.hasDerivAt_pureCoordinateIteratedFDeriv_first
+#print axioms Tao2026.hasDerivAt_pureCoordinateIteratedFDeriv_second
+#print axioms Tao2026.norm_iteratedFDeriv_le_taoC3Norm_of_bddAbove
+#print axioms Tao2026.norm_le_taoC3Norm_of_bddAbove
+#print axioms Tao2026.norm_iteratedFDeriv_three_apply_le_taoC3Norm_of_bddAbove
+#print axioms Tao2026.norm_le_twentySeven_mul_fourierDecayWeight
+#print axioms Tao2026.norm_taoFourierCoeff_le_radial_thirdDerivatives
+#print axioms Tao2026.norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight
+#print axioms Tao2026.norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_contDiff
+#print axioms Tao2026.norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth
