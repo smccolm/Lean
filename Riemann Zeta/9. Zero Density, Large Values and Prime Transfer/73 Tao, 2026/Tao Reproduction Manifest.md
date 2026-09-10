@@ -37,7 +37,7 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `PowerfulRelations`, `PowerfulRelationCounting`, `SquareRelations`, `ConvolutionRearrangement`,
   `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`,
   `PublicStatements`, `TypeIReduction`, `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `VeryBadIntervals`,
-  `TorusFourier`, `VinogradovPhase`, `VaughanCoefficients`, `VaughanIdentity`, and `Audit`.
+  `TorusFourier`, `VinogradovPhase`, `Vinogradov`, `VaughanCoefficients`, `VaughanIdentity`, and `Audit`.
 - Frozen theorem dependency: the exact 1,226-module import closure of
   `GafniTao.Theorem11`, with 852 `GafniTao`, 291 `RiemannZeta`, and 83
   `PrimeNumberTheoremAnd` source modules.
@@ -391,28 +391,121 @@ resulting source-facing theorem proves the nonlinear critical-regular terminal
   outer-block expansion margin supplies the interval endpoints and the linear
   power-evaluation bound automatically. The transformed-scale condition also
   follows algebraically when the uniform block error is at most `1/K`. In the
-  quadratic case this comparison is now derived from the explicit monomial
-  condition `5q|N|≤K^5R^2`. The
+  quadratic case this comparison is now derived on large inner bands from
+  `10F≤K^4(log Bcap)^100`: logarithmic block width gives `10qF≤K^4R`, and the
+  reciprocal-phase scale estimate then obtains
+  the former monomial condition `5q|N|≤K^5R^2` internally. The
   endpoint-free kernel and Weyl propagation are generalized to arbitrary
   positive endpoints and then specialized to the exact named dyadic Vaughan
   blocks. Pairwise effective errors are bounded by the named scalar
   `typeIIShortIntervalEffectiveErrorBound`; its `1/128` power controls the
   optimized range. The logarithmic block-width theorem proves `5q≤K` on bands
   above the subdivision budget, automatically closing the expansion margin.
-  Consequently the canonical dyadic theorem exposes that monomial condition
-  rather than an abstract block-error hypothesis. It now splits pairs at
+  Consequently the canonical dyadic theorem exposes the low-frequency
+  source-scale condition rather than an abstract block-error or derived
+  monomial hypothesis. It now splits pairs at
   `distance·F/B=3`: nearby correlations are bounded trivially and absorbed by
   the kernel lower bound `1/4`, while far pairs have inverse transformed scale
   at most `2/3` and consume the explicit `1/4` upper-scale budget. That budget
-  follows from `E≤1/K`; the standing `2≤log Bcap` assumption proves the common
+  follows from the pair-local `F'/K^5≤1/K`; the standing `2≤log Bcap` assumption proves the common
   subdivision budget is at least `4·(240·7^5)`, so no second monomial or
   threshold hypothesis remains. The
-  corresponding source inequalities and their logarithmic consequences, the
-  complementary high-scale branch, and the small singleton-band branch remain pending.
+  generic and canonical `..._norm_sq_le_weylVinogradov_quadratic_additiveError`
+  wrappers now perform the source's scale split on every far pair. The
+  `F'≤K^4` branch is proved by four-step Weyl with a pair-local effective-error
+  budget and contributes `E^(1/1024)`; only the target correlation bound for
+  `K^4<F'`, carrying an independent nonnegative error `V`, remains as an
+  analytic argument. The
+  source inequalities and logarithmic consequences needed to absorb the
+  retained uniform block-error term, and that high-scale Vinogradov bound
+  itself, remain pending. The small inner singleton-band branch is closed by
+  an exact diagonal-only theorem.
   The high-frequency logarithmic arithmetic is formalized exactly: if
   `ℓ≥1`, `ℓ^d≤F`, and `b+t≤dc`, then `ℓ^b F^(-c)≤ℓ^(-t)`. Direct corollaries
   use `ℓ=log P`, the explicit threshold `P≥e`, and the source's strict
   `log^d P<F` hypothesis.
+  Independently, `eventually_exp_neg_log_rpow_le_log_rpow_neg` and its
+  polynomial-prefactor variant prove that every source-shaped factor
+  `log(P)^b exp(-c log(P)^ρ)` with `c,ρ>0` is eventually at most
+  `log(P)^(-A)`. Thus the logarithmic absorption after the pending Vinogradov
+  estimate is already exact. The source parameter bound
+  `log F≤C(log P)^(3/2-ε)` is also converted exactly to the lower exponent
+  `(log P)^3/(log F)^2≥C⁻²(log P)^(2ε)` and combined with that absorption in
+  `eventually_log_rpow_mul_vinogradovExp_le_log_rpow_neg`. The source's more
+  primitive parameter hypothesis `F≤C exp((log P)^(3/2-ε))` is converted to
+  this logarithmic form, with its multiplier retained explicitly, by
+  `eventually_log_rpow_mul_vinogradovExp_of_parameterBound`. The source choices
+  `α=(log P)^(4A)` and `q=(log P)^(-3A)` discharge the coefficient conditions
+  for the full regular-component derivative window, and
+  `eventually_vinogradov_alpha_condition_of_parameterBound` proves the
+  numerical `10^-3` condition whenever `log X≥c log P`.
+  `vinogradovDerivativeCutoff` is the literal source cutoff
+  `10⌈log F/log X⌉+1`; its primitive eventual budget theorem includes the
+  shifted demand `R+j≤log P` for `j≤(log P)^(1/2)`. The production
+  `Vinogradov` module combines this budget with critical deletion and the
+  logarithmic coefficient parameters to produce the complete source-cutoff
+  derivative window on a regular interval.
+  `norm_reciprocalPhaseSum_le_sourceVinogradov_componentEnvelope` consumes a
+  local analytic bound stated from precisely that window and propagates it to
+  the full interval with the proved regular-component count and explicit
+  deletion error.
+  `VinogradovExponentialSumEstimate` records the pinned source lemma with one
+  absolute constant, the hypotheses `X≥2`, `F≥X^4`, pointwise neighborhood
+  smoothness, the numerical condition, and the exact decay
+  `αX exp(-2^-18(log X)^3/(log F)^2)`. Its formal Taylor front end identifies
+  the literal ordinary-derivative polynomial `F_n(q)`, proves the Lagrange
+  remainder and normalized factorial cancellation, and controls the integral
+  shift by its exact boundary cardinality. Product shifts are indexed by pairs,
+  retaining multiplicities with proved cardinality `V²`; their Taylor errors
+  are summed into a uniform envelope, and an exact averaging lemma reduces the
+  original sum to a `V²`-normalized Taylor-polynomial pair-sum estimate. That
+  reduction also covers intervals shorter than a shift. At the floor-rounded
+  source choice `V=⌊X^(1/4)⌋`, the envelope is bounded by `√X` plus the exact
+  normalized top-derivative remainder. The literal cutoff, `F≥X⁴`, and the
+  `10^-3` condition prove its two displayed factors at most one; `√X+2π` is
+  then absorbed into nine copies of the target decay scale. The interval pair
+  sum is also split into complete local product sums and a right-boundary strip
+  bounded exactly by `V⁴`. Each complete sum is rewritten as a generic
+  coefficient-only bilinear polynomial sum after its unit constant phase is
+  removed. The exact trivial `V²` bound handles normalized targets at least
+  one. Therefore the smallest open residual is
+  `VinogradovBilinearPolynomialNontrivialEstimate`; it implies the full named
+  exponential-sum proposition with an explicit total constant shift of
+  eighteen. The coefficient window is converted to logarithmic form, its
+  cubic distortion is controlled by the nontrivial-scale hypothesis, and the
+  explicit block `[(4/3)(log F/log X),(7/4)(log F/log X)]` is proved to contain
+  at least `R/128` medium coefficients with `c₀=1/128`. The subsequent
+  polynomial mean-value argument is now formalized through both Hölder steps:
+  `∑ν=V^ℓ`, `∑ν²=J`, the exact equal-power-sum solution count, and the
+  unnormalized equation-(16) estimate are proved. The signed power-sum
+  difference support is finite, has total multiplicity `(V^ℓ)²`, and is
+  contained coordinatewise in `|d_j|≤ℓV^(j+1)`. The remaining portion begins
+  with the equation-(18) regrouping and multiplicity bound, then Lemma 12 and
+  the VMVT estimate.
+  `exists_norm_reciprocalPhaseSum_le_sourceVinogradov_componentEnvelope`
+  proves its complete global reciprocal-phase consumer.
+  The intrinsic low-scale theorem uses `F'≤K^4` directly to replace the former
+  global block error by `(1/K)^(1/1024)`; this is propagated through the generic
+  and canonical mixed Weyl--Vinogradov Type II estimates. Consequently the
+  upper source-scale inequality is no longer an input to that hybrid.
+  `exists_norm_typeIIProductRestrictedCorrelationSum_le_sourceVinogradov`
+  rewrites each actual high-scale correlation to the exact quotient interval
+  and applies the source contract with explicit critical-deletion cost.
+  The companion logarithmic-envelope theorems replace the exact component
+  multiplicities by `log P` and prove that the entire normalized
+  principal-plus-deletion expression is eventually at most
+  `3(log P)^(-T)` whenever `T+2≤3A`.
+  The fixed-constant interfaces preserve one absolute Vinogradov constant
+  through all pairs and produce the exact hybrid callback
+  `Q(4·kernel+3(log P)^(-T))`; the Vaughan-inner-block specialization derives
+  the required transformed-scale upper bound with multiplier `5`.
+  `eventually_sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_sourceVinogradov`
+  consumes this callback in the intrinsic-error canonical double-block
+  theorem, removing the abstract high-pair hypothesis entirely.
+  `reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadicBlock` proves that
+  passing to a Type II correlation preserves the same exponential parameter
+  class; in the canonical equal-parameter quadratic block the explicit loss
+  is exactly the fixed factor `5`.
 
 ## Reproduction command
 

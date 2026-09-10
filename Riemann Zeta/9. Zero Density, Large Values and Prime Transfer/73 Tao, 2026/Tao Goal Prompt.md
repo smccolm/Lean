@@ -158,22 +158,43 @@ bound.  The pairwise `F'/K^5≤E` family is now discharged from block geometry:
 diameter and is uniform over every off-diagonal pair.  For `j=2`, fitting the
 four-step expansion inside the outer block now automatically supplies all
 endpoint and power-evaluation conditions.  For the quadratic phase, the
-monomial condition `5q|N|≤K^5R^2` now proves that the explicit block error is
-at most `1/K`, which in turn implies the transformed scale bound.  The full
+source-shaped condition `10F≤K^4(log Bcap)^100` on large inner bands combines
+with the proved logarithmic width to give `10qF≤K^4R`; this implies the
+monomial bound `5q|N|≤K^5R^2` and proves that the explicit block error is at most `1/K`, which
+in turn implies the transformed scale bound.  The full
 kernel/Weyl chain now accepts arbitrary positive
 endpoints and is specialized to the exact named dyadic Vaughan blocks.  Its
 effective error is the single scalar `typeIIShortIntervalEffectiveErrorBound`,
 and the proved logarithmic block width gives `5q≤K` and hence the expansion
 margin on bands above the subdivision budget.  The canonical dyadic theorem
-now takes the monomial condition directly.  It also uses a source-faithful
+now takes the large-inner-band and low-frequency source-scale conditions
+directly.  It also uses a source-faithful
 distance split: scaled distance at most three is handled trivially using the
 kernel lower bound `1/4`, while farther pairs have inverse transformed scale
 at most `2/3` and use an upper-scale budget of `1/4`.  That budget now follows
-from `E≤1/K`; the existing `2≤log Bcap` assumption proves the common Vaughan
-subdivision budget is large enough.  The remaining local work is to prove the
-`F≥1`, `5q|N|≤K^5R^2` source inequalities, close the complementary
-high-transformed-scale branch, obtain
-the required logarithmic saving, and close the small singleton-band branch.
+from the pair-local `F'/K^5≤1/K`; the existing `2≤log Bcap` assumption proves the common Vaughan
+subdivision budget is large enough.  The logarithmic lower split
+`(log Bcap)^d≤F`, `0≤d`, now supplies `F≥1` internally. The new generic and
+canonical `..._norm_sq_le_weylVinogradov_quadratic_additiveError` theorems split
+each far pair at `F'=K^4`: the low branch is discharged by the proved four-step
+Weyl estimate with error `E^(1/1024)`, and their sole analytic argument is the
+target kernel bound for `K^4<F'` with an independent nonnegative error `V`.
+The strengthened hybrid uses `F'≤K^4` itself to obtain the intrinsic
+low-branch error `(1/K)^(1/1024)`, so it retains no global block error and no
+longer needs the upper source inequality. The logarithmic lower split already
+supplies `F≥1`. The complete conditional component envelope, including both
+critical-deletion terms, is now uniformly bounded by `3K(log P)^(-T)` under
+the explicit budget `T+2≤3A`. The remaining local work is therefore the
+polynomial mean-value stage of the high-scale Vinogradov proposition and the
+remaining outer quantitative
+assembly. Conditional on that proposition, the canonical intrinsic-error Type
+II double-block estimate is now complete and has no abstract `hhigh` premise.
+The high-pair estimate is
+in the exact callback shape `Q(4·kernel+3(log P)^(-T))`; canonical Vaughan
+inner-block membership discharges its pair-scale upper bound with factor `5`.
+The small inner singleton-band branch is now closed unconditionally by its
+pure diagonal estimate. The common near/far aggregation theorem supplies the
+exact finite summation endpoint used by this compiled pairwise hybrid.
 The Type II correlation kernel is already regrouped exactly by
 natural distance with multiplicity at most two. Its one-dimensional
 real-power sum is bounded by an exact affine-rpow calculation and has the pure
@@ -195,7 +216,61 @@ Their cardinalities are bounded by their chosen block lengths and substituted
 into both the conservative and endpoint-free squared-sum estimates.
 The high-frequency exponent arithmetic is explicit: a lower bound
 `(log P)^d≤F` absorbs `(log P)^b F^(-c)` to `(log P)^(-t)` whenever
-`b+t≤dc`.
+`b+t≤dc`. The high-scale Vinogradov parameter arithmetic is exact too:
+`log F≤C(log P)^(3/2-ε)` gives exponent
+`(log P)^3/(log F)^2≥C⁻²(log P)^(2ε)`, and its exponential absorbs every
+polynomial logarithmic loss eventually. On every regular component, the
+source choices `α=(log P)^(4A)` and `q=(log P)^(-3A)` now supply the complete
+derivative window for `1≤r≤R`, and the primitive parameter bound implies
+`log α·(log F)^2/(log X)^3<10^-3` eventually whenever `log X≥c log P`.
+The exact source cutoff `R=10⌈log F/log X⌉+1` is now defined and its shifted
+budget `R+j≤log P` is proved eventually under `j≤(log P)^(1/2)`; the
+`Tao2026.Vinogradov` assembly theorem combines that cutoff, the logarithmic
+coefficient parameters, and critical deletion into the full regular-interval
+derivative hypothesis. Its global component theorem reduces the remaining
+high-scale phase-sum bound to a local Vinogradov callback with exactly that
+derivative hypothesis, carrying the component count and deletion error
+unconditionally. The precise absolute-constant source lemma—`X≥2`, `F≥X^4`,
+pointwise neighborhood smoothness on the interval, the `10^-3` condition, and decay
+`αX exp(-2^-18(log X)^3/(log F)^2)`—is now the single named proposition
+`VinogradovExponentialSumEstimate`, and its full reciprocal-phase consumer is
+proved. Its Taylor front end is now proved as well: the literal
+`F_n(q)=∑_{r≤R}f^(r)(n)q^r/r!`, Lagrange remainder, factorial cancellation,
+and shifted-interval boundary error give the exact polynomial replacement
+bound directly from the proposition's hypotheses. The product multiset
+`{xy : 1≤x,y≤V}` is formalized as pairs, retaining multiplicities and exact
+cardinality `V²`; its total Taylor error is reduced to a uniform envelope, and
+the unnormalized average is cancelled exactly. Consequently the remaining
+local input is precisely a `V²`-normalized estimate for the resulting
+Taylor-polynomial pair sum. The reduction remains valid for intervals shorter
+than a shift; at `V=⌊X^(1/4)⌋` its envelope becomes the source's `√X` plus
+top-derivative remainder. The two source factors in that remainder are proved
+at most one from the proposition's hypotheses, and the resulting `√X+2π` is
+absorbed into nine target-scale copies. The pair sum is further reduced to
+complete pointwise product sums with an exact `V⁴` boundary cost; after the
+unit constant phase is removed, these are the generic coefficient-only sums
+`∑ e(∑ c_r x^r y^r)`. The trivial `V²` estimate closes the branch in which the
+requested normalized bound is at least one. Thus the smallest named residual
+is `VinogradovBilinearPolynomialNontrivialEstimate`, and it implies
+`VinogradovExponentialSumEstimate` formally with an explicit total constant
+shift of eighteen. Within the nontrivial branch, the fixed degree block
+`[(4/3)(log F/log X),(7/4)(log F/log X)]` is proved to contain at least
+`R/128` indices, each satisfying the medium-coefficient condition with
+`c₀=1/128` for the actual floor-rounded averaging range. Hence coefficient
+selection is no longer part of the open analytic input. The polynomial
+mean-value stage is now formalized through both Hölder inequalities: the
+representation identities `∑ν=V^ℓ` and `∑ν²=J`, the equal-power-sum solution
+count, and the exact equation-(16) bound are proved. Signed tuple differences
+are also counted and placed in the coordinate box `|d_j|≤ℓV^(j+1)`. The
+remaining part of this residual starts at the equation-(16)-to-(18)
+regrouping/multiplicity estimate, Lemma 12, and VMVT. A further theorem rewrites
+every actual high-scale Type II correlation
+to its ceiling-divided quotient interval and applies this consumer with exact
+endpoint geometry and deletion cost.
+The raw component count and deletion multiplicity are further bounded by
+`log P`; the resulting principal-plus-deletion envelope is proved to have an
+arbitrary uniform logarithmic saving after normalization by the interval
+scale.
 This includes
 the reverse-big-O half of the
 `F₃` and factorial-triple square-root scale contracts. The source definitions and public conclusion contracts

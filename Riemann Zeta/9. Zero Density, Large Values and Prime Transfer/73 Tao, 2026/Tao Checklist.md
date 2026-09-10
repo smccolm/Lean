@@ -417,8 +417,58 @@ paper has been formalized.
   short-block comparison `typeIIShortIntervalScaleError≤1/K`, eliminating the
   remaining pairwise scale family from the quadratic interface.
 - [x] Bound the quadratic short-block scale error by the explicit monomial
-  `5q|N|/(K^6R^2)` and derive `E≤1/K` from `5q|N|≤K^5R^2`; use this explicit
-  size condition in the canonical dyadic Vaughan theorem.
+  `5q|N|/(K^6R^2)` and derive `E≤1/K` from `5q|N|≤K^5R^2` as the intermediate
+  block-error comparison.
+- [x] Derive that monomial condition from the source-shaped low-frequency
+  inequality `10qF≤K^4R`, and expose only the source-scale inequality in the
+  canonical dyadic Vaughan theorem.
+- [x] On inner dyadic bands above the subdivision budget, derive
+  `10qF≤K^4R` from the literal logarithmic width and
+  `10F≤K^4(log Bcap)^100`; expose this cleaner frequency bound in the
+  canonical theorem.
+- [x] Close inner bands below the Vaughan subdivision budget: prove their
+  block length is at most one, erase every off-diagonal support exactly, and
+  obtain the canonical diagonal bound `qouter·L²` without phase hypotheses.
+- [x] Derive the canonical `F≥1` condition internally from the source lower
+  split `(log Bcap)^d≤F`, using `0≤d` and `2≤log Bcap`.
+- [x] Factor the near/far Type II summation through a common theorem accepting
+  an arbitrary far-pair correlation estimate, so the source's pairwise
+  Weyl/Vinogradov scale split can share the exact kernel aggregation layer.
+- [x] Implement that pairwise split in generic and canonical quadratic Type II
+  theorems: prove `F'≤K^4` by four-step Weyl with a pair-local error budget and
+  expose only the complementary `K^4<F'` correlation bound as analytic input.
+- [x] Separate the two analytic remainders in the common aggregation and both
+  hybrid endpoints: low-scale Weyl contributes `E^(1/1024)`, while the
+  high-scale callback contributes an independent nonnegative error `V`.
+- [x] Prove that `exp(-c(log P)^ρ)`, even after multiplication by an arbitrary
+  real power of `log P`, eventually beats every requested logarithmic saving
+  whenever `c,ρ>0`.
+- [x] Convert the source parameter growth
+  `log F≤C(log P)^(3/2-ε)` into the explicit Vinogradov exponent lower bound
+  `C⁻²(log P)^(2ε)` and combine it uniformly with that logarithmic absorption.
+- [x] Derive that logarithmic parameter bound from the primitive source form
+  `F≤C exp((log P)^(3/2-ε))`, preserving the hidden multiplier as an explicit
+  positive adjusted constant.
+- [x] Package the complete regular-component derivative window for every
+  `1≤r≤R`, and discharge its coefficient conditions from the literal source
+  choices `α=(log P)^(4A)` and `q=(log P)^(-3A)`.
+- [x] Prove Vinogradov's numerical side condition
+  `log α·(log F)^2/(log X)^3<10^-3` eventually from the primitive source
+  parameter bound and `log X≥c log P`.
+- [x] Define the literal derivative cutoff `R=10⌈log F/log X⌉+1`, prove the
+  shifted source budget `R+j≤log P` eventually for
+  `j≤(log P)^(1/2)`, and assemble the full source-cutoff derivative window on
+  every regular interval in `Tao2026.Vinogradov`.
+- [x] Propagate a local Vinogradov inequality whose only analytic hypothesis is
+  that source-cutoff derivative window through the global regular-component
+  decomposition, with explicit component and critical-deletion costs.
+- [x] State the exact absolute-constant Vinogradov exponential-sum proposition,
+  including `X≥2`, `F≥X^4`, the `10^-3` hypothesis, and the source `2^-18`
+  decay exponent, and prove that it supplies the complete global
+  reciprocal-phase estimate.
+- [x] Prove that dyadic Type II correlations preserve the source exponential
+  parameter class, with multiplier `1+j·2^(j-1)` and canonical quadratic loss
+  exactly `5`.
 - [x] Generalize the endpoint-free Type II kernel and Weyl propagation from
   artificial `[1,B]` blocks to arbitrary positive short-block endpoints, and
   specialize the result to the exact named dyadic blocks in the canonical
@@ -438,11 +488,64 @@ paper has been formalized.
   monomial hypothesis from the canonical theorem.
 - [x] Prove that the standing assumption `2≤log Bcap` already implies that
   Vaughan-budget threshold, removing it from the canonical theorem interface.
-- [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl cancellation and
-  quantitative Type I/II estimates. In particular, discharge the exposed
-  low-frequency source-scale conditions `F≥1` and `5q|N|≤K^5R^2`, prove their required logarithmic
-  consequences, close the high-transformed-scale Vinogradov branch, and close
-  the small singleton-band branch. The canonical Vaughan coefficient
+- [x] Replace the retained global low-branch block error by the intrinsic
+  `(1/K)^(1/1024)` consequence of `F'≤K^4`, propagate it through arbitrary
+  blocks and canonical Vaughan blocks, and remove the former upper
+  source-scale hypothesis from the mixed Weyl--Vinogradov theorem.
+- [x] Rewrite each actual high transformed-scale Type II correlation to its
+  ceiling-divided quotient interval and prove its explicit global estimate
+  from `VinogradovExponentialSumEstimate`, including critical deletion.
+- [x] Package the eventual logarithmic, amplitude, degree-two cutoff, and
+  `10^-3` conditions directly from the primitive transformed-scale bound.
+- [x] Bound the exact component/deletion multiplicities by `log P` and absorb
+  the complete normalized Vinogradov envelope into `3(log P)^(-T)`, including
+  both deletion terms, under the explicit budget `T+2≤3A`.
+- [x] Preserve the single absolute Vinogradov constant through the global and
+  Type II consumers, convert the saving to the exact hybrid callback
+  `Q(4·kernel+3(log P)^(-T))`, and discharge the transformed pair-scale upper
+  bound from canonical Vaughan inner-block membership with factor `5`.
+- [x] Feed that callback into the canonical intrinsic-error Vaughan
+  double-block theorem, eliminating its abstract `hhigh` premise and proving
+  the complete mixed Weyl--Vinogradov squared-inner-sum estimate conditional
+  only on `VinogradovExponentialSumEstimate` and the source parameter bounds.
+- [x] Formalize the Taylor front end of the pinned Vinogradov proof: use
+  pointwise neighborhood smoothness, identify Tao's ordinary-derivative
+  polynomial `F_n(q)`, prove the Lagrange remainder and factorial cancellation,
+  and include the exact finite-interval shift boundary term.
+- [x] Formalize the product-multiset averaging reduction with multiplicities:
+  prove cardinality `V²`, sum all shift errors into a uniform envelope, and
+  cancel the unnormalized average so a `V²`-normalized polynomial-pair-sum
+  estimate transfers directly to the original exponential sum. Cover intervals
+  shorter than a shift and specialize `V=⌊X^(1/4)⌋` to the source's `√X` plus
+  normalized top-derivative remainder.
+- [x] Prove both numerical factors in the source Taylor-error display are at
+  most one, absorb `√X+2π` into nine copies of the target decay scale, and show
+  that the exact residual polynomial-pair estimate implies the full named
+  Vinogradov proposition.
+- [x] Decompose the interval pair sum into complete local product sums and a
+  right-boundary strip bounded exactly by `V⁴`; rewrite each local sum as the
+  generic coefficient-only bilinear polynomial sum after removing its unit
+  constant phase.
+- [x] Prove the generic trivial `V²` bound and use it to close the branch where
+  the requested normalized majorant is at least one. Propagate the remaining
+  nontrivial coefficient-only estimate through the local, pair-sum, and full
+  Vinogradov interfaces with an explicit total constant shift of eighteen.
+- [x] Convert the derivative window to exact logarithmic coefficient bounds;
+  control cubic distortion in the nontrivial branch; and prove that the block
+  `[(4/3)(log F/log X),(7/4)(log F/log X)]` supplies at least `R/128` medium
+  coefficients with `c₀=1/128`, including floor and ceiling effects.
+- [x] Formalize both Hölder steps in the bilinear mean-value argument; define
+  the representation function; prove `∑ν=V^ℓ`, `∑ν²=J`, and the exact
+  equal-power-sum solution interpretation; derive the unnormalized equation
+  (16); and prove the signed difference support has total multiplicity
+  `(V^ℓ)²` and lies in `|d_j|≤ℓV^(j+1)`.
+- [ ] Prove the remaining Theorem 2.5 analytic chain: the named high-scale
+  Vinogradov proposition (now reduced exactly to
+  `VinogradovBilinearPolynomialNontrivialEstimate`, with its next frontier at
+  the equation-(18) regrouping, Lemma 12, and VMVT) and
+  the quantitative Type I/II estimates. Its full
+  conditional uniform logarithmic consequence is now proved. The source lower split already supplies
+  `F≥1`. The canonical Vaughan coefficient
   envelopes and their support cutoffs are now proved. The
   two-dimensional slice/Fubini assembly, directional bounds, radial arithmetic,
   automatic smooth-periodic derivative chains, and unconditional `taoC3Norm`

@@ -45,6 +45,8 @@ import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
 import Tao2026.VinogradovPhase
+import Tao2026.Vinogradov
+import Tao2026.VinogradovMeanValue
 import Tao2026.VaughanCoefficients
 import Tao2026.VaughanIdentity
 import Tao2026.WeylDifferencing

@@ -1,6 +1,7 @@
 import Tao2026.TypeIIKernel
 import Tao2026.PhaseVariation
 import Tao2026.CriticalIntervals
+import Tao2026.Vinogradov
 import RiemannZeta.GuthMaynard.VanDerCorput
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 
@@ -8307,6 +8308,181 @@ theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_
       (by norm_num : (1 / 1024 : ℝ) < 1) hqinnerB hpoint
   simpa only [F, Q, δ] using hresult
 
+/-- Equal-parameter Type II propagation after the far-pair estimate has been
+proved by any analytic method. Nearby pairs are bounded trivially and absorbed
+by the decay kernel. This is the common aggregation layer for the source's
+pairwise Weyl/Vinogradov split. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_nearFar_of_farBound
+    (a b : ℕ) (γ : ℕ → ℂ) (N : ℝ) {j : ℕ} (orders : Finset ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L K B E : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hK : 0 < K) (hB : 0 < B) (hqinnerB : (qinner : ℝ) ≤ B)
+    (hF : 1 ≤ reciprocalPhaseScale N N j (K * B)) (hE : 0 ≤ E)
+    (hqouterK : (qouter : ℝ) ≤ K)
+    (hfarBound : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N j (K * B) / B →
+        let F := reciprocalPhaseScale N N j (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N j n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+            E ^ (1 / 1024 : ℝ))) :
+    let F := reciprocalPhaseScale N N j (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N N j m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * E ^ (1 / 1024 : ℝ)))) := by
+  dsimp only
+  let F := reciprocalPhaseScale N N j (K * B)
+  let δ : ℝ := 1 / 1024
+  let Q : ℝ := ((370 * orders.card + 173 : ℕ) : ℝ) *
+    (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+      (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+        (1 + Real.log (qouter : ℝ)) * K)
+  have hQ : 0 ≤ Q := by
+    have hlog : 0 ≤ Real.log (qouter : ℝ) :=
+      Real.log_nonneg (by exact_mod_cast hqouter)
+    unfold Q
+    positivity
+  have hpoint : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+          (shortIntervalBlock K₀ K₁ qouter kouter)
+          N N j n n'‖ ≤
+        Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) + E ^ δ) := by
+    intro n hnmem n' hn'mem hne
+    have hnData := mem_shortIntervalBlock.mp hnmem
+    have hn'Data := mem_shortIntervalBlock.mp hn'mem
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    by_cases hnear : (Nat.dist n' n : ℝ) *
+        reciprocalPhaseScale N N j (K * B) / B ≤ 3
+    · have hnearBound :=
+        norm_typeIIProductRestrictedCorrelationSum_near_le_decayKernel_blockLength
+          a b K₀ K₁ qouter kouter N orders hqouter hnpos hn'pos
+            hK hB hE hqouterK hnear
+      simpa only [F, Q, δ] using hnearBound
+    · have hfar : 3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N j (K * B) / B :=
+        (lt_of_not_ge hnear).le
+      simpa only [F, Q, δ] using hfarBound n hnmem n' hn'mem hne hfar
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_sourceScale_blockLengths
+      (Finset.Ico a b) γ N N j K₀ K₁ S₀ S₁ qouter qinner kouter kinner
+      hK₀ hS₀ hqouter hqinner hL hγ hQ (by norm_num : (0 : ℝ) ≤ 4)
+      (Real.rpow_nonneg hE _) hB hF (by norm_num : (0 : ℝ) ≤ 1 / 1024)
+      (by norm_num : (1 / 1024 : ℝ) < 1) hqinnerB hpoint
+  simpa only [F, Q, δ] using hresult
+
+/-- Additive-error form of the common near/far aggregation theorem.  This is
+the natural endpoint when different analytic branches contribute different
+errors, such as the Weyl `E^(1/1024)` term and a Vinogradov logarithmic term. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_nearFar_of_farBound_additiveError
+    (a b : ℕ) (γ : ℕ → ℂ) (N : ℝ) {j : ℕ} (orders : Finset ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L K B Z : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hK : 0 < K) (hB : 0 < B) (hqinnerB : (qinner : ℝ) ≤ B)
+    (hF : 1 ≤ reciprocalPhaseScale N N j (K * B)) (hZ : 0 ≤ Z)
+    (hqouterK : (qouter : ℝ) ≤ K)
+    (hfarBound : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N j (K * B) / B →
+        let F := reciprocalPhaseScale N N j (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N j n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + Z)) :
+    let F := reciprocalPhaseScale N N j (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N N j m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * Z))) := by
+  dsimp only
+  let F := reciprocalPhaseScale N N j (K * B)
+  let δ : ℝ := 1 / 1024
+  let Q : ℝ := ((370 * orders.card + 173 : ℕ) : ℝ) *
+    (480 * ((((5 + j) ^ 5 : ℕ) : ℝ)) *
+      (((((5 + j) ^ 5 : ℕ) : ℝ)) + 1) *
+        (1 + Real.log (qouter : ℝ)) * K)
+  have hQ : 0 ≤ Q := by
+    have hlog : 0 ≤ Real.log (qouter : ℝ) :=
+      Real.log_nonneg (by exact_mod_cast hqouter)
+    unfold Q
+    positivity
+  have hpoint : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+          (shortIntervalBlock K₀ K₁ qouter kouter)
+          N N j n n'‖ ≤
+        Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) + Z) := by
+    intro n hnmem n' hn'mem hne
+    have hnData := mem_shortIntervalBlock.mp hnmem
+    have hn'Data := mem_shortIntervalBlock.mp hn'mem
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    by_cases hnear : (Nat.dist n' n : ℝ) *
+        reciprocalPhaseScale N N j (K * B) / B ≤ 3
+    · have hnearZero :=
+        norm_typeIIProductRestrictedCorrelationSum_near_le_decayKernel_blockLength
+          a b K₀ K₁ qouter kouter N orders (E := (0 : ℝ))
+            hqouter hnpos hn'pos hK hB (by norm_num) hqouterK hnear
+      have hbase :
+          ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+              (shortIntervalBlock K₀ K₁ qouter kouter) N N j n n'‖ ≤
+            Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n)) := by
+        simpa only [F, Q, δ, Real.zero_rpow (by norm_num : (1 / 1024 : ℝ) ≠ 0),
+          add_zero] using hnearZero
+      exact hbase.trans (mul_le_mul_of_nonneg_left
+        (le_add_of_nonneg_right hZ) hQ)
+    · have hfar : 3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N j (K * B) / B :=
+        (lt_of_not_ge hnear).le
+      simpa only [F, Q, δ] using hfarBound n hnmem n' hn'mem hne hfar
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_sourceScale_blockLengths
+      (Finset.Ico a b) γ N N j K₀ K₁ S₀ S₁ qouter qinner kouter kinner
+      hK₀ hS₀ hqouter hqinner hL hγ hQ (by norm_num : (0 : ℝ) ≤ 4)
+      hZ hB hF (by norm_num : (0 : ℝ) ≤ 1 / 1024)
+      (by norm_num : (1 / 1024 : ℝ) < 1) hqinnerB hpoint
+  simpa only [F, Q, δ] using hresult
+
 /-- Equal-parameter Type II propagation with the source-faithful distance
 split.  Nearby pairs are bounded trivially and absorbed by the decay kernel;
 only pairs with scaled distance at least three must satisfy the Weyl analytic
@@ -8429,6 +8605,16 @@ theorem le_pow_four_of_div_pow_five_le_one_div
     F = (F / K ^ 5) * K ^ 5 := by field_simp
     _ ≤ (1 / K) * K ^ 5 := hmul
     _ = K ^ 4 := by field_simp
+
+/-- The converse degree-five normalization: a transformed scale in the
+four-step Weyl range contributes at most `1/K` to its high-scale error. -/
+theorem div_pow_five_le_one_div_of_le_pow_four
+    {F K : ℝ} (hK : 0 < K) (hFK : F ≤ K ^ 4) :
+    F / K ^ 5 ≤ 1 / K := by
+  calc
+    F / K ^ 5 ≤ K ^ 4 / K ^ 5 :=
+      div_le_div_of_nonneg_right hFK (pow_nonneg hK.le 5)
+    _ = 1 / K := by field_simp
 
 /-- Uniformly bound the complete four-step effective error from bounds for its
 high-scale and inverse-scale terms.  A nonempty interval contributes at most
@@ -8944,6 +9130,575 @@ theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_
     hqouter hqinner hL hγ hN hK hB hKB hBinner hqinnerB hF
     (by norm_num) hrFive hrSix hanalytic
 
+/-- Pointwise quadratic Type II correlation estimate in the low transformed-
+scale branch.  The effective-error budget is manufactured from the pair's own
+bound `F' ≤ K^4`; the independent majorant `E` is used only in the final
+source-scale decay kernel. -/
+theorem norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale
+    (a b K₀ K₁ q k : ℕ) (N : ℝ) (orders : Finset ℕ)
+    {n n' : ℕ} {K B E : ℝ}
+    (hK₀ : 0 < K₀) (hq : 0 < q) (hn : 0 < n) (hn' : 0 < n') (hne : n ≠ n')
+    (hN : N ≠ 0) (hKouter : K = ((K₀ + k * q : ℕ) : ℝ))
+    (hB : 0 < B) (hKB : 1 ≤ K * B)
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
+    (hupper :
+      reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K / K ^ 5 ≤ E)
+    (hscale :
+      reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K ≤ K ^ 4)
+    (hfar : 3 ≤ (Nat.dist n' n : ℝ) *
+      reciprocalPhaseScale N N 2 (K * B) / B)
+    (hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K)
+    (hqK : 5 * (q : ℝ) ≤ K) :
+    let lo := typeIIProductRestrictedBlockLower a K₀ q k n n'
+    let hi := typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n'
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+        (shortIntervalBlock K₀ K₁ q k) N N 2 n n'‖ ≤
+      ((370 * orders.card + 173 : ℕ) : ℝ) *
+        (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+          (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log ((hi - lo : ℕ) : ℝ)) * K *
+            (E ^ (1 / 1024 : ℝ) +
+              4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n))) := by
+  dsimp only
+  have hKnat : 0 < K₀ + k * q := by omega
+  have hK : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hpairError :
+      reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K / K ^ 5 ≤ 1 / K :=
+    div_pow_five_le_one_div_of_le_pow_four hK hscale
+  have hanalytic :
+      let N' := typeIICorrelationLinearParameter N n n'
+      let M' := typeIICorrelationHigherParameter N 2 n n'
+      let lo := typeIIProductRestrictedBlockLower a K₀ q k n n'
+      let hi := typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n'
+      1 ≤ hi - lo →
+        reciprocalPhaseScale N' M' 2 K ≤ K ^ 4 ∧
+        reciprocalPhaseFourStepEffectiveErrorScale N' M' 2 K (hi - lo) ≤ 1 ∧
+        (lo : ℝ) ∈ Set.Icc K (2 * K) ∧
+        (lo : ℝ) + (hi - lo : ℕ) +
+            (4 * reciprocalPhaseFourStepOptimizedRange N' M' 2 K (hi - lo) : ℕ) ≤
+          2 * K ∧
+        (lo : ℝ) + (hi - lo : ℕ) +
+            (4 * reciprocalPhaseFourStepOptimizedRange N' M' 2 K (hi - lo) : ℕ) ≤
+          2 * K ∧
+        ∀ t ∈ Set.Icc K (2 * K), t ^ (2 - 1) ≤ 2 * K ^ (2 - 1) := by
+    dsimp only
+    intro hLength
+    have herror : reciprocalPhaseFourStepEffectiveErrorScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K
+        (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+          typeIIProductRestrictedBlockLower a K₀ q k n n') ≤ 1 := by
+      apply reciprocalPhaseFourStepEffectiveErrorScale_typeIICorrelation_le_one_of_far
+        N K B
+        (reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K / K ^ 5)
+        hK hB hKB (by norm_num) hn hn' hnB hn'B
+      · exact le_rfl
+      · apply mul_error_le_one_div_four_of_error_le_one_div
+        · positivity
+        · exact hK
+        · exact hpairError
+        · exact hKbudget
+      · exact hLength
+      · exact hfar
+    have hM' : typeIICorrelationHigherParameter N 2 n n' ≠ 0 :=
+      typeIICorrelationHigherParameter_ne_zero hN (by norm_num)
+        (Nat.ne_of_gt hn) (Nat.ne_of_gt hn') hne
+    have hF' : 0 < reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K := by
+      unfold reciprocalPhaseScale
+      have hterm : 0 < |typeIICorrelationHigherParameter N 2 n n'| / K ^ 2 :=
+        div_pos (abs_pos.mpr hM') (pow_pos hK 2)
+      positivity
+    have hlenNat :
+        typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+          typeIIProductRestrictedBlockLower a K₀ q k n n' ≤ q :=
+      typeIIProductRestrictedBlock_length_le a b K₀ K₁ q k n n'
+    have hlen :
+        ((typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+          typeIIProductRestrictedBlockLower a K₀ q k n n' : ℕ) : ℝ) ≤ (q : ℝ) := by
+      exact_mod_cast hlenNat
+    have hrangeRaw := reciprocalPhaseFourStepOptimizedRange_cast_le_of_error_bound
+      (typeIICorrelationLinearParameter N n n')
+      (typeIICorrelationHigherParameter N 2 n n') hK hF' herror
+    have hrange :
+        (reciprocalPhaseFourStepOptimizedRange
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K
+          (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+            typeIIProductRestrictedBlockLower a K₀ q k n n') : ℝ) ≤ (q : ℝ) := by
+      calc
+        (reciprocalPhaseFourStepOptimizedRange
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K
+            (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+              typeIIProductRestrictedBlockLower a K₀ q k n n') : ℝ) ≤
+          ((typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+            typeIIProductRestrictedBlockLower a K₀ q k n n' : ℕ) : ℝ) *
+              (1 : ℝ) ^ (1 / 128 : ℝ) := hrangeRaw
+        _ = ((typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+            typeIIProductRestrictedBlockLower a K₀ q k n n' : ℕ) : ℝ) := by
+              norm_num
+        _ ≤ (q : ℝ) := hlen
+    have hmargin : (q : ℝ) +
+        (4 * reciprocalPhaseFourStepOptimizedRange
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K
+          (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+            typeIIProductRestrictedBlockLower a K₀ q k n n') : ℕ) ≤ K := by
+      norm_num only [Nat.cast_mul, Nat.cast_ofNat]
+      have hfour := mul_le_mul_of_nonneg_left hrange (by norm_num : (0 : ℝ) ≤ 4)
+      calc
+        (q : ℝ) + 4 *
+            (reciprocalPhaseFourStepOptimizedRange
+              (typeIICorrelationLinearParameter N n n')
+              (typeIICorrelationHigherParameter N 2 n n') 2 K
+              (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+                typeIIProductRestrictedBlockLower a K₀ q k n n') : ℝ) ≤
+          (q : ℝ) + 4 * (q : ℝ) := add_le_add le_rfl hfour
+        _ = 5 * (q : ℝ) := by ring
+        _ ≤ K := hqK
+    have hgeom := typeIIProductRestrictedBlock_quadratic_fourStep_geometryAt
+      a b K₀ K₁ q k n n'
+      (typeIICorrelationLinearParameter N n n')
+      (typeIICorrelationHigherParameter N 2 n n') K hKouter hLength hmargin
+    exact ⟨hscale, herror, hgeom.1,
+      hgeom.2.1, hgeom.2.1, hgeom.2.2⟩
+  exact norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_equalParameters
+    a b K₀ K₁ q k N orders hq hn hn' hne hN hK hB hKB
+      (by norm_num) hnB hn'B hrFive hrSix hupper hanalytic
+
+/-- Intrinsic low-scale form of the quadratic correlation estimate.  The
+branch hypothesis `F' ≤ K^4` itself supplies `F'/K^5 ≤ 1/K`, so no global
+short-block error majorant or upper bound on the original phase scale is
+needed. -/
+theorem norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale_intrinsic
+    (a b K₀ K₁ q k : ℕ) (N : ℝ) (orders : Finset ℕ)
+    {n n' : ℕ} {K B : ℝ}
+    (hK₀ : 0 < K₀) (hq : 0 < q) (hn : 0 < n) (hn' : 0 < n') (hne : n ≠ n')
+    (hN : N ≠ 0) (hKouter : K = ((K₀ + k * q : ℕ) : ℝ))
+    (hB : 0 < B) (hKB : 1 ≤ K * B)
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
+    (hscale :
+      reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K ≤ K ^ 4)
+    (hfar : 3 ≤ (Nat.dist n' n : ℝ) *
+      reciprocalPhaseScale N N 2 (K * B) / B)
+    (hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K)
+    (hqK : 5 * (q : ℝ) ≤ K) :
+    let lo := typeIIProductRestrictedBlockLower a K₀ q k n n'
+    let hi := typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n'
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+        (shortIntervalBlock K₀ K₁ q k) N N 2 n n'‖ ≤
+      ((370 * orders.card + 173 : ℕ) : ℝ) *
+        (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+          (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log ((hi - lo : ℕ) : ℝ)) * K *
+            ((1 / K) ^ (1 / 1024 : ℝ) +
+              4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n))) := by
+  have hKnat : 0 < K₀ + k * q := by omega
+  have hK : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  apply norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale
+    a b K₀ K₁ q k N orders hK₀ hq hn hn' hne hN hKouter hB hKB
+      hnB hn'B hrFive hrSix
+  · exact div_pow_five_le_one_div_of_le_pow_four hK hscale
+  · exact hscale
+  · exact hfar
+  · exact hKbudget
+  · exact hqK
+
+/-- Quadratic Type II propagation with the source's pairwise analytic split.
+Far pairs with transformed scale at most `K^4` are proved here by four-step
+Weyl differencing; only the complementary high-scale pairs are delegated to
+`hhigh`.  Nearby pairs and the final double-block summation are automatic. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic
+    (a b : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L K B : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hN : N ≠ 0) (hKouter : K = ((K₀ + kouter * qouter : ℕ) : ℝ))
+    (hB : 0 < B) (hKB : 1 ≤ K * B)
+    (hS₁ : (S₁ : ℝ) ≤ B) (hqinnerB : (qinner : ℝ) ≤ B)
+    (hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B))
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
+    (hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K)
+    (hqouterK : 5 * (qouter : ℝ) ≤ K)
+    (hhigh : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let E := typeIIShortIntervalScaleErrorAt N N K B 2 S₀ qinner kinner
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+            E ^ (1 / 1024 : ℝ))) :
+    let E := typeIIShortIntervalScaleErrorAt N N K B 2 S₀ qinner kinner
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * E ^ (1 / 1024 : ℝ)))) := by
+  dsimp only
+  let E := typeIIShortIntervalScaleErrorAt N N K B 2 S₀ qinner kinner
+  let F := reciprocalPhaseScale N N 2 (K * B)
+  let Q : ℝ := ((370 * orders.card + 173 : ℕ) : ℝ) *
+    (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+      (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+        (1 + Real.log (qouter : ℝ)) * K)
+  have hKnat : 0 < K₀ + kouter * qouter := by omega
+  have hK : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hE : 0 ≤ E := by
+    unfold E typeIIShortIntervalScaleErrorAt
+    positivity
+  have hupper : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K / K ^ 5 ≤ E := by
+    intro n hnmem n' hn'mem _
+    simpa only [E] using
+      (reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortIntervalAt
+        N N K B (by norm_num) hK hS₀ hqinner hS₁ hnmem hn'mem)
+  have hfarBound : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+            E ^ (1 / 1024 : ℝ)) := by
+    intro n hnmem n' hn'mem hne hfar
+    have hnData := mem_shortIntervalBlock.mp hnmem
+    have hn'Data := mem_shortIntervalBlock.mp hn'mem
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    have hnUpper : n ≤ S₁ := by omega
+    have hn'Upper : n' ≤ S₁ := by omega
+    have hnB : (n : ℝ) ≤ B := (by exact_mod_cast hnUpper : (n : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    have hn'B : (n' : ℝ) ≤ B :=
+      (by exact_mod_cast hn'Upper : (n' : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    by_cases hscale : reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K ≤ K ^ 4
+    · have hraw :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale
+          a b K₀ K₁ qouter kouter N orders hK₀ hqouter hnpos hn'pos hne
+            hN hKouter hB hKB hnB hn'B hrFive hrSix
+            (hupper n hnmem n' hn'mem hne) hscale hfar hKbudget hqouterK
+      have huniform :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_blockLength
+          a b K₀ K₁ qouter kouter N orders hqouter hK.le hB hE hraw
+      simpa only [E, F, Q] using huniform
+    · have hscaleHigh : K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K :=
+        lt_of_not_ge hscale
+      simpa only [E, F, Q] using
+        hhigh n hnmem n' hn'mem hne hfar hscaleHigh
+  have hqouterK' : (qouter : ℝ) ≤ K := by
+    nlinarith [hqouterK]
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_nearFar_of_farBound
+      a b γ N orders K₀ K₁ S₀ S₁ qouter qinner kouter kinner
+      hK₀ hS₀ hqouter hqinner hL hγ hK hB hqinnerB hF hE hqouterK' hfarBound
+  simpa only [E, F, Q] using hresult
+
+/-- Source-faithful quadratic Type II hybrid with separate analytic errors.
+The low-scale Weyl branch contributes `E^(1/1024)`; the high-scale Vinogradov
+branch contributes the independent additive error `V`. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic_additiveError
+    (a b : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L K B V : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hN : N ≠ 0) (hKouter : K = ((K₀ + kouter * qouter : ℕ) : ℝ))
+    (hB : 0 < B) (hKB : 1 ≤ K * B)
+    (hS₁ : (S₁ : ℝ) ≤ B) (hqinnerB : (qinner : ℝ) ≤ B)
+    (hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B))
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
+    (hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K)
+    (hqouterK : 5 * (qouter : ℝ) ≤ K) (hV : 0 ≤ V)
+    (hhigh : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V)) :
+    let E := typeIIShortIntervalScaleErrorAt N N K B 2 S₀ qinner kinner
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * (E ^ (1 / 1024 : ℝ) + V)))) := by
+  dsimp only
+  let E := typeIIShortIntervalScaleErrorAt N N K B 2 S₀ qinner kinner
+  let F := reciprocalPhaseScale N N 2 (K * B)
+  let δ : ℝ := 1 / 1024
+  let Q : ℝ := ((370 * orders.card + 173 : ℕ) : ℝ) *
+    (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+      (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+        (1 + Real.log (qouter : ℝ)) * K)
+  have hKnat : 0 < K₀ + kouter * qouter := by omega
+  have hK : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hE : 0 ≤ E := by unfold E typeIIShortIntervalScaleErrorAt; positivity
+  have hEpow : 0 ≤ E ^ δ := Real.rpow_nonneg hE _
+  have hZ : 0 ≤ E ^ δ + V := add_nonneg hEpow hV
+  have hQ : 0 ≤ Q := by
+    have hlog : 0 ≤ Real.log (qouter : ℝ) :=
+      Real.log_nonneg (by exact_mod_cast hqouter)
+    unfold Q
+    positivity
+  have hupper : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K / K ^ 5 ≤ E := by
+    intro n hnmem n' hn'mem _
+    simpa only [E] using
+      (reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortIntervalAt
+        N N K B (by norm_num) hK hS₀ hqinner hS₁ hnmem hn'mem)
+  have hfarBound : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+            (E ^ δ + V)) := by
+    intro n hnmem n' hn'mem hne hfar
+    have hnData := mem_shortIntervalBlock.mp hnmem
+    have hn'Data := mem_shortIntervalBlock.mp hn'mem
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    have hnUpper : n ≤ S₁ := by omega
+    have hn'Upper : n' ≤ S₁ := by omega
+    have hnB : (n : ℝ) ≤ B :=
+      (by exact_mod_cast hnUpper : (n : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    have hn'B : (n' : ℝ) ≤ B :=
+      (by exact_mod_cast hn'Upper : (n' : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    by_cases hscale : reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K ≤ K ^ 4
+    · have hraw :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale
+          a b K₀ K₁ qouter kouter N orders hK₀ hqouter hnpos hn'pos hne
+            hN hKouter hB hKB hnB hn'B hrFive hrSix
+            (hupper n hnmem n' hn'mem hne) hscale hfar hKbudget hqouterK
+      have hlow :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_blockLength
+          a b K₀ K₁ qouter kouter N orders hqouter hK.le hB hE hraw
+      have hadd : 4 * typeIIDecayKernel B F δ (Nat.dist n' n) + E ^ δ ≤
+          4 * typeIIDecayKernel B F δ (Nat.dist n' n) + (E ^ δ + V) := by
+        linarith
+      have hlow' : ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) + E ^ δ) := by
+        simpa only [E, F, Q, δ] using hlow
+      exact hlow'.trans
+        (mul_le_mul_of_nonneg_left hadd hQ)
+    · have hscaleHigh : K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K := lt_of_not_ge hscale
+      have hhighPair := hhigh n hnmem n' hn'mem hne hfar hscaleHigh
+      have hadd : 4 * typeIIDecayKernel B F δ (Nat.dist n' n) + V ≤
+          4 * typeIIDecayKernel B F δ (Nat.dist n' n) + (E ^ δ + V) := by
+        linarith
+      have hhighPair' : ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) + V) := by
+        simpa only [F, Q, δ] using hhighPair
+      exact hhighPair'.trans
+        (mul_le_mul_of_nonneg_left hadd hQ)
+  have hqouterK' : (qouter : ℝ) ≤ K := by nlinarith [hqouterK]
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_nearFar_of_farBound_additiveError
+      a b γ N orders K₀ K₁ S₀ S₁ qouter qinner kouter kinner
+      hK₀ hS₀ hqouter hqinner hL hγ hK hB hqinnerB hF hZ hqouterK' hfarBound
+  simpa only [E, F, Q, δ] using hresult
+
+/-- Quadratic Type II hybrid with an intrinsic low-scale error.  Low pairs use
+`(1/K)^(1/1024)`, obtained directly from `F' ≤ K^4`; high pairs use the
+independent Vinogradov error `V`.  Consequently this estimate has no global
+short-block scale error and needs no upper bound on the original phase scale.
+-/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic_intrinsicError
+    (a b : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L K B V : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hN : N ≠ 0) (hKouter : K = ((K₀ + kouter * qouter : ℕ) : ℝ))
+    (hB : 0 < B) (hKB : 1 ≤ K * B)
+    (hS₁ : (S₁ : ℝ) ≤ B) (hqinnerB : (qinner : ℝ) ≤ B)
+    (hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B))
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
+    (hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K)
+    (hqouterK : 5 * (qouter : ℝ) ≤ K) (hV : 0 ≤ V)
+    (hhigh : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V)) :
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * ((1 / K) ^ (1 / 1024 : ℝ) + V)))) := by
+  dsimp only
+  let F := reciprocalPhaseScale N N 2 (K * B)
+  let δ : ℝ := 1 / 1024
+  let Q : ℝ := ((370 * orders.card + 173 : ℕ) : ℝ) *
+    (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+      (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+        (1 + Real.log (qouter : ℝ)) * K)
+  have hKnat : 0 < K₀ + kouter * qouter := by omega
+  have hK : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hInvK : 0 ≤ 1 / K := by positivity
+  have hInvKpow : 0 ≤ (1 / K) ^ δ := Real.rpow_nonneg hInvK _
+  have hZ : 0 ≤ (1 / K) ^ δ + V := add_nonneg hInvKpow hV
+  have hQ : 0 ≤ Q := by
+    have hlog : 0 ≤ Real.log (qouter : ℝ) :=
+      Real.log_nonneg (by exact_mod_cast hqouter)
+    unfold Q
+    positivity
+  have hfarBound : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+            ((1 / K) ^ δ + V)) := by
+    intro n hnmem n' hn'mem hne hfar
+    have hnData := mem_shortIntervalBlock.mp hnmem
+    have hn'Data := mem_shortIntervalBlock.mp hn'mem
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    have hnUpper : n ≤ S₁ := by omega
+    have hn'Upper : n' ≤ S₁ := by omega
+    have hnB : (n : ℝ) ≤ B :=
+      (by exact_mod_cast hnUpper : (n : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    have hn'B : (n' : ℝ) ≤ B :=
+      (by exact_mod_cast hn'Upper : (n' : ℝ) ≤ (S₁ : ℝ)).trans hS₁
+    by_cases hscale : reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K ≤ K ^ 4
+    · have hraw :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_quadratic_lowScale_intrinsic
+          a b K₀ K₁ qouter kouter N orders hK₀ hqouter hnpos hn'pos hne
+            hN hKouter hB hKB hnB hn'B hrFive hrSix hscale hfar
+            hKbudget hqouterK
+      have hlow :=
+        norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_blockLength
+          a b K₀ K₁ qouter kouter N orders hqouter hK.le hB hInvK hraw
+      have hadd : 4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+          (1 / K) ^ δ ≤
+          4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+            ((1 / K) ^ δ + V) := by linarith
+      have hlow' : ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+            (1 / K) ^ δ) := by
+        simpa only [F, Q, δ] using hlow
+      exact hlow'.trans (mul_le_mul_of_nonneg_left hadd hQ)
+    · have hscaleHigh : K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K := lt_of_not_ge hscale
+      have hhighPair := hhigh n hnmem n' hn'mem hne hfar hscaleHigh
+      have hadd : 4 * typeIIDecayKernel B F δ (Nat.dist n' n) + V ≤
+          4 * typeIIDecayKernel B F δ (Nat.dist n' n) +
+            ((1 / K) ^ δ + V) := by linarith
+      have hhighPair' : ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock K₀ K₁ qouter kouter) N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F δ (Nat.dist n' n) + V) := by
+        simpa only [F, Q, δ] using hhighPair
+      exact hhighPair'.trans (mul_le_mul_of_nonneg_left hadd hQ)
+  have hqouterK' : (qouter : ℝ) ≤ K := by nlinarith [hqouterK]
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_nearFar_of_farBound_additiveError
+      a b γ N orders K₀ K₁ S₀ S₁ qouter qinner kouter kinner
+      hK₀ hS₀ hqouter hqinner hL hγ hK hB hqinnerB hF hZ hqouterK' hfarBound
+  simpa only [F, Q, δ] using hresult
+
 /-- Quadratic Type II estimate on arbitrary positive short blocks.  This is
 the direct analytic interface for the dyadic blocks appearing in the canonical
 Vaughan double-family decomposition. -/
@@ -9120,27 +9875,683 @@ theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_
       hqouterK' (by norm_num) hrFive hrSix hupper hanalyticFar
   simpa only [E] using hresult
 
+/-- Canonical Vaughan Type II blocks below the common subdivision budget have
+inner length at most one.  Their off-diagonal contribution is empty, so the
+squared sum is bounded by the diagonal term alone, without any phase-scale or
+Weyl hypothesis. -/
+theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_singleton
+    (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (sk tl : ℕ × ℕ) {L : ℝ}
+    (hsmall : 2 ^ tl.1 < vaughanShortIntervalBudget Bcap)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) :
+    let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+      (vaughanShortIntervalBudget Bcap)
+    ∑ m ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) sk,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (dyadicShortIntervalIndexedBlock (vaughanShortIntervalBudget Bcap) tl)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * L ^ 2 := by
+  dsimp only
+  let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+    (vaughanShortIntervalBudget Bcap)
+  let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+    (vaughanShortIntervalBudget Bcap)
+  have hbudget : 0 < vaughanShortIntervalBudget Bcap :=
+    vaughanShortIntervalBudget_pos Bcap
+  have hDouter : 0 < 2 ^ sk.1 := pow_pos (by omega) sk.1
+  have hDinner : 0 < 2 ^ tl.1 := pow_pos (by omega) tl.1
+  have hqouter : 0 < qouter := by
+    unfold qouter
+    exact dyadicShortIntervalLength_pos hDouter hbudget
+  have hqinner : 0 < qinner := by
+    unfold qinner
+    exact dyadicShortIntervalLength_pos hDinner hbudget
+  have hqinnerOne : qinner ≤ 1 := by
+    have hraw := dyadicShortIntervalLength_le_div_add_one
+      (2 ^ tl.1) hbudget
+    have hdiv : 2 ^ tl.1 / vaughanShortIntervalBudget Bcap = 0 :=
+      Nat.div_eq_of_lt hsmall
+    simpa only [qinner, hdiv, zero_add] using hraw
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_singleton
+      a b γ N N 2 (2 ^ sk.1) (2 * 2 ^ sk.1)
+      (2 ^ tl.1) (2 * 2 ^ tl.1) qouter qinner sk.2 tl.2
+      hDouter hDinner hqouter hqinner hqinnerOne hL hγ
+  simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner] using hresult
+
+/-- Canonical Vaughan Type II block estimate with the source's pairwise
+Weyl/Vinogradov split.  The decomposition discharges every low-scale Weyl and
+block-geometry condition; the sole analytic input `hhigh` concerns far pairs
+whose transformed scale exceeds the four-step Weyl range. -/
+theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_weylVinogradov_quadratic
+    (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (sk tl : ℕ × ℕ) {L d : ℝ}
+    (hBcap : 0 < Bcap) (hlog : 2 ≤ Real.log Bcap)
+    (hDouter : (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ sk.1 : ℕ))
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) (hN : N ≠ 0)
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders) (hd : 0 ≤ d)
+    (hFhigh : (Real.log Bcap) ^ d ≤ reciprocalPhaseScale N N 2
+      (((dyadicShortIntervalLeftEndpoint (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
+        ((2 * 2 ^ tl.1 : ℕ) : ℝ)))
+    (hhigh :
+      let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+        (vaughanShortIntervalBudget Bcap)
+      let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+        (vaughanShortIntervalBudget Bcap)
+      let K : ℝ := (dyadicShortIntervalLeftEndpoint
+        (vaughanShortIntervalBudget Bcap) sk : ℕ)
+      let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+      ∀ n ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) tl,
+        ∀ n' ∈ dyadicShortIntervalIndexedBlock
+            (vaughanShortIntervalBudget Bcap) tl, n ≠ n' →
+          3 ≤ (Nat.dist n' n : ℝ) *
+            reciprocalPhaseScale N N 2 (K * B) / B →
+          K ^ 4 < reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K →
+          let F := reciprocalPhaseScale N N 2 (K * B)
+          let E := typeIIShortIntervalScaleErrorAt N N K B 2
+            (2 ^ tl.1) qinner tl.2
+          let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+            (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+              (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+                (1 + Real.log (qouter : ℝ)) * K)
+          ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+              (dyadicShortIntervalIndexedBlock
+                (vaughanShortIntervalBudget Bcap) sk)
+              N N 2 n n'‖ ≤
+            Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+              E ^ (1 / 1024 : ℝ))) :
+    let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+      (vaughanShortIntervalBudget Bcap)
+    let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+      (vaughanShortIntervalBudget Bcap)
+    let K : ℝ := (dyadicShortIntervalLeftEndpoint
+      (vaughanShortIntervalBudget Bcap) sk : ℕ)
+    let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+    let E := typeIIShortIntervalScaleErrorAt N N K B 2 (2 ^ tl.1) qinner tl.2
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) sk,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (dyadicShortIntervalIndexedBlock (vaughanShortIntervalBudget Bcap) tl)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * E ^ (1 / 1024 : ℝ)))) := by
+  dsimp only
+  let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+    (vaughanShortIntervalBudget Bcap)
+  let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+    (vaughanShortIntervalBudget Bcap)
+  let K : ℝ := (dyadicShortIntervalLeftEndpoint
+    (vaughanShortIntervalBudget Bcap) sk : ℕ)
+  let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+  have hbudget : 0 < vaughanShortIntervalBudget Bcap :=
+    vaughanShortIntervalBudget_pos Bcap
+  have hbudgetLarge : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤
+      (vaughanShortIntervalBudget Bcap : ℝ) :=
+    four_mul_quadraticWeylCoefficient_le_vaughanShortIntervalBudget hBcap hlog
+  have hDouterPos : 0 < 2 ^ sk.1 := pow_pos (by omega) sk.1
+  have hDinnerPos : 0 < 2 ^ tl.1 := pow_pos (by omega) tl.1
+  have hqouter : 0 < qouter := by
+    unfold qouter
+    exact dyadicShortIntervalLength_pos hDouterPos hbudget
+  have hqinner : 0 < qinner := by
+    unfold qinner
+    exact dyadicShortIntervalLength_pos hDinnerPos hbudget
+  have hKouter : K = (((2 ^ sk.1) + sk.2 * qouter : ℕ) : ℝ) := by rfl
+  have hlogOne : (1 : ℝ) ≤ Real.log Bcap := by linarith
+  have hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B) := by
+    have hpowOne : (1 : ℝ) ≤ (Real.log Bcap) ^ d :=
+      Real.one_le_rpow hlogOne hd
+    exact hpowOne.trans (by simpa only [K, B] using hFhigh)
+  have hB : 0 < B := by unfold B; positivity
+  have hKnat : 0 < (2 ^ sk.1) + sk.2 * qouter := by omega
+  have hKpos : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hKone : (1 : ℝ) ≤ K := by rw [hKouter]; exact_mod_cast hKnat
+  have hKB : 1 ≤ K * B := by
+    have hpowOne : 1 ≤ 2 ^ tl.1 := one_le_pow₀ (by omega)
+    have hBoneNat : 1 ≤ 2 * 2 ^ tl.1 := by omega
+    have hBone : (1 : ℝ) ≤ B := by unfold B; exact_mod_cast hBoneNat
+    simpa only [one_mul] using
+      (mul_le_mul hKone hBone (by norm_num : (0 : ℝ) ≤ 1)
+        (zero_le_one.trans hKone))
+  have hS₁ : (((2 * 2 ^ tl.1 : ℕ) : ℝ)) ≤ B := by rfl
+  have hqinnerNat : qinner ≤ 2 * 2 ^ tl.1 := by
+    have hraw := dyadicShortIntervalLength_le_div_add_one
+      (2 ^ tl.1) hbudget
+    unfold qinner
+    have hdiv : 2 ^ tl.1 / vaughanShortIntervalBudget Bcap ≤ 2 ^ tl.1 :=
+      Nat.div_le_self _ _
+    omega
+  have hqinnerB : (qinner : ℝ) ≤ B := by
+    unfold B
+    exact_mod_cast hqinnerNat
+  have hDouterK : ((2 ^ sk.1 : ℕ) : ℝ) ≤ K := by
+    rw [hKouter]
+    have hnat : 2 ^ sk.1 ≤ 2 ^ sk.1 + sk.2 * qouter :=
+      Nat.le_add_right _ _
+    exact_mod_cast hnat
+  have hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K :=
+    hbudgetLarge.trans (hDouter.trans hDouterK)
+  have hfive := five_mul_vaughanShortIntervalLength_cast_le
+    hBcap hlog hDouter
+  have hqouterK : 5 * (qouter : ℝ) ≤ K := by
+    have hfiveQ : 5 * (qouter : ℝ) ≤ ((2 ^ sk.1 : ℕ) : ℝ) := by
+      simpa only [qouter] using hfive
+    exact hfiveQ.trans hDouterK
+  have hhigh' : ∀ n ∈ shortIntervalBlock
+        (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2,
+      ∀ n' ∈ shortIntervalBlock
+          (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let E := typeIIShortIntervalScaleErrorAt N N K B 2
+          (2 ^ tl.1) qinner tl.2
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock (2 ^ sk.1) (2 * 2 ^ sk.1) qouter sk.2)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+            E ^ (1 / 1024 : ℝ)) := by
+    simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hhigh
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic
+      a b γ N orders (2 ^ sk.1) (2 * 2 ^ sk.1) (2 ^ tl.1) (2 * 2 ^ tl.1)
+      qouter qinner sk.2 tl.2 hDouterPos hDinnerPos hqouter hqinner hL hγ hN
+      hKouter hB hKB hS₁ hqinnerB (by simpa only [K, B] using hF)
+      hrFive hrSix hKbudget hqouterK hhigh'
+  simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hresult
+
+/-- Source-faithful canonical Vaughan Type II block estimate with separate
+analytic errors.  The low-scale Weyl branch contributes `E^(1/1024)`, while
+the high-scale callback contributes the independent additive error `V`.  All
+block geometry and low-scale Weyl conditions are discharged internally. -/
+theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_weylVinogradov_quadratic_additiveError
+    (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (sk tl : ℕ × ℕ) {L d V : ℝ}
+    (hBcap : 0 < Bcap) (hlog : 2 ≤ Real.log Bcap)
+    (hDouter : (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ sk.1 : ℕ))
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) (hN : N ≠ 0)
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders) (hd : 0 ≤ d)
+    (hFhigh : (Real.log Bcap) ^ d ≤ reciprocalPhaseScale N N 2
+      (((dyadicShortIntervalLeftEndpoint (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
+        ((2 * 2 ^ tl.1 : ℕ) : ℝ)))
+    (hV : 0 ≤ V)
+    (hhigh :
+      let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+        (vaughanShortIntervalBudget Bcap)
+      let K : ℝ := (dyadicShortIntervalLeftEndpoint
+        (vaughanShortIntervalBudget Bcap) sk : ℕ)
+      let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+      ∀ n ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) tl,
+        ∀ n' ∈ dyadicShortIntervalIndexedBlock
+            (vaughanShortIntervalBudget Bcap) tl, n ≠ n' →
+          3 ≤ (Nat.dist n' n : ℝ) *
+            reciprocalPhaseScale N N 2 (K * B) / B →
+          K ^ 4 < reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K →
+          let F := reciprocalPhaseScale N N 2 (K * B)
+          let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+            (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+              (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+                (1 + Real.log (qouter : ℝ)) * K)
+          ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+              (dyadicShortIntervalIndexedBlock
+                (vaughanShortIntervalBudget Bcap) sk)
+              N N 2 n n'‖ ≤
+            Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V)) :
+    let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+      (vaughanShortIntervalBudget Bcap)
+    let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+      (vaughanShortIntervalBudget Bcap)
+    let K : ℝ := (dyadicShortIntervalLeftEndpoint
+      (vaughanShortIntervalBudget Bcap) sk : ℕ)
+    let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+    let E := typeIIShortIntervalScaleErrorAt N N K B 2 (2 ^ tl.1) qinner tl.2
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) sk,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (dyadicShortIntervalIndexedBlock (vaughanShortIntervalBudget Bcap) tl)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * (E ^ (1 / 1024 : ℝ) + V)))) := by
+  dsimp only
+  let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+    (vaughanShortIntervalBudget Bcap)
+  let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+    (vaughanShortIntervalBudget Bcap)
+  let K : ℝ := (dyadicShortIntervalLeftEndpoint
+    (vaughanShortIntervalBudget Bcap) sk : ℕ)
+  let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+  have hbudget : 0 < vaughanShortIntervalBudget Bcap :=
+    vaughanShortIntervalBudget_pos Bcap
+  have hbudgetLarge : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤
+      (vaughanShortIntervalBudget Bcap : ℝ) :=
+    four_mul_quadraticWeylCoefficient_le_vaughanShortIntervalBudget hBcap hlog
+  have hDouterPos : 0 < 2 ^ sk.1 := pow_pos (by omega) sk.1
+  have hDinnerPos : 0 < 2 ^ tl.1 := pow_pos (by omega) tl.1
+  have hqouter : 0 < qouter := by
+    unfold qouter
+    exact dyadicShortIntervalLength_pos hDouterPos hbudget
+  have hqinner : 0 < qinner := by
+    unfold qinner
+    exact dyadicShortIntervalLength_pos hDinnerPos hbudget
+  have hKouter : K = (((2 ^ sk.1) + sk.2 * qouter : ℕ) : ℝ) := by rfl
+  have hlogOne : (1 : ℝ) ≤ Real.log Bcap := by linarith
+  have hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B) := by
+    have hpowOne : (1 : ℝ) ≤ (Real.log Bcap) ^ d :=
+      Real.one_le_rpow hlogOne hd
+    exact hpowOne.trans (by simpa only [K, B] using hFhigh)
+  have hB : 0 < B := by unfold B; positivity
+  have hKnat : 0 < (2 ^ sk.1) + sk.2 * qouter := by omega
+  have hKpos : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
+  have hKone : (1 : ℝ) ≤ K := by rw [hKouter]; exact_mod_cast hKnat
+  have hKB : 1 ≤ K * B := by
+    have hpowOne : 1 ≤ 2 ^ tl.1 := one_le_pow₀ (by omega)
+    have hBoneNat : 1 ≤ 2 * 2 ^ tl.1 := by omega
+    have hBone : (1 : ℝ) ≤ B := by unfold B; exact_mod_cast hBoneNat
+    simpa only [one_mul] using
+      (mul_le_mul hKone hBone (by norm_num : (0 : ℝ) ≤ 1)
+        (zero_le_one.trans hKone))
+  have hS₁ : (((2 * 2 ^ tl.1 : ℕ) : ℝ)) ≤ B := by rfl
+  have hqinnerNat : qinner ≤ 2 * 2 ^ tl.1 := by
+    have hraw := dyadicShortIntervalLength_le_div_add_one
+      (2 ^ tl.1) hbudget
+    unfold qinner
+    have hdiv : 2 ^ tl.1 / vaughanShortIntervalBudget Bcap ≤ 2 ^ tl.1 :=
+      Nat.div_le_self _ _
+    omega
+  have hqinnerB : (qinner : ℝ) ≤ B := by
+    unfold B
+    exact_mod_cast hqinnerNat
+  have hDouterK : ((2 ^ sk.1 : ℕ) : ℝ) ≤ K := by
+    rw [hKouter]
+    have hnat : 2 ^ sk.1 ≤ 2 ^ sk.1 + sk.2 * qouter :=
+      Nat.le_add_right _ _
+    exact_mod_cast hnat
+  have hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K :=
+    hbudgetLarge.trans (hDouter.trans hDouterK)
+  have hfive := five_mul_vaughanShortIntervalLength_cast_le
+    hBcap hlog hDouter
+  have hqouterK : 5 * (qouter : ℝ) ≤ K := by
+    have hfiveQ : 5 * (qouter : ℝ) ≤ ((2 ^ sk.1 : ℕ) : ℝ) := by
+      simpa only [qouter] using hfive
+    exact hfiveQ.trans hDouterK
+  have hhigh' : ∀ n ∈ shortIntervalBlock
+        (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2,
+      ∀ n' ∈ shortIntervalBlock
+          (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock (2 ^ sk.1) (2 * 2 ^ sk.1) qouter sk.2)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V) := by
+    simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hhigh
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic_additiveError
+      a b γ N orders (2 ^ sk.1) (2 * 2 ^ sk.1) (2 ^ tl.1) (2 * 2 ^ tl.1)
+      qouter qinner sk.2 tl.2 hDouterPos hDinnerPos hqouter hqinner hL hγ hN
+      hKouter hB hKB hS₁ hqinnerB (by simpa only [K, B] using hF)
+      hrFive hrSix hKbudget hqouterK hV hhigh'
+  simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hresult
+
+/-- Canonical Vaughan Type II hybrid with intrinsic low-scale error.  The
+low-scale contribution is `(1/K)^(1/1024)` and therefore no source upper bound
+is needed to control a retained short-block error. -/
+theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_weylVinogradov_quadratic_intrinsicError
+    (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+    (sk tl : ℕ × ℕ) {L d V : ℝ}
+    (hBcap : 0 < Bcap) (hlog : 2 ≤ Real.log Bcap)
+    (hDouter : (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ sk.1 : ℕ))
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) (hN : N ≠ 0)
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders) (hd : 0 ≤ d)
+    (hFhigh : (Real.log Bcap) ^ d ≤ reciprocalPhaseScale N N 2
+      (((dyadicShortIntervalLeftEndpoint (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
+        ((2 * 2 ^ tl.1 : ℕ) : ℝ)))
+    (hV : 0 ≤ V)
+    (hhigh :
+      let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+        (vaughanShortIntervalBudget Bcap)
+      let K : ℝ := (dyadicShortIntervalLeftEndpoint
+        (vaughanShortIntervalBudget Bcap) sk : ℕ)
+      let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+      ∀ n ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) tl,
+        ∀ n' ∈ dyadicShortIntervalIndexedBlock
+            (vaughanShortIntervalBudget Bcap) tl, n ≠ n' →
+          3 ≤ (Nat.dist n' n : ℝ) *
+            reciprocalPhaseScale N N 2 (K * B) / B →
+          K ^ 4 < reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K →
+          let F := reciprocalPhaseScale N N 2 (K * B)
+          let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+            (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+              (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+                (1 + Real.log (qouter : ℝ)) * K)
+          ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+              (dyadicShortIntervalIndexedBlock
+                (vaughanShortIntervalBudget Bcap) sk)
+              N N 2 n n'‖ ≤
+            Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V)) :
+    let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+      (vaughanShortIntervalBudget Bcap)
+    let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+      (vaughanShortIntervalBudget Bcap)
+    let K : ℝ := (dyadicShortIntervalLeftEndpoint
+      (vaughanShortIntervalBudget Bcap) sk : ℕ)
+    let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+    let F := reciprocalPhaseScale N N 2 (K * B)
+    let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+      (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+        (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+          (1 + Real.log (qouter : ℝ)) * K)
+    ∑ m ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) sk,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (dyadicShortIntervalIndexedBlock (vaughanShortIntervalBudget Bcap) tl)
+          γ N N 2 m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (4 *
+              (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                (1 - (1 / 1024 : ℝ))) * B * F ^ (-(1 / 1024 : ℝ)))) +
+            (qinner : ℝ) * ((1 / K) ^ (1 / 1024 : ℝ) + V)))) := by
+  dsimp only
+  let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+    (vaughanShortIntervalBudget Bcap)
+  let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+    (vaughanShortIntervalBudget Bcap)
+  let K : ℝ := (dyadicShortIntervalLeftEndpoint
+    (vaughanShortIntervalBudget Bcap) sk : ℕ)
+  let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+  have hbudget : 0 < vaughanShortIntervalBudget Bcap :=
+    vaughanShortIntervalBudget_pos Bcap
+  have hbudgetLarge : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤
+      (vaughanShortIntervalBudget Bcap : ℝ) :=
+    four_mul_quadraticWeylCoefficient_le_vaughanShortIntervalBudget hBcap hlog
+  have hDouterPos : 0 < 2 ^ sk.1 := pow_pos (by omega) sk.1
+  have hDinnerPos : 0 < 2 ^ tl.1 := pow_pos (by omega) tl.1
+  have hqouter : 0 < qouter := by
+    unfold qouter
+    exact dyadicShortIntervalLength_pos hDouterPos hbudget
+  have hqinner : 0 < qinner := by
+    unfold qinner
+    exact dyadicShortIntervalLength_pos hDinnerPos hbudget
+  have hKouter : K = (((2 ^ sk.1) + sk.2 * qouter : ℕ) : ℝ) := by rfl
+  have hlogOne : (1 : ℝ) ≤ Real.log Bcap := by linarith
+  have hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B) := by
+    have hpowOne : (1 : ℝ) ≤ (Real.log Bcap) ^ d :=
+      Real.one_le_rpow hlogOne hd
+    exact hpowOne.trans (by simpa only [K, B] using hFhigh)
+  have hB : 0 < B := by unfold B; positivity
+  have hKnat : 0 < (2 ^ sk.1) + sk.2 * qouter := by omega
+  have hKone : (1 : ℝ) ≤ K := by rw [hKouter]; exact_mod_cast hKnat
+  have hKB : 1 ≤ K * B := by
+    have hpowOne : 1 ≤ 2 ^ tl.1 := one_le_pow₀ (by omega)
+    have hBoneNat : 1 ≤ 2 * 2 ^ tl.1 := by omega
+    have hBone : (1 : ℝ) ≤ B := by unfold B; exact_mod_cast hBoneNat
+    simpa only [one_mul] using
+      (mul_le_mul hKone hBone (by norm_num : (0 : ℝ) ≤ 1)
+        (zero_le_one.trans hKone))
+  have hS₁ : (((2 * 2 ^ tl.1 : ℕ) : ℝ)) ≤ B := by rfl
+  have hqinnerNat : qinner ≤ 2 * 2 ^ tl.1 := by
+    have hraw := dyadicShortIntervalLength_le_div_add_one
+      (2 ^ tl.1) hbudget
+    unfold qinner
+    have hdiv : 2 ^ tl.1 / vaughanShortIntervalBudget Bcap ≤ 2 ^ tl.1 :=
+      Nat.div_le_self _ _
+    omega
+  have hqinnerB : (qinner : ℝ) ≤ B := by
+    unfold B
+    exact_mod_cast hqinnerNat
+  have hDouterK : ((2 ^ sk.1 : ℕ) : ℝ) ≤ K := by
+    rw [hKouter]
+    have hnat : 2 ^ sk.1 ≤ 2 ^ sk.1 + sk.2 * qouter := Nat.le_add_right _ _
+    exact_mod_cast hnat
+  have hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K :=
+    hbudgetLarge.trans (hDouter.trans hDouterK)
+  have hfive := five_mul_vaughanShortIntervalLength_cast_le
+    hBcap hlog hDouter
+  have hqouterK : 5 * (qouter : ℝ) ≤ K := by
+    have hfiveQ : 5 * (qouter : ℝ) ≤ ((2 ^ sk.1 : ℕ) : ℝ) := by
+      simpa only [qouter] using hfive
+    exact hfiveQ.trans hDouterK
+  have hhigh' : ∀ n ∈ shortIntervalBlock
+        (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2,
+      ∀ n' ∈ shortIntervalBlock
+          (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2, n ≠ n' →
+        3 ≤ (Nat.dist n' n : ℝ) *
+          reciprocalPhaseScale N N 2 (K * B) / B →
+        K ^ 4 < reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N 2 n n') 2 K →
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+            (shortIntervalBlock (2 ^ sk.1) (2 * 2 ^ sk.1) qouter sk.2)
+            N N 2 n n'‖ ≤
+          Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) + V) := by
+    simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hhigh
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_weylVinogradov_quadratic_intrinsicError
+      a b γ N orders (2 ^ sk.1) (2 * 2 ^ sk.1) (2 ^ tl.1) (2 * 2 ^ tl.1)
+      qouter qinner sk.2 tl.2 hDouterPos hDinnerPos hqouter hqinner hL hγ hN
+      hKouter hB hKB hS₁ hqinnerB (by simpa only [K, B] using hF)
+      hrFive hrSix hKbudget hqouterK hV hhigh'
+  simpa only [dyadicShortIntervalIndexedBlock, qouter, qinner, K, B] using hresult
+
+/-- Canonical Vaughan Type II hybrid with the high branch discharged by the
+source Vinogradov proposition.  The abstract `hhigh` callback has disappeared:
+the low branch is the intrinsic four-step Weyl estimate, while the high branch
+uses the uniform callback from `Tao2026.Vinogradov` with error
+`3(log P)^(-T)`. -/
+theorem eventually_sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_sourceVinogradov
+    (hVinogradov : VinogradovExponentialSumEstimate)
+    {A A₀ c ε T : ℝ} (hA : 1 / 4 ≤ A) (hA₀ : 0 < A₀) (hc : 0 < c)
+    (hε : 0 < ε) (ha : 0 ≤ 3 / 2 - ε) (hAT : T + 2 ≤ 3 * A) :
+    ∀ᶠ P : ℝ in Filter.atTop,
+      ∀ (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
+        (sk tl : ℕ × ℕ) (L d : ℝ),
+        0 < Bcap → 2 ≤ Real.log Bcap →
+        (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ sk.1 : ℕ) →
+        0 ≤ L → (∀ n, ‖γ n‖ ≤ L) → N ≠ 0 →
+        5 ∈ orders → 6 ∈ orders → 0 ≤ d →
+        (Real.log Bcap) ^ d ≤ reciprocalPhaseScale N N 2
+          (((dyadicShortIntervalLeftEndpoint
+              (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
+            ((2 * 2 ^ tl.1 : ℕ) : ℝ)) →
+        |N| ≤ A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+        c * Real.log P ≤ Real.log
+          ((dyadicShortIntervalLeftEndpoint
+            (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) →
+        let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+          (vaughanShortIntervalBudget Bcap)
+        let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+          (vaughanShortIntervalBudget Bcap)
+        let K : ℝ := (dyadicShortIntervalLeftEndpoint
+          (vaughanShortIntervalBudget Bcap) sk : ℕ)
+        let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+        let F := reciprocalPhaseScale N N 2 (K * B)
+        let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+          (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+            (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+              (1 + Real.log (qouter : ℝ)) * K)
+        ∑ m ∈ dyadicShortIntervalIndexedBlock
+              (vaughanShortIntervalBudget Bcap) sk,
+            ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+              (dyadicShortIntervalIndexedBlock
+                (vaughanShortIntervalBudget Bcap) tl)
+              γ N N 2 m‖ ^ 2 ≤
+          (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+            L ^ 2 * ((qinner : ℝ) *
+              (Q * (4 *
+                  (2 * ((2 ^ (1 - (1 / 1024 : ℝ)) /
+                    (1 - (1 / 1024 : ℝ))) * B *
+                      F ^ (-(1 / 1024 : ℝ)))) +
+                (qinner : ℝ) * ((1 / K) ^ (1 / 1024 : ℝ) +
+                  3 * (Real.log P) ^ (-T))))) := by
+  have hcallback :=
+    eventually_norm_typeIIProductRestrictedCorrelationSum_le_sourceVinogradov_vaughanInnerBlockCallback
+      hVinogradov hA hA₀ hc hε ha hAT
+  filter_upwards [hcallback,
+    Real.tendsto_log_atTop.eventually (Filter.eventually_ge_atTop (1 : ℝ))]
+      with P hcallbackP hlogP
+  intro a b Bcap γ N orders sk tl L d hBcap hlog hDouter hL hγ hN
+    hrFive hrSix hd hFhigh hNupper hKlower
+  let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+    (vaughanShortIntervalBudget Bcap)
+  let qinner := dyadicShortIntervalLength (2 ^ tl.1)
+    (vaughanShortIntervalBudget Bcap)
+  let K : ℝ := (dyadicShortIntervalLeftEndpoint
+    (vaughanShortIntervalBudget Bcap) sk : ℕ)
+  let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+  let F := reciprocalPhaseScale N N 2 (K * B)
+  have hbudget : 0 < vaughanShortIntervalBudget Bcap :=
+    vaughanShortIntervalBudget_pos Bcap
+  have hbudgetLarge : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤
+      (vaughanShortIntervalBudget Bcap : ℝ) :=
+    four_mul_quadraticWeylCoefficient_le_vaughanShortIntervalBudget hBcap hlog
+  have hDouterPos : 0 < 2 ^ sk.1 := pow_pos (by omega) sk.1
+  have hDinnerPos : 0 < 2 ^ tl.1 := pow_pos (by omega) tl.1
+  have hqouter : 0 < qouter := by
+    unfold qouter
+    exact dyadicShortIntervalLength_pos hDouterPos hbudget
+  have hqinner : 0 < qinner := by
+    unfold qinner
+    exact dyadicShortIntervalLength_pos hDinnerPos hbudget
+  have hKouter : K = (((2 ^ sk.1) + sk.2 * qouter : ℕ) : ℝ) := by rfl
+  have hDouterK : ((2 ^ sk.1 : ℕ) : ℝ) ≤ K := by
+    rw [hKouter]
+    exact_mod_cast Nat.le_add_right (2 ^ sk.1) (sk.2 * qouter)
+  have hKbudget : 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ))) ≤ K :=
+    hbudgetLarge.trans (hDouter.trans hDouterK)
+  have hK : (2 : ℝ) ≤ K :=
+    (by norm_num : (2 : ℝ) ≤ 4 * (240 * ((((5 + 2) ^ 5 : ℕ) : ℝ)))).trans
+      hKbudget
+  have hfive := five_mul_vaughanShortIntervalLength_cast_le
+    hBcap hlog hDouter
+  have hqouterK : (qouter : ℝ) ≤ K := by
+    have hfiveQ : 5 * (qouter : ℝ) ≤ ((2 ^ sk.1 : ℕ) : ℝ) := by
+      simpa only [qouter] using hfive
+    linarith
+  have hB : 0 < B := by unfold B; positivity
+  have hlogOne : (1 : ℝ) ≤ Real.log Bcap := by linarith
+  have hFone : 1 ≤ F := by
+    have hpowOne : (1 : ℝ) ≤ (Real.log Bcap) ^ d :=
+      Real.one_le_rpow hlogOne hd
+    exact hpowOne.trans (by simpa only [F, K, B] using hFhigh)
+  have hV : 0 ≤ 3 * (Real.log P) ^ (-T) := by positivity
+  have hhigh :
+      let qouter := dyadicShortIntervalLength (2 ^ sk.1)
+        (vaughanShortIntervalBudget Bcap)
+      let K : ℝ := (dyadicShortIntervalLeftEndpoint
+        (vaughanShortIntervalBudget Bcap) sk : ℕ)
+      let B : ℝ := (2 * 2 ^ tl.1 : ℕ)
+      ∀ n ∈ dyadicShortIntervalIndexedBlock
+          (vaughanShortIntervalBudget Bcap) tl,
+        ∀ n' ∈ dyadicShortIntervalIndexedBlock
+            (vaughanShortIntervalBudget Bcap) tl, n ≠ n' →
+          3 ≤ (Nat.dist n' n : ℝ) *
+            reciprocalPhaseScale N N 2 (K * B) / B →
+          K ^ 4 < reciprocalPhaseScale
+            (typeIICorrelationLinearParameter N n n')
+            (typeIICorrelationHigherParameter N 2 n n') 2 K →
+          let F := reciprocalPhaseScale N N 2 (K * B)
+          let Q := ((370 * orders.card + 173 : ℕ) : ℝ) *
+            (480 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
+              (((((5 + 2) ^ 5 : ℕ) : ℝ)) + 1) *
+                (1 + Real.log (qouter : ℝ)) * K)
+          ‖typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+              (dyadicShortIntervalIndexedBlock
+                (vaughanShortIntervalBudget Bcap) sk)
+              N N 2 n n'‖ ≤
+            Q * (4 * typeIIDecayKernel B F (1 / 1024 : ℝ) (Nat.dist n' n) +
+              3 * (Real.log P) ^ (-T)) := by
+    dsimp only
+    intro n hnBlock n' hn'Block hne _ hpairHigh
+    have hnShort : n ∈ shortIntervalBlock
+        (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2 := by
+      simpa only [dyadicShortIntervalIndexedBlock, qinner] using hnBlock
+    have hn'Short : n' ∈ shortIntervalBlock
+        (2 ^ tl.1) (2 * 2 ^ tl.1) qinner tl.2 := by
+      simpa only [dyadicShortIntervalIndexedBlock, qinner] using hn'Block
+    have hnData := mem_shortIntervalBlock.mp hnShort
+    have hn'Data := mem_shortIntervalBlock.mp hn'Short
+    have hnpos : 0 < n := by omega
+    have hn'pos : 0 < n' := by omega
+    have hraw := hcallbackP a b Bcap (2 ^ sk.1) (2 * 2 ^ sk.1) qouter
+      sk.2 N K n n' orders B F tl hKouter hK hqouter hqouterK hnBlock
+        hn'Block hnpos hn'pos hne hN hB (zero_le_one.trans hFone) hNupper
+        (by simpa only [K] using hKlower) hpairHigh.le
+    simpa only [dyadicShortIntervalIndexedBlock, qouter, K, B, F] using hraw
+  have hresult :=
+    sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_weylVinogradov_quadratic_intrinsicError
+      a b Bcap γ N orders sk tl hBcap hlog hDouter hL hγ hN hrFive hrSix hd
+        hFhigh hV hhigh
+  simpa only [qouter, qinner, K, B, F] using hresult
+
 /-- Direct specialization to one pair of canonical Vaughan dyadic short
 blocks.  All block geometry, positivity, and the five-block expansion margin
 are discharged from the named decomposition. -/
 theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_fourStepWeyl_quadratic
     (a b Bcap : ℕ) (γ : ℕ → ℂ) (N : ℝ) (orders : Finset ℕ)
-    (sk tl : ℕ × ℕ) {L : ℝ}
+    (sk tl : ℕ × ℕ) {L d : ℝ}
     (hBcap : 0 < Bcap) (hlog : 2 ≤ Real.log Bcap)
     (hDouter : (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ sk.1 : ℕ))
+    (hDinner : (vaughanShortIntervalBudget Bcap : ℝ) ≤ (2 ^ tl.1 : ℕ))
     (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) (hN : N ≠ 0)
-    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders)
-    (hF : 1 ≤ reciprocalPhaseScale N N 2
+    (hrFive : 5 ∈ orders) (hrSix : 6 ∈ orders) (hd : 0 ≤ d)
+    (hFhigh : (Real.log Bcap) ^ d ≤ reciprocalPhaseScale N N 2
       (((dyadicShortIntervalLeftEndpoint (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
         ((2 * 2 ^ tl.1 : ℕ) : ℝ)))
-    (hsize : 5 *
-        (dyadicShortIntervalLength (2 ^ tl.1)
-          (vaughanShortIntervalBudget Bcap) : ℝ) * |N| ≤
+    (hFlow : 10 * reciprocalPhaseScale N N 2
+        (((dyadicShortIntervalLeftEndpoint
+            (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) *
+          ((2 * 2 ^ tl.1 : ℕ) : ℝ)) ≤
       ((dyadicShortIntervalLeftEndpoint
-          (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) ^ 5 *
-        (((2 ^ tl.1) + tl.2 *
-          dyadicShortIntervalLength (2 ^ tl.1)
-            (vaughanShortIntervalBudget Bcap) : ℕ) : ℝ) ^ 2)
+          (vaughanShortIntervalBudget Bcap) sk : ℕ) : ℝ) ^ 4 *
+        (Real.log Bcap) ^ 100)
     :
     let qouter := dyadicShortIntervalLength (2 ^ sk.1)
       (vaughanShortIntervalBudget Bcap)
@@ -9189,6 +10600,11 @@ theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_fourSt
     exact dyadicShortIntervalLength_pos hDinnerPos hbudget
   have hKouter : K = (((2 ^ sk.1) + sk.2 * qouter : ℕ) : ℝ) := by
     rfl
+  have hlogOne : (1 : ℝ) ≤ Real.log Bcap := by linarith
+  have hF : 1 ≤ reciprocalPhaseScale N N 2 (K * B) := by
+    have hpowOne : (1 : ℝ) ≤ (Real.log Bcap) ^ d :=
+      Real.one_le_rpow hlogOne hd
+    exact hpowOne.trans (by simpa only [K, B] using hFhigh)
   have hB : 0 < B := by unfold B; positivity
   have hKnat : 0 < (2 ^ sk.1) + sk.2 * qouter := by omega
   have hKpos : 0 < K := by rw [hKouter]; exact_mod_cast hKnat
@@ -9223,11 +10639,23 @@ theorem sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_fourSt
     have hnat : 2 ^ sk.1 ≤ 2 ^ sk.1 + sk.2 * qouter :=
       Nat.le_add_right _ _
     exact_mod_cast hnat
+  have hDinnerR : ((2 ^ tl.1 : ℕ) : ℝ) ≤
+      (((2 ^ tl.1) + tl.2 * qinner : ℕ) : ℝ) := by
+    have hnat : 2 ^ tl.1 ≤ 2 ^ tl.1 + tl.2 * qinner :=
+      Nat.le_add_right _ _
+    exact_mod_cast hnat
+  have hsourceLow : 10 * (qinner : ℝ) *
+      reciprocalPhaseScale N N 2 (K * B) ≤
+        K ^ 4 * (((2 ^ tl.1) + tl.2 * qinner : ℕ) : ℝ) := by
+    apply ten_mul_vaughanShortIntervalLength_mul_le_pow_four_mul
+      hBcap hlog hDinner
+    · simpa only [K, B] using hFlow
+    · exact hDinnerR
   have hscaleError : typeIIShortIntervalScaleErrorAt N N K B 2
       (2 ^ tl.1) qinner tl.2 ≤ 1 / K := by
-    apply typeIIShortIntervalScaleErrorAt_quadratic_le_one_div
-      N K B hKone hDinnerPos hB.le hBupper
-    simpa only [K, qinner] using hsize
+    apply typeIIShortIntervalScaleErrorAt_quadratic_le_one_div_of_sourceScale
+      N K B hKone hDinnerPos hB hBupper
+    simpa only [K, B, qinner] using hsourceLow
   have hscaleBudget : 240 * ((((5 + 2) ^ 5 : ℕ) : ℝ)) *
       typeIIShortIntervalScaleErrorAt N N K B 2
         (2 ^ tl.1) qinner tl.2 ≤ 1 / 4 := by

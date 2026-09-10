@@ -894,6 +894,146 @@ theorem reciprocalPhaseScale_typeIICorrelation_le_dyadic
     (reciprocalPhaseScale_typeIICorrelation_le_productScale
       N M K R (2 * R) hj hK hR hn hn' hn2 hn'2)
 
+/-- Dyadic Type II correlation preserves the source's exponential parameter
+class.  If both original coefficients are bounded by `A exp(log(P)^a)`, the
+transformed phase scale has the same bound with the explicit multiplier
+`1 + j*2^(j-1)`. -/
+theorem reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadic
+    (N M K R P A a : ℝ) {j n n' : ℕ}
+    (hj : 1 ≤ j) (hKone : 1 ≤ K) (hRone : 1 ≤ R)
+    (hn : R ≤ (n : ℝ)) (hn' : R ≤ (n' : ℝ))
+    (hn2 : (n : ℝ) ≤ 2 * R) (hn'2 : (n' : ℝ) ≤ 2 * R)
+    (hdist : (Nat.dist n' n : ℝ) ≤ R) (hA : 0 ≤ A)
+    (hN : |N| ≤ A * Real.exp ((Real.log P) ^ a))
+    (hM : |M| ≤ A * Real.exp ((Real.log P) ^ a)) :
+    reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter M j n n') j K ≤
+      (1 + (j : ℝ) * 2 ^ (j - 1)) * A *
+        Real.exp ((Real.log P) ^ a) := by
+  have hK : 0 < K := zero_lt_one.trans_le hKone
+  have hR : 0 < R := zero_lt_one.trans_le hRone
+  have hscale := reciprocalPhaseScale_typeIICorrelation_le_dyadic
+    N M K R hj hK hR hn hn' hn2 hn'2
+  have hdenomOne : (1 : ℝ) ≤ K * R :=
+    by
+      simpa only [one_mul] using
+        mul_le_mul hKone hRone (by norm_num : (0 : ℝ) ≤ 1)
+          (zero_le_one.trans hKone)
+  have hdenomPowOne : (1 : ℝ) ≤ (K * R) ^ j :=
+    one_le_pow₀ hdenomOne
+  have hNdiv : |N| / (K * R) ≤ A * Real.exp ((Real.log P) ^ a) :=
+    (div_le_self (abs_nonneg N) hdenomOne).trans hN
+  have hMdiv : |M| / (K * R) ^ j ≤ A * Real.exp ((Real.log P) ^ a) :=
+    (div_le_self (abs_nonneg M) hdenomPowOne).trans hM
+  have hratioNonneg : 0 ≤ |(n' : ℝ) - n| / R := by positivity
+  have hratioOne : |(n' : ℝ) - n| / R ≤ 1 := by
+    apply (div_le_one hR).2
+    simpa only [abs_natCast_sub_eq_natDist_cast] using hdist
+  have hcoefficientNonneg : 0 ≤ (j : ℝ) * 2 ^ (j - 1) := by positivity
+  have hparameterNonneg : 0 ≤ A * Real.exp ((Real.log P) ^ a) := by positivity
+  have hbracketNonneg : 0 ≤ |N| / (K * R) +
+      (j : ℝ) * 2 ^ (j - 1) * (|M| / (K * R) ^ j) := by positivity
+  calc
+    reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter M j n n') j K ≤
+      |(n' : ℝ) - n| / R *
+        (|N| / (K * R) +
+          (j : ℝ) * 2 ^ (j - 1) * (|M| / (K * R) ^ j)) := hscale
+    _ ≤ 1 * (|N| / (K * R) +
+          (j : ℝ) * 2 ^ (j - 1) * (|M| / (K * R) ^ j)) :=
+      mul_le_mul_of_nonneg_right hratioOne hbracketNonneg
+    _ ≤ 1 * (A * Real.exp ((Real.log P) ^ a) +
+          (j : ℝ) * 2 ^ (j - 1) *
+            (A * Real.exp ((Real.log P) ^ a))) := by
+      rw [one_mul, one_mul]
+      exact add_le_add hNdiv
+        (mul_le_mul_of_nonneg_left hMdiv hcoefficientNonneg)
+    _ = (1 + (j : ℝ) * 2 ^ (j - 1)) * A *
+          Real.exp ((Real.log P) ^ a) := by ring
+
+/-- Canonical-block form of
+`reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadic`. Membership in one
+named dyadic short block automatically supplies the dyadic bounds and the
+distance bound needed to preserve the source parameter class. -/
+theorem reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadicBlock
+    (N M K P A a : ℝ) (L : ℕ) {j : ℕ} {sk : ℕ × ℕ} {n n' : ℕ}
+    (hL : 0 < L) (hj : 1 ≤ j) (hKone : 1 ≤ K)
+    (hn : n ∈ dyadicShortIntervalIndexedBlock L sk)
+    (hn' : n' ∈ dyadicShortIntervalIndexedBlock L sk)
+    (hA : 0 ≤ A)
+    (hN : |N| ≤ A * Real.exp ((Real.log P) ^ a))
+    (hM : |M| ≤ A * Real.exp ((Real.log P) ^ a)) :
+    reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter M j n n') j K ≤
+      (1 + (j : ℝ) * 2 ^ (j - 1)) * A *
+        Real.exp ((Real.log P) ^ a) := by
+  let D := 2 ^ sk.1
+  let q := dyadicShortIntervalLength D L
+  have hD : 0 < D := by unfold D; positivity
+  have hq : 0 < q := by
+    unfold q
+    exact dyadicShortIntervalLength_pos hD hL
+  have hqD : q ≤ D := by
+    unfold q dyadicShortIntervalLength
+    apply (ceilDiv_le_iff_le_mul hL).2
+    have hLone : 1 ≤ L := Nat.one_le_iff_ne_zero.2 hL.ne'
+    nlinarith
+  have hnBlock : n ∈ shortIntervalBlock D (2 * D) q sk.2 := by
+    simpa only [dyadicShortIntervalIndexedBlock, D, q] using hn
+  have hn'Block : n' ∈ shortIntervalBlock D (2 * D) q sk.2 := by
+    simpa only [dyadicShortIntervalIndexedBlock, D, q] using hn'
+  have hnData := hn
+  have hn'Data := hn'
+  rw [dyadicShortIntervalIndexedBlock, shortIntervalBlock_eq_Ico hq] at hnData hn'Data
+  have hnIco := Finset.mem_Ico.mp hnData
+  have hn'Ico := Finset.mem_Ico.mp hn'Data
+  have hnLower : D ≤ n := by omega
+  have hn'Lower : D ≤ n' := by omega
+  have hnUpper : n ≤ 2 * D := by omega
+  have hn'Upper : n' ≤ 2 * D := by omega
+  have hdistNat : Nat.dist n' n ≤ D := by
+    have hdist : Nat.dist n' n < q :=
+      natDist_lt_of_mem_same_shortIntervalBlock hq hn'Block hnBlock
+    omega
+  apply reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadic
+    N M K (D : ℝ) P A a hj hKone
+  · exact_mod_cast (Nat.one_le_iff_ne_zero.2 hD.ne')
+  · exact_mod_cast hnLower
+  · exact_mod_cast hn'Lower
+  · exact_mod_cast hnUpper
+  · exact_mod_cast hn'Upper
+  · exact_mod_cast hdistNat
+  · exact hA
+  · exact hN
+  · exact hM
+
+/-- Quadratic equal-parameter specialization for a canonical Vaughan inner
+block.  The transformed high-scale parameter costs exactly the fixed factor
+`1 + 2*2 = 5`. -/
+theorem reciprocalPhaseScale_typeIICorrelation_le_exp_of_vaughanBlock_quadratic
+    (Bcap : ℕ) (N K P A a : ℝ) {tl : ℕ × ℕ} {n n' : ℕ}
+    (hKone : 1 ≤ K)
+    (hn : n ∈ dyadicShortIntervalIndexedBlock
+      (vaughanShortIntervalBudget Bcap) tl)
+    (hn' : n' ∈ dyadicShortIntervalIndexedBlock
+      (vaughanShortIntervalBudget Bcap) tl)
+    (hA : 0 ≤ A)
+    (hN : |N| ≤ A * Real.exp ((Real.log P) ^ a)) :
+    reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N 2 n n') 2 K ≤
+      5 * A * Real.exp ((Real.log P) ^ a) := by
+  have hraw := reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadicBlock
+    (j := 2) (sk := tl) (n := n) (n' := n')
+    N N K P A a (vaughanShortIntervalBudget Bcap)
+    (vaughanShortIntervalBudget_pos Bcap) (by norm_num) hKone
+      hn hn' hA hN hN
+  norm_num at hraw ⊢
+  exact hraw
+
 /-- The off-diagonal portion of the source's Type II correlation sum. -/
 def typeIIOffDiagonalSum (K S : Finset ℕ) (γ : ℕ → ℂ)
     (N M : ℝ) (j : ℕ) : ℂ :=
@@ -1517,6 +1657,72 @@ theorem sum_typeIIProductRestrictedInnerSum_norm_sq_le
       Complex.re_le_norm _
     _ ≤ _ := norm_typeIIProductRestrictedCorrelationExpression_le
       I K S γ N M j hL hγ
+
+/-- If the inner support contains at most one index, the off-diagonal Type II
+correlation sum is empty and the exact finite reduction consists only of its
+diagonal term. -/
+theorem sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_card_le_one
+    (I K S : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ) (j : ℕ) {L : ℝ}
+    (hK : ∀ m ∈ K, m ≠ 0) (hS : ∀ n ∈ S, n ≠ 0)
+    (hL : 0 ≤ L) (hγ : ∀ n ∈ S, ‖γ n‖ ≤ L)
+    (hScard : S.card ≤ 1) :
+    ∑ m ∈ K, ‖typeIIProductRestrictedInnerSum I S γ N M j m‖ ^ 2 ≤
+      (K.card : ℝ) * (S.card : ℝ) * L ^ 2 := by
+  have herase : ∀ n ∈ S, S.erase n = ∅ := by
+    intro n hn
+    apply Finset.card_eq_zero.mp
+    rw [Finset.card_erase_of_mem hn]
+    omega
+  have hoff : ∑ n ∈ S, ∑ n' ∈ S.erase n,
+      ‖typeIIProductRestrictedCorrelationSum I K N M j n n'‖ = 0 := by
+    apply Finset.sum_eq_zero
+    intro n hn
+    rw [herase n hn]
+    simp
+  simpa only [hoff, mul_zero, add_zero] using
+    sum_typeIIProductRestrictedInnerSum_norm_sq_le
+      I K S γ N M j hK hS hL hγ
+
+/-- A short-interval double block whose inner block has length at most one is
+purely diagonal.  Its squared sum is bounded by the outer block length, with
+no phase-size or derivative hypothesis. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_singleton
+    (a b : ℕ) (γ : ℕ → ℂ) (N M : ℝ) (j : ℕ)
+    (K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ) {L : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hqinnerOne : qinner ≤ 1)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L) :
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner) γ N M j m‖ ^ 2 ≤
+      (qouter : ℝ) * L ^ 2 := by
+  have hKcardNat := card_shortIntervalBlock_le K₀ K₁ qouter kouter hqouter
+  have hScardNat := card_shortIntervalBlock_le S₀ S₁ qinner kinner hqinner
+  have hScardOne : (shortIntervalBlock S₀ S₁ qinner kinner).card ≤ 1 :=
+    hScardNat.trans hqinnerOne
+  have hraw := sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_card_le_one
+    (Finset.Ico a b) (shortIntervalBlock K₀ K₁ qouter kouter)
+      (shortIntervalBlock S₀ S₁ qinner kinner) γ N M j
+      (by
+        intro m hm
+        rw [mem_shortIntervalBlock] at hm
+        omega)
+      (by
+        intro n hn
+        rw [mem_shortIntervalBlock] at hn
+        omega)
+      hL (fun n _ => hγ n) hScardOne
+  calc
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum (Finset.Ico a b)
+          (shortIntervalBlock S₀ S₁ qinner kinner) γ N M j m‖ ^ 2 ≤
+        ((shortIntervalBlock K₀ K₁ qouter kouter).card : ℝ) *
+          ((shortIntervalBlock S₀ S₁ qinner kinner).card : ℝ) * L ^ 2 := hraw
+    _ ≤ (qouter : ℝ) * 1 * L ^ 2 := by
+      gcongr
+      exact_mod_cast hScardOne
+    _ = (qouter : ℝ) * L ^ 2 := by ring
 
 /-- The real squared-inner-sum estimate delivered by the complete literal
 Type II finite reduction.  The sole remaining input is the uniform analytic

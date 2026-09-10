@@ -1843,6 +1843,91 @@ theorem reciprocalPhase_vinogradov_derivative_bounds_on_regular
   exact ⟨hscaled.trans hlower,
     hupper.trans (mul_le_mul_of_nonneg_right hupperCoeff hF0)⟩
 
+/-- The two elementary coefficient conditions in the Vinogradov derivative
+window follow uniformly from a single upper bound on the derivative order and
+the critical-deletion width.  This removes the order-by-order coefficient
+bookkeeping from the eventual exponential-sum invocation. -/
+theorem reciprocalPhase_vinogradov_derivative_bounds_on_regular_of_order_le
+    (N M : ℝ) {j r R : ℕ} (orders : Finset ℕ) {X Y q t α : ℝ}
+    (hX : 0 < X) (hq : 0 < q) (hqOne : q ≤ 1) (hα : 1 ≤ α)
+    (hj : 1 ≤ j) (htIcc : t ∈ Set.Icc X Y) (htop : t ≤ 2 * X)
+    (htRegular : t ∉ reciprocalDerivativeCriticalUnion N M j orders X Y q)
+    (hr : r ∈ orders) (hrOne : 1 ≤ r) (hrR : r ≤ R)
+    (hRj : (((R + j : ℕ) : ℝ)) ≤ α) (hαq : 10 ≤ α * q) :
+    reciprocalPhaseScale N M j X / α ^ (r ^ 3) ≤
+        t ^ r / (r.factorial : ℝ) *
+          |iteratedDeriv r (reciprocalPhase N M j) t| ∧
+      t ^ r / (r.factorial : ℝ) *
+          |iteratedDeriv r (reciprocalPhase N M j) t| ≤
+        α ^ (r ^ 3) * reciprocalPhaseScale N M j X := by
+  have hq0 : 0 ≤ q := hq.le
+  have hrCube : 1 ≤ r ^ 3 := one_le_pow₀ hrOne
+  have hαpow : α ≤ α ^ (r ^ 3) := by
+    simpa only [pow_one] using
+      (pow_le_pow_right₀ hα (show 1 ≤ r ^ 3 from hrCube))
+  have hlowerCoeff : 10 ≤ α ^ (r ^ 3) * q :=
+    hαq.trans (mul_le_mul_of_nonneg_right hαpow hq0)
+  have hrjNat : r + j ≤ R + j := Nat.add_le_add_right hrR j
+  have hrj : (((r + j : ℕ) : ℝ)) ≤ α := by
+    exact (by exact_mod_cast hrjNat :
+      (((r + j : ℕ) : ℝ)) ≤ (((R + j : ℕ) : ℝ))).trans hRj
+  have hbasePow : (((r + j) ^ r : ℕ) : ℝ) ≤ α ^ r := by
+    rw [Nat.cast_pow]
+    exact pow_le_pow_left₀ (by positivity) hrj r
+  have hrCubeR : r ≤ r ^ 3 := le_self_pow₀ hrOne (by norm_num)
+  have hupperCoeff : (((r + j) ^ r : ℕ) : ℝ) ≤ α ^ (r ^ 3) :=
+    hbasePow.trans (pow_le_pow_right₀ hα hrCubeR)
+  exact reciprocalPhase_vinogradov_derivative_bounds_on_regular
+    N M orders hX hq hqOne (lt_of_lt_of_le zero_lt_one hα) hj htIcc htop htRegular hr
+      hlowerCoeff hupperCoeff
+
+/-- Full consecutive range of source-normalized Vinogradov derivative bounds
+on one point of the regular remainder.  The range `1 ≤ r ≤ R` is represented
+literally by `Finset.Icc 1 R`, matching the derivative-order set used in the
+critical deletion. -/
+theorem reciprocalPhase_vinogradov_derivative_bounds_on_regular_range
+    (N M : ℝ) {j R : ℕ} {X Y q t α : ℝ}
+    (hX : 0 < X) (hq : 0 < q) (hqOne : q ≤ 1) (hα : 1 ≤ α)
+    (hj : 1 ≤ j) (htIcc : t ∈ Set.Icc X Y) (htop : t ≤ 2 * X)
+    (htRegular : t ∉ reciprocalDerivativeCriticalUnion
+      N M j (Finset.Icc 1 R) X Y q)
+    (hRj : (((R + j : ℕ) : ℝ)) ≤ α) (hαq : 10 ≤ α * q) :
+    ∀ r : ℕ, 1 ≤ r → r ≤ R →
+      reciprocalPhaseScale N M j X / α ^ (r ^ 3) ≤
+          t ^ r / (r.factorial : ℝ) *
+            |iteratedDeriv r (reciprocalPhase N M j) t| ∧
+        t ^ r / (r.factorial : ℝ) *
+            |iteratedDeriv r (reciprocalPhase N M j) t| ≤
+          α ^ (r ^ 3) * reciprocalPhaseScale N M j X := by
+  intro r hrOne hrR
+  exact reciprocalPhase_vinogradov_derivative_bounds_on_regular_of_order_le
+    N M (Finset.Icc 1 R) hX hq hqOne hα hj htIcc htop htRegular
+      (Finset.mem_Icc.mpr ⟨hrOne, hrR⟩) hrOne hrR hRj hαq
+
+/-- Interval-level form of the complete Vinogradov derivative window.  This is
+the direct smooth-phase hypothesis required on each connected component left
+after critical deletion. -/
+theorem reciprocalPhase_vinogradov_derivative_bounds_on_regular_interval
+    (N M : ℝ) {j R : ℕ} {X Y q α c d : ℝ}
+    (hX : 0 < X) (hq : 0 < q) (hqOne : q ≤ 1) (hα : 1 ≤ α)
+    (hj : 1 ≤ j) (hI : Set.Icc c d ⊆ Set.Icc X Y) (hYtop : Y ≤ 2 * X)
+    (hRegular : ∀ t ∈ Set.Icc c d,
+      t ∉ reciprocalDerivativeCriticalUnion
+        N M j (Finset.Icc 1 R) X Y q)
+    (hRj : (((R + j : ℕ) : ℝ)) ≤ α) (hαq : 10 ≤ α * q) :
+    ∀ t ∈ Set.Icc c d, ∀ r : ℕ, 1 ≤ r → r ≤ R →
+      reciprocalPhaseScale N M j X / α ^ (r ^ 3) ≤
+          t ^ r / (r.factorial : ℝ) *
+            |iteratedDeriv r (reciprocalPhase N M j) t| ∧
+        t ^ r / (r.factorial : ℝ) *
+            |iteratedDeriv r (reciprocalPhase N M j) t| ≤
+          α ^ (r ^ 3) * reciprocalPhaseScale N M j X := by
+  intro t ht r hrOne hrR
+  have htIcc := hI ht
+  exact reciprocalPhase_vinogradov_derivative_bounds_on_regular_range
+    N M hX hq hqOne hα hj htIcc (htIcc.2.trans hYtop)
+      (hRegular t ht) hRj hαq r hrOne hrR
+
 end
 
 end Tao2026

@@ -543,6 +543,38 @@ theorem vaughanShortIntervalLength_cast_le_realLog
     _ ≤ (D : ℝ) / R ^ 100 := hlast
     _ = (D : ℝ) / (Real.log B) ^ 100 := rfl
 
+/-- The source's logarithmic short-block width converts a low-frequency
+upper bound into the scale-error inequality needed by the quadratic Type II
+estimate.  The endpoint `R` may be any real number above the dyadic left
+endpoint `D`; in the canonical application it is the left endpoint of the
+selected inner short block. -/
+theorem ten_mul_vaughanShortIntervalLength_mul_le_pow_four_mul
+    {B D : ℕ} {F K R : ℝ}
+    (hB : 0 < B) (hlog : 2 ≤ Real.log B)
+    (hD : (vaughanShortIntervalBudget B : ℝ) ≤ (D : ℝ))
+    (hFlow : 10 * F ≤ K ^ 4 * (Real.log B) ^ 100)
+    (hDR : (D : ℝ) ≤ R) :
+    10 * (dyadicShortIntervalLength D
+      (vaughanShortIntervalBudget B) : ℝ) * F ≤ K ^ 4 * R := by
+  have hq := vaughanShortIntervalLength_cast_le_realLog hB hlog hD
+  have hlogPos : 0 < Real.log B := lt_of_lt_of_le (by norm_num) hlog
+  have hlogPowPos : 0 < (Real.log B) ^ 100 := pow_pos hlogPos 100
+  calc
+    10 * (dyadicShortIntervalLength D
+        (vaughanShortIntervalBudget B) : ℝ) * F =
+        (dyadicShortIntervalLength D
+          (vaughanShortIntervalBudget B) : ℝ) * (10 * F) := by ring
+    _ ≤ (dyadicShortIntervalLength D
+          (vaughanShortIntervalBudget B) : ℝ) *
+        (K ^ 4 * (Real.log B) ^ 100) :=
+      mul_le_mul_of_nonneg_left hFlow (by positivity)
+    _ ≤ ((D : ℝ) / (Real.log B) ^ 100) *
+        (K ^ 4 * (Real.log B) ^ 100) :=
+      mul_le_mul_of_nonneg_right hq
+        (mul_nonneg (by positivity) hlogPowPos.le)
+    _ = K ^ 4 * (D : ℝ) := by field_simp
+    _ ≤ K ^ 4 * R := mul_le_mul_of_nonneg_left hDR (by positivity)
+
 /-- On every dyadic band above the Vaughan subdivision budget, the source's
 logarithmic relative width is more than enough for five copies of the rounded
 block length to fit inside the band. -/

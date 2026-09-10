@@ -380,7 +380,9 @@ off-diagonal pairs, and the result is substituted into the literal
   the endpoint and power-evaluation bundle to one expansion margin. The
   transformed-scale condition is further deduced from the uniform block error
   comparison `E≤1/K`. For the quadratic phase this comparison is now proved
-  from the explicit monomial condition `5q|N|≤K^5R^2`. The kernel and analytic propagation now accept arbitrary
+  on large inner bands from `10F≤K^4(log Bcap)^100`: logarithmic block width
+  gives `10qF≤K^4R`, which derives the former
+  monomial condition `5q|N|≤K^5R^2` internally. The kernel and analytic propagation now accept arbitrary
   positive endpoints and are specialized to the exact dyadic blocks used by
   the canonical Vaughan family. Pairwise effective errors are dominated by
   `typeIIShortIntervalEffectiveErrorBound`, and the optimized range by its
@@ -390,11 +392,25 @@ off-diagonal pairs, and the result is substituted into the literal
   three is handled by the trivial correlation estimate and a kernel lower
   bound of `1/4`; farther pairs have inverse transformed scale at most `2/3`
   and the `1/4` upper-scale budget closes the effective error. That budget now
-  follows from `E≤1/K`, and the standing `2≤log Bcap` assumption proves the
-  common subdivision budget is large enough. The remaining
-  input is the source-regime proof of `F≥1` and `5q|N|≤K^5R^2`,
-  plus the complementary high-transformed-scale
-  and small singleton-band branches. The finite theorem is specialized
+  follows from the pair-local `F'/K^5≤1/K`, and the standing `2≤log Bcap` assumption proves the
+  common subdivision budget is large enough. The logarithmic lower split
+  `(log Bcap)^d≤F`, `0≤d`, now supplies `F≥1` internally. The generic and
+  canonical hybrid theorems now split every far pair at `F'=K^4`, prove the
+  low branch by four-step Weyl using a pair-local error budget, and expose only
+  the target kernel estimate for the high branch. The strengthened endpoint
+  retains the intrinsic `(1/K)^(1/1024)` error from `F'≤K^4`, rather than a
+  global short-block error; hence the upper source inequality is no longer
+  required there. The lower split already supplies `F≥1`. The remaining
+  non-singleton work is the actual high-transformed-scale Vinogradov estimate
+  and its insertion into the quantitative Type II assembly. Its complete
+  conditional principal-plus-deletion envelope now has a uniform logarithmic
+  saving and is converted to the hybrid's exact
+  `Q(4·kernel+3(log P)^(-T))` callback. Canonical inner-block membership
+  discharges the transformed-scale upper bound with the exact factor `5`.
+  This callback is now consumed by the canonical intrinsic-error double-block
+  theorem, so no abstract high-pair estimate remains at that endpoint.
+  The small inner singleton-band
+  branch is purely diagonal and unconditional. The finite theorem is specialized
 to the actual inner quotient block and exact Vaughan double-block geometry;
 the block diameter and nonzero reciprocal indices are now discharged
 internally rather than left as interface assumptions. The exact bound
@@ -405,7 +421,77 @@ The high-frequency exponent conversion is also exact: under `P≥e`, a source
 lower bound `(log P)^d≤F` converts `(log P)^b F^(-c)` into
 `(log P)^(-t)` whenever `b+t≤dc`. What remains is to instantiate `b,d,t`
 from the quantitative Vaughan and exponential-sum constants rather than an
-informal `O(A)` exponent.
+informal `O(A)` exponent. The complementary high-scale conversion is now
+proved as well: for `c,ρ>0`, every polynomial logarithmic prefactor times
+`exp(-c(log P)^ρ)` is eventually bounded by any requested negative logarithmic
+power. The generic and canonical Type II hybrid endpoints retain this future
+Vinogradov saving as its own additive error `V`, separate from the low-scale
+Weyl error `E^(1/1024)`; no comparison between the errors is required. What
+remains there is the Vinogradov exponential-sum estimate that
+produces this factor. The parameter arithmetic is now closed uniformly:
+`log F≤C(log P)^(3/2-ε)` yields
+`(log P)^3/(log F)^2≥C⁻²(log P)^(2ε)` and hence the required eventual saving.
+The more primitive source bound `F≤C exp((log P)^(3/2-ε))` is also converted
+to that logarithmic hypothesis with an explicit adjusted constant. The full
+regular-component derivative window is packaged for `1≤r≤R`; with
+`α=(log P)^(4A)` and `q=(log P)^(-3A)`, all coefficient conditions and the
+numerical smallness condition `log α·(log F)^2/(log X)^3<10^-3` are now
+automatic under the source scale bounds. The exact cutoff
+`R=10⌈log F/log X⌉+1` and its shifted budget `R+j≤log P` are also formalized;
+for `j≤(log P)^(1/2)` the latter is eventual under the primitive source bound.
+`Tao2026.Vinogradov` now assembles these ingredients into the full
+source-cutoff derivative window on each regular interval. Thus the remaining
+local high-scale task is the substantive Vinogradov exponential-sum
+inequality, not cutoff or derivative-window bookkeeping. A conditional global
+component theorem already transports such a local inequality to the complete
+phase sum with the exact component multiplier and critical-deletion error. The
+absolute-constant source statement is isolated exactly as
+`VinogradovExponentialSumEstimate`, including `F≥X^4`, pointwise neighborhood
+smoothness, the `10^-3` condition, and decay
+`αX exp(-2^-18(log X)^3/(log F)^2)`; its global reciprocal-phase consumer is
+complete. The proposition's Taylor front end is now internal: Tao's literal
+ordinary-derivative polynomial, Lagrange remainder, normalized factorial
+cancellation, and finite-interval shift error are all proved. Product shifts
+are represented by pairs to retain multiplicities; their cardinality is
+exactly `V²`, their errors sum into a uniform envelope, and division of the
+unnormalized average is formalized even for intervals shorter than a shift.
+The canonical floor-rounded `V=⌊X^(1/4)⌋` reduces the envelope to `√X` plus the
+normalized top-derivative remainder. Both source factors are proved at most
+one, and `√X+2π` is absorbed into nine copies of the target Vinogradov scale.
+The interval pair sum is now decomposed into complete pointwise product sums
+and an exact right-boundary strip bounded by `V⁴`. Removing the unit-modulus
+constant Taylor phase rewrites each complete sum as the generic coefficient-only
+bilinear polynomial sum `∑ e(∑ c_r x^r y^r)`. The exact trivial `V²` estimate
+closes the branch where the normalized target is at least one. The remaining
+local high-scale analytic task is therefore exactly the named
+`VinogradovBilinearPolynomialNontrivialEstimate`; it implies the full
+exponential-sum contract with an explicit total constant shift of eighteen.
+The coefficient-selection stage inside this residual is now exact as well:
+the block `[(4/3)(log F/log X),(7/4)(log F/log X)]` has at least `R/128`
+integer degrees, and every one satisfies the medium window with `c₀=1/128`
+for the floor-rounded range. The remaining task starts with the polynomial
+mean-value estimate for a bilinear sum already carrying this positive-density
+medium set. Its two Hölder steps and all intervening representation
+combinatorics are now compiled: `∑ν=V^ℓ`, `∑ν²=J`, the equal-power-sum
+solution count, and the exact equation-(16) inequality. The signed difference
+support is also finite, has total multiplicity `(V^ℓ)²`, and lies in the
+coordinate box `|d_j|≤ℓV^(j+1)`. Work now begins at the equation-(18)
+regrouping and difference-multiplicity estimate, before Lemma 12 and VMVT.
+Its exact high-pair Type II
+consumer is also proved:
+the correlation support is rewritten to the ceiling-divided quotient interval,
+whose endpoints and critical-deletion cost are discharged explicitly. The
+raw component and deletion multiplicities are bounded by `log P`, and the
+complete normalized envelope is eventually at most `3(log P)^(-T)` under the
+explicit source budget `T+2≤3A`. Thus no separate asymptotic deletion
+obligation remains once the named proposition is supplied. The fixed absolute
+constant is preserved through an `...EstimateAt C` interface, and the result
+is already packaged as the pointwise callback expected by the mixed
+Weyl--Vinogradov Type II theorem. The canonical double-block consumer of this
+callback is complete as well. The
+transformed Type II correlation scale is proved to preserve this exponential
+class on a named dyadic block, with exact multiplier `1+j·2^(j-1)` and hence
+the fixed multiplier `5` for the canonical `N=M`, `j=2` case.
 The preceding prime/Mangoldt replacement is no longer implicit: the exact
 prime-logarithm plus higher-prime-power decomposition compiles, and the
 oscillatory tail is controlled by the frozen local prime-power majorant.
