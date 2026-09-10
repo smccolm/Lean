@@ -112,7 +112,10 @@ source factor `|n'-n|/R` at product scale `KR`, with loss
 longer suppressed: the squared inner sums rearrange exactly to correlations
 on `K ∩ (1/n)I ∩ (1/n')I`. The restricted expression is split exactly,
 its diagonal is bounded by `#K·#S·L²`, and a uniform off-diagonal bound is
-propagated to the final real squared-inner-sum inequality.
+propagated to the final real squared-inner-sum inequality. For interval `I`
+and a quotient outer block, the filtered support is one explicit half-open
+interval with ceiling-divided endpoints and length at most the outer block;
+canonical Vaughan correlations rewrite exactly as `reciprocalPhaseSum`.
 The Type I variable-support sum is also reduced exactly to the rescaled
 integer phases with parameters `N/m, M/m^j`, under an explicit coefficient
 envelope. The exact divisor-antidiagonal-to-product-box rearrangement and
@@ -120,8 +123,13 @@ outer/double coefficient-block decompositions now connect the weighted
 Vaughan identity to literal `m*n∈I` Type I/II sums. The source-oriented
 reassociation now identifies the canonical Type I/II coefficient pairs and
 proves their exact support conditions and `1`, `log P`, `1`, `log P`
-envelopes. This is proof infrastructure only; the paper's quantitative
-polylogarithmic family count, Vinogradov/Weyl cancellation, and Type I/II
+envelopes. The canonical family over `[1,B]` has exactly
+`(log₂ B+1)^102` indices, covers every positive coefficient index, and gives
+the exact one-family Type I and double-family Type II decomposition. The
+strengthened budget `L=(log₂ B+1)^101` absorbs ceiling rounding and proves the
+literal source support width `(1+log(B)^(-100))M`; small dyadic bands are
+singleton blocks, and `P≤B` transfers this to the paper's literal
+`(1+log(P)^(-100))M` width. Vinogradov/Weyl cancellation and quantitative Type I/II
 estimates remain open. Conditional Fourier
 reconstruction is now proved. The finite Abel-summation identity and its explicit
 `2 log b` bound are proved, so the source's logarithm-weighted alternate Type I
@@ -192,7 +200,116 @@ bound must dominate `1`. In the actual off-diagonal correlation sum the
 center is erased, its zero-distance fiber is empty, and the positive-distance
 sum has a pure `N_r F^(-c)` bound without an endpoint assumption. That
 stronger bound is propagated through the squared-inner-sum reduction and an
-actual short block. The analytic cancellation input remains open. A
+actual short block. The first unconditional Weyl-differencing layer is also
+proved: exact shifted-pair fibers give the averaged-shift identity, finite
+Cauchy--Schwarz, and the summed window-square expansion with constraint
+`n+h=n'+h'`. Both shift orders reduce to truncated forward correlations, and
+natural-distance regrouping gives the divided finite van der Corput
+inequality with its strict lag range. The zero lag, uniform recursive rule,
+translation of `reciprocalPhaseSum`, appended-lag recursion, and commutation
+of sampled real finite differences with derivatives on the positive ray are
+also proved. The exact terminal affine geometric-sum identity and its
+nonresonant `min(N, 2 / ‖e(alpha)-1‖)` bound are proved, as is its canonical
+nearest-integer-distance form `min(N, 1/(2 dist(alpha,ℤ)))`. Uniform terminal
+bounds propagate through any finite number of Weyl rounds via an explicit
+nested square-root majorant, and the translated reciprocal phase has the exact
+four-step interface needed by the source's `k=5` branch. Each one-step real
+finite difference is exactly an interval integral of its derivative, with
+absolute upper and signed lower derivative-separation bounds. For globally
+smooth phases these estimates iterate with the exact product of all lags. They
+now also iterate on the positive ray over the exact evaluation interval, with
+direct reciprocal-phase upper and critical-regular lower bounds; continuity
+supplies the required constant sign. Terminal iterated phases now have a
+uniform critical-regular first-derivative window obtained from the next source
+derivative, so four lags consume the fifth derivative exactly. The frozen
+Kusmin--Landau theorem is now adapted exactly to `exp(2πix)`; mean-value and
+second-derivative sign bridges turn absolute terminal derivative windows into
+monotone increments. The resulting source-facing theorem proves the nonlinear
+critical-regular terminal sum bound under explicit expanded-interval and
+upper-one-period hypotheses. Exact `rH` lag-sum and `H^r` lag-product bounds
+make this uniform over all admissible lags and truncated lengths on one
+expanded regular interval and feed it through the recursive majorant; the
+literal four-round theorem uses derivative orders five and six and a single
+`H^4` upper-smallness condition. A second, exact lag-sensitive tree retains
+each accumulated lag list and boundary-truncated length, accepts the source
+leaf bound `min(L, 1/(prod(lags)*scale))`, and bounds the innermost lag sum by
+the exact harmonic factor before the first square root. A general induction
+collapses every successive outer lag sum to explicit scalar length and scale
+recurrences with generalized harmonic factors at most `H`; the closed
+four-round source theorem retains the expected inverse-scale sixteenth root.
+The generalized harmonic factors are now also kept sharply: successive
+Cauchy--Schwarz inequalities prove that the exact four-round scale coefficient
+has sixteenth power at most `(6L)^15 * harmonic(H)^4 / (H+1)^4`. Thus the
+terminal scale term retains the decisive harmonic-over-range gain, and a
+source-readable wrapper bounds `harmonic(H)` by `1 + log H`.
+Replacing those factors by `H` yields a coarse scale coefficient with exact
+four-round sixteenth power `(QH)^15`, hence a complete scale term with power
+`(QH)^15/scale`. The length recurrence is split into four explicit terms with
+sixteenth powers `D^8`, `E^8D^4`, `E^12D^2`, and `E^14D`; exact step-factor
+bounds give their denominator powers `8,4,2,1`. All four diagonal terms and the
+scale term are extracted as sixteenth roots and rewritten exactly as real
+`1/16` powers in a source-facing five-term majorant with no hidden recurrence.
+The canonical floor-rounded range `floor((2U)^(-1/4))` is now proved to
+discharge the exact upper-smallness condition and is installed in both root and
+rpow source estimates. Expanded critical starts have the proved count
+`orders.card*(16Xq+4H+2)`; their per-order interval hulls preserve this bound,
+and at most two endpoint cuts per order give the improved regular multiplier
+`2*orders.card+1`. Recovery of real expanded-interval regularity and a global
+long/short-component theorem now work for every range satisfying the exact
+upper-smallness inequality. The adaptive range
+`min(length, floor((2U)^(-1/4)))` automatically fits the interval and preserves
+that inequality, while using the sharp harmonic majorant. The two adaptive
+branches are now unified by the exact denominator bound
+`(H+1)^(-4) <= 2U+(L+1)^(-4)`. This feeds an optimization-ready global
+majorant, with critical width fixed to the `1/128` power of the complete
+effective error scale. That scale is normalized exactly to
+`240(5+j)^5 F/X^5 + (L+1)^(-4) + 1/F` and bounded by the explicit derivative
+factor times the source-shaped three-term error. Final parameter
+optimization now additionally uses
+`min(floor(L*q), canonicalRange)`: its short-component and expanded-window
+penalties are proved to be at most `Lq` and `4Lq+1`, and its harmonic logarithm
+is at most `log L`. Its fourth-power denominator is bounded by
+`2U+(Lq)^(-4)`, and this has been propagated through the terminal root in the
+global theorem. The four diagonal roots are now bounded by `72Lq`, the
+optimized terminal root by `100((5+j)^5+1)(1+log L)Xq`, and the complete
+majorant by the corresponding constant `172`. These estimates propagate to a
+global fixed-power theorem and a wrapper using the explicit source-normalized
+`1/128` power. The additive endpoint constant is absorbed into the same source
+power, leaving one coefficient times `X`. Under `F≤X^4`, an exact short/long
+interval dichotomy now removes the remaining length term on arbitrary
+subintervals: the long case is absorbed into
+`(F/X^5+1/F)^(1/1024)`, while the short case follows from cardinality. This
+gives the source-shaped two-term degree-five bound under the stated
+effective-error and expanded-interval regularity hypotheses. This theorem is
+also specialized to the exact product-restricted Type II correlation support;
+the off-diagonal transformed coefficient obligations and empty-intersection
+case are discharged internally. In the final `N=M` specialization, an exact
+transformed-scale lower bound yields the pointwise kernel-plus-error estimate
+`E^(1/1024)+4(1+distance*F/B)^(-1/1024)`. Its varying interval logarithm is
+uniformized by the outer block length and the result is propagated through the
+endpoint-free kernel summation to the exact Vaughan double-block squared-sum
+bound. The pairwise `F'/K^5≤E` premise is now discharged uniformly from the
+inner block's left endpoint and diameter by the explicit
+`typeIIShortIntervalScaleError`; proving that fixed block error
+logarithmically negligible remains. In the quadratic specialization, outer
+block geometry now discharges all endpoint and power-evaluation conditions;
+the transformed-scale bound also follows once the block error is at most
+`1/K`. In the quadratic case that comparison is now derived from the explicit
+monomial condition `5q|N|≤K^5R^2`, where `R` is the inner block left endpoint.
+The complete estimate is now generalized to arbitrary positive block
+endpoints and specialized directly to the named dyadic blocks in the canonical
+Vaughan double family. Its effective-error family is compressed to the scalar
+`typeIIShortIntervalEffectiveErrorBound≤1`; on large Vaughan bands the proved
+logarithmic width estimate supplies `5q≤K` and hence the expansion margin.
+The canonical theorem now makes the source-faithful distance split internally.
+Pairs with `distance·F/B≤3` use the trivial correlation bound and the proved
+kernel lower bound `1/4`; farther pairs have inverse transformed scale at most
+`2/3` and enter Weyl differencing. Thus no false polynomial lower bound on
+`F` is required. Moreover, the `1/4` upper-scale budget follows from `E≤1/K`
+and the existing `2≤log Bcap` assumption now proves that the common Vaughan
+subdivision budget dominates `4·(240·7^5)`. The remaining low-frequency inputs
+are only `F≥1` and `5q|N|≤K^5R^2`, together with the
+high-transformed-scale and singleton-band branches. A
 source-shaped pointwise
 correlation estimate now propagates through the ordered off-diagonal pairs
 and the exact product-restricted Cauchy--Schwarz identity to a final
@@ -263,12 +380,11 @@ The node follows the useful role separation established in node 74:
 
 ## Next legitimate step
 
-For Theorem 1.8, continue Theorem 2.5 from its compiled exact contract and
-phase calculus and exact product-restricted, block-decomposed weighted Vaughan
-identity through the Vinogradov/Weyl estimate, quantitative Vaughan family
-envelopes, Type I/II bounds, and the derivative-to-coefficient decay step of
-the Fourier argument; the subsequent weight reconstruction is already
-formalized conditional on that decay.
+For Theorem 1.8, continue Theorem 2.5 from its compiled exact contract, phase
+calculus, complete Fourier coefficient decay/reconstruction, and exact
+source-oriented, coefficient-bounded, product-restricted, block-decomposed
+weighted Vaughan identity through the Vinogradov/Weyl estimate and quantitative
+Type I/II bounds.
 Then prove the
 subexponential second clause of Lemma 3.1 and combine it with the now-complete
 Lemma 3.2 and Corollary 2.11.

@@ -1,4 +1,5 @@
 import Tao2026.VinogradovPhase
+import Tao2026.ShortIntervalDecomposition
 import Mathlib.Algebra.Order.Chebyshev
 
 /-!
@@ -128,6 +129,17 @@ theorem typeIIInnerSum_norm_sq
     Complex.normSq_eq_conj_mul_self, mul_comm,
     typeIIInnerSum_mul_conj S γ N M j hm hS]
 
+/-- Linear reciprocal coefficient after the source's Type II correlation
+transformation. -/
+def typeIICorrelationLinearParameter (N : ℝ) (n n' : ℕ) : ℝ :=
+  N * ((n' : ℝ) - n) / ((n : ℝ) * n')
+
+/-- Higher reciprocal coefficient after the source's Type II correlation
+transformation. -/
+def typeIICorrelationHigherParameter (M : ℝ) (j n n' : ℕ) : ℝ :=
+  M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+    ((n : ℝ) ^ j * (n' : ℝ) ^ j)
+
 /-- The correlation sum denoted `X_{n,n'}` in the source, for an arbitrary
 finite outer support `K`. -/
 def typeIICorrelationSum (K : Finset ℕ) (N M : ℝ)
@@ -199,6 +211,195 @@ theorem abs_typeIICorrelationLinearParameter
         mul_nonneg (show 0 ≤ (n : ℝ) from Nat.cast_nonneg n)
         (show 0 ≤ (n' : ℝ) from Nat.cast_nonneg n')
       rw [abs_of_nonneg hden]
+
+/-- The absolute difference of two natural indices, viewed in `ℝ`, is the
+cast of their natural distance. -/
+theorem abs_natCast_sub_eq_natDist_cast (n n' : ℕ) :
+    |(n' : ℝ) - n| = (Nat.dist n' n : ℝ) := by
+  rcases le_total n n' with h | h
+  · rw [Nat.dist_comm, Nat.dist_eq_sub_of_le h, Nat.cast_sub h]
+    exact abs_of_nonneg (sub_nonneg.mpr (by exact_mod_cast h))
+  · rw [Nat.dist_eq_sub_of_le h, Nat.cast_sub h]
+    rw [abs_of_nonpos (sub_nonpos.mpr (by exact_mod_cast h))]
+    ring
+
+/-- A nonzero linear frequency supplies a sharp lower bound for the
+transformed Type II phase scale.  The form on the left is exactly
+`distance / B` times the original linear contribution at product scale
+`K*B`. -/
+theorem typeIICorrelationScale_lower_of_linear
+    (N M K B : ℝ) (j n n' : ℕ)
+    (hK : 0 < K) (hB : 0 < B) (hn : 0 < n) (hn' : 0 < n')
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B) :
+    (Nat.dist n' n : ℝ) / B * (|N| / (K * B)) ≤
+      reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter M j n n') j K := by
+  have hnR : 0 < (n : ℝ) := by exact_mod_cast hn
+  have hn'R : 0 < (n' : ℝ) := by exact_mod_cast hn'
+  have hden : (n : ℝ) * n' ≤ B ^ 2 := by
+    rw [pow_two]
+    exact mul_le_mul hnB hn'B hn'R.le hB.le
+  have hnum : 0 ≤ |N| * (Nat.dist n' n : ℝ) := by positivity
+  have hcoeff :
+      |N| * (Nat.dist n' n : ℝ) / B ^ 2 ≤
+        |typeIICorrelationLinearParameter N n n'| := by
+    calc
+      |N| * (Nat.dist n' n : ℝ) / B ^ 2 ≤
+          |N| * (Nat.dist n' n : ℝ) / ((n : ℝ) * n') :=
+        div_le_div_of_nonneg_left hnum (mul_pos hnR hn'R) hden
+      _ = |typeIICorrelationLinearParameter N n n'| := by
+        rw [typeIICorrelationLinearParameter,
+          abs_typeIICorrelationLinearParameter,
+          abs_natCast_sub_eq_natDist_cast]
+  have hlinear :
+      (|N| * (Nat.dist n' n : ℝ) / B ^ 2) / K ≤
+        |typeIICorrelationLinearParameter N n n'| / K :=
+    div_le_div_of_nonneg_right hcoeff hK.le
+  calc
+    (Nat.dist n' n : ℝ) / B * (|N| / (K * B)) =
+        (|N| * (Nat.dist n' n : ℝ) / B ^ 2) / K := by
+      field_simp
+    _ ≤ |typeIICorrelationLinearParameter N n n'| / K := hlinear
+    _ ≤ reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter M j n n') j K := by
+      unfold reciprocalPhaseScale
+      exact le_add_of_nonneg_right (by positivity)
+
+/-- The linear term of the reciprocal phase scale recovers the absolute
+linear coefficient after multiplication by the positive base scale. -/
+theorem abs_le_reciprocalPhaseScale_mul_scale
+    (N M : ℝ) (j : ℕ) {Z : ℝ} (hZ : 0 < Z) :
+    |N| ≤ reciprocalPhaseScale N M j Z * Z := by
+  have hlinear : |N| / Z ≤ reciprocalPhaseScale N M j Z := by
+    unfold reciprocalPhaseScale
+    exact le_add_of_nonneg_right (by positivity)
+  have hmul := mul_le_mul_of_nonneg_right hlinear hZ.le
+  calc
+    |N| = (|N| / Z) * Z := by field_simp
+    _ ≤ reciprocalPhaseScale N M j Z * Z := hmul
+
+/-- For equal phase parameters and product scale at least one, the full source
+scale is at most twice its linear contribution. -/
+theorem reciprocalPhaseScale_equalParameters_le_two_mul_linear
+    (N Z : ℝ) {j : ℕ} (hZ : 1 ≤ Z) (hj : 1 ≤ j) :
+    reciprocalPhaseScale N N j Z ≤ 2 * (|N| / Z) := by
+  have hZpos : 0 < Z := zero_lt_one.trans_le hZ
+  have hZpow : Z ≤ Z ^ j := le_self_pow₀ hZ (Nat.ne_of_gt hj)
+  have hhigher : |N| / Z ^ j ≤ |N| / Z :=
+    div_le_div_of_nonneg_left (abs_nonneg N) hZpos hZpow
+  unfold reciprocalPhaseScale
+  linarith
+
+/-- In the `N=M` specialization ultimately used by Tao, natural distance
+controls the complete original phase scale, with only the explicit factor
+two lost when the higher reciprocal term is absorbed. -/
+theorem typeIICorrelationScale_lower_of_equalParameters
+    (N K B : ℝ) {j n n' : ℕ}
+    (hK : 0 < K) (hB : 0 < B) (hKB : 1 ≤ K * B) (hj : 1 ≤ j)
+    (hn : 0 < n) (hn' : 0 < n')
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B) :
+    (Nat.dist n' n : ℝ) / B *
+        (reciprocalPhaseScale N N j (K * B) / 2) ≤
+      reciprocalPhaseScale
+        (typeIICorrelationLinearParameter N n n')
+        (typeIICorrelationHigherParameter N j n n') j K := by
+  have hdB : 0 ≤ (Nat.dist n' n : ℝ) / B := by positivity
+  have hsource := reciprocalPhaseScale_equalParameters_le_two_mul_linear
+    N (K * B) hKB hj
+  have hmul := mul_le_mul_of_nonneg_left hsource hdB
+  have hhalf :
+      (Nat.dist n' n : ℝ) / B *
+          (reciprocalPhaseScale N N j (K * B) / 2) ≤
+        (Nat.dist n' n : ℝ) / B * (|N| / (K * B)) := by
+    nlinarith
+  exact hhalf.trans
+    (typeIICorrelationScale_lower_of_linear
+      N N K B j n n' hK hB hn hn' hnB hn'B)
+
+/-- Off the diagonal, the reciprocal transformed scale is controlled by the
+original equal-parameter source scale.  This is the inverse-scale term needed
+in the Type II four-step effective error. -/
+theorem one_div_typeIICorrelationScale_le_two_mul_B_div_sourceScale
+    (N K B : ℝ) {j n n' : ℕ}
+    (hK : 0 < K) (hB : 0 < B) (hKB : 1 ≤ K * B) (hj : 1 ≤ j)
+    (hn : 0 < n) (hn' : 0 < n') (hne : n ≠ n')
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hF : 0 < reciprocalPhaseScale N N j (K * B)) :
+    1 / reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N j n n') j K ≤
+      2 * B / reciprocalPhaseScale N N j (K * B) := by
+  let F := reciprocalPhaseScale N N j (K * B)
+  let F' := reciprocalPhaseScale
+    (typeIICorrelationLinearParameter N n n')
+    (typeIICorrelationHigherParameter N j n n') j K
+  have hdistNat : 1 ≤ Nat.dist n' n :=
+    Nat.one_le_iff_ne_zero.mpr (fun h => hne (Nat.eq_of_dist_eq_zero h).symm)
+  have hdist : (1 : ℝ) ≤ (Nat.dist n' n : ℝ) := by exact_mod_cast hdistNat
+  have hdiv : 1 / B ≤ (Nat.dist n' n : ℝ) / B :=
+    div_le_div_of_nonneg_right hdist hB.le
+  have hhalf0 : 0 ≤ F / 2 := by unfold F; positivity
+  have hbaseRaw := mul_le_mul_of_nonneg_right hdiv hhalf0
+  have hbase : F / (2 * B) ≤ (Nat.dist n' n : ℝ) / B * (F / 2) := by
+    calc
+      F / (2 * B) = (1 / B) * (F / 2) := by field_simp
+      _ ≤ (Nat.dist n' n : ℝ) / B * (F / 2) := hbaseRaw
+  have hlower : (Nat.dist n' n : ℝ) / B * (F / 2) ≤ F' := by
+    simpa only [F, F'] using
+      (typeIICorrelationScale_lower_of_equalParameters
+        N K B hK hB hKB hj hn hn' hnB hn'B)
+  have hbasePos : 0 < F / (2 * B) := by unfold F; positivity
+  have hinv : 1 / F' ≤ 1 / (F / (2 * B)) :=
+    one_div_le_one_div_of_le hbasePos (hbase.trans hlower)
+  calc
+    1 / reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N j n n') j K = 1 / F' := by rfl
+    _ ≤ 1 / (F / (2 * B)) := hinv
+    _ = 2 * B / reciprocalPhaseScale N N j (K * B) := by
+      unfold F
+      field_simp
+
+/-- Once the source-scaled distance is at least three, the transformed phase
+scale is at least `3/2`, so its reciprocal contributes at most `2/3`.  This
+is the far-pair counterpart to the trivial near-pair kernel estimate. -/
+theorem one_div_typeIICorrelationScale_le_two_thirds_of_three_le_scaledDistance
+    (N K B : ℝ) {j n n' : ℕ}
+    (hK : 0 < K) (hB : 0 < B) (hKB : 1 ≤ K * B) (hj : 1 ≤ j)
+    (hn : 0 < n) (hn' : 0 < n')
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hfar : 3 ≤ (Nat.dist n' n : ℝ) *
+      reciprocalPhaseScale N N j (K * B) / B) :
+    1 / reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N j n n') j K ≤ 2 / 3 := by
+  let F := reciprocalPhaseScale N N j (K * B)
+  let F' := reciprocalPhaseScale
+    (typeIICorrelationLinearParameter N n n')
+    (typeIICorrelationHigherParameter N j n n') j K
+  have hlower : (Nat.dist n' n : ℝ) / B * (F / 2) ≤ F' := by
+    simpa only [F, F'] using
+      (typeIICorrelationScale_lower_of_equalParameters
+        N K B hK hB hKB hj hn hn' hnB hn'B)
+  have hthreeHalves : (3 / 2 : ℝ) ≤
+      (Nat.dist n' n : ℝ) / B * (F / 2) := by
+    calc
+      (3 / 2 : ℝ) ≤
+          ((Nat.dist n' n : ℝ) * F / B) / 2 := by
+        apply div_le_div_of_nonneg_right
+        · simpa only [F] using hfar
+        · norm_num
+      _ = (Nat.dist n' n : ℝ) / B * (F / 2) := by field_simp
+  have hinv : 1 / F' ≤ 1 / (3 / 2 : ℝ) :=
+    one_div_le_one_div_of_le (by norm_num) (hthreeHalves.trans hlower)
+  calc
+    1 / reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter N j n n') j K = 1 / F' := by rfl
+    _ ≤ 1 / (3 / 2 : ℝ) := hinv
+    _ = 2 / 3 := by norm_num
 
 /-- Exact absolute size of the transformed higher reciprocal coefficient. -/
 theorem abs_typeIICorrelationHigherParameter
@@ -385,6 +586,293 @@ theorem reciprocalPhaseScale_typeIICorrelation_le_productScale
   exact (reciprocalPhaseScale_typeIICorrelation_le_of_bounds
     N M K R B (k + 1) n n' hK hR hn hn' hnB hn'B).trans_eq
       (typeIICorrelationScaleMajorant_eq N M K R B k n n' hK.ne' hR.ne')
+
+/-- If the two inner indices are separated by at most the lower support scale,
+the transformed phase's `K⁻⁵` contribution is uniformly bounded by the source
+product-scale majorant divided by `K⁵`.  This is the explicit error parameter
+used by the four-step Type II theorem. -/
+theorem reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_productScale
+    (N M K R B : ℝ) {j n n' : ℕ} (hj : 1 ≤ j)
+    (hK : 0 < K) (hR : 0 < R)
+    (hn : R ≤ (n : ℝ)) (hn' : R ≤ (n' : ℝ))
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hdR : (Nat.dist n' n : ℝ) ≤ R) :
+    reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter M j n n') j K / K ^ 5 ≤
+      (|N| / (K * R) +
+          (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j)) /
+        K ^ 5 := by
+  have hscale := reciprocalPhaseScale_typeIICorrelation_le_productScale
+    N M K R B hj hK hR hn hn' hnB hn'B
+  rw [← abs_natCast_sub_eq_natDist_cast] at hdR
+  have hratio0 : 0 ≤ |(n' : ℝ) - n| / R := by positivity
+  have hratio1 : |(n' : ℝ) - n| / R ≤ 1 := by
+    apply (div_le_one hR).2
+    exact hdR
+  have hmajorant : 0 ≤ |N| / (K * R) +
+      (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j) := by
+    have hBR : 0 ≤ B / R := by
+      have hB0 : 0 ≤ B := (Nat.cast_nonneg n).trans hnB
+      positivity
+    positivity
+  have huniform : reciprocalPhaseScale
+        (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
+        (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+          ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j K ≤
+      |N| / (K * R) +
+        (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j) :=
+    hscale.trans <| by
+      have hmul := mul_le_mul_of_nonneg_right hratio1 hmajorant
+      simpa using hmul
+  apply div_le_div_of_nonneg_right _ (pow_nonneg hK.le 5)
+  simpa only [typeIICorrelationLinearParameter,
+    typeIICorrelationHigherParameter] using huniform
+
+/-- Version of the product-scale upper bound with a separate separation
+majorant `D`.  This is the form naturally used on a short interval: `R` is
+its left endpoint, whereas `D` is its length. -/
+theorem reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_productScale_of_dist
+    (N M K R B D : ℝ) {j n n' : ℕ} (hj : 1 ≤ j)
+    (hK : 0 < K) (hR : 0 < R)
+    (hn : R ≤ (n : ℝ)) (hn' : R ≤ (n' : ℝ))
+    (hnB : (n : ℝ) ≤ B) (hn'B : (n' : ℝ) ≤ B)
+    (hdD : (Nat.dist n' n : ℝ) ≤ D) :
+    reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter M j n n') j K / K ^ 5 ≤
+      (D / R * (|N| / (K * R) +
+          (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j))) /
+        K ^ 5 := by
+  have hscale := reciprocalPhaseScale_typeIICorrelation_le_productScale
+    N M K R B hj hK hR hn hn' hnB hn'B
+  rw [← abs_natCast_sub_eq_natDist_cast] at hdD
+  have hratio : |(n' : ℝ) - n| / R ≤ D / R :=
+    div_le_div_of_nonneg_right hdD hR.le
+  have hmajorant : 0 ≤ |N| / (K * R) +
+      (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j) := by
+    have hB0 : 0 ≤ B := (Nat.cast_nonneg n).trans hnB
+    have hBR : 0 ≤ B / R := by positivity
+    positivity
+  have huniform : reciprocalPhaseScale
+        (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
+        (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+          ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j K ≤
+      D / R * (|N| / (K * R) +
+        (j : ℝ) * (B / R) ^ (j - 1) * (|M| / (K * R) ^ j)) :=
+    hscale.trans (mul_le_mul_of_nonneg_right hratio hmajorant)
+  apply div_le_div_of_nonneg_right _ (pow_nonneg hK.le 5)
+  simpa only [typeIICorrelationLinearParameter,
+    typeIICorrelationHigherParameter] using huniform
+
+/-- Pair-independent high-scale error attached to a literal short block.
+The support lower bound is its left endpoint `1 + kq`, and its diameter is
+bounded by `q`. -/
+def typeIIShortIntervalScaleError
+    (N M K B : ℝ) (j q k : ℕ) : ℝ :=
+  ((q : ℝ) / ((1 + k * q : ℕ) : ℝ) *
+      (|N| / (K * ((1 + k * q : ℕ) : ℝ)) +
+        (j : ℝ) * (B / ((1 + k * q : ℕ) : ℝ)) ^ (j - 1) *
+          (|M| / (K * ((1 + k * q : ℕ) : ℝ)) ^ j))) /
+    K ^ 5
+
+/-- Pair-independent high-scale error for a short block with arbitrary
+positive initial endpoint `S₀`. -/
+def typeIIShortIntervalScaleErrorAt
+    (N M K B : ℝ) (j S₀ q k : ℕ) : ℝ :=
+  ((q : ℝ) / ((S₀ + k * q : ℕ) : ℝ) *
+      (|N| / (K * ((S₀ + k * q : ℕ) : ℝ)) +
+        (j : ℝ) * (B / ((S₀ + k * q : ℕ) : ℝ)) ^ (j - 1) *
+          (|M| / (K * ((S₀ + k * q : ℕ) : ℝ)) ^ j))) /
+    K ^ 5
+
+/-- Uniform transformed-scale estimate for two indices in a short block with
+an arbitrary positive initial endpoint. -/
+theorem reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortIntervalAt
+    (N M K B : ℝ) {j S₀ S₁ q k n n' : ℕ} (hj : 1 ≤ j)
+    (hK : 0 < K) (hS₀ : 0 < S₀) (hq : 0 < q)
+    (hS₁ : (S₁ : ℝ) ≤ B)
+    (hn : n ∈ shortIntervalBlock S₀ S₁ q k)
+    (hn' : n' ∈ shortIntervalBlock S₀ S₁ q k) :
+    reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter M j n n') j K / K ^ 5 ≤
+      typeIIShortIntervalScaleErrorAt N M K B j S₀ q k := by
+  have hnData := mem_shortIntervalBlock.mp hn
+  have hn'Data := mem_shortIntervalBlock.mp hn'
+  have hdist : (Nat.dist n' n : ℝ) ≤ (q : ℝ) := by
+    exact_mod_cast Nat.le_of_lt
+      (natDist_lt_of_mem_same_shortIntervalBlock hq hn' hn)
+  have hnLower : S₀ + k * q ≤ n := by
+    rw [shortIntervalBlock_eq_Ico hq] at hn
+    exact (Finset.mem_Ico.mp hn).1
+  have hn'Lower : S₀ + k * q ≤ n' := by
+    rw [shortIntervalBlock_eq_Ico hq] at hn'
+    exact (Finset.mem_Ico.mp hn').1
+  have hnUpper : n ≤ S₁ := by omega
+  have hn'Upper : n' ≤ S₁ := by omega
+  have hnUpperReal : (n : ℝ) ≤ (S₁ : ℝ) := by exact_mod_cast hnUpper
+  have hn'UpperReal : (n' : ℝ) ≤ (S₁ : ℝ) := by exact_mod_cast hn'Upper
+  apply reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_productScale_of_dist
+    N M K (((S₀ + k * q : ℕ) : ℝ)) B (q : ℝ) hj hK
+  · have hleft : 0 < S₀ + k * q := by omega
+    exact_mod_cast hleft
+  · exact_mod_cast hnLower
+  · exact_mod_cast hn'Lower
+  · exact hnUpperReal.trans hS₁
+  · exact hn'UpperReal.trans hS₁
+  · exact hdist
+
+/-- In the quadratic equal-parameter case, dyadic support collapses the
+short-block scale error to the explicit monomial `5q|N|/(K^6 R^2)`, where
+`R = S₀ + kq` is the inner block's left endpoint. -/
+theorem typeIIShortIntervalScaleErrorAt_quadratic_le_monomial
+    (N K B : ℝ) {S₀ q k : ℕ}
+    (hK : 1 ≤ K) (hS₀ : 0 < S₀) (hB0 : 0 ≤ B)
+    (hB : B ≤ 2 * (((S₀ + k * q : ℕ) : ℝ))) :
+    typeIIShortIntervalScaleErrorAt N N K B 2 S₀ q k ≤
+      5 * (q : ℝ) * |N| /
+        (K ^ 6 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) := by
+  let R : ℝ := ((S₀ + k * q : ℕ) : ℝ)
+  have hR : 1 ≤ R := by
+    unfold R
+    exact_mod_cast Nat.succ_le_iff.mpr (by omega : 0 < S₀ + k * q)
+  have hKpos : 0 < K := zero_lt_one.trans_le hK
+  have hRpos : 0 < R := zero_lt_one.trans_le hR
+  have hKR : 1 ≤ K * R := by nlinarith [mul_nonneg (sub_nonneg.mpr hK) (sub_nonneg.mpr hR)]
+  have hKRpos : 0 < K * R := zero_lt_one.trans_le hKR
+  have hKRpow : K * R ≤ (K * R) ^ 2 := le_self_pow₀ hKR (by norm_num)
+  have hpower : |N| / (K * R) ^ 2 ≤ |N| / (K * R) :=
+    div_le_div_of_nonneg_left (abs_nonneg N) hKRpos hKRpow
+  have hBR : B / R ≤ 2 := by
+    apply (div_le_iff₀ hRpos).2
+    simpa only [R] using hB
+  have hBR0 : 0 ≤ B / R := by
+    positivity
+  have hsecond : 2 * (B / R) * (|N| / (K * R) ^ 2) ≤
+      4 * (|N| / (K * R)) := by
+    calc
+      2 * (B / R) * (|N| / (K * R) ^ 2) ≤
+          2 * 2 * (|N| / (K * R)) := by gcongr
+      _ = 4 * (|N| / (K * R)) := by ring
+  have hsum : |N| / (K * R) +
+      2 * (B / R) * (|N| / (K * R) ^ 2) ≤
+        5 * (|N| / (K * R)) := by linarith
+  have hqR0 : 0 ≤ (q : ℝ) / R := by positivity
+  calc
+    typeIIShortIntervalScaleErrorAt N N K B 2 S₀ q k =
+        ((q : ℝ) / R * (|N| / (K * R) +
+          2 * (B / R) * (|N| / (K * R) ^ 2))) / K ^ 5 := by
+      norm_num only [typeIIShortIntervalScaleErrorAt, R, Nat.reduceSubDiff,
+        pow_one, Nat.cast_ofNat]
+    _ ≤ ((q : ℝ) / R * (5 * (|N| / (K * R)))) / K ^ 5 :=
+      div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hsum hqR0) (pow_nonneg hKpos.le 5)
+    _ = 5 * (q : ℝ) * |N| / (K ^ 6 * R ^ 2) := by field_simp
+    _ = 5 * (q : ℝ) * |N| /
+        (K ^ 6 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) := by rfl
+
+/-- A single polynomial-scale inequality suffices for the low-scale condition
+`typeIIShortIntervalScaleErrorAt ≤ 1/K`. -/
+theorem typeIIShortIntervalScaleErrorAt_quadratic_le_one_div
+    (N K B : ℝ) {S₀ q k : ℕ}
+    (hK : 1 ≤ K) (hS₀ : 0 < S₀) (hB0 : 0 ≤ B)
+    (hB : B ≤ 2 * (((S₀ + k * q : ℕ) : ℝ)))
+    (hsize : 5 * (q : ℝ) * |N| ≤
+      K ^ 5 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) :
+    typeIIShortIntervalScaleErrorAt N N K B 2 S₀ q k ≤ 1 / K := by
+  have hKpos : 0 < K := zero_lt_one.trans_le hK
+  refine (typeIIShortIntervalScaleErrorAt_quadratic_le_monomial
+    N K B hK hS₀ hB0 hB).trans ?_
+  rw [div_le_div_iff₀ (mul_pos (pow_pos hKpos 6)
+    (pow_pos (by positivity) 2)) hKpos]
+  have hcalc : 5 * (q : ℝ) * |N| * K ≤
+        (K ^ 5 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) * K :=
+    mul_le_mul_of_nonneg_right hsize hKpos.le
+  calc
+    5 * (q : ℝ) * |N| * K ≤
+        (K ^ 5 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) * K := hcalc
+    _ = 1 * (K ^ 6 * (((S₀ + k * q : ℕ) : ℝ)) ^ 2) := by ring
+
+/-- Source-scale form of the quadratic low-frequency condition.  The global
+phase scale controls `|N|`, so `10qF ≤ K⁴R` implies the canonical block error
+bound `E ≤ 1/K`. -/
+theorem typeIIShortIntervalScaleErrorAt_quadratic_le_one_div_of_sourceScale
+    (N K B : ℝ) {S₀ q k : ℕ}
+    (hK : 1 ≤ K) (hS₀ : 0 < S₀) (hB : 0 < B)
+    (hBupper : B ≤ 2 * (((S₀ + k * q : ℕ) : ℝ)))
+    (hsource : 10 * (q : ℝ) * reciprocalPhaseScale N N 2 (K * B) ≤
+      K ^ 4 * (((S₀ + k * q : ℕ) : ℝ))) :
+    typeIIShortIntervalScaleErrorAt N N K B 2 S₀ q k ≤ 1 / K := by
+  let R : ℝ := ((S₀ + k * q : ℕ) : ℝ)
+  let F := reciprocalPhaseScale N N 2 (K * B)
+  have hKpos : 0 < K := zero_lt_one.trans_le hK
+  have hRpos : 0 < R := by
+    unfold R
+    exact_mod_cast (by omega : 0 < S₀ + k * q)
+  have hKBpos : 0 < K * B := mul_pos hKpos hB
+  have hN : |N| ≤ F * (K * B) := by
+    simpa only [F] using
+      (abs_le_reciprocalPhaseScale_mul_scale N N 2 hKBpos)
+  have hF0 : 0 ≤ F := by unfold F reciprocalPhaseScale; positivity
+  have hN' : |N| ≤ 2 * F * K * R := by
+    calc
+      |N| ≤ F * (K * B) := hN
+      _ ≤ F * (K * (2 * R)) := by gcongr
+      _ = 2 * F * K * R := by ring
+  have hq0 : 0 ≤ (q : ℝ) := Nat.cast_nonneg q
+  have hleft : 5 * (q : ℝ) * |N| ≤ 10 * (q : ℝ) * F * K * R := by
+    have h5q0 : 0 ≤ 5 * (q : ℝ) := by positivity
+    have hmul := mul_le_mul_of_nonneg_left hN' h5q0
+    nlinarith
+  have hsourceK := mul_le_mul_of_nonneg_right hsource hKpos.le
+  have hsourceKR := mul_le_mul_of_nonneg_right hsourceK hRpos.le
+  have hsize : 5 * (q : ℝ) * |N| ≤ K ^ 5 * R ^ 2 := by
+    calc
+      5 * (q : ℝ) * |N| ≤ 10 * (q : ℝ) * F * K * R := hleft
+      _ ≤ (K ^ 4 * R) * K * R := by
+        simpa only [F, R, mul_assoc] using hsourceKR
+      _ = K ^ 5 * R ^ 2 := by ring
+  apply typeIIShortIntervalScaleErrorAt_quadratic_le_one_div
+    N K B hK hS₀ hB.le hBupper
+  simpa only [R] using hsize
+
+/-- Uniform transformed-scale estimate for two indices in one literal short
+block.  Its explicit error scale uses the block left endpoint and length, so
+no pair-dependent upper-bound premise remains. -/
+theorem reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortInterval
+    (N M K B : ℝ) {j Binner q k n n' : ℕ} (hj : 1 ≤ j)
+    (hK : 0 < K) (hq : 0 < q)
+    (hBinner : (Binner : ℝ) ≤ B)
+    (hn : n ∈ shortIntervalBlock 1 (Binner + 1) q k)
+    (hn' : n' ∈ shortIntervalBlock 1 (Binner + 1) q k) :
+    reciprocalPhaseScale
+          (typeIICorrelationLinearParameter N n n')
+          (typeIICorrelationHigherParameter M j n n') j K / K ^ 5 ≤
+      typeIIShortIntervalScaleError N M K B j q k := by
+  have hnData := mem_shortIntervalBlock.mp hn
+  have hn'Data := mem_shortIntervalBlock.mp hn'
+  have hdist : (Nat.dist n' n : ℝ) ≤ (q : ℝ) := by
+    exact_mod_cast Nat.le_of_lt
+      (natDist_lt_of_mem_same_shortIntervalBlock hq hn' hn)
+  have hnLower : 1 + k * q ≤ n := by
+    rw [shortIntervalBlock_eq_Ico hq] at hn
+    exact (Finset.mem_Ico.mp hn).1
+  have hn'Lower : 1 + k * q ≤ n' := by
+    rw [shortIntervalBlock_eq_Ico hq] at hn'
+    exact (Finset.mem_Ico.mp hn').1
+  have hnUpper : n ≤ Binner := by omega
+  have hn'Upper : n' ≤ Binner := by omega
+  have hnUpperReal : (n : ℝ) ≤ (Binner : ℝ) := by exact_mod_cast hnUpper
+  have hn'UpperReal : (n' : ℝ) ≤ (Binner : ℝ) := by exact_mod_cast hn'Upper
+  apply reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_productScale_of_dist
+    N M K (((1 + k * q : ℕ) : ℝ)) B (q : ℝ) hj hK
+  · positivity
+  · exact_mod_cast hnLower
+  · exact_mod_cast hn'Lower
+  · exact hnUpperReal.trans hBinner
+  · exact hn'UpperReal.trans hBinner
+  · exact hdist
 
 /-- Dyadic-support specialization of the transformed phase-scale comparison.
 For `n,n' ∈ [R,2R]`, the higher-power loss is explicitly
@@ -630,6 +1118,113 @@ def typeIIProductRestrictedCorrelationSum (I K : Finset ℕ) (N M : ℝ)
         (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
         (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
           ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j m)
+
+/-- Exact lower endpoint of the source's intersection
+`[K₀,K₁) ∩ (1/n)[a,b) ∩ (1/n')[a,b)` when the outer support is
+the `k`-th quotient block. -/
+def typeIIProductRestrictedBlockLower
+    (a K₀ q k n n' : ℕ) : ℕ :=
+  max (K₀ + k * q) (max (a ⌈/⌉ n) (a ⌈/⌉ n'))
+
+/-- Exact upper endpoint of the same three-interval intersection. -/
+def typeIIProductRestrictedBlockUpper
+    (b K₀ K₁ q k n n' : ℕ) : ℕ :=
+  min (min K₁ (K₀ + (k + 1) * q))
+    (min (b ⌈/⌉ n) (b ⌈/⌉ n'))
+
+/-- The filtered support appearing in `X_{n,n'}` is literally one half-open
+natural interval, with all integer endpoint rounding made explicit. -/
+theorem typeIIProductRestrictedBlock_filter_eq_Ico
+    {a b K₀ K₁ q k n n' : ℕ} (hq : 0 < q)
+    (hn : 0 < n) (hn' : 0 < n') :
+    (shortIntervalBlock K₀ K₁ q k).filter
+        (fun m => m * n ∈ Finset.Ico a b ∧ m * n' ∈ Finset.Ico a b) =
+      Finset.Ico (typeIIProductRestrictedBlockLower a K₀ q k n n')
+        (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n') := by
+  rw [shortIntervalBlock_eq_Ico hq]
+  ext m
+  simp only [Finset.mem_filter, Finset.mem_Ico,
+    mul_mem_Ico_iff_mem_Ico_ceilDiv hn,
+    mul_mem_Ico_iff_mem_Ico_ceilDiv hn',
+    typeIIProductRestrictedBlockLower,
+    typeIIProductRestrictedBlockUpper, max_le_iff, lt_min_iff]
+  aesop
+
+/-- Intersecting with the two product restrictions cannot enlarge the outer
+quotient block: the resulting interval has natural length at most `q`. -/
+theorem typeIIProductRestrictedBlock_length_le
+    (a b K₀ K₁ q k n n' : ℕ) :
+    typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' -
+        typeIIProductRestrictedBlockLower a K₀ q k n n' ≤ q := by
+  have hlower : K₀ + k * q ≤
+      typeIIProductRestrictedBlockLower a K₀ q k n n' :=
+    le_max_left _ _
+  have hupper :
+      typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n' ≤
+        K₀ + (k + 1) * q := by
+    exact (min_le_left _ _).trans (min_le_right _ _)
+  rw [Nat.add_mul] at hupper
+  simp only [one_mul] at hupper
+  omega
+
+/-- Consequently the source's product-restricted correlation `X_{n,n'}` is
+exactly a reciprocal-phase sum over one explicit interval.  This is the
+direct input shape required by the integer Vinogradov/Weyl proposition. -/
+theorem typeIIProductRestrictedCorrelationSum_shortIntervalBlock_eq
+    (a b K₀ K₁ q k : ℕ) (N M : ℝ) (j : ℕ) {n n' : ℕ}
+    (hq : 0 < q) (hn : 0 < n) (hn' : 0 < n') :
+    typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+        (shortIntervalBlock K₀ K₁ q k) N M j n n' =
+      reciprocalPhaseSum
+        (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
+        (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+          ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j
+        (typeIIProductRestrictedBlockLower a K₀ q k n n')
+        (typeIIProductRestrictedBlockUpper b K₀ K₁ q k n n') := by
+  unfold typeIIProductRestrictedCorrelationSum reciprocalPhaseSum
+  rw [typeIIProductRestrictedBlock_filter_eq_Ico hq hn hn']
+
+/-- Specialization to the actual named dyadic block used by the canonical
+Vaughan family. -/
+theorem typeIIProductRestrictedCorrelationSum_dyadicBlock_eq
+    (a b L : ℕ) (N M : ℝ) (j : ℕ) {sk : ℕ × ℕ} {n n' : ℕ}
+    (hL : 0 < L) (hn : 0 < n) (hn' : 0 < n') :
+    typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+        (dyadicShortIntervalIndexedBlock L sk) N M j n n' =
+      reciprocalPhaseSum
+        (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
+        (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+          ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j
+        (typeIIProductRestrictedBlockLower a (2 ^ sk.1)
+          (dyadicShortIntervalLength (2 ^ sk.1) L) sk.2 n n')
+        (typeIIProductRestrictedBlockUpper b (2 ^ sk.1) (2 * 2 ^ sk.1)
+          (dyadicShortIntervalLength (2 ^ sk.1) L) sk.2 n n') := by
+  unfold dyadicShortIntervalIndexedBlock
+  exact typeIIProductRestrictedCorrelationSum_shortIntervalBlock_eq
+    a b (2 ^ sk.1) (2 * 2 ^ sk.1)
+      (dyadicShortIntervalLength (2 ^ sk.1) L) sk.2 N M j
+      (dyadicShortIntervalLength_pos (pow_pos (by omega) sk.1) hL) hn hn'
+
+/-- The same exact interval rewrite for a canonical Vaughan outer block. -/
+theorem typeIIProductRestrictedCorrelationSum_vaughanBlock_eq
+    (a b B : ℕ) (N M : ℝ) (j : ℕ) {sk : ℕ × ℕ} {n n' : ℕ}
+    (hn : 0 < n) (hn' : 0 < n') :
+    typeIIProductRestrictedCorrelationSum (Finset.Ico a b)
+        (dyadicShortIntervalIndexedBlock (vaughanShortIntervalBudget B) sk)
+        N M j n n' =
+      reciprocalPhaseSum
+        (N * ((n' : ℝ) - n) / ((n : ℝ) * n'))
+        (M * ((n' : ℝ) ^ j - (n : ℝ) ^ j) /
+          ((n : ℝ) ^ j * (n' : ℝ) ^ j)) j
+        (typeIIProductRestrictedBlockLower a (2 ^ sk.1)
+          (dyadicShortIntervalLength (2 ^ sk.1)
+            (vaughanShortIntervalBudget B)) sk.2 n n')
+        (typeIIProductRestrictedBlockUpper b (2 ^ sk.1) (2 * 2 ^ sk.1)
+          (dyadicShortIntervalLength (2 ^ sk.1)
+            (vaughanShortIntervalBudget B)) sk.2 n n') := by
+  exact typeIIProductRestrictedCorrelationSum_dyadicBlock_eq
+    a b (vaughanShortIntervalBudget B) N M j
+      (vaughanShortIntervalBudget_pos B) hn hn'
 
 /-- On the diagonal, the exact product-restricted correlation is the number
 of outer variables whose product lies in `I`. -/

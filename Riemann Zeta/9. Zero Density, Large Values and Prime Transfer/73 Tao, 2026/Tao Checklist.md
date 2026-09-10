@@ -254,6 +254,18 @@ paper has been formalized.
 - [x] Prove the generic finite shorter-than-dyadic quotient-block
   decomposition: exact sum regrouping, a ceiling block-count bound, and
   strict within-block diameter.
+- [x] Prove the exact dyadic family-count envelope: block length `ceil(D/L)`
+  gives at most `L` blocks in `[D,2D)`, hence `S` dyadic ranges give at most
+  `S*L` short families.
+- [x] Construct the canonical family over `[1,B]` with budget
+  `(log₂ B+1)^101`; prove exact cardinality `(log₂ B+1)^102`, coverage of
+  every positive index, the rounded relative diameter `D/L+1`, exact weighted
+  coefficient decomposition, and the final counted Type I/II Vaughan-family
+  identity retaining `m*n∈I`.
+- [x] Compare `Real.log B` with `log₂ B+1` and absorb ceiling rounding via
+  the extra subdivision power, proving the literal source support width
+  `(1+log(B)^(-100))M` for every block; treat sub-budget bands as singletons
+  and transfer to `(1+log(P)^(-100))M` whenever `P≤B`.
 - [x] Lift the quotient blocks to coefficient sequences: prove exact
   pointwise and arbitrary finite weighted-sum decompositions for coefficients
   supported on the original interval, with uniform norm bounds preserved by
@@ -284,6 +296,11 @@ paper has been formalized.
 - [x] Specialize the resulting estimate to the actual inner quotient block
   and exact Vaughan outer/inner double blocks, discharging block diameter and
   nonzero reciprocal-index hypotheses from membership.
+- [x] Prove a quotient block is literally one `Finset.Ico`; identify
+  `mn∈[a,b)` with the ceiling-divided interval in `m`; and rewrite the exact
+  product-restricted correlation support as one explicit intersection
+  interval of length at most the outer block length. Specialize this rewrite
+  through the canonical Vaughan block to `reciprocalPhaseSum`.
 - [x] Prove every quotient block has cardinality at most its chosen length and
   replace both double-block support cardinalities by `q_outer` and `q_inner`
   in the final squared-sum estimate.
@@ -295,9 +312,137 @@ paper has been formalized.
   center, obtain a pure `N_r F^(-c)` kernel bound without extra assumptions,
   and propagate it through the complete squared-inner-sum reduction, the
   exact Vaughan double blocks, and their source-facing block-length bound.
-- [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl
-  cancellation, the paper's precise polylogarithmic Vaughan family count, and
-  quantitative Type I/II estimates. The canonical Vaughan coefficient
+- [x] Begin the unconditional Weyl engine with the exact shifted-pair fibers,
+  prove the `H`-fold averaged-shift identity and its finite Cauchy--Schwarz
+  inequality, expand the summed window squares into the literal constraint
+  `n+h=n'+h'`, identify both shift orders with truncated forward correlations,
+  and derive the sharp-lag divided finite van der Corput bound. Specialize it
+  to translated `reciprocalPhaseSum`, split the zero lag exactly, prove the
+  uniform recursive rule, and connect discrete iterates to smooth real-phase
+  differences and their derivatives on the positive ray. Prove the terminal
+  affine geometric-sum identity and the nonresonant bound
+  `min(N, 2 / ‖e(alpha)-1‖)`, then lower-bound the denominator by four
+  times the canonical nearest-integer distance to obtain the standard
+  reciprocal-distance form. Package arbitrary finite repetition through
+  `UniformIteratedPhaseBound` and `weylRecursiveMajorant`, and expose the
+  exact four-step source-facing interface for the cited `k=5` branch. Identify
+  each one-step real finite difference exactly with an interval integral of
+  its derivative, and derive upper and signed lower derivative-separation
+  bounds from that identity. Iterate these estimates for globally smooth
+  phases, gaining the exact product of all lags in the upper, positive signed,
+  negative signed, and sign-independent separation bounds. Localize the full
+  iteration to the positive ray and the exact evaluation interval, specialize
+  it to `reciprocalPhase`, convert the normalized source derivative window to
+  explicit raw upper and lower finite-difference bounds, and obtain the lower
+  bound from absolute derivative separation by proving constant sign through
+  continuity and the intermediate value theorem. Identify the derivative of
+  a terminal iterated difference with the difference of the next source
+  derivative and prove a uniform critical-regular two-sided derivative window;
+  in particular, the four-lag terminal phase now consumes the fifth original
+  derivative exactly. Adapt the frozen radian-normalized Kusmin--Landau theorem
+  exactly to `exp(2πix)`, prove the mean-value and second-derivative sign bridges
+  from absolute derivative windows to monotone increments, and close the
+  nonlinear terminal reciprocal-phase sum under explicit expanded-interval
+  regularity and upper-one-period hypotheses. Prove that admissible lag sums
+  and products are bounded by `rH` and `H^r`, uniformize the terminal estimate
+  over every admissible lag list and every truncated initial length on one
+  expanded regular interval, feed it through the recursive majorant, and expose
+  the literal four-round theorem with derivative orders five and six and its
+  single `H^4` upper-smallness condition. Replace the uniform-leaf loss by an
+  exact lag-sensitive Weyl tree retaining every accumulated lag list and
+  boundary-truncated length; feed the reciprocal-phase leaf profile
+  `min(L, 1/(prod(lags)*scale))` into that tree, sum the innermost lag with the
+  exact harmonic factor, and expose the resulting one-level square-root bound.
+  Collapse every successive outer lag sum to explicit scalar length and scale
+  recurrences using `iteratedRootHarmonic`; prove each generalized harmonic
+  factor is at most `H`, expose the closed four-round source theorem, and prove
+  that its fourfold iterated scale root has sixteenth power equal to the
+  original inverse scale. Replace all generalized harmonic factors by `H` in
+  a coarse scale recurrence, prove its four-round sixteenth power is
+  `(weylTreeStepFactor H L * H)^15`, combine it with the inverse terminal scale,
+  and expose the resulting source-facing coarse majorant. Split the remaining
+  length recurrence into four explicit nonnegative terms, prove their exact
+  sixteenth powers `D^8`, `E^8 D^4`, `E^12 D^2`, `E^14 D`, derive the powered
+  denominator bounds from `E≤6L` and `D(H+1)≤6L²`, and expose the corresponding
+  source-facing expanded majorant. Extract all four diagonal bounds and the
+  inverse-scale term as sixteenth roots, rewrite them as exact real `1/16`
+  powers, and expose the resulting source-facing five-term majorant. Define the
+  floor-rounded canonical range `floor((2U)^(-1/4))`, prove that it discharges
+  the exact upper-smallness condition, and instantiate both root and rpow
+  source estimates at that range. Delete every integer start whose `4H+1`
+  forward window can meet a critical set, prove the expanded deletion count,
+  fill each order's bad-start holes by its interval hull, prove that its two
+  endpoints suffice as cuts, derive the sharp `2*orders.card+1` component
+  multiplier and real expanded-interval regularity on each surviving component,
+  and assemble the global Weyl bound with trivial handling of components
+  shorter than `H`. Preserve the generalized harmonic factors via successive
+  Cauchy--Schwarz, prove the sharp four-round product bound
+  `H^11 * harmonic(H)^4` and terminal bound
+  `(6L)^15 * harmonic(H)^4 / (H+1)^4 / scale`, generalize the global theorem to
+  every upper-small range, and instantiate it at the automatically fitting
+  adaptive range `min(L, floor((2U)^(-1/4)))`, including the source-readable
+  `harmonic(H) <= 1 + log H` specialization. Combine both adaptive branches
+  through `(H+1)^(-4) <= 2U+(L+1)^(-4)`, propagate this into an effective
+  global majorant, and fix the critical width to the `1/128` power of the
+  complete effective error scale `2U+(L+1)^(-4)+1/F`. Normalize this exactly
+  to `240(5+j)^5 F/X^5+(L+1)^(-4)+1/F` and bound it by the explicit
+  derivative-order factor times the source-shaped three-term error.
+  Refine the differencing range to `min(floor(L*q), canonicalRange)`, prove it
+  preserves upper-smallness, bound its cast and expanded margin by `Lq` and
+  `4Lq+1`, bound its harmonic logarithm by `log L`, and substitute these bounds
+  into the global component theorem. Prove
+  `(H+1)^(-4) <= 2U+(Lq)^(-4)` for this range and propagate it through the
+  optimized terminal root. Extract the four diagonal roots into `72Lq`, bound
+  the terminal root by `100((5+j)^5+1)(1+log L)Xq`, combine these into the
+  fixed-power optimized majorant, and propagate it through both the global
+  component theorem and its explicit source-normalized `1/128`-power wrapper.
+  Absorb the additive endpoint constant to obtain one explicit coefficient
+  times `X` and the same source power.
+- [x] Remove the Weyl interval-length term under `F≤X^4` by an exact
+  short/long dichotomy, obtaining the arbitrary-subinterval two-term width
+  `(F/X^5+1/F)^(1/1024)`.
+- [x] In the `N=M` specialization, prove the transformed Type II phase-scale
+  lower bound in natural distance, dominate the Weyl width by the fixed
+  distance kernel plus `E^(1/1024)`, uniformize the interval logarithm by the
+  outer block length, and propagate the result through the endpoint-free exact
+  Vaughan double-block squared-sum reduction.
+- [x] Discharge the pairwise Type II `F'/K^5≤E` premise uniformly on each
+  inner short block, using its literal left endpoint as the reciprocal support
+  scale and its chosen length as the distance bound; expose the resulting
+  `typeIIShortIntervalScaleError` in the full double-block theorem.
+- [x] In the final quadratic specialization, derive the correlation interval's
+  endpoint membership, expanded upper endpoint, and power-evaluation condition
+  from the literal outer-block left endpoint and one expansion-margin bound.
+- [x] Derive the transformed low-scale condition `F'≤K^4` from the uniform
+  short-block comparison `typeIIShortIntervalScaleError≤1/K`, eliminating the
+  remaining pairwise scale family from the quadratic interface.
+- [x] Bound the quadratic short-block scale error by the explicit monomial
+  `5q|N|/(K^6R^2)` and derive `E≤1/K` from `5q|N|≤K^5R^2`; use this explicit
+  size condition in the canonical dyadic Vaughan theorem.
+- [x] Generalize the endpoint-free Type II kernel and Weyl propagation from
+  artificial `[1,B]` blocks to arbitrary positive short-block endpoints, and
+  specialize the result to the exact named dyadic blocks in the canonical
+  Vaughan double family.
+- [x] Compress the pairwise effective-error conditions to the single explicit
+  `typeIIShortIntervalEffectiveErrorBound≤1`; prove the optimized range is
+  controlled by its `1/128` power and derive the expansion margin from
+  `5q≤K`. Prove `5q≤K` for Vaughan bands above the subdivision budget from the
+  existing `log(B)^{-100}` width estimate.
+- [x] Replace the over-strong uniform inverse-scale premise by the source
+  distance split. For `distance·F/B≤3`, absorb the trivial correlation through
+  the kernel lower bound `1/4`; for farther pairs, prove reciprocal transformed
+  scale `≤2/3` and combine it with a `1/4` upper-scale budget.
+- [x] Derive the far-pair `1/4` upper-scale budget from `E≤1/K` and the fixed
+  eventual threshold `vaughanShortIntervalBudget Bcap≥4·(240·7^5)`, which
+  bounds every large-band outer endpoint and removes the redundant second
+  monomial hypothesis from the canonical theorem.
+- [x] Prove that the standing assumption `2≤log Bcap` already implies that
+  Vaughan-budget threshold, removing it from the canonical theorem interface.
+- [ ] Prove the remaining Theorem 2.5 analytic chain: Vinogradov/Weyl cancellation and
+  quantitative Type I/II estimates. In particular, discharge the exposed
+  low-frequency source-scale conditions `F≥1` and `5q|N|≤K^5R^2`, prove their required logarithmic
+  consequences, close the high-transformed-scale Vinogradov branch, and close
+  the small singleton-band branch. The canonical Vaughan coefficient
   envelopes and their support cutoffs are now proved. The
   two-dimensional slice/Fubini assembly, directional bounds, radial arithmetic,
   automatic smooth-periodic derivative chains, and unconditional `taoC3Norm`

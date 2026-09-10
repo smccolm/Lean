@@ -232,6 +232,17 @@ theorem iteratedDeriv_zpow_of_pos
   rw [iteratedDerivWithin_of_isOpen isOpen_Ioi ht] at hwithin
   exact hwithin
 
+/-- The reciprocal phase is smooth to every finite order at each positive
+point. -/
+theorem contDiffAt_reciprocalPhase_of_pos
+    (N M : ℝ) (j r : ℕ) {t : ℝ} (ht : 0 < t) :
+    ContDiffAt ℝ r (reciprocalPhase N M j) t := by
+  have hpowOne : ContDiffAt ℝ r (fun y : ℝ => y ^ (-1 : ℤ)) t := by
+    exact ((analyticAt_id.zpow ht.ne').contDiffAt.of_le le_top)
+  have hpowJ : ContDiffAt ℝ r (fun y : ℝ => y ^ (-(j : ℤ))) t := by
+    exact ((analyticAt_id.zpow ht.ne').contDiffAt.of_le le_top)
+  exact (contDiffAt_const.mul hpowOne).add (contDiffAt_const.mul hpowJ)
+
 /-- Exact `r`-th derivative of the reciprocal phase.  This is the formal
 counterpart of equation (expint1) before its absolute-value normalization. -/
 theorem iteratedDeriv_reciprocalPhase

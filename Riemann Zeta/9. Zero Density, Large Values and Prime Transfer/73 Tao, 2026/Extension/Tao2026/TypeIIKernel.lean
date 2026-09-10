@@ -157,6 +157,32 @@ theorem typeIIDecayKernel_nonneg {R F : ℝ} (c : ℝ) (d : ℕ)
   have hone : (1 : ℝ) ≤ 1 + (d : ℝ) * F / R := le_add_of_nonneg_right hterm
   exact zero_le_one.trans hone
 
+/-- At source distance at most three, the tiny `1/1024` exponent leaves a
+uniformly positive kernel.  This is the quantitative input for handling
+nearby Type II correlations by the trivial sum bound instead of imposing a
+false large-transformed-scale hypothesis. -/
+theorem one_div_four_le_typeIIDecayKernel_of_scaledDistance_le_three
+    {R F : ℝ} (d : ℕ) (hR : 0 < R) (hF : 0 ≤ F)
+    (hnear : (d : ℝ) * F / R ≤ 3) :
+    1 / 4 ≤ typeIIDecayKernel R F (1 / 1024 : ℝ) d := by
+  let x : ℝ := (d : ℝ) * F / R
+  have hx0 : 0 ≤ x := by unfold x; positivity
+  have hx3 : x ≤ 3 := by simpa only [x] using hnear
+  have hbaseOne : (1 : ℝ) ≤ 1 + x := by linarith
+  have hbaseFour : 1 + x ≤ (4 : ℝ) := by linarith
+  have hinv : 1 / (4 : ℝ) ≤ 1 / (1 + x) :=
+    one_div_le_one_div_of_le (by positivity) hbaseFour
+  have hrpow : (1 + x) ^ (-1 : ℝ) ≤
+      (1 + x) ^ (-(1 / 1024 : ℝ)) :=
+    Real.rpow_le_rpow_of_exponent_le hbaseOne (by norm_num)
+  calc
+    1 / 4 ≤ 1 / (1 + x) := hinv
+    _ = (1 + x) ^ (-1 : ℝ) := by
+      simp only [one_div, Real.rpow_neg_one]
+    _ ≤ (1 + x) ^ (-(1 / 1024 : ℝ)) := hrpow
+    _ = typeIIDecayKernel R F (1 / 1024 : ℝ) d := by
+      rfl
+
 @[simp]
 theorem typeIIDecayKernel_zero (R F c : ℝ) :
     typeIIDecayKernel R F c 0 = 1 := by
@@ -941,6 +967,81 @@ theorem sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_blockLengths
     (sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_of_decayKernel
       I γ N M j Bouter Binner qouter qinner kouter kinner hqinner hL hγ
       hQ hA hR hF hc0 hc hqinnerR hX).trans (add_le_add hdiag hoff)
+
+/-- Endpoint-free source-facing estimate for two arbitrary positive quotient
+blocks.  This is the form consumed by the canonical dyadic Vaughan family,
+whose blocks begin at powers of two rather than at one. -/
+theorem sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_sourceScale_blockLengths
+    (I : Finset ℕ) (γ : ℕ → ℂ) (N M : ℝ)
+    (j K₀ K₁ S₀ S₁ qouter qinner kouter kinner : ℕ)
+    {L Q A E R F c : ℝ}
+    (hK₀ : 0 < K₀) (hS₀ : 0 < S₀)
+    (hqouter : 0 < qouter) (hqinner : 0 < qinner)
+    (hL : 0 ≤ L) (hγ : ∀ n, ‖γ n‖ ≤ L)
+    (hQ : 0 ≤ Q) (hA : 0 ≤ A) (hE : 0 ≤ E)
+    (hR : 0 < R) (hF : 1 ≤ F) (hc0 : 0 ≤ c) (hc : c < 1)
+    (hqinnerR : (qinner : ℝ) ≤ R)
+    (hX : ∀ n ∈ shortIntervalBlock S₀ S₁ qinner kinner,
+      ∀ n' ∈ shortIntervalBlock S₀ S₁ qinner kinner, n ≠ n' →
+      ‖typeIIProductRestrictedCorrelationSum I
+          (shortIntervalBlock K₀ K₁ qouter kouter)
+          N M j n n'‖ ≤
+        Q * (A * typeIIDecayKernel R F c (Nat.dist n' n) + E)) :
+    ∑ m ∈ shortIntervalBlock K₀ K₁ qouter kouter,
+        ‖typeIIProductRestrictedInnerSum I
+          (shortIntervalBlock S₀ S₁ qinner kinner)
+          γ N M j m‖ ^ 2 ≤
+      (qouter : ℝ) * (qinner : ℝ) * L ^ 2 +
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            (qinner : ℝ) * E))) := by
+  have hKcardNat := card_shortIntervalBlock_le K₀ K₁ qouter kouter hqouter
+  have hScardNat := card_shortIntervalBlock_le S₀ S₁ qinner kinner hqinner
+  have hKcard :
+      ((shortIntervalBlock K₀ K₁ qouter kouter).card : ℝ) ≤ qouter := by
+    exact_mod_cast hKcardNat
+  have hScard :
+      ((shortIntervalBlock S₀ S₁ qinner kinner).card : ℝ) ≤ qinner := by
+    exact_mod_cast hScardNat
+  have hSsubCard :
+      ((((shortIntervalBlock S₀ S₁ qinner kinner).card - 1 : ℕ) : ℝ)) ≤
+        qinner := by
+    exact_mod_cast (Nat.sub_le _ _).trans hScardNat
+  have hdecay :
+      0 ≤ 2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c)) := by
+    have hconstant : 0 ≤ 2 ^ (1 - c) / (1 - c) :=
+      div_nonneg (Real.rpow_nonneg (by norm_num) _) (sub_nonneg.mpr hc.le)
+    have hscale : 0 ≤ R * F ^ (-c) :=
+      mul_nonneg hR.le (Real.rpow_nonneg (zero_le_one.trans hF) _)
+    positivity
+  have hdiag :
+      ((shortIntervalBlock K₀ K₁ qouter kouter).card : ℝ) *
+          ((shortIntervalBlock S₀ S₁ qinner kinner).card : ℝ) * L ^ 2 ≤
+        (qouter : ℝ) * (qinner : ℝ) * L ^ 2 := by
+    gcongr
+  have hoff :
+      L ^ 2 *
+          (((shortIntervalBlock S₀ S₁ qinner kinner).card : ℝ) *
+            (Q * (A *
+                (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+              (((shortIntervalBlock S₀ S₁ qinner kinner).card - 1 : ℕ) : ℝ) *
+                E))) ≤
+        L ^ 2 * ((qinner : ℝ) *
+          (Q * (A * (2 * ((2 ^ (1 - c) / (1 - c)) * R * F ^ (-c))) +
+            (qinner : ℝ) * E))) := by
+    gcongr
+  have hbase :=
+    sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale
+      I (shortIntervalBlock K₀ K₁ qouter kouter) γ N M j
+      S₀ S₁ qinner kinner hqinner
+      (fun m hm => by
+        rw [mem_shortIntervalBlock] at hm
+        omega)
+      (fun n hn => by
+        rw [mem_shortIntervalBlock] at hn
+        omega)
+      hL (fun n _ => hγ n) hQ hA hR hF hc0 hc hqinnerR hX
+  exact hbase.trans (add_le_add hdiag hoff)
 
 /-- Endpoint-free source-facing estimate with both exact Vaughan block
 cardinalities replaced by their chosen lengths. -/
