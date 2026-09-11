@@ -4,7 +4,9 @@ This directory is the active formalization project for Terence Tao,
 *Products of consecutive integers with unusual anatomy*, arXiv
 `2603.27990v2`. The paper and its TeX source are pinned under `Sources/`.
 
-**Status:** Proposition 2.3(i),(iii) and complete Lemma 3.2 milestone.
+**Status:** Proposition 2.3(i),(iii), complete Lemma 3.2, unconditional
+eventual Lemma 3.1 arithmetic-scale/geometric lower bounds, and the complete
+Lemma 3.1 contradiction conditional on the specialized Theorem 2.5 estimate.
 Bertrand's clause (i), the exact Guth--Maynard application in clause (iii),
 and the polynomial-coefficient powerful relation are proved and audited; none of the four main
 Theorems 1.7--1.10 is proved or claimed. The isolated `Extension/` package
@@ -29,6 +31,32 @@ subfamily give an unconditional `⌊√x⌋-1` lower bound first for `F₃¹`, t
 for `F₃` and factorial solutions; the corresponding triple is explicit.
 These finite bounds have been lifted to the complete reverse-big-O half of
 the square-root `PowerScale` contracts for Theorems 1.9 and 1.10.
+Tao's complete Lemma 4.1 (`abound`) is now proved: every type-`F₃` interval
+has `H<N`, is prime-free, and every witnessing smaller factorial index obeys
+one uniform bound `a ≤ C H log N`. The proof formalizes the upper-half-prime
+product divisibility, its exact Chebyshev-theta inequality, the pinned PNT
+lower bound, and absorption of the finite exceptional range.
+The shared arithmetic core of Lemma 4.2 is also proved at the literal scale
+`P=H log²N`: eventually `a<P`; primes above `P` have even interval-product
+valuation concentrated in one interval element; and in the large-`P` branch
+`√(2N)<P<p`, such a prime cannot divide the product because `p²>N+H`.
+The large-`P` equidistribution interface is now compiled as well: membership
+of `{N/p}` in the final divisor arc produces an interval multiple, Tao's
+smaller arc of width `1/(10 log²N)` is supported there for `P<p<2P`, the
+corresponding prime sum vanishes exactly, and specialized Theorem 2.5 gives
+the integral upper bound. A shrinking one-coordinate bump is explicitly
+defined from the audited flat-exponential periodic bump and proved smooth,
+periodic, nonnegative, and supported in the required arc. A second normalized
+smooth-transition construction is proved to equal one on Tao's full inner
+plateau arc. Its exact mass is at least `1/(60 log²N)` per unit interval.
+The stretched-log contradiction hypothesis also supplies the complete
+Theorem 2.5 parameter bound at `P` internally, yielding the source-growth form
+of this integral upper estimate with multiplier one.
+The reciprocal substitution `u=N/t`, its Jacobian comparison, and removal of
+the logarithmic weight now give the matching prime-integral norm lower bound
+and a single audited lower/upper logarithmic sandwich. Only the uniform
+polynomial `C³` bound for the normalized family and final logarithmic
+contradiction remain in the high-`P` branch.
 The Erdős--Selfridge source is pinned, and the exact reduction from a repeated
 factorial squarefree component to a square consecutive product is proved;
 the no-square theorem itself remains to be formalized.
@@ -51,7 +79,26 @@ hypothesis now yields the exact Theorem 2.5 exponent with multiplier one. The
 cutoff has a fixed positive minimum on the inner rectangle, its integral is
 real and nonnegative, and its norm lower bound is reduced to the measure of
 the exact inner good set; reciprocal-set membership is transported exactly.
-Proving that this set has measure `≫H` remains open. The smoothness index was also corrected from
+Both source changes of variables now compile with their exact Jacobians. The
+quadratic band has exact unit-period mass `43/50`; its uniform slice bound
+implies quadratic reciprocal-set measure at least `H/32` whenever
+`N/H²≥1/2`. A finite disjoint unit-cell covering, endpoint trimming, and the
+slow-variation estimate now insert the first-coordinate fractional band and
+give inner prime-scale measure at least `H/400` for `H≥200` under that scale
+condition. The arithmetic boundary is now unconditional in the eventual form
+needed by Tao: the frozen PNT, exact binomial factorization, central/general
+binomial lower bounds, and a two-range logarithmic argument produce a prime
+`p>H` whenever `2N<H²` for all sufficiently large `H`. Hence
+`eventually_one_half_le_start_div_length_sq_of_veryBad` gives `N/H²≥1/2`, and
+`eventually_veryBadInnerPrimeScale_measure_lower` gives the final `H/400`
+measure bound. The stronger unrestricted Sylvester--Schur contract and its
+standard binomial form remain documented interfaces, but are no longer a
+Lemma 3.1 blocker. The fixed cutoff and Theorem 2.5 constants are now chosen
+outside the eventual quantifiers, two logarithmic powers are proved to beat
+the `H/log H` lower bound, and
+`eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized`
+packages the complete contradiction assuming only the specialized Theorem
+2.5 conclusion. The smoothness index was also corrected from
 Mathlib's analytic `⊤` to its genuine `C∞` index `∞`.
 For Lemma 3.2, every interval element now has a canonical, audited
 factorization into its squarefree exponent-one coefficient and a powerful
@@ -532,9 +579,8 @@ calculus, complete Fourier coefficient decay/reconstruction, and exact
 source-oriented, coefficient-bounded, product-restricted, block-decomposed
 weighted Vaughan identity through the Vinogradov/Weyl estimate and quantitative
 Type I/II bounds.
-Then complete the integral-lower-bound end of the
-subexponential second clause of Lemma 3.1 and combine it with the now-complete
-Lemma 3.2 and Corollary 2.11.
+Then instantiate the now-complete conditional Lemma 3.1 contradiction and
+combine it with the complete Lemma 3.2 and Corollary 2.11.
 In parallel source order, the pinned Baker--Harman--Pintz input in Proposition
 2.3(ii) remains the next missing analytic boundary for Section 4.
 

@@ -18,7 +18,19 @@ growth hypothesis supplies the exact source parameter exponent with `K=1`.
 The cutoff has a positive uniform inner-rectangle minimum, its integral is
 real and nonnegative, and its norm lower bound is reduced to the measure of
 the explicit inner good set, with exact reciprocal-set membership. The
-remaining boundary is to prove that good set has measure `≫H`. The Theorem 2.5 smoothness
+two source substitutions and their Jacobians are exact. The retained
+quadratic band has unit-period mass `43/50`, and a uniform periodic-slice
+argument gives quadratic reciprocal-set measure at least `H/32` under
+`N/H²≥1/2`. A finite disjoint unit-cell covering, endpoint trimming, and slow
+variation insert the first coordinate and give inner prime-scale measure at
+least `H/400` for `H≥200`. The needed arithmetic scale is now proved
+unconditionally and eventually: a PNT prime-counting bound plus exact
+binomial-factorization and binomial-growth inequalities supplies a prime `p>H`
+throughout the quadratic failure window `2N<H²`. The resulting eventual
+`N/H²≥1/2` and `H/400` theorems remove unrestricted Sylvester--Schur from the
+Lemma 3.1 dependency chain. The fixed lower-cutoff and Theorem 2.5 constants
+are coordinated uniformly, and the full eventual shortness contradiction is
+proved conditional on `TaoTheorem25SpecializedConclusion`. The Theorem 2.5 smoothness
 hypothesis uses `∞` (the genuine `C∞` index), since `⊤` denotes analyticity in
 this Mathlib version. The package also proves the
 all-orders reciprocal-phase derivative identities used by the cited
@@ -387,5 +399,25 @@ saving, and the high-scale Vinogradov estimate itself, are not yet claimed.
 The prime/Mangoldt conversion is exact: the prime-logarithm phase sum and
 higher-prime-power tail are split in `PrimePowerReduction`, and unit modulus
 reduces the tail to the frozen explicit local prime-power bound.
+The `FactorialCoefficientBounds` module proves Tao's complete Lemma 4.1:
+type-`F₃` intervals satisfy `H<N`, contain no prime, and their witnessing
+factorial index satisfies `a ≤ C H log N` for one uniform positive constant.
+Its proof includes the exact upper-half Chebyshev-theta inequality and closes
+the finite PNT-exceptional range.
+`FactorialShortIntervals` then proves the common arithmetic reduction for
+Lemma 4.2 at `P=H log²N`, including even valuation, unique-element square
+divisibility, and complete exclusion of primes in Tao's large-`P` branch.
+`FactorialEquidistribution` proves the exact final-arc-to-interval-divisor
+bridge, the resulting zero prime sum on `(P,2P)`, and the direct specialized
+Theorem 2.5 integral upper bound. It defines both a shrinking supported bump
+and a quantitatively normalized smooth-transition weight which is exactly one
+on Tao's inner plateau arc. Smoothness, periodicity, nonnegativity, support,
+the exact `1/(60 log²N)` unit-period mass, long-interval mass, reciprocal
+change of variables, logarithmic-weight comparison, prime-integral norm lower
+bound, and the final lower/upper sandwich are proved. The uniform polynomial
+`C³` estimate and final logarithmic contradiction remain open.
+The same module transfers the existing stretched-log parameter calculation
+from `H` to `P≥H`, so its final upper-bound wrapper has no user-supplied
+Vinogradov range hypothesis.
 None of Theorems 1.7--1.10 is complete or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.

@@ -1,5 +1,6 @@
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 import Mathlib.Data.Finset.Interval
+import Mathlib.Data.Nat.Choose.Basic
 import Mathlib.Data.Nat.Factorial.Basic
 import Tao2026.Anatomy
 
@@ -132,6 +133,14 @@ theorem factorial_mul_consecutiveProduct (N H : ℕ) :
           (consecutiveProduct N H * (N + H + 1)) = (N + H + 1).factorial
       rw [← mul_assoc, ih, Nat.factorial_succ]
       ring
+
+/-- The interval product is Mathlib's ascending factorial.  This is the exact
+bridge from the consecutive-interval formulation to binomial coefficients. -/
+theorem consecutiveProduct_eq_ascFactorial (N H : ℕ) :
+    consecutiveProduct N H = (N + 1).ascFactorial H := by
+  apply Nat.eq_of_mul_eq_mul_left (Nat.factorial_pos N)
+  exact (factorial_mul_consecutiveProduct N H).trans
+    (Nat.factorial_mul_ascFactorial N H).symm
 
 /-- A product of positive consecutive naturals is nonzero, including the
 empty-product case. -/

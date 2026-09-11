@@ -560,9 +560,23 @@ contradiction hypothesis is converted to the exact source parameter exponent
 `ε25=3/2-(2/3+η)⁻¹>0` with `K=1`. The cutoff has a fixed positive minimum on
 the inner rectangle; its integral is real and nonnegative, and its norm lower
 bound is reduced exactly to the measure of the inner prime-scale good set.
-The reciprocal membership transformation is also proved. The remaining
-boundary is the source geometric estimate that this good set has measure
-`≫H`.
+Both source changes of variables and their Jacobians are proved exactly. The
+quadratic fractional band has exact unit-period mass `43/50`, and its uniform
+slice estimate gives quadratic reciprocal-set measure at least `H/32` under
+`N/H²≥1/2`. The finite unit-cell comparison, endpoint trimming, and
+first-coordinate insertion are now complete and give inner prime-scale measure
+at least `H/400` for `H≥200`. The geometric-arithmetic boundary is now complete
+in the eventual form used by the contradiction: the frozen PNT and exact
+binomial factorization prove a large prime in the only remaining window
+`2N<H²`, yielding eventual `N/H²≥1/2` and then the `H/400` measure lower bound.
+The unrestricted classical Sylvester--Schur theorem is retained only as a
+stronger documented interface, not as a dependency of this chain. The fixed
+cutoff minimum and Theorem 2.5 constant are now selected outside all eventual
+quantifiers; an audited logarithmic-gap lemma closes the lower-versus-upper
+contradiction. Thus the full subexponential conclusion is packaged
+conditionally as
+`eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized`; only
+the specialized Theorem 2.5 analytic estimate remains to make it unconditional.
 
 ### TAO-05: type `F_3` intervals and factorial solutions
 

@@ -7,10 +7,13 @@ import Tao2026.CoefficientSelection
 import Tao2026.ConvolutionRearrangement
 import Tao2026.Counting
 import Tao2026.CriticalIntervals
+import Tao2026.FactorialCoefficientBounds
+import Tao2026.FactorialEquidistribution
 import Tao2026.FactorialIntervals
 import Tao2026.FactorialOneTerm
 import Tao2026.FactorialAsymptotics
 import Tao2026.FactorialFibers
+import Tao2026.FactorialShortIntervals
 import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation
 import Tao2026.FourierDecay

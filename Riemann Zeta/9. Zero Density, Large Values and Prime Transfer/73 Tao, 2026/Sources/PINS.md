@@ -64,6 +64,23 @@ This pin establishes the exact cited source and statement. It does not import
 the paper as a Lean dependency or claim that Proposition 1.12 has already been
 formalized.
 
+## Public Sylvester--Schur Lean proof reference
+
+- Repository: `AllenGrahamHart/FormalConjectures-Bench`
+- Commit: `482dacc4d9335240f26218cdc62032da3100392b`
+- Path: `formalizations/erdos699/Erdos699Formalization.lean`
+- Raw-file SHA-256: `ab0987fe6012fb421138af86ea6509979fcf885aa54744f06b2215fbb7f7e7b4`
+- Raw-file size: `365225` bytes
+- Target: `Erdos699Formalization.sylvester_schur`, the standard statement
+  represented locally by `Tao2026.BinomialSylvesterSchurConclusion`.
+- Upstream environment: Lean `v4.27.0`; this project uses Lean `v4.30.0`.
+
+This is a provenance-only reference. The proof file has no license header, the
+pinned repository root has no license file, and that repository's pinned
+`manifest/licence_review.csv` has no Erdős 699 entry. Consequently the source
+has not been copied or vendored here. The local binomial-to-interval bridge was
+proved independently and is kernel-checked in this repository.
+
 ## Erdős--Selfridge factorial-fiber input
 
 - Authors: P. Erdős and J. L. Selfridge

@@ -71,6 +71,27 @@ def taoC3Norm (W : ℝ × ℝ → ℂ) : ℝ :=
   ∑ i ∈ Finset.range 4,
     sSup {r : ℝ | ∃ x : ℝ × ℝ, r = ‖iteratedFDeriv ℝ i W x‖}
 
+/-- A uniform pointwise bound for derivatives through order three controls
+Tao's summed `C³` norm with the expected factor four. -/
+theorem taoC3Norm_le_four_mul_of_iteratedFDeriv_le
+    {W : ℝ × ℝ → ℂ} {B : ℝ} (hB : 0 ≤ B)
+    (hderiv : ∀ i < 4, ∀ x : ℝ × ℝ,
+      ‖iteratedFDeriv ℝ i W x‖ ≤ B) :
+    taoC3Norm W ≤ 4 * B := by
+  unfold taoC3Norm
+  calc
+    ∑ i ∈ Finset.range 4,
+        sSup {r : ℝ | ∃ x : ℝ × ℝ,
+          r = ‖iteratedFDeriv ℝ i W x‖} ≤
+        ∑ _i ∈ Finset.range 4, B := by
+      apply Finset.sum_le_sum
+      intro i hi
+      apply Real.sSup_le
+      · rintro r ⟨x, rfl⟩
+        exact hderiv i (Finset.mem_range.mp hi) x
+      · exact hB
+    _ = 4 * B := by norm_num
+
 /-- The pointwise size condition denoted
 `O(exp(log^(3/2-ε) P))` in the source.  The explicit multiplier records the
 otherwise suppressed constant. -/

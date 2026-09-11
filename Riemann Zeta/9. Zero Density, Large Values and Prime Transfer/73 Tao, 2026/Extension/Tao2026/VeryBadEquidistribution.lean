@@ -96,6 +96,97 @@ theorem not_forbiddenResidues_of_veryBad
   exact hpSqNotDvd
     (prime_sq_dvd_intervalElement_of_veryBad hveryBad hk hp hHltp hpDvd)
 
+/-- A large prime factor of a very bad consecutive product forces Tao's
+quadratic scale inequality. This isolates the use of Sylvester--Schur from
+the local powerfulness argument. -/
+theorem IsVeryBadInterval.square_length_le_two_mul_start_of_large_prime
+    {N H : ℕ} (hN : 1 ≤ N) (hveryBad : IsVeryBadInterval N H)
+    (hlarge : ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H) :
+    H ^ 2 ≤ 2 * N := by
+  obtain ⟨p, hp, hHltp, hpProduct⟩ := hlarge
+  change p ∣ (consecutiveInterval N H).prod id at hpProduct
+  obtain ⟨k, hk, hpk⟩ :=
+    (hp.prime.dvd_finsetProd_iff id).mp hpProduct
+  have hkPos : 0 < k := by
+    have := (Finset.mem_Ioc.mp hk).1
+    omega
+  have hkLe : k ≤ N + H := (Finset.mem_Ioc.mp hk).2
+  have hpSq : p ^ 2 ∣ k :=
+    prime_sq_dvd_intervalElement_of_veryBad hveryBad hk hp hHltp hpk
+  have hpSqLe : p ^ 2 ≤ k := Nat.le_of_dvd hkPos hpSq
+  have hHltN : H < N := hveryBad.length_lt_start_of_pos hN
+  nlinarith
+
+/-- Real quotient form of the scale inequality used by the geometric lower
+bound in Lemma 3.1. -/
+theorem IsVeryBadInterval.one_half_le_start_div_length_sq_of_large_prime
+    {N H : ℕ} (hN : 1 ≤ N) (hveryBad : IsVeryBadInterval N H)
+    (hlarge : ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H) :
+    (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2 := by
+  have hHPos : 0 < H := lt_of_lt_of_le Nat.zero_lt_one hveryBad.1
+  have hHReal : (0 : ℝ) < H := by exact_mod_cast hHPos
+  have hsq := hveryBad.square_length_le_two_mul_start_of_large_prime hN hlarge
+  have hsqReal : (H : ℝ) ^ 2 ≤ 2 * N := by exact_mod_cast hsq
+  rw [le_div_iff₀ (sq_pos_of_pos hHReal)]
+  nlinarith
+
+/-- Sylvester--Schur supplies the exact scale hypothesis required by Tao's
+quadratic slice argument for every positive-start very bad interval. -/
+theorem IsVeryBadInterval.one_half_le_start_div_length_sq_of_sylvesterSchur
+    (hSS : SylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hveryBad : IsVeryBadInterval N H) :
+    (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2 := by
+  have hHltN := hveryBad.length_lt_start_of_pos hN
+  exact hveryBad.one_half_le_start_div_length_sq_of_large_prime hN
+    (hSS hveryBad.1 hHltN)
+
+/-- Standard binomial Sylvester--Schur supplies the same exact scale bound. -/
+theorem IsVeryBadInterval.one_half_le_start_div_length_sq_of_binomial_sylvesterSchur
+    (hSS : BinomialSylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hveryBad : IsVeryBadInterval N H) :
+    (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2 :=
+  hveryBad.one_half_le_start_div_length_sq_of_sylvesterSchur
+    (sylvesterSchurConclusion_of_binomial hSS) hN
+
+/-- The quadratic-window form is sufficient because failure of the desired
+scale bound is exactly the hypothesis `2N < H²`. -/
+theorem IsVeryBadInterval.one_half_le_start_div_length_sq_of_quadraticWindow_sylvesterSchur
+    (hSS : QuadraticWindowSylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hveryBad : IsVeryBadInterval N H) :
+    (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2 := by
+  have hHPos : 0 < H := lt_of_lt_of_le Nat.zero_lt_one hveryBad.1
+  have hHReal : (0 : ℝ) < H := by exact_mod_cast hHPos
+  have hHltN := hveryBad.length_lt_start_of_pos hN
+  have hsq : H ^ 2 ≤ 2 * N := by
+    by_contra hnot
+    have hwindow : 2 * N < H ^ 2 := Nat.lt_of_not_ge hnot
+    exact hnot (hveryBad.square_length_le_two_mul_start_of_large_prime hN
+      (hSS hveryBad.1 hHltN hwindow))
+  have hsqReal : (H : ℝ) ^ 2 ≤ 2 * N := by exact_mod_cast hsq
+  rw [le_div_iff₀ (sq_pos_of_pos hHReal)]
+  nlinarith
+
+/-- Unconditional eventual form of the exact quadratic scale bound.  The
+large prime is supplied by the frozen PNT and binomial-factorization argument
+in `VeryBadIntervals`, rather than by an imported Sylvester--Schur theorem. -/
+theorem eventually_one_half_le_start_div_length_sq_of_veryBad :
+    ∀ᶠ H : ℕ in Filter.atTop, ∀ N : ℕ, 1 ≤ N → IsVeryBadInterval N H →
+      (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2 := by
+  filter_upwards
+    [eventually_exists_large_prime_dvd_consecutiveProduct_quadraticWindow]
+      with H hlarge N hN hveryBad
+  have hHPos : 0 < H := lt_of_lt_of_le Nat.zero_lt_one hveryBad.1
+  have hHReal : (0 : ℝ) < H := by exact_mod_cast hHPos
+  have hHltN := hveryBad.length_lt_start_of_pos hN
+  have hsq : H ^ 2 ≤ 2 * N := by
+    by_contra hnot
+    have hwindow : 2 * N < H ^ 2 := Nat.lt_of_not_ge hnot
+    exact hnot (hveryBad.square_length_le_two_mul_start_of_large_prime hN
+      (hlarge N hHltN hwindow))
+  have hsqReal : (H : ℝ) ^ 2 ≤ 2 * N := by exact_mod_cast hsq
+  rw [le_div_iff₀ (sq_pos_of_pos hHReal)]
+  nlinarith
+
 /-- Real fractional-part form of the rectangle used in the paper. -/
 def InVeryBadForbiddenFractionalRegion (N p : ℕ) : Prop :=
   (9 / 10 : ℝ) ≤ Int.fract ((N : ℝ) / (p : ℝ)) ∧
@@ -954,6 +1045,334 @@ theorem veryBadQuadraticReciprocalScale_measure_lower
     nlinarith
   nlinarith
 
+/-- A point within `1/100` of a value whose fractional part lies in
+`[2/100,88/100]` has fractional part in `[1/100,89/100]`.  The margins force
+the two points to have the same floor. -/
+theorem fract_mem_veryBad_innerBand_of_abs_sub_le
+    {u v : ℝ} (hdist : |u - v| ≤ 1 / 100)
+    (hvlo : (2 / 100 : ℝ) ≤ Int.fract v)
+    (hvhi : Int.fract v ≤ 88 / 100) :
+    (1 / 100 : ℝ) ≤ Int.fract u ∧ Int.fract u ≤ 89 / 100 := by
+  have huvlo : v - 1 / 100 ≤ u := by
+    rw [abs_le] at hdist
+    linarith [hdist.1]
+  have huvhi : u ≤ v + 1 / 100 := by
+    rw [abs_le] at hdist
+    linarith [hdist.2]
+  have hvId : Int.fract v + (⌊v⌋ : ℝ) = v := Int.fract_add_floor v
+  have huCell : u ∈ Ico (⌊v⌋ : ℝ) ((⌊v⌋ : ℝ) + 1) := by
+    constructor <;> norm_num at hvlo hvhi ⊢ <;> linarith
+  have hfloor : ⌊u⌋ = ⌊v⌋ := Int.floor_eq_iff.mpr huCell
+  have hfloorR : (⌊u⌋ : ℝ) = (⌊v⌋ : ℝ) := congrArg Int.cast hfloor
+  have huId : Int.fract u + (⌊u⌋ : ℝ) = u := Int.fract_add_floor u
+  constructor <;> norm_num at hvlo hvhi ⊢ <;> linarith
+
+/-- On the reciprocal source interval, `s ↦ s²/N` varies by at most `2/H`
+between two points at distance at most one. -/
+theorem abs_square_div_sub_square_div_le_two_div_length
+    {N H : ℕ} (hN : 0 < N) (hH : 0 < H)
+    {s t : ℝ} (hs0 : 0 ≤ s) (ht0 : 0 ≤ t)
+    (hs : s ≤ (N : ℝ) / H) (ht : t ≤ (N : ℝ) / H)
+    (hst : |s - t| ≤ 1) :
+    |s ^ 2 / (N : ℝ) - t ^ 2 / N| ≤ 2 / (H : ℝ) := by
+  have hNr : (0 : ℝ) < N := by exact_mod_cast hN
+  have hHr : (0 : ℝ) < H := by exact_mod_cast hH
+  have hs' : s * (H : ℝ) ≤ N := (le_div_iff₀ hHr).mp hs
+  have ht' : t * (H : ℝ) ≤ N := (le_div_iff₀ hHr).mp ht
+  have hsum : s + t ≤ 2 * (N : ℝ) / H := by
+    rw [le_div_iff₀ hHr]
+    nlinarith
+  have hsum0 : 0 ≤ s + t := add_nonneg hs0 ht0
+  rw [← sub_div, sq_sub_sq, abs_div, abs_mul,
+    abs_of_pos hNr, abs_of_nonneg hsum0]
+  calc
+    (s + t) * |s - t| / (N : ℝ) ≤
+        (2 * (N : ℝ) / H) * 1 / N := by gcongr
+    _ = 2 / (H : ℝ) := by field_simp
+
+/-- For `H≥200`, the quadratic fractional coordinate stays inside the larger
+inner band throughout any unit cell meeting the narrower quadratic set. -/
+theorem quadratic_fract_mem_veryBad_innerBand_of_same_unit_cell
+    {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H)
+    {s t : ℝ} (hs0 : 0 ≤ s) (ht0 : 0 ≤ t)
+    (hs : s ≤ (N : ℝ) / H) (ht : t ≤ (N : ℝ) / H)
+    (hst : |s - t| ≤ 1)
+    (htlo : (2 / 100 : ℝ) ≤ Int.fract (t ^ 2 / N))
+    (hthi : Int.fract (t ^ 2 / N) ≤ 88 / 100) :
+    (1 / 100 : ℝ) ≤ Int.fract (s ^ 2 / N) ∧
+      Int.fract (s ^ 2 / N) ≤ 89 / 100 := by
+  have hHpos : 0 < H := lt_of_lt_of_le (by norm_num) hH
+  have hslow := abs_square_div_sub_square_div_le_two_div_length
+    hN hHpos hs0 ht0 hs ht hst
+  have htwo : 2 / (H : ℝ) ≤ (1 / 100 : ℝ) := by
+    have hHr : (0 : ℝ) < H := by exact_mod_cast hHpos
+    have hHreal : (200 : ℝ) ≤ H := by exact_mod_cast hH
+    rw [div_le_iff₀ hHr]
+    calc
+      (2 : ℝ) = (1 / 100 : ℝ) * 200 := by norm_num
+      _ ≤ (1 / 100 : ℝ) * H :=
+        mul_le_mul_of_nonneg_left hHreal (by norm_num)
+  exact fract_mem_veryBad_innerBand_of_abs_sub_le
+    (hslow.trans htwo) htlo hthi
+
+/-- A unit cell meeting the narrowed quadratic set contributes its fixed
+`[0.91,0.99]` slice to the inner two-coordinate reciprocal set, away from the
+two source-interval endpoint cells. -/
+theorem firstBandCell_subset_innerReciprocal_of_witness {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H)
+    {t : ℝ} (htY : t ∈ veryBadQuadraticReciprocalScaleSet N H)
+    (htLower : (N : ℝ) / (2 * H) + 1 < t)
+    (htUpper : t < (N : ℝ) / H - 1) :
+    Icc ((⌊t⌋ : ℝ) + 91 / 100) ((⌊t⌋ : ℝ) + 99 / 100) ⊆
+      veryBadInnerReciprocalScaleSet N H := by
+  intro s hsCell
+  have hHpos : 0 < H := lt_of_lt_of_le (by norm_num) hH
+  have hHr : (0 : ℝ) < H := by exact_mod_cast hHpos
+  have hNr : (0 : ℝ) < N := by exact_mod_cast hN
+  have htId : Int.fract t + (⌊t⌋ : ℝ) = t := Int.fract_add_floor t
+  have htFract0 : (0 : ℝ) ≤ Int.fract t := Int.fract_nonneg t
+  have htFract1 : Int.fract t < 1 := Int.fract_lt_one t
+  have hdist : |s - t| ≤ 1 := by
+    rw [abs_le]
+    constructor <;> norm_num at hsCell ⊢ <;> linarith
+  have hsLower : (N : ℝ) / (2 * H) < s := by
+    rw [abs_le] at hdist
+    linarith [hdist.1]
+  have hsUpper : s < (N : ℝ) / H := by
+    rw [abs_le] at hdist
+    linarith [hdist.2]
+  have hsCellIco : s ∈ Ico (⌊t⌋ : ℝ) ((⌊t⌋ : ℝ) + 1) := by
+    constructor <;> norm_num at hsCell ⊢ <;> linarith
+  have hsFloor : ⌊s⌋ = ⌊t⌋ := Int.floor_eq_iff.mpr hsCellIco
+  have hsFloorR : (⌊s⌋ : ℝ) = (⌊t⌋ : ℝ) := congrArg Int.cast hsFloor
+  have hsId : Int.fract s + (⌊s⌋ : ℝ) = s := Int.fract_add_floor s
+  have hsFractLo : (91 / 100 : ℝ) ≤ Int.fract s := by
+    norm_num at hsCell ⊢
+    linarith
+  have hsFractHi : Int.fract s ≤ (99 / 100 : ℝ) := by
+    norm_num at hsCell ⊢
+    linarith
+  have hsourceLower0 : (0 : ℝ) ≤ (N : ℝ) / (2 * H) := by positivity
+  have hs0 : (0 : ℝ) ≤ s := hsourceLower0.trans hsLower.le
+  have ht0 : (0 : ℝ) ≤ t := hsourceLower0.trans htY.1.1.le
+  have hquad := quadratic_fract_mem_veryBad_innerBand_of_same_unit_cell
+    hN hH hs0 ht0 hsUpper.le htY.1.2.le hdist htY.2.1 htY.2.2
+  exact ⟨⟨hsLower, hsUpper⟩, hsFractLo, hsFractHi, hquad.1, hquad.2⟩
+
+def veryBadQuadraticReciprocalInteriorSet (N H : ℕ) : Set ℝ :=
+  Ioo ((N : ℝ) / (2 * H) + 1) ((N : ℝ) / H - 1) ∩
+    {s | (2 / 100 : ℝ) ≤ Int.fract (s ^ 2 / N) ∧
+      Int.fract (s ^ 2 / N) ≤ 88 / 100}
+
+theorem measurableSet_veryBadQuadraticReciprocalInterior (N H : ℕ) : MeasurableSet (veryBadQuadraticReciprocalInteriorSet N H) := by
+  unfold veryBadQuadraticReciprocalInteriorSet
+  measurability
+
+theorem quadraticReciprocal_measure_le_interior_add_two {N H : ℕ} :
+    (volume (veryBadQuadraticReciprocalScaleSet N H)).toReal ≤
+      (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal + 2 := by
+  let a : ℝ := (N : ℝ) / (2 * H)
+  let b : ℝ := (N : ℝ) / H
+  let L : Set ℝ := Icc a (a + 1)
+  let R : Set ℝ := Icc (b - 1) b
+  have hcover : veryBadQuadraticReciprocalScaleSet N H ⊆
+      (veryBadQuadraticReciprocalInteriorSet N H ∪ L) ∪ R := by
+    intro t ht
+    by_cases htI : a + 1 < t ∧ t < b - 1
+    · left
+      left
+      exact ⟨htI, ht.2⟩
+    · simp only [not_and_or, not_lt] at htI
+      rcases htI with htleft | htright
+      · left
+        right
+        exact ⟨ht.1.1.le, htleft⟩
+      · right
+        exact ⟨htright, ht.1.2.le⟩
+  have hIfinite : volume (veryBadQuadraticReciprocalInteriorSet N H) ≠ ⊤ := (calc
+    volume (veryBadQuadraticReciprocalInteriorSet N H) ≤
+        volume (Ioo (a + 1) (b - 1)) := measure_mono inter_subset_left
+    _ < ⊤ := measure_Ioo_lt_top).ne
+  have hLfinite : volume L ≠ ⊤ := by
+    dsimp [L]
+    exact measure_Icc_lt_top.ne
+  have hRfinite : volume R ≠ ⊤ := by
+    dsimp [R]
+    exact measure_Icc_lt_top.ne
+  have hunionfinite : volume ((veryBadQuadraticReciprocalInteriorSet N H ∪ L) ∪ R) ≠ ⊤ :=
+    measure_union_ne_top (measure_union_ne_top hIfinite hLfinite) hRfinite
+  calc
+    (volume (veryBadQuadraticReciprocalScaleSet N H)).toReal ≤
+        (volume ((veryBadQuadraticReciprocalInteriorSet N H ∪ L) ∪ R)).toReal :=
+      measureReal_mono hcover hunionfinite
+    _ ≤ (volume (veryBadQuadraticReciprocalInteriorSet N H ∪ L)).toReal + (volume R).toReal :=
+      measureReal_union_le _ _
+    _ ≤ ((volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal + (volume L).toReal) +
+        (volume R).toReal := by
+      gcongr
+      exact measureReal_union_le _ _
+    _ = (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal + 2 := by
+      dsimp [L, R, a, b]
+      simp [Real.volume_Icc]
+      ring
+
+theorem veryBadQuadraticReciprocalScale_measure_lower_source {N H : ℕ} (hN : 0 < N) (hH : 0 < H)
+    (hscale : (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2) :
+    (N : ℝ) / (16 * H) ≤
+      (volume (veryBadQuadraticReciprocalScaleSet N H)).toReal := by
+  have hHr : (0 : ℝ) < H := by exact_mod_cast hH
+  have hlower := veryBadQuadraticSlice_measure_lower hH hscale
+  have hupper :=
+    quadraticSlice_measure_le_two_div_length_mul_reciprocalScale_measure hN hH
+  have hchain : (N : ℝ) / (8 * H ^ 2) ≤
+      2 / (H : ℝ) *
+        (volume (veryBadQuadraticReciprocalScaleSet N H)).toReal :=
+    hlower.trans hupper
+  have hchain' : (N : ℝ) ≤ 16 * H *
+      (volume (veryBadQuadraticReciprocalScaleSet N H)).toReal := by
+    rw [div_le_iff₀ (by positivity : (0 : ℝ) < 8 * H ^ 2)] at hchain
+    field_simp at hchain
+    nlinarith
+  rw [div_le_iff₀ (by positivity : (0 : ℝ) < 16 * H)]
+  simpa [mul_comm, mul_left_comm, mul_assoc] using hchain'
+
+theorem veryBadQuadraticReciprocalInterior_measure_lower {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H)
+    (hscale : (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2) :
+    (N : ℝ) / (32 * H) ≤ (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal := by
+  have hHpos : 0 < H := lt_of_lt_of_le (by norm_num) hH
+  have hHr : (0 : ℝ) < H := by exact_mod_cast hHpos
+  have hHlarge : (200 : ℝ) ≤ H := by exact_mod_cast hH
+  have hy := veryBadQuadraticReciprocalScale_measure_lower_source hN hHpos hscale
+  have htrim := quadraticReciprocal_measure_le_interior_add_two (N := N) (H := H)
+  have hscale' : (H : ℝ) ^ 2 / 2 ≤ N := by
+    rw [le_div_iff₀ (sq_pos_of_pos hHr)] at hscale
+    nlinarith
+  have hratio : (64 : ℝ) ≤ (N : ℝ) / H := by
+    rw [le_div_iff₀ hHr]
+    nlinarith
+  have hNH : (64 : ℝ) * H ≤ N := (le_div_iff₀ hHr).mp hratio
+  have hdiff : (N : ℝ) / (32 * H) + 2 ≤ (N : ℝ) / (16 * H) := by
+    rw [le_div_iff₀ (by positivity : (0 : ℝ) < 16 * H)]
+    field_simp
+    nlinarith
+  linarith
+
+noncomputable def veryBadOccupiedInteriorCells (N H : ℕ) : Finset ℤ := by
+  classical
+  exact (Finset.Icc
+      ⌊(N : ℝ) / (2 * H) + 1⌋
+      ⌊(N : ℝ) / H - 1⌋).filter
+        (fun k => ∃ t ∈ veryBadQuadraticReciprocalInteriorSet N H, ⌊t⌋ = k)
+
+def veryBadUnitCell (k : ℤ) : Set ℝ := Ico (k : ℝ) ((k : ℝ) + 1)
+
+def veryBadFirstBandCell (k : ℤ) : Set ℝ :=
+  Ioo ((k : ℝ) + 91 / 100) ((k : ℝ) + 99 / 100)
+
+theorem quadraticInterior_subset_occupiedCells {N H : ℕ} :
+    veryBadQuadraticReciprocalInteriorSet N H ⊆ ⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadUnitCell k := by
+  classical
+  intro t ht
+  have hklo : ⌊(N : ℝ) / (2 * H) + 1⌋ ≤ ⌊t⌋ :=
+    Int.floor_mono ht.1.1.le
+  have hkhi : ⌊t⌋ ≤ ⌊(N : ℝ) / H - 1⌋ :=
+    Int.floor_mono ht.1.2.le
+  have hk : ⌊t⌋ ∈ veryBadOccupiedInteriorCells N H := by
+    simp only [veryBadOccupiedInteriorCells, Finset.mem_filter, Finset.mem_Icc]
+    exact ⟨⟨hklo, hkhi⟩, t, ht, rfl⟩
+  simp only [mem_iUnion]
+  refine ⟨⌊t⌋, ⟨hk, ?_⟩⟩
+  exact ⟨Int.floor_le t, Int.lt_floor_add_one t⟩
+
+theorem quadraticInterior_measure_le_occupiedCell_card {N H : ℕ} :
+    (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal ≤ (veryBadOccupiedInteriorCells N H).card := by
+  classical
+  let U : Set ℝ := ⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadUnitCell k
+  have hUfinite : volume U ≠ ⊤ := (measure_biUnion_finset_le
+      (μ := volume) (veryBadOccupiedInteriorCells N H) veryBadUnitCell).trans_lt
+    (ENNReal.sum_lt_top.mpr (fun k hk => measure_Ico_lt_top)) |>.ne
+  calc
+    (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal ≤ (volume U).toReal :=
+      measureReal_mono quadraticInterior_subset_occupiedCells hUfinite
+    _ ≤ ∑ k ∈ veryBadOccupiedInteriorCells N H, (volume (veryBadUnitCell k)).toReal :=
+      measureReal_biUnion_finset_le _ _
+    _ = (veryBadOccupiedInteriorCells N H).card := by
+      simp [veryBadUnitCell, Real.volume_Ico]
+
+theorem firstBandCells_pairwiseDisjoint {N H : ℕ} :
+    Set.PairwiseDisjoint (↑(veryBadOccupiedInteriorCells N H)) veryBadFirstBandCell := by
+  intro k hk l hl hkl
+  change Disjoint (veryBadFirstBandCell k) (veryBadFirstBandCell l)
+  rw [Set.disjoint_left]
+  intro s hsk hsl
+  rcases lt_or_gt_of_ne hkl with hkl' | hlk'
+  · have hcast : (k : ℝ) + 1 ≤ (l : ℝ) := by exact_mod_cast hkl'
+    norm_num [veryBadFirstBandCell] at hsk hsl
+    linarith
+  · have hcast : (l : ℝ) + 1 ≤ (k : ℝ) := by exact_mod_cast hlk'
+    norm_num [veryBadFirstBandCell] at hsk hsl
+    linarith
+
+theorem firstBandUnion_measure {N H : ℕ} :
+    (volume (⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadFirstBandCell k)).toReal =
+      (2 / 25 : ℝ) * (veryBadOccupiedInteriorCells N H).card := by
+  classical
+  change volume.real (⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadFirstBandCell k) = _
+  rw [measureReal_biUnion_finset firstBandCells_pairwiseDisjoint
+    (fun k hk => measurableSet_Ioo)
+    (h := fun k hk => measure_Ioo_lt_top.ne)]
+  simp [veryBadFirstBandCell]
+  norm_num [max_def]
+  ring
+
+theorem firstBandUnion_subset_innerReciprocal
+    {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H) :
+    (⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadFirstBandCell k) ⊆
+      veryBadInnerReciprocalScaleSet N H := by
+  classical
+  intro s hs
+  simp only [mem_iUnion] at hs
+  obtain ⟨k, hk, hsBand⟩ := hs
+  have hkOcc := (Finset.mem_filter.mp hk).2
+  obtain ⟨t, ht, htfloor⟩ := hkOcc
+  have htY : t ∈ veryBadQuadraticReciprocalScaleSet N H := by
+    exact ⟨⟨by linarith [ht.1.1], by linarith [ht.1.2]⟩, ht.2⟩
+  have hcell := firstBandCell_subset_innerReciprocal_of_witness hN hH htY ht.1.1 ht.1.2
+  rw [htfloor] at hcell
+  exact hcell ⟨hsBand.1.le, hsBand.2.le⟩
+
+theorem innerReciprocal_measure_lower_by_quadraticInterior
+    {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H) :
+    (2 / 25 : ℝ) * (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal ≤
+      (volume (veryBadInnerReciprocalScaleSet N H)).toReal := by
+  have hSfinite : volume (veryBadInnerReciprocalScaleSet N H) ≠ ⊤ := (calc
+    volume (veryBadInnerReciprocalScaleSet N H) ≤
+        volume (Ioo ((N : ℝ) / (2 * H)) ((N : ℝ) / H)) :=
+      measure_mono inter_subset_left
+    _ < ⊤ := measure_Ioo_lt_top).ne
+  have hmono := measureReal_mono
+    (firstBandUnion_subset_innerReciprocal hN hH) hSfinite
+  change (volume (⋃ k ∈ veryBadOccupiedInteriorCells N H, veryBadFirstBandCell k)).toReal ≤
+    (volume (veryBadInnerReciprocalScaleSet N H)).toReal at hmono
+  rw [firstBandUnion_measure] at hmono
+  have hcard := quadraticInterior_measure_le_occupiedCell_card (N := N) (H := H)
+  nlinarith [mul_nonneg (by norm_num : (0 : ℝ) ≤ 2 / 25)
+    (measureReal_nonneg : 0 ≤ volume.real (veryBadQuadraticReciprocalInteriorSet N H))]
+
+theorem veryBadInnerReciprocalScale_measure_lower
+    {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H)
+    (hscale : (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2) :
+    (N : ℝ) / (400 * H) ≤
+      (volume (veryBadInnerReciprocalScaleSet N H)).toReal := by
+  have hInterior := veryBadQuadraticReciprocalInterior_measure_lower hN hH hscale
+  have hInsert := innerReciprocal_measure_lower_by_quadraticInterior hN hH
+  calc
+    (N : ℝ) / (400 * H) = (2 / 25 : ℝ) * (N / (32 * H)) := by
+      field_simp
+      ring
+    _ ≤ (2 / 25 : ℝ) * (volume (veryBadQuadraticReciprocalInteriorSet N H)).toReal := by
+      gcongr
+    _ ≤ (volume (veryBadInnerReciprocalScaleSet N H)).toReal := hInsert
+
 /-- Exact pointwise transport of the inner good set by `s = N / t`. -/
 theorem mem_veryBadInnerPrimeScaleSet_iff_reciprocal_mem
     {N H : ℕ} (hN : 0 < N) (hH : 0 < H) {t : ℝ} (ht : 0 < t) :
@@ -1160,19 +1579,81 @@ theorem reciprocalScale_measure_mul_jacobian_le_primeScale_measure
   rw [volume_veryBadInnerPrimeScaleSet_eq_integral_reciprocal hN hH]
   simpa [mul_comm] using hmain
 
+/-- The complete geometric lower bound in Tao's Lemma 3.1: after the two
+changes of variables, endpoint trimming, and unit-cell insertion, the exact
+inner prime-scale good set occupies at least `H / 400`. -/
+theorem veryBadInnerPrimeScale_measure_lower
+    {N H : ℕ} (hN : 0 < N) (hH : 200 ≤ H)
+    (hscale : (1 / 2 : ℝ) ≤ (N : ℝ) / H ^ 2) :
+    (H : ℝ) / 400 ≤
+      (volume (veryBadInnerPrimeScaleSet N H)).toReal := by
+  have hHpos : 0 < H := lt_of_lt_of_le (by norm_num) hH
+  have hNr : (0 : ℝ) < N := by exact_mod_cast hN
+  have hHr : (0 : ℝ) < H := by exact_mod_cast hHpos
+  have hreciprocal := veryBadInnerReciprocalScale_measure_lower hN hH hscale
+  have hjac := reciprocalScale_measure_mul_jacobian_le_primeScale_measure
+    hN hHpos
+  calc
+    (H : ℝ) / 400 = (H : ℝ) ^ 2 / N * (N / (400 * H)) := by
+      field_simp
+    _ ≤ (H : ℝ) ^ 2 / N *
+        (volume (veryBadInnerReciprocalScaleSet N H)).toReal := by
+      gcongr
+    _ ≤ (volume (veryBadInnerPrimeScaleSet N H)).toReal := hjac
+
+/-- The complete geometric lower bound with its source arithmetic input
+packaged as the exact Sylvester--Schur contract. -/
+theorem veryBadInnerPrimeScale_measure_lower_of_sylvesterSchur
+    (hSS : SylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hH : 200 ≤ H) (hveryBad : IsVeryBadInterval N H) :
+    (H : ℝ) / 400 ≤
+      (volume (veryBadInnerPrimeScaleSet N H)).toReal :=
+  veryBadInnerPrimeScale_measure_lower hN hH
+    (hveryBad.one_half_le_start_div_length_sq_of_sylvesterSchur hSS hN)
+
+/-- The complete geometric lower bound stated directly from the standard
+binomial Sylvester--Schur theorem. -/
+theorem veryBadInnerPrimeScale_measure_lower_of_binomial_sylvesterSchur
+    (hSS : BinomialSylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hH : 200 ≤ H) (hveryBad : IsVeryBadInterval N H) :
+    (H : ℝ) / 400 ≤
+      (volume (veryBadInnerPrimeScaleSet N H)).toReal :=
+  veryBadInnerPrimeScale_measure_lower_of_sylvesterSchur
+    (sylvesterSchurConclusion_of_binomial hSS) hN hH hveryBad
+
+/-- The complete geometric lower bound from only the quadratic-window
+Sylvester--Schur input actually required by Tao's proof. -/
+theorem veryBadInnerPrimeScale_measure_lower_of_quadraticWindow_sylvesterSchur
+    (hSS : QuadraticWindowSylvesterSchurConclusion) {N H : ℕ} (hN : 1 ≤ N)
+    (hH : 200 ≤ H) (hveryBad : IsVeryBadInterval N H) :
+    (H : ℝ) / 400 ≤
+      (volume (veryBadInnerPrimeScaleSet N H)).toReal :=
+  veryBadInnerPrimeScale_measure_lower hN hH
+    (hveryBad.one_half_le_start_div_length_sq_of_quadraticWindow_sylvesterSchur hSS hN)
+
+/-- Unconditional eventual geometric lower bound for every positive-start
+very bad interval. -/
+theorem eventually_veryBadInnerPrimeScale_measure_lower :
+    ∀ᶠ H : ℕ in Filter.atTop, ∀ N : ℕ, 1 ≤ N → IsVeryBadInterval N H →
+      (H : ℝ) / 400 ≤
+        (volume (veryBadInnerPrimeScaleSet N H)).toReal := by
+  filter_upwards [eventually_one_half_le_start_div_length_sq_of_veryBad,
+    Filter.eventually_ge_atTop (200 : ℕ)] with H hscale hH N hN hveryBad
+  exact veryBadInnerPrimeScale_measure_lower hN hH (hscale N hN hveryBad)
+
 /-- The weighted cutoff integral dominates the Lebesgue measure of the exact
-inner good set.  This isolates the remaining geometric content of the source
-change-of-variables argument from all complex and logarithmic bookkeeping. -/
-theorem exists_norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMeasure
+inner good set, with a fixed lower-bound constant for the cutoff.  Keeping
+the constant explicit is what permits a uniform eventual contradiction. -/
+theorem norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMeasure
+    (c : ℝ) (hcW : ∀ x y : ℝ,
+      (91 / 100 : ℝ) ≤ Int.fract x → Int.fract x ≤ 99 / 100 →
+      (1 / 100 : ℝ) ≤ Int.fract y → Int.fract y ≤ 89 / 100 →
+      c ≤ (veryBadSmoothCutoff (x, y)).re)
     {N H : ℕ} (hH : 2 ≤ H) :
-    ∃ c : ℝ, 0 < c ∧
-      c / Real.log (2 * H) *
-          (volume (veryBadInnerPrimeScaleSet N H)).toReal ≤
-        ‖primeEquidistributionIntegral (Ioo (H : ℝ) (2 * H))
-          veryBadSmoothCutoff (N : ℝ) (N : ℝ) 2‖ := by
-  obtain ⟨c, hc, hcW⟩ :=
-    exists_pos_le_veryBadSmoothCutoff_re_of_innerFractionalRegion
-  refine ⟨c, hc, ?_⟩
+    c / Real.log (2 * H) *
+        (volume (veryBadInnerPrimeScaleSet N H)).toReal ≤
+      ‖primeEquidistributionIntegral (Ioo (H : ℝ) (2 * H))
+        veryBadSmoothCutoff (N : ℝ) (N : ℝ) 2‖ := by
   let f : ℝ → ℝ := fun t =>
     (veryBadSmoothCutoff ((N : ℝ) / t, (N : ℝ) / t ^ 2) /
       Real.log t).re
@@ -1236,6 +1717,20 @@ theorem exists_norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMea
           (integrableOn_veryBadPrimeIntegralIntegrand hH)]
       rfl
 
+/-- Existential form of the fixed-cutoff integral lower bound. -/
+theorem exists_norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMeasure
+    {N H : ℕ} (hH : 2 ≤ H) :
+    ∃ c : ℝ, 0 < c ∧
+      c / Real.log (2 * H) *
+          (volume (veryBadInnerPrimeScaleSet N H)).toReal ≤
+        ‖primeEquidistributionIntegral (Ioo (H : ℝ) (2 * H))
+          veryBadSmoothCutoff (N : ℝ) (N : ℝ) 2‖ := by
+  obtain ⟨c, hc, hcW⟩ :=
+    exists_pos_le_veryBadSmoothCutoff_re_of_innerFractionalRegion
+  exact ⟨c, hc,
+    norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMeasure
+      c hcW hH⟩
+
 /-- The exponent supplied to Theorem 2.5 when Lemma 3.1 is contradicted at
 the scale `exp ((log N) ^ (2 / 3 + η))`. -/
 def veryBadTheorem25Epsilon (η : ℝ) : ℝ :=
@@ -1251,6 +1746,27 @@ theorem threeHalves_sub_veryBadTheorem25Epsilon (η : ℝ) :
     3 / 2 - veryBadTheorem25Epsilon η = ((2 / 3 + η)⁻¹ : ℝ) := by
   rw [veryBadTheorem25Epsilon]
   ring
+
+/-- For every fixed positive source slack, Tao's contradiction growth
+hypothesis eventually exceeds the absolute unit-cell threshold `H ≥ 200`. -/
+theorem eventually_two_hundred_le_of_veryBad_growth {η : ℝ} (hη : 0 < η) :
+    ∀ᶠ N : ℕ in Filter.atTop, ∀ H : ℕ,
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) < H → 200 ≤ H := by
+  have ha : 0 < (2 / 3 : ℝ) + η := by positivity
+  have ht : Filter.Tendsto
+      (fun N : ℕ => (Real.log (N : ℝ)) ^ (2 / 3 + η))
+      Filter.atTop Filter.atTop :=
+    (tendsto_rpow_atTop ha).comp
+      (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop)
+  filter_upwards [ht.eventually
+      (Filter.eventually_ge_atTop (Real.log 200))] with N hN H hGrowth
+  have hExp : (200 : ℝ) ≤
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) := by
+    rw [← Real.exp_log (by norm_num : (0 : ℝ) < 200)]
+    exact Real.exp_le_exp.mpr hN
+  have hReal : (200 : ℝ) < H :=
+    hExp.trans_lt (by exact_mod_cast hGrowth)
+  exact_mod_cast hReal.le
 
 /-- The contradiction hypothesis in Lemma 3.1 implies the exact frequency
 range required by the specialized Theorem 2.5, with hidden multiplier one. -/
@@ -1373,6 +1889,130 @@ theorem exists_veryBadSmoothCutoffIntegralBound_of_growth
   exact exists_veryBadSmoothCutoffIntegralBound_of_taoTheorem25Specialized
     h25 hH hveryBad (veryBadTheorem25Epsilon_pos hη) hA
     (by norm_num) (vinogradovParameterBound_of_veryBad_growth hN hH hη hgrowth)
+
+/-- Two powers of logarithmic saving eventually beat the fixed-cutoff lower
+bound, uniformly after the common factor `H` is restored. -/
+theorem eventually_logarithmic_integral_gap (D : ℝ) {c : ℝ} (hc : 0 < c) :
+    ∀ᶠ H : ℕ in Filter.atTop,
+      D * (H : ℝ) / (Real.log H) ^ 2 <
+        c / Real.log (2 * H) * ((H : ℝ) / 400) := by
+  let D₀ : ℝ := max D 0
+  have hlog := (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually
+    (Filter.eventually_gt_atTop (800 * D₀ / c))
+  filter_upwards [hlog, Filter.eventually_ge_atTop (2 : ℕ)] with H hlarge hH
+  have hHr : (2 : ℝ) ≤ H := by exact_mod_cast hH
+  have hHpos : (0 : ℝ) < H := by positivity
+  have hlogH : 0 < Real.log (H : ℝ) := Real.log_pos (by linarith)
+  have hlogTwoLe : Real.log 2 ≤ Real.log (H : ℝ) :=
+    Real.strictMonoOn_log.monotoneOn (by norm_num) hHpos hHr
+  have hlogTwoH : Real.log (2 * (H : ℝ)) =
+      Real.log 2 + Real.log (H : ℝ) := by
+    rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) hHpos.ne']
+  have hlogTwoHPos : 0 < Real.log (2 * (H : ℝ)) :=
+    Real.log_pos (by nlinarith)
+  have hlogTwoHLe : Real.log (2 * (H : ℝ)) ≤
+      2 * Real.log (H : ℝ) := by
+    rw [hlogTwoH]
+    linarith
+  have hD₀ : 0 ≤ D₀ := le_max_right D 0
+  have hDle : D ≤ D₀ := le_max_left D 0
+  have hthreshold : 800 * D₀ < c * Real.log (H : ℝ) := by
+    have hlarge' : 800 * D₀ / c < Real.log (H : ℝ) := by
+      simpa only [Function.comp_apply] using hlarge
+    simpa [mul_comm] using (div_lt_iff₀ hc).mp hlarge'
+  have hnum : D * (400 * Real.log (2 * (H : ℝ))) <
+      c * (Real.log (H : ℝ)) ^ 2 := by
+    calc
+      D * (400 * Real.log (2 * (H : ℝ))) ≤
+          D₀ * (400 * Real.log (2 * (H : ℝ))) := by
+            gcongr
+      _ ≤ D₀ * (400 * (2 * Real.log (H : ℝ))) := by
+            gcongr
+      _ = (800 * D₀) * Real.log (H : ℝ) := by ring
+      _ < (c * Real.log (H : ℝ)) * Real.log (H : ℝ) :=
+        mul_lt_mul_of_pos_right hthreshold hlogH
+      _ = c * (Real.log (H : ℝ)) ^ 2 := by ring
+  have hscalar : D / (Real.log (H : ℝ)) ^ 2 <
+      c / (400 * Real.log (2 * (H : ℝ))) := by
+    rw [div_lt_div_iff₀ (sq_pos_of_pos hlogH)
+      (mul_pos (by norm_num) hlogTwoHPos)]
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hnum
+  have hmul := mul_lt_mul_of_pos_left hscalar hHpos
+  convert hmul using 1 <;> ring
+
+/-- An eventual property of integer scales transfers uniformly to every
+`H` above Tao's subexponential growth threshold. -/
+theorem eventually_of_veryBad_growth {η : ℝ} (hη : 0 < η)
+    {P : ℕ → Prop} (hP : ∀ᶠ H : ℕ in Filter.atTop, P H) :
+    ∀ᶠ N : ℕ in Filter.atTop, ∀ H : ℕ,
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) < H → P H := by
+  obtain ⟨H₀, hH₀⟩ := (Filter.eventually_atTop.1 hP)
+  have ha : 0 < (2 / 3 : ℝ) + η := by positivity
+  have ht : Filter.Tendsto
+      (fun N : ℕ => Real.exp ((Real.log (N : ℝ)) ^ (2 / 3 + η)))
+      Filter.atTop Filter.atTop :=
+    Real.tendsto_exp_atTop.comp ((tendsto_rpow_atTop ha).comp
+      (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop))
+  filter_upwards [ht.eventually
+      (Filter.eventually_ge_atTop (H₀ : ℝ))] with N hN H hGrowth
+  apply hH₀ H
+  have hreal : (H₀ : ℝ) < H := hN.trans_lt (by exact_mod_cast hGrowth)
+  exact_mod_cast hreal.le
+
+/-- Conditional completion of Tao's Lemma 3.1 contradiction: assuming the
+specialized Theorem 2.5 estimate, sufficiently large positive-start very bad
+intervals cannot lie above the source's subexponential length threshold. -/
+theorem eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized
+    (h25 : TaoTheorem25SpecializedConclusion) {η : ℝ} (hη : 0 < η) :
+    ∀ᶠ N : ℕ in Filter.atTop, ∀ H : ℕ,
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) < H →
+        ¬ IsVeryBadInterval N H := by
+  obtain ⟨c, hc, hcW⟩ :=
+    exists_pos_le_veryBadSmoothCutoff_re_of_innerFractionalRegion
+  obtain ⟨C, hC, hbound⟩ := h25 (veryBadTheorem25Epsilon η)
+    (veryBadTheorem25Epsilon_pos hη) 2 (by norm_num) 1 (by norm_num)
+  let D : ℝ := C * taoC3Norm veryBadSmoothCutoff
+  have hgapN := eventually_of_veryBad_growth hη
+    (eventually_logarithmic_integral_gap D hc)
+  have hmeasureN := eventually_of_veryBad_growth hη
+    eventually_veryBadInnerPrimeScale_measure_lower
+  have hlargeN := eventually_two_hundred_le_of_veryBad_growth hη
+  filter_upwards [hgapN, hmeasureN, hlargeN,
+    Filter.eventually_ge_atTop (2 : ℕ)] with N hgap hmeasure hlarge hN H hGrowth
+  intro hveryBad
+  have hH200 : 200 ≤ H := hlarge H hGrowth
+  have hH : 2 ≤ H := le_trans (by norm_num) hH200
+  have hNpos : 1 ≤ N := le_trans (by norm_num) hN
+  have hmeasureLower := hmeasure H hGrowth N hNpos hveryBad
+  have hintegralLower :=
+    norm_veryBadPrimeEquidistributionIntegral_lower_bound_by_innerMeasure
+      c hcW hH (N := N)
+  have hlogTwoHNonneg : 0 ≤ Real.log (2 * (H : ℝ)) := by
+    apply Real.log_nonneg
+    exact_mod_cast (show 1 ≤ 2 * H by omega)
+  have hfullLower :
+      c / Real.log (2 * H) * ((H : ℝ) / 400) ≤
+        ‖primeEquidistributionIntegral (Ioo (H : ℝ) (2 * H))
+          veryBadSmoothCutoff (N : ℝ) (N : ℝ) 2‖ :=
+    (mul_le_mul_of_nonneg_left hmeasureLower
+      (div_nonneg hc.le hlogTwoHNonneg)).trans hintegralLower
+  have hHReal : (2 : ℝ) ≤ H := by exact_mod_cast hH
+  have hsubset : Ioo (H : ℝ) (2 * H) ⊆ Icc (H : ℝ) (2 * H) := by
+    intro x hx
+    exact ⟨hx.1.le, hx.2.le⟩
+  have hestimate := hbound (H : ℝ) (Ioo (H : ℝ) (2 * H))
+    veryBadSmoothCutoff (N : ℝ) hHReal measurableSet_Ioo ordConnected_Ioo
+    hsubset veryBadSmoothCutoff_contDiff veryBadSmoothCutoff_isZ2Periodic
+    (vinogradovParameterBound_of_veryBad_growth hN hH hη hGrowth)
+  rw [primeEquidistributionSum_eq_zero_of_veryBad hH hveryBad
+      veryBadSmoothCutoff_supported,
+    zero_sub, norm_neg] at hestimate
+  have hfullUpper :
+      ‖primeEquidistributionIntegral (Ioo (H : ℝ) (2 * H))
+          veryBadSmoothCutoff (N : ℝ) (N : ℝ) 2‖ ≤
+        D * (H : ℝ) / (Real.log H) ^ 2 := by
+    simpa [D] using hestimate
+  exact (not_lt_of_ge (hfullLower.trans hfullUpper)) (hgap H hGrowth)
 
 end
 

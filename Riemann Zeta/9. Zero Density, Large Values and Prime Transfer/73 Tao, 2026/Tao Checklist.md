@@ -113,9 +113,54 @@ paper has been formalized.
 - [x] Prove the exact equivalence between type-`F₃` intervals and the
   three-factorial square equation, and the corresponding right-endpoint
   characterization of `F₃`.
+- [x] Prove the first conclusion of Tao's Lemma 4.1 (`abound`): every
+  type-`F₃` interval has `H<N`. The proof extracts a Bertrand prime from
+  `(N,N+H]`, shows that it occurs exactly once in the interval product, and
+  contradicts its occurrence in the smaller factorial component. Deduce the
+  triple form `a₃-a₂<a₂`, and prove that every integer lying in a type-`F₃`
+  interval is nonprime, the exact arithmetic input needed before applying
+  Proposition 2.3(ii).
+- [x] Prove the remaining quantitative conclusion of Lemma 4.1,
+  `a ≪ H log N`, uniformly for the smaller factorial index in a type-`F₃`
+  interval. Formalize the exact upper-half-prime product divisibility and
+  Chebyshev-theta inequality, use the pinned PNT for a positive theta-mass
+  lower bound, and absorb the finite exceptional range into one constant.
+- [x] Formalize the common arithmetic spine of Lemma 4.2 (`hf3`). Eventually
+  Lemma 4.1 gives `a<P=H log²N`; every prime `p>P` therefore has even interval-
+  product valuation, and because `p>H`, any occurrence is concentrated twice
+  in one interval element. In the large-`P` branch `√(2N)<P<p` this is
+  impossible since `p²>N+H`, so the prime does not divide the interval product.
+- [x] Formalize the large-`P` equidistribution interface for Lemma 4.2. Prove
+  that the final fractional arc detects a divisor in `(N,N+H]`, that Tao's
+  narrower `1/(10 log²N)` support lies in this arc for `P<p<2P`, and hence
+  that the prime sum vanishes exactly; consume specialized Theorem 2.5 to
+  obtain the corresponding integral upper bound. Define a concrete
+  shrinking cutoff and prove it smooth, periodic, nonnegative, supported,
+  and accepted by that upper-bound theorem. Derive the Theorem 2.5 frequency
+  range internally from the stretched-log contradiction hypothesis and
+  package the source-growth integral upper bound with multiplier one.
+- [x] Construct a normalized smooth-transition plateau weight for the
+  high-`P` branch. Prove it is one on the source inner arc, has mass at least
+  `1/(60 log²N)` per unit period, transport the long-interval mass through
+  `u=N/t`, remove the logarithmic weight, and combine the resulting norm lower
+  bound with Theorem 2.5 into the exact logarithmic sandwich.
+- [ ] Complete both analytic branches of Lemma 4.2 and prove its uniform
+  `H ≤ exp(log^(2/3+o(1)) N)` conclusion. This still requires Proposition
+  2.3(ii), the low-`P` two-dimensional Theorem 2.5 argument, and the high-`P`
+  normalized plateau cutoff's uniform polynomial `C³` estimate and the final
+  one-dimensional logarithmic contradiction.
 - [x] Prove that largest-index projection maps the finite factorial-square
   triple set exactly onto `F₃∩[1,x]`, yielding the lower-count transfer
   `#F₃(x) ≤ #triples(x)` used in Theorem 1.10.
+- [x] Formalize Tao's exact upper-counting key
+  `(a₃, a₃-a₂-1, a₁ mod 2)`. Under Erdős--Selfridge it is injective, and a
+  uniform tail-gap bound `a₃-a₂≤g` places its image in
+  `(F₃∩[1,x])×[0,g)×[0,2)`, proving the exact finite inequality
+  `#triples(x) ≤ 2g #F₃(x)`.
+- [x] Lift the finite inequality through the exact asymptotic API: any
+  eventual gap budget `g(x)=x^(o(1))`, the total power-scale conclusion of
+  Theorem 1.9, and Erdős--Selfridge imply the literal public Theorem 1.10
+  contract. The reverse-big-O half is discharged by the proved square family.
 - [x] Characterize `F₃¹` as square multiples of factorial squarefree
   components and prove the unconditional `⌊√x⌋-1` lower bounds for both
   `F₃¹`, `F₃` endpoints, and factorial-square triples, including the explicit
@@ -125,9 +170,17 @@ paper has been formalized.
 - [x] Pin Erdős--Selfridge and prove the exact factorial-fiber reduction:
   equal squarefree components are equivalent to the intervening consecutive
   product being a square; adjacent repetition is exactly at a square index.
+- [x] Prove the full long-interval square obstruction from Bertrand: if
+  `N≤H` and `2≤N+H`, then `(N+1)⋯(N+H)` is not a square. Consequently any repeated
+  positive factorial component at indices `a≤b` has `b-a<a`. Define the
+  exact Erdős--Selfridge square proposition and derive, without any axiom,
+  its complete finite two-element factorial-fiber consequence. Also prove
+  the length-two case by strict inequalities between consecutive squares, so
+  the full proposition is equivalent to only the core range `3≤H<N`.
 - [ ] Recursively formalize the Erdős--Selfridge no-perfect-power theorem
-  (at minimum its square specialization) and derive the two-element fiber
-  bound used in Theorem 1.10.
+  (at minimum its square specialization) in the residual short range
+  `3≤H<N`; instantiating the proved consequence then gives the two-element
+  fiber bound used in Theorem 1.10.
 - [x] Sharpen the proved square-root power scale to the source's
   `ζ(3/2)/ζ(3) √x` asymptotic for `VB¹` from the exact sum.
 - [x] Prove the elementary `H<N` conclusion of Lemma 3.1 for `N≥1`, by
@@ -562,7 +615,12 @@ paper has been formalized.
   is proved sufficient for the existing coefficient contract; native existence
   of all data except that uniform inequality is audited. The alternative
   supercritical Ford moment `3R+⌊R/5⌋` is quantitative but loses the required
-  decay after its larger root. All native critical constants for `40≤R<1000`
+  decay after its larger root. The maximal multiplier `4R` is now available
+  for `R≥10000`; its loss is `3R²/8000`, equation (18) is proved at arbitrary
+  supercritical moment, and the resulting positive power saving has a uniform
+  absolute coefficient after the `32R⁴` root. Its normalized saving still
+  falls short of the fixed `2^-18` source target, so it does not remove the
+  critical-moment residual. All native critical constants for `40≤R<1000`
   are now combined into one finite envelope, and the global coefficient
   contract plus its bilinear consumer are derived from a rooted hypothesis only
   for `R≥1000`. The supremal optimal coefficient is proved both to be a valid
@@ -603,8 +661,29 @@ paper has been formalized.
   - [x] Prove the cutoff has a fixed positive minimum on the inner rectangle,
     the integral is real and nonnegative, and reduce its norm lower bound to
     the measure of the explicit inner prime-scale good set.
-  - [ ] Prove that good set has measure `≫H` via the two source
-    changes of variables and periodic slice geometry.
+  - [x] Formalize both source changes of variables, including the exact
+    reciprocal and square Jacobians and their quantitative measure comparisons.
+  - [x] Prove the periodic quadratic-slice lower bound uniformly for
+    `N/H²≥1/2`; in particular the quadratic reciprocal set has measure at
+    least `H/32`.
+  - [x] Prove the unit-cell slow-variation estimate: for `H≥200`, meeting the
+    narrower quadratic band forces the entire cell into the enlarged band.
+  - [x] Complete the finite unit-cell measure comparison inserting
+    `{s}∈[0.91,0.99]`; after endpoint trimming and the reciprocal Jacobian,
+    obtain inner prime-scale measure at least `H/400` for `H≥200`.
+  - [x] Convert the Sylvester--Schur large-prime conclusion to the exact source
+    scale `N/H²≥1/2`, and discharge the eventual `H≥200` threshold from
+    contradiction growth.
+  - [x] State the standard binomial Sylvester--Schur contract and prove its
+    exact bridge to the consecutive-product contract used by Lemma 3.1.
+  - [x] Avoid the stronger unrestricted contract by proving the sufficient
+    eventual quadratic-window large-prime theorem from the frozen PNT and
+    exact binomial bounds; promote it to eventual `N/H²≥1/2` and `H/400`.
+  - [x] Choose the cutoff and Theorem 2.5 constants outside the eventual
+    quantifiers, prove the two-logarithm gap, and package the full eventual
+    contradiction conditional on `TaoTheorem25SpecializedConclusion`.
+  - [ ] Optional strengthening: prove the unrestricted exact
+    `SylvesterSchurConclusion` prime-factor contract.
 - [x] Build Lemma 3.2's canonical exponent-one/powerful-core factorization;
   prove its coefficient squarefree, supported on primes `≤H`, and dividing
   `H!`, and derive the exact two-position relation `an+h=bm`.

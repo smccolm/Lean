@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-0.92`. It
+This is a development manifest, version `prime-equidistribution-0.99`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -21,6 +21,10 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   pinned by SHA-256 with arXiv and DOI provenance and an exact Proposition
   1.12 proof locator; this is the cited input behind Tao's Theorem 2.5, not yet
   a formal proof.
+- A public Lean proof of the standard Sylvester--Schur theorem is pinned by
+  commit, path, byte size, and raw-file SHA-256 in `Sources/PINS.md`. It is a
+  provenance-only reference and is not vendored because the pinned proof source
+  has no explicit license. The local binomial-to-interval bridge is independent.
 
 ## Lean package
 
@@ -30,7 +34,7 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 - Mathlib commit: `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - Production modules: `Anatomy`, `Intervals`, `Asymptotics`, `Counting`,
   `CoefficientBounds`, `CoefficientProduct`, `CoefficientSelection`, `CriticalIntervals`,
-  `FactorialAsymptotics`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FourierAssembly`, `FourierApproximation`, `FourierDecay`, `FourierIntegrationByParts`, `FourierRadial`, `FourierSlices`,
+  `FactorialAsymptotics`, `FactorialCoefficientBounds`, `FactorialEquidistribution`, `FactorialFibers`, `FactorialIntervals`, `FactorialOneTerm`, `FactorialShortIntervals`, `FourierAssembly`, `FourierApproximation`, `FourierDecay`, `FourierIntegrationByParts`, `FourierRadial`, `FourierSlices`,
   `IntervalMultiples`, `PrimeIntervals`, `PrimeEquidistribution`,
   `PrimePowerReduction`, `PartialSummation`, `PhaseVariation`, `LowFrequency`, `PowerfulAsymptotics`, `PowerfulExtraction`,
   `PowerfulLimit`, `PowerfulNumbers`,
@@ -72,8 +76,37 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   subfamily gives audited `⌊√x⌋-1` lower bounds for endpoints and triples and
   the full reverse-big-O half of their `x^(1/2+o(1))` scale contracts.
   The exact reduction from repeated factorial squarefree components to a
-  square consecutive product is also proved; Erdős--Selfridge itself remains
-  an explicitly open, source-pinned dependency.
+  square consecutive product is also proved. Bertrand's postulate now rules
+  out every such square when `N≤H` and `2≤N+H`; the full square proposition is
+  also proved directly at length two and is therefore equivalent to only its
+  residual arithmetic core `3≤H<N`. The exact
+  Erdős--Selfridge square proposition has a proved finite
+  consequence bounding every factorial squarefree-component fiber by two;
+  proving its residual short-range arithmetic core remains the explicit,
+  source-pinned dependency. The exact counting key
+  `(a₃,a₃-a₂-1,a₁ mod 2)` is proved injective under this proposition, and a
+  uniform gap bound `a₃-a₂≤g` now gives Tao's literal finite upper transfer
+  `#triples(x)≤2g #F₃(x)`. This has also been lifted through the quantified
+  asymptotic API: a subpolynomial natural gap budget, the total power-scale
+  half of Theorem 1.9, and ES imply the literal `TaoTheorem110Conclusion`,
+  with the square family supplying its lower half. Thus no unformalized
+  counting or asymptotic bookkeeping remains between those three source
+  inputs and Theorem 1.10.
+  Tao's complete Lemma 4.1 (`abound`) is now unconditional:
+  every type-`F₃` interval satisfies `H<N`. Its exact triple specialization
+  `a₃-a₂<a₂` is also proved, as is the resulting fact that no member of such
+  an interval is prime. For its quantitative conclusion, the product of the
+  primes in `(a/2,a]` is proved to divide the interval product, giving the
+  exact inequality `θ(a)-θ(⌊a/2⌋)≤H log(N+H)`. The pinned PNT supplies an
+  eventual lower bound by `a/4`, and the finite exceptional range is absorbed
+  into one uniform positive constant, proving `a ≪ H log N` literally.
+  The common arithmetic spine of Lemma 4.2 is also complete. At Tao's exact
+  scale `P=H log²N`, Lemma 4.1 puts `a<P` eventually. Equality of squarefree
+  components then forces every prime `p>P` to have even interval-product
+  valuation, concentrated in a unique interval element because `p>H`. In the
+  large-`P` branch `√(2N)<P<p`, the resulting `p²` divisor is larger than the
+  endpoint, proving that `p` cannot divide the product. Both analytic
+  contradictions and Proposition 2.3(ii) remain explicit dependencies.
   All three source-facing total counts are proved to decompose exactly into
   their nontrivial and one-term value counts.
   The `b=1` powerful-number family gives audited `⌊√x⌋` lower bounds for
@@ -95,7 +128,21 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   The cutoff has a fixed positive minimum on the inner rectangle, the integral
   is real and nonnegative, and its norm lower bound is reduced to the measure
   of the explicit inner prime-scale good set; reciprocal membership is
-  transported exactly. Proving this good set has measure `≫H` remains. The
+  transported exactly. Both source substitutions and their Jacobians compile.
+  The quadratic band has exact period mass `43/50`; its uniform slice lower
+  bound implies quadratic reciprocal-set measure at least `H/32` under
+  `N/H²≥1/2`. The finite disjoint unit-cell argument, endpoint trimming, and
+  reciprocal Jacobian give the complete geometric lower bound `H/400`. The
+  standard binomial Sylvester--Schur contract and the exact interval-product
+  contract are stated, and their bridge is proved. More importantly, the
+  frozen PNT and exact factorization/binomial bounds prove the large prime
+  uniformly in the sufficient quadratic window for all large `H`. Thus
+  `N/H²≥1/2` and the `H/400` measure bound are unconditional eventually; the
+  unrestricted classical contract is no longer a release dependency. A fixed
+  cutoff constant and the fixed specialized-Theorem-2.5 constant are selected
+  before the eventual quantifiers; the audited two-logarithm comparison then
+  proves the complete eventual Lemma 3.1 contradiction conditional on
+  `TaoTheorem25SpecializedConclusion`.
   Theorem 2.5 and Fourier hypotheses use Mathlib's genuine
   `C∞` index `∞`; `⊤` in this toolchain denotes analytic regularity and would
   incorrectly exclude every nonzero compactly supported cutoff.
@@ -522,8 +569,18 @@ resulting source-facing theorem proves the nonlinear critical-regular terminal
   uniform rooted bound for it implies the established critical coefficient
   contract, while native existence of all other fields is proved. The explicit
   supercritical Ford multiplier `3R+⌊R/5⌋`, loss `3R²/2800`, and `57R³`
-  coefficient exponent also compile, but its larger extraction root is too
-  costly for the target decay. The optimal critical VMVT coefficient is defined
+  coefficient exponent also compile. At `R≥10000`, the maximal recurrence
+  multiplier `4R` is now proved to lie in Ford's source range and gives the
+  sharper loss `3R²/8000`. Equation (18) has been reassembled for an arbitrary
+  supercritical moment, proving exact cancellation of the main VMVT exponent;
+  its cubic coefficient growth is absorbed by the `32R⁴` root into the
+  existing absolute `fordUniversalRootCoefficient`, and the full-range Ford
+  moment therefore yields an unconditional uniform positive rooted power
+  saving. The formal comparison
+  `vinogradovFordFull_root_saving_lt_sourceTarget` proves that its extraction
+  root is nevertheless too large for Tao's fixed `2^-18` decay, confirming
+  that this route cannot replace quantitative control at the critical moment.
+  The optimal critical VMVT coefficient is defined
   as the supremum of the normalized counts; it supplies the mean-value bound
   and lies below every other valid witness. Coefficients below any cutoff are
   absorbed into one literal finite sum envelope. At cutoff `1000`, the theorem

@@ -27,6 +27,14 @@ theorem taoProposition23i {N : ℕ} (hN : 2 ≤ N) :
   obtain ⟨p, hp, hpLower, hpUpper⟩ := Nat.bertrand (N / 2) hhalf
   exact ⟨p, hp, hpLower, hpUpper.trans (by omega)⟩
 
+/-- Exact proposition-valued interface for the Baker--Harman--Pintz input in
+Tao Proposition 2.3(ii).  The exponent `21/40` is `0.525`; the single
+constant also absorbs the finite initial range. -/
+def TaoProposition23iiConclusion : Prop :=
+  ∃ C : ℝ, 0 < C ∧ ∀ (N H : ℕ), 1 ≤ N → 1 ≤ H →
+    (∀ p : ℕ, N < p → p ≤ N + H → ¬p.Prime) →
+    (H : ℝ) ≤ C * (N : ℝ) ^ (21 / 40 : ℝ)
+
 /-- The literal endpoint set in Tao's Proposition 2.3(iii): the interval
 length is determined by the outer scale `X`, and the closed interval
 `[x', x' + X^theta]` contains no natural prime.  The countable-intersection

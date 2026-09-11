@@ -93,13 +93,25 @@ now has its exact arithmetic and Theorem 2.5 interface: the source's
 fractional rectangle is incompatible with very badness, the corresponding
 prime sum is zero, and specialized Theorem 2.5 supplies the integral upper
 bound. The fixed sine/flat-exponential cutoff is now explicitly constructed
-and proved nonzero, nonnegative, `C∞`, periodic, and correctly supported. What
-remains in this consumer is now purely geometric: the contradiction growth
+and proved nonzero, nonnegative, `C∞`, periodic, and correctly supported. The
+contradiction growth
 hypothesis already supplies `ε25=3/2-(2/3+η)⁻¹>0` and `K=1`; the cutoff has a
 fixed positive inner-rectangle minimum; its integral is real and nonnegative;
 and its norm lower bound is reduced to the measure of an explicit good set in
-`(H,2H)`, whose reciprocal membership transport is exact. It remains to prove
-that this set has measure `≫H` by the source's two changes of variables. The
+`(H,2H)`, whose reciprocal membership transport is exact. Both source changes
+of variables and their Jacobian comparisons are now formalized. The quadratic
+fractional band has exact period mass `43/50`; uniformly for `N/H²≥1/2`, its
+slice has measure at least `N/(8H²)` and the quadratic reciprocal preimage has
+measure at least `H/32`. A finite disjoint unit-cell covering with endpoint
+trimming and slow variation now inserts the first fractional coordinate and
+gives inner prime-scale measure at least `H/400` for `H≥200`. The fixed
+cutoff and Theorem 2.5 constants are now coordinated uniformly, and two
+logarithmic powers close the full eventual contradiction conditional on the
+specialized Theorem 2.5 conclusion. The arithmetic scale no
+longer depends on unrestricted Sylvester--Schur: the frozen PNT and exact
+binomial-factorization bounds now prove the required large prime uniformly in
+the quadratic failure window for all sufficiently large `H`, giving eventual
+`N/H²≥1/2` and the final geometric measure bound. The
 Theorem 2.5/Fourier smoothness index is now the genuine `∞`, rather than
 Mathlib's stronger analytic index `⊤`.
 Lemma 3.2's arithmetic extraction is now formalized independently: removing
@@ -132,7 +144,7 @@ literal signed, polynomial-family form of Lemma 2.10. Corollary 2.11 is also
 complete: its exact dyadic fibers, three estimates, `2/5,2/5,1/5`
 interpolation, logarithmic absorption, signed-shift symmetry, and uniform
 linear-family theorem are all proved and audited. The next honest Theorem 1.8
-boundary is Theorem 2.5 and its Lemma 3.1 consumer.
+boundary is Theorem 2.5; its Lemma 3.1 consumer is now conditionally complete.
 
 The cited source of Theorem 2.5 is now pinned exactly: Proposition 1.12(ii) of
 Matomäki--Radziwiłł--Shao--Tao--Teräväinen, arXiv `2106.03335v1`, with both
