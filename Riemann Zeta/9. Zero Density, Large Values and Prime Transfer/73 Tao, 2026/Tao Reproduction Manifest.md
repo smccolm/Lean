@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-0.80`. It
+This is a development manifest, version `prime-equidistribution-0.92`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -36,10 +36,13 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `PowerfulLimit`, `PowerfulNumbers`,
   `PowerfulRelations`, `PowerfulRelationCounting`, `SquareRelations`, `ConvolutionRearrangement`,
   `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`,
-  `PublicStatements`, `TypeIReduction`, `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `VeryBadIntervals`,
-  `TorusFourier`, `VinogradovPhase`, `Vinogradov`, `VaughanCoefficients`, `VaughanIdentity`, and `Audit`.
-- Frozen theorem dependency: the exact 1,226-module import closure of
-  `GafniTao.Theorem11`, with 852 `GafniTao`, 291 `RiemannZeta`, and 83
+  `PublicStatements`, `TypeIReduction`, `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `VeryBadIntervals`, `VeryBadEquidistribution`,
+  `TorusFourier`, `VinogradovPhase`, `Vinogradov`, `VinogradovSharp`,
+  `VinogradovMeanValue`, `VinogradovUniform`, `VinogradovFord`,
+  `VinogradovWooleyCoefficient`, `VinogradovFiniteDegree`,
+  `VinogradovOptimalWooley`, `VaughanCoefficients`, `VaughanIdentity`, and `Audit`.
+- Frozen theorem dependency: the exact 1,339-module import closure of
+  `GafniTao.Theorem11`, with 965 `GafniTao`, 291 `RiemannZeta`, and 83
   `PrimeNumberTheoremAnd` source modules.
 - Proved content: Proposition 2.3(i) from Mathlib's Bertrand theorem;
   definition-interface lemmas; the uniform discrepancy result
@@ -81,6 +84,21 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   The exact-once prime divisor lemma and the positive-start `H<N` conclusion
   of Tao's Lemma 3.1 are also proved; the documented `{1}` edge case prevents
   claiming the unrestricted wording verbatim.
+  The arithmetic and Theorem 2.5 interface for the stronger clause now also
+  compile: a prime `H<p≤2H` dividing an interval element must divide it twice;
+  the exact source rectangle `{N/p}≥0.9`, `{N/p²}<0.9` contradicts this; every
+  supported periodic weight therefore has zero prime sum. The explicit
+  sine/flat-exponential cutoff is proved nonzero, nonnegative, `C∞`,
+  `ℤ²`-periodic, and supported in this rectangle; the specialized Theorem 2.5
+  contract yields its integral upper bound. The contradiction growth
+  hypothesis supplies the exact positive source exponent with multiplier one.
+  The cutoff has a fixed positive minimum on the inner rectangle, the integral
+  is real and nonnegative, and its norm lower bound is reduced to the measure
+  of the explicit inner prime-scale good set; reciprocal membership is
+  transported exactly. Proving this good set has measure `≫H` remains. The
+  Theorem 2.5 and Fourier hypotheses use Mathlib's genuine
+  `C∞` index `∞`; `⊤` in this toolchain denotes analytic regularity and would
+  incorrectly exclude every nonzero compactly supported cutoff.
   Lemma 3.2's canonical exponent-one coefficient/powerful-core split, its
   small-prime support, factorial divisibility, and exact two-position linear
   relation are proved. The exact coefficient-product divisibility, finite
@@ -479,9 +497,61 @@ resulting source-facing theorem proves the nonlinear critical-regular terminal
   `∑ν=V^ℓ`, `∑ν²=J`, the exact equal-power-sum solution count, and the
   unnormalized equation-(16) estimate are proved. The signed power-sum
   difference support is finite, has total multiplicity `(V^ℓ)²`, and is
-  contained coordinatewise in `|d_j|≤ℓV^(j+1)`. The remaining portion begins
-  with the equation-(18) regrouping and multiplicity bound, then Lemma 12 and
-  the VMVT estimate.
+  contained coordinatewise in `|d_j|≤ℓV^(j+1)`. The conjugate-pair moment
+  expansion is regrouped exactly over that support, and the proved bound
+  `μ(d)≤J` yields equation (18). Full symmetric-box enlargement and exact
+  coordinate factorization are also compiled. The geometric-series reduction,
+  capped reciprocal kernel, separated nearest-integer fibers, image count, and
+  explicit harmonic integral-test coordinate estimate in Lemma 12 compile as
+  well. Its medium coefficients now satisfy a coefficient-free normalized
+  logarithmic saving, with the reciprocal cancellation preserved. The scalar
+  factors are bounded by fixed negative powers, reindexed over the actual
+  medium degrees, and the source block proves the quadratic coordinate-product
+  initial saving `V^(-R^2/307200)` times the trivial box square. The scalar-growth
+  discharge, native frozen Wooley VMVT, and exact Ford/local count bridge now
+  compile. The squared coordinate-box product is now bounded by
+  `(3ℓ)^(2R)V^(R(R+1))`; the critical positive exponent is exactly `4ℓ²`, and
+  its real-power normalization yields the compiled abstract assembly
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)`. The sharper `c₀=1/4` block now has
+  floor-rounded weighted mass `R²/193`; after the `1/1024` scalar cost it gives
+  `V^(-255R²/197632)`. Native VMVT loss `ε=δ/128`, exact critical-root
+  extraction, the ceiling-sensitive comparison with `4·2⁻¹⁸/s²`, and the
+  floor-rounded conversion to twice the exact source exponential decay all
+  compile. The exact Section-12 passage now retains the native p-adic data
+  `(p,C,B₀)` and produces the critical coefficient `C·(p^(B₀+1)κ_R)^ε`; a
+  uniform rooted bound for it implies the established critical coefficient
+  contract, while native existence of all other fields is proved. The explicit
+  supercritical Ford multiplier `3R+⌊R/5⌋`, loss `3R²/2800`, and `57R³`
+  coefficient exponent also compile, but its larger extraction root is too
+  costly for the target decay. The optimal critical VMVT coefficient is defined
+  as the supremum of the normalized counts; it supplies the mean-value bound
+  and lies below every other valid witness. Coefficients below any cutoff are
+  absorbed into one literal finite sum envelope. At cutoff `1000`, the theorem
+  `vinogradovCriticalRootCoefficientBoundAt_of_from1000` glues a rooted bound
+  restricted to `R≥1000` to this finite envelope, and
+  `vinogradovBilinearPolynomialNontrivialEstimateAt_of_from1000` supplies the
+  existing source-facing consumer. The two directions between the witness tail
+  contract and uniform scalar boundedness of the optimal rooted coefficient
+  are proved, so no stronger choice-dependent hypothesis has been introduced.
+  `VinogradovOptimalWooley` further proves directly that the retained p-adic
+  data bound both the optimal coefficient and its rooted form by the exact
+  Section-12 expression, and maps the Wooley data contract to the optimal
+  scalar contract. Bertrand's theorem is used to choose the concentration
+  prime in the controlled range `R<p≤2R`; the corresponding bounded-prime tail
+  contract already implies the source-facing bilinear estimate. The open
+  frontier is therefore exactly the uniform infinite-degree control of the
+  concentration constant and starting depth in that displayed expression.
+  The coordinate-box factor is separately proved to contribute a critical
+  root between `1` and `3`; hence uniform boundedness of the full optimal root
+  is equivalent, up to this absolute factor, to boundedness of the VMVT
+  coefficient root alone. Its coefficient-only tail condition already implies
+  the source-facing bilinear estimate. More precisely, that root is proved
+  equal to `C_R^(1/κ_R²)`, and its bound by a fixed `A≥1` is equivalent to the
+  unrooted growth condition `C_R≤A^(κ_R²)`. This exact growth condition also
+  has a direct source-facing bilinear consumer. At the p-adic level, the single
+  root-free residual
+  `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)` is now a named bounded-prime contract;
+  it implies optimal coefficient growth and the final bilinear consumer.
   `exists_norm_reciprocalPhaseSum_le_sourceVinogradov_componentEnvelope`
   proves its complete global reciprocal-phase consumer.
   The intrinsic low-scale theorem uses `F'≤K^4` directly to replace the former
@@ -521,7 +591,7 @@ The command verifies:
 2. all six pinned source artifact hashes (Tao PDF and TeX archive,
    Baker--Harman--Pintz PDF, Erdős--Selfridge PDF, and the Singmaster PDF and
    TeX archive);
-3. all 1,226 frozen dependency hashes and the exact frozen source file set;
+3. all 1,339 frozen dependency hashes and the exact frozen source file set;
 4. the raw-only Mermaid architecture contract;
 5. the exact Lean, Mathlib, and imported package pins;
 6. direct production-root import coverage and forbidden-shortcut absence in

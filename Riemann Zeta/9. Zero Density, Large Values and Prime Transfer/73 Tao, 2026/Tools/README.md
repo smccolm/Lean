@@ -4,7 +4,7 @@
 excluded from the production import graph; any result used by the formalization
 must be promoted to `Extension/Tao2026/` and audited there.
 
-`run_tao_build.ps1` verifies the pinned Tao source artifacts, all 1,226 frozen
+`run_tao_build.ps1` verifies the pinned Tao source artifacts, all 1,339 frozen
 dependency hashes and their exact file set, the raw Mermaid contract, Lean and
 dependency pins, direct production-root coverage, forbidden proof shortcuts,
 the current axiom audit, and a warning-free build. It currently certifies only
@@ -114,6 +114,7 @@ development-only and excluded from production-root coverage pending owner
 permission to remove them; they are not imported by `Tao2026.lean`.
 
 `refresh_gafnitao_snapshot.ps1` reconstructs the exact recursive import
-closure of `GafniTao.Theorem11` from node 74, including `public import`
+closures of `GafniTao.Theorem11` and the native Wooley VMVT bridge from node
+74, including `public import`
 declarations, and regenerates the per-source SHA-256 manifest. Run it only as
 an intentional dependency-update operation and review all resulting changes.

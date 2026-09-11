@@ -44,9 +44,16 @@ import Tao2026.TypeIIReduction
 import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
+import Tao2026.VeryBadEquidistribution
 import Tao2026.VinogradovPhase
 import Tao2026.Vinogradov
+import Tao2026.VinogradovSharp
 import Tao2026.VinogradovMeanValue
+import Tao2026.VinogradovUniform
+import Tao2026.VinogradovFord
+import Tao2026.VinogradovWooleyCoefficient
+import Tao2026.VinogradovFiniteDegree
+import Tao2026.VinogradovOptimalWooley
 import Tao2026.VaughanCoefficients
 import Tao2026.VaughanIdentity
 import Tao2026.WeylDifferencing

@@ -20,6 +20,9 @@ try {
         'Dependencies\GafniTaoFrozen\lakefile.toml',
         'Dependencies\GafniTaoFrozen\lean-toolchain',
         'Dependencies\GafniTaoFrozen\GafniTao\Theorem11.lean',
+        'Dependencies\GafniTaoFrozen\GafniTao\WooleySourceCriticalBase.lean',
+        'Dependencies\GafniTaoFrozen\GafniTao\WooleySourceToPadic.lean',
+        'Dependencies\GafniTaoFrozen\GafniTao\WooleyPadicToCritical.lean',
         'Dependencies\GafniTaoFrozen\PrimeNumberTheoremAndClean\lakefile.toml',
         'Extension\lake-manifest.json',
         'Extension\lakefile.toml',
@@ -126,8 +129,8 @@ try {
         Get-Content -LiteralPath (Join-Path $frozenRoot 'SOURCE_SHA256SUMS.txt') |
             Where-Object { $_.Trim() }
     )
-    if ($frozenHashLines.Count -ne 1226) {
-        throw "Frozen source manifest must contain exactly 1226 modules; found $($frozenHashLines.Count)."
+    if ($frozenHashLines.Count -ne 1339) {
+        throw "Frozen source manifest must contain exactly 1339 modules; found $($frozenHashLines.Count)."
     }
     $manifestFiles = [System.Collections.Generic.HashSet[string]]::new(
         [System.StringComparer]::OrdinalIgnoreCase)
@@ -157,8 +160,8 @@ try {
         Get-ChildItem -LiteralPath $frozenRoot -Recurse -File -Filter '*.lean' |
             ForEach-Object { $_.FullName.Substring($frozenRoot.Length + 1) }
     )
-    if ($actualFrozenFiles.Count -ne 1226) {
-        throw "Frozen dependency must contain exactly 1226 Lean modules; found $($actualFrozenFiles.Count)."
+    if ($actualFrozenFiles.Count -ne 1339) {
+        throw "Frozen dependency must contain exactly 1339 Lean modules; found $($actualFrozenFiles.Count)."
     }
     foreach ($relativePath in $actualFrozenFiles) {
         if (-not $manifestFiles.Contains($relativePath)) {
@@ -262,7 +265,7 @@ try {
         throw 'The canonical Tao2026 build emitted a warning or tactic diagnostic.'
     }
 
-    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemmas 2.10 and 3.2, complete signed uniform Corollary 2.11, and audited Theorem 2.5 complex source contract/j1-absorption/phase-character-variation/qualitative-PNT dyadic and bounded-frequency consequences/low-frequency Abel-PNT reduction/finite Fourier assembly, uniform-approximation transfer, finite l1 truncation tails, summable cubic Z2 envelope, vanishing square-box tails, torus descent, conditional uniform reconstruction of W, complete smooth-periodic radial C3 Fourier decay/source-oriented Vaughan coefficient bounds and supports/product-restricted convolution/canonical polynomial-log short-family coverage, exact weighted Type-I/II decomposition, literal real-log relative-width support, exact ceiling-divided correlation-interval rewrite, and unconditional sharp-lag finite van-der-Corput recursion with arbitrary-depth majorant, exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridges with arbitrary lag-product upper/regular-lower estimates, IVT sign separation, terminal first/second derivative windows, a critical-regular nonlinear Kusmin-Landau terminal bound, exact rH/H^r admissible-lag control, uniform arbitrary-depth plus literal four-round regular-interval closure, exact lag-sensitive Weyl-tree propagation with an inverse-product/truncation leaf profile, harmonic leaf summation, all-depth scalar closure with generalized harmonic factors bounded by H, a source four-round sixteenth-root estimate, and a coarse scale recurrence with exact (QH)^15/scale sixteenth power, four explicit diagonal terms with exact sixteenth powers and powered denominator bounds, an exact source-facing five-term real-1/16-power majorant, a canonical floor-rounded differencing range with automatic upper-smallness discharge, and exact expanded-critical-start counting plus global long/short regular-component assembly, and terminal affine geometric-sum plus nearest-integer-distance estimate/prime-power/Abel/Type-I/complete-finite-product-restricted-Type-II/necessary all-support endpoint plus endpoint-free pure off-diagonal distance-kernel propagation through exact Vaughan double blocks and source-facing block lengths/high-frequency-log-absorption/normalized-parameter-bounds/critical-deletion groundwork; no main-theorem release is claimed.'
+    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemmas 2.10 and 3.2, complete signed uniform Corollary 2.11, and audited Theorem 2.5 complex source contract/j1-absorption/phase-character-variation/qualitative-PNT dyadic and bounded-frequency consequences/low-frequency Abel-PNT reduction/finite Fourier assembly, uniform-approximation transfer, finite l1 truncation tails, summable cubic Z2 envelope, vanishing square-box tails, torus descent, conditional uniform reconstruction of W, complete smooth-periodic radial C3 Fourier decay/source-oriented Vaughan coefficient bounds and supports/product-restricted convolution/canonical polynomial-log short-family coverage, exact weighted Type-I/II decomposition, literal real-log relative-width support, exact ceiling-divided correlation-interval rewrite, and unconditional sharp-lag finite van-der-Corput recursion with arbitrary-depth majorant, exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridges with arbitrary lag-product upper/regular-lower estimates, IVT sign separation, terminal first/second derivative windows, a critical-regular nonlinear Kusmin-Landau terminal bound, exact rH/H^r admissible-lag control, uniform arbitrary-depth plus literal four-round regular-interval closure, exact lag-sensitive Weyl-tree propagation with an inverse-product/truncation leaf profile, harmonic leaf summation, all-depth scalar closure with generalized harmonic factors bounded by H, a source four-round sixteenth-root estimate, and a coarse scale recurrence with exact (QH)^15/scale sixteenth power, four explicit diagonal terms with exact sixteenth powers and powered denominator bounds, an exact source-facing five-term real-1/16-power majorant, a canonical floor-rounded differencing range with automatic upper-smallness discharge, and exact expanded-critical-start counting plus global long/short regular-component assembly, and terminal affine geometric-sum plus nearest-integer-distance estimate/prime-power/Abel/Type-I/complete-finite-product-restricted-Type-II/necessary all-support endpoint plus endpoint-free pure off-diagonal distance-kernel propagation through exact Vaughan double blocks and source-facing block lengths/high-frequency-log-absorption/normalized-parameter-bounds/critical-deletion groundwork, together with exact equation-(18)/Lemma-12/scalar-growth/native-Wooley-VMVT count bridges/critical box-power ledger/critical assembly/sharp quarter-window R^2/193 saving/exact root/source-decay conversion/exact p-adic concentration-data coefficient bridge, quantitative supercritical Ford boundary, and finite native critical-coefficient absorption reducing the rooted residual to R>=1000; no main-theorem release is claimed.'
     exit 0
 }
 catch {

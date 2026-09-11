@@ -19,7 +19,7 @@ estimate is postulated as an axiom or theorem.
 -/
 
 open Filter MeasureTheory Set
-open scoped BigOperators Topology
+open scoped BigOperators ContDiff Topology
 
 namespace Tao2026
 
@@ -85,7 +85,7 @@ def TaoTheorem25Conclusion : Prop :=
     ∃ C : ℝ, 0 < C ∧
       ∀ (P : ℝ) (I : Set ℝ) (W : ℝ × ℝ → ℂ) (N M : ℝ) (j : ℕ),
         2 ≤ P → MeasurableSet I → OrdConnected I → I ⊆ Icc P (2 * P) →
-        ContDiff ℝ ⊤ W → IsZ2Periodic W → 1 ≤ j →
+        ContDiff ℝ ∞ W → IsZ2Periodic W → 1 ≤ j →
         VinogradovParameterBound ε K P N →
         VinogradovParameterBound ε K P M →
         ‖primeEquidistributionSum P I W N M j -
@@ -98,7 +98,7 @@ def TaoTheorem25SpecializedConclusion : Prop :=
     ∃ C : ℝ, 0 < C ∧
       ∀ (P : ℝ) (I : Set ℝ) (W : ℝ × ℝ → ℂ) (N : ℝ),
         2 ≤ P → MeasurableSet I → OrdConnected I → I ⊆ Icc P (2 * P) →
-        ContDiff ℝ ⊤ W → IsZ2Periodic W →
+        ContDiff ℝ ∞ W → IsZ2Periodic W →
         VinogradovParameterBound ε K P N →
         ‖primeEquidistributionSum P I W N N 2 -
             primeEquidistributionIntegral I W N N 2‖ ≤

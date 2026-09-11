@@ -40,6 +40,19 @@ upper bound remains open, so Theorem 1.8 itself is not yet claimed.
 The elementary first step of Lemma 3.1 is also proved for positive starting
 points: a very bad interval has `H<N`. The crosswalk records the genuine
 `N=0,H=1` edge case in the paper's unrestricted wording.
+The stronger-clause interface is now formalized through the exact source
+rectangle: for `H<p≤2H`, the conditions `{N/p}≥0.9` and `{N/p²}<0.9` produce
+an interval element divisible by `p` but not `p²`, contradicting very
+badness. Thus supported weights have identically zero prime sum, and the
+specialized Theorem 2.5 contract gives the required integral upper bound. An
+explicit nonzero, nonnegative sine/flat-exponential cutoff is now proved
+`C∞`, `ℤ²`-periodic, and supported in that rectangle. The contradiction growth
+hypothesis now yields the exact Theorem 2.5 exponent with multiplier one. The
+cutoff has a fixed positive minimum on the inner rectangle, its integral is
+real and nonnegative, and its norm lower bound is reduced to the measure of
+the exact inner good set; reciprocal-set membership is transported exactly.
+Proving that this set has measure `≫H` remains open. The smoothness index was also corrected from
+Mathlib's analytic `⊤` to its genuine `C∞` index `∞`.
 For Lemma 3.2, every interval element now has a canonical, audited
 factorization into its squarefree exponent-one coefficient and a powerful
 core. In a very bad interval every prime of that coefficient is at most `H`,
@@ -392,15 +405,61 @@ selection is also complete: all degrees in
 `c₀=1/128`, and exact floor/ceiling counting supplies at least `R/128` such
 degrees. Thus the remaining bilinear work begins at the polynomial mean-value
 argument itself. The new `Tao2026.VinogradovMeanValue` module now carries that
-argument through both Hölder steps: it defines the curve representation
+argument through Tao's equation (18): it defines the curve representation
 function, proves `∑ν=V^ℓ`, identifies `∑ν²` with the exact equal-power-sum
 solution count, proves the three-factor Hölder interpolation (including its
 Cauchy endpoint), and derives the unnormalized analogue of Tao's equation
 (16). It also defines the signed power-sum difference support, proves its total
 multiplicity is `(V^ℓ)²`, and places every coordinate in the symmetric box
-`|d_j|≤ℓV^(j+1)`. The remaining bilinear work starts with the equation
-(16)-to-(18) regrouping/multiplicity bound, followed by Lemma 12 and the
-Vinogradov mean-value estimate.
+`|d_j|≤ℓV^(j+1)`. The exact even-moment expansion, difference regrouping,
+and sharp pointwise multiplicity bound `μ(d)≤J` now give equation (18). The
+two supports are enlarged to the full symmetric box, and its double character
+sum is factored exactly into Tao's product of one-dimensional coordinate sums.
+The geometric-series reduction, capped reciprocal-distance kernel, rescaled
+nearest-integer fibers, their separation and count, and the resulting explicit
+one-dimensional integral-test estimate from Lemma 12 are now compiled. The
+medium window is also converted to a coefficient-free normalized logarithmic
+saving for each good coordinate. The scalar factors are now bounded by fixed
+negative powers, reindexed over the actual medium degrees, and the explicit
+  source block first gives the quadratic product saving `V^(-R^2/307200)` times the
+  trivial box square. The scalar growth condition is now discharged from the
+original nontrivial-scale hypotheses. The frozen native Wooley development
+proves the full VMVT, and its finite Ford count is identified exactly with the
+local equation-(17) count. The trivial box square is now collected exactly as
+`(3ℓ)^(2R) V^(R(R+1))`. At the critical moment
+`ℓ=R(R+1)/2`, the complete positive-power ledger is proved to equal
+`4ℓ²`; its real-power normalization and the abstract equation-(18) assembly
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)` also compile. A sharper production block
+  `[(9/8)(log F/log X),(7/4)(log F/log X)]` lies in the genuine `c₀=1/4`
+  window and has floor-rounded weighted mass at least `R²/193`. Absorbing only
+  `1/1024` of each degree gives the coordinate product saving
+  `V^(-255R²/197632)`. With native VMVT loss `ε=δ/128`, exact critical-root
+  extraction leaves exponent `16065R²/(12648448·2ℓ²)`. This exponent is proved,
+  including `R=10⌈log F/log X⌉`, to dominate the source target, and the floor in
+  `V=⌊X^(1/4)⌋` costs only a factor two. `VinogradovWooleyCoefficient` now
+  retains the native p-adic concentration data `(p,C,B₀)` and proves that its
+  exact Section-12 coefficient is `C·(p^(B₀+1)κ_R)^ε`; a uniform rooted bound
+  for this displayed expression implies the existing critical coefficient
+  contract. `VinogradovFord` separately verifies the explicit supercritical
+  multiplier `3R+⌊R/5⌋`, loss `3R²/2800`, and cubic coefficient growth. Its
+  larger extraction power is insufficient for the prescribed `2⁻¹⁸` decay,
+  while `VinogradovFiniteDegree` packages all native critical constants for
+  `40≤R<1000` into one finite envelope. It proves that a rooted bound restricted
+  to `R≥1000` implies the global coefficient contract and the nontrivial
+  bilinear estimate. Thus the remaining work is precisely the infinite-degree
+  scalar boundedness of the optimal rooted critical coefficient sequence. The
+  optimum is the supremum of the normalized counts; it is a valid witness and
+  is bounded by every other witness, making this scalar condition equivalent
+  to the original tail contract rather than a stronger choice-dependent one.
+  `VinogradovOptimalWooley` directly bounds the optimum and its critical root
+  by the retained `C·(p^(B₀+1)κ_R)^ε` expression. Its prime is selected
+  in the Bertrand range `R<p≤2R`. The coordinate-box root lies in `[1,3]`,
+  reducing the residual, up to an absolute factor, to the VMVT coefficient
+  root and therefore to growth of `C` and `B₀` alone. The coefficient root is
+  exactly `C_R^(1/κ_R²)`; a fixed bound `A` is equivalent to the unrooted
+  allowance `C_R≤A^(κ_R²)`, not uniform boundedness of the raw coefficients.
+  Thus the p-adic frontier is the single explicit inequality
+  `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)`; it now has a direct bilinear consumer.
 Its Type II
 consumer rewrites each actual high transformed-scale correlation to the
 ceiling-divided quotient interval and discharges its endpoint geometry. Raw
@@ -412,7 +471,8 @@ exponential-sum inequality itself.
 Theorem 2.5 is not claimed.
 
 Node 73 keeps the human-readable location assigned by the RH Map. The exact
-1,226-module Lean import closure of `GafniTao.Theorem11` is frozen under this
+1,339-module Lean import closure of `GafniTao.Theorem11` and the native Wooley
+VMVT bridge is frozen under this
 node with per-file SHA-256 hashes. The first Tao-facing quantitative bridge is
 proved. The literal variable-length dyadic prime-free set has now been shown
 measurable and eventually contained in Gafni--Tao's discrepancy exceptional
@@ -440,7 +500,7 @@ From this directory, run:
 cmd /c run_tao_build.bat --no-pause
 ```
 
-The runner checks all pinned source hashes, all 1,226 frozen dependency hashes and the exact
+The runner checks all pinned source hashes, all 1,339 frozen dependency hashes and the exact
 frozen file set, the raw Mermaid contract, toolchain/dependency pins, direct
 production-root coverage, forbidden proof shortcuts in both production and
 frozen source, the axiom audit, and the warning-free Lake build. Its current
@@ -472,7 +532,7 @@ calculus, complete Fourier coefficient decay/reconstruction, and exact
 source-oriented, coefficient-bounded, product-restricted, block-decomposed
 weighted Vaughan identity through the Vinogradov/Weyl estimate and quantitative
 Type I/II bounds.
-Then prove the
+Then complete the integral-lower-bound end of the
 subexponential second clause of Lemma 3.1 and combine it with the now-complete
 Lemma 3.2 and Corollary 2.11.
 In parallel source order, the pinned Baker--Harman--Pintz input in Proposition

@@ -39,7 +39,7 @@ competing status document.
 
 The first required analytic boundary is now fixed at the recursive import
 closure of `GafniTao.Theorem11`. Node 73 contains an immutable, per-file-hashed
-copy of its 1,226 reachable Lean modules and imports that package rather than a
+copy of its 1,339 reachable Lean modules and imports that package rather than a
 mutable sibling checkout. Further dependencies remain crosswalk-driven.
 
 Properties enforced for this boundary and required of later ones:
@@ -89,7 +89,19 @@ assembly from the now-complete Lemma 3.2 and Corollary 2.11.
 The first, elementary `H<N` clause of Lemma 3.1 is now proved for `N≥1`.
 The positive-start hypothesis is necessary under the literal definitions:
 `{1}` (`N=0,H=1`) is powerful. The remaining subexponential length estimate
-is the first consumer of the still-unformalized Theorem 2.5.
+now has its exact arithmetic and Theorem 2.5 interface: the source's
+fractional rectangle is incompatible with very badness, the corresponding
+prime sum is zero, and specialized Theorem 2.5 supplies the integral upper
+bound. The fixed sine/flat-exponential cutoff is now explicitly constructed
+and proved nonzero, nonnegative, `C∞`, periodic, and correctly supported. What
+remains in this consumer is now purely geometric: the contradiction growth
+hypothesis already supplies `ε25=3/2-(2/3+η)⁻¹>0` and `K=1`; the cutoff has a
+fixed positive inner-rectangle minimum; its integral is real and nonnegative;
+and its norm lower bound is reduced to the measure of an explicit good set in
+`(H,2H)`, whose reciprocal membership transport is exact. It remains to prove
+that this set has measure `≫H` by the source's two changes of variables. The
+Theorem 2.5/Fourier smoothness index is now the genuine `∞`, rather than
+Mathlib's stronger analytic index `⊤`.
 Lemma 3.2's arithmetic extraction is now formalized independently: removing
 exactly the exponent-one primes leaves a powerful core, and global
 powerfulness forces every removed prime to be at most `H`. The coefficient is
@@ -475,8 +487,53 @@ medium set. Its two Hölder steps and all intervening representation
 combinatorics are now compiled: `∑ν=V^ℓ`, `∑ν²=J`, the equal-power-sum
 solution count, and the exact equation-(16) inequality. The signed difference
 support is also finite, has total multiplicity `(V^ℓ)²`, and lies in the
-coordinate box `|d_j|≤ℓV^(j+1)`. Work now begins at the equation-(18)
-regrouping and difference-multiplicity estimate, before Lemma 12 and VMVT.
+coordinate box `|d_j|≤ℓV^(j+1)`. The exact even-moment expansion, difference
+regrouping, and Cauchy bound `μ(d)≤J` now establish equation (18). Work now
+includes the full symmetric-box enlargement and the exact factorization of its
+double character sum by coordinates. The geometric-series majorant is now
+summed through rescaled, separated nearest-integer fibers, giving an explicit
+harmonic integral-test bound for each coordinate. The two medium-window
+endpoints are now combined—before losing their cancellation—into the source's
+four-term logarithmic envelope, normalized by the side-length square. The
+full product uses this saving on good coordinates and the sharp trivial bound
+elsewhere. The scalar factors, exact medium-degree product, and explicit source
+  block now yield `V^(-R^2/307200)` times the trivial box square. Work then enters
+with the sharp constant and root layer: the scalar growth inequality is
+discharged, the native frozen Wooley VMVT is proved, and its Ford moment is
+exactly the local equation-(17) count. The trivial box square is collected as
+`(3ℓ)^(2R)V^(R(R+1))`; the critical positive-power ledger equals `4ℓ²`, and
+the compiled abstract assembly is
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)`. The constant ledger is now closed more
+  strongly: `[(9/8)s,(7/4)s]` lies in the `c₀=1/4` window with weight at least
+  `R²/193`; the scalar cost is only `1/1024`, so the product saves
+  `V^(-255R²/197632)`. Native VMVT with `ε=δ/128` is composed and root-extracted,
+  and the resulting exponent is proved to dominate `4·2⁻¹⁸/s²` despite the
+  ceiling in `R=10⌈s⌉`. The floor in `V=⌊X^(1/4)⌋` costs at most a factor two in
+  the exact source decay. The native p-adic concentration prime, coefficient,
+  and starting depth are now retained through Section 12, giving the exact
+  critical coefficient `C·(p^(B₀+1)κ_R)^ε`; a uniform rooted estimate for it
+  implies the established coefficient contract, and the native development
+  supplies every other field. The explicit supercritical Ford multiplier
+  `3R+⌊R/5⌋` has loss `3R²/2800` and controlled cubic coefficient growth, but
+  its larger root cannot deliver the target decay. The native critical
+  coefficients for `40≤R<1000` are now absorbed into a single finite envelope;
+  a rooted bound only for `R≥1000` is formally glued to that envelope and then
+  passed through the existing nontrivial bilinear consumer. What remains is
+  therefore one scalar assertion: uniform boundedness of the optimal rooted
+  critical coefficient sequence on the infinite-degree tail. Defining the
+  optimum by a supremum proves both that it supplies the VMVT estimate and that
+  every possible witness bounds it; this scalar formulation is equivalent to
+  the witness-based contract. The retained p-adic concentration data now map
+  directly into this optimum with the exact Section-12 coefficient and root,
+  so the remaining bound is stated identically at both interfaces. Bertrand's
+  theorem supplies `R<p≤2R` for the concentration prime; quantitative bounds
+  for the concentration constant and starting depth are the remaining fields.
+  The coordinate-box root is proved uniformly between `1` and `3`, so only the
+  VMVT coefficient root needs quantitative control. That root is exactly
+  `C_R^(1/κ_R²)`: a fixed bound by `A≥1` is equivalent to the natural
+  exponential-growth allowance `C_R≤A^(κ_R²)`. At the retained p-adic
+  interface this becomes the one explicit target
+  `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)`; all downstream packaging is complete.
 Its exact high-pair Type II
 consumer is also proved:
 the correlation support is rewritten to the ceiling-divided quotient interval,

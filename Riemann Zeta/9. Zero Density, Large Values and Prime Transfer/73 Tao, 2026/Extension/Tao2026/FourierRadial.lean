@@ -14,6 +14,8 @@ namespace Tao2026
 
 noncomputable section
 
+open scoped ContDiff
+
 /-- Every iterated Fréchet derivative of a `ℤ²`-periodic weight is itself
 ` ℤ²`-periodic. -/
 theorem iteratedFDeriv_isZ2Periodic
@@ -33,11 +35,13 @@ theorem iteratedFDeriv_isZ2Periodic
 translate an arbitrary point to the compact fundamental square and use
 continuity there. -/
 theorem bddAbove_iteratedFDeriv_norm_range
-    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ⊤ W)
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
     (hper : IsZ2Periodic W) (i : ℕ) :
     BddAbove {r : ℝ | ∃ x : ℝ × ℝ, r = ‖iteratedFDeriv ℝ i W x‖} := by
   let f : ℝ × ℝ → ℝ := fun x => ‖iteratedFDeriv ℝ i W x‖
-  have hf : Continuous f := (hW.continuous_iteratedFDeriv (by simp)).norm
+  have hi : (i : ℕ∞ω) < ∞ :=
+    WithTop.coe_lt_coe.mpr (ENat.coe_lt_top i)
+  have hf : Continuous f := (hW.continuous_iteratedFDeriv hi.le).norm
   have hbdd : BddAbove (f '' Set.Icc ((0 : ℝ), (0 : ℝ)) (1, 1)) :=
     isCompact_Icc.bddAbove_image hf.continuousOn
   apply BddAbove.mono _ hbdd
@@ -68,22 +72,26 @@ theorem pureCoordinateIteratedFDeriv_isZ2Periodic
 
 /-- Pure coordinate derivatives of a smooth weight are continuous. -/
 theorem continuous_pureCoordinateIteratedFDeriv
-    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ⊤ W)
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
     (i : ℕ) (e : ℝ × ℝ) :
     Continuous (pureCoordinateIteratedFDeriv W i e) := by
+  have hi : (i : ℕ∞ω) < ∞ :=
+    WithTop.coe_lt_coe.mpr (ENat.coe_lt_top i)
   have hd : Differentiable ℝ (iteratedFDeriv ℝ i W) := fun x =>
-    hW.contDiffAt.differentiableAt_iteratedFDeriv (by simp)
+    hW.contDiffAt.differentiableAt_iteratedFDeriv hi
   exact (hd.continuousMultilinear_apply_const (fun _ : Fin i => e)).continuous
 
 /-- Successive pure first-coordinate derivatives form the slice chain needed
 for periodic integration by parts. -/
 theorem hasDerivAt_pureCoordinateIteratedFDeriv_first
-    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ⊤ W)
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
     (i : ℕ) (x y : ℝ) :
     HasDerivAt (fun t => pureCoordinateIteratedFDeriv W i (1, 0) (t, y))
       (pureCoordinateIteratedFDeriv W (i + 1) (1, 0) (x, y)) x := by
+  have hi : (i : ℕ∞ω) < ∞ :=
+    WithTop.coe_lt_coe.mpr (ENat.coe_lt_top i)
   have hd : DifferentiableAt ℝ (iteratedFDeriv ℝ i W) (x, y) :=
-    hW.contDiffAt.differentiableAt_iteratedFDeriv (by simp)
+    hW.contDiffAt.differentiableAt_iteratedFDeriv hi
   have hp := hd.hasFDerivAt.continuousMultilinear_apply_const
     (fun _ : Fin i => ((1 : ℝ), (0 : ℝ)))
   have hline : HasDerivAt (fun t : ℝ => (t, y)) ((1 : ℝ), (0 : ℝ)) x :=
@@ -94,12 +102,14 @@ theorem hasDerivAt_pureCoordinateIteratedFDeriv_first
 
 /-- The symmetric pure second-coordinate derivative chain. -/
 theorem hasDerivAt_pureCoordinateIteratedFDeriv_second
-    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ⊤ W)
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
     (i : ℕ) (x y : ℝ) :
     HasDerivAt (fun t => pureCoordinateIteratedFDeriv W i (0, 1) (x, t))
       (pureCoordinateIteratedFDeriv W (i + 1) (0, 1) (x, y)) y := by
+  have hi : (i : ℕ∞ω) < ∞ :=
+    WithTop.coe_lt_coe.mpr (ENat.coe_lt_top i)
   have hd : DifferentiableAt ℝ (iteratedFDeriv ℝ i W) (x, y) :=
-    hW.contDiffAt.differentiableAt_iteratedFDeriv (by simp)
+    hW.contDiffAt.differentiableAt_iteratedFDeriv hi
   have hp := hd.hasFDerivAt.continuousMultilinear_apply_const
     (fun _ : Fin i => ((0 : ℝ), (1 : ℝ)))
   have hline : HasDerivAt (fun t : ℝ => (x, t)) ((0 : ℝ), (1 : ℝ)) y :=
@@ -333,7 +343,7 @@ theorem norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight
 in the preceding `taoC3Norm` comparison. -/
 theorem norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_contDiff
     (W W₁ W₂ W₃ V₁ V₂ V₃ : ℝ × ℝ → ℂ)
-    (hW : ContDiff ℝ ⊤ W)
+    (hW : ContDiff ℝ ∞ W)
     (hper : IsZ2Periodic W)
     (hperW₁ : IsZ2Periodic W₁) (hperW₂ : IsZ2Periodic W₂)
     (hperV₁ : IsZ2Periodic V₁) (hperV₂ : IsZ2Periodic V₂)
@@ -363,7 +373,7 @@ theorem norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_contDiff
 /-- Unconditional source-facing Fourier decay: the exact public smoothness and
 periodicity hypotheses imply Tao's radial cubic coefficient envelope. -/
 theorem norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth
-    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ⊤ W)
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
     (hper : IsZ2Periodic W) (q : ℤ × ℤ) :
     ‖taoFourierCoeff W hper hW.continuous q‖ ≤
       27 * taoC3Norm W * fourierDecayWeight q := by

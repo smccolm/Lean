@@ -38,7 +38,7 @@ paper has been formalized.
 
 - [x] Identify `GafniTao.Theorem11` as the root of the first required
   Guth--Maynard/Gafni--Tao analytic boundary.
-- [x] Freeze its exact recursive source import closure: 852 Gafni--Tao, 291
+- [x] Freeze its exact recursive source import closure: 965 Gafni--Tao, 291
   Guth--Maynard foundation, and 83 PNT+ modules.
 - [x] Pin the selected revisions and record every copied Lean source hash.
 - [x] Ensure node 73 imports the frozen package rather than mutable sibling
@@ -538,11 +538,44 @@ paper has been formalized.
   the representation function; prove `∑ν=V^ℓ`, `∑ν²=J`, and the exact
   equal-power-sum solution interpretation; derive the unnormalized equation
   (16); and prove the signed difference support has total multiplicity
-  `(V^ℓ)²` and lies in `|d_j|≤ℓV^(j+1)`.
+  `(V^ℓ)²` and lies in `|d_j|≤ℓV^(j+1)`. Expand the linearized even
+  moment, prove every difference multiplicity satisfies `μ(d)≤J`, regroup
+  exactly by differences, derive equation (18), enlarge both variables to the
+  full symmetric box, and factor the double phase sum by coordinates.
 - [ ] Prove the remaining Theorem 2.5 analytic chain: the named high-scale
   Vinogradov proposition (now reduced exactly to
-  `VinogradovBilinearPolynomialNontrivialEstimate`, with its next frontier at
-  the equation-(18) regrouping, Lemma 12, and VMVT) and
+  `VinogradovBilinearPolynomialNontrivialEstimate`; the geometric-series,
+  separated-fiber, harmonic integral-test, explicit coordinate bounds,
+  normalized medium-coordinate saving, fixed-power scalar reduction, exact
+  medium-degree product reindexing, quadratic degree-sum estimate, and source
+  initial product bound `V^(-R^2/307200)` in Lemma 12 now compiles; its scalar-growth
+  hypothesis is discharged, the native frozen Wooley VMVT is proved, and its
+  Ford moment is exactly bridged to the local count; the squared-box product
+  `(3ℓ)^(2R)V^(R(R+1))`, exact critical exponent cancellation, real-power
+  normalization, and abstract bound
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)` now compiles; the sharper `c₀=1/4` block has
+  floor-rounded weight `R²/193`, the `1/1024` envelope gives
+  `V^(-255R²/197632)`, and `ε=δ/128` is propagated through the exact critical
+  root; its exponent dominates `4·2⁻¹⁸/s²`, and the floor-rounded `V` power is
+  converted to twice the exact source decay. The native Section-12 coefficient
+  is now exposed as `C·(p^(B₀+1)κ_R)^ε`, and a rooted bound for this expression
+  is proved sufficient for the existing coefficient contract; native existence
+  of all data except that uniform inequality is audited. The alternative
+  supercritical Ford moment `3R+⌊R/5⌋` is quantitative but loses the required
+  decay after its larger root. All native critical constants for `40≤R<1000`
+  are now combined into one finite envelope, and the global coefficient
+  contract plus its bilinear consumer are derived from a rooted hypothesis only
+  for `R≥1000`. The supremal optimal coefficient is proved both to be a valid
+  witness and to lie below every witness, so this contract is equivalent to
+  scalar boundedness of its rooted sequence. Retained Wooley concentration
+  data bound the optimum by the exact Section-12 coefficient. Thus only the
+  uniform infinite-degree bound for that explicit expression remains here;
+  its prime is already constrained by Bertrand to `R<p≤2R`, leaving only `C`
+  and `B₀` growth uncontrolled. The coordinate-box root is in `[1,3]`, and
+  the coefficient-only root condition is sufficient for the final bilinear
+  consumer; this root equals `C_R^(1/κ_R²)`, so its bound by `A` is equivalent
+  to `C_R≤A^(κ_R²)`. The remaining p-adic condition is exactly
+  `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)`, with a direct final consumer) and
   the quantitative Type I/II estimates. Its full
   conditional uniform logarithmic consequence is now proved. The source lower split already supplies
   `F≥1`. The canonical Vaughan coefficient
@@ -555,6 +588,23 @@ paper has been formalized.
   Vaughan identity are not proof of this estimate.
 - [ ] Prove Lemma 3.1's subexponential bound
   `H ≤ exp(log^(2/3+o(1)) N)` from Theorem 2.5.
+  - [x] Prove that a prime `H<p≤2H` dividing an element of a very bad
+    interval has its square dividing that same element.
+  - [x] Formalize the exact forbidden fractional-part rectangle
+    `{N/p}≥0.9`, `{N/p²}<0.9` and prove that it produces a nonsquare prime
+    divisor in the interval.
+  - [x] Prove the supported prime sum vanishes and instantiate the specialized
+    Theorem 2.5 contract to obtain the source integral upper bound.
+  - [x] Construct an explicit nonzero `C∞`, `ℤ²`-periodic, nonnegative cutoff
+    supported in the forbidden rectangle and specialize the integral upper
+    bound to it.
+  - [x] Convert `H>exp((log N)^(2/3+η))` to the exact Theorem 2.5 parameter
+    bound with `ε25=3/2-(2/3+η)⁻¹` and multiplier `K=1`.
+  - [x] Prove the cutoff has a fixed positive minimum on the inner rectangle,
+    the integral is real and nonnegative, and reduce its norm lower bound to
+    the measure of the explicit inner prime-scale good set.
+  - [ ] Prove that good set has measure `≫H` via the two source
+    changes of variables and periodic slice geometry.
 - [x] Build Lemma 3.2's canonical exponent-one/powerful-core factorization;
   prove its coefficient squarefree, supported on primes `≤H`, and dividing
   `H!`, and derive the exact two-position relation `an+h=bm`.

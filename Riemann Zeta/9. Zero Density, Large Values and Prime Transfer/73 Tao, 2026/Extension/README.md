@@ -9,6 +9,18 @@ The package proves Proposition 2.3(i),(iii), the exact one-term `B¹` and `VB¹`
 counts, the full `VB¹` zeta-ratio asymptotic, Lemma 3.2, the complete signed
 and uniform Lemma 2.10, and the complete `x^(2/5+o(1))` Corollary 2.11. It
 also compiles the exact Theorem 2.5 summation/integral contract and proves the
+arithmetic interface for its Lemma 3.1 consumer: the exact forbidden
+fractional rectangle contradicts very badness, every supported weight has
+zero prime sum, and specialized Theorem 2.5 yields the required integral
+upper bound. An explicit nonzero, nonnegative sine/flat-exponential cutoff is
+proved `C∞`, `ℤ²`-periodic, and supported in the rectangle. The contradiction
+growth hypothesis supplies the exact source parameter exponent with `K=1`.
+The cutoff has a positive uniform inner-rectangle minimum, its integral is
+real and nonnegative, and its norm lower bound is reduced to the measure of
+the explicit inner good set, with exact reciprocal-set membership. The
+remaining boundary is to prove that good set has measure `≫H`. The Theorem 2.5 smoothness
+hypothesis uses `∞` (the genuine `C∞` index), since `⊤` denotes analyticity in
+this Mathlib version. The package also proves the
 all-orders reciprocal-phase derivative identities used by the cited
 Vinogradov argument, as well as the exact four-term arithmetic-function
 Vaughan identity in convolution, nested finite-divisor, and
@@ -116,9 +128,60 @@ proof is now formalized as well: the literal Taylor degree
   `∑ν²=J_{ℓ,R}(V)`, the equal-power-sum solution interpretation, and the exact
   unnormalized equation-(16) bound for the original bilinear polynomial sum.
   Its signed difference support has total multiplicity `(V^ℓ)²` and is proved
-  coordinatewise contained in `|d_j|≤ℓV^(j+1)`. The next frontier is the
-  equation-(18) regrouping and its representation-multiplicity bound, then the
-  factored box estimate and VMVT bound.
+  coordinatewise contained in `|d_j|≤ℓV^(j+1)`. Exact conjugate-pair expansion,
+  regrouping by this support, and `μ(d)≤J_{ℓ,R}(V)` establish equation (18).
+  Both variables are then enlarged to the full symmetric box, whose double
+  phase expression is factored exactly into one-dimensional coordinate sums.
+  The geometric-series reduction, capped reciprocal-distance kernel, separated
+  nearest-integer fibers, fiber count, and resulting quantitative integral-test
+  bound for each coordinate are now compiled. Both medium-window endpoints
+  now yield a coefficient-free logarithmic coordinate saving, normalized by
+  the square of its side length; these savings are assembled across all
+  coordinates while nonmedium coordinates use the sharp trivial bound. The
+  scalar estimate, exact medium-degree reindexing, quadratic degree-sum bound,
+  and initial source product saving `V^(-R^2/307200)` now compile, and the explicit
+  growth hypothesis is discharged from the original nontrivial-scale
+  assumptions. The native frozen Wooley VMVT and the exact equality between
+  its Ford moment and the local equation-(17) count now compile as well. The
+  squared side-length product is collected as
+  `(3ℓ)^(2R) V^(R(R+1))`; the critical identity reduces the entire positive
+  `V` exponent to `4ℓ²`, and the abstract critical assembly now gives
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)`. The separate production module
+  `Tao2026.VinogradovSharp` now proves, with every low ceiling case explicit,
+  that the block `[(9/8)s,(7/4)s]` has weighted mass at least `R²/193` and lies
+  in the genuine `c₀=1/4` window. A ninth-order exponential envelope absorbs
+  only `1/1024` per degree, giving `V^(-255R²/197632)`. Taking native VMVT
+  `ε=δ/128`, extracting the exact critical root, comparing the resulting
+  exponent with `4·2⁻¹⁸/s²`, and converting the floor-rounded `V` saving to two
+  copies of the exact source exponential decay all compile.
+  `Tao2026.VinogradovWooleyCoefficient` now keeps the native concentration
+  prime, constant, and starting depth literal and derives the exact critical
+  coefficient `C·(p^(B₀+1)κ_R)^ε`; a uniform rooted bound for that expression
+  implies the existing VMVT coefficient contract. The native proof supplies
+  every datum except this uniform inequality. `Tao2026.VinogradovFord` also
+  proves the explicit supercritical multiplier `3R+⌊R/5⌋`, Ford loss
+  `3R²/2800`, and `57R³` universal-base coefficient exponent. The resulting
+  larger moment root cannot preserve the source's `2⁻¹⁸` decay, so the next
+  frontier remains the quantitative rooted bound for the critical p-adic data.
+  `Tao2026.VinogradovFiniteDegree` now absorbs every native critical coefficient
+  below an arbitrary cutoff into one finite real envelope. Its concrete
+  specialization at `1000` proves that rooted control only for `R ≥ 1000`
+  implies the existing global coefficient contract and hence the nontrivial
+  bilinear estimate. The coefficient is defined optimally as the supremum of
+  the normalized mean-value counts. It is itself a valid VMVT witness, and
+  every other witness bounds it, so the tail contract is equivalent to uniform
+  boundedness of this displayed rooted coefficient sequence.
+  `Tao2026.VinogradovOptimalWooley` proves that retained p-adic concentration
+  data bound this optimum by the exact Section-12 coefficient, identifying the
+  scalar and p-adic descriptions of the remaining frontier. The concentration
+  prime is now chosen by Bertrand with `R<p≤2R`, leaving only quantitative
+  control of the concentration constant and starting depth. The coordinate-box
+  part of the critical root is independently trapped between `1` and `3`, so
+  the residual is equivalently coefficient-only, up to an absolute factor.
+  The coefficient root is exactly `C_R^(1/κ_R²)`, making its uniform bound by
+  `A` equivalent to the correctly scaled growth condition `C_R≤A^(κ_R²)`.
+  The remaining bounded-prime p-adic hypothesis is therefore the one explicit
+  inequality `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)`, with a compiled final consumer.
 The mixed Type II theorem now uses the intrinsic low-branch error
 `(1/K)^(1/1024)` from `F'≤K^4`, eliminating the retained global block error and
 its former upper source-scale hypothesis. The high-branch consumer is proved

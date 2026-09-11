@@ -2070,6 +2070,226 @@ theorem isVinogradovMediumCoefficient_eighth_of_sourceBlock
     have hright := mul_le_mul_of_nonpos_right hlogVUpp hnegative.le
     nlinarith
 
+/-- The cubic distortion estimate remains valid up to the wider endpoint
+`r ≤ (59/32)s`; the numerical `2⁻¹⁸` margin still dominates `1/65536`. -/
+theorem cube_mul_lt_linear_of_sharp_ratio
+    {r s L A : ℝ} (hr : 0 < r) (hs : 0 < s) (hL : 0 < L) (hA0 : 0 ≤ A)
+    (hrs : r ≤ (59 / 32 : ℝ) * s)
+    (hA : A < (2 : ℝ) ^ (-18 : ℝ) * L / s ^ 2) :
+    r ^ 3 * A < r * L / 65536 := by
+  have hsq : r ^ 2 ≤ (3481 / 1024 : ℝ) * s ^ 2 := by nlinarith
+  have hAs : A * s ^ 2 < (2 : ℝ) ^ (-18 : ℝ) * L := by
+    rw [lt_div_iff₀ (sq_pos_of_pos hs)] at hA
+    nlinarith
+  have hquad : r ^ 2 * A < L / 65536 := by
+    calc
+      r ^ 2 * A ≤ ((3481 / 1024 : ℝ) * s ^ 2) * A :=
+        mul_le_mul_of_nonneg_right hsq hA0
+      _ = (3481 / 1024 : ℝ) * (A * s ^ 2) := by ring
+      _ < (3481 / 1024 : ℝ) * ((2 : ℝ) ^ (-18 : ℝ) * L) := by gcongr
+      _ < L / 65536 := by
+        have hconst : (3481 / 1024 : ℝ) * (2 : ℝ) ^ (-18 : ℝ) < 1 / 65536 := by
+          norm_num
+        nlinarith
+  calc
+    r ^ 3 * A = r * (r ^ 2 * A) := by ring
+    _ < r * (L / 65536) := mul_lt_mul_of_pos_left hquad hr
+    _ = r * L / 65536 := by ring
+
+/-- Source nontriviality controls coefficient distortion throughout the wider
+sharp medium block ending at `(59/32)(log F/log X)`. -/
+theorem cube_log_alpha_lt_linear_of_sharpMediumIndex
+    {X F α : ℝ} {r : ℕ}
+    (hX : 2 ≤ X) (hFhigh : X ^ 4 ≤ F) (hα : 1 ≤ α) (hr : 1 ≤ r)
+    (hrupp : (r : ℝ) ≤ (59 / 32 : ℝ) * (Real.log F / Real.log X))
+    (hsmall : 2 * α * Real.exp
+      (-((2 : ℝ) ^ (-18 : ℝ)) * (Real.log X) ^ 3 /
+        (Real.log F) ^ 2) < 1) :
+    ((r ^ 3 : ℕ) : ℝ) * Real.log α <
+      (r : ℝ) * Real.log X / 65536 := by
+  have hXpos : 0 < X := by linarith
+  have hlogX : 0 < Real.log X := Real.log_pos (by linarith)
+  have hFpos : 0 < F := (pow_pos hXpos 4).trans_le hFhigh
+  have hlogF : 0 < Real.log F := Real.log_pos
+    ((show 1 < X ^ 4 by nlinarith [sq_nonneg (X ^ 2 - 4)]).trans_le hFhigh)
+  let s := Real.log F / Real.log X
+  have hs : 0 < s := div_pos hlogF hlogX
+  have hlogα := log_alpha_lt_vinogradovDecay_of_nontrivialScale
+    (by norm_num : (1 : ℝ) ≤ 2) hα hsmall
+  have hdecay : (2 : ℝ) ^ (-18 : ℝ) * (Real.log X) ^ 3 /
+      (Real.log F) ^ 2 = (2 : ℝ) ^ (-18 : ℝ) * Real.log X / s ^ 2 := by
+    dsimp only [s]
+    field_simp
+  rw [hdecay] at hlogα
+  have hrpos : 0 < (r : ℝ) := by exact_mod_cast hr
+  have hmain := cube_mul_lt_linear_of_sharp_ratio hrpos hs hlogX
+    (Real.log_nonneg hα) (by simpa only [s] using hrupp) hlogα
+  norm_num only [Nat.cast_pow] at hmain ⊢
+  exact hmain
+
+/-- Every degree in the wider block
+`(17/16)s ≤ r ≤ (59/32)s` lies in the genuine `c₀=1/8` window. The endpoints
+retain strict room for floor rounding, the `n∈[X,2X]` error, and cubic
+coefficient distortion. -/
+theorem isVinogradovMediumCoefficient_eighth_of_sharpBlock
+    {X F α : ℝ} {n r : ℕ} {c : ℕ → ℝ}
+    (hX : 2 ≤ X) (hFhigh : X ^ 4 ≤ F) (hα : 1 ≤ α)
+    (hn : (n : ℝ) ∈ Set.Icc X (2 * X)) (hr : 1 ≤ r)
+    (hrlow : (17 / 16 : ℝ) * (Real.log F / Real.log X) ≤ (r : ℝ))
+    (hrupp : (r : ℝ) ≤ (59 / 32 : ℝ) * (Real.log F / Real.log X))
+    (hcoeff : F / α ^ (r ^ 3) ≤ (n : ℝ) ^ r * |c r| ∧
+      (n : ℝ) ^ r * |c r| ≤ α ^ (r ^ 3) * F)
+    (hsmall : 2 * α * Real.exp
+      (-((2 : ℝ) ^ (-18 : ℝ)) * (Real.log X) ^ 3 /
+        (Real.log F) ^ 2) < 1) :
+    IsVinogradovMediumCoefficient (vinogradovAveragingRange X : ℝ)
+      (1 / 8) c r := by
+  have hXpos : 0 < X := by linarith
+  have hlogX : 0 < Real.log X := Real.log_pos (by linarith)
+  have hFpos : 0 < F := (pow_pos hXpos 4).trans_le hFhigh
+  have hlogF : 0 < Real.log F := Real.log_pos
+    ((show 1 < X ^ 4 by nlinarith [sq_nonneg (X ^ 2 - 4)]).trans_le hFhigh)
+  have hnpos : 0 < (n : ℝ) := hXpos.trans_le hn.1
+  have hrpos : 0 < (r : ℝ) := by exact_mod_cast hr
+  let s := Real.log F / Real.log X
+  have hspos : 0 < s := div_pos hlogF hlogX
+  have hsIdentity : Real.log F = s * Real.log X := by
+    dsimp only [s]
+    field_simp
+  have hsLower : (32 / 59 : ℝ) * (r : ℝ) ≤ s := by
+    dsimp only [s] at hrupp ⊢
+    linarith
+  have hsUpper : s ≤ (16 / 17 : ℝ) * (r : ℝ) := by
+    dsimp only [s] at hrlow ⊢
+    linarith
+  have hsLowerMul : (32 / 59 : ℝ) * (r : ℝ) * Real.log X ≤
+      s * Real.log X := mul_le_mul_of_nonneg_right hsLower hlogX.le
+  have hsUpperMul : s * Real.log X ≤
+      (16 / 17 : ℝ) * (r : ℝ) * Real.log X :=
+    mul_le_mul_of_nonneg_right hsUpper hlogX.le
+  have hlognLow : Real.log X ≤ Real.log n :=
+    Real.strictMonoOn_log.monotoneOn (Set.mem_Ioi.mpr hXpos)
+      (Set.mem_Ioi.mpr hnpos) hn.1
+  have hlognUpp : Real.log n ≤ Real.log X + Real.log 2 := by
+    have h2Xpos : 0 < 2 * X := mul_pos (by norm_num) hXpos
+    have h := Real.strictMonoOn_log.monotoneOn (Set.mem_Ioi.mpr hnpos)
+      (Set.mem_Ioi.mpr h2Xpos) hn.2
+    rw [Real.log_mul (by norm_num) (ne_of_gt hXpos)] at h
+    linarith
+  have hlognLowMul : (r : ℝ) * Real.log X ≤ (r : ℝ) * Real.log n :=
+    mul_le_mul_of_nonneg_left hlognLow hrpos.le
+  have hlognUppMul : (r : ℝ) * Real.log n ≤
+      (r : ℝ) * (Real.log X + Real.log 2) :=
+    mul_le_mul_of_nonneg_left hlognUpp hrpos.le
+  have herror := cube_log_alpha_lt_linear_of_sharpMediumIndex
+    hX hFhigh hα hr hrupp hsmall
+  have hXsixteen : 16 ≤ X :=
+    (sixteen_lt_of_nontrivialScale hX hFhigh hα hsmall).le
+  obtain ⟨hlogVLow, hlogVUpp⟩ := log_vinogradovAveragingRange_bounds hXsixteen
+  have hVpos : 0 < (vinogradovAveragingRange X : ℝ) := by
+    exact_mod_cast vinogradovAveragingRange_pos (show 1 ≤ X by linarith)
+  have hlarge := two_pow_22_mul_log_two_lt_log_of_nontrivialScale
+    hX hFhigh hα hsmall
+  have hbig : (2 : ℝ) ^ (22 : ℝ) * (r : ℝ) * Real.log 2 <
+      (r : ℝ) * Real.log X := by
+    nlinarith
+  norm_num at hbig
+  apply isVinogradovMediumCoefficient_of_coefficientWindow
+    hX hFhigh hα hn.1 hVpos hcoeff
+  · rw [hsIdentity]
+    have hnegative : -(2 - (1 / 8 : ℝ)) * (r : ℝ) < 0 := by
+      norm_num
+      omega
+    have hleft := mul_lt_mul_of_neg_right hlogVLow hnegative
+    nlinarith
+  · rw [hsIdentity]
+    have hnegative : -(1 / 8 : ℝ) * (r : ℝ) < 0 := by
+      norm_num
+      omega
+    have hright := mul_le_mul_of_nonpos_right hlogVUpp hnegative.le
+    nlinarith
+
+/-- Every degree in the block `(9/8)s ≤ r ≤ (7/4)s` lies in the genuine
+`c₀=1/4` coefficient window.  This stronger separation constant is the one
+used in the sharp final saving. -/
+theorem isVinogradovMediumCoefficient_quarter_of_sharpBlock
+    {X F α : ℝ} {n r : ℕ} {c : ℕ → ℝ}
+    (hX : 2 ≤ X) (hFhigh : X ^ 4 ≤ F) (hα : 1 ≤ α)
+    (hn : (n : ℝ) ∈ Set.Icc X (2 * X)) (hr : 1 ≤ r)
+    (hrlow : (9 / 8 : ℝ) * (Real.log F / Real.log X) ≤ (r : ℝ))
+    (hrupp : (r : ℝ) ≤ (7 / 4 : ℝ) * (Real.log F / Real.log X))
+    (hcoeff : F / α ^ (r ^ 3) ≤ (n : ℝ) ^ r * |c r| ∧
+      (n : ℝ) ^ r * |c r| ≤ α ^ (r ^ 3) * F)
+    (hsmall : 2 * α * Real.exp
+      (-((2 : ℝ) ^ (-18 : ℝ)) * (Real.log X) ^ 3 /
+        (Real.log F) ^ 2) < 1) :
+    IsVinogradovMediumCoefficient (vinogradovAveragingRange X : ℝ)
+      (1 / 4) c r := by
+  have hXpos : 0 < X := by linarith
+  have hlogX : 0 < Real.log X := Real.log_pos (by linarith)
+  have hFpos : 0 < F := (pow_pos hXpos 4).trans_le hFhigh
+  have hlogF : 0 < Real.log F := Real.log_pos
+    ((show 1 < X ^ 4 by nlinarith [sq_nonneg (X ^ 2 - 4)]).trans_le hFhigh)
+  have hnpos : 0 < (n : ℝ) := hXpos.trans_le hn.1
+  have hrpos : 0 < (r : ℝ) := by exact_mod_cast hr
+  let s := Real.log F / Real.log X
+  have hspos : 0 < s := div_pos hlogF hlogX
+  have hsIdentity : Real.log F = s * Real.log X := by
+    dsimp only [s]
+    field_simp
+  have hsLower : (4 / 7 : ℝ) * (r : ℝ) ≤ s := by
+    dsimp only [s] at hrupp ⊢
+    linarith
+  have hsUpper : s ≤ (8 / 9 : ℝ) * (r : ℝ) := by
+    dsimp only [s] at hrlow ⊢
+    linarith
+  have hsLowerMul : (4 / 7 : ℝ) * (r : ℝ) * Real.log X ≤
+      s * Real.log X := mul_le_mul_of_nonneg_right hsLower hlogX.le
+  have hsUpperMul : s * Real.log X ≤
+      (8 / 9 : ℝ) * (r : ℝ) * Real.log X :=
+    mul_le_mul_of_nonneg_right hsUpper hlogX.le
+  have hlognLow : Real.log X ≤ Real.log n :=
+    Real.strictMonoOn_log.monotoneOn (Set.mem_Ioi.mpr hXpos)
+      (Set.mem_Ioi.mpr hnpos) hn.1
+  have hlognUpp : Real.log n ≤ Real.log X + Real.log 2 := by
+    have h2Xpos : 0 < 2 * X := mul_pos (by norm_num) hXpos
+    have h := Real.strictMonoOn_log.monotoneOn (Set.mem_Ioi.mpr hnpos)
+      (Set.mem_Ioi.mpr h2Xpos) hn.2
+    rw [Real.log_mul (by norm_num) (ne_of_gt hXpos)] at h
+    linarith
+  have hlognLowMul : (r : ℝ) * Real.log X ≤ (r : ℝ) * Real.log n :=
+    mul_le_mul_of_nonneg_left hlognLow hrpos.le
+  have hlognUppMul : (r : ℝ) * Real.log n ≤
+      (r : ℝ) * (Real.log X + Real.log 2) :=
+    mul_le_mul_of_nonneg_left hlognUpp hrpos.le
+  have herror := cube_log_alpha_lt_linear_of_mediumIndex
+    hX hFhigh hα hr hrupp hsmall
+  have hXsixteen : 16 ≤ X :=
+    (sixteen_lt_of_nontrivialScale hX hFhigh hα hsmall).le
+  obtain ⟨hlogVLow, hlogVUpp⟩ := log_vinogradovAveragingRange_bounds hXsixteen
+  have hVpos : 0 < (vinogradovAveragingRange X : ℝ) := by
+    exact_mod_cast vinogradovAveragingRange_pos (show 1 ≤ X by linarith)
+  have hlarge := two_pow_22_mul_log_two_lt_log_of_nontrivialScale
+    hX hFhigh hα hsmall
+  have hbig : (2 : ℝ) ^ (22 : ℝ) * (r : ℝ) * Real.log 2 <
+      (r : ℝ) * Real.log X := by
+    nlinarith
+  norm_num at hbig
+  apply isVinogradovMediumCoefficient_of_coefficientWindow
+    hX hFhigh hα hn.1 hVpos hcoeff
+  · rw [hsIdentity]
+    have hnegative : -(2 - (1 / 4 : ℝ)) * (r : ℝ) < 0 := by
+      norm_num
+      omega
+    have hleft := mul_lt_mul_of_neg_right hlogVLow hnegative
+    nlinarith
+  · rw [hsIdentity]
+    have hnegative : -(1 / 4 : ℝ) * (r : ℝ) < 0 := by
+      norm_num
+      omega
+    have hright := mul_le_mul_of_nonpos_right hlogVUpp hnegative.le
+    nlinarith
+
 /-- The same source block meets the smaller separation constant `1/128`,
 which is compatible with its positive density among the `R` Taylor degrees. -/
 theorem isVinogradovMediumCoefficient_one_div_128_of_sourceBlock

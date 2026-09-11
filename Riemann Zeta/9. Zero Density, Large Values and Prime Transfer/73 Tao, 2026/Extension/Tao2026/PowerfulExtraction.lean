@@ -171,6 +171,47 @@ theorem factorization_consecutiveProduct_eq_one_of_mem_singleExponent
     have := (Finset.mem_Ioc.mp hj).1
     omega
 
+/-- A prime larger than the interval length can divide at most one interval
+element.  Hence powerfulness of the whole consecutive product forces its
+square to divide that same element.  This is the exact local arithmetic input
+used in the equidistribution proof of Lemma 3.1. -/
+theorem prime_sq_dvd_intervalElement_of_veryBad
+    {N H k p : ℕ} (hveryBad : IsVeryBadInterval N H)
+    (hk : k ∈ consecutiveInterval N H) (hp : p.Prime)
+    (hHltp : H < p) (hpk : p ∣ k) : p ^ 2 ∣ k := by
+  have hkPos : 0 < k := by
+    have := (Finset.mem_Ioc.mp hk).1
+    omega
+  have hproductFac :
+      (consecutiveProduct N H).factorization p = k.factorization p := by
+    rw [consecutiveProduct, Nat.factorization_prod_apply]
+    · apply Finset.sum_eq_single k
+      · intro j hj hjne
+        have hjPos : 0 < j := by
+          have := (Finset.mem_Ioc.mp hj).1
+          omega
+        have hpjNot : ¬p ∣ j := by
+          intro hpj
+          exact hjne (eq_of_mem_consecutiveInterval_of_prime_dvd
+            hj hk hHltp hpj hpk)
+        rw [hp.dvd_iff_one_le_factorization hjPos.ne'] at hpjNot
+        omega
+      · exact fun h => (h hk).elim
+    · intro j hj
+      have := (Finset.mem_Ioc.mp hj).1
+      omega
+  have hpProduct : p ∣ consecutiveProduct N H := by
+    rw [consecutiveProduct]
+    exact dvd_trans hpk (Finset.dvd_prod_of_mem id hk)
+  have hpSqProduct : p ^ 2 ∣ consecutiveProduct N H :=
+    hveryBad.2 p hp hpProduct
+  have htwoProduct : 2 ≤ (consecutiveProduct N H).factorization p :=
+    (hp.pow_dvd_iff_le_factorization (consecutiveProduct_ne_zero N H)).mp
+      hpSqProduct
+  have htwoK : 2 ≤ k.factorization p := by
+    rwa [hproductFac] at htwoProduct
+  exact (hp.pow_dvd_iff_le_factorization hkPos.ne').mpr htwoK
+
 theorem prime_dvd_singleExponentPart_le_length_of_veryBad
     {N H k p : ℕ} (hveryBad : IsVeryBadInterval N H)
     (hk : k ∈ consecutiveInterval N H) (hp : p.Prime)

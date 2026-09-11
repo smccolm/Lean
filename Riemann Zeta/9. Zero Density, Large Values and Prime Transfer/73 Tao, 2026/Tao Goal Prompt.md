@@ -258,12 +258,59 @@ shift of eighteen. Within the nontrivial branch, the fixed degree block
 `R/128` indices, each satisfying the medium-coefficient condition with
 `c₀=1/128` for the actual floor-rounded averaging range. Hence coefficient
 selection is no longer part of the open analytic input. The polynomial
-mean-value stage is now formalized through both Hölder inequalities: the
+mean-value stage is now formalized through equation (18): the
 representation identities `∑ν=V^ℓ` and `∑ν²=J`, the equal-power-sum solution
 count, and the exact equation-(16) bound are proved. Signed tuple differences
-are also counted and placed in the coordinate box `|d_j|≤ℓV^(j+1)`. The
-remaining part of this residual starts at the equation-(16)-to-(18)
-regrouping/multiplicity estimate, Lemma 12, and VMVT. A further theorem rewrites
+are also counted and placed in the coordinate box `|d_j|≤ℓV^(j+1)`. The exact
+even-moment expansion is regrouped by these differences, whose multiplicities
+satisfy `μ(d)≤J`, proving equation (18). The remaining part of this residual
+has also been enlarged to the full symmetric box and factored exactly by
+coordinates. The geometric-series reduction, capped reciprocal kernel,
+separated nearest-integer fibers, fiber count, and explicit one-dimensional
+integral-test estimate in Lemma 12 now compile. Its medium-window endpoints
+now give the normalized coefficient-free logarithmic saving for every good
+coordinate. The scalar factors have been reduced to fixed negative powers,
+reindexed over the actual medium-degree set, and combined with the explicit
+  source block to prove the initial quadratic product saving `V^(-R^2/307200)` times the
+trivial box square. The displayed scalar growth hypothesis is now derived from
+the original nontrivial-scale assumptions. The frozen native Wooley proof of
+VMVT is imported without a project axiom, and its Ford moment is identified
+exactly with the local equation-(17) count. The residual starts with the
+exact squared-box estimate `(3ℓ)^(2R) V^(R(R+1))`, the critical identity
+reducing all positive `V` powers to `4ℓ²`, and the abstract assembly
+  `|B|^(2ℓ²) ≤ C² A V^(4ℓ²+2ε-δ)`, all of which now compile. The sharper block
+  `[(9/8)s,(7/4)s]` is proved to lie in the `c₀=1/4` window and to have exact
+  floor-rounded weighted mass at least `R²/193`. The `1/1024` scalar absorption
+  yields `V^(-255R²/197632)`; choosing VMVT `ε=δ/128` and extracting the critical
+  root leaves the explicit exponent `16065R²/(12648448·2ℓ²)`. Its comparison
+  with `4·2⁻¹⁸/s²`, including `R=10⌈s⌉`, and the conversion from floor-rounded
+  `V` to two copies of the source exponential decay are now proved. The native
+  Section-12 conversion is now repeated with its p-adic concentration data
+  `(p,C,B₀)` retained literally, producing the exact critical coefficient
+  `C(p^(B₀+1)κ_R)^ε`; a uniform rooted bound for that displayed quantity implies
+  the existing critical coefficient contract, while the frozen proof supplies
+  all of the data apart from that inequality. An explicit supercritical Ford
+  alternative with multiplier `3R+⌊R/5⌋`, loss `3R²/2800`, and cubic coefficient
+  growth is also proved, but its larger extraction power does not retain the
+  prescribed `2⁻¹⁸` decay. Every native critical coefficient in the finite
+  range `40 ≤ R < 1000` is now absorbed into one finite envelope; a rooted
+  estimate only for `R ≥ 1000` is proved to imply the global coefficient
+  contract and its nontrivial bilinear consumer. The residual is therefore
+  the single scalar assertion that the optimal rooted critical coefficients
+  are uniformly bounded in the infinite-degree range. The optimum is defined
+  as the supremum of normalized mean-value counts and is proved equivalent to
+  the witness-based tail contract. The retained p-adic concentration data are
+  then proved to bound this optimum and its root by exactly
+  `C(p^(B₀+1)κ_R)^ε`. Bertrand permits the retained concentration prime
+  to be chosen with `R<p≤2R`, isolating `C` and `B₀` as the only uncontrolled
+  growth. The coordinate-box part of the critical root is proved to lie
+  between `1` and `3`, so the remaining tail bound is equivalent up to an
+  absolute factor to a coefficient-only VMVT root bound. This root is exactly
+  `C_R^(1/κ_R²)`, and a uniform root bound by `A` is proved equivalent to the
+  raw growth allowance `C_R≤A^(κ_R²)`. The p-adic residual is now the single
+  root-free bounded-prime condition
+  `C·(p^(B₀+1)κ_R)^ε≤A^(κ_R²)`, which directly implies the bilinear
+  contract. A further theorem rewrites
 every actual high-scale Type II correlation
 to its ceiling-divided quotient interval and applies this consumer with exact
 endpoint geometry and deletion cost.
@@ -504,6 +551,18 @@ Lemma 3.2's extraction of a nontrivial linear relation `a*n+h=b*m` between
 powerful numbers with every size, coprimality, and multiplicity bound. Combine
 it with Corollary 2.11, account for all parameter choices and interval
 overlaps, and close Theorem 1.8 and its zeta-constant corollary.
+
+Current Lemma 3.1 status: the exact forbidden `0.9` fractional rectangle, its
+contradiction with very badness for `H<p≤2H`, the resulting zero prime sum,
+the explicit nonzero/nonnegative `C∞`, `ℤ²`-periodic supported cutoff, and its
+specialized Theorem 2.5 integral upper bound are compiled and audited. The
+contradiction hypothesis is converted to the exact source parameter exponent
+`ε25=3/2-(2/3+η)⁻¹>0` with `K=1`. The cutoff has a fixed positive minimum on
+the inner rectangle; its integral is real and nonnegative, and its norm lower
+bound is reduced exactly to the measure of the inner prime-scale good set.
+The reciprocal membership transformation is also proved. The remaining
+boundary is the source geometric estimate that this good set has measure
+`≫H`.
 
 ### TAO-05: type `F_3` intervals and factorial solutions
 

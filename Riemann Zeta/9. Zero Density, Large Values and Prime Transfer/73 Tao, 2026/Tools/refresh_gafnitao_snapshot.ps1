@@ -43,7 +43,12 @@ function Resolve-LocalModule {
 }
 
 $queue = [System.Collections.Generic.Queue[string]]::new()
-$queue.Enqueue('GafniTao.Theorem11')
+@(
+    'GafniTao.Theorem11',
+    'GafniTao.WooleySourceCriticalBase',
+    'GafniTao.WooleySourceToPadic',
+    'GafniTao.WooleyPadicToCritical'
+) | ForEach-Object { $queue.Enqueue($_) }
 $seen = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::Ordinal)
 $closure = [System.Collections.Generic.List[object]]::new()
 
