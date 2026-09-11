@@ -480,4 +480,31 @@ theorem IsVeryBadInterval.length_lt_start_of_pos {N H : ℕ}
     prime_dvd_consecutiveProduct_exactly_once hp hNltp hpUpper hsumLt
   exact hpSqNotDvd (hveryBad.2 p hp hpdvd)
 
+/-- The documented `N = 0` edge case is unique: among intervals starting at
+zero, only the singleton `{1}` is very bad. -/
+theorem isVeryBadInterval_zero_iff {H : ℕ} :
+    IsVeryBadInterval 0 H ↔ H = 1 := by
+  constructor
+  · intro hveryBad
+    have hH : 1 ≤ H := hveryBad.length_pos
+    by_contra hne
+    have hHTwo : 2 ≤ H := by omega
+    obtain ⟨p, hp, hpLower, hpUpper⟩ := taoProposition23i hHTwo
+    have hpPos : 0 < p := hp.pos
+    have hsumLt : H < 2 * p := by omega
+    obtain ⟨hpdvd, hpSqNotDvd⟩ :=
+      prime_dvd_consecutiveProduct_exactly_once (N := 0) (H := H)
+        hp hpPos (by simpa using hpUpper) (by simpa using hsumLt)
+    exact hpSqNotDvd (hveryBad.2 p hp hpdvd)
+  · rintro rfl
+    simp [IsVeryBadInterval, Powerful]
+
+/-- Exact all-start classification for the elementary half of Lemma 3.1. -/
+theorem IsVeryBadInterval.eq_zero_one_or_length_lt_start
+    {N H : ℕ} (hveryBad : IsVeryBadInterval N H) :
+    (N = 0 ∧ H = 1) ∨ H < N := by
+  rcases N.eq_zero_or_pos with rfl | hN
+  · exact Or.inl ⟨rfl, isVeryBadInterval_zero_iff.mp hveryBad⟩
+  · exact Or.inr (hveryBad.length_lt_start_of_pos hN)
+
 end Tao2026

@@ -29,11 +29,155 @@ theorem taoProposition23i {N : ℕ} (hN : 2 ≤ N) :
 
 /-- Exact proposition-valued interface for the Baker--Harman--Pintz input in
 Tao Proposition 2.3(ii).  The exponent `21/40` is `0.525`; the single
-constant also absorbs the finite initial range. -/
+The coefficient also absorbs the finite initial range. -/
 def TaoProposition23iiConclusion : Prop :=
   ∃ C : ℝ, 0 < C ∧ ∀ (N H : ℕ), 1 ≤ N → 1 ≤ H →
     (∀ p : ℕ, N < p → p ≤ N + H → ¬p.Prime) →
     (H : ℝ) ≤ C * (N : ℝ) ^ (21 / 40 : ℝ)
+
+/-- Source-shaped form of Baker--Harman--Pintz Theorem 1: every sufficiently
+large real endpoint has a prime in its backward interval of length
+`x^(21/40)`.  This separates the analytic content of the cited paper from the
+endpoint and finite-range bookkeeping needed by Tao's Proposition 2.3(ii). -/
+def BakerHarmanPintzTheorem1Conclusion : Prop :=
+  ∀ᶠ x : ℝ in atTop, ∃ p : ℕ, p.Prime ∧
+    x - x ^ (21 / 40 : ℝ) < p ∧ (p : ℝ) ≤ x
+
+/-- The forward sampling point `N+2N^(21/40)` has a backward BHP interval
+whose left endpoint eventually lies strictly to the right of `N`. -/
+theorem eventually_bhp_backward_interval_left_gt_nat :
+    ∀ᶠ N : ℕ in atTop,
+      (N : ℝ) <
+        ((N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ)) -
+          ((N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ)) ^
+            (21 / 40 : ℝ) := by
+  have hpowTop : Tendsto (fun N : ℕ =>
+      (N : ℝ) ^ (19 / 40 : ℝ)) atTop atTop :=
+    (tendsto_rpow_atTop (by norm_num : (0 : ℝ) < 19 / 40)).comp
+      tendsto_natCast_atTop_atTop
+  have hlarge : ∀ᶠ N : ℕ in atTop,
+      2 < (N : ℝ) ^ (19 / 40 : ℝ) :=
+    hpowTop.eventually (eventually_gt_atTop _)
+  filter_upwards [hlarge, eventually_ge_atTop (1 : ℕ)] with N hlargeN hN
+  have hNpos : (0 : ℝ) < N := by exact_mod_cast hN
+  have hRpos : 0 < (N : ℝ) ^ (21 / 40 : ℝ) :=
+    Real.rpow_pos_of_pos hNpos _
+  have htwoRltN : 2 * (N : ℝ) ^ (21 / 40 : ℝ) < N := by
+    calc
+      2 * (N : ℝ) ^ (21 / 40 : ℝ) <
+          (N : ℝ) ^ (19 / 40 : ℝ) *
+            (N : ℝ) ^ (21 / 40 : ℝ) :=
+        mul_lt_mul_of_pos_right hlargeN hRpos
+      _ = (N : ℝ) ^ ((19 / 40 : ℝ) + 21 / 40) := by
+        rw [Real.rpow_add hNpos]
+      _ = N := by norm_num
+  have hshiftLt :
+      (N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ) < 2 * N := by
+    linarith
+  have hthetaPos : (0 : ℝ) < 21 / 40 := by norm_num
+  have hpowShift :
+      ((N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ)) ^
+          (21 / 40 : ℝ) <
+        (2 * (N : ℝ)) ^ (21 / 40 : ℝ) := by
+    exact Real.rpow_lt_rpow (by positivity) hshiftLt hthetaPos
+  have htwoPow : (2 : ℝ) ^ (21 / 40 : ℝ) < 2 := by
+    simpa only [Real.rpow_one] using
+      Real.rpow_lt_rpow_of_exponent_lt (by norm_num : (1 : ℝ) < 2)
+        (by norm_num : (21 / 40 : ℝ) < 1)
+  have hpowUpper :
+      ((N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ)) ^
+          (21 / 40 : ℝ) <
+        2 * (N : ℝ) ^ (21 / 40 : ℝ) := by
+    calc
+      _ < (2 * (N : ℝ)) ^ (21 / 40 : ℝ) := hpowShift
+      _ = (2 : ℝ) ^ (21 / 40 : ℝ) *
+          (N : ℝ) ^ (21 / 40 : ℝ) := by
+        rw [Real.mul_rpow (by norm_num) hNpos.le]
+      _ < 2 * (N : ℝ) ^ (21 / 40 : ℝ) :=
+        mul_lt_mul_of_pos_right htwoPow hRpos
+  linarith
+
+/-- Exact endpoint transfer: the source's eventual backward real interval
+implies a forward prime within `2N^(21/40)` of every sufficiently large
+natural endpoint. -/
+theorem eventually_exists_prime_after_nat_of_bakerHarmanPintz
+    (hBHP : BakerHarmanPintzTheorem1Conclusion) :
+    ∀ᶠ N : ℕ in atTop, ∃ p : ℕ, p.Prime ∧ N < p ∧
+      (p : ℝ) ≤ (N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ) := by
+  let x : ℕ → ℝ := fun N =>
+    (N : ℝ) + 2 * (N : ℝ) ^ (21 / 40 : ℝ)
+  have hxTop : Tendsto x atTop atTop := by
+    rw [tendsto_atTop]
+    intro b
+    filter_upwards
+      [tendsto_natCast_atTop_atTop.eventually (eventually_ge_atTop b)] with
+        N hN
+    exact hN.trans (le_add_of_nonneg_right (by positivity))
+  have hsample : ∀ᶠ N : ℕ in atTop, ∃ p : ℕ, p.Prime ∧
+      x N - (x N) ^ (21 / 40 : ℝ) < p ∧ (p : ℝ) ≤ x N :=
+    hxTop.eventually hBHP
+  filter_upwards [hsample, eventually_bhp_backward_interval_left_gt_nat] with
+    N hprime hleft
+  obtain ⟨p, hp, hpLower, hpUpper⟩ := hprime
+  refine ⟨p, hp, ?_, ?_⟩
+  · exact_mod_cast hleft.trans hpLower
+  · simpa only [x] using hpUpper
+
+/-- Baker--Harman--Pintz Theorem 1 implies Tao's uniform natural-number
+Proposition 2.3(ii), including both endpoint orientations and absorption of
+the finite initial range into one constant. -/
+theorem taoProposition23ii_of_bakerHarmanPintz
+    (hBHP : BakerHarmanPintzTheorem1Conclusion) :
+    TaoProposition23iiConclusion := by
+  have hforward := eventually_exists_prime_after_nat_of_bakerHarmanPintz hBHP
+  have hlarge : ∀ᶠ N : ℕ in atTop, ∀ H : ℕ,
+      (∀ p : ℕ, N < p → p ≤ N + H → ¬p.Prime) →
+      (H : ℝ) ≤ 2 * (N : ℝ) ^ (21 / 40 : ℝ) := by
+    filter_upwards [hforward] with N hprime
+    intro H hfree
+    obtain ⟨p, hp, hpLower, hpUpper⟩ := hprime
+    by_contra hbound
+    have hHlt : 2 * (N : ℝ) ^ (21 / 40 : ℝ) < H :=
+      lt_of_not_ge hbound
+    have hpUpperNat : p ≤ N + H := by
+      have hpUpperReal : (p : ℝ) < (N + H : ℕ) :=
+        hpUpper.trans_lt (by norm_num at hHlt ⊢; linarith)
+      have hpUpperStrict : p < N + H := by exact_mod_cast hpUpperReal
+      exact hpUpperStrict.le
+    exact hfree p hpLower hpUpperNat hp
+  rw [eventually_atTop] at hlarge
+  obtain ⟨N₀, hN₀⟩ := hlarge
+  let C : ℝ := N₀ + 2
+  have hC : 0 < C := by dsimp only [C]; positivity
+  refine ⟨C, hC, ?_⟩
+  intro N H hN hH hfree
+  have hNpos : (0 : ℝ) < N := by exact_mod_cast hN
+  have hRone : (1 : ℝ) ≤ (N : ℝ) ^ (21 / 40 : ℝ) :=
+    Real.one_le_rpow (by exact_mod_cast hN) (by norm_num)
+  by_cases hNN₀ : N₀ ≤ N
+  · have hbound := hN₀ N hNN₀ H hfree
+    calc
+      (H : ℝ) ≤ 2 * (N : ℝ) ^ (21 / 40 : ℝ) := hbound
+      _ ≤ C * (N : ℝ) ^ (21 / 40 : ℝ) := by
+        exact mul_le_mul_of_nonneg_right (by dsimp only [C]; norm_num)
+          (Real.rpow_nonneg hNpos.le _)
+  · have hHltN : H < N := by
+      by_contra hnot
+      have hNleH : N ≤ H := Nat.le_of_not_gt hnot
+      obtain ⟨p, hp, hpLower, hpUpper⟩ :=
+        taoProposition23i (N := 2 * N) (by omega)
+      have hpLower' : N < p := by simpa using hpLower
+      have hpUpper' : p ≤ N + H := hpUpper.trans (by omega)
+      exact hfree p hpLower' hpUpper' hp
+    have hNltN₀ : N < N₀ := Nat.lt_of_not_ge hNN₀
+    have hNleC : (N : ℝ) ≤ C := by
+      dsimp only [C]
+      exact_mod_cast (show N ≤ N₀ + 2 by omega)
+    calc
+      (H : ℝ) ≤ N := by exact_mod_cast hHltN.le
+      _ ≤ C := hNleC
+      _ ≤ C * (N : ℝ) ^ (21 / 40 : ℝ) := by
+        nlinarith
 
 /-- The literal endpoint set in Tao's Proposition 2.3(iii): the interval
 length is determined by the outer scale `X`, and the closed interval
@@ -214,7 +358,7 @@ theorem mem_shortIntervalExceptionalSet_half_of_primeFree
   linarith
 
 /-- The dyadic variable-length prime-free set used to connect Tao's literal
-constant-length endpoint set to Gafni--Tao's exceptional set. -/
+fixed-length endpoint set to Gafni--Tao's exceptional set. -/
 def dyadicPrimeFreeShortSet (X theta : ℝ) : Set ℝ :=
   Icc X (2 * X) ∩ ⋂ p : ℕ,
     if p.Prime then

@@ -144,11 +144,100 @@ paper has been formalized.
   `1/(60 log²N)` per unit period, transport the long-interval mass through
   `u=N/t`, remove the logarithmic weight, and combine the resulting norm lower
   bound with Theorem 2.5 into the exact logarithmic sandwich.
-- [ ] Complete both analytic branches of Lemma 4.2 and prove its uniform
-  `H ≤ exp(log^(2/3+o(1)) N)` conclusion. This still requires Proposition
-  2.3(ii), the low-`P` two-dimensional Theorem 2.5 argument, and the high-`P`
-  normalized plateau cutoff's uniform polynomial `C³` estimate and the final
-  one-dimensional logarithmic contradiction.
+- [x] Complete the high-`P` analytic contradiction conditional on the stated
+  inputs. Prove the normalized cutoff's uniform `O(log^12 N)` `C³` bound, fix
+  the uniform constant ordering in the sandwich, derive `4P≤N` from the exact
+  `21/40` Proposition 2.3(ii) interface, and finish the logarithmic
+  contradiction.
+- [x] Formalize the low-`P` arithmetic and upper-bound package. Define the
+  two-coordinate shrinking cutoff, prove its support excludes the forced
+  `p²` divisor, obtain exact prime-sum vanishing, prove its uniform
+  `O(log^12 N)` `C³` bound, and consume Theorem 2.5 with one uniform constant.
+- [x] Complete the low-`P` shrinking-band geometry and analytic contradiction.
+  Formalize both changes of variables, trim the endpoint cells, count occupied
+  unit cells, insert the `1/(60 log²N)` first band, derive prime-set measure
+  `≥H/1920`, lower-bound the fixed quadratic bump, and join the low/high split.
+- [ ] Prove the pinned Baker--Harman--Pintz result behind Proposition 2.3(ii),
+  thereby discharging the last external interface in the conditional Lemma
+  4.2 proof and obtaining its uniform `H ≤ exp(log^(2/3+o(1)) N)` conclusion.
+  - [x] State the source-shaped eventual backward real interval theorem and
+    prove its exact transfer to Tao's uniform forward natural-number bound,
+    including the `N+2N^(21/40)` shift and finite-range Bertrand absorption.
+- [x] Prove Lemma 4.3. Decompose every type-`F₃` interval element canonically
+  as `c n²`, prove that `c` is positive, squarefree, and supported on primes
+  at most `P=max a H`, and prove the exact product divisibility
+  `∏c | ∏_{p≤P} p^(H/p+1)`. Bound its logarithm by
+  `log 4 · H(2+log P)+log 4 · P`, average separately over the two interval
+  halves, and obtain ordered elements satisfying
+  `c₁n₁²+h=c₂n₂²`, `0<h<H`, with both coefficients at most
+  `exp(3 log 4 (2+log P+P/H))`.
+- [x] Formalize the exact finite counting reduction following Lemma 4.3.
+  Separate nontrivial endpoint values from interval witnesses, choose a
+  structured bounded smooth relation certificate for each witness, and prove
+  that the certificate together with the interval length and selected-element
+  offset determines the interval. For arbitrary bounds `A,C,G`, construct the
+  budgeted source subfamily and prove its endpoint count is at most
+  `A·C²·G³` times one uniform Lemma 2.10 relation-count budget. Define the
+  literal small-index-or-bounded-length family and its complement, prove they
+  partition every interval witness, and bound the total nontrivial endpoint
+  count by the sum of their endpoint-image cardinalities.
+- [x] Refine the bounded-length finite family to the exact smooth coefficient
+  range. Prove that the pair range has cardinality `psiNat x P ^ 2`, that
+  Lemma 4.3 puts both chosen coefficients in it whenever `max a H ≤ P`, and
+  bound its endpoint image by `A·psiNat(x,P)²·G³` times the uniform Lemma 2.10
+  budget.
+- [x] Close the actual fixed-bounded-`H` branch. Retain smoothness through an
+  arbitrary number of square-times-squarefree decompositions, prove the exact
+  bound `Ψ(x,P) ≤ (2^π(P))^r iterSqrt(r,x)`, combine it with Chebyshev's
+  `π(P)=O(P/log P)` estimate to obtain
+  `Ψ(x,⌈C log(x+2)⌉)=x^o(1)`, and use Lemma 4.1 to put every `H≤B` interval
+  into that logarithmic smooth family. The resulting endpoint count is
+  `x^o(1)` for every fixed `B`.
+- [x] Close the small-`a` numerical-coefficient regime at the concrete
+  threshold `a ≤ H log(x+2)/100`. Lemma 4.3 gives both selected coefficients
+  exponent `1/10`; the exact certificate code then gives the literal endpoint
+  family exponent `1/4` after the Lemma 4.2 gap budget.
+- [ ] Discharge the remaining `a ≍ H log x` family via the large sieve. The
+  bounded-`H` and small-`a` parts are complete above.
+- [x] Formalize the finite large-sieve interface for that family. Prove that
+  each prime `a/2<p≤a` leaves at most `H` start residues and hence removes at
+  least `p-H`; inject each fixed `(a,H)` fiber into the literal survivor set,
+  reassemble budgeted fibers with an `A·G` loss, and derive the exact
+  three-way reduction of the nontrivial count. Lemmas 4.1 and 4.2 supply the
+  required subpolynomial global `(a,H)` box. The upper-half primes are now
+  proved pairwise coprime, every selected product is bounded by `a^k`, PNT
+  supplies the explicit cardinal lower bound `a/(4 log a)`, and deletion of
+  up to `k` weights leaves the source-scale lower bound
+  `a log(x+2)/(3200 log a)`. This surrogate sum is connected pointwise to the
+  literal complement/allowed ratio. Native cyclic DFT Parseval, the one- and
+  two-modulus Montgomery uncertainty inequalities, the arbitrary finite
+  tensor inequality, pairwise-coprime iterated CRT, and its finite-support
+  residue-class specialization are compiled. The additive CRT character
+  reindexing, exact tensor/cyclic energy identity, interval residue-fiber
+  bound, one-product-denominator upper inequality, and resulting finite
+  survivor-cardinality inequality are now compiled as well. The finite Schur
+  Gram-form estimate, exact analysis/synthesis identities, coordinate
+  Cauchy--Schwarz, synthesis-to-analysis operator duality, and Bombieri
+  duality are compiled in `LargeSieveGlobal`; `LargeSieveCircle` gives the
+  exact circle-character Dirichlet-kernel Gram formula and diagonal. Its
+  Fejér construction embeds the original synthesis energy with exact
+  multiplicity `L` into `2L` shift differences, computes the resulting
+  nonnegative squared-Dirichlet Gram kernel, and reduces the desired analysis
+  inequality without loss to Fejér row/column bounds. `LargeSieveSeparated`
+  now proves the separated-circle row-sum estimate via centered
+  representatives and two-point radial bins, yielding an explicit `8L`
+  analysis bound for every finite `1/L`-separated frequency family. The
+  rational/selection/aggregation layers now compute the CRT numerator, prove
+  nondivisibility at every nonzero tensor coordinate, use an exclusive
+  modulus to separate different `k`-subsets, identify circle analysis with
+  tensor DFT energy, and derive the global finite Corollary 2.8 survivor bound
+  `(∑ S, ρ(S))·#survivors ≤ 8L` without a subset-count loss. The
+  fixed-cardinality elementary-symmetric denominator is now compiled from the
+  exact binomial selection count and `choose n k ≥ (n/(2k))^k`. The literal
+  factorial residue complements, exact tensor ratio, `Fin (x+1)` survivor
+  transport, source-scale Corollary 2.9 survivor bound, and fixed-`(a,H)`
+  fiber bound are compiled as well. The remaining step is the final
+  maximal-`k` asymptotic specialization.
 - [x] Prove that largest-index projection maps the finite factorial-square
   triple set exactly onto `F₃∩[1,x]`, yielding the lower-count transfer
   `#F₃(x) ≤ #triples(x)` used in Theorem 1.10.
@@ -161,6 +250,10 @@ paper has been formalized.
   eventual gap budget `g(x)=x^(o(1))`, the total power-scale conclusion of
   Theorem 1.9, and Erdős--Selfridge imply the literal public Theorem 1.10
   contract. The reverse-big-O half is discharged by the proved square family.
+- [x] Instantiate that gap input from Lemma 4.2 using
+  `g(x)=⌈exp((log x)^(3/4))⌉`. Prove it bounds every triple, including bounded
+  middle indices, prove `g=x^(o(1))`, and reduce Theorem 1.10's remaining
+  inputs exactly to Theorem 1.9, Erdős--Selfridge, Theorem 2.5, and BHP.
 - [x] Characterize `F₃¹` as square multiples of factorial squarefree
   components and prove the unconditional `⌊√x⌋-1` lower bounds for both
   `F₃¹`, `F₃` endpoints, and factorial-square triples, including the explicit
@@ -183,10 +276,21 @@ paper has been formalized.
   fiber bound used in Theorem 1.10.
 - [x] Sharpen the proved square-root power scale to the source's
   `ζ(3/2)/ζ(3) √x` asymptotic for `VB¹` from the exact sum.
+- [x] Prove the final Theorem 1.8 asymptotic bookkeeping: any
+  `x^(2/5+o(1))` bound for the nontrivial count is little-oh of the positive
+  zeta-ratio square-root main term, and the exact finite decomposition then
+  yields the literal public conclusion.
+- [x] Begin the remaining Theorem 1.8 counting assembly with an exact finite
+  cover: every nontrivial value below `x` lies in a positive-start very-bad
+  interval with `2≤H<x`, and its count is at most the sum of all witness
+  interval lengths.
 - [x] Prove the elementary `H<N` conclusion of Lemma 3.1 for `N≥1`, by
   extracting a Bertrand prime that divides the interval product exactly once;
   record that the literal `N=0,H=1` interval is an exception to the paper's
   unrestricted natural-number wording.
+- [x] Prove that `(N,H)=(0,1)` is the unique zero-start exception and package
+  the exact all-start alternative `(N=0 ∧ H=1) ∨ H<N` into the corrected
+  Lemma 3.1 contract.
 - [x] Pin and hash both the PDF and TeX archive of the exact source cited for
   Theorem 2.5, with the Proposition 1.12 statement and proof locator.
 - [x] Compile the exact Theorem 2.5 finite prime sum, logarithmic integral,
@@ -644,7 +748,7 @@ paper has been formalized.
   Fourier series with the original periodic weight is now proved. The
   compiled contract and exact weighted
   Vaughan identity are not proof of this estimate.
-- [ ] Prove Lemma 3.1's subexponential bound
+- [x] Prove Lemma 3.1's subexponential bound
   `H ≤ exp(log^(2/3+o(1)) N)` from Theorem 2.5.
   - [x] Prove that a prime `H<p≤2H` dividing an element of a very bad
     interval has its square dividing that same element.
@@ -682,6 +786,9 @@ paper has been formalized.
   - [x] Choose the cutoff and Theorem 2.5 constants outside the eventual
     quantifiers, prove the two-logarithm gap, and package the full eventual
     contradiction conditional on `TaoTheorem25SpecializedConclusion`.
+  - [x] Package the positive-start `H<N` clause and every fixed-slack
+    subexponential bound into `TaoLemma31Conclusion`, and derive it from both
+    the specialized and full Theorem 2.5 contracts.
   - [ ] Optional strengthening: prove the unrestricted exact
     `SylvesterSchurConclusion` prime-factor contract.
 - [x] Build Lemma 3.2's canonical exponent-one/powerful-core factorization;
@@ -689,6 +796,14 @@ paper has been formalized.
   `H!`, and derive the exact two-position relation `an+h=bm`.
 - [x] Complete Lemma 3.2's averaging step selecting two distinct positions
   whose coefficients are each `H^O(1)`.
+- [x] Encode every bounded nontrivial very-bad interval injectively by its
+  chosen Lemma 3.2 certificate, interval length, and selected-element offset.
+- [x] Turn Lemma 3.1 into a uniform subpolynomial natural length budget and
+  Lemma 3.2 into a uniform subpolynomial natural coefficient budget.
+- [x] Bound the complete finite certificate family by `A²G` uniform
+  Corollary 2.11 fibers and close the nontrivial `x^(2/5+o(1))` count.
+- [x] Prove the full literal Theorem 1.8 endpoint conditional only on the
+  specialized (and hence also the full) Theorem 2.5 contract.
 - [x] Prove and audit a uniform fixed-power bound below one for the frozen
   dyadic Gafni--Tao discrepancy exceptional measures when `2/15 < θ < 1`.
 - [x] Formalize the literal closed prime-free endpoint set and its measurable
@@ -702,13 +817,15 @@ paper has been formalized.
   Mathlib's Bertrand theorem.
 - [x] Prove the exact unique `n=p²m` characterization of `B¹` and the finite
   identity `#(B¹∩[1,x]) = ∑_{p≤√x} Ψ(⌊x/p²⌋,p)`.
-- [ ] Formalize Proposition 2.1's analytic smooth-number estimates and use
+- [ ] Formalize the remaining full Proposition 2.1 analytic smooth-number estimates and use
   them to prove Lemma 1.6; the exact finite identity alone is not the
   asymptotic.
 - [x] Pin and hash the Baker--Harman--Pintz primary source, with exact theorem
   and proof locators.
 - [ ] Formalize the Baker--Harman--Pintz bound in Proposition 2.3(ii). The
-  pinned paper is provenance only and is not proof evidence.
+  pinned paper is provenance only and is not proof evidence. The exact
+  backward-to-forward endpoint and finite-exception transfer is proved; the
+  source theorem's analytic sieve argument remains.
 - [ ] Prove the selected release scope without `sorry`, `admit`, project
   postulates, or unsafe proof bypasses.
 - [x] Add an executable development `Audit.lean` covering every current Tao
@@ -731,8 +848,10 @@ paper has been formalized.
 ## Current stop line
 
 The verified stop line includes Proposition 2.3(i),(iii), the exact `VB¹`
-zeta-ratio asymptotic, the positive-start elementary clause of Lemma 3.1, and
-the complete polynomial-coefficient relation of Lemma 3.2. It also includes
+zeta-ratio asymptotic, the corrected full Lemma 3.1 contract conditional on
+Theorem 2.5, the complete polynomial-coefficient relation of Lemma 3.2, and
+the full Theorem 1.8 counting/asymptotic assembly conditional only on Theorem
+2.5. It also includes
 the exact Theorem 2.5 interface, reciprocal-phase calculus and character
 variation, bidirectional finite partial-summation/log-weight reductions, and
 the low-frequency Abel reduction and the frozen qualitative PNT's uniform

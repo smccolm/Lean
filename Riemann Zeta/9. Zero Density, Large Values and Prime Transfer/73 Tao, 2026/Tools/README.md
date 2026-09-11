@@ -20,10 +20,29 @@ The audit also covers the positive-start first clause of Lemma 3.1 and the
 complete Lemma 3.2 proof: canonical extraction, coefficient-product
 divisibility, finite Abel/Chebyshev bounds, polynomial selection, and the
 nonzero-shift powerful relation.
+It also covers the complete Theorem 1.8 finite/asymptotic assembly conditional
+only on Theorem 2.5: the injective interval encoding, explicit subpolynomial
+length and coefficient budgets, uniform Corollary 2.11 family count, and final
+zeta-ratio endpoint.
 It also covers the complete Lemma 2.10 and Corollary 2.11 chains: the concrete
 quadratic maximal-order construction, sharp ideal-divisor count, rank-one
 unit and height estimates, signed square-solution theorem, exact dyadic
 powerful-number fibers, interpolation, and the uniform signed `≪ x` endpoint.
+It now also audits the complete Lemma 4.3 chain: canonical square extraction,
+prime support, exact coefficient-product divisibility, its logarithmic
+Chebyshev bound, two-half averaging, and the final explicitly bounded smooth
+square relation.
+The Section 4 audit additionally covers the exact nontrivial endpoint and
+interval finsets, structured chosen certificates, injective interval codes,
+uniform Lemma 2.10 rounding budget, and the arbitrary-`A,C,G` finite endpoint
+bound used by the pending Theorem 1.9 case split. It also checks the literal
+easy/hard interval partition and additive endpoint-count reduction. The
+bounded-length refinement is audited too: exact smooth-pair cardinality,
+chosen-certificate membership, injective code range, and the final
+`A·psiNat(x,P)²·G³` endpoint bound. It additionally audits the iterated
+retained-smooth square decomposition, its Chebyshev-based logarithmic
+`psiNat=x^o(1)` consequence, and the unconditional `x^o(1)` closure of every
+fixed-bounded-length endpoint family.
 For Theorem 2.5 it now certifies the exact source contract, reciprocal-phase
 derivative and coefficient bounds, Type I/II phase rescalings, and Vaughan's
 identity in convolution, nested-divisor, and weighted reciprocal-phase forms.

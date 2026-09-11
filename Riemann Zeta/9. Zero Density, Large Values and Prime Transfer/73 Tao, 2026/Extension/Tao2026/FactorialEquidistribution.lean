@@ -1,5 +1,6 @@
 import Tao2026.FactorialShortIntervals
 import Tao2026.VeryBadEquidistribution
+import Tao2026.FourierRadial
 import Mathlib.Analysis.Calculus.ContDiff.Bounds
 import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
@@ -22,6 +23,58 @@ open scoped ContDiff
 namespace Tao2026
 
 noncomputable section
+
+/-- The same forbidden residue rectangle used in Lemma 3.1 is impossible
+for a type-`F₃` interval as soon as the prime lies above both the interval
+length and the factorial index. -/
+theorem not_forbiddenResidues_of_factorialThree
+    {N H a p : ℕ}
+    (hcomponent : squarefreeComponent (consecutiveProduct N H) =
+      squarefreeComponent a.factorial)
+    (hp : p.Prime) (hHltp : H < p) (haLtp : a < p)
+    (hpLe : p ≤ 2 * H) :
+    ¬InVeryBadForbiddenResidueRegion N p := by
+  intro hregion
+  obtain ⟨h, hhPos, hhLe, hpDvd, hpSqNotDvd⟩ :=
+    exists_nonsquare_intervalElement_of_forbiddenResidues hp hHltp hpLe hregion
+  have hk : N + h ∈ consecutiveInterval N H := by
+    simp only [consecutiveInterval, Finset.mem_Ioc]
+    omega
+  have hpNotDvdFactorial : ¬p ∣ a.factorial := by
+    rw [hp.dvd_factorial, not_le]
+    exact haLtp
+  exact hpSqNotDvd
+    (prime_sq_dvd_intervalElement_of_factorialThree
+      hcomponent hk hp hHltp hpDvd hpNotDvdFactorial)
+
+/-- If the quadratic fractional coordinate is below `9/10`, an interval
+element of length at most `H` cannot be divisible by `p²` once `p²>10H`.
+This is the local arithmetic obstruction needed in the low-`P` branch. -/
+theorem not_prime_sq_dvd_add_of_quadraticFract_lt_nineTenths
+    {N H h p : ℕ} (hp : 0 < p) (hh : 1 ≤ h) (hhH : h ≤ H)
+    (hlarge : 10 * H < p ^ 2)
+    (hfract : Int.fract ((N : ℝ) / ((p ^ 2 : ℕ) : ℝ)) < 9 / 10) :
+    ¬p ^ 2 ∣ N + h := by
+  intro hpSqDvd
+  have hpSqPos : 0 < p ^ 2 := pow_pos hp 2
+  have hpSqReal : (0 : ℝ) < (p ^ 2 : ℕ) := by exact_mod_cast hpSqPos
+  rw [Int.fract_div_natCast_eq_div_natCast_mod,
+    div_lt_iff₀ hpSqReal] at hfract
+  have hresidue : 10 * (N % (p ^ 2)) < 9 * (p ^ 2) := by
+    exact_mod_cast (show
+      (10 : ℝ) * (N % (p ^ 2) : ℕ) < 9 * (p ^ 2 : ℕ) by nlinarith)
+  have hsumLt : N % (p ^ 2) + h < p ^ 2 := by
+    omega
+  have hrewrite :
+      N + h = (N % (p ^ 2) + h) + p ^ 2 * (N / p ^ 2) := by
+    have hdecomp := Nat.mod_add_div N (p ^ 2)
+    omega
+  have hpSqDvdSmall : p ^ 2 ∣ N % (p ^ 2) + h := by
+    rw [hrewrite] at hpSqDvd
+    exact (Nat.dvd_add_iff_left
+      (dvd_mul_right (p ^ 2) (N / p ^ 2))).mpr hpSqDvd
+  have hsumPos : 0 < N % (p ^ 2) + h := by omega
+  exact (not_lt_of_ge (Nat.le_of_dvd hsumPos hpSqDvdSmall)) hsumLt
 
 /-- The final fractional arc which detects a multiple of `p` in `(N,N+H]`. -/
 def InFactorialDivisorFractionalRegion (N H p : ℕ) : Prop :=
@@ -77,6 +130,15 @@ def IsSupportedInFactorialFinalArc
     (N : ℕ) (W : ℝ × ℝ → ℂ) : Prop :=
   ∀ x y : ℝ, W (x, y) ≠ 0 →
     1 - 1 / (10 * (Real.log N) ^ 2) ≤ Int.fract x
+
+/-- The two-coordinate support condition for the low-`P` branch: the first
+coordinate detects a divisor in the original length-`H` interval, while the
+second excludes divisibility by the square of that prime. -/
+def IsSupportedInFactorialLowObstruction
+    (N : ℕ) (W : ℝ × ℝ → ℂ) : Prop :=
+  ∀ x y : ℝ, W (x, y) ≠ 0 →
+    1 - 1 / (10 * (Real.log N) ^ 2) ≤ Int.fract x ∧
+      Int.fract y < 9 / 10
 
 /-- General left-end support property of the periodic smooth bump. -/
 theorem fract_ge_left_of_smoothPeriodicIntervalBump_ne_zero
@@ -867,6 +929,169 @@ theorem IsFactorialPlateauWeight.lift_re_nonneg
     0 ≤ (factorialPlateauWeightLift w z).re := by
   simpa only [factorialPlateauWeightLift, Complex.ofReal_re] using hw.nonneg z.1
 
+/-- The fixed quadratic-coordinate factor in the low-`P` cutoff. -/
+def factorialQuadraticBumpLift (z : ℝ × ℝ) : ℂ :=
+  (smoothPeriodicIntervalBump 0 (9 / 10) z.2 : ℝ)
+
+theorem factorialQuadraticBumpLift_contDiff :
+    ContDiff ℝ ∞ factorialQuadraticBumpLift := by
+  have hreal : ContDiff ℝ ∞ (fun z : ℝ × ℝ =>
+      smoothPeriodicIntervalBump 0 (9 / 10) z.2) :=
+    (smoothPeriodicIntervalBump_contDiff 0 (9 / 10)).comp contDiff_snd
+  simpa only [factorialQuadraticBumpLift, Function.comp_apply,
+    Complex.ofRealCLM_apply] using Complex.ofRealCLM.contDiff.comp hreal
+
+theorem factorialQuadraticBumpLift_isZ2Periodic :
+    IsZ2Periodic factorialQuadraticBumpLift := by
+  intro x y m n
+  unfold factorialQuadraticBumpLift
+  rw [smoothPeriodicIntervalBump_add_int]
+
+/-- Tao's low-`P` cutoff: the normalized shrinking final-arc plateau in the
+divisor coordinate, multiplied by the fixed quadratic-coordinate bump from
+the proof of Lemma 3.1. -/
+def factorialLowObstructionWeight (N : ℕ) (z : ℝ × ℝ) : ℂ :=
+  ((factorialNormalizedPlateauWeight N z.1 *
+    smoothPeriodicIntervalBump 0 (9 / 10) z.2 : ℝ) : ℂ)
+
+theorem factorialLowObstructionWeight_eq_mul (N : ℕ) :
+    factorialLowObstructionWeight N =
+      fun z => factorialPlateauWeightLift
+        (factorialNormalizedPlateauWeight N) z * factorialQuadraticBumpLift z := by
+  funext z
+  simp only [factorialLowObstructionWeight, factorialPlateauWeightLift,
+    factorialQuadraticBumpLift, Complex.ofReal_mul]
+
+theorem factorialLowObstructionWeight_contDiff (N : ℕ) :
+    ContDiff ℝ ∞ (factorialLowObstructionWeight N) := by
+  have hx : ContDiff ℝ ∞ (fun z : ℝ × ℝ =>
+      factorialNormalizedPlateauWeight N z.1) :=
+    (factorialNormalizedPlateauWeight_contDiff N).comp contDiff_fst
+  have hy : ContDiff ℝ ∞ (fun z : ℝ × ℝ =>
+      smoothPeriodicIntervalBump 0 (9 / 10) z.2) :=
+    (smoothPeriodicIntervalBump_contDiff 0 (9 / 10)).comp contDiff_snd
+  have hreal := hx.mul hy
+  simpa only [factorialLowObstructionWeight, Function.comp_apply,
+    Complex.ofRealCLM_apply] using Complex.ofRealCLM.contDiff.comp hreal
+
+theorem factorialLowObstructionWeight_isZ2Periodic (N : ℕ) :
+    IsZ2Periodic (factorialLowObstructionWeight N) := by
+  intro x y m n
+  unfold factorialLowObstructionWeight
+  rw [show x + (m : ℝ) = x + (m : ℝ) * 1 by ring,
+    factorialNormalizedPlateauWeight_periodic N |>.int_mul m,
+    smoothPeriodicIntervalBump_add_int]
+
+theorem factorialLowObstructionWeight_re_nonneg (N : ℕ) (z : ℝ × ℝ) :
+    0 ≤ (factorialLowObstructionWeight N z).re := by
+  simp only [factorialLowObstructionWeight, Complex.ofReal_re]
+  exact mul_nonneg (factorialNormalizedPlateauWeight_nonneg N z.1)
+    (expNegInvGlue.nonneg _)
+
+theorem factorialLowObstructionWeight_supported
+    {N : ℕ} (hlog : 1 < Real.log (N : ℝ)) :
+    IsSupportedInFactorialLowObstruction N
+      (factorialLowObstructionWeight N) := by
+  intro x y hne
+  have hprod : factorialNormalizedPlateauWeight N x *
+      smoothPeriodicIntervalBump 0 (9 / 10) y ≠ 0 := by
+    simpa only [factorialLowObstructionWeight, Complex.ofReal_ne_zero] using hne
+  exact ⟨
+    (factorialNormalizedPlateauWeight_spec hlog).supported x
+      (left_ne_zero_of_mul hprod),
+    fract_lt_nineTenths_of_smoothPeriodicIntervalBump_ne_zero
+      (right_ne_zero_of_mul hprod)⟩
+
+/-- The low-`P` product cutoff has the same coarse `log^12 N` derivative
+growth as its shrinking first-coordinate factor; the fixed second-coordinate
+bump is absorbed into one absolute constant. -/
+theorem norm_iteratedFDeriv_factorialLowObstructionWeight_le
+    {B : ℝ} (hB : 1 ≤ B)
+    (htransition : ∀ i < 4, ∀ x : ℝ,
+      ‖iteratedFDeriv ℝ i Real.smoothTransition x‖ ≤ B)
+    {N i : ℕ} (hlog : 1 ≤ Real.log (N : ℝ)) (hi : i < 4)
+    (z : ℝ × ℝ) :
+    ‖iteratedFDeriv ℝ i (factorialLowObstructionWeight N) z‖ ≤
+      8 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) *
+        max 1 (taoC3Norm factorialQuadraticBumpLift) := by
+  let X : ℝ × ℝ → ℂ :=
+    factorialPlateauWeightLift (factorialNormalizedPlateauWeight N)
+  let Y : ℝ × ℝ → ℂ := factorialQuadraticBumpLift
+  let L : ℝ := 6 * B * (1200 * (Real.log N) ^ 4) ^ 3
+  let D : ℝ := max 1 (taoC3Norm factorialQuadraticBumpLift)
+  have hXdiff : ContDiff ℝ ∞ X := by
+    have hreal : ContDiff ℝ ∞ (fun z : ℝ × ℝ =>
+        factorialNormalizedPlateauWeight N z.1) :=
+      (factorialNormalizedPlateauWeight_contDiff N).comp contDiff_fst
+    dsimp only [X]
+    simpa only [factorialPlateauWeightLift, Function.comp_apply,
+      Complex.ofRealCLM_apply] using Complex.ofRealCLM.contDiff.comp hreal
+  have hYdiff : ContDiff ℝ ∞ Y := by
+    exact factorialQuadraticBumpLift_contDiff
+  have hD : 0 ≤ D := by dsimp only [D]; positivity
+  have hL : 0 ≤ L := by dsimp only [L]; positivity
+  have hXbound : ∀ j < 4, ‖iteratedFDeriv ℝ j X z‖ ≤ L := by
+    intro j hj
+    exact (norm_iteratedFDeriv_factorialPlateauWeightLift_le
+      (factorialNormalizedPlateauWeight_contDiff N) j z).trans
+        (norm_iteratedFDeriv_factorialNormalizedPlateauWeight_le
+          hB htransition hlog hj z.1)
+  have hYbdd : ∀ j ∈ Finset.range 4,
+      BddAbove {r : ℝ | ∃ x : ℝ × ℝ,
+        r = ‖iteratedFDeriv ℝ j Y x‖} := by
+    intro j _hj
+    exact bddAbove_iteratedFDeriv_norm_range Y hYdiff
+      factorialQuadraticBumpLift_isZ2Periodic j
+  have hYbound : ∀ j < 4, ‖iteratedFDeriv ℝ j Y z‖ ≤ D := by
+    intro j hj
+    exact (norm_iteratedFDeriv_le_taoC3Norm_of_bddAbove Y hYbdd
+      (Finset.mem_range.mpr hj) z).trans (le_max_right _ _)
+  rw [factorialLowObstructionWeight_eq_mul]
+  have hproduct := norm_iteratedFDeriv_mul_le hXdiff hYdiff z
+    (n := i) (mod_cast le_top)
+  calc
+    ‖iteratedFDeriv ℝ i (fun y => X y * Y y) z‖ ≤
+        ∑ j ∈ Finset.range (i + 1),
+          (i.choose j : ℝ) * ‖iteratedFDeriv ℝ j X z‖ *
+            ‖iteratedFDeriv ℝ (i - j) Y z‖ := hproduct
+    _ ≤ ∑ j ∈ Finset.range (i + 1), (i.choose j : ℝ) * L * D := by
+      apply Finset.sum_le_sum
+      intro j hj
+      have hjle : j ≤ i := Nat.le_of_lt_succ (Finset.mem_range.mp hj)
+      have hj4 : j < 4 := lt_of_le_of_lt hjle hi
+      have hij4 : i - j < 4 := lt_of_le_of_lt (Nat.sub_le i j) hi
+      gcongr
+      · exact hXbound j hj4
+      · exact hYbound (i - j) hij4
+    _ = (2 : ℝ) ^ i * L * D := by
+      rw [← Finset.sum_mul, ← Finset.sum_mul, ← Nat.cast_sum,
+        Nat.sum_range_choose, Nat.cast_pow, Nat.cast_ofNat]
+    _ ≤ 8 * L * D := by
+      have hpow : (2 : ℝ) ^ i ≤ 8 := by
+        interval_cases i <;> norm_num
+      gcongr
+    _ = 8 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) *
+        max 1 (taoC3Norm factorialQuadraticBumpLift) := by rfl
+
+theorem taoC3Norm_factorialLowObstructionWeight_le
+    {B : ℝ} (hB : 1 ≤ B)
+    (htransition : ∀ i < 4, ∀ x : ℝ,
+      ‖iteratedFDeriv ℝ i Real.smoothTransition x‖ ≤ B)
+    {N : ℕ} (hlog : 1 ≤ Real.log (N : ℝ)) :
+    taoC3Norm (factorialLowObstructionWeight N) ≤
+      32 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) *
+        max 1 (taoC3Norm factorialQuadraticBumpLift) := by
+  calc
+    taoC3Norm (factorialLowObstructionWeight N) ≤
+        4 * (8 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) *
+          max 1 (taoC3Norm factorialQuadraticBumpLift)) :=
+      taoC3Norm_le_four_mul_of_iteratedFDeriv_le (by positivity)
+        (fun i hi z =>
+          norm_iteratedFDeriv_factorialLowObstructionWeight_le
+            hB htransition hlog hi z)
+    _ = 32 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) *
+        max 1 (taoC3Norm factorialQuadraticBumpLift) := by ring
+
 /-- Exact reciprocal substitution `u=N/t` for an arbitrary continuous real
 weight. -/
 theorem intervalIntegral_reciprocal_weighted_eq
@@ -1280,6 +1505,200 @@ theorem eventually_primeEquidistributionSum_eq_zero_of_factorialThree_finalArc
   exact hzero hH ha haN hcomponent hlarge hP
     (hW.onIntervalDivisors hlog hH)
 
+/-- Exact prime-sum vanishing for the two-coordinate cutoff needed in the
+low-`P` branch.  Unlike the large-`P` argument, primes may divide the
+interval, but equality of squarefree components forces a square divisor;
+the second cutoff coordinate rules that out. -/
+theorem eventually_primeEquidistributionSum_eq_zero_of_factorialThree_lowObstruction :
+    ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      1 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      2 ≤ factorialPrimeScale N H →
+      ∀ {W : ℝ × ℝ → ℂ}, IsSupportedInFactorialLowObstruction N W →
+        primeEquidistributionSum (factorialPrimeScale N H)
+          (Ioo (factorialPrimeScale N H)
+            (2 * factorialPrimeScale N H)) W
+          (N : ℝ) (N : ℝ) 2 = 0 := by
+  have hlogTwo : ∀ᶠ N : ℕ in atTop, 2 < Real.log (N : ℝ) :=
+    (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually
+      (eventually_gt_atTop 2)
+  filter_upwards [eventually_factorialPrimeScale_lt_prime, hlogTwo] with
+    N hprimeScale hlog H a hH ha haN hcomponent hP W hW
+  unfold primeEquidistributionSum
+  apply Finset.sum_eq_zero
+  intro p hpMem
+  have hsubset :
+      Ioo (factorialPrimeScale N H) (2 * factorialPrimeScale N H) ⊆
+        Icc (factorialPrimeScale N H) (2 * factorialPrimeScale N H) := by
+    intro x hx
+    exact ⟨hx.1.le, hx.2.le⟩
+  have hpData := (mem_primesInScaleSet hP hsubset).mp hpMem
+  by_contra hWne
+  have hsupport := hW ((N : ℝ) / (p : ℝ))
+    ((N : ℝ) / (p : ℝ) ^ 2) (by simpa using hWne)
+  have hfinalSupport : IsSupportedInFactorialFinalArc N W := by
+    intro x y hne
+    exact (hW x y hne).1
+  have hpDvdProduct : p ∣ consecutiveProduct N H :=
+    hfinalSupport.onIntervalDivisors (by linarith) hH p hpData.1
+      hpData.2.1 hpData.2.2 (by simpa using hWne)
+  obtain ⟨haLtp, hHLtp⟩ :=
+    hprimeScale hH ha haN hcomponent hpData.2.1
+  change p ∣ (consecutiveInterval N H).prod id at hpDvdProduct
+  obtain ⟨k, hk, hpk⟩ :=
+    (hpData.1.prime.dvd_finsetProd_iff id).mp hpDvdProduct
+  have hpNotDvdFactorial : ¬p ∣ a.factorial := by
+    rw [hpData.1.dvd_factorial, not_le]
+    exact haLtp
+  have hpSqK : p ^ 2 ∣ k :=
+    prime_sq_dvd_intervalElement_of_factorialThree
+      hcomponent hk hpData.1 hHLtp hpk hpNotDvdFactorial
+  let h := k - N
+  have hh : 1 ≤ h := by
+    dsimp [h]
+    have := (Finset.mem_Ioc.mp hk).1
+    omega
+  have hhH : h ≤ H := by
+    dsimp [h]
+    have := (Finset.mem_Ioc.mp hk).2
+    omega
+  have hadd : N + h = k := by
+    dsimp [h]
+    have := (Finset.mem_Ioc.mp hk).1
+    omega
+  have hfourHltP : (4 : ℝ) * H < factorialPrimeScale N H := by
+    rw [factorialPrimeScale]
+    have hHpos : (0 : ℝ) < H := by exact_mod_cast hH
+    have hlogSq : (4 : ℝ) < (Real.log (N : ℝ)) ^ 2 := by nlinarith
+    nlinarith
+  have hfourHLtp : 4 * H < p := by
+    exact_mod_cast (hfourHltP.trans hpData.2.1)
+  have hlarge : 10 * H < p ^ 2 := by
+    nlinarith
+  have hpSqAdd : p ^ 2 ∣ N + h := by
+    rw [hadd]
+    exact hpSqK
+  exact (not_prime_sq_dvd_add_of_quadraticFract_lt_nineTenths
+    hpData.1.pos hh hhH hlarge (by simpa only [Nat.cast_pow] using hsupport.2))
+    hpSqAdd
+
+/-- Concrete low-`P` zero sum for the explicit two-coordinate shrinking
+cutoff. -/
+theorem eventually_primeEquidistributionSum_eq_zero_of_factorialThree_lowWeight :
+    ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      1 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      2 ≤ factorialPrimeScale N H →
+      primeEquidistributionSum (factorialPrimeScale N H)
+        (Ioo (factorialPrimeScale N H)
+          (2 * factorialPrimeScale N H))
+        (factorialLowObstructionWeight N)
+        (N : ℝ) (N : ℝ) 2 = 0 := by
+  filter_upwards
+    [eventually_primeEquidistributionSum_eq_zero_of_factorialThree_lowObstruction,
+      eventually_one_lt_log_nat] with N hzero hlog
+  intro H a hH ha haN hcomponent hP
+  exact hzero hH ha haN hcomponent hP
+    (factorialLowObstructionWeight_supported hlog)
+
+/-- Uniform Theorem 2.5 upper bound for the explicit low-`P` cutoff.  Its
+coefficient is chosen before the eventual threshold and before the interval
+parameters. -/
+theorem exists_eventually_factorialLowObstructionIntegralBound_of_taoTheorem25Specialized
+    (h25 : TaoTheorem25SpecializedConclusion)
+    {ε A K : ℝ} (hε : 0 < ε) (hA : 0 < A) (hK : 0 < K) :
+    ∃ C : ℝ, 0 < C ∧ ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      1 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      2 ≤ factorialPrimeScale N H →
+      VinogradovParameterBound ε K (factorialPrimeScale N H) (N : ℝ) →
+      ‖primeEquidistributionIntegral
+          (Ioo (factorialPrimeScale N H)
+            (2 * factorialPrimeScale N H))
+          (factorialLowObstructionWeight N)
+          (N : ℝ) (N : ℝ) 2‖ ≤
+        C * taoC3Norm (factorialLowObstructionWeight N) *
+          factorialPrimeScale N H /
+            (Real.log (factorialPrimeScale N H)) ^ A := by
+  obtain ⟨C, hC, hbound⟩ := h25 ε hε A hA K hK
+  refine ⟨C, hC, ?_⟩
+  filter_upwards
+    [eventually_primeEquidistributionSum_eq_zero_of_factorialThree_lowWeight]
+      with N hzero
+  intro H a hH ha haN hcomponent hP hNbound
+  have hsubset :
+      Ioo (factorialPrimeScale N H) (2 * factorialPrimeScale N H) ⊆
+        Icc (factorialPrimeScale N H) (2 * factorialPrimeScale N H) := by
+    intro x hx
+    exact ⟨hx.1.le, hx.2.le⟩
+  have hestimate := hbound (factorialPrimeScale N H)
+    (Ioo (factorialPrimeScale N H) (2 * factorialPrimeScale N H))
+    (factorialLowObstructionWeight N) (N : ℝ) hP measurableSet_Ioo
+    ordConnected_Ioo hsubset (factorialLowObstructionWeight_contDiff N)
+    (factorialLowObstructionWeight_isZ2Periodic N) hNbound
+  rw [hzero hH ha haN hcomponent hP, zero_sub, norm_neg] at hestimate
+  exact hestimate
+
+/-- After inserting the explicit cutoff estimate, the low-`P` Theorem 2.5
+upper bound has a single uniform coefficient and polynomial cost
+`log^12 N`. -/
+theorem exists_eventually_factorialLowObstructionPolynomialUpper_of_growth
+    (h25 : TaoTheorem25SpecializedConclusion)
+    {η A : ℝ} (hη : 0 < η) (hA : 0 < A) :
+    ∃ K : ℝ, 0 < K ∧ ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      2 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      2 ≤ factorialPrimeScale N H →
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) < H →
+      ‖primeEquidistributionIntegral
+          (Ioo (factorialPrimeScale N H)
+            (2 * factorialPrimeScale N H))
+          (factorialLowObstructionWeight N)
+          (N : ℝ) (N : ℝ) 2‖ ≤
+        K * (Real.log N) ^ 12 * factorialPrimeScale N H /
+          (Real.log (factorialPrimeScale N H)) ^ A := by
+  obtain ⟨B, hB, htransition⟩ := exists_smoothTransition_C3_bound
+  obtain ⟨C, hC, hupper⟩ :=
+    exists_eventually_factorialLowObstructionIntegralBound_of_taoTheorem25Specialized
+      h25 (ε := veryBadTheorem25Epsilon η) (A := A) (K := 1)
+        (veryBadTheorem25Epsilon_pos hη) hA (by norm_num)
+  let D : ℝ := max 1 (taoC3Norm factorialQuadraticBumpLift)
+  let K : ℝ := C * 32 * 6 * B * (1200 : ℝ) ^ 3 * D
+  have hD : 0 < D := by dsimp only [D]; positivity
+  have hK : 0 < K := by dsimp only [K]; positivity
+  refine ⟨K, hK, ?_⟩
+  filter_upwards [hupper, eventually_one_lt_log_nat,
+    eventually_ge_atTop (2 : ℕ)] with N hupperN hlog hN
+  intro H a hH ha haN hcomponent hP hgrowth
+  have hNbound := factorialVinogradovParameterBound_of_growth
+    hN hH hη hlog hgrowth
+  have hraw := hupperN (by omega) ha haN hcomponent hP hNbound
+  have hc3 := taoC3Norm_factorialLowObstructionWeight_le
+    hB htransition hlog.le (N := N)
+  have hc3combined :
+      C * taoC3Norm (factorialLowObstructionWeight N) ≤
+        K * (Real.log N) ^ 12 := by
+    calc
+      C * taoC3Norm (factorialLowObstructionWeight N) ≤
+          C * (32 * (6 * B * (1200 * (Real.log N) ^ 4) ^ 3) * D) :=
+        mul_le_mul_of_nonneg_left hc3 hC.le
+      _ = K * (Real.log N) ^ 12 := by
+        dsimp only [K]
+        ring
+  have hPPos : 0 < factorialPrimeScale N H :=
+    lt_of_lt_of_le (by norm_num) hP
+  have hlogPPos : 0 < Real.log (factorialPrimeScale N H) :=
+    Real.log_pos (lt_of_lt_of_le (by norm_num) hP)
+  have hdenPos : 0 < (Real.log (factorialPrimeScale N H)) ^ A :=
+    Real.rpow_pos_of_pos hlogPPos A
+  exact hraw.trans (by
+    rw [div_le_div_iff_of_pos_right hdenPos]
+    exact mul_le_mul_of_nonneg_right hc3combined hPPos.le)
+
 /-- Direct Theorem 2.5 consumer for the large-`P` branch of Lemma 4.2.  The
 prime sum has vanished; the conclusion is precisely the required analytic
 upper bound for any smooth periodic cutoff supported in Tao's final arc. -/
@@ -1608,14 +2027,19 @@ theorem eventually_four_factorialPrimeScale_le_of_twentyOneFortieth_bound
     rw [Real.norm_eq_abs, abs_of_pos (Real.rpow_pos_of_pos hx _)]
     exact Real.rpow_pos_of_pos hx _
   have hreal : ∀ᶠ x : ℝ in atTop,
-      4 * C * (Real.log x) ^ 2 < x ^ (19 / 40 : ℝ) := by
+      4 * C * (Real.log x) ^ (2 : ℝ) < x ^ (19 / 40 : ℝ) := by
     filter_upwards
       [hsmallO.eventuallyLT_norm_of_eventually_pos hdenPositive,
         eventually_ge_atTop (1 : ℝ)] with x hxSmall hxOne
-    have hleftNonneg : 0 ≤ 4 * C * (Real.log x) ^ 2 := by positivity
-    simpa only [Real.norm_eq_abs, abs_of_nonneg hleftNonneg,
-      abs_of_pos (Real.rpow_pos_of_pos (zero_lt_one.trans_le hxOne) _)]
-      using hxSmall
+    have hright : ‖x ^ (19 / 40 : ℝ)‖ = x ^ (19 / 40 : ℝ) := by
+      rw [Real.norm_eq_abs,
+        abs_of_pos (Real.rpow_pos_of_pos (zero_lt_one.trans_le hxOne) _)]
+    rw [hright] at hxSmall
+    have hleftNonneg : 0 ≤ 4 * C * (Real.log x) ^ (2 : ℝ) :=
+      mul_nonneg (mul_nonneg (by norm_num) hC.le)
+        (Real.rpow_nonneg (Real.log_nonneg hxOne) _)
+    rw [Real.norm_of_nonneg hleftNonneg] at hxSmall
+    exact hxSmall
   have hnat :=
     tendsto_natCast_atTop_atTop.eventually hreal
   filter_upwards [hnat, eventually_ge_atTop 1] with N hsmall hN
@@ -1623,20 +2047,54 @@ theorem eventually_four_factorialPrimeScale_le_of_twentyOneFortieth_bound
   have hNPos : (0 : ℝ) < N := by exact_mod_cast hN
   have hNpowPos : 0 < (N : ℝ) ^ (21 / 40 : ℝ) :=
     Real.rpow_pos_of_pos hNPos _
+  have hsmallNat :
+      4 * C * (Real.log (N : ℝ)) ^ (2 : ℕ) <
+        (N : ℝ) ^ (19 / 40 : ℝ) := by
+    rw [← Real.rpow_natCast]
+    exact hsmall
   rw [factorialPrimeScale]
   apply le_of_lt
   calc
     4 * ((H : ℝ) * (Real.log N) ^ 2) ≤
         4 * (C * (N : ℝ) ^ (21 / 40 : ℝ)) * (Real.log N) ^ 2 := by
-      gcongr
+      have hfourBound : 4 * (H : ℝ) ≤
+          4 * (C * (N : ℝ) ^ (21 / 40 : ℝ)) :=
+        mul_le_mul_of_nonneg_left hHbound (by norm_num)
+      have hlogSq : 0 ≤ (Real.log (N : ℝ)) ^ 2 := sq_nonneg _
+      have hmul := mul_le_mul_of_nonneg_right hfourBound hlogSq
+      simpa only [mul_assoc] using hmul
     _ = (N : ℝ) ^ (21 / 40 : ℝ) *
         (4 * C * (Real.log N) ^ 2) := by ring
     _ < (N : ℝ) ^ (21 / 40 : ℝ) *
         (N : ℝ) ^ (19 / 40 : ℝ) :=
-      mul_lt_mul_of_pos_left hsmall hNpowPos
+      mul_lt_mul_of_pos_left hsmallNat hNpowPos
     _ = (N : ℝ) ^ ((21 / 40 : ℝ) + 19 / 40) := by
-      rw [Real.rpow_add hNPos.le]
+      rw [Real.rpow_add hNPos]
     _ = (N : ℝ) := by norm_num
+
+/-- Proposition 2.3(ii) supplies the upper-scale hypothesis required by the
+large-`P` contradiction for every type-`F₃` interval. -/
+theorem eventually_four_factorialPrimeScale_le_of_taoProposition23ii
+    (h23ii : TaoProposition23iiConclusion) :
+    ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      2 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      4 * factorialPrimeScale N H ≤ (N : ℝ) := by
+  obtain ⟨C, hC, hBHP⟩ := h23ii
+  filter_upwards
+    [eventually_four_factorialPrimeScale_le_of_twentyOneFortieth_bound hC]
+      with N hscale
+  intro H a hH ha haN hcomponent
+  have hN : 1 ≤ N := by omega
+  have hf3 : IsFactorialThreeInterval N H :=
+    ⟨by omega, a, ha, haN, hcomponent⟩
+  have hfree : ∀ p : ℕ, N < p → p ≤ N + H → ¬p.Prime := by
+    intro p hpLower hpUpper
+    apply hf3.not_prime_of_mem
+    simpa only [consecutiveInterval, Finset.mem_Ioc] using
+      (show N < p ∧ p ≤ N + H from ⟨hpLower, hpUpper⟩)
+  exact hscale (hBHP N H hN (by omega) hfree)
 
 /-- Completion of Tao's large-`P` contradiction, conditional only on the
 source upper-scale inequality `4P ≤ N`.  The lower bound coming from
@@ -1754,6 +2212,26 @@ theorem eventually_not_factorialThree_of_large_primeScale_and_growth
   have hbounded : L ^ 5 ≤ 240 * K * (2 : ℝ) ^ 20 :=
     (mul_le_mul_iff_of_pos_right (pow_pos hLPos 15)).mp hfactor
   exact (not_lt_of_ge hbounded) (by simpa only [L] using hlargeLogN)
+
+/-- Large-`P` half of Lemma 4.2 with the Baker--Harman--Pintz upper scale
+discharged through the exact Proposition 2.3(ii) interface. -/
+theorem eventually_not_factorialThree_of_large_primeScale_and_growth_of_inputs
+    (h25 : TaoTheorem25SpecializedConclusion)
+    (h23ii : TaoProposition23iiConclusion) {η : ℝ} (hη : 0 < η) :
+    ∀ᶠ N : ℕ in atTop, ∀ {H a : ℕ},
+      2 ≤ H → 1 ≤ a → a < N →
+      squarefreeComponent (consecutiveProduct N H) =
+        squarefreeComponent a.factorial →
+      Real.sqrt (2 * N) < factorialPrimeScale N H →
+      2 ≤ factorialPrimeScale N H →
+      Real.exp ((Real.log N) ^ (2 / 3 + η)) < H → False := by
+  filter_upwards
+    [eventually_not_factorialThree_of_large_primeScale_and_growth h25 hη,
+      eventually_four_factorialPrimeScale_le_of_taoProposition23ii h23ii] with
+      N hcontra hupper
+  intro H a hH ha haN hcomponent hlarge hP hgrowth
+  exact hcontra hH ha haN hcomponent hlarge hP
+    (hupper hH ha haN hcomponent) hgrowth
 
 end
 

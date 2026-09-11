@@ -2014,6 +2014,40 @@ theorem eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized
     simpa [D] using hestimate
   exact (not_lt_of_ge (hfullLower.trans hfullUpper)) (hgap H hGrowth)
 
+/-- Exact corrected contract for Tao's Lemma 3.1.  The elementary clause
+classifies `(N,H)=(0,1)` as the unique exception to `H < N` under the paper's
+literal conventions.  The second clause is the precise fixed-slack meaning of
+`H ≤ exp (log^(2/3+o(1)) N)`. -/
+def TaoLemma31Conclusion : Prop :=
+  (∀ {N H : ℕ}, IsVeryBadInterval N H →
+      (N = 0 ∧ H = 1) ∨ H < N) ∧
+    ∀ η : ℝ, 0 < η →
+      ∀ᶠ N : ℕ in Filter.atTop, ∀ H : ℕ,
+        IsVeryBadInterval N H →
+          (H : ℝ) ≤ Real.exp ((Real.log N) ^ (2 / 3 + η))
+
+/-- Conditional closure of the full corrected Lemma 3.1 contract from the
+only specialization of Theorem 2.5 used in its proof. -/
+theorem taoLemma31_of_taoTheorem25Specialized
+    (h25 : TaoTheorem25SpecializedConclusion) : TaoLemma31Conclusion := by
+  refine ⟨?_, ?_⟩
+  · intro N H hveryBad
+    exact hveryBad.eq_zero_one_or_length_lt_start
+  · intro η hη
+    have hnot :=
+      eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized h25 hη
+    filter_upwards [hnot] with N hN H hveryBad
+    apply le_of_not_gt
+    intro hgrowth
+    exact hN H hgrowth hveryBad
+
+/-- Source-facing conditional closure of Lemma 3.1 from the full Theorem 2.5
+contract. -/
+theorem taoLemma31_of_taoTheorem25
+    (h25 : TaoTheorem25Conclusion) : TaoLemma31Conclusion :=
+  taoLemma31_of_taoTheorem25Specialized
+    (taoTheorem25Specialized_of_full h25)
+
 end
 
 end Tao2026

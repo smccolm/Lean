@@ -6,7 +6,8 @@ This directory is the active formalization project for Terence Tao,
 
 **Status:** Proposition 2.3(i),(iii), complete Lemma 3.2, unconditional
 eventual Lemma 3.1 arithmetic-scale/geometric lower bounds, and the complete
-Lemma 3.1 contradiction conditional on the specialized Theorem 2.5 estimate.
+Lemma 3.1 contradiction and full Theorem 1.8 assembly conditional on the
+specialized Theorem 2.5 estimate.
 Bertrand's clause (i), the exact Guth--Maynard application in clause (iii),
 and the polynomial-coefficient powerful relation are proved and audited; none of the four main
 Theorems 1.7--1.10 is proved or claimed. The isolated `Extension/` package
@@ -54,17 +55,43 @@ Theorem 2.5 parameter bound at `P` internally, yielding the source-growth form
 of this integral upper estimate with multiplier one.
 The reciprocal substitution `u=N/t`, its Jacobian comparison, and removal of
 the logarithmic weight now give the matching prime-integral norm lower bound
-and a single audited lower/upper logarithmic sandwich. Only the uniform
-polynomial `C³` bound for the normalized family and final logarithmic
-contradiction remain in the high-`P` branch.
+and a single audited lower/upper logarithmic sandwich. The normalized family
+has a uniform `O(log^12 N)` `C³` bound, and the final logarithmic contradiction
+is complete. The proposition-valued Baker--Harman--Pintz interface implies
+`4P≤N` eventually and closes the entire high-`P` branch conditional on that
+interface and Theorem 2.5; the analytic proof of Proposition 2.3(ii) itself
+remains open.
+For the low-`P` branch, the explicit two-coordinate product cutoff is smooth,
+periodic, nonnegative, and supported where an interval divisor is not
+divisible by `p²`. Its prime sum vanishes exactly, its `C³` norm is
+`O(log^12 N)`, and Theorem 2.5 gives a uniform polynomial-logarithmic integral
+upper bound. The shrinking-band geometry is now complete: two exact changes
+of variables, endpoint trimming, and occupied-unit-cell insertion give
+prime-set measure at least `H/1920`; the fixed quadratic bump then supplies
+the integral lower bound. The resulting logarithmic contradiction closes the
+low-`P` branch and combines with the high-`P` branch into Lemma 4.2 conditional
+on Theorem 2.5 and Proposition 2.3(ii). The source-shaped backward BHP theorem
+is now proved to imply Tao's exact natural-endpoint proposition: sampling at
+`N+2N^0.525` handles the orientation and Bertrand absorbs the finite range.
+Only the pinned paper's analytic backward-interval theorem remains open here.
+Lemma 4.2 also supplies the formerly abstract Theorem 1.10 gap input:
+`⌈exp((log x)^(3/4))⌉` bounds every factorial-square triple tail and is proved
+to be `x^o(1)`. The remaining Theorem 1.10 inputs are therefore Theorem 1.9,
+the Erdős--Selfridge core, Theorem 2.5, and the analytic BHP theorem.
 The Erdős--Selfridge source is pinned, and the exact reduction from a repeated
 factorial squarefree component to a square consecutive product is proved;
 the no-square theorem itself remains to be formalized.
 The finite counts for `B`, `VB`, and `F₃` also have audited exact
 `nontrivial + one-term = total` decomposition identities.
 For `VB¹`, the full source constant asymptotic
-`#(VB¹∩[1,x]) ~ ζ(3/2)/ζ(3) √x` is proved and audited. The nontrivial-`VB`
-upper bound remains open, so Theorem 1.8 itself is not yet claimed.
+`#(VB¹∩[1,x]) ~ ζ(3/2)/ζ(3) √x` is proved and audited. The complete finite
+assembly for the nontrivial branch is now also proved: bounded interval
+witnesses inject into Lemma 3.2 relation certificates with two explicit
+multiplicity parameters; Lemma 3.1 and Lemma 3.2 give subpolynomial natural
+budgets; and uniform Corollary 2.11 yields `x^(2/5+o(1))`. Consequently the
+literal Theorem 1.8 endpoint is proved conditional only on analytic Theorem
+2.5, through `taoTheorem18_of_taoTheorem25Specialized` and
+`taoTheorem18_of_taoTheorem25`. It is not claimed unconditionally.
 The elementary first step of Lemma 3.1 is also proved for positive starting
 points: a very bad interval has `H<N`. The crosswalk records the genuine
 `N=0,H=1` edge case in the paper's unrestricted wording.
@@ -98,7 +125,9 @@ outside the eventual quantifiers, two logarithmic powers are proved to beat
 the `H/log H` lower bound, and
 `eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized`
 packages the complete contradiction assuming only the specialized Theorem
-2.5 conclusion. The smoothness index was also corrected from
+2.5 conclusion. `TaoLemma31Conclusion` now combines it with the positive-start
+`H<N` clause and follows from both the specialized and full Theorem 2.5
+contracts. The smoothness index was also corrected from
 Mathlib's analytic `⊤` to its genuine `C∞` index `∞`.
 For Lemma 3.2, every interval element now has a canonical, audited
 factorization into its squarefree exponent-one coefficient and a powerful
@@ -553,7 +582,17 @@ production-root coverage, forbidden proof shortcuts in both production and
 frozen source, the axiom audit, and the warning-free Lake build. Its current
 success certifies Proposition 2.3(i),(iii), the exact one-term sums, the exact
 zeta-ratio asymptotic for `VB¹`, Lemmas 2.10 and 3.2, Corollary 2.11, and the
-factorial endpoint/counting bridges. It also certifies the exact Theorem 2.5
+factorial endpoint/counting bridges and complete finite Lemma 4.3 extraction.
+It also certifies the injective interval-certificate encoding and arbitrary-
+budget finite counting reduction that begins the Theorem 1.9 case split. The
+bounded-length branch now has an exact smooth-coefficient refinement: its two
+coefficient ranges have cardinality exactly `psiNat x P²`, and its endpoint
+count is bounded by `A·psiNat(x,P)²·G³` times the uniform Lemma 2.10 budget.
+An iterated square-times-squarefree encoding and Chebyshev's prime-counting
+bound then prove directly that `psiNat(x,⌈C log(x+2)⌉)=x^o(1)`. Combined with
+Lemma 4.1, this closes the actual fixed-bounded-length endpoint family with an
+`x^o(1)` bound, without assuming Proposition 2.1(ii). It
+also certifies the exact Theorem 2.5
 interface, reciprocal-phase derivative/variation identities, and bidirectional finite
 partial-summation/log-weight reductions, but not the analytic
 equidistribution estimate itself. It does not certify a main theorem.
@@ -579,8 +618,8 @@ calculus, complete Fourier coefficient decay/reconstruction, and exact
 source-oriented, coefficient-bounded, product-restricted, block-decomposed
 weighted Vaughan identity through the Vinogradov/Weyl estimate and quantitative
 Type I/II bounds.
-Then instantiate the now-complete conditional Lemma 3.1 contradiction and
-combine it with the complete Lemma 3.2 and Corollary 2.11.
+Completing that analytic theorem now directly instantiates the proved
+Theorem 1.8 endpoint; no finite counting or asymptotic assembly remains.
 In parallel source order, the pinned Baker--Harman--Pintz input in Proposition
 2.3(ii) remains the next missing analytic boundary for Section 4.
 

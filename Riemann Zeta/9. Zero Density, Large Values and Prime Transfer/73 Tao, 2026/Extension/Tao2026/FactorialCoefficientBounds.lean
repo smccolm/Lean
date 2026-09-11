@@ -305,4 +305,20 @@ theorem taoLemma41 : TaoLemma41Conclusion := by
         exact le_max_right _ _
       _ = C * (H : ℝ) * Real.log N := by ring
 
+/-- A deterministic positive uniform constant from the proved Lemma 4.1. -/
+noncomputable def taoLemma41Constant : ℝ := Classical.choose taoLemma41
+
+theorem taoLemma41Constant_pos : 0 < taoLemma41Constant :=
+  (Classical.choose_spec taoLemma41).1
+
+/-- Source-ready specialization of Lemma 4.1 using its chosen uniform
+constant. -/
+theorem taoLemma41_chosenConstant
+    {N H a : ℕ} (hH : 1 ≤ H) (ha : 1 ≤ a) (haN : a < N)
+    (hcomponent : squarefreeComponent (consecutiveProduct N H) =
+      squarefreeComponent a.factorial) :
+    H < N ∧
+      (a : ℝ) ≤ taoLemma41Constant * H * Real.log N :=
+  (Classical.choose_spec taoLemma41).2 hH ha haN hcomponent
+
 end Tao2026

@@ -8,6 +8,11 @@ and Mathlib commit `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 The package proves Proposition 2.3(i),(iii), the exact one-term `B¹` and `VB¹`
 counts, the full `VB¹` zeta-ratio asymptotic, Lemma 3.2, the complete signed
 and uniform Lemma 2.10, and the complete `x^(2/5+o(1))` Corollary 2.11. It
+also proves the complete Theorem 1.8 finite and asymptotic assembly conditional
+only on Theorem 2.5: an injective certificate/length/offset encoding, explicit
+subpolynomial length and coefficient budgets, and the uniform relation count
+give the nontrivial-value `x^(2/5+o(1))` bound and hence the literal zeta-ratio
+endpoint. It
 also compiles the exact Theorem 2.5 summation/integral contract and proves the
 arithmetic interface for its Lemma 3.1 consumer: the exact forbidden
 fractional rectangle contradicts very badness, every supported weight has
@@ -30,7 +35,9 @@ throughout the quadratic failure window `2N<H²`. The resulting eventual
 `N/H²≥1/2` and `H/400` theorems remove unrestricted Sylvester--Schur from the
 Lemma 3.1 dependency chain. The fixed lower-cutoff and Theorem 2.5 constants
 are coordinated uniformly, and the full eventual shortness contradiction is
-proved conditional on `TaoTheorem25SpecializedConclusion`. The Theorem 2.5 smoothness
+proved conditional on `TaoTheorem25SpecializedConclusion`. The exact corrected
+`TaoLemma31Conclusion` adds the positive-start `H<N` clause and follows from
+both the specialized and full Theorem 2.5 contracts. The Theorem 2.5 smoothness
 hypothesis uses `∞` (the genuine `C∞` index), since `⊤` denotes analyticity in
 this Mathlib version. The package also proves the
 all-orders reciprocal-phase derivative identities used by the cited
@@ -415,9 +422,108 @@ on Tao's inner plateau arc. Smoothness, periodicity, nonnegativity, support,
 the exact `1/(60 log²N)` unit-period mass, long-interval mass, reciprocal
 change of variables, logarithmic-weight comparison, prime-integral norm lower
 bound, and the final lower/upper sandwich are proved. The uniform polynomial
-`C³` estimate and final logarithmic contradiction remain open.
+`C³` estimate is proved with the coarse sufficient bound `O(log^12 N)`, and
+the final large-`P` logarithmic contradiction is complete. The exact
+`21/40` Baker--Harman--Pintz proposition interface yields `4P≤N` eventually,
+so the high-`P` branch closes conditional on that interface and Theorem 2.5.
 The same module transfers the existing stretched-log parameter calculation
 from `H` to `P≥H`, so its final upper-bound wrapper has no user-supplied
 Vinogradov range hypothesis.
+For the low-`P` branch it also defines the two-coordinate product cutoff,
+proves smoothness, periodicity, support, exact prime-sum vanishing, a uniform
+`O(log^12 N)` `C³` estimate, and the resulting Theorem 2.5 integral upper
+bound. `FactorialLowGeometry` proves both exact substitutions, endpoint
+trimming, occupied-unit-cell insertion for the shrinking first band, the
+prime-set lower bound `H/1920`, and the fixed quadratic-bump integral lower
+bound. Its logarithmic contradiction closes the low-`P` branch and joins it
+with the high-`P` branch. Thus Lemma 4.2 is complete conditional on Theorem
+2.5 and Proposition 2.3(ii). `PrimeIntervals` now also proves that the pinned
+source-shaped BHP backward interval theorem implies the exact uniform natural-
+endpoint Proposition 2.3(ii), including forward-endpoint conversion and finite-
+range absorption. The analytic proof of the source BHP theorem itself remains.
+`FactorialExtraction` proves Lemma 4.3 in explicit finite form. Every interval
+element has its canonical decomposition `c n²`, with `c` positive, squarefree,
+and supported on primes at most `P=max(a,H)`. The product of all coefficients
+divides `∏_{p≤P}p^(H/p+1)`; Chebyshev estimates and two-half averaging select
+ordered elements with coefficients at most
+`exp(3 log 4 (2+log P+P/H))`, yielding the required relation
+`c₁n₁²+h=c₂n₂²` with `0<h<H`.
+`FactorialCounting` begins the exact Theorem 1.9 assembly without identifying
+endpoint values with interval witnesses. It chooses a structured Lemma 4.3
+certificate for every nontrivial interval, proves that the certificate,
+interval length, and selected-element offset recover the interval, and embeds
+each arbitrary-budget subfamily into an explicit finite code range. Its final
+finite estimate is `A·C²·G³` times one uniform Lemma 2.10 relation budget; the
+small-index-or-bounded-length predicate and its complement are also proved to
+partition all witnesses exactly.
+`FactorialSmoothCounting` refines the bounded-length side using the literal
+Mathlib smooth-number finset. It proves that the ordered coefficient range has
+cardinality exactly `psiNat x P ^ 2`, places every chosen Lemma 4.3 certificate
+with `max a H ≤ P` in that range, and obtains the exact endpoint bound
+`A·psiNat(x,P)²·G³` times the uniform Lemma 2.10 budget. Proposition 2.1(ii)'s
+full analytic estimate remains open, but this branch needs only its
+`P=O(log x)` consequence. `SmoothNumberBounds` proves that consequence
+directly by iterating Mathlib's square-times-squarefree decomposition and
+using the Chebyshev prime-counting bound. Lemma 4.1 then places every actual
+fixed-bounded-length interval in the concrete logarithmic smooth family, and
+`factorialBoundedLengthEndpointCount_powerUpperBound_zero` closes that source
+subfamily unconditionally.
+`FactorialSmallIndexCounting` closes the other easy source regime at the fixed
+threshold `a ≤ H log(x+2)/100`. It proves exact parameter and coefficient
+budgets from Lemma 4.3, bounds each selected coefficient by
+`x^(1/10+o(1))`, and feeds these budgets into the injective interval code.
+Consequently the literal small-index endpoint family is
+`x^(1/4+o(1))` after Lemma 4.2. Only the complementary large-sieve regime
+remains in the upper bound for Theorem 1.9.
+`FactorialLargeSieve` now formalizes the exact finite interface for that last
+regime. For every upper-half prime `a/2<p≤a`, divisibility of the interval
+product puts the start `N mod p` in the image of `h↦-h` for `1≤h≤H`; this set
+has at most `H` elements, so at least `p-H` classes are removed. Each fixed
+`(a,H)` interval fiber injects into the literal survivor set, and all fibers
+reassemble with only an `A·G` loss under global index and gap budgets. Lemmas
+4.1 and 4.2 provide such subpolynomial budgets. The source-side large-sieve
+arithmetic is also compiled: the upper-half primes are pairwise coprime, every
+selected product is at most `a^k`, PNT gives at least `a/(4 log a)` moduli,
+deleting `k` terms loses at most half when `2k≤#Q`, and the remaining
+removed/allowed weight is at least `a log(x+2)/(3200 log a)`. The surrogate
+weight `(p-H)/H` is proved below the literal complement/allowed cardinality
+ratio. `LargeSieve` proves native cyclic DFT Parseval and the one- and
+two-modulus Montgomery uncertainty inequalities. `LargeSieveTensor` proves
+the arbitrary finite tensor inequality, constructs the iterated additive CRT
+equivalence for pairwise-coprime moduli, and applies the tensor inequality to
+finitely supported natural-number sequences with simultaneous residue
+restrictions. Tensor characters are now reindexed injectively as ordinary
+cyclic DFT frequencies modulo the product, with exact equality of Fourier
+energies. Parseval and an exact residue-fiber count prove the matching upper
+bound for any one product denominator and hence a finite survivor-cardinality
+inequality. `LargeSieveGlobal` now proves the finite Schur Gram-form estimate,
+the exact analysis/synthesis and synthesis/Gram identities, and Bombieri
+duality for arbitrary finite complex vector families, including direct
+transfer from any synthesis-energy bound. `LargeSieveCircle` identifies the
+circle-character Gram matrix exactly with its Dirichlet kernel and computes
+the diagonal. Its Fejér layer embeds every length-`L` synthesis coordinate
+exactly `L` times into shift differences of length `2L`, identifies their Gram
+matrix with the nonnegative squared Dirichlet kernel, and reduces the circle
+large-sieve inequality without loss to Fejér row and column bounds. The new
+`LargeSieveSeparated` layer proves the separated-circle Fejér row-sum estimate
+by centered representatives and radial bins, and hence an explicit
+large-sieve inequality with constant `8L` for arbitrary finite frequencies
+separated by `1/L`. `LargeSieveRational`, `LargeSieveSelections`, and
+`LargeSieveAggregation` then identify the CRT numerator, prove cross-denominator
+distinctness from an exclusive modulus, establish `1/L` separation for every
+tensor frequency from every fixed-cardinality selection, and sum the tensor
+lower bounds against one global upper bound. This gives the finite Corollary
+2.8 survivor inequality `(∑ S, ρ(S)) * #survivors ≤ 8L` without a
+subset-count loss. `LargeSieveDenominator` proves the fixed-cardinality
+elementary-symmetric lower bound using the exact binomial cardinality and
+`choose n k ≥ (n/(2k))^k`. `FactorialLargeSieveCor29` packages the literal
+residue complements, proves their exact tensor-ratio product, transports the
+natural survivor set to `Fin (x+1)`, and derives the source-scale fixed-fiber
+Corollary 2.9 estimate. The remaining large-sieve work is the maximal-`k`
+asymptotic closure of the nontrivial Theorem 1.9 upper count.
+The compiled Lemma 4.2 contract is propagated to Theorem 1.10 through the
+explicit natural gap budget `⌈exp((log x)^(3/4))⌉`, proved both to bound every
+factorial-square triple tail and to be `x^o(1)`. Thus its remaining inputs are
+Theorem 1.9, Erdős--Selfridge, Theorem 2.5, and the analytic BHP theorem.
 None of Theorems 1.7--1.10 is complete or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.

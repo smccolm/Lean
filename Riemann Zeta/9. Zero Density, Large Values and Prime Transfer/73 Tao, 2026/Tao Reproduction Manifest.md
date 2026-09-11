@@ -89,9 +89,11 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `#triples(x)≤2g #F₃(x)`. This has also been lifted through the quantified
   asymptotic API: a subpolynomial natural gap budget, the total power-scale
   half of Theorem 1.9, and ES imply the literal `TaoTheorem110Conclusion`,
-  with the square family supplying its lower half. Thus no unformalized
-  counting or asymptotic bookkeeping remains between those three source
-  inputs and Theorem 1.10.
+  with the square family supplying its lower half. Lemma 4.2 is now connected
+  to this API by the explicit budget `⌈exp((log x)^(3/4))⌉`; it bounds all
+  triple tail gaps, including bounded middle indices, and is proved to be
+  `x^o(1)`. Thus no unformalized counting, gap-transfer, or asymptotic
+  bookkeeping remains between Theorem 1.9, Lemma 4.2, ES, and Theorem 1.10.
   Tao's complete Lemma 4.1 (`abound`) is now unconditional:
   every type-`F₃` interval satisfies `H<N`. Its exact triple specialization
   `a₃-a₂<a₂` is also proved, as is the resulting fact that no member of such
@@ -105,8 +107,80 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   components then forces every prime `p>P` to have even interval-product
   valuation, concentrated in a unique interval element because `p>H`. In the
   large-`P` branch `√(2N)<P<p`, the resulting `p²` divisor is larger than the
-  endpoint, proving that `p` cannot divide the product. Both analytic
-  contradictions and Proposition 2.3(ii) remain explicit dependencies.
+  endpoint, proving that `p` cannot divide the product. The normalized
+  large-`P` cutoff has a uniform `O(log^12 N)` `C³` bound; its reciprocal-mass
+  sandwich and final logarithmic contradiction are complete. The exact
+  proposition-valued Proposition 2.3(ii) interface supplies `4P≤N`, closing
+  this branch conditional on that interface and Theorem 2.5. In the low-`P`
+  branch, the explicit two-coordinate cutoff is smooth and periodic, its
+  support gives an exact arithmetic zero sum, its `C³` cost is
+  `O(log^12 N)`, and Theorem 2.5 gives the uniform upper bound. Exact
+  reciprocal and quadratic substitutions, endpoint trimming, occupied-cell
+  insertion, and the positive quadratic-bump minimum give the matching
+  `H/1920` set-measure and integral lower bounds. The final contradiction and
+  low/high case split are compiled. The remaining Lemma 4.2 input is the
+  analytic BHP proof behind Proposition 2.3(ii). The source-shaped backward
+  interval theorem is separately declared and proved to imply the exact Tao
+  interface: the `N+2N^(21/40)` sampling shift handles endpoint orientation,
+  and Bertrand absorbs the finite initial range into one uniform constant.
+  Lemma 4.3 is now reproducible in full finite form. Canonical square
+  decomposition gives positive squarefree coefficients supported on primes
+  at most `P=max(a,H)`. Their interval product divides the exact envelope
+  `∏_{p≤P}p^(H/p+1)`, whose logarithm is bounded by
+  `log 4·H(2+log P)+log 4·P`. Two-half averaging produces ordered terms and
+  the relation `c₁n₁²+h=c₂n₂²`, `0<h<H`, with each coefficient bounded by
+  `exp(3 log 4(2+log P+P/H))`.
+  The subsequent exact finite Theorem 1.9 reduction is also reproducible.
+  Nontrivial endpoint values map to length-at-least-two interval witnesses;
+  each chosen Lemma 4.3 certificate, interval length, and selected-element
+  offset form an injective interval code. For arbitrary bounds `A,C,G`, the
+  endpoint subfamily is bounded by `A·C²·G³` times a rounded uniform Lemma
+  2.10 relation count. In the bounded-length refinement, the two coefficient
+  intervals are replaced by the exact smooth-number pair finset of cardinality
+  `psiNat x P ^ 2`; the resulting endpoint count is bounded by
+  `A·psiNat(x,P)²·G³` times the same relation budget. The required logarithmic
+  smooth-number specialization is proved directly: iterated retained-smooth
+  square decomposition plus Chebyshev gives
+  `psiNat(x,⌈C log(x+2)⌉)=x^o(1)`. Lemma 4.1 places the actual `H≤B` family in
+  this range, proving its endpoint count is `x^o(1)` for every fixed `B`.
+  The small-`a` regime is also complete: at
+  `a ≤ H log(x+2)/100`, Lemma 4.3 gives coefficient exponent `1/10`, and the
+  exact interval code gives endpoint exponent `1/4` after Lemma 4.2. Full
+  Proposition 2.1 and the complementary large-sieve estimate are not yet
+  claimed.
+  The complementary regime now has an exact finite sieve interface: every
+  upper-half prime removes at least `p-H` start residues, fixed `(a,H)` fibers
+  inject into the resulting survivor set, and budgeted fibers reassemble with
+  an `A·G` loss. Lemmas 4.1 and 4.2 place all such intervals in explicit
+  subpolynomial parameter boxes. Pairwise coprimality, the `a^k` product
+  condition, the PNT lower count of upper-half primes, the `[-k]` deletion
+  loss, and the source-scale lower bound for the literal removed/allowed
+  ratio are compiled. Native cyclic DFT Parseval, one- and two-modulus
+  Montgomery uncertainty, arbitrary finite tensor uncertainty,
+  pairwise-coprime iterated additive CRT, and the finite-support
+  simultaneous-residue specialization are also compiled and axiom-audited.
+  Tensor characters are injectively reindexed into one cyclic denominator,
+  their Fourier energies agree exactly, and Parseval plus exact interval
+  residue-fiber counting supplies the upper inequality and survivor bound for
+  one product denominator. The finite Schur Gram bound, exact
+  analysis/synthesis identities, and Bombieri duality are also compiled and
+  audited, including direct transfer from synthesis energy. The exact
+  circle-character Dirichlet-kernel Gram formula and diagonal are compiled in
+  a separate arithmetic layer. An injective `L`-fold shift-pair embedding,
+  exact difference-synthesis identity, squared-Dirichlet Fejér Gram identity,
+  Schur synthesis estimate, and operator duality reduce the circle large sieve
+  without loss to Fejér row/column bounds. `LargeSieveSeparated` proves the
+  separated-circle row-sum estimate by centered representatives and radial
+  bins, giving an explicit `8L` analysis bound for every finite
+  `1/L`-separated family. The rational, fixed-selection, and aggregation
+  layers compute the CRT numerator, prove nondivisibility and exclusive-modulus
+  cross-denominator distinctness, identify the circle and tensor energies,
+  and derive the finite global Corollary 2.8 survivor inequality without a
+  subset-count loss. The exact fixed-cardinality selection count, binomial
+  lower bound, elementary-symmetric denominator, literal factorial residue
+  restrictions and ratio product, survivor transport, and source-scale
+  Corollary 2.9 fixed-fiber estimate are now compiled and audited. The
+  remaining step is the maximal-`k` asymptotic specialization.
   All three source-facing total counts are proved to decompose exactly into
   their nontrivial and one-term value counts.
   The `b=1` powerful-number family gives audited `⌊√x⌋` lower bounds for
@@ -114,6 +188,13 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   Termwise domination of the exact `VB¹` sum by the convergent `b⁻³ᐟ²`
   p-series gives the summable majorant used in the audited normalized limit;
   its squarefree p-series constant is proved equal to the public zeta ratio.
+  The complete finite and asymptotic Theorem 1.8 assembly is proved
+  conditional on Lemma 3.1, hence conditional only on Theorem 2.5. Every
+  nontrivial value below `x` lies in a bounded witness interval; each interval
+  injects into a chosen Lemma 3.2 certificate together with its length and one
+  offset. Explicit subpolynomial natural length and coefficient budgets reduce
+  the count to `A²G⁴` times one uniform Corollary 2.11 fiber, proving the
+  nontrivial `x^(2/5+o(1))` bound and then the literal zeta-ratio endpoint.
   The exact-once prime divisor lemma and the positive-start `H<N` conclusion
   of Tao's Lemma 3.1 are also proved; the documented `{1}` edge case prevents
   claiming the unrestricted wording verbatim.
@@ -141,8 +222,13 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   unrestricted classical contract is no longer a release dependency. A fixed
   cutoff constant and the fixed specialized-Theorem-2.5 constant are selected
   before the eventual quantifiers; the audited two-logarithm comparison then
-  proves the complete eventual Lemma 3.1 contradiction conditional on
+  proves the complete eventual Lemma 3.1 contradiction and exact corrected
+  fixed-slack `TaoLemma31Conclusion` conditional on
   `TaoTheorem25SpecializedConclusion`.
+  Combining this contract with the proved certificate encoding and uniform
+  Corollary 2.11 gives audited endpoints
+  `taoTheorem18_of_taoTheorem25Specialized` and
+  `taoTheorem18_of_taoTheorem25`; no further Section 3 bookkeeping remains.
   Theorem 2.5 and Fourier hypotheses use Mathlib's genuine
   `C∞` index `∞`; `⊤` in this toolchain denotes analytic regularity and would
   incorrectly exclude every nonzero compactly supported cutoff.
