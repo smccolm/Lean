@@ -137,6 +137,50 @@ def QuotientPowerScale
       numerator n / (scale n) ^ (a + ε) ≤ f n ∧
       f n ≤ numerator n / (scale n) ^ (a - ε)
 
+/-- Diagonal uniformization on `ℕ`: if every selector satisfying an eventual
+pointwise range condition eventually satisfies a conclusion, and the range is
+eventually nonempty, then the conclusion holds uniformly over that range.
+
+This is the exact logical bridge needed to turn sequence-form asymptotic
+theorems into estimates uniform over a finite parameter family at each
+cutoff. -/
+theorem eventually_forall_of_forall_selector
+    {α : Type*} [Nonempty α] {R P : ℕ → α → Prop}
+    (hne : ∀ᶠ n : ℕ in atTop, ∃ a, R n a)
+    (hselector : ∀ f : ℕ → α,
+      (∀ᶠ n : ℕ in atTop, R n (f n)) →
+        ∀ᶠ n : ℕ in atTop, P n (f n)) :
+    ∀ᶠ n : ℕ in atTop, ∀ a, R n a → P n a := by
+  classical
+  rw [eventually_atTop] at hne ⊢
+  obtain ⟨N, hN⟩ := hne
+  by_contra hgoal
+  push Not at hgoal
+  let f : ℕ → α := fun n =>
+    if hbad : ∃ a, R n a ∧ ¬ P n a then Classical.choose hbad
+    else if hR : ∃ a, R n a then Classical.choose hR
+    else Classical.choice inferInstance
+  have hfR : ∀ᶠ n : ℕ in atTop, R n (f n) := by
+    rw [eventually_atTop]
+    refine ⟨N, fun n hn => ?_⟩
+    have hRn := hN n hn
+    by_cases hbad : ∃ a, R n a ∧ ¬ P n a
+    · simp only [f, dif_pos hbad]
+      exact (Classical.choose_spec hbad).1
+    · simp only [f, dif_neg hbad, dif_pos hRn]
+      exact Classical.choose_spec hRn
+  have hfP := hselector f hfR
+  rw [eventually_atTop] at hfP
+  obtain ⟨M, hM⟩ := hfP
+  obtain ⟨n, hn, a, haR, haP⟩ := hgoal (max N M)
+  have hbad : ∃ a, R n a ∧ ¬ P n a := ⟨a, haR, haP⟩
+  have hfn : f n = Classical.choose hbad := by
+    simp only [f, dif_pos hbad]
+  have hfBad := Classical.choose_spec hbad
+  have hfGood := hM n (le_trans (le_max_right N M) hn)
+  rw [hfn] at hfGood
+  exact hfBad.2 hfGood
+
 /-- Ordinary asymptotic equivalence of real-valued sequences. -/
 def SequenceEquivalent (f g : ℕ → ℝ) : Prop := f ~[atTop] g
 

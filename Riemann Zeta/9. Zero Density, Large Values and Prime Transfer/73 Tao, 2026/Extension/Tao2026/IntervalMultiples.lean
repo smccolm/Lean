@@ -55,4 +55,11 @@ theorem card_intervalMultiples_le (N H p : ℕ) (hp : 0 < p) :
       rw [Nat.sub_le_iff_le_add]
       simpa [add_comm, add_left_comm, add_assoc] using hadd
 
+/-- At start zero, the count is the exact quotient rather than merely the
+general `H / p + 1` upper bound. -/
+theorem card_intervalMultiples_zero (H p : ℕ) :
+    (intervalMultiples 0 H p).card = H / p := by
+  simpa [intervalMultiples, consecutiveInterval] using
+    Nat.Ioc_filter_dvd_card_eq_div H p
+
 end Tao2026

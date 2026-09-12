@@ -44,6 +44,178 @@ theorem mem_smoothNumbersUpTo_source {x y n : ℕ} :
     n ∈ Nat.smoothNumbersUpTo x (y + 1) ↔ n ≤ x ∧ IsSmooth n y := by
   simp [IsSmooth, Nat.mem_smoothNumbersUpTo]
 
+/-! ## Exact largest-prime-factor recurrence -/
+
+/-- The collision-free representation family behind the Buchstab recurrence:
+the first coordinate is the largest prime factor and the second is the
+remaining smooth cofactor. -/
+noncomputable def smoothLargestPrimeRepresentations (X y : ℕ) :
+    Finset (Σ _p : ℕ, ℕ) := by
+  classical
+  exact ((Finset.Icc 2 (min X y)).filter Nat.Prime).sigma fun p =>
+    Nat.smoothNumbersUpTo (X / p) (p + 1)
+
+/-- The natural represented by a largest-prime/cofactor pair. -/
+def smoothLargestPrimeRepresentationValue (r : Σ _p : ℕ, ℕ) : ℕ :=
+  r.1 * r.2
+
+theorem mem_smoothLargestPrimeRepresentations_iff
+    {X y : ℕ} {r : Σ _p : ℕ, ℕ} :
+    r ∈ smoothLargestPrimeRepresentations X y ↔
+      r.1.Prime ∧ 2 ≤ r.1 ∧ r.1 ≤ X ∧ r.1 ≤ y ∧
+        r.2 ≤ X / r.1 ∧ IsSmooth r.2 r.1 := by
+  classical
+  simp [smoothLargestPrimeRepresentations, mem_smoothNumbersUpTo_source,
+    and_left_comm, and_assoc]
+
+/-- A represented number has precisely the declared largest prime factor. -/
+theorem largestPrimeFactor_smoothLargestPrimeRepresentation
+    {p m : ℕ} (hp : p.Prime) (hm : IsSmooth m p) :
+    largestPrimeFactor (p * m) = some p := by
+  have hm0 : m ≠ 0 := (isSmooth_iff.mp hm).1
+  have hprod0 : p * m ≠ 0 := mul_ne_zero hp.ne_zero hm0
+  rw [largestPrimeFactor_eq_some_iff]
+  constructor
+  · exact hp.mem_primeFactors (dvd_mul_right p m) hprod0
+  · intro q hqmem
+    have hqprime : q.Prime := Nat.prime_of_mem_primeFactors hqmem
+    have hqdiv : q ∣ p * m := Nat.dvd_of_mem_primeFactors hqmem
+    rcases hqprime.dvd_mul.mp hqdiv with hqp | hqm
+    · exact ((Nat.prime_dvd_prime_iff_eq hqprime hp).mp hqp).le
+    · exact (isSmooth_iff.mp hm).2 q hqprime hqm
+
+/-- Forgetting the representation gives exactly the non-unit smooth numbers
+up to `X`. -/
+theorem image_smoothLargestPrimeRepresentations (X y : ℕ) :
+    (smoothLargestPrimeRepresentations X y).image
+        smoothLargestPrimeRepresentationValue =
+      (Nat.smoothNumbersUpTo X (y + 1)).erase 1 := by
+  classical
+  ext n
+  constructor
+  · intro hn
+    rw [Finset.mem_image] at hn
+    rcases hn with ⟨⟨p, m⟩, hpm, rfl⟩
+    have hpm' := mem_smoothLargestPrimeRepresentations_iff.mp hpm
+    have hm0 : m ≠ 0 := (isSmooth_iff.mp hpm'.2.2.2.2.2).1
+    have hp0 : p ≠ 0 := hpm'.1.ne_zero
+    have hle : p * m ≤ X := by
+      have := (Nat.le_div_iff_mul_le hpm'.1.pos).mp hpm'.2.2.2.2.1
+      simpa only [mul_comm] using this
+    have hsmooth : IsSmooth (p * m) y := by
+      rw [isSmooth_iff]
+      refine ⟨mul_ne_zero hp0 hm0, ?_⟩
+      intro q hq hqdiv
+      rcases hq.dvd_mul.mp hqdiv with hqp | hqm
+      · have hqpEq : q = p := (Nat.prime_dvd_prime_iff_eq hq hpm'.1).mp hqp
+        exact hqpEq ▸ hpm'.2.2.2.1
+      · exact (isSmooth_iff.mp hpm'.2.2.2.2.2).2 q hq hqm |>.trans
+          hpm'.2.2.2.1
+    have hneOne : p * m ≠ 1 := by
+      intro hone
+      have hnone : largestPrimeFactor (p * m) = none :=
+        largestPrimeFactor_eq_none_iff.mpr (Or.inr hone)
+      rw [largestPrimeFactor_smoothLargestPrimeRepresentation hpm'.1
+        hpm'.2.2.2.2.2] at hnone
+      simp at hnone
+    rw [Finset.mem_erase, mem_smoothNumbersUpTo_source]
+    exact ⟨hneOne, hle, hsmooth⟩
+  · intro hn
+    rw [Finset.mem_erase, mem_smoothNumbersUpTo_source] at hn
+    rcases hn with ⟨hnOne, hnX, hnSmooth⟩
+    have hn0 : n ≠ 0 := (isSmooth_iff.mp hnSmooth).1
+    have hlpfNotNone : largestPrimeFactor n ≠ none := by
+      intro hlpf
+      rcases largestPrimeFactor_eq_none_iff.mp hlpf with hnZero | hnEqOne
+      · exact hn0 hnZero
+      · exact hnOne hnEqOne
+    cases hlpf : largestPrimeFactor n with
+    | none => exact (hlpfNotNone hlpf).elim
+    | some p =>
+        have hpData := largestPrimeFactor_eq_some_iff.mp hlpf
+        have hp : p.Prime := Nat.prime_of_mem_primeFactors hpData.1
+        have hpDvd : p ∣ n := Nat.dvd_of_mem_primeFactors hpData.1
+        have hpLeN : p ≤ n := Nat.le_of_dvd (Nat.pos_of_ne_zero hn0) hpDvd
+        have hpLeX : p ≤ X := hpLeN.trans hnX
+        have hpLeY : p ≤ y := (isSmooth_iff.mp hnSmooth).2 p hp hpDvd
+        have hmLe : n / p ≤ X / p := Nat.div_le_div_right hnX
+        have hdecomp : p * (n / p) = n := Nat.mul_div_cancel' hpDvd
+        have hmSmooth : IsSmooth (n / p) p := by
+          rw [isSmooth_iff]
+          constructor
+          · exact Nat.ne_of_gt (Nat.div_pos hpLeN hp.pos)
+          · intro q hq hqdiv
+            have hqDvdN : q ∣ n := by
+              rw [← hdecomp]
+              exact dvd_mul_of_dvd_right hqdiv p
+            exact hpData.2 q (hq.mem_primeFactors hqDvdN hn0)
+        rw [Finset.mem_image]
+        refine ⟨⟨p, n / p⟩, ?_, hdecomp⟩
+        exact mem_smoothLargestPrimeRepresentations_iff.mpr
+          ⟨hp, hp.two_le, hpLeX, hpLeY, hmLe, hmSmooth⟩
+
+/-- The representation-value map is injective because the first coordinate
+is the largest prime factor, after which cancellation recovers the cofactor. -/
+theorem injOn_smoothLargestPrimeRepresentationValue (X y : ℕ) :
+    Set.InjOn smoothLargestPrimeRepresentationValue
+      (smoothLargestPrimeRepresentations X y) := by
+  rintro ⟨p, m⟩ hpm ⟨q, k⟩ hqk heq
+  have hpm' := mem_smoothLargestPrimeRepresentations_iff.mp hpm
+  have hqk' := mem_smoothLargestPrimeRepresentations_iff.mp hqk
+  change p * m = q * k at heq
+  have hpq : p = q := by
+    have hlp := largestPrimeFactor_smoothLargestPrimeRepresentation
+      hpm'.1 hpm'.2.2.2.2.2
+    have hlq := largestPrimeFactor_smoothLargestPrimeRepresentation
+      hqk'.1 hqk'.2.2.2.2.2
+    exact Option.some.inj (hlp.symm.trans ((congrArg largestPrimeFactor heq).trans hlq))
+  subst q
+  have hmk : m = k := Nat.eq_of_mul_eq_mul_left hpm'.1.pos heq
+  subst k
+  rfl
+
+/-- Cardinality of the largest-prime representation family. -/
+theorem card_smoothLargestPrimeRepresentations (X y : ℕ) :
+    (smoothLargestPrimeRepresentations X y).card =
+      ∑ p ∈ (Finset.Icc 2 (min X y)).filter Nat.Prime,
+        psiNat (X / p) p := by
+  classical
+  rw [smoothLargestPrimeRepresentations, Finset.card_sigma]
+  rfl
+
+/-- Exact largest-prime-factor (Buchstab) recurrence for the source-facing
+smooth-number counting function. -/
+theorem psiNat_eq_one_add_sum_largestPrime {X y : ℕ} (hX : 1 ≤ X) :
+    psiNat X y = 1 +
+      ∑ p ∈ (Finset.Icc 2 (min X y)).filter Nat.Prime,
+        psiNat (X / p) p := by
+  classical
+  have hone : 1 ∈ Nat.smoothNumbersUpTo X (y + 1) := by
+    rw [mem_smoothNumbersUpTo_source]
+    refine ⟨hX, ?_⟩
+    rw [isSmooth_iff]
+    exact ⟨one_ne_zero, fun p hp hpdvd => (hp.not_dvd_one hpdvd).elim⟩
+  have herase : ((Nat.smoothNumbersUpTo X (y + 1)).erase 1).card =
+      ∑ p ∈ (Finset.Icc 2 (min X y)).filter Nat.Prime,
+        psiNat (X / p) p := by
+    rw [← image_smoothLargestPrimeRepresentations X y,
+      Finset.card_image_iff.mpr
+        (injOn_smoothLargestPrimeRepresentationValue X y),
+      card_smoothLargestPrimeRepresentations]
+  calc
+    psiNat X y = (Nat.smoothNumbersUpTo X (y + 1)).card := rfl
+    _ = ((Nat.smoothNumbersUpTo X (y + 1)).erase 1).card + 1 :=
+      (Finset.card_erase_add_one hone).symm
+    _ = (∑ p ∈ (Finset.Icc 2 (min X y)).filter Nat.Prime,
+        psiNat (X / p) p) + 1 := by rw [herase]
+    _ = 1 + ∑ p ∈ (Finset.Icc 2 (min X y)).filter Nat.Prime,
+        psiNat (X / p) p := Nat.add_comm _ _
+
+/-- The unit is counted by `Psi(X,y)` as soon as the range is nonempty. -/
+theorem one_le_psiNat {X y : ℕ} (hX : 1 ≤ X) : 1 ≤ psiNat X y := by
+  rw [psiNat_eq_one_add_sum_largestPrime hX]
+  omega
+
 /-- A one-term bad number is exactly a square of a prime times a positive
 number all of whose prime factors are no larger than that prime. -/
 theorem mem_badOneTermSet_iff_exists_prime_sq_mul_smooth {n : ℕ} :

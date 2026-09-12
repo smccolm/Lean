@@ -460,21 +460,197 @@ partition all witnesses exactly.
 Mathlib smooth-number finset. It proves that the ordered coefficient range has
 cardinality exactly `psiNat x P ^ 2`, places every chosen Lemma 4.3 certificate
 with `max a H ≤ P` in that range, and obtains the exact endpoint bound
-`A·psiNat(x,P)²·G³` times the uniform Lemma 2.10 budget. Proposition 2.1(ii)'s
-full analytic estimate remains open, but this branch needs only its
-`P=O(log x)` consequence. `SmoothNumberBounds` proves that consequence
+`A·psiNat(x,P)²·G³` times the uniform Lemma 2.10 budget. This branch needs only
+the `P=O(log x)` consequence of Proposition 2.1(ii). `SmoothNumberBounds`
+proves that consequence
 directly by iterating Mathlib's square-times-squarefree decomposition and
 using the Chebyshev prime-counting bound. Lemma 4.1 then places every actual
 fixed-bounded-length interval in the concrete logarithmic smooth family, and
 `factorialBoundedLengthEndpointCount_powerUpperBound_zero` closes that source
 subfamily unconditionally.
+`SmoothNumberRankin` starts the stronger Proposition 2.1 route. It proves
+summability and the exact finite-prime Euler product for the Dirichlet series
+of positive smooth naturals, transports Mathlib's strict cutoff to Tao's
+inclusive `p≤y` convention, and proves the finite bound
+`psiNat X y ≤ X^sigma ∏_{p≤y}(1-p^(-sigma))⁻¹` for `X≥1` and `sigma>0`.
+Every factor is further converted to an exponential geometric tail and the
+denominators are uniformly controlled by the prime-two factor. The resulting
+source theorem exposes the exact saddle exponent
+`-(1-sigma)log X + (1-2^(-sigma))⁻¹∑_{p≤y}p^(-sigma)`.
+`SmoothNumberPrimeSum` performs the next exact layer: finite Abel summation
+rewrites the weighted prime sum as its `pi(y)y^(-sigma)` endpoint plus
+nonnegative backward differences against `pi(n)`. Mathlib's explicit
+Chebyshev theorem then gives a fully unconditional finite majorant, which is
+substituted back into the Rankin exponent. The square-root remainder in the
+explicit theorem is absorbed to give the clean global majorant
+`(2 log 4+2)n/log n`. A proved Bernoulli estimate gives
+`n^(-sigma)-(n+1)^(-sigma)≤sigma*n^(-sigma)/n`. After exact cancellation,
+only the canonical finite power-log sum `∑ n^(-sigma)/log n` remains.
+A second Bernoulli/telescoping proof bounds this sum unconditionally using the
+uniform denominator `log 2`, producing a fully explicit sum-free Rankin
+estimate. A sharper source-scale range split replaces this coarse denominator
+by a growing logarithm. That split is proved at
+an arbitrary `2≤k≤y`: the lower range has scale `k^(1-sigma)/log 2`, while
+the upper range gains `log k`. Two explicit cutoff comparisons normalize the
+result to a growing `log y` denominator and feed it back into Rankin. The
+concrete divisor `R=(log y)^(1/(1-sigma))` is now proved to satisfy
+`R^(1-sigma)=log y`; flooring `y/R` preserves the power comparison. Moreover,
+for `y≥4`, the single separation `2R≤sqrt y` supplies the cutoff lower bound
+and the logarithmic comparison with `L=2`. This yields compiled canonical
+power-log, weighted-prime, and source-facing Rankin estimates. It remains to
+specialize the separation in the polylogarithmic regime. The standard
+variables `u=log X/log y` and `sigma=1-log u/log y` are now defined, their
+range conditions are explicit, and the exact identities
+`y^(1-sigma)=u` and `-(1-sigma)log X=-u log u` are proved. In the critical
+`y=z^(alpha+o(1))` regime the square-root separation is too strong, so that
+branch uses a finer multi-scale power-log bound. The required finite argument
+now compiles: on each `[a,b)` it retains the difference of the two endpoint
+`(1-sigma)` powers divided by `(1-sigma)log a`; consecutive intervals along
+any monotone cutoff chain reassemble exactly, and their local majorants sum
+termwise. The saturated dyadic chain `min y 2^(i+1)` reaches `y` after exactly
+`clog 2 y - 1` active blocks. Freezing each block at its left endpoint and
+using its cardinality removes the artificial `(1-sigma)â»Â¹`, leaving the
+explicit exponential-harmonic sum `∑_{j≤m}2^(j delta)/j`. An arbitrary
+cutoff lemma and its midpoint specialization now bound this by a harmonic
+prefix plus a geometric tail, and `2^delta-1≥delta log 2` exposes the sharp
+terminal denominator `m delta`; the resulting closed midpoint estimate is
+fed back into the original power-log sum. The named dyadic majorants are also
+propagated through the weighted-prime sum and source-facing Rankin exponent.
+Exact depth/logarithm comparisons convert the terminal part further to
+`2(2y)^delta/(delta log y)` and then, for the actual saddle, to
+`2*2^delta*u/log u`. The midpoint exponential is now bounded by the square
+root of the terminal source scale, giving a prefix
+`sqrt(2^delta*u) * (1+log(floor(m/2)))`. An explicit finite absorption wrapper
+proves the complete scalar estimate `5u/log u` under
+`2(1+log(floor(m/2)))log u <= sqrt u`. Both exact source regimes now discharge
+the needed quadratic depth envelope and optimize the full positive Rankin
+contribution. The compiled depth comparison
+`1+log(floor(m/2)) <= 1+log(log(2y)/log 2)` and the general inequality
+`log u <= 4u^(1/4)` reduce the generic obligation to the explicit
+continuous-scale condition `8(1+log(log(2y)/log 2)) <= u^(1/4)`.
+The exact critical source contract is now `IsTaoCriticalSmoothRegime X y α`,
+meaning `log X/log x -> 1` and `log y/log z(x) -> α` with `α` fixed. The
+identities `log z` and `log x/log z = u₀` are proved, as are `u₀ -> infinity`,
+`u/u₀ -> 1/α`, and `u -> infinity` for every fixed `α>0`. The source-scale
+decay `log z/u₀² -> 0` transfers to `log(2y)/u² -> 0`, proving the quadratic
+dyadic-depth envelope. Lean also derives `X,y >= 2`, `u>1`, `u<y`, and hence
+`sigma>=0` eventually. Consequently the critical contract alone now feeds the
+generic consumer and yields the complete scalar estimate `5u/log u`. The
+optimized finite `Psi` bridge is now also compiled: the positive dyadic error
+is `o(log z)`, while `u log u/log z -> 1/α`. Hence for every fixed `ε>0`,
+`Psi(X,y) <= X/z^(1/α-ε)` eventually. `SmoothNumberLowerBound` fixes the
+integer side of that branch: `k=Nat.log y X` obeys `k/u₀->1/α`,
+`log k/log₂x->1/2`, and `k log k/log z->1/α`; moreover the frozen PNT yields
+`log pi(y)/log z->α` and eventually `2k<=pi(y)`. The compiled
+`HasCriticalSmoothLowerSaddle X y E` consumer turns
+`X*exp(-(u*log u+E))<=Psi(X,y)` and `E/log z->0` directly into the sharp
+critical lower estimate.  Lean also proves this condition for every fixed
+CEP-sized error `E=C*u*log(log u)`, proves `log u/log y->0`, and enters the
+fixed source-uniform range `u<=y^(1/2)`. The exact finite combinatorial base
+includes all exponent vectors of total degree at most `k`: stars and bars
+gives `choose(k+pi(y),pi(y))`, unique factorization makes the product map
+injective, and `y^k<=X` embeds the whole family into `Psi(X,y)`.  The source
+counting function also satisfies the exact largest-prime recurrence
+`Psi(X,y)=1+sum_{p<=min(X,y)}Psi(X/p,p)` for `X>=1`, proved by a bijection with
+largest-prime/smooth-cofactor pairs.  `SmoothNumberHildebrand` adds the exact
+weighted bridge: smooth multiples of `p^a` are counted by `Psi(X/p^a,y)`, the
+total `p`-adic multiplicity is their prime-power sum, and summing
+`log n=sum_p v_p(n)log p` gives the finite Chebyshev--Hildebrand identity and
+its exact nonnegative boundary-defect decomposition.  Discarding higher prime
+powers gives the recursive inequality
+`sum_{p<=y} log(p)Psi(X/p,y)<=Psi(X,y)log X`. The first full finite iteration
+is compiled: for every
+`d` with `y^d<=X`,
+`theta(y)^d<=Psi(X,y)(log X)^d`, hence
+`(theta(y)/log X)^d<=Psi(X,y)` when `X>=2`.
+`SmoothNumberCriticalLower` retains the fractional endpoint with the
+canonical residual `b=floor(X/y^d)`: it proves `1<=b<y`, `y^d*b<=X`, the
+refined product bound `theta(b)theta(y)^d<=Psi(X,y)log(X)^(d+1)`, and a uniform
+thresholded endpoint factor.  The pinned PNT supplies one fixed threshold
+above which `theta(b)>=b/2`; below it the omitted residual is bounded.  The
+complete loss ledger is also formalized: the finite inequality
+`X/(B*2^d*(log X)^(d+1))<=Psi(X,y)` has normalized logarithmic denominator
+`2/alpha`, yielding `X/z^(2/alpha+epsilon)<=Psi(X,y)`.  Thus this elementary
+Hildebrand route is certified to lose a factor of two in the critical
+exponent.  The sharp consumer is nevertheless complete: a lower packet with
+loss `u*log u+E`, where `E/log z->0`, yields the required
+`X/z^(1/alpha+epsilon)` estimate. The finite CEP packet itself is
+source-faithful: `SmoothNumberCEPIntervals` encodes the exact open--closed
+bands and proves them pairwise disjoint, `SmoothNumberCEPWeights` defines
+`k=floor(log(u)^2 log(log u))`, the geometric `alpha_j`, and proves (3.7),
+and `SmoothNumberCEPSource` specializes the collision-free (3.11) and
+cofactor-density (3.10) bridge to `floor(alpha_j*u)` prime choices per band.
+`SmoothNumberCEPSize` proves the exact reverse geometric moment, aggregates
+the flooring loss, and gives every generated multiplier the finite lower
+exponent from (3.6)--(3.8). `SmoothNumberCEPPrimeMass` identifies each exact
+band cardinality with the corresponding difference of `Nat.primeCounting` at
+the floored endpoints, reduces reciprocal mass to that literal endpoint
+estimate, and propagates it through (3.11)--(3.10).
+`SmoothNumberCEPBootstrap` proves the exact
+saddle identity `X^(1/(log X/log y))=y`, hence identifies the canonical
+natural packet cutoff with `y` and feeds the canonical packet directly into
+`psiNat X y` without a rounding loss. `SmoothNumberCEPCoarse` then replaces
+the shrinking source bands by fixed dyadic PNT blocks. It proves reciprocal
+mass at least `1/(16 log 2 log u)`, uses multiplicity
+`floor(u-2u/log u)`, bounds the cofactor depth by `10u/log u`, and bounds the
+complete secondary loss by `60u log(log u)`. This constructs
+`HasCriticalSmoothLowerSaddle X y (criticalSmoothLowerCEPError 60 X y)` and
+proves the unconditional sharp theorem
+`IsTaoCriticalSmoothRegime.eventually_self_div_taoZ_rpow_le_psiNat`. Thus all
+four quantified upper/lower halves of Proposition 2.1 are compiled and
+audited. The exact shrinking-band route remains as an optional source-faithful
+alternative; its shrinking-band estimate is not a blocker. Downstream
+multiplicative instantiation over the fixed prime block `z<p<3z` is now
+compiled in `BadOneTermAsymptotics`: the exact `B¹` identity and reciprocal
+prime mass prove `x/z^(2+ε) <= badOneTermCount x` eventually. The matching
+upper bound partitions the exact prime sum at `sqrt z` and `z²`, covers the
+middle by a finite exponent grid, and absorbs the fixed grid cardinality.
+Consequently `badOneTermCount_quotientPowerScale` proves Lemma 1.6(i).
+`SmoothNumberStability` now uses the literal floored cutoff `floor(cX)`,
+proves its ratio/logarithmic limits and preservation of the critical regime,
+and isolates Granville (3.24)'s quotient limit from its formal `IsTheta`
+consequence. `TaoLemma16iiConclusion` is the exact target for Lemma 1.6(ii),
+with both automatic monotone directions proved; the reverse analytic
+comparison remains open. `SmoothNumberSaddlePoint` now constructs the exact
+positive saddle solving `sum_{p<=y} log(p)/(p^sigma-1)=log X`, proves
+existence and uniqueness, defines the positive second sum `phiTwo`, proves
+`phiOne'=-phiTwo`, and gives the exact mean-value sensitivity identity under
+changes of `X`. `SmoothNumberSaddleRegimes` bounds `phiOne(y,1)` by an
+explicit Abel--Chebyshev majorant and `phiOne(y,1-epsilon)` by prime counting;
+it proves that the exact saddle tends to `1` in every critical regime. The
+second saddle sum is at least `log(2) log(X)` at the saddle and therefore
+diverges; the exact secant estimate and regime preservation show that fixed
+dilations change the saddle by `o(1/log y)`. The remaining gap is the uniform
+saddle-point asymptotic itself. `SmoothNumberSaddlePhase` defines its exact
+logarithmic Euler-product phase and Gaussian main term, proves the two phase
+derivatives, recovers the Euler product by exponentiation, evaluates Rankin's
+bound at the saddle, and proves the saddle is the unique positive global
+minimum. The exact old/new minimum-phase squeeze then proves that dilation
+changes this minimum by `log(c)`. Uniform prime-local curvature estimates
+show that the `phiTwo` quotient tends to `1`, so the quotient of the complete
+Gaussian main terms tends to `c`; only the uniform comparison with `Psi`
+remains.
+The exact polylogarithmic source contract is `IsTaoPolylogSmoothRegime X y A`,
+meaning `log X/log x -> 1` and `log y/log₂x -> A` for fixed `A>1`. Its natural
+scale `log x/log₂x` is represented by `taoPolylogUZero`; Lean proves
+`u/taoPolylogUZero -> 1/A`, `sigma -> 1-1/A`, the quadratic dyadic-depth
+envelope, and the full scalar estimate. The leading saving satisfies
+`u log u/log x -> 1/A`, while the complete positive dyadic error is
+`o(log x)`. Consequently `Psi(X,y) <= X/x^(1/A-ε)` eventually for every fixed
+`ε>0`. `SmoothNumberLowerBound` proves the matching lower estimate.  Its exact
+depth `k=Nat.log y X` satisfies `y^k<=X` and differs from the real Rankin ratio
+by less than one.  The frozen PNT gives `log pi(y)/log₂x->A`, while
+`log k/log₂x->1`, so eventually `2k<=pi(y)`.  Products of fixed-size prime
+subsets are injective, smooth, and bounded, and the integral binomial entropy
+bound yields `x^(1-1/A-ε)<=Psi(X,y)` eventually. Multiplicative stability
+remains open in this regime.
 `FactorialSmallIndexCounting` closes the other easy source regime at the fixed
 threshold `a ≤ H log(x+2)/100`. It proves exact parameter and coefficient
 budgets from Lemma 4.3, bounds each selected coefficient by
 `x^(1/10+o(1))`, and feeds these budgets into the injective interval code.
 Consequently the literal small-index endpoint family is
-`x^(1/4+o(1))` after Lemma 4.2. Only the complementary large-sieve regime
-remains in the upper bound for Theorem 1.9.
+`x^(1/4+o(1))` after Lemma 4.2. The complementary large-sieve regime is
+closed below.
 `FactorialLargeSieve` now formalizes the exact finite interface for that last
 regime. For every upper-half prime `a/2<p≤a`, divisibility of the interval
 product puts the start `N mod p` in the image of `h↦-h` for `1≤h≤H`; this set
@@ -519,11 +695,96 @@ elementary-symmetric lower bound using the exact binomial cardinality and
 `choose n k ≥ (n/(2k))^k`. `FactorialLargeSieveCor29` packages the literal
 residue complements, proves their exact tensor-ratio product, transports the
 natural survivor set to `Fin (x+1)`, and derives the source-scale fixed-fiber
-Corollary 2.9 estimate. The remaining large-sieve work is the maximal-`k`
-asymptotic closure of the nontrivial Theorem 1.9 upper count.
+Corollary 2.9 estimate. `FactorialLargeSieveMaximal` chooses
+`k=⌊log(x+1)/(2 log a)⌋`, verifies the product and selection conditions,
+proves a uniform square-root fixed-fiber estimate, reassembles only nonempty
+fibers, and absorbs both subpolynomial parameter budgets. Thus the
+nontrivial Theorem 1.9 upper count follows from Lemma 4.2.
+`FactorialOneTermAsymptotics` proves exponential growth of `s(a!)`, covers
+the literal one-term values by `O(log x)·⌊√x⌋` representations, and combines
+the upper and square-family lower bounds. The full `TaoTheorem19Conclusion`
+is therefore compiled from Lemma 4.2, and hence from Theorem 2.5 plus
+Proposition 2.3(ii) or the pinned BHP source contract.
 The compiled Lemma 4.2 contract is propagated to Theorem 1.10 through the
 explicit natural gap budget `⌈exp((log x)^(3/4))⌉`, proved both to bound every
 factorial-square triple tail and to be `x^o(1)`. Thus its remaining inputs are
-Theorem 1.9, Erdős--Selfridge, Theorem 2.5, and the analytic BHP theorem.
+now directly Erdős--Selfridge, Theorem 2.5, and the analytic BHP theorem;
+Theorem 1.9 is supplied internally by the new closure above.
+`BadIntervals` now starts the independent Theorem 1.7 branch with the exact
+arithmetic core of Tao's Lemma 6.1. It proves `H≤N` for every non-singleton
+bad interval without an external hypothesis and proves unconditionally that
+every interval element is nonprime. From the explicitly isolated
+Sylvester--Schur contract it then obtains the largest prime `p₀>H`, a literal
+interval witness `p₀²m` with smooth cofactor, and `p₀`-smoothness of every
+interval element. The admissible dyadic witness yields the exact rounded
+bounds `N<x≤4N+1` and `p₀²m≤2x`.
+`NormalizedBadIntervals` proves the corrected exact core of Lemma 6.2. The
+largest power of two below `(H+3)/2` satisfies `2≤H'≤H<4H'`; one of the two
+subintervals with endpoint `p₀²m` is contained in the parent and remains bad
+with the same largest prime. Its exact inherited scale is `x≤4N'+1` and
+`N'+H'≤2x`. The module intentionally does not claim that the child meets the
+identical `[x/2,x]` window, because containment does not preserve that
+condition without an additional argument.
+`BadIntervalMaximal` packages both interval families as finite index sets and
+finite unions. It proves that every point in the admissible union belongs to a
+four-length enlargement whose intersection with the normalized union has
+exact lattice density at least `1/10`. A greedy maximal-length selection gives
+pairwise disjoint intervals whose threefold enlargements cover the original
+family, proving the finite one-dimensional weak-`(1,1)` inequality and the
+final bound `#admissibleUnion≤30·#normalizedUnion`.
+`TypicalBadIntervals` gives exact cutoff-parametrized versions of Definitions
+6.3--6.4. It encodes the ordered 1000-prime factorization, smooth remainder,
+literal typical/non-typical split, `p₀<squareThreshold`, and the source bound
+`m'≤2x/(p₀²p₁⋯p₁₀₀₀)`. `NonTypicalBadIntervals` closes the finite part of the
+large-square failure branch in Proposition 6.5: every affected short interval
+lies in an explicit neighborhood union bounded by
+`(2L+1)∑_{D≤d≤2x}⌊2x/d²⌋`. A telescoping reciprocal-square estimate closes
+this further to `(2L+1)(2x)/(D-1)`. `BadIntervalSourceScales` substitutes
+`L=⌈(log x)^20⌉₊` and `D=⌈z(x)^3⌉₊`, proves the needed growth and logarithmic
+absorption, and derives `#exceptional≤24x/z(x)^(5/2)` eventually. Thus the
+actual finite union of short normalized intervals failing condition (ii) is
+covered and satisfies the weak source alternative with explicit `δ=1/2`;
+`BadIntervalLongSieve` starts condition (i) at the exact source residue level.
+It proves the `H` forbidden start classes are distinct modulo every prime
+`p₀<p≤2p₀`, derives their avoidance from normalized-interval smoothness, and
+feeds the resulting literal restrictions through the existing tensor
+Corollary 2.9. The actual fixed-`(p₀,H)` interval union satisfies the compiled
+weighted large-sieve bound. Its ambient-start maximal degree and eventual PNT
+range are compiled. `BadIntervalCofactorSieve` implements the literal source
+cofactor budget `2x/p₀²`: both endpoint orientations are transported to `H`
+distinct affine restrictions on `m`, smoothness supplies their avoidance, and
+their exact tensor ratios feed the global sieve. The two survivor interval
+covers recombine into a fixed-fiber source bound with explicit factor `16`,
+specialized to the floor-defined degree and eventual PNT range. Source-range
+optimization now extracts `H/(8k log(2p₀))` as an exact lower bound for the
+sieve base and proves the paper's `H^(0.9k)` fixed-fiber inequality from
+`8k log(2p₀)≤H^(1/10)`. Exact floor maximality further gives
+`2x<(2p₀)^(2k+4)` and `log(2x)/log(2p₀)<2k+4`; the quarter-bound is compiled
+with its necessary finite hypothesis `k≥4`. Under the stronger denominator
+absorption `8k log(2p₀)≤H^(3/50)`, the leading `H` is removed and the fiber is
+bounded by `16(⌊2x/p₀²⌋+1)H^(-0.9(k-1))`, then by the canonical exponential
+degree-decay term. The literal long cutoff discharges the denominator
+comparison eventually. The complementary `k<4` branch forces
+`2x<(2p₀)^10`; the unsieved cofactor cover yields `4096x^(9/10)` for the whole
+fiber. `BadIntervalLongSaddle` performs the exact prime-scale AM--GM step. The
+literal long cutoff supplies `(9/2)log x log₂x` in the saddle numerator, so the
+canonical `k≥4` fixed fiber is eventually at most
+`128x/(p₀z(x)^6)`. The corrected full source range `k≥2` uses the valid
+eighth-comparison and a `22/25` absorption, retaining the uniform bound
+`128x/(p₀z(x)^4)`. Under the exact source upper scale `p₀^20≤x^3`, nonempty
+fibers supply the square inequality and the long range supplies the degree,
+PNT, and large-budget hypotheses automatically. `BadIntervalLongSum` performs
+the finite dyadic-length and moderate-prime aggregation, majorizes the prime
+sum by the harmonic number, absorbs both logarithmic losses into `z(x)`, and
+proves the actual long moderate-prime failure-union bound `x/z(x)^3`
+eventually. `BadIntervalLargePrimeSum` treats Tao's earlier large-`p₀` branch
+under the ceiling-rounded `H<x^(7/50)` cutoff. Its unsieved `8Hx/p₀²` fiber
+bound and reciprocal-square tail prove `#union≤x^(199/200)` eventually, with
+exact bridges from `H^50<x^7` and `p₀^20>x^3`. `BadIntervalLargeLength`
+closes the complementary `H≥x^(7/50)` prime-gap branch: `41/300` is a fixed
+spare exponent above `2/15`, one greedy disjoint family controls all lengths,
+the corresponding real endpoint blocks lie in Tao's literal Proposition
+2.3(iii) set at scale `2x`, and the actual union has a fixed power saving.
+The remaining smooth-number branches are not yet claimed.
 None of Theorems 1.7--1.10 is complete or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.

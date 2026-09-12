@@ -31,6 +31,19 @@ try {
         'Extension\Tao2026\Anatomy.lean',
         'Extension\Tao2026\Asymptotics.lean',
         'Extension\Tao2026\Audit.lean',
+        'Extension\Tao2026\BadIntervals.lean',
+        'Extension\Tao2026\BadIntervalMaximal.lean',
+        'Extension\Tao2026\NormalizedBadIntervals.lean',
+        'Extension\Tao2026\TypicalBadIntervals.lean',
+        'Extension\Tao2026\NonTypicalBadIntervals.lean',
+        'Extension\Tao2026\BadIntervalSourceScales.lean',
+        'Extension\Tao2026\BadIntervalLongSieve.lean',
+        'Extension\Tao2026\BadIntervalCofactorSieve.lean',
+        'Extension\Tao2026\BadIntervalLongOptimization.lean',
+        'Extension\Tao2026\BadIntervalLongSaddle.lean',
+        'Extension\Tao2026\BadIntervalLongSum.lean',
+        'Extension\Tao2026\BadIntervalLargePrimeSum.lean',
+        'Extension\Tao2026\BadIntervalLargeLength.lean',
         'Extension\Tao2026\CoefficientBounds.lean',
         'Extension\Tao2026\CoefficientProduct.lean',
         'Extension\Tao2026\CoefficientSelection.lean',
@@ -44,6 +57,7 @@ try {
         'Extension\Tao2026\FactorialFibers.lean',
         'Extension\Tao2026\FactorialIntervals.lean',
         'Extension\Tao2026\FactorialOneTerm.lean',
+        'Extension\Tao2026\FactorialOneTermAsymptotics.lean',
         'Extension\Tao2026\FactorialShortIntervals.lean',
         'Extension\Tao2026\Intervals.lean',
         'Extension\Tao2026\IntervalMultiples.lean',
@@ -64,6 +78,28 @@ try {
           'Extension\Tao2026\QuadraticSolutionCount.lean',
           'Extension\Tao2026\PublicStatements.lean',
         'Extension\Tao2026\SmoothNumbers.lean',
+        'Extension\Tao2026\SmoothNumberRankin.lean',
+        'Extension\Tao2026\SmoothNumberPrimeSum.lean',
+        'Extension\Tao2026\SmoothNumberSourceRegimes.lean',
+        'Extension\Tao2026\SmoothNumberPolylogRegimes.lean',
+        'Extension\Tao2026\SmoothNumberLowerBound.lean',
+        'Extension\Tao2026\SmoothNumberHildebrand.lean',
+        'Extension\Tao2026\SmoothNumberCriticalLower.lean',
+        'Extension\Tao2026\SmoothNumberCEPPacket.lean',
+        'Extension\Tao2026\SmoothNumberCEPRecurrence.lean',
+        'Extension\Tao2026\SmoothNumberCEPIntervals.lean',
+        'Extension\Tao2026\SmoothNumberCEPWeights.lean',
+        'Extension\Tao2026\SmoothNumberCEPSource.lean',
+        'Extension\Tao2026\SmoothNumberCEPSize.lean',
+        'Extension\Tao2026\SmoothNumberCEPPrimeMass.lean',
+        'Extension\Tao2026\SmoothNumberCEPBootstrap.lean',
+        'Extension\Tao2026\SmoothNumberCEPCoarse.lean',
+        'Extension\Tao2026\SmoothNumberSaddlePoint.lean',
+        'Extension\Tao2026\SmoothNumberSaddleRegimes.lean',
+        'Extension\Tao2026\SmoothNumberSaddlePhase.lean',
+        'Extension\Tao2026\SmoothNumberStability.lean',
+        'Extension\Tao2026\SmoothNumberSaddleCurvature.lean',
+        'Extension\Tao2026\BadOneTermAsymptotics.lean',
         'Extension\Tao2026\ShortIntervalDecomposition.lean',
         'Extension\Tao2026\TypeIReduction.lean',
         'Extension\Tao2026\TypeIIReduction.lean',
@@ -76,6 +112,8 @@ try {
         'Sources\SHA256SUMS.txt',
         'Sources\baker-harman-pintz-2001.pdf',
         'Sources\erdos-selfridge-1975.pdf',
+        'Sources\granville-smooth-numbers-2008.pdf',
+        'Sources\canfield-erdos-pomerance-1983.pdf',
         'Sources\singmaster-2106.03335v1.pdf',
         'Sources\singmaster-2106.03335v1.tar',
         'Sources\tao-unusual-anatomy-2603.27990v2.pdf',
@@ -109,8 +147,8 @@ try {
         Get-Content -LiteralPath (Join-Path $nodeRoot 'Sources\SHA256SUMS.txt') |
             Where-Object { $_.Trim() }
     )
-    if ($hashLines.Count -ne 6) {
-        throw 'SHA256SUMS.txt must contain exactly the Tao PDF and TeX archive, Baker-Harman-Pintz PDF, Erdos-Selfridge PDF, and Singmaster PDF and TeX archive.'
+    if ($hashLines.Count -ne 8) {
+        throw 'SHA256SUMS.txt must contain exactly the Tao PDF and TeX archive, Baker-Harman-Pintz PDF, Erdos-Selfridge PDF, Granville and Canfield-Erdos-Pomerance smooth-number PDFs, and Singmaster PDF and TeX archive.'
     }
     foreach ($line in $hashLines) {
         if ($line -notmatch '^([0-9A-Fa-f]{64})\s{2}(.+)$') {
@@ -279,9 +317,22 @@ try {
 
     Write-Host 'MILESTONE: Lemma 4.3 is complete: canonical square extraction, prime support up to P=max(a,H), exact divisibility by the product envelope prod_{p<=P} p^(H/p+1), its O(H log P+P) logarithmic bound, two-half coefficient selection, and the final bounded smooth square relation c1*n1^2+h=c2*n2^2 with 0<h<H are verified.'
 
-    Write-Host 'MILESTONE: the Theorem 1.9 finite counting layer is compiled: bounded-H is x^o(1), small-a is x^(1/4+o(1)), and the complementary family has an exact residue/fiber reduction. Every upper-half prime removes at least p-H start classes, each fixed (a,H) fiber injects into the literal survivor set, budgeted fibers reassemble with only an A*G loss, and Lemmas 4.1-4.2 supply subpolynomial global budgets. Pairwise coprimality, the a^k product bound, the PNT modulus count, the [-k] deletion loss, and the source-scale lower bound for the literal residue ratio are also compiled. Native cyclic DFT Parseval, arbitrary finite tensor Montgomery uncertainty, pairwise-coprime CRT, finite Schur--Bombieri duality, the loss-free Fejer reduction, and the explicit 8L separated-frequency inequality are compiled. The global layer computes exact CRT numerators, proves coordinate nondivisibility and exclusive-modulus cross-denominator distinctness, separates every tensor frequency across all fixed-cardinality selections, identifies circle and tensor energies, sums every tensor lower bound against one global upper bound, and proves the finite Corollary 2.8 survivor inequality without subset-count loss. The exact fixed-cardinality binomial count, elementary-symmetric denominator lower bound, literal factorial restriction-ratio product, Fin(x+1) survivor transport, and source-scale Corollary 2.9 fixed-fiber estimate are compiled. Only maximal-k asymptotic closure remains in this branch.'
+    Write-Host 'MILESTONE: the Theorem 1.9 counting closure is compiled. The bounded-H, small-a, and complementary residue-sieve branches are complete; finite Corollaries 2.8-2.9, the maximal-k specialization, nonempty-fiber reassembly, and absorption of the Lemma 4.1-4.2 budgets prove the nontrivial x^(1/2+o(1)) bound. Exponential growth of s(a!) and an O(log x)*sqrt(x) representation cover prove the one-term upper bound, while the square family supplies the lower bound. The exact TaoTheorem19Conclusion follows from Lemma 4.2 and is reduced to Theorem 2.5 plus Proposition 2.3(ii), or the pinned BHP source contract.'
 
-    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), exact B1/VB1 sums, the VB1 zeta-ratio asymptotic, complete Lemmas 2.10, 3.2, and 4.3, complete signed uniform Corollary 2.11, and audited Theorem 2.5 complex source contract/j1-absorption/phase-character-variation/qualitative-PNT dyadic and bounded-frequency consequences/low-frequency Abel-PNT reduction/finite Fourier assembly, uniform-approximation transfer, finite l1 truncation tails, summable cubic Z2 envelope, vanishing square-box tails, torus descent, conditional uniform reconstruction of W, complete smooth-periodic radial C3 Fourier decay/source-oriented Vaughan coefficient bounds and supports/product-restricted convolution/canonical polynomial-log short-family coverage, exact weighted Type-I/II decomposition, literal real-log relative-width support, exact ceiling-divided correlation-interval rewrite, and unconditional sharp-lag finite van-der-Corput recursion with arbitrary-depth majorant, exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridges with arbitrary lag-product upper/regular-lower estimates, IVT sign separation, terminal first/second derivative windows, a critical-regular nonlinear Kusmin-Landau terminal bound, exact rH/H^r admissible-lag control, uniform arbitrary-depth plus literal four-round regular-interval closure, exact lag-sensitive Weyl-tree propagation with an inverse-product/truncation leaf profile, harmonic leaf summation, all-depth scalar closure with generalized harmonic factors bounded by H, a source four-round sixteenth-root estimate, and a coarse scale recurrence with exact (QH)^15/scale sixteenth power, four explicit diagonal terms with exact sixteenth powers and powered denominator bounds, an exact source-facing five-term real-1/16-power majorant, a canonical floor-rounded differencing range with automatic upper-smallness discharge, and exact expanded-critical-start counting plus global long/short regular-component assembly, and terminal affine geometric-sum plus nearest-integer-distance estimate/prime-power/Abel/Type-I/complete-finite-product-restricted-Type-II/necessary all-support endpoint plus endpoint-free pure off-diagonal distance-kernel propagation through exact Vaughan double blocks and source-facing block lengths/high-frequency-log-absorption/normalized-parameter-bounds/critical-deletion groundwork, together with exact equation-(18)/Lemma-12/scalar-growth/native-Wooley-VMVT count bridges/critical box-power ledger/critical assembly/sharp quarter-window R^2/193 saving/exact root/source-decay conversion/exact p-adic concentration-data coefficient bridge, a uniform absolute-coefficient positive Ford benchmark at moment 4R^2 for R>=10000, finite native critical-coefficient absorption reducing the exact rooted residual to R>=1000, and the exact factorial-fiber reduction with unconditional long-interval and length-two square obstructions, full-to-core ES equivalence, two-element fiber consequence, and conditional finite Theorem 1.10 upper transfer #triples<=2g#F3; no main-theorem release is claimed.'
+    Write-Host 'MILESTONE: the Section 6 arithmetic core of Lemma 6.1 is compiled. Every non-singleton bad interval satisfies H<=N and is prime-free unconditionally; the isolated Sylvester-Schur input gives the largest prime p0>H, one interval term p0^2*m with smooth cofactor, and p0-smoothness of every interval term. Admissible dyadic witnesses retain the exact natural bounds N<x<=4N+1 and p0^2*m<=2x.'
+
+    Write-Host 'MILESTONE: the corrected exact core of Lemma 6.2 is compiled. Every admissible interval contains a bad power-of-two endpoint subinterval with the same p0^2*m witness, length H/4<Hprime<=H, and exact scale bounds x<=4Nprime+1 and Nprime+Hprime<=2x. The source same-window admissibility sentence is not assumed, since containment alone does not preserve intersection with [x/2,x].'
+
+    Write-Host 'MILESTONE: the full corrected finite maximal-function transfer after Lemma 6.2 is compiled. Bounded admissible and comparable-scale normalized families and their unions are explicit; every admissible-union point lies in a four-length enlargement with normalized-union density at least 1/10. A greedy disjoint interval selection proves the finite uncentered weak-(1,1) inequality and the final cardinality bound #admissibleUnion<=30*#normalizedUnion.'
+
+    Write-Host 'MILESTONE: the exact finite Definitions 6.3-6.4 typical/non-typical contracts are compiled with explicit asymptotic cutoffs. The ordered 1000-prime anatomy, smooth remainder, p0<squareThreshold consequence, and mprime<=2x/(p0^2*product) bound are verified. The condition-(ii) failure branch of Proposition 6.5 has an explicit finite large-square cover, exact floor-sum count, telescoping reciprocal-square tail, literal cutoffs L=ceil(log(x)^20) and D=ceil(z(x)^3), and the source weak bound #union<=24x/z(x)^(5/2) for the actual short normalized failure union, giving delta=1/2.'
+    Write-Host 'MILESTONE: the Proposition 6.5 condition-(i) source-faithful finite large sieve is compiled. Both square-endpoint orientations are transported to H distinct affine forbidden classes on the exact cofactor range m<=2x/p0^2; smoothness proves avoidance, the tensor ratio is preserved, global Corollary 2.9 bounds both survivor families, and their interval covers recombine with explicit factor 16. Tao literal floor-defined degree and eventual PNT specialization are verified. The PNT lower count yields the exact base H/(8k log(2p0)). Floor maximality gives 2x<(2p0)^(2k+4). Exact AM-GM optimization bounds k>=4 fibers by 128x/(p0*z(x)^6). The paper quarter-comparison gap at k=2,3 is repaired by a valid eighth-comparison for every k>=2; adjusted absorption retains 128x/(p0*z(x)^4). On p0^20<=x^3, every nonempty long fiber automatically supplies the square, degree, PNT, and large-budget side conditions eventually. The dyadic H and reciprocal-p0 sums are finite, their two logarithmic losses are absorbed by one z(x), and the actual long moderate-prime failure union is eventually bounded by x/z(x)^3. The complementary k<4 unsieved bound 4096*x^(9/10) remains available.'
+    Write-Host 'MILESTONE: Tao preliminary large-p0 disposal is compiled on the exact ceiling-rounded H<x^(7/50) range. The natural inequalities p0^20>x^3 and H^50<x^7 are bridged to finite cutoffs, the unsieved cofactor cover gives 8Hx/p0^2 per fixed fiber, the dyadic-length and reciprocal-square prime tails are summed, and the actual normalized failure union is eventually at most x^(199/200).'
+    Write-Host 'MILESTONE: Tao preliminary large-H disposal is compiled on the exact H>=x^(7/50) range. A spare fixed prime-gap exponent 41/300 lies above 2/15 and below 7/50; a finite greedy selection controls all dyadic lengths simultaneously, its disjoint real start segments lie in the literal Proposition 2.3(iii) prime-free endpoint set at scale 2x, and the actual normalized failure union has an existential fixed power saving.'
+    Write-Host 'MILESTONE: the matching lower half of Proposition 2.1(ii) is compiled. The exact depth k=Nat.log y X satisfies y^k<=X and differs from log X/log y by less than one; its normalized and logarithmic limits, the frozen-PNT limit log(pi(y))/log_2(x)->A, eventual 2k<=pi(y), the injective prime-subset lattice, and the integral binomial entropy bound yield x^(1-1/A-epsilon)<=Psi(X,y) for every fixed A>1 and epsilon>0.'
+    Write-Host 'MILESTONE: the sharp critical lower half of Proposition 2.1(i) is compiled unconditionally. The exact CEP source packet and endpoint-Hildebrand cofactor bridge remain audited. A coarse specialization replaces shrinking bands by disjoint fixed dyadic PNT blocks, proves endpoint reciprocal mass at least 1/(16 log(2) log(u)), chooses multiplicity floor(u-2u/log(u)), bounds the cofactor depth by 10u/log(u), and bounds the complete secondary loss by 60u log(log(u)). This constructs the sharp u*log(u)+o(log z) saddle and yields X/z^(1/alpha+epsilon)<=Psi(X,y). Together with the critical upper theorem and both polylogarithmic bounds, all four quantified halves of Proposition 2.1 are proved. Lemma 1.6(i) is also complete: a fixed prime block z<p<3z gives the lower half, while a rounded sqrt(z) range, finite exponent grid through z^2, alpha+1/alpha>=2, and the reciprocal-square tail give the upper half. For part (ii), literal floor(cX) rounding, logarithmic invariance, critical-regime preservation, the exact Granville-(3.24) quotient-limit target, its IsTheta reduction, and the automatic monotone halves are compiled. The genuine finite saddle is now constructed uniquely from phiOne=log X; phiTwo is positive, phiOne''s derivative is -phiTwo, and the exact two-cutoff secant identity is proved. Explicit Abel-Chebyshev and prime-counting comparisons show that this exact saddle tends to 1 in every critical regime. Its curvature is at least log(2)log(X) and diverges; an exact sensitivity estimate shows fixed dilations move the saddle by o(1/log y). The logarithmic Euler-product phase and Gaussian main term are literal, the phase derivatives are log(X)-phiOne and phiTwo, exponentiation recovers the source Euler product, Rankin is evaluated at the saddle, and the saddle is the unique positive global phase minimum. Uniform prime-local curvature control proves the phiTwo quotient tends to 1 and the complete Gaussian main-term quotient tends to c. The uniform Granville asymptotic, and hence the reverse analytic comparison, remains.'
+
+    Write-Host 'FINAL RESULT: PASS - Tao Proposition 2.3(i),(iii), all four quantified Proposition 2.1 bounds, complete Lemma 1.6(i), exact B1/VB1 sums, exact smooth-number Euler product, finite Rankin/Abel-Chebyshev bound, exact finite saddle existence/uniqueness/derivative/secant theory, critical-regime limit to 1, divergent curvature, fixed-dilation o(1/log y) displacement, exact saddle phase/main-term/global-minimum theory, and complete Gaussian saddle-main-term dilation ratio, both quantified upper and lower halves of the polylogarithmic Proposition 2.1(ii), the VB1 zeta-ratio asymptotic, complete Lemmas 2.10, 3.2, and 4.3, complete signed uniform Corollary 2.11, and audited Theorem 2.5 complex source contract/j1-absorption/phase-character-variation/qualitative-PNT dyadic and bounded-frequency consequences/low-frequency Abel-PNT reduction/finite Fourier assembly, uniform-approximation transfer, finite l1 truncation tails, summable cubic Z2 envelope, vanishing square-box tails, torus descent, conditional uniform reconstruction of W, complete smooth-periodic radial C3 Fourier decay/source-oriented Vaughan coefficient bounds and supports/product-restricted convolution/canonical polynomial-log short-family coverage, exact weighted Type-I/II decomposition, literal real-log relative-width support, exact ceiling-divided correlation-interval rewrite, and unconditional sharp-lag finite van-der-Corput recursion with arbitrary-depth majorant, exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridges with arbitrary lag-product upper/regular-lower estimates, IVT sign separation, terminal first/second derivative windows, a critical-regular nonlinear Kusmin-Landau terminal bound, exact rH/H^r admissible-lag control, uniform arbitrary-depth plus literal four-round regular-interval closure, exact lag-sensitive Weyl-tree propagation with an inverse-product/truncation leaf profile, harmonic leaf summation, all-depth scalar closure with generalized harmonic factors bounded by H, a source four-round sixteenth-root estimate, and a coarse scale recurrence with exact (QH)^15/scale sixteenth power, four explicit diagonal terms with exact sixteenth powers and powered denominator bounds, an exact source-facing five-term real-1/16-power majorant, a canonical floor-rounded differencing range with automatic upper-smallness discharge, and exact expanded-critical-start counting plus global long/short regular-component assembly, and terminal affine geometric-sum plus nearest-integer-distance estimate/prime-power/Abel/Type-I/complete-finite-product-restricted-Type-II/necessary all-support endpoint plus endpoint-free pure off-diagonal distance-kernel propagation through exact Vaughan double blocks and source-facing block lengths/high-frequency-log-absorption/normalized-parameter-bounds/critical-deletion groundwork, together with exact equation-(18)/Lemma-12/scalar-growth/native-Wooley-VMVT count bridges/critical box-power ledger/critical assembly/sharp quarter-window R^2/193 saving/exact root/source-decay conversion/exact p-adic concentration-data coefficient bridge, a uniform absolute-coefficient positive Ford benchmark at moment 4R^2 for R>=10000, finite native critical-coefficient absorption reducing the exact rooted residual to R>=1000, the exact factorial-fiber reduction with unconditional long-interval and length-two square obstructions, full-to-core ES equivalence, two-element fiber consequence, and conditional finite Theorem 1.10 upper transfer #triples<=2g#F3, plus the Section-6 condition-(ii) source-scale exceptional bound #exceptional<=24x/z(x)^(5/2), actual long moderate-prime condition-(i) bound #union<=x/z(x)^3, preliminary large-p0 normalized-union bound #union<=x^(199/200), and preliminary large-H normalized-union fixed power saving via Proposition 2.3(iii); no main-theorem release is claimed.'
     exit 0
 }
 catch {

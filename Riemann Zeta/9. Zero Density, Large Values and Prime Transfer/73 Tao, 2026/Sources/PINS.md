@@ -34,6 +34,48 @@ local artifact is therefore the byte-identical identity recorded here from the
 accessible University of Maryland archival mirror; the DOI above remains the
 bibliographic authority.
 
+## Granville smooth-number input
+
+- Author: Andrew Granville
+- Title: *Smooth numbers: computational number theory and beyond*
+- In: *Algorithmic Number Theory*, MSRI Publications 44 (2008), 267--323
+- Author-hosted PDF origin:
+  <https://dms.umontreal.ca/~andrew/PDF/msrire.pdf>
+- Publisher record:
+  <https://www.cambridge.org/core/books/algorithmic-number-theory/4C4A9C117A30E1AC72814695F223B656>
+- Local artifact: `granville-smooth-numbers-2008.pdf`
+- Source locators: equations (1.14) and (1.15), journal page 270 (PDF page
+  4), give the polylogarithmic and subexponential smooth-number scales cited
+  in Tao's Proposition 2.1. The elementary lattice-count lower bound is
+  equation (3.3), journal page 282 (PDF page 16). The polylogarithmic upper
+  estimate and its combination with (3.3) occur on journal page 291 (PDF page
+  25). Tao additionally cites equation (3.24) for multiplicative stability.
+
+This pin records the exact cited survey and proof locators. The PDF is source
+evidence, not a Lean dependency or a substitute for formalizing the stated
+finite lattice-count and asymptotic arguments.
+
+## Canfield--Erdős--Pomerance critical smooth-number input
+
+- Authors: E. Rodney Canfield, Paul Erdős, and Carl Pomerance
+- Title: *On a problem of Oppenheim concerning “Factorisatio Numerorum”*
+- Journal: *Journal of Number Theory* 17 (1983), 1--28
+- DOI: <https://doi.org/10.1016/0022-314X(83)90002-1>
+- Author-hosted PDF origin:
+  <https://math.dartmouth.edu/~carlp/PDF/paper39.pdf>
+- Retrieved: 8 September 2026
+- Local artifact: `canfield-erdos-pomerance-1983.pdf`
+- Source locator: Theorem 3.1, journal/PDF pages 10--15, gives the
+  unconditional explicit lower bound for `Psi(x,x^(1/u))` for `x>=1` and
+  `u>=3`. Its finite multiscale product decomposition is equation (3.5), the
+  recursive `D(v)` insertion is (3.10), the reciprocal-prime packet lower
+  bound is (3.11), and their assembled iteration is (3.15).
+
+This is the primary proof behind Granville (1.12). The scanned PDF has no text
+layer; the page and equation locators above are therefore part of the pin.
+As with every analytic source here, the paper is evidence to formalize, not a
+Lean dependency or an admitted theorem.
+
 ## Matomäki--Radziwiłł--Shao--Tao--Teräväinen prime-equidistribution input
 
 - Authors: Kaisa Matomäki, Maksym Radziwiłł, Xuancheng Shao, Terence Tao, and

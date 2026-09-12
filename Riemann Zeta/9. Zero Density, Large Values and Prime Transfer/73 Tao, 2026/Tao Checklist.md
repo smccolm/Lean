@@ -197,8 +197,9 @@ paper has been formalized.
   threshold `a ≤ H log(x+2)/100`. Lemma 4.3 gives both selected coefficients
   exponent `1/10`; the exact certificate code then gives the literal endpoint
   family exponent `1/4` after the Lemma 4.2 gap budget.
-- [ ] Discharge the remaining `a ≍ H log x` family via the large sieve. The
-  bounded-`H` and small-`a` parts are complete above.
+- [x] Discharge the remaining `a ≍ H log x` family via the large sieve. The
+  bounded-`H`, small-`a`, and maximal-degree complementary branches now
+  combine into the conditional nontrivial Theorem 1.9 upper bound.
 - [x] Formalize the finite large-sieve interface for that family. Prove that
   each prime `a/2<p≤a` leaves at most `H` start residues and hence removes at
   least `p-H`; inject each fixed `(a,H)` fiber into the literal survivor set,
@@ -236,8 +237,14 @@ paper has been formalized.
   exact binomial selection count and `choose n k ≥ (n/(2k))^k`. The literal
   factorial residue complements, exact tensor ratio, `Fin (x+1)` survivor
   transport, source-scale Corollary 2.9 survivor bound, and fixed-`(a,H)`
-  fiber bound are compiled as well. The remaining step is the final
-  maximal-`k` asymptotic specialization.
+  fiber bound are compiled as well. The maximal choice
+  `k=⌊log(x+1)/(2 log a)⌋` now verifies the product and selection conditions,
+  gives a uniform square-root fiber estimate, reassembles only nonempty
+  fibers, and absorbs the Lemma 4.1/4.2 budgets. The literal `F₃¹` upper
+  bound is also compiled from exponential growth of `s(a!)` and an
+  `O(log x)·⌊√x⌋` representation cover. Consequently the full
+  `TaoTheorem19Conclusion` follows from Lemma 4.2 and is reduced exactly to
+  Theorem 2.5 plus Proposition 2.3(ii) (or the pinned BHP contract).
 - [x] Prove that largest-index projection maps the finite factorial-square
   triple set exactly onto `F₃∩[1,x]`, yielding the lower-count transfer
   `#F₃(x) ≤ #triples(x)` used in Theorem 1.10.
@@ -253,7 +260,9 @@ paper has been formalized.
 - [x] Instantiate that gap input from Lemma 4.2 using
   `g(x)=⌈exp((log x)^(3/4))⌉`. Prove it bounds every triple, including bounded
   middle indices, prove `g=x^(o(1))`, and reduce Theorem 1.10's remaining
-  inputs exactly to Theorem 1.9, Erdős--Selfridge, Theorem 2.5, and BHP.
+  inputs exactly to Theorem 1.9, Erdős--Selfridge, Theorem 2.5, and BHP. With
+  Theorem 1.9 now derived internally from Lemma 4.2, also compile the direct
+  bridge requiring only Erdős--Selfridge, Theorem 2.5, and BHP.
 - [x] Characterize `F₃¹` as square multiples of factorial squarefree
   components and prove the unconditional `⌊√x⌋-1` lower bounds for both
   `F₃¹`, `F₃` endpoints, and factorial-square triples, including the explicit
@@ -817,9 +826,263 @@ paper has been formalized.
   Mathlib's Bertrand theorem.
 - [x] Prove the exact unique `n=p²m` characterization of `B¹` and the finite
   identity `#(B¹∩[1,x]) = ∑_{p≤√x} Ψ(⌊x/p²⌋,p)`.
-- [ ] Formalize the remaining full Proposition 2.1 analytic smooth-number estimates and use
-  them to prove Lemma 1.6; the exact finite identity alone is not the
-  asymptotic.
+- [x] Begin the Section 6 branch with the exact arithmetic core of Lemma 6.1.
+  Define admissible bad intervals through a literal dyadic-window witness;
+  prove unconditionally that every non-singleton bad interval has `H≤N`;
+  and, from the isolated Sylvester--Schur contract, prove that its largest
+  prime `p₀` exceeds `H`, that one interval element is `p₀²m` with
+  `m` `p₀`-smooth, and that every interval element is `p₀`-smooth.
+  Prove unconditionally that every interval element is nonprime, and record
+  the exact rounded dyadic bounds `N<x≤4N+1` and `p₀²m≤2x`.
+- [x] Formalize the valid exact core of Lemma 6.2. Choose the source's largest
+  power of two below `(H+3)/2`; prove `2≤H'≤H<4H'`; retain a contained bad
+  subinterval with `p₀²m` as an endpoint and the same largest prime; and record
+  the exact replacement scale bounds `x≤4N'+1` and `N'+H'≤2x`. Do not assume
+  the paper's unsupported claim that containment preserves intersection with
+  the identical dyadic window `[x/2,x]`; the later maximal-function transfer
+  must use the proved comparable-scale formulation.
+- [x] Put the post-Lemma-6.2 maximal reduction into exact finite form. Define
+  the bounded admissible and comparable-scale normalized index families and
+  their unions; prove the parent lies in the four-length enlargement of its
+  normalized child; and prove every admissible-union point has a witnessing
+  enlarged interval with normalized-union lattice density at least `1/10`.
+- [x] Prove the finite one-dimensional weak-`(1,1)` interval covering
+  inequality by greedy maximal-length selection and disjoint threefold
+  enlargements. Deduce the exact cardinality comparison
+  `#admissibleUnion≤30·#normalizedUnion`.
+- [x] Formalize Definitions 6.3--6.4 with explicit finite cutoffs for the
+  source's slowly varying prime windows. Encode the ordered 1000-prime
+  anatomy, smooth remainder, the exact typical/non-typical dichotomy, the
+  consequence `p₀<squareThreshold`, and the displayed bound
+  `m'≤2x/(p₀²p₁⋯p₁₀₀₀)`.
+- [x] Close the finite covering/counting reduction for failure of typicality
+  condition (ii). Every short comparable-scale interval containing `d² | j`
+  with `d≥D` lies in an explicit neighborhood union of cardinality at most
+  `(2L+1)∑_{D≤d≤2x}⌊2x/d²⌋`. Prove the sharp telescoping estimate
+  `∑d⁻²≤1/(D-1)` and hence the closed real bound
+  `#exceptional≤(2L+1)(2x)/(D-1)`.
+- [x] Substitute the literal source cutoffs
+  `L=⌈(log x)^20⌉₊` and `D=⌈z(x)^3⌉₊`. Prove `z(x)→∞`, absorb
+  `(log x)^20+1≤2√z(x)` eventually, and obtain the explicit estimate
+  `#exceptional≤24x/z(x)^(5/2)`. Define the actual finite union of short
+  normalized intervals failing (ii), prove it lies in this cover, and package
+  its cardinality as the weak
+  `x/z(x)^(2+δ)` alternative with `δ=1/2`. The other Proposition 6.5
+  failure branches remain open.
+- [x] Build the exact finite large-sieve layer for failure of condition (i).
+  Prove that the `H` classes `-1,…,-H` are distinct modulo every
+  `p₀<p≤2p₀`; use normalized-interval smoothness to show every actual start
+  avoids them; package the restrictions into the tensor sieve; and apply the
+  loss-free global Corollary 2.9 machinery. For each fixed `(p₀,H)` fiber the
+  actual interval union now satisfies the explicit compiled weighted bound
+  `W(p₀,H,k)^k #union ≤ H·8(2x+1)`. The maximal degree for this ambient-start
+  sieve and its eventual PNT range are compiled. Separately define Tao's
+  literal cofactor budget `2x/p₀²` and floor-defined `k`, proving exact
+  conditional positivity, product, and prime-cardinality constraints. Transfer
+  both endpoint orientations to `H` distinct affine restrictions on `m`, prove
+  smoothness avoidance, preserve the tensor ratio, apply global Corollary 2.9
+  on the cofactor range, and recombine both interval covers. This gives the
+  source-faithful fixed-fiber bound with explicit factor `16`. Asymptotic
+  optimization now also extracts the exact base `H/(8k log(2p₀))` from the
+  PNT count and proves that the source comparison
+  `8k log(2p₀)≤H^(1/10)` yields the canonical `H^(0.9k)`-weighted bound.
+  Prove floor maximality in the strict next-power form, expand the quotient
+  budget to `2x<(2p₀)^(2k+4)`, and derive
+  `log(2x)/log(2p₀)<2k+4`. The paper's quarter comparison is encoded on its
+  valid finite range `k≥4`; it is false for `k=2,3`. Under
+  `8k log(2p₀)≤H^(3/50)`, absorb the leading `H` and obtain both the exact
+  `16(⌊2x/p₀²⌋+1)H^(-0.9(k-1))` fiber bound and its canonical exponential
+  consequence. Prove that `8k log(2p₀)≤4log(⌊2x/p₀²⌋+1)`, and that the literal
+  long cutoff eventually makes this at most `H^(3/50)`, uniformly in `p₀`.
+  For the complementary `k<4` branch, derive `2x<(2p₀)^10`; combine the
+  unsieved two-orientation cofactor cover with `p₀²≤2x` to obtain the uniform
+  fiber saving `4096x^(9/10)`. Perform the exact AM--GM saddle in `p₀`: under
+  the literal long cutoff its numerator is at least
+  `(9/2)log x log₂x`, and exponentiation gives the canonical `k≥4` estimate
+  `#fiber≤128x/(p₀z(x)^6)` eventually. Repair the source's `k=2,3` gap with
+  the valid eighth-comparison for all `k≥2`; the adjusted `22/25` absorption
+  and saddle give `#fiber≤128x/(p₀z(x)^4)`. On the exact upper source range
+  `p₀^20≤x^3`, prove degree two eventually, extract `p₀²≤2x` from every
+  nonempty normalized fiber, and discharge the PNT and large-budget
+  conditions from `⌈(log x)^20⌉≤H<p₀`. Sum the exact finite dyadic `H` and
+  moderate-prime `p₀` fibers, bound the reciprocal-prime sum by the harmonic
+  number, absorb both logarithmic losses by one `z(x)`, and prove the actual
+  long moderate-prime failure-union estimate `#union≤x/z(x)^3` eventually.
+- [x] Formalize Tao's preliminary large-`p₀` disposal under the exact
+  ceiling-rounded `H<x^(7/50)` range. Bridge `H^50<x^7` and `p₀^20>x^3` to
+  the finite length and prime cutoffs, sum the unsieved `8Hx/p₀²` fixed-fiber
+  estimate over dyadic lengths and the reciprocal-square tail, and prove the
+  actual normalized failure-union bound `#union≤x^(199/200)` eventually.
+- [x] Formalize Tao's preliminary large-`H` disposal on the exact
+  `H≥x^(7/50)` range. Use the fixed exponent `41/300∈(2/15,7/50)`, prove its
+  prime-gap length at scale `2x` is eventually at most `H/2`, select a
+  disjoint finite interval family across all lengths, embed its real start
+  segments in the literal Proposition 2.3(iii) endpoint set, prove
+  `#union≤6 primeFreeEndpointMeasure(2x,41/300)`, and deduce an existential
+  fixed power saving for the actual normalized failure union.
+- [x] Prove the exact positive-smooth-number Dirichlet-series Euler product
+  and finite Rankin inequality in Tao's inclusive `p≤y` convention.
+- [x] Convert the Euler product to an exponential geometric-tail bound,
+  uniformize its denominators by the prime-two factor, and expose the exact
+  Rankin saddle exponent involving `∑_{p≤y}p^(-sigma)`.
+- [x] Prove the exact finite Abel identity for `∑_{p≤y}p^(-sigma)`, show its
+  backward-difference coefficients are nonnegative, apply Mathlib's explicit
+  Chebyshev bound pointwise, absorb its square-root remainder into the clean
+  global majorant `(2 log 4+2)n/log n`, and substitute both resulting
+  unconditional finite majorants into the Rankin saddle exponent.
+- [x] Apply real Bernoulli to prove the sharp first-order backward-difference
+  estimate `n^(-sigma)-(n+1)^(-sigma)≤sigma*n^(-sigma)/n` on
+  `0≤sigma≤1`, cancel the prime-counting factor exactly, and reduce the
+  weighted prime sum to its endpoint plus
+  `(2 log 4+2)*sigma*∑ n^(-sigma)/log n`.
+- [x] Prove a second Bernoulli/telescoping finite `p`-sum comparison and the
+  coarse but completely sum-free bound
+  `∑ n^(-sigma)/log n ≤ y^(1-sigma)/((1-sigma)log 2)` for
+  `0≤sigma<1`, then propagate it into an explicit Rankin exponent.
+- [x] Split the canonical power-log sum at an arbitrary natural cutoff
+  `2≤k≤y`, retain `log k` on the upper range, and prove the normalized
+  saddle-scale bound with denominator `log y` from the exact hypotheses
+  `k^(1-sigma)log y≤y^(1-sigma)` and `log y≤L log k`; propagate both the
+  raw split and normalized estimates through the weighted prime sum and the
+  source-facing Rankin exponent.
+- [x] Construct the canonical divisor `R=(log y)^(1/(1-sigma))` and integer
+  cutoff `floor(y/R)`, prove the exact identity `R^(1-sigma)=log y`, transfer
+  both cutoff comparisons through the floor, and show that for `y≥4` the
+  single separation `2R≤sqrt y` gives the normalized estimate with `L=2`.
+  Propagate this concrete bound through the weighted-prime sum and the
+  source-facing Rankin exponent.
+- [x] Define the actual saddle variables `u=log X/log y` and
+  `sigma=1-log u/log y`, prove the exact positivity/range criteria, and
+  kernel-check `y^(1-sigma)=u` together with the negative-exponent identity
+  `-(1-sigma)log X=-u log u`.
+- [x] Restore the endpoint cancellation discarded by the coarse integral
+  comparison: prove the exact local bound on every `[a,b)` with numerator
+  `(b-1)^(1-sigma)-(a-1)^(1-sigma)` and denominator
+  `(1-sigma)log a`. Prove exact reassembly and termwise bounds along an
+  arbitrary monotone natural cutoff chain, supplying the finite primitive for
+  the critical-regime multi-scale argument, and propagate its named majorant
+  through the weighted-prime and source-facing Rankin inequalities.
+- [x] Choose the concrete saturated dyadic chain `min y 2^(i+1)`, prove its
+  exact `clog 2 y - 1` length and terminal saturation, and replace the local
+  integral loss by a block-cardinality estimate. Reduce the chain to the
+  scalar sum `∑ 2^(j delta)/j`; split at an arbitrary cutoff, sum the tail
+  geometrically, prove `2^delta-1≥delta log 2`, and obtain the closed midpoint
+  bound with terminal term `2^(m delta)/(m delta)` and half-exponential
+  harmonic prefix.
+- [x] Prove the exact dyadic depth/logarithm comparisons, including
+  `log y≤(clog 2 y)log 2`, midpoint denominator at least `(log y)/2`, and
+  terminal overshoot below `2y`. Convert the terminal scalar contribution to
+  `2(2y)^delta/(delta log y)` and, at the actual Rankin saddle, to
+  `2*2^delta*u/log u`.
+- [x] Compress the half-exponential prefix to
+  `sqrt(2^delta*u) * (1+log(floor(m/2)))` and prove the finite absorption
+  interface giving the complete scalar bound `5u/log u` from
+  `2(1+log(floor(m/2)))log u ≤ sqrt u`.
+- [x] Bound the natural dyadic prefix by `1+log(log(2y)/log 2)`, prove
+  `log u ≤ 4u^(1/4)`, and reduce the absorption hypothesis to the
+  continuous-scale fourth-root comparison
+  `8(1+log(log(2y)/log 2)) ≤ u^(1/4)`.
+- [x] Encode the critical regime by the precise fixed-parameter limits
+  `log X/log x → 1` and `log y/log z(x) → α`. Prove `log x/log z=u₀`,
+  `u₀→∞`, `u/u₀→1/α`, and therefore `u→∞` for every fixed `α>0`.
+- [x] Prove `log z/u₀²→0`, transfer it to `log(2y)/u²→0`, and discharge
+  the critical quadratic-depth and saddle-range hypotheses. Apply the generic
+  consumer to obtain the complete eventual scalar estimate `5u/log u`
+  directly from the critical source contract.
+- [x] Insert the scalar estimate into the finite smooth-number Rankin bound,
+  prove `u₀ log u₀/log z→1`, `u log u/log z→1/α`, and show the complete
+  positive dyadic error is `o(log z)`. Deduce the quantified critical upper
+  bound `Psi(X,y)≤X/z^(1/α-ε)` for every fixed `ε>0`.
+- [x] Encode the polylogarithmic regime by `log X/log x→1` and
+  `log y/log₂x→A` for fixed `A>1`. Prove `u/(log x/log₂x)→1/A`,
+  `sigma→1-1/A`, discharge the quadratic depth and saddle-range hypotheses,
+  show `u log u/log x→1/A` with dyadic error `o(log x)`, and deduce
+  `Psi(X,y)≤X/x^(1/A-ε)` for every fixed `ε>0`.
+- [x] Begin the matching lower bound with Granville's finite lattice-count
+  construction: prove fixed-size prime-subset products are injective, smooth,
+  and bounded, and deduce `choose (π(y)) k ≤ Psi(X,y)` whenever `y^k≤X`.
+- [x] Complete the polylogarithmic lower estimate: take `k=Nat.log y X`, prove
+  its normalized and logarithmic asymptotics, use the frozen PNT to obtain
+  `log π(y)/log₂x→A` and eventually `2k≤π(y)`, and deduce
+  `x^(1-1/A-ε)≤Psi(X,y)` from the binomial entropy lower bound.
+- [x] Connect the same exact integral depth to the critical regime: prove
+  `k/u₀→1/α`, `log k/log₂x→1/2`, `k log k/log z→1/α`, the critical PNT limit
+  `log π(y)/log z→α`, and eventually `2k≤π(y)`.
+- [x] Replace the squarefree-only finite lower family by Granville's full
+  exponent simplex.  Prove unique factorization of prime multisets, count all
+  total degrees `j≤k` by stars and bars as
+  `choose(k+π(y),π(y))`, and embed them in `Psi(X,y)` whenever `y^k≤X`.
+- [x] Prove the exact largest-prime-factor recurrence
+  `Psi(X,y)=1+sum_{p≤min(X,y)}Psi(X/p,p)` for `X≥1`, including the finite
+  largest-prime/cofactor bijection and injectivity.
+- [x] Prove the exact finite Chebyshev--Hildebrand weighted identity: identify
+  smooth multiples of every `p^a` with smooth cofactors, double count total
+  prime multiplicity, sum the logarithmic factorization formula, and retain
+  the boundary error as an explicit nonnegative finite defect; deduce the
+  first-prime-power recursive inequality.
+- [x] Iterate the weighted inequality at finite depth: prove
+  `theta(y)^d<=Psi(X,y)(log X)^d` whenever `y^d<=X`, including every natural
+  quotient, positivity, and logarithmic-denominator comparison.
+- [x] Recover the fractional finite endpoint with
+  `b=floor(X/y^Nat.log_y(X))`: prove `1<=b<y`, retain a final prime packet up
+  to `b`, and construct a fixed PNT threshold with `theta(b)>=b/2` above it
+  while safely omitting bounded endpoints below it.
+- [x] Audit the full asymptotic strength of the endpoint-Hildebrand route:
+  prove `X/(B*2^d*(log X)^(d+1))<=Psi(X,y)`, show its denominator has
+  logarithm `(2/alpha+o(1))*log z`, and derive the quantified fallback
+  `X/z^(2/alpha+epsilon)<=Psi(X,y)`.
+- [x] Isolate and prove the sharp critical lower consumer: any finite packet
+  `X*exp(-(u*log u+E))<=Psi(X,y)` with `E/log z->0` yields
+  `X/z^(1/alpha+epsilon)<=Psi(X,y)` for every positive `epsilon`; prove in
+  particular that each fixed CEP-sized error `E=C*u*log(log u)` is
+  `o(log z)`, prove the critical regime eventually satisfies the uniform
+  source range `u<=y^(1/2)`, and instantiate the consumer from the resulting
+  exact two-variable finite CEP contract.
+- [x] Complete the matching critical lower estimate by a finite coarse CEP
+  saddle: use fixed dyadic PNT blocks to obtain reciprocal mass
+  `1/(16 log 2 log u)`, multiplicity `floor(u-2u/log u)`, cofactor depth at
+  most `10u/log u`, and total secondary loss at most `60u log(log u)`; deduce
+  `X/z^(1/alpha+epsilon)<=Psi(X,y)` and thereby complete all four quantified
+  upper/lower halves of Proposition 2.1.
+- [x] Instantiate the critical Proposition 2.1 lower estimate uniformly over
+  the fixed prime block `z<p<3z`; insert reciprocal-prime mass into the exact
+  `B¹` sum and prove `x/z^(2+epsilon) <= #B¹(x)` eventually for every
+  `epsilon>0`, the lower half of Lemma 1.6(i).
+- [x] Prove the small- and large-prime pieces of the Lemma 1.6(i) upper
+  decomposition: uniformize the `alpha=1/2` estimate below `ceil(sqrt z)`
+  and telescope the reciprocal-square tail above `ceil(z²)`.
+- [x] Complete the finite exponent-band estimate in the remaining middle
+  prime range, absorb the fixed grid cardinality, and prove the exact
+  `QuotientPowerScale` conclusion of Lemma 1.6(i).
+- [x] Fix the exact `floor(cX)` convention for multiplicative stability;
+  prove its ratio/logarithmic limits, preservation of the critical regime,
+  smooth/count cutoff monotonicity, and the automatic direction of both the
+  smooth-number and Lemma 1.6(ii) comparisons.
+- [x] State Granville (3.24)'s exact critical quotient-limit target and prove
+  abstractly that its positive limit gives the required `IsTheta` contract;
+  keep this as a proposition-valued target rather than an assumed theorem.
+- [x] Construct the genuine finite smooth-number saddle parameter: prove the
+  first prime sum is continuous and strictly decreasing from `+infinity` to
+  zero, obtain the unique positive solution, define the positive `phiTwo`
+  sum, prove `phiOne'=-phiTwo`, and prove the exact mean-value sensitivity
+  identity between two ambient cutoffs.
+- [x] Locate the genuine saddle in the critical regime: prove explicit
+  Abel--Chebyshev and prime-counting comparisons at `sigma=1` and
+  `sigma=1-epsilon`, then deduce `smoothSaddlePoint(X(x),y(x)) -> 1`; prove
+  `phiTwo >= log(2) log(X)`, its divergence, an exact finite sensitivity
+  bound, and `o(1)` saddle displacement under fixed dilation.
+- [x] Define the exact logarithmic Euler-product phase and Gaussian saddle
+  main term; prove exponentiation recovers the source Euler product,
+  `phase'=log(X)-phiOne`, the derivative of this derivative is `phiTwo`,
+  Rankin's inequality at the saddle, and the saddle's unique positive global
+  minimum property.
+- [x] Prove the exact old/new minimum-phase squeeze under changing `X`; for
+  fixed positive dilation deduce phase difference `-> log(c)` and exponential
+  saddle-main-term quotient `-> c`.
+- [x] Prove prime-scale saddle displacement `o(1/log y)`, uniform
+  prime-local curvature comparison, `phiTwo` quotient `-> 1`, and complete
+  Gaussian saddle-main-term quotient `-> c` under fixed dilation.
+- [ ] Prove the constant-factor stability clause Lemma 1.6(ii).
 - [x] Pin and hash the Baker--Harman--Pintz primary source, with exact theorem
   and proof locators.
 - [ ] Formalize the Baker--Harman--Pintz bound in Proposition 2.3(ii). The
@@ -852,6 +1115,10 @@ zeta-ratio asymptotic, the corrected full Lemma 3.1 contract conditional on
 Theorem 2.5, the complete polynomial-coefficient relation of Lemma 3.2, and
 the full Theorem 1.8 counting/asymptotic assembly conditional only on Theorem
 2.5. It also includes
+the exact smooth-number saddle parameter, its existence, uniqueness,
+positive second logarithmic derivative, and finite cutoff-sensitivity
+identity, together with its critical-regime limit to `1`, but not the uniform
+saddle-point asymptotic needed for Granville (3.24). It further includes
 the exact Theorem 2.5 interface, reciprocal-phase calculus and character
 variation, bidirectional finite partial-summation/log-weight reductions, and
 the low-frequency Abel reduction and the frozen qualitative PNT's uniform

@@ -46,9 +46,9 @@ flowchart TD
 
     subgraph SECTION2["Section 2 common inputs"]
         direction TB
-        SMOOTH["Proposition 2.1<br/>smooth-number asymptotics + stability"]
+        SMOOTH["Proposition 2.1 quantified forms PROVED<br/>Euler product + Rankin + Abel/Chebyshev/Bernoulli upper route PROVED;<br/>critical z^(-1/alpha+epsilon) and polylog x^(-1/A+epsilon) upper bounds PROVED;<br/>polylog x^(1-1/A-epsilon) lower bound PROVED;<br/>exact largest-prime + Chebyshev-Hildebrand + source CEP packet infrastructure PROVED;<br/>coarse fixed-dyadic CEP packet PROVED;<br/>reciprocal mass 1/(16 log 2 log u), multiplicity floor(u-2u/log u), cofactor depth <=10u/log u;<br/>secondary loss <=60u log log u;<br/>critical z^(-1/alpha-epsilon) lower bound PROVED;<br/>thin-band CEP retained as optional source-faithful route;<br/>downstream multiplicative instantiation belongs to Lemma 1.6"]
         ONETERMID["PROVED: exact B1 identity<br/>unique p²m representation + finite Psi sum"]
-        ONETERM["Lemma 1.6<br/>x/z^(2+o(1)) asymptotic absent"]
+        ONETERM["Lemma 1.6(i) PROVED<br/>lower z<p<3z packet + upper finite exponent grid;<br/>Lemma 1.6(ii) exact floor(cX) target + regime preservation + monotone halves PROVED;<br/>exact saddle + phase + curvature + complete Gaussian main-term dilation ratio c PROVED;<br/>uniform Granville asymptotic absent"]
         VBONETERM["PROVED: exact VB1 identity<br/>unique a²b³ + finite squarefree-cube sum"]
         VBLOWER["PROVED VB square-family lower bounds<br/>reverse-big-O square-root scale"]
         VBONESCALE["PROVED complete VB1 square-root scale<br/>convergent b^-3/2 majorant + lower family"]
@@ -108,7 +108,7 @@ flowchart TD
         direction TB
         FBOUNDS["PROVED Lemma 4.1 + conditional full Lemma 4.2<br/>both low/high cutoffs, geometric lower bounds, and contradictions<br/>explicit x^o(1) Theorem 1.10 gap budget; analytic BHP remains"]
         FEXTRACT["PROVED Lemma 4.3<br/>canonical square decomposition + exact product envelope<br/>two-half selection + bounded smooth square relation"]
-        FCASES["IN PROGRESS source case split<br/>easy cases + hard residue/fiber/PNT weights + finite Corollaries 2.8--2.9 PROVED;<br/>maximal-k asymptotic closure open"]
+        FCASES["PROVED conditional source case split<br/>easy cases + hard residue/fiber/PNT weights + finite Corollaries 2.8--2.9;<br/>maximal-k closure + F3 one-term upper bound; consumes Lemma 4.2"]
         T19["PUBLIC: Theorem 1.9<br/>nontrivial F3 bound + x^(1/2+o(1))"]
         T110["PUBLIC: Theorem 1.10<br/>factorial solutions x^(1/2+o(1))"]
         FBOUNDS --> FEXTRACT
@@ -144,9 +144,9 @@ flowchart TD
 
     subgraph SECTION6["Section 6: bad intervals and anti-sieve"]
         direction TB
-        NORMALIZE["Lemmas 6.1--6.2<br/>admissibility + p0^2 p1...p1000 m' anatomy"]
-        TYPICAL["Definitions 6.3--6.4<br/>typical interval contracts"]
-        ATYPICAL["Proposition 6.5<br/>non-typical union bound"]
+        NORMALIZE["Lemmas 6.1--6.2 arithmetic/normalization core PROVED<br/>H≤N + prime-free + exact dyadic bounds + p0²m witness;<br/>contained power-of-two endpoint child with H/4<H'≤H;<br/>finite weak-(1,1) maximal transfer PROVED<br/>#admissible≤30#normalized"]
+        TYPICAL["Definitions 6.3--6.4 PROVED<br/>exact cutoff-parametrized typicality;<br/>ordered 1000-prime anatomy + smooth remainder"]
+        ATYPICAL["Proposition 6.5 partial<br/>condition-(ii) actual union weak bound PROVED<br/>condition-(i) cofactor sieve + corrected full k>=2 z^-4 saddle + summed long moderate union <=x/z^3 PROVED;<br/>preliminary large-p0 union <=x^(199/200) PROVED;<br/>preliminary large-H fixed power saving PROVED;<br/>Proposition 2.1 available; exact smooth-branch instantiation open"]
         RANDOM["Proposition 6.6<br/>independent sampled-prime probability bound"]
         MOMENTS["Propositions 6.7--6.8<br/>anti-sieve moments and character expansion"]
         T17["PUBLIC: Theorem 1.7<br/>nontrivial B saving + x/z^(2+o(1))"]
@@ -176,7 +176,7 @@ flowchart TD
 
     DOCS["Goal Prompt complete<br/>Checklist / Crosswalk / Manifest continuously updated"] --> CROSSWALK
     SHELL["Extension/Tao2026<br/>active pinned Mathlib package builds"] --> CONTRACTS
-    MILESTONE["Proposition 2.3(i),(iii), exact one-term sums,<br/>VB1 zeta asymptotic + factorial lower-asymptotic verifier PASS"] --> SHELL
+    MILESTONE["Proposition 2.3(i),(iii), Proposition 2.1 quantified forms,<br/>Lemma 1.6(i), exact one-term sums,<br/>VB1 zeta asymptotic + factorial lower-asymptotic verifier PASS"] --> SHELL
     HULL["PROVED expanded critical hull assembly<br/>same additive deletion bound;<br/>at most two cuts per order"] --> VINO
 
     LEGEND["Status: green = verified groundwork<br/>blue = inspected candidate/ready shell<br/>yellow = specified but unproved<br/>red = major unformalized input or endpoint"]
@@ -187,8 +187,9 @@ flowchart TD
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,AUDIT,RUNNER complete
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,AUDIT,RUNNER complete
     class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
-    class CROSSWALK,ONETERM,VINO,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,T18,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,NORMALIZE,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
-    class SMOOTH,PRIMEII,PELL,BURGESS,FUND,T17,T19,T110,PUBLIC,RELEASE absent
+    class CROSSWALK,ONETERM,VINO,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,T18,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS pending
+    class NORMALIZE complete
+    class PRIMEII,PELL,BURGESS,FUND,T17,T19,T110,PUBLIC,RELEASE absent
     class LEGEND note

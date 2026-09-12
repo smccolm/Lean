@@ -55,6 +55,69 @@ theorem factorialSieveDegree_product_le
     a ^ k * a ^ k = a ^ (2 * k) := by rw [← pow_add]; congr 1; omega
     _ ≤ x + 1 := hpowNat
 
+/-- Maximality of the floor-defined degree: the next squared power is
+strictly larger than the ambient interval length. -/
+theorem factorialSieveDegree_next_power_gt
+    {x a : ℕ} (ha : 2 ≤ a) :
+    x + 1 < a ^ (2 * (factorialSieveDegree x a + 1)) := by
+  let k := factorialSieveDegree x a
+  have hloga : 0 < Real.log (a : ℝ) :=
+    Real.log_pos (by exact_mod_cast ha)
+  have hxpos : (0 : ℝ) < ((x + 1 : ℕ) : ℝ) := by positivity
+  have hfloor :
+      Real.log ((x + 1 : ℕ) : ℝ) / (2 * Real.log a) < (k : ℝ) + 1 := by
+    simpa only [k, factorialSieveDegree] using
+      (Nat.lt_floor_add_one
+        (Real.log ((x + 1 : ℕ) : ℝ) / (2 * Real.log a)))
+  have hlog : Real.log ((x + 1 : ℕ) : ℝ) <
+      (2 * ((k : ℝ) + 1)) * Real.log a := by
+    have h :=
+      (div_lt_iff₀ (by positivity : (0 : ℝ) < 2 * Real.log a)).mp hfloor
+    nlinarith
+  have hpowReal : ((x + 1 : ℕ) : ℝ) <
+      ((a ^ (2 * (k + 1)) : ℕ) : ℝ) := by
+    calc
+      ((x + 1 : ℕ) : ℝ) = Real.exp (Real.log ((x + 1 : ℕ) : ℝ)) := by
+        rw [Real.exp_log hxpos]
+      _ < Real.exp ((2 * ((k : ℝ) + 1)) * Real.log a) :=
+        Real.exp_lt_exp.mpr hlog
+      _ = Real.exp (Real.log (((a ^ (2 * (k + 1)) : ℕ) : ℝ))) := by
+        congr 1
+        rw [Nat.cast_pow, Real.log_pow]
+        norm_num [Nat.cast_mul, Nat.cast_add]
+      _ = ((a ^ (2 * (k + 1)) : ℕ) : ℝ) := by
+        rw [Real.exp_log]
+        positivity
+  exact_mod_cast hpowReal
+
+/-- Any squared power already fitting in the ambient interval gives a lower
+bound on the floor-defined sieve degree. -/
+theorem le_factorialSieveDegree_of_power_le
+    {x a n : ℕ} (ha : 2 ≤ a) (hpow : a ^ (2 * n) ≤ x + 1) :
+    n ≤ factorialSieveDegree x a := by
+  have hloga : 0 < Real.log (a : ℝ) :=
+    Real.log_pos (by exact_mod_cast ha)
+  have hpowPos : (0 : ℝ) < (a : ℝ) ^ (2 * n) := by positivity
+  have hxpos : (0 : ℝ) < ((x + 1 : ℕ) : ℝ) := by positivity
+  have hpowReal : (a : ℝ) ^ (2 * n) ≤ ((x + 1 : ℕ) : ℝ) := by
+    exact_mod_cast hpow
+  have hlog : (2 * (n : ℝ)) * Real.log (a : ℝ) ≤
+      Real.log ((x + 1 : ℕ) : ℝ) := by
+    calc
+      (2 * (n : ℝ)) * Real.log (a : ℝ) =
+          Real.log ((a : ℝ) ^ (2 * n)) := by
+        rw [Real.log_pow]
+        norm_num [Nat.cast_mul]
+      _ ≤ Real.log ((x + 1 : ℕ) : ℝ) :=
+        Real.strictMonoOn_log.monotoneOn hpowPos hxpos hpowReal
+  have hratio : (n : ℝ) ≤
+      Real.log ((x + 1 : ℕ) : ℝ) / (2 * Real.log (a : ℝ)) := by
+    exact (le_div_iff₀ (by positivity : (0 : ℝ) < 2 * Real.log a)).2 (by
+      convert hlog using 1
+      ring)
+  rw [factorialSieveDegree]
+  exact Nat.le_floor hratio
+
 theorem factorialSieveDegree_pos
     {x a : ℕ} (ha : 2 ≤ a) (hsq : a ^ 2 ≤ x + 1) :
     1 ≤ factorialSieveDegree x a := by

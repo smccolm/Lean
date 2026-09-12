@@ -60,6 +60,16 @@ theorem countUpTo_mono {S T : Set ℕ} (hST : S ⊆ T) (x : ℕ) :
   rw [Finset.mem_filter] at hn ⊢
   exact ⟨hn.1, hST hn.2⟩
 
+/-- Literal value counts are monotone in the closed upper endpoint. -/
+theorem countUpTo_mono_right {S : Set ℕ} {x y : ℕ} (hxy : x ≤ y) :
+    countUpTo S x ≤ countUpTo S y := by
+  classical
+  unfold countUpTo
+  apply Finset.card_le_card
+  intro n hn
+  simp only [Finset.mem_filter, Finset.mem_Icc] at hn ⊢
+  exact ⟨⟨hn.1.1, hn.1.2.trans hxy⟩, hn.2⟩
+
 theorem factorialThreeOneTermCount_le_factorialThreeCount (x : ℕ) :
     factorialThreeOneTermCount x ≤ factorialThreeCount x :=
   countUpTo_mono factorialThreeOneTermSet_subset_factorialThreeSet x

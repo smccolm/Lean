@@ -65,6 +65,47 @@ contracts. Research probes may be used, but they must remain outside the
 production import root. Do not substitute theorem-shaped assumptions for
 missing mathematics.
 
+The four quantified upper/lower conclusions of Proposition 2.1 are now
+compiled and axiom-audited. The last critical lower half is discharged by a
+coarse CEP construction using fixed dyadic PNT blocks: its endpoint reciprocal
+mass is at least `1/(16 log 2 log u)`, its multiplicity is
+`floor(u-2u/log u)`, its cofactor depth is at most `10u/log u`, and its full
+secondary loss is at most `60u log(log u)`. This yields the unconditional
+theorem `IsTaoCriticalSmoothRegime.eventually_self_div_taoZ_rpow_le_psiNat`.
+The shrinking-band CEP construction is no longer a proof blocker. The first
+downstream instantiation is complete: selector diagonalization makes the
+critical lower estimate uniform for primes in `z<p<3z`, reciprocal-prime mass
+and the exact `B¹` identity then prove the lower half of Lemma 1.6(i). The
+matching upper proof closes Lemma 1.6(i) by combining a
+uniform `alpha=1/2` small-prime estimate, a reciprocal-square large-prime
+tail, and a finite exponent grid in the middle; `alpha+1/alpha≥2` controls
+each grid cell and the fixed number of cells is absorbed into `z^epsilon`.
+The remaining Lemma 1.6 task is the reverse analytic half of the separate
+constant-factor stability clause (ii). `SmoothNumberStability` now fixes the
+literal `floor(cX)` endpoint, proves its ratio and logarithmic limits and
+critical-regime preservation, and reduces the source clause to Granville
+(3.24)'s quotient limit. Cutoff monotonicity supplies the other direction for
+both contractions and expansions. `SmoothNumberSaddlePoint` now removes the
+first analytic prerequisite: it constructs the unique positive solution of
+`sum_{p<=y} log(p)/(p^sigma-1)=log X`, proves the positive `phiTwo` formula
+and `phiOne'=-phiTwo`, and gives an exact mean-value identity controlling the
+change in the saddle when `X` changes. `SmoothNumberSaddleRegimes` adds
+explicit finite upper/lower comparisons and proves that this exact saddle
+tends to `1` throughout the critical regime. It also proves the curvature
+lower bound `phiTwo >= log(2) log(X)`, an exact finite secant estimate, and
+that fixed dilations move the saddle by `o(1/log y)`. The phase infrastructure is
+also exact: `SmoothNumberSaddlePhase` identifies the
+finite Euler product, proves both derivatives, defines the Gaussian main term,
+and proves the saddle is its unique positive global minimum. What remains here
+is narrowed further by the exact minimum-phase squeeze: fixed dilation changes
+the minimized phase by `log(c)`, so its exponential quotient tends to `c`.
+`SmoothNumberSaddleCurvature` bounds every prime-local logarithmic curvature
+derivative uniformly, proves the `phiTwo` quotient tends to `1`, and combines
+this with phase and saddle stability to prove that the complete Gaussian main
+term quotient tends to `c`. The remaining task is the uniform
+Hildebrand--Tenenbaum/Granville saddle-point evaluation of `Psi`, including
+an error small enough to derive (3.24).
+
 The compiled analytic chain now reaches Proposition 2.3(i) and the full
 `theta > 2/15` range of Tao's constant-length Proposition 2.3(iii). It retains closed endpoint
 conventions, bounds rather than discards all higher prime powers, performs the
