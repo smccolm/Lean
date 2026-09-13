@@ -184,6 +184,293 @@ theorem TypicalPrimeAnatomy.factorProduct_pos
     0 < ∏ i, a.factors i := by
   exact Finset.prod_pos fun i _hi => (a.factors_prime i).pos
 
+set_option maxRecDepth 4000 in
+/-- If a smooth cofactor has at least 1000 prime factors at or above the
+lower cutoff, counted with multiplicity, its 1000 largest factors and the
+remaining factorization construct condition (iii) exactly. -/
+theorem exists_typicalPrimeAnatomy_of_many_large_primeFactors
+    {lowerPrime upperPrime p₀ m : ℕ}
+    (hmSmooth : IsSmooth m p₀) (hp₀Upper : p₀ ≤ upperPrime)
+    (hcount : 1000 ≤
+      (m.primeFactorsList.filter fun q => lowerPrime ≤ q).length) :
+    Nonempty (TypicalPrimeAnatomy lowerPrime upperPrime p₀ m) := by
+  have hm0 : m ≠ 0 := (isSmooth_iff.mp hmSmooth).1
+  let highAsc := m.primeFactorsList.filter fun q => lowerPrime ≤ q
+  let highDesc := highAsc.reverse
+  let selected := highDesc.take 1000
+  let low := m.primeFactorsList.filter fun q => !(lowerPrime ≤ q)
+  have hhighLen : 1000 ≤ highDesc.length := by
+    simpa [highDesc, highAsc] using hcount
+  have hselectedLen : selected.length = 1000 := by
+    simp [selected, hhighLen]
+  let factors : Fin 1000 → ℕ := fun i =>
+    selected.get (Fin.cast hselectedLen.symm i)
+  let remainder := (highDesc.drop 1000 ++ low).prod
+  have hhighSorted : highDesc.SortedGE := by
+    exact ((Nat.primeFactorsList_sorted m).pairwise.filter _).sortedLE.reverse
+  have hselectedSorted : selected.SortedGE :=
+    (hhighSorted.pairwise.take).sortedGE
+  have hfactorMemHigh (i : Fin 1000) : factors i ∈ highDesc := by
+    apply List.take_subset 1000 highDesc
+    exact selected.get_mem (Fin.cast hselectedLen.symm i)
+  have hfactorMemOriginal (i : Fin 1000) :
+      factors i ∈ m.primeFactorsList := by
+    have hi := hfactorMemHigh i
+    dsimp only [highDesc, highAsc] at hi
+    rw [List.mem_reverse] at hi
+    exact List.mem_of_mem_filter hi
+  have hfactorPrime (i : Fin 1000) : (factors i).Prime :=
+    Nat.prime_of_mem_primeFactorsList (hfactorMemOriginal i)
+  have hfactorLower (i : Fin 1000) : lowerPrime ≤ factors i := by
+    have hi := hfactorMemHigh i
+    dsimp only [highDesc, highAsc] at hi
+    rw [List.mem_reverse] at hi
+    exact of_decide_eq_true (List.mem_filter.mp hi).2
+  have hfactorLeP₀ (i : Fin 1000) : factors i ≤ p₀ := by
+    have hi := (Nat.mem_primeFactorsList hm0).mp (hfactorMemOriginal i)
+    exact (isSmooth_iff.mp hmSmooth).2 _ hi.1 hi.2
+  have hfactorNonincreasing :
+      ∀ ⦃i j : Fin 1000⦄, i ≤ j → factors j ≤ factors i := by
+    intro i j hij
+    apply hselectedSorted.antitone_get
+    exact hij
+  have hfactorProduct : (∏ i, factors i) = selected.prod := by
+    rw [← List.prod_ofFn]
+    congr 1
+    apply List.ext_get
+    · simp only [List.length_ofFn]
+      exact hselectedLen.symm
+    · intro n hnFn hnSelected
+      simp only [List.length_ofFn] at hnFn
+      simp only [List.get_ofFn]
+      dsimp only [factors]
+      congr
+  have hpartition : (highAsc ++ low).Perm m.primeFactorsList := by
+    exact List.filter_append_perm (fun q => lowerPrime ≤ q) m.primeFactorsList
+  have hfactorization : m = (∏ i, factors i) * remainder := by
+    have hsplit := List.prod_take_mul_prod_drop highDesc 1000
+    have hreverse : highDesc.prod = highAsc.prod := by
+      simp [highDesc]
+    have hpartitionProd : highAsc.prod * low.prod = m := by
+      calc
+        highAsc.prod * low.prod = (highAsc ++ low).prod := by simp
+        _ = m.primeFactorsList.prod := hpartition.prod_eq
+        _ = m := Nat.prod_primeFactorsList hm0
+    rw [hfactorProduct]
+    dsimp only [remainder]
+    simp only [List.prod_append]
+    calc
+      m = highAsc.prod * low.prod := hpartitionProd.symm
+      _ = highDesc.prod * low.prod := by rw [hreverse]
+      _ = (selected.prod * (highDesc.drop 1000).prod) * low.prod := by
+        rw [hsplit]
+      _ = selected.prod * ((highDesc.drop 1000).prod * low.prod) := by
+        rw [Nat.mul_assoc]
+  have hremainingPrime : ∀ a ∈ highDesc.drop 1000 ++ low, a.Prime := by
+    intro a ha
+    have haOriginal : a ∈ m.primeFactorsList := by
+      rcases List.mem_append.mp ha with haHigh | haLow
+      · have haHigh' := List.mem_of_mem_drop haHigh
+        dsimp only [highDesc, highAsc] at haHigh'
+        rw [List.mem_reverse] at haHigh'
+        exact List.mem_of_mem_filter haHigh'
+      · dsimp only [low] at haLow
+        exact List.mem_of_mem_filter haLow
+    exact Nat.prime_of_mem_primeFactorsList haOriginal
+  have hremainderPos : 0 < remainder := by
+    dsimp only [remainder]
+    apply Nat.pos_of_ne_zero
+    apply List.prod_ne_zero
+    intro hzero
+    exact (hremainingPrime 0 hzero).ne_zero rfl
+  have hlastLower : lowerPrime ≤ factors (Fin.last 999) :=
+    hfactorLower _
+  have hdropLeLast : ∀ a ∈ highDesc.drop 1000,
+      a ≤ factors (Fin.last 999) := by
+    intro a ha
+    have hidx : (highDesc.drop 1000).idxOf a <
+        (highDesc.drop 1000).length :=
+      List.idxOf_lt_length_iff.mpr ha
+    have hidxHigh : 1000 + (highDesc.drop 1000).idxOf a < highDesc.length := by
+      simp only [List.length_drop] at hidx
+      omega
+    have h999 : 999 < highDesc.length := by omega
+    have hsorted := hhighSorted.getElem_ge_getElem_of_le
+      (i := 1000 + (highDesc.drop 1000).idxOf a) (j := 999)
+      (hi := hidxHigh) (hj := h999) (by omega)
+    have haGet : highDesc[1000 + (highDesc.drop 1000).idxOf a] = a := by
+      rw [← List.getElem_drop]
+      exact List.getElem_idxOf hidx
+    have hlastGet : highDesc[999] = factors (Fin.last 999) := by
+      change highDesc[999] = selected.get
+        (Fin.cast hselectedLen.symm (Fin.last 999))
+      rw [List.get_eq_getElem, List.getElem_take]
+      congr
+    simpa only [haGet, hlastGet] using hsorted
+  have hremainderSmooth : IsSmooth remainder (factors (Fin.last 999)) := by
+    rw [isSmooth_iff]
+    refine ⟨hremainderPos.ne', ?_⟩
+    intro q hqPrime hqDvd
+    obtain ⟨a, ha, hqa⟩ := hqPrime.prime.dvd_prod_iff.mp hqDvd
+    have haPrime := hremainingPrime a ha
+    have hqaEq : q = a := by
+      rcases (Nat.dvd_prime haPrime).mp hqa with hqOne | hqaEq
+      · exact (hqPrime.ne_one hqOne).elim
+      · exact hqaEq
+    rw [hqaEq]
+    rcases List.mem_append.mp ha with haHigh | haLow
+    · exact hdropLeLast a haHigh
+    · have haLt : a < lowerPrime := by
+        dsimp only [low] at haLow
+        have hnot : ¬ lowerPrime ≤ a := by
+          simpa using (List.mem_filter.mp haLow).2
+        omega
+      exact haLt.le.trans hlastLower
+  exact ⟨{
+    factors := factors
+    remainder := remainder
+    factors_prime := hfactorPrime
+    factors_nonincreasing := hfactorNonincreasing
+    lower_le_last := hlastLower
+    first_le_p₀ := hfactorLeP₀ 0
+    p₀_le_upper := hp₀Upper
+    factorization := hfactorization
+    remainder_smooth := hremainderSmooth }⟩
+
+/-- Contrapositive form used by Proposition 6.5: failure of condition (iii)
+forces fewer than 1000 prime factors above the lower cutoff. -/
+theorem primeFactorsList_filter_length_lt_of_no_typicalPrimeAnatomy
+    {lowerPrime upperPrime p₀ m : ℕ}
+    (hmSmooth : IsSmooth m p₀) (hp₀Upper : p₀ ≤ upperPrime)
+    (hno : ¬ Nonempty (TypicalPrimeAnatomy lowerPrime upperPrime p₀ m)) :
+    (m.primeFactorsList.filter fun q => lowerPrime ≤ q).length < 1000 := by
+  by_contra hnot
+  exact hno (exists_typicalPrimeAnatomy_of_many_large_primeFactors
+    hmSmooth hp₀Upper (by omega))
+
+/-- Once the length and square conditions hold, every non-typical interval
+with `p₀` below the supplied upper cutoff is in the deficient-large-factor
+branch: its smooth cofactor has fewer than 1000 prime factors at or above the
+lower cutoff, counted with multiplicity. -/
+theorem IsNonTypicalScaleNormalizedBadInterval.few_large_primeFactors
+    {x lengthCutoff squareThreshold lowerPrime upperPrime
+      N H p₀ k m : ℕ}
+    (hnon : IsNonTypicalScaleNormalizedBadInterval x lengthCutoff
+      squareThreshold lowerPrime upperPrime N H p₀ k m)
+    (hshort : H < lengthCutoff)
+    (havoid : AvoidsSquareMultiplesAtLeast N H squareThreshold)
+    (hp₀Upper : p₀ ≤ upperPrime) :
+    (m.primeFactorsList.filter fun q => lowerPrime ≤ q).length < 1000 := by
+  have hno : ¬ Nonempty
+      (TypicalPrimeAnatomy lowerPrime upperPrime p₀ m) := by
+    rcases hnon.failure_cases with hlong | hsquare | hanatomy
+    · omega
+    · exact (hsquare havoid).elim
+    · exact hanatomy
+  obtain ⟨_hH, _hbad, _hpPrime, _hHltp, _hpMax, _hkMem, hmSmooth,
+    _hkEq, _hkEndpoint, _hpow⟩ := hnon.1
+  exact primeFactorsList_filter_length_lt_of_no_typicalPrimeAnatomy
+    hmSmooth hp₀Upper hno
+
+/-- Exact factorization packet for Tao's deficient condition-(iii) branch.
+The list retains multiplicity, contains fewer than 1000 large prime factors,
+and the complementary factor is smooth at the lower cutoff. -/
+structure DeficientPrimeFactorization (lowerPrime p₀ m : ℕ) where
+  largeFactors : List ℕ
+  remainder : ℕ
+  largeFactors_length_lt : largeFactors.length < 1000
+  largeFactors_prime : ∀ q ∈ largeFactors, q.Prime
+  lower_le_largeFactors : ∀ q ∈ largeFactors, lowerPrime ≤ q
+  largeFactors_le_p₀ : ∀ q ∈ largeFactors, q ≤ p₀
+  factorization : m = largeFactors.prod * remainder
+  remainder_smooth : IsSmooth remainder lowerPrime
+
+/-- The canonical filter partition of the prime-factor list realizes the
+deficient factorization packet. -/
+theorem exists_deficientPrimeFactorization
+    {lowerPrime p₀ m : ℕ} (hmSmooth : IsSmooth m p₀)
+    (hfew : (m.primeFactorsList.filter fun q => lowerPrime ≤ q).length < 1000) :
+    Nonempty (DeficientPrimeFactorization lowerPrime p₀ m) := by
+  have hm0 : m ≠ 0 := (isSmooth_iff.mp hmSmooth).1
+  let large := m.primeFactorsList.filter fun q => lowerPrime ≤ q
+  let small := m.primeFactorsList.filter fun q => !(lowerPrime ≤ q)
+  have hlargePrime : ∀ q ∈ large, q.Prime := by
+    intro q hq
+    exact Nat.prime_of_mem_primeFactorsList
+      (List.mem_of_mem_filter (by simpa only [large] using hq))
+  have hlargeLower : ∀ q ∈ large, lowerPrime ≤ q := by
+    intro q hq
+    have hq' : q ∈ m.primeFactorsList.filter fun q => lowerPrime ≤ q := by
+      simpa only [large] using hq
+    exact of_decide_eq_true (List.mem_filter.mp hq').2
+  have hlargeUpper : ∀ q ∈ large, q ≤ p₀ := by
+    intro q hq
+    have hqOriginal : q ∈ m.primeFactorsList := by
+      apply List.mem_of_mem_filter
+      simpa only [large] using hq
+    have hqData := (Nat.mem_primeFactorsList hm0).mp hqOriginal
+    exact (isSmooth_iff.mp hmSmooth).2 q hqData.1 hqData.2
+  have hsmallPrime : ∀ q ∈ small, q.Prime := by
+    intro q hq
+    exact Nat.prime_of_mem_primeFactorsList
+      (List.mem_of_mem_filter (by simpa only [small] using hq))
+  have hsmallLt : ∀ q ∈ small, q < lowerPrime := by
+    intro q hq
+    have hq' : q ∈ m.primeFactorsList.filter fun q => !(lowerPrime ≤ q) := by
+      simpa only [small] using hq
+    have hnot : ¬ lowerPrime ≤ q := by
+      simpa using (List.mem_filter.mp hq').2
+    omega
+  have hsmallPos : 0 < small.prod := by
+    apply Nat.pos_of_ne_zero
+    apply List.prod_ne_zero
+    intro hzero
+    exact (hsmallPrime 0 hzero).ne_zero rfl
+  have hsmallSmooth : IsSmooth small.prod lowerPrime := by
+    rw [isSmooth_iff]
+    refine ⟨hsmallPos.ne', ?_⟩
+    intro q hqPrime hqDvd
+    obtain ⟨a, ha, hqa⟩ := hqPrime.prime.dvd_prod_iff.mp hqDvd
+    have haPrime := hsmallPrime a ha
+    have hqaEq : q = a := by
+      rcases (Nat.dvd_prime haPrime).mp hqa with hqOne | hqaEq
+      · exact (hqPrime.ne_one hqOne).elim
+      · exact hqaEq
+    rw [hqaEq]
+    exact (hsmallLt a ha).le
+  have hpartition : (large ++ small).Perm m.primeFactorsList := by
+    exact List.filter_append_perm (fun q => lowerPrime ≤ q) m.primeFactorsList
+  have hfactorization : m = large.prod * small.prod := by
+    calc
+      m = m.primeFactorsList.prod := (Nat.prod_primeFactorsList hm0).symm
+      _ = (large ++ small).prod := hpartition.prod_eq.symm
+      _ = large.prod * small.prod := List.prod_append
+  exact ⟨{
+    largeFactors := large
+    remainder := small.prod
+    largeFactors_length_lt := by simpa only [large] using hfew
+    largeFactors_prime := hlargePrime
+    lower_le_largeFactors := hlargeLower
+    largeFactors_le_p₀ := hlargeUpper
+    factorization := hfactorization
+    remainder_smooth := hsmallSmooth }⟩
+
+/-- A remaining non-typical interval therefore comes with Tao's exact
+`m=p₁⋯pⱼ m'`, `j<1000`, `m'`-smooth factorization packet. -/
+theorem IsNonTypicalScaleNormalizedBadInterval.exists_deficientPrimeFactorization
+    {x lengthCutoff squareThreshold lowerPrime upperPrime
+      N H p₀ k m : ℕ}
+    (hnon : IsNonTypicalScaleNormalizedBadInterval x lengthCutoff
+      squareThreshold lowerPrime upperPrime N H p₀ k m)
+    (hshort : H < lengthCutoff)
+    (havoid : AvoidsSquareMultiplesAtLeast N H squareThreshold)
+    (hp₀Upper : p₀ ≤ upperPrime) :
+    Nonempty (DeficientPrimeFactorization lowerPrime p₀ m) := by
+  obtain ⟨_hH, _hbad, _hpPrime, _hHltp, _hpMax, _hkMem, hmSmooth,
+    _hkEq, _hkEndpoint, _hpow⟩ := hnon.1
+  exact Tao2026.exists_deficientPrimeFactorization hmSmooth
+    (hnon.few_large_primeFactors hshort havoid hp₀Upper)
+
 /-- Exact division-form consequence displayed after Definition 6.4 in the
 source: `m' ≤ 2x/(p₀² p₁...p₁₀₀₀)`. -/
 theorem IsTypicalScaleNormalizedBadInterval.exists_anatomy_with_remainder_bound

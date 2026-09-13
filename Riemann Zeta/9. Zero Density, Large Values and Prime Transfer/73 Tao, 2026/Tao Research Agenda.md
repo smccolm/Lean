@@ -104,7 +104,325 @@ derivative uniformly, proves the `phiTwo` quotient tends to `1`, and combines
 this with phase and saddle stability to prove that the complete Gaussian main
 term quotient tends to `c`. The remaining task is the uniform
 Hildebrand--Tenenbaum/Granville saddle-point evaluation of `Psi`, including
-an error small enough to derive (3.24).
+an error small enough to derive (3.24). Its precise uniform
+`Psi/mainTerm -> 1` form is now `TaoCriticalSmoothSaddleAsymptoticConclusion`;
+Lean proves this contract implies the quotient-limit and `IsTheta` targets.
+The small-distinguished-prime disposal in Proposition 6.5 now consumes the
+proved critical upper estimate directly. The actual union with `p₀≤y` is
+embedded into `Psi(2x,y)`, and the floored scale `y=⌊z(x)^β⌋` is proved to
+remain critical. This gives `2x/z(x)^(1/β-ε)` uniformly for fixed positive
+parameters, including the explicit `2x/z(x)^(12/5)` bound at `β=2/5`.
+The later smooth prime bands now have their exact finite endpoint reduction:
+the fixed `(p₀,H)` union is covered by two smooth-cofactor families and has
+cardinality at most `2H Ψ(⌊2x/p₀²⌋,p₀)`. A concrete 60-cell grid now performs
+the prime-band and dyadic-length aggregation from exponent `6/5` through
+`3`. Each cell retains a fixed margin above exponent two, and arbitrary
+logarithmic losses plus the `2x` dilation are absorbed, yielding the actual
+union bound `x/z(x)^(2+1/800)`. The proved slow-variation identity
+`log z(2x)/log z(x)→1` also embeds the literal fixed source branch
+`z(x)^(5/4)<p₀≤⌈z(x)^3⌉` into this grid. The exact arithmetic reduction is
+proved: 1000 multiplicity-counted prime
+factors above the lower cutoff construct `TypicalPrimeAnatomy`, including a
+remainder smooth below the last selected factor; hence an interval still
+failing condition (iii) has fewer than 1000 such factors.
+The ensuing finite counting reduction is also compiled: canonical deficient
+packets cover the actual short, square-avoiding non-typical union, dyadic
+lengths are summed, producing the intermediate analytic target
+`4L ∑_{p₀}∑_a Ψ((2x/p₀²)/a,y)` over products `a` of fewer than 1000 primes in
+`[y,p₀]`. The product index is expanded into the literal finite universe of
+factor lists of length below 1000. A uniform selector argument at
+`y=⌊z(x)^(9/10)⌋` retains the exact reciprocal `1/(p₀²∏q)` weight; elementary
+harmonic and reciprocal-square tails bound the complete list mass, and the
+resulting fixed logarithmic loss is absorbed into `z(x)^(1/200)`. Thus the
+actual central deficient condition-(iii) union, with
+`z(x)^(9/10)<p₀≤z(x)^(11/10)`, satisfies
+`#union ≤ x/z(x)^(2+1/200)` eventually.
+The two fixed outside-central gaps are now closed as well. A fine 600-cell
+mesh retains a uniform margin on `2/5<p₀-exponent≤9/10` and
+`11/10<p₀-exponent≤5/4`; one-percent endpoint slack transfers the source
+cutoffs to the cofactor scale `2x`, and a generic fixed-constant length
+absorption yields the actual-union estimate
+`#union≤x/z(x)^(2+1/1000)`. For each row denominator `d=n+10`, the same
+construction is now made quantitative on the moving source window with exact
+lower cutoff `⌊z(x)^(1-2/d)⌋` and upper cutoff `⌈z(x)^(1+2/d)⌉`. Moving low
+and high exponent meshes retain a margin `1/(4d²)`, while the full intervening
+deficient-factor range retains its reciprocal weights and a `1/d²` margin.
+The resulting eight-branch fixed-row family satisfies
+`#union≤x/z(x)^(2+1/(128d²))`. Countable diagonalization chooses a single
+`q(x)→∞`; floor- and ceiling-ratio lemmas prove that both selected cutoff
+logarithms divided by `log z(x)` tend to one, and the selected actual union is
+eventually at most `x/z(x)^2`. Thus the source-facing Proposition 6.5 cutoff
+diagonal is closed.
+The next layer now gives Proposition 6.6 its literal probability model.
+`BadIntervalRandomModel` places the 1001 coordinates on a finite product
+measure, gives coordinate `j` the uniform law on the primes in `[Pⱼ,2Pⱼ)`,
+and proves both the exact pushforward mass formula and mutual independence.
+The source product, its divisibility indicators, and the typical-interval
+event are defined on this space. The exceptional `p∣l` branch is now closed
+deterministically: the contribution is at most `H log H`, then `H log z(x)`
+at the source scale, so its large event is empty and has measure zero. The
+small-prime branch now has its exact cutoff, `p∤l` index set, fixed fiftieth
+moment, and ordered-tuple expectation expansion into joint divisibility
+probabilities. The tuple lcm is explicit, and an exact CRT precursor proves
+that every joint event is either empty or one primitive residue-class fiber
+modulo this lcm. The exact normalized Dirichlet-character expansion of that
+fiber now compiles, as do its integrated probability identity, exact
+independent-coordinate factorization, identification with normalized dyadic
+prime-character averages, and weak AM--GM reduction to the all-character sum
+of 1000th powers. The lcm/totient comparison supplies the exact `2^50/lcm`
+coefficient, and this estimate is now inserted into the entire ordered
+fiftieth moment. Exact finite reordering followed by pigeonholing selects one
+of the 1000 tail coordinates with factor `1000`. `PrimeCharacterSums` starts
+the Section 5 analytic interface: `s_Z(χ)`, the exact threshold
+`Z^(-1/125)=Z^(-0.008)`, the primitive exceptional/unexceptional partition,
+the unexceptional total `≤φ(q)Z^(-8)`, and reduction of every exceptional
+1000th power to the squared moment of Lemma 5.1 all compile. The source
+conductor footnote is now exact: scale separation gives coprimality with the
+tuple lcm, hence equality with the primitive counterpart. The principal term
+is one, the nonprincipal terms are partitioned by exact positive conductor,
+and every fixed fiber injects into the primitive nonprincipal characters.
+This bounds the full ambient moment by a divisor sum of exceptional squares
+and `φ(d)Z^(-8)` errors. The bound is now inserted termwise into the actual
+ordered tuple sum, and the factor-1000 coordinate pigeonhole controls the full
+fiftieth moment by the resulting explicit conductor-reduced expression. The
+new `SmallPrimeMertens` layer identifies the tuple lcm with the product of its
+distinct prime support and proves that the support multiplicities sum to 50.
+Thus the coefficient is exactly one `log p/p` per support prime times repeated
+logarithms of total exponent `50-#support`. The explicit finite weighted-prime
+bound `log 4 * (2 + log Y)` is inserted pointwise, and fixed ordered prime
+tuples have at most `H^50` compatible shift tuples, with a generic fiberwise
+summation theorem. Exact support regrouping, the uniform `50^50` support-fiber
+bound, and an elementary-symmetric inequality sum all equality patterns and
+give `H^50 O(log(cutoff)^50)`. The conductor expression is split into
+principal, exceptional-square, and totient-error pieces. The first and third
+are bounded explicitly, using the totient-divisor identity and Chebyshev theta
+for the latter. The new `ExceptionalCharacterBHM` layer proves Lemma 5.3 as an
+exact finite weighted inequality. Hermitian symmetry supplies the column bound
+from a single Gram-row hypothesis; the weighted prime indicator recovers the
+literal dyadic prime sum and has energy equal to the band cardinality; and each
+row is split into its diagonal plus `J-1` uniform off-diagonal terms. Exact
+division by the band cardinality recovers the normalized `s_Z` estimate, and
+the exceptional threshold gives `J Z^(-2/125) ≤ ∑|s_Z|²` by a compiled finite
+Markov argument. The remaining Proposition 6.6 small-prime work is the
+analytic Burgess estimate and its application to the isolated exceptional sum, followed by the
+large-prime mean/variance estimates supplied by Propositions 6.7--6.8. The
+source-exact fundamental-lemma coefficients remain separately open, although
+the proved Selberg alternative already supplies the diagonal estimate needed
+here.
+The finite Lemma 5.4 algebra is now isolated in `FundamentalSieveWeights`: its
+divisor-sum weight equals one on the dyadic prime band, its positive-interval
+mass is exactly the floor-weighted coefficient sum, and bounded coefficients
+have `ℓ¹` mass at most the sieve level. The floor replacement is quantitative:
+the mass differs from `X Σ_{d≤R}λ_d/d` by at most `R`, and any upper bound for
+that coefficient main mass transfers directly with this additive error. The
+remaining sieve task is the actual fundamental-lemma construction proving
+squarefree support, nonnegativity, and logarithmic main mass.
+An unconditional fallback is now compiled in `SelbergPrimeWeights`. The
+library Selberg construction at density `1/d` gives a literal globally
+nonnegative divisor weight equal to one on primes above its level, with main
+mass at most `2/log R`. Its coefficients satisfy `|λ_d|≤3^ω(d)`, so the exact
+finite mass bound has error `R(1+log R)^3` rather than Tao's sharper `R`.
+This polylogarithmic loss is harmless for the later power-separated level,
+but the source-exact `{−1,0,1}` Rosser construction remains a separate task.
+The new `ExceptionalCharacterSelberg` bridge now feeds this concrete weight
+through the finite BHM theorem. Exact finite identities remove `n=0`, expand
+the weighted correlation, and reindex each divisor restriction as an ordinary
+prefix. Pointwise multiplicativity extracts the divisor factor at norm cost
+at most one. Consequently the finite normalized second-moment bound has only
+one unresolved analytic hypothesis: a uniform Burgess bound for the unshifted
+pair correlations of distinct characters.
+`ExceptionalCharacterFamilies` now removes the remaining arithmetic ambiguity
+from that hypothesis. It packages the primitive moduli `q₁q₂,j`, proves the
+pair lcm is `q₁ lcm(q₂,j,q₂,k)`, squarefree, and at most `Z^3.09`, and proves
+the raw correlation equals the quotient Dirichlet character at that level for
+all natural inputs, including zeros at nonunits. The full normalized family
+estimate is therefore reduced to a named cubefree prefix bound.
+`ExceptionalCharacterBurgess` refines this to precisely the sieve prefixes
+`⌊(2Z-1)/d⌋` and records the source-shaped explicit target with saving
+`0.0163`, a fixed lower cutoff, and range `q≤H^3.1`.
+`ExceptionalCharacterScales` takes `R=⌊Z^0.0001⌋` and proves uniformly that all
+requested prefixes eventually exceed the cutoff and meet the period range;
+Bertrand proves band nonemptiness. Thus only the analytic Burgess proof remains
+at this boundary. `ExceptionalCharacterNormalization` identifies the exact
+half-open band cardinality with `π′(2Z)-π′(Z)`, transfers the pinned PNT to
+strict counting, proves the asymptotic `Z/log Z`, and records the eventual
+lower bound `Z/(2 log Z)`. `ExceptionalCharacterAbsorption` now proves the
+two diagonal pieces are `O(Z/log Z)` and, under `J≤A Z^(2/125)`, combines the
+three exact exponents into `1-1/5000` and obtains an `o(Z/log Z)` off-diagonal
+term. The normalized moment constant is independent of `A`; truncation at
+`⌊A Z^(2/125)⌋` and the exceptional threshold therefore close the
+self-improving argument. Both `J≪Z^(2/125)` and the bounded squared moment now
+follow conditional only on explicit Burgess. The analytic Burgess proof
+remains.
+`ExceptionalCharacterFixedLevel` supplies the downstream consumer bridge.
+With `q₂=1`, literal exceptional primitive characters of level `q` form a
+separated heterogeneous family, and both its cardinality and squared sum are
+preserved exactly. The resulting varying-conductor theorem gives the literal
+`J≪Z^0.016`, bounded moment, and general `O(λ⁻²)` tail conclusions conditional
+only on explicit Burgess.
+`ExceptionalCharacterAggregate` strengthens this to the actual multi-conductor
+shape needed downstream. Primitive characters agreeing after lcm lift are
+proved to have equal levels and equal original characters. The dependent
+sigma over any admissible finite conductor set is therefore one separated
+family, with exact total-cardinality and double-moment identities; explicit
+Burgess yields a single constant uniform over the entire set. This is the
+uniform family input needed by the divisor sets generated from the
+small-prime tuple moduli.
+`SmallPrimeExceptionalConductors` now performs that finite instantiation. It
+unions the nontrivial divisor sets of every actual tuple modulus, proves the
+lcm and every member squarefree, and obtains the uniform bound
+`d≤taoSmallAntiSievePrimeCutoff(x)^50`. The rounded exponent comparison
+`cutoff^50<⌊z^(9/10)⌋` is now proved eventually, so every source selector
+above the lower distinguished-prime scale lies in the Lemma 5.1 square-root
+range. A maximal finite universe of all admissible squarefree conductors gives
+one eventual Burgess-conditional moment constant simultaneously for every
+admissible subset and all 1001 selectors. The literal exceptional outer sum
+is bounded by that constant times the completed Mertens coefficient and then
+absorbed into the principal majorant. The same scale inequality proves
+`P_j⁻⁸ cutoff⁵⁰≤1`, so the explicit totient error is absorbed as well. Thus
+the entire source-facing small-prime fiftieth moment has a fixed elementary
+majorant conditional on analytic Burgess. The large-prime branch now has a
+literal unweighted contribution and exact finite mean, second-moment,
+variance, and double-covariance identities. Its diagonal is bounded by the
+mean; under `H≤lowerPrime`, joint divisibility at two distinct shifts carrying
+the same prime is impossible, so all such covariances are nonpositive. The
+variance therefore reduces exactly to the mean plus distinct-prime
+covariances. The remaining Proposition 6.6 work is analytic Burgess, the
+crude/improved distinct-prime estimates of Propositions 6.7--6.8, and final
+probability normalization.
+
+The character-algebra entry to those propositions is now also compiled. A
+single large-prime event is empty or one primitive residue fiber modulo `p`;
+a joint event at distinct primes is empty or one primitive residue fiber
+modulo `pp'`. Both probability bounds reduce to the existing all-character
+1000th-power dyadic prime-average expression.
+
+The exceptional counting itself is now closed conditional on analytic
+Burgess. For Proposition 6.7, the number of prime conductors supporting an
+exceptional character is bounded by the total character count, with exponent
+`2/125`. For Proposition 6.8, a dependent common-factor family retains `p`
+  and varies `p'`; the self-improving Lemma 5.1 cardinal proof now exposes one
+  constant independent of the family, and selector diagonalization makes the
+  bound eventually pointwise uniform in `p`.
+
+The principal part of the probability error is now explicit. The character
+sum is split before weak AM--GM, so its main term occurs exactly once. The
+principal expectation equals the probability that the tuple product is
+coprime to the modulus. If `m'` is coprime to `p` or `pp'`, failure forces a
+coordinate collision with one of those primes; uniformity of each coordinate
+and primality of the dyadic band give a reciprocal-cardinality bound, followed
+by a finite union bound. The one-prime nonprincipal conversion is now
+complete: every nonprincipal character modulo a prime is primitive, and away
+from the union of exceptional conductors over all ordinary tuple coordinates
+the complete moment is bounded by `φ(p) ∑_{j≠0} P_j^(-8)`. This is substituted
+directly into the collision estimate to bound deviation from `1/φ(p)`.
+For the product modulus, exact conductor regrouping is now complete under the
+explicit assumption that every ordinary coordinate band is coprime to `pp'`.
+The totient divisor identity then bounds the whole nonprincipal contribution
+by `pp' ∑_{j≠0} P_j^(-8)` and supplies the corresponding direct deviation
+theorem. That band-separation assumption is now removed. The noncoprime part of a
+band is contained in `{p,p'}`, so the ambient and primitive normalized averages
+differ by at most `4/card`. Coprimality-free primitive conductor regrouping and
+1000th-power convexity yield the explicit correction `(4/card)^1000`, and the
+final product-modulus deviation theorem no longer assumes band separation.
+The remaining work in Propositions 6.7--6.8 is Burgess-cardinality insertion
+and dyadic aggregation of the now source-normalized crude and improved
+estimates.
+The first direct-counting input is exact:
+the primes in `[Z,2Z)` lying in one residue class modulo positive `q` number
+at most `⌊2Z/q⌋+1`. The next step is to combine this normalized fiber bound
+with frozen tuple coordinates.
+The product probability measure is now also converted exactly to finite
+counting: its Cartesian prime-band support has measure one, every supported
+tuple has the same inverse-product atom mass, and an arbitrary event's
+probability equals its supported cardinality times this mass. The
+frozen-coordinate bridge is now compiled too: its support has the exact
+full-support/missing-band cardinality, a uniform coordinate fiber bound divides
+by the exact band size, and pairwise residue rigidity inserts the
+`⌊2P/q⌋+1` progression count. Factoring the source product by any ordinary
+coordinate and cancelling its coprime complementary cofactor gives the core
+single- and joint-divisibility bounds. A coprime/noncoprime event split now
+combines this with the proved collision unions, yielding unconditional crude
+bounds with respectively one and two explicit collision sums.
+The paper's stronger source freezing step is compiled as well. Arbitrary finite
+sets of coordinates have an exact support-cardinality cancellation law, and a
+general theorem counts selected products lying in one residue class with any
+specified representation multiplicity. Unique factorization gives multiplicity
+at most `2` for two sampled primes and at most `6` for three. Freezing two
+coordinates therefore proves the exact finite Proposition 6.7(i) ratio with
+numerator `2(⌊4P₁P₂/p⌋+1)`; freezing three proves the Proposition 6.8(i) ratio
+with numerator `6(⌊8P₁P₂P₃/(pp')⌋+1)`. The divisibility events and nonzero
+shifts automatically supply the complementary-cofactor coprimality.
+The exact ratios are also normalized abstractly. If every selected scale obeys
+`P_j≤L·#band(P_j)` and the modulus lies below the selected product range, the
+floor-plus-one term is absorbed and the coordinate scales cancel, giving
+`16L²/p` in Proposition 6.7(i) and `96L³/(pp')` in Proposition 6.8(i).
+The next source specialization derives one common logarithmic loss from the
+PNT and the anatomy-scale hypotheses.
+That common PNT specialization is now compiled under the precise structure
+`TaoPrimeTupleSourceScaleFamily`: all bands are eventually nonempty and obey
+`P_j≤4log(z)#band(P_j)` simultaneously. Hence the eventual source bounds are
+`256log²(z)/p` and `6144log³(z)/(pp')`. The remaining work here is the exact
+modulus/product scale discharge and finite dyadic mean/covariance aggregation.
+The improved estimates now reach the literal probability space as well.
+Coprimality removes the empty single-event branch and gives the absolute
+deviation from `1/φ(p)`; the one- and two-prime upper bounds cover empty events.
+Exact multiplicativity of the totient main term and a separate covariance
+algebra lemma then give the distinct-prime covariance error needed by the
+second-moment sum. The remaining work is its finite dyadic aggregation and
+source-scale discharge.
+That finite partition is now compiled on the literal anti-sieve indices.
+Single conductors and ordered distinct-prime pairs are each separated into
+improved and exceptional pieces; all shift multiplicities are preserved, and
+the exceptional pieces retain explicit crude majorants. The partition is
+inserted into the existing diagonal variance reduction. What remains is the
+analytic cardinality and source-scale summation of those finite expressions.
+The product exceptional predicate is now reduced to the counted Lemma 5.1
+families: the only nontrivial divisors of `pp'` are `p`, `p'`, and `pp'`.
+Thus a bad pair lies over an exceptional endpoint prime or in the common-factor
+exceptional-partner union. The union over all ordinary coordinate scales has
+both its exact sum-cardinality bound and the fixed factor-1000 consequence.
+The first-moment block summation is also compiled. The anti-sieve interval is
+identified with the source half-open dyadic band, its reciprocal-totient main
+sum is eventually at most `4/log R` by PNT, and the remaining improved and
+exceptional contributions are kept as explicit uniform-error and
+cardinality-times-crude terms. The exact two-band covariance block is now
+compiled as well: it preserves the ordered distinct-prime restriction and
+literal `(H-1)^2` shift multiplicity, and separates the full band-product
+uniform improved error from the exceptional ordered-pair cardinality times a
+crude joint bound. That exceptional pair cardinality is now reduced exactly
+to exceptional first endpoints, exceptional second endpoints, and the sum of
+common-factor partner fibers. The three coordinate aggregates in the
+improved errors also have explicit uniform source envelopes from
+`P_j=z^(1+o(1))` and PNT, which are composed into the literal one-prime,
+joint, and covariance errors. Fixed log-power absorption and source-range
+dyadic selector comparisons now give the direct literal bounds
+`3R^-1.001` and `C R^-1.001 S^-1`, including the ordered covariance form.
+For the exceptional endpoints, the fixed `P_j^0.016` count cannot be
+uniformly rewritten as `R^0.02` at the bottom of the modulus range. The new
+adaptive threshold `max(P_j^-0.008,R^-0.01)` fixes that mismatch: it remains
+inside the fixed exceptional family, and the uniform squared moment plus
+Chebyshev gives the required `O(R^0.02)` count after the 1000-coordinate
+union. The cofactor embedding now also preserves its complete squared moment;
+the moment bound is pointwise uniform in the fixed prime and cofactor set, and
+the same adaptive argument gives `O(S^0.02)` partners. These sets now feed the
+actual character expansions: adaptive emptiness gives the exact 1000th-moment
+tail `P_j^-8+R^-10`, the one-prime error is bounded by
+`1003R^-1.001`, and the uniform adaptive joint/covariance errors retain the
+ordered `R^-1.001 S^-1` scale. The product partition also keeps the necessary
+mixed thresholds—`R` for conductor `p`, `S` for `p'` and `pp'`—and is covered
+exactly by the two endpoint sets and the adaptive partner set. The mixed
+product moment and literal joint-probability bound compile, and direct
+normalization gives the same ordered source power for its joint and covariance
+errors. The adaptive one-band probability and two-band covariance consumers
+are now compiled with literal shift multiplicities. Their exceptional pair
+finset is bounded by the two adaptive endpoint counts plus the pointwise
+adaptive partner fibers. These bounds are now composed with explicit Burgess:
+the exceptional pair count has source shape
+`R^0.02·#band(S)+#band(R)·S^0.02`, and both finite block sums consume this
+cardinality together with their normalized improved errors. The remaining
+steps are uniform crude-bound specialization, automatic conductor-range
+geometry, and dyadic scale summation.
 
 The compiled analytic chain now reaches Proposition 2.3(i) and the full
 `theta > 2/15` range of Tao's constant-length Proposition 2.3(iii). It retains closed endpoint

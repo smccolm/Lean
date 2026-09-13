@@ -629,7 +629,9 @@ minimum. The exact old/new minimum-phase squeeze then proves that dilation
 changes this minimum by `log(c)`. Uniform prime-local curvature estimates
 show that the `phiTwo` quotient tends to `1`, so the quotient of the complete
 Gaussian main terms tends to `c`; only the uniform comparison with `Psi`
-remains.
+remains. That comparison is represented exactly by
+`TaoCriticalSmoothSaddleAsymptoticConclusion`, which is proved to imply both
+the quotient-limit and `IsTheta` stability contracts.
 The exact polylogarithmic source contract is `IsTaoPolylogSmoothRegime X y A`,
 meaning `log X/log x -> 1` and `log y/log₂x -> A` for fixed `A>1`. Its natural
 scale `log x/log₂x` is represented by `taoPolylogUZero`; Lean proves
@@ -780,11 +782,315 @@ proves the actual long moderate-prime failure-union bound `x/z(x)^3`
 eventually. `BadIntervalLargePrimeSum` treats Tao's earlier large-`p₀` branch
 under the ceiling-rounded `H<x^(7/50)` cutoff. Its unsieved `8Hx/p₀²` fiber
 bound and reciprocal-square tail prove `#union≤x^(199/200)` eventually, with
-exact bridges from `H^50<x^7` and `p₀^20>x^3`. `BadIntervalLargeLength`
+exact bridges from `H^50<x^7` and `p₀^20>x^3`.
+`BadIntervalSmoothBranches` treats the easy small-`p₀` branch: the actual
+normalized interval union with `p₀≤y` embeds in the `y`-smooth numbers up to
+`2x`. The floored cutoff `⌊z(x)^β⌋` is proved to lie in the critical regime,
+so the union is eventually at most `2x/z(x)^(1/β-ε)`; the concrete choice
+`β=2/5`, `ε=1/10` yields `2x/z(x)^(12/5)`.
+The module additionally covers every fixed later `(p₀,H)` fiber by its two
+smooth-cofactor endpoint orientations and proves
+`#fiber≤2H Ψ(⌊2x/p₀²⌋,p₀)`. The actual short union is aggregated over its
+dyadic lengths and a concrete 60-cell prime-exponent grid. For
+`z(2x)^(6/5)<p₀≤z(2x)^3`, the smooth-number exponents retain a fixed margin
+above two; all grid, length, and dilation losses are absorbed in the final
+bound `#union≤x/z(x)^(2+1/800)`.
+The exact slow-variation limit `log z(2x)/log z(x)→1` now transfers the
+literal source range `z(x)^(5/4)<p₀≤⌈z(x)^3⌉` into that grid, so the
+same bound holds for this actual source-defined short interval union.
+`BadIntervalLargeLength`
 closes the complementary `H≥x^(7/50)` prime-gap branch: `41/300` is a fixed
 spare exponent above `2/15`, one greedy disjoint family controls all lengths,
 the corresponding real endpoint blocks lie in Tao's literal Proposition
 2.3(iii) set at scale `2x`, and the actual union has a fixed power saving.
-The remaining smooth-number branches are not yet claimed.
+The constructive arithmetic core of the deficient-large-factor branch is
+also proved: at least 1000 multiplicity-counted large prime factors produce
+the ordered `TypicalPrimeAnatomy` and smooth remainder exactly. A canonical
+filtered factorization also gives `m=p₁⋯pⱼ m'` with `j<1000`, bounded
+large factors, and lower-cutoff-smooth `m'` for every surviving condition-(iii)
+failure. These packets now generate an explicit finite product/remainder
+cover, and the actual deficient interval union is reduced to
+`4L ∑_{p₀} ∑_a Ψ((2x/p₀²)/a,y)`, with `a` ranging over products of fewer
+than 1000 primes between `y` and `p₀`. An explicit finite list universe expands
+this further into a sum over the individual multiplicity-retaining factor
+lists. The uniform critical estimate at `y=⌊z(x)^(9/10)⌋` keeps the exact
+weight `1/(p₀²∏q)`; the outer reciprocal-square tail, elementary harmonic
+bound, and fixed polylogarithmic absorption then prove the actual deficient
+central union bound `#union≤x/z(x)^(2+1/200)` eventually on
+`z(x)^(9/10)<p₀≤z(x)^(11/10)`. A fine 600-cell mesh and exact source-to-
+cofactor cutoff transfer additionally prove
+`#union≤x/z(x)^(2+1/1000)` on the actual fixed outside-central windows
+`z(x)^(2/5)<p₀≤z(x)^(9/10)` and
+`z(x)^(11/10)<p₀≤z(x)^(5/4)`. `BadIntervalProposition65` then assembles the
+actual concrete non-typical family into eight named failure unions, converts
+the fixed-power branches using `log z/log x→0`, and absorbs the finite sum to
+obtain `#union≤x/z(x)^(2+1/4000)` eventually.
+`BadIntervalSlowCutoff` supplies the moving version. For `d=n+10`, exact
+lower-floor and upper-ceiling cutoffs at exponents `1-2/d` and `1+2/d` are
+covered by moving low/high meshes and the full deficient interval. The fixed
+row bound is `#union≤x/z(x)^(2+1/(128d²))`. A countable diagonal then selects
+`q(x)→∞`, proves both rounded cutoff logarithms have ratio one to `log z(x)`,
+and obtains `#union≤x/z(x)^2` eventually for the selected actual non-typical
+family. The source-facing Proposition 6.5 cutoff diagonal is therefore
+compiled and axiom-audited.
+`BadIntervalRandomModel` then instantiates Proposition 6.6's random prime
+tuple as a genuine finite product probability measure. Every coordinate is
+uniform on the exact prime band `[Pⱼ,2Pⱼ)`, its pushforward mass and support
+are proved, and all 1001 projections are mutually independent. The exact
+source tuple product, divisibility indicators, typical event, and its
+probability are ready for the anti-sieve moment estimates.
+`BadIntervalAntiSieve` closes the exceptional `p∣l` branch pointwise: its
+weight is at most `H log H`, hence eventually `H log z(x)` throughout the
+source length range, so the large event is empty and its probability is zero.
+`BadIntervalSmallPrimeMoment` defines the exact small-prime cutoff
+`⌊z(x)^(1/100)⌋`, the `p∤l` pairs, and the source fiftieth moment. Its final
+theorem expands that expectation exactly over ordered 50-tuples as logarithmic
+weights times joint divisibility probabilities, exposing the next character-
+sum obligation without hiding it behind an assumption. It also defines the
+tuple lcm and proves the exact CRT precursor: the joint event is either empty
+or precisely one primitive residue-class fiber modulo that lcm.
+`BadIntervalLargePrimeMoment` supplies the parallel large-prime probability
+layer: the literal unweighted sum over `1≤l<H`, exact mean/second-moment and
+double-covariance variance identities, and the diagonal/same-prime reduction.
+Under `H≤lowerPrime`, distinct shifts with one common prime have empty joint
+event and nonpositive covariance, leaving only the mean and distinct-prime
+covariances for the analytic Propositions 6.7--6.8 estimates.
+`BadIntervalLargePrimeCharacter` supplies the next exact step: single events
+are primitive fibers modulo `p`, distinct-prime joint events are primitive
+fibers modulo `pp'`, and both probabilities inherit the compiled
+all-character 1000th-moment bound at those exact moduli.
+`BadIntervalLargePrimeExceptional` bounds exceptional prime conductors by the
+aggregate character count with exponent `2/125`. The common-factor aggregate,
+uniform self-improving cardinal theorem, and selector diagonalization preserve
+one constant while the fixed prime varies. `BadIntervalLargePrimePairs` then
+  gives the corresponding uniform `pp'` exceptional-partner bound needed by
+  Proposition 6.8, conditional only on explicit Burgess.
+  `BadIntervalPrincipalCharacter` isolates the principal character before the
+  1000-coordinate AM--GM step. Its expectation is exactly the tuple-product
+  coprimality probability, and the one-prime and two-prime deficits are bounded
+  by explicit coordinate-collision union bounds. A fixed prime divides at most
+  one member of a dyadic prime band, so every coordinate costs at most the
+  reciprocal of the exact band cardinality. The remaining improved-probability
+  error is the nonprincipal character moment.
+  `BadIntervalLargePrimeNonprincipal` closes this term for prime moduli. It
+  identifies all nonprincipal characters modulo `p` as primitive, unions the
+  exceptional conductors over the 1000 ordinary coordinate scales, proves the
+  union loses at most a fixed factor 1000, and bounds the surviving moment by
+  `φ(p) * ∑ P_j^(-8)`. The resulting theorem directly bounds the probability
+  deviation from `1/φ(p)` by that error plus the collision term.
+  `BadIntervalLargePrimeProductNonprincipal` proves the exact product-modulus
+  conductor reduction under the stated coprime-band condition. The fixed
+  conductor fibers are bounded by their unexceptional errors, the totient
+  divisor identity sums these to `pp'`, and the result feeds the direct
+  deviation from `1/φ(pp')`. Removing band separation at the possible sampled
+  points `p,p'` is completed by `BadIntervalLargePrimeProductCollision`. It
+  proves that the ambient and primitive averages differ by at most `4/card`,
+  regroups primitive counterparts without a coprimality hypothesis, and carries
+  the correction through the 1000th power. The final product deviation theorem
+  is therefore unconditional in the band position.
+  `BadIntervalLargePrimeCrude` supplies the first direct-counting primitive:
+  every residue class modulo positive `q` contains at most `⌊2Z/q⌋+1` members
+  of a dyadic prime band, with the normalized cardinal inequality exposed for
+  the forthcoming frozen-coordinate probability argument.
+  `BadIntervalPrimeTupleUniform` proves the complementary measure-theoretic
+  bridge: the Cartesian support has mass one, all supported tuples have the
+  same inverse-product atom, and arbitrary event probabilities are exact
+  supported-cardinality ratios.
+  `BadIntervalPrimeTupleFiber` completes the finite coordinate-freezing
+  bridge. Its frozen support has exactly the full-support cardinality divided
+  by the missing band, so uniform fibers give `M/card`; pairwise residue
+  rigidity gives `(⌊2P/q⌋+1)/card`. It also factors the literal source
+  product by any ordinary coordinate. A coprime/noncoprime split plus the
+  existing collision-union estimates then proves unconditional single- and
+  joint-event crude bounds, with one and two collision sums respectively.
+  `BadIntervalPrimeTupleMultiFiber` generalizes freezing to arbitrary finite
+  coordinate sets, with exact cancellation by the product of their band
+  cardinalities and a general product-residue/multiplicity estimate. Prime
+  factorization bounds two-coordinate product fibers by `2` and
+  three-coordinate fibers by `6`. Thus the literal finite forms of
+  Propositions 6.7(i) and 6.8(i) have numerators
+  `2(⌊4P₁P₂/p⌋+1)` and `6(⌊8P₁P₂P₃/(pp')⌋+1)`, respectively; their event
+  hypotheses automatically imply the needed cofactor coprimality.
+  `BadIntervalLargePrimeCrudeNormalize` absorbs the terminal floor `+1` and
+  cancels the selected coordinate scales under
+  `P_j≤L·#taoDyadicPrimeBand(P_j)`. It yields the exact source-shaped estimates
+  `16L²/p` and `96L³/(pp')`; the next module supplies the common PNT scale.
+  `BadIntervalLargePrimeCrudeSource` supplies that instantiation for the exact
+  source family contract `log(P_j)/log(z)→1` with divergent coordinate scales.
+  Uniformly over all 1001 coordinates it proves
+  `P_j≤4log(z)#taoDyadicPrimeBand(P_j)` and band nonemptiness, and concludes
+  `256log²(z)/p` and `6144log³(z)/(pp')` eventually. Dyadic aggregation remains.
+  `BadIntervalLargePrimeProbabilityBounds` transfers the improved prime and
+  product-modulus character estimates to the literal single and joint events.
+  It gives the absolute marginal deviation, handles empty-event upper bounds,
+  and derives the explicit distinct-prime covariance error after exact
+  totient-main-term cancellation. Dyadic aggregation remains.
+  `BadIntervalLargePrimeAggregation` performs the exact finite partition on
+  the literal anti-sieve index set. Improved single and pair terms are summed
+  separately from exceptional terms carrying explicit crude majorants, then
+  combined with the diagonal variance reduction. Analytic cardinality and
+  source-scale summation remain.
+  `BadIntervalLargePrimeExceptionalPartition` proves that the product
+  predicate has only three conductor cases, `p`, `p'`, and `pp'`. A bad pair
+  is therefore covered by the two exceptional-prime sets or the common-factor
+  exceptional-partner union, whose 1000-scale cardinality is bounded exactly.
+  `BadIntervalLargePrimeBlockSum` supplies the finite dyadic first-moment
+  estimate: exact band identification, the reciprocal-totient main sum with
+  eventual `4/log R` PNT bound, and the separate uniform improved-error and
+  exceptional-cardinality times crude-error contributions.
+  `BadIntervalLargePrimeCovarianceBlockSum` gives the exact two-band analogue
+  for ordered distinct-prime covariances. It preserves the literal
+  `(H-1)^2` shift multiplicity and separates the whole band-product times a
+  uniform improved error from the exceptional ordered-pair cardinality times
+  a supplied crude joint bound. Burgess cardinality insertion and dyadic
+  scale summation remain.
+  `BadIntervalLargePrimeExceptionalPairCard` converts its exceptional-pair
+  parameter into the exact three-family count from the source: bad first
+  endpoints, bad second endpoints, and common-factor exceptional partners.
+  `BadIntervalLargePrimeErrorNormalize` exposes the three coordinate
+  aggregates in the literal errors, while `BadIntervalLargePrimeErrorSource`
+  uses the simultaneous `P_j=z^(1+o(1))` contract and PNT to bound them and
+  obtain explicit one-prime, joint, and covariance source envelopes.
+  `BadIntervalLargePrimeErrorPower` absorbs all fixed logarithmic powers,
+  packages the source-range dyadic selector, and proves both envelope and
+  literal-error bounds of the exact forms `3R^-1.001` and
+  `C R^-1.001 S^-1` (joint and ordered covariance). Burgess insertion and
+  dyadic scale summation remain. `BadIntervalLargePrimeAdaptiveExceptional`
+  supplies the endpoint part of that insertion with the necessary threshold
+  `max(P_j^-0.008,R^-0.01)`: the uniform exceptional squared moment and finite
+  Chebyshev give one `O(R^0.02)` bound after unioning all 1000 coordinates.
+  This avoids the invalid conversion of the fixed `O(P_j^0.016)` count at
+  the smallest admissible modulus bands. The cofactor embedding now preserves
+  the full squared moment exactly, its Burgess bound is pointwise uniform in
+  the fixed prime and cofactor set, and the same argument gives
+  `O(S^0.02)` adaptive partners. `BadIntervalLargePrimeAdaptiveError`
+  supplies the missing consumer interface: outside those sets the exact
+  1000th moments feed the one- and two-prime residue fibers, the additional
+  tail is explicitly `1000R^-10`, and adaptive one-prime, joint, and ordered
+  covariance errors retain the required source powers.
+  `BadIntervalLargePrimeAdaptivePartition` proves the exact mixed pair
+  partition needed by the counted families, using scale `R` for conductor
+  `p` and scale `S` for conductors `p'` and `pp'`; its mixed product moment
+  and literal joint-probability bound compile, and the corresponding joint
+  and covariance errors retain ordered `R^-1.001 S^-1` decay.
+  `BadIntervalLargePrimeAdaptiveBlockSum` now supplies the exact adaptive
+  one-band and two-band consumers and reduces its exceptional pair finset to
+  the two endpoint counts plus adaptive partner fibers. Burgess-cardinality
+  insertion is completed by `BadIntervalLargePrimeAdaptiveSource`, including
+  the exact pair-count shape
+  `R^0.02·#band(S)+#band(R)·S^0.02` and the normalized improved errors in both
+  block sums. Uniform crude specialization, conductor-range geometry, and the
+  final scale sum remain.
+  `BadIntervalCharacterExpansion` proves the exact normalized all-character
+orthogonality identity for such fibers and integrates it on the tuple measure.
+Mutual independence factors the full character expectation into its 1001
+coordinate expectations; these are computed exactly as normalized finite
+dyadic prime-character averages. Norm-one bounds remove the residual and
+distinguished squared coordinate, and a finite weak AM--GM theorem gives the
+literal source reduction to the sum, over all characters and the remaining
+1000 coordinates, of 1000th powers of those prime averages. The tuple modulus
+satisfies the exact estimate `lcm≤2^50 φ(lcm)`, so the fiber coefficient becomes
+`2^50/lcm`; this is inserted into the complete fiftieth-moment sum, reordered
+by coordinate, and pigeonholed with the literal factor `1000`.
+`PrimeCharacterSums` fixes `s_Z(χ)`, the exceptional threshold
+`Z^(-1/125)=Z^(-0.008)`, and the finite exceptional/unexceptional partition of
+primitive nonprincipal characters. It proves the exact unexceptional bound
+`φ(q)Z^(-8)` and reduces the exceptional 1000th moment to the squared moment
+used by Lemma 5.1. Scale separation proves every averaged prime coprime to the
+tuple modulus, justifying exact replacement by primitive counterparts. The
+principal character contributes `1`; fixed-conductor fibers inject into the
+primitive nonprincipal characters, and the complete ambient moment is bounded
+by a divisor sum of exceptional squares and `φ(d)Z^(-8)` errors. Lemma 5.1's
+consumer is inserted termwise into the ordered tuple sum and then into the
+complete fiftieth moment after coordinate pigeonholing. Proving the resulting
+explicit finite sum now continues in `SmallPrimeMertens`: the lcm is exactly
+the product of the distinct selected-prime support, support multiplicities sum
+to 50, and the tuple coefficient splits into one `log p/p` factor per support
+prime and repeated logarithms of exact total exponent `50-#support`. The
+proved bound `weightedPrimeLogSum Y ≤ log 4 * (2 + log Y)` gives an explicit
+pointwise estimate, while every fixed ordered prime tuple has at most `H^50`
+admissible shift tuples and a generic fiberwise theorem removes those shifts.
+Exact support regrouping, a `50^50` support-fiber bound, and the proved
+elementary-symmetric inequality now sum every ordered-prime equality pattern,
+yielding an explicit `H^50 O(log(cutoff)^50)` coefficient bound. An exact
+three-way conductor split isolates the exceptional squared moments; the
+principal term obeys the Mertens bound and the `φ(d)P^-8` term is closed via
+the totient-divisor identity and Chebyshev theta. `ExceptionalCharacterBHM`
+proves the exact finite weighted Bombieri--Halász--Montgomery inequality used
+as Lemma 5.3, reduces its Schur hypotheses to one Hermitian Gram-row bound,
+recovers the prime sum from the weighted prime indicator, splits that row into
+its diagonal and `J-1` off-diagonal terms, divides by the exact prime-band
+cardinality to recover `s_Z`, and proves the exact threshold Markov inequality
+`J Z^(-2/125) ≤ ∑|s_Z|²`. The Burgess estimate and the
+construction/bound for the fundamental-lemma sieve weights remain before
+Lemma 5.1 and its exceptional-term application can close.
+`FundamentalSieveWeights` records the literal truncated divisor sum from Lemma
+5.4. It proves `ν(p)=1` throughout the dyadic prime band above the level, the
+exact identity `Σ_{1≤n≤X}ν(n)=Σ_{d≤R}⌊X/d⌋λ_d`, and the elementary coefficient
+`ℓ¹` bound. It also proves the exact error bound
+`|Σν-XΣλ_d/d|≤R` and transfers any coefficient main-mass bound to
+`Σν≤XB+R`. Only the fundamental-lemma coefficient construction, squarefree
+support, nonnegativity, and logarithmic main-mass estimate remain on the sieve
+side.
+`SelbergPrimeWeights` now provides a fully proved real-valued alternative from
+the frozen Selberg-sieve library. Its upper-Möbius coefficients are supported
+at level `R`, give a globally nonnegative divisor weight equal to one on primes
+above `R`, and have main mass at most `2/log R`. The coefficient estimate
+`3^ω(d)` yields the explicit total-mass bound
+`2X/log R+R(1+log R)^3`. This suffices for the intended power separation, but
+is explicitly not identified with Tao's `{−1,0,1}` Rosser weights.
+`ExceptionalCharacterSelberg` carries that concrete weight through the full
+finite BHM reduction. It proves the exact divisor expansion, reindexes the
+restricted sums as ordinary prefixes, uses multiplicativity and norm-one
+control to remove the divisor factor, closes the diagonal, and produces the
+normalized second-moment estimate with only a uniform unshifted Burgess
+prefix bound remaining.
+`ExceptionalCharacterFamilies` supplies the dependent primitive `q₁q₂`
+family behind that bound. It proves the exact common-factor lcm formula, the
+pair level's squarefreeness and `Z^3.09` bound, and the equality between the
+raw conjugated correlation and a single quotient Dirichlet-character value,
+including the nonunit cases. `ExceptionalCharacterBurgess` then narrows the
+terminal hypothesis to the actual sieve prefixes `⌊(2Z-1)/d⌋` and exposes the
+source-shaped proposition-valued cubefree Burgess statement with saving
+`0.0163`, fixed cutoff, and range `q≤H^3.1`. `ExceptionalCharacterScales`
+defines the canonical `R=⌊Z^0.0001⌋`, proves every requested prefix eventually
+lies above the cutoff and uniformly meets the period range, and uses Bertrand
+to discharge band nonemptiness. Therefore the family BHM estimate now awaits
+only the analytic Burgess target. `ExceptionalCharacterNormalization` proves
+that the exact half-open band cardinality is `π′(2Z)-π′(Z)`, is asymptotic to
+`Z/log Z`, and is eventually at least `Z/(2 log Z)`.
+`ExceptionalCharacterAbsorption` proves the Selberg main and floor-error terms
+are `O(Z/log Z)` and uses
+`0.016+0.0001+(1-0.0163)=1-0.0002` to make the off-diagonal term
+`o(Z/log Z)` whenever `J≤A Z^0.016`. The normalized moment constant is
+therefore independent of `A`. Truncating an arbitrary family at
+`⌊A Z^0.016⌋` and applying the exceptional threshold closes Tao's
+self-improving bootstrap. Conditional only on explicit Burgess, the final
+theorem gives both `J≪Z^0.016` and the bounded squared moment. Only the
+analytic Burgess proof remains in Lemma 5.1.
+`ExceptionalCharacterFixedLevel` then specializes the heterogeneous theorem
+to the literal fixed-conductor exceptional finsets by taking `q₂=1`. It proves
+exact cardinality and squared-sum transport and records the source's full
+`O(λ⁻²)` tail statement, conditional only on explicit Burgess.
+`ExceptionalCharacterAggregate` proves the needed cross-conductor uniqueness:
+primitive characters with equal lcm lifts have equal levels and are equal
+after transport. It then maps the dependent sigma of all exceptional
+characters over an arbitrary admissible finite conductor set into one
+automatically separated `q₁=1` family. Total cardinality and the full double
+squared-moment sum are exact, so explicit Burgess supplies one uniform bound
+for the whole conductor set rather than a non-uniform bound conductor by
+conductor.
+`SmallPrimeExceptionalConductors` instantiates the finite conductor universe
+from the actual tuple expansion. Tuple moduli and all their divisor conductors
+are squarefree, and the entire union lies below the explicit `cutoff^50`
+bound. The rounded inequality `cutoff^50<⌊z^(9/10)⌋` and its monotone
+Burgess-range consequence are proved eventually. The maximal finite set of
+all admissible squarefree conductors supplies one eventual moment constant
+for every admissible subset and all 1001 selectors. Pointwise insertion and
+the exact logarithmic-lcm Mertens coefficient absorb
+`taoSmallPrimeExceptionalConductorSum` into the principal majorant. The scale
+bound also gives `P_j⁻⁸ cutoff⁵⁰≤1`, which absorbs the explicit totient error.
+Thus the entire literal small-prime fiftieth moment is bounded by a fixed
+multiple of the principal majorant conditional only on Burgess.
 None of Theorems 1.7--1.10 is complete or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.

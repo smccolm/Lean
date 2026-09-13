@@ -247,6 +247,50 @@ theorem bombieri_inequality {I : Type*} [Fintype I]
   intro z
   exact finiteSynthesis_energy_le_of_gram_bounds u z B hrow hcol
 
+/-- The Gram matrix of a finite family is Hermitian.  We state the consequence
+at the level of norms, which is exactly what converts the row bound in the
+Bombieri--Halász--Montgomery lemma into the column bound needed by Schur's
+test. -/
+theorem norm_finiteGram_comm {I : Type*} [Fintype I]
+    (u : A → I → ℂ) (a b : A) :
+    ‖finiteGram u a b‖ = ‖finiteGram u b a‖ := by
+  unfold finiteGram
+  have hconj :
+      conj (∑ i, starRingEnd ℂ (u a i) * u b i) =
+        ∑ i, starRingEnd ℂ (u b i) * u a i := by
+    simp only [map_sum, map_mul, starRingEnd_apply]
+    apply sum_congr rfl
+    intro i _hi
+    simp
+    ring
+  calc
+    ‖∑ i, starRingEnd ℂ (u a i) * u b i‖ =
+        ‖star (∑ i, starRingEnd ℂ (u a i) * u b i)‖ :=
+      (norm_star _).symm
+    _ = ‖∑ i, starRingEnd ℂ (u b i) * u a i‖ :=
+      congrArg norm hconj
+
+/-- Finite Bombieri--Halász--Montgomery inequality in its source form: because
+the Gram matrix is Hermitian, a uniform absolute row-sum bound alone controls
+the square energy of all scalar products.  This is Lemma 5.3 of Tao's paper
+after choosing coordinates in the finite weighted pre-Hilbert space. -/
+theorem bombieri_halasz_montgomery_inequality
+    {I : Type*} [Fintype I] [Fintype A]
+    (u : A → I → ℂ) (f : I → ℂ) (B : ℝ)
+    (hB : 0 ≤ B)
+    (hrow : ∀ a, ∑ b, ‖finiteGram u a b‖ ≤ B) :
+    ∑ a, Complex.normSq (finiteAnalysis u f a) ≤
+      B * ∑ i, Complex.normSq (f i) := by
+  apply bombieri_inequality u f B hB hrow
+  intro b
+  calc
+    (∑ a, ‖finiteGram u a b‖) =
+        ∑ a, ‖finiteGram u b a‖ := by
+      apply sum_congr rfl
+      intro a _ha
+      exact norm_finiteGram_comm u a b
+    _ ≤ B := hrow b
+
 end
 
 end Tao2026
