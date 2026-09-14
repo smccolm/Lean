@@ -181,6 +181,26 @@ def taoLargePrimeCovariance
   taoLargePrimeJointProbability P hP m' a b -
     taoLargePrimeProbability P hP m' a * taoLargePrimeProbability P hP m' b
 
+theorem taoLargePrimeJointProbability_comm
+    (P : Fin 1001 → ℕ) (hP : ∀ j, (taoDyadicPrimeBand (P j)).Nonempty)
+    (m' : ℕ) (a b : ℕ × ℕ) :
+    taoLargePrimeJointProbability P hP m' a b =
+      taoLargePrimeJointProbability P hP m' b a := by
+  unfold taoLargePrimeJointProbability
+  congr 2
+  ext w
+  simp only [TaoLargePrimeJointDivisibilityEvent]
+  tauto
+
+theorem taoLargePrimeCovariance_comm
+    (P : Fin 1001 → ℕ) (hP : ∀ j, (taoDyadicPrimeBand (P j)).Nonempty)
+    (m' : ℕ) (a b : ℕ × ℕ) :
+    taoLargePrimeCovariance P hP m' a b =
+      taoLargePrimeCovariance P hP m' b a := by
+  rw [taoLargePrimeCovariance, taoLargePrimeCovariance,
+    taoLargePrimeJointProbability_comm]
+  ring
+
 def taoLargePrimeVariance
     (P : Fin 1001 → ℕ) (hP : ∀ j, (taoDyadicPrimeBand (P j)).Nonempty)
     (lowerPrime upperPrime H m' : ℕ) : ℝ :=

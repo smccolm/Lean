@@ -369,6 +369,21 @@ theorem eventually_taoTypicalLengthCutoff_le_sourceDyadicScale_sub_one :
     exact_mod_cast hH.trans hscale.1
   omega
 
+/-- The source shift cutoff is eventually below the literal lower prime
+cutoff, as required by the diagonal/off-diagonal variance reduction. -/
+theorem eventually_taoTypicalLengthCutoff_le_sourceLowerCutoff :
+    ∀ᶠ x : ℕ in atTop,
+      taoTypicalLengthCutoff x ≤ taoLargePrimeSourceLowerCutoff x := by
+  filter_upwards
+    [eventually_const_mul_taoTypicalLengthCutoff_le_taoZ_rpow
+      (C := (2 : ℝ)) (δ := (1 / 200 : ℝ)) (by norm_num) (by norm_num),
+      eventually_two_mul_taoZ_rpow_one_two_hundred_le_sourceLowerCutoff] with
+      x hlength hlower
+  have hcast : (taoTypicalLengthCutoff x : ℝ) ≤
+      (taoLargePrimeSourceLowerCutoff x : ℝ) := by
+    nlinarith [Real.rpow_nonneg (taoZ_pos x).le (1 / 200 : ℝ)]
+  exact_mod_cast hcast
+
 /-- The number of retained scales is at most four logarithms of `z`. -/
 theorem eventually_card_taoLargePrimeSourceDyadicExponents_cast_le_log :
     ∀ᶠ x : ℕ in atTop,

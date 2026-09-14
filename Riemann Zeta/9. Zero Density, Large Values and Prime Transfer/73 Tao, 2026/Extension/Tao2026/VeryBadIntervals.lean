@@ -28,6 +28,12 @@ def SylvesterSchurConclusion : Prop :=
   ∀ {N H : ℕ}, 1 ≤ H → H < N →
     ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H
 
+/-- The bounded-length part of Sylvester--Schur.  The starts remain uniform
+and unbounded; only the interval length is restricted by `B`. -/
+def SylvesterSchurBelow (B : ℕ) : Prop :=
+  ∀ {N H : ℕ}, 1 ≤ H → H < B → H < N →
+    ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H
+
 /-- The strictly weaker Sylvester--Schur window sufficient for Tao's scale
 bound: a large prime is needed only when `H² > 2N`. -/
 def QuadraticWindowSylvesterSchurConclusion : Prop :=
@@ -239,14 +245,181 @@ theorem card_primesBelow_succ_eq_primeCounting (H : ℕ) :
     (H + 1).primesBelow.card = H.primeCounting := by
   simpa [Nat.primesLE] using Nat.primesLE_card_eq_primeCounting H
 
-/-- Uniformly in the quadratic window `2N < H²`, the binomial coefficient
-eventually exceeds the complete small-prime factorization envelope. -/
-theorem eventually_quadraticWindow_choose_growth :
-    ∀ᶠ H : ℕ in atTop, ∀ N : ℕ, H < N → 2 * N < H ^ 2 →
+/-- The number of primes at most a positive natural `H` is strictly smaller
+than `H`.  The proof uses the elementary lower bound on the `n`th prime. -/
+theorem primeCounting_lt_self {H : ℕ} (hH : 1 ≤ H) :
+    H.primeCounting < H := by
+  have hle : H.primeCounting ≤ H - 1 := by
+    change Nat.count Nat.Prime (H + 1) ≤ H - 1
+    rw [Nat.count_le_iff_le_nth Nat.infinite_setOf_prime]
+    change H + 1 ≤ Nat.nth Nat.Prime (H - 1)
+    have h := Nat.add_two_le_nth_prime (H - 1)
+    omega
+  omega
+
+/-- The elementary power comparison needed to propagate the binomial growth
+inequality from `n` to `n+1`. -/
+theorem pow_succ_sub_mul_le {n k r : ℕ}
+    (hrk : r ≤ k) (hkn : k ≤ n) :
+    (n + 1) ^ r * (n + 1 - k) ≤ n ^ r * (n + 1) := by
+  have hn1 : (0 : ℝ) < n + 1 := by positivity
+  have hn0 : (0 : ℝ) ≤ n := by positivity
+  have haNonneg : (0 : ℝ) ≤ (n : ℝ) / (n + 1) :=
+    div_nonneg hn0 hn1.le
+  have ha : (-1 : ℝ) ≤ (n : ℝ) / (n + 1) := by linarith
+  have hbern := one_add_mul_sub_le_pow ha r
+  have hsub : (n + 1 - k : ℕ) ≤ n + 1 - r :=
+    Nat.sub_le_sub_left hrk (n + 1)
+  have hrealSub : ((n + 1 - k : ℕ) : ℝ) ≤ (n + 1 : ℝ) - r := by
+    calc
+      ((n + 1 - k : ℕ) : ℝ) ≤ ((n + 1 - r : ℕ) : ℝ) := by
+        exact_mod_cast hsub
+      _ = (n + 1 : ℝ) - r := by
+        rw [Nat.cast_sub (hrk.trans (hkn.trans (Nat.le_add_right n 1)))]
+        norm_num
+  have hratio :
+      ((n + 1 - k : ℕ) : ℝ) / (n + 1) ≤
+        ((n : ℝ) / (n + 1)) ^ r := by
+    calc
+      ((n + 1 - k : ℕ) : ℝ) / (n + 1) ≤
+          ((n + 1 : ℝ) - r) / (n + 1) :=
+        (div_le_div_iff_of_pos_right hn1).2 hrealSub
+      _ = 1 + (r : ℝ) * ((n : ℝ) / (n + 1) - 1) := by
+        field_simp
+        ring
+      _ ≤ ((n : ℝ) / (n + 1)) ^ r := hbern
+  have hreal :
+      ((n + 1 : ℕ) ^ r * (n + 1 - k) : ℕ) ≤
+        (n ^ r * (n + 1) : ℕ) := by
+    exact_mod_cast (show
+      ((n + 1 : ℝ) ^ r) * (n + 1 - k : ℕ) ≤
+        (n : ℝ) ^ r * (n + 1) by
+      calc
+        ((n + 1 : ℝ) ^ r) * (n + 1 - k : ℕ) =
+            (n + 1 : ℝ) ^ (r + 1) *
+              ((n + 1 - k : ℕ) / (n + 1 : ℝ)) := by
+                field_simp
+                ring
+        _ ≤ (n + 1 : ℝ) ^ (r + 1) *
+              ((n : ℝ) / (n + 1)) ^ r :=
+          mul_le_mul_of_nonneg_left hratio (pow_nonneg hn1.le _)
+        _ = (n : ℝ) ^ r * (n + 1) := by
+          rw [div_pow]
+          field_simp
+          ring)
+  exact hreal
+
+/-- If the binomial growth inequality holds at `n`, it also holds at `n+1`
+whenever its exponent is strictly smaller than the lower index. -/
+theorem choose_growth_succ {n k r : ℕ}
+    (hkn : k ≤ n) (hrk : r < k)
+    (hgrowth : n ^ r < n.choose k) :
+    (n + 1) ^ r < (n + 1).choose k := by
+  have hfactor := pow_succ_sub_mul_le hrk.le hkn
+  have hstrict : n ^ r * (n + 1) < n.choose k * (n + 1) :=
+    (Nat.mul_lt_mul_right (by omega : 0 < n + 1)).2 hgrowth
+  rw [Nat.choose_mul_succ_eq] at hstrict
+  exact Nat.lt_of_mul_lt_mul_right (hfactor.trans_lt hstrict)
+
+/-- The binomial growth inequality propagates from one threshold to every
+larger upper index. -/
+theorem choose_growth_of_le {m n k r : ℕ}
+    (hkm : k ≤ m) (hrk : r < k) (hmn : m ≤ n)
+    (hgrowth : m ^ r < m.choose k) :
+    n ^ r < n.choose k := by
+  induction n, hmn using Nat.le_induction with
+  | base => exact hgrowth
+  | succ n hmn ih =>
+      exact choose_growth_succ (hkm.trans hmn) hrk ih
+
+/-- A canonical explicit upper-index threshold for a fixed positive interval
+length.  It is deliberately coarse, but makes the residual case set finite. -/
+def sylvesterSchurBinomialThreshold (H : ℕ) : ℕ := H ^ H + 1
+
+/-- At the canonical threshold, the binomial coefficient already exceeds the
+complete small-prime factorization envelope. -/
+theorem sylvesterSchurBinomialThreshold_choose_growth {H : ℕ} (hH : 1 ≤ H) :
+    sylvesterSchurBinomialThreshold H ^ (H + 1).primesBelow.card <
+      (sylvesterSchurBinomialThreshold H).choose H := by
+  let r := (H + 1).primesBelow.card
+  let T := sylvesterSchurBinomialThreshold H
+  have hrH : r < H := by
+    dsimp [r]
+    rw [card_primesBelow_succ_eq_primeCounting]
+    exact primeCounting_lt_self hH
+  have hHT : H ≤ T := by
+    dsimp [T, sylvesterSchurBinomialThreshold]
+    have : H ≤ H ^ H := le_self_pow hH (by omega)
+    omega
+  have hTPos : 0 < T := by simp [T, sylvesterSchurBinomialThreshold]
+  have hbase : H ^ H < T := by simp [T, sylvesterSchurBinomialThreshold]
+  have hexpPos : H - r ≠ 0 := by omega
+  have hbasePow : T ≤ T ^ (H - r) :=
+    le_self_pow (by omega) hexpPos
+  have hfactor : H ^ H < T ^ (H - r) := hbase.trans_le hbasePow
+  have hpowStrict : T ^ r * H ^ H < T ^ H := by
+    calc
+      T ^ r * H ^ H < T ^ r * T ^ (H - r) :=
+        (Nat.mul_lt_mul_left (pow_pos hTPos r)).2 hfactor
+      _ = T ^ H := by rw [← pow_add]; congr 1; omega
+  have hlower : T ^ H ≤ T.choose H * H ^ H :=
+    pow_le_choose_mul_pow hHT
+  have hmul : T ^ r * H ^ H < T.choose H * H ^ H :=
+    hpowStrict.trans_le hlower
+  exact Nat.lt_of_mul_lt_mul_right hmul
+
+/-- Above the canonical fixed-length threshold, the large prime follows from
+the propagated binomial growth inequality. -/
+theorem exists_large_prime_dvd_consecutiveProduct_of_threshold_le
+    {N H : ℕ} (hH : 1 ≤ H)
+    (hthreshold : sylvesterSchurBinomialThreshold H ≤ N + H) :
+    ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H := by
+  have hrH : (H + 1).primesBelow.card < H := by
+    rw [card_primesBelow_succ_eq_primeCounting]
+    exact primeCounting_lt_self hH
+  have hHT : H ≤ sylvesterSchurBinomialThreshold H := by
+    dsimp [sylvesterSchurBinomialThreshold]
+    have : H ≤ H ^ H := le_self_pow hH (by omega)
+    omega
+  have hgrowth :
+      (N + H) ^ (H + 1).primesBelow.card < (N + H).choose H :=
+    choose_growth_of_le hHT hrH hthreshold
+      (sylvesterSchurBinomialThreshold_choose_growth hH)
+  have hsumPos : 0 < N + H := by omega
+  obtain ⟨p, hpPrime, hHltp, hpChoose⟩ :=
+    exists_large_prime_dvd_choose_of_pow_card_lt
+      (show H ≤ N + H by omega) hsumPos hgrowth
+  refine ⟨p, hpPrime, hHltp, ?_⟩
+  rw [consecutiveProduct_eq_ascFactorial,
+    Nat.ascFactorial_eq_factorial_mul_choose]
+  exact dvd_mul_of_dvd_right hpChoose H.factorial
+
+/-- The genuinely finite residual rectangle: both the interval length and
+the start are bounded (the latter through the explicit binomial threshold). -/
+def SylvesterSchurFiniteRectangle (B : ℕ) : Prop :=
+  ∀ {N H : ℕ}, 1 ≤ H → H < B → H < N →
+    N + H < sylvesterSchurBinomialThreshold H →
+    ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H
+
+/-- A proof on the finite rectangle supplies every start for every length
+below `B`, because the canonical threshold handles the remaining starts. -/
+theorem sylvesterSchurBelow_of_finiteRectangle {B : ℕ}
+    (hrect : SylvesterSchurFiniteRectangle B) : SylvesterSchurBelow B := by
+  intro N H hH hHB hHN
+  by_cases hsmall : N + H < sylvesterSchurBinomialThreshold H
+  · exact hrect hH hHB hHN hsmall
+  · exact exists_large_prime_dvd_consecutiveProduct_of_threshold_le hH
+      (Nat.le_of_not_gt hsmall)
+
+/-- Uniformly over every start `N > H`, the binomial coefficient eventually
+exceeds the complete small-prime factorization envelope.  In particular, the
+Sylvester--Schur conclusion has only finitely many interval lengths left. -/
+theorem eventually_sylvesterSchur_choose_growth :
+    ∀ᶠ H : ℕ in atTop, ∀ N : ℕ, H < N →
       (N + H) ^ (H + 1).primesBelow.card < (N + H).choose H := by
   filter_upwards [eventually_primeCounting_le_eleven_tenths,
     eventually_quadraticWindow_log_margin,
-    eventually_ge_atTop (4 : ℕ)] with H hpi hmargin hH N hHN hwindow
+    eventually_ge_atTop (4 : ℕ)] with H hpi hmargin hH N hHN
   let A : ℝ := Real.log (N + H)
   let L : ℝ := Real.log H
   have hHPos : 0 < H := by omega
@@ -377,6 +550,65 @@ theorem eventually_quadraticWindow_choose_growth :
         (N + H) ^ H ≤ (N + H).choose H * H ^ H :=
       pow_le_choose_mul_pow (by omega)
     exact Nat.lt_of_mul_lt_mul_right (hpow.trans_le hlower)
+
+/-- The formerly quadratic-window binomial estimate is an immediate
+specialization of the uniform Sylvester--Schur tail estimate. -/
+theorem eventually_quadraticWindow_choose_growth :
+    ∀ᶠ H : ℕ in atTop, ∀ N : ℕ, H < N → 2 * N < H ^ 2 →
+      (N + H) ^ (H + 1).primesBelow.card < (N + H).choose H := by
+  filter_upwards [eventually_sylvesterSchur_choose_growth] with H hgrowth N hHN hwindow
+  exact hgrowth N hHN
+
+/-- For every sufficiently large interval length, every start `N > H` has a
+prime divisor exceeding `H` in the product `N+1, ..., N+H`. -/
+theorem eventually_exists_large_prime_dvd_consecutiveProduct :
+    ∀ᶠ H : ℕ in atTop, ∀ N : ℕ, H < N →
+      ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H := by
+  filter_upwards [eventually_sylvesterSchur_choose_growth] with H hgrowth N hHN
+  have hsumPos : 0 < N + H := by omega
+  obtain ⟨p, hpPrime, hHltp, hpChoose⟩ :=
+    exists_large_prime_dvd_choose_of_pow_card_lt
+      (show H ≤ N + H by omega) hsumPos (hgrowth N hHN)
+  refine ⟨p, hpPrime, hHltp, ?_⟩
+  rw [consecutiveProduct_eq_ascFactorial,
+    Nat.ascFactorial_eq_factorial_mul_choose]
+  exact dvd_mul_of_dvd_right hpChoose H.factorial
+
+/-- The analytic binomial estimate supplies a concrete (though not here
+numerically evaluated) cutoff above which unrestricted Sylvester--Schur holds. -/
+theorem exists_sylvesterSchur_tailCutoff :
+    ∃ B : ℕ, ∀ {N H : ℕ}, B ≤ H → H < N →
+      ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H := by
+  obtain ⟨B, hB⟩ :=
+    Filter.eventually_atTop.1 eventually_exists_large_prime_dvd_consecutiveProduct
+  exact ⟨B, fun {N H} hBH hHN => hB H hBH N hHN⟩
+
+/-- A bounded-length certificate below the analytic cutoff closes the full
+Sylvester--Schur contract. -/
+theorem sylvesterSchurConclusion_of_below_of_tailCutoff
+    {B : ℕ} (hbelow : SylvesterSchurBelow B)
+    (htail : ∀ {N H : ℕ}, B ≤ H → H < N →
+      ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H) :
+    SylvesterSchurConclusion := by
+  intro N H hH hHN
+  by_cases hHB : H < B
+  · exact hbelow hH hHB hHN
+  · exact htail (Nat.le_of_not_gt hHB) hHN
+
+/-- Consequently, the remaining unrestricted Sylvester--Schur obligation is
+exactly a bounded set of interval lengths (still uniformly over all starts). -/
+theorem exists_sylvesterSchur_finiteLengthReduction :
+    ∃ B : ℕ, SylvesterSchurBelow B → SylvesterSchurConclusion := by
+  obtain ⟨B, htail⟩ := exists_sylvesterSchur_tailCutoff
+  exact ⟨B, fun hbelow =>
+    sylvesterSchurConclusion_of_below_of_tailCutoff hbelow htail⟩
+
+/-- Combining the analytic length tail with the canonical fixed-length start
+threshold reduces the full theorem to a genuinely finite rectangle. -/
+theorem exists_sylvesterSchur_finiteRectangleReduction :
+    ∃ B : ℕ, SylvesterSchurFiniteRectangle B → SylvesterSchurConclusion := by
+  obtain ⟨B, hreduce⟩ := exists_sylvesterSchur_finiteLengthReduction
+  exact ⟨B, fun hrect => hreduce (sylvesterSchurBelow_of_finiteRectangle hrect)⟩
 
 /-- The large prime required in Tao's quadratic window exists uniformly for
 all starts once the interval length is sufficiently large. -/

@@ -34,6 +34,64 @@ local artifact is therefore the byte-identical identity recorded here from the
 accessible University of Maryland archival mirror; the DOI above remains the
 bibliographic authority.
 
+## Burgess prime-modulus precursor
+
+- Author: D. A. Burgess
+- Title: *On character sums and primitive roots*
+- Original journal: *Proceedings of the London Mathematical Society*, Series
+  3, 12 (1962), 179--192
+- MathNet archival record: <https://www.mathnet.ru/eng/mat267>
+- Archived PDF origin:
+  <https://www.mathnet.ru/php/getFT.phtml?jrnid=mat&option_lang=eng&paperid=267&what=fullt>
+- Archived edition: Russian translation by O. M. Fomenko, *Matematika* 7:4
+  (1963), 3--16
+- Retrieved: 14 September 2026
+- Local artifact: `burgess-character-sums-primitive-roots-1962.pdf`
+- Source locators: Theorem 1 is on original/archived PDF page 1 and gives the
+  prime-modulus character-sum estimate for arbitrary positive integer `r`.
+  Lemma 2, beginning on archived PDF page 5, proves the complete `2r`-th
+  moment estimate; Lemma 3 begins on archived PDF page 7 and selects disjoint
+  intervals; Lemma 4 begins on archived PDF page 8 and supplies the
+  amplification lower bound. The proof combines Lemmas 2 and 4.
+
+This is the first paper in Tao's three-item Burgess citation bundle and
+records the original prime-modulus proof architecture. It is not the 1963
+composite cube-free theorem that supplies Tao's required all-`r`, `r = 7`
+case. The latter remains an unpinned analytic source and an unformalized
+boundary; this artifact is source evidence, not a Lean dependency.
+
+## Modern explicit cube-free Burgess proof architecture
+
+- Authors: Elchin Hasanalizade, Hua Lin, Greg Martin, Andradis Luna Martínez,
+  and Enrique Treviño
+- Title: *Explicit Burgess inequalities for cubefree moduli*
+- arXiv: `2511.17778v2`
+- Version date: 29 August 2026
+- Abstract record: <https://arxiv.org/abs/2511.17778v2>
+- PDF origin: <https://arxiv.org/pdf/2511.17778v2>
+- TeX source origin: <https://arxiv.org/e-print/2511.17778v2>
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Retrieved: 14 September 2026
+- Local artifacts: `explicit-burgess-cubefree-2511.17778v2.pdf` and
+  `explicit-burgess-cubefree-2511.17778v2.tar`
+- Source locators: Theorem 1.1 gives the explicit cube-free Burgess bound;
+  Theorem 1.3, labeled `weil` in
+  `Explicit_Burgess_for_composite_moduli_HLLMT.tex`, gives the exact shifted
+  `2r`-th moment; Lemma 2.1, labeled `burgess weil`, isolates Burgess's
+  composite-modulus complete rational-function character sum; Lemmas 2.3 and
+  2.4 bound the resulting gcd tuple sum; the proof immediately following
+  them expands the moment and separates tuples with at least `r+1` distinct
+  shifts from the diagonal tuples.
+
+This modern paper is pinned as an accessible, explicit proof architecture for
+formalization. It is not silently substituted for Tao's cited theorem, and
+none of its analytic results is asserted as a Lean theorem. In particular,
+its Lemma 2.1 still cites Burgess's 1962 Lemma 7 and 1963 Lemma 8; the latter
+original source remains locally unavailable. The intended formal reduction
+is to kernel-check the finite moment expansion and gcd combinatorics, leaving
+that complete Weil-type character sum as the sharply identified analytic
+boundary.
+
 ## Granville smooth-number input
 
 - Author: Andrew Granville

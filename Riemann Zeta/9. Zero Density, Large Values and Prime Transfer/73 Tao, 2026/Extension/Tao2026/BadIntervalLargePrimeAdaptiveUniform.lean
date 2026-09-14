@@ -606,7 +606,7 @@ theorem exists_eventually_forall_sum_taoLargePrimeProbability_adaptive_sourceBlo
 /-- Proposition 6.8's ordered adaptive covariance block holds
 simultaneously on every ordered pair of retained source scales, with one
 Burgess constant. -/
-theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoBand_le
+theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoBand_restrict_le
     {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
     (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
     {P : ℕ → Fin 1001 → ℕ} (hscale : TaoPrimeTupleSourceScaleFamily P)
@@ -616,11 +616,11 @@ theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoB
       ∀ r ∈ taoLargePrimeSourceDyadicExponents x,
       ∀ s ∈ taoLargePrimeSourceDyadicExponents x, r ≤ s →
       ∀ hP : ∀ j, (taoDyadicPrimeBand (P x j)).Nonempty,
-      (∑ a ∈ taoLargeAntiSieveIndices
-          (2 ^ r - 1) (2 * 2 ^ r - 1) (H x),
-        ∑ b ∈ (taoLargeAntiSieveIndices
-          (2 ^ s - 1) (2 * 2 ^ s - 1) (H x)).filter
-            (fun b => b.2 ≠ a.2),
+      ∀ DR DS : Finset ℕ,
+      DR ⊆ taoDyadicPrimeBand (2 ^ r) →
+      DS ⊆ taoDyadicPrimeBand (2 ^ s) →
+      (∑ a ∈ (Finset.Ico 1 (H x)).product DR,
+        ∑ b ∈ ((Finset.Ico 1 (H x)).product DS).filter (fun b => b.2 ≠ a.2),
           taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
         ((H x - 1 : ℕ) : ℝ) ^ 2 *
           (((taoDyadicPrimeBand (2 ^ r)).card : ℝ) *
@@ -642,11 +642,11 @@ theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoB
       rs.2 ∈ taoLargePrimeSourceDyadicExponents x ∧ rs.1 ≤ rs.2
   let Good : ℕ → (ℕ × ℕ) → Prop := fun x rs =>
     ∀ hP : ∀ j, (taoDyadicPrimeBand (P x j)).Nonempty,
-      (∑ a ∈ taoLargeAntiSieveIndices
-          (2 ^ rs.1 - 1) (2 * 2 ^ rs.1 - 1) (H x),
-        ∑ b ∈ (taoLargeAntiSieveIndices
-          (2 ^ rs.2 - 1) (2 * 2 ^ rs.2 - 1) (H x)).filter
-            (fun b => b.2 ≠ a.2),
+      ∀ DR DS : Finset ℕ,
+      DR ⊆ taoDyadicPrimeBand (2 ^ rs.1) →
+      DS ⊆ taoDyadicPrimeBand (2 ^ rs.2) →
+      (∑ a ∈ (Finset.Ico 1 (H x)).product DR,
+        ∑ b ∈ ((Finset.Ico 1 (H x)).product DS).filter (fun b => b.2 ≠ a.2),
           taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
         ((H x - 1 : ℕ) : ℝ) ^ 2 *
           (((taoDyadicPrimeBand (2 ^ rs.1)).card : ℝ) *
@@ -707,7 +707,7 @@ theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoB
       hR.eventually_two_le, hS.eventually_two_le,
       tendsto_taoZ_atTop.eventually (eventually_ge_atTop (1 : ℝ))] with
         x hcardX hgeomX herrorX hcrudeX hHRX hHSX hRtwo hStwo hz
-    intro hP
+    intro hP DR DS hDR hDS
     have hcardPair := hcardX (R x) (S x) (R x - 1) (2 * S x - 1)
       hRtwo hStwo hgeomX.1 hgeomX.2.1 hgeomX.2.2.1 hgeomX.2.2.2
     have hB : 0 ≤ 6144 * Real.log (taoZ x) ^ 3 /
@@ -715,8 +715,9 @@ theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoB
       exact div_nonneg
         (mul_nonneg (by norm_num) (pow_nonneg (Real.log_nonneg hz) 3))
         (mul_nonneg (by positivity) (by positivity))
-    have hblock := sum_taoLargePrimeCovariance_adaptive_twoBand_le
-      (P x) hP (R x) (S x) (H x) (m' x) hRtwo hStwo hHRX hHSX
+    have hblock := sum_taoLargePrimeCovariance_adaptive_twoBand_restrict_le
+      (P x) hP (R x) (S x) (H x) (m' x) DR DS hDR hDS
+        hRtwo hStwo hHRX hHSX
         (taoLargePrimeMixedAdaptiveSourceCovariancePowerConstant *
           (R x : ℝ) ^ (-(1001 / 1000 : ℝ)) *
           (S x : ℝ) ^ (-(1 : ℝ)))
@@ -755,8 +756,52 @@ theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoB
   have hall := eventually_forall_of_forall_selector hne hselector
   refine ⟨K, hK, ?_⟩
   filter_upwards [hall] with x hx
+  intro r hr s hs hrs hP DR DS hDR hDS
+  exact hx (r, s) ⟨hr, hs, hrs⟩ hP DR DS hDR hDS
+
+/-- Full-band corollary of the simultaneous restricted covariance block. -/
+theorem exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoBand_le
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    {P : ℕ → Fin 1001 → ℕ} (hscale : TaoPrimeTupleSourceScaleFamily P)
+    (H m' : ℕ → ℕ)
+    (hH : ∀ᶠ x : ℕ in atTop, H x ≤ taoTypicalLengthCutoff x) :
+    ∃ K : ℝ, 0 < K ∧ ∀ᶠ x : ℕ in atTop,
+      ∀ r ∈ taoLargePrimeSourceDyadicExponents x,
+      ∀ s ∈ taoLargePrimeSourceDyadicExponents x, r ≤ s →
+      ∀ hP : ∀ j, (taoDyadicPrimeBand (P x j)).Nonempty,
+      (∑ a ∈ taoLargeAntiSieveIndices
+          (2 ^ r - 1) (2 * 2 ^ r - 1) (H x),
+        ∑ b ∈ (taoLargeAntiSieveIndices
+          (2 ^ s - 1) (2 * 2 ^ s - 1) (H x)).filter
+            (fun b => b.2 ≠ a.2),
+          taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
+        ((H x - 1 : ℕ) : ℝ) ^ 2 *
+          (((taoDyadicPrimeBand (2 ^ r)).card : ℝ) *
+              ((taoDyadicPrimeBand (2 ^ s)).card : ℝ) *
+              (taoLargePrimeMixedAdaptiveSourceCovariancePowerConstant *
+                ((2 ^ r : ℕ) : ℝ) ^ (-(1001 / 1000 : ℝ)) *
+                ((2 ^ s : ℕ) : ℝ) ^ (-(1 : ℝ))) +
+            (K * (((2 ^ r : ℕ) : ℝ) ^ (1 / 50 : ℝ) *
+                ((taoDyadicPrimeBand (2 ^ s)).card : ℝ) +
+              ((taoDyadicPrimeBand (2 ^ r)).card : ℝ) *
+                ((2 ^ s : ℕ) : ℝ) ^ (1 / 50 : ℝ))) *
+              (6144 * Real.log (taoZ x) ^ 3 /
+                (((2 ^ r : ℕ) : ℝ) * ((2 ^ s : ℕ) : ℝ)))) := by
+  obtain ⟨K, hK, hrestricted⟩ :=
+    exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoBand_restrict_le
+      hC hburgess hscale H m' hH
+  refine ⟨K, hK, ?_⟩
+  filter_upwards [hrestricted] with x hx
   intro r hr s hs hrs hP
-  exact hx (r, s) ⟨hr, hs, hrs⟩ hP
+  have h := hx r hr s hs hrs hP
+    (taoDyadicPrimeBand (2 ^ r)) (taoDyadicPrimeBand (2 ^ s))
+      (by rfl) (by rfl)
+  have hRpos : 0 < (2 ^ r : ℕ) := by positivity
+  have hSpos : 0 < (2 ^ s : ℕ) := by positivity
+  have hrangeR := taoLargeAntiSievePrimeRange_sub_eq_dyadicPrimeBand hRpos
+  have hrangeS := taoLargeAntiSievePrimeRange_sub_eq_dyadicPrimeBand hSpos
+  simpa only [taoLargeAntiSieveIndices, hrangeR, hrangeS] using h
 
 /-! ## Final dyadic first-moment summation -/
 
@@ -1099,6 +1144,73 @@ theorem eventually_forall_taoLargePrimeSourceCovarianceBlockMajorant_le
         (taoZ x) ^ (-(1 / 200000 : ℝ)) := add_le_add himproved hexception
     _ = (4 * A + 1) * (taoZ x) ^ (-(1 / 200000 : ℝ)) := by ring
 
+/-- Transposing the two restricted dyadic slices leaves their distinct-prime
+covariance block unchanged. -/
+theorem sum_taoLargePrimeCovariance_sourceDyadicSlices_comm
+    (P : Fin 1001 → ℕ) (hP : ∀ j, (taoDyadicPrimeBand (P j)).Nonempty)
+    (m' x H r s : ℕ) :
+    (∑ a ∈ taoLargePrimeSourceDyadicIndices x r H,
+      ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s H).filter
+          (fun b => b.2 ≠ a.2),
+        taoLargePrimeCovariance P hP m' a b) =
+      ∑ b ∈ taoLargePrimeSourceDyadicIndices x s H,
+        ∑ a ∈ (taoLargePrimeSourceDyadicIndices x r H).filter
+            (fun a => a.2 ≠ b.2),
+          taoLargePrimeCovariance P hP m' b a := by
+  simp_rw [Finset.sum_filter]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro b hb
+  apply Finset.sum_congr rfl
+  intro a ha
+  by_cases hab : a.2 ≠ b.2
+  · rw [if_pos hab, if_pos hab.symm]
+    exact taoLargePrimeCovariance_comm P hP m' a b
+  · rw [if_neg hab, if_neg]
+    exact fun h => hab h.symm
+
+/-- Exact decomposition of the literal source distinct-prime covariance sum
+into ordered pairs of exact dyadic slices. -/
+theorem sum_taoLargePrimeCovariance_sourceIndices_eq_sum_dyadicSlices
+    (P : Fin 1001 → ℕ) (hP : ∀ j, (taoDyadicPrimeBand (P j)).Nonempty)
+    (m' x H : ℕ) :
+    (∑ a ∈ (Finset.Ico 1 H).product (taoLargePrimeSourcePrimes x),
+      ∑ b ∈ ((Finset.Ico 1 H).product
+          (taoLargePrimeSourcePrimes x)).filter (fun b => b.2 ≠ a.2),
+        taoLargePrimeCovariance P hP m' a b) =
+      ∑ r ∈ taoLargePrimeSourceDyadicExponents x,
+        ∑ s ∈ taoLargePrimeSourceDyadicExponents x,
+          ∑ a ∈ taoLargePrimeSourceDyadicIndices x r H,
+            ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s H).filter
+                (fun b => b.2 ≠ a.2),
+              taoLargePrimeCovariance P hP m' a b := by
+  rw [sum_taoLargePrimeSourceIndices_eq_sum_dyadicSlices]
+  apply Finset.sum_congr rfl
+  intro r hr
+  calc
+    (∑ a ∈ taoLargePrimeSourceDyadicIndices x r H,
+        ∑ b ∈ ((Finset.Ico 1 H).product
+            (taoLargePrimeSourcePrimes x)).filter (fun b => b.2 ≠ a.2),
+          taoLargePrimeCovariance P hP m' a b) =
+        ∑ a ∈ taoLargePrimeSourceDyadicIndices x r H,
+          ∑ s ∈ taoLargePrimeSourceDyadicExponents x,
+            ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s H).filter
+                (fun b => b.2 ≠ a.2),
+              taoLargePrimeCovariance P hP m' a b := by
+      apply Finset.sum_congr rfl
+      intro a ha
+      rw [Finset.sum_filter]
+      rw [sum_taoLargePrimeSourceIndices_eq_sum_dyadicSlices]
+      apply Finset.sum_congr rfl
+      intro s hs
+      rw [Finset.sum_filter]
+    _ = ∑ s ∈ taoLargePrimeSourceDyadicExponents x,
+          ∑ a ∈ taoLargePrimeSourceDyadicIndices x r H,
+            ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s H).filter
+                (fun b => b.2 ≠ a.2),
+              taoLargePrimeCovariance P hP m' a b := by
+      rw [Finset.sum_comm]
+
 /-- The complete ordered off-diagonal covariance sum over source dyadic
 scales is `O(H)`; the tiny block power saving absorbs both the scale count
 and the second factor of `H`. -/
@@ -1266,6 +1378,234 @@ theorem eventually_sum_taoLargePrimeCovariance_adaptive_orderedSourceDyadicScale
         (mul_le_mul_of_nonneg_right hcoefficient (by positivity)) (by positivity)
     _ = (H x : ℝ) := by
       rw [mul_inv_cancel₀ hZδpos.ne', mul_one]
+
+/-- Proposition 6.8's complete off-diagonal covariance sum on the literal
+source prime range is `O(H)`. -/
+theorem eventually_sum_taoLargePrimeCovariance_sourceCutoffs_le
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    {P : ℕ → Fin 1001 → ℕ} (hscale : TaoPrimeTupleSourceScaleFamily P)
+    (H m' : ℕ → ℕ)
+    (hH : ∀ᶠ x : ℕ in atTop, H x ≤ taoTypicalLengthCutoff x) :
+    ∀ᶠ x : ℕ in atTop,
+      ∀ hP : ∀ j, (taoDyadicPrimeBand (P x j)).Nonempty,
+      (∑ a ∈ taoLargeAntiSieveIndices
+          (taoLargePrimeSourceLowerCutoff x)
+          (taoLargePrimeSourceUpperCutoff x) (H x),
+        ∑ b ∈ (taoLargeAntiSieveIndices
+          (taoLargePrimeSourceLowerCutoff x)
+          (taoLargePrimeSourceUpperCutoff x) (H x)).filter
+            (fun b => b.2 ≠ a.2),
+          taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
+        (H x : ℝ) := by
+  obtain ⟨K, hK, hblocks⟩ :=
+    exists_eventually_forall_sum_taoLargePrimeCovariance_adaptive_sourceTwoBand_restrict_le
+      hC hburgess hscale H m' hH
+  let B : ℝ := 4 * taoLargePrimeMixedAdaptiveSourceCovariancePowerConstant + 1
+  have hA : 0 ≤ taoLargePrimeMixedAdaptiveSourceCovariancePowerConstant := by
+    unfold taoLargePrimeMixedAdaptiveSourceCovariancePowerConstant
+    unfold taoLargePrimeMixedAdaptiveSourceJointPowerConstant
+    unfold taoLargePrimeSourceJointPowerConstant
+    positivity
+  have hB : 0 < B := by dsimp only [B]; linarith
+  have hmajorant :=
+    eventually_forall_taoLargePrimeSourceCovarianceBlockMajorant_le hK.le
+  have hlogAbsorb := eventually_const_mul_log_rpow_taoZ_div_rpow_le
+    (C := 16 * B) (k := (2 : ℝ)) (a := (1 / 400000 : ℝ))
+      (b := (0 : ℝ)) (mul_nonneg (by norm_num) hB.le) (by norm_num)
+  have hlengthAbsorb := eventually_const_mul_taoTypicalLengthCutoff_le_taoZ_rpow
+    (C := (1 : ℝ)) (δ := (1 / 400000 : ℝ)) (by norm_num) (by norm_num)
+  filter_upwards [hblocks, hmajorant,
+    eventually_card_taoLargePrimeSourceDyadicExponents_cast_le_log,
+    hlogAbsorb, hlengthAbsorb, hH,
+    tendsto_taoZ_atTop.eventually (eventually_ge_atTop (Real.exp 1))] with
+      x hblocksX hmajorantX hcardX hlogAbsorbX hlengthAbsorbX hHX hz
+  intro hP
+  let L : ℝ := Real.log (taoZ x)
+  let Zδ : ℝ := (taoZ x) ^ (1 / 200000 : ℝ)
+  let Zhalf : ℝ := (taoZ x) ^ (1 / 400000 : ℝ)
+  have hLone : 1 ≤ L := by
+    dsimp only [L]
+    simpa only [Real.log_exp] using Real.log_le_log (by positivity) hz
+  have hLpos : 0 < L := zero_lt_one.trans_le hLone
+  have hZδpos : 0 < Zδ := by
+    dsimp only [Zδ]
+    exact Real.rpow_pos_of_pos (taoZ_pos x) _
+  have hZhalfPos : 0 < Zhalf := by
+    dsimp only [Zhalf]
+    exact Real.rpow_pos_of_pos (taoZ_pos x) _
+  have hlogAbsorbNat : 16 * B * L ^ (2 : ℕ) ≤ Zhalf := by
+    have hx := hlogAbsorbX
+    rw [Real.rpow_zero, div_one] at hx
+    have hx' : 16 * B * L ^ (2 : ℕ) / Zhalf ≤ 1 := by
+      rw [show L ^ (2 : ℕ) = L ^ (2 : ℝ) from
+        (Real.rpow_natCast L 2).symm]
+      simpa only [L, Zhalf] using hx
+    have := (div_le_iff₀ hZhalfPos).mp hx'
+    simpa only [one_mul] using this
+  have hlengthPower : (H x : ℝ) ≤ Zhalf := by
+    calc
+      (H x : ℝ) ≤ (taoTypicalLengthCutoff x : ℝ) := by
+        exact_mod_cast hHX
+      _ = 1 * (taoTypicalLengthCutoff x : ℝ) := by ring
+      _ ≤ Zhalf := by simpa only [Zhalf] using hlengthAbsorbX
+  have hhalfSquare : Zhalf * Zhalf = Zδ := by
+    dsimp only [Zhalf, Zδ]
+    rw [← Real.rpow_add (taoZ_pos x)]
+    congr 1
+    norm_num
+  have hcoefficient : (4 * L) ^ (2 : ℕ) * B * (H x : ℝ) ≤ Zδ := by
+    calc
+      (4 * L) ^ (2 : ℕ) * B * (H x : ℝ) =
+          (16 * B * L ^ (2 : ℕ)) * (H x : ℝ) := by ring
+      _ ≤ Zhalf * Zhalf :=
+        mul_le_mul hlogAbsorbNat hlengthPower (by positivity) hZhalfPos.le
+      _ = Zδ := hhalfSquare
+  have hHsub : (((H x - 1 : ℕ) : ℝ) : ℝ) ≤ (H x : ℝ) := by
+    exact_mod_cast Nat.sub_le (H x) 1
+  have htermNonneg : 0 ≤
+      ((H x : ℝ) ^ 2 * (B * (Zδ)⁻¹)) := by positivity
+  have hblockUniform :
+      ∀ r ∈ taoLargePrimeSourceDyadicExponents x,
+      ∀ s ∈ taoLargePrimeSourceDyadicExponents x,
+      (∑ a ∈ taoLargePrimeSourceDyadicIndices x r (H x),
+        ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s (H x)).filter
+            (fun b => b.2 ≠ a.2),
+          taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
+        (H x : ℝ) ^ 2 * (B * (Zδ)⁻¹) := by
+    intro r hr s hs
+    by_cases hrs : r ≤ s
+    · have hblock := hblocksX r hr s hs hrs hP
+          (taoLargePrimeSourceDyadicPrimeSlice x r)
+          (taoLargePrimeSourceDyadicPrimeSlice x s)
+          (taoLargePrimeSourceDyadicPrimeSlice_subset_band x r)
+          (taoLargePrimeSourceDyadicPrimeSlice_subset_band x s)
+      have hmaj := hmajorantX r hr s hs hrs
+      have hmaj' : taoLargePrimeSourceCovarianceBlockMajorant K x r s ≤
+          B * (Zδ)⁻¹ := by
+        simpa only [B, Zδ, Real.rpow_neg (taoZ_pos x).le] using hmaj
+      have hmajNonneg : 0 ≤
+          taoLargePrimeSourceCovarianceBlockMajorant K x r s := by
+        rw [taoLargePrimeSourceCovarianceBlockMajorant]
+        positivity
+      calc
+        _ ≤ ((H x - 1 : ℕ) : ℝ) ^ 2 *
+            taoLargePrimeSourceCovarianceBlockMajorant K x r s := by
+          simpa only [taoLargePrimeSourceDyadicIndices,
+            taoLargePrimeSourceCovarianceBlockMajorant] using hblock
+        _ ≤ (H x : ℝ) ^ 2 *
+            taoLargePrimeSourceCovarianceBlockMajorant K x r s := by
+          exact mul_le_mul_of_nonneg_right
+            (pow_le_pow_left₀ (by positivity) hHsub 2) hmajNonneg
+        _ ≤ (H x : ℝ) ^ 2 * (B * (Zδ)⁻¹) :=
+          mul_le_mul_of_nonneg_left hmaj' (sq_nonneg _)
+    · have hsr : s ≤ r := Nat.le_of_lt (lt_of_not_ge hrs)
+      have hblock := hblocksX s hs r hr hsr hP
+          (taoLargePrimeSourceDyadicPrimeSlice x s)
+          (taoLargePrimeSourceDyadicPrimeSlice x r)
+          (taoLargePrimeSourceDyadicPrimeSlice_subset_band x s)
+          (taoLargePrimeSourceDyadicPrimeSlice_subset_band x r)
+      have hmaj := hmajorantX s hs r hr hsr
+      have hmaj' : taoLargePrimeSourceCovarianceBlockMajorant K x s r ≤
+          B * (Zδ)⁻¹ := by
+        simpa only [B, Zδ, Real.rpow_neg (taoZ_pos x).le] using hmaj
+      have hmajNonneg : 0 ≤
+          taoLargePrimeSourceCovarianceBlockMajorant K x s r := by
+        rw [taoLargePrimeSourceCovarianceBlockMajorant]
+        positivity
+      calc
+        _ = ∑ b ∈ taoLargePrimeSourceDyadicIndices x s (H x),
+              ∑ a ∈ (taoLargePrimeSourceDyadicIndices x r (H x)).filter
+                  (fun a => a.2 ≠ b.2),
+                taoLargePrimeCovariance (P x) hP (m' x) b a :=
+          sum_taoLargePrimeCovariance_sourceDyadicSlices_comm
+            (P x) hP (m' x) x (H x) r s
+        _ ≤ ((H x - 1 : ℕ) : ℝ) ^ 2 *
+            taoLargePrimeSourceCovarianceBlockMajorant K x s r := by
+          simpa only [taoLargePrimeSourceDyadicIndices,
+            taoLargePrimeSourceCovarianceBlockMajorant] using hblock
+        _ ≤ (H x : ℝ) ^ 2 *
+            taoLargePrimeSourceCovarianceBlockMajorant K x s r := by
+          exact mul_le_mul_of_nonneg_right
+            (pow_le_pow_left₀ (by positivity) hHsub 2) hmajNonneg
+        _ ≤ (H x : ℝ) ^ 2 * (B * (Zδ)⁻¹) :=
+          mul_le_mul_of_nonneg_left hmaj' (sq_nonneg _)
+  rw [taoLargeAntiSieveIndices_sourceCutoffs_eq,
+    sum_taoLargePrimeCovariance_sourceIndices_eq_sum_dyadicSlices]
+  calc
+    (∑ r ∈ taoLargePrimeSourceDyadicExponents x,
+        ∑ s ∈ taoLargePrimeSourceDyadicExponents x,
+          ∑ a ∈ taoLargePrimeSourceDyadicIndices x r (H x),
+            ∑ b ∈ (taoLargePrimeSourceDyadicIndices x s (H x)).filter
+                (fun b => b.2 ≠ a.2),
+              taoLargePrimeCovariance (P x) hP (m' x) a b) ≤
+      ∑ _r ∈ taoLargePrimeSourceDyadicExponents x,
+        ∑ _s ∈ taoLargePrimeSourceDyadicExponents x,
+          (H x : ℝ) ^ 2 * (B * (Zδ)⁻¹) := by
+      apply Finset.sum_le_sum
+      intro r hr
+      apply Finset.sum_le_sum
+      intro s hs
+      exact hblockUniform r hr s hs
+    _ = ((taoLargePrimeSourceDyadicExponents x).card : ℝ) ^ 2 *
+        ((H x : ℝ) ^ 2 * (B * (Zδ)⁻¹)) := by simp; ring
+    _ ≤ (4 * L) ^ 2 * ((H x : ℝ) ^ 2 * (B * (Zδ)⁻¹)) := by
+      have hcardNonneg : 0 ≤
+          ((taoLargePrimeSourceDyadicExponents x).card : ℝ) := by positivity
+      have hcardSq := pow_le_pow_left₀ hcardNonneg
+        (by simpa only [L] using hcardX) 2
+      exact mul_le_mul_of_nonneg_right hcardSq htermNonneg
+    _ = (H x : ℝ) *
+        (((4 * L) ^ 2 * B * (H x : ℝ)) * (Zδ)⁻¹) := by ring
+    _ ≤ (H x : ℝ) * (Zδ * (Zδ)⁻¹) := by
+      exact mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_right hcoefficient (by positivity)) (by positivity)
+    _ = (H x : ℝ) := by
+      rw [mul_inv_cancel₀ hZδpos.ne', mul_one]
+
+/-- Proposition 6.8 on the literal source prime range: the complete
+large-prime variance is `O(H)`. -/
+theorem eventually_taoLargePrimeVariance_sourceCutoffs_le
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    {P : ℕ → Fin 1001 → ℕ} (hscale : TaoPrimeTupleSourceScaleFamily P)
+    (H m' : ℕ → ℕ)
+    (hH : ∀ᶠ x : ℕ in atTop, H x ≤ taoTypicalLengthCutoff x) :
+    ∀ᶠ x : ℕ in atTop,
+      ∀ hP : ∀ j, (taoDyadicPrimeBand (P x j)).Nonempty,
+      taoLargePrimeVariance (P x) hP
+          (taoLargePrimeSourceLowerCutoff x)
+          (taoLargePrimeSourceUpperCutoff x) (H x) (m' x) ≤
+        2000001 * (H x : ℝ) := by
+  filter_upwards
+    [eventually_taoLargePrimeMean_sourceCutoffs_le
+      hC hburgess hscale H m' hH,
+    eventually_sum_taoLargePrimeCovariance_sourceCutoffs_le
+      hC hburgess hscale H m' hH,
+    hH, eventually_taoTypicalLengthCutoff_le_sourceLowerCutoff] with
+      x hmean hcov hHX hlower
+  intro hP
+  have hHlower : H x ≤ taoLargePrimeSourceLowerCutoff x := hHX.trans hlower
+  calc
+    taoLargePrimeVariance (P x) hP
+        (taoLargePrimeSourceLowerCutoff x)
+        (taoLargePrimeSourceUpperCutoff x) (H x) (m' x) ≤
+      taoLargePrimeMean (P x) hP
+          (taoLargePrimeSourceLowerCutoff x)
+          (taoLargePrimeSourceUpperCutoff x) (H x) (m' x) +
+        ∑ a ∈ taoLargeAntiSieveIndices
+            (taoLargePrimeSourceLowerCutoff x)
+            (taoLargePrimeSourceUpperCutoff x) (H x),
+          ∑ b ∈ (taoLargeAntiSieveIndices
+            (taoLargePrimeSourceLowerCutoff x)
+            (taoLargePrimeSourceUpperCutoff x) (H x)).filter
+              (fun b => b.2 ≠ a.2),
+            taoLargePrimeCovariance (P x) hP (m' x) a b :=
+      taoLargePrimeVariance_le_mean_add_distinctPrimeCovariances
+        (P x) hP _ _ _ _ hHlower
+    _ ≤ 2000000 * (H x : ℝ) + (H x : ℝ) :=
+      add_le_add (hmean hP) (hcov hP)
+    _ = 2000001 * (H x : ℝ) := by ring
 
 end
 

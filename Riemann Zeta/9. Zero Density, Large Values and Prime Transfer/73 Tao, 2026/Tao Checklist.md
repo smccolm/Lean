@@ -792,6 +792,12 @@ paper has been formalized.
   - [x] Avoid the stronger unrestricted contract by proving the sufficient
     eventual quadratic-window large-prime theorem from the frozen PNT and
     exact binomial bounds; promote it to eventual `N/H²≥1/2` and `H/400`.
+  - [x] Remove the unused quadratic-window hypothesis from the binomial proof
+    and obtain Sylvester--Schur uniformly for every start at all sufficiently
+    large interval lengths.
+  - [x] Prove start monotonicity of the binomial envelope, verify the explicit
+    fixed-length threshold `H^H+1`, and reduce the unrestricted contract to a
+    genuinely finite bounded rectangle in `(H,N)`.
   - [x] Choose the cutoff and Theorem 2.5 constants outside the eventual
     quantifiers, prove the two-logarithm gap, and package the full eventual
     contradiction conditional on `TaoTheorem25SpecializedConclusion`.
@@ -988,8 +994,9 @@ paper has been formalized.
   almost-sure band membership, and prove mutual independence of all 1001
   coordinate projections. Define the source tuple product, divisibility
   indicators, typical-tuple event, and its probability.
-- [ ] Prove Proposition 6.6's anti-sieve probability estimate on this product
-  space. The exceptional `p∣l` contribution is now bounded pointwise by
+- [x] Prove Proposition 6.6's anti-sieve probability estimate on this product
+  space, conditional on explicit analytic Burgess. The exceptional `p∣l`
+  contribution is now bounded pointwise by
   `H log H`, then by `H log z(x)` eventually, and its large event has exactly
   zero probability. The small-prime cutoff, `p∤l` index set, fixed moment 50,
   exact ordered-tuple expectation expansion, and primitive CRT fiber are also
@@ -1050,10 +1057,15 @@ paper has been formalized.
   corresponding direct deviation theorem. The separation hypothesis is now
   removed: the ambient-to-primitive difference is supported on at most
   `{p,p'}`, costs at most `4/card`, and contributes an explicit
-  `(4/card)^1000` correction after convexity. It remains to prove analytic
-  Burgess, insert its cardinality bounds into the dyadic summation for
-  Propositions 6.7--6.8, and close the final
-  probability normalization. The first crude-counting primitive is complete: a residue
+  `(4/card)^1000` correction after convexity. The Burgess-conditional dyadic
+  summation for Propositions 6.7--6.8 is complete. Exact moment-50 Markov and
+  variance Chebyshev bounds give the source-shaped small- and large-prime
+  tails. The exact logarithmic partition of every squarefree shift component,
+  together with square avoidance and the one-eighth scalar gap, puts the
+  typical event in their three-branch union. The final compiled estimate is
+  `Pr(typical) ≤ B(8 log₂(x))^50/(H log(z)^2)` eventually. Thus probability
+  normalization is closed conditional on explicit Burgess; proving analytic
+  Burgess remains. The first crude-counting primitive is complete: a residue
   class modulo `q>0` contains at most `⌊2Z/q⌋+1` primes of `[Z,2Z)`.
   The tuple law is now exactly a uniform finite Cartesian law: its support has
   measure one, supported singleton masses are computed, and every event is
@@ -1064,6 +1076,72 @@ paper has been formalized.
   joint-divisibility crude bounds after splitting noncoprime source products
   into the already-controlled coordinate-collision unions. The final costs are
   respectively one and two explicit collision sums.
+- [x] Put Proposition 6.6 in the quantifier order required by the source tuple
+  sum. Choose one Burgess-dependent constant before the eventual ambient
+  scale, then prove the estimate simultaneously for every positive
+  `H≤taoTypicalLengthCutoff x` and every remainder `m'`. Define the finite
+  typical support, prove its probability is exactly its cardinality divided by
+  the product of all band cardinalities, and export the corresponding uniform
+  cardinality bound. The remaining Theorem 1.7 typical-counting step is the
+  finite summation and bounded-representation layer.
+- [x] Sum the uniform Proposition 6.6 tuple bound at fixed prime scales. Define
+  the exact budget `2x/(P₀²P₁⋯P₁₀₀₀)` and smooth cutoff `2P₁₀₀₀`, identify the
+  remainder-family cardinality with `Psi`, and form the dependent tuple sigma
+  family. Sum all power-of-two lengths and use `Σ 2⁻ʳ≤2`, with no logarithmic
+  loss. Evaluate every counted tuple into the literal `B¹∩[1,2x]`, bound the
+  distinct image by `badOneTermCount (2x)`, and reduce the full domain count to
+  a uniform evaluation-fiber bound.
+- [x] Assemble every ordered 1001-coordinate prime-scale choice. Construct the
+  moving slow dyadic grid, compare original bands with Tao's enlarged bands,
+  and prove the fixed and global evaluation-fiber bounds `≤1000^1000` by
+  recovering the canonical 1000 largest prime factors. Sum the simultaneous
+  Proposition 6.6 estimates, absorb the PNT band loss `8^1001` into an explicit
+  factor tending to zero, and obtain a little-o bound relative to
+  `badOneTermCount` at one fixed dilation, conditional on Burgess.
+- [x] Upgrade the all-scale tuple estimate to the interval-length-weighted
+  count. Cancel each weight `2^r` against Proposition 6.6's `1/2^r`, bound the
+  number of dyadic length exponents by `50 iteratedLog x`, prove the weighted
+  assembly factor tends to zero, and obtain weighted little-o at the same fixed
+  dilation, conditional on Burgess.
+- [x] Bridge actual forward typical normalized intervals into the weighted
+  global tuple family. Choose canonical prime/cofactor/anatomy data, prove the
+  tuple start is exactly `N+1` and its length is exactly `H`, prove the code is
+  injective, and deduce little-o for the actual forward interval union. Define
+  the full and backward unions and prove the exact forward/backward cover.
+- [x] Prove the backward/right-endpoint `N+H` branch using the symmetric `v-l`
+  anti-sieve. Reflect the small-prime moment and the exact large-prime
+  mean/covariance/variance bounds, close Markov--Chebyshev normalization and
+  the uniform support count, assemble the length-weighted family, and encode
+  every actual backward interval injectively by its right endpoint and length.
+  Combine both orientations to obtain little-o for the full typical union at
+  the same fixed dilation, conditional on explicit Burgess.
+- [x] Retain an explicit `1/log(x)^(1-o(1))` saving through the Proposition
+  6.5 slow diagonal, normalize it by the actual `badOneTermCount x`, and
+  recombine it with the quantitative full typical-union estimate. Conditional
+  on explicit Burgess, Sylvester--Schur, and Lemma 1.6(ii), apply the exact
+  factor-`30` maximal transfer to obtain the corresponding local dyadic-window
+  bad-interval bound.
+- [x] Isolate the exact adjacent-scale regular-variation input
+  `badOneTermCount(2^r)/badOneTermCount(2^(r+1)) -> 1/2`, prove that it survives
+  every fixed logarithmic weight and yields a geometric finite-tail bound,
+  absorb the early scales, and sum the exact power-of-two cover without losing
+  the logarithmic saving. This gives both clauses of `TaoTheorem17Conclusion`
+  conditional on that ratio, analytic Burgess, Sylvester--Schur, and Lemma
+  1.6(ii).
+- [x] Derive the adjacent-dyadic `badOneTermCount` ratio from the sharp
+  critical smooth-number dilation limit. Partition the exact one-term sum
+  into a slowly widening central prime band and four complementary ranges,
+  prove the complement is `o(B¹(x))`, uniformize dilation by `1/2` across the
+  central packet, and squeeze
+  `badOneTermCount(x/2)/badOneTermCount(x) -> 1/2`. Composition at
+  `x=2^(r+1)` gives the exact adjacent ratio. The required dilation limit is
+  itself derived from `TaoCriticalSmoothSaddleAsymptoticConclusion`; the
+  coarse `x/z^(2+o(1))` bounds alone would not suffice.
+- [x] Derive the complete fixed-dilation clause of Lemma 1.6(ii) from the
+  same half-ratio. Prove `B¹(x) <= 4 B¹(floor(x/2))`, iterate through every
+  fixed power of two, bracket both `floor(cx)` and `x` with power-of-two
+  endpoints for arbitrary fixed `c>0`, and assemble both `IsBigO` directions
+  with the literal natural-floor convention.
 - [x] Formalize the literal multi-coordinate freezing arguments in
   Propositions 6.7(i) and 6.8(i): prove arbitrary finite frozen-support
   cardinality cancellation, the general product-residue/multiplicity bound,
@@ -1087,7 +1165,8 @@ paper has been formalized.
   the literal divisibility probabilities. Prove the absolute one-prime error,
   retain upper estimates through empty-event branches, and combine the exact
   marginal errors with `φ(pp')=φ(p)φ(p')` to obtain the explicit distinct-prime
-  covariance bound. Finite dyadic aggregation remains.
+  covariance bound. The later adaptive modules complete the finite dyadic
+  aggregation.
 - [x] Perform the exact finite anti-sieve aggregation: partition the literal
   mean by exceptional prime conductor, partition the ordered distinct-prime
   covariance sum by exceptional pair, retain supplied crude majorants on the
@@ -1106,8 +1185,8 @@ paper has been formalized.
   Preserve the ordered distinct-prime restriction and literal `(H-1)^2`
   shift multiplicity, charging the improved contribution to the full product
   of dyadic-band cardinalities and the exceptional contribution to its exact
-  ordered-pair cardinality times a supplied crude joint bound. Source error
-  normalization and dyadic scale summation remain.
+  ordered-pair cardinality times a supplied crude joint bound. The later
+  adaptive modules now complete source normalization and dyadic summation.
 - [x] Reduce the exact exceptional ordered modulus-pair finset to the three
   source families over any ambient conductor range containing both bands:
   exceptional first endpoints, exceptional second endpoints, and the sum of
@@ -1120,8 +1199,8 @@ paper has been formalized.
   into uniform one-prime, joint, and covariance envelopes. Absorb the fixed
   logarithmic powers and prove the direct literal source forms
   `3R^-1.001` and `C R^-1.001 S^-1`, with the latter covering both the joint
-  and ordered covariance errors. Burgess-cardinality insertion into the
-  complete dyadic scale sum remains.
+  and ordered covariance errors. The adaptive chain below now inserts the
+  Burgess cardinalities and completes the dyadic scale sum conditionally.
 - [x] Correct the exceptional endpoint count to the modulus scale used by
   Proposition 6.7. Define the adaptive threshold
   `max(P_j^-0.008,R^-0.01)`, prove its character family is contained in the
@@ -1150,8 +1229,13 @@ paper has been formalized.
 - [x] Compose the exact adaptive endpoint and partner counts with explicit
   Burgess and insert them, together with the normalized adaptive improved
   errors, into both complete finite block sums. Obtain the exceptional pair
-  source shape `R^0.02·#band(S)+#band(R)·S^0.02`. Uniform crude specialization,
-  conductor-range geometry, and the final dyadic sums remain.
+  source shape `R^0.02·#band(S)+#band(R)·S^0.02`.
+- [x] Build the exact source dyadic grid, prove disjoint coverage and its
+  `4 log z` scale count, uniformize one Burgess constant over every retained
+  scale and ordered scale pair, and sum the complete adaptive blocks. On the
+  literal source cutoffs this gives `mean ≤ 2000000 H`, distinct-prime
+  covariance sum `≤ H`, and `variance ≤ 2000001 H`, conditional on explicit
+  Burgess.
 - [x] Formalize the finite algebra around Lemma 5.4: the truncated divisor-sum
   weight, exact value `ν(p)=1` for primes above the level when `λ₁=1`, exact
   floor-weighted mass expansion, coefficient `ℓ¹` bound, quantitative error
@@ -1186,6 +1270,151 @@ paper has been formalized.
   prefix is eventually large enough and satisfies the range. Bertrand also
   proves eventual dyadic prime-band nonemptiness. The analytic Burgess proof
   remains.
+- [x] Compile Tao's numerical specialization of the published Burgess theorem:
+  define cube-free literally by exclusion of prime cubes, prove every
+  squarefree downstream period is cube-free, encode the cited `r=7` bound as
+  `A H^(6/7)q^(2/49+ε')`, take `ε'=1/2000000`, and prove this implies the exact
+  `H^(1-0.0163)` target throughout `q≤H^3.1`. Only the cited two-factor
+  character-sum estimate itself remains analytic.
+- [x] Reduce the analytic Burgess boundary from arbitrary nonprincipal
+  characters to primitive characters. Prove the exact changed-level
+  evaluation formula, Möbius-expand its coprimality indicator, reindex every
+  divisor contribution as a primitive prefix of length `H/d`, and bound the
+  resulting coefficient sum by `#divisors(q)`. Split the fixed positive
+  epsilon in half and use the proved divisor-epsilon theorem to absorb this
+  loss. Thus a primitive cube-free `r=7` estimate at
+  `ε'=1/4000000` implies the all-character decimal contract used downstream.
+- [x] Reduce the primitive Burgess target to its genuinely nontrivial prefix
+  range. Reindex `Ioc 0 H` as a shifted range, identify one complete period
+  with the finite sum over `ZMod q`, prove all complete periods cancel for a
+  nonprincipal character, and obtain the exact identity `S(H)=S(H % q)`.
+  Prove the trivial bound `|S(H)|≤H` and the exact threshold equivalence
+  `q^(2/49+ε')<H^(1/7) ↔ q^(2/7+7ε')<H`. Hence it now suffices to prove
+  the primitive cube-free estimate with a constant `A≥1` only when
+  `q^(2/7+7ε')<H<q` (at `ε'=1/4000000`).
+- [x] Pin an accessible composite cube-free proof architecture: the PDF and
+  TeX source of Hasanalizade--Lin--Martin--Luna Martínez--Treviño,
+  arXiv `2511.17778v2`, are hashed with exact locators for Theorem 1.3's
+  shifted `2r`-moment, Lemma 2.1's complete Weil-type character sum, and
+  Lemmas 2.3--2.4's gcd-tuple bounds. This auxiliary source does not replace
+  the still-unretrieved Burgess 1963 original or count as a Lean proof.
+- [x] Compile the finite Burgess moment and diagonal combinatorics. Define the
+  shifted character sum and the ordered pair of `r`-tuples, expand the exact
+  complete `2r`-moment, rewrite it as complete quotient-character
+  correlations (including nonunits), and split at `r` distinct shifts. Encode
+  every degenerate tuple by `r` values and `2r` labels to prove
+  `#degenerate≤r^(2r)B^r`; hence derive
+  `moment≤r^(2r)B^r q+B^(2r)W` and the literal `r=7` fourteenth-moment form.
+  The nondegenerate composite Weil bound remains.
+- [x] Formalize the pinned composite source's coefficient boundary. Define
+  the two tagged blocks of integer shifts and the literal
+  `A_j=∏_{i≠j}(b_i-b_j)`. Prove by exact fiber-cardinality summation that a
+  nondegenerate tuple has a uniquely occurring shift, equivalently a nonzero
+  `A_j`. Define `∑_{A_j≠0}gcd(|A_j|,q)`, prove its trivial pointwise bound,
+  state the relaxed composite Weil interface with factor
+  `(4r)^ω(q)√q`, and reduce both the general moment and the `r=7` fourteenth
+  moment to that interface and the explicit gcd sum.
+- [x] Prove the finite Burgess gcd-weight sum. Majorize `gcd(n,q)` by the
+  divisors of `q` which divide `n`, count their multiples to obtain
+  `∑_{n≤H}gcd(n,q)≤H τ(q)`, split the centered shift sum into its two sides,
+  prove gcd submultiplicativity over the literal product `A_j`, and factor
+  the remaining independent coordinates exactly. Conclude
+  `∑_uv burgessTupleGcdWeight q uv≤2r B(2B τ(q))^(2r-1)` and feed this into
+  both the general and `r=7` composite-Weil moment reductions.
+- [x] Absorb the arithmetic losses in the literal `r=7` moment. Use the
+  fixed-base prime-factor epsilon theorem on `28^ω(q)` and the divisor-epsilon
+  theorem on `τ(q)^13`, allocating `ε/2` to each. Conditional only on the
+  composite Weil predicate, obtain a positive `C_ε` and the source-shaped
+  bound `moment≤7^14 B^7 q+C_ε B^14 q^(1/2+ε)`.
+- [x] Prove the exact CRT multiplicative layer for the composite Weil
+  predicate. Define the canonical local characters at coprime factors, prove
+  global character-value factorization and coordinatewise compatibility of
+  the tuple numerator and denominator, and factor the complete correlation.
+  Prove multiplicativity of `(4r)^ω(q)√q` and of each fixed
+  `gcd(|A_j|,q)` contribution, then assemble two local bounds sharing `j`
+  into the relaxed global gcd-weight bound. Primitivity transport, iteration
+  through a cube-free factorization, and local prime/prime-square Weil bounds
+  remain.
+- [x] Prove primitivity transport through the canonical CRT factors. Express
+  the global character as the product of the two local characters changed
+  back to level `mn`. Show that a left factorization through `d` induces a
+  global factorization through `dn`, and symmetrically on the right. For a
+  primitive global character, conductor divisibility and cancellation force
+  each local conductor to equal its full local level.
+- [x] Iterate the CRT estimate over every cube-free modulus. Split each
+  nontrivial modulus as `p^k n`, where `k∈{1,2}`, `(p^k,n)=1`, and `n<q`.
+  Use strong induction to retain the same nonzero coefficient witness through
+  every split, obtaining the fixed-gcd composite estimate. Select one nonzero
+  `A_j` from each nondegenerate tuple and insert its contribution into the
+  relaxed gcd weight. This proves that the complete composite Weil predicate
+  follows solely from the primitive local estimates modulo `p` and `p^2`.
+- [x] Remove the coefficient-divisible part of the local Weil boundary.
+  When `p ∣ |A_j|`, combine the trivial correlation bound with the resulting
+  gcd contribution to prove the required estimate at both `p` and `p^2`.
+  Split the genuinely nontrivial remainder into separate primitive prime and
+  prime-square predicates under `gcd(|A_j|,p)=1`, and prove that they
+  reassemble into the prime-power and full composite predicates.
+- [x] Build the exact prime-square stationary-phase infrastructure. Reindex
+  `ZMod (p^2)` as base points `a : ZMod p` and principal-unit directions
+  `t : ZMod p`; prove the resulting complete-correlation fiber identity,
+  characterize unit status by reduction modulo `p`, and show all singular
+  fibers vanish with at most `2r` singular bases. Restrict a primitive
+  character to `1+pt`, prove this is a nontrivial additive character, and
+  define the numerator, denominator, and stationary polynomial `F'G-FG'`.
+  Its degree and root count are at most `2r`.
+- [x] Close the primitive prime-square Weil estimate. Prove the exact
+  first-order product identities for `F(a+pt)` and `G(a+pt)`, identify each
+  nonsingular quotient fiber with the principal additive character at
+  `(F'/F-G'/G)t`, and cancel every nonzero frequency. Coprimality of the
+  selected `A_j` makes its tagged root simple in exactly one of `F,G`, so
+  `F'G-FG'` is nonzero. Its at most `2r` roots support all surviving fibers,
+  yielding `‖correlation‖≤4rp`. Only the prime-modulus local Weil estimate
+  remains in the composite Burgess boundary.
+- [x] Normalize the primitive prime-modulus boundary to the exact finite-field
+  theorem it needs. Rewrite the Burgess correlation as the complete character
+  sum of a quotient of two products of linear factors, prove that
+  `gcd(|A_j|,p)=1` makes the selected tagged root unique modulo `p`, and prove
+  a primitive prime-level character is nontrivial. Verify that the resulting
+  `TaoPrimeLinearQuotientWeilBound` implies the primitive prime predicate and,
+  through the completed prime-square and CRT layers, the composite predicate.
+- [x] Reduce the linear-quotient theorem to the standard split-polynomial
+  Weil form. Clear the inverse character with denominator exponent
+  `orderOf χ - 1`, prove exact equality of the complete sums, calculate the
+  selected root multiplicity as `1` or `orderOf χ - 1`, and deduce that the
+  polynomial is not an `orderOf χ`-th power. Prove it splits and has at most
+  `2r` distinct roots, then bridge `TaoPrimeSplitPolynomialWeilBound` to the
+  linear-quotient and composite predicates.
+- [x] Prove the one- and two-distinct-root cases of
+  `TaoPrimeSplitPolynomialWeilBound`: group the split polynomial by root
+  multiplicity, show the one-root sum vanishes, identify the two-root sum
+  with a Jacobi sum by an affine reindexing, and derive its `√p` bound from
+  the Gauss--Jacobi identities. Bridge the residual
+  `TaoPrimeSplitPolynomialWeilBoundThreeRootsOrMore` contract to the full
+  split-polynomial and composite Weil predicates.
+- [x] Partition a split polynomial's roots into active and inactive roots
+  according to divisibility of their multiplicities by `orderOf χ`. Prove the
+  full root product is zero at inactive roots and equals the active product
+  elsewhere; bound the deleted-input correction by the inactive-root count
+  and absorb it into `2 #roots √p`. This extends the Jacobi proof to every
+  polynomial with at most two active roots and bridges the residual
+  `TaoPrimeSplitPolynomialWeilBoundThreeActiveRootsOrMore` contract to the
+  full split-polynomial and composite predicates.
+- [x] Prove the exactly-three-active-root case needed by Burgess. Compute the
+  cleared polynomial's degree as `r * orderOf χ`, deduce divisibility of the
+  active multiplicity sum, and verify a fractional-linear reindexing that
+  sends one root to infinity. The denominator character cancels and the sum
+  becomes a two-root Jacobi sum with one deleted point, giving `√p+1`; absorb
+  this and the inactive-root correction into `2 #roots √p`.
+- [x] Remove small prime characteristics from the remaining Weil input. Prove
+  the trivial complete-sum bound `p` and show it is at most `2D√p` whenever
+  `p ≤ 4D²`, where `D` is the distinct-root count.
+- [ ] Prove
+  `TaoPrimeSplitPolynomialWeilBoundFourActiveRootsLargeCharacteristic`: under
+  divisibility of the split polynomial's degree by `orderOf χ`, bound the
+  character sum when at least four root multiplicities are nonzero modulo the
+  character order. It is enough to do so under `4D² < p`; the checked bridge
+  then suffices for the cleared Burgess polynomial and the full cube-free
+  composite predicate.
 - [x] Normalize by the exact dyadic-prime cardinality: prove
   `#([Z,2Z)∩Primes)=π′(2Z)-π′(Z)`, transfer the pinned PNT to `π′`, derive
   `#([Z,2Z)∩Primes)∼Z/log Z`, and record the concrete eventual denominator
@@ -1388,7 +1617,10 @@ paper has been formalized.
 - [x] State the remaining uniform `Psi/mainTerm -> 1` saddle asymptotic as an
   exact proposition-valued contract and prove it implies Granville's quotient
   limit and the constant-factor `IsTheta` stability contract.
-- [ ] Prove the constant-factor stability clause Lemma 1.6(ii).
+- [x] Prove the constant-factor stability clause Lemma 1.6(ii), conditional
+  on the sharp critical smooth-number dilation limit. The proof now follows
+  from the half-ratio by finite power-of-two iteration and exact floor
+  bracketing; it is no longer a separate analytic input.
 - [x] Pin and hash the Baker--Harman--Pintz primary source, with exact theorem
   and proof locators.
 - [ ] Formalize the Baker--Harman--Pintz bound in Proposition 2.3(ii). The
@@ -1431,5 +1663,13 @@ the low-frequency Abel reduction and the frozen qualitative PNT's uniform
 dyadic and fixed-bounded-frequency `o(P)` consequences, but not the stronger
 arbitrary-logarithmic-saving PNT bound or the full prime exponential-sum
 estimate.
-It does not prove any of Theorems 1.7--1.10. Do not mark a later crosswalk,
-proof, or release item complete merely because one of its inputs builds.
+The unrestricted Sylvester--Schur input is now proved for every sufficiently
+large interval length, uniformly over all starts. An explicit fixed-length
+threshold and start-monotonicity reduce its unresolved part to a finite bounded
+rectangle; that rectangle has not yet been discharged.
+It does not prove any of Theorems 1.7--1.10 unconditionally. The exact
+Theorem 1.7 contract is now derived conditionally from analytic Burgess,
+Sylvester--Schur, and the sharp critical smooth-number saddle asymptotic. The
+formerly separate adjacent-dyadic ratio and Lemma 1.6(ii) are both derived
+from that saddle input. Do not mark a release item complete merely because
+this conditional endpoint builds.

@@ -29,9 +29,11 @@ argument gives quadratic reciprocal-set measure at least `H/32` under
 `N/H²≥1/2`. A finite disjoint unit-cell covering, endpoint trimming, and slow
 variation insert the first coordinate and give inner prime-scale measure at
 least `H/400` for `H≥200`. The needed arithmetic scale is now proved
-unconditionally and eventually: a PNT prime-counting bound plus exact
-binomial-factorization and binomial-growth inequalities supplies a prime `p>H`
-throughout the quadratic failure window `2N<H²`. The resulting eventual
+ unconditionally and eventually: a PNT prime-counting bound plus exact
+ binomial-factorization and binomial-growth inequalities supplies a prime `p>H`
+ for every start once `H` is sufficiently large, hence throughout the quadratic
+ failure window `2N<H²`. Start monotonicity and the explicit threshold `H^H+1`
+ further reduce unrestricted Sylvester--Schur to a finite rectangle. The resulting eventual
 `N/H²≥1/2` and `H/400` theorems remove unrestricted Sylvester--Schur from the
 Lemma 3.1 dependency chain. The fixed lower-cutoff and Theorem 2.5 constants
 are coordinated uniformly, and the full eventual shortness contradiction is
@@ -610,8 +612,10 @@ Consequently `badOneTermCount_quotientPowerScale` proves Lemma 1.6(i).
 proves its ratio/logarithmic limits and preservation of the critical regime,
 and isolates Granville (3.24)'s quotient limit from its formal `IsTheta`
 consequence. `TaoLemma16iiConclusion` is the exact target for Lemma 1.6(ii),
-with both automatic monotone directions proved; the reverse analytic
-comparison remains open. `SmoothNumberSaddlePoint` now constructs the exact
+with both automatic monotone directions proved. `BadOneTermRegularVariation`
+derives the full contract from the sharp critical dilation limit by iterating
+the half-ratio through powers of two and bracketing every floored fixed
+dilation. `SmoothNumberSaddlePoint` now constructs the exact
 positive saddle solving `sum_{p<=y} log(p)/(p^sigma-1)=log X`, proves
 existence and uniqueness, defines the positive second sum `phiTwo`, proves
 `phiOne'=-phiTwo`, and gives the exact mean-value sensitivity identity under
@@ -833,6 +837,9 @@ row bound is `#union≤x/z(x)^(2+1/(128d²))`. A countable diagonal then selects
 and obtains `#union≤x/z(x)^2` eventually for the selected actual non-typical
 family. The source-facing Proposition 6.5 cutoff diagonal is therefore
 compiled and axiom-audited.
+`BadIntervalSlowCutoffLogSaving` retains the stronger row margin and pays for
+Lemma 1.6(i)'s lower estimate, so the same selector gives, for every fixed
+`epsilon>0`, `#union≤badOneTermCount(x)/log(x)^(1-epsilon)` eventually.
 `BadIntervalRandomModel` then instantiates Proposition 6.6's random prime
 tuple as a genuine finite product probability measure. Every coordinate is
 uniform on the exact prime band `[Pⱼ,2Pⱼ)`, its pushforward mass and support
@@ -979,8 +986,15 @@ one constant while the fixed prime varies. `BadIntervalLargePrimePairs` then
   insertion is completed by `BadIntervalLargePrimeAdaptiveSource`, including
   the exact pair-count shape
   `R^0.02·#band(S)+#band(R)·S^0.02` and the normalized improved errors in both
-  block sums. Uniform crude specialization, conductor-range geometry, and the
-  final scale sum remain.
+  block sums. `BadIntervalLargePrimeAdaptiveGeometry` supplies uniform crude
+  specialization and proves the source conductor/partner ranges automatically;
+  `BadIntervalLargePrimeAdaptiveComplete` inserts these facts into both full
+  blocks. `BadIntervalLargePrimeDyadicScales` partitions the literal source
+  prime range into disjoint dyadic slices with at most `4 log z` scales, and
+  `BadIntervalLargePrimeAdaptiveUniform` uniformizes the Burgess constants and
+  sums them. The resulting literal bounds are mean `≤2000000H`, distinct-prime
+  covariance sum `≤H`, and variance `≤2000001H`, conditional on explicit
+  Burgess.
   `BadIntervalCharacterExpansion` proves the exact normalized all-character
 orthogonality identity for such fibers and integrates it on the tuple measure.
 Mutual independence factors the full character expectation into its 1001
@@ -1052,7 +1066,105 @@ raw conjugated correlation and a single quotient Dirichlet-character value,
 including the nonunit cases. `ExceptionalCharacterBurgess` then narrows the
 terminal hypothesis to the actual sieve prefixes `⌊(2Z-1)/d⌋` and exposes the
 source-shaped proposition-valued cubefree Burgess statement with saving
-`0.0163`, fixed cutoff, and range `q≤H^3.1`. `ExceptionalCharacterScales`
+`0.0163`, fixed cutoff, and range `q≤H^3.1`. It also defines cube-free
+literally, proves squarefree periods satisfy it, and encodes the cited `r=7`
+estimate as `A H^(6/7)q^(2/49+ε')`. The fixed choice
+`ε'=1/2000000` is proved to imply the decimal target throughout the required
+range. Exact Möbius inversion then expresses every changed-level prefix as a
+divisor sum of primitive prefixes; the frozen divisor-epsilon theorem absorbs
+the divisor-count loss after splitting epsilon in half. Thus only the
+primitive cube-free estimate at `ε'=1/4000000` remains analytic. Complete
+periods are now proved to vanish, arbitrary prefixes are reduced exactly
+modulo `q`, and the trivial `|S(H)|≤H` estimate is compiled. Consequently the
+analytic input is needed only on the core range `q^(2/7+7ε')<H<q`,
+equivalently `q^(2/49+ε')<H^(1/7)`.
+The PDF and TeX source of arXiv `2511.17778v2` are pinned as auxiliary
+architecture. `BurgessMoment` implements the first reduction: it expands the
+shifted complete `2r`-moment into ordered tuple correlations, rewrites each as
+a complete quotient-character sum, proves the diagonal coding bound
+`#degenerate≤r^(2r)B^r`, and obtains
+`moment≤r^(2r)B^r q+B^(2r)W`, including the exact `r=7` fourteenth-moment
+specialization. The nondegenerate composite Weil input and finite gcd-tuple
+counting were the remaining stages of this analytic core. The source
+coefficient boundary is now literal: `burgessTupleDifferenceProduct` is
+`A_j=∏_{i≠j}(b_i-b_j)`, and exact fiber-cardinality summation proves every
+nondegenerate tuple has some `A_j≠0`. `burgessTupleGcdWeight` is the relaxed
+sum over `gcd(|A_j|,q)`, while
+`TaoPrimitiveCubefreeBurgessCompleteWeilBound` states the remaining factor
+`(4r)^ω(q)√q`. The checked general and `r=7` theorems reduce the complete
+moment directly to that predicate and the visible gcd-weight sum.
+The finite gcd-tuple stage is now proved. The initial-interval identity counts
+multiples of every divisor to bound `∑gcd(n,q)` by `Hτ(q)`; a two-sided
+centered estimate, gcd submultiplicativity for `A_j`, and exact
+independent-coordinate factorization yield
+`∑_uv burgessTupleGcdWeight q uv≤2rB(2Bτ(q))^(2r-1)`. The general and `r=7`
+moment theorems consume this result, leaving only the composite Weil
+predicate as the analytic input in the moment stage.
+At `r=7`, the factors `28^ω(q)` and `τ(q)^13` are now absorbed by the frozen
+prime-factor and divisor epsilon bounds. Thus for every `ε>0`, that predicate
+alone yields a positive `C_ε` and
+`moment≤7^14B^7q+C_εB^14q^(1/2+ε)`.
+`BurgessWeilCRT` proves the exact coprime-product reduction for the remaining
+Weil predicate. It constructs the canonical left/right CRT characters,
+factors every tuple correlation, proves multiplicativity of the composite
+factor and of each fixed coefficient-gcd contribution, and assembles local
+bounds with one common witness into the relaxed global gcd-weight estimate.
+It also proves the exact changed-level product identity and uses conductor
+factorization to show that a primitive global character has primitive left
+and right CRT characters. `BurgessWeilIteration` closes cube-free iteration:
+a least-prime-factor split gives coprime `p^k n` with
+`k∈{1,2}` and smaller `n`; strong induction preserves a common nonzero
+coefficient and derives the full relaxed composite predicate. Only the local
+fixed-coefficient estimates modulo `p` and `p^2` remain. The local
+coefficient-divisible branches are now discharged: when `p ∣ |A_j|`, the
+trivial complete-correlation bound is already dominated by the required gcd
+factor at both levels. The remaining nontrivial boundary is split into
+separately stated prime and prime-square predicates with `gcd(|A_j|,p)=1`,
+and their exact recombination through the prime-power predicate to the
+composite bound is proved.
+`BurgessWeilPrimeSquare` closes the second predicate by an exact fiber
+decomposition modulo `p^2`. Singular base fibers vanish and occupy at most
+`2r` bases. The restriction of a primitive character to the principal units
+`1+pt` is constructed as a nontrivial additive character. For the reduced
+numerator and denominator polynomials `F,G`, exact first-order product
+identities give phase `(F'/F-G'/G)t` and cancel all nonstationary fibers.
+Coprimality of `A_j` proves `F'G-FG'` nonzero at a tagged simple root, and its
+at most `2r` roots support the sum. This proves the target local `4rp` bound;
+only the primitive prime-modulus Weil estimate remains.
+`BurgessWeilPrime` sharpens that final estimate to
+`TaoPrimeLinearQuotientWeilBound`. It rewrites the prime correlation exactly
+as a complete multiplicative-character sum for two tagged products of linear
+factors, proves the selected reduced root unique from `gcd(|A_j|,p)=1`, and
+proves primitive prime-level characters nontrivial. The checked implication
+from its `4r√p` conclusion reaches the prime local predicate and, through the
+finished prime-square and CRT machinery, the full cube-free composite
+predicate. The normalized finite-field Weil theorem itself remains open.
+`BurgessWeilPrimePolynomial` supplies the remaining elementary algebra around
+that theorem. The quotient sum is exactly the character sum of the numerator
+times the denominator to exponent `orderOf χ-1`. At the uniquely tagged
+root its multiplicity is `1` or `orderOf χ-1`, so the polynomial is not an
+order-th power. It splits and has at most `2r` distinct roots.
+`BurgessWeilPrimeLowRoots` proves the one-root sum is zero and converts the
+two-root sum exactly to a Jacobi sum, whose norm is at most `√p`. The sole open
+input is now `TaoPrimeSplitPolynomialWeilBoundThreeRootsOrMore`: the standard
+split-polynomial bound restricted to at least three distinct roots.
+`BurgessWeilPrimeActiveRoots` separates roots whose multiplicities vanish
+modulo `orderOf χ`. They contribute one away from their own zeros, and the
+deleted zero locations have total norm cost at most their cardinality. This
+cost is absorbed by the original target, so the actual residual is
+`TaoPrimeSplitPolynomialWeilBoundThreeActiveRootsOrMore`: at least three active
+root multiplicities.
+`BurgessWeilPrimeThreeRoots` proves the exactly-three case for the cleared
+Burgess polynomial. Its exact degree `r * orderOf χ` forces the active
+multiplicity sum to be divisible by the character order. A fractional-linear
+reindexing sends one root to infinity and reduces the sum to a two-root Jacobi
+sum with one deleted point, yielding `√p+1`; the target absorbs this and all
+inactive corrections. The sole prime input actually needed by Burgess is now
+`TaoPrimeSplitPolynomialWeilBoundFourActiveRootsOrMore`.
+`BurgessWeilPrimeLargeCharacteristic` proves the trivial complete-sum bound
+`p` and absorbs it into `2D√p` for `p ≤ 4D²`. The residual four-active-root
+input may therefore also assume the strict inequality `4D² < p`.
+`ExceptionalCharacterScales`
 defines the canonical `R=⌊Z^0.0001⌋`, proves every requested prefix eventually
 lies above the cutoff and uniformly meets the period range, and uses Bertrand
 to discharge band nonemptiness. Therefore the family BHM estimate now awaits
@@ -1092,5 +1204,70 @@ the exact logarithmic-lcm Mertens coefficient absorb
 bound also gives `P_j⁻⁸ cutoff⁵⁰≤1`, which absorbs the explicit totient error.
 Thus the entire literal small-prime fiftieth moment is bounded by a fixed
 multiple of the principal majorant conditional only on Burgess.
-None of Theorems 1.7--1.10 is complete or claimed. Imports from
+`BadIntervalProbabilityNormalization` supplies the exact probabilistic
+closure. Integrability of the fiftieth power and finite Markov give the
+small-prime source tail at threshold `H log(z)^2/(8 log₂(x))`; the exact
+large-prime variance identity and Chebyshev give the tail above its mean at
+threshold `H log(z)/(8 log₂(x))`. With the zero-measure exceptional branch,
+their union has the explicit sum of these two tail bounds.
+`BadIntervalTypicalAntiSieve` proves the deterministic complement. It
+partitions every squarefree shift component's logarithmic prime weight among
+the three branches, obtains the required lower mass from square avoidance and
+the comparable-scale identity, and proves the one-eighth scalar gap. Hence
+every typical tuple lies in the union eventually. Conditional only on
+`TaoExplicitCubefreeBurgessBound`, the final theorem gives a constant `B>0`
+such that
+`Pr(typical) ≤ B(8 log₂(x))^50/(H log(z)^2)` eventually. This is the compiled
+source interpretation of Proposition 6.6's
+`O(1/(H log(z)^(2-o(1))))`. `BadIntervalProbabilityUniform` strengthens the
+quantifier order to one `B` chosen before the eventual ambient scale and then
+simultaneously valid for every positive admissible `H` and every remainder
+`m'`. It also proves that the typical probability is exactly its finite
+supported-tuple cardinality divided by the product of the 1001 band
+cardinalities, and exports the corresponding uniform tuple-count bound.
+`BadIntervalTypicalCounting` now sums that bound over the exact finite smooth
+remainder family, restores the literal `Psi` factor, and sums every
+power-of-two length with geometric cost at most `2`. Evaluation maps the
+complete fixed-prime-scale family into `B¹ ∩ [1,2x]`; a general fiber theorem
+reduces its cardinality to `badOneTermCount (2x)` times the maximum evaluation
+fiber. `BadIntervalTypicalScales` constructs the moving dyadic scale grid and
+orders every 1001-coordinate scale tuple. `BadIntervalTypicalEnlargement` and
+`BadIntervalTypicalMultiplicity` implement Tao's doubled/quadrupled bands,
+map their values into the one-term bad set at one fixed dilation, and prove
+the absolute fixed-scale fiber bound `1000^1000`. `BadIntervalTypicalGlobal`
+shows that the same bound survives after summing every ordered scale tuple.
+Finally, `BadIntervalTypicalAssembly` compares original and enlarged prime
+bands by PNT, absorbs the `8^1001` loss into an explicit factor tending to
+zero, and proves that the complete global typical-tuple family is little-o of
+`badOneTermCount` at the fixed enlarged endpoint, conditional on Burgess.
+`BadIntervalTypicalWeighted` supplies the corresponding length-weighted
+all-scale estimate. Multiplication by `2^r` cancels the `1/2^r` probability
+gain, while the `O(log₂ x)` number of dyadic lengths is absorbed by the
+remaining logarithmic saving. `BadIntervalTypicalUnion` constructs a
+canonical injective code from every actual forward typical interval, with
+tuple start exactly `N+1` and tuple length exactly `H`, into that weighted
+global family. The backward modules prove the reflected `v-l` anti-sieve,
+source mean/variance and uniform support bound, then repeat the weighted
+assembly and construct a canonical injective code with tuple start exactly
+`N+H`. The exact forward-or-backward cover therefore makes the full actual
+typical union little-o of the fixed-dilation one-term count, conditional on
+Burgess, with an explicit fixed logarithmic saving. `BadIntervalRecombination`
+combines this with the quantitative Proposition 6.5 diagonal and the exact
+factor-`30` maximal transfer. Conditional on explicit Burgess,
+Sylvester--Schur, and Lemma 1.6(ii), it proves the logarithmically saving local
+dyadic-window bound. It also proves the exact finite power-of-two cover that
+bounds `nontrivialBadCount x` by the sum of these window cardinalities. What
+follows in `BadIntervalDyadicSummation` is the exact conditional endgame. The
+adjacent ratio `B¹(2^r)/B¹(2^(r+1))->1/2` gives geometric summability for the
+logarithmically weighted terms; the finite prefix and `[x,2x]` endpoint
+comparison then yield both clauses of `TaoTheorem17Conclusion`. That adjacent
+ratio is now proved in `BadOneTermRegularVariation` from
+`TaoCriticalSmoothDilationLimitConclusion`: the exact one-term sum is
+concentrated on a slowly widening central prime packet, dilation by `1/2` is
+uniform there, and the complementary mass is `o(B¹(x))`. The Gaussian saddle
+ asymptotic target implies this dilation limit. The sharp saddle asymptotic,
+ analytic Burgess, and the finite residual Sylvester--Schur rectangle remain
+ open; Lemma 1.6(ii) is supplied
+by that same dilation limit.
+None of Theorems 1.7--1.10 is complete unconditionally or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.
