@@ -120,6 +120,8 @@ import Tao2026.BurgessWeilPrimeNineRoots
 import Tao2026.BurgessWeilPrimeTenRoots
 import Tao2026.BurgessWeilPrimeElevenRoots
 import Tao2026.BurgessWeilPrimeTwelveRoots
+import Tao2026.BurgessWeilPrimeThirteenRoots
+import Tao2026.BurgessWeilPrimeFourteenRoots
 import Tao2026.BurgessWeilPrimeSourceResidual
 import Tao2026.ExceptionalCharacterScales
 import Tao2026.ExceptionalCharacterNormalization
@@ -146,6 +148,8 @@ import Tao2026.FactorialOneTerm
 import Tao2026.FactorialOneTermAsymptotics
 import Tao2026.FactorialAsymptotics
 import Tao2026.FactorialFibers
+import Tao2026.ErdosSelfridgeSource
+import Tao2026.ErdosSelfridgePowerFree
 import Tao2026.FactorialShortIntervals
 import Tao2026.FourierAssembly
 import Tao2026.FourierApproximation

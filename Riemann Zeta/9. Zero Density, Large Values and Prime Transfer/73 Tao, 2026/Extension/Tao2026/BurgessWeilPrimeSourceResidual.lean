@@ -1,4 +1,4 @@
-import Tao2026.BurgessWeilPrimeTwelveRoots
+import Tao2026.BurgessWeilPrimeFourteenRoots
 
 /-!
 # Source-specific residual for the prime Burgess sum
@@ -6,10 +6,10 @@ import Tao2026.BurgessWeilPrimeTwelveRoots
 The generic split-polynomial Weil statement is much broader than the
 polynomial actually produced by the Burgess quotient. This file packages the
 successive source-specific large-characteristic residuals directly for
-`primeLinearOrderPolynomial`. After the twelve-root reduction, the literal
-`r = 7` path retains only the exact active-root window `13..14`; together with
-the reduced lower-point inputs it still supplies the complete cube-free
-Burgess endpoint.
+`primeLinearOrderPolynomial`. The thirteen-point endpoint now closes the last
+exact-fourteen-root case on the literal `r = 7` path; together with the reduced
+lower-point inputs it supplies the complete cube-free Burgess endpoint without
+any remaining fixed-order source residual.
 -/
 
 namespace Tao2026
@@ -378,6 +378,38 @@ def TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeChar
       (primeLinearOrderPolynomial p 7 χ b)).card →
     (primeActiveRoots p χ
       (primeLinearOrderPolynomial p 7 χ b)).card ≤ 14 →
+    4 * (primeLinearOrderPolynomial p 7 χ b).roots.toFinset.card ^ 2 < p →
+    ‖primePolynomialCharacterCorrelation p χ
+      (primeLinearOrderPolynomial p 7 χ b)‖ ≤
+      ((2 * (primeLinearOrderPolynomial p 7 χ b).roots.toFinset.card : ℕ) : ℝ) *
+        Real.sqrt p
+
+/-- After the thirteen-active-root projective reduction, the source residual
+begins at fourteen active roots. -/
+def TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic : Prop :=
+  ∀ (p r : ℕ) [NeZero p] [Fact p.Prime]
+    (χ : MulChar (ZMod p) ℂ)
+    (b : Fin r ⊕ Fin r → ZMod p) (j : Fin r ⊕ Fin r),
+    2 ≤ r → χ ≠ 1 →
+    (∀ i, b i = b j → i = j) →
+    14 ≤ (primeActiveRoots p χ
+      (primeLinearOrderPolynomial p r χ b)).card →
+    4 * (primeLinearOrderPolynomial p r χ b).roots.toFinset.card ^ 2 < p →
+    ‖primePolynomialCharacterCorrelation p χ
+      (primeLinearOrderPolynomial p r χ b)‖ ≤
+      ((2 * (primeLinearOrderPolynomial p r χ b).roots.toFinset.card : ℕ) : ℝ) *
+        Real.sqrt p
+
+/-- The final exact-fourteen-active-root residual at Tao's literal moment
+order `r = 7`; the structural root bound supplies the matching upper bound. -/
+def TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven : Prop :=
+  ∀ (p : ℕ) [NeZero p] [Fact p.Prime]
+    (χ : MulChar (ZMod p) ℂ)
+    (b : Fin 7 ⊕ Fin 7 → ZMod p) (j : Fin 7 ⊕ Fin 7),
+    χ ≠ 1 →
+    (∀ i, b i = b j → i = j) →
+    14 ≤ (primeActiveRoots p χ
+      (primeLinearOrderPolynomial p 7 χ b)).card →
     4 * (primeLinearOrderPolynomial p 7 χ b).roots.toFinset.card ^ 2 < p →
     ‖primePolynomialCharacterCorrelation p χ
       (primeLinearOrderPolynomial p 7 χ b)‖ ≤
@@ -1513,6 +1545,132 @@ theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenActiveRootsLargeCharacteri
     TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
   (hweil.toLinearQuotient hthree hfour hfive hsix hseven height hnine hten heleven).toComposite
 
+/-- The reduced ten-parameter twelve-point endpoint closes the exactly-
+thirteen-active-root source case. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic.toThirteenActiveRoots
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic) :
+    TaoPrimeLinearOrderPolynomialWeilBoundThirteenActiveRootsLargeCharacteristic := by
+  intro p r _ _ χ b j hr hχ hunique hactiveThirteen hlarge
+  let P : Polynomial (ZMod p) := primeLinearOrderPolynomial p r χ b
+  by_cases hcard : (primeActiveRoots p χ P).card = 13
+  · have hP : P.Splits := primeLinearOrderPolynomial_splits p r χ b
+    have hnot : ¬orderOf χ ∣ P.rootMultiplicity (-b j) :=
+      not_orderOf_dvd_rootMultiplicity_primeLinearOrderPolynomial_of_unique
+        p r (Fact.out : p.Prime) χ b j hχ hunique
+    have hdegree : orderOf χ ∣ P.natDegree :=
+      orderOf_dvd_natDegree_primeLinearOrderPolynomial p r χ b
+    have hrootCard : 13 ≤ P.roots.toFinset.card := by
+      rw [← hcard]
+      exact Finset.card_le_card (primeActiveRoots_subset_roots p χ P)
+    have hp64 : 64 < p := by nlinarith
+    simpa [P] using
+      (primeSplitPolynomialWeilBound_of_card_activeRoots_eq_thirteen_degree_power
+        p (htwelve.toTwelvePoint.toPower p hp64) χ P (-b j)
+          hχ hP hnot hdegree hcard)
+  · have hactiveThirteenP : 13 ≤ (primeActiveRoots p χ P).card := by
+      simpa [P] using hactiveThirteen
+    have hactiveFourteenP : 14 ≤ (primeActiveRoots p χ P).card := by omega
+    exact hweil p r χ b j hr hχ hunique
+      (by simpa [P] using hactiveFourteenP) hlarge
+
+/-- The ten reduced endpoints and the fourteen-active-root residual imply the
+general prime quotient boundary. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic.toLinearQuotient
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic) :
+    TaoPrimeLinearQuotientWeilBound :=
+  (hweil.toThirteenActiveRoots htwelve).toLinearQuotient
+    hthree hfour hfive hsix hseven height hnine hten heleven
+
+/-- Direct composite bridge from the fourteen-active-root source residual. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic.toComposite
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristic) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBound :=
+  (hweil.toLinearQuotient hthree hfour hfive hsix hseven height hnine hten heleven htwelve).toComposite
+
+/-- The fixed twelve-point endpoint closes exactly thirteen active roots on
+the literal `r = 7` source path. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven.toThirteenActiveRoots
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven) :
+    TaoPrimeLinearOrderPolynomialWeilBoundThirteenActiveRootsLargeCharacteristicRSeven := by
+  intro p _ _ χ b j hχ hunique hactiveThirteen hlarge
+  let P : Polynomial (ZMod p) := primeLinearOrderPolynomial p 7 χ b
+  by_cases hcard : (primeActiveRoots p χ P).card = 13
+  · have hP : P.Splits := primeLinearOrderPolynomial_splits p 7 χ b
+    have hnot : ¬orderOf χ ∣ P.rootMultiplicity (-b j) :=
+      not_orderOf_dvd_rootMultiplicity_primeLinearOrderPolynomial_of_unique
+        p 7 (Fact.out : p.Prime) χ b j hχ hunique
+    have hdegree : orderOf χ ∣ P.natDegree :=
+      orderOf_dvd_natDegree_primeLinearOrderPolynomial p 7 χ b
+    have hrootCard : 13 ≤ P.roots.toFinset.card := by
+      rw [← hcard]
+      exact Finset.card_le_card (primeActiveRoots_subset_roots p χ P)
+    have hp64 : 64 < p := by nlinarith
+    simpa [P] using
+      (primeSplitPolynomialWeilBound_of_card_activeRoots_eq_thirteen_degree_power
+        p (htwelve.toTwelvePoint.toPower p hp64) χ P (-b j)
+          hχ hP hnot hdegree hcard)
+  · have hactiveThirteenP : 13 ≤ (primeActiveRoots p χ P).card := by
+      simpa [P] using hactiveThirteen
+    have hactiveFourteenP : 14 ≤ (primeActiveRoots p χ P).card := by omega
+    exact hweil p χ b j hχ hunique
+      (by simpa [P] using hactiveFourteenP) hlarge
+
+/-- The ten reduced endpoints and the exact-fourteen fixed residual imply the
+literal `r = 7` prime quotient bound. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven.toLinearQuotient
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven) :
+    TaoPrimeLinearQuotientWeilBoundRSeven :=
+  (hweil.toThirteenActiveRoots htwelve).toLinearQuotient
+    hthree hfour hfive hsix hseven height hnine hten heleven
+
+/-- Direct fixed composite bridge from the exact-fourteen source residual. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven.toComposite
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
+    (hweil : TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
+  (hweil.toLinearQuotient hthree hfour hfive hsix hseven height hnine hten heleven htwelve).toComposite
+
 /-- The exact finite window `12 ≤ active roots ≤ 14` supplies the fixed
 twelve-active-root residual; the upper bound is structural for `r = 7`. -/
 theorem TaoPrimeLinearOrderPolynomialWeilBoundTwelveToFourteenActiveRootsLargeCharacteristicRSeven.toTwelveActiveRoots
@@ -1588,6 +1746,28 @@ theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLarge
       _ = 14 := by norm_num
   exact hweil p χ b j hχ hunique hactive hactiveCard hlarge
 
+/-- The structural fourteen-root cap turns the lower bound `14 ≤ active roots`
+into the final exact-fourteen source residual. -/
+theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven.toFourteenActiveRoots
+    (hweil :
+      TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven) :
+    TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven := by
+  intro p _ _ χ b j hχ hunique hactive hlarge
+  have hrootCard :
+      (primeLinearOrderPolynomial p 7 χ b).roots.toFinset.card ≤ 2 * 7 :=
+    card_roots_primeLinearOrderPolynomial_le p 7 (Fact.out : p.Prime) χ b hχ
+  have hactiveCard :
+      (primeActiveRoots p χ
+        (primeLinearOrderPolynomial p 7 χ b)).card ≤ 14 := by
+    calc
+      (primeActiveRoots p χ
+          (primeLinearOrderPolynomial p 7 χ b)).card ≤
+          (primeLinearOrderPolynomial p 7 χ b).roots.toFinset.card :=
+        Finset.card_le_card (primeActiveRoots_subset_roots p χ _)
+      _ ≤ 2 * 7 := hrootCard
+      _ = 14 := by norm_num
+  exact hweil p χ b j hχ hunique (by omega) hactiveCard hlarge
+
 /-- Direct prime quotient bridge from the narrowed exact source window. -/
 theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven.toLinearQuotient
     (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
@@ -1599,11 +1779,12 @@ theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLarge
     (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
     (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
     (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
     (hweil :
       TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven) :
     TaoPrimeLinearQuotientWeilBoundRSeven :=
-  hweil.toThirteenActiveRoots.toLinearQuotient
-    hthree hfour hfive hsix hseven height hnine hten heleven
+  hweil.toFourteenActiveRoots.toLinearQuotient
+    hthree hfour hfive hsix hseven height hnine hten heleven htwelve
 
 /-- Direct fixed composite bridge from the exact `13..14` source window. -/
 theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven.toComposite
@@ -1616,10 +1797,86 @@ theorem TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLarge
     (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
     (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
     (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour)
     (hweil :
       TaoPrimeLinearOrderPolynomialWeilBoundThirteenToFourteenActiveRootsLargeCharacteristicRSeven) :
     TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
-  (hweil.toLinearQuotient hthree hfour hfive hsix hseven height hnine hten heleven).toComposite
+  (hweil.toLinearQuotient
+    hthree hfour hfive hsix hseven height hnine hten heleven htwelve).toComposite
+
+/-- The thirteen-point endpoint closes the final exact-fourteen-root source
+case at Tao's literal moment order `r = 7`. -/
+theorem TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toFourteenActiveRootsRSeven
+    (hthirteen : TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour) :
+    TaoPrimeLinearOrderPolynomialWeilBoundFourteenActiveRootsLargeCharacteristicRSeven := by
+  intro p _ _ χ b j hχ hunique hactiveFourteen hlarge
+  let P : Polynomial (ZMod p) := primeLinearOrderPolynomial p 7 χ b
+  have hP : P.Splits := primeLinearOrderPolynomial_splits p 7 χ b
+  have hnot : ¬orderOf χ ∣ P.rootMultiplicity (-b j) :=
+    not_orderOf_dvd_rootMultiplicity_primeLinearOrderPolynomial_of_unique
+      p 7 (Fact.out : p.Prime) χ b j hχ hunique
+  have hdegree : orderOf χ ∣ P.natDegree :=
+    orderOf_dvd_natDegree_primeLinearOrderPolynomial p 7 χ b
+  have hrootUpper : P.roots.toFinset.card ≤ 14 := by
+    calc
+      P.roots.toFinset.card ≤ 2 * 7 := by
+        simpa [P] using
+          (card_roots_primeLinearOrderPolynomial_le
+            p 7 (Fact.out : p.Prime) χ b hχ)
+      _ = 14 := by norm_num
+  have hactiveUpper : (primeActiveRoots p χ P).card ≤ 14 := by
+    calc
+      (primeActiveRoots p χ P).card ≤ P.roots.toFinset.card :=
+        Finset.card_le_card (primeActiveRoots_subset_roots p χ P)
+      _ ≤ 14 := hrootUpper
+  have hactiveLower : 14 ≤ (primeActiveRoots p χ P).card := by
+    simpa [P] using hactiveFourteen
+  have hcard : (primeActiveRoots p χ P).card = 14 :=
+    Nat.le_antisymm hactiveUpper hactiveLower
+  have hrootLower : 14 ≤ P.roots.toFinset.card := by
+    rw [← hcard]
+    exact Finset.card_le_card (primeActiveRoots_subset_roots p χ P)
+  have hp64 : 64 < p := by nlinarith
+  simpa [P] using
+    (primeSplitPolynomialWeilBound_of_card_activeRoots_eq_fourteen_degree_power
+      p (hthirteen.toThirteenPoint.toPower p hp64) χ P (-b j)
+        hχ hP hnot hdegree hcard)
+
+/-- All reduced endpoints through thirteen points imply the fixed `r = 7`
+prime quotient bound, with no residual source-cardinality hypothesis. -/
+theorem TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toLinearQuotientRSeven
+    (hthirteen : TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour)
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour) :
+    TaoPrimeLinearQuotientWeilBoundRSeven :=
+  hthirteen.toFourteenActiveRootsRSeven.toLinearQuotient
+    hthree hfour hfive hsix hseven height hnine hten heleven htwelve
+
+/-- All reduced endpoints through thirteen points imply the fixed composite
+Burgess complete-Weil bound, with no residual source-cardinality hypothesis. -/
+theorem TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toCompositeRSeven
+    (hthirteen : TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour)
+    (hthree : TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour)
+    (hfour : TaoPrimeReducedPowerFourPointLegendreWeilBoundAboveSixtyFour)
+    (hfive : TaoPrimeReducedPowerFivePointLegendreWeilBoundAboveSixtyFour)
+    (hsix : TaoPrimeReducedPowerSixPointLegendreWeilBoundAboveSixtyFour)
+    (hseven : TaoPrimeReducedPowerSevenPointLegendreWeilBoundAboveSixtyFour)
+    (height : TaoPrimeReducedPowerEightPointLegendreWeilBoundAboveSixtyFour)
+    (hnine : TaoPrimeReducedPowerNinePointLegendreWeilBoundAboveSixtyFour)
+    (hten : TaoPrimeReducedPowerTenPointLegendreWeilBoundAboveSixtyFour)
+    (heleven : TaoPrimeReducedPowerElevenPointLegendreWeilBoundAboveSixtyFour)
+    (htwelve : TaoPrimeReducedPowerTwelvePointLegendreWeilBoundAboveSixtyFour) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
+  (hthirteen.toLinearQuotientRSeven
+    hthree hfour hfive hsix hseven height hnine hten heleven htwelve).toComposite
 
 end
 

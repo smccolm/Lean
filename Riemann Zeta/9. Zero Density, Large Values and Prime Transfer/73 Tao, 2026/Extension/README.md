@@ -1688,3 +1688,55 @@ split-polynomial bridge. Its eleven-point input is reduced to one ambient
 character, finite exponent ranges, `p > 64`, and the nine-parameter form
 `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀`. The literal residual window is now
 `13 ≤ activeRoots.card ≤ 14`.
+
+## Release 2.91: thirteen-root projective reduction
+
+`BurgessWeilPrimeThirteenRoots` proves the thirteen-root Möbius and complete-
+sum identities, the sharp `11*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its twelve-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the ten-parameter form
+`0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀`. The literal fixed-`r=7` residual is now only
+the exact case `activeRoots.card = 14`.
+
+## Release 2.92: fourteen-root projective reduction
+
+`BurgessWeilPrimeFourteenRoots` proves the fourteen-root Möbius and complete-
+sum identities, the sharp `12*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its thirteen-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the eleven-parameter form
+`0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀`.
+
+The structural fourteen-root cap closes the last literal fixed-`r=7` source
+case. Consequently the fixed prime quotient and cube-free composite complete-
+Weil interfaces depend only on the reduced trace endpoints through thirteen
+points, with no remaining source-cardinality residual. The reduced trace
+endpoints remain unproved, so no unconditional Burgess or Theorem 1.7 claim is
+made.
+
+## Release 2.93: source-facing Erdős--Selfridge bridge
+
+`ErdosSelfridgeSource` formalizes the exact translation from the stronger
+prime-valuation statement in Erdős--Selfridge Theorem 2 to the square theorem
+used by Tao. It proves the local interval product equals the source's closed
+product over `[N+1,N+H]`, constructs the least prime `p^(H)`, and uses Bertrand
+to verify `p^(H) <= N+H` whenever `H<N`. At exponent two, a square has every
+prime valuation divisible by two, contradicting the source witness.
+
+The resulting theorem feeds both the Lemma 4.2 and direct source-input
+Theorem 1.10 consumers. The prime-multiplicity theorem itself remains a
+proposition-valued input, so this release narrows and source-aligns the
+dependency without claiming an unconditional Erdős--Selfridge or Theorem
+1.10 proof.
+
+## Release 2.94: Erdős--Selfridge power-free coefficients
+
+`ErdosSelfridgePowerFree` formalizes equation (3) of the pinned paper. Prime
+valuations split canonically into remainder modulo `l` and quotient by `l`,
+giving `m=a*x^l` with every valuation of `a` below `l`. A strengthened
+interval uniqueness lemma handles every prime `p>=H`, including `p=H`, and
+identifies its product valuation with that of the unique factor it divides.
+
+Thus a counterexample to source Theorem 2 now yields the simultaneous
+equation-(3) decomposition of every factor in `[N+1,N+H]`, with each
+coefficient supported only on primes below `H`. The source's distinct-product
+Lemma 1 and later deletion/counting argument remain to be formalized.

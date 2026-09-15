@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-2.90`. It
+This is a development manifest, version `prime-equidistribution-2.94`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -2424,3 +2424,84 @@ no unconditional Burgess or Theorem 1.7 claim is made.
 On 2026-09-14, `cmd /c run_tao_build.bat --no-pause` completed with
 `FINAL RESULT: PASS` after this delta; the isolated production graph contained
 10046 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.91
+
+Exactly thirteen degree-balanced active roots now reduce to a twelve-point
+power-character trace and one deleted projective value. The new
+`BurgessWeilPrimeThirteenRoots` module proves the pointwise Möbius identity,
+the complete-sum formula, the `11*sqrt(p)+1` active-root estimate, and the
+exact split-polynomial bridge. Exponent reduction and scaling isolate the
+remaining ten-parameter normal form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀` above
+characteristic `64`.
+
+The literal fixed-`r=7` higher-root residual is consequently narrowed from
+`13..14` to the exact active-root case `14`, with direct generic and fixed
+prime-quotient and cube-free composite bridges. The reduced trace endpoints
+remain unproved, so no unconditional Burgess or Theorem 1.7 claim is made.
+
+On 2026-09-14, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10047 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.92
+
+Exactly fourteen degree-balanced active roots now reduce to a thirteen-point
+power-character trace and one deleted projective value. The new
+`BurgessWeilPrimeFourteenRoots` module proves the pointwise Möbius identity,
+the complete-sum formula, the `12*sqrt(p)+1` active-root estimate, and the
+exact split-polynomial bridge. Exponent reduction and scaling isolate the
+remaining eleven-parameter normal form
+`0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀` above characteristic `64`.
+
+The structural fourteen-root cap for the literal `r=7` polynomial converts
+the final lower bound on active-root cardinality into equality. The fixed prime
+quotient and cube-free composite bridges therefore no longer assume a source-
+cardinality residual; they depend on the reduced trace endpoints through
+thirteen points. Those endpoints remain unproved, so no unconditional Burgess
+or Theorem 1.7 claim is made.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10048 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.93
+
+`ErdosSelfridgeSource.lean` adds the source-facing Theorem 2 boundary from the
+pinned 1975 Erdős--Selfridge paper. It proves that `consecutiveProduct N H` is
+the source product over `[N+1,N+H]`, constructs the least prime `p^(H)`, proves
+its minimality, and uses Bertrand to obtain `p^(H)<=N+H` in the exact residual
+range `H<N`.
+
+The exponent-two specialization is then fully internal: a hypothetical square
+has every prime valuation divisible by two, contradicting Theorem 2's witness.
+This proves bridges to `ErdosSelfridgeSquareCoreConclusion`, the full square
+proposition, the Lemma 4.2 Theorem 1.10 consumer, and the direct Theorem 2.5
+plus Baker--Harman--Pintz consumer. The prime-multiplicity proposition itself
+remains unproved, so no unconditional Erdős--Selfridge or Theorem 1.10 claim is
+made. The `erdos137` candidate was re-audited and not imported: it does not
+contain this theorem, while its relevant elementary facts are already
+subsumed by node 73.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10049 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.94
+
+`ErdosSelfridgePowerFree.lean` formalizes the first internal step of the
+pinned 1975 proof. The canonical factorization remainder and quotient modulo
+`l` reconstruct every positive natural exactly as `a*x^l`, and every prime
+valuation of `a` is strictly below `l`.
+
+For a source-Theorem-2 counterexample, a new uniqueness theorem valid at the
+closed boundary `H<=p` identifies each large-prime valuation of the interval
+product with the valuation of its unique divisible factor. Divisibility by
+`l` therefore removes all primes `p>=H` from the canonical coefficient. The
+simultaneous counterexample theorem yields precisely equation (3) for every
+factor in `[N+1,N+H]`. Source Lemma 1 and the subsequent deletion/counting
+argument remain unproved, so the public Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10050 jobs, including the root and dependency audit.

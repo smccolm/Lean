@@ -1772,3 +1772,60 @@ modulo the ambient character order and scaling gives the nine-parameter
 marked-point form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀` for `p > 64`. The resulting
 `10*sqrt(p)+1` estimate closes exact cardinality twelve, leaving the literal
 source residual on only the two-cardinality window `13..14`.
+
+## Prime-equidistribution release 2.91
+
+Thirteen degree-balanced active roots now Möbius-reduce to a twelve-point
+power-character trace plus one deleted projective value. Exponents are reduced
+modulo the ambient character order and scaling gives the ten-parameter
+marked-point form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀` for `p > 64`. The resulting
+`11*sqrt(p)+1` estimate closes exact cardinality thirteen, leaving the literal
+fixed-`r=7` source residual only at exact active-root cardinality fourteen.
+
+## Prime-equidistribution release 2.92
+
+Fourteen degree-balanced active roots now Möbius-reduce to a thirteen-point
+power-character trace plus one deleted projective value. Exponents are reduced
+modulo the ambient character order and scaling gives the eleven-parameter
+marked-point form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀` for `p > 64`. The
+resulting `12*sqrt(p)+1` estimate closes exact cardinality fourteen.
+
+Because the literal `r=7` source polynomial has at most fourteen distinct
+roots, the exact-card bridge eliminates the fixed-order source residual. The
+production prime quotient and cube-free composite bounds now follow from the
+reduced trace endpoints through thirteen points alone. Those analytic
+endpoints remain hypotheses, so no unconditional Burgess or Theorem 1.7 claim
+is made.
+
+## Prime-equidistribution release 2.93
+
+`ErdosSelfridgeSource` now transcribes the stronger prime-multiplicity
+statement of Erdős--Selfridge Theorem 2. The local half-open product is proved
+equal to the source interval `[N+1,N+H]`; the least prime `p^(H)` is constructed
+from Euclid's theorem; and Bertrand proves `p^(H) <= N+H` in the residual
+range `H<N`. Specializing the source exponent to two then turns a hypothetical
+square into even valuation at every prime, contradicting Theorem 2's witness.
+
+This gives audited bridges from the prime-multiplicity contract to the exact
+square proposition and onward to the existing Theorem 1.10 endpoint, including
+the direct Theorem 2.5 plus Baker--Harman--Pintz consumer. The pinned
+`erdos137` candidate was also checked at its exact commit: its relevant
+unconditional interval facts are already subsumed by the local extraction
+layer, and it does not prove the Erdős--Selfridge perfect-power theorem. The
+new source contract therefore remains an explicit unproved input; Theorem
+1.10 is not claimed unconditionally.
+
+## Prime-equidistribution release 2.94
+
+`ErdosSelfridgePowerFree` now formalizes the first contradiction step of the
+1975 proof, equation (3). For every positive `m`, the canonical coefficient
+reduces each prime valuation modulo `l`, and Lean proves
+`m = powerFreePart l m * powerRootPart l m ^ l` together with the strict
+valuation bound `v_p(powerFreePart l m) < l`.
+
+Under failure of the source prime-multiplicity conclusion, exact uniqueness of
+a multiple for every prime `p >= H` transfers the product valuation back to
+its single interval element, including the boundary `p=H`. Consequently every
+factor in `[N+1,N+H]` has the source decomposition `a*x^l` with `a`
+`l`-power-free and all prime factors of `a` strictly below `H`. The remaining
+Erdős--Selfridge proof begins with the source's distinct-product Lemma 1.

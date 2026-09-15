@@ -41,6 +41,9 @@ Power*, *Illinois Journal of Mathematics* 19 (1975), 292--301.
 
 - `Sources/erdos-selfridge-1975.pdf`
 - Required result: Theorem 1, specialized to squares.
+- Stronger formalized boundary: Theorem 2's prime-multiplicity statement;
+  `ErdosSelfridgePrimeMultiplicityConclusion` records its least-prime endpoint
+  and valuation-divisibility conclusion exactly (journal/PDF page 292).
 - Tao-facing use: equality of two factorial squarefree components would make
   a product of at least two consecutive positive integers a square; excluding
   that case leaves at most two consecutive factorial indices in each fiber.
@@ -100,3 +103,31 @@ row-by-row source crosswalk. The Baker--Harman--Pintz, Erdős--Selfridge,
 Granville, and Canfield--Erdős--Pomerance artifacts are pinned, but pinning
 papers is not a Lean proof of any
 missing dependency.
+
+## Release 2.92 source note
+
+`BurgessWeilPrimeFourteenRoots.lean` adds no external source dependency. It is
+the final finite algebraic/projective reduction for the literal fourteenth
+moment: exact fourteen active roots reduce to a normalized thirteen-point
+power-character trace. The corresponding reduced trace estimate remains an
+explicit analytic hypothesis rather than a claimed consequence of the pinned
+source archive.
+
+## Release 2.93 source note
+
+`ErdosSelfridgeSource.lean` uses the already pinned 1975 paper and introduces
+no new external dependency. It transcribes Theorem 2 in source-facing form
+and proves its implication to the exact square input. The online
+`formal-conjectures` statement remains unusable because its proof is `sorry`.
+The pinned `scottdhughes/erdos137` commit was re-inspected declaration by
+declaration in `Base`, `Finiteness`, `TaoPoint`, `RoughPartStructure`, and
+`SquarefreeCapacity`: it proves useful elementary facts but not the
+perfect-power theorem, and those relevant interval/extraction facts are
+already subsumed locally. No code or dependency was imported from it.
+
+## Release 2.94 source note
+
+`ErdosSelfridgePowerFree.lean` follows journal page 293 of the already pinned
+1975 paper. It formalizes equation (3), including the canonical
+`l`-power-free coefficient and its restriction to primes below the block
+length under failure of Theorem 2. No external declaration is imported.

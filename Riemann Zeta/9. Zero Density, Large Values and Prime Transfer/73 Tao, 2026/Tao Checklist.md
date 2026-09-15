@@ -2245,3 +2245,65 @@ covered by an explicit projective reduction or a named reduced trace endpoint.
 
 Every exact cleared Burgess trace with twelve or fewer active roots is now
 covered by an explicit projective reduction or a named reduced trace endpoint.
+
+## Prime-equidistribution 2.91
+
+- [x] Prove the thirteen-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate and normalize the source-shaped twelve-point endpoint.
+- [x] Prove the sharp `11*sqrt(p)+1` exact-cardinality bridge.
+- [x] Narrow the literal fixed-order residual to exact cardinality fourteen.
+- [ ] Prove the reduced trace endpoints through twelve points.
+
+## Prime-equidistribution 2.92
+
+- [x] Prove the fourteen-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped thirteen-point power-character endpoint.
+- [x] Reduce all fourteen finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀`.
+- [x] Prove the sharp `12*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-fourteen-active-root split-polynomial branch.
+- [x] Eliminate the literal fixed-`r=7` source-cardinality residual and connect
+  the reduced endpoints directly to prime quotient and composite bounds.
+- [ ] Prove the reduced trace endpoints through thirteen points.
+
+Every possible active-root cardinality of the literal cleared `r=7` Burgess
+polynomial is now covered by an explicit projective reduction or a named
+reduced trace endpoint.
+
+## Prime-equidistribution 2.93
+
+- [x] Transcribe Erdős--Selfridge Theorem 2 as the exact source-shaped
+  prime-multiplicity proposition.
+- [x] Prove that the local `Ioc N (N+H)` product is the source product over
+  `Icc (N+1) (N+H)`.
+- [x] Construct the least prime `p^(H)` and prove its minimality.
+- [x] Use Bertrand to discharge `p^(H) <= N+H` throughout `H<N`.
+- [x] Specialize the valuation witness to exponent two and derive the exact
+  residual square conclusion, the full square proposition, and the existing
+  public Theorem 1.10 consumers.
+- [x] Re-audit `scottdhughes/erdos137` at commit
+  `3027d9add77a1f2b203977501987c7def955475d`; no declaration is imported,
+  because its useful unconditional interval facts are already subsumed and it
+  does not prove the required perfect-power theorem.
+- [ ] Recursively formalize the prime-multiplicity theorem itself (or the
+  weaker square core) with no unproved source proposition.
+
+The remaining Erdős--Selfridge boundary is now the paper's stronger Theorem 2
+statement itself; all interval, least-prime, Bertrand, valuation, and public
+Theorem 1.10 translation steps are compiled and audited.
+
+## Prime-equidistribution 2.94
+
+- [x] Define the canonical `l`-power-free and `l`-power-root factorizations.
+- [x] Prove the exact decomposition `m=a*x^l` and `v_p(a)<l`.
+- [x] Strengthen prime uniqueness to `H<=p`, including the boundary `p=H`.
+- [x] Identify the full interval-product valuation with the valuation of its
+  unique divisible factor.
+- [x] Express negation of source Theorem 2 as a structured counterexample.
+- [x] Derive equation (3) simultaneously for every counterexample factor, with
+  all coefficient prime factors below `H`.
+- [ ] Formalize source Lemma 1: every product of fewer than `l` distinct
+  coefficients is distinct, equivalently no quotient is an `l`-th power.
+
+The recursive Erdős--Selfridge formalization has now entered the body of the
+proof; equation (3) and its valuation-localization prerequisite are complete.

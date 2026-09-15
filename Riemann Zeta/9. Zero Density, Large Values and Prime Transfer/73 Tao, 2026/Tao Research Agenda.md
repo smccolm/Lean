@@ -1692,3 +1692,57 @@ Modulo-order exponent reduction and scaling produce the nine-parameter normal
 form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀` above characteristic `64`. The literal `r=7`
 residual is now exactly `13..14`; cardinality thirteen is the next algebraic
 branch.
+
+## Thirteen-root reduction and twelve-point boundary (release 2.91)
+
+The degree-balanced projective calculation covers exactly thirteen active
+roots. Its complete sum is a twelve-point trace minus one deleted value, so an
+`11*sqrt(p)` trace estimate yields the required `11*sqrt(p)+1` active-root
+bound. Modulo-order reduction and scaling produce the ten-parameter normal
+form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀` above characteristic `64`. The literal
+fixed-order residual is thereby reduced to exact cardinality fourteen.
+
+## Fourteen-root reduction and thirteen-point boundary (release 2.92)
+
+The final degree-balanced projective calculation covers exactly fourteen
+active roots. Its complete sum is a thirteen-point trace minus one deleted
+value, so a `12*sqrt(p)` trace estimate yields the required
+`12*sqrt(p)+1` active-root bound. Modulo-order reduction and scaling produce
+the eleven-parameter normal form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀` above
+characteristic `64`.
+
+The structural `2r=14` root cap now eliminates the literal fixed-`r=7`
+source-cardinality residual. The remaining Burgess work is analytic: prove the
+reduced trace endpoints through thirteen points, then discharge their existing
+prime-quotient, composite, amplification, and optimization consumers.
+
+## Erdős--Selfridge source-Theorem-2 bridge (release 2.93)
+
+The stronger theorem used inside the 1975 Erdős--Selfridge proof is now an
+exact Lean contract: once `N+H` reaches the least prime `p^(H) >= H`, some
+prime at least `H` has product valuation not divisible by the proposed power
+exponent. The interval representation, construction and minimality of
+`p^(H)`, and the automatic endpoint hypothesis in `H<N` are all proved.
+
+At exponent two, a hypothetical square makes every factorization coordinate
+even, so the source witness yields the residual square contradiction. This is
+compiled through the full square proposition and both direct Theorem 1.10
+consumers. The remaining work is the arithmetic proof of the source
+prime-multiplicity theorem itself (or a direct proof of its weaker square
+corollary); no online candidate inspected so far supplies a completed Lean
+proof.
+
+## Erdős--Selfridge equation (3) (release 2.94)
+
+The counterexample setup is now internal. The canonical `l`-power-free part
+of a natural is defined by reducing every factorization coordinate modulo
+`l`; the complementary quotient coordinates reconstruct an exact `l`-th
+power. Both reconstructed naturals are nonzero, their factorizations are
+proved exactly, and the coefficient valuations are all below `l`.
+
+Prime uniqueness has also been sharpened from `H<p` to the source boundary
+`H<=p`. Under a Theorem-2 counterexample this localizes every large-prime
+product valuation to its unique factor, so all coefficient primes are `<H`.
+The resulting simultaneous interval theorem is precisely source equation (3).
+The next proof obligation is Lemma 1's distinctness of products of fewer than
+`l` coefficients; after that comes the deletion/divisibility Lemma 2.
