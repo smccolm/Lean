@@ -35,7 +35,7 @@ least `H/400` for `H≥200`. The needed arithmetic scale is now proved
  failure window `2N<H²`. Start monotonicity and the explicit threshold `H^H+1`
  further reduce unrestricted Sylvester--Schur to a finite rectangle. A
  separate checked module proves all rows `H<49`, so the residual rectangle is
- restricted to `H>=49`. A further checked module combines the large-length
+ restricted to `H>=101`. Checked small-length modules combine the large-length
  tail with the finitely many fixed-length thresholds to produce one common
  start cutoff valid for every length. The resulting eventual
 `N/H²≥1/2` and `H/400` theorems remove unrestricted Sylvester--Schur from the
@@ -1740,3 +1740,277 @@ Thus a counterexample to source Theorem 2 now yields the simultaneous
 equation-(3) decomposition of every factor in `[N+1,N+H]`, with each
 coefficient supported only on primes below `H`. The source's distinct-product
 Lemma 1 and later deletion/counting argument remain to be formalized.
+
+## Release 2.95: Erdős--Selfridge product separation
+
+`ErdosSelfridgeProductSeparation` formalizes source equation (2), equation
+(4), and all of Lemma 1. The Sylvester--Schur witness turns failure of source
+Theorem 2 into `H^l<N`; gcd control for products of interval elements then
+proves distinctness for equally sized subfamilies of cardinality below `l`.
+
+The source's stronger statement about quotients is proved over positive
+rationals, not merely for equal products. Cancelling the numerator and
+denominator gcd reduces it to coprime powers; a lower power-gap estimate and
+a strict interval upper-gap estimate are incompatible. Equation (3) then
+transfers both conclusions to the canonical power-free coefficients. Lemma 2
+and the remaining deletion/counting cases are still open, so no unconditional
+Erdős--Selfridge or Theorem 1.10 conclusion is claimed.
+
+## Release 2.96: Erdős--Selfridge deletion lemma
+
+`ErdosSelfridgeDeletion` formalizes Lemma 2 and equation (9). It chooses a
+maximal-valuation interval position for every prime below `H`, proves the
+factorization bound against the corresponding position distance, and computes
+the complete distance product as `m!*(H-1-m)!`. The binomial factorial
+divisibility then gives the required divisor of `(H-1)!`.
+
+Duplicate chosen positions are harmless: the core deletion set is extended
+inside `range H` to exactly `primeCounting (H-1)` positions, so the survivor
+cardinality is exactly the source value. The same valuation proof at exponent
+two gives equation (21), with the full coefficient product dividing
+`(H-1)!` times the product of primes below `H`. The remaining square proof
+requires the source's large-length inequality and finite residual analysis.
+
+## Release 2.97: the 36-term squarefree-density lemma
+
+`ErdosSelfridgeSquareDensity` begins the proof of source equation (22). A
+general interval lemma counts multiples of any divisor `d` of the block
+length exactly. Applied to `4`, `9`, and their coprime product `36`,
+inclusion--exclusion proves that exactly twelve values in `(N,N+36]` are
+divisible by `4` or `9`.
+
+Squarefree values cannot occupy any of those positions, so Lean obtains the
+source bound of at most 24 squarefree values in every block of 36 consecutive
+positive integers, together with the `N+(i+1)` offset formulation used by the
+existing interval API. The full product lower bound (22), the valuation
+comparison (23), and the finite residual lengths remain open.
+
+## Release 2.98: source equation (22)
+
+The same module now proves equation (22) itself. A cumulative squarefree
+count is initialized on `44≤M<80` by an explicit small-prime-square sieve and
+then advanced in exact blocks of 36. The first 64 squarefree values are
+described by excluding `4`, `9`, `25`, and `49` up to 103; their cardinality
+and strict product inequality are kernel-evaluated without `native_decide`.
+
+Increasing finset enumerations prove that this first-64 product is minimal.
+For larger finsets, removing the maximum and using `3*card≤2*max` propagates
+the cleared inequality `3^H H! < 2^H ∏a`. Lemma 1 supplies injectivity of the
+canonical counterexample coefficients, yielding the source-facing equation
+(22). Equation (23) and the finite residual lengths remain open.
+
+## Release 2.99: the exact pre-equation-(23) valuation ledger
+
+`ErdosSelfridgeSquareValuations` defines the canonical coefficient product
+and proves that the squarefree primorial in equation (21) has valuation one
+at every prime below `H`. It then extracts the full powers of `2` and `3` from
+the equation-(21) divisibility relation without division or rounding.
+
+The source-facing theorem combines this result with equation (22), producing
+the exact strict integer inequality on which the paper applies its four
+elementary logarithmic valuation bounds. Those bounds and the final displayed
+equation (23) remain the next large-length obligations.
+
+## Release 3.00: the four valuation bounds and logarithmic pre-(23) form
+
+`ErdosSelfridgeSquareValuations` now proves the paper's four explicit
+valuation estimates. Legendre's digit-sum formula gives the lower bounds for
+the powers of `2` and `3` in `(H-1)!`; exact halving and thirding recurrences
+for odd interval valuations give the matching upper bounds for the canonical
+squarefree coefficient product.
+
+The integer ledger is then cast to `ℝ`, `(H-1)!` is cancelled, the right-hand
+powers are divided out, and all four estimates are inserted into
+`powerFreePart_two_preEquation23_logarithmic_of_failure`. The only remaining
+step to the displayed equation (23) is its elementary real-power
+simplification to the constant `14/3`; the primorial contradiction and finite
+residual square cases remain open.
+
+## Release 3.01: displayed equation (23)
+
+`erdosSelfridge_equation23_root_factor_le` bounds the residual root factor by
+`4H²`, hence by the source constant `(14/3)H²`. Exact `rpow`/`logb`
+identities then turn the logarithmic endpoint into
+`erdosSelfridge_equation23_of_failure`, the paper's displayed equation (23).
+The next large-length obligation is the explicit primorial estimate and its
+contradiction for the required range of `H`.
+
+## Release 3.02: eventual primorial contradiction
+
+`ErdosSelfridgePrimorial` identifies the source prime product with the
+standard primorial at `H-1`. The frozen prime number theorem gives the
+eventual upper bound `prod_{p<H} p <= 3^H`.
+
+The effective base of equation (23) is proved strictly larger than `3` using
+the exact rational comparisons `14/9 < 2^(2/3)` and
+`13/10 < 3^(1/4)`. Polynomial-versus-exponential growth therefore contradicts
+equation (23) for every sufficiently large `H`. The paper's explicit cutoff
+and the finite residual square lengths remain open.
+
+## Release 3.03: first finite Section 3.2 cases
+
+`ErdosSelfridgeFinite` proves a general finite-candidate embedding: under a
+square-case failure, the `H` distinct canonical coefficients inject into the
+positive divisors of `prod_{p<H} p`. It closes `H=3` and `H=5` by exact
+candidate-cardinality computations.
+
+For `H=4`, the four coefficients exhaust `1,2,3,6`, so their product is `6^2`.
+Equation (3) would make four consecutive integers a square, contradicting
+`(N+1)(N+2)(N+3)(N+4) = (N^2+5N+5)^2-1`. The remaining finite range starts
+at `H=6`.
+
+## Release 3.04: the exceptional length-six split
+
+`not_erdosSelfridgePrimeMultiplicityFailureAt_two_six` formalizes both source
+branches at `H=6`. If `5` does not divide `N+1`, exactly five of the six
+positions avoid `5`, so their distinct coefficients cannot fit among the four
+products supported on `2` and `3`.
+
+If `5` divides `N+1`, the middle four positions avoid `5`; their coefficients
+exhaust `1,2,3,6`, and equation (3) makes those four consecutive integers a
+square, contradicting the release-3.03 identity. The combined finite endpoint
+now covers `3 <= H <= 6`.
+
+## Release 3.05: length seven
+
+`not_erdosSelfridgePrimeMultiplicityFailureAt_two_seven` closes `H=7` by
+the small-prime count from Section 3.2. An exact modulo-five enumeration shows
+that at least five of the seven interval positions avoid `5`. Their distinct
+canonical coefficients are therefore supported only on `2` and `3`, but the
+only four candidates are `1,2,3,6`.
+
+The combined endpoint
+`not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_seven`
+now excludes every square-case failure with `3 <= H <= 7`. The release-3.04
+endpoint remains available as a compatibility theorem, and the finite
+residual begins at `H=8`.
+
+## Release 3.06: the exceptional length-eight split
+
+`not_erdosSelfridgePrimeMultiplicityFailureAt_two_eight` formalizes the
+source's full `H=8` argument. Reduction modulo `35` proves that at least five
+positions avoid both `5` and `7` unless `7 | N+1` and `5 | N+2`; in the
+ordinary branch their distinct coefficients cannot fit among `1,2,3,6`.
+
+In the exceptional class the middle four terms `N+3,...,N+6` avoid both
+primes. Their coefficients exhaust `1,2,3,6`, and equation (3) again forces a
+forbidden square product of four consecutive integers. The combined endpoint
+now covers `3 <= H <= 8`, and the finite residual begins at `H=9`.
+
+## Release 3.07: uniform lengths nine through thirteen
+
+The small-prime pigeonhole argument now closes `9 <= H <= 13`. For lengths
+nine through eleven, a modulo-`35` count produces five positions avoiding
+`5` and `7`. For lengths twelve and thirteen, a modulo-`385` count produces
+five positions avoiding `5`, `7`, and `11`.
+
+In both blocks the surviving canonical coefficients are distinct but must be
+among `1,2,3,6`. The combined endpoint
+`not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_thirteen`
+therefore covers `3 <= H <= 13`; the next finite boundary is `H=14`.
+
+## Release 3.08: interval-union counts through seventeen
+
+`ErdosSelfridgeFiniteCounts` replaces large residue enumeration by a reusable
+union bound for multiples of `5,7,11,13`. Exact block counts at the divisible
+lengths and the general interval-multiple estimate leave at least five terms
+with coefficients supported only on `2,3` for every `14 <= H <= 17`.
+
+The resulting five-to-four contradiction extends the combined finite endpoint
+to `3 <= H <= 17`. The next finite boundary is `H=18`, where `17` enters the
+excluded prime support.
+
+## Release 3.09: scalable counts through twenty
+
+`ErdosSelfridgePrimeUnion` proves sharp ceiling and finite-prime union bounds.
+`ErdosSelfridgeFiniteTwenty` transfers the resulting five survivors through
+coprimality with the excluded-prime product, forcing every coefficient to
+divide six. The combined finite endpoint now covers `3 <= H <= 20`; the next
+source range begins at `H=21`.
+
+## Release 3.10: complete finite range through seventy
+
+`ErdosSelfridgeFiniteSeventy` proves that for every `21 <= H <= 70`, at
+least nine interval terms avoid all coefficient primes `p >= 7`. Their
+canonical coefficients are therefore nine distinct divisors of `30`, although
+`30` has only eight positive divisors. The combined finite endpoint now covers
+the complete source range `3 <= H < 71`.
+
+## Release 3.11: explicit Section 3.1 split
+
+`ErdosSelfridgeLargeGrowth` proves the paper's numerical equation-(23) split.
+A rational lower bound `31335/10000` for the effective exponential base gives
+the exact growth cutoff `H >= 297`. For every `71 <= H <= 296`, one closed
+natural-number certificate checks the actual prime product and contradicts
+equation (23). Thus the only remaining square-case input is the named
+elementary assertion `prod_{p<H} p <= 3^H`, needed from `H=297` onward.
+
+## Release 3.12: Hanson's elementary three-primorial bound
+
+`ErdosSelfridgeHanson` formalizes Hanson's Sylvester sequence and its strict
+reciprocal floor sum.  The resulting factorial coefficient is divisible by
+every prime below its index.  For the quantitative upper bound, the first four
+denominators `2,3,7,43` and integer weights `903,602,258,42,1` (summing to
+`1806`) produce a five-part multinomial estimate with no real logarithms.
+
+After clearing the exponent `1806`, exact natural-number inequalities absorb
+the remainder primorial and floor losses from length `1400` onward.  Twenty-five
+monotone endpoint certificates cover the smaller lengths.  Thus
+`erdosSelfridgeThreePrimorialConclusion_hanson` proves
+`prod_{p<H} p <= 3^H` for every `H`, and the square conclusion now requires
+only `SylvesterSchurConclusion`.
+
+## Release 3.13: prime-count factorial Sylvester--Schur threshold
+
+`SylvesterSchurFactorialThreshold` replaces the coarse fixed-length cutoff
+`H^H+1` by a factorial argument.  From
+`(N+1)^H <= H! * choose (N+H,H)` and `N+H <= 2(N+1)`, it proves that
+`H! 2^r < (N+1)^(H-r)` forces a prime divisor above `H`, whenever `r` bounds
+the number of primes at most `H`.
+
+Taking the exact exponent `r=pi(H)` yields the cutoff
+`H! 2^pi(H)+1`.  The public classical cutoff `H! 2^(H-1)+1` follows from
+`pi(H)<H`.  The unrestricted theorem is now reduced to the corresponding
+exact-prime-count finite rectangle; lengths below `49` remain discharged by
+the earlier certificate.
+
+## Release 3.14: Sylvester--Schur through length one hundred
+
+`SylvesterSchurHundred` verifies the `3H` binomial-growth baseline for every
+`49<=H<=100`.  One finite-type certificate supplies a prime witness for all
+starts below that baseline; `choose_growth_of_le` propagates the result to
+every later start.
+
+The public endpoint `sylvesterSchurBelow_oneHundredOne` is unconditional and
+uniform in the start.  Together with the exact factorial cutoff, it restricts
+the remaining rectangle to lengths `H>=101`.
+
+## Release 3.15: square-root and one-third primorial envelopes
+
+`SylvesterSchurSqrtEnvelope` splits the prime factorization of `choose n k`
+at `sqrt n`.  Low primes contribute at most `n^sqrt(n)`.  High primes have
+valuation at most one; under the no-large-prime hypothesis they contribute a
+primorial, which Hanson's theorem bounds by an explicit power of three.
+
+In the central range `2k<=n`, primes in `(n/3,k]` have zero binomial
+valuation, sharpening the bound to
+`choose n k <= n^sqrt(n) * 3^(n/3+1)`.  Both this bound and its weaker
+`3^(k+1)` form now export exact numerical-gap criteria for a prime `p>k`, in
+binomial and consecutive-product form.  This is the scalable analytic layer
+for the still-open `H>=101` rectangle; no unconditional global
+Sylvester--Schur claim is made here.
+
+## Release 3.16: explicit central tail
+
+`SylvesterSchurCentralTail` discharges the sharper release-3.15 gap without
+real logarithms or an ineffective asymptotic threshold.  A block induction
+proves `x <= 2^(sqrt(x)/16)` once `sqrt(x)>=320`, then absorbs the complete
+square-root factor at `n=3H` into `2^(H/4)`.  A second fixed-base induction
+proves the remaining comparison against `4^H`.
+
+Consequently, for every `H>=34134` and every central start
+`H<N<=2H`, the interval product has a prime divisor `p>H`.  The result is
+uniform over that entire two-dimensional region and is exported both for
+binomial coefficients and consecutive products.  The noncentral starts and
+the finite bridge `101<=H<34134` remain part of the unrestricted
+Sylvester--Schur boundary.

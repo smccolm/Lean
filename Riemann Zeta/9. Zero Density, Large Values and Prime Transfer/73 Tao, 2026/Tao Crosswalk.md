@@ -47,7 +47,9 @@ the required prime whenever `2N<H²`; and the resulting
  `exists_sylvesterSchur_finiteRectangleReduction` reduces the remaining global
  contract to a finite bounded rectangle. `sylvesterSchurBelow_fortyNine` now
  discharges every row with `H<49`, uniformly over all starts. The remaining
- rectangle may therefore be restricted to `H>=49`; it, and hence the full
+ rectangle may therefore be restricted to `H>=101`. The start coordinate is
+ now bounded by the exact cutoff `H! * 2^pi(H) + 1`; this smaller rectangle,
+ and hence the full
  unrestricted `SylvesterSchurConclusion`, remains open. Independently,
  `exists_sylvesterSchurAboveStart` gives one common start cutoff for every
  length, and `eventually_admissibleSylvesterSchurAtScale` shows that all
@@ -129,7 +131,63 @@ The next source line, equation (3) on journal page 293, is represented by
 `factorization_consecutiveProduct_eq_intervalElement_of_length_le`, and
 `counterexample_forall_exists_powerFree_smallPrime_decomposition`. This
 proves the complete power-free coefficient setup for every factor of a
-Theorem-2 counterexample. Source Lemma 1 remains open.
+Theorem-2 counterexample.
+
+Source equations (2), (4), and Lemma 1 are represented by
+`erdosSelfridge_pow_lt_start_of_failure`,
+`consecutiveSubproduct_injective_of_pow_lt_start`,
+`consecutiveSubproduct_not_rationalPowerRatio`,
+`powerFreePart_subproduct_not_rationalPowerRatio`,
+`powerFreePart_subproduct_injective`, and
+`erdosSelfridgeLemmaOne_of_failure`. The last theorem packages the complete
+coefficient-product conclusion, including exclusion of rational `l`-th-power
+ratios, from failure of Theorem 2 and `SylvesterSchurConclusion`.
+
+Source Lemma 2 and its square specialization are represented by
+`erdosSelfridgeMaxValuationIndex`,
+`factorization_powerFreePart_le_factorization_dist_maxIndex_of_ne`,
+`prod_range_erase_dist_eq_factorials`,
+`product_powerFreePart_sdiff_deletionSet_dvd_factorial`,
+`exists_erdosSelfridgeDeletionSet_card_eq_primeCounting_and_dvd`, and
+`product_powerFreePart_two_dvd_factorial_mul_primeProduct`. These declarations
+prove the exact `π(H-1)` deletion cardinality, survivor cardinality, equation
+(9), and square-case equation (21). The Section 3 inequalities (22)--(23) and
+the finite residual square cases remain open.
+
+The opening density step of Section 3.1 is represented by
+`card_filter_dvd_Ioc_add_of_dvd`,
+`card_erdosSelfridgeSmallSquareMultiples`,
+`card_erdosSelfridgeSquarefreeBlock_le`, and
+`card_filter_squarefree_interval_offsets_le`. Exact counts for multiples of
+`4`, `9`, and `36` show that twelve of every 36 consecutive values are
+divisible by `4` or `9`; prime-square exclusion gives the source upper bound
+24 for squarefree values. The remainder of equation (22), equation (23), and
+the finite residual cases remain open.
+
+Equation (22) is now represented by
+`three_mul_card_erdosSelfridgeSquarefreeUpTo_le_two_mul`,
+`erdosSelfridgeInitialSquarefree_eq_upTo`,
+`initialSquarefree_equation22_base`,
+`initialSquarefree_orderEmb_le`, `initialSquarefree_prod_le`,
+`erdosSelfridge_equation22`,
+`powerFreePart_two_injOn_range_of_failure`, and
+`powerFreePart_two_equation22_of_failure`. These declarations prove the exact
+first-64 base, minimality among distinct positive squarefree coefficients,
+inductive propagation to every `H≥64`, and the canonical counterexample
+specialization. Equation (23) and the finite residual cases remain open.
+
+The valuation passage toward equation (23) is represented by
+`factorization_erdosSelfridgePrimeProduct_eq_one`,
+`erdosSelfridge_equation21_two_three_valuation_ledger`, the four
+`factorization_..._source_lower/upper` bounds, and
+`powerFreePart_two_preEquation23_logarithmic_of_failure`. The development now
+contains the exact binary/ternary digit estimates, recursive odd-valuation
+interval counts, coefficient-product factorization identities, factorial
+cancellation over `ℝ`, and insertion of all four source bounds. The displayed
+`14/3` real-power simplification is now completed by
+`erdosSelfridge_equation23_root_factor_le` and
+`erdosSelfridge_equation23_of_failure`. The subsequent primorial contradiction
+remains open.
 
 ## Supporting theorem ledger
 
@@ -286,6 +344,36 @@ estimates and that Vinogradov bound remain.
 | Burgess Pólya--Vinogradov completion and all-prefix closure | `TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven`, `norm_gaussSum_stdAddChar_eq_sqrt`, `primitiveDirichletCharacter_fourier_inversion`, `burgessIntervalCharacterSum_eq_fourierCompletion`, `norm_sum_interval_stdAddChar_le_geometricBound`, `sum_zmod_vinogradovGeometricSumBound_le`, `norm_burgessIntervalCharacterSum_le_polyaVinogradov`, `burgessFourteenthLargeRange_rpow_le`, `exists_eventually_norm_burgessIntervalCharacterSum_le_core_of_completeWeil`, `exists_taoPrimitiveCubefreeBurgessRSevenCoreBound_of_completeWeil`, `exists_taoPrimitiveCubefreeBurgessRSevenBound_of_completeWeil`, `exists_taoExplicitCubefreeBurgessBound_of_completeWeil` | Complete and audited Fourier/large-range layer conditional only on the fixed-`r=7` complete Weil predicate. DFT inversion and the exact primitive Gauss norm yield `10*sqrt(q)*(1+harmonic(q))`; the failed no-wrap inequality contributes exactly `q^(45/98)`, matching the `r=7` monomial. Medium and large ranges are combined, small conductors are absorbed explicitly, periodicity gives all prefixes, and conductor reduction gives every cubefree character plus the decimal sieve contract. No unused moment order is assumed; the fixed prime finite-field theorem is the sole remaining Burgess input. |
 
 | Sharp prime Kummer boundary | `IsMulCharOrderScalarPower`, `primePolynomialCharacterCorrelation_eq_kummerRootCorrelation`, `not_isMulCharOrderScalarPower_iff_exists_not_dvd_rootMultiplicity`, `orderOf_dvd_natDegree_iff_dvd_sum_primeActiveRoots_count`, `primeKummerRootCorrelation_le_of_card_roots_le_two`, `primeKummerRootCorrelation_le_of_card_roots_eq_three_of_degree_dvd`, `fourPointMulCharSum_eq_legendreForm`, `fiveRootMobius_term`, `sixRootMobius_term`, `sevenRootMobius_term`, `eightRootMobius_term`, `nineRootMobius_term`, `tenRootMobius_term`, `elevenRootMobius_term`, `twelveRootMobius_term`, `thirteenRootMobius_term`, `fourteenRootMobius_term`, `norm_thirteenRootMulCharPowerSum_le_eleven_mul_sqrt_add_one`, `norm_fourteenRootMulCharPowerSum_le_twelve_mul_sqrt_add_one`, `primeSplitPolynomialWeilBound_of_card_activeRoots_eq_thirteen_degree_power`, `primeSplitPolynomialWeilBound_of_card_activeRoots_eq_fourteen_degree_power`, `TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toFourteenActiveRootsRSeven`, `TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toLinearQuotientRSeven`, `TaoPrimeReducedPowerThirteenPointLegendreWeilBoundAboveSixtyFour.toCompositeRSeven` | Exact and audited reduction with coefficient `(t-1)*sqrt(p)`. Root counts through four reduce to elementary/Jacobi or lower trace endpoints. Degree-balanced active-root counts five through fourteen Möbius-reduce to four- through thirteen-point power traces plus one deleted projective value. On the literal cleared Burgess path, modulo-order exponent reduction and scaling narrow these to powers of one ambient character above `64`, in normal forms growing from `0,1,t,u` through `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀,c₀,d₀`. The structural `2r=14` cap closes the last fixed-`Fin 7` source-cardinality residual, so the fixed prime quotient and cube-free composite interfaces now depend only on the reduced trace endpoints through thirteen points. Those geometric trace estimates remain explicit unproved hypotheses. |
+
+| Erdős--Selfridge Section 3.1, eventual consequence of equation (23) | `erdosSelfridgePrimeProduct_eq_primorial_sub_one`, `eventually_erdosSelfridgePrimeProduct_le_three_pow`, `three_lt_erdosSelfridgeEquation23Base`, `erdosSelfridge_equation23_left_eq_base_pow`, `eventually_equation23_three_pow_lt_left`, `eventually_not_erdosSelfridgePrimeMultiplicityFailureAt_two`, `exists_erdosSelfridgeSquareLargeLengthThreshold` | Complete and audited as an asymptotic large-length theorem. The frozen PNT gives the eventual `3^H` primorial bound; exact rational root estimates prove the equation-(23) base is larger than `3`, and little-o absorbs the quadratic factor. This does not reproduce the paper's explicit cutoff, so the effective estimate and finite residual lengths remain. |
+
+| Erdős--Selfridge Section 3.2, lengths `3`, `4`, and `5` | `powerFreePart_two_dvd_erdosSelfridgePrimeProduct_of_failure`, `length_le_card_erdosSelfridgeSquareCoefficientCandidates_of_failure`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_three`, `consecutiveProduct_four`, `not_exists_consecutiveProduct_eq_square_four`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_four`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_five`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_five` | Complete and audited. Lemma 1 injects coefficients into the finite divisor candidates. Lengths three and five fail by cardinality; length four exhausts `1,2,3,6`, whose square product and equation (3) contradict the exact four-consecutive identity. The residual finite range begins at six. |
+
+| Erdős--Selfridge Section 3.2, length `6` | `card_range_six_filter_not_five_dvd_add_succ`, `not_five_dvd_of_mem_consecutiveInterval_succ_four`, `powerFreePart_two_mem_candidatesWithoutFiveAtSix_of_failure`, `powerFreePart_two_injOn_consecutiveInterval_of_failure`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_six`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_six` | Complete and audited. Exact residue enumeration closes the ordinary branch by five-to-four pigeonhole. In the exceptional class `5 | N+1`, the middle four coefficients exhaust `1,2,3,6` and force the forbidden square product of four consecutive integers. The finite residual begins at seven. |
+
+| Erdős--Selfridge Section 3.2, length `7` | `five_le_card_range_seven_filter_not_five_dvd_add_succ`, `powerFreePart_two_mem_candidatesWithoutFiveAtSeven_of_failure`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_seven`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_seven` | Complete and audited. Exact enumeration modulo five leaves at least five positions avoiding five. Their coefficients inject into the four products supported on `2,3`, a contradiction. The finite residual begins at eight. |
+
+| Erdős--Selfridge Section 3.2, length `8` | `dvd_add_iff_dvd_mod_thirty_five_add`, `five_le_card_range_eight_filter_not_five_or_seven_dvd_add_succ`, `not_five_and_not_seven_dvd_of_mem_consecutiveInterval_add_two_four`, `powerFreePart_two_mem_candidatesWithoutFiveOrSevenAtEight_of_failure`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_eight`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_eight` | Complete and audited. Exact modulo-35 enumeration closes the ordinary five-to-four branch. In the exceptional class `7 | N+1`, `5 | N+2`, the middle four coefficients exhaust `1,2,3,6` and force the forbidden square four-term product. The finite residual begins at nine. |
+
+| Erdős--Selfridge Section 3.2, lengths `9` through `13` | `five_le_card_range_nine_filter_not_five_or_seven_dvd_add_succ`, `five_le_card_range_filter_not_five_or_seven_dvd_add_succ`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_nine_le_of_le_eleven`, `dvd_add_iff_dvd_mod_three_eighty_five_add`, `five_le_card_range_twelve_filter_not_five_seven_eleven_dvd_add_succ`, `five_le_card_range_filter_not_five_seven_eleven_dvd_add_succ`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_twelve_le_of_le_thirteen`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_thirteen` | Complete and audited. Kernel-checked periodic counts yield five coefficients supported only on `2,3`; Lemma 1 injects them into the four divisors of six. The finite residual begins at fourteen. |
+
+| Erdős--Selfridge Section 3.2, lengths `14` through `17` | `five_le_card_consecutiveInterval_filter_not_five_seven_eleven_thirteen`, `five_le_card_consecutiveInterval_fourteen_to_seventeen_avoiding_large_primes`, `powerFreePart_two_mem_candidatesWithoutFiveThroughThirteen_of_failure`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_fourteen_le_of_le_seventeen`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_seventeen` | Complete and audited. A union bound for four interval-multiple sets leaves five coefficients supported on `2,3`; exact divisible-length counts remove boundary slack. The finite residual begins at eighteen. |
+
+| Erdős--Selfridge Section 3.2, lengths `18` through `20` | `card_intervalMultiples_le_div_add_indicator`, `card_intervalPrimeMultiplesUnion_le`, `five_le_card_filter_avoiding_primeSet`, `powerFreePart_two_dvd_six_of_failure_of_avoids_primeSet`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_primeSet_count`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_eighteen_le_of_le_nineteen`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_twenty`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_twenty` | Complete and audited. Sharp ceiling sums leave five terms; generic coprimality transfer puts their distinct coefficients among the four divisors of six. The finite residual begins at twenty-one. |
+
+| Erdős--Selfridge Section 3.2, lengths `21` through `70` | `le_card_filter_avoiding_primeSet`, `nine_le_card_consecutiveInterval_twenty_one_to_seventy_avoiding_large_primes`, `powerFreePart_two_dvd_base_of_failure_of_avoids_primeSet`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_primeSet_base_count`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_twenty_one_le_of_le_seventy`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le_of_le_seventy` | Complete and audited. Fifty exact ceiling sums leave nine coefficients supported on `2,3,5`; they inject into the eight divisors of `30`. This completes the finite range below seventy-one. |
+
+| Erdős--Selfridge Section 3.1, explicit split at `71` and `297` | `equation23Base_rational_lower`, `equation23_three_pow_lt_rational_pow_of_297_le`, `equation23_three_pow_lt_left_of_297_le`, `equation23_finite_primeProduct_certificate`, `equation23_primeProduct_lt_left_of_71_le_of_le_296`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_71_le_of_le_296`, `ErdosSelfridgeThreePrimorialConclusion`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_297_le`, `not_erdosSelfridgePrimeMultiplicityFailureAt_two_of_three_le`, `erdosSelfridgeSquareConclusion_of_sylvesterSchur_of_threePrimorial` | The complete numerical and assembly layer is audited. Kernel arithmetic checks every actual prime product for `71..296`; rational root estimates and induction give exponential dominance from `297`. The named all-length primorial premise is discharged by the Hanson row below. |
+
+| Hanson's elementary all-length primorial theorem | `sum_range_hansonSylvester_reciprocal`, `sum_range_div_hansonSylvester_lt`, `factorization_hansonFactorialDenominator_lt_factorial`, `prime_dvd_hansonCoefficient`, `erdosSelfridgePrimeProduct_dvd_hansonCoefficient`, `erdosSelfridgePrimeProduct_dvd_primorial_remainder_mul_multinomial`, `hansonFourMultinomial_weighted_le_explicit`, `hansonFourEntropyNumerator_pow_le`, `hansonFourMultinomial_pow_mul_entropy_le`, `hansonFour_exact_base_gap`, `hansonFour_exact_initial_absorption`, `erdosSelfridgePrimeProduct_le_three_pow_below_1400`, `erdosSelfridgeThreePrimorialConclusion_hanson`, `erdosSelfridgeSquareConclusion_of_sylvesterSchur` | Complete and audited. Sylvester reciprocals give the factorial-valuation margin. The fixed `2,3,7,43` multinomial supplies an exact integer entropy bound; finite block certificates below `1400` and strong induction above it prove `prod_{p<H} p <= 3^H` for every `H`. The square conclusion now depends only on `SylvesterSchurConclusion`. |
+
+| Sylvester--Schur factorial large-start reduction | `choose_growth_of_factorial_exponent_gap`, `exists_large_prime_dvd_consecutiveProduct_of_factorial_exponent_gap`, `sylvesterSchurPrimeCountFactorialThreshold`, `exists_large_prime_dvd_consecutiveProduct_of_primeCountFactorialThreshold_le`, `sylvesterSchurPrimeCountFactorialThreshold_le`, `sylvesterSchurFactorialThreshold`, `SylvesterSchurPrimeCountFactorialFiniteRectangle`, `sylvesterSchurBelow_of_primeCountFactorialFiniteRectangle`, `exists_sylvesterSchur_primeCountFactorialFiniteRectangleReduction` | Complete and audited as a reduction. The exact prime count gives the cutoff `H! 2^pi(H)+1`; `pi(H)<H` gives the classical `H! 2^(H-1)+1` corollary. Combined with the large-length tail and the proof below length `101`, only the exact-prime-count factorial rectangle with `H>=101` remains. |
+
+| Sylvester--Schur lengths `49` through `100` | `sylvesterSchur_triple_baseline_fortyNine_to_oneHundred`, `sylvesterSchur_below_triple_certificate_fortyNine_to_oneHundred`, `sylvesterSchurBelow_oneHundredOne` | Complete and audited. The upper index `3H` satisfies the binomial-growth inequality throughout the block; a bounded certificate covers smaller starts and monotonicity covers the tail. The unrestricted length residual begins at `101`. |
+
+| Sylvester--Schur square-root central envelope | `choose_le_sqrt_envelope_mul_primorial_of_high_support`, `choose_le_sqrt_envelope_mul_primorial_third_of_no_large_prime`, `choose_le_sqrt_envelope_mul_three_pow_third_of_no_large_prime`, `exists_large_prime_dvd_choose_of_sqrt_three_third_gap`, `exists_large_prime_dvd_consecutiveProduct_of_sqrt_three_third_gap` | Complete and audited as a reduction. Splitting at `sqrt n` costs `n^sqrt(n)` for low primes; high valuations are at most one, and in the range `2k<=n` the three-multiple lemma cuts their support to `n/3`. Hanson turns the primorial into `3^(n/3+1)`. Establishing the exported numerical gap uniformly and closing its finite bridge remain open. |
+
+| Sylvester--Schur explicit central tail | `self_le_two_pow_sqrt_div_sixteen`, `three_mul_pow_sqrt_le_two_pow_quarter`, `two_pow_quarter_mul_three_pow_gap`, `sylvesterSchur_central_gap_of_le_triple`, `exists_large_prime_dvd_choose_of_central_tail`, `exists_large_prime_dvd_consecutiveProduct_of_central_tail` | Complete and audited. Exact natural-number inductions prove the release-3.15 gap for all `H>=34134` and all `2H<=n<=3H`, closing every start `H<N<=2H`. Noncentral starts and the finite bridge below the cutoff remain open. |
 
 ## Crosswalk completion rule
 

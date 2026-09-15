@@ -50,6 +50,18 @@ Power*, *Illinois Journal of Mathematics* 19 (1975), 292--301.
 - Formalization warning: the online `formal-conjectures` declaration is
   explicitly unfinished (`sorry`) and cannot be imported or copied as proof.
 
+## Hanson primorial input
+
+Denis Hanson, *On the Product of the Primes*, *Canadian Mathematical
+Bulletin* 15(1) (1972), 33--37, DOI `10.4153/CMB-1972-007-7`.
+
+- Primary source URL: `https://doi.org/10.4153/CMB-1972-007-7`.
+- Source role: the Sylvester-sequence factorial coefficient and multinomial
+  estimate behind the elementary bound on the product of primes.
+- Representation note: the Lean proof uses the first four denominators
+  `2,3,7,43` with exact integer weights and a strong-induction remainder,
+  rather than importing Hanson's decimal estimate or numerical table.
+
 ## Granville smooth-number input
 
 Andrew Granville, *Smooth numbers: computational number theory and beyond*,
@@ -131,3 +143,214 @@ already subsumed locally. No code or dependency was imported from it.
 1975 paper. It formalizes equation (3), including the canonical
 `l`-power-free coefficient and its restriction to primes below the block
 length under failure of Theorem 2. No external declaration is imported.
+
+## Release 2.95 source note
+
+`ErdosSelfridgeProductSeparation.lean` follows journal pages 293--294 of the
+already pinned 1975 paper. It formalizes source equations (2) and (4) and the
+full statement of Lemma 1, including the stronger assertion that the quotient
+of two distinct equal-cardinality coefficient products is not an `l`-th
+power in the positive rationals. No new external declaration is imported;
+the package theorem uses the existing, explicitly named Sylvester--Schur
+contract. The next source obligation is Lemma 2's deletion and
+factorial-divisibility argument.
+
+## Release 2.96 source note
+
+`ErdosSelfridgeDeletion.lean` follows journal pages 294--295 and the beginning
+of Section 3 on page 299 of the pinned paper. It formalizes Lemma 2 with the
+exact deletion count and equation (9), then specializes the valuation ledger
+to the squarefree case to obtain equation (21). No external result beyond the
+already imported elementary factorial and prime-counting APIs is used. The
+next source boundary is the quantitative square-case comparison in equations
+(22)--(23) and the finite residual analysis.
+
+## Release 2.97 source note
+
+`ErdosSelfridgeSquareDensity.lean` formalizes the first two sentences of
+Section 3.1 on journal page 299 of the pinned Erdős--Selfridge paper. The
+source observes that twelve of every 36 consecutive integers are divisible
+by `4` or `9`, hence at most 24 are squarefree. Lean proves the exact translated
+interval count via inclusion--exclusion and exports the matching offset form.
+Equation (22)'s subsequent product lower bound is not yet claimed.
+
+## Release 2.98 source note
+
+`ErdosSelfridgeSquareDensity.lean` now completes equation (22) on journal page
+299. The source threshold `H≥64` is preserved, and `(3/2)^H` is represented
+exactly by the natural-number inequality `3^H*H! < 2^H*∏aᵢ`. The proof also
+exports the canonical-counterexample specialization using the already proved
+source Lemma 1. Equation (23) is the next unformalized line.
+
+## Release 2.99 source note
+
+`ErdosSelfridgeSquareValuations.lean` follows the transition from equations
+(21) and (22) to equation (23) on journal pages 299--300 of the pinned 1975
+paper. It formalizes the exact 2- and 3-adic cancellation and the resulting
+strict counterexample inequality before the paper substitutes its four
+logarithmic valuation estimates. No new external dependency is introduced;
+the displayed equation (23) and the Rosser--Schoenfeld primorial estimate are
+not yet claimed.
+
+## Release 3.00 source note
+
+The same pinned Erdős--Selfridge paper, journal pages 299--300, supplies the
+four estimates now formalized in `ErdosSelfridgeSquareValuations.lean`:
+the factorial valuations are bounded using base-two and base-three digit
+sums, and the coefficient-product valuations are bounded by recursively
+counting odd local valuations in `(N,N+H]`.
+
+Lean then derives the exact real-exponent logarithmic inequality immediately
+before displayed equation (23). No new external dependency is introduced.
+The final elementary simplification to `14/3` and the later
+Rosser--Schoenfeld primorial input are not yet claimed.
+
+## Release 3.01 source note
+
+The elementary simplification on journal page 300 is now formalized exactly.
+The logarithmic factors are evaluated with real-power identities, and the
+remaining root factor is bounded with sufficient slack to recover the printed
+constant `14/3`. Thus displayed equation (23) is now claimed and audited.
+The subsequent explicit primorial estimate remains the next external
+source-facing step.
+
+## Release 3.02 source note
+
+The line after equation (23) on journal page 300 is now reproduced in an
+asymptotic form. `ErdosSelfridgePrimorial.lean` uses the already pinned prime
+number theorem to prove `prod_{p<H} p <= 3^H` eventually and derives the
+resulting contradiction for every sufficiently large `H`.
+
+The original paper gives explicit elementary/numerical cutoffs before its
+finite case analysis. Those constants have not been imported here, so release
+3.02 claims only an extracted threshold and leaves the explicit cutoff and
+Section 3.2 finite verification open.
+
+## Release 3.03 source note
+
+The opening cases of Section 3.2 on journal page 300 are now formalized.
+Length three is impossible by coefficient distinctness and the two divisors
+of `2`. At length four, the coefficients are exactly `1,2,3,6`; their product
+is a square, and the source difference-of-squares identity gives the
+contradiction. The same finite-candidate argument also closes length five.
+
+No external theorem is used for these cases. The next source line is the
+small-prime count beginning at length six.
+
+## Release 3.04 source note
+
+The exceptional `H=6` clause on journal page 300 is now formalized exactly.
+Outside `5 | N+1`, five coefficients have no prime factor above three and
+cannot be distinct. Inside that residue class, the middle four coefficients
+have square product, reducing to the already proved four-consecutive
+contradiction. The finite source analysis now begins at length seven.
+
+## Release 3.05 source note
+
+The `H=7` instance of the small-prime count on journal page 300 is now
+formalized exactly. Every residue class modulo five leaves at least five of
+the seven positions indivisible by five. Their coefficients have no prime
+factor above three and therefore cannot all be distinct. No new external
+theorem is used. The finite source analysis now begins at length eight and
+its stated exceptional congruence class.
+
+## Release 3.06 source note
+
+The exceptional `H=8` clause on journal page 300 is now formalized exactly.
+The ordinary count is a complete kernel-checked enumeration modulo `35`.
+Its only four-position class is precisely `7 | N+1` and `5 | N+2`; the four
+middle coefficients then have square product and reduce to the proved
+four-consecutive contradiction. No new external theorem is used. The finite
+source analysis now begins at length nine.
+
+## Release 3.07 source note
+
+The uniform five-coefficient count following the `H=8` exception on journal
+page 300 is now formalized through `H=13`. Exact periodic checks modulo `35`
+and `385` supply the count for the two prime-stable blocks `9..11` and
+`12..13`. The coefficient-support contradiction uses no new external theorem.
+The finite source analysis now begins at length fourteen.
+
+## Release 3.08 source note
+
+The journal-page-300 five-coefficient count is now formalized through
+`H=17`. Rather than enumerate modulo `5005`, the proof bounds the union of
+the four relevant prime-multiple sets, using exact block counts at the two
+tight endpoints. No new external theorem is used. The finite source analysis
+now begins at length eighteen.
+
+## Release 3.09 source note
+
+The journal-page-300 five-coefficient argument is now formalized through
+`H=20`. Sharp ceiling sums handle the primes through `17` and `19`; the
+generic coprimality transfer recovers the source conclusion that all surviving
+coefficients use only `2` and `3`. No external theorem is added.
+
+## Release 3.10 source note
+
+The journal-page-300 finite analysis is now complete through `k<71`. The
+source's nine-coefficient tier for `20<k<56` is formalized by the sharp union
+count, whose checked inequalities remain sufficient through `k=70`. Nine
+coefficients supported on `2,3,5` cannot be distinct. The next source line is
+the explicit `k>=71` consequence of equation (23).
+
+## Release 3.11 source note
+
+Journal page 300 splits the large square case at `k=297`: the elementary
+prime-product bound by `3^k` handles the tail, while the sharper tabulated
+bound handles `71<=k<297`. The formalization now proves the exact equation-(23)
+growth cutoff and checks each actual prime product in that finite interval.
+It isolates the remaining source dependency as
+`ErdosSelfridgeThreePrimorialConclusion`, with no imported numerical table.
+
+## Release 3.12 source note
+
+Hanson's 1972 paper supplies the elementary factorial-coefficient mechanism
+now formalized in `ErdosSelfridgeHanson.lean`: the Sylvester reciprocal sum
+leaves a positive valuation margin, so every prime below the index divides the
+coefficient.  The quantitative Lean proof specializes the same multinomial
+idea to `2,3,7,43`, clears denominator `1806`, and proves all entropy and
+floor-loss comparisons as exact natural-number inequalities.
+
+No decimal approximation or external prime table is imported.  Finite block
+certificates below `1400` and strong induction above it prove the named
+`ErdosSelfridgeThreePrimorialConclusion` internally.
+
+## Release 3.13 source note
+
+The pinned public Sylvester--Schur proof identifies the standard factorial
+large-start decomposition, but its unlicensed Lean source is not copied or
+imported.  `SylvesterSchurFactorialThreshold.lean` independently derives the
+criterion from local Mathlib ascending-factorial identities and the already
+proved binomial small-prime envelope.
+
+The local result is slightly sharper at this stage: it retains the exact
+prime-count exponent and obtains `H! 2^pi(H)+1`; the classical
+`H! 2^(H-1)+1` threshold is then a corollary.  This is a reduction of the
+remaining finite range, not a claim that the unrestricted theorem is complete.
+
+## Release 3.14 source note
+
+No new external input is used.  `SylvesterSchurHundred.lean` extends the local
+finite certification architecture: the `3H` binomial baseline and every
+smaller start are checked by Lean's kernel for `49<=H<=100`.  This advances
+the independent local proof while leaving the pinned unlicensed reference
+unimported.
+
+## Release 3.15 source note
+
+No external theorem or unlicensed implementation is imported.  The
+square-root factorization split uses Mathlib's checked binomial-valuation
+bounds, the local Hanson theorem from release 3.12, and the standard local
+three-multiple valuation lemma.  The pinned public proof was consulted only
+for high-level proof architecture; `SylvesterSchurSqrtEnvelope.lean` is an
+independent implementation with a separately stated `n/3` support lemma and
+explicit gap endpoints.
+
+## Release 3.16 source note
+
+No new external input is used.  `SylvesterSchurCentralTail.lean` is a purely
+integral consequence of the independently implemented release-3.15 envelope.
+Both exponential comparisons are proved by checked induction, and the cutoff
+`34134` is derived from the exact inequality `320^2<=3H`; no floating-point
+logarithm estimate, prime table, or unlicensed proof code is imported.

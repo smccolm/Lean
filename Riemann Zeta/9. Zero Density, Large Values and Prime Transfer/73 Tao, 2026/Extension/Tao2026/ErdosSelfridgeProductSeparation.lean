@@ -9,7 +9,8 @@ Sylvester--Schur large-prime input, forces `H ^ l < N`.  At that scale,
 different equally sized subfamilies of `[N+1, N+H]` have different products.
 
 The stronger final clause of source Lemma 1—that the ratio of two such
-products cannot be an `l`-th power in the rationals—remains the next step.
+products cannot be an `l`-th power in the rationals—is proved below.  The
+next source step is Lemma 2's maximal-valuation deletion argument.
 -/
 
 namespace Tao2026
@@ -220,5 +221,448 @@ theorem consecutiveSubproduct_crossPower_eq_of_powerFreePart_crossPower_eq
     _ = ((∏ m ∈ T, powerFreePart l m) *
           (∏ m ∈ T, powerRootPart l m) ^ l) *
         (u ^ l * (∏ m ∈ S, powerRootPart l m) ^ l) := by ring
+
+/-! ## The source gap estimate -/
+
+/-- First-order expansion bound with an explicit geometric remainder. -/
+theorem addPow_succ_le {N H s : ℕ} (hHN : H ≤ N) :
+    (N + H) ^ (s + 1) ≤
+      N ^ (s + 1) + (2 ^ (s + 1) - 1) * H * N ^ s := by
+  induction s with
+  | zero => simp
+  | succ s ih =>
+      have hdouble : N + H ≤ 2 * N := by omega
+      have hpowDouble : (N + H) ^ (s + 1) ≤
+          2 ^ (s + 1) * N ^ (s + 1) := by
+        calc
+          (N + H) ^ (s + 1) ≤ (2 * N) ^ (s + 1) :=
+            Nat.pow_le_pow_left hdouble _
+          _ = 2 ^ (s + 1) * N ^ (s + 1) := mul_pow 2 N (s + 1)
+      have hfirst := Nat.mul_le_mul_left N ih
+      have hsecond := Nat.mul_le_mul_left H hpowDouble
+      calc
+        (N + H) ^ (s + 1 + 1) =
+            N * (N + H) ^ (s + 1) + H * (N + H) ^ (s + 1) := by
+              rw [pow_succ']
+              ring
+        _ ≤ N * (N ^ (s + 1) + (2 ^ (s + 1) - 1) * H * N ^ s) +
+            H * (2 ^ (s + 1) * N ^ (s + 1)) :=
+              Nat.add_le_add hfirst hsecond
+        _ = N ^ (s + 1 + 1) +
+            (2 ^ (s + 1 + 1) - 1) * H * N ^ (s + 1) := by
+              have hpowN : N ^ (s + 1) = N * N ^ s := by rw [pow_succ']
+              have hpowN' : N ^ (s + 1 + 1) = N * N ^ (s + 1) := by
+                rw [pow_succ']
+              have hpowTwo : 2 ^ (s + 1 + 1) = 2 * 2 ^ (s + 1) := by
+                rw [pow_succ']
+              calc
+                N * (N ^ (s + 1) + (2 ^ (s + 1) - 1) * H * N ^ s) +
+                    H * (2 ^ (s + 1) * N ^ (s + 1)) =
+                  N ^ (s + 1 + 1) +
+                    ((2 ^ (s + 1) - 1) + 2 ^ (s + 1)) * H *
+                      N ^ (s + 1) := by
+                        rw [hpowN, hpowN']
+                        ring
+                _ = N ^ (s + 1 + 1) +
+                    (2 ^ (s + 1 + 1) - 1) * H * N ^ (s + 1) := by
+                      have htwoPos : 0 < 2 ^ (s + 1) := pow_pos (by omega) _
+                      have hcoeff :
+                          (2 ^ (s + 1) - 1) + 2 ^ (s + 1) =
+                            2 ^ (s + 1 + 1) - 1 := by
+                        omega
+                      rw [hcoeff]
+
+/-- Mean-value upper bound for a natural-number power difference. -/
+theorem addPow_sub_pow_le (N H r : ℕ) :
+    (N + H) ^ r - N ^ r ≤ H * r * (N + H) ^ (r - 1) := by
+  have h := abs_pow_sub_pow_le (a := ((N + H : ℕ) : ℝ))
+    (b := (N : ℝ)) r
+  have hsub : (0 : ℝ) ≤ ((N + H : ℕ) : ℝ) ^ r - (N : ℝ) ^ r := by
+    apply sub_nonneg.mpr
+    gcongr
+    omega
+  have hdiff : (0 : ℝ) ≤ ((N + H : ℕ) : ℝ) - N := by
+    norm_num
+  rw [abs_of_nonneg hsub, abs_of_nonneg hdiff,
+    abs_of_nonneg (by positivity : (0 : ℝ) ≤ ((N + H : ℕ) : ℝ)),
+    abs_of_nonneg (by positivity : (0 : ℝ) ≤ N),
+    max_eq_left (by norm_num)] at h
+  norm_num at h
+  have hnat : (N + H) ^ r ≤
+      H * r * (N + H) ^ (r - 1) + N ^ r := by
+    exact_mod_cast (show (((N + H) ^ r : ℕ) : ℝ) ≤
+      (H * r * (N + H) ^ (r - 1) + N ^ r : ℕ) by
+        push_cast
+        nlinarith)
+  omega
+
+/-- Elementary coefficient inequality controlling the geometric remainder. -/
+theorem succ_mul_two_pow_lt_three_pow_succ (n : ℕ) :
+    (n + 1) * 2 ^ n < 3 ^ (n + 1) := by
+  induction n with
+  | zero => norm_num
+  | succ n ih =>
+      by_cases hn : n = 0
+      · subst n
+        norm_num
+      · have hnPos : 1 ≤ n := Nat.one_le_iff_ne_zero.mpr hn
+        have hcoeff : 2 * (n + 2) ≤ 3 * (n + 1) := by omega
+        calc
+          (n + 1 + 1) * 2 ^ (n + 1) =
+              (2 * (n + 2)) * 2 ^ n := by rw [pow_succ']; ring
+          _ ≤ (3 * (n + 1)) * 2 ^ n :=
+            Nat.mul_le_mul_right _ hcoeff
+          _ < 3 * 3 ^ (n + 1) := by
+            rw [mul_assoc]
+            exact (Nat.mul_lt_mul_left (by omega)).mpr ih
+          _ = 3 ^ (n + 1 + 1) := by
+            rw [pow_succ', pow_succ']
+            ring
+
+theorem r_mul_two_pow_sub_one_lt_pow
+    {H r : ℕ} (hH : 3 ≤ H) (hr : 1 ≤ r) :
+    r * (2 ^ (r - 1) - 1) < H ^ r := by
+  have hmain : r * 2 ^ (r - 1) < 3 ^ r := by
+    have h := succ_mul_two_pow_lt_three_pow_succ (r - 1)
+    have hrEq : r - 1 + 1 = r := by omega
+    rwa [hrEq] at h
+  have hthree : 3 ^ r ≤ H ^ r := Nat.pow_le_pow_left hH r
+  exact (Nat.mul_le_mul_left r (Nat.sub_le _ _)).trans_lt
+    (hmain.trans_le hthree)
+
+/-- The source's sharp upper gap: at scale `H^(r+1)<N`, the endpoint power
+difference costs fewer than `r+1` linear increments. -/
+theorem intervalPowerGap_upper
+    {N H r : ℕ} (hH : 3 ≤ H) (hr : 1 ≤ r)
+    (hscale : H ^ (r + 1) < N) :
+    (N + H) ^ r - N ^ r < (r + 1) * H * N ^ (r - 1) := by
+  rcases eq_or_lt_of_le hr with rfl | hrTwo
+  · simp
+    omega
+  have hHN : H ≤ N := by
+    have hHpow : H ≤ H ^ (r + 1) := Nat.le_pow (by omega : 0 < r + 1)
+    omega
+  have hmean := addPow_sub_pow_le N H r
+  have happrox : (N + H) ^ (r - 1) ≤
+      N ^ (r - 1) + (2 ^ (r - 1) - 1) * H * N ^ (r - 2) := by
+    have h := addPow_succ_le (s := r - 2) hHN
+    have hexp : r - 2 + 1 = r - 1 := by omega
+    rwa [hexp] at h
+  have hcoef := r_mul_two_pow_sub_one_lt_pow hH hr
+  have hcoefH : r * (2 ^ (r - 1) - 1) * H < N := by
+    calc
+      r * (2 ^ (r - 1) - 1) * H < H ^ r * H :=
+        (Nat.mul_lt_mul_right (by omega : 0 < H)).mpr hcoef
+      _ = H ^ (r + 1) := by rw [pow_succ]
+      _ < N := hscale
+  have hNpos : 0 < N := by omega
+  have hfactorPos : 0 < H * N ^ (r - 2) := by positivity
+  have hremainder :
+      H * r * ((2 ^ (r - 1) - 1) * H * N ^ (r - 2)) <
+        H * N ^ (r - 1) := by
+    have hmul := (Nat.mul_lt_mul_right hfactorPos).mpr hcoefH
+    have hNpow : N ^ (r - 1) = N * N ^ (r - 2) := by
+      rw [show r - 1 = (r - 2) + 1 by omega, pow_succ']
+    rw [hNpow]
+    convert hmul using 1 <;> ring
+  calc
+    (N + H) ^ r - N ^ r ≤ H * r * (N + H) ^ (r - 1) := hmean
+    _ ≤ H * r *
+        (N ^ (r - 1) + (2 ^ (r - 1) - 1) * H * N ^ (r - 2)) :=
+      Nat.mul_le_mul_left _ happrox
+    _ = H * r * N ^ (r - 1) +
+        H * r * ((2 ^ (r - 1) - 1) * H * N ^ (r - 2)) := by ring
+    _ < H * r * N ^ (r - 1) + H * N ^ (r - 1) :=
+      Nat.add_lt_add_left hremainder _
+    _ = (r + 1) * H * N ^ (r - 1) := by ring
+
+/-- Powered upper gap in exactly the exponent ledger needed for Lemma 1. -/
+theorem intervalPowerGap_pow_upper
+    {N H l r : ℕ} (hH : 3 ≤ H) (hl : 2 ≤ l)
+    (hr : 1 ≤ r) (hrl : r < l) (hscale : H ^ l < N) :
+    ((N + H) ^ r - N ^ r) ^ l < l ^ l * N ^ (r * (l - 1)) := by
+  have hrSuccLe : r + 1 ≤ l := by omega
+  have hscaleR : H ^ (r + 1) < N :=
+    (Nat.pow_le_pow_right (by omega : 0 < H) hrSuccLe).trans_lt hscale
+  have hgap := intervalPowerGap_upper hH hr hscaleR
+  have hHpower : H ≤ H ^ (l - r) := Nat.le_pow (by omega)
+  have hfactor : (r + 1) * H ≤ l * H ^ (l - r) :=
+    Nat.mul_le_mul hrSuccLe hHpower
+  have hgap' : (N + H) ^ r - N ^ r <
+      l * H ^ (l - r) * N ^ (r - 1) :=
+    hgap.trans_le (Nat.mul_le_mul_right _ hfactor)
+  have hscalePow : H ^ (l * (l - r)) < N ^ (l - r) := by
+    rw [pow_mul]
+    exact Nat.pow_lt_pow_left hscale (by omega)
+  have hNpos : 0 < N := by omega
+  calc
+    ((N + H) ^ r - N ^ r) ^ l <
+        (l * H ^ (l - r) * N ^ (r - 1)) ^ l :=
+      Nat.pow_lt_pow_left hgap' (by omega)
+    _ = l ^ l * H ^ (l * (l - r)) * N ^ (l * (r - 1)) := by
+      simp only [mul_pow, pow_mul]
+      ring
+    _ < l ^ l * N ^ (l - r) * N ^ (l * (r - 1)) := by
+      exact (Nat.mul_lt_mul_right (pow_pos hNpos _)).mpr
+        ((Nat.mul_lt_mul_left (pow_pos (by omega : 0 < l) _)).mpr hscalePow)
+    _ = l ^ l * N ^ (r * (l - 1)) := by
+      have hexp : (l - r) + l * (r - 1) = r * (l - 1) := by
+        obtain ⟨d, rfl⟩ := Nat.exists_eq_add_of_le hrl.le
+        have hdiff : r + d - r = d := by omega
+        have hpred : r + d - 1 = (r - 1) + d := by omega
+        rw [hdiff, hpred]
+        have hdmul : d + d * (r - 1) = d * r := by
+          calc
+            d + d * (r - 1) = d * ((r - 1) + 1) := by ring
+            _ = d * r := by rw [Nat.sub_add_cancel hr]
+        calc
+          d + (r + d) * (r - 1) =
+              r * (r - 1) + (d + d * (r - 1)) := by ring
+          _ = r * (r - 1) + d * r := by rw [hdmul]
+          _ = r * ((r - 1) + d) := by ring
+      rw [mul_assoc, ← pow_add, hexp]
+
+/-- A rational `l`-th-power ratio forces a lower gap incompatible with the
+preceding powered upper bound. -/
+theorem rationalPowerRatio_gap_pow_lower
+    {P Q x y l : ℕ} (hl : 1 ≤ l) (hQ : 0 < Q)
+    (hy : 0 < y) (hcop : x.Coprime y)
+    (hcross : P * y ^ l = Q * x ^ l) (hQP : Q < P) :
+    l ^ l * Q ^ (l - 1) ≤ (P - Q) ^ l := by
+  have hyPowDvdQ : y ^ l ∣ Q := by
+    apply (hcop.symm.pow l l).dvd_of_dvd_mul_right
+    rw [← hcross]
+    exact ⟨P, by ring⟩
+  let A : ℕ := Q / y ^ l
+  have hQeq : Q = A * y ^ l := (Nat.div_mul_cancel hyPowDvdQ).symm
+  have hApos : 0 < A :=
+    Nat.div_pos (Nat.le_of_dvd hQ hyPowDvdQ) (pow_pos hy l)
+  have hPeq : P = A * x ^ l := by
+    apply Nat.mul_right_cancel (pow_pos hy l)
+    calc
+      P * y ^ l = Q * x ^ l := hcross
+      _ = (A * x ^ l) * y ^ l := by rw [hQeq]; ring
+  have hyx : y < x := by
+    have hxpow : y ^ l < x ^ l := by
+      apply (Nat.mul_lt_mul_left hApos).mp
+      calc
+        A * y ^ l = Q := hQeq.symm
+        _ < P := hQP
+        _ = A * x ^ l := hPeq
+    exact (Nat.pow_lt_pow_iff_left (by omega)).mp hxpow
+  have hbern : y ^ l + l * y ^ (l - 1) ≤ (y + 1) ^ l := by
+    simpa using (pow_add_mul_le_add_pow (R := ℕ) (a := y) (b := 1)
+      (by omega) (by omega) l)
+  have hbase : l * y ^ (l - 1) ≤ x ^ l - y ^ l := by
+    have hpowMono : (y + 1) ^ l ≤ x ^ l := Nat.pow_le_pow_left (by omega) l
+    omega
+  have hgap : A * (l * y ^ (l - 1)) ≤ P - Q := by
+    rw [hPeq, hQeq, ← Nat.mul_sub_left_distrib]
+    exact Nat.mul_le_mul_left A hbase
+  have hgapPow : (A * (l * y ^ (l - 1))) ^ l ≤ (P - Q) ^ l :=
+    Nat.pow_le_pow_left hgap l
+  have hfactorization :
+      (A * (l * y ^ (l - 1))) ^ l =
+        A * (l ^ l * Q ^ (l - 1)) := by
+    rw [hQeq]
+    simp only [mul_pow]
+    have hyPow : (y ^ (l - 1)) ^ l = (y ^ l) ^ (l - 1) := by
+      rw [← pow_mul, ← pow_mul]
+      congr 1
+      ring
+    have hApow : A ^ l = A * A ^ (l - 1) := by
+      conv_lhs => rw [show l = (l - 1) + 1 by omega, pow_succ']
+    rw [hApow, hyPow]
+    ring
+  calc
+    l ^ l * Q ^ (l - 1) ≤ A * (l ^ l * Q ^ (l - 1)) := by
+      simpa using Nat.mul_le_mul_right (l ^ l * Q ^ (l - 1)) hApos
+    _ = (A * (l * y ^ (l - 1))) ^ l := hfactorization.symm
+    _ ≤ (P - Q) ^ l := hgapPow
+
+/-- Every nonempty interval subproduct lies strictly above `N^r`. -/
+theorem start_pow_lt_consecutiveSubproduct
+    {N H r : ℕ} (hr : 1 ≤ r) {S : Finset ℕ}
+    (hS : S ⊆ consecutiveInterval N H) (hScard : S.card = r) :
+    N ^ r < ∏ m ∈ S, m := by
+  have hLower : (N + 1) ^ S.card ≤ ∏ m ∈ S, m := by
+    apply Finset.pow_card_le_prod
+    intro m hm
+    have := (Finset.mem_Ioc.mp (hS hm)).1
+    omega
+  calc
+    N ^ r < (N + 1) ^ r := Nat.pow_lt_pow_left (by omega) (by omega)
+    _ = (N + 1) ^ S.card := by rw [hScard]
+    _ ≤ ∏ m ∈ S, m := hLower
+
+/-- Every interval subproduct lies below the corresponding endpoint power. -/
+theorem consecutiveSubproduct_le_endpoint_pow
+    {N H r : ℕ} {S : Finset ℕ}
+    (hS : S ⊆ consecutiveInterval N H) (hScard : S.card = r) :
+    (∏ m ∈ S, m) ≤ (N + H) ^ r := by
+  calc
+    (∏ m ∈ S, m) ≤ (N + H) ^ S.card := by
+      apply Finset.prod_le_pow_card
+      intro m hm
+      exact (Finset.mem_Ioc.mp (hS hm)).2
+    _ = (N + H) ^ r := by rw [hScard]
+
+/-- Coprime numerator/denominator form of the source rational-power-ratio
+contradiction. -/
+theorem consecutiveSubproduct_not_coprimeRationalPowerRatio
+    {N H l r u v : ℕ} (hH : 3 ≤ H) (hl : 2 ≤ l)
+    (hr : 1 ≤ r) (hrl : r < l) (hscale : H ^ l < N)
+    {S T : Finset ℕ} (hS : S ⊆ consecutiveInterval N H)
+    (hT : T ⊆ consecutiveInterval N H) (hScard : S.card = r)
+    (hTcard : T.card = r) (hST : S ≠ T)
+    (hu : 0 < u) (hv : 0 < v) (hcop : u.Coprime v) :
+    (∏ m ∈ S, m) * v ^ l ≠ (∏ m ∈ T, m) * u ^ l := by
+  intro hcross
+  let P := ∏ m ∈ S, m
+  let Q := ∏ m ∈ T, m
+  have hPpos : 0 < P := Finset.prod_pos fun m hm => by
+    have := (Finset.mem_Ioc.mp (hS hm)).1
+    omega
+  have hQpos : 0 < Q := Finset.prod_pos fun m hm => by
+    have := (Finset.mem_Ioc.mp (hT hm)).1
+    omega
+  have hPneQ : P ≠ Q := by
+    intro hEq
+    exact hST (consecutiveSubproduct_injective_of_pow_lt_start
+      (by omega) hscale hrl hS hT hScard hTcard hEq)
+  have hcrossPQ : P * v ^ l = Q * u ^ l := hcross
+  have hPupper : P ≤ (N + H) ^ r :=
+    consecutiveSubproduct_le_endpoint_pow hS hScard
+  have hQupper : Q ≤ (N + H) ^ r :=
+    consecutiveSubproduct_le_endpoint_pow hT hTcard
+  have hPlower : N ^ r < P := start_pow_lt_consecutiveSubproduct hr hS hScard
+  have hQlower : N ^ r < Q := start_pow_lt_consecutiveSubproduct hr hT hTcard
+  have hscalar := intervalPowerGap_pow_upper hH hl hr hrl hscale
+  rcases lt_or_gt_of_ne hPneQ with hPQ | hQP
+  · have hlower := rationalPowerRatio_gap_pow_lower (l := l) (x := v) (y := u)
+        (by omega) hPpos hu hcop.symm hcrossPQ.symm hPQ
+    have hgapLt : Q - P < (N + H) ^ r - N ^ r := by omega
+    have hgapPowLt : (Q - P) ^ l < ((N + H) ^ r - N ^ r) ^ l :=
+      Nat.pow_lt_pow_left hgapLt (by omega)
+    have hbasePow : N ^ (r * (l - 1)) < P ^ (l - 1) := by
+      rw [pow_mul]
+      exact Nat.pow_lt_pow_left hPlower (by omega)
+    have hweighted : l ^ l * N ^ (r * (l - 1)) <
+        l ^ l * P ^ (l - 1) :=
+      (Nat.mul_lt_mul_left (pow_pos (by omega : 0 < l) _)).mpr hbasePow
+    omega
+  · have hlower := rationalPowerRatio_gap_pow_lower (l := l) (x := u) (y := v)
+        (by omega) hQpos hv hcop hcrossPQ hQP
+    have hgapLt : P - Q < (N + H) ^ r - N ^ r := by omega
+    have hgapPowLt : (P - Q) ^ l < ((N + H) ^ r - N ^ r) ^ l :=
+      Nat.pow_lt_pow_left hgapLt (by omega)
+    have hbasePow : N ^ (r * (l - 1)) < Q ^ (l - 1) := by
+      rw [pow_mul]
+      exact Nat.pow_lt_pow_left hQlower (by omega)
+    have hweighted : l ^ l * N ^ (r * (l - 1)) <
+        l ^ l * Q ^ (l - 1) :=
+      (Nat.mul_lt_mul_left (pow_pos (by omega : 0 < l) _)).mpr hbasePow
+    omega
+
+/-- The coprimality restriction is removed by cancelling the common gcd of
+the rational numerator and denominator. -/
+theorem consecutiveSubproduct_not_rationalPowerRatio
+    {N H l r u v : ℕ} (hH : 3 ≤ H) (hl : 2 ≤ l)
+    (hr : 1 ≤ r) (hrl : r < l) (hscale : H ^ l < N)
+    {S T : Finset ℕ} (hS : S ⊆ consecutiveInterval N H)
+    (hT : T ⊆ consecutiveInterval N H) (hScard : S.card = r)
+    (hTcard : T.card = r) (hST : S ≠ T)
+    (hu : 0 < u) (hv : 0 < v) :
+    (∏ m ∈ S, m) * v ^ l ≠ (∏ m ∈ T, m) * u ^ l := by
+  let g := Nat.gcd u v
+  let u₀ := u / g
+  let v₀ := v / g
+  have hg : 0 < g := Nat.gcd_pos_of_pos_left v hu
+  have hgu : g ∣ u := Nat.gcd_dvd_left u v
+  have hgv : g ∣ v := Nat.gcd_dvd_right u v
+  have huEq : u = u₀ * g := (Nat.div_mul_cancel hgu).symm
+  have hvEq : v = v₀ * g := (Nat.div_mul_cancel hgv).symm
+  have hu₀ : 0 < u₀ := Nat.div_pos (Nat.le_of_dvd hu hgu) hg
+  have hv₀ : 0 < v₀ := Nat.div_pos (Nat.le_of_dvd hv hgv) hg
+  have hcop : u₀.Coprime v₀ := Nat.coprime_div_gcd_div_gcd hg
+  intro hcross
+  have hcross₀ : (∏ m ∈ S, m) * v₀ ^ l =
+      (∏ m ∈ T, m) * u₀ ^ l := by
+    apply Nat.mul_right_cancel (pow_pos hg l)
+    calc
+      ((∏ m ∈ S, m) * v₀ ^ l) * g ^ l =
+          (∏ m ∈ S, m) * (v₀ * g) ^ l := by rw [mul_pow]; ring
+      _ = (∏ m ∈ S, m) * v ^ l := by rw [hvEq]
+      _ = (∏ m ∈ T, m) * u ^ l := hcross
+      _ = (∏ m ∈ T, m) * (u₀ * g) ^ l := by rw [huEq]
+      _ = ((∏ m ∈ T, m) * u₀ ^ l) * g ^ l := by rw [mul_pow]; ring
+  exact consecutiveSubproduct_not_coprimeRationalPowerRatio
+    hH hl hr hrl hscale hS hT hScard hTcard hST hu₀ hv₀ hcop hcross₀
+
+/-! ## Erdős--Selfridge Lemma 1 -/
+
+/-- Full source Lemma 1 in canonical coefficient form: the ratio of products
+of two distinct `r`-subfamilies, for `1 ≤ r < l`, cannot be an `l`-th power
+in the positive rationals. -/
+theorem powerFreePart_subproduct_not_rationalPowerRatio
+    {N H l r u v : ℕ} (hH : 3 ≤ H) (hl : 2 ≤ l)
+    (hr : 1 ≤ r) (hrl : r < l) (hscale : H ^ l < N)
+    {S T : Finset ℕ} (hS : S ⊆ consecutiveInterval N H)
+    (hT : T ⊆ consecutiveInterval N H) (hScard : S.card = r)
+    (hTcard : T.card = r) (hST : S ≠ T)
+    (hu : 0 < u) (hv : 0 < v) :
+    (∏ m ∈ S, powerFreePart l m) * v ^ l ≠
+      (∏ m ∈ T, powerFreePart l m) * u ^ l := by
+  intro hratio
+  have hSpos : ∀ m ∈ S, m ≠ 0 := by
+    intro m hm
+    have := (Finset.mem_Ioc.mp (hS hm)).1
+    omega
+  have hTpos : ∀ m ∈ T, m ≠ 0 := by
+    intro m hm
+    have := (Finset.mem_Ioc.mp (hT hm)).1
+    omega
+  have hcross :=
+    consecutiveSubproduct_crossPower_eq_of_powerFreePart_crossPower_eq
+      hSpos hTpos hratio
+  exact consecutiveSubproduct_not_rationalPowerRatio hH hl hr hrl hscale
+    hS hT hScard hTcard hST
+      (Nat.mul_pos hu (Finset.prod_pos fun m _hm =>
+        Nat.pos_of_ne_zero (powerRootPart_ne_zero l m)))
+      (Nat.mul_pos hv (Finset.prod_pos fun m _hm =>
+        Nat.pos_of_ne_zero (powerRootPart_ne_zero l m)))
+      hcross
+
+/-- The displayed distinctness conclusion of Lemma 1. -/
+theorem powerFreePart_subproduct_injective
+    {N H l r : ℕ} (hH : 3 ≤ H) (hl : 2 ≤ l)
+    (hr : 1 ≤ r) (hrl : r < l) (hscale : H ^ l < N)
+    {S T : Finset ℕ} (hS : S ⊆ consecutiveInterval N H)
+    (hT : T ⊆ consecutiveInterval N H) (hScard : S.card = r)
+    (hTcard : T.card = r)
+    (hprod : (∏ m ∈ S, powerFreePart l m) =
+      ∏ m ∈ T, powerFreePart l m) : S = T := by
+  by_contra hST
+  apply powerFreePart_subproduct_not_rationalPowerRatio hH hl hr hrl hscale
+    hS hT hScard hTcard hST (by norm_num : 0 < (1 : ℕ))
+      (by norm_num : 0 < (1 : ℕ))
+  simpa using hprod
+
+/-- Source-facing package: failure of Theorem 2 and Sylvester--Schur imply
+all of Lemma 1, including its stronger rational-ratio assertion. -/
+theorem erdosSelfridgeLemmaOne_of_failure
+    (hSS : SylvesterSchurConclusion) {N H l r u v : ℕ}
+    (hH : 3 ≤ H) (hl : 2 ≤ l) (hHN : H < N)
+    (hfail : ErdosSelfridgePrimeMultiplicityFailureAt N H l)
+    (hr : 1 ≤ r) (hrl : r < l)
+    {S T : Finset ℕ} (hS : S ⊆ consecutiveInterval N H)
+    (hT : T ⊆ consecutiveInterval N H) (hScard : S.card = r)
+    (hTcard : T.card = r) (hST : S ≠ T)
+    (hu : 0 < u) (hv : 0 < v) :
+    (∏ m ∈ S, powerFreePart l m) * v ^ l ≠
+      (∏ m ∈ T, powerFreePart l m) * u ^ l := by
+  exact powerFreePart_subproduct_not_rationalPowerRatio hH hl hr hrl
+    (erdosSelfridge_pow_lt_start_of_failure hSS hH hl hHN hfail)
+    hS hT hScard hTcard hST hu hv
 
 end Tao2026

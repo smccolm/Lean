@@ -285,7 +285,7 @@ binomial lower bounds, and a two-range logarithmic argument produce a prime
  explicit fixed-length threshold `H^H+1` reduce the stronger unrestricted
  Sylvester--Schur contract to a finite bounded rectangle. The first forty-eight
  length rows are now discharged uniformly over every start by
- `sylvesterSchurBelow_fortyNine`; the remaining rectangle has `H>=49` and remains
+ `sylvesterSchurBelow_oneHundredOne`; the remaining rectangle has `H>=101` and remains
  open. A separate start-uniform theorem also shows that every length works
  beyond one common start cutoff; consequently the residual rectangle is no
  longer a Lemma 3.1 or Theorem 1.7 blocker. The fixed cutoff and Theorem 2.5 constants are now chosen
@@ -1829,3 +1829,274 @@ its single interval element, including the boundary `p=H`. Consequently every
 factor in `[N+1,N+H]` has the source decomposition `a*x^l` with `a`
 `l`-power-free and all prime factors of `a` strictly below `H`. The remaining
 Erdős--Selfridge proof begins with the source's distinct-product Lemma 1.
+
+## Prime-equidistribution release 2.95
+
+`ErdosSelfridgeProductSeparation` now proves source equation (2), equation
+(4), and the full Lemma 1. A failed prime-multiplicity conclusion, together
+with the Sylvester--Schur large-prime witness, first forces `H^l<N`.
+Products of distinct equally sized subfamilies of `[N+1,N+H]` are then
+separated below exponent `l`.
+
+The stronger rational clause is also internal: after cancelling the gcd of
+the proposed numerator and denominator, a sharp lower bound for the gap
+between rational `l`-th powers contradicts the interval-product upper gap.
+Equation (3) transfers this to the canonical power-free coefficients, proving
+both rational-power exclusion and product injectivity for every `1<=r<l`.
+The next source obligation is Lemma 2's maximal-valuation deletion and
+factorial-divisibility argument; the public Theorem 1.10 status is unchanged.
+
+## Prime-equidistribution release 2.96
+
+`ErdosSelfridgeDeletion` now proves the complete source Lemma 2. For each
+prime `p<H`, a position maximizing the `p`-adic valuation of its interval
+element is selected. Every retained canonical coefficient is valuation-wise
+bounded by the distance from that position, and the product of all nonzero
+distances is exactly `m!*(H-1-m)!`, which divides `(H-1)!`.
+
+The possibly repeated choices are padded to an exact deletion set of
+cardinality `primeCounting (H-1)`. Lean verifies that the survivor set has
+cardinality `H-primeCounting (H-1)` and that its coefficient product divides
+`(H-1)!`, precisely equation (9). At exponent two, the discarded valuation
+is at most one; this also proves the source square-case divisibility equation
+(21). The next Erdős--Selfridge boundary is the large-length square-case
+inequality and the finite residual case analysis.
+
+## Prime-equidistribution release 2.97
+
+`ErdosSelfridgeSquareDensity` proves the first exact ingredient of source
+equation (22). For every divisor `d` of a block length `L`, Lean counts exactly
+`L/d` multiples of `d` in `(N,N+L]`. Inclusion--exclusion at `d=4,9,36`
+therefore shows that exactly twelve values in every block of 36 are divisible
+by `4` or `9`.
+
+Using the prime-square characterization of squarefreeness, every squarefree
+value avoids those twelve positions. Thus at most 24 values in any block of
+36 consecutive positive integers are squarefree; the equivalent offset form
+for `N+(i+1)`, `i<36`, is also proved and audited. The next source obligation
+is to combine this density lemma with distinctness of the squarefree
+coefficients to prove the full product lower bound (22), then equation (23)
+and the finite residual cases.
+
+## Prime-equidistribution release 2.98
+
+Source equation (22) is now complete in cleared-denominator form. Lean proves
+the global count `3*Q(M)≤2*M` for squarefree positive integers once `M≥44`,
+using a finite `44≤M<80` sieve check followed by the 36-block recurrence. It
+then identifies the first 64 squarefree values exactly, verifies their strict
+base product inequality, and proves their increasing enumeration is
+pointwise minimal among all 64-element positive squarefree finsets.
+
+Deleting the maximum coefficient and applying the cumulative count propagates
+the strict inequality to every cardinality `H≥64`. Finally, source Lemma 1
+proves that the canonical coefficients of a counterexample are distinct, so
+`powerFreePart_two_equation22_of_failure` gives equation (22) for the actual
+Erdős--Selfridge family. Equation (23)'s 2- and 3-adic comparison is now the
+next source boundary.
+
+## Prime-equidistribution release 2.99
+
+`ErdosSelfridgeSquareValuations` exposes the exact valuation ledger between
+equations (21) and (23). Lean proves that every prime below `H` occurs exactly
+once in the source primorial, then cancels the complete 2- and 3-adic content
+of equation (21) in a natural-number divisibility theorem.
+
+Combining that sharpened ledger with the canonical equation-(22) theorem
+gives `powerFreePart_two_preEquation23_of_failure`, the exact strict integer
+inequality immediately preceding the paper's logarithmic estimates. The four
+explicit valuation bounds, the displayed real-power form of equation (23),
+and its primorial contradiction remain open.
+
+## Prime-equidistribution release 3.00
+
+The Erdős--Selfridge square-case development now proves all four logarithmic
+valuation bounds used between equations (22) and (23). Binary and ternary
+digit-sum estimates control the factorial valuations, while exact recursive
+counts of interval elements with odd `2`-adic or `3`-adic valuation control
+the coefficient-product valuations.
+
+The release also cancels `(H-1)!` over `ℝ`, rewrites the remaining natural
+powers as real powers, and combines the bounds in
+`powerFreePart_two_preEquation23_logarithmic_of_failure`. The numerical
+real-power estimate producing `14/3`, the primorial contradiction, and the
+finite residual lengths are still not claimed.
+
+## Prime-equidistribution release 3.01
+
+The exact logarithmic inequality is now simplified to the source's displayed
+equation (23). `erdosSelfridge_equation23_root_factor_le` supplies a rigorous
+slack estimate for the residual cube- and square-root factors, and
+`erdosSelfridge_equation23_of_failure` concludes
+`(3/2)^H 2^(2H/3) 3^(H/4) < (14/3)H² ∏_{p<H}p`.
+The primorial contradiction and finite residual square cases remain open.
+
+## Prime-equidistribution release 3.02
+
+`ErdosSelfridgePrimorial` now closes the asymptotic large-length consequence
+of equation (23). It proves `prod_{p<H} p <= 3^H` eventually from the frozen
+prime number theorem, rewrites the left side as a power of an effective base
+strictly larger than `3`, and absorbs the polynomial factor by standard
+polynomial-versus-exponential growth.
+
+Thus `eventually_not_erdosSelfridgePrimeMultiplicityFailureAt_two` excludes
+all sufficiently large square-case counterexamples. This release does not
+claim the paper's explicit numerical cutoff; making that cutoff effective and
+checking the remaining finite lengths are the next Section 3 tasks.
+
+## Prime-equidistribution release 3.03
+
+`ErdosSelfridgeFinite` begins Section 3.2. A general candidate-set theorem
+embeds the distinct canonical coefficients into the positive divisors of the
+prime product below `H`; exact finite cardinalities close lengths `3` and `5`.
+
+At length `4`, Lean proves that the coefficient set is exactly `1,2,3,6`,
+uses its square product in equation (3), and derives the forbidden square
+product of four consecutive integers. Thus every square-case failure with
+`3 <= H <= 5` is excluded. The next finite source case is `H=6`, including
+its exceptional residue class modulo `5`.
+
+## Prime-equidistribution release 3.04
+
+The finite Erdős--Selfridge analysis now includes `H=6`. Exact modular
+enumeration proves that, unless `5 | N+1`, five positions have coefficients
+supported only on `2` and `3`, contradicting their four possible values.
+
+In the exceptional class, the middle four coefficients exhaust `1,2,3,6`;
+their product and equation (3) force a square product of four consecutive
+integers. The public combined theorem now excludes every square-case failure
+with `3 <= H <= 6`. The remaining uniform finite count begins at `H=7`.
+
+## Prime-equidistribution release 3.05
+
+The finite Erdős--Selfridge analysis now also excludes `H=7`. Among seven
+consecutive integers at least five avoid divisibility by `5`; their canonical
+squarefree coefficients must be five distinct members of the four-element
+set supported on `2` and `3`, an immediate contradiction.
+
+The new public combined theorem covers `3 <= H <= 7`, while retaining the
+release-3.04 theorem for downstream compatibility. The next finite source case
+is the exceptional residue split at `H=8`.
+
+## Prime-equidistribution release 3.06
+
+The `H=8` source split is complete. An exact reduction to the `35` residue
+classes produces five positions avoiding `5` and `7` except when
+`7 | N+1` and `5 | N+2`. The ordinary branch is a five-to-four coefficient
+pigeonhole argument.
+
+In the exceptional class, the four consecutive middle terms have
+coefficients exactly `1,2,3,6`; equation (3) makes their product a square,
+contradicting the exact four-consecutive identity. The public finite endpoint
+now excludes all square-case failures with `3 <= H <= 8`; the next length is
+`H=9`.
+
+## Prime-equidistribution release 3.07
+
+The finite square-case analysis now reaches length thirteen. Exact periodic
+counts give five terms avoiding `5,7` in the first nine positions and five
+terms avoiding `5,7,11` in the first twelve. Monotonicity carries those counts
+through the prime-stable ranges `9 <= H <= 11` and `12 <= H <= 13`.
+
+Lemma 1 makes the corresponding coefficients distinct, while equation (3)
+restricts them to the four products `1,2,3,6`. The public combined endpoint
+now excludes all square-case failures with `3 <= H <= 13`. The remaining
+finite analysis begins at `H=14`.
+
+## Prime-equidistribution release 3.08
+
+A reusable interval-union count now closes lengths fourteen through seventeen.
+It bounds the positions divisible by `5,7,11,13`, using exact counts when a
+prime divides the interval length, and leaves five distinct coefficients among
+the four values `1,2,3,6`.
+
+The public combined endpoint now excludes every square-case failure with
+`3 <= H <= 17`. The remaining finite analysis begins at `H=18`.
+
+## Prime-equidistribution release 3.09
+
+Sharp prime-union counts and a generic coefficient-support transfer now close
+lengths eighteen through twenty. Five coefficients survive removal of every
+prime above three, but all five must be distinct divisors of six. The public
+combined endpoint reaches `3 <= H <= 20`; the next range starts at `H=21`.
+
+## Prime-equidistribution release 3.10
+
+The complete finite square-case residual is now closed. A kernel-checked
+ceiling sum for every `21 <= H <= 70` leaves nine coefficients supported on
+`2,3,5`, which cannot be distinct among the eight divisors of `30`. The public
+finite endpoint now excludes every failure with `3 <= H < 71`.
+
+## Prime-equidistribution release 3.11
+
+The exact large-length split is now compiled. Direct kernel arithmetic rules
+out every `71 <= H <= 296`, while a rational equation-(23) base bound and
+ratio induction prove exponential dominance for every `H >= 297`. The public
+square conclusion is connected across all lengths conditional on the one
+remaining elementary primorial statement `prod_{p<H} p <= 3^H`.
+
+## Prime-equidistribution release 3.12
+
+`ErdosSelfridgeHanson.lean` proves the remaining primorial statement for every
+natural length.  It formalizes Hanson's Sylvester-sequence factorial
+coefficient, proves that every prime below the length divides it, and turns a
+fixed `2,3,7,43` multinomial into an exact integer entropy estimate.  A
+kernel-checked block certificate handles lengths below `1400`; above that
+cutoff, exact base and floor-loss inequalities give the induction step.
+
+Consequently `ErdosSelfridgeThreePrimorialConclusion` is now discharged
+internally.  The complete Erdős--Selfridge square conclusion is available
+conditional only on the independent `SylvesterSchurConclusion` contract.
+
+## Prime-equidistribution release 3.13
+
+`SylvesterSchurFactorialThreshold.lean` sharpens the remaining unrestricted
+Sylvester--Schur reduction.  If `r` bounds the number of primes at most `H`,
+the exact inequality `H! 2^r < (N+1)^(H-r)` now forces a prime larger than
+`H` in the consecutive product.  Retaining `r=pi(H)` gives the start cutoff
+`H! 2^pi(H)+1`; replacing `pi(H)` by `H-1` recovers the classical
+`H! 2^(H-1)+1` cutoff.
+
+Thus the global Sylvester--Schur contract is reduced to a strictly smaller
+finite rectangle than the earlier `H^H+1` construction.  The rectangle is
+still open, so no unconditional Sylvester--Schur or main-theorem release is
+claimed.
+
+## Prime-equidistribution release 3.14
+
+`SylvesterSchurHundred.lean` extends the unconditional uniform length range
+from `H<49` to `H<101`.  For every `49<=H<=100`, kernel computation verifies
+the binomial-growth baseline at upper index `3H` and a bounded witness below
+that baseline.  Monotonicity then covers every larger start.
+
+The unrestricted Sylvester--Schur residual is consequently confined to the
+exact-prime-count factorial rectangle with `H>=101`.
+
+## Prime-equidistribution release 3.15
+
+`SylvesterSchurSqrtEnvelope.lean` replaces the coarse one-factor-per-small-
+prime estimate in the central range by a square-root factorization split.
+Prime-power contributions below `sqrt n` cost at most `n^sqrt(n)`; above the
+split they have exponent at most one.  The elementary three-multiple
+valuation lemma further restricts supported high primes to `p<=n/3`, and
+Hanson's theorem gives
+`choose n k <= n^sqrt(n) * 3^(n/3+1)` under the no-prime-above-`k`
+hypothesis when `2k<=n`.
+
+The module exports audited numerical-gap criteria forcing a prime above `k`
+in both the binomial coefficient and the original consecutive product.  The
+remaining task is to prove the required explicit gap uniformly on a large-
+length central region and combine it with the factorial cutoff; the
+unrestricted theorem is not yet claimed.
+
+## Prime-equidistribution release 3.16
+
+`SylvesterSchurCentralTail.lean` proves the release-3.15 numerical gap with
+the explicit cutoff `H>=34134`.  Its natural-number proof first establishes
+`x<=2^(sqrt(x)/16)` above the checked square-root threshold `320`, obtains
+`(3H)^sqrt(3H)<=2^(H/4)`, and finishes with an inductive comparison of the
+fixed bases `162` and `256`.
+
+Thus every interval with `H>=34134` and `H<N<=2H` now unconditionally has a
+prime divisor above `H`.  This removes the full large-length central strip;
+the remaining Sylvester--Schur work consists of noncentral starts together
+with the bounded-length bridge from `101` through `34133`.

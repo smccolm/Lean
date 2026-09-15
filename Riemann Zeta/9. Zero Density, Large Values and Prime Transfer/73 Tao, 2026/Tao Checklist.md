@@ -1687,7 +1687,7 @@ dyadic and fixed-bounded-frequency `o(P)` consequences, but not the stronger
 arbitrary-logarithmic-saving PNT bound or the full prime exponential-sum
 estimate.
 The unrestricted Sylvester--Schur theorem itself still has a finite bounded
-residual rectangle, now restricted to `H>=49`. However, a separate theorem
+residual rectangle, now restricted to `H>=101`. However, a separate theorem
 proves one start cutoff beyond which its conclusion holds for every length.
 Admissible starts escape that cutoff with the dyadic scale, so unrestricted
 Sylvester--Schur is no longer an input to Theorem 1.7. The exact Theorem 1.7
@@ -1936,7 +1936,7 @@ sharp analytic boundary. Lemma 5.2 remains conditional only on that theorem.
 - [x] Verify `T=3H` binomial growth for `11<=H<=48`.
 - [x] Close every start below `3H` with one bounded finite-type certificate.
 - [x] Prove and audit `sylvesterSchurBelow_fortyNine`.
-- [ ] Discharge the remaining finite Sylvester--Schur rectangle for `H>=49`.
+- [ ] Discharge the remaining finite Sylvester--Schur rectangle for `H>=101`.
 
 The unrestricted theorem is still open, but its finite residual has strictly
 fewer length rows and no new proposition parameter was introduced.
@@ -2302,8 +2302,303 @@ Theorem 1.10 translation steps are compiled and audited.
 - [x] Express negation of source Theorem 2 as a structured counterexample.
 - [x] Derive equation (3) simultaneously for every counterexample factor, with
   all coefficient prime factors below `H`.
-- [ ] Formalize source Lemma 1: every product of fewer than `l` distinct
+- [x] Formalize source Lemma 1: every product of fewer than `l` distinct
   coefficients is distinct, equivalently no quotient is an `l`-th power.
 
 The recursive Erdős--Selfridge formalization has now entered the body of the
 proof; equation (3) and its valuation-localization prerequisite are complete.
+
+## Prime-equidistribution 2.95
+
+- [x] Derive source equation (2), `H^l<N`, from counterexample failure and the
+  Sylvester--Schur large-prime witness.
+- [x] Prove equation (4): distinct equally sized subfamilies of the interval
+  have unequal products whenever their cardinality is below `l`.
+- [x] Prove the strict powered interval-gap upper bound needed by Lemma 1.
+- [x] Prove the complementary lower gap for ratios of coprime positive
+  rational `l`-th powers.
+- [x] Cancel arbitrary numerator/denominator gcds and exclude every rational
+  `l`-th-power ratio between distinct interval subproducts.
+- [x] Transfer the result through equation (3) to the canonical power-free
+  coefficients, proving both the stronger ratio clause and displayed
+  distinctness conclusion of source Lemma 1.
+- [x] Package the full lemma directly from failure of Theorem 2 and the
+  existing `SylvesterSchurConclusion` contract.
+- [x] Formalize source Lemma 2's maximal-valuation deletion and resulting
+  factorial-divisibility statement.
+
+The full source Lemma 1 is now kernel-checked. The remaining
+Erdős--Selfridge proof proceeds with Lemma 2 and its later case/counting
+arguments; the Sylvester--Schur finite residual and final Theorem 2 closure
+remain explicit rather than silently assumed.
+
+## Prime-equidistribution 2.96
+
+- [x] Define the maximal-valuation position chosen for each prime `p<H` and
+  prove its membership and universal maximality properties.
+- [x] Compute the exact distance product outside one position as
+  `m!*(H-1-m)!`.
+- [x] Bound each retained coefficient valuation by the corresponding distance
+  valuation and derive divisibility by `(H-1)!`.
+- [x] Prove that the core deletion set lies in `range H` and has cardinality
+  at most `primeCounting (H-1)`.
+- [x] Pad duplicate prime choices to an exact deletion set of source
+  cardinality `primeCounting (H-1)` and prove the exact survivor cardinality
+  `H-primeCounting (H-1)`.
+- [x] Package equation (9) as full source Lemma 2 for the canonical
+  power-free coefficients.
+- [x] At exponent two, use squarefreeness to bound each discarded prime
+  valuation by one and prove source equation (21).
+- [x] Prove that every 36-term interval has exactly twelve values divisible
+  by `4` or `9`, hence at most 24 squarefree values, in both interval and
+  source-offset form.
+- [x] Complete equation (22)'s product lower bound from coefficient
+  distinctness and the 36-term density estimate.
+- [ ] Formalize the remaining large-length contradiction through equation
+  (23), then discharge the finite residual lengths.
+
+Lemmas 1 and 2 of the Erdős--Selfridge proof are now kernel-checked. The next
+route toward the no-square theorem is the paper's Section 3 size comparison;
+its explicit numerical and finite-case gates remain open.
+
+## Prime-equidistribution 2.97
+
+- [x] Prove the general exact formula for multiples of `d` in `(N,N+L]`
+  when `d∣L`.
+- [x] Apply inclusion--exclusion to `4`, `9`, and `36` and prove the exact
+  cardinality twelve.
+- [x] Exclude these positions using `squarefree_iff_prime_squarefree` and
+  prove the source cardinality bound 24.
+- [x] Transport the result to the interval-offset indexing `N+(i+1)`.
+- [x] Import the module through the production root and audit all four main
+  endpoints.
+- [x] Prove the full numerical product inequality (22) for `H≥64`
+  (completed in release 2.98).
+
+The first sentence of Section 3.1 was kernel-checked here without finite
+enumeration; release 2.98 completes its equation-(22) product consequence.
+
+## Prime-equidistribution 2.98
+
+- [x] Upgrade the 36-block bound to `3*Q(M)≤2*M` for every `M≥44`.
+- [x] Identify the first 64 squarefree naturals as the values at most 103
+  avoiding `4`, `9`, `25`, and `49`.
+- [x] Verify the strict cleared-denominator base product inequality.
+- [x] Prove prefix-cardinality formulas for increasing finset enumerations
+  and minimality of the first-64 squarefree product.
+- [x] Propagate the inequality to every `H≥64` by maximum deletion.
+- [x] Use source Lemma 1 to prove coefficient injectivity and instantiate
+  equation (22) for every square-case counterexample.
+- [ ] Formalize equation (23)'s 2- and 3-adic valuation inequalities and
+  primorial comparison.
+
+Equation (22) is now kernel-checked exactly as
+`3^H*H! < 2^H*∏aᵢ`. The next large-length obligation is equation (23).
+
+## Prime-equidistribution 2.99
+
+- [x] Define the canonical squarefree coefficient product used in equations
+  (21)--(23) and prove it is positive.
+- [x] Prove that every prime below `H` occurs exactly once in the source
+  primorial.
+- [x] Extract the complete 2- and 3-adic content from equation (21) as an
+  exact natural-number divisibility theorem.
+- [x] Combine the extracted equation-(21) ledger with the canonical strict
+  equation-(22) inequality.
+- [ ] Prove the paper's lower bounds for the 2- and 3-adic valuations of
+  `(H-1)!`.
+- [ ] Prove the upper bounds for the corresponding valuations of the
+  squarefree coefficient product.
+- [ ] Simplify these bounds to displayed equation (23) and insert the
+  primorial estimate giving the contradiction for `H≥71`.
+
+The algebraic cancellation linking equations (21) and (22) is now
+kernel-checked. Only the explicit counting/logarithmic estimates and their
+numerical consequence remain in the large-length square case.
+
+## Prime-equidistribution 3.00
+
+- [x] Prove the binary and ternary digit-sum logarithmic inequalities.
+- [x] Deduce the source lower bounds for the `2`- and `3`-adic valuations of
+  `(H-1)!`.
+- [x] Prove exact halving and thirding recurrences for odd interval
+  valuations, with uniform discrepancy estimates.
+- [x] Identify those interval counts with the valuations of the canonical
+  squarefree coefficient product and deduce both source upper bounds.
+- [x] Cancel `(H-1)!` in `ℝ`, divide out the coefficient valuations, normalize
+  to real powers, and insert all four bounds.
+- [ ] Simplify the logarithmic real-power inequality to the displayed
+  constant `14/3` in equation (23).
+- [ ] Insert the primorial estimate and finish the finite residual square
+  cases.
+
+The large-length proof now stops at the exact logarithmic inequality directly
+before the source's `14/3` simplification.
+
+## Prime-equidistribution 3.01
+
+- [x] Rewrite the two logarithmic valuation factors exactly using `rpow` and
+  `logb` identities.
+- [x] Bound the residual root factor by `4H² ≤ (14/3)H²`.
+- [x] Prove the displayed equation (23) for every canonical counterexample
+  with `64≤H<N`.
+- [ ] Apply the explicit primorial estimate and derive the large-length
+  contradiction.
+- [ ] Complete the remaining finite square lengths.
+
+## Prime-equidistribution 3.09
+
+- [x] Prove sharp ceiling and arbitrary finite-prime union bounds.
+- [x] Establish five surviving positions for `18 <= H <= 20`.
+- [x] Transfer avoidance to coefficient coprimality and divisibility by six.
+- [x] Exclude every square-case failure with `3 <= H <= 20`.
+- [ ] Formalize the next small-prime count beginning at `H=21`.
+
+## Prime-equidistribution 3.10
+
+- [x] Prove the nine-survivor ceiling sum for every `21 <= H <= 70`.
+- [x] Transfer prime avoidance to divisibility of coefficients by `30`.
+- [x] Exclude every finite square-case failure with `3 <= H < 71`.
+- [ ] Formalize the explicit Section 3.1 cutoff for every `H >= 71`.
+
+## Prime-equidistribution 3.11
+
+- [x] Prove a rational lower bound `31335/10000` for the equation-(23) base.
+- [x] Prove the explicit exponential-growth comparison for every `H >= 297`.
+- [x] Kernel-check the actual prime-product comparison for all `71 <= H <= 296`.
+- [x] Connect the full square conclusion conditional on the named `3^H`
+  primorial statement.
+- [x] Prove `prod_{p<H} p <= 3^H` in Lean and discharge that final condition
+  (release 3.12).
+
+## Prime-equidistribution 3.03
+
+- [x] Embed all canonical squarefree coefficients into the finite set of
+  positive divisors of `prod_{p<H} p`.
+- [x] Rule out `H=3` by the two available coefficient candidates.
+- [x] Prove directly that four consecutive positive integers cannot have
+  square product.
+- [x] Rule out `H=4` by showing its four coefficients are exactly
+  `1,2,3,6`.
+- [x] Rule out `H=5` by the four available coefficient candidates.
+- [x] Formalize the `H=6` residue split.
+- [ ] Formalize the remaining small-prime counts through `H<71`.
+
+## Prime-equidistribution 3.04
+
+- [x] Count exactly the five length-six positions avoiding `5` outside the
+  exceptional residue class.
+- [x] Prove coefficients at those positions lie among the four candidates
+  supported on `2` and `3`.
+- [x] Handle `5 | N+1` by showing the middle four coefficients exhaust
+  `1,2,3,6` and force a square four-term subproduct.
+- [x] Exclude every square-case failure with `3 <= H <= 6`.
+- [ ] Formalize the remaining small-prime counts for `7 <= H < 71`.
+
+## Prime-equidistribution 3.05
+
+- [x] Enumerate the length-seven residue classes modulo five and prove that at
+  least five positions avoid `5`.
+- [x] Place their canonical coefficients among the four products supported on
+  `2` and `3`.
+- [x] Exclude every square-case failure with `3 <= H <= 7` while retaining the
+  release-3.04 compatibility endpoint.
+- [ ] Formalize the `H=8` exceptional residue split and the remaining counts
+  for `9 <= H < 71`.
+
+## Prime-equidistribution 3.06
+
+- [x] Reduce the length-eight ordinary count to the `35` residue classes.
+- [x] Prove that the unique deficient class is exactly
+  `7 | N+1` and `5 | N+2`.
+- [x] Close that class using the middle four terms and the square-product
+  contradiction.
+- [x] Exclude every square-case failure with `3 <= H <= 8`.
+- [ ] Formalize the remaining small-prime counts for `9 <= H < 71`.
+
+## Prime-equidistribution 3.07
+
+- [x] Prove the modulo-`35` five-position count and extend it through
+  `9 <= H <= 11`.
+- [x] Prove the modulo-`385` five-position count and extend it through
+  `12 <= H <= 13`.
+- [x] Reduce the surviving coefficient candidates in both blocks to
+  `1,2,3,6` without large finite evaluation.
+- [x] Exclude every square-case failure with `3 <= H <= 13`.
+- [ ] Formalize the remaining small-prime counts for `14 <= H < 71`.
+
+## Prime-equidistribution 3.08
+
+- [x] Replace large-modulus enumeration with a reusable union bound for four
+  prime-divisibility filters.
+- [x] Prove five surviving coefficients for every `14 <= H <= 17`.
+- [x] Exclude every square-case failure with `3 <= H <= 17`.
+- [ ] Extend the union-count framework from `H=18`, where prime `17` enters.
+
+## Prime-equidistribution 3.02
+
+- [x] Identify the prime product below `H` with `primorial (H-1)`.
+- [x] Derive the eventual bound `prod_{p<H} p <= 3^H` from the frozen PNT.
+- [x] Prove the effective equation-(23) base is strictly larger than `3` by
+  exact rational root comparisons.
+- [x] Absorb `(14/3)H^2` by exponential growth and rule out every sufficiently
+  large square-case multiplicity failure.
+- [ ] Replace the extracted threshold by the paper's explicit numerical
+  primorial cutoff.
+- [ ] Complete the remaining finite square lengths.
+
+## Prime-equidistribution 3.12
+
+- [x] Formalize the Sylvester recurrence, reciprocal telescoping identity, and
+  strict quotient-floor sum used by Hanson.
+- [x] Prove that every prime below `n` divides Hanson's factorial coefficient.
+- [x] Build the fixed `2,3,7,43` five-part multinomial and its exact weighted
+  entropy bound.
+- [x] Prove the integer base gap, floor-loss absorption, and the finite block
+  certificate below `1400`.
+- [x] Prove `ErdosSelfridgeThreePrimorialConclusion` for every natural length
+  and remove it from the square-case assumptions.
+- [ ] Prove the remaining unrestricted `SylvesterSchurConclusion` internally.
+
+## Prime-equidistribution 3.13
+
+- [x] Derive the general factorial/exponent gap
+  `H! 2^r < (N+1)^(H-r)` from the binomial factorization envelope.
+- [x] Specialize to the exact exponent `r=pi(H)` and prove the cutoff
+  `H! 2^pi(H)+1`.
+- [x] Recover the classical `H! 2^(H-1)+1` cutoff as a checked corollary.
+- [x] Replace the `H^H+1` residual by the exact-prime-count factorial finite
+  rectangle and connect it to `SylvesterSchurConclusion`.
+- [ ] Discharge the remaining rectangle for lengths `H>=49`.
+
+## Prime-equidistribution 3.14
+
+- [x] Kernel-check the `3H` binomial-growth baseline for every
+  `49<=H<=100`.
+- [x] Kernel-check every bounded start below the `3H` baseline in that range.
+- [x] Assemble `sylvesterSchurBelow_oneHundredOne`, uniform over all starts.
+- [ ] Discharge the remaining exact-prime-count factorial rectangle for
+  `H>=101`.
+
+## Prime-equidistribution 3.15
+
+- [x] Split the binomial factorization at `sqrt n` and bound the low-prime
+  contribution by `n^sqrt(n)`.
+- [x] Prove that high supported primes have exponent at most one.
+- [x] In the central range `2k<=n`, eliminate supported primes in
+  `(n/3,k]` and bound the remainder by `primorial (n/3)`.
+- [x] Insert Hanson's all-length theorem and export explicit `3`-power gap
+  criteria for binomial coefficients and consecutive products.
+- [ ] Prove a uniform explicit numerical gap on a large-length central
+  region and finish the remaining `H>=101` rectangle.
+
+## Prime-equidistribution 3.16
+
+- [x] Prove an integral exponential bound absorbing
+  `(3H)^sqrt(3H)` into `2^(H/4)` from an explicit cutoff.
+- [x] Prove the remaining `3^(H+1)` versus `4^H` comparison by fixed-base
+  induction.
+- [x] Close every central start `H<N<=2H` uniformly for `H>=34134`.
+- [x] Export and audit both binomial and consecutive-product endpoints.
+- [ ] Close noncentral starts for large `H` and the finite bridge
+  `101<=H<34134`.

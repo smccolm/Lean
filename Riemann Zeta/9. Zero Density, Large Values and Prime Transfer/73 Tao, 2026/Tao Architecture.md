@@ -314,4 +314,71 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% The prime-multiplicity theorem itself remains the source input.
     %% Release 2.94: source equation (3) is compiled. Factorization remainders
     %% modulo l give m=a*x^l with v_p(a)<l; exact uniqueness for H<=p makes
-    %% every counterexample coefficient H-smooth. Source Lemma 1 remains.
+    %% every counterexample coefficient H-smooth.
+    %% Release 2.95: source equations (2) and (4), the sharp rational-power
+    %% gap, and full coefficient-product Lemma 1 are compiled. Lemma 2 and
+    %% the remaining deletion/counting cases are the next source boundary.
+    %% Release 2.96: maximal-valuation deletion, exact pi(H-1) padding,
+    %% equation (9), and the square-case equation (21) are compiled. The
+    %% large-length square inequality and finite residual cases remain.
+    %% Release 2.97: exact interval counts for multiples of 4, 9, and 36
+    %% prove that every 36-term block contains at most 24 squarefree values.
+    %% The product lower bound (22), equation (23), and finite cases remain.
+    %% Release 2.98: cumulative squarefree density, the exact first-64 base,
+    %% ordered-finset minimality, and maximum deletion prove equation (22)
+    %% for the canonical counterexample coefficients. Equation (23) remains.
+    %% Release 2.99: the exact 2- and 3-adic cancellation ledger for equation
+    %% (21), and its strict combination with equation (22), are compiled.
+    %% The four numerical valuation bounds and displayed equation (23) remain.
+    %% Release 3.00: binary/ternary digit-sum bounds, exact odd-valuation
+    %% interval recurrences, all four source valuation estimates, and the
+    %% factorial-cancelled logarithmic real-power form are compiled. The
+    %% numerical simplification to 14/3 and the primorial contradiction remain.
+    %% Release 3.01: exact rpow/logb evaluation and a slack root-factor bound
+    %% prove displayed equation (23) with constant 14/3. The explicit
+    %% primorial contradiction and finite residual square cases remain.
+    %% Release 3.02: the frozen PNT bounds the prime product by 3^H
+    %% eventually; exact rational root bounds make the equation-(23) base
+    %% strictly larger than 3, so polynomial-versus-exponential growth rules
+    %% out all sufficiently large square-case failures. The explicit cutoff
+    %% and finite residual square cases remain.
+    %% Release 3.03: a finite coefficient-candidate embedding and exact
+    %% divisor-cardinality computations close H=3 and H=5. Exhaustion of
+    %% {1,2,3,6}, equation (3), and the four-consecutive difference-of-squares
+    %% identity close H=4. The finite residual now begins at H=6.
+    %% Release 3.04: an exact modulo-five split closes H=6. Five nonexceptional
+    %% positions collide among four {2,3}-supported coefficients; in the
+    %% exceptional class the middle four exhaust them and force a forbidden
+    %% square four-term subproduct. The finite residual now begins at H=7.
+    %% Release 3.05: exact enumeration modulo five shows that at least five of
+    %% seven positions have {2,3}-supported coefficients, contradicting the
+    %% four available values. The finite residual now begins at H=8.
+    %% Release 3.06: reduction modulo 35 gives the H=8 five-coefficient count
+    %% except in the exact source class 7|(N+1), 5|(N+2); there the middle four
+    %% coefficients force the same forbidden square subproduct. Residual H=9.
+    %% Release 3.07: exact periodic counts modulo 35 and 385, persisted across
+    %% prime-stable ranges, close H=9 through H=13 by five-to-four coefficient
+    %% pigeonhole. The finite residual now begins at H=14.
+    %% Release 3.08: a reusable union bound for interval multiples of
+    %% 5,7,11,13 closes H=14 through H=17 without large residue enumeration.
+    %% The finite residual now begins at H=18.
+    %% Release 3.09: sharp finite-prime union bounds and a generic coprime
+    %% coefficient transfer close H=18 through H=20. Residual H=21.
+    %% Release 3.10: nine coefficients supported on 2,3,5 contradict the eight
+    %% divisors of 30 for every H=21 through H=70. Section 3.2 is complete.
+    %% Release 3.11: actual prime-product certificates close H=71 through 296;
+    %% a 31335/10000 base bound gives equation-(23) growth from H=297. The sole
+    %% remaining square input is the elementary all-H prime product <= 3^H.
+    %% Release 3.12: Hanson's Sylvester factorial coefficient and a fixed
+    %% 2,3,7,43 multinomial prove that prime-product bound for every H. The
+    %% square branch now depends only on unrestricted Sylvester--Schur.
+    %% Release 3.13: an independent ascending-factorial argument replaces the
+    %% H^H start cutoff by H!*2^pi(H)+1 (and the classical H!*2^(H-1)+1
+    %% corollary). Only the resulting finite H>=49 rectangle remains.
+    %% Release 3.14: kernel-checked 3H baselines and bounded witnesses close
+    %% every length 49 through 100. The finite rectangle now starts at H=101.
+    %% Release 3.15: split choose(n,H) at sqrt(n); high valuations are at most
+    %% one and central support contracts to n/3. Hanson gives the explicit
+    %% envelope n^sqrt(n)*3^(n/3+1), leaving its uniform numerical gap.
+    %% Release 3.16: exact integral inductions discharge that gap for every
+    %% H>=34134 and H<N<=2H. Noncentral starts and 101<=H<34134 remain.

@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-2.94`. It
+This is a development manifest, version `prime-equidistribution-3.16`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -2505,3 +2505,393 @@ argument remain unproved, so the public Theorem 1.10 status is unchanged.
 On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
 `FINAL RESULT: PASS` after this delta; the isolated production graph contained
 10050 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.95
+
+`ErdosSelfridgeProductSeparation.lean` continues the pinned 1975 proof from
+equation (3). Failure of source Theorem 2 plus the named Sylvester--Schur
+contract gives equation (2), `H^l<N`. Product-gcd control proves equation (4)
+for distinct equal-cardinality subfamilies of `[N+1,N+H]`.
+
+The complete stronger Lemma 1 is also compiled. After cancelling an arbitrary
+positive numerator/denominator gcd, a lower gap between coprime rational
+`l`-th powers contradicts the strict powered interval-gap upper bound.
+Equation (3) transports this exclusion, and hence product injectivity, to the
+canonical power-free coefficients. Lemma 2 and the remaining source
+deletion/counting argument remain open, so the public Theorem 1.10 status is
+unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10051 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.96
+
+`ErdosSelfridgeDeletion.lean` formalizes the maximal-valuation deletion
+argument of source Lemma 2. For each prime below `H`, its chosen interval
+position dominates every other valuation. The retained coefficient valuation
+is bounded by the corresponding distance valuation; the exact distance
+product `m!*(H-1-m)!` divides `(H-1)!`.
+
+The image of the prime choices is extended to exactly `primeCounting (H-1)`
+deleted positions, proving both the source survivor cardinality and equation
+(9). At exponent two, every canonical coefficient valuation is at most one,
+so the same ledger proves equation (21): the product of all coefficients
+divides `(H-1)!` times the product of primes below `H`. The subsequent
+large-length inequalities and finite square cases remain open, so the public
+Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10052 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.97
+
+`ErdosSelfridgeSquareDensity.lean` begins Section 3.1 of the pinned 1975
+proof. A general translated-interval theorem counts exactly `L/d` multiples
+of `d` whenever `d∣L`. At length 36, inclusion--exclusion for `4`, `9`, and
+`36` proves that exactly twelve entries are divisible by `4` or `9`.
+
+The prime-square characterization of squarefreeness then gives at most 24
+squarefree entries in any such block. The equivalent source-offset theorem
+for the values `N+(i+1)`, `i<36`, is included. All four main endpoints are in
+the dependency audit. The product inequality (22), equation (23), and finite
+residual lengths remain open, so the public Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10053 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.98
+
+`ErdosSelfridgeSquareDensity.lean` now completes source equation (22). The
+36-term density theorem is iterated from an explicit finite base to obtain
+`3*Q(M)≤2*M` for all `M≥44`. The first 64 squarefree values are identified
+exactly through the prime squares at most 103, and their strict product bound
+is checked by kernel reduction without forbidden evaluators.
+
+Increasing finset enumerations prove first-64 minimality; deleting a maximum
+then propagates `3^H*H! < 2^H*∏a` for every `H≥64`. Lemma 1 makes the canonical
+counterexample coefficient map injective, so the source-facing equation (22)
+is fully instantiated. All new endpoints are dependency-audited. Equation
+(23) and the finite residual square cases remain open, so the public Theorem
+1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10053 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-2.99
+
+`ErdosSelfridgeSquareValuations.lean` formalizes the exact valuation algebra
+between equations (21), (22), and (23). The primorial has factorization one
+at each prime below `H`; extracting the full powers of `2` and `3` from the
+equation-(21) divisibility gives an exact natural-number ledger.
+
+That ledger is combined with the canonical strict equation-(22) theorem to
+produce the source-facing pre-equation-(23) inequality. All four public
+endpoints are dependency-audited. The four explicit logarithmic valuation
+bounds, displayed equation (23), primorial contradiction, and finite square
+cases remain open, so the public Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10054 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.00
+
+`ErdosSelfridgeSquareValuations.lean` now proves the four valuation estimates
+used by Erdős--Selfridge before equation (23). Legendre digit-sum identities
+give the factorial lower bounds; exact halving/thirding recurrences and
+two-sided discrepancies for odd interval valuations give the coefficient
+product upper bounds.
+
+The release also provides factorial-cancelled real, ratio, and `rpow` forms of
+the pre-(23) ledger. `powerFreePart_two_preEquation23_logarithmic_of_failure`
+inserts all four estimates into the exact counterexample inequality. All new
+public endpoints are dependency-audited and use only the standard logical
+axioms. The final simplification to the displayed constant `14/3`, the
+primorial contradiction, and finite square cases remain open; public Theorem
+1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10054 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.01
+
+`ErdosSelfridgeSquareValuations.lean` now proves displayed equation (23).
+Exact `rpow`/`logb` identities evaluate both logarithmic loss factors, while
+`erdosSelfridge_equation23_root_factor_le` bounds the residual root expression
+by `4H²`, safely within the printed `(14/3)H²` constant. The resulting public
+theorem `erdosSelfridge_equation23_of_failure` has the literal source shape.
+
+Both new endpoints are dependency-audited and use only the standard logical
+axioms. The explicit primorial contradiction and finite residual square cases
+remain open; public Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10054 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.02
+
+`ErdosSelfridgePrimorial.lean` proves the exact identification of the local
+prime product with `primorial (H-1)` and derives the eventual estimate
+`prod_{p<H} p <= 3^H` from the frozen prime number theorem. The left side of
+equation (23) is regrouped as `B^H`; exact rational root estimates prove
+`B>3`, and polynomial-versus-exponential growth absorbs `(14/3)H^2`.
+
+The public endpoints exclude square-case multiplicity failure for every
+sufficiently large `H` and expose an existential natural threshold. All new
+endpoints are dependency-audited and use only the standard logical axioms.
+The source's explicit cutoff and finite residual square cases remain open, so
+the public Theorem 1.10 status is unchanged.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10055 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.03
+
+`ErdosSelfridgeFinite.lean` begins the finite Section 3.2 proof. It embeds the
+`H` distinct canonical coefficients into the positive divisors of
+`prod_{p<H} p`. Exact kernel-reduced candidate counts exclude `H=3` and
+`H=5`.
+
+For `H=4`, the image exhausts `1,2,3,6`, so its product is `36`. Multiplying
+the canonical equation-(3) decompositions makes the interval product a
+square, while the source difference-of-squares identity proves that four
+consecutive positive integers never have square product. The combined public
+endpoint excludes every failure with `3<=H<=5`. All new endpoints are audited
+and use only the standard logical axioms. The explicit large cutoff and finite
+lengths from six onward remain open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10056 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.04
+
+`ErdosSelfridgeFinite.lean` now proves the exact length-six residue split.
+Outside `5 | N+1`, a kernel-checked modulo-five enumeration leaves five
+positions whose coefficients belong to the four candidates supported on
+`2,3`. In the exceptional class, the middle four positions avoid five, their
+coefficients exhaust `1,2,3,6`, and equation (3) forces a square product of
+four consecutive integers.
+
+The combined public endpoint now excludes every square-case failure with
+`3<=H<=6`. All new endpoints are dependency-audited and use only the standard
+logical axioms. The explicit large cutoff and finite lengths from seven onward
+remain open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10056 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.05
+
+`ErdosSelfridgeFinite.lean` now closes length seven. A kernel-checked
+enumeration of the five residue classes of `N` proves that at least five of
+the seven interval positions avoid divisibility by five. Their canonical
+coefficients are distinct by Lemma 1 but belong to the four-element set
+`1,2,3,6`, contradicting cardinality.
+
+The combined public endpoint now excludes every square-case failure with
+`3<=H<=7`; the release-3.04 endpoint is retained as a compatibility theorem.
+All new endpoints are dependency-audited and use only the standard logical
+axioms. The explicit large cutoff and finite lengths from eight onward remain
+open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10056 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.06
+
+`ErdosSelfridgeFinite.lean` now proves the full length-eight split. A reusable
+modulo-35 reduction and closed enumeration leave at least five positions
+avoiding both five and seven outside the source exception. Their distinct
+coefficients cannot fit among the four products supported on `2,3`.
+
+In the exceptional class `7 | N+1`, `5 | N+2`, the middle four terms avoid
+both primes. Their coefficients exhaust `1,2,3,6`; equation (3) therefore
+forces a square product of four consecutive integers, contradicting the exact
+identity already formalized. The combined public endpoint covers
+`3<=H<=8`. All new endpoints are dependency-audited and use only the standard
+logical axioms. The explicit large cutoff and finite lengths from nine onward
+remain open.
+
+The cumulative canonical verification recorded for release 3.07 includes and
+audits this entire delta.
+
+## Release delta: prime-equidistribution-3.07
+
+`ErdosSelfridgeFinite.lean` now closes lengths nine through thirteen. A
+kernel-checked modulo-35 count supplies five positions avoiding `5,7` in
+every length at least nine, closing the prime-stable block through eleven. A
+second modulo-385 count supplies five positions avoiding `5,7,11` from length
+twelve, closing the block through thirteen.
+
+In both blocks, Lemma 1 makes the coefficients distinct and equation (3)
+places them among the four divisors `1,2,3,6`. The combined public endpoint
+now covers `3<=H<=13`. All new endpoints are dependency-audited and use only
+the standard logical axioms. The explicit large cutoff and finite lengths
+from fourteen onward remain open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10056 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.08
+
+`ErdosSelfridgeFiniteCounts.lean` introduces a reusable union bound for the
+positions divisible by `5,7,11,13`. Combining the general interval-multiple
+bound with exact divisible-block counts leaves at least five positions for
+every `14<=H<=17`. Their canonical coefficients are distinct and divide six,
+so the four available values give the contradiction.
+
+The combined public endpoint now covers `3<=H<=17`. All new endpoints are
+dependency-audited and use only the standard logical axioms. The explicit
+large cutoff and finite lengths from eighteen onward remain open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10057 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.09
+
+`ErdosSelfridgePrimeUnion.lean` proves the sharp ceiling bound for one prime
+and its arbitrary finite-union complement theorem. The explicit prime sets
+through `17` and `19` leave five survivors at every length `18..20`.
+`ErdosSelfridgeFiniteTwenty.lean` then transfers interval avoidance to
+coefficient coprimality and divisibility by six.
+
+The combined public endpoint now covers `3<=H<=20`. All new endpoints are
+dependency-audited and use only the standard logical axioms. The explicit
+large cutoff and finite lengths from twenty-one onward remain open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10059 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.10
+
+`ErdosSelfridgeFiniteSeventy.lean` generalizes the survivor lower bound and
+coefficient transfer to base `30`. Exact kernel computation verifies every
+length `21<=H<=70`: at least nine coefficients avoid all primes from seven
+upward, but only eight positive divisors of `30` are available.
+
+The combined public endpoint now excludes every square-case failure with
+`3<=H<=70`, completing Section 3.2. All new endpoints are dependency-audited
+and use only the standard logical axioms. The explicit Section 3.1 cutoff for
+`H>=71` remains open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10060 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.11
+
+`ErdosSelfridgeLargeGrowth.lean` proves a strict rational lower bound
+`31335/10000` for the effective equation-(23) base. An exact base calculation
+at `H=297` and ratio induction establish dominance over `(14/3)H^2 3^H` for
+every larger length. A closed natural-number certificate separately verifies
+the actual prime-product inequality for every `71<=H<=296`.
+
+These branches now assemble with the complete finite proof through seventy
+and feed `ErdosSelfridgeSquareConclusion` conditional on the explicitly named
+`ErdosSelfridgeThreePrimorialConclusion`. The only remaining Section 3.1
+arithmetic is a Lean proof of the elementary bound `prod_{p<H} p<=3^H`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10061 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.12
+
+`ErdosSelfridgeHanson.lean` formalizes Hanson's elementary primorial method.
+The Sylvester-sequence reciprocal identity proves a strict floor-sum margin,
+and factorial valuations show that every prime below `n` divides Hanson's
+coefficient.  A fixed five-part multinomial with denominators `2,3,7,43` and
+weights `903,602,258,42,1` supplies the quantitative upper bound entirely in
+natural-number arithmetic.
+
+Exact base-gap and initial-absorption inequalities close the strong-induction
+step from `n=1400`; twenty-five monotone block certificates cover the finite
+prefix.  Therefore `erdosSelfridgeThreePrimorialConclusion_hanson` proves the
+named all-length `3^H` primorial contract, and
+`erdosSelfridgeSquareConclusion_of_sylvesterSchur` leaves only the independent
+`SylvesterSchurConclusion` assumption.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10062 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.13
+
+`SylvesterSchurFactorialThreshold.lean` proves a sharper fixed-length
+large-start criterion.  The ascending-factorial lower bound and the existing
+small-prime binomial envelope show that
+`H! * 2^r < (N+1)^(H-r)` forces a prime above `H`, for every exponent `r`
+between the exact prime count and `H-1`.
+
+The specialization `r=pi(H)` gives the audited cutoff
+`sylvesterSchurPrimeCountFactorialThreshold H = H! * 2^pi(H) + 1`.
+The classical `H! * 2^(H-1) + 1` cutoff is retained as a corollary.  The
+unrestricted `SylvesterSchurConclusion` is now reduced to the smaller
+`SylvesterSchurPrimeCountFactorialFiniteRectangle`; that rectangle, restricted
+already to lengths at least `49`, remains open.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10063 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.14
+
+`SylvesterSchurHundred.lean` extends the unconditional bounded-length theorem
+from `H<49` to `H<101`.  Exact kernel evaluation verifies the `3H`
+binomial-growth inequality for all lengths `49..100` and supplies a prime
+witness for every start below the propagation baseline.
+
+`sylvesterSchurBelow_oneHundredOne` combines that block with the earlier
+small-length theorem and is uniform over all starts.  The remaining
+exact-prime-count factorial rectangle is therefore restricted to `H>=101`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10064 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.15
+
+`SylvesterSchurSqrtEnvelope.lean` proves a generic square-root factorization
+split for binomial coefficients.  Low primes contribute at most
+`n^sqrt(n)` and high primes occur with exponent at most one.  Under the
+no-prime-above-`k` hypothesis, their contribution is bounded by `primorial k`.
+
+For `2k<=n`, the checked three-multiple valuation lemma eliminates supported
+high primes in `(n/3,k]`, improving the factor to `primorial (n/3)`.
+The release-3.12 Hanson theorem converts both bounds to explicit powers of
+three.  Audited binomial and consecutive-product endpoints now show that the
+corresponding gap against `4^k/k` forces a prime divisor above `k`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10065 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.16
+
+`SylvesterSchurCentralTail.lean` discharges the release-3.15 square-root/Hanson
+gap on an explicit two-dimensional region.  Checked block induction proves
+`x<=2^(sqrt(x)/16)` for `sqrt(x)>=320`, which yields
+`(3H)^sqrt(3H)<=2^(H/4)` from `H>=34134`.  A second induction compares the
+remaining polynomial multiple of `162^q` with `256^q`, where `q=H/4`.
+
+Monotonicity extends the endpoint calculation to every `2H<=n<=3H`.
+The audited binomial and consecutive-product endpoints therefore close every
+start `H<N<=2H` for `H>=34134`, without an asymptotic or floating-point
+threshold.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10066 jobs, including the root and dependency audit.
