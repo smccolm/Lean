@@ -38,6 +38,17 @@ def TaoPrimeLinearQuotientWeilBound : Prop :=
     ‖primeLinearQuotientCorrelation p r χ b‖ ≤
       ((4 * r : ℕ) : ℝ) * Real.sqrt p
 
+/-- The prime quotient-character estimate at the sole order used in Tao's
+fourteenth-moment Burgess argument. -/
+def TaoPrimeLinearQuotientWeilBoundRSeven : Prop :=
+  ∀ (p : ℕ) [NeZero p]
+    (χ : MulChar (ZMod p) ℂ)
+    (b : Fin 7 ⊕ Fin 7 → ZMod p) (j : Fin 7 ⊕ Fin 7),
+    p.Prime → χ ≠ 1 →
+    (∀ i, b i = b j → i = j) →
+    ‖primeLinearQuotientCorrelation p 7 χ b‖ ≤
+      ((4 * 7 : ℕ) : ℝ) * Real.sqrt p
+
 /-- The Burgess tuple shifts reduced modulo a prime. -/
 def burgessPrimeTaggedShift
     (p B r : ℕ) (uv : (Fin r → Fin B) × (Fin r → Fin B))
@@ -107,6 +118,29 @@ theorem TaoPrimeLinearQuotientWeilBound.toComposite
     (hweil : TaoPrimeLinearQuotientWeilBound) :
     TaoPrimitiveCubefreeBurgessCompleteWeilBound :=
   hweil.toPrimeCoprimeCoefficient.toComposite
+
+/-- The fixed prime quotient estimate gives the fixed prime
+coprime-coefficient predicate. -/
+theorem TaoPrimeLinearQuotientWeilBoundRSeven.toPrimeCoprimeCoefficient
+    (hweil : TaoPrimeLinearQuotientWeilBoundRSeven) :
+    TaoPrimitivePrimeCoprimeCoefficientWeilBoundRSeven := by
+  intro p B _ χ uv j hp hχ hAj hcop
+  have hp' : (p ^ 1).Prime := by simpa only [pow_one] using hp
+  rw [burgessCompleteCorrelation_eq_primeLinearQuotientCorrelation]
+  simpa only [pow_one] using
+    hweil (p ^ 1) χ (burgessPrimeTaggedShift (p ^ 1) B 7 uv) j hp'
+      (dirichletCharacter_ne_one_of_isPrimitive_prime (p ^ 1) hp' χ hχ)
+      (burgessPrimeTaggedShift_unique_of_coefficient_coprime
+        (p ^ 1) B 7 hp' uv j (by simpa only [pow_one] using hcop))
+
+/-- The fixed prime quotient estimate closes exactly the complete-sum input
+used by Tao's fourteenth moment. -/
+theorem TaoPrimeLinearQuotientWeilBoundRSeven.toComposite
+    (hweil : TaoPrimeLinearQuotientWeilBoundRSeven) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
+  (TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven.ofPrimeAndPrimeSquare
+    hweil.toPrimeCoprimeCoefficient
+    taoPrimitivePrimeSquareCoprimeCoefficientWeilBound).toComposite
 
 end
 

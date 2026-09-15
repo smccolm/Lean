@@ -283,8 +283,12 @@ binomial lower bounds, and a two-range logarithmic argument produce a prime
  measure bound. The same binomial proof now works uniformly for every start at
  all sufficiently large lengths. A Bernoulli monotonicity argument and the
  explicit fixed-length threshold `H^H+1` reduce the stronger unrestricted
- Sylvester--Schur contract to a finite bounded rectangle; that rectangle remains
- open, but is no longer a Lemma 3.1 blocker. The fixed cutoff and Theorem 2.5 constants are now chosen
+ Sylvester--Schur contract to a finite bounded rectangle. The first forty-eight
+ length rows are now discharged uniformly over every start by
+ `sylvesterSchurBelow_fortyNine`; the remaining rectangle has `H>=49` and remains
+ open. A separate start-uniform theorem also shows that every length works
+ beyond one common start cutoff; consequently the residual rectangle is no
+ longer a Lemma 3.1 or Theorem 1.7 blocker. The fixed cutoff and Theorem 2.5 constants are now chosen
 outside the eventual quantifiers, two logarithmic powers are proved to beat
 the `H/log H` lower bound, and
 `eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized`
@@ -790,9 +794,10 @@ In parallel source order, the pinned Baker--Harman--Pintz input in Proposition
 ## Deliberate non-claims
 
 The Section 6 branch now includes the audited arithmetic core of Lemma 6.1:
-non-singleton bad intervals satisfy `H≤N` and are prime-free, while the isolated
-Sylvester--Schur input yields the source `p₀²m` witness together with
-largest-prime smoothness for every interval element. The dyadic-window
+non-singleton bad intervals satisfy `H≤N` and are prime-free. A local
+large-prime witness yields the source `p₀²m` witness together with
+largest-prime smoothness for every interval element; the eventual start-uniform
+theorem supplies it at all sufficiently large admissible scales. The dyadic-window
 comparability is recorded with its exact natural rounding, `N<x≤4N+1`.
 The corrected exact core of Lemma 6.2 is also audited: the source power-of-two
 choice gives a contained bad endpoint subinterval of length
@@ -1182,6 +1187,29 @@ prime input is `TaoPrimeSplitPolynomialWeilBoundFourActiveRootsOrMore`.
 `BurgessWeilPrimeLargeCharacteristic` then proves the trivial bound `p` and
 shows it already implies `2D√p` when `p ≤ 4D²`. Thus the remaining
 four-active-root input may additionally assume `4D² < p`.
+`BurgessWeilPrimeFourRoots` gives the exact four-root normalization. A
+fractional-linear permutation sends one active root to infinity; degree
+divisibility cancels the common denominator character and leaves a canonical
+three-point hypergeometric sum with one deleted value. Its checked lift shows
+that a `2√p` canonical estimate proves the full exactly-four-active-root
+polynomial target. The generic large-characteristic residual now starts at
+five active roots; the separate canonical hypergeometric estimate remains
+analytic input.
+`BurgessWeilPrimeSourceResidual` removes the last arbitrary-polynomial
+strength from this production route. The remaining higher-root estimate is
+stated only for `primeLinearOrderPolynomial p r χ b`, the literal cleared
+Burgess polynomial. Its bridge handles every lower-root and small-
+characteristic branch internally, requires the canonical hypergeometric
+estimate only for `p > 64`, and still proves the complete cube-free Weil
+predicate.
+The canonical input is additionally reduced to three powers of the one
+ambient character, with each exponent normalized below `orderOf χ` by exact
+`pow_mod_orderOf` identities. Thus no independent character triples or
+unbounded multiplicity exponents remain in the production assumption.
+An exact scaling reindexing then sends the finite marked points from
+`(0,λ,μ)` to Legendre form `(0,1,t)`, extracting only a character constant of
+norm at most one. The four-root input therefore has a single geometric
+parameter `t ≠ 0,1`.
 `ExceptionalCharacterScales`
 selects `R=⌊Z^0.0001⌋` and proves that
 all those prefixes eventually exceed any fixed cutoff and satisfy the Burgess
@@ -1259,8 +1287,9 @@ actual typical union is little-o of the same dilated `badOneTermCount`,
 conditional on Burgess, and the quantitative assembly retains an explicit
 fixed logarithmic saving. `BadIntervalRecombination` combines this with the
 Proposition 6.5 slow diagonal and applies the exact factor-`30` maximal
-transfer. Conditional on explicit Burgess, Sylvester--Schur, and Lemma 1.6(ii),
-the resulting local nontrivial dyadic-window count has a
+transfer. Its scale-local form uses the proved eventual admissible-scale
+large-prime theorem, so conditional on explicit Burgess and Lemma 1.6(ii), the
+resulting local nontrivial dyadic-window count has a
 `1/log(x)^(1-epsilon)` saving relative to `badOneTermCount x`. An exact finite
 power-of-two cover also bounds the global nontrivial bad count by the sum of
 these local window counts. `BadIntervalDyadicSummation` isolates the exact
@@ -1272,8 +1301,11 @@ adjacent ratio from `TaoCriticalSmoothDilationLimitConclusion`: a slowly
 widening central prime packet has complementary mass `o(B¹(x))`, and uniform
 dilation by `1/2` gives `B¹(x/2)/B¹(x)->1/2`. The completed saddle-main-term
  stability reduces the dilation limit to
- `TaoCriticalSmoothSaddleAsymptoticConclusion`. That sharp saddle asymptotic,
- analytic Burgess, and the finite residual Sylvester--Schur rectangle remain
+ `TaoCriticalSmoothSaddleAsymptoticConclusion`. The scale-local refinement now
+ invokes `eventually_admissibleSylvesterSchurAtScale`, obtained from the common
+ start cutoff, throughout maximal transfer and dyadic summation. Thus
+ `taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess` needs only
+ that sharp saddle asymptotic and analytic Burgess; those two inputs remain
  open. The same dilation limit now
 also proves Lemma 1.6(ii), so that clause is no longer a separate input; no
 main theorem is claimed.
@@ -1354,3 +1386,389 @@ dependency closure and the audited quantitative bridge described above.
 
 `push_to_github.bat` is the existing owner-operated repository synchronization
 script. It is not called by the build or development verifier.
+
+## Prime-equidistribution release 2.57
+
+`BurgessAmplification` begins the previously missing passage from the complete
+fourteenth moment to character prefixes. It proves exact interval splitting
+and shift differencing, the sharp `2K` boundary error, affine reindexing by a
+residue coprime to the conductor, preservation of the sum norm under that
+reindexing, and the finite-sum exchange which produces `burgessShiftSum` from
+the additive Burgess average. The coprime multiplier-pair set and its residue
+multiplicity are explicit; their first moment and the exact weighted
+regrouping of the complete affine average are proved. No new analytic
+hypothesis is introduced.
+
+The remaining amplification work is the residue-multiplicity collision
+estimate, Hölder step against the fourteenth moment, and the final choice and
+optimization of the Burgess parameters. Analytic Burgess
+and hence Theorems 1.7--1.10 remain unproved unconditionally.
+
+## Prime-equidistribution release 2.58
+
+The residue multiplicity's second moment is now identified exactly with an
+ordered collision count. Unit cancellation turns every such collision into
+the cross-multiplied congruence used in the pinned explicit Burgess proof.
+The source-shaped three-factor Hölder estimate is also complete: its factors
+are the proved first moment, this collision cardinality, and the existing
+complete `2r` character moment. The same theorem is exposed directly for the
+coprime affine average.
+
+What remains in this segment is the arithmetic upper bound on collision
+fibers, followed by the induction/error term and parameter optimization.
+
+## Prime-equidistribution release 2.59
+
+The fixed-multiplier arithmetic collision estimate is now proved. Under
+`2*A*H <= q`, congruence collisions cannot wrap modulo `q`; after division by
+`gcd(a,c)`, distinct points in a fiber are spaced by the reduced multipliers.
+Consequently each fiber has cardinality at most
+`H / (max a c / gcd a c) + 1`. The complete collision set is decomposed
+exactly by its multiplier pair and bounded by the corresponding finite
+`max/gcd` sum.
+
+The remaining elementary amplification step is to estimate that finite gcd
+sum in the source's divisor-sum form. The Burgess induction, boundary-error
+absorption, and `r = 7` parameter optimization then remain; analytic Burgess
+and Theorems 1.7--1.10 are still not unconditional results of this project.
+
+## Prime-equidistribution release 2.60
+
+The remaining collision divisor sum is now bounded. A fixed upper multiplier
+`c` contributes at most `H*tau(c)`; the exact summatory-divisor identity and a
+harmonic comparison then give `sum_{c<=A} tau(c) <= A*harmonic(A)` over the
+reals. Thus the complete residue-collision count has the required
+diagonal-plus-`O(A*H*log A)` form, with the explicit term
+`2*H*A*harmonic(A)`.
+
+The next frontier is no longer collision counting. It is the Burgess
+induction that absorbs the `2ab` translation boundary and combines this
+second moment with the compiled Hölder and fourteenth-moment estimates,
+followed by the concrete `r = 7` parameter optimization.
+
+## Prime-equidistribution release 2.61
+
+The exact pre-Hölder Burgess recursion now compiles. A real-valued residue-
+multiplicity regrouping bounds the sum of the norms of the affine `b`-averages.
+An arbitrary function `E` can then majorize both shorter boundary intervals,
+and the final theorem gives
+`#A*B*|S(N,H)| <= sum_x v_A(x)|W_B(x)| + 2*sum_{a,b} E(ab)`
+under `A*B <= H`, matching equation (28) of the pinned explicit proof.
+
+What remains is to insert the inductive Burgess power into `E`, estimate its
+finite boundary sum, combine Hölder with the collision and complete-moment
+bounds, and perform the `r = 7` parameter optimization.
+
+## Prime-equidistribution release 2.62
+
+The inductive power boundary is now inserted into the exact recursion.
+Monotonicity collapses the coprime-multiplier sum to its endpoint, and a
+finite endpoint estimate gives
+`sum_{b<=B} C*(A*b)^alpha*Q <= B*C*(A*B)^alpha*Q` for nonnegative data.
+After division by the positive averaging denominator, the compiled normalized
+recurrence is
+`|S(N,H)| <= M/(#A*B) + 2*C*(A*B)^alpha*Q`.
+
+The remaining main-term package is root extraction from powered Hölder,
+followed by the harmonic collision bound, the complete fourteenth moment,
+and the exact `r = 7` parameter choice.
+
+## Prime-equidistribution release 2.63
+
+The powered Hölder inequality has now been converted into its usable rooted
+form. Monotonicity then inserts both the harmonic collision estimate and the
+complete fourteenth-moment bound under the `1/14` power. A single compiled
+theorem combines this main term with the normalized power-boundary recursion.
+
+The Burgess amplification frontier is consequently scalar: lower-bound the
+coprime multiplier count, select integral `A` and `B`, discharge the no-wrap
+and shortening conditions, and absorb the boundary term. The composite Weil
+input is still explicit rather than silently assumed.
+
+## Prime-equidistribution release 2.64
+
+The coprime-multiplier denominator now has a quantitative lower bound. Exact
+Möbius inversion proves
+`A*phi(q)/q - tau(q) <= #{a<=A : (a,q)=1}`, together with the corresponding
+affine-pair statement and a half-density corollary once the divisor error is
+dominated.
+
+This deliberately uses `tau(q)` rather than Tao's sharper
+`2^(omega(q)-1)` error; the project already has the divisor power bounds
+needed to absorb that loss. The next task is the concrete integer parameter
+selection. The elementary companion inequality `q/phi(q) <= tau(q)` is also
+compiled, so `2*tau(q)^2 <= A` alone implies the required half-density
+denominator. The remaining estimates concern that rounded condition, the
+harmonic factor, and the Burgess range inequalities.
+
+## Prime-equidistribution release 2.65
+
+The Burgess recurrence is now cardinality-free and scalar. Divisor-power
+absorption makes `2*tau(q)^2<=A` automatic in the intended lower interval
+range, while `A<=H` compresses the collision bracket to
+`3*H*A*harmonic(A)`.
+
+The formal parameter choice is `B=floor(q^(1/14))`, `A=H/(K*B)`. Its floor
+losses and all current admissibility conditions are compiled, including the
+quadratic hypothesis implying `2*A*H<=q`. The remaining Burgess work is the
+epsilon absorption/power simplification and the inductive boundary closure;
+the composite complete-Weil input remains explicit.
+
+## Prime-equidistribution release 2.66
+
+The first post-parameter exponent calculation is compiled. Harmonic and
+reciprocal-totient losses have explicit conductor-power bounds; the complete
+moment reduces to `q^(3/2+epsilon)` and hence to
+`q^(3/28+epsilon/14)` after the fourteenth root. Exact factorization gives
+the combined main factor
+`A^(13/14)*H^(13/14)*q^(3/28+epsilon/14+delta/14)`.
+
+What remains is the final substitution of the already rounded `A,B`, which
+produces `H^(6/7)*q^(2/49+epsilon)`, followed by strict boundary absorption.
+
+## Prime-equidistribution release 2.67
+
+The rounded substitution is now formalized. The exact quotient and floor
+losses yield a normalized parameter factor
+`2*K^(1/14)*H^(6/7)/q^(13/196)`, and its combination with the rooted complete
+moment produces the target Burgess main exponent
+`H^(6/7)*q^(2/49+epsilon/14+delta/14)`.
+
+The next step is to include the reciprocal-totient epsilon loss and package
+the total exponent budget, then choose the safety factor so the normalized
+inductive boundary is strictly contractive. The composite complete-Weil input
+remains explicit.
+
+## Prime-equidistribution release 2.68
+
+The reciprocal-totient loss and final epsilon allocation are now compiled,
+giving the rounded main term at exactly
+`H^(6/7)*q^(2/49+eta)`. Separately, the exact inequality `K*A*B<=H` turns the
+normalized affine error into a contractive term; `K=128` is formally proved
+to leave at most one half of the induction majorant.
+
+The next step is recurrence-level assembly of these two estimates. The
+complete fourteenth-moment/Weil input remains the genuine analytic hypothesis.
+
+## Prime-equidistribution release 2.69
+
+The rounded Burgess recurrence now closes by strong induction. Both affine
+endpoint errors use strictly shorter lengths, the half-boundary is absorbed
+by the chosen uniform coefficient, and sublengths below the core threshold
+use the trivial estimate. For sufficiently large conductors this proves the
+primitive `H^(6/7)*q^(2/49+eta)` estimate throughout the exact quadratic
+no-wrap range.
+
+The remaining large-length completion is the Pólya--Vinogradov Fourier
+estimate. The source-specific prime complete-Weil residual remains the other
+analytic input.
+
+## Prime-equidistribution release 2.70
+
+The Pólya--Vinogradov completion is now formalized. Primitive finite Fourier
+inversion and an exact DFT proof of `|tau(chi)|=sqrt(q)` reduce every
+`H<q` interval to a geometric kernel whose full frequency norm is at most
+`10*(H+q*harmonic(q))`. Consequently
+`|S(N,H)|<=10*sqrt(q)*(1+harmonic(q))`.
+
+The harmonic factor is absorbed into `q^eta`. Outside the quadratic
+no-wrap range, its failure yields exactly the `q^(45/98)` length power
+needed to recover `H^(6/7)*q^(2/49+eta)`. The medium and large branches are
+combined, the finitely many small conductors are handled explicitly, and the
+primitive all-prefix, all-character cubefree, and decimal Burgess contracts
+are exported. They remain conditional only on the source-specific prime
+complete-Weil residual.
+
+## Prime-equidistribution release 2.71
+
+`BurgessWeilPrimeKummer.lean` consolidates the remaining prime assumptions
+into the sharp classical Kummer statement. For a split polynomial not equal
+to `C(c)*Q^(orderOf χ)` with `c≠0`, the required estimate is
+`(t-1)*sqrt(p)`, where `t` is the number of distinct roots.
+
+The tagged Burgess root is now proved to exclude this full scalar-power
+exception by exact root-multiplicity arithmetic. The sharp statement implies
+the existing split-polynomial, prime quotient, composite complete-Weil, and
+therefore all-prefix Burgess contracts. The Kummer estimate itself remains
+the sole Burgess analytic input.
+
+## Prime-equidistribution release 2.72
+
+`SylvesterSchurSmallLengths.lean` proves the unrestricted large-prime
+conclusion for every start at lengths `1<=H<=48`. It combines monotone
+binomial-growth propagation from verified small baselines with kernel-checked
+finite prime certificates, using the uniform baseline `T=3H` above length ten.
+
+Consequently the finite Sylvester--Schur residual that then fed Theorem 1.7 was
+restricted to `H>=49`. The full theorem remains open; this release removes forty-eight
+complete rows without introducing a conditional interface.
+
+## Prime-equidistribution release 2.73
+
+`SylvesterSchurEventual.lean` proves one common start cutoff after which the
+large-prime conclusion holds for every positive interval length. Large lengths
+use the existing all-start tail; the finitely many smaller lengths use their
+fixed-length `H^H+1` thresholds.
+
+Because admissible interval starts grow with the ambient dyadic scale,
+`eventually_admissibleSylvesterSchurAtScale` supplies exactly the local witness
+needed in Theorem 1.7. New scale-local variants carry it through normalized
+subintervals, the factor-30 maximal bound, typical/non-typical recombination,
+dyadic windows, tail summation, and the finite prefix. The compiled endpoint
+`taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess` therefore has
+only two open analytic inputs: Burgess and the critical smooth-number saddle
+asymptotic. The unrestricted Sylvester--Schur finite rectangle remains open as
+an independent theorem, not as a Theorem 1.7 dependency.
+
+## Prime-equidistribution release 2.74
+
+`BurgessWeilPrimeKummer.lean` now gives the exact distinct-root trace normal
+form for the remaining prime character sum. It proves both directions of the
+exceptional-power criterion for nonzero split polynomials: all root
+multiplicities are divisible by `orderOf χ` exactly when the polynomial is a
+nonzero scalar multiple of an order-th power. The equivalent endpoint
+`TaoPrimeKummerRootProductWeilBound` therefore exposes only the genuine
+finite-field trace estimate `(t-1)*sqrt(p)`.
+
+## Prime-equidistribution release 2.75
+
+The sharp Kummer trace estimate is now proved for one and two distinct roots:
+character orthogonality gives zero in the first case, and the existing Jacobi
+sum theorem gives `sqrt(p)` in the second. The equivalent residual
+`TaoPrimeKummerRootProductWeilBoundThreeRootsOrMore` feeds the composite
+Burgess chain directly. Only the three-or-more-root finite-field trace bound
+remains in this analytic branch.
+
+## Prime-equidistribution release 2.76
+
+The sharp `2*sqrt(p)` Kummer estimate is now proved for every three-root split
+polynomial whose degree is divisible by the character order. Active-root
+separation reduces both possible cases to the existing Jacobi/projective
+identities with at most one deleted-point contribution. The exact equivalent
+residual now contains only four-or-more-root traces and degree-nondivisible
+three-root traces. Tao's degree-divisible Burgess family therefore has no
+remaining three-root case.
+
+## Prime-equidistribution release 2.77
+
+Every degree-nondivisible three-active-root Kummer trace is now translated
+exactly to the existing three-point hypergeometric endpoint. Inactive-root
+and small-characteristic cases are discharged separately. Hence the full
+Kummer theorem follows from precisely the three-point hypergeometric estimate
+and a pure four-or-more-root Kummer trace estimate, with a direct bridge to
+the complete composite Burgess chain.
+
+## Prime-equidistribution release 2.78
+
+Under the three-point hypergeometric endpoint, the sharp Kummer estimate is
+now proved for every degree-divisible four-root polynomial. The two-, three-,
+and four-active-root branches use the existing Jacobi and Möbius reductions,
+with inactive-point losses absorbed inside `3√p`. The equivalent residual is
+five-or-more roots or degree-nondivisible four roots; Tao's degree-divisible
+Burgess family therefore starts at five roots.
+
+## Prime-equidistribution release 2.79
+
+Degree-nondivisible four-active-root traces now translate exactly to a new
+four-point hypergeometric endpoint with sharp allowance `3√p`. All other
+four-root active/inactive splits follow from the established lower-point
+bounds and deleted-point accounting. Assuming the three- and four-point
+endpoints, the full Kummer theorem is therefore equivalent to a pure
+five-or-more-root residual, with a direct composite Burgess bridge.
+
+## Prime-equidistribution release 2.80
+
+Five local characters with trivial product now admit an exact Möbius
+reduction to the four-point endpoint plus one deleted value. This proves the
+sharp `4√p` Kummer bound for every degree-divisible five-root polynomial.
+The generic residual becomes six-or-more roots or degree-nondivisible five
+roots, while the exact cleared Burgess polynomial now has a source-specific
+residual beginning at six active roots.
+
+## Prime-equidistribution release 2.81
+
+The four-point input on the exact Burgess path is now restricted to powers of
+one character, exponents reduced modulo the character order, primes above
+`64`, and the two cross-ratio parameters in the normal form `0,1,t,u`.
+Power-specific five-root and split-polynomial bridges feed this reduced input
+directly into the existing six-active-root source residual. The remaining
+finite-field work is therefore two explicit reduced hypergeometric estimates
+and the source-specific trace bound beginning at six active roots.
+
+## Prime-equidistribution release 2.82
+
+Six degree-balanced active roots now Möbius-reduce exactly to a five-point
+power-character trace and one deleted value. Exponent reduction and scaling
+normalize that trace to `0,1,t,u,v` above `64`. The exact cleared Burgess
+residual consequently begins at seven active roots and is connected directly
+to the composite endpoint, conditional on the three reduced lower-point
+trace estimates.
+
+## Prime-equidistribution release 2.83
+
+The complete-Weil hypothesis used by the final Burgess proof is now literally
+fixed at `r=7`. The specialization runs through the fourteenth moment,
+amplification, rounded induction, Pólya--Vinogradov, and the explicit
+cubefree endpoint. A separate fixed-order prime/prime-square CRT induction
+and prime quotient bridge mean that the exact seven-active-root source
+residual is likewise stated only for `Fin 7`; the all-orders interface is no
+longer an assumption on the production path.
+
+## Prime-equidistribution release 2.84
+
+Seven degree-balanced active roots now Möbius-reduce to a six-point
+power-character trace and one deleted value. The six finite exponents are
+reduced modulo the source character order and scaling normalizes the marked
+points to `0,1,t,u,v,w` above `64`. The exact fixed-`r=7` Burgess residual
+therefore begins at eight active roots, conditional on four reduced
+lower-point trace endpoints.
+
+## Prime-equidistribution release 2.85
+
+The fixed-order source residual is now restricted to the exact finite window
+of eight through fourteen active roots. The upper bound follows internally
+from the `2r` distinct-root bound for the cleared polynomial at `r=7`, and the
+window has direct fixed prime-quotient and composite bridges. No impossible
+cardinality above fourteen remains in the Burgess assumption.
+
+## Prime-equidistribution release 2.86
+
+Eight degree-balanced active roots now Möbius-reduce to a seven-point
+power-character trace plus one deleted projective value. The finite trace is
+normalized to powers of one character with exponents below its order and to
+the marked points `0,1,t,u,v,w,z` for `p > 64`. The exact fixed-order source
+residual therefore occupies only the six cardinalities `9..14`.
+
+## Prime-equidistribution release 2.87
+
+Nine degree-balanced active roots now Möbius-reduce to an eight-point
+power-character trace plus one deleted value. Exponents are reduced modulo
+the ambient character order and scaling gives the six-parameter marked-point
+form `0,1,t,u,v,w,z,r₀` for `p > 64`. The literal source residual is now the
+five-cardinality window `10..14`.
+
+## Prime-equidistribution release 2.88
+
+Ten degree-balanced active roots now Möbius-reduce to a nine-point
+power-character trace plus one deleted value. Exponents are reduced modulo
+the ambient character order and scaling gives the seven-parameter marked-point
+form `0,1,t,u,v,w,z,r₀,s₀` for `p > 64`. The literal source residual is now the
+four-cardinality window `11..14`.
+
+## Prime-equidistribution release 2.89
+
+Eleven degree-balanced active roots now Möbius-reduce to a ten-point
+power-character trace plus one deleted projective value. Exponents are reduced
+modulo the ambient character order and scaling gives the eight-parameter
+marked-point form `0,1,t,u,v,w,z,r₀,s₀,a₀` for `p > 64`. The resulting
+`9*sqrt(p)+1` estimate closes exact cardinality eleven, leaving the literal
+source residual on only the three-cardinality window `12..14`.
+
+## Prime-equidistribution release 2.90
+
+Twelve degree-balanced active roots now Möbius-reduce to an eleven-point
+power-character trace plus one deleted projective value. Exponents are reduced
+modulo the ambient character order and scaling gives the nine-parameter
+marked-point form `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀` for `p > 64`. The resulting
+`10*sqrt(p)+1` estimate closes exact cardinality twelve, leaving the literal
+source residual on only the two-cardinality window `13..14`.

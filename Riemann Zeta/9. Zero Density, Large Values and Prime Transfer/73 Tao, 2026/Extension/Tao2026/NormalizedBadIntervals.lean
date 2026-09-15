@@ -154,8 +154,9 @@ start and endpoint remain comparable with the original dyadic parameter:
 
 No same-`x` admissibility assertion is made: a subinterval around the
 distinguished element need not itself meet `[x/2,x]`. -/
-theorem exists_large_normalized_bad_subinterval_of_sylvesterSchur
-    (hSS : SylvesterSchurConclusion) {x N H : ℕ}
+theorem exists_large_normalized_bad_subinterval_of_largePrime
+    {x N H : ℕ}
+    (hlarge : ∃ q : ℕ, q.Prime ∧ H < q ∧ q ∣ consecutiveProduct N H)
     (hadm : IsAdmissibleBadInterval x N H) :
     ∃ N' H' p k m : ℕ,
       IsNormalizedBadInterval N' H' p k m ∧
@@ -164,7 +165,7 @@ theorem exists_large_normalized_bad_subinterval_of_sylvesterSchur
       x ≤ 4 * N' + 1 ∧ N' + H' ≤ 2 * x := by
   obtain ⟨hHleN, hNltx, hxLe, p, k, m, hp, hHltp, hpMax,
       hk, hmSmooth, hkm, _hkTwoX, _hallSmooth, _hallPrimeFree⟩ :=
-    hadm.basic_estimates_of_sylvesterSchur hSS
+    IsAdmissibleBadInterval.basic_estimates_of_largePrime hlarge hadm
   obtain ⟨hH, _hbad, _⟩ := hadm
   obtain ⟨hH'Two, hH'leH, hHfour, _hfit⟩ :=
     normalizedBadIntervalLength_bounds hH
@@ -199,5 +200,17 @@ theorem exists_large_normalized_bad_subinterval_of_sylvesterSchur
       hmSmooth, hkm, hkEndpoint, hpow⟩
   · omega
   · omega
+
+/-- Compatibility form of Lemma 6.2 from unrestricted Sylvester--Schur. -/
+theorem exists_large_normalized_bad_subinterval_of_sylvesterSchur
+    (hSS : SylvesterSchurConclusion) {x N H : ℕ}
+    (hadm : IsAdmissibleBadInterval x N H) :
+    ∃ N' H' p k m : ℕ,
+      IsNormalizedBadInterval N' H' p k m ∧
+      consecutiveInterval N' H' ⊆ consecutiveInterval N H ∧
+      H' ≤ H ∧ H < 4 * H' ∧
+      x ≤ 4 * N' + 1 ∧ N' + H' ≤ 2 * x :=
+  exists_large_normalized_bad_subinterval_of_largePrime
+    (hadm.exists_largePrime_of_sylvesterSchur hSS) hadm
 
 end Tao2026

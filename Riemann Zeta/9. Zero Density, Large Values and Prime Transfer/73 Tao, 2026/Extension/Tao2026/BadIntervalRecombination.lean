@@ -107,19 +107,28 @@ theorem exists_eventually_card_scaleNormalizedBadIntervalUnion_le_typical_add_so
 
 /-- The maximal-function reduction transfers the recombined normalized bound
 back to all admissible bad intervals. -/
-theorem card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical
-    (hSS : SylvesterSchurConclusion) (q : ℕ → ℕ) (x : ℕ) :
+theorem card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical_of_scale
+    (x : ℕ) (hscale : AdmissibleSylvesterSchurAtScale x) (q : ℕ → ℕ) :
     (admissibleBadIntervalUnion x).card ≤
       30 * ((taoTypicalBadIntervalUnion q x).card +
         (taoSlowNonTypicalFailureUnion (q x) x).card) := by
   calc
     (admissibleBadIntervalUnion x).card ≤
         30 * (scaleNormalizedBadIntervalUnion x).card :=
-      card_admissibleBadIntervalUnion_le_thirty_mul_normalized hSS x
+      card_admissibleBadIntervalUnion_le_thirty_mul_normalized_of_scale x hscale
     _ ≤ 30 * ((taoTypicalBadIntervalUnion q x).card +
         (taoSlowNonTypicalFailureUnion (q x) x).card) :=
       Nat.mul_le_mul_left 30
         (card_scaleNormalizedBadIntervalUnion_le_typical_add_nonTypical q x)
+
+/-- Compatibility recombination bound from unrestricted Sylvester--Schur. -/
+theorem card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical
+    (hSS : SylvesterSchurConclusion) (q : ℕ → ℕ) (x : ℕ) :
+    (admissibleBadIntervalUnion x).card ≤
+      30 * ((taoTypicalBadIntervalUnion q x).card +
+        (taoSlowNonTypicalFailureUnion (q x) x).card) :=
+  card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical_of_scale
+    x (fun hadm => hadm.exists_largePrime_of_sylvesterSchur hSS) q
 
 /-- Literal nontrivial bad values lying in the dyadic window inspected by an
 admissible interval at parameter `x`. -/
@@ -158,15 +167,24 @@ theorem nontrivialBadNumbersInDyadicWindow_subset_admissibleBadIntervalUnion
   exact ⟨N, H, hNltx, hHltx,
     ⟨hHTwo, hbad, n, hnInterval, hxHalf, hnx⟩, hnInterval⟩
 
-theorem card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical
-    (hSS : SylvesterSchurConclusion) (q : ℕ → ℕ) (x : ℕ) :
+theorem card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical_of_scale
+    (x : ℕ) (hscale : AdmissibleSylvesterSchurAtScale x) (q : ℕ → ℕ) :
     (nontrivialBadNumbersInDyadicWindow x).card ≤
       30 * ((taoTypicalBadIntervalUnion q x).card +
         (taoSlowNonTypicalFailureUnion (q x) x).card) :=
   (Finset.card_le_card
     (nontrivialBadNumbersInDyadicWindow_subset_admissibleBadIntervalUnion x)).trans
-      (card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical
-        hSS q x)
+      (card_admissibleBadIntervalUnion_le_thirty_mul_typical_add_nonTypical_of_scale
+        x hscale q)
+
+/-- Compatibility dyadic-window bound from unrestricted Sylvester--Schur. -/
+theorem card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical
+    (hSS : SylvesterSchurConclusion) (q : ℕ → ℕ) (x : ℕ) :
+    (nontrivialBadNumbersInDyadicWindow x).card ≤
+      30 * ((taoTypicalBadIntervalUnion q x).card +
+        (taoSlowNonTypicalFailureUnion (q x) x).card) :=
+  card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical_of_scale
+    x (fun hadm => hadm.exists_largePrime_of_sylvesterSchur hSS) q
 
 /-! ## Quantitative logarithmic recombination -/
 
@@ -178,10 +196,10 @@ theorem taoNaturalDilation_natCast (c x : ℕ) :
 Burgess input closes Proposition 6.6, Sylvester--Schur supplies the maximal
 reduction, and Lemma 1.6(ii) removes the fixed enlargement of the one-term
 count. -/
-theorem exists_taoBadIntervalDyadicWindow_logSaving
+theorem exists_taoBadIntervalDyadicWindow_logSaving_of_eventually_scale
     {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
     (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
-    (hSS : SylvesterSchurConclusion)
+    (hscale : ∀ᶠ x : ℕ in atTop, AdmissibleSylvesterSchurAtScale x)
     (h16ii : TaoLemma16iiConclusion) :
     ∃ q : ℕ → ℕ, ∃ K : ℝ,
       0 < K ∧
@@ -221,16 +239,17 @@ theorem exists_taoBadIntervalDyadicWindow_logSaving
   · simpa only [taoPrimeTupleSlowUpperCutoff] using hupper
   · intro ε hε
     filter_upwards
-      [eventually_card_taoTypicalBadIntervalUnion_le_logSaving_mul_dilatedBadOneTermCount
+      [hscale,
+       eventually_card_taoTypicalBadIntervalUnion_le_logSaving_mul_dilatedBadOneTermCount
         hC hburgess hq hε,
        hnon ε hε,
        hD.bound,
        (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually
          (eventually_gt_atTop (0 : ℝ))]
-        with x htyp hnonX hDilation hlog
+        with x hscaleX htyp hnonX hDilation hlog
     have hsplit :=
-      card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical
-        hSS q x
+      card_nontrivialBadNumbersInDyadicWindow_le_thirty_mul_typical_add_nonTypical_of_scale
+        x hscaleX q
     have hsplitReal :
         ((nontrivialBadNumbersInDyadicWindow x).card : ℝ) ≤
           30 * (((taoTypicalBadIntervalUnion q x).card : ℝ) +
@@ -282,6 +301,62 @@ theorem exists_taoBadIntervalDyadicWindow_logSaving
       _ = 30 * (A * D + 1) * ((badOneTermCount x : ℝ) /
           Real.log x ^ (1 - ε)) := by
         simp only [add_mul, one_mul, mul_assoc]
+
+/-- Compatibility quantitative dyadic-window conclusion from unrestricted
+Sylvester--Schur. -/
+theorem exists_taoBadIntervalDyadicWindow_logSaving
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (hSS : SylvesterSchurConclusion)
+    (h16ii : TaoLemma16iiConclusion) :
+    ∃ q : ℕ → ℕ, ∃ K : ℝ,
+      0 < K ∧
+      Tendsto q atTop atTop ∧
+      Tendsto (fun x =>
+        Real.log (taoPrimeTupleSlowLowerCutoff q x) /
+          Real.log (taoZ x)) atTop (𝓝 1) ∧
+      Tendsto (fun x =>
+        Real.log (taoPrimeTupleSlowUpperCutoff q x) /
+          Real.log (taoZ x)) atTop (𝓝 1) ∧
+      ∀ ε : ℝ, 0 < ε →
+        ∀ᶠ x : ℕ in atTop,
+          ((nontrivialBadNumbersInDyadicWindow x).card : ℝ) ≤
+            K * ((badOneTermCount x : ℝ) /
+              Real.log x ^ (1 - ε)) :=
+  exists_taoBadIntervalDyadicWindow_logSaving_of_eventually_scale
+    hC hburgess
+    (Filter.Eventually.of_forall fun _ _ _ hadm =>
+      hadm.exists_largePrime_of_sylvesterSchur hSS)
+    h16ii
+
+/-- The dyadic-window logarithmic-saving conclusion, packaged for reuse by
+the final dyadic summation. -/
+def TaoBadIntervalDyadicWindowLogSavingConclusion : Prop :=
+  ∃ q : ℕ → ℕ, ∃ K : ℝ,
+    0 < K ∧
+    Tendsto q atTop atTop ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowLowerCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowUpperCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    ∀ ε : ℝ, 0 < ε →
+      ∀ᶠ x : ℕ in atTop,
+        ((nontrivialBadNumbersInDyadicWindow x).card : ℝ) ≤
+          K * ((badOneTermCount x : ℝ) /
+            Real.log x ^ (1 - ε))
+
+/-- The local dyadic-window estimate no longer requires unrestricted
+Sylvester--Schur: its eventual admissible-scale form is already proved. -/
+theorem taoBadIntervalDyadicWindowLogSaving_of_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (h16ii : TaoLemma16iiConclusion) :
+    TaoBadIntervalDyadicWindowLogSavingConclusion := by
+  simpa [TaoBadIntervalDyadicWindowLogSavingConclusion] using
+    exists_taoBadIntervalDyadicWindow_logSaving_of_eventually_scale
+      hC hburgess eventually_admissibleSylvesterSchurAtScale h16ii
 
 /-! ## Exact dyadic assembly bridge -/
 

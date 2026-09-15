@@ -165,6 +165,34 @@ def TaoPrimitivePrimePowerCoprimeCoefficientWeilBound : Prop :=
       burgessCompositeWeilFactor (p ^ k) r *
         burgessCoefficientGcdContribution (p ^ k) uv j
 
+/-- The local prime/prime-square estimate specialized to the sole moment
+order used in Tao's argument. -/
+def TaoPrimitivePrimePowerBurgessCompleteWeilBoundRSeven : Prop :=
+  ∀ (p k B : ℕ) [NeZero (p ^ k)]
+    (χ : DirichletCharacter ℂ (p ^ k))
+    (uv : (Fin 7 → Fin B) × (Fin 7 → Fin B))
+    (j : Fin 7 ⊕ Fin 7),
+    p.Prime → (k = 1 ∨ k = 2) →
+    DirichletCharacter.IsPrimitive χ →
+    burgessTupleDifferenceProduct uv j ≠ 0 →
+    ‖burgessCompleteCorrelation χ uv‖ ≤
+      burgessCompositeWeilFactor (p ^ k) 7 *
+        burgessCoefficientGcdContribution (p ^ k) uv j
+
+/-- The coprime-coefficient form of the fixed `r = 7` local estimate. -/
+def TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven : Prop :=
+  ∀ (p k B : ℕ) [NeZero (p ^ k)]
+    (χ : DirichletCharacter ℂ (p ^ k))
+    (uv : (Fin 7 → Fin B) × (Fin 7 → Fin B))
+    (j : Fin 7 ⊕ Fin 7),
+    p.Prime → (k = 1 ∨ k = 2) →
+    DirichletCharacter.IsPrimitive χ →
+    burgessTupleDifferenceProduct uv j ≠ 0 →
+    (burgessTupleDifferenceProduct uv j).natAbs.Coprime p →
+    ‖burgessCompleteCorrelation χ uv‖ ≤
+      burgessCompositeWeilFactor (p ^ k) 7 *
+        burgessCoefficientGcdContribution (p ^ k) uv j
+
 /-- The composite Weil factor at a prime is the literal square-root factor
 appearing in the local estimate. -/
 theorem burgessCompositeWeilFactor_prime (p r : ℕ) (hp : p.Prime) :
@@ -217,6 +245,18 @@ def TaoPrimitivePrimeCoprimeCoefficientWeilBound : Prop :=
     (burgessTupleDifferenceProduct uv j).natAbs.Coprime p →
     ‖burgessCompleteCorrelation χ uv‖ ≤
       ((4 * r : ℕ) : ℝ) * Real.sqrt p
+
+/-- The residual prime-level input at the fixed fourteenth moment. -/
+def TaoPrimitivePrimeCoprimeCoefficientWeilBoundRSeven : Prop :=
+  ∀ (p B : ℕ) [NeZero (p ^ 1)]
+    (χ : DirichletCharacter ℂ (p ^ 1))
+    (uv : (Fin 7 → Fin B) × (Fin 7 → Fin B))
+    (j : Fin 7 ⊕ Fin 7),
+    p.Prime → DirichletCharacter.IsPrimitive χ →
+    burgessTupleDifferenceProduct uv j ≠ 0 →
+    (burgessTupleDifferenceProduct uv j).natAbs.Coprime p →
+    ‖burgessCompleteCorrelation χ uv‖ ≤
+      ((4 * 7 : ℕ) : ℝ) * Real.sqrt p
 
 /-- The residual prime-square analytic input, with the selected coefficient
 coprime to the underlying prime. -/
@@ -337,6 +377,113 @@ implies the full relaxed composite cube-free Weil predicate. -/
 theorem TaoPrimitivePrimePowerCoprimeCoefficientWeilBound.toComposite
     (hlocal : TaoPrimitivePrimePowerCoprimeCoefficientWeilBound) :
     TaoPrimitiveCubefreeBurgessCompleteWeilBound :=
+  hlocal.toPrimePower.toComposite
+
+/-- A fixed-`r = 7` prime estimate and the proved all-order prime-square
+estimate supply the fixed local prime-power input. -/
+theorem TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven.ofPrimeAndPrimeSquare
+    (hprime : TaoPrimitivePrimeCoprimeCoefficientWeilBoundRSeven)
+    (hprimeSquare : TaoPrimitivePrimeSquareCoprimeCoefficientWeilBound) :
+    TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven := by
+  intro p k B _ χ uv j hp hk hχ hAj hcop
+  rcases hk with rfl | rfl
+  · simpa [burgessCompositeWeilFactor_prime p 7 hp,
+      burgessCoefficientGcdContribution_prime_eq_one_of_coprime
+        p B 7 uv j hAj hcop] using
+      hprime p B χ uv j hp hχ hAj hcop
+  · simpa [burgessCompositeWeilFactor_primeSquare p 7 hp,
+      burgessCoefficientGcdContribution_primeSquare_eq_one_of_coprime
+        p B 7 uv j hAj hcop] using
+      hprimeSquare p B 7 χ uv j hp (by omega) hχ hAj hcop
+
+/-- At `r = 7`, the coprime local estimate implies the unrestricted local
+estimate; the coefficient-divisible branch remains elementary. -/
+theorem TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven.toPrimePower
+    (hlocal : TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven) :
+    TaoPrimitivePrimePowerBurgessCompleteWeilBoundRSeven := by
+  intro p k B _ χ uv j hp hk hχ hAj
+  by_cases hcop : (burgessTupleDifferenceProduct uv j).natAbs.Coprime p
+  · exact hlocal p k B χ uv j hp hk hχ hAj hcop
+  · have hdiv : p ∣ (burgessTupleDifferenceProduct uv j).natAbs := by
+      simpa [Nat.coprime_comm, hp.coprime_iff_not_dvd] using hcop
+    rcases hk with hk | hk
+    · subst k
+      exact norm_burgessCompleteCorrelation_le_prime_of_coefficient_dvd
+        p B 7 hp χ uv j hAj hdiv (by omega)
+    · subst k
+      exact norm_burgessCompleteCorrelation_le_primeSquare_of_coefficient_dvd
+        p B 7 hp χ uv j hAj hdiv (by omega)
+
+/-- Strong induction over a cube-free modulus at the fixed moment order. -/
+theorem norm_burgessCompleteCorrelation_le_coefficient_of_primePowerWeilRSeven
+    (hlocal : TaoPrimitivePrimePowerBurgessCompleteWeilBoundRSeven) :
+    ∀ {q B : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q)
+      (uv : (Fin 7 → Fin B) × (Fin 7 → Fin B))
+      (j : Fin 7 ⊕ Fin 7),
+      TaoCubefree q → DirichletCharacter.IsPrimitive χ →
+      burgessTupleDifferenceProduct uv j ≠ 0 →
+      ‖burgessCompleteCorrelation χ uv‖ ≤
+        burgessCompositeWeilFactor q 7 *
+          burgessCoefficientGcdContribution q uv j := by
+  intro q
+  induction q using Nat.strong_induction_on with
+  | h q ih =>
+      intro B _ χ uv j hq hχ hAj
+      by_cases hq1 : q = 1
+      · subst q
+        have hχone : χ = 1 := DirichletCharacter.level_one χ
+        subst χ
+        calc
+          ‖burgessCompleteCorrelation (1 : DirichletCharacter ℂ 1) uv‖ ≤
+              (1 : ℝ) := by
+            simpa using norm_burgessCompleteCorrelation_le_modulus
+              (1 : DirichletCharacter ℂ 1) uv
+          _ = burgessCompositeWeilFactor 1 7 *
+              burgessCoefficientGcdContribution 1 uv j := by
+            simp [burgessCompositeWeilFactor,
+              burgessCoefficientGcdContribution, hAj]
+      · obtain ⟨p, k, n, hp, hk, hcop, hmul, hnlt⟩ :=
+          exists_primePower_coprime_decomposition_of_cubefree hq hq1
+        have hpk0 : p ^ k ≠ 0 := pow_ne_zero k hp.ne_zero
+        subst q
+        have hn0 : n ≠ 0 := right_ne_zero_of_mul (NeZero.ne (p ^ k * n))
+        haveI : NeZero (p ^ k) := ⟨hpk0⟩
+        haveI : NeZero n := ⟨hn0⟩
+        have hleft := hlocal p k B
+          (burgessCRTLeftCharacter (p ^ k) n hcop χ) uv j hp hk
+          (burgessCRTLeftCharacter_isPrimitive (p ^ k) n hcop χ hχ) hAj
+        have hnCube : TaoCubefree n :=
+          hq.of_dvd (n.dvd_mul_left (p ^ k))
+        have hright := ih n hnlt
+          (burgessCRTRightCharacter (p ^ k) n hcop χ) uv j hnCube
+          (burgessCRTRightCharacter_isPrimitive (p ^ k) n hcop χ hχ) hAj
+        exact norm_burgessCompleteCorrelation_le_coefficient_of_coprime
+          (p ^ k) n B 7 hcop χ uv j hleft hright
+
+/-- The fixed local prime-power estimate implies precisely the complete Weil
+predicate required by the fourteenth moment. -/
+theorem TaoPrimitivePrimePowerBurgessCompleteWeilBoundRSeven.toComposite
+    (hlocal : TaoPrimitivePrimePowerBurgessCompleteWeilBoundRSeven) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven := by
+  intro q B _ χ uv hq hχ huv
+  obtain ⟨j, hAj⟩ :=
+    exists_burgessTupleDifferenceProduct_ne_zero_of_mem_nondegenerate uv huv
+  have hfixed :=
+    norm_burgessCompleteCorrelation_le_coefficient_of_primePowerWeilRSeven
+      hlocal χ uv j hq hχ hAj
+  have hcoefficient :
+      (burgessCoefficientGcdContribution q uv j : ℝ) ≤
+        burgessTupleGcdWeight q uv := by
+    exact_mod_cast burgessCoefficientGcdContribution_le_tupleGcdWeight q B 7 uv j
+  exact hfixed.trans (mul_le_mul_of_nonneg_left hcoefficient (by
+    unfold burgessCompositeWeilFactor
+    positivity))
+
+/-- The fixed coprime local predicate directly supplies the fourteenth-moment
+composite estimate. -/
+theorem TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven.toComposite
+    (hlocal : TaoPrimitivePrimePowerCoprimeCoefficientWeilBoundRSeven) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven :=
   hlocal.toPrimePower.toComposite
 
 end

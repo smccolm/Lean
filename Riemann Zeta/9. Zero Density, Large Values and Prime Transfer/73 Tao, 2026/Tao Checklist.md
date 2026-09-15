@@ -1117,17 +1117,17 @@ paper has been formalized.
   the same fixed dilation, conditional on explicit Burgess.
 - [x] Retain an explicit `1/log(x)^(1-o(1))` saving through the Proposition
   6.5 slow diagonal, normalize it by the actual `badOneTermCount x`, and
-  recombine it with the quantitative full typical-union estimate. Conditional
-  on explicit Burgess, Sylvester--Schur, and Lemma 1.6(ii), apply the exact
-  factor-`30` maximal transfer to obtain the corresponding local dyadic-window
-  bad-interval bound.
+  recombine it with the quantitative full typical-union estimate. Use the
+  eventual admissible-scale large-prime theorem and Lemma 1.6(ii), then apply
+  the exact factor-`30` maximal transfer to obtain the corresponding local
+  dyadic-window bad-interval bound conditional on explicit Burgess.
 - [x] Isolate the exact adjacent-scale regular-variation input
   `badOneTermCount(2^r)/badOneTermCount(2^(r+1)) -> 1/2`, prove that it survives
   every fixed logarithmic weight and yields a geometric finite-tail bound,
   absorb the early scales, and sum the exact power-of-two cover without losing
   the logarithmic saving. This gives both clauses of `TaoTheorem17Conclusion`
-  conditional on that ratio, analytic Burgess, Sylvester--Schur, and Lemma
-  1.6(ii).
+  conditional on that ratio, analytic Burgess, and Lemma 1.6(ii); unrestricted
+  Sylvester--Schur is eliminated by the eventual scale-local bridge.
 - [x] Derive the adjacent-dyadic `badOneTermCount` ratio from the sharp
   critical smooth-number dilation limit. Partition the exact one-term sum
   into a slowly widening central prime band and four complementary ranges,
@@ -1142,6 +1142,13 @@ paper has been formalized.
   fixed power of two, bracket both `floor(cx)` and `x` with power-of-two
   endpoints for arbitrary fixed `c>0`, and assemble both `IsBigO` directions
   with the literal natural-floor convention.
+- [x] Prove one start cutoff beyond which Sylvester--Schur holds for every
+  positive length, using the uniform large-length tail and the fixed-length
+  threshold `H^H+1` on the finitely many remaining lengths.
+- [x] Show every sufficiently large admissible dyadic scale lies beyond that
+  cutoff, thread the resulting scale-local large-prime witness through
+  normalization, maximal transfer, recombination, and dyadic summation, and
+  remove unrestricted Sylvester--Schur from the Theorem 1.7 hypotheses.
 - [x] Formalize the literal multi-coordinate freezing arguments in
   Propositions 6.7(i) and 6.8(i): prove arbitrary finite frozen-support
   cardinality cancellation, the general product-residue/multiplicity bound,
@@ -1408,13 +1415,29 @@ paper has been formalized.
 - [x] Remove small prime characteristics from the remaining Weil input. Prove
   the trivial complete-sum bound `p` and show it is at most `2D√p` whenever
   `p ≤ 4D²`, where `D` is the distinct-root count.
+- [x] Normalize the exactly-four-active-root case by a fractional-linear
+  reindexing. Send one root to infinity, cancel the denominator characters
+  from degree divisibility, and reduce the sum exactly to a canonical
+  three-point hypergeometric sum with one deleted value. Lift a `2√p`
+  canonical bound through multiplicities and inactive-root correction to the
+  split-polynomial target.
+- [x] Restrict the generic five-active-root split-polynomial residual to the
+  exact `primeLinearOrderPolynomial` family produced by Burgess. Dispatch all
+  small-characteristic and zero-through-four-active-root branches internally,
+  show four active roots force `p > 64`, and bridge the resulting source-
+  specific predicates to the full cube-free composite endpoint.
+- [x] Restrict the canonical four-root input to three powers of the single
+  ambient Burgess character and normalize every exponent modulo `orderOf χ`.
+  Prove by `pow_mod_orderOf` that the finite range
+  `m,n,l < orderOf χ` covers arbitrary active-root multiplicities.
+- [x] Scale the remaining marked points to Legendre form `(0,1,t,∞)`, prove
+  the exact complete-sum identity and norm transport, and reduce the
+  four-root geometric input from two parameters to one `t ≠ 0,1`.
 - [ ] Prove
-  `TaoPrimeSplitPolynomialWeilBoundFourActiveRootsLargeCharacteristic`: under
-  divisibility of the split polynomial's degree by `orderOf χ`, bound the
-  character sum when at least four root multiplicities are nonzero modulo the
-  character order. It is enough to do so under `4D² < p`; the checked bridge
-  then suffices for the cleared Burgess polynomial and the full cube-free
-  composite predicate.
+  `TaoPrimeReducedPowerLegendreHypergeometricWeilBoundAboveSixtyFour` and
+  `TaoPrimeLinearOrderPolynomialWeilBoundFiveActiveRootsLargeCharacteristic`.
+  The checked bridge from precisely these two inputs supplies the full
+  cube-free composite predicate; the latter residual may assume `4D² < p`.
 - [x] Normalize by the exact dyadic-prime cardinality: prove
   `#([Z,2Z)∩Primes)=π′(2Z)-π′(Z)`, transfer the pinned PNT to `π′`, derive
   `#([Z,2Z)∩Primes)∼Z/log Z`, and record the concrete eventual denominator
@@ -1663,13 +1686,562 @@ the low-frequency Abel reduction and the frozen qualitative PNT's uniform
 dyadic and fixed-bounded-frequency `o(P)` consequences, but not the stronger
 arbitrary-logarithmic-saving PNT bound or the full prime exponential-sum
 estimate.
-The unrestricted Sylvester--Schur input is now proved for every sufficiently
-large interval length, uniformly over all starts. An explicit fixed-length
-threshold and start-monotonicity reduce its unresolved part to a finite bounded
-rectangle; that rectangle has not yet been discharged.
-It does not prove any of Theorems 1.7--1.10 unconditionally. The exact
-Theorem 1.7 contract is now derived conditionally from analytic Burgess,
-Sylvester--Schur, and the sharp critical smooth-number saddle asymptotic. The
-formerly separate adjacent-dyadic ratio and Lemma 1.6(ii) are both derived
-from that saddle input. Do not mark a release item complete merely because
-this conditional endpoint builds.
+The unrestricted Sylvester--Schur theorem itself still has a finite bounded
+residual rectangle, now restricted to `H>=49`. However, a separate theorem
+proves one start cutoff beyond which its conclusion holds for every length.
+Admissible starts escape that cutoff with the dyadic scale, so unrestricted
+Sylvester--Schur is no longer an input to Theorem 1.7. The exact Theorem 1.7
+contract is now derived conditionally from analytic Burgess and the sharp
+critical smooth-number saddle asymptotic. The formerly separate
+adjacent-dyadic ratio and Lemma 1.6(ii) are both derived from that saddle
+input. This still does not prove any of Theorems 1.7--1.10 unconditionally.
+Do not mark a release item complete merely because this conditional endpoint
+builds.
+
+## Prime-equidistribution 2.57
+
+- [x] Define positive interval character sums and identify the zero-start case
+  with the established `Ioc` prefix.
+- [x] Prove exact first/last splitting, additive shift differencing, and the
+  norm error `<= 2K`.
+- [x] Prove affine reindexing and norm preservation for coprime multipliers.
+- [x] Exchange the interval and additive-shift sums to recover the exact
+  `burgessShiftSum` consumed by the complete moment.
+- [x] Define the coprime multiplier residue multiplicity, prove its exact
+  first moment, and regroup the affine average by residue.
+- [ ] Prove the second-moment collision bound for the residue multiplicity.
+- [ ] Apply Hölder and optimize the Burgess parameters to prove the primitive
+  `r = 7` core bound.
+
+These checked items are unconditional finite algebra; they do not discharge
+the remaining analytic Burgess input.
+
+## Prime-equidistribution 2.58
+
+- [x] Identify the multiplicity second moment with ordered residue collisions.
+- [x] Convert residue collisions for unit multipliers to the source's
+  cross-multiplied congruence.
+- [x] Define fixed-multiplier collision fibers with an exact membership lemma.
+- [x] Prove the three-factor powered Hölder estimate for the multiplicity-
+  weighted sum and the original affine average.
+- [ ] Prove the source collision-fiber bound
+  `card <= 1 + H*gcd(a,c)/max(a,c)` under its required range hypotheses.
+- [ ] Sum that bound and finish the Burgess induction and parameter choices.
+
+## Prime-equidistribution 2.59
+
+- [x] Convert the collision congruence into divisibility of the integer
+  determinant and prove the no-wrap consequence under `2*A*H <= q`.
+- [x] Prove reduced-multiplier spacing in each fixed-`a,c` fiber.
+- [x] Prove the local source-shaped bound
+  `card <= H / (max a c / gcd a c) + 1`.
+- [x] Decompose the global collision cardinality by multiplier pairs and bound
+  it by the corresponding finite `max/gcd` sum.
+- [ ] Estimate the remaining elementary gcd sum in the source's divisor-sum
+  form.
+- [ ] Finish the Burgess induction, boundary-error absorption, and `r = 7`
+  parameter choices.
+
+These checked statements are unconditional finite arithmetic. They do not
+prove analytic Burgess or any of Theorems 1.7--1.10.
+
+## Prime-equidistribution 2.60
+
+- [x] Bound the fixed-upper-multiplier gcd quotient sum by
+  `H * c.divisors.card` through divisor incidence and multiple counting.
+- [x] Prove the exact finite identity
+  `sum_{c<=A} tau(c) = sum_{d<=A} floor(A/d)`.
+- [x] Bound the real summatory divisor function by `A * harmonic A`.
+- [x] Deduce the complete collision estimate with explicit off-diagonal term
+  `2*H*A*harmonic A`.
+- [ ] Run the Burgess induction and absorb the affine translation boundary.
+- [ ] Optimize `A` and `B` at `r = 7` to prove the primitive core bound.
+
+The collision-counting package is now complete at the strength needed for
+the amplification argument. Analytic Burgess and Theorems 1.7--1.10 remain
+unproved unconditionally.
+
+## Prime-equidistribution 2.61
+
+- [x] Add real-valued residue-multiplicity regrouping.
+- [x] Bound the sum over `a` of affine `b`-average norms by the literal
+  multiplicity-weighted shifted-character sum.
+- [x] Generalize the additive-shift error to arbitrary majorants for both
+  shorter endpoint intervals.
+- [x] Prove the exact source pre-Hölder recursion inequality under `A*B <= H`.
+- [ ] Specialize the boundary majorant to the inductive Burgess power and sum
+  it over `a,b`.
+- [ ] Insert Hölder, collision, and complete-moment bounds and optimize the
+  `r = 7` parameters.
+
+No main theorem is claimed by these finite identities.
+
+## Prime-equidistribution 2.62
+
+- [x] Collapse the coprime-multiplier boundary sum using monotonicity.
+- [x] Bound a nonnegative power boundary sum by `B` copies of its endpoint.
+- [x] Specialize equation (28) to `E(K)=C*K^alpha*Q`.
+- [x] Divide by the positive affine-average denominator and cancel its common
+  boundary factor.
+- [ ] Extract the `2r`-th root from the powered Hölder estimate.
+- [ ] Substitute the harmonic collision and complete moment bounds.
+- [ ] Choose and verify the natural `r = 7`, `A`, and `B` parameters.
+
+The scalar translation-boundary calculation is now complete. Analytic
+Burgess and Theorems 1.7--1.10 remain unproved unconditionally.
+
+## Prime-equidistribution 2.63
+
+- [x] Extract the `2r`-th root from powered Hölder using nonnegativity.
+- [x] Prove monotone substitution of collision and complete-moment majorants.
+- [x] Insert the harmonic collision estimate at `r = 7`.
+- [x] Insert the diagonal-plus-`q^(1/2+epsilon)` complete moment.
+- [x] Combine the rooted main term with the normalized power-boundary
+  recurrence.
+- [ ] Prove a quantitative lower bound for the coprime multiplier count.
+- [ ] Select integer `A,B`, verify all range conditions, and absorb the
+  inductive boundary term.
+
+The full pre-optimization Burgess recurrence is compiled. Its complete-Weil
+hypothesis and the scalar optimization are not yet discharged.
+
+## Prime-equidistribution 2.64
+
+- [x] Prove exact Möbius inversion for the short coprime multiplier count.
+- [x] Recover the exact totient density from the complete-period identity.
+- [x] Prove `A*phi(q)/q - tau(q) <= #A` over the reals.
+- [x] Export the bound in Burgess multiplier-pair notation.
+- [x] Deduce a half-density lower bound under explicit discrepancy dominance.
+- [x] Prove `q/phi(q) <= tau(q)` and reduce discrepancy dominance to
+  `2*tau(q)^2 <= A`.
+- [x] Establish discrepancy dominance for the eventual parameter range.
+- [ ] Bound the divisor-square criterion and harmonic factor at the required
+  epsilon losses.
+- [ ] Select and round `A,B`, verify no-wrap/shortening, and absorb the
+  inductive boundary.
+
+The multiplier denominator is no longer an unformalized counting placeholder.
+The complete-Weil input and parameter optimization remain open.
+
+## Prime-equidistribution 2.65
+
+- [x] Prove eventual `2*tau(q)^2 <= floor(q^eta)` for every `eta>0`.
+- [x] Remove both multiplier-cardinality factors from the rooted Holder term.
+- [x] Compress the collision factor to `3*H*A*harmonic(A)` when `A<=H`.
+- [x] Export the fully scalar normalized fourteenth-moment recurrence.
+- [x] Define `B=floor(q^(1/14))` and `A=H/(K*B)`.
+- [x] Prove the rounded floor/quotient losses and all current parameter
+  admissibility implications.
+- [ ] Absorb harmonic and totient losses into the epsilon budget.
+- [ ] Complete the scalar exponent calculation and inductive boundary
+  absorption.
+
+The rounded parameters and their divisor criterion are no longer open. The
+complete-Weil input and the last scalar/inductive closure remain open.
+
+## Prime-equidistribution 2.66
+
+- [x] Bound `harmonic(A)` and `q/phi(q)` by explicit conductor epsilon powers.
+- [x] Normalize the half-density denominator to expose `1/(A*B)`.
+- [x] Collapse the complete-moment scalar to `q^(3/2+epsilon)`.
+- [x] Extract the exact `q^(3/28+epsilon/14)` fourteenth-root exponent.
+- [x] Factor and bound the compressed pre-substitution main term.
+- [ ] Substitute the rounded lower bounds for `A,B` and derive `2/49`.
+- [ ] Make the inductive boundary coefficient strictly less than one.
+
+## Prime-equidistribution 2.67
+
+- [x] Convert the rounded `A,B` denominator into a fourteenth-power base.
+- [x] Prove the exact normalized `A,H` fourteenth-root identity.
+- [x] Bound the normalized factor by
+  `2*K^(1/14)*H^(6/7)/q^(13/196)`.
+- [x] Combine this with the rooted complete moment and derive the exact
+  conductor exponent `2/49 + epsilon/14 + delta/14`.
+- [ ] Insert the reciprocal-totient loss and allocate the final epsilon.
+- [ ] Make the inductive boundary coefficient strictly less than one.
+
+The main term has passed the decisive rounded substitution. The analytic
+complete-Weil input and the final scalar/inductive closure remain open.
+
+## Prime-equidistribution 2.68
+
+- [x] Multiply the rounded main term by the reciprocal-totient bound.
+- [x] Allocate the three losses to obtain the single exponent `2/49+eta`.
+- [x] Export the exact stronger geometry `K*A*B<=H`.
+- [x] Bound the normalized boundary by one half under `K^(6/7)>=4`.
+- [x] Verify the concrete safety factor `K=128`.
+- [ ] Combine the main and boundary bounds with the full scalar recurrence.
+- [ ] Discharge the complete-Weil analytic hypothesis.
+
+Both scalar estimates needed for induction are now independently compiled.
+Their recurrence-level integration is the next bounded package.
+
+## Prime-equidistribution 2.69
+
+- [x] Assemble the rounded main and half-boundary estimates in the scalar
+  recurrence.
+- [x] Prove every multiplier product is strictly shorter than the parent
+  interval.
+- [x] Close the recurrence coefficient by strong induction.
+- [x] Use the trivial interval bound for recursive lengths below the Burgess
+  core threshold.
+- [x] Derive all rounded parameter hypotheses eventually from the core lower
+  inequality and the quadratic no-wrap range.
+- [x] Prove the eventual primitive estimate throughout that medium range.
+- [ ] Prove the Pólya--Vinogradov large-length bridge.
+- [ ] Discharge the prime finite-field complete-Weil residual.
+
+There is no longer an open Burgess recursion or parameter-induction step. The
+two remaining analytic tasks are the large-length Fourier bridge and the
+source-specific prime finite-field estimates.
+
+## Prime-equidistribution 2.70
+
+- [x] Prove primitive Fourier inversion on `ZMod q`.
+- [x] Prove the exact primitive Gauss-sum norm for composite conductors.
+- [x] Bound the completed interval kernel by the reciprocal-distance
+  geometric majorant.
+- [x] Sum all frequencies with an explicit harmonic loss.
+- [x] Absorb Pólya--Vinogradov into the large-length Burgess monomial.
+- [x] Combine medium and large ranges and absorb finitely many conductors.
+- [x] Export the primitive, all-character, and exact decimal Burgess
+  contracts from complete Weil.
+- [ ] Discharge the prime finite-field complete-Weil residual.
+
+The Pólya--Vinogradov and all-prefix parts of Lemma 5.2 are complete. Its only
+remaining analytic dependency is the source-specific complete-Weil estimate.
+
+## Prime-equidistribution 2.71
+
+- [x] State the sharp split Kummer estimate with coefficient
+  `(t-1)*sqrt(p)`.
+- [x] Include the full exceptional shape `C(c)*Q^(orderOf χ)` with `c≠0`.
+- [x] Prove the tagged nondivisible root multiplicity excludes that shape.
+- [x] Derive the split-polynomial, linear-quotient, and composite contracts.
+- [x] Add every new declaration to the root and dependency audit.
+- [ ] Prove the canonical Kummer finite-field estimate.
+
+The two earlier prime residual presentations are now specializations of one
+sharp analytic boundary. Lemma 5.2 remains conditional only on that theorem.
+
+## Prime-equidistribution 2.72
+
+- [x] Add the bounded-search-to-unbounded-existence certificate bridge.
+- [x] Use the analytic fixed-length tail automatically for `H=1,2`.
+- [x] Reduce `H=3` to `N<=24` and check every remaining start.
+- [x] Reduce `H=4` to `N<=252` and check every remaining start.
+- [x] Add arbitrary-baseline binomial-growth propagation.
+- [x] Prove the rows `5<=H<=10` from small baselines and finite certificates.
+- [x] Prove and audit `sylvesterSchurBelow_eleven`.
+- [x] Verify `T=3H` binomial growth for `11<=H<=48`.
+- [x] Close every start below `3H` with one bounded finite-type certificate.
+- [x] Prove and audit `sylvesterSchurBelow_fortyNine`.
+- [ ] Discharge the remaining finite Sylvester--Schur rectangle for `H>=49`.
+
+The unrestricted theorem is still open, but its finite residual has strictly
+fewer length rows and no new proposition parameter was introduced.
+
+## Prime-equidistribution 2.73
+
+- [x] Define and prove `SylvesterSchurAboveStart` from the large-length tail
+  and fixed-length thresholds.
+- [x] Prove `eventually_admissibleSylvesterSchurAtScale`.
+- [x] Add scale-local large-prime versions of the normalization, maximal,
+  recombination, and dyadic-window theorems while preserving the global
+  Sylvester--Schur compatibility interfaces.
+- [x] Package and prove the window-to-tail, tail-to-partial-sums, and
+  partial-sums-to-log-saving transformations.
+- [x] Prove and audit `taoTheorem17_of_explicitBurgess` without an unrestricted
+  Sylvester--Schur argument.
+- [x] Prove and audit
+  `taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess`.
+- [x] Remove the incidental unused-variable warnings in the compatibility
+  wrapper.
+- [ ] Prove the analytic Burgess endpoint.
+- [ ] Prove `TaoCriticalSmoothSaddleAsymptoticConclusion`.
+
+The still-open finite Sylvester--Schur rectangle is now independent of the
+Theorem 1.7 dependency chain. Theorem 1.7 has exactly two remaining analytic
+inputs: Burgess and the critical smooth-number saddle asymptotic.
+
+## Prime-equidistribution 2.74
+
+- [x] Rewrite a split polynomial character correlation as a product over its
+  distinct roots with exact root-multiplicity exponents.
+- [x] Construct `kummerRootPowerBase` by dividing every divisible root
+  multiplicity by `orderOf χ`.
+- [x] Prove the converse scalar-power criterion and the exact equivalence
+  between Kummer nondegeneracy and existence of a nondivisible root
+  multiplicity.
+- [x] Package the distinct-root trace estimate as
+  `TaoPrimeKummerRootProductWeilBound` and prove it equivalent to the existing
+  polynomial Kummer endpoint.
+- [ ] Prove the distinct-root Kummer trace bound.
+
+The remaining Burgess theorem is now a pure finite-field trace estimate; no
+polynomial splitting, scalar-power, or root-multiplicity conversion remains
+outside its hypotheses.
+
+## Prime-equidistribution 2.75
+
+- [x] Prove the sharp one-root Kummer trace bound by character orthogonality.
+- [x] Prove the sharp two-root Kummer trace bound through the formalized
+  Jacobi-sum estimate.
+- [x] Package
+  `TaoPrimeKummerRootProductWeilBoundThreeRootsOrMore` and prove it equivalent
+  to the full polynomial Kummer endpoint.
+- [x] Add a direct bridge from the restricted trace endpoint to the composite
+  Burgess estimate.
+- [ ] Prove the Kummer trace bound for at least three distinct roots.
+
+Thus the remaining finite-field input excludes all elementary low-root cases.
+
+## Prime-equidistribution 2.76
+
+- [x] Prove the sharp three-root Kummer estimate whenever the character order
+  divides the polynomial degree.
+- [x] Separate active and inactive roots exactly and absorb the single
+  deleted-point cost into the second square-root unit.
+- [x] Package
+  `TaoPrimeKummerRootProductWeilBoundFourRootsOrThreeDegreeNondivisible`.
+- [x] Prove this refined residual equivalent to the full polynomial Kummer
+  endpoint and connect it directly to composite Burgess.
+- [ ] Prove the remaining four-or-more-root or degree-nondivisible three-root
+  Kummer trace estimate.
+
+For Tao's degree-divisible cleared Burgess polynomials, no three-root trace
+case remains.
+
+## Prime-equidistribution 2.77
+
+- [x] Prove the converse active-root degree-divisibility identity.
+- [x] Translate the three-active-root trace exactly to the existing
+  three-point hypergeometric normal form.
+- [x] Handle inactive-root and small-characteristic three-root cases without
+  new analytic assumptions.
+- [x] Package `TaoPrimeKummerRootProductWeilBoundFourRootsOrMore` and prove
+  that it plus `TaoPrimeThreePointHypergeometricWeilBound` is equivalent to
+  the full polynomial Kummer endpoint.
+- [x] Connect this pair directly to composite Burgess.
+- [ ] Prove the three-point hypergeometric estimate.
+- [ ] Prove the four-or-more-root Kummer trace estimate.
+
+All three-root algebra is now closed; its sole non-elementary case is exactly
+the previously documented hypergeometric trace theorem.
+
+## Prime-equidistribution 2.78
+
+- [x] Prove the sharp degree-divisible four-root Kummer estimate from the
+  existing three-point hypergeometric endpoint.
+- [x] Cover every two-, three-, and four-active-root configuration and account
+  exactly for inactive deleted points.
+- [x] Package
+  `TaoPrimeKummerRootProductWeilBoundFiveRootsOrFourDegreeNondivisible`.
+- [x] Prove the corresponding full-Kummer equivalence and composite Burgess
+  bridge under the three-point endpoint.
+- [ ] Prove the three-point hypergeometric estimate.
+- [ ] Prove the five-or-more-root or degree-nondivisible four-root Kummer
+  estimate.
+
+For Tao's degree-divisible polynomial family, the unresolved sharp trace
+problem now starts at five distinct roots.
+
+## Prime-equidistribution 2.79
+
+- [x] State the exact four-point hypergeometric endpoint for four nontrivial
+  local characters with nontrivial product.
+- [x] Translate every degree-nondivisible four-active-root trace to that
+  endpoint with the sharp `3*sqrt(p)` target.
+- [x] Prove a general inactive-root deletion lemma and close all four-root
+  active/inactive configurations.
+- [x] Package `TaoPrimeKummerRootProductWeilBoundFiveRootsOrMore` and prove
+  its full-Kummer equivalence and composite bridge under the three- and
+  four-point endpoints.
+- [ ] Prove the three-point hypergeometric estimate.
+- [ ] Prove the four-point hypergeometric estimate.
+- [ ] Prove the five-or-more-root Kummer trace estimate.
+
+All Kummer cases below five distinct roots are now reduced to explicit
+lower-point analytic endpoints; no such endpoint is being assumed proved.
+
+## Prime-equidistribution 2.80
+
+- [x] Prove the pointwise and complete-sum five-root Möbius identities.
+- [x] Derive the sharp `3*sqrt(p)+1` active-five-root estimate from the
+  four-point endpoint.
+- [x] Close every degree-divisible five-root active/inactive configuration
+  with the sharp `4*sqrt(p)` Kummer coefficient.
+- [x] Package the exact generic six-root-or-nondivisible-five-root residual.
+- [x] Reduce the exact cleared Burgess polynomial to a source-specific
+  six-active-root large-characteristic residual and connect it to the
+  linear-quotient and composite endpoints.
+- [ ] Prove the three-point hypergeometric estimate.
+- [ ] Prove the four-point hypergeometric estimate.
+- [ ] Prove the source-specific six-active-root residual.
+
+For Tao's degree-divisible cleared family, no five-active-root analytic input
+remains.
+
+## Prime-equidistribution 2.81
+
+- [x] Restrict the four-point endpoint on the Burgess path to four powers of
+  the single source character.
+- [x] Reduce all four exponents modulo `orderOf χ`.
+- [x] Scale the finite points to the two-parameter Legendre form `0,1,t,u`.
+- [x] Prove power-specific five-root, active-root, and split-polynomial
+  bridges.
+- [x] Route the six-active-root source residual through the reduced
+  four-point power endpoint above `64`.
+- [ ] Prove the reduced one-parameter three-point endpoint.
+- [ ] Prove the reduced two-parameter four-point power endpoint.
+- [ ] Prove the source-specific six-active-root residual.
+
+The global four-unrelated-character endpoint is no longer an assumption on
+the exact cleared Burgess production path.
+
+## Prime-equidistribution 2.82
+
+- [x] Prove the six-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped five-point power-character endpoint.
+- [x] Reduce its five exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v`.
+- [x] Close the exactly-six-active-root split-polynomial branch.
+- [x] Package the seven-active-root source residual and its direct composite
+  bridge.
+- [ ] Prove the reduced one-parameter three-point endpoint.
+- [ ] Prove the reduced two-parameter four-point endpoint.
+- [ ] Prove the reduced three-parameter five-point endpoint.
+- [ ] Prove the source-specific seven-active-root residual.
+
+No exact cleared Burgess trace with six or fewer active roots remains outside
+the named lower-point analytic endpoints.
+
+## Prime-equidistribution 2.83
+
+- [x] Define the complete cubefree Weil input literally at `r = 7`.
+- [x] Propagate that fixed input through the fourteenth moment, amplification,
+  rounded induction, Pólya--Vinogradov, and explicit Burgess endpoints.
+- [x] Prove a fixed-`Fin 7` prime/prime-square CRT iteration independently of
+  the stronger all-orders local predicate.
+- [x] Package the prime linear-quotient and seven-active-root source residual
+  at `r = 7` and connect them to the fixed composite endpoint.
+- [ ] Prove the reduced one-parameter three-point endpoint.
+- [ ] Prove the reduced two-parameter four-point endpoint.
+- [ ] Prove the reduced three-parameter five-point endpoint.
+- [ ] Prove the fixed-`r = 7` seven-active-root source residual.
+
+The exact Burgess production path no longer assumes any complete character-
+sum estimate at unused moment orders.
+
+## Prime-equidistribution 2.84
+
+- [x] Prove the seven-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped six-point power-character endpoint.
+- [x] Reduce all six exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w`.
+- [x] Close the exactly-seven-active-root split-polynomial branch.
+- [x] Package both generic and fixed-`r=7` eight-active-root source residuals
+  with direct composite bridges.
+- [ ] Prove the reduced one-parameter three-point endpoint.
+- [ ] Prove the reduced two-parameter four-point endpoint.
+- [ ] Prove the reduced three-parameter five-point endpoint.
+- [ ] Prove the reduced four-parameter six-point endpoint.
+- [ ] Prove the fixed-`r=7` eight-active-root source residual.
+
+No exact cleared Burgess trace with seven or fewer active roots remains
+outside the named lower-point analytic endpoints.
+
+## Prime-equidistribution 2.85
+
+- [x] Prove that the fixed `r=7` cleared polynomial has at most fourteen
+  distinct roots.
+- [x] Transfer that upper bound to the active-root set.
+- [x] Replace the unbounded eight-or-more source residual by the exact finite
+  window `8 ≤ activeRoots.card ≤ 14`.
+- [x] Connect the finite-window residual directly to the fixed prime quotient
+  and composite complete-Weil endpoints.
+- [ ] Prove the reduced lower-point endpoints.
+- [ ] Close the seven remaining exact active-root cardinalities `8..14`.
+
+No impossible higher-root case remains in the literal Burgess hypothesis.
+
+## Prime-equidistribution 2.86
+
+- [x] Prove the eight-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped seven-point power-character endpoint.
+- [x] Reduce all seven finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z`.
+- [x] Prove the sharp `6*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-eight-active-root split-polynomial branch.
+- [x] Narrow the literal fixed-order residual to `9..14` and connect it to
+  the prime quotient and composite endpoints.
+- [ ] Prove the reduced one-, two-, three-, four-, and five-parameter trace
+  endpoints.
+- [ ] Close the six remaining exact active-root cardinalities `9..14`.
+
+Every exact cleared Burgess trace with eight or fewer active roots is now
+covered by an explicit projective reduction or a named reduced trace endpoint.
+
+## Prime-equidistribution 2.87
+
+- [x] Prove the nine-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped eight-point power-character endpoint.
+- [x] Reduce all eight finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z,r₀`.
+- [x] Prove the sharp `7*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-nine-active-root split-polynomial branch.
+- [x] Narrow the literal fixed-order residual to `10..14` and connect it to
+  the prime quotient and composite endpoints.
+- [ ] Prove the reduced one- through six-parameter trace endpoints.
+- [ ] Close the five remaining exact active-root cardinalities `10..14`.
+
+Every exact cleared Burgess trace with nine or fewer active roots is now
+covered by an explicit projective reduction or a named reduced trace endpoint.
+
+## Prime-equidistribution 2.88
+
+- [x] Prove the ten-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped nine-point power-character endpoint.
+- [x] Reduce all nine finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z,r₀,s₀`.
+- [x] Prove the sharp `8*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-ten-active-root split-polynomial branch.
+- [x] Narrow the literal fixed-order residual to `11..14` and connect it to
+  the prime quotient and composite endpoints.
+- [ ] Prove the reduced one- through seven-parameter trace endpoints.
+- [ ] Close the four remaining exact active-root cardinalities `11..14`.
+
+Every exact cleared Burgess trace with ten or fewer active roots is now
+covered by an explicit projective reduction or a named reduced trace endpoint.
+
+## Prime-equidistribution 2.89
+
+- [x] Prove the eleven-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped ten-point power-character endpoint.
+- [x] Reduce all ten finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z,r₀,s₀,a₀`.
+- [x] Prove the sharp `9*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-eleven-active-root split-polynomial branch.
+- [x] Narrow the literal fixed-order residual to `12..14` and connect it to
+  the prime quotient and composite endpoints.
+- [ ] Prove the reduced one- through eight-parameter trace endpoints.
+- [ ] Close the three remaining exact active-root cardinalities `12..14`.
+
+Every exact cleared Burgess trace with eleven or fewer active roots is now
+covered by an explicit projective reduction or a named reduced trace endpoint.
+
+## Prime-equidistribution 2.90
+
+- [x] Prove the twelve-root pointwise Möbius identity and complete-sum formula.
+- [x] Isolate the source-shaped eleven-point power-character endpoint.
+- [x] Reduce all eleven finite exponents modulo `orderOf χ`.
+- [x] Scale its marked points to `0,1,t,u,v,w,z,r₀,s₀,a₀,b₀`.
+- [x] Prove the sharp `10*sqrt(p)+1` active-root estimate.
+- [x] Close the exactly-twelve-active-root split-polynomial branch.
+- [x] Narrow the literal fixed-order residual to `13..14` and connect it to
+  the prime quotient and composite endpoints.
+- [ ] Prove the reduced one- through nine-parameter trace endpoints.
+- [ ] Close the two remaining exact active-root cardinalities `13..14`.
+
+Every exact cleared Burgess trace with twelve or fewer active roots is now
+covered by an explicit projective reduction or a named reduced trace endpoint.

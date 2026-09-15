@@ -1315,6 +1315,18 @@ theorem taoTheorem17_of_criticalSmoothDilationLimit
     (taoLemma16ii_of_criticalSmoothDilationLimit hlimit)
     (badOneTermDyadicRatio_of_criticalSmoothDilationLimit hlimit)
 
+/-- Explicit Burgess together with the sharp critical smooth-number dilation
+formula proves Theorem 1.7 without an unrestricted Sylvester--Schur
+hypothesis. -/
+theorem taoTheorem17_of_criticalSmoothDilationLimit_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (hlimit : TaoCriticalSmoothDilationLimitConclusion) :
+    TaoTheorem17Conclusion :=
+  taoTheorem17_of_explicitBurgess hC hburgess
+    (taoLemma16ii_of_criticalSmoothDilationLimit hlimit)
+    (badOneTermDyadicRatio_of_criticalSmoothDilationLimit hlimit)
+
 /-- The single Gaussian saddle asymptotic target is therefore also a
 source-faithful sufficient analytic input for the conditional Theorem 1.7
 endpoint. -/
@@ -1325,6 +1337,16 @@ theorem taoTheorem17_of_criticalSmoothSaddleAsymptotic
     (hasymptotic : TaoCriticalSmoothSaddleAsymptoticConclusion) :
     TaoTheorem17Conclusion :=
   taoTheorem17_of_criticalSmoothDilationLimit hC hburgess hSS
+    (criticalSmoothDilationLimit_of_saddleAsymptotic hasymptotic)
+
+/-- The source-faithful Gaussian saddle asymptotic and explicit Burgess are
+the two remaining analytic inputs for Theorem 1.7. -/
+theorem taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (hasymptotic : TaoCriticalSmoothSaddleAsymptoticConclusion) :
+    TaoTheorem17Conclusion :=
+  taoTheorem17_of_criticalSmoothDilationLimit_explicitBurgess hC hburgess
     (criticalSmoothDilationLimit_of_saddleAsymptotic hasymptotic)
 
 /-- Under the sharp critical smooth-number dilation formula, doubling the

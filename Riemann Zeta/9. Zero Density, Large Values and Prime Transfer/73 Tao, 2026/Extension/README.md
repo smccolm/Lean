@@ -33,9 +33,14 @@ least `H/400` for `H≥200`. The needed arithmetic scale is now proved
  binomial-factorization and binomial-growth inequalities supplies a prime `p>H`
  for every start once `H` is sufficiently large, hence throughout the quadratic
  failure window `2N<H²`. Start monotonicity and the explicit threshold `H^H+1`
- further reduce unrestricted Sylvester--Schur to a finite rectangle. The resulting eventual
+ further reduce unrestricted Sylvester--Schur to a finite rectangle. A
+ separate checked module proves all rows `H<49`, so the residual rectangle is
+ restricted to `H>=49`. A further checked module combines the large-length
+ tail with the finitely many fixed-length thresholds to produce one common
+ start cutoff valid for every length. The resulting eventual
 `N/H²≥1/2` and `H/400` theorems remove unrestricted Sylvester--Schur from the
-Lemma 3.1 dependency chain. The fixed lower-cutoff and Theorem 2.5 constants
+Lemma 3.1 dependency chain, and the common start cutoff also removes it from
+the asymptotic Theorem 1.7 chain. The fixed lower-cutoff and Theorem 2.5 constants
 are coordinated uniformly, and the full eventual shortness contradiction is
 proved conditional on `TaoTheorem25SpecializedConclusion`. The exact corrected
 `TaoLemma31Conclusion` adds the positive-start `H<N` clause and follows from
@@ -1164,6 +1169,27 @@ inactive corrections. The sole prime input actually needed by Burgess is now
 `BurgessWeilPrimeLargeCharacteristic` proves the trivial complete-sum bound
 `p` and absorbs it into `2D√p` for `p ≤ 4D²`. The residual four-active-root
 input may therefore also assume the strict inequality `4D² < p`.
+`BurgessWeilPrimeFourRoots` performs the exact four-root Möbius reduction.
+One root is sent to infinity, the denominator characters cancel by total
+degree divisibility, and the remaining expression is a canonical three-point
+hypergeometric sum minus one deleted value. A `2√p` bound for that canonical
+sum formally gives the full exactly-four-active-root polynomial estimate.
+Thus the generic large-characteristic residual is restricted to at least five
+active roots, with the canonical hypergeometric estimate exposed separately.
+`BurgessWeilPrimeSourceResidual` tightens the production contract to the
+literal family `primeLinearOrderPolynomial p r χ b`. The bridge establishes
+all structural hypotheses internally, disposes of small characteristic and
+active-root counts below five, and uses the canonical four-root estimate only
+when `p > 64`. These two source-specific analytic inputs still imply the full
+cube-free composite endpoint.
+The canonical four-root predicate is stated only for powers of the ambient
+Burgess character. Each of its three exponents is reduced modulo and bounded
+strictly below `orderOf χ`; a checked transport theorem recovers arbitrary
+active-root multiplicities exactly.
+Scaling by the first nonzero marked point is also formalized exactly. It puts
+the finite roots in Legendre form `0,1,t` and reduces the analytic contract to
+one parameter `t ≠ 0,1`, up to a character-valued constant of norm at most
+one.
 `ExceptionalCharacterScales`
 defines the canonical `R=⌊Z^0.0001⌋`, proves every requested prefix eventually
 lies above the cutoff and uniformly meets the period range, and uses Bertrand
@@ -1254,8 +1280,8 @@ typical union little-o of the fixed-dilation one-term count, conditional on
 Burgess, with an explicit fixed logarithmic saving. `BadIntervalRecombination`
 combines this with the quantitative Proposition 6.5 diagonal and the exact
 factor-`30` maximal transfer. Conditional on explicit Burgess,
-Sylvester--Schur, and Lemma 1.6(ii), it proves the logarithmically saving local
-dyadic-window bound. It also proves the exact finite power-of-two cover that
+Lemma 1.6(ii), and the proved eventual scale-local large-prime theorem, it
+proves the logarithmically saving local dyadic-window bound. It also proves the exact finite power-of-two cover that
 bounds `nontrivialBadCount x` by the sum of these window cardinalities. What
 follows in `BadIntervalDyadicSummation` is the exact conditional endgame. The
 adjacent ratio `B¹(2^r)/B¹(2^(r+1))->1/2` gives geometric summability for the
@@ -1265,9 +1291,400 @@ ratio is now proved in `BadOneTermRegularVariation` from
 `TaoCriticalSmoothDilationLimitConclusion`: the exact one-term sum is
 concentrated on a slowly widening central prime packet, dilation by `1/2` is
 uniform there, and the complementary mass is `o(B¹(x))`. The Gaussian saddle
- asymptotic target implies this dilation limit. The sharp saddle asymptotic,
- analytic Burgess, and the finite residual Sylvester--Schur rectangle remain
- open; Lemma 1.6(ii) is supplied
+ asymptotic target implies this dilation limit. Scale-local variants of every
+ intervening reduction culminate in
+ `taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess`. The sharp
+ saddle asymptotic and analytic Burgess remain the two open inputs; the finite
+ residual Sylvester--Schur rectangle is independent. Lemma 1.6(ii) is supplied
 by that same dilation limit.
 None of Theorems 1.7--1.10 is complete unconditionally or claimed. Imports from
 node 74 enter only through the exact immutable snapshot under `Dependencies/`.
+
+## Release 2.57: finite Burgess amplification
+
+`BurgessAmplification.lean` adds the exact elementary reindexing layer between
+the existing prefix target and `BurgessMoment`. Its interval sum agrees with
+the established `Ioc 0 H` prefix, additive translation has two boundary
+pieces of total norm at most `2K`, and multiplication by a unit turns the
+affine sum into the translated interval without changing its norm. Summing
+the affine identity over `1 <= b <= B` and exchanging finite sums yields the
+existing complete-moment inner function `burgessShiftSum B χ` exactly.
+The coprime multiplier pairs are then grouped by their residue `(N+n)/a`;
+the multiplicity has the expected exact first moment, and the full affine
+average is proved equal to its multiplicity-weighted shifted-character sum.
+
+The next proof obligation is the second-moment collision bound for those
+multiplicities, followed by Hölder, the fourteenth-moment bound, and
+optimization of `A` and `B`. This module contains no placeholder theorem for
+that still-open step.
+
+## Release 2.58: collision identity and Hölder
+
+The second multiplicity moment is now exactly the cardinality of
+`burgessResidueCollisionPairs`. For two coprime multipliers, its defining
+residue equality is equivalent to the cross-multiplied congruence, recorded
+also as the membership criterion for `burgessMultiplierCollisionFiber`.
+The reusable finite interpolation theorem from `VinogradovMeanValue` then
+gives the exact Burgess Hölder product, including complex norm and affine-
+average forms. The missing arithmetic step is now precisely the source's
+upper bound on each fixed-multiplier collision fiber.
+
+## Release 2.59: arithmetic collision fibers
+
+`BurgessAmplification` now converts the cross-multiplied congruence into
+divisibility of an integer determinant. The range condition `2*A*H <= q`
+forces the difference of two determinant values to vanish in `ℤ`, and
+coprime reduction then gives spacing by `a/gcd(a,c)` and `c/gcd(a,c)`.
+The resulting local bounds include the symmetric source-shaped estimate
+`card <= H / (max a c / gcd a c) + 1`.
+
+The global ordered collision family is also decomposed exactly into fixed-
+multiplier fibers and injected into those local fibers, yielding the complete
+finite `max/gcd` sum bound. Estimating that remaining gcd sum, then carrying
+the induction/error and parameter choices through to the primitive `r = 7`
+core theorem, remains open.
+
+## Release 2.60: summatory collision bound
+
+The explicit `max/gcd` majorant is now summed unconditionally. For fixed `c`,
+divisor incidence and exact multiple counting bound the upper-triangular
+quotient sum by `H * c.divisors.card`. Symmetry costs a factor two. A second
+finite double count proves
+`sum_{c in (0,A]} c.divisors.card = sum_{d in (0,A]} A/d`, whose real cast is
+at most `A * harmonic A`.
+
+The resulting source-facing theorem bounds the residue-collision count by the
+square of the coprime multiplier count plus `2*H*A*harmonic A`. The remaining
+work is to execute the induction with the affine boundary error and optimize
+the `r = 7` Burgess parameters.
+
+## Release 2.61: exact pre-Hölder recursion
+
+The amplification module now contains the real multiplicity regrouping needed
+by the source, not merely a norm of the total complex affine average. For each
+coprime multiplier, the exact translated-interval identity is summed over
+`b`; two arbitrary shorter-interval bounds control its endpoint error. The
+global theorem then proves equation (28)'s finite inequality with main term
+`sum_x v_A(x)*|W_B(x)|` and error `2*sum_{a,b} E(ab)`.
+
+The remaining recursion work is scalar: specialize `E` to the inductive
+Burgess power and estimate the resulting finite power sum. Hölder, the
+collision estimate, and the complete fourteenth moment are already available
+for the main term.
+
+## Release 2.62: normalized power-boundary recursion
+
+The scalar recursion work is complete for every nonnegative power majorant.
+Monotonicity replaces `E(a*b)` by `E(A*b)`, and the finite `b`-sum is bounded
+by `B` copies of its endpoint. Positivity of the coprime-multiplier count and
+of `B` then justifies division by the averaging denominator and cancels the
+common boundary factor exactly.
+
+The resulting theorem states
+`|S(N,H)| <= M/(#A*B) + 2*C*(A*B)^alpha*Q`, with both shorter endpoint
+intervals retained as hypotheses. The next main-term step is to take the
+`2r`-th root of Hölder and substitute the compiled collision and moment
+bounds before specializing to `r = 7`.
+
+## Release 2.63: rooted Hölder and full pre-optimization recurrence
+
+Positivity now converts the powered Hölder inequality into the required
+reciprocal-real-power form. An abstract monotone theorem permits independent
+upper bounds for its collision and moment factors. Its `r=7` specialization
+inserts the harmonic collision estimate and the complete cubefree-Weil moment
+estimate, producing an explicit `1/14`-power main term.
+
+That main term is also substituted into the normalized affine recurrence.
+The resulting theorem has no remaining finite-sum or Hölder placeholder: only
+the complete-Weil hypothesis and the scalar parameter estimates remain. The
+next package is a quantitative lower bound for coprime multipliers followed by
+the integer `A,B` optimization and inductive absorption.
+
+## Release 2.64: short coprime-multiplier density
+
+`BurgessOptimization.lean` now supplies an exact Möbius formula for the
+coprime multipliers in `(0,A]`. Comparing natural quotients with real
+quotients and evaluating the complete period gives
+`A*phi(q)/q - q.divisors.card <= #A`. The same result is exposed in the
+`burgessCoprimeMultiplierPairs q A 1` notation used inside the collision and
+recurrence theorems.
+
+A separate corollary retains half the expected totient density as soon as the
+explicit divisor error is at most half the main term. The next scalar package
+also proves `q/phi(q) <= tau(q)`, reducing that hypothesis to the natural
+condition `2*tau(q)^2 <= A`. It remains to establish this condition for the
+rounded `A`, then carry out the `A,B` range estimates and boundary absorption.
+
+## Release 2.65: scalar recurrence and rounded Burgess parameters
+
+The divisor-epsilon estimate now proves eventual domination
+`2*tau(q)^2 <= floor(q^eta)` for every `eta>0`. The rooted Holder numerator is
+also reduced to scalar rectangle bounds and, when `A<=H`, its collision term
+is compressed to `3*H*A*harmonic(A)`. The resulting normalized recurrence has
+no multiplier-cardinality placeholder.
+
+For `r=7` the module defines `B=floor(q^(1/14))` and `A=H/(K*B)`. Compiled
+lemmas give the two-sided floor estimate for `B`, a half-quotient lower bound
+for `A`, all shortening/no-wrap inequalities from explicit lower and upper
+range hypotheses, and eventual divisor-discrepancy dominance for this actual
+rounded `A`. Harmonic and totient epsilon losses, final exponent algebra, and
+boundary absorption remain.
+
+## Release 2.66: Burgess exponent normalization
+
+The scalar file now bounds both `harmonic(A)` and `q/phi(q)` by explicit
+epsilon powers of the conductor and rewrites the half-density denominator as
+`2*S*(q/phi(q))/(A*B)`. At `B<=q^(1/14)`, both complete-moment terms collapse
+to one `q^(3/2+epsilon)` monomial, whose fourteenth root is exactly bounded at
+`q^(3/28+epsilon/14)`.
+
+The compressed collision root is factored exactly, and the combined
+pre-substitution main term is bounded by an explicit constant times
+`A^(13/14)*H^(13/14)*q^(3/28+epsilon/14+delta/14)`. Substitution of the
+rounded `A,B`, the final totient epsilon allocation, and boundary contraction
+remain.
+
+## Release 2.67: rounded Burgess exponent substitution
+
+The scalar module now carries out the rounded `A,B` substitution itself. It
+proves the exact fourteenth-power base bound arising from
+`A=H/(K*B)` and `B=floor(q^(1/14))`, then takes its real fourteenth root to
+obtain `2*K^(1/14)*H^(6/7)/q^(13/196)`.
+
+Combining this with the release-2.66 rooted moment gives the normalized main
+term at `H^(6/7)*q^(2/49+epsilon/14+delta/14)`, including the explicit
+constant. The remaining scalar tasks are reciprocal-totient insertion,
+epsilon allocation, and strict contraction of the affine boundary.
+
+## Release 2.68: epsilon allocation and boundary contraction
+
+The rounded main estimate now includes `q/phi(q)`. Its separate exponent
+losses are specialized by taking moment epsilon `6*eta`, harmonic epsilon
+`eta`, and totient epsilon `eta/2`, giving exactly
+`H^(6/7)*q^(2/49+eta)`.
+
+For the boundary, exact quotient geometry strengthens `A*B<=H` to
+`K*A*B<=H`. Thus its `6/7` power gains `K^(-6/7)`; under
+`K^(6/7)>=4` the boundary consumes at most half the induction majorant. The
+module verifies this condition for `K=128`. Recurrence-level assembly and the
+complete-Weil analytic input remain.
+
+## Release 2.69: rounded recurrence and strong induction
+
+The two scalar estimates are now inserted into the complete-Weil recurrence.
+The chosen induction coefficient absorbs the main term and its own half-sized
+boundary, while `K*A*B<=H` makes every translated multiplier length strictly
+smaller. Strong induction therefore removes the two boundary callbacks; the
+trivial estimate handles recursive lengths below the nontrivial threshold.
+
+With `K=128`, the core lower inequality eventually implies every rounded
+parameter condition. The resulting theorem proves
+`H^(6/7)*q^(2/49+eta)` throughout the quadratic no-wrap range. The remaining
+large-length bridge is Pólya--Vinogradov, and the complete-Weil finite-field
+residual remains the analytic input to the medium theorem.
+
+## Release 2.70: Pólya--Vinogradov and all-prefix closure
+
+`BurgessPolyaVinogradov.lean` now proves primitive Fourier inversion and the
+exact Gauss-sum norm at composite conductors. The interval kernel is bounded
+by the existing geometric majorant and summed explicitly, giving
+`10*sqrt(q)*(1+harmonic(q))`.
+
+When the rounded no-wrap inequality fails, its lower floor estimate supplies
+exactly `q^(45/98)<=H^(6/7)`. This closes the large branch at the same
+`H^(6/7)*q^(2/49+eta)` monomial as strong induction. The module then
+combines both ranges, absorbs small conductors, applies periodicity and
+conductor reduction, and exports Tao's decimal sieve-facing Burgess contract.
+Only the prime finite-field complete-Weil input remains conditional.
+
+## Release 2.71: sharp prime Kummer boundary
+
+`BurgessWeilPrimeKummer.lean` states the remaining prime theorem with the
+classical sharp coefficient `(t-1)*sqrt(p)`. Its exceptional case is exactly
+a nonzero scalar multiple `C(c)*Q^(orderOf χ)`.
+
+The tagged Burgess root has multiplicity not divisible by `orderOf χ`; a new
+checked polynomial argument proves this rules out the full scalar-power
+shape. The Kummer statement now implies the split-polynomial, linear-
+quotient, and composite complete-Weil contracts directly. Its finite-field
+proof remains the only analytic Burgess dependency.
+
+## Release 2.72: small Sylvester--Schur lengths
+
+`SylvesterSchurSmallLengths.lean` proves `SylvesterSchurBelow 49`. Monotone
+binomial-growth propagation handles every start above small verified
+baselines, and bounded prime certificates cover the remaining cases through
+length forty-eight. Thus the finite rectangle in the Theorem 1.7 arithmetic
+input now has `H>=49`. No new assumption is used.
+
+## Release 2.73: eventual start-uniform Sylvester--Schur
+
+`SylvesterSchurEventual.lean` proves `exists_sylvesterSchurAboveStart`: one
+start cutoff works simultaneously for every positive length. This is enough
+for all sufficiently large admissible dyadic scales, whose starts grow with
+the ambient endpoint.
+
+The new scale-local interfaces propagate that fact through `BadIntervals`,
+`NormalizedBadIntervals`, `BadIntervalMaximal`, `BadIntervalRecombination`,
+and `BadIntervalDyadicSummation`. Packaged window, tail, and partial-sum
+conclusions avoid duplicating the endgame and preserve the former global
+Sylvester--Schur APIs as compatibility theorems. The audited endpoint
+`taoTheorem17_of_criticalSmoothSaddleAsymptotic_explicitBurgess` now reduces
+Theorem 1.7 to analytic Burgess and the critical smooth-number saddle
+asymptotic alone.
+
+## Release 2.74: distinct-root Kummer trace
+
+`BurgessWeilPrimeKummer.lean` rewrites the split-polynomial correlation as an
+exact finite trace over distinct roots and their multiplicities. It constructs
+the scalar-power base whenever every multiplicity is divisible by the
+character order and proves the converse equivalence. Hence
+`TaoPrimeKummerRootProductWeilBound` is exactly equivalent to the former
+polynomial endpoint, with all algebraic factorization bookkeeping discharged.
+The remaining input is the sharp finite-field trace bound itself.
+
+## Release 2.75: elementary Kummer root counts
+
+The sharp Kummer trace estimate is proved for at most two distinct roots.
+The one-root sum vanishes, while the two-root sum is controlled by the exact
+Jacobi-sum argument already in the production graph. The new restricted
+predicate `TaoPrimeKummerRootProductWeilBoundThreeRootsOrMore` is equivalent
+to the full polynomial endpoint and has a direct composite Burgess bridge.
+Only traces with at least three distinct roots remain open.
+
+## Release 2.76: degree-divisible three-root Kummer closure
+
+For exactly three roots and character-order-divisible degree, the sharp
+Kummer bound is now unconditional. Active/inactive-root separation reduces
+the trace to an existing Jacobi or projective Jacobi estimate plus one deleted
+point, yielding `sqrt(p)+1 <= 2*sqrt(p)`. The equivalent refined residual is
+`TaoPrimeKummerRootProductWeilBoundFourRootsOrThreeDegreeNondivisible`; the
+degree-divisible Burgess family now starts at four roots.
+
+## Release 2.77: exact three-point Kummer normalization
+
+The active-root degree congruence is now an equivalence. A three-active-root
+trace with nondivisible degree translates literally to
+`TaoPrimeThreePointHypergeometricWeilBoundAt`; all inactive-root and small
+characteristic cases are elementary. Under that hypergeometric endpoint, the
+full Kummer theorem is equivalent to
+`TaoPrimeKummerRootProductWeilBoundFourRootsOrMore`, which feeds composite
+Burgess directly.
+
+## Release 2.78: degree-divisible four-root Kummer closure
+
+The sharp `3*sqrt(p)` bound is proved for degree-divisible four-root traces
+from the existing three-point hypergeometric endpoint. Exact active-root
+splitting covers two, three, and four active roots and absorbs all inactive
+deleted points. The equivalent residual is now
+`TaoPrimeKummerRootProductWeilBoundFiveRootsOrFourDegreeNondivisible`; for the
+cleared Burgess family only five-or-more-root traces remain.
+
+## Release 2.79: exact four-point Kummer normalization
+
+The degree-nondivisible four-active-root trace is translated literally to
+`TaoPrimeFourPointHypergeometricWeilBoundAt`. A general deletion lemma and the
+fact that four distinct roots imply `p >= 4` close every inactive-root split.
+Under the three- and four-point endpoints, the full polynomial Kummer theorem
+is equivalent to `TaoPrimeKummerRootProductWeilBoundFiveRootsOrMore`, which
+feeds the composite Burgess chain directly.
+
+## Release 2.80: degree-divisible five-root Kummer closure
+
+`fiveRootMobius_term` sends one of five roots to infinity and cancels the
+denominator through the trivial total character product. The resulting
+four-point sum and one deleted value give the sharp `4*sqrt(p)` bound for
+degree-divisible five-root traces. The generic residual is now six roots or
+a nondivisible-degree five-root case. For `primeLinearOrderPolynomial`, the
+new source-specific residual begins at six active roots and still has direct
+linear-quotient and composite Burgess bridges.
+
+## Release 2.81: source-shaped four-point endpoint
+
+`fourPointMulCharSum_eq_legendreForm` scales four marked finite points to
+`0,1,t,u`. The new power and reduced-power endpoint hierarchy proves that the
+exact five-active-root Burgess branch needs only powers of its single input
+character, reduced exponents, two geometric parameters, and `p > 64`.
+`TaoPrimeLinearOrderPolynomialWeilBoundSixActiveRootsLargeCharacteristic`
+now reaches composite Burgess through this narrower endpoint; the two reduced
+hypergeometric estimates and the six-active-root residual remain open.
+
+## Release 2.82: six-root projective reduction
+
+The new `BurgessWeilPrimeSixRoots` module proves the pointwise and complete
+six-root Möbius identities, the `4*sqrt(p)+1` active-root estimate, and the
+split-polynomial bridge. Its five-point analytic input is reduced to powers
+of one character, exponents below `orderOf χ`, `p > 64`, and the three
+parameters of `0,1,t,u,v`. The source-specific residual now starts at seven
+active roots.
+
+## Release 2.83: literal fixed-order Burgess boundary
+
+`TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven` now feeds every
+fourteenth-moment consumer through the explicit cubefree Burgess theorem.
+The local input is independently specialized: fixed-`Fin 7` prime-power
+predicates, cube-free CRT strong induction, and
+`TaoPrimeLinearQuotientWeilBoundRSeven` connect the fixed seven-active-root
+source residual to that composite endpoint. The unconditional prime-square
+argument remains shared with the general interface.
+
+## Release 2.84: seven-root projective reduction
+
+The new `BurgessWeilPrimeSevenRoots` module proves the seven-root pointwise
+and complete Möbius identities, the sharp `5*sqrt(p)+1` active-root estimate,
+and the split-polynomial bridge. Its six-point analytic input is reduced to
+powers of one character, exponents below `orderOf χ`, `p > 64`, and the four
+parameters of `0,1,t,u,v,w`. Both source routes now retain only an
+eight-active-root residual.
+
+## Release 2.85: finite fixed-order residual window
+
+At `r=7`, `primeLinearOrderPolynomial` has at most fourteen distinct roots,
+and every active root is among them. The production hypothesis is therefore
+restricted to `8 ≤ activeRoots.card ≤ 14`, with direct bridges through the
+fixed prime quotient and composite Weil predicates.
+
+## Release 2.86: eight-root projective reduction
+
+`BurgessWeilPrimeEightRoots` proves the exact eight-root Möbius and complete-
+sum identities, the sharp `6*sqrt(p)+1` active-root estimate, and the
+split-polynomial bridge. Its seven-point analytic input is reduced to powers
+of one ambient character, finite exponent ranges, `p > 64`, and the
+five-parameter form `0,1,t,u,v,w,z`. The literal residual window is now
+`9 ≤ activeRoots.card ≤ 14`.
+
+## Release 2.87: nine-root projective reduction
+
+`BurgessWeilPrimeNineRoots` proves the nine-root Möbius and complete-sum
+identities, the sharp `7*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its eight-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the six-parameter form
+`0,1,t,u,v,w,z,r₀`. The literal residual window is now
+`10 ≤ activeRoots.card ≤ 14`.
+
+## Release 2.88: ten-root projective reduction
+
+`BurgessWeilPrimeTenRoots` proves the ten-root Möbius and complete-sum
+identities, the sharp `8*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its nine-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the seven-parameter form
+`0,1,t,u,v,w,z,r₀,s₀`. The literal residual window is now
+`11 ≤ activeRoots.card ≤ 14`.
+
+## Release 2.89: eleven-root projective reduction
+
+`BurgessWeilPrimeElevenRoots` proves the eleven-root Möbius and complete-sum
+identities, the sharp `9*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its ten-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the eight-parameter form
+`0,1,t,u,v,w,z,r₀,s₀,a₀`. The literal residual window is now
+`12 ≤ activeRoots.card ≤ 14`.
+
+## Release 2.90: twelve-root projective reduction
+
+`BurgessWeilPrimeTwelveRoots` proves the twelve-root Möbius and complete-sum
+identities, the sharp `10*sqrt(p)+1` active-root estimate, and the exact
+split-polynomial bridge. Its eleven-point input is reduced to one ambient
+character, finite exponent ranges, `p > 64`, and the nine-parameter form
+`0,1,t,u,v,w,z,r₀,s₀,a₀,b₀`. The literal residual window is now
+`13 ≤ activeRoots.card ≤ 14`.

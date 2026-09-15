@@ -99,6 +99,9 @@ import Tao2026.ExceptionalCharacterSelberg
 import Tao2026.ExceptionalCharacterFamilies
 import Tao2026.ExceptionalCharacterBurgess
 import Tao2026.BurgessMoment
+import Tao2026.BurgessAmplification
+import Tao2026.BurgessOptimization
+import Tao2026.BurgessPolyaVinogradov
 import Tao2026.BurgessWeilCRT
 import Tao2026.BurgessWeilIteration
 import Tao2026.BurgessWeilPrimeSquare
@@ -108,6 +111,16 @@ import Tao2026.BurgessWeilPrimeLowRoots
 import Tao2026.BurgessWeilPrimeActiveRoots
 import Tao2026.BurgessWeilPrimeThreeRoots
 import Tao2026.BurgessWeilPrimeLargeCharacteristic
+import Tao2026.BurgessWeilPrimeFourRoots
+import Tao2026.BurgessWeilPrimeKummer
+import Tao2026.BurgessWeilPrimeSixRoots
+import Tao2026.BurgessWeilPrimeSevenRoots
+import Tao2026.BurgessWeilPrimeEightRoots
+import Tao2026.BurgessWeilPrimeNineRoots
+import Tao2026.BurgessWeilPrimeTenRoots
+import Tao2026.BurgessWeilPrimeElevenRoots
+import Tao2026.BurgessWeilPrimeTwelveRoots
+import Tao2026.BurgessWeilPrimeSourceResidual
 import Tao2026.ExceptionalCharacterScales
 import Tao2026.ExceptionalCharacterNormalization
 import Tao2026.ExceptionalCharacterAbsorption
@@ -190,6 +203,8 @@ import Tao2026.TypeIIReduction
 import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
+import Tao2026.SylvesterSchurSmallLengths
+import Tao2026.SylvesterSchurEventual
 import Tao2026.VeryBadEquidistribution
 import Tao2026.VeryBadAsymptotics
 import Tao2026.VinogradovPhase

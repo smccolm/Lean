@@ -125,8 +125,8 @@ expressed without division as `#I ≤ 10 #(`normalized union` ∩ I)`.
 
 The only arithmetic input is the isolated Sylvester--Schur conclusion already
 used in Lemma 6.1. -/
-theorem exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion
-    (hSS : SylvesterSchurConclusion) {x n : ℕ}
+theorem exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion_of_scale
+    {x n : ℕ} (hscale : AdmissibleSylvesterSchurAtScale x)
     (hn : n ∈ admissibleBadIntervalUnion x) :
     ∃ N' H' : ℕ,
       (N', H') ∈ scaleNormalizedBadIntervalIndices x ∧
@@ -138,7 +138,7 @@ theorem exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion
     mem_admissibleBadIntervalUnion.mp hn
   obtain ⟨N', H', p, k, m, hnorm, hsub, hH'leH, hHfour,
       hxLower, hxUpper⟩ :=
-    exists_large_normalized_bad_subinterval_of_sylvesterSchur hSS hadm
+    exists_large_normalized_bad_subinterval_of_largePrime (hscale hadm) hadm
   have hN'lt : N' < 2 * x := by
     have hH'pos : 0 < H' := by omega
     omega
@@ -177,6 +177,20 @@ theorem exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion
   refine ⟨N', H', hindex, hnExpanded, ?_⟩
   have hH'pos : 1 ≤ H' := by omega
   omega
+
+/-- Compatibility form of the pointwise density certificate from unrestricted
+Sylvester--Schur. -/
+theorem exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion
+    (hSS : SylvesterSchurConclusion) {x n : ℕ}
+    (hn : n ∈ admissibleBadIntervalUnion x) :
+    ∃ N' H' : ℕ,
+      (N', H') ∈ scaleNormalizedBadIntervalIndices x ∧
+      n ∈ expandedConsecutiveInterval N' H' (4 * H') ∧
+      (expandedConsecutiveInterval N' H' (4 * H')).card ≤
+        10 * ((scaleNormalizedBadIntervalUnion x) ∩
+          expandedConsecutiveInterval N' H' (4 * H')).card := by
+  apply exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion_of_scale
+    (fun hadm => hadm.exists_largePrime_of_sylvesterSchur hSS) hn
 
 /-! ## A finite one-dimensional covering lemma -/
 
@@ -450,16 +464,16 @@ theorem normalizedBadIntervalExpansionFamily_density {x : ℕ} {ab : ℕ × ℕ}
 
 /-- The admissible union is covered by the finite family of enlarged
 normalized intervals. -/
-theorem admissibleBadIntervalUnion_subset_normalizedExpansionUnion
-    (hSS : SylvesterSchurConclusion) (x : ℕ) :
+theorem admissibleBadIntervalUnion_subset_normalizedExpansionUnion_of_scale
+    (x : ℕ) (hscale : AdmissibleSylvesterSchurAtScale x) :
     admissibleBadIntervalUnion x ⊆
       (normalizedBadIntervalExpansionFamily x).biUnion
         closedNatInterval := by
   classical
   intro n hn
   obtain ⟨N, H, hNH, hnExpanded, _hdensity⟩ :=
-    exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion
-      hSS hn
+    exists_expanded_normalized_density_of_mem_admissibleBadIntervalUnion_of_scale
+      hscale hn
   apply Finset.mem_biUnion.mpr
   refine ⟨normalizedBadIntervalExpansionEndpoints (N, H), ?_, ?_⟩
   · apply Finset.mem_image.mpr
@@ -467,16 +481,25 @@ theorem admissibleBadIntervalUnion_subset_normalizedExpansionUnion
   · rw [closedNatInterval_normalizedBadIntervalExpansionEndpoints]
     exact hnExpanded
 
+/-- Compatibility cover from unrestricted Sylvester--Schur. -/
+theorem admissibleBadIntervalUnion_subset_normalizedExpansionUnion
+    (hSS : SylvesterSchurConclusion) (x : ℕ) :
+    admissibleBadIntervalUnion x ⊆
+      (normalizedBadIntervalExpansionFamily x).biUnion
+        closedNatInterval :=
+  admissibleBadIntervalUnion_subset_normalizedExpansionUnion_of_scale
+    x (fun hadm => hadm.exists_largePrime_of_sylvesterSchur hSS)
+
 /-- Completed finite maximal-function transfer after Lemma 6.2.  The union of
 all admissible intervals has cardinality at most thirty times the union of the
 corrected comparable-scale normalized intervals. -/
-theorem card_admissibleBadIntervalUnion_le_thirty_mul_normalized
-    (hSS : SylvesterSchurConclusion) (x : ℕ) :
+theorem card_admissibleBadIntervalUnion_le_thirty_mul_normalized_of_scale
+    (x : ℕ) (hscale : AdmissibleSylvesterSchurAtScale x) :
     (admissibleBadIntervalUnion x).card ≤
       30 * (scaleNormalizedBadIntervalUnion x).card := by
   classical
   have hcover :=
-    admissibleBadIntervalUnion_subset_normalizedExpansionUnion hSS x
+    admissibleBadIntervalUnion_subset_normalizedExpansionUnion_of_scale x hscale
   have hweak := card_biUnion_closedNatInterval_le_of_density
     (normalizedBadIntervalExpansionFamily x)
     (scaleNormalizedBadIntervalUnion x) 10
@@ -488,5 +511,13 @@ theorem card_admissibleBadIntervalUnion_le_thirty_mul_normalized
             closedNatInterval).card := Finset.card_le_card hcover
     _ ≤ 3 * 10 * (scaleNormalizedBadIntervalUnion x).card := hweak
     _ = 30 * (scaleNormalizedBadIntervalUnion x).card := by omega
+
+/-- Compatibility maximal transfer from unrestricted Sylvester--Schur. -/
+theorem card_admissibleBadIntervalUnion_le_thirty_mul_normalized
+    (hSS : SylvesterSchurConclusion) (x : ℕ) :
+    (admissibleBadIntervalUnion x).card ≤
+      30 * (scaleNormalizedBadIntervalUnion x).card :=
+  card_admissibleBadIntervalUnion_le_thirty_mul_normalized_of_scale
+    x (fun hadm => hadm.exists_largePrime_of_sylvesterSchur hSS)
 
 end Tao2026

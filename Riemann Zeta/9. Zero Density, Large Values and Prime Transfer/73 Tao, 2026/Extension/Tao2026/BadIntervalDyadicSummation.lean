@@ -265,15 +265,12 @@ theorem exists_taoBadIntervalDyadicTail_logSaving
         mul_le_mul_of_nonneg_left hweights hK.le
       _ = 4 * K * taoDyadicBadOneTermLogWeight ε L := by ring
 
-/-- After enlarging the epsilon-dependent constant, the finitely many early
-dyadic windows can be included as well. -/
-theorem exists_taoBadIntervalDyadicPartialSums_logSaving
-    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
-    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
-    (hSS : SylvesterSchurConclusion)
-    (h16ii : TaoLemma16iiConclusion)
+/-- Dyadic-tail summation from the packaged local window estimate. -/
+theorem exists_taoBadIntervalDyadicTail_logSaving_of_window
+    (hwindow : TaoBadIntervalDyadicWindowLogSavingConclusion)
     (hratio : TaoBadOneTermDyadicRatioConclusion) :
-    ∃ q : ℕ → ℕ,
+    ∃ q : ℕ → ℕ, ∃ K : ℝ,
+      0 < K ∧
       Tendsto q atTop atTop ∧
       Tendsto (fun x =>
         Real.log (taoPrimeTupleSlowLowerCutoff q x) /
@@ -282,13 +279,126 @@ theorem exists_taoBadIntervalDyadicPartialSums_logSaving
         Real.log (taoPrimeTupleSlowUpperCutoff q x) /
           Real.log (taoZ x)) atTop (𝓝 1) ∧
       ∀ ε : ℝ, 0 < ε →
-        ∃ A : ℝ, 0 < A ∧ ∃ R : ℕ, ∀ L : ℕ, R ≤ L →
-          ∑ r ∈ range (L + 1),
+        ∃ R : ℕ, 2 ≤ R ∧ ∀ L : ℕ, R ≤ L →
+            (∑ r ∈ Icc R L,
+                ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+              4 * K * taoDyadicBadOneTermLogWeight ε L) ∧
+            (∑ r ∈ Icc R L, taoDyadicBadOneTermLogWeight ε r ≤
+              4 * taoDyadicBadOneTermLogWeight ε L) := by
+  obtain ⟨q, K, hK, hq, hlower, hupper, hlocal⟩ := hwindow
+  refine ⟨q, K, hK, hq, hlower, hupper, ?_⟩
+  intro ε hε
+  obtain ⟨Rsum, hsum⟩ :=
+    exists_forall_sum_Icc_taoDyadicBadOneTermLogWeight_le hratio ε
+  have hpow : Tendsto (fun r : ℕ => 2 ^ r) atTop atTop :=
+    tendsto_pow_atTop_atTop_of_one_lt (by norm_num)
+  have hlocalPow : ∀ᶠ r : ℕ in atTop,
+      ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+        K * taoDyadicBadOneTermLogWeight ε r := by
+    have h := hpow.eventually (hlocal ε hε)
+    simpa only [taoDyadicBadOneTermLogWeight] using h
+  obtain ⟨Rlocal, hRlocal⟩ := eventually_atTop.1 hlocalPow
+  let R := max (max Rsum Rlocal) 2
+  refine ⟨R, le_max_right _ _, fun L hRL => ?_⟩
+  have hRsum : Rsum ≤ R := le_trans (le_max_left _ _) (le_max_left _ _)
+  have hRlocal' : Rlocal ≤ R :=
+    le_trans (le_max_right Rsum Rlocal) (le_max_left _ _)
+  have hsum' := hsum L (hRsum.trans hRL)
+  have hterm : ∀ r ∈ Icc R L,
+      ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+        K * taoDyadicBadOneTermLogWeight ε r := by
+    intro r hr
+    exact hRlocal r (hRlocal'.trans (Finset.mem_Icc.mp hr).1)
+  have hweights :
+      ∑ r ∈ Icc R L, taoDyadicBadOneTermLogWeight ε r ≤
+        4 * taoDyadicBadOneTermLogWeight ε L := by
+    exact (Finset.sum_le_sum_of_subset_of_nonneg
+      (show Icc R L ⊆ Icc Rsum L by
+        intro r hr
+        exact Finset.mem_Icc.mpr
+          ⟨hRsum.trans (Finset.mem_Icc.mp hr).1, (Finset.mem_Icc.mp hr).2⟩)
+      (fun _ _ _ => taoDyadicBadOneTermLogWeight_nonneg ε _)).trans hsum'
+  refine ⟨?_, hweights⟩
+  calc
+      ∑ r ∈ Icc R L,
+          ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+          ∑ r ∈ Icc R L, K * taoDyadicBadOneTermLogWeight ε r :=
+        Finset.sum_le_sum fun r hr => hterm r hr
+      _ = K * ∑ r ∈ Icc R L, taoDyadicBadOneTermLogWeight ε r := by
+        rw [Finset.mul_sum]
+      _ ≤ K * (4 * taoDyadicBadOneTermLogWeight ε L) :=
+        mul_le_mul_of_nonneg_left hweights hK.le
+      _ = 4 * K * taoDyadicBadOneTermLogWeight ε L := by ring
+
+/-- The complete dyadic tail no longer needs unrestricted Sylvester--Schur. -/
+theorem exists_taoBadIntervalDyadicTail_logSaving_of_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    ∃ q : ℕ → ℕ, ∃ K : ℝ,
+      0 < K ∧
+      Tendsto q atTop atTop ∧
+      Tendsto (fun x =>
+        Real.log (taoPrimeTupleSlowLowerCutoff q x) /
+          Real.log (taoZ x)) atTop (𝓝 1) ∧
+      Tendsto (fun x =>
+        Real.log (taoPrimeTupleSlowUpperCutoff q x) /
+          Real.log (taoZ x)) atTop (𝓝 1) ∧
+      ∀ ε : ℝ, 0 < ε →
+        ∃ R : ℕ, 2 ≤ R ∧ ∀ L : ℕ, R ≤ L →
+            (∑ r ∈ Icc R L,
+                ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+              4 * K * taoDyadicBadOneTermLogWeight ε L) ∧
+            (∑ r ∈ Icc R L, taoDyadicBadOneTermLogWeight ε r ≤
+              4 * taoDyadicBadOneTermLogWeight ε L) :=
+  exists_taoBadIntervalDyadicTail_logSaving_of_window
+    (taoBadIntervalDyadicWindowLogSaving_of_explicitBurgess hC hburgess h16ii)
+    hratio
+
+/-- The complete conclusion delivered by dyadic-tail summation. -/
+abbrev TaoBadIntervalDyadicTailLogSavingConclusion : Prop :=
+  ∃ q : ℕ → ℕ, ∃ K : ℝ,
+    0 < K ∧
+    Tendsto q atTop atTop ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowLowerCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowUpperCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    ∀ ε : ℝ, 0 < ε →
+      ∃ R : ℕ, 2 ≤ R ∧ ∀ L : ℕ, R ≤ L →
+          (∑ r ∈ Icc R L,
               ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
-            A * taoDyadicBadOneTermLogWeight ε L := by
+            4 * K * taoDyadicBadOneTermLogWeight ε L) ∧
+          (∑ r ∈ Icc R L, taoDyadicBadOneTermLogWeight ε r ≤
+            4 * taoDyadicBadOneTermLogWeight ε L)
+
+/-- The complete conclusion after absorbing the finitely many early dyadic
+windows. -/
+abbrev TaoBadIntervalDyadicPartialSumsLogSavingConclusion : Prop :=
+  ∃ q : ℕ → ℕ,
+    Tendsto q atTop atTop ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowLowerCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    Tendsto (fun x =>
+      Real.log (taoPrimeTupleSlowUpperCutoff q x) /
+        Real.log (taoZ x)) atTop (𝓝 1) ∧
+    ∀ ε : ℝ, 0 < ε →
+      ∃ A : ℝ, 0 < A ∧ ∃ R : ℕ, ∀ L : ℕ, R ≤ L →
+        ∑ r ∈ range (L + 1),
+            ((nontrivialBadNumbersInDyadicWindow (2 ^ r)).card : ℝ) ≤
+          A * taoDyadicBadOneTermLogWeight ε L
+
+/-- After enlarging the epsilon-dependent constant, the finitely many early
+dyadic windows can be included as well. -/
+theorem exists_taoBadIntervalDyadicPartialSums_logSaving_of_tail
+    (htailConclusion : TaoBadIntervalDyadicTailLogSavingConclusion) :
+    TaoBadIntervalDyadicPartialSumsLogSavingConclusion := by
   obtain ⟨q, K, hK, hq, hlower, hupper, htail⟩ :=
-    exists_taoBadIntervalDyadicTail_logSaving
-      hC hburgess hSS h16ii hratio
+    htailConclusion
   refine ⟨q, hq, hlower, hupper, ?_⟩
   intro ε hε
   obtain ⟨R, hRtwo, hR⟩ := htail ε hε
@@ -342,6 +452,31 @@ theorem exists_taoBadIntervalDyadicPartialSums_logSaving
     _ = A * taoDyadicBadOneTermLogWeight ε L := by
       dsimp only [A]
       ring
+
+/-- Compatibility form of the partial-sum estimate using the global
+Sylvester--Schur interface. -/
+theorem exists_taoBadIntervalDyadicPartialSums_logSaving
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (hSS : SylvesterSchurConclusion)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    TaoBadIntervalDyadicPartialSumsLogSavingConclusion :=
+  exists_taoBadIntervalDyadicPartialSums_logSaving_of_tail
+    (exists_taoBadIntervalDyadicTail_logSaving
+      hC hburgess hSS h16ii hratio)
+
+/-- The complete dyadic partial sums no longer need unrestricted
+Sylvester--Schur. -/
+theorem exists_taoBadIntervalDyadicPartialSums_logSaving_of_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    TaoBadIntervalDyadicPartialSumsLogSavingConclusion :=
+  exists_taoBadIntervalDyadicPartialSums_logSaving_of_tail
+    (exists_taoBadIntervalDyadicTail_logSaving_of_explicitBurgess
+      hC hburgess h16ii hratio)
 
 /-! ## Comparison of the top dyadic endpoint with the original cutoff -/
 
@@ -427,15 +562,12 @@ theorem exists_eventually_taoDyadicTopLogWeight_le
     _ = D * ((badOneTermCount x : ℝ) /
           Real.log x ^ (1 - ε)) := by ring
 
-/-- Conditional global logarithmic saving in Theorem 1.7.  The proof now
-contains the exact finite dyadic cover and its summation; the remaining
-analytic inputs are displayed explicitly in the hypotheses. -/
-theorem taoTheorem17_logPowerSaving_of_badOneTermDyadicRatio
-    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
-    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
-    (hSS : SylvesterSchurConclusion)
+/-- Global logarithmic saving from the packaged dyadic partial sums.  This
+separates the exact finite dyadic cover from the upstream interval input. -/
+theorem taoTheorem17_logPowerSaving_of_partialSums
     (h16ii : TaoLemma16iiConclusion)
-    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    (hpartialConclusion :
+      TaoBadIntervalDyadicPartialSumsLogSavingConclusion) :
     LogPowerSavingRelative
       (fun x => (nontrivialBadCount x : ℝ))
       (fun x => (badOneTermCount x : ℝ)) := by
@@ -447,8 +579,7 @@ theorem taoTheorem17_logPowerSaving_of_badOneTermDyadicRatio
   have hδε : δ ≤ ε := min_le_left _ _
   have hδone : δ ≤ 1 := (min_le_right _ _).trans (by norm_num)
   obtain ⟨q, hq, hlower, hupper, hpartial⟩ :=
-    exists_taoBadIntervalDyadicPartialSums_logSaving
-      hC hburgess hSS h16ii hratio
+    hpartialConclusion
   obtain ⟨A, hA, R, hR⟩ := hpartial δ hδ
   obtain ⟨D, hD, htop⟩ :=
     exists_eventually_taoDyadicTopLogWeight_le h16ii hδone
@@ -515,6 +646,36 @@ theorem taoTheorem17_logPowerSaving_of_badOneTermDyadicRatio
   simpa only [Real.norm_eq_abs,
     abs_of_nonneg (show 0 ≤ (nontrivialBadCount x : ℝ) by positivity),
     abs_of_nonneg (div_nonneg (Nat.cast_nonneg _) hdenε.le)] using hresult
+
+/-- Compatibility form of the logarithmic saving using the global
+Sylvester--Schur interface. -/
+theorem taoTheorem17_logPowerSaving_of_badOneTermDyadicRatio
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (hSS : SylvesterSchurConclusion)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    LogPowerSavingRelative
+      (fun x => (nontrivialBadCount x : ℝ))
+      (fun x => (badOneTermCount x : ℝ)) :=
+  taoTheorem17_logPowerSaving_of_partialSums h16ii
+    (exists_taoBadIntervalDyadicPartialSums_logSaving
+      hC hburgess hSS h16ii hratio)
+
+/-- The logarithmic saving required by Theorem 1.7 follows from explicit
+Burgess and the analytic one-term inputs, without unrestricted
+Sylvester--Schur. -/
+theorem taoTheorem17_logPowerSaving_of_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    LogPowerSavingRelative
+      (fun x => (nontrivialBadCount x : ℝ))
+      (fun x => (badOneTermCount x : ℝ)) :=
+  taoTheorem17_logPowerSaving_of_partialSums h16ii
+    (exists_taoBadIntervalDyadicPartialSums_logSaving_of_explicitBurgess
+      hC hburgess h16ii hratio)
 
 /-- The logarithmic saving for the nontrivial part, together with Lemma
 1.6(i) for the one-term part, implies the quotient-power asymptotic for the
@@ -593,6 +754,21 @@ theorem taoTheorem17_of_badOneTermDyadicRatio
     TaoTheorem17Conclusion := by
   have hsaving := taoTheorem17_logPowerSaving_of_badOneTermDyadicRatio
     hC hburgess hSS h16ii hratio
+  exact ⟨hsaving,
+    badCount_quotientPowerScale_of_logPowerSavingRelative hsaving⟩
+
+/-- Exact form of Tao's Theorem 1.7 from explicit Burgess and the two
+one-term analytic inputs.  Unrestricted Sylvester--Schur is not needed:
+the eventual start-uniform theorem supplies every sufficiently large
+admissible dyadic scale. -/
+theorem taoTheorem17_of_explicitBurgess
+    {C : ℝ} {H₀ : ℕ} (hC : 0 ≤ C)
+    (hburgess : TaoExplicitCubefreeBurgessBound C H₀)
+    (h16ii : TaoLemma16iiConclusion)
+    (hratio : TaoBadOneTermDyadicRatioConclusion) :
+    TaoTheorem17Conclusion := by
+  have hsaving := taoTheorem17_logPowerSaving_of_explicitBurgess
+    hC hburgess h16ii hratio
   exact ⟨hsaving,
     badCount_quotientPowerScale_of_logPowerSavingRelative hsaving⟩
 

@@ -836,6 +836,26 @@ def TaoPrimitiveCubefreeBurgessCompleteWeilBound : Prop :=
     ‖burgessCompleteCorrelation χ uv‖ ≤
       burgessCompositeWeilFactor q r * burgessTupleGcdWeight q uv
 
+/-- The exact complete-sum input used by Tao's chosen fourteenth moment.
+Unlike the generic convenience predicate above, this proposition fixes
+`r = 7` and therefore quantifies only over fourteen shifts. -/
+def TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven : Prop :=
+  ∀ (q B : ℕ) [NeZero q] (χ : DirichletCharacter ℂ q)
+    (uv : (Fin 7 → Fin B) × (Fin 7 → Fin B)),
+    TaoCubefree q →
+    DirichletCharacter.IsPrimitive χ →
+    uv ∈ burgessNondegenerateTuples B 7 →
+    ‖burgessCompleteCorrelation χ uv‖ ≤
+      burgessCompositeWeilFactor q 7 * burgessTupleGcdWeight q uv
+
+/-- The generic complete-sum predicate specializes to the only moment order
+used in the final Burgess argument. -/
+theorem TaoPrimitiveCubefreeBurgessCompleteWeilBound.toRSeven
+    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBound) :
+    TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven := by
+  intro q B _ χ uv hq hχ huv
+  exact hweil q B 7 χ uv (by norm_num) hq hχ huv
+
 /-- The unconditional complete-correlation bound obtained term by term. -/
 theorem norm_burgessCompleteCorrelation_le_modulus
     {q B r : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q)
@@ -1022,34 +1042,70 @@ theorem burgess_shift_moment_le_of_completeWeil_divisor
 /-- Literal `r = 7` version of the composite-Weil/gcd-sum reduction. -/
 theorem burgess_shift_fourteenth_moment_le_of_completeWeil
     {q B : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q)
-    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBound)
+    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven)
     (hq : TaoCubefree q) (hχ : DirichletCharacter.IsPrimitive χ) :
     (∑ x : ZMod q, ‖burgessShiftSum B χ x‖ ^ 14 : ℝ) ≤
       ((7 ^ 14 * B ^ 7 : ℕ) : ℝ) * q +
         burgessCompositeWeilFactor q 7 *
           ∑ uv ∈ burgessNondegenerateTuples B 7,
             (burgessTupleGcdWeight q uv : ℝ) := by
-  simpa using burgess_shift_moment_le_of_completeWeil
-    (r := 7) χ hweil (by norm_num) hq hχ
+  have hsplit := burgess_shift_moment_le_degenerate_add_nondegenerate χ
+    (fun uv => burgessCompositeWeilFactor q 7 * burgessTupleGcdWeight q uv)
+    (fun uv huv => hweil q B χ uv hq hχ huv)
+  have hbadNat : (burgessDegenerateTuples B 7).card ≤
+      7 ^ 14 * B ^ 7 := by
+    simpa using card_burgessDegenerateTuples_le B 7
+  have hbad : ((burgessDegenerateTuples B 7).card : ℝ) ≤
+      ((7 ^ 14 * B ^ 7 : ℕ) : ℝ) := by exact_mod_cast hbadNat
+  calc
+    (∑ x : ZMod q, ‖burgessShiftSum B χ x‖ ^ 14 : ℝ) ≤
+        ((burgessDegenerateTuples B 7).card : ℝ) * q +
+          ∑ uv ∈ burgessNondegenerateTuples B 7,
+            burgessCompositeWeilFactor q 7 *
+              (burgessTupleGcdWeight q uv : ℝ) := by
+      simpa using hsplit
+    _ = ((burgessDegenerateTuples B 7).card : ℝ) * q +
+        burgessCompositeWeilFactor q 7 *
+          ∑ uv ∈ burgessNondegenerateTuples B 7,
+            (burgessTupleGcdWeight q uv : ℝ) := by
+      rw [Finset.mul_sum]
+    _ ≤ ((7 ^ 14 * B ^ 7 : ℕ) : ℝ) * q +
+        burgessCompositeWeilFactor q 7 *
+          ∑ uv ∈ burgessNondegenerateTuples B 7,
+            (burgessTupleGcdWeight q uv : ℝ) := by
+      exact add_le_add
+        (mul_le_mul_of_nonneg_right hbad (Nat.cast_nonneg q)) le_rfl
 
 /-- Literal `r = 7` divisor-count form of the composite-Weil moment bound. -/
 theorem burgess_shift_fourteenth_moment_le_of_completeWeil_divisor
     {q B : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q)
-    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBound)
+    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven)
     (hq : TaoCubefree q) (hχ : DirichletCharacter.IsPrimitive χ) :
     (∑ x : ZMod q, ‖burgessShiftSum B χ x‖ ^ 14 : ℝ) ≤
       ((7 ^ 14 * B ^ 7 : ℕ) : ℝ) * q +
         burgessCompositeWeilFactor q 7 *
           ((14 * B * (2 * B * q.divisors.card) ^ 13 : ℕ) : ℝ) := by
-  simpa using burgess_shift_moment_le_of_completeWeil_divisor
-    (r := 7) χ hweil (by norm_num) hq hχ
+  have hmoment := burgess_shift_fourteenth_moment_le_of_completeWeil
+    (B := B) χ hweil hq hχ
+  have hsumNat := sum_burgessTupleGcdWeight_le q B 7
+  have hsumReal :
+      (∑ uv ∈ burgessNondegenerateTuples B 7,
+          (burgessTupleGcdWeight q uv : ℝ)) ≤
+        ((14 * B * (2 * B * q.divisors.card) ^ 13 : ℕ) : ℝ) := by
+    norm_num only [Nat.reduceMul, Nat.reduceSub] at hsumNat
+    exact_mod_cast hsumNat
+  have hfactor0 : 0 ≤ burgessCompositeWeilFactor q 7 := by
+    unfold burgessCompositeWeilFactor
+    positivity
+  exact hmoment.trans (add_le_add le_rfl
+    (mul_le_mul_of_nonneg_left hsumReal hfactor0))
 
 /-- After the elementary divisor and prime-factor losses are absorbed, the
 `r = 7` moment has the analytic shape used by Burgess: a diagonal term plus
 `C_ε B^14 q^(1/2+ε)`.  The complete Weil estimate is now the only hypothesis
 in this finite-moment statement. -/
 theorem exists_burgess_shift_fourteenth_moment_le_of_completeWeil_rpow
-    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBound)
+    (hweil : TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven)
     {ε : ℝ} (hε : 0 < ε) :
     ∃ C : ℝ, 0 < C ∧
       ∀ {q B : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q),

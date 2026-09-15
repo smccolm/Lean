@@ -2,6 +2,7 @@ import Tao2026.FactorialExtraction
 import Tao2026.FactorialLargeSieve
 import Tao2026.SmoothNumbers
 import Tao2026.VeryBadIntervals
+import Tao2026.SylvesterSchurEventual
 
 /-!
 # Basic estimates for bad intervals
@@ -192,11 +193,41 @@ theorem IsAdmissibleBadInterval.start_bounds {x N H : ℕ}
       (Nat.div_lt_iff_lt_mul (by omega : 0 < 2)).mp hdivLt
     omega
 
+/-- The exact Sylvester--Schur datum needed by admissible intervals at one
+dyadic scale. -/
+def AdmissibleSylvesterSchurAtScale (x : ℕ) : Prop :=
+  ∀ {N H : ℕ}, IsAdmissibleBadInterval x N H →
+    ∃ p : ℕ, p.Prime ∧ H < p ∧ p ∣ consecutiveProduct N H
+
+/-- The admissible-scale form of Sylvester--Schur is unconditional eventually.
+The start of every admissible interval grows with `x`; the only equality case
+`H=N` is supplied directly by Bertrand. -/
+theorem eventually_admissibleSylvesterSchurAtScale :
+    ∀ᶠ x : ℕ in Filter.atTop, AdmissibleSylvesterSchurAtScale x := by
+  obtain ⟨M, hM, hlarge⟩ := exists_sylvesterSchurAboveStart
+  filter_upwards [Filter.eventually_ge_atTop (4 * M)] with x hx
+  intro N H hadm
+  obtain ⟨hNltx, hxLe⟩ := hadm.start_bounds
+  obtain ⟨hHTwo, hbad, _⟩ := hadm
+  have hMN : M ≤ N := by omega
+  have hHleN := hbad.length_le_start hHTwo
+  rcases hHleN.eq_or_lt with hEq | hHltN
+  · subst N
+    obtain ⟨q, hq, hqLower, hqUpper⟩ :=
+      taoProposition23i (by omega : 2 ≤ H + H)
+    have hHltq : H < q := by omega
+    have hsumLt : H + H < 2 * q := by omega
+    exact ⟨q, hq, hHltq,
+      (prime_dvd_consecutiveProduct_exactly_once
+        (N := H) (H := H) hq hHltq hqUpper hsumLt).1⟩
+  · exact hlarge hMN (by omega) hHltN
+
 /-- Tao's Lemma 6.1 arithmetic package.  It records the exact finite bounds
 behind `N \asymp x`, the large squared prime factor, its smooth cofactor, and
 the smoothness of every element of the admissible interval. -/
-theorem IsAdmissibleBadInterval.basic_estimates_of_sylvesterSchur
-    (hSS : SylvesterSchurConclusion) {x N H : ℕ}
+theorem IsAdmissibleBadInterval.basic_estimates_of_largePrime
+    {x N H : ℕ}
+    (hlarge : ∃ q : ℕ, q.Prime ∧ H < q ∧ q ∣ consecutiveProduct N H)
     (hadm : IsAdmissibleBadInterval x N H) :
     H ≤ N ∧ N < x ∧ x ≤ 4 * N + 1 ∧
       ∃ p k m : ℕ, p.Prime ∧ H < p ∧
@@ -209,8 +240,11 @@ theorem IsAdmissibleBadInterval.basic_estimates_of_sylvesterSchur
   obtain ⟨hH, hbad, _⟩ := hadm
   have hHleN := hbad.length_le_start hH
   obtain ⟨p, hp, hpMax, hpSq⟩ := hbad.exists_largestPrimeData
-  have hHltp := hbad.length_lt_largestPrime_of_sylvesterSchur
-    hSS hH hpMax
+  obtain ⟨q, hq, hHltq, hqDvd⟩ := hlarge
+  have hqLeP : q ≤ p :=
+    (largestPrimeFactor_eq_some_iff.mp hpMax).2 q
+      (hq.mem_primeFactors hqDvd (consecutiveProduct_ne_zero N H))
+  have hHltp : H < p := hHltq.trans_le hqLeP
   obtain ⟨k, hk, m, hmSmooth, hkm⟩ :=
     exists_intervalElement_eq_largestPrime_sq_mul_smooth
       hHltp hp hpMax hpSq
@@ -223,5 +257,38 @@ theorem IsAdmissibleBadInterval.basic_estimates_of_sylvesterSchur
     exact intervalElement_isSmooth_largestPrime hpMax hj
   · intro j hj
     exact hbad.not_prime_of_mem hH hj
+
+/-- Unrestricted Sylvester--Schur supplies the local large-prime datum for an
+admissible interval, including the equality case via Bertrand. -/
+theorem IsAdmissibleBadInterval.exists_largePrime_of_sylvesterSchur
+    {x N H : ℕ} (hadm : IsAdmissibleBadInterval x N H)
+    (hSS : SylvesterSchurConclusion) :
+    ∃ q : ℕ, q.Prime ∧ H < q ∧ q ∣ consecutiveProduct N H := by
+  obtain ⟨hH, hbad, _⟩ := hadm
+  have hHleN := hbad.length_le_start hH
+  rcases hHleN.eq_or_lt with hEq | hHltN
+  · subst N
+    obtain ⟨q, hq, hqLower, hqUpper⟩ :=
+      taoProposition23i (by omega : 2 ≤ H + H)
+    have hHltq : H < q := by omega
+    have hsumLt : H + H < 2 * q := by omega
+    exact ⟨q, hq, hHltq,
+      (prime_dvd_consecutiveProduct_exactly_once
+        (N := H) (H := H) hq hHltq hqUpper hsumLt).1⟩
+  · exact hSS (by omega) hHltN
+
+/-- Compatibility form of Lemma 6.1 from unrestricted Sylvester--Schur. -/
+theorem IsAdmissibleBadInterval.basic_estimates_of_sylvesterSchur
+    (hSS : SylvesterSchurConclusion) {x N H : ℕ}
+    (hadm : IsAdmissibleBadInterval x N H) :
+    H ≤ N ∧ N < x ∧ x ≤ 4 * N + 1 ∧
+      ∃ p k m : ℕ, p.Prime ∧ H < p ∧
+        largestPrimeFactor (consecutiveProduct N H) = some p ∧
+        k ∈ consecutiveInterval N H ∧ IsSmooth m p ∧
+        k = p ^ 2 * m ∧ p ^ 2 * m ≤ 2 * x ∧
+        (∀ j ∈ consecutiveInterval N H, IsSmooth j p) ∧
+        ∀ j ∈ consecutiveInterval N H, ¬j.Prime :=
+  IsAdmissibleBadInterval.basic_estimates_of_largePrime
+    (hadm.exists_largePrime_of_sylvesterSchur hSS) hadm
 
 end Tao2026
