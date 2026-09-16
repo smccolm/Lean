@@ -582,7 +582,17 @@ Vinogradov component envelope is now absorbed uniformly into
 `3K(log P)^(-T)`, including both critical-deletion terms, under the explicit
 budget `T+2≤3A`. The remaining local high-scale input is the actual
 Vinogradov proposition. Conditional on it, the canonical quantitative Type II
-double-block assembly is now complete. The
+double-block squared-inner-sum assembly is now complete. The literal source
+convolution block is now connected to that estimate as well:
+`typeIIProductRestrictedOuterSum` gives its exact product-restricted outer-sum
+form, Cauchy--Schwarz feeds the squared inner sums, and bounded product support
+is enlarged exactly to the canonical Vaughan block. The actual source beta
+coefficient has norm at most one and the gamma coefficient is bounded by
+`log(2B)`, so
+`eventually_norm_weightedConvolutionProductVaughanTypeIIDoubleBlockSum_sq_le_sourceVinogradov`
+delivers the conditional estimate for the literal Type II double block.
+Finally, `norm_weightedConvolutionProductSum_le_sum_sqrt_vaughanDoubleBlocks`
+reassembles arbitrary block estimates into the full convolution norm. The
 conditional estimate is already converted to the exact hybrid callback
 `Q(4·kernel+3(log P)^(-T))`; canonical Vaughan inner-block membership supplies
 the transformed-scale upper bound with its fixed factor `5`. The complementary inner singleton-band
@@ -597,8 +607,10 @@ and then to the exact outer/inner double blocks produced by Vaughan; block
 membership discharges the diameter and nonzero-index obligations. Each block
 is also proved to contain at most its chosen length, so the final estimate is
 now stated directly in `q_outer` and `q_inner` in the endpoint-free
-source-scale form, ready for logarithmic exponent
-bookkeeping. The high-frequency implication is also formalized exactly:
+source-scale form. What remains at this layer is the source regime split and
+the asymptotic summation/simplification of all block majorants, together with
+the Type I and Fourier assembly. The high-frequency implication is also
+formalized exactly:
 `(log P)^d ≤ F` and `b+t ≤ dc` imply
 `(log P)^b F^(-c) ≤ (log P)^(-t)` once `P≥e`. The high-scale arithmetic is
 also closed: `log F≤C(log P)^(3/2-ε)` converts the Vinogradov exponent to at
@@ -2206,3 +2218,438 @@ specialization of Erdős--Selfridge. Every factorial squarefree fiber is
 unconditionally bounded by two, and the public Theorem 1.10 consumer now
 requires only Theorem 2.5 and Proposition 2.3(ii), or equivalently the pinned
 Baker--Harman--Pintz input.
+
+## Prime-equidistribution release 3.25
+
+The conditional high-scale Type II estimate now reaches the literal Vaughan
+convolution term.  `TypeIIConvolutionBridge.lean` supplies the exact outer-sum
+identity, the product-restricted Cauchy--Schwarz inequality, the bounded/full
+block support equivalence, and the actual source coefficient bounds.  It also
+reassembles per-block square bounds into the full convolution norm.
+
+`TypeIISourceBlock.lean` composes this bridge with the existing mixed
+Weyl--Vinogradov squared-inner-sum theorem.  Thus, conditional only on the
+named `VinogradovExponentialSumEstimate` and its source parameter hypotheses,
+the norm square of every admitted literal source Type II double block has the
+full low-scale Weyl plus high-scale logarithmic-saving majorant.  Theorem 2.5
+is not yet claimed: proving the Vinogradov proposition, closing all source
+regime splits, summing/simplifying the Type I and Type II block bounds, and
+finishing the Fourier assembly remain.
+
+## Prime-equidistribution release 3.26
+
+The Type II source-family regime split and finite summation are now complete.
+If an outer or inner dyadic scale is below the common logarithmic subdivision
+budget, the corresponding Möbius-tail or divisor-tail coefficient vanishes
+exactly once the source cutoff dominates twice that budget.  Thus only
+large--large block pairs consume the conditional mixed Weyl--Vinogradov
+estimate.
+
+`vaughanTypeIISourceBlockMajorant` records the resulting explicit block
+majorant, and
+`eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov`
+sums its square roots over the complete literal Type II convolution.  A
+uniform block-square bound costs exactly `(log₂ B+1)^204`.  Remaining Type II
+work is to instantiate the source cutoffs and scale inequalities uniformly
+and simplify the displayed majorant to the required logarithmic saving;
+`VinogradovExponentialSumEstimate`, Type I, and Fourier closure also remain.
+
+## Prime-equidistribution release 3.27
+
+The source cutoff is now canonical rather than hypothetical:
+`vaughanSourceTailCutoff b = ⌊b^(1/3)⌋₊`.  The cube-root cutoff eventually
+dominates twice the exact `(log₂ b+1)^101` subdivision budget, and its floor
+loss is absorbed by the strict exponent gap `1/4<1/3`.  Consequently, when
+`P≤b`, it also supplies the uniform lower scale
+`2 exp((1/4) log P)≤U` needed by every surviving outer block.
+
+The family proof now uses the actual dyadic cutoff tests, deletes blocks with
+empty product support, and derives each surviving block's phase-scale premise
+from the single global inequality
+`2b (log b)^d≤|N|`.  The public canonical-cutoff theorem therefore has no
+blockwise scale hypotheses and no free cutoff parameters.  The remaining
+Type II work is the analytic `VinogradovExponentialSumEstimate` and the
+uniform simplification of the explicit summed majorant; Type I and Fourier
+closure remain downstream.
+
+## Prime-equidistribution release 3.28
+
+`TypeIISourceBlock` now fixes the derivative-order family itself to `{5,6}`.
+The fully canonical family theorem therefore exposes neither cutoff parameters
+nor an auxiliary order set.  Surviving blocks have outer endpoint above
+`B^(1/4)` and doubled inner scale above `2B^(1/4)`.
+
+Each canonical short-block length is at most `B/(log B)^100`, its outer block
+cardinality is at most that length, and `1+log q≤2log B`.  These facts replace
+the exact component-count expression by one absolute constant times
+`log B*K`, yielding the audited
+`vaughanTypeIICanonicalGeometricBlockMajorant`.  Its comparison theorem is the
+first uniform geometric compression of every exact source block.  The
+Vinogradov proposition and the remaining power/logarithm absorption across the
+full square-root sum are still explicit open tasks.
+
+## Prime-equidistribution release 3.29
+
+The Type II simplification now retains the source-critical local widths
+`2^s/(log b)^100` and `2^t/(log b)^100`.  On every nonempty product block,
+the dyadic product is at most `b`; the two expanded analytic monomials are at
+most `b²`.  Exact denominator bookkeeping therefore gives the three squared
+block exponents `298`, `197`, and `297`.
+
+The purely diagonal monomial is sharper: survival beyond the canonical inner
+cutoff gives `D²E≤b²/b^(1/4)`.  The audited
+`vaughanTypeIICanonicalPowerSavedBlockMajorant` retains this power saving, and
+the full conditional convolution theorem sums its square roots over the exact
+canonical family.  Remaining Type II work is to absorb the reciprocal-phase
+and endpoint factors, sum the resulting family bounds, and prove the named
+Vinogradov proposition.
+
+## Prime-equidistribution release 3.30
+
+The last block-dependent Type II decay factors are now eliminated.  A global
+lower bound `(log b)^d≤F` replaces `F^(-1/1024)` by
+`(log b)^(-d/1024)`, while survival beyond the outer cutoff replaces the
+inverse endpoint contribution by `b^(-1/4096)`.
+
+The resulting block-independent ledger is flattened exactly: its diagonal
+term is `b^(7/4)/(log b)^298`, and its other squared-block denominators remain
+`197` and `297`.  The complete canonical double sum is evaluated as
+`(log₂ b+1)^204 sqrt(R)` and then bounded by
+`(3 log b)^204 sqrt(R)`.  The remaining Type II work is the final choice and
+absorption of `d,T` into an arbitrary target logarithmic saving, plus the
+still-open `VinogradovExponentialSumEstimate`; Type I and Fourier closure
+remain downstream.
+
+
+## Prime-equidistribution release 3.31
+
+The flattened Type II ledger is now absorbed into an arbitrary requested
+logarithmic saving.  Under the source comparison `P≤b≤2P`, fixed powers of
+`b` dominate every logarithmic target, `log b≤2log P`, and square-root
+extraction cancels the exact family exponent `204`.
+
+For target `S≥0`, the audited specialization fixes
+`d=2048S+216064`, `T=2S+111`, and the matching Vinogradov parameter.
+It yields the literal conditional bound
+`C b/(log P)^S` for the complete canonical Type II convolution.  Thus the
+remaining Type II obstruction is the named
+`VinogradovExponentialSumEstimate` itself; quantitative Type I and the final
+Fourier assembly still remain for Theorem 2.5.
+
+## Prime-equidistribution release 3.32
+
+The literal Type I terms in Vaughan's identity are now connected to the
+one-dimensional analytic interface.  Each canonical outer block becomes an
+exact product-restricted Type I outer sum, and each inner fiber over
+`[a,b)` is identified with `[⌈a/m⌉,⌈b/m⌉)` carrying the rescaled phase
+`(N/m,M/m^j)`.
+
+The unit and `log(2B)` source coefficient envelopes are propagated through
+the full outer family.  The logarithmically weighted term also feeds the
+existing finite Abel-summation theorem directly.  Thus the remaining Type I
+boundary is quantitative cancellation for the exposed unweighted prefix
+sums, followed by the final Fourier recombination.
+
+## Prime-equidistribution release 3.33
+
+The Type I bridge now retains actual nonzero coefficient support through the
+triangle inequality. Active indices satisfy `mâ‰¤U` in the first term and
+`mâ‰¤UV` in the second, giving the exact block-cardinality bounds needed for
+quantitative summation.
+
+A uniform inner bound `Q` yields complete-family losses
+`(logâ‚‚ B+1)^102 U` and `(logâ‚‚ B+1)^102 log(2B) UV`. The remaining task is
+to obtain `Q` from high-scale reciprocal-phase cancellation and Abel
+summation, then absorb these explicit factors.
+
+## Prime-equidistribution release 3.34
+
+The Type I rescaling now includes the quantitative source-to-fiber geometry.
+The reciprocal-phase scale is exactly invariant before ceiling rounding and
+antitone afterwards.  Every source subinterval of `[P,2P)` therefore maps
+inside `[ceil(P/m),2ceil(P/m))`, and the source inequality
+`F(P) <= (P/m)^4` supplies the low-scale condition required at the rounded
+inner scale.
+
+These are finite algebraic and order-theoretic theorems, not a cancellation
+claim.  The next boundary is the endpoint buffer and effective-error premise
+of the existing four-step Weyl estimate, followed by insertion into the
+uniform Type I callback.
+
+## Prime-equidistribution release 3.35
+
+The quadratic Type I fibers now enter the analytic Weyl layer.  Each dyadic
+fiber is split exactly into at most ten canonical blocks.  On every nonempty
+block, the optimized four-step range is at most the block length, and the
+ten-block geometry supplies the endpoint margin and quadratic power bound.
+
+A new dyadic comparison shows that the reciprocal-phase scale falls by at
+most a factor four.  Thus a single source budget bounds the effective error
+at every local block scale, and the two-term Weyl estimate is proved for each
+piece.  Uniformizing the local two-term widths and summing the ten pieces
+remains before the active Type I family theorem can be instantiated.
+
+## Prime-equidistribution release 3.36
+
+All local quadratic widths are now uniformized by the source expression
+`(F/D^5+4/F)^(1/1024)`. The ten block estimates sum to one explicit bound for
+the complete dyadic interval.
+
+The same proof is exported for every subinterval of `[D,2D)`. This is the
+strong form needed for logarithmic Abel summation: every initial prefix is
+covered with the same constant and source budget. Substitution of the
+ceiling-rounded Type I parameters and uniform control over active outer
+indices remain.
+
+## Prime-equidistribution release 3.37
+
+The quadratic subinterval estimate is now specialized to every literal Type
+I fiber at `(N/m,M/m^2,ceil(P/m))`. A named admissibility predicate exposes
+the exact rounded-scale, fourth-power, and effective-error premises, while an
+explicit ten-block rescaled majorant controls both the complete unweighted
+fiber and every prefix needed for the logarithmic Abel argument.
+
+These estimates instantiate both complete active-support Vaughan callbacks.
+Thus all Type I convolution bookkeeping is closed conditionally on uniform
+active-index admissibility and a common bound `Q`. What remains is the
+source-parameter inequality which supplies those premises and absorbs the
+explicit `U`, `UV`, logarithmic, and family-count factors.
+
+## Prime-equidistribution release 3.38
+
+The Type I analytic callback now follows the source's genuine two-regime
+argument. Each rounded fiber is classified by whether its transformed phase
+scale is below or above `D^4`. The low branch uses the quadratic Weyl
+subdivision; the high branch invokes the fixed-constant Vinogradov theorem
+with its full critical-deletion envelope.
+
+This hybrid estimate holds for every fiber subinterval, feeds finite Abel
+summation, and propagates through both complete active Vaughan families. The
+paper's exponential frequency bound and a fixed-power lower bound for `D`
+now imply all eventual high-branch side conditions. Only the branch-local
+low-scale budget and the common logarithmic majorant remain to finish the
+quantitative Type I estimate.
+
+## Prime-equidistribution release 3.39
+
+The branch-local low-scale budget is now automatic. In the Weyl branch,
+`F(D) <= D^4` turns the effective-error expression into an explicit quantity
+at most one for all sufficiently large `D`; source-to-fiber ceiling
+comparison supplies the required transformed-scale lower bound.
+
+For both canonical Type I coefficient families, active support implies
+`D=ceil(P/m) >= B^(1/4)` eventually. `TypeISourceBlock.lean` combines this
+geometry with the global source frequency bounds and proves the full hybrid
+admissibility predicate for every active index. What remains is the uniform
+logarithmic absorption and summation of the already explicit hybrid
+majorants; Theorem 2.5 is not yet claimed.
+
+## Prime-equidistribution release 3.40
+
+Type I family aggregation now preserves the reciprocal outer-index decay of
+the analytic fiber length. The sum of `1/m` over either canonical active
+support is bounded by `harmonic U` or `harmonic (UV)`, and complete-family
+theorems turn every inner estimate `(P/m)Q` into a bound with only that
+harmonic loss across each short-interval family.
+
+Thus the polynomial cutoff losses `U` and `UV` no longer obstruct the target
+logarithmic saving. The remaining Type I task is to replace the current
+maximum envelope by branch-sensitive low-Weyl/high-Vinogradov absorption and
+feed its `(P/m)` bound into these harmonic aggregators.
+
+## Prime-equidistribution release 3.41
+
+The branch-sensitive Type I majorant is now fully absorbed. High fibers use
+only the source Vinogradov envelope, while low fibers reduce to the explicit
+width `(1/D + 16/(log B)^d)^(1/1024)` and use the active quarter-power lower
+bound for `D`. No unused Weyl expression survives in the high branch.
+
+Both complete canonical Vaughan Type I families now satisfy arbitrary
+logarithmic savings. The exact ledger loses 104 powers of the logarithm;
+the exported theorems use `T=S+104` and the explicit budgets
+`S+106<=3A` and `1024*(S+105)+1<=d`. Quantitative Type I is therefore closed,
+conditional on the named source Vinogradov estimate. The remaining Theorem
+2.5 work begins with the Type I/Type II/Vaughan assembly and then the
+Mangoldt, prime, and Fourier transfer layers.
+
+## Prime-equidistribution release 3.42
+
+The complete Type I and Type II estimates are now inserted into the literal
+Vaughan decomposition. `MangoldtSourceBlock.lean` proves that the canonical
+initial cutoff term vanishes on every sufficiently large dyadic block and
+then combines the remaining three convolution terms without changing their
+signs, coefficients, supports, or phase.
+
+The resulting theorem gives arbitrary logarithmic saving for the quadratic
+Mangoldt reciprocal-phase sum using the shared exponent
+`2048*S+216064`. This closes the Vaughan assembly itself, conditional on the
+named Vinogradov estimate. Remaining work is to consolidate the equivalent
+scale and `|N|` hypotheses into the source-facing frequency range and carry
+the Mangoldt estimate through prime partial summation and Fourier assembly.
+
+## Prime-equidistribution release 3.43
+
+The quadratic Mangoldt estimate now exposes exactly one source-frequency
+range. The lower `|N|` inequality supplies the logarithmic Type I scale and
+the fixed threshold 64, while `F(N,N,2,P) <= 2|N|` transfers the upper
+frequency bound. Thus the completed Vaughan theorem no longer asks callers
+to repeat equivalent Type I and Type II hypotheses.
+
+What remains in this chain is the Mangoldt-to-prime conversion and insertion
+into the existing Fourier assembly for smooth periodic weights.
+
+## Prime-equidistribution release 3.44
+
+`PrimeSourceBlock.lean` now transports the unified quadratic Mangoldt bound
+to unweighted primes. It aligns the half-open prime interval with the frozen
+prime-power-tail convention exactly, proves a dyadic quarter-power tail
+bound, and absorbs that tail into every requested logarithmic saving.
+
+Uniform control of all initial prefixes gives the log-weighted prime bound;
+reverse Abel summation then yields the complete high-frequency unweighted
+quadratic prime exponential-sum estimate under the same single source range.
+The remaining Fourier boundary is the logarithmic integral for nonzero modes
+and its combination with the low-frequency and zero-mode contributions.
+
+## Prime-equidistribution release 3.45
+
+`FourierSourceBlock.lean` now connects the completed prime estimate to the
+literal Fourier definitions in the diagonal `(1,1)` case. The half-open
+Fourier prime sum is exactly the reciprocal-phase sum with coefficients
+`(N,N)`, and integration by parts gives the matching logarithmic integral the
+explicit bound `6*P^2/(|N|*log P)` on a dyadic subinterval.
+
+The combined theorem bounds the diagonal Fourier discrepancy by the prime
+logarithmic saving plus this inverse-frequency integral term. This release
+does not claim general Fourier completion: a mode `(q1,q2)` produces unequal
+phase coefficients `(q1*N,q2*N)`, which the current diagonal Type I/II source
+theorems do not cover. The exact general-mode identification, derivative, and
+same-sign nonstationarity are nevertheless now formalized. Unequal-parameter
+high-frequency estimates, opposite-sign stationary cases, and the low-
+frequency and zero-mode branches remain open.
+
+## Prime-equidistribution release 3.46
+
+`UnequalTypeIIVinogradov.lean` generalizes the complete high-pair Type II
+Vinogradov interface from the diagonal phase `(N,N)` to independent
+coefficients `(N,M)`. The transformed correlation uses the linear parameter
+derived from `N` and the quadratic parameter derived from `M`; the existing
+general dyadic-block estimate bounds their combined scale by the same factor
+five under separate source upper bounds.
+
+The fixed envelope, eventual logarithmic saving, decay-kernel callback, and
+canonical Vaughan-block callback are all compiled and audited in this form.
+The low-scale Weyl distance-kernel comparison remains diagonal, so this does
+not yet constitute the full unequal Type II family estimate or Theorem 2.5.
+
+## Prime-equidistribution release 3.47
+
+`UnequalTypeIIWeyl.lean` supplies the missing low-scale Type II comparison for
+independent reciprocal coefficients `(N,M)`. The proof uses the quadratic
+transformed term together with the canonical inner-band lower bound, then
+combines it with the linear transformed term by a max split.
+
+The unequal estimate now passes through the fixed-block logarithmic wrapper,
+near/far kernel aggregation, the Vinogradov high-pair callback, canonical
+Vaughan inner blocks, and an actual weighted Vaughan Type II double block.
+Summation over the complete double-block family and the ensuing unequal
+Mangoldt/prime/Fourier endpoints remain the next boundary.
+
+## Prime-equidistribution release 3.48
+
+The complete Vaughan Type II family now retains independent reciprocal-phase
+coefficients. `UnequalTypeIISourceBlock.lean` performs finite block-family
+summation and every subsequent majorant compression through arbitrary
+logarithmic saving. Its blockwise synthetic diagonal coefficient has exactly
+the unequal phase scale, permitting exact reuse of the prior scalar
+compression proof.
+
+`UnequalMangoldtSourceBlock.lean` combines this result with the already-
+general Type I estimates and exports a unified source range with separate
+upper bounds for the two coefficients. `UnequalPrimeSourceBlock.lean`
+completes prime-power removal and reverse Abel summation. Thus all modes with
+nonzero quadratic coefficient now have a prime exponential-sum estimate.
+The remaining Fourier work is the zero-quadratic branch, general integral
+estimates (especially opposite-sign stationary geometry), low frequencies,
+and final mode assembly.
+
+## Prime-equidistribution release 3.49
+
+`UnequalFourierSourceBlock.lean` now controls the logarithmically weighted
+integral for independent same-sign reciprocal coefficients. The positive
+chamber is proved by an exact integration-by-parts amplitude and monotonicity
+calculation; conjugation supplies the negative chamber with the same bound.
+
+The result is combined with the unequal prime estimate to give the literal
+Fourier-mode discrepancy for both same-sign chambers. Remaining work is
+localized to opposite-sign stationary geometry, modes on the coordinate
+axes, low frequencies, and the finite Fourier assembly.
+
+## Prime-equidistribution release 3.50
+
+`StationaryFourierSourceBlock.lean` formalizes the exact critical point
+`-2*B/A`, uniqueness of derivative vanishing, and factorization of derivative
+size as `|A|` times distance to the critical point. When that point lies in
+the source dyadic range, the existing phase-scale hypothesis yields both a
+linear-coefficient lower bound and a quantitative far-region derivative
+lower bound.
+
+An exact three-piece interval identity isolates a radius-`δ` stationary
+neighborhood, whose contribution is bounded by `2*δ/log P`. The remaining
+opposite-sign task is now precisely the two far-piece cancellation bounds and
+choice of `δ`; axis modes and final Fourier assembly remain separate.
+
+## Prime-equidistribution release 3.51
+
+The two stationary far pieces are now bounded. Exact integration by parts on
+intervals avoiding the critical point gives monotone endpoint estimates on
+the left and initial right segment. A separate pointwise amplitude-derivative
+bound controls the post-turning tail, and the pieces reassemble without an
+unstated monotonicity assumption.
+
+After inserting `A >= (16/5)*P*L`, the formal choice `δ=P/sqrt L` proves the
+interior stationary integral bound `50*P/(sqrt L*log P)` for `L>=4`.
+Endpoint-clipped stationary intervals and the sign-conjugate wrapper are the
+remaining opposite-sign work; coordinate-axis modes, low modes, and the final
+Fourier assembly also remain open.
+
+## Prime-equidistribution release 3.52
+
+The optimized stationary estimate is now endpoint-safe: the radius
+`P/sqrt L` neighborhood may be clipped on the left, right, or both sides.
+Exact interval additivity reduces each case to the already proved one-sided
+far bounds and the central length estimate, with the same constant `50`.
+
+Conjugation unifies both opposite-sign orientations. The bound is then
+inserted into the literal Fourier integral and combined with the unequal
+prime exponential-sum theorem. Thus the nonzero-coefficient stationary
+Fourier chamber has a source-range discrepancy theorem. Coordinate-axis
+modes, low frequencies, and final mode assembly remain open.
+
+## Prime-equidistribution release 3.53
+
+`CoordinateAxisFourierSourceBlock.lean` closes the pure quadratic coordinate
+axis. The generalized integration-by-parts machinery now includes a
+nonnegative-amplitude-derivative variant, yielding
+`16*P^3/(|B|*log P)` and hence `P/(L*log P)` from the exact pure quadratic
+source scale. This is combined with the existing unequal prime estimate in a
+literal Fourier-mode discrepancy theorem.
+
+Only the pure linear coordinate axis remains among high-frequency modes. It
+needs a distinct Type II cancellation argument; the existing quadratic Weyl
+and Vinogradov branches both genuinely consume nonvanishing of the quadratic
+coefficient. Low-frequency control and final Fourier assembly also remain.
+
+## Prime-equidistribution release 3.56
+
+The pure linear coordinate axis is now complete. `LinearAxisTypeII.lean` and
+`LinearAxisTypeIISourceBlock.lean` supply the full Type II source family, while
+`LinearAxisTypeI.lean` supplies both zero-quadratic Vaughan Type I families.
+The exact Vaughan identity, prime-power removal, and reverse Abel summation
+then yield the pure-linear prime exponential-sum estimate.
+
+`LinearAxisFourierSourceBlock.lean` combines that prime theorem with the
+existing `2*P/(L*log P)` pure-linear integral estimate, giving the literal
+prime-minus-integral discrepancy. Both coordinate axes are now complete. Low
+frequencies and final Fourier assembly remain open; Theorem 2.5 is not
+claimed.

@@ -318,6 +318,30 @@ The raw component count and deletion multiplicity are further bounded by
 `log P`; the resulting principal-plus-deletion envelope is proved to have an
 arbitrary uniform logarithmic saving after normalization by the interval
 scale.
+The unequal Type II estimate now propagates through the full Vaughan family,
+Mangoldt weights, prime powers, and reverse Abel summation for every nonzero
+quadratic coefficient. Same-sign Fourier integrals are closed by exact
+integration by parts. In the opposite-sign chamber the unique stationary
+point, both far-piece cancellation estimates, the post-turning tail, and the
+interior cutoff optimization are formalized: under the source lower bound and
+`L>=4`, choosing `δ=P/sqrt L` gives the explicit integral bound
+`50*P/(sqrt L*log P)`. Endpoint-clipped stationary neighborhoods, the
+conjugate chamber, coordinate-axis modes, low-frequency control, and final
+Fourier assembly remain open.
+The endpoint-clipped cases and conjugate chamber are now also complete, and
+the optimized estimate is combined with the unequal prime theorem in the
+literal stationary Fourier-mode discrepancy for two nonzero coefficients.
+The remaining Fourier branches are the coordinate axes, low frequencies, and
+final mode assembly.
+The pure quadratic coordinate axis is now complete as well: its exact scale
+converts a positive-variation integration-by-parts estimate into
+`P/(L*log P)`, and the unequal prime theorem supplies the literal discrepancy.
+The pure linear coordinate axis is now complete. The zero-critical-set Weyl
+and conditional Vinogradov estimates feed both Type I families and the full
+Type II source family; exact Vaughan assembly, prime-power removal, reverse
+Abel summation, and the logarithmic integral estimate then give the literal
+prime-minus-integral Fourier discrepancy. Low frequencies and final mode
+assembly remain.
 This includes
 the reverse-big-O half of the
 `F₃` and factorial-triple square-root scale contracts. The source definitions and public conclusion contracts

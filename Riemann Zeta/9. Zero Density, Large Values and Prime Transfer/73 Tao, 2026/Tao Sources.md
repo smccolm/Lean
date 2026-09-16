@@ -417,3 +417,321 @@ evaluated by Lean's kernel from Mathlib definitions.  The proof then uses the
 already audited binomial monotonicity and consecutive-product reductions.
 No external numerical table, unlicensed code, or native decision procedure
 is used.
+
+## Release 3.24 source note
+
+No new external source is used.  The common endpoint `243`, all twenty
+central binomial inequalities, and all 420 admissible earlier starts are
+evaluated by Lean's kernel from Mathlib definitions.  The unrestricted
+Sylvester--Schur assembly uses only the previously audited tail theorem, and
+the square Erdős--Selfridge specialization uses the already formalized local
+Hanson and Sylvester--Schur results.  No external numerical table, unlicensed
+implementation, or native decision procedure is used.
+
+## Release 3.25 source note
+
+No new external source is used.  The Type II convolution bridge is an exact
+finite rearrangement, Cauchy--Schwarz argument, support comparison, and
+triangle inequality over the already pinned Vaughan decomposition.  The
+source beta/gamma bounds are derived from the existing audited coefficient
+lemmas.  The conditional source-block theorem only composes these results with
+the previously isolated `VinogradovExponentialSumEstimate`; it does not claim
+that open analytic proposition.
+
+## Release 3.26 source note
+
+No new external source is used.  Small-block vanishing follows directly from
+the already audited support cutoffs in the pinned Vaughan identity.  The
+large--large case reuses the existing conditional source-block estimate, and
+the full-family result uses only finite case splitting, the exact canonical
+family cardinality, monotonicity of square root, and the triangle inequality.
+The open `VinogradovExponentialSumEstimate` remains an explicit hypothesis.
+
+## Release 3.27 source note
+
+No new external source is used.  The cube-root cutoff comparisons use only
+Mathlib's real-power little-o estimates, the elementary comparison between
+`Nat.log 2 B` and `log B`, and exact floor inequalities.  The product-support
+and product-scale lemmas are finite consequences of the already audited
+canonical short-block definitions.  The resulting theorem still states
+`VinogradovExponentialSumEstimate` explicitly and does not claim the open
+analytic estimate.
+
+## Release 3.28 source note
+
+No new external source is used.  The short-block length, cardinality, and
+logarithm comparisons follow from the already audited canonical subdivision
+definitions and elementary real inequalities.  The order set `{5,6}`, its
+cardinality, the quarter-power scale bounds, and the geometric-majorant
+comparison are all checked locally by Lean.  The release continues to expose
+`VinogradovExponentialSumEstimate` as an assumption and does not claim the
+remaining analytic cancellation.
+
+## Release 3.29 source note
+
+No new external source is used.  The scale-local width substitutions are the
+already audited canonical subdivision inequalities.  All product monomial
+bounds follow from membership in the literal filtered product support, and
+the quarter-power improvement follows from the canonical cutoff comparison.
+The exponents `298`, `197`, and `297` are checked by exact field and ring
+normalization in Lean.  The release remains conditional on the explicitly
+named `VinogradovExponentialSumEstimate`.
+
+## Release 3.30 source note
+
+No new external source is used.  Phase absorption is monotonicity of real
+powers with a negative exponent; endpoint absorption uses reciprocal
+monotonicity and the already audited quarter-power cutoff.  Flattening the
+nested powers and the diagonal quotient is exact real-power and ring
+arithmetic.  The family evaluation uses its audited exact cardinality and the
+elementary bound `log₂ B+1≤3log B`.  The release continues to state
+`VinogradovExponentialSumEstimate` as an explicit hypothesis.
+
+## Release 3.31 source note
+
+No new external source is used.  The arbitrary logarithmic absorption uses
+Mathlib's standard fact that powers of `log x` are little-o of every positive
+power of `x`, followed by exact reciprocal, real-power, square-root, and ring
+arithmetic.  The explicit parameter choices are verified symbolically in
+Lean.  The final theorem remains conditional on the separately named
+`VinogradovExponentialSumEstimate` and does not claim that analytic input.
+
+## Release 3.32 source note
+
+No new external source is used.  The exact fiber identity is elementary
+ceiling division of `mn∈[a,b)`, and the parameter change is the already proved
+reciprocal-phase product rescaling.  The coefficient bounds come from the
+audited Vaughan coefficient envelopes; the logarithmic inner uses the
+existing finite Abel-summation theorem.  This release adds no analytic
+cancellation hypothesis and does not claim Theorem 2.5.
+
+## Release 3.33 source note
+
+No new external source is used. Nonzero-support filtering is an exact finite
+sum identity. The bounds `mâ‰¤U` and `mâ‰¤UV` use the audited support of the two
+Vaughan Type I coefficients, and the family factors use the exact cardinality
+`(logâ‚‚ B+1)^102`. The uniform analytic inner estimate remains open.
+
+## Release 3.34 source note
+
+No new external source is used.  Scale invariance is exact real-field
+arithmetic, antitonicity uses positivity of the denominators, and the rounded
+fiber bounds use elementary natural ceiling division.  This release proves
+only the geometric transfer of the low-scale premise; the endpoint-buffer and
+effective-error hypotheses of the analytic Weyl estimate remain open.
+
+## Release 3.35 source note
+
+No new external source is used.  The ten-block reconstruction uses the
+already audited exact quotient-block decomposition.  The endpoint margin is
+elementary ceiling arithmetic, the factor-four comparison follows directly
+from the linear and quadratic reciprocal terms, and the local analytic bound
+is an application of the existing audited four-step Weyl theorem.  This does
+not yet sum or uniformize the local widths and does not claim Theorem 2.5.
+
+## Release 3.36 source note
+
+No new external source is used. Uniformization uses only monotonicity of
+division, logarithm, and positive real powers together with the release-3.35
+factor-four scale comparison. The arbitrary-subinterval decomposition is the
+same exact quotient-block identity applied with general endpoints. The
+rescaled active-family budget remains to be proved, so Theorem 2.5 is not
+claimed.
+
+## Release 3.37 source note
+
+No new external source is used. The rescaled unweighted estimate is a direct
+specialization of the audited release-3.36 subinterval theorem using the
+release-3.34 ceiling geometry. The logarithmic estimate uses the already
+audited finite Abel-summation interface, and the complete-family theorems use
+the exact active-support cardinalities from release 3.33. All remaining
+source-scale inequalities are explicit hypotheses; this release does not
+claim Theorem 2.5.
+
+## Release 3.38 source note
+
+No new external source is used. The split at `F=X^4` is the literal split in
+the proof of Proposition 1.12 of the pinned Matomäki--Radziwiłł--Shao--Tao--
+Teräväinen source. The low branch uses the already audited Weyl theorem; the
+high branch uses the explicitly named `VinogradovExponentialSumEstimateAt`
+contract and existing source-parameter arithmetic. The remaining low-scale
+budget and logarithmic absorption are not claimed here.
+
+## Release 3.39 source note
+
+No new external source is used. The low-branch estimate is elementary
+arithmetic applied to the already audited Weyl budget, and the factor-four
+scale comparison is ceiling arithmetic. The active-fiber lower bound uses
+only the exact support and canonical cube-root cutoff already formalized from
+Vaughan's identity. The resulting theorems discharge admissibility but do not
+claim the remaining logarithmic majorant absorption or Theorem 2.5.
+
+## Release 3.40 source note
+
+No new external source is used. The reciprocal weighting is the literal
+fiber length `P/m` already present after the Type I substitution. The new
+family bounds use only active-support containment and the elementary identity
+between the reciprocal sum on `[1,K]` and `harmonic K`. They do not claim the
+branch-sensitive analytic absorption or Theorem 2.5.
+
+## Release 3.41 source note
+
+No new external source is used. The branch-sensitive high estimate is an
+application of the already named and audited
+`VinogradovExponentialSumEstimateAt C1` contract. The low estimate uses the
+existing quadratic Weyl theorem plus elementary ceiling, logarithm, and real
+power inequalities. Harmonic family insertion and the exact logarithmic loss
+104 are internal Lean arithmetic. This release completes the quantitative
+Type I families conditionally on that named source proposition; it does not
+yet claim Theorem 2.5.
+
+## Release 3.42 source note
+
+No new external source is used. `MangoldtSourceBlock.lean` applies the exact
+Vaughan identity already formalized from the pinned Proposition 1.12 proof,
+the release-3.41 Type I estimates, and the release-3.31 Type II estimate. The
+cutoff vanishing and three-term norm assembly are elementary. The resulting
+quadratic Mangoldt estimate is conditional on the same explicitly named
+Vinogradov proposition; the common source-frequency wrapper and the
+Mangoldt-to-prime/Fourier transfers are not claimed here.
+
+## Release 3.43 source note
+
+No new external source is used. The unified interface follows directly from
+the definition `F=|N|/P+|N|/P^2`, dyadic scale comparison, and elementary
+real-power monotonicity. It changes no analytic assumption: the quadratic
+Mangoldt estimate remains conditional only on the named Vinogradov
+proposition. Prime partial summation and Fourier reconstruction remain open.
+
+## Release 3.44 source note
+
+No new external source is used. The half-open endpoint conversion is exact
+natural interval arithmetic. The prime-power estimate is the already audited
+local tail theorem specialized to a dyadic interval; its arbitrary-logarithm
+absorption is elementary real-power asymptotics. The prime-log decomposition
+comes from the exact Mangoldt identity, and the final unweighted estimate uses
+the already audited finite reverse-Abel theorem. The sole analytic dependency
+remains `VinogradovExponentialSumEstimate`; Fourier reconstruction is still
+open.
+
+## Release 3.45 source note
+
+No new external source is used. `FourierSourceBlock.lean` unfolds the existing
+Fourier definitions and proves the diagonal oscillatory-integral estimate by
+ordinary differentiation, interval integration by parts, and elementary
+dyadic inequalities. The combined discrepancy theorem inherits the sole
+analytic dependency `VinogradovExponentialSumEstimate` from release 3.44.
+The general-mode coefficient identity, derivative, and same-sign
+nonstationarity are elementary and introduce no new input. Only the `(1,1)`
+mode estimate is covered; unequal Fourier estimates, opposite-sign stationary
+analysis, low frequencies, the zero mode, and Theorem 2.5 are not claimed.
+
+## Release 3.46 source note
+
+No new external source is used. `UnequalTypeIIVinogradov.lean` reuses the
+already audited source proposition `VinogradovExponentialSumEstimate`, the
+exact general Type II correlation identity, and the existing dyadic-block
+transformed-scale bound. The new work is interface generalization: the linear
+coefficient comes from `N`, the higher coefficient comes from `M`, and each
+has its own source upper bound. The unequal low-scale Weyl estimate and full
+Theorem 2.5 remain open.
+
+## Release 3.47 source note
+
+No new external source is used. `UnequalTypeIIWeyl.lean` combines the exact
+Type II correlation identity, the existing four-step Weyl theorem, the
+release-3.46 unequal Vinogradov callback, and elementary dyadic-band
+inequalities. Its new scale comparison uses both transformed coefficients:
+the linear term controls one source component and the quadratic term controls
+the other on the positive inner band. The result reaches one weighted Vaughan
+double block. Full double-family summation and Theorem 2.5 remain open.
+
+## Release 3.48 source note
+
+No new external source is used. `UnequalTypeIISourceBlock.lean` combines the
+release-3.47 double-block theorem with exact finite Vaughan block summation
+and reuses the already audited scalar majorant inequalities through a
+blockwise coefficient having precisely the same phase scale.
+
+`UnequalMangoldtSourceBlock.lean` uses the exact formalized Vaughan identity
+and the existing Type I theorems; `UnequalPrimeSourceBlock.lean` uses the
+already audited prime-power estimate and finite reverse-Abel identity. The
+sole analytic dependency remains `VinogradovExponentialSumEstimate`. These
+files cover nonzero quadratic coefficients, not the remaining Fourier
+integral, zero-quadratic, low-frequency, or mode-assembly work. Theorem 2.5
+is not claimed.
+
+## Release 3.49 source note
+
+No new external source is used. `UnequalFourierSourceBlock.lean` is an
+elementary calculus continuation of the release-3.45 diagonal integral
+argument. It differentiates the exact unequal amplitude, applies interval
+integration by parts, and uses complex conjugation for the negative chamber.
+The prime-sum term inherits the sole analytic dependency
+`VinogradovExponentialSumEstimate` from release 3.48. Stationary opposite-sign
+modes, coordinate-axis modes, and Theorem 2.5 remain open.
+
+## Release 3.50 source note
+
+No new external source is used. `StationaryFourierSourceBlock.lean` consists
+of exact algebra for the reciprocal quadratic phase, elementary dyadic scale
+comparisons, interval integrability, additive interval decomposition, and the
+unit-modulus length bound for the central stationary neighborhood. It adds no
+analytic assumption. Cancellation on the two far pieces, coordinate-axis
+modes, and Theorem 2.5 remain open.
+
+## Release 3.51 source note
+
+No new external source is used. The release is an elementary continuation of
+the exact integration-by-parts calculation in
+`StationaryFourierSourceBlock.lean`: sign analysis of the differentiated
+amplitude, dyadic logarithm inequalities, interval additivity, and explicit
+real algebra. The optimized bound adds no analytic assumption. Endpoint
+clipping, sign conjugation, coordinate-axis modes, and Theorem 2.5 remain
+open.
+
+## Release 3.52 source note
+
+No new external source is used. Endpoint clipping is exact interval
+additivity plus the release-3.51 one-sided estimates. Coefficient negation is
+handled by complex conjugation, and the final discrepancy uses the already
+audited unequal prime theorem. The sole analytic dependency remains
+`VinogradovExponentialSumEstimate`. Coordinate-axis modes and Theorem 2.5
+remain open.
+
+## Release 3.53 source note
+
+No new external source is used. The pure quadratic integral is an elementary
+specialization of the audited unequal integration-by-parts identity, and its
+prime term uses the existing unequal prime theorem. The pure linear axis is
+not claimed: its transformed Type II phase has zero quadratic coefficient and
+therefore lies outside the current quadratic Weyl/Vinogradov callbacks.
+
+## Release 3.54 source note
+
+No new external source is used. The high-scale pure-linear branch specializes
+the existing conditional `VinogradovExponentialSumEstimate` after proving that
+the derivative critical sets are empty. The low-scale branch is an internal
+specialization of the audited four-step Weyl machinery to the full regular
+interval. No additional analytic dependency is introduced. The pointwise
+Type II chamber is complete, but its double-block, Vaughan, Mangoldt, and prime
+propagation is not; the full pure-linear prime endpoint is not claimed.
+
+## Release 3.55 source note
+
+No new external source is used. The pure-linear double-block aggregation is
+finite Cauchy--Schwarz and decay-kernel summation, and the source-family layer
+reuses the already audited Vaughan block cover and scalar majorant algebra.
+Its only analytic dependency is still the existing conditional
+`VinogradovExponentialSumEstimate` in the high-scale branch. The pure-linear
+Type I families and hence the Mangoldt and prime endpoints are not claimed.
+
+## Release 3.56 source note
+
+No new external source is used. `LinearAxisTypeI.lean` specializes the audited
+four-step Weyl and conditional Vinogradov machinery to the empty-critical-set
+pure-linear chamber and reuses the existing finite Type I source-family
+ledger. The Mangoldt and prime transfers are exact Vaughan decomposition,
+prime-power removal, and reverse Abel summation; the Fourier endpoint uses the
+already audited pure-linear logarithmic integral. The sole analytic dependency
+remains `VinogradovExponentialSumEstimate`.

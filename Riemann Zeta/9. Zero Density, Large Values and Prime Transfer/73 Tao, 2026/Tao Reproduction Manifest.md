@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-3.23`. It
+This is a development manifest, version `prime-equidistribution-3.56`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -61,7 +61,9 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `PowerfulLimit`, `PowerfulNumbers`,
   `PowerfulRelations`, `PowerfulRelationCounting`, `SquareRelations`, `ConvolutionRearrangement`,
   `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`, `SmoothNumberBounds`, `SmoothNumberRankin`, `SmoothNumberPrimeSum`, `SmoothNumberSourceRegimes`, `SmoothNumberPolylogRegimes`, `SmoothNumberLowerBound`, `SmoothNumberHildebrand`, `SmoothNumberCriticalLower`, `SmoothNumberCEPPacket`, `SmoothNumberCEPRecurrence`, `SmoothNumberCEPIntervals`, `SmoothNumberCEPWeights`, `SmoothNumberCEPSource`, `SmoothNumberCEPSize`, `SmoothNumberCEPPrimeMass`, `SmoothNumberCEPBootstrap`, `SmoothNumberCEPCoarse`, `SmoothNumberSaddlePoint`, `SmoothNumberSaddleRegimes`, `SmoothNumberSaddlePhase`, `SmoothNumberStability`, `SmoothNumberSaddleCurvature`, `BadOneTermAsymptotics`,
-  `PublicStatements`, `TypeIReduction`, `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `VeryBadIntervals`, `SylvesterSchurSmallLengths`, `SylvesterSchurEventual`, `VeryBadEquidistribution`,
+  `PublicStatements`, `TypeIReduction`, `TypeIConvolutionBridge`, `TypeIWeylBridge`, `TypeISourceBlock`,
+  `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `TypeIIConvolutionBridge`,
+  `TypeIISourceBlock`, `VeryBadIntervals`, `SylvesterSchurSmallLengths`, `SylvesterSchurEventual`, `VeryBadEquidistribution`,
   `TorusFourier`, `VinogradovPhase`, `Vinogradov`, `VinogradovSharp`,
   `VinogradovMeanValue`, `VinogradovUniform`, `VinogradovFord`,
   `VinogradovWooleyCoefficient`, `VinogradovFiniteDegree`,
@@ -3022,3 +3024,680 @@ Together with release 3.22, this proves the all-start conclusion from
 On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
 10079 jobs, including the root and dependency audit.  The canonical isolated
 verifier was then run twice as the release gate.
+
+## Release delta: prime-equidistribution-3.24
+
+`SylvesterSchurComplete.lean` closes the last twenty length rows.  It checks
+the common central binomial-growth baseline at upper index `243` for every
+`101<=H<121`, then verifies all 420 admissible earlier starts in one bounded
+Lean-kernel certificate.  Together with release 3.23, the resulting theorem
+`sylvesterSchur` proves `SylvesterSchurConclusion` without a residual
+rectangle.
+
+`ErdosSelfridgeComplete.lean` combines the unrestricted Sylvester--Schur
+theorem with the audited Hanson theorem to prove the exact square
+Erdős--Selfridge specialization used by Tao's Theorem 1.10.  The public
+Theorem 1.10 assembly therefore no longer takes Erdős--Selfridge as an
+external hypothesis; its remaining inputs are Tao's Theorem 2.5 and
+Proposition 2.3(ii).
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10081 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.25
+
+`TypeIIConvolutionBridge.lean` connects the literal product-restricted Vaughan
+Type II convolution block to the canonical analytic endpoint.  It proves an
+exact outer-sum identity, Cauchy--Schwarz reduction to squared inner sums, and
+an exact comparison between bounded product support and the full canonical
+Vaughan block.  The actual beta coefficient is bounded by `1`, the gamma
+coefficient by `log(2B)`, and arbitrary per-block square majorants reassemble
+into the full convolution norm through a sum of square roots.
+
+`TypeIISourceBlock.lean` composes that bridge with the existing conditional
+mixed Weyl--Vinogradov theorem.  Its public theorem bounds the norm square of
+the literal source Type II double block with the intrinsic low-scale Weyl
+error and the high-scale `3(log P)^(-T)` error.  The open analytic proposition
+`VinogradovExponentialSumEstimate` remains explicit; release 3.25 does not
+claim Theorem 2.5.  The remaining downstream work is the source regime split,
+all-block Type I/II summation and simplification, and Fourier assembly.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.26
+
+`TypeIISourceBlock.lean` now closes the finite source-family regime split.
+The Möbius-tail coefficient vanishes identically on every outer dyadic band
+below the common subdivision budget once `2*budget≤U`; the divisor-tail
+coefficient satisfies the analogous result under `2*budget≤V`.  Thus only
+large--large block pairs enter the conditional Weyl--Vinogradov estimate.
+
+The new `vaughanTypeIISourceBlockMajorant` records the exact surviving
+expression, and the full literal Type II convolution is bounded by the sum of
+the square roots of these majorants.  `TypeIIConvolutionBridge.lean` also
+proves that a uniform block-square bound `R` yields the exact global factor
+`(log₂ B+1)^204 sqrt(R)`, using the existing canonical family count.
+
+Release 3.26 leaves the analytic `VinogradovExponentialSumEstimate` explicit.
+The remaining downstream Type II work is to discharge the source cutoff and
+block-scale comparisons uniformly and simplify the majorant to the target
+logarithmic saving before the Type I/Fourier assembly.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.27
+
+`TypeIISourceBlock.lean` now defines the canonical Vaughan source cutoff
+`⌊B^(1/3)⌋₊`.  Kernel-checked little-o arguments prove that this cutoff
+eventually dominates twice the `(log₂ B+1)^101` subdivision budget and also
+dominates `2B^(1/4)`.  For `P≤B`, these results discharge the cutoff and outer
+scale premises of the full Type II family theorem with `c=1/4`.
+
+The same module now uses exact dyadic cutoff tests and an explicit filtered
+product support.  Empty supports vanish; a contributing pair bounds the
+analytic product scale by `2B`; and the global inequality
+`2B*(log B)^d≤|N|` supplies every blockwise reciprocal-phase premise.  The new
+canonical-cutoff theorem therefore retains only global source hypotheses and
+the explicit `VinogradovExponentialSumEstimate` assumption.
+
+Release 3.27 does not claim Theorem 2.5.  The remaining Type II tasks are the
+open Vinogradov estimate and simplification of the explicit summed majorant,
+followed by the Type I and Fourier assembly.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.28
+
+`TypeIISourceBlock.lean` now fixes the minimal derivative-order family to
+`{5,6}` and exports a fully canonical Type II family theorem.  Canonical
+short-block lengths are bounded by `B/(log B)^100`, outer block cardinality by
+the corresponding length, and the component-count logarithm by `2log B`.
+Survival beyond the cube-root cutoff also gives the literal quarter-power
+lower bounds for both dyadic scales.
+
+The new `vaughanTypeIICanonicalGeometricBlockMajorant` replaces the exact
+outer cardinality and component count by these bounds.  A separate abstract
+monotonicity lemma keeps the comparison algebra auditable, and
+`vaughanTypeIICanonicalSourceBlockMajorant_le_geometric` proves the resulting
+majorant dominates every exact canonical source block.  The parenthesization
+retains the component-count factor on both analytic error terms.
+
+Release 3.28 does not claim Theorem 2.5.  The open boundary remains
+`VinogradovExponentialSumEstimate`, followed by the remaining power/logarithm
+absorption, Type I estimate, and Fourier assembly.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.29
+
+`TypeIISourceBlock.lean` now retains the two source-critical dyadic widths
+instead of using the common global-width fallback.  Literal product support
+proves `2^s2^t≤B`, the diagonal cubic bound, and the endpoint-weighted quartic
+bound.  Exact field normalization expands the resulting block expression with
+logarithmic denominators `298`, `197`, and `297`.
+
+The canonical inner cutoff strengthens the diagonal monomial to
+`D²E≤B²/B^(1/4)`.  The new
+`vaughanTypeIICanonicalPowerSavedBlockMajorant` retains that power saving while
+compressing both analytic monomials to `B²`; it bounds every exact canonical
+source block.  The complete conditional Type II convolution is bounded by the
+sum of square roots of these power-saved majorants.
+
+Release 3.29 does not claim Theorem 2.5.  Phase and endpoint decay absorption,
+the final family summation, `VinogradovExponentialSumEstimate`, Type I, and
+Fourier closure remain.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.30
+
+`TypeIISourceBlock.lean` now removes the final block-dependent decay factors
+from the power-saved Type II ledger.  The global phase lower bound replaces
+`F^(-1/1024)` by `(log B)^(-d/1024)`, and the outer quarter-power endpoint
+replaces `K^(-1/1024)` by `B^(-1/4096)`.  Cutoff and empty-support branches
+remain exactly zero.
+
+The new explicit common ledger flattens the diagonal quotient to `B^(7/4)`
+and exposes all remaining powers without nested rpow expressions.  The full
+conditional canonical convolution is bounded first by the exact family loss
+`(log₂ B+1)^204` and then by `(3 log B)^204`, times the square root of this
+single block-independent ledger.
+
+Release 3.30 does not claim Theorem 2.5.  The remaining Type II tasks are the
+final choice and absorption of `d,T`, the open
+`VinogradovExponentialSumEstimate`, and subsequent Type I/Fourier assembly.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.31
+
+`TypeIISourceBlock.lean` now absorbs the block-independent ledger into an
+arbitrary requested logarithmic saving.  Fixed negative powers of the source
+scale are proved eventually smaller than every prescribed negative
+logarithmic power.  Under `P≤B≤2P`, the remaining phase and source terms are
+compressed to one squared-block envelope `C B²(log P)^(-E)`.
+
+Square-root extraction and the complete family loss require
+`E=2S+408`.  The explicit choices `d=2048S+216064`, `T=2S+111`, and
+Vinogradov parameter `(2S+113)/3` discharge all exponent inequalities.  The
+new source-facing theorem gives `C B/(log P)^S` for every `S≥0`, conditional
+on `VinogradovExponentialSumEstimate`.
+
+Release 3.31 does not claim Theorem 2.5.  The Type II summation and exponent
+arithmetic are complete; the named Vinogradov estimate, quantitative Type I,
+and final Fourier assembly remain.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10083 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.32
+
+The new `Tao2026/TypeIConvolutionBridge.lean` connects both literal Type I
+Vaughan convolution terms to their exact ceiling-divided one-dimensional
+fibers.  It proves product-box equality, phase rescaling, full-family triangle
+reassembly, the source coefficient envelopes `1` and `log(2B)`, and the
+finite Abel-summation entry point for the logarithmically weighted term.
+
+Release 3.32 does not claim quantitative Type I cancellation or Theorem 2.5.
+The remaining analytic work is the uniform prefix estimate, the named
+Vinogradov proposition, quantitative low-frequency PNT, and final Fourier
+recombination.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10084 jobs, including the production root and all new axiom-audit entries.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.33
+
+`TypeIConvolutionBridge.lean` now removes zero outer coefficients before the
+Type I triangle inequality. The active support of the first coefficient is
+contained in `[1,U]`; the active support of the second is contained in
+`[1,UV]`. Their block cardinalities are at most `U` and `UV`.
+
+Uniform active-inner callbacks propagate through the exact canonical family
+count. The complete first Type I convolution costs
+`(logâ‚‚ B+1)^102 U Q`; the second costs
+`(logâ‚‚ B+1)^102 log(2B) UV Q`. These are finite reduction theorems and do not
+assert the remaining reciprocal-phase cancellation estimate.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10084 jobs, including all new active-support declarations and axiom audits.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.34
+
+`TypeIConvolutionBridge.lean` now proves exact invariance of the
+reciprocal-phase scale under Type I parameter rescaling, its antitonicity in
+the positive scale variable, and the ceiling geometry of source fibers.
+For `P,m>0`, every fiber from a subinterval of `[P,2P)` lies inside
+`[ceil(P/m),2ceil(P/m))`; rounding the real scale `P/m` upward can only lower
+the rescaled phase scale.  Thus a source bound by `(P/m)^4` transfers to the
+rounded fourth-power Weyl condition.
+
+Release 3.34 does not assert Type I cancellation or Theorem 2.5.  The
+four-step endpoint-buffer and effective-error premises remain to be supplied
+uniformly before the active-support callbacks can be instantiated.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10084 jobs, including the new geometry declarations and their axiom audits.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.35
+
+The new `TypeIWeylBridge.lean` connects the quadratic Type I inner sums to the
+four-step analytic estimate.  It reconstructs `[D,2D)` exactly from the
+existing quotient decomposition with at most ten blocks.  When `D>=10`, each
+nonempty block satisfies the five-length fit needed to contain the interval
+and four optimized differencing ranges in its local dyadic window.
+
+The reciprocal-phase scale at a local endpoint in `[D,2D]` is at least one
+quarter of its source value.  One explicit source budget therefore controls
+the local high-scale, inverse-scale, and interval-length terms, and the
+two-term Weyl estimate is proved blockwise.  Release 3.35 does not yet
+uniformize the local widths, sum the analytic majorants, or claim Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10085 jobs, including the new quadratic Weyl bridge and its axiom audits.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.36
+
+`TypeIWeylBridge.lean` now bounds every local two-term width by the single
+source width `(F/D^5+4/F)^(1/1024)`. All nonempty canonical pieces therefore
+share one explicit majorant, and their exact cardinality supplies the factor
+ten for a complete dyadic interval.
+
+The decomposition, geometry, analytic estimate, and finite summation are also
+proved for every half-open subinterval of `[D,2D)`. This includes the complete
+family of initial prefixes consumed by the logarithmic Type I Abel theorem.
+Release 3.36 does not yet establish the active-index source budgets or claim
+Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10085 jobs, including the uniform subinterval declarations and axiom audits.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.37
+
+`TypeIWeylBridge.lean` now performs the exact Type I substitution
+`(N,M,D) -> (N/m,M/m²,ceil(P/m))`. The fixed order set `{5,6}`, explicit
+ten-block rescaled majorant, rounded-scale admissibility predicate, and both
+literal inner estimates are exported. The logarithmically weighted estimate
+uses uniform control of every initial prefix through the finite Abel theorem.
+
+Both estimates are inserted into the complete active Vaughan Type I families.
+The resulting bounds retain the exact losses `(log₂ B+1)^102 U` and
+`(log₂ B+1)^102 log(2B)UV`. Release 3.37 leaves the active-index source
+inequalities and common logarithmically saving majorant as explicit premises;
+it does not claim Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10085 jobs, including the rescaled fibers, complete-family callbacks, and all
+new axiom-audit entries. The canonical isolated verifier was then run twice
+with `FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.38
+
+`TypeIWeylBridge.lean` now implements the source's exact analytic split on
+each rounded Type I fiber. Low transformed phase scale uses the ten-block
+Weyl estimate; high transformed phase scale uses the fixed-constant source
+Vinogradov envelope, including critical deletion and regular-component loss.
+The admissibility predicate is branch-local and does not impose unused
+hypotheses.
+
+The hybrid estimate is uniform on arbitrary subintervals, feeds every finite
+Abel prefix, and is inserted into both complete active Vaughan families. The
+source exponential parameter bound and a fixed positive-power lower bound on
+the rounded scale eventually discharge the high branch's cutoff and numerical
+smallness premises. Release 3.38 leaves the low-scale effective-error budget
+and final common-majorant absorption open and does not claim Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10085 jobs, including all hybrid Type I declarations and axiom-audit entries.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.39
+
+`TypeIWeylBridge.lean` now derives the low-scale Weyl effective-error budget
+from the branch inequality `F(D) <= D^4` above one explicit absolute
+threshold. It also proves the factor-four comparison between the source phase
+scale at `P` and the transformed scale at `ceil(P/m)`.
+
+The new `TypeISourceBlock.lean` proves the exact canonical active-support
+geometry for both Vaughan Type I coefficient families. Active indices force
+`ceil(P/m) >= B^(1/4)` eventually, hence exceed every fixed threshold and
+retain one quarter of the ambient logarithm. Combining those facts with the
+global source lower and exponential upper frequency bounds yields the full
+hybrid admissibility predicate uniformly over every active index. Release
+3.39 leaves only common-majorant logarithmic absorption and family summation
+open on the Type I side and does not claim Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10086 jobs, including `TypeISourceBlock` and all new axiom-audit entries. The
+canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.40
+
+`TypeISourceBlock.lean` now retains the natural reciprocal outer-index factor
+in complete Type I family aggregation. The reciprocal sums over the two
+canonical active supports are bounded exactly by `harmonic U` and
+`harmonic (U*V)`. Consequently, any fiber estimate of the form `(P/m)Q`
+propagates through the full first and second Type I families with harmonic
+losses instead of the polynomial cardinality factors `U` and `U*V`.
+
+This closes the family-summation geometry required for logarithmic saving.
+Release 3.40 leaves the branch-sensitive absorption of the explicit Weyl and
+Vinogradov majorants open and does not claim Theorem 2.5.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10086 jobs, including all reciprocal-weighted aggregation declarations and
+axiom-audit entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.41
+
+`TypeIWeylBridge.lean` now exports a genuinely branch-sensitive Type I
+majorant. The high branch is bounded solely through the named source
+Vinogradov envelope, while the low branch reduces its Weyl width to
+`(1/D + 16/(log B)^d)^(1/1024)` and uses the active quarter-power lower bound
+for `D`. This avoids retaining the potentially large unused Weyl expression
+on high fibers.
+
+`TypeISourceBlock.lean` inserts the resulting reciprocal-weighted estimate
+into both complete canonical Vaughan Type I families. Harmonic cutoff bounds,
+the Abel coefficient, and short-interval aggregation have exact combined
+logarithmic loss 104. The final theorems choose `T=S+104` and require the
+explicit budgets `S+106<=3A` and `1024*(S+105)+1<=d`, yielding arbitrary
+requested logarithmic saving. Quantitative Type I is now complete conditional
+only on `VinogradovExponentialSumEstimateAt C1`; Theorem 2.5 itself is not yet
+claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10086 jobs, including the complete Type I family bounds and all new
+axiom-audit entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.42
+
+The new `MangoldtSourceBlock.lean` imports the exact source-oriented Vaughan
+identity and the completed Type I/II source blocks. It proves that the
+initial cutoff term vanishes on sufficiently large dyadic intervals, retains
+the signs and literal coefficient pairs of all three convolution terms, and
+combines their norm estimates by the triangle inequality.
+
+The final theorem uses the common explicit phase exponent
+`2048*S+216064` and gives arbitrary logarithmic saving for the complete
+quadratic Mangoldt reciprocal-phase sum. Its hypotheses deliberately retain
+both the Type I reciprocal-scale formulation and the Type II `|N|`
+formulation; proving their common source-facing wrapper is the next interface
+step. The only analytic dependency is the named
+`VinogradovExponentialSumEstimate` proposition, and Theorem 2.5 itself is not
+yet claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10087 jobs, including `MangoldtSourceBlock` and all new axiom-audit entries.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.43
+
+`MangoldtSourceBlock.lean` now proves the elementary comparison
+`reciprocalPhaseScale N N 2 P <= 2*|N|` and derives both the logarithmic scale
+lower bound and the fixed threshold 64 from the single source lower bound on
+`|N|`. The explicit phase exponent `2048*S+216064` is more than sufficient
+for the numerical threshold.
+
+The exported theorem
+`eventually_norm_mangoldtReciprocalPhaseSum_le_sourceRange` consequently uses
+only one lower and one upper absolute-frequency hypothesis. It retains the
+same arbitrary logarithmic saving and the same sole analytic dependency,
+`VinogradovExponentialSumEstimate`.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10087 jobs, including the unified source-range declarations and their axiom
+audits. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.44
+
+The new `PrimeSourceBlock.lean` first proves an exact identity between the
+half-open interval `[a,b)` and the local interval convention used by the
+frozen prime-power-tail theorem. It transports that theorem to the prime sum,
+derives a uniform dyadic envelope with a quarter-power saving, and absorbs the
+tail into every requested negative logarithmic power.
+
+The theorem
+`eventually_norm_primeReciprocalPhaseSum_le_sourceRange` applies the unified
+Mangoldt estimate to every initial prefix, removes the prime-power tail, and
+uses reverse Abel summation to remove the logarithmic prime weight. The result
+is the complete high-frequency unweighted quadratic prime exponential-sum
+bound with the same one lower/one upper source-frequency interface.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10088 jobs, including `PrimeSourceBlock` and all new axiom-audit entries. The
+canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.45
+
+The new `FourierSourceBlock.lean` identifies the half-open `(1,1)` Fourier
+prime sum exactly with the release-3.44 diagonal reciprocal-phase sum. It
+then differentiates the diagonal additive character and performs interval
+integration by parts with amplitude `t^3/((t+2)*log t)`, obtaining the
+explicit dyadic integral bound `6*P^2/(|N|*log P)`.
+
+The exported theorem
+`eventually_norm_primeFourierMode_sub_integral_Ico_one_one_le_sourceRange`
+combines the prime logarithmic saving with that inverse-frequency term. This
+is intentionally only a diagonal Fourier bridge. General modes require
+unequal coefficients `(q1*N,q2*M)`. Their exact prime-sum identity, derivative
+formula, and same-sign nonstationarity are now audited, but the corresponding
+unequal-parameter estimates, opposite-sign stationary cases, and the low-
+frequency and zero-mode branches remain open; Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10089 jobs, including `FourierSourceBlock` and all new axiom-audit entries.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.46
+
+The new `UnequalTypeIIVinogradov.lean` retains independent source
+coefficients through the high-pair Type II chain. It proves the fixed
+logarithmic envelope and eventual arbitrary-logarithmic saving for the exact
+product-restricted correlation with parameters `(N,M)`, packages the result
+as the source decay-kernel callback, and specializes it to canonical Vaughan
+inner blocks.
+
+The general dyadic transformed-scale theorem consumes separate exponential
+upper bounds for `|N|` and `|M|` and preserves the factor-five envelope. The
+low-scale Weyl distance-kernel theorem is still diagonal, so the full unequal
+Type II family and Theorem 2.5 are not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10090 jobs, including `UnequalTypeIIVinogradov` and all new axiom-audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.47
+
+The new `UnequalTypeIIWeyl.lean` closes the low-scale Type II correlation
+estimate for independent source coefficients. It proves the combined linear
+and quadratic transformed-scale lower bound on positive dyadic bands, the
+corresponding distance-kernel and effective-error estimates, and the
+source-shaped four-step Weyl bound.
+
+That estimate is propagated through fixed block lengths, nearby-pair
+absorption, near/far aggregation, the unequal Weyl--Vinogradov split,
+canonical Vaughan inner blocks, and one actual weighted Vaughan Type II
+double block. Complete double-family summation and the unequal
+Mangoldt/prime/Fourier endpoints remain open; Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10091 jobs, including `UnequalTypeIIWeyl` and all new axiom-audit entries.
+The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.48
+
+The new `UnequalTypeIISourceBlock.lean` propagates the independent-coefficient
+double-block estimate through complete finite Vaughan-family summation,
+canonical cutoff specialization, exact block-majorant compression, explicit
+decay, and arbitrary logarithmic saving. The compression reuses the prior
+diagonal algebra through a synthetic block coefficient whose diagonal phase
+scale is exactly the original unequal scale.
+
+`UnequalMangoldtSourceBlock.lean` combines both general Type I families with
+the completed unequal Type II theorem in the exact Vaughan decomposition and
+exports one lower phase-scale condition at `4*P`. Separate upper bounds on
+the two coefficients are retained. `UnequalPrimeSourceBlock.lean` removes
+prime powers and applies reverse Abel summation, yielding the unweighted
+prime exponential-sum estimate for every nonzero quadratic coefficient.
+
+General Fourier completion is not claimed: zero-quadratic modes, unequal
+oscillatory integrals (including stationary opposite-sign modes), low
+frequencies, and the final Fourier sum remain open. Theorem 2.5 is not
+claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10094 jobs, including all three new source modules and their axiom-audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.49
+
+The new `UnequalFourierSourceBlock.lean` proves the logarithmic
+oscillatory-integral estimate for independent same-sign coefficients. In the
+positive chamber, the exact amplitude `t^3/((A*t+2*B)*log t)` is differentiated,
+shown to be increasing for `t>=2`, and inserted into interval integration by
+parts. Complex conjugation transports the norm bound to the negative chamber.
+
+These integral estimates are combined with the release-3.48 unequal prime
+estimate to produce the literal prime-Fourier-mode-minus-integral discrepancy
+in both same-sign chambers. Opposite-sign stationary modes, coordinate-axis
+modes, low frequencies, and the final Fourier assembly remain open; Theorem
+2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10095 jobs, including `UnequalFourierSourceBlock` and all new axiom-audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.50
+
+The new `StationaryFourierSourceBlock.lean` isolates the unique critical
+point `-2*B/A` and factors the opposite-sign phase derivative exactly through
+distance from it. For a critical point in the dyadic source interval, the
+phase-scale lower hypothesis yields an explicit lower bound on `|A|` and,
+outside radius `δ`, on the derivative magnitude.
+
+The logarithmic interval integral is decomposed exactly into two far pieces
+and a central stationary neighborhood. The latter is bounded by
+`2*δ/log P`. This release does not yet claim the opposite-sign discrepancy:
+far-piece cancellation and optimization of `δ` remain, followed by axis
+modes, low-frequency control, and final Fourier assembly.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10096 jobs, including `StationaryFourierSourceBlock` and all new axiom-audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.51
+
+`StationaryFourierSourceBlock.lean` now supplies the two missing far-piece
+cancellation bounds. Integration by parts was generalized to intervals where
+the critical linear factor is nonzero. The amplitude derivative has the
+required sign on the left and on the first right segment; after the turning
+point it is bounded explicitly and integrated over the residual tail.
+
+The far estimates and central length bound give a complete raw stationary
+inequality for an interior radius-`δ` neighborhood. Inserting the source
+coefficient lower bound and choosing `δ=P/sqrt L` proves
+`50*P/(sqrt L*log P)` for `L>=4`. Endpoint clipping, the conjugate chamber,
+coordinate-axis modes, low frequencies, and final Fourier assembly remain;
+Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10096 jobs, including all release-3.51 declarations and axiom-audit entries.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.
+
+## Release delta: prime-equidistribution-3.53
+
+The new `CoordinateAxisFourierSourceBlock.lean` closes the pure quadratic
+coordinate axis. A positive-variation integration-by-parts theorem gives the
+dyadic integral bound, the exact pure quadratic phase scale converts it to
+`P/(L*log P)`, and the unequal prime estimate yields the literal
+prime-minus-integral Fourier discrepancy.
+
+The pure linear axis remains open because its Type II correlations have zero
+quadratic coefficient and do not satisfy the present quadratic Weyl and
+Vinogradov interfaces. Low frequencies and final Fourier assembly also
+remain; Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10097 jobs, including `CoordinateAxisFourierSourceBlock` and all new audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.54
+
+The new `LinearAxisTypeII.lean` closes the zero-quadratic obstruction at the
+pointwise Type II correlation level. The derivative critical sets are empty,
+so the high-scale branch uses the existing conditional
+`VinogradovExponentialSumEstimate` on the entire interval without deletion or
+component loss. The low-scale branch applies the internal four-step Weyl
+estimate on the regular interval and proves the exact short-block geometry,
+far-pair inverse-scale inequality, and effective-error estimate required by
+the standard four-kernel bound.
+
+The pure-linear Fourier integral side is also present, with dyadic bound
+`6*P^2/(|A|*log P)`, exact phase scale `|A|/(4*P)`, and source-scale bound
+`2*P/(L*log P)`. Aggregation through Type II double blocks and the Vaughan,
+Mangoldt, and prime layers remains open. Low frequencies and final Fourier
+assembly also remain; neither the complete pure-linear axis nor Theorem 2.5 is
+claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10098 jobs, including `LinearAxisTypeII` and all new audit entries. The
+canonical isolated verifier was then run twice with `FINAL RESULT: PASS` as
+the release gate.
+
+## Release delta: prime-equidistribution-3.55
+
+The pure-linear Type II path is now complete through the full Vaughan source
+family. `LinearAxisTypeII.lean` lifts the zero-quadratic pointwise Weyl and
+conditional Vinogradov bounds through arbitrary short double blocks,
+canonical dyadic blocks, and literal weighted-convolution double blocks.
+`LinearAxisTypeIISourceBlock.lean` performs the finite family sum and reuses
+the audited scalar ledger to obtain the explicit arbitrary-log-saving source
+theorem.
+
+This does not yet give the pure-linear prime endpoint. The two Type I Vaughan
+families still need zero-quadratic analogues before Mangoldt and prime
+assembly. Low frequencies and final Fourier assembly also remain; Theorem 2.5
+is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10099 jobs, including `LinearAxisTypeIISourceBlock` and all new audit entries.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.
+
+## Release delta: prime-equidistribution-3.56
+
+The pure-linear coordinate axis is now complete. `LinearAxisTypeI.lean`
+specializes the empty-critical-set Weyl and conditional Vinogradov branches to
+both Vaughan Type I families. `LinearAxisMangoldtSourceBlock.lean` combines
+them with the release-3.55 Type II family through the exact Vaughan identity;
+`LinearAxisPrimeSourceBlock.lean` removes prime powers and performs reverse
+Abel summation. `LinearAxisFourierSourceBlock.lean` combines the resulting
+prime estimate with the existing pure-linear integral theorem to prove the
+literal zero-quadratic Fourier-mode discrepancy.
+
+Both coordinate axes are now closed. Low frequencies and final Fourier
+assembly remain; Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10103 jobs, including all release-3.56 modules and axiom-audit entries. The
+canonical isolated verifier was then run twice with `FINAL RESULT: PASS` as
+the release gate.
+
+## Release delta: prime-equidistribution-3.52
+
+The stationary estimate is now valid with the optimized neighborhood clipped
+at either or both integration endpoints. The exact case split preserves the
+release-3.51 bound. Simultaneous coefficient negation preserves the stationary
+point and conjugates the integral, so both opposite-sign orientations are
+covered by one absolute-coefficient theorem.
+
+The deterministic estimate is exposed for the literal Fourier-mode integral
+and combined with the unequal prime theorem. This gives a source-range
+prime-minus-integral discrepancy for stationary modes with both coefficients
+nonzero. Coordinate-axis modes, low frequencies, and final Fourier assembly
+remain open; Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10096 jobs, including all release-3.52 declarations and axiom-audit entries.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.

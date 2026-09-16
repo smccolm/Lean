@@ -113,8 +113,8 @@ Theorem 2.5 estimate.
 | Lemma 4.2 (`hf3`), both equidistribution branches | For `P=H log²N`, primes `p>P` have even interval-product valuation concentrated in one interval element. If `√(2N)<P`, no such prime divides the product and the normalized final-arc cutoff gives a contradiction. If `P≤√(2N)`, a two-coordinate cutoff detects an interval divisor while excluding the forced `p²` divisor | Lemma 4.1, uniqueness of a multiple when `p>H`, specialized Theorem 2.5, reciprocal substitution, and Proposition 2.3(ii) | `eventually_not_prime_dvd_factorialThree_of_large_scale`, `eventually_not_factorialThree_of_large_primeScale_and_growth_of_inputs`, `factorialLowObstructionWeight`, `factorialLowInnerPrimeScale_measure_lower_at_factorialPrimeScale`, `factorialLowPrimeEquidistributionIntegral_norm_lower`, `eventually_not_factorialThree_of_low_primeScale_and_growth_of_inputs`, `eventually_not_factorialThree_of_growth_of_inputs` | Both high- and low-`P` contradictions are proved and audited, including the shrinking-band cell geometry, exact substitutions, the `H/1920` prime-set bound, uniform `O(log^12 N)` cutoff control, and the final low/high split. Lemma 4.2 is complete conditional on Theorem 2.5 and the exact Proposition 2.3(ii) interface. The analytic proof of Proposition 2.3(ii) remains open. |
 | Lemma 4.3, smooth square relation | For a type-`F₃` interval, write two ordered terms as `c₁n₁²` and `c₂n₂²`, where each `cᵢ` is squarefree and `P`-smooth for `P=max(a,H)`, and `c₁n₁²+h=c₂n₂²` with `0<h<H`; the selected coefficients satisfy `exp(O(log P+P/H))` bounds | Equality with `s(a!)`, uniqueness of an interval multiple of a prime larger than `H`, Chebyshev bounds, and finite averaging over two interval halves | `factorialIntervalCoefficientProduct_dvd_factorialCoefficientEnvelope`, `log_factorialCoefficientEnvelope_le`, `exists_two_factorial_coefficients_with_exp_bound`, `factorialThreeInterval_exists_bounded_smooth_squareRelation` | Complete and audited. The exact envelope is `∏_{p≤P}p^(H/p+1)`; its logarithm is at most `log 4·H(2+log P)+log 4·P`, yielding the explicit coefficient threshold `exp(3 log 4(2+log P+P/H))`. |
 | Theorem 1.9, type `F₃` | `#((F₃ \ F₃¹)∩[1,x]) ≪ x^(1/2+o(1))`; hence `#(F₃∩[1,x])=x^(1/2+o(1))` | Proposition 2.3, Theorem 2.5, large sieve, Lemmas 4.1--4.3 | `TaoTheorem19Conclusion`; `factorialLargeSieveEndpointCount_powerUpperBound`; `nontrivialFactorialThreeCount_powerUpperBound_of_lemma42`; `factorialThreeOneTermCount_powerUpperBound`; `factorialThreeCount_powerScale_of_lemma42`; `taoTheorem19_of_lemma42`; `taoTheorem19_of_analytic_inputs`; `taoTheorem19_of_source_inputs` | Conditional counting closure complete and audited. The bounded-length and small-index branches, finite Corollaries 2.8--2.9, maximal choice `k=⌊log(x+1)/(2 log a)⌋`, nonempty-fiber reassembly, and absorption of the Lemma 4.1/4.2 budgets prove the nontrivial square-root upper bound. Exponential growth of `s(a!)` and an `O(log x)·⌊√x⌋` representation cover prove the one-term upper bound; the square family supplies the lower half. Thus the exact public contract follows from Lemma 4.2, and is reduced to Theorem 2.5 plus Proposition 2.3(ii) or the pinned BHP contract. |
-| Theorem 1.10, factorial equation | Number of `1≤a₁<a₂<a₃≤x` solutions is `x^(1/2+o(1))` | Theorem 1.9 plus endpoint projection, the `f31` square family, `hf3`, and Erdős--Selfridge fiber control | `TaoTheorem110Conclusion`; `factorialSquareTripleCount_powerScale_lower`; `factorialLemma42GapBudget`; `eventually_factorialSquareTriple_tail_gap_le_lemma42Budget`; `factorialLemma42GapBudget_powerUpperBound`; `taoTheorem110_of_lemma42_and_erdosSelfridge`; `taoTheorem110_of_analytic_inputs_direct`; `taoTheorem110_of_source_inputs_direct` | Complete lower half, exact finite upper transfer, and the Lemma 4.2 gap instantiation are proved. Since Theorem 1.9 is now derived internally from Lemma 4.2, the direct public bridge has exactly the remaining mathematical inputs Erdős--Selfridge, Theorem 2.5, and Proposition 2.3(ii) or the analytic BHP theorem. |
-| Erdős--Selfridge input | Theorem 1.1(ii), used after Theorem 1.10 | Original Theorem 1 specialized to exponent two | `not_exists_consecutiveProduct_eq_square_of_start_le_length`, `not_exists_consecutiveProduct_eq_square_two`, `erdosSelfridgeSquareConclusion_iff_core`, `factorialSquarefreeFiberUpTo_card_le_two` | Exact factorial-fiber reduction, unconditional long-interval and length-two obstructions, equivalence of the full theorem to `3≤H<N`, and complete ES-to-two-element-fiber deduction proved and audited; only that core no-square range remains; original paper pinned and hashed |
+| Theorem 1.10, factorial equation | Number of `1≤a₁<a₂<a₃≤x` solutions is `x^(1/2+o(1))` | Theorem 1.9 plus endpoint projection, the `f31` square family, `hf3`, and Erdős--Selfridge fiber control | `TaoTheorem110Conclusion`; `factorialSquareTripleCount_powerScale_lower`; `taoTheorem110_of_lemma42`; `taoTheorem110_of_analytic_inputs`; `taoTheorem110_of_source_inputs` | Complete lower half, exact finite upper transfer, Lemma 4.2 gap instantiation, and Erdős--Selfridge fiber control are proved. Since Theorem 1.9 is derived internally from Lemma 4.2, the direct public bridge has exactly the remaining analytic inputs Theorem 2.5 and Proposition 2.3(ii), or the analytic BHP theorem. |
+| Erdős--Selfridge input | Theorem 1.1(ii), used after Theorem 1.10 | Original Theorem 1 specialized to exponent two | `sylvesterSchur`; `erdosSelfridgeThreePrimorialConclusion_hanson`; `erdosSelfridgeSquare`; `factorialSquarefreeFiberUpTo_card_le_two_unconditional` | Complete and audited for the exact square specialization used by Tao. Unrestricted Sylvester--Schur and Hanson's all-length primorial estimate close the source square argument, giving the unconditional two-element factorial-fiber bound. |
 
 The Erdős--Selfridge row now also has an exact source-Theorem-2 route:
 `consecutiveProduct_eq_prod_Icc_succ`, `erdosSelfridgeNextPrime_spec`,
@@ -196,9 +196,9 @@ remains open.
 | Proposition 2.3(i) | If `N >= 2`, there is a prime `p` with `N/2 < p <= N` | `Tao2026.taoProposition23i` | Proved from Mathlib's kernel-checked Bertrand theorem and axiom-audited |
 | Proposition 2.3(ii) | If `N >= 0`, `H >= 1`, and `{N+1,...,N+H}` has no prime, then `H ≪ N^0.525` | `TaoProposition23iiConclusion`; `BakerHarmanPintzTheorem1Conclusion`; `eventually_bhp_backward_interval_left_gt_nat`; `eventually_exists_prime_after_nat_of_bakerHarmanPintz`; `taoProposition23ii_of_bakerHarmanPintz` | The exact source-shaped backward interval interface is compiled and proved to imply Tao's uniform natural endpoint statement. Sampling the source theorem at `N+2N^(21/40)` supplies the forward prime, while Bertrand bounds the finite exceptional range. The primary source is pinned as `Sources/baker-harman-pintz-2001.pdf`, SHA-256 `D3B6011255C49E52B002E08FAEBB7D252CA1027E545B72FA097176E6285443A2`. The full analytic BHP proof remains open. |
 | Proposition 2.3(iii) | If `theta > 2/15`, there is `c>0` such that the real `0<=x'<=X` for which the closed interval `[x',x'+X^theta]` contains no prime have measure `O(X^(1-c+o(1)))` | `Tao2026.taoProposition23iii_guthMaynard` | Proved, warning-free, and axiom-audited |
-| Theorem 2.5 | Uniformly for `P≥2`, intervals `I⊆[P,2P]`, `j≥1`, and `M,N=O(exp(log^(3/2-ε) P))`, the prime sum of a smooth `ℤ²`-periodic weight `W(N/p,M/p^j)` equals its logarithmic integral with error `O_{ε,A}(‖W‖_{C³}P/log^A P)` | `TaoTheorem25Conclusion`, `TaoTheorem25SpecializedConclusion`, `taoTheorem25Specialized_of_full`; phase lemmas through `reciprocalPhase_one_eq_absorb`, `normalized_abs_iteratedDeriv_reciprocalPhase_eq_critical`, `sum_norm_standardAdditiveCharacter_reciprocalPhase_succ_sub_le_scale`; low-frequency reduction through `norm_mangoldtReciprocalPhaseSum_sub_reciprocalPhaseSum_le_scale` and `eventually_norm_mangoldtReciprocalPhaseSum_sub_le_of_scale_le`; finite Fourier assembly through `integrableOn_fourierModeIntegrand`, `norm_finiteFourierPolynomial_discrepancy_le_uniform_of_subset`, `card_fourierFrequencyBox`, `norm_fourierFrequencyBox_discrepancy_le`, and `vinogradovParameterBound_int_mul`; approximation transfer through `integrableOn_primeEquidistributionIntegrand`, `norm_primeEquidistributionDiscrepancy_le_of_approx`, `norm_finiteFourierPolynomial_sub_le_tail`, and `norm_primeEquidistributionDiscrepancy_le_of_finiteFourierTruncation`; Fourier decay and reconstruction through `summable_fourierDecayWeight`, `tendsto_fourierCoefficientTail_zero`, `isOpenQuotientMap_realPairToUnitTorus`, `mFourier_pairFrequency_realPairToUnitTorus`, `taoFourierCoeff_eq_integral_fin2`, `hasSum_taoFourierSeries_of_decay`, and `tendstoUniformly_taoFourierPolynomial_of_decay`; unconditional derivative-to-radial decay through `bddAbove_iteratedFDeriv_norm_range`, `hasDerivAt_pureCoordinateIteratedFDeriv_first`, `hasDerivAt_pureCoordinateIteratedFDeriv_second`, and `norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth`; critical-set lemmas through `card_nat_points_reciprocalDerivativeCriticalUnion_le`; `weightedMangoldtSum_eq_primeLog_add_primePowerTail`, `norm_intervalPrimePowerTailReciprocalPhaseSum_le_explicit`; `vaughanIdentity`, `vaughanIdentity_apply`, `vaughanIdentity_sourceCoefficients`, `weightedVaughanIdentity_sourceCoefficients`, `mangoldtReciprocalPhaseSum_vaughan_source_product_restricted`; canonical coefficient bounds through `abs_vaughanTypeICoefficient_le_one`, `abs_vaughanTypeIPrimeCoefficient_le_log_scale`, `abs_vaughanTypeIIBetaCoefficient_le_one`, and `abs_vaughanTypeIIGammaCoefficient_le_log_scale`; support through `vaughanTypeIPrimeCoefficient_eq_zero_of_mul_lt` and `vaughanTypeIIGammaCoefficient_eq_zero_of_le`; convolution blocks through `weightedConvolutionProductSum_eq_sum_doubleBlocks`; `norm_sum_Ico_log_smul_le`, `norm_primeLogReciprocalPhaseSum_Ico_le`, `norm_primeReciprocalPhaseSum_Ico_le`; `norm_typeIOuterSum_le_rescaled`; Type II reduction through `sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_uniform`; short-block interfaces through `weightedSum_eq_sum_shortIntervalCoefficients`; high-scale source interface through `VinogradovExponentialSumEstimate`, `exists_norm_reciprocalPhaseSum_le_sourceVinogradov_componentEnvelope`, `exists_norm_typeIIProductRestrictedCorrelationSum_le_sourceVinogradov_logEnvelope`, and `eventually_sourceVinogradov_logEnvelope_le` | Exact cited source pinned as `Sources/singmaster-2106.03335v1.pdf` and `.tar`, Proposition 1.12(ii), with hashes in `Sources/SHA256SUMS.txt`. The source-faithful complex-valued contract and sum-of-orders `C³` norm, exact `j=1` absorption, phase derivative and additive-character total-variation bounds, complex Abel reduction to the uniform initial-subinterval `Λ-1` discrepancy, the frozen qualitative PNT bridge to uniform dyadic and fixed-bounded-frequency `o(P)` consequences, finite Fourier-mode prime-sum/integral assembly, automatic source-interval mode integrability, exact retained-box count and uniform-envelope error, parameter rescaling, continuous-weight integrability, explicit uniform-approximation transfer errors, exact finite discarded-mode `ℓ¹` tail propagation, summability of the source cubic `ℤ²` envelope with vanishing square-box tails, open-quotient torus descent, character compatibility, literal fundamental-square coefficient formula, uniform reconstruction of `W` conditional on that envelope, and the complete smooth-periodic radial Fourier bound `|c_(n,m)| ≤ 27 * taoC3Norm W * (1+|n|+|m|)^(-3)`, one-interval critical-set cover, finite-union measure and lattice-point deletion bounds, exact prime/Mangoldt split with controlled higher-prime-power tail, four-term weighted Vaughan identity, its source-oriented Type I/II reassociation, exact product-box reindexing with `m*n∈I`, the canonical coefficient bounds `1, log P, 1, log P`, their cutoff/tail supports, exact outer and double coefficient-block decompositions retaining the product restriction, bidirectional finite Abel reductions with explicit logarithmic factors, exact variable-support Type I reduction, exact product-restricted Type II Cauchy/`X_{n,n'}` reduction and normalized parameter bounds, the low-frequency arbitrary-subinterval two-term Weyl bound, and its equal-parameter distance-kernel propagation through the exact endpoint-free Vaughan double-block squared sum, including uniform scale/effective-error majorants, arbitrary-positive-endpoint propagation, and direct specialization to the canonical dyadic Vaughan double blocks, compile and are audited. The exact cutoff `10⌈log F/log X⌉+1`, its eventual shifted budget, the source derivative window, the absolute-constant Vinogradov statement with exponent `2^-18`, and its global reciprocal-phase consumer are also compiled and audited. The intrinsic low-scale endpoint removes the former retained block error and its upper source inequality. The high-pair consumer rewrites the product-restricted correlation to its exact quotient interval, and the complete normalized principal-plus-deletion envelope is eventually at most `3(log P)^(-T)` whenever `T+2≤3A`. Tao later consumes only `M=N`, `j=2`. The analytic cancellation theorem remains open: `VinogradovExponentialSumEstimate` is now the single local high-scale analytic proposition, while the frozen PNT closure proves only qualitative fixed-scale cancellation, not the quantitative classical discrepancy needed for arbitrary logarithmic saving at polylogarithmically growing scale. The remaining work is to prove that proposition, insert the resulting bound into the high-transformed-scale branch, and finish the quantitative Type I/II and Fourier assembly estimates. The lower split `(log Bcap)^d≤F`, with `0≤d`, already supplies `F≥1` internally. The inner singleton-band branch is already closed by an exact diagonal-only estimate. |
+| Theorem 2.5 | Uniformly for `P≥2`, intervals `I⊆[P,2P]`, `j≥1`, and `M,N=O(exp(log^(3/2-ε) P))`, the prime sum of a smooth `ℤ²`-periodic weight `W(N/p,M/p^j)` equals its logarithmic integral with error `O_{ε,A}(‖W‖_{C³}P/log^A P)` | `TaoTheorem25Conclusion`, `TaoTheorem25SpecializedConclusion`, `taoTheorem25Specialized_of_full`; phase lemmas through `reciprocalPhase_one_eq_absorb`, `normalized_abs_iteratedDeriv_reciprocalPhase_eq_critical`, `sum_norm_standardAdditiveCharacter_reciprocalPhase_succ_sub_le_scale`; low-frequency reduction through `norm_mangoldtReciprocalPhaseSum_sub_reciprocalPhaseSum_le_scale` and `eventually_norm_mangoldtReciprocalPhaseSum_sub_le_of_scale_le`; finite Fourier assembly through `integrableOn_fourierModeIntegrand`, `norm_finiteFourierPolynomial_discrepancy_le_uniform_of_subset`, `card_fourierFrequencyBox`, `norm_fourierFrequencyBox_discrepancy_le`, and `vinogradovParameterBound_int_mul`; approximation transfer through `integrableOn_primeEquidistributionIntegrand`, `norm_primeEquidistributionDiscrepancy_le_of_approx`, `norm_finiteFourierPolynomial_sub_le_tail`, and `norm_primeEquidistributionDiscrepancy_le_of_finiteFourierTruncation`; Fourier decay and reconstruction through `summable_fourierDecayWeight`, `tendsto_fourierCoefficientTail_zero`, `isOpenQuotientMap_realPairToUnitTorus`, `mFourier_pairFrequency_realPairToUnitTorus`, `taoFourierCoeff_eq_integral_fin2`, `hasSum_taoFourierSeries_of_decay`, and `tendstoUniformly_taoFourierPolynomial_of_decay`; unconditional derivative-to-radial decay through `bddAbove_iteratedFDeriv_norm_range`, `hasDerivAt_pureCoordinateIteratedFDeriv_first`, `hasDerivAt_pureCoordinateIteratedFDeriv_second`, and `norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth`; critical-set lemmas through `card_nat_points_reciprocalDerivativeCriticalUnion_le`; `weightedMangoldtSum_eq_primeLog_add_primePowerTail`, `norm_intervalPrimePowerTailReciprocalPhaseSum_le_explicit`; `vaughanIdentity`, `vaughanIdentity_apply`, `vaughanIdentity_sourceCoefficients`, `weightedVaughanIdentity_sourceCoefficients`, `mangoldtReciprocalPhaseSum_vaughan_source_product_restricted`; canonical coefficient bounds through `abs_vaughanTypeICoefficient_le_one`, `abs_vaughanTypeIPrimeCoefficient_le_log_scale`, `abs_vaughanTypeIIBetaCoefficient_le_one`, and `abs_vaughanTypeIIGammaCoefficient_le_log_scale`; support through `vaughanTypeIPrimeCoefficient_eq_zero_of_mul_lt` and `vaughanTypeIIGammaCoefficient_eq_zero_of_le`; convolution blocks through `weightedConvolutionProductSum_eq_sum_doubleBlocks`; `norm_sum_Ico_log_smul_le`, `norm_primeLogReciprocalPhaseSum_Ico_le`, `norm_primeReciprocalPhaseSum_Ico_le`; `norm_typeIOuterSum_le_rescaled`; Type II reduction through `sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_uniform`; short-block interfaces through `weightedSum_eq_sum_shortIntervalCoefficients`; high-scale source interface through `VinogradovExponentialSumEstimate`, `exists_norm_reciprocalPhaseSum_le_sourceVinogradov_componentEnvelope`, `exists_norm_typeIIProductRestrictedCorrelationSum_le_sourceVinogradov_logEnvelope`, and `eventually_sourceVinogradov_logEnvelope_le`; literal Type II convolution closure through `typeIIProductRestrictedOuterSum_eq_productSum`, `norm_weightedConvolutionProductVaughanDoubleBlockSum_sq_le`, `norm_weightedConvolutionProductVaughanTypeIIDoubleBlockSum_sq_le`, `eventually_norm_weightedConvolutionProductVaughanTypeIIDoubleBlockSum_sq_le_sourceVinogradov`, `vaughanTypeIIDoubleBlockProductSupport`, `vaughanTypeIISourceBlockMajorant`, `vaughanSourceTailCutoff`, `eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov`, `eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov_canonicalCutoff`, and `norm_weightedConvolutionProductSum_le_logTwo_pow_twoHundredFour_mul_sqrt` | Exact cited source pinned as `Sources/singmaster-2106.03335v1.pdf` and `.tar`, Proposition 1.12(ii), with hashes in `Sources/SHA256SUMS.txt`. The source-faithful complex-valued contract and sum-of-orders `C³` norm, exact `j=1` absorption, phase derivative and additive-character total-variation bounds, complex Abel reduction to the uniform initial-subinterval `Λ-1` discrepancy, the frozen qualitative PNT bridge to uniform dyadic and fixed-bounded-frequency `o(P)` consequences, finite Fourier-mode prime-sum/integral assembly, automatic source-interval mode integrability, exact retained-box count and uniform-envelope error, parameter rescaling, continuous-weight integrability, explicit uniform-approximation transfer errors, exact finite discarded-mode `ℓ¹` tail propagation, summability of the source cubic `ℤ²` envelope with vanishing square-box tails, open-quotient torus descent, character compatibility, literal fundamental-square coefficient formula, uniform reconstruction of `W` conditional on that envelope, and the complete smooth-periodic radial Fourier bound `|c_(n,m)| ≤ 27 * taoC3Norm W * (1+|n|+|m|)^(-3)`, one-interval critical-set cover, finite-union measure and lattice-point deletion bounds, exact prime/Mangoldt split with controlled higher-prime-power tail, four-term weighted Vaughan identity, its source-oriented Type I/II reassociation, exact product-box reindexing with `m*n∈I`, the canonical coefficient bounds `1, log P, 1, log P`, their cutoff/tail supports, exact outer and double coefficient-block decompositions retaining the product restriction, bidirectional finite Abel reductions with explicit logarithmic factors, exact variable-support Type I reduction, exact product-restricted Type II Cauchy/`X_{n,n'}` reduction and normalized parameter bounds, the low-frequency arbitrary-subinterval two-term Weyl bound, and its equal-parameter distance-kernel propagation through the exact endpoint-free Vaughan double-block squared sum, including uniform scale/effective-error majorants, arbitrary-positive-endpoint propagation, and direct specialization to the canonical dyadic Vaughan double blocks, compile and are audited. The exact cutoff `10⌈log F/log X⌉+1`, its eventual shifted budget, the source derivative window, the absolute-constant Vinogradov statement with exponent `2^-18`, and its global reciprocal-phase consumer are also compiled and audited. The intrinsic low-scale endpoint removes the former retained block error and its upper source inequality. The high-pair consumer rewrites the product-restricted correlation to its exact quotient interval, and the complete normalized principal-plus-deletion envelope is eventually at most `3(log P)^(-T)` whenever `T+2≤3A`. Tao later consumes only `M=N`, `j=2`. The analytic cancellation theorem remains open: `VinogradovExponentialSumEstimate` is now the single local high-scale analytic proposition, while the frozen PNT closure proves only qualitative fixed-scale cancellation, not the quantitative classical discrepancy needed for arbitrary logarithmic saving at polylogarithmically growing scale. The high-transformed-scale bound is already inserted through the actual source Type II Vaughan double blocks: the literal convolution is identified with the exact outer sum, Cauchy--Schwarz reaches the canonical squared inner sum, actual beta/gamma envelopes are supplied, and arbitrary block bounds reassemble into the full convolution norm. The finite Type II source-family split is complete: both tail cutoffs annihilate small dyadic bands, the explicit large--large majorant is summed over the full literal convolution, and a uniform square bound costs exactly `(log₂ B+1)^204`. The canonical cube-root cutoffs, empty-support deletion, global-to-block phase comparison, and uniform outer-scale comparison are now discharged. The remaining work is to prove the Vinogradov proposition, simplify the Type I/II majorants to the target logarithmic saving, and finish the Fourier assembly. The lower split `(log Bcap)^d≤F`, with `0≤d`, already supplies `F≥1` internally. The inner singleton-band branch is already closed by an exact diagonal-only estimate. |
 | Vaughan shorter-family count | Split each dyadic coefficient range into intervals of relative length `log^{-100} P`, using only `log^{O(1)} P` families overall | `dyadicShortIntervalLength_le_div_add_one`, `dyadicShortIntervalIndex_spec`, `card_vaughanShortIntervalIndexBox`, `weightedSum_eq_sum_vaughanShortIntervalCoefficients`, `weightedConvolutionProductSum_eq_sum_vaughanDoubleBlocks`, `mangoldtReciprocalPhaseSum_vaughan_source_shortFamilies`, `realLog_nat_le_logTwo_add_one`, `vaughanShortIntervalLength_cast_le_realLog`, `mem_vaughanShortIntervalIndexedBlock_realLog_bounds`, `vaughanShortIntervalCoefficient_realLog_support`, `vaughanShortIntervalCoefficient_realLogScale_support` | Complete and audited. Every positive index at most `B` has a canonical dyadic short-block index; with strengthened budget `(log₂ B+1)^101`, the rectangular family has exactly `(log₂ B+1)^102` members, every weighted coefficient sum decomposes over it, and the two Type I plus Type II Vaughan sums decompose over one or two copies while retaining `m*n∈I`. The natural/real logarithm comparison and extra subdivision power absorb ceiling rounding. Every block lies in `[M,(1+log(B)^{-100})M)`, and for the source scale `P≤B` monotonicity gives the literal `[M,(1+log(P)^{-100})M)` support; sub-budget dyadic bands are singleton blocks. Only polynomial-logarithmic family growth is used, as required by the source. |
-| Type II distance-kernel summation and exponent arithmetic | Regroup the source kernel depending on `|n-n'|` without losing the short-support cardinality; convert the high-frequency lower bound into logarithmic saving | `shortIntervalBlock_eq_Ico`, `mul_mem_Ico_iff_mem_Ico_ceilDiv`, `typeIIProductRestrictedBlock_filter_eq_Ico`, `typeIIProductRestrictedBlock_length_le`, `typeIIProductRestrictedCorrelationSum_vaughanBlock_eq`, `typeIICorrelationLinearParameter`, `typeIICorrelationHigherParameter`, `typeIICorrelationScale_lower_of_linear`, `typeIICorrelationScale_lower_of_equalParameters`, `norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_twoTerm`, `reciprocalPhaseFourStepTwoTermWidth_typeIICorrelation_equalParameters_le`, `norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_equalParameters`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_equalParameters`, `typeIIShortIntervalScaleError`, `reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortInterval`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_productScale`, `le_pow_four_of_div_pow_five_le_one_div`, `typeIIProductRestrictedBlock_quadratic_fourStep_geometry`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_quadratic`, `sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_sourceScale_blockLengths`, `typeIIShortIntervalScaleErrorAt`, `typeIIShortIntervalEffectiveErrorBoundAt`, `ten_mul_vaughanShortIntervalLength_mul_le_pow_four_mul`, `sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_singleton`, `sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_fourStepWeyl_quadratic`, `natDistFiber`, `card_natDistFiber_le_two`, `sum_eq_sum_natDistFibers`, `sum_natDistKernel_le_two_mul_sum`, `antitone_typeIIDecayKernel`, `sum_typeIIDecayKernel_natDist_le_one_add_sourceScale`, `one_le_sourceScale_of_sum_typeIIDecayKernel_le`, `sum_typeIIDecayKernel_le_sourceScale`, `sum_typeIIDecayKernel_natDist_le_sourceScale`, `natDistFiber_erase_center_zero`, `sum_typeIIDecayKernel_erase_le_sourceScale`, `sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_decayKernel`, `sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_decayKernel`, `sum_typeIIProductRestrictedInnerSum_norm_sq_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale`, `card_shortIntervalBlock_le`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale_blockLengths`, `rpow_mul_frequencyDecay_le`, `log_rpow_mul_frequencyDecay_le_of_lt` | Exact distance regrouping, sharp multiplicity two, kernel monotonicity, discrete-to-integral comparison, affine-rpow antiderivative, and the unconditional `1 + O(N_r F^{-c})` finite-support bound are proved and audited. The exact filtered correlation support is one half-open interval with explicit ceiling-divided endpoints and length at most the outer quotient-block length; the canonical Vaughan correlation is rewritten literally as `reciprocalPhaseSum` on this interval. The low-frequency two-term Weyl theorem is applied directly to that support: transformed coefficients are named, their positivity/nonvanishing obligations are discharged off diagonal, nonempty intersections consume the bundled analytic conditions, and empty intersections close automatically. For the `N=M` specialization used by Tao, the transformed scale now has the exact distance lower bound, and the Weyl width is bounded by `E^(1/1024)+4(1+distance*F/B)^(-1/1024)`. The correlation-dependent logarithm is replaced by the fixed outer-block length, and this pointwise estimate is propagated through the endpoint-free kernel theorem to the exact Vaughan double-block squared-sum bound. The pairwise `F'/K^5≤E` family is discharged uniformly from the short block's left endpoint and diameter by `typeIIShortIntervalScaleError`. For `j=2`, the literal outer-block geometry reduces endpoint membership, the expanded endpoint, and the power evaluation to one margin bound. The transformed low-scale condition follows from `E≤1/K`. The kernel and Weyl layers now accept arbitrary positive endpoints and specialize directly to the named dyadic Vaughan blocks. Pairwise effective errors are compressed to `typeIIShortIntervalEffectiveErrorBound`; its `1/128` power controls the optimized range, while the logarithmic Vaughan width gives `5q≤K` and closes the expansion margin above the subdivision budget. On large inner bands, the logarithmic width converts `10F≤K^4(log Bcap)^100` into the required error comparison; inner singleton bands are purely diagonal. The remaining source-regime work is to prove the logarithmic lower split and that low-frequency upper bound, close the high-transformed-scale branch, and obtain logarithmic saving; `F≥1` follows internally from the lower split. The zero-distance lower bound still shows why an all-support endpoint would be necessary; the actual erased-center support removes it. The implication `(log P)^d<F`, `b+t≤dc` ⇒ `(log P)^bF^{-c}≤(log P)^(-t)` is proved. |
+| Type II distance-kernel summation and exponent arithmetic | Regroup the source kernel depending on `|n-n'|` without losing the short-support cardinality; convert the high-frequency lower bound into logarithmic saving | `shortIntervalBlock_eq_Ico`, `mul_mem_Ico_iff_mem_Ico_ceilDiv`, `typeIIProductRestrictedBlock_filter_eq_Ico`, `typeIIProductRestrictedBlock_length_le`, `typeIIProductRestrictedCorrelationSum_vaughanBlock_eq`, `typeIICorrelationLinearParameter`, `typeIICorrelationHigherParameter`, `typeIICorrelationScale_lower_of_linear`, `typeIICorrelationScale_lower_of_equalParameters`, `norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_twoTerm`, `reciprocalPhaseFourStepTwoTermWidth_typeIICorrelation_equalParameters_le`, `norm_typeIIProductRestrictedCorrelationSum_le_fourStepWeyl_decayKernel_equalParameters`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_equalParameters`, `typeIIShortIntervalScaleError`, `reciprocalPhaseScale_typeIICorrelation_div_pow_five_le_shortInterval`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_productScale`, `le_pow_four_of_div_pow_five_le_one_div`, `typeIIProductRestrictedBlock_quadratic_fourStep_geometry`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_fourStepWeyl_quadratic`, `sum_typeIIProductRestrictedInnerSum_shortIntervalDoubleBlock_norm_sq_le_sourceScale_blockLengths`, `typeIIShortIntervalScaleErrorAt`, `typeIIShortIntervalEffectiveErrorBoundAt`, `ten_mul_vaughanShortIntervalLength_mul_le_pow_four_mul`, `sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_singleton`, `sum_typeIIProductRestrictedInnerSum_vaughanDoubleBlock_norm_sq_le_fourStepWeyl_quadratic`, `natDistFiber`, `card_natDistFiber_le_two`, `sum_eq_sum_natDistFibers`, `sum_natDistKernel_le_two_mul_sum`, `antitone_typeIIDecayKernel`, `sum_typeIIDecayKernel_natDist_le_one_add_sourceScale`, `one_le_sourceScale_of_sum_typeIIDecayKernel_le`, `sum_typeIIDecayKernel_le_sourceScale`, `sum_typeIIDecayKernel_natDist_le_sourceScale`, `natDistFiber_erase_center_zero`, `sum_typeIIDecayKernel_erase_le_sourceScale`, `sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_decayKernel`, `sum_norm_typeIIProductRestrictedCorrelationSum_offDiagonal_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_norm_sq_le_of_decayKernel`, `sum_typeIIProductRestrictedInnerSum_norm_sq_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_shortIntervalBlock_norm_sq_le_sourceScale`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale`, `card_shortIntervalBlock_le`, `sum_typeIIProductRestrictedInnerSum_doubleBlock_norm_sq_le_sourceScale_blockLengths`, `rpow_mul_frequencyDecay_le`, `log_rpow_mul_frequencyDecay_le_of_lt` | Exact distance regrouping, sharp multiplicity two, kernel monotonicity, discrete-to-integral comparison, affine-rpow antiderivative, and the unconditional `1 + O(N_r F^{-c})` finite-support bound are proved and audited. The exact filtered correlation support is one half-open interval with explicit ceiling-divided endpoints and length at most the outer quotient-block length; the canonical Vaughan correlation is rewritten literally as `reciprocalPhaseSum` on this interval. The low-frequency two-term Weyl theorem is applied directly to that support: transformed coefficients are named, their positivity/nonvanishing obligations are discharged off diagonal, nonempty intersections consume the bundled analytic conditions, and empty intersections close automatically. For the `N=M` specialization used by Tao, the transformed scale now has the exact distance lower bound, and the Weyl width is bounded by `E^(1/1024)+4(1+distance*F/B)^(-1/1024)`. The correlation-dependent logarithm is replaced by the fixed outer-block length, and this pointwise estimate is propagated through the endpoint-free kernel theorem to the exact Vaughan double-block squared-sum bound. The pairwise `F'/K^5≤E` family is discharged uniformly from the short block's left endpoint and diameter by `typeIIShortIntervalScaleError`. For `j=2`, the literal outer-block geometry reduces endpoint membership, the expanded endpoint, and the power evaluation to one margin bound. The transformed low-scale condition follows from `E≤1/K`. The kernel and Weyl layers now accept arbitrary positive endpoints and specialize directly to the named dyadic Vaughan blocks. Pairwise effective errors are compressed to `typeIIShortIntervalEffectiveErrorBound`; its `1/128` power controls the optimized range, while the logarithmic Vaughan width gives `5q≤K` and closes the expansion margin above the subdivision budget. On large inner bands, the logarithmic width converts `10F≤K^4(log Bcap)^100` into the required error comparison; inner singleton bands are purely diagonal. The conditional high-transformed-scale branch and its literal convolution-block consumer are complete. Small outer and inner bands vanish exactly from the two source tail cutoffs; the remaining large--large majorants are summed over the full double family, with exact uniform family loss `(log₂ B+1)^204`. The canonical cube-root cutoff and the global phase inequality now discharge the uniform block-scale comparison, leaving logarithmic simplification of this explicit majorant; `F≥1` follows internally from the lower split. The zero-distance lower bound still shows why an all-support endpoint would be necessary; the actual erased-center support removes it. The implication `(log P)^d<F`, `b+t≤dc` ⇒ `(log P)^bF^{-c}≤(log P)^(-t)` is proved. |
 | Weyl differencing foundation | Average a finite exponential sum over shifts and expose its lag correlations | `weylShiftPairs`, `weylShiftFiber`, `sum_weylWindowSum`, `norm_sum_sq_mul_shift_sq_le`, `weylWindowSum_norm_sq`, `sum_weylWindowSum_norm_sq_eq_pairCorrelation`, `weylForwardCorrelation`, `sum_weylFixedShiftPairs_eq_forwardCorrelation_of_le`, `sum_weylFixedShiftPairs_eq_conj_forwardCorrelation_of_ge`, `sum_weylWindowSum_norm_sq_le_forwardCorrelations`, `norm_sum_sq_mul_shift_le_forwardCorrelations`, `norm_reciprocalPhaseSum_le_fourStepWeyl_fixedPower_source`, `norm_reciprocalPhaseSum_le_fourStepWeyl_twoTerm` | Exact boundary fibers, finite Cauchy--Schwarz, strict-lag recursion, four-round reciprocal-phase differentiation, terminal Kusmin--Landau control, optimized range selection, critical-set component assembly, and an endpoint-absorbed source-normalized global `1/128`-power Weyl envelope are proved and audited. Under `F≤X^4`, an exact short/long interval split removes the interval-length term on arbitrary subintervals and yields the explicit two-term width `(F/X^5+1/F)^(1/1024)` under the recorded effective-error and expanded-interval conditions. |
 | Weyl phase/derivative bridge | Put the finite van der Corput recursion on the source reciprocal phase and preserve the smooth derivative data needed for the fifth-derivative test | `forwardPhaseDifference`, `iteratedForwardPhaseDifference_append_singleton`, `weylForwardCorrelation_phaseExponentialSequence`, `norm_phaseExponentialSum_sq_mul_shift_succ_le_of_uniform`, `UniformIteratedPhaseBound`, `weylRecursiveMajorant`, `uniformIteratedPhaseBound_of_deeper`, `norm_phaseExponentialSum_le_weylRecursiveMajorant`, `norm_reciprocalPhaseSum_le_fourStepWeylMajorant`, `weylTreeMajorant`, `norm_phaseExponentialSum_le_weylTreeMajorant`, `weylTreeMajorant_lagProduct_le_closed`, `norm_reciprocalPhaseSum_le_fourStepWeylLagClosedMajorant_regularScale`, `iteratedSqrt_four_pow_sixteen`, `weylLagScaleCoarseCoefficient_four_pow_sixteen`, `weylLagScaleTerm_four_pow_sixteen`, `norm_reciprocalPhaseSum_le_fourStepWeylLagCoarseMajorant_regularScale`, `weylLagLengthCoefficient_le_terms`, `weylLagLengthFourMajorant_eq_sum_terms`, `weylLagLengthTerm_three_pow_sixteen`, `weylLagLengthTerm_three_power_bound`, `norm_reciprocalPhaseSum_le_fourStepWeylLagExpandedMajorant_regularScale`, `iteratedForwardPhaseDifference_sample`, `iteratedDeriv_realForwardDifferenceNat`, `realForwardDifferenceNat_eq_intervalIntegral_deriv`, `abs_realForwardDifferenceNat_le_mul_of_abs_deriv_le`, `mul_le_abs_realForwardDifferenceNat_of_deriv_separated`, `abs_iteratedRealForwardDifferenceNat_le_prod`, `prod_mul_le_iteratedRealForwardDifferenceNat_of_le_iteratedDeriv_le`, `iteratedRealForwardDifferenceNat_le_neg_prod_mul_of_iteratedDeriv_le_neg`, `prod_mul_le_abs_iteratedRealForwardDifferenceNat_of_iteratedDeriv_separated`, `contDiffAt_reciprocalPhase_of_pos`, `ContDiffAt.iteratedDeriv_right`, `iteratedDeriv_realForwardDifferenceNat_reciprocalPhase`, `iteratedRealForwardDifferenceNat_append_eq_intervalIntegral_of_pos`, `abs_iteratedRealForwardDifferenceNat_le_prod_of_pos`, `prod_mul_le_abs_iteratedRealForwardDifferenceNat_of_pos_separated`, `abs_iteratedDeriv_reciprocalPhase_le_scale_div_pow`, `abs_iteratedRealForwardDifferenceNat_reciprocalPhase_le_product_scale`, `continuousOn_sign_separated_of_abs_lower`, `prod_mul_regularScale_div_pow_le_abs_iteratedRealForwardDifferenceNat_reciprocalPhase`, `hasDerivAt_iteratedRealForwardDifferenceNat_reciprocalPhase`, `abs_deriv_iteratedRealForwardDifferenceNat_reciprocalPhase_le_product_scale_of_le`, `prod_mul_regularScale_div_two_pow_le_abs_deriv_iteratedRealForwardDifferenceNat_reciprocalPhase`, `reciprocalPhase_terminalDifference_derivative_bounds_on_regular`, `norm_phaseExponentialSum_le_inv_of_signed_increments_monotone`, `norm_phaseExponentialSum_sample_le_inv_of_abs_deriv_windows_of_pos`, `prod_mul_regularScale_div_two_pow_le_abs_iteratedRealForwardDifferenceNat_iteratedDeriv_reciprocalPhase`, `norm_iteratedReciprocalPhaseExponentialSum_le_inv_regularScale`, `sum_le_length_mul_of_admissibleWeylLags`, `prod_le_pow_length_of_admissibleWeylLags`, `uniformIteratedPhaseBound_reciprocalPhase_of_regularScale`, `norm_reciprocalPhaseSum_le_fourStepWeylMajorant_regularScale`, `phaseExponentialSum_affine_mul_sub_one`, `nearestIntegerDistance`, `four_mul_nearestIntegerDistance_le_norm_standardAdditiveCharacter_sub_one`, `norm_phaseExponentialSum_affine_le_min_nearestIntegerDistance`, `uniformIteratedPhaseBound_of_affine` | The exact half-open source sum is translated to `[0,b-a)`, correlations become exponential sums of genuine forward phase differences, lag lists append recursively, zero lag is exactly the interval length, and a uniform positive-lag bound propagates quantitatively. Uniform terminal bounds at arbitrary depth propagate to the original sum through an explicit nested square-root majorant; the source reciprocal phase has an exact four-round specialization for the cited `k=5` branch. Discrete sampled differences agree with real differences, which preserve positive-ray smoothness and commute with arbitrary iterated derivatives for one shift. A real one-step difference is exactly the interval integral of its derivative; absolute upper bounds and signed lower derivative-separation bounds follow. The iterated bridge now localizes on the positive ray to the exact evaluation interval `[x, x + sum(lags)]`, retaining the exact lag product. Direct reciprocal-phase theorems give raw upper and critical-regular lower finite-difference bounds, with continuity and the intermediate value theorem deriving the required constant sign from absolute derivative separation. The first and second derivatives of every terminal iterated phase are the corresponding differences of the next two source derivatives and have uniform critical-regular windows frozen at `X` and `2X`; four lags therefore consume the fifth and sixth derivatives at the terminal test. The frozen radian-normalized Kusmin--Landau estimate is adapted exactly to `exp(2πix)`. Mean-value and second-derivative sign bridges convert absolute derivative windows into monotone increments, and the source-facing reciprocal-phase theorem proves the nonlinear critical-regular terminal sum bound by the inverse explicit lag-product lower scale under expanded-interval regularity and upper-one-period hypotheses. The terminal affine geometric sum is also evaluated exactly and has the nonresonant bound `min(N, 2 / ‖e(alpha)-1‖)`. Its denominator is exactly `2|sin(π alpha)|`, is at least four times the canonical nearest-integer distance, and yields `min(N, 1/(2 dist(alpha,ℤ)))`; affine terminal hypotheses close the recursive majorant directly. Exact lag-sum and lag-product bounds by `rH` and `H^r` now uniformize the terminal estimate over every admissible lag list and truncated length on one expanded regular interval, feed it through the arbitrary-depth majorant, and yield a literal four-round source theorem with orders five and six and one `H^4` upper-smallness condition. The exact lag-sensitive tree `weylTreeMajorant` retains every accumulated lag list and boundary-truncated length; `lagProductTerminalMajorant`, `terminalLagSensitiveBound_reciprocalPhase_regularScale`, and `norm_reciprocalPhaseSum_le_fourStepWeylTreeMajorant_regularScale` install the source leaf profile `min(L, 1/(prod(lags)*scale))`. `sum_lagProductTerminalMajorant_append_le_harmonic` sums the innermost lag with the exact harmonic factor, and `weylTreeMajorant_one_lagProduct_le_harmonic` exposes the resulting one-level square-root bound. `weylTreeMajorant_lagProduct_le_closed` then collapses all successive outer sums to `weylLagLengthCoefficient` and `weylLagScaleCoefficient`; their exact generalized harmonic factors `iteratedRootHarmonic` are bounded by `H`. `norm_reciprocalPhaseSum_le_fourStepWeylLagClosedMajorant_regularScale` is the closed source wrapper, while `iteratedSqrt_four_pow_sixteen` verifies the characteristic inverse-scale sixteenth root. Replacing every generalized harmonic factor by `H` gives `weylLagScaleCoarseCoefficient`; its four-round coefficient has exact sixteenth power `(QH)^15`, the full scale term has power `(QH)^15/scale`, and `norm_reciprocalPhaseSum_le_fourStepWeylLagCoarseMajorant_regularScale` exposes this coarse source estimate. The length recurrence is split into four explicit nonnegative terms with exact sixteenth powers `D^8`, `E^8D^4`, `E^12D^2`, and `E^14D`. Under `1≤L`, `H≤L`, exact step-factor arithmetic proves `E≤6L` and `D(H+1)≤6L²`, producing the four powered denominator bounds with exponents `8,4,2,1`; the expanded source wrapper has no hidden recurrence. The four powered diagonal bounds and the coarse scale bound are root-extracted and rewritten exactly as real `1/16` powers in `norm_reciprocalPhaseSum_le_fourStepWeylLagRpowMajorant_regularScale`. `reciprocalPhaseFourStepRange` is the canonical floor-rounded `(2U)^(-1/4)` range; `reciprocalPhaseFourStepRange_upperSmall` proves its exact smallness condition, and the canonical-range root/rpow source wrappers install it. `reciprocalDerivativeExpandedCriticalNatPoints` deletes precisely the starts whose `4H+1` windows can hit the critical union, with count `orders.card*(16Xq+4H+2)`. `norm_sum_filter_Ico_le_badCard_add_one_mul_of_subinterval` splits the complement into consecutive components, `regular_on_fourStepExpandedIcc_of_forwardWindows` recovers the required real margins, and `norm_reciprocalPhaseSum_le_fourStepWeyl_components_canonicalRange` assembles the global long/short-component bound. Parameter optimization and the cited fifth-derivative cancellation estimate remain open. |
 | Exact one-term bad-set identity | `#(B¹∩[1,x]) = ∑_{p≤√x} Ψ(x/p²,p)` | `Tao2026.badOneTermCount_eq_sum_psiNat` | Proved with floor encoded by natural division, a prime-restricted finite sum, and an injectivity proof for the unique representation |
@@ -251,7 +251,58 @@ constructs the pair-local Weyl error budget, and the generic and canonical
 source's split at `F'=K^4`. They retain `E^(1/1024)` only from the low branch
 and an independent error `V` from the high branch. Only the high-scale
 pointwise estimate is left as their analytic input; the source logarithmic
-estimates and that Vinogradov bound remain.
+estimate and that Vinogradov bound remain.  The literal convolution consumer
+now rewrites each source Type II Vaughan double block as the exact outer sum,
+applies Cauchy--Schwarz, supplies the actual beta/gamma envelopes, and invokes
+the canonical mixed theorem.  The full convolution is bounded by the sum of
+square roots of these block majorants.  Both source tail cutoffs now annihilate
+small dyadic bands exactly, so the complete family theorem invokes the mixed
+estimate only on large--large pairs.  The canonical family count gives the
+exact uniform loss `(log₂ B+1)^204`.  The literal cutoff is now fixed to
+`⌊B^(1/3)⌋₊`; it eventually dominates both the subdivision budget and
+`2B^(1/4)`. Empty product supports vanish, contributing product scales are at
+most `2B`, and one global phase inequality supplies all surviving blockwise
+premises. What remains is the named Vinogradov proposition and asymptotic
+simplification of the explicit summed majorant.
+
+The order family is now fixed to `{5,6}` by
+`vaughanTypeIICanonicalOrders`, and
+`eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov_canonical`
+removes that last finite parameter.  The declarations
+`vaughanShortIntervalLength_cast_le_global_realLog`,
+`one_add_log_vaughanShortIntervalLength_le_two_mul_log`, and
+`card_dyadicShortIntervalIndexedBlock_le_length` supply the source block
+geometry.  Together with the two quarter-power lower-scale lemmas they yield
+`vaughanTypeIICanonicalGeometricBlockMajorant` and the audited comparison
+`vaughanTypeIICanonicalSourceBlockMajorant_le_geometric`.  Thus the remaining
+Type II boundary is the Vinogradov estimate plus power and logarithm
+absorption in the full square-root family sum, not finite parameter selection.
+
+The sharp continuation retains the two distinct local widths in
+`vaughanTypeIICanonicalDyadicGeometricBlockMajorant`.  Product-support lemmas
+bound the dyadic product and the two expanded endpoint monomials, while
+`typeIIDyadicGeometricBlockMajorant_product_mono` checks the exact denominator
+ledger `298,197,297`.  The inner cutoff further yields
+`vaughanTypeIIDoubleBlockOuterSquareInner_le_sq_div_quarter_rpow`, so
+`vaughanTypeIICanonicalPowerSavedBlockMajorant` keeps a genuine diagonal power
+saving.  Its full-family consumer is
+`eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov_powerSaved`.
+The phase and endpoint row is now closed by
+`vaughanTypeIICanonicalPowerSavedBlockMajorant_le_decayAbsorbed` and
+`vaughanTypeIICanonicalSourceBlockMajorant_le_decayAbsorbed`.  Exact rpow
+identities flatten the common ledger to
+`vaughanTypeIICanonicalExplicitDecayBlockMajorant`, displaying
+`B^(7/4)`, `(log B)^(-d/1024)`, and `B^(-1/4096)`.  Its full-family consumer
+`eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov_explicitDecay`
+evaluates the double sum and bounds the family loss by `(3 log B)^204`.
+The final target-exponent row is now closed by
+`eventually_vaughanTypeIICanonicalExplicitDecayBlockMajorant_le`,
+`three_mul_log_pow_mul_sqrt_decay_le`, and
+`eventually_norm_weightedConvolutionProductSum_vaughanTypeII_le_sourceVinogradov_logSaving_explicit`.
+For every target `S≥0`, the explicit choices `d=2048S+216064`,
+`T=2S+111`, and `A=(2S+113)/3` yield the source-form bound
+`C B/(log P)^S` under `P≤B≤2P`.  The Type II reduction and exponent arithmetic
+are therefore complete conditional on the named Vinogradov estimate.
 
 ## Section 6 continuation
 
@@ -375,7 +426,185 @@ estimates and that Vinogradov bound remain.
 
 | Sylvester--Schur explicit central tail | `self_le_two_pow_sqrt_div_sixteen`, `three_mul_pow_sqrt_le_two_pow_quarter`, `two_pow_quarter_mul_three_pow_gap`, `sylvesterSchur_central_gap_of_le_triple`, `exists_large_prime_dvd_choose_of_central_tail`, `exists_large_prime_dvd_consecutiveProduct_of_central_tail` | Complete and audited. Exact natural-number inductions prove the release-3.15 gap for all `H>=34134` and all `2H<=n<=3H`, closing every start `H<N<=2H`. Noncentral starts and the finite bridge below the cutoff remain open. |
 
-| Sylvester--Schur effective all-start tail | `choose_le_primeCounting_sqrt_envelope_mul_primorial_of_high_support`, `primeCountCentral_choose_growth_bounded`, `primeCountCentral_near_gap_281`, `primeCountCentral_near_gap_403`, `primeCountCentral_choose_growth_281`, `primeCountCentral_choose_growth_403`, `exists_large_prime_dvd_consecutiveProduct_of_primeCount_tail_oneHundredTwentyOne`, `SylvesterSchurPrimeCountOneHundredTwentyOneResidualRectangle`, `sylvesterSchurConclusion_of_primeCountOneHundredTwentyOneResidualRectangle` | Complete and audited as an effective tail and reduction. The exact central baseline at `2H` closes all `121<=H<512` rows except five; fixed prime-counted bridges at upper indices `281` and `403` close those exceptions, while release 3.22 handles all larger lengths. Every start is closed for `H>=121`, leaving exactly the twenty-row finite rectangle `101<=H<121` below the prime-count factorial start cutoff. |
+| Sylvester--Schur unrestricted theorem | `primeCountCentral_choose_growth_bounded`, `exists_large_prime_dvd_consecutiveProduct_of_primeCount_tail_oneHundredTwentyOne`, `sylvesterSchur_baseline_oneHundredOne_to_oneHundredTwenty`, `sylvesterSchur_below_243_certificate_oneHundredOne_to_oneHundredTwenty`, `sylvesterSchur` | Complete and audited. The prime-counted tail closes every `H>=121`; a common baseline at upper index `243` and one bounded certificate close all twenty remaining rows. There is no residual rectangle. |
+
+## Latest Type I interface refinement
+
+`TypeIConvolutionBridge.lean` supplies the missing literal bridge for both
+Type I terms of Proposition 1.12.  The declarations
+`weightedConvolutionProductVaughanBlockSum_eq_typeIOuterSum` and
+`typeIProductRestrictedSupport_Ico_eq` retain the product restriction and
+identify its fiber exactly as `[⌈a/m⌉,⌈b/m⌉)`.  The inner phase is rescaled
+by `typeIProductRestrictedWeightedInnerSum_Ico_eq`.
+
+The full source terms are exposed by
+`norm_weightedConvolutionProductVaughanTypeILogSum_Ico_le` and
+`norm_weightedConvolutionProductVaughanTypeIPrimeSum_Ico_le`, with coefficient
+losses `1` and `log(2B)`.  Finally,
+`norm_typeIProductRestrictedLogInnerSum_Ico_le` makes the paper's partial
+summation step an explicit callback on unweighted initial subintervals.
+Quantitative cancellation for those callbacks remains open.
+
+Release 3.33 strengthens this interface with
+`vaughanTypeIActiveProductBlockSupport`. The two active-support membership
+theorems recover the cutoffs `U` and `UV`; their cardinality bounds feed
+`norm_weightedConvolutionProductVaughanTypeILogSum_le_uniform` and
+`norm_weightedConvolutionProductVaughanTypeIPrimeSum_le_uniform`. A uniform
+analytic callback now incurs only the exact family and cutoff losses, rather
+than an ambient factor `B`.
+
+Release 3.34 adds `reciprocalPhaseScale_rescale`,
+`typeI_ceilDiv_dyadic_geometry`, and
+`reciprocalPhaseScale_typeI_rescale_ceilDiv_le_pow_four`.  Together they show
+that the exact ceiling-divided source fiber has the required dyadic geometry
+and inherits the low-scale fourth-power condition after Type I rescaling.
+The existing four-step Weyl theorem still requires its endpoint buffer and
+effective-error premises; those are not hidden by this crosswalk entry.
+
+Release 3.35 supplies `TypeIWeylBridge.lean`.  The exact decomposition is
+`reciprocalPhaseSum_eq_sum_typeIQuadraticWeylBlocks`; local geometry is
+`typeIQuadraticWeylBlock_geometry`; source-to-local error transfer is
+`reciprocalPhaseFourStepEffectiveErrorScale_quadratic_le_one_of_dyadic`; and
+`norm_reciprocalPhaseSum_typeIQuadraticWeylBlock_le` applies the existing
+two-term Weyl theorem to every nonempty piece.  The crosswalk still leaves
+the uniform local-width comparison and complete Type I family summation open.
+
+Release 3.36 adds `typeIQuadraticWeylSourceWidth` and
+`norm_reciprocalPhaseSum_subinterval_le_typeIQuadraticWeylSource`. The latter
+is uniform over every subinterval of `[D,2D)` and follows from the exact
+`typeIQuadraticWeylSubBlock` reconstruction with at most ten pieces. It now
+matches the prefix quantifier of the Type I Abel interface. Rescaled source
+budgets and active-family insertion remain explicit downstream obligations.
+
+Release 3.37 adds `TypeIQuadraticWeylAdmissible` and
+`typeIQuadraticRescaledWeylMajorant`, making the substitution
+`(N,M,D) -> (N/m,M/m²,ceil(P/m))` literal in the exported interface.
+`norm_typeIProductRestrictedInnerSum_Ico_le_quadraticWeyl` handles the zeta
+inner variable, while
+`norm_typeIProductRestrictedLogInnerSum_Ico_le_quadraticWeyl` invokes the
+uniform-prefix theorem through finite Abel summation. The declarations
+`norm_weightedConvolutionProductVaughanTypeIPrimeSum_le_quadraticWeyl` and
+`norm_weightedConvolutionProductVaughanTypeILogSum_le_quadraticWeyl` insert
+these bounds into both complete active Vaughan families. Their active-index
+admissibility and common-majorant premises remain visible, not imported as an
+analytic assumption.
+
+Release 3.38 corrects the analytic interface to the source's actual regime
+split. `norm_reciprocalPhaseSum_subinterval_le_typeIQuadraticVinogradovAt`
+specializes the fixed-constant high-scale estimate to a rounded Type I fiber.
+`TypeIQuadraticHybridAdmissible` is a disjunction: low fibers carry only the
+Weyl budget, while high fibers carry only the Vinogradov cutoff and smallness
+conditions. `norm_reciprocalPhaseSum_subinterval_le_typeIQuadraticHybridAt`
+and its two complete-family consumers cover both regimes and all Abel
+prefixes. Finally,
+`eventually_typeIQuadraticHybridAdmissible_of_parameterBound` derives the
+high-branch conditions from the source parameter bound, leaving only the
+low-branch budget and final majorant absorption.
+
+Release 3.39 removes the remaining active-index admissibility premise.
+`quadraticWeylBudget_of_lowScale` proves the low-branch numerical budget
+above an explicit absolute scale, while
+`reciprocalPhaseScale_le_four_mul_typeI_rescale_ceilDiv` transfers the source
+lower bound through ceiling rounding. The new `TypeISourceBlock.lean` derives
+`ceil(P/m) >= B^(1/4)` from each canonical active support and exports
+`eventually_forall_activePrime_typeIQuadraticHybridAdmissible` and
+`eventually_forall_activeLog_typeIQuadraticHybridAdmissible`. Thus the global
+source frequency bounds now supply all branch-local hypotheses; only the
+uniform hybrid-majorant absorption and family summation remain.
+
+Release 3.40 corrects the final family-summation interface. The declarations
+`sum_inv_vaughanTypeIActiveLogSupport_le_harmonic` and
+`sum_inv_vaughanTypeIActivePrimeSupport_le_harmonic` use exact active-support
+containment to retain the reciprocal fiber factor. Their complete-family
+consumers, `norm_weightedConvolutionProductVaughanTypeILogSum_le_invWeighted`
+and `norm_weightedConvolutionProductVaughanTypeIPrimeSum_le_invWeighted`, turn
+per-fiber bounds `(P/m)Q` into harmonic rather than polynomial cutoff losses.
+The remaining quantitative interface is a branch-sensitive majorant bounded
+in precisely this reciprocal-weighted form.
+
+Release 3.41 closes that interface. The branch-sensitive declarations
+`typeIQuadraticRescaledBranchMajorantAt` and
+`eventually_typeIQuadraticRescaledBranchMajorantAt_le_invWeighted` retain
+only the active analytic formula. The high branch is absorbed by the named
+Vinogradov source envelope; the low branch uses
+`typeIQuadraticWeylSourceWidth_le_of_sourceLogScale` and the active-fiber
+quarter-power bound. The complete-family theorems
+`eventually_norm_weightedConvolutionProductVaughanTypeIPrimeSum_le_logSaving`
+and
+`eventually_norm_weightedConvolutionProductVaughanTypeILogSum_le_logSaving`
+then give arbitrary logarithmic saving with exact aggregate loss 104 and
+explicit budgets `S+106<=3A` and `1024*(S+105)+1<=d`. Quantitative Type I is
+complete conditional only on `VinogradovExponentialSumEstimateAt C1`; the
+next crosswalk boundary is its combination with Type II and Vaughan's
+identity.
+
+Release 3.42 performs that combination in `MangoldtSourceBlock.lean`.
+`weightedRealArithmeticSum_vaughanCutoff_eq_zero_of_lt` removes the initial
+cutoff term, and
+`norm_mangoldtReciprocalPhaseSum_le_vaughanComponents` is the exact finite
+triangle-inequality assembly. The theorem
+`eventually_norm_mangoldtReciprocalPhaseSum_le_vaughan_logSaving` then inserts
+both final Type I family estimates and the explicit Type II estimate with the
+shared exponent `vaughanTypeIILogSavingPhaseExponent S = 2048*S+216064`.
+This yields the complete quadratic Mangoldt phase bound at arbitrary
+logarithmic saving. The currently separate reciprocal-scale and `|N|`
+hypotheses remain visible for the next source-interface consolidation.
+
+Release 3.43 removes that duplication.
+`reciprocalPhaseScale_self_two_le_two_abs`,
+`logPower_le_reciprocalPhaseScale_self_two_of_abs_lower`, and
+`sixtyFour_le_reciprocalPhaseScale_self_two_of_abs_lower` translate the
+source `|N|` range into every Type I scale premise. The endpoint
+`eventually_norm_mangoldtReciprocalPhaseSum_le_sourceRange` therefore retains
+only the common lower and upper absolute-frequency bounds while preserving
+the arbitrary logarithmic saving.
+
+Release 3.44 completes the next representation change in
+`PrimeSourceBlock.lean`. `Ico_eq_Ioc_floor_sub_one` and
+`primePowerTailReciprocalPhaseSum_Ico_eq_interval` identify the half-open
+prime interval with the existing local prime-power-tail convention exactly.
+`norm_primePowerTailReciprocalPhaseSum_Ico_le_dyadic` gives the explicit
+quarter-power envelope, and
+`eventually_norm_primePowerTailReciprocalPhaseSum_Ico_le_logSaving` absorbs it
+uniformly into any prescribed logarithmic saving.
+
+The endpoint
+`eventually_norm_primeReciprocalPhaseSum_le_sourceRange` applies the release-
+3.43 Mangoldt theorem to every initial prefix, subtracts the absorbed prime-
+power tail, and invokes reverse Abel summation. It therefore supplies the
+unweighted quadratic prime exponential sum under the same one lower/one upper
+source-frequency range. The remaining crosswalk boundary is the nonzero-mode
+logarithmic integral and the final low/zero/high Fourier assembly.
+
+Release 3.45 supplies the first exact Fourier consumer in
+`FourierSourceBlock.lean`. `primeFourierModeSum_Ico_one_one` identifies the
+literal half-open `(1,1)` mode with `primeReciprocalPhaseSum a b N N 2`.
+The integration-by-parts chain ending in
+`norm_fourierModeIntegral_Ico_one_one_le_dyadic` gives the explicit bound
+`6*P^2/(|N|*log P)` for the corresponding logarithmic integral.
+
+The endpoint
+`eventually_norm_primeFourierMode_sub_integral_Ico_one_one_le_sourceRange`
+combines that integral estimate with the release-3.44 prime bound. It covers
+only the diagonal estimate. The declaration
+`primeFourierModeSum_Ico_eq_reciprocalPhaseSum` exposes every general source
+mode with coefficients `(q1*N,q2*M)`; its derivative and same-sign
+nonstationarity are also proved. Unequal-parameter high-frequency control,
+opposite-sign stationary cases, and the low/zero branches remain explicit
+crosswalk gaps. Theorem 2.5 is not claimed.
+
+Release 3.46 opens the unequal-parameter Type II path at its high-scale end.
+`UnequalTypeIIVinogradov.lean` proves fixed and eventual Vinogradov estimates
+for `typeIIProductRestrictedCorrelationSum ... N M 2`, then packages them in
+the exact kernel callback consumed by the mixed Type II argument. The
+canonical Vaughan-block wrapper uses
+`reciprocalPhaseScale_typeIICorrelation_le_exp_of_dyadicBlock` with separate
+upper bounds for `|N|` and `|M|`, retaining the factor-five envelope.
+
+The low-scale half of that mixed argument still invokes the equal-parameter
+distance-kernel theorem. Consequently the complete Type II family,
+Mangoldt-to-prime transfer, and Fourier-mode summation remain open for unequal
+coefficients; this release does not claim Theorem 2.5.
 
 ## Crosswalk completion rule
 
@@ -383,3 +612,130 @@ A row becomes complete only when the exact source location, quantifiers,
 conventions, imported mathematical inputs, compiling Lean declaration, axiom
 audit, and every representation delta are recorded. No compiled definition in
 this table constitutes a proof of a Tao theorem.
+
+Release 3.47 closes the low-scale unequal Type II gap through one weighted
+Vaughan double block. `UnequalTypeIIWeyl.lean` proves that the transformed
+quadratic term controls the missing source-scale component on the canonical
+positive dyadic inner band, then exports the unequal four-step Weyl bound,
+near/far aggregation, Weyl--Vinogradov split, canonical inner-block theorem,
+and weighted convolution double-block theorem.
+
+This does not yet complete the Type II row: the subsequent summation over all
+Vaughan block pairs and its compressed majorants still use the diagonal phase.
+Accordingly the unequal Mangoldt, prime, and Fourier crosswalk entries remain
+open, and Theorem 2.5 is not claimed.
+
+Release 3.48 completes the unequal Type II source row and the ensuing
+Mangoldt-to-prime row. `UnequalTypeIISourceBlock.lean` sums all Vaughan block
+pairs and compresses the exact unequal majorant through arbitrary logarithmic
+saving. Its synthetic diagonal coefficient preserves the phase scale exactly,
+so this compression imports no additional analytic estimate.
+
+`UnequalMangoldtSourceBlock.lean` combines the result with both Type I
+families in the literal Vaughan decomposition and consolidates their premises
+into one lower phase-scale condition at `4*P` plus separate coefficient upper
+bounds. `UnequalPrimeSourceBlock.lean` performs the same exact prime-power and
+reverse-Abel transfer as the diagonal case. This covers nonzero quadratic
+coefficients. The Fourier row remains open at quadratic coefficient zero,
+unequal and stationary integral bounds, low frequencies, and mode assembly;
+Theorem 2.5 is not claimed.
+
+Release 3.49 closes the nonstationary same-sign part of the Fourier row.
+`UnequalFourierSourceBlock.lean` differentiates the exact unequal amplitude,
+proves it is nonnegative and increasing in the positive chamber, and bounds
+the interval integral by inverse linear frequency. The negative chamber is
+transported exactly by complex conjugation.
+
+The two integral bounds are combined with the release-3.48 prime estimate,
+so every mode with two strictly same-sign rescaled coefficients now has a
+source-range discrepancy theorem. Opposite-sign modes can have a stationary
+point, and modes on either coordinate axis need separate estimates. Those
+branches, low-frequency control, and finite Fourier summation remain open;
+Theorem 2.5 is not claimed.
+
+Release 3.50 establishes the stationary geometry required by the remaining
+opposite-sign Fourier row. `StationaryFourierSourceBlock.lean` proves that
+`-2*B/A` is the unique critical point and rewrites derivative magnitude as
+`|A|*|t-t0|/t^3`. If `t0` belongs to `[P,2P]`, the phase scale at `4P` is at
+most `5|A|/(16P)`, so the source lower bound forces the required linear
+frequency and far-region derivative lower bounds.
+
+The interval integral is decomposed exactly around `[t0-δ,t0+δ]`; its middle
+piece costs at most `2δ/log P`. The two far-piece cancellation estimates and
+the optimizing choice of `δ` remain open, as do coordinate-axis modes, low
+frequencies, and final Fourier summation. Theorem 2.5 is not claimed.
+
+Release 3.51 completes cancellation and cutoff optimization for an interior
+opposite-sign stationary point. The integration-by-parts theorem now requires
+only nonvanishing of the linear factor on the interval. Monotonicity controls
+the left far piece and the right piece through `3t0/2`; a separate derivative
+bound controls the post-turning tail. Their reassembly gives the raw
+three-term estimate, and the source coefficient lower bound plus
+`δ=P/sqrt L` yields `50P/(sqrt L log P)` for `L>=4`.
+
+The exported optimized theorem currently assumes the full stationary
+neighborhood lies inside the integration interval. Endpoint clipping and
+sign conjugation remain before the opposite-sign Fourier row is complete;
+coordinate-axis modes, low modes, and final Fourier summation also remain.
+Theorem 2.5 is not claimed.
+
+Release 3.52 removes the interior-neighborhood restriction. Exact one-sided
+splits cover both endpoint-clipped cases and the fully central case, after
+which the source-scale insertion and `P/sqrt L` optimization retain the
+constant `50`. Negating both coefficients preserves the stationary point and
+conjugates the integral, yielding a sign-independent theorem.
+
+The resulting bound is exposed for `fourierModeIntegral` and combined with
+the unequal prime theorem in a literal source-range prime-minus-integral
+estimate with explicit auxiliary scale `L`. This completes the stationary
+row when both rescaled coefficients are nonzero. The coordinate axes, low
+frequencies, and final Fourier summation remain open; Theorem 2.5 is not
+claimed.
+
+Release 3.53 closes the zero-linear, nonzero-quadratic coordinate axis.
+`CoordinateAxisFourierSourceBlock.lean` proves the positive-variation
+integration-by-parts bound, the exact scale identity
+`reciprocalPhaseScale 0 B 2 (4P)=|B|/(16P^2)`, and the resulting
+`P/(L log P)` Fourier integral estimate. Combining it with the unequal prime
+endpoint yields the literal axis discrepancy.
+
+The zero-quadratic, nonzero-linear axis remains separate because the current
+Type II low and high branches both require a nonzero transformed quadratic
+coefficient. Low modes and final Fourier summation also remain open; Theorem
+2.5 is not claimed.
+
+Release 3.54 removes that analytic coefficient obstruction at the pointwise
+Type II level. `LinearAxisTypeII.lean` proves that the zero-quadratic critical
+sets are empty, applies the existing conditional Vinogradov estimate globally
+in the high-scale branch, and specializes the internal four-step Weyl argument
+to the full regular interval in the low-scale branch. The resulting source
+theorems include the exact short-block and far-pair scale inequalities and the
+same four-kernel decay shape used by the mixed-coefficient aggregation.
+
+Together with the pure-linear Fourier integral bound already exposed by
+`CoordinateAxisFourierSourceBlock.lean`, this completes both analytic inputs
+at the pointwise correlation level. Double-block aggregation and propagation
+through Vaughan, Mangoldt, and primes still remain, as do low modes and final
+Fourier summation; the pure-linear axis and Theorem 2.5 are not yet claimed.
+
+Release 3.55 completes the pure-linear Type II source family.
+`LinearAxisTypeII.lean` propagates the pointwise dichotomy through short and
+canonical Vaughan double blocks, including the literal weighted-convolution
+block. `LinearAxisTypeIISourceBlock.lean` sums the complete finite family and
+compresses its ledger to the same explicit arbitrary-log-saving endpoint as
+the mixed-coefficient branch.
+
+The next missing analytic inputs are the two pure-linear Type I Vaughan
+families. Mangoldt and prime propagation, the final pure-linear discrepancy,
+low modes, and final Fourier summation remain open; Theorem 2.5 is not claimed.
+
+Release 3.56 completes the pure-linear coordinate axis. `LinearAxisTypeI.lean`
+proves both Vaughan Type I families with the zero-quadratic phase, including
+their explicit arbitrary-log-saving source bounds. The exact Vaughan identity
+then combines them with release 3.55 Type II in
+`LinearAxisMangoldtSourceBlock.lean`; `LinearAxisPrimeSourceBlock.lean`
+removes prime powers and performs reverse Abel summation. Finally,
+`LinearAxisFourierSourceBlock.lean` combines the prime theorem with the
+existing `2P/(L log P)` integral bound to obtain the literal coordinate-axis
+mode discrepancy. Both coordinate axes are now closed. Low modes and final
+Fourier summation remain open; Theorem 2.5 is not claimed.

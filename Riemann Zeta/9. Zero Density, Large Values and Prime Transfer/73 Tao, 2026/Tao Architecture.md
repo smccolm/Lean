@@ -59,7 +59,7 @@ flowchart TD
         GTPOWER["Compiled quantitative bridge<br/>uniform dyadic discrepancy power xi < 1"]
         DYADICFREE["Compiled dyadic prime-free bridge<br/>prime-power tail retained and absorbed"]
         PREFIX["Compiled constant-length endpoint measure<br/>finite dyadic assembly + full theta range"]
-        VINO["Theorem 2.5 partial<br/>j=1 absorption + phase/character variation + low-frequency complex Abel/PNT-discrepancy reduction + qualitative-PNT uniform dyadic and fixed-bounded-frequency o(P) consequences + finite Fourier assembly with automatic integrability, exact retained-box count, uniform-approximation transfer, finite ℓ¹ truncation, summable cubic ℤ² envelope, vanishing square-box tails, open-quotient torus descent, character compatibility, conditional uniform reconstruction of W, complete smooth-periodic radial C³ Fourier decay + source-oriented product-restricted Vaughan with exact 1/log-P coefficient envelopes and supports + exact outer/double coefficient blocks + canonical (log₂B+1)^102 short family with coverage, exact weighted Type I/II decomposition, and literal real-log relative-width support + prime-power + Abel + Type I + product-restricted Type II + all-support distance-kernel bound with necessary +1 and endpoint-free pure off-diagonal bound through exact double blocks and source-facing block lengths + high-frequency log absorption + normalized parameter bounds + critical deletion + arbitrary-depth finite van der Corput majorant with exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridge with arbitrary lag-product upper and critical-regular lower estimates, IVT sign separation, terminal derivative windows from the next two source derivatives, critical-regular nonlinear Kusmin--Landau terminal bound, exact `rH`/`H^r` admissible-lag control, uniform arbitrary-depth and literal four-round regular-interval closure, exact lag-sensitive Weyl tree, inverse-product/truncation leaf profile, harmonic leaf summation, closed all-depth scalar lag envelope with generalized harmonic factors ≤ H, source four-round sixteenth-root estimate, coarse scale recurrence with exact `(QH)^15/scale` sixteenth power, four explicit diagonal terms with exact powered denominator bounds, source five-term root/rpow majorant without hidden recurrence, a canonical floor-rounded range that automatically satisfies upper-smallness, exact expanded-critical-start deletion plus global long/short regular-component assembly, optimized fixed-power global closure, arbitrary-subinterval low-frequency two-term width `(F/X^5+1/F)^(1/1024)`, and equal-parameter Type II distance-kernel propagation through arbitrary positive blocks and the exact canonical dyadic Vaughan double family, with uniform scale/effective-error majorants and quadratic geometry discharge, plus affine nearest-integer endpoint<br/>quantitative arbitrary-log-saving PNT, source split `(log Bcap)^d≤F`, large-band bound `10F≤K^4(log Bcap)^100`, exact equation-(18), sharp critical root/source-decay ledger, explicit native p-adic coefficient `C(p^(B₀+1)κ)^ε`, uniform absolute-coefficient positive Ford benchmark at moment `4R²` for `R≥10000` (quantitatively below the source decay), and finite absorption of every native critical coefficient for `40≤R<1000`; uniform rooted control for `R≥1000` and the remaining high-scale Vinogradov-Weyl cancellation are open; the inner singleton branch is closed diagonally"]
+        VINO["Theorem 2.5 partial<br/>j=1 absorption + phase/character variation + low-frequency complex Abel/PNT-discrepancy reduction + qualitative-PNT uniform dyadic and fixed-bounded-frequency o(P) consequences + finite Fourier assembly with automatic integrability, exact retained-box count, uniform-approximation transfer, finite ℓ¹ truncation, summable cubic ℤ² envelope, vanishing square-box tails, open-quotient torus descent, character compatibility, conditional uniform reconstruction of W, complete smooth-periodic radial C³ Fourier decay + source-oriented product-restricted Vaughan with exact 1/log-P coefficient envelopes and supports + exact outer/double coefficient blocks + canonical (log₂B+1)^102 short family with coverage, exact weighted Type I/II decomposition, and literal real-log relative-width support + prime-power + Abel + Type I + product-restricted Type II + all-support distance-kernel bound with necessary +1 and endpoint-free pure off-diagonal bound through exact double blocks and source-facing block lengths + high-frequency log absorption + normalized parameter bounds + critical deletion + arbitrary-depth finite van der Corput majorant with exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridge with arbitrary lag-product upper and critical-regular lower estimates, IVT sign separation, terminal derivative windows from the next two source derivatives, critical-regular nonlinear Kusmin--Landau terminal bound, exact `rH`/`H^r` admissible-lag control, uniform arbitrary-depth and literal four-round regular-interval closure, exact lag-sensitive Weyl tree, inverse-product/truncation leaf profile, harmonic leaf summation, closed all-depth scalar lag envelope with generalized harmonic factors ≤ H, source four-round sixteenth-root estimate, coarse scale recurrence with exact `(QH)^15/scale` sixteenth power, four explicit diagonal terms with exact powered denominator bounds, source five-term root/rpow majorant without hidden recurrence, a canonical floor-rounded range that automatically satisfies upper-smallness, exact expanded-critical-start deletion plus global long/short regular-component assembly, optimized fixed-power global closure, arbitrary-subinterval low-frequency two-term width `(F/X^5+1/F)^(1/1024)`, and equal-parameter Type II distance-kernel propagation through arbitrary positive blocks and the exact canonical dyadic Vaughan double family, exact outer-sum/Cauchy--Schwarz insertion into the literal source Type II convolution blocks, source beta/gamma envelopes, exact tail-cutoff annihilation of both small-band regimes, full-family conditional summation, exact `(log₂ B+1)^204` uniform loss, and full-convolution square-root reassembly, with uniform scale/effective-error majorants and quadratic geometry discharge, plus affine nearest-integer endpoint<br/>quantitative arbitrary-log-saving PNT, source split `(log Bcap)^d≤F`, large-band bound `10F≤K^4(log Bcap)^100`, exact equation-(18), sharp critical root/source-decay ledger, explicit native p-adic coefficient `C(p^(B₀+1)κ)^ε`, uniform absolute-coefficient positive Ford benchmark at moment `4R²` for `R≥10000` (quantitatively below the source decay), and finite absorption of every native critical coefficient for `40≤R<1000`; uniform rooted control for `R≥1000` and the remaining high-scale Vinogradov-Weyl cancellation are open; the inner singleton branch is closed diagonally"]
         SCALEMONO["PROVED quadratic short-block source bridge<br/>near/far split + pairwise F'=K^4 dispatch + intrinsic low error (1/K)^(1/1024) + exact high-pair Vinogradov consumer + diagonal singleton closure"]
         SCALEMONO --> VINO
         UNCERT["PROVED finite Lemma 2.6<br/>native DFT Parseval + arbitrary tensor uncertainty<br/>additive CRT character and energy reindexing"]
@@ -399,3 +399,125 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% certificates close every start from H>=512. Residual: 101<=H<512.
     %% Release 3.23: the exact central baseline at 2H, with five rows bridged
     %% at upper indices 281 and 403, closes H>=121. Residual: 101<=H<121.
+    %% Release 3.24: a common baseline at 243 plus one finite certificate
+    %% closes the final twenty rows. Sylvester--Schur and square ES are complete.
+    %% Release 3.25: the conditional mixed Weyl--Vinogradov squared-inner-sum
+    %% estimate is connected to the literal source Type II Vaughan double
+    %% block, including source coefficients and full convolution reassembly.
+    %% Release 3.26: both source tail cutoffs annihilate small dyadic bands;
+    %% the explicit large--large majorants are summed over the full family,
+    %% with exact uniform block-family loss (log_2 B+1)^204.
+    %% Release 3.27: U=V=floor(B^(1/3)) now eventually dominates the exact
+    %% subdivision budget and 2*B^(1/4); empty product blocks vanish, and one
+    %% global phase inequality supplies every surviving block-scale premise.
+    %% Release 3.28: the order family is fixed to {5,6}; canonical short-block
+    %% lengths, cardinalities, and component logarithms are bounded uniformly,
+    %% giving the first geometric compression of the exact Type II majorant.
+    %% Release 3.29: separate dyadic widths preserve product geometry; exact
+    %% expansion gives log exponents 298,197,297, and the inner cutoff gives
+    %% the diagonal power saving D^2 E <= B^2/B^(1/4).
+    %% Release 3.30: the global phase lower bound and outer quarter-power
+    %% endpoint remove all block dependence; nested powers flatten to
+    %% B^(7/4), log(B)^(-d/1024), and B^(-1/4096), and the exact double family
+    %% is evaluated and bounded by (3 log B)^204 times one square root.
+    %% Release 3.31: fixed power savings absorb arbitrary logarithmic targets;
+    %% d=2048S+216064 and T=2S+111 close the exact exponent ledger and give
+    %% the conditional full Type II bound C*B/(log P)^S for P<=B<=2P.
+    %% Release 3.32: each literal Type I Vaughan block is now an exact
+    %% product-restricted outer sum; its inner support is [ceil(a/m),ceil(b/m)),
+    %% its phase is rescaled to (N/m,M/m^j), and both full outer families are
+    %% reassembled with the unit/log(2B) coefficient envelopes and Abel entry.
+    %% Release 3.33: zero outer coefficients are removed before Type I
+    %% triangle bounds; active supports have cardinality at most U and UV,
+    %% giving exact uniform-callback family losses without an ambient B cost.
+    %% Release 3.34: Type I phase scale is invariant at P/m and antitone under
+    %% ceiling rounding; fibers of [P,2P) lie in the rounded dyadic interval,
+    %% transferring the source fourth-power condition to the Weyl input scale.
+    %% Release 3.35: the quadratic fiber is reconstructed from ten short
+    %% blocks; five-length fit discharges the four-step endpoint buffer, and
+    %% factor-four scale comparability transfers one effective-error budget.
+    %% Release 3.36: all local widths are bounded by one source-scale width;
+    %% exact ten-block summation covers every subinterval of the dyadic fiber,
+    %% including every initial prefix needed for Type I Abel summation.
+    %% Release 3.37: substitution at (N/m,M/m^2,ceil(P/m)) produces explicit
+    %% unweighted and logarithmic fiber bounds and instantiates both complete
+    %% active Vaughan Type I families under named source-budget premises.
+    %% Release 3.38: every rescaled fiber now splits exactly at F(D)=D^4;
+    %% low fibers use the ten-block Weyl bound, high fibers use Vinogradov,
+    %% and both branches propagate through Abel and the active families.
+    %% Release 3.39: the low Weyl budget is automatic above one absolute
+    %% threshold, while canonical active support forces D>=B^(1/4);
+    %% global source frequency bounds therefore imply hybrid admissibility
+    %% simultaneously on every active Type I fiber.
+    %% Release 3.40: Type I aggregation retains the fiber factor P/m;
+    %% reciprocal active supports cost harmonic(U) or harmonic(UV), replacing
+    %% the polynomial cardinality losses by logarithmic losses.
+    %% Release 3.41: a branch-sensitive envelope absorbs high fibers by the
+    %% source Vinogradov bound and low fibers by the explicit Weyl width;
+    %% the harmonic family insertion costs exactly 104 logarithmic powers and
+    %% closes both complete Type I families at arbitrary requested saving.
+    %% Release 3.42: the canonical cutoff term vanishes above B^(1/3), and
+    %% the two completed Type I terms plus completed Type II term are inserted
+    %% into the exact Vaughan identity, yielding a quadratic Mangoldt phase
+    %% bound with arbitrary logarithmic saving.
+    %% Release 3.43: F(N,N,2,P)<=2|N| and the converse lower comparison derive
+    %% every Type I scale premise from the single Type II-shaped source range;
+    %% the exported Mangoldt endpoint now has one frequency interface.
+    %% Release 3.44: exact endpoint transport and a quarter-power bound remove
+    %% prime powers uniformly on every prefix; reverse Abel removes log p and
+    %% exports the unweighted quadratic prime sum on that same source range.
+    %% Release 3.45: the (1,1) Fourier sum is identified with the diagonal
+    %% prime phase sum; integration by parts bounds its logarithmic integral
+    %% by 6*P^2/(|N|*log P), yielding the exact diagonal discrepancy bridge.
+    %% General modes are exactly exposed as unequal reciprocal coefficients,
+    %% with derivative and same-sign nonstationarity proved; opposite-sign
+    %% stationary cases, unequal estimates, and the low/zero modes remain open.
+    %% Release 3.46: the Type II high-pair Vinogradov envelope, log saving,
+    %% kernel callback, and canonical Vaughan-block callback now retain
+    %% independent N and M. The low Weyl distance kernel remains diagonal.
+    %% Release 3.47: the transformed quadratic term plus the positive dyadic
+    %% lower band closes the unequal low-scale distance-kernel comparison.
+    %% Near/far aggregation and the Weyl--Vinogradov split now reach one
+    %% actual weighted Vaughan Type II double block with independent N and M;
+    %% complete double-family summation and later source transfers remain.
+    %% Release 3.48: finite double-family summation, canonical majorant
+    %% compression, and arbitrary logarithmic saving now retain independent
+    %% N and M. The exact Vaughan identity, prime-power removal, and reverse
+    %% Abel transfer yield the unequal Mangoldt and unweighted-prime source
+    %% estimates whenever M is nonzero. The zero-quadratic Fourier branch,
+    %% unequal integrals, low modes, and final Fourier assembly remain open.
+    %% Release 3.49: the exact unequal integration-by-parts amplitude and its
+    %% monotonicity close both same-sign Fourier chambers; conjugation moves
+    %% the positive estimate to negative coefficients. Combined with the
+    %% unequal prime theorem this yields the literal mode discrepancy.
+    %% Opposite-sign stationary modes, coordinate axes, low frequencies, and
+    %% final Fourier assembly remain open.
+    %% Release 3.50: the unique opposite-sign critical point is explicit, and
+    %% the derivative factors through distance from it. An interior critical
+    %% point plus the source scale gives a quantitative far derivative lower
+    %% bound. The integral splits exactly into two far pieces and a central
+    %% radius-delta piece bounded by 2*delta/log(P). Far-piece cancellation,
+    %% axis modes, and Fourier assembly remain open.
+    %% Release 3.51: exact nonvanishing-factor integration by parts closes
+    %% both stationary far pieces, including the post-turning right tail.
+    %% Source-scale insertion and delta=P/sqrt(L) give the interior bound
+    %% 50*P/(sqrt(L)*log(P)). Endpoint clipping, sign conjugation, axis modes,
+    %% low modes, and final Fourier assembly remain open.
+    %% Release 3.52: exact endpoint clipping preserves the optimized stationary
+    %% bound, coefficient negation closes the reflected chamber, and the
+    %% unequal prime theorem yields the literal stationary Fourier-mode
+    %% discrepancy for two nonzero coefficients. Coordinate axes remain.
+    %% Release 3.53: the zero-linear/nonzero-quadratic axis has an exact
+    %% positive-variation integral bound, source-scale conversion, and literal
+    %% prime discrepancy. The pure linear Type II axis remains open.
+    %% Release 3.54: zero-quadratic derivative critical sets are empty. The
+    %% high-scale Vinogradov and low-scale four-step Weyl branches now give
+    %% pointwise pure-linear Type II correlations. Double-block aggregation
+    %% and Vaughan/Mangoldt/prime propagation remain open.
+    %% Release 3.55: short and canonical double-block aggregation and the
+    %% complete arbitrary-log-saving pure-linear Type II source family are
+    %% compiled. Pure-linear Type I, Mangoldt, and prime propagation remain.
+    %% Release 3.56: both pure-linear Type I Vaughan families are complete.
+    %% Exact Vaughan assembly, prime-power removal, reverse Abel summation,
+    %% and the existing integral estimate close the literal zero-quadratic
+    %% Fourier discrepancy. Low modes and final Fourier assembly remain.

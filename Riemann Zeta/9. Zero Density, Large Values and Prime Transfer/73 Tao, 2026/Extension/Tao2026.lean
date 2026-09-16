@@ -215,7 +215,9 @@ import Tao2026.SmoothNumberSaddleCurvature
 import Tao2026.BadOneTermAsymptotics
 import Tao2026.ShortIntervalDecomposition
 import Tao2026.TypeIReduction
+import Tao2026.TypeIConvolutionBridge
 import Tao2026.TypeIIReduction
+import Tao2026.TypeIIConvolutionBridge
 import Tao2026.TypeIIKernel
 import Tao2026.TypeIIArithmetic
 import Tao2026.VeryBadIntervals
@@ -244,6 +246,7 @@ import Tao2026.VeryBadEquidistribution
 import Tao2026.VeryBadAsymptotics
 import Tao2026.VinogradovPhase
 import Tao2026.Vinogradov
+import Tao2026.UnequalTypeIIVinogradov
 import Tao2026.VinogradovSharp
 import Tao2026.VinogradovMeanValue
 import Tao2026.VinogradovUniform
@@ -254,6 +257,25 @@ import Tao2026.VinogradovOptimalWooley
 import Tao2026.VaughanCoefficients
 import Tao2026.VaughanIdentity
 import Tao2026.WeylDifferencing
+import Tao2026.UnequalTypeIIWeyl
+import Tao2026.TypeIWeylBridge
+import Tao2026.TypeIISourceBlock
+import Tao2026.UnequalTypeIISourceBlock
+import Tao2026.TypeISourceBlock
+import Tao2026.MangoldtSourceBlock
+import Tao2026.UnequalMangoldtSourceBlock
+import Tao2026.PrimeSourceBlock
+import Tao2026.UnequalPrimeSourceBlock
+import Tao2026.FourierSourceBlock
+import Tao2026.UnequalFourierSourceBlock
+import Tao2026.StationaryFourierSourceBlock
+import Tao2026.CoordinateAxisFourierSourceBlock
+import Tao2026.LinearAxisTypeII
+import Tao2026.LinearAxisTypeIISourceBlock
+import Tao2026.LinearAxisTypeI
+import Tao2026.LinearAxisMangoldtSourceBlock
+import Tao2026.LinearAxisPrimeSourceBlock
+import Tao2026.LinearAxisFourierSourceBlock
 
 /-!
 # Tao 2026
