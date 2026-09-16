@@ -354,3 +354,66 @@ integral consequence of the independently implemented release-3.15 envelope.
 Both exponential comparisons are proved by checked induction, and the cutoff
 `34134` is derived from the exact inequality `320^2<=3H`; no floating-point
 logarithm estimate, prime table, or unlicensed proof code is imported.
+
+## Release 3.17 source note
+
+The only new mathematical input is Mathlib's already pinned explicit
+Chebyshev prime-count inequality.  All constants (`1024`, `4^101`, and the
+rational logarithmic margins) are derived inside Lean from Mathlib's certified
+logarithm bounds.  The near/far split, binomial baseline, propagation, and
+finite-rectangle reduction are independent local proofs; no external table or
+unlicensed implementation is imported.
+
+## Release 3.18 source note
+
+No new external source is used.  The improved constants `64` and `250000`
+come entirely from tightening the local inequalities against the same pinned
+Mathlib Chebyshev prime-count bound and certified logarithm estimates used in
+release 3.17.  The proof remains an independent local implementation and
+imports no numerical table or unlicensed code.
+
+## Release 3.19 source note
+
+No new external source is used.  The sharper low-prime exponent is derived
+directly from Mathlib's checked factorization and prime-counting definitions.
+The bounds `pi(m)<=m/3` and `pi(m)<=m/4` use Mathlib's
+`Nat.primeCounting_add_le`, exact totient and prime-count evaluations checked
+by the Lean kernel, and local arithmetic.  The finite `120<=m<690` endpoint
+certificate is also a kernel computation; no external prime table,
+unlicensed implementation, or opaque native decision procedure is imported.
+
+## Release 3.20 source note
+
+No new external source is used.  The bounded inequality
+`6*pi(m)<=m+84` is an exact Lean-kernel computation from Mathlib's
+`Nat.primeCounting` on a finite quotient range.  The logarithmic comparison
+uses the same certified Mathlib bounds on `log 2` and antitonicity of
+`log(x)/sqrt(x)` as the preceding releases.  No external prime table or
+native decision procedure is used.
+
+## Release 3.21 source note
+
+No new external source is used.  The estimate `4*pi(m)<=m+12` is a compact
+Lean-kernel computation from `Nat.primeCounting`.  The adaptive transitions,
+logarithmic estimates, and far binomial baselines use only previously audited
+local lemmas and Mathlib's certified logarithm bounds.  No external prime
+table, unlicensed code, or native decision procedure is imported.
+
+## Release 3.22 source note
+
+No new external source is used.  The sparse endpoint values of
+`Nat.primeCounting` and the four finite counts of integers coprime to `210`
+are evaluated by Lean's kernel from Mathlib definitions.  The interval
+comparison proving that every prime above `1906` lies in the counted coprime
+set is formalized directly.  The adaptive transitions and logarithmic
+estimates use only previously audited local lemmas and Mathlib bounds.  No
+external prime table, unlicensed code, or native decision procedure is used.
+
+## Release 3.23 source note
+
+No new external source is used.  The bounded central binomial inequalities,
+the two exceptional prime-counted gaps, and their endpoint baselines are
+evaluated by Lean's kernel from Mathlib definitions.  The proof then uses the
+already audited binomial monotonicity and consecutive-product reductions.
+No external numerical table, unlicensed code, or native decision procedure
+is used.

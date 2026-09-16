@@ -2051,3 +2051,100 @@ improves on the no-large-prime cutoff `H`.  The natural next layer is a
 sublinear square-root envelope on a growing noncentral range, followed by the
 factorial large-start criterion; the bounded bridge remains
 `101<=H<34134`.
+
+## Effective all-start tail (release 3.17)
+
+The noncentral large-length region is now closed.  At upper index `1024H`,
+Mathlib's explicit Chebyshev inequality and exact decimal-free rational
+margins prove the full small-prime binomial-growth inequality.  The local
+growth monotonicity lemma propagates it to every larger index.  Below that
+baseline, the square-root/Hanson envelope is controlled using
+`log H<=sqrt(H)/1000`, itself obtained from the antitonicity of
+`log x/sqrt x` at the explicit cutoff `4^101`.
+
+This replaces the earlier ineffective PNT length endpoint by the concrete
+tail `H>=4^101`.  The exact remaining problem is now a genuinely explicit
+finite rectangle: `101<=H<4^101` and starts below the prime-count factorial
+cutoff.  Further work should reduce that enormous length endpoint sharply
+before kernel certification, using tighter explicit prime-count margins and
+additional interval decompositions.
+
+## Sharpened effective all-start tail (release 3.18)
+
+The proposed tightening has now reduced the effective tail from `4^101` to
+`250000`.  The transition point is `64H`: below it,
+`log H<=sqrt(H)/40` absorbs the square-root/Hanson term, while the explicit
+Chebyshev estimate establishes binomial growth at the endpoint and
+monotonicity handles all larger starts.
+
+The outstanding unrestricted Sylvester--Schur task is now the finite
+rectangle `101<=H<250000` below the exact prime-count factorial start cutoff.
+The next useful step is a kernel-checkable length-block certification or a
+further analytic split that reduces this remaining length range.
+
+## Prime-counted effective all-start tail (release 3.19)
+
+The square-root split now retains the exact number of low primes, replacing
+the exponent `sqrt(n)` by `pi(sqrt(n))`.  A finite endpoint certificate plus
+reduced-residue counting modulo `210` proves `pi(m)<=m/4` for all `m>=120`.
+This reduces the near-branch logarithmic cost enough to close every upper
+index through `64H` from `H=10000`.  The corresponding bound
+`pi(H)<=H/4` also supplies the far-branch baseline at `64H`, with release
+3.18 covering lengths at least `250000`.
+
+The outstanding unrestricted Sylvester--Schur task is therefore the finite
+rectangle `101<=H<10000` below the exact prime-count factorial start cutoff.
+A length-block certificate or another arithmetic refinement must discharge
+that rectangle; unrestricted Sylvester--Schur is still not claimed.
+
+## Bounded prime-count bridge (release 3.20)
+
+The exact kernel certificate `6*pi(m)<=m+84` on `100<=m<800` matches the
+square-root range for `6000<=H<10000` below the transition `n=64H`.
+Together with `log H<=13*sqrt(H)/100`, it closes that near branch.  The far
+baseline already works from `H>=2200`, so every start is now closed once
+`H>=6000`.
+
+The outstanding unrestricted Sylvester--Schur task is the finite rectangle
+`101<=H<6000` below the exact prime-count factorial start cutoff.  Further
+work needs either a sharper bounded envelope, a smaller transition, or direct
+length-block certification.
+
+## Adaptive-transition tail (release 3.21)
+
+The bounded prime-count estimate is sharpened to `4*pi(m)<=m+12` for
+`60<=m<400`.  Rather than retain one transition across the bridge, the proof
+uses `16H` on `2200<=H<3000` and `20H` on `3000<=H<6000`.  This balances the
+near square-root cost against the far condition `H<C^3` and closes both
+regions exactly.
+
+The outstanding unrestricted Sylvester--Schur task is now the finite
+rectangle `101<=H<2200` below the exact prime-count factorial start cutoff.
+The adaptive method can plausibly be iterated, but direct length-block
+certificates become increasingly competitive at this scale.
+
+## Finite prime-count tail to 512 (release 3.22)
+
+The adaptive split is refined to transition `5H` on `512<=H<625`, `6H` on
+`625<=H<1134`, and `5H` on `1134<=H<2200`.  Sparse exact prime-count
+certificates prove `pi(H)<=H/5` and `pi(H)<=H/6`; after the anchor
+`pi(1906)=291`, four exact counts of residues coprime to `210` cover the rest
+of the upper band without costly larger prime-count evaluations.  The matching
+near logarithmic estimates and far binomial baselines close every start.
+
+The outstanding unrestricted Sylvester--Schur task is now the finite
+rectangle `101<=H<512` below the exact prime-count factorial start cutoff.
+At this scale, direct length-block certification is the natural next route.
+
+## Central finite bridge to 121 (release 3.23)
+
+Direct bounded certification shows that the central binomial baseline
+`(2H)^pi(H)<choose(2H,H)` already holds throughout `121<=H<512` except at
+five isolated lengths.  For `139,140`, the near square-root envelope reaches
+the exact baseline `n=281`; for `199,200,201`, it reaches `n=403`.
+Monotonicity propagates each baseline to every later start.
+
+The outstanding unrestricted Sylvester--Schur task is now only the twenty
+length rows `101<=H<121` below their exact prime-count factorial cutoffs.
+These rows require a stronger local certificate because the present
+prime-counted envelope already fails at their first admissible upper index.

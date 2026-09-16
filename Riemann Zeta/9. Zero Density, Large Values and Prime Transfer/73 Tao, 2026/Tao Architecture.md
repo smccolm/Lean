@@ -382,3 +382,20 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% envelope n^sqrt(n)*3^(n/3+1), leaving its uniform numerical gap.
     %% Release 3.16: exact integral inductions discharge that gap for every
     %% H>=34134 and H<N<=2H. Noncentral starts and 101<=H<34134 remain.
+    %% Release 3.17: explicit Chebyshev growth at 1024H plus the near envelope
+    %% closes every start for H>=4^101. The residual is the concrete rectangle
+    %% 101<=H<4^101 below the exact prime-count factorial start cutoff.
+    %% Release 3.18: tighter certified margins move the common transition to
+    %% 64H and the all-start cutoff to H>=250000. The residual is now exactly
+    %% 101<=H<250000 below the same prime-count factorial start cutoff.
+    %% Release 3.19: retaining pi(sqrt n) in the low-prime envelope and
+    %% proving pi(m)<=m/4 from m=120 moves the all-start cutoff to H>=10000.
+    %% The exact residual is 101<=H<10000 below the factorial start cutoff.
+    %% Release 3.20: the finite bound 6*pi(m)<=m+84 for 100<=m<800 closes
+    %% the bridge 6000<=H<10000. The exact residual is now 101<=H<6000.
+    %% Release 3.21: adaptive transitions 16H and 20H plus the finite bound
+    %% 4*pi(m)<=m+12 close every start from H>=2200. Residual: 101<=H<2200.
+    %% Release 3.22: transitions 5H, 6H, and 5H plus exact finite prime-count
+    %% certificates close every start from H>=512. Residual: 101<=H<512.
+    %% Release 3.23: the exact central baseline at 2H, with five rows bridged
+    %% at upper indices 281 and 403, closes H>=121. Residual: 101<=H<121.

@@ -2602,3 +2602,91 @@ before the source's `14/3` simplification.
 - [x] Export and audit both binomial and consecutive-product endpoints.
 - [ ] Close noncentral starts for large `H` and the finite bridge
   `101<=H<34134`.
+
+## Prime-equidistribution 3.17
+
+- [x] Prove an explicit Chebyshev logarithmic margin at upper index `1024H`.
+- [x] Establish the binomial-growth baseline there and propagate it to every
+  larger upper index.
+- [x] Absorb the square-root/Hanson envelope uniformly below `1024H` for
+  `H>=4^101`.
+- [x] Prove the effective all-start Sylvester--Schur tail.
+- [x] Reduce unrestricted Sylvester--Schur to the concrete rectangle
+  `101<=H<4^101`, `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that explicit finite rectangle.
+
+## Prime-equidistribution 3.18
+
+- [x] Prove `log H<=sqrt(H)/40` uniformly from `H>=250000`.
+- [x] Move the explicit Chebyshev binomial-growth baseline from `1024H` to
+  `64H`.
+- [x] Absorb the square-root/Hanson envelope uniformly through `64H`.
+- [x] Close every start for `H>=250000` and reduce unrestricted
+  Sylvester--Schur to `101<=H<250000`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that sharpened finite rectangle.
+
+## Prime-equidistribution 3.19
+
+- [x] Retain the exact low-prime exponent `pi(sqrt(n))` in the
+  square-root/Hanson envelope.
+- [x] Prove by reduced-residue counting and a finite kernel certificate that
+  `pi(m)<=m/4` for every `m>=120`.
+- [x] Prove the prime-counted near gap through `64H` for every `H>=10000`.
+- [x] Establish and propagate the far-branch binomial-growth baseline on
+  `10000<=H<250000`, using the release-3.18 tail above that band.
+- [x] Close every start for `H>=10000` and reduce unrestricted
+  Sylvester--Schur to `101<=H<10000`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that sharpened finite rectangle.
+
+## Prime-equidistribution 3.20
+
+- [x] Kernel-check `6*pi(m)<=m+84` for every `100<=m<800`.
+- [x] Prove `log H<=13*sqrt(H)/100` from `H>=6000`.
+- [x] Close the near branch throughout `6000<=H<10000`.
+- [x] Generalize the far-branch baseline to `H>=2200` and close the
+  complementary starts on the bridge.
+- [x] Reduce unrestricted Sylvester--Schur to `101<=H<6000`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that sharpened finite rectangle.
+
+## Prime-equidistribution 3.21
+
+- [x] Kernel-check `4*pi(m)<=m+12` for every `60<=m<400`.
+- [x] Prove the near gap through `16H` on `2200<=H<3000`.
+- [x] Prove the near gap through `20H` on `3000<=H<6000`.
+- [x] Establish binomial-growth baselines at both adaptive transitions and
+  propagate them through the far branches.
+- [x] Close every start for `H>=2200` and reduce unrestricted
+  Sylvester--Schur to `101<=H<2200`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that sharpened finite rectangle.
+
+## Prime-equidistribution 3.22
+
+- [x] Kernel-check the endpoint certificates proving `pi(H)<=H/5` on
+  `360<=H<1134` and `pi(H)<=H/6` on `1134<=H<2200`.
+- [x] Replace the expensive final prime-count endpoints above `1906` by four
+  exact coprimality counts modulo `210`.
+- [x] Prove the near gaps through `5H`, `6H`, and `5H` on the three adaptive
+  bands beginning at `512`, `625`, and `1134`.
+- [x] Establish and propagate all three matching far binomial-growth
+  baselines.
+- [x] Close every start for `H>=512` and reduce unrestricted
+  Sylvester--Schur to `101<=H<512`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge that sharpened finite rectangle.
+
+## Prime-equidistribution 3.23
+
+- [x] Kernel-check the central binomial-growth baseline at `n=2H` on
+  `121<=H<512` away from the five exact exceptional lengths.
+- [x] Prove the prime-counted near gap through `n=281` for `H=139,140` and
+  the matching exact binomial-growth baseline.
+- [x] Prove the prime-counted near gap through `n=403` for
+  `H=199,200,201` and the matching exact binomial-growth baseline.
+- [x] Close every start for `H>=121` and reduce unrestricted
+  Sylvester--Schur to the twenty rows `101<=H<121`,
+  `N+1 < H! * 2^pi(H)+1`.
+- [ ] Discharge those twenty remaining length rows.

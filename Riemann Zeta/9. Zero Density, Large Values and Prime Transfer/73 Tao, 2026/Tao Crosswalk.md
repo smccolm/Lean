@@ -375,6 +375,8 @@ estimates and that Vinogradov bound remain.
 
 | Sylvester--Schur explicit central tail | `self_le_two_pow_sqrt_div_sixteen`, `three_mul_pow_sqrt_le_two_pow_quarter`, `two_pow_quarter_mul_three_pow_gap`, `sylvesterSchur_central_gap_of_le_triple`, `exists_large_prime_dvd_choose_of_central_tail`, `exists_large_prime_dvd_consecutiveProduct_of_central_tail` | Complete and audited. Exact natural-number inductions prove the release-3.15 gap for all `H>=34134` and all `2H<=n<=3H`, closing every start `H<N<=2H`. Noncentral starts and the finite bridge below the cutoff remain open. |
 
+| Sylvester--Schur effective all-start tail | `choose_le_primeCounting_sqrt_envelope_mul_primorial_of_high_support`, `primeCountCentral_choose_growth_bounded`, `primeCountCentral_near_gap_281`, `primeCountCentral_near_gap_403`, `primeCountCentral_choose_growth_281`, `primeCountCentral_choose_growth_403`, `exists_large_prime_dvd_consecutiveProduct_of_primeCount_tail_oneHundredTwentyOne`, `SylvesterSchurPrimeCountOneHundredTwentyOneResidualRectangle`, `sylvesterSchurConclusion_of_primeCountOneHundredTwentyOneResidualRectangle` | Complete and audited as an effective tail and reduction. The exact central baseline at `2H` closes all `121<=H<512` rows except five; fixed prime-counted bridges at upper indices `281` and `403` close those exceptions, while release 3.22 handles all larger lengths. Every start is closed for `H>=121`, leaving exactly the twenty-row finite rectangle `101<=H<121` below the prime-count factorial start cutoff. |
+
 ## Crosswalk completion rule
 
 A row becomes complete only when the exact source location, quantifiers,

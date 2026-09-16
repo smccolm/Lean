@@ -238,11 +238,10 @@ Only the pinned paper's analytic backward-interval theorem remains open here.
 Lemma 4.2 also supplies the formerly abstract Theorem 1.10 gap input:
 `⌈exp((log x)^(3/4))⌉` bounds every factorial-square triple tail and is proved
 to be `x^o(1)`. Theorem 1.9 is now derived internally from that same Lemma
-4.2, so the direct Theorem 1.10 bridge has exactly three remaining inputs:
-the Erdős--Selfridge core, Theorem 2.5, and the analytic BHP theorem.
-The Erdős--Selfridge source is pinned, and the exact reduction from a repeated
-factorial squarefree component to a square consecutive product is proved;
-the no-square theorem itself remains to be formalized.
+4.2. Unrestricted Sylvester--Schur and Hanson's all-length primorial bound now
+prove the required Erdős--Selfridge square theorem internally. Thus the direct
+Theorem 1.10 bridge has exactly two remaining analytic inputs: Theorem 2.5 and
+the Baker--Harman--Pintz theorem.
 The finite counts for `B`, `VB`, and `F₃` also have audited exact
 `nontrivial + one-term = total` decomposition identities.
 For `VB¹`, the full source constant asymptotic
@@ -285,10 +284,10 @@ binomial lower bounds, and a two-range logarithmic argument produce a prime
  explicit fixed-length threshold `H^H+1` reduce the stronger unrestricted
  Sylvester--Schur contract to a finite bounded rectangle. The first forty-eight
  length rows are now discharged uniformly over every start by
- `sylvesterSchurBelow_oneHundredOne`; the remaining rectangle has `H>=101` and remains
- open. A separate start-uniform theorem also shows that every length works
- beyond one common start cutoff; consequently the residual rectangle is no
- longer a Lemma 3.1 or Theorem 1.7 blocker. The fixed cutoff and Theorem 2.5 constants are now chosen
+`sylvesterSchurBelow_oneHundredOne`.  An explicit Chebyshev/square-root
+argument proves every row `H>=121`; a final kernel certificate closes all
+twenty rows `101<=H<121`. Thus unrestricted Sylvester--Schur is proved. The
+fixed cutoff and Theorem 2.5 constants are now chosen
 outside the eventual quantifiers, two logarithmic powers are proved to beat
 the `H/log H` lower bound, and
 `eventually_not_isVeryBadInterval_of_growth_of_taoTheorem25Specialized`
@@ -2100,3 +2099,110 @@ Thus every interval with `H>=34134` and `H<N<=2H` now unconditionally has a
 prime divisor above `H`.  This removes the full large-length central strip;
 the remaining Sylvester--Schur work consists of noncentral starts together
 with the bounded-length bridge from `101` through `34133`.
+
+## Prime-equidistribution release 3.17
+
+`SylvesterSchurExplicitTail.lean` upgrades the large-length result from a
+central strip to every start.  For `N+H<=1024H`, the release-3.15
+square-root/Hanson envelope is absorbed using exact logarithmic bounds valid
+from `H>=4^101`.  At `1024H`, Mathlib's explicit Chebyshev estimate places the
+prime-count factor below the binomial-growth margin.  The already checked
+growth monotonicity covers every larger upper index.
+
+The theorem `exists_large_prime_dvd_consecutiveProduct_of_explicit_tail` is
+therefore uniform in all `H<N` once `H>=4^101`.  Together with the proof below
+`101` and the exact factorial start cutoff, this leaves the explicit finite
+rectangle `101<=H<4^101`,
+`N+1 < H! * 2^pi(H)+1`.  The module proves that this exact rectangle implies
+the unrestricted Sylvester--Schur conclusion.
+
+## Prime-equidistribution release 3.18
+
+The explicit all-start argument has been quantitatively tightened without a
+new external input.  The near/far transition is now `N+H=64H`, and the
+certified estimate `log H<=sqrt(H)/40` begins at `H=250000`.  The near branch
+absorbs the square-root/Hanson envelope through `64H`; at that same endpoint,
+the explicit Chebyshev prime-count bound proves the binomial-growth baseline,
+which propagates to every larger upper index.
+
+Thus every start `H<N` is closed for `H>=250000`.  The exact remaining
+Sylvester--Schur rectangle is `101<=H<250000` with
+`N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.19
+
+The low-prime part of the square-root envelope now retains its exact
+cardinality: its exponent is `pi(sqrt(n))`, not `sqrt(n)`.  An elementary
+reduced-residue count, including a finite kernel certificate below `690`,
+proves `pi(m)<=m/4` from `m=120`.
+
+This sharpens the near branch through `64H` to start at `H=10000`.  A second
+modulo-210 count proves `pi(H)<=H/4` on the far branch; at `64H` that bound
+fits the exact binomial-growth margin throughout `10000<=H<250000`, while
+release 3.18 handles all larger lengths.  Hence every start `H<N` is now
+closed for `H>=10000`, and the exact remaining Sylvester--Schur rectangle is
+`101<=H<10000`, `N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.20
+
+A bounded exact prime-count certificate now proves
+`6*pi(m)<=m+84` for every `100<=m<800`.  This is precisely the square-root
+range arising from `6000<=H<10000` and `2H<=n<=64H`.  Together with the
+certified inequality `log H<=13*sqrt(H)/100`, it closes the near branch on
+that entire bridge.  The far binomial-growth baseline, now stated from
+`H>=2200`, closes the complementary starts.
+
+Consequently every start `H<N` is closed for `H>=6000`.  The exact remaining
+Sylvester--Schur rectangle is `101<=H<6000`,
+`N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.21
+
+The near/far transition is now adaptive.  On `2200<=H<3000` it occurs at
+`16H`; on `3000<=H<6000` it occurs at `20H`.  A compact kernel certificate
+proves `4*pi(m)<=m+12` for `60<=m<400`, exactly covering the square-root
+ranges in the two near branches.  The corresponding logarithmic estimates
+and `pi(H)<=H/4` close both far baselines.
+
+Thus every start `H<N` is closed for `H>=2200`.  The exact remaining
+Sylvester--Schur rectangle is `101<=H<2200`,
+`N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.22
+
+Three adaptive bands now carry the effective tail down to `H=512`: transition
+`5H` on `512<=H<625`, `6H` on `625<=H<1134`, and `5H` again on
+`1134<=H<2200`.  Exact kernel certificates establish `pi(H)<=H/5` and
+`pi(H)<=H/6` on the needed finite ranges.  Above the final exact anchor
+`pi(1906)=291`, four checked counts of integers coprime to `210` finish the
+upper range without an external prime table.
+
+Thus every start `H<N` is closed for `H>=512`.  The exact remaining
+Sylvester--Schur rectangle is `101<=H<512`,
+`N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.23
+
+An exact bounded central-binomial certificate proves the far growth baseline
+already at `n=2H` for every `121<=H<512` except
+`H=139,140,199,200,201`.  The first exceptional pair is bridged by the
+prime-counted square-root envelope through `n=281`, and the remaining triple
+through `n=403`; exact binomial growth begins at those same endpoints.
+
+Together with release 3.22, every start `H<N` is now closed for `H>=121`.
+The remaining Sylvester--Schur rectangle has only the twenty length rows
+`101<=H<121`, with `N+1 < H! * 2^pi(H)+1`.
+
+## Prime-equidistribution release 3.24
+
+The common upper index `243` satisfies the binomial-growth baseline for every
+remaining length `101<=H<121`. Below that endpoint there are only 420
+admissible `(N,H)` pairs; one bounded kernel certificate supplies a prime
+`p>H` dividing each consecutive product. Therefore `sylvesterSchur` proves
+the unrestricted `SylvesterSchurConclusion` with no residual hypothesis.
+
+Hanson's all-length primorial theorem then gives the exact square
+specialization of Erdős--Selfridge. Every factorial squarefree fiber is
+unconditionally bounded by two, and the public Theorem 1.10 consumer now
+requires only Theorem 2.5 and Proposition 2.3(ii), or equivalently the pinned
+Baker--Harman--Pintz input.

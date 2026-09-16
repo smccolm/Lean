@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-3.16`. It
+This is a development manifest, version `prime-equidistribution-3.23`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -2895,3 +2895,130 @@ threshold.
 On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
 `FINAL RESULT: PASS` after this delta; the isolated production graph contained
 10066 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.17
+
+`SylvesterSchurExplicitTail.lean` proves an effective all-start tail.  For
+upper index at most `1024H`, certified logarithmic estimates discharge the
+square-root/Hanson gap.  At `1024H`, Mathlib's explicit Chebyshev prime-count
+bound proves the complete small-prime binomial-growth inequality; monotonicity
+propagates it to every larger upper index.
+
+Thus every start `H<N` is closed once `H>=4^101`.  Combining this theorem with
+`sylvesterSchurBelow_oneHundredOne` and the exact prime-count factorial cutoff
+defines `SylvesterSchurExplicitResidualRectangle`, with concrete bounds
+`101<=H<4^101` and `N+1 < H! * 2^pi(H)+1`.  A checked assembly theorem shows
+that this rectangle implies unrestricted `SylvesterSchurConclusion`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10067 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.18
+
+`SylvesterSchurExplicitTail.lean` now proves the same all-start conclusion
+from the substantially smaller cutoff `H>=250000`.  The certified inequality
+`log H<=sqrt(H)/40`, anchored at the exact square `250000=500^2`, controls the
+square-root/Hanson branch through upper index `64H`.  At `64H`, Mathlib's
+explicit Chebyshev prime-count estimate gives the strict binomial-growth
+margin, and the existing monotonicity theorem propagates it thereafter.
+
+The checked residual proposition is therefore the concrete finite rectangle
+`101<=H<250000` and `N+1 < H! * 2^pi(H)+1`.  No theorem statement outside the
+explicit-tail quantitative boundary changed.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10067 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.19
+
+`SylvesterSchurPrimeCountEnvelope.lean` sharpens the square-root split by
+retaining the exact low-prime exponent `pi(sqrt(n))`.  Its consecutive-product
+gap theorem remains purely integral, and an elementary residue count modulo
+`30` supplies an auxiliary `pi(m)<=m/3` estimate.
+
+`SylvesterSchurPrimeCountTail.lean` proves `pi(m)<=m/4` from `m=120`, using a
+finite kernel endpoint certificate below `690` and reduced-residue counting
+modulo `210` thereafter.  Together with `log H<=sqrt(H)/10`, this closes the
+near branch through `64H` from `H=10000`.  The same prime-count saving proves
+the far binomial-growth baseline on `10000<=H<250000`; release 3.18 handles
+larger lengths.
+
+The checked all-start cutoff is therefore `H>=10000`.  The exact residual is
+`101<=H<10000` and `N+1 < H! * 2^pi(H)+1`, recorded by
+`SylvesterSchurPrimeCountResidualRectangle` and its unrestricted assembly
+theorem.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10069 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.20
+
+`SylvesterSchurPrimeCountTailSixThousand.lean` adds the exact bounded
+prime-count envelope `6*pi(m)<=m+84` for `100<=m<800`.  The certificate is
+evaluated by Lean's kernel over a compact quotient range.  A certified
+logarithmic estimate, `log H<=13*sqrt(H)/100`, converts this envelope into the
+near-branch gap throughout `6000<=H<10000`.
+
+The release-3.19 far binomial-growth baseline is generalized to `H>=2200`, so
+it closes all complementary starts in the same bridge.  Together with the
+previous tail this proves the all-start conclusion from `H>=6000` and leaves
+exactly `101<=H<6000`, `N+1 < H! * 2^pi(H)+1`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10070 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.21
+
+`SylvesterSchurPrimeCountTailTwoThousandTwoHundred.lean` proves the exact
+finite estimate `4*pi(m)<=m+12` on `60<=m<400`.  It then uses an adaptive
+transition: `16H` for `2200<=H<3000` and `20H` for `3000<=H<6000`.
+Certified bounds `log H<=19*sqrt(H)/100` and
+`log H<=16*sqrt(H)/100` close the respective near branches.
+
+At both transition points, `pi(H)<=H/4` gives the strict binomial-growth
+baseline; the existing monotonicity theorem handles every larger start.  The
+all-start cutoff is therefore `H>=2200`, and the exact residual is
+`101<=H<2200`, `N+1 < H! * 2^pi(H)+1`.
+
+On 2026-09-15, `cmd /c run_tao_build.bat --no-pause` completed with
+`FINAL RESULT: PASS` after this delta; the isolated production graph contained
+10071 jobs, including the root and dependency audit.
+
+## Release delta: prime-equidistribution-3.22
+
+`SylvesterSchurPrimeCountTailFiveHundredTwelve.lean` proves exact finite
+prime-count bounds tailored to three adaptive bands: transition `5H` on
+`512<=H<625`, `6H` on `625<=H<1134`, and `5H` on
+`1134<=H<2200`.  Sparse kernel-checked endpoint certificates yield
+`pi(H)<=H/5` and `pi(H)<=H/6`.  Above `pi(1906)=291`, four exact finite
+coprimality counts modulo `210` replace the two prohibitively expensive final
+prime-count evaluations.
+
+The certified logarithmic estimates close the near branches and the same
+finite prime-count bounds give strict binomial-growth baselines on the far
+branches.  The all-start cutoff is therefore `H>=512`, and the exact residual
+is `101<=H<512`, `N+1 < H! * 2^pi(H)+1`.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10078 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice as the release gate.
+
+## Release delta: prime-equidistribution-3.23
+
+`SylvesterSchurPrimeCountTailOneHundredTwentyOne.lean` checks the central
+binomial-growth baseline at `n=2H` for every `121<=H<512` except the five
+lengths `139,140,199,200,201`.  Exact prime-counted near-gap certificates
+bridge the first pair to `n=281` and the second triple to `n=403`; exact
+binomial baselines at those endpoints propagate to every larger upper index.
+
+Together with release 3.22, this proves the all-start conclusion from
+`H>=121`.  The exact residual is the twenty-row rectangle `101<=H<121`,
+`N+1 < H! * 2^pi(H)+1`.
+
+On 2026-09-15, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10079 jobs, including the root and dependency audit.  The canonical isolated
+verifier was then run twice as the release gate.
