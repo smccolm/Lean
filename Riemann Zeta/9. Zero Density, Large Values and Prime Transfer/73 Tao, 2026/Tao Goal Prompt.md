@@ -44,7 +44,37 @@ singletons and an exact monotonic transfer to `(1+log(P)^(-100))M` for
 `P≤B`. The unconditional radial
 `taoC3Norm` Fourier coefficient-decay theorem now follows directly from the
 public smooth-periodic hypotheses. The analytic cancellation estimate remains
-open. Its finite Weyl-differencing foundation now compiles independently:
+open. The later Fourier work now gives an inverse-power radial tail, uniform
+polylogarithmically growing boxes, and a `C³`-normalized smooth estimate. The
+natural-ceiling endpoint bridge and bounded-scale absorption prove the literal
+`TaoTheorem25SpecializedConclusion` conditional exactly on
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`; there is no remaining scale, interval, or
+Fourier-reconstruction wrapper for that specialization. The quantitative-PNT
+input is now normalized further: a standard de la Vallée Poussin error bound
+for `Chebyshev.psi` implies the exact half-open Mangoldt discrepancy contract,
+including endpoint absorption, and yields the same literal specialized
+conclusion together with the unchanged Vinogradov input.
+Release 3.70 now proves that classical quantitative-PNT input unconditionally
+from the frozen native Ford zero-free region, quadratic Jensen zero count, and
+sharp Perron formula. Hence `ClassicalMangoldtDiscrepancyLogSaving` is closed,
+and `taoTheorem25Specialized_of_vinogradov` reaches the literal specialized
+conclusion from `VinogradovExponentialSumEstimate` alone. The uniform
+critical-VMVT coefficient-growth theorem was the sole remaining analytic input
+for this specialization in release 3.70. Release 3.71 corrects the source
+parameter split: the Taylor remainder keeps the larger cutoff, but the
+mean-value polynomial has degree `floor(4 log F / log X)`. The quarter-degree
+block supplies the required quadratic mass; explicit Ford moments handle
+degree at least 10000, the finitely many smaller degrees use the native
+critical coefficients, and the complementary parameter branch is trivial.
+Thus `VinogradovExponentialSumEstimate`, the literal specialized Theorem 2.5,
+Lemma 3.1, and `TaoTheorem18Conclusion` are now unconditional. Its finite
+The established Section 4 chain is correspondingly reduced: Proposition
+2.3(ii) is now the sole premise of both `TaoTheorem19Conclusion` and
+`TaoTheorem110Conclusion`, with Baker--Harman--Pintz as the pinned
+source-facing boundary. Theorem 2.5 is no longer an input to either endpoint.
+Its finite
+Weyl-differencing foundation now compiles independently:
 exact shifted-pair fibers prove the `H`-fold averaging identity and
 Cauchy--Schwarz bound, and the summed window squares are regrouped into the
 literal correlation constraint `n+h=n'+h'`. Both shift orders are identified

@@ -8,8 +8,9 @@ and Mathlib commit `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 The package proves Proposition 2.3(i),(iii), the exact one-term `B¹` and `VB¹`
 counts, the full `VB¹` zeta-ratio asymptotic, Lemma 3.2, the complete signed
 and uniform Lemma 2.10, and the complete `x^(2/5+o(1))` Corollary 2.11. It
-also proves the complete Theorem 1.8 finite and asymptotic assembly conditional
-only on Theorem 2.5: an injective certificate/length/offset encoding, explicit
+also proves the complete Theorem 1.8 finite and asymptotic assembly
+unconditionally: the source-faithful IK argument proves the specialized
+Theorem 2.5 input, while an injective certificate/length/offset encoding, explicit
 subpolynomial length and coefficient budgets, and the uniform relation count
 give the nontrivial-value `x^(2/5+o(1))` bound and hence the literal zeta-ratio
 endpoint. It
@@ -2618,3 +2619,216 @@ prime theorem with the audited `2*P/(L*log P)` integral estimate, yielding the
 literal zero-quadratic prime-minus-integral Fourier discrepancy. Both
 coordinate axes are now complete. Low modes and final Fourier assembly remain
 open; Theorem 2.5 is not claimed.
+
+## Release 3.57: low-frequency discrete-to-continuous bridge
+
+The new `LowFrequencyIntegral.lean` proves the exact elementary bridge from
+the logarithmically weighted reciprocal-phase integer sum to its interval
+integral. A dyadic inverse-log Lipschitz estimate and the existing phase
+variation theorem give the unit-cell error; exact interval additivity and a
+cell-count bound then yield
+`2*pi*(j+1)*F/log(P) + 1/log(P)^2` on the full interval.
+
+No quantitative PNT is introduced. The next analytic task is the classical
+arbitrary-log-saving Mangoldt discrepancy estimate needed to connect this
+bridge to primes. The zero mode and final finite Fourier assembly remain
+open; Theorem 2.5 is not claimed.
+
+## Release 3.58: quantitative-PNT interface and weighted Abel consumer
+
+`LowFrequencyIntegral.lean` now carries the release-3.57 variation estimate
+through Abel summation for `Lambda(n)/log(n)`, producing a direct conditional
+Mangoldt/log-to-integral theorem with one explicit partial-sum parameter.
+
+The new `LowFrequencyPNT.lean` states the missing classical PNT input in
+global prefix form, proves its uniform dyadic subinterval consequence, and
+feeds it into that weighted theorem. The contract remains an explicit
+hypothesis. Higher prime powers, the zero mode, and final Fourier assembly
+remain open; Theorem 2.5 is not claimed.
+
+## Release 3.59: low-frequency prime and Fourier endpoint
+
+`LowFrequencyPrime.lean` splits the Mangoldt/log sum exactly into the
+unweighted prime sum and the higher-prime-power tail. The tail is controlled
+by the existing frozen local estimate with arbitrary logarithmic saving.
+
+`LowFrequencyFourier.lean` transports the resulting conditional prime theorem
+to the literal Fourier-mode sum and integral and exposes the zero mode
+explicitly. Final logarithmic absorption and the finite high/low mode
+partition remain. The quantitative-PNT contract is still a hypothesis, and
+Theorem 2.5 is not claimed.
+
+## Release 3.60: low-frequency logarithmic absorption
+
+The new `LowFrequencyAbsorption.lean` converts the explicit release-3.59
+majorant into `P/(log P)^S` for every fixed target exponent `S`, uniformly for
+modes satisfying `reciprocalPhaseScale <= (log P)^D`. The proof supplies the
+eventual log-versus-power estimates and checks all three error terms with
+explicit constants.
+
+This completes the conditional low-frequency source bound. Quantitative PNT
+is still a named hypothesis, and the finite high/low mode partition remains;
+Theorem 2.5 is not claimed.
+
+## Release 3.61: exterior stationary and scale-complete same-sign bounds
+
+`StationaryFourierSourceBlock.lean` now treats a stationary point anywhere in
+the ambient dyadic block, even when it lies outside the summed subinterval,
+and supplies a separate first-derivative bound when it lies at most at
+`P/2`. For the specialization `M=N`, the stationary point is the fixed ratio
+`-2q₂/q₁` and is uniformly at most `2R` on a radius-`R` Fourier box.
+
+`UnequalFourierSourceBlock.lean` now controls the same-sign integral using the
+total phase scale rather than only the linear coefficient. Final finite mode
+partition and absorption remain. `LowFrequencyAbsorption.lean` also records
+the exact `F(P) <= 16 F(4P)` comparison and its deterministic high/low
+dichotomy. Theorem 2.5 is not claimed.
+
+## Release 3.62: specialized all-mode high/low partition
+
+`SpecializedFourierPartition.lean` combines the absorbed PNT branch with the
+axis, same-sign, and opposite-sign high-frequency estimates for `M=N`,
+`j=2`. It is uniform over every mode in a fixed Fourier box and every natural
+half-open dyadic subinterval. A second theorem absorbs all three displayed
+majorant terms into an arbitrary target `P/(log P)^S`.
+
+The analytic inputs remain the explicit propositions
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`. Finite Fourier summation and the
+arbitrary-interval endpoint reduction remain; Theorem 2.5 is not claimed.
+
+## Release 3.63: specialized finite Fourier assembly
+
+`eventually_specializedFiniteFourierPolynomial_Ico_le_logSaving` feeds the
+release-3.62 uniform mode theorem into the existing exact finite Fourier
+assembly. It uses the actual retained coefficient `ℓ¹` norm and absorbs that
+fixed constant with two extra powers of `log P`. Only the reduction from an
+arbitrary real order-convex interval to its natural `Ico` core remains in
+this specialized polynomial pipeline.
+
+## Release 3.64: arbitrary-interval natural core
+
+`SpecializedIntervalReduction.lean` proves that the natural points of an
+order-convex real interval form exactly one `Finset.Ico`. The corresponding
+real `Set.Ico` preserves `primesInScaleSet` and
+`primeEquidistributionSum` exactly. Its symmetric difference from the
+original interval has Lebesgue measure at most two whenever the core is
+nonempty. Integral endpoint absorption and the empty-core case remain.
+
+## Release 3.65: arbitrary-interval finite Fourier estimate
+
+`SpecializedIntervalReduction.lean` now completes the endpoint reduction.
+It proves a generic symmetric-difference set-integral estimate, caps the
+analytic core at `2P` while preserving every sampled prime, handles the
+degenerate composite endpoint and the empty-core unit-cell geometry, and
+absorbs the resulting endpoint errors. Consequently every fixed finite
+Fourier polynomial satisfies the specialized arbitrary-log-saving estimate
+on every measurable order-convex real interval in the dyadic block.
+
+The result remains conditional on `ClassicalMangoldtDiscrepancyLogSaving`
+and `VinogradovExponentialSumEstimate`. Quantitative reconstruction of a
+general smooth periodic weight remains, so Theorem 2.5 is not claimed.
+
+## Release 3.66: exact smooth Fourier-tail reconstruction
+
+`SpecializedFourierReconstruction.lean` transfers the release-3.65
+finite-polynomial estimate to a smooth periodic weight with the literal
+outer-box coefficient tail. `FourierRadial.lean` bounds that coefficient tail
+by `27 * taoC3Norm W` times the universal radial cubic-envelope tail. Thus all
+non-tail terms already have arbitrary logarithmic saving on arbitrary real
+order-convex intervals.
+
+An explicit rate for the universal tail and a mode theorem uniform for the
+corresponding growing Fourier box remain. Theorem 2.5 is not yet claimed.
+
+## Release 3.67: quantitative growing-box reconstruction
+
+`FourierDecayRate.lean` extracts a half power from the radial cubic envelope
+outside the square box and sums the remaining radial `5/2` envelope through a
+separable `5/4` majorant. Hence the universal tail is at most a fixed summable
+constant times `(R+1)^(-1/2)`.
+
+`SpecializedGrowingFourier.lean` uses
+`R(P)=ceil((log P)^B)`. Polylogarithmic frequency growth is absorbed by
+replacing epsilon with epsilon/2 in the fixed-constant Vinogradov range. The
+all-mode partition, finite assembly, natural-core endpoint reduction, and
+smooth reconstruction are uniform in the growing box. The final theorem is
+`C3`-normalized with one universal reconstruction constant and quantifies the
+weight only after the eventual natural-scale threshold.
+
+The two analytic propositions remain explicit hypotheses. A wrapper from
+eventual natural scales to every real `P>=2`, together with proofs of those
+analytic inputs, remains before Theorem 2.5 is claimed.
+
+## Release 3.68: literal real-scale specialized contract
+
+`SpecializedRealScale.lean` sends a real scale `P` to `ceil(P)` and intersects
+the source interval with the corresponding upper ray. It proves exact equality
+of the sampled prime sets, a unit bound for the discarded endpoint strip, and
+the resulting `taoC3Norm W / log P` integral error. It also transfers the
+Vinogradov parameter bound monotonically to the ceiling scale.
+
+The module converts the natural logarithmic saving to every positive real
+exponent, then controls the bounded initial range by an explicit elementary
+prime-sum/integral estimate. The final declaration
+`taoTheorem25Specialized_of_analyticInputs` proves the literal
+`TaoTheorem25SpecializedConclusion` from the two named analytic propositions.
+No scale or Fourier-reconstruction wrapper remains; only proofs of
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate` are still needed for an unconditional
+specialized Theorem 2.5.
+
+## Release 3.69: classical quantitative-PNT normalization
+
+`QuantitativePNTBridge.lean` restates the low-frequency input in the standard
+de la Vallée Poussin form for Chebyshev's `ψ`. It proves the exact endpoint
+identity `cumsum Λ k = ψ(k) - Λ(k)`, absorbs the endpoint term, and shows that
+the stretched-exponential `ψ` error implies every logarithmic saving required
+by `ClassicalMangoldtDiscrepancyLogSaving`.
+
+The declaration
+`taoTheorem25Specialized_of_chebyshevPsiDeLaValleePoussin` now proves the
+literal specialized conclusion from that classical `ψ` proposition and
+`VinogradovExponentialSumEstimate`. The quantitative `ψ` estimate and the
+Vinogradov polynomial mean-value input remain analytic obligations.
+
+## Release 3.70: unconditional classical quantitative PNT
+
+`ClassicalQuantitativePNT.lean` assembles the frozen sharp explicit formula,
+Ford's proved rectangle-uniform Vinogradov--Korobov zero-free region, and the
+proved global Jensen count. A finite low-zero reciprocal constant and a
+coarse eventual `N(0,T) <= K*T^2` bound control the zero sum. Choosing
+`T=exp(a*sqrt(log x))` with `a=min(1,c/8)` yields the standard eventual
+de la Vallee Poussin estimate for `psi(x)-x`.
+
+Consequently `ClassicalMangoldtDiscrepancyLogSaving` is now proved
+unconditionally, and `taoTheorem25Specialized_of_vinogradov` has the literal
+specialized conclusion with only `VinogradovExponentialSumEstimate` as an
+input. The remaining analytic frontier for this specialization is the
+uniform critical-VMVT coefficient-growth estimate already isolated by the
+Vinogradov modules.
+
+## Release 3.71: unconditional specialized Theorem 2.5 and Theorem 1.8
+
+`VinogradovIKDegree.lean` separates the source's Taylor cutoff from its
+effective mean-value degree `k=floor(4 log F/log X)`. It proves that the
+degree-`k` remainder is at most one and transfers the shifted Taylor sum at
+that smaller degree. `VinogradovIKMeanValue.lean` extracts at least `k^2/25`
+of weighted quarter-block mass and converts it into the required coordinate
+saving.
+
+`VinogradovIKFord.lean` treats `k>=10000` with an explicit Ford moment;
+`VinogradovIKFinite.lean` takes a finite maximum of the already proved native
+critical coefficients for `16<=k<10000` and uses the trivial estimate in the
+complementary parameter branch. `VinogradovIKComplete.lean` assembles the
+local product, pair-sum, and Taylor-transfer bounds, proving
+`vinogradovExponentialSumEstimate_unconditional`.
+
+Finally, `Theorem25Complete.lean` combines that theorem with the native
+quantitative PNT. The exact specialized Theorem 2.5 conclusion and Tao's
+literal Theorem 1.8 conclusion are now unconditional.
+
+`PublicEndpointReductions.lean` also removes Theorem 2.5 from the remaining
+Section 4 interfaces: Proposition 2.3(ii) alone implies both Theorem 1.9 and
+Theorem 1.10, while the source-facing variants require only the pinned
+Baker--Harman--Pintz proposition.

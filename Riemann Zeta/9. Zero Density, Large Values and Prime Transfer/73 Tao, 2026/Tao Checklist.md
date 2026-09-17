@@ -3121,3 +3121,44 @@ before the source's `14/3` simplification.
   Mangoldt, primes, and the literal coordinate-axis Fourier discrepancy.
 - [ ] Control low and zero modes, then perform the final finite Fourier
   assembly.
+
+## Prime-equidistribution 3.69
+
+- [x] Prove the exact endpoint identity between the half-open Mangoldt prefix
+  sum and `Chebyshev.psi`.
+- [x] Prove that `exp(-c*sqrt(log x))` beats every fixed inverse logarithmic
+  power and absorb the `Λ(k)` endpoint.
+- [x] Derive `ClassicalMangoldtDiscrepancyLogSaving` from the standard de la
+  Vallée Poussin `ψ` error proposition.
+- [x] Expose the literal specialized Theorem 2.5 conclusion from that
+  classical PNT proposition and `VinogradovExponentialSumEstimate`.
+- [ ] Prove the quantitative `ψ` proposition and the residual Vinogradov
+  polynomial mean-value proposition.
+
+## Prime-equidistribution 3.70
+
+- [x] Derive an eventual quadratic full-strip zero count from the frozen
+  Jensen estimate.
+- [x] Convert Ford's rectangle-uniform Vinogradov--Korobov region to a common
+  `c/log T` zero-free width.
+- [x] Bound the complete truncated zero sum, separating the finite low-zero
+  reciprocal mass from the high zeros.
+- [x] Optimize the sharp Perron formula at
+  `T=exp(min(1,c/8)*sqrt(log x))` and prove the de la Vallee Poussin psi error.
+- [x] Discharge `ClassicalMangoldtDiscrepancyLogSaving` unconditionally and
+  reduce the literal specialized Theorem 2.5 conclusion to the Vinogradov
+  proposition alone.
+- [ ] Prove the residual uniform critical-VMVT coefficient-growth estimate
+  and hence `VinogradovExponentialSumEstimate`.
+
+## Prime-equidistribution 3.71
+
+- [x] Separate the Taylor remainder cutoff from the effective IK mean-value
+  degree `floor(4 log F/log X)`.
+- [x] Prove the effective-degree Taylor remainder, pair transfer, and the
+  quarter-block weighted mass bound `k^2/25`.
+- [x] Prove the high-degree Ford branch and the finite native-critical branch,
+  including the trivial complementary parameter range.
+- [x] Prove `VinogradovExponentialSumEstimate` unconditionally.
+- [x] Combine it with the native quantitative PNT to prove the literal
+  specialized Theorem 2.5 and Tao's Theorem 1.8 unconditionally.

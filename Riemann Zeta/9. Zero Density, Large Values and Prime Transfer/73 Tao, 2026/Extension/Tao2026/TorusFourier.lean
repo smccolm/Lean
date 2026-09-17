@@ -182,6 +182,41 @@ theorem tendstoUniformly_taoFourierPolynomial_of_decay
   funext x
   exact (hasSum_taoFourierSeries_of_decay hW hWcont hc x).tsum_eq.symm
 
+/-- The pointwise error of a square Fourier truncation is bounded by the
+exact outer-box `ℓ¹` coefficient tail. -/
+theorem norm_taoFourierPolynomial_sub_le_coefficientTail
+    {W : ℝ × ℝ → ℂ} (hW : IsZ2Periodic W) (hWcont : Continuous W)
+    {C : ℝ}
+    (hc : ∀ q, ‖taoFourierCoeff W hW hWcont q‖ ≤
+      C * fourierDecayWeight q) (R : ℕ) (x : ℝ × ℝ) :
+    ‖W x - finiteFourierPolynomial (fourierFrequencyBox R)
+        (taoFourierCoeff W hW hWcont) x‖ ≤
+      ∑' q : {q // q ∉ fourierFrequencyBox R},
+        ‖taoFourierCoeff W hW hWcont q‖ := by
+  let c := taoFourierCoeff W hW hWcont
+  let f : ℤ × ℤ → ℂ := fun q => c q * fourierMode2D q x
+  have hcNorm : Summable (fun q => ‖c q‖) :=
+    summable_norm_of_fourierDecay c hc
+  have hfNorm : Summable (fun q => ‖f q‖) := by
+    simpa only [f, norm_mul, norm_fourierMode2D, mul_one] using hcNorm
+  have hf : Summable f := hfNorm.of_norm
+  have hseries : HasSum f (W x) := by
+    simpa only [f, c] using hasSum_taoFourierSeries_of_decay hW hWcont hc x
+  have hdecomp := hf.sum_add_tsum_subtype_compl (fourierFrequencyBox R)
+  have hEq : W x = finiteFourierPolynomial (fourierFrequencyBox R) c x +
+      ∑' q : {q // q ∉ fourierFrequencyBox R}, f q := by
+    rw [← hseries.tsum_eq]
+    simpa only [finiteFourierPolynomial, c] using hdecomp.symm
+  calc
+    ‖W x - finiteFourierPolynomial (fourierFrequencyBox R) c x‖ =
+        ‖∑' q : {q // q ∉ fourierFrequencyBox R}, f q‖ := by rw [hEq]; ring_nf
+    _ ≤ ∑' q : {q // q ∉ fourierFrequencyBox R}, ‖f q‖ :=
+      norm_tsum_le_tsum_norm (hfNorm.subtype _)
+    _ = ∑' q : {q // q ∉ fourierFrequencyBox R}, ‖c q‖ := by
+      apply tsum_congr
+      intro q
+      simp only [f, norm_mul, norm_fourierMode2D, mul_one]
+
 end
 
 end Tao2026

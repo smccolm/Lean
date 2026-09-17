@@ -735,3 +735,134 @@ ledger. The Mangoldt and prime transfers are exact Vaughan decomposition,
 prime-power removal, and reverse Abel summation; the Fourier endpoint uses the
 already audited pure-linear logarithmic integral. The sole analytic dependency
 remains `VinogradovExponentialSumEstimate`.
+
+## Release 3.57 source note
+
+No new external source is used. `LowFrequencyIntegral.lean` is elementary:
+real differentiation bounds `1/log`, the existing reciprocal-phase variation
+bound controls the character, and interval additivity telescopes the unit
+cells. It adds no analytic assumption. The missing low-frequency prime input
+is explicitly the classical quantitative PNT with arbitrary logarithmic
+saving for Mangoldt discrepancy; the frozen dependency currently provides
+only qualitative PNT.
+
+## Release 3.58 source note
+
+No quantitative PNT is asserted. `ClassicalMangoldtDiscrepancyLogSaving` is a
+proposition-valued interface for the standard global estimate
+`psi(x)-x <<_A x/log(x)^A`. Its dyadic subinterval consequence and the full
+weighted Abel consumer are proved internally. Thus the only new analytic
+dependency is explicit and source-faithful; all transformations after that
+contract are finite summation, variation bounds, and real inequalities.
+
+## Release 3.59 source note
+
+No new external source is used. Higher-prime-power removal reuses the pinned
+`GafniTao.primePowerTailIntervalSum_le` estimate already audited by the
+high-frequency prime transfer. The `Lambda/log` split, inverse-log comparison,
+and Fourier-mode transport are exact. The only conditional analytic input in
+the low-frequency row remains the explicitly named classical quantitative
+PNT contract.
+
+## Release 3.60 source note
+
+No new external source is used. `LowFrequencyAbsorption.lean` is elementary
+asymptotic and ordered-field bookkeeping applied to the release-3.59 bound.
+The only analytic input remains the explicitly named quantitative-PNT
+proposition; the new endpoint itself introduces no axiom.
+
+## Release 3.61 source note
+
+No new external source is used. The new stationary estimates are exact
+interval-additivity and integration-by-parts consequences of the previously
+audited clipped estimate. The same-sign refinement is elementary denominator
+arithmetic for the existing reciprocal phase scale. All analytic hypotheses
+remain explicit.
+
+## Release 3.62 source note
+
+No new external source is used. `SpecializedFourierPartition.lean` is a
+finite logical partition of the previously audited PNT, Vaughan, axis,
+same-sign, and stationary estimates. Its final absorption theorem uses only
+elementary ordered-field identities and eventual growth of `log`. Both
+analytic assumptions remain named propositions.
+
+## Release 3.63 source note
+
+No new external source is used. The finite Fourier assembly is an exact
+finite-sum interchange and triangle inequality already present in
+`FourierAssembly.lean`; the only new step is elementary eventual absorption
+of the fixed coefficient `ℓ¹` norm.
+
+## Release 3.64 source note
+
+No new external source is used. The natural-core theorems use only order
+convexity, finite minimum/maximum properties, exact unfolding of the sampled
+prime set, and elementary Lebesgue interval volumes.
+
+## Release 3.65 source note
+
+No new external source is used. The capped-core prime preservation is an
+elementary consequence of the compositeness of `2P` for `P >= 2`; the
+integral comparison uses standard set-integral decomposition and Lebesgue
+measure monotonicity. The empty-core and logarithmic-absorption arguments are
+elementary. The same named quantitative-PNT and Vinogradov propositions are
+the only analytic assumptions in the resulting finite-polynomial theorem.
+
+## Release 3.66 source note
+
+No new external source is used. The coefficient-tail comparison is the
+triangle inequality for an absolutely summable Fourier series, and the
+smooth tail envelope is obtained by summing the already audited radial cubic
+coefficient bound. The prime-discrepancy transfer uses the existing exact
+uniform-approximation stability theorem. Quantitative PNT and Vinogradov
+remain the only analytic assumptions.
+
+## Release 3.67 source note
+
+No new external source is used. The inverse-square-root tail follows by
+factoring the cubic radial weight into a half-power radius factor and a
+summable radial `5/2` envelope. The growing-box parameter bridge is elementary
+stretched-exponential domination of fixed log powers. The mode estimates use
+the same explicitly named quantitative-PNT and Vinogradov assumptions as the
+preceding releases.
+
+## Release 3.68 source note
+
+No new external source is used. `SpecializedRealScale.lean` is an elementary
+formal bridge from the preceding eventual natural-scale estimate to the
+literal all-real-scale specialized contract: natural ceiling, exact finite-set
+extensionality, a unit Lebesgue endpoint strip, logarithm-versus-power
+absorption, and a bounded-scale crude estimate. The resulting theorem remains
+conditional on the same quantitative-PNT and Vinogradov propositions.
+
+## Release 3.69 source note
+
+No new external source is used. `QuantitativePNTBridge.lean` formalizes the
+standard conversion from a de la Vallée Poussin Chebyshev-`ψ` error bound to
+arbitrary logarithmic savings for the Mangoldt prefix discrepancy. The
+quantitative `ψ` bound is recorded as a proposition, not imported or assumed
+as an axiom. The frozen dependency's available terminal PNT theorem remains
+qualitative; its sharp-Perron modules do not contain the missing contour-shift
+estimate.
+
+## Release 3.70 source note
+
+No new external source is introduced. `ClassicalQuantitativePNT.lean`
+assembles already frozen, audited results: the native Ford asymptotic
+Vinogradov--Korobov zero-free theorem, its finite-low-zero rectangle bridge,
+the native sharp Perron formula for `Chebyshev.psi`, and the global Jensen
+zero-count estimate. The local proof weakens the Ford width to `c/log T`, uses
+the deliberately coarse consequence `N(0,T)=O(T^2)`, and performs the
+classical `T=exp(a*sqrt(log x))` optimization. The resulting quantitative PNT
+is proved rather than postulated.
+
+## Release 3.71 source note
+
+No new source artifact is introduced. The completion follows the Singmaster
+source's citation of Iwaniec--Kowalski, Theorem 8.25. The decisive source
+distinction is that `10 ceil(log F/log X)` controls Taylor truncation error,
+whereas the polynomial mean-value degree is `floor(4 log F/log X)`. The
+formal proof uses quarter-scale critical moments, the already frozen explicit
+Ford coefficient for the large-degree tail, and a finite maximum of native
+critical coefficients below degree 10000.

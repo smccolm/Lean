@@ -60,6 +60,7 @@ flowchart TD
         DYADICFREE["Compiled dyadic prime-free bridge<br/>prime-power tail retained and absorbed"]
         PREFIX["Compiled constant-length endpoint measure<br/>finite dyadic assembly + full theta range"]
         VINO["Theorem 2.5 partial<br/>j=1 absorption + phase/character variation + low-frequency complex Abel/PNT-discrepancy reduction + qualitative-PNT uniform dyadic and fixed-bounded-frequency o(P) consequences + finite Fourier assembly with automatic integrability, exact retained-box count, uniform-approximation transfer, finite ℓ¹ truncation, summable cubic ℤ² envelope, vanishing square-box tails, open-quotient torus descent, character compatibility, conditional uniform reconstruction of W, complete smooth-periodic radial C³ Fourier decay + source-oriented product-restricted Vaughan with exact 1/log-P coefficient envelopes and supports + exact outer/double coefficient blocks + canonical (log₂B+1)^102 short family with coverage, exact weighted Type I/II decomposition, and literal real-log relative-width support + prime-power + Abel + Type I + product-restricted Type II + all-support distance-kernel bound with necessary +1 and endpoint-free pure off-diagonal bound through exact double blocks and source-facing block lengths + high-frequency log absorption + normalized parameter bounds + critical deletion + arbitrary-depth finite van der Corput majorant with exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridge with arbitrary lag-product upper and critical-regular lower estimates, IVT sign separation, terminal derivative windows from the next two source derivatives, critical-regular nonlinear Kusmin--Landau terminal bound, exact `rH`/`H^r` admissible-lag control, uniform arbitrary-depth and literal four-round regular-interval closure, exact lag-sensitive Weyl tree, inverse-product/truncation leaf profile, harmonic leaf summation, closed all-depth scalar lag envelope with generalized harmonic factors ≤ H, source four-round sixteenth-root estimate, coarse scale recurrence with exact `(QH)^15/scale` sixteenth power, four explicit diagonal terms with exact powered denominator bounds, source five-term root/rpow majorant without hidden recurrence, a canonical floor-rounded range that automatically satisfies upper-smallness, exact expanded-critical-start deletion plus global long/short regular-component assembly, optimized fixed-power global closure, arbitrary-subinterval low-frequency two-term width `(F/X^5+1/F)^(1/1024)`, and equal-parameter Type II distance-kernel propagation through arbitrary positive blocks and the exact canonical dyadic Vaughan double family, exact outer-sum/Cauchy--Schwarz insertion into the literal source Type II convolution blocks, source beta/gamma envelopes, exact tail-cutoff annihilation of both small-band regimes, full-family conditional summation, exact `(log₂ B+1)^204` uniform loss, and full-convolution square-root reassembly, with uniform scale/effective-error majorants and quadratic geometry discharge, plus affine nearest-integer endpoint<br/>quantitative arbitrary-log-saving PNT, source split `(log Bcap)^d≤F`, large-band bound `10F≤K^4(log Bcap)^100`, exact equation-(18), sharp critical root/source-decay ledger, explicit native p-adic coefficient `C(p^(B₀+1)κ)^ε`, uniform absolute-coefficient positive Ford benchmark at moment `4R²` for `R≥10000` (quantitatively below the source decay), and finite absorption of every native critical coefficient for `40≤R<1000`; uniform rooted control for `R≥1000` and the remaining high-scale Vinogradov-Weyl cancellation are open; the inner singleton branch is closed diagonally"]
+        VINO["PROVED specialized Theorem 2.5<br/>unconditional quantitative PNT + source-faithful IK effective-degree Vinogradov estimate + complete Fourier reconstruction"]
         SCALEMONO["PROVED quadratic short-block source bridge<br/>near/far split + pairwise F'=K^4 dispatch + intrinsic low error (1/K)^(1/1024) + exact high-pair Vinogradov consumer + diagonal singleton closure"]
         SCALEMONO --> VINO
         UNCERT["PROVED finite Lemma 2.6<br/>native DFT Parseval + arbitrary tensor uncertainty<br/>additive CRT character and energy reindexing"]
@@ -87,10 +88,10 @@ flowchart TD
 
     subgraph SECTION3["Section 3: very bad intervals"]
         direction TB
-        VBSHORT["CONDITIONAL FULL Lemma 3.1 contract<br/>(N,H)=(0,1) is the unique H&lt;N exception + obstruction/cutoff/T2.5 upper + both substitutions + periodic slice + unit-cell insertion + unconditional eventual PNT/binomial scale and measure lower bound + fixed-constant contradiction;<br/>open: analytic Theorem 2.5 only"]
+        VBSHORT["PROVED Lemma 3.1 contract<br/>(N,H)=(0,1) is the unique H&lt;N exception + obstruction/cutoff/T2.5 upper + both substitutions + periodic slice + unit-cell insertion + unconditional eventual PNT/binomial scale and measure lower bound + fixed-constant contradiction"]
         VBEXTRACT["PROVED Lemma 3.2<br/>polynomial coefficients + powerful relation"]
         VBCOVER["PROVED finite Lemma 3.2 encoding<br/>injective interval codes + subpolynomial budgets"]
-        T18["CONDITIONAL FULL Theorem 1.8<br/>nontrivial x^(2/5+o(1)) count + zeta-ratio asymptotic<br/>open: analytic Theorem 2.5 only"]
+        T18["PROVED Theorem 1.8<br/>nontrivial x^(2/5+o(1)) count + zeta-ratio asymptotic"]
         VBSHORT --> VBEXTRACT
         VBSHORT --> VBCOVER
         VBEXTRACT --> T18
@@ -109,9 +110,9 @@ flowchart TD
         FBOUNDS["PROVED Lemma 4.1 + conditional full Lemma 4.2<br/>both low/high cutoffs, geometric lower bounds, and contradictions<br/>explicit x^o(1) Theorem 1.10 gap budget; analytic BHP remains"]
         FEXTRACT["PROVED Lemma 4.3<br/>canonical square decomposition + exact product envelope<br/>two-half selection + bounded smooth square relation"]
         FCASES["PROVED conditional source case split<br/>easy cases + hard residue/fiber/PNT weights + finite Corollaries 2.8--2.9;<br/>maximal-k closure + F3 one-term upper bound; consumes Lemma 4.2"]
-        T19["PUBLIC: Theorem 1.9<br/>nontrivial F3 bound + x^(1/2+o(1))"]
+        T19["CONDITIONAL FULL: Theorem 1.9<br/>nontrivial F3 bound + x^(1/2+o(1));<br/>only Proposition 2.3(ii) remains"]
         ES2["CONDITIONAL SOURCE: Erdos--Selfridge Theorem 2<br/>prime valuation not divisible by exponent"]
-        T110["CONDITIONAL FULL: Theorem 1.10<br/>factorial solutions x^(1/2+o(1));<br/>source-Theorem-2 translation PROVED"]
+        T110["CONDITIONAL FULL: Theorem 1.10<br/>factorial solutions x^(1/2+o(1));<br/>only Proposition 2.3(ii) remains"]
         FBOUNDS --> FEXTRACT
         FEXTRACT --> FCASES
         FCASES --> T19
@@ -189,9 +190,9 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,AUDIT,RUNNER complete
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,VINO,VBSHORT,T18,AUDIT,RUNNER complete
     class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
-    class CROSSWALK,ONETERM,VINO,UNCERT,LSIEVE,POWERREL,VBSHORT,VBEXTRACT,T18,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,BURGESS pending
+    class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBEXTRACT,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,BURGESS pending
     class NORMALIZE complete
     class PRIMEII,PELL,FUND,T17,T19,T110,PUBLIC,RELEASE absent
     class LEGEND note
@@ -521,3 +522,76 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% Exact Vaughan assembly, prime-power removal, reverse Abel summation,
     %% and the existing integral estimate close the literal zero-quadratic
     %% Fourier discrepancy. Low modes and final Fourier assembly remain.
+    %% Release 3.57: dyadic variation, unit-cell integration, and exact
+    %% telescoping compare the low-frequency logarithmically weighted integer
+    %% sum with its interval integral. Quantitative PNT, the zero mode, and
+    %% final Fourier assembly remain.
+    %% Release 3.58: weighted Abel summation compares the Mangoldt/log sum
+    %% directly with the integral. A global quantitative-PNT proposition is
+    %% reduced to the exact uniform dyadic consumer; prime-power removal,
+    %% zero mode, and final assembly remain.
+    %% Release 3.59: Lambda/log is split exactly into primes and higher prime
+    %% powers; the latter retain arbitrary log saving. The conditional result
+    %% is transported to every literal Fourier mode, including zero. Final
+    %% absorption and high/low partition remain.
+    %% Release 3.60: the explicit conditional low-frequency majorant is
+    %% absorbed into P/(log P)^S under every fixed polylogarithmic phase-scale
+    %% cutoff. The finite high/low partition remains; quantitative PNT stays
+    %% explicit and Theorem 2.5 is not claimed.
+    %% Release 3.61: stationary cancellation now covers every subinterval when
+    %% the critical point lies in the ambient dyadic block, plus the exterior
+    %% left range s<=P/2. Same-sign cancellation now uses the total phase
+    %% scale. The final finite mode partition remains.
+    %% Release 3.62: the specialized M=N, j=2 high/low partition is complete
+    %% modewise on natural Ico dyadic subintervals, including axes and both
+    %% sign geometries, and its three-term majorant is absorbed into an
+    %% arbitrary P/(log P)^S target. Finite mode summation and arbitrary-real-
+    %% interval reduction remain.
+    %% Release 3.63: the fixed Fourier box is summed with its exact coefficient
+    %% l1 norm, absorbed by two spare logarithmic powers. The specialized
+    %% polynomial estimate is complete on natural Ico dyadic subintervals;
+    %% arbitrary-real-interval endpoint reduction remains.
+    %% Release 3.64: the natural core of every order-convex real interval is
+    %% one exact Finset.Ico; the prime set and prime sum are unchanged, and
+    %% the nonempty-core symmetric difference has volume at most two.
+    %% Release 3.65: the core is capped at 2P without losing primes, the
+    %% generic set-integral endpoint inequality and empty-core unit-cell
+    %% branch are complete, and all endpoint errors are absorbed. Thus the
+    %% specialized arbitrary-log-saving theorem holds for every fixed finite
+    %% Fourier polynomial on arbitrary measurable order-convex intervals.
+    %% Quantitative infinite Fourier reconstruction remains.
+    %% Release 3.66: exact torus reconstruction now bounds W minus its square
+    %% Fourier truncation by the outer coefficient l1 tail; smooth radial
+    %% decay replaces this by 27*taoC3Norm(W) times the universal cubic tail.
+    %% The arbitrary-interval discrepancy retains only this tail remainder.
+    %% Release 3.67: the cubic tail is O((R+1)^(-1/2)) through a summable
+    %% radial 5/2 envelope. The radius ceil((log P)^B) is now admissible
+    %% uniformly after spending half the stretched-log epsilon margin.
+    %% Coefficient-normalized growing-box assembly, arbitrary-interval
+    %% reduction, and uniform C3-normalized smooth reconstruction are proved
+    %% on eventual natural scales. The real-scale/small-scale wrapper and the
+    %% two explicit analytic inputs remain before Theorem 2.5 is claimed.
+    %% Release 3.68: SpecializedRealScale passes P to ceil(P), preserves the
+    %% prime set on I intersect Ici(ceil(P)), and bounds the discarded integral
+    %% strip by C3/log(P). Real logarithmic exponents and bounded initial scales
+    %% are absorbed explicitly. taoTheorem25Specialized_of_analyticInputs now
+    %% has the literal TaoTheorem25SpecializedConclusion type. Only the named
+    %% quantitative-PNT and Vinogradov propositions remain for this specialization.
+    %% Release 3.69: QuantitativePNTBridge identifies the low-frequency input
+    %% with the standard de la Vallee Poussin psi error. The exact identity
+    %% cumsum Lambda k = psi(k)-Lambda(k), endpoint absorption, and
+    %% stretched-exponential-to-arbitrary-log-saving conversion are compiled.
+    %% The classical quantitative psi theorem and the residual Vinogradov
+    %% polynomial mean-value proposition remain analytic obligations.
+    %% Release 3.70: ClassicalQuantitativePNT combines the frozen native Ford
+    %% rectangle zero-free region, quadratic Jensen zero count, and sharp
+    %% Perron formula at height exp(a*sqrt(log x)). The de la Vallee Poussin
+    %% psi bound and ClassicalMangoldtDiscrepancyLogSaving are now
+    %% unconditional. Only VinogradovExponentialSumEstimate remains for the
+    %% literal specialized Theorem 2.5 conclusion.
+    %% Release 3.71: the Iwaniec--Kowalski degree split uses
+    %% k=floor(4 log F/log X), while the larger Taylor cutoff is retained only
+    %% for the remainder. Quarter-block VMVT mass, Ford for k>=10000, finite
+    %% native critical coefficients below 10000, and the trivial complementary
+    %% branch prove VinogradovExponentialSumEstimate. Specialized Theorem 2.5,
+    %% Lemma 3.1, and the literal Theorem 1.8 endpoint are unconditional.

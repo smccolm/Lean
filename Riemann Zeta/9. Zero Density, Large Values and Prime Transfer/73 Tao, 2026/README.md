@@ -5,16 +5,16 @@ This directory is the active formalization project for Terence Tao,
 `2603.27990v2`. The paper and its TeX source are pinned under `Sources/`.
 
 **Status:** Proposition 2.3(i),(iii), complete Lemma 3.2, unconditional
-eventual Lemma 3.1 arithmetic-scale/geometric lower bounds, and the complete
-Lemma 3.1 contradiction and full Theorem 1.8 assembly conditional on the
-specialized Theorem 2.5 estimate. All four quantified upper/lower halves of
+eventual Lemma 3.1 arithmetic-scale/geometric lower bounds, the unconditional
+specialized Theorem 2.5 estimate, and the complete Lemma 3.1 contradiction
+and full Theorem 1.8. All four quantified upper/lower halves of
 Proposition 2.1 are now proved and audited. The critical-prime-band
 instantiation and finite exponent-grid argument also prove all of Lemma
 1.6(i): `#(B¹∩[1,x]) = x/z^(2+o(1))` in the exact `QuotientPowerScale`
 contract.
 Bertrand's clause (i), the exact Guth--Maynard application in clause (iii),
-and the polynomial-coefficient powerful relation are proved and audited; none of the four main
-Theorems 1.7--1.10 is proved or claimed. The isolated `Extension/` package
+and the polynomial-coefficient powerful relation are proved and audited.
+Theorem 1.8 is proved; Theorems 1.7, 1.9, and 1.10 remain conditional. The isolated `Extension/` package
 contains the compiled arithmetic-anatomy, interval, counting, and
 asymptotic-language definitions required to state the source results, plus a
 kernel-checked proof of Tao's global constant-length prime-free endpoint
@@ -220,7 +220,7 @@ and a single audited lower/upper logarithmic sandwich. The normalized family
 has a uniform `O(log^12 N)` `C³` bound, and the final logarithmic contradiction
 is complete. The proposition-valued Baker--Harman--Pintz interface implies
 `4P≤N` eventually and closes the entire high-`P` branch conditional on that
-interface and Theorem 2.5; the analytic proof of Proposition 2.3(ii) itself
+interface; Theorem 2.5 is now internal, while the analytic proof of Proposition 2.3(ii) itself
 remains open.
 For the low-`P` branch, the explicit two-coordinate product cutoff is smooth,
 periodic, nonnegative, and supported where an interval divisor is not
@@ -231,7 +231,7 @@ of variables, endpoint trimming, and occupied-unit-cell insertion give
 prime-set measure at least `H/1920`; the fixed quadratic bump then supplies
 the integral lower bound. The resulting logarithmic contradiction closes the
 low-`P` branch and combines with the high-`P` branch into Lemma 4.2 conditional
-on Theorem 2.5 and Proposition 2.3(ii). The source-shaped backward BHP theorem
+only on Proposition 2.3(ii). The source-shaped backward BHP theorem
 is now proved to imply Tao's exact natural-endpoint proposition: sampling at
 `N+2N^0.525` handles the orientation and Bertrand absorbs the finite range.
 Only the pinned paper's analytic backward-interval theorem remains open here.
@@ -240,8 +240,8 @@ Lemma 4.2 also supplies the formerly abstract Theorem 1.10 gap input:
 to be `x^o(1)`. Theorem 1.9 is now derived internally from that same Lemma
 4.2. Unrestricted Sylvester--Schur and Hanson's all-length primorial bound now
 prove the required Erdős--Selfridge square theorem internally. Thus the direct
-Theorem 1.10 bridge has exactly two remaining analytic inputs: Theorem 2.5 and
-the Baker--Harman--Pintz theorem.
+Theorem 1.10 bridge has exactly one remaining analytic input: Proposition
+2.3(ii), supplied in the source-facing route by Baker--Harman--Pintz.
 The finite counts for `B`, `VB`, and `F₃` also have audited exact
 `nontrivial + one-term = total` decomposition identities.
 For `VB¹`, the full source constant asymptotic
@@ -2653,3 +2653,216 @@ existing `2*P/(L*log P)` pure-linear integral estimate, giving the literal
 prime-minus-integral discrepancy. Both coordinate axes are now complete. Low
 frequencies and final Fourier assembly remain open; Theorem 2.5 is not
 claimed.
+
+## Prime-equidistribution release 3.57
+
+`LowFrequencyIntegral.lean` closes the unconditional
+discrete-to-continuous part of the low-frequency branch. It proves a uniform
+dyadic Lipschitz bound for `e(N/t+M/t^j)/log t`, integrates it on every unit
+cell, and telescopes the cells to compare the complete integer sum with the
+matching logarithmic integral. The resulting explicit error is
+`2*pi*(j+1)*F/log(P) + 1/log(P)^2`.
+
+The remaining low-frequency obstruction is now precise: a quantitative
+classical PNT estimate with arbitrary logarithmic saving for the Mangoldt
+discrepancy. The frozen dependency supplies only a qualitative PNT. The zero
+mode and final finite Fourier assembly also remain; Theorem 2.5 is not
+claimed.
+
+## Prime-equidistribution release 3.58
+
+The weighted low-frequency Abel step is now exact. The Mangoldt/log sum is
+compared with the integer/log sum using the endpoint inverse logarithm and
+the full dyadic variation from release 3.57, then compared directly with the
+matching interval integral.
+
+`LowFrequencyPNT.lean` isolates the missing classical theorem as a global
+prefix-discrepancy proposition with every fixed logarithmic saving and proves
+its uniform dyadic consumer. This is conditional plumbing, not a new axiom or
+a proof of quantitative PNT. Prime-power removal, the zero mode, and final
+Fourier assembly remain; Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.59
+
+Higher prime powers are now removed in the low-frequency normalization.
+`LowFrequencyPrime.lean` identifies `Lambda(n)/log(n)` with weight one on
+primes, isolates the non-prime tail exactly, and proves that tail has arbitrary
+logarithmic saving from the frozen local estimate.
+
+`LowFrequencyFourier.lean` then gives the literal conditional
+prime-Fourier-mode-minus-integral theorem, including the zero mode. The
+remaining work is logarithmic absorption into the final source bound and the
+finite high/low mode partition. Quantitative PNT remains an explicit
+hypothesis; Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.60
+
+`LowFrequencyAbsorption.lean` closes the logarithmic bookkeeping in the
+conditional low-frequency branch. It proves that every fixed multiple of a
+fixed power of `log P` is eventually dominated by `P`, verifies the complete
+explicit majorant, and obtains an arbitrary target logarithmic saving whenever
+the reciprocal-phase scale is bounded by a fixed polylogarithm.
+
+The quantitative-PNT proposition remains an explicit hypothesis. The next
+task is the finite high/low mode partition, including the audit of
+opposite-sign modes whose stationary point lies outside the interval;
+Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.61
+
+The high-frequency integral partition is now substantially wider. A
+stationary point anywhere in the ambient dyadic block is handled on every
+subinterval by subtracting two endpoint-stationary integrals. A stationary
+point at most `P/2` is handled by a direct first-derivative estimate, which is
+the eventual exterior geometry for each fixed Fourier mode when `M=N`.
+
+The same-sign estimate now uses the complete reciprocal phase scale, so it
+also covers modes whose quadratic coefficient carries the high frequency.
+The exact comparison `F(P) <= 16 F(4P)` supplies the deterministic high/low
+dichotomy used by the forthcoming finite partition.
+The full finite high/low mode partition remains; Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.62
+
+`SpecializedFourierPartition.lean` now performs the complete per-mode
+high/low partition for the specialization `M=N`, `j=2` on every natural
+half-open dyadic subinterval. The high branch covers both coordinate axes,
+both same-sign chambers, and both opposite-sign chambers; the fixed Fourier
+box forces the latter into the exterior-left stationary estimate eventually.
+
+An exact scalar ledger absorbs the low term, the Vaughan prime term, and the
+source integral term into `P/(log P)^S` for arbitrary `S`. The result remains
+conditional on the explicitly named quantitative-PNT and Vinogradov
+propositions. Finite Fourier summation and arbitrary-interval reduction still
+remain, so Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.63
+
+The specialized arbitrary-log-saving estimate is now summed over the entire
+retained Fourier box. The exact coefficient `ℓ¹` norm is fixed once the
+polynomial is fixed and is absorbed by two spare logarithmic powers. Thus
+every finite Fourier polynomial has the desired discrepancy bound on natural
+half-open dyadic subintervals. Arbitrary-real-interval endpoint reduction
+remains, so Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.64
+
+The arbitrary-interval endpoint reduction now has its exact discrete and
+geometric core. Natural points of any order-convex `I ⊆ [P,2P]` form one
+half-open natural interval; replacing `I` by that core preserves the sampled
+prime set and prime sum exactly. When the core is nonempty, the symmetric
+difference has Lebesgue measure at most two. The remaining step is to turn
+this measure bound, including the empty-core case, into the integral error
+used by the specialized theorem.
+
+## Prime-equidistribution release 3.65
+
+The specialized finite-polynomial theorem now holds on arbitrary measurable
+order-convex real intervals in `[P,2P]`. The capped analytic core stays inside
+the dyadic block, preserves the prime sum exactly (the only discarded
+possible endpoint is composite `2P`), and differs from the original interval
+by at most two units of measure. Empty natural cores lie in one open unit
+cell and are treated separately. All endpoint losses are absorbed into any
+requested logarithmic saving.
+
+The quantitative-PNT and Vinogradov propositions remain explicit hypotheses.
+Uniform quantitative passage from finite Fourier polynomials to an arbitrary
+smooth periodic weight remains, so Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.66
+
+The smooth-weight reconstruction error is now explicit. The pointwise error
+of a square Fourier truncation is bounded by its exact outer coefficient
+`l1` tail, and smooth periodic weights inherit the bound
+`27 * taoC3Norm W` times the universal radial cubic tail. Combining this with
+release 3.65 gives a complete arbitrary-interval discrepancy bound whose
+only reconstruction remainder is that displayed universal tail.
+
+The remaining step is quantitative: prove an explicit tail rate and extend
+the mode estimate uniformly to a polylogarithmically growing box. The two
+analytic propositions remain explicit hypotheses; Theorem 2.5 is not claimed.
+
+## Prime-equidistribution release 3.67
+
+`FourierDecayRate.lean` proves the explicit universal bound
+`tail(R) <= (R+1)^(-1/2) * sum_q (1+|q.1|+|q.2|)^(-5/2)` and proves the new
+majorant summable. `SpecializedGrowingFourier.lean` chooses the radius
+`ceil((log P)^B)`, spends half of the positive stretched-log epsilon margin,
+and obtains arbitrary logarithmic saving uniformly over every retained mode.
+
+The growing-box polynomial assembly keeps its coefficient `l1` mass explicit
+and is uniform on arbitrary measurable order-convex real intervals. Combining
+it with radial `C3` decay gives one universal, `C3`-normalized eventual smooth
+estimate on natural scales, uniform in the weight, interval, and parameter.
+The result remains conditional on `ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`; the real-scale/small-scale wrapper and the
+analytic proof of those inputs remain before the literal Theorem 2.5 contract.
+
+## Prime-equidistribution release 3.68
+
+`SpecializedRealScale.lean` closes the scale mismatch in the specialized
+contract. For a real scale `P`, it passes to `Q=ceil(P)` and the core
+`I ∩ [Q,∞)`. The sampled prime set is preserved exactly, while the discarded
+integral strip has measure at most one and costs at most
+`taoC3Norm W / log P`. The Vinogradov parameter bound transfers from `P` to
+`Q` after the existing epsilon reduction.
+
+The eventual natural-scale estimate is thereby upgraded to arbitrary real
+`P` and arbitrary positive real logarithmic exponent. An elementary uniform
+discrepancy bound absorbs every bounded initial scale. Consequently
+`taoTheorem25Specialized_of_analyticInputs` has the literal type
+`TaoTheorem25SpecializedConclusion`. The specialized contract is now complete
+conditional only on `ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`; proving those two propositions remains the
+analytic frontier.
+
+## Prime-equidistribution release 3.69
+
+`QuantitativePNTBridge.lean` identifies the conventional analytic statement
+behind the low-frequency hypothesis. A de la Vallée Poussin bound
+`|ψ(x)-x| <= C x exp(-c sqrt(log x))` is transported to the half-open prefix
+sum used by the formal Abel argument, including the exact `Λ(k)` endpoint and
+its absorption into arbitrary logarithmic savings.
+
+Thus `taoTheorem25Specialized_of_chebyshevPsiDeLaValleePoussin` has the literal
+`TaoTheorem25SpecializedConclusion` type under the classical quantitative
+`ψ` proposition and `VinogradovExponentialSumEstimate`. Neither analytic
+proposition is asserted as an axiom or claimed proved.
+
+## Prime-equidistribution release 3.70
+
+`ClassicalQuantitativePNT.lean` proves the previously explicit quantitative
+PNT proposition. It combines the frozen unconditional Ford
+Vinogradov--Korobov zero-free region, the frozen sharp Perron formula, and a
+proved quadratic Jensen zero count. Zeros below height one are isolated in a
+finite reciprocal-weight constant; all remaining reciprocal weights are at
+most one. The height `exp(a*sqrt(log x))`, with `a=min(1,c/8)`, absorbs both
+the quadratic count and the Perron logarithms.
+
+Thus `classicalChebyshevPsiDeLaValleePoussin_native` and
+`classicalMangoldtDiscrepancyLogSaving_native` are unconditional kernel-
+checked theorems. The declaration
+`taoTheorem25Specialized_of_vinogradov` reaches the literal specialized
+Theorem 2.5 conclusion from `VinogradovExponentialSumEstimate` alone. The
+residual Vinogradov critical-mean-value coefficient bound is now the only
+analytic obligation for this specialization.
+
+## Prime-equidistribution release 3.71
+
+The source-faithful Vinogradov proof is complete. The Taylor remainder retains
+the large cutoff `10 ceil(log F/log X)`, while the polynomial entering the
+mean-value argument has degree `floor(4 log F/log X)`. Quarter-block critical
+moments give the coordinate saving; an explicit Ford moment covers degrees at
+least 10000, and a finite maximum of native critical coefficients covers the
+remaining degrees. The complementary parameter branch is trivial.
+
+Consequently `vinogradovExponentialSumEstimate_unconditional` and
+`taoTheorem25Specialized_unconditional` are proved without hypotheses. The
+existing Lemma 3.1 and counting assembly then yield
+`taoTheorem18_unconditional : TaoTheorem18Conclusion`.
+
+The same endpoint is inserted into the established Section 4 consumers.
+`taoTheorem19_of_proposition23ii` and
+`taoTheorem110_of_proposition23ii` show that Proposition 2.3(ii) alone now
+implies the two remaining factorial conclusions; source-facing variants need
+only the pinned Baker--Harman--Pintz proposition.

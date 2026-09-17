@@ -413,6 +413,41 @@ theorem norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth
   · intro x
     rfl
 
+/-- The exact coefficient mass outside a square Fourier box inherits the
+smooth weight's radial cubic `C³` envelope. -/
+theorem taoFourierCoefficientTail_le_taoC3Norm_mul_decayTail
+    (W : ℝ × ℝ → ℂ) (hW : ContDiff ℝ ∞ W)
+    (hper : IsZ2Periodic W) (R : ℕ) :
+    (∑' q : {q // q ∉ fourierFrequencyBox R},
+        ‖taoFourierCoeff W hper hW.continuous q‖) ≤
+      27 * taoC3Norm W *
+        (∑' q : {q // q ∉ fourierFrequencyBox R}, fourierDecayWeight q) := by
+  let c := taoFourierCoeff W hper hW.continuous
+  have hc : Summable (fun q => ‖c q‖) :=
+    summable_norm_of_fourierDecay c
+      (norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth
+        W hW hper)
+  have hdecay : Summable
+      (fun q : {q // q ∉ fourierFrequencyBox R} => fourierDecayWeight q) :=
+    summable_fourierDecayWeight.subtype _
+  have hmajor : Summable
+      (fun q : {q // q ∉ fourierFrequencyBox R} =>
+        27 * taoC3Norm W * fourierDecayWeight q) :=
+    hdecay.mul_left _
+  calc
+    (∑' q : {q // q ∉ fourierFrequencyBox R}, ‖c q‖) ≤
+        ∑' q : {q // q ∉ fourierFrequencyBox R},
+          27 * taoC3Norm W * fourierDecayWeight q := by
+      exact (hc.subtype _).tsum_le_tsum
+        (fun q =>
+          norm_taoFourierCoeff_le_taoC3Norm_mul_fourierDecayWeight_of_smooth
+            W hW hper q)
+        hmajor
+    _ = 27 * taoC3Norm W *
+        (∑' q : {q // q ∉ fourierFrequencyBox R}, fourierDecayWeight q) := by
+      simpa only [mul_assoc] using
+        hdecay.tsum_mul_left (27 * taoC3Norm W)
+
 end
 
 end Tao2026

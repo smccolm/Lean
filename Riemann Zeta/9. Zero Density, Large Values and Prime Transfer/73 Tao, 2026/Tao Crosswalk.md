@@ -10,8 +10,11 @@ kernel-checked source objects, not proofs of any paper theorem. The immutable
 1,226-module `GafniTao.Theorem11` closure, its Tao-facing dyadic prime-free
 measure bridge, exact Proposition 2.3(iii), and the exact finite `B¹` smooth-
 number sum, exact `VB¹` zeta-ratio asymptotic, corrected Lemma 3.1 contract,
-complete Lemma 3.2 polynomial-coefficient relation, and the full Theorem 1.8
-assembly conditional on Theorem 2.5 are complete; the exact smooth-number Euler product, Rankin bound, Abel--Chebyshev weighted-prime reduction, finite saddle parameter, and its critical-regime limit to `1` are proved, while the uniform saddle-point asymptotic and the full
+complete Lemma 3.2 polynomial-coefficient relation, the source-faithful
+specialized Theorem 2.5, and the full unconditional Theorem 1.8 are complete;
+the exact smooth-number Euler product, Rankin bound, Abel--Chebyshev
+weighted-prime reduction, finite saddle parameter, and its critical-regime
+limit to `1` are proved, while the uniform saddle-point asymptotic and the full
 Section 2--6 lemma ledger remain open.
 
 Vinogradov quantitative benchmark update: for `R≥10000`, Ford's full explicit
@@ -21,8 +24,8 @@ the ensuing root extraction are formalized; the `32R⁴` root absorbs the full
 coefficient into an absolute constant and leaves a genuine positive scale
 saving. The theorem `vinogradovFordFull_root_saving_lt_sourceTarget` formally
 proves that this saving is weaker than Tao's fixed `2^-18` target, so the
-benchmark confirms rather than bypasses the open uniform critical-moment
-coefficient bound.
+benchmark is superseded for the source application by release 3.71's
+effective-degree split; no uniform all-degree coefficient theorem is needed.
 
 Lemma 3.1 geometric update: `volume_veryBadInnerPrimeScaleSet_eq_integral_reciprocal`
 and `volume_veryBadQuadraticSliceSet_eq_integral_squareJacobian` formalize the
@@ -739,3 +742,134 @@ removes prime powers and performs reverse Abel summation. Finally,
 existing `2P/(L log P)` integral bound to obtain the literal coordinate-axis
 mode discrepancy. Both coordinate axes are now closed. Low modes and final
 Fourier summation remain open; Theorem 2.5 is not claimed.
+
+Release 3.57 adds the exact low-frequency discrete-to-continuous row.
+`LowFrequencyIntegral.lean` bounds inverse-log and reciprocal-character
+variation on `[P,2P]`, controls each integer sample against its unit-cell
+integral, and telescopes to the complete interval with error
+`2*pi*(j+1)*F/log(P) + 1/log(P)^2`. The remaining prime-side row is the
+quantitative logarithmic-error PNT input; the zero mode and final Fourier
+summation are also still open, so Theorem 2.5 is not claimed.
+
+Release 3.58 completes the conditional weighted Abel row. The exact
+Mangoldt/log sum differs from the integer/log sum by an Abel transform of the
+ordinary Mangoldt discrepancy, and release 3.57 supplies its total variation.
+`LowFrequencyPNT.lean` expresses the remaining analytic input globally and
+derives the uniform dyadic theorem consumed by this comparison. The contract
+is not proved here. Prime-power removal, the zero mode, and final Fourier
+summation remain, so Theorem 2.5 is not claimed.
+
+Release 3.59 closes the conditional low-frequency prime-transfer row.
+`LowFrequencyPrime.lean` proves the exact `Lambda/log` prime-power split and
+absorbs the higher-power tail by the frozen local estimate.
+`LowFrequencyFourier.lean` identifies the resulting reciprocal-phase theorem
+with the literal Fourier-mode discrepancy, including `(0,0)`. Quantitative
+PNT remains the sole hypothesis in this row; final logarithmic absorption and
+the high/low finite Fourier partition remain, so Theorem 2.5 is not claimed.
+
+Release 3.60 closes the logarithmic-absorption row.
+`LowFrequencyAbsorption.lean` proves the eventual dominance estimates and an
+explicit three-term scalar ledger, yielding `P/(log P)^S` uniformly whenever
+the reciprocal-phase scale is at most `(log P)^D`. This remains conditional
+only on `ClassicalMangoldtDiscrepancyLogSaving`. The finite high/low Fourier
+partition remains, so Theorem 2.5 is not claimed.
+
+Release 3.61 extends the high-frequency Fourier rows. The stationary estimate
+now applies to an arbitrary subinterval whenever the critical point belongs
+to `[P,2P]`, and a direct monotone-amplitude argument covers nonnegative
+critical points at most `P/2`. In the specialized `M=N` geometry, every fixed
+non-axis Fourier mode has critical point `-2q₂/q₁`, bounded by `2R` in the
+retained box. The same-sign row now absorbs either coefficient through the
+total phase scale. Final mode partition remains, so Theorem 2.5 is not claimed.
+
+Release 3.62 completes the specialized modewise partition.
+`eventually_specializedFourierMode_Ico_le_highLowMajorant` combines the
+low-frequency PNT theorem with every high-frequency axis and sign chamber for
+`M=N`, `j=2`, uniformly over a fixed Fourier box. The scalar theorem
+`specializedFourierHighLowMajorant_le_logSaving` and its eventual wrapper
+`eventually_specializedFourierMode_Ico_le_logSaving` absorb the resulting
+three terms into `P/(log P)^S`. Finite Fourier summation and conversion from
+arbitrary real intervals to natural half-open intervals remain, so Theorem
+2.5 is not claimed.
+
+Release 3.63 closes finite Fourier summation for the specialized natural
+interval theorem. `eventually_specializedFiniteFourierPolynomial_Ico_le_logSaving`
+uses the exact coefficient `ℓ¹` norm from `FourierAssembly.lean` and absorbs
+it with two spare logarithmic powers. The remaining local bridge is the
+endpoint comparison for arbitrary real order-convex intervals.
+
+Release 3.64 proves the discrete endpoint comparison.
+`naturalPointsInDyadicInterval_eq_Ico` identifies the natural core,
+`primeEquidistributionSum_eq_natural_core` preserves the discrete term
+exactly, and `volumeReal_symmDiff_natural_core_le_two` bounds the remaining
+integral support by two units. The integral norm estimate and empty-core
+branch remain before the specialized Theorem 2.5 contract can be claimed.
+
+Release 3.65 closes the arbitrary-real-interval row for fixed finite Fourier
+polynomials. `norm_setIntegral_sub_setIntegral_le_symmDiff` supplies the
+generic endpoint estimate; the capped analytic core remains inside `[P,2P]`
+and preserves all primes; and the empty-core branch is confined to one unit
+cell. `eventually_specializedFiniteFourierPolynomial_interval_le_logSaving`
+then absorbs the core and endpoint errors into `P/(log P)^S`. The remaining
+Theorem 2.5 step is a quantitative, uniform reconstruction of general smooth
+periodic weights, and both analytic inputs remain explicit hypotheses.
+
+Release 3.66 makes the smooth reconstruction row quantitative up to one
+universal scalar tail. `norm_taoFourierPolynomial_sub_le_coefficientTail`
+bounds the truncation error by the exact discarded coefficient mass, while
+`taoFourierCoefficientTail_le_taoC3Norm_mul_decayTail` inserts the proved
+radial `C3` envelope. `eventually_specializedSmoothDiscrepancy_le_decayTail_add_logSaving`
+then carries this through the arbitrary-interval discrepancy. What remains
+is an explicit decay rate for the radial tail and modewise uniformity for the
+resulting growing box; Theorem 2.5 is not yet claimed.
+
+Release 3.67 closes both of those reconstruction gaps.
+`fourierDecayTail_le_invSqrt` gives the universal inverse-square-root tail,
+and `eventually_specializedFourierMode_Ico_le_logSaving_growing` is uniform
+on `ceil((log P)^B)` boxes by spending half of epsilon. The coefficient-mass
+and arbitrary-interval assembly remain uniform in the weight, culminating in
+`eventually_specializedSmoothDiscrepancy_le_logSaving_of_analyticInputs'` with
+one universal `C3`-normalized constant on eventual natural scales. The exact
+real-scale/small-scale contract wrapper and the analytic proofs of the named
+PNT and Vinogradov propositions remain; Theorem 2.5 is not yet claimed.
+
+Release 3.68 closes the remaining specialized-contract wrapper.
+`primesInScaleSet_eq_realScaleCore` preserves the finite prime set after
+passing from real `P` to `ceil(P)`, while
+`norm_primeEquidistributionIntegral_sub_realScaleCore_le` bounds the discarded
+unit strip. `naturalCeil_logSaving_le_real_logSaving` handles arbitrary real
+logarithmic exponents and `boundedScaleCrude_le_real_logSaving` absorbs the
+initial compact range. Thus `taoTheorem25Specialized_of_analyticInputs` proves
+the exact `TaoTheorem25SpecializedConclusion` from
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`. The specialized contract has no remaining
+geometric, scale, or Fourier-assembly gap; those two analytic propositions
+remain open.
+
+Release 3.69 normalizes the quantitative-PNT boundary to its classical source
+form. `cumsum_vonMangoldt_eq_psi_sub_endpoint` proves the exact half-open
+endpoint conversion, and
+`classicalMangoldtDiscrepancyLogSaving_of_chebyshevPsiDeLaValleePoussin`
+derives the existing low-frequency contract from the de la Vallée Poussin
+error for `Chebyshev.psi`. Consequently
+`taoTheorem25Specialized_of_chebyshevPsiDeLaValleePoussin` reaches the literal
+specialized conclusion from that standard PNT proposition and the unchanged
+Vinogradov proposition. These two analytic statements remain open.
+
+Release 3.70 closes the quantitative-PNT row. The frozen Ford theorem is
+converted to a rectangle-uniform logarithmic strip; the global Jensen estimate
+is instantiated with epsilon one to give a quadratic zero count; and the
+frozen sharp Perron formula is optimized at square-root-logarithmic height.
+The resulting declarations are
+`classicalChebyshevPsiDeLaValleePoussin_native` and
+`classicalMangoldtDiscrepancyLogSaving_native`. Therefore
+`taoTheorem25Specialized_of_vinogradov` reaches the literal specialized
+conclusion with only `VinogradovExponentialSumEstimate` remaining. No PNT
+assumption remains on this path.
+
+Release 3.71 closes that remaining path. `VinogradovIKDegree`,
+`VinogradovIKMeanValue`, `VinogradovIKFord`, `VinogradovIKFinite`, and
+`VinogradovIKComplete` implement the effective-degree proof cited by the
+Singmaster source. The resulting unconditional Vinogradov proposition feeds
+the existing Fourier reconstruction, so the exact specialized Theorem 2.5,
+Lemma 3.1, and the public `TaoTheorem18Conclusion` are all proved.

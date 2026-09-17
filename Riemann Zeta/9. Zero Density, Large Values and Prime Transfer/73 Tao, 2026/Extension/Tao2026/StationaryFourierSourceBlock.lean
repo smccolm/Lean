@@ -25,6 +25,37 @@ theorem quadraticReciprocalStationaryPoint_spec
   field_simp
   ring
 
+/-- With the two source parameters equal, a nonzero Fourier mode's stationary
+point depends only on the integer frequency ratio. -/
+theorem quadraticReciprocalStationaryPoint_same_parameter
+    (q : ℤ × ℤ) {N : ℝ} (hq₁ : q.1 ≠ 0) (hN : N ≠ 0) :
+    quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * N) =
+      -2 * (q.2 : ℝ) / (q.1 : ℝ) := by
+  unfold quadraticReciprocalStationaryPoint
+  have hq₁' : (q.1 : ℝ) ≠ 0 := by exact_mod_cast hq₁
+  field_simp [hq₁', hN]
+
+/-- A stationary point belonging to a frequency box of radius `R` is at most
+`2R` when the two source parameters agree. -/
+theorem quadraticReciprocalStationaryPoint_same_parameter_le_two_mul
+    {q : ℤ × ℤ} {N R : ℝ} (hq₁ : q.1 ≠ 0) (hN : N ≠ 0)
+    (hq₂ : |(q.2 : ℝ)| ≤ R) :
+    quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * N) ≤ 2 * R := by
+  rw [quadraticReciprocalStationaryPoint_same_parameter q hq₁ hN]
+  have hq₁abs : 1 ≤ |(q.1 : ℝ)| := by
+    exact_mod_cast Int.one_le_abs hq₁
+  calc
+    -2 * (q.2 : ℝ) / (q.1 : ℝ) ≤
+        |-2 * (q.2 : ℝ) / (q.1 : ℝ)| := le_abs_self _
+    _ = 2 * |(q.2 : ℝ)| / |(q.1 : ℝ)| := by
+      rw [abs_div, abs_mul]
+      norm_num
+    _ ≤ 2 * |(q.2 : ℝ)| := by
+      exact div_le_self (by positivity) hq₁abs
+    _ ≤ 2 * R := by gcongr
+
 theorem quadraticReciprocalLinearFactor_eq
     {A B : ℝ} (hA : A ≠ 0) (t : ℝ) :
     A * t + 2 * B =
@@ -1476,6 +1507,263 @@ theorem norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
     · exact hsLower
     · exact hsUpper
 
+/-- Optimized stationary cancellation on an arbitrary subinterval of the
+ambient dyadic block.  The stationary point need only lie in `[P,2P]`; when
+it lies outside `[a,b]`, subtract two intervals having the stationary point
+as a common endpoint. -/
+theorem norm_quadraticIntervalIntegral_le_stationary_optimized_dyadic
+    {A B P L a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P) (hL : 4 ≤ L)
+    (hAsource : (16 / 5 : ℝ) * P * L ≤ |A|)
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P)
+    (hsLower : P ≤ quadraticReciprocalStationaryPoint A B)
+    (hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      100 * P / (Real.sqrt L * Real.log P) := by
+  let s := quadraticReciprocalStationaryPoint A B
+  have ha1 : 1 < a := (show 1 < P by linarith).trans_le hPa
+  have hs1 : 1 < s := (show 1 < P by linarith).trans_le hsLower
+  have hlogP : 0 < Real.log P := Real.log_pos (by linarith)
+  have hsqrtL : 0 < Real.sqrt L := Real.sqrt_pos.2 (by linarith)
+  have hRnonneg :
+      0 ≤ 50 * P / (Real.sqrt L * Real.log P) := by positivity
+  by_cases hsa : a ≤ s
+  · by_cases hsb : s ≤ b
+    · have hmain :=
+        norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
+          hA hP hL hAsource hPa hab hbP hsa hsb hsLower hsUpper
+      calc
+        _ ≤ 50 * P / (Real.sqrt L * Real.log P) := hmain
+        _ ≤ 100 * P / (Real.sqrt L * Real.log P) := by
+          rw [show 100 * P / (Real.sqrt L * Real.log P) =
+            2 * (50 * P / (Real.sqrt L * Real.log P)) by ring]
+          linarith
+    · have hbs : b ≤ s := le_of_not_ge hsb
+      have hPb : P ≤ b := hPa.trans hab
+      have hb1 : 1 < b := ha1.trans_le hab
+      have hleft :=
+        norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
+          hA hP hL hAsource hPa hsa hsUpper hsa le_rfl hsLower hsUpper
+      have hright :=
+        norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
+          hA hP hL hAsource hPb hbs hsUpper hbs le_rfl hsLower hsUpper
+      have hintLeft := intervalIntegrable_quadraticLogIntegrand A B ha1 hab
+      have hintRight := intervalIntegrable_quadraticLogIntegrand A B hb1 hbs
+      have hadd :=
+        intervalIntegral.integral_add_adjacent_intervals hintLeft hintRight
+      calc
+        ‖∫ t in a..b,
+            standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+              Real.log t‖ =
+            ‖(∫ t in a..s,
+                standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                  Real.log t) -
+              ∫ t in b..s,
+                standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                  Real.log t‖ := by
+              rw [← hadd]
+              simp
+        _ ≤ ‖∫ t in a..s,
+                standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                  Real.log t‖ +
+              ‖∫ t in b..s,
+                standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                  Real.log t‖ := norm_sub_le _ _
+        _ ≤ 100 * P / (Real.sqrt L * Real.log P) := by
+          rw [show 100 * P / (Real.sqrt L * Real.log P) =
+            50 * P / (Real.sqrt L * Real.log P) +
+              50 * P / (Real.sqrt L * Real.log P) by ring]
+          exact add_le_add hleft hright
+  · have hsa' : s ≤ a := le_of_not_ge hsa
+    have hsb : s ≤ b := hsa'.trans hab
+    have hfirst :=
+      norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
+        hA hP hL hAsource hsLower hsb hbP le_rfl hsb hsLower hsUpper
+    have hsecond :=
+      norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
+        hA hP hL hAsource hsLower hsa' (hab.trans hbP) le_rfl hsa'
+          hsLower hsUpper
+    have hintSecond := intervalIntegrable_quadraticLogIntegrand A B hs1 hsa'
+    have hintMain := intervalIntegrable_quadraticLogIntegrand A B ha1 hab
+    have hadd :=
+      intervalIntegral.integral_add_adjacent_intervals hintSecond hintMain
+    calc
+      ‖∫ t in a..b,
+          standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+            Real.log t‖ =
+          ‖(∫ t in s..b,
+              standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                Real.log t) -
+            ∫ t in s..a,
+              standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                Real.log t‖ := by
+            rw [← hadd]
+            simp
+      _ ≤ ‖∫ t in s..b,
+              standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                Real.log t‖ +
+            ‖∫ t in s..a,
+              standardAdditiveCharacter (reciprocalPhase A B 2 t) /
+                Real.log t‖ := norm_sub_le _ _
+      _ ≤ 100 * P / (Real.sqrt L * Real.log P) := by
+        rw [show 100 * P / (Real.sqrt L * Real.log P) =
+          50 * P / (Real.sqrt L * Real.log P) +
+            50 * P / (Real.sqrt L * Real.log P) by ring]
+        exact add_le_add hfirst hsecond
+
+/-- Far to the right of a nonnegative stationary point, the integration-by-
+parts amplitude is increasing once the logarithm is at least two. -/
+theorem unequalQuadraticIntegralAmplitudeDeriv_nonneg_right_far
+    {A B t : ℝ} (hA : 0 < A)
+    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)
+    (hlog : 2 ≤ Real.log t)
+    (hsep : 2 * quadraticReciprocalStationaryPoint A B ≤ t) :
+    0 ≤ unequalQuadraticIntegralAmplitudeDeriv A B t := by
+  let s := quadraticReciprocalStationaryPoint A B
+  have hA0 : A ≠ 0 := hA.ne'
+  have ht : 0 ≤ t := by dsimp only [s] at hsep ⊢; linarith
+  have hcoef : 0 ≤ 2 * t - 3 * s := by
+    dsimp only [s] at hsNonneg hsep ⊢
+    linarith
+  have hmul : 2 * (2 * t - 3 * s) ≤
+      (2 * t - 3 * s) * Real.log t := by
+    simpa only [mul_comm] using mul_le_mul_of_nonneg_left hlog hcoef
+  have hcore : 0 ≤
+      (2 * t - 3 * s) * Real.log t - (t - s) := by
+    dsimp only [s] at hsNonneg hsep hmul ⊢
+    linarith
+  have hbracket : 0 ≤
+      (2 * A * t + 6 * B) * Real.log t - (A * t + 2 * B) := by
+    rw [quadraticReciprocalSecondLinearFactor_eq hA0,
+      quadraticReciprocalLinearFactor_eq hA0]
+    change 0 ≤ A * (2 * t - 3 * s) * Real.log t - A * (t - s)
+    rw [show A * (2 * t - 3 * s) * Real.log t - A * (t - s) =
+      A * ((2 * t - 3 * s) * Real.log t - (t - s)) by ring]
+    exact mul_nonneg hA.le hcore
+  unfold unequalQuadraticIntegralAmplitudeDeriv
+  exact div_nonneg (mul_nonneg (sq_nonneg t) hbracket) (sq_nonneg _)
+
+/-- First-derivative cancellation when a nonnegative stationary point lies at
+least a half-block to the left of the dyadic interval. -/
+theorem norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half
+    {A B P a b : ℝ} (hA : 0 < A) (hP : 2 ≤ P)
+    (hlogP : 2 ≤ Real.log P)
+    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)
+    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      64 * P ^ 2 / (A * Real.log P) := by
+  let s := quadraticReciprocalStationaryPoint A B
+  have hPpos : 0 < P := by linarith
+  have hlogPpos : 0 < Real.log P := by linarith
+  have hdelta : 0 < P / 2 := by positivity
+  have hlin : ∀ t ∈ Set.Icc a b, A * t + 2 * B ≠ 0 := by
+    intro t ht
+    rw [quadraticReciprocalLinearFactor_eq hA.ne']
+    apply mul_ne_zero hA.ne'
+    apply sub_ne_zero.mpr
+    dsimp only [s] at hsFar ⊢
+    nlinarith [hPa.trans ht.1]
+  have hderiv : ∀ t ∈ Set.Icc a b,
+      0 ≤ unequalQuadraticIntegralAmplitudeDeriv A B t := by
+    intro t ht
+    apply unequalQuadraticIntegralAmplitudeDeriv_nonneg_right_far hA hsNonneg
+    · exact hlogP.trans
+        (Real.log_le_log hPpos (hPa.trans ht.1))
+    · dsimp only [s] at hsFar ⊢
+      nlinarith [hPa.trans ht.1]
+  have hraw := norm_quadraticIntervalIntegral_le_of_amplitudeDeriv_nonneg
+    (A := A) (B := B) (a := a) (b := b) (hP.trans hPa) hab hlin hderiv
+  have hfarA : P / 2 ≤ |a - s| := by
+    rw [abs_of_nonneg]
+    · dsimp only [s] at hsFar ⊢
+      linarith
+    · dsimp only [s] at hsFar ⊢
+      nlinarith
+  have hfarB : P / 2 ≤ |b - s| := by
+    rw [abs_of_nonneg]
+    · dsimp only [s] at hsFar ⊢
+      linarith [hPa.trans hab]
+    · dsimp only [s] at hsFar ⊢
+      nlinarith [hPa.trans hab]
+  have hampA := abs_unequalQuadraticIntegralAmplitude_le_of_dyadic_far
+    hA hP hPa (hab.trans hbP) hdelta hfarA
+  have hampB := abs_unequalQuadraticIntegralAmplitude_le_of_dyadic_far
+    hA hP (hPa.trans hab) hbP hdelta hfarB
+  have hfactor : ‖unequalQuadraticIntegralFactor‖ ≤ 1 := by
+    rw [norm_unequalQuadraticIntegralFactor]
+    exact inv_le_one_of_one_le₀ (by nlinarith [Real.pi_gt_three])
+  calc
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+        2 * ‖unequalQuadraticIntegralFactor‖ *
+          (|unequalQuadraticIntegralAmplitude A B a| +
+            |unequalQuadraticIntegralAmplitude A B b|) := hraw
+    _ ≤ 2 * 1 *
+          (8 * P ^ 3 / (A * (P / 2) * Real.log P) +
+            8 * P ^ 3 / (A * (P / 2) * Real.log P)) := by gcongr
+    _ = 64 * P ^ 2 / (A * Real.log P) := by
+      field_simp
+      ring
+
+theorem norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half_abs
+    {A B P a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P)
+    (hlogP : 2 ≤ Real.log P)
+    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)
+    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      64 * P ^ 2 / (|A| * Real.log P) := by
+  by_cases hApos : 0 < A
+  · simpa only [abs_of_pos hApos] using
+      norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half
+        hApos hP hlogP hsNonneg hsFar hPa hab hbP
+  · have hAneg : A < 0 := lt_of_le_of_ne (le_of_not_gt hApos) hA
+    rw [norm_intervalIntegral_quadratic_eq_neg_coefficients A B a b]
+    have hraw :=
+      norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half
+        (A := -A) (B := -B) (by linarith) hP hlogP
+        (by simpa only [quadraticReciprocalStationaryPoint_neg_coefficients]
+          using hsNonneg)
+        (by simpa only [quadraticReciprocalStationaryPoint_neg_coefficients]
+          using hsFar)
+        hPa hab hbP
+    simpa only [abs_of_neg hAneg, neg_neg] using hraw
+
+/-- Source-scale version of the exterior-left first-derivative bound. -/
+theorem norm_quadraticIntervalIntegral_le_sourceScale_of_stationaryPoint_le_half
+    {A B P L a b : ℝ} (hA : A ≠ 0) (hP : 2 ≤ P)
+    (hlogP : 2 ≤ Real.log P) (hL : 0 < L)
+    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint A B)
+    (hsFar : quadraticReciprocalStationaryPoint A B ≤ P / 2)
+    (hscale : L ≤ reciprocalPhaseScale A B 2 (4 * P))
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      20 * P / (L * Real.log P) := by
+  have hPpos : 0 < P := by linarith
+  have hlogPpos : 0 < Real.log P := by linarith
+  have hsUpper : quadraticReciprocalStationaryPoint A B ≤ 2 * P := by
+    linarith
+  have hAsource := abs_linear_lower_of_phaseScale_lower_of_stationaryPoint
+    hA hPpos hsNonneg hsUpper hscale
+  have hraw :=
+    norm_quadraticIntervalIntegral_le_of_stationaryPoint_le_half_abs
+      hA hP hlogP hsNonneg hsFar hPa hab hbP
+  calc
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+        64 * P ^ 2 / (|A| * Real.log P) := hraw
+    _ ≤ 64 * P ^ 2 /
+        (((16 / 5 : ℝ) * P * L) * Real.log P) := by
+      apply div_le_div_of_nonneg_left (by positivity) (by positivity)
+      exact mul_le_mul_of_nonneg_right hAsource hlogPpos.le
+    _ = 20 * P / (L * Real.log P) := by
+      field_simp
+      ring
+
 theorem norm_fourierModeIntegral_Ico_le_stationary_optimized_clipped
     {q : ℤ × ℤ} {N M P L a b : ℝ}
     (hlinear : (q.1 : ℝ) * N ≠ 0)
@@ -1500,6 +1788,56 @@ theorem norm_fourierModeIntegral_Ico_le_stationary_optimized_clipped
   have hraw := norm_quadraticIntervalIntegral_le_stationary_optimized_clipped_abs
     (A := A) (B := B) hlinear hP hL hAsource hPa hab hbP hsa hsb
       hsLower hsUpper
+  unfold fourierModeIntegral
+  rw [integral_Ico_eq_integral_Ioc, ← intervalIntegral.integral_of_le hab]
+  exact hraw
+
+/-- Fourier-mode form of the stationary estimate on any subinterval of the
+dyadic block containing the stationary point. -/
+theorem norm_fourierModeIntegral_Ico_le_stationary_optimized_dyadic
+    {q : ℤ × ℤ} {N M P L a b : ℝ}
+    (hlinear : (q.1 : ℝ) * N ≠ 0)
+    (hP : 2 ≤ P) (hL : 4 ≤ L) (hPa : P ≤ a) (hab : a ≤ b)
+    (hbP : b ≤ 2 * P)
+    (hsLower : P ≤ quadraticReciprocalStationaryPoint
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M))
+    (hsUpper : quadraticReciprocalStationaryPoint
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ 2 * P)
+    (hscale : L ≤ reciprocalPhaseScale
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P)) :
+    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤
+      100 * P / (Real.sqrt L * Real.log P) := by
+  let A := (q.1 : ℝ) * N
+  let B := (q.2 : ℝ) * M
+  have hAsource := abs_linear_lower_of_phaseScale_lower_of_stationaryPoint
+    (A := A) (B := B) hlinear (by linarith)
+      ((by linarith) : 0 ≤ quadraticReciprocalStationaryPoint A B)
+      hsUpper hscale
+  have hraw := norm_quadraticIntervalIntegral_le_stationary_optimized_dyadic
+    (A := A) (B := B) hlinear hP hL hAsource hPa hab hbP hsLower hsUpper
+  unfold fourierModeIntegral
+  rw [integral_Ico_eq_integral_Ioc, ← intervalIntegral.integral_of_le hab]
+  exact hraw
+
+/-- Fourier-mode exterior-left estimate: the nonnegative stationary point is
+at most `P/2`, hence the whole dyadic interval is nonstationary. -/
+theorem norm_fourierModeIntegral_Ico_le_sourceScale_of_stationaryPoint_le_half
+    {q : ℤ × ℤ} {N M P L a b : ℝ}
+    (hlinear : (q.1 : ℝ) * N ≠ 0)
+    (hP : 2 ≤ P) (hlogP : 2 ≤ Real.log P) (hL : 0 < L)
+    (hsNonneg : 0 ≤ quadraticReciprocalStationaryPoint
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M))
+    (hsFar : quadraticReciprocalStationaryPoint
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ P / 2)
+    (hscale : L ≤ reciprocalPhaseScale
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P))
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤
+      20 * P / (L * Real.log P) := by
+  have hraw :=
+    norm_quadraticIntervalIntegral_le_sourceScale_of_stationaryPoint_le_half
+      (A := (q.1 : ℝ) * N) (B := (q.2 : ℝ) * M)
+      hlinear hP hlogP hL hsNonneg hsFar hscale hPa hab hbP
   unfold fourierModeIntegral
   rw [integral_Ico_eq_integral_Ioc, ← intervalIntegral.integral_of_le hab]
   exact hraw
@@ -1547,6 +1885,101 @@ theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stat
       (by exact_mod_cast hP) hL (by exact_mod_cast hPa)
       (by exact_mod_cast hab.le) (by exact_mod_cast hbP)
       hsa hsb hlower
+  rw [hsum]
+  exact (norm_sub_le _ _).trans (add_le_add hprimeBound hintegralBound)
+
+/-- The stationary high-frequency Fourier estimate only requires the
+stationary point to lie in the ambient dyadic block, not in the particular
+subinterval being summed. -/
+theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_dyadic
+    (hVinogradov : VinogradovExponentialSumEstimate)
+    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)
+    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :
+    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),
+      P ≤ a → a < b → b ≤ 2 * P →
+      (q.1 : ℝ) * N ≠ 0 → (q.2 : ℝ) * M ≠ 0 → 4 ≤ L →
+      (P : ℝ) ≤ quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) →
+      quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ 2 * (P : ℝ) →
+      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →
+      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2
+        (4 * (P : ℝ)) →
+      |(q.1 : ℝ) * N| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      |(q.2 : ℝ) * M| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      ‖primeFourierModeSum (P : ℝ)
+          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -
+        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤
+        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *
+            (Real.log P) ^ (-S) +
+          100 * (P : ℝ) / (Real.sqrt L * Real.log P) := by
+  have hprime := eventually_norm_primeReciprocalPhaseSum_le_sourceRange_unequal
+    hVinogradov hA₀ hε haexp hS
+  filter_upwards [hprime, eventually_ge_atTop (2 : ℕ)] with P hprimeP hP
+  intro a b q N M L hPa hab hbP hlinear hquadratic hL hsLower hsUpper
+    hlogLower hlower hNupper hMupper
+  have hsum := primeFourierModeSum_Ico_eq_reciprocalPhaseSum
+    hP hPa hbP q N M
+  have hprimeBound := hprimeP a b ((q.1 : ℝ) * N) ((q.2 : ℝ) * M)
+    hPa hab hbP hquadratic (hlogLower.trans hlower) hNupper hMupper
+  have hintegralBound :=
+    norm_fourierModeIntegral_Ico_le_stationary_optimized_dyadic
+      (q := q) (N := N) (M := M) (P := (P : ℝ)) (L := L)
+      (a := (a : ℝ)) (b := (b : ℝ)) hlinear
+      (by exact_mod_cast hP) hL (by exact_mod_cast hPa)
+      (by exact_mod_cast hab.le) (by exact_mod_cast hbP)
+      hsLower hsUpper hlower
+  rw [hsum]
+  exact (norm_sub_le _ _).trans (add_le_add hprimeBound hintegralBound)
+
+/-- Prime-minus-integral estimate in the exterior-left opposite-sign chamber.
+The phase stationary point is nonnegative but lies at most at `P/2`. -/
+theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_stationary_left
+    (hVinogradov : VinogradovExponentialSumEstimate)
+    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)
+    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :
+    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),
+      P ≤ a → a < b → b ≤ 2 * P →
+      (q.1 : ℝ) * N ≠ 0 → (q.2 : ℝ) * M ≠ 0 → 4 ≤ L →
+      0 ≤ quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) →
+      quadraticReciprocalStationaryPoint
+        ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) ≤ (P : ℝ) / 2 →
+      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →
+      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2
+        (4 * (P : ℝ)) →
+      |(q.1 : ℝ) * N| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      |(q.2 : ℝ) * M| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      ‖primeFourierModeSum (P : ℝ)
+          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -
+        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤
+        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *
+            (Real.log P) ^ (-S) +
+          20 * (P : ℝ) / (L * Real.log P) := by
+  have hprime := eventually_norm_primeReciprocalPhaseSum_le_sourceRange_unequal
+    hVinogradov hA₀ hε haexp hS
+  have hlogLarge : ∀ᶠ P : ℕ in atTop, 2 ≤ Real.log P :=
+    (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually
+      (eventually_ge_atTop 2)
+  filter_upwards [hprime, hlogLarge, eventually_ge_atTop (2 : ℕ)] with
+      P hprimeP hlogP hP
+  intro a b q N M L hPa hab hbP hlinear hquadratic hL hsNonneg hsFar
+    hlogLower hlower hNupper hMupper
+  have hsum := primeFourierModeSum_Ico_eq_reciprocalPhaseSum
+    hP hPa hbP q N M
+  have hprimeBound := hprimeP a b ((q.1 : ℝ) * N) ((q.2 : ℝ) * M)
+    hPa hab hbP hquadratic (hlogLower.trans hlower) hNupper hMupper
+  have hintegralBound :=
+    norm_fourierModeIntegral_Ico_le_sourceScale_of_stationaryPoint_le_half
+      (q := q) (N := N) (M := M) (P := (P : ℝ)) (L := L)
+      (a := (a : ℝ)) (b := (b : ℝ)) hlinear
+      (by exact_mod_cast hP) hlogP (by linarith) hsNonneg hsFar hlower
+      (by exact_mod_cast hPa) (by exact_mod_cast hab.le)
+      (by exact_mod_cast hbP)
   rw [hsum]
   exact (norm_sub_le _ _).trans (add_le_add hprimeBound hintegralBound)
 

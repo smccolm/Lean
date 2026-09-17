@@ -4,8 +4,8 @@
 
 This agenda governs the active formalization of Terence Tao, *Products of
 consecutive integers with unusual anatomy*, arXiv `2603.27990v2`. The release
-scope is now fixed by `Tao Goal Prompt.md` at Theorems 1.7--1.10; none is yet
-claimed proved.
+scope is now fixed by `Tao Goal Prompt.md` at Theorems 1.7--1.10. Theorem 1.8
+is proved unconditionally; Theorems 1.7, 1.9, and 1.10 remain active.
 
 The paper studies bad and very bad intervals of consecutive integers, type
 `F_3` intervals, and consequences related to the factorial equation
@@ -2316,6 +2316,103 @@ coefficient is zero. Active first-term indices obey `mâ‰¤U`, and active
 second-term indices obey `mâ‰¤UV`, directly from the two Vaughan support
 theorems.
 
+## High-frequency exterior geometry (release 3.61)
+
+The stationary estimate now covers every subinterval when the stationary
+point lies in the ambient dyadic block, and the exterior-left range
+`0 <= s <= P/2` has a source-scale first-derivative bound. For `M=N`, the
+identity `s=-2q₂/q₁` makes this exterior-left condition eventual uniformly
+on each fixed Fourier box. Same-sign modes are now controlled by the total
+phase scale even when the quadratic coefficient dominates.
+
+The next bounded task is to encode the finite sign/axis/high/low partition and
+absorb its finitely many modewise constants into the target logarithmic
+saving.
+
+## Specialized all-mode partition (release 3.62)
+
+The finite sign/axis/high/low case split is now encoded modewise for `M=N`,
+`j=2`. It yields arbitrary logarithmic saving uniformly for every retained
+mode on a natural half-open dyadic subinterval. The fixed Fourier-box radius
+is absorbed into the eventual threshold, so the opposite-sign stationary
+point always lies in the exterior-left chamber.
+
+The next bounded task is finite Fourier-box summation, followed by the exact
+endpoint comparison between an arbitrary real order-convex interval and its
+natural `Ico` core. The quantitative PNT and Vinogradov propositions remain
+explicit analytic inputs.
+
+## Specialized finite Fourier assembly (release 3.63)
+
+The retained Fourier box is now summed exactly, with its fixed coefficient
+`ℓ¹` norm absorbed into the target logarithmic saving. The next bounded task
+is the arbitrary-real-interval bridge: identify the natural `Ico` core of an
+order-convex subset of `[P,2P]`, compare prime sums exactly, and bound the two
+short integral endpoint pieces.
+
+## Arbitrary-interval natural core (release 3.64)
+
+The natural core and exact prime-sum identity are now formalized, together
+with the sharp two-unit symmetric-difference volume bound for a nonempty
+core. Next: prove the generic set-integral difference estimate, discharge the
+empty-core geometry, and absorb both endpoint errors into the arbitrary
+logarithmic saving.
+
+## Arbitrary-interval finite Fourier closure (release 3.65)
+
+The generic set-integral comparison, capped core, composite top-endpoint
+case, and empty-core unit-cell geometry are complete. The resulting theorem
+gives every fixed finite Fourier polynomial an arbitrary logarithmic saving
+uniformly over measurable order-convex real dyadic intervals.
+
+The next bounded task is the quantitative reconstruction step for a general
+smooth periodic weight. The existing coefficient decay and uniform Fourier
+convergence are qualitative; the proof must retain a `P/(log P)^A` rate while
+the truncation radius varies, or instead sum a frequency-dependent mode
+majorant directly. The two analytic propositions remain explicit inputs.
+
+## Exact smooth Fourier-tail reconstruction (release 3.66)
+
+The reconstruction remainder is now isolated exactly. A smooth periodic
+weight differs from its retained Fourier box by no more than the discarded
+coefficient `l1` mass, which is bounded by `27 * taoC3Norm W` times the
+universal radial cubic-envelope tail. This bound has been carried through the
+full arbitrary-real-interval discrepancy.
+
+Next: prove a concrete inverse-power bound for the radial tail, choose a
+polylogarithmic radius that absorbs it into `P/(log P)^A`, and generalize the
+mode partition from a fixed box to that growing box by spending frequency
+growth inside the available stretched-log parameter margin.
+
+## Quantitative growing-box reconstruction (release 3.67)
+
+That task is complete. The cubic radial tail is bounded by a universal
+summable `5/2` mass times `(R+1)^(-1/2)`. At
+`R(P)=ceil((log P)^B)`, every retained frequency fits a fixed Vinogradov
+constant at epsilon/2. The resulting mode theorem, coefficient-normalized
+finite assembly, arbitrary-interval reduction, and smooth reconstruction are
+uniform in all data quantified after the eventual natural-scale threshold.
+
+Next: pass this eventual natural-scale estimate to the literal all-real-scale
+specialized contract, including the bounded initial range. Independently, the
+named quantitative PNT and Vinogradov propositions remain the genuine
+analytic hypotheses to discharge.
+
+## Real-scale specialized contract closure (release 3.68)
+
+The real-scale and bounded-initial-range task is complete.
+`SpecializedRealScale.lean` proves exact prime-set preservation at
+`Q=ceil(P)`, a unit endpoint-strip integral error, monotone transfer of the
+Vinogradov range, real-exponent logarithmic normalization, and a compact-range
+crude estimate. These combine in
+`taoTheorem25Specialized_of_analyticInputs :
+ClassicalMangoldtDiscrepancyLogSaving → VinogradovExponentialSumEstimate →
+TaoTheorem25SpecializedConclusion`.
+
+Next: discharge the two named analytic propositions. The scale, interval,
+Fourier reconstruction, and bounded-range parts of the specialized Theorem
+2.5 contract are no longer open.
+
 Block cardinalities now compress every uniform callback `Q`. Summing the
 exact canonical family gives losses `(logâ‚‚ B+1)^102 U Q` and
 `(logâ‚‚ B+1)^102 log(2B) UV Q`. The next analytic package should instantiate
@@ -2664,3 +2761,100 @@ the unweighted prime estimate, and the existing pure-linear integral theorem
 then gives the literal prime-minus-integral Fourier discrepancy. The next
 bounded task is the low-frequency/zero-mode partition and final finite Fourier
 assembly.
+
+## Low-frequency discrete-to-continuous bridge (release 3.57)
+
+The elementary bridge is complete. The logarithmically weighted reciprocal
+character is uniformly Lipschitz on a positive dyadic interval, every sample
+is compared with its unit-cell integral, and exact telescoping gives the
+full-interval error `2*pi*(j+1)*F/log(P) + 1/log(P)^2`.
+
+The next bounded analytic task is to formalize a classical quantitative PNT
+input with arbitrary logarithmic saving for Mangoldt partial-sum discrepancy,
+then transfer it through Abel summation and prime-power removal to this
+integer/integral comparison. After that, the zero mode and the finite
+high/low Fourier partition can be assembled.
+
+## Quantitative-PNT consumer (release 3.58)
+
+The complete weighted Abel consumer is now formalized. A uniform bound `B`
+for ordinary Mangoldt discrepancy partial sums yields an explicit bound for
+the Mangoldt/log sum minus the logarithmic integral. The missing classical
+PNT is stated independently as a global prefix estimate with every integral
+logarithmic saving, and that proposition implies the required uniform dyadic
+bound.
+
+The next bounded task is higher-prime-power removal for the `Lambda/log`
+normalization, giving the literal unweighted prime sum. Then the zero mode and
+the finite high/low Fourier partition can be completed. The quantitative PNT
+contract itself remains an external analytic obligation.
+
+## Low-frequency prime endpoint (release 3.59)
+
+Higher-prime-power removal for `Lambda/log` is complete. The literal
+unweighted prime sum is now compared with the logarithmic integral under the
+single global quantitative-PNT contract, and the result has been transported
+to every integer Fourier mode. The zero mode is an explicit specialization.
+
+The next bounded task is to absorb the displayed polylogarithmic factors into
+an arbitrary target saving under the low-frequency phase-scale cutoff. That
+uniform statement can then be joined to the completed high-frequency chambers
+inside the finite Fourier box.
+
+## Low-frequency absorption complete (release 3.60)
+
+The displayed polylogarithmic factors are now absorbed rigorously. Under the
+global quantitative-PNT contract, every mode with phase scale at most
+`(log P)^D` satisfies any prescribed `P/(log P)^S` bound, uniformly on the
+dyadic interval.
+
+The next bounded task is the finite high/low partition. Before assembly, the
+opposite-sign, nonzero-coefficient chamber with stationary point outside the
+summation interval must be checked against the existing nonstationary source
+theorems.
+
+## Quantitative-PNT source bridge (release 3.69)
+
+The low-frequency hypothesis is now connected exactly to the conventional
+classical theorem statement. `QuantitativePNTBridge.lean` converts an eventual
+de la Vallée Poussin bound for `Chebyshev.psi` into the half-open complex
+Mangoldt discrepancy used throughout node 73. The conversion accounts for
+the endpoint `Λ(k)` and proves stretched-exponential-to-logarithmic absorption
+for every natural exponent.
+
+Next: prove `ClassicalChebyshevPsiDeLaValleePoussin` by completing a
+quantitative PNT contour/zero-free argument, and prove
+`VinogradovBilinearPolynomialNontrivialEstimate` (which already implies the
+named Vinogradov proposition with the compiled constant shifts). The frozen
+dependency supplies sharp Perron approximation and a qualitative PNT, but no
+terminal quantitative `ψ` estimate, so neither obligation is silently
+discharged by that dependency.
+
+## Unconditional quantitative PNT (release 3.70)
+
+The quantitative-PNT task above is now complete.
+`ClassicalQuantitativePNT.lean` uses the frozen sharp Perron theorem, Ford's
+proved asymptotic zero-free region after its finite-low-zero rectangle patch,
+and the frozen global Jensen count. The zero sum is controlled with a finite
+low-zero reciprocal constant and a coarse quadratic multiplicity count; the
+square-root-logarithmic Perron height supplies the classical stretched-
+exponential error.
+
+Next: close `VinogradovBilinearPolynomialNontrivialEstimate`. The remaining
+source-facing gap is the degree-uniform critical-VMVT coefficient-growth
+bound isolated in `VinogradovOptimalWooley.lean`; the explicit Ford moment
+route is formally known to be weaker than the fixed `2^-18` target.
+
+## Effective-degree Vinogradov completion (release 3.71)
+
+The preceding agenda item is closed after correcting its degree choice. The
+source applies Taylor with a large remainder cutoff but applies the
+mean-value theorem only to `k=floor(4 log F/log X)`. At this effective degree,
+the quarter-block saving dominates the fixed `2^-18` target. Ford handles the
+large-degree tail and a finite maximum handles all smaller critical degrees.
+
+The specialized Theorem 2.5 and Theorem 1.8 are now unconditional. The next
+public-endpoint analytic boundaries are independent: the sharp critical
+smooth-number dilation asymptotic and the prime finite-field Weil input for
+Theorem 1.7, and Proposition 2.3(ii)/Baker--Harman--Pintz for Theorems 1.9 and
+1.10.

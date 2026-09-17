@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-3.56`. It
+This is a development manifest, version `prime-equidistribution-3.71`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -1738,13 +1738,12 @@ The command verifies:
 The runner emits no persistent log. Console success is evidence only for the
 checkout on which it was run.
 
-## Not yet reproducible
+## Current reproducibility boundary
 
-The source crosswalk records the initial definitions, main targets, and proved
-Proposition 2.3(i),(iii). There is no proved public endpoint for Theorems
-1.7--1.10 and no main-theorem proof release to reproduce. The present
-axiom audit covers every current Tao production theorem but is not a substitute
-for the eventual public-endpoint release audit.
+The source crosswalk records the definitions, main targets, and proved
+Proposition 2.3(i),(iii). Release 3.71 includes the first unconditional public
+endpoint, Theorem 1.8. Theorems 1.7, 1.9, and 1.10 are not yet unconditional,
+so the combined four-theorem proof release is not yet reproducible.
 
 ## Release delta: prime-equidistribution-2.57
 
@@ -3603,6 +3602,179 @@ On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
 The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
 as the release gate.
 
+## Release delta: prime-equidistribution-3.62
+
+The new `SpecializedFourierPartition.lean` performs the full per-mode
+high/low split for `M=N`, `j=2` on natural half-open dyadic subintervals. Its
+high branch exhausts zero-coordinate, same-sign, and opposite-sign modes; in
+the last case the fixed Fourier box and stationary-point identity provide the
+eventual exterior-left bound. Its scalar absorption ledger then turns the
+three-term majorant into `P/(log P)^S` for every target natural `S`.
+
+The theorem remains conditional on the explicit propositions
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`. Finite Fourier summation and arbitrary
+real-interval reduction remain, so Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10109 jobs, including `SpecializedFourierPartition` and all three new
+axiom-audit entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.63
+
+`eventually_specializedFiniteFourierPolynomial_Ico_le_logSaving` sums the
+release-3.62 modewise bound over the entire retained Fourier box. It uses the
+exact coefficient `ℓ¹` norm supplied by `FourierAssembly.lean` and absorbs
+that fixed constant with two spare logarithmic powers. The specialized finite
+polynomial discrepancy now has arbitrary log saving on natural half-open
+dyadic subintervals. Arbitrary-real-interval reduction remains, so Theorem
+2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10109 jobs, including the finite-assembly declaration and its axiom-audit
+entry. The canonical isolated verifier was then run twice successfully as the
+release gate.
+
+## Release delta: prime-equidistribution-3.64
+
+The new `SpecializedIntervalReduction.lean` identifies the natural points of
+an order-convex real dyadic interval with one exact `Finset.Ico`. The induced
+real half-open core preserves `primesInScaleSet` and the complete finite prime
+sum exactly. For a nonempty core, order convexity confines the symmetric
+difference to two unit endpoint intervals, hence its Lebesgue measure is at
+most two. Integral endpoint absorption and the empty-core case remain, so
+Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10110 jobs, including every interval-reduction declaration and axiom-audit
+entry. The canonical isolated verifier was then run twice successfully as the
+release gate.
+
+## Release delta: prime-equidistribution-3.65
+
+`SpecializedIntervalReduction.lean` now proves the generic norm bound for
+changing measurable integration sets, caps the analytic natural core at
+`2P`, and proves that this cap preserves every sampled prime. The only
+potential removed natural endpoint is `2P`, which is composite for `P >= 2`.
+The capped symmetric difference still has volume at most two. Intervals with
+empty natural core are confined to one open unit cell, making both the prime
+sum and its endpoint estimate elementary.
+
+Combining these branches with the release-3.63 natural-interval theorem gives
+`eventually_specializedFiniteFourierPolynomial_interval_le_logSaving` for
+every measurable order-convex real dyadic interval and every fixed finite
+Fourier polynomial. The quantitative-PNT and Vinogradov propositions remain
+explicit assumptions; general smooth-weight reconstruction remains open, so
+Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10110 jobs, including all release-3.65 declarations and axiom-audit entries.
+The canonical isolated verifier was then run twice successfully as the
+release gate.
+
+## Release delta: prime-equidistribution-3.66
+
+`TorusFourier.lean` now gives an exact pointwise truncation-error bound by the
+outer square-box coefficient `l1` tail. `FourierRadial.lean` sums the existing
+smooth radial coefficient estimate over that complement. The new
+`SpecializedFourierReconstruction.lean` transfers both forms through the
+prime-sum/integral stability theorem and the release-3.65 arbitrary-interval
+finite-polynomial estimate.
+
+The resulting smooth discrepancy has arbitrary logarithmic saving plus one
+explicit universal radial cubic tail remainder. An explicit rate for that
+tail and analytic uniformity on a growing Fourier box remain, so Theorem 2.5
+is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10111 jobs, including all release-3.66 reconstruction declarations and their
+axiom-audit entries.
+The canonical isolated verifier was then run twice successfully as the
+release gate.
+
+## Release delta: prime-equidistribution-3.67
+
+`FourierDecayRate.lean` proves an explicit `(R+1)^(-1/2)` bound for the
+universal radial cubic tail using a summable radial `5/2` envelope.
+`SpecializedGrowingFourier.lean` chooses a polylogarithmic Fourier radius,
+absorbs its frequency growth into half of the stretched-log epsilon margin,
+and proves uniform growing-box mode estimates.
+
+The coefficient-normalized finite assembly and arbitrary-interval endpoint
+reduction quantify the coefficient family after the eventual threshold.
+Their smooth specialization is uniform in `W`, `I`, and `N` and has one
+explicit universal reconstruction constant. The conclusion is presently on
+eventual natural scales and remains conditional on the two named analytic
+propositions; the literal real-scale Theorem 2.5 contract is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10113 jobs, including both release-3.67 modules and all new axiom-audit
+entries. The canonical isolated verifier was then run twice successfully with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.68
+
+`SpecializedRealScale.lean` transfers the eventual natural-scale smooth
+estimate to the literal real-scale specialized contract. It proves exact
+prime-set preservation after passing to `ceil(P)`, controls the removed lower
+endpoint strip by `taoC3Norm W / log P`, transfers the parameter range to the
+ceiling scale, converts natural logarithmic powers to arbitrary positive real
+exponents, and absorbs bounded initial scales with a uniform elementary bound.
+
+The declaration `taoTheorem25Specialized_of_analyticInputs` now has conclusion
+`TaoTheorem25SpecializedConclusion`. It remains conditional exactly on
+`ClassicalMangoldtDiscrepancyLogSaving` and
+`VinogradovExponentialSumEstimate`; neither proposition is introduced as an
+axiom.
+
+On 2026-09-16, `lake build Tao2026.SpecializedRealScale Tao2026
+Tao2026.Audit` completed successfully with 10114 jobs. The new audit entries
+report only `propext`, `Classical.choice`, and `Quot.sound`. The canonical
+isolated verifier was then run twice successfully with `FINAL RESULT: PASS` as
+the release gate.
+
+## Release delta: prime-equidistribution-3.69
+
+`QuantitativePNTBridge.lean` converts the conventional de la Vallée Poussin
+estimate
+`|Chebyshev.psi x - x| <= C*x*exp(-c*sqrt(log x))` into the precise global
+half-open Mangoldt discrepancy contract used by the low-frequency proof. The
+module proves `cumsum Λ k = Chebyshev.psi k - Λ k`, absorbs the endpoint term,
+and proves that the stretched exponential beats every fixed logarithmic
+power.
+
+The declaration
+`taoTheorem25Specialized_of_chebyshevPsiDeLaValleePoussin` has conclusion
+`TaoTheorem25SpecializedConclusion`, conditional on the standard quantitative
+`ψ` proposition and `VinogradovExponentialSumEstimate`. These remain explicit
+propositions rather than axioms or proved analytic theorems.
+
+On 2026-09-16, `lake build Tao2026.QuantitativePNTBridge Tao2026
+Tao2026.Audit` completed successfully with 10115 jobs. The new audit entries
+report only `propext`, `Classical.choice`, and `Quot.sound`. The canonical
+isolated verifier was then run twice successfully with `FINAL RESULT: PASS` as
+the release gate.
+
+## Release delta: prime-equidistribution-3.61
+
+`StationaryFourierSourceBlock.lean` now subtracts endpoint-stationary
+integrals to cover every subinterval when the critical point belongs to the
+ambient dyadic block. It also proves the exterior-left first-derivative bound
+for `0 <= s <= P/2` and the fixed-ratio identity and Fourier-box bound when
+`M=N`.
+
+`UnequalFourierSourceBlock.lean` strengthens same-sign cancellation to depend
+on the complete reciprocal phase scale, including the quadratic-dominant
+case. `LowFrequencyAbsorption.lean` proves the exact comparison
+`F(P) <= 16 F(4P)` and the resulting deterministic high/low dichotomy. The
+finite mode partition remains, so Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10108 jobs, including every release-3.61 declaration and axiom-audit entry.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.
+
 ## Release delta: prime-equidistribution-3.53
 
 The new `CoordinateAxisFourierSourceBlock.lean` closes the pure quadratic
@@ -3683,6 +3855,83 @@ On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
 canonical isolated verifier was then run twice with `FINAL RESULT: PASS` as
 the release gate.
 
+## Release delta: prime-equidistribution-3.57
+
+`LowFrequencyIntegral.lean` now proves the elementary discrete-to-continuous
+part of Tao's low-frequency argument. On every dyadic interval it controls
+the variation of `e(N/t+M/t^j)/log t`, compares each integer sample with its
+unit-cell integral, telescopes those cells exactly, and obtains the explicit
+full-interval error
+`2*pi*(j+1)*F/log(P) + 1/log(P)^2`.
+
+This release does not assume or claim the missing quantitative prime number
+theorem. That logarithmic-error Mangoldt discrepancy is now the isolated
+analytic input needed before the low-frequency prime comparison can be
+assembled. The zero mode and final finite Fourier partition also remain;
+Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10104 jobs, including `LowFrequencyIntegral` and all new axiom-audit entries.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.
+
+## Release delta: prime-equidistribution-3.58
+
+The low-frequency Abel layer now uses the logarithmically weighted character
+itself. `LowFrequencyIntegral.lean` defines the Mangoldt/log sum, bounds its
+endpoint and total variation, and combines it with release 3.57 to compare
+that sum directly with the interval integral under one explicit uniform
+Mangoldt partial-sum bound.
+
+`LowFrequencyPNT.lean` records the missing classical quantitative PNT as a
+global prefix-discrepancy proposition, derives the uniform dyadic estimate,
+and inserts it into the complete Mangoldt/log-to-integral consumer. The PNT
+proposition is a hypothesis, not an axiom or proved theorem. Prime-power
+removal, the zero mode, and final Fourier assembly remain; Theorem 2.5 is not
+claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10105 jobs, including `LowFrequencyPNT` and all new axiom-audit entries. The
+canonical isolated verifier was then run twice with `FINAL RESULT: PASS` as
+the release gate.
+
+## Release delta: prime-equidistribution-3.59
+
+`LowFrequencyPrime.lean` proves the exact `Lambda/log` split into the literal
+unweighted prime sum and a higher-prime-power tail. The latter is bounded by
+the frozen local prime-power estimate and retains every requested logarithmic
+saving. Combining it with release 3.58 gives the conditional low-frequency
+prime-minus-integral theorem.
+
+`LowFrequencyFourier.lean` transports that result to the literal Fourier-mode
+sum and integral used by the finite assembly. The theorem is uniform in the
+integer mode and includes an explicit zero-mode specialization. The sole
+analytic hypothesis remains `ClassicalMangoldtDiscrepancyLogSaving`; final
+logarithmic absorption and the high/low finite mode partition remain, so
+Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10107 jobs, including the two release-3.59 modules and all new axiom-audit
+entries. The canonical isolated verifier was then run twice with
+`FINAL RESULT: PASS` as the release gate.
+
+## Release delta: prime-equidistribution-3.60
+
+`LowFrequencyAbsorption.lean` proves the deterministic absorption ledger for
+the explicit low-frequency estimate. It combines eventual
+`C*(log P)^d <= P`, eventual growth of fixed log powers, and the
+polylogarithmic phase-scale cutoff to produce the literal uniform bound
+`P/(log P)^S` for every target `S`.
+
+The result remains conditional on `ClassicalMangoldtDiscrepancyLogSaving`,
+which is a proposition rather than an axiom. The finite high/low Fourier
+partition remains, and Theorem 2.5 is not claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10108 jobs, including `LowFrequencyAbsorption` and its axiom-audit entries.
+The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
+as the release gate.
+
 ## Release delta: prime-equidistribution-3.52
 
 The stationary estimate is now valid with the optimized neighborhood clipped
@@ -3701,3 +3950,51 @@ On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
 10096 jobs, including all release-3.52 declarations and axiom-audit entries.
 The canonical isolated verifier was then run twice with `FINAL RESULT: PASS`
 as the release gate.
+
+## Release delta: prime-equidistribution-3.70
+
+`ClassicalQuantitativePNT.lean` closes the classical quantitative-PNT
+boundary without a new assumption. It combines
+`ford_asymptotic_zero_free_native`, the rectangle-uniform finite-low-zero
+bridge, `sharpPsiTruncationBound_native`, and the global Jensen zero-count
+estimate. A finite low-zero reciprocal constant and the coarse bound
+`zeroCount 0 T <= K*T^2` control the truncated zero sum. At the height
+`exp(min(1,c/8)*sqrt(log x))`, the zero sum and sharp-Perron error both have a
+stretched-exponential square-root-logarithmic saving.
+
+The new public theorems
+`classicalChebyshevPsiDeLaValleePoussin_native` and
+`classicalMangoldtDiscrepancyLogSaving_native` are unconditional.
+`taoTheorem25Specialized_of_vinogradov` reaches the literal
+`TaoTheorem25SpecializedConclusion` from
+`VinogradovExponentialSumEstimate` alone. The audit reports only `propext`,
+`Classical.choice`, and `Quot.sound` for every new declaration.
+
+On 2026-09-16, `lake build Tao2026.ClassicalQuantitativePNT Tao2026
+Tao2026.Audit` completed successfully with 10116 jobs.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including hash checks, warning-failing
+production and audit builds, forbidden-shortcut and root-reachability scans,
+and semantic regression tests.
+
+## Release delta: prime-equidistribution-3.71
+
+Five source-faithful IK modules now prove the formerly residual
+`VinogradovExponentialSumEstimate`. They separate the large Taylor-remainder
+cutoff from the effective degree `floor(4 log F/log X)`, prove the quarter
+block's `k^2/25` mass, use explicit Ford moments for `k>=10000`, and take a
+finite maximum of native critical coefficients below that threshold. The
+complementary parameter range is closed by the trivial cardinality bound.
+
+`Theorem25Complete.lean` combines this result with the unconditional classical
+quantitative PNT, proving the literal specialized Theorem 2.5 and
+`TaoTheorem18Conclusion` with no hypotheses. The audit reports only `propext`,
+`Classical.choice`, and `Quot.sound` for the new declarations.
+`PublicEndpointReductions.lean` then discharges Theorem 2.5 in the established
+Section 4 consumers, leaving Proposition 2.3(ii) alone for Theorems 1.9 and
+1.10. The production root and audit build contains 10123 jobs.
+
+On 2026-09-16, the canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` completed twice with
+`FINAL RESULT: PASS`, including the hash, raw-Mermaid, warning-failing build,
+axiom-audit, forbidden-shortcut, root-reachability, and semantic gates.

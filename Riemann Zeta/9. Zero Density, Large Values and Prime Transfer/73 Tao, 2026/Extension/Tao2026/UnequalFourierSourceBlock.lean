@@ -474,6 +474,80 @@ theorem norm_unequalQuadraticIntervalIntegral_le_dyadic_of_pos_nonneg
       apply (div_le_iff₀ (by positivity : 0 < 2 * Real.pi)).2
       nlinarith [sq_nonneg P]
 
+/-- In the same-sign chamber, the total source phase scale controls the
+integration-by-parts denominator even when the quadratic coefficient carries
+most of that scale. -/
+theorem unequalQuadraticIntegralAmplitude_le_sourceScale_of_pos_nonneg
+    {A B P L b : ℝ} (hA : 0 < A) (hB : 0 ≤ B)
+    (hP : 2 ≤ P) (hL : 0 < L)
+    (hscale : L ≤ reciprocalPhaseScale A B 2 (4 * P))
+    (hPb : P ≤ b) (hbP : b ≤ 2 * P) :
+    unequalQuadraticIntegralAmplitude A B b ≤
+      2 * P / (L * Real.log P) := by
+  have hPpos : 0 < P := by linarith
+  have hbpos : 0 < b := hPpos.trans_le hPb
+  have hlogP : 0 < Real.log P := Real.log_pos (by linarith)
+  have hlogb : 0 < Real.log b := Real.log_pos (by linarith)
+  have hlogle : Real.log P ≤ Real.log b :=
+    Real.log_le_log hPpos hPb
+  have hscale' : L ≤ A / (4 * P) + B / (16 * P ^ 2) := by
+    simpa [reciprocalPhaseScale, abs_of_pos hA, abs_of_nonneg hB,
+      mul_pow, show (4 : ℝ) ^ 2 = 16 by norm_num] using hscale
+  have hscaled : 16 * P ^ 2 * L ≤ 4 * A * P + B := by
+    have hmul := mul_le_mul_of_nonneg_left hscale' (by positivity : 0 ≤ 16 * P ^ 2)
+    field_simp [hPpos.ne'] at hmul
+    nlinarith
+  have hlinearLower : 4 * P ^ 2 * L ≤ A * b + 2 * B := by
+    have hAP : A * P ≤ A * b := mul_le_mul_of_nonneg_left hPb hA.le
+    nlinarith
+  have hdenLower : (4 * P ^ 2 * L) * Real.log P ≤
+      (A * b + 2 * B) * Real.log b := by
+    calc
+      (4 * P ^ 2 * L) * Real.log P ≤
+          (A * b + 2 * B) * Real.log P := by gcongr
+      _ ≤ (A * b + 2 * B) * Real.log b := by
+        gcongr
+  have hbCube : b ^ 3 ≤ 8 * P ^ 3 := by
+    calc
+      b ^ 3 ≤ (2 * P) ^ 3 := pow_le_pow_left₀ hbpos.le hbP 3
+      _ = 8 * P ^ 3 := by ring
+  unfold unequalQuadraticIntegralAmplitude
+  calc
+    b ^ 3 / ((A * b + 2 * B) * Real.log b) ≤
+        8 * P ^ 3 / ((4 * P ^ 2 * L) * Real.log P) := by
+      exact div_le_div₀ (by positivity) hbCube (by positivity) hdenLower
+    _ = 2 * P / (L * Real.log P) := by
+      field_simp
+      ring
+
+/-- Same-sign oscillatory integral bound expressed directly through the total
+reciprocal phase scale. -/
+theorem norm_unequalQuadraticIntervalIntegral_le_sourceScale_of_pos_nonneg
+    {A B P L a b : ℝ} (hA : 0 < A) (hB : 0 ≤ B)
+    (hP : 2 ≤ P) (hL : 0 < L)
+    (hscale : L ≤ reciprocalPhaseScale A B 2 (4 * P))
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      6 * P / (L * Real.log P) := by
+  have hraw := norm_unequalQuadraticIntervalIntegral_le hA hB
+    (hP.trans hPa) hab
+  have hamp := unequalQuadraticIntegralAmplitude_le_sourceScale_of_pos_nonneg
+    hA hB hP hL hscale (hPa.trans hab) hbP
+  have hfactor : ‖unequalQuadraticIntegralFactor‖ ≤ 1 := by
+    rw [norm_unequalQuadraticIntegralFactor]
+    exact inv_le_one_of_one_le₀ (by nlinarith [Real.pi_gt_three])
+  have hampNonneg : 0 ≤ unequalQuadraticIntegralAmplitude A B b :=
+    unequalQuadraticIntegralAmplitude_nonneg hA hB (hP.trans (hPa.trans hab))
+  calc
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+        3 * ‖unequalQuadraticIntegralFactor‖ *
+          unequalQuadraticIntegralAmplitude A B b := hraw
+    _ ≤ 3 * 1 * unequalQuadraticIntegralAmplitude A B b := by gcongr
+    _ ≤ 3 * 1 * (2 * P / (L * Real.log P)) := by gcongr
+    _ = 6 * P / (L * Real.log P) := by ring
+
 theorem norm_intervalIntegral_quadratic_eq_neg_coefficients
     (A B a b : ℝ) :
     ‖∫ t in a..b,
@@ -512,6 +586,28 @@ theorem norm_unequalQuadraticIntervalIntegral_le_dyadic_of_neg_nonpos
     (A := -A) (B := -B) (by linarith) (by linarith) hP hPa hab hbP
   simpa [abs_of_neg hA] using hraw
 
+/-- Same-sign bound through the total source scale, with both sign
+orientations combined. -/
+theorem norm_unequalQuadraticIntervalIntegral_le_sourceScale_of_sameSign
+    {A B P L a b : ℝ}
+    (hsign : (0 < A ∧ 0 < B) ∨ (A < 0 ∧ B < 0))
+    (hP : 2 ≤ P) (hL : 0 < L)
+    (hscale : L ≤ reciprocalPhaseScale A B 2 (4 * P))
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖∫ t in a..b,
+        standardAdditiveCharacter (reciprocalPhase A B 2 t) / Real.log t‖ ≤
+      6 * P / (L * Real.log P) := by
+  rcases hsign with hsign | hsign
+  · exact norm_unequalQuadraticIntervalIntegral_le_sourceScale_of_pos_nonneg
+      hsign.1 hsign.2.le hP hL hscale hPa hab hbP
+  · rw [norm_intervalIntegral_quadratic_eq_neg_coefficients A B a b]
+    apply norm_unequalQuadraticIntervalIntegral_le_sourceScale_of_pos_nonneg
+      (A := -A) (B := -B) (by linarith) (by linarith) hP hL
+    · simpa [reciprocalPhaseScale] using hscale
+    · exact hPa
+    · exact hab
+    · exact hbP
+
 theorem norm_fourierModeIntegral_Ico_le_dyadic_of_coeff_pos_nonneg
     {q : ℤ × ℤ} {N M P a b : ℝ}
     (hlinear : 0 < (q.1 : ℝ) * N) (hquadratic : 0 ≤ (q.2 : ℝ) * M)
@@ -533,6 +629,24 @@ theorem norm_fourierModeIntegral_Ico_le_dyadic_of_coeff_neg_nonpos
       6 * P ^ 2 / (|(q.1 : ℝ) * N| * Real.log P) := by
   have hraw := norm_unequalQuadraticIntervalIntegral_le_dyadic_of_neg_nonpos
     hlinear hquadratic hP hPa hab hbP
+  unfold fourierModeIntegral
+  rw [integral_Ico_eq_integral_Ioc,
+    ← intervalIntegral.integral_of_le hab]
+  exact hraw
+
+theorem norm_fourierModeIntegral_Ico_le_sourceScale_of_sameSign
+    {q : ℤ × ℤ} {N M P L a b : ℝ}
+    (hsign :
+      (0 < (q.1 : ℝ) * N ∧ 0 < (q.2 : ℝ) * M) ∨
+        ((q.1 : ℝ) * N < 0 ∧ (q.2 : ℝ) * M < 0))
+    (hP : 2 ≤ P) (hL : 0 < L)
+    (hscale : L ≤ reciprocalPhaseScale
+      ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2 (4 * P))
+    (hPa : P ≤ a) (hab : a ≤ b) (hbP : b ≤ 2 * P) :
+    ‖fourierModeIntegral (Set.Ico a b) q N M 2‖ ≤
+      6 * P / (L * Real.log P) := by
+  have hraw := norm_unequalQuadraticIntervalIntegral_le_sourceScale_of_sameSign
+    hsign hP hL hscale hPa hab hbP
   unfold fourierModeIntegral
   rw [integral_Ico_eq_integral_Ioc,
     ← intervalIntegral.integral_of_le hab]
@@ -653,6 +767,51 @@ theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_same
         hlower hNupper hMupper
   · exact hnegP a b q N M hPa hab hbP hsign.1 hsign.2
       hlower hNupper hMupper
+
+/-- Same-sign prime-minus-integral estimate with the integral remainder
+controlled by the total phase scale rather than only the linear coefficient. -/
+theorem eventually_norm_primeFourierMode_sub_integral_Ico_le_sourceRange_of_sameSign_sourceScale
+    (hVinogradov : VinogradovExponentialSumEstimate)
+    {A₀ ε S : ℝ} (hA₀ : 0 < A₀) (hε : 0 < ε)
+    (haexp : 0 ≤ 3 / 2 - ε) (hS : 0 ≤ S) :
+    ∀ᶠ P : ℕ in atTop, ∀ (a b : ℕ) (q : ℤ × ℤ) (N M L : ℝ),
+      P ≤ a → a < b → b ≤ 2 * P →
+      ((0 < (q.1 : ℝ) * N ∧ 0 < (q.2 : ℝ) * M) ∨
+        ((q.1 : ℝ) * N < 0 ∧ (q.2 : ℝ) * M < 0)) →
+      0 < L →
+      (Real.log b) ^ vaughanTypeIILogSavingPhaseExponent (S + 1) ≤ L →
+      L ≤ reciprocalPhaseScale ((q.1 : ℝ) * N) ((q.2 : ℝ) * M) 2
+        (4 * (P : ℝ)) →
+      |(q.1 : ℝ) * N| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      |(q.2 : ℝ) * M| ≤
+        A₀ * Real.exp ((Real.log P) ^ (3 / 2 - ε)) →
+      ‖primeFourierModeSum (P : ℝ)
+          (Set.Ico (a : ℝ) (b : ℝ)) q N M 2 -
+        fourierModeIntegral (Set.Ico (a : ℝ) (b : ℝ)) q N M 2‖ ≤
+        vaughanPrimeQuadraticDecayConstant * (P : ℝ) *
+            (Real.log P) ^ (-S) +
+          6 * (P : ℝ) / (L * Real.log P) := by
+  have hprime := eventually_norm_primeReciprocalPhaseSum_le_sourceRange_unequal
+    hVinogradov hA₀ hε haexp hS
+  filter_upwards [hprime, eventually_ge_atTop (2 : ℕ)] with P hprimeP hP
+  intro a b q N M L hPa hab hbP hsign hL hlogLower hlower hNupper hMupper
+  have hquadratic : (q.2 : ℝ) * M ≠ 0 := by
+    rcases hsign with hsign | hsign
+    · exact hsign.2.ne'
+    · exact hsign.2.ne
+  have hsum := primeFourierModeSum_Ico_eq_reciprocalPhaseSum
+    hP hPa hbP q N M
+  have hprimeBound := hprimeP a b ((q.1 : ℝ) * N) ((q.2 : ℝ) * M)
+    hPa hab hbP hquadratic (hlogLower.trans hlower) hNupper hMupper
+  have hintegralBound :=
+    norm_fourierModeIntegral_Ico_le_sourceScale_of_sameSign
+      (q := q) (N := N) (M := M) (P := (P : ℝ)) (L := L)
+      (a := (a : ℝ)) (b := (b : ℝ)) hsign
+      (by exact_mod_cast hP) hL hlower (by exact_mod_cast hPa)
+      (by exact_mod_cast hab.le) (by exact_mod_cast hbP)
+  rw [hsum]
+  exact (norm_sub_le _ _).trans (add_le_add hprimeBound hintegralBound)
 
 end
 end Tao2026
