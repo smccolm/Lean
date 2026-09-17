@@ -2866,3 +2866,445 @@ The same endpoint is inserted into the established Section 4 consumers.
 `taoTheorem110_of_proposition23ii` show that Proposition 2.3(ii) alone now
 implies the two remaining factorial conclusions; source-facing variants need
 only the pinned Baker--Harman--Pintz proposition.
+
+## Prime-equidistribution release 3.72
+
+The smooth-number saddle boundary is now expressed as an explicit local-limit
+problem. `SmoothNumberSaddleTilt` constructs the normalized tilted mass,
+proves total mass one and the exact `phiOne`/`phiTwo` cumulant identities, and
+factors the finite smooth count into the saddle exponential and a cutoff
+factor in `[0,1]`. `SmoothNumberSaddleLocalLimit` proves that the original
+critical saddle asymptotic is equivalent to the cutoff factor times its
+Gaussian scale tending to one. The local-limit estimate itself and analytic
+Burgess remain open, so Theorem 1.7 is still conditional.
+
+## Prime-equidistribution release 3.73
+
+`SmoothNumberSaddleProbability` upgrades the normalized tilted mass to an
+actual probability measure on logarithmic size. It proves the exact,
+absolutely convergent characteristic-function series and constructs the
+centered variance-normalized saddle characteristic function. Its Fourier
+series is exactly supported at
+`(log n - log X) / sqrt(phiTwo)`, with normalization and unit norm bound
+proved. This exposes the precise characteristic-function object needed for
+the remaining Gaussian local-limit argument; that analytic convergence is
+not yet claimed.
+
+## Prime-equidistribution release 3.74
+
+`SmoothNumberSaddleEulerCharacteristic` factors the tilted characteristic
+function into the exact finite product of its source-prime geometric factors.
+It also proves the precise squared-norm contraction formula for every local
+factor and for the full centered saddle characteristic function. Thus the
+remaining Gaussian analysis can work directly with a finite product whose
+oscillatory loss is the explicit term `1-cos(t log p)`.
+
+## Prime-equidistribution release 3.75
+
+`SmoothNumberSaddleFrequency` proves a central Gaussian envelope from the
+finite contraction product. The local exponent coefficients sum exactly to
+`phiTwo`; after saddle variance normalization this yields the universal decay
+`|characteristic(t)| ≤ exp(-t^2/pi^2)` throughout an explicit source-scale
+central window. The next task is to prove a growing window lies in that range
+and obtain complementary-frequency decay for Fourier inversion.
+
+## Prime-equidistribution release 3.76
+
+`SmoothNumberSaddleCentralWindow` defines the exact positive normalized
+central radius and proves that its interval is precisely the range required
+by release 3.75. It also proves that the radius diverges, hence captures every
+fixed frequency, from the single remaining curvature-scale limit
+`log y / sqrt(phiTwo) → 0`. That limit is now the explicit next analytic
+target before complementary-frequency decay and inversion.
+
+## Prime-equidistribution release 3.77
+
+`SmoothNumberSaddleCurvatureLower` proves that target. A coarse moving saddle
+comparison and the exact `phiOne` secant identity yield
+`phiTwo/log(y)^2 ≥ u/(16 log u)` eventually. Thus the normalized central
+radius diverges in every critical smooth regime, and every fixed normalized
+frequency eventually has the universal Gaussian envelope. Only the
+complementary-frequency estimates and inversion remain in this local-limit
+stage.
+
+## Prime-equidistribution release 3.78
+
+`SmoothNumberSaddleGaussianProduct` compiles the global triangular-array
+argument. The normalized characteristic is exactly the product of centered
+prime factors, their variance shares are nonnegative and sum to one, and the
+largest share tends to zero by the release-3.77 curvature bound. A finite
+contraction-product comparison now reduces the Gaussian limit
+`characteristic(t) -> exp(-t^2/2)` to the summed prime-local quadratic Taylor
+error. That explicit local estimate, complementary-frequency decay, and
+Fourier inversion remain.
+
+## Prime-equidistribution release 3.79
+
+`SmoothNumberSaddlePrimeTaylor` proves the exact centered geometric moments,
+a uniform third absolute moment estimate, and a global cubic Taylor bound for
+`exp(ix)`. It identifies the resulting geometric characteristic exactly with
+the centered prime-local saddle factor and bounds the summed quadratic error
+by `16000 |t|^3 log(y)/sqrt(phiTwo)`.
+
+Since release 3.77 makes this bound vanish, release 3.78 now yields
+`characteristic(t) -> exp(-t^2/2)` for every fixed normalized frequency in
+the critical regime. Complementary-frequency decay and Fourier inversion
+remain before the Gaussian local-limit target, so Theorem 1.7 is still not
+claimed.
+
+## Prime-equidistribution release 3.80
+
+`SmoothNumberSaddleLaplaceCutoff` rewrites the remaining cutoff expression as
+a one-sided Laplace moment of the centered normalized logarithmic law. Its
+rate is `sigma*sqrt(phiTwo)`, the Gaussian scale is exactly `sqrt(2*pi)` times
+that rate, and the rate tends to infinity. The critical saddle asymptotic is
+equivalent to this explicit normalized moment tending to one. This is a
+shrinking-scale local-limit problem, so complementary-frequency control and
+inversion remain necessary.
+
+## Prime-equidistribution release 3.81
+
+`SmoothNumberSaddleCentralIntegral` proves the complete normalized
+central-frequency limit. It combines the exact characteristic function with
+the Laplace kernel `lambda/(lambda-i*t)` on the explicit expanding central
+interval, dominates the result by `exp(-t^2/pi^2)`, and applies dominated
+convergence to the fixed-frequency Gaussian limit. The central integral tends
+to `sqrt(2*pi)`, so its Gaussian-normalized contribution tends to one.
+
+This closes the central saddle calculation but not the cutoff inversion. The
+remaining step is to formalize the truncated smooth-number Perron formula and
+show that frequencies outside the central segment contribute negligibly.
+
+## Prime-equidistribution release 3.82
+
+`SmoothNumberSaddlePerronLine` identifies the release-3.81 central integral
+with the literal normalized smooth-number vertical line. The source
+Dirichlet-series factor at `-t`, phase `exp(i*t*log X)`, and kernel
+`sigma/(sigma+i*t)` are exactly the centered characteristic and
+`lambda/(lambda-i*u)` after the checked substitution
+`u=-t*sqrt(phiTwo)`.
+
+The corresponding central height rescales exactly to the explicit Gaussian
+radius. Thus the central Perron contribution is now source aligned; the
+remaining step is the sharp cutoff/truncation bound and the complementary
+portion of the line.
+
+## Prime-equidistribution release 3.83
+
+`SmoothNumberSaddlePerronCutoff` passes the smooth Dirichlet series through a
+finite vertical integral and identifies it exactly with the sum of frozen
+sharp-Perron kernels. The inclusive smooth cutoff sum is `psiNat X y`, so the
+finite-height error is an absolutely convergent kernel-minus-cutoff series.
+
+The frozen logarithmic estimates transfer on both strict sides of `X`, and
+the endpoint error is uniformly at most `3/2`. Quantitative summation at the
+saddle height and the complementary vertical-line range remain.
+
+## Prime-equidistribution release 3.84
+
+`SmoothNumberSaddlePerronLimit` proves the symmetric large-height limit of
+each sharp-Perron kernel: one below `X`, one half at `X`, and zero above `X`.
+A summable, height-independent envelope permits Tannery's theorem to pass this
+limit through the complete smooth-number series. Consequently that series
+converges exactly to `psiNat X y` minus the explicit possible endpoint
+half-mass, whose norm is at most `1/2`.
+
+Thus Granville's endpoint `O(1)` is now an exact formal correction. The
+remaining saddle obligation is the quantitative estimate showing that the
+noncentral part of the finite vertical line is negligible on the Gaussian
+main-term scale.
+
+## Prime-equidistribution release 3.85
+
+`SmoothNumberSaddlePerronComplement` supplies the exact normalization and
+tail interface. The complete finite Perron line divided by the saddle main
+term is the full frozen-kernel sum divided by that same main term. Subtracting
+the compiled central Gaussian contribution is exactly the sum of the two
+literal vertical-line tail integrals.
+
+As the height tends to infinity, this complementary line converges to the
+half-endpoint-corrected saddle ratio minus the central contribution. In every
+critical regime, vanishing of that explicit infinite complement is equivalent
+to convergence of the corrected saddle ratio to one. The endpoint correction
+after normalization is bounded by `1/(2*mainTerm)`. The remaining analytic
+task is complementary-line decay plus the main-term growth needed to discard
+the bounded endpoint.
+
+## Prime-equidistribution release 3.86
+
+`SmoothNumberSaddleMainTermGrowth` proves the required growth unconditionally.
+On `sigma >= 1/2`, the curvature satisfies
+`phiTwo <= 7*log(y)*phiOne`; at the exact saddle this becomes
+`phiTwo <= 7*log(y)*log(X)`. Positivity of the Euler-product phase then yields
+the explicit lower bound
+`sqrt(X)/(sqrt(14*pi)*log(X)) <= smoothSaddleMainTerm` whenever `y <= X` and
+the saddle lies between `1/2` and `1`.
+
+These conditions hold eventually in every critical regime, so the main term
+tends to infinity and the normalized half-endpoint correction tends to zero.
+The original, uncorrected critical saddle asymptotic is now proved equivalent
+to decay of `smoothSaddleInfiniteComplementaryPerronLine`. Complementary-line
+decay is the sole remaining smooth-saddle input.
+
+## Prime-equidistribution release 3.87
+
+`SmoothNumberSaddleWideFrequency` extends the characteristic-function bound
+from the Taylor window to the full principal prime-phase range
+`|t|*log(y)/sqrt(phiTwo) <= pi`.  On that range it proves the uniform envelope
+`|characteristic(t)| <= exp(-t^2/(48*pi^2))`.
+
+Consequently the annulus between the expanding central radius and
+`pi*sqrt(phiTwo)/log(y)` has integral tending to zero in every critical
+regime.  The remaining complementary-line problem is now confined to
+frequencies beyond this principal-phase radius.
+
+## Prime-equidistribution release 3.88
+
+`SmoothNumberSaddleWidePerron` transports the release-3.87 annulus back to
+the literal vertical line. The wide Perron height is exactly `pi/log(y)`, and
+the normalized sum of the two physical segments between the central and wide
+heights tends to zero. Thus only the two outer tails beyond
+`|t| = pi/log(y)` remain.
+
+## Prime-equidistribution release 3.89
+
+`SmoothNumberSaddleOuterPerron` names those two outer tails at finite and
+infinite height. The complementary line is exactly the sum of the vanishing
+principal-phase annulus and the outer line, and the finite outer line tends to
+its named infinite-height value. The critical smooth saddle asymptotic is
+therefore equivalent to decay of `smoothSaddleInfiniteOuterPerronLine` alone.
+
+## Prime-equidistribution release 3.90
+
+`SmoothNumberSaddleOuterDecay` proves a global finite-Euler-product bound,
+valid without a phase-range restriction. The tilted characteristic and the
+literal Perron integrand are bounded by
+`exp(-smoothSaddleCosineLoss/96)`, where the loss is the explicit nonnegative
+sum of `p^(-sigma)*(1-cos(t*log p))` over source primes. Outer-tail decay is
+therefore reduced to a lower-bound problem for this one phase-loss sum.
+
+## Prime-equidistribution release 3.91
+
+`SmoothNumberSaddleOuterShell` proves the first quantitative outer loss. On
+the shell `pi/log(y) <= t <= 4*pi/(3*log(y))`, the top dyadic prime block lies
+in the cosine-negative phase range. The Chebyshev–PNT block bound yields
+`y^(-sigma)*y/(16*log(y)) <= smoothSaddleCosineLoss`. Extending compatible
+loss bounds across all remaining frequency shells is the next step.
+
+## Prime-equidistribution release 3.92
+
+`SmoothNumberSaddleMovingShell` replaces the fixed top block by the adaptive
+scale `N(t)=ceil(exp(pi/t))`. Formal ceiling and logarithm bounds put its
+dyadic prime band in the cosine-negative phase range, prove `N(t) <= y` from
+the outer-frequency condition, and discharge the finite block-width and PNT
+requirements. Thus the explicit release-3.91 loss bound now moves with `t`
+over a controlled small-frequency interval. Covering the remaining
+frequencies and integrating the resulting envelopes are still open.
+
+## Prime-equidistribution release 3.93
+
+`SmoothNumberSaddleMultiShell` accumulates all coarse CEP dyadic blocks that
+stay near the top prime scale. On the first outer shell their phases are all
+in the negative-cosine half-circle, giving a loss bounded below by a named
+quantity comparable to `u/log(u)`. That quantity diverges in every critical
+regime, so the physical Perron integrand decays uniformly on the whole shell.
+The normalized shell integral and the subsequent frequency ranges remain.
+
+## Prime-equidistribution release 3.94
+
+`SmoothNumberSaddleFirstShellIntegral` packages the two literal physical
+Perron segments with `pi/log(y) <= |t| <= 4*pi/(3*log(y))` as one exact
+normalized contribution. The interval-length estimate and release-3.93
+uniform envelope reduce it to a saddle prefactor times
+`exp(-c*u/log(u))`. Since curvature gives
+`standardDeviation/log(y) <= sqrt(7*u)`, that exponential absorbs the
+prefactor and the complete first-shell contribution tends to zero. Only the
+later outer-frequency shells and their infinite-height assembly remain.
+
+## Prime-equidistribution release 3.95
+
+`SmoothNumberSaddleExtendedShell` exploits the full phase range already
+available from `log(p) >= 3/4*log(y)`: the accumulated loss remains valid up
+to physical height `3*pi/(2*log(y))`. A reusable symmetric Perron-shell norm
+estimate integrates the new band between the old and new endpoints, and the
+same exponential loss absorbs its normalization. The adjacent normalized
+contribution therefore tends to zero. The contour beyond
+`3*pi/(2*log(y))` is still open.
+
+## Prime-equidistribution release 3.96
+
+`SmoothNumberSaddleSecondShell` crosses the first resonant boundary by moving
+the full CEP alphabet to `Nat.sqrt(y)`. Exact floor-square-root logarithmic
+bounds place its retained primes between one third and one half of `log(y)`.
+Their phases therefore stay in `[pi/2,3*pi/2]` across the complete physical
+range from `3*pi/(2*log(y))` to `3*pi/log(y)`. Critical-regime growth verifies
+all CEP range hypotheses and yields a uniform explicit cosine-loss lower
+bound. Its divergence and normalized integral are the next step.
+
+## Prime-equidistribution release 3.97
+
+`SmoothNumberSaddleSecondShellIntegral` converts the square-root-alphabet
+bound into an explicit loss comparable to `u^(2/5)/log(u)`. This scale
+diverges in every critical regime, and its exponential decay absorbs the
+square-root saddle normalization. The exact normalized symmetric Perron
+contribution on
+`3*pi/(2*log(y)) <= |t| <= 3*pi/log(y)` therefore tends to zero. Frequencies
+beyond `3*pi/log(y)` and the infinite outer tail remain.
+
+## Prime-equidistribution release 3.98
+
+`SmoothNumberSaddleThirdShell` crosses the next resonant endpoint by using
+the twice-iterated natural square root of `y`. Its logarithm lies between
+one fifth and one quarter of `log(y)` on an explicit tail, and the retained
+CEP primes lie above one sixth of `log(y)`. Their phases remain in the
+nonpositive-cosine window throughout
+`3*pi/log(y) <= t <= 6*pi/log(y)`, yielding an accumulated loss bound on the
+whole third shell. Divergent-scale conversion and integration are next.
+
+## Prime-equidistribution release 3.99
+
+`SmoothNumberSaddleThirdShellIntegral` converts the fourth-root-alphabet
+bound into a loss comparable to `u^(1/5)/log(u)`. Its exponential absorbs
+the square-root saddle normalization, and the exact normalized symmetric
+Perron contribution on `3*pi/log(y) <= |t| <= 6*pi/log(y)` tends to zero in
+every critical regime. Frequencies beyond `6*pi/log(y)` and the infinite
+outer line remain.
+
+## Prime-equidistribution release 4.00
+
+`SmoothNumberSaddleFourthShell` moves the CEP alphabet to the third iterated
+natural square root of `y`. Exact rounding bounds put its logarithm between
+`1/9` and `1/8` of `log(y)` and its retained primes above `1/12` of
+`log(y)`. Their phases therefore remain in the nonpositive-cosine window on
+`6*pi/log(y) <= t <= 12*pi/log(y)`. Critical growth verifies the cofactor
+range and yields an accumulated fourth-shell loss. Its normalized integral
+is the next step.
+
+## Prime-equidistribution release 4.01
+
+`SmoothNumberSaddleFourthShellIntegral` turns the eighth-root loss into the
+divergent scale `u^(1/9)/log(u)`. Its exponential absorbs the saddle
+normalization, so the exact normalized symmetric contribution on
+`6*pi/log(y) <= |t| <= 12*pi/log(y)` tends to zero. Later shells and the
+infinite outer line remain.
+
+## Prime-equidistribution release 4.02
+
+`SmoothNumberSaddleIndexedShell` abstracts the repeated square-root scales.
+It proves closed-form lower and upper logarithmic envelopes for every
+iteration, recovers the certified square-, fourth-, and eighth-root scales,
+and defines physical shell heights that double exactly. This is the indexed
+foundation for aggregating all later bands into the infinite outer line.
+
+## Prime-equidistribution release 4.03
+
+`SmoothNumberSaddleIndexedPhase` proves the uniform shell theorem. For every
+`k >= 2`, a scale retaining four fifths of its ideal `2^(-k)` logarithmic
+size has CEP support in the exact nonpositive-cosine window between the
+adjacent indexed heights. The full accumulated cosine-loss bound follows.
+
+## Prime-equidistribution release 4.04
+
+`SmoothNumberSaddleIndexedScaleRange` proves the explicit growing-range
+criterion. Iterated scales decrease with their index, terminal noncollapse
+controls every preceding root, and
+`10*(2^k-1)*log(2) <= log(y)` yields the four-fifths scale retention required
+by release 4.03.
+
+## Prime-equidistribution release 4.05
+
+`SmoothNumberSaddleIndexedFixedDepth` proves that survival through `k`
+natural square roots is equivalent to the single threshold
+`a^(2^k) <= y`. It follows that every fixed finite prefix of indexed shells
+eventually satisfies terminal noncollapse and the two logarithmic scale
+bounds in every Tao-critical regime. The remaining step is a diagonal choice
+whose depth grows with the regime parameter, followed by shell summation.
+
+## Prime-equidistribution release 4.06
+
+`SmoothNumberSaddleIndexedFixedLoss` combines fixed-depth scale retention
+with the critical Rankin-ratio estimate. For every fixed `k >= 2`, all CEP
+range hypotheses eventually hold and the generic accumulated cosine-loss
+bound is valid over the entire indexed shell. The outstanding issue is now
+uniformity for a growing index and aggregation of the shell integrals.
+
+## Prime-equidistribution release 4.07
+
+`SmoothNumberSaddleIndexedDiagonal` turns the family of fixed-index eventual
+loss statements into one growing family. There is a depth `K(n) -> infinity`
+for which every indexed shell `2 <= k <= K(n)` is simultaneously controlled
+at parameter `n`. The remaining analytic work is to integrate and sum these
+moving shell bounds and then dispose of the outer residual tail.
+
+## Prime-equidistribution release 4.08
+
+`SmoothNumberSaddleIndexedLossScale` turns the indexed phase estimate into a
+quantitative Rankin-ratio envelope. The exponent is `(4/5)*2^(-k)`, the
+cofactor-rounding penalty is the same universal `exp(-16)` as in the concrete
+shells, and the resulting loss diverges for every fixed `k`. The next layer
+integrates this generic envelope and diagonalizes the finite shell sum.
+
+## Prime-equidistribution release 4.09
+
+`SmoothNumberSaddleIndexedShellIntegral` absorbs the saddle normalization for
+every fixed positive indexed exponent and integrates the corresponding exact
+symmetric shell. Thus every fixed indexed Perron contribution vanishes. The
+next step is to slow the growing depth so that the entire moving finite sum,
+not merely each fixed coordinate, tends to zero.
+
+## Prime-equidistribution release 4.10
+
+`SmoothNumberSaddleIndexedPrefix` chooses precisely such a slow depth. It
+controls the norm of the whole finite sum by `1/(K+1)` while keeping every
+included shell admissible. Hence `K(n) -> infinity` and the complete moving
+indexed prefix tends to zero. A telescoping identity must now connect this
+algebraic sum to one contiguous Perron segment before the residual tail is
+handled.
+
+## Prime-equidistribution release 4.11
+
+`SmoothNumberSaddleIndexedTelescoping` supplies that exact identity. Adjacent
+positive and negative interval integrals concatenate, including their common
+saddle normalization, so the moving prefix is a single symmetric segment
+from indexed height one to height `K(n)`. This segment tends to zero while
+`K(n) -> infinity`; only the post-terminal outer line remains.
+
+## Prime-equidistribution release 4.12
+
+`SmoothNumberSaddlePostTerminalTail` concatenates the first, extended, and
+second outer pieces into the complete pre-indexed segment and proves that
+segment vanishes. It then defines the post-terminal remainder after removing
+both that segment and the moving indexed segment from the infinite outer
+Perron line. Decay of this one named remainder is now proved equivalent to
+the full critical smooth-saddle asymptotic. Establishing that decay requires
+a genuinely high-frequency argument beyond the iterated-root shell method.
+
+## Prime-equidistribution release 4.13
+
+`SmoothNumberSaddleIndexedHeightCeiling` proves why the indexed-root method
+cannot close that remainder. If the terminal iterated prime scale remains at
+least four, its physical endpoint is at most
+`3*pi/(2*log 4)`, independently of both depth and `y`. Thus even a terminal
+index tending to infinity cannot have height tending to infinity while
+remaining CEP/PNT-admissible. The remaining tail requires a second analytic
+mechanism, not a faster indexed diagonal.
+
+## Prime-equidistribution release 4.14
+
+`SmoothNumberSaddleHildebrandTenenbaumEnvelope` begins that second mechanism
+with the exact loss from Hildebrand--Tenenbaum Lemma 8(ii):
+`u*t^2/((1-sigma)^2+t^2)`. The loss is nonnegative, even, and radially
+increasing. Its source-facing characteristic bound now transfers to the
+literal normalized Perron integrand and yields a checked finite symmetric
+shell estimate at the left-endpoint loss. The remaining analytic steps are
+the HT minor-arc bound itself and the finite Perron truncation/short-interval
+estimate used in their Lemma 10.
+
+## Prime-equidistribution release 4.15
+
+`SmoothNumberSaddleHTMangoldtTransform` formalizes the complex transform in
+HT Lemma 6 and its weighted cosine sum. The cosine sum is exactly the real
+part of the zero-frequency transform minus the frequency-`t` transform, and
+two complex main-term estimates imply the source cosine approximation with
+error `2E`. The remaining analytic boundary is the uniform transform estimate
+from the native zero-free-region PNT machinery.

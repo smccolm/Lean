@@ -3162,3 +3162,550 @@ before the source's `14/3` simplification.
 - [x] Prove `VinogradovExponentialSumEstimate` unconditionally.
 - [x] Combine it with the native quantitative PNT to prove the literal
   specialized Theorem 2.5 and Tao's Theorem 1.8 unconditionally.
+
+## Prime-equidistribution 3.72
+
+- [x] Normalize the positive `y`-smooth Dirichlet weights and prove their
+  total mass is one.
+- [x] Identify the tilted log-partition derivatives exactly with `-phiOne`
+  and `phiTwo`.
+- [x] Factor `Psi(X,y)` exactly as the saddle exponential times a cutoff
+  expectation and prove that expectation lies in `[0,1]`.
+- [x] Prove the critical saddle asymptotic equivalent to the explicit
+  Gaussian local-limit target for the tilted cutoff factor.
+- [ ] Prove that Gaussian local-limit target uniformly in the critical
+  smooth-number regime.
+
+## Prime-equidistribution 3.73
+
+- [x] Realize the tilted smooth-number masses as a probability measure on
+  logarithmic size.
+- [x] Prove the exact absolutely convergent characteristic-function series,
+  its value at zero, and its unit norm bound.
+- [x] Identify the exact saddle center and variance from the log-partition
+  derivatives.
+- [x] Construct the centered variance-normalized saddle characteristic
+  function and prove its explicit Fourier-series formula.
+- [ ] Prove its Gaussian convergence with the uniform estimates required by
+  the cutoff local-limit theorem.
+
+## Prime-equidistribution 3.74
+
+- [x] Prove absolute summability and the finite-prime Euler product for the
+  complex smooth Fourier Dirichlet series.
+- [x] Normalize that product to the literal local characteristic factor
+  `(1-p^(-sigma))/(1-p^(-sigma) exp(i t log p))`.
+- [x] Prove each local factor has norm at most one.
+- [x] Prove the exact local and global squared-norm contraction products with
+  oscillatory loss `1-cos(t log p)`.
+- [ ] Establish the small-, intermediate-, and large-frequency estimates and
+  complete local-limit inversion.
+
+## Prime-equidistribution 3.75
+
+- [x] Convert `1-cos(theta)` into a quadratic loss on the principal period.
+- [x] Prove a prime-local Gaussian exponential bound on the central window.
+- [x] Identify its coefficient exactly with the corresponding `phiTwo`
+  summand and multiply the local estimates.
+- [x] Derive the universal variance-normalized Gaussian envelope from one
+  explicit source-scale frequency condition.
+- [ ] Prove an expanding normalized window satisfies that condition and
+  control the complementary frequencies needed for inversion.
+
+## Prime-equidistribution 3.76
+
+- [x] Define the exact positive symmetric central radius.
+- [x] Prove interval membership is equivalent to the source-scale frequency
+  condition from release 3.75.
+- [x] Transfer both normalized Gaussian envelopes to the whole interval.
+- [x] Prove conditionally that `log y / sqrt(phiTwo) → 0` makes the radius
+  diverge and eventually captures every fixed frequency.
+- [ ] Prove that curvature-scale limit unconditionally in the critical regime.
+- [ ] Control complementary frequencies and complete Fourier inversion.
+
+## Prime-equidistribution 3.77
+
+- [x] Prove the second saddle sum is antitone in the positive parameter.
+- [x] Place the exact saddle above `1-8 log(u)/log(y)` in the critical regime.
+- [x] Combine that comparison with the exact secant identity to prove
+  `phiTwo/log(y)^2 ≥ u/(16 log u)` eventually.
+- [x] Prove normalized curvature tends to infinity and
+  `log(y)/sqrt(phiTwo) → 0`.
+- [x] Deduce unconditional divergence of the central radius and the eventual
+  fixed-frequency Gaussian envelope.
+- [ ] Prove complementary-frequency decay and complete Fourier inversion.
+
+## Prime-equidistribution 3.78
+
+- [x] Factor the normalized saddle characteristic exactly into centered
+  prime-local factors.
+- [x] Define the prime variance shares and prove they are nonnegative and sum
+  exactly to one.
+- [x] Prove the quantitative finite-product Gaussian transfer theorem.
+- [x] Bound every variance share by `20 log(y)^2/phiTwo` on the eventual
+  half-plane and prove this uniform bound tends to zero.
+- [x] Reduce fixed-frequency convergence to `exp(-t^2/2)` solely to the summed
+  prime-local quadratic Taylor remainder.
+- [x] Prove the explicit prime-local Taylor remainder estimate.
+- [ ] Prove complementary-frequency decay and complete Fourier inversion.
+
+## Prime-equidistribution 3.79
+
+- [x] Prove the exact centered first and second geometric moments and a
+  uniform summable third absolute centered moment bound.
+- [x] Prove a global cubic Taylor remainder for the pure-imaginary
+  exponential and transfer it to the centered geometric characteristic.
+- [x] Identify that characteristic exactly with the centered prime-local
+  saddle Euler factor.
+- [x] Bound the summed local Taylor error by
+  `16000 |t|^3 log(y)/sqrt(phiTwo)` and prove it tends to zero.
+- [x] Deduce fixed-frequency convergence of the normalized saddle
+  characteristic to `exp(-t^2/2)` in every critical smooth regime.
+- [ ] Prove complementary-frequency decay and complete Fourier inversion.
+
+## Prime-equidistribution 3.80
+
+- [x] Rewrite the saddle cutoff factor as a one-sided Laplace moment of the
+  centered variance-normalized logarithmic law.
+- [x] Identify the Gaussian prefactor with `sqrt(2*pi)` times the Laplace
+  rate and prove that rate tends to infinity.
+- [x] Prove the critical saddle asymptotic equivalent to convergence of the
+  explicit normalized Laplace target.
+- [ ] Establish the complementary-frequency bounds needed to control that
+  shrinking-scale target and complete inversion.
+
+## Prime-equidistribution 3.81
+
+- [x] Define the exact normalized Laplace/Perron kernel
+  `lambda/(lambda-i*t)` on the centered characteristic scale.
+- [x] Restrict the characteristic-function integrand to the explicit
+  expanding central interval and prove strong measurability.
+- [x] Dominate that integrand uniformly by the integrable Gaussian
+  `exp(-t^2/pi^2)`.
+- [x] Prove pointwise convergence of the exact kernel-weighted integrand to
+  `exp(-t^2/2)` and evaluate its integral as `sqrt(2*pi)`.
+- [x] Deduce that the normalized central-frequency contribution to the
+  one-sided Laplace target tends to one.
+- [ ] Bound the complementary Perron/truncation contribution and identify
+  the truncated contour integral with the literal cutoff moment.
+
+## Prime-equidistribution 3.82
+
+- [x] Define the exact central Perron height on the original vertical-line
+  frequency scale.
+- [x] Define the normalized source integrand using the twisted smooth
+  Dirichlet series, phase `exp(i*t*log X)`, and kernel
+  `sigma/(sigma+i*t)`.
+- [x] Prove pointwise equality with the centered characteristic and corrected
+  Laplace kernel at frequency `-t*sqrt(phiTwo)`.
+- [x] Prove the exact standard-deviation substitution from the vertical line
+  to the normalized central interval.
+- [x] Identify the release-3.81 normalized central contribution exactly with
+  this source-facing Perron-line integral.
+- [ ] Extend the finite-height line to a sharp cutoff formula and prove its
+  complementary-frequency/truncation error is negligible.
+
+## Prime-equidistribution 3.83
+
+- [x] Pass the absolutely convergent smooth Dirichlet series through every
+  finite vertical interval.
+- [x] Identify the normalized line with the sum of frozen sharp-Perron
+  kernels.
+- [x] Prove the inclusive smooth cutoff series equals `psiNat X y`.
+- [x] Express the Perron error as a summable kernel-minus-cutoff series.
+- [x] Transfer the strict lower/upper logarithmic bounds and the uniform
+  `3/2` endpoint bound.
+- [ ] Aggregate these bounds at the saddle height and prove the complementary
+  line negligible on the Gaussian main-term scale.
+
+## Prime-equidistribution 3.84
+
+- [x] Prove the scalar symmetric sharp-Perron limits below, at, and above the
+  endpoint, including the exact half-weight at equality.
+- [x] Define the half-weighted smooth cutoff and its explicit endpoint
+  correction.
+- [x] Prove its full smooth sum is `psiNat X y` minus that correction and
+  bound the correction norm by `1/2`.
+- [x] Construct a summable height-independent envelope for every height at
+  least one.
+- [x] Apply Tannery's theorem to the complete smooth sharp-Perron series.
+- [ ] Prove the finite saddle-height noncentral line negligible on the
+  Gaussian main-term scale.
+
+## Prime-equidistribution 3.85
+
+- [x] Normalize the complete finite Perron line by the exact saddle main term.
+- [x] Identify that line with the full sharp-kernel sum divided by the same
+  main term.
+- [x] Express the complementary line exactly as the two integrals outside the
+  central Perron height.
+- [x] Identify its infinite-height limit with the endpoint-corrected saddle
+  ratio minus the central Gaussian contribution.
+- [x] Prove critical corrected-ratio convergence is equivalent to vanishing of
+  the named infinite complement.
+- [x] Bound the normalized endpoint correction by `1/(2*mainTerm)`.
+- [ ] Prove main-term divergence and complementary-line decay in every
+  critical regime.
+
+## Prime-equidistribution 3.86
+
+- [x] Prove `phiTwo <= 7*log(y)*phiOne` uniformly for `sigma >= 1/2`.
+- [x] Specialize this to `phiTwo <= 7*log(y)*log(X)` at the exact saddle.
+- [x] Prove the explicit lower bound
+  `sqrt(X)/(sqrt(14*pi)*log(X)) <= smoothSaddleMainTerm`.
+- [x] Prove the saddle main term tends to infinity in every critical regime.
+- [x] Prove the normalized endpoint correction tends to zero.
+- [x] Identify the original critical saddle asymptotic exactly with decay of
+  `smoothSaddleInfiniteComplementaryPerronLine`.
+- [ ] Prove that complementary Perron line tends to zero in every critical
+  regime.
+
+## Prime-equidistribution 3.87
+
+- [x] Extend prime-local contraction to the full range `|t log p| <= pi`.
+- [x] Multiply the local estimates into a normalized Gaussian envelope on
+  `|t|*log(y)/standardDeviation <= pi`.
+- [x] Define the annulus between the central and full principal-phase radii.
+- [x] Prove its integrand is uniformly dominated by an integrable Gaussian.
+- [x] Prove its full integral tends to zero in every critical regime.
+- [ ] Control the complementary Perron line beyond physical height
+  `pi/log(y)`.
+
+## Prime-equidistribution 3.88
+
+- [x] Define the physical Perron height corresponding to the wide radius.
+- [x] Prove that height is exactly `pi/log(y)`.
+- [x] Convert both signed physical annular intervals under the exact
+  standard-deviation substitution.
+- [x] Identify the normalized physical annular contribution with the
+  release-3.87 Fourier integral.
+- [x] Prove that contribution tends to zero in every critical regime.
+- [ ] Prove decay of the two outer tails beyond `|t| = pi/log(y)`.
+
+## Prime-equidistribution 3.89
+
+- [x] Define the finite normalized outer Perron line beyond `pi/log(y)`.
+- [x] Decompose the complementary line as annulus plus outer line.
+- [x] Define and identify the infinite-height outer Perron object.
+- [x] Prove outer-line decay is equivalent to complementary-line decay in
+  every critical regime.
+- [x] Restate the complete critical saddle asymptotic using only the named
+  infinite outer line.
+- [ ] Prove `smoothSaddleInfiniteOuterPerronLine -> 0` in every critical
+  regime.
+
+## Prime-equidistribution 3.90
+
+- [x] Define the exact prime-local and aggregate outer phase losses.
+- [x] Prove their nonnegativity and symmetry in frequency.
+- [x] Establish a phase-unrestricted exponential contraction for every
+  normalized prime Euler factor.
+- [x] Multiply these estimates over the complete source-prime product.
+- [x] Bound the literal physical Perron integrand by
+  `exp(-smoothSaddleCosineLoss/96)`.
+- [ ] Prove a uniform lower bound for `smoothSaddleCosineLoss` sufficient to
+  integrate the outer tails.
+
+## Prime-equidistribution 3.91
+
+- [x] Derive a cardinality lower bound for the top dyadic prime block from
+  the compiled Chebyshev–PNT reciprocal-mass estimate.
+- [x] Place all top-block phases in the cosine-negative range on the first
+  outer shell.
+- [x] Prove
+  `y^(-sigma)*y/(16*log(y)) <= smoothSaddleCosineLoss` on that shell.
+- [ ] Extend quantitative loss bounds across all later outer shells.
+- [ ] Integrate those bounds and pass to the infinite outer Perron line.
+
+## Prime-equidistribution 3.92
+
+- [x] Define the adaptive scale `ceil(exp(pi/t))` and prove its sharp ceiling
+  and logarithm bounds.
+- [x] Derive `N(t) <= y` from the outer-frequency boundary and place the
+  adaptive block in the cosine-negative phase window.
+- [x] Enlarge the qualitative Chebyshev–PNT threshold and discharge the
+  dyadic half-block logarithmic-width condition.
+- [x] Prove the adaptive weighted cosine-loss lower bound on the controlled
+  small-frequency range.
+- [ ] Obtain uniform loss for the remaining outer frequencies.
+- [ ] Integrate the full bound and pass to the infinite outer Perron line.
+
+## Prime-equidistribution 3.93
+
+- [x] Keep every coarse CEP dyadic block inside the first-shell
+  negative-cosine phase window.
+- [x] Convert the accumulated reciprocal mass into a weighted cosine-loss
+  lower bound.
+- [x] Use the exact saddle equation and cutoff displacement to obtain a named
+  loss scale comparable from below to `u/log(u)`.
+- [x] Prove that scale diverges and uniformly bounds the physical Perron
+  integrand on the first shell.
+- [x] Absorb the normalization and prove the first-shell integral tends to
+  zero.
+- [ ] Extend accumulated loss to later outer-frequency ranges.
+
+## Prime-equidistribution 3.94
+
+- [x] Define the exact symmetric normalized first outer-shell Perron
+  contribution.
+- [x] Bound both physical interval integrals from a uniform absolute-frequency
+  envelope.
+- [x] Extend the release-3.93 positive-frequency envelope to negative
+  frequencies by cosine-loss symmetry.
+- [x] Prove
+  `standardDeviation/log(y) <= sqrt(7*u)` from the curvature upper bound.
+- [x] Prove the generic decay
+  `sqrt(u)*exp(-c*u/log(u)) -> 0` and deduce first-shell vanishing.
+- [x] Extend accumulated phase loss beyond `4*pi/(3*log(y))`.
+- [ ] Assemble all later shells and prove
+  `smoothSaddleInfiniteOuterPerronLine -> 0`.
+
+## Prime-equidistribution 3.95
+
+- [x] Sharpen the accumulated-alphabet cosine window to
+  `3*pi/(2*log(y))`.
+- [x] Define a reusable exact symmetric Perron-shell contribution.
+- [x] Prove its norm bound from a uniform absolute-frequency envelope.
+- [x] Define and integrate the adjacent band from `4*pi/(3*log(y))` to
+  `3*pi/(2*log(y))`.
+- [x] Prove that adjacent normalized contribution tends to zero in every
+  critical regime.
+- [ ] Recover divergent accumulated loss beyond `3*pi/(2*log(y))`.
+- [ ] Pass all remaining bands to the infinite outer Perron line.
+
+## Prime-equidistribution 3.96
+
+- [x] Define the natural square-root prime scale.
+- [x] Prove its logarithm lies between `2/5*log(y)` and `1/2*log(y)` on the
+  required tail.
+- [x] Put the retained CEP alphabet above `1/3*log(y)`.
+- [x] Place all retained phases in the nonpositive-cosine window on
+  `[3*pi/(2*log(y)), 3*pi/log(y)]`.
+- [x] Prove the accumulated square-root-alphabet cosine-loss lower bound.
+- [x] Verify its cofactor-range hypotheses in every critical regime.
+- [ ] Convert the explicit second-shell loss to a divergent Rankin-ratio
+  scale and integrate the normalized shell.
+- [ ] Extend coverage beyond `3*pi/log(y)`.
+
+## Prime-equidistribution 3.97
+
+- [x] Compare the square-root-alphabet cofactor power with a positive
+  `2/5` power of the Rankin ratio.
+- [x] Define the second-shell loss scale and prove that it tends to infinity
+  in every critical regime.
+- [x] Prove that its exponential envelope absorbs the `sqrt(u)` saddle
+  normalization.
+- [x] Extend the positive-frequency loss to both signs by cosine-loss
+  symmetry.
+- [x] Define and integrate the exact symmetric shell from
+  `3*pi/(2*log(y))` through `3*pi/log(y)`.
+- [x] Prove that normalized second-shell contribution tends to zero.
+- [ ] Recover divergent accumulated loss beyond `3*pi/log(y)`.
+- [ ] Assemble all remaining bands into the infinite outer Perron line.
+
+## Prime-equidistribution 4.10
+
+- [x] Prove every fixed finite indexed-shell sum tends to zero.
+- [x] Diagonalize a norm bound for the complete prefix rather than its
+  coordinates separately.
+- [x] Retain all shellwise cosine-loss assertions on the selected prefix.
+- [x] Obtain a depth tending to infinity whose moving prefix vanishes.
+- [ ] Telescope the finite sum into one contiguous physical Perron segment.
+- [ ] Control the infinite line beyond the moving terminal height.
+
+## Prime-equidistribution 4.11
+
+- [x] Prove exact addition of adjacent normalized symmetric Perron shells.
+- [x] Telescope every finite indexed prefix to one contiguous segment.
+- [x] Transfer the vanishing slow diagonal to that physical segment.
+- [x] Make the terminal shell index tend to infinity.
+- [ ] Prove the post-terminal outer Perron line tends to zero.
+- [ ] Feed the completed outer-line estimate into the sharp saddle asymptotic.
+
+## Prime-equidistribution 4.05
+
+- [x] Characterize survival through `k` iterated natural square roots by
+  `a^(2^k) <= y`.
+- [x] Prove eventual terminal noncollapse at every fixed depth.
+- [x] Prove the indexed logarithmic rounding criterion eventually at every
+  fixed depth.
+- [x] Package both ideal scale bounds for each fixed finite shell prefix.
+- [ ] Choose one admissible depth tending to infinity.
+- [ ] Sum its indexed shell envelopes and control the residual tail.
+
+## Prime-equidistribution 4.06
+
+- [x] Choose a positive fixed exponent adapted to each shell index.
+- [x] Prove the critical Rankin ratio is eventually at most the square root
+  of the corresponding iterated prime scale.
+- [x] Discharge the CEP/PNT/saddle hypotheses at every fixed index `k >= 2`.
+- [x] Obtain the full accumulated cosine loss throughout each fixed shell.
+- [ ] Make the estimate uniform along a depth tending to infinity.
+- [ ] Sum the indexed shell integrals and close the residual outer tail.
+
+## Prime-equidistribution 4.07
+
+- [x] Package the full pointwise assertion for one indexed shell.
+- [x] Intersect the estimates over every fixed finite index prefix.
+- [x] Select a single shell depth tending to infinity by countable
+  diagonalization.
+- [x] Obtain simultaneous loss bounds for all `2 <= k <= K(n)`.
+- [ ] Derive a uniform normalized integral envelope for this moving family.
+- [ ] Sum the controlled prefix and bound the post-terminal tail.
+
+## Prime-equidistribution 4.08
+
+- [x] Define the positive indexed exponent `(4/5)*2^(-k)`.
+- [x] Transfer its Rankin-ratio power to the iterated prime scale at the
+  saddle.
+- [x] Absorb the CEP cofactor cutoff with the universal displacement penalty.
+- [x] Prove the explicit loss scale bounds every fixed indexed shell.
+- [x] Prove this loss scale tends to infinity for every fixed index.
+- [ ] Integrate the fixed-index envelope and diagonalize its finite sum.
+
+## Prime-equidistribution 4.09
+
+- [x] Prove positive-power exponential decay absorbs `sqrt(u)`.
+- [x] Extend the indexed loss envelope to both frequency signs.
+- [x] Compute the exact width of every indexed symmetric shell.
+- [x] Prove each fixed indexed Perron contribution tends to zero.
+- [ ] Select a growing depth whose complete finite contribution sum vanishes.
+- [ ] Control the infinite Perron tail beyond that terminal height.
+
+## Prime-equidistribution 4.12
+
+- [x] Concatenate the first, extended, and second outer pieces into one
+  pre-indexed Perron segment.
+- [x] Prove the complete pre-indexed segment tends to zero.
+- [x] Define the exact infinite remainder after the pre-indexed and moving
+  indexed segments.
+- [x] Prove its decay is equivalent to decay of the infinite outer line.
+- [x] Reduce the critical smooth-saddle asymptotic to this named remainder.
+- [ ] Prove the post-terminal remainder tends to zero by a second
+  high-frequency mechanism.
+- [ ] Feed the resulting saddle asymptotic into the unconditional Theorem
+  1.7 endpoint.
+
+## Prime-equidistribution 4.13
+
+- [x] Convert terminal iterated-scale survival to `4^(2^k) <= y`.
+- [x] Bound every admissible indexed physical endpoint by
+  `3*pi/(2*log 4)`.
+- [x] Prove an eventually admissible growing depth has bounded height.
+- [x] Prove such a height cannot tend to infinity.
+- [ ] Develop a non-indexed high-frequency estimate for the post-terminal
+  Perron remainder.
+
+## Prime-equidistribution 4.14
+
+- [x] Define the exact HT loss `u*t^2/((1-sigma)^2+t^2)`.
+- [x] Prove nonnegativity, sign symmetry, and radial monotonicity.
+- [x] State HT Lemma 8(ii) as a finite-range characteristic contract.
+- [x] Transfer that contract to the normalized physical Perron integrand.
+- [x] Integrate a finite symmetric shell at its left-endpoint loss.
+- [ ] Prove the minor-arc contract from the Mangoldt cosine sum.
+- [ ] Formalize the smoothed short-interval and finite-truncation estimates.
+
+## Prime-equidistribution 4.15
+
+- [x] Define the finite HT complex Mangoldt transform.
+- [x] Define its weighted Mangoldt cosine sum.
+- [x] Prove the exact real-part subtraction identity.
+- [x] Define the source-shaped complex and cosine main terms.
+- [x] Prove two complex errors `<=E` give cosine error `<=2E`.
+- [ ] Prove the uniform complex transform approximation by Abel–PNT.
+
+## Prime-equidistribution 4.16
+
+- [x] Define the exact HT ceiling `exp((log y)^(3/2-epsilon))`.
+- [x] Define the exact equation-(3.10) transform-error majorant.
+- [x] State the full uniform HT Lemma 6 transform proposition.
+- [x] Compute the main term at frequency zero, its real part, and its norm.
+- [x] Compute the Cartesian weighted-cosine main term.
+- [x] Derive the cosine corollary from the uniform transform proposition.
+- [ ] Prove the proposition by shifted Perron inversion and the zero-free region.
+
+## Prime-equidistribution 4.17
+
+- [x] Split the HT Mangoldt cosine sum into prime and non-prime parts.
+- [x] Identify the prime part using `Λ(p)=log p`.
+- [x] Bound the prime part by `log y` times the Euler-product cosine loss.
+- [x] Bound the prime-power cosine tail by twice its nonoscillatory mass.
+- [x] Derive the explicit cosine-loss lower bound from HT Lemma 6.
+- [ ] Prove the source-strength HT Lemma 5 bound for the remainder.
+- [ ] Lower-bound the elementary cosine main term in the Lemma 8 range.
+
+## Prime-equidistribution 4.00
+
+- [x] Define the third iterated natural square-root prime scale.
+- [x] Bound its logarithm between `1/9*log(y)` and `1/8*log(y)`.
+- [x] Put the retained CEP alphabet above `1/12*log(y)`.
+- [x] Prove unit cosine loss on `[6*pi/log(y), 12*pi/log(y)]`.
+- [x] Prove the accumulated eighth-root-alphabet loss.
+- [x] Verify its critical-regime cofactor range.
+- [ ] Convert the loss to a divergent Rankin-ratio scale and integrate it.
+- [ ] Abstract and aggregate the continuing shell family.
+
+## Prime-equidistribution 4.01
+
+- [x] Convert the fourth-shell loss to `u^(1/9)/log(u)`.
+- [x] Prove divergence and exponential saddle-normalization absorption.
+- [x] Establish the signed physical envelope.
+- [x] Integrate the exact shell through `12*pi/log(y)`.
+- [ ] Abstract and aggregate all subsequent shells.
+- [ ] Pass the aggregate to the infinite outer Perron line.
+
+## Prime-equidistribution 4.02
+
+- [x] Define arbitrary iterated natural square-root prime scales.
+- [x] Prove recursive lower and upper logarithmic bounds.
+- [x] Solve both envelopes in closed form.
+- [x] Recover the existing three rescaled alphabets exactly.
+- [x] Define indexed physical upper heights and prove exact doubling.
+- [ ] Prove uniform indexed phase loss and shell envelopes.
+- [ ] Sum the indexed shells and identify the infinite outer line.
+
+## Prime-equidistribution 4.03
+
+- [x] Prove the indexed endpoint/support coefficient identities.
+- [x] Derive retained CEP support from a uniform `4/5` scale bound.
+- [x] Prove the exact indexed nonpositive-cosine phase window.
+- [x] Prove the generic accumulated indexed-shell loss.
+- [ ] Establish the required scale hypotheses uniformly over a growing range.
+- [ ] Sum the normalized indexed shells and pass to infinite height.
+
+## Prime-equidistribution 4.04
+
+- [x] Prove iterated prime scales are antitone in the index.
+- [x] Reduce all intermediate largeness hypotheses to terminal noncollapse.
+- [x] Convert the closed-form rounding error to a four-fifths scale bound.
+- [x] Package the explicit condition `10*(2^k-1)*log(2) <= log(y)`.
+- [ ] Choose a growing terminal index satisfying both range conditions.
+- [ ] Sum its indexed shell envelopes and control the residual tail.
+
+## Prime-equidistribution 3.98
+
+- [x] Define the twice-iterated natural square-root prime scale.
+- [x] Prove its logarithm lies between `1/5*log(y)` and `1/4*log(y)` on an
+  explicit tail.
+- [x] Put the retained CEP alphabet above `1/6*log(y)`.
+- [x] Place all retained phases in the nonpositive-cosine window on
+  `[3*pi/log(y), 6*pi/log(y)]`.
+- [x] Prove the accumulated fourth-root-alphabet cosine-loss lower bound.
+- [x] Verify its cofactor-range hypotheses in every critical regime.
+- [ ] Convert the explicit third-shell loss to a divergent Rankin-ratio
+  scale and integrate the normalized shell.
+- [ ] Extend coverage beyond `6*pi/log(y)`.
+
+## Prime-equidistribution 3.99
+
+- [x] Compare the fourth-root cofactor power with a `1/5` power of the
+  Rankin ratio.
+- [x] Prove the resulting `u^(1/5)/log(u)` loss tends to infinity.
+- [x] Prove its exponential envelope absorbs the saddle normalization.
+- [x] Extend the envelope to both frequency signs.
+- [x] Integrate the exact symmetric shell from `3*pi/log(y)` through
+  `6*pi/log(y)`.
+- [x] Prove the normalized third-shell contribution tends to zero.
+- [ ] Recover uniform loss beyond `6*pi/log(y)`.
+- [ ] Assemble all remaining bands into the infinite outer Perron line.

@@ -107,7 +107,11 @@ boundary.
   in Tao's Proposition 2.1. The elementary lattice-count lower bound is
   equation (3.3), journal page 282 (PDF page 16). The polylogarithmic upper
   estimate and its combination with (3.3) occur on journal page 291 (PDF page
-  25). Tao additionally cites equation (3.24) for multiplicative stability.
+  25). The Perron representation is equation (3.22), journal page 292 (PDF
+  page 25); the saddle calculation on the central segment
+  `|t| <= 1/log y` and its resulting asymptotic are equation (3.23), journal
+  page 293 (PDF page 26). Tao additionally cites equation (3.24) for
+  multiplicative stability.
 
 This pin records the exact cited survey and proof locators. The PDF is source
 evidence, not a Lean dependency or a substitute for formalizing the stated
@@ -205,3 +209,37 @@ dependency for this project.
 The local filenames and SHA-256 values are authoritative in
 `SHA256SUMS.txt`. These third-party artifacts retain their original rights and
 are not covered by the repository's MIT-0 grant.
+
+Release 4.12 records the precise formal status of Granville's equations
+(3.22)–(3.23): the survey states that the contour outside the central segment
+is a small error but does not provide the high-frequency proof there. The
+local development now identifies that missing assertion exactly as decay of
+`smoothSaddlePostTerminalPerronTail`; no source theorem has been silently
+imported for it.
+
+Release 4.13 further records that the local CEP/PNT shell implementation has
+a proved absolute physical-height ceiling whenever its terminal prime scale
+survives. This is an internal limitation theorem, not a claim extracted from
+Granville's survey.
+
+Release 4.14 uses the corrected author-hosted Hildebrand--Tenenbaum 1986
+paper as a proof locator: Lemma 8(ii), equation (3.16), supplies the global
+minor-arc exponent, while Lemmas 9–10 supply the smoothed short-interval and
+finite Perron-truncation steps. These results are being reproduced locally;
+they are not imported as axioms.
+
+Release 4.15 reproduces the algebraic corollary immediately following HT
+Lemma 6: subtract the transforms at `0` and `t` and take real parts. The
+uniform complex transform estimate itself remains to be proved locally.
+
+Release 4.16 pins the complete statement of HT Lemma 6 to equation (3.10):
+the ceiling is `Y(epsilon)=exp((log y)^(3/2-epsilon))` and the error is the
+source's `beta^(-1)` majorant. These quantities and the implied cosine
+corollary are local definitions and theorems; the cited contour argument is
+not imported as an axiom.
+
+Release 4.17 follows the proof of HT Lemma 8(ii) on page 276: the Mangoldt
+cosine sum is divided by `log y`, its prime part is compared with the Euler
+product loss, and the higher-prime-power part is isolated. The local bridge
+is proved exactly; the paper's preceding Lemma 5 remains the provenance for
+the required sharp remainder estimate.

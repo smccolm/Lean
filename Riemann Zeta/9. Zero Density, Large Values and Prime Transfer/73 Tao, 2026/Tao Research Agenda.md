@@ -2858,3 +2858,535 @@ public-endpoint analytic boundaries are independent: the sharp critical
 smooth-number dilation asymptotic and the prime finite-field Weil input for
 Theorem 1.7, and Proposition 2.3(ii)/Baker--Harman--Pintz for Theorems 1.9 and
 1.10.
+
+## Tilted saddle distribution (release 3.72)
+
+`SmoothNumberSaddleTilt` now constructs the normalized tilted mass on the
+positive `y`-smooth integers and proves that its total mass is one. Its
+log-partition function is exactly `phiZero`; its first and second derivatives
+are `-phiOne` and `phiTwo`. The finite count has the exact factorization
+`Psi(X,y) = exp(phase) * cutoffFactor`, with `cutoffFactor` in `[0,1]`.
+
+`SmoothNumberSaddleLocalLimit` proves that the existing critical saddle
+asymptotic is equivalent to the explicit local-limit target
+`cutoffFactor * saddleGaussianScale -> 1`. Thus the smooth-number side of
+Theorem 1.7 is now reduced to a concrete Gaussian local-limit estimate for a
+kernel-normalized distribution; that estimate remains open, as does analytic
+Burgess.
+
+## Probability characteristic function (release 3.73)
+
+`SmoothNumberSaddleProbability` realizes the tilted weights as a probability
+measure on logarithmic size and evaluates its characteristic function as the
+absolutely convergent series of those masses. At the saddle, the existing
+log-partition derivative identities give exact center `log X` and positive
+variance `phiTwo`. The centered, variance-normalized characteristic function
+now has a checked Fourier expansion with atoms
+`(log n - log X) / sqrt(phiTwo)`.
+
+The next smooth-number task is no longer to construct the probabilistic
+object: it is to bound this explicit series on small, intermediate, and large
+frequencies and feed those estimates through a local-limit inversion theorem.
+
+## Prime-local Fourier product (release 3.74)
+
+`SmoothNumberSaddleEulerCharacteristic` now provides the exact finite Euler
+product for the complex smooth Dirichlet series and hence for the tilted
+characteristic function. The local normalized factor is precisely
+`(1-a)/(1-a exp(i theta))`, with `a=p^(-sigma)` and `theta=t log p`.
+
+Its squared norm is formally reduced to
+`(1-a)^2 / ((1-a)^2 + 2a(1-cos theta))`, and these factors multiply exactly
+for the centered variance-normalized saddle law. The next analytic step is to
+turn elementary lower bounds for `1-cos theta` into uniform product decay,
+with a Taylor expansion on the central frequency window and an integrable
+minor-arc bound outside it.
+
+## Central Gaussian envelope (release 3.75)
+
+`SmoothNumberSaddleFrequency` proves the first uniform estimate on the exact
+prime product. The principal-period inequality
+`1-cos(theta) ≥ 2theta^2/pi^2` supplies a rational local contraction, and a
+central-window estimate converts this to a Gaussian exponential. The exponent
+coefficient is proved equal to `smoothSaddleSecondPrimeTerm`, so the global
+coefficient is exactly `phiTwo`, not a comparison surrogate.
+
+At the saddle, normalization by `sqrt(phiTwo)` gives
+`|characteristic(t)| ≤ exp(-t^2/pi^2)` whenever
+`|t| log y / sqrt(phiTwo)` is below the explicit two-prime margin. The next
+step is an asymptotic lower bound on `phiTwo` strong enough to make this window
+grow, followed by a minor-arc product estimate.
+
+## Explicit central radius (release 3.76)
+
+`SmoothNumberSaddleCentralWindow` defines the exact radius
+`pi/2*(1-2^(-sigma))*sqrt(phiTwo)/log y`. It proves positivity, exact
+equivalence between `|t|` lying below this radius and the local phase condition,
+and the squared and unsquared Gaussian envelopes on the resulting interval.
+
+The asymptotic interface is now precise: the already proved saddle limit
+`sigma → 1`, together with `log y/sqrt(phiTwo) → 0`, implies that the radius
+tends to infinity. Thus the next central-frequency task is a curvature lower
+bound strong enough to prove that ratio limit. Minor-arc product decay and
+Fourier inversion follow as separate tasks.
+
+## Critical curvature lower bound (release 3.77)
+
+The central-radius growth problem is complete. At the moving comparison point
+`1-8 log(u)/log(y)`, the endpoint prime-counting bound makes `phiOne` exceed
+`log X`, so this point lies below the exact saddle. The second saddle sum is
+proved antitone, and the exact secant identity between the saddle and one
+therefore gives
+`phiTwo/log(y)^2 ≥ u/(16 log u)` eventually.
+
+It follows that `log(y)/sqrt(phiTwo) → 0`, the explicit central radius tends
+to infinity, and every fixed normalized frequency is eventually governed by
+the universal Gaussian envelope. The next tasks are product decay on the
+complementary frequency ranges and a checked Fourier inversion argument.
+
+## Gaussian finite-product transfer (release 3.78)
+
+The global fixed-frequency central-limit step is now compiled. The exact
+center `log X` distributes over the prime-local means, so the normalized
+characteristic is a finite product of centered prime factors. Their curvature
+shares are nonnegative and sum to one. A telescoping contraction estimate,
+combined with `|exp(-x)-(1-x)| <= x^2`, proves convergence to the Gaussian
+product whenever the summed local quadratic remainder vanishes and the
+largest share tends to zero.
+
+The latter condition is unconditional: on `sigma >= 1/2`, one prime
+contributes at most `20 log(y)^2`, hence its normalized share is at most
+`20 log(y)^2/phiTwo -> 0`. The immediate next task is therefore the explicit
+third-order estimate for the centered geometric prime factor. After that,
+complementary-frequency decay and Fourier inversion remain.
+
+## Prime-local Taylor closure (release 3.79)
+
+The centered geometric exponent law now has exact mean zero and variance
+`a/(1-a)^2`, together with a uniform third absolute centered moment bound
+`<= 4000a` on `a <= 4/5`. A global cubic bound for the pure-imaginary
+exponential gives local quadratic error `<= 16000 |u|^3 a`.
+
+The geometric characteristic is proved equal to the centered saddle Euler
+factor. Summing over source primes costs at most
+`16000 |t|^3 log(y)/sqrt(phiTwo)`, which vanishes in the critical regime.
+Thus fixed-frequency convergence to the standard Gaussian characteristic is
+unconditional. The next analytic task is uniform decay outside the expanding
+central range, followed by a checked Fourier inversion/local-limit argument.
+
+## One-sided Laplace target (release 3.80)
+
+The cutoff factor is now exactly a one-sided Laplace moment of the centered
+normalized logarithmic law. Its rate is `sigma*sqrt(phiTwo)`, the full
+Gaussian prefactor is `sqrt(2*pi)` times that rate, and the rate diverges in
+the critical regime. The critical saddle theorem is equivalent to this
+normalized moment tending to one. The remaining task is thus a genuine
+shrinking-scale local limit: complementary-frequency estimates must be strong
+enough to justify inversion at this diverging rate.
+
+## Central saddle integral (release 3.81)
+
+`SmoothNumberSaddleCentralIntegral.lean` now carries out the complete
+central-frequency limit. The exact normalized kernel
+`lambda/(lambda-i*t)` has norm at
+most one and tends to one at every fixed frequency. After restriction to the
+explicit expanding central interval, the full integrand is dominated by the
+integrable envelope `exp(-t^2/pi^2)` and converges pointwise to the standard
+Gaussian characteristic function. Dominated convergence and the checked
+Gaussian integral give mass `sqrt(2*pi)`; after normalization, the central
+contribution tends to one.
+
+The next analytic task is the part Granville summarizes as the small error
+outside the segment `|t| <= 1/log y`: formalize a smooth-number Perron
+truncation at the exact saddle, identify its normalized central segment with
+this integral, and prove the complementary error is negligible.
+
+## Exact normalized Perron line (release 3.82)
+
+`SmoothNumberSaddlePerronLine.lean` now matches the probability-side central
+integral to the source-side vertical line without an implicit Fourier
+convention. It proves the exact identity
+between the twisted Dirichlet-series integrand with
+`sigma/(sigma+i*t)` and the centered characteristic/Laplace integrand at
+frequency `-t*sqrt(phiTwo)`. The central Perron height rescales exactly to the
+explicit radius, and the interval change of variables identifies the two
+normalized central contributions.
+
+The next task is no longer a normalization or sign issue. It is the genuine
+sharp Perron estimate: compare the complete finite-height vertical line with
+the literal smooth cutoff, then show the part outside the central height is
+negligible on the Gaussian main-term scale.
+
+## Smooth sharp-Perron cutoff (release 3.83)
+
+The finite-height comparison is now formalized. Absolute convergence passes
+the smooth Dirichlet series through the vertical integral, giving exactly the
+sum of frozen coefficient-free Perron kernels. The inclusive cutoff series is
+`psiNat`, so subtraction is a summable termwise kernel error.
+
+The immediate analytic task is to aggregate the inherited logarithmic bounds
+below and above `X`, retain the uniform endpoint estimate, and choose the
+height so both the cutoff error and frequencies outside the central segment
+are negligible after saddle normalization.
+
+## Symmetric Perron inversion limit (release 3.84)
+
+The infinite-height endpoint convention is now exact. Each kernel converges
+to the symmetric cutoff value, and a summable height-independent envelope
+permits passage through the full smooth-number sum. The resulting limit is
+`psiNat X y` minus the possible endpoint half-mass, with norm at most `1/2`.
+
+The next analytic target is therefore sharper than the former cutoff problem:
+at the finite saddle height, bound the portion of the vertical line outside
+the expanding central window by `o` of the Gaussian main term. Combined with
+the compiled central contribution, this will supply the critical smooth-number
+saddle asymptotic.
+
+## Complementary Perron interface (release 3.85)
+
+The full normalization and subtraction ledger is now closed. The normalized
+finite line is the full kernel sum over the saddle main term, and after
+removing the evaluated central interval the remainder is exactly the two
+vertical-line tails. Its height limit is the endpoint-corrected saddle ratio
+minus the central term, so critical corrected-ratio convergence is equivalent
+to decay of one named infinite complement.
+
+Two quantitative tasks remain: prove `smoothSaddleMainTerm` tends to infinity
+in every critical regime, disposing of the correction bounded by one half;
+and prove the complementary Perron line tends to zero using the finite Euler
+product away from the central frequency window.
+
+## Saddle main-term growth (release 3.86)
+
+The first of those two tasks is complete. A uniform comparison of the second
+and first saddle prime terms proves `phiTwo <= 7*log(y)*phiOne` on the critical
+half-plane. At the exact saddle this supplies a concrete
+`sqrt(X)/(sqrt(14*pi)*log(X))` lower bound for the Gaussian main term. The main
+term diverges in every critical regime, and the bounded endpoint disappears
+after normalization.
+
+The remaining smooth-number target is now singular and exact: prove
+`smoothSaddleInfiniteComplementaryPerronLine (X n) (y n) -> 0` for every
+critical regime. No endpoint, normalization, or main-term-growth side
+condition remains.
+
+## Wide-frequency annular decay (release 3.87)
+
+The prime-factor contraction now holds across the full principal phase range,
+not merely the local Taylor window. After variance normalization it supplies
+the integrable bound `exp(-t^2/(48*pi^2))` up to radius
+`pi*standardDeviation/log(y)`. Since the old central radius diverges, the
+indicator of the intervening annulus tends pointwise to zero; dominated
+convergence proves that annular contribution is negligible.
+
+The next target is the outer-frequency estimate beginning at physical height
+`pi/log(y)`. This is the only part of the named infinite complementary Perron
+line not covered by the central and wide-frequency integral theorems.
+
+## Physical principal-phase interface (release 3.88)
+
+The normalized annulus is now matched exactly to the source-side Perron
+contour. Its outer endpoint is physical height `pi/log(y)`, and the signed
+standard-deviation substitution proves that the normalized sum of the two
+intervening vertical-line integrals tends to zero.
+
+The remaining target is a direct estimate of the two outer tails starting at
+`pi/log(y)`, uniformly through the height limit defining
+`smoothSaddleInfiniteComplementaryPerronLine`.
+
+## Named outer-tail target (release 3.89)
+
+The two tails beyond `pi/log(y)` are now a literal finite Perron-line object,
+with an exact infinite-height limit. Algebraic interval splitting proves that
+the former complementary line is the already negligible annulus plus this
+outer line. Consequently every remaining formulation of the critical saddle
+asymptotic reduces to
+`smoothSaddleInfiniteOuterPerronLine (X n) (y n) -> 0`.
+
+The next work is genuinely analytic: obtain uniform finite-Euler-product
+decay or an equivalent oscillatory estimate on these nonprincipal tails.
+
+## Global phase-loss envelope (release 3.90)
+
+The exact Euler-factor modulus formula now yields a range-free contraction.
+After multiplication, both the tilted characteristic and the physical Perron
+integrand are controlled by the exponential of the explicit weighted cosine
+loss over primes. The estimate includes all resonant and nonresonant
+frequencies; no principal-cell hypothesis remains in the bound itself.
+
+The next analytic task is sharply isolated: lower-bound this cosine loss on
+suitable outer-frequency blocks, using prime distribution and phase
+variation, strongly enough to integrate through the Perron height limit.
+
+## First outer-frequency shell (release 3.91)
+
+The first block after the principal phase boundary is now quantitative. On
+`[pi/log(y), 4*pi/(3*log(y))]`, primes in `(y/2,y]` all lie in the
+cosine-negative half-circle. A reusable cardinality consequence of the
+Chebyshev–PNT dyadic-block estimate and monotonicity of `p^(-sigma)` produce
+the loss `y^(1-sigma)/(16*log(y))` in factored form.
+
+The next step is a shell construction that shifts the contributing prime
+band as `t` grows, followed by summation of the resulting integrable
+envelopes.
+
+## Adaptive outer-frequency shell (release 3.92)
+
+The contributing block now shifts with frequency at
+`N(t)=ceil(exp(pi/t))`. Ceiling control proves its lower and upper phase
+inequalities, the outer cutoff puts it below `y`, and a sufficiently large
+Chebyshev–PNT threshold supplies its prime population. The resulting bound
+is `N(t)^(1-sigma)/(16*log(N(t)))` in factored form.
+
+The next analytic step is to control the frequencies above this
+small-frequency regime, where one movable block gives only bounded loss, by
+combining multiple prime bands or a suitable phase-distribution estimate;
+the resulting bound must then be integrated uniformly to infinite height.
+
+## Accumulated first-shell loss (release 3.93)
+
+The first outer shell now uses every retained CEP dyadic block. The cutoff
+remains within an `exp(-16)` factor after raising to `1-sigma`, while the
+saddle equation supplies `y^(1-sigma) ≫ u`; combined with reciprocal mass
+`≫1/log(u)`, the cosine loss is `≫u/log(u)` and diverges. The corresponding
+Perron integrand has a uniform vanishing envelope.
+
+Next, absorb the saddle-standard-deviation prefactor to make this shell's
+normalized integral vanish, then reproduce an accumulating phase window for
+the later outer ranges.
+
+## Integrated first outer shell (release 3.94)
+
+The complete symmetric first-shell Perron contribution is now a named exact
+integral and tends to zero. Its total physical width contributes `1/log(y)`,
+curvature bounds the remaining standard-deviation factor by `sqrt(7*u)`, and
+the accumulated `exp(-c*u/log(u))` decay absorbs this square-root growth.
+
+The next analytic step is no longer integration of the first shell. It is to
+construct accumulated phase loss beyond `4*pi/(3*log(y))`, cover all later
+outer-frequency ranges, and pass the resulting estimates to
+`smoothSaddleInfiniteOuterPerronLine`.
+
+## Eighth-root fourth shell (release 4.00)
+
+The third iterated square-root alphabet now gives accumulated loss throughout
+the physical band from `6*pi/log(y)` to `12*pi/log(y)`. Its retained
+logarithmic support lies between exponents `1/12` and `1/8`.
+
+Next, convert this loss to a divergent Rankin-ratio power and integrate the
+fourth shell. The repeated construction should then be abstracted into an
+indexed family suitable for infinite outer-line assembly.
+
+## Integrated eighth-root shell (release 4.01)
+
+The fourth-shell loss is now the divergent scale `u^(1/9)/log(u)`, and its
+exact normalized symmetric contribution through `12*pi/log(y)` vanishes.
+The next step is an indexed shell construction and aggregate tail estimate.
+
+## Indexed shell infrastructure (release 4.02)
+
+All iterated square-root alphabets now share one recursive definition with
+closed-form logarithmic envelopes, and their physical endpoints form an
+exact doubling sequence. Next, prove a uniform indexed phase-loss theorem
+and sum the resulting normalized shell bounds.
+
+## Uniform indexed phase loss (release 4.03)
+
+The full CEP loss theorem now holds uniformly for any indexed shell whose
+iterated-root scale retains four fifths of its ideal logarithmic size. Next,
+verify that condition over a growing index range and sum the shell envelopes.
+
+## Indexed scale range (release 4.04)
+
+The four-fifths hypothesis now follows from terminal noncollapse and the
+explicit inequality `10*(2^k-1)*log(2) <= log(y)`. Next, construct a growing
+terminal index satisfying these conditions and estimate the residual tail.
+
+## Fourth-root third shell (release 3.98)
+
+The next resonant endpoint is crossed with the iterated square-root prime
+scale. Its retained CEP support lies between logarithmic exponents `1/6` and
+`1/4`, giving accumulated cosine loss throughout the complete physical band
+from `3*pi/log(y)` to `6*pi/log(y)`.
+
+Next, compare its cofactor power with a positive power of the Rankin ratio,
+prove exponential absorption of the saddle normalization, and integrate the
+third shell before iterating the construction further.
+
+## Integrated fourth-root shell (release 3.99)
+
+The third-shell loss is now a divergent `u^(1/5)/log(u)` scale. Its
+exponential absorbs the saddle prefactor, proving that the exact normalized
+symmetric contribution through physical height `6*pi/log(y)` tends to zero.
+
+Next, the rescaled-alphabet construction must be iterated or abstracted to
+cover all subsequent bands uniformly and pass their aggregate to
+`smoothSaddleInfiniteOuterPerronLine`.
+
+## Extended first-shell band (release 3.95)
+
+The accumulated CEP alphabet remains in the nonpositive-cosine window up to
+`3*pi/(2*log(y))`, not merely `4*pi/(3*log(y))`. The exact newly exposed
+symmetric band has been integrated with a reusable shell lemma, and its
+normalized contribution tends to zero.
+
+Next, move or repartition the prime alphabet after the phase reaches
+`3*pi/2`. The proof must recover divergent accumulated loss across the
+resulting resonant region and ultimately cover the entire infinite outer
+Perron line.
+
+## Square-root second shell (release 3.96)
+
+The first resonant boundary is now crossed by replacing the top alphabet with
+the full CEP alphabet below `floor(sqrt(y))`. Its exact logarithmic support
+keeps every selected phase in the negative-cosine half-circle through height
+`3*pi/log(y)`, and the critical regime satisfies the required PNT and cofactor
+range conditions. The resulting cosine loss is explicit on the whole second
+shell.
+
+Next, compare the square-root cofactor power with a positive power of the
+Rankin ratio, prove the resulting loss tends to infinity fast enough to absorb
+the saddle normalization, and integrate this second shell.
+
+## Integrated square-root second shell (release 3.97)
+
+The square-root-alphabet loss has now been converted to the divergent scale
+`u^(2/5)/log(u)`. Its exponential envelope absorbs the square-root saddle
+prefactor, so the exact normalized symmetric contribution through physical
+height `3*pi/log(y)` tends to zero in every critical regime.
+
+The next analytic step is to repartition the prime alphabet after this
+second resonant endpoint, obtain summable control over all subsequent
+frequency bands, and pass those bounds to
+`smoothSaddleInfiniteOuterPerronLine`.
+
+## Fixed-depth indexed admissibility (release 4.05)
+
+Every fixed number of iterated-root shells is now eventually available. The
+terminal scale survives exactly when `4^(2^k) <= y`, and the logarithmic
+rounding condition is eventually automatic for fixed `k`. The next task is
+genuinely diagonal: define an integer depth tending to infinity slowly enough
+that both inequalities hold pointwise, then obtain a uniform summable shell
+envelope through that depth and control the remaining infinite tail.
+
+## Fixed-index indexed loss (release 4.06)
+
+For each fixed `k >= 2`, the critical Rankin ratio now fits the CEP cofactor
+range and the full indexed cosine-loss theorem applies on the corresponding
+shell. The next proof must avoid merely intersecting infinitely many eventual
+sets: choose an explicit or slow diagonal depth, establish all range
+inequalities uniformly below it, convert each loss into an integrable
+normalized envelope, and sum the resulting finite family before treating the
+frequencies beyond its terminal endpoint.
+
+## Growing indexed diagonal (release 4.07)
+
+The slow depth selector now tends to infinity and controls all preceding
+indexed shells simultaneously. The next module should formulate an
+index-dependent lower envelope for the CEP cutoff power, convert the global
+Euler-product loss to a symmetric-shell norm estimate, and find a summable
+majorant uniform for `k <= K(n)`. Only after that finite moving sum vanishes
+can the terminal-height residual be attacked.
+
+## Explicit indexed loss scale (release 4.08)
+
+The fixed-index loss is now
+`exp(-16)*(u/(15 log 4))^((4/5)2^(-k))/(16 log 2 log u)` and diverges for
+every fixed `k`. Next combine its exponential with the indexed shell width
+and the `sqrt(u)` saddle normalization. Once every fixed contribution tends
+to zero, diagonalize a finite-prefix norm bound with a prescribed vanishing
+threshold; this avoids requiring a false uniform-in-all-`k` power estimate.
+
+## Fixed indexed shell integrals (release 4.09)
+
+Every fixed indexed shell contribution now tends to zero, with its exact
+doubling width accounted for. The next construction should apply the
+countable diagonal theorem to predicates asserting both analytic shell
+admissibility and a small bound on the norm of the finite prefix sum, for
+example `<=1/(K+1)`. Since each fixed finite sum tends to zero, the resulting
+moving sum will vanish automatically as `K(n)->infinity`.
+
+## Vanishing growing indexed prefix (release 4.10)
+
+The moving finite sum now vanishes at a depth tending to infinity, with all
+shellwise estimates retained. Next prove a finite telescoping lemma for the
+positive and negative interval integrals, including the common saddle
+normalization, so this sum becomes the symmetric Perron contribution from
+indexed height one to height `K`. Then compare its terminal truncation with
+the named infinite outer line; that final comparison is the remaining
+smooth-saddle tail problem.
+
+## Telescoped indexed segment (release 4.11)
+
+The indexed prefix is now exactly one contiguous symmetric Perron segment,
+and its moving upper endpoint crosses arbitrarily many shell boundaries while
+the contribution vanishes. The remaining task is no longer finite-shell
+assembly: prove that the named infinite outer line differs from this segment
+by a post-terminal tail tending to zero. This likely requires a second
+frequency mechanism once the iterated prime scale approaches the CEP
+cofactor floor, rather than further fixed-depth diagonalization alone.
+
+## Exact post-terminal reduction (release 4.12)
+
+The first three outer pieces now concatenate to one pre-indexed segment and
+their existing convergence theorems prove that segment vanishes. Removing it
+and the vanishing moving indexed segment from the infinite outer line defines
+one exact post-terminal remainder. The critical smooth-saddle asymptotic is
+equivalent to decay of this remainder along the already selected diagonal.
+
+Further iterated-root diagonalization cannot by itself solve this obligation:
+the terminal index may diverge while its physical endpoint remains bounded
+when PNT admissibility forces the terminal prime scale away from the CEP
+floor. The next analytic task must therefore use a genuinely high-frequency
+estimate—such as a uniform finite-Euler-product minor-arc bound or an
+equivalent oscillatory Perron-tail argument.
+
+## Indexed physical-height ceiling (release 4.13)
+
+The limitation anticipated above is now a theorem. Terminal scale survival
+is exactly `4^(2^k) <= y`; logarithmic monotonicity and the indexed endpoint
+formula give the absolute ceiling `3*pi/(2*log 4)`. Any growing admissible
+depth therefore has eventually bounded physical height and cannot tend to
+infinity. Research on the post-terminal remainder should now focus entirely
+on a global minor-arc or oscillatory inversion estimate.
+
+## Hildebrand--Tenenbaum minor-arc interface (release 4.14)
+
+The original global mechanism is now represented exactly. The HT loss
+`u*t^2/((1-sigma)^2+t^2)` is radially monotone, and their Lemma 8(ii)
+characteristic estimate has a source-facing proposition. Assuming it, the
+literal normalized Perron integrand obeys the same exponential envelope and
+every finite symmetric shell is bounded by its left-endpoint loss times its
+width and saddle normalization.
+
+The next source steps are now unambiguous: formalize the Mangoldt cosine-sum
+lower bound behind equation (3.16), then reproduce Lemma 9's smoothed
+short-interval estimate and Lemma 10's finite Perron-height selection.
+
+## HT Mangoldt-transform subtraction (release 4.15)
+
+The finite complex transform and weighted cosine sum in Lemma 6 are now
+literal Lean definitions. Real-part subtraction gives the cosine sum exactly,
+and two complex approximation errors bounded by `E` give the corollary with
+error `2E`. Next combine the native quantitative PNT with complex Abel
+summation to prove this transform approximation uniformly in the HT range.
+
+## Exact HT Lemma 6 interface (release 4.16)
+
+The target range is now fixed exactly at
+`exp((log y)^(3/2-epsilon))`, together with equation (3.10)'s error scale.
+The main term has checked Cartesian and norm formulas, and the uniform
+transform proposition feeds the cosine corollary without further analytic
+loss. A naive Abel transfer from the unshifted de la Vallée Poussin estimate
+costs `|t|` and cannot reach this ceiling. The next proof must therefore use
+shifted Perron inversion and the Vinogradov zero-free region directly.
+
+## HT prime-power bridge (release 4.17)
+
+The Mangoldt cosine sum now splits exactly into a logarithmically weighted
+prime sum and a non-prime remainder. Monotonicity of `log` bounds the first
+by `log y` times the literal Euler-product cosine loss, and `1-cos<=2`
+bounds the second. Combining these facts with release 4.16 gives the exact
+source-shaped lower bound needed in Lemma 8(ii). Next reproduce HT Lemma 5
+at weight `n^(-sigma)`, then prove that the cosine main term dominates both
+that remainder and the Lemma-6 error in the required saddle ranges.

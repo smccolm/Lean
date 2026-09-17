@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-3.71`. It
+This is a development manifest, version `prime-equidistribution-4.17`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -60,7 +60,7 @@ definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
   `PrimePowerReduction`, `PartialSummation`, `PhaseVariation`, `LowFrequency`, `PowerfulAsymptotics`, `PowerfulExtraction`,
   `PowerfulLimit`, `PowerfulNumbers`,
   `PowerfulRelations`, `PowerfulRelationCounting`, `SquareRelations`, `ConvolutionRearrangement`,
-  `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`, `SmoothNumberBounds`, `SmoothNumberRankin`, `SmoothNumberPrimeSum`, `SmoothNumberSourceRegimes`, `SmoothNumberPolylogRegimes`, `SmoothNumberLowerBound`, `SmoothNumberHildebrand`, `SmoothNumberCriticalLower`, `SmoothNumberCEPPacket`, `SmoothNumberCEPRecurrence`, `SmoothNumberCEPIntervals`, `SmoothNumberCEPWeights`, `SmoothNumberCEPSource`, `SmoothNumberCEPSize`, `SmoothNumberCEPPrimeMass`, `SmoothNumberCEPBootstrap`, `SmoothNumberCEPCoarse`, `SmoothNumberSaddlePoint`, `SmoothNumberSaddleRegimes`, `SmoothNumberSaddlePhase`, `SmoothNumberStability`, `SmoothNumberSaddleCurvature`, `BadOneTermAsymptotics`,
+  `QuadraticIdealDivisors`, `QuadraticSolutionCount`, `QuadraticUnits`, `ShortIntervalDecomposition`, `SmoothNumbers`, `SmoothNumberBounds`, `SmoothNumberRankin`, `SmoothNumberPrimeSum`, `SmoothNumberSourceRegimes`, `SmoothNumberPolylogRegimes`, `SmoothNumberLowerBound`, `SmoothNumberHildebrand`, `SmoothNumberCriticalLower`, `SmoothNumberCEPPacket`, `SmoothNumberCEPRecurrence`, `SmoothNumberCEPIntervals`, `SmoothNumberCEPWeights`, `SmoothNumberCEPSource`, `SmoothNumberCEPSize`, `SmoothNumberCEPPrimeMass`, `SmoothNumberCEPBootstrap`, `SmoothNumberCEPCoarse`, `SmoothNumberSaddlePoint`, `SmoothNumberSaddleRegimes`, `SmoothNumberSaddlePhase`, `SmoothNumberSaddleTilt`, `SmoothNumberSaddleProbability`, `SmoothNumberSaddleEulerCharacteristic`, `SmoothNumberSaddleFrequency`, `SmoothNumberSaddleCentralWindow`, `SmoothNumberSaddleCurvatureLower`, `SmoothNumberSaddleGaussianProduct`, `SmoothNumberStability`, `SmoothNumberSaddleCurvature`, `SmoothNumberSaddleLocalLimit`, `BadOneTermAsymptotics`,
   `PublicStatements`, `TypeIReduction`, `TypeIConvolutionBridge`, `TypeIWeylBridge`, `TypeISourceBlock`,
   `TypeIIReduction`, `TypeIIArithmetic`, `TypeIIKernel`, `TypeIIConvolutionBridge`,
   `TypeIISourceBlock`, `VeryBadIntervals`, `SylvesterSchurSmallLengths`, `SylvesterSchurEventual`, `VeryBadEquidistribution`,
@@ -3998,3 +3998,872 @@ On 2026-09-16, the canonical isolated verifier
 `cmd /c run_tao_build.bat --no-pause` completed twice with
 `FINAL RESULT: PASS`, including the hash, raw-Mermaid, warning-failing build,
 axiom-audit, forbidden-shortcut, root-reachability, and semantic gates.
+
+## Release delta: prime-equidistribution-3.72
+
+`SmoothNumberSaddleTilt.lean` turns the exact finite Euler product into a
+normalized tilted mass on positive smooth integers. It proves total mass one,
+identifies the first two log-partition derivatives with `-phiOne` and
+`phiTwo`, and proves the exact identity
+`Psi(X,y) = exp(smoothSaddlePhase) * smoothSaddleCutoffFactor`, where the
+cutoff factor lies in `[0,1]`.
+
+At the exact saddle, division by `smoothSaddleMainTerm` is therefore exactly
+the cutoff factor times `smoothSaddleGaussianScale`.
+`SmoothNumberSaddleLocalLimit.lean` proves that convergence of this explicit
+quantity to one is equivalent to `TaoCriticalSmoothSaddleAsymptoticConclusion`.
+The Gaussian local-limit estimate itself remains open, so this delta does not
+claim Theorem 1.7 unconditionally. The second open input to Theorem 1.7 is
+still analytic Burgess.
+
+## Release delta: prime-equidistribution-3.73
+
+`SmoothNumberSaddleProbability.lean` turns the normalized tilted mass into a
+literal probability measure on logarithmic size. Its characteristic function
+is exactly the absolutely convergent Fourier series of the tilted masses, is
+one at zero, and has norm at most one.
+
+At the exact saddle, audited log-partition derivative identities give center
+`log X` and positive variance `phiTwo`. The centered variance-normalized
+characteristic function is defined and proved equal to the explicit Fourier
+series with atoms `(log n - log X) / sqrt(phiTwo)`. Gaussian convergence and
+the local-limit inversion step remain open; no unconditional Theorem 1.7 is
+claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10126 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.74
+
+`SmoothNumberSaddleEulerCharacteristic.lean` proves absolute summability and
+the exact finite-prime Euler product for the complex smooth Fourier Dirichlet
+series. Dividing by the untwisted Euler product gives the literal normalized
+factor `(1-p^(-sigma))/(1-p^(-sigma) exp(i t log p))` for every source prime
+`p ≤ y`.
+
+Each local factor is one at zero and has norm at most one. Its squared norm is
+identified exactly with
+`(1-a)^2 / ((1-a)^2 + 2a(1-cos(t log p)))`, `a=p^(-sigma)`. The complete
+centered variance-normalized saddle characteristic function therefore has an
+exact finite contraction product. Uniform frequency bounds and local-limit
+inversion remain open, so this delta does not claim Theorem 1.7.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10127 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.75
+
+`SmoothNumberSaddleFrequency.lean` converts the exact contraction product into
+a quantitative central Gaussian envelope. On the principal period,
+`1-cos(theta) ≥ 2theta^2/pi^2`; on the central local window the resulting
+reciprocal contraction is bounded by an exponential. Its coefficient is
+proved exactly equal to `smoothSaddleSecondPrimeTerm`, so the full exponent is
+the literal finite sum `phiTwo`.
+
+After centering and normalization by `sqrt(phiTwo)`, one explicit source-scale
+range condition yields
+`|characteristic(t)|^2 ≤ exp(-2t^2/pi^2)` and
+`|characteristic(t)| ≤ exp(-t^2/pi^2)`. Proving that an expanding normalized
+window satisfies this condition, controlling complementary frequencies, and
+performing local-limit inversion remain open; Theorem 1.7 is not yet claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10128 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.76
+
+`SmoothNumberSaddleCentralWindow.lean` defines the exact positive central
+radius
+`pi/2 * (1-2^(-sigma)) * sqrt(phiTwo) / log y`. It proves that membership in
+the associated symmetric interval is equivalent to the source-scale condition
+used by the central Gaussian estimate, and transfers both the squared and
+unsquared universal envelopes to that whole interval.
+
+In a Tao critical smooth regime, the module further proves that the hypothesis
+`log y / sqrt(phiTwo) → 0` makes the radius tend to infinity. Consequently
+every fixed normalized frequency eventually lies in the central interval and
+satisfies the Gaussian envelope. The curvature-scale hypothesis itself,
+complementary-frequency estimates, and local-limit inversion remain open;
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10129 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.77
+
+`SmoothNumberSaddleCurvatureLower.lean` proves the quantitative curvature
+estimate needed to expand the central frequency window. The explicit point
+`1-8 log(u)/log(y)` is eventually positive and lies below the exact saddle.
+Antitonicity of every second-prime summand and the exact `phiOne` secant
+identity then yield
+`phiTwo/log(y)^2 ≥ u/(16 log u)` eventually.
+
+Since `u/log u → ∞`, normalized curvature tends to infinity and
+`log(y)/sqrt(phiTwo) → 0`. Therefore the exact release-3.76 radius tends to
+infinity unconditionally in every critical smooth regime, and each fixed
+normalized frequency eventually satisfies the universal Gaussian envelope.
+Complementary-frequency decay and local-limit inversion remain open;
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10130 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.78
+
+`SmoothNumberSaddleGaussianProduct.lean` proves the deterministic
+triangular-array transfer for the exact saddle Euler product. The normalized
+characteristic factors into centered prime-local contractions. Their variance
+shares are nonnegative and sum exactly to one, and a telescoping product bound
+compares the product with `exp(-t^2/2)` through the summed local quadratic
+Taylor error and the largest variance share.
+
+On the eventual half-plane `sigma >= 1/2`, every prime curvature contribution
+is at most `20 log(y)^2`. Release 3.77 therefore implies that the largest
+normalized share tends to zero. Fixed-frequency Gaussian convergence is now
+reduced solely to the explicit summed prime-local Taylor remainder. That
+estimate, complementary-frequency decay, and Fourier inversion remain open;
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10131 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.79
+
+`SmoothNumberSaddlePrimeTaylor.lean` proves exact first, second, and third
+geometric prime-power moments, a summable third absolute centered moment, and
+the uniform bound `E|N-EN|^3 <= 4000a` for `a <= 4/5`. A global cubic
+remainder for `exp(ix)` then gives the centered local factor estimate with
+error at most `16000 |u|^3 a`.
+
+The centered geometric characteristic is identified exactly with the existing
+prime-local saddle factor. Summation over `p <= y` bounds the total quadratic
+Taylor error by
+`16000 |t|^3 log(y)/smoothSaddleStandardDeviation`; release 3.77 makes this
+tend to zero. Combined with release 3.78, the exact normalized saddle
+characteristic now converges to `exp(-t^2/2)` at every fixed frequency in the
+critical regime. Complementary-frequency decay and Fourier inversion remain;
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10132 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.80
+
+`SmoothNumberSaddleLaplaceCutoff.lean` identifies the exact remaining
+shrinking-scale quantity. The cutoff factor is a one-sided Laplace moment of
+the centered normalized logarithmic law, with rate
+`smoothSaddlePoint*sqrt(phiTwo)`. The Gaussian prefactor is exactly
+`sqrt(2*pi)` times this rate, and the rate tends to infinity in every critical
+regime. Thus the critical saddle asymptotic is equivalent to convergence of
+the explicit normalized Laplace target to one. Fixed-frequency convergence
+alone does not discharge this shrinking-scale statement; complementary
+frequency control and inversion remain.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10133 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.81
+
+`SmoothNumberSaddleCentralIntegral.lean` proves the complete central segment
+of the normalized Laplace/Perron calculation. The exact kernel
+`lambda/(lambda-i*t)` has norm at most one and tends to one at every fixed
+normalized frequency. On the explicit expanding central interval, the
+kernel-weighted characteristic function is dominated by the integrable
+Gaussian `exp(-t^2/pi^2)` and converges pointwise to `exp(-t^2/2)`.
+
+Dominated convergence and the checked complex Gaussian integral show that
+the central integral tends to `sqrt(2*pi)`; its Gaussian-normalized
+contribution therefore tends to one. This does not yet identify the literal
+cutoff moment with a truncated contour integral or bound the complementary
+Perron error, so the critical saddle asymptotic and Theorem 1.7 remain open.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10134 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.82
+
+`SmoothNumberSaddlePerronLine.lean` closes the exact normalization gap between
+the source vertical line and the probability-side central integral. The
+twisted smooth Dirichlet series at `-t`, its phase `exp(i*t*log X)`, and the
+kernel `sigma/(sigma+i*t)` are proved pointwise equal to the centered
+characteristic and corrected Laplace kernel at
+`-t*sqrt(phiTwo)`. The central Perron height rescales exactly to the explicit
+central radius, and the symmetric interval substitution is checked in Lean.
+
+Consequently the release-3.81 normalized central contribution is literally
+the normalized central vertical-line Perron integral. The complete
+finite-height cutoff comparison and complementary-line bound remain open, so
+the critical saddle asymptotic and Theorem 1.7 are not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10135 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.83
+
+`SmoothNumberSaddlePerronCutoff.lean` passes the absolutely convergent smooth
+Dirichlet series through every finite vertical segment and identifies the
+normalized integral with the sum of the frozen coefficient-free sharp-Perron
+kernels. After restoring the saddle factors, this is the literal release-3.82
+Perron line.
+
+The inclusive subtype cutoff series is exactly `psiNat X y`. The
+kernel-minus-cutoff error is an absolutely convergent termwise sum; below and
+above `X` it inherits the frozen logarithmic bounds, and at `n=X` it has the
+height-uniform bound `3/2`. Quantitative aggregation at the saddle height and
+the complementary-line estimate remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10136 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.84
+
+`SmoothNumberSaddlePerronLimit.lean` proves that the symmetric sharp-Perron
+kernel converges to one below the cutoff, one half at the cutoff, and zero
+above it. It defines the corresponding smooth half-cutoff and proves that its
+complete sum is exactly `psiNat X y` minus the possible source-smooth endpoint
+half-mass, whose norm is at most `1/2`.
+
+A height-independent piecewise kernel envelope is proved summable over the
+smooth-number subtype. Tannery's theorem therefore upgrades pointwise kernel
+inversion to the complete smooth sharp-Perron series. The remaining saddle
+input is the quantitative finite-height noncentral-line estimate; Theorem 1.7
+is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10137 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.85
+
+`SmoothNumberSaddlePerronComplement.lean` proves the exact saddle
+normalization of the complete finite Perron line and identifies it with the
+full sharp-kernel sum divided by `smoothSaddleMainTerm`. Subtracting the
+already evaluated central Gaussian contribution gives exactly the two literal
+tail integrals outside `smoothSaddleCentralPerronHeight`.
+
+The complementary line tends, with height, to the endpoint-corrected saddle
+ratio minus the central term. In every critical regime its vanishing is
+equivalent to convergence of that corrected ratio to one. The normalized
+endpoint correction is bounded by `1/(2*mainTerm)`. Main-term divergence and
+the analytic tail-decay estimate remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10138 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.86
+
+`SmoothNumberSaddleMainTermGrowth.lean` proves the uniform curvature estimate
+`phiTwo <= 7*log(y)*phiOne` for `sigma >= 1/2`, its exact-saddle specialization
+`phiTwo <= 7*log(y)*log(X)`, and the explicit lower bound
+`sqrt(X)/(sqrt(14*pi)*log(X)) <= smoothSaddleMainTerm` under the eventual
+critical-range hypotheses.
+
+The saddle main term consequently tends to infinity in every critical regime,
+so the normalized half-endpoint correction tends to zero. The original
+critical smooth saddle asymptotic is now equivalent to vanishing of
+`smoothSaddleInfiniteComplementaryPerronLine`; that complementary-frequency
+decay is the sole remaining smooth-saddle input, and Theorem 1.7 is not yet
+claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10139 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.87
+
+`SmoothNumberSaddleWideFrequency.lean` proves prime-local contraction on the
+full range `|t log p| <= pi`, the resulting normalized Gaussian envelope up
+to radius `pi*standardDeviation/log(y)`, and dominated-convergence decay of
+the annulus outside the central saddle window. The remaining smooth-saddle
+input is the outer-frequency Perron estimate beyond physical height
+`pi/log(y)`; Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10140 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.88
+
+`SmoothNumberSaddleWidePerron.lean` proves that the wide normalized radius
+corresponds exactly to physical Perron height `pi/log(y)`. It carries out the
+standard-deviation substitution on both signed annular segments and
+identifies their normalized physical contribution with the release-3.87
+Fourier integral. This literal Perron contribution tends to zero in every
+critical regime. Only the outer tails beyond that height remain, and Theorem
+1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10141 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.89
+
+`SmoothNumberSaddleOuterPerron.lean` defines the normalized pair of physical
+Perron tails beyond `pi/log(y)` at finite height and proves that the complete
+complementary line is exactly the release-3.88 annular contribution plus this
+outer line. Its height limit is the named
+`smoothSaddleInfiniteOuterPerronLine`. Since the annulus tends to zero, the
+critical saddle asymptotic is equivalent to decay of this outer object alone;
+that analytic decay and Theorem 1.7 are not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10142 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.90
+
+`SmoothNumberSaddleOuterDecay.lean` defines exact prime-local and aggregate
+phase losses and proves a frequency-unrestricted Euler-product contraction.
+The tilted characteristic and the literal saddle Perron integrand are bounded
+by `exp(-smoothSaddleCosineLoss/96)`, where the exponent is the explicit
+nonnegative weighted sum of `1-cos(t log p)` over source primes. Proving a
+uniform lower bound for this loss on the outer tails remains; Theorem 1.7 is
+not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10143 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.91
+
+`SmoothNumberSaddleOuterShell.lean` proves the first quantitative lower bound
+for the global cosine loss. On
+`pi/log(y) <= t <= 4*pi/(3*log(y))`, all primes in the top dyadic block have
+nonpositive cosine. The compiled Chebyshev–PNT block estimate consequently
+gives loss at least `y^(-sigma)*y/(16*log(y))`. Later frequency shells and the
+complete outer-tail integral remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10144 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.92
+
+`SmoothNumberSaddleMovingShell.lean` defines the adaptive scale
+`N(t)=ceil(exp(pi/t))` and proves exact ceiling, logarithmic, and frequency
+bounds. The outer boundary implies `N(t)<=y`; a direct finite estimate gives
+the required dyadic half-block width once `N(t)>=81`; and an enlarged
+Chebyshev–PNT threshold supplies both block endpoints. The resulting theorem
+gives
+`N(t)^(-sigma)*N(t)/(16*log(N(t))) <= smoothSaddleCosineLoss y sigma t`
+through an explicit small-frequency range. Larger outer frequencies and the
+integrated infinite tail remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10145 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.93
+
+`SmoothNumberSaddleMultiShell.lean` replaces the single top block on the
+first outer shell by the full retained CEP dyadic alphabet. Its primes all
+remain in the negative-cosine phase window and have reciprocal mass
+`≫1/log(u)`. Explicit finite estimates from the exact saddle equation and
+the CEP cutoff yield a named cosine-loss scale bounded below by a positive
+constant times `u/log(u)`. The scale tends to infinity in every critical
+regime, giving a uniform vanishing bound for the physical Perron integrand on
+the shell. The normalized shell integral and later frequencies remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10146 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.94
+
+`SmoothNumberSaddleFirstShellIntegral.lean` defines the exact symmetric
+normalized contribution on the first physical outer shell. The release-3.93
+envelope applies at both signs by cosine-loss symmetry; the literal interval
+width and the curvature estimate
+`standardDeviation/log(y) <= sqrt(7*u)` reduce the contribution to a constant
+multiple of `sqrt(u)*exp(-c*u/log(u))`. That expression tends to zero, so the
+complete first-shell contribution vanishes in every critical regime. Later
+outer-frequency shells and the infinite outer line remain, so Theorem 1.7 is
+not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10147 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.95
+
+`SmoothNumberSaddleExtendedShell.lean` strengthens the accumulated CEP phase
+window to `3*pi/(2*log(y))`, defines a reusable exact symmetric Perron-shell
+contribution and norm estimate, and applies them to the adjacent band beyond
+the release-3.94 endpoint. The same divergent `u/log(u)` cosine loss absorbs
+the saddle normalization, so this additional normalized contribution tends
+to zero in every critical regime. Frequencies beyond the new endpoint and the
+infinite outer line remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10148 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.96
+
+`SmoothNumberSaddleSecondShell.lean` moves the accumulated CEP alphabet to
+the natural scale `floor(sqrt(y))`. Exact rounding and logarithmic estimates
+put all retained primes between one third and one half of `log(y)`, so their
+phases have nonpositive cosine throughout
+`3*pi/(2*log(y)) <= t <= 3*pi/log(y)`. The critical regime satisfies the
+cofactor and PNT hypotheses, yielding an explicit accumulated loss on the
+whole second shell. Converting this scale to a divergent normalized envelope
+and integrating it remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10149 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.97
+
+`SmoothNumberSaddleSecondShellIntegral.lean` compares the release-3.96
+square-root cofactor power with `(u/(15*log(4)))^(2/5)` and defines the
+resulting loss scale, comparable to `u^(2/5)/log(u)`. That scale diverges in
+every critical regime, and its exponential envelope absorbs the `sqrt(u)`
+saddle normalization. Cosine-loss symmetry and the reusable symmetric-shell
+bound then prove that the exact normalized Perron contribution on
+`3*pi/(2*log(y)) <= |t| <= 3*pi/log(y)` tends to zero. Later frequency
+shells and the infinite outer line remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10150 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.98
+
+`SmoothNumberSaddleThirdShell.lean` moves the accumulated CEP alphabet to
+the twice-iterated natural square root of `y`. Exact floor-root inequalities
+put its logarithm between `1/5*log(y)` and `1/4*log(y)` and every retained
+prime above `1/6*log(y)`. Consequently the complete alphabet has
+nonpositive cosine throughout
+`3*pi/log(y) <= t <= 6*pi/log(y)`. Critical-regime growth verifies the PNT
+and cofactor-range hypotheses and yields a uniform explicit third-shell
+loss. Its divergent-scale conversion and normalized integral remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10151 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-3.99
+
+`SmoothNumberSaddleThirdShellIntegral.lean` compares the fourth-root
+cofactor power with `(u/(15*log(4)))^(1/5)` and defines the corresponding
+loss scale of order `u^(1/5)/log(u)`. This scale diverges in every critical
+regime, while its exponential absorbs the `sqrt(u)` saddle normalization.
+The signed envelope and generic symmetric-shell estimate then prove that the
+exact normalized Perron contribution on
+`3*pi/log(y) <= |t| <= 6*pi/log(y)` tends to zero. Later frequency shells and
+the infinite outer line remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10152 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.00
+
+`SmoothNumberSaddleFourthShell.lean` moves the accumulated CEP alphabet to
+the third iterated natural square root of `y`. Exact floor-root estimates put
+its logarithm between `1/9*log(y)` and `1/8*log(y)` and every retained prime
+above `1/12*log(y)`. Thus the full alphabet has nonpositive cosine throughout
+`6*pi/log(y) <= t <= 12*pi/log(y)`. Critical-regime growth verifies its PNT
+and cofactor hypotheses, producing a uniform explicit fourth-shell loss. Its
+divergent-scale conversion and normalized integral remain, so Theorem 1.7 is
+not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10153 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.01
+
+`SmoothNumberSaddleFourthShellIntegral.lean` converts the eighth-root
+cofactor power to a loss of order `u^(1/9)/log(u)`, proves its divergence and
+exponential absorption of the saddle normalization, and applies the signed
+envelope plus symmetric-shell norm theorem. The exact normalized Perron
+contribution on `6*pi/log(y) <= |t| <= 12*pi/log(y)` tends to zero. Later
+shells and the infinite outer line remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10154 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.02
+
+`SmoothNumberSaddleIndexedShell.lean` replaces the repeated scale geometry
+with an indexed iterated-root alphabet. Recursive lower and upper logarithmic
+envelopes are proved and solved in closed form; indices one, two, and three
+recover the previously certified square-, fourth-, and eighth-root scales.
+The indexed physical upper heights likewise recover their endpoints and
+double exactly. Uniform indexed loss and infinite aggregation remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10155 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.03
+
+`SmoothNumberSaddleIndexedPhase.lean` proves the common phase-loss theorem
+for all indexed shells `k>=2`. If the chosen iterated-root scale retains at
+least four fifths of its ideal `2^(-k)` logarithmic size, its CEP alphabet
+starts at the exact support needed for the adjacent indexed endpoints. Every
+retained prime then lies in the nonpositive-cosine phase window, and the full
+accumulated loss follows. Growing-range scale control and summation remain,
+so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10156 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.04
+
+`SmoothNumberSaddleIndexedScaleRange.lean` proves that iterated-root scales
+are antitone, so terminal noncollapse supplies all intermediate largeness
+hypotheses. The exact rounding envelope then converts
+`10*(2^k-1)*log(2) <= log(y)` into the four-fifths scale retention required
+by the uniform indexed phase theorem. Choosing a growing terminal index and
+summing the resulting shells remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10157 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.05
+
+`SmoothNumberSaddleIndexedFixedDepth.lean` proves the exact threshold
+`a <= scale(k,y) ↔ a^(2^k) <= y` for survival through `k` natural square
+roots. Consequently, every fixed indexed depth is eventually noncollapsed
+in a critical regime. Since `log(y)` also tends to infinity, the explicit
+rounding criterion from release 4.04 is eventually automatic, and the two
+ideal logarithmic scale bounds are packaged together. This certifies every
+fixed finite shell prefix; a single growing diagonal index and its summed
+shell envelope remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10158 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.06
+
+`SmoothNumberSaddleIndexedFixedLoss.lean` proves that at every fixed index
+the critical Rankin ratio is eventually at most the square root of the
+iterated prime scale. The exponent choice `(1/5)*2^(-k)` turns the 4/5 scale
+retention into this cofactor bound. Combining it with release 4.05 and the
+uniform indexed phase theorem gives the full cosine-loss estimate throughout
+the exact `k`th physical shell. Thus every fixed shell is now analytically
+controlled; diagonal growth, uniform summation, and the residual infinite
+tail remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10159 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.07
+
+`SmoothNumberSaddleIndexedDiagonal.lean` packages the complete loss assertion
+for one indexed shell, proves simultaneous eventual control over every fixed
+finite prefix, and applies the frozen countable-diagonal theorem. It produces
+one depth `K(n)` tending to infinity such that, eventually, every shell
+`2 <= k <= K(n)` obeys its full critical cosine-loss estimate at the same
+parameter value. The growing-index quantifier exchange is therefore closed.
+Converting these losses to uniform integral envelopes, summing the prefix,
+and controlling frequencies beyond its terminal endpoint remain, so Theorem
+1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10160 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.08
+
+`SmoothNumberSaddleIndexedLossScale.lean` defines the natural indexed
+exponent `(4/5)*2^(-k)` and converts the raw CEP cofactor bound into an
+explicit Rankin-ratio loss scale. The saddle displacement pays the universal
+`exp(-16)` cutoff penalty, while the four-fifths scale retention supplies the
+power comparison. For every fixed index the resulting scale is eventually a
+lower bound for the cosine loss throughout the exact shell and tends to
+infinity. Fixed-index integration and moving-prefix summation remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10161 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.09
+
+`SmoothNumberSaddleIndexedShellIntegral.lean` proves that
+`sqrt(u)*exp(-a*u^beta/log(u))` tends to zero for every fixed positive
+`a,beta`, applies this to the indexed loss scale, extends the pointwise bound
+to both frequency signs, and integrates the exact symmetric indexed shell.
+Its width is computed from the doubling endpoint formula, so every fixed
+indexed Perron contribution tends to zero in a critical regime. Selecting a
+single growing prefix whose whole finite sum vanishes remains, as does the
+post-terminal tail; Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10162 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.10
+
+`SmoothNumberSaddleIndexedPrefix.lean` proves that every fixed finite sum of
+indexed shell contributions tends to zero. It then diagonalizes the joint
+predicate asserting both a whole-prefix norm bound `<=1/(K+1)` and all
+shellwise cosine-loss estimates. The selected depth tends to infinity, its
+entire moving prefix tends to zero, and every shell below it remains
+analytically controlled. Identifying this sum with the contiguous physical
+Perron segment and controlling the post-terminal tail remain, so Theorem 1.7
+is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10163 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.11
+
+`SmoothNumberSaddleIndexedTelescoping.lean` proves exact concatenation of
+adjacent normalized symmetric Perron shells. By induction, the algebraic
+indexed prefix is the single contiguous segment from indexed height one to
+height `K`. Applied to the release-4.10 slow diagonal, this gives a terminal
+index tending to infinity whose complete contiguous indexed segment tends to
+zero, while all constituent shell-loss estimates remain available. Only the
+outer Perron line beyond this moving terminal height remains in the smooth
+saddle argument; Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10164 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.12
+
+`SmoothNumberSaddlePostTerminalTail.lean` concatenates the already controlled
+first, extended, and second outer pieces into one pre-indexed segment and
+proves its contribution tends to zero. It defines the exact remainder after
+subtracting this segment and the release-4.11 moving indexed segment from the
+infinite outer Perron line. A checked equivalence reduces the full critical
+smooth-saddle asymptotic to decay of that one post-terminal remainder along
+the existing growing diagonal. The required genuinely high-frequency decay
+estimate remains, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10165 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.13
+
+`SmoothNumberSaddleIndexedHeightCeiling.lean` proves an absolute limitation
+of the indexed root-shell construction. If shell depth `k >= 1` retains a
+terminal iterated prime scale of at least four, then its physical upper
+height is at most `3*pi/(2*log 4)`. Therefore any growing index whose terminal
+scale remains eventually admissible has bounded physical height and cannot
+tend to infinity. Closing the release-4.12 post-terminal remainder requires
+a distinct high-frequency argument; Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10166 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.14
+
+`SmoothNumberSaddleHildebrandTenenbaumEnvelope.lean` formalizes the exact
+large-frequency loss in Hildebrand--Tenenbaum Lemma 8(ii), equation (3.16):
+`u*t^2/((1-sigma)^2+t^2)`. It proves this loss is nonnegative, even, and
+radially increasing, packages the source finite-range characteristic bound,
+transfers it through the exact Laplace kernel to the normalized Perron
+integrand, and integrates the resulting finite symmetric shell. The analytic
+proof of the minor-arc contract and HT Lemmas 9–10's truncation mechanism
+remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10167 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.15
+
+`SmoothNumberSaddleHTMangoldtTransform.lean` defines the finite complex
+Mangoldt transform of HT Lemma 6, its weighted cosine sum, and their
+source-shaped main terms. The cosine sum is proved exactly equal to the real
+part of the zero-frequency transform minus the frequency-`t` transform. Two
+complex approximation errors bounded by `E` therefore give the corollary's
+cosine error bounded by `2E`. The uniform Abel–PNT transform estimate remains,
+so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10168 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.16
+
+`SmoothNumberSaddleHTLemmaSix.lean` records HT Lemma 6 at its exact source
+frequency ceiling `exp((log y)^(3/2-epsilon))` and equation-(3.10) error
+scale. It states the remaining uniform transform estimate as a named
+proposition, computes the complex main term at zero and at general frequency,
+computes its norm and the Cartesian cosine main term, and derives the full
+cosine corollary. The shifted Perron/zero-free-region proof of the named
+proposition remains, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10169 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.17
+
+`SmoothNumberSaddleHTPrimePowerBridge.lean` splits the HT Mangoldt cosine
+sum exactly into prime and non-prime contributions. It bounds the prime
+contribution by `log y` times the existing Euler-product cosine loss and the
+non-prime cosine tail by twice an explicit prime-power remainder. Combined
+with the release-4.16 transform contract, this yields the checked source
+lower bound for the Lemma-8(ii) loss. The sharp HT Lemma 5 remainder bound
+and transform contract remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10170 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.

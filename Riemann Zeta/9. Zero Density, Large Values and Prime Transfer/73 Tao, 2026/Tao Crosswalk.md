@@ -873,3 +873,345 @@ Release 3.71 closes that remaining path. `VinogradovIKDegree`,
 Singmaster source. The resulting unconditional Vinogradov proposition feeds
 the existing Fourier reconstruction, so the exact specialized Theorem 2.5,
 Lemma 3.1, and the public `TaoTheorem18Conclusion` are all proved.
+
+Release 3.72 sharpens the remaining smooth-number edge of Theorem 1.7.
+`SmoothNumberSaddleTilt` proves exact normalization of the tilted smooth
+Dirichlet mass, the `phiOne` mean and `phiTwo` curvature identities, and
+`Psi = exp(phase) * cutoffFactor` with `0 <= cutoffFactor <= 1`.
+`SmoothNumberSaddleLocalLimit` then proves
+`criticalSmoothSaddleAsymptotic_iff_tiltedLocalLimit`. The unproved statement
+is precisely the resulting Gaussian local limit, not any of these algebraic
+or normalization bridges.
+
+Release 3.73 makes the probability language literal rather than heuristic.
+`SmoothNumberSaddleProbability` packages the tilted weights as a probability
+measure on `log n`, evaluates its characteristic function as an absolutely
+convergent Fourier series, and constructs the exact centered, curvature-
+normalized characteristic function at the saddle. The centering is `log X`
+and the variance scale is `phiTwo` by audited derivative identities. The
+remaining smooth-number input is therefore Gaussian convergence of this
+explicit series and the corresponding local-limit inversion estimate.
+
+Release 3.74 supplies the independent-prime factorization needed for those
+estimates. `SmoothNumberSaddleEulerCharacteristic` proves the exact complex
+Euler product and rewrites the tilted characteristic function as the product
+of the source-prime factors
+`(1-p^(-sigma))/(1-p^(-sigma) exp(i t log p))`. The local squared norm has the
+exact denominator increment `2 p^(-sigma) (1-cos(t log p))`; multiplying these
+identities gives the full normalized saddle contraction product. What remains
+is to estimate that explicit finite product uniformly and perform inversion.
+
+Release 3.75 completes the first of those estimates. The elementary cosine
+lower bound supplies quadratic local contraction, while a checked reciprocal-
+to-exponential inequality gives Gaussian decay on the central subwindow. The
+local coefficient is definitionally reconciled with
+`smoothSaddleSecondPrimeTerm`; summing therefore produces exactly `phiTwo`.
+After normalization by `sqrt(phiTwo)`, the full characteristic function is
+bounded by `exp(-t^2/pi^2)` on an explicit source-scale range. Growth of that
+range and off-central decay remain before local-limit inversion.
+
+Release 3.76 turns that range into an explicit object:
+`smoothSaddleCentralRadius = pi/2 * (1-2^(-sigma)) * sqrt(phiTwo)/log y`.
+The radius is positive, its symmetric interval is exactly equivalent to the
+release-3.75 phase condition, and both Gaussian bounds hold throughout it.
+The critical saddle already tends to one, so the module proves that the one
+additional limit `log y/sqrt(phiTwo) → 0` forces this radius to infinity and
+gives the pointwise fixed-frequency envelope. This sharply separates the
+needed curvature lower bound from the subsequent minor-arc and inversion
+arguments.
+
+Release 3.77 discharges that curvature target. The elementary prime-counting
+lower bound at `1-8 log(u)/log(y)` places this comparison point below the exact
+saddle. Antitonicity of `phiTwo` and the exact mean-value identity for
+`phiOne` then give the quantitative lower bound
+`phiTwo/log(y)^2 ≥ u/(16 log u)`. Since `u/log u → ∞`, the normalized
+curvature and the release-3.76 radius both diverge. Thus central Gaussian
+control now covers every fixed normalized frequency unconditionally; only
+the complementary frequency ranges and inversion remain.
+
+Release 3.78 closes the global triangular-array bookkeeping. The centered
+normalized characteristic factors exactly over the source primes, and the
+associated nonnegative variance shares sum to one. Each share is bounded by
+`20 log(y)^2/phiTwo`, so the maximal share tends to zero using release 3.77.
+The finite-product perturbation theorem then reduces pointwise Gaussian
+convergence to vanishing of the summed local quadratic Taylor errors. The
+prime-local remainder estimate is the remaining central-frequency input;
+minor-arc decay and inversion remain separate.
+
+Release 3.79 closes that prime-local input. Exact geometric exponent moments
+and a global cubic remainder for `exp(ix)` give an error bounded by
+`16000 |u|^3 a` for each centered factor. After the exact identification with
+the source-prime Euler factor, summation yields the bound
+`16000 |t|^3 log(y)/sqrt(phiTwo)`, which tends to zero by release 3.77.
+Consequently the exact variance-normalized saddle characteristic converges to
+`exp(-t^2/2)` at every fixed frequency. Complementary-frequency control and
+Fourier inversion remain before the local-limit target is established.
+
+Release 3.80 rewrites that local-limit target exactly. The saddle cutoff is a
+one-sided Laplace moment of the normalized logarithmic displacement, at rate
+`sigma*sqrt(phiTwo)`. Its Gaussian scale is
+`sqrt(2*pi)*sigma*sqrt(phiTwo)`, and the rate diverges. The source saddle
+asymptotic is therefore equivalent to convergence of this explicit normalized
+Laplace moment to one. This exposes why fixed-frequency weak convergence is
+insufficient and pins the remaining work to shrinking-scale inversion.
+
+Release 3.81 completes the central part of that inversion. The normalized
+Laplace kernel `lambda/(lambda-i*t)` is multiplied by the exact centered
+characteristic function and restricted to the release-3.76 central interval.
+Its norm is dominated by `exp(-t^2/pi^2)`, while release 3.79 supplies
+pointwise convergence to `exp(-t^2/2)` and the diverging Laplace rate makes
+the kernel tend to one. Dominated convergence therefore gives central
+integral `sqrt(2*pi)`, or normalized contribution one. What remains is the
+source-facing Perron truncation identity and the complementary-contour error,
+not the central Gaussian integral.
+
+Release 3.82 removes the remaining convention gap on that central segment.
+The literal source integrand is now the twisted smooth Dirichlet series at
+`-t`, divided by its untwisted value, multiplied by `exp(i*t*log X)` and
+`sigma/(sigma+i*t)`. It is proved exactly equal to the centered
+characteristic times `lambda/(lambda-i*u)` at
+`u=-t*sqrt(phiTwo)`. The standard-deviation substitution and both symmetric
+endpoints are checked, yielding an exact equality between the release-3.81
+central contribution and the normalized vertical-line integral. Only the
+sharp cutoff/truncation estimate and the complementary line remain.
+
+Release 3.83 supplies the exact sharp-cutoff interface. The full finite line
+is the absolutely convergent sum of frozen sharp-Perron kernels; the inclusive
+smooth cutoff sum is `psiNat`; and their difference is a summable termwise
+error. Frozen logarithmic estimates cover both strict sides of the endpoint,
+with a uniform `3/2` endpoint bound. Their quantitative aggregation at the
+saddle height and the complementary-line estimate remain.
+
+Release 3.84 identifies the complete symmetric inversion limit. Individual
+kernels tend to `1`, `1/2`, or `0` according as the source-smooth integer is
+below, at, or above `X`. A summable uniform envelope validates Tannery
+interchange, so the full kernel series tends to `psiNat X y` minus the
+explicit possible endpoint half-mass, bounded by `1/2`. The remaining
+Granville-(3.22)--(3.23) bridge is the quantitative finite-height estimate for
+the line outside the central saddle window.
+
+Release 3.85 turns that bridge into an exact normalized remainder. The full
+finite line equals the frozen-kernel sum after division by
+`smoothSaddleMainTerm`; subtracting the central contribution yields precisely
+the negative- and positive-frequency tail integrals. Its infinite-height limit
+is the corrected saddle ratio minus the central Gaussian term. Hence, in the
+critical regime, the corrected form of Granville (3.23) is equivalent to
+vanishing of this explicit complement. The endpoint discrepancy contributes
+at most `1/(2*mainTerm)`.
+
+Release 3.86 removes the final endpoint qualification. The curvature bound
+`phiTwo <= 7*log(y)*phiOne` yields an explicit
+`sqrt(X)/(sqrt(14*pi)*log(X))` lower bound for the saddle main term. In every
+critical regime this tends to infinity, so Granville's bounded endpoint
+discrepancy vanishes after normalization. The literal source saddle asymptotic
+is therefore equivalent, without correction, to decay of the named infinite
+complementary Perron line.
+
+Release 3.87 formalizes the next part of Granville's “small error” outside the
+central segment. The finite Euler product now has Gaussian contraction over
+the entire principal phase cell, through normalized radius
+`pi*sqrt(phiTwo)/log(y)`. The integral between the old central radius and this
+wide radius tends to zero. Thus the unresolved part of Granville (3.23) is
+localized to the genuinely nonprincipal frequencies beyond `pi/log(y)` on
+the physical Perron line.
+
+Release 3.88 checks the complete change-of-variables ledger for that range.
+The wide normalized radius is exactly the image of physical height
+`pi/log(y)`, including reversal of the positive and negative intervals under
+the Fourier sign convention. The formal vanishing theorem now applies to the
+literal pair of vertical-line segments; only the two outer tails remain.
+
+Release 3.89 gives those outer tails their final source-facing interface. The
+finite complementary line splits exactly into the principal-phase annulus
+and the finite outer line, whose height limit is
+`smoothSaddleInfiniteOuterPerronLine`. Granville's remaining “small error” is
+now precisely the assertion that this named object tends to zero.
+
+Release 3.90 expands the exact Euler-product ledger into a global bound on the
+remaining contour. The modulus loss is the weighted source-prime sum
+`sum p^(-sigma)*(1-cos(t log p))`, and the physical integrand is at most the
+exponential of minus this sum divided by `96`. The missing content of
+Granville's “small error” is thereby localized to a quantitative lower bound
+for this phase loss on `|t| >= pi/log(y)`.
+
+Release 3.91 proves that lower bound on Granville's first omitted frequency
+shell. The top dyadic prime block has phase between `pi/2` and `3*pi/2`, so
+each factor supplies unit cosine loss. The formal Chebyshev–PNT block count
+then gives the explicit weighted lower bound. The remaining “small error” is
+reduced to later shells and their aggregate integral.
+
+Release 3.92 constructs the first moving version of this argument. For
+`N(t)=ceil(exp(pi/t))`, exact ceiling/logarithm inequalities place the block
+`(N(t)/2,N(t)]` in the same phase window and the outer boundary gives
+`N(t)<=y`. A compiled large PNT threshold supplies the dyadic block count.
+This covers an explicit intermediate small-frequency range; it does not yet
+establish Granville's full omitted tail estimate.
+
+Release 3.93 returns to the first omitted shell and supplies the accumulation
+missing from the one-block estimate. The full CEP dyadic alphabet has
+reciprocal mass `≫1/log(u)` and stays in the same phase window; the exact
+saddle equation turns this into a divergent `≫u/log(u)` cosine loss. Thus
+Granville's integrand is uniformly small there, though the normalized shell
+integral and all later frequencies are not yet claimed.
+
+Release 3.94 completes that first-shell part of Granville's omitted estimate.
+The two literal physical intervals with
+`pi/log(y) <= |t| <= 4*pi/(3*log(y))` are packaged into one normalized
+contribution. Exact interval length, cosine-loss symmetry, the release-3.93
+envelope, and `standardDeviation/log(y) <= sqrt(7*u)` reduce it to
+`sqrt(u)*exp(-c*u/log(u))`, which tends to zero. Granville's remaining
+â€œsmall errorâ€ is now confined to later outer-frequency shells and their
+infinite-height assembly.
+
+Release 3.95 sharpens the same formal Granville bridge. The retained CEP
+alphabet has logarithmic support at least `3/4` of the top scale, so its
+nonpositive-cosine window reaches `3*pi/(2*log(y))`. A generic symmetric-shell
+estimate proves that the newly covered adjacent physical segment has
+vanishing normalized contribution. The remaining “small error” begins at
+this larger endpoint.
+
+Release 3.96 supplies the next Granville frequency block. The accumulated CEP
+alphabet is rebuilt at `floor(sqrt(y))`; exact logarithmic support puts its
+phases in the negative-cosine half-circle from `3*pi/(2*log(y))` through
+`3*pi/log(y)`. The formal result is an explicit full-alphabet cosine-loss
+lower bound on this second shell. Its asymptotic normalization and integral
+remain separate.
+
+Release 3.97 completes this second finite portion of Granville's omitted
+estimate. The square-root-alphabet loss is bounded below by a positive
+constant times `u^(2/5)/log(u)`; its exponential absorbs the saddle
+normalization, and the exact symmetric Perron segment from
+`3*pi/(2*log(y))` through `3*pi/log(y)` has vanishing normalized
+contribution. Granville's remaining “small error” now begins beyond that
+larger endpoint, with its infinite-height assembly still unclaimed.
+
+Release 3.98 supplies the next Granville frequency block. Replacing the
+square-root alphabet by its iterated square root places retained prime logs
+between one sixth and one quarter of `log(y)`. Their complete CEP mass stays
+in the negative-cosine half-circle from `3*pi/log(y)` through
+`6*pi/log(y)`, giving an explicit third-shell loss. Its asymptotic
+normalization and integral remain separate.
+
+Release 3.99 completes this third finite portion of Granville's omitted
+estimate. The fourth-root-alphabet loss is at least a positive constant
+times `u^(1/5)/log(u)`, whose exponential absorbs the saddle normalization.
+The exact symmetric Perron segment through `6*pi/log(y)` therefore has
+vanishing normalized contribution. The remaining “small error” begins
+beyond that endpoint and still includes the infinite-height assembly.
+
+Release 4.00 supplies the fourth finite Granville frequency block. The
+eighth-root alphabet has retained prime logs between one twelfth and one
+eighth of `log(y)`, so its full CEP mass remains in the negative-cosine
+half-circle from `6*pi/log(y)` through `12*pi/log(y)`. This gives an explicit
+fourth-shell loss; its asymptotic normalization and integral remain separate.
+
+Release 4.01 completes the fourth finite Granville block. Its loss is
+`≫u^(1/9)/log(u)`, whose exponential absorbs the saddle normalization; the
+exact symmetric Perron segment through `12*pi/log(y)` therefore vanishes.
+The remaining “small error” begins beyond that endpoint.
+
+Release 4.02 packages the repeated Granville frequency blocks into one
+indexed geometry. Iterated-root alphabets have explicit two-sided logarithmic
+envelopes, while their physical endpoints double exactly and reproduce every
+completed concrete shell. Uniform indexed loss and infinite aggregation
+remain.
+
+Release 4.03 proves the indexed Granville block estimate itself. A single
+four-fifths scale hypothesis gives the retained support, exact phase window,
+and accumulated CEP loss at every index. The remaining issue is uniform
+control and summation as the number of blocks grows.
+
+Release 4.04 makes the indexed range explicit: terminal noncollapse and
+`10*(2^k-1)*log(2) <= log(y)` imply the scale retention required by every
+preceding Granville block. A growing terminal choice and summation remain.
+
+Release 4.05 closes the fixed-depth quantifier. Exact natural-square-root
+arithmetic shows `a <= scale(k,y)` precisely when `a^(2^k) <= y`, while the
+critical regime sends both `y` and `log(y)` to infinity. Hence every fixed
+finite Granville shell prefix is eventually scale-admissible. The unresolved
+quantifier exchange is to select one depth growing with the regime parameter
+and sum the corresponding shells.
+
+Release 4.06 supplies the remaining critical-regime hypothesis at fixed
+depth: the Rankin ratio lies below the square root of the iterated scale.
+Consequently every fixed Granville shell now has its complete accumulated
+cosine-loss estimate, not just its geometry. The unresolved passage is from
+these pointwise-in-index eventual statements to one growing diagonal family
+with a summable integral bound.
+
+Release 4.07 resolves that quantifier passage. A slow diagonal depth tends to
+infinity and simultaneously carries the complete accumulated loss on every
+Granville shell below it. This reaches arbitrarily large physical multiples
+of `1/log(y)` along one family. The remaining comparison with Granville's
+omitted “small error” is the normalized sum of these shell integrals plus the
+tail after the moving terminal endpoint.
+
+Release 4.08 matches each abstract Granville shell with an explicit decay
+scale. Its power `(4/5)*2^(-k)` is exactly the retained logarithmic fraction
+certified by the indexed root ledger. At fixed `k`, this gives divergent
+cosine loss and hence a vanishing exponential envelope candidate. The
+remaining step is to include shell width and saddle normalization, then sum
+along a suitably slowed version of the growing diagonal.
+
+Release 4.09 completes the fixed-shell analytic comparison: each indexed
+Granville block has a vanishing normalized symmetric Perron integral. The
+endpoint coefficient grows with `k`, but this is harmless at fixed index.
+The next diagonal must therefore control the finite sum itself, choosing its
+growth slowly enough to absorb those index-dependent constants.
+
+Release 4.10 carries out that slow summation. The diagonal is chosen using
+the norm of the entire Granville-block prefix, so its moving finite sum tends
+to zero while its terminal block index tends to infinity. The next formal
+identity must show adjacent interval integrals telescope exactly to the
+single symmetric frequency band from the first indexed endpoint through the
+moving terminal endpoint.
+
+Release 4.11 identifies that sum with the literal contiguous Granville
+frequency segment. Its upper endpoint passes through arbitrarily many
+doubling shells and the complete segment contribution vanishes. Thus the
+formal gap in Granville's “small error” has been reduced to frequencies
+beyond one moving terminal endpoint, rather than an unassembled family of
+finite blocks.
+
+Release 4.12 makes that endpoint exact. The controlled contributions from
+Granville's principal cutoff through indexed height one are one vanishing
+pre-indexed segment, and the release-4.11 diagonal supplies the next
+vanishing contiguous segment. Their subtraction from the named infinite
+outer line is `smoothSaddlePostTerminalPerronTail`; its decay is formally
+equivalent to Granville's omitted outer “small error” and hence to the
+critical saddle asymptotic.
+
+Release 4.13 records the limitation of that Granville-block construction.
+The terminal prime alphabet survives only if `4^(2^k) <= y`; after taking
+logs, the corresponding physical endpoint is uniformly at most
+`3*pi/(2*log 4)`. Hence the moving block index may diverge without its
+physical endpoint escaping, and Granville's remaining high-frequency error
+cannot follow from the indexed CEP/PNT shells alone.
+
+Release 4.14 maps the next source theorem directly to Lean. HT Lemma 8(ii),
+equation (3.16), becomes
+`SmoothSaddleHildebrandTenenbaumMinorArcBoundAt`; its exponent is the exact
+loss `u*t^2/((1-sigma)^2+t^2)`. The checked transfer controls the normalized
+Perron integrand and integrates every finite symmetric minor-arc band. HT
+Lemma 10's finite truncation and the proof of (3.16) remain uncompiled.
+
+Release 4.15 maps HT Lemma 6 and its corollary to explicit finite objects.
+`smoothSaddleHTMangoldtTransform` represents the complex Mangoldt sum, while
+`smoothSaddleHTMangoldtCosineSum` is proved equal to the real part of the
+difference of its two relevant frequencies. The corollary's error doubling
+is now exact; only the uniform transform approximation remains analytic.
+
+Release 4.16 maps the full statement of HT Lemma 6, equation (3.10), to
+`SmoothSaddleHTMangoldtTransformEstimate`. Its range uses the source's
+`Y_epsilon(y)=exp((log y)^(3/2-epsilon))`, not a low-frequency surrogate.
+The source main term is evaluated in Cartesian form and the named estimate
+is proved to imply the weighted-cosine corollary. The contour proof of the
+named proposition remains the analytic obligation.
+
+Release 4.17 compiles the first half of the proof of HT Lemma 8(ii) after
+Lemma 6. `smoothSaddleHTMangoldtCosineSum_eq_prime_add_primePower` is the
+exact prime/power decomposition, and
+`SmoothSaddleHTMangoldtTransformEstimate.cosineLoss_lower_bound` is the
+source inequality reducing the Euler-product loss to the cosine main term,
+the Lemma-6 error, and the higher-prime-power remainder. HT Lemma 5 is the
+next source estimate needed for that remainder.

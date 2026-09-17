@@ -150,9 +150,9 @@ flowchart TD
         NORMALIZE["Lemmas 6.1--6.2 arithmetic/normalization core PROVED<br/>H≤N + prime-free + exact dyadic bounds + p0²m witness;<br/>contained power-of-two endpoint child with H/4<H'≤H;<br/>finite weak-(1,1) maximal transfer PROVED<br/>#admissible≤30#normalized"]
         TYPICAL["Definitions 6.3--6.4 PROVED<br/>exact cutoff-parametrized typicality;<br/>ordered 1000-prime anatomy + smooth remainder;<br/>>=1000 multiplicity-counted large factors construct anatomy PROVED"]
         ATYPICAL["Proposition 6.5 PROVED<br/>condition-(ii) actual union weak bound;<br/>condition-(i) cofactor sieve + corrected full k>=2 z^-4 saddle + summed long moderate union <=x/z^3;<br/>large-p0 union <=x^(199/200) and large-H fixed power saving;<br/>small-p0, moving low/high smooth bands, and moving deficient band;<br/>fixed-row eight-branch bound <=x/z^(2+1/(128d^2));<br/>countable diagonal with exact floor/ceiling cutoffs both z^(1+o(1));<br/>selected union <=B1(x)/log(x)^(1-o(1))"]
-RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite product probability space PROVED;<br/>exact uniform prime-band laws + mutual independence PROVED;<br/>forward and reflected v-l small-prime 50th moments PROVED conditional on Burgess;<br/>forward and reflected large-prime source mean/variance bounds PROVED conditional on Burgess;<br/>exact Markov/Chebyshev normalization + both typical-event inclusions PROVED conditional on Burgess;<br/>one B simultaneous for every admissible H,m' in both orientations PROVED conditional on Burgess;<br/>exact probability/support-cardinality identities + uniform tuple-count bounds PROVED;<br/>fixed-prime-scale smooth-remainder sums + dyadic geometric cost 2 PROVED;<br/>moving grid + all ordered prime-scale choices PROVED;<br/>enlarged-band global image + fiber ≤1000^1000 PROVED;<br/>PNT band comparison + unweighted assembly factor →0 PROVED conditional on Burgess;<br/>length-weighted all-scale assembly has explicit log saving PROVED conditional on Burgess;<br/>canonical left- and right-endpoint actual-union injections PROVED;<br/>typical/non-typical recombination + factor-30 maximal transfer PROVED;<br/>eventual start-uniform Sylvester--Schur + scale-local large-prime transfer PROVED;<br/>conditional local dyadic-window log saving + exact finite global dyadic cover PROVED;<br/>adjacent-ratio geometric summation + exact conditional T1.7 contract PROVED;<br/>slow central-packet concentration + B1 half-ratio + adjacent ratio + Lemma 1.6(ii) from sharp smooth dilation PROVED;<br/>Sylvester--Schur all-start large-length tail + finite-rectangle reduction + all H&lt;49 PROVED independently;<br/>open for T1.7: critical smooth saddle asymptotic + analytic Burgess"]
+RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite product probability space PROVED;<br/>exact uniform prime-band laws + mutual independence PROVED;<br/>forward and reflected v-l small-prime 50th moments PROVED conditional on Burgess;<br/>forward and reflected large-prime source mean/variance bounds PROVED conditional on Burgess;<br/>exact Markov/Chebyshev normalization + both typical-event inclusions PROVED conditional on Burgess;<br/>one B simultaneous for every admissible H,m' in both orientations PROVED conditional on Burgess;<br/>exact probability/support-cardinality identities + uniform tuple-count bounds PROVED;<br/>fixed-prime-scale smooth-remainder sums + dyadic geometric cost 2 PROVED;<br/>moving grid + all ordered prime-scale choices PROVED;<br/>enlarged-band global image + fiber ≤1000^1000 PROVED;<br/>PNT band comparison + unweighted assembly factor →0 PROVED conditional on Burgess;<br/>length-weighted all-scale assembly has explicit log saving PROVED conditional on Burgess;<br/>canonical left- and right-endpoint actual-union injections PROVED;<br/>typical/non-typical recombination + factor-30 maximal transfer PROVED;<br/>eventual start-uniform Sylvester--Schur + scale-local large-prime transfer PROVED;<br/>conditional local dyadic-window log saving + exact finite global dyadic cover PROVED;<br/>adjacent-ratio geometric summation + exact conditional T1.7 contract PROVED;<br/>slow central-packet concentration + B1 half-ratio + adjacent ratio + Lemma 1.6(ii) from sharp smooth dilation PROVED;<br/>tilted smooth mass normalization + phi1/phi2 cumulants + exact Gaussian local-limit reformulation PROVED;<br/>Sylvester--Schur all-start large-length tail + finite-rectangle reduction + all H&lt;49 PROVED independently;<br/>open for T1.7: tilted Gaussian local limit + analytic Burgess"]
         MOMENTS["Propositions 6.7--6.8 conditional closure<br/>finite mean/variance algebra and diagonal reduction PROVED;<br/>single-p and joint-pp' primitive character fibers PROVED;<br/>principal split + exact one/two-prime collision loss PROVED;<br/>prime-modulus nonprincipal Z^-8 error PROVED;<br/>product-modulus conductor reduction + change-level collision removal PROVED;<br/>literal improved probability + distinct-prime covariance error PROVED;<br/>finite exceptional mean/covariance partition + variance insertion PROVED;<br/>bad product pairs covered by exceptional endpoints/partner union PROVED;<br/>dyadic first-moment PNT/main/error/cardinality block PROVED;<br/>exact two-band covariance error/cardinality block PROVED;<br/>exceptional pair cardinality reduced to exact three-family count PROVED;<br/>source aggregate + one/joint/covariance error envelopes PROVED;<br/>direct R^-1.001 and ordered R^-1.001 S^-1 power errors PROVED;<br/>adaptive Burgess endpoint O(R^0.02) + partner O(S^0.02) counts PROVED;<br/>adaptive character-moment and one/joint/covariance error consumers PROVED;<br/>mixed R-for-p, S-for-p'/pp' pair partition + joint/covariance powers PROVED;<br/>adaptive one-/two-band aggregation + pair-cardinality reduction PROVED;<br/>Burgess cardinalities + improved errors inserted into both blocks PROVED;<br/>fixed-threshold exceptional p and uniformly-in-p exceptional p' counts PROVED;<br/>exact residue fiber + uniform finite tuple-count law PROVED;<br/>one-coordinate collision-closed crude bounds PROVED;<br/>source two-/three-coordinate crude fibers with multiplicities 2/6 PROVED;<br/>normalized crude shapes 16L²/p and 96L³/(pp') PROVED;<br/>uniform PNT scale gives 256log²(z)/p and 6144log³(z)/(pp') PROVED;<br/>whole-band crude specialization + automatic conductor/partner geometry PROVED;<br/>p|m' zero branches + complete source blocks PROVED;<br/>exact disjoint dyadic grid + uniform scale constants PROVED;<br/>literal mean ≤2000000H + covariance ≤H + variance ≤2000001H PROVED conditional on Burgess;<br/>analytic Burgess open"]
-        T17["CONDITIONAL FULL: Theorem 1.7<br/>nontrivial B saving + x/z^(2+o(1));<br/>open inputs: critical smooth saddle asymptotic,<br/>analytic Burgess"]
+        T17["CONDITIONAL FULL: Theorem 1.7<br/>nontrivial B saving + x/z^(2+o(1));<br/>open inputs: tilted Gaussian local limit,<br/>analytic Burgess"]
         NORMALIZE --> TYPICAL
         TYPICAL --> ATYPICAL
         TYPICAL --> RANDOM
@@ -595,3 +595,175 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% native critical coefficients below 10000, and the trivial complementary
     %% branch prove VinogradovExponentialSumEstimate. Specialized Theorem 2.5,
     %% Lemma 3.1, and the literal Theorem 1.8 endpoint are unconditional.
+    %% Release 3.72: normalized tilted smooth-number weights, their first two
+    %% log-partition derivatives, and the exact cutoff-factor ratio reduce the
+    %% critical saddle theorem to one explicit Gaussian local-limit target.
+    %% Release 3.73: those weights are an actual probability measure on log n.
+    %% Its characteristic function and the centered variance-normalized saddle
+    %% Fourier series are exact and absolutely convergent. Gaussian convergence
+    %% and local-limit inversion remain the smooth-number analytic boundary.
+    %% Release 3.74: the complex smooth Fourier series factors into the exact
+    %% source-prime geometric Euler product. Each normalized prime factor has
+    %% squared norm (1-a)^2/((1-a)^2+2a(1-cos(t log p))), yielding the full
+    %% centered saddle contraction product. Frequency estimates remain.
+    %% Release 3.75: principal-period cosine loss gives quadratic local decay;
+    %% a central-window reciprocal estimate upgrades it to Gaussian decay.
+    %% The coefficients sum exactly to phiTwo, so variance normalization yields
+    %% |char(t)|<=exp(-t^2/pi^2) on one explicit source-scale range.
+    %% Release 3.76: that range is the symmetric interval of exact positive
+    %% radius pi/2*(1-2^(-sigma))*sqrt(phiTwo)/log(y). Membership is equivalent
+    %% to the source-scale condition. The radius tends to infinity, and hence
+    %% captures every fixed frequency, once log(y)/sqrt(phiTwo) tends to zero.
+    %% Release 3.77: the eight-log Rankin comparison lies below the exact
+    %% saddle. PhiTwo antitonicity plus the exact secant identity yields
+    %% phiTwo/log(y)^2>=u/(16log(u)); hence the radius diverges unconditionally
+    %% and every fixed normalized frequency eventually has Gaussian decay.
+    %% Release 3.78: exact centering distributes over the prime factors and
+    %% their variance shares sum to one. A finite contraction-product theorem
+    %% reduces convergence to exp(-t^2/2) to the summed local quadratic Taylor
+    %% error; the maximal share tends to zero by the 3.77 curvature bound.
+    %% Release 3.79: exact geometric moments and a global cubic exp(ix)
+    %% remainder bound the summed local Taylor error by
+    %% 16000*|t|^3*log(y)/sqrt(phiTwo), which tends to zero. Hence the exact
+    %% normalized saddle characteristic converges to exp(-t^2/2) at each
+    %% fixed frequency. Complementary-frequency decay and inversion remain.
+    %% Release 3.80: the cutoff factor is exactly a one-sided Laplace moment
+    %% of the normalized logarithmic law at rate sigma*sqrt(phiTwo). The
+    %% Gaussian prefactor is sqrt(2*pi) times this diverging rate, and the
+    %% saddle asymptotic is equivalent to convergence of that explicit target.
+    %% Release 3.81: the exact normalized Laplace kernel times the centered
+    %% characteristic is restricted to the expanding central interval and
+    %% dominated by exp(-t^2/pi^2). Pointwise Gaussian convergence plus
+    %% dominated convergence evaluates the central integral as sqrt(2*pi),
+    %% so its normalized contribution tends to one. Only the Perron
+    %% truncation identity and complementary-contour error remain here.
+    %% Release 3.82: the twisted smooth Dirichlet series at -t, the phase
+    %% exp(i*t*log X), and sigma/(sigma+i*t) are proved exactly equal to the
+    %% characteristic/Laplace integrand at -t*sqrt(phiTwo). The central height
+    %% and standard-deviation interval substitution are exact, so the 3.81
+    %% limit is now literally the normalized central Perron-line limit.
+    %% Release 3.83: absolute convergence passes the smooth Dirichlet series
+    %% through the finite line, identifying it with frozen sharp-Perron
+    %% kernels. The inclusive cutoff is psiNat, subtraction is summable, and
+    %% lower/upper logarithmic plus endpoint bounds transfer. Their
+    %% saddle-scale aggregation remains.
+    %% Release 3.84: the frozen kernels tend to 1, 1/2, and 0 below, at, and
+    %% above the cutoff. A summable height-independent envelope and Tannery
+    %% give the full smooth-series limit psiNat minus the explicit possible
+    %% endpoint half-mass, of norm at most 1/2. Only the finite-height
+    %% noncentral-line estimate remains in this saddle step.
+    %% Release 3.85: the full line is normalized exactly by the saddle main
+    %% term. Removing the central Gaussian contribution is literally the two
+    %% tail integrals; its infinite-height limit is the corrected saddle ratio
+    %% minus the central term. Critical corrected-ratio convergence is
+    %% equivalent to vanishing of this named complement, and the normalized
+    %% endpoint is bounded by 1/(2*mainTerm).
+    %% Release 3.86: phiTwo <= 7*log(y)*phiOne on sigma>=1/2 gives the
+    %% explicit saddle-main-term lower bound sqrt(X)/(sqrt(14*pi)*log X).
+    %% Thus the main term diverges in every critical regime, the normalized
+    %% endpoint vanishes, and the original saddle asymptotic is equivalent to
+    %% decay of the named infinite complementary Perron line.
+    %% Release 3.87: prime-local contraction is extended through the full
+    %% phase range |t log p|<=pi. This gives a Gaussian envelope up to
+    %% normalized radius pi*sqrt(phiTwo)/log(y), and dominated convergence
+    %% makes the annulus outside the central window negligible. Only the
+    %% Perron frequencies beyond physical height pi/log(y) remain.
+    %% Release 3.88: the wide normalized annulus is transported exactly to
+    %% the two physical Perron segments between the central height and
+    %% pi/log(y). Their normalized sum tends to zero, leaving precisely the
+    %% two outer vertical-line tails beyond that height.
+    %% Release 3.89: those two tails are named at finite and infinite height.
+    %% The complementary line is annulus plus outer line, and the critical
+    %% saddle asymptotic is equivalent to decay of the infinite outer object.
+    %% Release 3.90: every Euler factor admits a global exponential loss.
+    %% The full characteristic and literal Perron integrand are bounded by
+    %% exp(-sum_{p<=y} p^(-sigma)*(1-cos(t log p))/96). Outer-tail closure is
+    %% reduced to a lower bound for this explicit nonnegative cosine loss.
+    %% Release 3.91: on pi/log(y)<=t<=4*pi/(3*log(y)), the top dyadic prime
+    %% block has nonpositive cosine. Chebyshev--PNT supplies the explicit loss
+    %% y^(-sigma)*y/(16*log(y)). Later outer shells and their integral remain.
+    %% Release 3.92: N(t)=ceil(exp(pi/t)) moves the dyadic block with frequency.
+    %% Exact ceiling/log bounds put it below y and inside the same negative-cosine
+    %% window on a controlled small-frequency range; PNT supplies its explicit
+    %% N(t)^(-sigma)*N(t)/(16*log(N(t))) loss. Larger frequencies remain.
+    %% Release 3.93: all retained CEP dyadic blocks stay in the first-shell
+    %% negative-cosine window. Their 1/log(u) reciprocal mass plus exact saddle
+    %% and cutoff bounds gives a divergent loss >>u/log(u), hence a uniform
+    %% vanishing envelope for the literal Perron integrand on that shell.
+    %% Release 3.94: the exact symmetric physical first-shell contribution is
+    %% bounded by its interval width times the 3.93 envelope. Curvature gives
+    %% standardDeviation/log(y)<=sqrt(7u), and exp(-c*u/log(u)) absorbs this
+    %% factor, so the normalized first-shell integral tends to zero. Later
+    %% outer-frequency shells and the infinite outer line remain.
+    %% Release 3.95: the exact 3/4 logarithmic support extends the same
+    %% accumulated loss through height 3*pi/(2*log y). A reusable symmetric
+    %% shell norm bound integrates the adjacent band beyond the 3.94 endpoint,
+    %% and its normalized contribution tends to zero. Later frequencies remain.
+    %% Release 3.96: a full CEP alphabet at floor(sqrt(y)) has logarithmic
+    %% support between one third and one half of log(y). Its phases stay in the
+    %% negative-cosine window for 3*pi/(2*log y)<=t<=3*pi/log y, yielding an
+    %% explicit accumulated loss throughout the second shell.
+    %% Release 3.97: that loss is >= c*u^(2/5)/log(u), whose exponential
+    %% absorbs the saddle normalization. The exact symmetric second-shell
+    %% contribution through physical height 3*pi/log(y) tends to zero.
+    %% Release 3.98: the iterated square-root alphabet has logarithmic support
+    %% between one sixth and one quarter of log(y), giving accumulated loss on
+    %% the full third shell 3*pi/log(y)<=t<=6*pi/log(y).
+    %% Release 3.99: the third-shell loss is >=c*u^(1/5)/log(u); exponential
+    %% absorption and the symmetric-shell bound make its normalized
+    %% contribution through height 6*pi/log(y) tend to zero.
+    %% Release 4.00: a third iterated square-root alphabet has retained support
+    %% between one twelfth and one eighth of log(y), giving accumulated loss on
+    %% the fourth shell 6*pi/log(y)<=t<=12*pi/log(y).
+    %% Release 4.01: the fourth-shell loss is >=c*u^(1/9)/log(u); its
+    %% exponential absorbs the saddle normalization and its exact symmetric
+    %% contribution through height 12*pi/log(y) tends to zero.
+    %% Release 4.02: arbitrary iterated-root alphabets have closed-form
+    %% logarithmic envelopes, and indexed physical shell endpoints double
+    %% exactly while recovering all previously certified concrete scales.
+    %% Release 4.03: one four-fifths scale hypothesis yields the retained CEP
+    %% support, exact phase window, and accumulated loss for every indexed
+    %% shell k>=2.
+    %% Release 4.04: terminal noncollapse plus
+    %% 10*(2^k-1)*log(2)<=log(y) supplies the four-fifths scale hypothesis
+    %% uniformly for the indexed shell range.
+    %% Release 4.05: a<=scale(k,y) iff a^(2^k)<=y. Hence every fixed indexed
+    %% depth is eventually noncollapsed in a critical regime, and log(y)->∞
+    %% makes its explicit rounding criterion eventually automatic.
+    %% Release 4.06: at every fixed k, the Rankin ratio is eventually below
+    %% sqrt(scale(k,y)); the uniform indexed phase theorem therefore gives
+    %% the complete loss bound throughout that fixed physical shell.
+    %% Release 4.07: finite-prefix intersections plus the frozen countable
+    %% diagonal theorem select K(n)->infinity, with simultaneous loss on all
+    %% indexed shells 2<=k<=K(n).
+    %% Release 4.08: shell k has explicit loss exponent (4/5)*2^(-k); the
+    %% retained scale and universal exp(-16) cofactor penalty yield a loss
+    %% tending to infinity for every fixed k.
+    %% Release 4.09: positive-power exponential absorption and exact indexed
+    %% shell widths show every fixed symmetric indexed Perron contribution
+    %% tends to zero.
+    %% Release 4.10: a second slow diagonal controls the norm of the complete
+    %% finite prefix by 1/(K+1), so K(n)->infinity while the moving indexed
+    %% shell sum tends to zero.
+    %% Release 4.11: adjacent normalized symmetric shells telescope exactly;
+    %% the moving sum is one contiguous segment from indexed height 1 through
+    %% height K(n), and its contribution tends to zero.
+    %% Release 4.12: the earlier controlled pieces form one vanishing
+    %% pre-indexed segment. Subtracting it and the moving indexed segment from
+    %% the infinite outer line isolates one post-terminal remainder whose
+    %% decay is equivalent to the critical saddle asymptotic.
+    %% Release 4.13: terminal iterated-scale survival forces indexed physical
+    %% height <=3*pi/(2*log(4)); an admissible growing depth therefore cannot
+    %% escape to infinite height, so a second tail mechanism is necessary.
+    %% Release 4.14: HT Lemma 8(ii)'s exact loss
+    %% u*t^2/((1-sigma)^2+t^2) is named, radially monotone, transferred to the
+    %% physical Perron integrand, and integrated on finite symmetric shells.
+    %% Release 4.15: the HT Lemma-6 Mangoldt transform and cosine sum are
+    %% explicit; real-part subtraction is exact and two transform errors E
+    %% yield the cosine-corollary error 2E.
+    %% Release 4.16: HT Lemma 6 is stated at its exact
+    %% exp((log y)^(3/2-epsilon)) frequency ceiling and equation-(3.10) error;
+    %% its complex and cosine main terms are computed in closed form.
+    %% Release 4.17: the Mangoldt cosine sum is split exactly into prime and
+    %% prime-power terms, yielding the source lower bound for the Euler-product
+    %% cosine loss modulo the explicit HT Lemma-5 remainder.

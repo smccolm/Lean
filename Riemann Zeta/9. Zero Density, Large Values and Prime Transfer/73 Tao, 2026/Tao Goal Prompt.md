@@ -73,6 +73,40 @@ The established Section 4 chain is correspondingly reduced: Proposition
 2.3(ii) is now the sole premise of both `TaoTheorem19Conclusion` and
 `TaoTheorem110Conclusion`, with Baker--Harman--Pintz as the pinned
 source-facing boundary. Theorem 2.5 is no longer an input to either endpoint.
+Release 3.72 also normalizes the exact tilted smooth-number distribution,
+proves its `phiOne` mean and `phiTwo` curvature identities, and factors
+`Psi(X,y)` exactly into the saddle exponential and a cutoff expectation.
+The existing critical saddle asymptotic is now kernel-checked equivalent to
+the explicit Gaussian local-limit target for that cutoff expectation. The
+local-limit estimate itself remains open, as does analytic Burgess.
+Release 3.73 realizes the tilted weights as an actual probability measure on
+`log n`, proves the exact absolutely convergent characteristic-function
+series, and constructs its centered variance-normalized saddle form with
+center `log X` and variance `phiTwo`. Gaussian convergence of that explicit
+series and its local-limit inversion remain open.
+Release 3.74 proves the exact finite-prime Euler product for that characteristic
+function, including the source-prime factor
+`(1-p^(-sigma))/(1-p^(-sigma) exp(i t log p))` and its exact squared-norm
+contraction formula. The remaining smooth-number work is now the uniform
+frequency analysis of this explicit product and local-limit inversion.
+Release 3.75 proves the central-frequency component: the exact local cosine
+loss yields a Gaussian envelope, its coefficients sum to `phiTwo`, and saddle
+variance normalization gives `|characteristic(t)| ≤ exp(-t^2/pi^2)` on one
+explicit source-scale window. Growth of that window, complementary-frequency
+decay, and local-limit inversion remain open.
+Release 3.76 packages that window as the exact positive radius
+`pi/2*(1-2^(-sigma))*sqrt(phiTwo)/log y`, proves equivalence with the previous
+source-scale condition, and transfers both Gaussian envelopes to the full
+symmetric interval. It further proves that the radius tends to infinity and
+captures every fixed frequency from the single curvature-scale hypothesis
+`log y/sqrt(phiTwo) → 0`. Establishing that hypothesis in the critical regime,
+complementary-frequency decay, and inversion remain open.
+Release 3.77 proves that curvature-scale hypothesis. The moving point
+`1-8 log(u)/log(y)` is eventually below the exact saddle, and the exact secant
+identity yields `phiTwo/log(y)^2 ≥ u/(16 log u)`. Hence the central radius
+tends to infinity unconditionally in every critical regime and every fixed
+normalized frequency eventually satisfies the Gaussian envelope.
+Complementary-frequency estimates and local-limit inversion remain open.
 Its finite
 Weyl-differencing foundation now compiles independently:
 exact shifted-pair fibers prove the `H`-fold averaging identity and
@@ -820,5 +854,307 @@ which identifies the exact false statement and supports a source-level
 erratum. Difficulty, proof length, missing library convenience, a failed
 tactic, or completion of a substantial subset is not such a result and is not
 a reason to stop.
+
+Release 3.78 formalizes the global Gaussian triangular-array step. The
+normalized characteristic is an exact product of centered prime factors; the
+prime variance shares are nonnegative, sum to one, and have maximum bounded
+by `20 log(y)^2/phiTwo`, which tends to zero by release 3.77. A quantitative
+finite-product theorem reduces convergence to `exp(-t^2/2)` at every fixed
+frequency to the single summed prime-local quadratic Taylor remainder. That
+local estimate, complementary-frequency decay, and inversion remain open.
+
+Release 3.79 proves the remaining prime-local estimate. Exact geometric
+moments and a global cubic remainder for `exp(ix)` bound the summed quadratic
+Taylor error by `16000 |t|^3 log(y)/sqrt(phiTwo)`, which tends to zero by the
+critical curvature theorem. The exact normalized saddle characteristic now
+converges to `exp(-t^2/2)` at every fixed frequency. Complementary-frequency
+decay and Fourier inversion remain open.
+
+Release 3.80 identifies the precise shrinking-scale target behind that
+inversion. The saddle cutoff factor is a one-sided Laplace moment of the
+centered normalized logarithmic law at rate `sigma*sqrt(phiTwo)`; the Gaussian
+prefactor is exactly `sqrt(2*pi)` times this rate, which diverges. The critical
+saddle asymptotic is equivalent to convergence of this normalized Laplace
+target to one. Complementary-frequency control remains open.
+
+Release 3.81 proves the complete central-frequency contribution to that
+target. The exact normalized Laplace kernel is bounded by one and tends to
+one, the expanding central-window integrand is dominated by
+`exp(-t^2/pi^2)`, and dominated convergence evaluates its integral as
+`sqrt(2*pi)`. Consequently the Gaussian-normalized central contribution tends
+to one. The remaining smooth-number work is now the source-facing Perron
+truncation identity and negligible complementary-contour error; Theorem 1.7
+is not yet claimed.
+
+Release 3.82 connects that contribution to the literal normalized Perron
+line. The twisted smooth Dirichlet series, `exp(i*t*log X)`, and
+`sigma/(sigma+i*t)` are exactly the centered characteristic and
+`lambda/(lambda-i*u)` after `u=-t*sqrt(phiTwo)`. The central height and
+interval substitution are exact. The remaining smooth-number obligation is
+therefore the sharp Perron cutoff error and the complementary-frequency line
+bound, not any unresolved sign or normalization convention.
+
+Release 3.83 proves the sharp-cutoff comparison framework. Absolute
+convergence permits termwise integration of the smooth Dirichlet series; the
+finite vertical line is exactly a sum of frozen sharp-Perron kernels. The
+source-smooth cutoff sum is `psiNat`, and the error is the summable series of
+kernel-minus-cutoff terms. Frozen logarithmic bounds apply below and above
+the endpoint, with a uniform `3/2` endpoint bound. Their quantitative
+aggregation and the complementary-line estimate remain.
+
+Release 3.84 completes symmetric large-height Perron inversion for the full
+smooth series. The frozen kernel tends to one below `X`, one half at `X`, and
+zero above `X`; a summable height-independent envelope justifies Tannery
+interchange. The resulting limit is exactly `psiNat X y` minus the explicit
+possible endpoint half-mass, uniformly bounded by `1/2`. Accordingly the
+remaining smooth-saddle task is the quantitative noncentral-line estimate at
+the chosen finite saddle height.
+
+Release 3.85 makes that last line estimate a literal public object. The full
+finite Perron line is normalized exactly by `smoothSaddleMainTerm`; after the
+central Gaussian contribution is removed, the result is precisely the two
+tail integrals outside `smoothSaddleCentralPerronHeight`. Its large-height
+limit is the half-endpoint-corrected saddle ratio minus the central term, and
+in every critical regime its convergence to zero is equivalent to convergence
+of the corrected saddle ratio to one. The normalized endpoint correction is
+at most `1/(2*mainTerm)`. The remaining work is to prove this named
+complementary-line decay and the requisite main-term growth.
+
+Release 3.86 closes the main-term growth clause. A uniform half-plane estimate
+gives `phiTwo <= 7*log(y)*phiOne`, hence
+`phiTwo <= 7*log(y)*log(X)` at the saddle. This yields the explicit lower bound
+`sqrt(X)/(sqrt(14*pi)*log(X)) <= smoothSaddleMainTerm`; critical-regime growth
+forces the main term to infinity and the normalized endpoint correction to
+zero. Therefore `TaoCriticalSmoothSaddleAsymptoticConclusion` is now exactly
+equivalent to vanishing of `smoothSaddleInfiniteComplementaryPerronLine`.
+The complementary-line decay theorem is the sole remaining smooth-number
+saddle obligation.
+
+Release 3.87 proves the first complementary-frequency segment negligible.
+The prime-local contraction is extended to every phase `|t log p| <= pi`,
+giving a uniform Gaussian envelope on the normalized range
+`|t|*log(y)/sqrt(phiTwo) <= pi`. Dominated convergence then shows that the
+annulus from the central saddle radius to `pi*sqrt(phiTwo)/log(y)` has
+vanishing integral in every critical regime. It remains to control the
+Perron line outside the corresponding physical height `pi/log(y)`.
+
+Release 3.88 removes the remaining coordinate ambiguity. The wide radius
+rescales exactly to physical height `pi/log(y)`, and the release-3.87 annular
+integral equals the normalized sum of the negative and positive Perron-line
+segments between the central and wide heights. That literal contribution
+tends to zero. The sole smooth-saddle target is decay of the two outer tails
+beyond `|t| = pi/log(y)`.
+
+Release 3.89 packages that last target as
+`smoothSaddleInfiniteOuterPerronLine`. At finite height the complementary
+line is exactly the sum of the release-3.88 annular contribution and the two
+outer tails; the outer finite line has the named infinite-height limit. Since
+the annulus tends to zero, `TaoCriticalSmoothSaddleAsymptoticConclusion` is
+equivalent to decay of this outer object alone.
+
+Release 3.90 supplies a global pointwise envelope for that object. The exact
+Euler factors yield exponential decay governed by
+`smoothSaddleCosineLoss y sigma t`, the nonnegative sum of
+`p^(-sigma)*(1-cos(t*log p))` over `p <= y`. The literal Perron integrand is
+bounded by `exp(-smoothSaddleCosineLoss/96)` for every frequency. It remains
+to prove that this loss is large enough, uniformly on the outer tails, to
+make their normalized integral vanish.
+
+Release 3.91 establishes that lower bound on the first outer shell. For
+`pi/log(y) <= t <= 4*pi/(3*log(y))`, the phases of every prime in `(y/2,y]`
+lie where cosine is nonpositive. The audited Chebyshev–PNT block count then
+gives cosine loss at least `y^(-sigma)*y/(16*log(y))`. The remaining task is
+to cover and integrate the subsequent outer-frequency shells.
+
+Release 3.92 makes that shell move. It defines
+`N(t)=ceil(exp(pi/t))`, proves that the outer boundary puts `N(t)` below `y`,
+and verifies that its dyadic prime block lies in the same cosine-negative
+window for an explicit small-frequency range. After enlarging the qualitative
+PNT threshold and proving the required half-block logarithmic width, the
+formal loss becomes `N(t)^(-sigma)*N(t)/(16*log(N(t)))`. Frequencies beyond
+this adaptive range and the complete outer-tail integral remain.
+
+Release 3.93 strengthens the first shell by accumulating the full coarse CEP
+dyadic alphabet. Its reciprocal prime mass is of order `1/log(u)`, all of its
+phases remain in the negative-cosine window, and explicit saddle/cutoff bounds
+give a loss scale bounded below by a positive constant times `u/log(u)`. This
+scale diverges and uniformly suppresses the physical Perron integrand on the
+first shell. The growing normalization must still be absorbed in the shell
+integral, and subsequent shells remain to be controlled.
+
+Release 3.94 absorbs that normalization and closes the first shell. The exact
+symmetric contribution over
+`pi/log(y) <= |t| <= 4*pi/(3*log(y))` is bounded using its literal interval
+width, the release-3.93 envelope, and
+`standardDeviation/log(y) <= sqrt(7*u)`. A direct
+`sqrt(u)*exp(-c*u/log(u)) -> 0` limit proves that this normalized Perron
+contribution tends to zero in every critical regime. Subsequent outer shells
+and the complete infinite tail remain to be controlled.
+
+Release 3.95 extends the accumulated phase window beyond the former endpoint.
+Because every retained CEP prime has `log(p) >= 3/4*log(y)`, its phase remains
+in the cosine-nonpositive interval through physical height
+`3*pi/(2*log(y))`. A generic symmetric-shell norm theorem then integrates the
+new band from `4*pi/(3*log(y))` to that endpoint. Its normalized contribution
+tends to zero by the same `exp(-c*u/log(u))` absorption. Frequencies beyond
+`3*pi/(2*log(y))` and the infinite outer line remain.
+
+Release 3.96 crosses that endpoint with a square-root prime alphabet. For
+`N=floor(sqrt(y))`, exact logarithmic estimates give
+`2/5*log(y) <= log(N) <= 1/2*log(y)`, and the CEP cutoff retains only primes
+with `log(p) >= 1/3*log(y)`. Thus every retained phase lies in the
+cosine-nonpositive interval for
+`3*pi/(2*log(y)) <= t <= 3*pi/log(y)`. The complete CEP reciprocal mass gives
+an explicit loss bound throughout this second shell. It remains to prove that
+this new scale diverges strongly enough to integrate the normalized shell.
+
+Release 3.97 completes that second-shell integration. The square-root
+cofactor power dominates `(u/(15*log(4)))^(2/5)`, producing a named loss
+scale comparable to `u^(2/5)/log(u)`. This scale tends to infinity and its
+exponential absorbs the `sqrt(u)` saddle normalization. Consequently the
+exact symmetric normalized Perron contribution on
+`3*pi/(2*log(y)) <= |t| <= 3*pi/log(y)` tends to zero. The remaining smooth
+saddle task begins beyond `3*pi/log(y)` and still includes the infinite-tail
+assembly.
+
+Release 3.98 crosses the next endpoint with the twice-iterated natural square
+root scale. Exact floor-root estimates give
+`1/5*log(y) <= log(N) <= 1/4*log(y)`, and the CEP cutoff keeps its primes
+above `1/6*log(y)`. Thus all retained phases remain in the
+cosine-nonpositive interval for
+`3*pi/log(y) <= t <= 6*pi/log(y)`. The complete accumulated third-shell loss
+is formal, including its eventual critical-regime range hypotheses. Its
+divergent Rankin-ratio comparison and normalized integral remain next.
+
+Release 3.99 completes the third-shell integration. Its cofactor power
+dominates `(u/(15*log(4)))^(1/5)`, giving a loss comparable to
+`u^(1/5)/log(u)`. This scale diverges and its exponential absorbs the saddle
+normalization. Hence the exact symmetric normalized Perron contribution on
+`3*pi/log(y) <= |t| <= 6*pi/log(y)` tends to zero. The remaining smooth
+saddle contour begins beyond `6*pi/log(y)` and still requires infinite-tail
+assembly.
+
+Release 4.00 crosses the next resonant endpoint with an eighth-root prime
+alphabet. Exact iterated-floor estimates give
+`1/9*log(y) <= log(N) <= 1/8*log(y)`, while the CEP cutoff retains primes
+above `1/12*log(y)`. Thus every retained phase has nonpositive cosine for
+`6*pi/log(y) <= t <= 12*pi/log(y)`. The accumulated loss and its eventual
+critical cofactor range are proved. Its divergent Rankin-ratio comparison
+and normalized integral remain next.
+
+Release 4.01 completes the fourth-shell integration. The cofactor power
+dominates `(u/(15*log(4)))^(1/9)`, giving a divergent
+`u^(1/9)/log(u)` loss whose exponential absorbs the saddle normalization.
+Thus the exact normalized contribution on
+`6*pi/log(y) <= |t| <= 12*pi/log(y)` tends to zero. Remaining frequencies
+start beyond `12*pi/log(y)` and require indexed aggregation.
+
+Release 4.02 supplies that indexed foundation. Arbitrary iterated natural
+square-root alphabets now have exact recursive and closed-form logarithmic
+envelopes, specialize to all previously certified scales, and carry physical
+upper heights that double at each positive index. Uniform phase loss and
+summation over this family are the next obligations.
+
+Release 4.03 proves the uniform phase-loss half. At every index `k >= 2`, a
+four-fifths lower bound for the iterated-root logarithmic scale forces the
+retained CEP primes into the exact support needed on the adjacent indexed
+physical shell. All such primes contribute unit cosine loss, yielding the
+generic accumulated bound. Uniform scale ranges and shell summation remain.
+
+Release 4.04 proves the scale-range half. Iterated roots are antitone, so a
+terminal lower bound of four controls every preceding scale. The closed-form
+rounding loss then shows that
+`10*(2^k-1)*log(2) <= log(y)` implies the four-fifths hypothesis used by the
+uniform indexed phase theorem. Selecting a growing terminal index and
+summing its shells remain.
+
+Release 4.05 proves eventual admissibility at each fixed indexed depth. The
+exact identity `a <= scale(k,y) ↔ a^(2^k) <= y` converts noncollapse to one
+ordinary lower bound on `y`; critical-regime divergence of `y` and `log(y)`
+then supplies both range hypotheses and hence the ideal logarithmic scale
+bounds. Arbitrarily long fixed shell prefixes are now certified. A diagonal
+depth growing with the regime parameter and the corresponding finite-prefix
+sum remain.
+
+Release 4.06 adds the fixed-index analytic range. Choosing the positive power
+`(1/5)*2^(-k)` and using the 4/5 logarithmic scale lower bound shows that the
+critical Rankin ratio is eventually at most the square root of the `k`th
+iterated prime scale. All hypotheses of the indexed phase theorem therefore
+hold eventually for every fixed `k >= 2`, yielding the full loss over its
+exact shell. A growing diagonal index and uniform summed integral remain.
+
+Release 4.07 performs the diagonal passage. Fixed finite prefixes are first
+intersected, then the countable-diagonal theorem selects a depth tending to
+infinity for which all indices from two through that depth satisfy their full
+loss estimates simultaneously. What remains is quantitative rather than
+logical: convert the moving family to summable normalized shell envelopes and
+control the infinite line after its terminal height.
+
+Release 4.08 supplies the common quantitative envelope. Shell `k` receives
+the exponent `(4/5)*2^(-k)`; the four-fifths scale lower bound transfers that
+Rankin-ratio power to the iterated prime scale, and the saddle displacement
+absorbs the cofactor cutoff at universal cost `exp(-16)`. The resulting loss
+scale bounds every fixed shell eventually and diverges. Its normalized
+integral and moving-prefix sum remain.
+
+Release 4.09 integrates that envelope at arbitrary fixed index. A general
+positive-power exponential lemma absorbs `sqrt(u)`, the loss is transferred
+to both signs of the shell, and the endpoint-doubling identity gives the
+exact symmetric width. Consequently every fixed indexed Perron contribution
+tends to zero. A second slow diagonal must now make the whole moving prefix
+sum vanish before the residual infinite tail is addressed.
+
+Release 4.10 performs that second diagonal. Every fixed finite prefix tends
+to zero, and the diagonal predicate bounds the whole prefix norm by
+`1/(K+1)` while retaining every individual shell-loss assertion. Thus a
+single depth tends to infinity and its complete moving indexed contribution
+vanishes. The finite sum must next be telescoped to the contiguous physical
+segment, after which only the post-terminal infinite tail remains.
+
+Release 4.11 proves the exact telescoping identity. Adjacent signed interval
+integrals concatenate under the common saddle normalization, so the moving
+indexed sum is one contiguous symmetric segment from indexed height one to
+height `K(n)`. Its contribution tends to zero while `K(n)` tends to infinity.
+The sole remaining smooth-saddle frequency region is now the infinite outer
+line beyond that moving terminal endpoint.
+
+Release 4.12 names that final region without hiding any finite pieces. The
+first, extended, and second outer contributions concatenate to a vanishing
+pre-indexed segment; subtracting it and the release-4.11 moving segment from
+the infinite outer line defines the post-terminal tail. A checked equivalence
+now says that the critical smooth-saddle asymptotic holds exactly when this
+remainder vanishes along the existing growing diagonal. The next proof must
+therefore supply a new high-frequency mechanism for this remainder.
+
+Release 4.13 proves that this change of mechanism is logically necessary.
+The exact survival criterion `4^(2^k) <= y` forces every admissible indexed
+endpoint below `3*pi/(2*log 4)`. Consequently a growing shell index cannot
+make the physical terminal height tend to infinity while retaining the
+prime alphabet used by the CEP/PNT phase argument.
+
+Release 4.14 follows the original replacement mechanism. It formalizes the
+Hildebrand--Tenenbaum Lemma 8(ii) loss
+`u*t^2/((1-sigma)^2+t^2)`, its monotonicity in physical frequency, the exact
+minor-arc characteristic contract, and its transfer and integration on a
+finite symmetric Perron shell. Next prove that contract from the Mangoldt
+phase estimate and combine it with their finite-height truncation argument.
+
+Release 4.15 compiles the algebraic core of that phase estimate. The HT
+Mangoldt cosine sum is the real part of the zero-frequency transform minus
+the oscillatory transform, and two uniform Lemma-6 transform errors cost
+exactly `2E`. The next step is the analytic transform approximation itself.
+
+Release 4.16 fixes that remaining approximation at the source's exact scale:
+`Y_epsilon(y)=exp((log y)^(3/2-epsilon))`, with the equation-(3.10) error
+majorant. The complex and cosine main terms now have checked closed forms,
+and the named uniform transform proposition implies the complete cosine
+corollary. Its shifted Perron/zero-free-region proof is still required.
+
+Release 4.17 connects that corollary to the Euler product. It proves the
+exact prime/higher-prime-power split, bounds the prime logarithm by `log y`,
+and costs at most two on the cosine factor in the remainder. Consequently
+the Lemma-6 proposition supplies an explicit lower bound for the precise
+cosine loss used in Lemma 8(ii). The source-strength remainder estimate and
+main-term lower bound remain.
 
 ---

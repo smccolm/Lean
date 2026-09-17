@@ -137,3 +137,49 @@ closures of `GafniTao.Theorem11` and the native Wooley VMVT bridge from node
 74, including `public import`
 declarations, and regenerates the per-source SHA-256 manifest. Run it only as
 an intentional dependency-update operation and review all resulting changes.
+
+Release 4.05 adds the fixed-depth indexed-shell arithmetic and eventual
+critical-regime scale package to both the production root and axiom audit;
+the canonical build continues to check these through root reachability,
+warning failure, and the semantic-regression gates.
+
+Release 4.06 additionally audits the fixed-index Rankin/cofactor comparison
+and the resulting critical-regime indexed cosine-loss theorem.
+
+Release 4.07 audits the finite-prefix intersection and the growing shell
+depth selected through the frozen countable-diagonal theorem.
+
+Release 4.08 audits the generic indexed Rankin-power loss scale and its
+fixed-index critical-regime divergence.
+
+Release 4.09 audits the generic exponential absorption and vanishing fixed
+indexed symmetric Perron contribution.
+
+Release 4.10 audits the finite-prefix convergence and the second slow
+diagonal that makes the complete moving shell sum vanish.
+
+Release 4.11 audits exact symmetric-shell concatenation and the resulting
+vanishing contiguous moving Perron segment.
+
+Release 4.12 audits the pre-indexed concatenation, its critical-regime
+vanishing, the exact post-terminal remainder decomposition, and the
+equivalence between decay of that remainder and the critical saddle
+asymptotic.
+
+Release 4.13 audits the absolute indexed physical-height ceiling and the
+resulting impossibility of an admissible indexed terminal height tending to
+infinity.
+
+Release 4.14 audits the Hildebrand--Tenenbaum minor-arc loss, its symmetry
+and radial monotonicity, the exact characteristic-to-Perron transfer, and the
+finite symmetric-shell integration theorem.
+
+Release 4.15 audits the HT complex Mangoldt transform, its exact cosine-sum
+real-part identity, and the two-error stability estimate.
+
+Release 4.16 audits the exact HT Lemma 6 frequency ceiling and error scale,
+the complex main-term formulas, and the deduction of the cosine corollary
+from the named uniform transform estimate.
+
+Release 4.17 audits the exact prime/prime-power decomposition of the HT
+cosine sum and its conversion to the Euler-product cosine-loss lower bound.

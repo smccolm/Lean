@@ -866,3 +866,326 @@ whereas the polynomial mean-value degree is `floor(4 log F/log X)`. The
 formal proof uses quarter-scale critical moments, the already frozen explicit
 Ford coefficient for the large-degree tail, and a finite maximum of native
 critical coefficients below degree 10000.
+
+## Release 3.72 source note
+
+No new external source is introduced. The new modules formalize the standard
+exponential-tilting interpretation of the already recorded finite smooth
+Euler product and prove an exact equivalence with the existing critical
+saddle-asymptotic contract. The remaining Gaussian local-limit estimate is
+not claimed as proved.
+
+## Release 3.73 source note
+
+No new external source is introduced. The release formalizes the standard
+probability-measure and characteristic-function interpretation of the same
+finite-prime saddle tilt already fixed in release 3.72. The exact Fourier
+series, saddle centering, and variance normalization are proved; Gaussian
+convergence and Fourier inversion remain open.
+
+## Release 3.74 source note
+
+No new external source is introduced. The new module proves the standard
+prime-power geometric factorization of the already defined tilted law. The
+exact local contraction identity isolates `1-cos(t log p)`, matching the
+classical characteristic-function route to the saddle local limit. The
+frequency estimates themselves are not claimed.
+
+## Release 3.75 source note
+
+No new external source is introduced. This release formalizes the elementary
+central-frequency part of the characteristic-function method: the standard
+quadratic cosine loss, conversion of reciprocal contraction to an exponential,
+and exact identification of the accumulated variance with `phiTwo`.
+Complementary-frequency estimates and inversion remain open.
+
+## Release 3.76 source note
+
+No new external source is introduced. This release records the exact finite
+central interval already implicit in the prime-local contraction argument and
+proves the filter-theoretic implication from vanishing maximal normalized
+prime phase to an expanding window. The required critical-regime curvature
+limit, complementary-frequency estimates, and inversion are not claimed.
+
+## Release 3.77 source note
+
+No new external source is introduced. The quantitative curvature bound is
+derived from the already formalized finite saddle equation, prime-counting
+lower estimate, antitonicity of the explicit second-prime summands, and the
+exact mean-value identity. This closes the central-window growth step but does
+not claim complementary-frequency estimates or local-limit inversion.
+
+## Release 3.78 source note
+
+No new external source is introduced. The release packages the elementary
+finite-product triangular-array argument for the already formalized geometric
+Euler factors. It uses the exact saddle centering and curvature decomposition,
+the standard quadratic remainder bound for the real exponential, and the
+release-3.77 curvature growth. The prime-local third-order Taylor estimate,
+complementary-frequency bounds, and inversion are not claimed.
+
+## Release 3.79 source note
+
+No new external source is introduced. The release derives the geometric
+prime-power moments from Mathlib's geometric-series identities and proves the
+needed pure-imaginary exponential remainder from the checked sine and cosine
+bounds. These elementary inputs close fixed-frequency Gaussian convergence.
+No complementary-frequency estimate or local-limit inversion is claimed.
+
+## Release 3.80 source note
+
+No new external source is introduced. This release is an exact algebraic and
+probabilistic reformulation of the already pinned saddle cutoff. It records
+the diverging one-sided Laplace rate and the precise normalized target for the
+remaining local-limit argument; no new analytic estimate is claimed.
+
+## Release 3.81 source note
+
+No new external source is introduced. The release formalizes the central
+segment of the saddle calculation described in the already pinned Granville
+survey, equations (3.22)--(3.23): the Euler-product characteristic is
+Gaussian on `|t| <= 1/log y`, which becomes the expanding normalized central
+window. Mathlib's dominated-convergence theorem and Gaussian integral close
+that segment. Granville's complementary Perron error is not claimed and is
+the next source-facing obligation.
+
+## Release 3.82 source note
+
+No new external source is introduced. This release formalizes the exact
+normalization of Granville (3.22) on the central segment used in (3.23). In
+particular, the Fourier sign, the phase `exp(i*t*log X)`, the denominator
+`sigma+i*t`, and the substitution by `sqrt(phiTwo)` are kernel checked. The
+finite-height Perron cutoff error and the noncentral portion of the line are
+still not claimed.
+
+## Release 3.83 source note
+
+No new external source is introduced. This release reuses the frozen
+coefficient-free sharp-Perron kernel and its physical estimates, then proves
+the smooth-coefficient convergence and inclusive cutoff identities locally.
+It formalizes the finite-height comparison implicit in Granville
+(3.22)--(3.23). The summed saddle-scale error and complementary segment are
+not yet claimed.
+
+## Release 3.84 source note
+
+No new external source is introduced. The release makes the symmetric Perron
+endpoint convention in Granville (3.22) exact: the kernel limits are `1`,
+`1/2`, and `0`, and Tannery's theorem gives `psiNat` minus an explicit possible
+half-endpoint correction. Its norm is at most `1/2`, formalizing the bounded
+endpoint discrepancy absorbed by Granville's `O(1)`. The noncentral finite-line
+estimate implicit in (3.23) is still not claimed.
+
+## Release 3.85 source note
+
+No new source is introduced. This release formalizes the subtraction implicit
+between Granville (3.22) and the central segment used in (3.23): after exact
+saddle normalization, the complement is the pair of tail integrals outside
+the central height. Its infinite-height value is the endpoint-corrected
+counting ratio minus the central Gaussian contribution. The normalized
+endpoint is explicitly at most `1/(2*mainTerm)`. The analytic decay assertion
+for those tails is not yet claimed.
+
+## Release 3.86 source note
+
+No new external source is introduced. The elementary comparison
+`phiTwo <= 7*log(y)*phiOne` and the resulting explicit main-term lower bound
+show that the bounded endpoint term in Granville (3.22) is negligible in every
+critical regime. Thus the formal version of (3.23) is reduced exactly to decay
+of the complementary line; that analytic decay is still not claimed.
+
+## Release 3.87 source note
+
+No new external source is introduced. The release proves directly from the
+already formalized finite Euler product that the portion of Granville's
+complementary line lying in the principal phase cell is negligible. It does
+not claim decay beyond physical height `pi/log(y)`; that outer-frequency
+estimate remains the source-facing analytic boundary.
+
+## Release 3.88 source note
+
+No new external source is introduced. This release verifies that the
+principal-phase annulus proved negligible in release 3.87 is exactly the
+corresponding portion of Granville's physical Perron line, with endpoint
+`pi/log(y)`. It leaves the two outer tails beyond that endpoint unclaimed.
+
+## Release 3.89 source note
+
+No new external source is introduced. This release only packages and
+decomposes the part of Granville's complementary Perron line beyond
+`pi/log(y)`. The analytic assertion that the resulting named infinite outer
+line tends to zero is not claimed.
+
+## Release 3.90 source note
+
+No new external source is introduced. Granville's survey states that the
+central segment has a “small error” complement but does not supply the
+outer-frequency inequality in the cited passage. This release derives a
+global exponential envelope directly from the already formalized finite
+Euler product. A lower bound for its explicit cosine-loss exponent is still
+required and is not claimed.
+
+## Release 3.91 source note
+
+No new external source is introduced. The first omitted outer-frequency
+shell is bounded directly using the already pinned qualitative PNT through
+the compiled Chebyshev-theta dyadic block estimates. This is one finite part
+of Granville's unstated “small error”; later shells are not yet claimed.
+
+## Release 3.92 source note
+
+No new external source is introduced. The adaptive choice
+`ceil(exp(pi/t))`, its phase-window inequalities, and the finite
+half-block-width estimate are proved directly. Prime population again uses
+only the already compiled qualitative Chebyshev–PNT threshold. The full
+outer-frequency “small error” remains unclaimed.
+
+## Release 3.93 source note
+
+No new external source is introduced. The accumulated first-shell estimate
+reuses the compiled CEP dyadic alphabet, qualitative Chebyshev–PNT block
+bounds, and exact saddle identities. Its divergent `u/log(u)` loss and
+uniform integrand envelope are formal internal consequences. The complete
+outer-frequency “small error” remains unclaimed.
+
+## Release 3.94 source note
+
+No new external source is introduced. This release integrates the already
+proved first-shell envelope on the exact two physical Perron intervals. The
+curvature upper bound and the elementary exponential-over-polynomial limit
+are internal formal consequences. The first shell of Granville's unstated
+outer-frequency “small error” is now complete; all later shells and the
+infinite outer line remain unclaimed.
+
+## Release 4.00 source note
+
+No new external source is introduced. The third iterated square-root scale,
+its exact rounding inequalities, the shifted CEP alphabet, and phase-window
+calculation are internal; prime population still uses the pinned qualitative
+PNT. This establishes a fourth finite portion of Granville's omitted
+outer-frequency estimate. Its normalized integral and all later frequencies
+remain unclaimed.
+
+## Release 4.01 source note
+
+No new external source is introduced. Rankin-ratio conversion, divergence,
+exponential absorption, and symmetric-shell integration are internal. This
+completes the fourth finite portion of Granville's omitted outer-frequency
+estimate; later bands and the infinite line remain unclaimed.
+
+## Release 4.02 source note
+
+No new external source is introduced. The indexed iterated-root recursion,
+closed-form rounding envelopes, and doubling shell geometry are internal
+abstractions of the four already formalized finite frequency blocks.
+
+## Release 4.03 source note
+
+No new external source is introduced. The indexed support and phase
+calculation abstract the already proved finite CEP arguments; population
+continues to use only the pinned qualitative PNT.
+
+## Release 4.04 source note
+
+No new external source is introduced. The scale-range criterion is an
+internal consequence of the exact iterated-floor rounding envelope.
+
+## Release 3.95 source note
+
+No new external source is introduced. The wider endpoint follows directly
+from the already proved logarithmic support bound for the retained CEP
+alphabet and the exact nonpositive-cosine interval. The symmetric-shell
+integration is internal. This verifies one further finite portion of
+Granville's unstated outer-frequency “small error”; the range beyond
+`3*pi/(2*log(y))` remains unclaimed.
+
+## Release 3.96 source note
+
+No new external source is introduced. The square-root scale, its rounding
+bounds, the shifted CEP alphabet, and the phase-window calculation are proved
+internally. Prime population uses only the already pinned qualitative PNT.
+This establishes a second finite portion of Granville's omitted
+outer-frequency estimate; divergence and integration of its explicit loss
+are not yet claimed.
+
+## Release 3.97 source note
+
+No new external source is introduced. The comparison with the `2/5` power
+of the Rankin ratio, divergence of `u^(2/5)/log(u)`, exponential absorption,
+and symmetric-shell integration are formal internal consequences of the
+release-3.96 loss and earlier curvature bounds. This completes the second
+finite shell of Granville's unstated outer-frequency “small error”; the
+range beyond `3*pi/log(y)` and the infinite outer line remain unclaimed.
+
+## Release 3.98 source note
+
+No new external source is introduced. The iterated square-root scale,
+rounding bounds, shifted CEP alphabet, and phase-window inequalities are
+proved internally; prime population again uses only the pinned qualitative
+PNT. This establishes the next finite portion of Granville's omitted
+outer-frequency estimate. Divergence and integration of its explicit loss
+remain unclaimed.
+
+## Release 3.99 source note
+
+No new external source is introduced. The `1/5` Rankin-ratio comparison,
+divergence, exponential absorption, and symmetric-shell integration are
+internal consequences of release 3.98 and the existing curvature bounds.
+This completes the third finite shell of Granville's unstated
+outer-frequency “small error”; frequencies beyond `6*pi/log(y)` and the
+infinite outer line remain unclaimed.
+
+## Release 4.05 source note
+
+No new external source is introduced. The exact iterated-square-root
+threshold and its eventual critical-regime consequences are elementary
+formal deductions from the existing indexed scale definitions and the
+already proved divergence of `y` and `log(y)`. This certifies fixed finite
+shell prefixes only; growing-depth aggregation remains unclaimed.
+
+## Release 4.06 source note
+
+No new external source is introduced. The fixed-index cofactor estimate is
+an internal consequence of the previously formalized critical Rankin-ratio
+power bound and the indexed logarithmic scale lower bound. Prime population
+uses the already pinned qualitative PNT threshold. Growing-index uniformity
+and infinite outer-line aggregation remain unclaimed.
+
+## Release 4.07 source note
+
+No new external analytic source is introduced. The passage from all fixed
+finite prefixes to one growing prefix uses the already frozen and audited
+countable-diagonal theorem from `GafniTao.CountableDiagonal`. The result is a
+logical uniformization of the internal shell estimates; summed integral and
+post-terminal tail estimates remain unclaimed.
+
+## Release 4.08 source note
+
+No new external source is introduced. The indexed exponent, power transfer,
+cofactor penalty, and divergence theorem abstract the already formalized
+second-, third-, and fourth-shell calculations. They use only the internal
+saddle identities, CEP cutoff estimate, and critical-regime limits. Generic
+shell integration and aggregation remain unclaimed.
+
+## Release 4.09 source note
+
+No new external source is introduced. The generic exponential absorption,
+signed envelope, shell-width identity, and symmetric integral estimate are
+internal abstractions of the previously certified concrete shell integrals.
+Moving-prefix summation and the residual infinite tail remain unclaimed.
+
+## Release 4.10 source note
+
+No new external source is introduced. Finite-sum convergence and the second
+slow diagonal are internal topological consequences of the fixed-index
+integral theorems and the frozen countable-diagonal principle. The exact
+contiguous-segment identity and post-terminal infinite-tail estimate remain
+unclaimed.
+
+## Release 4.11 source note
+
+No new external source is introduced. The telescoping identity is an exact
+formal consequence of interval-integral additivity and the common saddle
+normalization. It converts the internal finite shell sum to a contiguous
+physical Perron segment. The post-terminal infinite-tail estimate remains
+unclaimed.
