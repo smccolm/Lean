@@ -3308,3 +3308,93 @@ part of the zero-frequency transform minus the frequency-`t` transform, and
 two complex main-term estimates imply the source cosine approximation with
 error `2E`. The remaining analytic boundary is the uniform transform estimate
 from the native zero-free-region PNT machinery.
+
+## Prime-equidistribution release 4.40
+
+`SmoothNumberSaddleHTShiftedTwoPole` supplies the exact negative-left
+shifted-Perron rectangle required in the small-beta range. It computes the
+Perron-origin residue, identifies it with `-zeta'/zeta(s)` at regular source
+points, proves arbitrary-left VK zero-freeness, and combines the two-pole
+right-line identity with the existing truncation error. The formal HT Lemma 6
+contract is also corrected to retain the source's epsilon-dependent implied
+constant: equation (3.10) is stated with `O_epsilon`, not coefficient one.
+The remaining small-beta input is a sharp zero-free-region bound for the
+origin logarithmic derivative together with negative-left edge absorption.
+
+## Prime-equidistribution release 4.41
+
+`SmoothNumberSaddleHTSmallBetaWidth` closes the small-beta contour geometry.
+From `beta <= 2*eta` it obtains physical depth `beta+eta <= 3*eta`, spends
+that fixed factor in the native VK comparison, and discharges the depth,
+height, and zero-free-width hypotheses eventually in `y`, uniformly over the
+full HT frequency range. The packaged exact branch now also identifies its
+origin term with the physical `-zeta'/zeta(1-beta+it)`. On bounded heights a
+compact surrogate argument proves the sharp `C+1/beta` norm bound. The
+remaining origin input is the high-height `O(D(t)+1/beta)` estimate, followed
+by negative-left edge absorption.
+
+## Prime-equidistribution release 4.42
+
+`SmoothNumberSaddleHTVariableDisk.lean` places the source point in a
+VK-scale disk centered to the right of one, proves the normalized zeta is
+analytic and zero-free there, and combines the Euler-product center lower
+bound with the frozen Pintz window and disk logarithmic-derivative theorem.
+`SmoothNumberSaddleHTVariableDiskScale.lean` reduces the resulting physical
+bound to `O(D(A)*loglog(A))`. The exact scale lemmas in
+`SmoothNumberSaddleHTSmallBetaScale.lean` absorb this into `O(1/beta)`, and
+`SmoothNumberSaddleHTSmallBetaHighHeight.lean` joins it to the compact
+low-height estimate. The origin residue is now uniformly bounded by
+`K/beta` on the complete small-beta branch. Only the negative-left three-edge
+contribution remains before the HT Lemma 6 contract can be closed.
+
+## Prime-equidistribution release 4.43
+
+`SmoothNumberSaddleHTSmallBetaEdges.lean` reflects the weighted vertical
+integral to the negative Perron line, proves three-shift VK control throughout
+the small-beta rectangle, and assembles the two horizontal plus negative-left
+edges. `SmoothNumberSaddleHTSmallBetaEdgeAbsorption.lean` absorbs their scalar
+majorant into the literal HT error, combines it with the origin residue and
+truncation, and then joins the existing large-beta branch. Equation (3.10) is
+now proved uniformly on an eventual tail for every `0<beta<1`; only the finite
+initial-`y` promotion remains before the named all-`y` contract is claimed.
+
+## Prime-equidistribution release 4.44
+
+`SmoothNumberSaddleHTFinitePrefix.lean` supplies the elementary uniform
+initial-range bound. It controls the finite transform by `Chebyshev.psi y`,
+the main term by `y/beta`, and their difference by
+`(Chebyshev.psi y + y) * smoothSaddleHTMangoldtError`. The eventual contour
+threshold is then extracted explicitly; monotonicity of `psi` absorbs every
+smaller `y` into one enlarged positive coefficient. The resulting theorem
+`smoothSaddleHTMangoldtTransformEstimate` proves the literal all-`y`
+HT Lemma 6 contract. The next smooth-number boundary is to propagate this
+now-unconditional cosine-loss input through the complete outer-frequency
+Perron decay and local-limit inversion; Theorem 1.7 is not yet claimed.
+
+## Prime-equidistribution release 4.45
+
+`SmoothNumberSaddleHTMinorArc.lean` performs the exact Lemma-6-to-Lemma-8(ii)
+transfer. After reserving one quarter of the rational HT loss for the
+Lemma-6 error and higher-prime-power remainder, the sharp saddle comparison
+leaves another quarter as a lower bound for `smoothSaddleCosineLoss`. The
+global Euler-product inequality then gives the literal
+`SmoothSaddleHildebrandTenenbaumMinorArcBoundAt` contract with coefficient
+`1/(384*smoothSaddleHTSharpComparisonConstant)`. Thus no complex-transform,
+prime-power, saddle-comparison, or characteristic-function algebra remains
+in this bridge. The next obligation is the uniform scalar absorption over
+the physical outer-frequency range.
+
+## Prime-equidistribution release 4.46
+
+`SmoothNumberSaddleHTMinorArcScale.lean` proves the missing uniform scalar
+absorption and closes HT Lemma 8(ii) on the critical scale. It shows that the
+loss at the first outer frequency `1/log y` is bounded below by
+`u/(65*(log u)^2)` and diverges. The saddle displacement and saddle equation
+respectively control the two delicate factors by `y^(1-sigma)<=u^8` and
+`(1-sigma)*log y >= (log u)/2`; stretched-exponential absorption then reduces
+the normalized Lemma-6 error to `4/log u`. The normalized prime-power error
+is uniformly bounded. These terms are eventually absorbed at the first
+frequency and hence, by radial monotonicity, at every frequency through
+`smoothSaddleHTFrequencyCeiling y (1/2)`. The resulting theorem
+`eventually_smoothSaddleHTMinorArcBoundAt` is unconditional in every
+Tao-critical smooth regime. Local-limit inversion remains before Theorem 1.7.

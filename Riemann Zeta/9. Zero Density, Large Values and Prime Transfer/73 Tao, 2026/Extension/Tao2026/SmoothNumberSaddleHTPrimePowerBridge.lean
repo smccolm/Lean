@@ -159,21 +159,20 @@ theorem smoothSaddleHTMangoldtCosineSum_sub_remainder_div_log_le_cosineLoss
   rw [hsplit]
   linarith
 
-/-- Assuming the exact transform estimate of HT Lemma 6, its main term gives
-a lower bound for the prime cosine loss after the explicit prime-power cost. -/
-theorem SmoothSaddleHTMangoldtTransformEstimate.cosineLoss_lower_bound
-    (hHT : SmoothSaddleHTMangoldtTransformEstimate)
-    {y : ℕ} {sigma ε t : ℝ}
+/-- Assuming HT Lemma 6 at a displayed fixed constant, its main term gives a
+lower bound for the prime cosine loss after the explicit prime-power cost. -/
+theorem SmoothSaddleHTMangoldtTransformEstimateAt.cosineLoss_lower_bound
+    {ε C : ℝ} (hHT : SmoothSaddleHTMangoldtTransformEstimateAt ε C)
+    {y : ℕ} {sigma t : ℝ}
     (hy : 2 ≤ y) (hsigma : 0 < sigma) (hsigmaOne : sigma < 1)
-    (hε : 0 < ε) (hεOne : ε < 1)
     (ht : |t| ≤ smoothSaddleHTFrequencyCeiling y ε) :
     (smoothSaddleHTMangoldtCosineMainTerm y (1 - sigma) t -
-        2 * smoothSaddleHTMangoldtError y (1 - sigma) ε -
+        2 * C * smoothSaddleHTMangoldtError y (1 - sigma) ε -
         2 * smoothSaddleHTPrimePowerRemainder y sigma) / Real.log y ≤
       smoothSaddleCosineLoss y sigma t := by
   have hbeta : 0 < 1 - sigma := sub_pos.mpr hsigmaOne
   have hbetaOne : 1 - sigma < 1 := by linarith
-  have hcosine := hHT.cosine hy hbeta hbetaOne hε hεOne ht
+  have hcosine := hHT.cosine hy hbeta hbetaOne ht
   have hbridge :=
     smoothSaddleHTMangoldtCosineSum_sub_remainder_div_log_le_cosineLoss
       hy sigma t

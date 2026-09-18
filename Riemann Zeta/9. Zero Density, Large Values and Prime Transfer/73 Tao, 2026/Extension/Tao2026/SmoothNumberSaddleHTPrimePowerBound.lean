@@ -1,5 +1,16 @@
 import Tao2026.SmoothNumberSaddleHTPrimePowerBridge
 
+/-!
+# Hildebrand--Tenenbaum Lemma 5 in the saddle range
+
+This module bounds the higher-prime-power remainder isolated by the
+Hildebrand--Tenenbaum Lemma 6 bridge.  It first expands the remainder by
+prime-power exponent, then dominates every exponent slice by a geometric
+factor times the weighted prime logarithm sum.  Summing the geometric series
+and applying the existing Chebyshev estimate gives an explicit `O(log y)`
+bound whenever `sigma ≥ 1 / 2`, the range needed at the smooth-number saddle.
+-/
+
 open Filter Topology MeasureTheory Set Complex Finset
 open scoped ArithmeticFunction.vonMangoldt BigOperators Interval
 
@@ -7,15 +18,21 @@ namespace Tao2026
 
 noncomputable section
 
-noncomputable def testSlice (y : ℕ) (sigma : ℝ) (k : ℕ) : ℝ :=
+/-- The contribution to the non-prime Mangoldt mass from the `k`th powers of
+primes.  The condition that the power itself is not prime keeps the formula
+valid also at `k = 1`, where the slice vanishes. -/
+noncomputable def smoothSaddleHTPrimePowerExponentSlice
+    (y : ℕ) (sigma : ℝ) (k : ℕ) : ℝ :=
   ∑ p ∈ (Finset.Ioc 0 ⌊(y : ℝ) ^ ((1 : ℝ) / k)⌋₊).filter
-    (fun p => p.Prime ∧ ¬(p ^ k).Prime),
+      (fun p => p.Prime ∧ ¬(p ^ k).Prime),
     (Λ (p ^ k) : ℝ) * ((p ^ k : ℕ) : ℝ) ^ (-sigma)
 
-example (y : ℕ) (sigma : ℝ) :
+/-- Exact decomposition of the higher-prime-power remainder by exponent. -/
+theorem smoothSaddleHTPrimePowerRemainder_eq_exponent_sum
+    (y : ℕ) (sigma : ℝ) :
     smoothSaddleHTPrimePowerRemainder y sigma =
       ∑ k ∈ Finset.Icc 1 ⌊Real.log y / Real.log 2⌋₊,
-        testSlice y sigma k := by
+        smoothSaddleHTPrimePowerExponentSlice y sigma k := by
   classical
   let f : ℕ → ℝ := fun n =>
     if ¬n.Prime then (Λ n : ℝ) * (n : ℝ) ^ (-sigma) else 0
@@ -23,9 +40,9 @@ example (y : ℕ) (sigma : ℝ) :
   have hdecomp' :
       (∑ n ∈ Finset.Ioc 0 ⌊(y : ℝ)⌋₊ with IsPrimePow n, f n) =
         ∑ k ∈ Finset.Icc 1 ⌊Real.log y / Real.log 2⌋₊,
-          testSlice y sigma k := by
-    simpa only [f, testSlice, Finset.sum_filter, ← ite_and, and_assoc]
-      using hdecomp
+          smoothSaddleHTPrimePowerExponentSlice y sigma k := by
+    simpa only [f, smoothSaddleHTPrimePowerExponentSlice, Finset.sum_filter,
+      ← ite_and, and_assoc] using hdecomp
   rw [← hdecomp']
   unfold smoothSaddleHTPrimePowerRemainder f
   have hyFloor : ⌊(y : ℝ)⌋₊ = y := by simp
@@ -47,15 +64,20 @@ example (y : ℕ) (sigma : ℝ) :
       ArithmeticFunction.vonMangoldt_eq_zero_iff.mpr hpp
     simp [hprime, hpp, hLambda]
 
-@[simp] example (y : ℕ) (sigma : ℝ) : testSlice y sigma 1 = 0 := by
+@[simp] theorem smoothSaddleHTPrimePowerExponentSlice_one
+    (y : ℕ) (sigma : ℝ) :
+    smoothSaddleHTPrimePowerExponentSlice y sigma 1 = 0 := by
   classical
-  unfold testSlice
+  unfold smoothSaddleHTPrimePowerExponentSlice
   apply Finset.sum_eq_zero
   intro p hp
   rw [Finset.mem_filter] at hp
   exact (hp.2.2 (by simpa using hp.2.1)).elim
 
-theorem testPower {p k : ℕ} {sigma : ℝ} (hp : 2 ≤ p) (hk : 2 ≤ k)
+/-- In the saddle range, a `k`th-prime-power weight is bounded by the first
+prime weight times a geometric factor in `k`. -/
+theorem natPrimePow_rpow_neg_le_geometric
+    {p k : ℕ} {sigma : ℝ} (hp : 2 ≤ p) (hk : 2 ≤ k)
     (hsigma : (1 / 2 : ℝ) ≤ sigma) :
     ((p ^ k : ℕ) : ℝ) ^ (-sigma) ≤
       (p : ℝ)⁻¹ * ((2 : ℝ) ^ (-(1 / 2 : ℝ))) ^ (k - 2) := by
@@ -83,10 +105,13 @@ theorem testPower {p k : ℕ} {sigma : ℝ} (hp : 2 ≤ p) (hk : 2 ≤ k)
   exact mul_le_mul haSq (pow_le_pow_left₀ ha0 haQ (k - 2))
     (pow_nonneg ha0 _) (inv_nonneg.mpr (by positivity))
 
-example {y k : ℕ} {sigma : ℝ} (hy : 2 ≤ y) (hk : 2 ≤ k)
+/-- Each exponent slice is controlled by the weighted prime logarithm sum. -/
+theorem smoothSaddleHTPrimePowerExponentSlice_le
+    {y k : ℕ} {sigma : ℝ} (hy : 2 ≤ y) (hk : 2 ≤ k)
     (hsigma : (1 / 2 : ℝ) ≤ sigma) :
-    testSlice y sigma k ≤
-      ((2 : ℝ) ^ (-(1 / 2 : ℝ))) ^ (k - 2) * weightedPrimeLogSum y := by
+    smoothSaddleHTPrimePowerExponentSlice y sigma k ≤
+      ((2 : ℝ) ^ (-(1 / 2 : ℝ))) ^ (k - 2) *
+        weightedPrimeLogSum y := by
   classical
   let S : Finset ℕ :=
     (Finset.Ioc 0 ⌊(y : ℝ) ^ ((1 : ℝ) / k)⌋₊).filter
@@ -110,7 +135,7 @@ example {y k : ℕ} {sigma : ℝ} (hy : 2 ≤ y) (hk : 2 ≤ k)
     exact Finset.mem_filter.mpr
       ⟨Finset.mem_Icc.mpr ⟨hpPrime.two_le,
         by exact_mod_cast hpRoot.trans hrootLe⟩, hpPrime⟩
-  unfold testSlice weightedPrimeLogSum
+  unfold smoothSaddleHTPrimePowerExponentSlice weightedPrimeLogSum
   change (∑ p ∈ S, (Λ (p ^ k) : ℝ) * ((p ^ k : ℕ) : ℝ) ^ (-sigma)) ≤
     q ^ (k - 2) * ∑ p ∈ P, Real.log p / p
   rw [Finset.mul_sum]
@@ -124,12 +149,11 @@ example {y k : ℕ} {sigma : ℝ} (hy : 2 ≤ y) (hk : 2 ≤ k)
       have hpow := show ((p ^ k : ℕ) : ℝ) ^ (-sigma) ≤
           (p : ℝ)⁻¹ * q ^ (k - 2) by
         dsimp [q]
-        exact testPower hpPrime.two_le hk hsigma
+        exact natPrimePow_rpow_neg_le_geometric hpPrime.two_le hk hsigma
       rw [ArithmeticFunction.vonMangoldt_apply_pow (by omega),
         ArithmeticFunction.vonMangoldt_apply_prime hpPrime]
       calc
-        _ ≤
-            Real.log p * ((p : ℝ)⁻¹ * q ^ (k - 2)) :=
+        _ ≤ Real.log p * ((p : ℝ)⁻¹ * q ^ (k - 2)) :=
           mul_le_mul_of_nonneg_left hpow
             (Real.log_nonneg (by exact_mod_cast hpPrime.one_le))
         _ = q ^ (k - 2) * (Real.log p / p) := by
@@ -143,7 +167,8 @@ example {y k : ℕ} {sigma : ℝ} (hy : 2 ≤ y) (hk : 2 ≤ k)
       exact mul_nonneg (pow_nonneg hq0 _)
         (div_nonneg (Real.log_nonneg (by exact_mod_cast hpData.2.one_le)) hpPos.le)
 
-example (K : ℕ) :
+/-- A convenient explicit bound for the truncated geometric coefficients. -/
+theorem sum_ht_geometric_coefficients_le (K : ℕ) :
     (∑ k ∈ Finset.Icc 1 K,
       ((2 : ℝ) ^ (-(1 / 2 : ℝ))) ^ (k - 2)) ≤
         2 * (1 - (2 : ℝ) ^ (-(1 / 2 : ℝ)))⁻¹ := by
@@ -191,6 +216,72 @@ example (K : ℕ) :
       rw [Finset.Icc_eq_Ico, Finset.sum_Ico_eq_sum_range]
       simp
     _ ≤ 2 * (1 - q)⁻¹ := mul_le_mul_of_nonneg_left hsum (by norm_num)
+
+/-- Explicit Hildebrand--Tenenbaum Lemma 5 bound in terms of the weighted
+prime logarithm sum. -/
+theorem smoothSaddleHTPrimePowerRemainder_le_weightedPrimeLogSum
+    {y : ℕ} {sigma : ℝ} (hy : 2 ≤ y)
+    (hsigma : (1 / 2 : ℝ) ≤ sigma) :
+    smoothSaddleHTPrimePowerRemainder y sigma ≤
+      (2 * (1 - (2 : ℝ) ^ (-(1 / 2 : ℝ)))⁻¹) *
+        weightedPrimeLogSum y := by
+  classical
+  let q : ℝ := (2 : ℝ) ^ (-(1 / 2 : ℝ))
+  let K : ℕ := ⌊Real.log y / Real.log 2⌋₊
+  have hq0 : 0 ≤ q := by dsimp [q]; positivity
+  have hW0 : 0 ≤ weightedPrimeLogSum y := by
+    unfold weightedPrimeLogSum
+    apply Finset.sum_nonneg
+    intro p hp
+    have hpData := Finset.mem_filter.mp hp
+    exact div_nonneg (Real.log_nonneg (by exact_mod_cast hpData.2.one_le))
+      (by exact_mod_cast hpData.2.pos.le)
+  rw [smoothSaddleHTPrimePowerRemainder_eq_exponent_sum]
+  change (∑ k ∈ Finset.Icc 1 K,
+      smoothSaddleHTPrimePowerExponentSlice y sigma k) ≤
+    (2 * (1 - q)⁻¹) * weightedPrimeLogSum y
+  calc
+    (∑ k ∈ Finset.Icc 1 K,
+        smoothSaddleHTPrimePowerExponentSlice y sigma k) ≤
+        ∑ k ∈ Finset.Icc 1 K,
+          q ^ (k - 2) * weightedPrimeLogSum y := by
+      apply Finset.sum_le_sum
+      intro k hk
+      by_cases hkOne : k = 1
+      · subst k
+        simp [hW0]
+      · exact smoothSaddleHTPrimePowerExponentSlice_le hy (by
+          have := (Finset.mem_Icc.mp hk).1
+          omega) hsigma
+    _ = (∑ k ∈ Finset.Icc 1 K, q ^ (k - 2)) *
+        weightedPrimeLogSum y := by
+      rw [Finset.sum_mul]
+    _ ≤ (2 * (1 - q)⁻¹) * weightedPrimeLogSum y :=
+      mul_le_mul_of_nonneg_right (by
+        dsimp [q, K]
+        exact sum_ht_geometric_coefficients_le K) hW0
+
+/-- Source-strength `O(log y)` bound for the higher-prime-power remainder in
+the saddle range `sigma ≥ 1 / 2`. -/
+theorem smoothSaddleHTPrimePowerRemainder_le_log
+    {y : ℕ} {sigma : ℝ} (hy : 2 ≤ y)
+    (hsigma : (1 / 2 : ℝ) ≤ sigma) :
+    smoothSaddleHTPrimePowerRemainder y sigma ≤
+      (2 * (1 - (2 : ℝ) ^ (-(1 / 2 : ℝ)))⁻¹) *
+        (Real.log 4 * (2 + Real.log y)) := by
+  let q : ℝ := (2 : ℝ) ^ (-(1 / 2 : ℝ))
+  have hq1 : q < 1 := by
+    dsimp [q]
+    exact Real.rpow_lt_one_of_one_lt_of_neg one_lt_two (by norm_num)
+  have hC0 : 0 ≤ 2 * (1 - q)⁻¹ :=
+    mul_nonneg (by norm_num) (inv_nonneg.mpr (sub_nonneg.mpr hq1.le))
+  calc
+    smoothSaddleHTPrimePowerRemainder y sigma ≤
+        (2 * (1 - q)⁻¹) * weightedPrimeLogSum y := by
+      dsimp [q]
+      exact smoothSaddleHTPrimePowerRemainder_le_weightedPrimeLogSum hy hsigma
+    _ ≤ (2 * (1 - q)⁻¹) * (Real.log 4 * (2 + Real.log y)) :=
+      mul_le_mul_of_nonneg_left (weightedPrimeLogSum_le y (by omega)) hC0
 
 end
 

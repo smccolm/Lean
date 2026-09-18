@@ -234,12 +234,164 @@ uniform complex transform estimate itself remains to be proved locally.
 
 Release 4.16 pins the complete statement of HT Lemma 6 to equation (3.10):
 the ceiling is `Y(epsilon)=exp((log y)^(3/2-epsilon))` and the error is the
-source's `beta^(-1)` majorant. These quantities and the implied cosine
-corollary are local definitions and theorems; the cited contour argument is
-not imported as an axiom.
+source's `beta^(-1)` majorant multiplied by an `O_epsilon` constant. The
+epsilon-dependent implied constant, the error shape, and the implied cosine
+corollary are represented explicitly in local definitions and theorems; the
+cited contour argument is not imported as an axiom.
 
 Release 4.17 follows the proof of HT Lemma 8(ii) on page 276: the Mangoldt
 cosine sum is divided by `log y`, its prime part is compared with the Euler
 product loss, and the higher-prime-power part is isolated. The local bridge
 is proved exactly; the paper's preceding Lemma 5 remains the provenance for
 the required sharp remainder estimate.
+
+Release 4.18 reproduces the required `sigma>=1/2` specialization of HT
+Lemma 5 locally. Mathlib's exact prime-power decomposition is combined with
+the elementary estimate
+`(p^k)^(-sigma) <= p^(-1) 2^(-(k-2)/2)`, a geometric series, and the
+previously audited Chebyshev bound. No analytic estimate is imported as an
+axiom; the resulting explicit `O(log y)` bound is stronger than the needed
+specialization of the source remainder estimate.
+
+Release 4.19 reproduces the elementary main-term estimate in the proof of HT
+Lemma 8(ii). The local proof uses only the exact equation-(3.10) Cartesian
+main term, `sin^2+cos^2=1`, and algebra; no source inequality is imported as
+an axiom. The resulting bound is combined locally with the proved Lemma 5
+specialization.
+
+Release 4.20 reproduces the saddle-coefficient comparison used in HT Lemma
+8(ii) from local finite Abel summation and the exact saddle equation. The
+explicit comparison constant is deliberately coarse; no asymptotic prime
+sum or source assertion is imported as an axiom. Its cutoff is not expected
+in the critical regime, so the theorem is retained only as a conditional
+intermediate result.
+
+Release 4.21 replaces that route by the finite theta-Abel argument implicit
+in the same HT Lemma 8(ii) prime-sum step. Chebyshev's explicit theta bound
+and the existing finite power-sum inequality prove the uniform main-scale
+estimate locally. No asymptotic prime theorem or HT conclusion is imported;
+the only remaining source input in this chain is the analytic Lemma 6
+transform estimate, still represented by a named proposition.
+
+Release 4.22 follows the literal notation of HT Lemma 6: `s=1-beta+i*t`,
+the truncated series `sum Lambda(n)n^(-s)`, and the main term
+`y^(1-s)/(1-s)`. Their equality with the local transform notation is proved,
+not assumed. The author-hosted paper explicitly omits the usual contour
+details, so the equivalent shifted-Perron proposition remains a transparent
+analytic obligation rather than a source axiom.
+
+Release 4.23 proves the standard initial Perron-line expansion locally from
+the frozen von Mangoldt `LSeries` theorem and dominated convergence. The
+finite cutoff and source-coordinate specialization are also proved, not
+imported from Hildebrand--Tenenbaum. Consistently with the paper's omission,
+the contour displacement and zero-free-region estimates remain explicit
+formalization obligations.
+
+Release 4.24 formalizes the omitted contour displacement as an exact local
+residue theorem rather than importing it from the paper. The surrogate
+presentation, pole location, residue, and four-edge orientation are all
+proved in Lean. Only the stated rectangle zero-freeness and quantitative
+edge bounds remain to be supplied from the frozen analytic machinery.
+
+Release 4.25 supplies the zero-free part from the frozen, locally proved
+Ford/Vinogradov--Korobov theorem. The coordinate translation and rectangle
+membership argument are proved in this node; no additional zero-free source
+claim is assumed. Quantitative parameter selection and edge bounds remain.
+
+Release 4.26 makes the standard omitted contour choices locally and proves
+their algebra rather than importing it: the shift gives exactly the source
+exponential decay, the initial line gives exactly a constant power cost, and
+twice the source frequency ceiling encloses every requested frequency. The
+combined contour/Perron error identity is also proved in Lean. Only the
+quantitative bounds on its explicit terms and the native VK-width
+asymptotic remain; no HT Lemma 6 conclusion is assumed.
+
+Release 4.27 proves that remaining VK-width asymptotic locally. The exact
+source ceiling converts the denominator to explicit powers of `log y` and
+`log log y`; Mathlib's log-versus-power theorem and the frozen VK
+factor-three comparison then give the required uniform width. The native
+Ford theorem is instantiated directly, with no new zero-free assumption.
+The source Lemma 6 conclusion is still not assumed: its explicit edge and
+truncation estimates and small-beta branch remain.
+
+Release 4.28 proves the standard finite-height Perron truncation reduction
+locally from the frozen sharp-kernel inequalities. The beta-dependent source
+weight is cancelled algebraically, all cutoff cases are explicit, and the
+infinite upper tail is justified by an actual summability proof. No
+big-O truncation claim from the source is imported; its remaining explicit
+majorant sum must still be estimated in Lean.
+
+Release 4.29 estimates that majorant locally. The only source-independent
+input is the frozen, already proved bound for the positive von Mangoldt
+Dirichlet series. The reciprocal-distance comparison, integral endpoint
+separation, optimized-power simplification, summation, and specialization
+to the HT contour height are all proved in this node. No asymptotic Perron
+error from the paper is imported; absorption into Tao's target allowance
+remains a separate formal obligation.
+
+Release 4.30 proves the sharp arithmetic summation locally rather than
+importing the paper's omitted Perron-error calculation. The near/far split,
+half-integral harmonic comparison, factor-two far estimate, explicit
+summation, and source-height specialization are all checked in Lean. The
+only reused analytic input is the frozen positive von Mangoldt series bound.
+Eventual absorption into the equation-(3.10) scale is not yet claimed.
+
+Release 4.31 proves that absorption locally. No asymptotic truncation estimate
+is imported: the source exponent inequality, fixed-logarithm absorption,
+three-component budget, restoration of the `y^(beta-1)` factor, and comparison
+with the exact Lemma-6 allowance are all formal Lean arguments. The remaining
+source analytic work in this chain is confined to the three displaced edges
+and the elementary small-beta case.
+
+Release 4.32 introduces no new analytic source. It proves the contour
+length-times-sup reduction directly from Mathlib's interval-integral norm
+inequality, computes the literal HT edge lengths, and combines the three
+normalized edges. The only remaining large-beta source input is pointwise
+control of the translated zeta logarithmic derivative on those boundaries.
+
+Release 4.33 likewise imports no omitted contour estimate. The reciprocal
+Perron denominator is integrated locally, its logarithmic envelope is proved
+from the fundamental theorem of calculus, and the zeta-Perron integrand norm
+is factored exactly in Lean. This removes the artificial full-height loss
+from the vertical sup reduction. The remaining source-facing analytic input
+is precisely a translated zero-free-strip logarithmic-derivative bound.
+
+Release 4.34 proves that logarithmic-derivative input locally from the pinned
+native VK theorem and frozen Landau machinery. The spare-width separation,
+individual and summed zero-term estimates, exclusion from the larger zero
+disk, partial-fraction instantiation, and physical-coordinate transport are
+all checked in Lean. No selected-height logarithmic-derivative estimate or
+omitted contour bound from the paper is imported.
+
+Release 4.35 adds no source assumption. The negative-height estimate is
+proved from the pinned conjugation identity, the absolute-height wrapper is
+an exact reparameterization of release 4.34, and the logarithmic form uses
+only the frozen proved zero-mass and elementary logarithm bounds.
+
+Release 4.36 proves the low-height input locally. It uses the pinned native
+VK theorem to exclude surrogate zeros on a fixed compact rectangle, standard
+compactness for the resulting continuous logarithmic derivative, and the
+already proved exact surrogate/zeta identity for the pole term. No omitted
+low-height estimate is imported.
+
+Release 4.37 also imports no contour estimate. The nine-frequency comparison,
+horizontal ordinate geometry, real-strip bounds, and vertical high/low case
+split are local Lean arguments using only the already pinned VK and Landau
+results.
+
+Release 4.38 imports no new analytic estimate. Surrogate-to-zeta
+nonvanishing, the exact shifted-integrand factorization, horizontal
+reciprocal-height geometry, vertical denominator retention, and weighted
+integration are all local consequences of the pinned results already listed.
+
+Release 4.39 adds no source input. The factor-two shift correction uses the
+same pinned VK region and a stronger local asymptotic comparison. Every
+logarithmic envelope and stretched-exponential absorption is proved locally
+from the explicit release-4.38 majorant.
+
+Release 4.42 adds no source assumption. It combines the already pinned
+native VK zero-free rectangle, frozen Euler-product right-line lower bound,
+frozen Pintz zeta-window estimate, and frozen disk logarithmic-derivative
+theorem. The variable-disk geometry, empty-zero-set reduction, native-width
+specialization, `loglog` estimates, HT scale absorption, and low/high-height
+assembly are all proved locally in Lean.

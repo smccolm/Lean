@@ -3503,6 +3503,227 @@ before the source's `14/3` simplification.
 - [ ] Recover divergent accumulated loss beyond `3*pi/log(y)`.
 - [ ] Assemble all remaining bands into the infinite outer Perron line.
 
+## Prime-equidistribution 4.29
+
+- [x] Convert both off-endpoint logarithmic Perron denominators to additive
+  distance.
+- [x] Use integrality of `y` to bound every reciprocal distance by `y+1`.
+- [x] Dominate all off-endpoint terms by one positive von Mangoldt Dirichlet
+  series.
+- [x] Insert the frozen `log y+C` estimate and exact optimized-line power.
+- [x] Deduce the explicit complete HT contour-truncation bound at `T=2Y`.
+- [ ] Absorb the endpoint and height terms into the target error.
+- [ ] Bound the two horizontal and one left vertical contour edges.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.30
+
+- [x] Define a finite reciprocal-distance weight around the integral cutoff.
+- [x] Compare it with the frozen half-integral kernel and bound its sum by
+  eight harmonic numbers.
+- [x] Prove sharp additive near-range and Dirichlet far-range majorants.
+- [x] Sum the endpoint, near, and far components explicitly.
+- [x] Specialize the harmonic-strength bound to the selected HT height.
+- [ ] Prove eventual absorption using `3/2-epsilon > epsilon/2`.
+- [ ] Bound the two horizontal and one left vertical contour edges.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.31
+
+- [x] Prove `epsilon/2 < 3/2-epsilon` throughout the source epsilon range.
+- [x] Absorb fixed constants and logarithmic powers into the height exponent.
+- [x] Bound each endpoint/near/far component by one third of the target.
+- [x] Absorb the complete scalar truncation majorant.
+- [x] Prove the exact complex truncation-error decay uniformly in frequency.
+- [x] Embed that decay into the full HT Mangoldt-error allowance.
+- [ ] Bound the two horizontal and one left vertical contour edges.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.32
+
+- [x] Prove a generic normalized horizontal-integral bound from a pointwise
+  sup bound.
+- [x] Prove the corresponding normalized vertical-integral bound.
+- [x] Compute the exact HT horizontal and vertical edge lengths.
+- [x] Bound the complete three-edge contribution by one scalar sup majorant.
+- [ ] Prove the three pointwise translated zeta log-derivative bounds.
+- [ ] Absorb the resulting edge majorant into the Lemma-6 allowance.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.33
+
+- [x] Retain the reciprocal Perron denominator on the left vertical edge.
+- [x] Evaluate its elementary symmetric envelope with logarithmic height
+  cost.
+- [x] Prove the exact norm factorization of the shifted zeta-Perron integrand.
+- [x] Assemble the two horizontal edges and weighted left edge into one
+  source-scale majorant.
+- [ ] Prove the translated zeta log-derivative bound on the zero-free strip.
+- [ ] Absorb the weighted edge majorant into the Lemma-6 allowance.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.34
+
+- [x] Reserve twice the HT contour shift inside the eventual native VK width.
+- [x] Convert VK zero-freeness into quantitative separation from every local
+  sharp-Landau zero.
+- [x] Bound the complete finite Landau zero sum by reciprocal spare width.
+- [x] Reinstantiate the frozen partial-fraction theorem without a selected
+  good ordinate.
+- [x] Transport the estimate to the physical positive-height `zeta'/zeta`.
+- [ ] Specialize the estimate uniformly to all three HT contour edges.
+- [ ] Absorb the resulting weighted edge majorant.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.35
+
+- [x] Transfer the arbitrary-height estimate to negative ordinates by zeta
+  conjugation.
+- [x] Package both signs using the absolute ordinate as Landau scale.
+- [x] Replace the raw partial-fraction logarithm and zero mass by an explicit
+  `(1+1/eta)*log |R|` bound.
+- [ ] Prove the near-pole low-height vertical bound.
+- [ ] Instantiate and absorb the complete weighted contour-edge majorant.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.36
+
+- [x] Define the fixed compact half-VK low-height rectangle.
+- [x] Prove the entire zeta surrogate is nonzero throughout it.
+- [x] Bound the surrogate logarithmic derivative by compactness.
+- [x] Restore zeta with the explicit simple-pole term.
+- [x] Deduce the low-height left-line bound `C+1/eta`.
+- [ ] Combine the high- and low-height pointwise bounds in the weighted edge.
+- [ ] Absorb the complete edge majorant and close the small-beta branch.
+
+## Prime-equidistribution 4.37
+
+- [x] Prove the twice-shift VK comparison at nine source frequency ceilings.
+- [x] Compute the physical ordinate range on both horizontal edges.
+- [x] Prove their real coordinates remain in the Landau strip.
+- [x] Obtain one explicit high-height logarithmic-derivative majorant.
+- [x] Combine compact and Landau bounds across the complete left edge.
+- [ ] Transfer all three estimates to the shifted Perron integrand.
+- [ ] Apply and absorb the weighted edge majorant.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.38
+
+- [x] Transfer a horizontal physical log-derivative bound to the shifted
+  Perron integrand with its reciprocal-height gain.
+- [x] Transfer the left-line bound while retaining the full Perron
+  denominator pointwise.
+- [x] Derive every zeta-nonzero and non-pole side condition from the
+  translated surrogate-zero-free rectangle.
+- [x] Instantiate the weighted three-edge integration theorem.
+- [x] Derive the rectangle and all pointwise bounds from the VK/Landau inputs.
+- [ ] Absorb the explicit weighted scalar majorant.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.39
+
+- [x] Correct the contour displacement to
+  `2*(log y)^(epsilon/2-1)` and reverify the VK comparison.
+- [x] Bound the high and full-left log-derivative majorants by a cubic log.
+- [x] Bound the vertical reciprocal-distance logarithm by a quadratic log.
+- [x] Absorb the horizontal term using the full frequency height.
+- [x] Absorb the vertical polynomial losses using the spare exponential copy.
+- [x] Prove the complete three-edge target uniformly for `2*eta<=beta`.
+- [ ] Close the complementary small-beta branch.
+
+## Prime-equidistribution 4.40
+
+- [x] Correct HT Lemma 6 from a coefficient-one inequality to its literal
+  epsilon-dependent `O_epsilon` contract.
+- [x] Thread the displayed constant through the cosine and Euler-loss bridges.
+- [x] Compute the shifted integrand's principal coefficient at `z=0`.
+- [x] Prove the two-pole negative-left rectangle and right-line identities.
+- [x] Discharge arbitrary-left rectangle zero-freeness from native VK data.
+- [x] Combine the two-pole contour with the existing Perron truncation error.
+- [x] Prove a source-scale bound for the origin logarithmic derivative.
+- [x] Absorb the negative-left three-edge contribution.
+
+## Prime-equidistribution 4.43
+
+- [x] Reflect the denominator-retaining vertical integral to `Re z=-eta`.
+- [x] Prove three-shift VK logarithmic-derivative control on both horizontal
+  edges and the complete negative-left edge.
+- [x] Transfer those bounds to the shifted Perron integrand and assemble the
+  weighted three-edge majorant.
+- [x] Absorb that majorant into the literal HT Mangoldt error.
+- [x] Combine origin, edges, and truncation in the small-beta branch.
+- [x] Join small and large beta into one uniform eventual transform estimate.
+- [x] Promote the eventual estimate over the finite initial `y` range to the
+  named all-`y` HT Lemma 6 contract.
+
+## Prime-equidistribution 4.44
+
+- [x] Bound the finite Mangoldt transform by `Chebyshev.psi y`.
+- [x] Bound the HT main term by `y/beta` for `y>=2` and `0<beta<1`.
+- [x] Show the literal HT error dominates `1/beta` and obtain the uniform
+  crude initial-range estimate with coefficient `psi(y)+y`.
+- [x] Extract the eventual contour threshold and absorb every smaller `y`
+  using monotonicity of `psi`.
+- [x] Prove `SmoothSaddleHTMangoldtTransformEstimate` for all `y>=2`.
+- [ ] Propagate the now-unconditional HT cosine estimate through the complete
+  outer-frequency Perron decay needed for the smooth saddle local limit.
+
+## Prime-equidistribution 4.45
+
+- [x] Define an explicit positive HT minor-arc coefficient.
+- [x] Combine Lemma 6, the prime-power bridge, and the sharp saddle comparison
+  into a quarter-loss lower bound for the Euler-product cosine loss.
+- [x] Transfer that lower bound through the global Euler-product norm estimate
+  to `SmoothSaddleHildebrandTenenbaumMinorArcBoundAt`.
+- [x] Package the complete fixed-parameter implication with the exact HT
+  frequency ceiling.
+- [x] Prove the remaining scalar error absorption uniformly from the first
+  outer frequency to that ceiling.
+
+## Prime-equidistribution 4.46
+
+- [x] Prove `u/log y -> 0` and the eventual bound `u<=log y`.
+- [x] Lower-bound the first outer-frequency HT loss by
+  `u/(65*(log u)^2)` and prove that scale tends to infinity.
+- [x] Absorb `y^(1-sigma)` into `u^8` and then into the HT
+  stretched-exponential saving.
+- [x] Derive `(log u)/2 <= (1-sigma)*log y` from the saddle equation and
+  bound the normalized Lemma-6 error by `4/log u`.
+- [x] Uniformly bound the normalized higher-prime-power remainder.
+- [x] Absorb the complete scalar error at `1/log y`, propagate by radial
+  monotonicity, and prove the unconditional full-range minor-arc contract.
+- [ ] Combine the central and minor-arc estimates in the smooth saddle
+  local-limit inversion required for Theorem 1.7.
+
+## Prime-equidistribution 4.41
+
+- [x] Prove the selected HT shift tends below every positive fixed target.
+- [x] Fit the full small-beta depth `beta+eta<=3*eta` inside the native VK
+  region at the actual translated height.
+- [x] Package the exact two-pole decomposition uniformly for
+  `0<beta<=2*eta` and the full HT frequency range.
+- [x] Identify the packaged origin residue with the physical
+  `-zeta'/zeta(1-beta+it)`.
+- [x] Prove the sharp `C+1/beta` origin-residue bound at bounded height.
+- [x] Prove the high-height `O(D(A)*loglog(A))` origin-residue bound and
+  absorb it into `O(1/beta)` on the small-beta scale.
+- [ ] Absorb the negative-left three-edge contribution.
+
+## Prime-equidistribution 4.42
+
+- [x] Place the source coordinate inside a fixed-radius variable VK disk.
+- [x] Prove normalized analyticity, zero-freeness, and emptiness of the disk
+  zero set.
+- [x] Bound the center reciprocal by the Euler product and the disk maximum
+  by the frozen Pintz zeta window.
+- [x] Apply the frozen disk logarithmic-derivative bound and transport it to
+  the physical source point.
+- [x] Reduce the disk logarithmic majorant to `O(loglog(A))` at native VK
+  width.
+- [x] Combine high and bounded heights and prove the uniform eventual
+  `K/beta` origin-residue estimate.
+- [ ] Absorb the negative-left three-edge contribution.
+
 ## Prime-equidistribution 4.10
 
 - [x] Prove every fixed finite indexed-shell sum tends to zero.
@@ -3618,8 +3839,9 @@ before the source's `14/3` simplification.
 ## Prime-equidistribution 4.16
 
 - [x] Define the exact HT ceiling `exp((log y)^(3/2-epsilon))`.
-- [x] Define the exact equation-(3.10) transform-error majorant.
-- [x] State the full uniform HT Lemma 6 transform proposition.
+- [x] Define the equation-(3.10) transform-error shape.
+- [x] State the full uniform HT Lemma 6 proposition with its literal
+  epsilon-dependent implied constant.
 - [x] Compute the main term at frequency zero, its real part, and its norm.
 - [x] Compute the Cartesian weighted-cosine main term.
 - [x] Derive the cosine corollary from the uniform transform proposition.
@@ -3632,8 +3854,131 @@ before the source's `14/3` simplification.
 - [x] Bound the prime part by `log y` times the Euler-product cosine loss.
 - [x] Bound the prime-power cosine tail by twice its nonoscillatory mass.
 - [x] Derive the explicit cosine-loss lower bound from HT Lemma 6.
-- [ ] Prove the source-strength HT Lemma 5 bound for the remainder.
+- [x] Prove the source-strength HT Lemma 5 bound for the remainder in the
+  saddle range `sigma >= 1/2`.
 - [ ] Lower-bound the elementary cosine main term in the Lemma 8 range.
+
+## Prime-equidistribution 4.18
+
+- [x] Decompose the non-prime Mangoldt remainder exactly by prime-power
+  exponent.
+- [x] Prove the `k=1` slice vanishes.
+- [x] Dominate every `k>=2` slice by a geometric coefficient times the
+  weighted prime logarithm sum when `sigma>=1/2`.
+- [x] Sum the geometric coefficients with an explicit constant.
+- [x] Apply the Chebyshev bound to obtain the explicit `O(log y)` remainder.
+- [x] Combine the remainder with a lower bound for the cosine main term.
+
+## Prime-equidistribution 4.19
+
+- [x] Prove the uniform quadratic lower bound for the Cartesian HT cosine
+  main term.
+- [x] Insert the explicit prime-power remainder bound into the Lemma 6 bridge.
+- [x] Compare the main coefficient with the Rankin ratio under the canonical
+  saddle-cutoff hypothesis.
+- [ ] Prove the named Lemma 6 transform proposition analytically.
+
+## Prime-equidistribution 4.20
+
+- [x] Bound each saddle prime term by `5 log(y) p^(-sigma)`.
+- [x] Apply the canonical finite Abel prime-sum estimate.
+- [x] Derive the explicit Rankin-ratio/main-coefficient comparison.
+- [x] Obtain the source-shaped rational HT loss from the cosine main term.
+- [x] Record that the cutoff is not expected in the critical regime and
+  replace this route by a uniform theta-Abel estimate in release 4.21.
+
+## Prime-equidistribution 4.21
+
+- [x] Prove the exact Abel identity for `sum log(p)p^(-sigma)` using theta.
+- [x] Bound it by `log(4)y^(1-sigma)/(1-sigma)` for `0<=sigma<1`.
+- [x] Deduce the cutoff-free `smoothSaddlePhiOne` main-scale estimate.
+- [x] Insert the exact saddle equation and derive the rational HT main-term
+  loss with constant `5 log(4)`.
+- [ ] Prove the named HT Lemma 6 transform proposition analytically.
+
+## Prime-equidistribution 4.22
+
+- [x] Rewrite the HT transform as `sum Lambda(n)n^(-s)` at
+  `s=1-beta+i*t`.
+- [x] Rewrite the source main term as `y^(1-s)/(1-s)`.
+- [x] Prove the source shifted-Perron contract equivalent to the Lemma-6
+  transform contract.
+- [x] Prove the exact finite Abel identity against Chebyshev's `psi`.
+- [ ] Prove the shifted contour estimate from the zeta logarithmic derivative
+  and frozen zero-free rectangle.
+
+## Prime-equidistribution 4.23
+
+- [x] Prove absolute convergence and termwise integration on the shifted
+  initial Perron line `1 < Re(s)+c`.
+- [x] Identify the normalized logarithmic-derivative integral with the
+  source-weighted frozen sharp-Perron kernels.
+- [x] Identify the exact shifted cutoff series with the source Dirichlet sum.
+- [x] Prove the termwise cutoff-error identity at `s=1-beta+i*t` for
+  `beta<c`.
+- [ ] Shift the contour, extract `y^(1-s)/(1-s)`, and bound the remaining
+  edges from the frozen zero-free region.
+
+## Prime-equidistribution 4.24
+
+- [x] Define the translated zeta-surrogate Perron integrand.
+- [x] Prove it equals the literal shifted logarithmic-derivative integrand at
+  regular points.
+- [x] Prove the simple-pole residue at `z=1-s` is `y^(1-s)/(1-s)`.
+- [x] Decompose the initial right line into the source main term and the
+  three other rectangle edges.
+- [x] Specialize the exact rectangle identity to `s=1-beta+i*t`.
+- [ ] Derive the required rectangle zero-freeness and quantitative edge
+  estimates uniformly in the HT parameter range.
+
+## Prime-equidistribution 4.25
+
+- [x] Translate the shifted rectangle to physical zeta coordinates.
+- [x] Bound every translated imaginary part by `|t|+T`.
+- [x] Derive surrogate nonvanishing from the rectangle-uniform
+  Vinogradov--Korobov width condition.
+- [x] Insert that result into the exact shifted contour identity.
+- [x] Extract positive native rectangle constants from the proved Ford
+  zero-free theorem.
+- [ ] Choose uniform HT contour parameters and bound all three remaining
+  edges by the equation-(3.10) error.
+
+## Prime-equidistribution 4.26
+
+- [x] Fix the source shift `2*(log y)^(epsilon/2-1)` and prove its exact
+  equation-(3.10) decay identity.
+- [x] Fix height `2Y_epsilon(y)` and prove it contains every allowed
+  frequency, with translated height at most `3Y_epsilon(y)`.
+- [x] Fix the initial line `beta+1/log y` and prove its physical real part
+  and exact `exp(1)y^beta` power cost.
+- [x] Assemble the contour and sharp-Perron identities into one exact
+  transform-error decomposition and norm reduction.
+- [ ] Prove the selected shift satisfies the native VK width eventually.
+- [ ] Bound the contour-edge and Perron-truncation remainders, including the
+  complementary small-beta range.
+
+## Prime-equidistribution 4.27
+
+- [x] Compute the VK denominator exactly at the HT frequency ceiling.
+- [x] Reduce the shift-denominator product to a negative power of `log y`
+  times a `log log y` factor.
+- [x] Prove that product tends to zero by log-versus-power asymptotics.
+- [x] Transfer the width through the frozen factor-three height comparison.
+- [x] Obtain the literal width uniformly at every translated requested
+  height and instantiate native Ford constants.
+- [ ] Bound the three contour edges and finite-height Perron error.
+- [ ] Close the complementary `beta<=eta` range from the `1/beta` budget.
+
+## Prime-equidistribution 4.28
+
+- [x] Compute the exact norm of the shifted von Mangoldt coefficient.
+- [x] Prove cancellation to the optimized sharp-Perron exponent.
+- [x] Bound every below-cutoff, endpoint, and above-cutoff term.
+- [x] Package the bounds in a nonnegative scalar majorant.
+- [x] Prove the infinite majorant is summable.
+- [x] Bound the full truncation-error norm by its majorant `tsum`.
+- [ ] Estimate that `tsum` explicitly at height `2Y_epsilon(y)`.
+- [ ] Bound the displaced contour edges and close the small-beta range.
 
 ## Prime-equidistribution 4.00
 

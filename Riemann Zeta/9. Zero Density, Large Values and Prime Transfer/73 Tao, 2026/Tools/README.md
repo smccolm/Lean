@@ -183,3 +183,101 @@ from the named uniform transform estimate.
 
 Release 4.17 audits the exact prime/prime-power decomposition of the HT
 cosine sum and its conversion to the Euler-product cosine-loss lower bound.
+
+Release 4.18 audits the exact prime-power exponent decomposition, its
+geometric slice bounds for `sigma>=1/2`, the finite geometric-series
+estimate, and the resulting explicit `O(log y)` HT Lemma 5 remainder bound.
+
+Release 4.19 audits the phase-uniform HT cosine-main-term lower bound and its
+explicit combination with the Lemma 6 bridge and prime-power remainder.
+
+Release 4.20 audits the canonical finite Abel saddle comparison and the
+resulting source-shaped Rankin-ratio lower bound for the HT cosine main term.
+
+Release 4.21 audits the exact theta-Abel identity, its uniform Chebyshev
+main-scale bound, and the resulting cutoff-free saddle/HT comparison.
+
+Release 4.22 audits the exact HT source-coordinate Dirichlet-sum and main-term
+identities, shifted-Perron contract equivalence, and finite psi-Abel formula.
+
+Release 4.23 audits the shifted initial-line series/integral interchange,
+zeta logarithmic-derivative identity, exact source cutoff, and termwise
+finite-height Perron error formula.
+
+Release 4.24 audits the translated zeta-surrogate integrand, its single-pole
+residue theorem, the exact four-edge rectangle decomposition, and the
+source-coordinate specialization.
+
+Release 4.25 audits the translation of the native Vinogradov--Korobov
+rectangle to HT coordinates, the resulting surrogate nonvanishing theorem,
+and extraction of native positive zero-free constants.
+
+Release 4.26 audits the concrete HT contour shift, height, and initial line;
+their exact decay and power identities; and the assembled equality reducing
+the transform error to contour-edge and sharp-Perron truncation remainders.
+
+Release 4.27 audits the exact VK denominator computation, log-versus-power
+width comparison, factor-three height transfer, uniform actual-height width,
+and native eventual contour decomposition in the large-beta branch.
+
+Release 4.28 audits the shifted coefficient norm, optimized-exponent power
+cancellation, all three cutoff locations, summability of the scalar
+truncation majorant, and its control of the complete complex remainder.
+
+Release 4.29 audits the integral-cutoff reciprocal-distance bounds, the
+endpoint-plus-Dirichlet-series domination of the complete scalar majorant,
+the frozen explicit `log y+C` estimate, and the resulting source-height
+bound for the complete complex truncation remainder.
+
+Release 4.30 audits the finite harmonic weight, its half-integral comparison
+and eight-harmonic mass bound, the additive near and Dirichlet far estimates,
+their complete scalar summation, and the harmonic-strength source-height
+truncation bound.
+
+Release 4.31 audits the stretched-exponent gap, fixed logarithmic absorption,
+the three one-third component estimates, complete scalar-majorant absorption,
+the resulting complex truncation decay, and its inclusion in the full HT
+Mangoldt-error allowance.
+
+Release 4.32 audits the generic normalized horizontal and vertical
+length-times-sup inequalities, the exact HT edge lengths, and the assembly of
+all three displaced edges into the named scalar sup majorant.
+
+Release 4.33 audits the exact reciprocal-distance integral, the weighted
+vertical contour estimate with logarithmic height cost, the exact shifted
+integrand norm factorization, and the source-scale weighted three-edge
+assembly.
+
+Release 4.34 audits the eventual twice-width comparison, quantitative VK
+separation of every local sharp-Landau zero, the reciprocal-distance zero
+sum, large-zero exclusion, arbitrary-height Landau partial-fraction bound,
+and its transport to the physical positive-height zeta logarithmic
+derivative.
+
+Release 4.35 audits exact conjugation to negative height, the sign-uniform
+absolute-ordinate parameterization, and simplification of the raw Landau
+bound to explicit reciprocal-width times logarithmic growth.
+
+Release 4.36 audits compactness of the half-VK low-height rectangle,
+surrogate nonvanishing, its uniform logarithmic-derivative bound, restoration
+of the explicit zeta pole term, and the resulting `C+1/eta` left-line bound.
+
+Release 4.37 audits the nine-frequency VK comparison, exact horizontal
+physical-coordinate ranges, their two pointwise logarithmic-derivative
+bounds, and the complete vertical compact/Landau max assembly.
+
+Release 4.38 audits the two shifted-integrand transfer bounds, the
+surrogate-to-zeta nonvanishing bridge on every edge, the horizontal `1/T`
+gain, the denominator-retaining vertical numerator, and the complete
+VK-specialized weighted contour-edge assembly.
+
+Release 4.39 audits the corrected doubled contour shift, its strengthened VK
+comparison, cubic high/left logarithmic-derivative envelopes, quadratic
+vertical logarithm, the two scalar stretched-exponential absorptions, and the
+uniform large-beta three-edge target theorem.
+
+Release 4.42 audits the variable VK disk geometry, normalized zero-freeness,
+Euler-product center lower bound, Pintz disk maximum, empty-zero-set disk
+logarithmic derivative, native-width `O(D(A)*loglog(A))` specialization, HT
+scale absorption, and the final compact/high-height `K/beta` origin-residue
+assembly.

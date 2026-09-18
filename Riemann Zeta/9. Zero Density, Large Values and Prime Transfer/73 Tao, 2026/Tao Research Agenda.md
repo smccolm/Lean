@@ -3390,3 +3390,257 @@ bounds the second. Combining these facts with release 4.16 gives the exact
 source-shaped lower bound needed in Lemma 8(ii). Next reproduce HT Lemma 5
 at weight `n^(-sigma)`, then prove that the cosine main term dominates both
 that remainder and the Lemma-6 error in the required saddle ranges.
+
+## HT Lemma 5 in the saddle range (release 4.18)
+
+The non-prime Mangoldt remainder now has an exact exponent decomposition.
+For `sigma>=1/2`, the `k`th slice is at most
+`2^(-(k-2)/2)` times the weighted prime logarithm sum; a checked truncated
+geometric-series estimate and Chebyshev's bound therefore give an explicit
+`O(log y)` theorem. This closes the higher-prime-power term in the proof of
+HT Lemma 8(ii). The next bounded task is to lower-bound the elementary
+cosine main term strongly enough to absorb this logarithmic remainder and
+the equation-(3.10) error, still conditional on the Lemma-6 transform
+proposition.
+
+## HT cosine main term (release 4.19)
+
+Cauchy--Schwarz applied to the Cartesian phase gives the checked bound
+`M >= y^beta*t^2/(2*beta*(beta^2+t^2))`, uniformly in `t log y`. This is now
+inserted into the Euler-product loss inequality together with the explicit
+`O(log y)` prime-power remainder. The next bounded arithmetic task is a
+source-strength upper bound for `smoothSaddlePhiOne`, yielding
+`y^(1-sigma)/((1-sigma) log y) >= c*u` at the saddle. The independent
+analytic task remains the shifted-Perron proof of HT Lemma 6.
+
+## HT saddle comparison (release 4.20)
+
+The existing canonical finite Abel estimate now bounds `smoothSaddlePhiOne`
+by an explicit constant times `y^(1-sigma)/(1-sigma)`. At the exact saddle
+this proves that the HT main coefficient controls a fixed multiple of `u`,
+and hence that the cosine main term divided by `log y` dominates the exact
+rational loss in Lemma 8(ii). The finite theorem assumes
+`2*smoothSaddleDivisor y sigma <= sqrt y`. Parameter inspection shows that
+this cutoff is not expected in the critical regime, so the theorem is kept
+only as a conditional intermediate result.
+
+## Uniform HT saddle comparison (release 4.21)
+
+Abel summation against Chebyshev's theta function now directly bounds the
+logarithmically weighted prime sum by
+`log(4)y^(1-sigma)/(1-sigma)`. This gives
+`smoothSaddlePhiOne <= 5 log(4)y^(1-sigma)/(1-sigma)` and closes the
+Rankin-ratio/main-coefficient comparison without a cutoff. The remaining
+task in this chain is the shifted-Perron/zero-free-region proof of the named
+HT Lemma 6 transform proposition.
+
+## HT shifted-Perron normalization (release 4.22)
+
+The remaining transform is now written literally as
+`sum_{n<=y} Lambda(n)n^(-s)` with `s=1-beta+i*t`; its source main term is
+literally `y^(1-s)/(1-s)`. This shifted-Perron estimate is equivalent to the
+previous contract. The exact psi-Abel formula is also available and confirms
+where an unshifted discrepancy estimate incurs frequency variation. The next
+bounded analytic task is to connect the truncated Mangoldt Dirichlet sum to
+the zeta logarithmic derivative on the initial Perron line before shifting
+through the frozen zero-free rectangle.
+
+## HT shifted-Perron initial line (release 4.23)
+
+That initial-line connection is now exact. Absolute convergence on
+`1<Re(s)+c` permits termwise integration of the shifted von Mangoldt series,
+and the normalized integral is the source coefficient times the existing
+finite-height sharp-Perron kernel. The sharp cutoff recovers the finite
+source Dirichlet sum, producing an exact error series at
+`s=1-beta+i*t` whenever `beta<c`. The next bounded task is the rectangle
+identity that moves this line left across the pole at `z=1-s`; after that,
+the horizontal and left-edge integrals require the frozen zero-free bounds.
+
+## HT shifted-Perron rectangle (release 4.24)
+
+The rectangle identity and pole extraction are now compiled. On a rectangle
+with positive left edge and `left<beta<right`, the translated surrogate is
+holomorphic away from `z=beta-i*t` provided it is zero-free throughout the
+rectangle. The residue is the exact source main term, and the initial line
+equals that term plus the two horizontal and one left vertical integrals.
+The next bounded task is to choose the left displacement and height from the
+native Vinogradov--Korobov zero-free theorem, then establish a uniform bound
+for the literal translated logarithmic derivative on those three edges.
+
+## HT shifted zero-free rectangle (release 4.25)
+
+The rectangle's nonvanishing is now derived from the frozen native
+Vinogradov--Korobov theorem. The exact sufficient condition is
+`eta <= c / VKDenominator(|t|+T)` with `eta<=1`; no new source proposition is
+introduced. The native Ford theorem supplies positive `c` and a starting
+height. The next bounded task is parameter arithmetic: choose a positive
+`eta<beta` and `T>|t|` satisfying that width throughout the HT frequency
+range, then establish logarithmic-derivative bounds on the resulting left
+and horizontal edges.
+
+## HT contour parameters and error assembly (release 4.26)
+
+The rectangle now uses the concrete source-compatible choices
+`eta=2*(log y)^(epsilon/2-1)`, `T=2Y_epsilon(y)`, and
+`right=beta+1/log y`. Their positivity, pole geometry, full-frequency height
+coverage, exact left-edge decay, and constant right-line power cost are all
+proved. The initial-line sharp-Perron identity and the zero-free contour
+identity combine exactly, reducing the transform error to a named sum of
+three contour edges minus a named truncation series. The next bounded task is
+to prove `eta <= c/VKDenominator(3Y_epsilon(y))` eventually, use monotonicity
+to discharge the literal width condition, and then bound the two remainders;
+the range `beta<=eta` should be closed separately by the `1/beta` allowance.
+
+## HT selected-contour VK width (release 4.27)
+
+The exact VK comparison is now closed. After unfolding the source ceiling,
+the selected shift times the denominator is a fixed log-log factor times
+`(log y)^(-epsilon/6)`, so log-versus-power decay makes it smaller than the
+native Ford constant. The frozen denominator scaling theorem controls
+height `3Y`, and monotonicity covers each actual height `|t|+2Y`. Native
+constants therefore yield the exact error decomposition eventually and
+uniformly in frequency whenever `beta>eta`. The next bounded task is to
+estimate the sharp-Perron truncation series (using its frozen kernel bounds)
+and the three zero-free contour edges; separately, `beta<=eta` should follow
+from a crude transform/main-term bound absorbed by the existing `1/beta`
+term.
+
+## HT sharp-Perron truncation majorant (release 4.28)
+
+The source-weighted finite-height cutoff error is now controlled term by
+term. Its coefficient/right-line powers cancel exactly to the frozen
+optimized Perron exponent, leaving the common factor `y^(beta-1)`. The
+strict lower range, endpoint, and strict upper range are combined into a
+nonnegative majorant whose far tail is summable by comparison with the
+von Mangoldt Dirichlet series at `1+1/log y`. The full complex `tsum` is
+bounded by this scalar `tsum`. The next bounded task is its explicit
+arithmetic estimate—finite near-diagonal harmonic mass plus the far
+Dirichlet tail—at `T=2Y_epsilon(y)`; this should make the truncation term
+negligible compared with the equation-(3.10) allowance.
+
+## HT sharp-Perron arithmetic estimate (release 4.29)
+
+The majorant sum is now explicit. Integrality of the cutoff means every
+nonendpoint additive distance is at least one, so a deliberately coarse
+`y+1` bound replaces the near-diagonal harmonic decomposition. After the
+exact power factorization, every such term belongs to one positive von
+Mangoldt Dirichlet series at the optimized abscissa. The frozen series bound
+and `y^(1+1/log y)=exp(1)y` yield the endpoint plus
+`(y+1)exp(1)y(log y+C)/(pi*T)`, and this is transferred to the full complex
+HT truncation remainder at `T=2Y_epsilon(y)`. The next bounded task is to
+prove its eventual absorption into the target exponential allowance; the
+other analytic task is the quantitative bound for the three contour edges.
+
+## HT harmonic-strength Perron arithmetic (release 4.30)
+
+The coarse all-distance factor has been replaced by the required harmonic
+summation. The near range compares to a half-integral reciprocal-distance
+kernel with mass at most `8*harmonic(y+1)`; the far range costs only two
+times the optimized positive von Mangoldt series. Thus the explicit
+source-height error has the schematic size
+`y^(beta-1)*(Lambda(y)+y*polylog(y)/Y_epsilon(y))`.
+The height-decay exponent `3/2-epsilon` exceeds the target exponent
+`epsilon/2` exactly when `epsilon<1`, so the next bounded task is the formal
+eventual absorption of these displayed terms. Quantitative contour-edge
+bounds and the small-beta branch remain afterward.
+
+## HT Perron-truncation absorption (release 4.31)
+
+The sharp-Perron remainder is now closed at the source scale. The strict gap
+between height exponent `3/2-epsilon` and decay exponent `epsilon/2` absorbs
+all fixed constants and logarithmic powers. Endpoint, near, and far pieces
+each consume one third of the scalar target, yielding the complete complex
+bound `y^beta*exp(-(log y)^(epsilon/2))`, uniformly in the frequency. This is
+formally below the HT Lemma-6 allowance for every `0<beta<1`. The next
+bounded task is now purely the displaced rectangle: bound its two horizontal
+edges and left vertical edge, then close `beta<=eta` separately.
+
+## HT contour-edge geometry (release 4.32)
+
+The normalized contour geometry is now closed. Generic pointwise sup bounds
+control `HIntegral'` and `VIntegral'` by exact edge lengths, and the HT
+specialization combines both horizontal edges and the left vertical edge
+into one named scalar majorant. The horizontal length is exactly
+`eta+1/log y`; the vertical length is `2T`. The next bounded analytic task is
+therefore to prove uniform pointwise estimates for the translated zeta
+logarithmic derivative on those three zero-free boundary segments and absorb
+the resulting majorant. The `beta<=eta` branch remains independent.
+
+## HT weighted left edge (release 4.33)
+
+The vertical geometry is now at the correct source scale. Keeping `1/|z|`
+inside the left-edge integral gives the elementary bound
+`1/|a+iu| <= 2/(a+|u|)`, whose symmetric mass is logarithmic rather than
+linear in the contour height. The shifted integrand norm has also been
+reduced exactly to the translated zeta logarithmic derivative times
+`y^Re(z)/|z|`. The next bounded task is consequently a genuine analytic one:
+prove a uniform logarithmic-derivative estimate throughout the selected
+zero-free strip, instantiate the weighted majorant, and absorb its fixed
+logarithmic losses. The small-beta branch remains independent.
+
+## HT VK-separated logarithmic derivative (release 4.34)
+
+The analytic input behind the edge bound is now available without selecting
+a special ordinate. Twice the HT shift fits eventually inside the native VK
+width, so every local sharp-Landau zero is horizontally separated from the
+evaluation point by the contour shift. The resulting reciprocal-distance
+bound controls the full finite zero sum, and the frozen Landau
+partial-fraction theorem yields a physical `zeta'/zeta` estimate throughout
+each admissible positive-height unit interval. The next bounded task is to
+instantiate this theorem on the two horizontal edges and the positive half
+of the left edge, use conjugation for negative heights, and absorb the
+resulting logarithmic factors. The small-beta branch remains independent.
+
+## HT sign-uniform logarithmic derivative (release 4.35)
+
+Conjugation now gives the same VK-separated Landau estimate at negative
+height, and a single absolute-ordinate theorem covers both signs without an
+auxiliary selected interval. Frozen zero-mass control reduces its size to
+`O((1+1/eta)*log |R|)`. This is already the pointwise estimate needed on the
+two horizontal edges. The vertical edge crosses ordinate zero, where the
+zeta pole contributes a separate reciprocal-distance term, so the next task
+is a fixed-height surrogate-logarithmic-derivative bound plus that explicit
+pole term, followed by high/low vertical assembly.
+
+## HT compact low-height pole control (release 4.36)
+
+The vertical edge's central segment is now controlled. A fixed half-VK
+compact rectangle is free of zeros of the entire surrogate `(s-1)zeta(s)`;
+compactness supplies its uniform logarithmic-derivative bound. Returning to
+zeta costs exactly `1/eta` on `Re(s)=1-eta`. Together with release 4.35 this
+covers every ordinate. The next bounded task is to prove the enlarged
+nine-frequency VK comparison needed by the high part, split the weighted
+vertical integral at height eight, assemble the horizontal estimates, and
+absorb the resulting logarithmic factors.
+
+## HT literal contour pointwise bounds (release 4.37)
+
+Pointwise physical `zeta'/zeta` control is now specialized to every literal
+HT edge. The nine-frequency VK comparison covers the factor-three Landau
+height enlargement, the horizontal ordinates and real parts satisfy the
+required ranges exactly, and the vertical high/low split is recombined by a
+single max majorant. The next bounded task is algebraic rather than analytic:
+prove surrogate nonvanishing supplies the zeta nonzero hypotheses, retain
+the Perron denominator on all three edges, instantiate the weighted contour
+majorant, and absorb its logarithmic losses.
+
+## HT weighted analytic contour edge (release 4.38)
+
+The three physical logarithmic-derivative estimates now control the literal
+shifted Perron integrand. Both horizontal edges gain the full reciprocal
+contour height, the left edge retains its reciprocal Perron denominator, and
+the translated surrogate-zero-free rectangle proves all required zeta
+nonvanishing assertions. The prepared weighted integration theorem therefore
+gives one explicit complete edge majorant. The next bounded task is to absorb
+that scalar majorant into the Lemma 6 allowance; the complementary
+`beta<=eta` branch remains separate.
+
+## HT large-beta contour absorption (release 4.39)
+
+The weighted edge majorant is now absorbed uniformly when `2*eta<=beta`.
+Both logarithmic-derivative envelopes cost only `O((log y)^3)`, and the
+vertical reciprocal-distance integral costs `O((log y)^2)`. The corrected
+factor-two contour displacement gives the spare stretched exponential needed
+to remove these powers while retaining the exact equation-(3.10) decay.
+The next bounded task is the complementary small-beta estimate, after which
+the contour and already-complete truncation bounds can be recombined.

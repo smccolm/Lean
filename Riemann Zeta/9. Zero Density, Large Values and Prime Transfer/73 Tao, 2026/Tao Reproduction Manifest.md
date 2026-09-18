@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-4.17`. It
+This is a development manifest, version `prime-equidistribution-4.46`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -4037,6 +4037,87 @@ On 2026-09-16, `lake build Tao2026 Tao2026.Audit` completed successfully with
 warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
 semantic regression gates.
 
+## Release delta: prime-equidistribution-4.43
+
+`SmoothNumberSaddleHTSmallBetaEdges.lean` proves the reflected weighted
+vertical estimate on `Re z=-eta`, the three-shift VK real-part geometry, the
+uniform high/low logarithmic-derivative bound, and the complete analytic
+three-edge estimate. `SmoothNumberSaddleHTSmallBetaEdgeAbsorption.lean`
+absorbs the horizontal terms into the exponentially decaying error summand
+and the negative-left term into the pole-scale summand. It combines those
+edges with the release-4.42 origin bound and Perron truncation, then joins the
+existing large-beta contour. The result is a single uniform eventual HT
+transform estimate for all `0<beta<1`. Finite initial-`y` promotion remains,
+so the all-`y` Lemma 6 contract and Theorem 1.7 are not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10201 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.44
+
+`SmoothNumberSaddleHTFinitePrefix.lean` proves the elementary estimates
+needed below the eventual contour threshold: the transform norm is at most
+`Chebyshev.psi y`, the main-term norm is at most `y/beta`, and the literal HT
+error dominates `1/beta`. Hence the transform error is bounded by
+`(Chebyshev.psi y + y) * smoothSaddleHTMangoldtError`. Extracting the eventual
+threshold and applying monotonicity of `psi` gives one positive coefficient
+valid both below and above it. The audited endpoint
+`smoothSaddleHTMangoldtTransformEstimate` is therefore the complete all-`y`
+equation-(3.10) contract of HT Lemma 6. This delta does not claim Theorem 1.7;
+outer-frequency Perron decay and local-limit inversion remain.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10202 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.45
+
+`SmoothNumberSaddleHTMinorArc.lean` isolates and proves the exact algebraic
+passage from the all-`y` HT Lemma 6 estimate to the source minor-arc contract.
+The sharp saddle main term supplies one half of the rational HT loss; under
+the displayed one-quarter scalar error budget, the Euler-product cosine loss
+retains the other quarter. The existing global product estimate converts
+this to `SmoothSaddleHildebrandTenenbaumMinorArcBoundAt` with the explicit
+positive coefficient
+`1/(384*smoothSaddleHTSharpComparisonConstant)`. The only remaining premise
+in this bridge is the uniform scalar absorption of the now-explicit errors.
+This delta does not yet claim the outer Perron limit or Theorem 1.7.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10203 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.46
+
+`SmoothNumberSaddleHTMinorArcScale.lean` removes the final scalar hypothesis
+from the release-4.45 bridge. It proves divergence of the rational HT loss at
+the first physical outer frequency, absorbs the `y^(1-sigma)` factor using
+the critical saddle displacement and stretched-exponential decay, derives
+the complementary lower bound for `(1-sigma)*log y` from the saddle equation,
+and gives explicit normalized bounds for both the Lemma-6 and higher-prime-
+power errors. Radial monotonicity then yields the exact
+`SmoothSaddleHildebrandTenenbaumMinorArcBoundAt` contract on
+`[1/log y, smoothSaddleHTFrequencyCeiling y (1/2)]` eventually in every
+Tao-critical smooth regime. This delta does not claim the local-limit
+inversion or Theorem 1.7.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10204 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
 ## Release delta: prime-equidistribution-3.74
 
 `SmoothNumberSaddleEulerCharacteristic.lean` proves absolute summability and
@@ -4838,11 +4919,13 @@ semantic regression gates.
 
 `SmoothNumberSaddleHTLemmaSix.lean` records HT Lemma 6 at its exact source
 frequency ceiling `exp((log y)^(3/2-epsilon))` and equation-(3.10) error
-scale. It states the remaining uniform transform estimate as a named
-proposition, computes the complex main term at zero and at general frequency,
-computes its norm and the Cartesian cosine main term, and derives the full
-cosine corollary. The shifted Perron/zero-free-region proof of the named
-proposition remains, so Theorem 1.7 is not yet claimed.
+shape. As corrected in release 4.40, the source's `O_epsilon` multiplier is
+explicit rather than fixed to one. The module states the remaining uniform
+transform estimate as a named proposition, computes the complex main term at
+zero and at general frequency, computes its norm and the Cartesian cosine
+main term, and derives the full cosine corollary. The shifted
+Perron/zero-free-region proof of the named proposition remains, so Theorem
+1.7 is not yet claimed.
 
 On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
 10169 jobs. The canonical isolated verifier
@@ -4863,6 +4946,500 @@ and transform contract remain, so Theorem 1.7 is not yet claimed.
 
 On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
 10170 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.18
+
+`SmoothNumberSaddleHTPrimePowerBound.lean` decomposes the higher-prime-power
+remainder exactly by exponent, proves the first slice vanishes, and bounds
+every later slice geometrically in the saddle range `sigma >= 1/2`. Summing
+those coefficients and applying the audited weighted Chebyshev estimate gives
+an explicit `O(log y)` bound, which supplies the required specialization of
+HT Lemma 5. The elementary cosine-main-term lower bound and the analytic
+Lemma 6 transform contract remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10171 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.19
+
+`SmoothNumberSaddleHTMainTermLower.lean` proves a phase-uniform lower bound
+for the exact Cartesian cosine main term and combines it with the Lemma 6
+bridge and the release-4.18 prime-power estimate. This yields a single
+explicit lower bound for the Euler-product cosine loss. The saddle-coefficient
+comparison and analytic Lemma 6 transform proposition remain, so Theorem 1.7
+is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10172 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.20
+
+`SmoothNumberSaddleHTSaddleComparison.lean` combines the canonical finite
+Abel weighted-prime estimate with the exact smooth saddle equation. It proves
+that the HT main coefficient controls a fixed multiple of the Rankin ratio
+and derives the source-shaped rational cosine loss under one explicit cutoff
+hypothesis. That cutoff is not expected in the critical regime, so this is
+retained as a correct conditional intermediate result; Theorem 1.7 is not
+claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10173 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.21
+
+`SmoothNumberSaddleHTSaddleComparisonSharp.lean` proves an exact finite Abel
+identity against Chebyshev's theta function and the uniform estimate
+`sum_{p<=y} log(p)p^(-sigma) <= log(4)y^(1-sigma)/(1-sigma)`. It bounds the
+exact saddle prime sum by `5 log(4)` times that scale, inserts the saddle
+equation, and derives the source-shaped rational HT cosine-main-term loss
+without the release-4.20 divisor cutoff. The analytic Lemma 6 transform
+proposition remains, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10174 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.22
+
+`SmoothNumberSaddleHTShiftedPerron.lean` rewrites the finite HT Mangoldt
+transform as the literal source Dirichlet sum at `s=1-beta+i*t` and its main
+term as `y^(1-s)/(1-s)`. It proves the shifted-Perron estimate equivalent to
+the named Lemma 6 contract and records the exact finite Abel identity against
+Chebyshev's `psi`. The omitted contour/zero-free-region estimate remains, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10175 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.23
+
+`SmoothNumberSaddleHTShiftedRightLine.lean` proves absolute convergence and
+termwise integration for the shifted von Mangoldt series on
+`1<Re(s)+c`, identifies the normalized zeta-logarithmic-derivative integral
+with source-weighted frozen sharp-Perron kernels, and proves that the exact
+cutoff series is the finite source Dirichlet sum. Their subtraction gives an
+exact error series, specialized to `s=1-beta+i*t` for `beta<c`. The contour
+shift, pole extraction, and zero-free-region remainder remain, so Theorem 1.7
+is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10176 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.24
+
+`SmoothNumberSaddleHTShiftedRectangle.lean` defines the translated
+zeta-surrogate Perron integrand and proves its exact residue theorem on a
+positive-real rectangle containing `z=1-s`. Under a literal zero-free
+hypothesis for the translated surrogate, the only pole contributes
+`y^(1-s)/(1-s)`; solving the boundary identity expresses the initial right
+line as this source main term plus the two horizontal and left vertical
+edges. The source-facing theorem specializes this to `s=1-beta+i*t`,
+`left<beta<right`, and `|t|<T`. Uniform zero-freeness and quantitative edge
+bounds remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10177 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.25
+
+`SmoothNumberSaddleHTShiftedZeroFree.lean` translates the frozen
+rectangle-uniform Vinogradov--Korobov theorem to the HT coordinates. For
+left edge `beta-eta`, the physical zeta rectangle begins at `1-eta` and its
+height is at most `|t|+T`; the explicit frozen width condition therefore
+proves the surrogate nonvanishing required by release 4.24. The resulting
+theorem inserts zero-freeness directly into the exact contour identity, and
+positive rectangle constants are extracted from the frozen native Ford
+proof. Uniform parameter selection and the three edge bounds remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10178 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.26
+
+`SmoothNumberSaddleHTContourParameters.lean` fixes the shifted contour at
+`eta=2*(log y)^(epsilon/2-1)`, `T=2Y_epsilon(y)`, and
+`right=beta+1/log y`. It proves the exact source decay
+`y^(-eta)=exp(-2*(log y)^(epsilon/2))`, the strengthened initial-line power
+cost
+`y^right=exp(1)y^beta`, and all required positivity and height geometry. The
+right-line cutoff identity and the native-zero-free rectangle identity are
+then combined into an exact decomposition of the transform error as the
+three contour edges minus the finite-height sharp-Perron truncation error.
+The eventual VK-width comparison, the complementary small-beta branch, and
+quantitative bounds for those two explicit remainders remain, so Theorem 1.7
+is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10179 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.27
+
+`SmoothNumberSaddleHTContourWidth.lean` unfolds the VK denominator at the
+exact source ceiling and proves that its product with the selected shift is
+`(log y)^(-epsilon/6)` times a one-third power of a `log log y` factor.
+Log-versus-power decay makes this smaller than the positive native Ford
+constant. The frozen factor-three denominator comparison and denominator
+monotonicity then prove the literal width uniformly at
+`|t|+2Y_epsilon(y)` for every requested frequency. Consequently the native
+Ford constants instantiate the exact transform-error decomposition
+eventually whenever `beta` exceeds the shift. The explicit contour-edge and
+Perron-truncation bounds and the complementary small-beta branch remain, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10180 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.28
+
+`SmoothNumberSaddleHTPerronTruncation.lean` computes the shifted source
+coefficient norm and proves that its product with the selected right-line
+power is `y^(beta-1)` times the frozen optimized sharp-Perron power. Frozen
+strict-lower, endpoint, and strict-upper kernel estimates therefore give a
+single nonnegative scalar term majorant. Its infinite upper tail is proved
+summable by comparison with the von Mangoldt Dirichlet series beyond
+`2y`, and the full complex truncation error is bounded by `y^(beta-1)` times
+the majorant `tsum`. An explicit bound for that sum, the three displaced
+edges, and the complementary small-beta branch remain, so Theorem 1.7 is not
+yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10181 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.29
+
+`SmoothNumberSaddleHTPerronArithmetic.lean` uses the integral cutoff to
+bound both nonendpoint reciprocal logarithmic distances by `y+1`. The full
+scalar majorant is thereby dominated by its single endpoint plus one
+constant multiple of the positive von Mangoldt Dirichlet series at the
+optimized Perron abscissa. The frozen `log y+C` estimate and exact identity
+`y^(1+1/log y)=exp(1)y` give an explicit bound, which is transferred to the
+complete complex truncation error at the selected HT contour height.
+Absorption into the target error, the three displaced contour edges, and the
+complementary small-beta branch remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10182 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.30
+
+`SmoothNumberSaddleHTPerronArithmeticSharp.lean` replaces the coarse global
+distance factor by a near/far split. The near range retains reciprocal
+distance and is compared to a frozen half-integral kernel of mass at most
+eight harmonic numbers. In the far range the additive-distance factor is at
+most two, leaving the positive von Mangoldt Dirichlet series. The endpoint,
+near, and far terms are summed explicitly and specialized to the selected HT
+height, removing the spurious extra factor of `y` across the full epsilon
+range. Eventual absorption, the three contour edges, and the small-beta
+branch remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10183 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.31
+
+`SmoothNumberSaddleHTPerronAbsorption.lean` formalizes the strict source
+exponent gap `epsilon/2 < 3/2-epsilon` and a fixed-constant logarithmic
+absorption theorem. The endpoint, harmonic near, and Dirichlet far pieces
+are each assigned one third of `y exp(-(log y)^(epsilon/2))`. Their sum
+therefore controls the complete scalar truncation majorant, and restoring
+`y^(beta-1)` gives the exact source decay
+`y^beta exp(-(log y)^(epsilon/2))`. This is also bounded by the full HT
+Lemma-6 allowance uniformly for `0<beta<1`. The three displaced contour
+edges and complementary small-beta branch remain, so Theorem 1.7 is not yet
+claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10184 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.32
+
+`SmoothNumberSaddleHTContourEdgeBounds.lean` proves generic normalized
+horizontal- and vertical-integral estimates from pointwise sup bounds. It
+then computes the literal HT horizontal length
+`shift+1/log y`, the vertical length `2T`, and combines the two horizontal
+edges and left vertical edge into one named scalar majorant for the complete
+contour-edge contribution. Thus the remaining large-beta edge task consists
+only of three pointwise translated zeta logarithmic-derivative bounds and
+their scalar absorption. The complementary small-beta branch also remains,
+so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10185 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.33
+
+`SmoothNumberSaddleHTContourEdgeWeighted.lean` retains the reciprocal Perron
+denominator on the left vertical edge. Its elementary symmetric envelope is
+evaluated exactly, replacing the artificial linear contour-height loss by
+the logarithmic factor `4*B*log((a+T)/a)`. The shifted zeta-Perron integrand
+norm is factored exactly into the translated zeta logarithmic derivative,
+the real power, and the reciprocal Perron denominator. Both horizontal edges
+and this weighted left edge are assembled into a source-scale scalar
+majorant. The pointwise translated logarithmic-derivative estimate, its
+absorption, and the separate small-beta branch remain, so Theorem 1.7 is not
+yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10186 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.34
+
+`SmoothNumberSaddleHTLogDerivativeSeparation.lean` strengthens the eventual
+HT/VK width comparison to reserve twice the contour shift. It converts the
+native zero-free rectangle into a quantitative distance bound from every
+frozen sharp-Landau zero to every point with real part at least `1-eta`.
+`SmoothNumberSaddleHTLogDerivativeLandau.lean` uses that distance inside the
+finite Landau zero sum, proves the evaluation point is outside the larger
+zero disk, and reinstantiates the frozen partial-fraction theorem. The result
+is an arbitrary-positive-height physical `zeta'/zeta` estimate whose only
+separation cost is `1/eta`; no selected good ordinate is assumed. Its
+specialization to all three HT edges, scalar absorption, and the small-beta
+branch remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10188 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.35
+
+`SmoothNumberSaddleHTLogDerivativeSymmetry.lean` transfers the arbitrary
+positive-height VK/Landau estimate to negative height by exact conjugation.
+It then uses the absolute ordinate itself as the Landau scale, eliminating
+the frozen unit-interval parameter from subsequent applications. Finally,
+the frozen logarithm and zero-mass estimates compress the raw bound to an
+explicit constant times `(1+1/eta)*log |R|`, uniformly for either sign once
+`|R|>=8`. The low-height vertical segment, contour specialization, and scalar
+absorption remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10189 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.36
+
+`SmoothNumberSaddleHTLogDerivativeLowHeight.lean` handles the portion of the
+left edge that crosses the zeta pole and lies outside the high-height Landau
+coordinate. A fixed compact rectangle is placed to the right of half the
+native VK boundary. The entire surrogate `(s-1)zeta(s)` is proved nonzero
+there using the native zero-free theorem; compactness then bounds its
+logarithmic derivative. Restoring zeta adds the explicit `1/|s-1|` term,
+which is at most `1/eta` on the shifted left line. Complete contour
+specialization and absorption remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10190 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.37
+
+`SmoothNumberSaddleHTLogDerivativeContour.lean` enlarges the spare-width
+comparison to nine source frequency ceilings, exactly what the Landau bound
+requires after multiplying each physical ordinate by three. It computes the
+absolute-height ranges of both horizontal edges and their real-coordinate
+strip bounds, obtaining one explicit high-height majorant. On the left edge,
+the compact surrogate bound below the fixed native height and the Landau
+bound above it are combined into a single max majorant. Thus all three
+literal HT edges now have pointwise physical `zeta'/zeta` bounds. Transfer to
+the shifted Perron integrand, weighted integration, and scalar absorption
+remain, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10191 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.38
+
+`SmoothNumberSaddleHTContourEdgeAnalytic.lean` converts the physical
+logarithmic-derivative bounds into estimates for the literal shifted Perron
+integrand. The two horizontal edges retain the reciprocal contour-height
+gain, while the left edge retains the full Perron denominator under weighted
+integration. The translated surrogate-zero-free rectangle supplies all
+zeta-nonzero and non-pole conditions. A VK-specialized wrapper assembles the
+three pointwise estimates into the explicit weighted edge majorant. Scalar
+absorption and the complementary small-beta branch remain, so Theorem 1.7 is
+not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10192 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.39
+
+`SmoothNumberSaddleHTContourEdgeAbsorption.lean` corrects the contour
+displacement to `2*(log y)^(epsilon/2-1)`, which still fits the native VK
+width and supplies two stretched-exponential copies on the left edge. It
+bounds both logarithmic-derivative majorants by a cubic logarithm and the
+vertical reciprocal-distance logarithm by a quadratic logarithm. One decay
+copy absorbs all these scalar losses; the other remains as the exact
+equation-(3.10) target. Consequently the complete three-edge norm has the
+required target bound uniformly for `2*eta<=beta`. The complementary
+small-beta branch remains, so Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10193 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.40
+
+The HT Lemma 6 contract is corrected to match the pinned source literally:
+equation (3.10) has an epsilon-dependent implied constant. The new
+`SmoothSaddleHTMangoldtTransformEstimateAt epsilon C` exposes that constant,
+and the global proposition selects one positive `C` uniformly in `y`, beta,
+and frequency. The cosine, prime-power, shifted-coordinate, and main-term
+bridges now retain this multiplier rather than assuming it equals one.
+
+`SmoothNumberSaddleHTShiftedTwoPole.lean` constructs the complementary
+small-beta contour. It proves the local principal part at `z=0`, identifies
+its coefficient with `-zeta'/zeta(s)`, applies the finite-pole residue theorem
+to `{0,1-s}`, and solves for the right vertical edge. A new arbitrary-left VK
+theorem proves translated surrogate nonvanishing at physical depth
+`beta-left`. Finally, the existing right-line cutoff identity is combined
+with this two-pole rectangle to give the exact formula
+`transform-main = origin residue + negative-left edges - truncation error`
+and its norm form. Sharp source-scale control of the origin residue and
+absorption of the negative-left edges remain, so Theorem 1.7 is not yet
+claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10194 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.41
+
+`SmoothNumberSaddleHTSmallBetaWidth.lean` proves the missing parameter
+geometry for the complementary branch. The selected contour shift tends
+below every positive target, `3*eta` eventually fits both the unit-depth
+condition and the native VK width at the actual translated height, and
+`beta<=2*eta` supplies `beta+eta<=3*eta`. Native VK constants therefore give
+an eventual exact two-pole decomposition uniformly over the complete source
+frequency range.
+
+The same package identifies the Perron-origin coefficient with the physical
+`-zeta'/zeta(1-beta+it)`. On the fixed low-height VK rectangle, compactness of
+the nonvanishing entire surrogate `(s-1)zeta(s)` yields the sharp
+`C+1/beta` bound for this residue. The remaining high-height estimate must
+have source scale `O(D(t)+1/beta)`; the previously proved Landau logarithmic
+bound is too coarse near `beta=0`. Negative-left edge absorption remains, so
+Theorem 1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10195 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.42
+
+`SmoothNumberSaddleHTVariableDisk.lean` builds the physical disk centered at
+`1+w+it` with radius `2*w`. It proves that the small-beta source coordinate
+lies at normalized radius at most `5/6`, derives disk zero-freeness from the
+native VK rectangle, bounds the center reciprocal by the frozen
+Euler-product right-line estimate, and bounds the disk maximum by the frozen
+Pintz zeta window. With the normalized zero set empty, the frozen
+`GafniTao.FinalBound` gives a physical logarithmic-derivative estimate.
+
+`SmoothNumberSaddleHTVariableDiskScale.lean` specializes to native VK width
+and proves that estimate is `O(D(A)*loglog(A))` uniformly at high height.
+`SmoothNumberSaddleHTSmallBetaScale.lean` proves the exact HT ceiling and
+scale identities needed to absorb this into `O(1/beta)`.
+`SmoothNumberSaddleHTSmallBetaHighHeight.lean` combines the high-height disk
+argument with release 4.41's compact low-height theorem, producing a single
+eventual `K/beta` bound for the origin residue over the full small-beta and
+frequency ranges. Negative-left three-edge absorption remains, so Theorem
+1.7 is not yet claimed.
+
+On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10199 jobs. The canonical isolated verifier
 `cmd /c run_tao_build.bat --no-pause` then completed with
 `FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
 warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and

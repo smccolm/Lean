@@ -767,3 +767,124 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% Release 4.17: the Mangoldt cosine sum is split exactly into prime and
     %% prime-power terms, yielding the source lower bound for the Euler-product
     %% cosine loss modulo the explicit HT Lemma-5 remainder.
+    %% Release 4.18: the HT Lemma-5 remainder is decomposed by prime-power
+    %% exponent and bounded by a convergent geometric series times the
+    %% weighted Chebyshev sum, giving explicit O(log y) for sigma>=1/2.
+    %% Release 4.19: the exact cosine main term is bounded below uniformly by
+    %% y^beta*t^2/(2*beta*(beta^2+t^2)) and inserted into the Euler-product
+    %% loss bridge together with the explicit prime-power remainder.
+    %% Release 4.20: canonical finite Abel summation compares the HT main
+    %% coefficient with the exact saddle Rankin ratio, giving the source
+    %% rational loss under one explicit cutoff-size hypothesis.
+    %% Release 4.21: theta-Abel summation gives the uniform logarithmically
+    %% weighted prime bound at scale y^beta/beta, removing the cutoff from
+    %% the saddle comparison and source-shaped rational HT main-term loss.
+    %% Release 4.22: the HT transform and main term are normalized exactly at
+    %% s=1-beta+i*t, the shifted-Perron contract is proved equivalent to the
+    %% Lemma-6 contract, and the finite psi-Abel identity is compiled.
+    %% Release 4.23: absolute convergence identifies the shifted initial-line
+    %% zeta-log-derivative integral with source-weighted frozen Perron kernels;
+    %% the exact cutoff yields the source Dirichlet sum and error series.
+    %% Release 4.24: a translated zeta-surrogate rectangle crosses only
+    %% z=1-s, extracts the exact source main term, and exposes two horizontal
+    %% and one left vertical edge under a literal zero-free premise.
+    %% Release 4.25: the native rectangle-uniform Vinogradov--Korobov theorem
+    %% discharges that premise at left edge beta-eta and height |t|+T under
+    %% its explicit source width condition.
+    %% Release 4.26 corrected: eta=2*(log y)^(epsilon/2-1), T=2Y_epsilon(y),
+    %% right=beta+1/log y give the exact target left-edge decay and constant
+    %% right-line cost; the transform error is exactly the three contour
+    %% edges minus the finite-height sharp-Perron truncation error.
+    %% Release 4.27: exact exponent arithmetic makes eta*VKDenominator(Y)
+    %% a negative epsilon/6 power times a log-log factor. Log-versus-power
+    %% decay plus the frozen factor-three comparison proves the literal
+    %% zero-free width uniformly over every requested translated height.
+    %% Release 4.28: the shifted coefficient and selected right-line power
+    %% cancel to y^(beta-1) times the frozen optimized Perron exponent.
+    %% Below-cutoff, endpoint, and above-cutoff estimates form a nonnegative
+    %% summable majorant controlling the complete truncation-error norm.
+    %% Release 4.29: integrality of y bounds every nonendpoint reciprocal
+    %% logarithmic distance by y+1. The majorant sum is thus one endpoint
+    %% plus an optimized positive von Mangoldt Dirichlet series, giving an
+    %% explicit complete truncation bound at the selected HT height.
+    %% Release 4.30: the source-scale refinement retains reciprocal distance
+    %% near n=y and compares it to eight harmonic numbers; the far range has
+    %% factor two and one optimized von Mangoldt series. This removes the
+    %% coarse extra factor y uniformly over the full epsilon range.
+    %% Release 4.31: epsilon/2 < 3/2-epsilon absorbs every fixed logarithmic
+    %% loss. Endpoint, near, and far pieces split the scalar target in thirds,
+    %% giving the exact complex truncation decay and its inclusion in the
+    %% HT Lemma-6 Mangoldt-error allowance.
+    %% Release 4.32: generic normalized horizontal/vertical length-times-sup
+    %% bounds specialize to the literal HT widths and combine all three
+    %% displaced edges into one scalar majorant. Only their pointwise
+    %% translated log-derivative bounds and absorption remain in this branch.
+    %% Release 4.33: the left-edge Perron denominator stays inside the
+    %% integral, giving logarithmic rather than linear height cost. Exact
+    %% integrand factorization and a weighted three-edge majorant isolate the
+    %% remaining translated zeta log-derivative estimate.
+    %% Release 4.34: twice the HT shift fits in the native VK width, giving
+    %% quantitative separation from every frozen sharp-Landau zero. The
+    %% finite zero sum, large-zero exclusion, frozen partial-fraction bound,
+    %% and transport yield zeta'/zeta control at every positive height with
+    %% reciprocal-width cost and no selected-good-ordinate hypothesis.
+    %% Release 4.35: zeta conjugation covers negative ordinates; choosing
+    %% the Landau scale |R| removes unit-interval bookkeeping, and frozen
+    %% logarithm/zero-mass estimates give O((1+1/eta)*log |R|) uniformly in
+    %% the sign. Only the low-height vertical segment needs separate input.
+    %% Release 4.36: on a fixed compact half-VK rectangle the entire
+    %% surrogate (s-1)zeta(s) is nonzero, hence has bounded logarithmic
+    %% derivative. Restoring zeta gives precisely the 1/eta pole cost on the
+    %% low-height left line, completing pointwise coverage of all ordinates.
+    %% Release 4.37: twice the shift fits at nine source frequency ceilings.
+    %% Exact horizontal coordinate bounds instantiate the high Landau theorem;
+    %% a split at the fixed native height combines compact and Landau control
+    %% on the full left edge, yielding pointwise bounds on all three edges.
+    %% Release 4.38: surrogate nonvanishing supplies every zeta side condition.
+    %% The horizontal Perron denominator gives 1/T, the left denominator stays
+    %% inside the integral, and the weighted theorem yields a logarithmic-cost
+    %% scalar majorant for the complete three-edge contribution.
+    %% Release 4.39: the displacement is doubled, still fitting the VK width.
+    %% Cubic log-derivative and quadratic reciprocal-distance-log losses spend
+    %% one stretched-exponential copy; the other is the exact Lemma-6 target.
+    %% Thus every displaced edge is closed uniformly when 2*eta <= beta.
+    %% Release 4.40: equation (3.10)'s O_epsilon constant is now explicit.
+    %% Moving the complementary contour left of zero crosses both z=1-s and
+    %% z=0; the latter residue is -zeta'/zeta(s). The exact two-pole VK contour
+    %% and its truncation-error decomposition are proved for the small-beta
+    %% branch. Sharp origin control and negative-left edge absorption remain.
+    %% Release 4.41: beta <= 2*eta makes the negative-left physical depth at
+    %% most 3*eta. Spending this fixed factor in the VK comparison discharges
+    %% the complete small-beta contour geometry eventually and uniformly.
+    %% The origin is identified with physical -zeta'/zeta; compactness gives
+    %% C+1/beta at bounded height. Sharp high-height control remains.
+    %% Release 4.42: a VK-scale variable disk centered right of one contains
+    %% the small-beta source point at normalized radius at most 5/6. Native
+    %% zero-freeness, Euler-product center control, the Pintz disk maximum,
+    %% and the frozen disk log-derivative theorem give O(D(A)*loglog A) at
+    %% high height. Exact HT scale absorption and compact low-height control
+    %% yield the uniform K/beta origin-residue bound. Only the three
+    %% negative-left edges remain.
+    %% Release 4.43: reflection preserves logarithmic denominator cost on
+    %% Re z=-eta. Three-shift VK geometry controls both horizontal edges and
+    %% the complete negative-left edge; their scalar majorant fits the two
+    %% terms of the literal HT error. Origin, edges, truncation, and the
+    %% large-beta contour now give a uniform eventual equation-(3.10) bound.
+    %% Only finite initial-y promotion to the named contract remains.
+    %% Release 4.44: the transform is bounded by psi(y), the main term by
+    %% y/beta, and the literal HT error dominates 1/beta. Monotonicity of psi
+    %% absorbs the finite prefix below the eventual contour threshold into
+    %% one enlarged constant. The all-y HT Lemma 6 contract is now proved;
+    %% outer-frequency Perron decay and local-limit inversion remain.
+    %% Release 4.45: the sharp saddle comparison reserves half of the rational
+    %% HT loss. If the explicit Lemma-6 and prime-power terms consume one
+    %% quarter, the remaining quarter controls the Euler-product cosine loss.
+    %% The global characteristic bound yields the exact HT minor-arc contract
+    %% with coefficient 1/(384*C_HT). Only uniform scalar absorption remains.
+    %% Release 4.46: the first-frequency rational loss is at least
+    %% u/(65*(log u)^2) and diverges. Saddle displacement bounds y^(1-sigma)
+    %% by u^8, stretched-exponential decay absorbs that power, and the saddle
+    %% equation gives (1-sigma)*log y >= (log u)/2. The Lemma-6 error and
+    %% prime-power remainder are therefore uniformly absorbed at 1/log y;
+    %% radial monotonicity proves the unconditional HT minor-arc contract
+    %% through the epsilon=1/2 ceiling. Local-limit inversion remains.

@@ -1215,3 +1215,247 @@ exact prime/power decomposition, and
 source inequality reducing the Euler-product loss to the cosine main term,
 the Lemma-6 error, and the higher-prime-power remainder. HT Lemma 5 is the
 next source estimate needed for that remainder.
+
+Release 4.18 maps the needed saddle-range part of HT Lemma 5 to
+`SmoothNumberSaddleHTPrimePowerBound.lean`.
+`smoothSaddleHTPrimePowerRemainder_eq_exponent_sum` is the exact
+prime-power exponent decomposition,
+`smoothSaddleHTPrimePowerExponentSlice_le` supplies the geometric slice
+bound for `sigma>=1/2`, and
+`smoothSaddleHTPrimePowerRemainder_le_log` gives the resulting explicit
+`O(log y)` estimate after the weighted Chebyshev bound. The remaining
+Lemma-8(ii) work is the elementary main-term lower bound together with the
+analytic proof of the named Lemma-6 transform proposition.
+
+Release 4.19 maps the elementary main-term step in HT Lemma 8(ii) to
+`SmoothNumberSaddleHTMainTermLower.lean`.
+`smoothSaddleHTMangoldtCosineMainTerm_lower` gives the phase-uniform rational
+quadratic lower bound, and
+`SmoothSaddleHTMangoldtTransformEstimate.cosineLoss_lower_bound_explicit`
+combines it with the exact Lemma-6 bridge and release-4.18 prime-power bound.
+Only the saddle-coefficient comparison and the analytic transform proposition
+remain before the source loss follows.
+
+Release 4.20 maps the saddle-coefficient comparison to
+`SmoothNumberSaddleHTSaddleComparison.lean`.
+`smoothSaddlePhiOne_le_ht_mainScale` applies the canonical finite Abel bound,
+`smoothRankinRatio_div_htConstant_le_saddleMainCoefficient` inserts the exact
+saddle equation, and
+`smoothSaddleHTMangoldtCosineMainTerm_div_log_lower` obtains the rational
+Rankin-ratio loss in HT Lemma 8(ii). These finite theorems are valid under a
+square-root cutoff, but that cutoff is not the critical-regime route.
+
+Release 4.21 maps the uniform replacement to
+`SmoothNumberSaddleHTSaddleComparisonSharp.lean`.
+`saddlePrimeLogRpowSum_abel_Ico` gives the exact theta-Abel identity,
+`saddlePrimeLogRpowSum_le_mainScale` proves the sharp finite Chebyshev bound,
+and `smoothSaddlePhiOne_le_sharp_ht_mainScale` inserts the prime-term
+estimate. `smoothSaddleHTMangoldtCosineMainTerm_div_log_lower_sharp` then
+delivers the same Lemma-8(ii) rational loss with no divisor cutoff. The
+analytic proof of the named Lemma-6 transform proposition remains.
+
+Release 4.22 maps HT Lemma 6's source variable `s=1-beta+i*t` to
+`SmoothNumberSaddleHTShiftedPerron.lean`.
+`smoothSaddleHTMangoldtTransform_eq_sourceDirichletSum` and
+`smoothSaddleHTMangoldtMainTerm_eq_sourceMainTerm` prove the exact source
+normalizations, while
+`smoothSaddleHTShiftedPerronEstimate_iff_mangoldtTransformEstimate` proves
+that the shifted-Perron contract is exactly the existing Lemma-6 contract.
+`smoothSaddleHTMangoldtTransform_abel` records the complete finite
+psi-partial-summation identity. The source's omitted contour estimate remains.
+
+Release 4.23 maps the initial shifted-Perron line to
+`SmoothNumberSaddleHTShiftedRightLine.lean`.
+`smoothSaddleHTShiftedPerron_logDerivative_eq_tsum_kernels` performs the
+absolutely convergent series/integral interchange for
+`-zeta'(s+z)/zeta(s+z)`, while
+`tsum_smoothSaddleHTShiftedPerronCutoff_eq_sourceDirichletSum` identifies the
+matching sharp cutoff exactly. The theorem
+`smoothSaddleHTSource_shiftedPerron_error_identity` specializes the resulting
+termwise error decomposition to `s=1-beta+i*t`. The contour displacement,
+pole residue, and zero-free edge estimates remain.
+
+Release 4.24 maps the omitted contour displacement itself to
+`SmoothNumberSaddleHTShiftedRectangle.lean`.
+`smoothSaddleHTShiftedZetaPerron_rectangleIntegral_eq_main` proves the
+translated single-pole residue theorem, and
+`smoothSaddleHTShiftedZetaPerron_rightEdge_eq_main_add_edges` solves it for
+the initial vertical edge. The source theorem
+`smoothSaddleHTSource_shiftedPerron_rightLine_eq_main_add_edges` identifies
+the residue with `y^(1-s)/(1-s)` at `s=1-beta+i*t`. Its explicit surrogate
+zero-free premise and three remaining edges are the quantitative analytic
+obligations corresponding to HT's omitted standard contour estimates.
+
+Release 4.25 maps the zero-free premise to
+`SmoothNumberSaddleHTShiftedZeroFree.lean`.
+`smoothSaddleHTSource_shiftedSurrogate_ne_zero_on_rectangle_of_vK` converts
+the frozen rectangle-uniform Vinogradov--Korobov region into nonvanishing on
+the translated HT rectangle, and
+`smoothSaddleHTSource_shiftedPerron_rightLine_eq_main_add_edges_of_vK`
+instantiates the release-4.24 contour identity without an abstract
+nonvanishing assumption. The theorem
+`exists_smoothSaddleHT_native_vinogradovKorobovRectangleZeroFree` obtains its
+constants from the frozen native Ford proof. Uniform parameter selection and
+edge estimates remain.
+
+Release 4.26 maps the concrete source parameter selection to
+`SmoothNumberSaddleHTContourParameters.lean`.
+`rpow_neg_smoothSaddleHTContourShift` proves that the selected left line has
+exactly the equation-(3.10) exponential saving, and
+`rpow_smoothSaddleHTContourRight` proves that the initial line costs only the
+constant `exp(1)` over `y^beta`. The theorem
+`smoothSaddleHTMangoldtTransform_sub_mainTerm_eq_contourErrors` combines the
+initial-line and zero-free rectangle identities into the literal remaining
+contour-edge term minus the sharp-Perron truncation term. Thus the source
+Lemma 6 boundary is now two explicit estimates plus the eventual VK-width
+comparison and small-beta branch.
+
+Release 4.27 maps the remaining zero-free parameter inequality to
+`SmoothNumberSaddleHTContourWidth.lean`.
+`smoothSaddleHTContourShift_mul_vinogradovKorobovDenominator` is the exact
+exponent computation, and
+`eventually_smoothSaddleHTContourShift_le_vk_actualHeight` proves the
+uniform literal width after the factor-three and monotonicity transfers.
+Finally `exists_smoothSaddleHT_native_eventually_exact_decomposition`
+chooses the locally proved Ford constants and supplies the release-4.26
+identity throughout the full HT frequency range in the large-beta contour
+branch. The analytic crosswalk now ends at the two named remainder estimates
+and the elementary small-beta branch.
+
+Release 4.28 maps the finite-height cutoff remainder to
+`SmoothNumberSaddleHTPerronTruncation.lean`.
+`smoothSaddleHTShiftedPerron_power_cancellation` converts the source-weighted
+right-line power to `y^(beta-1)` times the frozen optimized exponent. The
+three termwise cutoff theorems cover both strict sides and the integral
+endpoint. `summable_smoothSaddleHTPerronTruncationMajorant` proves the
+resulting scalar envelope summable, and
+`norm_smoothSaddleHTContourTruncationError_le_tsum_majorant` transfers it to
+the complete complex remainder. Only its quantitative `tsum` estimate, the
+contour edges, and the small-beta branch remain in this Lemma-6 chain.
+
+Release 4.29 maps the arithmetic summation of that scalar envelope to
+`SmoothNumberSaddleHTPerronArithmetic.lean`.
+`one_div_log_nat_ratio_le_succ` and its upper-side counterpart use the
+integral cutoff to replace every nonendpoint logarithmic denominator by
+`y+1`. The theorem
+`tsum_smoothSaddleHTPerronTruncationMajorant_le_arithmetic` reduces the full
+sum to its single endpoint plus the positive optimized von Mangoldt series;
+`exists_tsum_smoothSaddleHTPerronTruncationMajorant_le_explicit` inserts the
+frozen `log y+C` estimate and exact `exp(1)y` power. Finally
+`exists_norm_smoothSaddleHTContourTruncationError_le_explicit` specializes
+the result to the selected HT height. Absorption, the three contour edges,
+and the small-beta branch remain.
+
+Release 4.30 maps the source-scale arithmetic refinement to
+`SmoothNumberSaddleHTPerronArithmeticSharp.lean`. The finite harmonic weight
+is compared to the frozen half-integral distance sum and has total mass at
+most `8*harmonic(y+1)`. Theorems
+`smoothSaddleHTPerronTruncationMajorant_le_near` and `_le_far` split at
+`y/2` and `2y`; the former preserves reciprocal distance, while the latter
+uses the factor-two far-distance estimate and the optimized von Mangoldt
+series. `exists_norm_smoothSaddleHTContourTruncationError_le_sharp_explicit`
+packages the endpoint, harmonic near term, and Dirichlet far term at the
+selected source height. Its eventual absorption and the other contour
+branches remain.
+
+Release 4.31 maps the final truncation absorption to
+`SmoothNumberSaddleHTPerronAbsorption.lean`.
+`eventually_const_mul_log_rpow_mul_exp_log_rpow_le_exp_log_rpow_of_lt`
+packages fixed-constant logarithmic absorption. The endpoint, harmonic near,
+and Dirichlet far bounds are each assigned one third of the source target.
+`eventually_tsum_smoothSaddleHTPerronTruncationMajorant_le_target` sums these
+allocations, and
+`eventually_norm_smoothSaddleHTContourTruncationError_le_target` restores the
+factor `y^(beta-1)` to obtain the exact equation-(3.10) decay. The final
+Mangoldt-error theorem records its uniform inclusion for `0<beta<1`.
+Contour-edge estimates and the small-beta branch remain.
+
+Release 4.32 maps the contour geometry to
+`SmoothNumberSaddleHTContourEdgeBounds.lean`.
+`norm_HIntegral'_le_of_norm_le_const` and
+`norm_VIntegral'_le_of_norm_le_const` expose the normalized length-times-sup
+bounds. `smoothSaddleHTContour_horizontal_length` computes the source width,
+and `norm_smoothSaddleHTContourEdgeContribution_le_supMajorant` combines the
+two horizontal edges and left vertical edge into
+`smoothSaddleHTContourEdgeSupMajorant`. The unresolved analytic input is now
+exactly the three pointwise translated logarithmic-derivative estimates,
+followed by scalar absorption and the separate small-beta branch.
+
+Release 4.33 maps the denominator-retaining refinement to
+`SmoothNumberSaddleHTContourEdgeWeighted.lean`.
+`integral_one_div_add_abs` evaluates the symmetric reciprocal envelope, and
+`norm_VIntegral'_le_of_norm_le_div_norm` converts it to the normalized
+vertical bound. `norm_smoothSaddleHTShiftedZetaPerronIntegrand_eq` and its
+inequality form expose the exact zeta-log-derivative, power, and Perron
+factors. Finally,
+`norm_smoothSaddleHTContourEdgeContribution_le_weightedMajorant` combines
+both horizontal edges with the logarithmic-cost left edge. The remaining
+analytic input is the pointwise translated logarithmic-derivative bound.
+
+Release 4.34 maps the zero-free-strip logarithmic-derivative step to
+`SmoothNumberSaddleHTLogDerivativeSeparation.lean` and
+`SmoothNumberSaddleHTLogDerivativeLandau.lean`.
+`sharpLandauCoord_zero_separation_of_vK` transfers spare native VK width to
+the frozen Landau coordinate. The zero-term and zero-sum bounds feed this
+distance into `sharpLandau_partialFraction_bound_of_vK`, while
+`sharpLandauCoord_not_mem_large_zeros_of_vK` supplies the required exclusion.
+Finally, `norm_riemannZeta_logDeriv_positive_height_le_of_vK` transports the
+local estimate to the physical zeta logarithmic derivative at an arbitrary
+positive height. Edge specialization and scalar absorption remain.
+
+Release 4.35 maps the ordinate-symmetry layer to
+`SmoothNumberSaddleHTLogDerivativeSymmetry.lean`.
+`norm_riemannZeta_logDeriv_negative_height_le_of_vK` is the exact conjugate
+of the positive theorem. `norm_riemannZeta_logDeriv_abs_height_le_of_vK`
+chooses `T=|R|`, and
+`norm_riemannZeta_logDeriv_abs_height_le_log_of_vK` applies the frozen
+partial-fraction-logarithm and zero-mass bounds. This supplies the high-height
+pointwise estimate for either contour orientation; the low-height vertical
+segment remains distinct.
+
+Release 4.36 maps the low-height vertical segment to
+`SmoothNumberSaddleHTLogDerivativeLowHeight.lean`.
+`smoothSaddleHTLowHeightCompact` is the fixed half-VK rectangle;
+`sharpZetaSurrogate_ne_zero_on_smoothSaddleHTLowHeightCompact` discharges its
+nonvanishing from the native zero-free theorem. Compactness bounds the
+surrogate logarithmic derivative, and
+`exists_norm_riemannZeta_logDeriv_lowHeight_leftLine_le` restores the explicit
+pole term to obtain `C+1/eta` on the source left line.
+
+Release 4.37 maps the literal contour coordinates to
+`SmoothNumberSaddleHTLogDerivativeContour.lean`.
+`eventually_two_mul_smoothSaddleHTContourShift_le_vk_nine_frequency` supplies
+the enlarged VK comparison. The top/bottom physical-height lemmas and
+`smoothSaddleHT_horizontal_physicalReal_bounds` feed the two horizontal
+log-derivative theorems. `norm_riemannZeta_logDeriv_HT_left_le_of_vK` combines
+the compact and Landau regimes on the entire left edge with the named
+`smoothSaddleHTLeftLogDerivativeMajorant`.
+
+Release 4.38 maps the physical contour bounds to
+`SmoothNumberSaddleHTContourEdgeAnalytic.lean`.
+`norm_smoothSaddleHTShiftedZetaPerronIntegrand_horizontal_le` preserves the
+horizontal `1/T` denominator gain, while the corresponding left theorem
+retains the full reciprocal norm. The analytic assembly theorem derives all
+zeta-nonzero hypotheses from the surrogate-zero-free rectangle and invokes
+`norm_smoothSaddleHTContourEdgeContribution_le_weightedMajorant`. Its VK
+wrapper supplies the rectangle and all three pointwise bounds directly.
+
+Release 4.39 maps scalar edge absorption to
+`SmoothNumberSaddleHTContourEdgeAbsorption.lean`. The high and complete-left
+majorants receive cubic-log envelopes, while
+`eventually_smoothSaddleHT_verticalWeightLog_le_log_sq` controls the
+reciprocal-distance logarithm. The doubled contour displacement supplies the
+extra stretched-exponential copy, and
+`eventually_norm_smoothSaddleHTContourEdgeContribution_le_target_of_vK`
+closes the complete large-beta edge uniformly at the source frequency ceiling.
+
+Release 4.42 maps the small-beta origin residue to four modules.
+`SmoothNumberSaddleHTVariableDisk.lean` supplies the affine disk geometry,
+VK zero-freeness, empty normalized zero set, center reciprocal, Pintz disk
+majorant, and physical disk logarithmic-derivative estimate.
+`SmoothNumberSaddleHTVariableDiskScale.lean` specializes this to
+`O(D(A)*loglog(A))`. `SmoothNumberSaddleHTSmallBetaScale.lean` proves the
+exact ceiling and absorption identities, and
+`SmoothNumberSaddleHTSmallBetaHighHeight.lean` packages the native constants,
+joins high and compact heights, and concludes with
+`exists_smoothSaddleHT_eventually_originResidue_le_div_beta`.
