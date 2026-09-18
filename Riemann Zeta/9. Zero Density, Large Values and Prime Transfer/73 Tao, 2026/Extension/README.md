@@ -3564,3 +3564,151 @@ Finally, `SmoothNumberSaddleHTSmallBetaHighHeight.lean` joins the result to
 the compact low-height theorem and gives one uniform eventual `K/beta`
 origin-residue bound. The remaining small-beta task is absorption of the
 negative-left three-edge contribution.
+
+## Release 4.64: monic-polynomial Hasse--Davenport coefficients
+
+`BurgessWeilPrimeKummerHasseDavenportMonic.lean` begins the classical
+generating-function proof of the remaining Gauss-lifting theorem. It gives
+the exact equivalence between monic polynomials of fixed degree and their
+coefficient vectors, proves that the degree-one weighted monic sum is the
+Gauss sum, and proves that every degree-at-least-two weighted monic sum
+vanishes for a nontrivial multiplicative character. Both coefficient-vector
+and polynomial formulations are available. The remaining finite-field leaf
+is the Euler-product/closed-point comparison that identifies these monic
+coefficients with norm/trace Gauss sums; the independent three-or-more-root
+Kummer cohomology theorem also remains open.
+
+## Release 4.65: irreducible-factor and closed-point bridge
+
+`BurgessWeilPrimeKummerHasseDavenportEuler.lean` extends the monic weight to
+all polynomials and proves it is multiplicative on monic factors, powers, and
+multiset products. Normalized factorization now expresses each monic weight
+as the product of its positive-degree monic irreducible weights, while the
+factor degrees sum exactly to the original degree. For every element `x` in
+a finite extension, its norm/trace character weight is proved equal to the
+weight of `minpoly K x` raised to `[L:K(x)]`. Thus the lifted Gauss sum is now
+an exact minimal-polynomial/closed-point sum. The remaining algebraic step is
+the logarithmic-derivative recurrence relating this closed-point sum to the
+already-vanishing monic coefficients.
+
+## Release 4.66: logarithmic-derivative recurrence solver
+
+`BurgessWeilPrimeKummerHasseDavenportRecurrence.lean` formalizes the finite
+coefficient recurrence for `X A'(X) = B(X) A(X)` and proves, by an exact
+induction, that the coefficient profile `A = 1 + G X` forces
+`B(n+1)=(-1)^n G^(n+1)`. The file also defines the genuine fixed-degree sum
+of the global Hasse--Davenport monic weight and proves that its degree-zero,
+degree-one, and higher-degree values are respectively `1`, the Gauss sum,
+and zero.
+
+Consequently any closed-point sequence satisfying the Euler
+logarithmic-derivative recurrence has exactly the signed Gauss-power values
+required by Hasse--Davenport. The remaining finite-field step is reduced to
+constructing that recurrence from normalized irreducible factorization and
+the minimal-polynomial sum of release 4.65. The independent three-or-more-
+root Kummer cohomology theorem also remains open.
+
+## Release 4.67: finite weighted Euler-product engine
+
+`BurgessWeilPrimeKummerHasseDavenportEulerProduct.lean` constructs the local
+formal factor `(1-wX^d)⁻¹`, proves its exact geometric coefficient formula,
+and computes both its ordinary and shifted logarithmic derivatives. The
+closed-point coefficient is exactly `d*w^(m/d)` when `d` divides `m`, and is
+zero otherwise.
+
+For every finite weighted alphabet, differentiation of the product is proved
+by induction and coefficient extraction supplies the precise recurrence from
+release 4.66. This removes all formal-power-series analysis from the remaining
+Hasse--Davenport leaf. What remains is to specialize the finite alphabet to
+bounded-degree monic irreducibles, identify the Euler-product coefficients
+with weighted monic polynomials, and identify the divisor sum with extension
+Gauss sums. The independent three-or-more-root Kummer cohomology theorem also
+remains open.
+
+## Release 4.68: bounded irreducible Euler specialization
+
+`BurgessWeilPrimeKummerHasseDavenportIrreducibleEuler.lean` makes monic
+irreducible polynomials of a fixed degree into a finite type and assembles all
+degrees up to a cutoff into the finite Euler alphabet. The generic engine now
+gives a literal recurrence for its Euler and closed-point coefficient
+sequences. The closed-point term is expressed both as a sum over bounded
+irreducibles and as a degree-stratified divisor sum.
+
+The coefficient expansion is also made explicit over finite degree
+allocations. Every allocation satisfying the divisibility conditions is sent
+to the corresponding product of irreducible powers; this polynomial is proved
+monic, to have exactly the allocated total degree, and to carry exactly the
+Euler-product weight. The remaining coefficient-side task is the inverse map
+from normalized factorization and the resulting sum equivalence. The later
+minimal-polynomial fiber comparison and independent three-or-more-root Kummer
+cohomology theorem remain open.
+
+## Release 4.69: normalized-factor allocation equivalence
+
+`BurgessWeilPrimeKummerHasseDavenportIrreducibleFactorization.lean` completes
+the coefficient side of the finite Euler product. Normalized factorization and
+multiset multiplication give mutually inverse maps between fixed-degree monic
+polynomials and degree-summing monic irreducible multisets. For every cutoff
+containing the target degree, exact count formulas then identify those
+factorizations with the divisible `finsuppAntidiag` allocations of release
+4.68, preserving the full Hasse--Davenport product weight.
+
+Consequently the bounded irreducible Euler coefficient is exactly
+`hasseDavenportMonicSum`. A truncated recurrence solver uses only coefficients
+through the target degree and proves that the bounded closed-point coefficient,
+and hence the explicit degree-stratified irreducible divisor sum, equals the
+required signed Gauss-sum power. The remaining Gauss-lifting step is the
+minimal-polynomial fiber comparison with the finite-extension sum; the
+independent three-or-more-root Kummer cohomology theorem also remains open.
+
+## Release 4.70: unconditional finite-field Hasse--Davenport
+
+`BurgessWeilPrimeKummerHasseDavenportMinimalPolynomialFibers.lean` completes
+the classical generating-function proof. For every monic irreducible `q`, its
+minimal-polynomial fiber in a finite extension is equivalent to its root set.
+Using the finite-field algebra-hom count, this fiber has exactly `deg q`
+elements when `deg q` divides the extension degree and is empty otherwise.
+The relative closed-point multiplicity is proved to be the quotient of the
+extension degree by `deg q`.
+
+Fiberwise regrouping therefore identifies the full norm/trace lifted Gauss
+sum with the degree-stratified divisor sum of release 4.69. Universal
+finite-field Hasse--Davenport, its prime-field specialization, Jacobi
+Hasse--Davenport, and the complete at-most-two-active-root Kummer Frobenius
+system are now unconditional. The remaining finite-field source leaf is the
+independent three-or-more-active-root Kummer cohomological system.
+
+## Release 4.71: extension-field affine Kummer Fourier traces
+
+`BurgessWeilPrimeKummerExtensionAffineTrace.lean` lifts the exact affine
+Kummer point-count calculation from the prime field to every finite field.
+It defines the arbitrary-field polynomial correlation, zero and character-
+kernel fibers, affine Kummer cover, scalar twists, and trace defect, then
+proves the full point-count and proper-character-power trace formulas.
+
+Multiplicative Fourier inversion now identifies the `χ⁻¹` coefficient of all
+scalar-twisted affine point-count defects with `(#F-1)` times the selected
+complete `χ`-correlation. Specializing to the canonical degree-`n+2`
+extension and the norm-lifted character proves that every positive-successor
+`primeKummerExtensionCorrelation` is exactly this normalized geometric
+Fourier coefficient, with explicit factor `p^(n+2)-1`. Thus the remaining
+three-or-more-root leaf is connected in all extension degrees to literal
+affine Kummer curve counts; construction of their bounded-rank pure
+isotypic Frobenius system remains open.
+
+## Release 4.72: affine-Fourier Frobenius-system equivalence
+
+`BurgessWeilPrimeKummerAffineFourierSystem.lean` packages a chosen-character
+Frobenius spectrum whose higher trace equations are stated directly as
+inverse-character Fourier coefficients of scalar-twisted affine Kummer
+point-count defects. Every genuine `PrimeKummerIsotypicFrobeniusSystem`
+constructs this geometric system by release 4.71.
+
+Conversely, primality gives `p^(n+2)-1 ≠ 0`, so the exact Fourier
+normalization cancels in every positive extension degree. The affine system
+therefore reconstructs the original all-extension power-trace system. The
+three-or-more-root source propositions are proved equivalent, and the
+affine-Fourier form transfers directly to the fixed-`r=7` composite Burgess
+endpoint. The remaining theorem is now literally the bounded-rank, integral,
+weight-bounded isotypic decomposition of these affine point-count Fourier
+coefficients.

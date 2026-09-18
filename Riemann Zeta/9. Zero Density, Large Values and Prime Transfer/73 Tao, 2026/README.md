@@ -3398,3 +3398,281 @@ frequency and hence, by radial monotonicity, at every frequency through
 `smoothSaddleHTFrequencyCeiling y (1/2)`. The resulting theorem
 `eventually_smoothSaddleHTMinorArcBoundAt` is unconditional in every
 Tao-critical smooth regime. Local-limit inversion remains before Theorem 1.7.
+
+## Prime-equidistribution release 4.47
+
+`SmoothNumberSaddleHTMinorArcIntegral.lean` retains the exact physical
+Laplace--Fourier kernel rather than discarding its reciprocal-frequency
+decay. Its norm is `sigma/sqrt(sigma^2+t^2) <= sigma/|t|`, so integrating an
+HT-bounded symmetric Perron shell incurs only a logarithmic height cost. The
+full shell from `1/log y` to `smoothSaddleHTFrequencyCeiling y (1/2)` is
+bounded by an explicit envelope tending to zero; the scalar limit reduces to
+`u^5*exp(-c*u/(log u)^2) -> 0` using `log y<=u^2`. The exact adjacent-shell
+identity then gives vanishing of the outer segment from the existing wide
+height `pi/log y` to the HT ceiling. The remaining Theorem 1.7 boundary is
+the sharp finite-height Perron truncation connecting this segment to the
+smooth-number cutoff, followed by the final local-limit inversion.
+
+## Prime-equidistribution release 4.48
+
+The HT range is enlarged to the fixed epsilon-`1/4` ceiling
+`exp((log y)^(5/4))`. `SmoothNumberSaddleHTMinorArcQuarter.lean` proves the
+unconditional minor-arc contract through that height, and
+`SmoothNumberSaddleHTMinorArcIntegralQuarter.lean` shows that its complete
+weighted Perron contribution still vanishes; the larger logarithmic endpoint
+cost is absorbed by `u^7*exp(-c*u/(log u)^2)`.
+
+`SmoothNumberSaddleFiniteHeightPerron.lean` supplies the sharp arithmetic
+bridge. It splits the coefficient-free Perron error into an endpoint term, a
+harmonic near-diagonal term, and a smooth Dirichlet-series far term, sums the
+majorant, and normalizes it by the saddle main term. The exact critical limit
+`u*log u/log y -> 1/alpha^2` makes the epsilon-`1/4` height dominate the
+near-diagonal displacement for every fixed `alpha>0`; exact Rankin/main-term
+cancellation handles the far term. Consequently the finite-height sharp
+Perron sum differs from `psiNat` by `o(smoothSaddleMainTerm)`. Theorem 1.7 is
+not yet claimed: the remaining step is to identify and combine the finite
+Perron contour pieces with the central local-limit contribution.
+
+## Prime-equidistribution release 4.49
+
+`SmoothNumberSaddleFiniteHeightAssembly.lean` performs that exact splice.
+At the quarter-epsilon ceiling, the normalized finite Perron line is the sum
+of the central Gaussian contribution, the principal-phase wide annulus, and
+the enlarged HT outer shell. Their limits are respectively `1`, `0`, and
+`0`. The finite-height sharp-Perron theorem then transfers this limit to
+`psiNat/smoothSaddleMainTerm`.
+
+The proposition `taoCriticalSmoothSaddleAsymptoticConclusion` now proves the
+complete critical smooth-number saddle asymptotic with no remaining
+local-limit, contour-tail, or Perron-truncation hypothesis. Consequently the
+smooth-number analytic input to Theorem 1.7 is closed. Theorem 1.7 itself is
+not yet claimed unconditionally because its independent explicit Burgess
+input remains.
+
+## Prime-equidistribution release 4.50
+
+`BurgessWeilPrimeKummerOrthogonality.lean` starts the finite-field geometry
+layer beneath the remaining Burgess input. For a multiplicative character
+`χ`, geometric-series orthogonality over the positive powers
+`χ, χ^2, ..., χ^(orderOf χ)` is proved at every field element, including the
+zero-value case. Summing this identity over a polynomial gives the exact
+formula
+`sum_k S(χ^(k+1),P) = orderOf(χ) * #{x : χ(P(x))=1}`.
+
+The same formula is transported to the distinct-root
+`primeKummerRootCorrelation` normal form for split polynomials. Thus the
+remaining complete-Weil dependency now has a checked algebraic entry point
+as a Kummer-fiber point-count problem. The unresolved source input is the
+projective Kummer-curve Weil estimate itself (and its passage back to the
+individual trace), so unconditional Theorem 1.7 is still not claimed.
+
+## Prime-equidistribution release 4.51
+
+`BurgessWeilPrimeKummerPowerFiber.lean` identifies the kernel fiber with the
+literal Kummer power condition. Evaluation of a character on a generator of
+the cyclic finite-field unit group preserves its order, so the character
+image has cardinality `orderOf χ` and its kernel has the complementary
+quotient cardinality. The `orderOf χ`-power subgroup is contained in that
+kernel and has the same cardinality; the two subgroups are therefore equal.
+
+At field level this gives the exact equivalence
+`χ a = 1 ↔ ∃ y ≠ 0, y^(orderOf χ)=a`. The next finite step is to count every
+affine fiber, including the unique solution above `a=0`, and sum those fibers
+over `P(x)`. The genuinely analytic endpoint remains the ensuing projective
+Kummer-curve Weil bound.
+
+## Prime-equidistribution release 4.52
+
+`BurgessWeilPrimeKummerAffineFiber.lean` counts the Kummer fibers exactly.
+The unit-group power map has kernel cardinality `orderOf χ`; translation of
+its nonempty fibers shows that a nonzero value has exactly `orderOf χ`
+preimages when `χ(a)=1` and none otherwise. The zero fiber is proved to be
+the singleton `{0}`.
+
+Summing these vertical fibers gives the exact affine-curve identity
+`#{(x,y) : y^(orderOf χ)=P(x)} = #{x : P(x)=0} + orderOf χ *
+#{x : χ(P(x))=1}`. For `P≠0`, the first term is rewritten as
+`P.roots.toFinset.card`, the distinct-root quantity used by the existing
+Burgess interface. The remaining source boundary is now solely the
+projective completion, its points at infinity, and the projective Kummer
+Weil estimate.
+
+## Prime-equidistribution release 4.53
+
+`BurgessWeilPrimeKummerAffineTrace.lean` rewrites the affine count as the
+exact trace formula
+`#C_aff = p + sum_(1<=j<orderOf χ) S(χ^j,P)`. The construction is then
+carried out uniformly for every scalar twist `y^(orderOf χ)=cP(x)`.
+
+Multiplicative Fourier inversion over `c : ZMod p` is proved exactly: the
+`χ⁻¹` coefficient of the twisted affine trace defects is `(p-1)S(χ,P)`.
+Consequently a sharp trace-defect bound for every nonzero scalar twist
+implies `TaoPrimeKummerPolynomialWeilBound`, with no loss in the constant.
+This Fourier criterion is deliberately stronger than an ordinary bound for
+the total Kummer curve: one total curve count does not isolate an individual
+character eigentrace, and other character powers can contribute separately.
+
+## Prime-equidistribution release 4.54
+
+`BurgessWeilPrimeKummerIsotypicSpectrum.lean` states the geometric boundary
+at the correct character-isotypic level. A
+`PrimeKummerIsotypicFrobeniusSpectrum` has at most
+`P.roots.toFinset.card - 1` eigenvalues, every eigenvalue has norm at most
+`sqrt p`, every eigenvalue is an algebraic integer,
+and its negative trace is exactly `S(χ,P)`. The triangle inequality proves
+the sharp polynomial Kummer bound from these three geometric facts.
+
+The global isotypic-spectrum proposition is connected directly to the prime
+linear-quotient estimate, the complete cubefree Burgess estimate, and its
+fixed `r=7` specialization actually consumed by Tao's argument. Thus the
+remaining source theorem is precisely existence of this weight-bounded-rank
+chosen-character spectrum; total point-count Fourier inversion remains an
+independent exact identity, not a substitute for the isotypic rank theorem.
+
+## Prime-equidistribution release 4.55
+
+The isotypic weight condition is corrected from equality to
+`‖eigenvalue‖ ≤ sqrt p`. Equality would incorrectly exclude weight-zero
+Jacobi degeneracies already present for two roots. The corrected condition is
+the mixed-weight form actually required by the Weil estimate.
+
+The one- and two-root spectra are now constructed unconditionally from the
+existing zero-trace and Jacobi-sum theorems, and their trace is identified
+with the `χ⁻¹` Fourier coefficient of the scalar-twisted affine counts. An
+exact equivalence removes these elementary cases from the global spectral
+contract. The remaining spectral theorem is restricted to at least three
+distinct roots and still feeds the fixed `r=7` composite Burgess endpoint.
+
+## Prime-equidistribution release 4.56
+
+The spectral boundary now records algebraic integrality of every eigenvalue.
+This prevents arbitrary fractional decompositions and matches an arithmetic
+property of genuine Frobenius eigenvalues. It does not by itself distinguish
+the boundary from the desired norm estimate: because the complete trace is
+already integral, that whole trace can still be placed in one eigenvalue.
+
+Every multiplicative-character value is proved integral because it is either
+zero or a root of unity. Finite summation then proves that every complete
+polynomial character correlation is an algebraic integer. Consequently the
+rank-one Jacobi spectrum from release 4.55 satisfies the strengthened
+contract, while the triangle-inequality and downstream Burgess transfers are
+unchanged.
+
+## Prime-equidistribution release 4.57
+
+`primeKummerExtensionCorrelation` is the norm-lifted Kummer correlation over
+every positive-degree finite extension of `ZMod p`; degree one is definitionally
+the existing base-field correlation. A new
+`PrimeKummerIsotypicFrobeniusSystem` requires one fixed integral,
+weight-bounded eigenvalue family to reproduce all these correlations as its
+successive power traces.
+
+This is a genuinely stronger Frobenius boundary. Rank zero forces every
+extension correlation to vanish, while rank one forces consecutive traces to
+obey a fixed geometric recurrence. The three-or-more-root system theorem
+forgets to release 4.56's spectral residual and therefore reaches the exact
+fixed-`r=7` Burgess endpoint. Constructing this extension-compatible system
+from Kummer cohomology remains the unresolved source leaf.
+
+## Prime-equidistribution release 4.58
+
+Norm pullback is now formalized as an injective monoid homomorphism from
+base-field characters to characters on every finite extension. Surjectivity
+of the finite-field norm proves that it preserves nontriviality and the exact
+character order. Higher Kummer correlations are rewritten literally through
+this lifted character, and every extension correlation is proved algebraically
+integral.
+
+The one-root system is now constructed rather than assumed. Base change
+turns the polynomial into a scalar times one power; exact order preservation
+makes that character power nontrivial, so translation and complete-character
+orthogonality make every extension trace zero. The empty spectrum therefore
+satisfies the full power-trace contract. The full Kummer Frobenius theorem is
+proved equivalent to the conjunction of an exact two-root
+Hasse--Davenport residual and the three-or-more-root geometric residual, and
+it still transfers to fixed-`r=7` Burgess.
+
+## Prime-equidistribution release 4.59
+
+`BurgessWeilPrimeKummerTwoRootTrace.lean` evaluates every split two-root
+correlation over an arbitrary finite field as an explicit Jacobi sum. After
+base change, the same formula gives each positive-degree Kummer extension
+trace. Norm lifting on a base scalar is proved to be the corresponding
+degree power, including the exact leading-coefficient and root-difference
+factors.
+
+The remaining two-root input is now stated literally as the finite-field
+Jacobi Hasse--Davenport identity, with its exact sign. Assuming precisely that
+identity, the extension formula is proved equal to the successive power
+traces of the single eigenvalue `-S(chi,P)`, constructing the rank-one
+two-root Frobenius system. Thus no two-root cohomological packaging remains:
+the unresolved leaves are the literal Jacobi Hasse--Davenport theorem and the
+three-or-more-root Kummer cohomology theorem.
+
+## Prime-equidistribution release 4.60
+
+`BurgessWeilPrimeKummerHasseDavenport.lean` defines trace pullback for complex
+additive characters and proves that it preserves primitivity over finite
+separable extensions, using surjectivity of the field trace. It states the
+remaining Gauss Hasse--Davenport lift with the canonical primitive additive
+character on `ZMod p` and its trace lift upstairs.
+
+That single Gauss identity now implies the complete Jacobi identity from
+release 4.59. The proof discharges the trivial second character and inverse-
+product character cases directly, and uses the library Jacobi/Gauss product
+identity only when all three relevant multiplicative characters are
+nontrivial. Consequently Gauss Hasse--Davenport constructs the exact two-root
+system and, together with the three-or-more-root geometric residual, the full
+Kummer Frobenius system. The two unresolved source leaves are now the classical
+Gauss lifting formula and the three-or-more-root Kummer cohomology theorem.
+
+## Prime-equidistribution release 4.61
+
+The norm and trace character lifts are now proved transitive in arbitrary
+finite-field towers. A local `FiniteFieldGaussLiftRelation` packages the exact
+signed lifting identity for one extension, and its tower theorem proves that
+two such identities compose with the correct product degree and sign.
+
+Extension degree one is discharged unconditionally by transporting the Gauss
+sum through finite-field uniqueness and the invariance of norm and trace under
+an algebra equivalence. Consequently the full prime-field Gauss
+Hasse--Davenport proposition is equivalent to its restriction to degrees at
+least two. The next algebraic reduction is to construct suitable intermediate
+finite fields (with the required general-base formulation) before reducing
+composite degrees to prime degrees; no such reduction is claimed yet.
+
+## Prime-equidistribution release 4.62
+
+Norm/trace-lifted Gauss sums and their exact lifting relation are now proved
+invariant under algebra equivalence of the extension field. Consequently an
+arbitrary finite extension can be replaced by Mathlib's chosen extension of
+the same degree without changing the statement.
+
+The Hasse--Davenport source is generalized to arbitrary finite base fields
+and primitive additive characters. Prime/composite induction then proves
+that its prime-degree fragment implies every positive extension degree:
+composite degree `a*b` is realized by a canonical degree-`a` extension
+followed by a canonical degree-`b` extension, the two relations compose, and
+finite-field uniqueness transports the result back. Hence universal
+Hasse--Davenport is equivalent to its prime-degree fragment and specializes
+to the original prime-field residual. The remaining classical input is now
+the universal prime-degree formula; the three-or-more-root Kummer
+cohomological system remains independent.
+
+## Prime-equidistribution release 4.63
+
+Trace lifting now commutes exactly with scalar shifts of additive characters,
+while norm lifting on a base scalar supplies the corresponding degree-th
+power. The ordinary Gauss-sum shift formula therefore proves that a local
+Hasse--Davenport relation transfers to every nonzero scalar shift of its
+additive character.
+
+Finite Pontryagin duality supplies the matching exhaustion theorem: scalar
+shifts of any primitive complex additive character cover every complex
+additive character of a finite field, and a primitive target character uses
+a nonzero scalar. Consequently the universal prime-degree residual is
+equivalent to the formula for Mathlib's single canonical primitive additive
+character on each base field. This canonical-character prime-degree leaf now
+implies the original prime-field Gauss theorem, Jacobi Hasse--Davenport, and
+the exact two-root Frobenius system. The leaf itself and the independent
+three-or-more-root Kummer cohomology theorem remain open.

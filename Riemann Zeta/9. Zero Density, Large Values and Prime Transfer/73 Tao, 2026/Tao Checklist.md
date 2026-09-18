@@ -3695,6 +3695,401 @@ before the source's `14/3` simplification.
 - [ ] Combine the central and minor-arc estimates in the smooth saddle
   local-limit inversion required for Theorem 1.7.
 
+## Prime-equidistribution 4.47
+
+- [x] Compute the exact norm of the physical Laplace--Fourier kernel and
+  retain its reciprocal-frequency decay.
+- [x] Prove a generic logarithmic-cost interval-integral estimate for
+  integrands bounded by `C/|t|`.
+- [x] Integrate the unconditional HT minor-arc estimate over the complete
+  finite shell from `1/log y` to the epsilon-`1/2` source ceiling.
+- [x] Prove the normalized shell envelope tends to zero using `log y<=u^2`
+  and `u^5*exp(-c*u/(log u)^2) -> 0`.
+- [x] Split the shell exactly at `pi/log y` and prove that the resulting
+  finite outer Perron segment tends to zero.
+- [ ] Prove the sharp finite-height Perron truncation connecting the finite
+  HT segment to the smooth-number cutoff and finish the local-limit inversion.
+
+## Prime-equidistribution 4.48
+
+- [x] Re-run the HT Lemma-6 scalar absorption at fixed `epsilon=1/4` and
+  prove the unconditional minor-arc contract through
+  `exp((log y)^(5/4))`.
+- [x] Integrate the enlarged minor arc with logarithmic endpoint cost and
+  absorb the resulting seventh-power Rankin loss.
+- [x] Split the coefficient-free sharp-Perron error into endpoint,
+  harmonic near-diagonal, and smooth Dirichlet-series far terms.
+- [x] Prove summability and the explicit `tsum` bound for that complete
+  finite-height majorant.
+- [x] Prove `u*log u/log y -> 1/alpha^2` and use it to absorb
+  `X^(1-sigma)` at the quarter-epsilon ceiling for every fixed `alpha>0`.
+- [x] Prove that the finite sharp-Perron sum differs from `psiNat` by
+  `o(smoothSaddleMainTerm)`.
+- [ ] Assemble the finite Perron identity with the central local-limit and
+  outer-shell limits, then state the completed Theorem 1.7 consequence.
+
+## Prime-equidistribution 4.49
+
+- [x] Split the normalized quarter-height Perron line exactly into the
+  central contribution, wide annulus, and enlarged HT outer shell.
+- [x] Combine their limits to prove the normalized finite Perron line tends
+  to one.
+- [x] Transfer the sharp-Perron cutoff error to prove
+  `psiNat/smoothSaddleMainTerm -> 1` in complex and real form.
+- [x] Prove `TaoCriticalSmoothSaddleAsymptoticConclusion` with no remaining
+  local-limit or Perron-tail assumption.
+- [ ] Close the independent explicit Burgess input and apply the existing
+  transfer theorem to obtain the unconditional Theorem 1.7 contract.
+
+## Prime-equidistribution 4.50
+
+- [x] Define the exact polynomial kernel fiber `χ(P(x))=1`.
+- [x] Prove positive character-power orthogonality through `orderOf χ`, with
+  the zero field element handled by the positive indexing.
+- [x] Sum over polynomial values and prove the exact powered-correlation
+  family equals `orderOf χ` times the kernel-fiber cardinality.
+- [x] Transport the identity to the split-polynomial distinct-root Kummer
+  trace normal form.
+- [x] Identify the character kernel with the nonzero `orderOf χ`-power image.
+- [x] Obtain the exact affine Kummer-cover point-count formula.
+- [ ] Formalize the projective Kummer-curve Weil estimate and recover the
+  individual complete character-sum bound.
+
+## Prime-equidistribution 4.51
+
+- [x] Prove evaluation at a cyclic unit-group generator preserves character
+  order.
+- [x] Compute the character image and kernel cardinalities.
+- [x] Compute the `orderOf χ`-power subgroup cardinality from finite cyclicity.
+- [x] Prove the power subgroup equals the unit-group character kernel.
+- [x] Deduce `χ(a)=1` iff `a` is a nonzero `orderOf χ`-th power.
+- [x] Count the zero and nonzero affine power fibers and sum them over
+  polynomial values.
+- [ ] Add the points at infinity and apply the projective Weil estimate.
+
+## Prime-equidistribution 4.52
+
+- [x] Compute the kernel cardinality of the `orderOf χ` power map.
+- [x] Count every nonzero affine power fiber by translation from the kernel.
+- [x] Prove the zero power fiber is the singleton `{0}`.
+- [x] Sum the vertical fibers into the exact affine Kummer-curve point count.
+- [x] Rewrite the polynomial zero fiber as `P.roots.toFinset` for `P≠0`.
+- [ ] Construct the projective completion and count its points at infinity.
+- [ ] Apply the projective Weil estimate and recover the individual trace.
+
+## Prime-equidistribution 4.53
+
+- [x] Rewrite the affine Kummer count as `p` plus all proper character-power
+  traces.
+- [x] Prove the trace identity for every scalar twist `cP`.
+- [x] Establish multiplicative orthogonality against the `χ⁻¹` weight.
+- [x] Fourier-invert the twisted trace defects to recover exactly
+  `(p-1)S(χ,P)`.
+- [x] Transfer a uniform sharp twisted point-count bound to the existing
+  `TaoPrimeKummerPolynomialWeilBound` contract without constant loss.
+- [x] Record that this uniform twisted-defect hypothesis is a stronger
+  Fourier criterion, not the ordinary total-curve Hasse--Weil estimate.
+
+## Prime-equidistribution 4.54
+
+- [x] Define the chosen-character Kummer Frobenius spectrum with an explicit
+  finite eigenvalue family.
+- [x] State the conductor bound `rank <= #roots-1` and exact trace formula.
+- [x] State the weight-at-most-one bound as `‖eigenvalue‖ <= sqrt p`.
+- [x] Derive the sharp polynomial Kummer bound by triangle inequality.
+- [x] Connect the spectral theorem to the prime quotient and complete
+  cubefree Burgess endpoints.
+- [x] Connect it specifically to the fixed `r=7` endpoint used downstream.
+- [ ] Construct the normalized Kummer sheaf/curve eigenspace and prove the
+  trace formula, weight bound, and rank bound furnishing this spectrum.
+
+## Prime-equidistribution 4.55
+
+- [x] Correct exact purity to the mixed-weight inequality required by the
+  low-root Jacobi degeneracies.
+- [x] Construct the rank-zero spectrum in the one-root case.
+- [x] Construct the rank-one spectrum in the two-root case from the Jacobi
+  bound.
+- [x] Express the spectral trace as the `χ⁻¹` Fourier projection of the
+  scalar-twisted affine point-count defects.
+- [x] Prove the full spectral source contract equivalent to its restriction
+  to at least three distinct roots.
+- [x] Connect that genuine residual directly to fixed-`r=7` composite
+  Burgess.
+- [ ] Construct the weight-bounded isotypic spectrum for at least three
+  distinct roots.
+
+## Prime-equidistribution 4.56
+
+- [x] Add algebraic integrality to every spectral eigenvalue.
+- [x] Prove every finite-field multiplicative-character value is integral by
+  its zero/root-of-unity dichotomy.
+- [x] Prove every complete polynomial character correlation is integral.
+- [x] Upgrade the one- and two-root spectra to the strengthened contract.
+- [x] Recheck the sharp Kummer and fixed-`r=7` transfers without changing
+  their constants.
+- [ ] Construct the integral weight-bounded spectrum for the remaining
+  three-or-more-root cases.
+
+## Prime-equidistribution 4.57
+
+- [x] Define the norm-lifted Kummer correlation over every positive-degree
+  canonical finite extension of `ZMod p`.
+- [x] Make degree one exactly the existing base-field polynomial correlation.
+- [x] Strengthen the spectrum by the simultaneous Frobenius power-trace
+  identities over all extension degrees.
+- [x] Prove that rank zero forces all extension traces to vanish and rank one
+  forces the consecutive-trace geometric recurrence.
+- [x] Forget the extension traces to recover the three-or-more-root spectral
+  residual and the exact fixed-`r=7` Burgess endpoint.
+- [ ] Construct the extension-compatible system for the remaining
+  three-or-more-root Kummer cases.
+
+## Prime-equidistribution 4.58
+
+- [x] Package finite-field norm pullback as a monoid homomorphism on complex
+  multiplicative characters.
+- [x] Prove norm pullback is injective and preserves nontriviality and exact
+  character order.
+- [x] Rewrite every higher Kummer extension correlation through the
+  norm-lifted character and prove its algebraic integrality.
+- [x] Prove the exact single-root base-change factorization.
+- [x] Prove every one-root extension correlation vanishes and construct the
+  empty rank-zero Frobenius system.
+- [x] Prove the full Frobenius system theorem equivalent to the conjunction
+  of the exact two-root and three-or-more-root residuals.
+- [ ] Prove the two-root Hasse--Davenport power-trace identity.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.59
+
+- [x] Evaluate the arbitrary-finite-field two-root character sum exactly as a
+  Jacobi sum, with both translation factors.
+- [x] Prove the exact two-root split-polynomial factorization after base
+  change.
+- [x] Express every higher two-root Kummer extension correlation as the
+  corresponding norm-lifted Jacobi sum.
+- [x] Prove that norm lifting on a base scalar raises the character value to
+  the extension degree.
+- [x] State the literal Jacobi Hasse--Davenport identity with its exact sign.
+- [x] Derive the rank-one two-root Frobenius system from that literal identity.
+- [ ] Prove the literal Jacobi Hasse--Davenport identity.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.60
+
+- [x] Define additive-character pullback along the finite-field trace.
+- [x] Prove trace pullback preserves primitivity over finite separable
+  extensions.
+- [x] State the exact Gauss Hasse--Davenport norm/trace lifting formula.
+- [x] Prove the trivial-second-character Jacobi branch directly.
+- [x] Prove the inverse-product Jacobi branch directly with the exact sign.
+- [x] Reduce the nondegenerate Jacobi branch to the three corresponding Gauss
+  lifting identities.
+- [x] Derive the two-root and full-system constructors from Gauss lifting.
+- [ ] Prove the Gauss Hasse--Davenport lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.61
+
+- [x] Prove norm-lifted multiplicative characters compose through finite-field
+  towers.
+- [x] Prove trace-lifted additive characters compose through finite-field
+  towers.
+- [x] Package the exact Gauss lifting relation for one finite extension.
+- [x] Prove two local Gauss lifting relations compose with the exact degree
+  product and Hasse--Davenport sign.
+- [x] Prove the degree-one Gauss lifting identity by finite-field uniqueness.
+- [x] Prove the full prime-field statement is equivalent to its restriction
+  to degrees at least two.
+- [ ] Construct a general-base/intermediate-field reduction of composite
+  degrees to prime degrees.
+- [ ] Prove the remaining positive-degree Gauss Hasse--Davenport identity.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.62
+
+- [x] Prove norm/trace-lifted Gauss sums are invariant under algebra
+  equivalence of extension fields.
+- [x] Prove the local Gauss lifting relation is invariant under algebra
+  equivalence.
+- [x] Replace any finite extension by the canonical extension of equal
+  degree.
+- [x] State universal finite-base Hasse--Davenport and its prime-degree
+  fragment with arbitrary primitive additive character.
+- [x] Split every composite degree into a nested pair of canonical
+  extensions and compose the induction hypotheses.
+- [x] Prove universal finite-field Hasse--Davenport is equivalent to its
+  prime-degree fragment.
+- [x] Specialize the universal theorem to the original prime-field residual.
+- [ ] Prove universal Hasse--Davenport in prime extension degree.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.63
+
+- [x] Prove trace lifting commutes with scalar shifts of additive characters.
+- [x] Compute norm-lifted character values on base scalars in arbitrary
+  finite extensions.
+- [x] Compute the exact degree-th-power scaling of the lifted Gauss sum.
+- [x] Transfer a local Gauss lifting relation to every nonzero additive
+  character shift.
+- [x] Use finite Pontryagin duality to prove shifts of a primitive complex
+  additive character exhaust all complex additive characters.
+- [x] Prove a primitive target character is represented by a nonzero shift.
+- [x] Reduce the universal prime-degree theorem to the canonical primitive
+  additive character on each finite base field.
+- [x] Connect the reduced leaf to the prime-field, Jacobi, two-root, and full
+  Kummer-system constructors.
+- [ ] Prove the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.64
+
+- [x] Identify monic polynomials of fixed degree with their coefficient
+  vectors below the leading term.
+- [x] Transport the constant and subleading coefficient weight across that
+  equivalence.
+- [x] Prove the degree-one weighted monic sum is exactly the Gauss sum.
+- [x] Prove every degree-at-least-two weighted monic sum vanishes for a
+  nontrivial multiplicative character.
+- [x] Expose both coefficient-vector and polynomial versions of the two
+  identities.
+- [ ] Relate the monic generating series to norm/trace Gauss sums through
+  the finite-field closed-point Euler product.
+- [ ] Prove the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.65
+
+- [x] Extend the fixed-degree coefficient weight to a global polynomial
+  weight.
+- [x] Prove multiplicativity on monic products, powers, and multiset
+  products.
+- [x] Compute the weight of each linear factor from its root.
+- [x] Decompose every monic weight over its normalized monic irreducible
+  factors, with exact preservation of total degree.
+- [x] Express each finite-extension norm/trace character weight through the
+  minimal polynomial and relative degree `[L:K(x)]`.
+- [x] Rewrite the lifted Gauss sum as the exact minimal-polynomial weighted
+  sum over extension elements.
+- [ ] Prove the finite logarithmic-derivative recurrence between monic
+  coefficients and closed-point sums.
+- [ ] Deduce the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.66
+
+- [x] Define the finite logarithmic-derivative coefficient recurrence
+  `X A' = B A`.
+- [x] Prove that the coefficient profile `A = 1 + G X` uniquely forces the
+  signed-power sequence `B(n+1)=(-1)^n G^(n+1)`.
+- [x] Package the global Hasse--Davenport monic weight into its actual
+  fixed-degree coefficient sequence.
+- [x] Prove that this sequence is `1`, the Gauss sum, and zero in degrees
+  zero, one, and at least two respectively.
+- [x] Reduce the signed Gauss-power conclusion to the single genuine
+  closed-point recurrence.
+- [ ] Construct that recurrence from normalized irreducible factorization
+  and the minimal-polynomial extension sum.
+- [ ] Deduce the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.67
+
+- [x] Define the formal local factor `(1-wX^d)⁻¹` and compute its exact
+  coefficients by power-series substitution.
+- [x] Compute the ordinary and shifted local logarithmic derivatives.
+- [x] Prove the local closed-point coefficient is `d*w^(m/d)` precisely
+  when `d ∣ m`.
+- [x] Differentiate arbitrary finite weighted Euler products exactly.
+- [x] Extract the finite Euler-product coefficient recurrence required by
+  release 4.66.
+- [ ] Instantiate the finite alphabet with bounded-degree monic irreducible
+  polynomials and identify product coefficients with weighted monic sums.
+- [ ] Identify the irreducible divisor sum with finite-extension Gauss sums.
+- [ ] Deduce the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.68
+
+- [x] Make fixed-degree monic irreducibles and the bounded-degree union into
+  finite types.
+- [x] Instantiate the finite Euler-product recurrence on this irreducible
+  alphabet.
+- [x] Rewrite its closed-point coefficient as both an irreducible sum and a
+  degree-stratified divisor sum.
+- [x] Expand its ordinary coefficient over finite degree allocations.
+- [x] Map every divisible allocation to a monic polynomial of the exact total
+  degree and prove exact preservation of the Hasse--Davenport weight.
+- [ ] Construct the inverse allocation from normalized factorization and
+  identify Euler coefficients with weighted monic sums.
+- [ ] Identify the irreducible divisor sum with finite-extension Gauss sums.
+- [ ] Deduce the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.69
+
+- [x] Construct normalized-factorization and multiplication as inverse maps
+  between fixed-degree monic polynomials and irreducible factor multisets.
+- [x] Convert factor multisets to bounded divisible degree allocations and
+  back, with exact multiplicity formulas and inverse laws.
+- [x] Transport the Hasse--Davenport product weight across both equivalences.
+- [x] Identify every bounded Euler coefficient below the cutoff with
+  `hasseDavenportMonicSum`.
+- [x] Prove the cutoff-aware logarithmic-derivative signed-power induction.
+- [x] Evaluate the bounded closed-point coefficient and its explicit
+  degree-stratified irreducible divisor sum as the signed Gauss-sum power.
+- [ ] Identify the irreducible divisor sum with finite-extension Gauss sums
+  by minimal-polynomial fibers.
+- [ ] Deduce the canonical-character prime-degree Gauss lifting formula.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.70
+
+- [x] Package each extension element's minimal polynomial in the bounded
+  irreducible alphabet at the extension degree.
+- [x] Prove the relative closed-point multiplicity is extension degree
+  divided by minimal-polynomial degree.
+- [x] Equate a prescribed minimal-polynomial fiber with the corresponding
+  irreducible root fiber.
+- [x] Compute its cardinality as `d` when `d` divides the extension degree
+  and zero otherwise via finite-field algebra-hom counting.
+- [x] Regroup the full minimal-polynomial weight sum into the exact
+  degree-stratified irreducible divisor sum.
+- [x] Prove universal and prime-field Gauss Hasse--Davenport unconditionally.
+- [x] Deduce Jacobi Hasse--Davenport and the complete at-most-two-root Kummer
+  Frobenius system.
+- [ ] Construct the three-or-more-root Kummer cohomological system.
+
+## Prime-equidistribution 4.71
+
+- [x] Generalize polynomial character correlations, zero fibers, character-
+  kernel fibers, and affine Kummer covers to arbitrary finite fields.
+- [x] Prove the exact arbitrary-field affine point-count and proper-character-
+  power trace formulas.
+- [x] Prove scalar-twist compatibility and multiplicative Fourier inversion
+  for every finite field.
+- [x] Specialize the Fourier identity to norm-lifted characters and
+  base-changed polynomials over every canonical positive extension.
+- [x] Identify the exact normalization factor as `p^(n+2)-1`.
+- [ ] Construct the bounded-rank integral weight-bounded isotypic Frobenius
+  decomposition for three or more active roots.
+
+## Prime-equidistribution 4.72
+
+- [x] Package higher affine point-count Fourier coefficients with the
+  bounded-rank integral weight-bounded base Frobenius spectrum.
+- [x] Construct the affine-Fourier system from every genuine all-extension
+  Kummer Frobenius system.
+- [x] Prove `p^(n+2)-1` is nonzero and cancel the Fourier normalization in
+  every positive extension degree.
+- [x] Reconstruct the genuine power-trace system from the affine-Fourier
+  equations.
+- [x] Prove exact equivalence of the three-or-more-root source propositions
+  and retain the direct fixed-`r=7` Burgess transfer.
+- [ ] Construct the pure bounded-rank isotypic affine Kummer decomposition
+  for three or more active roots.
+
 ## Prime-equidistribution 4.41
 
 - [x] Prove the selected HT shift tends below every positive fixed target.

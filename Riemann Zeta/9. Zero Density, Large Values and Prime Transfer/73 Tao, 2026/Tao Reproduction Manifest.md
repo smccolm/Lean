@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-4.46`. It
+This is a development manifest, version `prime-equidistribution-4.72`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -4113,6 +4113,679 @@ inversion or Theorem 1.7.
 
 On 2026-09-17, `lake build Tao2026 Tao2026.Audit` completed successfully with
 10204 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.47
+
+`SmoothNumberSaddleHTMinorArcIntegral.lean` proves the exact physical
+Laplace--Fourier kernel norm and preserves its `1/|t|` decay in the Perron
+integrand. A generic interval-integral lemma converts such a pointwise bound
+into the logarithmic endpoint cost, and its HT specialization bounds the
+complete symmetric shell from `1/log y` to
+`smoothSaddleHTFrequencyCeiling y (1/2)`. The explicit normalized envelope
+tends to zero: `log y<=u^2` reduces it to a constant multiple of
+`u^5*exp(-c*u/(log u)^2)`. Splitting the shell at the already established
+wide height `pi/log y` and using the exact adjacent-shell identity then proves
+that the finite outer segment through the HT ceiling also vanishes. This
+delta does not yet claim the sharp finite-height Perron truncation, the final
+local-limit inversion, or Theorem 1.7.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10205 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.48
+
+`SmoothNumberSaddleHTMinorArcQuarter.lean` specializes the unconditional HT
+minor-arc argument at `epsilon=1/4`, where the source ceiling is
+`exp((log y)^(5/4))`. The weaker equation-(3.10) saving still absorbs the
+eighth-power Rankin factor. `SmoothNumberSaddleHTMinorArcIntegralQuarter.lean`
+retains the reciprocal physical kernel and proves that the full enlarged
+shell, including the exact outer segment from `pi/log y`, has vanishing
+normalized mass.
+
+`SmoothNumberSaddleFiniteHeightPerron.lean` proves a coefficient-free
+finite-height sharp-Perron estimate. Its summable majorant consists of a
+`3/2` endpoint allowance, a harmonic near-diagonal weight, and a smooth
+Dirichlet-series far weight. A saddle-exponent lower bound for the main term,
+exact cancellation of the far Rankin exponential, and the critical limit
+`u*log u/log y -> 1/alpha^2` show that all three normalized pieces vanish at
+the quarter-epsilon ceiling. Hence the literal sharp-Perron `tsum` differs
+from `psiNat` by `o(smoothSaddleMainTerm)`. This delta does not claim Theorem
+1.7; final contour/local-limit assembly remains.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10208 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.49
+
+`SmoothNumberSaddleFiniteHeightAssembly.lean` proves the exact identity
+decomposing the normalized Perron line at
+`smoothSaddleHTFrequencyCeiling y (1/4)` into the central Gaussian term, the
+wide principal-phase annulus, and the enlarged HT outer shell. The three
+previously audited limits yield convergence of that finite line to one.
+Combining the identity with release 4.48's sharp-Perron cutoff estimate gives
+the complex limit `psiNat/smoothSaddleMainTerm -> 1`; taking real parts proves
+the proposition-valued contract
+`taoCriticalSmoothSaddleAsymptoticConclusion`. No smooth-number local-limit,
+infinite-tail, or truncation hypothesis remains. This delta does not claim
+unconditional Theorem 1.7: the independent explicit Burgess estimate remains.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10209 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.50
+
+`BurgessWeilPrimeKummerOrthogonality.lean` defines the exact kernel fiber
+`{x : χ(P(x))=1}` and proves geometric-series orthogonality for the positive
+character powers through `orderOf χ`. The positive indexing makes the
+identity valid without an auxiliary nonzero hypothesis: a zero polynomial
+value contributes zero to every character power in the family.
+
+Finite-sum interchange yields the exact powered-trace formula
+`sum_k S(χ^(k+1),P) = orderOf(χ) * #kernelFiber`. For split polynomials this
+is transported to `primeKummerRootCorrelation`, the distinct-root normal
+form used by the sharp complete-Weil boundary. The result adds no analytic
+assumption and introduces no axiom. The remaining source theorem is the
+projective Kummer-cover point-count/Weil estimate needed to bound an
+individual trace.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10210 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.51
+
+`BurgessWeilPrimeKummerPowerFiber.lean` proves that character evaluation at a
+generator of the cyclic finite-field unit group preserves order. It computes
+the image of `χ.toUnitHom` to have cardinality `orderOf χ` and its kernel to
+have cardinality `#Fˣ / orderOf χ`. The cyclic-group power-map theorem gives
+the same cardinality for the `orderOf χ`-power image; direct evaluation of
+`χ ^ orderOf χ = 1` supplies subgroup inclusion, hence exact equality.
+
+The field-element corollary is
+`χ(a)=1 ↔ ∃ y, y≠0 ∧ y^(orderOf χ)=a`. This is an unconditional algebraic
+identification and introduces no new proposition-valued analytic input. The
+next bridge is the affine power-fiber cardinality (with the exceptional zero
+fiber), followed by the projective Kummer-curve Weil estimate.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10211 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.52
+
+`BurgessWeilPrimeKummerAffineFiber.lean` computes the kernel cardinality of
+the `orderOf χ` power map on finite-field units. Translation identifies every
+nonempty unit fiber with the kernel. Combined with release 4.51, this proves
+that a nonzero field value has `orderOf χ` roots precisely when its character
+value is one, and no roots otherwise; the zero field value has the unique
+root zero.
+
+Summing over polynomial values proves
+`#affinePoints = #zeroFiber + orderOf(χ) * #kernelFiber`. For a nonzero
+polynomial, the zero fiber is identified with `P.roots.toFinset`, giving the
+exact distinct-root form needed for projective completion. All declarations
+are imported by the production root and covered by the axiom audit. The
+remaining boundary is the projective Kummer curve, its points at infinity,
+and the projective Weil estimate.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10212 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.53
+
+`BurgessWeilPrimeKummerAffineTrace.lean` proves that the affine Kummer point
+count is `p` plus the sum of the proper positive character-power traces. It
+then proves this formula for every scalar twist `cP` and defines the resulting
+affine trace defect.
+
+Exact multiplicative Fourier orthogonality gives
+`sum_c χ⁻¹(c) defect(c) = (p-1) S(χ,P)`. Triangle inequality and the unit norm
+of nonzero character values therefore transfer a uniform sharp bound for all
+nonzero twisted defects to `TaoPrimeKummerPolynomialWeilBound` with no loss.
+This is an exact strong Fourier criterion. It is not identified with the
+ordinary total-curve Hasse--Weil estimate, because the latter combines all
+proper character-power eigentraces.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10213 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.54
+
+`BurgessWeilPrimeKummerIsotypicSpectrum.lean` isolates the actual geometric
+input required for the sharp individual trace. The structure
+`PrimeKummerIsotypicFrobeniusSpectrum` contains a finite chosen-character
+algebraic-integer eigenvalue family, the conductor bound `rank <= #roots-1`,
+the mixed-weight bound `‖α_i‖ <= sqrt p`, and the exact trace identity
+`S(χ,P) = -sum_i α_i`.
+
+The triangle inequality derives `TaoPrimeKummerPolynomialWeilBound` with the
+literal sharp constant. Further checked bridges reach
+`TaoPrimeLinearQuotientWeilBound`,
+`TaoPrimitiveCubefreeBurgessCompleteWeilBound`, and the fixed
+`TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven` used by the downstream
+argument. The unresolved source leaf is therefore the construction and
+weight/rank proof for this isotypic Frobenius spectrum, rather than a bound
+for the undifferentiated total Kummer point count.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10214 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.55
+
+The isotypic spectrum is corrected to require `‖α_i‖ <= sqrt p`, not equality.
+This is essential for the weight-zero Jacobi degeneracies that occur already
+with two roots. The triangle-inequality transfer retains the identical sharp
+Kummer constant.
+
+The existing one-root zero trace and two-root Jacobi estimate now construct
+the corresponding rank-zero and rank-one spectral data. The spectral trace
+is also tied exactly to the affine geometry by proving that its scaled
+negative trace is the `χ⁻¹` Fourier coefficient of all scalar-twisted affine
+defects. Finally, the global isotypic-spectrum proposition is proved
+equivalent to its restriction to polynomials with at least three distinct
+roots, and that residual has a direct checked bridge to the fixed `r=7`
+composite Burgess endpoint.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10214 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.56
+
+`PrimeKummerIsotypicFrobeniusSpectrum` now requires each eigenvalue to be an
+algebraic integer over `ℤ`. This rules out arbitrary fractional subdivisions
+of the target trace and preserves an arithmetic feature of Frobenius spectra.
+Because the complete correlation itself is integral, however, it can still
+be placed in one eigenvalue; integrality alone is not a full Frobenius
+compatibility condition.
+
+`isIntegral_mulChar_apply` proves the zero/root-of-unity dichotomy for every
+complex value of a finite-field multiplicative character.
+`isIntegral_primePolynomialCharacterCorrelation` then closes integrality
+under the finite complete sum. The elementary rank-zero and rank-one spectra
+continue to construct under the strengthened definition, and all sharp
+polynomial, composite, and fixed-`r=7` transfers remain unchanged.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10214 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.57
+
+`primeKummerExtensionCorrelation` now defines the complete Kummer trace over
+every positive-degree canonical finite extension of `ZMod p`. The polynomial
+is base-changed and the original character is lifted by the finite-field norm.
+Degree one is exactly `primePolynomialCharacterCorrelation`.
+
+`PrimeKummerIsotypicFrobeniusSystem` extends the integral, weight-bounded
+spectrum with the simultaneous identities
+`S_n = -sum_i alpha_i^n` over all positive extension degrees. These equations
+prevent a base-field norm estimate from manufacturing the source object:
+rank zero forces every extension trace to vanish, and rank one forces a
+kernel-checked geometric recurrence between consecutive traces.
+
+The three-or-more-root system theorem forgets to the existing spectral
+residual and hence supplies
+`TaoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven`. The remaining source
+leaf is now the construction of this single extension-compatible Kummer
+Frobenius system, rather than a base-field spectral repackaging.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10215 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.58
+
+`finiteFieldNormLiftMulChar` packages pullback along the extension norm as a
+monoid homomorphism on complex multiplicative characters. Finite-field norm
+surjectivity proves this homomorphism injective; consequently it preserves
+nontriviality and exact `orderOf`. The higher extension correlations from
+release 4.57 are now literal correlations for this lifted character, and all
+extension correlations are algebraic integers.
+
+`eval_map_eq_leadingCoeff_mul_pow_of_single_root` gives the exact base-change
+factorization for a split polynomial with one distinct root. Exact order
+preservation keeps its active character power nontrivial. Translation and
+complete-character orthogonality then prove every extension correlation
+zero, constructing `PrimeKummerIsotypicFrobeniusSystem` with rank zero.
+
+The newly stated full all-extension source theorem is equivalent to the
+conjunction of `TaoPrimeKummerIsotypicFrobeniusSystemTwoRoots` and the existing
+three-or-more-root system residual. Thus the Kummer leaf has separated into
+the exact two-root Hasse--Davenport compatibility and the genuinely geometric
+three-or-more-root cohomology theorem. The full system still forgets to the
+sharp spectrum and supplies the fixed-`r=7` Burgess endpoint.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10216 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.59
+
+`BurgessWeilPrimeKummerTwoRootTrace.lean` proves the exact affine two-root
+character-sum/Jacobi-sum identity over an arbitrary finite field. It also
+proves the exact split-polynomial two-root factorization after base change and
+uses both results to express every higher Kummer extension correlation as a
+norm-lifted Jacobi sum. The scalar norm calculation
+`finiteFieldNormLiftMulChar_algebraMap_extension` shows that each base-field
+character factor is raised to the extension degree.
+
+`TaoPrimeFieldJacobiHasseDavenport` is the literal remaining two-root source
+statement, including the factor `(-1)^(d-1)`. From exactly this hypothesis,
+`primeKummerExtensionCorrelation_eq_neg_neg_base_pow_of_twoRoots` proves the
+required power-trace identity, and
+`TaoPrimeFieldJacobiHasseDavenport.toTwoRoots` constructs the rank-one
+two-root Frobenius system. Hasse--Davenport itself is not claimed: the two
+remaining leaves are this classical Jacobi identity and the three-or-more-root
+Kummer cohomology theorem.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10217 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.60
+
+`BurgessWeilPrimeKummerHasseDavenport.lean` defines
+`finiteFieldTraceLiftAddChar` by composing an additive character with the
+field trace. The theorem `finiteFieldTraceLiftAddChar_isPrimitive` uses
+separable trace surjectivity to preserve primitivity. The remaining
+`TaoPrimeFieldGaussHasseDavenport` proposition is the literal norm/trace
+Gauss-sum lifting formula with factor `(-1)^(d-1)`.
+
+`TaoPrimeFieldGaussHasseDavenport.toJacobi` proves the complete Jacobi theorem.
+It handles a trivial second character and an inverse product character
+directly, then uses `jacobiSum_mul_nontrivial` and nonvanishing of primitive
+Gauss sums in the genuinely nondegenerate branch. Its `toTwoRoots` and
+`toFull` corollaries construct the two-root Frobenius system and reduce the
+full Kummer source to Gauss Hasse--Davenport plus the three-or-more-root
+cohomological system. Neither remaining source theorem is claimed here.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10218 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.61
+
+`finiteFieldNormLiftMulChar_tower` and
+`finiteFieldTraceLiftAddChar_tower` prove that the two character lifts are
+transitive through arbitrary finite-field towers. The local proposition
+`FiniteFieldGaussLiftRelation` records the exact signed Gauss identity for one
+extension, and `FiniteFieldGaussLiftRelation.tower` proves that two such
+relations compose. Its proof includes the exact degree multiplication and
+`(-1)^(d-1)` sign arithmetic.
+
+`gaussSum_normTraceLift_extension_one` proves the degree-one relation by
+transporting the finite sum through `FiniteField.algEquivOfCardEq`, together
+with norm and trace invariance under algebra equivalence. Hence
+`taoPrimeFieldGaussHasseDavenport_iff_degreeAtLeastTwo` identifies the full
+prime-field residual exactly with degrees at least two. This release does not
+claim a prime-degree reduction: that still needs suitable intermediate fields
+and a general-base lifting statement. The remaining source leaves are the
+positive-degree Gauss lifting theorem and the three-or-more-root Kummer
+cohomological system.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10218 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.62
+
+`gaussSum_normTraceLift_eq_of_algEquiv` proves that the lifted Gauss sum is
+invariant under an algebra equivalence of extension fields, using invariance
+of norm and trace and transport of the finite sum. The corresponding local
+relation is invariant as well, and
+`finiteFieldGaussLiftRelation_iff_extension` replaces any finite extension by
+Mathlib's canonical extension of equal degree.
+
+`TaoFiniteFieldGaussHasseDavenportPrimeDegree` states the remaining theorem
+over arbitrary finite base fields, prime-degree extensions, and arbitrary
+primitive additive characters. Its `canonical` induction realizes a
+composite degree `a*b` as a canonical degree-`a` extension followed by a
+canonical degree-`b` extension. Nontriviality and primitivity survive the
+first lift, the two relations compose, and algebra-equivalence invariance
+returns to the canonical degree-`a*b` field. Therefore
+`taoFiniteFieldGaussHasseDavenport_iff_primeDegree` proves that universal
+finite-field Hasse--Davenport is exactly its prime-degree fragment.
+`TaoFiniteFieldGaussHasseDavenport.toPrimeField` specializes it to the
+original two-root source proposition. The universal prime-degree formula and
+the three-or-more-root Kummer cohomological system remain unproved.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10218 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.63
+
+`finiteFieldTraceLiftAddChar_mulShift` proves trace lifting commutes with
+scalar shifts, while `finiteFieldNormLiftMulChar_algebraMap` computes the norm
+factor as the extension-degree power. Together with `gaussSum_mulShift_eq`,
+`gaussSum_normTraceLift_mulShift` gives the exact scaling upstairs and
+`FiniteFieldGaussLiftRelation.mulShift` transfers any local lifting relation
+to a nonzero scalar shift.
+
+The imported finite Pontryagin-duality cardinality theorem combines with
+`AddChar.to_mulShift_inj_of_isPrimitive` to prove
+`exists_eq_mulShift_of_isPrimitive`. Its primitive-target refinement forces
+the scalar to be nonzero. Therefore
+`taoFiniteFieldGaussHasseDavenportPrimeDegree_iff_canonicalAddChar` reduces
+the universal prime-degree theorem to Mathlib's canonical primitive complex
+additive character on each finite base field. The reduced residual has direct
+constructors for the original prime-field theorem, Jacobi
+Hasse--Davenport, the two-root Frobenius system, and—given the independent
+three-root residual—the full Kummer system. The canonical-character
+prime-degree formula and the three-or-more-root Kummer cohomological system
+remain unproved.
+
+On 2026-09-18, `lake build Tao2026 Tao2026.Audit` completed successfully with
+10218 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.64
+
+`BurgessWeilPrimeKummerHasseDavenportMonic.lean` formalizes the first
+generating-function layer of the classical Hasse--Davenport proof.
+`monicPolynomialEquivCoefficients` identifies fixed-degree monic polynomials
+with the vectors of their lower coefficients, and
+`hasseDavenportMonicCoefficientWeight_equiv` transports the constant and
+subleading coefficient weight across this equivalence.
+
+`sum_hasseDavenportMonicCoefficientWeight_one` and its polynomial form prove
+that the degree-one coefficient is exactly `gaussSum chi psi`. For every
+degree at least two,
+`sum_hasseDavenportMonicCoefficientWeight_eq_zero` isolates the constant
+coefficient and applies multiplicative-character orthogonality; its
+polynomial counterpart transports the result back to monic polynomials.
+The remaining step on this route is the closed-point Euler-product comparison
+that relates this monic generating series to the norm/trace Gauss sums over
+finite extensions. The canonical-character prime-degree formula and the
+independent three-or-more-root Kummer cohomological system remain unproved.
+
+On 2026-09-18, `lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportMonic Tao2026`
+completed successfully with 10219 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.65
+
+`BurgessWeilPrimeKummerHasseDavenportEuler.lean` defines the global
+constant/subleading coefficient weight and proves its multiplicativity on
+monic products, powers, and arbitrary multiset products. The linear-factor
+formula identifies each factor weight with the multiplicative/additive
+character weight of its root.
+
+Normalized unique factorization now decomposes every monic weight into the
+product of its monic irreducible factor weights, counted with multiplicity.
+Every such factor is proved irreducible, monic, and positive-degree, and the
+factor degrees sum exactly to the degree of the original polynomial.
+
+`normTraceCharacterWeight_eq_minpolyWeight_pow` proves the pointwise
+closed-point identity
+`chi (norm K x) * psi (trace K L x) = weight (minpoly K x)^[L:K(x)]`.
+Summing it gives `gaussSum_normTraceLift_eq_sum_minpolyWeight_pow`, an exact
+minimal-polynomial expression for the lifted Gauss sum. The remaining step
+on this route is the finite logarithmic-derivative recurrence connecting
+this closed-point sum to the already-computed monic coefficients. The
+independent three-or-more-root Kummer cohomological system remains unproved.
+
+On 2026-09-18, `lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportEuler Tao2026`
+completed successfully with 10220 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.66
+
+`BurgessWeilPrimeKummerHasseDavenportRecurrence.lean` defines the finite
+coefficient recurrence corresponding to `X A'(X) = B(X) A(X)`. A direct
+induction solves it when `A_0=1`, `A_1=G`, and all higher coefficients
+vanish, proving `B_(n+1)=(-1)^n G^(n+1)` without any division or formal-power-
+series infrastructure.
+
+The same module packages the genuine fixed-degree sums of the global
+Hasse--Davenport monic weight. Releases 4.64 and 4.65 give its complete
+coefficient profile: degree zero is one, degree one is the base Gauss sum,
+and every degree at least two vanishes for a nontrivial multiplicative
+character. Therefore a closed-point sequence satisfying the Euler recurrence
+is proved to equal the required signed Gauss-power sequence. What remains is
+the finite combinatorial construction of that recurrence from normalized
+irreducible factors and the minimal-polynomial extension sum. The independent
+three-or-more-root Kummer cohomological system remains unproved.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportRecurrence Tao2026`
+completed successfully with 10221 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.67
+
+`BurgessWeilPrimeKummerHasseDavenportEulerProduct.lean` builds the formal
+local factor `(1-wX^d)⁻¹` by substituting `X^d` into the weighted geometric
+series. Its coefficient is proved exactly equal to `w^(n/d)` when `d ∣ n`
+and zero otherwise. Ordinary and shifted logarithmic derivatives are computed
+algebraically, giving the local closed-point coefficient
+`d*w^(m/d)` precisely on positive multiples of `d`.
+
+The product and sum of these local factors are then formed over an arbitrary
+finite alphabet. Induction with the derivation Leibniz rule proves the exact
+finite Euler-product logarithmic-derivative identity. Coefficient extraction
+proves `weightedEulerProduct_logDerivativeRecurrence`, an immediate instance
+of the recurrence solved in release 4.66. No convergence, infinite products,
+or analytic logarithms enter this argument. The remaining Hasse--Davenport
+work is the finite specialization to bounded-degree monic irreducibles and the
+identification of its divisor sum with extension-field minimal-polynomial
+fibers. The independent three-or-more-root Kummer cohomological system remains
+unproved.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportEulerProduct Tao2026`
+completed successfully with 10222 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.68
+
+`BurgessWeilPrimeKummerHasseDavenportIrreducibleEuler.lean` packages monic
+irreducible polynomials of every fixed degree as finite types and forms their
+dependent finite union through an arbitrary cutoff. The finite weighted
+Euler-product engine of release 4.67 then supplies an exact recurrence for the
+bounded irreducible Euler coefficients and closed-point coefficients. The
+latter are rewritten first as a sum over irreducibles and then as the literal
+degree-stratified divisor sum.
+
+The ordinary Euler coefficient is expanded over `finsuppAntidiag` degree
+allocations. For any allocation on which every irreducible degree divides its
+assigned total degree, `hasseDavenportIrreducibleAllocationPolynomial`
+constructs the product of the corresponding irreducible powers. It is proved
+monic, its natural degree is exactly the antidiagonal total, and its global
+Hasse--Davenport weight is exactly the product weight from the Euler
+coefficient. The remaining coefficient-side step is the inverse allocation
+from normalized factors and the induced equivalence with fixed-degree monic
+polynomials. Minimal-polynomial fiber counting and the independent three-or-
+more-root Kummer cohomological system remain unproved.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportIrreducibleEuler Tao2026`
+completed successfully with 10223 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.69
+
+`BurgessWeilPrimeKummerHasseDavenportIrreducibleFactorization.lean` constructs
+the normalized-factorization inverse omitted by release 4.68. Fixed-degree
+monic polynomials are equivalent to multisets of monic irreducibles whose
+degrees sum to the target. At every cutoff `N ≥ n`, a second equivalence sends
+such multisets to the valid divisible `finsuppAntidiag` allocations and back.
+The two inverse laws follow from exact multiset-count formulas, and the
+Hasse--Davenport product weight is transported exactly across the maps.
+
+Finite-sum transport now proves
+`hasseDavenportIrreducibleEulerCoefficient_eq_monicSum`. A truncated form of
+the logarithmic-derivative induction needs the recurrence only through its
+target index, so the cutoff product suffices to prove
+`hasseDavenportIrreducibleClosedPointCoefficient_eq_signedGaussPower` and the
+literal degree-stratified divisor-sum identity. The coefficient and recurrence
+sides of the classical Euler-product proof are therefore complete. The
+remaining Gauss-lifting step is the minimal-polynomial fiber comparison with
+the extension Gauss sum; the independent three-or-more-root Kummer
+cohomological system remains unproved.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportIrreducibleFactorization Tao2026`
+completed successfully with 10224 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.70
+
+`BurgessWeilPrimeKummerHasseDavenportMinimalPolynomialFibers.lean` closes the
+last comparison in the internal Gauss-lifting proof. Each extension element's
+minimal polynomial is packaged in the irreducible alphabet at the total
+extension degree. The intermediate-field tower formula proves that its
+relative multiplicity is the total degree divided by its polynomial degree.
+
+For a fixed monic irreducible `q`, the fiber `minpoly K x = q` is equivalent
+to the roots of `q` in the extension. Passing through `AdjoinRoot q` and the
+exact finite-field algebra-hom count proves that the fiber cardinality is
+`deg q` when `deg q` divides the extension degree and zero otherwise.
+`Finset.sum_fiberwise` then regroups the full minimal-polynomial weight sum
+into the literal degree-stratified divisor sum from release 4.69.
+
+The resulting theorem
+`gaussSum_normTraceLift_eq_signedGaussPower` proves universal finite-field
+Hasse--Davenport without an external hypothesis. Its prime-field and Jacobi
+specializations and the complete zero-, one-, and two-active-root Kummer
+Frobenius system are discharged as corollaries. The only remaining Kummer
+source leaf is the three-or-more-active-root cohomological system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerHasseDavenportMinimalPolynomialFibers Tao2026`
+completed successfully with 10225 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.71
+
+`BurgessWeilPrimeKummerExtensionAffineTrace.lean` generalizes the elementary
+affine Kummer geometry to an arbitrary finite field. It proves the exact
+vertical-fiber point count, the decomposition into proper positive character
+powers, scalar-twist compatibility, and multiplicative Fourier inversion.
+For nontrivial `χ`, the inverse-character Fourier coefficient of the twisted
+affine trace defects is exactly `(#F-1)` times the selected polynomial
+character correlation.
+
+Specialization to `FiniteField.Extension (ZMod p) p (n+2)`, the norm-lifted
+character, and the base-changed polynomial identifies this correlation with
+`primeKummerExtensionCorrelation p χ P (n+1)`. The cardinality-explicit form
+has normalization `p^(n+2)-1`. Hence every positive extension trace in the
+remaining three-or-more-root Frobenius contract is now connected to literal
+scalar-twisted affine Kummer point counts. The still-unproved geometric
+content is the bounded-rank integral weight-bounded isotypic decomposition of
+those all-degree traces.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerExtensionAffineTrace Tao2026 Tao2026.Audit`
+completed successfully with 10226 jobs. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
+semantic regression gates.
+
+## Release delta: prime-equidistribution-4.72
+
+`BurgessWeilPrimeKummerAffineFourierSystem.lean` defines
+`PrimeKummerAffineFourierFrobeniusSystem`: the base chosen-character spectrum
+is unchanged, while each higher trace equation is expressed as the literal
+inverse-character Fourier coefficient of scalar-twisted affine Kummer
+point-count defects from release 4.71.
+
+Every genuine `PrimeKummerIsotypicFrobeniusSystem` constructs this geometric
+system. Conversely, primality proves `p^(n+2)-1 ≠ 0`; cancelling this exact
+Fourier normalization reconstructs every original extension power-trace
+identity. The two fixed-data existence statements are equivalent, as are the
+universal three-or-more-root source propositions. The affine-Fourier source
+also transfers directly to the fixed-`r=7` Burgess endpoint. Thus the final
+unproved leaf is precisely construction of the pure bounded-rank integral
+isotypic decomposition of these affine point-count Fourier coefficients.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerAffineFourierSystem Tao2026 Tao2026.Audit`
+completed successfully with 10227 jobs. The canonical isolated verifier
 `cmd /c run_tao_build.bat --no-pause` then completed with
 `FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
 warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and

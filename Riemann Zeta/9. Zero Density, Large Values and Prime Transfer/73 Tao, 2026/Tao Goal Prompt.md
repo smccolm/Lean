@@ -1441,4 +1441,313 @@ additional hypothesis. Theorem 1.7 is still not claimed: the next boundary
 is the local-limit inversion combining the central Gaussian window with this
 outer-frequency decay and the remaining far-frequency control.
 
+Release 4.47 integrates that minor-arc estimate with the exact physical
+Laplace--Fourier kernel. Its norm is
+`sigma/sqrt(sigma^2+t^2)`, hence at most `sigma/|t|`; the symmetric finite
+shell therefore costs only the logarithm of its endpoint ratio. At the HT
+ceiling the resulting normalized envelope is controlled by
+`u^5*exp(-c*u/(log u)^2)`, after using `log y<=u^2`, and tends to zero.
+Consequently the complete finite HT minor arc from `1/log y` to the source
+ceiling has vanishing normalized Perron mass. Exact adjacent-shell
+subtraction also proves that the outer segment from the established wide
+height `pi/log y` to that ceiling vanishes. Theorem 1.7 is still not claimed:
+the next boundary is the sharp finite-height Perron truncation tying this
+finite segment to the smooth-number cutoff and the remaining local-limit
+inversion.
+
+Release 4.48 closes that sharp finite-height Perron boundary at a uniformly
+adequate source height. Fixing `epsilon=1/4` raises the HT ceiling to
+`exp((log y)^(5/4))`; the Lemma-6 error absorption, minor-arc contract, and
+weighted shell integration are all proved through this enlarged interval.
+The coefficient-free sharp-Perron error is then split into its endpoint,
+harmonic near-diagonal, and Dirichlet-series far pieces. The new exact limit
+`u*log u/log y -> 1/alpha^2` shows that the enlarged ceiling absorbs the
+near-diagonal factor `X^(1-sigma)` for every fixed `alpha>0`, while the far
+piece cancels exactly against the saddle exponential. Thus the sharp Perron
+sum at the quarter-epsilon ceiling equals `psiNat` up to
+`o(smoothSaddleMainTerm)`. Theorem 1.7 is still not claimed: the remaining
+boundary is the final contour/local-limit assembly identifying that finite
+sum with the already controlled central and outer Perron contributions.
+
+Release 4.49 completes that contour/local-limit assembly. The normalized
+finite Perron line at the quarter-epsilon ceiling is exactly the sum of the
+central Laplace contribution, the wide principal-phase annulus, and the HT
+outer shell. Their established limits give `1+0+0`; release 4.48 identifies
+the same line with `psiNat/smoothSaddleMainTerm` up to `o(1)`. Therefore
+`taoCriticalSmoothSaddleAsymptoticConclusion` is now a theorem, not a pending
+analytic input. The smooth-number side of Theorem 1.7 is complete. Theorem
+1.7 is still not claimed unconditionally because the separate explicit
+Burgess estimate remains its only analytic dependency.
+
+Release 4.50 opens that final Burgess dependency at its genuine geometric
+interface. `BurgessWeilPrimeKummerOrthogonality.lean` proves positive-power
+orthogonality for an arbitrary multiplicative character, with the indexing
+chosen so that zero polynomial values contribute correctly. Interchanging
+the two finite sums then identifies the sum of the complete polynomial
+traces for `χ^(k+1)`, `k<orderOf χ`, with `orderOf χ` times the cardinality of
+the kernel fiber `χ(P(x))=1`. For split polynomials the identity is also
+proved in the exact distinct-root Kummer normal form already consumed by the
+Burgess chain. The next bounded task is to identify this kernel fiber with
+the affine Kummer cover and formalize the projective point-count/Weil bound;
+no active-root-cardinality bookkeeping remains.
+
+Release 4.51 proves that identification on the finite-field unit group.
+Evaluation at a cyclic generator preserves character order, giving exact
+cardinalities for the character image and kernel. The image of the
+`orderOf χ` power map lies in the kernel and has the same cardinality, hence
+the two subgroups coincide. Consequently `χ(a)=1` is equivalent to `a` being
+a nonzero `orderOf χ`-th power. The remaining algebraic bridge is now the
+fiber-cardinality and affine-curve total, including the exceptional zero
+fiber; after that, the unresolved source input is the projective Kummer Weil
+point-count estimate itself.
+
+Release 4.52 completes that affine bridge. The positive power map on the
+finite-field unit group has kernel cardinality `orderOf χ`, and all nonempty
+fibers therefore have that cardinality. Combined with the power-subgroup
+criterion from release 4.51 and the singleton zero fiber, this gives the
+complete formula for every equation `y^(orderOf χ)=a`. Summing over `a=P(x)`
+proves the exact affine Kummer-curve point count; when `P≠0`, its zero-value
+term is exactly `P.roots.toFinset.card`. The next unresolved boundary is to
+add the points at infinity and prove the projective Kummer Weil estimate,
+then recover the individual complete character sum.
+
+Release 4.53 proves the exact recovery of that individual sum. The affine
+point count is first expressed as `p` plus the proper positive character
+powers. Replacing `P` by every scalar twist `cP` gives a finite family of
+trace defects. Its multiplicative `χ⁻¹` Fourier coefficient is proved to be
+exactly `(p-1)` times the original complete `χ`-sum. A uniform sharp bound on
+the nonzero twisted defects therefore transfers to
+`TaoPrimeKummerPolynomialWeilBound` without any factor depending on
+`orderOf χ`. This is a strong sufficient Fourier criterion; an ordinary
+bound for the total curve does not by itself give the required sharp bound
+for each twisted defect.
+
+Release 4.54 states the faithful remaining geometric input at the
+character-isotypic level. `PrimeKummerIsotypicFrobeniusSpectrum` records a
+rank at most `P.roots.toFinset.card-1`, algebraic-integer eigenvalues of norm
+at most `sqrt p`, and the exact trace formula whose negative trace is
+`S(χ,P)`.
+The triangle inequality transfers this spectrum to
+`TaoPrimeKummerPolynomialWeilBound`, then directly to the prime quotient,
+complete cubefree, and fixed `r=7` Burgess endpoints. The unresolved theorem
+is now exactly existence of that weight-bounded-rank chosen-character
+Frobenius spectrum; normalization, infinity, and cohomological rank are the
+remaining geometric content.
+
+Release 4.55 corrects the weight statement and closes its elementary range.
+Requiring norm exactly `sqrt p` was too strong because degenerate Jacobi sums
+can have weight zero; the faithful mixed-weight condition is the inequality
+`‖α_i‖ ≤ sqrt p`. Rank-zero and rank-one spectra are constructed for every
+nondegenerate split polynomial with at most two distinct roots, and the
+spectral trace is proved to equal the multiplicative Fourier projection of
+the twisted affine point-count family. Consequently the full spectral source
+contract is equivalent to its restriction to at least three distinct roots,
+which maps directly to the fixed `r=7` Burgess endpoint.
+
+Release 4.56 strengthens that boundary with algebraic integrality. Character
+values are kernel-checked algebraic integers because every nonzero value is a
+root of unity, and hence each finite polynomial correlation is integral.
+The low-root spectra satisfy this stronger condition. This excludes arbitrary
+fractional complex summands, but does not yet prevent putting the entire
+integral base-field correlation into a single eigenvalue.
+
+Release 4.57 replaces that remaining weakness by defining the norm-lifted
+Kummer correlation over every positive-degree finite extension and requiring
+one fixed eigenvalue family to reproduce all of them as successive power
+traces. The degree-one correlation is exactly the existing base-field sum.
+Rank-zero systems force all extension traces to vanish, and rank-one systems
+obey a proved geometric recurrence, so this interface cannot be recovered
+from the base norm bound alone. Forgetting the extension equations recovers
+the three-or-more-root spectrum and the exact fixed-`r=7` Burgess endpoint.
+The remaining analytic-geometric task is to construct this full power-trace
+system for the non-elementary Kummer cases.
+
+Release 4.58 begins that construction. Pullback along the finite-field norm
+is an injective monoid homomorphism on multiplicative characters, so it
+preserves nontriviality and exact order. Every higher extension correlation
+is identified with a polynomial correlation for this norm-lifted character,
+and is algebraically integral. For a split polynomial with one distinct root,
+base change gives a scalar times one active power; complete-character
+orthogonality proves every extension trace is zero. This constructs the
+empty rank-zero Frobenius system unconditionally. The full system theorem is
+now kernel-checked equivalent to two precise remaining statements: the exact
+two-root Hasse--Davenport power-trace compatibility and the three-or-more-root
+Kummer cohomology theorem.
+
+Release 4.59 reduces the two-root compatibility to its literal classical
+identity. Every two-root character correlation over an arbitrary finite field
+is evaluated exactly as a Jacobi sum, and the split polynomial factorization
+transports this formula to every canonical finite extension. Norm lifting on
+base scalars is proved to raise the original character value to the extension
+degree. The exact Jacobi Hasse--Davenport formula, including its sign, then
+implies that all extension correlations are the power traces of the single
+eigenvalue `-S(chi,P)`, and hence constructs the full rank-one two-root
+Frobenius system. Hasse--Davenport itself is not yet proved in Mathlib or this
+development; it is now the isolated two-root source leaf, alongside the
+three-or-more-root Kummer cohomology theorem.
+
+Release 4.60 reduces that Jacobi leaf to the standard Gauss-sum lifting
+formula. Additive characters are pulled back along the finite-field trace,
+and trace surjectivity proves that a primitive base character remains
+primitive upstairs. The trivial second-character and inverse-product Jacobi
+branches are proved unconditionally, including the exact signs. In the
+remaining nondegenerate branch, the existing Jacobi/Gauss product identity
+shows that the three Gauss lifting formulas for `chi`, `phi`, and `chi*phi`
+imply Jacobi Hasse--Davenport. Thus one literal Gauss Hasse--Davenport
+proposition constructs the two-root system and combines with the geometric
+three-or-more-root residual to give the full Kummer system. Those two source
+theorems remain open.
+
+Release 4.61 proves the first structural part of Gauss Hasse--Davenport.
+Norm-lifted multiplicative characters and trace-lifted additive characters
+are transitive through arbitrary finite-field towers, and local Gauss lifting
+relations compose with the exact product degree and sign. Degree one is
+proved outright by transporting the Gauss sum through the unique algebra
+equivalence with the base field. Thus the full prime-field lifting statement
+is now equivalent to its restriction to degrees at least two. Reducing those
+degrees further requires a general-base/intermediate-field construction and
+is not claimed here; the degree-at-least-two Gauss identity and the
+three-or-more-root Kummer cohomology theorem remain open.
+
+Release 4.62 completes the composite-degree reduction. Norm/trace-lifted
+Gauss sums and their local lifting relation are invariant under algebra
+equivalence, so arbitrary extensions may be replaced by canonical ones of
+the same degree. The source theorem is generalized to every finite base
+field and primitive additive character. Prime/composite induction realizes
+degree `a*b` as two canonical extensions, applies the induction hypotheses
+over the changing intermediate base, composes them by release 4.61, and
+transports back by finite-field uniqueness. Universal finite-field
+Hasse--Davenport is therefore equivalent to its prime-degree fragment, and
+the universal theorem specializes to the original prime-field residual.
+The universal prime-degree formula itself and the three-or-more-root Kummer
+cohomology theorem remain open.
+
+Release 4.63 removes the arbitrary additive-character quantifier from the
+prime-degree source. Trace lifting commutes with scalar shifts, norm lifting
+on a base scalar contributes the exact degree-th power, and the Gauss-sum
+shift formula transfers a local lifting relation to every nonzero shift.
+Finite Pontryagin duality shows that shifts of any primitive complex additive
+character exhaust all complex additive characters of a finite field; a
+primitive character necessarily corresponds to a nonzero shift. Hence the
+universal prime-degree theorem is equivalent to its restriction to Mathlib's
+one canonical primitive additive character on each base field. This smaller
+leaf still constructs Jacobi Hasse--Davenport and the complete two-root
+Frobenius system. The canonical-character prime-degree formula and the
+three-or-more-root Kummer cohomology theorem remain open.
+
+Release 4.64 formalizes the first algebraic stage of the classical
+generating-function proof of the remaining Gauss formula. Monic polynomials
+of fixed degree are identified exactly with their vectors of coefficients
+below the leading term. For the weight formed from the constant and
+subleading coefficients, the degree-one sum is proved equal to the Gauss
+sum, while every degree-at-least-two sum vanishes for a nontrivial
+multiplicative character. These identities are exposed in both coefficient
+and polynomial form. What remains on this route is the Euler-product or
+closed-point comparison between the monic generating series and the
+norm/trace Gauss sums over finite extensions. The canonical-character
+prime-degree formula and the independent three-or-more-root Kummer
+cohomology theorem therefore remain open.
+
+Release 4.65 supplies the unique-factorization and pointwise closed-point
+bridge. The global constant/subleading coefficient weight is multiplicative
+on monic polynomials, powers, and arbitrary multiset products. Normalized
+factorization expresses it exactly as the product of the weights of monic
+irreducible factors, with their degrees summing to the polynomial degree.
+For every element `x` of a finite extension `L/K`, its norm/trace character
+weight is now proved equal to the weight of `minpoly K x` raised to the
+relative multiplicity `[L:K(x)]`. The complete lifted Gauss sum is therefore
+rewritten as the corresponding minimal-polynomial sum. What remains is the
+finite logarithmic-derivative recurrence that identifies this closed-point
+sum with the monic generating-series coefficient, followed by its immediate
+signed-power evaluation. The independent three-or-more-root Kummer
+cohomology theorem also remains open.
+
+Release 4.66 formalizes the finite logarithmic-derivative calculation itself.
+For sequences satisfying the coefficient recurrence for `X A' = B A`, an
+exact induction proves that `A_0=1`, `A_1=G`, and `A_n=0` for `n>=2` force
+`B_{n+1}=(-1)^n G^(n+1)`. The genuine fixed-degree sums of the global
+Hasse--Davenport monic weight are packaged as a single sequence and proved to
+have precisely this linear coefficient profile, with `G` equal to the base
+Gauss sum. Thus the desired signed-power evaluation is now reduced to one
+explicit closed-point recurrence. Constructing that recurrence from the
+normalized irreducible factorization and release 4.65's minimal-polynomial
+sum is the remaining Hasse--Davenport step. The independent three-or-more-
+root Kummer cohomology theorem also remains open.
+
+Release 4.67 proves the exact finite weighted Euler-product identity in formal
+power series. Each local factor `(1-wX^d)⁻¹` is constructed and its coefficient
+is proved to be `w^(n/d)` exactly when `d` divides `n`. Its logarithmic-
+derivative coefficient is therefore `d*w^(m/d)` on multiples of `d` and zero
+otherwise. Finite products satisfy the derivative identity by induction, and
+coefficient extraction gives the precise recurrence isolated in release 4.66.
+The remaining specialization is now finite algebra: use monic irreducibles of
+degree at most the target degree as the alphabet, identify product coefficients
+with the weighted monic sums, and identify the resulting divisor sum with the
+minimal-polynomial extension Gauss sum. The independent three-or-more-root
+Kummer cohomology theorem also remains open.
+
+Release 4.68 specializes that engine to the actual monic irreducibles. Monic
+irreducibles of each fixed degree form a finite type, and their sigma type up
+to a cutoff is the finite Euler alphabet. Its closed-point sequence is
+rewritten as the exact irreducible divisor sum, stratified by degree, while
+its ordinary coefficients are expanded over finite degree allocations. Each
+divisible allocation now constructs the corresponding product of irreducible
+powers; the result is proved monic, has the exact allocated degree, and has
+the exact product weight. The remaining coefficient-side step is to recover
+the allocation from normalized factorization and prove the resulting finite
+sum equivalence with `hasseDavenportMonicSum`. The minimal-polynomial fiber
+comparison and independent three-or-more-root Kummer cohomology theorem then
+remain.
+
+Release 4.69 completes the normalized-factor allocation equivalence. Fixed-
+degree monic polynomials are now equivalent to multisets of monic irreducible
+factors with the same total degree, and, below any chosen cutoff, those
+factorizations are equivalent to the divisible degree allocations appearing
+in the Euler coefficient. Exact count formulas prove both inverse laws and
+the Hasse--Davenport product weight is preserved throughout. Thus the bounded
+irreducible Euler coefficient is proved equal to
+`hasseDavenportMonicSum`. A cutoff-aware version of the logarithmic-derivative
+induction then proves that the bounded closed-point coefficient, equivalently
+the explicit degree-stratified irreducible divisor sum, is the required signed
+Gauss-sum power. The remaining Gauss-lifting step is now precisely the
+minimal-polynomial fiber comparison with the finite-extension sum. The
+independent three-or-more-root Kummer cohomology theorem also remains open.
+
+Release 4.70 completes the remaining minimal-polynomial fiber comparison and
+hence the full finite-field Gauss Hasse--Davenport theorem. A monic
+irreducible polynomial of degree `d` has exactly `d` elements in its
+minimal-polynomial fiber when `d` divides the extension degree, and no such
+elements otherwise; the proof uses the exact finite-field algebra-hom count
+through `AdjoinRoot`. The relative extension multiplicity is exactly the
+total degree divided by `d`. Regrouping the norm/trace lifted Gauss sum by
+these fibers produces the degree-stratified divisor sum already evaluated in
+release 4.69. Thus universal and prime-field Gauss lifting, Jacobi lifting,
+and the complete zero-, one-, and two-active-root Kummer Frobenius system are
+unconditional. The only remaining Kummer source leaf is now the independent
+three-or-more-active-root cohomological system.
+
+Release 4.71 connects that final leaf to literal geometry over every finite
+extension. The affine Kummer fiber count, proper character-power trace
+formula, scalar-twist formula, and multiplicative Fourier inversion are now
+proved over an arbitrary finite field. Applied to the norm-lifted character
+and base-changed polynomial on the canonical degree-`n+2` extension, the
+`χ⁻¹` Fourier coefficient of the scalar-twisted affine point-count defects is
+exactly `(p^(n+2)-1)` times `primeKummerExtensionCorrelation ... (n+1)`.
+Consequently the full all-extension trace sequence in the remaining
+Frobenius-system contract has a checked geometric point-count realization;
+the unresolved content is precisely the bounded-rank, integral, weight-at-
+most-one isotypic cohomological decomposition for three or more active roots.
+
+Release 4.72 proves that this geometric formulation is not merely a one-way
+source. `PrimeKummerAffineFourierFrobeniusSystem` retains the base spectrum
+and replaces every higher character-sum equation by the corresponding
+scalar-twisted affine point-count Fourier equation. A genuine Frobenius
+system maps to it using release 4.71. In the reverse direction,
+`p^(n+2)-1` is nonzero for prime `p`, so cancellation recovers every original
+power-trace identity. Consequently the three-or-more-root abstract system
+theorem is kernel-checked equivalent to its literal affine-Fourier
+point-count version, which still transfers directly to fixed `r=7` Burgess.
+The sole unresolved content is construction of that pure bounded-rank
+isotypic decomposition.
+
 ---
