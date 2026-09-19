@@ -1,6 +1,13 @@
 # Tao 2026 Research Agenda
 
-## Status and scope: verified release 5.09
+## Status and scope: verified release 5.10
+
+The owner-approved completion amendment permits endpoint-equivalent,
+hypothesis-free substitutions. Native quantitative PNT is accepted for the
+exact Section 4 upper-scale consumer in place of BHP, and the proved Selberg
+upper-sieve weight is accepted for every Lemma 5.1 consumer in place of the
+literal Rosser construction. BHP `0.525` and `{-1,0,1}` Rosser weights remain
+unproved stronger alternatives outside the four-endpoint completion scope.
 
 All four unchanged Theorem 1.7--1.10 contracts are proved without additional
 mathematical hypotheses. The integrated 10284-job build and canonical release

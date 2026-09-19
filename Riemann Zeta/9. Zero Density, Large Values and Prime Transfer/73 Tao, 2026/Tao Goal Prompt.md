@@ -1,12 +1,28 @@
 # Whole-proof operational goal prompt
 
-## Verified completion checkpoint: release 5.09 (2026-09-19)
+## Owner-approved completion amendment and release 5.10 (2026-09-19)
+
+The owner formally amends the completion contract as follows. Endpoint-
+equivalent substitutions are permitted when they prove every unchanged public
+Theorem 1.7--1.10 contract, add no mathematical hypothesis, and the crosswalk
+identifies the exact source consumer that is replaced. Under that rule:
+
+- native quantitative PNT at the consumed scale `4 H (log N)^2 ≤ N` is an
+  accepted completion replacement for Proposition 2.3(ii)/BHP `0.525`; and
+- the proved nonnegative Selberg upper-sieve weight is an accepted completion
+  replacement for Lemma 5.4's literal `{-1,0,1}` Rosser construction.
+
+This amendment does not claim either stronger source theorem. BHP `0.525` and
+the literal Rosser coefficients remain unformalized, optional source-faithful
+alternatives outside the four-endpoint completion scope. Where the historical
+work-package text below requires those particular constructions, this
+amendment supersedes that method requirement for release acceptance only.
 
 All four unchanged public contracts are proved unconditionally.
 `taoMainTheorems_unconditional` combines the exact Theorem 1.7, 1.8, 1.9,
 and 1.10 conclusions. The integrated 10284-job build and canonical verifier
-passed. The explicit audit checked 8297 nonempty axiom lists against the
-three standard logical axioms; all 10 semantic regression assertions and
+passed. The exhaustive explicit audit checked 8,708 nonempty axiom lists and
+47 axiom-free declarations; all 10 semantic regression assertions and
 every remaining release gate passed. The reproduction manifest records the
 complete unsuppressed log and its SHA-256.
 
@@ -19,14 +35,18 @@ arbitrary-multiplicity Kummer interfaces likewise remain optional conditional
 alternatives. The crosswalk records these scope distinctions; no public
 hypothesis or conclusion was weakened.
 
-The literal four-public-theorem stopping condition below has been met.
-The original completion contract is retained, and earlier progress/stop-line
-narratives describe historical checkpoints rather than current blockers.
+The literal four-public-theorem stopping condition below has been met under
+this formally amended contract. Earlier progress/stop-line narratives describe
+historical checkpoints rather than current blockers.
 
 ## Completion contract
 
 **Use:** this is the active completion contract for the Tao 2026
-formalization. The owner activated it on 8 September 2026. The current verified
+formalization. The owner activated it on 8 September 2026 and amended it above
+on 19 September 2026. Release acceptance is now the four exact public endpoints
+plus the stated proof/audit gates; the detailed stop-line narrative and method-
+specific work packages retained below are historical except where the
+amendment incorporates them. The current verified
 stop line is Proposition 2.3(i),(iii), exact one-term sums, the complete
 `ζ(3/2)/ζ(3) √x` asymptotic for `VB¹`, the factorial endpoint/counting bridge,
 the complete polynomial-coefficient powerful relation from Lemma 3.2, and
@@ -620,6 +640,11 @@ already contain theorem types strong enough for these parameter ranges.
 
 ### TAO-02: primes in short intervals and two-variable equidistribution
 
+**Completion amendment:** the BHP construction requested in this historical
+work package is satisfied for release purposes by the proved native-PNT bound
+at the exact scale consumed by Lemma 4.2. The literal BHP theorem is not
+claimed.
+
 Formalize Proposition 2.3 in all three forms used by later sections:
 Bertrand's postulate, the Baker--Harman--Pintz `0.525` prime-gap consequence,
 and the almost-all prime number theorem for every fixed `theta > 2/15` with
@@ -703,6 +728,11 @@ needed to close Theorem 1.10 rather than treating the factorial equation as an
 informal corollary.
 
 ### TAO-06: character sums and sieve inputs for bad intervals
+
+**Completion amendment:** the literal Rosser-coefficient construction
+requested in this historical work package is satisfied for release purposes
+by the proved Selberg upper-sieve weight at every downstream Lemma 5.1
+consumer. The `{-1,0,1}` Rosser theorem is not claimed.
 
 Define the paper's normalized prime character sum `s_Z(chi)` and its
 exceptional primitive characters. Prove Lemma 5.1, including both the count of

@@ -2,12 +2,57 @@
 
 ## Manifest status
 
-This is the four-public-theorem release manifest, version `tao-main-5.09`.
+This is the four-public-theorem release manifest, version `tao-main-5.10`.
 The exact unchanged Theorems 1.7--1.10 are proved without additional
 mathematical hypotheses. The canonical release verifier passed on
 2026-09-19. Older versioned sections below are historical checkpoints.
 
-## Verified release: tao-main-5.09
+## Verified release: tao-main-5.10
+
+The owner-approved completion amendment accepts native quantitative PNT at
+the exact Section 4 consumer scale in place of the stronger BHP theorem, and
+the proved Selberg upper-sieve weight at every Lemma 5.1 consumer in place of
+the literal Rosser construction. The four public contracts are unchanged and
+no hypothesis was added. BHP `0.525` and `{-1,0,1}` Rosser coefficients remain
+unformalized out-of-scope alternatives; this release does not claim them.
+
+The integrated `lake build Tao2026 Tao2026.Audit` completed successfully with
+10284 jobs. The canonical `cmd /c run_tao_build.bat --no-pause` returned exit
+code 0 and `FINAL RESULT: PASS`. Its complete unsuppressed transcript is
+[tao-build-20260919-092612-a3101810.log](logs/tao-build-20260919-092612-a3101810.log),
+with a normal PowerShell transcript end marker at 2026-09-19 09:27:43 local
+time (America/Vancouver).
+
+Log SHA-256:
+`1883F3F0F2F909269DF483A7FEF9658C636F4B54C24FBB21E113E349D57F3AF3`.
+
+The verified runner `Tools/run_tao_build.ps1` has SHA-256
+`1E1473370518D2D479E8A61EB95746D5A7C73395472D50AB3C3B8ADD8EF81721`.
+Only documentation/status-record edits followed this verification; no
+production Lean source, dependency, audit command, or verifier check changed.
+
+Verified release-5.10 gates:
+
+- Comment-stripped production-source inventory found 7,307 public theorem or
+  lemma declarations, including attributed declarations. Every one has direct
+  audit coverage among 8,755 unique case-sensitive targets; a repeated source
+  token, duplicate target, or missing declaration now fails the verifier.
+- The explicit audit produced exactly 8,755 reports: 8,708 nonempty lists and
+  47 axiom-free reports. Every nonempty list contains only `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- All four unconditional public endpoints and their conjunction were checked
+  directly. The 10 semantic regressions covering endpoints, partitions,
+  squarefree conventions, factorial multiplicity, and asymptotic signs and
+  quantifiers passed.
+- Source artifacts, all 1,339 frozen dependency hashes and file-set boundary,
+  Lean/Mathlib pins, raw Mermaid, root imports, forbidden shortcuts, build
+  diagnostics, transcript status, and transcript end marker all passed.
+- The source-fidelity review reconfirmed `Finset.Ioc N (N+H)` intervals,
+  `[1,x]` value counts, literal nontrivial set differences, strictly ordered
+  factorial triples and square-root uniqueness, and the four unchanged
+  proposition-valued public contracts.
+
+## Historical verified release: tao-main-5.09
 
 The integrated `lake build Tao2026 Tao2026.Audit` completed successfully
 with 10284 jobs. The canonical `cmd /c run_tao_build.bat --no-pause` returned

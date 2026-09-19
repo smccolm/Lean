@@ -420,6 +420,72 @@ try {
         }
     }
 
+    Write-Host 'Checking exhaustive public theorem/lemma audit coverage...'
+    $taoAuditSourcePath = Join-Path $extensionRoot 'Tao2026\Audit.lean'
+    $taoAuditTargets = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::Ordinal)
+    $taoAuditSuffixes = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::Ordinal)
+    foreach ($taoAuditLine in Get-Content -LiteralPath $taoAuditSourcePath) {
+        if ($taoAuditLine -cmatch '^#print axioms\s+([^\s]+)\s*$') {
+            $taoAuditTarget = $Matches[1]
+            if (-not $taoAuditTargets.Add($taoAuditTarget)) {
+                throw "Duplicate case-sensitive axiom-audit target: $taoAuditTarget"
+            }
+            [void]$taoAuditSuffixes.Add($taoAuditTarget)
+            $taoAuditTargetParts = $taoAuditTarget.Split('.')
+            for ($taoAuditPartIndex = 1; $taoAuditPartIndex -lt $taoAuditTargetParts.Length; $taoAuditPartIndex++) {
+                [void]$taoAuditSuffixes.Add(
+                    ($taoAuditTargetParts[$taoAuditPartIndex..($taoAuditTargetParts.Length - 1)] -join '.')
+                )
+            }
+        }
+    }
+    $taoPublicDeclarations = New-Object 'System.Collections.Generic.List[object]'
+    $taoPublicDeclarationNames = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::Ordinal)
+    foreach ($taoSource in $leanFiles | Where-Object { $_.Name -ne 'Audit.lean' }) {
+        $taoSourceText = Get-Content -LiteralPath $taoSource.FullName -Raw
+        do {
+            $taoSourceTextBeforeCommentPass = $taoSourceText
+            $taoSourceText = [regex]::Replace(
+                $taoSourceText,
+                '/-(?:(?!/-|-/)[\s\S])*?-/',
+                { param($taoCommentMatch) ' ' * $taoCommentMatch.Length }
+            )
+        } while ($taoSourceText -ne $taoSourceTextBeforeCommentPass -and $taoSourceText -match '/-')
+        if ($taoSourceText -match '/-' -or $taoSourceText -match '-/') {
+            throw "Unable to strip nested Lean comments while inventorying $($taoSource.FullName)"
+        }
+        $taoSourceText = [regex]::Replace($taoSourceText, '(?m)--.*$', '')
+        $taoDeclarationMatches = [regex]::Matches(
+            $taoSourceText,
+            '(?m)^\s*(?:@\[[^\]]+\]\s*)*(?:(protected)\s+|(private|local)\s+)?(?:theorem|lemma)\s+([^\s({:]+)'
+        )
+        foreach ($taoDeclarationMatch in $taoDeclarationMatches) {
+            if (-not $taoDeclarationMatch.Groups[2].Success) {
+                $taoPublicDeclarationName = $taoDeclarationMatch.Groups[3].Value
+                if (-not $taoPublicDeclarationNames.Add($taoPublicDeclarationName)) {
+                    throw "Ambiguous repeated public declaration token in the source audit inventory: $taoPublicDeclarationName"
+                }
+                $taoPublicDeclarations.Add([pscustomobject]@{
+                    Name = $taoPublicDeclarationName
+                    File = $taoSource.FullName
+                })
+            }
+        }
+    }
+    $taoMissingPublicAudits = @(
+        $taoPublicDeclarations |
+            Where-Object { -not $taoAuditSuffixes.Contains($_.Name) }
+    )
+    if ($taoMissingPublicAudits.Count -ne 0) {
+        $taoMissingPublicAuditSummary = @(
+            $taoMissingPublicAudits |
+                Select-Object -First 20 |
+                ForEach-Object { "$($_.Name) [$($_.File)]" }
+        ) -join '; '
+        throw "Public theorem/lemma declarations lack direct axiom audits: $taoMissingPublicAuditSummary"
+    }
+    Write-Host "Exhaustive source audit coverage: $($taoPublicDeclarations.Count) public theorem/lemma declarations; $($taoAuditTargets.Count) unique direct audit targets."
+
     $elanRoot = if ($env:ELAN_HOME) { $env:ELAN_HOME } else { Join-Path $env:USERPROFILE '.elan' }
     if (-not $env:ELAN_HOME) { $env:ELAN_HOME = $elanRoot }
     $lakeExecutable = Join-Path $elanRoot 'bin\lake.exe'
@@ -522,13 +588,13 @@ try {
         }
     }
     $taoAxiomFreeReportCount = [regex]::Matches($taoBuildText, 'does not depend on any axioms').Count
-    $taoAuditCommandCount = @(Select-String -LiteralPath (Join-Path $extensionRoot 'Tao2026\Audit.lean') -Pattern '^#print axioms ').Count
+    $taoAuditCommandCount = $taoAuditTargets.Count
     if ($taoAxiomLists.Count + $taoAxiomFreeReportCount -ne $taoAuditCommandCount) {
         throw 'The explicit audit did not produce one axiom report per source audit command.'
     }
     Write-Host "Checked $($taoAxiomLists.Count) production axiom lists against the standard-axiom allowlist."
     Write-Host "Audit report coverage: $taoAuditCommandCount declaration reports, including $taoAxiomFreeReportCount axiom-free reports."
-    Write-Host 'All four exact unconditional public endpoints and all release-5.09 declarations have mandatory axiom coverage.'
+    Write-Host 'All four exact unconditional public endpoints and every inventoried public theorem/lemma declaration have mandatory direct axiom coverage.'
 
     Write-Host 'Running the kernel-checked semantic regression suite explicitly...'
     Push-Location $extensionRoot
@@ -675,8 +741,8 @@ try {
     Write-Host 'HISTORICAL MILESTONE: the Proposition 6.6 typical-tuple count is assembled over every ordered 1001-coordinate moving dyadic scale. Tao enlarged bands map globally into B1 at one fixed dilation; canonical recovery of the largest 1000 prime factors gives the absolute global fiber bound 1000^1000. PNT comparison costs 8^1001, the explicit unweighted and length-weighted assembly factors tend to zero, and both global counts are little-o of the dilated one-term count conditional on explicit Burgess.'
 Write-Host 'HISTORICAL MILESTONE: every actual typical interval in both endpoint orientations has a canonical injective code into a global weighted family. The forward tuple start is exactly N+1, the reflected tuple start is exactly N+H, and both codes recover length H. The symmetric v-l small-prime moment, reflected source mean/variance, Markov-Chebyshev normalization, uniform support count, and backward all-scale weighted assembly are compiled. The quantitative typical estimate and Proposition 6.5 slow diagonal each retain a 1/log(x)^(1-o(1)) saving relative to the appropriate one-term count. Their exact partition, Lemma 1.6(ii) fixed-dilation removal, and the factor-30 maximal transfer give the conditional local dyadic-window bound. An exact finite power-of-two cover bounds the global nontrivial bad count by the sum of those windows. A slowly widening central packet carries asymptotically all B1 mass; the sharp critical smooth-number dilation limit proves B1(x/2)/B1(x)->1/2 and hence the adjacent ratio B1(2^r)/B1(2^(r+1))->1/2. The half-ratio iterates through powers of two, and exact floor bracketing proves the complete Lemma 1.6(ii) contract for every fixed positive dilation. Logarithmic weights contract geometrically, finite early scales are absorbed, the top endpoint lies in [x,2x], and both clauses of the exact Theorem 1.7 contract follow conditionally. The all-start large-length Sylvester--Schur tail and the explicit H^H+1 fixed-length thresholds give one common start cutoff; admissible starts eventually cross it, removing unrestricted Sylvester--Schur from this dependency chain. The sharp critical smooth-number saddle asymptotic and analytic Burgess are the two remaining Theorem 1.7 inputs; no unconditional Theorem 1.7 release is claimed.'
 
-    Write-Host 'FINAL RESULT: PASS - all four exact public Theorems 1.7--1.10 are unconditional. Production build, explicit standard-axiom audit, zero-warning/tactic-diagnostic gate, inventory, direct root coverage, forbidden-shortcut scan, source hashes, frozen dependencies, pins, and explicit semantic regressions passed.'
-    Write-Host 'RELEASE STATUS: release 5.09 closes Lemma 4.2 and Theorems 1.9--1.10 using the proved quantitative-PNT prime-free bound 4*H*log(N)^2<=N. The stronger BHP 0.525 statement remains unformalized and is not a premise. Broader arbitrary-multiplicity Kummer interfaces remain optional conditional alternatives, not premises of Theorem 1.7.'
+    Write-Host 'FINAL RESULT: PASS - all four exact public Theorems 1.7--1.10 are unconditional. Production build, exhaustive direct standard-axiom audit, zero-warning/tactic-diagnostic gate, inventory, direct root coverage, forbidden-shortcut scan, source hashes, frozen dependencies, pins, and explicit semantic regressions passed.'
+    Write-Host 'RELEASE STATUS: release 5.10 uses the owner-approved endpoint-equivalent completion amendment. Native quantitative PNT supplies the exact Section 4 consumer scale, and the proved Selberg upper-sieve weight supplies every Lemma 5.1 consumer. The stronger BHP 0.525 theorem and literal {-1,0,1} Rosser construction remain unformalized out-of-scope alternatives, not premises.'
     Write-Host "Reproducibility log: $taoVerificationLogPath"
     exit 0
 }

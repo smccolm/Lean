@@ -1,6 +1,6 @@
 # Tao 2026 build tools
 
-## Current release verifier: 5.09
+## Current release verifier: 5.10
 
 From the node root, run `cmd /c run_tao_build.bat --no-pause`.
 The canonical verifier passed on 2026-09-19 for all four exact unconditional
@@ -8,9 +8,15 @@ Theorem 1.7--1.10 endpoints. It checks the twelve source artifacts, 1,339
 frozen dependency hashes and exact file set, pinned tools/dependencies,
 raw Mermaid, source inventory, direct production imports, and forbidden
 shortcuts. It builds the complete root, explicitly reruns `Audit.lean`,
-checks the standard-axiom allowlist and mandatory endpoint/new-declaration
-coverage, and explicitly runs the 10 semantic regression assertions.
+checks the standard-axiom allowlist, strips nested comments from every
+production source, inventories all public theorem/lemma declarations
+(including attributed declarations), requires unique case-sensitive direct
+audit targets and exhaustive coverage, and explicitly runs the 10 semantic
+regression assertions.
 Every Lean warning or tactic diagnostic fails the run.
+The release-5.10 run inventoried 7,307 public theorem/lemma declarations and
+validated 8,755 unique direct reports: 8,708 standard-axiom lists and 47
+axiom-free reports.
 
 Each invocation creates a unique `logs/tao-build-<timestamp>-<id>.log`
 transcript with unsuppressed build/audit output, final status, and transcript

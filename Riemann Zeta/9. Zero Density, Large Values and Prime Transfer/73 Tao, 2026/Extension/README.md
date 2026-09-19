@@ -1,6 +1,19 @@
 # Tao2026 Lean package
 
-## Release 5.09: all four unconditional public theorems
+## Release 5.10: amended completion contract and exhaustive audit
+
+The four exact public theorem contracts remain unchanged. The owner-approved
+contract accepts native PNT at the exact Section 4 consumer scale instead of
+the stronger BHP statement, and the proved Selberg upper-sieve weight at every
+Lemma 5.1 consumer instead of literal Rosser coefficients. Neither stronger
+statement is claimed. The release verifier now inventories every public
+production theorem/lemma and requires a unique, case-sensitive direct axiom
+audit target.
+The canonical run covered 7,307 public theorem/lemma declarations with 8,755
+unique reports (8,708 standard-axiom lists and 47 axiom-free reports), built
+all 10,284 jobs, and passed all 10 semantic regressions.
+
+## Historical release 5.09: all four unconditional public theorems
 
 `PublicTheorems.lean` exports `taoMainTheorems_unconditional`, the conjunction
 of the exact unchanged Theorem 1.7, 1.8, 1.9, and 1.10 contracts.

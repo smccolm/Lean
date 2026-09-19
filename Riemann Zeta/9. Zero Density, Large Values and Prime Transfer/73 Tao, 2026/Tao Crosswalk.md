@@ -1,6 +1,13 @@
 # Tao 2026 Source-to-Lean Crosswalk
 
-## Current completion delta: 5.09
+## Current completion delta: 5.10
+
+The owner-approved completion amendment accepts two endpoint-equivalent,
+hypothesis-free substitutions: native quantitative PNT replaces BHP only at
+the exact Section 4 scale consumed below, and the proved Selberg upper-sieve
+weight replaces literal Rosser coefficients at every Lemma 5.1 consumer.
+This is completion authority for the four unchanged endpoints, not a claim
+that BHP `0.525` or `{-1,0,1}` Rosser weights were proved.
 
 | Mathematical claim | Lean declaration | Source relation and status |
 | --- | --- | --- |
@@ -9,6 +16,7 @@
 | The actual Section 4 upper-scale consumer | `eventually_four_factorialPrimeScale_le_unconditional` | Actual F3 witnesses imply prime-freeness. Proves exactly `4 P≤N` at `P=H log² N`, formerly obtained from BHP. |
 | Complete Lemma 4.2 | `taoLemma42_unconditional` | Both unchanged low/high geometric contradictions consume the proved upper scale and unconditional specialized Theorem 2.5. Proved. |
 | Exact Theorems 1.9 and 1.10 | `taoTheorem19_unconditional`, `taoTheorem110_unconditional` | Existing counting and unconditional square Erdős--Selfridge chains consume Lemma 4.2; no new mathematical hypothesis. |
+| Lemma 5.1 sieve consumer | `taoSelbergDivisorWeight`, `sum_finiteNormalizedPrimeBandSum_sq_le_selberg_of_baseCorrelations` and the downstream Theorem 1.7 chain | The proved Selberg coefficients have the required support, normalization, nonnegative prime majorant, logarithmic main mass, and controlled floor error. They replace the source-exact Rosser construction without changing the consumer or public conclusion. |
 | All four unchanged frozen public contracts | `taoMainTheorems_unconditional` | Conjunction of the four unconditional endpoint proofs in `PublicTheorems.lean`. |
 | Semantic release checks | Ten `regression_*` declarations in `SemanticRegression.lean` | Exact interval/product, count partitions, squarefree parity and zero/one conventions, fiber multiplicity, epsilon quantifiers and signs, and all four public contracts. Compiled and explicitly rerun. |
 
@@ -20,6 +28,25 @@ interval, at one eventual start threshold independent of H and a. All
 remaining hypotheses and both public counting conclusions are unchanged.
 Thus this is a proved replacement at the consumed scale, not a proof of
 `TaoProposition23iiConclusion` or an assumption of BHP.
+
+The analogous sieve substitution is consumer-exact: Lemma 5.1 uses an upper
+sieve majorant with logarithmic mass and controlled finite error. The Selberg
+weight proves those properties and is what the compiled chain consumes. The
+literal coefficient range `{-1,0,1}` is therefore not inferred or advertised.
+
+### Release 5.10 source-fidelity review
+
+| Contract surface | Verified Lean representation |
+| --- | --- |
+| Consecutive interval and product | `consecutiveInterval N H = Finset.Ioc N (N+H)` and the product over that exact half-open interval. |
+| Value-count endpoint | `countUpTo S x` filters `Finset.Icc 1 x`; `B`, `VB`, and `F₃` counts therefore use the source's closed `[1,x]` convention. |
+| Nontrivial partitions | Each nontrivial count is the literal set difference from its one-term set, with exact additive partition theorems. |
+| Theorem 1.7 | `LogPowerSavingRelative nontrivialBadCount badOneTermCount` and `QuotientPowerScale badCount x taoZ 2`, with denominator epsilon signs regression-locked. |
+| Theorem 1.8 | Nontrivial `VB` exponent `2/5` and sequence equivalence to `ζ(3/2)/ζ(3) * sqrt x`. |
+| Theorem 1.9 | Nontrivial `F₃` exponent `1/2` and two-sided `PowerScale` for all `F₃` values. |
+| Theorem 1.10 | Strictly ordered positive triples, each coordinate in `[1,x]`, satisfying the factorial-square equation; uniqueness of the natural square root justifies counting triples rather than quadruples. |
+| Asymptotic quantifiers | Every epsilon is positive and receives its own eventual bound; `PowerScale` has both directions and `QuotientPowerScale` has the correct lower/upper epsilon signs. |
+| Accepted substitutions | PNT proves the exact `4 H log²N≤N` consumer; Selberg weights prove the exact upper-sieve consumer. Neither stronger source construction is encoded as proved. |
 
 The integrated build and the complete canonical release verifier passed on
 2026-09-19; the reproduction manifest records the unsuppressed log.
@@ -64,7 +91,9 @@ conclusions and the whole-proof completion contract are unchanged.
 Primary source: Terence Tao, *Products of consecutive integers with unusual
 anatomy*, arXiv `2603.27990v2`, pinned under `Sources/`.
 
-This is an active crosswalk. Rows marked **definition compiled** identify
+Everything from this heading downward is a frozen historical ledger: its
+then-current status prose is not an active blocker list and is superseded by
+the release-5.10 tables above. Rows marked **definition compiled** identify
 kernel-checked source objects, not proofs of any paper theorem. The immutable
 1,226-module `GafniTao.Theorem11` closure, its Tao-facing dyadic prime-free
 measure bridge, exact Proposition 2.3(iii), and the exact finite `B¹` smooth-
@@ -122,7 +151,7 @@ lower theorem, `eventually_logarithmic_integral_gap`, and
 package the complete uniform contradiction conditional on the specialized
 Theorem 2.5 estimate.
 
-## Source conventions
+## Historical source-convention ledger
 
 | Source object | Exact paper location | Lean representation | Representation note | Status |
 |---|---|---|---|---|

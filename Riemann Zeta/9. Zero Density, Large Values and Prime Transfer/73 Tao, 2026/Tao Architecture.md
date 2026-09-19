@@ -1,8 +1,9 @@
 flowchart TD
     MAP["RH Map node 73<br/>Tao, 2026"] --> PAPER["Tao: Products of consecutive integers<br/>with unusual anatomy"]
     PAPER --> SOURCE["arXiv 2603.27990v2<br/>PDF and TeX pinned + SHA-256 verified"]
-    SOURCE --> PLAN["Four exact public contracts proved<br/>Release 5.09 canonical verifier PASS"]
-    PLAN --> CROSSWALK["Tao Crosswalk<br/>exact public contracts and source consumers mapped;<br/>PNT substitution and unused stronger alternatives explicit"]
+    SOURCE --> PLAN["Four exact public contracts proved<br/>Release 5.10 amended completion contract"]
+    PLAN --> AMEND510["OWNER-APPROVED completion amendment<br/>endpoint-equivalent, hypothesis-free substitutions accepted;<br/>PNT for BHP consumer + Selberg for Rosser consumer"]
+    AMEND510 --> CROSSWALK["Tao Crosswalk<br/>exact public contracts and source consumers mapped;<br/>both substitutions and unused stronger alternatives explicit"]
 
     subgraph FOUNDATION["Immutable foundation boundary"]
         direction TB
@@ -128,6 +129,7 @@ flowchart TD
     PNT509 --> GAP509
     PRIMEI --> GAP509
     GAP509 --> FBOUNDS
+    AMEND510 --> GAP509
     PRIMEIII --> FBOUNDS
     VINO --> FBOUNDS
     PELL --> FCASES
@@ -147,6 +149,7 @@ flowchart TD
         BURGESS --> EXCHAR
         BHM --> EXCHAR
         FUND --> EXCHAR
+        AMEND510 --> FUND
     end
 
     MATHLIB --> DIRICHLET
@@ -180,9 +183,9 @@ flowchart TD
     T18 --> PUBLIC
     T19 --> PUBLIC
     T110 --> PUBLIC
-    PUBLIC --> AUDIT["Tao2026/Audit.lean<br/>explicit run: 8340 declaration reports;<br/>8297 nonempty standard-axiom lists + 43 axiom-free"]
-    AUDIT --> RUNNER["run_tao_build.bat<br/>hash/file-set/pin/shortcut/audit/build/semantic gates PASS;<br/>complete unsuppressed transcript"]
-    RUNNER --> RELEASE["VERIFIED four-public-theorem release 5.09<br/>Theorems 1.7--1.10 unconditional;<br/>canonical verifier exit 0, 2026-09-19"]
+    PUBLIC --> AUDIT["Tao2026/Audit.lean<br/>7307 public theorem/lemma declarations covered;<br/>8755 unique reports: 8708 standard-axiom + 47 axiom-free"]
+    AUDIT --> RUNNER["run_tao_build.bat<br/>hash/file-set/pin/shortcut/exhaustive-audit/build/semantic gates;<br/>complete unsuppressed transcript"]
+    RUNNER --> RELEASE["VERIFIED four-public-theorem release 5.10<br/>10284 jobs + canonical verifier exit 0;<br/>Theorems 1.7--1.10 unconditional"]
     SEMANTIC509["PROVED semantic regressions<br/>10 assertions explicitly rerun;<br/>endpoints, partitions, squarefree conventions, multiplicity, asymptotics"]
     PUBLIC --> SEMANTIC509
     SEMANTIC509 --> RUNNER
@@ -200,7 +203,7 @@ flowchart TD
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,VINO,VBSHORT,T17,T18,T19,T110,BURGESS,AUDIT,RUNNER,PUBLIC,RELEASE,CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBEXTRACT,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,PELL,FUND,ASYM,SETS,CONTRACTS,ESSQUARE509,PNT509,GAP509,SEMANTIC509 complete
+    class MAP,PAPER,SOURCE,PLAN,AMEND510,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,VINO,VBSHORT,T17,T18,T19,T110,BURGESS,AUDIT,RUNNER,PUBLIC,RELEASE,CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBEXTRACT,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,PELL,FUND,ASYM,SETS,CONTRACTS,ESSQUARE509,PNT509,GAP509,SEMANTIC509 complete
     class MATHLIB,PNT,GM,GT,E137,SHELL ready
     class NORMALIZE complete
     class PRIMEII,ES2,ROSSER509 absent

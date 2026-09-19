@@ -4,7 +4,22 @@ This is the detailed readiness and future completion ledger for node 73.
 Checked groundwork and input items do not imply that a public theorem from the
 paper has been formalized.
 
-## Current completion delta: 5.09
+## Current completion delta: 5.10
+
+- [x] Formally amend the completion contract to accept endpoint-equivalent,
+  hypothesis-free substitutions at every unchanged public consumer.
+- [x] Accept native quantitative PNT at `4 H (log N)^2 ≤ N` in place of the
+  stronger unused BHP `0.525` construction.
+- [x] Accept the proved Selberg upper-sieve weight in place of the literal
+  unused `{-1,0,1}` Rosser construction.
+- [x] Inventory every public theorem/lemma declaration from comment-stripped
+  production source and require a unique, case-sensitive direct audit target.
+- [x] Cover all 7,307 inventoried public theorem/lemma declarations with 8,755
+  unique reports: 8,708 standard-axiom lists and 47 axiom-free declarations.
+- [x] Perform and record the release source-fidelity review of endpoints,
+  sets, counts, multiplicity, and asymptotic signs/quantifiers.
+- [x] Align the Goal Prompt, Architecture, Checklist, Crosswalk, Agenda,
+  Sources, READMEs, verifier documentation, and reproduction manifest.
 
 - [x] Prove arbitrary logarithmic savings for Chebyshev theta from native quantitative PNT.
 - [x] Prove eventual prime-free shortness `4 H (log N)^2 ≤ N`, including endpoints and thresholds.
@@ -18,10 +33,11 @@ paper has been formalized.
 - [x] Pass source hashes, frozen boundaries, pins, root coverage, inventory, and forbidden-shortcut checks.
 - [x] Complete the canonical release verifier with exit code 0 and save the unsuppressed log.
 - [x] Record the log's exact status and SHA-256 in the reproduction manifest and synchronize release documentation.
-- [ ] Optional stronger source theorem: Proposition 2.3(ii)/BHP `0.525` remains unformalized.
-- [ ] Optional broader Kummer alternative: arbitrary-multiplicity geometric interfaces remain conditional.
+- [ ] Out-of-scope stronger alternative: Proposition 2.3(ii)/BHP `0.525` remains unformalized.
+- [ ] Out-of-scope source construction: literal `{-1,0,1}` Rosser weights remain unformalized.
+- [ ] Out-of-scope broader Kummer alternative: arbitrary-multiplicity geometric interfaces remain conditional.
 
-The two optional items are not hypotheses of any of the four public endpoints.
+The three out-of-scope items are not hypotheses of any of the four public endpoints.
 The crosswalk records exactly why the proved PNT scale supplies every actual
 Section 4 consumer without strengthening a public hypothesis. All older
 checkpoint and open-item lists below are historical, not remaining release
@@ -1714,7 +1730,7 @@ their old open-item lists are superseded by this current completion ledger.
 - [ ] Optional stronger alternative: formalize the Baker--Harman--Pintz bound
   in Proposition 2.3(ii). Its pinned paper is provenance, not proof evidence.
   The endpoint transfer is proved, but the analytic sieve theorem is not.
-  Release 5.09 proves the exact consumed upper scale by quantitative PNT,
+  Release 5.10 accepts the exact consumed upper scale proved by quantitative PNT,
   so this is no longer an endpoint prerequisite.
 - [x] Prove all four selected public contracts without `sorry`, `admit`,
   project postulates, or unsafe proof bypasses.
@@ -1725,12 +1741,14 @@ their old open-item lists are superseded by this current completion ledger.
 - [x] Promote the verifier to the four-theorem proof-release verifier and pass
   its explicit audit, semantic, and persistent-log gates.
 
-## Release acceptance - passed in 5.09
+## Release acceptance - passed in 5.10
 
 - [x] Every claimed result has an exact source crosswalk, including the PNT substitution.
 - [x] Every vendored or copied dependency has immutable provenance.
 - [x] The production root builds with zero project diagnostics.
 - [x] All four public endpoints pass the explicit transitive axiom audit.
+- [x] Every inventoried public theorem/lemma has direct, unique,
+  case-sensitive audit coverage.
 - [x] Source hashes and frozen dependency boundaries pass.
 - [x] All 10 semantic regression assertions pass explicitly.
 - [x] The complete unsuppressed log and exact status are recorded in the manifest.

@@ -1,6 +1,15 @@
 # Tao 2026 Sources
 
-## Release 5.09 source note
+## Release 5.10 source note
+
+No new source artifact is required by the owner-approved completion
+amendment. The pinned BHP paper and Tao's literal Rosser-weight formulation
+remain provenance for stronger source-faithful alternatives. Release
+acceptance instead uses the internally proved native-PNT Section 4 scale and
+Selberg upper-sieve consumer properties; it does not cite the stronger
+statements as if they had been formalized.
+
+## Historical release 5.09 source note
 
 No new source artifact or dependency is introduced. The final Section 4
 route combines `classicalChebyshevPsiDeLaValleePoussin_native` with the pinned

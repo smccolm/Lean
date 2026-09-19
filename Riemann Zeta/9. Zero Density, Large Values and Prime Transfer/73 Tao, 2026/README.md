@@ -1,6 +1,13 @@
 # Tao 2026 formalization
 
-## Verified four-theorem release: 5.09
+## Verified four-theorem release: 5.10
+
+The owner-approved completion contract accepts two endpoint-equivalent,
+hypothesis-free substitutions: native quantitative PNT for the exact Section 4
+scale formerly sourced from BHP, and the proved Selberg upper-sieve weight for
+the exact Lemma 5.1 consumers formerly assigned to literal Rosser weights.
+Neither stronger source statement is claimed. Both are now explicitly outside
+the four-public-theorem completion scope.
 
 All four unchanged public contracts are proved without additional mathematical
 hypotheses: `taoTheorem17_unconditional`, `taoTheorem18_unconditional`,
@@ -10,14 +17,15 @@ conjunction as `taoMainTheorems_unconditional`.
 
 On 2026-09-19, the integrated build passed all 10284 jobs and
 `cmd /c run_tao_build.bat --no-pause` returned `FINAL RESULT: PASS`.
-The explicit audit checked 8297 nonempty axiom lists against
-`propext`, `Classical.choice`, and `Quot.sound`; the 10 semantic regression
+The exhaustive audit checked 7,307 public theorem/lemma declarations through
+8,755 unique direct reports (8,708 nonempty and 47 axiom-free). Every nonempty
+list uses only `propext`, `Classical.choice`, and `Quot.sound`; the 10 semantic regression
 assertions, zero-diagnostic, source-hash, frozen-boundary, and coverage gates
 also passed. See the [reproduction manifest](Tao%20Reproduction%20Manifest.md)
 and its complete, unsuppressed log.
 
 The final Section 4 proof uses native quantitative PNT to show that every
-sufficiently large prime-free interval satisfies `4 H (log N)^2 ≤ N).
+sufficiently large prime-free interval satisfies `4 H (log N)^2 ≤ N`.
 That is precisely the upper scale consumed by the unchanged Lemma 4.2
 argument. It closes Theorems 1.9 and 1.10 without BHP. The stronger BHP
 `0.525` theorem and broader arbitrary-multiplicity Kummer alternatives
