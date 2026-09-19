@@ -1,11 +1,52 @@
 # Tao 2026 Research Agenda
 
-## Status and scope
+## Status and scope: verified release 5.09
+
+All four unchanged Theorem 1.7--1.10 contracts are proved without additional
+mathematical hypotheses. The integrated 10284-job build and canonical release
+verifier passed on 2026-09-19, including the explicit standard-axiom audit
+and all 10 semantic regression assertions. The reproduction manifest records
+the complete unsuppressed log and its SHA-256.
+
+The final Section 4 argument uses native quantitative PNT: constancy of
+Chebyshev theta on a prime-free interval, the quantitative theta error, and
+Bertrand imply `4 H (log N)^2 ≤ N` eventually. This is precisely the upper
+scale consumed by both existing Lemma 4.2 contradictions. The complete lemma
+then supplies the established Theorems 1.9 and 1.10 counting chains without
+changing any public hypothesis or conclusion.
+
+Theorem 1.7 uses the completed simple-root Stepanov, norm-fiber cancellation,
+Newton amplification, unique-tag prime quotient, cubefree Burgess, and sharp
+critical saddle chain. Theorem 1.8 uses the unconditional specialized
+Theorem 2.5 and Section 3 counting/asymptotic chain.
+
+BHP's stronger `0.525` statement remains unformalized, and the broader
+arbitrary-multiplicity Kummer interfaces remain conditional alternatives.
+They are possible future library work, not assumptions or unresolved
+dependencies of the four-theorem release. The original source-program
+requests and older progress descriptions below are historical records;
+the release does not claim every stronger auxiliary paper statement.
+
+## Historical status and scope: 5.08
+
+Release 5.08 proves Theorem 1.7 unconditionally. The Stepanov construction
+uses a simple root to separate orders of vanishing, and its explicit
+dimension and natural-floor parameter calculations give square-root norm-
+fiber bounds. Character cancellation and translation give the eventual
+extension estimate. Newton recurrence amplification then proves the sharp
+simple-root Weil bound. The unique-tag Burgess consumer fits this hypothesis
+after a block swap and character inversion when necessary. The prime-square,
+CRT, Burgess, and critical saddle chains reach `taoTheorem17_unconditional`.
+The general arbitrary-multiplicity Kummer contracts remain conditional
+alternatives; they are not required for this endpoint.
+
+The next mathematical obligation is Proposition 2.3(ii)/BHP, still the sole
+premise of Theorems 1.9 and 1.10. The whole-proof goal remains active.
 
 This agenda governs the active formalization of Terence Tao, *Products of
 consecutive integers with unusual anatomy*, arXiv `2603.27990v2`. The release
-scope is now fixed by `Tao Goal Prompt.md` at Theorems 1.7--1.10. Theorem 1.8
-is proved unconditionally; Theorems 1.7, 1.9, and 1.10 remain active.
+scope is now fixed by `Tao Goal Prompt.md` at Theorems 1.7--1.10. Theorems 1.7
+and 1.8 are proved unconditionally; Theorems 1.9 and 1.10 remain active.
 
 The paper studies bad and very bad intervals of consecutive integers, type
 `F_3` intervals, and consequences related to the factorial equation
@@ -21,7 +62,7 @@ Complete:
 - reserve isolated source, dependency, package, and tool locations;
 - provide an isolated Lake package and honest development check.
 
-## Phase 1 - source reconstruction (active)
+## Historical Phase 1 - source reconstruction
 
 Read the v2 TeX in proof order. Produce an exact ledger of:
 
@@ -58,7 +99,7 @@ literally enough that endpoint conventions, multiplicities,
 uniformity, exceptional sets, and numerical constants remain visible. Record
 every deliberate representation change in the crosswalk before proof work.
 
-## Phase 4 - proof implementation (active)
+## Historical Phase 4 - proof implementation
 
 Build from definitions and reusable lemmas toward the frozen source-facing
 contracts. Research probes may be used, but they must remain outside the
@@ -1187,7 +1228,7 @@ When real endpoints exist, add:
 - changing nodes 71 or 74;
 - claiming a result about the Riemann Hypothesis.
 
-## Current Burgess amplification frontier (release 2.57)
+## Historical Burgess amplification frontier (release 2.57)
 
 The exact interval/affine layer is now formalized in
 `BurgessAmplification.lean`. In particular, the prefix-to-translate error is

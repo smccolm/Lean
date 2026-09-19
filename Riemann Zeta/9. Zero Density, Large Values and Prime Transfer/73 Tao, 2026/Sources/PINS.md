@@ -1,5 +1,20 @@
 # Tao 2026 source pins
 
+## Cochrane--Pinner polynomial-method source (pinned 2026-09-19)
+
+- Todd Cochrane and Christopher Pinner, *Using Stepanov's method for
+  exponential sums involving rational functions*, Journal of Number Theory
+  116 (2006), 270--292; DOI `10.1016/j.jnt.2005.04.001`.
+- Author-hosted PDF: <https://www.math.ksu.edu/~cochrane/research/stepmix.pdf>.
+- Local artifact: `cochrane-pinner-stepanov-author.pdf`; SHA-256 is recorded
+  in `SHA256SUMS.txt`. This is the 15-page author copy dated October 9, 2008,
+  not a claim to be byte-identical to the publisher's 2006 typesetting.
+- Relevant locators: Theorem 1.2 (PDF p. 4), Section 3 (PDF pp. 10--14),
+  Theorem 3.1, Lemma 3.2, and equations (3.4)--(3.15).
+- Role: roadmap for the release-5.08 simple-root polynomial-method proof.
+  All auxiliary, multiplicity, parameter, norm-fiber, and cancellation steps
+  are proved in Lean; this source is not an admitted mathematical premise.
+
 ## Primary paper
 
 - Author: Terence Tao

@@ -1,5 +1,54 @@
 # Tao2026 Lean package
 
+## Release 5.09: all four unconditional public theorems
+
+`PublicTheorems.lean` exports `taoMainTheorems_unconditional`, the conjunction
+of the exact unchanged Theorem 1.7, 1.8, 1.9, and 1.10 contracts.
+`PrimeFreeLogShortness.lean` proves the logarithmic prime-free upper scale
+from native quantitative PNT. `Theorem19And110Complete.lean` inserts it into
+both existing Lemma 4.2 cases and assembles the last two endpoints.
+`SemanticRegression.lean` contains 10 kernel-checked assertions covering
+endpoints, count partitions, squarefree conventions, factorial-fiber
+multiplicity, and the asymptotic/public interfaces.
+
+All four new modules are directly imported by `Tao2026.lean`; their 20 new
+declarations are audited. The integrated 10284-job build and the canonical
+release verifier passed on 2026-09-19. The verifier explicitly reruns the
+audit and semantic suite and writes an unsuppressed log; see the parent
+reproduction manifest for its path and SHA-256.
+
+BHP's stronger fixed-power gap theorem is not proved or assumed by the new
+PNT route. The broader conditional Kummer alternatives are not premises
+of the simple-root Burgess proof. Older module histories below record their
+then-current status.
+
+## Historical release 5.08: unconditional Theorem 1.7
+
+`Theorem17Complete.lean` proves `taoTheorem17_unconditional` and retains the
+explicit Burgess certificate. The production chain consists of Hasse
+derivative multiplicities, linear auxiliary constraints, simple-root
+nonvanishing, explicit square-root parameters, norm-fiber cancellation,
+translation, and Newton power-sum amplification. `BurgessWeilPrimeComplete.lean`
+proves the all-r and r=7 prime quotient bounds and both cubefree complete-sum
+contracts without analytic premises. All twelve new production modules are
+directly imported, with 61 new declaration audits.
+
+Theorem 1.8 remains unconditional. Proposition 2.3(ii)/BHP remains the input
+to Theorems 1.9 and 1.10. Historical broad Kummer contracts remain available
+conditionally but are not used as assumptions by `Theorem17Complete`.
+
+## Historical release 5.07: polynomial L-series and characteristic recurrences
+
+`BurgessWeilPrimeKummerMonicPolynomialSums.lean` proves character-sum
+vanishing by interpolation. `BurgessWeilPrimeKummerOrbitPolynomials.lean`
+identifies orbit lengths and weights with minimal-polynomial degrees and
+evaluation weights. `PolynomialEulerCoefficients.lean` proves the exact
+unique-factorization coefficient identity. `BurgessWeilPrimeKummerNewtonPolynomiality.lean`
+then proves the literal Newton degree cutoff and characteristic recurrence.
+`BurgessWeilPrimeKummerLiteralWeilOnly.lean` specializes to Legendre and
+reduces the Kummer input to literal Weil bounds alone. The public bridge is
+`TaoPrimeLiteralWeilConditions.toTheorem17`; its Weil premise is still open.
+
 This isolated package contains the active node-73 formalization. The production
 root currently imports source-faithful arithmetic-anatomy, interval, literal
 counting, and asymptotic-language definitions. It is pinned to Lean `v4.30.0`

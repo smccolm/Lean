@@ -1,5 +1,31 @@
 # Tao 2026 build tools
 
+## Current release verifier: 5.09
+
+From the node root, run `cmd /c run_tao_build.bat --no-pause`.
+The canonical verifier passed on 2026-09-19 for all four exact unconditional
+Theorem 1.7--1.10 endpoints. It checks the twelve source artifacts, 1,339
+frozen dependency hashes and exact file set, pinned tools/dependencies,
+raw Mermaid, source inventory, direct production imports, and forbidden
+shortcuts. It builds the complete root, explicitly reruns `Audit.lean`,
+checks the standard-axiom allowlist and mandatory endpoint/new-declaration
+coverage, and explicitly runs the 10 semantic regression assertions.
+Every Lean warning or tactic diagnostic fails the run.
+
+Each invocation creates a unique `logs/tao-build-<timestamp>-<id>.log`
+transcript with unsuppressed build/audit output, final status, and transcript
+end marker. The parent reproduction manifest records the successful log and
+its SHA-256. The verifier performs no commit or push.
+
+BHP's stronger gap theorem and the broader Kummer alternatives are not
+premises of the completed public endpoints; their older conditional
+interfaces remain honestly labeled.
+
+## Historical development coverage
+
+The milestone descriptions below record earlier verifier scopes and are
+superseded by the current release paragraph.
+
 `Probes/` is reserved for non-production API experiments. Such files are
 excluded from the production import graph; any result used by the formalization
 must be promoted to `Extension/Tao2026/` and audited there.

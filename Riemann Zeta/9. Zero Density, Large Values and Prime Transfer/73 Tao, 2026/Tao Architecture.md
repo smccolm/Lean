@@ -1,8 +1,8 @@
 flowchart TD
     MAP["RH Map node 73<br/>Tao, 2026"] --> PAPER["Tao: Products of consecutive integers<br/>with unusual anatomy"]
     PAPER --> SOURCE["arXiv 2603.27990v2<br/>PDF and TeX pinned + SHA-256 verified"]
-    SOURCE --> PLAN["Whole-proof contract researched<br/>Theorems 1.7--1.10 fixed as release scope"]
-    PLAN --> CROSSWALK["Tao Crosswalk<br/>principal objects and endpoints mapped;<br/>Section 2--6 ledger still expanding"]
+    SOURCE --> PLAN["Four exact public contracts proved<br/>Release 5.09 canonical verifier PASS"]
+    PLAN --> CROSSWALK["Tao Crosswalk<br/>exact public contracts and source consumers mapped;<br/>PNT substitution and unused stronger alternatives explicit"]
 
     subgraph FOUNDATION["Immutable foundation boundary"]
         direction TB
@@ -31,7 +31,7 @@ flowchart TD
         FACTEQ["PROVED factorial bridge<br/>ordered triples, root uniqueness,<br/>exact F3 endpoint image + count inequality"]
         F31["PROVED F3 one-term bridge<br/>square-multiple characterization<br/>and floor(sqrt x)-1 lower family"]
         F3LOWER["PROVED square-root lower asymptotics<br/>reverse-big-O for F3 and triples"]
-        FIBERRED["PROVED factorial-fiber + Lemma 4.1<br/>F3: H&lt;N, prime-free, a≪H log N<br/>residual ES core 3≤H&lt;N<br/>ES + subpoly gap + T1.9 ⇒ T1.10"]
+        FIBERRED["PROVED factorial fibers and Lemma 4.1<br/>F3: H&lt;N, prime-free, a≪H log N;<br/>square Erdos--Selfridge + subpoly gap + T1.9 give T1.10"]
         ASYM --> SETS
         ANATOMY --> INTERVALS
         INTERVALS --> SETS
@@ -48,18 +48,17 @@ flowchart TD
         direction TB
         SMOOTH["Proposition 2.1 quantified forms PROVED<br/>Euler product + Rankin + Abel/Chebyshev/Bernoulli upper route PROVED;<br/>critical z^(-1/alpha+epsilon) and polylog x^(-1/A+epsilon) upper bounds PROVED;<br/>polylog x^(1-1/A-epsilon) lower bound PROVED;<br/>exact largest-prime + Chebyshev-Hildebrand + source CEP packet infrastructure PROVED;<br/>coarse fixed-dyadic CEP packet PROVED;<br/>reciprocal mass 1/(16 log 2 log u), multiplicity floor(u-2u/log u), cofactor depth <=10u/log u;<br/>secondary loss <=60u log log u;<br/>critical z^(-1/alpha-epsilon) lower bound PROVED;<br/>thin-band CEP retained as optional source-faithful route;<br/>downstream multiplicative instantiation belongs to Lemma 1.6"]
         ONETERMID["PROVED: exact B1 identity<br/>unique p²m representation + finite Psi sum"]
-        ONETERM["Lemma 1.6(i) PROVED<br/>lower z<p<3z packet + upper finite exponent grid;<br/>Lemma 1.6(ii) from sharp critical dilation via power-of-two bracketing PROVED;<br/>exact saddle + phase + curvature + complete Gaussian main-term dilation ratio c PROVED;<br/>uniform Granville asymptotic absent"]
+        ONETERM["PROVED Lemma 1.6(i),(ii)<br/>one-term scale + critical saddle asymptotic;<br/>sharp fixed dilation via power-of-two bracketing"]
         VBONETERM["PROVED: exact VB1 identity<br/>unique a²b³ + finite squarefree-cube sum"]
         VBLOWER["PROVED VB square-family lower bounds<br/>reverse-big-O square-root scale"]
         VBONESCALE["PROVED complete VB1 square-root scale<br/>convergent b^-3/2 majorant + lower family"]
         VBONEZETA["PROVED exact VB1 asymptotic<br/>dominated limit + zeta(3/2)/zeta(3) identity"]
         PRIMEI["PROVED: Proposition 2.3(i)<br/>exact Bertrand endpoints"]
-        PRIMEII["Proposition 2.3(ii)<br/>exact interface compiled and consumed;<br/>BHP proof absent"]
+        PRIMEII["UNPROVED stronger source alternative<br/>Proposition 2.3(ii), BHP 0.525;<br/>not a premise of the final PNT route"]
         PRIMEIII["PROVED: Proposition 2.3(iii)<br/>global prime-free measure power saving"]
         GTPOWER["Compiled quantitative bridge<br/>uniform dyadic discrepancy power xi < 1"]
         DYADICFREE["Compiled dyadic prime-free bridge<br/>prime-power tail retained and absorbed"]
         PREFIX["Compiled constant-length endpoint measure<br/>finite dyadic assembly + full theta range"]
-        VINO["Theorem 2.5 partial<br/>j=1 absorption + phase/character variation + low-frequency complex Abel/PNT-discrepancy reduction + qualitative-PNT uniform dyadic and fixed-bounded-frequency o(P) consequences + finite Fourier assembly with automatic integrability, exact retained-box count, uniform-approximation transfer, finite ℓ¹ truncation, summable cubic ℤ² envelope, vanishing square-box tails, open-quotient torus descent, character compatibility, conditional uniform reconstruction of W, complete smooth-periodic radial C³ Fourier decay + source-oriented product-restricted Vaughan with exact 1/log-P coefficient envelopes and supports + exact outer/double coefficient blocks + canonical (log₂B+1)^102 short family with coverage, exact weighted Type I/II decomposition, and literal real-log relative-width support + prime-power + Abel + Type I + product-restricted Type II + all-support distance-kernel bound with necessary +1 and endpoint-free pure off-diagonal bound through exact double blocks and source-facing block lengths + high-frequency log absorption + normalized parameter bounds + critical deletion + arbitrary-depth finite van der Corput majorant with exact source four-step specialization, positive-ray exact-interval finite-difference FTC bridge with arbitrary lag-product upper and critical-regular lower estimates, IVT sign separation, terminal derivative windows from the next two source derivatives, critical-regular nonlinear Kusmin--Landau terminal bound, exact `rH`/`H^r` admissible-lag control, uniform arbitrary-depth and literal four-round regular-interval closure, exact lag-sensitive Weyl tree, inverse-product/truncation leaf profile, harmonic leaf summation, closed all-depth scalar lag envelope with generalized harmonic factors ≤ H, source four-round sixteenth-root estimate, coarse scale recurrence with exact `(QH)^15/scale` sixteenth power, four explicit diagonal terms with exact powered denominator bounds, source five-term root/rpow majorant without hidden recurrence, a canonical floor-rounded range that automatically satisfies upper-smallness, exact expanded-critical-start deletion plus global long/short regular-component assembly, optimized fixed-power global closure, arbitrary-subinterval low-frequency two-term width `(F/X^5+1/F)^(1/1024)`, and equal-parameter Type II distance-kernel propagation through arbitrary positive blocks and the exact canonical dyadic Vaughan double family, exact outer-sum/Cauchy--Schwarz insertion into the literal source Type II convolution blocks, source beta/gamma envelopes, exact tail-cutoff annihilation of both small-band regimes, full-family conditional summation, exact `(log₂ B+1)^204` uniform loss, and full-convolution square-root reassembly, with uniform scale/effective-error majorants and quadratic geometry discharge, plus affine nearest-integer endpoint<br/>quantitative arbitrary-log-saving PNT, source split `(log Bcap)^d≤F`, large-band bound `10F≤K^4(log Bcap)^100`, exact equation-(18), sharp critical root/source-decay ledger, explicit native p-adic coefficient `C(p^(B₀+1)κ)^ε`, uniform absolute-coefficient positive Ford benchmark at moment `4R²` for `R≥10000` (quantitatively below the source decay), and finite absorption of every native critical coefficient for `40≤R<1000`; uniform rooted control for `R≥1000` and the remaining high-scale Vinogradov-Weyl cancellation are open; the inner singleton branch is closed diagonally"]
         VINO["PROVED specialized Theorem 2.5<br/>unconditional quantitative PNT + source-faithful IK effective-degree Vinogradov estimate + complete Fourier reconstruction"]
         SCALEMONO["PROVED quadratic short-block source bridge<br/>near/far split + pairwise F'=K^4 dispatch + intrinsic low error (1/K)^(1/1024) + exact high-pair Vinogradov consumer + diagonal singleton closure"]
         SCALEMONO --> VINO
@@ -107,21 +106,28 @@ flowchart TD
 
     subgraph SECTION4["Section 4: type F3 and factorial equation"]
         direction TB
-        FBOUNDS["PROVED Lemma 4.1 + conditional full Lemma 4.2<br/>both low/high cutoffs, geometric lower bounds, and contradictions<br/>explicit x^o(1) Theorem 1.10 gap budget; analytic BHP remains"]
+        FBOUNDS["PROVED Lemmas 4.1 and 4.2<br/>both low/high geometric contradictions;<br/>P=H log² N has 4P≤N from quantitative PNT;<br/>explicit subpolynomial gap budget"]
         FEXTRACT["PROVED Lemma 4.3<br/>canonical square decomposition + exact product envelope<br/>two-half selection + bounded smooth square relation"]
-        FCASES["PROVED conditional source case split<br/>easy cases + hard residue/fiber/PNT weights + finite Corollaries 2.8--2.9;<br/>maximal-k closure + F3 one-term upper bound; consumes Lemma 4.2"]
-        T19["CONDITIONAL FULL: Theorem 1.9<br/>nontrivial F3 bound + x^(1/2+o(1));<br/>only Proposition 2.3(ii) remains"]
-        ES2["CONDITIONAL SOURCE: Erdos--Selfridge Theorem 2<br/>prime valuation not divisible by exponent"]
-        T110["CONDITIONAL FULL: Theorem 1.10<br/>factorial solutions x^(1/2+o(1));<br/>only Proposition 2.3(ii) remains"]
+        FCASES["PROVED Section 4 counting assembly<br/>easy cases + residue/fiber sieve + finite Corollaries 2.8--2.9;<br/>maximal-k closure and one-term upper bound"]
+        T19["PROVED Theorem 1.9<br/>taoTheorem19_unconditional;<br/>exact nontrivial and total F3 counting contracts"]
+        ES2["UNPROVED stronger source alternative<br/>Erdos--Selfridge Theorem 2 for arbitrary exponent;<br/>not used by the square endpoint"]
+        ESSQUARE509["PROVED square Erdos--Selfridge specialization<br/>factorial squarefree fibers have cardinality at most two"]
+        T110["PROVED Theorem 1.10<br/>taoTheorem110_unconditional;<br/>exact factorial-solution x^(1/2+o(1)) contract"]
         FBOUNDS --> FEXTRACT
         FEXTRACT --> FCASES
         FCASES --> T19
         T19 --> T110
         FBOUNDS --> T110
-        ES2 --> T110
+        ESSQUARE509 --> T110
     end
 
-    PRIMEII --> FBOUNDS
+    PRIMEII -. optional stronger route .-> FBOUNDS
+    PNT509["PROVED native quantitative PNT<br/>theta error with arbitrary fixed log saving"]
+    GAP509["PROVED prime-free upper scale<br/>eventually, uniformly in H: 4 H log² N≤N"]
+    FREEZE --> PNT509
+    PNT509 --> GAP509
+    PRIMEI --> GAP509
+    GAP509 --> FBOUNDS
     PRIMEIII --> FBOUNDS
     VINO --> FBOUNDS
     PELL --> FCASES
@@ -132,10 +138,11 @@ flowchart TD
     subgraph SECTION5["Section 5: character and sieve machinery"]
         direction TB
         DIRICHLET["Normalized prime character sums PROVED<br/>exact Z^(-1/125) threshold + Z^-8 unexceptional moment;<br/>principal split + exact primitive-conductor regrouping PROVED;<br/>exceptional 1000th moment reduced to Lemma 5.1 square"]
-        BURGESS["Lemma 5.2 PARTIAL<br/>literal cubefree r=7 target + exact sieve-prefix interface PROVED;<br/>epsilon'=1/2000000 exponent bridge to saving 0.0163 PROVED;<br/>exact Möbius primitive-to-all-character reduction PROVED;<br/>periodicity + trivial-bound reduction to q^(2/7+7epsilon')&lt;H&lt;q PROVED;<br/>exact 2r-moment expansion + quotient correlations PROVED;<br/>degenerate count ≤r^(2r)B^r + standard moment split PROVED;<br/>literal A_j product + nondegenerate A_j≠0 PROVED;<br/>gcd weight + composite Weil interface + literal r=7 production predicate PROVED;<br/>gcd-weight tuple sum ≤2rB(2B tau(q))^(2r-1) PROVED;<br/>r=7 losses absorbed: moment ≤7^14 B^7 q+C_epsilon B^14 q^(1/2+epsilon) PROVED conditional on Weil;<br/>exact coprime CRT correlation/factor/gcd multiplicativity + common-witness assembly PROVED;<br/>primitivity descends to both canonical CRT factors PROVED;<br/>fixed-Fin 7 strong cube-free iteration to p and p^2 local bounds PROVED;<br/>p-divides-A_j branches at p and p^2 PROVED trivially;<br/>p^2 first-order fiber phase + nonstationary cancellation + stationary root count ≤2r + local 4rp bound PROVED;<br/>fixed-r=7 prime quotient and source bridge PROVED;<br/>prime quotient converted exactly to a split non-order-power polynomial with ≤2r roots PROVED;<br/>one-root cancellation + two-root Jacobi-sum bound PROVED;<br/>inactive-root deletion + correction absorption PROVED;<br/>exact degree divisibility + three-active-root Möbius/Jacobi reduction PROVED;<br/>small-characteristic p≤4D^2 cases PROVED trivially;<br/>exact four-active-root Möbius/hypergeometric normalization PROVED;<br/>exact five-active-root Möbius/four-point normalization PROVED;<br/>exact six-active-root Möbius/five-point normalization PROVED;<br/>exact seven-active-root Möbius/six-point normalization PROVED;<br/>exact eight-active-root Möbius/seven-point normalization PROVED;<br/>exact nine-active-root Möbius/eight-point normalization PROVED;<br/>exact ten-active-root Möbius/nine-point normalization PROVED;<br/>exact eleven-active-root Möbius/ten-point normalization PROVED;<br/>exact twelve-active-root Möbius/eleven-point normalization PROVED;<br/>exact thirteen-active-root Möbius/twelve-point normalization PROVED;<br/>exact fourteen-active-root Möbius/thirteen-point normalization PROVED;<br/>generic higher-root residual restricted to exact cleared Burgess polynomials PROVED;<br/>fixed-r=7 source-cardinality residual eliminated using the structural card≤14 cap PROVED;<br/>four-root input restricted to p&gt;64, one ambient character, finite exponent range, and one Legendre parameter PROVED;<br/>five-root input restricted to p&gt;64, one ambient character, finite exponent range, and two Legendre parameters PROVED;<br/>six-root input restricted to p&gt;64, one ambient character, finite exponent range, and three Legendre parameters PROVED;<br/>seven-root input restricted to p&gt;64, one ambient character, finite exponent range, and four Legendre parameters PROVED;<br/>eight-root input restricted to p&gt;64, one ambient character, finite exponent range, and five Legendre parameters PROVED;<br/>nine-root input restricted to p&gt;64, one ambient character, finite exponent range, and six Legendre parameters PROVED;<br/>ten-root input restricted to p&gt;64, one ambient character, finite exponent range, and seven Legendre parameters PROVED;<br/>eleven-root input restricted to p&gt;64, one ambient character, finite exponent range, and eight Legendre parameters PROVED;<br/>twelve-root input restricted to p&gt;64, one ambient character, finite exponent range, and nine Legendre parameters PROVED;<br/>thirteen-root input restricted to p&gt;64, one ambient character, finite exponent range, and ten Legendre parameters PROVED;<br/>fourteen-root input restricted to p&gt;64, one ambient character, finite exponent range, and eleven Legendre parameters PROVED;<br/>sharp Kummer (t-1)sqrt(p) contract + scalar-power exclusion bridge PROVED;<br/>open: reduced one- through eleven-parameter trace endpoints"]
+        BURGESS["PROVED Lemma 5.2 / explicit cubefree Burgess<br/>unique-tag prime quotient: simple-root Stepanov + Newton amplification;<br/>denominator case: block swap + inverse character;<br/>prime-square stationary phase + CRT + moment and optimization assembled"]
         BHM["Lemma 5.3 PROVED<br/>finite weighted Bombieri--Halasz--Montgomery;<br/>Hermitian row reduction + prime-indicator specialization"]
-        FUND["Lemma 5.4 PARTIAL<br/>generic finite algebra + O(R) floor error PROVED;<br/>real Selberg alternative with nonnegativity + 2/log R main mass PROVED;<br/>source {-1,0,1} Rosser construction open"]
-        EXCHAR["Lemma 5.1 CONDITIONAL<br/>Selberg diagonal + divisor expansion + normalized BHM assembly PROVED;<br/>heterogeneous q1*q2 family, squarefree lcm, Z^3.09 bound, pair-character identity PROVED;<br/>R=floor(Z^0.0001), cutoff/range/band side conditions PROVED;<br/>exact band cardinality + strict off-diagonal absorption PROVED;<br/>self-improving J bound + bounded moment + lambda tail PROVED conditional on Burgess;<br/>maximal admissible conductor universe + all-selector Section 6 insertion PROVED;<br/>analytic Burgess open"]
+        FUND["PROVED Selberg alternative used by Lemma 5.1<br/>finite algebra + O(R) floor error;<br/>nonnegative real weights and 2/log R main mass"]
+        ROSSER509["UNPROVED optional source construction<br/>Lemma 5.4 literal {-1,0,1} Rosser weights;<br/>replaced by proved Selberg weights in this route"]
+        EXCHAR["PROVED Lemma 5.1 consumer chain<br/>Selberg/BHM + conductor families + off-diagonal absorption;<br/>Burgess premise discharged by the proved explicit bound"]
         DIRICHLET --> EXCHAR
         BURGESS --> EXCHAR
         BHM --> EXCHAR
@@ -150,9 +157,9 @@ flowchart TD
         NORMALIZE["Lemmas 6.1--6.2 arithmetic/normalization core PROVED<br/>H≤N + prime-free + exact dyadic bounds + p0²m witness;<br/>contained power-of-two endpoint child with H/4<H'≤H;<br/>finite weak-(1,1) maximal transfer PROVED<br/>#admissible≤30#normalized"]
         TYPICAL["Definitions 6.3--6.4 PROVED<br/>exact cutoff-parametrized typicality;<br/>ordered 1000-prime anatomy + smooth remainder;<br/>>=1000 multiplicity-counted large factors construct anatomy PROVED"]
         ATYPICAL["Proposition 6.5 PROVED<br/>condition-(ii) actual union weak bound;<br/>condition-(i) cofactor sieve + corrected full k>=2 z^-4 saddle + summed long moderate union <=x/z^3;<br/>large-p0 union <=x^(199/200) and large-H fixed power saving;<br/>small-p0, moving low/high smooth bands, and moving deficient band;<br/>fixed-row eight-branch bound <=x/z^(2+1/(128d^2));<br/>countable diagonal with exact floor/ceiling cutoffs both z^(1+o(1));<br/>selected union <=B1(x)/log(x)^(1-o(1))"]
-RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite product probability space PROVED;<br/>exact uniform prime-band laws + mutual independence PROVED;<br/>forward and reflected v-l small-prime 50th moments PROVED conditional on Burgess;<br/>forward and reflected large-prime source mean/variance bounds PROVED conditional on Burgess;<br/>exact Markov/Chebyshev normalization + both typical-event inclusions PROVED conditional on Burgess;<br/>one B simultaneous for every admissible H,m' in both orientations PROVED conditional on Burgess;<br/>exact probability/support-cardinality identities + uniform tuple-count bounds PROVED;<br/>fixed-prime-scale smooth-remainder sums + dyadic geometric cost 2 PROVED;<br/>moving grid + all ordered prime-scale choices PROVED;<br/>enlarged-band global image + fiber ≤1000^1000 PROVED;<br/>PNT band comparison + unweighted assembly factor →0 PROVED conditional on Burgess;<br/>length-weighted all-scale assembly has explicit log saving PROVED conditional on Burgess;<br/>canonical left- and right-endpoint actual-union injections PROVED;<br/>typical/non-typical recombination + factor-30 maximal transfer PROVED;<br/>eventual start-uniform Sylvester--Schur + scale-local large-prime transfer PROVED;<br/>conditional local dyadic-window log saving + exact finite global dyadic cover PROVED;<br/>adjacent-ratio geometric summation + exact conditional T1.7 contract PROVED;<br/>slow central-packet concentration + B1 half-ratio + adjacent ratio + Lemma 1.6(ii) from sharp smooth dilation PROVED;<br/>tilted smooth mass normalization + phi1/phi2 cumulants + exact Gaussian local-limit reformulation PROVED;<br/>Sylvester--Schur all-start large-length tail + finite-rectangle reduction + all H&lt;49 PROVED independently;<br/>open for T1.7: tilted Gaussian local limit + analytic Burgess"]
-        MOMENTS["Propositions 6.7--6.8 conditional closure<br/>finite mean/variance algebra and diagonal reduction PROVED;<br/>single-p and joint-pp' primitive character fibers PROVED;<br/>principal split + exact one/two-prime collision loss PROVED;<br/>prime-modulus nonprincipal Z^-8 error PROVED;<br/>product-modulus conductor reduction + change-level collision removal PROVED;<br/>literal improved probability + distinct-prime covariance error PROVED;<br/>finite exceptional mean/covariance partition + variance insertion PROVED;<br/>bad product pairs covered by exceptional endpoints/partner union PROVED;<br/>dyadic first-moment PNT/main/error/cardinality block PROVED;<br/>exact two-band covariance error/cardinality block PROVED;<br/>exceptional pair cardinality reduced to exact three-family count PROVED;<br/>source aggregate + one/joint/covariance error envelopes PROVED;<br/>direct R^-1.001 and ordered R^-1.001 S^-1 power errors PROVED;<br/>adaptive Burgess endpoint O(R^0.02) + partner O(S^0.02) counts PROVED;<br/>adaptive character-moment and one/joint/covariance error consumers PROVED;<br/>mixed R-for-p, S-for-p'/pp' pair partition + joint/covariance powers PROVED;<br/>adaptive one-/two-band aggregation + pair-cardinality reduction PROVED;<br/>Burgess cardinalities + improved errors inserted into both blocks PROVED;<br/>fixed-threshold exceptional p and uniformly-in-p exceptional p' counts PROVED;<br/>exact residue fiber + uniform finite tuple-count law PROVED;<br/>one-coordinate collision-closed crude bounds PROVED;<br/>source two-/three-coordinate crude fibers with multiplicities 2/6 PROVED;<br/>normalized crude shapes 16L²/p and 96L³/(pp') PROVED;<br/>uniform PNT scale gives 256log²(z)/p and 6144log³(z)/(pp') PROVED;<br/>whole-band crude specialization + automatic conductor/partner geometry PROVED;<br/>p|m' zero branches + complete source blocks PROVED;<br/>exact disjoint dyadic grid + uniform scale constants PROVED;<br/>literal mean ≤2000000H + covariance ≤H + variance ≤2000001H PROVED conditional on Burgess;<br/>analytic Burgess open"]
-        T17["CONDITIONAL FULL: Theorem 1.7<br/>nontrivial B saving + x/z^(2+o(1));<br/>open inputs: tilted Gaussian local limit,<br/>analytic Burgess"]
+        RANDOM["PROVED Proposition 6.6 consumer chain<br/>literal finite prime-tuple probability laws;<br/>forward/reflected moments, counting, and maximal transfer;<br/>Burgess and critical-saddle inputs now proved"]
+        MOMENTS["PROVED Propositions 6.7--6.8 consumer chain<br/>prime and prime-pair residue probabilities;<br/>exceptional-character counts and dyadic aggregation;<br/>mean and variance bounds; Burgess input now proved"]
+        T17["PROVED Theorem 1.7<br/>taoTheorem17_unconditional;<br/>unconditional explicit Burgess + sharp critical saddle;<br/>exact frozen public conclusion, no analytic premise"]
         NORMALIZE --> TYPICAL
         TYPICAL --> ATYPICAL
         TYPICAL --> RANDOM
@@ -173,16 +180,19 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     T18 --> PUBLIC
     T19 --> PUBLIC
     T110 --> PUBLIC
-    PUBLIC --> AUDIT["Tao2026/Audit.lean<br/>transitive #print axioms coverage"]
-    AUDIT --> RUNNER["run_tao_build.bat<br/>hash/file-set/pin/shortcut/audit/build PASS"]
-    RUNNER --> RELEASE["Tao 2026 formal proof release<br/>not achieved"]
+    PUBLIC --> AUDIT["Tao2026/Audit.lean<br/>explicit run: 8340 declaration reports;<br/>8297 nonempty standard-axiom lists + 43 axiom-free"]
+    AUDIT --> RUNNER["run_tao_build.bat<br/>hash/file-set/pin/shortcut/audit/build/semantic gates PASS;<br/>complete unsuppressed transcript"]
+    RUNNER --> RELEASE["VERIFIED four-public-theorem release 5.09<br/>Theorems 1.7--1.10 unconditional;<br/>canonical verifier exit 0, 2026-09-19"]
+    SEMANTIC509["PROVED semantic regressions<br/>10 assertions explicitly rerun;<br/>endpoints, partitions, squarefree conventions, multiplicity, asymptotics"]
+    PUBLIC --> SEMANTIC509
+    SEMANTIC509 --> RUNNER
 
     DOCS["Goal Prompt complete<br/>Checklist / Crosswalk / Manifest continuously updated"] --> CROSSWALK
     SHELL["Extension/Tao2026<br/>active pinned Mathlib package builds"] --> CONTRACTS
     MILESTONE["Proposition 2.3(i),(iii), Proposition 2.1 quantified forms,<br/>Lemma 1.6(i), exact one-term sums,<br/>VB1 zeta asymptotic + factorial lower-asymptotic verifier PASS"] --> SHELL
     HULL["PROVED expanded critical hull assembly<br/>same additive deletion bound;<br/>at most two cuts per order"] --> VINO
 
-    LEGEND["Status: green = verified groundwork<br/>blue = inspected candidate/ready shell<br/>yellow = specified but unproved<br/>red = major unformalized input or endpoint"]
+    LEGEND["Status: green = proved or verified release gate<br/>blue = pinned dependency-supplied foundation<br/>yellow = honestly conditional alternative<br/>red = unused unformalized stronger source statement"]
 
     classDef complete fill:#d9f7df,stroke:#238636,color:#111
     classDef ready fill:#dbeafe,stroke:#2563eb,color:#111
@@ -190,11 +200,10 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     classDef absent fill:#f8d7da,stroke:#b42318,color:#111
     classDef note fill:#f3f4f6,stroke:#6b7280,color:#111
 
-    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,VINO,VBSHORT,T18,AUDIT,RUNNER complete
-    class MATHLIB,PNT,GM,GT,E137,SHELL,ASYM,SETS,CONTRACTS ready
-    class CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBEXTRACT,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,BURGESS pending
+    class MAP,PAPER,SOURCE,PLAN,DOCS,MILESTONE,FREEZE,GTPOWER,DYADICFREE,PREFIX,PRIMEI,PRIMEIII,SMOOTH,ONETERMID,VBONETERM,VBLOWER,VBONESCALE,VBONEZETA,ANATOMY,INTERVALS,FACTEQ,F31,F3LOWER,FIBERRED,HULL,SCALEMONO,VBCOVER,FEXTRACT,VINO,VBSHORT,T17,T18,T19,T110,BURGESS,AUDIT,RUNNER,PUBLIC,RELEASE,CROSSWALK,ONETERM,UNCERT,LSIEVE,POWERREL,VBEXTRACT,FBOUNDS,FCASES,DIRICHLET,BHM,EXCHAR,TYPICAL,ATYPICAL,RANDOM,MOMENTS,PELL,FUND,ASYM,SETS,CONTRACTS,ESSQUARE509,PNT509,GAP509,SEMANTIC509 complete
+    class MATHLIB,PNT,GM,GT,E137,SHELL ready
     class NORMALIZE complete
-    class PRIMEII,PELL,FUND,T17,T19,T110,PUBLIC,RELEASE absent
+    class PRIMEII,ES2,ROSSER509 absent
     class LEGEND note
 
     %% Release 2.57: BurgessAmplification supplies the exact edge from a
@@ -1224,3 +1233,37 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% base weights proves the cubic complete-homogeneous term integral, so
     %% Newton degree three is unconditional. Integrality now remains only in
     %% degrees at least four.
+    %% Release 5.04: quartic Frobenius is decomposed into its base-field fixed
+    %% points, quadratic-subfield points, and full four-element orbits. Norm
+    %% transitivity identifies the middle weights with squares of quadratic
+    %% orbit weights. Degree-four complete-homogeneous induction then proves
+    %% Newton degree four integral. Integrality remains only in degrees at
+    %% least five.
+    %% Release 5.05: order-five Frobenius has only fixed points and full
+    %% five-element orbits. The fifth Newton numerator reuses the integral
+    %% aggregate residuals from degrees two through four and adds the quintic
+    %% orbit sum. Newton degree five is unconditional; integrality remains
+    %% only in degrees at least six.
+    %% Release 5.06 supersedes all finite-degree integrality residuals:
+    %% arbitrary subfield embeddings, partial Frobenius norms, and weighted
+    %% orbit divisor sums identify the first m Newton coefficients with a
+    %% finite Euler product over the degree-m! field. Every coefficient and
+    %% every canonical Newton root is integral. The endpoint now consumes
+    %% only literal Weil bounds and characteristic recurrences.
+    %% Release 5.07: orbit/minimal-polynomial degree and weight identities,
+    %% polynomial unique factorization, and interpolation/orthogonality prove
+    %% the exact signed monic coefficient identity and Newton degree cutoff.
+    %% General and Legendre characteristic recurrences are now proved.
+    %% Theorem 1.7 consumes only literal all-extension Weil inequalities.
+    %% Historical 5.07 boundary above, superseded by release 5.08 below.
+    STEPANOV508["PROVED simple-root Stepanov method<br/>Hasse constraints + separated orders + dimension count<br/>explicit integer parameters + norm-fiber cancellation + translation"]
+    RECURRENCE508["PROVED literal Newton recurrence<br/>eventual power-sum spectral amplification"]
+    SIMPLEWEIL508["PROVED simple-root sharp Weil bound<br/>all extensions; arbitrary other root multiplicities"]
+    STEPANOV508 --> SIMPLEWEIL508
+    RECURRENCE508 --> SIMPLEWEIL508
+    SIMPLEWEIL508 --> BURGESS
+    BURGESS --> T17
+    class STEPANOV508,RECURRENCE508,SIMPLEWEIL508 complete
+    KUMMERALT509["CONDITIONAL broader Kummer alternatives<br/>arbitrary-multiplicity geometric and literal-Weil interfaces;<br/>not required by the proved unique-tag simple-root route"]
+    KUMMERALT509 -. optional stronger route .-> BURGESS
+    class KUMMERALT509 pending

@@ -2,6 +2,8 @@ import Tao2026.BadOneTermRegularVariation
 import Tao2026.SmoothNumberSaddleFiniteHeightAssembly
 import Tao2026.BurgessPolyaVinogradov
 import Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+import Tao2026.BurgessWeilPrimeKummerNewtonAllDegreeIntegrality
+import Tao2026.BurgessWeilPrimeKummerLiteralWeilOnly
 
 /-!
 # Theorem 1.7 reduced to the single Burgess input
@@ -226,6 +228,32 @@ Newton-coefficient integrality, implies Theorem 1.7 directly. -/
 theorem TaoPrimeLiteralWeilRecurrenceLegendreAndNewtonLiteralConditions.toTheorem17
     (h : TaoPrimeLiteralWeilRecurrenceLegendreAndNewtonLiteralConditions) :
     TaoTheorem17Conclusion := by
+  obtain ⟨_C, _hC, _hburgess, h17⟩ := h.toTheorem17BurgessCertificate
+  exact h17
+
+/-- Unconditional all-degree Newton integrality removes integrality from
+the remaining literal Kummer input to the Burgess certificate. -/
+theorem TaoPrimeLiteralWeilRecurrenceConditions.toTheorem17BurgessCertificate
+    (h : TaoPrimeLiteralWeilRecurrenceConditions) :
+    TaoTheorem17BurgessCertificate :=
+  h.toFull.toTheorem17BurgessCertificate
+
+/-- Theorem 1.7 from only the remaining literal Weil bounds and
+characteristic recurrences. These source hypotheses are still open. -/
+theorem TaoPrimeLiteralWeilRecurrenceConditions.toTheorem17
+    (h : TaoPrimeLiteralWeilRecurrenceConditions) :
+    TaoTheorem17Conclusion := by
+  obtain ⟨_C, _hC, _hburgess, h17⟩ := h.toTheorem17BurgessCertificate
+  exact h17
+
+/-- The Burgess certificate from only the remaining literal Weil inequalities. -/
+theorem TaoPrimeLiteralWeilConditions.toTheorem17BurgessCertificate
+    (h : TaoPrimeLiteralWeilConditions) : TaoTheorem17BurgessCertificate :=
+  h.toFull.toTheorem17BurgessCertificate
+
+/-- Theorem 1.7 from the still-open literal all-extension Weil bounds alone. -/
+theorem TaoPrimeLiteralWeilConditions.toTheorem17
+    (h : TaoPrimeLiteralWeilConditions) : TaoTheorem17Conclusion := by
   obtain ⟨_C, _hC, _hburgess, h17⟩ := h.toTheorem17BurgessCertificate
   exact h17
 

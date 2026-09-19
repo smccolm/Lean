@@ -1,6 +1,65 @@
 # Tao 2026 Source-to-Lean Crosswalk
 
-## Authority and status
+## Current completion delta: 5.09
+
+| Mathematical claim | Lean declaration | Source relation and status |
+| --- | --- | --- |
+| Chebyshev theta error with every fixed logarithmic saving | `classicalChebyshevThetaLogSaving_native` | Native quantitative psi estimate plus Mathlib's explicit prime-power correction. Proved; no new dependency. |
+| Prime-free intervals eventually satisfy `4 H (log N)^2 ≤ N` | `eventually_four_mul_primeFree_length_log_sq_le` | Constancy of theta on the literal half-open interval; Bertrand gives `H<N`, and two quantitative errors give `H≤3N/(16 log² N)`. Proved uniformly in H. |
+| The actual Section 4 upper-scale consumer | `eventually_four_factorialPrimeScale_le_unconditional` | Actual F3 witnesses imply prime-freeness. Proves exactly `4 P≤N` at `P=H log² N`, formerly obtained from BHP. |
+| Complete Lemma 4.2 | `taoLemma42_unconditional` | Both unchanged low/high geometric contradictions consume the proved upper scale and unconditional specialized Theorem 2.5. Proved. |
+| Exact Theorems 1.9 and 1.10 | `taoTheorem19_unconditional`, `taoTheorem110_unconditional` | Existing counting and unconditional square Erdős--Selfridge chains consume Lemma 4.2; no new mathematical hypothesis. |
+| All four unchanged frozen public contracts | `taoMainTheorems_unconditional` | Conjunction of the four unconditional endpoint proofs in `PublicTheorems.lean`. |
+| Semantic release checks | Ten `regression_*` declarations in `SemanticRegression.lean` | Exact interval/product, count partitions, squarefree parity and zero/one conventions, fiber multiplicity, epsilon quantifiers and signs, and all four public contracts. Compiled and explicitly rerun. |
+
+Proof-route substitution: Tao's Section 4 uses Proposition 2.3(ii) to obtain
+an upper scale for `P=H(log N)^2`. Inspection of both formal contradiction
+consumers shows that they require only `4 P≤N`, not the exponent `0.525`.
+The PNT theorem above proves that exact requirement on every actual F3
+interval, at one eventual start threshold independent of H and a. All
+remaining hypotheses and both public counting conclusions are unchanged.
+Thus this is a proved replacement at the consumed scale, not a proof of
+`TaoProposition23iiConclusion` or an assumption of BHP.
+
+The integrated build and the complete canonical release verifier passed on
+2026-09-19; the reproduction manifest records the unsuppressed log.
+All earlier completion-delta sections below are historical.
+
+## Historical completion delta: 5.08
+
+| Mathematical claim | Lean declaration | Source relation and status |
+| --- | --- | --- |
+| Nonzero Stepanov auxiliary polynomial from a simple root | `polynomialStepanovAuxiliary_injective_of_simple_root` | Separated orders of vanishing; explicit Hasse constraints and degree bounds. Proved. |
+| Uniform square-root norm-character sum bound above an explicit field-size threshold | `finiteField_norm_polynomial_sum_le_sqrt_of_rootMultiplicity_one` | Polynomial-method roadmap: Cochrane--Pinner, Section 3. Actual finite fields, norm fibers, natural-floor parameters, and translation are proved internally. |
+| Sharp all-extension bound at a root of multiplicity one | `primeRootMultisetExtensionWeilBounds_of_simple_root` | Eventual Stepanov bounds plus the unconditional Newton recurrence and spectral amplification. Proved. No general arbitrary-multiplicity Weil claim. |
+| Actual prime quotient and cubefree complete-sum bounds | `taoPrimeLinearQuotientWeilBound_unconditional`, `taoPrimitiveCubefreeBurgessCompleteWeilBoundRSeven_unconditional` | Unique numerator root is simple; the denominator case follows by block swap and character inversion. Prime-square and CRT consumers are assembled. Proved. |
+| Exact Tao Theorem 1.7 | `taoTheorem17_unconditional` | Unconditional explicit Burgess certificate plus the already proved critical saddle and full public endpoint. No analytic premise remains. |
+
+Theorems 1.9 and 1.10 still depend on Proposition 2.3(ii)/BHP. Their
+conclusions and the whole-proof completion contract are unchanged.
+
+## Historical Kummer support delta: 5.07
+
+| Mathematical claim | Lean declaration | Source relation and status |
+| --- | --- | --- |
+| Monic-polynomial character sums vanish at and above the support degree when a local character is nontrivial | `primeRootMultisetMonicLseriesCoefficient_eq_zero` | Internal interpolation and orthogonality argument. Proved. |
+| Finite orbit Euler coefficients equal the weighted monic-polynomial sums | `primeRootMultisetOrbitEulerProduct_coeff_eq_monic` | Minimal-polynomial conjugacy and unique factorization. Proved. |
+| Every Newton coefficient equals the signed monic coefficient | `primeRootMultisetNewtonElementary_eq_signed_monicCoefficient` | Literal correlations, including degree one, realized in a factorial-degree ambient field. Proved. |
+| General literal characteristic recurrence with one reduced positive root multiplicity | `primeRootMultisetNewtonPowerSum_characteristic_recurrence` | Polynomiality and inverse Newton identities; no Weil or recurrence premise. Proved. |
+| Literal Legendre quadratic recurrence | `primePowerLegendreExtensionCorrelation_characteristic_recurrence` | Exact three-root specialization with positive exponents, distinct roots, and reduced multiplicity at zero. Proved. |
+| Exact Theorem 1.7 from literal Weil inequalities alone | `TaoPrimeLiteralWeilConditions.toTheorem17` | Public conclusion unchanged. The remaining all-extension Weil bounds are open; no integrality, recurrence, or spectral-existence premise remains. Conditional. |
+
+## Historical Kummer support delta: 5.06
+
+| Mathematical claim | Lean declaration | Source relation and status |
+| --- | --- | --- |
+| Literal degree-d correlation equals the weighted d-step Frobenius fixed-point sum in any divisible-degree ambient field | `primeRootMultisetExtensionCorrelation_eq_fixed_sum` | Internal finite-field support for the Burgess/Kummer input to Theorem 1.7; includes the literal degree-one convention. Proved. |
+| Periodic integral weights give integral Newton coefficients in every degree | `finitePermutationWeight_newton_integral` | Internal weighted-cycle divisor sum and finite formal Euler-product proof; no spectral or analytic assumption. Proved. |
+| Every literal Kummer Newton elementary coefficient is an algebraic integer | `primeRootMultisetNewtonElementary_integral` | Unconditional for all primes, all characters, all root multisets, and all natural degrees; supersedes the degree-at-most-five boundary. Proved. |
+| Canonical Newton roots are integral | `primeRootMultisetCanonicalEigenvalues_integral` | Monicity and the existing coefficient/root equivalence applied to the all-degree theorem. Proved. |
+| Exact Theorem 1.7 from only the remaining Weil and recurrence clauses | `TaoPrimeLiteralWeilRecurrenceConditions.toTheorem17` | The public conclusion is unchanged; the Legendre and higher-root literal Weil bounds and characteristic recurrences remain explicit open assumptions. Conditional, not a main-theorem completion. |
+
+## Historical authority and status narrative
 
 Primary source: Terence Tao, *Products of consecutive integers with unusual
 anatomy*, arXiv `2603.27990v2`, pinned under `Sources/`.

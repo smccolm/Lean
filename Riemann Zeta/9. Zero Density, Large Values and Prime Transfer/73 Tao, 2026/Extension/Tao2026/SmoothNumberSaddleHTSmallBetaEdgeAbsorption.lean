@@ -31,7 +31,7 @@ theorem eventually_smoothSaddleHT_smallBeta_verticalWeightLog_le_log_sq
   have heta := smoothSaddleHTContourShift_pos hy ε
   have h := hweight (2 * smoothSaddleHTContourShift y ε) le_rfl
   convert h using 1
-  ring
+  ring_nf
 
 /-- Uniform scalar absorption of the complete negative-left edge majorant
 into the source-faithful HT Lemma 6 error shape. -/

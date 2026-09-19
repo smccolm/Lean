@@ -4,7 +4,59 @@ This is the detailed readiness and future completion ledger for node 73.
 Checked groundwork and input items do not imply that a public theorem from the
 paper has been formalized.
 
-## Groundwork completed
+## Current completion delta: 5.09
+
+- [x] Prove arbitrary logarithmic savings for Chebyshev theta from native quantitative PNT.
+- [x] Prove eventual prime-free shortness `4 H (log N)^2 ≤ N`, including endpoints and thresholds.
+- [x] Apply that exact scale to actual F3 witnesses and close both cases of Lemma 4.2.
+- [x] Prove the exact unconditional Theorems 1.9 and 1.10.
+- [x] Export all four unchanged public contracts in `PublicTheorems.lean`.
+- [x] Directly import all four new modules and audit all 20 new declarations.
+- [x] Pass the integrated 10284-job build with zero warnings or tactic diagnostics.
+- [x] Pass the explicit axiom audit: 8297 nonempty lists use only standard logical axioms.
+- [x] Run and pass all 10 explicit semantic regression assertions.
+- [x] Pass source hashes, frozen boundaries, pins, root coverage, inventory, and forbidden-shortcut checks.
+- [x] Complete the canonical release verifier with exit code 0 and save the unsuppressed log.
+- [x] Record the log's exact status and SHA-256 in the reproduction manifest and synchronize release documentation.
+- [ ] Optional stronger source theorem: Proposition 2.3(ii)/BHP `0.525` remains unformalized.
+- [ ] Optional broader Kummer alternative: arbitrary-multiplicity geometric interfaces remain conditional.
+
+The two optional items are not hypotheses of any of the four public endpoints.
+The crosswalk records exactly why the proved PNT scale supplies every actual
+Section 4 consumer without strengthening a public hypothesis. All older
+checkpoint and open-item lists below are historical, not remaining release
+obligations.
+
+## Historical completion delta: 5.08
+
+- [x] Prove Hasse multiplicity bounds and the auxiliary linear constraints.
+- [x] Prove nonvanishing from separated simple-root orders and the exact dimension condition.
+- [x] Choose integer parameters and prove explicit square-root norm-fiber and character-sum bounds.
+- [x] Translate an arbitrary simple root and amplify eventual bounds to sharp all-extension Weil bounds.
+- [x] Consume the actual unique-tag Burgess data, including the denominator-root swap.
+- [x] Prove prime and cubefree complete Weil bounds for all r and the required r=7.
+- [x] Prove `taoTheorem17BurgessCertificate_unconditional` and the exact `taoTheorem17_unconditional`.
+- [x] Import all twelve production modules and add 61 declaration audits.
+- [ ] Prove Proposition 2.3(ii)/BHP and thereby close Theorems 1.9 and 1.10.
+- [ ] Complete every combined main-theorem release gate.
+
+The broader arbitrary-multiplicity Kummer interfaces in historical sections
+are conditional alternatives, not remaining premises of Theorem 1.7.
+All release-numbered sections below record their historical checkpoint;
+their old open-item lists are superseded by this current completion ledger.
+
+## Historical Kummer delta: 5.07
+
+- [x] Identify Frobenius orbits with monic irreducible polynomials, including degree and weight.
+- [x] Prove the finite Euler-product coefficient identity by unique factorization.
+- [x] Prove monic-polynomial character-sum vanishing by interpolation and orthogonality.
+- [x] Prove all-degree Newton polynomiality and the literal characteristic recurrence.
+- [x] Prove the Legendre quadratic specialization and the Weil-only Theorem 1.7 bridge.
+- [x] Add all five production imports and 68 declaration/endpoint axiom audits.
+- [ ] Prove the remaining literal all-extension Weil bounds.
+- [ ] Prove Proposition 2.3(ii)/BHP and complete the main-theorem release.
+
+## Groundwork record
 
 - [x] Preserve the human-readable RH-map node `73 Tao, 2026/`.
 - [x] Identify the intended paper from the local inference agenda and verify
@@ -50,7 +102,7 @@ paper has been formalized.
 - [ ] Freeze any additional dependency closure only when a later crosswalk row
   demonstrates that it is required.
 
-## Formalization - active
+## Historical implementation ledger (original source program)
 
 - [x] Freeze exact Lean conclusion contracts for Theorems 1.7--1.10, with
   literal counting functions and distinct quantified asymptotic predicates.
@@ -1659,30 +1711,33 @@ paper has been formalized.
   bracketing; it is no longer a separate analytic input.
 - [x] Pin and hash the Baker--Harman--Pintz primary source, with exact theorem
   and proof locators.
-- [ ] Formalize the Baker--Harman--Pintz bound in Proposition 2.3(ii). The
-  pinned paper is provenance only and is not proof evidence. The exact
-  backward-to-forward endpoint and finite-exception transfer is proved; the
-  source theorem's analytic sieve argument remains.
-- [ ] Prove the selected release scope without `sorry`, `admit`, project
-  postulates, or unsafe proof bypasses.
+- [ ] Optional stronger alternative: formalize the Baker--Harman--Pintz bound
+  in Proposition 2.3(ii). Its pinned paper is provenance, not proof evidence.
+  The endpoint transfer is proved, but the analytic sieve theorem is not.
+  Release 5.09 proves the exact consumed upper scale by quantitative PNT,
+  so this is no longer an endpoint prerequisite.
+- [x] Prove all four selected public contracts without `sorry`, `admit`,
+  project postulates, or unsafe proof bypasses.
 - [x] Add an executable development `Audit.lean` covering every current Tao
   theorem declaration.
 - [x] Extend the development verifier with real source, import, diagnostic,
   frozen-hash, file-set, and axiom contracts.
-- [ ] Promote the development verifier to a proof-release verifier only when
-  all four public theorem endpoints exist.
+- [x] Promote the verifier to the four-theorem proof-release verifier and pass
+  its explicit audit, semantic, and persistent-log gates.
 
-## Release acceptance - future
+## Release acceptance - passed in 5.09
 
-- [ ] Every claimed result has an exact source crosswalk.
-- [ ] Every vendored or copied dependency has immutable provenance.
-- [ ] The production root builds with zero project diagnostics.
-- [ ] Public endpoints pass a transitive axiom audit.
-- [ ] Source hashes and frozen dependency boundaries pass.
-- [ ] README claims match the executable audit and reproduction manifest.
-- [ ] The architecture dashboard reflects actual, not aspirational, status.
+- [x] Every claimed result has an exact source crosswalk, including the PNT substitution.
+- [x] Every vendored or copied dependency has immutable provenance.
+- [x] The production root builds with zero project diagnostics.
+- [x] All four public endpoints pass the explicit transitive axiom audit.
+- [x] Source hashes and frozen dependency boundaries pass.
+- [x] All 10 semantic regression assertions pass explicitly.
+- [x] The complete unsuppressed log and exact status are recorded in the manifest.
+- [x] README claims match the executable audit and reproduction manifest.
+- [x] The architecture distinguishes the proved main route from unused conditional alternatives.
 
-## Current stop line
+## Historical stop line
 
 The verified stop line includes Proposition 2.3(i),(iii), the exact `VB¹`
 zeta-ratio asymptotic, the corrected full Lemma 3.1 contract conditional on
@@ -4556,6 +4611,42 @@ before the source's `14/3` simplification.
   homogeneous expressions by finite induction.
 - [x] Deduce unconditional integrality of Newton elementary degree three.
 - [ ] Prove the remaining finite Newton integrality in degrees at least four
+  and the literal higher-root and Legendre Weil bounds/recurrences.
+
+## Prime-equidistribution 5.04
+
+- [x] Decompose the full quartic Frobenius locus into four-element orbits.
+- [x] Identify the two-step fixed locus with the quadratic subfield and prove
+  that quartic norm-lifted weights there are squares of quadratic weights.
+- [x] Prove integrality of the degree-four complete homogeneous expression by
+  finite induction.
+- [x] Deduce unconditional integrality of Newton elementary degree four.
+- [ ] Prove the remaining finite Newton integrality in degrees at least five
+  and the literal higher-root and Legendre Weil bounds/recurrences.
+
+## Prime-equidistribution 5.06 (historical)
+
+- [x] Embed arbitrary divisor-degree finite fields and identify Frobenius fixed loci.
+- [x] Prove partial-norm descent, orbit invariance, and repeated-period power identities.
+- [x] Prove the weighted divisor-sum formula for every finite permutation.
+- [x] Construct integral formal Euler factors and prove their differential equation.
+- [x] Compare formal coefficients with the exact Newton recursion in every degree.
+- [x] Prove all-degree Kummer Newton integrality and canonical-root integrality.
+- [x] Remove integrality from the literal residual consumed by Theorem 1.7.
+- [x] Eliminate the three inherited contour `ring` diagnostics.
+- [ ] Prove the remaining literal higher-root and Legendre Weil bounds/recurrences.
+- [ ] Prove Proposition 2.3(ii)/BHP and finish the combined main-theorem release.
+
+## Prime-equidistribution 5.05 (historical)
+
+- [x] Prove a general weighted order-five orbit decomposition.
+- [x] Identify quintic Frobenius fixed points and norm-lifted weights.
+- [x] Prove integrality of the degree-five complete homogeneous expression by
+  finite induction.
+- [x] Assemble the fifth Newton numerator from the earlier aggregate residuals
+  and the quintic orbit sum.
+- [x] Deduce unconditional integrality of Newton elementary degree five.
+- [ ] Prove the remaining finite Newton integrality in degrees at least six
   and the literal higher-root and Legendre Weil bounds/recurrences.
 
 ## Prime-equidistribution 4.41

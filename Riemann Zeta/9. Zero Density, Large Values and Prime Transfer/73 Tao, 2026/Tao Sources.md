@@ -1,5 +1,44 @@
 # Tao 2026 Sources
 
+## Release 5.09 source note
+
+No new source artifact or dependency is introduced. The final Section 4
+route combines `classicalChebyshevPsiDeLaValleePoussin_native` with the pinned
+Mathlib theorem `Chebyshev.abs_psi_sub_theta_le_sqrt_mul_log`, then proves
+prime-free shortness `4 H (log N)^2 ≤ N` internally. The crosswalk identifies
+the exact replacement for the original BHP consumer.
+
+All four frozen public endpoints are now proved and passed the release
+verifier. BHP's `0.525` theorem remains unformalized: its pinned paper is
+provenance for the stronger original alternative, not proof evidence or a
+premise of the final route. The broader Kummer interfaces likewise remain
+optional conditional alternatives to the proved simple-root route.
+All twelve pinned source artifacts and all frozen dependency hashes passed.
+
+## Historical release 5.08 source note
+
+The author-hosted Cochrane--Pinner paper, *Using Stepanov's method for
+exponential sums involving rational functions*, is pinned as
+`Sources/cochrane-pinner-stepanov-author.pdf`. Its Section 3 is a roadmap
+for the polynomial method. The formal proof supplies its own simple-root
+nonvanishing, Hasse constraints, dimension count, integer parameter choice,
+norm-fiber count, and character cancellation; no paper theorem is admitted.
+The artifact, date distinction, DOI, exact locators, and SHA-256 are recorded
+in `Sources/PINS.md` and `Sources/SHA256SUMS.txt`.
+
+Together with the existing Newton recurrence, this proves the simple-root
+Weil theorem actually required by Burgess and closes Theorem 1.7. It does
+not assert the broader arbitrary-multiplicity Kummer theorem or BHP.
+
+## Historical release 5.07 source note
+
+No new external source or dependency is introduced. The polynomiality and
+recurrence proofs use the pinned Mathlib interpolation, character
+orthogonality, minimal-polynomial conjugacy, polynomial factorization, and
+formal power series APIs. Exact claims and consumers are recorded in the
+release-5.07 crosswalk. This does not claim a proof of the remaining Weil
+bounds or BHP theorem.
+
 `Sources/` is the provenance authority for node 73. It currently contains the
 exact v2 PDF and TeX source archive for the target paper, the Baker--Harman--
 Pintz paper used in Proposition 2.3(ii), the Erdős--Selfridge paper used in
@@ -106,7 +145,7 @@ Oppenheim concerning “Factorisatio Numerorum”*, Journal of Number Theory 17
 - Do not add candidate background sources until the paper crosswalk identifies
   why they are needed.
 
-## Current limits
+## Historical source-survey limits
 
 The source archive has been validated as readable but not extracted into the
 repository. An initial theorem-number and dependency survey is recorded in

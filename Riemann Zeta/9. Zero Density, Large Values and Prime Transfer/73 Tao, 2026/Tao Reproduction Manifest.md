@@ -2,10 +2,143 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-5.03`. It
-reproduces the source identities, pinned build environment, initial source
-definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
-2.3(i),(iii). It is not a main-theorem release manifest.
+This is the four-public-theorem release manifest, version `tao-main-5.09`.
+The exact unchanged Theorems 1.7--1.10 are proved without additional
+mathematical hypotheses. The canonical release verifier passed on
+2026-09-19. Older versioned sections below are historical checkpoints.
+
+## Verified release: tao-main-5.09
+
+The integrated `lake build Tao2026 Tao2026.Audit` completed successfully
+with 10284 jobs. The canonical `cmd /c run_tao_build.bat --no-pause` returned
+exit code 0 and `FINAL RESULT: PASS`. Its complete unsuppressed transcript is
+[tao-build-20260919-062837-b948c503.log](logs/tao-build-20260919-062837-b948c503.log),
+with a normal PowerShell transcript end marker at 2026-09-19 06:30:07 local
+time (America/Vancouver).
+
+Log SHA-256:
+`9A05049F736D09DD442D8E7983F9CD33D3BC58384D9BB270CC0BFA290F98E47F`.
+
+This final run includes the synchronized architecture and the gate requiring
+one emitted axiom report per source audit command. The verified runner
+`Tools/run_tao_build.ps1` has SHA-256
+`8FF435DC43624AEF6E177DDC22C609E316AF94CB55797C4E6CD0644F7CC15B50`.
+An earlier successful run is retained as
+`logs/tao-build-20260919-061749-9489c6b1.log`, SHA-256
+`2D37C52847EFD5A84385B3723189974AE635BEC1E309806F5952BBC3ADFB5D5E`.
+Only documentation/status-record edits followed the final verification;
+no production Lean source, dependency, or verifier check was changed.
+
+Verified gates:
+
+- Twelve pinned source artifacts and all 1,339 captured dependency hashes
+  match their manifests and exact frozen file-set boundary.
+- Lean `v4.30.0`, Mathlib
+  `c5ea00351c28e24afc9f0f84379aa41082b1188f`, and the remaining frozen pins
+  match. No dependency version changed in this release.
+- The complete isolated production root and dependency closure build with
+  zero Lean warnings, linter suggestions, or tactic diagnostics.
+- `Tao2026/Audit.lean` is explicitly rerun. Its 8340 declaration reports
+  consist of 8297 nonempty standard-axiom lists and 43 axiom-free reports.
+  Every nonempty list is checked against `propext`, `Classical.choice`,
+  and `Quot.sound`; all four public endpoints and all 20 new declarations
+  have mandatory coverage.
+- The explicit `Tao2026/SemanticRegression.lean` run passes all 10 assertions:
+  literal interval endpoints/product, one-term/nontrivial count partitions,
+  squarefree parity and zero/one conventions, factorial-fiber multiplicity,
+  epsilon quantifiers, upper/lower scale signs, and the four exact contracts.
+- Inventory, raw Mermaid, direct production-root import coverage, and
+  forbidden-shortcut scans pass. The two pre-existing root API probes remain
+  non-production; they are also scanned, not deleted or promoted.
+- The verifier writes all build and audit output to the transcript without
+  diagnostic suppression, then records its exact final status and end marker.
+  Tool-display truncation does not truncate the saved transcript.
+
+Four new production modules close this release:
+`PrimeFreeLogShortness`, `Theorem19And110Complete`, `PublicTheorems`, and
+`SemanticRegression`. The first proves a quantitative theta error and
+eventual prime-free bound `4 H (log N)^2 ≤ N`. The second supplies that
+exact upper scale to the unchanged low/high Lemma 4.2 contradictions and
+the established Section 4 counting endpoints. The combined public theorem is
+`taoMainTheorems_unconditional`.
+
+Scope: the stronger BHP `0.525` statement is still unformalized and is not a
+premise of this PNT-based proof. Broader arbitrary-multiplicity Kummer
+interfaces remain optional conditional alternatives to the simple-root
+Burgess route. This manifest certifies the four frozen public contracts and
+their release gates, not every stronger auxiliary statement of the paper.
+
+## Historical release delta: prime-equidistribution-5.08
+
+Twelve new production modules prove the Stepanov simple-root square-root
+estimate, amplify it to the exact all-extension Weil bound, consume the
+unique-tag prime Burgess interface, and assemble the cubefree Burgess
+certificate and unconditional `taoTheorem17_unconditional`. The public
+Theorem 1.7 contract is unchanged. All twelve modules are directly imported
+and all 61 new public declarations have axiom audits. Cochrane--Pinner's
+author copy is newly pinned as a proof roadmap; no dependency version changed.
+
+On 2026-09-19, the full `lake build Tao2026 Tao2026.Audit` passed with
+10280 jobs. The canonical `cmd /c run_tao_build.bat --no-pause` then returned
+exit code zero and `FINAL RESULT: PASS`. Its standard-axiom allowlist,
+warning/tactic-diagnostic, inventory, direct-root-coverage, raw-Mermaid,
+source-hash, frozen-dependency, pin, and forbidden-shortcut gates passed.
+The new Theorem 1.7 dependency audit contains only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+The first integrated build exposed the audit's missing independent import,
+which was repaired. The first canonical run exposed the source manifest's
+old eleven-artifact count; it now requires twelve, including the newly
+pinned Cochrane--Pinner PDF. No check was bypassed. The verifier's historical
+milestone messages are explicitly labeled historical, and its current final
+summary reports the actual endpoint status.
+
+Theorems 1.7 and 1.8 are unconditional; Theorems 1.9 and 1.10 still require
+Proposition 2.3(ii)/BHP. No combined main-theorem release is claimed.
+
+## Historical release delta: prime-equidistribution-5.07
+
+Five production modules prove monic-polynomial character-sum vanishing,
+the orbit/minimal-polynomial degree and weight identities, unique-
+factorization Euler coefficients, the all-degree Newton coefficient identity
+and cutoff, and the general and Legendre characteristic recurrences. The
+Weil-only Theorem 1.7 endpoint has no remaining integrality, recurrence, or
+spectral-existence premise. Its literal Weil inequalities remain unproved.
+Theorems 1.9 and 1.10 still require Proposition 2.3(ii)/BHP. No source pin,
+dependency, or public conclusion changed. All five modules are root-imported;
+all 68 new public declarations and endpoint bridges have axiom audits.
+
+On 2026-09-19, `lake build Tao2026 Tao2026.Audit` passed with 10268 jobs.
+The canonical `cmd /c run_tao_build.bat --no-pause` then passed with exit
+code zero. Its standard-axiom allowlist, warning/tactic-diagnostic gate,
+inventory, direct root coverage, raw Mermaid, source hashes, frozen
+dependencies, pins, and forbidden-shortcut checks all passed. The 68 new
+audit entries are present. Earlier sections record historical release
+states, not the current residual hypotheses. No main-theorem completion
+is claimed.
+
+## Historical release delta: prime-equidistribution-5.06
+
+Four production modules prove arbitrary-degree finite-field subfield and
+norm identities, weighted finite-permutation orbit sums, integral formal
+Euler products, and unconditional all-degree Kummer Newton integrality.
+Every canonical Newton root is integral, and the Theorem 1.7 endpoint now
+requires only literal Weil bounds and characteristic recurrences. The root
+imports all four modules and the audit includes all 67 new declarations and
+endpoint bridges. No theorem statement, source pin, or dependency is weakened.
+
+The three inherited contour `ring` diagnostics have been eliminated by
+normalization, and the canonical build gate now rejects tactic suggestions
+as well as warnings, and checks every emitted axiom list against the standard
+allowlist. On 2026-09-19, `lake build Tao2026 Tao2026.Audit` passed with
+10263 jobs. The canonical `cmd /c run_tao_build.bat --no-pause` subsequently
+passed with exit code zero and `FINAL RESULT: PASS`; it checked 8148 axiom
+lists and emitted no warnings or tactic suggestions. All 67 new audit
+entries are present. Inventory, source hashes, frozen dependencies, pins,
+raw Mermaid, direct root coverage, and forbidden-shortcut checks passed.
+An initial inventory-stage failure was a comment line beginning with the
+word `constant`; rewording the prose resolved that lexical false positive
+without weakening the scanner. No completed main-theorem release is claimed.
 
 ## Pinned source
 
@@ -1735,10 +1868,10 @@ The command verifies:
    production and frozen source; and
 7. the warning-free `Tao2026` build and executable axiom audit.
 
-The runner emits no persistent log. Console success is evidence only for the
-checkout on which it was run.
+At this historical checkpoint the runner emitted no persistent log.
+Release 5.09 supersedes this limitation with an unsuppressed transcript.
 
-## Current reproducibility boundary
+## Historical reproducibility boundary
 
 The source crosswalk records the definitions, main targets, and proved
 Proposition 2.3(i),(iii). Release 3.71 includes the first unconditional public
@@ -5601,6 +5734,63 @@ Tao2026 Tao2026.Audit` completed successfully with 10257 jobs. The focused
 axiom audit reported only `propext`, `Classical.choice`, and `Quot.sound` for
 the order-three orbit theorem, cubic finite-field lemmas, complete-homogeneous
 integrality, and the third Newton coefficient.
+
+## Release delta: prime-equidistribution-5.04
+
+`BurgessWeilPrimeKummerNewtonQuarticIntegrality.lean` proves a weighted orbit
+formula for the full four-element locus of every order-four permutation.
+For quartic finite-field Frobenius, the two-step fixed locus is identified
+with the quadratic subfield by an explicit algebra embedding.  The embedding
+intertwines Frobenius, and transitivity of the field norm proves that each
+embedded quartic root-multiset weight is the square of its quadratic weight.
+
+The fourth Newton numerator separates into the degree-four complete
+homogeneous expression in the base weights, the degree-two base expression
+times the quadratic-orbit sum, a degree-two complete homogeneous expression
+in those orbit weights, the integral cubic residual, and the full quartic
+orbit sum.  Finite induction proves the degree-four complete-homogeneous term
+integral.  Hence Newton elementary degrees zero through four are
+unconditional; the finite integrality residual starts at degree five.
+Literal Weil bounds and characteristic recurrences remain open in both
+Kummer branches.
+
+On 2026-09-19,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonQuarticIntegrality
+Tao2026 Tao2026.Audit` completed successfully with 10258 jobs. The focused
+axiom audit reported only `propext`, `Classical.choice`, and `Quot.sound` for
+the order-four orbit theorem, quartic finite-field and quadratic-subfield
+lemmas, complete-homogeneous integrality, and the fourth Newton coefficient.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS` twice consecutively, including inventory,
+source-hash, raw-Mermaid, warning-failing build, axiom-audit,
+forbidden-shortcut, root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-5.05
+
+`BurgessWeilPrimeKummerNewtonQuinticIntegrality.lean` proves a weighted orbit
+formula for every order-five permutation.  Applied to quintic finite-field
+Frobenius, fixed points are exactly the embedded base field, fixed weights are
+fifth powers of base weights, and every non-fixed orbit contributes five
+times one algebraic integer.
+
+Finite induction proves the degree-five complete-homogeneous expression
+integral.  The fifth Newton numerator is then organized using the previously
+proved integral aggregate residuals in degrees two, three, and four, together
+with the quintic orbit sum.  Hence Newton elementary degrees zero through
+five are unconditional; the finite integrality residual starts at degree six.
+Literal Weil bounds and characteristic recurrences remain open in both
+Kummer branches.
+
+On 2026-09-19,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonQuinticIntegrality
+Tao2026 Tao2026.Audit` completed successfully with 10259 jobs. The focused
+axiom audit reported only `propext`, `Classical.choice`, and `Quot.sound` for
+the order-five orbit theorem, quintic finite-field lemmas,
+complete-homogeneous integrality, and the fifth Newton coefficient. The
+canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS` twice consecutively, including inventory,
+source-hash, raw-Mermaid, warning-failing build, axiom-audit,
+forbidden-shortcut, root-reachability, and semantic regression gates.
 
 ## Release delta: prime-equidistribution-3.74
 

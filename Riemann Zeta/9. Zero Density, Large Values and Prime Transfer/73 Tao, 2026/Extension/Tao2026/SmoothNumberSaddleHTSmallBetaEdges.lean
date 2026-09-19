@@ -409,7 +409,7 @@ theorem norm_riemannZeta_logDeriv_HT_smallBeta_negativeLeft_le_of_vK
           riemannZeta
             (((1 - beta - smoothSaddleHTContourShift y ε : ℝ) : ℂ) +
               ((t + u : ℝ) : ℂ) * Complex.I)‖ ≤ C + 1 / delta := by
-        convert hlow using 1 <;> simp [delta, eta, R] <;> ring
+        convert hlow using 1 <;> simp [delta, eta, R] <;> ring_nf
       _ ≤ C + 1 / eta := hlow'
       _ ≤ max (C + 1 / smoothSaddleHTContourShift y ε)
           (smoothSaddleHTHighLogDerivativeMajorant y ε) := by
@@ -439,7 +439,7 @@ theorem norm_riemannZeta_logDeriv_HT_smallBeta_negativeLeft_le_of_vK
             (((1 - beta - smoothSaddleHTContourShift y ε : ℝ) : ℂ) +
               ((t + u : ℝ) : ℂ) * Complex.I)‖ ≤
           smoothSaddleHTHighLogDerivativeMajorant y ε := by
-        convert hhigh using 1 <;> simp [delta, eta, R] <;> ring
+        convert hhigh using 1 <;> simp [delta, eta, R] <;> ring_nf
       _ ≤ max (C + 1 / smoothSaddleHTContourShift y ε)
           (smoothSaddleHTHighLogDerivativeMajorant y ε) :=
         le_max_right _ _

@@ -1,5 +1,30 @@
 # Whole-proof operational goal prompt
 
+## Verified completion checkpoint: release 5.09 (2026-09-19)
+
+All four unchanged public contracts are proved unconditionally.
+`taoMainTheorems_unconditional` combines the exact Theorem 1.7, 1.8, 1.9,
+and 1.10 conclusions. The integrated 10284-job build and canonical verifier
+passed. The explicit audit checked 8297 nonempty axiom lists against the
+three standard logical axioms; all 10 semantic regression assertions and
+every remaining release gate passed. The reproduction manifest records the
+complete unsuppressed log and its SHA-256.
+
+The final Section 4 proof uses native quantitative PNT to establish the exact
+consumed upper scale `4 H (log N)^2 ≤ N` on prime-free intervals. It closes
+the unchanged Lemma 4.2 and Theorems 1.9/1.10 without BHP. The stronger BHP
+`0.525` source statement requested in the original proof program remains
+unformalized; it is neither proved nor assumed by this route. Broader
+arbitrary-multiplicity Kummer interfaces likewise remain optional conditional
+alternatives. The crosswalk records these scope distinctions; no public
+hypothesis or conclusion was weakened.
+
+The literal four-public-theorem stopping condition below has been met.
+The original completion contract is retained, and earlier progress/stop-line
+narratives describe historical checkpoints rather than current blockers.
+
+## Completion contract
+
 **Use:** this is the active completion contract for the Tao 2026
 formalization. The owner activated it on 8 September 2026. The current verified
 stop line is Proposition 2.3(i),(iii), exact one-term sums, the complete
@@ -2076,5 +2101,23 @@ expression in the base weights. Combining that term with the quadratic and
 cubic orbit sums gives the exact third Newton numerator as an explicit
 algebraic integer. The finite integrality residual now begins at degree four;
 the literal Weil bounds and characteristic recurrences remain unchanged.
+
+Release 5.04 proves Newton degree four integral unconditionally. Quartic
+Frobenius separates into fixed points, the quadratic subfield, and full
+four-element orbits. An explicit embedding of the quadratic extension into
+the quartic extension intertwines Frobenius, and norm transitivity makes the
+embedded quartic Kummer weight the square of the quadratic weight. The exact
+fourth Newton expression becomes a sum of degree-four and degree-two complete
+homogeneous expressions and integral orbit terms. Thus the finite integrality
+residual now begins at degree five; literal Weil bounds and characteristic
+recurrences remain unchanged.
+
+Release 5.05 proves Newton degree five integral unconditionally. Quintic
+Frobenius has only base-field fixed points and full five-element orbits. The
+fifth Newton numerator is expressed using the degree-five complete homogeneous
+base term, the already-integral aggregate residuals from degrees two through
+four, and the quintic orbit sum. Thus the finite integrality residual now
+begins at degree six; literal Weil bounds and characteristic recurrences
+remain unchanged.
 
 ---

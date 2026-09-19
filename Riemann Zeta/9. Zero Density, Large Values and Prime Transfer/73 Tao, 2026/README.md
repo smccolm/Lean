@@ -1,5 +1,60 @@
 # Tao 2026 formalization
 
+## Verified four-theorem release: 5.09
+
+All four unchanged public contracts are proved without additional mathematical
+hypotheses: `taoTheorem17_unconditional`, `taoTheorem18_unconditional`,
+`taoTheorem19_unconditional`, and `taoTheorem110_unconditional`.
+[PublicTheorems.lean](Extension/Tao2026/PublicTheorems.lean) exports their
+conjunction as `taoMainTheorems_unconditional`.
+
+On 2026-09-19, the integrated build passed all 10284 jobs and
+`cmd /c run_tao_build.bat --no-pause` returned `FINAL RESULT: PASS`.
+The explicit audit checked 8297 nonempty axiom lists against
+`propext`, `Classical.choice`, and `Quot.sound`; the 10 semantic regression
+assertions, zero-diagnostic, source-hash, frozen-boundary, and coverage gates
+also passed. See the [reproduction manifest](Tao%20Reproduction%20Manifest.md)
+and its complete, unsuppressed log.
+
+The final Section 4 proof uses native quantitative PNT to show that every
+sufficiently large prime-free interval satisfies `4 H (log N)^2 ≤ N).
+That is precisely the upper scale consumed by the unchanged Lemma 4.2
+argument. It closes Theorems 1.9 and 1.10 without BHP. The stronger BHP
+`0.525` theorem and broader arbitrary-multiplicity Kummer alternatives
+remain unformalized/conditional; neither is a premise of these endpoints.
+This release certifies the four frozen main-theorem contracts, not every
+stronger auxiliary statement in the paper.
+
+Earlier milestone sections below are historical records, superseded by this
+release status.
+
+## Historical development: 5.08
+
+Theorem 1.7 is now proved unconditionally by `taoTheorem17_unconditional`.
+An explicit Stepanov auxiliary polynomial gives eventual square-root
+cancellation for polynomials with a simple root. The proved Newton recurrence
+amplifies this to the sharp all-extension Weil bound. The actual Burgess
+consumer always supplies a simple root after swapping its tagged blocks and
+inverting the character when necessary. Its prime-square and cubefree
+assembly, explicit Burgess coefficient, and sharp critical saddle endpoint
+then prove the exact frozen Theorem 1.7 contract.
+
+Theorems 1.7 and 1.8 are unconditional. Theorems 1.9 and 1.10 still require
+Proposition 2.3(ii)/Baker--Harman--Pintz; the whole goal remains open. The
+broader arbitrary-multiplicity Kummer Weil interfaces are retained as
+conditional alternatives, not premises of the completed Theorem 1.7 route.
+
+## Historical development: 5.07
+
+All-degree Kummer Newton integrality and the characteristic recurrences are
+now proved. Weighted Frobenius orbit Euler coefficients equal signed monic-
+polynomial character sums; interpolation and orthogonality give their degree
+cutoff. This proves the higher-root recurrence and its Legendre specialization.
+Theorem 1.7 now has only literal all-extension Weil bounds as its Kummer
+residual. Theorem 1.8 remains unconditional; Theorems 1.9 and
+1.10 still require Proposition 2.3(ii)/Baker--Harman--Pintz. The combined
+main-theorem goal remains open. Earlier release sections below are historical.
+
 This directory is the active formalization project for Terence Tao,
 *Products of consecutive integers with unusual anatomy*, arXiv
 `2603.27990v2`. The paper and its TeX source are pinned under `Sources/`.
@@ -14,7 +69,7 @@ instantiation and finite exponent-grid argument also prove all of Lemma
 contract.
 Bertrand's clause (i), the exact Guth--Maynard application in clause (iii),
 and the polynomial-coefficient powerful relation are proved and audited.
-Theorem 1.8 is proved; Theorems 1.7, 1.9, and 1.10 remain conditional. The isolated `Extension/` package
+Theorems 1.7 and 1.8 are proved; Theorems 1.9 and 1.10 remain conditional. The isolated `Extension/` package
 contains the compiled arithmetic-anatomy, interval, counting, and
 asymptotic-language definitions required to state the source results, plus a
 kernel-checked proof of Tao's global constant-length prime-free endpoint
@@ -743,9 +798,10 @@ full source range `theta > 2/15`.
   PNT+ dependencies.
 - `Extension/`: isolated Lean package named `Tao2026`, pinned to the exact
   Mathlib revision used by node 74.
-- `Tools/`: reproducible snapshot refresh tooling and the evolving
-  warning-failing project verifier. It is not yet the final proof-release
-  verifier.
+- `Tools/`: snapshot tooling and the warning-failing four-theorem release
+  verifier, with explicit audit, semantic tests, and persistent transcripts.
+- `logs/`: unsuppressed verifier transcripts; the manifest identifies the
+  successful release log and its SHA-256.
 
 ## Current verification
 
@@ -755,7 +811,17 @@ From this directory, run:
 cmd /c run_tao_build.bat --no-pause
 ```
 
-The runner checks all pinned source hashes, all 1,339 frozen dependency hashes and the exact
+The release-5.09 run certifies all four exact unconditional public endpoints.
+It checks all twelve pinned source artifacts, all 1,339 frozen dependency
+hashes and the exact file set, raw Mermaid, pins, production-root coverage,
+and forbidden shortcuts. It builds the complete root, explicitly reruns the
+8340-declaration axiom audit and 10 semantic assertions, fails on Lean
+diagnostics, and writes an unsuppressed log. The current reproduction manifest
+records the successful status and log hash.
+
+## Historical verifier scope
+
+The former runner checked all pinned source hashes, all 1,339 frozen dependency hashes and the exact
 frozen file set, the raw Mermaid contract, toolchain/dependency pins, direct
 production-root coverage, forbidden proof shortcuts in both production and
 frozen source, the axiom audit, and the warning-free Lake build. Its current
@@ -783,14 +849,14 @@ The node follows the useful role separation established in node 74:
 - `README.md`: public status, layout, and entry points.
 - `Tao Architecture.md`: raw Mermaid planning dashboard; no Markdown wrapper.
 - `Tao Checklist.md`: detailed readiness and future completion ledger.
-- `Tao Goal Prompt.md`: activation contract for the future implementation
-  agent.
+- `Tao Goal Prompt.md`: activated completion contract, verified completion
+  checkpoint, and retained historical proof ledger.
 - `Tao Research Agenda.md`: source-first sequencing and scope controls.
 - `Tao Crosswalk.md`: active paper-to-Lean mapping and semantic-gap ledger.
 - `Tao Sources.md` and `Sources/`: source policy, artifacts, pins, and hashes.
 - `Tao Reproduction Manifest.md`: what can truthfully be reproduced now.
 
-## Next legitimate step
+## Historical next-step plan
 
 For Theorem 1.8, continue Theorem 2.5 from its compiled exact contract, phase
 calculus, complete Fourier coefficient decay/reconstruction, and exact
@@ -802,7 +868,7 @@ Theorem 1.8 endpoint; no finite counting or asymptotic assembly remains.
 In parallel source order, the pinned Baker--Harman--Pintz input in Proposition
 2.3(ii) remains the next missing analytic boundary for Section 4.
 
-## Deliberate non-claims
+## Historical non-claims
 
 The Section 6 branch now includes the audited arithmetic core of Lemma 6.1:
 non-singleton bad intervals satisfy `H≤N` and are prime-free. A local
@@ -3971,3 +4037,35 @@ the quadratic-orbit sum, and the cubic-orbit sum. A finite induction proves
 the complete-homogeneous expression integral without division assumptions.
 Thus only Newton degrees at least four remain in the finite integrality
 clause; all literal Weil and recurrence conditions remain open.
+
+## Prime-equidistribution release 5.04
+
+The fourth higher-root Newton coefficient is now integral unconditionally.
+Quartic Frobenius orbits have sizes one, two, or four.  The size-two locus is
+identified with the quadratic subfield by an explicit finite-field embedding;
+norm transitivity proves that each embedded quartic Kummer weight is the
+square of its quadratic weight.  Full quartic orbits contribute in multiples
+of four.
+
+The exact fourth Newton combination separates into the degree-four complete
+homogeneous expression in the base weights, the degree-two base expression
+times the quadratic-orbit sum, a degree-two complete homogeneous expression
+in those orbit weights, the already-integral cubic residual, and the quartic
+orbit sum.  A finite induction proves the degree-four base expression
+integral.  Thus only Newton degrees at least five remain in the finite
+integrality clause; all literal Weil and recurrence conditions remain open.
+
+## Prime-equidistribution release 5.05
+
+The fifth higher-root Newton coefficient is now integral unconditionally.  A
+general order-five orbit decomposition splits the quintic finite field into
+base-field fixed points and full five-element Frobenius orbits.  Norm lifting
+makes fixed weights fifth powers of the base weights and makes each orbit
+weight constant.
+
+A finite induction proves integrality of the degree-five complete homogeneous
+expression.  The exact fifth Newton numerator is organized using the already
+integral aggregate residuals from degrees two, three, and four, together with
+the quintic orbit sum.  Thus only Newton degrees at least six remain in the
+finite integrality clause; all literal Weil and recurrence conditions remain
+open.
