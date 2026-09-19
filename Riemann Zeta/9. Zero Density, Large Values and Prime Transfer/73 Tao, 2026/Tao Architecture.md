@@ -1049,3 +1049,178 @@ RANDOM["Proposition 6.6 conditional closure<br/>literal 1001-coordinate finite p
     %% nonzero factor p^(n+2)-1 cancels degree by degree to reconstruct the
     %% original system. The 3+-root source propositions are equivalent, and
     %% the geometric form still reaches fixed-r=7 Burgess directly.
+    %% Release 4.73: an explicit projective Mobius map reduces every exact
+    %% three-root correlation to a Jacobi main term minus one deleted point.
+    %% Jacobi Hasse--Davenport makes both terms powers of two integral
+    %% weight-at-most-one eigenvalues. This constructs the rank-two system in
+    %% every degree-divisible exact-three-root case, including one inactive
+    %% root. The residual is now three roots with nondivisible degree or at
+    %% least four roots.
+    %% Release 4.74: if one of the three roots is inactive, its trivial local
+    %% character deletes exactly that point and leaves a two-root Jacobi sum.
+    %% The Jacobi and deleted terms yield two integral weight-at-most-one
+    %% eigenvalues in every degree, with no degree hypothesis. The exact
+    %% three-root residual is therefore only all-active and nondivisible; the
+    %% other branch has at least four roots.
+    %% Release 4.75: the inactive-root deletion formula is generalized to any
+    %% root set and every extension degree. Each deleted value is an integral
+    %% weight-zero power eigenvalue. One active root has zero main sum; two
+    %% active roots have the Hasse--Davenport Jacobi eigenvalue. Thus every
+    %% <=2-active-root system is constructed at rank #roots-1, and the final
+    %% geometric source is exactly the >=3-active-root system.
+    %% Release 4.76: the final cohomological datum is repackaged as the
+    %% unrestricted active-root trace with rank <= #active roots-1. The base
+    %% field and every extension split into this trace minus explicit inactive
+    %% powers. Appending those integral weight-zero eigenvalues reconstructs
+    %% the full system while the active/inactive cardinality identity preserves
+    %% rank <= #roots-1. Only the genuine >=3-active-root cohomology remains.
+    %% Release 4.77: retaining the leading scalar and only active linear
+    %% factors constructs a canonical split polynomial whose root multiset is
+    %% exactly the active roots with unchanged multiplicities. Its ordinary
+    %% Kummer trace equals the active trace over the base field and every norm-
+    %% lifted extension. Full systems for these all-active polynomials convert
+    %% losslessly to active systems, making the final source equivalent to
+    %% ordinary >=3-root Kummer cohomology with every root active.
+    %% Release 4.78: every active multiplicity is reduced modulo orderOf chi.
+    %% The residues are nonzero and strictly below the order, the distinct
+    %% roots are unchanged, and norm lifting preserves the character-power
+    %% identity in every degree. The final source is equivalent to full
+    %% Kummer cohomology for split >=3-root polynomials with all multiplicities
+    %% in the finite range 1,...,orderOf(chi)-1.
+    %% Release 4.79: scalar multiplication contributes the degree-th power of
+    %% its base character value to every extension trace. Dividing by the
+    %% leading coefficient makes the residual polynomial monic without
+    %% changing roots, multiplicities, splitness, or reduced exponents.
+    %% Twisting every eigenvalue by that character value reconstructs the
+    %% original system at the same rank and weight. The final source is now
+    %% monic reduced-exponent >=3-root Kummer cohomology.
+    %% Release 4.80: choose distinct roots a,b and apply the affine coordinate
+    %% (r-a)/(b-a). The new monic split polynomial has the same distinct-root
+    %% count and multiplicities, still has reduced exponents, and contains
+    %% roots 0 and 1. Extension traces differ by the d-th power of
+    %% chi(b-a)^degree, which is absorbed into every eigenvalue. The final
+    %% source is two-point-normalized finite-exponent Kummer cohomology.
+    %% Release 4.81: the exactly-three-root branch is represented literally
+    %% by a canonical polynomial with roots 0,1,t and positive reduced
+    %% exponents m,n,k. The old Jacobi construction removes m+n+k divisible
+    %% by orderOf(chi). The residual is precisely the nondivisible Legendre
+    %% family together with the normalized >=4-root family.
+    %% Release 4.82: the canonical three-root trace over every extension is
+    %% identified with the literal power-Legendre sum for chi_E^m, chi_E^n,
+    %% chi_E^k at 0,1,t. A dedicated rank<=2 integral weight-one Frobenius
+    %% structure is equivalent to the polynomial Kummer system. The residual
+    %% three-root input is now a pure hypergeometric power-trace theorem.
+    %% Release 4.83: rank<=2 is normalized to a literal ordered eigenpair,
+    %% padding ranks 0 and 1 with zero. The converse Fin 2 system is exact.
+    %% Its traces satisfy the quadratic recurrence determined by pair sum and
+    %% product, and its weight bounds recover the base 2*sqrt(p) Weil bound.
+    %% Release 4.84: every monic split higher-root polynomial is replaced
+    %% literally by the product of X-C r over its root multiset. Roots, degree,
+    %% multiplicities, splitness, and reducedness become exact finite multiset
+    %% data. The remaining source is now a Legendre eigenpair together with a
+    %% normalized multiset containing 0 and 1 and at least four support points.
+    %% Release 4.85: the higher-root system's variable rank is padded with
+    %% zeros to the literal maximal vector Fin (#support-1). Exact finite-sum
+    %% identities preserve all power traces, and the converse vector gives a
+    %% maximal-rank system. The residual is now two explicit finite vectors:
+    %% the Legendre pair and the normalized higher-root eigenvalue vector.
+    %% Release 4.86: mapped evaluation of the canonical multiset polynomial
+    %% is identified with the direct product of local character powers over
+    %% its support. This holds in every norm-lifted extension. Both residual
+    %% branches are now literal finite-field character sums equipped with
+    %% fixed integral weight-one eigenvalue vectors.
+    %% Release 4.87: the higher-root vector is quotiented by ordering to an
+    %% exact spectral multiset of cardinality #support-1. Conversions preserve
+    %% multiplicities and all power traces. Its product of X-C alpha is a
+    %% canonical monic split Frobenius polynomial with precisely that root
+    %% multiset and degree.
+    %% Release 4.88: the Legendre pair is likewise quotiented by ordering to
+    %% a two-element spectrum, with a canonical monic split quadratic
+    %% Frobenius polynomial. The complete residual is now uniformly two
+    %% families of bounded integral spectra realizing explicit character-sum
+    %% power traces.
+    %% Release 4.89: the two-element Legendre spectrum's multiset sum and
+    %% product are its intrinsic integral trace and determinant. Its canonical
+    %% Frobenius polynomial is exactly X^2-C(trace)X+C(determinant), and all
+    %% extension correlations satisfy the resulting order-two recurrence
+    %% without choosing an eigenvalue ordering.
+    %% Release 4.90: the unconditional critical saddle theorem is composed
+    %% into the public endpoint. Explicit cubefree Burgess alone now implies
+    %% Theorem 1.7. Fixed-r=7 complete Weil, the full Kummer system, and the
+    %% final two intrinsic spectral sources each map to a concrete Burgess
+    %% certificate carrying the public conclusion. Only construction of those
+    %% Kummer spectra remains on the Theorem 1.7 route.
+    %% Release 4.91: the first two explicit Legendre correlations determine
+    %% canonical integral trace and determinant coefficients and therefore one
+    %% explicit quadratic Frobenius polynomial. Every possible spectrum has
+    %% exactly its roots; spectra for fixed input data form a subsingleton.
+    %% The remaining Legendre leaf is existence for this fixed polynomial.
+    %% Release 4.92: that explicit quadratic unconditionally has one canonical
+    %% two-element complex root multiset. A Legendre spectrum exists exactly
+    %% when these roots are integral and sqrt(p)-bounded and the literal
+    %% correlations obey the fixed quadratic recurrence. Two-step induction
+    %% reconstructs every trace. The abstract Legendre existential is gone;
+    %% these concrete conditions and the higher-root spectra remain.
+    %% Release 4.93: every literal extension correlation, hence the canonical
+    %% trace, is unconditionally an algebraic integer. Both fixed roots are
+    %% integral iff the explicit determinant is integral, by an integral-
+    %% closure transitivity argument. The Legendre leaf is now determinant
+    %% integrality, fixed-root weight bounds, and the literal recurrence.
+    %% Release 4.94: quadratic-extension Frobenius orbits and base-pair swap
+    %% orbits have the same diagonal, because norm lifting squares every base
+    %% weight. The Newton determinant numerator is therefore twice an explicit
+    %% finite sum of algebraic integers, proving determinant integrality
+    %% unconditionally. Only fixed-root sqrt(p) bounds and the literal
+    %% recurrence remain in the Legendre leaf; higher-root spectra remain.
+    %% Release 4.95: the recurrence identifies every literal correlation with
+    %% the negative power sum of the two canonical roots. A converse power-sum
+    %% spectral-radius lemma makes the individual sqrt(p) root bounds exactly
+    %% equivalent to sharp Weil bounds in every extension degree. The roots
+    %% are unconditionally integral. The Legendre leaf is now stated solely
+    %% as the literal all-extension Weil bound plus literal recurrence.
+    %% Release 4.96: Newton identities recover every elementary symmetric
+    %% coefficient of a finite complex multiset from its positive power sums.
+    %% Thus the literal higher-root extension traces and prescribed cardinality
+    %% determine the spectral multiset with multiplicity. Its spectrum type is
+    %% a subsingleton, so existence is unique existence and its Frobenius
+    %% polynomial is canonical. Only existence of this unique higher-root
+    %% spectrum and the literal Legendre Weil/recurrence statements remain.
+    %% Release 4.97: a well-founded Newton recursion constructs every
+    %% higher-root elementary symmetric coefficient from the first literal
+    %% correlations. The resulting polynomial is unconditionally monic of
+    %% degree #support-1 and has a fixed complex root multiset of that exact
+    %% cardinality. Spectrum existence is equivalent to integrality, weight,
+    %% and all-trace predicates on these canonical roots; the abstract
+    %% higher-root spectral existential is removed from the residual.
+    %% Release 4.98: canonical root power sums satisfy the characteristic
+    %% recurrence of the Newton polynomial. Monicity proves recurrence
+    %% uniqueness from the first degree-many terms. Thus all higher-root
+    %% trace identities are replaced by a finite initial segment plus the
+    %% explicit Newton recurrence, and this residual reaches Theorem 1.7.
+    %% Release 4.99: Vieta coefficient extraction identifies the canonical
+    %% roots' elementary symmetric sums with all constructed Newton
+    %% coefficients. Inverse Newton induction makes the finite initial power
+    %% sums automatic. Only canonical-root integrality, sqrt(p) weight, and
+    %% the literal characteristic recurrence remain in the higher-root leaf.
+    %% Release 5.00: for a monic split polynomial, integral roots are
+    %% equivalent to integral coefficients. Exact Newton degree makes this a
+    %% finite coefficient predicate, also equivalent to integrality of the
+    %% recursively constructed elementary coefficients. Rootwise integrality
+    %% disappears from the residual; weight and recurrence remain.
+    %% Release 5.01: Newton identities for every powered finite multiset plus
+    %% Cauchy's root bound prove that sharp bounds on all positive power sums
+    %% are equivalent to individual root bounds. The higher-root sqrt(p)
+    %% clause becomes the literal all-extension Weil bound. Its residual is
+    %% now finite coefficient integrality, literal Weil, and recurrence only.
+    %% Release 5.02: the quadratic-extension correlation is split into
+    %% Frobenius orbits and compared with the coordinate-swap decomposition
+    %% of the squared base correlation. Their common fixed-point contribution
+    %% proves the second Newton coefficient integral; degrees zero and one are
+    %% immediate. Only Newton integrality in degrees at least three remains,
+    %% together with the literal Weil bounds and characteristic recurrences.
+    %% Release 5.03: a general order-three orbit decomposition handles the
+    %% cubic extension. Its fixed points contribute cubes of base weights and
+    %% non-fixed points contribute in Frobenius triples. Finite induction on
+    %% base weights proves the cubic complete-homogeneous term integral, so
+    %% Newton degree three is unconditional. Integrality now remains only in
+    %% degrees at least four.

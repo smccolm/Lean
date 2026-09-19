@@ -2,7 +2,7 @@
 
 ## Manifest status
 
-This is a development manifest, version `prime-equidistribution-4.72`. It
+This is a development manifest, version `prime-equidistribution-5.03`. It
 reproduces the source identities, pinned build environment, initial source
 definitions, frozen Gafni--Tao theorem closure, and Tao's Proposition
 2.3(i),(iii). It is not a main-theorem release manifest.
@@ -4790,6 +4790,817 @@ completed successfully with 10227 jobs. The canonical isolated verifier
 `FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
 warning-failing build, axiom-audit, forbidden-shortcut, root-reachability, and
 semantic regression gates.
+
+## Release delta: prime-equidistribution-4.73
+
+`BurgessWeilPrimeKummerThreeRootFrobenius.lean` proves an explicit
+projective Möbius/Jacobi reduction for a split polynomial with exactly three
+distinct roots. The prime-field correlation is a scaled Jacobi main term
+minus one deleted point, and the same formula is established after every
+canonical finite extension. Unconditional Jacobi Hasse--Davenport identifies
+the main term as a signed degree power, while the deleted term is an ordinary
+degree power.
+
+The two resulting base-field eigenvalues are proved algebraic integral and
+of norm at most `sqrt p`; their power sums construct a genuine rank-two
+`PrimeKummerIsotypicFrobeniusSystem`. Divisibility of the polynomial degree by
+the character order supplies the required product-one relation, so every
+degree-divisible exactly-three-root case is discharged, even when one root is
+inactive. The full three-or-more-root source is consequently equivalent to
+the smaller residual consisting of degree-nondivisible exactly-three-root
+cases and cases with at least four roots.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerThreeRootFrobenius Tao2026 Tao2026.Audit`
+completed successfully with 10228 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for the new power-trace,
+system-construction, and residual-equivalence theorems.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.74
+
+`BurgessWeilPrimeKummerThreeRootInactiveFrobenius.lean` treats the complementary
+elementary exact-three-root branch. When the third local character is
+trivial, it deletes exactly its zero, leaving a two-root Jacobi sum minus the
+value at that point. This identity is proved both over the base field and on
+every canonical extension.
+
+Jacobi Hasse--Davenport gives the signed degree powers of the main term, while
+norm lifting gives ordinary powers for the deleted term. The corresponding
+two eigenvalues are algebraic integral and have norm at most `sqrt p`, hence
+construct a rank-two `PrimeKummerIsotypicFrobeniusSystem` without any degree
+condition. Selecting an active root and an inactive root proves this for
+every exact-three-root polynomial that is not all-active. Combined with
+release 4.73, the remaining exact-three-root source is precisely all-active
+and degree-nondivisible; the other residual branch has at least four roots.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerThreeRootInactiveFrobenius Tao2026 Tao2026.Audit`
+completed successfully with 10229 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for the new all-extension
+power trace, explicit system, inactive-root selection, and residual
+equivalence theorems.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.75
+
+`BurgessWeilPrimeKummerLowActiveFrobenius.lean` proves the all-extension
+active/inactive-root decomposition for an arbitrary split polynomial. Its
+full correlation is the unrestricted active-root sum minus the value at every
+inactive root. Each deleted value lifts as a fixed degree power, is algebraic
+integral, and has norm at most one.
+
+When there is one active root, character orthogonality makes the unrestricted
+sum zero. When there are two, the main term is the Jacobi eigenvalue and
+unconditional Hasse--Davenport supplies all of its extension powers. Adding
+one eigenvalue for each inactive root constructs genuine systems of rank
+exactly `#roots-1`. Thus all at-most-two-active-root cases are unconditional,
+even with arbitrarily many inactive roots. The original three-or-more-root
+source is proved equivalent to the smaller three-or-more-active-root source,
+which by itself yields the full Kummer Frobenius theorem.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLowActiveFrobenius Tao2026 Tao2026.Audit`
+completed successfully with 10230 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for the extension deletion
+formula, both explicit systems, the low-active constructor, the residual
+equivalence, and the full-source transfer.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.76
+
+`BurgessWeilPrimeKummerActiveFrobeniusSystem.lean` defines the remaining
+unrestricted active-root trace in the base field and every canonical finite
+extension. `PrimeKummerActiveFrobeniusSystem` isolates its natural
+cohomological presentation: rank at most `#active roots-1`, algebraic-
+integral eigenvalues, the `sqrt(p)` weight bound, and the exact negative
+power-trace identities.
+
+The uniform active/inactive deletion formula expresses every full Kummer
+trace as this active trace minus fixed powers of the inactive-root deleted
+values. Appending those values to the active spectrum gives the complete
+`PrimeKummerIsotypicFrobeniusSystem`. Their norm is at most one, and the exact
+active-plus-inactive cardinality formula preserves the sharp total rank bound
+`#roots-1`. Hence the at-least-three-active-root cohomological source directly
+implies the full Kummer theorem, with no inactive-root data left in the
+remaining geometric input.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerActiveFrobeniusSystem Tao2026`
+completed successfully with 10231 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for every new definition and
+theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.77
+
+`BurgessWeilPrimeKummerActivePolynomial.lean` constructs the canonical
+polynomial formed from the source leading scalar and exactly its active
+linear factors with their original multiplicities. It proves nonvanishing,
+splitness, the exact root multiset and multiplicities, Kummer nondegeneracy,
+and the fact that every resulting root is active.
+
+The evaluation formula holds after arbitrary scalar extension. Applying the
+norm-lifted multiplicative character therefore identifies the canonical
+polynomial's ordinary Kummer correlation with the unrestricted active trace
+in the base field and every extension degree. Any full Frobenius system for
+the canonical polynomial converts to the source active-root system with the
+same eigenvalues and rank. Conversely, an active system for an all-active
+polynomial gives its full system. Thus the remaining active cohomological
+source is equivalent to ordinary bounded-rank Kummer cohomology restricted
+to split nondegenerate polynomials with at least three roots, all active.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerActivePolynomial Tao2026`
+completed successfully with 10232 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for every new definition and
+theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.78
+
+`BurgessWeilPrimeKummerReducedActivePolynomial.lean` replaces every retained
+active multiplicity by its least residue modulo the character order. The
+activity condition proves every residue is nonzero; all residues are
+strictly below `orderOf χ`. The resulting polynomial is nonzero and split,
+with exactly the original active distinct roots and the reduced
+multiplicities.
+
+The base character power is unchanged by exponent reduction. The same is
+true for every norm lift because finite-field norm lifting preserves the
+exact character order. Hence the reduced polynomial's ordinary Kummer trace
+equals the original unrestricted active trace in the base field and every
+canonical extension. Full systems transport without changing eigenvalues or
+rank, and the active source is proved equivalent to the Kummer source for
+split polynomials having at least three roots and all root multiplicities in
+the finite range `1,...,orderOf χ-1`.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerReducedActivePolynomial Tao2026`
+completed successfully with 10233 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for every new definition and
+theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.79
+
+`BurgessWeilPrimeKummerMonicNormalization.lean` proves the exact scalar law
+for the full Kummer trace sequence: multiplying a polynomial by `C c`
+multiplies its degree-`d` correlation by `χ(c)^d`. This uses the exact norm
+lift of a base scalar in every canonical finite extension.
+
+The normalization `C P.leadingCoeff⁻¹ * P` is proved nonzero and monic and
+has exactly the same root multiset, root multiplicities, splitness, and
+reduced-exponent property as `P`. A Frobenius system for the normalized
+polynomial is transported to `P` by replacing every eigenvalue `λ` with
+`χ(P.leadingCoeff) * λ`. The construction preserves rank and algebraic
+integrality, retains the weight bound, and proves every power-trace equation.
+The reduced-exponent source is therefore equivalent to its restriction to
+monic polynomials.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerMonicNormalization Tao2026`
+completed successfully with 10234 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for every new definition and
+theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.80
+
+`BurgessWeilPrimeKummerTwoPointNormalization.lean` constructs a polynomial
+from the multiset of affine-normalized roots `(r-a)/(b-a)`. For distinct
+roots `a,b`, it proves that this polynomial is monic and split, has unchanged
+distinct-root cardinality and root multiplicities, satisfies the same strict
+reduced-exponent condition, and contains both zero and one as roots.
+
+The affine evaluation identity over an arbitrary scalar extension yields the
+exact finite-field correlation law. Norm lifting then upgrades it to every
+canonical extension: the original degree-`d` trace is
+`(χ(b-a)^P.natDegree)^d` times the normalized trace. Twisting each eigenvalue
+by `χ(b-a)^P.natDegree` preserves rank, algebraic integrality, and weight and
+reconstructs every extension trace. The monic source is therefore equivalent
+to its restriction to polynomials with roots zero and one.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerTwoPointNormalization Tao2026`
+completed successfully with 10235 jobs. The exhaustive audit build completed
+in the same invocation and the focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.81
+
+`BurgessWeilPrimeKummerLegendreReduction.lean` defines the canonical
+three-root polynomial by mapping the multiset
+`replicate m 0 + replicate n 1 + replicate k t` to linear factors. Its root
+multiset is therefore exact by construction. The module proves monicity,
+splitness, degree `m+n+k`, distinct root set `{0,1,t}`, all three root
+multiplicities, and the strict reduced-exponent condition.
+
+For any monic split source with exactly three roots containing zero and one,
+successive erasure extracts the remaining root `t`. Equality of root
+multisets and the monic product-of-roots identity then prove literal equality
+with the canonical polynomial. The degree-divisible branch is sent to the
+existing explicit rank-two Jacobi system. The final source is therefore
+equivalent to the conjunction of the nondivisible finite-exponent Legendre
+family and the two-point-normalized four-or-more-root family.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreReduction Tao2026`
+completed successfully with 10236 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.82
+
+`BurgessWeilPrimeKummerLegendreFrobeniusSystem.lean` defines the explicit
+finite-field power-Legendre sum for three multiplicative characters. An
+arbitrary scalar-extension evaluation identity for the canonical Legendre
+polynomial converts its polynomial character correlation to the sum with
+local characters `χE^m`, `χE^n`, and `χE^k`. Case analysis on the extension
+degree proves equality with the complete Kummer correlation sequence.
+
+`PrimePowerLegendreFrobeniusSystem` packages at most two algebraic-integral
+eigenvalues of norm at most `√p`, with the base trace and every extension
+power trace equal to the corresponding explicit Legendre sum. Exact
+transports prove equivalence with the polynomial Kummer system. The combined
+residual source is correspondingly equivalent to the pure nondivisible
+power-Legendre system and the normalized four-or-more-root system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreFrobeniusSystem Tao2026`
+completed successfully with 10237 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.83
+
+`BurgessWeilPrimeKummerLegendreEigenpair.lean` converts every rank-at-most-two
+power-Legendre Frobenius system into an ordered pair. The rank-zero case gives
+two zeros, rank one retains its unique eigenvalue and appends zero, and rank
+two is enumerated through the canonical equivalence with `Fin 2`. Integrality,
+weight, and every power-trace identity are retained in each case.
+
+Conversely, any pair gives a literal rank-two system. This proves nonempty
+equivalence and replaces the remaining Legendre source by an exact eigenpair
+contract. The pair power sums satisfy the expected second-order recurrence
+with coefficients given by pair sum and product. The base trace and weight
+bounds yield the earlier reduced-power Legendre `2√p` Weil theorem, linking
+the all-extension source back to the existing analytic boundary.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreEigenpair Tao2026`
+completed successfully with 10238 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.84
+
+`BurgessWeilPrimeKummerRootMultiset.lean` defines the canonical polynomial
+obtained by multiplying `X-C r` over a finite multiset `R`. It proves that
+this polynomial is monic and split, has root multiset exactly `R`, degree
+`R.card`, and root multiplicity `R.count r`. Its reduced-exponent condition
+is equivalent to the finite family of strict inequalities
+`R.count r < orderOf χ` on `R.toFinset`.
+
+Every monic split polynomial is proved literally equal to this product for
+its own root multiset. Consequently the normalized four-or-more-root Kummer
+source is equivalent to a source over finite multisets containing zero and
+one, with support cardinality at least four and reduced multiplicities. The
+complete residual source is correspondingly equivalent to the conjunction of
+the explicit Legendre eigenpair contract and this root-multiset contract, and
+still implies the full Kummer Frobenius system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerRootMultiset Tao2026` completed
+successfully with 10239 jobs. The exhaustive audit build completed in the
+same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.85
+
+`BurgessWeilPrimeKummerRootMultisetEigenvalues.lean` replaces the variable
+rank of a root-multiset Frobenius system by the fixed maximal index type
+`Fin (R.toFinset.card - 1)`. Every smaller spectrum is padded with zero.
+An exact range-sum argument proves that all positive-degree power sums are
+unchanged, while integrality and the `√p` weight bound hold coordinatewise.
+
+Conversely, every such fixed vector constructs a genuine maximal-rank
+Frobenius system. This proves nonempty equivalence and replaces the complete
+higher-root source by fixed finite eigenvalue data. The vector also gives the
+direct all-extension estimate
+`‖correlation(q)‖ ≤ (R.toFinset.card - 1) * (√p)^(q+1)`.
+Together with the Legendre eigenpair, this fixed-vector source remains
+equivalent to the previous residual and still implies the full Kummer system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerRootMultisetEigenvalues Tao2026`
+completed successfully with 10240 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.86
+
+`BurgessWeilPrimeKummerRootMultisetCorrelation.lean` defines the direct
+finite-field root-multiset correlation
+`Σx ∏r∈R.toFinset (ψ^(R.count r))(x-r)`. Over an arbitrary finite extension,
+the mapped canonical root-multiset polynomial is proved to evaluate to the
+corresponding product of local powers. Its polynomial character correlation
+therefore equals the explicit sum exactly.
+
+The identity is propagated through every norm-lifted extension degree,
+identifying the complete Kummer correlation sequence with the direct
+root-multiset sequence. Fixed integral weight-one eigenvalue vectors are
+transported in both directions. Consequently the remaining combined source
+now consists entirely of explicit finite-field character sums and fixed
+eigenvalue vectors, and still implies the full Kummer system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerRootMultisetCorrelation Tao2026`
+completed successfully with 10241 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.87
+
+`BurgessWeilPrimeKummerRootMultisetSpectrum.lean` removes the arbitrary order
+from the higher-root eigenvalue vector. The intrinsic spectrum is a multiset
+of exactly `R.toFinset.card - 1` algebraic integers, each of norm at most
+`√p`, whose power sums realize the explicit root-multiset correlations in
+every extension degree.
+
+Exact conversions between the vector and spectral multiset preserve repeated
+eigenvalues and all trace identities. The spectrum also defines its canonical
+product of linear factors. This Frobenius polynomial is proved monic and
+split, with root multiset exactly the spectrum and degree exactly the
+conductor bound. The source-level spectral formulation remains equivalent to
+the preceding explicit-vector source and still implies the full Kummer
+system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerRootMultisetSpectrum Tao2026`
+completed successfully with 10242 jobs. The exhaustive audit build completed
+in the same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.88
+
+`BurgessWeilPrimeKummerLegendreSpectrum.lean` replaces the ordered Legendre
+eigenpair by an intrinsic spectral multiset of cardinality two. Exact
+conversions in both directions preserve algebraic integrality, the `√p`
+weight bounds, repeated eigenvalues, and every explicit power-Legendre
+extension trace.
+
+The spectrum defines a canonical monic split quadratic Frobenius polynomial
+whose roots are exactly the spectrum. Its root power sums give the complete
+trace sequence, and its weight bounds yield the uniform extension estimate
+`2*(√p)^(q+1)`. The complete residual source is consequently equivalent to
+the existence of the Legendre spectrum and the higher-root spectrum, putting
+both branches in one intrinsic form while retaining the implication to the
+full Kummer system.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreSpectrum Tao2026` completed
+successfully with 10243 jobs. The exhaustive audit build completed in the
+same invocation. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem.
+The canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.89
+
+`BurgessWeilPrimeKummerLegendreCharacteristic.lean` extracts the canonical
+symmetric characteristic data from the intrinsic two-element Legendre
+spectrum. The multiset sum and product are proved equal to the sum and
+product of the two entries under a fixed enumeration, independently of that
+enumeration, and both coefficients are algebraic integers.
+
+The canonical Frobenius polynomial is expanded exactly as
+`X^2 - C(sum) * X + C(product)`. The complete sequence of explicit
+power-Legendre extension correlations satisfies the corresponding order-two
+recurrence with the multiset sum and product as coefficients. This recovers
+the earlier eigenpair recurrence in a fully unordered formulation.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreCharacteristic Tao2026
+Tao2026.Audit` completed successfully with 10244 jobs. The focused axiom
+audit reported only `propext`, `Classical.choice`, and `Quot.sound` for every
+new theorem. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability,
+and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.90
+
+`Theorem17BurgessEndpoint.lean` composes the already unconditional critical
+smooth-number saddle asymptotic with the established public endpoint. A
+nonnegative `TaoExplicitCubefreeBurgessBound` now implies
+`TaoTheorem17Conclusion` directly, with no remaining smooth-number or
+unrestricted Sylvester--Schur premise.
+
+The module extracts a concrete nonnegative Burgess coefficient from the
+fixed seventh-moment complete Weil estimate and packages that bound together
+with Theorem 1.7. The full Kummer Frobenius system maps to this certificate,
+as does the final pair of intrinsic Legendre and higher-root spectral
+sources. Consequently construction of those spectra is the sole remaining
+input on the formal Theorem 1.7 route.
+
+On 2026-09-18,
+`lake build Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed
+successfully with 10245 jobs. The focused axiom audit reported only
+`propext`, `Classical.choice`, and `Quot.sound` for every new definition and
+theorem. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability,
+and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.91
+
+`BurgessWeilPrimeKummerLegendreCanonical.lean` defines the Legendre trace as
+the negative base-field correlation and recovers the determinant from the
+base and degree-two correlations by the quadratic Newton identity. Assuming
+a spectrum exists, both explicit coefficients are algebraic integers and
+have norms at most `2*√p` and `p`.
+
+Their explicit monic quadratic is proved identical to every Legendre
+Frobenius polynomial, with root multiset exactly the spectrum. The full
+extension recurrence is rewritten using only those first two literal
+correlations. Equality of the canonical polynomials proves equality of any
+two spectral multisets and then equality of the complete spectrum structures;
+the fixed-input spectrum type is therefore a `Subsingleton`. The remaining
+Legendre leaf is existence of bounded integral roots for this one explicit
+quadratic.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreCanonical Tao2026
+Tao2026.Audit` completed successfully with 10246 jobs. The focused axiom
+audit reported only `propext`, `Classical.choice`, and `Quot.sound` for every
+new definition and theorem. The canonical isolated verifier
+`cmd /c run_tao_build.bat --no-pause` then completed with
+`FINAL RESULT: PASS`, including inventory, source-hash, raw-Mermaid,
+warning-failing build, axiom-audit, forbidden-shortcut, root-reachability,
+and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.92
+
+`BurgessWeilPrimeKummerLegendreCanonicalRoots.lean` takes the roots of the
+explicit correlation-determined characteristic polynomial as the canonical
+Legendre multiset. The polynomial is proved monic of degree two and split over
+`ℂ`; its root multiset has cardinality two, sum equal to the explicit trace,
+and product equal to the explicit determinant.
+
+The module proves that a `PrimePowerLegendreSpectrum` exists exactly when
+these fixed roots are algebraic integers, each has norm at most `√p`, and the
+literal extension correlations obey the fixed characteristic recurrence.
+The reverse direction enumerates the two roots and uses two-step induction,
+including the Newton-identity base cases, to recover every power trace. The
+global residual is correspondingly restated without an abstract Legendre
+spectrum and maps through the full Kummer system and explicit Burgess
+certificate to `TaoTheorem17Conclusion`. The remaining Theorem 1.7 input is
+the canonical Legendre conditions together with the higher-root spectra.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreCanonicalRoots
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10247 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem. The
+canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.93
+
+`BurgessWeilPrimeKummerLegendreIntegrality.lean` proves directly that every
+literal power-Legendre correlation over an arbitrary finite field is an
+algebraic integer. It reuses the audited fact that every complex-valued
+multiplicative-character value is zero or a root of unity, closes products
+and finite sums, and applies the result uniformly to the explicit extension
+sequence. The canonical trace coefficient is consequently integral without
+assuming a spectrum.
+
+The module then proves that all roots of the fixed explicit quadratic are
+integral if and only if its determinant coefficient is integral. The forward
+direction uses the root product. In the reverse direction each root satisfies
+a monic quadratic over the integral closure of `ℤ` in `ℂ`, and transitivity
+descends integrality to `ℤ`. The global residual and public Theorem 1.7 bridge
+are restated with determinant integrality in place of rootwise integrality.
+The remaining Legendre clauses are the explicit determinant's integrality,
+the `√p` bounds for the fixed roots, and the literal recurrence.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreIntegrality
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10248 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for every new definition and theorem. The
+canonical isolated verifier `cmd /c run_tao_build.bat --no-pause` then
+completed with `FINAL RESULT: PASS`, including inventory, source-hash,
+raw-Mermaid, warning-failing build, axiom-audit, forbidden-shortcut,
+root-reachability, and semantic regression gates.
+
+## Release delta: prime-equidistribution-4.94
+
+`BurgessWeilPrimeKummerLegendreDeterminantIntegral.lean` proves the canonical
+determinant coefficient algebraically integral with no spectral hypothesis.
+Quadratic Frobenius is proved involutive, norm preserving, and fixed exactly
+on the embedded base field. The norm-lifted Legendre weight is Frobenius
+invariant and restricts on the base field to the square of the original
+weight. A general finite involution-sum identity then decomposes the
+degree-two correlation into this diagonal plus twice an orbit sum.
+
+A second application of the same identity to coordinate swap decomposes the
+square of the base-field correlation into the identical diagonal plus twice
+an off-diagonal orbit sum. The quadratic Newton numerator is consequently
+twice an explicit finite sum of products of character values; closure of
+algebraic integers under products and finite sums proves determinant
+integrality. The global Legendre residual and its public Theorem 1.7 bridge
+are restated with only the canonical-root `√p` bounds and literal recurrence.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreDeterminantIntegral
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10249 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the determinant theorem and the new
+residual-to-endpoint chain.
+
+## Release delta: prime-equidistribution-4.95
+
+`BurgessWeilPrimeKummerLegendreLiteralWeil.lean` proves a converse
+power-sum bound for a complex pair. If every positive power sum is at most
+`2*R^d`, comparison of the degree-`d` and degree-`2d` sums bounds each
+individual `d`th power by a fixed multiple of `R^d`; powers of any ratio
+strictly above one then contradict that uniform bound. Hence the pair lies in
+the closed radius-`R` disk. The forward implication is the triangle
+inequality.
+
+The canonical quadratic recurrence is separately proved to force every
+literal extension correlation to equal the negative canonical-root power
+sum. Combining these results makes the fixed-root `√p` condition exactly
+equivalent to the literal sharp bounds
+`‖C_q‖≤2*(√p)^(q+1)` in every extension degree. Both roots are also proved
+unconditionally algebraic integral from release 4.94. The global residual and
+Theorem 1.7 bridge are therefore restated using only literal correlation
+bounds, the literal recurrence, and the higher-root spectra.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10250 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the new equivalences and endpoint
+chain.
+
+## Release delta: prime-equidistribution-4.96
+
+`BurgessWeilPrimeKummerCanonicalRootMultisetSpectrum.lean` evaluates
+Newton's identities on an arbitrary finite complex multiset. Strong induction
+recovers all elementary symmetric sums from the positive power sums; Vieta's
+formula and the roots of the product of linear factors then prove that equal
+cardinality and equal positive power sums force equality of multisets,
+including multiplicities.
+
+For `PrimeKummerExplicitRootMultisetSpectrum`, the prescribed cardinality is
+fixed by the root support and every positive power sum is fixed by a literal
+extension correlation. Hence any two spectra are equal and the spectrum type
+is a subsingleton. A canonical spectrum can be selected from any existence
+witness independently of that witness. The global higher-root source is
+proved equivalent to unique existence, and the corresponding literal
+Legendre-plus-unique-spectrum residual is carried to the Burgess certificate
+and Theorem 1.7.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerCanonicalRootMultisetSpectrum
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10251 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the Newton, uniqueness, canonical
+spectrum, unique-residual, and endpoint theorems.
+
+## Release delta: prime-equidistribution-4.97
+
+`BurgessWeilPrimeKummerNewtonPolynomial.lean` defines a well-founded Newton
+recursion for elementary symmetric coefficients of an arbitrary complex
+power-sum sequence and proves that it recovers `Multiset.esymm`. For a
+higher-root Kummer input, degree zero is the prescribed rank and positive
+degrees are the negatives of the literal extension correlations.
+
+The associated Vieta polynomial is proved monic of degree exactly
+`R.toFinset.card-1`, independently of any spectral hypothesis. Its roots over
+`ℂ` therefore form an unconditional canonical multiset of exactly that
+cardinality. Any prior spectrum has this Newton polynomial and this precise
+root multiset. Consequently spectrum existence is equivalent to integrality,
+weight-one bounds, and all-extension trace identities for the fixed roots.
+The global literal residual and Theorem 1.7 endpoint are restated using these
+Newton conditions, with no abstract higher-root spectral witness.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonPolynomial
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10252 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the Newton reconstruction,
+canonical-root equivalence, global residual, and endpoint chain.
+
+## Release delta: prime-equidistribution-4.98
+
+`BurgessWeilPrimeKummerNewtonRecurrence.lean` proves that the power sums of a
+polynomial's complex root multiset satisfy the coefficient recurrence through
+its natural degree. It also proves, by strong induction, that a monic
+degree-`n` recurrence uniquely determines a sequence from its first `n`
+values, including the degree-zero case.
+
+The higher-root Newton conditions are therefore equivalent to fixed-root
+integrality and weight, only the first `R.toFinset.card-1` literal trace
+identities, and the explicit characteristic recurrence for the literal
+power-sum sequence. The global literal Legendre/Newton residual and its full
+Frobenius-system, Burgess-certificate, and Theorem 1.7 transports are restated
+in this finite-initial-data recurrence form.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonRecurrence
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10253 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the recurrence, equivalence, global
+residual, and endpoint chain.
+
+## Release delta: prime-equidistribution-4.99
+
+`BurgessWeilPrimeKummerNewtonRecurrence.lean` now extracts each coefficient
+of the fixed Newton polynomial and applies Vieta's formula to prove that its
+canonical roots have precisely the recursively constructed elementary
+symmetric sums through the full degree. A converse Newton theorem for
+arbitrary complex sequences is proved by strong induction, isolating the
+`(0,k)` antidiagonal term in each Newton identity.
+
+The literal Newton power sums consequently agree with the canonical root
+power sums throughout the complete initial segment automatically. The former
+finite initial hypotheses disappear: the higher-root trace condition is now
+equivalent to the literal sequence satisfying the characteristic recurrence
+of its own Newton polynomial. The remaining fixed-root conditions are only
+algebraic integrality and weight at most `√p`. This sharpened global residual
+is carried through the full Frobenius system, Burgess certificate, and public
+Theorem 1.7 endpoint.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonRecurrence
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10253 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for coefficient extraction, inverse
+Newton reconstruction, automatic initial traces, the characteristic residual,
+and the endpoint chain.
+
+## Release delta: prime-equidistribution-5.00
+
+`BurgessWeilPrimeKummerNewtonIntegrality.lean` proves a general coefficient
+criterion: a monic split polynomial over `ℂ` has only algebraic-integer roots
+if and only if every coefficient is integral over `ℤ`. Forward transport uses
+factorization into linear root factors; reverse transport uses the polynomial
+itself as a monic integral-coefficient annihilator of each root.
+
+For the explicit Newton polynomial, exact degree reduces this to the finite
+range `0,...,R.toFinset.card-1`; all later coefficients vanish. The signed
+coefficient formula further identifies this finite predicate with integrality
+of every recursively constructed Newton elementary coefficient. Rootwise
+integrality is replaced by this finite source condition in the global
+higher-root residual and in the full Frobenius-system, Burgess-certificate,
+and Theorem 1.7 transports.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonIntegrality
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10254 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the root/coefficient criterion,
+finite Newton integrality equivalences, global residual, and endpoint chain.
+
+## Release delta: prime-equidistribution-5.01
+
+`BurgessWeilPrimeKummerNewtonLiteralWeil.lean` proves a general spectral-radius
+criterion for finite complex multisets with multiplicity. A recursive real
+majorant bounds every Newton elementary coefficient when all positive power
+sums are uniformly bounded. Applying this to each powered multiset gives a
+uniform Cauchy bound for its monic root polynomial. If an original element had
+norm greater than the target radius, its normalized powers would diverge,
+contradicting that bound. The radius-zero case follows separately from power-
+sum uniqueness against the zero multiset.
+
+Under the explicit Newton characteristic recurrence, all canonical root power
+sums equal the literal Kummer sequence. Canonical `√p` weight is consequently
+equivalent to the sharp literal all-extension bound
+`‖C_q‖ ≤ (R.toFinset.card-1)*(√p)^(q+1)`. The new global residual contains
+only finite Newton-coefficient integrality, literal higher-root Weil bounds,
+and the literal characteristic recurrence; it is transported together with
+the literal Legendre branch to the full system and Theorem 1.7.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonLiteralWeil
+Tao2026.BurgessWeilPrimeKummerLegendreLiteralWeil
+Tao2026.Theorem17BurgessEndpoint Tao2026 Tao2026.Audit` completed successfully
+with 10255 jobs. The focused axiom audit reported only `propext`,
+`Classical.choice`, and `Quot.sound` for the Newton majorant, Cauchy/spectral-
+radius theorem, literal-weight equivalence, global residual, and endpoint.
+
+## Release delta: prime-equidistribution-5.02
+
+`BurgessWeilPrimeKummerNewtonLowDegreeIntegrality.lean` generalizes the
+quadratic Frobenius-orbit calculation from the Legendre weight to the literal
+root-multiset Kummer weight. Frobenius invariance follows from invariance of
+the finite-field norm. The fixed points are exactly the embedded base field,
+where norm lifting squares every base weight.
+
+The quadratic-extension correlation and the square of the base correlation
+therefore have the same diagonal term and paired off-diagonal terms. Their
+Newton combination is an explicit sum of algebraic integers. This proves
+unconditional integrality of Newton elementary degree two; degrees zero and
+one follow from the constant coefficient and correlation integrality. The
+finite higher-root integrality residual is now restricted to degrees at least
+three. Literal higher-root and Legendre Weil bounds and characteristic
+recurrences remain open.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonLowDegreeIntegrality
+Tao2026 Tao2026.Audit` completed successfully with 10256 jobs. The focused
+axiom audit reported only `propext`, `Classical.choice`, and `Quot.sound` for
+the Frobenius-orbit decomposition and all low-degree integrality theorems.
+
+## Release delta: prime-equidistribution-5.03
+
+`BurgessWeilPrimeKummerNewtonCubicIntegrality.lean` proves a weighted orbit
+formula for every order-three permutation. Applied to cubic finite-field
+Frobenius, fixed points are exactly the embedded base field, norm-lifted fixed
+weights are cubes of the base weights, and non-fixed weights occur in triples.
+
+Finite induction proves that the quadratic and cubic complete-homogeneous
+Newton expressions of any finite family of algebraic integers are integral.
+The exact third higher-root Newton numerator then splits into this cubic base
+term, a base-sum times the quadratic Frobenius-orbit sum, and the cubic orbit
+sum. Hence Newton elementary degrees zero through three are unconditional;
+the finite integrality residual starts at degree four. Literal Weil bounds and
+characteristic recurrences remain open in both Kummer branches.
+
+On 2026-09-18,
+`lake build Tao2026.BurgessWeilPrimeKummerNewtonCubicIntegrality
+Tao2026 Tao2026.Audit` completed successfully with 10257 jobs. The focused
+axiom audit reported only `propext`, `Classical.choice`, and `Quot.sound` for
+the order-three orbit theorem, cubic finite-field lemmas, complete-homogeneous
+integrality, and the third Newton coefficient.
 
 ## Release delta: prime-equidistribution-3.74
 

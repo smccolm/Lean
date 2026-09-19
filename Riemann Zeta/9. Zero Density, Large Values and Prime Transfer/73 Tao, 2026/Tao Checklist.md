@@ -4090,6 +4090,474 @@ before the source's `14/3` simplification.
 - [ ] Construct the pure bounded-rank isotypic affine Kummer decomposition
   for three or more active roots.
 
+## Prime-equidistribution 4.73
+
+- [x] Construct the finite-field three-root projective Möbius equivalence.
+- [x] Reduce the three-root character sum exactly to a scaled Jacobi sum
+  minus the deleted projective point.
+- [x] Prove the corresponding identity in every canonical extension degree.
+- [x] Apply unconditional Jacobi Hasse--Davenport to identify two fixed
+  base-field eigenvalues whose power sums give every extension trace.
+- [x] Prove both eigenvalues algebraic integral and of norm at most `sqrt p`.
+- [x] Construct the genuine rank-two Frobenius system for every
+  degree-divisible exactly-three-root case, including one inactive root.
+- [x] Reduce the remaining three-or-more-root source to nondivisible
+  three-root cases and cases with at least four roots.
+- [ ] Construct the residual bounded-rank isotypic Kummer decomposition.
+
+## Prime-equidistribution 4.74
+
+- [x] Prove that a trivial third local character deletes exactly its root.
+- [x] Express every inactive-root three-root correlation as a two-root Jacobi
+  main term minus one deleted value.
+- [x] Prove the formula over every canonical finite extension.
+- [x] Use Jacobi Hasse--Davenport and norm lifting to obtain two fixed power-
+  trace eigenvalues.
+- [x] Prove their algebraic integrality and weight-at-most-one bounds.
+- [x] Construct a rank-two Frobenius system for every exact-three-root case
+  with at least one inactive root, without a degree hypothesis.
+- [x] Reduce the exact-three-root residual to the all-active,
+  degree-nondivisible case.
+- [ ] Construct that three-point hypergeometric Frobenius system and the
+  four-or-more-root systems.
+
+## Prime-equidistribution 4.75
+
+- [x] Prove arbitrary split-polynomial root factorization after base change.
+- [x] Decompose every extension correlation into its unrestricted active-root
+  sum minus the values at all inactive roots.
+- [x] Prove every inactive-root deleted value lifts by an ordinary degree
+  power and is algebraic integral of norm at most one.
+- [x] Construct the exact one-active-root spectrum indexed by inactive roots.
+- [x] Construct the exact two-active-root spectrum from one Jacobi eigenvalue
+  and all inactive-root eigenvalues.
+- [x] Verify the rank is exactly the allowed `#roots-1` in both branches.
+- [x] Prove equivalence of the three-or-more-distinct-root source and the
+  three-or-more-active-root source.
+- [x] Transfer the latter directly to the full Kummer Frobenius theorem.
+- [ ] Construct the three-or-more-active-root cohomological system.
+
+## Prime-equidistribution 4.76
+
+- [x] Define the unrestricted active-root trace sequence from the base field
+  through every canonical extension.
+- [x] State its natural Frobenius system with rank at most
+  `#active roots-1`.
+- [x] Prove the full correlation is the active trace minus the power sum of
+  all inactive-root deleted values in every indexed degree.
+- [x] Append the inactive values as explicit integral weight-zero
+  eigenvalues.
+- [x] Prove the active and inactive rank budgets combine to `#roots-1`.
+- [x] Transfer the at-least-three-active-root system directly to the complete
+  Kummer Frobenius theorem.
+- [ ] Construct the bounded-rank active-root spectrum from Kummer cohomology.
+
+## Prime-equidistribution 4.77
+
+- [x] Define the canonical polynomial retaining exactly the active linear
+  factors, original multiplicities, and leading scalar.
+- [x] Prove its nonvanishing, splitness, exact root multiset, and unchanged
+  active-root multiplicities.
+- [x] Prove every retained root is active and the canonical polynomial is
+  Kummer-nondegenerate when its active set is nonempty.
+- [x] Prove the evaluation identity after arbitrary scalar extension.
+- [x] Identify its ordinary Kummer trace with the active trace in the base
+  field and every canonical extension degree.
+- [x] Convert its full Frobenius system to an active-root system without rank
+  loss.
+- [x] Prove equivalence between the active-system source and the full Kummer
+  source restricted to all-active split polynomials.
+- [ ] Construct the all-active bounded-rank Kummer cohomology system.
+
+## Prime-equidistribution 4.78
+
+- [x] Reduce every active multiplicity modulo the character order.
+- [x] Prove every retained residue is nonzero and strictly below the order.
+- [x] Prove the reduced polynomial is nonzero, split, and has exactly the
+  original active distinct roots with the reduced multiplicities.
+- [x] Prove reduced-exponent polynomials have every root active and are
+  Kummer-nondegenerate when they have a root.
+- [x] Prove base-field correlation invariance under exponent reduction.
+- [x] Prove norm lifting preserves the modulo-order power identity.
+- [x] Prove all extension correlations are invariant under reduction.
+- [x] Prove equivalence with the full Frobenius source restricted to the
+  finite exponent range below `orderOf χ`.
+- [ ] Construct the reduced-exponent bounded-rank Kummer cohomology system.
+
+## Prime-equidistribution 4.79
+
+- [x] Prove the exact all-extension scalar-multiplication trace formula.
+- [x] Construct the explicit monic normalization of every nonzero polynomial.
+- [x] Prove normalization preserves splitness, roots, multiplicities, and the
+  reduced-exponent condition.
+- [x] Absorb the leading-character value into every Frobenius eigenvalue.
+- [x] Preserve rank, algebraic integrality, the weight bound, and every power
+  trace under that twist.
+- [x] Prove equivalence between the reduced source and its monic restriction.
+- [ ] Construct the monic reduced-exponent bounded-rank Kummer cohomology
+  system.
+
+## Prime-equidistribution 4.80
+
+- [x] Construct the affine root normalization sending two distinct roots to
+  `0` and `1`.
+- [x] Prove monicity, splitness, root-cardinality, and multiplicity
+  preservation.
+- [x] Preserve the strict reduced-exponent condition under normalization.
+- [x] Prove the exact affine evaluation and all-extension correlation laws.
+- [x] Absorb the affine scalar into every Frobenius eigenvalue while
+  preserving rank, integrality, weight, and every power trace.
+- [x] Prove equivalence between the monic source and its two-point-normalized
+  restriction.
+- [ ] Construct the two-point-normalized reduced-exponent bounded-rank Kummer
+  cohomology system.
+
+## Prime-equidistribution 4.81
+
+- [x] Construct the canonical three-root Legendre polynomial from its third
+  root and three multiplicities.
+- [x] Prove its monicity, splitness, exact roots, degree, and root
+  multiplicities.
+- [x] Prove the canonical polynomial satisfies the reduced-exponent condition
+  for positive exponents below the character order.
+- [x] Extract the unique third root from every normalized three-root source.
+- [x] Prove literal equality with the canonical Legendre polynomial.
+- [x] Remove the already solved degree-divisible three-root case.
+- [x] Split the residual source exactly into the nondivisible Legendre family
+  and the normalized four-or-more-root family.
+- [ ] Construct the nondivisible Legendre and four-or-more-root Frobenius
+  systems.
+
+## Prime-equidistribution 4.82
+
+- [x] Define the explicit power-Legendre character correlation over an
+  arbitrary finite field.
+- [x] Evaluate the canonical Legendre polynomial after arbitrary scalar
+  extension.
+- [x] Identify its polynomial correlation with the three local character
+  powers.
+- [x] Prove equality with the Kummer correlation in every extension degree.
+- [x] Define the rank-two integral weight-one Legendre Frobenius-system
+  contract.
+- [x] Transport systems exactly in both directions between polynomial and
+  character-sum formulations.
+- [x] Restate the complete residual source using the pure power-Legendre
+  system together with the four-or-more-root source.
+- [ ] Construct the required power-Legendre and four-or-more-root Frobenius
+  systems.
+
+## Prime-equidistribution 4.83
+
+- [x] Replace every rank-at-most-two Legendre system by an explicit ordered
+  eigenpair, padding lower ranks with zero.
+- [x] Construct the converse `Fin 2` Frobenius system from any eigenpair.
+- [x] Prove nonempty-system equivalence and source-level equivalence.
+- [x] Derive the exact second-order recurrence for all extension traces.
+- [x] Recover the reduced-power Legendre `2√p` Weil bound from the eigenpair
+  weight bounds.
+- [x] Preserve the complete implication to the full Kummer source.
+- [ ] Construct the integral bounded Legendre eigenpair and the normalized
+  four-or-more-root systems.
+
+## Prime-equidistribution 4.84
+
+- [x] Define the canonical polynomial product attached to a finite root
+  multiset.
+- [x] Prove its monicity, splitness, exact root multiset, and exact degree.
+- [x] Identify every root multiplicity with the corresponding multiset count.
+- [x] Express reduced exponents as the finite inequalities
+  `R.count r < orderOf χ` on the multiset support.
+- [x] Prove every monic split polynomial equals the product formed from its
+  roots.
+- [x] Replace the normalized four-or-more-root polynomial source by the
+  equivalent root-multiset source.
+- [x] Combine that source with the literal Legendre eigenpair and preserve the
+  implication to the full Kummer Frobenius system.
+- [ ] Construct the integral bounded Legendre eigenpair and the normalized
+  four-or-more-root multiset systems.
+
+## Prime-equidistribution 4.85
+
+- [x] Replace the variable-rank higher-root spectrum by a fixed vector indexed
+  by `Fin (R.toFinset.card - 1)`.
+- [x] Pad every smaller spectrum with zero while preserving integrality and
+  weight bounds.
+- [x] Prove the padded power sum equals the original power sum in every
+  positive degree.
+- [x] Construct the converse maximal-rank Frobenius system from the fixed
+  vector.
+- [x] Prove nonempty-system equivalence and source-level equivalence.
+- [x] Derive the sharp all-extension norm bound directly from the vector.
+- [x] Preserve the complete implication to the full Kummer source.
+- [ ] Construct the Legendre pair and higher-root fixed eigenvalue vectors.
+
+## Prime-equidistribution 4.86
+
+- [x] Define the explicit finite-field root-multiset character correlation.
+- [x] Evaluate the mapped canonical root-multiset polynomial as the product
+  of its local character powers.
+- [x] Identify the polynomial character correlation with the explicit sum
+  over every finite extension.
+- [x] Prove equality of the complete norm-lifted Kummer and root-multiset
+  extension sequences.
+- [x] Transport fixed integral weight-one eigenvalue vectors exactly in both
+  directions.
+- [x] Restate the complete residual using only explicit character sums and
+  fixed eigenvalue vectors.
+- [x] Preserve the all-extension norm bound and implication to the full
+  Kummer source.
+- [ ] Construct the two remaining explicit eigenvalue-vector families.
+
+## Prime-equidistribution 4.87
+
+- [x] Replace the ordered higher-root eigenvalue vector by its spectral
+  multiset, preserving multiplicities.
+- [x] Prove the spectrum has cardinality exactly
+  `R.toFinset.card - 1`.
+- [x] Transport integrality, weight bounds, and every power trace in both
+  directions between vectors and multisets.
+- [x] Construct the canonical monic split Frobenius polynomial from the
+  spectral multiset.
+- [x] Prove its roots are exactly the spectrum and its degree is exactly the
+  conductor bound.
+- [x] Express every explicit extension trace as a power sum of its roots.
+- [x] Preserve the all-extension norm bound and implication to the full
+  Kummer source.
+- [ ] Construct the Legendre pair and intrinsic higher-root Frobenius
+  spectra.
+
+## Prime-equidistribution 4.88
+
+- [x] Replace the ordered Legendre pair by an intrinsic two-element spectral
+  multiset.
+- [x] Transport integrality, weight bounds, and every extension trace in both
+  directions.
+- [x] Construct its canonical monic split quadratic Frobenius polynomial.
+- [x] Prove its roots are exactly the spectrum and its degree is two.
+- [x] Express all Legendre extension traces as power sums of its roots.
+- [x] Derive the uniform bound `2*(√p)^(q+1)` in every extension degree.
+- [x] Restate the complete residual as two intrinsic spectral families and
+  preserve its implication to the full Kummer source.
+- [ ] Construct the Legendre and higher-root Frobenius spectra.
+
+## Prime-equidistribution 4.89
+
+- [x] Identify the multiset sum with the sum of the two enumerated Legendre
+  eigenvalues.
+- [x] Identify the multiset product with their product.
+- [x] Prove that both symmetric coefficients are algebraic integers.
+- [x] Expand the canonical Frobenius polynomial exactly as
+  `X^2 - C(sum) * X + C(product)`.
+- [x] Derive the order-two recurrence for every explicit extension
+  correlation from the intrinsic trace and determinant.
+- [x] Remove eigenvalue-order dependence from the characteristic recurrence.
+- [ ] Construct the Legendre and higher-root Frobenius spectra.
+
+## Prime-equidistribution 4.90
+
+- [x] Compose the unconditional critical saddle asymptotic into the public
+  Theorem 1.7 endpoint.
+- [x] Prove that a nonnegative explicit cubefree Burgess estimate alone
+  implies `TaoTheorem17Conclusion`.
+- [x] Extract a nonnegative explicit Burgess coefficient from the fixed
+  seventh-moment complete Weil estimate.
+- [x] Package that coefficient, its Burgess bound, and Theorem 1.7 as one
+  checked certificate.
+- [x] Carry the full Kummer Frobenius system through to this certificate.
+- [x] Carry the final Legendre-plus-higher-root intrinsic spectra directly to
+  the public Theorem 1.7 conclusion.
+- [ ] Construct the Legendre and higher-root Frobenius spectra, the sole
+  remaining input on the Theorem 1.7 route.
+
+## Prime-equidistribution 4.91
+
+- [x] Recover the Legendre trace coefficient from the base-field explicit
+  correlation.
+- [x] Recover the determinant from the base and degree-two correlations by
+  the quadratic Newton identity.
+- [x] Prove these explicit coefficients are algebraic integers.
+- [x] Prove the coefficient bounds `‖trace‖ ≤ 2*√p` and
+  `‖determinant‖ ≤ p`.
+- [x] Define the explicit correlation-determined characteristic polynomial.
+- [x] Prove every Legendre Frobenius polynomial equals it and has its roots.
+- [x] Express the complete extension recurrence using only the first two
+  literal correlations.
+- [x] Prove uniqueness and a `Subsingleton` instance for the Legendre
+  spectrum at fixed input data.
+- [ ] Prove existence of the bounded integral roots of the explicit
+  characteristic polynomial and construct the higher-root spectra.
+
+## Prime-equidistribution 4.92
+
+- [x] Define the unconditional canonical root multiset of the explicit
+  Legendre characteristic polynomial.
+- [x] Prove the polynomial is monic of degree two and splits over `ℂ`.
+- [x] Prove the canonical multiset has cardinality two and its sum and product
+  are the explicit trace and determinant.
+- [x] Characterize existence of a Legendre spectrum exactly by root
+  integrality, the `√p` root bound, and the literal order-two recurrence.
+- [x] Reconstruct every extension power trace from those conditions by
+  two-step induction.
+- [x] Carry the canonical residual source through the explicit Burgess
+  certificate to the public Theorem 1.7 conclusion.
+- [ ] Prove the canonical Legendre conditions and construct the higher-root
+  spectra.
+
+## Prime-equidistribution 4.93
+
+- [x] Prove every finite-field power-Legendre correlation is an algebraic
+  integer.
+- [x] Carry this through every literal extension degree.
+- [x] Prove the explicit characteristic trace is unconditionally integral.
+- [x] Prove that both canonical roots are integral if and only if the explicit
+  determinant coefficient is integral.
+- [x] Restate the global Legendre source using determinant integrality alone.
+- [x] Carry the determinant-only residual through the explicit Burgess
+  certificate to the public Theorem 1.7 conclusion.
+- [ ] Prove determinant integrality, the canonical-root `√p` bound, and the
+  literal recurrence, and construct the higher-root spectra.
+
+## Prime-equidistribution 4.94
+
+- [x] Prove quadratic Frobenius is an involution and preserves the norm-lifted
+  Legendre weight.
+- [x] Identify its fixed field exactly with the embedded base field.
+- [x] Decompose the degree-two correlation into its squared base-weight
+  diagonal and paired Frobenius orbits.
+- [x] Decompose the square of the base correlation into the same diagonal and
+  paired coordinate-swap orbits.
+- [x] Cancel the Newton factor `2` and prove the explicit determinant is an
+  algebraic integer unconditionally.
+- [x] Remove determinant integrality from the global Legendre residual and
+  carry the sharper source to the public Theorem 1.7 endpoint.
+- [ ] Prove the canonical-root `√p` bound and the literal recurrence, and
+  construct the higher-root spectra.
+
+## Prime-equidistribution 4.95
+
+- [x] Prove that a uniform bound on every positive power sum of two complex
+  numbers forces the corresponding individual norm bounds.
+- [x] Prove the recurrence identifies every literal Legendre extension
+  correlation with the canonical-root power sum.
+- [x] Prove the canonical-root `√p` condition is equivalent to the literal
+  sharp Weil bounds in all extension degrees.
+- [x] Record unconditional algebraic integrality of both canonical roots.
+- [x] Restate the complete three-root residual using only the literal Weil
+  bound and recurrence, with no root or coefficient predicates.
+- [x] Carry the completely literal residual through the public Theorem 1.7
+  endpoint.
+- [ ] Prove the literal all-extension Weil bound and recurrence, and construct
+  the higher-root spectra.
+
+## Prime-equidistribution 4.96
+
+- [x] Evaluate Newton's identities on arbitrary finite complex multisets.
+- [x] Prove that cardinality and all positive power sums determine a complex
+  multiset with multiplicity.
+- [x] Prove that two higher-root spectrum records for the same literal
+  correlation sequence are equal.
+- [x] Install the higher-root spectrum type as a subsingleton and define its
+  canonical value from any existence witness.
+- [x] Restate higher-root existence as unique existence and carry the
+  canonical residual through the public Theorem 1.7 endpoint.
+- [ ] Prove the literal Legendre all-extension Weil bound and recurrence, and
+  prove existence of the uniquely determined higher-root spectra.
+
+## Prime-equidistribution 4.97
+
+- [x] Define a terminating Newton recursion for elementary symmetric
+  coefficients from an arbitrary complex power-sum sequence.
+- [x] Prove the recursion recovers multiset elementary symmetric sums.
+- [x] Construct the higher-root Newton polynomial from the first finitely
+  many literal extension correlations.
+- [x] Prove this polynomial is monic of degree `R.toFinset.card-1`.
+- [x] Define its canonical complex root multiset and prove the exact
+  cardinality unconditionally.
+- [x] Prove every admissible spectrum has exactly this polynomial and root
+  multiset.
+- [x] Replace higher-root spectrum existence by fixed-root integrality,
+  weight, and trace conditions and carry them to Theorem 1.7.
+- [ ] Prove the literal Legendre Weil bound/recurrence and the canonical
+  higher-root integrality, weight, and trace conditions.
+
+## Prime-equidistribution 4.98
+
+- [x] Prove that the power sums of all roots of a degree-`n` polynomial
+  satisfy its order-`n` characteristic recurrence.
+- [x] Prove uniqueness of a sequence satisfying a monic recurrence from its
+  first `n` values.
+- [x] Replace the canonical higher-root all-extension trace identities by
+  finitely many initial identities and the Newton recurrence.
+- [x] Carry the recurrence residual through the full Frobenius system,
+  Burgess certificate, and public Theorem 1.7 endpoint.
+- [ ] Prove the finite initial identities automatically from the Newton
+  construction, then prove the remaining integrality, weight, and recurrence
+  conditions together with the literal Legendre Weil bound/recurrence.
+
+## Prime-equidistribution 4.99
+
+- [x] Extract every Newton polynomial coefficient in signed elementary-
+  symmetric form.
+- [x] Identify the elementary symmetric sums of the canonical roots with the
+  recursively constructed Newton coefficients.
+- [x] Prove inverse Newton identities for arbitrary complex sequences.
+- [x] Deduce all finite initial canonical power-sum identities automatically.
+- [x] Reduce the higher-root trace boundary to the literal characteristic
+  recurrence and carry the result through Theorem 1.7.
+- [ ] Prove canonical-root integrality and `√p` weight, the higher-root
+  literal recurrence, and the Legendre literal Weil bound/recurrence.
+
+## Prime-equidistribution 5.00
+
+- [x] Prove that a monic split complex polynomial has integral roots exactly
+  when all of its coefficients are integral.
+- [x] Restrict Newton-polynomial coefficient integrality to its exact finite
+  degree range.
+- [x] Identify finite coefficient integrality with integrality of the
+  recursively constructed Newton elementary coefficients.
+- [x] Replace rootwise integrality in the higher-root residual and carry the
+  finite form through the Frobenius system and Theorem 1.7.
+- [ ] Prove finite Newton-coefficient integrality, canonical-root `√p` weight,
+  and the literal characteristic recurrence, together with the Legendre
+  literal Weil bound/recurrence.
+
+## Prime-equidistribution 5.01
+
+- [x] Prove uniform Newton coefficient bounds from uniformly bounded power
+  sums for an arbitrary complex sequence.
+- [x] Apply Cauchy's root bound to every powered finite multiset.
+- [x] Prove that all positive power-sum bounds are equivalent to individual
+  finite-multiset norm bounds, including radius zero.
+- [x] Replace canonical higher-root weight by the literal sharp
+  all-extension Weil bound.
+- [x] Carry the fully literal weight residual through the Frobenius system,
+  Burgess certificate, and public Theorem 1.7 endpoint.
+- [ ] Prove finite Newton-coefficient integrality and the literal higher-root
+  and Legendre Weil bounds/characteristic recurrences.
+
+## Prime-equidistribution 5.02
+
+- [x] Generalize the quadratic Frobenius-orbit decomposition from the
+  Legendre weight to every explicit root-multiset Kummer weight.
+- [x] Compare it with the coordinate-swap decomposition of the squared base
+  correlation and prove the second Newton numerator integral.
+- [x] Prove Newton elementary integrality in degrees zero, one, and two for
+  every prime root-multiset input, with no spectral assumptions.
+- [ ] Prove the remaining finite Newton integrality in degrees at least three
+  and the literal higher-root and Legendre Weil bounds/recurrences.
+
+## Prime-equidistribution 5.03
+
+- [x] Prove a general weighted sum decomposition for an automorphism of order
+  three into fixed points and three-element orbits.
+- [x] Identify cubic Frobenius fixed points, norm invariance, and norm-lifted
+  root-multiset weights over the cubic finite-field extension.
+- [x] Prove integrality of the degree-two and degree-three complete
+  homogeneous expressions by finite induction.
+- [x] Deduce unconditional integrality of Newton elementary degree three.
+- [ ] Prove the remaining finite Newton integrality in degrees at least four
+  and the literal higher-root and Legendre Weil bounds/recurrences.
+
 ## Prime-equidistribution 4.41
 
 - [x] Prove the selected HT shift tends below every positive fixed target.

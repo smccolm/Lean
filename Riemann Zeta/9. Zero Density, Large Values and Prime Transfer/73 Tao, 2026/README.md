@@ -3676,3 +3676,298 @@ character on each base field. This canonical-character prime-degree leaf now
 implies the original prime-field Gauss theorem, Jacobi Hasse--Davenport, and
 the exact two-root Frobenius system. The leaf itself and the independent
 three-or-more-root Kummer cohomology theorem remain open.
+
+## Prime-equidistribution release 4.84
+
+The higher-root Kummer source now has a finite canonical form. For every
+multiset `R`, `primeKummerRootMultisetPolynomial R` is the product of the
+monic factors `X-C r`; its roots are exactly `R`, its degree is `R.card`, and
+its root multiplicities are the multiset counts. Reducedness is exactly the
+finite condition `R.count r < orderOf χ` on the support. Conversely, every
+monic split polynomial is literally the product built from its root multiset.
+
+The four-or-more-root source is therefore equivalent to a source quantified
+only over multisets containing zero and one with support cardinality at least
+four. Together with the literal Legendre eigenpair, the complete remaining
+geometric input is now an explicit eigenpair plus this normalized
+root-multiset system.
+
+## Prime-equidistribution release 4.85
+
+The variable rank in the root-multiset Frobenius system is removed. Every
+spectrum is padded with zero to the fixed maximal index type
+`Fin (R.toFinset.card - 1)`, and the padded power sums are proved exactly
+equal to the original power sums in every positive degree. Integrality and
+the `√p` weight bound hold coordinatewise, while the converse fixed vector
+constructs a genuine maximal-rank Frobenius system.
+
+Thus the complete remaining geometric input is now a literal Legendre
+eigenpair together with a fixed finite eigenvalue vector for each normalized
+four-or-more-root multiset. The vector directly supplies the sharp
+all-extension norm bound with coefficient `R.toFinset.card - 1`.
+
+## Prime-equidistribution release 4.86
+
+The higher-root trace itself is now polynomial-free. Over every finite
+extension it is the explicit sum
+`Σx ∏r∈R.toFinset (χE^(R.count r))(x-r)`. Evaluation of the canonical
+root-multiset polynomial is proved equal to this local-character product,
+and the equality is propagated through the entire norm-lifted extension
+sequence.
+
+Fixed higher-root eigenvalue vectors for these explicit sums are equivalent
+to the polynomial systems of release 4.85. The complete remaining source is
+therefore a Legendre eigenpair plus a fixed integral weight-one vector whose
+power sums realize literal finite-field character correlations.
+
+## Prime-equidistribution release 4.87
+
+The arbitrary ordering of the higher-root eigenvalues is removed. The
+intrinsic datum is now a multiset of exactly `R.toFinset.card - 1` algebraic
+integers, each of norm at most `√p`, whose power sums realize every explicit
+root-multiset extension correlation. Exact conversions between the ordered
+vector and unordered multiset preserve repeated eigenvalues and all traces.
+
+Multiplying `X-C α` over this spectrum gives a canonical monic split
+Frobenius polynomial. Its root multiset is literally the spectrum and its
+degree is exactly the conductor bound. The trace sequence is recorded
+directly as the negative power sums of this polynomial's roots.
+
+## Prime-equidistribution release 4.88
+
+The Legendre branch now has the same intrinsic form. Its ordered eigenpair is
+equivalent to an unordered two-element spectral multiset, preserving
+integrality, `√p` weight bounds, and every extension trace. The associated
+product of linear factors is a canonical monic split quadratic Frobenius
+polynomial whose roots are exactly that spectrum.
+
+Both remaining geometric inputs are therefore stated uniformly as existence
+of bounded integral Frobenius spectra realizing explicit finite-field
+character sums. The Legendre spectrum also supplies the all-extension bound
+`2*(√p)^(q+1)` directly.
+
+## Prime-equidistribution release 4.89
+
+The intrinsic Legendre spectrum now carries its canonical characteristic
+data explicitly. Its multiset sum and product are the trace and determinant
+of either enumeration of the two roots, and both are algebraic integers. The
+canonical Frobenius polynomial is proved literally equal to
+`X^2 - C(sum) * X + C(product)`.
+
+Every explicit power-Legendre extension correlation consequently satisfies
+the order-two recurrence with these unordered trace and determinant
+coefficients. The recurrence and characteristic polynomial therefore no
+longer depend on the ordered eigenpair used to enumerate the spectrum.
+
+## Prime-equidistribution release 4.90
+
+The sharp critical smooth-number saddle asymptotic is now composed into the
+public endpoint. Any nonnegative explicit cubefree Burgess bound directly
+implies Tao's exact Theorem 1.7 conclusion; no smooth-number or unrestricted
+Sylvester--Schur hypothesis remains in that implication.
+
+The fixed seventh-moment complete Weil estimate produces an explicit
+nonnegative Burgess coefficient together with Theorem 1.7. The full Kummer
+Frobenius system and, in particular, the final Legendre-plus-higher-root
+spectral source are carried through this chain. Thus the only remaining
+Theorem 1.7 input is the intrinsic Kummer/Burgess spectral theorem itself.
+
+## Prime-equidistribution release 4.91
+
+The Legendre spectrum is now canonical from finite-field data alone. Its
+trace is the negative base-field correlation, and its determinant is the
+quadratic Newton expression formed from the base and degree-two extension
+correlations. These coefficients are algebraic integers with norms at most
+`2*√p` and `p`, respectively.
+
+The resulting explicit quadratic is proved equal to every Legendre
+Frobenius polynomial, and its roots are exactly the spectral multiset. Hence
+any two spectra for the same character-sum data are equal. The complete
+extension recurrence is likewise expressed only through the first two
+literal correlations. The remaining Legendre task is existence for this one
+explicit polynomial, with no hidden eigenvalue or coefficient choices.
+
+## Prime-equidistribution release 4.92
+
+The explicit Legendre characteristic polynomial now supplies its canonical
+root multiset unconditionally: it is monic of degree two, splits over `ℂ`,
+has exactly two roots counted with multiplicity, and those roots have the
+previously determined trace and determinant.
+
+Existence of a Legendre spectrum is proved equivalent to three concrete
+properties of this fixed data: integrality of the two canonical roots, their
+`√p` norm bound, and the order-two recurrence for the literal extension
+correlations. The reverse implication reconstructs every power trace by
+two-step induction. Consequently the residual source and its direct route to
+Theorem 1.7 no longer quantify over an abstract Legendre spectrum; only these
+canonical conditions and the higher-root Kummer spectra remain.
+
+## Prime-equidistribution release 4.93
+
+Every literal power-Legendre correlation over every finite extension is now
+proved to be an algebraic integer directly, as a finite sum of products of
+finite-field character values. In particular, the explicit characteristic
+trace is integral without assuming any Frobenius spectrum.
+
+For the canonical monic quadratic, integrality of both fixed roots is proved
+equivalent to integrality of the single explicit determinant coefficient.
+The converse is obtained over the integral closure of `ℤ` in `ℂ` and then
+descended by transitivity. The residual Theorem 1.7 source is therefore
+determinant integrality, the `√p` bound on the fixed roots, the literal
+order-two recurrence, and the higher-root spectra.
+
+## Prime-equidistribution release 4.94
+
+The explicit Legendre determinant is now proved unconditionally to be an
+algebraic integer. Frobenius partitions the quadratic extension into its
+embedded base-field fixed points and two-element orbits. On fixed points the
+norm-lifted Legendre weight is exactly the square of the base-field weight.
+Independently, coordinate swap partitions the square of the base correlation
+into the same diagonal and paired off-diagonal terms. Their common diagonal
+makes the quadratic Newton numerator visibly twice a finite sum of algebraic
+integers.
+
+The residual Legendre source therefore no longer contains any integrality
+assumption. It consists exactly of the `√p` bound on the two canonical roots
+and the literal order-two recurrence. Together with the explicit higher-root
+spectra, this sharpened residual still reaches the Burgess certificate and
+the public Theorem 1.7 endpoint.
+
+## Prime-equidistribution release 4.95
+
+The canonical roots have now disappeared from the remaining source statement.
+Under the explicit recurrence, every extension correlation is proved to be
+the negative power sum of the two canonical roots. An elementary converse
+spectral-radius argument proves that the sharp bounds
+`‖C_q‖ ≤ 2*(√p)^(q+1)` in every extension degree are equivalent to the two
+individual root bounds `‖α‖,‖β‖ ≤ √p`.
+
+Thus the residual three-root input is stated entirely in finite-field terms:
+the literal all-extension Weil bounds and their explicit order-two recurrence.
+The determinant theorem also implies unconditionally that both canonical
+roots are algebraic integers. The new completely literal residual, together
+with the higher-root spectra, is carried through to the public Theorem 1.7
+endpoint.
+
+## Prime-equidistribution release 4.96
+
+The higher-root spectrum is now canonical from its literal trace sequence.
+Newton's identities are specialized to finite complex multisets and prove
+that a prescribed cardinality together with every positive power sum
+determines the multiset, including repeated eigenvalues. The extension-trace
+field of `PrimeKummerExplicitRootMultisetSpectrum` supplies precisely those
+power sums.
+
+Consequently any two higher-root spectrum records for fixed character and
+root-multiset data are equal, and the spectrum type is a subsingleton. Any
+existence witness therefore selects the same canonical spectrum and the same
+Frobenius polynomial. The higher-root source is restated as unique existence
+and carried, together with the literal Legendre Weil bounds and recurrence,
+to the public Theorem 1.7 endpoint. Actual existence of these spectra remains
+the geometric boundary.
+
+## Prime-equidistribution release 4.97
+
+The higher-root characteristic polynomial is now constructed directly from
+finite-field data. A terminating Newton recursion recovers elementary
+symmetric coefficients from the literal power sums supplied by the first
+`R.toFinset.card-1` extension correlations. The resulting Vieta polynomial
+is proved monic of exactly that degree and therefore has an unconditional
+canonical complex root multiset with the required cardinality.
+
+Every former higher-root spectrum is proved to have exactly this polynomial
+and exactly these roots. Its existence is equivalent to integrality and
+`√p` bounds for the fixed roots together with the literal all-extension trace
+identities. The final Theorem 1.7 source now contains no abstract higher-root
+spectrum variable: both branches are stated using explicit correlation data
+and canonical polynomials.
+
+## Prime-equidistribution release 4.98
+
+The higher-root all-extension trace identities are now reduced to the
+characteristic recurrence of the fixed Newton polynomial. The power sums of
+its canonical roots satisfy this recurrence, and a general strong-induction
+argument proves that a monic degree-`n` recurrence determines every sequence
+from its first `n` values.
+
+Accordingly, the higher-root residual now asks for fixed-root integrality and
+`√p` bounds, agreement between the literal correlations and canonical power
+sums only below degree `R.toFinset.card-1`, and the explicit Newton recurrence
+for the literal sequence. This equivalent recurrence formulation is carried
+to the full Kummer Frobenius system, Burgess certificate, and public Theorem
+1.7 endpoint.
+
+## Prime-equidistribution release 4.99
+
+The finite initial higher-root trace identities are now theorems rather than
+hypotheses. Vieta's coefficient formula identifies the elementary symmetric
+sums of the unconditional canonical roots with the recursively constructed
+Newton coefficients. A converse Newton induction for arbitrary complex
+sequences then recovers every positive power sum through the polynomial
+degree; degree zero follows from the already proved root cardinality.
+
+Thus the higher-root trace source has collapsed to one explicit assertion:
+the literal power-sum sequence satisfies the characteristic recurrence of its
+own Newton polynomial. Together with integrality and `√p` bounds for the fixed
+canonical roots, this is equivalent to the full spectral source and reaches
+the Burgess certificate and public Theorem 1.7 endpoint.
+
+## Prime-equidistribution release 5.00
+
+Canonical higher-root integrality is now a finite condition on explicit
+coefficients. A general monic-split theorem proves that all complex roots are
+algebraic integers if and only if every polynomial coefficient is. Since the
+Newton polynomial has exact degree `R.toFinset.card-1`, coefficients above
+that degree vanish, leaving only `R.toFinset.card` finite checks.
+
+Coefficient extraction also proves this is equivalent to integrality of the
+recursively defined Newton elementary coefficients themselves. The sharpened
+Theorem 1.7 residual therefore asks for finite Newton-coefficient integrality,
+the `√p` bound on the fixed canonical roots, and the literal characteristic
+recurrence, together with the literal Legendre Weil bound and recurrence.
+
+## Prime-equidistribution release 5.01
+
+The higher-root weight condition is now stated solely through literal
+extension correlations. A general finite-multiset spectral-radius theorem
+proves that every element has norm at most `R` exactly when every positive
+power sum has norm at most `card*R^n`. For the difficult reverse implication,
+Newton identities uniformly bound the coefficients of every powered root
+multiset, Cauchy's theorem uniformly bounds its roots, and powers of any norm
+strictly above one diverge.
+
+After the Newton recurrence identifies canonical and literal power sums, the
+fixed-root `√p` condition is therefore equivalent to the sharp literal bound
+`‖C_q‖ ≤ (R.toFinset.card-1)*(√p)^(q+1)` in every extension degree. Both
+Kummer branches now use literal Weil bounds and literal recurrences; the only
+additional higher-root clause is finite Newton-coefficient integrality.
+
+## Prime-equidistribution release 5.02
+
+Higher-root Newton integrality is now unconditional in degrees zero, one, and
+two. Frobenius orbits in the quadratic extension split its literal correlation
+into a base-field square term plus twice an algebraic-integer sum. The square
+of the base correlation has the same square term after pairing ordered base
+pairs by coordinate swap. Hence the second Newton numerator is twice an
+explicit sum of algebraic integers, proving the degree-two coefficient
+integral without any spectral assumption; degrees zero and one are direct.
+
+The finite higher-root integrality residual is therefore confined to Newton
+elementary degrees at least three. The literal all-extension Weil bound and
+literal characteristic recurrence, together with the corresponding Legendre
+conditions, remain the exact Kummer boundary.
+
+## Prime-equidistribution release 5.03
+
+The third higher-root Newton coefficient is now integral unconditionally. A
+general order-three orbit decomposition splits the cubic finite field into
+base-field fixed points and three-element Frobenius orbits. Norm lifting makes
+the fixed weights cubes of the base weights and makes every orbit weight
+constant.
+
+The exact third Newton combination separates into a degree-three complete
+homogeneous expression in the base weights, the product of the base sum with
+the quadratic-orbit sum, and the cubic-orbit sum. A finite induction proves
+the complete-homogeneous expression integral without division assumptions.
+Thus only Newton degrees at least four remain in the finite integrality
+clause; all literal Weil and recurrence conditions remain open.

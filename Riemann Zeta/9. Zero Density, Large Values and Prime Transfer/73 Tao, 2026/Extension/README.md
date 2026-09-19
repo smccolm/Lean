@@ -3712,3 +3712,183 @@ affine-Fourier form transfers directly to the fixed-`r=7` composite Burgess
 endpoint. The remaining theorem is now literally the bounded-rank, integral,
 weight-bounded isotypic decomposition of these affine point-count Fourier
 coefficients.
+
+## Release 4.73: unconditional degree-divisible three-root Frobenius systems
+
+`BurgessWeilPrimeKummerThreeRootFrobenius.lean` performs an explicit
+projective Möbius reduction for every split polynomial with exactly three
+distinct roots. Its complete character correlation is a scaled Jacobi sum
+minus one deleted projective point, and the same identity is proved after
+every canonical finite-field base change.
+
+Jacobi Hasse--Davenport makes the main term a signed power of one base-field
+Jacobi eigenvalue; the deleted point is an ordinary power of a second
+eigenvalue. Both are proved algebraic integral and of norm at most `sqrt p`.
+They therefore construct a genuine rank-two
+`PrimeKummerIsotypicFrobeniusSystem` whenever the total degree is divisible by
+the character order. This covers all such exactly-three-root cases, including
+two active roots and one inactive root. The remaining three-or-more-root
+source is now equivalent to only the degree-nondivisible three-root case plus
+the cases with at least four roots.
+
+## Release 4.74: unconditional inactive-root three-root systems
+
+`BurgessWeilPrimeKummerThreeRootInactiveFrobenius.lean` handles every exact
+three-root polynomial having an inactive root. The inactive local character
+deletes exactly that affine point, leaving a two-root Jacobi sum minus its
+value there. Jacobi Hasse--Davenport and norm lifting again turn these terms
+into powers of two fixed algebraic-integral eigenvalues of norm at most
+`sqrt p`, producing a genuine rank-two system without any degree condition.
+
+Combining this construction with release 4.73 proves that the exact
+three-root residual is only the all-active, degree-nondivisible case. The full
+three-or-more-root source is equivalent to that genuinely three-point case
+together with polynomials having at least four distinct roots.
+
+## Release 4.75: complete at-most-two-active-root Frobenius systems
+
+`BurgessWeilPrimeKummerLowActiveFrobenius.lean` generalizes the inactive-root
+calculation to an arbitrary number of distinct roots. Over every finite
+extension, the full correlation is proved equal to the unrestricted
+active-root correlation minus one deleted value for each inactive root. Each
+deleted value is algebraic integral, has norm at most one, and lifts as an
+ordinary degree power.
+
+For one active root the unrestricted sum vanishes, while for two active roots
+it is a Jacobi sum governed by unconditional Hasse--Davenport. Explicit
+spectra indexed by all inactive roots therefore construct genuine Frobenius
+systems of rank `#roots-1` in both cases. Consequently the original
+three-or-more-distinct-root source is kernel-checked equivalent to the exact
+source with at least three active roots, and that smaller source alone implies
+the complete all-extension Kummer theorem.
+
+## Release 4.76: rank-preserving active-root Frobenius interface
+
+`BurgessWeilPrimeKummerActiveFrobeniusSystem.lean` isolates the remaining
+cohomological datum as the unrestricted active-root trace sequence. Its
+natural spectrum has rank at most `#active roots-1`, with the same algebraic-
+integrality and weight-at-most-one conditions as the full Kummer system.
+
+The all-extension deletion identity is upgraded to include the base field.
+Appending one explicit weight-zero eigenvalue for each inactive root then
+recovers every full polynomial trace. The active and inactive cardinalities
+add to the total distinct-root count, so this construction preserves the
+sharp rank bound `#roots-1`. Consequently the sole Kummer source leaf is now
+the bounded-rank Frobenius decomposition of the unrestricted trace attached
+to at least three active roots; no inactive-root bookkeeping remains in that
+cohomological contract.
+
+## Release 4.77: canonical all-active Kummer polynomial
+
+`BurgessWeilPrimeKummerActivePolynomial.lean` deletes every inactive linear
+factor algebraically while retaining the original leading scalar and active
+root multiplicities. The resulting polynomial is nonzero, split, and has
+root multiset exactly the active roots with their original multiplicities.
+Every one of its roots is therefore active, and it remains Kummer-
+nondegenerate whenever the active set is nonempty.
+
+Evaluation is proved after arbitrary scalar extension. Applying the norm-
+lifted character shows that the canonical polynomial's ordinary Kummer trace
+is exactly the unrestricted active-root trace in the base field and every
+extension degree. Its full Frobenius systems consequently convert without
+loss to active-root systems for the original polynomial. The final active-
+trace source is proved equivalent to ordinary Kummer cohomology restricted
+to split, nondegenerate polynomials with at least three roots and no inactive
+roots. Thus both inactive trace corrections and inactive geometry have been
+removed from the remaining source leaf.
+
+## Release 4.78: finite reduced-exponent Kummer source
+
+`BurgessWeilPrimeKummerReducedActivePolynomial.lean` replaces every active
+root multiplicity by its least residue modulo `orderOf χ`. Activity proves
+these residues are nonzero, while `orderOf_pos` puts them strictly below the
+character order. The reduced polynomial remains nonzero and split, has the
+same distinct active roots, and has exactly these reduced multiplicities.
+
+Character powers are unchanged by reduction, including after norm lifting
+because the lifted character has the same order. Consequently the reduced
+polynomial has exactly the original active trace over the prime field and
+every canonical extension. The remaining cohomological source is proved
+equivalent to a full Kummer Frobenius theorem for split polynomials with at
+least three roots and every root multiplicity strictly below the character
+order. This removes arbitrary multiplicities and leaves a finite local-
+exponent range for each character order.
+
+## Release 4.79: monic normalization of the Kummer source
+
+`BurgessWeilPrimeKummerMonicNormalization.lean` proves that multiplying a
+Kummer polynomial by a base-field scalar multiplies its degree-`d` extension
+correlation by the `d`th power of the scalar's character value. Thus the
+leading coefficient can be absorbed into each Frobenius eigenvalue.
+
+The explicit normalization `C P.leadingCoeff⁻¹ * P` is proved nonzero and
+monic and preserves splitness, the complete root multiset, every root
+multiplicity, and the reduced-exponent condition. Twisting a system for this
+normalization by `χ P.leadingCoeff` preserves rank, algebraic integrality, and
+the weight bound while reconstructing every extension trace of `P`.
+Consequently the reduced-exponent source is equivalent to its restriction to
+monic split polynomials. The remaining cohomological leaf now has leading
+coefficient one and local exponents in `1,...,orderOf χ-1`.
+
+## Release 4.80: affine two-point normalization
+
+`BurgessWeilPrimeKummerTwoPointNormalization.lean` chooses two distinct roots
+`a,b` of a monic split polynomial and replaces every root `r` by
+`(r-a)/(b-a)`. The resulting polynomial is monic and split, has the same
+number of distinct roots and the same root multiplicities, preserves the
+reduced-exponent condition, and contains both `0` and `1` among its roots.
+
+After the affine substitution `y = a + (b-a)x`, the degree-`d` extension
+correlation is multiplied by `(χ(b-a)^deg P)^d`. Multiplying each Frobenius
+eigenvalue by `χ(b-a)^deg P` therefore transports a system back to the
+original polynomial without changing rank, integrality, or the weight bound.
+The monic source is equivalent to its restriction to reduced-exponent split
+polynomials with at least three roots and distinguished roots `0` and `1`.
+The unresolved geometric leaf is now a two-point-normalized finite-exponent
+Kummer family.
+
+## Release 4.81: canonical Legendre and higher-root split
+
+`BurgessWeilPrimeKummerLegendreReduction.lean` constructs the canonical
+three-root polynomial from the multiset containing `m` copies of `0`, `n`
+copies of `1`, and `k` copies of `t`. It proves monicity, splitness, the exact
+root multiset, degree `m+n+k`, the three root multiplicities, and preservation
+of the reduced-exponent condition when `0<m,n,k<orderOf χ` and `t≠0,1`.
+
+Every monic split polynomial with exactly three roots including `0` and `1`
+is proved literally equal to this canonical polynomial for the unique
+remaining root and its three multiplicities. The previously constructed
+Jacobi system discharges the degree-divisible case. Thus the residual source
+is exactly the conjunction of the nondivisible finite-exponent Legendre
+family and the two-point-normalized family with at least four roots.
+
+## Release 4.82: explicit power-Legendre Frobenius interface
+
+`BurgessWeilPrimeKummerLegendreFrobeniusSystem.lean` identifies the canonical
+polynomial trace over every extension field with the literal sum
+`Σx (χE^m)(x) (χE^n)(x-1) (χE^k)(x-t)`, where `χE` is the norm lift of the
+base character. The equality is proved degree by degree from an arbitrary-
+extension evaluation formula for the canonical polynomial.
+
+`PrimePowerLegendreFrobeniusSystem` states the residual geometric input
+directly: at most two integral eigenvalues of weight at most `√p` whose power
+sums recover all these Legendre correlations. Explicit transports in both
+directions prove that this is equivalent to the canonical polynomial Kummer
+system. Consequently the final three-root source is now a pure rank-two
+hypergeometric Frobenius statement, paired with the normalized four-or-more-
+root source.
+
+## Release 4.83: exact Legendre eigenpair
+
+`BurgessWeilPrimeKummerLegendreEigenpair.lean` replaces the variable rank
+`≤2` index type by two explicit complex eigenvalues. Rank-zero and rank-one
+systems are padded by zero; rank-two systems are enumerated exactly. The
+reverse construction uses both entries as a `Fin 2` Frobenius system, proving
+the formulations equivalent.
+
+Every resulting Legendre trace sequence satisfies the quadratic recurrence
+with coefficients `first+second` and `first*second`. The pair’s weight bounds
+also recover the earlier base-field estimate `≤2√p`, so the new all-extension
+source directly implies the previously isolated reduced-power Legendre Weil
+bound. The unresolved three-root datum is now precisely an integral bounded
+eigenpair realizing the explicit power-Legendre traces.
