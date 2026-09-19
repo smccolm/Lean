@@ -1,0 +1,21 @@
+name = "TaoTrudgianYang2025"
+version = "0.1.0"
+keywords = ["analytic-number-theory", "exponent-pairs", "zero-density"]
+defaultTargets = ["TaoTrudgianYang2025"]
+packagesDir = "../../../.lake/packages"
+buildDir = "E:/Lean/.lake/tao-trudgian-yang-2025-build"
+
+[[lean_lib]]
+name = "TaoTrudgianYang2025"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "RiemannZeta"
+path = "../../.."
+
+[[require]]
+name = "ExpdbFrozen"
+path = "../Dependencies/ANTEDBFrozen"

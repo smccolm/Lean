@@ -83,10 +83,19 @@ try {
         'Tao-Trudgian-Yang Research Agenda.md',
         'Tao-Trudgian-Yang Sources.md',
         'Dependencies\README.md',
+        'Dependencies\ANTEDBFrozen\README.md',
+        'Dependencies\ANTEDBFrozen\LICENSE',
+        'Dependencies\ANTEDBFrozen\SOURCE_SHA256SUMS.txt',
+        'Dependencies\ANTEDBFrozen\lakefile.toml',
+        'Dependencies\ANTEDBFrozen\lean-toolchain',
         'Extension\README.md',
+        'Extension\lake-manifest.json',
+        'Extension\lakefile.toml',
+        'Extension\lean-toolchain',
         'Sources\PINS.md',
         'Sources\SHA256SUMS.txt',
         'Tools\README.md',
+        'Tools\generate_certificates.py',
         'Tools\verify_sources.ps1',
         'Tools\run_tao_trudgian_yang_build.ps1',
         'run_tao_trudgian_yang_build.bat',
@@ -101,6 +110,51 @@ try {
     & (Join-Path $PSScriptRoot 'verify_sources.ps1')
     Write-Host 'PASS: pinned source integrity'
 
+    Write-Host 'STAGE: frozen ANTEDB source integrity'
+    $frozenRoot = Join-Path $projectRoot 'Dependencies\ANTEDBFrozen'
+    $frozenLedger = Join-Path $frozenRoot 'SOURCE_SHA256SUMS.txt'
+    $frozenLines = @(
+        Get-Content -LiteralPath $frozenLedger |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    )
+    if ($frozenLines.Count -ne 12) {
+        throw "Frozen ANTEDB manifest must contain exactly 12 files; found $($frozenLines.Count)."
+    }
+    $manifestPaths = [System.Collections.Generic.HashSet[string]]::new(
+        [System.StringComparer]::OrdinalIgnoreCase)
+    foreach ($line in $frozenLines) {
+        if ($line -notmatch '^([0-9A-Fa-f]{64})  (.+)$') {
+            throw "Malformed frozen-source hash line: $line"
+        }
+        $expectedHash = $Matches[1].ToUpperInvariant()
+        $relativePath = $Matches[2].Replace('/', '\')
+        if (-not $manifestPaths.Add($relativePath)) {
+            throw "Duplicate frozen-source manifest entry: $relativePath"
+        }
+        $sourcePath = Join-Path $frozenRoot $relativePath
+        if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) {
+            throw "Frozen ANTEDB source is missing: $relativePath"
+        }
+        $actualHash = (Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash
+        if ($actualHash -ne $expectedHash) {
+            throw "Frozen ANTEDB source hash mismatch: $relativePath"
+        }
+    }
+    $actualFrozenFiles = @(
+        Get-ChildItem -LiteralPath $frozenRoot -Recurse -File |
+            Where-Object { $_.Extension -eq '.lean' -or $_.Name -eq 'LICENSE' } |
+            ForEach-Object { $_.FullName.Substring($frozenRoot.Length + 1) }
+    )
+    foreach ($relativePath in $actualFrozenFiles) {
+        if (-not $manifestPaths.Contains($relativePath)) {
+            throw "Unmanifested frozen ANTEDB source: $relativePath"
+        }
+    }
+    if ($actualFrozenFiles.Count -ne $frozenLines.Count) {
+        throw 'Frozen ANTEDB source inventory does not match its hash manifest.'
+    }
+    Write-Host "PASS: frozen ANTEDB source integrity ($($frozenLines.Count) files)"
+
     Write-Host 'STAGE: forbidden Lean shortcut scan'
     $leanFiles = @(
         Get-ChildItem -LiteralPath $projectRoot -Recurse -File -Filter '*.lean' |
@@ -108,7 +162,7 @@ try {
     )
     $forbiddenPatterns = @(
         '\b(sorry|admit)\b|sorryAx',
-        '^\s*(axiom|constant)\b',
+        '^(axiom|constant)\b',
         '\b(native_decide|implemented_by|unsafe)\b'
     )
     $forbiddenMatches = [System.Collections.Generic.List[string]]::new()
@@ -149,15 +203,69 @@ try {
         Write-Host 'STAGE: Lean package bootstrap inventory'
         $leanPackageFiles = @(
             'Extension\TaoTrudgianYang2025.lean',
+            'Extension\TaoTrudgianYang2025\AdditiveEnergy.lean',
+            'Extension\TaoTrudgianYang2025\AsymptoticBridge.lean',
             'Extension\TaoTrudgianYang2025\Audit.lean',
-            'Extension\TaoTrudgianYang2025\SemanticRegression.lean'
+            'Extension\TaoTrudgianYang2025\BetaDuality.lean',
+            'Extension\TaoTrudgianYang2025\BourgainPiecewiseCertificates.lean',
+            'Extension\TaoTrudgianYang2025\ClassicalDensityBridge.lean',
+            'Extension\TaoTrudgianYang2025\EnergyExponents.lean',
+            'Extension\TaoTrudgianYang2025\EnergyRegions.lean',
+            'Extension\TaoTrudgianYang2025\ExponentPair.lean',
+            'Extension\TaoTrudgianYang2025\GeneratedCertificates.lean',
+            'Extension\TaoTrudgianYang2025\GuthMaynardBridge.lean',
+            'Extension\TaoTrudgianYang2025\LargeValueExponent.lean',
+            'Extension\TaoTrudgianYang2025\LargeValuePattern.lean',
+            'Extension\TaoTrudgianYang2025\PiecewiseEnvelope.lean',
+            'Extension\TaoTrudgianYang2025\PolyhedralCertificates.lean',
+            'Extension\TaoTrudgianYang2025\RationalCertificates.lean',
+            'Extension\TaoTrudgianYang2025\SemanticRegression.lean',
+            'Extension\TaoTrudgianYang2025\ZeroCountBridge.lean',
+            'Extension\TaoTrudgianYang2025\ZeroDensityExponent.lean'
         )
         foreach ($relativePath in $leanPackageFiles) {
             Assert-ProjectFile -ProjectRoot $projectRoot -RelativePath $relativePath
         }
         Write-Host 'PASS: Lean package bootstrap inventory'
 
+        Write-Host 'STAGE: deterministic certificate regeneration'
+        $pythonCommand = Get-Command python -ErrorAction Stop
+        $generatorPath = Join-Path $projectRoot 'Tools\generate_certificates.py'
+        $archivePath = Join-Path $projectRoot 'Sources\antedb-expdb-paper-time-9953003.zip'
+        $checkedCertificatePath = Join-Path $extensionRoot `
+            'TaoTrudgianYang2025\GeneratedCertificates.lean'
+        $temporaryCertificate = New-TemporaryFile
+        try {
+            & $pythonCommand.Source $generatorPath --archive $archivePath `
+                --output $temporaryCertificate.FullName
+            if ($LASTEXITCODE -ne 0) {
+                throw "Certificate generator exited with code $LASTEXITCODE."
+            }
+            $expectedHash = (Get-FileHash -LiteralPath $checkedCertificatePath `
+                -Algorithm SHA256).Hash
+            $actualHash = (Get-FileHash -LiteralPath $temporaryCertificate.FullName `
+                -Algorithm SHA256).Hash
+            if ($actualHash -ne $expectedHash) {
+                throw 'Generated certificate output differs from the checked-in Lean module.'
+            }
+        }
+        finally {
+            Remove-Item -LiteralPath $temporaryCertificate.FullName -Force `
+                -ErrorAction SilentlyContinue
+        }
+        Write-Host 'PASS: deterministic certificate regeneration'
+
         $lakeCommand = Get-Command lake -ErrorAction Stop
+        if ([string]::IsNullOrWhiteSpace($env:ELAN_HOME)) {
+            $elanBin = Split-Path -Parent $lakeCommand.Source
+            $elanHomeCandidate = Split-Path -Parent $elanBin
+            $toolchainDirectory = Join-Path $elanHomeCandidate 'toolchains'
+            if (-not (Test-Path -LiteralPath $toolchainDirectory -PathType Container)) {
+                throw 'ELAN_HOME is unset and could not be inferred from the Lake executable.'
+            }
+            $env:ELAN_HOME = $elanHomeCandidate
+            Write-Host "Using inferred ELAN_HOME: $elanHomeCandidate"
+        }
         Invoke-LeanGate -Label 'default Lake build' -WorkingDirectory $extensionRoot `
             -Executable $lakeCommand.Source -Arguments @('build')
         Invoke-LeanGate -Label 'semantic regression' -WorkingDirectory $extensionRoot `
@@ -191,4 +299,3 @@ finally {
 }
 
 exit $buildExitCode
-

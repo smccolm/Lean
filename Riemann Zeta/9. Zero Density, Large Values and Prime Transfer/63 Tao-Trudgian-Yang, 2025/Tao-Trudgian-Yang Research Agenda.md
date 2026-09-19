@@ -16,7 +16,32 @@ large-value patterns, zeta zero counts, and additive energy. The optimization
 should be formalized as proof-producing exact finite certificates only after
 those meanings are fixed.
 
+## Implementation status (19 September 2026)
+
+EPZAE-00--05, EPZAE-07--08, EPZAE-16--17, EPZAE-20, EPZAE-22--23,
+EPZAE-25, and EPZAE-31 pass. The project now has one Lean 4.30 graph,
+an attributed frozen ANTEDB subset, exact rational/piecewise/polyhedral
+certificate kernels, and the paper's analytic exponent-pair definition with a
+proved non-asymptotic equivalence, an exact multiplicity-weighted zero-
+rectangle bridge, the extended-real density exponent with its epsilon-loss
+interface, and exact shifted-convention bridges for the native Ingham,
+Huxley, and Guth--Maynard estimates, faithful general/zeta large-value
+patterns and least-exponent interfaces, and the exact `guth-maynard-lvt`
+bound obtained from the native publication theorem through proved support,
+reflection, phase, norm, threshold, and epsilon-loss conversions, together
+with unit-tolerance indexed-
+multiset energy and its quadratic/cubic bounds. These bounds now induce the
+extended-real general and zeta exponent comparisons `2LV ≤ LV* ≤ 3LV`, even
+at infinite infima. The non-asymptotic energy regions also imply the necessary
+`ρ ≤ τ` and `2ρ ≤ ρ* ≤ 3ρ` constraints. The
+remaining checklist items are open; none of the advertised
+paper outputs is complete.
+
 ## Phase 0: freeze and compatibility
+
+**Complete.** The selected ANTEDB subset was backported to the local Lean 4.30
+graph with two documented compatibility edits, and the two-source import spike
+is part of the default build and audit.
 
 1. Preserve arXiv v1 PDF and TeX source with hashes.
 2. Preserve the paper-time ANTEDB snapshot and the current Lean-enabled
@@ -35,6 +60,11 @@ surface is small enough to evaluate, while upgrading the completed
 Guth--Maynard tree is high risk.
 
 ## Phase 1: exact certificate kernel
+
+**Core acceptance test complete (EPZAE-03--05).** Exact denominator signs for
+all displayed output formulas, generic envelope/polyhedral soundness, and the
+optimized Bourgain endpoint/coverage certificates are kernel-checked. The
+deterministic generator remains separate work under EPZAE-06.
 
 Build reusable, domain-independent machinery for:
 
@@ -56,6 +86,9 @@ specified affine line dominates on its stated interval.
 
 ## Phase 2: exponent pairs and beta
 
+**In progress.** EPZAE-07--08 are complete. Convexity and beta duality are the
+next open analytic edge.
+
 1. Reuse ANTEDB's `exponentSumGrowthExponent` and non-asymptotic equivalence.
 2. define the analytic `ExponentPair` predicate;
 3. prove monotonicity and convexity;
@@ -70,6 +103,11 @@ pair. Lean must contain the actual duality argument; it may not record D as an
 unproved constructor.
 
 ## Phase 3: large-value semantics
+
+**In progress.** EPZAE-16--17 and EPZAE-20 are complete. In particular,
+`guthMaynard_largeValueBound` proves the source maximum of all three affine
+exponents from the native publication theorem. Elementary/classical and
+zeta-specific large-value inputs remain under EPZAE-18--19 and EPZAE-21.
 
 1. Define large-value patterns with exact interval, separation, coefficient,
    phase-sign, and normalization conventions.
@@ -147,17 +185,15 @@ explicitly warns may differ.
 | Source editorial slips | TeX contains minor variable/label inconsistencies | Maintain an errata ledger in the crosswalk |
 | Over-formalizing literature | Full books/papers would swamp the target | Formalize the exact consumed theorem surfaces first |
 
-## Concrete first sprint
+## Next sprint
 
-1. Finish EPZAE-01 compatibility experiment.
-2. Import/reuse ANTEDB `Basic.Asymptotics`, `Basic.AutomaticUniformity`,
-   `Basic.PowerAsymptotics`, `ExponentialSums.PhaseFunctions`, and
-   `ExponentialSums.ExponentSumGrowth`.
-3. Create exact rational interval/envelope certificate types.
-4. Formalize the exponent-pair triangle and analytic predicate.
-5. Prove the easy direction “exponent pair implies affine beta bound.”
-6. Certify that all four published pairs lie in the exponent-pair triangle.
-7. Add the first audit and warning-clean build runner.
+1. Prove exponent-pair convex closure directly from the analytic estimate.
+2. Prove the easy direction “exponent pair implies affine beta bound.”
+3. Prove the converse, including the `alpha = 0,1` endpoints and beta
+   reflection bookkeeping.
+4. Extend the installed deterministic extractor and byte-for-byte runner diff
+   gate to every certificate table.
+5. Begin exact A/B/C process theorem surfaces only after duality compiles.
 
-This sprint deliberately stops before claiming any new exponent pair: triangle
-membership and affine arithmetic are prerequisites, not the analytic result.
+Triangle membership and affine arithmetic remain prerequisites, not claims
+that any of the four advertised points is already an exponent pair.

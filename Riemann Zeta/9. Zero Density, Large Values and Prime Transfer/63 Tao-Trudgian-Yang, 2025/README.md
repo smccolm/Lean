@@ -5,10 +5,14 @@ formalization of Terence Tao, Tim Trudgian, and Andrew Yang,
 *New exponent pairs, zero density estimates, and zero additive energy
 estimates: a systematic approach*, arXiv `2501.16779v1` (2025).
 
-**Current status:** research and architecture scaffold only. No theorem from
-the paper is claimed formalized here yet. The neighboring Guth--Maynard and
-Tao projects are completed foundations; this directory does not inherit their
-completion status merely by referring to them.
+**Current status:** the unified package, audited dependency bridges, exact
+certificate kernel, analytic exponent-pair semantics, exact Guth--Maynard
+large-value bridge, and additive-energy foundations are installed and pass
+the principal runner. The energy layer includes the extended-real general
+and zeta comparisons `2LV ≤ LV* ≤ 3LV` and the corresponding necessary region
+constraints. No advertised theorem from the paper is claimed
+formalized yet; the four exponent pairs, density bounds, and energy bounds
+still require their analytic derivations.
 
 ## Exact intended outputs
 
@@ -40,11 +44,11 @@ Fourier/L2 estimates. It does **not** yet contain Lean modules for exponent
 pairs, large-value exponents, zero-density exponents, or additive-energy
 exponents.
 
-That upstream is therefore the natural starting point, but not a complete
-formalization of this paper. Its current Lean toolchain is `v4.32.0`; the
-completed local Guth--Maynard foundation is on `v4.30.0`. Resolving that
-compatibility boundary is Checklist item EPZAE-01 and must precede production
-code.
+That upstream is therefore a foundation, not a complete formalization of this
+paper. Its upstream Lean toolchain is `v4.32.0`; the completed local
+Guth--Maynard foundation is on `v4.30.0`. EPZAE-01 resolved that boundary by
+compiling an attributed, hash-pinned subset of ANTEDB on the local Lean 4.30
+graph.
 
 ## Layout
 
@@ -60,39 +64,33 @@ code.
 - `Tao-Trudgian-Yang Reproduction Manifest.md` -- pins and verification policy.
 - `Sources/` -- the primary paper, source archive, figures, and frozen ANTEDB
   snapshots.
-- `Dependencies/` -- dependency decision record; no multi-gigabyte tree is
-  copied here during planning.
-- `Extension/` -- proposed Lean package and module layout.
-- `Tools/` -- source-integrity and future build-runner notes.
-- `run_tao_trudgian_yang_build.bat` -- human-facing verification runner; currently reports
-  a planning-scaffold result and activates Lean build/audit gates when the
-  unified package is installed.
+- `Dependencies/` -- attributed frozen ANTEDB compatibility subset and
+  dependency decision record.
+- `Extension/` -- unified Lean package and production modules.
+- `Tools/` -- source-integrity, build, regression, and audit implementation.
+- `run_tao_trudgian_yang_build.bat` -- principal human-facing verification
+  runner; it builds the unified package and runs every currently installed
+  integrity, regression, and audit gate.
 
-## Recommended first implementation slice
+## Current implementation frontier
 
-Start with a compatibility spike, not a theorem stub:
-
-1. select one Lean/mathlib version for both the local Guth--Maynard source and
-   the ANTEDB foundations;
-2. import ANTEDB's existing asymptotic and phase-function API without copying
-   definitions under new names;
-3. formalize the paper's `ExponentPair` predicate and the
-   exponent-pair/`beta` duality interface;
-4. build an exact rational certificate checker for piecewise-affine bounds;
-5. certify one small convex-hull calculation before tackling any analytic
-   process theorem.
-
-This order separates exact finite optimization from the deep analytic inputs
-and gives an early, auditable end-to-end artifact.
+EPZAE-00--05, EPZAE-07--08, EPZAE-16--17, EPZAE-20, EPZAE-22--23,
+EPZAE-25, and EPZAE-31 are complete. The next analytic
+frontier is EPZAE-09: the remaining endpoint/reflection and converse direction
+of beta/exponent-pair duality.
+The initial deterministic certificate extractor is in the principal runner;
+EPZAE-06 remains open until it reproduces every optimization witness rather
+than only the four output coordinates.
 
 ## Non-claims
 
 - ANTEDB's Python output is discovery evidence, not Lean proof evidence.
 - A checked rational inequality is not a proof that its analytic input is an
   exponent pair or a large-value theorem.
-- The completed Guth--Maynard theorem does not automatically prove every
-  large-value inequality used in this paper; each interface requires an exact
-  source-convention bridge.
+- The completed Guth--Maynard theorem supplies `guth-maynard-lvt` only through
+  the explicit, kernel-checked support, reflection, phase, coefficient, and
+  epsilon-loss conversions in `GuthMaynardBridge.lean`; it does not
+  automatically prove the other large-value inequalities used in the paper.
 - A theorem parameterized by the desired exponent-pair, density, or energy
   conclusion is conditional and cannot satisfy the release contract.
 - The source paper itself describes its computation as not formally

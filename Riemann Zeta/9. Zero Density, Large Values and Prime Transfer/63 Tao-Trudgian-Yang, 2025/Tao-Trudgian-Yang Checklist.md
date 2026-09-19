@@ -9,26 +9,26 @@ additive energy**, the three output families covered by the paper.
 
 ## Groundwork
 
-- [ ] **EPZAE-00 -- Source freeze.** Primary PDF/TeX, both ANTEDB snapshots,
+- [x] **EPZAE-00 -- Source freeze.** Primary PDF/TeX, both ANTEDB snapshots,
   relevant source papers, URLs, versions, licenses, and SHA-256 values are
   recorded and verified by a script.
-- [ ] **EPZAE-01 -- Toolchain and dependency unification.** One pinned Lean and
+- [x] **EPZAE-01 -- Toolchain and dependency unification.** One pinned Lean and
   mathlib graph imports both the selected ANTEDB foundations and the completed
   Guth--Maynard source. A clean two-module spike builds with zero warnings.
-- [ ] **EPZAE-02 -- Package/audit bootstrap.** Root module, production-module
+- [x] **EPZAE-02 -- Package/audit bootstrap.** Root module, production-module
   inventory, semantic regression file, exhaustive axiom audit, forbidden-
   shortcut scan, and warning-failing runner exist and pass for the bootstrap
   scope.
 
 ## Exact certificate layer
 
-- [ ] **EPZAE-03 -- Rational-function signs.** Exact arithmetic normalizes the
+- [x] **EPZAE-03 -- Rational-function signs.** Exact arithmetic normalizes the
   paper's rational bounds and proves every denominator positive on its claimed
   interval.
-- [ ] **EPZAE-04 -- Piecewise envelopes.** Lean checks rational interval covers,
+- [x] **EPZAE-04 -- Piecewise envelopes.** Lean checks rational interval covers,
   affine/rational comparisons, crossover points, endpoint agreement, and
   finite max/min envelopes.
-- [ ] **EPZAE-05 -- Convex/polyhedral certificates.** Convex-combination,
+- [x] **EPZAE-05 -- Convex/polyhedral certificates.** Convex-combination,
   half-space, projection, and optimization witnesses are represented as data
   with kernel-checked soundness theorems.
 - [ ] **EPZAE-06 -- Deterministic generator.** A pinned script reproduces the
@@ -37,10 +37,10 @@ additive energy**, the three output families covered by the paper.
 
 ## Asymptotics and exponent pairs
 
-- [ ] **EPZAE-07 -- ANTEDB asymptotic bridge.** The selected upstream definitions
+- [x] **EPZAE-07 -- ANTEDB asymptotic bridge.** The selected upstream definitions
   are reused or ported faithfully; automatic uniformity, power asymptotics,
   model phases, and exponent-sum growth compile in the target graph.
-- [ ] **EPZAE-08 -- Exponent-pair semantics.** `ExponentPair (k,l)` unfolds to
+- [x] **EPZAE-08 -- Exponent-pair semantics.** `ExponentPair (k,l)` unfolds to
   the intended uniform exponential-sum estimate, and the non-asymptotic
   equivalent is proved.
 - [ ] **EPZAE-09 -- Convexity and duality.** Convex closure and both directions of
@@ -63,17 +63,17 @@ additive energy**, the three output families covered by the paper.
 
 ## Large values
 
-- [ ] **EPZAE-16 -- Large-value patterns.** Coefficients, dyadic support,
+- [x] **EPZAE-16 -- Large-value patterns.** Coefficients, dyadic support,
   interval length, one-separation, phase sign, and lower threshold are modeled
   exactly.
-- [ ] **EPZAE-17 -- LV semantics.** `LV` and `LV_zeta` have faithful
+- [x] **EPZAE-17 -- LV semantics.** `LV` and `LV_zeta` have faithful
   epsilon-loss and least-exponent/non-asymptotic interfaces.
 - [ ] **EPZAE-18 -- Elementary LV calculus.** Subdivision, lower/L2 bounds,
   obvious bounds, and raising-to-a-power are proved with uniform coefficient
   normalization.
 - [ ] **EPZAE-19 -- Classical LV inputs.** Exact consumed Huxley, Jutila,
   Heath--Brown, twelfth-moment, and Bourgain interfaces are proved/imported.
-- [ ] **EPZAE-20 -- Guth--Maynard bridge.** The completed local theorem proves the
+- [x] **EPZAE-20 -- Guth--Maynard bridge.** The completed local theorem proves the
   exact `guth-maynard-lvt` interface after all convention conversions; no
   generic restatement is accepted as a bridge.
 - [ ] **EPZAE-21 -- Zeta LV inputs.** Reflection, moment, and
@@ -81,13 +81,13 @@ additive energy**, the three output families covered by the paper.
 
 ## Zero density
 
-- [ ] **EPZAE-22 -- Zero-count convention.** The paper's multiplicity-weighted
+- [x] **EPZAE-22 -- Zero-count convention.** The paper's multiplicity-weighted
   `N(sigma,T)` and local rectangle count are related by a proved exact bridge.
-- [ ] **EPZAE-23 -- Density exponent.** `A(sigma)` and its non-asymptotic
+- [x] **EPZAE-23 -- Density exponent.** `A(sigma)` and its non-asymptotic
   epsilon-loss interface are defined faithfully.
 - [ ] **EPZAE-24 -- LV-to-density transfer.** `zero-from-large` and all corollaries
   used in the paper consume actual large-value patterns and actual zeta zeros.
-- [ ] **EPZAE-25 -- Classical density bridges.** Local Ingham, Huxley, and
+- [x] **EPZAE-25 -- Classical density bridges.** Local Ingham, Huxley, and
   Guth--Maynard public theorems instantiate the paper's interfaces exactly.
 - [ ] **EPZAE-26 -- Improved Heath--Brown density.** `hb-density2` is proved on
   `7/10 < sigma <= 1` with the correct endpoint handling.
@@ -103,7 +103,7 @@ additive energy**, the three output families covered by the paper.
 
 ## Additive energy
 
-- [ ] **EPZAE-31 -- Additive-energy semantics.** Approximate quadruple energy of
+- [x] **EPZAE-31 -- Additive-energy semantics.** Approximate quadruple energy of
   an indexed multiset is defined with unit tolerance and multiplicity; the
   paper's basic bounds are proved.
 - [ ] **EPZAE-32 -- Energy exponents/regions.** `LV*`, `LV*_zeta`, `A*`, `E`, and

@@ -54,6 +54,26 @@ No current Lean file defines exponent pairs, large-value exponents,
 zero-density exponents, or additive-energy exponents. These are target work,
 not existing proofs.
 
+## License and redistribution record
+
+License here means the license displayed by the authoritative source, not a
+claim that every local research copy may be republished under an open license.
+
+| Frozen material | Authoritative URL | Recorded license/status |
+|---|---|---|
+| Tao--Trudgian--Yang `2501.16779v1` PDF/source | `https://arxiv.org/abs/2501.16779` | arXiv non-exclusive distribution license 1.0 |
+| Trudgian--Yang `2306.05599v3` PDF/source | `https://arxiv.org/abs/2306.05599` | arXiv non-exclusive distribution license 1.0 |
+| Matomäki--Teräväinen `2403.13157v1` PDF/source | `https://arxiv.org/abs/2403.13157` | arXiv non-exclusive distribution license 1.0 |
+| Heath--Brown `1601.04493v3` PDF/source | `https://arxiv.org/abs/1601.04493` | arXiv non-exclusive distribution license 1.0 |
+| Guth--Maynard `2405.20552v1/v2` PDF/source | `https://arxiv.org/abs/2405.20552` | Creative Commons Attribution 4.0 |
+| ANTEDB snapshots and frozen Lean subset | `https://github.com/teorth/expdb` | Apache License 2.0; preserved as `Dependencies/ANTEDBFrozen/LICENSE` |
+| Heath--Brown 1978 twelfth-moment PDF | journal scan cited in the primary bibliography | no open redistribution license identified; retained as a pinned research/reference copy |
+
+The arXiv non-exclusive license grants distribution rights to arXiv and is not
+an open-source license. Citation-only books and journal articles are not copied
+into this target. `Sources/SHA256SUMS.txt` and the principal runner bind the
+installed artifact bytes independently of their license status.
+
 ## Existing local formalization assets
 
 1. `../71 Guth-Maynard, 2026/` is the canonical local Lean formalization of
@@ -133,16 +153,16 @@ the crosswalk later promotes it.
 | Bou17 | Bourgain, *Decoupling, exponential sums and the Riemann zeta function* | exponent pair `(13/84,55/84)` | formalize/import exact pair input |
 | CDV24 | Chen--Debruyne--Vindas, density for cusp-form L-functions | best-known zeta-density table entry cited by paper | validate scope before EPZAE-30 |
 | CT21 | Cladek--Tao, additive energy of regular measures | alternate proof of a basic energy inequality | reference |
-| GM24 | Guth--Maynard, *New large value estimates...* | `guth-maynard-lvt`, density input | local completed formalization; exact bridge EPZAE-20/25 |
+| GM24 | Guth--Maynard, *New large value estimates...* | `guth-maynard-lvt`, density input | local completed formalization; exact kernel-checked bridges EPZAE-20/25 |
 | HT69 | Halász--Turán, distribution of zeta roots | Lindelöf-implies-density theorem | supporting/reference |
 | HB78 | Heath--Brown, twelfth moment | `twelfth-bound` | PDF pinned; formalize/import EPZAE-21 |
 | HB79a | Heath--Brown, differences between consecutive primes II | optimized large-value inequality `hb-opt` | formalize consumed form EPZAE-19 |
 | HB79b | Heath--Brown, large values for Dirichlet polynomials | classical LV input | formalize consumed form EPZAE-19 |
 | HB79c | Heath--Brown, zero density and Dirichlet L-functions | `hb-density2` precursor and energy relation `hbt` | formalize EPZAE-35 and cited LV steps |
 | HB17 | Heath--Brown, kth derivative estimate | beta formula | PDF/source pinned; formalize EPZAE-12 |
-| Hux72 | Huxley, consecutive primes | Huxley density bound | local theorem; bridge EPZAE-25 |
+| Hux72 | Huxley, consecutive primes | Huxley density bound | local theorem and EPZAE-25 bridge kernel-checked |
 | Hux96 | Huxley, *Area, Lattice Points, and Exponential Sums* | beta tables, A/B process references | book/citation; exact used rows need source verification |
-| Ing40 | Ingham, estimation of `N(sigma,t)` | classical density bound | local theorem; bridge EPZAE-25 |
+| Ing40 | Ingham, estimation of `N(sigma,t)` | classical density bound | local theorem and EPZAE-25 bridge kernel-checked |
 | Ivi80 | Ivić, exponent pairs and zeta | density-table pieces | local scan available; formalize exact EPZAE-30 inputs |
 | Ivi03 | Ivić, *The Riemann Zeta-Function* | exponent-pair processes and density theorems | local scan available; citation/page crosswalk required |
 | IK04 | Iwaniec--Kowalski, *Analytic Number Theory* | L2 mean value and van der Corput background | reference; prefer Mathlib/local proofs |

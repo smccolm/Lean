@@ -7,7 +7,9 @@
 - **Planned:** statement/module design only.
 - **Kernel-checked:** reserved for a compiled theorem with audited dependencies.
 
-At scaffold creation every target row is **planned**.
+Current kernel-checked infrastructure comprises EPZAE-00--05, EPZAE-07--08,
+EPZAE-16--17, EPZAE-20, EPZAE-22--23, EPZAE-25, and EPZAE-31. Every
+public-result row below remains **planned**.
 
 ## Public result ledger
 
@@ -56,17 +58,17 @@ Every bound below is for `A*(sigma) * (1-sigma)`.
 
 ## Definition crosswalk
 
-| Paper object/label | Intended semantics | Existing reusable code | Planned module |
+| Paper object/label | Intended semantics | Existing reusable code | Lean module/status |
 |---|---|---|---|
-| `auto` | automatic uniformity for variable families | ANTEDB `Basic.AutomaticUniformity` | `AsymptoticBridge` |
-| `phase-def`, `fpu` | model phase through derivative convergence on `[1,2]` | ANTEDB `ExponentialSums.PhaseFunctions` | `PhaseBridge` |
-| `energy-def` | approximate additive quadruples of a finite multiset | no exact upstream Lean object found | `AdditiveEnergy` |
-| `beta-def`, `beta-asymp` | least exponential-sum growth exponent and epsilon/delta form | ANTEDB `ExponentSumGrowth` and `ExponentSumGrowthNonAsymptotic` | bridge/reuse |
-| `exp-pair-def` | analytic exponent-pair estimate | not present in current ANTEDB Lean tree | `ExponentPair` |
-| `lv-def` | large-value exponent for one-separated ordinates | not present | `LargeValueExponent` |
-| `zero-def` | multiplicity-weighted zeros with `Re >= sigma`, `|Im| <= T` | local Guth--Maynard has rectangle counts | `ZeroCountBridge`, `ZeroDensityExponent` |
-| `lve-def`, `zeroe-def` | energy large-value and zero-density exponents | not present | `EnergyRegions` |
-| `lv-edef` | five-dimensional feasible energy tuples | Python polytope model only | `EnergyRegions`, `PolyhedralCertificates` |
+| `auto` | automatic uniformity for variable families | ANTEDB `Basic.AutomaticUniformity` | `AsymptoticBridge`, kernel-checked import |
+| `phase-def`, `fpu` | model phase through derivative convergence on `[1,2]` | ANTEDB `ExponentialSums.PhaseFunctions` | `AsymptoticBridge`, kernel-checked import |
+| `energy-def` | approximate additive quadruples of a finite multiset | no exact upstream Lean object found | `AdditiveEnergy`, unit-tolerance indexed definition, multiplicity expansion, and `n²`/one-separated cubic bounds kernel-checked |
+| `beta-def`, `beta-asymp` | least exponential-sum growth exponent and epsilon/delta form | ANTEDB `ExponentSumGrowth` and `ExponentSumGrowthNonAsymptotic` | `AsymptoticBridge`, kernel-checked import |
+| `exp-pair-def` | analytic exponent-pair estimate | not present in current ANTEDB Lean tree | `ExponentPair`, definition and non-asymptotic equivalence kernel-checked |
+| `lv-def` | large-value exponent for one-separated ordinates | not present | `LargeValuePattern` and `LargeValueExponent`, exact pattern and epsilon-loss infimum interfaces kernel-checked |
+| `zero-def` | multiplicity-weighted zeros with `Re >= sigma`, `|Im| <= T` | local Guth--Maynard has rectangle counts | `ZeroCountBridge` and `ZeroDensityExponent`, exact count and epsilon-loss infimum kernel-checked |
+| `lve-def`, `zeroe-def` | energy large-value and zero-density exponents | not present | `EnergyExponents`, non-asymptotic infimum interfaces, candidate conversions, and the extended-real general/zeta inequalities `2LV ≤ LV* ≤ 3LV` kernel-checked without finiteness assumptions; EPZAE-32 remains open |
+| `lv-edef` | five-dimensional feasible energy tuples | Python polytope model only | `EnergyRegions`, exact double-zeta sum, non-asymptotic general/zeta region predicates, zeta-to-general inclusion, and the necessary `ρ ≤ τ` and `2ρ ≤ ρ* ≤ 3ρ` constraints kernel-checked; asymptotic equivalence and supremum characterizations remain open |
 
 ## Supporting theorem crosswalk
 
@@ -81,15 +83,15 @@ Every bound below is for `A*(sigma) * (1-sigma)`.
 | `hux-sub` | subdivision in `tau` | EPZAE-18 |
 | `l2-mvt` | basic large-values estimate | mathlib/local analytic input; EPZAE-18 |
 | `huxley-lvt`, `hb-opt`, `jutila-lvt` | classical LV bounds | literature formalization; EPZAE-19 |
-| `guth-maynard-lvt` | modern LV bound | exact bridge from local completed project; EPZAE-20 |
+| `guth-maynard-lvt` | modern LV bound | `guthMaynard_largeValueBound`, with exact closed-support, reflection, phase-twist, separation, coefficient-norm, threshold, and epsilon-loss conversions; kernel-checked EPZAE-20 |
 | `bourgain-lvt` | optimized LV inequality | Bourgain 2000; EPZAE-19 |
 | `power-lemma` | Dirichlet-polynomial powering | local GM coefficient machinery may help; EPZAE-18 |
 | `twelfth-bound`, `lvz-340` | zeta-specific nonexistence/bound | HB twelfth moment plus old pair; EPZAE-21 |
 | `zero-from-large` | Type I/II transfer | local GM zero-density transfer is related but conventions must be matched; EPZAE-24 |
 | `zero-large-cor*` | optimized transfer corollaries | exact finite supremum reasoning; EPZAE-24 |
-| `thm:ingham_zero_density2` | `A <= 3/(2-sigma)` | local theorem available; bridge EPZAE-25 |
-| `huxley-bound` | `A <= 3/(3 sigma-1)` | local theorem available; bridge EPZAE-25 |
-| `guth-maynard-density` | `A <= 15/(3+5 sigma)` | local theorem available; bridge EPZAE-25 |
+| `thm:ingham_zero_density2` | `A <= 3/(2-sigma)` | `ingham_isZeroDensityBound` and `zeroDensityExponent_le_ingham`, kernel-checked |
+| `huxley-bound` | `A <= 3/(3 sigma-1)` | `huxley_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_huxley`, kernel-checked |
+| `guth-maynard-density` | `A <= 15/(3+5 sigma)` | `guthMaynard_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_guthMaynard`, kernel-checked |
 | `bourgain-zd` | pair-to-density formula | Bourgain 1995, planned EPZAE-28 |
 | `zeroe-from-large` | zero-energy from LV energy | planned EPZAE-33 |
 | `power-energy` | weakened energy powering | planned EPZAE-34 |

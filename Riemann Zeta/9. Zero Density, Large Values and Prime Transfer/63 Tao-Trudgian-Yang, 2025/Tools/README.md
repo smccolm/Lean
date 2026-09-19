@@ -1,24 +1,25 @@
-# Tooling plan
+# Tooling record
 
-The planning baseline includes the human-facing build runner. Until a unified
-Lean package is installed, it verifies the scaffold inventory, pinned sources,
-and forbidden-shortcut scan, then prints `PLANNING SCAFFOLD ONLY`. It must not
-describe that result as a Lean build or theorem audit.
+The human-facing build runner now verifies the unified Lean package, frozen
+ANTEDB source ledger, source archive hashes, forbidden-shortcut policy,
+semantic regressions, and dynamic transitive axiom audit. It writes a complete
+timestamped log and supports `--no-pause`.
 
-Planned tools:
+Installed and planned tools:
 
 - `verify_sources.ps1` -- recompute `Sources/SHA256SUMS.txt`, check archive
   commit metadata, and fail on missing/unlisted files;
-- `reproduce_paper_time.py` -- invoke pinned ANTEDB functions for the 2025
+- `generate_certificates.py` -- installed standard-library extractor that
+  verifies the paper-time archive hash and deterministically emits the first
+  kernel-checked rational data module;
+- `reproduce_paper_time.py` -- future tool to invoke pinned ANTEDB functions for the 2025
   outputs and serialize exact rational results;
-- `emit_certificates.py` -- convert exact rational witnesses to deterministic
+- `emit_certificates.py` -- future full conversion of exact rational witnesses to deterministic
   Lean data, never theorem declarations;
-- `check_generated.ps1` -- regenerate into a temporary directory and fail on
-  any diff;
-- `run_tao_trudgian_yang_build.ps1` -- scaffold verifier now; automatically becomes the
-  warning-failing Lake build, semantic-regression, axiom-audit, integrity, and
-  pin orchestrator when `Extension/lakefile.toml` and `lean-toolchain` are
-  installed together; and
+- deterministic regeneration/diff checking for the installed generated module
+  is integrated directly into the principal runner;
+- `run_tao_trudgian_yang_build.ps1` -- installed warning-failing Lake build,
+  semantic-regression, axiom-audit, integrity, inventory, and pin orchestrator;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
 

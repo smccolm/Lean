@@ -1,8 +1,9 @@
 # Tao--Trudgian--Yang 2025 proof architecture
 
-This is the canonical dependency view for the planned formalization. Node
-status is conservative: blue means a reusable source exists but its target
-bridge is not yet proved; red means open. Checklist numbers are authoritative.
+This is the canonical dependency view for the formalization. Green means the
+checklist acceptance test is installed and passes the principal runner, blue
+means reusable source exists but its target bridge is not yet proved, and red
+means open. Checklist numbers are authoritative.
 
 ```mermaid
 flowchart TD
@@ -12,34 +13,36 @@ flowchart TD
     PY["Paper-time ANTEDB Python/blueprint<br/>DISCOVERY AND REPRODUCTION ONLY"]
     SRC["Classical source literature<br/>AVAILABLE AS REFERENCES"]
 
-    TC["EPZAE-01--02 unified toolchain,<br/>package, build and audit<br/>OPEN"]
-    RC["EPZAE-03--06 exact rational,<br/>piecewise and polyhedral certificates<br/>OPEN"]
-    AB["EPZAE-07 asymptotic/phase bridge<br/>OPEN"]
+    TC["EPZAE-01--02 unified toolchain,<br/>package, build and audit<br/>DONE"]
+    RC["EPZAE-03--05 exact rational,<br/>piecewise and polyhedral certificates<br/>DONE"]
+    GEN["EPZAE-06 deterministic<br/>certificate generator<br/>OPEN"]
+    AB["EPZAE-07 asymptotic/phase bridge<br/>DONE"]
 
-    EP["EPZAE-08 exponent-pair semantics<br/>OPEN"]
+    EP["EPZAE-08 exponent-pair semantics<br/>DONE"]
     DU["EPZAE-09 convexity and beta duality<br/>OPEN"]
     PR["EPZAE-10--12 A/B/C/D and<br/>Heath--Brown processes<br/>OPEN"]
     BT["EPZAE-13 certified beta table<br/>OPEN"]
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     MU["EPZAE-15 zeta-growth bridge<br/>OPEN"]
 
-    LVP["EPZAE-16 large-value patterns<br/>OPEN"]
-    LVS["EPZAE-17 LV and LV_zeta semantics<br/>OPEN"]
+    LVP["EPZAE-16 large-value patterns<br/>DONE"]
+    LVS["EPZAE-17 LV and LV_zeta semantics<br/>DONE"]
     LVC["EPZAE-18--19 elementary and<br/>classical LV calculus<br/>OPEN"]
-    GMB["EPZAE-20 exact Guth--Maynard bridge<br/>OPEN"]
+    GMB["EPZAE-20 exact Guth--Maynard bridge<br/>DONE"]
     ZLV["EPZAE-21 zeta large-values bounds<br/>OPEN"]
 
-    ZCB["EPZAE-22 zero-count convention bridge<br/>OPEN"]
-    ZDE["EPZAE-23 density exponent A(sigma)<br/>OPEN"]
-    ZDT["EPZAE-24--25 LV-to-density transfer<br/>and classical density bridges<br/>OPEN"]
+    ZCB["EPZAE-22 zero-count convention bridge<br/>DONE"]
+    ZDE["EPZAE-23 density exponent A(sigma)<br/>DONE"]
+    ZDT["EPZAE-24 LV-to-density transfer<br/>OPEN"]
+    CD["EPZAE-25 classical density bridges<br/>DONE"]
     HBD["EPZAE-26 improved Heath--Brown density<br/>OPEN"]
     IBD["EPZAE-27 improved Bourgain density<br/>OPEN"]
     BZD["EPZAE-28 Bourgain pair-to-density theorem<br/>OPEN"]
     OBD["EPZAE-29 optimized eight-piece bound<br/>OPEN"]
     ZTAB["EPZAE-30 best-known density envelope<br/>OPEN"]
 
-    AE["EPZAE-31 additive-energy semantics<br/>OPEN"]
-    ER["EPZAE-32 energy exponents and regions<br/>OPEN"]
+    AE["EPZAE-31 additive-energy semantics<br/>DONE"]
+    ER["EPZAE-32 energy exponents and regions<br/>IN PROGRESS"]
     ET["EPZAE-33--34 energy transfer and powering<br/>OPEN"]
     HBE["EPZAE-35 Heath--Brown energy relation<br/>OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>OPEN"]
@@ -52,7 +55,7 @@ flowchart TD
     ML --> TC
     ED --> TC
     GM --> TC
-    PY --> RC
+    PY --> GEN
     ML --> RC
     TC --> AB
     ED --> AB
@@ -61,6 +64,7 @@ flowchart TD
     SRC --> PR
     DU --> PR
     RC --> BT
+    GEN --> BT
     PR --> BT
     DU --> BT
     BT --> NEP
@@ -79,6 +83,8 @@ flowchart TD
 
     GM --> ZCB
     ZCB --> ZDE
+    GM --> CD
+    ZDE --> CD
     LVS --> ZDT
     ZLV --> ZDT
     GM --> ZDT
@@ -115,12 +121,15 @@ flowchart TD
     NAE --> PUB
     PUB --> SEM
     RC --> SEM
+    GEN --> SEM
     SEM --> REL
 
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
+    classDef done fill:#d9f2df,stroke:#26753a,color:#123d1e,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
-    class TC,RC,AB,EP,DU,PR,BT,NEP,MU,LVP,LVS,LVC,GMB,ZLV,ZCB,ZDE,ZDT,HBD,IBD,BZD,OBD,ZTAB,AE,ER,ET,HBE,EC,NAE,PUB,SEM,REL open;
+    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE done;
+    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ER,ET,HBE,EC,NAE,PUB,SEM,REL open;
 ```
 
 ## Critical paths

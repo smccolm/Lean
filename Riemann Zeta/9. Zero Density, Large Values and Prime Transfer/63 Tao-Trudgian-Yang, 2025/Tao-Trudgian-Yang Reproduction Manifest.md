@@ -2,9 +2,11 @@
 
 ## Manifest status
 
-**Planning baseline, 19 September 2026.** This manifest records the research
-pins and intended verification gates. It is not evidence that a Lean package
-or any paper theorem currently builds in this directory.
+**Verified implementation baseline, 19 September 2026.** A unified Lean
+package, its selected frozen dependency, exact certificate kernel, semantic
+regressions, and transitive axiom audit are installed. This is not yet a
+paper-level release: no advertised exponent-pair, density, or energy theorem
+is claimed complete.
 
 ## Frozen identifiers
 
@@ -17,10 +19,11 @@ or any paper theorem currently builds in this directory.
 | local root Lean toolchain | `leanprover/lean4:v4.30.0` |
 | local root mathlib | `c5ea00351c28e24afc9f0f84379aa41082b1188f` |
 | local `PrimeNumberTheoremAnd` | `4ecb950126c4290293c5662dfe0e884123171df5` |
+| local Guth--Maynard release | annotated tag `gm-foundation-freeze-v1.0.1`, commit `2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be` |
 
-The exact local Guth--Maynard pin and verification evidence remain owned by
-that dependency's reproduction files; this project must record the selected
-commit/tag when EPZAE-01 is implemented.
+The Guth--Maynard dependency's own reproduction files remain authoritative for
+its internal verification evidence. This target imports its canonical source
+through the local root package rather than copying it.
 
 ## Source inventory
 
@@ -38,18 +41,23 @@ Required primary artifacts:
 Supporting arXiv sources and PDFs should be pinned where redistribution is
 appropriate; citation-only sources remain listed in the source survey.
 
-## Planning-stage checks
+## Installed verification checks
 
-The scaffold handoff must verify:
+The principal runner currently verifies:
 
 1. every control document exists;
 2. primary paper PDF and TeX are present;
 3. both ANTEDB archive commits match their filenames;
 4. all `Sources/SHA256SUMS.txt` entries match;
-5. no `.lean` file in the target contains a prohibited shortcut; and
-6. Git status is reported without changing unrelated user work.
+5. no `.lean` file in the target contains a prohibited shortcut;
+6. the frozen ANTEDB subset hash ledger and inventory;
+7. the complete installed production-module inventory;
+8. byte-identical regeneration of the installed generated certificate module;
+9. a warning-clean default build and semantic regression build; and
+10. a dynamic transitive axiom audit over imported boundaries and every
+   nonprivate theorem in the target namespace.
 
-Passing these checks means only that the research scaffold is reproducible.
+Passing these checks certifies the currently installed package scope only.
 
 ### Paper-time Python smoke-test result
 
@@ -61,7 +69,7 @@ the `python.tests` package gets past that mismatch but then stops at
 `ModuleNotFoundError: No module named 'cdd'`. The snapshot contains no pinned
 Python requirements file or environment manifest.
 
-This is a reproducibility finding, not a failed mathematical test. EPZAE-03 must
+This is a reproducibility finding, not a failed mathematical test. EPZAE-06 must
 identify and pin the intended `cdd`/`pycddlib` stack, record a package-aware
 test invocation, and then preserve the resulting output. The archived source
 has not been patched to conceal the upstream packaging issue.
@@ -79,16 +87,11 @@ Run the paper-time snapshot in a pinned Python environment and preserve:
 Floating-point or linear-program output is discovery evidence. The release
 gate additionally requires exact rational witnesses replayed in Lean.
 
-## Lean runner and future build gate
+## Lean runner and build gate
 
-`run_tao_trudgian_yang_build.bat --no-pause` is installed in the planning baseline. Before a
-Lean package exists, it checks project inventory, all pinned source hashes, and
-the entire target's Lean files for forbidden shortcuts. Its successful final
-status is explicitly `PLANNING SCAFFOLD PASS`, followed by a warning that no
-Lean theorem build or audit ran.
-
-Once `Extension/lakefile.toml` and `Extension/lean-toolchain` are installed
-together, the same runner must:
+`run_tao_trudgian_yang_build.bat --no-pause` is the principal entry point and
+must be updated whenever modules, pins, certificates, regressions, or audit
+surfaces change. With the package installed, it currently:
 
 1. resolve the target directory from the script location;
 2. use the pinned target toolchain and dependency graph;
@@ -98,15 +101,23 @@ together, the same runner must:
 6. scan the entire target for `sorry`, `admit`, `sorryAx`, project axioms,
    `native_decide`, `implemented_by`, and unsafe proof bypasses;
 7. verify source and dependency hashes/pins;
-8. regenerate certificates and fail on a diff;
-9. run the paper-time Python reproduction; and
-10. write a timestamped complete log and return success only if all stages
-    pass.
+8. regenerate the installed paper-time exponent-pair data module and fail on
+   a byte-level difference; and
+9. write a timestamped complete log and return success only if all installed
+   stages pass.
 
-The runner must continue to print `PLANNING SCAFFOLD ONLY` until a real Lean
-package and audit are installed. Exit code `0` in scaffold mode certifies only
-the planning inventory and source archive; it is not a Lean-build success
+The initial deterministic extractor is installed, but extending regeneration
+to every optimization witness and running the full paper-time Python stack are
+still open EPZAE-06/40 gates. Accordingly, runner success is a Lean
+verification claim for installed modules, not a final paper reproduction
 claim.
+
+The latest installed-scope verification ran on 19 September 2026 with
+`run_tao_trudgian_yang_build.bat --no-pause`, exited `0`, and wrote
+`logs/tao-trudgian-yang-build-20260919-140605-f9abbea5.log` (SHA-256
+`25901d1c8a876f0df789ae871548dfe919eb2c55e2bea6bb72b9316810a4df69`).
+It audited 255 nonprivate target theorems plus five imported boundary
+declarations and reported no warnings.
 
 ## Future axiom gate
 
