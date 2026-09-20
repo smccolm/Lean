@@ -8,8 +8,10 @@
 - **Kernel-checked:** reserved for a compiled theorem with audited dependencies.
 
 Current kernel-checked infrastructure comprises EPZAE-00--05, EPZAE-07--08,
-EPZAE-16--17, EPZAE-20, EPZAE-22--23, EPZAE-25, and EPZAE-31. Every
-public-result row below remains **planned**.
+EPZAE-16--17, EPZAE-20, EPZAE-22--23, EPZAE-25, EPZAE-31--32, and
+EPZAE-34--35, together with the precisely scoped partial results below.
+Every final public-result row below remains **planned**; the general-energy
+half of `Add-est (i)` is now kernel-checked.
 
 ## Public result ledger
 
@@ -99,11 +101,14 @@ certificates, not proofs of the energy-region projections.
 | `exp-pair-mu`, `mu-bound` | zeta-growth application | EPZAE-15 |
 | `hux-sub` | subdivision in `tau` | EPZAE-18 |
 | `l2-mvt` | basic large-values estimate | mathlib/local analytic input; EPZAE-18 |
-| `huxley-lvt`, `hb-opt`, `jutila-lvt` | classical LV bounds | literature formalization; EPZAE-19 |
+| `huxley-lvt` | classical LV bound | `ClassicalLargeValueRegions` proves the exact finite native Montgomery--Halasz--Huxley bridge and its actual energy-region cardinality consequence, including corrected cardinality powering. The standalone uniform `LV` interface remains open under EPZAE-19 |
+| `hb-opt`, `jutila-lvt` | other classical LV bounds | literature formalization; EPZAE-19 |
 | `guth-maynard-lvt` | modern LV bound | `guthMaynard_largeValueBound`, with exact closed-support, reflection, phase-twist, separation, coefficient-norm, threshold, and epsilon-loss conversions; kernel-checked EPZAE-20 |
 | `bourgain-lvt` | optimized LV inequality | Bourgain 2000; EPZAE-19 |
 | `power-lemma` | Dirichlet-polynomial powering | local GM coefficient machinery may help; EPZAE-18 |
 | `twelfth-bound`, `lvz-340` | zeta-specific nonexistence/bound | HB twelfth moment plus old pair; EPZAE-21 |
+| `add-bound (ii)`, critical line and twelfth power | uniform moment-to-zeta-polynomial large values | `zetaTwelfth_largeValueBound_of_dyadic` proves `IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))` for `σ ≥ 1/2`, `τ ≥ 2`, conditional only on the genuine dyadic critical-line twelfth moment. The actual Perron entry, window, logarithmic losses, and epsilon--delta conversion are proved. The moment itself and the general source parameters remain open under EPZAE-19/21 |
+| `add-bound (ii)`, exact coefficient-one source entry | sharp polynomial to localized critical-zeta convolution | `ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin` retains both integer endpoints and residue `mellin cutoff (1-it)`. `ZetaMellinUniform` and `ZetaMellinLocalization` prove physical-scale kernels and the far integral. `ZetaLargeValuePattern.perron_entry` bounds and absorbs both errors; `exists_zetaPerron_uniform_threshold` derives its physical conditions from all actual windows `σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`. This critical-line entry edge is complete, not the full EPZAE-21 work package |
 | `zero-from-large` | Type I/II transfer | local GM zero-density transfer is related but conventions must be matched; EPZAE-24 |
 | `zero-large-cor*` | optimized transfer corollaries | exact finite supremum reasoning; EPZAE-24 |
 | `thm:ingham_zero_density2` | `A <= 3/(2-sigma)` | `ingham_isZeroDensityBound` and `zeroDensityExponent_le_ingham`, kernel-checked |
@@ -111,10 +116,14 @@ certificates, not proofs of the energy-region projections.
 | `guth-maynard-density` | `A <= 15/(3+5 sigma)` | `guthMaynard_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_guthMaynard`, kernel-checked |
 | `bourgain-zd` | pair-to-density formula | Bourgain 1995, planned EPZAE-28 |
 | `zeroe-from-large` | zero-energy from LV energy | Source inequality proved by `zeroDensityEnergyExponent_le_sup_limsup` in `EnergyExponentTransfer`, with exact domain `1/2 < σ < 1`, zeta supremum over `τ ≥ 1`, and general-energy limsup. The proof consumes actual Type-I/II source fibers, analytic multiplicity, compact-range uniformity, all explicit losses, and signed dyadic symmetric-rectangle assembly. No mathematical theorem parameter remains |
-| `zeroe-large-cor-0` | bounded-range zero-energy transfer | Still open under EPZAE-33. The source zeta interval is `2 ≤ τ < τ₀`; the general interval is `τ₀ ≤ τ ≤ 2τ₀`. Requires the short-zeta-scale reduction and bounded general-energy powering; neither endpoint nor the empty-interval convention may be silently changed |
+| `zeroe-large-cor-0` | bounded-range zero-energy transfer | Still open under EPZAE-33. The general interval `τ₀ ≤ τ ≤ 2τ₀` now controls all higher scales via `isLargeValueEnergyBound_of_bounded_power_range`. `isZeroDensityEnergyBound_of_bounded_energy_ranges` consumes that result with zeta bounds on `[1,τ₀)`. The source's lower zeta endpoint `2` and exact supremum statement remain open; neither endpoint nor empty-interval convention may be silently changed |
 | `power-energy` | printed five-coordinate powering | **Disproved and preserved:** `energyPowering_source_counterexample` gives input `(3/4,2,0,0,2)` and excludes any `k=2` output with `s' ≤ 1`; every region point has `s' ≥ 2`. Not an upstream theorem |
-| Owner-authorized repair of `power-energy` | two cardinality/energy witnesses | EPZAE-34 now requires `CorrectedCardinalityEnergyPowering`: one `ρ/k` witness, one `ρ*/k` witness, with the other retained coordinate bounded above and each `s` separately existential. General analytic proof OPEN; finite energy selection and conditional monotone/Heath--Brown consumers kernel-checked in `EnergyPowering`. See the Energy Powering Repair document |
-| `hbt` | Heath--Brown five-variable energy relation | Heath--Brown 1979; planned EPZAE-35 |
+| Owner-authorized repair of `power-energy` | two cardinality/energy witnesses | EPZAE-34 **DONE**: `correctedCardinalityEnergyPowering` proves the full `CorrectedCardinalityEnergyPowering` target; `InLargeValueEnergyRegion.corrected_powering` gives one `ρ/k` witness and one `ρ*/k` witness, with the other retained coordinate bounded above and each `s` separately existential. Actual powered patterns, uniform normalization, and coordinate-preserving compactness are proved. `InCardinalityEnergyRegion.heathBrown_powered` now consumes the proved analytic relation too. See the Energy Powering Repair document |
+| `hbt` | Heath--Brown five-variable energy relation | EPZAE-35 **DONE**: `InLargeValueEnergyRegion.heathBrown_relation`, independently derived from native second/fourth moments with exact source bridges; corrected powered consumer and the `τ ≤ 3/2` consequence also proved |
+| `imphb-lver-ineq` | general-energy half of `Add-est (i)` | `EnergyClauseOneGeneral` proves both source pieces on `3/4 ≤ σ ≤ 5/6`, `8σ-4 ≤ τ ≤ 2(8σ-4)`, with the exact `σ=4/5` crossover, using actual Huxley cardinality witnesses and Heath--Brown energy witnesses. Its uniform energy bound and extension to every `τ ≥ 8σ-4` are kernel-checked; this is a completed sub-result of EPZAE-36/37, not the whole clauses |
+| Conditional `Add-est (i)` assembly | remaining zeta input separated from proved general half | `energyClauseOne_of_zeta_range` proves the advertised zero-energy bound from explicit uniform zeta-energy bounds on `[1,8σ-4)`. Those zeta bounds and the source endpoint-two reduction remain open; no final `Add-est` clause is claimed |
+| `imphb-zlver-ineq` | zeta-energy half of `Add-est (i)` | The six-branch rational certificate, `τ=4σ-1` transition, `σ=65/86` crossover, and public-envelope comparison are kernel-checked in `EnergyClauseOneZeta`. Its actual-region and uniform-energy consumers are **conditional** on the independent twelfth-moment cardinality bound; Huxley's cap and the uniform-LV-to-region bridge are proved |
+| Refined conditional `Add-est (i)` assembly | two exact analytic inputs remain | `energyClauseOne_of_dyadic_moment_and_short_zeta` derives uniform twelfth-moment cardinality and consumes short zeta energy on `[1,2)` plus the genuine dyadic critical-line twelfth moment. Those two inputs and the source endpoint-two alternative remain open; all Perron, uniform-LV, general-energy, and zeta rational deductions in this chain are proved |
 
 ## Source-convention bridges requiring proofs
 
@@ -159,12 +168,20 @@ ANTEDB blueprint, and cited source before freezing Lean statements:
 - In the prose proof of `hbt`, the last finite-estimate factor is printed
   as `E₁(W)^(3/4) N T^(1/2)`, whereas the displayed exponent relation has
   `3ρ*/4 + ρ + τ/2`. These are not the same exponent comparison. EPZAE-35
-  must check the cited original estimate or the independent blueprint
-  derivation; the repair consumer retains the displayed source relation
-  and does not assume the mismatched finite estimate proves it.
+  now has an independent kernel-checked derivation: native
+  `gmDiscreteFourthMoment_native` has the required `E^(3/4) |W| T^(1/2) N`
+  term. Together with the second moment, Hölder, and native large-value
+  energy inequality, `heathBrown_largeValuePattern_energy_squared` and
+  `InLargeValueEnergyRegion.heathBrown_relation` prove the displayed source
+  relation. The archived text is unchanged; its mismatched line is not used.
 - The prose after the proof of additive-energy clause (i) concludes one
   intermediate line with `min` where the target and preceding derivation use a
-  maximum. This must be checked rather than copied mechanically.
+  maximum. `EnergyClauseOneZeta` now proves the displayed target maximum
+  from its exact cardinality constraints, not that concluding `min`.
+  In the same proof's second case, substituting `ρ ≤ 4-4σ` in the middle
+  branch gives `23/2 - (25/2)σ + τ/4`; the archived line omits the `σ`
+  after `25/2`. The Lean certificate performs the substitution from the
+  proved branch formula and does not use that mismatched printed line.
 - The best-known density table calls the optimized Bourgain result a
   “Corollary” although the labeled source declaration is a theorem.
 - The paper records exact rational calculations as computer assisted and not

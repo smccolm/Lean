@@ -102,17 +102,146 @@ Define `E₄(σ,τ,ρ,e) := ∃ s, E(σ,τ,ρ,e,s)`. For every fixed integer
 
 These are two potentially different witnesses. Their existential fifth
 coordinates have no asserted relation to the input `s` or to `s/k`.
-The full Lean target is `CorrectedCardinalityEnergyPowering`; its current
-definition is a statement, not a proof. Derive the witnesses from actual
-powered Dirichlet polynomials, uniform coefficient normalization, finite
-cardinality/energy selection, and subsequence limits. Do not assume them.
+The full Lean target is `CorrectedCardinalityEnergyPowering`, now proved by
+`correctedCardinalityEnergyPowering` in `CorrectedEnergyPowering.lean`.
+Maintain that complete proof from actual powered Dirichlet polynomials,
+uniform coefficient normalization, finite cardinality/energy selection,
+and coordinate-preserving subsequence limits. The target's proposition
+definition alone is not proof evidence; neither witness may be assumed.
 
 Use the cardinality witness for large-value constraints and the energy
 witness for the Heath--Brown relation, whose right side is nondecreasing
 in cardinality and independent of `s`. Feed those justified constraints
 into exact energy optimization and the nine unchanged `Add-est` clauses.
+
+EPZAE-35 is now proved by `InLargeValueEnergyRegion.heathBrown_relation`;
+`InCardinalityEnergyRegion.heathBrown_powered` composes the two proved
+inputs without a separate analytic hypothesis. Maintain its exact source
+signature and full `τ ≥ 0` domain. The finite derivation uses the native
+second and fourth moments, with proved reflection, support, energy-count,
+constant-dependency, and height-padding bridges. It does not use the
+mismatched `N` factor in the archived `hbt` proof. The small-height
+three-branch constraint and its powered consumer are available for EPZAE-36;
+their existence does not complete any final projection or `Add-est` clause.
+Keep these modules, their explicit audits and semantic regressions covered
+by `run_tao_trudgian_yang_build.bat`, updating its PowerShell inventory and
+the root imports whenever this proof chain changes.
 Do not infer arbitrary polytope closure or use any scaled `s` constraint.
 Keep `energyPowering_source_counterexample` as a permanent audited regression.
+
+The clause-(i) general intermediate `imphb-lver-ineq` is now proved by
+`InLargeValueEnergyRegion.energyClauseOneGeneral_lower_piece` and
+`InLargeValueEnergyRegion.energyClauseOneGeneral_upper_piece`, with exact
+range `[8σ-4,2(8σ-4)]`, closed crossover `σ=4/5`, and full upper endpoint
+`σ=5/6`. `energyClauseOneGeneral_uniform_bound` and
+`energyClauseOneGeneral_high_height_bound` supply uniform general bounds.
+Maintain their actual dependency on corrected cardinality witnesses at
+`k,k+1` and the separate corrected energy witness. The Huxley energy-region
+bridge is proved in `ClassicalLargeValueRegions`; the six-branch rational
+certificate is in `EnergyClauseOneGeneral`. Do not infer arbitrary region
+closure from these specific, proved deductions.
+
+`energyClauseOne_of_zeta_range` still assumes the real zeta-energy bounds
+on `[1,8σ-4)`. Prove those remaining inputs, or establish the source's
+endpoint-two reduction and its zeta inputs, before claiming `Add-est (i)`.
+The other eight final clauses remain in scope. Keep both new modules and
+their endpoint/consumer regressions in `run_tao_trudgian_yang_build.bat`
+coverage, updating the root imports, explicit audit, and runner inventory.
+
+The clause-(i) zeta rational certificate is now proved in
+`EnergyClauseOneZeta`: six affine branches, the exact `τ=4σ-1` height
+transition, `σ=65/86` crossover, and domination by the advertised maximum.
+Preserve its distinction from the analytic estimate. The actual-region
+consumer derives its Huxley cap from corrected cardinality powering and
+its Heath--Brown relation from the proved native analytic chain; it still
+requires the independent twelfth-moment cardinality inequality.
+`InZetaLargeValueEnergyRegion.rho_le_of_largeValueBound` proves the exact
+uniform-LV-to-region bridge, and the resulting uniform zeta-energy bounds
+remain conditional on `IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))`.
+
+`energyClauseOne_of_twelfth_and_short_zeta` now gives end-to-end assembly
+with precisely the remaining short zeta-energy input on `[1,2)` and the
+twelfth-moment LV input on `[2,8σ-4)`. The latter now follows from the
+dyadic critical-line moment through `ZetaTwelfthFromMoment` below.
+Prove that moment and the short-zeta input, or prove the source
+endpoint-two transfer together with the moment, before
+claiming clause (i). The nearby Gafni--Tao `HeathBrownTwelfthStatement`
+file contains a proposition and conditional consumers, not an importable
+proof of the full twelfth-moment estimate. Do not treat it as an axiom or
+completed analytic input. Keep `EnergyClauseOneZeta`, all named audits,
+closed-endpoint regressions, and conditional signatures in
+`run_tao_trudgian_yang_build.bat` coverage.
+
+The critical-line, twelfth-power summation step of `add-bound (ii)` is now
+proved in `ZetaMomentKernel` and `ZetaMomentTransfer` on the actual zeta
+function and the source interval `[T/2,3T]`. `ZetaMomentAsymptotics` proves
+logarithmic-loss absorption and dyadic/source-window normalization, with
+a consumer on actual `ZetaLargeValuePattern` objects. Preserve the exact
+physical `C^12 N^6` normalization and uniform height threshold.
+The low-level finite consumer explicitly assumes pointwise entry and the
+dyadic critical-line moment separately. Preserve that modular interface;
+`ZetaPerronEntry` now discharges the pointwise premise and
+`ZetaTwelfthFromMoment` proves the uniform epsilon--delta LV deduction.
+The moment hypothesis itself remains open. A conditional deduction does
+not discharge `twelfth-bound`.
+Do not assume away a Perron residue, smoothing loss, or support endpoint.
+Keep all three modules, their 21 named public audits, and ten semantic
+regressions in the root imports and `run_tao_trudgian_yang_build.bat`
+inventory; update the runner whenever this analytic chain changes.
+
+The exact coefficient-one source identity is now proved in
+`ZetaIntervalCutoff`, `ZetaMellinEntry`, `ZetaMellinContour`, and
+`ZetaMellinShift`. Preserve the actual-pattern consumer
+`ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin`: the original
+sharp polynomial equals the whole critical-line zeta integral plus
+`mellin cutoff (1-it)`. The cutoff equals the active indicator at every
+integer; both endpoints, the negative phase, and the moving pole are exact.
+The native smooth-test object is constructed from this cutoff. Boundary
+integrability, horizontal decay, and the contour shift are proved, with
+constants permitted to depend on the fixed cutoff and ordinate.
+
+Quantitative Mellin bounds, source-window localization, and residue/tail
+absorption are now proved in the six-module continuation below. Preserve
+their actual dependencies; do not replace them by fixed-cutoff convergence
+or an independently assumed entry estimate. Keep these four identity
+modules, their
+36 named public theorem audits, the explicit cutoff-constructor audit, and
+ten semantic regressions in the root imports and
+`run_tao_trudgian_yang_build.bat` inventory. Update and rerun that principal
+runner whenever the analytic chain, audit, or production coverage changes.
+The preserved Lemma 62 counterexample and all final publication contracts
+remain unchanged.
+
+The uniform continuation consists of `ZetaCutoffDerivatives`,
+`ZetaMellinDerivative`, `ZetaMellinUniform`, `ZetaMellinLocalization`,
+`ZetaPerronEntry`, and `ZetaTwelfthFromMoment`. For `j ≥ 1`,
+the cutoff derivative integral is bounded independently of its endpoints,
+and for `σ ≥ 1/2` the Mellin estimate is
+`|M_w(σ+iu)| ≤ C_j(σ) N^(σ+j-1)/(1+|u|)^j`.
+The omitted critical integral is at most
+`120 C_4(1/2) N^(7/2)/T²`; the residue is at most
+`C_4(1) N^4/(1+|t|)^4`. The actual-pattern `perron_entry` absorbs both
+when `T ≥ N^(7/4)` and `V ≥ 2 zetaPerronError`.
+`exists_zetaPerron_uniform_threshold` derives these physical conditions
+from the source windows, uniformly for `σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`.
+
+`zetaTwelfth_largeValueBound_of_dyadic` proves the full uniform
+`IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))` from the genuine dyadic
+critical-line twelfth moment alone. Its constants and approximation
+radius precede the actual pattern. No pointwise entry or cardinality
+conclusion is an assumed input.
+`energyClauseOne_of_dyadic_moment_and_short_zeta` composes this theorem
+with corrected powering, Heath--Brown energy, and the exact optimizations.
+Prove its two remaining inputs: the dyadic twelfth moment and short zeta
+energy on `[1,2)` (or establish the source endpoint-two alternative).
+Other source moment parameters, other eight energy clauses, and the
+complete EPZAE-00--41 contract remain in scope.
+
+Keep all six continuation modules, their 38 named public theorem audits,
+the constructed derivative-test audit, and 14 regressions in root imports
+and `run_tao_trudgian_yang_build.bat` coverage. Update and rerun that
+runner as this chain changes. Neither a passing runner nor a conditional
+moment consequence proves the missing moment or any final `Add-est` clause.
 
 ## Source and dependency boundary
 
@@ -169,9 +298,23 @@ TaoTrudgianYang2025/
   LargeValueSubdivision.lean
   LargeValuePowering.lean
   ClassicalLargeValues.lean
+  ClassicalLargeValueRegions.lean
   GuthMaynardBridge.lean
   BourgainLargeValues.lean
   ZetaLargeValues.lean
+  ZetaMomentKernel.lean
+  ZetaMomentTransfer.lean
+  ZetaMomentAsymptotics.lean
+  ZetaIntervalCutoff.lean
+  ZetaMellinEntry.lean
+  ZetaMellinContour.lean
+  ZetaMellinShift.lean
+  ZetaCutoffDerivatives.lean
+  ZetaMellinDerivative.lean
+  ZetaMellinUniform.lean
+  ZetaMellinLocalization.lean
+  ZetaPerronEntry.lean
+  ZetaTwelfthFromMoment.lean
   ZeroCountBridge.lean
   ZeroDensityExponent.lean
   ZeroDensityTransfer.lean
@@ -185,8 +328,16 @@ TaoTrudgianYang2025/
   EnergyRegionAsymptotics.lean
   EnergyBoundAsymptotics.lean
   EnergyPowering.lean
+  EnergyPoweredPatterns.lean
+  EnergyPoweringLimits.lean
+  CorrectedEnergyPowering.lean
+  EnergyPoweringBounds.lean
   EnergyPoweringObstruction.lean
-  HeathBrownEnergyRelation.lean
+  EnergyLogLimits.lean
+  HeathBrownEnergyFinite.lean
+  HeathBrownEnergy.lean
+  EnergyClauseOneGeneral.lean
+  EnergyClauseOneZeta.lean
   EnergyCertificates.lean
   NewAdditiveEnergy.lean
   PublicTheorems.lean

@@ -26,9 +26,20 @@ Installed and planned tools:
   its inventory now rejects unlisted Lean files and production modules absent
   from the root imports, and its warning gate covers filename-prefixed Lean
   diagnostics as well as bare warning lines;
-  both the preserved `EnergyPoweringObstruction` and the new `EnergyPowering`
-  specification/consumer module are in its production inventory, and both
-  obstruction and repair reports are required project files;
+  the preserved `EnergyPoweringObstruction`, the `EnergyPowering` interfaces,
+  and all three full-proof modules (`EnergyPoweredPatterns`,
+  `EnergyPoweringLimits`, `CorrectedEnergyPowering`) are in its production
+  inventory; both obstruction and repair reports are required project files;
+  the downstream `EnergyPoweringBounds`, `EnergyLogLimits`,
+  `HeathBrownEnergyFinite`, `HeathBrownEnergy`, `ClassicalLargeValueRegions`,
+  `EnergyClauseOneGeneral`, `EnergyClauseOneZeta`, `ZetaMomentKernel`,
+  `ZetaMomentTransfer`, `ZetaMomentAsymptotics`, `ZetaIntervalCutoff`,
+  `ZetaMellinEntry`, `ZetaMellinContour`, and `ZetaMellinShift` modules are
+  covered as well, including their exact source-entry audits and regressions;
+  the uniform continuation (`ZetaCutoffDerivatives`, `ZetaMellinDerivative`,
+  `ZetaMellinUniform`, `ZetaMellinLocalization`, `ZetaPerronEntry`,
+  `ZetaTwelfthFromMoment`) is inventoried with 38 named public theorem
+  audits, the derivative-test constructor audit, and 14 new regressions;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
 

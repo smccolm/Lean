@@ -102,9 +102,106 @@ The owner-authorized replacement is specified in `EnergyPowering`:
 witnesses in the existential projection of the real five-dimensional region.
 No relation on their fifth coordinates is imposed. The finite energy-class
 selection, identity/singleton regressions, and monotone/Heath--Brown consumers
-are kernel-checked. The consumers remain conditional on actual powering
-witnesses and the analytic relation; neither input is proved by defining the
-target. General powering and all advertised endpoints remain open.
+are kernel-checked. The full target is now proved by
+`correctedCardinalityEnergyPowering` in `CorrectedEnergyPowering`:
+`EnergyPoweredPatterns` constructs the actual polynomial blocks and both
+finite witnesses; `EnergyPoweringLimits` absorbs the uniform constants,
+rebases the logarithmic exponents, and extracts the new double-zeta
+coordinates. `InLargeValueEnergyRegion.corrected_powering` exposes the
+exact two-witness conclusion. `HeathBrownEnergyFinite` now bridges actual
+patterns to the native second and fourth moments; `EnergyLogLimits` and
+`HeathBrownEnergy` prove the source relation at every admissible height,
+including `τ < 1`. `InCardinalityEnergyRegion.heathBrown_powered` consumes
+the corrected energy witness with no analytic theorem parameter. The
+three-branch `τ ≤ 3/2` constraint and its powered form are proved as well.
+EPZAE-34 and EPZAE-35 are complete; the bounded-range transfer corollary,
+optimization, and all advertised endpoints remain open.
+`EnergyPoweringBounds` completes the general-energy factor-two range reduction
+and a compact-range transfer with zeta endpoint `1`. The source's stronger
+zeta endpoint `2` remains unproved, so this does not complete EPZAE-33.
+
+`ClassicalLargeValueRegions` transfers the full native Montgomery--Halász--
+Huxley finite estimate, including both minimum branches. Its physical height
+padding is removed exactly at the exponent level. It proves Huxley's
+cardinality constraint on actual energy regions and its corrected powered
+form; it is not yet the standalone uniform `LV` API for all EPZAE-19 inputs.
+`EnergyClauseOneGeneral` consumes these real region constraints at powers
+`k` and `k+1`, and the separate powered Heath--Brown energy witness.
+Its six affine branches have exact endpoint certificates; powers two and
+three cover `[8σ-4,2(8σ-4)]`. Both source sigma pieces, their `4/5` crossover,
+uniform general-energy bounds, and extension to all higher heights are proved.
+`energyClauseOne_of_zeta_range` remains conditional on actual zeta-energy
+bounds on `[1,8σ-4)`; no final `Add-est` clause is claimed complete.
+
+`EnergyClauseOneZeta` proves the exact six-branch zeta certificate, its
+`τ=4σ-1` transition, strict slope bounds, and `σ=65/86` crossover.
+Actual region membership discharges the Huxley cardinality cap and the
+Heath--Brown energy relation. A uniform zeta cardinality bound is converted
+to the actual region coordinate with all epsilon and constant dependencies
+preserved. The resulting uniform energy bounds are conditional on the
+twelfth-moment LV predicate; final assembly also retains short zeta energy
+on `[1,2)`. No new dependency or unproved twelfth-moment instance is imported.
+
+`ZetaMomentKernel` proves exact mass and separated occupancy estimates for
+`1/(1+|u-t|)`, together with weighted twelfth-power Hölder.
+`ZetaMomentTransfer` applies them to the literal critical-line zeta norm
+on `[T/2,3T]`. For one-separated `W ⊆ [T,2T]`, the twelfth powers of its
+convolutions sum to at most `L(T)^12 M₁₂(T)`, where
+`L(T)=3+2 log(ceil(2T)+1)` and `M₁₂` is the actual moment integral.
+`ZetaLargeValuePattern.twelfth_cardinality_of_convolution` consumes the
+actual pattern and an explicit pointwise entry inequality, retaining the
+physical factor `C^12 N^6`.
+
+`ZetaMomentAsymptotics` absorbs every fixed power of `L(T)`, proves the
+three-dyadic-window enlargement, and deduces the epsilon-loss moment bound
+from an explicitly quantified dyadic moment hypothesis.
+`zetaPattern_twelfth_cardinality_of_dyadic_and_convolution` composes all
+these results on actual patterns, with a uniform physical-height threshold.
+Its two upstream interfaces remain explicit; the pointwise entry is now
+discharged by `ZetaPerronEntry` below. This is the critical
+line, twelfth-power portion of `add-bound (ii)`, not the general source
+theorem or a proved `twelfth-bound`. All 21 public theorems in these three
+modules are named in the audit, root-imported, and runner-inventoried;
+ten semantic regressions check the kernel, windows, real zeta function,
+uniform losses, and conditional consumer signatures.
+
+`ZetaIntervalCutoff` constructs a smooth interpolation equal to the exact
+active-interval indicator at every integer, including both endpoints.
+`ZetaMellinEntry` derives its right-line zeta integral by Mellin inversion
+and justified interchange of sum and integral. `ZetaMellinContour` retains
+the pole at `1-it`, and `ZetaMellinShift` proves absolute boundary
+integrability, vanishing horizontal integrals, and the exact critical-line
+formula. The actual-pattern consumer
+`ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin` has no independent
+analytic premise. Its residue is the cutoff's Mellin transform at `1-it`.
+
+These four modules have 36 named public theorem audits, an explicit audit of
+the constructed native smooth-test object, and ten endpoint/support/sign/
+residue regressions. The root imports and principal runner include them.
+The contour-convergence constants in these four modules depend on the
+fixed cutoff and ordinate. Uniformity is proved separately in the following
+six modules, not inferred from those constants.
+
+`ZetaCutoffDerivatives` gives endpoint-independent derivative integral
+bounds of every positive order. `ZetaMellinDerivative` proves integration
+by parts and its exact product of Mellin factors.
+`ZetaMellinUniform` consumes actual patterns, giving
+`|M_w(σ+iu)| ≤ C_j(σ) N^(σ+j-1)/(1+|u|)^j` for `σ ≥ 1/2`, `j ≥ 1`.
+The constants depend only on the fixed transition, order, and real line.
+`ZetaMellinLocalization` bounds the omitted integral by
+`120 C_4(1/2) N^(7/2)/T²`. `ZetaPerronEntry` retains the residue,
+absorbs both errors when `T ≥ N^(7/4)` and `V ≥ 2 zetaPerronError`,
+and derives those hypotheses uniformly from the actual source windows
+`σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`.
+
+`ZetaTwelfthFromMoment` proves
+`IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))` from the explicitly quantified
+dyadic critical-line twelfth moment alone, then composes the repaired
+energy chain through clause (i), retaining the moment and short-zeta
+inputs. These six modules have 38 named public theorem audits, an explicit
+derivative-test constructor audit, and 14 semantic regressions, with root
+and principal-runner coverage. The moment itself, short-zeta transfer,
+other source moment parameters, and all final `Add-est` clauses remain open.
 
 ## Verification
 

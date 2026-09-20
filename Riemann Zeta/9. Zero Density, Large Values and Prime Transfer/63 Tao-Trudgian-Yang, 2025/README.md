@@ -11,7 +11,7 @@ large-value bridge, and additive-energy foundations are installed and pass
 the principal runner. The energy layer includes the extended-real general
 and zeta comparisons `2LV ≤ LV* ≤ 3LV`, the necessary region constraints,
 and exact general/zeta feasible-region supremum characterizations on the
-source domain. No advertised theorem from the paper is claimed
+source domain. No advertised final output from the paper is claimed
 formalized yet; the four exponent pairs, density bounds, and energy bounds
 still require their analytic derivations.
 
@@ -20,10 +20,54 @@ counterexample disproves printed Lemma 62's `s' ≤ s/k` requirement; see
 [the obstruction report](Tao-Trudgian-Yang%20Energy%20Powering%20Obstruction.md).
 The owner authorized replacing EPZAE-34 by separate cardinality- and
 energy-preserving witnesses with independent, unrestricted fifth exponents.
-[The repair](Tao-Trudgian-Yang%20Energy%20Powering%20Repair.md) is specified
-in Lean; finite energy selection and conditional monotone/Heath--Brown
-consumers are proved. The full analytic powering theorem remains open.
+[The repair](Tao-Trudgian-Yang%20Energy%20Powering%20Repair.md) is now proved:
+`correctedCardinalityEnergyPowering` constructs both actual witnesses for
+every positive integer power, with no remaining mathematical hypothesis.
+EPZAE-35 is also proved: `InLargeValueEnergyRegion.heathBrown_relation`
+derives the exact two-max inequality from native second/fourth moments.
+`InCardinalityEnergyRegion.heathBrown_powered` composes it with the repaired
+energy witness without any remaining analytic theorem parameter.
 The counterexample, source archives, and advertised final outputs are unchanged.
+
+The corrected witnesses now also give the exact general-energy intermediate
+bound in `Add-est (i)`: `EnergyClauseOneGeneral` proves both sigma pieces,
+their crossover, the compact height interval, uniform epsilon-loss bounds,
+and extension to every higher general height. `EnergyClauseOneZeta` now
+certifies the zeta six-branch optimization and its `65/86` crossover.
+Its actual-region and uniform-bound consumers now obtain the needed
+cardinality estimate from the genuine dyadic twelfth-moment hypothesis.
+That moment theorem remains unproved. The final clause also needs short zeta
+energy on `[1,2)`, or the source endpoint-two transfer. Neither analytic
+gap is claimed closed; see the checklist's EPZAE-21/33/36/37 entries.
+
+The moment-transfer analysis has progressed: `ZetaMomentKernel`,
+`ZetaMomentTransfer`, and `ZetaMomentAsymptotics` prove the separated
+convolution estimate for the actual critical-line zeta function, with
+weighted twelfth-power Hölder, logarithmic-loss absorption, and a proved
+dyadic-to-`[T/2,3T]` window bridge. The low-level transfer exposes the
+pointwise entry and moment inputs separately. The new source-entry chain
+below discharges the former; the genuine dyadic twelfth-moment theorem
+remains unproved, not postulated.
+
+The source entry now has an exact proved identity:
+`ZetaIntervalCutoff`, `ZetaMellinEntry`, `ZetaMellinContour`, and
+`ZetaMellinShift` turn each actual sharp coefficient-one polynomial into
+its whole critical-line zeta integral **plus the pole residue**. Both integer
+endpoints and the negative phase are preserved; the smooth cutoff and all
+contour-shift hypotheses are derived, not assumed. The Mellin estimates used
+to justify the shift are for each fixed cutoff and ordinate.
+`ZetaCutoffDerivatives`, `ZetaMellinDerivative`, `ZetaMellinUniform`,
+`ZetaMellinLocalization`, and `ZetaPerronEntry` now also prove uniform
+physical-scale bounds, localization to `[T/2,3T]`, and residue/tail
+absorption. `exists_zetaPerron_uniform_threshold` covers the actual
+source exponent windows for `σ ≥ 1/2`, `τ ≥ 2`.
+
+`ZetaTwelfthFromMoment` proves the complete uniform deduction
+`LV_ζ(σ,τ) ≤ 2τ-12(σ-1/2)` conditional only on the genuine dyadic
+critical-line twelfth moment. Its
+`energyClauseOne_of_dyadic_moment_and_short_zeta` reaches clause (i)
+conditional on that moment and short zeta energy on `[1,2)`.
+Neither remaining input is claimed proved; no final `Add-est` status changes.
 
 ## Exact intended outputs
 
@@ -86,7 +130,7 @@ graph.
 ## Current implementation frontier
 
 EPZAE-00--05, EPZAE-07--08, EPZAE-16--17, EPZAE-20, EPZAE-22--23,
-EPZAE-25, and EPZAE-31--32 are complete. EPZAE-33 now includes a
+EPZAE-25, EPZAE-31--32, and EPZAE-34--35 are complete. EPZAE-33 now includes a
 multiplicity-safe bounded-perturbation theorem, an explicit return from
 arbitrary tolerance to unit energy, and a lift of the native Guth--Maynard
 Type I beta-removal detector to every analytic-multiplicity copy. Its new
@@ -195,12 +239,38 @@ conditional hypotheses using the actual exponent supremum and limsup. Its
 `zeroDensityEnergyExponent_le_sup_limsup` proves the exact `zeroe-from-large`
 inequality for `1/2 < σ < 1`, including the zeta supremum starting at `τ=1`.
 EPZAE-33 remains open for the bounded-range corollary `zeroe-large-cor-0`;
-EPZAE-34 now requires the authorized two-witness repair, not the disproved
-fifth-coordinate scaling. `EnergyPowering` supplies its exact specification,
-finite energy-class selection, and conditional Heath--Brown/optimization
-consumers; actual powered-pattern construction and its compactness limits
-remain open. No advertised new energy bound
-in `Add-est` is claimed complete.
+EPZAE-34 is complete for the authorized two-witness repair, not the disproved
+fifth-coordinate scaling. `EnergyPoweredPatterns` constructs normalized
+powered blocks with exact closed/half-open support bridges and separate
+cardinality/energy selections. `EnergyPoweringLimits` chooses realizing
+scales after the coefficient constants and proves the required limits.
+`CorrectedEnergyPowering` assembles the full theorem and its source-facing
+consumer. `HeathBrownEnergyFinite`, `EnergyLogLimits`, and `HeathBrownEnergy`
+complete EPZAE-35 through exact energy/phase/support bridges, physical-scale
+limits, and full-domain height-padding removal. The small-height three-branch
+constraint and its corrected powered form are also proved. The bounded-range
+EPZAE-33 corollary and the remaining exact optimizations stay open. No advertised
+new energy bound in `Add-est` is claimed complete.
+The clause-(i) **general** optimization is now proved in
+`EnergyClauseOneGeneral`, using the actual Huxley cardinality constraints in
+`ClassicalLargeValueRegions` and the proved powered Heath--Brown relation.
+`energyClauseOne_of_zeta_range` supplies conditional final assembly with
+only the real zeta bounds on `[1,8σ-4)` remaining as its mathematical premise.
+`EnergyClauseOneZeta` discharges the zeta rational certificate, the corrected
+Huxley cap, and the uniform-cardinality-to-region bridge. Its end-to-end
+`energyClauseOne_of_twelfth_and_short_zeta` explicitly retains only
+short zeta energy on `[1,2)` and the twelfth-moment cardinality bound on
+`[2,8σ-4)`. It is conditional; the other optimization clauses and the
+missing analytic inputs are not assumed proved.
+The refined consumer `energyClauseOne_of_dyadic_moment_and_short_zeta`
+now derives the uniform cardinality input from the dyadic critical-line
+moment, using the proved exact Perron entry, uniform localization, and
+physical exponent windows. Only that moment and short zeta energy remain
+as analytic theorem inputs to this consumer.
+`EnergyPoweringBounds` now transfers uniform energy bounds via that proved
+witness and reduces all high general scales to `[τ₀,2τ₀]`. Its compact-range
+zero-energy consumer still uses zeta endpoint `1`; reaching the printed
+endpoint `2` is the remaining short-zeta-scale obligation in EPZAE-33.
 The next exponent-pair analytic
 frontier is EPZAE-09: the remaining endpoint/reflection and converse direction
 of beta/exponent-pair duality.

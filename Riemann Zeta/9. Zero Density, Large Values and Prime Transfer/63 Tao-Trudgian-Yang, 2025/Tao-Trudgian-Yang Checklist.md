@@ -79,11 +79,37 @@ additive energy**, the three output families covered by the paper.
   normalization.
 - [ ] **EPZAE-19 -- Classical LV inputs.** Exact consumed Huxley, Jutila,
   Heath--Brown, twelfth-moment, and Bourgain interfaces are proved/imported.
+  The native MHH finite estimate and Huxley cardinality constraints on actual
+  energy regions are now proved in `ClassicalLargeValueRegions`, including
+  full-domain height-padding removal and corrected cardinality powering.
+  The standalone uniform Huxley `LV` API and the other listed inputs remain open.
 - [x] **EPZAE-20 -- Guth--Maynard bridge.** The completed local theorem proves the
   exact `guth-maynard-lvt` interface after all convention conversions; no
   generic restatement is accepted as a bridge.
 - [ ] **EPZAE-21 -- Zeta LV inputs.** Reflection, moment, and
   `LV_zeta = -infinity`/nonexistence statements used by density are proved.
+  The clause-(i) energy consumer now accepts the exact uniform twelfth-moment
+  LV predicate and proves all downstream rational and uniform-energy steps.
+  The moment theorem remains open; the nearby
+  Gafni--Tao twelfth-moment proposition is not a proved instance.
+  `ZetaMomentKernel`, `ZetaMomentTransfer`, and `ZetaMomentAsymptotics`
+  now prove the actual critical-zeta convolution estimate, weighted
+  twelfth-power Hölder, logarithmic-loss absorption, and exact
+  dyadic/source-window normalization. Their assembled finite-pattern
+  consumer exposes pointwise entry and moment inputs separately.
+  The exact sharp-polynomial-to-whole-critical-integral identity is now
+  proved in `ZetaIntervalCutoff`, `ZetaMellinEntry`, `ZetaMellinContour`,
+  and `ZetaMellinShift`, with actual-pattern consumers, exact integer
+  endpoints, and the pole residue retained. The smooth-test object and
+  contour hypotheses are derived. `ZetaCutoffDerivatives`,
+  `ZetaMellinDerivative`, `ZetaMellinUniform`, `ZetaMellinLocalization`,
+  and `ZetaPerronEntry` now prove uniform physical-scale Mellin bounds,
+  window localization, and residue/tail absorption. The actual source
+  exponent windows `σ ≥ 1/2`, `τ ≥ 2` discharge the entry conditions.
+  `zetaTwelfth_largeValueBound_of_dyadic` proves the full uniform
+  `LV_ζ ≤ 2τ-12(σ-1/2)` deduction from the genuine dyadic twelfth-moment
+  hypothesis alone. That moment is unproved; other source parameters
+  and zeta-LV inputs remain open, so EPZAE-21 is not closed.
 
 ## Zero density
 
@@ -124,32 +150,66 @@ additive energy**, the three output families covered by the paper.
   zero-energy predicate, preserving conjugate multiplicities and low heights.
   `zeroDensityEnergyExponent_le_sup_limsup` now proves `zeroe-from-large`
   itself, with the exact source domain and no extra mathematical hypothesis.
-  This checklist item remains open for `zeroe-large-cor-0`, including its
-  bounded-scale reduction and the stated lower zeta endpoint `2`.
-- [ ] **EPZAE-34 -- Corrected cardinality/energy powering.** Owner-authorized
+  The general bounded-scale reduction is now proved in `EnergyPoweringBounds`:
+  `IsLargeValueEnergyBound.of_powered` and
+  `isLargeValueEnergyBound_of_bounded_power_range` consume the corrected
+  witness. `isZeroDensityEnergyBound_of_bounded_energy_ranges` combines this
+  with zeta bounds on `[1,τ₀)` and general bounds on `[τ₀,2τ₀]`.
+  This item remains open for the source's stronger lower zeta endpoint `2`
+  and the final exact `zeroe-large-cor-0` supremum statement.
+- [x] **EPZAE-34 -- Corrected cardinality/energy powering.** Owner-authorized
   replacement of the false printed Lemma 62: for every positive integer `k`,
   an actual region point yields one output with cardinality exponent `ρ/k`
   and energy exponent at most `ρ*/k`, and a possibly different output with
   energy exponent `ρ*/k` and cardinality exponent at most `ρ/k`. The fifth
   coordinates are separately existential, with no `s/k` restriction and no
   third witness. Prove the full `CorrectedCardinalityEnergyPowering` target.
-  The exact projected-region specification, finite energy-class selection,
-  singleton/identity regressions, and conditional monotone/Heath--Brown
-  consumers are installed in `EnergyPowering.lean`; general powered-pattern
-  construction and coordinate-preserving compactness remain open.
+  `correctedCardinalityEnergyPowering` proves the complete target;
+  `InLargeValueEnergyRegion.corrected_powering` exposes its two independent
+  fifth coordinates. `EnergyPoweredPatterns` constructs the actual normalized
+  dyadic blocks and finite witnesses; `EnergyPoweringLimits` absorbs the
+  accuracy-dependent constants before choosing scales, proves the logarithmic
+  limits, and extracts the new double-zeta coordinates. No mathematical
+  theorem parameter remains in the full powering theorem.
   Preserve `energyPowering_source_counterexample` and its audits permanently.
   See the Energy Powering Repair and Energy Powering Obstruction documents.
-- [ ] **EPZAE-35 -- Heath--Brown relation.** The exact two-max five-variable
+- [x] **EPZAE-35 -- Heath--Brown relation.** The exact two-max five-variable
   inequality is proved from the cited large-values estimate.
   Its powered application uses the corrected energy witness from EPZAE-34;
-  the conditional consumer is proved, but the analytic relation remains open.
+  `InLargeValueEnergyRegion.heathBrown_relation` proves the source relation
+  through the native second/fourth moments and exact finite-pattern bridges.
+  `InCardinalityEnergyRegion.heathBrown_powered` consumes both proved inputs,
+  with no analytic theorem parameter. Height padding is removed for all
+  `τ ≥ 0`; the `τ ≤ 3/2` three-branch consequence is also proved.
+  The mismatched printed finite factor is bypassed by this independent
+  kernel-checked derivation, not silently corrected in the archived paper.
 - [ ] **EPZAE-36 -- Energy optimization certificates.** Every projection and
   piecewise maximum needed by clauses (i)--(ix) has a checked rational
   certificate and denominator/range proof.
   Rebuild powered constraints in the four-coordinate projection using the
   separate witnesses and proved monotonicity; never scale an `s` constraint.
+  The clause-(i) general six-branch projection and its `σ=4/5` crossover
+  are now certified by `energyClauseOneGeneral_branch_bound` and the two
+  `energyClauseOneGeneralRate_*_piece` theorems. The actual-region consumer,
+  uniform bound, and high-height extension are proved, not supplied premises.
+  The clause-(i) zeta six-branch certificate is also proved by
+  `energyClauseOneZeta_branch_bound`, including the `τ=4σ-1` transition,
+  `σ=65/86` crossover, and comparison with the advertised maximum.
+  Its actual-region/uniform consumers use the twelfth-moment cardinality
+  bound, now derived from the dyadic critical-line moment hypothesis.
+  The moment itself, the other eight clauses' projections,
+  and the general reproduction gate remain open.
 - [ ] **EPZAE-37 -- Nine new energy estimates.** Every clause of `Add-est` is
   proved on its exact interval and audited.
+  Clause (i)'s general intermediate `imphb-lver-ineq` is proved on the exact
+  two-piece sigma range and compact height interval, with a uniform extension.
+  `energyClauseOne_of_dyadic_moment_and_short_zeta` now separates the two
+  remaining analytic inputs: short zeta energy on `[1,2)` and the genuine
+  dyadic critical-line twelfth moment. The zeta cardinality bound, uniform
+  conversion, and energy deductions are proved from the latter; the
+  general side is proved.
+  Neither analytic input nor the endpoint-two reduction is discharged,
+  so even clause (i) remains incomplete.
 
 ## Release
 

@@ -6,10 +6,11 @@ import TaoTrudgianYang2025.EnergyPartition
 
 The four-coordinate region is the existential projection of the real
 five-coordinate region, not a new model for its double zeta sum. The
-corrected powering proposition below is a specification, not a proved
-analytic theorem. The finite energy-selection lemma and the consumers of
-its two separate output witnesses are proved here. In particular, the
-Heath--Brown consumer never assumes a transformation law for `s`.
+corrected powering proposition below is a specification; its full analytic
+proof is `correctedCardinalityEnergyPowering` in `CorrectedEnergyPowering`.
+The finite energy-selection lemma and conditional consumers of its two
+separate output witnesses are proved here. In particular, the Heath--Brown
+consumer never assumes a transformation law for `s`.
 -/
 
 noncomputable section
@@ -28,8 +29,8 @@ def CardinalityEnergyPoweringWitnesses (σ τ ρ ρstar : ℝ) (k : ℕ) : Prop 
   (∃ card : ℝ,
     InCardinalityEnergyRegion σ (τ / k) card (ρstar / k) ∧ card ≤ ρ / k)
 
-/-- Authorized replacement target for EPZAE-34. This declaration states
-the analytic theorem still to be proved; no proof is claimed by this `def`.
+/-- Authorized replacement target for EPZAE-34. This `def` states the target;
+`correctedCardinalityEnergyPowering` in `CorrectedEnergyPowering` proves it.
 The power is a positive integer, as required by polynomial expansion. -/
 def CorrectedCardinalityEnergyPowering : Prop :=
   ∀ (σ τ ρ ρstar : ℝ) (k : ℕ), 1 ≤ k →

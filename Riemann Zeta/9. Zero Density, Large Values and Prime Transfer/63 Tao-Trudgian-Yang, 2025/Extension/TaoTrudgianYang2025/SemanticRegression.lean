@@ -616,6 +616,57 @@ example : CardinalityEnergyPoweringWitnesses 1 2 0 0 4 :=
   singleton_cardinalityEnergyPoweringWitnesses _ _ _
     (by norm_num) (by norm_num) (by norm_num) (by norm_num)
 
+-- The compact powered-height interval includes both endpoints.
+example : ∃ k : ℕ, 1 ≤ k ∧ (2 : ℝ) / k ∈ Set.Icc (2 : ℝ) 4 := by
+  simpa only [show (2 : ℝ) * 2 = 4 by norm_num] using
+    exists_power_height_in_Icc (τ₀ := 2) (τ := 2) (by norm_num) (by norm_num)
+
+example : ∃ k : ℕ, 1 ≤ k ∧ (4 : ℝ) / k ∈ Set.Icc (2 : ℝ) 4 := by
+  simpa only [show (2 : ℝ) * 2 = 4 by norm_num] using
+    exists_power_height_in_Icc (τ₀ := 2) (τ := 4) (by norm_num) (by norm_num)
+
+-- This signature intentionally retains endpoint one, not the unproved two.
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (1 : ℝ) τ₀, IsZetaLargeValueEnergyBound σ τ (B * τ))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2 * τ₀), IsLargeValueEnergyBound σ τ (B * τ)) :
+    IsZeroDensityEnergyBound σ (B / (1 - σ)) :=
+  isZeroDensityEnergyBound_of_bounded_energy_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+-- The full theorem, not just the singleton helper, recovers this witness.
+example : CardinalityEnergyPoweringWitnesses (3 / 4) 2 0 0 2 :=
+  correctedCardinalityEnergyPowering _ _ _ _ _ (by norm_num)
+    ⟨2, energyPowering_source_counterexample.1⟩
+
+-- Every positive integer power and both sigma endpoints use the full proof.
+example (k : ℕ) (hk : 1 ≤ k) :
+    CardinalityEnergyPoweringWitnesses (1 / 2) 0 0 0 k :=
+  correctedCardinalityEnergyPowering _ _ _ _ k hk
+    ⟨2, singleton_mem_largeValueEnergyRegion _ _
+      (by norm_num) (by norm_num) (by norm_num)⟩
+
+example (k : ℕ) (hk : 1 ≤ k) : CardinalityEnergyPoweringWitnesses 1 2 0 0 k :=
+  correctedCardinalityEnergyPowering _ _ _ _ k hk
+    ⟨2, singleton_mem_largeValueEnergyRegion _ _
+      (by norm_num) (by norm_num) (by norm_num)⟩
+
+-- Exact expanded interface: two witnesses, two independent fifth coordinates.
+example (σ τ ρ energy s : ℝ) (k : ℕ) (hk : 1 ≤ k)
+    (h : InLargeValueEnergyRegion σ τ ρ energy s) :
+    (∃ eCard sCard : ℝ,
+      InLargeValueEnergyRegion σ (τ / k) (ρ / k) eCard sCard ∧ eCard ≤ energy / k) ∧
+    (∃ rEnergy sEnergy : ℝ,
+      InLargeValueEnergyRegion σ (τ / k) rEnergy (energy / k) sEnergy ∧ rEnergy ≤ ρ / k) :=
+  h.corrected_powering k hk
+
+example (σ τ ρ energy : ℝ) (k : ℕ) (hk : 1 ≤ k)
+    (h : InCardinalityEnergyRegion σ τ ρ energy)
+    (hHeathBrown : ∀ card e : ℝ,
+      InCardinalityEnergyRegion σ (τ / k) card e →
+        e ≤ heathBrownEnergyRHS σ (τ / k) card e) :
+    energy / k ≤ heathBrownEnergyRHS σ (τ / k) (ρ / k) (energy / k) :=
+  h.powered_heathBrown_relation k hk hHeathBrown
+
 example (σ τ ρ energy : ℝ) (k : ℕ)
     (h : CardinalityEnergyPoweringWitnesses σ τ ρ energy k)
     (hHeathBrown : ∀ card e : ℝ,
@@ -635,9 +686,356 @@ example : doubleZetaSum (singletonLargeValuePattern 2 (3 / 4) 2
   rw [singletonLargeValuePattern_doubleZetaSum]
   norm_num
 
+-- Actual five-coordinate source interface, with no separate analytic premise.
+example (σ τ ρ e s : ℝ) (h : InLargeValueEnergyRegion σ τ ρ e s) :
+    e ≤ 1 - 2 * σ +
+      1 / 2 * max (max (ρ + 1) (2 * ρ)) (5 / 4 * ρ + τ / 2) +
+      1 / 2 * max (max (e + 1) (4 * ρ)) (3 / 4 * e + ρ + τ / 2) :=
+  h.heathBrown_relation
+
+example (σ τ ρ e : ℝ) (h : InCardinalityEnergyRegion σ τ ρ e)
+    (k : ℕ) (hk : 1 ≤ k) :
+    e / k ≤ heathBrownEnergyRHS σ (τ / k) (ρ / k) (e / k) :=
+  h.heathBrown_powered k hk
+
+-- The preserved obstruction is also a valid input to the repaired HB chain.
+example : 0 ≤ heathBrownEnergyRHS (3 / 4) 1 0 0 := by
+  have h : InCardinalityEnergyRegion (3 / 4) 2 0 0 :=
+    ⟨2, energyPowering_source_counterexample.1⟩
+  simpa using h.heathBrown_powered 2 (by norm_num)
+
+-- Low-height and sigma endpoint coverage consumes actual source patterns.
+example : 0 ≤ heathBrownEnergyRHS 1 0 0 0 :=
+  (singleton_mem_largeValueEnergyRegion 1 0
+    (by norm_num) (by norm_num) (by norm_num)).heathBrown_relation
+
+example (σ ρ e s : ℝ) (h : InLargeValueEnergyRegion σ (3 / 2) ρ e s) :
+    e ≤ max (max (3 * ρ + 1 - 2 * σ) (ρ + 4 - 4 * σ))
+      (5 / 2 * ρ + (3 - 4 * σ) / 2) :=
+  h.heathBrown_small_height le_rfl
+
+example (W : Finset ℝ) : finsetAdditiveEnergy W =
+    RiemannZeta.GuthMaynard.ApproxAddEnergy 1 W := finsetAdditiveEnergy_eq_native W
+
+-- Classical cardinality powering consumes its own corrected witness.
+example (σ τ ρ e : ℝ) (h : InCardinalityEnergyRegion σ τ ρ e)
+    (k : ℕ) (hk : 1 ≤ k) :
+    ρ / k ≤ max (2 - 2 * σ) (4 + τ / k - 6 * σ) :=
+  h.huxley_cardinality_powered k hk
+
+example (σ : ℝ) : classicalLargeValueExponent σ 0 = 2 - 2 * σ := by
+  unfold classicalLargeValueExponent
+  have := min_le_left (1 - 2 * σ) (4 - 6 * σ)
+  rw [max_eq_left (by linarith)]
+
+-- The compact interval and both sigma-piece endpoints use actual bounds.
+example : IsLargeValueEnergyBound (3 / 4) 2 3 := by
+  convert energyClauseOneGeneral_uniform_bound (σ := 3 / 4) (τ := 2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num [energyClauseOneGeneralRate]
+
+example : IsLargeValueEnergyBound (3 / 4) 4 6 := by
+  convert energyClauseOneGeneral_uniform_bound (σ := 3 / 4) (τ := 4)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num [energyClauseOneGeneralRate]
+
+example : energyClauseOneGeneralRate (4 / 5) = 1 := by
+  norm_num [energyClauseOneGeneralRate]
+
+example : IsLargeValueEnergyBound (5 / 6) (16 / 3) (112 / 27) := by
+  convert energyClauseOneGeneral_uniform_bound (σ := 5 / 6) (τ := 16 / 3)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num [energyClauseOneGeneralRate]
+
+example (σ τ ρ e s : ℝ) (h : InLargeValueEnergyRegion σ τ ρ e s)
+    (hlo : 3 / 4 ≤ σ) (hhi : σ ≤ 4 / 5)
+    (htlo : 8 * σ - 4 ≤ τ) (hthi : τ ≤ 2 * (8 * σ - 4)) :
+    e / τ ≤ (18 - 19 * σ) / (2 * (3 * σ - 1)) :=
+  h.energyClauseOneGeneral_lower_piece hlo hhi htlo hthi
+
+-- Final assembly remains conditional only on the displayed zeta range;
+-- endpoint one must not silently become the source's unproved endpoint two.
+example (σ : ℝ) (hlo : 3 / 4 ≤ σ) (hhi : σ ≤ 5 / 6)
+    (hZeta : ∀ τ ∈ Set.Ico (1 : ℝ) (8 * σ - 4),
+      IsZetaLargeValueEnergyBound σ τ (energyClauseOnePublicRate σ * τ)) :
+    IsZeroDensityEnergyBound σ (energyClauseOnePublicRate σ / (1 - σ)) :=
+  energyClauseOne_of_zeta_range hlo hhi hZeta
+
+-- Exact zeta-envelope endpoints and the rational crossover are certified.
+example : energyClauseOneZetaRate (3 / 4) = 21 / 16 := by
+  norm_num [energyClauseOneZetaRate]
+
+example : energyClauseOneZetaRate (5 / 6) = 6 / 7 := by
+  norm_num [energyClauseOneZetaRate]
+
+example : energyClauseOneZetaRate (65 / 86) = 110 / 87 := by
+  norm_num [energyClauseOneZetaRate]
+
+-- Both low/high cardinality caps agree at the closed height transition.
+example (σ : ℝ) : 2 * (4 * σ - 1) - 12 * (σ - 1 / 2) = 4 - 4 * σ := by
+  ring
+
+example (i : Fin 6) : heathBrownEnergyBranch (4 / 5) (11 / 5) (4 / 5) i ≤ 56 / 25 := by
+  have h := energyClauseOneZeta_branch_bound (σ := 4 / 5) (t := 11 / 5) (r := 4 / 5)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num) i
+  norm_num [energyClauseOneZetaRate] at h
+  exact h
+
+-- Actual-region Huxley cap has no twelfth-moment premise.
+example (ρ e s : ℝ) (h : InZetaLargeValueEnergyRegion (4 / 5) (12 / 5) ρ e s) :
+    ρ ≤ 4 / 5 := by
+  have hc := (show InCardinalityEnergyRegion (4 / 5) (12 / 5) ρ e from
+    ⟨s, h.toGeneral⟩).energyClauseOneZeta_cardinality_cap (by norm_num)
+  norm_num at hc
+  exact hc
+
+-- The closed upper source height is supported, but the LV premise stays visible.
+example (hTwelfth : IsZetaLargeValueBound (5 / 6) (8 / 3) (4 / 3)) :
+    IsZetaLargeValueEnergyBound (5 / 6) (8 / 3) (16 / 7) := by
+  have h := energyClauseOneZeta_uniform_bound_of_twelfth (σ := 5 / 6) (τ := 8 / 3)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by convert hTwelfth using 1; norm_num)
+  norm_num [energyClauseOneZetaRate] at h
+  exact h
+
+-- End-to-end assembly retains both unfinished analytic inputs literally.
+example (σ : ℝ) (hlo : 3 / 4 ≤ σ) (hhi : σ ≤ 5 / 6)
+    (hShort : ∀ τ ∈ Set.Ico (1 : ℝ) 2,
+      IsZetaLargeValueEnergyBound σ τ (energyClauseOnePublicRate σ * τ))
+    (hTwelfth : ∀ τ ∈ Set.Ico (2 : ℝ) (8 * σ - 4),
+      IsZetaLargeValueBound σ τ (2 * τ - 12 * (σ - 1 / 2))) :
+    IsZeroDensityEnergyBound σ (energyClauseOnePublicRate σ / (1 - σ)) :=
+  energyClauseOne_of_twelfth_and_short_zeta hlo hhi hShort hTwelfth
+
+-- The central kernel contribution and a separated neighboring point are retained.
+example : zetaMomentKernel 0 0 = 1 := by norm_num [zetaMomentKernel]
+
+example : (∑ t ∈ ({0, 1} : Finset ℝ), zetaMomentKernel t 0) = 3 / 2 := by
+  norm_num [zetaMomentKernel]
+
+-- Exact source-window mass, including the closed center and both endpoints.
+example : (∫ u in (1 / 2 : ℝ)..3, zetaMomentKernel 1 u) =
+    Real.log (3 / 2) + Real.log 3 := by
+  convert integral_zetaMomentKernel (a := 1 / 2) (t := 1) (b := 3)
+    (by norm_num) (by norm_num) using 1; norm_num
+
+example (a x : ℝ) (ha : 0 ≤ a) (hx : 0 ≤ x) :
+    12 * a ^ 11 * x ≤ x ^ 12 + 11 * a ^ 12 := twelfth_tangent_bound ha hx
+
+-- The final analytic estimate is on the real zeta function, not a proxy.
+example (T : ℝ) (W : Finset ℝ) (hT : 0 < T)
+    (hSep : RiemannZeta.GuthMaynard.IsSeparated 1 W)
+    (hW : ∀ t ∈ W, t ∈ Set.Icc T (2 * T)) :
+    (∑ t ∈ W, (∫ u in T / 2..3 * T,
+      (1 / (1 + |u - t|)) *
+        ‖riemannZeta (((1 / 2 : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖) ^ 12) ≤
+      zetaMomentLogLoss T ^ 12 *
+        ∫ u in T / 2..3 * T,
+          ‖riemannZeta (((1 / 2 : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖ ^ 12 :=
+  sum_zetaMomentConvolution_twelfth W hT hSep hW
+
+-- The modular entry premise remains visible; the later Perron consumer discharges it.
+example (P : ZetaLargeValuePattern) (C : ℝ) (hC : 0 < C)
+    (hEntry : ∀ t ∈ P.ordinates,
+      P.V ≤ C * Real.sqrt P.N * zetaMomentConvolution P.T t) :
+    (P.ordinates.card : ℝ) * P.V ^ 12 ≤
+      C ^ 12 * P.N ^ 6 * zetaMomentLogLoss P.T ^ 12 * zetaTwelfthMoment P.T :=
+  P.twelfth_cardinality_of_convolution hC hEntry
+
 example :
     (RationalAffineFraction.mk 270 (-173) 125 (-93)).normalizeSign.eval
         (173 / 229 : ℝ) =
       (RationalAffineFraction.mk 270 (-173) 125 (-93)).eval
         (173 / 229 : ℝ) :=
   RationalAffineFraction.eval_normalizeSign _ _
+
+-- Every fixed logarithmic loss, including the zeroth power, has a uniform threshold.
+example (n : ℕ) (ε : ℝ) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, zetaMomentLogLoss T ^ n ≤ T ^ ε :=
+  eventually_zetaMomentLogLoss_pow_le_rpow n hε
+
+-- Source-window enlargement keeps the actual critical-line moment integrals.
+example (T : ℝ) (hT : 0 < T) :
+    zetaTwelfthMoment T ≤
+      (∫ u in T / 2..T, zetaMomentCriticalNorm u ^ 12) +
+      (∫ u in T..2 * T, zetaMomentCriticalNorm u ^ 12) +
+      (∫ u in 2 * T..4 * T, zetaMomentCriticalNorm u ^ 12) :=
+  zetaTwelfthMoment_le_three_dyadic hT
+
+-- Dyadic normalization still exposes the genuine, unproved analytic input.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    (ε : ℝ) (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      zetaMomentLogLoss T ^ 12 * zetaTwelfthMoment T ≤ T ^ (2 + ε) :=
+  eventually_zetaMomentLoss_twelfth_of_dyadic hDyadic hε
+
+-- Uniform physical-height consumption of both explicit analytic inputs.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    (ε : ℝ) (hε : 0 < ε) :
+    ∃ T₀ : ℝ, 0 < T₀ ∧ ∀ P : ZetaLargeValuePattern, T₀ ≤ P.T →
+      ∀ C : ℝ, 0 < C →
+        (∀ t ∈ P.ordinates, P.V ≤ C * Real.sqrt P.N * zetaMomentConvolution P.T t) →
+        (P.ordinates.card : ℝ) * P.V ^ 12 ≤ C ^ 12 * P.N ^ 6 * P.T ^ (2 + ε) :=
+  zetaPattern_twelfth_cardinality_of_dyadic_and_convolution hDyadic hε
+
+-- Integer endpoints are retained exactly, including a singleton interval.
+example : zetaIntervalCutoff 3 7 3 = 1 :=
+  zetaIntervalCutoff_eq_one (by norm_num) (by norm_num)
+
+example : zetaIntervalCutoff 3 7 7 = 1 :=
+  zetaIntervalCutoff_eq_one (by norm_num) (by norm_num)
+
+example : zetaIntervalCutoff 3 3 3 = 1 :=
+  zetaIntervalCutoff_eq_one (by norm_num) (by norm_num)
+
+-- The outer half-integer endpoints vanish, not the integer endpoints.
+example : zetaIntervalCutoff 3 7 (5 / 2) = 0 :=
+  zetaIntervalCutoff_eq_zero_left (by norm_num)
+
+example : zetaIntervalCutoff 3 7 (15 / 2) = 0 :=
+  zetaIntervalCutoff_eq_zero_right (by norm_num)
+
+example (n : ℕ) : zetaIntervalCutoff 4 3 n = 0 := by
+  rw [zetaIntervalCutoff_nat]
+  have hn : n ∉ Finset.Icc 4 3 := by simp
+  simp only [hn, ↓reduceIte]
+
+-- No endpoint or sign correction is hidden in the source polynomial.
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (t : ℝ) :
+    (∑ n ∈ P.indices, P.coeff n * dirichletPhase n t) =
+      ∑' n : ℕ, (zetaIntervalCutoff a b n : ℂ) * dirichletPhase n t :=
+  P.polynomial_eq_cutoff_tsum hactive t
+
+-- Physical support is derived from the actual nonempty large-value set.
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) {t : ℝ} (ht : t ∈ P.ordinates) :
+    Function.support (zetaIntervalCutoff a b) ⊆ Set.Icc (P.N / 2) (3 * P.N) :=
+  P.cutoff_support_in_scale hactive (P.active_nonempty_of_mem_ordinates ht)
+
+-- The moving pole has the negative ordinate, and its residue is retained.
+example (g : ℝ → ℂ) (t : ℝ) :
+    zetaMellinNumerator g t (1 - (t : ℂ) * Complex.I) =
+      mellin g (1 - (t : ℂ) * Complex.I) :=
+  zetaMellinNumerator_at_pole g t
+
+-- The actual sharp polynomial equals the whole critical integral PLUS residue.
+-- The localized norm estimate is checked separately below, with physical hypotheses.
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (t : ℝ) :
+    (∑ n ∈ P.indices, P.coeff n * dirichletPhase n t) =
+      mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) (1 - (t : ℂ) * Complex.I) +
+        (1 / (2 * Real.pi) : ℂ) * ∫ u : ℝ,
+          riemannZeta (((1 / 2 : ℝ) : ℂ) + ((u + t : ℝ) : ℂ) * Complex.I) *
+            mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+              (((1 / 2 : ℝ) : ℂ) + (u : ℂ) * Complex.I) :=
+  P.polynomial_eq_critical_zeta_mellin hactive t
+
+-- Every positive derivative order has one endpoint-independent mass bound.
+example (a b j : ℕ) (hab : a ≤ b) (hj : 0 < j) :
+    (∫ x : ℝ, ‖iteratedDeriv j (zetaIntervalCutoff a b) x‖) ≤ zetaCutoffDerivativeMass j :=
+  integral_norm_iteratedDeriv_zetaIntervalCutoff_le hab hj
+
+-- The flat interior of the actual sharp-interval interpolation has zero derivative.
+example : deriv (zetaIntervalCutoff 2 4) 3 = 0 := by
+  have heq : zetaIntervalCutoff 2 4 =ᶠ[nhds (3 : ℝ)] fun _ => (1 : ℝ) := by
+    filter_upwards [Ioo_mem_nhds (by norm_num : (2 : ℝ) < 3) (by norm_num : (3 : ℝ) < 4)] with x hx
+    exact zetaIntervalCutoff_eq_one hx.1.le hx.2.le
+  rw [heq.deriv_eq, deriv_const]
+
+example (a b : ℕ) (hab : a ≤ b) :
+    (∫ x : ℝ, ‖iteratedDeriv 4 (fun y => (zetaIntervalCutoff a b y : ℂ)) x‖) ≤
+      zetaCutoffDerivativeMass 4 :=
+  integral_norm_complex_cutoff_deriv_le hab (by norm_num)
+
+-- Exact physical square-root normalization, including frequency zero.
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty) (u : ℝ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+      (((1 / 2 : ℝ) : ℂ) + (u : ℂ) * Complex.I)‖ ≤
+        zetaCutoffMellinConstant 1 (1 / 2) * Real.sqrt P.N / (1 + |u|) :=
+  P.cutoff_critical_mellin_kernel hactive hne u
+
+-- The residue is bounded, not silently removed even at ordinate zero.
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) 1‖ ≤
+      zetaCutoffMellinConstant 4 1 * P.N ^ 4 := by
+  simpa using P.cutoff_mellin_residue_bound hactive hne (j := 4) (by norm_num) 0
+
+-- Both closed source height endpoints translate to the correct Mellin window.
+example (T : ℝ) : zetaMellinSourceWindow T T = Set.Icc (-T / 2) (2 * T) := by
+  unfold zetaMellinSourceWindow
+  congr 1 <;> ring
+
+example (T : ℝ) : zetaMellinSourceWindow T (2 * T) = Set.Icc (-3 * T / 2) T := by
+  unfold zetaMellinSourceWindow
+  congr 1 <;> ring
+
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {t : ℝ} (ht : t ∈ Set.Icc P.T (2 * P.T)) :
+    ‖∫ u : ℝ in (zetaMellinSourceWindow P.T t)ᶜ, zetaCutoffCriticalIntegrand a b t u‖ ≤
+      120 * zetaCutoffMellinConstant 4 (1 / 2) * P.N ^ (7 / 2 : ℝ) / P.T ^ 2 :=
+  P.cutoff_critical_far_integral hactive hne ht
+
+-- No supplied pointwise analytic estimate remains in this actual-pattern consumer.
+example (P : ZetaLargeValuePattern) (hscale : P.N ^ (7 / 4 : ℝ) ≤ P.T)
+    (hvalue : 2 * zetaPerronError ≤ P.V) {t : ℝ} (ht : t ∈ P.ordinates) :
+    P.V ≤ zetaPerronConstant * Real.sqrt P.N * zetaMomentConvolution P.T t :=
+  P.perron_entry hscale hvalue ht
+
+example (P : ZetaLargeValuePattern) (hscale : P.N ^ (7 / 4 : ℝ) ≤ P.T)
+    (hvalue : 2 * zetaPerronError ≤ P.V) :
+    (P.ordinates.card : ℝ) * P.V ^ 12 ≤
+      zetaPerronConstant ^ 12 * P.N ^ 6 * zetaMomentLogLoss P.T ^ 12 * zetaTwelfthMoment P.T :=
+  P.twelfth_cardinality_of_perron hscale hvalue
+
+-- Closed sigma=1/2, tau=2 and delta=1/4 are covered by a common threshold.
+example : ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+    P.N ^ (7 / 4 : ℝ) ≤ P.T → P.N ^ (1 / 4 : ℝ) ≤ P.V →
+      ∀ t ∈ P.ordinates,
+        P.V ≤ zetaPerronConstant * Real.sqrt P.N * zetaMomentConvolution P.T t := by
+  obtain ⟨N₀, hN₀, h⟩ := exists_zetaPerron_uniform_threshold
+  refine ⟨N₀, hN₀, ?_⟩
+  intro P hN hT hV
+  have hentry := h P hN (1 / 2) 2 (1 / 4) (by norm_num) le_rfl le_rfl
+  norm_num at hentry
+  exact hentry hT hV
+
+-- The genuine dyadic moment is now the only analytic input to the uniform LV bound.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η)) :
+    IsZetaLargeValueBound (5 / 6) (8 / 3) (4 / 3) := by
+  convert zetaTwelfth_largeValueBound_of_dyadic hDyadic
+    (σ := 5 / 6) (τ := 8 / 3) (by norm_num) (by norm_num) using 1
+  norm_num
+
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η)) :
+    IsZetaLargeValueEnergyBound (5 / 6) (8 / 3) (16 / 7) := by
+  have h := energyClauseOneZeta_uniform_bound_of_twelfth (σ := 5 / 6) (τ := 8 / 3)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (zetaTwelfth_largeValueBound_of_dyadic hDyadic (by norm_num) (by norm_num))
+  norm_num [energyClauseOneZetaRate] at h
+  exact h
+
+-- End-to-end clause (i) still exposes the moment and short-zeta obligations.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    {σ : ℝ} (hlo : 3 / 4 ≤ σ) (hhi : σ ≤ 5 / 6)
+    (hShort : ∀ τ ∈ Set.Ico (1 : ℝ) 2,
+      IsZetaLargeValueEnergyBound σ τ (energyClauseOnePublicRate σ * τ)) :
+    IsZeroDensityEnergyBound σ (energyClauseOnePublicRate σ / (1 - σ)) :=
+  energyClauseOne_of_dyadic_moment_and_short_zeta hDyadic hlo hhi hShort
