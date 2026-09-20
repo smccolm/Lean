@@ -26,6 +26,18 @@ flowchart TD
     ZMI["EPZAE-21 exact coefficient-one Mellin identity<br/>sharp endpoints + negative phase;<br/>critical integral + pole residue DONE"]
     ZMU["EPZAE-21 uniform cutoff derivative masses<br/>Mellin factors + physical-scale kernels DONE"]
     ZPE["EPZAE-21 localized Perron entry estimate<br/>tail + residue absorption;<br/>actual sigma >= 1/2, tau >= 2 windows DONE"]
+    ZPS["EPZAE-21 short Perron entry<br/>error absorbed against V;<br/>sigma >= 3/4, tau >= 3/2 windows DONE"]
+    ZSC["EPZAE-21 sharp-interval cancellation<br/>sigma >= 3/4, 1 <= tau < 3/2;<br/>actual emptiness and LV_zeta=-infinity DONE"]
+    ZND["EPZAE-17/21 zeta discreteness<br/>negative iff -infinity iff actual emptiness;<br/>iff sharp positive-height power saving DONE"]
+    ZSQ["EPZAE-21 exact one-sided square entry<br/>whole-line divisor series + Gamma normalization;<br/>termwise actual local second moment DONE"]
+    ZGA["EPZAE-21 actual Gaussian averaging<br/>weighted divisor series + physical Jacobian;<br/>uniform logarithmic-window tail DONE"]
+    ZGQ["EPZAE-21 quadratic Gaussian transform<br/>exact formula + frequency damping;<br/>closed G squared <= 2T domain DONE"]
+    ZDL["EPZAE-21 actual digamma series to log<br/>uniform right-half-plane error;<br/>both height signs DONE"]
+    ZGP["EPZAE-21 actual reflected Gamma phase<br/>source factorization + exact ODE;<br/>closed-window quadratic error DONE"]
+    ZGT["EPZAE-21 actual Gamma-phase transform<br/>integrated error + both Gaussian tails;<br/>frequency damping consumer DONE"]
+    ZAMP["EPZAE-21 actual shifted-Gamma and pole amplitude<br/>near + far normalized kernel error;<br/>complete reflected divisor source O(1) DONE"]
+    ZDS["EPZAE-21 leading divisor weights<br/>shortening + uniform height variation;<br/>Gaussian source assembly OPEN"]
+    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>actual Voronoi + stationary reduction;<br/>uniform source errors OPEN"]
     ZTM["EPZAE-19/21 critical-line twelfth moment<br/>dyadic height estimate OPEN"]
 
     ZCB["EPZAE-22 zero-count convention bridge<br/>DONE"]
@@ -51,8 +63,9 @@ flowchart TD
     EC1G["EPZAE-36/37 Add-est (i) general half<br/>six-branch endpoint certificates;<br/>actual-region + uniform high-height bounds DONE"]
     EC1Z["EPZAE-36 Add-est (i) zeta certificate<br/>six branches + height transition;<br/>65/86 crossover + envelope DONE"]
     EC1ZA["EPZAE-21/37 actual zeta-energy bound<br/>uniform LV + energy deductions proved;<br/>dyadic critical twelfth moment OPEN"]
+    EC1S["EPZAE-21/37 short zeta energy on [1,2]<br/>deduced from genuine moment;<br/>dyadic critical twelfth moment OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>clause (i) general/zeta certificates DONE;<br/>other eight projections OPEN"]
-    NAE["EPZAE-37 nine new additive-energy bounds<br/>OPEN"]
+    NAE["EPZAE-37 nine new additive-energy bounds<br/>clause (i) reduced to dyadic twelfth moment;<br/>all final clauses OPEN"]
 
     PUB["EPZAE-38 exact public assembly<br/>OPEN"]
     SEM["EPZAE-39 semantic regressions<br/>OPEN"]
@@ -90,6 +103,27 @@ flowchart TD
     GM -->|separated shell occupancy| ZMK
     SRC --> ZPE
     SRC --> ZTM
+    GM -->|native entire numerator, contour and divisor L-series| ZSQ
+    ML -->|dominated convergence and absolute series interchange| ZSQ
+    ZSQ --> ZGA
+    GM -->|global actual-zeta growth bound| ZGA
+    ML -->|exact quadratic Gaussian transform| ZGQ
+    GM -->|pinned actual digamma series| ZDL
+    ML --> ZDL
+    ZDL --> ZGP
+    ZSQ -->|exact Gamma normalization| ZGP
+    ZGP --> ZGT
+    ZGQ -->|actual quadratic frequency bound| ZGT
+    ZGP -->|actual Gamma derivative and reflected phase| ZAMP
+    ZSQ -->|complete normalized source and divisor series| ZAMP
+    GM -->|Euler Gamma integral and auxiliary Gaussian bounds| ZAMP
+    ML -->|Gronwall and Gamma reflection| ZAMP
+    ZGA --> ZDS
+    ZGT -->|frequency damping after weight control| ZDS
+    ZAMP -->|proved complete-series uniform remainder| ZDS
+    ZDS --> ZAT
+    SRC --> ZAT
+    ZAT -->|scale and spacing assembly still needed| ZTM
     LVP --> ZMI
     GM -->|native Mellin inversion and residue calculus| ZMI
     ML -->|smooth transition and L-series| ZMI
@@ -99,6 +133,13 @@ flowchart TD
     ZMU -->|uniform kernel and fourth-order tail| ZPE
     ZMK -->|finite actual-pattern consumer proved| ZLV
     ZPE -->|proved entry and uniform LV deduction| ZLV
+    ZPE -->|proved error terms retained| ZPS
+    ZPS -->|proved short-height moment-to-LV deduction| ZLV
+    GM -->|native first and second derivative estimates| ZSC
+    LVP -->|actual sharp support and endpoints| ZSC
+    LVS --> ZND
+    LVP -->|actual singleton and factor-two window bridge| ZND
+    ZND -->|sharp-interval consumer of cancellation| ZSC
     ZTM -->|moment bound still needed| ZLV
 
     GM --> ZCB
@@ -154,7 +195,11 @@ flowchart TD
     EC1Z --> EC1ZA
     ZLV -->|twelfth-moment cardinality needed| EC1ZA
     EC1ZA --> NAE
-    ET -->|short-zeta transfer needed| NAE
+    ZSC --> EC1S
+    ZLV -->|moment-to-short-cardinality deduction proved| EC1S
+    RC -->|exact cubic-energy comparison| EC1S
+    EC1S --> NAE
+    ET -->|proved endpoint-one consumer; endpoint-two not used here| NAE
     RC --> EC
     ET --> EC
     HBA --> EC
@@ -175,6 +220,6 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
-    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE done;
-    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZTM,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,EC1ZA,EC,NAE,PUB,SEM,REL open;
+    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP done;
+    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDS,ZAT,ZTM,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,EC1ZA,EC1S,EC,NAE,PUB,SEM,REL open;
     class PL62 preserved;

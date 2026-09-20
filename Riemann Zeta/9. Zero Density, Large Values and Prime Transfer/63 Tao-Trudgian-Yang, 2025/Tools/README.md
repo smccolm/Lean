@@ -38,8 +38,46 @@ Installed and planned tools:
   covered as well, including their exact source-entry audits and regressions;
   the uniform continuation (`ZetaCutoffDerivatives`, `ZetaMellinDerivative`,
   `ZetaMellinUniform`, `ZetaMellinLocalization`, `ZetaPerronEntry`,
-  `ZetaTwelfthFromMoment`) is inventoried with 38 named public theorem
-  audits, the derivative-test constructor audit, and 14 new regressions;
+  `ZetaTwelfthFromMoment`) is inventoried with 39 named public theorem
+  audits, the derivative-test constructor audit, and 14 regressions;
+  `ZetaShortPerron`, `ZetaShortPatterns`, and `EnergyClauseOneFromMoment`
+  are also inventoried and root-imported. Their original 11 public theorems and
+  the new short-height theorem in `ZetaTwelfthFromMoment` have 12 named
+  audits; eight additional regressions check source boundaries and the
+  final clause-(i) signature with only the genuine moment hypothesis;
+  `ZetaLargeValueDiscreteness` and `ZetaPointwiseNonexistence` are now
+  inventoried and root-imported too. Together with the new sharp-interval
+  consumer in `ZetaShortPatterns`, they add 13 named theorem audits and
+  eight regressions for infimum semantics, negative/zero/positive branches,
+  and the genuine pointwise conclusion. The analytic twelfth moment is
+  still open;
+  the six modules `ZetaSquareContour`, `ZetaSquareContourShift`,
+  `ZetaSquareDivisorKernel`, `ZetaSquareDivisorSeries`,
+  `ZetaSquareSourceEntry`, and `ZetaSquareLocalMean` are inventoried and
+  root-imported, with 47 named theorem audits and nine source-entry
+  regressions. Coverage includes absolute integrated-norm summability
+  and the actual local second-moment identity, not a claimed proof of
+  the sharp Atkinson estimate;
+  `ZetaSquareAveraging`, `ZetaSquareGaussianTail`, and
+  `ZetaSquareGaussianTransform` are covered with 31 named theorem audits
+  and nine additional regressions. These test physical Gaussian
+  normalization, uniform logarithmic tails, and the closed quadratic
+  transform boundary. Four further modules cover the proved actual
+  digamma/Gamma-phase approximation and its whole-line Gaussian
+  transform, now with 26 named audits and 12 phase regressions. Seven
+  further modules prove the uniform actual shifted-Gamma/pole error,
+  whole normalized contour bound and complete reflected divisor-source
+  remainder. They add 44 public audits (plus the promoted Gamma derivative
+  audit counted above) and 14 regressions. All seven are required by the
+  same root import/inventory check. Nine more modules cover actual
+  Mellin weights/reflection, signed source arguments, height variation,
+  square-root coefficient mass, freezing, real zeta normalization and
+  the complete quadratic Gaussian-source comparison. All 78 new public
+  theorems have named audits; 20 additional regressions test zero
+  coefficients, both closed height boundaries, the Gaussian scale
+  boundary, factor two, and the full source-consumer quantifiers.
+  The shortened divisor sum and genuine twelfth moment remain open,
+  not assumed or excluded;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
 

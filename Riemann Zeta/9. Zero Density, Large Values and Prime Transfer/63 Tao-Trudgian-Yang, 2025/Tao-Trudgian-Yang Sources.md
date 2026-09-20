@@ -192,6 +192,134 @@ exhaustive-audit contract.
 
 ## Acquisition policy
 
+### Twelfth-moment route checked on 20 September 2026
+
+The live author-maintained [zeta-moment chapter](https://teorth.github.io/expdb/blueprint/zeta-moment-chapter.html)
+and [zeta large-values chapter](https://teorth.github.io/expdb/blueprint/largevalue-zeta-chapter.html)
+were inspected for Theorem 9.7 and Lemmas 8.4/8.11. Theorem 9.7's displayed
+minimum does not match Lemma 8.11's maximum; the crosswalk records the
+proved discreteness-based maximum reduction. These moving pages are
+research references, not changed source pins or proof dependencies.
+
+The already-present adjacent file
+`../74 Gafni-Tao, 2026/Sources/ivic-zeta-book-scan.pdf` was read in place;
+it was not copied into this project's source archive. Its SHA-256 is
+`fafac152db87abe132858fa97d8fe501c61cd261e20732ef701396fba27b61aa`,
+and its local capture is recorded by that folder's `Sources/PINS.md`.
+Its title pages identify Ivić's *Topics in Recent Zeta Function Theory*,
+Orsay report 83.06; the filename is not a bibliographic identification.
+Printed pages 107--115 and 127--133 contain the local mean-square
+Theorem 6.2 and the large-values/twelfth-moment Theorem 7.1 and Corollary
+7.2. This is a different text from the book edition referenced by ANTEDB;
+its theorem numbers must not be identified with that edition's numbers.
+The inspected nearby Lean modules provide conditional statements and
+genuine partial analytic steps, not a proved twelfth-moment instance.
+No dependency pin or archived source was changed.
+
+### One-sided contour adaptation, 20 September 2026
+
+Two adjacent source files were adapted into this target rather than
+importing the incompatible separate package:
+
+| Adjacent file under `../74 Gafni-Tao, 2026/Extension/GafniTao/` | SHA-256 at adaptation | Target module |
+|---|---|---|
+| `HeathBrownOneSidedZetaSquareContour.lean` | `9880bb13ed4d0cf80fd16a38d151a06a69430056e4d94efbd9c59a8c4e63a201` | `ZetaSquareContour` |
+| `HeathBrownOneSidedZetaSquareAFE.lean` | `0a1c6c6ec8f4386994b4340c21a4a8638410a2bce070a86a4a65842cd4a10291` | `ZetaSquareContourShift` |
+
+Changes replace imports/namespaces with the canonical Lean 4.30 native
+foundation and target namespace; the unused adjacent AFE import is
+removed. The target additionally proves the exact pole normalization
+and lower bound. Neither adjacent file was edited. Four new target
+modules prove the right-kernel majorant, complete ordinary-divisor
+series with absolute integral summability, actual squared-zeta
+normalization, and local sum--integral exchange. They do not import a
+twelfth-moment instance or assert the uniform Theorem 6.2 estimate.
+The archived paper and dependency pins are unchanged.
+
+### Gaussian averaging continuation, 20 September 2026
+
+The same pinned Orsay scan was inspected on printed pages 107--115
+(PDF pages 112--120). Equation (6.27)'s first Gaussian majorization
+is now implemented on the literal `T ± G L` window. The complete
+actual-zeta Gaussian tail is proved uniformly on `L=log T`.
+Equations (6.32)--(6.33) motivate the separate quadratic kernel with
+coefficient `G^(-2)+i/(2T)`. Its exact integral uses
+`fourierIntegral_gaussian` and `integrable_cexp_quadratic` from the
+already-pinned Mathlib `Gaussian/FourierTransform.lean`, not numerical
+quadrature. The actual unit-phase substitution is proved in the next
+continuation; the amplitude/complete reflected-source remainder is proved
+in the later continuation below.
+The later shortened divisor sum, Voronoi terms, stationary
+phase, and source error estimates remain open. No archived source,
+package pin, or adjacent project was changed.
+
+### Actual digamma/Gamma phase continuation, 20 September 2026
+
+The leading logarithmic term was checked against the primary NIST
+[DLMF 5.11.2](https://dlmf.nist.gov/5.11.E2), alongside
+[DLMF 5.9](https://dlmf.nist.gov/5.9). The formal proof does not import
+an asymptotic expansion or assume its error. `ZetaDigammaLog` derives
+`‖psi(z)-log(z)‖≤4/|Im z|` from the already-pinned
+`Complex.hasSum_digamma_of_re_pos`, harmonic-number limit, elementary
+unit-interval integration, and a telescoping reciprocal-square bound.
+The estimate includes both height signs throughout the right half-plane.
+
+The GammaR derivative proof (now public as `hasDerivAt_gammaReal`)
+is adapted from the canonical
+`71 Guth-Maynard, 2026/GuthMaynard/HughesYoungGammaRatioJets.lean`
+(`hasDerivAt_GammaR_eq_mul_logDeriv_of_re_pos`, SHA-256
+`41f6beb58aee0e927bbb1546d0c4c78d0be3e2a37f3ca0cb96f2fc5a344e47e6`).
+Conjugation follows from Mathlib's actual Gamma conjugation and
+`deriv_conj_conj`; no unfinished dependency module is imported.
+The source phase is the literal reflected Gamma quotient, with an
+actual zeta functional-equation consumer and exact factorization of
+the existing contour normalization.
+
+The quadratic expansion uses the pinned
+`Real.abs_log_sub_add_sum_range_le` and a real-interval mean-value
+inequality. The whole-line consumer uses Mathlib's actual Gaussian
+integral, both physical tails, and the previously proved quadratic
+frequency damping. This proves the phase component of the Orsay
+scan's (6.28)--(6.33) route. The amplitude is controlled in the continuation
+below; divisor truncation, Voronoi/stationary phase, and Theorem 6.2
+remain open.
+No paper archive, dependency pin, or adjacent source file was changed.
+
+### Uniform amplitude/source continuation, 20 September 2026
+
+The new shift estimate does not assume a Stirling ratio expansion.
+It uses the proved actual digamma/log estimate, a principal-log path
+entirely in the lower half-plane, and the pinned Mathlib
+`norm_le_gronwallBound_of_norm_deriv_right_le`. The actual GammaR
+derivative is the audited adaptation recorded above.
+
+The far bound uses Mathlib's `Complex.Gamma_mul_Gamma_one_sub`
+(`Mathlib/Analysis/SpecialFunctions/Gamma/Beta.lean`),
+`Complex.two_sin`, and the native
+`norm_Gamma_le_realGamma_re` in `HughesYoungContourShift.lean`.
+Its linear exponential in height is derived explicitly, not taken
+from the coarser native quadratic-exponential bound. The normalized
+source's auxiliary Gaussian absorbs that exponential on `|u|≥t/4`.
+
+The elementary sine-exponential calculation was adapted from the opening
+of `norm_complex_sin_le_two_mul_exp_sq_im` in native
+`HughesYoungCentralBounds.lean` (SHA-256
+`7cbaa4755da8c373d295ac49c4a438fe3d28e70881350f29ca7b0c31af261ba9`),
+then proved with the sharper linear-exponential conclusion needed here.
+The imported `HughesYoungContourShift.lean` has SHA-256
+`f23953d14892b53c8acbf11fbec31e9d4028e9dfce712abc58ba1143f3afcce4`.
+Both are canonical native sources; neither file was edited.
+
+The kernel and complete-series consumers use the already proved
+`zetaSquareRightKernel`, actual pole/Gamma normalizations, and the
+ordinary divisor terms on `Re(s+w)=3/2`. Absolute integrated-norm
+summability justifies all complete-series operations. This proves
+a uniform reflected-source remainder, not Ivić's shortened sum,
+Voronoi/stationary reduction or sharp Theorem 6.2. No paper archive,
+dependency pin, adjacent source, or preserved counterexample changed.
+
+### Source handling
+
 - Prefer arXiv source archives and author/journal pages.
 - Record citation-only status for copyrighted books or inaccessible journal
   scans; do not redistribute material without a clear basis.

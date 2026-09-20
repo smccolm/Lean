@@ -107,6 +107,11 @@ certificates, not proofs of the energy-region projections.
 | `bourgain-lvt` | optimized LV inequality | Bourgain 2000; EPZAE-19 |
 | `power-lemma` | Dirichlet-polynomial powering | local GM coefficient machinery may help; EPZAE-18 |
 | `twelfth-bound`, `lvz-340` | zeta-specific nonexistence/bound | HB twelfth moment plus old pair; EPZAE-21 |
+| Ivić Orsay 83.06, Theorem 6.2 route: exact square entry | actual local zeta second moment to complete ordinary-divisor contour series | `hasSum_zetaSquareLocalMean` proves the exact source identity, including all contour limits, absolute integrated-norm summability, Gamma normalization, and compact-height interchange. The initial six `ZetaSquare*` modules have no moment premise. Averaging and the actual unit phase are proved below; the uniform amplitude/complete-series remainder is also proved below; divisor shortening, Voronoi/stationary phase, sharp remainders, and the Atkinson inequality remain open under EPZAE-21 |
+| Ivić (6.27), first Gaussian majorization and window tail | actual local second moment and physical `T ± G L` window | `zetaSquareLocalMean_le_gaussian_divisor_series` proves the weighted-series majorization with constant `exp(1)`. `exists_zetaSquareGaussian_source_approximation` gives the literal whole-line Gaussian mean up to `G T^(-A)` on `L=log T`, uniformly for `0<G≤T`. The later oscillatory source reduction remains open |
+| Ivić (6.32)--(6.33), quadratic Gaussian kernel | exact transform and frequency damping | `zetaGaussianQuadraticIntegral_eq` and `norm_zetaGaussianQuadraticIntegral_le` prove the transform with coefficient `G^(-2)+i/(2T)` and bound `sqrt(pi) G exp(-(Gv)²/8)` for `G²≤2T`. The actual unit-phase substitution and error are proved by the next row; the amplitude continuation below gives a uniform complete-source remainder, but these helpers do not establish the source's shortened divisor sum |
+| DLMF 5.11.2 leading term; Ivić (6.28)--(6.33) phase component | actual digamma/Gamma quotient to quadratic Gaussian phase | `norm_digamma_sub_log_le` derives the explicit `4/abs(Im z)` error from the pinned series. `hasDerivAt_zetaSquareReflectedGammaPhase` and the actual functional-equation/source-normalization consumers identify the true phase. `norm_zetaSquareGammaGaussianTransform_sub_quadratic_le` proves its whole-line transform error `2r²(18/T+2r²/T²)+2sqrt(2pi)G exp(-(r/G)²/2)` on `T≥4`, `0≤r≤T/2`, `G>0`. The following consumer uses actual quadratic damping when `G²≤2T`. The following continuation proves the uniform amplitude and complete reflected-source remainder; divisor shortening remains open, so this is not the complete Ivić source inequality |
+| Exact square-source continuation toward Ivić Theorem 6.2 | actual shifted Gamma/pole amplitudes to the complete reflected divisor integral | `norm_gammaReal_shift_sq_sub_exp_le` derives the relative error from the actual digamma/log path and Gronwall. `exists_norm_zetaSquareRightKernel_sub_leading_le` combines near and far estimates, including the actual inverse Gamma normalization. `hasSum_zetaSquareLeadingDivisorContribution` and `exists_norm_zetaSquareDivisorIntegral_sub_leading_le` prove the full ordinary-divisor series and one uniform `O(1)` source remainder for all `t≥4`. No moment premise. Weight control/shortening, Gaussian assembly, Voronoi/stationary phase and Theorem 6.2 remain open under EPZAE-21 |
 | `add-bound (ii)`, critical line and twelfth power | uniform moment-to-zeta-polynomial large values | `zetaTwelfth_largeValueBound_of_dyadic` proves `IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))` for `σ ≥ 1/2`, `τ ≥ 2`, conditional only on the genuine dyadic critical-line twelfth moment. The actual Perron entry, window, logarithmic losses, and epsilon--delta conversion are proved. The moment itself and the general source parameters remain open under EPZAE-19/21 |
 | `add-bound (ii)`, exact coefficient-one source entry | sharp polynomial to localized critical-zeta convolution | `ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin` retains both integer endpoints and residue `mellin cutoff (1-it)`. `ZetaMellinUniform` and `ZetaMellinLocalization` prove physical-scale kernels and the far integral. `ZetaLargeValuePattern.perron_entry` bounds and absorbs both errors; `exists_zetaPerron_uniform_threshold` derives its physical conditions from all actual windows `σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`. This critical-line entry edge is complete, not the full EPZAE-21 work package |
 | `zero-from-large` | Type I/II transfer | local GM zero-density transfer is related but conventions must be matched; EPZAE-24 |
@@ -123,7 +128,19 @@ certificates, not proofs of the energy-region projections.
 | `imphb-lver-ineq` | general-energy half of `Add-est (i)` | `EnergyClauseOneGeneral` proves both source pieces on `3/4 ≤ σ ≤ 5/6`, `8σ-4 ≤ τ ≤ 2(8σ-4)`, with the exact `σ=4/5` crossover, using actual Huxley cardinality witnesses and Heath--Brown energy witnesses. Its uniform energy bound and extension to every `τ ≥ 8σ-4` are kernel-checked; this is a completed sub-result of EPZAE-36/37, not the whole clauses |
 | Conditional `Add-est (i)` assembly | remaining zeta input separated from proved general half | `energyClauseOne_of_zeta_range` proves the advertised zero-energy bound from explicit uniform zeta-energy bounds on `[1,8σ-4)`. Those zeta bounds and the source endpoint-two reduction remain open; no final `Add-est` clause is claimed |
 | `imphb-zlver-ineq` | zeta-energy half of `Add-est (i)` | The six-branch rational certificate, `τ=4σ-1` transition, `σ=65/86` crossover, and public-envelope comparison are kernel-checked in `EnergyClauseOneZeta`. Its actual-region and uniform-energy consumers are **conditional** on the independent twelfth-moment cardinality bound; Huxley's cap and the uniform-LV-to-region bridge are proved |
-| Refined conditional `Add-est (i)` assembly | two exact analytic inputs remain | `energyClauseOne_of_dyadic_moment_and_short_zeta` derives uniform twelfth-moment cardinality and consumes short zeta energy on `[1,2)` plus the genuine dyadic critical-line twelfth moment. Those two inputs and the source endpoint-two alternative remain open; all Perron, uniform-LV, general-energy, and zeta rational deductions in this chain are proved |
+| Short-height coefficient-one entry | threshold-relative Perron bound | `ZetaLargeValuePattern.perron_entry_with_scaled_error` and `exists_zetaPerron_short_uniform_threshold` prove actual entry uniformly for `σ ≥ 3/4`, `τ ≥ 3/2`, `δ ≤ 1/16`. The moment-to-LV deduction is proved from the genuine dyadic moment |
+| Short-zeta nonexistence | actual patterns eventually empty | `exists_zetaShort_empty_uniform_threshold` and `zetaShort_largeValueExponent_eq_bot` prove emptiness and `LV_ζ=-∞` for `σ ≥ 3/4`, `1 ≤ τ < 3/2`, consuming exact sharp-interval first/second derivative bounds. This is a proved subrange, not the full source `lvz-340` or reflection theorem |
+| Refined conditional `Add-est (i)` assembly | genuine dyadic moment is the sole analytic input | `energyClauseOne_of_dyadic_moment` derives the complete short-zeta range from cancellation, threshold-relative Perron entry, and cubic energy, then consumes the repaired witnesses, Heath--Brown relation, exact optimizations, and endpoint-one transfer. The dyadic twelfth moment is unproved. The independent endpoint-two source theorem and all nine unconditional outputs remain open |
+
+The positive-height normalization of ANTEDB Lemma 8.4 is now proved by
+`zetaLargeValueExponent_eq_bot_iff_neg`,
+`zetaLargeValueExponent_eq_bot_iff_empty_threshold`, and
+`zetaLargeValueExponent_eq_bot_iff_pointwise_powerSaving`. The last theorem
+uses the actual sharp interval and `n^(-it)` phase, constructs an actual
+singleton, and pays for the upper `2T` endpoint in the reverse direction.
+`zetaLargeValueExponent_le_iff` supplies the exact non-asymptotic
+infimum semantics. `zetaShort_pointwise_powerSaving` is the unconditional
+short-range consumer. Other nonexistence ranges and reflection remain open.
 
 ## Source-convention bridges requiring proofs
 
@@ -189,3 +206,14 @@ ANTEDB blueprint, and cited source before freezing Lean statements:
 
 No item in this ledger authorizes silently changing a source theorem. Each
 resolution belongs in a theorem docstring and semantic regression.
+
+The live [ANTEDB zeta-moment chapter](https://teorth.github.io/expdb/blueprint/zeta-moment-chapter.html)
+was checked on 20 September 2026. Its Theorem 9.7 proof displays a `min`,
+although [Lemma 8.11](https://teorth.github.io/expdb/blueprint/largevalue-zeta-chapter.html)
+provides a `max`. The Lean branch lemma retains that maximum: if
+`a = τ-6(σ-1/2)` is nonnegative, `max(a,2a)=2a`; if negative, the actual
+zeta exponent is negative infinity. This does not establish the input
+analytic maximum bound. No archived source is edited. The pinned Ivić
+scan is *Topics in Recent Zeta Function Theory*, Orsay report 83.06,
+and uses Theorem 7.1/Corollary 7.2 for this route; it is not the book
+edition whose Theorem 8.2 is cited by the live blueprint.

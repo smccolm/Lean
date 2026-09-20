@@ -1,4 +1,5 @@
 import TaoTrudgianYang2025.ZetaPerronEntry
+import TaoTrudgianYang2025.ZetaShortPerron
 import TaoTrudgianYang2025.ZetaMomentAsymptotics
 import TaoTrudgianYang2025.EnergyClauseOneZeta
 
@@ -16,24 +17,28 @@ open Filter MeasureTheory Set
 
 namespace TaoTrudgianYang2025
 
-theorem zetaTwelfth_largeValueBound_of_dyadic
+private theorem zetaTwelfth_largeValueBound_of_uniform_entry
     (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
       ∀ H : ℝ, T₀ ≤ H → 0 < H →
         (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
-    {σ τ : ℝ} (hσ : 1 / 2 ≤ σ) (hτ : 2 ≤ τ) :
+    {σ τ : ℝ} (hτ : 3 / 2 ≤ τ)
+    (hUniform : ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+      ∀ δ : ℝ, δ ≤ 1 / 16 → P.N ^ (τ - δ) ≤ P.T → P.N ^ (σ - δ) ≤ P.V →
+        ∀ t ∈ P.ordinates,
+          P.V ≤ zetaPerronConstant * Real.sqrt P.N * zetaMomentConvolution P.T t) :
     IsZetaLargeValueBound σ τ (2 * τ - 12 * (σ - 1 / 2)) := by
   intro ε hε
   let η : ℝ := min 1 (ε / (4 * (τ + 1)))
-  let δ : ℝ := min (1 / 4) (ε / 64)
+  let δ : ℝ := min (1 / 16) (ε / 64)
   have hτpos : 0 < τ + 1 := by linarith
   have hη : 0 < η := lt_min (by norm_num) (div_pos hε (mul_pos (by norm_num) hτpos))
   have hηone : η ≤ 1 := min_le_left _ _
   have hηeps : η * (4 * (τ + 1)) ≤ ε :=
     (le_div_iff₀ (mul_pos (by norm_num) hτpos)).1 (min_le_right _ _)
   have hδ : 0 < δ := lt_min (by norm_num) (div_pos hε (by norm_num))
-  have hδquarter : δ ≤ 1 / 4 := min_le_left _ _
+  have hδsmall : δ ≤ 1 / 16 := min_le_left _ _
   have hδeps : δ * 64 ≤ ε := (le_div_iff₀ (by norm_num : (0 : ℝ) < 64)).1 (min_le_right _ _)
-  obtain ⟨N₀, hN₀, hEntry⟩ := exists_zetaPerron_uniform_threshold
+  obtain ⟨N₀, hN₀, hEntry⟩ := hUniform
   obtain ⟨T₀, hT₀, hfinite⟩ := zetaPattern_twelfth_cardinality_of_dyadic_and_convolution hDyadic hη
   let C : ℝ := max 1 (max N₀ (max T₀ (zetaPerronConstant ^ 12)))
   have hC : 1 ≤ C := le_max_left _ _
@@ -50,7 +55,7 @@ theorem zetaTwelfth_largeValueBound_of_dyadic
       (by linarith : (1 : ℝ) ≤ τ - δ)
   have hphysical := hfinite P ((hCT.trans hPN).trans hNT)
     zetaPerronConstant zetaPerronConstant_pos
-      (hEntry P (hCN.trans hPN) σ τ δ hσ hτ hδquarter hTlower hVlower)
+      (hEntry P (hCN.trans hPN) δ hδsmall hTlower hVlower)
   have hVp : P.N ^ (12 * (σ - δ)) ≤ P.V ^ 12 := by
     have h := pow_le_pow_left₀ (Real.rpow_nonneg hNpos.le (σ - δ)) hVlower 12
     convert h using 1
@@ -80,6 +85,30 @@ theorem zetaTwelfth_largeValueBound_of_dyadic
       mul_le_mul_of_nonneg_left (Real.rpow_le_rpow_of_exponent_le P.one_lt_N.le hExponent)
         (zero_le_one.trans hC)
     _ = _ := by rw [Real.rpow_add hNpos, mul_assoc]
+
+theorem zetaTwelfth_largeValueBound_of_dyadic
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    {σ τ : ℝ} (hσ : 1 / 2 ≤ σ) (hτ : 2 ≤ τ) :
+    IsZetaLargeValueBound σ τ (2 * τ - 12 * (σ - 1 / 2)) := by
+  apply zetaTwelfth_largeValueBound_of_uniform_entry hDyadic (by linarith : 3 / 2 ≤ τ)
+  obtain ⟨N₀, hN₀, h⟩ := exists_zetaPerron_uniform_threshold
+  refine ⟨N₀, hN₀, ?_⟩
+  intro P hN δ hδ hT hV
+  exact h P hN σ τ δ hσ hτ (by linarith) hT hV
+
+/-- The actual short-height Perron consumer extends the same moment
+consequence to `τ ≥ 3/2` when `σ ≥ 3/4`. -/
+theorem zetaTwelfth_short_largeValueBound_of_dyadic
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    {σ τ : ℝ} (hσ : 3 / 4 ≤ σ) (hτ : 3 / 2 ≤ τ) :
+    IsZetaLargeValueBound σ τ (2 * τ - 12 * (σ - 1 / 2)) := by
+  apply zetaTwelfth_largeValueBound_of_uniform_entry hDyadic hτ
+  obtain ⟨N₀, hN₀, h⟩ := exists_zetaPerron_short_uniform_threshold
+  exact ⟨N₀, hN₀, fun P hN δ hδ => h P hN σ τ δ hσ hτ hδ⟩
 
 theorem energyClauseOne_of_dyadic_moment_and_short_zeta
     (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧

@@ -130,8 +130,9 @@ Never scale an `s`-dependent constraint using the disproved rule.
 The exact general-energy certificate for `Add-est (i)` is now checked on
 its full source interval, with actual-region consumption and uniform
 high-height consequences. The zeta rational certificate is also checked;
-its analytic twelfth-moment input and final short-zeta transfer, and the
-remaining eight clauses' certificates and analytic inputs, remain open.
+its analytic twelfth-moment input and the remaining eight clauses'
+certificates and analytic inputs remain open. The short-zeta continuation
+below now supplies the full short range from that same moment.
 The public bounds are unchanged; full recovery by this repaired route
 remains an obligation, not a conclusion of the static source inspection.
 
@@ -254,9 +255,10 @@ cardinality witness at power two, not any fifth-coordinate scaling.
 | Full zero-energy assembly | `energyClauseOne_of_twelfth_and_short_zeta`, conditional on twelfth-moment LV over `[2,8σ-4)` and short zeta energy over `[1,2)` |
 
 The uniform LV premise in this modular interface is now derived from the
-genuine dyadic critical-line moment, as recorded below. That moment and
-the short-zeta input are not supplied by the certificate or counterexample
-repair. In particular the nearby Gafni--Tao twelfth-moment
+genuine dyadic critical-line moment, as recorded below. The short-zeta
+continuation also derives the short input from that moment; neither the
+certificate nor the counterexample repair proves the moment itself.
+In particular the nearby Gafni--Tao twelfth-moment
 statement is not a proved theorem instance. The source endpoint-two
 alternative and all nine final `Add-est` clauses remain open. All 11 public
 theorems and their conditional signatures are explicitly audited, with
@@ -300,7 +302,8 @@ are now proved by the continuation below; the dyadic twelfth-moment
 estimate remains open under EPZAE-19/21.
 No nearby Gafni--Tao assumption was imported. This does
 not close the general-parameter `add-bound (ii)`, `twelfth-bound`, the
-short-zeta transfer, or any final `Add-est` clause. All 21 public theorems
+independent endpoint-two source transfer, or any final `Add-est` clause.
+All 21 public theorems
 in these three modules have named audits and runner coverage, with ten
 semantic regressions. The preserved Lemma 62 counterexample is unchanged.
 
@@ -341,8 +344,9 @@ This green edge is only the exact identity. Its contour-tail constant
 can depend on the fixed cutoff and ordinate. The separate quantitative
 continuation below now proves uniform kernels, localization, and error
 absorption; it does not infer them from fixed-cutoff convergence.
-The dyadic twelfth moment and short-zeta transfer remain separate open
-inputs. No final `Add-est` clause is newly claimed.
+The dyadic twelfth moment remains open. The short-zeta continuation below
+now supplies the short energy range from it. No final `Add-est` clause is
+newly claimed.
 
 All four modules are root-imported and inventoried by
 `run_tao_trudgian_yang_build.bat`. Their 36 public theorems and actual
@@ -398,9 +402,10 @@ energy, or density conclusion. It remains unproved.
 `energyClauseOne_of_dyadic_moment_and_short_zeta` performs the complete
 downstream deduction through the repaired witnesses, Heath--Brown relation,
 and exact optimizations, retaining only this moment and short zeta energy
-on `[1,2)`. Hence no final `Add-est` clause is complete.
+on `[1,2)` in its modular signature. The next continuation discharges
+the latter premise from the former; no final `Add-est` clause is complete.
 
-The six continuation modules contain 38 named public theorem audits plus
+The six continuation modules now contain 39 named public theorem audits plus
 the derivative-test constructor audit. Fourteen regressions check uniform
 derivative mass, complexification, frequency zero, both source height
 endpoints, explicit errors, actual-pattern entry, physical normalization,
@@ -408,3 +413,159 @@ closed exponent windows, uniform LV, and conditional final assembly.
 They are root-imported and covered by `run_tao_trudgian_yang_build.bat`.
 The original counterexample, source archives, and publication contracts
 are unchanged.
+
+## Short-zeta range discharged from the genuine moment (EPZAE-21/37)
+
+The actual `perron_entry_with_scaled_error` retains the same residue and
+far integral, but absorbs the error against `V`. If `T ≥ N^(23/16)`,
+the far integral is at most `120 C_4(1/2) N^(5/8)`, while the residue
+is bounded by `C_4(1) ≤ C_4(1) N^(5/8)`. Thus the entry follows when
+`V ≥ 2 zetaPerronError N^(5/8)`. A single scale threshold derives these
+hypotheses from every `σ ≥ 3/4`, `τ ≥ 3/2`, `δ ≤ 1/16` window.
+`zetaTwelfth_short_largeValueBound_of_dyadic` consumes this entry and
+the existing moment/window/logarithmic chain, including its constants
+and physical exponents. It is conditional only on the genuine moment.
+
+Below `3/2`, `polynomial_norm_le_short_majorant` proves, for the literal
+coefficient-one sharp interval and `1 ≤ t ≤ N²`,
+
+```text
+|polynomial(t)| ≤ 2 + 200 sqrt(t) + 12 pi N/t.
+```
+
+The proof bounds two prefixes and retains the possible left endpoint
+of `[N,2N]`. It consumes the native first-derivative bound when `t ≤ N`
+and the native second-derivative bound when `N ≤ t ≤ N²`, with the exact
+negative phase. For `1 ≤ τ < 3/2`, choose
+`δ=(3/2-τ)/8` and `β=3/4-2δ`. The actual window puts the right side
+below `K N^β`, whereas `V ≥ N^(σ-δ)` exceeds it eventually for `σ ≥ 3/4`.
+`exists_zetaShort_empty_uniform_threshold` derives `W=∅`, rather than
+restricting the definition of a pattern. Its consumers give every real
+cardinality/energy bound and `zetaShort_largeValueExponent_eq_bot`.
+
+On `[3/2,2]`, cubic energy gives the exponent
+`3(2τ-12(σ-1/2))`. `energyClauseOne_short_cubic_bound` proves it is at most
+`energyClauseOnePublicRate σ * τ`, using the exact comparison
+`15-18σ ≤ energyClauseOnePublicRate σ` and closed height endpoints.
+`energyClauseOne_short_zeta_of_dyadic` combines both ranges without a
+short-zeta hypothesis. `energyClauseOne_of_dyadic_moment` then consumes
+the existing corrected-witness, Heath--Brown, general/zeta optimization,
+and endpoint-one transfer chain on the full `3/4 ≤ σ ≤ 5/6` interval.
+
+Semantic completion audit: the two new green architecture edges are
+`exists_zetaPerron_short_uniform_threshold` (actual windows to actual
+pointwise entry) and `exists_zetaShort_empty_uniform_threshold` with
+`zetaShort_largeValueExponent_eq_bot` (actual sharp patterns to genuine
+nonexistence). The short-energy and final-clause nodes stay open because
+their assembled public consumer still requires the dyadic twelfth moment.
+It does not require a cardinality, short-energy, or zero-density conclusion.
+The general endpoint-two source theorem is independently open; the
+clause-(i) deduction uses the proved endpoint-one interface exactly.
+
+The three added modules and the strengthened moment-to-LV module have
+12 new public theorem audits and eight new regressions, with root imports
+and principal-runner coverage. The counterexample is unchanged. The next
+clause-(i) obligation is the actual twelfth moment, not the short-zeta input.
+
+## Zeta nonexistence semantics and the source maximum
+
+`ZetaLargeValueDiscreteness` and `ZetaPointwiseNonexistence` now prove
+`LV_ζ < 0 iff LV_ζ = -∞ iff uniform eventual emptiness iff uniform
+positive-height sharp-interval power saving`. The first step uses actual
+integer cardinalities below one; the infimum-to-candidate step spends only
+epsilon slack. The pointwise forward step builds the exact singleton
+pattern at height `t`. The reverse step pays explicitly for `t ≤ 2T` by
+using a quarter-radius window and a common threshold. No singleton
+counterexample or pattern definition has been changed.
+
+`zetaShort_pointwise_powerSaving` is an unconditional actual-interval
+consumer for `σ ≥ 3/4`, `1 ≤ τ < 3/2`. The maximum-to-double theorem uses
+the same discreteness when the base exponent is negative; at zero it
+does not infer negative infinity. These 13 new public theorems have named
+audits and eight boundary/consumer regressions. They repair the logical
+branch reduction suggested by the online twelfth-moment proof, not its
+still-missing analytic estimate. `energyClauseOne_of_dyadic_moment`
+continues to require the genuine dyadic twelfth moment alone.
+
+### Exact local mean-square entry toward the remaining moment
+
+The six `ZetaSquare*` modules now prove a complete ordinary-divisor
+series identity for the actual local second moment. They derive the
+one-sided reflected contour, whole-line integrability, absolute
+integrated-norm summability, Gamma normalization, compact-height
+continuity, and the second sum--integral exchange.
+`hasSum_zetaSquareLocalMean` has no moment or local mean-square premise.
+It is not the sharp Atkinson inequality. Averaging is proved in the next
+continuations, including the actual unit phase and uniform amplitude/source
+remainder. Divisor shortening, oscillatory reduction, sharp Atkinson
+remainders, and the dyadic twelfth moment remain open.
+Thus `energyClauseOne_of_dyadic_moment` is still conditional.
+
+The original singleton counterexample is unchanged. Nothing in this
+entry modifies the repaired two witnesses or introduces an `s/k`
+constraint. The goal and architecture retain the full route through
+the moment to the unchanged nine `Add-est` clauses. All six modules,
+47 named public theorem audits, and nine regressions are covered by
+the root imports and maintained `run_tao_trudgian_yang_build.bat`.
+
+### Uniform averaging continuation
+
+Three further modules prove the actual Gaussian averaging step,
+weighted divisor-series interchange, and whole-line source approximation
+with a uniform `G T^(-A)` logarithmic-window tail. The width Jacobian
+and common threshold are explicit. The quadratic Gaussian transform
+also has a proved exact formula and physical frequency damping for
+`G²≤2T`. These are 31 named public theorem audits and nine regressions,
+all covered by the root imports and principal batch runner.
+
+The unit-phase approximation and its uniform integrated error are now
+proved below, followed by the uniform shifted-Gamma/pole approximation
+and complete reflected-source remainder. Divisor shortening,
+Voronoi/stationary reduction and the dyadic twelfth moment remain open.
+Hence the repaired-witness/Heath--Brown/optimization
+assembly of clause (i) is
+still conditional on the same genuine moment; no final clause is
+marked complete. The counterexample and unrestricted fifth coordinates
+are unchanged.
+
+### Actual phase continuation
+
+The next four modules prove the actual digamma logarithmic estimate and
+the reflected quotient `GammaR(1/2-it)/GammaR(1/2+it)`, including its
+zeta functional-equation identity and exact source normalization. They
+derive its real-frequency differential equation and closed-window
+quadratic approximation. The whole-line Gaussian transform consumer
+pays the finite integrated error and both omitted tails, then uses
+the proved quadratic frequency damping. There are now 26 named public
+audits and 12 regressions, all in the principal batch-runner inventory.
+
+The shifted-Gamma amplitude in the source factorization is not set to
+one or assumed controlled: the continuation below proves its uniform
+estimate and consumes it in the complete reflected divisor series.
+Divisor truncation, Voronoi/stationary reduction and the actual twelfth
+moment remain open.
+The repaired powering and Heath--Brown theorems are unchanged, and
+`energyClauseOne_of_dyadic_moment` remains conditional. The original
+counterexample remains byte-for-byte unchanged and audited.
+
+### Uniform amplitude and complete reflected-series continuation
+
+Seven further modules prove the actual shifted Gamma ratio and pole
+amplitude, then combine near and far bounds into one height-independent
+integrable majorant for the complete normalized kernel. The far estimate
+uses the actual inverse Gamma normalization, not a fixed-height constant.
+`hasSum_zetaSquareLeadingDivisorContribution` proves the complete leading
+ordinary-divisor series. `exists_norm_zetaSquareDivisorIntegral_sub_leading_le`
+consumes it and the original source integral to prove one uniform `O(1)`
+remainder for all `t≥4`, with no moment hypothesis.
+
+This adds 44 public audits, one newly public Gamma derivative audit,
+and 14 boundary/source regressions, all in root imports and the inventory
+behind `run_tao_trudgian_yang_build.bat`. That batch runner and the
+foundation runner must continue to be updated and rerun with this chain.
+Leading divisor weight bounds/height variation, shortening, Gaussian
+assembly, Voronoi/stationary phase and the genuine dyadic twelfth moment
+remain open. Thus clause (i) remains conditional; all final `Add-est`
+clauses and the full EPZAE-00--41 goal are unchanged and incomplete.
+The original counterexample and both independent fifth coordinates remain
+preserved; this analytic continuation does not alter the repaired powering.

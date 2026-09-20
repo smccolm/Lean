@@ -197,11 +197,206 @@ and derives those hypotheses uniformly from the actual source windows
 `ZetaTwelfthFromMoment` proves
 `IsZetaLargeValueBound σ τ (2τ-12(σ-1/2))` from the explicitly quantified
 dyadic critical-line twelfth moment alone, then composes the repaired
-energy chain through clause (i), retaining the moment and short-zeta
-inputs. These six modules have 38 named public theorem audits, an explicit
+energy chain through its preserved modular clause-(i) consumer. These six
+modules now have 39 named public theorem audits, an explicit
 derivative-test constructor audit, and 14 semantic regressions, with root
-and principal-runner coverage. The moment itself, short-zeta transfer,
-other source moment parameters, and all final `Add-est` clauses remain open.
+and principal-runner coverage.
+
+`ZetaShortPerron` proves entry when `T ≥ N^(23/16)` and
+`V ≥ 2 zetaPerronError N^(5/8)`, deriving these conditions from uniform
+`σ ≥ 3/4`, `τ ≥ 3/2`, `δ ≤ 1/16` windows. The new short-height LV
+consumer in `ZetaTwelfthFromMoment` uses this actual entry.
+`ZetaShortPatterns` proves sharp-interval cancellation including the left
+endpoint, actual eventual emptiness for `1 ≤ τ < 3/2`, and `LV_ζ = -∞`.
+`EnergyClauseOneFromMoment` combines these facts with cubic energy and
+the exact public-rate comparison, supplying all `[1,2]` short zeta energy
+from the moment and assembling `energyClauseOne_of_dyadic_moment`.
+The three added modules contain 11 public theorems; together with the
+new short-height LV theorem there are 12 new named audits and eight new
+semantic regressions. The genuine moment, independent endpoint-two
+source theorem, other moment parameters, and final `Add-est` outputs
+remain open. No short-zeta estimate is assumed by the new assembly.
+
+`ZetaLargeValueDiscreteness` proves the exact infimum-to-uniform-bound
+equivalence and collapse of negative cardinality exponents to negative
+infinity. `ZetaPointwiseNonexistence` proves both directions between that
+condition and uniform strict cancellation on literal sharp intervals at
+positive heights. It constructs actual singleton patterns and absorbs the
+factor two in the reverse height window. The new
+`zetaShort_pointwise_powerSaving` is an unconditional consumer of the
+existing short-range cancellation. These additions have 13 named public
+theorem audits and eight regressions, with both modules root-imported and
+principal-runner-inventoried. The analytic maximum estimate and twelfth
+moment remain unproved.
+
+`ZetaSquareContour` and `ZetaSquareContourShift` adapt the adjacent
+one-sided squared-zeta contour argument directly to the canonical native
+foundation, without importing the separate Gafni--Tao package.
+`ZetaSquareDivisorKernel` proves a Gaussian majorant with one constant for
+both height variables. `ZetaSquareDivisorSeries` proves integrability of
+every term and summability of their integrated norms before opening the
+complete ordinary-divisor series. `ZetaSquareSourceEntry` removes the
+Gamma factors and gives a convergent series for `|ζ(1/2+it)|²`, including
+height zero. `ZetaSquareLocalMean` derives compact-height domination,
+continuity, and the termwise local-integral identity
+`hasSum_zetaSquareLocalMean`. These six modules have 47 named theorem
+audits and nine new regressions. The exact local identity is proved;
+the sharp Atkinson estimate with uniform source-scale errors is not.
+No twelfth-moment hypothesis was added to this source-entry chain.
+
+`ZetaSquareAveraging` extends the convergent series to continuous real
+weights, then uses the literal `exp(-((t-T)/G)²)` Gaussian. Its local
+majorization constant is `exp(1)`, independent of `T,G,L`.
+`ZetaSquareGaussianTail` constructs a global linear bound on the actual
+critical zeta norm, proves whole-line integrability, and carries the
+Jacobian `G` through centering. The tail is at most
+`C G(1+|T|+G)² exp(-L²/2)` for all `G>0,L≥0`, with one fixed `C`.
+At `L=log T`, `0<G≤T`, it is at most `G T^(-A)` past one threshold.
+`exists_zetaSquareGaussian_source_approximation` consumes the actual
+weighted divisor series and this tail in one theorem.
+
+`ZetaSquareGaussianTransform` proves the exact transform for coefficient
+`G^(-2)+i/(2T)` and the bound
+`sqrt(pi) G exp(-(Gv)²/8)` for `T,G>0`, `G²≤2T`. It is a theorem about
+that literal kernel, not a supplied approximation to the Gamma factors.
+The actual phase and its integrated error are proved in the continuation
+below, followed by the uniform amplitude/source remainder. The later
+shortened-sum and Atkinson estimates remain open. The three averaging modules have 31 named
+public theorem audits and nine regressions, with root/runner coverage.
+
+### Actual Gamma-phase continuation
+
+`ZetaDigammaLog` proves the right-half-plane estimate
+`‖digamma z-log z‖ ≤ 4/|Im z|` for `|Im z|≥1` from the pinned reciprocal
+series and a unit-interval logarithmic comparison. There is no assumed
+Stirling formula. `ZetaSquareGammaPhase` constructs
+`phi(t)=GammaR(1/2-it)/GammaR(1/2+it)`, proves `|phi|=1`, the actual
+zeta functional equation, and the exact factorization of the source's
+Gamma normalization. Its derivative is `i d(t) phi(t)`, where
+`d(t)=log(pi)-Re digamma(1/4+it/2)` and
+`|d(t)+log(t/(2pi))|≤9/t` for `t≥2`.
+
+`ZetaSquareGammaQuadratic` gives the actual phase replacement on
+`|x|≤r≤T/2`, `T≥4`, with error `(18/T+2r²/T²)|x|`. Its integrated
+consumer pays `2r²(18/T+2r²/T²)` and identifies the exact quadratic
+coefficient and frequency `v-log(T/(2pi))`.
+`ZetaSquareGammaTransform` adds both physical Gaussian tails, giving
+total error `2r²(18/T+2r²/T²)+2sqrt(2pi)G exp(-(r/G)²/2)` for `G>0`.
+The final consumer actually uses the prior quadratic frequency bound.
+
+These are now 26 named public theorem audits and 12 phase regressions
+in four root-imported, runner-inventoried modules. The additional named
+audit is the exact Gamma derivative reused by the amplitude proof below.
+Weighted divisor truncation, Voronoi/stationary phase, Atkinson errors,
+and the actual twelfth moment are not claimed proved.
+
+
+### Uniform shifted amplitude and complete reflected source
+
+Preserve the seven modules `ZetaGammaShiftLog`, `ZetaGammaShiftAmplitude`,
+`ZetaSquarePoleShift`, `ZetaSquareNearKernel`, `ZetaSquareGammaInverse`,
+`ZetaSquareKernelApproximation`, and `ZetaSquareLeadingDivisor`.
+They add 44 public theorem audits; the promoted actual Gamma derivative
+`hasDerivAt_gammaReal` adds one further named audit. Fourteen new
+regressions retain zero shift/height/coefficient, both contour signs,
+closed shift and central-contour boundaries, and the uniform source consumer.
+
+For `t≥4`, `Re w≥0`, `‖w‖≤t/2`, put
+`ell(t)=log(t/(2pi))-i*pi/2` and `B=(17‖w‖+2‖w‖²)/t`.
+The literal squared Gamma ratio, normalized by `exp(-w ell)`,
+differs from one by at most `B exp(B)`. This follows from the actual
+digamma series, principal-branch path geometry, the exact derivative,
+and Gronwall. The actual squared pole factor is bounded by 9 and
+differs from one by at most `12‖w‖/t`.
+
+`exists_norm_zetaSquareRightKernel_sub_leading_le` combines the near
+estimate with the far inverse-Gamma/reflection estimate. One constant,
+independent of `t≥4`, bounds the complete normalized reflected kernel
+error by `C exp(-90u²)(1+|u|)^12`. The majorant is integrable.
+`hasSum_zetaSquareLeadingDivisorContribution` proves convergence of
+the full leading ordinary-divisor series.
+`exists_norm_zetaSquareDivisorIntegral_sub_leading_le` consumes that
+series and the actual source integral to give one uniform `O(1)`
+remainder, with no analytic theorem premise.
+
+This closes the amplitude/complete reflected-series remainder. The
+following continuation proves actual weight control, height variation,
+freezing and the local Gaussian-window comparison with a complete
+quadratic divisor sum. Shortening, Voronoi/stationary phase, sharp
+Atkinson errors, scale/spacing assembly and the genuine dyadic twelfth
+moment remain open. Do not substitute a full-series absolute bound
+for the needed oscillatory estimate. EPZAE-21/37 and final outputs stay open.
+
+Keep all seven modules, all 45 newly named audits and the regressions
+in root imports and in the inventory behind
+`run_tao_trudgian_yang_build.bat`. Update and rerun that exact batch
+entry point and the foundation runner whenever this chain changes.
+The original counterexample, independent corrected fifth coordinates,
+proved powering/Heath--Brown results, source pins, and full
+EPZAE-00--41 goal remain unchanged.
+
+### Actual divisor weights, freezing and Gaussian source assembly
+
+Nine further modules are preserved: `ZetaDivisorWeightKernel`,
+`ZetaDivisorWeightReflection`, `ZetaDivisorWeightSource`,
+`ZetaDivisorWeightVariation`, `ZetaDivisorWeightMass`,
+`ZetaDivisorWeightFreezing`, `ZetaFrozenDivisorGaussian`,
+`ZetaSquareRealSource`, and `ZetaSquareFrozenWindow`.
+They add 78 named public theorem audits and 20 semantic regressions.
+
+The actual Mellin weight `W(q)` satisfies `W(q)+W(-q)=1` and
+`W(0)=1/2`, proved by its contour residue and integrable tails.
+On each fixed imaginary strip, `‖W(q)‖≤C min(1,exp(-Re q))`.
+The actual divisor argument is
+`q(T,n)=log n-log(T/(2pi))+i*pi/2`, not a real cutoff.
+For `T>0`, `n>0` and `|x|≤T/2`, its weight variation is at most
+`C (|x|/T) min(T/(2pi n),2pi n/T)`.
+The coefficient mass is `Oε(T^(1/2+ε))`, uniformly in the
+oscillatory height; it is derived from the convergent divisor L-series,
+not a postulated pointwise divisor estimate.
+
+`exists_norm_zetaSquareLeadingDivisor_sub_frozen_le` freezes only
+this weight, with error `Cε |x| T^(-1/2+ε)` on `T≥8`, `|x|≤T/2`.
+The phase and Dirichlet oscillation remain at `T+x`.
+`zetaSquareNorm_eq_reflected_source` proves the conjugate pairing
+and the factor two for the actual real zeta square, including height zero.
+`exists_abs_zetaSquareNorm_sub_frozen_le` consumes the actual
+normalized contour remainder and this pairing.
+
+`hasSum_zetaFrozenDivisorGaussianMean` proves the complete Gaussian
+series exchange after absolute integrated-norm summability.
+Write `M(T)=Σ_n ‖zetaFrozenDivisorCoefficient T n‖`, and let `Q(T,G)`
+be the defined convergent quadratic divisor sum, retaining its exact
+complex weight and actual central phase. The public consumer
+`exists_abs_zetaSquareGaussianWindow_sub_quadratic_le` proves
+for `T≥8`, `G>0`, `G²≤2T`, `0≤r≤T/2`:
+
+```text
+| actual Gaussian zeta window on T±r - 2 Re Q(T,G) |
+ ≤ Cε r (1 + r T^(-1/2+ε))
+   + M(T) [4r²(18/T+2r²/T²) + 6sqrt(2pi)G exp(-(r/G)²/2)].
+```
+
+This theorem consumes the real zeta source, frozen weights, actual
+Gamma-phase transform, and both Gaussian tails. It has no analytic
+theorem premise. It is a complete-series comparison, not the shortened
+Ivić/Atkinson sum or the genuine twelfth moment.
+
+Continue by combining the proved whole-line zeta tail with this window
+comparison, choosing the source's logarithmic window uniformly, and
+shortening the actual quadratic divisor series using its frequency
+damping. Then prove the required Voronoi/stationary-phase reduction,
+Atkinson inequality and dyadic moment, and discharge the remaining
+`energyClauseOne_of_dyadic_moment` input. All nine unconditional
+`Add-est` clauses and other public outputs remain required by the full
+EPZAE-00--41 goal; this continuation does not narrow that goal.
+
+Keep all nine modules in root imports, all 78 public audits and all
+20 regressions in the inventory behind `run_tao_trudgian_yang_build.bat`.
+Update that exact batch interface's backing inventory whenever the chain
+changes, and rerun it and `run_lake_build.bat`; do not bypass their gates.
+The original Lemma 62 counterexample, corrected independent fifth
+coordinates, powering/Heath--Brown proofs and pinned sources are unchanged.
 
 ## Verification
 

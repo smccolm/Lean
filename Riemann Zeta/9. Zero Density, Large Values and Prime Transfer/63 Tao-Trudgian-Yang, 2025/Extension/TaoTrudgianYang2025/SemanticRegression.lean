@@ -1029,7 +1029,7 @@ example
   norm_num [energyClauseOneZetaRate] at h
   exact h
 
--- End-to-end clause (i) still exposes the moment and short-zeta obligations.
+-- The preserved modular interface exposes both inputs; the later consumer derives short zeta.
 example
     (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
       ∀ H : ℝ, T₀ ≤ H → 0 < H →
@@ -1039,3 +1039,429 @@ example
       IsZetaLargeValueEnergyBound σ τ (energyClauseOnePublicRate σ * τ)) :
     IsZeroDensityEnergyBound σ (energyClauseOnePublicRate σ / (1 - σ)) :=
   energyClauseOne_of_dyadic_moment_and_short_zeta hDyadic hlo hhi hShort
+
+-- Threshold-relative absorption keeps the actual error scale visible.
+example (P : ZetaLargeValuePattern) (hscale : P.N ^ (23 / 16 : ℝ) ≤ P.T)
+    (hvalue : 2 * zetaPerronError * P.N ^ (5 / 8 : ℝ) ≤ P.V)
+    {t : ℝ} (ht : t ∈ P.ordinates) :
+    P.V ≤ zetaPerronConstant * Real.sqrt P.N * zetaMomentConvolution P.T t :=
+  P.perron_entry_with_scaled_error hscale hvalue ht
+
+-- Closed sigma=3/4, tau=3/2, delta=1/16 windows have a common threshold.
+example : ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+    P.N ^ (23 / 16 : ℝ) ≤ P.T → P.N ^ (11 / 16 : ℝ) ≤ P.V →
+      ∀ t ∈ P.ordinates,
+        P.V ≤ zetaPerronConstant * Real.sqrt P.N * zetaMomentConvolution P.T t := by
+  obtain ⟨N₀, hN₀, h⟩ := exists_zetaPerron_short_uniform_threshold
+  refine ⟨N₀, hN₀, ?_⟩
+  intro P hN hT hV
+  have hentry := h P hN (3 / 4) (3 / 2) (1 / 16) le_rfl le_rfl le_rfl
+  norm_num at hentry
+  exact hentry hT hV
+
+-- The transition between first- and second-derivative ranges is included.
+example (P : ZetaLargeValuePattern) :
+    ‖∑ n ∈ P.indices, P.coeff n * dirichletPhase n P.N‖ ≤
+      2 + 200 * Real.sqrt P.N + 12 * Real.pi := by
+  have h := P.polynomial_norm_le_short_majorant P.one_lt_N.le
+    (show P.N ≤ P.N ^ 2 by nlinarith [P.one_lt_N])
+  simpa only [mul_div_cancel_right₀ _ (zero_lt_one.trans P.one_lt_N).ne'] using h
+
+-- Genuine cancellation gives minus infinity at the closed lower source height.
+example : zetaLargeValueExponent (3 / 4) 1 = ⊥ :=
+  zetaShort_largeValueExponent_eq_bot le_rfl le_rfl (by norm_num)
+
+-- The short-height twelfth-moment bridge includes its boundary exponent zero.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η)) :
+    IsZetaLargeValueBound (3 / 4) (3 / 2) 0 := by
+  convert zetaTwelfth_short_largeValueBound_of_dyadic hDyadic
+    (σ := 3 / 4) (τ := 3 / 2) le_rfl le_rfl using 1
+  norm_num
+
+example : energyClauseOnePublicRate (3 / 4) * 2 = 3 := by
+  norm_num [energyClauseOnePublicRate]
+
+-- No separate short-zeta premise remains, including the upper sigma endpoint.
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η)) :
+    IsZeroDensityEnergyBound (5 / 6) (36 / 7) := by
+  convert energyClauseOne_of_dyadic_moment hDyadic
+    (σ := 5 / 6) (by norm_num) le_rfl using 1
+  norm_num [energyClauseOnePublicRate]
+
+example
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2 * H, zetaMomentCriticalNorm u ^ 12) ≤ C * H ^ (2 + η))
+    {σ : ℝ} (hlo : 3 / 4 ≤ σ) (hhi : σ ≤ 5 / 6) :
+    IsZeroDensityEnergyBound σ (energyClauseOnePublicRate σ / (1 - σ)) :=
+  energyClauseOne_of_dyadic_moment hDyadic hlo hhi
+
+-- Infimum semantics recover the exact uniform statement, including exponent zero.
+example (σ τ : ℝ) :
+    zetaLargeValueExponent σ τ ≤ 0 ↔ IsZetaLargeValueBound σ τ 0 :=
+  zetaLargeValueExponent_le_iff
+
+-- Negative rates collapse through actual finite cardinalities, for every target rate.
+example {σ τ : ℝ} (h : IsZetaLargeValueBound σ τ (-1 / 10)) :
+    IsZetaLargeValueBound σ τ (-100) :=
+  h.any_of_neg (by norm_num) (-100)
+
+example (σ τ : ℝ) :
+    zetaLargeValueExponent σ τ = ⊥ ↔ zetaLargeValueExponent σ τ < 0 :=
+  zetaLargeValueExponent_eq_bot_iff_neg σ τ
+
+-- Negative branch: the maximum is -1, but discreteness gives the stronger -2.
+example {σ τ : ℝ} (h : zetaLargeValueExponent σ τ ≤ (-1 : ℝ)) :
+    zetaLargeValueExponent σ τ ≤ (-2 : ℝ) := by
+  have hm : zetaLargeValueExponent σ τ ≤ ((max (-1) (2 * (-1)) : ℝ) : EReal) := by
+    norm_num
+    exact h
+  simpa using zetaLargeValueExponent_le_double_of_le_max hm
+
+-- The same numerical implication would be false for unrestricted real numbers.
+example : ¬ ((-1 : ℝ) ≤ 2 * (-1)) := by norm_num
+
+-- Zero is not treated as negative infinity at the maximum's branch boundary.
+example : (0 : EReal) ≤ ((max (0 : ℝ) (2 * 0) : ℝ) : EReal) ∧ (0 : EReal) ≠ ⊥ := by
+  norm_num
+
+example {σ τ : ℝ} (h : zetaLargeValueExponent σ τ ≤ (2 : ℝ)) :
+    zetaLargeValueExponent σ τ ≤ ((2 * (1 : ℝ) : ℝ) : EReal) := by
+  apply zetaLargeValueExponent_le_double_of_le_max
+  simpa using h
+
+-- Unconditional actual sharp-interval consumer at the closed short-height endpoint.
+example : ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ (N : ℕ) (I : Finset ℕ) (t : ℝ),
+    C ≤ (N : ℝ) → IsIntegerInterval I → I ⊆ Finset.Icc N (2 * N) →
+    (N : ℝ) ^ (1 - δ) ≤ t → t ≤ (N : ℝ) ^ (1 + δ) →
+    ‖∑ n ∈ I, dirichletPhase n t‖ < (N : ℝ) ^ (3 / 4 - δ) :=
+  zetaShort_pointwise_powerSaving le_rfl le_rfl (by norm_num)
+
+-- The one-sided square remains nonsingular at central height zero.
+example : zetaSquarePoleNormalization 0 = (1 / 16 : ℂ) := by
+  norm_num [zetaSquarePoleNormalization_eq]
+
+example (t : ℝ) : zetaSquareGammaNormalization (-t) = zetaSquareGammaNormalization t :=
+  zetaSquareGammaNormalization_neg t
+
+-- Actual ordinary-divisor coefficients, including the empty zero term.
+example (t u : ℝ) : zetaSquareDivisorTerm t 0 u = 0 := by
+  simp [zetaSquareDivisorTerm, divisorDirichletTerm, LSeries.term]
+
+example (t u : ℝ) : zetaSquareDivisorTerm t 1 u = zetaSquareRightKernel t u := by
+  simp [zetaSquareDivisorTerm, divisorDirichletTerm, LSeries.term]
+
+-- One Gaussian constant works for all central and contour heights.
+example : ∃ C : ℝ, 0 < C ∧ ∀ t u : ℝ,
+    ‖zetaSquareRightKernel t u‖ ≤
+      C * Real.exp (100 - 100 * u ^ 2) * (3 + |t| + |u|) ^ 12 :=
+  exists_zetaSquareRightKernel_uniform_gaussian_bound
+
+example (t : ℝ) :
+    Summable (fun n : ℕ => ∫ u : ℝ, ‖zetaSquareDivisorTerm t n u‖) :=
+  summable_integral_norm_zetaSquareDivisorTerm t
+
+-- Source entry has no analytic input or positive-height exclusion.
+example : HasSum (zetaSquareNormalizedContribution 0)
+    ((zetaMomentCriticalNorm 0 ^ 2 : ℝ) : ℂ) :=
+  hasSum_zetaSquareNormalizedContribution 0
+
+-- The local second-moment identity uses actual zeta, with a convergent series.
+example {T G : ℝ} (hG : 0 ≤ G) :
+    HasSum (fun n : ℕ => ∫ t in T - G..T + G, zetaSquareNormalizedContribution t n)
+      ((∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2 : ℝ) : ℂ) :=
+  hasSum_zetaSquareLocalMean (by linarith)
+
+example (T : ℝ) :
+    (∫ t in T..T, zetaMomentCriticalNorm t ^ 2) =
+      (∑' n : ℕ, ∫ t in T..T, zetaSquareNormalizedContribution t n).re :=
+  zetaSquareLocalMean_eq_divisor_series le_rfl
+
+-- The physical Gaussian is centered at T, without an unintended 1/G factor.
+example (T G : ℝ) : zetaGaussianWeight T G T = 1 := by simp [zetaGaussianWeight]
+
+example (T : ℝ) {G : ℝ} (hG : 0 < G) :
+    1 ≤ Real.exp 1 * zetaGaussianWeight T G (T + G) :=
+  zetaGaussianWeight_local_lower hG ⟨by linarith, le_rfl⟩
+
+-- Weighted convergence is not restricted to positive test functions.
+example {a b : ℝ} (hab : a ≤ b) :
+    HasSum (fun n : ℕ => ∫ t in a..b, ((-1 : ℝ) : ℂ) * zetaSquareNormalizedContribution t n)
+      ((∫ t in a..b, (-1 : ℝ) * zetaMomentCriticalNorm t ^ 2 : ℝ) : ℂ) :=
+  hasSum_zetaSquareWeightedLocalMean _ continuous_const hab
+
+example {T G : ℝ} (hG : 0 < G) :
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      Real.exp 1 * zetaSquareGaussianWindow T G 1 :=
+  zetaSquareLocalMean_le_gaussian_window hG le_rfl
+
+example (T : ℝ) {G : ℝ} (hG : 0 < G) :
+    zetaSquareGaussianMean T G =
+      ∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2 :=
+  zetaSquareGaussianMean_eq_physical T hG
+
+-- The same threshold works for all positive widths up to T.
+example : ∃ T₀ : ℝ, 1 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T → 0 < G → G ≤ T →
+    0 ≤ zetaSquareGaussianMean T G - zetaSquareGaussianWindow T G (Real.log T) ∧
+    zetaSquareGaussianMean T G - zetaSquareGaussianWindow T G (Real.log T) ≤ G * T ^ (-10 : ℝ) :=
+  exists_zetaSquareGaussian_log_tail_bound 10
+
+-- Quadratic transform includes zero frequency and the closed G^2=2T boundary.
+example : ‖zetaGaussianQuadraticIntegral 2 2 0‖ ≤ Real.sqrt Real.pi * 2 := by
+  simpa using norm_zetaGaussianQuadraticIntegral_le
+    (T := 2) (G := 2) (by norm_num) (by norm_num) (by norm_num) 0
+
+example : ‖zetaGaussianQuadraticIntegral 2 2 (-1)‖ ≤
+    Real.sqrt Real.pi * 2 * Real.exp (-(2 : ℝ) ^ 2 / 8) :=
+  norm_zetaGaussianQuadraticIntegral_tail (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+-- The negative quadratic phase retains the actual T-dependent imaginary part.
+example : (zetaGaussianQuadraticCoefficient 2 2).im = 1 / 4 := by
+  rw [zetaGaussianQuadraticCoefficient_im]
+  norm_num
+
+-- The actual digamma estimate includes both closed height boundaries.
+section GammaPhaseRegression
+
+open Complex MeasureTheory
+
+example : ‖Complex.digamma (1 + I) - Complex.log (1 + I)‖ ≤ 4 := by
+  simpa using norm_digamma_sub_log_le (z := 1 + I) (by norm_num) (by norm_num)
+
+example : ‖Complex.digamma (1 - I) - Complex.log (1 - I)‖ ≤ 4 := by
+  simpa using norm_digamma_sub_log_le (z := 1 - I) (by norm_num) (by norm_num)
+
+example {z : ℂ} (hz : 0 < z.re) (hy : 1 ≤ |z.im|) :
+    ‖(∑ n ∈ Finset.range 0, (z + n)⁻¹) -
+      (Complex.log (z + (0 : ℕ)) - Complex.log z)‖ ≤ 4 / |z.im| :=
+  norm_sum_reciprocal_sub_log_le hz hy 0
+
+example : zetaSquareReflectedGammaPhase 0 = 1 := zetaSquareReflectedGammaPhase_zero
+
+-- Genuine functional-equation source, not an independent unit-phase parameter.
+example (t : ℝ) : zetaSquareReflectedGammaPhase t *
+    riemannZeta (afeCriticalPoint (-t)) = riemannZeta (afeCriticalPoint t) :=
+  zetaSquareReflectedGammaPhase_mul_zeta t
+
+example : |zetaSquareGammaFrequency 2 + Real.log (2 / (2 * Real.pi))| ≤ 9 / 2 :=
+  abs_zetaSquareGammaFrequency_add_log_le le_rfl
+
+-- The negative endpoint is included at the smallest permitted central height.
+example : ‖zetaSquareReflectedGammaPhase (4 + (-2 : ℝ)) -
+    zetaSquareReflectedGammaPhase 4 * Complex.exp (-I * (zetaSquareGammaQuadraticAngle 4 (-2) : ℂ))‖ ≤
+    (18 / 4 + 2 * (2 : ℝ) ^ 2 / 4 ^ 2) * |(-2 : ℝ)| :=
+  norm_zetaSquareReflectedGammaPhase_sub_quadratic_le
+    (r := 2) (by norm_num) (by norm_num) (by norm_num)
+
+example : ‖zetaSquareReflectedGammaPhase (4 + (2 : ℝ)) -
+    zetaSquareReflectedGammaPhase 4 * Complex.exp (-I * (zetaSquareGammaQuadraticAngle 4 2 : ℂ))‖ ≤
+    (18 / 4 + 2 * (2 : ℝ) ^ 2 / 4 ^ 2) * |(2 : ℝ)| :=
+  norm_zetaSquareReflectedGammaPhase_sub_quadratic_le
+    (r := 2) (by norm_num) (by norm_num) (by norm_num)
+
+example (T G v : ℝ) :
+    Complex.exp (-I * (zetaSquareGammaQuadraticAngle T 0 : ℂ)) *
+      Complex.exp (I * (v : ℂ) * (0 : ℂ)) * ((Real.exp (-(0 / G) ^ 2) : ℝ) : ℂ) =
+      Complex.exp (I * ((v - Real.log (T / (2 * Real.pi)) : ℝ) : ℂ) * (0 : ℂ)) *
+        Complex.exp (-zetaGaussianQuadraticCoefficient T G * (0 : ℂ) ^ 2) :=
+  zetaSquareGammaQuadratic_gaussian_identity T G v 0
+
+example : Integrable (zetaSquareGammaGaussianIntegrand 4 2 (-1)) :=
+  integrable_zetaSquareGammaGaussianIntegrand 4 (-1) (by norm_num)
+
+-- Tail bound includes radius zero and retains the physical width.
+example {G : ℝ} (hG : 0 < G) :
+    (∫ x in (Set.Ioc (0 : ℝ) 0)ᶜ, Real.exp (-(x / G) ^ 2)) ≤ Real.sqrt (2 * Real.pi) * G := by
+  simpa using physical_gaussian_tail_le (r := 0) hG le_rfl
+
+-- The complete true-phase transform consumes quadratic damping, not just its formula.
+example : ‖zetaSquareGammaGaussianTransform 4 2 (-1)‖ ≤
+    Real.sqrt Real.pi * 2 * Real.exp (-(2 * ((-1 : ℝ) - Real.log (4 / (2 * Real.pi)))) ^ 2 / 8) +
+    2 * (2 : ℝ) ^ 2 * (18 / 4 + 2 * 2 ^ 2 / 4 ^ 2) +
+      2 * Real.sqrt (2 * Real.pi) * 2 * Real.exp (-(2 / 2 : ℝ) ^ 2 / 2) :=
+  norm_zetaSquareGammaGaussianTransform_le (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (-1)
+
+end GammaPhaseRegression
+
+section GammaAmplitudeRegression
+
+open Complex MeasureTheory
+
+example (t : ℝ) (w : ℂ) : zetaGammaShiftAmplitude t w 0 = 1 :=
+  zetaGammaShiftAmplitude_zero t w
+
+example : Complex.log (-(2 : ℂ) * I) = zetaGammaLeadingLog 4 + Complex.log (Real.pi : ℂ) := by
+  convert log_negative_height_eq (t := 4) (by norm_num) using 1
+  norm_num
+
+-- The closed shift boundary and the path endpoint are both included.
+example : ‖Complex.digamma (zetaGammaHalfShift 4 (2 * I) 1) -
+    (zetaGammaLeadingLog 4 + Complex.log (Real.pi : ℂ))‖ ≤ 21 / 4 := by
+  convert norm_zetaGammaHalfShift_digamma_sub_le (t := 4) (w := 2 * I)
+    (v := 1) (by norm_num) (by norm_num) (by norm_num) (by constructor <;> norm_num)
+    using 1
+  norm_num
+
+example : ‖Complex.digamma (zetaGammaHalfShift 4 (-2 * I) 1) -
+    (zetaGammaLeadingLog 4 + Complex.log (Real.pi : ℂ))‖ ≤ 21 / 4 := by
+  convert norm_zetaGammaHalfShift_digamma_sub_le (t := 4) (w := -2 * I)
+    (v := 1) (by norm_num) (by norm_num) (by norm_num) (by constructor <;> norm_num)
+    using 1
+  norm_num
+
+-- The signed contour growth is not replaced by a symmetric phase.
+example (t : ℝ) : ((1 + I) * zetaGammaLeadingLog t).re =
+    Real.log (t / (2 * Real.pi)) + Real.pi / 2 := by
+  simpa using zetaGammaLeadingLog_mul_re t (1 + I)
+
+example (t : ℝ) : ((1 - I) * zetaGammaLeadingLog t).re =
+    Real.log (t / (2 * Real.pi)) - Real.pi / 2 := by
+  simpa [sub_eq_add_neg] using zetaGammaLeadingLog_mul_re t (1 - I)
+
+example (t : ℝ) : zetaSquarePoleShift t 0 = 1 := by
+  have hne : afeCriticalPoint (-t) * (1 - afeCriticalPoint (-t)) ≠ 0 := by
+    rw [criticalPoint_pole_product]
+    exact Complex.ofReal_ne_zero.mpr (ne_of_gt (by positivity))
+  simp only [zetaSquarePoleShift, add_zero, div_self hne, one_pow]
+
+example : ‖zetaSquareRightKernel (-4) 1 / zetaSquareGammaNormalization 4 -
+    zetaSquareLeadingRightKernel 4 1‖ ≤
+    114375 * Real.exp 120 * Real.exp (-90 * (1 : ℝ) ^ 2) * (1 + |(1 : ℝ)|) ^ 10 :=
+  norm_zetaSquareRightKernel_sub_leading_near_le (by norm_num) (by norm_num)
+
+example : ‖zetaSquareRightKernel (-4) (-1) / zetaSquareGammaNormalization 4 -
+    zetaSquareLeadingRightKernel 4 (-1)‖ ≤
+    114375 * Real.exp 120 * Real.exp (-90 * (-1 : ℝ) ^ 2) * (1 + |(-1 : ℝ)|) ^ 10 :=
+  norm_zetaSquareRightKernel_sub_leading_near_le (by norm_num) (by norm_num)
+
+-- The inverse bound covers height zero as well as arbitrarily large heights.
+example : ∃ C : ℝ, 0 < C ∧ ‖(zetaSquareGammaNormalization 0)⁻¹‖ ≤ C := by
+  obtain ⟨C, hC, hbound⟩ := exists_norm_inv_zetaSquareGammaNormalization_le
+  exact ⟨C, hC, by simpa using hbound 0⟩
+
+example : Integrable (zetaSquareLeadingRightKernel 4) :=
+  integrable_zetaSquareLeadingRightKernel le_rfl
+
+example : HasSum (zetaSquareLeadingDivisorContribution 4) (zetaSquareLeadingDivisorIntegral 4) :=
+  hasSum_zetaSquareLeadingDivisorContribution le_rfl
+
+example (t u : ℝ) : ‖zetaSquareLeadingDivisorTerm t 0 u‖ = 0 := by
+  rw [norm_zetaSquareLeadingDivisorTerm]
+  simp [divisorDirichletTerm, LSeries.term]
+
+-- One source remainder constant, not a separately chosen constant for each height.
+example : ∃ C : ℝ, 0 < C ∧ ∀ t : ℝ, 4 ≤ t →
+    ‖zetaSquareDivisorIntegral (-t) / zetaSquareGammaNormalization t -
+      zetaSquareLeadingDivisorIntegral t‖ ≤ C :=
+  exists_norm_zetaSquareDivisorIntegral_sub_leading_le
+
+end GammaAmplitudeRegression
+
+section DivisorWeightRegression
+
+open Complex MeasureTheory
+open scoped ComplexConjugate
+
+example : zetaDivisorWeight 0 = 1 / 2 := zetaDivisorWeight_zero
+
+example (q : ℂ) : zetaDivisorWeight q + zetaDivisorWeight (-q) = 1 :=
+  zetaDivisorWeight_add_neg q
+
+-- The logarithmic source argument retains its signed imaginary part,
+-- even at the zero coefficient (whose Dirichlet term is separately zero).
+example (T : ℝ) : (zetaDivisorWeightArgument T 0).im = Real.pi / 2 :=
+  zetaDivisorWeightArgument_im T 0
+
+example : Real.exp (-(zetaDivisorWeightArgument (2 * Real.pi) 1).re) = 1 := by
+  rw [exp_neg_zetaDivisorWeightArgument_re (by positivity) (by norm_num)]
+  field_simp
+  norm_num
+
+example : |Real.log (8 + (-4 : ℝ)) - Real.log 8| ≤ 2 * |(-4 : ℝ)| / 8 :=
+  abs_log_height_shift_le (by norm_num) (by norm_num)
+
+example : |Real.log (8 + (4 : ℝ)) - Real.log 8| ≤ 2 * |(4 : ℝ)| / 8 :=
+  abs_log_height_shift_le (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T : ℝ, 0 < T → ∀ x : ℝ, |x| ≤ T / 2 →
+    ∀ n : ℕ, 0 < n →
+    ‖zetaDivisorWeight (zetaDivisorWeightArgument (T + x) n) -
+      zetaDivisorWeight (zetaDivisorWeightArgument T n)‖ ≤
+      C * (|x| / T) * min (T / (2 * Real.pi * (n : ℝ))) (2 * Real.pi * (n : ℝ) / T) :=
+  exists_norm_source_zetaDivisorWeight_height_sub_le
+
+example (t : ℝ) : Summable (fun n : ℕ => ‖divisorDirichletTerm (afeCriticalPoint t) n‖ *
+    ‖zetaDivisorWeight (zetaDivisorWeightArgument 1 n)‖) :=
+  summable_norm_source_divisor_weight (by norm_num) t
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T : ℝ, 1 ≤ T → ∀ t : ℝ,
+    (∑' n : ℕ, ‖divisorDirichletTerm (afeCriticalPoint t) n‖ *
+      ‖zetaDivisorWeight (zetaDivisorWeightArgument T n)‖) ≤ C * T ^ (1 / 2 + (1 / 4 : ℝ)) :=
+  exists_tsum_norm_source_divisor_weight_le (1 / 4) (by norm_num)
+
+example (T : ℝ) (n : ℕ) : ‖zetaSquareLeadingDivisorContribution T n -
+    zetaSquareFrozenDivisorContribution T 0 n‖ = 0 := by
+  simpa only [add_zero, sub_self, norm_zero, mul_zero] using norm_zetaSquareDivisor_freezing_error T 0 n
+
+-- Both closed half-height boundaries are covered by one constant.
+example : ∃ C : ℝ, 0 < C ∧ ∀ x ∈ ({-4, 4} : Set ℝ),
+    ‖zetaSquareLeadingDivisorIntegral (8 + x) - zetaSquareFrozenDivisorIntegral 8 x‖ ≤
+      C * |x| * (8 : ℝ) ^ (-1 / 2 + (1 / 4 : ℝ)) := by
+  obtain ⟨C, hC, hbound⟩ := exists_norm_zetaSquareLeadingDivisor_sub_frozen_le (1 / 4) (by norm_num)
+  refine ⟨C, hC, ?_⟩
+  intro x hx
+  apply hbound 8 (by norm_num)
+  simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hx
+  rcases hx with rfl | rfl <;> norm_num
+
+example : HasSum (fun n : ℕ => zetaFrozenDivisorCoefficient 8 n *
+    zetaSquareGammaGaussianTransform 8 4 (Real.log (n : ℝ))) (zetaFrozenDivisorGaussianMean 8 4) :=
+  hasSum_zetaFrozenDivisorGaussianMean (by norm_num) (by norm_num)
+
+example (T : ℝ) : zetaFrozenDivisorCoefficient T 0 = 0 := by
+  simp [zetaFrozenDivisorCoefficient, divisorDirichletTerm, LSeries.term]
+
+example (T x : ℝ) : zetaSquareFrozenDivisorContribution T x 1 =
+    zetaFrozenDivisorCoefficient T 1 * zetaSquareReflectedGammaPhase (T + x) := by
+  simpa using zetaSquareFrozenDivisorContribution_eq_phase T x 1
+
+example : zetaMomentCriticalNorm 0 ^ 2 =
+    2 * (zetaSquareDivisorIntegral 0 / zetaSquareGammaNormalization 0).re := by
+  simpa using zetaSquareNorm_eq_reflected_source 0
+
+example : zetaSquareRightKernel (-4) (-1) = conj (zetaSquareRightKernel 4 1) :=
+  zetaSquareRightKernel_conj 4 1
+
+example : zetaSquareGaussianWindow 8 4 1 =
+    ∫ x in (-4 : ℝ)..4, Real.exp (-(x / 4) ^ 2) * zetaMomentCriticalNorm (8 + x) ^ 2 := by
+  convert zetaSquareGaussianWindow_eq_height_shift 8 4 (G := 4) (by norm_num) using 1
+  norm_num
+
+example : Integrable (fun x : ℝ => zetaSquareFrozenDivisorIntegral 1 x *
+    (Real.exp (-(x / 1) ^ 2) : ℂ)) :=
+  integrable_zetaSquareFrozenDivisor_gaussian (by norm_num) (by norm_num)
+
+-- The closed Gaussian scale boundary still uses the actual coefficient series.
+example : Summable (fun n : ℕ => zetaFrozenDivisorCoefficient 8 n * zetaSquareReflectedGammaPhase 8 *
+    zetaGaussianQuadraticIntegral 8 4 (Real.log (n : ℝ) - Real.log (8 / (2 * Real.pi)))) :=
+  summable_zetaFrozenDivisorQuadraticTerm (by norm_num) (by norm_num) (by norm_num)
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ T G r : ℝ, 8 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+      0 ≤ r → r ≤ T / 2 →
+      |zetaSquareGaussianWindow T G (r / G) - 2 * (zetaFrozenDivisorQuadraticSum T G).re| ≤
+        C * r * (1 + r * T ^ (-1 / 2 + ε)) +
+          (∑' n : ℕ, ‖zetaFrozenDivisorCoefficient T n‖) *
+            (4 * r ^ 2 * (18 / T + 2 * r ^ 2 / T ^ 2) +
+              6 * Real.sqrt (2 * Real.pi) * G * Real.exp (-(r / G) ^ 2 / 2)) :=
+  exists_abs_zetaSquareGaussianWindow_sub_quadratic_le ε hε
+
+end DivisorWeightRegression
