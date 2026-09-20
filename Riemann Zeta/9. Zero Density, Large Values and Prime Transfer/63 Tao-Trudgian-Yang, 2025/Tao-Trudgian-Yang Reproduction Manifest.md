@@ -52,7 +52,9 @@ The principal runner currently verifies:
 5. no `.lean` file in the target contains a prohibited shortcut;
 6. the frozen ANTEDB subset hash ledger and inventory;
 7. the complete installed production-module inventory;
-8. byte-identical regeneration of the installed generated certificate module;
+8. byte-identical regeneration of the installed generated certificate module,
+   including four new-pair coordinates, eight derived Bourgain pieces, and
+   nine normalized public energy clauses;
 9. a warning-clean default build and semantic regression build; and
 10. a dynamic transitive axiom audit over imported boundaries and every
    nonprivate theorem in the target namespace.
@@ -101,23 +103,25 @@ surfaces change. With the package installed, it currently:
 6. scan the entire target for `sorry`, `admit`, `sorryAx`, project axioms,
    `native_decide`, `implemented_by`, and unsafe proof bypasses;
 7. verify source and dependency hashes/pins;
-8. regenerate the installed paper-time exponent-pair data module and fail on
-   a byte-level difference; and
+8. regenerate the installed paper-time exponent-pair, Bourgain-envelope, and
+   public energy-clause data module and fail on a byte-level difference; and
 9. write a timestamped complete log and return success only if all installed
    stages pass.
 
-The initial deterministic extractor is installed, but extending regeneration
-to every optimization witness and running the full paper-time Python stack are
-still open EPZAE-06/40 gates. Accordingly, runner success is a Lean
+The deterministic extractor covers the four advertised pair coordinates, all
+eight Bourgain pieces, and all nine public energy-clause tables, but extending
+regeneration to the underlying energy projection witnesses and running the
+full paper-time Python stack are still open
+EPZAE-06/40 gates. Accordingly, runner success is a Lean
 verification claim for installed modules, not a final paper reproduction
 claim.
 
 The latest installed-scope verification ran on 19 September 2026 with
 `run_tao_trudgian_yang_build.bat --no-pause`, exited `0`, and wrote
-`logs/tao-trudgian-yang-build-20260919-140605-f9abbea5.log` (SHA-256
-`25901d1c8a876f0df789ae871548dfe919eb2c55e2bea6bb72b9316810a4df69`).
-It audited 255 nonprivate target theorems plus five imported boundary
-declarations and reported no warnings.
+`logs/tao-trudgian-yang-build-20260919-180020-e928fa27.log` (SHA-256
+`2be7ccae02e38685280a3dcb9c63c9d20705b1416fdb4513f40ec253c1b716da`).
+It scanned 40 Lean files and audited 409 nonprivate target theorems plus five
+imported boundary declarations and reported no warnings.
 
 ## Future axiom gate
 

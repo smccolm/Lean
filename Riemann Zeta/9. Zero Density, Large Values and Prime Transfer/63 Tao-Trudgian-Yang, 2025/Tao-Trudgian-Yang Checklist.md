@@ -34,6 +34,12 @@ additive energy**, the three output families covered by the paper.
 - [ ] **EPZAE-06 -- Deterministic generator.** A pinned script reproduces the
   certificate data from the paper-time ANTEDB snapshot; regeneration is
   byte-stable and Lean checks the generated result.
+  The installed partial generator now extracts the four advertised new pairs
+  and reconstructs the eight exact Bourgain lower-envelope pieces (candidate
+  provenance, rational functions, and crossover intervals), as well as all
+  nine public energy-clause tables from the frozen blueprint. The underlying
+  energy projection witnesses and pinned execution of the archived Python
+  stack remain open, so this item is not complete.
 
 ## Asymptotics and exponent pairs
 
@@ -106,7 +112,7 @@ additive energy**, the three output families covered by the paper.
 - [x] **EPZAE-31 -- Additive-energy semantics.** Approximate quadruple energy of
   an indexed multiset is defined with unit tolerance and multiplicity; the
   paper's basic bounds are proved.
-- [ ] **EPZAE-32 -- Energy exponents/regions.** `LV*`, `LV*_zeta`, `A*`, `E`, and
+- [x] **EPZAE-32 -- Energy exponents/regions.** `LV*`, `LV*_zeta`, `A*`, `E`, and
   `E_zeta` have faithful asymptotic and non-asymptotic interfaces.
 - [ ] **EPZAE-33 -- Energy-density transfer.** `zeroe-from-large` and its
   corollary preserve bounded perturbations and zero multiplicity.

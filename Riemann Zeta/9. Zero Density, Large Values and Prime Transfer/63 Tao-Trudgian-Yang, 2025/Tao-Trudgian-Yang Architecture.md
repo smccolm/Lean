@@ -15,7 +15,7 @@ flowchart TD
 
     TC["EPZAE-01--02 unified toolchain,<br/>package, build and audit<br/>DONE"]
     RC["EPZAE-03--05 exact rational,<br/>piecewise and polyhedral certificates<br/>DONE"]
-    GEN["EPZAE-06 deterministic<br/>certificate generator<br/>OPEN"]
+    GEN["EPZAE-06 deterministic generator<br/>all public tables INSTALLED;<br/>energy projections OPEN"]
     AB["EPZAE-07 asymptotic/phase bridge<br/>DONE"]
 
     EP["EPZAE-08 exponent-pair semantics<br/>DONE"]
@@ -42,8 +42,8 @@ flowchart TD
     ZTAB["EPZAE-30 best-known density envelope<br/>OPEN"]
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
-    ER["EPZAE-32 energy exponents and regions<br/>IN PROGRESS"]
-    ET["EPZAE-33--34 energy transfer and powering<br/>OPEN"]
+    ER["EPZAE-32 energy exponents and regions<br/>DONE"]
+    ET["EPZAE-33 energy transfer<br/>IN PROGRESS: perturbation, tolerance normalization,<br/>Type I scale/separation/pattern packaging DONE;<br/>coefficient subpower bound, LV* use + Type II OPEN;<br/>EPZAE-34 OPEN"]
     HBE["EPZAE-35 Heath--Brown energy relation<br/>OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>OPEN"]
     NAE["EPZAE-37 nine new additive-energy bounds<br/>OPEN"]

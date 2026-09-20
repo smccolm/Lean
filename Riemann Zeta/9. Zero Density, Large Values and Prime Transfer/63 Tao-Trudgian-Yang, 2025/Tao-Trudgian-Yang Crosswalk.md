@@ -36,6 +36,15 @@ For `3/4 < sigma < 1`, the target is the following source function:
 | `974605/1005296 < sigma <= 5857/6032` | `288 / (3616*sigma-3197)` |
 | `5857/6032 < sigma < 1` | `86152 / (1447460*sigma-1311509)` |
 
+`GeneratedCertificates.lean` now reconstructs these eight rows by exact
+rational arithmetic from the first eight Bourgain candidates in the pinned
+paper-time ANTEDB driver. `BourgainPiecewiseCertificates.lean` consumes the
+generated rational functions and kernel-checks all seven crossovers and the
+full interval cover. It also proves for every row that the normalized generated
+fraction is exactly Bourgain's `4k/(2(1+k)sigma-1-l)` expression for its stored
+candidate. This is certificate-layer progress only; EPZAE-28--29 still require
+the analytic Bourgain theorem and its application to proved exponent pairs.
+
 The source best-known table later clips some of these pieces against Pintz
 and other bounds. EPZAE-29 proves the theorem as stated; EPZAE-30 separately
 proves the clipped envelope.
@@ -43,6 +52,14 @@ proves the clipped envelope.
 ### Exact additive-energy clauses
 
 Every bound below is for `A*(sigma) * (1-sigma)`.
+
+The generator extracts the corresponding nine source theorem blocks from the
+pinned ANTEDB blueprint, removes the common `(1-sigma)` denominator factor,
+normalizes signs, and emits exact `RationalAffineFraction` lists. Lean
+regression-checks the nine target intervals and each maximum's arity;
+`EnergyCertificates.lean` additionally proves every generated denominator is
+strictly positive throughout its generated interval. These are source-table
+certificates, not proofs of the energy-region projections.
 
 | Clause/range | Upper bound |
 |---|---|
@@ -62,13 +79,13 @@ Every bound below is for `A*(sigma) * (1-sigma)`.
 |---|---|---|---|
 | `auto` | automatic uniformity for variable families | ANTEDB `Basic.AutomaticUniformity` | `AsymptoticBridge`, kernel-checked import |
 | `phase-def`, `fpu` | model phase through derivative convergence on `[1,2]` | ANTEDB `ExponentialSums.PhaseFunctions` | `AsymptoticBridge`, kernel-checked import |
-| `energy-def` | approximate additive quadruples of a finite multiset | no exact upstream Lean object found | `AdditiveEnergy`, unit-tolerance indexed definition, multiplicity expansion, and `n²`/one-separated cubic bounds kernel-checked |
+| `energy-def` | approximate additive quadruples of a finite multiset | no exact upstream Lean object found | `AdditiveEnergy`, unit-tolerance indexed definition, multiplicity expansion, `n²`/one-separated cubic bounds, and the local-mass-times-cube bound kernel-checked |
 | `beta-def`, `beta-asymp` | least exponential-sum growth exponent and epsilon/delta form | ANTEDB `ExponentSumGrowth` and `ExponentSumGrowthNonAsymptotic` | `AsymptoticBridge`, kernel-checked import |
 | `exp-pair-def` | analytic exponent-pair estimate | not present in current ANTEDB Lean tree | `ExponentPair`, definition and non-asymptotic equivalence kernel-checked |
 | `lv-def` | large-value exponent for one-separated ordinates | not present | `LargeValuePattern` and `LargeValueExponent`, exact pattern and epsilon-loss infimum interfaces kernel-checked |
 | `zero-def` | multiplicity-weighted zeros with `Re >= sigma`, `|Im| <= T` | local Guth--Maynard has rectangle counts | `ZeroCountBridge` and `ZeroDensityExponent`, exact count and epsilon-loss infimum kernel-checked |
-| `lve-def`, `zeroe-def` | energy large-value and zero-density exponents | not present | `EnergyExponents`, non-asymptotic infimum interfaces, candidate conversions, and the extended-real general/zeta inequalities `2LV ≤ LV* ≤ 3LV` kernel-checked without finiteness assumptions; EPZAE-32 remains open |
-| `lv-edef` | five-dimensional feasible energy tuples | Python polytope model only | `EnergyRegions`, exact double-zeta sum, non-asymptotic general/zeta region predicates, zeta-to-general inclusion, and the necessary `ρ ≤ τ` and `2ρ ≤ ρ* ≤ 3ρ` constraints kernel-checked; asymptotic equivalence and supremum characterizations remain open |
+| `lve-def`, `zeroe-def` | energy large-value and zero-density exponents | not present | `EnergyExponents`, `EnergyBoundAsymptotics`, `ZeroEnergyMultiplicity`, and `EnergyRegionSupremum`; equivalent asymptotic/non-asymptotic bound interfaces, exact multiplicity-copy/local-weight conversion, the extended-real general/zeta inequalities `2LV ≤ LV* ≤ 3LV`, exact feasible-region supremum characterizations on the source domain, the unconditional `2A ≤ A* ≤ 4A`, and the sharp source-range `2A ≤ A* ≤ 3A` for `1/2 < σ`, all kernel-checked without finiteness assumptions |
+| `lv-edef`, `lve-asymp` | five-dimensional feasible energy tuples | Python polytope model only | `EnergyRegions`, `EnergyRegionAsymptotics`, and `EnergyRegionSupremum`; exact double-zeta sum, source-facing unbounded-family and non-asymptotic general/zeta predicates with proved equivalences, zeta-to-general inclusion, the necessary `ρ ≤ τ`, `2ρ ≤ ρ* ≤ 3ρ`, and `ρ+2 ≤ s ≤ 2ρ+2` constraints, plus both directions of the general and zeta `LV*` region-supremum characterizations |
 
 ## Supporting theorem crosswalk
 
@@ -93,7 +110,7 @@ Every bound below is for `A*(sigma) * (1-sigma)`.
 | `huxley-bound` | `A <= 3/(3 sigma-1)` | `huxley_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_huxley`, kernel-checked |
 | `guth-maynard-density` | `A <= 15/(3+5 sigma)` | `guthMaynard_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_guthMaynard`, kernel-checked |
 | `bourgain-zd` | pair-to-density formula | Bourgain 1995, planned EPZAE-28 |
-| `zeroe-from-large` | zero-energy from LV energy | planned EPZAE-33 |
+| `zeroe-from-large` | zero-energy from LV energy | EPZAE-33 in progress: bounded perturbation and arbitrary-to-unit tolerance normalization retain analytic-multiplicity indices. `typeIZero_exists_shifted_detector` chooses one native beta-removal shift per underlying zero. `typeIZeroCopy_shifted_unitBin_card_le` transfers the native Jensen unit-bin bound to multiplicity copies. `EnergyPartition` supplies indexed scale aggregation, while `EnergySeparation` colors by unit-bin parity and rank. The composed theorem `typeIZeroAdditiveEnergy_le_separated_detector_scale_class_energies` controls actual Type I zero energy by four multiplicity-safe, one-separated, single-scale detector classes with explicit losses. `DetectorPattern` supplies exact closed-support coefficient normalization and packages each inhabited class as a `LargeValuePattern`, with exact equality between its finset energy and the indexed class energy. A subpower bound for the normalization, application of `LV*`, the Type II transfer, and final assembly remain open |
 | `power-energy` | weakened energy powering | planned EPZAE-34 |
 | `hbt` | Heath--Brown five-variable energy relation | Heath--Brown 1979; planned EPZAE-35 |
 

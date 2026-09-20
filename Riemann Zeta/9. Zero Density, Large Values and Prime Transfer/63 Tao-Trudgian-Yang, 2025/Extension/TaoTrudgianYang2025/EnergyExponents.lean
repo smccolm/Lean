@@ -1,4 +1,4 @@
-import TaoTrudgianYang2025.AdditiveEnergy
+import TaoTrudgianYang2025.ToleranceNormalization
 import TaoTrudgianYang2025.LargeValueExponent
 import TaoTrudgianYang2025.ZeroDensityExponent
 
@@ -32,11 +32,76 @@ theorem zeroCopy_card (σ T : ℝ) :
   exact Finset.sum_attach (paperZeros σ T)
     (fun ρ ↦ analyticVanishingOrder riemannZeta ρ)
 
+/-- Filtering the multiplicity-indexed copies by an ordinate interval gives
+exactly the corresponding analytic-multiplicity sum over distinct zeros. -/
+theorem zeroCopy_local_card_eq_weighted_sum (σ T center : ℝ) :
+    ((Finset.univ : Finset (ZeroCopy σ T)).filter fun z =>
+      |center - (z.1 : ℂ).im| ≤ 1).card =
+      ∑ ρ ∈ paperZeros σ T,
+        if |center - ρ.im| ≤ 1 then
+          analyticVanishingOrder riemannZeta ρ else 0 := by
+  classical
+  let pred : ℂ → Prop := fun ρ => |center - ρ.im| ≤ 1
+  letI : Fintype {ρ : ℂ // ρ ∈ paperZeros σ T ∧ pred ρ} :=
+    Fintype.ofFinset ((paperZeros σ T).filter pred) (by
+      intro ρ
+      rw [Finset.mem_filter]
+      rfl)
+  change ((Finset.univ : Finset (ZeroCopy σ T)).filter fun z => pred z.1).card = _
+  rw [← Fintype.card_subtype]
+  let e : {z : ZeroCopy σ T // pred z.1} ≃
+      Σ ρ : {ρ : ℂ // ρ ∈ paperZeros σ T ∧ pred ρ},
+        Fin (analyticVanishingOrder riemannZeta (ρ : ℂ)) :=
+    { toFun := fun z =>
+        ⟨⟨z.1.1, z.1.1.property, z.2⟩, z.1.2⟩
+      invFun := fun z =>
+        ⟨⟨⟨z.1.1, z.1.2.1⟩, z.2⟩, z.1.2.2⟩
+      left_inv := by intro z; rfl
+      right_inv := by intro z; rfl }
+  rw [Fintype.card_congr e, Fintype.card_sigma]
+  simp only [Fintype.card_fin]
+  calc
+    (∑ x : {ρ : ℂ // ρ ∈ paperZeros σ T ∧ pred ρ},
+        analyticVanishingOrder riemannZeta (x : ℂ)) =
+        ∑ ρ ∈ (paperZeros σ T).filter pred,
+          analyticVanishingOrder riemannZeta ρ :=
+      (Finset.sum_subtype
+        ((paperZeros σ T).filter pred)
+        (fun ρ => by simp)
+        (fun ρ : ℂ => analyticVanishingOrder riemannZeta ρ)).symm
+    _ = ∑ ρ ∈ paperZeros σ T,
+        if |center - ρ.im| ≤ 1 then
+          analyticVanishingOrder riemannZeta ρ else 0 := by
+      simp only [Finset.sum_filter]
+      rfl
+
 /-- Unit-tolerance additive energy of zeta zeros in the paper rectangle,
 with analytic multiplicity represented by explicit indexed copies. -/
 def zeroAdditiveEnergy (σ T : ℝ) : ℕ :=
   approximateAdditiveEnergyOf 1
     (fun z : ZeroCopy σ T ↦ ((z.1 : ℂ).im : ℝ))
+
+/-- Perturbing every multiplicity-indexed zero ordinate by at most `d`
+changes unit additive relations only to tolerance `1 + 4d`.  The common
+`ZeroCopy` index type ensures that analytic multiplicity is not discarded. -/
+theorem zeroAdditiveEnergy_le_perturbed
+    (σ T d : ℝ) (shifted : ZeroCopy σ T → ℝ)
+    (hshift : ∀ z, |shifted z - (z.1 : ℂ).im| ≤ d) :
+    zeroAdditiveEnergy σ T ≤
+      approximateAdditiveEnergyOf (1 + 4 * d) shifted := by
+  exact approximateAdditiveEnergyOf_perturbation_le hshift
+
+/-- After a bounded perturbation, the enlarged tolerance can be returned to
+unit scale at an explicit linear cost.  The shifted family has the same
+`ZeroCopy` index type, so this comparison retains analytic multiplicity. -/
+theorem zeroAdditiveEnergy_le_mul_perturbed_unit
+    (σ T d : ℝ) (shifted : ZeroCopy σ T → ℝ)
+    (hshift : ∀ z, |shifted z - (z.1 : ℂ).im| ≤ d) :
+    zeroAdditiveEnergy σ T ≤
+      (4 * Nat.ceil (1 + 4 * d) + 6) *
+        approximateAdditiveEnergyOf 1 shifted := by
+  exact (zeroAdditiveEnergy_le_perturbed σ T d shifted hshift).trans
+    (approximateAdditiveEnergyOf_le_natCeil_mul_unit (1 + 4 * d) shifted)
 
 theorem paperZeroCount_square_le_zeroAdditiveEnergy (σ T : ℝ) :
     paperZeroCount σ T ^ 2 ≤ zeroAdditiveEnergy σ T := by
@@ -126,6 +191,98 @@ theorem zeroDensityEnergyExponent_le_of_bound {σ Astar : ℝ}
     zeroDensityEnergyExponent σ ≤ (Astar : EReal) := by
   apply sInf_le
   exact ⟨Astar, h, rfl⟩
+
+/-- The diagonal quadratic contribution converts a zero-energy bound into a
+zero-density bound at half the exponent. -/
+theorem IsZeroDensityEnergyBound.toZeroDensityBound_half
+    {σ Astar : ℝ} (h : IsZeroDensityEnergyBound σ Astar) :
+    IsZeroDensityBound σ (Astar / 2) := by
+  intro ε hε
+  obtain ⟨K, hK, δ, hδ, henergy⟩ := h (2 * ε) (by linarith)
+  refine ⟨K, hK, δ, hδ, ?_⟩
+  intro T hKT
+  have henergyBound := henergy T hKT
+  have hsquareNat :=
+    paperZeroCount_square_le_zeroAdditiveEnergy (σ - δ) T
+  have hsquare : (paperZeroCount (σ - δ) T : ℝ) ^ 2 ≤
+      (zeroAdditiveEnergy (σ - δ) T : ℝ) := by
+    exact_mod_cast hsquareNat
+  have hTnonneg : 0 ≤ T := zero_le_one.trans (hK.trans hKT)
+  have hpowNonneg :
+      0 ≤ T ^ ((Astar / 2) * (1 - σ) + ε) :=
+    Real.rpow_nonneg hTnonneg _
+  have hpowSquare :
+      (T ^ ((Astar / 2) * (1 - σ) + ε)) ^ 2 =
+        T ^ (Astar * (1 - σ) + 2 * ε) := by
+    calc
+      (T ^ ((Astar / 2) * (1 - σ) + ε)) ^ 2 =
+          T ^ (((Astar / 2) * (1 - σ) + ε) * (2 : ℝ)) := by
+        rw [Real.rpow_mul hTnonneg]
+        exact (Real.rpow_natCast
+          (T ^ ((Astar / 2) * (1 - σ) + ε)) 2).symm
+      _ = T ^ (Astar * (1 - σ) + 2 * ε) := by
+        congr 1
+        ring
+  have hKnonneg : 0 ≤ K := zero_le_one.trans hK
+  have hdominatedSquare : (paperZeroCount (σ - δ) T : ℝ) ^ 2 ≤
+      (K * T ^ ((Astar / 2) * (1 - σ) + ε)) ^ 2 := by
+    calc
+      (paperZeroCount (σ - δ) T : ℝ) ^ 2 ≤
+          (zeroAdditiveEnergy (σ - δ) T : ℝ) := hsquare
+      _ ≤ K * T ^ (Astar * (1 - σ) + 2 * ε) := henergyBound
+      _ ≤ K ^ 2 * T ^ (Astar * (1 - σ) + 2 * ε) := by
+        gcongr
+        nlinarith
+      _ = (K * T ^ ((Astar / 2) * (1 - σ) + ε)) ^ 2 := by
+        rw [mul_pow, hpowSquare]
+  have hcountNonneg : 0 ≤ (paperZeroCount (σ - δ) T : ℝ) :=
+    Nat.cast_nonneg _
+  exact (sq_le_sq₀ hcountNonneg
+    (mul_nonneg hKnonneg hpowNonneg)).mp hdominatedSquare
+
+/-- The unconditional fourth-power bound converts an ordinary zero-density
+estimate into a (generally non-sharp) zero-energy estimate. -/
+theorem IsZeroDensityBound.toEnergyBound_four_mul
+    {σ A : ℝ} (h : IsZeroDensityBound σ A) :
+    IsZeroDensityEnergyBound σ (4 * A) := by
+  intro ε hε
+  obtain ⟨K, hK, δ, hδ, hcount⟩ := h (ε / 4) (by linarith)
+  let C : ℝ := max K (K ^ 4)
+  have hKC : K ≤ C := le_max_left _ _
+  have hfourKC : K ^ 4 ≤ C := le_max_right _ _
+  have hC : 1 ≤ C := hK.trans hKC
+  refine ⟨C, hC, δ, hδ, ?_⟩
+  intro T hCT
+  have hKT : K ≤ T := hKC.trans hCT
+  have hcountBound := hcount T hKT
+  have henergyNat :=
+    zeroAdditiveEnergy_le_paperZeroCount_fourthPower (σ - δ) T
+  have henergy : (zeroAdditiveEnergy (σ - δ) T : ℝ) ≤
+      (paperZeroCount (σ - δ) T : ℝ) ^ 4 := by
+    exact_mod_cast henergyNat
+  have hTnonneg : 0 ≤ T := zero_le_one.trans (hC.trans hCT)
+  have hpowFourth :
+      (T ^ (A * (1 - σ) + ε / 4)) ^ 4 =
+        T ^ ((4 * A) * (1 - σ) + ε) := by
+    calc
+      (T ^ (A * (1 - σ) + ε / 4)) ^ 4 =
+          T ^ ((A * (1 - σ) + ε / 4) * (4 : ℝ)) := by
+        rw [Real.rpow_mul hTnonneg]
+        exact (Real.rpow_natCast
+          (T ^ (A * (1 - σ) + ε / 4)) 4).symm
+      _ = T ^ ((4 * A) * (1 - σ) + ε) := by
+        congr 1
+        ring
+  calc
+    (zeroAdditiveEnergy (σ - δ) T : ℝ) ≤
+        (paperZeroCount (σ - δ) T : ℝ) ^ 4 := henergy
+    _ ≤ (K * T ^ (A * (1 - σ) + ε / 4)) ^ 4 := by
+      gcongr
+    _ = K ^ 4 * T ^ ((4 * A) * (1 - σ) + ε) := by
+      rw [mul_pow, hpowFourth]
+    _ ≤ C * T ^ ((4 * A) * (1 - σ) + ε) :=
+      mul_le_mul_of_nonneg_right hfourKC
+        (Real.rpow_nonneg hTnonneg _)
 
 theorem IsLargeValueEnergyBound.toZeta {σ τ ρstar : ℝ}
     (h : IsLargeValueEnergyBound σ τ ρstar) :
@@ -351,6 +508,13 @@ private theorem sInf_image_mul_three (s : Set EReal) :
   change (⨅ a ∈ s, e a) = e (sInf s)
   exact (e.map_sInf s).symm
 
+private theorem sInf_image_mul_four (s : Set EReal) :
+    sInf ((fun x : EReal => x * 4) '' s) = sInf s * 4 := by
+  let e := erealScaleOrderIso 4 (by norm_num) (EReal.natCast_ne_top 4)
+  rw [sInf_image]
+  change (⨅ a ∈ s, e a) = e (sInf s)
+  exact (e.map_sInf s).symm
+
 /-- The diagonal energy contribution gives the exponent-level lower
 comparison `2 LV(σ,τ) ≤ LV*(σ,τ)`, including infinite infima. -/
 theorem two_mul_largeValueExponent_le_largeValueEnergyExponent (σ τ : ℝ) :
@@ -446,6 +610,54 @@ theorem zetaLargeValueEnergyExponent_le_three_mul_zetaLargeValueExponent
     sInf_le_sInf hsubset
   rw [sInf_image_mul_three] at hinf
   simpa only [zetaLargeValueExponent, zetaLargeValueEnergyExponent, L, E,
+    mul_comm] using hinf
+
+/-- The diagonal zero-energy contribution gives the exponent-level source
+inequality `2 A(σ) ≤ A*(σ)`, including infinite infima. -/
+theorem two_mul_zeroDensityExponent_le_zeroDensityEnergyExponent (σ : ℝ) :
+    (2 : EReal) * zeroDensityExponent σ ≤
+      zeroDensityEnergyExponent σ := by
+  let Z : Set EReal :=
+    (fun A : ℝ => (A : EReal)) '' zeroDensityBounds σ
+  let ZE : Set EReal :=
+    (fun Astar : ℝ => (Astar : EReal)) '' zeroDensityEnergyBounds σ
+  have hsubset : ZE ⊆ (fun x : EReal => x * 2) '' Z := by
+    rintro x ⟨Astar, hAstar, rfl⟩
+    refine ⟨(Astar / 2 : ℝ),
+      ⟨Astar / 2, hAstar.toZeroDensityBound_half, rfl⟩, ?_⟩
+    change (↑(Astar / 2) : EReal) * 2 = (Astar : EReal)
+    calc
+      (↑(Astar / 2) : EReal) * 2 =
+          (↑(Astar / 2) : EReal) * (↑(2 : ℝ) : EReal) := by rfl
+      _ = (↑((Astar / 2) * 2) : EReal) := (EReal.coe_mul _ _).symm
+      _ = (Astar : EReal) := by congr 1; ring
+  have hinf : sInf ((fun x : EReal => x * 2) '' Z) ≤ sInf ZE :=
+    sInf_le_sInf hsubset
+  rw [sInf_image_mul_two] at hinf
+  simpa only [zeroDensityExponent, zeroDensityEnergyExponent, Z, ZE,
+    mul_comm] using hinf
+
+/-- The elementary fourth-power energy bound gives the unconditional
+comparison `A*(σ) ≤ 4 A(σ)`, including infinite infima. -/
+theorem zeroDensityEnergyExponent_le_four_mul_zeroDensityExponent (σ : ℝ) :
+    zeroDensityEnergyExponent σ ≤
+      (4 : EReal) * zeroDensityExponent σ := by
+  let Z : Set EReal :=
+    (fun A : ℝ => (A : EReal)) '' zeroDensityBounds σ
+  let ZE : Set EReal :=
+    (fun Astar : ℝ => (Astar : EReal)) '' zeroDensityEnergyBounds σ
+  have hsubset : (fun x : EReal => x * 4) '' Z ⊆ ZE := by
+    rintro x ⟨y, ⟨A, hA, rfl⟩, rfl⟩
+    refine ⟨4 * A, hA.toEnergyBound_four_mul, ?_⟩
+    change (↑(4 * A) : EReal) = (A : EReal) * 4
+    calc
+      (↑(4 * A) : EReal) = (↑(A * 4) : EReal) := by congr 1; ring
+      _ = (A : EReal) * (↑(4 : ℝ) : EReal) := EReal.coe_mul _ _
+      _ = (A : EReal) * 4 := by rfl
+  have hinf : sInf ZE ≤ sInf ((fun x : EReal => x * 4) '' Z) :=
+    sInf_le_sInf hsubset
+  rw [sInf_image_mul_four] at hinf
+  simpa only [zeroDensityExponent, zeroDensityEnergyExponent, Z, ZE,
     mul_comm] using hinf
 
 end TaoTrudgianYang2025

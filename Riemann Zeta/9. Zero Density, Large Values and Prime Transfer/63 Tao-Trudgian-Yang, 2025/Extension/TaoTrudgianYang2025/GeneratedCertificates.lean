@@ -3,6 +3,7 @@
 -- Do not edit by hand.
 
 import TaoTrudgianYang2025.ExponentPair
+import TaoTrudgianYang2025.RationalCertificates
 
 namespace TaoTrudgianYang2025
 
@@ -16,6 +17,231 @@ def generatedExponentPairCoordinates : List (ℚ × ℚ) := [
 
 theorem generatedExponentPairCoordinates_count :
     generatedExponentPairCoordinates.length = 4 := by
+  rfl
+
+/-- One exact rational piece of the paper's eight-piece Bourgain envelope. -/
+structure GeneratedBourgainDensityPiece where
+  candidateIndex : Nat
+  k : ℚ
+  ell : ℚ
+  lower : ℚ
+  upper : ℚ
+  bound : RationalAffineFraction
+
+/-- Exact lower-envelope piece 1, derived from frozen candidate 0. -/
+def generatedBourgainPiece1 : GeneratedBourgainDensityPiece where
+  candidateIndex := 0
+  k := 11 / 85
+  ell := 59 / 85
+  lower := 3 / 4
+  upper := 14 / 15
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 11,
+      denominatorSlope := 48,
+      denominatorConstant := -36 }
+/-- Exact lower-envelope piece 2, derived from frozen candidate 1. -/
+def generatedBourgainPiece2 : GeneratedBourgainDensityPiece where
+  candidateIndex := 1
+  k := 391 / 4595
+  ell := 3461 / 4595
+  lower := 14 / 15
+  upper := 2841 / 3016
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 391,
+      denominatorSlope := 2493,
+      denominatorConstant := -2014 }
+/-- Exact lower-envelope piece 3, derived from frozen candidate 2. -/
+def generatedBourgainPiece3 : GeneratedBourgainDensityPiece where
+  candidateIndex := 2
+  k := 2779 / 38033
+  ell := 58699 / 76066
+  lower := 2841 / 3016
+  upper := 859 / 908
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 22232,
+      denominatorSlope := 163248,
+      denominatorConstant := -134765 }
+/-- Exact lower-envelope piece 4, derived from frozen candidate 3. -/
+def generatedBourgainPiece4 : GeneratedBourgainDensityPiece where
+  candidateIndex := 3
+  k := 89 / 1282
+  ell := 997 / 1282
+  lower := 859 / 908
+  upper := 1625 / 1692
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 356,
+      denominatorSlope := 2742,
+      denominatorConstant := -2279 }
+/-- Exact lower-envelope piece 5, derived from frozen candidate 4. -/
+def generatedBourgainPiece5 : GeneratedBourgainDensityPiece where
+  candidateIndex := 4
+  k := 652397 / 9713986
+  ell := 7599781 / 9713986
+  lower := 1625 / 1692
+  upper := 3334585 / 3447984
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 2609588,
+      denominatorSlope := 20732766,
+      denominatorConstant := -17313767 }
+/-- Exact lower-envelope piece 6, derived from frozen candidate 5. -/
+def generatedBourgainPiece6 : GeneratedBourgainDensityPiece where
+  candidateIndex := 5
+  k := 2371 / 43205
+  ell := 280013 / 345640
+  lower := 3334585 / 3447984
+  upper := 974605 / 1005296
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 75872,
+      denominatorSlope := 729216,
+      denominatorConstant := -625653 }
+/-- Exact lower-envelope piece 7, derived from frozen candidate 6. -/
+def generatedBourgainPiece7 : GeneratedBourgainDensityPiece where
+  candidateIndex := 6
+  k := 9 / 217
+  ell := 1461 / 1736
+  lower := 974605 / 1005296
+  upper := 5857 / 6032
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 288,
+      denominatorSlope := 3616,
+      denominatorConstant := -3197 }
+/-- Exact lower-envelope piece 8, derived from frozen candidate 7. -/
+def generatedBourgainPiece8 : GeneratedBourgainDensityPiece where
+  candidateIndex := 7
+  k := 10769 / 351096
+  ell := 609317 / 702192
+  lower := 5857 / 6032
+  upper := 1
+  bound :=
+    { numeratorSlope := 0, numeratorConstant := 86152,
+      denominatorSlope := 1447460,
+      denominatorConstant := -1311509 }
+
+/-- The eight source-theorem pieces reconstructed by exact rational arithmetic
+from the first eight candidates in the frozen optimization driver. -/
+def generatedBourgainDensityPieces : List GeneratedBourgainDensityPiece := [
+  generatedBourgainPiece1,
+  generatedBourgainPiece2,
+  generatedBourgainPiece3,
+  generatedBourgainPiece4,
+  generatedBourgainPiece5,
+  generatedBourgainPiece6,
+  generatedBourgainPiece7,
+  generatedBourgainPiece8
+]
+
+theorem generatedBourgainDensityPieces_count :
+    generatedBourgainDensityPieces.length = 8 := by
+  rfl
+
+/-- One source clause for `A*(sigma) * (1-sigma)`, represented as the maximum
+of exact rational affine fractions on a closed rational interval. -/
+structure GeneratedEnergyClause where
+  sourceLabel : String
+  lower : ℚ
+  upper : ℚ
+  bounds : List RationalAffineFraction
+
+/-- Exact clause 1 data extracted from `imp-hb-energy-bound` in the frozen blueprint. -/
+def generatedEnergyClause1 : GeneratedEnergyClause where
+  sourceLabel := "imp-hb-energy-bound"
+  lower := 3 / 4
+  upper := 5 / 6
+  bounds := [
+    { numeratorSlope := -19, numeratorConstant := 18, denominatorSlope := 6, denominatorConstant := -2 },
+    { numeratorSlope := -36, numeratorConstant := 40, denominatorSlope := 20, denominatorConstant := -5 }
+  ]
+/-- Exact clause 2 data extracted from `imp-energy-bound2` in the frozen blueprint. -/
+def generatedEnergyClause2 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound2"
+  lower := 7 / 10
+  upper := 3 / 4
+  bounds := [
+    { numeratorSlope := -95, numeratorConstant := 90, denominatorSlope := 10, denominatorConstant := 6 },
+    { numeratorSlope := -88, numeratorConstant := 90, denominatorSlope := 2, denominatorConstant := 15 }
+  ]
+/-- Exact clause 3 data extracted from `imp-energy-bound9` in the frozen blueprint. -/
+def generatedEnergyClause3 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound9"
+  lower := 173 / 229
+  upper := 443 / 586
+  bounds := [
+    { numeratorSlope := 270, numeratorConstant := -173, denominatorSlope := 2000, denominatorConstant := -1488 },
+    { numeratorSlope := 890, numeratorConstant := -653, denominatorSlope := 1250, denominatorConstant := -930 },
+    { numeratorSlope := -1190, numeratorConstant := 1151, denominatorSlope := 300, denominatorConstant := -40 }
+  ]
+/-- Exact clause 4 data extracted from `imp-energy-bound10` in the frozen blueprint. -/
+def generatedEnergyClause4 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound10"
+  lower := 443 / 586
+  upper := 373 / 493
+  bounds := [
+    { numeratorSlope := 810, numeratorConstant := -593, denominatorSlope := 1150, denominatorConstant := -855 },
+    { numeratorSlope := -1100, numeratorConstant := 1064, denominatorSlope := 275, denominatorConstant := -35 }
+  ]
+/-- Exact clause 5 data extracted from `imp-energy-bound11` in the frozen blueprint. -/
+def generatedEnergyClause5 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound11"
+  lower := 373 / 493
+  upper := 103 / 136
+  bounds := [
+    { numeratorSlope := 730, numeratorConstant := -533, denominatorSlope := 1050, denominatorConstant := -780 },
+    { numeratorSlope := -99, numeratorConstant := 78, denominatorSlope := 85, denominatorConstant := -62 },
+    { numeratorSlope := -185, numeratorConstant := 174, denominatorSlope := 31, denominatorConstant := 2 }
+  ]
+/-- Exact clause 6 data extracted from `imp-energy-bound4` in the frozen blueprint. -/
+def generatedEnergyClause6 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound4"
+  lower := 103 / 136
+  upper := 42 / 55
+  bounds := [
+    { numeratorSlope := -91, numeratorConstant := 72, denominatorSlope := 77, denominatorConstant := -56 },
+    { numeratorSlope := -95, numeratorConstant := 90, denominatorSlope := 10, denominatorConstant := 6 }
+  ]
+/-- Exact clause 7 data extracted from `imp-energy-bound6` in the frozen blueprint. -/
+def generatedEnergyClause7 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound6"
+  lower := 42 / 55
+  upper := 79 / 103
+  bounds := [
+    { numeratorSlope := -19, numeratorConstant := 18, denominatorSlope := 90, denominatorConstant := -66 },
+    { numeratorSlope := -57, numeratorConstant := 54, denominatorSlope := 16, denominatorConstant := -4 }
+  ]
+/-- Exact clause 8 data extracted from `imp-energy-bound7` in the frozen blueprint. -/
+def generatedEnergyClause8 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound7"
+  lower := 79 / 103
+  upper := 84 / 109
+  bounds := [
+    { numeratorSlope := -19, numeratorConstant := 18, denominatorSlope := 74, denominatorConstant := -54 },
+    { numeratorSlope := -95, numeratorConstant := 90, denominatorSlope := 26, denominatorConstant := -6 }
+  ]
+/-- Exact clause 9 data extracted from `imp-energy-bound8` in the frozen blueprint. -/
+def generatedEnergyClause9 : GeneratedEnergyClause where
+  sourceLabel := "imp-energy-bound8"
+  lower := 84 / 109
+  upper := 5 / 6
+  bounds := [
+    { numeratorSlope := -19, numeratorConstant := 18, denominatorSlope := 27, denominatorConstant := -18 },
+    { numeratorSlope := -36, numeratorConstant := 40, denominatorSlope := 20, denominatorConstant := -5 }
+  ]
+
+/-- All nine additive-energy clauses extracted from the frozen ANTEDB
+blueprint, restricted to the exact intervals in the paper's public theorem. -/
+def generatedEnergyClauses : List GeneratedEnergyClause := [
+  generatedEnergyClause1,
+  generatedEnergyClause2,
+  generatedEnergyClause3,
+  generatedEnergyClause4,
+  generatedEnergyClause5,
+  generatedEnergyClause6,
+  generatedEnergyClause7,
+  generatedEnergyClause8,
+  generatedEnergyClause9
+]
+
+theorem generatedEnergyClauses_count :
+    generatedEnergyClauses.length = 9 := by
   rfl
 
 end TaoTrudgianYang2025

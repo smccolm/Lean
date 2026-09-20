@@ -2,6 +2,7 @@ import TaoTrudgianYang2025
 
 open scoped NNReal
 open TaoTrudgianYang2025
+open RiemannZeta.GuthMaynard
 
 /-! Exact-type compatibility checks for the bootstrap dependency graph. -/
 
@@ -123,6 +124,14 @@ example (σ Astar : ℝ) : IsZeroDensityEnergyBound σ Astar ↔
 example (σ T : ℝ) : Fintype.card (ZeroCopy σ T) = paperZeroCount σ T :=
   zeroCopy_card σ T
 
+example (σ T center : ℝ) :
+    ((Finset.univ : Finset (ZeroCopy σ T)).filter fun z =>
+      |center - (z.1 : ℂ).im| ≤ 1).card =
+      ∑ ρ ∈ paperZeros σ T,
+        if |center - ρ.im| ≤ 1 then
+          analyticVanishingOrder riemannZeta ρ else 0 :=
+  zeroCopy_local_card_eq_weighted_sum σ T center
+
 example {σ τ ρstar : ℝ} (h : IsLargeValueEnergyBound σ τ ρstar) :
     IsZetaLargeValueEnergyBound σ τ ρstar :=
   h.toZeta
@@ -142,11 +151,148 @@ example (σ τ : ℝ) :
   ⟨two_mul_zetaLargeValueExponent_le_zetaLargeValueEnergyExponent σ τ,
     zetaLargeValueEnergyExponent_le_three_mul_zetaLargeValueExponent σ τ⟩
 
+example (σ : ℝ) :
+    (2 : EReal) * zeroDensityExponent σ ≤
+        zeroDensityEnergyExponent σ ∧
+      zeroDensityEnergyExponent σ ≤
+        (4 : EReal) * zeroDensityExponent σ :=
+  ⟨two_mul_zeroDensityExponent_le_zeroDensityEnergyExponent σ,
+    zeroDensityEnergyExponent_le_four_mul_zeroDensityExponent σ⟩
+
+example (σ : ℝ) (hσ : 1 / 2 < σ) :
+    (2 : EReal) * zeroDensityExponent σ ≤
+        zeroDensityEnergyExponent σ ∧
+      zeroDensityEnergyExponent σ ≤
+        (3 : EReal) * zeroDensityExponent σ :=
+  ⟨two_mul_zeroDensityExponent_le_zeroDensityEnergyExponent σ,
+    zeroDensityEnergyExponent_le_three_mul_zeroDensityExponent σ hσ⟩
+
+example {σ T : ℝ} (hσ : 1 / 2 ≤ σ) :
+    zeroAdditiveEnergy σ T ≤
+      max (paperZeroCount (1 / 2) 10)
+        (3 * classicalLocalMultiplicityCap T) * paperZeroCount σ T ^ 3 :=
+  zeroAdditiveEnergy_le_globalCap_mul_cube hσ
+
+example (σ T d : ℝ) (shifted : ZeroCopy σ T → ℝ)
+    (hshift : ∀ z, |shifted z - (z.1 : ℂ).im| ≤ d) :
+    zeroAdditiveEnergy σ T ≤
+      approximateAdditiveEnergyOf (1 + 4 * d) shifted :=
+  zeroAdditiveEnergy_le_perturbed σ T d shifted hshift
+
+example (σ T d : ℝ) (shifted : ZeroCopy σ T → ℝ)
+    (hshift : ∀ z, |shifted z - (z.1 : ℂ).im| ≤ d) :
+    zeroAdditiveEnergy σ T ≤
+      (4 * Nat.ceil (1 + 4 * d) + 6) *
+        approximateAdditiveEnergyOf 1 shifted :=
+  zeroAdditiveEnergy_le_mul_perturbed_unit σ T d shifted hshift
+
+example (δ : ℝ) (hδ : 0 < δ) :
+    ∃ T₀ : ℝ, Real.exp 2 ≤ T₀ ∧
+      ∀ (σ T : ℝ), 7 / 10 ≤ σ → σ ≤ 4 / 5 → T₀ ≤ T →
+        ∃ shifted : TypeIZeroCopy σ T → ℝ,
+          (∀ z, |(z.1.1 : ℂ).im - shifted z| ≤ T ^ δ) ∧
+          (∀ z, 1 / (4 * Real.log T) ≤
+            ‖RiemannZeta.GuthMaynard.detectPoly
+              (2 ^ RiemannZeta.GuthMaynard.chosenTypeIScale z.1.1 T)
+              (σ + Complex.I * shifted z) T‖) :=
+  typeIZeroCopy_exists_shifted_detector δ hδ
+
+example {ι κ : Type*} [Fintype ι] [Fintype κ] [DecidableEq κ] [Nonempty κ]
+    (W : ι → ℝ) (color : ι → κ) :
+    ∃ label : Fin 4 → κ,
+      let Wᵢ := fun i : Fin 4 =>
+        fun x : EnergyColorFiber color (label i) => W x.1
+      4 * (approximateAdditiveEnergyOf 1 W : ℝ) ≤
+        9 * (Fintype.card κ : ℝ) ^ 4 *
+          ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+            (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+            (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+            (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ)) :=
+  exists_energy_color_classes W color
+
+example (δ : ℝ) (hδ : 0 < δ) :=
+  typeIZeroAdditiveEnergy_le_detector_scale_class_energies δ hδ
+
+example (δ : ℝ) (hδ : 0 < δ) :=
+  typeIZeroAdditiveEnergy_le_separated_detector_scale_class_energies δ hδ
+
+example (σ T : ℝ) (shift : ↥(typeIZeroSet σ T) → ℝ) (z : ℤ) :=
+  typeIZeroCopy_shifted_unitBin_card σ T shift z
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι] (W : ι → ℝ)
+    (hsep : ∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) :
+    finsetAdditiveEnergy (Finset.univ.image W) =
+      approximateAdditiveEnergyOf 1 W :=
+  finsetAdditiveEnergy_image_eq W hsep
+
+example (δ σ T : ℝ) (hT : Real.exp 2 ≤ T)
+    (shifted : TypeIZeroCopy σ T → ℝ) (L : ℕ)
+    (hlocal : ∀ z : ℤ, (unitBinFinset shifted z).card ≤ L)
+    (label : TypeISeparatedScaleColor T L)
+    (x₀ : EnergyColorFiber
+      (typeISeparatedScaleColor σ T shifted L hlocal) label)
+    (hshift : ∀ x : TypeIZeroCopy σ T,
+      |(x.1.1 : ℂ).im - shifted x| ≤ T ^ δ)
+    (hlarge : ∀ x : EnergyColorFiber
+      (typeISeparatedScaleColor σ T shifted L hlocal) label,
+      1 / (4 * Real.log T) ≤
+        ‖detectPoly (2 ^ typeIScaleColorIndex label.1)
+          (σ + Complex.I * shifted x.1) T‖)
+    (hsep : ∀ x y : EnergyColorFiber
+      (typeISeparatedScaleColor σ T shifted L hlocal) label,
+      x ≠ y → 1 ≤ |shifted x.1 - shifted y.1|) :=
+  exists_typeIDetectorClassPattern δ σ T hT shifted L hlocal label x₀
+    hshift hlarge hsep
+
 example {σ τ ρ ρstar s : ℝ}
     (h : InLargeValueEnergyRegion σ τ ρ ρstar s) :
-    ρ ≤ τ ∧ 2 * ρ ≤ ρstar ∧ ρstar ≤ 3 * ρ :=
+    ρ ≤ τ ∧ 2 * ρ ≤ ρstar ∧ ρstar ≤ 3 * ρ ∧
+      ρ + 2 ≤ s ∧ s ≤ 2 * ρ + 2 :=
   ⟨h.rho_le_tau, h.two_mul_rho_le_rhoStar,
-    h.rhoStar_le_three_mul_rho⟩
+    h.rhoStar_le_three_mul_rho, h.rho_add_two_le_s,
+    h.s_le_two_mul_rho_add_two⟩
+
+example (σ τ : ℝ) :
+    largeValueEnergyRegionSupremum σ τ ≤
+        largeValueEnergyExponent σ τ ∧
+      zetaLargeValueEnergyRegionSupremum σ τ ≤
+        zetaLargeValueEnergyExponent σ τ :=
+  ⟨largeValueEnergyRegionSupremum_le_largeValueEnergyExponent σ τ,
+    zetaLargeValueEnergyRegionSupremum_le_zetaLargeValueEnergyExponent σ τ⟩
+
+example {σ τ : ℝ} (hσLower : 1 / 2 ≤ σ) (hσUpper : σ ≤ 1)
+    (hτ : 0 ≤ τ) :
+    largeValueEnergyExponent σ τ =
+        largeValueEnergyRegionSupremum σ τ ∧
+      zetaLargeValueEnergyExponent σ τ =
+        zetaLargeValueEnergyRegionSupremum σ τ :=
+  ⟨largeValueEnergyExponent_eq_regionSupremum hσLower hσUpper hτ,
+    zetaLargeValueEnergyExponent_eq_regionSupremum hσLower hσUpper hτ⟩
+
+example {σ τ ρ ρstar s : ℝ} :
+    InLargeValueEnergyRegionAsymptotic σ τ ρ ρstar s ↔
+      InLargeValueEnergyRegion σ τ ρ ρstar s :=
+  inLargeValueEnergyRegionAsymptotic_iff
+
+example {σ τ ρ ρstar s : ℝ} :
+    InZetaLargeValueEnergyRegionAsymptotic σ τ ρ ρstar s ↔
+      InZetaLargeValueEnergyRegion σ τ ρ ρstar s :=
+  inZetaLargeValueEnergyRegionAsymptotic_iff
+
+example {σ τ ρstar : ℝ} :
+    IsLargeValueEnergyBoundAsymptotic σ τ ρstar ↔
+      IsLargeValueEnergyBound σ τ ρstar :=
+  isLargeValueEnergyBoundAsymptotic_iff
+
+example {σ τ ρstar : ℝ} :
+    IsZetaLargeValueEnergyBoundAsymptotic σ τ ρstar ↔
+      IsZetaLargeValueEnergyBound σ τ ρstar :=
+  isZetaLargeValueEnergyBoundAsymptotic_iff
+
+example {σ Astar : ℝ} :
+    IsZeroDensityEnergyBoundAsymptotic σ Astar ↔
+      IsZeroDensityEnergyBound σ Astar :=
+  isZeroDensityEnergyBoundAsymptotic_iff
 
 example :
     InExponentPairTriangle (89 / 1282 : ℝ) (997 / 1282 : ℝ) :=
@@ -158,6 +304,23 @@ example : generatedExponentPairCoordinates = [
     (10769 / 351096, 609317 / 702192),
     (89 / 3478, 15327 / 17390)] := by
   rfl
+
+example : generatedEnergyClauses.map
+    (fun clause => (clause.lower, clause.upper, clause.bounds.length)) = [
+      (3 / 4, 5 / 6, 2),
+      (7 / 10, 3 / 4, 2),
+      (173 / 229, 443 / 586, 3),
+      (443 / 586, 373 / 493, 2),
+      (373 / 493, 103 / 136, 3),
+      (103 / 136, 42 / 55, 2),
+      (42 / 55, 79 / 103, 2),
+      (79 / 103, 84 / 109, 2),
+      (84 / 109, 5 / 6, 2)] := by
+  rfl
+
+example : ∀ clause ∈ generatedEnergyClauses,
+    EnergyClauseDenominatorsPositive clause :=
+  generatedEnergyClauses_denominatorsPositive
 
 example := optimizedBourgain_endpoint_agreement
 

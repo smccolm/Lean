@@ -10,8 +10,11 @@ Installed and planned tools:
 - `verify_sources.ps1` -- recompute `Sources/SHA256SUMS.txt`, check archive
   commit metadata, and fail on missing/unlisted files;
 - `generate_certificates.py` -- installed standard-library extractor that
-  verifies the paper-time archive hash and deterministically emits the first
-  kernel-checked rational data module;
+  verifies the paper-time archive hash, extracts the four new-pair
+  coordinates, reconstructs the eight exact Bourgain lower-envelope pieces,
+  extracts and sign-normalizes all nine energy-clause tables from the frozen
+  blueprint, and deterministically emits their kernel-consumed rational data
+  module;
 - `reproduce_paper_time.py` -- future tool to invoke pinned ANTEDB functions for the 2025
   outputs and serialize exact rational results;
 - `emit_certificates.py` -- future full conversion of exact rational witnesses to deterministic

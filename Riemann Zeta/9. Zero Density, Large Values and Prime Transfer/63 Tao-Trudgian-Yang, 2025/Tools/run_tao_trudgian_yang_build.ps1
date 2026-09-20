@@ -210,6 +210,10 @@ try {
             'Extension\TaoTrudgianYang2025\BourgainPiecewiseCertificates.lean',
             'Extension\TaoTrudgianYang2025\ClassicalDensityBridge.lean',
             'Extension\TaoTrudgianYang2025\EnergyExponents.lean',
+            'Extension\TaoTrudgianYang2025\EnergyCertificates.lean',
+            'Extension\TaoTrudgianYang2025\EnergyBoundAsymptotics.lean',
+            'Extension\TaoTrudgianYang2025\EnergyRegionAsymptotics.lean',
+            'Extension\TaoTrudgianYang2025\EnergyRegionSupremum.lean',
             'Extension\TaoTrudgianYang2025\EnergyRegions.lean',
             'Extension\TaoTrudgianYang2025\ExponentPair.lean',
             'Extension\TaoTrudgianYang2025\GeneratedCertificates.lean',
@@ -220,8 +224,14 @@ try {
             'Extension\TaoTrudgianYang2025\PolyhedralCertificates.lean',
             'Extension\TaoTrudgianYang2025\RationalCertificates.lean',
             'Extension\TaoTrudgianYang2025\SemanticRegression.lean',
+            'Extension\TaoTrudgianYang2025\ToleranceNormalization.lean',
+            'Extension\TaoTrudgianYang2025\EnergyPartition.lean',
+            'Extension\TaoTrudgianYang2025\EnergySeparation.lean',
+            'Extension\TaoTrudgianYang2025\DetectorPattern.lean',
             'Extension\TaoTrudgianYang2025\ZeroCountBridge.lean',
-            'Extension\TaoTrudgianYang2025\ZeroDensityExponent.lean'
+            'Extension\TaoTrudgianYang2025\ZeroDensityExponent.lean',
+            'Extension\TaoTrudgianYang2025\ZeroEnergyMultiplicity.lean',
+            'Extension\TaoTrudgianYang2025\ZeroEnergyTypeI.lean'
         )
         foreach ($relativePath in $leanPackageFiles) {
             Assert-ProjectFile -ProjectRoot $projectRoot -RelativePath $relativePath

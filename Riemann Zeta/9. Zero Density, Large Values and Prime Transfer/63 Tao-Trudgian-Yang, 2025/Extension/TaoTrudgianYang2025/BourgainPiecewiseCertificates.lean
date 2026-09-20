@@ -1,3 +1,4 @@
+import TaoTrudgianYang2025.GeneratedCertificates
 import TaoTrudgianYang2025.PiecewiseEnvelope
 
 /-!
@@ -10,29 +11,116 @@ open interval `(3/4, 1)`; it does not assert the analytic zero-density bound.
 
 namespace TaoTrudgianYang2025
 
+private theorem div_eq_scaled_div (a b c : ℝ) (hc : c ≠ 0) :
+    a / b = (c * a) / (c * b) :=
+  (mul_div_mul_left a b hc).symm
+
 noncomputable def bourgainPieceOne (sigma : ℝ) : ℝ :=
-  11 / (12 * (4 * sigma - 3))
+  generatedBourgainPiece1.bound.eval sigma
 
 noncomputable def bourgainPieceTwo (sigma : ℝ) : ℝ :=
-  391 / (2493 * sigma - 2014)
+  generatedBourgainPiece2.bound.eval sigma
 
 noncomputable def bourgainPieceThree (sigma : ℝ) : ℝ :=
-  22232 / (163248 * sigma - 134765)
+  generatedBourgainPiece3.bound.eval sigma
 
 noncomputable def bourgainPieceFour (sigma : ℝ) : ℝ :=
-  356 / (2742 * sigma - 2279)
+  generatedBourgainPiece4.bound.eval sigma
 
 noncomputable def bourgainPieceFive (sigma : ℝ) : ℝ :=
-  2609588 / (20732766 * sigma - 17313767)
+  generatedBourgainPiece5.bound.eval sigma
 
 noncomputable def bourgainPieceSix (sigma : ℝ) : ℝ :=
-  75872 / (9 * (81024 * sigma - 69517))
+  generatedBourgainPiece6.bound.eval sigma
 
 noncomputable def bourgainPieceSeven (sigma : ℝ) : ℝ :=
-  288 / (3616 * sigma - 3197)
+  generatedBourgainPiece7.bound.eval sigma
 
 noncomputable def bourgainPieceEight (sigma : ℝ) : ℝ :=
-  86152 / (1447460 * sigma - 1311509)
+  generatedBourgainPiece8.bound.eval sigma
+
+/-! The generated normalized fractions are checked against Bourgain's
+`4k / (2(1+k)sigma - 1 - ell)` formula inside Lean. -/
+
+theorem bourgainPieceOne_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceOne sigma =
+      4 * generatedBourgainPiece1.k /
+        (2 * (1 + generatedBourgainPiece1.k) * sigma - 1 -
+          generatedBourgainPiece1.ell) := by
+  norm_num [bourgainPieceOne, generatedBourgainPiece1,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 11 (48 * sigma - 36) (4 / 85) (by norm_num) using 1;
+    ring
+
+theorem bourgainPieceTwo_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceTwo sigma =
+      4 * generatedBourgainPiece2.k /
+        (2 * (1 + generatedBourgainPiece2.k) * sigma - 1 -
+          generatedBourgainPiece2.ell) := by
+  norm_num [bourgainPieceTwo, generatedBourgainPiece2,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 391 (2493 * sigma - 2014) (4 / 4595)
+    (by norm_num) using 1; ring
+
+theorem bourgainPieceThree_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceThree sigma =
+      4 * generatedBourgainPiece3.k /
+        (2 * (1 + generatedBourgainPiece3.k) * sigma - 1 -
+          generatedBourgainPiece3.ell) := by
+  norm_num [bourgainPieceThree, generatedBourgainPiece3,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 22232 (163248 * sigma - 134765) (1 / 76066)
+    (by norm_num) using 1; ring
+
+theorem bourgainPieceFour_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceFour sigma =
+      4 * generatedBourgainPiece4.k /
+        (2 * (1 + generatedBourgainPiece4.k) * sigma - 1 -
+          generatedBourgainPiece4.ell) := by
+  norm_num [bourgainPieceFour, generatedBourgainPiece4,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 356 (2742 * sigma - 2279) (1 / 1282)
+    (by norm_num) using 1; ring
+
+theorem bourgainPieceFive_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceFive sigma =
+      4 * generatedBourgainPiece5.k /
+        (2 * (1 + generatedBourgainPiece5.k) * sigma - 1 -
+          generatedBourgainPiece5.ell) := by
+  norm_num [bourgainPieceFive, generatedBourgainPiece5,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 2609588 (20732766 * sigma - 17313767)
+    (1 / 9713986) (by norm_num) using 1; ring
+
+theorem bourgainPieceSix_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceSix sigma =
+      4 * generatedBourgainPiece6.k /
+        (2 * (1 + generatedBourgainPiece6.k) * sigma - 1 -
+          generatedBourgainPiece6.ell) := by
+  norm_num [bourgainPieceSix, generatedBourgainPiece6,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 75872 (729216 * sigma - 625653) (1 / 345640)
+    (by norm_num) using 1; ring
+
+theorem bourgainPieceSeven_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceSeven sigma =
+      4 * generatedBourgainPiece7.k /
+        (2 * (1 + generatedBourgainPiece7.k) * sigma - 1 -
+          generatedBourgainPiece7.ell) := by
+  norm_num [bourgainPieceSeven, generatedBourgainPiece7,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 288 (3616 * sigma - 3197) (1 / 1736)
+    (by norm_num) using 1; ring
+
+theorem bourgainPieceEight_eq_candidateFormula (sigma : ℝ) :
+    bourgainPieceEight sigma =
+      4 * generatedBourgainPiece8.k /
+        (2 * (1 + generatedBourgainPiece8.k) * sigma - 1 -
+          generatedBourgainPiece8.ell) := by
+  norm_num [bourgainPieceEight, generatedBourgainPiece8,
+    RationalAffineFraction.eval]
+  convert div_eq_scaled_div 86152 (1447460 * sigma - 1311509) (1 / 702192)
+    (by norm_num) using 1; ring
 
 /-- Consecutive optimized Bourgain pieces agree at all seven exact rational
 crossover points. -/
@@ -49,7 +137,11 @@ theorem optimizedBourgain_endpoint_agreement :
       bourgainPieceEight (5857 / 6032) := by
   norm_num [bourgainPieceOne, bourgainPieceTwo, bourgainPieceThree,
     bourgainPieceFour, bourgainPieceFive, bourgainPieceSix,
-    bourgainPieceSeven, bourgainPieceEight]
+    bourgainPieceSeven, bourgainPieceEight, generatedBourgainPiece1,
+    generatedBourgainPiece2, generatedBourgainPiece3,
+    generatedBourgainPiece4, generatedBourgainPiece5,
+    generatedBourgainPiece6, generatedBourgainPiece7,
+    generatedBourgainPiece8, RationalAffineFraction.eval]
 
 /-- The eight source intervals cover exactly `(3/4, 1)`, with each internal
 endpoint owned by the piece on its left. -/

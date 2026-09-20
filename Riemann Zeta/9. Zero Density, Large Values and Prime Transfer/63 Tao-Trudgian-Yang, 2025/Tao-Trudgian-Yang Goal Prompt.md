@@ -145,7 +145,11 @@ TaoTrudgianYang2025/
   ImprovedBourgainDensity.lean
   BourgainOptimizedDensity.lean
   AdditiveEnergy.lean
+  EnergyExponents.lean
+  ZeroEnergyMultiplicity.lean
   EnergyRegions.lean
+  EnergyRegionAsymptotics.lean
+  EnergyBoundAsymptotics.lean
   EnergyPowering.lean
   HeathBrownEnergyRelation.lean
   EnergyCertificates.lean

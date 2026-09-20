@@ -32,8 +32,14 @@ reflection, phase, norm, threshold, and epsilon-loss conversions, together
 with unit-tolerance indexed-
 multiset energy and its quadratic/cubic bounds. These bounds now induce the
 extended-real general and zeta exponent comparisons `2LV ≤ LV* ≤ 3LV`, even
-at infinite infima. The non-asymptotic energy regions also imply the necessary
-`ρ ≤ τ` and `2ρ ≤ ρ* ≤ 3ρ` constraints. The
+at infinite infima, together with the unconditional zero-density comparison
+`2A ≤ A* ≤ 4A` and the sharp source-range comparison `2A ≤ A* ≤ 3A` for
+`1/2 < σ`. The upper factor three follows from a uniform local-multiplicity
+bound for the full symmetric zero rectangle: positive ordinates use the
+Jensen cap, negative ordinates use conjugation, and bounded heights use a
+fixed zero count. The non-asymptotic energy regions imply the necessary
+`ρ ≤ τ` and `2ρ ≤ ρ* ≤ 3ρ` constraints, and their general/zeta energy-coordinate
+suprema are proved bounded above by the corresponding `LV*` exponents. The
 remaining checklist items are open; none of the advertised
 paper outputs is complete.
 
@@ -64,7 +70,13 @@ Guth--Maynard tree is high risk.
 **Core acceptance test complete (EPZAE-03--05).** Exact denominator signs for
 all displayed output formulas, generic envelope/polyhedral soundness, and the
 optimized Bourgain endpoint/coverage certificates are kernel-checked. The
-deterministic generator remains separate work under EPZAE-06.
+deterministic generator now extracts the four new-pair coordinates, derives
+the complete eight-piece Bourgain rational table from the frozen driver, and
+normalizes all nine public energy-clause tables from the frozen blueprint. Its
+remaining EPZAE-06 work is the underlying energy-projection witness set and a
+pinned run of the archived Python stack. `EnergyCertificates.lean` consumes
+the emitted clauses and kernel-checks interval ordering and denominator
+positivity for every rational function.
 
 Build reusable, domain-independent machinery for:
 
@@ -154,9 +166,55 @@ zeta-specific large-value inputs remain under EPZAE-18--19 and EPZAE-21.
 7. Turn every polyhedral projection used by `Add-est` into an exact certificate.
 8. Prove all nine clauses and their interval endpoints.
 
+The reverse zero-energy comparison `A* ≤ 3A` is now kernel-checked on the
+source range `1/2 < σ`. Its uniform local-multiplicity bridge covers the full
+symmetric paper rectangle `|Im ρ| ≤ T`: it applies the Guth--Maynard Jensen cap
+on positive unit bins, transfers negative bins by multiplicity-preserving
+conjugation, and absorbs bounded-low-height zeros into a fixed count. The
+source-facing unbounded-family energy regions are now proved equivalent to
+their fully quantified non-asymptotic forms. The general, zeta-restricted, and
+zero-density energy-bound predicates likewise have proved asymptotic/
+non-asymptotic equivalences. `EnergyRegionSupremum` completes EPZAE-32:
+failure of a uniform bound produces a bounded logarithmic counterexample
+family, one common subsequence supplies all three auxiliary exponents, and
+both the general and zeta energy exponents equal their feasible-region
+suprema on the source domain.
+
 The additive-energy section has the highest semantic risk because informal
 subsequence selection can silently identify witnesses that the paper
 explicitly warns may differ.
+
+EPZAE-33 now has a kernel-checked bounded-perturbation core.  Pointwise
+displacement by `d` maps every tolerance-`r` relation to a tolerance-`r+4d`
+relation on the same index type, and its zero-specific corollary keeps the
+full `ZeroCopy` analytic multiplicity.  `ToleranceNormalization` now proves
+that tolerance-`R` indexed energy is at most `(4 * ceil R + 6)` times unit
+energy, and `zeroAdditiveEnergy_le_mul_perturbed_unit` combines the two steps
+without changing the multiplicity index.  `ZeroEnergyTypeI` additionally lifts
+the native Guth--Maynard beta-dependence-removal theorem to every analytic-
+multiplicity copy of every Type I zero: `typeIZeroCopy_exists_shifted_detector`
+selects a nearby ordinate with the actual detector lower bound, and
+`typeIZeroAdditiveEnergy_le_shifted_detector_energy` returns the resulting
+energy to unit tolerance.  `EnergyPartition` proves the separation-free,
+indexed mixed-to-self inequality and the four-coordinate finite-coloring
+theorem `exists_energy_color_classes`.  The specialized theorem
+`typeIZeroAdditiveEnergy_le_detector_scale_class_energies` now combines these
+steps: the actual Type I zero energy is controlled by four single-scale
+detector-class energies with explicit tolerance and fourth-power scale-count
+losses.  `EnergySeparation` further colors by unit-bin parity and rank.
+`typeIZeroCopy_shifted_unitBin_card_le` identifies copy occupancy with the
+analytic-multiplicity sum and applies the native Jensen/finite-covering bound;
+the composed theorem
+`typeIZeroAdditiveEnergy_le_separated_detector_scale_class_energies` therefore
+produces four one-separated single-scale classes without discarding a copy.
+`DetectorPattern` normalizes the native half-open detector on closed support,
+proves its exact phase-sum identity, and constructs a `LargeValuePattern` from
+every inhabited class.  `finsetAdditiveEnergy_image_eq` proves that the image
+finset retains the complete indexed energy, while
+`typeIDetectorClass_energy_eq_zero_or_exists_pattern` handles empty classes
+without a spurious scale.  Proving that the coefficient normalizer is
+subpower, applying the `LV*` bound, the Type II transfer, and the final dyadic
+assembly needed to finish `zeroe-from-large` remain open.
 
 ## Phase 6: release integration
 

@@ -84,4 +84,55 @@ theorem LargeValuePattern.ordinate_card_cast_le
     oneSeparated_card_cast_le_interval_length_add_one P.ordinates
       P.ordinates_oneSeparated hlength P.ordinates_in_interval
 
+/-- The stored support is exactly the natural dyadic interval determined by
+the integral scale. -/
+theorem LargeValuePattern.indices_eq_dyadicInterval
+    (P : LargeValuePattern) :
+    P.indices = Finset.Icc P.scale (2 * P.scale) := by
+  ext n
+  rw [P.mem_indices_iff, P.N_eq_scale]
+  simp only [Finset.mem_Icc]
+  norm_cast
+
+/-- Every index in a large-value pattern is positive. -/
+theorem LargeValuePattern.index_pos
+    (P : LargeValuePattern) {n : ℕ} (hn : n ∈ P.indices) :
+    0 < n := by
+  have hnLower := (P.mem_indices_iff n).mp hn |>.1
+  have hNPos : 0 < P.N := lt_trans zero_lt_one P.one_lt_N
+  exact_mod_cast lt_of_lt_of_le hNPos hnLower
+
+/-- The dyadic support contains exactly `scale + 1` natural numbers. -/
+theorem LargeValuePattern.indices_card (P : LargeValuePattern) :
+    P.indices.card = P.scale + 1 := by
+  rw [P.indices_eq_dyadicInterval]
+  simp
+  omega
+
+/-- The real scale is bounded by the support cardinality. -/
+theorem LargeValuePattern.N_le_indices_card_cast (P : LargeValuePattern) :
+    P.N ≤ (P.indices.card : ℝ) := by
+  rw [P.indices_card, Nat.cast_add, Nat.cast_one, P.N_eq_scale]
+  linarith
+
+/-- The support cardinality is at most twice the real scale. -/
+theorem LargeValuePattern.indices_card_cast_le_two_mul_N
+    (P : LargeValuePattern) :
+    (P.indices.card : ℝ) ≤ 2 * P.N := by
+  rw [P.indices_card, Nat.cast_add, Nat.cast_one, P.N_eq_scale]
+  have h : (1 : ℝ) < P.scale := by simpa [P.N_eq_scale] using P.one_lt_N
+  linarith
+
+/-- The unweighted Dirichlet phase has unit norm on the dyadic support. -/
+theorem LargeValuePattern.norm_dirichletPhase
+    (P : LargeValuePattern) {n : ℕ} (hn : n ∈ P.indices) (t : ℝ) :
+    ‖dirichletPhase n t‖ = 1 := by
+  simpa [dirichletPhase] using
+    Complex.norm_natCast_cpow_of_pos (P.index_pos hn)
+      (-(Complex.I * (t : ℂ)))
+
+/-- At zero frequency every unweighted Dirichlet phase is one. -/
+theorem dirichletPhase_zero (n : ℕ) : dirichletPhase n 0 = 1 := by
+  simp [dirichletPhase]
+
 end TaoTrudgianYang2025

@@ -9,8 +9,9 @@ estimates: a systematic approach*, arXiv `2501.16779v1` (2025).
 certificate kernel, analytic exponent-pair semantics, exact Guth--Maynard
 large-value bridge, and additive-energy foundations are installed and pass
 the principal runner. The energy layer includes the extended-real general
-and zeta comparisons `2LV ≤ LV* ≤ 3LV` and the corresponding necessary region
-constraints. No advertised theorem from the paper is claimed
+and zeta comparisons `2LV ≤ LV* ≤ 3LV`, the necessary region constraints,
+and exact general/zeta feasible-region supremum characterizations on the
+source domain. No advertised theorem from the paper is claimed
 formalized yet; the four exponent pairs, density bounds, and energy bounds
 still require their analytic derivations.
 
@@ -75,12 +76,31 @@ graph.
 ## Current implementation frontier
 
 EPZAE-00--05, EPZAE-07--08, EPZAE-16--17, EPZAE-20, EPZAE-22--23,
-EPZAE-25, and EPZAE-31 are complete. The next analytic
+EPZAE-25, and EPZAE-31--32 are complete. EPZAE-33 now includes a
+multiplicity-safe bounded-perturbation theorem, an explicit return from
+arbitrary tolerance to unit energy, and a lift of the native Guth--Maynard
+Type I beta-removal detector to every analytic-multiplicity copy. Its new
+indexed mixed-energy and four-coordinate coloring theorems reduce the Type I
+energy to four actual single-scale detector classes with explicit losses.
+`EnergySeparation` now refines those colors by unit-bin parity and local rank;
+the native Jensen bound controls the number of rank colors, and
+`typeIZeroAdditiveEnergy_le_separated_detector_scale_class_energies` produces
+four multiplicity-safe, one-separated, single-scale detector classes.
+`DetectorPattern` now normalizes the native coefficients on the exact closed
+dyadic support and packages every inhabited class as a `LargeValuePattern`;
+`finsetAdditiveEnergy_image_eq` proves that this passage preserves the indexed
+energy exactly. The remaining Type I work is a subpower bound for the detector
+normalization and application of the `LV*` estimate; Type II transfer and
+final assembly also remain open.
+The next exponent-pair analytic
 frontier is EPZAE-09: the remaining endpoint/reflection and converse direction
 of beta/exponent-pair duality.
-The initial deterministic certificate extractor is in the principal runner;
-EPZAE-06 remains open until it reproduces every optimization witness rather
-than only the four output coordinates.
+The deterministic certificate extractor in the principal runner now
+reproduces the four output coordinates, derives the paper's complete
+eight-piece Bourgain rational table, and extracts all nine public
+additive-energy clause tables from the frozen blueprint. EPZAE-06 remains open
+until it also reproduces every underlying energy-projection witness and the
+archived Python environment is pinned.
 
 ## Non-claims
 

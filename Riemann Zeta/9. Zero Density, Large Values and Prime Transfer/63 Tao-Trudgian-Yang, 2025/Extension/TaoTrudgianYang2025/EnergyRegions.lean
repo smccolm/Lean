@@ -18,6 +18,78 @@ def doubleZetaSum (P : LargeValuePattern) : ℝ :=
   ∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
     ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖ ^ 2
 
+/-- The unweighted Dirichlet polynomial is the support cardinality on the
+diagonal. -/
+theorem LargeValuePattern.phaseSum_zero (P : LargeValuePattern) :
+    ∑ n ∈ P.indices, dirichletPhase n 0 = (P.indices.card : ℂ) := by
+  simp [dirichletPhase_zero]
+
+/-- Triangle-inequality control of the unweighted Dirichlet polynomial. -/
+theorem LargeValuePattern.norm_phaseSum_le (P : LargeValuePattern) (t : ℝ) :
+    ‖∑ n ∈ P.indices, dirichletPhase n t‖ ≤ P.indices.card := by
+  calc
+    ‖∑ n ∈ P.indices, dirichletPhase n t‖ ≤
+        ∑ n ∈ P.indices, ‖dirichletPhase n t‖ := norm_sum_le _ _
+    _ = ∑ _n ∈ P.indices, (1 : ℝ) := by
+      apply Finset.sum_congr rfl
+      intro n hn
+      exact P.norm_dirichletPhase hn t
+    _ = P.indices.card := by simp
+
+/-- The double zeta sum is nonnegative. -/
+theorem doubleZetaSum_nonneg (P : LargeValuePattern) :
+    0 ≤ doubleZetaSum P := by
+  unfold doubleZetaSum
+  positivity
+
+/-- The diagonal pairs give a cardinality lower bound for the double zeta
+sum. -/
+theorem doubleZetaSum_diagonal_lower (P : LargeValuePattern) :
+    (P.ordinates.card : ℝ) * (P.indices.card : ℝ) ^ 2 ≤
+      doubleZetaSum P := by
+  have hdiag (t : ℝ) (ht : t ∈ P.ordinates) :
+      (P.indices.card : ℝ) ^ 2 ≤
+        ∑ u ∈ P.ordinates,
+          ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖ ^ 2 := by
+    have hterm :
+        ‖∑ n ∈ P.indices, dirichletPhase n (t - t)‖ ^ 2 =
+          (P.indices.card : ℝ) ^ 2 := by
+      rw [sub_self, P.phaseSum_zero]
+      simp
+    rw [← hterm]
+    exact Finset.single_le_sum
+      (fun u hu => sq_nonneg
+        ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖) ht
+  unfold doubleZetaSum
+  calc
+    (P.ordinates.card : ℝ) * (P.indices.card : ℝ) ^ 2 =
+        ∑ _t ∈ P.ordinates, (P.indices.card : ℝ) ^ 2 := by simp
+    _ ≤ ∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
+        ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖ ^ 2 := by
+      exact Finset.sum_le_sum fun t ht => hdiag t ht
+
+/-- Applying the triangle inequality termwise gives a polynomial upper bound
+for the double zeta sum. -/
+theorem doubleZetaSum_card_upper (P : LargeValuePattern) :
+    doubleZetaSum P ≤
+      (P.ordinates.card : ℝ) ^ 2 * (P.indices.card : ℝ) ^ 2 := by
+  have hterm (t u : ℝ) :
+      ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖ ^ 2 ≤
+        (P.indices.card : ℝ) ^ 2 := by
+    have h := P.norm_phaseSum_le (t - u)
+    nlinarith [norm_nonneg (∑ n ∈ P.indices, dirichletPhase n (t - u))]
+  unfold doubleZetaSum
+  calc
+    ∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
+        ‖∑ n ∈ P.indices, dirichletPhase n (t - u)‖ ^ 2 ≤
+        ∑ _t ∈ P.ordinates, ∑ _u ∈ P.ordinates,
+          (P.indices.card : ℝ) ^ 2 := by
+      exact Finset.sum_le_sum fun t _ =>
+        Finset.sum_le_sum fun u _ => hterm t u
+    _ = (P.ordinates.card : ℝ) ^ 2 * (P.indices.card : ℝ) ^ 2 := by
+      simp
+      ring
+
 /-- Non-asymptotic membership in the paper's five-dimensional region `E`.
 The source TeX leaves `δ` unbound in clause (ii); the required meaning is
 arbitrary positive approximation radius, made explicit here. -/
@@ -330,6 +402,120 @@ theorem InLargeValueEnergyRegion.rho_le_tau
     Real.rpow_lt_rpow_of_exponent_lt P.one_lt_N hExponentStrict
   exact (not_lt_of_ge hPowerOrder) hPowerStrict
 
+/-- The diagonal contribution to the double zeta sum forces
+`ρ + 2 ≤ s`. -/
+theorem InLargeValueEnergyRegion.rho_add_two_le_s
+    {σ τ ρ ρstar s : ℝ}
+    (h : InLargeValueEnergyRegion σ τ ρ ρstar s) :
+    ρ + 2 ≤ s := by
+  by_contra hcontra
+  have hgap : 0 < ρ + 2 - s := sub_pos.mpr (lt_of_not_ge hcontra)
+  let ε : ℝ := (ρ + 2 - s) / 3
+  have hε : 0 < ε := div_pos hgap (by norm_num)
+  obtain ⟨P, hP⟩ := h.2.2.2.2.2 ε hε 1 zero_lt_one 1 zero_lt_one
+  rcases hP with
+    ⟨_, _, _, _, _, hCardLower, _, _, _, _, hSumUpper⟩
+  have hDiagonal := doubleZetaSum_diagonal_lower P
+  have hIndexSquare : P.N ^ 2 ≤
+      (P.indices.card : ℝ) ^ 2 := by
+    nlinarith [P.N_le_indices_card_cast]
+  have hPowerOrder : P.N ^ (ρ + 2 - ε) ≤ P.N ^ (s + ε) := by
+    calc
+      P.N ^ (ρ + 2 - ε) =
+          P.N ^ (ρ - ε) * P.N ^ 2 := by
+        rw [show ρ + 2 - ε = (ρ - ε) + 2 by ring,
+          Real.rpow_add (lt_trans zero_lt_one P.one_lt_N), Real.rpow_two]
+      _ ≤ (P.ordinates.card : ℝ) * (P.indices.card : ℝ) ^ 2 := by
+        exact mul_le_mul hCardLower hIndexSquare
+          (sq_nonneg P.N)
+          (Nat.cast_nonneg _)
+      _ ≤ doubleZetaSum P := hDiagonal
+      _ ≤ P.N ^ (s + ε) := hSumUpper
+  have hExponentStrict : s + ε < ρ + 2 - ε := by
+    dsimp [ε]
+    linarith
+  have hPowerStrict :=
+    Real.rpow_lt_rpow_of_exponent_lt P.one_lt_N hExponentStrict
+  exact (not_lt_of_ge hPowerOrder) hPowerStrict
+
+/-- Termwise triangle inequality forces the complementary upper constraint
+`s ≤ 2ρ + 2`. -/
+theorem InLargeValueEnergyRegion.s_le_two_mul_rho_add_two
+    {σ τ ρ ρstar s : ℝ}
+    (h : InLargeValueEnergyRegion σ τ ρ ρstar s) :
+    s ≤ 2 * ρ + 2 := by
+  by_contra hcontra
+  have hgap : 0 < s - (2 * ρ + 2) := sub_pos.mpr (lt_of_not_ge hcontra)
+  let ε : ℝ := (s - (2 * ρ + 2)) / 5
+  have hε : 0 < ε := div_pos hgap (by norm_num)
+  let C : ℝ := max 1 (4 ^ (1 / ε : ℝ))
+  have hC : 0 < C := lt_of_lt_of_le zero_lt_one (le_max_left _ _)
+  obtain ⟨P, hP⟩ := h.2.2.2.2.2 ε hε 1 zero_lt_one C hC
+  rcases hP with
+    ⟨hNLower, _, _, _, _, _, hCardUpper, _, _, hSumLower, _⟩
+  have hSumBound := doubleZetaSum_card_upper P
+  have hFourBase : 4 ^ (1 / ε : ℝ) ≤ P.N :=
+    (le_max_right _ _).trans hNLower
+  have hFour : (4 : ℝ) ≤ P.N ^ ε := by
+    calc
+      (4 : ℝ) = 4 ^ (1 : ℝ) := (Real.rpow_one 4).symm
+      _ = 4 ^ ((1 / ε) * ε) := by
+        congr 1
+        field_simp
+      _ = (4 ^ (1 / ε : ℝ)) ^ ε :=
+        Real.rpow_mul (by norm_num : (0 : ℝ) ≤ 4) _ _
+      _ ≤ P.N ^ ε := Real.rpow_le_rpow (by positivity) hFourBase hε.le
+  have hCardSquare : (P.ordinates.card : ℝ) ^ 2 ≤
+      (P.N ^ (ρ + ε)) ^ 2 := by
+    exact (sq_le_sq₀ (Nat.cast_nonneg P.ordinates.card)
+      (Real.rpow_nonneg (zero_le_one.trans P.one_lt_N.le) (ρ + ε))).2
+        hCardUpper
+  have hIndexSquare : (P.indices.card : ℝ) ^ 2 ≤
+      4 * P.N ^ 2 := by
+    have hi := P.indices_card_cast_le_two_mul_N
+    calc
+      (P.indices.card : ℝ) ^ 2 ≤ (2 * P.N) ^ 2 :=
+        (sq_le_sq₀ (Nat.cast_nonneg P.indices.card)
+          (mul_nonneg (by norm_num) (zero_le_one.trans P.one_lt_N.le))).2 hi
+      _ = 4 * P.N ^ 2 := by ring
+  have hPowerSquare : (P.N ^ (ρ + ε)) ^ 2 =
+      P.N ^ (2 * (ρ + ε)) := by
+    have hNNonneg : 0 ≤ P.N := P.one_lt_N.le.trans' zero_le_one
+    calc
+      (P.N ^ (ρ + ε)) ^ 2 = P.N ^ ((ρ + ε) * (2 : ℝ)) := by
+        rw [Real.rpow_mul hNNonneg]
+        exact (Real.rpow_natCast (P.N ^ (ρ + ε)) 2).symm
+      _ = P.N ^ (2 * (ρ + ε)) := by ring_nf
+  have hPowerOrder : P.N ^ (s - ε) ≤ P.N ^ (2 * ρ + 2 + 3 * ε) := by
+    calc
+      P.N ^ (s - ε) ≤ doubleZetaSum P := hSumLower
+      _ ≤ (P.ordinates.card : ℝ) ^ 2 *
+          (P.indices.card : ℝ) ^ 2 := hSumBound
+      _ ≤ (P.N ^ (ρ + ε)) ^ 2 * (4 * P.N ^ 2) := by
+        exact mul_le_mul hCardSquare hIndexSquare (sq_nonneg _)
+          (sq_nonneg _)
+      _ = 4 * (P.N ^ (2 * (ρ + ε)) * P.N ^ 2) := by
+        rw [hPowerSquare]
+        ring
+      _ ≤ P.N ^ ε *
+          (P.N ^ (2 * (ρ + ε)) * P.N ^ 2) := by
+        exact mul_le_mul_of_nonneg_right hFour
+          (mul_nonneg
+            (Real.rpow_nonneg (zero_le_one.trans P.one_lt_N.le) _)
+            (sq_nonneg P.N))
+      _ = P.N ^ (2 * ρ + 2 + 3 * ε) := by
+        rw [← Real.rpow_natCast P.N 2]
+        rw [← Real.rpow_add (lt_trans zero_lt_one P.one_lt_N),
+          ← Real.rpow_add (lt_trans zero_lt_one P.one_lt_N)]
+        congr 1
+        ring
+  have hExponentStrict : 2 * ρ + 2 + 3 * ε < s - ε := by
+    dsimp [ε]
+    linarith
+  have hPowerStrict :=
+    Real.rpow_lt_rpow_of_exponent_lt P.one_lt_N hExponentStrict
+  exact (not_lt_of_ge hPowerOrder) hPowerStrict
+
 theorem InZetaLargeValueEnergyRegion.two_mul_rho_le_rhoStar
     {σ τ ρ ρstar s : ℝ}
     (h : InZetaLargeValueEnergyRegion σ τ ρ ρstar s) :
@@ -347,5 +533,58 @@ theorem InZetaLargeValueEnergyRegion.rho_le_tau
     (h : InZetaLargeValueEnergyRegion σ τ ρ ρstar s) :
     ρ ≤ τ :=
   h.toGeneral.rho_le_tau
+
+theorem InZetaLargeValueEnergyRegion.rho_add_two_le_s
+    {σ τ ρ ρstar s : ℝ}
+    (h : InZetaLargeValueEnergyRegion σ τ ρ ρstar s) :
+    ρ + 2 ≤ s :=
+  h.toGeneral.rho_add_two_le_s
+
+theorem InZetaLargeValueEnergyRegion.s_le_two_mul_rho_add_two
+    {σ τ ρ ρstar s : ℝ}
+    (h : InZetaLargeValueEnergyRegion σ τ ρ ρstar s) :
+    s ≤ 2 * ρ + 2 :=
+  h.toGeneral.s_le_two_mul_rho_add_two
+
+/-- The extended-real supremum of energy coordinates occurring in the
+general feasible region at fixed `(σ,τ)`. -/
+noncomputable def largeValueEnergyRegionSupremum (σ τ : ℝ) : EReal :=
+  sSup (((fun ρstar : ℝ => (ρstar : EReal)) ''
+    {ρstar : ℝ | ∃ ρ s : ℝ,
+      InLargeValueEnergyRegion σ τ ρ ρstar s}) : Set EReal)
+
+/-- The extended-real supremum of energy coordinates occurring in the zeta
+feasible region at fixed `(σ,τ)`. -/
+noncomputable def zetaLargeValueEnergyRegionSupremum (σ τ : ℝ) : EReal :=
+  sSup (((fun ρstar : ℝ => (ρstar : EReal)) ''
+    {ρstar : ℝ | ∃ ρ s : ℝ,
+      InZetaLargeValueEnergyRegion σ τ ρ ρstar s}) : Set EReal)
+
+/-- Every feasible-region energy coordinate is controlled by every uniform
+energy bound, hence the region supremum is at most `LV*`. -/
+theorem largeValueEnergyRegionSupremum_le_largeValueEnergyExponent
+    (σ τ : ℝ) :
+    largeValueEnergyRegionSupremum σ τ ≤
+      largeValueEnergyExponent σ τ := by
+  unfold largeValueEnergyRegionSupremum largeValueEnergyExponent
+  apply le_sInf
+  rintro x ⟨B, hB, rfl⟩
+  apply sSup_le
+  rintro y ⟨ρstar, ⟨ρ, s, hregion⟩, rfl⟩
+  exact EReal.coe_le_coe_iff.mpr
+    (hregion.rhoStar_le_of_energyBound hB)
+
+/-- The zeta feasible-region supremum is at most `LV*_ζ`. -/
+theorem zetaLargeValueEnergyRegionSupremum_le_zetaLargeValueEnergyExponent
+    (σ τ : ℝ) :
+    zetaLargeValueEnergyRegionSupremum σ τ ≤
+      zetaLargeValueEnergyExponent σ τ := by
+  unfold zetaLargeValueEnergyRegionSupremum zetaLargeValueEnergyExponent
+  apply le_sInf
+  rintro x ⟨B, hB, rfl⟩
+  apply sSup_le
+  rintro y ⟨ρstar, ⟨ρ, s, hregion⟩, rfl⟩
+  exact EReal.coe_le_coe_iff.mpr
+    (hregion.rhoStar_le_of_energyBound hB)
 
 end TaoTrudgianYang2025

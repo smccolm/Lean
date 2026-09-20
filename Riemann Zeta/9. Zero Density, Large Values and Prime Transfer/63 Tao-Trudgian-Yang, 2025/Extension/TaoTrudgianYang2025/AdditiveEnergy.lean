@@ -158,6 +158,64 @@ not introducing an arbitrary enumeration. -/
 noncomputable def finsetAdditiveEnergy (W : Finset ℝ) : ℕ :=
   approximateAdditiveEnergyOf 1 (fun t : ↥W ↦ (t : ℝ))
 
+/-- Enlarging the tolerance can only enlarge approximate additive energy. -/
+theorem approximateAdditiveEnergyOf_mono_tolerance
+    {ι : Type*} [Fintype ι] {r R : ℝ} (h : r ≤ R) (W : ι → ℝ) :
+    approximateAdditiveEnergyOf r W ≤ approximateAdditiveEnergyOf R W := by
+  classical
+  apply Finset.card_le_card
+  intro q hq
+  rw [Finset.mem_filter] at hq ⊢
+  exact ⟨Finset.mem_univ q, hq.2.trans h⟩
+
+private theorem abs_add_add_sub_sub_le
+    (a b c d : ℝ) :
+    |a + b - c - d| ≤ |a| + |b| + |c| + |d| := by
+  calc
+    |a + b - c - d| = |a + b + (-c) + (-d)| := by ring_nf
+    _ ≤ |a + b + (-c)| + |-d| := abs_add_le _ _
+    _ ≤ (|a + b| + |-c|) + |-d| := by gcongr; exact abs_add_le _ _
+    _ ≤ ((|a| + |b|) + |-c|) + |-d| := by gcongr; exact abs_add_le _ _
+    _ = |a| + |b| + |c| + |d| := by simp
+
+/-- Pointwise displacement by at most `d` sends every tolerance-`r`
+additive relation to a tolerance-`r + 4d` relation.  The index type is
+unchanged, so all multiplicities are retained exactly. -/
+theorem approximateAdditiveEnergyOf_perturbation_le
+    {ι : Type*} [Fintype ι] {r d : ℝ} {W W' : ι → ℝ}
+    (hpert : ∀ i, |W' i - W i| ≤ d) :
+    approximateAdditiveEnergyOf r W ≤
+      approximateAdditiveEnergyOf (r + 4 * d) W' := by
+  classical
+  apply Finset.card_le_card
+  intro q hq
+  rw [Finset.mem_filter] at hq ⊢
+  refine ⟨Finset.mem_univ q, ?_⟩
+  have hsource := hq.2
+  have herror :
+      |(W' (q 0) - W (q 0)) + (W' (q 1) - W (q 1)) -
+          (W' (q 2) - W (q 2)) - (W' (q 3) - W (q 3))| ≤
+        4 * d := by
+    calc
+      |(W' (q 0) - W (q 0)) + (W' (q 1) - W (q 1)) -
+          (W' (q 2) - W (q 2)) - (W' (q 3) - W (q 3))| ≤
+          |W' (q 0) - W (q 0)| + |W' (q 1) - W (q 1)| +
+            |W' (q 2) - W (q 2)| + |W' (q 3) - W (q 3)| :=
+        abs_add_add_sub_sub_le _ _ _ _
+      _ ≤ 4 * d := by
+        linarith [hpert (q 0), hpert (q 1), hpert (q 2), hpert (q 3)]
+  calc
+    |W' (q 0) + W' (q 1) - W' (q 2) - W' (q 3)| =
+        |(W (q 0) + W (q 1) - W (q 2) - W (q 3)) +
+          ((W' (q 0) - W (q 0)) + (W' (q 1) - W (q 1)) -
+            (W' (q 2) - W (q 2)) - (W' (q 3) - W (q 3)))| := by
+      congr 1
+      ring
+    _ ≤ |W (q 0) + W (q 1) - W (q 2) - W (q 3)| +
+        |(W' (q 0) - W (q 0)) + (W' (q 1) - W (q 1)) -
+          (W' (q 2) - W (q 2)) - (W' (q 3) - W (q 3))| := abs_add_le _ _
+    _ ≤ r + 4 * d := add_le_add hsource herror
+
 theorem approximateAdditiveEnergyOf_le_fourthPower
     {ι : Type*} [Fintype ι] (r : ℝ) (W : ι → ℝ) :
     approximateAdditiveEnergyOf r W ≤ Fintype.card ι ^ 4 := by
@@ -166,6 +224,71 @@ theorem approximateAdditiveEnergyOf_le_fourthPower
         (Finset.univ : Finset (AdditiveQuadrupleOf ι)).card := by
       exact Finset.card_filter_le _ _
     _ = Fintype.card ι ^ 4 := by simp [AdditiveQuadrupleOf]
+
+/-- If every tolerance-`r` interval contains at most `M` indexed values,
+then fixing the first three entries of an additive quadruple leaves at most
+`M` choices for the fourth. -/
+theorem approximateAdditiveEnergyOf_le_localMass_mul_cube
+    {ι : Type*} [Fintype ι] (r : ℝ) (W : ι → ℝ) (M : ℕ)
+    (hlocal : ∀ center : ℝ,
+      ((Finset.univ : Finset ι).filter fun i =>
+        |center - W i| ≤ r).card ≤ M) :
+    approximateAdditiveEnergyOf r W ≤ M * Fintype.card ι ^ 3 := by
+  classical
+  let good : Finset (AdditiveQuadrupleOf ι) :=
+    Finset.univ.filter fun q =>
+      |W (q 0) + W (q 1) - W (q 2) - W (q 3)| ≤ r
+  let project : AdditiveQuadrupleOf ι → ι × ι × ι :=
+    fun q => (q 0, q 1, q 2)
+  have hfiber : ∀ p ∈ good.image project,
+      (good.filter fun q => project q = p).card ≤ M := by
+    intro p hp
+    let fiber := good.filter fun q => project q = p
+    let lastIndex : AdditiveQuadrupleOf ι → ι := fun q => q 3
+    let center : ℝ := W p.1 + W p.2.1 - W p.2.2
+    have hlastInj : Set.InjOn lastIndex
+        (↑fiber : Set (AdditiveQuadrupleOf ι)) := by
+      intro q hq q' hq' hlast
+      have hqProject := (Finset.mem_filter.mp hq).2
+      have hq'Project := (Finset.mem_filter.mp hq').2
+      have hproject : project q = project q' :=
+        hqProject.trans hq'Project.symm
+      funext j
+      fin_cases j
+      · exact congrArg Prod.fst hproject
+      · exact congrArg (fun z => z.2.1) hproject
+      · exact congrArg (fun z => z.2.2) hproject
+      · exact hlast
+    have hsubset : fiber.image lastIndex ⊆
+        (Finset.univ : Finset ι).filter fun i =>
+          |center - W i| ≤ r := by
+      intro i hi
+      obtain ⟨q, hq, rfl⟩ := Finset.mem_image.mp hi
+      have hqGood := (Finset.mem_filter.mp
+        (Finset.mem_filter.mp hq).1).2
+      have hqProject := (Finset.mem_filter.mp hq).2
+      have h0 : q 0 = p.1 := congrArg Prod.fst hqProject
+      have h1 : q 1 = p.2.1 := congrArg (fun z => z.2.1) hqProject
+      have h2 : q 2 = p.2.2 := congrArg (fun z => z.2.2) hqProject
+      rw [Finset.mem_filter]
+      refine ⟨Finset.mem_univ _, ?_⟩
+      simpa only [center, h0, h1, h2] using hqGood
+    calc
+      fiber.card = (fiber.image lastIndex).card :=
+        (Finset.card_image_iff.mpr hlastInj).symm
+      _ ≤ ((Finset.univ : Finset ι).filter fun i =>
+          |center - W i| ≤ r).card := Finset.card_le_card hsubset
+      _ ≤ M := hlocal center
+  have hmain := Finset.card_le_mul_card_image good M hfiber
+  change good.card ≤ M * Fintype.card ι ^ 3
+  calc
+    good.card ≤ M * (good.image project).card := hmain
+    _ ≤ M * Fintype.card (ι × ι × ι) := by
+      gcongr
+      exact Finset.card_le_univ _
+    _ = M * Fintype.card ι ^ 3 := by
+      simp only [Fintype.card_prod]
+      ring
 
 theorem square_le_approximateAdditiveEnergyOf
     {ι : Type*} [Fintype ι] {r : ℝ} (hr : 0 ≤ r) (W : ι → ℝ) :
