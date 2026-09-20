@@ -603,6 +603,27 @@ example := optimizedBourgain_interval_cover
 example : InLargeValueEnergyRegion (3 / 4) 2 0 0 2 :=
   energyPowering_source_counterexample.1
 
+-- The repair keeps actual region membership and leaves the fifth exponent free.
+example : CardinalityEnergyPoweringWitnesses (3 / 4) 2 0 0 2 :=
+  singleton_cardinalityEnergyPoweringWitnesses _ _ _
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : CardinalityEnergyPoweringWitnesses (1 / 2) 0 0 0 3 :=
+  singleton_cardinalityEnergyPoweringWitnesses _ _ _
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : CardinalityEnergyPoweringWitnesses 1 2 0 0 4 :=
+  singleton_cardinalityEnergyPoweringWitnesses _ _ _
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (σ τ ρ energy : ℝ) (k : ℕ)
+    (h : CardinalityEnergyPoweringWitnesses σ τ ρ energy k)
+    (hHeathBrown : ∀ card e : ℝ,
+      InCardinalityEnergyRegion σ (τ / k) card e →
+        e ≤ heathBrownEnergyRHS σ (τ / k) card e) :
+    energy / k ≤ heathBrownEnergyRHS σ (τ / k) (ρ / k) (energy / k) :=
+  h.heathBrown_relation hHeathBrown
+
 example : ¬ ∃ ρ' ρstar' s' : ℝ,
     InLargeValueEnergyRegion (3 / 4) 1 ρ' ρstar' s' ∧ s' ≤ 1 := by
   rintro ⟨ρ', ρstar', s', hregion, hs⟩

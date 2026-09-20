@@ -14,12 +14,14 @@ certificates, but they may not serve as proof oracles.
 
 ## Frozen public theorem contract
 
-Implementation status note (20 September 2026): the supporting `power-energy`
-requirement in EPZAE-34 has a kernel-checked counterexample. See
-`Tao-Trudgian-Yang Energy Powering Obstruction.md`. The source statement and
-this completion contract remain unchanged pending owner authorization of a
-documented replacement. Do not attempt to discharge it with an assumption,
-an altered double-zeta-sum normalization, or a silently weakened conclusion.
+Authorized supporting-lemma correction (20 September 2026): preserve the
+kernel-checked counterexample to printed `power-energy` (Lemma 62), and
+replace EPZAE-34 with the cardinality/energy two-witness theorem specified
+below and in `Tao-Trudgian-Yang Energy Powering Repair.md`. Drop the false
+`s' ≤ s/k` restrictions and the third, `s`-preserving witness. This is an
+explicit correction to a supporting lemma, not to the advertised outputs.
+Keep the original paper, the definitions of `S` and `E`, and the
+counterexample unchanged. All public theorem statements below remain frozen.
 
 The release layer must expose source-facing theorems for the following labels.
 
@@ -79,13 +81,38 @@ The release outputs require faithful formal versions of:
 - zero-density exponents and the Type I/Type II transfer from large values;
 - the Bourgain zero-density theorem and its admissibility side conditions;
 - additive energy, `LV*`, `LV*_zeta`, the five-dimensional energy regions,
-  energy powering, and the Heath--Brown relation; and
+  the corrected cardinality/energy powering theorem, and the Heath--Brown
+  relation; and
 - exact rational/polyhedral optimization certificates for every final
   envelope and interval split.
 
 An upstream theorem may be imported only after its quantifiers, interval
 conventions, coefficient normalization, sign convention, epsilon losses, and
 constant dependencies are matched by a proved bridge.
+
+### Corrected EPZAE-34 contract
+
+Define `E₄(σ,τ,ρ,e) := ∃ s, E(σ,τ,ρ,e,s)`. For every fixed integer
+`k ≥ 1` and every `E₄(σ,τ,ρ,e)`, prove:
+
+```text
+∃ eCard, E₄(σ, τ/k, ρ/k, eCard) ∧ eCard ≤ e/k;
+∃ rEnergy, E₄(σ, τ/k, rEnergy, e/k) ∧ rEnergy ≤ ρ/k.
+```
+
+These are two potentially different witnesses. Their existential fifth
+coordinates have no asserted relation to the input `s` or to `s/k`.
+The full Lean target is `CorrectedCardinalityEnergyPowering`; its current
+definition is a statement, not a proof. Derive the witnesses from actual
+powered Dirichlet polynomials, uniform coefficient normalization, finite
+cardinality/energy selection, and subsequence limits. Do not assume them.
+
+Use the cardinality witness for large-value constraints and the energy
+witness for the Heath--Brown relation, whose right side is nondecreasing
+in cardinality and independent of `s`. Feed those justified constraints
+into exact energy optimization and the nine unchanged `Add-est` clauses.
+Do not infer arbitrary polytope closure or use any scaled `s` constraint.
+Keep `energyPowering_source_counterexample` as a permanent audited regression.
 
 ## Source and dependency boundary
 
@@ -158,6 +185,7 @@ TaoTrudgianYang2025/
   EnergyRegionAsymptotics.lean
   EnergyBoundAsymptotics.lean
   EnergyPowering.lean
+  EnergyPoweringObstruction.lean
   HeathBrownEnergyRelation.lean
   EnergyCertificates.lean
   NewAdditiveEnergy.lean
@@ -219,7 +247,13 @@ A release may be called complete only when all of the following pass:
    reproduction manifest state the same completion status; and
 10. semantic regression tests verify zero-count conventions, interval
     endpoints, multiplicity, epsilon-loss quantifiers, convex-hull membership,
-    and every piecewise crossover.
+    and every piecewise crossover;
+11. the corrected two-witness powering theorem is proved on its full domain,
+    and every powered optimization constraint is justified without the false
+    fifth-coordinate scaling; and
+12. the original Lemma 62 counterexample remains imported, explicitly audited,
+    and covered by `run_tao_trudgian_yang_build.bat`, alongside the repaired
+    theorem and its downstream consumers.
 
 Until then, use the status terms **planned**, **defined/stated**,
 **conditionally proved**, or **kernel-checked helper** as appropriate. Do not

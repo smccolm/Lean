@@ -36,8 +36,12 @@ flowchart TD
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]
     ET["EPZAE-33 energy transfer<br/>zeroe-from-large source inequality DONE;<br/>actual Type-I/II + multiplicities DONE;<br/>symmetric rectangle + sup/limsup DONE;<br/>bounded-range corollary OPEN"]
-    PW["EPZAE-34 three-witness powering<br/>SOURCE STATEMENT DISPROVED;<br/>kernel-checked singleton counterexample;<br/>correction authorization required"]
+    PL62["Printed Lemma 62: DISPROVED<br/>kernel-checked counterexample PRESERVED"]
+    PW["EPZAE-34 corrected cardinality/energy powering<br/>two-witness target STATED;<br/>finite energy selection CHECKED;<br/>general analytic proof OPEN"]
+    PWC["EPZAE-34 cardinality witness<br/>rho/k exact; energy at most rho-star/k;<br/>independent existential sCard; OPEN"]
+    PWE["EPZAE-34 energy witness<br/>rho-star/k exact; cardinality at most rho/k;<br/>independent existential sEnergy; OPEN"]
     HBE["EPZAE-35 Heath--Brown energy relation<br/>OPEN"]
+    HBA["EPZAE-34/35 powered Heath--Brown application<br/>s-free monotone consumer CHECKED;<br/>analytic inputs OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>OPEN"]
     NAE["EPZAE-37 nine new additive-energy bounds<br/>OPEN"]
 
@@ -99,14 +103,20 @@ flowchart TD
     AE --> ER
     ER --> ET
     ER --> PW
-    PW -. "valid replacement needed for bounded-range corollary" .-> ET
+    PL62 -. "authorized repair: remove false s scaling" .-> PW
+    PW --> PWC
+    PW --> PWE
+    PWC -->|cardinality constraints| EC
+    PWE -. "bounded-range energy reduction" .-> ET
+    PWE --> HBA
     ZCB --> ET
     ZLV --> ET
     SRC --> HBE
     ER --> HBE
+    HBE --> HBA
     RC --> EC
     ET --> EC
-    HBE --> EC
+    HBA --> EC
     EC --> NAE
 
     NEP --> PUB
@@ -122,6 +132,8 @@ flowchart TD
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
     classDef done fill:#d9f2df,stroke:#26753a,color:#123d1e,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
+    classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
     class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER done;
-    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PW,HBE,EC,NAE,PUB,SEM,REL open;
+    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PW,PWC,PWE,HBE,HBA,EC,NAE,PUB,SEM,REL open;
+    class PL62 preserved;

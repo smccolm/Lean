@@ -26,6 +26,9 @@ Installed and planned tools:
   its inventory now rejects unlisted Lean files and production modules absent
   from the root imports, and its warning gate covers filename-prefixed Lean
   diagnostics as well as bare warning lines;
+  both the preserved `EnergyPoweringObstruction` and the new `EnergyPowering`
+  specification/consumer module are in its production inventory, and both
+  obstruction and repair reports are required project files;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
 

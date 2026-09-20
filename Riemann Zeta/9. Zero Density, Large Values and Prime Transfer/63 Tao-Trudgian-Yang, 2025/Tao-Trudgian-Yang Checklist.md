@@ -126,19 +126,28 @@ additive energy**, the three output families covered by the paper.
   itself, with the exact source domain and no extra mathematical hypothesis.
   This checklist item remains open for `zeroe-large-cor-0`, including its
   bounded-scale reduction and the stated lower zeta endpoint `2`.
-- [ ] **EPZAE-34 -- Energy powering.** The source's three possibly different
-  output witnesses are formalized without strengthening them into one witness.
-  **Source obstruction:** this acceptance statement is false as printed.
-  `energyPowering_source_counterexample` proves that `(3/4,2,0,0,2)` is
-  an actual region point, but no output with `s' ≤ 2/2` exists because every
-  region point has `s' ≥ 2`. See the Energy Powering Obstruction document.
-  The requirement is retained pending authorization of a documented correction;
-  a checked counterexample does not complete this item.
+- [ ] **EPZAE-34 -- Corrected cardinality/energy powering.** Owner-authorized
+  replacement of the false printed Lemma 62: for every positive integer `k`,
+  an actual region point yields one output with cardinality exponent `ρ/k`
+  and energy exponent at most `ρ*/k`, and a possibly different output with
+  energy exponent `ρ*/k` and cardinality exponent at most `ρ/k`. The fifth
+  coordinates are separately existential, with no `s/k` restriction and no
+  third witness. Prove the full `CorrectedCardinalityEnergyPowering` target.
+  The exact projected-region specification, finite energy-class selection,
+  singleton/identity regressions, and conditional monotone/Heath--Brown
+  consumers are installed in `EnergyPowering.lean`; general powered-pattern
+  construction and coordinate-preserving compactness remain open.
+  Preserve `energyPowering_source_counterexample` and its audits permanently.
+  See the Energy Powering Repair and Energy Powering Obstruction documents.
 - [ ] **EPZAE-35 -- Heath--Brown relation.** The exact two-max five-variable
   inequality is proved from the cited large-values estimate.
+  Its powered application uses the corrected energy witness from EPZAE-34;
+  the conditional consumer is proved, but the analytic relation remains open.
 - [ ] **EPZAE-36 -- Energy optimization certificates.** Every projection and
   piecewise maximum needed by clauses (i)--(ix) has a checked rational
   certificate and denominator/range proof.
+  Rebuild powered constraints in the four-coordinate projection using the
+  separate witnesses and proved monotonicity; never scale an `s` constraint.
 - [ ] **EPZAE-37 -- Nine new energy estimates.** Every clause of `Add-est` is
   proved on its exact interval and audited.
 

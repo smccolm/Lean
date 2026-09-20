@@ -15,12 +15,15 @@ source domain. No advertised theorem from the paper is claimed
 formalized yet; the four exponent pairs, density bounds, and energy bounds
 still require their analytic derivations.
 
-**Source obstruction:** EPZAE-34's energy-powering statement is disproved by
-a kernel-checked singleton counterexample. Its `s' ≤ s/k` requirement
-conflicts with the diagonal lower bound `s' ≥ 2`. See
+**Preserved discovery and authorized repair:** the kernel-checked singleton
+counterexample disproves printed Lemma 62's `s' ≤ s/k` requirement; see
 [the obstruction report](Tao-Trudgian-Yang%20Energy%20Powering%20Obstruction.md).
-The frozen contract has not been changed; a valid replacement requires
-owner direction. This does not disprove the advertised final estimates.
+The owner authorized replacing EPZAE-34 by separate cardinality- and
+energy-preserving witnesses with independent, unrestricted fifth exponents.
+[The repair](Tao-Trudgian-Yang%20Energy%20Powering%20Repair.md) is specified
+in Lean; finite energy selection and conditional monotone/Heath--Brown
+consumers are proved. The full analytic powering theorem remains open.
+The counterexample, source archives, and advertised final outputs are unchanged.
 
 ## Exact intended outputs
 
@@ -192,7 +195,11 @@ conditional hypotheses using the actual exponent supremum and limsup. Its
 `zeroDensityEnergyExponent_le_sup_limsup` proves the exact `zeroe-from-large`
 inequality for `1/2 < σ < 1`, including the zeta supremum starting at `τ=1`.
 EPZAE-33 remains open for the bounded-range corollary `zeroe-large-cor-0`;
-energy powering has a proved source contradiction under EPZAE-34. No advertised new energy bound
+EPZAE-34 now requires the authorized two-witness repair, not the disproved
+fifth-coordinate scaling. `EnergyPowering` supplies its exact specification,
+finite energy-class selection, and conditional Heath--Brown/optimization
+consumers; actual powered-pattern construction and its compactness limits
+remain open. No advertised new energy bound
 in `Add-est` is claimed complete.
 The next exponent-pair analytic
 frontier is EPZAE-09: the remaining endpoint/reflection and converse direction

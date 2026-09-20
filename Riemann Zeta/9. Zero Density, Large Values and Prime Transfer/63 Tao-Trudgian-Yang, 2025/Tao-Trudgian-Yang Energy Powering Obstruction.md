@@ -1,7 +1,10 @@
 # Energy-powering source obstruction
 
-Status: kernel-checked counterexample; EPZAE-34 is not complete. The frozen
-completion contract has not been amended. Recorded 20 September 2026.
+Status: kernel-checked counterexample, permanently preserved; EPZAE-34 is not
+complete. On 20 September 2026 the owner authorized a separate cardinality/
+energy repair, documented in `Tao-Trudgian-Yang Energy Powering Repair.md`.
+The printed source and this counterexample have not been altered. Only the
+supporting-lemma contract changes; all advertised final outputs stay frozen.
 
 ## Exact source conflict
 
@@ -81,7 +84,9 @@ clauses. The new proof of `zeroe-from-large` does not use the false lemma.
 The bounded-range corollary remains open and needs a valid powering
 argument; it must not inherit the disproved fifth-coordinate restriction.
 
-Completing EPZAE-34 literally is impossible. A documented replacement or
-removal of that supporting requirement needs the project owner's direction.
-Until then, retain the counterexample, preserve the source and final output
-contracts, and make no paper-completion claim.
+Proving the original EPZAE-34 statement literally is impossible. The owner
+has now authorized replacing it by two cardinality/energy witnesses, with
+independent existential fifth coordinates and no `s/k` restriction. The
+repair's general analytic proof remains open. Retain this counterexample,
+preserve the original source and final output contracts, and make no
+paper-completion claim. Authorization is no longer a blocker.

@@ -161,8 +161,9 @@ zeta-specific large-value inputs remain under EPZAE-18--19 and EPZAE-21.
 4. Prove the non-asymptotic energy-region equivalence.
 5. Finish the zero-density-energy transfer's bounded-range corollary.
    The source's weakened powering lemma is now disproved even with separate
-   witnesses; EPZAE-34 needs an authorized, documented replacement before
-   this route can be used. See the source obstruction below.
+   witnesses. Prove the now-authorized cardinality/energy replacement in
+   EPZAE-34 before using it analytically. See the preserved obstruction and
+   repair status below.
 6. Formalize Heath--Brown's five-variable max inequality.
 7. Turn every polyhedral projection used by `Add-est` into an exact certificate.
 8. Prove all nine clauses and their interval endpoints.
@@ -378,10 +379,43 @@ The live ANTEDB blueprint repeats the claim, and no correction was found
 in the primary sources checked. Full evidence and scope are in
 `Tao-Trudgian-Yang Energy Powering Obstruction.md`.
 
-The frozen goal and EPZAE-34 acceptance clause remain unchanged pending
-owner authorization to develop a documented replacement. No inference is
-made that the advertised final estimates are false. The completed
-`zeroe-from-large` proof is independent of the invalid powering statement.
+The owner has now authorized the documented replacement below. The original
+source, counterexample, and advertised final output statements remain
+unchanged. No inference is made that the advertised estimates are false.
+The completed `zeroe-from-large` proof is independent of the invalid
+powering statement.
+
+### Authorized two-witness repair (20 September 2026)
+
+`EnergyPowering` defines the actual projected region
+`InCardinalityEnergyRegion σ τ ρ e := ∃ s, InLargeValueEnergyRegion σ τ ρ e s`
+and the exact two-output target `CorrectedCardinalityEnergyPowering`.
+One witness preserves `ρ/k` and bounds energy above by `e/k`; the other
+preserves `e/k` and bounds cardinality above by `ρ/k`. Their fifth
+coordinates are independent existential values. There is no `s/k` bound.
+
+The following are kernel-checked: the exact expanded five-coordinate
+specification equivalence; identity-power and singleton regressions;
+`exists_energy_preserving_color` with loss `9 * card(colors)^4`; separate
+monotone cardinality/energy consumers and their intersection rule; the
+Heath--Brown right side's monotonicity in cardinality; and the powered
+Heath--Brown consumer. The latter takes the two actual output witnesses and
+the independently stated analytic relation as explicit upstream inputs.
+It proves the required deduction without mentioning `s`, not either input.
+
+The general analytic powering theorem is still open: construct normalized
+powered patterns with proved closed/half-open endpoint bridges, choose
+uniform coefficient constants before scales, then extract the two
+coordinate-preserving subsequences. EPZAE-34 stays unchecked. EPZAE-35
+still owns the analytic Heath--Brown relation; EPZAE-36 must replay all
+optimization constraints using the justified four-coordinate rules, and
+EPZAE-37 must derive all nine unchanged endpoints.
+
+The repair report includes a mathematical proof route and a static audit of
+the pinned optimizer. Its Heath--Brown `2a` alternatives have zero `s`
+coefficient, but historical five-coordinate transforms and finite boxes
+must not be trusted without the new proof. No full certificate replay is
+claimed. Authorization is no longer a blocker.
 
 ## Phase 6: release integration
 
@@ -406,7 +440,8 @@ made that the advertised final estimates are false. The completed
 | Denominator signs | Rational bounds can reverse under multiplication | Carry interval-specific positivity lemmas in certificates |
 | Open/closed endpoints | Several tables mix `<` and `<=` | Formal interval cover with overlap equality proofs |
 | Additive-energy multiplicity | Set simplification changes the theorem | Use multisets or indexed families from the start |
-| False fifth-coordinate powering | Singleton patterns contradict `s' ≤ s/k` already for `k=2` | Kernel-checked obstruction; retain source contract pending authorization of a replacement; do not infer failure of advertised endpoints |
+| False fifth-coordinate powering | Singleton patterns contradict `s' ≤ s/k` already for `k=2` | Preserve counterexample; prove authorized two-witness repair; prohibit scaled `s` constraints in all new certificates |
+| Invalid projection closure | Separate witnesses do not imply arbitrary polytope closure | Apply checked coordinatewise monotonicity consumers, audit finite boxes, and replay every endpoint certificate |
 | Source editorial slips | TeX contains minor variable/label inconsistencies | Maintain an errata ledger in the crosswalk |
 | Over-formalizing literature | Full books/papers would swamp the target | Formalize the exact consumed theorem surfaces first |
 

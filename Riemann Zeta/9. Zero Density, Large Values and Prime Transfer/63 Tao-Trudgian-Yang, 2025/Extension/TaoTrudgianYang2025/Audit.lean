@@ -273,6 +273,15 @@ def runBootstrapDependencyAudit : CoreM Unit := do
 #print axioms TaoTrudgianYang2025.singleton_mem_largeValueEnergyRegion
 #print axioms TaoTrudgianYang2025.InLargeValueEnergyRegion.two_le_s
 #print axioms TaoTrudgianYang2025.energyPowering_source_counterexample
+#print axioms TaoTrudgianYang2025.cardinalityEnergyPoweringWitnesses_iff
+#print axioms TaoTrudgianYang2025.cardinalityEnergyPoweringWitnesses_one
+#print axioms TaoTrudgianYang2025.singleton_cardinalityEnergyPoweringWitnesses
+#print axioms TaoTrudgianYang2025.exists_energy_preserving_color
+#print axioms TaoTrudgianYang2025.CardinalityEnergyPoweringWitnesses.cardinality_bound
+#print axioms TaoTrudgianYang2025.CardinalityEnergyPoweringWitnesses.energy_relation
+#print axioms TaoTrudgianYang2025.CardinalityEnergyPoweringWitnesses.monotone_constraints
+#print axioms TaoTrudgianYang2025.heathBrownEnergyRHS_mono_card
+#print axioms TaoTrudgianYang2025.CardinalityEnergyPoweringWitnesses.heathBrown_relation
 
 #eval runBootstrapDependencyAudit
 

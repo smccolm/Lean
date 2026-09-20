@@ -112,7 +112,8 @@ certificates, not proofs of the energy-region projections.
 | `bourgain-zd` | pair-to-density formula | Bourgain 1995, planned EPZAE-28 |
 | `zeroe-from-large` | zero-energy from LV energy | Source inequality proved by `zeroDensityEnergyExponent_le_sup_limsup` in `EnergyExponentTransfer`, with exact domain `1/2 < σ < 1`, zeta supremum over `τ ≥ 1`, and general-energy limsup. The proof consumes actual Type-I/II source fibers, analytic multiplicity, compact-range uniformity, all explicit losses, and signed dyadic symmetric-rectangle assembly. No mathematical theorem parameter remains |
 | `zeroe-large-cor-0` | bounded-range zero-energy transfer | Still open under EPZAE-33. The source zeta interval is `2 ≤ τ < τ₀`; the general interval is `τ₀ ≤ τ ≤ 2τ₀`. Requires the short-zeta-scale reduction and bounded general-energy powering; neither endpoint nor the empty-interval convention may be silently changed |
-| `power-energy` | weakened energy powering | **Disproved as printed:** `energyPowering_source_counterexample` gives input `(3/4,2,0,0,2)` and excludes any `k=2` output with `s' ≤ 1`; every region point has `s' ≥ 2`. EPZAE-34 remains unresolved pending a documented replacement; see the Energy Powering Obstruction document |
+| `power-energy` | printed five-coordinate powering | **Disproved and preserved:** `energyPowering_source_counterexample` gives input `(3/4,2,0,0,2)` and excludes any `k=2` output with `s' ≤ 1`; every region point has `s' ≥ 2`. Not an upstream theorem |
+| Owner-authorized repair of `power-energy` | two cardinality/energy witnesses | EPZAE-34 now requires `CorrectedCardinalityEnergyPowering`: one `ρ/k` witness, one `ρ*/k` witness, with the other retained coordinate bounded above and each `s` separately existential. General analytic proof OPEN; finite energy selection and conditional monotone/Heath--Brown consumers kernel-checked in `EnergyPowering`. See the Energy Powering Repair document |
 | `hbt` | Heath--Brown five-variable energy relation | Heath--Brown 1979; planned EPZAE-35 |
 
 ## Source-convention bridges requiring proofs
@@ -146,13 +147,21 @@ ANTEDB blueprint, and cited source before freezing Lean statements:
   double-zeta-sum exponent to at most `s/k`, contradicting the diagonal
   lower bound on a singleton pattern. The kernel-checked counterexample and
   exact source references are in `Tao-Trudgian-Yang Energy Powering Obstruction.md`.
-  The source and final output contracts have not been silently modified.
+  The source and final output contracts have not been modified. The owner
+  explicitly authorized the separate two-witness supporting-lemma repair;
+  it is not represented as a proof of the printed statement.
 
 - The TeX line for `exp-pair-def` contains `T >= N <= 1`, while the displayed
   estimate immediately continues with `T >= N >= 1`; Lean must use the latter
   intended range and document the correction.
 - The `lv-edef` binder lists `rho, rho' >= 0` although the tuple uses `rho*`
   and `s`; the non-asymptotic lemma clarifies the intended variables.
+- In the prose proof of `hbt`, the last finite-estimate factor is printed
+  as `E₁(W)^(3/4) N T^(1/2)`, whereas the displayed exponent relation has
+  `3ρ*/4 + ρ + τ/2`. These are not the same exponent comparison. EPZAE-35
+  must check the cited original estimate or the independent blueprint
+  derivation; the repair consumer retains the displayed source relation
+  and does not assume the mismatched finite estimate proves it.
 - The prose after the proof of additive-energy clause (i) concludes one
   intermediate line with `min` where the target and preceding derivation use a
   maximum. This must be checked rather than copied mechanically.

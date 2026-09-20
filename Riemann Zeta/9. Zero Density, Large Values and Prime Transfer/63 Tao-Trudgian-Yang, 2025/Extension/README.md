@@ -97,8 +97,14 @@ open under EPZAE-33. `EnergyPoweringObstruction` proves that the exact
 EPZAE-34 source claim is false: singleton patterns realize `s=2`, while
 `k=2` would require an impossible output `s'≤1`. Its four theorems and
 regressions are included in the root imports, runner inventory, and audit.
-The frozen contract remains unchanged pending owner direction; no corrected
-powering statement or advertised endpoint is claimed proved.
+The owner-authorized replacement is specified in `EnergyPowering`:
+`CorrectedCardinalityEnergyPowering` requires two separate cardinality/energy
+witnesses in the existential projection of the real five-dimensional region.
+No relation on their fifth coordinates is imposed. The finite energy-class
+selection, identity/singleton regressions, and monotone/Heath--Brown consumers
+are kernel-checked. The consumers remain conditional on actual powering
+witnesses and the analytic relation; neither input is proved by defining the
+target. General powering and all advertised endpoints remain open.
 
 ## Verification
 

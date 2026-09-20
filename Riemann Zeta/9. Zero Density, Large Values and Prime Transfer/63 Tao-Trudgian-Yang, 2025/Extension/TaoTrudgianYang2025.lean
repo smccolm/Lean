@@ -21,6 +21,7 @@ import TaoTrudgianYang2025.ClassicalSlabEnergyTransfer
 import TaoTrudgianYang2025.ZeroEnergyAssembly
 import TaoTrudgianYang2025.EnergyExponentTransfer
 import TaoTrudgianYang2025.EnergyPoweringObstruction
+import TaoTrudgianYang2025.EnergyPowering
 import TaoTrudgianYang2025.EnergyRegions
 import TaoTrudgianYang2025.EnergyRegionAsymptotics
 import TaoTrudgianYang2025.EnergyRegionSupremum
