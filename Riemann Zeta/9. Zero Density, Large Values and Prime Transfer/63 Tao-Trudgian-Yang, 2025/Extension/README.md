@@ -64,10 +64,41 @@ scale-independent Fourier `L¹` loss, and a generic theorem gives its Fourier
   already turns a power bound for the radius's defining base into a subpower
   radius. The source threshold reciprocal, sharp-cutoff base envelope, fixed
   constant and `clog` absorption, and existential order choice are all proved;
-  the resulting radius is uniformly eventually `T^δ`. Height-interval pattern
-  propagation and the `LV*` application remain open. The coefficient-one
-  active-support polynomial and its exact `LargeValuePattern` constructor with
-  energy preservation are already available.
+  the resulting radius is uniformly eventually `T^δ`. The coefficient-one
+  active-support polynomial and its exact `LargeValuePattern` constructor
+  preserve energy, and a finite general-`LV*` consumer is proved.
+
+`ClassicalTypeIEnergyTransfer` now proves the sharper source zeta consumer.
+It derives the normalized-threshold lower power bound, partitions the
+expanded positive interval into three exact `[H,2H]` zeta slabs, and
+absorbs the complete degree-five displacement/coloring loss. Its source-class
+theorem consumes actual classical branch/scale fibers with every
+analytic-multiplicity index retained. Source largeness also supplies the
+upper scale bound needed to select a common subsequence with
+`1 ≤ τ ≤ 1/a` and every eventual height window. `EnergyUniformity` supplies
+one constant and threshold window on a neighborhood of a compact scale
+interval. `ClassicalTypeIUniformity` consumes this result through the genuine
+source classes and obtains `energy ≤ C*T^(B+ε)`, allowing a slightly shifted
+source line and deriving all physical height windows. These deductions remain
+conditional on the specified zeta energy bounds.
+`ClassicalTypeIIEnergyTransfer` now derives the normalized mollifier threshold,
+physical scale window, and uniform source-fiber energy estimate from general
+energy bounds. `ClassicalSlabEnergyTransfer` consumes both branches, chooses
+the common source parameters, and absorbs the outer multiplicity/coloring
+loss to prove the positive dyadic zero-slab estimate. `ZeroEnergyAssembly`
+then proves the signed dyadic assembly, including conjugate analytic
+multiplicities and the finite low-height rectangle, and concludes
+`IsZeroDensityEnergyBound σ (B/(1-σ))` from the specified energy hypotheses.
+`zeroDensityEnergyExponent_le_sup_limsup` in module `EnergyExponentTransfer`
+(namespace `TaoTrudgianYang2025`) proves the exact source supremum/limsup
+inequality with no additional mathematical assumptions. Its lower-endpoint
+argument uses genuine singleton patterns. The bounded-range corollary remains
+open under EPZAE-33. `EnergyPoweringObstruction` proves that the exact
+EPZAE-34 source claim is false: singleton patterns realize `s=2`, while
+`k=2` would require an impossible output `s'≤1`. Its four theorems and
+regressions are included in the root imports, runner inventory, and audit.
+The frozen contract remains unchanged pending owner direction; no corrected
+powering statement or advertised endpoint is claimed proved.
 
 ## Verification
 

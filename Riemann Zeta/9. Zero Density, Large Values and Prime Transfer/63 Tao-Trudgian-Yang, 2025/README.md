@@ -15,6 +15,13 @@ source domain. No advertised theorem from the paper is claimed
 formalized yet; the four exponent pairs, density bounds, and energy bounds
 still require their analytic derivations.
 
+**Source obstruction:** EPZAE-34's energy-powering statement is disproved by
+a kernel-checked singleton counterexample. Its `s' ≤ s/k` requirement
+conflicts with the diagonal lower bound `s' ≥ 2`. See
+[the obstruction report](Tao-Trudgian-Yang%20Energy%20Powering%20Obstruction.md).
+The frozen contract has not been changed; a valid replacement requires
+owner direction. This does not disprove the advertised final estimates.
+
 ## Exact intended outputs
 
 The initial completion contract covers all results advertised by the paper as
@@ -138,13 +145,55 @@ coefficient-one families. Subpower control of the canonical radius, including
 the fixed seminorm and source `clog` loss, is now complete:
 `exists_order_eventually_classicalTypeIFourierRadius_sharpCutoff_le_rpow`
 chooses one decay order and proves a uniform eventual `T^δ` radius for all
-source-large scales and ordinates. Height-interval pattern packaging and the
-`LV*` application are the remaining sharp-route steps. The exact packaging
-primitive is now present: `classicalTypeICoefficientOneCoeff` realizes the
-active interval inside the full dyadic block, and
+source-large scales and ordinates. Height-interval pattern packaging is now
+complete: `classicalTypeICoefficientOneCoeff` realizes the active interval
+inside the full dyadic block, and
 `indexedClassicalTypeICoefficientOnePattern` constructs a paper
-`LargeValuePattern` with exact indexed-energy preservation once interval bounds
-are supplied.
+`LargeValuePattern`. `exists_classicalTypeI_explicitFourier_patterns` packages
+all four color fibers on their common expanded interval, and
+`IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer`
+applies one finite-scale `LV*` witness to all four and transfers the resulting
+bound back to the original indexed energy.
+`classicalSlab_expanded_height_in_rpow_window` also proves that the beta and
+Fourier expansions preserve the required height exponent window after a
+fixed-factor absorption.
+
+`ClassicalTypeIEnergyTransfer` now supplies the source's zeta-specific step.
+The normalized source threshold is exactly `N^σ` divided by the fixed
+Fourier norm, dyadic count, and `T^D`; its lower exponent window is proved
+uniformly when `T^a ≤ N` and `D ≤ a*δ/2`. Three height colors place the
+coefficient-one families in genuine zeta intervals `[H,2H]`, preserving the
+active integer support and indexed energy. The complete perturbation and
+coloring loss is bounded by `429981696*(1+d)^5` and absorbed into an
+arbitrarily small scale power.
+`IsZetaLargeValueEnergyBound.classicalTypeI_source_class_energy_bound`
+consumes an actual classical Type-I branch/scale fiber, derives its separation
+and source lower bound from its label, and proves the fixed-parameter
+epsilon estimate. `exists_classicalTypeI_source_scale_subsequence` derives
+`N ≤ 6T` from genuine source largeness and selects one physical exponent
+`1 ≤ τ ≤ 1/a`, together with all required height windows, along a common
+subsequence. `EnergyUniformity` and `ClassicalTypeIUniformity` now strengthen
+this to a compact-range estimate: a single threshold window is chosen before
+the source line and cutoff powers, and the actual multiplicity-preserving
+Type-I fibers satisfy `energy ≤ C*T^(B+ε)`. Small excursions beyond the
+physical scale endpoints and a slightly left-shifted source line are included.
+`ClassicalTypeIIEnergyTransfer` supplies the corresponding uniform estimate
+for the actual normalized mollifier fibers, using the proved divisor bound.
+`ClassicalSlabEnergyTransfer` selects the common cutoffs and shifted line,
+consumes both genuine source branches, and absorbs the outer multiplicity and
+coloring losses. Its public
+`classicalSlabZeroEnergy_bound_of_uniform_energy_bounds` proves the positive
+dyadic zero-slab estimate from the specified zeta and general energy bounds.
+`ZeroEnergyAssembly` now proves the symmetric-rectangle bridge by a signed
+dyadic coloring, conjugate multiplicity copies, and a fixed low-height
+rectangle. `isZeroDensityEnergyBound_of_uniform_energy_bounds` concludes the
+paper's shifted `A*` predicate. `EnergyExponentTransfer` now removes those
+conditional hypotheses using the actual exponent supremum and limsup. Its
+`zeroDensityEnergyExponent_le_sup_limsup` proves the exact `zeroe-from-large`
+inequality for `1/2 < σ < 1`, including the zeta supremum starting at `τ=1`.
+EPZAE-33 remains open for the bounded-range corollary `zeroe-large-cor-0`;
+energy powering has a proved source contradiction under EPZAE-34. No advertised new energy bound
+in `Add-est` is claimed complete.
 The next exponent-pair analytic
 frontier is EPZAE-09: the remaining endpoint/reflection and converse direction
 of beta/exponent-pair duality.

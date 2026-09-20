@@ -35,7 +35,8 @@ flowchart TD
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]
-    ET["EPZAE-33 energy transfer<br/>IN PROGRESS: perturbation, normalization,<br/>native Type I pattern/subpower DONE;<br/>classical branch/scale + Type II pattern DONE;<br/>smooth + sharp re-separation DONE;<br/>sharp radius subpower DONE;<br/>height packaging + LV* OPEN;<br/>EPZAE-34 OPEN"]
+    ET["EPZAE-33 energy transfer<br/>zeroe-from-large source inequality DONE;<br/>actual Type-I/II + multiplicities DONE;<br/>symmetric rectangle + sup/limsup DONE;<br/>bounded-range corollary OPEN"]
+    PW["EPZAE-34 three-witness powering<br/>SOURCE STATEMENT DISPROVED;<br/>kernel-checked singleton counterexample;<br/>correction authorization required"]
     HBE["EPZAE-35 Heath--Brown energy relation<br/>OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>OPEN"]
     NAE["EPZAE-37 nine new additive-energy bounds<br/>OPEN"]
@@ -97,6 +98,8 @@ flowchart TD
     AB --> AE
     AE --> ER
     ER --> ET
+    ER --> PW
+    PW -. "valid replacement needed for bounded-range corollary" .-> ET
     ZCB --> ET
     ZLV --> ET
     SRC --> HBE
@@ -120,5 +123,5 @@ flowchart TD
     classDef done fill:#d9f2df,stroke:#26753a,color:#123d1e,stroke-width:2px;
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
-    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE done;
-    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ER,ET,HBE,EC,NAE,PUB,SEM,REL open;
+    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER done;
+    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PW,HBE,EC,NAE,PUB,SEM,REL open;

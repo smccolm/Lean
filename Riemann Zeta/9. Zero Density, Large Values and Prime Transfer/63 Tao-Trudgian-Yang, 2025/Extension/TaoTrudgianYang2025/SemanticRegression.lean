@@ -427,6 +427,20 @@ example {ι : Type*} [Fintype ι] [DecidableEq ι]
   unitBinFinset_perturbation_card_le_natCeil
     W W' d hd hsep hpert z
 
+example (N : ℕ) (T u d tau delta : ℝ)
+    (hN : 1 ≤ (N : ℝ)) (hdelta : 0 < delta)
+    (hu : 0 ≤ u) (huT : u ≤ T) (hd : 0 ≤ d) (hdT : d ≤ T)
+    (hTLower : (N : ℝ) ^ (tau - delta / 2) ≤ T)
+    (hTUpper : T ≤ (N : ℝ) ^ (tau + delta / 2))
+    (hFive : 5 ≤ (N : ℝ) ^ (delta / 2)) :
+    (N : ℝ) ^ (tau - delta) ≤
+        (2 * T + u + d) - (T - u - d) ∧
+      (2 * T + u + d) - (T - u - d) ≤
+        (N : ℝ) ^ (tau + delta) :=
+  classicalSlab_expanded_height_in_rpow_window
+    N T u d tau delta hN hdelta hu huT hd hdT
+      hTLower hTUpper hFive
+
 example {σ τ ρ ρstar s : ℝ}
     (h : InLargeValueEnergyRegion σ τ ρ ρstar s) :
     ρ ≤ τ ∧ 2 * ρ ≤ ρstar ∧ ρstar ≤ 3 * ρ ∧
@@ -434,6 +448,31 @@ example {σ τ ρ ρstar s : ℝ}
   ⟨h.rho_le_tau, h.two_mul_rho_le_rhoStar,
     h.rhoStar_le_three_mul_rho, h.rho_add_two_le_s,
     h.s_le_two_mul_rho_add_two⟩
+
+-- All shared endpoints have one deterministic height color. The upper
+-- endpoint of the last slab remains in that slab.
+example :
+    (classicalTypeIHeightColor 10 5, classicalTypeIHeightColor 10 10,
+      classicalTypeIHeightColor 10 20, classicalTypeIHeightColor 10 40) =
+      ((0 : Fin 3), (1 : Fin 3), (2 : Fin 3), (2 : Fin 3)) := by
+  norm_num [classicalTypeIHeightColor]
+
+example :
+    classicalTypeIHeight 10 0 = 5 ∧
+      classicalTypeIHeight 10 1 = 10 ∧ classicalTypeIHeight 10 2 = 20 := by
+  norm_num [classicalTypeIHeight, Fin.ext_iff]
+
+-- Closed support includes N, but its coefficient is zero. The active
+-- integer interval includes its right cutoff and excludes the next integer.
+example :
+    closedDyadicCoeff 2 (classicalTypeICoefficientOneCoeff 3) 2 = 0 ∧
+      closedDyadicCoeff 2 (classicalTypeICoefficientOneCoeff 3) 3 = 1 ∧
+      closedDyadicCoeff 2 (classicalTypeICoefficientOneCoeff 3) 4 = 0 := by
+  norm_num [closedDyadicCoeff, classicalTypeICoefficientOneCoeff]
+
+example : Finset.Ioc 2 (min (2 * 2) 3) = ({3} : Finset ℕ) := by decide
+
+example : Finset.Ioc 4 (min (2 * 4) 3) = (∅ : Finset ℕ) := by decide
 
 example (σ τ : ℝ) :
     largeValueEnergyRegionSupremum σ τ ≤
@@ -507,7 +546,73 @@ example : ∀ clause ∈ generatedEnergyClauses,
 
 example := optimizedBourgain_endpoint_agreement
 
+-- Type II normalization retains both the dyadic count and divisor power.
+example :
+    ((((3 / 4 : ℝ) * (3 / 4)) / Nat.clog 2 2) /
+      ((1 : ℝ) * (2 * 2 : ℝ) ^ (0 : ℝ) * (2 : ℝ) ^ (-(1 : ℝ)))) = 9 / 8 := by
+  norm_num [Real.rpow_neg_one, Nat.clog]
+
+example :
+    ((((3 / 4 : ℝ) * (3 / 4)) / Nat.clog 2 2) /
+      ((1 : ℝ) * (2 * 2 : ℝ) ^ (1 : ℝ) * (2 : ℝ) ^ (-(1 : ℝ)))) = 9 / 32 := by
+  norm_num [Real.rpow_neg_one, Nat.clog]
+
+example (s T D t : ℝ) (Y X : ℕ) :
+    ¬ ClassicalBranchScaleLarge s T D Y X none t := by
+  simp only [ClassicalBranchScaleLarge, not_false_eq_true]
+
+-- Signed slabs have closed endpoints; the low-height color includes its edge.
+example (σ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1) :
+    zeroDensityEnergyExponent σ * ((1 - σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueEnergyExponent σ τ / (τ : EReal)) '' Set.Ici 1))
+        (Filter.limsup (fun τ : ℝ => largeValueEnergyExponent σ τ / (τ : EReal)) Filter.atTop) :=
+  zeroDensityEnergyExponent_le_sup_limsup σ hσ hσUpper
+
+example : finsetAdditiveEnergy
+    (singletonLargeValuePattern 2 1 0 (by norm_num) (by norm_num)).ordinates = 1 :=
+  singletonLargeValuePattern_energy 2 1 0 (by norm_num) (by norm_num)
+
+example : ZeroDyadicColorCondition 2 8 (-4) (some (true, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ZeroDyadicColorCondition 2 8 4 (some (false, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ZeroDyadicColorCondition 2 8 (-2) none := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : approximateAdditiveEnergyOf 1 (fun _ : Fin 2 => (0 : ℝ)) = 16 := by
+  norm_num [approximateAdditiveEnergyOf, AdditiveQuadrupleOf]
+
+-- The uniform scale neighborhood includes excursions past either endpoint.
+example : ∃ y ∈ Set.Icc (1 : ℝ) 2, |(9 / 10 : ℝ) - y| ≤ 1 / 10 :=
+  exists_mem_Icc_abs_sub_le_of_bounds 1 2 (9 / 10) (1 / 10)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ y ∈ Set.Icc (1 : ℝ) 2, |(21 / 10 : ℝ) - y| ≤ 1 / 10 :=
+  exists_mem_Icc_abs_sub_le_of_bounds 1 2 (21 / 10) (1 / 10)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ y ∈ Set.Icc (1 : ℝ) 1, |(1 : ℝ) - y| ≤ 0 :=
+  exists_mem_Icc_abs_sub_le_of_bounds 1 1 1 0
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
 example := optimizedBourgain_interval_cover
+
+-- The pinned five-coordinate powering clause contradicts actual region membership.
+example : InLargeValueEnergyRegion (3 / 4) 2 0 0 2 :=
+  energyPowering_source_counterexample.1
+
+example : ¬ ∃ ρ' ρstar' s' : ℝ,
+    InLargeValueEnergyRegion (3 / 4) 1 ρ' ρstar' s' ∧ s' ≤ 1 := by
+  rintro ⟨ρ', ρstar', s', hregion, hs⟩
+  have hlower := hregion.two_le_s
+  linarith
+
+example : doubleZetaSum (singletonLargeValuePattern 2 (3 / 4) 2
+    (by norm_num) (by norm_num)) = 9 := by
+  rw [singletonLargeValuePattern_doubleZetaSum]
+  norm_num
 
 example :
     (RationalAffineFraction.mk 270 (-173) 125 (-93)).normalizeSign.eval

@@ -88,6 +88,12 @@ For a noninteractive terminal session, use `run_lake_build.bat --no-pause`. From
 
 The verifier mechanically classifies all 303 project Lean modules (301 in the root graph and two explicit audit/lint regressions), scans the entire Lean tree for prohibited proof shortcuts, builds the root, elaborates the exact publication contract and both retained regressions, executes the exhaustive dependency audit, and runs all project linters. Any project warning, tactic suggestion, linter finding, unclassified module, failed output gate, or nonzero stage fails the run. Development evidence is written under the ignored `logs/` directory; release mode refuses a dirty tree. Heavyweight hosted workflows have been retired, so the local verifier is authoritative. The source editions and conventions are frozen in **[`verification/SOURCE_FREEZE.md`](verification/SOURCE_FREEZE.md)**. Re-run the verifier for the current checkout: a historical PASS is evidence only for the recorded commit.
 
+The postulate text scan distinguishes a declaration from a structure field
+named `constant` and punctuation-attached prose. Built-in regression cases
+check these distinctions, including standalone declaration keywords; source
+is read as UTF-8. The exhaustive transitive dependency audit remains a
+separate gate and is unchanged.
+
 ---
 
 ## Contribution Taxonomy, Status, and AI Tool Disclosure

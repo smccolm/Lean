@@ -159,9 +159,10 @@ zeta-specific large-value inputs remain under EPZAE-18--19 and EPZAE-21.
    perturbation used in the zero-to-large-value transfer.
 3. Define `LV*`, `LV*_zeta`, `A*`, `E`, and `E_zeta` faithfully.
 4. Prove the non-asymptotic energy-region equivalence.
-5. Prove the zero-density-energy transfer and the source's weakened powering
-   lemma, preserving the fact that the cardinality, energy, and double-zeta
-   witnesses may be different subsequences.
+5. Finish the zero-density-energy transfer's bounded-range corollary.
+   The source's weakened powering lemma is now disproved even with separate
+   witnesses; EPZAE-34 needs an authorized, documented replacement before
+   this route can be used. See the source obstruction below.
 6. Formalize Heath--Brown's five-variable max inequality.
 7. Turn every polyhedral projection used by `Add-est` into an exact certificate.
 8. Prove all nine clauses and their interval endpoints.
@@ -286,10 +287,101 @@ now complete: `eventually_classicalTypeIFourier_clog_loss_le_rpow` absorbs the
 fixed seminorm and `clog`, while
 `exists_order_eventually_classicalTypeIFourierRadius_sharpCutoff_le_rpow`
 chooses one order and proves the uniform source-level radius bound. The next
-task is to propagate the source height interval through each perturbation and
-apply the `LV*` estimate. The target constructor is already kernel-checked:
-`indexedClassicalTypeICoefficientOnePattern` packages the exact active support
-and preserves indexed energy.
+height and finite-scale transfer steps are also kernel-checked:
+`exists_classicalTypeI_explicitFourier_patterns` packages all four classes on
+the expanded interval, and
+`IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer`
+applies one `LV*` witness to them and propagates the energy estimate through
+the explicit perturbation and coloring losses.
+`classicalSlab_expanded_height_in_rpow_window` converts a half-width source
+height window into the full window for the expanded interval, absorbing the
+factor five exactly.
+
+`ClassicalTypeIEnergyTransfer` now proves the normalized source threshold
+identity and its uniform lower power bound. It constructs exact zeta patterns
+on three positive dyadic height slabs, including the sharp active interval's
+excluded left endpoint. The finite zeta transfer is composed with the
+Fourier extraction, and the full loss is at most
+`429981696*(1+d)^5`, allowing it to be absorbed into any prescribed scale
+epsilon loss. The theorem
+`IsZetaLargeValueEnergyBound.classicalTypeI_source_class_energy_bound`
+consumes actual classical branch/scale fibers, deriving largeness and
+separation from their source labels. Its physical lower scale estimate
+includes the floor cutoff. Separately,
+`exists_classicalTypeI_source_scale_subsequence` derives the upper scale
+bound from genuine source largeness and selects `1 ≤ τ ≤ 1/a` and all
+height windows along one subsequence.
+
+`EnergyUniformity` now uses a finite open cover to select one constant and
+threshold window on a neighborhood of any compact height-exponent interval.
+`ClassicalTypeIUniformity` derives that neighborhood condition uniformly from
+the physical source bounds, applies it to the three genuine zeta slabs, and
+absorbs the Fourier losses. Its public
+`classicalTypeI_uniform_source_class_energy_bound` consumes the actual Type-I
+color fiber returned by source extraction, retains analytic-multiplicity
+indices, and concludes `energy ≤ C*T^(B+ε)`. The threshold window is chosen
+before the source line and threshold power, and a slightly left-shifted
+real-part line is allowed. No separately assumed height window remains.
+
+`ClassicalTypeIIEnergyTransfer` now derives the exact normalized mollifier
+threshold, absorbs its divisor and logarithmic losses, and consumes the actual
+Type-II color fiber. Its compact physical scale window is derived from the
+source floors and dyadic label. The same slightly shifted real-part line is
+allowed in this general-energy estimate.
+
+`ClassicalSlabEnergyTransfer` bounds the outer source extraction loss by
+`K*T^(13*θ)`, retaining the genuine local analytic-multiplicity cap. The public
+`classicalSlabZeroEnergy_bound_of_uniform_energy_bounds` then chooses the
+cutoffs, threshold power, source line, and displacement in dependency order,
+consumes both branch consumers, and proves a shifted positive dyadic zero-slab
+bound `C*T^(B+ε)`. The impossible `none` source color contributes zero, proved
+from the extraction assertion rather than assumed. This theorem takes only
+the stated zeta energy bounds for `τ ≥ 1` and general energy bounds beyond a
+fixed positive scale threshold as mathematical inputs.
+
+`ZeroEnergyAssembly` now proves index-injective energy restriction, exact
+reflection, and transfer of subfamilies into their actual positive slabs.
+The negative-height bridge uses the proved conjugate analytic vanishing
+orders. Signed dyadic coloring covers the symmetric rectangle, including
+closed slab edges and the terminal partially occupied slab; bounded heights
+are absorbed using the actual finite zero energy. The logarithmic coloring
+loss is an arbitrary height power. The public
+`isZeroDensityEnergyBound_of_uniform_energy_bounds` composes this assembly
+with the source slab theorem and concludes the exact shifted paper predicate
+`IsZeroDensityEnergyBound σ (B/(1-σ))`.
+
+`EnergyExponentTransfer` now derives the uniform energy bounds from real
+upper bounds on the extended-real exponents via the proved feasible-region
+compactness theorem. Genuine singleton patterns prove nonnegativity of the
+general energy exponent and hence of the transfer envelope. The public
+`zeroDensityEnergyExponent_le_sup_limsup` concludes the exact source
+`zeroe-from-large` inequality on `1/2 < σ < 1`, with zeta supremum over
+`τ ≥ 1` and the genuine general-energy limsup. It has no remaining
+mathematical theorem parameter and consumes the complete analytic transfer.
+
+EPZAE-33 remains open for `zeroe-large-cor-0`. Its v1 statement starts the
+bounded zeta supremum at `2`, unlike the preceding lemma's endpoint `1`;
+that additional short-scale reduction must be proved, not silently changed.
+The bounded general-energy reduction also needs a valid energy-powering
+argument. The exact five-coordinate source claim owned by EPZAE-34 is
+disproved, as recorded below; it cannot be used as an upstream theorem.
+
+### EPZAE-34 source obstruction (20 September 2026)
+
+`EnergyPoweringObstruction` proves actual membership of `(3/4,2,0,0,2)`
+using singleton large-value patterns and all approximation quantifiers.
+Every energy-region point has `s ≥ 2`, so the printed `k=2` conclusion
+`s' ≤ 1` is impossible even for one output witness.
+`energyPowering_source_counterexample` is kernel-checked and explicitly
+audited; this is a disproved source claim, not an unimplemented proof.
+The live ANTEDB blueprint repeats the claim, and no correction was found
+in the primary sources checked. Full evidence and scope are in
+`Tao-Trudgian-Yang Energy Powering Obstruction.md`.
+
+The frozen goal and EPZAE-34 acceptance clause remain unchanged pending
+owner authorization to develop a documented replacement. No inference is
+made that the advertised final estimates are false. The completed
+`zeroe-from-large` proof is independent of the invalid powering statement.
 
 ## Phase 6: release integration
 
@@ -314,7 +406,7 @@ and preserves indexed energy.
 | Denominator signs | Rational bounds can reverse under multiplication | Carry interval-specific positivity lemmas in certificates |
 | Open/closed endpoints | Several tables mix `<` and `<=` | Formal interval cover with overlap equality proofs |
 | Additive-energy multiplicity | Set simplification changes the theorem | Use multisets or indexed families from the start |
-| Different powering witnesses | Source lemma permits three different output tuples | Do not package them as one stronger witness |
+| False fifth-coordinate powering | Singleton patterns contradict `s' ≤ s/k` already for `k=2` | Kernel-checked obstruction; retain source contract pending authorization of a replacement; do not infer failure of advertised endpoints |
 | Source editorial slips | TeX contains minor variable/label inconsistencies | Maintain an errata ledger in the crosswalk |
 | Over-formalizing literature | Full books/papers would swamp the target | Formalize the exact consumed theorem surfaces first |
 

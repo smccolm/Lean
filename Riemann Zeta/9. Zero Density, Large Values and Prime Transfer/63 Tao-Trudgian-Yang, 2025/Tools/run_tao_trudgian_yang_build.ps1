@@ -43,7 +43,7 @@ function Invoke-LeanGate {
         if ($processExitCode -ne 0) {
             throw "$Label failed with exit code $processExitCode."
         }
-        $warnings = @($output | Where-Object { "$_" -match '^\s*warning:' })
+        $warnings = @($output | Where-Object { "$_" -match '(^|\s)warning:' })
         if ($warnings.Count -ne 0) {
             throw "$Label emitted $($warnings.Count) Lean warning(s)."
         }
@@ -79,6 +79,7 @@ try {
         'Tao-Trudgian-Yang Checklist.md',
         'Tao-Trudgian-Yang Crosswalk.md',
         'Tao-Trudgian-Yang Goal Prompt.md',
+        'Tao-Trudgian-Yang Energy Powering Obstruction.md',
         'Tao-Trudgian-Yang Reproduction Manifest.md',
         'Tao-Trudgian-Yang Research Agenda.md',
         'Tao-Trudgian-Yang Sources.md',
@@ -162,7 +163,7 @@ try {
     )
     $forbiddenPatterns = @(
         '\b(sorry|admit)\b|sorryAx',
-        '^(axiom|constant)\b',
+        '^\s*(axiom|constant)\s+[^:\s]',
         '\b(native_decide|implemented_by|unsafe)\b'
     )
     $forbiddenMatches = [System.Collections.Generic.List[string]]::new()
@@ -209,7 +210,15 @@ try {
             'Extension\TaoTrudgianYang2025\BetaDuality.lean',
             'Extension\TaoTrudgianYang2025\BourgainPiecewiseCertificates.lean',
             'Extension\TaoTrudgianYang2025\ClassicalDensityBridge.lean',
+            'Extension\TaoTrudgianYang2025\ClassicalTypeIEnergyTransfer.lean',
+            'Extension\TaoTrudgianYang2025\ClassicalTypeIUniformity.lean',
+            'Extension\TaoTrudgianYang2025\ClassicalTypeIIEnergyTransfer.lean',
+            'Extension\TaoTrudgianYang2025\ClassicalSlabEnergyTransfer.lean',
+            'Extension\TaoTrudgianYang2025\ZeroEnergyAssembly.lean',
+            'Extension\TaoTrudgianYang2025\EnergyExponentTransfer.lean',
+            'Extension\TaoTrudgianYang2025\EnergyPoweringObstruction.lean',
             'Extension\TaoTrudgianYang2025\EnergyExponents.lean',
+            'Extension\TaoTrudgianYang2025\EnergyUniformity.lean',
             'Extension\TaoTrudgianYang2025\EnergyCertificates.lean',
             'Extension\TaoTrudgianYang2025\EnergyBoundAsymptotics.lean',
             'Extension\TaoTrudgianYang2025\EnergyRegionAsymptotics.lean',
@@ -237,6 +246,35 @@ try {
         foreach ($relativePath in $leanPackageFiles) {
             Assert-ProjectFile -ProjectRoot $projectRoot -RelativePath $relativePath
         }
+        $listedLeanFiles = [System.Collections.Generic.HashSet[string]]::new(
+            [string[]]$leanPackageFiles, [System.StringComparer]::OrdinalIgnoreCase)
+        $rootImports = Get-Content -LiteralPath (
+            Join-Path $extensionRoot 'TaoTrudgianYang2025.lean') -Raw
+        $explicitLeanGates = @(
+            'TaoTrudgianYang2025.Audit',
+            'TaoTrudgianYang2025.SemanticRegression'
+        )
+        $actualLeanFiles = @(
+            Get-ChildItem -LiteralPath $extensionRoot -Recurse -File -Filter '*.lean' |
+                Where-Object { $_.FullName -notmatch '[\\/]\.lake[\\/]' }
+        )
+        foreach ($leanFile in $actualLeanFiles) {
+            $relativePath = $leanFile.FullName.Substring($projectRoot.Length + 1)
+            if (-not $listedLeanFiles.Contains($relativePath)) {
+                throw "Unlisted Lean package file: $relativePath"
+            }
+            $modulePath = $leanFile.FullName.Substring($extensionRoot.Length + 1)
+            $moduleName = $modulePath.Substring(0, $modulePath.Length - 5).Replace('\', '.')
+            if ($moduleName -eq 'TaoTrudgianYang2025' -or
+                $explicitLeanGates -contains $moduleName) {
+                continue
+            }
+            $importPattern = '(?m)^import\s+' + [regex]::Escape($moduleName) + '\s*$'
+            if ($rootImports -notmatch $importPattern) {
+                throw "Production module missing from the root import graph: $moduleName"
+            }
+        }
+        Write-Host "PASS: complete production coverage ($($actualLeanFiles.Count) Lean package files)"
         Write-Host 'PASS: Lean package bootstrap inventory'
 
         Write-Host 'STAGE: deterministic certificate regeneration'

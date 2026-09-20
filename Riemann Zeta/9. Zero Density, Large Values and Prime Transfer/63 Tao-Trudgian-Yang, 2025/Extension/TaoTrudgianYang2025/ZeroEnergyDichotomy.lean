@@ -681,6 +681,45 @@ theorem perturbedOrdinate_mem_expandedInterval
   have hdiff := (abs_le.mp (hpert x))
   constructor <;> linarith [hW x]
 
+/-- Constant-factor absorption for the common height interval used after the
+source beta-removal displacement and the Fourier displacement.  A half-width
+exponent window for `T` becomes the full requested window for the expanded
+interval once the fixed factor five is absorbed. -/
+theorem classicalSlab_expanded_height_in_rpow_window
+    (N : ℕ) (T u d tau delta : ℝ)
+    (hN : 1 ≤ (N : ℝ)) (hdelta : 0 < delta)
+    (hu : 0 ≤ u) (huT : u ≤ T) (hd : 0 ≤ d) (hdT : d ≤ T)
+    (hTLower : (N : ℝ) ^ (tau - delta / 2) ≤ T)
+    (hTUpper : T ≤ (N : ℝ) ^ (tau + delta / 2))
+    (hFive : 5 ≤ (N : ℝ) ^ (delta / 2)) :
+    (N : ℝ) ^ (tau - delta) ≤
+        (2 * T + u + d) - (T - u - d) ∧
+      (2 * T + u + d) - (T - u - d) ≤
+        (N : ℝ) ^ (tau + delta) := by
+  have hNPos : (0 : ℝ) < N := lt_of_lt_of_le zero_lt_one hN
+  have hTNonneg : 0 ≤ T :=
+    (Real.rpow_nonneg hNPos.le (tau - delta / 2)).trans hTLower
+  constructor
+  · calc
+      (N : ℝ) ^ (tau - delta) ≤
+          (N : ℝ) ^ (tau - delta / 2) := by
+        apply Real.rpow_le_rpow_of_exponent_le hN
+        linarith
+      _ ≤ T := hTLower
+      _ ≤ (2 * T + u + d) - (T - u - d) := by linarith
+  · calc
+      (2 * T + u + d) - (T - u - d) ≤ 5 * T := by linarith
+      _ ≤ (N : ℝ) ^ (delta / 2) * T :=
+        mul_le_mul_of_nonneg_right hFive hTNonneg
+      _ ≤ (N : ℝ) ^ (delta / 2) *
+          (N : ℝ) ^ (tau + delta / 2) :=
+        mul_le_mul_of_nonneg_left hTUpper
+          (Real.rpow_nonneg hNPos.le (delta / 2))
+      _ = (N : ℝ) ^ (tau + delta) := by
+        rw [← Real.rpow_add hNPos]
+        congr 1
+        ring
+
 /-- A fixed compact logarithmic profile equal to `exp (-σu)` throughout the
 logarithmic image of every dyadic interval. -/
 noncomputable def classicalTypeILogProfile (σ u : ℝ) : ℂ :=
@@ -2031,7 +2070,7 @@ theorem IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer
       P, hP⟩ :=
     exists_classicalTypeI_explicitFourier_patterns
       A N k sigma V a b W hN hV hk hab hW hlarge hsep
-  let hlocal : ∀ z : ℤ, (unitBinFinset W' z).card ≤ L := fun z ⇒
+  let hlocal : ∀ z : ℤ, (unitBinFinset W' z).card ≤ L := fun z =>
     unitBinFinset_perturbation_card_le_natCeil W W' d
       (by
         dsimp only [d, R]
@@ -2039,14 +2078,15 @@ theorem IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer
           (classicalTypeIFourierRadius_pos A N k sigma V hV hk).le)
       hsep hpert z
   let color := boundedMultiplicityColor W' L hlocal
-  let Wᵢ := fun i : Fin 4 ⇒
-    fun x : EnergyColorFiber color (label i) ⇒ W' x.1
+  let Wᵢ := fun i : Fin 4 =>
+    fun x : EnergyColorFiber color (label i) => W' x.1
   have hPattern (i : Fin 4) :
       (finsetAdditiveEnergy (P i).ordinates : ℝ) ≤
         C * (N : ℝ) ^ (rhoStar + epsilon) := by
     obtain ⟨hPN, hPV, hPLeft, hPRight, _hPOrd, _hPEnergy⟩ := hP i
     have hPT : (P i).T = (b + d) - (a - d) := by
       rw [← (P i).interval_length, hPLeft, hPRight]
+    rw [← hPN]
     apply hLVbound (P i)
     · simpa [hPN] using hCN
     · simpa [hPN, hPT] using hTLower
@@ -2072,9 +2112,6 @@ theorem IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer
     exact_mod_cast htransfer
   have hFactorNonneg :
       0 ≤ (4 * Nat.ceil (1 + 4 * d) + 6 : ℝ) := by positivity
-  have hColorNonneg :
-      0 ≤ 9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4 := by
-    positivity
   calc
     (approximateAdditiveEnergyOf 1 W : ℝ) ≤
         (4 * Nat.ceil (1 + 4 * d) + 6) *
@@ -2082,26 +2119,32 @@ theorem IsLargeValueEnergyBound.classicalTypeI_explicitFourier_energy_transfer
     _ ≤ (4 * Nat.ceil (1 + 4 * d) + 6) *
           ((9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
             (C * (N : ℝ) ^ (rhoStar + epsilon))) := by
-      apply le_of_mul_le_mul_left (a := (4 : ℝ)) (by norm_num)
-      calc
-        4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
+      have hFourBound :
+          4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
+                (approximateAdditiveEnergyOf 1 W' : ℝ)) ≤
+            4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
+              ((9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
+                (C * (N : ℝ) ^ (rhoStar + epsilon)))) := by
+        calc
+          4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
               (approximateAdditiveEnergyOf 1 W' : ℝ)) =
             (4 * Nat.ceil (1 + 4 * d) + 6) *
               (4 * (approximateAdditiveEnergyOf 1 W' : ℝ)) := by ring
-        _ ≤ (4 * Nat.ceil (1 + 4 * d) + 6) *
+          _ ≤ (4 * Nat.ceil (1 + 4 * d) + 6) *
               ((9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
                 ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
                   (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
                   (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
                   (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) :=
           mul_le_mul_of_nonneg_left henergy hFactorNonneg
-        _ ≤ (4 * Nat.ceil (1 + 4 * d) + 6) *
+          _ ≤ (4 * Nat.ceil (1 + 4 * d) + 6) *
               ((9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
                 (4 * (C * (N : ℝ) ^ (rhoStar + epsilon)))) := by
-          gcongr
-        _ = 4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
+            gcongr
+          _ = 4 * ((4 * Nat.ceil (1 + 4 * d) + 6) *
               ((9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
                 (C * (N : ℝ) ^ (rhoStar + epsilon)))) := by ring
+      linarith
     _ = (4 * Nat.ceil (1 + 4 * d) + 6) *
           (9 * (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) ^ 4) *
             (C * (N : ℝ) ^ (rhoStar + epsilon)) := by ring

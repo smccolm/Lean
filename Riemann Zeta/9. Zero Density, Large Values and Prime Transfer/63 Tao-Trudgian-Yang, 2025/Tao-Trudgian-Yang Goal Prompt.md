@@ -14,6 +14,13 @@ certificates, but they may not serve as proof oracles.
 
 ## Frozen public theorem contract
 
+Implementation status note (20 September 2026): the supporting `power-energy`
+requirement in EPZAE-34 has a kernel-checked counterexample. See
+`Tao-Trudgian-Yang Energy Powering Obstruction.md`. The source statement and
+this completion contract remain unchanged pending owner authorization of a
+documented replacement. Do not attempt to discharge it with an assumption,
+an altered double-zeta-sum normalization, or a silently weakened conclusion.
+
 The release layer must expose source-facing theorems for the following labels.
 
 ### Exponent-pair output

@@ -273,9 +273,29 @@ function Test-ProhibitedProofText {
   Write-VerificationLine "[Repository proof-integrity scans]"
   $LeanFiles = Get-ChildItem -LiteralPath $ProjectRoot -Recurse -File -Filter "*.lean" |
     Where-Object { $_.FullName -notmatch "[\\/]\.lake[\\/]" -and $_.FullName -notmatch "[\\/]\.git[\\/]" }
+  # A structure field named `constant : ...` is not a postulate. Keep
+  # standalone/multiline declaration keywords detectable, but do not flag
+  # punctuation-attached prose such as `constant.` or `constant-factor`.
+  $PostulatePattern = '^\s*(?:axiom\b|constant(?:\s*$|\s+[^:\s]))'
+  $PostulateScanCases = @(
+    @{ text = 'axiom forbidden : True'; expected = $true },
+    @{ text = '  constant forbidden : Nat'; expected = $true },
+    @{ text = 'constant'; expected = $true },
+    @{ text = 'axiom'; expected = $true },
+    @{ text = '  constant : Nat'; expected = $false },
+    @{ text = 'constant, while the parameters remain fixed.'; expected = $false },
+    @{ text = 'constant. -/'; expected = $false },
+    @{ text = 'constant-factor stability contract. -/'; expected = $false }
+  )
+  foreach ($Case in $PostulateScanCases) {
+    if (($Case.text -match $PostulatePattern) -ne $Case.expected) {
+      throw "Postulate scanner regression failed: $($Case.text)"
+    }
+  }
+  Write-VerificationLine 'PASS: postulate scanner regressions (declarations, fields, and comment punctuation)'
   $Scans = @(
     [ordered]@{ name = "sorry/admit/sorryAx"; pattern = "\b(sorry|admit)\b|sorryAx" },
-    [ordered]@{ name = "project axiom/constant"; pattern = "(?m)^\s*(axiom|constant)\b" },
+    [ordered]@{ name = "project axiom/constant"; pattern = $PostulatePattern },
     [ordered]@{ name = "unsafe proof bypass"; pattern = "\b(native_decide|implemented_by|unsafe)\b" }
   )
   $Passed = $true
@@ -283,7 +303,7 @@ function Test-ProhibitedProofText {
     $Hits = New-Object System.Collections.Generic.List[string]
     foreach ($File in $LeanFiles) {
       $LineNumber = 0
-      foreach ($Line in Get-Content -LiteralPath $File.FullName) {
+      foreach ($Line in Get-Content -LiteralPath $File.FullName -Encoding UTF8) {
         $LineNumber++
         if ($Line -match $Scan.pattern) {
           $Relative = $File.FullName.Substring($ProjectRoot.Length + 1)

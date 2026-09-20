@@ -116,8 +116,24 @@ additive energy**, the three output families covered by the paper.
   `E_zeta` have faithful asymptotic and non-asymptotic interfaces.
 - [ ] **EPZAE-33 -- Energy-density transfer.** `zeroe-from-large` and its
   corollary preserve bounded perturbations and zero multiplicity.
+  The Type-I and Type-II source-class consumers prove uniform compact-scale
+  energy estimates `C*T^(B+ε)`, with actual thresholds, physical windows, and
+  multiplicity indices retained. The positive dyadic zero-slab theorem chooses
+  the common cutoffs and shifted line and absorbs all outer coloring losses.
+  The signed dyadic assembly now concludes the paper's shifted symmetric
+  zero-energy predicate, preserving conjugate multiplicities and low heights.
+  `zeroDensityEnergyExponent_le_sup_limsup` now proves `zeroe-from-large`
+  itself, with the exact source domain and no extra mathematical hypothesis.
+  This checklist item remains open for `zeroe-large-cor-0`, including its
+  bounded-scale reduction and the stated lower zeta endpoint `2`.
 - [ ] **EPZAE-34 -- Energy powering.** The source's three possibly different
   output witnesses are formalized without strengthening them into one witness.
+  **Source obstruction:** this acceptance statement is false as printed.
+  `energyPowering_source_counterexample` proves that `(3/4,2,0,0,2)` is
+  an actual region point, but no output with `s' ≤ 2/2` exists because every
+  region point has `s' ≥ 2`. See the Energy Powering Obstruction document.
+  The requirement is retained pending authorization of a documented correction;
+  a checked counterexample does not complete this item.
 - [ ] **EPZAE-35 -- Heath--Brown relation.** The exact two-max five-variable
   inequality is proved from the cited large-values estimate.
 - [ ] **EPZAE-36 -- Energy optimization certificates.** Every projection and

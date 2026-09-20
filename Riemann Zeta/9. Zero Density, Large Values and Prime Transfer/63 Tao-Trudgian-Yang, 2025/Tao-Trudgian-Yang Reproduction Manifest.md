@@ -116,12 +116,47 @@ EPZAE-06/40 gates. Accordingly, runner success is a Lean
 verification claim for installed modules, not a final paper reproduction
 claim.
 
-The latest installed-scope verification ran on 19 September 2026 with
+The latest installed-scope verification ran on 20 September 2026 with
 `run_tao_trudgian_yang_build.bat --no-pause`, exited `0`, and wrote
-`logs/tao-trudgian-yang-build-20260919-220935-26fb4b92.log` (SHA-256
-`a005b958eb19973809b271f4bfb22b5cec494a65901a30e723b41ced0559e7ec`).
-It scanned 42 Lean files and audited 610 nonprivate target theorems plus five
+`logs/tao-trudgian-yang-build-20260920-001114-f84115e4.log` (SHA-256
+`06f934a6db4a4f254184160140eb237f174c6eee322fd0ced746c36b7eaa84e7`).
+It scanned 50 Lean files and audited 738 nonprivate target theorems plus five
 imported boundary declarations and reported no warnings.
+Its production inventory also checks that every package Lean source is listed
+and every production module is imported directly by the root library. The
+warning gate recognizes both bare and filename-prefixed Lean diagnostics.
+
+This run covers the completed `zeroe-from-large` source inequality and the
+four public theorems in `EnergyPoweringObstruction`, including the concrete
+counterexample to source `power-energy`. Its 39 package files are inventoried,
+and the obstruction report is a required project file. EPZAE-34 is not
+complete: the printed source statement is false, and the frozen contract
+has not been amended. Runner success remains an installed-code verification,
+not success of that impossible source obligation or the paper's endpoints.
+
+The broader repository verifier was also run with
+`cmd /c run_lake_build.bat --no-pause` from `E:\Lean\Riemann Zeta`.
+Its first run, `logs/foundation_freeze_20260920_000909.log`, failed only
+because the text scanner classified two rational structure fields named
+`constant` and seven comment lines as postulate declarations. The scanner
+now distinguishes those cases, reads UTF-8, and runs eight positive/negative
+regressions; no module or dependency-audit coverage was removed.
+The rerun exited `0`, with final status `PASS`, no failed stages, and no
+Lean warnings:
+
+```text
+log (relative to Riemann Zeta): logs/foundation_freeze_20260920_001239.log
+log SHA-256: 1625cce51deb9634c6a2ddd7a73c48783c572b7cafa1eb2df8ce8b653150377c
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+foundation audited nonprivate theorems: 14290
+```
+
+Repository-wide manual shortcut scans also found no prohibited proof terms
+or postulate declarations; the `constant` matches were the reviewed fields
+and prose above. `git diff --check` passed. Git's initial LF-to-CRLF notices
+were line-ending notices, not Lean diagnostics. All 61 public theorems in
+the eight newly added energy modules have explicit named axiom audits in
+addition to dynamic declaration discovery. No commit or push was performed.
 
 ## Future axiom gate
 

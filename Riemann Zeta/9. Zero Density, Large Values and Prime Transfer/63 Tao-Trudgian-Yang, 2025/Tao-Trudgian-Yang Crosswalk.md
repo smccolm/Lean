@@ -110,8 +110,9 @@ certificates, not proofs of the energy-region projections.
 | `huxley-bound` | `A <= 3/(3 sigma-1)` | `huxley_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_huxley`, kernel-checked |
 | `guth-maynard-density` | `A <= 15/(3+5 sigma)` | `guthMaynard_isZeroDensityBound_inclusive` and `zeroDensityExponent_le_guthMaynard`, kernel-checked |
 | `bourgain-zd` | pair-to-density formula | Bourgain 1995, planned EPZAE-28 |
-| `zeroe-from-large` | zero-energy from LV energy | EPZAE-33 in progress: bounded perturbation and arbitrary-to-unit tolerance normalization retain analytic-multiplicity indices. The native-detector route has one-separated, single-scale `LargeValuePattern` classes and a proved epsilon-power coefficient normalizer. Independently, `classicalZero_exists_shifted_branch_scale` derives the paper's genuine classical Type-I/Type-II alternative for every slab zero, while `classicalSlabZeroEnergy_le_separated_branch_scale_class_energies` preserves every analytic-multiplicity copy and bounds the full slab energy by four one-separated fixed-branch/fixed-scale classes under the source scale hypotheses. `exists_classicalTypeIIClassPattern_native` converts each inhabited Type-II class to the exact closed-support paper pattern, discharges the coefficient bound, and preserves energy. `exists_classicalTypeIWeightedClassPattern` gives the exact normalized weighted pre-deweighting pattern with energy equality. The smooth-block route has an unconditional explicit Fourier window and four re-separated coefficient-one classes. More directly, `dirichletPoly_classicalZetaLongLineCoeff_fourierDeweight` deweights the original sharp block on `Ioc N (min (2*N) A)` using a scale-independent profile; `exists_large_coefficientOne_shift_of_classicalTypeI` has a fixed-line `L¹` loss, and `integral_norm_fourier_schwartz_compl_Icc_le_order` supplies arbitrary polynomial tail decay. `classicalTypeIFourierRadius` is a canonical positive radius whose numerical tail inequality is automatic; its indexed theorem preserves the full energy, and `exists_separated_classicalTypeI_explicitFourier_energy_classes` produces four one-separated coefficient-one families. The exact source-threshold reciprocal, sharp-cutoff base envelope, logarithmic absorption, and existential order selection now prove a uniform eventual `T^δ` radius. Height-pattern packaging, application of `LV*`, and final dyadic/asymptotic assembly remain open |
-| `power-energy` | weakened energy powering | planned EPZAE-34 |
+| `zeroe-from-large` | zero-energy from LV energy | Source inequality proved by `zeroDensityEnergyExponent_le_sup_limsup` in `EnergyExponentTransfer`, with exact domain `1/2 < σ < 1`, zeta supremum over `τ ≥ 1`, and general-energy limsup. The proof consumes actual Type-I/II source fibers, analytic multiplicity, compact-range uniformity, all explicit losses, and signed dyadic symmetric-rectangle assembly. No mathematical theorem parameter remains |
+| `zeroe-large-cor-0` | bounded-range zero-energy transfer | Still open under EPZAE-33. The source zeta interval is `2 ≤ τ < τ₀`; the general interval is `τ₀ ≤ τ ≤ 2τ₀`. Requires the short-zeta-scale reduction and bounded general-energy powering; neither endpoint nor the empty-interval convention may be silently changed |
+| `power-energy` | weakened energy powering | **Disproved as printed:** `energyPowering_source_counterexample` gives input `(3/4,2,0,0,2)` and excludes any `k=2` output with `s' ≤ 1`; every region point has `s' ≥ 2`. EPZAE-34 remains unresolved pending a documented replacement; see the Energy Powering Obstruction document |
 | `hbt` | Heath--Brown five-variable energy relation | Heath--Brown 1979; planned EPZAE-35 |
 
 ## Source-convention bridges requiring proofs
@@ -139,6 +140,13 @@ certificates, not proofs of the energy-region projections.
 
 These are editorial or semantic points to resolve against the rendered paper,
 ANTEDB blueprint, and cited source before freezing Lean statements:
+
+- **Substantive contradiction, not an editorial repair:** `power-energy`
+  (paper Lemma 62; live blueprint Lemma 10.12) scales the unnormalized
+  double-zeta-sum exponent to at most `s/k`, contradicting the diagonal
+  lower bound on a singleton pattern. The kernel-checked counterexample and
+  exact source references are in `Tao-Trudgian-Yang Energy Powering Obstruction.md`.
+  The source and final output contracts have not been silently modified.
 
 - The TeX line for `exp-pair-def` contains `T >= N <= 1`, while the displayed
   estimate immediately continues with `T >= N >= 1`; Lean must use the latter
