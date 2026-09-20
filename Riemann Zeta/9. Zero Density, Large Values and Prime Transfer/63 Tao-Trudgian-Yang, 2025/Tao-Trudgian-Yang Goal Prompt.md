@@ -331,8 +331,9 @@ the sum and integral. No local mean-square or moment theorem is assumed.
 
 This identity does not discharge Ivić's uniform Theorem 6.2. The
 averaging continuation below is now proved; continue through the
-proved uniform shifted-Gamma/complete-series bridge and the remaining
-divisor-shortening/Voronoi/stationary-phase reduction, with physical parameter ranges, sharp tail and remainder
+proved uniform shifted-Gamma/complete-series bridge and source-scale
+finite shortening and smooth Voronoi/Bessel entry to the remaining
+stationary-phase reduction, with physical parameter ranges, sharp tail and remainder
 bounds, and scale/spacing assembly, to the genuine dyadic twelfth moment.
 The Gaussian convergence majorant and compact-dependent constants are
 not the required uniform Atkinson estimate. Keep EPZAE-21/37 open until
@@ -405,9 +406,11 @@ The actual source contains
 `[GammaR(1/2-it+w)/GammaR(1/2-it)]²`, the pole-removal factors, and
 the contour/divisor weights. Their uniform kernel approximation and
 complete reflected-series remainder are proved in the continuation below.
-Next justify weight bounds, height variation and the shortened divisor
-range, then continue through Voronoi/stationary phase and the sharp
-Atkinson inequality to the dyadic twelfth moment.
+Weight bounds, height variation, the complete quadratic Gaussian
+comparison and source-scale shortening are proved in the subsequent
+continuations, as is the actual smooth Voronoi/Bessel entry. Continue
+through uniform stationary phase and the sharp Atkinson inequality
+to the dyadic twelfth moment.
 Do not replace those amplitudes by `1` or call the unit-phase transform
 an unconditional local zeta mean-square theorem. EPZAE-21/37 remain open.
 
@@ -450,8 +453,10 @@ remainder, with no analytic theorem premise.
 This closes the amplitude/complete reflected-series remainder. The
 following continuation proves actual weight control, height variation,
 freezing and the local Gaussian-window comparison with a complete
-quadratic divisor sum. Shortening, Voronoi/stationary phase, sharp
-Atkinson errors, scale/spacing assembly and the genuine dyadic twelfth
+quadratic divisor sum. The later continuation also proves source-scale
+finite shortening and the actual smooth Voronoi/Bessel entry. Uniform
+stationary phase,
+sharp Atkinson errors, scale/spacing assembly and genuine dyadic twelfth
 moment remain open. Do not substitute a full-series absolute bound
 for the needed oscillatory estimate. EPZAE-21/37 and final outputs stay open.
 
@@ -510,14 +515,15 @@ Gamma-phase transform, and both Gaussian tails. It has no analytic
 theorem premise. It is a complete-series comparison, not the shortened
 Ivić/Atkinson sum or the genuine twelfth moment.
 
-Continue by combining the proved whole-line zeta tail with this window
-comparison, choosing the source's logarithmic window uniformly, and
-shortening the actual quadratic divisor series using its frequency
-damping. Then prove the required Voronoi/stationary-phase reduction,
-Atkinson inequality and dyadic moment, and discharge the remaining
-`energyClauseOne_of_dyadic_moment` input. All nine unconditional
-`Add-est` clauses and other public outputs remain required by the full
-EPZAE-00--41 goal; this continuation does not narrow that goal.
+The following continuation combines the proved whole-line zeta tail,
+uniform logarithmic window and frequency shortening into the actual
+local-mean-square entry to a finite divisor source; the continuation
+also proves smooth Voronoi/Bessel entry. Uniform stationary estimates,
+the Atkinson inequality and
+dyadic moment remain open, as does the analytic input to
+`energyClauseOne_of_dyadic_moment`. All nine unconditional `Add-est`
+clauses and other public outputs remain required by the full
+EPZAE-00--41 goal; no continuation narrows that goal.
 
 Keep all nine modules in root imports, all 78 public audits and all
 20 regressions in the inventory behind `run_tao_trudgian_yang_build.bat`.
@@ -525,6 +531,387 @@ Update that exact batch interface's backing inventory whenever the chain
 changes, and rerun it and `run_lake_build.bat`; do not bypass their gates.
 The original Lemma 62 counterexample, corrected independent fifth
 coordinates, powering/Heath--Brown proofs and pinned sources are unchanged.
+
+### Finite divisor shortening and the source-scale local mean
+
+Preserve six further modules: `ZetaQuadraticDivisorBand`,
+`ZetaQuadraticDivisorShortening`, `ZetaSourceLogScales`,
+`ZetaSourceErrorScales`, `ZetaShortDivisorSource`, and
+`ZetaShortDivisorGeometry`. Their 29 public theorems have named
+dependency audits and 18 additional semantic regressions.
+
+The band is a literal finite set of positive integers, with exact
+closed membership condition
+`G abs(log n-log(T/(2pi)))≤L`.
+The upper index bound is proved, not a separate truncation premise.
+The finite sum `S(T,G,L)=zetaShortQuadraticDivisorSum T G L`
+retains the actual complex Mellin weight, divisor coefficient, central
+Gamma phase and quadratic Gaussian transform.
+`norm_zetaFrozenDivisorQuadraticSum_sub_short_le` bounds the omitted
+sum by `M(T) sqrt(pi) G exp(-L²/8)`.
+For every real `A`, one threshold before all widths makes the
+`L=log T` tail at most `G T^(-A)`.
+
+For each `δ>0`, one height threshold covers every
+`0<G≤T^(1/2-δ)`. The half-height window, `G²≤2T` and `G≤T`
+are derived from these scales. The mass loss is chosen as `δ/4`;
+the actual freezing and phase errors are then `Oδ(G log T)`.
+The source consumers prove
+
+```text
+| integral_R exp(-((t-T)/G)^2) |zeta(1/2+it)|^2 dt
+    - 2 Re S(T,G,log T) | ≤ Cδ G log T,
+
+integral_[T-G,T+G] |zeta(1/2+it)|^2 dt
+ ≤ 2 exp(1) Re S(T,G,log T) + Cδ G log T.
+```
+
+These are `exists_zetaSquarePhysicalGaussian_short_approximation`
+and `exists_zetaSquareLocalMean_le_short_divisor`, with one constant
+and one threshold depending only on `δ`. No moment, Voronoi,
+stationary-phase or result-shaped theorem premise is present.
+
+On the lower source scale `T^δ≤G`, the actual band satisfies
+`abs(n-T/(2pi))≤T log T/(pi G)` and
+`T/(4pi)≤n≤T/pi`, uniformly beyond one threshold.
+`zetaShortQuadraticDivisorSum_eq_divisor_test` identifies the
+literal finite sum with `Σ d(n) zetaShortDivisorTestFunction(T,G,n)`.
+This exact real-variable test function retains its complex weight.
+
+The following continuation constructs a smooth positive-support cutoff
+of this actual test, pays its change from the frequency tails, and
+applies native Voronoi and both literal Bessel bridges. The hard finite
+band itself is not declared smooth. Uniform oscillatory estimates and
+the sharp Ivić/Atkinson inequality remain required; do not assume the
+source inequality or bound the entire retained oscillatory sum absolutely.
+
+EPZAE-21/37, the genuine dyadic twelfth moment, every unconditional
+`Add-est` output and the complete EPZAE-00--41 contract remains in force.
+The original Lemma 62 counterexample, independent corrected fifth
+coordinates and proved powering/Heath--Brown relations are unchanged.
+
+Keep all six modules directly imported by the root, all 29 named
+audits and all 18 regressions covered by
+`run_tao_trudgian_yang_build.bat`. Update the exact batch interface's
+backing inventory as this chain changes and rerun it together with
+`run_lake_build.bat`; the full goal and existing gates are not narrowed.
+
+### Actual smooth Voronoi and literal Bessel source
+
+Eight new modules now construct and consume the genuine smooth divisor
+source: `ZetaDivisorWeightSmooth`, `ZetaDivisorTestSmooth`,
+`ZetaDivisorBandCutoff`, `ZetaSmoothDivisorTest`,
+`ZetaDivisorVoronoi`, `ZetaSmoothDivisorTail`,
+`ZetaSquareVoronoiSource` and `ZetaDivisorBesselSource`.
+They add 43 named public theorem audits and 18 semantic regressions.
+
+The literal Mellin weight is entire in its complex logarithmic argument.
+`hasDerivAt_zetaDivisorWeight` differentiates its actual contour integral
+using a locally uniform integrable Gaussian majorant; real smoothness
+of all orders follows from holomorphy. The evaluated Gaussian transform
+and positive-axis complex power then prove smoothness of the actual
+`zetaShortDivisorTestFunction` for positive arguments.
+
+For `A=T/(2pi)`, set
+`a=A exp(-2L/G)`, `b=A exp(-L/G)`,
+`c=A exp(L/G)`, `d=A exp(2L/G)`. The actual cutoff is
+
+```text
+chi(x) = smoothTransition((x-a)/(b-a))
+       * smoothTransition((d-x)/(d-c)),
+g(T,G,L,x) = chi(x) zetaShortDivisorTestFunction(T,G,x).
+```
+
+For `T,G,L>0`, it lies in `[0,1]`, equals one throughout `[b,c]`,
+and vanishes outside `[a,d]`. The closed transition endpoints are
+proved. Its positive support gives global real smoothness of the
+product, including at zero. `zetaSmoothDivisorVoronoiTest` constructs
+the native test object; smoothness and support are not hypotheses.
+
+`norm_zetaSmoothDivisorSum_sub_short_le` bounds the actual difference
+from the earlier finite source by
+`M(T) sqrt(pi) G exp(-L²/8)`, where
+`M(T)=Σ norm(zetaFrozenDivisorCoefficient T n)`.
+For `L=log T`, this is at most `G T^(-B)` for every fixed real
+`B`, beyond one threshold uniform in all positive widths with
+`G²≤2T`. Thus every smooth transition term has a proved cost.
+
+The modulus-one native Voronoi theorem is now applied to this object,
+not to an independently supplied test. Both native transforms are
+then identified with their literal Bessel integrals:
+
+```text
+V0 = integral_(x>0) (log x + 2 gamma) g(x) dx,
+VY = sum_n d(n) (-2pi) integral_(x>0) g(x) Y0(4pi sqrt(nx)) dx,
+VK = sum_n d(n) 4 integral_(x>0) g(x) K0(4pi sqrt(nx)) dx.
+```
+
+Here `Y0` and `K0` are the native classical real-integral kernels,
+not uninterpreted symbols. The zero index is handled by the actual
+`d(0)=0`; it is not passed to a positive-index bridge.
+`exists_zetaSquarePhysicalGaussian_bessel_approximation` and
+`exists_zetaSquareLocalMean_le_bessel` prove, for every `δ>0`,
+one `Cδ>0` and one `T0≥8`, uniformly for
+`T≥T0` and `0<G≤T^(1/2-δ)`:
+
+```text
+| integral_R exp(-((t-T)/G)^2) |zeta(1/2+it)|^2 dt
+    - 2 Re(V0+VY+VK) | ≤ Cδ G log T,
+
+integral_[T-G,T+G] |zeta(1/2+it)|^2 dt
+ ≤ 2 exp(1) Re(V0+VY+VK) + Cδ G log T.
+```
+
+This closes the actual smooth Voronoi/Bessel **entry**, not the
+stationary-phase estimate or Ivić Theorem 6.2. The following continuation
+proves the complete modified-Bessel branch negligible; the later
+phase-adjusted continuation also bounds and removes its actual main term.
+Derive the oscillatory Neumann-kernel reduction with uniform amplitudes, tails and source
+scales. The sharp Atkinson inequality, physical dyadic/Gram assembly,
+genuine twelfth moment, EPZAE-21/37 and every unconditional `Add-est`
+output remain open. No target-shaped analytic input is assumed.
+
+Preserve the original Lemma 62 counterexample and the corrected
+independent fifth coordinates. Keep these eight modules directly
+imported, all 43 public audits and 18 regressions covered by
+`run_tao_trudgian_yang_build.bat`, and update its backing inventory
+as the chain changes. Run it and `run_lake_build.bat` after Lean
+changes. Do not narrow the complete EPZAE-00--41 goal or its gates.
+
+### Negligible complete K0 branch and actual reduced source
+
+Seven new modules now prove and consume the complete modified-Bessel
+branch estimate: `ZetaBesselK0Decay`,
+`ZetaSmoothDivisorSupport`, `ZetaSmoothDivisorMass`,
+`ZetaBesselK0Integral`, `ZetaBesselK0Series`,
+`ZetaBesselK0Scales` and `ZetaSquareBesselMinusSource`.
+All 29 public theorem audits and 16 semantic regressions are in the
+root import graph and the exact batch-runner inventory.
+
+The kernel estimate begins with the literal integral
+`K0(y)=integral_(u>0) exp(-y cosh u) du`.
+It proves `K0(y)≤exp(-y/2) K0(y/2)` for `y>0`, hence
+`abs(K0(y))≤2exp(-y/2)` for `y≥2`. The real exponential
+series then gives, for every natural `k`,
+
+```text
+abs(K0(y)) ≤ Bk/(y^2)^k,
+Bk = 2 * 2^(2k) * (2k)!.
+```
+
+For `T≥16`, `G,L>0` and `8L≤G`, the full smooth
+source—including both transitions—has support in `[T/16,T]`.
+The exponentiated outer-band endpoints are proved first, not supplied
+as a support hypothesis. Thus every positive divisor index satisfies
+`(4pi sqrt(nx))^2≥Tn` on the actual support.
+The genuine test has a uniform bound `norm(g(x))≤C G` and
+integrated mass at most `C G T` when `G²≤2T`.
+These deliberately coarse absolute bounds are used only for the
+exponentially decaying branch, not as a replacement for oscillatory
+cancellation in the main or Neumann terms.
+
+The actual K0 source integrand is proved measurable and absolutely
+integrable. For every `k`, its integral has bound
+`Ck G T/(T^k n^k)`, uniformly before choosing `T,G,L,n`.
+For `k≥2`, summation uses the genuine ordinary-divisor Dirichlet
+series at `s=2`. `hasSum_zetaBesselK0SourceTerm` identifies the
+complete arithmetic series with `zetaDivisorBesselPlus`; the zero
+index has its actual zero divisor coefficient.
+
+`exists_zetaDivisorBesselPlus_powerSaving` proves, for every
+`δ>0` and every real `A`, one threshold `T0≥16` such that
+
+```text
+T≥T0, T^δ≤G≤T^(1/2-δ)
+  implies norm(zetaDivisorBesselPlus(T,G,log T)) ≤ G T^(-A).
+```
+
+All scale conditions, cutoff widths and constants are derived
+uniformly, before choosing `G`. The lower width `G≥T^δ` is
+explicit: this is the source range, not the earlier wider
+Voronoi-entry range with arbitrary positive `G`.
+
+The public source consumers
+`exists_zetaSquarePhysicalGaussian_main_minus_approximation`
+and `exists_zetaSquareLocalMean_le_main_minus` use this proved
+power saving, not a supplied transform-error premise. On that range,
+one constant and threshold depending only on `δ` give
+
+```text
+| integral_R exp(-((t-T)/G)^2) |zeta(1/2+it)|^2 dt
+    - 2 Re(V0+VY) | ≤ Cδ G log T,
+
+integral_[T-G,T+G] |zeta(1/2+it)|^2 dt
+ ≤ 2 exp(1) Re(V0+VY) + Cδ G log T.
+```
+
+Here `V0` is the unchanged logarithmic main integral and `VY`
+the actual oscillatory Neumann-kernel divisor sum. The next section
+reapplies Voronoi with the source-required lattice phase. The later
+continuation proves the phase-adjusted main bound. Next derive the
+sharp Y0 stationary reduction with uniform amplitudes, tails and
+source scales. The sharp Ivić/Atkinson
+inequality, physical dyadic/Gram assembly, genuine twelfth moment,
+EPZAE-21/37 and every unconditional `Add-est` output remain open.
+No new analytic theorem assumption is introduced.
+
+The original Lemma 62 counterexample, corrected independent fifth
+coordinates and proved powering/Heath–Brown results remain unchanged.
+The full EPZAE-00--41 goal is not narrowed. Keep all seven modules,
+29 named audits and 16 regressions covered by
+`run_tao_trudgian_yang_build.bat`; update its backing inventory
+as needed and rerun it together with `run_lake_build.bat` after
+Lean changes.
+
+### Source-aligned lattice phase and exact saddle geometry
+
+The pinned Ivić Orsay 83.06 scan, printed page 110, equation (6.36),
+inserts `exp(2pi i n)=1` before applying Voronoi. Our divisor source
+has the conjugate sign `x^(-1/2+iT)`, so its continuous test must
+instead be multiplied by `alpha(x)=exp(-2pi i x)`.
+The unadjusted identities above remain valid, but their continuous
+saddle equations are different; do not use them as the source's
+Atkinson stationary phase.
+
+Six additional modules are installed: `ZetaDivisorLatticePhase`,
+`ZetaAtkinsonVoronoi`, `ZetaAtkinsonK0`,
+`ZetaAtkinsonReducedSource`, `ZetaAtkinsonPhase` and
+`ZetaAtkinsonSaddle`. They have 40 named public theorem audits
+and 22 semantic regressions.
+
+For the actual new test `gA=alpha*g`, every natural-index value,
+pointwise norm and support is proved unchanged. Its globally smooth
+positive-support native test is constructed. Applying native Voronoi
+again gives new logarithmic main, Y0 and K0 integrals, not equalities
+between the old and new continuous integrals. The K0 pointwise
+majorant transfers by unit norm; actual integrability, complete
+arithmetic summability and `HasSum` are proved for the new branch.
+`exists_zetaAtkinsonBesselPlus_powerSaving` gives
+`norm(VK_A)≤G T^(-A)` for every fixed real `A` on
+`T^δ≤G≤T^(1/2-δ)` beyond one threshold depending only on
+`δ,A`.
+
+The actual consumers
+`exists_zetaSquarePhysicalGaussian_atkinson_reduced` and
+`exists_zetaSquareLocalMean_le_atkinson_reduced` remove that
+proved branch. They retain only `zetaAtkinsonVoronoiMain` and
+`zetaAtkinsonBesselMinus`, with uniform error `Cδ G log T`,
+the same factors `2` and `2 exp(1)`, and one constant and
+threshold before all allowed widths. No analytic estimate is a
+theorem parameter.
+
+The exact source factorization keeps the cutoff, complex Mellin
+weight, Gamma factor and quadratic Gaussian in
+`zetaAtkinsonAmplitude`. Its carrier, after multiplication by
+`exp(4pi i b sqrt(x))`, is
+
+```text
+Phi(T,b,x) = T log x - 2pi x + 4pi b sqrt(x),
+A = T/(2pi), r = (b + sqrt(b^2 + 4A))/2.
+For T>0 and x>0: Phi'(x)=0 iff x=r^2,
+Phi''(r^2) = -pi (2r-b)/r^3 < 0.
+```
+
+These are proved for every real `b`, including zero for the main
+term and both signs of `sqrt(n)` for the prospective Bessel
+carriers. The main saddle is exactly `T/(2pi)`.
+This is exact carrier calculus, not a proved Y0 asymptotic expansion
+or a uniform stationary-phase approximation. The amplitude is still
+complex and variable; its required derivative bounds may not be
+silently discarded.
+
+The following continuation proves the **phase-adjusted** main-term
+estimate. Continue with literal Y0 asymptotic reduction, uniform
+amplitudes and tails, then the sharp
+Atkinson inequality and physical dyadic/Gram assembly. The genuine
+twelfth moment, EPZAE-21/37 and every unconditional `Add-est`
+output remain open. The preserved Lemma 62 counterexample and proved
+corrected independent fifth-coordinate powering/Heath–Brown chain
+are unchanged. The full EPZAE-00--41 goal remains active.
+
+Keep all six modules directly imported, all 40 named audits and
+22 regressions covered, and update the backing inventory of
+`run_tao_trudgian_yang_build.bat` whenever this chain changes.
+Both that exact batch interface and `run_lake_build.bat` remain
+mandatory after Lean changes; do not replace their gates with a
+focused build or narrow the goal.
+
+### Actual logarithmic main integral bounded and removed
+
+Nine additional modules now bound the **phase-adjusted** logarithmic
+main integral and consume the bound in the actual physical zeta
+source: `IntervalAmplitudeBounds`, `ZetaMainElementaryWeights`,
+`ZetaMainMellinProfile`, `ZetaLogGaussianVariation`,
+`ZetaQuadraticGaussianDerivative`,
+`ZetaQuadraticLogGaussianVariation`, `ZetaAtkinsonMainWeight`,
+`ZetaAtkinsonMainIntegral` and `ZetaAtkinsonMinusSource`.
+All 38 public theorem audits and 20 semantic regressions are covered
+by root imports and the exact batch-runner inventory.
+
+The literal `IntervalC1Bound` records smoothness, the norm bound
+and the integral of the norm of the actual derivative. These are
+constructed for every source factor, not assumed in the final
+source theorem. The two monotone cutoff transitions have uniformly
+bounded variation independent of their widths. The actual complex
+Mellin weight becomes a fixed smooth profile on `[1/16,1]`
+after `x/T` rescaling; its contour definition is unchanged.
+The square-root, logarithmic and unit Gamma factors retain their
+actual values.
+
+Differentiating the exact complex quadratic Gaussian gives its
+damped derivative, not a constant majorant over the whole support.
+The logarithmic Gaussian envelope has variation at most two. This
+proves the uniform complex-transform variation bound
+`4 sqrt(pi) G` on the full physical support, with `G²≤2T`.
+Combining every factor gives one constant independent of `T,G,L`
+such that the complete main amplitude has norm and variation at
+most `C G sqrt(T) log T`.
+
+The native `norm_weighted_gmReflectionIntegral_le` applies to
+the exact carrier `T log x - 2pi x` and supplies
+`10/sqrt(T)` cancellation. The actual main integrand is proved
+absolutely integrable; the positive-support restriction and exact
+reflection identity are proved. Consequently
+`exists_norm_zetaAtkinsonVoronoiMain_le` gives
+
+```text
+norm(zetaAtkinsonVoronoiMain(T,G,L)) ≤ C G log T
+for T≥16, log T≥1, G>0, G²≤2T, L>0 and 8L≤G.
+```
+
+The source-scale theorem derives these conditions uniformly at
+`L=log T`, with a threshold before every
+`T^δ≤G≤T^(1/2-δ)`. The public consumers
+`exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation`
+and `exists_zetaSquareLocalMean_le_atkinson_minus` now prove
+
+```text
+| integral_R exp(-((t-T)/G)^2) |zeta(1/2+it)|² dt - 2 Re(VY_A) |
+  ≤ Cδ G log T,
+integral_[T-G,T+G] |zeta(1/2+it)|² dt
+  ≤ 2 exp(1) Re(VY_A) + Cδ G log T.
+```
+
+Here `VY_A=zetaAtkinsonBesselMinus(T,G,log T)` is the
+complete actual phase-adjusted divisor sum with the literal Y0
+kernel and its `-2pi` normalization. Both removed branches are
+paid for by proved bounds; no amplitude, transform-error or moment
+theorem is a parameter. The old unadjusted integral is not used in
+place of the new source.
+
+Next prove the literal Y0 asymptotic expansion and the uniform
+oscillatory stationary reduction, retaining the complex amplitude
+and complete arithmetic tails. The sharp Atkinson inequality,
+physical dyadic/Gram assembly, genuine twelfth moment, EPZAE-21/37
+and every unconditional `Add-est` output remain open.
+The main-integral substep is complete, not the full Atkinson theorem.
+
+The full EPZAE-00--41 goal, preserved Lemma 62 counterexample and
+proved independent-coordinate powering/Heath–Brown chain remain
+intact. Keep all nine modules, 38 named audits and 20 regressions
+covered by `run_tao_trudgian_yang_build.bat`, update its backing
+inventory as needed, and run it together with `run_lake_build.bat`
+after Lean changes. Neither the goal nor verification scope is narrowed.
 
 ## Source and dependency boundary
 

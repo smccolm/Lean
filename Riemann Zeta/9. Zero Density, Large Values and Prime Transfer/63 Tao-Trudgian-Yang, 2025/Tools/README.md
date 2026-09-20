@@ -76,8 +76,28 @@ Installed and planned tools:
   theorems have named audits; 20 additional regressions test zero
   coefficients, both closed height boundaries, the Gaussian scale
   boundary, factor two, and the full source-consumer quantifiers.
-  The shortened divisor sum and genuine twelfth moment remain open,
-  not assumed or excluded;
+  Six further modules cover the exact finite frequency band, Gaussian
+  shortening tail, uniform logarithmic scale/error assembly, actual
+  local-second-moment consumer and physical divisor support. Their
+  29 public theorem audits and 18 regressions are required by the same
+  root/inventory gate. Eight further required modules construct the
+  entire weight, actual smooth cutoff and native test, pay transition
+  tails, and consume native Voronoi and literal Bessel bridges. Their
+  43 public audits and 18 regressions are included in the same gates.
+  Seven further modules prove literal K0 decay, full smooth support
+  and mass, actual integrability, complete divisor summation, arbitrary
+  power saving and source removal. All 29 public audits and 16
+  regressions are included in the same root/inventory gates. Six further
+  required modules insert the lattice phase, reapply native Voronoi,
+  transfer the complete K0 bound and remove it from the actual physical
+  source; exact carrier factorization and unique nondegenerate saddle
+  calculus are also proved. All 40 public audits and 22 regressions
+  are covered by the root and batch inventory. Nine further modules
+  prove the actual amplitude variation, phase-adjusted main-integral
+  bound and its physical-source removal, leaving the complete Y0 sum.
+  Their 38 public audits and 20 regressions are included. The remaining
+  Y0 asymptotic and uniform stationary estimates, sharp Atkinson inequality
+  and genuine twelfth moment remain open, not assumed or excluded;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
 

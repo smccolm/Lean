@@ -520,8 +520,9 @@ all covered by the root imports and principal batch runner.
 
 The unit-phase approximation and its uniform integrated error are now
 proved below, followed by the uniform shifted-Gamma/pole approximation
-and complete reflected-source remainder. Divisor shortening,
-Voronoi/stationary reduction and the dyadic twelfth moment remain open.
+and complete reflected-source remainder. Later continuations prove
+divisor shortening and actual smooth Voronoi/Bessel entry. Uniform
+stationary reduction and the dyadic twelfth moment remain open.
 Hence the repaired-witness/Heath--Brown/optimization
 assembly of clause (i) is
 still conditional on the same genuine moment; no final clause is
@@ -563,9 +564,166 @@ This adds 44 public audits, one newly public Gamma derivative audit,
 and 14 boundary/source regressions, all in root imports and the inventory
 behind `run_tao_trudgian_yang_build.bat`. That batch runner and the
 foundation runner must continue to be updated and rerun with this chain.
-Leading divisor weight bounds/height variation, shortening, Gaussian
-assembly, Voronoi/stationary phase and the genuine dyadic twelfth moment
-remain open. Thus clause (i) remains conditional; all final `Add-est`
-clauses and the full EPZAE-00--41 goal are unchanged and incomplete.
+The following continuation proves weight bounds/height variation and
+the complete quadratic Gaussian-window comparison. The later continuation
+also proves source-scale shortening and actual smooth Voronoi/Bessel
+entry. Uniform stationary phase and the genuine dyadic twelfth moment remain open.
+Thus clause (i) remains conditional; all
+final `Add-est` clauses and the full EPZAE-00--41 goal are incomplete.
 The original counterexample and both independent fifth coordinates remain
 preserved; this analytic continuation does not alter the repaired powering.
+
+### Actual weight and Gaussian-source continuation
+
+Nine additional modules prove the Mellin weight's reflection and bounded
+small-index regime, its signed physical argument and height variation,
+and the summed coefficient bound `Cε T^(1/2+ε)`.
+Only the smooth weight is frozen: the phase and divisor oscillation
+remain at `T+x`. The freezing error is `Cε |x| T^(-1/2+ε)` on
+`T≥8`, `|x|≤T/2`.
+
+The two actual contour branches are proved conjugate, giving
+`|ζ(1/2+it)|²=2 Re(I(-t)/GammaNormalization(t))`, including `t=0`.
+`exists_abs_zetaSquareGaussianWindow_sub_quadratic_le` then bounds
+the actual Gaussian zeta window by its complete quadratic divisor
+source plus explicit freezing, Gaussian-tail and phase-replacement
+errors. Absolute integrated-norm summability justifies the exchange.
+This is not a shortened sum or a twelfth-moment theorem.
+
+The 78 public theorem audits, 20 regressions and nine root imports
+are included in the backing inventory of `run_tao_trudgian_yang_build.bat`.
+Keep that exact runner updated and rerun both principal runners as the
+chain changes. No analytic theorem premise was added to these source
+consumers. The moment premise in `energyClauseOne_of_dyadic_moment`
+is still open. The counterexample, corrected independent fifth
+coordinates and all repaired powering/Heath--Brown conclusions remain
+unchanged.
+
+### Source-scale finite divisor entry
+
+Six further modules now prove actual finite frequency shortening,
+uniform logarithmic Gaussian tails and the `Oδ(G log T)` error
+for all `0<G≤T^(1/2-δ)`, beyond one threshold depending only on `δ>0`.
+`exists_zetaSquareLocalMean_le_short_divisor` applies this to the
+actual unsmoothed local zeta second moment, retaining the finite
+oscillatory divisor source rather than assuming a moment estimate.
+On `G≥T^δ`, its physical band has radius `T log T/(pi G)` about
+`T/(2pi)`, with indices in `[T/(4pi),T/pi]`.
+
+All 29 new public theorem audits and 18 semantic regressions are
+covered by root imports and the inventory behind
+`run_tao_trudgian_yang_build.bat`. Both principal runners remain
+required as this chain changes. The next continuation proves the smooth
+actual test and native Voronoi/Bessel entry. Uniform stationary
+reduction, the sharp Atkinson estimate and genuine dyadic twelfth
+moment are still open. No final
+`Add-est` clause or full-goal completion is claimed.
+
+The original Lemma 62 counterexample remains byte-for-byte unchanged,
+as do the corrected independent fifth coordinates, powering and
+Heath--Brown theorems. No new analytic theorem premise is used in the
+finite source entry; the moment premise in the existing conditional
+clause-(i) assembly is not discharged by it.
+
+### Actual smooth Voronoi/Bessel entry
+
+Eight modules now prove entire complex-weight smoothness, construct a
+fixed-profile cutoff with positive compact support, pay every transition
+term from the frequency tail, and consume native modulus-one Voronoi.
+Both native transforms are identified with literal Bessel integrals,
+retaining `-2pi`, `4`, the full logarithmic main term and `d(0)=0`.
+`exists_zetaSquareLocalMean_le_bessel` is the actual source consumer,
+with one constant and height threshold uniform in all
+`0<G≤T^(1/2-δ)` for each `δ>0`. The associated physical Gaussian
+identity has error `Cδ G log T`. None of these theorems assumes a
+moment, smoothness, support or Voronoi input for the actual source.
+
+The 43 public theorem audits and 18 regressions are covered by the
+root imports and `run_tao_trudgian_yang_build.bat` inventory. The
+goal retains both principal runners and all EPZAE-00--41 obligations.
+The original counterexample is unchanged, as are the independent
+corrected fifth coordinates and the powering/Heath--Brown theorems.
+The following continuation discharges the complete modified-Bessel
+branch. The remaining main/Y0 oscillatory estimates, sharp Atkinson
+inequality and actual twelfth moment are not discharged; all
+unconditional `Add-est` clauses and EPZAE-21/37 remain open.
+
+### Complete modified-Bessel branch removed
+
+Seven modules now prove the literal `K0` exponential bound and consume
+the actual smooth source support, mass, absolute integrability and
+ordinary-divisor series at two. The complete branch satisfies
+`norm(VK)≤G T^(-A)` for every fixed real `A`, uniformly beyond one
+height threshold on `T^δ≤G≤T^(1/2-δ)` for each `δ>0`.
+`exists_zetaSquareLocalMean_le_main_minus` applies this proved bound
+to the actual zeta local mean; the unchanged logarithmic main term
+and oscillatory `Y0` sum remain, with error `Cδ G log T`.
+
+This is not the Atkinson inequality or the genuine twelfth moment.
+The later continuation proves the phase-adjusted main estimate;
+sharp stationary estimates remain required. The
+moment premise in the earlier conditional clause-(i) theorem is not
+discharged. All unconditional `Add-est` outputs and EPZAE-21/37 stay
+open. The 29 public audits and 16 regressions are included in root
+imports and the `run_tao_trudgian_yang_build.bat` inventory; both
+principal runners and the full goal remain required. The counterexample,
+independent corrected fifth coordinates and powering/Heath–Brown
+proofs are untouched.
+
+### Source-required lattice phase and nondegenerate carrier saddle
+
+Six additional modules now insert `exp(-2pi i x)` into the actual
+continuous divisor test, following the conjugate-sign version of
+Ivić (6.36). Every natural-index coefficient, norm and support is
+proved unchanged; native Voronoi is applied to the newly constructed
+smooth test. The new continuous integrals are not equated with the
+old ones. The complete K0 bound transfers by its actual norm
+majorant, with integrability, arithmetic convergence and a proved
+`HasSum`. `exists_zetaSquareLocalMean_le_atkinson_reduced` is
+the actual phase-adjusted local-source consumer, with uniform
+`Cδ G log T` error on `T^δ≤G≤T^(1/2-δ)`.
+
+The true cutoff, Mellin weight, Gamma factor and quadratic Gaussian
+are retained in the amplitude. Exact carrier factorization and
+derivatives give the unique positive saddle for both real signs,
+and its second derivative is strictly negative. This is not a Y0
+asymptotic expansion or a uniform stationary-phase estimate.
+The phase-adjusted main estimate is proved below; the Y0 estimate
+and genuine twelfth moment are still needed before the moment-to-energy consumer
+can close clause (i). All unconditional `Add-est` outputs and
+EPZAE-21/37 remain open. The counterexample, independent corrected
+fifth coordinates and proved powering/Heath–Brown chain are preserved.
+
+All six modules, 40 public audits and 22 regressions are included
+in root imports and the backing inventory of
+`run_tao_trudgian_yang_build.bat`. Both principal runners remain
+required after Lean changes, and the full EPZAE-00--41 goal is
+unchanged.
+
+### Actual main integral removed from the phase-aligned source
+
+Nine additional modules now prove and consume the phase-adjusted
+logarithmic main-integral bound `C G log T`. All amplitude bounds
+are constructed: the actual cutoff has uniformly bounded variation,
+the actual Mellin weight is a fixed profile after `x/T` rescaling,
+and the complex quadratic Gaussian's derivative is controlled by
+its literal damping envelope. Its total variation is `O(G)`, not
+a bound losing another power of G. The full amplitude has norm
+and variation `O(G sqrt(T) log T)`; native logarithmic reflection
+supplies `O(1/sqrt(T))` cancellation. Positive support, absolute
+integrability and the exact main/reflection identity are proved.
+
+`exists_zetaSquareLocalMean_le_atkinson_minus` now links the
+actual zeta local mean to only the complete phase-adjusted Y0
+divisor sum, with uniform `Cδ G log T` error on
+`T^δ≤G≤T^(1/2-δ)`. The physical Gaussian companion is also
+proved. The main term is not an assumed or discarded error.
+
+All nine modules, 38 public audits and 20 regressions are covered
+by the root and `run_tao_trudgian_yang_build.bat` inventory.
+The goal retains both principal runners and every EPZAE-00--41
+obligation. The original counterexample and proved independent
+cardinality/energy powering and Heath–Brown chain are unchanged.
+The remaining literal Y0 asymptotic/stationary estimates, genuine
+twelfth moment and unconditional Add-est outputs are not discharged;
+EPZAE-21/37 remain open.

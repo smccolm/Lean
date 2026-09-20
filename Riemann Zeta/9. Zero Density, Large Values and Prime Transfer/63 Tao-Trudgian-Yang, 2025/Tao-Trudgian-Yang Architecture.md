@@ -36,8 +36,14 @@ flowchart TD
     ZGP["EPZAE-21 actual reflected Gamma phase<br/>source factorization + exact ODE;<br/>closed-window quadratic error DONE"]
     ZGT["EPZAE-21 actual Gamma-phase transform<br/>integrated error + both Gaussian tails;<br/>frequency damping consumer DONE"]
     ZAMP["EPZAE-21 actual shifted-Gamma and pole amplitude<br/>near + far normalized kernel error;<br/>complete reflected divisor source O(1) DONE"]
-    ZDS["EPZAE-21 leading divisor weights<br/>shortening + uniform height variation;<br/>Gaussian source assembly OPEN"]
-    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>actual Voronoi + stationary reduction;<br/>uniform source errors OPEN"]
+    ZWG["EPZAE-21 actual Mellin weights + reflection<br/>height variation, square-root mass;<br/>actual source freezing DONE"]
+    ZFG["EPZAE-21 real zeta factor-two bridge<br/>Gaussian window to complete quadratic<br/>divisor sum with all errors DONE"]
+    ZDS["EPZAE-21 finite frequency band + log tails<br/>source-scale O(G log T) error;<br/>actual local mean to short divisor sum DONE"]
+    ZVT["EPZAE-21 actual smooth cutoff + paid tails<br/>native Voronoi + literal Y0/K0 bridges;<br/>actual zeta local-mean entry DONE"]
+    ZK["EPZAE-21 actual K0 exponential decay<br/>full smooth support + arithmetic summation;<br/>arbitrary power saving + source removal DONE"]
+    ZAP["EPZAE-21 source-required lattice phase<br/>native Voronoi reapplied + complete K0 removal;<br/>actual phase-adjusted local source DONE"]
+    ZAM["EPZAE-21 actual amplitude variation<br/>native logarithmic reflection + main bound;<br/>actual zeta source to Y0-only sum DONE"]
+    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>exact carrier + unique nondegenerate saddle CHECKED;<br/>Y0 asymptotic + uniform stationary estimates OPEN"]
     ZTM["EPZAE-19/21 critical-line twelfth moment<br/>dyadic height estimate OPEN"]
 
     ZCB["EPZAE-22 zero-count convention bridge<br/>DONE"]
@@ -118,10 +124,23 @@ flowchart TD
     ZSQ -->|complete normalized source and divisor series| ZAMP
     GM -->|Euler Gamma integral and auxiliary Gaussian bounds| ZAMP
     ML -->|Gronwall and Gamma reflection| ZAMP
-    ZGA --> ZDS
-    ZGT -->|frequency damping after weight control| ZDS
-    ZAMP -->|proved complete-series uniform remainder| ZDS
-    ZDS --> ZAT
+    ZAMP -->|actual Mellin weight and source remainder| ZWG
+    ML -->|contour reflection and summable divisor series| ZWG
+    ZWG -->|frozen actual coefficients and real-source error| ZFG
+    ZGA -->|physical window and Gaussian tails| ZFG
+    ZGT -->|actual phase transform and error| ZFG
+    ZFG -->|complete quadratic source comparison| ZDS
+    ZWG -->|square-root coefficient mass| ZDS
+    ZGQ -->|frequency damping| ZDS
+    ZDS -->|actual finite divisor test and physical support| ZVT
+    GM -->|native smooth positive-support Voronoi theorem| ZVT
+    ZVT -->|actual positive support and complete Bessel source| ZK
+    ZVT -->|unchanged integer coefficients; continuous test changes| ZAP
+    ZK -->|unit-norm transfer of actual K0 majorant and summation| ZAP
+    SRC -->|Ivic 6.36 lattice-phase convention| ZAP
+    ZAP -->|phase-corrected main and Y0 source| ZAM
+    GM -->|native bounded-variation logarithmic reflection| ZAM
+    ZAM -->|complete Y0-only source; exact saddle calculus| ZAT
     SRC --> ZAT
     ZAT -->|scale and spacing assembly still needed| ZTM
     LVP --> ZMI
@@ -220,6 +239,6 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
-    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP done;
-    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDS,ZAT,ZTM,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,EC1ZA,EC1S,EC,NAE,PUB,SEM,REL open;
+    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP,ZWG,ZFG,ZDS,ZVT,ZK,ZAP,ZAM done;
+    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZAT,ZTM,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,EC1ZA,EC1S,EC,NAE,PUB,SEM,REL open;
     class PL62 preserved;

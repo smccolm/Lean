@@ -139,10 +139,49 @@ combines the source freeze, Gaussian tails and actual phase transform
 into a comparison with the complete quadratic divisor sum.
 The 78 public audits and 20 regressions are in the root imports and
 the inventory behind `run_tao_trudgian_yang_build.bat`.
-Source-scale assembly/shortening, Voronoi/stationary phase, Atkinson
-and the genuine twelfth moment remain open; no moment is assumed by
-these new source consumers. The full goal and preserved counterexample
-are unchanged.
+Six more modules now prove finite frequency shortening and the uniform
+source-scale assembly. For each `δ>0`, beyond one threshold for all
+`0<G≤T^(1/2-δ)`, the actual Gaussian mean differs from twice the real
+part of the finite divisor source by at most `Cδ G log T`.
+`exists_zetaSquareLocalMean_le_short_divisor` gives the unsmoothed
+local-second-moment consumer. On `G≥T^δ`, the retained indices lie
+within `T log T/(pi G)` of `T/(2pi)` and remain comparable with `T`.
+All 29 public audits and 18 regressions are in the root and batch inventory.
+Eight further modules now construct the actual smooth positive-support
+source, pay its transition error, and apply native modulus-one Voronoi.
+The literal `Y0` and `K0` bridges preserve every transform constant.
+`exists_zetaSquareLocalMean_le_bessel` links the actual local zeta
+second moment to these Bessel integrals with uniform `Cδ G log T`
+error. Its 43 public audits and 18 regressions are covered by the root
+and batch inventory. Seven further modules now prove the complete
+`K0` branch negligible: for every fixed `A` and `δ>0`, its norm is
+at most `G T^(-A)` on `T^δ≤G≤T^(1/2-δ)` beyond one uniform
+threshold. The proof consumes the full smooth support, literal kernel
+integral, absolute integrability and actual divisor series at two.
+`exists_zetaSquareLocalMean_le_main_minus` now leaves only the
+logarithmic main term and oscillatory `Y0` sum, with error
+`Cδ G log T`. All 29 additional public audits and 16 regressions
+are in the root and exact batch inventory. Six further modules now
+insert the source-required lattice phase `exp(-2pi i x)`: integer
+coefficients, norms and support are unchanged, but the continuous
+integrals are not identified with the old ones. Native Voronoi is
+reapplied; the new complete K0 bound and actual source removal are
+proved. `exists_zetaSquareLocalMean_le_atkinson_reduced` is the
+phase-corrected source consumer. Exact amplitude/carrier factorization
+and the unique nondegenerate saddle are also kernel-checked for both
+signs. The 40 public audits and 22 regressions are included in the
+root and batch inventory. Nine further modules now prove and consume
+the phase-adjusted main-integral bound `C G log T`. Every actual
+amplitude factor has proved uniform variation; native logarithmic
+reflection provides the square-root cancellation. The new consumer
+`exists_zetaSquareLocalMean_le_atkinson_minus` retains only the
+complete phase-adjusted Y0 divisor sum, with uniform `Cδ G log T`
+error. The 38 public audits and 20 regressions are covered by the
+root and batch inventory. The Y0 asymptotic expansion and uniform
+stationary estimates, sharp Atkinson inequality and genuine
+twelfth moment remain open. These source
+consumers assume no analytic theorem. The full goal and counterexample
+are unchanged; the exact batch interface remains part of the goal.
 
 ## Exact intended outputs
 

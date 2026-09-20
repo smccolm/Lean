@@ -118,9 +118,9 @@ claim.
 
 The latest installed-scope verification ran on 20 September 2026 with
 `run_tao_trudgian_yang_build.bat --no-pause`, exited `0`, and wrote
-`logs/tao-trudgian-yang-build-20260920-114345-833edc62.log` (SHA-256
-`34eba2ce1fd13e09304986671c04af8a4ee8497963d5a546ee984a717a911995`).
-It scanned 99 Lean files and audited 1423 nonprivate target declarations plus five
+`logs/tao-trudgian-yang-build-20260920-130458-fb69391d.log` (SHA-256
+`5ed832a981330e597ed37280d309ebf2b394fe219f619fda1e6fa201c0575b4f`).
+It scanned 114 Lean files and audited 1576 nonprivate target declarations plus five
 imported boundary declarations and reported no warnings.
 Its production inventory also checks that every package Lean source is listed
 and every production module is imported directly by the root library. The
@@ -808,10 +808,11 @@ series, the original reflected source integral and the complete-kernel
 error, proving one uniform `O(1)` remainder for every `t≥4`. No Gamma
 asymptotic, local mean-square or moment theorem is an input.
 
-This supersedes the previous continuation's open amplitude/remainder
-status, not its open paper theorem status. Leading divisor weight bounds,
-height variation, shortening and Gaussian source assembly remain open,
-as do Voronoi/stationary phase, sharp Atkinson estimates, physical
+This superseded the previous continuation's open amplitude/remainder
+status, not its open paper theorem status. At that historical checkpoint,
+weight bounds, height variation and Gaussian source assembly were open;
+the subsequent continuation below proves them for the complete quadratic
+sum. Shortening, Voronoi/stationary phase, sharp Atkinson estimates, physical
 scale/spacing assembly and the genuine dyadic twelfth moment. Therefore
 `energyClauseOne_of_dyadic_moment` remains conditional and all final
 `Add-est` clauses and the full EPZAE-00--41 goal remain incomplete.
@@ -858,6 +859,508 @@ No paper archive, dependency pin, adjacent source file, commit or push
 was changed. Goal, architecture, checklist, research report, crosswalk,
 repair note, READMEs, source survey and principal runner inventory are
 synchronized with this precise partial scope.
+
+## Actual weight, freezing and quadratic Gaussian source, 20 September 2026
+
+Nine new modules implement the continuation:
+
+- `ZetaDivisorWeightKernel`, `ZetaDivisorWeightReflection`,
+  `ZetaDivisorWeightSource`, `ZetaDivisorWeightVariation`,
+  `ZetaDivisorWeightMass`, and `ZetaDivisorWeightFreezing`;
+- `ZetaFrozenDivisorGaussian`, `ZetaSquareRealSource`, and
+  `ZetaSquareFrozenWindow`.
+
+The actual Mellin integral satisfies `W(q)+W(-q)=1`, `W(0)=1/2`,
+and the bounded small-index/decaying large-index estimates on fixed
+imaginary strips. Its physical argument retains imaginary part `pi/2`.
+Height variation is bounded by
+`C (abs x/T) min(T/(2pi n),2pi n/T)` on `abs x≤T/2`.
+The absolutely summed coefficient mass is `Oε(T^(1/2+ε))`,
+derived from the native convergent divisor L-series.
+
+The complete source freeze keeps the actual phase and oscillatory
+coefficient at `T+x`, with error `Cε abs(x) T^(-1/2+ε)` on
+`T≥8`, `abs x≤T/2`. Conjugation of both original contour branches
+proves the factor-two real-zeta source identity, including height zero.
+The new Gaussian source consumer proves the precise finite-window
+comparison documented in the goal, with the freeze, Gaussian tails
+and actual Gamma-phase replacement all consumed in its proof.
+
+Semantic verdict: these are actual source consumers, without a moment
+or result-shaped theorem premise. They prove a comparison with a
+complete quadratic divisor sum, not source-scale shortening, the
+Voronoi/stationary reduction, Ivić Theorem 6.2 or the twelfth moment.
+The latter remains the explicit analytic premise of
+`energyClauseOne_of_dyadic_moment`. All nine unconditional
+`Add-est` clauses and the full EPZAE-00--41 goal remain open.
+
+All 78 new public theorems have named axiom audits and are also
+discovered by the exhaustive audit. Twenty regressions test the
+reflection, zero coefficient, signed argument, both closed half-height
+endpoints, exact phase retention, factor two at height zero, closed
+Gaussian-width boundary, absolute integrated-norm summability and
+the complete source-consumer quantifiers. Every new module is a direct
+root import and required by the batch runner's backing inventory.
+
+The final focused command
+`lake build TaoTrudgianYang2025.SemanticRegression` exited `0`
+(8951 jobs), without warnings. Earlier elaboration/unused-simp diagnostics
+were repaired in source; no warning suppression, excluded module or
+proof shortcut was used. The principal runner rebuilt and executed
+the real dependency audit.
+
+```text
+target command: cmd /c run_tao_trudgian_yang_build.bat --no-pause
+target exit: 0
+target final result: LEAN VERIFICATION PASS
+target log: logs/tao-trudgian-yang-build-20260920-123627-bee4d657.log
+target log SHA-256: 654d7eec7175fa97055e2028b8ebfef312b17e384c742fa9221a8d1643f902d0
+inventory: 108 scanned Lean files; 97 package files; 28 required project files
+audit: 1548 declarations (1543 target plus 5 imported boundary declarations)
+target failed stages: none
+target Lean warnings/errors/linter diagnostics: none
+```
+
+The root principal verifier also passed:
+
+```text
+foundation command: cmd /c run_lake_build.bat --no-pause
+foundation cwd: E:\Lean\Riemann Zeta
+foundation exit: 0
+foundation final result: PASS
+foundation log: logs/foundation_freeze_20260920_123638.log
+foundation log SHA-256: 6953c1269e3d0009ac4494eb28c5557025ada1a74ddeab474aae0d03afb154e7
+foundation manifest: logs/foundation_freeze_20260920_123638.json
+foundation audit: 14290 nonprivate project theorems; 7636 explicit public declarations
+foundation closure: 301 modules plus 2 retained regression modules; no exclusions/unclassified files
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+HEAD: 77fe3141d73fe1b85e24a33735dd3d8e6f27535b (dirty worktree)
+foundation failed stages: none
+foundation Lean warnings/errors/linter diagnostics: none
+```
+
+The checkout advanced externally during this continuation, from
+`de7b892efe8d9b97ef0b0cebdace2baeea0189c3` to
+`77fe3141d73fe1b85e24a33735dd3d8e6f27535b` (`Progress Update`).
+The agent did not commit, push or revert that change. The verifier's
+current-checkout evidence uses the latter HEAD and records a dirty worktree.
+
+Repository-wide proof-term and unsafe-bypass scans find no prohibited
+terms. The postulate matches are reviewed comment prose and rational
+structure fields, not project postulates. `git diff --check` passes
+with Git line-ending notices only. The counterexample remains unchanged:
+
+```text
+EnergyPoweringObstruction.lean SHA-256:
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487
+```
+
+No source archive, dependency pin, adjacent source file or corrected
+powering/Heath--Brown theorem was changed. The goal, architecture,
+checklist, research report, crosswalk, repair note, READMEs, source
+survey and principal runner inventory describe the same partial scope.
+
+
+## Source-scale finite divisor entry, 20 September 2026
+
+Six new modules implement the next actual source stage:
+
+- `ZetaQuadraticDivisorBand` and `ZetaQuadraticDivisorShortening`;
+- `ZetaSourceLogScales` and `ZetaSourceErrorScales`;
+- `ZetaShortDivisorSource` and `ZetaShortDivisorGeometry`.
+
+The actual finite band consists exactly of positive integers with
+`G abs(log n-log(T/(2pi)))≤L`, including both endpoints.
+Its complement is bounded by the actual coefficient mass times
+`sqrt(pi) G exp(-L²/8)`. At `L=log T`, the complete-to-finite
+divisor-source error is at most `G T^(-A)` for every requested
+real `A`, uniformly after one height threshold before all widths.
+
+For each `δ>0`, the physical source scales
+`0<G≤T^(1/2-δ)` derive the half-height window, `G²≤2T` and
+`G≤T`. Choosing the coefficient-mass loss `δ/4` and controlling
+the logarithmic powers makes the actual freezing/phase error
+`Oδ(G log T)`. Both the whole-line Gaussian and unsmoothed local
+zeta-second-moment source consumers are proved, with the finite
+oscillatory sum retained literally. On `G≥T^δ`, every retained
+index satisfies
+`abs(n-T/(2pi))≤T log T/(pi G)` and lies in
+`[T/(4pi),T/pi]`. The finite sum equals the ordinary divisor
+weight applied to the exact complex real-variable test function.
+
+Semantic verdict: the public
+`exists_zetaSquareLocalMean_le_short_divisor` consumes the actual
+zeta moment, actual Gaussian/window tails, exact reflected phase,
+frozen source and finite-band shortening. It has no analytic theorem
+premise. This closes source-scale finite divisor entry, not the
+smooth-source Voronoi/Bessel/stationary reduction, sharp Ivić/Atkinson
+inequality or the genuine twelfth moment. The latter is still the
+explicit analytic premise in `energyClauseOne_of_dyadic_moment`.
+All nine unconditional `Add-est` clauses and all other full-goal
+outputs remain required and incomplete.
+
+The six modules are direct root imports and required by the backing
+inventory of `run_tao_trudgian_yang_build.bat`. All 29 public
+theorems have named transitive audits and are discovered mechanically.
+Eighteen new regressions check zero coefficients, the zero-frequency
+centre, both closed band endpoints, closed Gaussian scale, arbitrary
+power tails, uniform source-width quantifiers, the actual local
+moment, physical support and the exact divisor test-function consumer.
+
+The final focused command
+`lake build TaoTrudgianYang2025.SemanticRegression` exited `0`
+(8957 jobs), without warnings. Earlier local syntax/elaboration and
+tactic-sequence diagnostics were repaired, without warning suppression
+or excluding modules. The principal runner rebuilt and executed the
+actual dependency audit.
+
+```text
+target command: cmd /c run_tao_trudgian_yang_build.bat --no-pause
+target exit: 0
+target final result: LEAN VERIFICATION PASS
+target log: logs/tao-trudgian-yang-build-20260920-130458-fb69391d.log
+target log SHA-256: 5ed832a981330e597ed37280d309ebf2b394fe219f619fda1e6fa201c0575b4f
+inventory: 114 scanned Lean files; 103 package files; 28 required project files
+audit: 1581 declarations (1576 target plus 5 imported boundary declarations)
+target failed stages: none
+target Lean warnings/errors/linter diagnostics: none
+```
+
+The current foundation verifier also passed:
+
+```text
+foundation command: cmd /c run_lake_build.bat --no-pause
+foundation cwd: E:\Lean\Riemann Zeta
+foundation exit: 0
+foundation final result: PASS
+foundation log: logs/foundation_freeze_20260920_130510.log
+foundation log SHA-256: f1975786880809edfa12dfce036be41b76be6702c915b98a9b050473fda7bee0
+foundation manifest: logs/foundation_freeze_20260920_130510.json
+foundation audit: 14290 nonprivate project theorems; 7636 explicit public declarations
+foundation closure: 301 modules plus 2 retained regression modules; no exclusions/unclassified files
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+HEAD: 77fe3141d73fe1b85e24a33735dd3d8e6f27535b (dirty worktree)
+foundation failed stages: none
+foundation Lean warnings/errors/linter diagnostics: none
+```
+
+`git diff --check` passed after synchronization, with Git line-ending
+notices only. Both principal runners emitted zero Lean warnings,
+errors or linter diagnostics. Their success certifies the installed
+scope, not the remaining paper outputs.
+
+The next native Voronoi interface was inspected, not assumed to apply.
+Its `DFIVoronoiTestFunction` requires smoothness and compact positive
+support of the actual test function. The hard finite band is not such
+an instance. The exact native files/hashes and the remaining cutoff
+obligation are recorded in the Sources document. No adjacent file,
+source archive or dependency pin was changed.
+
+Repository-wide proof-term and unsafe-bypass scans find no prohibited
+terms. The postulate matches are reviewed comments and rational
+structure fields, not postulates. The Lemma 62 counterexample remains
+byte-for-byte unchanged, SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent fifth coordinates and all powering/Heath--Brown
+proofs are preserved. No commit, push, source pin change or module
+exclusion was performed by the agent.
+
+
+## Actual smooth Voronoi/Bessel source verification — 20 September 2026
+
+This continuation adds eight required production modules, 43 named
+public theorem audits and 18 semantic regressions. All eight are
+directly imported by the root and listed in the inventory backing
+`run_tao_trudgian_yang_build.bat`. The counterexample and prior dirty
+work were preserved.
+
+The green-node/source-entry test for architecture node `ZVT` is:
+`exists_zetaSquareLocalMean_le_bessel` consumes the actual zeta
+local moment, the proved finite source, constructed globally smooth
+positive-support test, paid cutoff error, native modulus-one Voronoi,
+and both literal Bessel bridges. Its conclusion has the full
+logarithmic main term and both actual `Y0`/`K0` integrals, with
+`-2pi`/`4` normalizations and uniform `Cδ G log T` source error.
+No moment, smoothness, support, contour-shift or Voronoi theorem is
+assumed for this source. Its companion
+`exists_zetaSquarePhysicalGaussian_bessel_approximation` controls
+the actual whole-line physical Gaussian integral.
+
+This verifies the source-entry edge only. Uniform main/K0 estimates,
+the oscillatory Y0 stationary reduction, sharp Ivić/Atkinson inequality,
+genuine twelfth moment and all unconditional `Add-est` outputs remain
+open. EPZAE-21/37 and the complete EPZAE-00--41 goal remain active.
+
+The initial standalone regression build found a computational
+`example` of the noncomputable constructed test. It was explicitly
+marked `noncomputable example`; the exact theorem/structure and
+analytic content were unchanged. The subsequent full target runner
+compiled the repaired regression and passed every stage.
+
+```text
+target command: cmd /c run_tao_trudgian_yang_build.bat --no-pause
+target cwd: the Tao–Trudgian–Yang 2025 folder
+target exit: 0
+target final result: LEAN VERIFICATION PASS
+target log: logs/tao-trudgian-yang-build-20260920-133118-d2959250.log
+target log SHA-256: cad67ff91accc63e905984288f134b46a33a0bcb599b9f1623b0d12137abee7f
+default build: 8965 jobs
+inventory: 122 scanned Lean files; 111 package files; 28 required project files
+audit: 1642 declarations (1637 target plus 5 imported boundary declarations)
+target failed stages: none
+target Lean warnings/errors/linter diagnostics: none
+
+foundation command: cmd /c run_lake_build.bat --no-pause
+foundation cwd: E:\Lean\Riemann Zeta
+foundation exit: 0
+foundation final result: PASS
+foundation log: logs/foundation_freeze_20260920_133052.log
+foundation log SHA-256: dfeb6aa653a02c48e6cb17f39c065c78a20dc9ffdb8e847d6f890c9564e99bc5
+foundation manifest: logs/foundation_freeze_20260920_133052.json
+foundation audit: 14290 nonprivate project theorems; 7636 explicit public declarations
+foundation closure: 301 modules plus 2 retained regression modules; no exclusions/unclassified files
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+HEAD: 77fe3141d73fe1b85e24a33735dd3d8e6f27535b (dirty worktree)
+foundation failed stages: none
+foundation Lean warnings/errors/linter diagnostics: none
+```
+
+Repository-wide proof-term and unsafe-bypass scans found no prohibited
+terms. Postulate-pattern matches were reviewed comment prose and two
+rational structure fields, not mathematical postulates.
+`git diff --check` passes; Git emits only LF-to-CRLF notices.
+The counterexample's SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent fifth coordinates and powering/Heath–Brown
+theorems are unchanged. Existing native Bessel files were inspected
+and imported, not edited or copied; their hashes are recorded in
+Sources. No dependency pin, exclusion, commit or push was changed
+by the agent.
+
+
+## Complete K0 removal and source-aligned saddle verification — 20 September 2026
+
+This continuation adds thirteen required production modules: seven for
+literal K0 decay, full smooth support/mass and complete-series removal,
+and six for the lattice phase, reapplied Voronoi, phase-adjusted K0
+removal, exact carrier factorization and unique nondegenerate saddle.
+All thirteen are directly root-imported and explicitly listed in the
+inventory backing `run_tao_trudgian_yang_build.bat`.
+There are 69 new named public theorem audits and 38 new semantic
+regressions (29/16 for K0 and 40/22 for the phase-aligned chain).
+
+The architecture/source-entry checks are:
+
+- `ZK`: `exists_zetaSquareLocalMean_le_main_minus` consumes the
+  actual full smooth support, literal K0 integral, divisor series at
+  two and arbitrary power saving. It removes the complete branch
+  from the actual local zeta source, uniformly on
+  `T^δ≤G≤T^(1/2-δ)), with `Cδ G log T` error.
+- `ZAP`: `exists_zetaSquareLocalMean_le_atkinson_reduced` uses
+  the actually phase-adjusted source and its newly proved K0 bound.
+  The phase equals one at every natural index and has unit norm
+  and unchanged support for real x; its continuous integral is not
+  identified with the old integral. The native smooth test is
+  constructed, Voronoi reapplied, and new complete arithmetic
+  convergence proved. No source estimate is assumed.
+- The physical Gaussian companions prove the corresponding absolute
+  source error. Constants and thresholds precede every allowed width.
+- `ZAT` remains open. Exact actual-amplitude/carrier factorization
+  and `zetaAtkinsonPhase_stationary_iff` link the saddle to
+  `T/(2pi)`; `zetaAtkinsonPhase_secondDeriv_saddle_neg` proves
+  nondegeneracy for every real carrier parameter. These are not
+  a Y0 asymptotic expansion or a uniform stationary-phase estimate.
+  The variable complex Mellin/Gamma/Gaussian amplitude is retained.
+
+The pinned Ivić source was reread in place at PDF pages 115--117,
+printed pages 110--112: (6.36), (6.38), (6.47). This exposed the
+essential lattice-phase insertion before the stationary reduction.
+The source's sign is conjugated to match the actual Lean divisor
+test. Its SHA-256 and exact use are recorded in Sources. No scan or
+native source was copied, changed or imported from the incompatible
+adjacent Gafni–Tao package.
+
+Focused development found and repaired explicit natural-cast
+regression mismatches, a nested-comment typo, algebraic normalization
+errors and tactic-style diagnostics. All repaired modules and
+regressions compiled in the final principal run. No warning was
+suppressed and no module excluded.
+
+```text
+target command: cmd /c run_tao_trudgian_yang_build.bat --no-pause
+target cwd: the Tao–Trudgian–Yang 2025 folder
+target exit: 0
+target final result: LEAN VERIFICATION PASS
+target log: logs/tao-trudgian-yang-build-20260920-142518-62ab5433.log
+target log SHA-256: 67f56da0c2a7361b280cd8663a737252409c17399ada502185e969be9078865d
+default build: 8978 jobs
+inventory: 135 scanned Lean files; 124 package files; 28 required project files
+audit: 1738 declarations (1733 target plus 5 imported boundary declarations)
+target failed stages: none
+target Lean warnings/errors/tactic suggestions/linter diagnostics: none
+
+foundation command: cmd /c run_lake_build.bat --no-pause
+foundation cwd: E:\Lean\Riemann Zeta
+foundation exit: 0
+foundation final result: PASS
+foundation log: logs/foundation_freeze_20260920_142530.log
+foundation log SHA-256: 7ac38652b329992f1ed7cfb133d987a3359c62b137ce12b2ed8f428a5acc41fa
+foundation manifest: logs/foundation_freeze_20260920_142530.json
+foundation audit: 14290 nonprivate project theorems; 7636 explicit public declarations
+foundation closure: 301 modules plus 2 retained regression modules; no exclusions/unclassified files
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+HEAD: 77fe3141d73fe1b85e24a33735dd3d8e6f27535b (dirty worktree)
+foundation failed stages: none
+foundation Lean warnings/errors/tactic suggestions/linter diagnostics: none
+```
+
+Repository-wide prohibited-proof and unsafe-bypass searches found no
+matches. Postulate-pattern matches were inspected: comment prose
+and two rational structure fields, not postulates. The runners'
+semantic scans also passed. `git diff --check` passes, with Git
+LF-to-CRLF notices only; those are not Lean diagnostics.
+
+The original Lemma 62 counterexample is byte-for-byte unchanged:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The repaired independent fifth coordinates, actual cardinality/energy
+powering and Heath–Brown proofs are unchanged and remain audited.
+
+The phase-adjusted main estimate, literal Y0 asymptotic and uniform
+stationary reduction, sharp Atkinson inequality, physical dyadic/Gram
+assembly and genuine twelfth moment remain required. The conditional
+moment premise in the existing clause-(i) consumer is not discharged.
+Every unconditional `Add-est` output, EPZAE-21/37 and the full
+EPZAE-00--41 goal remain open. These PASS logs certify the installed
+scope, not completion of the paper.
+
+README, Extension README, Tools README, Goal Prompt, Checklist,
+Research Agenda, Crosswalk, Architecture, Repair, Sources and this
+manifest are synchronized. The exact batch interface and both
+principal runners remain mandatory as the proof changes. No commit,
+push, source/dependency pin change or exclusion was performed.
+
+## Actual logarithmic main-term removal verification — 20 September 2026
+
+Nine new production modules are directly root-imported and included in
+the inventory backing `run_tao_trudgian_yang_build.bat`:
+
+- `IntervalAmplitudeBounds`, `ZetaMainElementaryWeights`,
+  `ZetaMainMellinProfile`;
+- `ZetaLogGaussianVariation`, `ZetaQuadraticGaussianDerivative`,
+  `ZetaQuadraticLogGaussianVariation`;
+- `ZetaAtkinsonMainWeight`, `ZetaAtkinsonMainIntegral`,
+  `ZetaAtkinsonMinusSource`.
+
+All 38 new public theorems have named axiom audits, and all 20 new
+semantic regressions are covered by the principal runner. The new
+`ZAM` node closes the actual phase-adjusted main-integral substep,
+not `ZAT`, the twelfth moment or a final paper output.
+
+The semantic/source-entry audit is:
+
+- `IntervalC1Bound` records actual derivative-norm integrals and
+  pointwise bounds. Its source instances are proved for the cutoff,
+  complex rescaled Mellin profile, square root, logarithm, unit Gamma
+  factor and exact quadratic Gaussian; they are not final theorem
+  hypotheses.
+- The quadratic transform derivative retains its Gaussian damping.
+  Actual logarithmic-envelope variation proves the uniform complex
+  transform variation bound `4 sqrt(pi) G`, without losing an
+  additional power of G. Every cutoff transition is included.
+- `exists_intervalC1Bound_zetaAtkinsonMainWeight` constructs one
+  `C G sqrt(T) log T` norm/variation bound for the complete
+  amplitude, before choosing the source parameters.
+- The actual main integrand is absolutely integrable, and
+  `zetaAtkinsonVoronoiMain_eq_reflection` proves the exact
+  positive-support restriction and carrier identity. The native
+  `norm_weighted_gmReflectionIntegral_le` then supplies square-root
+  cancellation. `exists_norm_zetaAtkinsonVoronoiMain_le` proves
+  `norm(V0_A)≤C G log T` for `T≥16`, `log T≥1`,
+  `G>0`, `G²≤2T`, `L>0`, `8L≤G`.
+- `exists_zetaAtkinsonVoronoiMain_log_bound` derives every scale
+  condition uniformly at `L=log T` before the choice of
+  `T^δ≤G≤T^(1/2-δ)`.
+- `exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation`
+  and `exists_zetaSquareLocalMean_le_atkinson_minus` consume
+  that actual bound. The complete phase-adjusted Y0 divisor sum
+  remains with its literal `-2pi` normalization, factors `2`
+  and `2 exp(1)`, and uniform error `Cδ G log T`. Neither
+  an analytic estimate nor a moment is assumed.
+
+Focused development compiled every new module incrementally. The
+final focused `lake build TaoTrudgianYang2025.SemanticRegression`
+passed with 8987 jobs and no Lean warning. The first principal
+attempts rejected a documentation line beginning with
+`constant over a length ...` in
+`ZetaQuadraticGaussianDerivative.lean` as a possible postulate.
+The line was rephrased; the proof and both scanners were unchanged.
+These earlier logs are **failed historical attempts**, not verification
+evidence for the final source:
+
+- `logs/tao-trudgian-yang-build-20260920-145618-20e76021.log`,
+  exit 1, shortcut-scan failure;
+- foundation `logs/foundation_freeze_20260920_145620.log`,
+  exit 1, proof-integrity-scan failure.
+
+Both runners were subsequently rerun on the corrected source, with
+no excluded module, suppressed warning, changed scan or altered pin.
+
+```text
+target command: cmd /c run_tao_trudgian_yang_build.bat --no-pause
+target cwd: the Tao–Trudgian–Yang 2025 folder
+target exit: 0
+target final result: LEAN VERIFICATION PASS
+target log: logs/tao-trudgian-yang-build-20260920-145714-b1ec7fad.log
+target log SHA-256: 245cb9c17670f5ef6c4ced82299d1997711abcf1afeb84ba28c8f698e1af20d8
+default build: 8987 jobs
+inventory: 144 scanned Lean files; 133 package files; 28 required project files
+audit: 1796 declarations (1791 target plus 5 imported boundary declarations)
+target failed stages: none
+target Lean warnings/errors/tactic suggestions/linter diagnostics: none
+
+foundation command: cmd /c run_lake_build.bat --no-pause
+foundation cwd: E:\Lean\Riemann Zeta
+foundation exit: 0
+foundation final result: PASS
+foundation log: logs/foundation_freeze_20260920_150305.log
+foundation log SHA-256: e58699b50e03c409f3ff4cdfaec7a05997aa4ed59756e97d27fed6e6ef66ec8c
+foundation manifest: logs/foundation_freeze_20260920_150305.json
+foundation manifest SHA-256: bffd6407ed92e9ec5129e2cd1db3417fc4953c29353d3c16a0bfcaf0b3a42243
+foundation audit: 14290 nonprivate project theorems; 7636 explicit public declarations
+foundation closure: 301 modules plus 2 explicit regression modules; no exclusions/unclassified files
+verifier SHA-256: 0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7
+HEAD: 77fe3141d73fe1b85e24a33735dd3d8e6f27535b (dirty worktree)
+foundation failed stages: none
+foundation Lean warnings/errors/tactic suggestions/linter diagnostics: none
+```
+
+Repository-wide placeholder and unsafe-bypass searches found no
+matches. Postulate-pattern matches are comment prose and two
+rational structure fields, not mathematical postulates; both
+principal semantic scans pass. `git diff --check` passes,
+with only Git LF-to-CRLF notices, not Lean diagnostics.
+
+The original Lemma 62 counterexample remains byte-for-byte unchanged:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent fifth coordinates, actual powering and
+Heath–Brown proofs remain preserved and audited. The native
+reflection file was imported, not copied or edited; its hash is in
+Sources. Online DLMF/Mathlib research for the next Y0 step is recorded
+there as research, not a formal proof or an imported assumption.
+
+The phase-adjusted logarithmic main term, previously open, is now
+bounded and removed. Literal Y0 asymptotics, uniform oscillatory
+stationary reduction, the sharp Atkinson inequality, physical
+dyadic/Gram assembly and the genuine twelfth moment remain open.
+The conditional moment premise in the clause-(i) consumer is not
+discharged. EPZAE-21/37, every unconditional `Add-est` output
+and the complete EPZAE-00--41 goal remain open.
+
+README, Extension README, Tools README, Goal Prompt, Checklist,
+Research Agenda, Crosswalk, Architecture, Repair, Sources and this
+manifest agree on that distinction. The exact batch interface
+remains required and its inventory must evolve with the proof.
+No commit, push, source/dependency pin change or exclusion was made.
 
 ## Future axiom gate
 

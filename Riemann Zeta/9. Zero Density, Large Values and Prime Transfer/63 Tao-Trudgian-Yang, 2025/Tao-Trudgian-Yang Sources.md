@@ -318,6 +318,128 @@ a uniform reflected-source remainder, not Ivić's shortened sum,
 Voronoi/stationary reduction or sharp Theorem 6.2. No paper archive,
 dependency pin, adjacent source, or preserved counterexample changed.
 
+### Actual divisor weights and Gaussian-source continuation, 20 September 2026
+
+The nine new weight/freezing/source modules use the same pinned
+ordinary-divisor contour and the already recorded Orsay Theorem 6.2
+route. No new source download, copied adjacent module, toolchain
+change or dependency-pin change is involved.
+
+The weight residue/reflection proof adapts the already local
+`ZetaSquareContour` and `ZetaSquareContourShift` rectangle and
+infinite-line arguments. The actual exponential kernel is integrated
+on `Re w=1`; its reflection gives `W(q)+W(-q)=1`.
+The source argument's imaginary part is `pi/2`, so the weight
+is not silently replaced by a real cutoff.
+
+Height variation uses a real mean-value bound on that actual kernel,
+dominated by its integrable Gaussian envelope. The square-root mass
+uses the pinned Mathlib real-power identities and the native absolutely
+convergent ordinary-divisor L-series at real part greater than one.
+No pointwise divisor asymptotic is a theorem hypothesis.
+
+The conjugation bridge uses the pinned `Complex.cpow_conj`,
+`Complex.conj_tsum`, Bochner `integral_conj` and change of variable
+`integral_neg_eq_self`, together with the proved `gammaReal_conj`.
+The actual source factor two is proved before the real zeta window is
+compared with the quadratic series.
+Gaussian exchange uses `hasSum_integral_of_summable_integral_norm`;
+continuity of the frozen series uses `continuous_tsum` with the
+proved summable coefficient majorant. The consumer
+`exists_abs_zetaSquareGaussianWindow_sub_quadratic_le` composes
+these real-source, tail and actual-phase results.
+
+This closes the complete quadratic source comparison only. The
+source-scale shortening corresponding to the scan's (6.34)--(6.35),
+Voronoi/Bessel and stationary-phase reduction, Theorem 6.2 and the
+dyadic twelfth moment remain open. The original Lemma 62 counterexample
+and the authorized two-witness repair are unchanged.
+
+### Source-scale shortening and native Voronoi boundary, 20 September 2026
+
+The six-module continuation proves the actual finite frequency band,
+its Gaussian shortening tail, uniform logarithmic scales and the
+local-second-moment entry with error `Cδ G log T`.
+The physical band is proved from exponentiating its exact log-frequency
+condition, not from assuming a paper truncation interval. The ordinary
+divisor coefficient and full complex weight are retained in
+`zetaShortDivisorTestFunction`.
+
+The proof uses the existing exact Gaussian transform and source
+consumers, pinned Mathlib finite/complement infinite-sum identities,
+real log/exp monotonicity, the real exponential remainder bound and
+`isLittleO_log_rpow_rpow_atTop`. All six modules are new native
+proofs in this package; no adjacent file was copied or edited.
+
+The next available native theorem was inspected directly:
+`DFIVoronoiTestFunction.dfiProposition1_native` in
+`71 Guth-Maynard, 2026/GuthMaynard/DFIProposition1Native.lean`,
+SHA-256 `006e2405784c73f037b3527fa68e7eb15d00cc61436320428e46c9bb44bcab79`.
+Its actual input is `DFIVoronoiTestFunction g`, defined in
+`GuthMaynard/DFIProposition1.lean`,
+SHA-256 `841c8ea474b358be0d5b88be0c629087bfd7f1efb946c5b761e804c1c68c1670`.
+That structure requires `ContDiff ℝ ∞ g` and support in a proved
+compact positive interval. The theorem returns the main term and
+both canonical Mellin--Barnes divisor transforms with their additive
+characters; the ordinary-divisor use requires its modulus-one
+specialization and exact transform normalization.
+
+The hard finite band is not a smooth test-function structure. The next
+continuation constructs its actual smooth replacement, pays the error,
+and applies the native theorem and literal Bessel bridges as recorded
+below. Uniform Bessel/stationary estimates and the sharp Ivić/Atkinson
+inequality remain open source obligations. Existing adjacent
+Atkinson/Gram modules do not by themselves supply those estimates or
+the genuine twelfth moment.
+No archive, dependency pin, adjacent source, counterexample or
+corrected powering theorem changed.
+
+### Actual smooth-source Voronoi/Bessel consumer, 20 September 2026
+
+The eight-module continuation constructs the literal contour weight's
+complex derivative with Mathlib's
+`hasDerivAt_integral_of_dominated_loc_of_deriv_le`.
+Its locally uniform bound is proved from the installed Gaussian
+envelope; `Differentiable.contDiff` and restriction of scalars supply
+real smoothness. A fixed affine smooth-transition profile on the
+exponentiated inner/outer frequency bands gives the actual positive
+compact support. The change from the hard finite source is bounded
+by the existing off-band Gaussian estimate.
+
+`ordinaryDivisorVoronoi_native` specializes the already-inspected
+native theorem to modulus one. The constructed test is consumed by
+`zetaSmoothDivisorSum_eq_voronoi`; no native test-interface premise is
+left in that theorem. The literal Bessel identifications use these
+existing canonical files, inspected directly and left unchanged:
+
+- `GuthMaynard/DFIBesselKernel.lean`: real integral definitions of
+  `dfiBesselY0`, `dfiBesselK0` and their transforms;
+  SHA-256 `f64faaf8ac5a810cda871cc6ef46011015636ee92182efe570a52b2c20ddb7a2`.
+- `GuthMaynard/DFIBesselTransformBridge.lean`:
+  `dfiVoronoiPlusTransform_mellin_eq_bessel`;
+  SHA-256 `d1dc9be9fffa1e85e65f730bf7e548de0824960bb70ad1614e3457112b95c5d7`.
+- `GuthMaynard/DFIEquation29.lean`:
+  `DFIVoronoiTestFunction.dfiEquation29InitialMinusTransform_eq_bessel`,
+  including its required contour displacement;
+  SHA-256 `7d6cbe7d7c5257d6c2b2b6276e709a252485c9453ab2384831054f399708af4e`.
+
+All paths are under the local `71 Guth-Maynard, 2026` package. No
+frozen adjacent Gafni–Tao package was imported or copied.
+`exists_zetaSquareLocalMean_le_bessel` and its actual physical
+Gaussian companion close this source-entry edge with uniform
+`Cδ G log T` error for `0<G≤T^(1/2-δ)`.
+They preserve the logarithmic main term and both literal Bessel
+branches with factors `-2pi` and `4`, including the zero-index
+coefficient convention.
+
+The existence of these bridges does not supply the sharp oscillatory
+estimate. The following continuations discharge K0, then transfer it
+to the source-aligned lattice phase. Uniform main estimates, the Y0
+stationary reduction and the sharp Ivić/Atkinson inequality remain open. The known native
+quarter-power Bessel bounds alone are not a substitute for that
+oscillatory source analysis or the genuine twelfth moment.
+
+
 ### Source handling
 
 - Prefer arXiv source archives and author/journal pages.
@@ -328,3 +450,145 @@ dependency pin, adjacent source, or preserved counterexample changed.
   download.
 - Treat the live blueprint as a useful expansion, not as the immutable 2025
   theorem statement.
+
+### Complete modified-Bessel source estimate, 20 September 2026
+
+The new native `ZetaBesselK0Decay` proof starts from the literal
+`dfiBesselK0` real integral, not a claimed special-function asymptotic.
+It uses `Real.one_le_cosh`,
+`integrableOn_dfiBesselK0_integrand`,
+`abs_dfiBesselK0_le_two_div_sqrt`, and Mathlib's exact
+`Real.pow_div_factorial_le_exp` to obtain exponential and arbitrary
+even-power decay. The canonical `DFIBesselKernel.lean` source and
+its recorded hash are unchanged.
+
+`ZetaSmoothDivisorSupport` proves the exponentiated outer-band
+endpoints and hence the full smooth support in `[T/16,T]` when
+`8L≤G`. This condition is derived from `G≥T^δ` at `L=log T`.
+`ZetaSmoothDivisorMass` consumes the actual complex weight and
+Gaussian transform. `ZetaBesselK0Integral` proves actual
+measurability and absolute integrability before estimation.
+The complete divisor series is summed using
+`summable_divisorDirichletTerm` at `s=2`, with its literal
+coefficient norm and zero-index convention; no pointwise divisor
+asymptotic or moment input is assumed.
+
+`exists_zetaDivisorBesselPlus_powerSaving` and
+`exists_zetaSquareLocalMean_le_main_minus` consume the whole
+source chain. The explicit lower width `G≥T^δ` belongs to the
+Ivić source range; the earlier wider Voronoi entry for arbitrary
+positive sub-square-root `G` remains intact. Both the power-saving
+threshold and the final source-error constant precede the choice of
+width.
+
+The following continuation corrects the continuous source phase before
+the main-term estimate and sharp Neumann-kernel reduction. The present coarse
+absolute mass bound is used only for the exponentially decaying K0
+branch, not as a substitute for that cancellation. No source archive,
+native dependency file, toolchain pin, counterexample or corrected
+powering theorem was changed.
+
+### Lattice-phase convention and carrier saddle, 20 September 2026
+
+The same pinned local `ivic-zeta-book-scan.pdf` was reread in place:
+PDF pages 115--117, printed pages 110--112. Its SHA-256 remains
+`fafac152db87abe132858fa97d8fe501c61cd261e20732ef701396fba27b61aa`.
+Equation (6.36) inserts `exp(2pi i n)=1` before Voronoi;
+(6.38) uses the corresponding continuous test and (6.47) records
+the resulting saddle equation. Our actual source carries
+`x^(-1/2+iT)`, the opposite sign, so `ZetaDivisorLatticePhase`
+uses `exp(-2pi i x)`. This is an exact convention bridge on every
+natural index, not a claim that the phase is one for real x.
+
+`ZetaAtkinsonVoronoi` constructs and consumes the new smooth
+native test. `ZetaAtkinsonK0` transfers the actual norm majorant,
+proves the new integrability and complete divisor summation, and
+obtains arbitrary power saving. `ZetaAtkinsonReducedSource`
+applies that result to the genuine physical Gaussian/local moment.
+No equality of old and new continuous Bessel integrals is asserted.
+
+`ZetaAtkinsonPhase` factors the actual test while retaining its
+complex amplitudes, and differentiates the real carrier
+`T log x - 2pi x + 4pi b sqrt(x)`. `ZetaAtkinsonSaddle`
+proves that its unique positive saddle is
+`((b+sqrt(b²+4T/(2pi)))/2)²` and that the second derivative
+there is strictly negative, for all real b and T>0. Thus both
+prospective Bessel signs and the zero-index main carrier are covered.
+Mathlib's exact logarithm/square-root derivative and positive-axis
+complex-power identities are used; no stationary-phase theorem is
+postulated. The literal Y0 asymptotic expansion and uniform source
+estimates are still open, as is the sharp Ivić inequality.
+
+All six modules, 40 named public audits and 22 regressions are
+covered by the root and batch-runner inventory. No scan was copied,
+source/dependency pin changed, adjacent package edited, or original
+counterexample altered.
+
+### Actual logarithmic main-term estimate, 20 September 2026
+
+The canonical native `GuthMaynard/LargeValuesReflection.lean`
+was inspected in place. SHA-256:
+`91b34cff0e5f72a6dbbd844e03f4c98ae06344d5d5e6b767869e8418d7177534`.
+`norm_gmReflectionIntegral_le_ten_div_sqrt` proves the uniform
+`10/sqrt(tau)` bound for the literal `x^(-1)` logarithmic
+reflection kernel on every positive interval, for `tau≥1`.
+`norm_weighted_gmReflectionIntegral_le` inserts a complex C1
+amplitude with its actual endpoint norm and derivative-norm integral.
+The carrier is exactly `tau log x - 2pi x`, matching the
+phase-adjusted main source. No new black-box stationary theorem
+or special-function asymptotic is assumed.
+
+`IntervalAmplitudeBounds` records and composes literal C1
+supremum/variation bounds. The source constructs all instances.
+`ZetaMainElementaryWeights` uses Mathlib's monotone smooth
+transition and exact positive square-root/logarithm derivatives.
+`ZetaMainMellinProfile` uses the already proved holomorphy of
+the actual contour weight on a fixed positive compact interval.
+Its source argument after `x/T` rescaling is proved equal to
+the profile, including the imaginary `pi/2` component.
+
+`ZetaQuadraticGaussianDerivative` differentiates the exact
+complex Gaussian transform. `ZetaLogGaussianVariation` and
+`ZetaQuadraticLogGaussianVariation` retain the Gaussian damping
+and prove uniform variation `4 sqrt(pi) G` for the actual
+logarithmic transform. `ZetaAtkinsonMainWeight` combines every
+factor; `ZetaAtkinsonMainIntegral` proves absolute integrability,
+the support/reflection identity and `norm(V0_A)≤C G log T`.
+`ZetaAtkinsonMinusSource` applies the bound to the actual physical
+Gaussian and local zeta mean. The complete Y0 sum and its `-2pi`
+normalization remain. Nine modules, 38 named audits, 20 regressions.
+
+This closes the main-integral estimate only. The literal Y0
+asymptotic expansion and uniform oscillatory stationary reduction,
+sharp Atkinson inequality and genuine twelfth moment remain open.
+The native source file was imported, not copied or edited. No
+source scan, dependency pin, adjacent package or counterexample
+was changed.
+
+### Next Y0 asymptotic: checked references, not an imported proof
+
+Checked online on 20 September 2026: [DLMF 10.17.1--4](https://dlmf.nist.gov/10.17#i)
+and its [real-argument remainder bounds](https://dlmf.nist.gov/10.17#iii).
+Specializing to order zero gives the candidate two-term expansion
+
+```text
+Y0(z) = sqrt(2/(pi z)) * (sin(z-pi/4) - cos(z-pi/4)/(8z)) + R(z),
+|R(z)| ≤ sqrt(2/(pi z)) * (9/(128z²) + 75/(1024z³)), z>0.
+```
+
+This specialization uses one term of each even/odd series. It gives
+`R(z)=O(z^(-5/2))` for `z≥1`. Proposed application (not yet
+formalized): at `z=4pi sqrt(nx)`, the remainder has a summable
+`n^(-5/4)` divisor weight, whereas a one-term absolute remainder
+would only give `n^(-3/4)`. The bridge to the literal native
+`dfiBesselY0`, the remainder proof and the complete oscillatory
+source reduction are still required. No DLMF statement is used as
+a Lean premise or a kernel oracle.
+
+The current [Mathlib Bessel documentation](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/SpecialFunctions/Bessel.html)
+provides first-kind `Complex.besselJ`; its TODO lists second-kind
+functions and integral representations. The local pinned Mathlib
+search found no Bessel-named source file. This is a limited reuse
+check, not a claim that no external Lean development exists. The
+dependency pin is unchanged; the actual native kernel remains the
+object that the next proof must estimate.

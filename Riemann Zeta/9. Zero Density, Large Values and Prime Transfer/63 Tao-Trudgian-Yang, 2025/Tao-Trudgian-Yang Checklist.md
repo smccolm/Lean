@@ -150,9 +150,51 @@ additive energy**, the three output families covered by the paper.
   Gamma phase, frozen coefficients and Gaussian tails. It bounds the
   difference from the complete quadratic divisor sum; 78 public audits
   and 20 regressions are covered by the principal runner.
-  Source-scale assembly/shortening, Voronoi/stationary phase and the
-  sharp Atkinson inequality remain required. These are proved source
-  components, not a closed Theorem 6.2; EPZAE-21/37 stay open.
+  Six further modules now prove finite frequency shortening, uniform
+  logarithmic power tails and the source-scale `Oδ(G log T)` error.
+  `exists_zetaSquareLocalMean_le_short_divisor` consumes the actual
+  unsmoothed local second moment, with a threshold before every width
+  `0<G≤T^(1/2-δ)`. The finite band and the exact complex divisor test
+  function are proved; its physical radius is `T log T/(pi G)` on
+  `G≥T^δ`. The 29 named audits and 18 regressions are in the runner.
+  Eight further modules now prove entire complex-weight smoothness,
+  a fixed-profile positive-support cutoff, its actual paid transition
+  error, and the native modulus-one Voronoi consumer. Both canonical
+  transforms are identified with literal `Y0`/`K0` integrals.
+  `exists_zetaSquareLocalMean_le_bessel` consumes the actual local
+  moment with uniform `Cδ G log T` error; it assumes no smoothness,
+  support, Voronoi or moment theorem. All 43 public audits and 18
+  regressions are covered by the root and exact batch-runner inventory.
+  Seven further modules now prove literal `K0` exponential decay,
+  the full smooth support in `[T/16,T]`, actual integrability and
+  complete arithmetic summation from the divisor series at two.
+  `exists_zetaDivisorBesselPlus_powerSaving` gives `G T^(-A)` for
+  every fixed real `A`, uniformly on `T^δ≤G≤T^(1/2-δ)`.
+  `exists_zetaSquareLocalMean_le_main_minus` consumes this bound
+  to remove the actual branch, leaving the unchanged main and `Y0`
+  terms. Its 29 public audits and 16 regressions are covered by the
+  root and exact batch runner. Six further modules now prove the
+  source-required lattice phase `exp(-2pi i x)`, unchanged integer
+  coefficients/norm/support, the actual phase-adjusted Voronoi source,
+  and its complete K0 bound and removal.
+  `exists_zetaSquareLocalMean_le_atkinson_reduced` consumes the
+  genuine local zeta moment with uniform `Cδ G log T` error.
+  Exact source amplitude/carrier factorization, the unique positive
+  saddle and negative second derivative are kernel-checked for both
+  signs. All 40 public audits and 22 regressions are covered. The
+  old continuous integrals are not equated with the new ones. Nine
+  further modules now prove the phase-adjusted main-integral bound
+  `C G log T` from the actual amplitude variation and native
+  logarithmic reflection. `exists_zetaSquareLocalMean_le_atkinson_minus`
+  consumes that bound, retaining only the complete phase-adjusted
+  Y0 divisor sum with uniform `Cδ G log T` error. The physical
+  Gaussian companion is also proved. All 38 public audits and 20
+  regressions are covered by the root and exact batch runner. The
+  literal Y0 asymptotic expansion, uniform stationary reduction and
+  sharp Atkinson inequality remain required.
+  These are proved source
+  components, not a closed Theorem 6.2;
+  EPZAE-21/37 stay open.
   That moment is unproved; other source parameters
   and zeta-LV inputs remain open, so EPZAE-21 is not closed.
 

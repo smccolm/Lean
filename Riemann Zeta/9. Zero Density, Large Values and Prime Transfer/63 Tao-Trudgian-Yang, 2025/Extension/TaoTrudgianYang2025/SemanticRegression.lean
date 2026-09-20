@@ -1465,3 +1465,446 @@ example (ε : ℝ) (hε : 0 < ε) :
   exists_abs_zetaSquareGaussianWindow_sub_quadratic_le ε hε
 
 end DivisorWeightRegression
+
+section ShortDivisorRegression
+
+open Complex Filter MeasureTheory
+
+example (T G L : ℝ) : 0 ∉ zetaQuadraticDivisorBand T G L :=
+  zero_not_mem_zetaQuadraticDivisorBand T G L
+
+-- Closed zero-frequency centre; no positive-width cutoff assumption.
+example : 1 ∈ zetaQuadraticDivisorBand (2 * Real.pi) 1 0 := by
+  rw [mem_zetaQuadraticDivisorBand_iff (by positivity) (by norm_num)]
+  norm_num [Real.pi_ne_zero]
+
+-- The upper and lower logarithmic band boundaries are included.
+example : 2 ∈ zetaQuadraticDivisorBand (2 * Real.pi) 1 (Real.log 2) := by
+  rw [mem_zetaQuadraticDivisorBand_iff (by positivity) (by norm_num)]
+  norm_num [Real.pi_ne_zero, abs_of_nonneg (Real.log_nonneg (by norm_num : (1 : ℝ) ≤ 2))]
+
+example : 1 ∈ zetaQuadraticDivisorBand (4 * Real.pi) 1 (Real.log 2) := by
+  have hc : 4 * Real.pi / (2 * Real.pi) = 2 := by
+    field_simp
+    norm_num
+  rw [mem_zetaQuadraticDivisorBand_iff (by positivity) (by norm_num), hc]
+  norm_num [abs_of_nonneg (Real.log_nonneg (by norm_num : (1 : ℝ) ≤ 2))]
+
+example (T : ℝ) : zetaFrozenDivisorCoefficient T 0 = 0 :=
+  zetaFrozenDivisorCoefficient_zero T
+
+example : ‖zetaFrozenDivisorQuadraticSum 8 4 - zetaShortQuadraticDivisorSum 8 4 0‖ ≤
+    (∑' n : ℕ, ‖zetaFrozenDivisorCoefficient 8 n‖) * (Real.sqrt Real.pi * 4) := by
+  simpa using norm_zetaFrozenDivisorQuadraticSum_sub_short_le
+    (T := 8) (G := 4) (L := 0) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ T₀ : ℝ, 1 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    ‖zetaFrozenDivisorQuadraticSum T G - zetaShortQuadraticDivisorSum T G (Real.log T)‖ ≤
+      G * T ^ (-(3 : ℝ)) :=
+  exists_zetaQuadraticDivisor_log_tail_bound 3
+
+example : (2 : ℝ) ^ 2 ≤ 4 :=
+  gaussian_width_sq_le_height (G := 2) (T := 4) (δ := 0) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num [Real.rpow_div_two_eq_sqrt])
+
+example : ∀ᶠ T : ℝ in atTop, 8 ≤ T ∧ 1 ≤ Real.log T ∧
+    ∀ G : ℝ, 0 < G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+      G ^ 2 ≤ 2 * T ∧ G * Real.log T ≤ T / 2 ∧ G ≤ T :=
+  eventually_zeta_source_log_window_scales (by norm_num)
+
+example (T G δ : ℝ) (hT : 1 ≤ T) (hδ : 0 < δ) (hG : G ≤ T ^ (1 / 2 - δ))
+    (hlog : 1 ≤ Real.log T) (hlog4 : (Real.log T) ^ 4 ≤ T ^ (δ / 2)) :
+    G * (Real.log T) ^ 0 * T ^ (-1 / 2 + δ / 4) ≤ 1 :=
+  source_log_monomial_le_one hT hδ hG hlog hlog4 (by norm_num)
+
+example : ∀ᶠ T : ℝ in atTop, 4 * (Real.log T) ^ 4 ≤ T ^ (1 / 4 : ℝ) :=
+  eventually_const_log_pow_le_rpow 4 (by norm_num) 4 (by norm_num)
+
+example : Real.exp 1 - 1 ≤ 2 * (1 : ℝ) :=
+  exp_sub_one_le_two_mul (by norm_num) le_rfl
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → 0 < G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaShortQuadraticDivisorSum T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_short_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → 0 < G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaShortQuadraticDivisorSum T G (Real.log T)).re + C * G * Real.log T :=
+  exists_zetaSquareLocalMean_le_short_divisor (by norm_num)
+
+example : ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G →
+    ∀ n ∈ zetaQuadraticDivisorBand T G (Real.log T),
+      |(n : ℝ) - T / (2 * Real.pi)| ≤ T * Real.log T / (Real.pi * G) ∧
+        T / (4 * Real.pi) ≤ (n : ℝ) ∧ (n : ℝ) ≤ T / Real.pi :=
+  exists_zetaQuadraticDivisorBand_physical_bounds (by norm_num)
+
+example (T G L : ℝ) : zetaShortQuadraticDivisorSum T G L =
+    ∑ n ∈ zetaQuadraticDivisorBand T G L, divisorWeight n * zetaShortDivisorTestFunction T G n :=
+  zetaShortQuadraticDivisorSum_eq_divisor_test T G L
+
+example (T G : ℝ) : zetaFrozenDivisorCoefficient T 0 * zetaSquareReflectedGammaPhase T *
+    zetaGaussianQuadraticIntegral T G (Real.log (0 : ℝ) - Real.log (T / (2 * Real.pi))) =
+      divisorWeight 0 * zetaShortDivisorTestFunction T G 0 :=
+  by simpa only [Nat.cast_zero] using zetaQuadraticDivisorTerm_eq_testFunction T G 0
+
+-- A single tail constant is allowed to be negative; the uniform
+-- Gaussian-power absorption remains true without a positivity postulate.
+example : ∃ T₀ : ℝ, 1 ≤ T₀ ∧ ∀ T : ℝ, T₀ ≤ T →
+    (-1 : ℝ) * T ^ (1 : ℝ) * Real.exp (-(1 / 8) * (Real.log T) ^ 2) ≤ T ^ (-(2 : ℝ)) :=
+  exists_logGaussian_power_tail_bound (-1) 1 2 (by norm_num)
+
+end ShortDivisorRegression
+
+section SmoothVoronoiRegression
+
+open Complex Filter MeasureTheory
+open scoped ContDiff
+
+-- Smoothness concerns the actual entire contour weight, including its
+-- complex logarithmic argument rather than only the real axis.
+example : ContDiff ℝ ∞ zetaDivisorWeight := contDiff_zetaDivisorWeight
+
+example : DifferentiableAt ℂ zetaDivisorWeight (Complex.I * Real.pi / 2) :=
+  differentiable_zetaDivisorWeight _
+
+example : ContDiffAt ℝ ∞ (zetaShortDivisorTestFunction 8 4) 1 :=
+  contDiffAt_zetaShortDivisorTestFunction 8 (by norm_num) (by norm_num)
+
+-- Both ends of both smooth transitions have their exact values.
+example : zetaBandCutoff 1 2 3 4 1 = 0 :=
+  zetaBandCutoff_eq_zero_left (by norm_num) le_rfl
+
+example : zetaBandCutoff 1 2 3 4 2 = 1 :=
+  zetaBandCutoff_eq_one (by norm_num) (by norm_num) le_rfl (by norm_num)
+
+example : zetaBandCutoff 1 2 3 4 3 = 1 :=
+  zetaBandCutoff_eq_one (by norm_num) (by norm_num) (by norm_num) le_rfl
+
+example : zetaBandCutoff 1 2 3 4 4 = 0 :=
+  zetaBandCutoff_eq_zero_right (by norm_num) le_rfl
+
+example : zetaSmoothDivisorTest 8 4 1 0 = 0 :=
+  zetaSmoothDivisorTest_eq_zero_left (by norm_num) (by norm_num) (by norm_num)
+    (zetaDivisorBandEdge_pos (by norm_num) 4 (-2 * 1)).le
+
+example : ContDiff ℝ ∞ (zetaSmoothDivisorTest 8 4 1) :=
+  contDiff_zetaSmoothDivisorTest (by norm_num) (by norm_num) (by norm_num)
+
+noncomputable example : DFIVoronoiTestFunction (zetaSmoothDivisorTest 8 4 1) :=
+  zetaSmoothDivisorVoronoiTest (by norm_num) (by norm_num) (by norm_num)
+
+example : Summable (fun n : ℕ => divisorWeight n * zetaSmoothDivisorTest 8 4 1 n) :=
+  summable_zetaSmoothDivisorTerm (by norm_num) (by norm_num) (by norm_num) 1
+
+example : ‖zetaSmoothDivisorSum 8 4 1 - zetaShortQuadraticDivisorSum 8 4 1‖ ≤
+    (∑' n : ℕ, ‖zetaFrozenDivisorCoefficient 8 n‖) *
+      (Real.sqrt Real.pi * 4 * Real.exp (-(1 : ℝ) ^ 2 / 8)) :=
+  norm_zetaSmoothDivisorSum_sub_short_le (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ T₀ : ℝ, 2 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    ‖zetaSmoothDivisorSum T G (Real.log T) - zetaShortQuadraticDivisorSum T G (Real.log T)‖ ≤
+      G * T ^ (-(3 : ℝ)) := exists_zetaSmoothDivisor_log_tail_bound 3
+
+example : zetaSmoothDivisorSum 8 4 1 = zetaDivisorVoronoiMain 8 4 1 +
+    zetaDivisorVoronoiMinus 8 4 1 + zetaDivisorVoronoiPlus 8 4 1 :=
+  zetaSmoothDivisorSum_eq_voronoi (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaDivisorVoronoiMinus 8 4 1 = zetaDivisorBesselMinus 8 4 1 :=
+  zetaDivisorVoronoiMinus_eq_bessel (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaDivisorVoronoiPlus 8 4 1 = zetaDivisorBesselPlus 8 4 1 :=
+  zetaDivisorVoronoiPlus_eq_bessel (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → 0 < G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaDivisorVoronoiMain T G (Real.log T) + zetaDivisorBesselMinus T G (Real.log T) +
+        zetaDivisorBesselPlus T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_bessel_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → 0 < G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaDivisorVoronoiMain T G (Real.log T) +
+        zetaDivisorBesselMinus T G (Real.log T) + zetaDivisorBesselPlus T G (Real.log T)).re +
+          C * G * Real.log T := exists_zetaSquareLocalMean_le_bessel (by norm_num)
+
+end SmoothVoronoiRegression
+
+section BesselK0Regression
+
+open Complex Filter MeasureTheory Set
+
+example : |dfiBesselK0 2| ≤ 2 * Real.exp (-1) := by
+  simpa using abs_dfiBesselK0_exp_le (x := 2) le_rfl
+
+example : Real.exp (-(1 : ℝ)) ≤ 1 := by
+  calc
+    _ ≤ (Nat.factorial 0 : ℝ) / (1 : ℝ) ^ 0 := exp_neg_le_factorial_div_pow (by norm_num) 0
+    _ = 1 := by norm_num
+
+example : 0 < zetaBesselK0PowerConstant 0 := zetaBesselK0PowerConstant_pos 0
+
+example : |dfiBesselK0 (4 * Real.pi)| ≤ zetaBesselK0PowerConstant 2 / (16 : ℝ) ^ 2 := by
+  simpa using abs_dfiBesselK0_source_le (T := 16) (x := 1) (n := 1)
+    (by norm_num) (by norm_num) (by norm_num) 2
+
+example : (32 : ℝ) / (4 * Real.pi) ≤ zetaDivisorBandEdge 32 8 (-2 * 1) ∧
+    zetaDivisorBandEdge 32 8 (2 * 1) ≤ 32 / Real.pi :=
+  zetaDivisorBandEdge_outer_bounds (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+-- The complete smooth transitions, not just the retained integer band.
+example : Function.support (zetaSmoothDivisorTest 32 8 1) ⊆ Icc 2 32 := by
+  simpa only [show (32 : ℝ) / 16 = 2 by norm_num] using
+    support_zetaSmoothDivisorTest_physical (T := 32) (G := 8) (L := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, ‖zetaSmoothDivisorTest 32 8 1 x‖ ≤ C * 8 := by
+  obtain ⟨C, hC, hbound⟩ := exists_norm_zetaSmoothDivisorTest_le
+  exact ⟨C, hC, hbound 32 8 1 (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)⟩
+
+example : Integrable (zetaBesselK0SourceIntegrand 32 8 1 1) :=
+  integrable_zetaBesselK0SourceIntegrand (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : (∫ x : ℝ in Ioi 0, ‖zetaSmoothDivisorTest 32 8 1 x‖) =
+    ∫ x : ℝ in Icc 2 32, ‖zetaSmoothDivisorTest 32 8 1 x‖ := by
+  simpa only [show (32 : ℝ) / 16 = 2 by norm_num] using
+    zetaSmoothDivisorTest_integral_norm_eq_physical (T := 32) (G := 8) (L := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (T G L : ℝ) : zetaBesselK0SourceTerm T G L 0 = 0 := by
+  simp [zetaBesselK0SourceTerm, divisorWeight]
+
+example : ‖divisorDirichletTerm 2 0‖ = 0 := by
+  simpa using norm_divisorDirichletTerm_two 0
+
+-- Both the Gaussian-square and smooth-cutoff width boundaries are closed.
+example : HasSum (zetaBesselK0SourceTerm 32 8 1) (zetaDivisorBesselPlus 32 8 1) :=
+  hasSum_zetaBesselK0SourceTerm (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : (-1 : ℝ) * 4 / (4 : ℝ) ^ (2 : ℕ) ≤ (4 : ℝ) ^ (-(0 : ℝ)) :=
+  besselK0_source_power_absorb (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T →
+    T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    ‖zetaDivisorBesselPlus T G (Real.log T)‖ ≤ G * T ^ (-(3 : ℝ)) :=
+  exists_zetaDivisorBesselPlus_powerSaving (by norm_num) 3
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaDivisorVoronoiMain T G (Real.log T) +
+        zetaDivisorBesselMinus T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_main_minus_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaDivisorVoronoiMain T G (Real.log T) +
+        zetaDivisorBesselMinus T G (Real.log T)).re + C * G * Real.log T :=
+  exists_zetaSquareLocalMean_le_main_minus (by norm_num)
+
+end BesselK0Regression
+
+section AtkinsonSourceRegression
+
+open Complex Filter MeasureTheory Set
+open scoped ContDiff
+
+example : zetaDivisorLatticePhase 0 = 1 := by
+  simpa only [Nat.cast_zero] using zetaDivisorLatticePhase_nat 0
+
+example : zetaDivisorLatticePhase 2 = 1 := zetaDivisorLatticePhase_nat 2
+
+example : ‖zetaDivisorLatticePhase (1 / 2)‖ = 1 := norm_zetaDivisorLatticePhase _
+
+example (T G L : ℝ) : zetaAtkinsonDivisorTest T G L 1 = zetaSmoothDivisorTest T G L 1 := by
+  simpa only [Nat.cast_one] using zetaAtkinsonDivisorTest_nat T G L 1
+
+example (T G L x : ℝ) :
+    ‖zetaAtkinsonDivisorTest T G L x‖ = ‖zetaSmoothDivisorTest T G L x‖ :=
+  norm_zetaAtkinsonDivisorTest T G L x
+
+example : Function.support (zetaAtkinsonDivisorTest 32 8 1) ⊆ Icc 2 32 := by
+  rw [support_zetaAtkinsonDivisorTest]
+  simpa only [show (32 : ℝ) / 16 = 2 by norm_num] using
+    support_zetaSmoothDivisorTest_physical (T := 32) (G := 8) (L := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+noncomputable example : DFIVoronoiTestFunction (zetaAtkinsonDivisorTest 32 8 1) :=
+  zetaAtkinsonDivisorVoronoiTest (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaSmoothDivisorSum 32 8 1 = zetaAtkinsonVoronoiMain 32 8 1 +
+    zetaAtkinsonBesselMinus 32 8 1 + zetaAtkinsonBesselPlus 32 8 1 :=
+  zetaSmoothDivisorSum_eq_atkinson_bessel (by norm_num) (by norm_num) (by norm_num)
+
+example : Integrable (fun x : ℝ => zetaAtkinsonDivisorTest 32 8 1 x *
+    (dfiBesselK0 (4 * Real.pi * Real.sqrt (x * (1 : ℕ))) : ℂ)) :=
+  integrable_zetaAtkinsonK0_integrand (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example (T G L : ℝ) : zetaAtkinsonBesselPlusTerm T G L 0 = 0 := by
+  simp [zetaAtkinsonBesselPlusTerm, divisorWeight]
+
+example : HasSum (zetaAtkinsonBesselPlusTerm 32 8 1) (zetaAtkinsonBesselPlus 32 8 1) :=
+  hasSum_zetaAtkinsonBesselPlusTerm (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ, T₀ ≤ T →
+    T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    ‖zetaAtkinsonBesselPlus T G (Real.log T)‖ ≤ G * T ^ (-(3 : ℝ)) :=
+  exists_zetaAtkinsonBesselPlus_powerSaving (by norm_num) 3
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaAtkinsonVoronoiMain T G (Real.log T) +
+        zetaAtkinsonBesselMinus T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_reduced (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaAtkinsonVoronoiMain T G (Real.log T) +
+        zetaAtkinsonBesselMinus T G (Real.log T)).re + C * G * Real.log T :=
+  exists_zetaSquareLocalMean_le_atkinson_reduced (by norm_num)
+
+end AtkinsonSourceRegression
+
+section AtkinsonSaddleRegression
+
+open Complex
+
+example (T G L : ℝ) :
+    zetaAtkinsonDivisorTest T G L 1 =
+      zetaAtkinsonAmplitude T G L 1 * Complex.exp ((zetaAtkinsonPhase T 0 1 : ℝ) * I) :=
+  zetaAtkinsonDivisorTest_eq_amplitude_phase T G L (by norm_num)
+
+example : zetaAtkinsonSaddle (4 * Real.pi) 1 = 4 := by
+  have hA : 4 * Real.pi / (2 * Real.pi) = (2 : ℝ) := by field_simp; ring
+  norm_num [zetaAtkinsonSaddle, atkinsonSaddleRoot, hA]
+
+example : zetaAtkinsonSaddle (4 * Real.pi) (-1) = 1 := by
+  have hA : 4 * Real.pi / (2 * Real.pi) = (2 : ℝ) := by field_simp; ring
+  norm_num [zetaAtkinsonSaddle, atkinsonSaddleRoot, hA]
+
+example (T : ℝ) (hT : 0 < T) : zetaAtkinsonSaddle T 0 = T / (2 * Real.pi) :=
+  zetaAtkinsonSaddle_zero hT
+
+example (T x : ℝ) (hT : 0 < T) (hx : 0 < x) :
+    deriv (zetaAtkinsonPhase T 1) x = 0 ↔ x = zetaAtkinsonSaddle T 1 :=
+  zetaAtkinsonPhase_stationary_iff hT hx 1
+
+example (T : ℝ) (hT : 0 < T) :
+    deriv (zetaAtkinsonPhase T (-1)) (zetaAtkinsonSaddle T (-1)) = 0 :=
+  zetaAtkinsonPhase_stationary hT (-1)
+
+example (T : ℝ) (hT : 0 < T) :
+    deriv (deriv (zetaAtkinsonPhase T 1)) (zetaAtkinsonSaddle T 1) < 0 :=
+  zetaAtkinsonPhase_secondDeriv_saddle_neg hT 1
+
+example (T : ℝ) (hT : 0 < T) :
+    deriv (deriv (zetaAtkinsonPhase T (-1))) (zetaAtkinsonSaddle T (-1)) < 0 :=
+  zetaAtkinsonPhase_secondDeriv_saddle_neg hT (-1)
+
+end AtkinsonSaddleRegression
+
+section AtkinsonMainRegression
+
+open Complex MeasureTheory Set
+
+example : IntervalC1Bound (fun x => (zetaBandCutoff 1 2 3 4 x : ℂ)) (-1) 5 2 :=
+  intervalC1Bound_zetaBandCutoff (by norm_num) (by norm_num) (by norm_num)
+
+example (T : ℝ) (hT : 0 < T) :
+    IntervalC1Bound (fun x : ℝ => (Real.sqrt x : ℂ)) (T / 16) T (Real.sqrt T) :=
+  intervalC1Bound_source_sqrt hT
+
+example (T : ℝ) (hT : 16 ≤ T) :
+    IntervalC1Bound (fun x : ℝ => ((Real.log x + 2 * Real.eulerMascheroniConstant : ℝ) : ℂ))
+      (T / 16) T (Real.log T + 2 * Real.eulerMascheroniConstant) :=
+  intervalC1Bound_source_log hT
+
+example (T : ℝ) (hT : 0 < T) :
+    zetaDivisorWeight ((Real.log T : ℂ) - zetaGammaLeadingLog T) = zetaMainMellinProfile 1 := by
+  simpa only [div_self hT.ne'] using zetaDivisorWeight_source_eq_profile hT hT
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T : ℝ, 0 < T →
+    IntervalC1Bound (fun x => zetaMainMellinProfile (x / T)) (T / 16) T C :=
+  exists_intervalC1Bound_zetaMainMellinProfile
+
+example : zetaLogGaussianEnvelope 4 8 4 = 1 := by
+  simp only [zetaLogGaussianEnvelope, sub_self, mul_zero, zero_pow (by decide : 2 ≠ 0),
+    neg_zero, zero_div, Real.exp_zero]
+
+example : IntervalC1Bound (fun x : ℝ => (zetaLogGaussianEnvelope 2 0 x : ℂ)) 1 4 2 :=
+  intervalC1Bound_zetaLogGaussianEnvelope (by norm_num) (by norm_num) (by norm_num) 0
+
+example : HasDerivAt (zetaLogGaussianEnvelope 2 8) 0 2 := by
+  simpa only [sub_self, zero_div, mul_zero, zero_mul] using
+    hasDerivAt_zetaLogGaussianEnvelope 2 8 (x := 2) (by norm_num)
+
+example : 1 / ‖zetaGaussianQuadraticCoefficient 8 4‖ ≤ 16 := by
+  simpa only [show (4 : ℝ) ^ 2 = 16 by norm_num] using
+    inverse_norm_zetaGaussianQuadraticCoefficient_le 8 (G := 4) (by norm_num)
+
+example : HasDerivAt (zetaGaussianQuadraticIntegral 8 4) 0 0 := by
+  simpa only [Complex.ofReal_zero, neg_zero, zero_div, zero_mul] using
+    hasDerivAt_zetaGaussianQuadraticIntegral 8 (G := 4) (by norm_num) 0
+
+example : ‖deriv (zetaGaussianQuadraticIntegral 32 8) 1‖ ≤
+    (Real.sqrt Real.pi * (8 : ℝ) ^ 3 / 2) * |(1 : ℝ)| * Real.exp (-((8 : ℝ) * 1) ^ 2 / 8) :=
+  norm_deriv_zetaGaussianQuadraticIntegral_le (by norm_num) (by norm_num) (by norm_num) 1
+
+example : IntervalC1Bound
+    (fun x => zetaGaussianQuadraticIntegral 32 8 (Real.log x - Real.log (32 / (2 * Real.pi))))
+    (32 / 16) 32 (4 * Real.sqrt Real.pi * 8) :=
+  intervalC1Bound_zetaQuadraticLogGaussian (by norm_num) (by norm_num) (by norm_num)
+
+example (T G L : ℝ) (hT : 0 < T) :
+    zetaAtkinsonMainWeight T G L 1 * ((1 : ℂ)⁻¹ *
+      Complex.exp (((T * Real.log 1 - 2 * Real.pi * 1 : ℝ) : ℂ) * I)) =
+        ((Real.log 1 : ℂ) + 2 * Real.eulerMascheroniConstant) * zetaAtkinsonDivisorTest T G L 1 :=
+  zetaAtkinsonMainWeight_carrier hT (by norm_num) G L
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 16 ≤ T → 1 ≤ Real.log T →
+    0 < G → G ^ 2 ≤ 2 * T → 0 < L →
+    IntervalC1Bound (zetaAtkinsonMainWeight T G L) (T / 16) T
+      (C * G * Real.sqrt T * Real.log T) := exists_intervalC1Bound_zetaAtkinsonMainWeight
+
+example : Integrable (zetaAtkinsonMainIntegrand 32 8 1) :=
+  integrable_zetaAtkinsonMainIntegrand (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaAtkinsonVoronoiMain 32 8 1 =
+    ∫ x in (32 / 16)..32, zetaAtkinsonMainWeight 32 8 1 x * ((x : ℂ)⁻¹ *
+      Complex.exp (((32 * Real.log x - 2 * Real.pi * x : ℝ) : ℂ) * I)) :=
+  zetaAtkinsonVoronoiMain_eq_reflection (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 16 ≤ T → 1 ≤ Real.log T →
+    0 < G → G ^ 2 ≤ 2 * T → 0 < L → 8 * L ≤ G →
+    ‖zetaAtkinsonVoronoiMain T G L‖ ≤ C * G * Real.log T :=
+  exists_norm_zetaAtkinsonVoronoiMain_le
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    ‖zetaAtkinsonVoronoiMain T G (Real.log T)‖ ≤ C * G * Real.log T :=
+  exists_zetaAtkinsonVoronoiMain_log_bound (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaAtkinsonBesselMinus T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaAtkinsonBesselMinus T G (Real.log T)).re +
+        C * G * Real.log T := exists_zetaSquareLocalMean_le_atkinson_minus (by norm_num)
+
+end AtkinsonMainRegression
