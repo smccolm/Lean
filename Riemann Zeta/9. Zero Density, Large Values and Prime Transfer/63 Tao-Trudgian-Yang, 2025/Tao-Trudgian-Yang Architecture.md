@@ -1,11 +1,3 @@
-# Tao--Trudgian--Yang 2025 proof architecture
-
-This is the canonical dependency view for the formalization. Green means the
-checklist acceptance test is installed and passes the principal runner, blue
-means reusable source exists but its target bridge is not yet proved, and red
-means open. Checklist numbers are authoritative.
-
-```mermaid
 flowchart TD
     ML["Mathlib analytic and finite foundations<br/>AVAILABLE"]
     ED["ANTEDB Lean asymptotics, phases,<br/>exponential sums, Euler--Maclaurin<br/>AVAILABLE at current pin"]
@@ -43,7 +35,7 @@ flowchart TD
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]
-    ET["EPZAE-33 energy transfer<br/>IN PROGRESS: perturbation, tolerance normalization,<br/>Type I scale/separation/pattern packaging DONE;<br/>coefficient subpower bound, LV* use + Type II OPEN;<br/>EPZAE-34 OPEN"]
+    ET["EPZAE-33 energy transfer<br/>IN PROGRESS: perturbation, normalization,<br/>native Type I pattern/subpower DONE;<br/>classical branch/scale + Type II pattern DONE;<br/>smooth + sharp re-separation DONE;<br/>sharp radius subpower DONE;<br/>height packaging + LV* OPEN;<br/>EPZAE-34 OPEN"]
     HBE["EPZAE-35 Heath--Brown energy relation<br/>OPEN"]
     EC["EPZAE-36 energy polyhedral certificates<br/>OPEN"]
     NAE["EPZAE-37 nine new additive-energy bounds<br/>OPEN"]
@@ -130,31 +122,3 @@ flowchart TD
     class ML,ED,GM,PY,SRC available;
     class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE done;
     class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZDT,HBD,IBD,BZD,OBD,ZTAB,ER,ET,HBE,EC,NAE,PUB,SEM,REL open;
-```
-
-## Critical paths
-
-The shortest useful path is:
-
-```text
-toolchain -> ANTEDB bridge -> exponent-pair semantics -> beta duality
--> exact envelope certificates -> four new exponent pairs
-```
-
-The zero-density path additionally requires large-value semantics and the
-source-convention bridge to the completed Guth--Maynard work. The
-additive-energy path is last because it depends on nearly the whole
-large-value/zero framework and on five-dimensional projection certificates.
-
-## Boundary rules
-
-- `RC` proves only finite arithmetic implications. It cannot manufacture an
-  analytic exponent-pair or large-value premise.
-- `GMB` must consume the actual local Guth--Maynard theorem, not a separately
-  supplied proposition with the desired bound.
-- `ZCB` is mandatory even if both projects use the letter `N`; naming does not
-  establish equality of zero-count conventions.
-- `ET` must preserve the source's possibly different subsequences for
-  cardinality, energy, and double-zeta exponents.
-- `PUB` remains red until every advertised output has no mathematical theorem
-  parameter and is present in the default build and exhaustive audit.

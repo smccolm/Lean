@@ -26,8 +26,48 @@ with unit-bin parity/rank coloring, so the refined detector classes are also
 one-separated while retaining every multiplicity copy. `DetectorPattern`
 normalizes the native half-open detector on exact closed dyadic support and
 turns every inhabited refined class into a source `LargeValuePattern`; the
-image-finset energy is proved equal to the indexed class energy. No advertised
-paper theorem is claimed complete yet.
+image-finset energy is proved equal to the indexed class energy. Its maximum
+scaled-coefficient normalizer is `O_epsilon(N^epsilon)` by the native proved
+divisor bound, and the logarithmic detector threshold is explicitly absorbed
+using admissible-scale growth. `ZeroEnergyDichotomy` separately follows the
+paper's classical Type-I/Type-II split: it chooses one beta-removed ordinate
+and one genuine branch/scale label for every slab zero, lifts the choice to all
+analytic-multiplicity copies, transfers the native Jensen cap to shifted unit
+bins, and bounds the original slab energy by four one-separated classes with
+explicit coloring and perturbation losses. The Type-II branch now has an exact
+closed-support `LargeValuePattern` constructor using the native normalized
+sharp-mollifier coefficients, including equality of finset and indexed
+energy. The Type-I branch likewise has an exact normalized weighted
+pre-deweighting `LargeValuePattern` with energy equality. Its exact two-block
+source decomposition now also selects a large smooth block for every indexed
+ordinate and controls the original energy by four fixed-block, one-separated
+classes, including the specialization to a classical Type-I branch/scale
+fiber. Exact untruncated Fourier deweighting of every selected block now
+produces a large coefficient-one sum on the exact active integer interval
+with an explicit Fourier-`L¹` loss. An order-two Schwartz estimate now gives
+a uniform-in-ordinate complementary-tail bound and the explicit window
+`typeISourceFourierRadius`; explicit displacement and occupancy estimates
+therefore recolor the full indexed energy unconditionally into four
+one-separated coefficient-one classes. The remaining source-specific edge is
+subpower/source-scale control of that radius and of the Fourier-`L¹` loss;
+height-pattern packaging, the `LV*` application, and asymptotic assembly are
+also not yet proved, so no advertised paper theorem is claimed complete.
+The sharper source-paper route is now also present: a fixed logarithmic bump
+deweights the original sharp Type-I polynomial on `Ioc N (min (2*N) A)` with
+scale-independent Fourier `L¹` loss, and a generic theorem gives its Fourier
+  tail at every polynomial order. The full scale-and-cardinality tail is now
+  composed with finite-window extraction, and the canonical positive-real-root
+  radius makes its numerical tail premise automatic. The resulting bounded
+  ordinates carry the full indexed energy with an explicit normalization loss.
+  Generic bounded-multiplicity coloring now further produces four
+  one-separated coefficient-one families. The abstract order-selection lemma
+  already turns a power bound for the radius's defining base into a subpower
+  radius. The source threshold reciprocal, sharp-cutoff base envelope, fixed
+  constant and `clog` absorption, and existential order choice are all proved;
+  the resulting radius is uniformly eventually `T^δ`. Height-interval pattern
+  propagation and the `LV*` application remain open. The coefficient-one
+  active-support polynomial and its exact `LargeValuePattern` constructor with
+  energy preservation are already available.
 
 ## Verification
 

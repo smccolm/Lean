@@ -89,9 +89,62 @@ four multiplicity-safe, one-separated, single-scale detector classes.
 `DetectorPattern` now normalizes the native coefficients on the exact closed
 dyadic support and packages every inhabited class as a `LargeValuePattern`;
 `finsetAdditiveEnergy_image_eq` proves that this passage preserves the indexed
-energy exactly. The remaining Type I work is a subpower bound for the detector
-normalization and application of the `LV*` estimate; Type II transfer and
-final assembly also remain open.
+energy exactly. Its maximum coefficient normalizer is proved to be
+`O_epsilon(N^epsilon)` from the native kernel-checked divisor bound. The
+remaining native-detector Type I work is the quantitative scale/threshold
+application of the `LV*` estimate. `ZeroEnergyDichotomy` now completes the
+multiplicity-safe finite extraction for the paper's classical Type-I/Type-II
+route: every zero copy inherits a beta-removed ordinate and genuine branch and
+dyadic scale, the shifted Jensen cap yields one-separated color classes, and
+`classicalSlabZeroEnergy_le_separated_branch_scale_class_energies` bounds the
+full slab energy by four such classes with explicit losses. Converting the
+classical Type II classes to the paper interface is also kernel-checked:
+`exists_classicalTypeIIClassPattern` uses the native sharp-mollifier
+normalization and preserves indexed energy exactly; its `_native` corollary
+discharges the coefficient bound from the proved divisor estimate. Classical Type I pattern
+conversion now also has an exact normalized weighted `LargeValuePattern` with
+energy preservation. The exact source decomposition into two smooth blocks is
+now used pointwise and at energy level: four fixed-block, one-separated
+classes control the full Type-I class energy, and the same construction is
+specialized to an actual classical Type-I branch/scale fiber. Exact
+untruncated Fourier deweighting now turns every selected block into a large
+literal coefficient-one Dirichlet sum on the exact active integer interval,
+with an explicit Fourier-`L¹` loss.
+The Fourier tail is now quantitative: order-two Schwartz decay bounds the
+complementary integral uniformly in the original ordinate, and
+`typeISourceFourierRadius` gives the explicit window
+`max 1 (4 * card * seminorm / V)`. Consequently
+`exists_separated_explicitTypeISourceFourier_energy_classes` unconditionally
+selects bounded ordinates, retains the complete indexed energy through
+tolerance normalization, and recolors it into four one-separated
+coefficient-one classes. What remains analytically is source-scale/subpower
+control of the block Fourier `L¹` majorant and seminorm radius, followed by
+height-pattern packaging, applying `LV*`, and the dyadic/asymptotic assembly.
+In parallel, the source-faithful sharp-block route now avoids the endpoint
+smoothing entirely: `classicalTypeILogProfileSchwartz` is one fixed translated
+profile for every dyadic scale,
+`dirichletPoly_classicalZetaLongLineCoeff_fourierDeweight` is its exact active-
+interval identity, and `integral_norm_fourier_schwartz_compl_Icc_le_order`
+provides tail decay of every polynomial order.
+`exists_bounded_coefficientOne_shift_of_classicalTypeI` composes the full
+sharp-block tail with finite-window extraction. The canonical positive-real
+root `classicalTypeIFourierRadius` now makes the required numerical tail
+inequality automatic at every order greater than one, and
+`exists_classicalTypeI_explicitBoundedOrdinate_family` lifts the resulting
+witnesses to the complete indexed family with explicit tolerance-normalized
+energy transfer. `exists_separated_classicalTypeI_explicitFourier_energy_classes`
+then performs the generic occupancy coloring and produces four one-separated
+coefficient-one families. Subpower control of the canonical radius, including
+the fixed seminorm and source `clog` loss, is now complete:
+`exists_order_eventually_classicalTypeIFourierRadius_sharpCutoff_le_rpow`
+chooses one decay order and proves a uniform eventual `T^δ` radius for all
+source-large scales and ordinates. Height-interval pattern packaging and the
+`LV*` application are the remaining sharp-route steps. The exact packaging
+primitive is now present: `classicalTypeICoefficientOneCoeff` realizes the
+active interval inside the full dyadic block, and
+`indexedClassicalTypeICoefficientOnePattern` constructs a paper
+`LargeValuePattern` with exact indexed-energy preservation once interval bounds
+are supplied.
 The next exponent-pair analytic
 frontier is EPZAE-09: the remaining endpoint/reflection and converse direction
 of beta/exponent-pair duality.

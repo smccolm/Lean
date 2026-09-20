@@ -12,6 +12,7 @@ import TaoTrudgianYang2025.EnergyCertificates
 import TaoTrudgianYang2025.ZeroEnergyMultiplicity
 import TaoTrudgianYang2025.ZeroEnergyTypeI
 import TaoTrudgianYang2025.DetectorPattern
+import TaoTrudgianYang2025.ZeroEnergyDichotomy
 import TaoTrudgianYang2025.EnergyRegions
 import TaoTrudgianYang2025.EnergyRegionAsymptotics
 import TaoTrudgianYang2025.EnergyRegionSupremum

@@ -1,6 +1,6 @@
 import TaoTrudgianYang2025
 
-open scoped NNReal
+open scoped NNReal FourierTransform
 open TaoTrudgianYang2025
 open RiemannZeta.GuthMaynard
 
@@ -210,6 +210,12 @@ example {ι κ : Type*} [Fintype ι] [Fintype κ] [DecidableEq κ] [Nonempty κ]
             (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ)) :=
   exists_energy_color_classes W color
 
+example {ι κ : Type*} [Fintype ι] [LinearOrder ι]
+    [Fintype κ] [DecidableEq κ] [Nonempty κ]
+    (W : ι → ℝ) (color : ι → κ) (L : ℕ)
+    (hlocal : ∀ z : ℤ, (unitBinFinset W z).card ≤ L) :=
+  exists_separated_energy_color_classes W color L hlocal
+
 example (δ : ℝ) (hδ : 0 < δ) :=
   typeIZeroAdditiveEnergy_le_detector_scale_class_energies δ hδ
 
@@ -224,6 +230,9 @@ example {ι : Type*} [Fintype ι] [DecidableEq ι] (W : ι → ℝ)
     finsetAdditiveEnergy (Finset.univ.image W) =
       approximateAdditiveEnergyOf 1 W :=
   finsetAdditiveEnergy_image_eq W hsep
+
+example (σ ε : ℝ) (hσ : 0 ≤ σ) (hε : 0 < ε) :=
+  exists_detectorPatternNormalization_le_const_mul_rpow σ ε hσ hε
 
 example (δ σ T : ℝ) (hT : Real.exp 2 ≤ T)
     (shifted : TypeIZeroCopy σ T → ℝ) (L : ℕ)
@@ -243,6 +252,180 @@ example (δ σ T : ℝ) (hT : Real.exp 2 ≤ T)
       x ≠ y → 1 ≤ |shifted x.1 - shifted y.1|) :=
   exists_typeIDetectorClassPattern δ σ T hT shifted L hlocal label x₀
     hshift hlarge hsep
+
+example (σ T : ℝ) :
+    Fintype.card (ClassicalSlabZeroCopy σ T) =
+      zeroCountRect σ 1 T (2 * T) :=
+  classicalSlabZeroCopy_card σ T
+
+example (σ T H : ℝ) (L₀ : ℕ)
+    (shift : ↥(zerosInRect σ 1 T (2 * T)) → ℝ)
+    (hshift : ∀ ρ : ↥(zerosInRect σ 1 T (2 * T)),
+      |(ρ : ℂ).im - shift ρ| ≤ H)
+    (hlocal : ∀ z : ℤ,
+      ∑ ρ ∈ (zerosInRect σ 1 T (2 * T)).filter
+        (fun ρ => (z : ℝ) ≤ ρ.im ∧ ρ.im < (z : ℝ) + 1),
+        analyticVanishingOrder riemannZeta ρ ≤ L₀)
+    (z : ℤ) :
+    (unitBinFinset
+      (fun x : ClassicalSlabZeroCopy σ T => shift x.1) z).card ≤
+        (2 * Nat.ceil H + 1) * L₀ :=
+  classicalSlabZeroCopy_shifted_unitBin_card_le σ T H L₀
+    shift hshift hlocal z
+
+example (σ T d : ℝ) (shifted : ClassicalSlabZeroCopy σ T → ℝ)
+    (hshift : ∀ z, |shifted z - (z.1.1 : ℂ).im| ≤ d) :=
+  classicalSlabZeroEnergy_le_shifted_unit σ T d shifted hshift
+
+example (N : ℕ) (a : ℕ → ℂ) (t : ℝ) :
+    (∑ n ∈ Finset.Icc N (2 * N),
+      closedDyadicCoeff N a n * dirichletPhase n t) =
+        dirichletPoly N a t :=
+  sum_closedDyadicCoeff_eq_dirichletPoly N a t
+
+example (A N : ℕ) (σ t : ℝ) :
+    dirichletPoly N (normalizedClassicalZetaLongLineCoeff A N σ) t =
+      (((N : ℝ) ^ σ : ℝ) : ℂ) *
+        dirichletPoly N (classicalZetaLongLineCoeff A σ) t :=
+  dirichletPoly_normalizedClassicalZetaLongLineCoeff A N σ t
+
+example (A N : ℕ) (σ V t : ℝ) (hN : 0 < N)
+    (hlarge : V ≤
+      ‖dirichletPoly N (classicalZetaLongLineCoeff A σ) t‖) :
+    ∃ r : Fin 2, V / 2 ≤
+      ‖typeISourceSmoothBlock N (min (2 * N) A) r σ t‖ :=
+  exists_large_typeISourceSmoothBlock_of_sharp_large A N σ V t hN hlarge
+
+example (A N : ℕ) (σ t : ℝ) (hN : 0 < N) :
+    dirichletPoly N (classicalZetaLongLineCoeff A σ) t =
+      ((((N : ℝ) ^ (-σ) : ℝ) : ℂ) *
+        ∫ ξ : ℝ, 𝓕 (classicalTypeILogProfileSchwartz σ) ξ *
+          Complex.exp
+            (-(((2 * Real.pi * ξ * Real.log (N : ℝ) : ℝ) : ℂ) * Complex.I)) *
+          ∑ n ∈ Finset.Ioc N (min (2 * N) A),
+            (n : ℂ) ^
+              (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)) :=
+  dirichletPoly_classicalZetaLongLineCoeff_fourierDeweight
+    A N σ t hN
+
+example (A N : ℕ) (t : ℝ) :
+    dirichletPoly N (classicalTypeICoefficientOneCoeff A) t =
+      ∑ n ∈ Finset.Ioc N (min (2 * N) A), dirichletPhase n t :=
+  dirichletPoly_classicalTypeICoefficientOneCoeff_eq_active_sum A N t
+
+example (A N : ℕ) (σ V t : ℝ) (hN : 0 < N) (hV : 0 < V)
+    (hlarge : V ≤
+      ‖dirichletPoly N (classicalZetaLongLineCoeff A σ) t‖) :
+    ∃ ξ : ℝ,
+      V / (2 * (N : ℝ) ^ (-σ) * classicalTypeIFourierL1 σ) ≤
+        ‖∑ n ∈ Finset.Ioc N (min (2 * N) A),
+          (n : ℂ) ^
+            (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ :=
+  exists_large_coefficientOne_shift_of_classicalTypeI
+    A N σ V t hN hV hlarge
+
+example (A N k : ℕ) (σ V t R : ℝ) (hN : 0 < N) (hV : 0 < V)
+    (hk : 1 < k) (hR : 0 < R)
+    (hlarge : V ≤
+      ‖dirichletPoly N (classicalZetaLongLineCoeff A σ) t‖)
+    (htail :
+      (N : ℝ) ^ (-σ) * (Finset.Ioc N (min (2 * N) A)).card *
+        ((2 * SchwartzMap.seminorm ℝ k 0
+            (𝓕 (classicalTypeILogProfileSchwartz σ)) / ((k : ℝ) - 1)) *
+          R ^ (1 - (k : ℝ))) ≤ V / 2) :
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V / (4 * (N : ℝ) ^ (-σ) * classicalTypeIFourierL1 σ) ≤
+        ‖∑ n ∈ Finset.Ioc N (min (2 * N) A),
+          (n : ℂ) ^
+            (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ :=
+  exists_bounded_coefficientOne_shift_of_classicalTypeI
+    A N k σ V t R hN hV hk hR hlarge htail
+
+example (A N k : ℕ) (σ V : ℝ) (hV : 0 < V) (hk : 1 < k) :
+    let R := classicalTypeIFourierRadius A N k σ V
+    (N : ℝ) ^ (-σ) * (Finset.Ioc N (min (2 * N) A)).card *
+        ((2 * SchwartzMap.seminorm ℝ k 0
+            (𝓕 (classicalTypeILogProfileSchwartz σ)) / ((k : ℝ) - 1)) *
+          R ^ (1 - (k : ℝ))) ≤ V / 2 :=
+  classicalTypeIFourierRadius_tail_numeric A N k σ V hV hk
+
+example (A N k : ℕ) (σ V T α δ : ℝ) (hV : 0 < V) (hk : 1 < k)
+    (hT : 1 ≤ T) (horder : α ≤ δ * ((k : ℝ) - 1))
+    (hbase :
+      1 +
+          4 * ((N : ℝ) ^ (-σ) * (Finset.Ioc N (min (2 * N) A)).card) *
+            SchwartzMap.seminorm ℝ k 0
+              (𝓕 (classicalTypeILogProfileSchwartz σ)) /
+            (((k : ℝ) - 1) * V) ≤
+        T ^ α) :
+    classicalTypeIFourierRadius A N k σ V ≤ T ^ δ :=
+  classicalTypeIFourierRadius_le_rpow_of_base_growth
+    A N k σ V T α δ hV hk hT horder hbase
+
+example (D δ : ℝ) (hδ : 0 < δ) :
+    ∃ k : ℕ, 1 < k ∧
+      D + 1 + δ / 2 ≤ δ * ((k : ℝ) - 1) :=
+  exists_classicalTypeIFourier_order D δ hδ
+
+example (A N k : ℕ) (σ V t : ℝ) (hN : 0 < N) (hV : 0 < V)
+    (hk : 1 < k)
+    (hlarge : V ≤
+      ‖dirichletPoly N (classicalZetaLongLineCoeff A σ) t‖) :
+    let R := classicalTypeIFourierRadius A N k σ V
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V / (4 * (N : ℝ) ^ (-σ) * classicalTypeIFourierL1 σ) ≤
+        ‖∑ n ∈ Finset.Ioc N (min (2 * N) A),
+          (n : ℂ) ^
+            (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ :=
+  exists_explicitly_bounded_coefficientOne_shift_of_classicalTypeI
+    A N k σ V t hN hV hk hlarge
+
+example (Y A r : ℕ) (σ V t : ℝ) (hY : 0 < Y) (hV : 0 < V)
+    (hlarge : V ≤ ‖typeISourceSmoothBlock Y A r σ t‖) :
+    ∃ ξ : ℝ,
+      V / (2 * typeISourceSmoothBlockFourierL1 Y A r σ hY) ≤
+        ‖∑ n ∈ Finset.Ioc Y A,
+          (n : ℂ) ^ (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ :=
+  exists_large_coefficientOne_shift_of_typeISourceSmoothBlock
+    Y A r σ V t hY hV hlarge
+
+example (Y A r : ℕ) (σ t : ℝ) (hY : 0 < Y) :
+    typeISourceSmoothBlock Y A r σ t =
+      ∫ ξ : ℝ, 𝓕 (typeILogWeightSchwartz Y A r σ hY) ξ *
+        ∑ n ∈ Finset.Ioc Y A,
+          (n : ℂ) ^
+            (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I) :=
+  typeISourceSmoothBlock_fourierDeweight_restricted Y A r σ t hY
+
+example (Y A r : ℕ) (σ V t : ℝ) (hY : 0 < Y) (hV : 0 < V) :
+    let R := typeISourceFourierRadius Y A r σ V hY
+    ‖∫ ξ : ℝ in (Set.Icc (-R) R)ᶜ,
+        𝓕 (typeILogWeightSchwartz Y A r σ hY) ξ *
+          ∑ n ∈ Finset.Ioc Y A,
+            (n : ℂ) ^
+              (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ ≤
+      V / 2 :=
+  norm_typeILogWeight_fourier_tail_integral_le_half
+    Y A r σ V t hY hV
+
+example (Y A r : ℕ) (σ V t : ℝ) (hY : 0 < Y) (hV : 0 < V)
+    (hlarge : V ≤ ‖typeISourceSmoothBlock Y A r σ t‖) :
+    let R := typeISourceFourierRadius Y A r σ V hY
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V / (4 * typeISourceSmoothBlockFourierL1 Y A r σ hY) ≤
+        ‖∑ n ∈ Finset.Ioc Y A,
+          (n : ℂ) ^
+            (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * Complex.I)‖ :=
+  exists_explicitly_bounded_coefficientOne_shift_of_typeISourceSmoothBlock
+    Y A r σ V t hY hV hlarge
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (W W' : ι → ℝ) (d : ℝ) (hd : 0 ≤ d)
+    (hsep : ∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|)
+    (hpert : ∀ x, |W' x - W x| ≤ d) (z : ℤ) :
+    (unitBinFinset W' z).card ≤ Nat.ceil (2 * d + 2) :=
+  unitBinFinset_perturbation_card_le_natCeil
+    W W' d hd hsep hpert z
 
 example {σ τ ρ ρstar s : ℝ}
     (h : InLargeValueEnergyRegion σ τ ρ ρstar s) :

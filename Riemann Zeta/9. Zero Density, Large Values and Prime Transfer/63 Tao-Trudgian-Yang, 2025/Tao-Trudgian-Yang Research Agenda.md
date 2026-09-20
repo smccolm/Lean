@@ -212,9 +212,84 @@ proves its exact phase-sum identity, and constructs a `LargeValuePattern` from
 every inhabited class.  `finsetAdditiveEnergy_image_eq` proves that the image
 finset retains the complete indexed energy, while
 `typeIDetectorClass_energy_eq_zero_or_exists_pattern` handles empty classes
-without a spurious scale.  Proving that the coefficient normalizer is
-subpower, applying the `LV*` bound, the Type II transfer, and the final dyadic
-assembly needed to finish `zeroe-from-large` remain open.
+without a spurious scale.  The native kernel proof
+`divisorCountBound_native` now yields
+`exists_detectorPatternNormalization_le_const_mul_rpow`, so the coefficient
+normalizer has the required epsilon-power loss.  Quantitatively matching the
+pattern's height and threshold to `LV*`, the Type II transfer, and the final
+dyadic assembly needed to finish `zeroe-from-large` remain open.
+
+`ZeroEnergyDichotomy` now supplies the complete finite, multiplicity-safe
+source-classical extraction.  `ClassicalSlabZeroCopy` has cardinality exactly
+the native weighted `zeroCountRect`; `classicalZero_exists_shifted_branch_scale`
+derives a beta-removed ordinate and genuine Type-I or Type-II dyadic scale for
+every distinct zero from the source inequalities; and
+`classicalSlabZeroEnergy_le_separated_branch_scale_class_energies` lifts those
+choices to all analytic-multiplicity copies, transfers the native Jensen cap,
+and bounds the slab energy by four one-separated fixed-branch/fixed-scale
+classes with explicit perturbation and color losses.
+`exists_classicalTypeIIClassPattern` additionally converts every inhabited
+Type-II class to the exact closed-support paper `LargeValuePattern` using the
+native normalized sharp-mollifier coefficients and proves exact energy
+preservation; `exists_classicalTypeIIClassPattern_native` discharges its
+coefficient majorant from the proved divisor bound.
+`exists_classicalTypeIWeightedClassPattern` now supplies the exact normalized
+weighted pre-deweighting pattern with energy equality.
+`exists_large_typeISourceSmoothBlock_of_sharp_large` uses the exact source
+two-block identity to select a block of size at least half the sharp sum, and
+`exists_typeISourceSmoothBlock_energy_classes` retains the energy quantity by
+coloring the indexed family into four fixed-block, one-separated classes.
+`exists_classicalTypeISourceSmoothBlock_energy_classes` specializes this
+construction to a genuine Type-I branch/scale fiber.
+`exists_large_coefficientOne_shift_of_typeISourceSmoothBlock` packages the
+exact Fourier identity with a positive block-specific `L¹` majorant and
+extracts a literal coefficient-one sum; its chosen-block corollary applies
+this pointwise to the deterministic two-block selection.
+`integral_norm_fourier_schwartz_compl_Icc_le` proves an explicit order-two
+Schwartz Fourier tail, and `norm_typeILogWeight_fourier_tail_integral_le_half`
+combines it with the active-sum cardinality bound. Thus
+`typeISourceFourierRadius = max 1 (4 * card * seminorm / V)` works uniformly
+for every original ordinate. The resulting deterministic ordinate has a
+proved `2πR` displacement bound, while
+`unitBinFinset_perturbation_card_le_natCeil` and
+`exists_separated_explicitTypeISourceFourier_energy_classes` retain the full
+indexed energy, normalize its enlarged tolerance, and unconditionally produce
+four one-separated coefficient-one classes. The remaining Type-I edge is
+source-scale/subpower control of this radius and the block Fourier `L¹` loss;
+height-pattern packaging, the corresponding `LV*` use, and asymptotic assembly
+then remain.
+
+The source-faithful sharp route now removes the artificial endpoint issue.
+`dirichletPoly_classicalZetaLongLineCoeff_eq_active_sum` identifies the exact
+interval `Ioc N (min (2*N) A)`, and a fixed bump equal to one on every dyadic
+log interval gives
+`dirichletPoly_classicalZetaLongLineCoeff_fourierDeweight`. Its `L¹` loss
+depends only on the fixed line `σ`, while
+`integral_norm_fourier_schwartz_compl_Icc_le_order` gives arbitrary-order
+tail decay. `norm_classicalTypeI_fourier_tail_integral_le_order` includes the
+physical scale and active cardinality, and
+`exists_bounded_coefficientOne_shift_of_classicalTypeI` turns the resulting
+numerical tail inequality into a bounded coefficient-one witness. The
+indexed theorem `exists_classicalTypeI_boundedOrdinate_family` now selects all
+of these witnesses simultaneously and proves the perturbation/tolerance
+energy transfer without dropping an index. The canonical positive-real root
+`classicalTypeIFourierRadius` makes that numerical premise automatic for every
+order greater than one; its single-ordinate and indexed-family corollaries no
+longer ask a caller for a tail proof.
+`exists_separated_classicalTypeI_explicitFourier_energy_classes` composes the
+existing occupancy and energy-coloring machinery and produces four
+one-separated coefficient-one families with no dropped indices. The
+order-selection theorem `classicalTypeIFourierRadius_le_rpow_of_base_growth`
+already converts any `T^α` bound for the defining base, together with
+`α ≤ δ(k-1)`, into the desired `T^δ` radius. The final epsilon absorption is
+now complete: `eventually_classicalTypeIFourier_clog_loss_le_rpow` absorbs the
+fixed seminorm and `clog`, while
+`exists_order_eventually_classicalTypeIFourierRadius_sharpCutoff_le_rpow`
+chooses one order and proves the uniform source-level radius bound. The next
+task is to propagate the source height interval through each perturbation and
+apply the `LV*` estimate. The target constructor is already kernel-checked:
+`indexedClassicalTypeICoefficientOnePattern` packages the exact active support
+and preserves indexed energy.
 
 ## Phase 6: release integration
 

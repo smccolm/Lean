@@ -46,6 +46,180 @@ theorem detectorPatternNormalization_pos (σ T : ℝ) (N : ℕ) :
     0 < detectorPatternNormalization σ T N := by
   exact lt_of_lt_of_le zero_lt_one (le_max_left _ _)
 
+/-- Uniform epsilon-power control of the scaled detector coefficients on a
+dyadic block.  This consumes the native kernel proof of the classical divisor
+bound, rather than assuming a coefficient estimate. -/
+theorem exists_scaledDetectorLineCoeff_bound
+    (σ ε : ℝ) (hσ : 0 ≤ σ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (T : ℝ) (N n : ℕ), 1 ≤ T → 0 < N →
+        n ∈ Finset.Icc N (2 * N) →
+        ‖scaledDetectorLineCoeff σ T N n‖ ≤
+          C * ((2 * N : ℕ) : ℝ) ^ ε := by
+  obtain ⟨C, hC, hCoeff⟩ :=
+    uniformDetectorCoeffBound_of_divisorCount divisorCountBound_native ε hε
+  refine ⟨C, hC, ?_⟩
+  intro T N n hT hN hn
+  have hnBounds := Finset.mem_Icc.mp hn
+  have hnPos : 0 < n := hN.trans_le hnBounds.1
+  have hNPow : (N : ℝ) ^ σ ≤ (n : ℝ) ^ σ := by
+    exact Real.rpow_le_rpow (Nat.cast_nonneg N) (by exact_mod_cast hnBounds.1) hσ
+  have hnPowPos : 0 < (n : ℝ) ^ σ :=
+    Real.rpow_pos_of_pos (by exact_mod_cast hnPos) σ
+  have hratio : (N : ℝ) ^ σ * (n : ℝ) ^ (-σ) ≤ 1 := by
+    rw [Real.rpow_neg (by exact_mod_cast hnPos.le), ← div_eq_mul_inv,
+      div_le_one₀ hnPowPos]
+    exact hNPow
+  have hdetector := hCoeff n T hnPos hT
+  have hnUpper : (n : ℝ) ^ ε ≤ ((2 * N : ℕ) : ℝ) ^ ε := by
+    exact Real.rpow_le_rpow (Nat.cast_nonneg n) (by exact_mod_cast hnBounds.2) hε.le
+  unfold scaledDetectorLineCoeff detectorLineCoeffs
+  rw [norm_mul, Complex.norm_real, Real.norm_eq_abs,
+    abs_of_nonneg (Real.rpow_nonneg (Nat.cast_nonneg N) σ), norm_mul,
+    Complex.norm_natCast_cpow_of_pos hnPos]
+  simp only [Complex.ofReal_re, neg_re]
+  calc
+    (N : ℝ) ^ σ * (‖detectorCoeff n T‖ * (n : ℝ) ^ (-σ)) =
+        ((N : ℝ) ^ σ * (n : ℝ) ^ (-σ)) * ‖detectorCoeff n T‖ := by ring
+    _ ≤ 1 * ‖detectorCoeff n T‖ := by
+      exact mul_le_mul_of_nonneg_right hratio (norm_nonneg _)
+    _ ≤ C * (n : ℝ) ^ ε := by simpa using hdetector
+    _ ≤ C * ((2 * N : ℕ) : ℝ) ^ ε :=
+      mul_le_mul_of_nonneg_left hnUpper hC.le
+
+/-- The exact coefficient normalizer has only an epsilon-power loss, uniformly
+in the detector height and dyadic scale. -/
+theorem exists_detectorPatternNormalization_bound
+    (σ ε : ℝ) (hσ : 0 ≤ σ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (T : ℝ) (N : ℕ), 1 ≤ T → 0 < N →
+        detectorPatternNormalization σ T N ≤
+          max 1 (C * ((2 * N : ℕ) : ℝ) ^ ε) := by
+  obtain ⟨C, hC, hscaled⟩ :=
+    exists_scaledDetectorLineCoeff_bound σ ε hσ hε
+  refine ⟨C, hC, ?_⟩
+  intro T N hT hN
+  unfold detectorPatternNormalization
+  apply max_le
+  · exact le_max_left _ _
+  · rw [Finset.sup'_le_iff]
+    intro n hn
+    exact (hscaled T N n hT hN hn).trans (le_max_right _ _)
+
+/-- Standard subpower form of the normalizer estimate. -/
+theorem exists_detectorPatternNormalization_le_const_mul_rpow
+    (σ ε : ℝ) (hσ : 0 ≤ σ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (T : ℝ) (N : ℕ), 1 ≤ T → 1 < N →
+        detectorPatternNormalization σ T N ≤ C * (N : ℝ) ^ ε := by
+  obtain ⟨D, hD, hnorm⟩ :=
+    exists_detectorPatternNormalization_bound σ ε hσ hε
+  let C := max 1 (D * (2 : ℝ) ^ ε)
+  refine ⟨C, le_max_left _ _, ?_⟩
+  intro T N hT hN
+  have hNOne : (1 : ℝ) ≤ N := by exact_mod_cast hN.le
+  have hNPowOne : (1 : ℝ) ≤ (N : ℝ) ^ ε :=
+    Real.one_le_rpow hNOne hε.le
+  apply (hnorm T N hT (by omega)).trans
+  apply max_le
+  · calc
+      (1 : ℝ) = 1 * 1 := by ring
+      _ ≤ C * (N : ℝ) ^ ε := mul_le_mul (le_max_left _ _)
+        hNPowOne zero_le_one (by positivity)
+  · rw [show ((2 * N : ℕ) : ℝ) = (2 : ℝ) * (N : ℝ) by norm_num,
+      Real.mul_rpow (by norm_num) (Nat.cast_nonneg N)]
+    calc
+      D * ((2 : ℝ) ^ ε * (N : ℝ) ^ ε) =
+          (D * (2 : ℝ) ^ ε) * (N : ℝ) ^ ε := by ring
+      _ ≤ C * (N : ℝ) ^ ε :=
+        mul_le_mul_of_nonneg_right (le_max_right _ _)
+          (Real.rpow_nonneg (Nat.cast_nonneg N) ε)
+
+/-- An epsilon-power upper bound for the normalizer gives the corresponding
+explicit lower bound for the normalized detector threshold. -/
+theorem detectorPatternThreshold_lower_of_normalization_le
+    (σ T C ε : ℝ) (N : ℕ) (hT : 1 < T)
+    (hnorm : detectorPatternNormalization σ T N ≤ C * (N : ℝ) ^ ε) :
+    ((N : ℝ) ^ σ / (C * (N : ℝ) ^ ε)) * (1 / (4 * Real.log T)) ≤
+      ((N : ℝ) ^ σ / detectorPatternNormalization σ T N) *
+        (1 / (4 * Real.log T)) := by
+  have hthreshold : 0 ≤ 1 / (4 * Real.log T) := by
+    have : 0 < Real.log T := Real.log_pos hT
+    positivity
+  apply mul_le_mul_of_nonneg_right _ hthreshold
+  exact div_le_div_of_nonneg_left
+    (Real.rpow_nonneg (Nat.cast_nonneg N) σ)
+    (detectorPatternNormalization_pos σ T N)
+    hnorm
+
+/-- The lower admissible detector-scale relation absorbs the logarithmic
+height loss into an arbitrary positive power of the dyadic scale. -/
+theorem log_height_le_admissible_scale_rpow
+    (η T : ℝ) (N : ℕ) (hη : 0 < η) (hT : 1 ≤ T) (hN : 0 < N)
+    (hscale : T ^ (1 / 100 : ℝ) ≤ (N : ℝ)) :
+    Real.log T ≤ (η / 100)⁻¹ * (N : ℝ) ^ η := by
+  let q : ℝ := η / 100
+  have hq : 0 < q := div_pos hη (by norm_num)
+  have hTNonneg : 0 ≤ T := le_trans (by norm_num) hT
+  have hNNonneg : 0 ≤ (N : ℝ) := Nat.cast_nonneg N
+  have hpow : T ^ q ≤ (N : ℝ) ^ η := by
+    calc
+      T ^ q = (T ^ (1 / 100 : ℝ)) ^ η := by
+        rw [← Real.rpow_mul hTNonneg]
+        congr 1
+        dsimp [q]
+        ring
+      _ ≤ (N : ℝ) ^ η :=
+        Real.rpow_le_rpow (Real.rpow_nonneg hTNonneg _) hscale hη.le
+  calc
+    Real.log T ≤ T ^ q / q := Real.log_le_rpow_div hTNonneg hq
+    _ ≤ (N : ℝ) ^ η / q := div_le_div_of_nonneg_right hpow hq.le
+    _ = q⁻¹ * (N : ℝ) ^ η := by field_simp
+
+/-- Combined coefficient and logarithmic loss for the normalized Type-I
+threshold.  Both losses are explicit powers of the admissible dyadic scale. -/
+theorem detectorPatternThreshold_lower_admissible
+    (σ η T C : ℝ) (N : ℕ) (hη : 0 < η) (hT : 1 < T)
+    (hC : 0 < C) (hN : 0 < N)
+    (hscale : T ^ (1 / 100 : ℝ) ≤ (N : ℝ))
+    (hnorm : detectorPatternNormalization σ T N ≤ C * (N : ℝ) ^ η) :
+    ((N : ℝ) ^ σ / (C * (N : ℝ) ^ η)) *
+        (((η / 100) * (N : ℝ) ^ (-η)) / 4) ≤
+      ((N : ℝ) ^ σ / detectorPatternNormalization σ T N) *
+        (1 / (4 * Real.log T)) := by
+  let q : ℝ := η / 100
+  have hq : 0 < q := div_pos hη (by norm_num)
+  have hNReal : 0 < (N : ℝ) := by exact_mod_cast hN
+  have hLogPos : 0 < Real.log T := Real.log_pos hT
+  have hLogBound : Real.log T ≤ q⁻¹ * (N : ℝ) ^ η := by
+    simpa [q] using log_height_le_admissible_scale_rpow η T N hη hT.le hN hscale
+  have hMajorPos : 0 < q⁻¹ * (N : ℝ) ^ η := by positivity
+  have hInvLog : q * (N : ℝ) ^ (-η) ≤ 1 / Real.log T := by
+    calc
+      q * (N : ℝ) ^ (-η) = 1 / (q⁻¹ * (N : ℝ) ^ η) := by
+        rw [Real.rpow_neg hNReal.le]
+        field_simp
+      _ ≤ 1 / Real.log T := one_div_le_one_div_of_le hLogPos hLogBound
+  have hQuarter : (q * (N : ℝ) ^ (-η)) / 4 ≤
+      1 / (4 * Real.log T) := by
+    calc
+      (q * (N : ℝ) ^ (-η)) / 4 ≤ (1 / Real.log T) / 4 := by
+        exact div_le_div_of_nonneg_right hInvLog (by norm_num)
+      _ = 1 / (4 * Real.log T) := by field_simp
+  have hFactorNonneg : 0 ≤ (N : ℝ) ^ σ / (C * (N : ℝ) ^ η) := by
+    positivity
+  calc
+    ((N : ℝ) ^ σ / (C * (N : ℝ) ^ η)) *
+        (((η / 100) * (N : ℝ) ^ (-η)) / 4) =
+        ((N : ℝ) ^ σ / (C * (N : ℝ) ^ η)) *
+          ((q * (N : ℝ) ^ (-η)) / 4) := by rfl
+    _ ≤ ((N : ℝ) ^ σ / (C * (N : ℝ) ^ η)) *
+          (1 / (4 * Real.log T)) :=
+      mul_le_mul_of_nonneg_left hQuarter hFactorNonneg
+    _ ≤ ((N : ℝ) ^ σ / detectorPatternNormalization σ T N) *
+          (1 / (4 * Real.log T)) :=
+      detectorPatternThreshold_lower_of_normalization_le σ T C η N hT hnorm
+
 theorem normalizedDetectorPatternCoeff_norm_le_one
     (σ T : ℝ) (N n : ℕ) (hn : n ∈ Finset.Icc N (2 * N)) :
     ‖normalizedDetectorPatternCoeff σ T N n‖ ≤ 1 := by
@@ -88,8 +262,10 @@ theorem normalizedDetectorPattern_sum_eq
   unfold scaledDetectorLineCoeff
   rw [div_eq_mul_inv]
   push_cast
+  ring_nf
   unfold dirichletPhase
-  rw [mul_comm I (t : ℂ)]
+  congr 1
+  apply congrArg (Complex.cpow (n : ℂ))
   ring
 
 /-- Build an exact source `LargeValuePattern` from a finite one-separated set

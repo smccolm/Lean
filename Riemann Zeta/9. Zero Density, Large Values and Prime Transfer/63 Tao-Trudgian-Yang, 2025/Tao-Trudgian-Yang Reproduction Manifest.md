@@ -118,9 +118,9 @@ claim.
 
 The latest installed-scope verification ran on 19 September 2026 with
 `run_tao_trudgian_yang_build.bat --no-pause`, exited `0`, and wrote
-`logs/tao-trudgian-yang-build-20260919-180020-e928fa27.log` (SHA-256
-`2be7ccae02e38685280a3dcb9c63c9d20705b1416fdb4513f40ec253c1b716da`).
-It scanned 40 Lean files and audited 409 nonprivate target theorems plus five
+`logs/tao-trudgian-yang-build-20260919-220935-26fb4b92.log` (SHA-256
+`a005b958eb19973809b271f4bfb22b5cec494a65901a30e723b41ced0559e7ec`).
+It scanned 42 Lean files and audited 610 nonprivate target theorems plus five
 imported boundary declarations and reported no warnings.
 
 ## Future axiom gate

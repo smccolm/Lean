@@ -231,7 +231,8 @@ try {
             'Extension\TaoTrudgianYang2025\ZeroCountBridge.lean',
             'Extension\TaoTrudgianYang2025\ZeroDensityExponent.lean',
             'Extension\TaoTrudgianYang2025\ZeroEnergyMultiplicity.lean',
-            'Extension\TaoTrudgianYang2025\ZeroEnergyTypeI.lean'
+            'Extension\TaoTrudgianYang2025\ZeroEnergyTypeI.lean',
+            'Extension\TaoTrudgianYang2025\ZeroEnergyDichotomy.lean'
         )
         foreach ($relativePath in $leanPackageFiles) {
             Assert-ProjectFile -ProjectRoot $projectRoot -RelativePath $relativePath
