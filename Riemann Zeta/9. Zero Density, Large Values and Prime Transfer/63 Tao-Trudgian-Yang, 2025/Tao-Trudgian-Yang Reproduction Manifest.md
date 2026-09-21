@@ -1,5 +1,11 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+Current analytic progress: [Jutila physical-scale smoothing and uniform pattern bounds](#jutila-physical-scale-smoothing-and-uniform-pattern-bounds--current-checkpoint).
+The moments and full-domain clauses (i)--(ii) are proved; clauses (iii)--(ix) and the full goal remain open.
+Earlier checkpoint sections retain historical status and next-step notes;
+the frozen public contract is unchanged.
+
+
 ## Manifest status
 
 **Verified implementation baseline, 20 September 2026.** A unified Lean
@@ -3036,7 +3042,7 @@ No source pin, native file, archive, diagnostic gate or exclusion changed.
 The counterexample remains byte-preserved and the corrected powering/
 Heath–Brown chain is untouched. Terminal verification follows.
 
-### Current terminal verification: complete dyadic source assembly
+### Historical terminal verification: complete dyadic source assembly
 
 Both principal runner handles were polled to terminal completion.
 Both returned exit code 0; no stage remains running or failed.
@@ -3105,3 +3111,3041 @@ unconditional Add-est remain open. EPZAE-21/37 and the full
 EPZAE-00--41 goal stay active, not completed or blocked.
 Proposed owner-run commit:
 `Assemble truncated dyadic Atkinson source bounds`.
+
+## Actual height-dependent maximal Gram consumers
+
+The eight production modules are `FinitePrefixGram`,
+`AtkinsonPrefixVectors`, `AtkinsonMaximalGram`,
+`AtkinsonCoefficientEnergy`, `AtkinsonDyadicGramBudget`,
+`AtkinsonPacketGram`, `AtkinsonLocalMeanGram` and
+`AtkinsonGramPhysicalCutoff`. All 41 public theorems have named
+axiom audits; 24 regressions cover the real objects and final signatures.
+
+Let f(t,n) be the already proved actual source phase in radians,
+A(t,M,N) the actual raw phase-prefix maximum, and
+
+```text
+E(M,N) = sum_(i<N) |d(M+i)|²,
+Q(M,j;t,u) = sum_(i<j) exp(i [f(u,M+i)-f(t,M+i)]),
+B(M,N;t,u) = max_(0<=j<=N) |Q(M,j;t,u)|.
+```
+
+The coefficient is the actual d(n)(-1)^n. Its sign cancels in its
+squared norm. Each height t separately attains its maximum at j(t)≤N.
+The exact vector inner product is Q(M,min(j(t),j(u));t,u), not
+Q(M,N;t,u). Zero prefixes, unequal prefixes and both height orders
+are covered. The direct masking proof uses [M,M+j), with no appeal
+to the adjacent common-prefix theorem on (K,2K].
+
+`sum_atkinsonPhaseBlockMax_sq_le_selectedGram` first proves the
+inequality with these actual selected pairwise prefixes.
+`sum_atkinsonPhaseBlockMax_sq_le_gramMax` then proves, for every
+finite W,
+
+```text
+(sum_(t in W) A(t,M,N))² <= E(M,N) sum_(t,u in W) B(M,N;t,u).
+```
+
+No spacing or analytic Gram estimate is a premise.
+B(M,N;t,t)=N is proved exactly; B is symmetric and nonnegative.
+The separate `exists_atkinsonBlockCoefficientEnergy_le` theorem
+uses the native ordinary-divisor bound at ε/2 to prove, uniformly
+for 0<M and N≤M, E(M,N)≤Cε M^(1+ε).
+Its block-level consumer is also proved. This is an epsilon-power
+estimate, not a claimed M log³M bound.
+
+For J=clog(2,N), define the literal nonnegative budget
+
+```text
+Gamma(N,W) = J sum_(j<J)
+  (M^(-1/4))² E(M,M) sum_(t,u in W) B(M,M;t,u),  M=2^j.
+```
+
+The damped full-dyadic source majorant is bounded by the undamped
+sum U(t,N)=sum_(j<J) M^(-1/4) A(t,M,M).
+Finite Cauchy–Schwarz in j consumes the actual maximal Gram theorem:
+(sum_(t in W) U(t,N))²≤Gamma(N,W). The Gaussian is removed by an
+upper bound, not an identity. Gamma still uses literal E; the separate
+epsilon-energy theorem is substituted in the later numerical budget below.
+
+The source-cutoff maximum over W is derived, not supplied as a premise.
+For H≥1, G>0 and W contained in [H,2H], monotonicity of the actual
+ceiling cutoff proves
+
+```text
+max_(t in W) atkinsonSourceCutoff(t,G,log t)
+ <= atkinsonSourceCutoff(2H,G,log(2H))
+  = ceil(72H(log(2H)/G)²).
+```
+
+Only nonnegative phase/Gram majorants are enlarged; no stationary
+term is extended beyond its own source cutoff.
+
+`exists_atkinsonStationaryPacket_sq_le_physicalGram` consumes the
+complete actual stationary Bessel/divisor sum S(t,G,log t) and proves
+
+```text
+(sum_(t in W) |S(t,G,log t)|)²
+ <= Cδ G² H^(-1/2) Gamma(ceil(72H(log(2H)/G)²),W).
+```
+
+For every δ>0 its Cδ>0 and H0≥40000 precede H,G,W. The hypotheses
+are H0≤H, G>0, H≤t≤2H and t^δ≤G≤t^(1/2-δ) for each t in W.
+There is no fourth-root-width restriction for this stationary-only bound.
+
+The final two `exists_atkinsonLocalMeanExcessPacket_sq_le_physicalGram`
+theorems consume the actual local zeta integral
+I(t,G)=integral_(t-G)^(t+G)|zeta(1/2+iv)|² dv.
+They bound the square of the sum of max(0,I(t,G)-error) by the same
+physical Gamma expression with a uniform positive factor D.
+For δ,ε>0 the error is Cδ,ε(G log t+t^(1/4+ε)) and G≥t^(1/4)
+remains required. The `above_fourthRoot` version has error
+Cδ,κ G log t for κ>0 and G≥t^(1/4+κ). All constants and thresholds
+precede the physical parameters. The original local-source factor
+2 exp(1) is retained in the deduction and absorbed into D.
+
+ZMG is green for this finite maximal-prefix argument and its actual
+stationary/local-excess consumers. The continuation below proves
+uniform cancellation for every truncated Q(M,j;t,u), derives the full
+mean-value endpoint geometry at the physical cutoff and substitutes
+the arithmetic coefficient-energy bound. ZPC records those actual
+numerical consumers. ZGB retains separated-height summation and scale
+optimization as open. No full-block estimate is substituted for an
+unknown prefix.
+
+The raw maximum is still not identified with Ivić's endpoint-plus-integral
+expression. The source-form bridge, smaller-width stationary errors or
+a proved lower-value-range reduction, and the genuine critical twelfth
+moment remain open. EPZAE-21/37, every unconditional Add-est clause and
+the full EPZAE-00--41 goal remain OPEN; this checkpoint does not narrow
+their acceptance tests.
+
+Maintain all eight root imports, 41 named audits, 24 regressions and
+the exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`.
+Update that batch interface and its implementation as needed, and
+execute it and `run_lake_build.bat` after relevant changes.
+Preserve the Lemma 62 counterexample byte-for-byte and the proved
+independent ρ/k and ρ*/k witnesses and actual Heath–Brown application.
+Never restore false fifth-coordinate scaling or a third s-preserving
+witness. Keep the full goal active until all original completion tests pass.
+
+### Semantic audit: actual maximal-prefix Gram assembly
+
+The new finite duality consumes the native `phaseAlign`,
+`norm_sum_mul_sq_le` and `sum_norm_sq_sum_le_gram` results;
+no analytic theorem is assumed. Actual alternating coefficients and the
+radian source phase are identified with the raw phase sum in
+`atkinsonPhaseBlockSum_eq_masked`.
+`atkinsonMaskedPhaseVector_gram` proves the paired minimum-prefix
+identity on the target's actual zero-based interval, including empty
+prefixes. `atkinsonMaximizingPrefix_spec` supplies the attained
+prefix independently at each height. No measurable-selection claim
+is made or needed for the finite height family.
+
+The selected-prefix and maximal-prefix Gram consumers retain literal
+ordinary-divisor energy. The separate arithmetic-energy theorem uses
+the native pointwise divisor bound, not an assumed coefficient estimate.
+The physical packet budget currently retains the literal energy, so
+its proof is not described as consuming the separate epsilon-power
+energy theorem. Finite dyadic Cauchy–Schwarz, the proved undamped
+enlargement and source-cutoff monotonicity perform the actual assembly.
+
+The three final physical consumers above have no stationary-source,
+local-zeta-entry, summability or Gram inequality as a theorem parameter.
+Their scale H, actual heights t, common G, log t and source ceilings
+are linked in the same chain. The local-excess positive part is the
+actual integral minus the previously proved error, not a proxy for a
+zeta moment. Its comparison uses the source factor 2 exp(1), the real
+part bound and the actual stationary packet estimate. Width restrictions
+are explicit and unchanged.
+
+The 24 regressions cover generic zero-prefix masking; unequal prefixes
+1 and 3 with minimum 1; zero against nonzero prefix; conjugate reversal;
+zero and nonzero diagonal entries; maximal diagonal and zero-block
+values; actual maximizers including N=0; literal coefficient energies
+E(1,0)=0 and E(1,2)=5; the empty-height lower-value consumer; the
+epsilon-energy signature; undamped enlargement even at G=0; empty
+dyadic sums/budgets/packet cutoffs; the physical cutoff comparison;
+the literal local-excess definition; selected-prefix Gram type; and
+all three final physical consumer signatures.
+
+The focused semantic build completed 9093 jobs with exit code 0 and
+no Lean diagnostic. Initial proof-elaboration and two numerical-regression
+errors were repaired at source; no warning or linter suppression was
+introduced. All eight modules and 41 named public audits are in the
+root and exact backing PowerShell inventory. No dependency pin, native
+file, source archive, exclusion or diagnostic gate changed in this
+checkpoint. The preserved counterexample and corrected independent
+powering/Heath–Brown chain are untouched. Terminal verification follows.
+
+### Historical terminal verification: height-dependent maximal Gram consumers
+
+Both principal runner handles were polled to terminal completion.
+Both returned exit code 0; no stage remains running or failed.
+The full logs contain no Lean warning, error or tactic suggestion.
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, launched
+  from this folder: **LEAN VERIFICATION PASS**.
+  Log: `logs/tao-trudgian-yang-build-20260920-224613-2e9aebf3.log`.
+  SHA256:
+  `d88ef341c53936e33ea3e4f0dfe1c3c7093a374313da398accfaffc82f8746b4`.
+  The runner checked 28 required files, 20 pinned sources, 12 frozen
+  ANTEDB sources, 250 Lean files in the integrity scan and all 239
+  package files in production coverage. Deterministic regeneration,
+  the 9093-job default build and semantic regression passed.
+  The transitive audit passed all 2575 declarations: 2570 discovered
+  target theorems and five imported boundary declarations.
+  Only permitted standard logical axioms occur.
+- `cmd /c run_lake_build.bat --no-pause`, launched from
+  `E:\Lean\Riemann Zeta`: **PASS**.
+  Log: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260920_224614.log`.
+  SHA256:
+  `487b28e3bbfb912b121c29c047921b4e05a0383467f1aedd905f0a1eb576bd86`.
+  JSON: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260920_224614.json`.
+  SHA256:
+  `c3dab61686ce336d83fd7ad5dfa2052cac057ee2110e98918ba54ec8051a0f64`.
+  All six stages have exit code 0, zero warnings, zero tactic-info
+  output, zero informational builds, zero linter failures and
+  `passed: true`; the manifest status is `PASS` with no failures.
+  The root build completed 8857 jobs. The audit passed 14290 discovered
+  nonprivate project theorems and the explicit 7636-entry public source
+  list. Coverage remains 301 root-graph modules plus two explicit
+  regressions, with no production exclusion or unclassified file.
+
+The unchanged foundation verifier is SHA256
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The current runs evaluate HEAD
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`
+with a dirty worktree. That is the actual run revision, not the
+preceding checkpoint's revision. No commit or push was made by this
+proof continuation; existing user changes were preserved.
+
+Mechanical checks found all eight root imports, eight exact backing
+PowerShell inventory entries, 41 named public audits and 24
+`HeightDependentPrefixGramRegression` examples. The path check was
+corrected to normalize Windows separators; no production-inventory
+entry was missing. All eight production source files were compared
+with their compiled contents, and all eleven target documents with
+their synchronized contents.
+
+The goal retains maintenance of the exact
+`run_tao_trudgian_yang_build.bat` interface and both principal
+evaluations. The architecture marks ZMG green only for finite
+height-dependent-prefix Gram assembly and the actual physical
+stationary/local-excess consumers. ZGB is explicitly open for numerical
+truncated phase-difference estimates and separated-height summation.
+The final physical budget retains literal divisor energy and is an
+undamped upper bound; the separate epsilon-energy result is not
+misreported as a consumed numerical budget estimate.
+
+All three mandatory repository-wide scans ran from `E:\Lean`.
+The placeholder and unsafe-proof scans returned 1 with no matches.
+The postulate-pattern scan returned 0 for existing comment prose and
+two rational data fields named `constant`; no mathematical postulate
+was found. Both canonical integrity gates passed.
+`git diff --check` returned 0; Git's LF-to-CRLF notices are not
+Lean diagnostics.
+
+The counterexample was rehashed after both runs and remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No Lean source changed after the evaluations. The corrected independent
+powering witnesses, actual Heath–Brown application and frozen public
+contracts are unchanged.
+
+The next analytic obligation is a uniform bound for the actual
+truncated phase-difference sums, with physical gap and full endpoint
+geometry proved at the enlarged cutoff, followed by separated-height
+summation. The source-form bridge, smaller-width source estimate or
+a proved lower-value reduction, critical twelfth moment and
+unconditional Add-est remain open. EPZAE-21/37 and the full
+EPZAE-00--41 goal stay active, not completed or blocked.
+Proposed owner-run commit:
+`Prove height-dependent maximal Gram source consumers`.
+
+## Uniform truncated phase cancellation and arithmetic gap packets
+
+Thirteen modules add 79 named public theorem audits and 30 regressions:
+`AtkinsonIndexPhase`, `AtkinsonIndexCurvature`,
+`AtkinsonIndexHeight`, `AtkinsonIndexScales`,
+`AtkinsonIndexBProcess`, `AtkinsonIndexFirstDerivative`,
+`AtkinsonPrefixCancellation`, `AtkinsonPrefixGapBound`,
+`AtkinsonGramCutoffGeometry`, `AtkinsonGapBudget`,
+`AtkinsonGapPacketConsumers`, `AtkinsonGapArithmetic` and
+`AtkinsonArithmeticGapPackets`.
+
+The first six adapt the inspected adjacent real-index proofs locally.
+The real phase restricts exactly to the already connected
+`atkinsonSourcePhase`; there is no new source-entry assumption or
+adjacent conditional moment import. For T,x>0 its first derivative is
+sqrt(2πT/x+π²), and its second derivative is
+-πT/[x² sqrt(2πT/x+π²)]. The height derivative of the positive
+curvature magnitude and two mean-value arguments derive the literal
+uniform increment and second-difference bounds.
+
+For ordered heights 0<u<t≤2u, M>0 and M+N+2≤u, put
+Δ=t-u, B=M+N+2, D=M+N+1 and
+
+```text
+sMinus(u,x) = sqrt(2*pi*u/x),
+sPlus(u,x)  = sqrt((2*pi+pi²)*2*u/x),
+lambda     = pi*Delta/(2*B²*sPlus(u,M)),
+Lambda     = pi*Delta/(M²*sMinus(u,B)),
+L          = pi*Delta/(D*sPlus(u,M)),
+U          = pi*Delta/(M*sMinus(u,D)).
+```
+
+Both curvature parameters are positive and are proved bounds for the
+actual phase differences. For every j≤N,
+
+```text
+|Q(M,j;t,u)| <= (N*Lambda/(2*pi)+2) *
+  (2*pi/sqrt(lambda)+2*(sqrt(lambda)/lambda+1)).
+```
+
+`norm_atkinsonPrefixGram_le_bProcess` applies the native B-process
+to the restricted actual second-difference bounds. Its full ambient
+M,N parameters are independent of j. The empty prefix is included.
+The same argument bounds the maximum over all j≤N.
+
+When U≤π, `norm_atkinsonPrefixGram_le_firstDerivative` proves
+|Q(M,j;t,u)|≤2π/L=2D sPlus(u,M)/Δ. The positive-slope orientation is
+the conjugate Gram entry; its exact conjugacy and decreasing unit
+increments are proved. The period-endpoint conditions are derived
+from the actual lower/upper slope scales, not assumed as a cancellation
+theorem.
+
+Let F(M,N;t,u)=`atkinsonPrefixGapMajorant M N t u`. On the diagonal
+F=N exactly. Off the diagonal, the larger height is placed first.
+F is the minimum of N and the B-process bound; when U≤π it also
+takes the minimum with the first-derivative bound. The triangle bound,
+both cancellation alternatives, symmetry and the bound for every
+actual truncated Gram entry are proved. F is a literal numerical
+expression, not a new name for the unevaluated phase maximum.
+
+The required endpoint geometry is now derived at the physical cutoff.
+For δ>0, eventually and uniformly for H^δ≤G,
+
+```text
+2*atkinsonSourceCutoff(2H,G,log(2H))+2 <= H.
+```
+
+The proof uses (2H)^(δ/2)≤H^δ for H≥2 and the earlier source-ceiling
+smallness theorem at exponent δ/2. Therefore every M=2^j with
+j<clog(2,atkinsonSourceCutoff(2H,G,log(2H))) has
+M+M+2≤H. If t,u belong to [H,2H], the positivity and dyadic height
+conditions also follow. No free endpoint or curvature hypothesis
+remains in the final physical consumer.
+
+`exists_atkinsonPhysicalGramBudget_le_gapBudget` replaces every
+actual Gram maximum by F. It derives H^δ≤G from any member of a
+nonempty actual packet satisfying t^δ≤G; the empty packet is proved
+separately. No artificial nonemptiness or extra width assumption is
+introduced into the source theorem.
+
+The next arithmetic step consumes the already proved ordinary-divisor
+energy bound, rather than merely citing it nearby. For η>0,
+`exists_atkinsonPhysicalGapBudget_le_arithmetic` replaces the
+coefficient-energy sum in every block. The identity
+(M^(-1/4))² M^(1+η)=M^(1/2+η) supplies the exact final weight.
+Define the fully numerical budget, J=clog(2,N),
+
+```text
+Psi(eta,N,W) = J sum_(j<J)
+  M^(1/2+eta) sum_(t,u in W) F(M,M;t,u),  M=2^j.
+```
+
+`exists_atkinsonStationaryPacket_sq_le_arithmeticGap` proves
+
+```text
+(sum_(t in W) |S(t,G,log t)|)²
+ <= C_(delta,eta) G² H^(-1/2) Psi(eta,ceil(72H(log(2H)/G)²),W).
+```
+
+Its C>0 and H0≥40000 precede H,G,W. It consumes the actual complete
+stationary Bessel/divisor series, with H0≤H, G>0, H≤t≤2H and
+t^δ≤G≤t^(1/2-δ) for every t in W. It has no fourth-root-width
+restriction and no assumed analytic estimate.
+
+The two `exists_atkinsonLocalMeanExcessPacket_sq_le_arithmeticGap`
+consumers prove the analogous bound for the square of the sum of
+max(0,I(t,G)-error), with I the actual local zeta-square integral.
+The error remains Cδ,ε(G log t+t^(1/4+ε)) for G≥t^(1/4), or
+Cδ,κ G log t for G≥t^(1/4+κ). Their constants and threshold precede
+the physical parameters, and the source factor 2 exp(1) remains
+accounted for through the earlier actual-source deduction.
+The preceding three `physicalGap` consumers, retaining literal E,
+are also proved and audited.
+
+ZPC is green for these uniform truncated estimates, derived physical
+geometry and actual numerical source consumers. ZGB remains OPEN:
+sum the explicit gap expressions using physical height separation,
+simplify their radical scales uniformly and optimize the resulting
+height/index ranges. Psi's finite double sum does not itself estimate
+separated-height occupancy. No such summation theorem is a premise
+of the current result or is silently claimed as proved.
+
+The source-form bridge, smaller-width stationary error or a proved
+lower-value reduction, genuine critical twelfth moment and every
+unconditional Add-est clause remain open. EPZAE-21/37 and the full
+EPZAE-00--41 completion contract are unchanged.
+
+Maintain all thirteen root imports, 79 named audits, 30 regressions
+and the exact PowerShell inventory behind
+`run_tao_trudgian_yang_build.bat`. Update the batch interface and
+its implementation as needed, and run it and `run_lake_build.bat`
+after relevant changes. Preserve the original Lemma 62 counterexample
+byte-for-byte and the proved independent ρ/k and ρ*/k witnesses and
+actual Heath–Brown application. Never restore false fifth-coordinate
+scaling or a third s-preserving witness. Keep the full goal active.
+
+### Semantic audit: actual truncated cancellation and numerical packets
+
+The real-index phase is definitionally the already connected natural
+source phase at integral indices; its exact derivative proof is local.
+The six adapted modules use only current native/Mathlib foundations,
+not the adjacent conditional twelfth-moment package.
+
+`norm_atkinsonPrefixGram_le_bProcess` uses one ambient pair of
+curvature bounds for M,N, restricts their actual unit second differences
+to j-1, and proves the inequality for all j≤N including zero.
+`norm_atkinsonPrefixGram_le_firstDerivative` does the analogous
+restriction for actual decreasing unit increments. The orientation
+change is a proved conjugation, not a discarded sign convention.
+No desired cancellation bound is a public theorem premise.
+
+`atkinsonPrefixGramMax_le_gap` combines those actual results with
+the exact diagonal and triangle bound. `atkinsonPrefixGapMajorant`
+unfolds to radicals, the physical gap, an explicit period condition,
+minima and the diagonal length; it contains no phase sum.
+
+`exists_atkinsonPhysicalCutoff_prefix_geometry` derives the full
+two-extra-endpoint range at the real ceiling cutoff. The subsequent
+physical consumer derives H^δ≤G from an actual packet member, or
+proves the empty case. Thus no scale, geometry, nonemptiness or
+coefficient estimate is left as an unproved physical-entry parameter.
+
+The three `physicalGap` packet consumers compose the actual previous
+source with these estimates. The three `arithmeticGap` consumers
+further consume `exists_atkinsonBlockCoefficientEnergy_le` through
+the proved budget inequality. Their explicit eta-weighted budget
+contains neither unevaluated phase sums nor coefficient-energy sums.
+Source errors, power-width hypotheses and the fourth-root-width
+restrictions on the local-mean error are unchanged. No separated-height
+sum or critical moment is assumed or claimed.
+
+Thirty regressions cover the actual real/natural phase equality;
+the real-index derivative and curvature signs; positive curvature
+parameters at heights 100,101; empty, proper and maximal prefixes;
+the explicit first-derivative branch; both height orders and diagonal;
+the doubled-height exponent conversion; the quarter-power arithmetic
+identity; empty and zero-cutoff budgets; the full endpoint geometry;
+physical Gram and arithmetic budget signatures; and all six actual
+physical packet consumer signatures.
+
+An initial numerical normalization error in one regression was fixed.
+The resulting unnecessary sequential-focus linter diagnostic was then
+fixed at its cause, without suppression. Focused clean verification and
+both principal terminal evaluations must be recorded below; the earlier
+warning-producing attempt is not counted as a clean pass.
+
+All thirteen modules, 79 named public audits and 30 regressions are
+in the default root and the exact backing PowerShell inventory.
+No source pin, native source, archived paper, production exclusion or
+diagnostic gate was changed. The preserved counterexample and proved
+independent powering/Heath–Brown chain are untouched.
+
+### Historical terminal verification: truncated cancellation and numerical packets
+
+Both principal runner handles were polled to terminal completion.
+Both returned exit code 0; no stage remains running or failed.
+The full logs contain no Lean warning, error or tactic suggestion.
+The final focused semantic build also returned exit code 0 for 9106
+jobs with no Lean diagnostic, after the regression normalization and
+sequential-focus issue were fixed at source.
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, launched
+  from this folder: **LEAN VERIFICATION PASS**.
+  Log: `logs/tao-trudgian-yang-build-20260920-231544-e70cb56f.log`.
+  SHA256:
+  `de4c5ad4e80289d300a3886923148e0a167540695b34cbf0c3b6b2f75e6898a9`.
+  The runner checked 28 required files, 20 pinned sources, 12 frozen
+  ANTEDB sources, 263 Lean files in the integrity scan and all 252
+  package files in production coverage. Deterministic regeneration,
+  the 9106-job default build and semantic regression passed.
+  The transitive audit passed all 2704 declarations: 2699 discovered
+  target theorems and five imported boundary declarations.
+  Only permitted standard logical axioms occur.
+- `cmd /c run_lake_build.bat --no-pause`, launched from
+  `E:\Lean\Riemann Zeta`: **PASS**.
+  Log: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260920_231545.log`.
+  SHA256:
+  `e5ff81e138f4481fc8da165b77435b85f3202c47ebad3d59e37496099307d9a1`.
+  JSON: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260920_231545.json`.
+  SHA256:
+  `a293340f1b138c9ec57eca4964265d29e3ec05535600e282312bc8c65cc6d766`.
+  All six stages have exit code 0, zero warnings, zero tactic-info
+  output, zero informational builds, zero linter failures and
+  `passed: true`. The manifest status is `PASS` with no failures.
+  The root build completed 8857 jobs. The audit passed 14290 discovered
+  nonprivate project theorems and the explicit 7636-entry public source
+  list. Coverage remains 301 root-graph modules plus two explicit
+  regressions, with no production exclusion or unclassified file.
+
+The unchanged foundation verifier is SHA256
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both current runs evaluate HEAD
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`
+with a dirty worktree. No commit or push was made by this continuation;
+existing user changes were preserved.
+
+Mechanical checks found all thirteen root imports, thirteen exact
+backing PowerShell inventory entries, 79 named public audits and 30
+`TruncatedPhaseCancellationRegression` examples. All thirteen
+production source files were compared with their compiled contents.
+All eleven target documents were compared with their synchronized
+contents. The exact batch interface and both principal evaluations
+remain requirements in the goal.
+
+The architecture marks ZPC green only for uniform truncated cancellation,
+the derived physical endpoint geometry, consumed divisor-energy estimate
+and actual numerical packet consumers. The eta-weighted budget still
+contains a finite double sum over actual height gaps. ZGB remains open
+for its separated-height summation and scale optimization; the finite
+sum is not misreported as a completed spacing theorem.
+
+All three mandatory repository-wide scans ran from `E:\Lean`.
+The placeholder and unsafe-proof scans returned 1 with no matches.
+The postulate-pattern scan returned 0 for existing comment prose and
+two rational data fields named `constant`; no mathematical postulate
+was found. Both canonical integrity gates passed.
+`git diff --check` returned 0; Git's LF-to-CRLF notices are not
+Lean diagnostics.
+
+The counterexample was rehashed after both runs and remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No Lean source changed after these evaluations. The corrected independent
+powering witnesses, actual Heath–Brown application and frozen public
+contracts are unchanged.
+
+The next analytic obligation is separated-height summation of the
+explicit B-process / reciprocal-gap expressions and uniform scale
+simplification. Native unit-annulus occupancy and reciprocal-distance
+harmonic estimates were inspected as available inputs, not treated as
+an already proved bound for the present kernel. The source-form bridge,
+smaller-width stationary estimate or a proved lower-value reduction,
+genuine twelfth moment and unconditional Add-est remain open.
+EPZAE-21/37 and the complete EPZAE-00--41 goal stay active, not completed
+or blocked. Proposed owner-run commit:
+`Prove truncated Atkinson cancellation and numerical packet bounds`.
+
+## Historical checkpoint: separated near-height cancellation
+
+EPZAE-21 now consumes the actual physical separation `IsSeparated G W`.
+For every positive dyadic block `M` and heights in `[H,2H]`, the
+half-period condition is derived whenever `0 < |t-u| ≤ sqrt(H*M)`.
+The literal numerical majorant already used by the source satisfies
+`F(M;t,u) ≤ 60*sqrt(H*M)/|t-u|`; both height orders and the exact
+diagonal `F(M;t,t)=M` are retained.
+
+Rescaling the actual height set by `t/G` proves unit separation.
+The native reciprocal-distance shell estimate is then applied, giving
+the near-row bound
+`M + 120*sqrt(H*M)/G * harmonic(ceil(sqrt(H*M)/G))`.
+The remaining row is exactly the sum over `sqrt(H*M) < |u-t|`;
+no near pair, diagonal, common-prefix assumption, or unproved packing
+hypothesis is concealed in that remainder.
+
+Four new production modules are root-reachable and included in the
+exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`AtkinsonNearGap`, `AtkinsonSeparatedReciprocal`,
+`AtkinsonNearGapBudget`, and `AtkinsonSeparatedNearPackets`.
+They add 17 named theorem audits and 14 semantic regressions, preserving
+all previous imports, audits and regressions.
+
+The three public `exists_atkinson*Packet_sq_le_separatedNear` consumers
+use the actual stationary sum or actual local mean, with the same
+source ceiling `N=ceil(72*H*(log(2H)/G)^2)`, dyadic weights
+`M^(1/2+η)`, actual divisor-energy estimate, and physical width `G`.
+Constants and thresholds remain before the heights and finite sets.
+Local-mean errors and fourth-root/above-fourth-root width restrictions
+are unchanged. This is an actual-source consumer of the near estimate,
+not a proof of the full source-form or twelfth-moment theorem.
+
+ZNH is the completed near-height substep. ZGB remains OPEN for the
+far-height B-process summation, height localization and scale
+optimization. ZAT, ZTM, unconditional Add-est, EPZAE-21/37 and the full
+EPZAE-00–41 goal remain OPEN. Continue those obligations; do not replace
+the full goal with this checkpoint.
+
+Preserve `EnergyPoweringObstruction.lean` byte-for-byte, the corrected
+independent ρ/k and ρ*/k witnesses, their independent fifth coordinates,
+and the actual Heath–Brown application. Never restore the false
+s-scaling or third s-preserving witness. Maintain and update
+`run_tao_trudgian_yang_build.bat` and its backing implementation as
+needed, and evaluate it and `run_lake_build.bat` after relevant changes.
+The Reproduction Manifest separates terminal integrity evidence from
+the mathematical scope just described.
+
+The new physical budget is `atkinsonSeparatedGapBudget η H G N W`.
+Writing `J=clog 2 N`, `M=2^j`, and `R_M=sqrt(H*M)`, it is
+
+```text
+J * sum_{j<J} M^(1/2+η) *
+  (card(W) * (M + 120*R_M/G * harmonic(ceil(R_M/G)))
+   + sum_{t in W} sum_{u in W, R_M < |u-t|} F(M;t,u)).
+```
+
+Semantic dependency check: `atkinson_near_half_period` derives the
+increment restriction from the physical gap and the actual radical
+slopes. `atkinsonPrefixGapMajorant_le_near` uses that result and the
+proved first-derivative alternative of the existing majorant.
+`atkinson_sum_inv_gap_le_harmonic_ceil` uses the actual scaled finite
+set and native `sum_inv_distance_near_le_harmonic`.
+`atkinsonArithmeticGapBudget_le_separated` substitutes the resulting
+row estimate into every dyadic block. The three final packet theorems
+explicitly consume the previous arithmetic source theorems and that
+budget inequality. No phase/cancellation or energy hypothesis is added;
+the only new physical premise is `IsSeparated G W`.
+
+The exact public consumers are
+`exists_atkinsonStationaryPacket_sq_le_separatedNear`,
+`exists_atkinsonLocalMeanExcessPacket_sq_le_separatedNear`, and
+`exists_atkinsonLocalMeanExcessPacket_sq_le_separatedNear_above_fourthRoot`.
+Their right sides keep `G^2*H^(-1/2)` times the displayed budget.
+The local-mean versions retain respectively the error
+`C*(G*log(t)+t^(1/4+ε))` with `t^(1/4)≤G`, and `C*G*log(t)`
+with `t^(1/4+κ)≤G`. Both still require the original power-width range.
+
+Next acceptance obligation: estimate the filtered far-height sums from
+the actual truncated B-process scales, localize the height sets with
+proved covering/cardinality control, and carry the optimized scales
+through the actual source consumer. The divisor estimate here is the
+proved epsilon-power bound, not a newly claimed sharp logarithmic
+divisor-square asymptotic. Smaller-width source entry and genuine
+twelfth-moment assembly remain separate obligations.
+
+### Historical terminal verification: separated near-height cancellation
+
+Verified on the dirty working tree at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`, Lean 4.30.0.
+No commit or push was made. The preceding checkpoint's logs remain
+historical evidence, not the verification record for these four modules.
+
+Target command, from this project folder:
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: LEAN VERIFICATION PASS`.
+- Log: `logs/tao-trudgian-yang-build-20260920-233931-ef9e4ddf.log`.
+- Final SHA256:
+  `bf552b9310c9744e642b2876477a955cdc51061577ea970a1315966bc6e4ed76`.
+- 9,110 default-build jobs; semantic regression PASS.
+- 267 Lean integrity-scan files; exact package coverage 256 Lean files.
+- 28 required project files, 20 pinned source files and 12 frozen
+  ANTEDB files verified; deterministic certificate regeneration PASS.
+- Exhaustive audit: 2,734 discovered nonprivate target theorems and
+  five imported contracts, 2,739 total declarations.
+- All 17 newly named public theorem audits printed only the permitted
+  standard logical dependencies. No project axiom or admitted proof
+  dependency was found. No Lean warning or tactic/linter diagnostic.
+- `SeparatedNearGapRegression` contains 14 new tests, including the
+  half-period boundary, both height orders, the exact diagonal,
+  empty/singleton cases, real physical rescaling, reciprocal sums,
+  the budget inequality and all three exact source-consumer types.
+
+Foundation command, from `E:/Lean/Riemann Zeta`:
+`cmd /c run_lake_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: PASS`.
+- Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260920_233932.log`.
+- Final log SHA256:
+  `79e8523550a6b6194690b64bd66e075587715b7af9143866812cdd93302c93f4`.
+- JSON: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260920_233932.json`.
+- JSON SHA256:
+  `58aa6994922117fe94b8a0e3710be9706e6d565ea7ebe2c837bdc742377b3f85`.
+- JSON status PASS and empty failures; all six stages have exit code 0,
+  warnings 0, tactic-info 0, informational-builds 0, linter-failures 0
+  and `passed=true`.
+- 8,857 build jobs; 14,290 discovered nonprivate project theorems and
+  the 7,636-entry explicit public source list audited.
+- Import classification: 301 root-graph modules, two explicit
+  regressions, zero excluded and zero unclassified.
+- Canonical verifier SHA256 unchanged:
+  `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Both process handles reached completion; neither remained running at
+handoff. No Lean source, import, audit or runner change was made after
+these terminal evaluations. Documentation-only evidence was appended
+afterward.
+
+Repository-wide three-pattern checks: placeholder and unsafe-bypass
+searches returned no matches; the postulate-pattern matches were
+reviewed as explanatory comments and the two pre-existing rational
+`constant : ℚ` data fields, not mathematical postulates.
+`git diff --check` passed; Git's LF/CRLF conversion notices are not Lean
+diagnostics. All eleven target documentation files were synchronized.
+
+`EnergyPoweringObstruction.lean` SHA256 after both runners:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The counterexample and corrected independent powering/Heath–Brown
+application were not changed.
+
+Semantic verdict: the actual truncated majorant's near-height sum is
+proved at the physical separation scale, and the actual source
+consumers use it. The remaining `atkinsonFarGapRow` is an explicit
+filtered far-height sum, not a proved cancellation estimate.
+Far-height B-process simplification/summation, localization, optimized
+scale absorption, smaller-width source entry, the genuine twelfth
+moment and unconditional Add-est remain OPEN. The full goal remains
+active, neither complete nor blocked.
+
+Proposed owner-run commit:
+`Prove separated near-height cancellation for Atkinson packets`.
+
+## Closed near/far packet bounds — current checkpoint
+
+EPZAE-21 now has a proved estimate for every height pair in the actual
+truncated Gram budget. The preceding near-height result and physical
+`G`-separation remain intact. For `R_M=sqrt(H*M)`, the far-height
+bound is
+
+```text
+|t-u| >= R_M  ==>  F(M;t,u) <= 2000*sqrt(M*|t-u|/R_M).
+```
+
+The curvature proof includes the actual two extra discrete endpoints:
+`B=2*M+2 <= 4*M`. With `Q=M*sqrt(H*M)` and `d=|t-u|`,
+the lower curvature is at least `d/(320*Q)` and the upper curvature
+at most `4*d/Q`. For `d<=Q` the B-process gives the square-root
+bound; for `d>Q` the proved triangle bound supplies it. Both height
+orders are covered. No upper-gap restriction is smuggled into the result.
+
+For a height set in `[A,A+L]`, the far-row sum is now bounded by
+`2000*card(W)*sqrt(M*L/sqrt(H*M))`. This is the actual filtered far
+row, not a separately supplied estimate. Combining it with the
+near-height harmonic bound and bounding each dyadic power at the
+terminal index removes all phase, coefficient-energy, height-pair and
+dyadic sums.
+
+Write `R=card(W)`, `N=ceil(72*H*(log(2H)/G)^2)`,
+`J=clog 2 N`, and `K=harmonic(ceil(sqrt(H*N)/G))`.
+The closed budget `atkinsonPowerGapBudget η H G L N R` is
+
+```text
+J^2 * ( R*N^(3/2+η)
+      + 120*R*sqrt(H)/G * N^(1+η)*K
+      + 2000*R^2*H^(-1/4)*sqrt(L)*N^(3/4+η) ).
+```
+
+The six public consumers in `AtkinsonPowerGapPackets` apply this
+budget to the actual stationary sum and actual local-mean excesses,
+with the original factor `C*G^2*H^(-1/2)`. Three quantify the
+localization interval after their uniform constants; three derive
+`A=L=H` directly from the original height range `[H,2H]`.
+The source ceiling, divisor-energy epsilon, separation, original
+power-width range and local-mean error restrictions are unchanged.
+
+Seven new root-reachable production modules are installed:
+`AtkinsonFarCurvature`, `AtkinsonFarRadical`, `AtkinsonFarGap`,
+`AtkinsonLocalizedGapBudget`, `AtkinsonLocalizedPowers`,
+`AtkinsonPowerGapBudget` and `AtkinsonPowerGapPackets`.
+They add 30 named public theorem audits and 27 semantic regressions.
+All earlier near-height modules, 17 named audits and 14 regressions,
+and all previous proof work remain installed.
+
+ZFH is the completed far-height/closed-budget substep. ZGB remains
+OPEN for physical-cutoff optimization, a covering of the height set
+by suitably chosen intervals, and proved absorption/cardinality
+estimates. A supplied localization interval is not yet a constructed
+optimized covering. ZAT, ZTM, unconditional Add-est, EPZAE-21/37 and
+the full EPZAE-00–41 completion contract remain OPEN.
+
+Keep the full goal active. Continue toward the real requested
+endpoints, not a replacement goal consisting of this checkpoint.
+Preserve `EnergyPoweringObstruction.lean` byte-for-byte and the
+corrected independent ρ/k and ρ*/k witnesses, independent fifth
+coordinates and actual Heath–Brown application. Never restore false
+s-scaling or a third s-preserving witness. Maintain and update
+`run_tao_trudgian_yang_build.bat` and its backing implementation as
+needed; its exact inventory includes every new module. Run that
+interface and `run_lake_build.bat` after relevant changes.
+
+Semantic acceptance evidence:
+
+- `atkinson_far_lambda_bounds` derives the numerical curvature
+  inequalities from the actual source phase's slope bounds, including
+  the true `2*M+2` endpoint geometry.
+- `atkinsonPrefixGapMajorant_le_far` consumes those inequalities,
+  the literal B-process alternative and the proved triangle alternative.
+  It is about the same `F` already bounding every truncated prefix.
+- `atkinsonSeparatedGapBudget_le_localized` estimates the actual
+  filtered far rows using the physical diameter. It does not add an
+  assumed cancellation, coefficient or kernel estimate.
+- `atkinsonLocalizedGapBudget_le_power` uses exact exponent identities,
+  monotonicity of powers and harmonic numbers, and `2^j<N` from the
+  actual dyadic cutoff. The displayed `J^2` is retained explicitly.
+- `exists_atkinsonStationaryPacket_sq_le_localizedPowers` and both
+  `exists_atkinsonLocalMeanExcessPacket_sq_le_localizedPowers`
+  variants explicitly compose those inequalities with the real source
+  consumers. Their corresponding `physicalPowers` theorems derive
+  the global interval from `H<=t<=2*H`, rather than adding it as an
+  unproved premise.
+
+The local-mean error remains `C*(G*log(t)+t^(1/4+ε))` with
+`t^(1/4)<=G`; the above-fourth-root variant retains `C*G*log(t)`
+with `t^(1/4+κ)<=G`. All versions retain
+`t^δ<=G<=t^(1/2-δ)`. These results do not yet establish the full
+smaller-width source form, a lower-value reduction, or the critical
+twelfth moment. The coefficient-energy estimate remains the proved
+epsilon-power divisor bound, not a newly claimed logarithmic asymptotic.
+
+Next acceptance obligation: substitute the actual ceiling and bound the
+remaining explicit logarithmic factors with uniform parameter control,
+construct the localization covering at the chosen physical length,
+absorb the quadratic-cardinality term and derive the needed
+large-value/cardinality bound from an actual upstream value witness.
+Then complete the source-entry/lower-value obligations and genuine
+twelfth-moment consumer before advertising any unconditional Add-est
+conclusion. Terminal audit counts alone cannot close those obligations.
+
+### Historical terminal verification: far-height cancellation and closed powers
+
+Verified on 2026-09-21, dirty working tree at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`, Lean 4.30.0.
+No commit or push was made. The preceding near-height verification
+record is historical and remains available above.
+
+Target command, from this project folder:
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: LEAN VERIFICATION PASS`.
+- Log: `logs/tao-trudgian-yang-build-20260921-000627-920a86e7.log`.
+- Final SHA256:
+  `18af09f103ebd98a0b033a7b93d849c185bca8cb284ac631cdd6a1799c50c629`.
+- 9,117 default-build jobs; semantic regression PASS.
+- 274 Lean integrity-scan files; exact package coverage 263 Lean files.
+- 28 required project files, 20 pinned source files and 12 frozen
+  ANTEDB files verified; deterministic certificate regeneration PASS.
+- Exhaustive audit: 2,781 discovered nonprivate target theorems and
+  five imported contracts, 2,786 total declarations.
+- All 30 new named public theorem audits printed only the permitted
+  standard logical dependencies. No project axiom or admitted proof
+  dependency was found. No Lean warning, tactic or linter diagnostic.
+- `FarGapPowerRegression` adds 27 tests. They cover physical curvature
+  scales, both branches of the B-process/triangle split, both height
+  orders and the far-gap boundary, empty/singleton cases, exact
+  weighted powers, harmonic/index monotonicity, the closed budget and
+  all six complete localized/physical source-consumer types.
+- Incremental proof failures were repaired in the source: normalization
+  of rational factors, one redundant tactic, and explicit inference
+  of the physical width in the consumers. No theorem was weakened to
+  address an elaboration failure.
+
+Foundation command, from `E:/Lean/Riemann Zeta`:
+`cmd /c run_lake_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: PASS`.
+- Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_000628.log`.
+- Final log SHA256:
+  `44de081a2eb22da067a7afde178f220efdf93b157ba8e6444296c6b2176acc58`.
+- JSON: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_000628.json`.
+- JSON SHA256:
+  `14cf90476afc1ad67c208b42613c37eab6c312aa4edcd4a2c22f25de7569bb15`.
+- JSON status PASS and empty failures; all six stages have exit code 0,
+  warnings 0, tactic-info 0, informational-builds 0, linter-failures 0
+  and `passed=true`.
+- 8,857 build jobs; 14,290 discovered nonprivate project theorems and
+  the 7,636-entry explicit public source list audited.
+- Import classification: 301 root-graph modules, two explicit
+  regressions, zero excluded and zero unclassified.
+- Canonical verifier SHA256 unchanged:
+  `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Both process handles reached completion. No Lean source, import, audit
+or runner change was made after these terminal evaluations.
+Documentation-only evidence was appended afterward.
+
+Repository-wide three-pattern checks: placeholder and unsafe-bypass
+searches returned no matches. Postulate-pattern matches were reviewed
+as explanatory comments and the two pre-existing rational
+`constant : ℚ` data fields, not mathematical postulates.
+`git diff --check` passed; Git's LF/CRLF notices are not Lean
+diagnostics. All eleven target documentation files were synchronized;
+the main current sections consolidate the previous near-height status
+with the new far-height result.
+
+`EnergyPoweringObstruction.lean` SHA256 after both runners:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The original counterexample and the corrected independent powering
+witnesses and actual Heath–Brown application remain unchanged.
+
+Semantic verdict: actual far-height cancellation is proved and consumed
+by six source-packet theorems with the closed three-term budget above.
+No unevaluated phase, coefficient-energy, height-pair or dyadic sum
+remains on their right sides. The explicit source ceiling, clog factor
+and harmonic factor still need physical-scale optimization. Constructed
+local covering, absorption/cardinality, the remaining source-entry or
+lower-value reduction, the genuine twelfth moment and unconditional
+Add-est remain OPEN. ZFH is complete only for its named substep.
+ZGB/ZAT/ZTM, EPZAE-21/37 and the full goal remain active, not complete
+or blocked.
+
+Proposed owner-run commit:
+`Prove far-height cancellation and closed Atkinson packet bounds`.
+
+## Optimized physical packet bounds — current checkpoint
+
+EPZAE-21 now has a kernel-checked two-term physical estimate for the
+actual stationary source and actual local-mean excesses. Write
+`R=card(W)`. For every `δ>0` and `ν>0`, the stationary result is
+
+```text
+(sum_(t in W) |S(t,G,log t)|)^2
+ <= D_(δ,ν) H^ν * (R*H/G + R^2*sqrt(G*L)).
+```
+
+Here W is G-separated, each t is in [H,2H] with
+`t^δ <= G <= t^(1/2-δ)`, and W lies in [A,A+L].
+The positive constant and threshold H0≥40000 precede H,G,A,L,W.
+The actual complete stationary series is unchanged; no analytic
+estimate, cutoff bound, logarithmic bound or width conversion is
+assumed in this public consumer. Its stationary-only version has no
+fourth-root-width restriction.
+
+The two local-mean consumers bound the square of the sum of the
+actual `atkinsonLocalMeanExcess`, with the same two physical terms.
+Their source errors remain `C*(G*log(t)+t^(1/4+ε))` for
+`G>=t^(1/4)`, or `C*G*log(t)` for
+`G>=t^(1/4+κ)`, with ε>0 or κ>0. These parameters remain
+independent of ν, and all constants precede the physical parameters.
+Three global versions derive A=L=H directly from the height range.
+
+The preceding near/far cancellation and closed three-term budget
+remain proved and installed. The new scale calculation uses the
+literal cutoff `N=ceil(72*H*(log(2H)/G)^2)`, paying rounding via
+`N <= 74*H*log(2H)^2/G^2`. Existing physical cutoff geometry
+derives N≤H from the original lower width. For nonempty W, a member
+of W supplies both H^δ≤G and G≤sqrt(2H); the empty set is handled
+explicitly. Thus no additional physical-scale premise is introduced.
+
+The exact dyadic count and harmonic factor satisfy
+
+```text
+clog(2,N) <= (1/log(2)+1)*log(2H)
+harmonic(ceil(sqrt(H*N)/G)) <= 2*log(2H).
+```
+
+The three cutoff powers yield diagonal/near scale R H/G and far
+scale R² sqrt(G L). The intermediate upper bound is
+`148000*(1/log(2)+1)^2*H^η*log(2H)^5` times those two terms.
+Choosing η=ν/2 and proving eventual `log(2H)^5<=H^(ν/2)`
+absorbs every remaining logarithmic factor. This uses the existing
+epsilon-power divisor-energy bound, not a new sharp logarithmic
+divisor asymptotic.
+
+Five root-reachable modules are installed:
+`AtkinsonPhysicalLogs`, `AtkinsonCutoffPowers`,
+`AtkinsonPhysicalTerm`, `AtkinsonPhysicalBudget` and
+`AtkinsonPhysicalPackets`. All 19 new public theorems have named
+dependency audits; 22 new regressions cover their exact types and
+the zero-cutoff, unit-index and zero-localization boundary cases.
+Every prior module, audit and regression remains installed.
+
+ZPH is the completed physical-cutoff/logarithmic-optimization substep.
+ZGB remains OPEN for a constructed localization covering and
+absorption/cardinality bound from an actual upstream value witness.
+An arbitrary supplied [A,A+L] is not an optimized covering, and the
+two-term bound alone is not a large-value count. ZAT, ZTM, all
+unconditional Add-est clauses, EPZAE-21/37 and the full EPZAE-00–41
+completion contract remain OPEN.
+
+Preserve `EnergyPoweringObstruction.lean` byte-for-byte and the
+corrected independent ρ/k and ρ*/k witnesses, their independent
+fifth coordinates and the actual Heath–Brown application. Never
+restore the false s-scaling or a third s-preserving witness.
+Maintain and update `run_tao_trudgian_yang_build.bat` and its
+backing implementation as needed; its exact inventory includes
+all five modules. Run it and `run_lake_build.bat` after relevant
+changes. Keep the full goal active, not replaced by this checkpoint.
+
+Semantic acceptance evidence:
+
+- `atkinsonPhysicalCutoff_le_natural` consumes the actual source
+  ceiling theorem, with rounding paid by the coefficient 74.
+- `atkinsonPhysical_gap_budget_log_le` estimates the literal
+  `atkinsonPowerGapBudget`; the epsilon factor is split exactly
+  and the dyadic and harmonic losses are proved, not supplied.
+- `exists_atkinsonPhysicalGapBudget_le_twoTerm` consumes the
+  actual eventual cutoff geometry and logarithmic power bound.
+  Its threshold precedes H,G,L,R.
+- `atkinson_packet_width_scales` derives the needed width bounds
+  from a member of the actual height set, including the original
+  sub-square-root power-width restriction.
+- The three `localizedPhysical` consumers in
+  `AtkinsonPhysicalPackets` compose the numeric theorem with
+  the preceding actual stationary/local-mean `localizedPowers`
+  consumers. Their proof terms retain the real source objects.
+  The three `globalPhysical` consumers derive their interval
+  directly rather than introducing a new source assumption.
+
+Next acceptance obligation: construct the physical localization
+covering, derive an excess lower bound from the relevant upstream
+value witness, absorb the quadratic-cardinality term at the chosen
+length, and obtain the required cardinality estimate. Complete the
+remaining source-entry/smaller-width or genuine lower-value reduction
+and critical twelfth-moment consumer before claiming any unconditional
+Add-est endpoint. Kernel integrity and source completeness remain
+separate verdicts.
+
+### Historical terminal verification: optimized physical packet bounds
+
+Verified on 2026-09-21, dirty working tree at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`, Lean 4.30.0.
+No commit or push was made. The preceding far-height evaluation is
+historical and remains recorded above.
+
+Target command, from this project folder:
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: LEAN VERIFICATION PASS`.
+- Log: `logs/tao-trudgian-yang-build-20260921-003056-a1b5e292.log`.
+- Final SHA256:
+  `b4f18a44470ed8383864f3a390f840e48b5d67983c0bc8139fe904f7c293f41a`.
+- 9,122 default-build jobs; semantic regression PASS.
+- 279 Lean integrity-scan files; exact package coverage 268 Lean files.
+- 28 required project files, 20 pinned source files and 12 frozen
+  ANTEDB files verified; deterministic certificate regeneration PASS.
+- Exhaustive audit: 2,800 discovered nonprivate target theorems and
+  five imported contracts, 2,805 total declarations.
+- All 19 new named theorem audits reported only permitted standard
+  logical dependencies. No project axiom or admitted dependency.
+- `PhysicalCutoffRegression` adds 22 passing tests: all 19 public
+  theorem types, including every uniform-constant source consumer,
+  plus unit-index, zero-localization and zero-cutoff boundary cases.
+- No Lean error, warning, tactic suggestion or linter diagnostic.
+  Incremental failures were repaired by correct cast/rational
+  normalization, removing one ineffective tactic and qualifying
+  `Filter.atTop` in a regression; no statement was weakened.
+
+Foundation command, from `E:/Lean/Riemann Zeta`:
+`cmd /c run_lake_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: PASS`.
+- Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_003057.log`.
+- Final log SHA256:
+  `9b0234ca48d3ea8ff46acd04321e9b4ebd702775fc88192153880a4880f720b2`.
+- JSON: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_003057.json`.
+- JSON SHA256:
+  `ea3d02518ca8135f33c7c8f7cd7d255fff55b5ba98ec2b5ffcc3cf6029163eed`.
+- JSON status PASS and no failures. All six stages have exit code 0,
+  warnings 0, tactic-info 0, informational-builds 0, linter-failures 0
+  and `passed=true`.
+- 8,857 build jobs; 14,290 discovered nonprivate foundation theorems
+  and the 7,636-entry explicit public list audited.
+- Classification: 301 root-graph modules, two explicit regressions,
+  zero excluded and zero unclassified.
+- Canonical verifier SHA256 remains
+  `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Both process handles reached terminal completion. No Lean source,
+root import, audit, regression or runner changed afterward; only
+documentation evidence was appended.
+
+Repository-wide searches found no placeholder or unsafe proof bypass
+(exit 1, no matches). The postulate-pattern search (exit 0) was
+reviewed: matches are explanatory comments and the two pre-existing
+rational `constant : ℚ` fields, not mathematical postulates.
+`git diff --check` passed. Git's LF/CRLF notices are not Lean
+diagnostics. All eleven target documents were synchronized.
+
+Counterexample SHA256 after both runners:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent powering witnesses, fifth coordinates and
+actual Heath–Brown application remain unchanged.
+
+Semantic verdict: ZPH is complete for the actual two-term source
+estimate with physical cutoff and logarithmic losses absorbed.
+The cutoff bound and both physical width bounds are derived in its
+consumer chain; no assumed analytic packet estimate is introduced.
+Constructed covering, value-witness absorption/cardinality, remaining
+source entry or genuine lower-value reduction, critical twelfth moment
+and unconditional Add-est remain OPEN. The full EPZAE-00–41 goal
+remains active, not complete or blocked.
+
+Proposed owner-run commit:
+`Optimize physical Atkinson packet bounds and preserve powering repair`.
+
+## Constructed covering and local-mean counts — preceding checkpoint
+
+EPZAE-21 now proves a sixth-power superlevel counting estimate for
+the actual critical-line local zeta integral. For every δ>0, ε>0
+and ν>0 there are C,D>0 and H0≥40000, before H,G,Y,W, such that
+
+```text
+card {t in W : C*(G*log(t)+t^(1/4+ε)) + Y
+                 <= integral_(t-G)^(t+G) |zeta(1/2+i*u)|^2 du}
+ <= D*H^ν * (H/(G*Y^2) + H^2/Y^6).
+```
+
+The hypotheses are H≥H0, G>0, Y>0, G-separation of W, and for
+each t in W, `H<=t<=2H`,
+`t^δ<=G<=t^(1/2-δ)`, and `t^(1/4)<=G`.
+The above-fourth-root version instead has error `C*G*log(t)`
+and requires `t^(1/4+κ)<=G`, κ>0. All source restrictions
+remain explicit. Both theorems count the literal integral's
+superlevel set; no analytic packet estimate, prescribed covering,
+absorption inequality or cardinality bound is a premise.
+
+The preceding physical packet theorem remains installed:
+the square of the sum of actual excesses is at most
+`D0*H^a*(R*H/G+R^2*sqrt(G*L))`, with uniform constants
+before the localization interval. Its cutoff/logarithmic optimization,
+including the literal source ceiling and derived width bounds,
+is unchanged.
+
+The new deduction constructs the length and bins. Put
+`A=D0*H^a` and `L=(Y^2/(4*A))^2/G`. Then L>0 and
+
+```text
+sqrt(G*L) = Y^2/(4*A)
+2*A*sqrt(G*L) <= Y^2.
+```
+
+The bin of t is `floor((t-H)/L)`. Its actual fiber is contained
+in `[H+k*L,H+(k+1)*L]`; the bins partition W for
+`0<=k<floor(H/L)+1`. This includes the terminal height 2H,
+even when H/L is integral. Separation and every original source
+range are inherited by each fiber.
+
+On a fiber whose actual excess is at least Y, the packet inequality
+and the proved absorption give `R<=2*A*H/(G*Y^2)`.
+Summing the exact fiber cardinalities and paying the final bin gives
+
+```text
+card(W) <= 2*A*H/(G*Y^2) + 32*A^3*H^2/Y^6.
+```
+
+Choosing the packet exponent a=ν/3 and absorbing constants yields
+the displayed global estimate. The exact positive-threshold
+equivalence between excess≥Y and integral≥error+Y is proved,
+then used on the actual filtered superlevel set.
+
+Four root-reachable modules are installed:
+`AtkinsonCardinalityAbsorption`, `AtkinsonHeightCover`,
+`AtkinsonGlobalCardinality` and `AtkinsonLocalMeanCounting`.
+All 17 new public theorems have named audits. The 27 new regressions
+cover every public theorem type, exact chosen-length arithmetic,
+empty fibers, unit/terminal bins, zero threshold geometry and the
+complete source-consumer signatures. Earlier work remains installed.
+
+ZLC is complete for constructed covering, absorption and actual
+local-mean superlevel counting. This is not yet a pointwise zeta
+large-value count: the entry from point values to these local
+integrals, a compatible physical width choice, an occupancy-preserving passage
+from unit-separated points to G-separated local windows, and the
+remaining value-range reduction are still required. ZGB, ZAT, the genuine
+critical twelfth moment ZTM, all unconditional Add-est conclusions,
+EPZAE-21/37 and the full EPZAE-00–41 goal remain OPEN.
+
+Preserve the original Lemma 62 counterexample byte-for-byte.
+The corrected independent ρ/k and ρ*/k witnesses, independent
+fifth coordinates and actual Heath–Brown application are unchanged.
+Never restore false s-scaling or a third s-preserving witness.
+Maintain and update `run_tao_trudgian_yang_build.bat` and its
+backing implementation as needed; its exact inventory includes
+all four new modules. Run it and `run_lake_build.bat` after
+relevant changes. Keep the full goal active.
+
+Semantic acceptance evidence:
+
+- `atkinsonAbsorptionLength_radical` proves the exact physical
+  square-root identity; `atkinsonAbsorptionLength_absorbs`
+  discharges the needed numerical absorption. L is not a freely
+  supplied scale left for a later argument.
+- `atkinsonHeightFiber_interval` proves the translated location
+  of each floor fiber, and `atkinsonHeightFiber_card_partition`
+  supplies the exact finite partition including the last endpoint.
+- `atkinson_card_le_of_local_packets` is an explicitly conditional
+  reusable finite deduction. Its localized packet premise is narrower
+  than the global count, and is not an unconditional source theorem.
+- Both `exists_atkinsonLocalMeanExcess_card_le` versions discharge
+  that premise with the actual `localizedPhysical` source theorem
+  on every subset/fiber. They derive inherited separation, locations,
+  widths and absorption rather than assuming these conclusions.
+- Both `exists_atkinsonLocalMean_superlevel_card_le` versions
+  use `atkinsonLocalMeanExcess_threshold_iff` to count the literal
+  integral's filtered superlevel set. No pointwise-value or
+  moment bound is hidden in the set's definition.
+
+Next acceptance obligation: prove the pointwise critical-zeta
+value-to-local-integral entry, choose a physical G compatible with
+both the threshold and the retained fourth-root source range,
+and handle the remaining lower-value range through a genuine source
+or moment reduction. Then assemble the pointwise large-value count
+and critical twelfth moment. The present integral superlevel bound
+must not be relabeled as any of these still-open endpoints or as
+an unconditional Add-est theorem.
+
+### Historical terminal verification: constructed covering and local-mean counts
+
+Verified on 2026-09-21, dirty working tree at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`, Lean 4.30.0.
+No commit or push was made. Earlier checkpoint evaluations are
+historical and remain recorded above.
+
+Target command, from this project folder:
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: LEAN VERIFICATION PASS`.
+- Log: `logs/tao-trudgian-yang-build-20260921-004731-117ec279.log`.
+- Final SHA256:
+  `a2e515d249bf693096e49a780d50ea66c3f118a18f502ac9acd7bd269779aa8e`.
+- 9,126 default-build jobs; semantic regression PASS.
+- 283 Lean integrity-scan files; exact package coverage 272 Lean files.
+- 28 required project files, 20 pinned source files and 12 frozen
+  ANTEDB files verified; deterministic certificate regeneration PASS.
+- Exhaustive audit: 2,842 discovered nonprivate target theorems and
+  five imported contracts, 2,847 total declarations. The discovery
+  count includes generated theorem declarations and is not a count
+  of source-level public statements.
+- All 17 new named public theorem audits reported only permitted
+  standard logical dependencies; no project axiom or admitted proof.
+- `AtkinsonCountingRegression` adds 27 passing tests: all 17 public
+  theorem types plus ten arithmetic, threshold, empty-fiber and
+  endpoint-bin regressions. The terminal height 2H is explicitly
+  tested in its last bin.
+- No Lean error, warning, tactic suggestion or linter diagnostic.
+  Incremental diagnostics were repaired by removing a genuinely
+  unnecessary sign parameter, replacing redundant tactic sequencing,
+  using the correctly oriented sum inequality and normalizing the
+  numerical radical regression. The intended count was not weakened.
+
+Foundation command, from `E:/Lean/Riemann Zeta`:
+`cmd /c run_lake_build.bat --no-pause`.
+
+- Terminal exit 0, `FINAL RESULT: PASS`.
+- Log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_004732.log`.
+- Final log SHA256:
+  `20a0ab923ed1d9a758770a55238ec5c5fb1391ec7228c0f7b8a1ba67f17864d0`.
+- JSON: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_004732.json`.
+- JSON SHA256:
+  `811d3e4e57e49ebfe8c6ec729c226df468dbb787cd835144fc04fb7e0206825d`.
+- JSON status PASS, no failures. All six stages have exit code 0,
+  warnings 0, tactic-info 0, informational-builds 0, linter-failures 0
+  and `passed=true`.
+- 8,857 build jobs; 14,290 discovered nonprivate foundation theorems
+  and the 7,636-entry explicit public list audited.
+- Classification: 301 root-graph modules, two explicit regressions,
+  zero excluded and zero unclassified.
+- Canonical verifier SHA256 remains
+  `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Both process handles reached terminal completion. No Lean source,
+root import, audit, regression or runner was changed afterward.
+Only documentation, research notes and verification evidence were
+updated after the runs.
+
+The three repository-wide proof-integrity searches were run explicitly.
+Placeholder and unsafe-bypass scans returned exit 1 with no matches.
+Postulate-pattern matches (exit 0) were reviewed as comments and
+the two pre-existing rational `constant : ℚ` data fields, not
+mathematical postulates. `git diff --check` passed; Git's LF/CRLF
+notices are not Lean diagnostics. All eleven target docs agree.
+
+Counterexample SHA256 after both runners:
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The independent corrected powering witnesses, fifth coordinates and
+actual Heath–Brown application remain unchanged.
+
+Semantic verdict: ZLC is complete for the constructed covering,
+derived absorption and actual local-integral superlevel count.
+The generic finite packet deduction is conditional, but its packet
+premise is discharged by the real source theorem in each final
+consumer. No pointwise zeta-value or twelfth-moment theorem is claimed.
+Point-value entry, occupancy-preserving separation/width choices,
+remaining value ranges, the genuine twelfth moment and unconditional
+Add-est remain OPEN. The complete EPZAE-00–41 goal remains active.
+
+Proposed owner-run commit:
+`Prove constructed Atkinson covering and local-mean superlevel counts`.
+
+## Point-entry kernels and literal zeta overlap — preceding checkpoint
+
+The preserved Lemma 62 counterexample and the proved corrected two-witness
+powering/Heath–Brown chain are unchanged. EPZAE-21 now additionally proves
+the Gamma-kernel and bounded-overlap components needed for point-value entry.
+
+For every 0<δ≤1/4 and a,b independently chosen from {δ,-δ}, the
+literal product
+
+```text
+P(a,b,u,w) = |Gamma(a+i*w)| |Gamma(b+i*(u-w))|
+```
+
+is integrable in w, and a single absolute C>0 gives
+`integral P <= (C/δ)*exp(-|u|)`. The public consumer
+`exists_pointMeanGammaProduct_integral_le` derives integrability and
+uses both proved shifted-Gamma bounds and the numerical convolution.
+Its height-linked companion
+`exists_pointMeanGammaProduct_log_integral_le` substitutes
+δ=1/log(t), derives 0<δ≤1/4 from t≥exp(4), and proves
+`integral P <= C*log(t)*exp(-|u|)`. Both displacement signs and
+zero ordinate are retained; no Gamma or convolution estimate is assumed.
+
+For a unit-separated finite W, the actual exponential kernels satisfy
+`sum_(t in W) exp(-|t-u|) <= 4`. The moving-window consumer
+`sum_truncated_exp_kernel_zeta_sq_le_localSecondMoment` proves
+
+```text
+sum_(t in W) integral_(t-L)^(t+L)
+  exp(-|t-u|) |zeta(1/2+i*u)|^2 du
+ <= 4 * integral_(center-G)^(center+G) |zeta(1/2+i*u)|^2 du.
+```
+
+It assumes G,L≥0, W⊂[center-G/2,center+G/2],
+G/2+L≤G and unit separation. It derives every interval enlargement
+and finite integral interchange. The cost is the absolute factor four,
+not the cluster occupancy or the physical width G.
+
+The previously proved local-integral superlevel count remains:
+`card <= D*H^ν*(H/(G*Y^2)+H^2/Y^6)`, with all original physical
+width restrictions, actual source errors, positive thresholds and
+uniform constant dependencies retained. This new overlap theorem does
+not yet connect pointwise zeta largeness to that count.
+
+Eight root-reachable modules are installed: `PointMeanDigamma`,
+`PointMeanGammaShift`, `PointMeanGammaDecay`, `PointMeanGammaKernel`,
+`PointMeanGammaConvolution`, `PointMeanExponentialOverlap`,
+`PointMeanIntegralOverlap` and `PointMeanGammaProduct`.
+All 38 public theorems have named audits; 46 new regressions cover
+their exact types and shell endpoints, empty sets, zero ordinates,
+and the negative displacement. Seven modules adapt inspected node-74
+proofs to the existing target/native imports and actual
+`zetaMomentCriticalNorm`; the eighth supplies new literal Gamma consumers.
+No adjacent package, dependency pin, source archive, or frozen foundation
+has been changed.
+
+ZGK is complete only for the literal Gamma convolution and its
+height-linked logarithmic bound. ZEO is complete only for the actual
+exponential local-integral overlap. The complete contour proof of
+Heath–Brown Lemma 3 is NOT yet installed in this target. Its residue,
+displaced zeta bounds, horizontal edges, truncated tail and compact range
+remain to be assembled. Pointwise large-value counting also still needs
+occupancy-aware clustering, compatible G selection and the lower-value
+reduction. ZGB, ZAT, ZTM, unconditional Add-est, EPZAE-21/37 and the full
+EPZAE-00–41 completion contract remain OPEN.
+
+Preserve `EnergyPoweringObstruction.lean` byte-for-byte. Never restore
+false s-scaling or a third s-preserving witness. The independent ρ/k and
+ρ*/k witnesses and actual Heath–Brown application remain intact.
+Maintain and update `run_tao_trudgian_yang_build.bat` and its backing
+implementation as needed, including all eight modules in the exact
+inventory. Run it and `run_lake_build.bat` after relevant changes.
+Keep the full goal active.
+
+Semantic acceptance and next analytic input:
+
+- The coefficient-one real-part digamma estimate comes from the actual
+  convergent series. Gronwall and Gamma reflection give exponential decay;
+  recurrence gives both displaced lines without dropping δ+|v|.
+- The stronger rate 4/3 leaves an exponential reserve. Its square is
+  bounded by 1/(δ²+x²), whose integral is π/δ. The subsequent
+  `pointMeanGammaProduct` consumer applies this to the actual Gamma
+  functions, rather than claiming a numerical majorant alone is a source theorem.
+- The overlap proof constructs integer distance shells, proves at most
+  two points per shell using unit separation, and sums a geometric series.
+  The final specialization consumes the literal continuous zeta-square integrand.
+- The next source target is the actual weighted Lemma 3 inequality
+  `|zeta(1/2+i*t)|² <= C*log(t)*(1+integral_(-log²t)^(log²t)
+  exp(-|u|)*|zeta(1/2+i*(t+u))|² du)`, for every t≥10.
+  The adjacent `HeathBrownLemmaThreeTail` and
+  `HeathBrownEquation44Native` contain proved consumers, but they are
+  NOT imports of this package and their conclusions are not yet target theorems.
+  Narrow their Mellin/contour prerequisites onto the current native foundation,
+  then assemble the residue and all analytic errors without a Lemma-3 hypothesis.
+- After that entry is proved, use the installed overlap to keep cluster
+  multiplicities when moving to G-separated windows. Merely thinning the
+  unit-separated points loses a factor G and does not meet acceptance.
+
+### Primary source and local reuse checked, 21 September 2026
+
+D. R. Heath–Brown, *The twelfth power moment of the Riemann zeta-function*,
+Quart. J. Math. 29 (1978), 443–462,
+[DOI 10.1093/qmath/29.4.443](https://doi.org/10.1093/qmath/29.4.443).
+The [primary-paper PDF hosted by NTNU](https://wiki.math.ntnu.no/_media/ma3001/2025h/analyticnumbertheory/heathbrowntwelfthmoment.pdf)
+was opened: printed pp. 455–456, Lemma 3, equations (40)–(44).
+Equation (41) retains the denominator δ+|v|; the subsequent double
+convolution must lose only δ⁻¹. The new rate-4/3 majorant is a proved
+strengthening used to preserve that loss. The local overlap adaptation
+keeps the printed exponentially weighted zeta-square integrals.
+
+The seven reused local files and their SHA256 hashes are recorded in the
+Reproduction Manifest. Only imports, namespace/provenance and the bridge
+to the target's actual critical-zeta norm were adapted; the literal Gamma
+product consumers are new. Node 74 itself was not changed or added as a
+dependency. Its full import closure is substantially larger than this
+analytic step; the target retains the minimal eight-module branch.
+The previously inspected Huxley–Ivić equation (2.1) remains a secondary
+source formulation, not evidence that the target already proves Lemma 3.
+
+Local adaptation provenance (SHA256, source bytes unchanged):
+
+| Node-74 source | Target module | Source SHA256 |
+|---|---|---|
+| `PintzDigammaSharp` | `PointMeanDigamma` | `9fc5aaa7ad15686f9a2c525927845213af2ef902eb768eae174eb4b4792a83fe` |
+| `PintzGammaHorizontalSharp` | `PointMeanGammaShift` | `0fc39e75ff81073d6f1788021f00c0a2bccef7ee1ea1949cfe5f5bb5fc40a2d4` |
+| `Pintz2023GammaExponential` | `PointMeanGammaDecay` | `ab2421401ee3d833e2fb572720b9a45e132a5ff6c36fe7fc046b6ca0ba211790` |
+| `HeathBrownGammaKernel` | `PointMeanGammaKernel` | `3236d95fe089a089b810a3cf66df82fa6aee71d0a931a705be55b1a02d557877` |
+| `HeathBrownGammaConvolution` | `PointMeanGammaConvolution` | `b4377464ad7abc710e87f20f975e611664ebf99c1bebcebf10bc39c47bc68482` |
+| `HeathBrownExponentialOverlap` | `PointMeanExponentialOverlap` | `e332392127765c395a7f748a5303512679718917aa4325bca46af2c150fd23cb` |
+| `HeathBrownExponentialIntegralOverlap` | `PointMeanIntegralOverlap` | `9cca1d13b2cdfbcb5f4e1ab18a4a094e16a4e3e03e8effc5428e0febbc4faa60` |
+
+The root imports all eight new production files, the named audit covers
+all 38 public declarations, and the exact PowerShell inventory includes
+every file. The 46 new tests retain full consumer signatures and concrete
+boundary cases. No goal item is crossed out on audit counts alone.
+
+### Historical terminal verification: point-entry kernels and literal overlap
+
+Evaluated the dirty working tree based on commit
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`.
+No commit, push, source-pin change, or adjacent-project modification was made.
+
+Commands and terminal results:
+
+```powershell
+# Target project directory:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# Foundation directory E:\Lean\Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes were polled to terminal exit code 0; neither result was
+inferred from an unfinished stage or a prior log. Target final status:
+`LEAN VERIFICATION PASS`. Foundation final status: `PASS`.
+
+Target transcript:
+`logs/tao-trudgian-yang-build-20260921-011317-a71c4c13.log`
+
+SHA256:
+`556d87842310dabfe1986f7cad056429e5239fad17c08b72d57a442337ae334c`.
+
+Target coverage: 9,134 default build jobs; 28 required files; all 20
+pinned source hashes; all 12 frozen ANTEDB source files; 291 Lean
+files in the integrity scope; exact inventory of 280 package files;
+deterministic certificate regeneration PASS. Semantic regression PASS,
+including 38 new complete theorem-signature tests and eight concrete
+boundary/empty/zero/negative-line tests. Exhaustive audit: 2,885
+discovered target theorems plus five imported contracts, 2,890 total.
+All 38 new public declarations also have explicit named axiom output,
+with only the permitted logical axioms. No Lean diagnostic remains.
+
+Foundation transcript:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_011318.log`
+
+SHA256:
+`2b0631226d25e98871d70a6fbde781705d9d5473b72800e9bdfcb2f9f8ade897`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_011318.json`
+
+SHA256:
+`c8b8761e16af01b696b361ead79fa20449a438f9ce278b6c29a0851170255393`.
+
+The JSON reports `status=PASS`, `failures=[]`; all six recorded
+stages have exitCode=0, warnings=0, tacticInfo=0,
+informationalBuilds=0, linterFailures=0 and passed=true.
+Foundation coverage remains 8,857 jobs, 301 root-graph modules plus
+two explicit regressions, zero excluded/unclassified modules,
+7,636 explicit public declarations and 14,290 discovered theorems.
+Verifier SHA256 remains
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+The three repository-wide Lean scans were rerun. Placeholder and
+unsafe scans returned exit 1 with no matches. The postulate scan
+matched only comments and the two existing rational structure fields;
+there is no prohibited declaration. `git diff --check` returned 0.
+Git's LF/CRLF notices are not Lean warnings; no Lean warning was
+suppressed or reclassified.
+
+The original `EnergyPoweringObstruction.lean` was rehashed after both
+runners, still exactly
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Corrected independent-coordinate powering and the actual Heath–Brown
+application were not edited. All eleven target documents are synchronized.
+This is a verified kernel/overlap checkpoint, not completion of Lemma 3,
+the genuine critical twelfth moment, Add-est or the full goal.
+
+## Heath–Brown point-to-local-mean entry — historical checkpoint
+
+The original Lemma 62 counterexample is preserved byte-for-byte. The corrected
+independent cardinality and energy witnesses, and their proved Heath–Brown
+application, are unchanged. This checkpoint closes an analytic input to the
+remaining zeta/Add-est branch; it does not change the frozen public outputs.
+
+`heathBrownLemmaThree_native` now proves the complete source-shaped estimate:
+one absolute C>0 works for every t≥10,
+
+```text
+|zeta(1/2+i*t)|^2
+ <= C*log(t)*(1 + integral_(-log(t)^2)^(log(t)^2)
+      exp(-|u|)*|zeta(1/2+i*(t+u))|^2 du).
+```
+
+The proposition and moment definitions unfold to this literal integral.
+The proof derives the smoothed divisor Mellin identity, both pole residues,
+the infinite shifts, both displaced-line estimates, the finite rectangle's
+four edge bounds, the full-to-truncated tail estimate and the compact range.
+The strong Gamma reserve makes the nested integral lose only δ⁻¹;
+δ=1/log(t) is linked to the source height. None of these estimates is an
+analytic hypothesis of the final theorem.
+
+`heathBrown_equation44_native` consumes that theorem and the actual
+factor-four exponential-overlap theorem. For R=card(W) it proves
+
+```text
+V^2*R <= C*log(T)*(R + 4*integral_(center-G)^(center+G)
+                                  |zeta(1/2+i*u)|^2 du).
+```
+
+Here T≥10, V>0, G,L≥0; W is unit-separated and contained in
+[center-G/2,center+G/2]⊂[10,T]; every t∈W has log(t)^2≤L;
+G/2+L≤G; and every t∈W satisfies V≤|zeta(1/2+i*t)|.
+All parameters follow the absolute constant. The final consumer has no
+Lemma-3 hypothesis and does not discard cluster occupancy.
+
+Nineteen additional production modules are root-reachable and included in
+the exact inventory behind `run_tao_trudgian_yang_build.bat`.
+There are 129 new public theorem audits and 136 new regressions, including
+the unfolded literal source inequality and the endpoints t=10 and t=exp(4).
+The adjacent node-74 proof bodies were inspected and adapted to existing
+target/native imports; unrelated import chains were not added. No package
+pin, source archive, counterexample or adjacent project was changed.
+
+ZL3 is complete for the full source Lemma 3; ZQ44 is complete for its
+literal finite peak-to-local-integral consumer. ZGB still needs constructed
+occupancy-aware clusters, compatible physical width selection, absorption
+of the actual local-source error, and the remaining value ranges.
+The installed local-integral superlevel count still has its original
+fourth-root width restrictions. ZAT, ZTM, unconditional Add-est,
+EPZAE-21/37 and the full EPZAE-00–41 goal remain OPEN.
+
+Keep the complete goal active. Preserve `EnergyPoweringObstruction.lean`
+and the independent fifth coordinates; never reintroduce false s-scaling
+or a third s-preserving witness. Maintain the principal
+`run_tao_trudgian_yang_build.bat`, its backing implementation, root imports,
+exact inventory, audits and regressions as the proof grows. After relevant
+changes, run both it and the foundation's `run_lake_build.bat`.
+
+### Exact dependency and next-obligation audit
+
+- `heathBrown_smoothed_divisor_eq_right_mellin` proves actual summation/integration
+  interchange from absolute convergence and exponential Mellin inversion.
+- `heathBrown_zetaSquare_eq_smoothed_sub_residue_sub_leftVertical` consumes
+  the two proved pole shifts. The moving double pole is 1-s; the Gamma pole
+  is 0. The residue constants and retained line are subsequently bounded.
+- `exists_heathBrown_offCritical_plus_strong_le` and its reflected minus
+  companion use the actual zeta square and convergent critical-line moment.
+  Functional reflection uses the pinned GammaR equation and conjugation.
+- `integral_strongKernel_mul_strongMoment_le` proves product-space
+  integrability, translation and Fubini with the π/δ bound. The finite
+  source rectangle then yields the full weighted moment with only log(t).
+- `exists_heathBrownFullCriticalMoment_le_truncated` pays the complete tail
+  at log(t)^2. `heathBrownLemmaThree_native` absorbs its constant and
+  derives the remaining compact t≥10 range from continuity.
+- `heathBrown_equation44_of_lemmaThree` is intentionally a conditional
+  finite deduction. `heathBrown_equation44_native` explicitly discharges
+  that premise using the new full theorem and retains the literal integral.
+- Next construct G-separated centers with the original point multiplicities.
+  Choose G in the existing Atkinson source range, derive a local-integral
+  excess threshold from each cluster's equation-(44) bound, and apply
+  `exists_atkinsonLocalMean_superlevel_card_le` (or its
+  `above_fourthRoot` form) with every source error and width condition paid.
+  Preserve and sum occupancy classes; thinning points without their
+  multiplicities is not an acceptable bridge.
+- The lower-value reduction and any upper-value exclusion must use proved
+  genuine zeta estimates. Assemble the actual dyadic critical twelfth moment
+  before consuming the existing moment-to-LV/energy transfers. Do not replace
+  it with a new moment hypothesis or mark Add-est complete from the point-entry
+  theorem alone. All other open EPZAE tasks remain part of the full goal.
+
+### Primary source and adaptation provenance
+
+The source is D. R. Heath–Brown, *The twelfth power moment of the Riemann
+zeta-function*, Quart. J. Math. 29 (1978), 443–462,
+[DOI](https://doi.org/10.1093/qmath/29.4.443);
+the [primary-paper PDF](https://wiki.math.ntnu.no/_media/ma3001/2025h/analyticnumbertheory/heathbrowntwelfthmoment.pdf)
+was rechecked at printed pp. 455–457 (Lemma 3 and equations (40)–(44)).
+The local pinned PDF is unchanged. Equation (44) is followed here through
+the bounded-overlap simplification, with its absolute constant exposed.
+
+The new target branch consists of `PointMeanMellinExp`,
+`PointMeanDivisorMellin`, `PointMeanDoublePole`, `PointMeanMovingPole`,
+`PointMeanGammaPole`, `PointMeanContourBasic`,
+`PointMeanMellinHorizontal`, `PointMeanMellinVertical`,
+`PointMeanMellinShift`, `PointMeanMellinBounds`,
+`PointMeanOffCritical`, `PointMeanReflection`,
+`PointMeanOffCriticalStrong`, `PointMeanLemmaThreeStatement`,
+`PointMeanLemmaThreeContour`, `PointMeanLemmaThreeDouble`,
+`PointMeanLemmaThreeEdges`, `PointMeanLemmaThreeTail`, and
+`PointMeanEquation44`.
+
+The local node-74 source hashes are recorded below/in the Reproduction
+Manifest. Namespace/import spelling, actual target zeta-norm references,
+and provenance comments were adapted. Only needed elementary lemmas were
+extracted from the broader Pintz/Ford and finite-loss modules; no theorem
+from those larger branches is assumed. The final equation-(44) consumer
+uses the literal integral instead of an adjacent local-moment alias.
+The node-74 package is not an added dependency and is unchanged.
+
+Local source SHA256 ledger (source files unchanged):
+
+| Node-74 source | Target use | Source SHA256 |
+|---|---|---|
+| `Pintz2023MellinExp` | `PointMeanMellinExp` | `038f5b0f28bf64faab7d039c42d8baca4f5e4f893a4adffbe70561f03a0ed85d` |
+| `HeathBrownSmoothedDivisorMellin` | `PointMeanDivisorMellin` | `7bc3f32b81d5ac1e1408f437b95c2e797bb37fe92b6520d1fb11d832e51b321d` |
+| `HeathBrownDoublePoleRectangle` | `PointMeanDoublePole` | `be8037772280da22145a8169dd0cbf5aaf9ec0dd9dbc3e8f2dcf7e69591bb77a` |
+| `HeathBrownMovingPole` | `PointMeanMovingPole` | `b1dfec90aaa8a5d9da98f0b3bb33470dfa6612c5fe19be4ec4adf8f576d45f88` |
+| `HeathBrownGammaPole` | `PointMeanGammaPole` | `0cb723dea0e3c8687f24d8fcc79095d14795df32051e293b527f684a4ee2bf46` |
+| `HeathBrownMellinHorizontal` | `PointMeanMellinHorizontal` | `f25bc447cf84918d9333c665e517fa5d1c8e195852f39a5ba5ba66fc11b93f50` |
+| `HeathBrownMellinVertical` | `PointMeanMellinVertical` | `cabc9ee3dd91ce5a7c024c33379a3b18b24c5481c87f0323068c87441cfba3b8` |
+| `HeathBrownMellinShift` | `PointMeanMellinShift` | `c8dd0fdc18b9ee08db7f04f717c111f6c39058e9fd28e98c176d4d2ca3b0dd9f` |
+| `HeathBrownMellinBounds` | `PointMeanMellinBounds` | `dac7c7175b87d2bf1c27118a9a5e33c303048471c88e5cd035e3f605a595e2cd` |
+| `HeathBrownOffCritical` | `PointMeanOffCritical` | `6cf8626e1b6bb3b38569cf81263160bf6ebf3971c419a6344b804e3356eb9f04` |
+| `HeathBrownFunctionalReflection` | `PointMeanReflection` | `3d71202f4228a81be01d6860d75923da693eebd5af8406b5821c7adb49319f64` |
+| `HeathBrownOffCriticalStrong` | `PointMeanOffCriticalStrong` | `c44116f0d2dfed8fbe0aa549b0f1c5c2b1adc10a7f956b9d2f7fa7b19601a01f` |
+| `HeathBrownLemmaThreeStatement` | `PointMeanLemmaThreeStatement` | `ddd69314915d75eb4d542ea82a0e8a88817e2da3649552b157cfa828941c6582` |
+| `HeathBrownLemmaThreeContour` | `PointMeanLemmaThreeContour` | `f286661c62cd94f4dfeeb524f4cb17368ef1af12765ebd1c1fec46939a547aca` |
+| `HeathBrownLemmaThreeDouble` | `PointMeanLemmaThreeDouble` | `f70c54135cfbdc8e0f6ce6ec4fd01f799d90deb3ba3d9b289f0182f87647ef9e` |
+| `HeathBrownLemmaThreeEdges` | `PointMeanLemmaThreeEdges` | `f6c88c628110732e7c44afea694043445e6ee8f93d9980053cda178da0d338ed` |
+| `HeathBrownLemmaThreeTail` | `PointMeanLemmaThreeTail` | `ab922be81cbcfa6a009a7dc2b4c93d92fffa0992a9289a1d2ba60798e0b7e2ca` |
+| `HeathBrownEquation44` | `PointMeanEquation44` | `6b27671bb029b3a42c027656e9ca88ed49a4f7ab48bf1800e7e8e3453774da36` |
+| `Pintz2023MellinHorizontal` | `PointMeanContourBasic (selected decay)` | `d56ec96c6411dd2347adc5a16234fdb791eaab88ba81a5e6937ebd30c95eec57` |
+| `FordZetaBasic` | `PointMeanContourBasic (two selected norm lemmas)` | `fd6f4976c85d1466b648f0aa2363f67397f0cb9d08f9b2e04993a8af6381b6eb` |
+| `Pintz2023MellinEdges` | `PointMeanContourBasic (selected orientation)` | `1e8631952d39963fb27d6f00356cc18f2b372fd3ed13e2454f049eabb2040a46` |
+| `PintzGammaVerticalRatio` | `PointMeanReflection (selected GammaR identity)` | `be2804a57d86faf882abe18e3d0bcf376f689526610e3bab0545abe90de92c20` |
+| `PintzZetaAFEKernelBound` | `PointMeanReflection (selected conjugation identity)` | `4dfc68c96a2ed894b59ee80388f25acba9c80eb31bf465ad9765c88b7c2d5e48` |
+| `ZeroSumSup` | `PointMeanLemmaThreeEdges (selected logarithmic comparison)` | `8bb2df4beeb90704ebf8fb3eb02e7e093cb581409840bcaf5524337101644440` |
+| `HeathBrownFiniteLossAbsorption` | `PointMeanLemmaThreeEdges (selected power comparison)` | `ec149f476f793e6b7ae4f5c97a8b71f4190d1aa4d6724506843608a94e58cdf8` |
+| `HeathBrownEquation44Native` | `PointMeanEquation44 (final composition)` | `3f3de2fdc68479f6238315decb4938dca36d6c2d458fb219458d01fbb4163afa` |
+
+### Current terminal verification: full point-to-local-mean entry
+
+The evaluated dirty checkout is based on
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`.
+No commit, push, frozen source-pin change or adjacent-project edit was made.
+
+Commands:
+
+```powershell
+# Target project directory:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# Foundation directory E:\Lean\Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both final processes reached exit code 0. Target status is
+`LEAN VERIFICATION PASS`; foundation status is `PASS`.
+No final failed stage or Lean diagnostic remains.
+
+Target transcript:
+`logs/tao-trudgian-yang-build-20260921-014038-81d7c7e7.log`
+
+SHA256:
+`91d97f6642fd6b68509db3b9f3931b173efe578d819be0e4d0edac630715585d`.
+
+Coverage: 9,154 default build jobs; 28 required files; 20 pinned source
+hashes; 12 frozen ANTEDB files; 310 Lean files in the integrity scan;
+exact inventory of 299 package files; deterministic certificate
+regeneration PASS. The root includes all 19 new production modules.
+All 136 new semantic regressions pass. The exhaustive audit checks
+3,099 discovered target theorems and five imported contracts, 3,104 total.
+The 129 new public theorems also each appear in named axiom output with
+only the permitted logical axioms. The literal source test unfolds
+`HeathBrownLemmaThree`, its moment and `zetaMomentCriticalNorm`.
+
+Foundation transcript:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_014317.log`
+
+SHA256:
+`4df06c1a54795f785d86a9d96271a439e3ba36c75a4b5e16dc1fb27d8bb4379d`.
+
+Foundation manifest:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_014317.json`
+
+SHA256:
+`4f646f5f5c52b12869e891deffa357eb17ed24932cd06759c7c7095cbaa00d2f`.
+
+Its recorded status is PASS and failures is empty. All six stages have
+exitCode=0, warnings=0, tacticInfo=0, informationalBuilds=0,
+linterFailures=0 and passed=true. Coverage remains 8,857 build jobs,
+301 root-graph modules and two explicit regressions, no excluded or
+unclassified modules, 7,636 explicit public declarations and 14,290
+discovered nonprivate theorems. The foundation verifier is unchanged:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Intermediate failures are not hidden: the initial target transcript
+`logs/tao-trudgian-yang-build-20260921-014001-03aeec79.log` and
+foundation transcript
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_014002.log`
+failed their integrity scan on a prose comment beginning with
+“constant inherited”. The comment was reworded and both scripts rerun;
+no scan was weakened, no module excluded and no warning suppressed.
+A preceding focused audit syntax error in a comment marker was also fixed.
+
+The three repository-wide Lean searches were rerun after the final source
+change. Placeholder and unsafe-bypass searches have no matches.
+The raw postulate search contains only existing prose comments and two
+rational structure fields, not postulated declarations. The principal
+integrity scans pass. `git diff --check` returns 0; Git's line-ending
+notices are not Lean diagnostics.
+
+After both final runners, the SHA256 of
+`EnergyPoweringObstruction.lean` remains exactly
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent-coordinate powering and actual Heath–Brown
+energy relation were not edited. All eleven target documents distinguish
+the completed source Lemma 3 and finite point-entry consumer from the
+still-open occupancy/width/value-range assembly, twelfth moment, Add-est
+and complete EPZAE-00–41 goal.
+
+## Occupancy-preserving peak count and derived growth — historical checkpoint
+
+The printed Lemma 62 counterexample is still byte-preserved. The proved
+corrected two-witness powering, independent fifth coordinates and actual
+Heath–Brown energy application are unchanged.
+
+Three additional EPZAE-21 consumers are now proved:
+
+- `exists_pointValue_card_le_with_width` counts the original unit-separated
+  zeta peaks, retaining every cluster occupancy. Half-G floor bins keep
+  occupied centers in [H,2H], including the terminal endpoint. Both parity
+  classes are G-separated. The actual equation-(44) entry and Atkinson
+  excess count bound each occupancy superlevel; exact layer-cake summation
+  and the inverse-square sum recover all points with no factor G loss.
+- `exists_pointValue_card_le_source_range` constructs
+  G=V²/(K log(3H)²), absorbs the actual source error and derives all window
+  and width conditions. For δ,κ,ν>0 with δ≤1/4, there are K,D>0 and H₀≥40000,
+  chosen before H,V,W, such that for H≥H₀ and V>0,
+  `K log(3H)² (2H)^(1/4+κ) ≤ V² ≤ K log(3H)² H^(1/2−δ)`,
+  every unit-separated W⊂[H,2H] with |ζ(1/2+it)|≥V satisfies
+  `card(W) ≤ D H^ν (H log(3H)^4/V^6 + H² log(3H)^6/V^12)`.
+  The fourth-root margin is retained, not removed.
+- `exists_zetaMomentCriticalNorm_lt_sixth_power` proves that for every ε>0
+  there is H₀≥40000 such that H≥H₀ and H≤t≤2H imply
+  |ζ(1/2+it)|<H^(1/6+ε). A singleton peak at H^(1/6+η),
+  η=min(ε,1/48), satisfies the proved source range but its cardinality bound
+  is eventually less than one. This derives the actual zeta growth estimate;
+  it does not assume one or substitute a Dirichlet-block estimate.
+
+The six modules `FiniteOccupancy`, `PointClusters`, `PointClusterEntry`,
+`PointClusterCounting`, `PointValueWidth` and `PointValueGrowth` are covered
+by the root and exact production inventory. Their 29 public theorems have
+named audits, and 37 added regressions check every public type plus actual
+endpoints, occupancy, parity and the unfolded zeta-growth conclusion.
+
+Architecture nodes ZOC, ZVW and ZPG record these exact consumers as DONE.
+ZGB remains OPEN for the remaining value-range reductions and their
+moment-ready aggregation. ZAT's smaller-width/source-form bridge, the genuine
+dyadic twelfth moment ZTM, all unconditional Add-est clauses, EPZAE-19/21/37
+and the full EPZAE-00–41 goal remain OPEN. This critical-line growth result
+does not complete the distinct exponent-pair-to-mu contract EPZAE-15.
+
+Maintain `run_tao_trudgian_yang_build.bat` and its backing implementation as
+needed: root imports, exact inventory, named/exhaustive audits and regressions
+must grow together. Run both principal scripts after relevant changes.
+Preserve the counterexample and do not restore false s-scaling or a third
+s-preserving witness. No dependency pin, source archive or adjacent proof
+was changed in this checkpoint.
+
+### Consumer audit and remaining analytic work
+
+The constructed centers are cₙ=H+nG/2. An occupied fiber inherits unit
+separation and the original peak threshold. Its points lie in
+[cₙ−G/2,cₙ+G/2]; equation (44) is applied with T=3H and
+L=log(3H)². The global assumptions G≤H and 2log(3H)²≤G derive
+the entire interval and logarithmic-window entry.
+
+For A=V²/(16P log(3H)), the proved peak-mass absorption gives
+I(cₙ,G)≥2RₙA. If Rₙ≥m≥1 and the true local error is at most A,
+then I(cₙ,G)≥error+mA. Each parity image is injective and G-separated.
+The actual source count gives m⁻² and m⁻⁶ superlevel decay, and
+`sum_nat_occupancy_eq_sum_superlevel` recovers ΣRₙ=card(W).
+Both colors and Σm≥1 m⁻²≤2 are paid in the final constant; neither
+maximal occupancy nor a thinning loss appears.
+
+The selected K=16PC+1 makes the actual C G log(cₙ) error at most A.
+The amplitude interval derives t^δ≤G≤t^(1/2−δ) and
+t^(1/4+κ)≤G for every t∈[H,2H]. No local-mean source estimate,
+point-entry theorem, cluster existence or window condition remains as
+an analytic hypothesis of the selected-width consumer.
+
+At V=H^(1/6+η), the count simplifies exactly to
+D log(3H)^4/H^(5η) + D log(3H)^6/H^(11η).
+Positive exponent gaps absorb the logarithms. The singleton contradiction
+proves growth directly from the actual local-zeta chain and works at both
+closed height endpoints.
+
+Next use this derived growth to control the upper value range and
+the first term of the peak count; derive the remaining low-value estimate
+from genuine zeta moment inputs. Construct the finite-to-continuous
+aggregation with all interval endpoints and separation colors accounted
+for, then prove the actual dyadic critical twelfth moment. Only that theorem
+can discharge the moment premise of `zetaTwelfth_largeValueBound_of_dyadic`
+and `energyClauseOne_of_dyadic_moment`. Their existing conditional proofs
+are not evidence that the moment has already been proved.
+
+Continue the full frozen public contract, not a replacement goal consisting
+only of these supporting results. All other open EPZAE tasks remain required.
+
+### Source and library reuse for this checkpoint
+
+This is new local composition of the already proved Heath–Brown
+equation-(44) entry and `AtkinsonLocalMeanCounting`, not an imported
+unproved twelfth-moment claim. The exact finite partition uses the existing
+physical floor fibers and Mathlib's `Finset.card_eq_sum_card_image`.
+Parity uses `Finset.card_filter_add_card_filter_not`; the convergent
+occupancy bound uses `sum_Ioo_inv_sq_le` from
+`Mathlib/Analysis/PSeries.lean` at the unchanged pin.
+The logarithmic absorption consumes `eventually_const_log_pow_le_rpow`.
+
+The native `GuthMaynard/WeylZeta.lean` was inspected: its critical-line
+Weyl block estimates are finite Dirichlet-block bounds, not themselves a
+full riemannZeta pointwise bound. No such identification was made.
+Instead `PointValueGrowth` supplies the actual zeta theorem via the proved
+singleton contradiction. No new external source snapshot or package is
+required; the previously frozen source literature remains unchanged.
+
+### Installed proof-source hashes
+
+These six files are new local proofs; all source/dependency pins are unchanged.
+SHA256 values below identify the files used by this checkpoint's evaluations.
+
+| Module | Public theorem audits | SHA256 |
+| --- | ---: | --- |
+| `FiniteOccupancy.lean` | 3 | `341a64b7f3496769184984010fc64275a377a2ebac4efd713a24f1292cdbcecb` |
+| `PointClusters.lean` | 11 | `14260addc923d44bc047bc1213e78dd50b033ff9e568dbad1ce840b82cb93367` |
+| `PointClusterEntry.lean` | 3 | `e800e4d49721ecd868dbc96e82f9a399df30a1d1988c0a67feeaec116e2de7fb` |
+| `PointClusterCounting.lean` | 3 | `15f1e9d9b6d15fb27b2360b510a09b0ea6a2dfbc97798df9a5ad5b10ca617ca7` |
+| `PointValueWidth.lean` | 4 | `23f39339835b96614d5fac7f5efd1126d80a576a7ee5afbf03adbd1119af6e50` |
+| `PointValueGrowth.lean` | 5 | `418ca89b599e6c3c440cffb1d6efb2a3513e7dd10b6f7b3d37967ffa48d42c92` |
+
+Verification (2026-09-21): both principal runners reached terminal exit 0.
+The target reports `LEAN VERIFICATION PASS`: 305 package files, 316 Lean
+files in its integrity scan, 3,187 audited declarations (3,182 discovered
+target theorems plus five imported contracts), all 29 new named audits and
+all 37 added regressions passed. The foundation reports `PASS`: all six
+stages passed and 14,290 discovered theorems audited. Both final evaluations
+have zero Lean errors, warnings, tactic suggestions or linter failures.
+The counterexample SHA256 is unchanged. Exact logs, hashes and repaired
+focused-build diagnostics are recorded in the current Reproduction Manifest.
+This verifies the occupancy/width consumers and actual critical-line growth,
+not the genuine twelfth moment, unconditional Add-est or the full goal.
+
+### Terminal occupancy/growth reproduction evidence
+
+Commands were run from their respective roots and polled to terminal exit 0:
+
+```powershell
+# Tao--Trudgian--Yang folder
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# E:/Lean/Riemann Zeta
+cmd /c run_lake_build.bat --no-pause
+```
+
+The checkout is the existing dirty `main` tree at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0`; no commit or push was made.
+Lean remains 4.30.0 and all dependency/source pins are unchanged.
+
+Target transcript:
+`E:/Lean/Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/logs/tao-trudgian-yang-build-20260921-022304-7efe6399.log`
+
+SHA256:
+`e9bb9b24639762bb7d1599900025cb519b3baf835261409c22f0722b13d50271`.
+
+The target confirms 28 required files, 20 pinned source files, 12 frozen
+ANTEDB files, byte-stable deterministic certificate regeneration, all
+305 package Lean files, a 316-file integrity scan and 9,160 build jobs.
+The semantic regressions pass. Its exhaustive dependency audit covers
+3,182 discovered target theorems plus five imported contracts, 3,187 total.
+Each of the 29 new public theorem names appears in explicit axiom output
+with only `propext`, `Classical.choice` and `Quot.sound`.
+All 37 new exact-type/boundary regressions pass, including the unfolded
+actual riemannZeta conclusion. The complete log contains no Lean diagnostic.
+
+Foundation transcript:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_022305.log`
+
+SHA256:
+`12f8ced87262eafeee1cb404f42eabfc62cc4560f692f37ff23d51a26992d029`.
+
+Foundation manifest:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_022305.json`
+
+SHA256:
+`2c2f65ed14aa503273eb0c547af212588cf55c821f92f73e63ba2114c3e9131c`.
+
+The JSON status is PASS, with an empty failures array. All six stages have
+exitCode=0, warnings=0, tacticInfo=0, informationalBuilds=0,
+linterFailures=0 and passed=true. Coverage remains 8,857 build jobs,
+301 root-graph modules, two explicit regressions, no excluded or
+unclassified modules, 7,636 explicit public declarations and 14,290
+discovered nonprivate theorems. The unchanged foundation verifier SHA256 is
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Intermediate focused elaboration failures were repaired, including natural/
+real exponent casts, finite-filter evaluations and explicit finite-sum
+regression notation. A redundant `ring` produced an unused/unreachable
+tactic warning; the redundant tactic was removed. The final focused
+`PointValueGrowth` and `SemanticRegression` builds and both principal
+evaluations have zero Lean warnings. No linter, scanner or module-coverage
+gate was weakened, and no failing module was excluded.
+
+Repository-wide placeholder and unsafe-bypass searches return no matches.
+The raw postulate search has only existing prose comments and two rational
+structure fields, not mathematical postulates; both principal integrity
+scans pass. `git diff --check` returns 0. Git's LF/CRLF notices are
+line-ending notices, not Lean diagnostics.
+
+After both terminal evaluations, `EnergyPoweringObstruction.lean` retains
+SHA256 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent witnesses and actual Heath–Brown energy theorem
+were not edited. All eleven target documents agree on ZOC/ZVW/ZPG and keep
+the remaining value-range aggregation, actual twelfth moment, unconditional
+Add-est and full EPZAE-00–41 goal open.
+
+## High-value twelfth moment and fourth-moment reduction — historical checkpoint
+
+The printed Lemma 62 counterexample is preserved byte-for-byte. Corrected
+cardinality/energy powering, the independent ρ/k and ρ*/k witnesses with
+independent fifth exponents, and the actual Heath–Brown energy application
+remain unchanged.
+
+The following actual-zeta consumers are now proved. Write
+S(H,V)={t∈[H,2H] : |ζ(1/2+it)|≥V}. For every ε>0 and sufficiently large H,
+uniformly for V≥H^(1/8+ε):
+
+- `exists_pointValue_twelfth_weighted_card_le` gives
+  card(W) V^12≤H^(2+ε) for every unit-separated W⊂S(H,V).
+  There is no upper-amplitude hypothesis: the proved actual growth estimate
+  controls that range, and the source-width and logarithmic margins are paid.
+- `exists_volume_pointValueSuperlevel_le` gives
+  volume(S(H,V))≤2H^(2+ε)/V^12. A maximal finite separated family is
+  constructed from the proved cardinality bound; its closed unit balls
+  cover the entire superlevel set, with the factor two accounted for.
+- `exists_zeta_twelfth_high_integral_le` proves
+  integral over S(H,H^(1/8+ε)) of |ζ(1/2+it)|^12≤H^(2+ε).
+  The actual measure bound, actual height-cube bound for |ζ|^12 and exact
+  logarithmic layer-cake integral are composed without analytic hypotheses.
+
+`zeta_twelfth_integral_le_high_add_fourth` proves the exact low/high
+reduction: the full twelfth moment on [H,2H] is at most the high-set
+integral plus V^8 times the unweighted fourth moment on [H,2H].
+`zeta_twelfth_dyadic_of_fourth` performs the full deduction but is
+explicitly CONDITIONAL on the genuine upstream estimate
+
+```text
+for every η>0 there exist C≥0 and H₀, chosen before H, such that
+H≥H₀ and H>0 imply integral_H^(2H) |ζ(1/2+it)|^4 dt ≤ C H^(1+η).
+```
+
+That unweighted fourth-moment instance is still OPEN. The foundation's
+`twistedZetaFourthMoment_native` instead bounds the fourth power of a
+short Möbius polynomial multiplied by ζ; its factor cannot simply be
+removed. No mollified result is claimed to prove the unweighted estimate.
+
+The six modules `PointValueRanges`, `PointValueMeasure`,
+`TruncatedLayerCake`, `PointValueTailIntegral`,
+`PointValueHighMoment` and `PointValueLowMoment` are in the root and exact
+production inventory. All 24 public theorems have named audits; 30 new
+regressions cover their exact signatures, boundary cases and the literal
+high-value zeta integral. ZHR/ZHM and the reduction ZLF are DONE; ZGB now
+identifies the missing genuine fourth-moment source theorem. ZTM, ZAT,
+EPZAE-19/21/37, unconditional Add-est and the full EPZAE-00–41 goal remain OPEN.
+No other frozen public output or acceptance test is weakened.
+
+Maintain `run_tao_trudgian_yang_build.bat` and its backing implementation
+as needed, including root imports, exact module coverage, named/exhaustive
+audits and regressions. Run both principal scripts after relevant changes.
+Preserve the counterexample, never restore false s-scaling or a third
+s-preserving witness, and keep the full goal active. No source pin,
+archive or adjacent/native proof was changed in this checkpoint.
+
+### Proof and source audit for this checkpoint
+
+The counting consumer chooses η=min(ε/16,1/1000), retaining the proved
+fourth-root source margin. For nonempty W the actual growth bound gives
+V≤H^(1/6+η); the two weighted count terms become
+D log(3H)^4 H^(2+7η) and D log(3H)^6 H^(2+η).
+All logarithms are absorbed using positive exponent gaps; W=∅ is handled
+explicitly. The cardinality-to-measure proof maximizes finite cardinalities
+in a bounded finite set of naturals and extends an allegedly non-covering
+family by one point. It assumes no compactness or covering theorem that
+already contains the desired measure conclusion.
+
+`TruncatedLayerCake` uses the pinned Mathlib
+`Integrable.integral_eq_integral_Ioc_meas_le` and proves
+integral_0^M C/max(A,t) dt=C(1+log(M/A)) for 0<A≤M.
+The actual restricted measure tail at s is at most C/max(V^12,s);
+the positive twelfth root converts the upper branch to a zeta superlevel.
+The terminal high-set theorem takes η=min(ε/2,1/100), uses the proved
+|ζ|^12≤H^3, and absorbs the remaining logarithm. Every actual point of
+the measurable superlevel set is included; there is no thinning or
+unproved finite-to-continuous aggregation.
+
+The low-set theorem needs no assumption V>0: if that set is nonempty,
+its actual nonnegative norm is less than V. The proof derives
+|ζ|^12≤V^8|ζ|^4 there and integrates over the actual interval complement.
+The full conditional theorem exposes every quantifier of the remaining
+fourth-moment estimate.
+
+No external source revision was added. The Mathlib layer-cake, interval
+integration and real-power APIs and the local actual-zeta source chain
+were inspected directly at the existing pins. The foundation's
+`twistedZetaMomentIntegrand` is
+|shortMobiusPolynomial · ζ|^4, not |ζ|^4; the distinction remains explicit
+in the source obligation and audit.
+
+Verification (2026-09-21): both principal scripts reached terminal exit 0.
+The target reports `LEAN VERIFICATION PASS`: 311 package files, 322 Lean
+files in its integrity scan, 3,232 audited declarations (3,227 discovered
+target theorems plus five imported contracts). All 24 new named audits
+and all 30 added regressions pass. The foundation reports `PASS`: all six
+stages passed, with 14,290 discovered theorems audited. Both final
+evaluations have zero Lean errors, warnings, tactic suggestions or linter
+failures. The counterexample SHA256 is unchanged; source and runner hashes
+were rechecked after both gates. Exact logs, hashes and repaired focused
+diagnostics are in the current Reproduction Manifest. These gates verify
+the high-value bound and explicitly conditional fourth-moment deduction,
+not the missing fourth-moment instance, unconditional Add-est or full goal.
+
+### Terminal high-value moment reproduction record — 2026-09-21
+
+These are fresh terminal results for the six high-value/low-value modules,
+their updated root, audit, regressions and runner inventory. The
+occupancy/growth records above remain historical; their hashes are not
+substituted for this source state.
+
+Commands executed from the indicated roots:
+
+```powershell
+# Target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# E:\Lean\Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes were polled to terminal completion and returned exit code 0.
+No principal stage failed. No final Lean error, warning, tactic suggestion,
+informational-build diagnostic or linter failure remains.
+
+Target terminal evidence:
+
+- Log: [tao-trudgian-yang-build-20260921-025847-e6521065.log](logs/tao-trudgian-yang-build-20260921-025847-e6521065.log).
+- Log SHA256: `3c8dda3e7e35769b374c4e3e83efe2b766eda3116817bd8ee67d8a5ffab97df8`.
+- Final result: `LEAN VERIFICATION PASS`; default build: 9,166 jobs.
+- Inventory: 28 required project files; 20 pinned source files; 12 frozen
+  ANTEDB files; all 311 package Lean files covered; 322 Lean files scanned.
+- Deterministic certificate regeneration and semantic regression: PASS.
+- Exhaustive audit: 3,227 discovered nonprivate target theorems plus five
+  imported contracts, totaling 3,232 declarations. Generated helper
+  declarations are included; this count is not merely the public list.
+- All 24 newly named public audit records were individually checked in
+  the full log. Their only axioms are `propext`, `Classical.choice` and
+  `Quot.sound`. The 30 new semantic examples pass, including each public
+  signature and the unfolded literal high-value integral.
+- Root imports and the backing PowerShell inventory contain each of the
+  six new production modules exactly once. No module is excluded to pass.
+
+Foundation terminal evidence:
+
+- Log: [foundation_freeze_20260921_025848.log](../../logs/foundation_freeze_20260921_025848.log).
+- Log SHA256: `c32d793e65650a09451a148a037eff44b7039fb436c0a3810a40f443267ad0a4`.
+- JSON manifest: [foundation_freeze_20260921_025848.json](../../logs/foundation_freeze_20260921_025848.json).
+- JSON SHA256: `3288cfb50aff5e86f92885444a27fd05e7f8d2edd25a45a720e0b15bb8159ee2`.
+- Canonical verifier SHA256: `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+- JSON status: `PASS`; failures: `[]`. All six process stages have exit
+  code 0, `passed=true`, and zero warning, tactic-info, informational-build
+  and linter-failure counts.
+- Root/default build: 8,857 jobs. Exact publication contract, both retained
+  regression stages, transitive axiom/exact-output audit and declaration
+  linter gate: PASS.
+- Classification: 301 root-graph modules, two explicit regressions,
+  zero excluded and zero unclassified.
+- Audit: 14,290 discovered nonprivate theorems; 7,636 explicit public source
+  declarations. The exact publication types and required outputs pass.
+- Checkout: `main`, commit `bda1d96a12d7eddca30079b59c6dde23a82e90e0`, dirty. Existing owner
+  changes were preserved; no commit, staging or push was performed.
+
+Focused development evidence and repairs:
+
+Each new production module reached a successful focused build before the
+principal evaluation. The final focused
+`lake build TaoTrudgianYang2025.SemanticRegression` completed with 9,166
+jobs and zero diagnostics. Earlier focused attempts exposed real-power
+rewrite/elaboration issues, dependent finite-maximum rewriting, missing
+measurability type annotations, and restricted-integrability field
+resolution. Those were repaired in the source. The final zero-coefficient
+regression initially retained two unnecessary hypotheses and used an
+unnecessary `simpa`; it now proves the stronger hypothesis-free boundary
+case with `simp`. No linter was disabled and no failure was relabeled.
+The principal gates ran after these repairs.
+
+All three repository-wide Lean searches were repeated. There are no
+`sorry`, `admit`, `sorryAx`, `native_decide`, `implemented_by` or
+`unsafe` matches. Raw `axiom|constant` line matches are existing comment
+prose and two rational structure fields, not postulated declarations;
+both principal scanners independently pass. `git diff --check` returns
+0; Git's LF/CRLF notices are line-ending notices, not Lean diagnostics.
+
+The following SHA256 values were rechecked after both terminal gates;
+none changed during verification:
+
+| File (relative to this target folder) | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/PointValueRanges.lean` | `2378a44bd914a0f43a6edb359d927ae2d034773a557be9c0d89815e52146af01` |
+| `Extension/TaoTrudgianYang2025/PointValueMeasure.lean` | `c9f1bf6f9a2dce2044ff2bb67a10977c172079105a8a4cae9350ffac0ab894c4` |
+| `Extension/TaoTrudgianYang2025/TruncatedLayerCake.lean` | `a9f4e2572000c214b754678e84fc14a9dce257a55f0380799572d8d94b288623` |
+| `Extension/TaoTrudgianYang2025/PointValueTailIntegral.lean` | `5e341537293f7c2cb72f1623bcc6413734b726534da58e25640d29a2551f9915` |
+| `Extension/TaoTrudgianYang2025/PointValueHighMoment.lean` | `dbc4e41d8a7fd4c2b574f6fdb5386f24ebb4052addf64b3f50fe9b7580210a9d` |
+| `Extension/TaoTrudgianYang2025/PointValueLowMoment.lean` | `179e029680d98680e00548385f9ae21a15456cc7805d8875f3c95171130d9cf2` |
+| `Extension/TaoTrudgianYang2025.lean` | `135bffb68de5d2de49e6bdf7b16c1bd2508c517d914515134617850655893139` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `932f52e31f099efc802230b2cad772c61700c49230d7df113f877fa2ae8a4ee9` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `c6ea26899c409530c0631a3d1216f6b6d6ad13d3ab7406feb93f948062e83d3d` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `3ec5c45a682b46414bdd7491541bb6fdecd55965f1bd405d4341c5b7c3af0ada` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+
+The preserved obstruction hash still equals
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent witnesses and actual Heath–Brown energy theorem
+were not edited. All eleven target documents are synchronized with the
+verified ZHR/ZHM results, the proved conditional deduction ZLF, and the
+still-open unweighted fourth-moment source ZGB. The full twelfth moment,
+unconditional Add-est and full EPZAE-00–41 goal remain OPEN.
+
+## Actual fourth-moment contour bounds and mixed-line truncation — historical checkpoint
+
+The printed Lemma 62 counterexample is preserved byte-for-byte. The
+authorized corrected cardinality/energy powering, independent ρ/k and
+ρ*/k witnesses (with independent fifth exponents), and actual Heath–Brown
+energy application remain unchanged. False s-scaling is not restored.
+
+The new source is genuinely unweighted zeta. Write
+J(t)=zetaSquareDivisorIntegral(-t)/zetaSquareGammaNormalization(t).
+`zetaSquareNorm_eq_two_re_fourthRightPiece` proves
+|ζ(1/2+it)|²=2 Re J(t), and `zeta_fourth_le_four_mul_rightPiece_sq`
+proves |ζ|⁴≤4|J|². The actual Gamma quotient and pole factors are retained;
+the native mollified fourth-moment theorem is not substituted.
+
+`exists_norm_zetaFourthKernel_le` proves, for each c>0, a constant K_c>0
+chosen before t and u such that t≥4 and t≥4c imply
+|K(t,c+iu)|≤K_c t^c exp(-98u²) on the complete line. Near-height
+Gronwall bounds and far-height Gamma bounds are both consumed.
+A separate, height-dependent strip bound justifies holomorphy,
+integrability and disappearing horizontal sides; it is not advertised
+as the uniform moment bound.
+
+`zetaFourthContribution_line_eq` proves equality of each actual
+integrated ordinary-divisor contribution on any two positive lines.
+`hasSum_zetaFourthContribution` transports the convergent integrated
+series from c=1. This does NOT assert pointwise Dirichlet-series
+convergence to the left of its half-plane.
+
+For t≥0, a,b>0 and any finite S, the actual source now satisfies
+J(t)=Prefix(t,a,S)+Tail(t,b,S). The prefix is proved equal to the
+integral of the finite ordinary-divisor polynomial times the actual kernel.
+For b>3/2, one constant K_b>0 works for all t≥max(4,4b) and all S:
+|Tail|≤K_b t^b Σ_(n∉S) d(n)n^(-1/2-b).
+The displayed positive tail is summable, not an assumed small error.
+`exists_zeta_fourth_le_prefix_add_weightTail` consumes these results
+to bound the literal |ζ|⁴ by eight times the squared prefix norm plus
+eight times the squared displayed tail bound.
+
+Twelve new `ZetaFourth*` modules are root-reachable and in the exact
+production inventory; 53 public theorems have named dependency audits.
+Sixty new regressions cover every signature, zero/empty/singleton cases,
+different contour lines and literal critical-zeta consumers. The final
+principal-runner evidence is recorded below.
+
+Z4K (uniform kernel) and Z4C (actual mixed-line truncation) are supporting
+results, not the unweighted fourth-moment theorem. ZGB still requires the
+finite-polynomial mean square, quantitative cutoff-tail decay and their
+integrated assembly. Thus ZGB/ZTM/ZAT, EPZAE-19/21/37, unconditional Add-est
+and the full EPZAE-00–41 goal remain OPEN. No frozen public contract is
+weakened, and no source pin, archive or adjacent/native proof is changed.
+
+Maintain `run_tao_trudgian_yang_build.bat` and its backing implementation
+as needed: exact module coverage, root imports, named/exhaustive audits and
+regressions are part of the goal. Run it and `run_lake_build.bat` after
+relevant changes; a passing audit establishes integrity, not completion
+of the missing moment or of all advertised Add-est clauses.
+
+### Contour checkpoint scope and repaired focused diagnostics
+
+The twelve new production modules are:
+- `ZetaFourthSource.lean`
+- `ZetaFourthGaussian.lean`
+- `ZetaFourthKernelBasic.lean`
+- `ZetaFourthKernelNear.lean`
+- `ZetaFourthKernelFar.lean`
+- `ZetaFourthKernel.lean`
+- `ZetaFourthContourBounds.lean`
+- `ZetaFourthTerm.lean`
+- `ZetaFourthTermBounds.lean`
+- `ZetaFourthContourShift.lean`
+- `ZetaFourthContributionBounds.lean`
+- `ZetaFourthTruncation.lean`
+
+Focused compilation checked each module. Initial failures were repaired
+in the source: conjugation/norm rewrites, explicit interval endpoints
+and measure, arithmetic normalization, explicit exponential monotonicity,
+complex argument equality, typed composition, real-to-complex negation,
+the zero coefficient's nonnegative real power, nested subtype casts, and
+the regression namespace's topology notation. The strip and contour-limit
+elaboration timeouts were repaired by reducing inference/unification work,
+not by suppressing diagnostics or raising heartbeat limits. No retained
+module has an admitted proof or a weakened theorem to bypass these errors.
+The final principal evaluations below supersede intermediate failures.
+
+The 53 named audits cover every new public theorem, including the actual
+kernel, line independence, convergent series, mixed-line decomposition,
+tail bound and literal fourth-power consumer. The 60 regressions repeat
+all exact public types and add seven boundary/literal-source tests.
+
+Verification (2026-09-21): both principal scripts reached terminal exit 0.
+The target reports `LEAN VERIFICATION PASS`: 323 package files, 334 Lean
+files in its integrity scan, 3,296 audited declarations (3,291 discovered
+target theorems plus five imported contracts). All 53 new named audits
+and 60 added regressions pass. The foundation reports `PASS`: all six
+stages passed and 14,290 discovered theorems audited. Both final
+evaluations have zero Lean errors, warnings, tactic suggestions or linter
+failures. The counterexample is byte-preserved; all source/runner hashes
+were rechecked after both gates. Exact logs, hashes and the repaired
+comment-scanner false positive are in the current Reproduction Manifest.
+These gates verify the actual contour and truncation consumers, not the
+missing fourth-moment integral, unconditional Add-est or the full goal.
+
+### Terminal runner evidence and reproducibility fingerprints
+
+Commands were run from their respective project directories:
+
+```powershell
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+cmd /c run_lake_build.bat --no-pause
+```
+
+- Target log: `logs/tao-trudgian-yang-build-20260921-034938-fb6541dc.log`.
+  SHA256: `d0f74f65a2591581367bd3b27b62dd8d71e89edbb3942c439c663417da5ca44c`.
+  Exit 0; all inventory, pinned-source, frozen-source, shortcut-scan,
+  exact-coverage, deterministic-regeneration, default-build, semantic-
+  regression and transitive-audit gates passed. The default build checked
+  9,178 jobs. Required files: 28; pinned files: 20; frozen ANTEDB files: 12.
+- Foundation log: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_035226.log`.
+  SHA256: `addafe426ab9d3572cccb06c82f0af90670608091152979c271ba67896497426`.
+  Manifest: `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_035226.json`.
+  SHA256: `757001f8ff40b3f62487d2982b7a1db676176f7e715cb4515faed2b53667cab8`.
+  Exit 0, final PASS, failures=[]; all six stage records have exitCode=0,
+  passed=true and zero warning/tactic-info/informational-build/linter fields.
+  Root build: 8,857 jobs; 7,636 explicit public declarations and 14,290
+  discovered theorems audited. Classification: 301 root-graph files,
+  two explicit regressions, zero excluded and zero unclassified.
+- Foundation verifier SHA256:
+  `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+- Git HEAD: `bda1d96a12d7eddca30079b59c6dde23a82e90e0`, branch `main`,
+  dirty working tree. No commit, staging, push or synchronization script
+  was performed. Existing changes were preserved.
+
+Intermediate logs are retained, not relabeled as passing:
+`logs/tao-trudgian-yang-build-20260921-034906-e074b248.log` and
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_034907.log`
+failed the integrity gate because a prose comment line began with
+`constant is ...`. That word was changed to `bound` in
+`ZetaFourthContourBounds.lean`. The mathematical code and scanner rules
+were not weakened; both complete final runs above passed the corrected
+source. This was not a Lean postulate, theorem assumption or ignored
+failure.
+
+Repository scans were repeated: no placeholder or unsafe-bypass matches.
+The 12 raw postulate-pattern matches are the unchanged historical comment
+text and two rational structure fields, not postulated declarations.
+Both semantic integrity scanners pass. `git diff --check` exits 0;
+Git emits its existing LF-to-CRLF conversion notices, not Lean diagnostics.
+All 11 documents were read back and checked against the intended edits;
+all 12 new source files and four integration files were similarly checked.
+The Mermaid nodes are unique and every class refers to a declared node.
+
+Post-gate SHA256 fingerprints (relative to this folder):
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/ZetaFourthSource.lean` | `d50cd2945c7d5d9a421f12b078060031858615e077832286f186f7b9f7dc0698` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthGaussian.lean` | `00b17cb429cce0e7241178f2e51cbed663c7e3a60cb9a9ee5618757220cce89c` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthKernelBasic.lean` | `f1d8da8be34d6085130651ed0a4710f41cf71ee940a046417ad45b2dfc62452a` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthKernelNear.lean` | `d85df3a62c136749cb31faa1ebbd35fa5b550d470443733969552f0064c5e1f0` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthKernelFar.lean` | `5b9eb64798a33ff57f6d571096988cb59544896ad7f137a11f00db437db7078c` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthKernel.lean` | `54299d1fd18edc2d8ec9beb18b314bf6fd876cdc5972a1c08de2b551389eaae1` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthContourBounds.lean` | `a99c80da503e34b080bd45cc6906ad5e09d2b10b6d7a709103ab336c8a03181e` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthTerm.lean` | `de1971a1961aeb33e2598c9af7a74e4bd8b04fc95bd0fe07066f20f2f2c74e94` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthTermBounds.lean` | `9f2949cf698856a20aca69b1c3af948018b7e8e5cec17640e6b062c0bb76113d` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthContourShift.lean` | `08bf9f771e8b5849ba02a27fab2ad03065c9841d8e4ca13659231556eec129b0` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthContributionBounds.lean` | `03b86cdc6bd4be63574050a3078de5e4291066e20767c67dfa392efb3b284645` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthTruncation.lean` | `522f41b28cae8db69cc2ff48bf4bfa5f0dd0e30b12ffd8c6d6f74d7b908033d6` |
+| `Extension/TaoTrudgianYang2025.lean` | `243124cef95ece114f1abe53f6489d02dc4dd133ee0c1e0b21adb034313dd342` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `787da2aaa4df8224ce66dcf079db1ebbdcee5fe8957abe597db188bec936a74b` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `98d9649190a360a985c0ac50ebb8a660a5b82a8545be15868755409eb916b68b` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `322a34031fba8482f1ee30858a402131f1e3c3f55107a2f02c035c7969376ecc` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+
+Only the comment clarification changed a source hash after the first,
+failed gate. All final source/runner hashes match the corrected-source
+snapshot used for the final gates. The counterexample's hash is still
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+## Unweighted moments and Add-est (i) — historical checkpoint
+
+The printed Lemma 62 singleton counterexample is preserved byte-for-byte.
+The corrected theorem still returns independent ρ/k and ρ*/k witnesses,
+with independent existential fifth coordinates. No false s'/s scaling or
+third s-preserving witness is restored.
+
+`zeta_fourth_dyadic` now proves the genuine unweighted estimate: for every
+η>0, constants C≥0 and H₀ are chosen before H, and H≥H₀, H>0 imply
+integral_H^(2H) |ζ(1/2+it)|⁴ ≤ C H^(1+η).
+It consumes the actual normalized divisor-contour source, not the native
+mollified fourth moment and not an assumed fourth-moment bound.
+
+The finite prefix is exactly {1,...,2^M}, including its first coefficient.
+Unit-modulus endpoint twists prove a mean square uniform under every real
+imaginary translation u, including the reflected phase u-t. The ordinary
+divisor coefficient-square bound is derived from the native divisor bound.
+Weighted Cauchy–Schwarz, product integrability and Fubini are proved for the
+actual Gaussian kernel and complete finite polynomial.
+
+The separate right line b=2+2/δ gives an actual bounded tail when
+N≥H^(1+δ), uniformly for H≤t≤2H. A dyadic N between H^(1+q) and
+2H^(1+q), with q=min(η,1)/20, pays the block-count loss. The exact exponent
+1+5q+2q² is at most 1+7q≤1+η. Neither the cutoff error nor the polynomial
+mean square remains a theorem parameter.
+
+`zeta_twelfth_dyadic` applies the installed high/low decomposition to this
+proved fourth moment. For every ε>0 it gives constants D≥0 and H₀ before H:
+integral_H^(2H) |ζ(1/2+it)|¹² ≤ D H^(2+ε).
+`zetaTwelfth_largeValueBound` and its short-height companion discharge
+the actual Perron consumers: LV_ζ≤2τ−12(σ−1/2) for σ≥1/2, τ≥2,
+and for σ≥3/4, τ≥3/2, respectively.
+
+`add_est_i` in `NewAdditiveEnergy.lean` proves the literal printed clause on the entire
+closed interval 3/4≤σ≤5/6:
+
+```text
+A*(σ)(1−σ) ≤ max((18−19σ)/(2(3σ−1)), 4(10−9σ)/(5(4σ−1))).
+```
+
+The actual declarations are `add_est_i`, `add_est_i_bound` and
+`add_est_i_zero_energy` in `NewAdditiveEnergy.lean`.
+The last exposes ∀ε>0 ∃C≥1 ∃δ>0 ∀T≥C, with the genuine shifted zero
+energy at σ−δ, preserving analytic multiplicities and unit tolerance.
+The epsilon--delta bound is proved first; the extended-real infimum
+inequality is its consequence, not a substitute. At σ=3/4 the rate is
+3/2 and A*≤6; at σ=5/6 the rate is 6/7 and A*≤36/7.
+
+The dependency chain consumes corrected powering, the actual Heath–Brown
+energy relation, certified general/zeta optimization, the proved twelfth
+moment, and the proved endpoint-one zero-energy transfer. The separate
+EPZAE-33 endpoint-two theorem is not assumed and remains open.
+
+Seventeen new production modules are root-reachable and explicitly listed
+in the batch runner's inventory. All 49 new public theorems have named
+dependency audits. Sixty-one new regressions cover every public signature,
+literal zeta integrals, coefficient/prefix endpoints, negative translated
+intervals, both LV threshold boundaries and both printed energy endpoints.
+
+ZGB, ZTM and clause (i)'s actual zeta/short-energy consumers are proved.
+The other eight Add-est clauses, their remaining optimization certificates,
+the separate sharp Atkinson source-form theorem, the other EPZAE-19/21
+inputs, and the exponent-pair/density outputs remain OPEN. EPZAE-36/37 and
+the full EPZAE-00–41 goal are not complete; the frozen contract is unchanged.
+
+Keep `run_tao_trudgian_yang_build.bat` and its backing implementation
+synchronized with root imports, exact inventory, named/exhaustive audits
+and regressions. Run it and `run_lake_build.bat` after relevant changes.
+This checkpoint's terminal gate evidence is recorded in the Reproduction
+Manifest; earlier checkpoint PASS records are historical.
+
+Verification (2026-09-21): both principal BAT scripts reached terminal
+exit 0. The target reports LEAN VERIFICATION PASS: 340 package files,
+351 integrity-scanned Lean files and 3,357 audited declarations
+(3,352 discovered target theorems plus five imported contracts).
+All 49 new named audits and all 61 new regressions pass.
+The foundation reports PASS: all six stages passed, with 14,290
+discovered theorems audited. Both final logs contain zero Lean errors,
+warnings, tactic suggestions or linter failures. The counterexample
+SHA256 is unchanged. Exact logs, source/runner hashes and repaired
+focused diagnostics are recorded in the current Reproduction Manifest.
+These gates verify the genuine moments and full-domain Add-est (i),
+not clauses (ii)--(ix) or completion of the full goal.
+
+### Exact terminal reproduction evidence
+
+Both commands were run against the same preserved dirty checkout at
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0` on `main`.
+No commit, staging, push, source-pin edit or adjacent/native proof edit
+was made. The pinned Lean/Mathlib graph is unchanged.
+
+| Command and working directory | Exit / result | Complete log |
+|---|---|---|
+| `cmd /c run_tao_trudgian_yang_build.bat --no-pause`, this folder | 0 / LEAN VERIFICATION PASS | [target log](logs/tao-trudgian-yang-build-20260921-044424-ec93e5ca.log) |
+| `cmd /c run_lake_build.bat --no-pause`, `Riemann Zeta` | 0 / PASS | [foundation log](../../logs/foundation_freeze_20260921_044435.log), [JSON](../../logs/foundation_freeze_20260921_044435.json) |
+
+Target: 9,195 build jobs; 28 required files; all 20 pinned-source checks;
+12 frozen ANTEDB files; deterministic certificate regeneration PASS;
+340 exact package files and 351 source-integrity files. The exhaustive
+audit checks 3,357 declarations, including all 3,352 discovered target
+theorems without generated-name exclusions and the five imported contracts.
+The 49 newly named audits explicitly include `zeta_fourth_dyadic`,
+`zeta_twelfth_dyadic`, both actual LV consumers, `energyClauseOne`
+and all three `add_est_i*` source-facing forms.
+
+Foundation: 8,857 build jobs; root graph 301, explicit regressions 2,
+excluded 0, unclassified 0; 7,636 explicit public declarations and
+14,290 discovered theorems. JSON status PASS, failures [], all six
+stages exit 0 with passed=true and zero warnings, tacticInfo,
+informationalBuilds and linterFailures. The unchanged verifier SHA256 is
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Full-file log hashes after terminal completion:
+
+- Target log SHA256: `25e7dd102de6ad8328781c35055a9d1e3ba0a843cd07abb70e66993153be26b2`.
+- Foundation log SHA256: `a9cc575ef6eef9626d1b41729c54e231441befbc2ad09aab6db2a68bfc422f8f`.
+- Foundation JSON SHA256: `a5d247010855dba0330353d2de5765c1b01f1de1514da073da14ab7c2c5c6c60`.
+
+Both actual proof runs finished normally. A later read-only
+`Get-Content` log-summary command stalled and was cancelled; direct
+.NET file reads and `rg` independently recovered the complete terminal
+evidence and verified the hashes. A read-only process-inspection attempt
+was denied by the environment; no elevated access was needed. Neither
+diagnostic affected or replaced a build or audit gate.
+
+### Semantic completion review
+
+The literal fourth and twelfth regressions unfold
+`zetaMomentCriticalNorm` to the actual `riemannZeta(1/2+it)` norm.
+The fourth theorem retains ∀η>0, ∃C,H₀ before ∀H and has no moment,
+mollifier, cutoff-error or mean-square premise. The complete prefix
+retains n=1 and its exact phase. Its translation estimate is uniform in u;
+the product integral is genuinely integrable before Fubini is used.
+The right-line choice is made before H and the geometric tail is bounded,
+not merely summable. The final dyadic loss fits every positive η.
+
+The twelfth theorem applies the genuine fourth instance to the installed
+actual high/low decomposition. Its downstream Perron consumers use
+physical pattern scales, exact coefficient-one sums and the full original
+epsilon--delta quantifier order. The short-height consumer covers [1,2],
+using actual eventual emptiness below 3/2 and the proved moment above it.
+
+`add_est_i_zero_energy` exposes the actual object:
+`zeroAdditiveEnergy (σ-δ) T` is unit-tolerance additive energy of the
+imaginary ordinates of `ZeroCopy (σ-δ) T`. That sigma type indexes every
+analytic-multiplicity copy of every actual zero with
+σ−δ≤Re ρ≤1 and |Im ρ|≤T. No multiplicity or sign half is dropped.
+`add_est_i_bound` proves the epsilon--delta predicate; `add_est_i`
+then uses its infimum consequence and 1−σ>0. The printed two-function
+maximum and both closed endpoints are unchanged.
+
+The proof term consumes `energyClauseOne_of_dyadic_moment` with
+`zeta_twelfth_dyadic`. Its general half reaches
+`InCardinalityEnergyRegion.energyClauseOneGeneral`, which applies the
+actual corrected cardinality cap and `heathBrown_powered`. The zeta
+half reaches `energyClauseOneZeta_public_rate_bound_of_twelfth` with
+proved cardinality. The final zero transfer is the proved endpoint-one
+consumer. The independently open endpoint-two theorem is not an input.
+
+### New production scope and final file hashes
+
+Every listed module is explicitly imported by the root and appears once
+in the production inventory. Every public theorem is named in Audit.lean;
+FourthTwelfthMomentRegression has 49 exact-signature tests plus 12 literal
+and boundary tests. All files were read back after the gates.
+
+| File relative to this folder | SHA256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/ZetaFourthTailPower.lean` | `4a5c8290119d7e9976c403bd50f2c0d7b436dcaef3b597bade05629c423f9a26` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthTailScale.lean` | `57a0a503f86545b23100f465027b4b4e4ca9e4f2bd4a29d6a6f986976a5695ad` |
+| `Extension/TaoTrudgianYang2025/DirichletMeanSquareTranslation.lean` | `219ef321fb3aa0d2c5e30b80d3586df69a8d95ebd45edc2f8473b661fcf8d551` |
+| `Extension/TaoTrudgianYang2025/DirichletPrefixBlocks.lean` | `b8ab2338d5d8409567fd585f3c162260643682c77341040c7a441ca931c3942d` |
+| `Extension/TaoTrudgianYang2025/DirichletPrefixMeanSquare.lean` | `1b9bf16835ce1ec19ab20554d75c1db606689f2fad11a3da8f81bb930692ee35` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthCoefficients.lean` | `f93b600d52fb7d4c7d65db14b7539ad8a4a5dbae47aed763c62e940ae8e74583` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthCoefficientMass.lean` | `4241aeb875f038992326efb1f4afe59459d5ccd2058b65d357a430597e74746a` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthPolynomialMean.lean` | `85a4af1a9bbb422fb21d16d515addc1ef99b3534aec3e79f7ad6f42624d82909` |
+| `Extension/TaoTrudgianYang2025/WeightedIntegralSquare.lean` | `eb10c388900e55238146a4157835d55b1c096291e65935f7ea1ea2fd01d1c5f2` |
+| `Extension/TaoTrudgianYang2025/DirichletPrefixBounded.lean` | `2230ad35621a0716ac81529db4ed4ceccefa62e677a8bc110aca8efd1292c1da` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthPrefixGaussian.lean` | `461bb6151125d7bd9a014eb91af6d4c1bd393079e96e614b05f9110a0d705887` |
+| `Extension/TaoTrudgianYang2025/GaussianPrefixMean.lean` | `95d13ae8988d12935cb5cf643cadd478627ab1ba5433d678875e3d5d1de3e26f` |
+| `Extension/TaoTrudgianYang2025/DyadicMomentCutoff.lean` | `e0d1be00b83554e487d8ce6dcb50000fc92c12df085f10b829a25827bf5dd4ce` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthDyadicBudget.lean` | `6c5712e2ecd6a92815a87a5e94efbef33d22c4a30f4944d8b622b49bc5132ec9` |
+| `Extension/TaoTrudgianYang2025/ZetaFourthMoment.lean` | `5f41c7fd87af6cdd55c6a9d53ae4258d9c1570fe9735ddc60c156ac29e81d538` |
+| `Extension/TaoTrudgianYang2025/ZetaTwelfthMoment.lean` | `6f40b139af99b18f671668044a4480fc148e9dbbeb5ace28475e7f1abb066f6b` |
+| `Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean` | `5e1d272e573d4c657e38dc1a9d2198b5b017a836cbac77b4db9cb99b45601126` |
+| `Extension/TaoTrudgianYang2025.lean` | `a6736e041b7a6c775aae468939e5b27a313bba992a38d5e965f4ab8bf888b4cd` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `f7b6e109ace726e923341ee827bc49ecf8e2c9fdbfb87f9124ea2582a9f92677` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `d3881110404608a612d950c4ead451971c1e746f6f8218e51038faf394898132` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `ccd499ab7219ca2a1f19f5ab508eeb35613e2ba1ab6a1d0938561e244af0ad86` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+
+### Failed focused attempts repaired before the principal gates
+
+Early focused builds exposed real-power/cast normalizations, typed
+integrability and finite-function-sum elaboration issues, and two
+misinferred inequality multipliers in the final fourth assembly.
+The proofs were repaired without weakening signatures, adding premises,
+raising a heartbeat limit or suppressing diagnostics. The first new
+regression build emitted five unnecessary-sequence-focus warnings.
+Those five sites were simplified; the two genuinely multi-goal
+extended-real endpoint tests retain their required goal sequencing.
+The final focused SemanticRegression build and both principal runs
+contain no Lean warning, error, tactic suggestion or linter failure.
+
+Repository-wide scans for placeholders and unsafe proof bypasses return
+exit 1 with no matches. The broad textual postulate scan returns the same
+12 historical non-declarations as the previous checkpoint: ten comment
+lines and two rational structure fields. Their sorted match set is
+unchanged; both semantic postulate scanners pass. `git diff --check`
+returns exit 0. Git's pre-existing LF/CRLF conversion notices are not
+Lean diagnostics and are not concealed. No proof-integrity gate was
+narrowed or bypassed.
+
+This establishes kernel/project completion of the genuine moments and
+Add-est (i), not all of EPZAE-19/21/36/37, all nine clauses, the separate
+sharp Atkinson source theorem, or the active full EPZAE-00–41 goal.
+
+## Add-est (ii): repaired powering to actual zero energy — verified checkpoint
+
+Printed Lemma 62 remains disproved. Its singleton counterexample is
+byte-preserved (SHA256 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`).
+The authorized replacement still uses independent cardinality-preserving
+ρ/k and energy-preserving ρ*/k witnesses with independent existential fifth
+coordinates. No false s'/s scaling or third witness is restored.
+
+`add_est_ii`, `add_est_ii_bound`, and `add_est_ii_zero_energy` in
+`NewAdditiveEnergy.lean` prove the complete second printed clause on
+the closed interval 7/10 ≤ σ ≤ 3/4:
+
+```text
+A*(σ)(1−σ) ≤ max(5(18−19σ)/(2(5σ+3)), 2(45−44σ)/(2σ+15)).
+```
+
+The actual shifted-zero epsilon--delta bound is proved first, with analytic
+multiplicity and unit-tolerance energy retained. The extended-real
+infimum inequality follows from it. At σ=7/10 the rate is 47/26 and
+A*≤235/39; at σ=3/4 the rate is 16/11 and A*≤64/11.
+These endpoint checks supplement, not replace, the full interval proof.
+
+For general patterns, `energyClauseTwo_general_bound` proves the rate on
+2≤τ≤4. Actual mean-square and Guth--Maynard cardinality consumers use the
+ρ/k witness at k and k+1. The actual Heath--Brown relation uses independent
+energy witnesses at k and k−1, where k is two or three. All nine affine
+branches are checked; the exceptional branches consume the first powered
+energy inequality. Every height and coordinate is linked to its original
+region point. Compactness promotes the region result to a uniform bound.
+
+For zeta patterns, sixth-order decay is applied to the actual critical
+Mellin integrand. Both the residue and the complete far tail
+240 C₆ N^(11/2)/T⁴ are retained before absorption at T≥N^(11/8).
+`zetaTwelfth_lower_short_largeValueBound` consumes the proved dyadic
+twelfth moment and this entry bridge for σ≥7/10, τ≥7/5.
+Actual cancellation gives eventual emptiness for 1≤τ<2σ on the clause
+interval; mean-square powering and the twelfth-moment cap handle
+2σ≤τ≤2 through nine exact branches with crossing τ=4σ−1.
+`energyClauseTwo_short_zeta` therefore supplies all of [1,2].
+
+`energyClauseTwo` composes the two uniform ranges with the already proved
+endpoint-one bounded-range zero-energy transfer. The separate printed
+endpoint-two transfer (EPZAE-33) is neither assumed nor marked complete.
+Clause (i) remains proved. Clauses (iii)--(ix), the remaining optimization
+projections, the source-form sharp Atkinson obligation, the other
+EPZAE-19/21 inputs, and the exponent-pair/density/release outputs remain OPEN.
+EPZAE-36/37 and the full EPZAE-00–41 objective are unchanged and incomplete.
+
+Eleven new production modules are root-reachable and explicitly included
+in the principal runner inventory. Eighty-four new public theorems have
+named dependency audits; 92 added regressions cover all signatures and
+literal physical/source endpoints. Keep `run_tao_trudgian_yang_build.bat`
+and its backing inventory synchronized; run it and `run_lake_build.bat`
+after relevant changes. Current gate evidence belongs in the Reproduction
+Manifest; earlier PASS records are historical.
+
+Verification (2026-09-21): both principal BATs reached terminal exit 0.
+The target reports LEAN VERIFICATION PASS: 351 package files, 362
+integrity-scanned Lean files and 3,504 audited declarations (3,499 discovered
+target theorems plus five imported contracts). All 84 new named audits and
+92 new regressions pass. The foundation reports PASS: all six stages passed
+and all 14,290 discovered theorems were audited. Final logs contain zero
+Lean errors, warnings, tactic suggestions or linter failures. The
+counterexample and all 18 recorded source/runner hashes were rechecked.
+Exact log paths and hashes appear in the current Reproduction Manifest.
+These gates verify full-domain Add-est (ii), not the other seven clauses or
+completion of the unchanged whole-proof goal.
+
+### Exact terminal reproduction evidence
+
+Commands (PowerShell, pinned Lean 4.30.0; each process was followed to terminal
+completion without restarting it on an observation timeout):
+
+```powershell
+# From this folder
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# From E:\Lean\Riemann Zeta
+cmd /c run_lake_build.bat --no-pause
+```
+
+Target: exit 0, LEAN VERIFICATION PASS. Log:
+`logs/tao-trudgian-yang-build-20260921-053556-5589399e.log`.
+SHA256: `fb9185625bca8946eb2df4131662fb61a6cf035bfaf17e477defc3bf31dc6150`.
+The default build checked 9,206 jobs; inventory, all 20 pinned source
+files, 12 frozen ANTEDB files, deterministic regeneration, semantic
+regressions, complete production coverage and transitive audits passed.
+
+Foundation: exit 0, PASS; 8,857 default-build jobs.
+Log: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260921_053607.log`.
+SHA256: `e74290168d4451c36dd90d7e11411cf2a5190964670235e053bd1dc3ac92bfed`.
+JSON: `E:\Lean\Riemann Zeta\logs\foundation_freeze_20260921_053607.json`.
+SHA256: `829c24464b95219cd239ef4f5becb3bfdd49d26f3ac2da173ed77ad4e311a22e`.
+The JSON reports `failures: []` and all six stages passed with zero errors,
+warnings, tactic suggestions, informational-build flags or linter failures.
+Root classification remains 301 production graph files and two explicit
+regressions, with zero exclusions or unclassified files. The audit covers
+14,290 discovered theorems and the 7,636-entry explicit public list.
+The canonical verifier SHA256 is unchanged:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+Focused final checks:
+`lake build TaoTrudgianYang2025.NewAdditiveEnergy` (9,185 jobs) and
+`lake build TaoTrudgianYang2025.SemanticRegression` (9,206 jobs)
+both exited 0 without Lean diagnostics. The earlier diagnostic-producing
+development attempts were repaired: explicit right-hand division rewriting,
+separate finite branch certificates, exact vector reduction, an explicit
+max-form cardinality cap, and three regression tactic sequencing fixes.
+No warning suppression or heartbeat-limit change was used.
+Large console audit output was truncated only by the tool display; both
+complete log files were separately inspected.
+
+All three prescribed repository-wide `rg` scans were run. Placeholder
+and unsafe-bypass scans returned no matches (exit 1, the normal rg no-match
+status). The postulate text scan's twelve historical matches are unchanged:
+ten comment lines and two rational structure fields, no postulate.
+Both semantic postulate scanners passed. `git diff --check` passed after
+removing spaces from blank Mermaid comment lines. Git's existing LF/CRLF
+conversion notices are not Lean diagnostics.
+
+HEAD remains `bda1d96a12d7eddca30079b59c6dde23a82e90e0` on main, dirty.
+Existing changes were preserved. No staging, commit or push was performed.
+The frozen source archives, toolchain and dependency pins are unchanged.
+The existing batch launcher is unchanged; its backing inventory now includes
+every added production module. Below are the post-gate SHA256 values.
+
+| Relative file | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/EnergyCardinalityBounds.lean` | `90ef35e4bb89f8feeeb2e241963b0b1585b15ddda5588a0368decaa318ab7722` |
+| `Extension/TaoTrudgianYang2025/HeathBrownNineBranches.lean` | `d00575434667b097750db1f85bf01417df8288a0eb0cb9f9308c5b3995272497` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseTwoCaps.lean` | `de063ea0b7661b360dd78f4215a2df2017cb7378c0acbfde3d506d1b363cb697` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseTwoCertificates.lean` | `2779886a11573b4bf0d75d0345050d11af475b3e73d177df00d15675550aac92` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseTwoGeneral.lean` | `89f12cb7593f2f6524ae318c6c37984bd2d0854ee0e5064ddd237b2f0989cb9b` |
+| `Extension/TaoTrudgianYang2025/ZetaSixthLocalization.lean` | `a0d040661e8126228e85ca51341e0abc5aa314fb7a247f5f258e5731ed657d67` |
+| `Extension/TaoTrudgianYang2025/ZetaSixthPerron.lean` | `ca77305944ca94143a336fc28b97f4eac51394965ffcbd99b6d31dc4e8bd51b9` |
+| `Extension/TaoTrudgianYang2025/ZetaBelowTwiceSigma.lean` | `452297b938780ad88c9b0002181acf41ba530d240f4c9b69511714a943f47ccb` |
+| `Extension/TaoTrudgianYang2025/ZetaTwelfthLowerShort.lean` | `db52774c4523c3c34707cbe323392df07b65b993914fd341414dfd5d4c603fc2` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseTwoZetaCertificates.lean` | `ed8db93eeafb1e9b9c924390627dae9435d732439187e3b0170e48d05c5dec9e` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseTwo.lean` | `2a3817177d81eda4b1a8505cbb382e7a48471a59c669c0dd0e390932da5697a5` |
+| `Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean` | `f3b7af4193160e9f8fa57de2d379d0b812aaaa278d0641deea57b9e95957b012` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `Extension/TaoTrudgianYang2025.lean` | `ac91bd52729c6141edde0e72bb3e5ceb58ff65f7b0eebfb98a63ad7672bee777` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `749c622ed557e31bca625e75dba5198f3f611dfbfd49b0517abd6633af5ec9d0` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `b1550d042427b7992afe6e88299c4600f3525a2bdd67841970f65c63aa385f20` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `1c45aa2fb38d5dd6df5485d6d331f40bcb1eb10edf3fc443fe656ae1d7b20c21` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+
+Semantic acceptance: the public `add_est_ii_zero_energy` quantifies
+epsilon, then constants and a positive shift, then every sufficiently large
+height, for the actual multiplicity-weighted shifted zero energy.
+Its proof term consumes the genuine moments, actual Mellin entry,
+independent corrected witnesses and the proved endpoint-one transfer.
+A rational certificate, endpoint check, positivity statement or assumed
+target predicate is not substituted for this conclusion. EPZAE-36/37,
+the distinct endpoint-two theorem and the full goal remain open.
+
+## Jutila source entry and uniform powered moments — verified checkpoint
+
+The printed Lemma 62 counterexample is preserved unchanged. Corrected
+independent cardinality and energy witnesses remain the only powering
+replacement. Full Add-est (i) and (ii) remain proved; (iii)--(ix) remain OPEN.
+
+Four new production modules advance the missing EPZAE-19 Jutila input:
+`JutilaGram`, `JutilaPatternEntry`, `JutilaPoweredMoments`, and
+`JutilaReflectedEntry`. They do **not** yet prove Jutila's large-values
+estimate or another Add-est clause.
+
+`jutila_smooth_amplified_gram` proves actual phase-aligned smoothed duality,
+removes the diagonal before Hölder, and gives, for every positive integer k,
+either R V² ≤ 2N² or R² V^(4k) ≤ (2N)^(2k) times the actual off-diagonal
+2k-th trace moment. No moment or cardinality bound is assumed.
+
+`LargeValuePattern.jutila_gram_entry` consumes an actual source pattern.
+Its fixed smoothed subfamily retains at least a third of the ordinates,
+the exact threshold (V−1)/3, unit separation, the actual height, and
+N/2 ≤ Q ≤ 2N. The spaced consumer keeps the explicit packing loss
+6(2⌈δ⌉+1). `jutila_reflected_pattern_entry` then consumes complete native
+reflection on that same subfamily, with one common dual cutoff M.
+The main factor uses the actual |u−t|. Mellin truncation, omitted-frequency,
+and zero-mode errors all remain in `jutilaReflectionEnvelope`.
+
+`jutila_weighted_power_moment_uniform` proves the actual critical-line
+2k-th ordered-difference moment bound. With U=2^k N^k and R=|W|, its RHS is
+C (U^η)² T^ε (R² + R U + R^(5/4) T^(1/2)).
+C and the height threshold depend only on k, ε, η, and are chosen before
+N, T, W. The proof consumes the uniform divisor bound, actual powered
+coefficients, dyadic decomposition, coefficient majorant, and the proved
+native weighted Heath--Brown theorem. That second-moment theorem is an
+input to this deduction, not a substitute for Jutila's large-values theorem.
+
+Remaining: pass from complete reflected prefixes to uniformly bounded
+powered difference moments, sum the reflected integrals with all errors,
+and perform the local-to-global large-values optimization. Then establish
+the actual region and uniform exponent consumers before using them in the
+seven remaining energy optimizations. EPZAE-19, 33, 36, 37 and the full
+EPZAE-00–41 goal remain open; the distinct endpoint-two transfer, source-form
+sharp Atkinson obligation, and other exponent-pair/density/release tasks
+are unchanged.
+
+The four modules are included in the root and the exact production
+inventory of `run_tao_trudgian_yang_build.bat`. Thirteen new public theorems
+have named audits and sixteen regressions cover their exact signatures,
+literal diagonal removal, the k=13 power, and all reflected error terms.
+Keep that BAT and its backing inventory synchronized, and execute it and
+`run_lake_build.bat` after relevant changes. Terminal verification evidence
+for this checkpoint is recorded below and in the Reproduction Manifest.
+
+Source check (2026-09-21): the frozen paper cites Matti Jutila,
+“Zero-density estimates for L-functions,” Acta Arithmetica 32(1)
+(1977), 55–62, equation (1.4). The original
+[PDF](https://matwbn.icm.edu.pl/ksiazki/aa/aa32/aa3216.pdf) and publisher
+download returned HTTP 403; no downloaded Jutila PDF was added or pinned.
+The author's [1975–76 survey](https://www.numdam.org/item/SDPP_1975-1976__17_1_A6_0.pdf)
+identifies the reflection and coefficient-majorant inputs. Exact formulas
+were also checked in the existing local Ivić scan, PDF pages 180–184
+(printed pages 175–179), §9.5–6, especially (9.38)–(9.44).
+That scan is read-only in node 74's Sources folder; it is not a new pinned
+dependency of this package. Current code uses the already pinned native
+reflection, divisor, and weighted moment proofs, not an external oracle.
+
+Verification (2026-09-21): both principal BAT runners reached terminal exit 0.
+The target reports LEAN VERIFICATION PASS: 355 package files, 366
+integrity-scanned Lean files, and 3,530 audited declarations (3,525 discovered
+target theorems plus five imported contracts). All 13 new named audits and
+16 new regressions pass. The foundation reports PASS: all six stages passed
+and all 14,290 discovered theorems were audited. Final logs contain zero
+Lean errors, warnings, tactic suggestions, or linter failures. All eleven
+recorded source/runner hashes were rechecked unchanged after the gates,
+including the original counterexample. Repository scans found no forbidden
+proof terms; the twelve raw postulate-pattern matches are the same ten
+comments and two rational structure fields already reviewed. Git
+`diff --check` passes (Git's LF/CRLF notices are not Lean diagnostics).
+Exact commands, logs and hashes are in the Reproduction Manifest.
+These gates verify the Jutila entry and powered-moment inputs, not the
+remaining Jutila large-values theorem, other seven Add-est clauses, or
+completion of the unchanged whole-proof goal.
+
+### Terminal gate ledger: Jutila source entry
+
+Commands, from their respective project directories:
+
+```powershell
+$env:ELAN_HOME = 'C:\Users\Naraphim\.elan'
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# From E:\Lean\Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Target: terminal exit 0, LEAN VERIFICATION PASS, 9,210 default-build jobs;
+28 required files, 20 pinned source files, 12 frozen ANTEDB files,
+deterministic regeneration, exact production inventory, regressions,
+integrity scans and dependency audit all PASS.
+Log (relative to this folder):
+`logs/tao-trudgian-yang-build-20260921-061345-f7f93a41.log`.
+Final log SHA256: `4672beda06ad2761716e3ca16dccb033fbf3a1941cfbfffeab9680014c8255f6`.
+
+Foundation: terminal exit 0, PASS; 8,857 default-build jobs; all six stages
+have exitCode=0, warnings=0, tacticInfo=0, linterFailures=0, passed=true;
+failures=[]. Classification remains 301 root-graph modules, two explicit
+regressions, zero excluded or unclassified modules. The audit includes
+7,636 explicit public declarations and 14,290 discovered theorems.
+Log (relative to the foundation): `logs/foundation_freeze_20260921_061356.log`.
+Final log SHA256: `b74be8e66b2477c7c668ae4cfebef8c7ae5d44eb044e7eee91a89cbf7c940340`.
+JSON manifest: `logs/foundation_freeze_20260921_061356.json`.
+JSON SHA256: `edd3e3162298730ab85452b9f7d94916070427865b61b5d711e201cf7c95e3e2`.
+Verifier SHA256 remains
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+All thirteen new named public audits were checked in the terminal target
+log; none is missing. Their only axioms are the permitted standard
+`propext`, `Classical.choice`, and `Quot.sound`.
+The exact-signature examples and three literal regressions compile cleanly.
+
+Focused development initially encountered the missing ELAN_HOME setting,
+then ordinary elaboration issues (cardinality normalization, a finite
+diagonal-sum rewrite, factor order, power cancellation, and a separation
+argument). The first exact-type regression draft exposed unused
+quantified-binder diagnostics and an unspecified k; the final tests apply
+every binder explicitly and fix k=13. All diagnostics were repaired at
+source. No linter option, heartbeat limit, theorem domain, audit coverage,
+or runner gate was weakened. One new Mermaid-comment whitespace issue was
+also repaired; final `git diff --check` has exit 0.
+
+Post-gate hashes, re-read from the actual files (relative paths use this
+folder unless absolute):
+
+```text
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+64a4dddac32cc592a59201ae03813fe41d4e1004c7ce9db2b08660a84745639c  Extension/TaoTrudgianYang2025.lean
+dc94e1299aecc53135d8632ff5a7644d229b8b34f42770ca9431f728c016c4cb  Extension/TaoTrudgianYang2025/Audit.lean
+33d4d91553d9920790e489d94f8cb4896c76118b98808c9b708cb65488715fe0  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+4399a563fcd53d0ec7166edd4288c09b85af4c99d877502245ba7a7dceabc5a6  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+Semantic gate: `jutila_reflected_pattern_entry` starts from an actual
+`LargeValuePattern`, constructs the smoothed and δ-separated subfamily,
+and consumes the native complete fixed-length reflection theorem before
+raising and summing its full envelope. The moment theorem starts from the
+actual `heathBrownWeightedPowerMoment` and composes the uniformly quantified
+divisor bound with the native weighted mean square. The connection from
+these two proved inputs through reflected-prefix moments and the final
+large-values optimization remains explicitly OPEN. No additional Add-est
+row or EPZAE completion box is claimed by this verification.
+
+Working tree remains dirty, with 135 reported entries confined to this
+target folder; existing work was preserved. No commit, staging, push, or
+goal-status reduction was performed.
+
+## Jutila reflected-prefix moments and near/far assembly — verified history
+
+The printed Lemma 62 counterexample is preserved unchanged. The corrected
+independent cardinality and energy witnesses remain the only powering
+replacement. Full Add-est (i) and (ii) remain proved; (iii)--(ix) remain OPEN.
+
+Six new production modules advance EPZAE-19: `JutilaPolynomialMoments`,
+`JutilaPrefixMoments`, `JutilaReflectionIntegrals`, `JutilaTraceBins`,
+`JutilaBinnedPatterns`, and `JutilaHybridPatterns`.
+
+`jutila_source_power_moment_uniform` handles arbitrary unit coefficients,
+with constants chosen before their values and the physical length.
+`jutila_reflected_prefix_moment_uniform` consumes the actual complete
+reflected prefix, including n=1. With U=(2M)^k, R=|W|, and L=ceil(log₂ M),
+its bound is C (L+1)^(2k) U (U^η)² T^ε
+(R² + R U + R^(5/4) T^(1/2)). The constant is uniform in M, T, W and
+the translation parameter. Neither the initial term nor a power of U is
+discarded.
+
+`jutila_reflected_bin_integral_moment_uniform` applies interval Jensen and
+the proved full ordered-pair majorant before restricting to a difference
+bin. Its extra interval factor is exactly (2H)^(2k).
+`jutila_binned_pattern_bound` connects those estimates to the actual
+source pattern, with bin-dependent positive dual lengths and all Mellin,
+omitted-frequency, and zero-mode errors retained.
+
+`jutila_hybrid_pattern_bound` additionally consumes native square-root
+cancellation of the complete nonzero Poisson tail below the stationary
+scale, keeping the separate zero-mode decay. Above that scale it uses the
+actual ceiling length max(1,ceil(2^j H/Q)). The same subfamily retains
+the packing loss 6(2 ceil(δ)+1), threshold (V−1)/3, N/2 ≤ Q ≤ 2N, the
+actual height, and δ-separation. The condition 4H ≤ δ derives reflection
+admissibility on occupied bins; it is not an independently assumed bin
+estimate. The three new majorant definitions are notation, not proofs.
+
+Remaining: bound this explicit near/far sum at source scale, absorb all
+errors and logarithmic losses uniformly, perform the local-to-global
+large-values optimization, and prove the exponent/energy-region consumers.
+The target remains
+LV(σ,τ) ≤ max(2−2σ, τ+4−2/k−(6−2/k)σ, τ+(6−8σ)k), k ≥ 1.
+Only then can k=13 enter Add-est (iii) and the other remaining optimizations.
+EPZAE-19, 33, 36, 37 and the full EPZAE-00–41 goal remain open. The distinct
+endpoint-two transfer, sharp source-form Atkinson bridge, exponent-pair,
+density, and release obligations are unchanged.
+
+All six modules are root-imported and included in the exact inventory
+behind `run_tao_trudgian_yang_build.bat`. Seventeen new public theorems have
+named audits; 23 regressions cover their exact signatures, the n=1 term at
+k=13, zero interval width, the literal ceiling, and both schedule branches.
+Both that BAT and `run_lake_build.bat` remain required evaluation gates.
+This is finite-scale proof progress, not completion of Jutila or another
+Add-est clause.
+
+Verification (2026-09-21): both principal BAT runners reached terminal
+exit 0. The target reports LEAN VERIFICATION PASS: 361 package files, 372
+integrity-scanned Lean files, and 3,564 audited declarations (3,559 discovered
+target theorems plus five imported contracts). All 17 new named audits and
+23 regressions pass. The foundation reports PASS: all six stages passed,
+with 14,290 discovered theorems audited. Final logs contain zero Lean
+errors, warnings, tactic suggestions, or linter failures. All seventeen
+recorded source/build hashes are unchanged after the gates, including the
+original counterexample. Repository scans find no forbidden proof terms;
+the twelve raw postulate-pattern matches are the previously reviewed ten
+comments and two rational structure fields. Git `diff --check` passes.
+Exact commands, logs, hashes, and the corrected initial scan failure are
+recorded in the Reproduction Manifest. These checks certify the stated
+finite-scale scope, not the remaining Jutila exponent, seven Add-est
+clauses, or completion of the unchanged whole-proof goal.
+
+### Commands and terminal evidence
+
+From the target folder, and then from the foundation, respectively:
+
+```powershell
+$env:ELAN_HOME = 'C:\Users\Naraphim\.elan'
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+# From E:\Lean\Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Target: terminal exit 0, LEAN VERIFICATION PASS, 9,216 default-build jobs.
+All 28 required files, 20 pinned sources, 12 frozen ANTEDB files, exact
+production coverage, deterministic regeneration, regressions, integrity
+scans, and transitive audits passed.
+Log relative to this folder: `logs/tao-trudgian-yang-build-20260921-064926-2dea053d.log`.
+Final log SHA256: `6f51f46bc294535c45557fa33bae60c62e2c16797d0cafd3e3cdda7051de4ec0`.
+
+Foundation: terminal exit 0, PASS, 8,857 default-build jobs. All six stages
+have exitCode=0, warnings=0, tacticInfo=0, linterFailures=0, passed=true;
+failures=[]. Classification remains 301 root-graph modules, two explicit
+regressions, zero excluded or unclassified modules. The audit covers
+7,636 explicit public declarations and 14,290 discovered theorems.
+Log relative to the foundation: `logs/foundation_freeze_20260921_065150.log`.
+Final log SHA256: `25830e1e13caaa5974116b30d44d0cc6846d36d160eda97b18c4195aa4d9de4d`.
+JSON manifest: `logs/foundation_freeze_20260921_065150.json`.
+JSON SHA256: `a3eb38e1ea7238243ef2a8e670feb7d0dcc5f1038180a68a3eec34036ee481e3`.
+Verifier SHA256 remains `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+All seventeen new public names were checked in the terminal target log;
+none is missing. Their only axioms are the permitted standard
+`propext`, `Classical.choice`, and `Quot.sound`. The 17 exact-signature
+tests and six literal boundary/schedule regressions compile cleanly.
+
+Initial verification honestly failed: both first BAT runs rejected a
+comment line beginning with the postulate keyword in
+`JutilaPrefixMoments.lean:8`. The prose was reworded; neither scanner was
+changed. Those historical failures are retained in
+`logs/tao-trudgian-yang-build-20260921-064836-a2a86209.log` and the
+foundation's `logs/foundation_freeze_20260921_064838.log`. Both complete
+reruns above test the corrected source and reached terminal exit 0.
+
+Focused elaboration also required ordinary finite-sum/power rewrites and
+style-warning fixes. The final hybrid-pattern theorem has a local
+400,000-heartbeat elaboration budget after the default budget timed out.
+This changes computation time only; no theorem domain, proof obligation,
+linter, inventory, or audit gate was weakened. No warning is suppressed.
+
+Post-gate hashes, reread from the actual files, are unchanged from the
+pre-terminal snapshot (paths relative to this folder unless absolute):
+
+```text
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+e9bc7dd30fa2e5953d41c454a7473bdee25bee186a56d14b190ff9d552947a6b  Extension/TaoTrudgianYang2025.lean
+e9417cc5f9141998dd7dc98d744610f95d0b399b195d0fe96f6802bb7f5de255  Extension/TaoTrudgianYang2025/Audit.lean
+9276ebbbb794d4576d1bec62f2a6aa7eec81b2027615463feb9b56e4578939b3  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+437b66be410eb50d26e1e57363ac724ffeb990920edfcf358f3cf45b7167f2c5  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+Semantic gate: `jutila_hybrid_pattern_bound` consumes an actual
+`LargeValuePattern`, constructs its smoothed and spaced subfamily, then
+uses the powered Gram alternative and the exact off-diagonal bin
+partition. Near bins consume the native square-root nonzero-tail theorem
+and separate zero-mode decay. Occupied far bins obtain their reflection
+conditions from separation, use the literal ceiling dual length, and
+consume complete reflection and the uniform prefix integral theorem.
+The latter uses arbitrary-coefficient powering, uniform divisor bounds,
+the actual weighted Heath--Brown theorem, and interval Jensen. None of
+these numerical bounds appears as a theorem hypothesis.
+
+The current green nodes JPF and JHB name only these proved finite-scale
+conclusions. JRF remains OPEN for source-scale error/loss absorption,
+local-to-global optimization, and the actual LV exponent. No additional
+Add-est clause or whole-checklist item is marked complete.
+
+The final working tree has 141 reported entries, all confined to this
+target folder; earlier work is preserved. No staging, commit, push, source
+pin change, or goal-status reduction was performed.
+
+## Jutila physical-scale smoothing and uniform pattern bounds — current checkpoint
+
+The printed Lemma 62 counterexample remains byte-for-byte unchanged. The
+authorized independent cardinality and energy witnesses remain the powering
+replacement. Full Add-est (i) and (ii) remain proved; (iii)--(ix) remain OPEN.
+
+Seven new production modules advance EPZAE-19: `JutilaDualScales`,
+`JutilaPhysicalMain`, `JutilaPhysicalPatterns`, `JutilaSmoothingErrors`,
+`JutilaSmoothingProfile`, `JutilaSmoothingLosses`, and
+`JutilaSmoothedPatterns`.
+
+`jutila_reflection_main_core_le` cancels each actual powered dual length
+against its own displacement denominator before imposing the common cap.
+`jutila_physical_pattern_bound` consumes the complete near/far pattern
+theorem, retaining all main terms, logarithmic/divisor costs, and sharp
+reflection errors. The common ceiling is used only for losses.
+
+Native smoothing uses H=max(1,ceil(T^θ)) and derivative order
+q=max(2,ceil(4/θ)+1). The zero mode and all three reflection errors are
+controlled by proved native estimates, not assumed numerical certificates.
+The smoothing-error bridge explicitly requires Q≤2T. The complete profile
+is uniformly O(T^(2θ)); its full powered cost, including the bin count,
+is O(T^((16k+3)θ)). The actual thinning cost is at most 108 T^θ.
+
+`jutila_smoothed_pattern_bound` chooses positive B and T₀≥2 before every
+actual `LargeValuePattern`. For scale≥30, V>1, T≥T₀, and **N≤T**, it
+constructs a subset W of the reflected ordinates and Q with N/2≤Q≤2N.
+Writing R=|W| and V'=(V−1)/3, the original count is at most B T^ν R,
+W is 1-separated in the actual height interval, and either
+
+- R (V')² ≤ 2Q²; or
+- R² (V')^(4k) ≤ B T^ν (2Q)^(2k)
+  (R²Q^k + R T^k + R^(5/4) T^(1/2) Q^k).
+
+This holds for every k≥1 and ν>0. The choice of θ absorbs both losses
+without changing the physical height or assuming the desired LV estimate.
+The N≤T restriction derives Q≤2T and is not silently removed.
+
+Remaining: solve the cardinality recurrence with its value threshold,
+cover the complementary short-height range, perform the local-to-global
+optimization, and prove the actual uniform LV and energy-region consumers.
+The unchanged target is
+LV(σ,τ) ≤ max(2−2σ, τ+4−2/k−(6−2/k)σ, τ+(6−8σ)k).
+Only then can k=13 enter Add-est (iii) and the other seven-clause work.
+EPZAE-19, 33, 36, 37 and the whole EPZAE-00–41 goal remain open. The
+distinct endpoint-two transfer, sharp source-form Atkinson, exponent-pair,
+density and release obligations are unchanged.
+
+All seven modules are root-imported and included in the exact inventory
+behind `run_tao_trudgian_yang_build.bat`. Twenty-one new public theorems
+have named audits. Twenty-seven regressions cover every exact signature
+plus the actual k=13 source-pattern consumer, its three literal terms,
+the empty-family boundary, ceiling padding, genuine zero-mode decay,
+and the derived thinning cost. Both that BAT and `run_lake_build.bat`
+remain mandatory; build integrity is separate from source completeness.
