@@ -95,8 +95,23 @@ Installed and planned tools:
   are covered by the root and batch inventory. Nine further modules
   prove the actual amplitude variation, phase-adjusted main-integral
   bound and its physical-source removal, leaving the complete Y0 sum.
-  Their 38 public audits and 20 regressions are included. The remaining
-  Y0 asymptotic and uniform stationary estimates, sharp Atkinson inequality
+  Their 38 public audits and 20 regressions are included. Thirteen further
+  required modules prove the literal Y0 ray and two-term expansion,
+  sum its actual arithmetic remainder and consume the complete replacement
+  in both physical zeta theorems. All 71 public audits and 25 regressions
+  are covered by the same root and exact inventory gate. Ten further
+  required modules prove uniform signed-carrier cancellation, actual
+  power-weight bounds, exact four-carrier algebra and integrability,
+  complete-series summability and both physical zeta consumers.
+  Their 43 public audits and 24 regressions are included in the same
+  root and backing inventory. The summand majorants are not used as
+  summable arithmetic bounds. Four further modules and the generalized
+  weighted-primitive helper prove the actual far-frequency gain,
+  a summable majorant for the complete correction, its `C G`
+  bound and leading-only physical zeta consumers. Their 19 new
+  public audits and 16 regressions are in the same root/inventory
+  gates. Leading stationary main values and sharper leading tails,
+  sharp Atkinson inequality
   and genuine twelfth moment remain open, not assumed or excluded;
 - `run_tao_trudgian_yang_build.bat` -- human-facing wrapper at the project root, with
   `--no-pause` support for agents and CI.
@@ -104,3 +119,173 @@ Installed and planned tools:
 Every tool must print the exact input pins and preserve complete stdout/stderr
 in the reproduction log. A tool exit code is not proof evidence unless its
 output is consumed by a Lean kernel-checked certificate theorem.
+
+## Second-order Fourier and finite-source coverage
+
+The root and backing inventory now also cover fifteen modules from
+`ZetaQuadraticGaussianSecondDerivative` through `AtkinsonFiniteSource`.
+All 59 new public theorems have named audits, and 20 additional semantic
+regressions check the actual amplitude, both signed source frequencies,
+scale boundaries, zero coefficients and physical finite-source signatures.
+This earlier tail gate proves C G for N≥T^10. The source-scale truncation
+coverage below now supplies the shorter cutoff.
+No incomplete module is excluded and no warning gate is weakened.
+
+Keep `run_tao_trudgian_yang_build.bat` and its backing inventory
+synchronized; run it and `run_lake_build.bat` after relevant changes.
+The Reproduction Manifest records terminal verification evidence.
+
+## Finite stationary reduction coverage
+
+The root and exact PowerShell inventory now cover twelve additional modules
+from `AtkinsonSaddleNormalization` through `AtkinsonStationaryPhysical`.
+All 71 public theorems have named dependency audits. The 22 new regressions
+cover both phases, (-1)^n, zero frequency/window, equal paired Gaussians,
+closed G²=2T and n=T damping boundaries, both logarithmic-remainder
+endpoints, natural derivative scale and actual full-source consumers.
+Physical saddle-window containment is derived for 10000n≤T.
+
+No source hash, dependency pin, exclusion or warning gate changed.
+Keep `run_tao_trudgian_yang_build.bat` synchronized as this chain changes;
+both it and `run_lake_build.bat` remain required. A passing runner checks
+this finite-window scope. Fresnel evaluation is now proved below;
+sharp Atkinson, the genuine twelfth moment and unconditional Add-est
+outputs remain open.
+
+## Fresnel evaluation and source power-saving coverage
+
+Nine additional production modules, `ContinuousKernelPrimitive`,
+`FresnelDampedTails`, `FresnelGaussianComparison`, `FresnelAbelLimit`,
+`FresnelEvaluation`, `AtkinsonStationaryMain`,
+`AtkinsonStationaryEvaluation`, `AtkinsonEvaluatedPhases` and
+`AtkinsonStationaryPowerSaving`, are root-imported and explicitly
+inventoried. All 35 public theorems have named audits; 16 regressions
+check zero damping, branch choice, both signs, the closed power-balance
+boundary and actual uniform source consumers.
+
+No warning gate, source pin or exclusion changed. Maintain
+`run_tao_trudgian_yang_build.bat` and its PowerShell inventory as this
+chain grows; execute it and `run_lake_build.bat` after relevant changes.
+A PASS verifies this per-carrier scope, not sharp summed stationary errors,
+the twelfth moment or unconditional Add-est. See the Reproduction Manifest.
+
+## Source-scale truncation coverage
+
+The eleven modules from `AtkinsonSaddleSupport` through
+`AtkinsonSourceCutoff` are explicitly inventoried and root-imported.
+All 53 public theorems have named dependency audits.
+The 22 new regressions cover actual endpoint vanishing, both slope signs,
+closed G²=2T and frequency thresholds, literal ceiling values and the
+uniform physical zeta and retained-index stationary consumers.
+
+The runner now covers a complete source-scale leading-tail estimate,
+not only the older N≥T^10 truncation. No warning gate, source pin or
+exclusion changed. Maintain `run_tao_trudgian_yang_build.bat` and its
+PowerShell inventory; execute it and `run_lake_build.bat` after relevant
+changes. Kernel integrity does not close summed stationary errors,
+the genuine twelfth moment or unconditional Add-est.
+
+## Symmetric stationary summation coverage
+
+The ten modules from `StationaryOddRemainder` through
+`AtkinsonStationaryZetaSource` are root-imported and explicitly inventoried.
+All 43 public theorems have named audits. The 24 regressions include
+both amplitude endpoints, both logarithmic Taylor endpoints, the
+small/large exponential-error branches, reversed odd-integral orientation,
+closed radius balances, the empty divisor prefix, literal cutoff 18,
+complete stationary-series support and exact uniform physical consumers.
+
+Keep `run_tao_trudgian_yang_build.bat` and its backing PowerShell inventory
+synchronized; execute it and `run_lake_build.bat` after relevant changes.
+Their integrity verdict does not close smaller source widths, final main
+assembly, the twelfth moment or unconditional Add-est. No diagnostic gate
+or exclusion changed.
+
+## Normalized main and partial-summation checkpoint
+
+Five new modules, 30 named audits and 24 regressions derive the actual
+common fourth-root coefficient from the original saddle power, curvature
+and Bessel constants. Both signed main sums retain separate cutoff/Mellin
+weights. Only the raw phase sums are conjugated.
+
+The actual weights have a proved uniform bound
+C G T^(-1/4) n^(-1/4) exp(-G²n/(12T)) on n≤T,
+T,G,L>0, G²≤2T and 8L≤G. The exact Abel bound retains literal finite
+weight differences. Both physical zeta consumers are linked to the same
+explicit source cutoff and normalized mains. Errors remain
+Cδ,ε(G log T+T^(1/4+ε)) for G≥T^(1/4), or Cδ,κ G log T above
+T^(1/4+κ), within the original power-width range.
+
+The continuation below proves uniform damped variation and the actual
+source-block bound. Global dyadic/Gram assembly, smaller source widths or
+a proved lower-value-range reduction, and the genuine twelfth moment remain open. No unconditional Add-est clause is closed.
+The original counterexample and corrected powering/Heath–Brown chain
+are unchanged. The exact `run_tao_trudgian_yang_build.bat` inventory
+is synchronized; maintain it and rerun both principal evaluation scopes.
+
+## Damped variation and source-block checkpoint
+
+Six new modules, from `FiniteWeightVariation` through
+`AtkinsonPhaseBlockBound`, have 36 named public audits and 24 regressions.
+The actual Gaussian increments telescope against a decreasing real
+envelope. Ordered actual saddle samples, the constructed Mellin bound,
+both original cutoff transitions and the decreasing fourth-root
+coefficient give uniform variation for both separate normalized weights.
+
+`exists_finiteVariationBound_atkinsonMainWeights` bounds both the
+supremum on indices 0..N and the adjacent-difference sum by
+C G T^(-1/4) m^(-1/4) exp(-G²m/(12T)), for
+T,G,L>0, G²≤2T, m>0 and 10000(m+N)≤T.
+No 8L≤G condition or conjugacy of residual weights is assumed.
+
+The actual stationary Bessel/divisor block at m..m+N-1 is bounded by
+that same shape times the maximum of the actual raw phase partial sums,
+with a larger uniform C. `exists_atkinsonSourceCutoff_block_bound`
+derives its small-frequency and scale conditions for every retained
+block from the original power-width range and the exact source ceiling
+cutoff, beyond a δ-dependent threshold.
+
+ZVB records these proved consumers; the continuation below also proves
+global dyadic assembly. The phase-sum/Gram bound, smaller-width stationary errors or a proved
+lower-value-range reduction, and the genuine twelfth moment remain open.
+The block theorem has no fourth-root-width restriction; the earlier
+stationary-error/zeta consumer still does. No unconditional Add-est
+clause or full EPZAE-00--41 completion is claimed.
+
+The original counterexample and independent-coordinate powering/
+Heath–Brown chain are unchanged. The exact
+`run_tao_trudgian_yang_build.bat` root/audit/PowerShell inventory is
+synchronized; maintain it and rerun both principal evaluation scopes.
+See the Reproduction Manifest for the semantic audit and terminal evidence.
+
+## Complete dyadic-source checkpoint
+
+Three new modules, `TruncatedDyadicPartition`, `AtkinsonDyadicMain`
+and `AtkinsonDyadicZetaConsumer`, have 20 named public audits and
+24 regressions. The exact partition uses M=2^j and block length
+min(M,N-M), for j<clog(2,N). Every retained endpoint stays at or below
+the original cutoff; zero/one cutoffs and exact powers of two are covered.
+
+The actual complete stationary Bessel/divisor series is now bounded by
+C G T^(-1/4) times the sum of
+M^(-1/4) exp(-G²M/(12T)) times the actual block phase-prefix maximum.
+The same source ceiling cutoff supplies every block's small-frequency
+geometry. Enlarging only the last raw phase maximum to a full block
+does not enlarge the stationary source.
+
+Four Gaussian/local-mean consumers use this complete dyadic bound.
+Their error remains Cδ,ε(G log T+T^(1/4+ε)) for G≥T^(1/4), or
+Cδ,κ G log T for G≥T^(1/4+κ), within the original power-width range.
+The stationary-main bound itself has no fourth-root-width restriction.
+ZDA records this exact assembly and these physical consumers.
+
+Global dyadic assembly is now proved. The maximal phase-sum/Gram
+estimate, the source-form bridge, smaller-width errors or a proved
+lower-value-range reduction, and the genuine twelfth moment remain open.
+No unconditional Add-est clause or full-goal completion is claimed.
+
+The counterexample and corrected powering/Heath–Brown chain are unchanged.
+Maintain the synchronized root, audits, regressions and exact backing
+inventory of `run_tao_trudgian_yang_build.bat`; run it and
+`run_lake_build.bat` after relevant changes. The Reproduction Manifest
+records the separate semantic and terminal integrity evidence.

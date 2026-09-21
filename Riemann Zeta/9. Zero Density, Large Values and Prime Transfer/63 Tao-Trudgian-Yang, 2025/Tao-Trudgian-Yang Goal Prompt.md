@@ -821,7 +821,7 @@ complex and variable; its required derivative bounds may not be
 silently discarded.
 
 The following continuation proves the **phase-adjusted** main-term
-estimate. Continue with literal Y0 asymptotic reduction, uniform
+estimate. The literal Y0 expansion is now proved below. Continue with uniform
 amplitudes and tails, then the sharp
 Atkinson inequality and physical dyadic/Gram assembly. The genuine
 twelfth moment, EPZAE-21/37 and every unconditional `Add-est`
@@ -899,8 +899,8 @@ paid for by proved bounds; no amplitude, transform-error or moment
 theorem is a parameter. The old unadjusted integral is not used in
 place of the new source.
 
-Next prove the literal Y0 asymptotic expansion and the uniform
-oscillatory stationary reduction, retaining the complex amplitude
+The literal Y0 expansion is now proved and consumed below. Next prove
+the uniform oscillatory stationary reduction, retaining the complex amplitude
 and complete arithmetic tails. The sharp Atkinson inequality,
 physical dyadic/Gram assembly, genuine twelfth moment, EPZAE-21/37
 and every unconditional `Add-est` output remain open.
@@ -912,6 +912,257 @@ intact. Keep all nine modules, 38 named audits and 20 regressions
 covered by `run_tao_trudgian_yang_build.bat`, update its backing
 inventory as needed, and run it together with `run_lake_build.bat`
 after Lean changes. Neither the goal nor verification scope is narrowed.
+
+
+### Literal Neumann expansion and complete two-term zeta source
+
+Thirteen production modules now prove and consume a two-term expansion
+of the literal native `dfiBesselY0`. This is a kernel-checked source
+component of EPZAE-21, not completion of that item or of Add-est.
+They have 71 named public theorem audits and 25 semantic regressions.
+
+The entry is proved from the existing Schläfli integral definition.
+`NeumannContourKernel`, `NeumannContourShift` and
+`NeumannSchlafliEntry` construct a Cauchy rectangle, prove absolute
+integrability of its vertical rays and vanishing of the top side,
+and pass the angular endpoint to the ray through one. The separate
+principal powers `(1-z)^(-1/2)(1+z)^(-1/2)` keep both branches
+explicit. `NeumannLaplaceRepresentation` cancels the actual
+Schläfli tail and gives an exact decaying-ray formula for Y0.
+
+`NeumannLaplaceAmplitude` proves, for every real u,
+
+```text
+|(1+iu)^(-1/2) - 1 + iu/2| ≤ 3u²/8.
+```
+
+`NeumannRayFactorization` links that amplitude to the actual ray.
+`NeumannLaplaceMoments` evaluates its three required moments by
+the Gamma integral and proves the exact coefficient `(1+i)/2`.
+`NeumannLaplaceRemainder` integrates the error only after proving
+integrability. `NeumannTwoTermExpansion` defines
+
+```text
+P(x) = sqrt(pi)/pi *
+       ((sin x-cos x) x^(-1/2) - (sin x+cos x) x^(-3/2)/8),
+K = (2/pi) (9/128) sqrt(pi) > 0,
+|Y0(x)-P(x)| ≤ K x^(-5/2),  for every x>0.
+```
+
+The sign and both coefficients are exact; the error is proved, not
+a DLMF assumption. `NeumannSourceBounds` proves measurability and
+links `x≥T/16`, `T≥16`, `n≥1` to the literal argument
+`4pi sqrt(nx)`. Its error is at most
+`K T^(-5/4) n^(-5/4)`.
+
+`ZetaNeumannRemainder` uses the actual phase-adjusted test
+`gA=zetaAtkinsonDivisorTest(T,G,L)`. Both retained kernels and
+their difference are integrable; the uniform mass bound gives a
+remainder integral at most `C G n^(-5/4)`.
+`ZetaNeumannSeries` consumes native Voronoi summability of the
+original branch and the genuine ordinary-divisor series at 5/4.
+It handles the zero coefficient explicitly and proves summability
+of the complete new series
+
+```text
+W(T,G,L) = sum_n d(n) (-2pi) integral_(x>0) gA(x) P(4pi sqrt(nx)) dx,
+|VY_A(T,G,L)-W(T,G,L)| ≤ C G.
+```
+
+The latter bound holds uniformly for `T≥16`, `G>0`,
+`G²≤2T`, `L>0`, `8L≤G`. It is a complete arithmetic
+replacement, not a finite-index or pointwise-only statement.
+
+`ZetaAtkinsonTwoTermSource` derives all source scale hypotheses
+at `L=log T` and consumes this replacement in the actual zeta
+theorems. For each δ>0, one Cδ>0 and threshold T₀≥16 work for
+every `T≥T₀` and `T^δ≤G≤T^(1/2-δ)`:
+
+```text
+|integral_R exp(-((t-T)/G)²) |zeta(1/2+it)|² dt - 2 Re W(T,G,log T)|
+  ≤ Cδ G log T,
+integral_(T-G)^(T+G) |zeta(1/2+it)|² dt
+  ≤ 2 exp(1) Re W(T,G,log T) + Cδ G log T.
+```
+
+The public consumers are
+`exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation`
+and `exists_zetaSquareLocalMean_le_atkinson_twoTerm`. They assume
+no amplitude, Bessel-expansion, summability, stationary-phase or
+moment theorem. All actual source constants and normalizations
+are retained.
+
+Next evaluate this oscillatory series with uniform stationary
+estimates for both signs, the actual complex amplitude and the
+complete arithmetic tails. Exact saddle geometry alone does not
+supply this estimate. The sharp Atkinson inequality, physical
+dyadic/Gram assembly, genuine critical-line twelfth moment,
+EPZAE-21/37 and every unconditional Add-est output remain open.
+
+The original Lemma 62 counterexample remains byte-for-byte preserved.
+The full EPZAE-00--41 goal and corrected independent-coordinate
+powering/Heath–Brown chain are unchanged. Keep all thirteen modules,
+71 named audits and 25 regressions in the root import graph and
+the backing inventory of `run_tao_trudgian_yang_build.bat`.
+Run that exact interface and `run_lake_build.bat` after Lean,
+audit or inventory changes; neither verification scope is narrowed.
+
+### Uniform signed-carrier bounds on the actual source
+
+Ten further production modules prove frequency-uniform cancellation
+for the actual power-weighted source, identify all four retained
+Neumann carriers, and consume the complete series in the physical
+zeta theorems. They have 43 named public theorem audits and 24
+semantic regressions.
+
+With `x=y²`, the exact normalized carrier is
+`q(T,b,y)=(T/pi)log y-y²+2by`.
+`zetaAtkinsonPhase_sq` proves the identity with the original
+carrier, including its `2pi` normalization.
+`AtkinsonRootPhase` differentiates q and its slope and factors
+the slope at the actual positive saddle root r:
+
+```text
+q'(y)=2(r-y)(1+(r-b)/y),   r-b>0.
+```
+
+`AtkinsonFirstDerivative` consumes the pinned native monotone
+reciprocal-slope estimate in both orientations. Beyond r±1 the
+slope has magnitude at least 2. `AtkinsonRootIntegral` combines
+the two tails with a central interval of length at most 2, proving
+
+```text
+|integral_a^c exp(2pi i q(T,b,y)) dy| ≤ 4
+for every T>0, b real, and 0<a≤c.
+```
+
+`AtkinsonAmplitudeIntegral` proves that the square substitution
+preserves the actual derivative-norm integral. Integration by parts
+then gives the weighted bound `8M` for a concrete C1 amplitude
+whose supremum and total variation are at most M.
+`AtkinsonPowerWeight` constructs that bound from the actual
+cutoff, rescaled power/Mellin profile, unit Gamma factor and
+damped quadratic Gaussian. No amplitude estimate is a source premise.
+
+`AtkinsonPowerIntegral` proves the positive-support restriction
+and exact Jacobian identity. Its public consumer
+`exists_norm_atkinsonPowerIntegral_le` gives, for every fixed
+real α, one Cα>0 such that
+
+```text
+Iα(T,G,L,b)=integral_(x>0) gA(x) x^(-α) exp(4pi i b sqrt(x)) dx,
+|Iα(T,G,L,b)| ≤ Cα G T^(-α)
+```
+
+for all `T>0`, `G>0`, `G²≤2T`, `L>0`, `8L≤G`
+and every real b. In particular both `b=±sqrt(n)` are covered.
+
+`AtkinsonCarrierAlgebra` and `AtkinsonCarrierIntegrals`
+identify the actual two-term Neumann integral with its four
+quarter-power carriers. Integrability is proved before using
+linearity. The leading coefficients are `-(1±i)/2`;
+the correction coefficients are `(1∓i)/2`, with the original
+outer `sqrt(pi)/pi`, minus sign and `1/8` correction retained.
+The Bessel-argument powers are linked to x and n exactly.
+The full series retains `d(n)(-2pi)`, handles n=0 and is
+proved summable by equality with the already convergent actual source.
+
+`AtkinsonCarrierBounds` consumes the uniform integral estimates
+in `exists_norm_zetaAtkinsonTwoTerm_le`. One pair C,D>0 works
+for every admissible source and every natural n:
+
+```text
+|twoTermSummand(n)| ≤ |d(n)| G
+  (C T^(-1/4)n^(-1/4) + D T^(-3/4)n^(-3/4)).
+```
+
+`AtkinsonCarrierSource` proves
+`exists_zetaSquarePhysicalGaussian_carrier_approximation` and
+`exists_zetaSquareLocalMean_le_carriers`. They retain the complete
+signed-carrier series, source factors 2 and 2 exp(1), and the same
+uniform `Cδ G log T` error on `T^δ≤G≤T^(1/2-δ)`, beyond
+one threshold. They assume no analytic theorem.
+
+These are cancellation bounds and exact source identities, not a
+stationary main-value asymptotic. The displayed per-summand
+majorants are not summable over all n and are never used as if they
+were. Next prove the sharper far-frequency estimates and arithmetic
+tail control, then the actual stationary main values with their
+uniform source-scale error. The sharp Atkinson inequality, physical
+dyadic/Gram assembly, genuine twelfth moment, EPZAE-21/37 and all
+unconditional Add-est outputs remain open.
+
+Keep these ten modules, 43 public audits and 24 regressions in the
+root and backing inventory of `run_tao_trudgian_yang_build.bat`;
+run it and `run_lake_build.bat` after relevant changes. Preserve
+the original Lemma 62 counterexample byte-for-byte and the proved
+independent-coordinate powering/Heath–Brown chain. The full
+EPZAE-00--41 goal and both verification scopes remain unchanged.
+
+### Complete correction removed; leading source retained
+
+Four further production modules and a generalized weighted-primitive
+lemma now prove the required summable correction estimate.
+There are 19 new named public theorem audits and 16 semantic
+regressions, in the root and exact batch-runner inventory.
+
+`AtkinsonFrequencyTail` proves that on the full square-root
+support `[sqrt(T/16),sqrt(T)]`, every `b≥8sqrt(T)` has
+
+```text
+q'(T,b,y) ≥ b,     q'(T,-b,y) ≤ -b.
+```
+
+Both phases have decreasing slope. The pinned native
+first-derivative estimate and the proved actual amplitude variation
+give `|Iα(T,G,L,±b)|≤Cα G T^(-α)/b`.
+This holds on `T>0, G>0, G²≤2T, L>0, 8L≤G`.
+`IntervalC1Bound.atkinsonRoot_of_primitive_bound` supplies
+the weighted deduction; the earlier frequency-uniform bound is
+also now a consumer of that proved lemma.
+
+`AtkinsonCorrectionBounds` uses the uniform bound for
+`sqrt(n)<8sqrt(T)` and the reciprocal-frequency gain in the
+complement, including the equality boundary. For T≥1 the actual
+correction pair has norm at most `C G/sqrt(n)` for n>0.
+Its exact `n^(-3/4)` coefficient supplies the missing decay:
+
+```text
+|correctionTerm(n)| ≤ C G |divisorDirichletTerm(5/4,n)|,
+|completeCorrection| ≤ C G.
+```
+
+The zero coefficient is handled separately. The genuinely
+convergent ordinary-divisor series at 5/4 proves absolute
+summability. `AtkinsonLeadingSeries` identifies the exact
+leading-minus-correction decomposition and proves summability
+of the complete leading source from the actual two-term source.
+Neither phase, complex coefficient nor `d(n)(-2pi)` factor
+is discarded. `exists_norm_zetaAtkinsonTwoTermSum_sub_leading_le`
+consumes the full correction estimate, not just a pointwise bound.
+
+`exists_zetaSquarePhysicalGaussian_atkinson_leading_approximation`
+and `exists_zetaSquareLocalMean_le_atkinson_leading` now retain
+only the complete leading signed-carrier series. They preserve
+source factors 2 and 2 exp(1) and uniform `Cδ G log T` error
+on `T^δ≤G≤T^(1/2-δ)`, beyond one threshold, with no
+analytic theorem premise.
+
+This closes the complete correction removal, not the leading
+stationary main values or a sharp tail estimate for the leading
+series. Those remain next, followed by the sharp Atkinson
+inequality and physical dyadic/Gram assembly. The genuine twelfth
+moment, EPZAE-21/37 and all unconditional Add-est outputs remain
+open; the full EPZAE-00--41 goal is unchanged.
+
+Keep these four modules, the weighted-primitive helper, all 19
+audits and 16 regressions covered by
+`run_tao_trudgian_yang_build.bat`; update its backing inventory
+and rerun it and `run_lake_build.bat` after relevant changes.
+Preserve the original counterexample byte-for-byte and the proved
+independent-coordinate powering/Heath–Brown chain.
+
+
 
 ## Source and dependency boundary
 
@@ -1104,3 +1355,526 @@ A release may be called complete only when all of the following pass:
 Until then, use the status terms **planned**, **defined/stated**,
 **conditionally proved**, or **kernel-checked helper** as appropriate. Do not
 say the paper or any advertised output is formalized.
+
+### Actual second-order Fourier tails and finite leading source
+
+Fifteen further production modules construct the actual second derivatives,
+apply Fourier integration by parts, and consume the resulting arithmetic
+tail in both physical zeta theorems. All 59 public theorems have named
+dependency audits; 20 additional regressions check the actual source,
+both frequency signs, closed scale boundaries, zero coefficients and
+uniform source-consumer signatures.
+
+For fixed real α, the new amplitude retains the power/Mellin profile,
+actual exponential-edge cutoff, unit Gamma factor, quadratic Gaussian
+and nonlinear phase. Its positive-root extension is smooth and supported
+in [1/4,1]; the existing band supplies a neighbourhood of zero on which
+it vanishes. No extra cutoff or assumed derivative bound is introduced.
+On T≥1, G>0, G²≤2T, L≥1 and 8L≤G, its constructed C2 bound has
+size Cα G T^(-α) and derivative scale T. The actual Gaussian second
+derivative and both cutoff transition-width lower bounds are proved.
+
+With ψ(u)=2log(u)-2pi u², the exact source identity is
+
+```text
+Iα(T,G,L,b) = 2sqrt(T) exp(i T log T) Fourier(Fα)(-2b sqrt(T)).
+(1+|ξ|)² |Fourier(Fα)(ξ)| ≤ Cα G T^(-α) T².
+b² |Iα(T,G,L,b)| ≤ Cα G T^(-α) T sqrt(T).
+```
+
+The source's square-root Jacobian, both signed frequencies and constant
+unit phase are preserved. Native Fourier integration by parts is consumed
+only after actual global smoothness, support and derivative bounds are proved.
+The exact leading coefficient then gives
+
+```text
+|leadingTerm(n)| ≤ C G T^(5/4) |divisorDirichletTerm(5/4,n)|,
+|leadingSum - sum_(n<N) leadingTerm(n)|
+  ≤ C G T^(5/4) N^(-1/8)      (N>0),
+|leadingSum - sum_(n<N) leadingTerm(n)| ≤ C G    (N≥T^10).
+```
+
+The true ordinary-divisor Dirichlet series at 9/8 sums the tail.
+`exists_zetaSquarePhysicalGaussian_atkinson_finite_approximation` and
+`exists_zetaSquareLocalMean_le_atkinson_finite` consume it on
+T^δ≤G≤T^(1/2-δ), beyond one threshold depending only on δ>0,
+for every natural N≥T^10. They retain the actual finite leading integrals,
+source factors 2 and 2exp(1), and uniform Cδ G log T error, with no
+analytic theorem premise.
+
+This closes a **coarse polynomial truncation**, not the sharp Atkinson
+inequality. The later continuations below prove evaluated stationary mains
+and source-scale localization. A sufficiently strong summed stationary error
+and final main assembly still precede sharp Atkinson and the physical
+dyadic/Gram argument. The genuine twelfth moment, EPZAE-21/37 and all
+unconditional Add-est outputs remain open.
+The full EPZAE-00--41 completion contract is unchanged.
+
+Maintain all fifteen modules, 59 named audits and 20 regressions in the
+root graph and backing inventory of `run_tao_trudgian_yang_build.bat`;
+update that runner as needed and rerun it and `run_lake_build.bat`
+after relevant changes. Preserve the original Lemma 62 counterexample
+byte-for-byte and the proved independent-coordinate powering/Heath–Brown chain.
+
+### Actual finite-window stationary reduction and paired source phases
+
+Twelve further production modules, from `AtkinsonSaddleNormalization`
+through `AtkinsonStationaryPhysical`, now have 71 named public theorem
+audits and 22 semantic regressions. The original counterexample and the
+proved independent-coordinate powering/Heath–Brown chain are unchanged.
+
+The actual positive saddle r=r(T/(2pi),b) satisfies r(b)r(-b)=T/(2pi).
+The source logarithmic argument log(r²)-log(T/(2pi)) is exactly
+2arsinh(b/(2sqrt(T/(2pi)))); the literal source
+phase f(T,n) is linked to both b=±sqrt(n), including (-1)^n and both
+pi/4 signs. The two actual quadratic Gaussians agree. On G²≤2T,
+T>0 and G>0 their norm is bounded by
+sqrt(pi) G exp(-G² n/(12T)) for n≤T. The cutoff and Mellin weights
+at the two saddles are retained separately, not assumed conjugate.
+
+Unlike the earlier Fourier amplitude, the stationary amplitude does
+not include the nonlinear phase. Its constructed C2 size is
+Cα G T^(-α) and derivative scale G/sqrt(T), on the actual root support.
+The proof uses the true Gaussian damping in Q' and Q'', with fixed
+profile, cutoff, power and unit Gamma factors. The cubic logarithmic
+remainder gives the actual kernel error 4T|y-r|³/r³ on |y-r|≤r/2.
+The outer weighted integrals are bounded using the actual total
+variation and the proved reciprocal-slope test.
+
+Write c=1+(T/(2pi))/r² and
+F(c,H)=integral_(-H)^H exp(-2pi i c z²) dz. The finite main term is
+
+```text
+Mα(T,G,L,b,H) = 2 Wα(T,G,L,r²) exp(2pi i q(T,b,r)) F(c,H).
+|Iα - Mα| ≤ Cα G T^(-α)
+  [4/(pi H) + 4(G/sqrt(T)) H² + 16T H⁴/r³].
+```
+
+`exists_atkinsonPowerIntegral_finite_stationary_approximation`
+proves this for all fixed real α, with one Cα before T,G,L,b,H,
+on T>0, G≥1, G²≤2T, L≥1, 8L≤G, H>0,
+[r-H,r+H]⊆[sqrt(T)/4,sqrt(T)] and H≤r/2.
+It starts at the actual positive-support carrier integral, not a
+separately supplied local integral or an assumed stationary estimate.
+
+`exists_atkinsonPowerIntegral_small_n_pair_approximation` derives
+all saddle/window conditions for both b=±sqrt(n) from
+10000n≤T and H≤sqrt(T)/12. Its common bound replaces
+16T H⁴/r³ by 432H⁴/sqrt(T). The signed-main identities consume
+the exact phase and Gaussian bridges. The finite quadratic window
+has not been replaced by an unproved Fresnel value.
+
+The Fresnel limiting value, quantitative finite-window tail and sharp
+source-scale localization are proved in the continuations below.
+A sufficiently strong summed stationary error and final main assembly
+remain before the sharp Atkinson local-mean inequality and physical
+dyadic/Gram argument. This reduction does not prove the genuine twelfth moment. EPZAE-21/37, all unconditional
+Add-est outputs and the full EPZAE-00--41 goal remain open.
+
+Maintain all twelve modules, 71 named audits and 22 regressions in
+the root and backing inventory of `run_tao_trudgian_yang_build.bat`;
+update it as needed and rerun it and `run_lake_build.bat` after
+relevant changes. Preserve Lemma 62's counterexample byte-for-byte,
+the two separate corrected witnesses and every frozen public output.
+
+### Evaluated Fresnel main terms and physical power saving
+
+Nine additional modules, from `ContinuousKernelPrimitive` through
+`AtkinsonStationaryPowerSaving`, now replace the finite quadratic window
+by its proved limiting value. All 35 public theorems have named audits;
+16 new regressions cover zero damping, the square-root branch, both
+phase signs, the closed power-balance boundary and actual source consumers.
+
+For c>0 and H>0 the locally proved statements are
+
+```text
+F(c,H) -> (1-i)/(2sqrt(c)) = exp(-i pi/4)/sqrt(2c),
+|F(c,H) - exp(-i pi/4)/sqrt(2c)| <= 2/(c H pi).
+```
+
+The proof uses genuinely integrable positive-damping Gaussians, a
+damping-uniform tail, and a zero-damping limit on each finite interval.
+It does not assert a whole-line Lebesgue integral at zero damping.
+
+`exists_atkinsonPowerIntegral_stationary_approximation` consumes that
+tail and the constructed saddle amplitude. Its evaluated main is
+Mα = 2 Wα(r²) exp(2pi i q(T,b,r)) exp(-i pi/4)/sqrt(2c).
+The error retains the previous bracket with a larger uniform Cα.
+`AtkinsonEvaluatedPhases` proves both actual signed identities:
+the positive phase is exp(if(T,n)); the negative is -i exp(-if(T,n)).
+Both retain (-1)^n, the central phase and their separate cutoff/Mellin
+profiles, with the actual shared quadratic Gaussian.
+
+Choosing H=T^η/12, for 0<η≤1/10 and 1≤G≤T^(1/2-3η), gives
+
+```text
+|Iα(T,G,L,b) - Mα(T,G,L,b)| <= Cα G T^(-α) T^(-η),
+T>=1, L>=1, 8L<=G, |b|<=sqrt(T)/100.
+```
+
+The theorem derives G²≤2T and the actual saddle-window conditions.
+`exists_atkinsonPowerIntegral_source_power_saving` then takes
+η=min(δ/3,1/10), L=log T and T^δ≤G≤T^(1/2-δ), beyond one
+threshold for δ>0, proving both b=±sqrt(n) estimates for 10000n≤T
+with one Cα independent of all physical parameters.
+
+This remains a **per-carrier** estimate, not the full sharp Atkinson sum.
+The source-scale truncation and linked cutoff proved below now resolve
+the earlier N≥T^10 versus 10000n≤T mismatch. A sufficiently strong
+summed stationary error is still needed before the sharp Atkinson inequality and physical
+dyadic/Gram assembly. The genuine twelfth moment, EPZAE-21/37,
+unconditional Add-est and the full EPZAE-00--41 goal remain open.
+
+Maintain the nine root imports, 35 named audits, 16 regressions and
+exact backing inventory of `run_tao_trudgian_yang_build.bat`; update
+the runner as needed and rerun it and `run_lake_build.bat` after relevant
+changes. Preserve the Lemma 62 counterexample byte-for-byte and the
+proved independent-coordinate powering/Heath–Brown chain. No false
+s scaling or third s-preserving witness may be reintroduced.
+
+### Source-scale truncation and linked stationary cutoff
+
+Eleven further modules, from `AtkinsonSaddleSupport` through
+`AtkinsonSourceCutoff`, prove the actual source-scale tail and consume
+it in both physical zeta theorems. All 53 public theorems have named
+audits; 22 regressions cover both signs, cutoff endpoints, closed scale
+boundaries, ceiling rounding and the actual uniform source statements.
+
+The original smooth cutoff at either saddle forces |b|≤3sqrt(T)L/G.
+Thus the evaluated stationary mains vanish for n>9T(L/G)².
+The actual carrier, however, is not zero there: it is restricted exactly
+to the original root band, whose length is at most 4sqrt(T)L/G.
+Both true slopes are bounded away from zero once |b|≥6sqrt(T)L/G.
+Two integrations by parts use the actual quotient amplitude, constructed
+natural C2 bounds and proved vanishing endpoints to give
+
+```text
+|Iα(T,G,L,±sqrt(n))| <= Cα G² T^(-α) L / (sqrt(T) n),
+n >= 36 T(L/G)²,
+T>0, G>=1, G²<=2T, L>=1, 8L<=G.
+```
+
+The ordinary-divisor Dirichlet series at 5/4 then sums the complete
+leading tail: `exists_norm_atkinsonLeadingSum_sub_band_finite_le`
+bounds it by C G² L T^(-3/4) for every N≥36T(L/G)².
+`exists_atkinsonLeading_source_band_bound` proves O(G) on the
+original physical width range T^δ≤G≤T^(1/2-δ), L=log T, eventually.
+No tail estimate, endpoint condition or source support is assumed.
+
+`exists_zetaSquarePhysicalGaussian_atkinson_band_approximation`
+and `exists_zetaSquareLocalMean_le_atkinson_band` consume that tail.
+They retain the actual leading finite sum, source factors 2 and
+2exp(1), and Cδ G log T error, now requiring only
+N≥36T(log T/G)² rather than N≥T^10.
+
+The explicit choice `atkinsonSourceCutoff = ceil(36T(L/G)²)`
+satisfies the tail requirement. Eventually 10000N≤T on the lower
+power-width range; `exists_atkinsonSourceCutoff_carrier_approximation`
+therefore proves both existing evaluated stationary estimates for every
+retained n<N. The earlier mismatch between the truncation range and
+the small-frequency stationary range is resolved.
+
+The symmetric continuation below now proves a **summed stationary error**
+at and above the fourth-root width, with both actual physical zeta consumers.
+The smaller-width error and remaining main-amplitude/source assembly still
+precede the full sharp Atkinson inequality and physical dyadic/Gram argument.
+The earlier per-carrier estimate alone is not claimed to establish this sum.
+The genuine twelfth moment, EPZAE-21/37, unconditional Add-est and
+the full EPZAE-00--41 goal remain open.
+
+Maintain all eleven root imports, 53 named audits, 22 regressions and
+the exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`;
+update the runner as needed and execute it and `run_lake_build.bat`
+after relevant changes. Preserve the original Lemma 62 counterexample
+byte-for-byte and the proved independent-coordinate powering/
+Heath–Brown chain. Never restore false s scaling.
+
+### Symmetric stationary summation and physical zeta consumers
+
+Ten further modules, from `StationaryOddRemainder` through
+`AtkinsonStationaryZetaSource`, now have 43 named public theorem audits
+and 24 regressions. The actual symmetric quadratic window cancels both
+the amplitude's linear term and the phase's cubic term. Constructed C2
+bounds and the true logarithmic quartic remainder control what remains.
+The original outer tails and the proved Fresnel value are consumed.
+
+The new balance is G X²≤sqrt(T), X⁴≤sqrt(T). Choosing
+X=T^(1/4)/sqrt(G), H=X/12, derives these inequalities on
+T≥1 and T^(1/4)≤G≤sqrt(T). For both b=±sqrt(n), 10000n≤T,
+L≥1 and 8L≤G, the actual carrier estimate is
+
+```text
+|Iα(T,G,L,b)-Mα(T,G,L,b)| <= Cα G sqrt(G) T^(-α-1/4).
+```
+
+`atkinsonStationaryLeadingSum` retains the original divisor weights,
+Bessel coefficients, both evaluated mains and their separate cutoff/
+Mellin profiles. Its finite support follows from the original saddle
+cutoff, and its sum equals the finite sum at the same explicit
+`atkinsonSourceCutoff` used by the physical source.
+
+Absolute convergence of the actual divisor Dirichlet series at 1+ε
+gives a quarter-weighted prefix bound Cε N^(3/4+ε).
+Ceiling rounding gives N≤37T L²/G². Combining these linked scales
+and absorbing logarithms proves a retained error Oε(T^(1/4+ε)),
+eventually on T^δ≤G≤T^(1/2-δ) with G≥T^(1/4).
+The complete leading-series difference is O(G+T^(1/4+ε)).
+
+`exists_zetaSquarePhysicalGaussian_stationary_approximation` and
+`exists_zetaSquareLocalMean_le_stationary` consume this complete error.
+They retain the source factors 2 and 2exp(1), and prove error
+Cδ,ε (G log T+T^(1/4+ε)). Their `above_fourthRoot` consumers
+give Cδ,κ G log T when G≥T^(1/4+κ), κ>0.
+All thresholds and constants precede T and G; no stationary, arithmetic
+or zeta-source estimate is assumed.
+
+This is not the full-width Ivić Theorem 6.2. Continue with the smaller-width
+stationary error and remaining main-amplitude/source assembly. Any route
+that omits smaller widths in the twelfth-moment argument must first prove
+the corresponding lower-value-range reduction; do not assume that the new
+fourth-root restriction is harmless. The sharp Atkinson theorem, physical
+dyadic/Gram assembly, genuine twelfth moment, EPZAE-21/37, unconditional
+Add-est and the full EPZAE-00--41 goal remain open.
+
+Maintain all ten root imports, 43 named audits, 24 regressions and the exact
+PowerShell inventory behind `run_tao_trudgian_yang_build.bat`; update it
+as needed and execute it and `run_lake_build.bat` after relevant changes.
+Preserve Lemma 62's counterexample byte-for-byte and the independent
+ρ/k and ρ*/k witnesses with their proved Heath–Brown application.
+Never restore false fifth-coordinate scaling or a third s-preserving witness.
+
+## Normalized main terms and actual Abel consumer
+
+Five production modules now continue the stationary series:
+`AtkinsonMainNormalization`, `AtkinsonSignedPhaseSeries`,
+`AtkinsonMainWeightBounds`, `AtkinsonMainPartialSummation` and
+`AtkinsonMainZetaConsumer`. Their 30 public theorems have named audits;
+24 `NormalizedMainAbelRegression` examples cover zero/one-index cases,
+both signs, exact coefficients and all four physical consumer signatures.
+
+The real saddle power and curvature cancel together. At alpha=1/4,
+`atkinsonSaddleProfile_div_curvature` extracts the common factor
+1/(sqrt(2) sqrt(sqrt(b²+2T/pi))) from the actual saddle profile.
+The remaining factor is the actual Mellin profile times the original
+cutoff, evaluated separately at b and -b; the Gamma phase is retained.
+
+For n>0 the exact fourth-root coefficient is
+
+```text
+a(T,n) = (1/sqrt(2)) n^(-1/4) (n+2T/pi)^(-1/4).
+```
+
+The zero-index term is also handled with the original zero divisor weight.
+`atkinsonStationaryLeadingSum_eq_signed` derives, from the original
+Bessel coefficients and the proved finite-support theorem,
+
+```text
+stationary sum = (1+i) GammaPhase(T) exp(i centralPhase(T)) (Splus-Sminus).
+```
+
+Each S retains its own weight a(T,n) times the common actual quadratic
+Gaussian times its separate cutoff/Mellin profile, multiplied by
+(-1)^n d(n) exp(±i f(T,n)). Both sums use the same explicit source ceiling.
+Only the raw negative-phase sums are proved conjugate to the positive
+ones; no conjugacy or equality of the two weights is assumed.
+
+`exists_norm_atkinsonMainWeights_le` constructs a uniform constant,
+before T,G,L,n, bounding both actual weights by
+C G T^(-1/4) n^(-1/4) exp(-G²n/(12T)) for n≤T,
+T,G,L>0, G²≤2T and 8L≤G. It consumes the actual cutoff support,
+the compact Mellin bound and the actual saddle Gaussian.
+
+`atkinsonMainAbelBound` is the explicit endpoint term plus a finite sum
+of literal differences of the two weights times raw phase partial sums.
+Mathlib's finite summation-by-parts identity proves the bound at every
+natural cutoff, including 0 and 1. It is not an assumed variation estimate.
+The actual Gaussian consumer now has the normalized signed main term;
+the actual local-mean consumer is bounded by 4exp(1) times this Abel quantity
+plus Cδ,ε(G log T+T^(1/4+ε)), eventually on
+T^δ≤G≤T^(1/2-δ), G≥T^(1/4). The corresponding above-fourth-root
+consumers have Cδ,κ G log T error when G≥T^(1/4+κ), κ>0.
+
+The continuation below proves uniform variation of these actual weights
+and the actual source-block bound. The newest continuation also proves
+global dyadic assembly. The phase-sum/Gram estimate, source-form bridge,
+and smaller-width error or a proved lower-value-range reduction remain required.
+This is not the full sharp Atkinson theorem or the genuine twelfth moment.
+EPZAE-21/37, every unconditional Add-est clause and the full goal remain OPEN.
+
+Maintain these five root imports, all 30 named audits, all 24 regressions
+and the exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`.
+Update that batch interface and its implementation as needed, and execute
+it and `run_lake_build.bat` after relevant changes. Preserve the original
+counterexample byte-for-byte and the proved independent-coordinate
+powering/Heath–Brown chain; never restore the false fifth-coordinate scaling.
+
+## Damped main-weight variation and actual source blocks
+
+Six additional production modules now close the uniform variation step:
+`FiniteWeightVariation`, `AtkinsonGaussianVariation`,
+`AtkinsonSaddleSamples`, `AtkinsonResidualVariation`,
+`AtkinsonMainVariation` and `AtkinsonPhaseBlockBound`.
+All 36 public theorems have named dependency audits; 24
+`DampedWeightVariationRegression` examples check the actual objects,
+both signs, empty blocks and closed physical boundaries.
+
+`FiniteVariationBound f N M` records three proved inequalities:
+M is nonnegative, every norm at indices 0 through N is at most M,
+and the sum of adjacent norm differences over indices below N is at
+most M. It is not an assumed zeta or exponential-sum estimate.
+The generic product and ordered-sampling rules are applied to all four
+factors of each actual normalized main weight.
+
+For E(G,v)=exp(-(Gv)²/8), the actual complex Gaussian increment from
+0≤a≤b is bounded by 2sqrt(pi) G (E(G,a)-E(G,b)).
+The proof integrates the already proved actual derivative bound using
+the exact real envelope primitive. The increasing saddle frequency
+2arsinh(sqrt(pi n/(2T))) then gives a telescoping, damped variation bound.
+
+The positive and negative normalized saddle roots are respectively
+increasing and decreasing. On 10000(m+N)≤T their samples lie in [1/4,1],
+where the actual Mellin profile has a constructed uniform Lipschitz bound.
+Each original cutoff transition has variation at most one; their
+product has variation at most two, independently of transition width.
+The actual fourth-root coefficient is decreasing for positive indices.
+These facts prove, for both separate weights Wplus and Wminus,
+
+```text
+sup_(0<=i<=N) |W(T,G,L,m+i)| <= B,
+sum_(0<=i<N) |W(T,G,L,m+i+1)-W(T,G,L,m+i)| <= B,
+B = C G T^(-1/4) m^(-1/4) exp(-G²m/(12T)).
+```
+
+`exists_finiteVariationBound_atkinsonMainWeights` constructs one C>0
+before T,G,L,m,N. Its range is T,G,L>0, G²≤2T, m>0 and
+10000(m+N)≤T. No 8L≤G premise or equality of the two residual weights
+is needed. The supremum and variation are each bounded by B; their
+sum is not asserted to be at most B.
+
+`atkinsonStationaryBlock` is the sum of the original stationary
+Bessel/divisor terms at m through m+N-1. Let A(T,m,N) be the maximum,
+over 0≤j≤N, of the norm of the actual raw positive-phase sum at
+m through m+j-1. Finite partial summation, both separate weight bounds
+and the exact common source phase prove
+
+```text
+|atkinsonStationaryBlock(T,G,L,m,N)|
+  <= C G T^(-1/4) m^(-1/4) exp(-G²m/(12T)) A(T,m,N).
+```
+
+`exists_atkinsonSourceCutoff_block_bound` is the actual-source consumer.
+For each δ>0 it derives all preceding scale hypotheses beyond one
+threshold T₀≥40000, from T^δ≤G≤T^(1/2-δ), L=log T,
+m>0 and m+N≤atkinsonSourceCutoff(T,G,log T).
+In particular, it consumes the proved eventual smallness of that exact
+ceiling cutoff; small-frequency geometry is no longer a premise here.
+This block theorem applies throughout the original power-width range.
+It does not alter the earlier stationary-error estimate, which still
+requires G≥T^(1/4).
+
+The next continuation now assembles the complete source with a faithful
+finite dyadic partition and a truncated last block below the same cutoff.
+The required maximal phase-sum/Gram estimate remains open.
+A maximum of partial sums is not silently identified with Ivić's
+endpoint-plus-integral expression. Smaller-width stationary errors or a
+genuine lower-value-range reduction also remain required.
+The sharp full-width Atkinson theorem, critical twelfth moment,
+EPZAE-21/37, every unconditional Add-est clause and the full
+EPZAE-00--41 goal remain OPEN. ZVB is green only for the proved variation
+and actual source-block consumer.
+
+Maintain all six root imports, 36 named audits, 24 regressions and the
+exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`.
+Update that batch interface and its implementation as needed; execute
+it and `run_lake_build.bat` after relevant changes.
+Preserve the original Lemma 62 counterexample byte-for-byte and the
+proved independent ρ/k and ρ*/k witnesses with their actual Heath–Brown
+application. Never restore false fifth-coordinate scaling or a third
+s-preserving witness.
+
+## Complete dyadic source assembly and physical zeta consumers
+
+Three production modules, `TruncatedDyadicPartition`,
+`AtkinsonDyadicMain` and `AtkinsonDyadicZetaConsumer`, now have
+20 named public theorem audits and 24 semantic regressions.
+They consume the previously proved actual block estimates rather than
+assuming a bound for an abstract main sum.
+
+For a natural cutoff N, block j starts at M=2^j and has length
+min(M,N-M). The index range is j<clog(2,N), the natural ceiling
+logarithm. Every retained block has positive length, starts strictly
+below N and ends at or before N. At an exact power of two the last
+block is full and no extra empty block is retained. The zero and one
+cutoffs have no blocks.
+
+`sum_range_eq_truncatedDyadic` proves the exact partition for every
+additive sequence whose zero coefficient vanishes. The induction first
+partitions a prefix ending at min(N,2^J); it never extends the source
+to a larger power-of-two cutoff.
+`atkinsonStationaryLeadingFiniteSum_eq_dyadic` applies that theorem
+to the original stationary Bessel/divisor terms and their proved zero
+coefficient. Both signs and their separate weights remain in each block.
+
+Define A(T,M,K) as the maximum of the actual raw phase-prefix norms
+on indices M through M+K-1. The complete stationary series is bounded
+by C G T^(-1/4) times
+
+```text
+D(T,G,N) = sum_(j<clog(2,N))
+  M^(-1/4) exp(-G²M/(12T)) A(T,M,min(M,N-M)),  M=2^j.
+```
+
+`exists_norm_atkinsonStationarySum_le_dyadic` sets
+N=atkinsonSourceCutoff(T,G,log T), consumes the actual finite-support
+identity and source-cutoff block theorem, and derives all support and
+width hypotheses from T^δ≤G≤T^(1/2-δ), eventually for each δ>0.
+Its constant and threshold precede T and G. This stationary-main bound
+does not require G≥T^(1/4).
+
+For later height estimates, `atkinsonPhaseBlockMax_mono` proves that
+each shortened last-block phase maximum may be enlarged to A(T,M,M).
+Only the raw phase maximum is enlarged: no stationary term, cutoff
+support or small-frequency estimate is applied beyond N.
+The resulting full-block sum is `atkinsonFullDyadicPhaseBound`,
+denoted Dfull below. The public complete-series consumer
+`exists_norm_atkinsonStationarySum_le_fullDyadic` proves the same
+bound with Dfull in place of D.
+
+Four physical consumers now apply this complete-series estimate to the
+actual Gaussian and local zeta means. For both
+I=integral_R exp(-((t-T)/G)²)|zeta(1/2+it)|² dt and
+I=integral_(T-G)^(T+G)|zeta(1/2+it)|² dt, they prove
+
+```text
+I <= C_(delta,epsilon) [
+  G T^(-1/4) Dfull(T,G,atkinsonSourceCutoff(T,G,log T))
+  + G log T + T^(1/4+epsilon)],
+```
+
+eventually on the original power-width range with G≥T^(1/4).
+Their `above_fourthRoot` versions replace the last two terms by
+G log T when G≥T^(1/4+κ), κ>0. The original source factors are
+absorbed into a uniform positive C, not dropped. The Gaussian theorem
+is an upper bound, not an approximation identity after discarding
+the main term's sign.
+
+ZDA is green for exact dyadic assembly and these actual physical
+consumers only. Next prove the maximal phase-sum/Gram estimate with
+the required height scales and spacing. The inspected adjacent prefix
+Gram theorem has one common prefix at every height and interval (K,2K];
+it cannot be applied directly to these height-dependent maxima on [M,2M).
+Prove the variable-prefix and endpoint bridges before reusing that result.
+A maximum of raw phase prefixes
+is still not identified with Ivić's endpoint-plus-integral expression.
+Smaller-width stationary errors or a proved lower-value-range reduction
+remain required as well. The genuine critical twelfth moment,
+EPZAE-21/37, all unconditional Add-est clauses and the full
+EPZAE-00--41 goal remain OPEN.
+
+Maintain all three root imports, 20 named audits, 24 regressions and
+the exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`.
+Update that batch interface and its implementation as needed, and run
+it and `run_lake_build.bat` after relevant changes.
+Preserve the Lemma 62 counterexample byte-for-byte and the proved
+independent ρ/k and ρ*/k witnesses and actual Heath–Brown application.
+No false fifth-coordinate scaling or third s-preserving witness returns.

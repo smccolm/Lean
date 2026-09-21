@@ -43,7 +43,18 @@ flowchart TD
     ZK["EPZAE-21 actual K0 exponential decay<br/>full smooth support + arithmetic summation;<br/>arbitrary power saving + source removal DONE"]
     ZAP["EPZAE-21 source-required lattice phase<br/>native Voronoi reapplied + complete K0 removal;<br/>actual phase-adjusted local source DONE"]
     ZAM["EPZAE-21 actual amplitude variation<br/>native logarithmic reflection + main bound;<br/>actual zeta source to Y0-only sum DONE"]
-    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>exact carrier + unique nondegenerate saddle CHECKED;<br/>Y0 asymptotic + uniform stationary estimates OPEN"]
+    ZAY["EPZAE-21 literal Y0 decaying ray + two-term expansion<br/>complete arithmetic remainder + actual zeta consumers;<br/>uniform source error DONE"]
+    ZAC["EPZAE-21 uniform signed-carrier cancellation<br/>actual power weights + exact complete series;<br/>summand bounds + physical zeta consumers DONE"]
+    ZCR["EPZAE-21 actual reciprocal-frequency gain<br/>complete correction O(G) + summability;<br/>leading-only physical zeta source DONE"]
+    ZFT["EPZAE-21 actual C2 + signed Fourier source<br/>leading tail O(G) for N >= T^10;<br/>finite physical zeta consumers DONE"]
+    ZSR["EPZAE-21 actual finite stationary reduction<br/>paired phases + natural C2 + cubic error + tails;<br/>both physical small-frequency consumers DONE"]
+    ZFE["EPZAE-21 evaluated Fresnel main terms<br/>uniform tail + both physical signs;<br/>source-width per-carrier power saving DONE"]
+    ZBT["EPZAE-21 source-scale truncation<br/>both tails + full arithmetic + physical zeta consumers;<br/>ceiling cutoff linked to stationary range DONE"]
+    ZSE["EPZAE-21 symmetric stationary + complete sum<br/>both actual zeta consumers;<br/>fourth-root-width error bounds DONE"]
+    ZMN["EPZAE-21 common fourth-root main + actual signed sums<br/>pointwise weights + literal Abel consumer DONE"]
+    ZVB["EPZAE-21 uniform damped weight variation<br/>actual source-cutoff block consumer DONE"]
+    ZDA["EPZAE-21 complete dyadic source assembly<br/>actual Gaussian/local-mean consumers;<br/>fourth-root-width error retained; DONE"]
+    ZAT["EPZAE-21 sharp Atkinson local mean square<br/>smaller-width + source-form bridge OPEN"]
     ZTM["EPZAE-19/21 critical-line twelfth moment<br/>dyadic height estimate OPEN"]
 
     ZCB["EPZAE-22 zero-count convention bridge<br/>DONE"]
@@ -140,7 +151,35 @@ flowchart TD
     SRC -->|Ivic 6.36 lattice-phase convention| ZAP
     ZAP -->|phase-corrected main and Y0 source| ZAM
     GM -->|native bounded-variation logarithmic reflection| ZAM
-    ZAM -->|complete Y0-only source; exact saddle calculus| ZAT
+    ZAM -->|complete actual Y0-only source| ZAY
+    ML -->|Cauchy rectangle, principal powers and Gamma moments| ZAY
+    GM -->|native complete Voronoi summability| ZAY
+    ZAY -->|actual convergent two-term series; exact saddle calculus| ZAC
+    ZAM -->|actual profile and amplitude variation| ZAC
+    GM -->|native first-derivative integral estimate| ZAC
+    ML -->|square substitution and integration by parts| ZAC
+    ZAC -->|both signs; actual power amplitude and full source| ZCR
+    ZCR -->|actual leading integrals and complete-series identities| ZFT
+    GM -->|native order-two Fourier integration by parts| ZFT
+    ML -->|actual second derivatives and exact Fourier normalization| ZFT
+    ZFT -->|actual power integral and source normalization| ZSR
+    ML -->|logarithmic cubic error and natural amplitude derivatives| ZSR
+    GM -->|weighted reciprocal-slope tails| ZSR
+    ZSR -->|actual carrier and constructed saddle amplitude| ZFE
+    ML -->|positive-damping Gaussian integral and branch continuity| ZFE
+    ZFE -->|evaluated estimates for every retained index| ZBT
+    ZSR -->|actual natural derivatives and source cutoff| ZBT
+    ZFT -->|complete leading series and arithmetic summability| ZBT
+    ZBT -->|same cutoff and complete actual tail| ZSE
+    ZFE -->|evaluated main terms and Fresnel tails| ZSE
+    ZSR -->|actual C2 amplitude and odd cancellation| ZSE
+    ZSE -->|actual evaluated stationary series| ZMN
+    ZMN -->|both actual weights and signed stationary terms| ZVB
+    ZVB -->|actual blocks and uniform damped variation| ZDA
+    ML -->|ceiling logarithm and exact truncated partition| ZDA
+    ZSE -->|actual physical source and proved error| ZDA
+    ZDA -->|full-width and source-form bridge still needed| ZAT
+    ZSE -->|smaller-width source error still needed| ZAT
     SRC --> ZAT
     ZAT -->|scale and spacing assembly still needed| ZTM
     LVP --> ZMI
@@ -239,6 +278,59 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
-    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP,ZWG,ZFG,ZDS,ZVT,ZK,ZAP,ZAM done;
+    class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP,ZWG,ZFG,ZDS,ZVT,ZK,ZAP,ZAM,ZAY,ZAC,ZCR,ZFT,ZSR,ZFE,ZBT,ZSE,ZMN,ZVB,ZDA done;
     class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZAT,ZTM,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,EC1ZA,EC1S,EC,NAE,PUB,SEM,REL open;
     class PL62 preserved;
+
+%% ZFE semantic audit: exists_atkinsonPowerIntegral_source_power_saving.
+%% Actual carrier and constructed saddle amplitude consume the proved Fresnel value and tail.
+%% H=T^eta/12 derives geometry; eta=min(delta/3,1/10), L=log(T), both b=+/-sqrt(n).
+%% Range: 10000n<=T and T^delta<=G<=T^(1/2-delta), beyond a delta-dependent threshold.
+%% Error: C_alpha G T^(-alpha) T^(-eta); no stationary-estimate premise.
+%% Nine modules, 35 named audits and 16 regressions are in the exact batch-runner inventory.
+%% Source-scale localization and the cutoff/range bridge are now proved by ZBT.
+%% Summed errors above the fourth-root width are now proved by ZSE; full-width ZAT remains open.
+%% See the Reproduction Manifest for the full semantic audit and both terminal PASS logs.
+%% ZBT semantic audit: exists_zetaSquarePhysicalGaussian_atkinson_band_approximation
+%% and exists_zetaSquareLocalMean_le_atkinson_band consume the complete actual leading tail.
+%% N>=36 T(log(T)/G)^2 replaces N>=T^10; source factors and C_delta G log(T) error remain.
+%% exists_atkinsonSourceCutoff_carrier_approximation derives 10000N<=T eventually
+%% for the explicit ceiling cutoff and consumes both evaluated stationary estimates for n<N.
+%% Eleven modules, 53 named audits and 22 regressions are in the exact runner inventory.
+%% Counterexample and corrected powering/Heath-Brown chain unchanged. Full goal active.
+%% ZSE semantic audit: exists_zetaSquarePhysicalGaussian_stationary_approximation
+%% and exists_zetaSquareLocalMean_le_stationary consume the complete actual evaluated series.
+%% Original power-width range plus G>=T^(1/4); error C_(delta,epsilon)(G log(T)+T^(1/4+epsilon)).
+%% Their above_fourthRoot consumers give C_(delta,kappa) G log(T) for G>=T^(1/4+kappa), kappa>0.
+%% Exact odd cancellation -> derived radius -> actual Bessel/divisor sum -> same ceiling cutoff.
+%% Separate cutoff/Mellin profiles and both signed coefficients remain; no conjugacy is assumed.
+%% Ten modules, 43 named audits and 24 regressions are in the exact runner inventory.
+%% Smaller-width error, source main assembly, genuine twelfth moment and unconditional Add-est OPEN.
+%% Counterexample and independent-coordinate powering/Heath-Brown chain unchanged. Full goal active.
+%% ZMN semantic audit: atkinsonSaddleProfile_div_curvature consumes actual power and curvature.
+%% atkinsonStationaryLeadingSum_eq_signed consumes original Bessel constants and the source cutoff.
+%% exists_norm_atkinsonMainWeights_le proves actual pointwise fourth-root size with Gaussian damping.
+%% Only raw negative phase sums are conjugated; residual weights remain separate.
+%% exists_zetaSquareLocalMean_le_mainAbel consumes literal finite weight differences and actual zeta source.
+%% All four physical consumer signatures retain fourth-root-width restrictions and previous errors.
+%% ZVB below now proves uniform damped variation and the actual source-block bound.
+%% ZDA below now proves global dyadic assembly. Smaller-width error, phase/Gram and twelfth moment remain OPEN.
+%% Five modules, 30 named audits and 24 regressions are in the exact batch runner inventory.
+%% Counterexample byte-preserved; repaired powering/Heath-Brown chain unchanged; full goal active.
+%% ZVB semantic audit: exists_finiteVariationBound_atkinsonMainWeights constructs both actual bounds.
+%% Gaussian increments telescope; ordered actual saddles sample the Mellin profile and original cutoff.
+%% exists_atkinsonSourceCutoff_block_bound consumes original stationary Bessel/divisor blocks.
+%% Its actual ceiling-cutoff hypothesis derives 10000(m+N)<=T; all constants precede physical parameters.
+%% Error-free block bound: C G T^(-1/4) m^(-1/4) exp(-G^2 m/(12T)) times actual raw phase-prefix maximum.
+%% Range: original power widths, eventually; this does not remove ZSE's fourth-root-width error restriction.
+%% ZDA below now consumes these blocks globally; the phase-sum/Gram argument, ZAT and ZTM remain OPEN.
+%% Six modules, 36 named audits and 24 regressions are in the exact batch-runner inventory.
+%% Counterexample byte-preserved; independent-coordinate powering/Heath-Brown chain unchanged; full goal active.
+%% ZDA semantic audit: exists_norm_atkinsonStationarySum_le_dyadic consumes the original complete source.
+%% Exact blocks start at 2^j and have min(2^j,N-2^j) entries, j<clog(2,N); no enlarged source cutoff.
+%% exists_norm_atkinsonStationarySum_le_fullDyadic enlarges only raw phase-prefix maxima, not stationary geometry.
+%% Both complete-series consumers derive support and block hypotheses from original power widths.
+%% Four physical dyadic consumers use actual Gaussian/local zeta means and preserve the fourth-root-width error.
+%% The maximal phase/Gram estimate and smaller-width route remain OPEN; no critical twelfth moment is claimed.
+%% Three modules, 20 named audits and 24 regressions are covered by the exact batch-runner inventory.
+%% Counterexample byte-preserved; repaired independent-coordinate powering/Heath-Brown chain unchanged; full goal active.

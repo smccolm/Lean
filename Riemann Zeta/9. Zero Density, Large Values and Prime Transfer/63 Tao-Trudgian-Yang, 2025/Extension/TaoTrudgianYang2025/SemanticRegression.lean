@@ -1908,3 +1908,1212 @@ example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
         C * G * Real.log T := exists_zetaSquareLocalMean_le_atkinson_minus (by norm_num)
 
 end AtkinsonMainRegression
+
+section NeumannSourceRegression
+
+open Complex Filter MeasureTheory Set Topology
+
+-- The branch signs and the limiting ray through one are essential.
+example : neumannRayCoefficient = (1 + I) / 2 := neumannRayCoefficient_eq
+
+example : neumannLaplaceAmplitude 0 = 1 := neumannLaplaceAmplitude_zero
+
+example : ‖neumannLaplaceAmplitude (-3)‖ ≤ 1 := norm_neumannLaplaceAmplitude_le_one (-3)
+
+example : ‖neumannLaplaceAmplitude (-2) - 1 + I * (-2 : ℝ) / 2‖ ≤
+    (3 / 8 : ℝ) * (-2 : ℝ) ^ 2 := by
+  simpa only [mul_comm I] using norm_neumannLaplaceAmplitude_sub_linear_le (-2)
+
+example : IntegrableOn (fun t : ℝ => neumannContourKernel 1 ((1 : ℂ) + t * I)) (Ioi 0) :=
+  integrableOn_neumannContourKernel_vertical (by norm_num) (by norm_num)
+
+example : ContinuousAt (neumannVerticalIntegral 1) 1 :=
+  continuousAt_neumannVerticalIntegral (by norm_num) (by norm_num)
+
+example : neumannVerticalIntegral 1 0 = (dfiBesselY0Tail 1 : ℂ) :=
+  neumannVerticalIntegral_zero_eq_tail 1
+
+example : dfiBesselY0 (1 / 2) = -(2 / Real.pi) * (neumannVerticalIntegral (1 / 2) 1).re :=
+  dfiBesselY0_eq_neumannVerticalIntegral (by norm_num)
+
+example : neumannLaplaceMoment 1 0 = Real.sqrt Real.pi := by
+  simpa using neumannLaplaceMoment_zero (x := 1) (by norm_num)
+
+example : neumannLaplaceMoment 1 1 = Real.sqrt Real.pi / 2 := by
+  simpa using neumannLaplaceMoment_one (x := 1) (by norm_num)
+
+example : neumannLaplaceMoment 1 2 = 3 * Real.sqrt Real.pi / 4 := by
+  simpa using neumannLaplaceMoment_two (x := 1) (by norm_num)
+
+-- Includes small positive arguments, not just an unspecified asymptotic range.
+example : |dfiBesselY0 (1 / 2) - neumannTwoTerm (1 / 2)| ≤
+    neumannTwoTermErrorConstant * (1 / 2 : ℝ) ^ (-(5 / 2 : ℝ)) :=
+  abs_dfiBesselY0_sub_neumannTwoTerm_le (by norm_num)
+
+example : Measurable dfiBesselY0 := measurable_dfiBesselY0
+
+example (n : ℕ) (hn : 0 < n) :
+    16 * n ≤ (4 * Real.pi * Real.sqrt (1 * n)) ^ 2 ∧
+      1 ≤ 4 * Real.pi * Real.sqrt (1 * n) :=
+  neumann_source_argument_bounds (by norm_num) (by norm_num) hn
+
+example (n : ℕ) (hn : 0 < n) :
+    |dfiBesselY0 (4 * Real.pi * Real.sqrt (2 * n)) -
+      neumannTwoTerm (4 * Real.pi * Real.sqrt (2 * n))| ≤
+        neumannTwoTermErrorConstant * (32 : ℝ) ^ (-(5 / 4 : ℝ)) *
+          (n : ℝ) ^ (-(5 / 4 : ℝ)) :=
+  abs_neumann_source_remainder_le (by norm_num) (by norm_num) hn
+
+-- Physical support and the closed G-squared endpoint are both exercised.
+example : Integrable (zetaAtkinsonTwoTermIntegrand 32 8 1 1) :=
+  integrable_zetaAtkinsonTwoTermIntegrand
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (T G L : ℝ) : zetaNeumannRemainderTerm T G L 0 = 0 := by
+  simp [zetaNeumannRemainderTerm, divisorWeight]
+
+example (T G L : ℝ) : zetaAtkinsonTwoTerm T G L 0 = 0 := by
+  simp [zetaAtkinsonTwoTerm, divisorWeight]
+
+example : ‖divisorDirichletTerm (5 / 4) 0‖ = ‖divisorWeight 0‖ * (0 : ℝ) ^ (-(5 / 4 : ℝ)) := by
+  simpa only [Complex.ofReal_div, Complex.ofReal_ofNat, Nat.cast_zero] using
+    norm_divisorDirichletTerm_real (5 / 4) 0
+
+example : Summable (zetaNeumannRemainderTerm 32 8 1) :=
+  summable_zetaNeumannRemainderTerm
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : Summable (zetaAtkinsonTwoTerm 32 8 1) :=
+  summable_zetaAtkinsonTwoTerm
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaAtkinsonBesselMinus 32 8 1 - zetaAtkinsonTwoTermSum 32 8 1 =
+    ∑' n : ℕ, zetaNeumannRemainderTerm 32 8 1 n :=
+  zetaAtkinsonBesselMinus_sub_twoTerm
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 16 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G →
+      ‖zetaAtkinsonBesselMinus T G L - zetaAtkinsonTwoTermSum T G L‖ ≤ C * G :=
+  exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (zetaAtkinsonTwoTermSum T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (zetaAtkinsonTwoTermSum T G (Real.log T)).re +
+        C * G * Real.log T := exists_zetaSquareLocalMean_le_atkinson_twoTerm (by norm_num)
+
+end NeumannSourceRegression
+
+section AtkinsonCarrierRegression
+
+open Complex Filter MeasureTheory Set
+
+example (T b : ℝ) : zetaAtkinsonPhase T b (2 ^ 2) = 2 * Real.pi * atkinsonRootPhase T b 2 :=
+  zetaAtkinsonPhase_sq T b (by norm_num)
+
+example (T b : ℝ) : HasDerivAt (atkinsonRootPhase T b) (atkinsonRootSlope T b 1) 1 :=
+  hasDerivAt_atkinsonRootPhase T b (by norm_num)
+
+example (b : ℝ) : HasDerivAt (atkinsonRootSlope Real.pi b) (-3) 1 := by
+  simpa only [one_pow, mul_one, neg_div, div_self Real.pi_ne_zero,
+    show -(1 : ℝ) - 2 = -3 by norm_num] using
+      hasDerivAt_atkinsonRootSlope Real.pi b (y := 1) (by norm_num)
+
+example : StrictAntiOn (atkinsonRootSlope 0 (-3)) (Ioi 0) :=
+  atkinsonRootSlope_strictAnti (by norm_num) (-3)
+
+example (T : ℝ) (hT : 0 < T) (b : ℝ) :
+    atkinsonRootSlope T b (atkinsonSaddleRoot (T / (2 * Real.pi)) b + 1) ≤ -2 :=
+  atkinsonRootSlope_le_neg_two hT
+    (by linarith [atkinsonSaddleRoot_pos (by positivity : 0 < T / (2 * Real.pi)) b]) le_rfl
+
+example (T : ℝ) (hT : 0 < T) (b : ℝ)
+    (hr : 1 < atkinsonSaddleRoot (T / (2 * Real.pi)) b) :
+    2 ≤ atkinsonRootSlope T b (atkinsonSaddleRoot (T / (2 * Real.pi)) b - 1) :=
+  two_le_atkinsonRootSlope hT (by linarith) le_rfl
+
+example : ‖∫ y in (1 : ℝ)..4, atkinsonRootKernel 8 3 y‖ ≤ 4 :=
+  norm_atkinsonRootKernel_integral_le_four (by norm_num) 3 (by norm_num) (by norm_num)
+
+example : ‖∫ y in (1 : ℝ)..4, atkinsonRootKernel 8 (-3) y‖ ≤ 4 :=
+  norm_atkinsonRootKernel_integral_le_four (by norm_num) (-3) (by norm_num) (by norm_num)
+
+example : ‖∫ y in (1 : ℝ)..1, atkinsonRootKernel 8 0 y‖ ≤ 4 :=
+  norm_atkinsonRootKernel_integral_le_four (by norm_num) 0 (by norm_num) le_rfl
+
+example {f : ℝ → ℂ} {M : ℝ} (hf : IntervalC1Bound f (1 ^ 2) (2 ^ 2) M) :
+    IntervalC1Bound (fun y => f (y ^ 2)) 1 2 M :=
+  hf.comp_sq (by norm_num) (by norm_num)
+
+example : ‖∫ y in (1 : ℝ)..4, (2 : ℂ) * atkinsonRootKernel 8 (-3) y‖ ≤ 16 := by
+  have h := (intervalC1Bound_const 2 1 4).atkinsonRoot (T := 8)
+    (by norm_num) (-3) (by norm_num) (by norm_num)
+  simpa only [norm_ofNat, show (8 : ℝ) * 2 = 16 by norm_num] using h
+
+example : Real.sqrt (1 : ℝ) * Real.exp (-Real.log 1 / 2) = 1 :=
+  sqrt_mul_exp_neg_half_log (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ, 0 < T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G →
+    ‖atkinsonPowerIntegral T G L (1 / 4) b‖ ≤ C * G * T ^ (-(1 / 4 : ℝ)) :=
+  exists_norm_atkinsonPowerIntegral_le (1 / 4)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ, 0 < T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G →
+    ‖atkinsonPowerIntegral T G L (3 / 4) b‖ ≤ C * G * T ^ (-(3 / 4 : ℝ)) :=
+  exists_norm_atkinsonPowerIntegral_le (3 / 4)
+
+example : Integrable (atkinsonPowerIntegrand 32 8 1 (1 / 4) (Real.sqrt 2)) :=
+  integrable_atkinsonPowerIntegrand (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (1 / 4) (Real.sqrt 2)
+
+example : Integrable (atkinsonPowerIntegrand 32 8 1 (3 / 4) (-Real.sqrt 2)) :=
+  integrable_atkinsonPowerIntegrand (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (3 / 4) (-Real.sqrt 2)
+
+example : (4 * Real.pi * Real.sqrt (2 * (1 : ℕ))) ^ (-2 * (3 / 4 : ℝ)) =
+    atkinsonBesselScale (3 / 4) 1 * (2 : ℝ) ^ (-(3 / 4 : ℝ)) :=
+  atkinson_bessel_argument_rpow (by norm_num) (by norm_num) (3 / 4)
+
+example (T G L : ℝ) : zetaAtkinsonTwoTerm T G L 0 = 0 := by
+  simp [zetaAtkinsonTwoTerm, divisorWeight]
+
+example : zetaAtkinsonTwoTerm 32 8 1 1 =
+    divisorWeight 1 * (-(2 * Real.pi) : ℂ) * atkinsonTwoTermCarrierIntegral 32 8 1 1 :=
+  zetaAtkinsonTwoTerm_eq_carrierIntegral (by norm_num) (by norm_num) (by norm_num) (by norm_num) 1
+
+example : Summable (fun n : ℕ => divisorWeight n * (-(2 * Real.pi) : ℂ) *
+    atkinsonTwoTermCarrierIntegral 32 8 1 n) :=
+  summable_atkinsonTwoTermCarrierIntegrals
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaAtkinsonTwoTermSum 32 8 1 = atkinsonTwoTermCarrierSum 32 8 1 :=
+  zetaAtkinsonTwoTermSum_eq_carrierIntegrals (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C D : ℝ, 0 < C ∧ 0 < D ∧ ∀ T G L : ℝ, 0 < T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G → ∀ n : ℕ,
+    ‖zetaAtkinsonTwoTerm T G L n‖ ≤ ‖divisorWeight n‖ *
+      (C * G * T ^ (-(1 / 4 : ℝ)) * (n : ℝ) ^ (-(1 / 4 : ℝ)) +
+       D * G * T ^ (-(3 / 4 : ℝ)) * (n : ℝ) ^ (-(3 / 4 : ℝ))) :=
+  exists_norm_zetaAtkinsonTwoTerm_le
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (atkinsonTwoTermCarrierSum T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_carrier_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (atkinsonTwoTermCarrierSum T G (Real.log T)).re +
+        C * G * Real.log T := exists_zetaSquareLocalMean_le_carriers (by norm_num)
+
+end AtkinsonCarrierRegression
+
+section AtkinsonCorrectionRegression
+
+open Complex MeasureTheory Set
+open RiemannZeta.GuthMaynard
+
+example : (32 : ℝ) ≤ atkinsonRootSlope 16 32 1 := by
+  apply atkinsonRootSlope_far_positive (by norm_num)
+  · norm_num
+  · norm_num
+
+example : atkinsonRootSlope 16 (-32) 4 ≤ (-32 : ℝ) := by
+  apply atkinsonRootSlope_far_negative (by norm_num)
+  · norm_num
+  · norm_num
+
+example : ‖∫ y in (1 : ℝ)..4, atkinsonRootKernel 16 32 y‖ ≤ 1 / (32 * Real.pi) ∧
+    ‖∫ y in (1 : ℝ)..4, atkinsonRootKernel 16 (-32) y‖ ≤ 1 / (32 * Real.pi) := by
+  have h := norm_atkinsonRootKernel_integral_far (T := 16) (b := 32) (c := 4)
+    (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ, 0 < T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G → 8 * Real.sqrt T ≤ b →
+    ‖atkinsonPowerIntegral T G L (1 / 4) b‖ ≤ C * G * T ^ (-(1 / 4 : ℝ)) / b ∧
+    ‖atkinsonPowerIntegral T G L (1 / 4) (-b)‖ ≤ C * G * T ^ (-(1 / 4 : ℝ)) / b :=
+  exists_norm_atkinsonPowerIntegral_far_le (1 / 4)
+
+example : (1 : ℝ) ^ (-(3 / 4 : ℝ)) * Real.sqrt 1 ≤ 1 :=
+  atkinson_correction_height_absorb le_rfl
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 1 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G → ∀ n : ℕ, 0 < n →
+    ‖neumannCorrectionPlus * atkinsonPowerIntegral T G L (3 / 4) (Real.sqrt n) +
+      neumannCorrectionMinus * atkinsonPowerIntegral T G L (3 / 4) (-Real.sqrt n)‖ ≤
+        C * G / Real.sqrt n := exists_norm_atkinsonCorrectionPair_le
+
+example (T G L : ℝ) : atkinsonCorrectionTerm T G L 0 = 0 := by
+  simp [atkinsonCorrectionTerm, divisorWeight]
+
+example (T G L : ℝ) : atkinsonLeadingTerm T G L 0 = 0 := by
+  simp [atkinsonLeadingTerm, divisorWeight]
+
+example (T G L : ℝ) : atkinsonTwoTermCarrierIntegral T G L 1 =
+    atkinsonLeadingIntegral T G L 1 - atkinsonCorrectionIntegral T G L 1 :=
+  atkinsonTwoTermCarrierIntegral_eq_leading_sub_correction T G L 1
+
+example : zetaAtkinsonTwoTerm 32 8 1 1 =
+    atkinsonLeadingTerm 32 8 1 1 - atkinsonCorrectionTerm 32 8 1 1 :=
+  zetaAtkinsonTwoTerm_eq_leading_sub_correction (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) 1
+
+example : Summable (atkinsonCorrectionTerm 32 8 1) :=
+  summable_atkinsonCorrectionTerm (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : Summable (atkinsonLeadingTerm 32 8 1) :=
+  summable_atkinsonLeadingTerm (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : zetaAtkinsonTwoTermSum 32 8 1 =
+    atkinsonLeadingSum 32 8 1 - atkinsonCorrectionSum 32 8 1 :=
+  zetaAtkinsonTwoTermSum_eq_leading_sub_correction (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 16 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    0 < L → 8 * L ≤ G → ‖zetaAtkinsonTwoTermSum T G L - atkinsonLeadingSum T G L‖ ≤ C * G :=
+  exists_norm_zetaAtkinsonTwoTermSum_sub_leading_le
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (atkinsonLeadingSum T G (Real.log T)).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_leading_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 4 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 4 : ℝ)) →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (atkinsonLeadingSum T G (Real.log T)).re +
+        C * G * Real.log T := exists_zetaSquareLocalMean_le_atkinson_leading (by norm_num)
+
+end AtkinsonCorrectionRegression
+
+section AtkinsonFourierRegression
+
+open Complex MeasureTheory Set
+open scoped ContDiff
+
+example : IntervalC2Bound (fun _ : ℝ => (1 : ℂ)) (1 / 4) 1 1 1 := by
+  simpa only [norm_one] using intervalC2Bound_const (1 : ℂ) (1 / 4) 1 (by norm_num : (0 : ℝ) ≤ 1)
+
+example : Function.support (zetaDivisorBandCutoff 32 8 1) ⊆ Icc 2 32 := by
+  have h := support_zetaDivisorBandCutoff_physical (T := 32) (G := 8) (L := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example (α : ℝ) : Function.support (atkinsonRootFourierAmplitude 32 8 1 α) ⊆ Icc (1 / 4) 1 :=
+  support_atkinsonRootFourierAmplitude (by norm_num) (by norm_num) (by norm_num) (by norm_num) α
+
+example (T G L α : ℝ) : atkinsonRootFourierAmplitude T G L α 0 = 0 := by
+  simp [atkinsonRootFourierAmplitude]
+
+example (T G L α : ℝ) : atkinsonRootFourierAmplitude T G L α (-1) = 0 := by
+  simp [atkinsonRootFourierAmplitude]
+
+example (α : ℝ) : ContDiff ℝ ∞ (atkinsonRootFourierAmplitude 32 8 1 α) :=
+  contDiff_atkinsonRootFourierAmplitude (by norm_num) (by norm_num) (by norm_num) (by norm_num) α
+
+example (α : ℝ) : HasCompactSupport (atkinsonRootFourierAmplitude 32 8 1 α) :=
+  hasCompactSupport_atkinsonRootFourierAmplitude (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) α
+
+example (α : ℝ) : Function.support (iteratedDeriv 2 (atkinsonRootFourierAmplitude 32 8 1 α)) ⊆
+    Icc (1 / 4) 1 :=
+  support_iteratedDeriv_atkinsonRootFourierAmplitude (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) α 2
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L ξ : ℝ, 1 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G →
+    (1 + |ξ|) ^ 2 * ‖𝓕 (atkinsonRootFourierAmplitude T G L (1 / 4)) ξ‖ ≤
+      C * G * T ^ (-(1 / 4 : ℝ)) * T ^ 2 :=
+  exists_norm_fourier_atkinsonRootFourierAmplitude_le (1 / 4)
+
+example (α : ℝ) : atkinsonPowerIntegral 32 8 1 α 1 =
+    (2 * Real.sqrt 32 : ℝ) • (atkinsonPhaseExponential 32 (Real.log 32) *
+      𝓕 (atkinsonRootFourierAmplitude 32 8 1 α) (-2 * 1 * Real.sqrt 32)) :=
+  atkinsonPowerIntegral_eq_fourier (by norm_num) (by norm_num) (by norm_num) (by norm_num) α 1
+
+example (α : ℝ) : atkinsonPowerIntegral 32 8 1 α (-1) =
+    (2 * Real.sqrt 32 : ℝ) • (atkinsonPhaseExponential 32 (Real.log 32) *
+      𝓕 (atkinsonRootFourierAmplitude 32 8 1 α) (-2 * (-1) * Real.sqrt 32)) :=
+  atkinsonPowerIntegral_eq_fourier (by norm_num) (by norm_num) (by norm_num) (by norm_num) α (-1)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ, 1 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → b ^ 2 * ‖atkinsonPowerIntegral T G L (1 / 4) b‖ ≤
+      C * G * T ^ (-(1 / 4 : ℝ)) * T * Real.sqrt T :=
+  exists_sq_mul_norm_atkinsonPowerIntegral_le (1 / 4)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 1 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → ∀ n : ℕ,
+    ‖atkinsonLeadingTerm T G L n‖ ≤ C * G * T ^ (5 / 4 : ℝ) *
+      ‖divisorDirichletTerm (5 / 4) n‖ := exists_norm_atkinsonLeadingTerm_le
+
+example : Summable (atkinsonLeadingTerm 32 8 1) :=
+  summable_atkinsonLeadingTerm_of_secondOrder (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example (T G L : ℝ) : atkinsonLeadingFiniteSum T G L 0 = 0 := by
+  simp [atkinsonLeadingFiniteSum]
+
+example (T G L : ℝ) : atkinsonLeadingFiniteSum T G L 1 = 0 := by
+  simp [atkinsonLeadingFiniteSum, atkinsonLeadingTerm, divisorWeight]
+
+example : ‖divisorDirichletTerm (5 / 4) 1‖ ≤ (1 : ℝ) ^ (-(1 / 8 : ℝ)) *
+    ‖divisorDirichletTerm (9 / 8) 1‖ := by
+  simpa only [Nat.cast_one] using
+    norm_divisorDirichletTerm_fiveQuarters_le_tail (N := 1) (by norm_num) le_rfl
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 1 ≤ T → 0 < G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → ∀ N : ℕ, T ^ (10 : ℝ) ≤ N →
+    ‖atkinsonLeadingSum T G L - atkinsonLeadingFiniteSum T G L N‖ ≤ C * G :=
+  exists_norm_atkinsonLeadingSum_sub_polynomial_le
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    ∀ N : ℕ, T ^ (10 : ℝ) ≤ N →
+    |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+      2 * (atkinsonLeadingFiniteSum T G (Real.log T) N).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_finite_approximation (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+    T₀ ≤ T → T ^ (1 / 8 : ℝ) ≤ G → G ≤ T ^ (1 / 2 - (1 / 8 : ℝ)) →
+    ∀ N : ℕ, T ^ (10 : ℝ) ≤ N →
+    (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+      2 * Real.exp 1 * (atkinsonLeadingFiniteSum T G (Real.log T) N).re +
+        C * G * Real.log T :=
+  exists_zetaSquareLocalMean_le_atkinson_finite (by norm_num)
+
+end AtkinsonFourierRegression
+
+namespace AtkinsonStationaryRegression
+
+open TaoTrudgianYang2025 Complex MeasureTheory Set
+
+example (T : ℝ) : atkinsonSourcePhase T 0 = -Real.pi / 4 := by
+  simp [atkinsonSourcePhase, neg_div]
+
+example : Complex.exp (((Real.pi * (0 : ℝ) : ℝ) : ℂ) * I) = 1 := by
+  simpa only [pow_zero, Nat.cast_zero] using exp_atkinson_natural_pi 0
+
+example : Complex.exp (((Real.pi * (1 : ℝ) : ℝ) : ℂ) * I) = -1 := by
+  simpa only [pow_one, Nat.cast_one] using exp_atkinson_natural_pi 1
+
+example : Complex.exp (((Real.pi * (2 : ℝ) : ℝ) : ℂ) * I) = 1 := by
+  simpa using exp_atkinson_natural_pi 2
+
+example {T : ℝ} (hT : 0 < T) (n : ℕ) :
+    atkinsonSaddleRoot (T / (2 * Real.pi)) (Real.sqrt n) *
+      atkinsonSaddleRoot (T / (2 * Real.pi)) (-Real.sqrt n) = T / (2 * Real.pi) :=
+  atkinsonSaddleRoot_mul_neg (by positivity) (Real.sqrt n)
+
+example (n : ℕ) : zetaGaussianQuadraticIntegral 32 8
+    (Real.log (zetaAtkinsonSaddle 32 (Real.sqrt n)) - Real.log (32 / (2 * Real.pi))) =
+      atkinsonSaddleGaussian 32 8 n :=
+  zetaGaussianQuadraticIntegral_at_saddle (by norm_num) 8 n
+
+example (n : ℕ) : zetaGaussianQuadraticIntegral 32 8
+    (Real.log (zetaAtkinsonSaddle 32 (-Real.sqrt n)) - Real.log (32 / (2 * Real.pi))) =
+      atkinsonSaddleGaussian 32 8 n :=
+  zetaGaussianQuadraticIntegral_at_neg_saddle (by norm_num) (by norm_num) n
+
+example : ‖atkinsonSaddleGaussian 32 8 32‖ ≤ Real.sqrt Real.pi * 8 *
+    Real.exp (-(8 : ℝ) ^ 2 * 32 / (12 * 32)) := by
+  simpa only [Nat.cast_ofNat, neg_mul] using
+    norm_atkinsonSaddleGaussian_le_physical (T := 32) (G := 8)
+      (by norm_num) (by norm_num) (by norm_num) 32 (by norm_num)
+
+example : |Real.log (1 + (1 / 2 : ℝ)) - 1 / 2 + (1 / 2 : ℝ) ^ 2 / 2| ≤
+    2 * |(1 / 2 : ℝ)| ^ 3 := abs_log_one_add_sub_quadratic_le (by norm_num)
+
+example : |Real.log (1 + (-(1 / 2 : ℝ))) - (-(1 / 2 : ℝ)) + (-(1 / 2 : ℝ)) ^ 2 / 2| ≤
+    2 * |(-(1 / 2 : ℝ))| ^ 3 := abs_log_one_add_sub_quadratic_le (by norm_num)
+
+example (v : ℝ) : ‖deriv (zetaGaussianQuadraticIntegral 32 8) v‖ ≤
+    5 * Real.sqrt Real.pi * 8 ^ 2 :=
+  norm_deriv_zetaGaussianQuadraticIntegral_le_natural (by norm_num) (by norm_num) (by norm_num) v
+
+example (v : ℝ) : ‖iteratedDeriv 2 (zetaGaussianQuadraticIntegral 32 8) v‖ ≤
+    3 * Real.sqrt Real.pi * 8 ^ 3 :=
+  norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le_natural
+    (by norm_num) (by norm_num) (by norm_num) v
+
+example : ∃ C : ℝ, 0 < C ∧
+    IntervalC2Bound (fun y => atkinsonPowerWeight 32 8 1 (1 / 4) (y ^ 2))
+      (Real.sqrt 32 / 4) (Real.sqrt 32)
+        (C * 8 * (32 : ℝ) ^ (-(1 / 4 : ℝ))) (8 / Real.sqrt 32) := by
+  obtain ⟨C, hC, h⟩ := exists_intervalC2Bound_atkinsonPowerWeight_root_natural (1 / 4)
+  exact ⟨C, hC, h 32 8 1 (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)⟩
+
+example (c : ℝ) : atkinsonQuadraticWindow c 0 = 0 := by
+  simp [atkinsonQuadraticWindow]
+
+example (T G L α b : ℝ) : atkinsonFiniteStationaryMain T G L α b 0 = 0 := by
+  simp [atkinsonFiniteStationaryMain, atkinsonQuadraticWindow]
+
+example {T : ℝ} (hT : 0 < T) (b : ℝ) : 1 < atkinsonSaddleCurvature T b :=
+  one_lt_atkinsonSaddleCurvature hT b
+
+example {T : ℝ} (hT : 0 < T) (b : ℝ) :
+    Real.sqrt (atkinsonSaddleCurvature T b) *
+      Real.sqrt (atkinsonSaddleRoot (T / (2 * Real.pi)) b) =
+    Real.sqrt (atkinsonSaddleCurvature T (-b)) *
+      Real.sqrt (atkinsonSaddleRoot (T / (2 * Real.pi)) (-b)) := by
+  rw [atkinsonSaddle_squareRoot_normalization hT b,
+    atkinsonSaddle_squareRoot_normalization hT (-b), neg_sq]
+
+example (n : ℕ) (H : ℝ) : atkinsonFiniteStationaryMain 32 8 1 (1 / 4) (Real.sqrt n) H =
+    2 * atkinsonSaddleProfile 32 8 1 (1 / 4) (Real.sqrt n) * atkinsonSaddleGaussian 32 8 n *
+      Complex.exp ((atkinsonCentralPhase 32 : ℂ) * I) * (-1 : ℂ) ^ n *
+        Complex.exp (((atkinsonSourcePhase 32 n + Real.pi / 4 : ℝ) : ℂ) * I) *
+          atkinsonQuadraticWindow (atkinsonSaddleCurvature 32 (Real.sqrt n)) H :=
+  atkinsonFiniteStationaryMain_sqrt (by norm_num) 8 1 (1 / 4) H n
+
+example (n : ℕ) (H : ℝ) : atkinsonFiniteStationaryMain 32 8 1 (1 / 4) (-Real.sqrt n) H =
+    2 * atkinsonSaddleProfile 32 8 1 (1 / 4) (-Real.sqrt n) * atkinsonSaddleGaussian 32 8 n *
+      Complex.exp ((atkinsonCentralPhase 32 : ℂ) * I) * (-1 : ℂ) ^ n *
+        Complex.exp (((-atkinsonSourcePhase 32 n - Real.pi / 4 : ℝ) : ℂ) * I) *
+          atkinsonQuadraticWindow (atkinsonSaddleCurvature 32 (-Real.sqrt n)) H :=
+  atkinsonFiniteStationaryMain_neg_sqrt (by norm_num) (by norm_num) 1 (1 / 4) H n
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → 0 < H →
+    Real.sqrt T / 4 ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b - H →
+    atkinsonSaddleRoot (T / (2 * Real.pi)) b + H ≤ Real.sqrt T →
+    H ≤ atkinsonSaddleRoot (T / (2 * Real.pi)) b / 2 →
+    ‖atkinsonPowerIntegral T G L (1 / 4) b - atkinsonFiniteStationaryMain T G L (1 / 4) b H‖ ≤
+      C * G * T ^ (-(1 / 4 : ℝ)) * (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 +
+        16 * T * H ^ 4 / (atkinsonSaddleRoot (T / (2 * Real.pi)) b) ^ 3) :=
+  exists_atkinsonPowerIntegral_finite_stationary_approximation (1 / 4)
+
+example : |Real.sqrt (1 : ℝ)| ≤ Real.sqrt 10000 / 100 := by
+  simpa only [Nat.cast_one] using
+    sqrt_nat_small_frequency (T := 10000) (by norm_num) 1 (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L H : ℝ, 0 < T → 1 ≤ G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → 0 < H → H ≤ Real.sqrt T / 12 →
+    ∀ n : ℕ, 10000 * (n : ℝ) ≤ T →
+    ‖atkinsonPowerIntegral T G L (1 / 4) (Real.sqrt n) -
+      atkinsonFiniteStationaryMain T G L (1 / 4) (Real.sqrt n) H‖ ≤
+        C * G * T ^ (-(1 / 4 : ℝ)) *
+          (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 + 432 * H ^ 4 / Real.sqrt T) ∧
+    ‖atkinsonPowerIntegral T G L (1 / 4) (-Real.sqrt n) -
+      atkinsonFiniteStationaryMain T G L (1 / 4) (-Real.sqrt n) H‖ ≤
+        C * G * T ^ (-(1 / 4 : ℝ)) *
+          (4 / (H * Real.pi) + 4 * (G / Real.sqrt T) * H ^ 2 + 432 * H ^ 4 / Real.sqrt T) :=
+  exists_atkinsonPowerIntegral_small_n_pair_approximation (1 / 4)
+
+end AtkinsonStationaryRegression
+
+section FresnelStationaryRegression
+
+open TaoTrudgianYang2025 Complex MeasureTheory Set Filter
+open scoped Topology
+
+example (c x : ℝ) : fresnelDampedKernel 0 c x =
+    Complex.exp (((-2 * Real.pi * c * x ^ 2 : ℝ) : ℂ) * I) :=
+  fresnelDampedKernel_zero c x
+
+example (ε c x : ℝ) : fresnelDampedKernel ε c (-x) = fresnelDampedKernel ε c x :=
+  fresnelDampedKernel_neg ε c x
+
+example (x : ℝ) : ‖fresnelDampedKernel 0 1 x‖ ≤ 1 :=
+  norm_fresnelDampedKernel (by norm_num) 1 x
+
+example : ‖∫ x in (1 : ℝ)..2, fresnelDampedKernel 0 1 x‖ ≤ 1 / Real.pi := by
+  simpa only [one_mul] using norm_integral_fresnelDampedKernel_le
+    (ε := 0) (c := 1) (a := 1) (b := 2) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example (c H : ℝ) : Continuous
+    (fun ε : ℝ => ∫ x in (-H)..H, fresnelDampedKernel ε c x) :=
+  continuous_fresnelDampedWindow c H
+
+example : fresnelGaussianValue 1 = (1 - I) / 2 := by
+  simpa using fresnelGaussianValue_eq_cartesian (c := 1) (by norm_num)
+
+example : ‖fresnelGaussianValue 1‖ = 1 / Real.sqrt 2 := by
+  simpa only [mul_one] using norm_fresnelGaussianValue (c := 1) (by norm_num)
+
+example : ‖atkinsonQuadraticWindow 1 1 - fresnelGaussianValue 1‖ ≤ 2 / Real.pi := by
+  simpa only [one_mul] using norm_atkinsonQuadraticWindow_sub_gaussianValue_le
+    (c := 1) (H := 1) (by norm_num) (by norm_num)
+
+example : Tendsto (atkinsonQuadraticWindow 1) atTop
+    (𝓝 (Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) / (Real.sqrt 2 : ℂ))) := by
+  simpa only [mul_one] using tendsto_atkinsonQuadraticWindow (c := 1) (by norm_num)
+
+example : Complex.exp (((Real.pi / 4 : ℝ) : ℂ) * I) *
+    Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) = 1 := by
+  simpa using exp_positive_saddle_mul_fresnel 0
+
+example : Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) *
+    Complex.exp (((-Real.pi / 4 : ℝ) : ℂ) * I) = -I := by
+  simpa only [neg_zero, zero_sub, neg_div, Complex.ofReal_zero, zero_mul,
+    Complex.exp_zero, mul_one] using exp_negative_saddle_mul_fresnel 0
+
+example (n : ℕ) : atkinsonStationaryMain 32 8 1 (1 / 4) (Real.sqrt n) =
+    (2 * atkinsonSaddleProfile 32 8 1 (1 / 4) (Real.sqrt n) * atkinsonSaddleGaussian 32 8 n *
+      Complex.exp ((atkinsonCentralPhase 32 : ℂ) * I) * (-1 : ℂ) ^ n *
+        Complex.exp ((atkinsonSourcePhase 32 n : ℂ) * I)) /
+          (Real.sqrt (2 * atkinsonSaddleCurvature 32 (Real.sqrt n)) : ℂ) :=
+  atkinsonStationaryMain_sqrt (by norm_num) 8 1 (1 / 4) n
+
+example (n : ℕ) : atkinsonStationaryMain 32 8 1 (1 / 4) (-Real.sqrt n) =
+    ((-I) * 2 * atkinsonSaddleProfile 32 8 1 (1 / 4) (-Real.sqrt n) * atkinsonSaddleGaussian 32 8 n *
+      Complex.exp ((atkinsonCentralPhase 32 : ℂ) * I) * (-1 : ℂ) ^ n *
+        Complex.exp ((-atkinsonSourcePhase 32 n : ℂ) * I)) /
+          (Real.sqrt (2 * atkinsonSaddleCurvature 32 (-Real.sqrt n)) : ℂ) :=
+  atkinsonStationaryMain_neg_sqrt (by norm_num) (by norm_num) 1 (1 / 4) n
+
+example : (4 : ℝ) / ((1 / 12) * Real.pi) + 4 * (1 / 1) * (1 / 12) ^ 2 +
+    432 * (1 / 12) ^ 4 / 1 ≤ 20 / 1 :=
+  atkinsonStationary_error_le_of_power_balance (S := 1) (G := 1) (X := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L b : ℝ, 1 ≤ T → 1 ≤ G →
+    G ≤ T ^ (1 / 2 - 3 * (1 / 10 : ℝ)) → 1 ≤ L → 8 * L ≤ G →
+    |b| ≤ Real.sqrt T / 100 →
+    ‖atkinsonPowerIntegral T G L (1 / 4) b - atkinsonStationaryMain T G L (1 / 4) b‖ ≤
+      C * G * T ^ (-(1 / 4 : ℝ)) * T ^ (-(1 / 10 : ℝ)) := by
+  obtain ⟨C, hC, h⟩ := exists_atkinsonPowerIntegral_small_frequency_power_saving (1 / 4)
+  exact ⟨C, hC, fun T G L b => h (1 / 10) T G L b (by norm_num) le_rfl⟩
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T ^ δ ≤ G → G ≤ T ^ (1 / 2 - δ) → ∀ n : ℕ, 10000 * (n : ℝ) ≤ T →
+      ‖atkinsonPowerIntegral T G (Real.log T) (1 / 4) (Real.sqrt n) -
+        atkinsonStationaryMain T G (Real.log T) (1 / 4) (Real.sqrt n)‖ ≤
+          C * G * T ^ (-(1 / 4 : ℝ)) * T ^ (-min (δ / 3) (1 / 10)) ∧
+      ‖atkinsonPowerIntegral T G (Real.log T) (1 / 4) (-Real.sqrt n) -
+        atkinsonStationaryMain T G (Real.log T) (1 / 4) (-Real.sqrt n)‖ ≤
+          C * G * T ^ (-(1 / 4 : ℝ)) * T ^ (-min (δ / 3) (1 / 10)) :=
+  exists_atkinsonPowerIntegral_source_power_saving (1 / 4) hδ
+
+end FresnelStationaryRegression
+
+section AtkinsonSourceBandRegression
+
+open TaoTrudgianYang2025 Complex MeasureTheory Set Filter
+
+example (x : ℝ) : Real.arsinh |x| = |Real.arsinh x| := arsinh_abs x
+
+example : Real.log (zetaDivisorBandEdge 32 8 0) = Real.log (32 / (2 * Real.pi)) := by
+  simpa using log_zetaDivisorBandEdge (by norm_num : (0 : ℝ) < 32) 8 0
+
+example :
+    zetaDivisorBandCutoff 32 8 1 (zetaDivisorBandEdge 32 8 (-2 * 1)) = 0 ∧
+    zetaDivisorBandCutoff 32 8 1 (zetaDivisorBandEdge 32 8 (2 * 1)) = 0 :=
+  zetaDivisorBandCutoff_endpoints (by norm_num) (by norm_num) (by norm_num)
+
+example : atkinsonPowerWeight 32 8 1 (1 / 4) (atkinsonRootBandLower 32 8 1 ^ 2) = 0 ∧
+    atkinsonPowerWeight 32 8 1 (1 / 4) (atkinsonRootBandUpper 32 8 1 ^ 2) = 0 :=
+  atkinsonPowerWeight_rootBand_endpoints (by norm_num) (by norm_num) (by norm_num) (1 / 4)
+
+example : atkinsonRootBandLower 32 8 1 ≤ atkinsonRootBandUpper 32 8 1 :=
+  atkinsonRootBand_order (by norm_num) (by norm_num) (by norm_num)
+
+example : atkinsonRootBandUpper 32 8 1 - atkinsonRootBandLower 32 8 1 ≤
+    4 * Real.sqrt 32 * (1 / 8) :=
+  atkinsonRootBand_length_le (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (b : ℝ) : atkinsonPowerIntegral 32 8 1 (1 / 4) b =
+    2 * ∫ y in atkinsonRootBandLower 32 8 1..atkinsonRootBandUpper 32 8 1,
+      atkinsonPowerWeight 32 8 1 (1 / 4) (y ^ 2) * atkinsonRootKernel 32 b y :=
+  atkinsonPowerIntegral_eq_root_band (by norm_num) (by norm_num) (by norm_num) (1 / 4) b
+
+example : atkinsonStationaryMain 32 8 1 (1 / 4) (Real.sqrt 5) = 0 ∧
+    atkinsonStationaryMain 32 8 1 (1 / 4) (-Real.sqrt 5) = 0 :=
+  atkinsonStationaryMain_pair_eq_zero_of_index (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (1 / 4) 5 (by norm_num)
+
+example {y : ℝ} (hy : y ∈ Icc (atkinsonRootBandLower 32 8 1) (atkinsonRootBandUpper 32 8 1)) :
+    6 * Real.sqrt 32 * (1 / 8) ≤ atkinsonRootSlope 32 (6 * Real.sqrt 32 * (1 / 8)) y ∧
+      atkinsonRootSlope 32 (-(6 * Real.sqrt 32 * (1 / 8))) y ≤ -(6 * Real.sqrt 32 * (1 / 8)) :=
+  atkinsonRootSlope_outside_band (by norm_num) (by norm_num) (by norm_num) (by norm_num) hy le_rfl
+
+example (b : ℝ) : |deriv (atkinsonRootSlope 32 b) (Real.sqrt 32 / 4)| ≤ 8 ∧
+    |iteratedDeriv 2 (atkinsonRootSlope 32 b) (Real.sqrt 32 / 4)| ≤ 64 / Real.sqrt 32 :=
+  atkinsonRootSlope_derivative_bounds (by norm_num) le_rfl b
+
+example : 32 * (8 / Real.sqrt 32) +
+    (atkinsonRootBandUpper 32 8 1 - atkinsonRootBandLower 32 8 1) *
+      (32 * (8 / Real.sqrt 32)) ^ 2 ≤ 4128 * 1 * (8 / Real.sqrt 32) :=
+  atkinsonRootBand_derivative_bracket (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ C : ℝ, 0 < C ∧
+    ‖atkinsonPowerIntegral 32 8 1 (1 / 4) (Real.sqrt 18)‖ ≤
+      C * 8 ^ 2 * (32 : ℝ) ^ (-(1 / 4 : ℝ)) * 1 / (Real.sqrt 32 * 18) ∧
+    ‖atkinsonPowerIntegral 32 8 1 (1 / 4) (-Real.sqrt 18)‖ ≤
+      C * 8 ^ 2 * (32 : ℝ) ^ (-(1 / 4 : ℝ)) * 1 / (Real.sqrt 32 * 18) := by
+  obtain ⟨C, hC, h⟩ := exists_norm_atkinsonPowerIntegral_index_band_secondOrder_le (1 / 4)
+  exact ⟨C, hC, h 32 8 1 (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) 18 (by norm_num)⟩
+
+example : ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 1 ≤ T → 1 ≤ G → G ^ 2 ≤ 2 * T →
+    1 ≤ L → 8 * L ≤ G → ∀ N : ℕ, 36 * T * (L / G) ^ 2 ≤ (N : ℝ) →
+    ‖atkinsonLeadingSum T G L - atkinsonLeadingFiniteSum T G L N‖ ≤
+      C * G ^ 2 * L * T ^ (-(3 / 4 : ℝ)) :=
+  exists_norm_atkinsonLeadingSum_sub_band_finite_le
+
+example : (1 : ℝ) ^ 2 * 1 * (1 : ℝ) ^ (-(3 / 4 : ℝ)) ≤ 2 * 1 :=
+  atkinsonBand_tail_scale_le (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : atkinsonSourceCutoff 32 8 1 = 18 := by norm_num [atkinsonSourceCutoff]
+
+example : atkinsonSourceCutoff 40000 1200 1 = 1 := by norm_num [atkinsonSourceCutoff]
+
+example : 10000 * (atkinsonSourceCutoff 40000 1200 1 : ℝ) ≤ 40000 :=
+  atkinsonSourceCutoff_le_small (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : atkinsonStationaryMain 32 8 1 (1 / 4) (Real.sqrt 18) = 0 ∧
+    atkinsonStationaryMain 32 8 1 (1 / 4) (-Real.sqrt 18) = 0 := by
+  apply atkinsonStationaryMain_pair_eq_zero_after_cutoff (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (1 / 4) 18
+  norm_num [atkinsonSourceCutoff]
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∀ᶠ T : ℝ in atTop, ∀ G : ℝ, T ^ δ ≤ G →
+      10000 * (atkinsonSourceCutoff T G (Real.log T) : ℝ) ≤ T :=
+  eventually_atkinsonSourceCutoff_small hδ
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T ^ δ ≤ G → G ≤ T ^ (1 / 2 - δ) →
+      ∀ N : ℕ, 36 * T * (Real.log T / G) ^ 2 ≤ (N : ℝ) →
+      |(∫ t : ℝ, zetaGaussianWeight T G t * zetaMomentCriticalNorm t ^ 2) -
+        2 * (atkinsonLeadingFiniteSum T G (Real.log T) N).re| ≤ C * G * Real.log T :=
+  exists_zetaSquarePhysicalGaussian_atkinson_band_approximation hδ
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 16 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T ^ δ ≤ G → G ≤ T ^ (1 / 2 - δ) →
+      ∀ N : ℕ, 36 * T * (Real.log T / G) ^ 2 ≤ (N : ℝ) →
+      (∫ t in T - G..T + G, zetaMomentCriticalNorm t ^ 2) ≤
+        2 * Real.exp 1 * (atkinsonLeadingFiniteSum T G (Real.log T) N).re +
+          C * G * Real.log T :=
+  exists_zetaSquareLocalMean_le_atkinson_band hδ
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T ^ δ ≤ G → G ≤ T ^ (1 / 2 - δ) →
+      ∀ n : ℕ, n < atkinsonSourceCutoff T G (Real.log T) →
+      ‖atkinsonPowerIntegral T G (Real.log T) (1 / 4) (Real.sqrt n) -
+        atkinsonStationaryMain T G (Real.log T) (1 / 4) (Real.sqrt n)‖ ≤
+          C * G * T ^ (-(1 / 4 : ℝ)) * T ^ (-min (δ / 3) (1 / 10)) ∧
+      ‖atkinsonPowerIntegral T G (Real.log T) (1 / 4) (-Real.sqrt n) -
+        atkinsonStationaryMain T G (Real.log T) (1 / 4) (-Real.sqrt n)‖ ≤
+          C * G * T ^ (-(1 / 4 : ℝ)) * T ^ (-min (δ / 3) (1 / 10)) :=
+  exists_atkinsonSourceCutoff_carrier_approximation (1 / 4) hδ
+
+end AtkinsonSourceBandRegression
+
+section SymmetricStationarySumRegression
+
+open Complex MeasureTheory
+
+example {f : ℝ → ℂ} {M R r H : ℝ} (hH : 0 ≤ H)
+    (hf : IntervalC2Bound f (r-H) (r+H) M R) :
+    ‖f (r+H)-f r-((r+H-r : ℝ) : ℂ)*deriv f r‖ ≤ M*R^2*H^2 :=
+  hf.norm_sub_linear_le hH le_rfl le_rfl (by
+    simpa only [add_sub_cancel_left,abs_of_nonneg hH] using (le_rfl : H ≤ H))
+
+example {f : ℝ → ℂ} {M R r H : ℝ} (hH : 0 ≤ H)
+    (hf : IntervalC2Bound f (r-H) (r+H) M R) :
+    ‖f (r-H)-f r-((r-H-r : ℝ) : ℂ)*deriv f r‖ ≤ M*R^2*H^2 :=
+  hf.norm_sub_linear_le hH le_rfl le_rfl (by
+    rw [show r-H-r = -H by ring,abs_neg,abs_of_nonneg hH])
+
+example : ‖Complex.exp ((1:ℂ)*I)-1-(1:ℂ)*I‖ ≤ 3*(1:ℝ)^2 :=
+  norm_exp_real_phase_sub_linear_le 1
+
+example : ‖Complex.exp ((2:ℂ)*I)-1-(2:ℂ)*I‖ ≤ 3*(2:ℝ)^2 :=
+  norm_exp_real_phase_sub_linear_le 2
+
+example : |Real.log (1+(1/2:ℝ))-(1/2:ℝ)+(1/2:ℝ)^2/2-(1/2:ℝ)^3/3| ≤
+    2*|(1/2:ℝ)|^4 :=
+  abs_log_one_add_sub_cubic_le (by norm_num)
+
+example : |Real.log (1+(-1/2:ℝ))-(-1/2:ℝ)+(-1/2:ℝ)^2/2-(-1/2:ℝ)^3/3| ≤
+    2*|(-1/2:ℝ)|^4 :=
+  abs_log_one_add_sub_cubic_le (by norm_num)
+
+example (T b : ℝ) :
+    (∫ y in (atkinsonSaddleRoot (T/(2*Real.pi)) b-1)..
+      (atkinsonSaddleRoot (T/(2*Real.pi)) b+1),
+        (((y-atkinsonSaddleRoot (T/(2*Real.pi)) b)^1 : ℝ) : ℂ) *
+          atkinsonRootQuadraticKernel T b y) = 0 :=
+  integral_atkinsonRootQuadratic_odd T b 1 (by decide)
+
+example (T b : ℝ) :
+    (∫ y in (atkinsonSaddleRoot (T/(2*Real.pi)) b-(-1))..
+      (atkinsonSaddleRoot (T/(2*Real.pi)) b+(-1)),
+        (((y-atkinsonSaddleRoot (T/(2*Real.pi)) b)^3 : ℝ) : ℂ) *
+          atkinsonRootQuadraticKernel T b y) = 0 :=
+  integral_atkinsonRootQuadratic_odd T b (-1) (by decide)
+
+example : atkinsonSymmetricRadiusScale 1 1 = 1 := by
+  norm_num [atkinsonSymmetricRadiusScale]
+
+example : 1 ≤ atkinsonSymmetricRadiusScale 1 1 ∧
+    1*(atkinsonSymmetricRadiusScale 1 1)^2 ≤ Real.sqrt 1 ∧
+    (atkinsonSymmetricRadiusScale 1 1)^4 ≤ Real.sqrt 1 :=
+  atkinsonSymmetricRadiusScale_balance (by norm_num) (by norm_num) (by norm_num)
+
+example : 4/(((1:ℝ)/12)*Real.pi) + 4*1^2*((1:ℝ)/12)^3/1 +
+    216*1*((1:ℝ)/12)^5/1 + 1296*((1:ℝ)/12)^5/1 +
+      11664*((1:ℝ)/12)^7/1 ≤ 20/(1:ℝ) :=
+  atkinsonSymmetric_error_le_of_power_balance (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : ‖divisorDirichletTerm (1/4) 0‖ ≤ (0:ℝ)^(3/4+1/8 : ℝ) *
+    ‖divisorDirichletTerm ((1+1/8 : ℝ) : ℂ) 0‖ := by
+  simpa only [Nat.cast_zero] using
+    norm_divisorDirichletTerm_quarter_le_prefix (ε := 1/8) (N := 0) (n := 0)
+      (by norm_num) (by norm_num)
+
+example (T G L : ℝ) : atkinsonStationaryLeadingTerm T G L 0 = 0 :=
+  atkinsonStationaryLeadingTerm_zero T G L
+
+example : atkinsonStationaryLeadingTerm 32 8 1 18 = 0 := by
+  apply atkinsonStationaryLeadingTerm_eq_zero_after_cutoff
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num [atkinsonSourceCutoff]
+
+example : HasSum (atkinsonStationaryLeadingTerm 32 8 1)
+    (atkinsonStationaryLeadingFiniteSum 32 8 1 18) := by
+  have h := hasSum_atkinsonStationaryLeadingTerm
+    (T := 32) (G := 8) (L := 1) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num [atkinsonSourceCutoff] at h
+  exact h
+
+example : atkinsonStationaryLeadingSum 32 8 1 = atkinsonStationaryLeadingFiniteSum 32 8 1 18 := by
+  have h := atkinsonStationaryLeadingSum_eq_finite
+    (T := 32) (G := 8) (L := 1) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num [atkinsonSourceCutoff] at h
+  exact h
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 1 ≤ T →
+      T^(1/4 : ℝ) ≤ G → G ≤ Real.sqrt T → 1 ≤ L → 8*L ≤ G →
+      ∀ N : ℕ, 10000*(N:ℝ) ≤ T →
+      ‖atkinsonLeadingFiniteSum T G L N-atkinsonStationaryLeadingFiniteSum T G L N‖ ≤
+        C*G*Real.sqrt G*T^(-(1/2 : ℝ))*(N:ℝ)^(3/4+ε) :=
+  exists_norm_atkinsonLeadingFiniteSum_sub_stationary_le hε
+
+example {T G L : ℝ} (hT : 1 ≤ T) (hG : 1 ≤ G)
+    (hupper : G ≤ Real.sqrt T) (hL : 1 ≤ L) :
+    G*Real.sqrt G*T^(-(1/2 : ℝ))*
+      (atkinsonSourceCutoff T G L : ℝ)^(3/4 : ℝ) ≤
+        37*T^((3/4:ℝ)-1/2)*L^2 :=
+  atkinsonStationary_cutoff_scale_le hT hG hupper hL le_rfl (by norm_num)
+
+example {T G L : ℝ} (hT : 1 ≤ T) (hG : 1 ≤ G)
+    (hupper : G ≤ Real.sqrt T) (hL : 1 ≤ L) :
+    G*Real.sqrt G*T^(-(1/2 : ℝ))*
+      (atkinsonSourceCutoff T G L : ℝ)^(1 : ℝ) ≤
+        37*T^((1:ℝ)-1/2)*L^2 :=
+  atkinsonStationary_cutoff_scale_le hT hG hupper hL (by norm_num) le_rfl
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      ‖atkinsonLeadingSum T G (Real.log T)-atkinsonStationaryLeadingSum T G (Real.log T)‖ ≤
+        C*(G+T^(1/4+ε)) :=
+  exists_atkinsonLeadingSum_sub_stationary_bound hδ hε
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) -
+        2*(atkinsonStationaryLeadingSum T G (Real.log T)).re| ≤
+          C*(G*Real.log T+T^(1/4+ε)) :=
+  exists_zetaSquarePhysicalGaussian_stationary_approximation hδ hε
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        2*Real.exp 1*(atkinsonStationaryLeadingSum T G (Real.log T)).re +
+          C*(G*Real.log T+T^(1/4+ε)) :=
+  exists_zetaSquareLocalMean_le_stationary hδ hε
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) -
+        2*(atkinsonStationaryLeadingSum T G (Real.log T)).re| ≤ C*G*Real.log T :=
+  exists_zetaSquarePhysicalGaussian_stationary_above_fourthRoot hδ hκ
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        2*Real.exp 1*(atkinsonStationaryLeadingSum T G (Real.log T)).re +
+          C*G*Real.log T :=
+  exists_zetaSquareLocalMean_le_stationary_above_fourthRoot hδ hκ
+
+end SymmetricStationarySumRegression
+
+section NormalizedMainAbelRegression
+
+open TaoTrudgianYang2025 Complex MeasureTheory
+
+example (T b : ℝ) : atkinsonCommonSaddleFactor T (-b) = atkinsonCommonSaddleFactor T b :=
+  atkinsonCommonSaddleFactor_neg T b
+
+example : 0 < atkinsonCommonSaddleFactor 1 0 :=
+  atkinsonCommonSaddleFactor_pos (by norm_num) 0
+
+example : atkinsonCommonSaddleFactor 1 (-1) =
+    (1/Real.sqrt 2)*((-1:ℝ)^2+4*(1/(2*Real.pi)))^(-(1/4:ℝ)) :=
+  atkinsonCommonSaddleFactor_eq_rpow (by norm_num) (-1)
+
+example : (1:ℝ)^(-(1/4:ℝ))*(zetaAtkinsonSaddle 1 (-2)/1)^(-(1/4:ℝ)) /
+    Real.sqrt (2*atkinsonSaddleCurvature 1 (-2)) = atkinsonCommonSaddleFactor 1 (-2) :=
+  atkinsonSaddle_quarter_power_curvature (by norm_num) (-2)
+
+example (G L : ℝ) :
+    atkinsonSaddleProfile 1 G L (1/4) 0 / (Real.sqrt (2*atkinsonSaddleCurvature 1 0) : ℂ) =
+      (atkinsonCommonSaddleFactor 1 0 : ℂ)*atkinsonSaddleResidual 1 G L 0*
+        zetaSquareReflectedGammaPhase 1 :=
+  atkinsonSaddleProfile_div_curvature (by norm_num) G L 0
+
+example (T : ℝ) : atkinsonFourthRootCoefficient T 0 = 0 := by
+  simp [atkinsonFourthRootCoefficient]
+
+example : atkinsonFourthRootCoefficient 1 1 =
+    (1/Real.sqrt 2)*(1:ℝ)^(-(1/4:ℝ))*(1+2*1/Real.pi)^(-(1/4:ℝ)) := by
+  simpa only [Nat.cast_one] using atkinsonFourthRootCoefficient_eq (by norm_num : (0:ℝ)<1) 1
+
+example : 2*Real.sqrt Real.pi*atkinsonBesselScale (1/4) 0 = 0 := by
+  simpa only [Nat.cast_zero,Real.zero_rpow (by norm_num : -(1/4:ℝ) ≠ 0)] using
+    atkinsonBesselScale_quarter_normalization 0
+
+example : 2*Real.sqrt Real.pi*atkinsonBesselScale (1/4) 1 = 1 := by
+  simpa only [Nat.cast_one,Real.one_rpow] using atkinsonBesselScale_quarter_normalization 1
+
+example (T G L : ℝ) : atkinsonStationaryLeadingTerm T G L 0 = 0 :=
+  atkinsonStationaryLeadingTerm_zero T G L
+
+example (L : ℝ) : atkinsonStationaryLeadingTerm 1 1 L 2 = atkinsonCommonMainPhase 1 *
+    (atkinsonPositiveMainWeight 1 1 L 2*atkinsonPositivePhaseTerm 1 2-
+      atkinsonNegativeMainWeight 1 1 L 2*atkinsonNegativePhaseTerm 1 2) :=
+  atkinsonStationaryLeadingTerm_eq_signed (by norm_num) (by norm_num) L 2
+
+example (L : ℝ) : atkinsonStationaryLeadingFiniteSum 1 1 L 0 = atkinsonCommonMainPhase 1 *
+    (atkinsonPositiveMainSum 1 1 L 0-atkinsonNegativeMainSum 1 1 L 0) :=
+  atkinsonStationaryLeadingFiniteSum_eq_signed (by norm_num) (by norm_num) L 0
+
+example : atkinsonNegativePhaseTerm 0 1 = (starRingEnd ℂ) (atkinsonPositivePhaseTerm 0 1) :=
+  atkinsonNegativePhaseTerm_eq_conj 0 1
+
+example (T : ℝ) : ‖∑ n ∈ Finset.range 0, atkinsonNegativePhaseTerm T n‖ =
+    ‖atkinsonPhasePartialSum T 0‖ := norm_atkinsonNegativePhaseSum T 0
+
+example (w a : ℕ → ℂ) : ‖∑ n ∈ Finset.range 0, w n*a n‖ ≤
+    ‖w (0-1)‖*‖∑ n ∈ Finset.range 0, a n‖+
+      ∑ n ∈ Finset.range (0-1),
+        ‖w (n+1)-w n‖*‖∑ k ∈ Finset.range (n+1), a k‖ :=
+  norm_sum_mul_le_discrete_parts w a 0
+
+example (w a : ℕ → ℂ) : ‖w 0*a 0‖ ≤ ‖w 0‖*‖a 0‖ := by
+  simpa only [Nat.sub_self,Finset.sum_range_zero,Finset.sum_range_one,add_zero] using
+    norm_sum_mul_le_discrete_parts w a 1
+
+example (T G L : ℝ) : atkinsonMainAbelBound T G L 0 = 0 := by
+  simp [atkinsonMainAbelBound,atkinsonPhasePartialSum]
+
+example (T G L : ℝ) : atkinsonMainAbelBound T G L 1 = 0 := by
+  simp [atkinsonMainAbelBound,atkinsonPhasePartialSum,atkinsonPositivePhaseTerm,
+    RiemannZeta.GuthMaynard.divisorWeight]
+
+example (T G L : ℝ) : 0 ≤ atkinsonMainAbelBound T G L 2 :=
+  atkinsonMainAbelBound_nonneg T G L 2
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ n : ℕ, (n:ℝ) ≤ 64 →
+      ‖atkinsonPositiveMainWeight 64 8 1 n‖ ≤
+        C*8*(64:ℝ)^(-(1/4:ℝ))*(n:ℝ)^(-(1/4:ℝ))*Real.exp (-(8^2*(n:ℝ))/(12*64)) ∧
+      ‖atkinsonNegativeMainWeight 64 8 1 n‖ ≤
+        C*8*(64:ℝ)^(-(1/4:ℝ))*(n:ℝ)^(-(1/4:ℝ))*Real.exp (-(8^2*(n:ℝ))/(12*64)) := by
+  obtain ⟨C,hC,h⟩ := exists_norm_atkinsonMainWeights_le
+  exact ⟨C,hC,h 64 8 1 (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)⟩
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4:ℝ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        4*Real.exp 1*atkinsonMainAbelBound T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T))+
+          C*(G*Real.log T+T^(1/4+ε)) :=
+  exists_zetaSquareLocalMean_le_mainAbel hδ hε
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        4*Real.exp 1*atkinsonMainAbelBound T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T))+
+          C*G*Real.log T :=
+  exists_zetaSquareLocalMean_le_mainAbel_above_fourthRoot hδ hκ
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) -
+        2*(atkinsonCommonMainPhase T *
+          (atkinsonPositiveMainSum T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T))-
+            atkinsonNegativeMainSum T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T)))).re| ≤
+          C*(G*Real.log T+T^(1/4+ε)) :=
+  exists_zetaSquarePhysicalGaussian_signedMain_approximation hδ hε
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      |(∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) -
+        2*(atkinsonCommonMainPhase T *
+          (atkinsonPositiveMainSum T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T))-
+            atkinsonNegativeMainSum T G (Real.log T) (atkinsonSourceCutoff T G (Real.log T)))).re| ≤
+          C*G*Real.log T :=
+  exists_zetaSquarePhysicalGaussian_signedMain_above_fourthRoot hδ hκ
+
+end NormalizedMainAbelRegression
+
+section DampedWeightVariationRegression
+
+open TaoTrudgianYang2025 Complex
+
+example : FiniteVariationBound (fun _ => (I:ℂ)) 0 1 := by
+  simpa only [Complex.norm_I] using finiteVariationBound_const I 0
+
+example : FiniteVariationBound (fun _ => (I:ℂ)) 3 1 := by
+  simpa only [Complex.norm_I] using finiteVariationBound_const I 3
+
+example : FiniteVariationBound (fun _ => (I:ℂ)*(-I)) 3 2 := by
+  simpa only [Complex.norm_I,norm_neg,mul_one] using
+    (finiteVariationBound_const I 3).mul (finiteVariationBound_const (-I) 3)
+
+example : FiniteVariationBound (fun i : ℕ => ((i:ℝ):ℂ)) 1 1 := by
+  apply finiteVariationBound_of_monotone (by norm_num)
+    (fun i _ j _ hij => by exact_mod_cast hij)
+  intro i hi
+  exact ⟨Nat.cast_nonneg i,by exact_mod_cast hi⟩
+
+example : FiniteVariationBound (fun i : ℕ => ((1-(i:ℝ):ℝ):ℂ)) 1 1 := by
+  apply finiteVariationBound_of_antitone (by norm_num)
+    (fun i _ j _ hij => sub_le_sub_left (by exact_mod_cast hij) 1)
+  intro i hi
+  have h : (i:ℝ) ≤ 1 := by exact_mod_cast hi
+  constructor <;> linarith [Nat.cast_nonneg (α := ℝ) i]
+
+example (G : ℝ) : quadraticFrequencyEnvelope G 0 = 1 := by
+  simp [quadraticFrequencyEnvelope]
+
+example :
+    ‖zetaGaussianQuadraticIntegral 1 1 0-zetaGaussianQuadraticIntegral 1 1 0‖ ≤
+      2*Real.sqrt Real.pi*1*(quadraticFrequencyEnvelope 1 0-quadraticFrequencyEnvelope 1 0) :=
+  norm_quadraticGaussian_increment_le (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) le_rfl
+
+example (T : ℝ) : atkinsonSaddleFrequency T 0 = 0 := by
+  simp [atkinsonSaddleFrequency]
+
+example : FiniteVariationBound (fun i => atkinsonSaddleGaussian 1 1 (0+i)) 10
+    (2*Real.sqrt Real.pi) := by
+  simpa only [Nat.cast_zero,mul_zero,neg_zero,zero_div,Real.exp_zero,mul_one] using
+    finiteVariationBound_atkinsonSaddleGaussian_physical (by norm_num : (0:ℝ)<1)
+      (by norm_num : (0:ℝ)<1) (by norm_num) 0 10 (by norm_num)
+
+example (G : ℝ) : quadraticFrequencyEnvelope G (atkinsonSaddleFrequency 1 0) ≤ 1 := by
+  simpa only [Nat.cast_zero,mul_zero,neg_zero,zero_div,Real.exp_zero] using
+    quadraticFrequencyEnvelope_saddle_le_physical (by norm_num : (0:ℝ)<1) G 0 (by norm_num)
+
+example : atkinsonSaddleRoot 1 (-1)-1/atkinsonSaddleRoot 1 (-1) = -1 :=
+  atkinsonSaddleRoot_inverse_identity (by norm_num) (-1)
+
+example : zetaAtkinsonSaddle 1 (-1) ≤ zetaAtkinsonSaddle 1 1 :=
+  zetaAtkinsonSaddle_monotone (by norm_num) (by norm_num)
+
+example : Monotone (atkinsonPositiveRootSample 1 0) :=
+  atkinsonPositiveRootSample_monotone (by norm_num) 0
+
+example : Antitone (atkinsonNegativeRootSample 1 0) :=
+  atkinsonNegativeRootSample_antitone (by norm_num) 0
+
+example : atkinsonPositiveRootSample 20000 1 1 ∈ Set.Icc (1/4) 1 ∧
+    atkinsonNegativeRootSample 20000 1 1 ∈ Set.Icc (1/4) 1 :=
+  atkinsonRootSample_mem (by norm_num) 1 1 (by norm_num) 1 le_rfl
+
+example : zetaMainMellinProfile (zetaAtkinsonSaddle 1 0/1) =
+    atkinsonPowerProfile 0 ((atkinsonSaddleRoot (1/(2*Real.pi)) 0/Real.sqrt 1)^2) :=
+  zetaMainMellinProfile_saddle_eq_root (by norm_num) 0
+
+example :
+    FiniteVariationBound (fun i => (zetaDivisorBandCutoff 1 1 100
+      (zetaAtkinsonSaddle 1 (Real.sqrt ((0+i:ℕ):ℝ))) : ℂ)) 2 2 ∧
+    FiniteVariationBound (fun i => (zetaDivisorBandCutoff 1 1 100
+      (zetaAtkinsonSaddle 1 (-Real.sqrt ((0+i:ℕ):ℝ))) : ℂ)) 2 2 :=
+  finiteVariationBound_saddleCutoff (by norm_num) (by norm_num) (by norm_num) 0 2
+
+example : atkinsonFourthRootCoefficient 1 2 ≤ atkinsonFourthRootCoefficient 1 1 :=
+  atkinsonFourthRootCoefficient_antitone (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example :
+    ∃ C : ℝ, 0 < C ∧
+      FiniteVariationBound (fun i => atkinsonPositiveMainWeight 20000 200 1 (1+i)) 1
+        (C*200*(20000:ℝ)^(-(1/4:ℝ))*(1:ℝ)^(-(1/4:ℝ))*Real.exp (-(200^2*1)/(12*20000))) ∧
+      FiniteVariationBound (fun i => atkinsonNegativeMainWeight 20000 200 1 (1+i)) 1
+        (C*200*(20000:ℝ)^(-(1/4:ℝ))*(1:ℝ)^(-(1/4:ℝ))*Real.exp (-(200^2*1)/(12*20000))) := by
+  obtain ⟨C,hC,h⟩ := exists_finiteVariationBound_atkinsonMainWeights
+  refine ⟨C,hC,?_⟩
+  simpa only [Nat.cast_one] using h 20000 200 1 (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) 1 1 (by norm_num) (by norm_num)
+
+example (T : ℝ) (m : ℕ) : atkinsonPhaseBlockMax T m 0 = 0 := by
+  simp [atkinsonPhaseBlockMax,atkinsonPhaseBlockSum]
+
+example (T G L : ℝ) (m : ℕ) : atkinsonStationaryBlock T G L m 0 = 0 := by
+  simp [atkinsonStationaryBlock]
+
+example (T : ℝ) : ‖atkinsonPhaseBlockSum T 1 2‖ ≤ atkinsonPhaseBlockMax T 1 2 :=
+  norm_atkinsonPhaseBlockSum_le_max T 1 2 2 le_rfl
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ T G L : ℝ, 0 < T → 0 < G → G^2 ≤ 2*T → 0 < L →
+      ∀ m N : ℕ, 0 < m → 10000*((m+N:ℕ):ℝ) ≤ T →
+      ‖atkinsonStationaryBlock T G L m N‖ ≤
+        C*G*T^(-(1/4:ℝ))*(m:ℝ)^(-(1/4:ℝ))*Real.exp (-(G^2*(m:ℝ))/(12*T))*
+          atkinsonPhaseBlockMax T m N :=
+  exists_norm_atkinsonStationaryBlock_le
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      ∀ m N : ℕ, 0 < m → m+N ≤ atkinsonSourceCutoff T G (Real.log T) →
+      ‖atkinsonStationaryBlock T G (Real.log T) m N‖ ≤
+        C*G*T^(-(1/4:ℝ))*(m:ℝ)^(-(1/4:ℝ))*Real.exp (-(G^2*(m:ℝ))/(12*T))*
+          atkinsonPhaseBlockMax T m N :=
+  exists_atkinsonSourceCutoff_block_bound hδ
+
+end DampedWeightVariationRegression
+
+section TruncatedDyadicSourceRegression
+
+open Complex MeasureTheory
+
+example : Nat.clog 2 0 = 0 := by decide
+example : Nat.clog 2 1 = 0 := by decide
+example : Nat.clog 2 8 = 3 := by decide
+example : Nat.clog 2 9 = 4 := by decide
+example : truncatedDyadicLength 5 2 = 1 := by decide
+example : truncatedDyadicLength 8 2 = 4 := by decide
+example : truncatedDyadicLength 9 3 = 1 := by decide
+example : truncatedDyadicLength 0 3 = 0 := by decide
+
+example : 2^1+truncatedDyadicLength 3 1 ≤ 3 :=
+  truncatedDyadic_endpoint_le (by decide)
+
+example {N j : ℕ} (hj : j < Nat.clog 2 N) : 2^j < N :=
+  truncatedDyadic_start_lt hj
+
+example {N j : ℕ} (hj : 2^(j+1) ≤ N) : truncatedDyadicLength N j = 2^j :=
+  truncatedDyadicLength_eq_width hj
+
+example (f : ℕ → ℂ) (hf : f 0 = 0) (N : ℕ) :
+    (∑ i ∈ Finset.range N, f i) =
+      ∑ j ∈ Finset.range (Nat.clog 2 N),
+        ∑ i ∈ Finset.range (truncatedDyadicLength N j), f (2^j+i) :=
+  sum_range_eq_truncatedDyadic f hf N
+
+example (T G L : ℝ) : atkinsonStationaryLeadingFiniteSum T G L 0 = 0 := by
+  rw [atkinsonStationaryLeadingFiniteSum_eq_dyadic]
+  simp
+
+example (T G L : ℝ) : atkinsonStationaryLeadingFiniteSum T G L 1 = 0 := by
+  rw [atkinsonStationaryLeadingFiniteSum_eq_dyadic]
+  simp
+
+example (T G L : ℝ) :
+    atkinsonStationaryLeadingFiniteSum T G L 3 =
+      atkinsonStationaryBlock T G L 1 1+atkinsonStationaryBlock T G L 2 1 := by
+  have h := atkinsonStationaryLeadingFiniteSum_eq_dyadic T G L 3
+  rw [show Nat.clog 2 3 = 2 by decide] at h
+  norm_num [Finset.sum_range_succ,truncatedDyadicLength] at h
+  exact h
+
+example (T G : ℝ) : atkinsonDyadicPhaseBound T G 1 = 0 := by
+  simp [atkinsonDyadicPhaseBound]
+
+example (T G : ℝ) : atkinsonFullDyadicPhaseBound T G 0 = 0 := by
+  simp [atkinsonFullDyadicPhaseBound]
+
+example (T : ℝ) (m N : ℕ) :
+    atkinsonPhaseBlockMax T m N ≤ atkinsonPhaseBlockMax T m (N+1) :=
+  atkinsonPhaseBlockMax_mono T m (Nat.le_succ N)
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      ‖atkinsonStationaryLeadingSum T G (Real.log T)‖ ≤
+        C*G*T^(-(1/4:ℝ))*
+          atkinsonDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T)) :=
+  exists_norm_atkinsonStationarySum_le_dyadic hδ
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) →
+      ‖atkinsonStationaryLeadingSum T G (Real.log T)‖ ≤
+        C*G*T^(-(1/4:ℝ))*
+          atkinsonFullDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T)) :=
+  exists_norm_atkinsonStationarySum_le_fullDyadic hδ
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      (∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) ≤
+        C*(G*T^(-(1/4:ℝ))*
+          atkinsonFullDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T))+
+            (G*Real.log T+T^(1/4+ε))) :=
+  exists_zetaSquarePhysicalGaussian_le_dyadic hδ hε
+
+example {δ ε : ℝ} (hδ : 0 < δ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4 : ℝ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        C*(G*T^(-(1/4:ℝ))*
+          atkinsonFullDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T))+
+            (G*Real.log T+T^(1/4+ε))) :=
+  exists_zetaSquareLocalMean_le_dyadic hδ hε
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      (∫ t : ℝ, zetaGaussianWeight T G t*zetaMomentCriticalNorm t^2) ≤
+        C*(G*T^(-(1/4:ℝ))*
+          atkinsonFullDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T))+
+            (G*Real.log T)) :=
+  exists_zetaSquarePhysicalGaussian_le_dyadic_above_fourthRoot hδ hκ
+
+example {δ κ : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T G : ℝ,
+      T₀ ≤ T → T^δ ≤ G → G ≤ T^(1/2-δ) → T^(1/4+κ) ≤ G →
+      (∫ t in T-G..T+G, zetaMomentCriticalNorm t^2) ≤
+        C*(G*T^(-(1/4:ℝ))*
+          atkinsonFullDyadicPhaseBound T G (atkinsonSourceCutoff T G (Real.log T))+
+            (G*Real.log T)) :=
+  exists_zetaSquareLocalMean_le_dyadic_above_fourthRoot hδ hκ
+
+end TruncatedDyadicSourceRegression

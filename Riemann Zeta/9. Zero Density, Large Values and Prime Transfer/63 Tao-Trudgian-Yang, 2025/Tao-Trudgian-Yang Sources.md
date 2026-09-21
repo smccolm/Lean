@@ -516,8 +516,8 @@ there is strictly negative, for all real b and T>0. Thus both
 prospective Bessel signs and the zero-index main carrier are covered.
 Mathlib's exact logarithm/square-root derivative and positive-axis
 complex-power identities are used; no stationary-phase theorem is
-postulated. The literal Y0 asymptotic expansion and uniform source
-estimates are still open, as is the sharp Ivić inequality.
+postulated. The literal Y0 expansion is proved below; uniform stationary
+source estimates and the sharp Ivić inequality remain open.
 
 All six modules, 40 named public audits and 22 regressions are
 covered by the root and batch-runner inventory. No scan was copied,
@@ -559,13 +559,13 @@ Gaussian and local zeta mean. The complete Y0 sum and its `-2pi`
 normalization remain. Nine modules, 38 named audits, 20 regressions.
 
 This closes the main-integral estimate only. The literal Y0
-asymptotic expansion and uniform oscillatory stationary reduction,
+expansion is proved below; uniform oscillatory stationary reduction,
 sharp Atkinson inequality and genuine twelfth moment remain open.
 The native source file was imported, not copied or edited. No
 source scan, dependency pin, adjacent package or counterexample
 was changed.
 
-### Next Y0 asymptotic: checked references, not an imported proof
+### Y0 asymptotic research: references, not an imported proof
 
 Checked online on 20 September 2026: [DLMF 10.17.1--4](https://dlmf.nist.gov/10.17#i)
 and its [real-argument remainder bounds](https://dlmf.nist.gov/10.17#iii).
@@ -577,12 +577,13 @@ Y0(z) = sqrt(2/(pi z)) * (sin(z-pi/4) - cos(z-pi/4)/(8z)) + R(z),
 ```
 
 This specialization uses one term of each even/odd series. It gives
-`R(z)=O(z^(-5/2))` for `z≥1`. Proposed application (not yet
-formalized): at `z=4pi sqrt(nx)`, the remainder has a summable
+`R(z)=O(z^(-5/2))` for `z≥1`. The proposed application, now
+proved below with a different explicit bound, is that at
+`z=4pi sqrt(nx)` the remainder has a summable
 `n^(-5/4)` divisor weight, whereas a one-term absolute remainder
 would only give `n^(-3/4)`. The bridge to the literal native
-`dfiBesselY0`, the remainder proof and the complete oscillatory
-source reduction are still required. No DLMF statement is used as
+`dfiBesselY0` and the complete arithmetic replacement are proved
+below; stationary-phase evaluation is still required. No DLMF statement is used as
 a Lean premise or a kernel oracle.
 
 The current [Mathlib Bessel documentation](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/SpecialFunctions/Bessel.html)
@@ -590,5 +591,407 @@ provides first-kind `Complex.besselJ`; its TODO lists second-kind
 functions and integral representations. The local pinned Mathlib
 search found no Bessel-named source file. This is a limited reuse
 check, not a claim that no external Lean development exists. The
-dependency pin is unchanged; the actual native kernel remains the
-object that the next proof must estimate.
+dependency pin is unchanged; the actual native kernel is the
+object estimated by the following proof.
+
+### Literal Neumann ray and complete source replacement, 20 September 2026
+
+[DLMF 10.9.5](https://dlmf.nist.gov/10.9.E5) gives the order-zero
+Schläfli normalization used for comparison with the native definition;
+[DLMF 10.17.1--4](https://dlmf.nist.gov/10.17#i) fixes the signs
+of the two oscillatory coefficients. These are reference checks, not
+formal imports. No source theorem, asymptotic or remainder is assumed.
+
+The local proof starts with the literal `dfiBesselY0Osc` and
+`dfiBesselY0Tail`. Cauchy's rectangle identity for
+`exp(ixz)(1-z)^(-1/2)(1+z)^(-1/2)` is passed to two infinite
+vertical rays. The positive angular endpoint is approached only
+after proving continuity of the integrable ray through one.
+The ray through zero equals the native tail, which cancels exactly.
+Thus `dfiBesselY0_eq_neumannLaplaceIntegral` identifies the actual
+kernel with an exponentially decaying integral, not a substitute.
+
+The elementary inverse-square-root remainder
+`|(1+iu)^(-1/2)-1+iu/2|≤3u²/8` is proved algebraically using
+the principal square root and `Re sqrt(1+iu)≥1`. Mathlib's actual
+Gamma integral evaluates the moments. The resulting theorem
+`abs_dfiBesselY0_sub_neumannTwoTerm_le` proves, for every x>0,
+
+```text
+P(x)=sqrt(pi)/pi*((sin x-cos x)x^(-1/2)-(sin x+cos x)x^(-3/2)/8),
+|dfiBesselY0(x)-P(x)| ≤ ((2/pi)(9/128)sqrt(pi)) x^(-5/2).
+```
+
+The retained terms match the expanded sine/cosine normalization;
+the displayed explicit remainder is the local proved bound, not a
+claim that the earlier DLMF bound was imported verbatim.
+
+`GuthMaynard/DFIEquation24.lean` was inspected and imported in place.
+SHA-256:
+`2011e38c332aeda0ada42c73a44014f31711c75dfd25ac55047f8aafd7245474`.
+Its `summable_norm_dfiVoronoiDualTerm` supplies summability of the
+original complete minus branch; the actual smooth test and literal
+Bessel bridge identify the terms before it is used. The ordinary
+divisor Dirichlet series at `5/4` sums the proved remainder.
+All original, remainder and new two-term series are genuinely
+summable. Zero-index coefficients and all `-2pi` factors are retained.
+
+`exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le` gives the
+complete uniform error `C G` on `T≥16`, `G>0`, `G²≤2T`,
+`L>0`, `8L≤G`. The actual physical Gaussian and local-mean
+consumers in `ZetaAtkinsonTwoTermSource` then give `Cδ G log T`
+on `T^δ≤G≤T^(1/2-δ)` beyond one uniform threshold. Their
+signatures contain no analytic theorem parameter. Thirteen modules,
+71 public audits and 25 regressions are covered by the root and
+exact batch-runner inventory.
+
+Uniform stationary evaluation of the actual two-term series, the sharp
+Ivić/Atkinson inequality, genuine twelfth moment and unconditional
+Add-est outputs remain open. No dependency pin, native source,
+source scan or preserved counterexample was changed.
+
+### Signed-carrier integral source audit, 20 September 2026
+
+The new cancellation proof uses the pinned native theorem
+`ZetaAppendix.nonstationary_phase_integral_bound`, imported through
+`GuthMaynardExternal.PNT.ZetaAppendix`. The native file is
+`../71 Guth-Maynard, 2026/GuthMaynardExternal/PNT/ZetaAppendix.lean`;
+SHA-256:
+`9fad94d5a7026d86882df61147b1082b103caf555ac803f0b1b52efd8bc28d9f`.
+It was inspected and imported in place, not copied or edited.
+The local Mathlib search did not find the required complete
+stationary-value theorem; no such theorem is presumed available.
+
+The native estimate requires a nonzero derivative and continuous
+monotone absolute reciprocal slope. `AtkinsonFirstDerivative`
+constructs these hypotheses from the actual C2 phase and slope.
+Its negative-slope bound is `1/(lam*pi)`; the positive-slope
+version follows by the proved reflection `x↦-x`, with the
+integral orientation and `2pi` normalization retained.
+`AtkinsonRootPhase` proves the square-substituted phase and
+derivatives, including `q''=-T/(pi*y²)-2`.
+The exact saddle factorization puts the left and right tails in
+the native estimate's domain. `AtkinsonRootIntegral` combines
+them with a central length bound to give the uniform bound four.
+
+Mathlib's interval substitution and integration-by-parts theorems
+then apply to actual derivatives and actual positive support.
+`IntervalC1Bound.comp_sq` proves preservation of the derivative
+mass; `IntervalC1Bound.atkinsonRoot` proves the weighted bound
+`8M`. `AtkinsonPowerWeight` constructs the needed amplitude
+bound from the fixed power/Mellin profile, cutoff, unit Gamma
+factor and damped Gaussian. `AtkinsonPowerIntegral` proves the
+exact source Jacobian and the uniform bound `Cα G T^(-α)`.
+
+The carrier algebra is derived from the already proved literal
+Neumann two-term expansion, not from a new assumed asymptotic.
+Actual integrability precedes linearity; complete summability
+comes from the actual convergent two-term source. The leading
+and correction estimates give powers `n^(-1/4)` and
+`n^(-3/4)`; these are not used as summable majorants.
+The actual physical Gaussian and local-mean consumers retain
+the whole series and the uniform source error.
+
+The canonical
+[Ivić Orsay scan](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
+was located again; browser retrieval exceeded the 10 MiB limit.
+No new page content from that attempt is used as evidence.
+The previously recorded local scan and source conventions remain
+unchanged. No package or external theorem was installed.
+
+Ten modules, 43 public audits and 24 regressions cover this scope.
+Uniform stationary main values and sharper arithmetic tails,
+the sharp Atkinson inequality, genuine twelfth moment and all
+unconditional Add-est outputs remain open. No native source,
+dependency pin or preserved counterexample changed.
+
+### Actual frequency tails and complete correction removal
+
+The next proof reuses the same pinned native reciprocal-slope
+theorem, without importing a stationary-value assertion.
+On `sqrt(T/16)≤y≤sqrt(T)`, the exact actual slope satisfies
+`q'(T,b,y)≥b` and `q'(T,-b,y)≤-b` when
+`b≥8sqrt(T)`. Its monotonicity was already proved.
+The weighted primitive lemma now retains a variable primitive
+bound B, giving `2 B M` for the actual C1 amplitude.
+Consequently `exists_norm_atkinsonPowerIntegral_far_le`
+proves `Cα G T^(-α)/b` for both signs, including the
+threshold equality, on the original physical support.
+
+The correction argument is a local proved estimate, not an
+assumed literature input. Below the threshold it uses
+`T^(-3/4)sqrt(T)≤1` for T≥1; above the threshold it
+uses the proved reciprocal-frequency gain. This yields
+`C G/sqrt(n)` for the actual correction pair, n>0.
+The exact `n^(-3/4)` coefficient turns the result into
+`C G |divisorDirichletTerm(5/4,n)|`; n=0 is handled
+by its genuine zero divisor coefficient.
+
+The ordinary-divisor Dirichlet theorem already imported from
+the native project proves absolute summability.
+`GuthMaynard/HughesYoungAFE.lean` defines the actual
+`LSeries.term` and proves `summable_divisorDirichletTerm`
+for `1<Re(s)`, consumed here at `s=5/4`. It was inspected
+in place; SHA-256:
+`8b500bf307d4faa135cbff55f52e827216840bc1d0ffa8bd84e46f858ed0a1cb`.
+No native source was copied or edited. The complete
+correction has norm at most `C G`; exact subtraction from
+the genuinely convergent two-term source proves summability
+of the full leading series. Both physical zeta theorems then
+consume the bound with unchanged factors and width ranges.
+Four modules plus one generalized helper, 19 new public audits
+and 16 regressions cover this continuation.
+
+The remaining leading stationary main values, sharper leading
+arithmetic tails and genuine twelfth moment are not supplied
+by that convergence argument. All unconditional Add-est outputs
+remain open. The native file/hash, all dependency and source
+pins, archived texts and preserved counterexample are unchanged.
+
+### Constructed C2 bounds and exact Fourier-tail source
+
+The pinned native `GuthMaynard/DFIParametricMellin.lean` was inspected
+and imported in place. SHA-256:
+`d07da5016fb76403dabaa23c377ca137ddf78c78767a03b9ac5303a92d9e4b42`.
+Its `one_add_abs_fourier_decay_of_support_of_bounds_order` at order two
+consumes actual smoothness, compact support and global derivative bounds.
+It derives from Mathlib Fourier integration by parts; it is not a
+stationary-value theorem. Mathlib's
+`Real.fourier_real_eq_integral_exp_smul` fixes the signed frequency
+-2b sqrt(T), and its interval scaling theorem supplies the exact Jacobian.
+
+The cutoff's exponential edges, Gaussian Q'', fixed logarithmic profile
+and nonlinear phase all have constructed derivative bounds. Extension
+by zero retains only the positive root; the actual band supplies smoothness
+at zero. The resulting bound for the true leading term is
+C G T^(5/4) |divisorDirichletTerm(5/4,n)|. The same native
+`summable_divisorDirichletTerm` recorded above is used at 9/8 to bound
+the tail by C G T^(5/4) N^(-1/8), not an assumed arithmetic estimate.
+N≥T^10 gives C G and is consumed in both physical zeta source theorems.
+
+This local coarse truncation is not attributed to Ivić as his sharp
+conclusion. Evaluated stationary mains and source-scale localization
+are proved by the later local deductions below; the summed stationary
+error, sharp Atkinson assembly, twelfth moment and unconditional Add-est
+outputs remain open. Fifteen modules,
+59 named public audits and 20 regressions cover this continuation.
+No native source, dependency pin, source archive or counterexample changed.
+
+### Paired saddles and actual finite stationary reduction
+
+Rechecked the primary [Ivić Orsay scan](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf).
+The online reader again rejected the PDF above its size limit; the
+already pinned local scan was read instead, printed pages 107–115,
+including Theorem 6.2, (6.22), and (6.47)–(6.51). SHA-256 unchanged:
+`fafac152db87abe132858fa97d8fe501c61cd261e20732ef701396fba27b61aa`.
+Its title is *Topics in Recent Zeta Function Theory*, Orsay 83.06,
+not the ANTEDB-cited book edition. No source was silently replaced.
+
+The phase definition was also checked against the adjacent
+`GafniTao/HeathBrownAtkinsonPhase.lean`, inspected in place, SHA-256
+`a42e7b9e7dbad92a9c7fd1f8a2859207d8d29241503eea259429386656cb7fa9`.
+Its source comment cites Heath–Brown (1978), (11). No adjacent package
+or conditional twelfth-moment proposition was imported.
+Our symmetric source retains both saddles; the lower-side truncation
+in Ivić's derivation does not authorize discarding one here.
+
+The exact logarithm/arsinh bridge, both alternating phases, actual
+paired complex Gaussian, natural derivative scale and cubic log error
+are locally proved using pinned Mathlib calculus/logarithm bounds.
+The outer integrals consume the existing native reciprocal-slope test.
+`exists_atkinsonPowerIntegral_small_n_pair_approximation` is a
+locally derived finite-quadratic reduction, not an attribution of
+Ivić's sharp conclusion: it uses 10000n≤T and H≤sqrt(T)/12 and
+retains the actual finite quadratic integral and both physical amplitudes.
+
+Twelve modules, 71 public audits and 22 regressions cover this continuation.
+Fresnel evaluation is now proved below. Sharp source-scale localization/
+error summation and the genuine twelfth moment remain open. Native files, source pins,
+archives and preserved counterexample are unchanged. Keep the exact
+batch runner and backing inventory synchronized.
+
+## Fresnel normalization and locally proved stationary power saving
+
+Primary normalization checked online: [NIST DLMF §7.2(iii)](https://dlmf.nist.gov/7.2.iii),
+equations 7.2.7–7.2.9, defines the cosine/sine Fresnel integrals with
+phase pi t²/2 and gives their positive-infinity limits as 1/2.
+With t=2sqrt(c)z and the negative complex phase, our symmetric
+normalization is (1-i)/(2sqrt(c))=exp(-i pi/4)/sqrt(2c).
+This comparison checks the sign and scale; it is not a proof oracle.
+
+The local proof uses pinned Mathlib's
+`integrable_cexp_neg_mul_sq`, `integral_gaussian_complex_Ioi`,
+`continuousAt_cpow_const` and `Complex.sq_cpow_two_inv`, with
+actual integrable positive damping, a locally proved damping-uniform
+tail and a finite-interval Abel limit. It proves the explicit remainder
+2/(c H pi) and the principal branch, with no whole-line zero-damping
+Lebesgue-integrability claim.
+
+The evaluated stationary consumer and choice H=T^η/12 are local
+deductions from the already constructed carrier amplitude and tails.
+The source-width bound uses η=min(δ/3,1/10), retains both physical
+signs and their separate profiles, and applies only to 10000n≤T.
+It is not attributed to Ivić as a complete sharp Atkinson formula.
+Sharp localization and summed errors remain missing.
+
+Nine modules, 35 public audits and 16 regressions are in the exact
+batch-runner inventory. No dependency pin, source archive, native file
+or preserved counterexample changed; both principal runners remain
+mandatory. The full goal, twelfth moment and unconditional Add-est remain open.
+
+## Source-scale tail: local deductions from the pinned source
+
+No additional paper, dependency or external theorem was imported.
+The original cutoff has edges (T/(2pi)) exp(±2L/G).
+Combining these actual edges with the already proved saddle logarithm
+gives |b|≤3sqrt(T)L/G. The actual root-band restriction is proved by
+support and the square change of variables, not by assuming localization.
+
+The quantitative reciprocal-slope second derivative, both integrations
+by parts, vanishing actual endpoints and band length are locally proved.
+The resulting bound Cα G² T^(-α) L/(sqrt(T)n), n≥36T(L/G)², is
+summed using the already pinned ordinary-divisor Dirichlet series at 5/4.
+Both physical zeta consumers retain the actual leading integral sum and
+Cδ G log T error, with the new source-scale cutoff. Ceiling rounding and
+the retained-index stationary range are proved, including 10000N≤T
+eventually on the lower power-width range.
+
+This is not an attribution of the complete sharp Atkinson formula to
+the new local estimate: summed stationary errors and final main assembly
+remain missing. Eleven modules, 53 named audits and 22 regressions
+cover the continuation. Source pins, native files, archives and the
+counterexample are unchanged. The exact batch runner and both evaluation
+scopes remain mandatory; the full goal and unconditional Add-est remain open.
+
+## Symmetric summation and a renewed width-range check
+
+The [Ivić Orsay scan](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
+was rechecked locally at printed pages 107–109 and 127–130.
+The web reader again exceeded its PDF size limit. Text extraction and
+visual inspection of printed page 130 confirm that (7.20) links
+B G (log T)²=V² and that the proof uses G≤T^(1/3); an estimate only
+for G≥T^(1/3) would not supply the missing range.
+The existing adjacent PDF remains SHA256
+`fafac152db87abe132858fa97d8fe501c61cd261e20732ef701396fba27b61aa`.
+A PDF reader installed under ignored workspace `.tmp` was used only
+for inspection, not as a Lean dependency or proof oracle.
+
+The new local proof uses the actual logarithmic quartic remainder,
+a kernel-checked complex exponential remainder, C2 amplitude control,
+and exact odd cancellation. Its radius T^(1/4)/(12sqrt(G)) is derived
+for G≥T^(1/4). The actual quarter-weighted divisor prefix is controlled
+through absolute convergence at 1+ε, and the ceiling cutoff gives a
+summed Oε(T^(1/4+ε)) retained error. Both physical zeta consumers use
+the complete evaluated series, retaining both coefficients and profiles.
+
+Their error is Cδ,ε (G log T+T^(1/4+ε)), or Cδ,κ G log T above
+T^(1/4+κ), within the original power-width range. This is not attributed
+to Ivić as a proof of his full-width Theorem 6.2. Smaller widths, any
+necessary lower-value-range reduction, final main assembly and the
+genuine twelfth moment remain open. Ten modules, 43 audits and 24
+regressions cover the continuation. All source pins, archives and
+native files, and the preserved counterexample, are unchanged.
+
+## Source fidelity of the normalized main and Abel step
+
+The renewed [Ivić source check](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
+used the existing scan's printed pages 107–109: Theorem 6.2,
+the dyadic phase-sum bound and the weighted sum preceding partial
+summation. No source pin or file changed. This is the Orsay text,
+not a substituted edition of the book cited in the paper's blueprint.
+
+The five new modules derive their normalization from local identities,
+including the exact saddle-curvature product and original Bessel constants.
+Finite partial summation consumes Mathlib's `Finset.sum_range_by_parts`
+in `Mathlib/Algebra/BigOperators/Module.lean` at the existing pin.
+There is no new external proof dependency.
+
+The actual weights remain separate: only the raw phase sums are conjugate.
+Their pointwise fourth-root/Gaussian bound and the literal finite-difference
+Abel consumer are proved. The continuation below supplies the uniform
+damped variation estimate and an actual source-block consumer. Four physical consumers retain the preceding explicit
+fourth-root-width restrictions and error terms. These results are not
+attributed to Ivić as a completed proof of his full Theorem 6.2.
+The smaller-width route, dyadic/Gram argument, genuine twelfth moment and
+unconditional Add-est remain open. All 30 public theorems are audited,
+and 24 regression examples retain exact source objects and endpoints.
+
+## Source fidelity of damped variation and actual block bounds
+
+The existing [Ivić Orsay scan](https://bibliotheque.imo.universite-paris-saclay.fr/media/filer_public/86/6d/866d1cf0-a942-4f8a-9d30-7cb3b03e1b1c/i_ivic-66.pdf)
+was rechecked at printed page 108, equations (6.24)–(6.25), using
+the local PDF after the web reader again exceeded its size limit.
+The retained PDF is unchanged, SHA256
+`fafac152db87abe132858fa97d8fe501c61cd261e20732ef701396fba27b61aa`.
+The source uses dyadic phase sums and an endpoint-plus-integral bound
+after partial summation. The new finite maximum of raw partial sums is
+a locally proved block majorant, not an asserted identity with that
+source expression or a completed Gram estimate.
+
+The new analytic input from the existing Mathlib pin is
+`norm_sub_le_integral_of_norm_deriv_le_of_le` in
+`Mathlib/MeasureTheory/Integral/IntervalIntegral/DistLEIntegral.lean`.
+It bounds actual complex Gaussian increments by the integral of their
+already proved derivative majorant. The explicit real Gaussian primitive
+and finite telescoping produce damping with no block-length loss.
+Ordered saddle samples and the already constructed compact C2 Mellin
+bound give uniform variation of the actual residual profiles; both
+original cutoff transitions and both signed weights are retained.
+
+`exists_finiteVariationBound_atkinsonMainWeights` and
+`exists_atkinsonSourceCutoff_block_bound` are local deductions with
+all constants before the physical parameters. The latter consumes the
+actual stationary terms and derives the small-frequency range from the
+same source ceiling cutoff. Its range is the original power-width
+range, but it does not extend the older stationary-error estimate below
+G=T^(1/4).
+
+Six modules, 36 named audits and 24 regressions cover this continuation.
+No dependency pin, native file, archive, preserved counterexample,
+production exclusion or diagnostic gate changed. Maintain the exact
+`run_tao_trudgian_yang_build.bat` inventory and run both principal
+scopes. Global dyadic assembly, the source-shaped phase-sum/Gram argument,
+smaller-width errors or a proved lower-value reduction, the genuine
+twelfth moment and unconditional Add-est remain open; the full goal
+is unchanged.
+
+## Exact truncated dyadic assembly: source and API fidelity
+
+The new partition is a local proof, not an imported paper theorem.
+At the existing Mathlib pin it uses `Nat.clog`,
+`Nat.pow_lt_of_lt_clog` and `Nat.le_pow_clog` from
+`Mathlib/Data/Nat/Log.lean`, together with the finite range-splitting
+identity `Finset.sum_range_add`. A direct induction proves the
+partition, including the shortened final block and exact powers of two.
+
+The actual stationary zero coefficient and finite-support theorem then
+supply the complete source identity. The previously proved block bound
+is applied only before the exact source ceiling. The monotonicity proof
+for raw phase-prefix maxima may enlarge the last phase block to a full
+one, but never asserts that stationary geometry holds beyond the cutoff.
+
+The four physical consumers bound actual Gaussian/local zeta means by
+the resulting full-block phase majorant plus the existing error.
+The Gaussian conclusion is an upper bound, not a signed approximation.
+The fourth-root-width restrictions of the earlier stationary error are
+unchanged. The source's maximal phase/Gram estimate and any necessary
+comparison with Ivić's endpoint-plus-integral expression remain separate
+obligations; none is silently assumed or attributed to the source.
+
+Three modules, 20 named public audits and 24 regressions cover the
+continuation. No new dependency, source pin, archive, native file,
+warning gate or production exclusion changed. The original counterexample
+and repaired powering/Heath–Brown chain are unchanged.
+The exact batch interface and both principal evaluations remain required.
+Smaller-width estimates or a proved low-value reduction, the genuine
+twelfth moment and unconditional Add-est remain open.
+
+The adjacent Gafni–Tao `HeathBrownAtkinsonPrefixGram` and
+`HeathBrownAtkinsonGramBound` modules were inspected read-only.
+The former proves Bombieri–Halász for a common integer prefix j at
+every height on (K,2K]; the latter bounds exact full-block Gram entries
+using the actual two-height phase. Neither statement alone supplies
+the present height-dependent prefix maximum on [M,2M).
+A faithful reuse requires a proved variable-prefix/endpoint bridge and
+uniform truncated Gram bounds. No adjacent module or conditional
+twelfth-moment statement was added as a dependency.

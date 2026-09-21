@@ -189,9 +189,51 @@ additive energy**, the three output families covered by the paper.
   consumes that bound, retaining only the complete phase-adjusted
   Y0 divisor sum with uniform `Cδ G log T` error. The physical
   Gaussian companion is also proved. All 38 public audits and 20
-  regressions are covered by the root and exact batch runner. The
-  literal Y0 asymptotic expansion, uniform stationary reduction and
-  sharp Atkinson inequality remain required.
+  regressions are covered by the root and exact batch runner. Thirteen
+  further modules prove the literal Y0 ray representation and two-term
+  expansion with explicit `K x^(-5/2)` error for all `x>0`.
+  `exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le` sums the
+  actual remainder against the ordinary-divisor series at `5/4`;
+  `exists_zetaSquareLocalMean_le_atkinson_twoTerm` consumes it,
+  retaining the complete oscillatory series and uniform `Cδ G log T`
+  error with no analytic premise. The Gaussian companion, all 71
+  public audits and 25 regressions are included in the root and runner.
+  Ten further modules prove uniform signed-carrier cancellation by
+  the exact square substitution, actual slope factorization and native
+  first-derivative estimates in both orientations. The actual
+  power amplitude has a constructed variation bound, yielding
+  `|Iα(T,G,L,b)|≤Cα G T^(-α)` for every real b. Exact four-carrier
+  algebra, positive-support integrability and complete summability
+  link this to the actual two-term series. Its `n^(-1/4)` and
+  `n^(-3/4)` summand bounds are proved, not presumed summable.
+  `exists_zetaSquareLocalMean_le_carriers` and its Gaussian
+  companion retain the complete source and uniform error.
+  All 43 public audits and 24 regressions are in the root and
+  exact batch inventory. Four further modules and a generalized
+  weighted-primitive lemma prove the actual `1/|b|` gain for
+  `|b|≥8sqrt(T)`, with both signs and the equality boundary.
+  Near/far combination bounds the actual correction by the divisor
+  Dirichlet series at `5/4`; its complete sum costs `C G`.
+  `exists_norm_zetaAtkinsonTwoTermSum_sub_leading_le` consumes
+  this estimate with proved complete-series identities.
+  `exists_zetaSquareLocalMean_le_atkinson_leading` and its
+  Gaussian companion retain only the full leading signed carriers
+  with uniform source error. All 19 new public audits and 16
+  regressions are covered by the root and exact batch runner.
+  Fifteen further modules construct the actual C2 amplitude and its
+  positive-root smooth extension. `atkinsonPowerIntegral_eq_fourier`
+  retains both signed frequencies, the unit constant phase and Jacobian.
+  `exists_norm_atkinsonLeadingSum_sub_finite_le` proves the quantitative
+  tail `C G T^(5/4) N^(-1/8)` from the true divisor series at `9/8`.
+  `exists_zetaSquarePhysicalGaussian_atkinson_finite_approximation`
+  and `exists_zetaSquareLocalMean_le_atkinson_finite` consume its
+  `C G` specialization for every `N≥T^10`, with uniform source
+  error and no analytic theorem premise. All 59 public audits and 20
+  regressions are covered by the root and exact batch inventory.
+  This is coarse polynomial truncation, not the sharp cutoff.
+  The later continuations below prove evaluated stationary mains and
+  source-scale localization. Summed stationary errors and final main
+  assembly still precede the sharp Atkinson inequality.
   These are proved source
   components, not a closed Theorem 6.2;
   EPZAE-21/37 stay open.
@@ -324,3 +366,171 @@ The paper-level project is complete only when EPZAE-00 through EPZAE-41 are all
 checked. If one advertised output remains conditional, disconnected from its
 real upstream object, outside the build, or absent from the axiom audit, the
 project remains incomplete.
+
+## EPZAE-21 stationary continuation: precise partial completion
+
+Kernel-checked helpers: twelve modules, 71 named audits and 22 regressions.
+`exists_atkinsonPowerIntegral_finite_stationary_approximation` consumes
+the actual carrier, constructed natural-scale amplitude derivatives, cubic
+logarithmic error and weighted nonstationary tails. It proves the finite
+quadratic main approximation with error
+Cα G T^(-α)[4/(pi H)+4(G/sqrt(T))H²+16T H⁴/r³].
+`exists_atkinsonPowerIntegral_small_n_pair_approximation` derives both
+signs' geometric conditions from 10000n≤T, 0<H≤sqrt(T)/12 and replaces
+the last term by 432H⁴/sqrt(T), on T>0, G≥1, G²≤2T, L≥1, 8L≤G.
+Both signed main terms have exact source-phase and Gaussian identities.
+
+The Fresnel limit is proved below. Sharp localization and summable stationary errors,
+sharp Atkinson inequality, dyadic/Gram assembly and genuine twelfth
+moment remain required. EPZAE-21 and EPZAE-37 are not crossed out.
+All unconditional Add-est outputs remain open. The full completion
+contract and byte-preserved Lemma 62 counterexample are unchanged.
+Maintain the root, named audits, regressions and backing inventory of
+`run_tao_trudgian_yang_build.bat`; rerun both principal scopes.
+
+## EPZAE-21 evaluated stationary continuation
+
+Kernel-checked: Fresnel value exp(-i pi/4)/sqrt(2c), finite-window error
+2/(c H pi), actual evaluated-main approximation, both source-phase
+identities and physical per-carrier power saving.
+`exists_atkinsonPowerIntegral_source_power_saving` derives all window
+and scale conditions and proves both ±sqrt(n) errors Cα G T^(-α) T^(-η)
+for 10000n≤T, η=min(δ/3,1/10), L=log T and the original power-width
+range beyond a uniform threshold.
+
+Nine more modules, 35 named audits and 16 regressions are in the root
+and exact batch inventory. ZFE is green for this consumer only.
+Sharp localization and a sufficiently strong summed error still separate
+it from sharp Atkinson and the genuine twelfth moment. EPZAE-21/37 and
+unconditional Add-est remain open; preserve the original counterexample,
+repaired chain and full EPZAE-00--41 completion contract.
+
+## EPZAE-21 source-scale truncation continuation
+
+Kernel-checked: original-cutoff saddle localization, exact root-band
+restriction, vanishing endpoints, natural reciprocal-slope C2 bounds,
+both inverse-square frequency estimates and complete arithmetic tail.
+`exists_atkinsonLeading_source_band_bound` proves O(G) for
+N≥36T(log T/G)², eventually on the original power-width range.
+Both physical zeta consumers use this tail and retain their actual
+finite leading integrals and Cδ G log T error.
+
+`exists_atkinsonSourceCutoff_carrier_approximation` links the explicit
+ceiling cutoff to the existing evaluated stationary estimates for every
+retained index. Eleven modules, 53 audits and 22 regressions are covered
+by the root and exact batch inventory. ZBT is green for these consumers.
+
+A sufficiently strong summed stationary error and main-amplitude/source
+assembly still precede sharp Atkinson and the genuine twelfth moment.
+EPZAE-21/37 and unconditional Add-est remain open. The full goal and
+byte-preserved counterexample contract are unchanged.
+
+## EPZAE-21 symmetric stationary summation continuation
+
+Kernel-checked: exact cancellation of the linear-amplitude and cubic-phase
+corrections on the symmetric quadratic window; a derived radius
+T^(1/4)/(12sqrt(G)); and both actual carrier estimates at G≥T^(1/4).
+The actual divisor prefix and ceiling cutoff now give a summed retained
+error Oε(T^(1/4+ε)); the complete leading tail contributes O(G).
+
+Both physical zeta consumers retain the complete evaluated series and
+prove Cδ,ε (G log T+T^(1/4+ε)), on the original power-width range with
+G≥T^(1/4). Their above-fourth-root consumers prove Cδ,κ G log T
+for G≥T^(1/4+κ). Ten modules, 43 named audits and 24 regressions are
+covered by the root and exact runner inventory. ZSE is green only for
+these precise consumer statements.
+
+Smaller widths and remaining main-amplitude/source assembly still separate
+this from the full sharp Atkinson theorem. Any lower-value-range
+replacement must itself be proved. EPZAE-21/37, the genuine twelfth
+moment, every unconditional Add-est clause and the full goal remain open.
+The byte-preserved counterexample and repaired energy chain are unchanged.
+
+## Normalized main and partial-summation checkpoint
+
+Five new modules, 30 named audits and 24 regressions derive the actual
+common fourth-root coefficient from the original saddle power, curvature
+and Bessel constants. Both signed main sums retain separate cutoff/Mellin
+weights. Only the raw phase sums are conjugated.
+
+The actual weights have a proved uniform bound
+C G T^(-1/4) n^(-1/4) exp(-G²n/(12T)) on n≤T,
+T,G,L>0, G²≤2T and 8L≤G. The exact Abel bound retains literal finite
+weight differences. Both physical zeta consumers are linked to the same
+explicit source cutoff and normalized mains. Errors remain
+Cδ,ε(G log T+T^(1/4+ε)) for G≥T^(1/4), or Cδ,κ G log T above
+T^(1/4+κ), within the original power-width range.
+
+The continuation below proves uniform damped variation and the actual
+source-block bound. Global dyadic/Gram assembly, smaller source widths or
+a proved lower-value-range reduction, and the genuine twelfth moment remain open. No unconditional Add-est clause is closed.
+The original counterexample and corrected powering/Heath–Brown chain
+are unchanged. The exact `run_tao_trudgian_yang_build.bat` inventory
+is synchronized; maintain it and rerun both principal evaluation scopes.
+
+## Damped variation and source-block checkpoint
+
+Six new modules, from `FiniteWeightVariation` through
+`AtkinsonPhaseBlockBound`, have 36 named public audits and 24 regressions.
+The actual Gaussian increments telescope against a decreasing real
+envelope. Ordered actual saddle samples, the constructed Mellin bound,
+both original cutoff transitions and the decreasing fourth-root
+coefficient give uniform variation for both separate normalized weights.
+
+`exists_finiteVariationBound_atkinsonMainWeights` bounds both the
+supremum on indices 0..N and the adjacent-difference sum by
+C G T^(-1/4) m^(-1/4) exp(-G²m/(12T)), for
+T,G,L>0, G²≤2T, m>0 and 10000(m+N)≤T.
+No 8L≤G condition or conjugacy of residual weights is assumed.
+
+The actual stationary Bessel/divisor block at m..m+N-1 is bounded by
+that same shape times the maximum of the actual raw phase partial sums,
+with a larger uniform C. `exists_atkinsonSourceCutoff_block_bound`
+derives its small-frequency and scale conditions for every retained
+block from the original power-width range and the exact source ceiling
+cutoff, beyond a δ-dependent threshold.
+
+ZVB records these proved consumers; the continuation below also proves
+global dyadic assembly. The phase-sum/Gram bound, smaller-width stationary errors or a proved
+lower-value-range reduction, and the genuine twelfth moment remain open.
+The block theorem has no fourth-root-width restriction; the earlier
+stationary-error/zeta consumer still does. No unconditional Add-est
+clause or full EPZAE-00--41 completion is claimed.
+
+The original counterexample and independent-coordinate powering/
+Heath–Brown chain are unchanged. The exact
+`run_tao_trudgian_yang_build.bat` root/audit/PowerShell inventory is
+synchronized; maintain it and rerun both principal evaluation scopes.
+See the Reproduction Manifest for the semantic audit and terminal evidence.
+
+## Complete dyadic-source checkpoint
+
+Three new modules, `TruncatedDyadicPartition`, `AtkinsonDyadicMain`
+and `AtkinsonDyadicZetaConsumer`, have 20 named public audits and
+24 regressions. The exact partition uses M=2^j and block length
+min(M,N-M), for j<clog(2,N). Every retained endpoint stays at or below
+the original cutoff; zero/one cutoffs and exact powers of two are covered.
+
+The actual complete stationary Bessel/divisor series is now bounded by
+C G T^(-1/4) times the sum of
+M^(-1/4) exp(-G²M/(12T)) times the actual block phase-prefix maximum.
+The same source ceiling cutoff supplies every block's small-frequency
+geometry. Enlarging only the last raw phase maximum to a full block
+does not enlarge the stationary source.
+
+Four Gaussian/local-mean consumers use this complete dyadic bound.
+Their error remains Cδ,ε(G log T+T^(1/4+ε)) for G≥T^(1/4), or
+Cδ,κ G log T for G≥T^(1/4+κ), within the original power-width range.
+The stationary-main bound itself has no fourth-root-width restriction.
+ZDA records this exact assembly and these physical consumers.
+
+Global dyadic assembly is now proved. The maximal phase-sum/Gram
+estimate, the source-form bridge, smaller-width errors or a proved
+lower-value-range reduction, and the genuine twelfth moment remain open.
+No unconditional Add-est clause or full-goal completion is claimed.
+
+The counterexample and corrected powering/Heath–Brown chain are unchanged.
+Maintain the synchronized root, audits, regressions and exact backing
+inventory of `run_tao_trudgian_yang_build.bat`; run it and
+`run_lake_build.bat` after relevant changes. The Reproduction Manifest
+records the separate semantic and terminal integrity evidence.
