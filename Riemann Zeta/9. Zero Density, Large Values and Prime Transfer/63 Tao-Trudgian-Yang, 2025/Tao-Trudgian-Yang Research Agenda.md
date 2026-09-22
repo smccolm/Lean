@@ -1,7 +1,8 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -6402,7 +6403,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 The all-order compact phase-control component of EPZAE-09/10 is now proved.
 The eight new modules derive the actual inverse/Legendre derivative
@@ -6447,3 +6448,191 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+Canonical extension is now proved on the source's full closed [1,2]
+interval. Exact retained Legendre values, all-order errors, finite
+coverage of arbitrary compact reference-slope intervals, and the actual
+ANTEDB model-family predicate are assembled. The scales and cutoffs are
+fixed before F, Q and epsilon; one delta controls all charts.
+See the latest Goal Prompt for the exact formulas and quantifier order.
+
+DCF, DHC, DCC and DMF are green for their named analytic consumers.
+EPZAE-09/10 and full reflection remain open: DBT still needs the actual
+Poisson/stationary sum transformation, its dual N,T normalization,
+amplitude handling, endpoint/boundary-band estimates and uniform errors.
+The next step is a source-facing transformed-sum theorem consuming the
+actual physical stationary-point and canonical-model outputs. Existing
+specialized logarithmic reflection and Atkinson stationary estimates
+are references for reusable components, not proofs for arbitrary model F.
+
+The counterexample, independent two-witness repair and all nine Add-est
+clauses are preserved. The full EPZAE-00--41 goal remains unchanged.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+The original finite source sum now enters an absolutely convergent
+Poisson series with at most two endpoint terms. A constructed cutoff
+agrees exactly with strict-interior lattice points; nonempty strict
+interior intervals give equality. Physical dual scales, exact
+stationary exponents, character conjugation and the literal canonical
+dual sum are connected. DXS, DXW, DXF, DXE and DXT are green for these
+specific consumers, documented in the latest Goal Prompt.
+
+Continue DBT with uniform general-model stationary integral estimates,
+curvature-amplitude and partial-summation control, lattice-margin cutoff
+budgets, nonstationary tails and moving dual-boundary bands. The proved
+source endpoint loss does not discharge these analytic errors.
+Full beta reflection, general B-process and EPZAE-09/10 remain open.
+The counterexample and complete repaired Add-est chain are unchanged;
+the full EPZAE-00--41 objective remains active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+DCA, DMA, DVA, DSB, DQD and DQJ are now green for their narrowly
+specified actual-object consumers. The original F yields the curvature
+amplitude, positive third derivative, sampled finite variation and a
+main-block bound from canonical unweighted beta estimates. Taylor's
+theorem gives the signed quadratic coordinate and its derivative at
+the stationary point. No desired weighted bound, model condition or
+Taylor-ratio limit is supplied as a hypothesis.
+
+Continue DQI with smooth regularity across the critical point, an
+actual local inverse and uniform higher derivative estimates. Feed
+these into DBT's transformed Poisson weights and stationary integral
+errors. The curvature amplitude alone does not account for the
+original lattice-dependent smoothing weight. Cutoff margin budgets,
+nonstationary tails and moving dual-boundary bands also remain.
+A fixed chart's source-beta consumer is not yet the full physical
+alpha-to-1-alpha transport or uniform beta reflection.
+
+The whole EPZAE-00--41 goal remains active; no aggregate acceptance
+condition or public output changed. The counterexample and complete
+corrected two-witness -> Heath--Brown -> optimization -> Add-est chain
+are preserved.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The actual quadratic coordinate now has a smooth inverse on its actual
+open image, including the critical point. Both first derivatives have
+explicit bounds depending only on sigma. Differentiated Taylor averages
+and the exact FTC identity establish the coordinate's smoothness.
+An actual positive-Jacobian substitution transports complex integrals
+and integrability. The original source cutoff is retained in the
+transformed amplitude and exact physical Fourier modes.
+
+The source consumer constructs the same original cutoff before T,
+preserves exact lattice values and endpoint loss <=2, and gives
+stationary-mode quadratic integrability and a uniform amplitude-size
+bound. The physical remainder identity keeps chi(g(v)) and e(-1/8);
+the error norm is exactly N*norm(R). No uniform remainder upper bound
+or new Fresnel evaluation is claimed.
+
+DTA, DQS, DMI, DJB, DQV, DMW, DQP and DQR are green for the narrow
+consumers listed in the latest Goal Prompt. Continue DQI with uniform
+higher inverse/weight derivative estimates and smooth zero-extension
+off the moving image. Then discharge DBT's uniform stationary remainder,
+lattice-margin budgets, nonstationary tails and moving boundary bands.
+Physical power-window/epsilon transport and full reflection remain open.
+Pointwise all-order smoothness and uniform first-derivative bounds do
+not discharge those higher-order uniform estimates.
+
+EPZAE-09/10 and the whole EPZAE-00--41 objective remain active under
+unchanged acceptance tests. The preserved counterexample, independent
+rho/k and rho*/k witnesses, Heath--Brown consumers, exact optimization
+and all nine Add-est clauses are unchanged.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+DQI's named analytic branch is now proved for each fixed original
+cutoff: actual smooth zero-extension, compact support and whole-line
+integrability; uniform all-order coordinate and inverse derivatives;
+and global weight derivatives with explicit original-cutoff jet budgets.
+
+The next analytic step has also been proved. Exact Taylor decomposition
+and odd cancellation reduce the weighted quadratic error to a genuine
+integration-by-parts estimate. The checked generic Fresnel value and
+tail complete an explicit O(1/T) remainder bound. Applied to the actual
+Morse weight, it gives an O(N/T) physical stationary-mode error, retaining
+chi(g(r*N/T)) and e(-1/8). The source consumer constructs the same lattice
+cutoff before sigma/F/T, preserves Poisson summability and endpoint
+loss <=2, and proves the error for every stationary integer frequency.
+
+The constants are uniform in F,v,T,N when chi is fixed. When chi is
+chosen from N,a,b, its derivative budgets may vary with those parameters.
+Continue DBT with quantitative lattice-margin/transition control,
+nonstationary modes/tails, weighted-main-block assembly and moving
+dual boundaries. Then complete physical power-window/epsilon transport,
+full beta reflection and the general B process. EPZAE-09/10 remain open.
+
+DZW, DJC, DJI, DJW, DQI, DRE and DSE are green only for the exact
+consumers recorded in the latest Goal Prompt. No aggregate acceptance
+test is weakened. The counterexample, independent two-witness repair,
+Heath--Brown energy relation, optimization and all nine Add-est clauses
+remain unchanged; the full EPZAE-00--41 goal remains active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.

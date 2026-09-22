@@ -1,7 +1,8 @@
 # Lean extension
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -5738,7 +5739,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 Eight new root-imported, runner-covered modules implement the all-order
 phase-control chain:
@@ -5775,3 +5776,193 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+Eight new root-imported, runner-covered modules implement canonical extension:
+
+- `BetaSmoothCutoff`: constructed plateaus and support-local smoothness.
+- `BetaCutoffEstimates`: actual Leibniz bounds with fixed compact budgets.
+- `BetaLegendreCorrection`: original-phase-to-smooth-correction consumer.
+- `BetaPhaseNormalization`: multiplicative scaling and closed-endpoint bridge.
+- `BetaCanonicalLegendre`: full [1,2] model and exact retained values.
+- `BetaLegendreCover`: arbitrary compact intervals and one common tolerance.
+- `BetaLegendreFamily`: literal ANTEDB model-family predicate.
+- `BetaLegendreModelCover`: simultaneous source families on all charts.
+
+All 27 new public theorems have explicit audits and exact-signature checks.
+Eight further regressions exercise actual normalization, endpoints,
+wide-window coverage and model-family semantics. DHC is complete for
+retained compact windows; the actual B-process sum theorem and full
+reflection remain open. No existing energy-proof module changed.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+The six installed modules are:
+
+- `BetaDualScales`: linked physical scales and exact stationary character.
+- `BetaModelPoisson`: actual smooth kernel, Schwartz construction and Poisson identity.
+- `BetaSharpCutoff`: constructed lattice cutoff and literal strict-interior source sum.
+- `BetaFourierModes`: exact normalization, integral bound and absolute summability.
+- `BetaPoissonBoundary`: closed source interval with at most two endpoint terms.
+- `BetaStationarySum`: exact weighted and literal canonical dual-sum identities.
+
+All 32 public theorems have explicit audits and exact-signature
+regressions; eight further tests exercise parameters, endpoints, empty
+intervals, original source predicates and Fourier normalization.
+Uniform integral asymptotics and moving dual-boundary estimates remain
+open. No existing energy-proof module changed.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+The eight installed modules are:
+
+- `BetaCurvatureAmplitude`: actual curvature, positive smooth amplitude,
+  derivative and physical N/sqrt(T) normalization.
+- `BetaAmplitudeMonotonicity`: third-derivative bounds from the original
+  order-two model hypothesis, inverse and amplitude antitonicity.
+- `BetaAmplitudeVariation`: finite variation on exactly the sampled
+  frequencies, plus a finite partial-summation consumer.
+- `BetaStationaryMain`: actual main term, the negative-curvature
+  e(-1/8) factor and exact canonical-prefix identities.
+- `BetaAmplitudePartialSummation`: actual stationary block bounded
+  by the canonical source-prefix maximum without an assumed weight bound.
+- `BetaStationaryBetaBound`: chart constructed before epsilon/F,
+  with the original source beta bound consumed at linked dual scales.
+- `BetaStationaryDeficit`: actual two-sided quadratic deficit,
+  signed square-root coordinate and exact physical quadratic normal form.
+- `BetaMorseCriticalPoint`: Taylor remainder proves the coordinate's
+  derivative at the critical point and its reciprocal-amplitude identity.
+
+All 46 public theorems have explicit audits and exact-signature
+regressions; eight further tests exercise the actual reference model,
+singleton frequency intervals, the phase norm and sign, and the critical
+derivative. Root imports and the exact PowerShell inventory cover all
+eight. No existing energy-proof module changed.
+
+This is a main-term bound conditional on a strictly upstream source beta
+bound, not the full B process. The slope-chart cutoff is not the Poisson
+smoothing cutoff. A uniformly controlled smooth inverse, transformed
+weights, integral approximation errors and moving boundary bands remain
+open; a reciprocal derivative does not construct an inverse function.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The eleven new installed modules are:
+
+- `BetaTaylorAverage`: actual segment-integral differentiation and smoothness.
+- `BetaTaylorIdentity`: exact second-order integral identity, including zero length.
+- `BetaAveragedCurvature`: positive smooth averaged curvature and actual coordinate.
+- `BetaMorseMonotonicity`: positive derivative and strict coordinate monotonicity.
+- `BetaMorseInverse`: actual open image, inverse identities, smoothness and critical Jacobian.
+- `BetaMorseDerivativeBounds`: uniform first-derivative bounds for coordinate and inverse.
+- `BetaMorseChangeVariables`: actual complex integral and integrability transport.
+- `BetaMorseAmplitude`: original cutoff composed with inverse and positive Jacobian.
+- `BetaMorseFourier`: integrability and exact normalized/physical quadratic modes.
+- `BetaMorsePoisson`: same constructed original source cutoff consumed before T.
+- `BetaMorseRemainder`: cutoff-weighted physical main term and exact error normalization.
+
+All 54 public theorems have explicit audits and exact-signature
+regressions; nine further tests exercise actual reference phases,
+inverse identities, a vanishing critical cutoff, zero T and a singleton
+source interval. Root imports and exact runner inventory cover all eleven.
+
+The transformed amplitude is smooth on the actual Morse image; its
+global smooth zero-extension and uniform higher derivative bounds
+remain open. The leading term retains the original cutoff at the
+stationary point. The physical remainder norm is exactly N*norm(R),
+but a uniform upper bound for R is still needed for full reflection.
+No existing energy-proof module or counterexample changed.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+Sixteen new production modules are installed:
+
+- `BetaMorseSupport`: actual compact support image and smooth zero-extension.
+- `BetaTaylorJets`: actual averaged-curvature jets and uniform original-model bounds.
+- `BetaMorseGlobalIntegral`: genuine Schwartz weight, whole-line integral and derivative integrability.
+- `BetaMorseJets`, `BetaMorseJetBounds`: actual coordinate formulas and uniform all-order bounds.
+- `BetaMorseInverseJets`, `BetaMorseInverseJetBounds`: actual inverse formulas and uniform bounds.
+- `BetaMorseWeightJets`, `BetaMorseWeightBounds`: original-cutoff composition and global derivative budgets.
+- `BetaTaylorGlobal`: actual global Taylor averages and exact remainder identity.
+- `BetaQuadraticKernel`: correct negative quadratic character and generic Fresnel window.
+- `BetaQuadraticParts`: integration by parts with both endpoints retained.
+- `BetaQuadraticTaylor`: exact weighted decomposition and odd cancellation.
+- `BetaQuadraticRemainder`: explicit whole-line K/T stationary remainder.
+- `BetaMorseStationaryEstimate`: actual fixed-cutoff C/T and physical C*N/T error.
+- `BetaMorseSourceEstimate`: original constructed cutoff in the source Poisson consumer.
+
+All 75 public theorems have explicit audits and exact-signature regressions;
+ten additional examples check actual reference phases, zero/vanishing
+cutoffs, zero T in exact identities, and the singleton source interval.
+Root imports and the exact runner inventory include all sixteen.
+
+The physical main term retains chi(g(r*N/T)) and e(-1/8).
+Constants are uniform for each fixed original cutoff. Uniform control
+when the lattice cutoff varies, nonstationary modes and moving bands
+remain open. Existing energy proofs and the counterexample are unchanged.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.

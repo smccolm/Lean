@@ -1,6 +1,6 @@
 flowchart TD
-%% Current checkpoint: actual all-order inverse formulas, uniform compact dual model errors and anchored values DONE.
-%% EPZAE-09/10 canonical interval extension and transformed-sum estimate OPEN; full reflection OPEN.
+%% Current checkpoint: smooth zero-extension, all-order bounds and fixed-cutoff stationary errors DONE.
+%% EPZAE-09/10 uniform lattice-cutoff budgets, nonstationary modes and moving bands OPEN.
 %% Corrected powering, all nine Add-est clauses and the permanent counterexample are preserved.
 %% Earlier checkpoint prose is historical; the full EPZAE-00--41 goal is unchanged.
     ML["Mathlib analytic and finite foundations<br/>AVAILABLE"]
@@ -31,8 +31,37 @@ flowchart TD
     DHR["EPZAE-09/10 exact log/power reference phase<br/>all-order zero error and inverse DONE"]
     DHU["EPZAE-09/10 uniform all-order dual model errors<br/>derived common compact slope domain DONE"]
     DHA["EPZAE-09/10 anchored dual phase values<br/>one tolerance, all derivatives and values DONE"]
-    DHC["EPZAE-09/10 all-order compact model control DONE<br/>canonical interval normalization/extension OPEN"]
-    DBT["EPZAE-09/10 actual stationary/Poisson sum transform<br/>amplitudes, endpoints and uniform errors OPEN"]
+    DCF["EPZAE-09/10 smooth cutoff correction<br/>global smoothness + all-order error bounds DONE"]
+    DHC["EPZAE-09/10 canonical compact-window extension<br/>full [1,2] model + exact retained values DONE"]
+    DCC["EPZAE-09/10 finite canonical slope cover<br/>fixed charts + one shared tolerance DONE"]
+    DMF["EPZAE-09/10 actual model-family bridge<br/>simultaneous eventual Legendre identities DONE"]
+    DXS["EPZAE-09/10 actual physical dual scales<br/>stationary phase and conjugation DONE"]
+    DXW["EPZAE-09/10 actual weighted-kernel<br/>Poisson identity DONE"]
+    DXF["EPZAE-09/10 actual Fourier modes<br/>normalization and absolute summability DONE"]
+    DXE["EPZAE-09/10 closed original source interval<br/>Poisson entry with error at most 2 DONE"]
+    DXT["EPZAE-09/10 exact stationary-exponent sums<br/>literal canonical dual sum DONE"]
+    DCA["EPZAE-09/10 actual curvature amplitude<br/>smoothness, derivative and N/sqrt(T) scaling DONE"]
+    DMA["EPZAE-09/10 original-model third derivative<br/>positive sign and antitone amplitude DONE"]
+    DVA["EPZAE-09/10 actual sampled finite variation<br/>canonical-prefix main-block bound DONE"]
+    DSB["EPZAE-09/10 constructed-chart source beta<br/>linked-scale stationary main bound DONE"]
+    DQD["EPZAE-09/10 actual stationary deficit<br/>two-sided bounds and exact quadratic coordinate DONE"]
+    DQJ["EPZAE-09/10 actual critical-point derivative<br/>reciprocal equals curvature amplitude DONE"]
+    DTA["EPZAE-09/10 actual Taylor segment averages<br/>smoothness and exact second identity DONE"]
+    DQS["EPZAE-09/10 actual quadratic coordinate<br/>smooth through critical point, positive derivative DONE"]
+    DMI["EPZAE-09/10 actual smooth quadratic inverse<br/>open image and critical Jacobian DONE"]
+    DJB["EPZAE-09/10 uniform first-derivative bounds<br/>actual coordinate and inverse DONE"]
+    DQV["EPZAE-09/10 actual positive-Jacobian substitution<br/>complex integrals and integrability equivalence DONE"]
+    DMW["EPZAE-09/10 transformed original cutoff<br/>smooth on image, critical value and size DONE"]
+    DQP["EPZAE-09/10 constructed source Poisson cutoff<br/>exact quadratic stationary modes DONE"]
+    DQR["EPZAE-09/10 cutoff-weighted physical main term<br/>exact remainder normalization, not estimate DONE"]
+    DZW["EPZAE-09/10 actual transformed weight<br/>smooth zero-extension, compact support and whole-line integral DONE"]
+    DJC["EPZAE-09/10 actual quadratic coordinate<br/>uniform all-order derivative bounds DONE"]
+    DJI["EPZAE-09/10 actual quadratic inverse<br/>uniform all-order derivative bounds DONE"]
+    DJW["EPZAE-09/10 global transformed-weight derivatives<br/>explicit original-cutoff jet budgets DONE"]
+    DRE["EPZAE-09/10 actual quadratic stationary remainder<br/>O(1/T) for each fixed original cutoff DONE"]
+    DSE["EPZAE-09/10 constructed original source cutoff<br/>stationary O(N/T) mode errors DONE"]
+    DQI["EPZAE-09/10 uniform all-order inverse/weight bounds<br/>fixed cutoff; smooth zero-extension DONE"]
+    DBT["EPZAE-09/10 uniform varying-lattice B-process<br/>cutoff budgets, nonstationary modes and moving bands OPEN"]
     DUR["EPZAE-09 beta reflection identity<br/>whole closed unit interval OPEN"]
     PR["EPZAE-10--12 A/B/C/D and<br/>Heath--Brown processes<br/>OPEN"]
     BT["EPZAE-13 certified beta table<br/>OPEN"]
@@ -253,6 +282,115 @@ flowchart TD
     DIS --> DHC
     DLG --> DHC
     DSP --> DBT
+    ML --> DCF
+    DHA --> DCF
+    DHU --> DCF
+    DHR --> DHC
+    DCF --> DHC
+    DHC --> DCC
+    ML --> DCC
+    DCC --> DMF
+    AB --> DMF
+    DHC --> DXS
+    DSP --> DXS
+    ML --> DXW
+    AB --> DXW
+    DXW --> DXF
+    ML --> DXF
+    DXW --> DXE
+    DXF --> DXE
+    AB --> DXE
+    DXS --> DXT
+    AB --> DXT
+    DXS --> DBT
+    DXE --> DBT
+    DXF --> DBT
+    DXT --> DBT
+    DUS --> DCA
+    DSI --> DCA
+    DSP --> DCA
+    AB --> DMA
+    DUS --> DMA
+    DCA --> DMA
+    DCA --> DVA
+    DMA --> DVA
+    DXS --> DVA
+    DHC --> DSB
+    DVA --> DSB
+    AB --> DSB
+    DUS --> DQD
+    DSI --> DQD
+    DSP --> DQD
+    ML --> DQD
+    DQD --> DQJ
+    DCA --> DQJ
+    ML --> DQJ
+    DQD --> DQI
+    DQJ --> DQI
+    ML --> DTA
+    AB --> DTA
+    DTA --> DQS
+    DQD --> DQS
+    DUS --> DQS
+    DSI --> DQS
+    DQS --> DMI
+    ML --> DMI
+    DCA --> DMI
+    DQJ --> DMI
+    DUS --> DJB
+    DMI --> DJB
+    DQD --> DJB
+    DQS --> DJB
+    DMI --> DQV
+    ML --> DQV
+    DMI --> DMW
+    DJB --> DMW
+    DCA --> DMW
+    DXE --> DQP
+    DXF --> DQP
+    DQV --> DQP
+    DMW --> DQP
+    DSP --> DQP
+    DQP --> DQR
+    DMW --> DQR
+    DCA --> DQR
+    DSP --> DQR
+    DMI --> DQI
+    DJB --> DQI
+    DMW --> DQI
+    DQP --> DBT
+    DQR --> DBT
+    DQS --> DZW
+    DMI --> DZW
+    DMW --> DZW
+    DQV --> DZW
+    DTA --> DJC
+    DQS --> DJC
+    DUS --> DJC
+    DJC --> DJI
+    DMI --> DJI
+    DJB --> DJI
+    DJI --> DJW
+    DZW --> DJW
+    DMW --> DJW
+    DZW --> DQI
+    DJC --> DQI
+    DJI --> DQI
+    DJW --> DQI
+    DTA --> DRE
+    DZW --> DRE
+    DJW --> DRE
+    DQR --> DRE
+    DRE --> DSE
+    DXE --> DSE
+    DQP --> DSE
+    DSE --> DBT
+    DRE --> DBT
+    ZFE -->|generic Fresnel value and tail only| DRE
+    DQI --> DBT
+    DSB --> DBT
+    DCC --> DBT
+    DMF --> DBT
     DHC --> DUR
     DBT --> DUR
     DUS -->|upper endpoint| DUE
@@ -772,7 +910,12 @@ flowchart TD
     class PL62 preserved;
     class DUC,DUU,DUS,DUE,DUF,DUL,CSP,DSI,DLG,DIS,DSP done;
     class DHE,DHR,DHU,DHA done;
-    class DHC,DBT open;
+    class DCF,DHC,DCC,DMF done;
+    class DXS,DXW,DXF,DXE,DXT done;
+    class DCA,DMA,DVA,DSB,DQD,DQJ done;
+    class DTA,DQS,DMI,DJB,DQV,DMW,DQP,DQR done;
+    class DZW,DJC,DJI,DJW,DRE,DSE,DQI done;
+    class DBT open;
     class DUR open;
 
 %% ZFE semantic audit: exists_atkinsonPowerIntegral_source_power_saving.
@@ -4246,7 +4389,7 @@ flowchart TD
 %% Both BATs and the counterexample are unchanged. Exact hashes and
 %% foundation stage evidence are in the latest Reproduction Manifest section.
 
-%% ## Uniform all-order Legendre model control — current checkpoint
+%% ## Uniform all-order Legendre model control — historical checkpoint
 %%
 %% DHE: every inverse/Legendre derivative equals the evaluated finite recurrence on the actual phase.
 %% DHR: the logarithmic/power primitive has zero source-model error at every derivative order.
@@ -4272,3 +4415,153 @@ flowchart TD
 %% both final runs. The counterexample and both BAT launchers are unchanged.
 %% Exact hashes and foundation stage evidence are in the latest
 %% Reproduction Manifest section. The full goal remains active.
+
+%% ## Canonical Legendre extension and finite model families — historical checkpoint
+%%
+%% DCF: the original approximate phase supplies globally smooth, uniformly small cutoff corrections.
+%% DHC: canonical [1,2] model errors and exact retained dual values are proved, including endpoints.
+%% DCC: fixed finite charts cover arbitrary compact reference-slope intervals with one tolerance.
+%% DMF: actual ANTEDB model families yield simultaneous eventual chart identities and source predicates.
+%% The exact public consumers and green-node tests are in the latest Goal Prompt.
+%% DBT still needs the actual sum transform, physical normalization, amplitudes, boundary bands and error.
+%% A fixed compact cover does not cover the entire moving slope image.
+%% DUR and aggregate EPZAE-09/10 remain OPEN; the full EPZAE-00--41 goal is unchanged.
+%% The counterexample and complete repaired Add-est chain are preserved.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+%% with zero Lean warnings, errors or tactic suggestions:
+%% [final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+%% and [final foundation log](../../logs/foundation_freeze_20260921_222922.log).
+%% The target covers 569 package files and audits 5058 declarations.
+%% All 27 new public audits and 35 new regression examples pass.
+%% All 228 checkpoint source/integration/runner hashes are stable across
+%% the final runs. The counterexample and both BAT launchers are unchanged.
+%% Exact hashes and foundation stage evidence are in the latest
+%% Reproduction Manifest section. The full goal remains active.
+
+%% ## Exact Poisson source entry and physical dual sums — historical checkpoint
+%%
+%% DXS: actual stationary exponent and canonical phase consume linked physical dual scales.
+%% DXW: the actual approximate-model weighted kernel is Schwartz and satisfies Poisson summation.
+%% DXF: actual Fourier integrals have exact normalization and absolute summability.
+%% DXE: the literal original closed-interval source sum enters Poisson with endpoint loss <=2.
+%% DXT: exact stationary-exponent sums become the literal canonical exponential sum.
+%% Exact public consumers and hypotheses are recorded in the latest Goal Prompt.
+%% DBT remains OPEN for uniform integral approximation, amplitudes, cutoff derivative budgets,
+%% nonstationary tails and moving dual-boundary bands. Source endpoint loss is not dual-band control.
+%% DUR, aggregate EPZAE-09/10 and the full EPZAE-00--41 goal remain OPEN.
+%% The counterexample and complete repaired Add-est chain remain preserved.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+%% with zero Lean warnings, errors or tactic suggestions:
+%% [final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+%% and [final foundation log](../../logs/foundation_freeze_20260921_231301.log).
+%% The target covers 575 package files and audits 5124 declarations.
+%% All 32 new public audits and 40 new regression examples pass.
+%% All 234 checkpoint source/integration/runner hashes are stable across
+%% the final runs. The counterexample and both BAT launchers are unchanged.
+%% Exact hashes and foundation stage evidence are in the latest
+%% Reproduction Manifest section. The full goal remains active.
+%%
+%%
+%% ## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+%%
+%% DCA: actual curvature amplitude is smooth, positive and linked to N/sqrt(T).
+%% DMA: the original model gives positive third derivative and antitone amplitude.
+%% DVA: actual sampled variation and canonical-prefix deweighting are proved.
+%% DSB: the constructed-chart consumer derives a main-block bound from source beta.
+%% DQD: the actual stationary deficit gives a two-sided, exact quadratic coordinate.
+%% DQJ: Taylor's remainder proves the critical derivative and its reciprocal amplitude.
+%% Exact public consumers and hypotheses are recorded in the latest Goal Prompt.
+%% DQI remains OPEN for smooth inverse and uniform transformed-weight estimates.
+%% DBT remains OPEN for uniform integral errors, cutoff budgets, tails and moving bands.
+%% The slope-chart cutoff is not the original Poisson smoothing cutoff.
+%% A critical derivative and main-term estimate do not close DBT or DUR.
+%% Aggregate EPZAE-09/10 and the full EPZAE-00--41 goal remain OPEN.
+%% The counterexample and complete corrected Add-est chain remain preserved.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+%% with zero Lean warnings, errors or tactic suggestions:
+%% [final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+%% and [final foundation log](../../logs/foundation_freeze_20260922_000107.log).
+%% The target covers 583 package files and audits 5203 declarations.
+%% All 46 new public audits and 54 new regression examples pass.
+%% All 242 checkpoint source/integration/runner hashes match the
+%% verification snapshot. The counterexample and both BAT launchers
+%% are unchanged. Exact hashes and foundation stage evidence are in
+%% the latest Reproduction Manifest section. The full goal remains active.
+%%
+
+%% ## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+%%
+%% DTA/DQS prove smooth segment averages and the actual smooth quadratic
+%% coordinate across its critical point. DMI constructs the actual smooth
+%% inverse on its open image; DJB bounds both first derivatives uniformly.
+%% DQV proves actual complex integral substitution and integrability
+%% equivalence. DMW retains the original cutoff in the transformed amplitude.
+%% DQP consumes the constructed source cutoff in exact quadratic Poisson
+%% modes; DQR proves cutoff-weighted physical remainder normalization.
+%% Exact theorem names, hypotheses and green-node tests are in the latest Goal Prompt.
+%%
+%% DQI remains OPEN for uniform higher inverse/weight derivatives and
+%% smooth zero-extension. DBT still needs uniform stationary remainders,
+%% lattice-margin cutoff budgets, nonstationary tails and moving bands.
+%% Pointwise smoothness is not uniform higher-derivative control, and
+%% a remainder identity is not a remainder upper bound.
+%% Aggregate EPZAE-09/10 and full reflection remain OPEN.
+%% The permanent counterexample, independent two-witness repair and all
+%% nine Add-est clauses remain preserved. The whole goal stays active.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+%% with zero Lean warnings, errors or tactic suggestions:
+%% [final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+%% and [final foundation log](../../logs/foundation_freeze_20260922_010947.log).
+%% The target covers 594 package files and audits 5272 declarations.
+%% All 54 new public audits and 63 new regression examples pass.
+%% All 253 checkpoint source/integration/runner hashes match the
+%% verification snapshot. The counterexample and both BAT launchers
+%% are unchanged. Exact hashes and foundation stage evidence are in
+%% the latest Reproduction Manifest section. The full goal remains active.
+
+%% ## Uniform smooth weights and stationary remainder bounds — current checkpoint
+%%
+%% DZW proves the actual smooth zero-extension, compact support and
+%% whole-line quadratic integral. DJC/DJI derive uniform all-order coordinate
+%% and actual inverse derivatives. DJW controls global weight derivatives
+%% with explicit original-cutoff jet budgets. DQI is DONE for this
+%% fixed-cutoff analytic branch, not for uniform lattice-family budgets.
+%%
+%% DRE proves the actual C/T quadratic remainder using Taylor, odd
+%% cancellation, integration by parts and the generic checked Fresnel tail.
+%% DSE constructs the original source cutoff and proves C*N/T stationary
+%% Fourier-mode errors in the same absolutely convergent Poisson series.
+%% The original cutoff value and e(-1/8) phase remain in the main term.
+%% Exact consumers, formulas and quantifiers are in the latest Goal Prompt.
+%%
+%% DBT remains OPEN for varying lattice-cutoff budgets, nonstationary modes,
+%% weighted-main-block assembly and moving dual boundaries. The fixed-cutoff
+%% constant may depend on N,a,b after the cutoff is constructed from them.
+%% DUR/full reflection and aggregate EPZAE-09/10 remain OPEN.
+%% The counterexample and complete corrected Add-est chain are preserved.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+%% with zero Lean warnings, errors or tactic suggestions:
+%% [final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+%% and [final foundation log](../../logs/foundation_freeze_20260922_021704.log).
+%% The target covers 610 package files and audits 5402 declarations.
+%% All 75 new public audits and 85 new regression examples pass.
+%% All 269 checkpoint source/integration/runner hashes match the
+%% verification snapshot. The counterexample and both BAT launchers
+%% are unchanged. Exact hashes and foundation stage evidence are in
+%% the latest Reproduction Manifest section. The full goal remains unfinished.
+%%

@@ -1,7 +1,8 @@
 # Whole-proof operational goal prompt
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -6788,7 +6789,7 @@ both final runs. The counterexample and both BAT launchers are unchanged.
 All 203 dirty worktree entries remain within node 63. No files were staged,
 committed or pushed. Full source completeness remains separate from runner PASS.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 ### Exact mathematical results
 
@@ -6926,3 +6927,933 @@ after both final runs. The counterexample, existing energy-proof modules,
 both BAT launchers, foundation verifier and frozen pins are unchanged.
 All 211 dirty worktree entries remain within node 63. No files were staged,
 committed or pushed. Full source completeness remains separate from runner PASS.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+### Exact mathematical results
+
+The canonical-domain phase branch of EPZAE-09/10 now has an actual
+source-model consumer. Eight modules are installed: `BetaSmoothCutoff`,
+`BetaCutoffEstimates`, `BetaLegendreCorrection`,
+`BetaPhaseNormalization`, `BetaCanonicalLegendre`,
+`BetaLegendreCover`, `BetaLegendreFamily` and
+`BetaLegendreModelCover`.
+
+Fix sigma>0 and a compact interval [a,b] strictly inside
+(2^(-sigma),1), with a<=b. The finite-cover theorem imposes no
+restriction b<2a and no restriction sigma>1. It constructs finitely
+many overlapping retained windows [l_j,r_j] covering [a,b] by their
+interiors, positive scales A_j with A_j<l_j<=r_j<2A_j, and fixed
+smooth cutoffs chi_j equal to one on those closed windows.
+The cover, scales and cutoffs are chosen before the requested order,
+tolerance and original phase F.
+
+Write s=1/sigma, G_F for the actual sign-normalized Legendre phase,
+and R_s for the exact logarithmic/power primitive. The canonical phase is
+
+```text
+K_j,F(u) = R_s(u) + A_j^(s-1) chi_j(A_j u) *
+  [(G_F(A_j u)-R_s(A_j u))-(G_F(l_j)-R_s(l_j))].
+```
+
+The cutoff correction is globally smooth: on its support this follows
+from the proved actual slope-image inclusion and inverse smoothness;
+off its closed support it is locally zero. Leibniz's formula, compact
+bounds for the fixed cutoff derivatives, and the proved anchored
+Legendre error supply all-order error estimates. No smooth extension,
+inverse derivative estimate or desired model condition is assumed.
+
+`modelPhaseLegendreDual_finite_canonical_cover` proves that, for every
+Q and epsilon>0, one positive delta works simultaneously for all
+charts and every original F satisfying the frozen approximate-model
+condition at order `legendreFiniteInputOrder (Q+1)`.
+Each K_j,F satisfies
+`IsApproximateModelPhaseFunction K_j,F s Q epsilon`
+on the full CLOSED canonical interval [1,2], including its within-derivatives
+at both endpoints. Each retained window also lies in F's actual slope image.
+The scaling is multiplicative; no affine translation of the monomial
+reference model is silently substituted.
+
+For every v in [l_j,r_j], the proof gives v/A_j in (1,2) and the exact identity
+
+```text
+K_j,F(v/A_j)
+  = A_j^(s-1) [G_F(v)-G_F(l_j)] + R_s(l_j/A_j).
+```
+
+Thus the extension retains the actual dual phase up to the permitted
+additive constant. The reference scaling identity is proved separately
+in both the logarithmic and power cases. Degenerate intervals a=b are
+allowed; strict buffers are still constructed.
+
+`modelPhaseLegendreDual_finite_model_family` consumes the original
+ANTEDB `IsModelPhaseFunctionWith F sigma` predicate. It produces,
+on every chart, a family satisfying the literal
+`IsModelPhaseFunctionWith ... (1/sigma)` and
+`IsModelPhaseFunction` predicates. One eventual index condition gives
+all charts' exact canonical formulas, actual slope-image membership,
+and retained pointwise identities simultaneously.
+Only finitely many initial family members may be replaced by the exact
+reference primitive to satisfy the source convention that every index
+is smooth. The original canonical formula holds eventually as an
+equality of whole functions, not just at selected points.
+
+### Semantic completion boundaries and continuing goal
+
+The green-node checks are now:
+
+- DCF: `legendreCutoffCorrection_uniformity` derives global smoothness
+  and all requested correction bounds from the original approximate phase.
+- DHC: `modelPhaseLegendreDual_canonical_extension` constructs the
+  full [1,2] model and proves exact retained values on a ratio-below-two window.
+- DCC: `modelPhaseLegendreDual_finite_canonical_cover` removes that
+  window-ratio restriction by fixed finite coverage and one common tolerance.
+- DMF: `modelPhaseLegendreDual_finite_model_family` consumes the actual
+  asymptotic source family and proves all chart model predicates and identities.
+
+DHC is DONE for canonical extension of retained compact slope windows.
+This is not a transformation of an exponential sum. DBT remains OPEN
+for the actual stationary-phase/Poisson sum theorem, physical dual scale
+and normalization, amplitude removal, endpoint/boundary-band handling,
+and uniform error. In particular, finite coverage of a fixed compact
+subinterval is not asserted to cover the entire moving slope image.
+Full beta reflection DUR and aggregate EPZAE-09/10 remain OPEN under
+their unchanged acceptance tests. The other unfinished public-output
+and release obligations retain their status. The full EPZAE-00--41
+objective remains active and unchanged.
+
+There are 27 new explicit public theorem audits and 35 new regression
+examples: 27 exact signatures and eight concrete checks of cutoffs,
+derivative scaling, reference homogeneity, closed-interval model errors,
+an actual logarithmic extension, a compact interval of ratio above two,
+and the source model-family predicate at exponent 1/2.
+
+The permanent printed-Lemma-62 counterexample is unchanged. The authorized
+independent rho/k and rho*/k witnesses, Heath--Brown energy consumers,
+optimization, and all nine Add-est clauses remain verified; EPZAE-36/37
+stay DONE. No false s'/s scaling, scaled fifth coordinate or third witness
+is reinstated. No existing energy-proof module or frozen source changed.
+
+Both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` remain mandatory acceptance gates.
+Keep the root imports, exact PowerShell production inventory, explicit
+audits and semantic regressions synchronized with every proof-graph change.
+Do not bypass coverage, integrity scans, warnings or dependency checks.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log).
+  Coverage: 569 package files, 580 scanned Lean files, 9424 build jobs,
+  5053 discovered target theorems plus five imported boundaries (5058 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260921_222922.log)
+  and [JSON manifest](../../logs/foundation_freeze_20260921_222922.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 27 new public audits were found with only permitted logical axioms;
+all 35 new regression examples pass. The earlier focused regression's
+tactic-style warning was fixed before both final runs.
+Repository scans found no prohibited proof terms; broad postulate matches
+are unchanged prose and rational structure fields.
+
+All 228 checkpoint source/integration/runner hashes agree before and
+after both final BAT runs. The permanent counterexample, existing
+energy-proof modules, BAT launchers, foundation verifier, dependency pins
+and frozen sources are unchanged. All worktree changes remain in node 63.
+No files were staged, committed or pushed. Mathematical/source completeness
+remains separate from runner PASS.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+### Exact mathematical results
+
+Six modules extend EPZAE-09/10: `BetaDualScales`, `BetaModelPoisson`,
+`BetaSharpCutoff`, `BetaFourierModes`, `BetaPoissonBoundary` and
+`BetaStationarySum`. They prove actual source-entry and coordinate
+identities, not the missing stationary-phase approximation.
+
+For a canonical Legendre chart with positive A and anchor w, write
+s=1/sigma, G for the actual sign-normalized Legendre phase and K for
+the already constructed canonical phase. The original physical scales
+are linked by
+
+```text
+Ndual = A*T/N,   Tdual = A^(1-s)*T,
+r/Ndual = (r*N/T)/A,
+offset = Tdual*R_s(w/A) - T*G(w).
+```
+
+Positivity of both physical parameters is derived when T,N>0. The
+phase identities require nonzero T,N, positive r*N/T and the chart
+cutoff equal to one there. The actual retained stationary point is
+x_r=N*inverseSlope_F(r*N/T), and
+
+```text
+T*F(x_r/N)-r*x_r = offset - Tdual*K(r/Ndual).
+```
+
+The Fourier character is consequently the common unit phase times the
+conjugate canonical character. `modelPhaseStationaryPoint_interval_canonical`
+assembles the exact finite stationary-exponent sum into the literal
+ANTEDB `exponentialSumAt K Tdual Ndual a b`; its norm identity and
+the corresponding real-weighted finite-sum identity are proved.
+The algebraic identities require positivity and retained cutoff values
+explicitly; they do not assert that these weights approximate the
+original Fourier integrals.
+
+For every actual approximate model phase F, N>0 and natural a,b with
+N<=a and b<=2N, `modelPhase_closed_interval_poisson` CONSTRUCTS a
+smooth compactly supported cutoff chi inside (1,2). On every integer n,
+chi(n/N) is exactly the indicator of
+`{n in [a,b] : N<n<2N}`. The cutoff is chosen before T. For every T,
+
+```text
+I_r = integral_R chi(x/N) e(T*F(x/N)-r*x) dx,
+sum_(r in Z) |I_r| < infinity,
+|exponentialSumAt F T N a b - sum_(r in Z) I_r| <= 2.
+```
+
+Thus the source is the original finite exponential sum, not an assumed
+weighted replacement. The discarded indices are proved to lie in
+{a,b}; the loss of two comes only from their unit character norms.
+Empty intervals and coincident endpoints are allowed. For a nonempty
+strict-interior interval N<a<=b<2N,
+`modelPhase_sharp_interval_poisson` proves exact equality.
+The actual weighted kernel is proved Schwartz before applying Mathlib's
+Poisson theorem. Absolute summability follows from Schwartz decay,
+not merely from the existence of a Lean totalized `tsum`.
+
+The exact substitution x=N*u gives
+`I_r = N * integral chi(u) e(T*F(u)-r*N*u) du`,
+with the complex scalar interpreted correctly; it also yields
+`|I_r| <= N * integral |chi|`.
+
+### Semantic boundaries and continuing goal
+
+The five new green nodes have explicit upstream consumers:
+
+- DXS: `modelPhaseStationaryPoint_canonical_phase` and its character
+  theorem consume the actual stationary-phase identity and canonical
+  retained-value theorem, with Ndual,Tdual linked to N,T.
+- DXW: `modelPhase_weighted_poisson` derives the identity from the
+  actual approximate-model F and the proved Schwartz weighted kernel.
+- DXF: `modelPhaseFourierMode_eq_normalized` and
+  `summable_norm_modelPhaseFourierMode` treat the actual Fourier modes.
+- DXE: `modelPhase_closed_interval_poisson` constructs the cutoff,
+  bridges the literal source sum, and proves the endpoint loss.
+- DXT: `modelPhaseStationaryPoint_interval_canonical` composes actual
+  critical exponents into the literal canonical source sum.
+
+DBT remains OPEN. In particular, neither exact Poisson summation nor
+an exact formula at stationary points proves an asymptotic for the
+integrals. Still required are the uniform general-model stationary
+approximation, curvature-amplitude bounds and partial-summation transfer,
+cutoff derivative budgets as lattice margins vary, nonstationary tails
+and the moving dual-boundary bands. The source endpoint loss <=2 does
+not prove dual-boundary control. Fixed compact canonical charts do not
+cover the entire moving slope image. Complete the physical power-scale
+and uniform-loss transport, then assemble full beta reflection and the
+general B process. Specialized logarithmic/Atkinson estimates are not
+silently promoted to arbitrary F. EPZAE-09/10 and the whole objective
+remain open; no acceptance condition has been weakened.
+
+There are 32 new explicit public audits and 40 regression examples:
+32 exact signatures plus eight tests of linked parameters, both closed
+endpoints, an empty interval, actual reference-model source sums and
+Fourier normalization.
+
+The permanent printed-Lemma-62 counterexample remains unchanged.
+The authorized independent rho/k and rho*/k witnesses, Heath--Brown
+energy consumers, exact optimization and all nine Add-est clauses
+remain verified. No false s'/s scaling, scaled fifth coordinate or
+third witness is restored. No existing energy-proof module changed.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory and operational. Update backing
+production inventories, root imports, explicit audits and semantic
+regressions whenever the proof graph changes. Do not bypass warnings,
+integrity scans or coverage. The full EPZAE-00--41 goal remains active.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log).
+  Coverage: 575 package files, 586 scanned Lean files, 9430 build jobs,
+  5119 discovered target theorems plus five imported boundaries (5124 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260921_231301.log) and [JSON manifest](../../logs/foundation_freeze_20260921_231301.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 32 new public audits were found with only permitted logical axioms;
+all 40 new regression examples pass. Initial focused regression failures
+were repaired before both final runs; no gate was weakened.
+Repository scans found no prohibited proof terms; broad postulate matches
+remain unchanged comments and rational structure fields.
+
+All 234 checkpoint source/integration/runner hashes agree before and
+after both final BAT runs. The permanent counterexample, existing
+energy-proof modules, BAT launchers, foundation verifier, frozen sources
+and dependency pins are unchanged. All worktree changes remain in node 63.
+No files were staged, committed or pushed. Mathematical/source completeness
+remains distinct from runner PASS. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+### Exact mathematical results
+
+Eight modules extend EPZAE-09/10: `BetaCurvatureAmplitude`,
+`BetaAmplitudeMonotonicity`, `BetaAmplitudeVariation`,
+`BetaStationaryMain`, `BetaAmplitudePartialSummation`,
+`BetaStationaryBetaBound`, `BetaStationaryDeficit` and
+`BetaMorseCriticalPoint`. They consume the original ANTEDB model
+phase and the actual inverse slope, not an independently assumed
+stationary-phase model.
+
+For sigma>0 set
+
+```text
+c_sigma = sigma * 2^(-sigma-1) / 2,
+d_sigma = sigma * (sigma+1) * 2^(-sigma-2) / 2,
+delta_amp = min(min(c_sigma,1), min(d_sigma,1)) > 0.
+g(v) = inverseSlope_F(v),
+a_F(v) = 1 / sqrt(-F''(g(v))).
+```
+
+The order-two original model hypothesis with delta<=delta_amp derives
+the positive third-derivative bounds and antitonicity of a_F on the
+actual slope image. The amplitude is positive and smooth there.
+The derivative and physical scaling are proved:
+
+```text
+q(v) = -F''(g(v)),
+a_F'(v) = -F'''(g(v)) / (2*q(v)^2*sqrt(q(v))),
+H_r(x) = T*F(x/N)-r*x,   x_r = N*g(r*N/T),
+1/sqrt(-H_r''(x_r)) = (N/sqrt(T))*a_F(r*N/T).
+```
+
+For T,N>0 and exactly the sampled frequencies r=a+i, 0<=i<=L,
+whose slopes lie in the actual image, the real physical amplitudes
+have the proved `FiniteVariationBound`
+
+```text
+M = (N/sqrt(T)) / sqrt(c_sigma).
+```
+
+No condition at the extra frequency a+L+1 is needed. The literal
+stationary main term is
+`(1/sqrt(-H_r''(x_r)))*e(H_r(x_r)-1/8)`, with the complex
+embedding and negative-curvature factor explicit. For retained
+canonical-chart samples, its block over [a,a+L] satisfies
+
+```text
+norm(main block) <= 2*M * max_(0<=j<=L)
+  norm(exponentialSumAt K Tdual Ndual a (a+j)).
+```
+
+The actual characters are the common unit phase e(offset-1/8) times
+the conjugate canonical characters. Finite partial summation derives
+the weighted bound from the sampled variation and unweighted prefixes;
+the desired weighted estimate is not a theorem parameter.
+
+`stationaryMain_bound_of_exponentSumBound` gives the source-facing
+consumer. Given `IsExponentSumBoundNonAsymptotic alpha beta`,
+sigma>0 and 2^(-sigma)<l<=r<1 with r<2*l, it first constructs
+A>0, A<l, r<2*A and a smooth compactly supported chart cutoff chi,
+equal to one on [l,r]. These choices precede epsilon and F.
+For every epsilon>0 it then gives delta>0, P>=2 and C>=1,
+uniform for all original F,T,N,a,L satisfying the order-P model
+hypothesis, T,N>0 and
+
+```text
+Tdual = A^(1-1/sigma)*T >= C,
+Ndual = A*T/N,
+Tdual^(alpha-delta) <= Ndual <= Tdual^(alpha+delta),
+(a+i)*N/T in [l,r] for every 0<=i<=L.
+```
+
+The conclusion is `norm(main block) <= 2*M*C*Tdual^(beta+epsilon)`.
+The proof derives the actual slope inclusion, canonical model
+condition and admissible source intervals before applying the upstream
+unweighted bound. This is a genuine conditional deduction from that
+strictly narrower source bound, not full beta reflection.
+
+The stationary deficit and signed quadratic coordinate are
+
+```text
+D_F(v,u) = F(g(v)) + v*(u-g(v)) - F(u),
+w_F(v,u) = -sqrt(2*D_F(v,u)) if u<g(v),
+            sqrt(2*D_F(v,u)) otherwise.
+```
+
+For the order-one original model at delta<=min(c_sigma,1), actual
+v in the slope image and u in (1,2), Taylor's theorem proves
+
+```text
+c_sigma*(u-g(v))^2/2 <= D_F(v,u) <= (sigma+1)*(u-g(v))^2/2,
+sqrt(c_sigma)*abs(u-g(v)) <= abs(w_F(v,u))
+                        <= sqrt(sigma+1)*abs(u-g(v)),
+F(u)-v*u = -G(v)-w_F(v,u)^2/2.
+```
+
+The linked physical phase therefore equals
+`H_r(x_r) - (T/2)*w_F(r*N/T,x/N)^2`.
+Taylor's little-o remainder also proves the divided-deficit limit
+at g(v), including its removable zero, and hence the actual derivative
+
+```text
+w_F(v,g(v)) = 0,
+d/du w_F(v,u) at u=g(v) = sqrt(-F''(g(v))),
+(deriv(w_F(v,...),g(v)))^(-1) = a_F(v).
+```
+
+No bound on the arbitrary additive constant of F is imposed: the
+deficit cancels it. No Taylor-ratio limit is assumed.
+
+### Semantic boundaries and continuing goal
+
+The six new green nodes have explicit real upstream consumers:
+
+- DCA: `modelPhaseStationaryPoint_amplitude_scale` consumes the actual
+  stationary second derivative; curvature, smoothness and derivative
+  theorems consume the original F and actual inverse slope.
+- DMA: `modelPhaseStationaryAmplitude_antitoneOn` derives the needed
+  third-derivative sign from the order-two original model and composes
+  the actual inverse and curvature.
+- DVA: `finiteVariationBound_modelPhasePhysicalAmplitude` and
+  `norm_modelPhaseStationaryBlock_le_prefixMax` apply to the actual
+  frequency samples and literal stationary main block.
+- DSB: `stationaryMain_bound_of_exponentSumBound` constructs the
+  canonical chart, derives its model hypotheses and consumes the
+  original source beta predicate with linked physical scales.
+- DQD: `modelPhaseFrequencyPhase_quadratic_normalForm` consumes the
+  actual Taylor-derived deficit and the physical H_r phase.
+- DQJ: `modelPhaseMorseCoordinate_hasDerivAt_inverse` and
+  `modelPhaseMorseCoordinate_reciprocal_derivative_amplitude` derive
+  the actual critical derivative and reciprocal amplitude from Taylor.
+
+DQI is OPEN for smooth regularity across the critical point, an actual
+inverse function and uniform higher derivative/weight estimates.
+A reciprocal derivative is not a constructed inverse. DQJ alone does
+not give the uniform smooth inverse needed for a change of variables.
+
+DBT remains OPEN. The chi constructed in the source-beta theorem is
+the slope-chart cutoff, NOT the lattice-dependent Poisson smoothing
+cutoff. The newly defined stationary main term uses uncut curvature
+amplitude. The actual Poisson integral's leading term must additionally
+account for its smoothing weight at the stationary point, and its
+transformed weight/error must be controlled. Neither a main-term bound
+nor an exact quadratic phase proves this integral approximation.
+
+Continue with the uniformly controlled smooth inverse, transformed
+Poisson weights, lattice-margin cutoff budgets, stationary integral
+errors, nonstationary tails and moving dual-boundary bands. Complete
+physical alpha-to-1-alpha power-scale and epsilon transport, then
+assemble full beta reflection and the general B process. A fixed
+compact chart is not the whole moving slope image; the earlier source
+endpoint loss <=2 is not dual-boundary control. Specialized logarithmic
+or Atkinson estimates must not be promoted to arbitrary F without proof.
+EPZAE-09/10 and all remaining whole-proof acceptance tests stay open.
+
+There are 46 new explicit public audits and 54 regression examples:
+46 exact signatures plus eight tests of the reference model, amplitude
+tolerance, singleton samples, prefix maxima, main-character norm, signed
+quadratic coordinate and actual critical derivative.
+
+The printed-Lemma-62 counterexample remains unchanged. The authorized
+independent rho/k and rho*/k witnesses, Heath--Brown energy consumers,
+exact optimization and all nine Add-est clauses retain their verified
+status. No false s'/s scaling, scaled fifth coordinate or third witness
+is restored. Existing energy-proof modules and advertised outputs are
+unchanged.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory and operational. Whenever the proof
+graph changes, update backing production inventories, root imports,
+explicit audits and semantic regressions; rerun both BATs after Lean,
+import, audit or runner edits. Do not bypass warnings, integrity scans
+or coverage. The full EPZAE-00--41 goal remains active and unchanged.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log).
+  Coverage: 583 package files, 594 scanned Lean files, 9438 build jobs,
+  5198 discovered target theorems plus five imported boundaries (5203 audited).
+- Foundation: `run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260922_000107.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_000107.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 46 new public audits were found once each with only permitted logical
+axioms; all 54 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 242 checkpoint source/integration/runner hashes match the verification
+snapshot. The eight new module texts and four integration/runner texts
+also match their exact compiled sources after line-ending normalization.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 37 worktree entries remain in node 63; 29 pre-existing
+dirty entries were preserved and eight new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+### Exact mathematical results
+
+Eleven new production modules extend the EPZAE-09/10 analytic branch:
+`BetaTaylorAverage`, `BetaTaylorIdentity`, `BetaAveragedCurvature`,
+`BetaMorseMonotonicity`, `BetaMorseInverse`,
+`BetaMorseDerivativeBounds`, `BetaMorseChangeVariables`,
+`BetaMorseAmplitude`, `BetaMorseFourier`, `BetaMorsePoisson`
+and `BetaMorseRemainder`.
+
+Let sigma>0, c=sigma*2^(-sigma-1)/2, C=sigma+1, and
+delta<=min(c,1). Let F satisfy the original
+`IsApproximateModelPhaseFunction F sigma 1 delta` predicate,
+J=F'((1,2)), v in J, g(v) the actual inverse slope and
+G(v)=v*g(v)-F(g(v)). Set
+
+```text
+A_F(v,u) = -2 * integral_(0<=t<=1)
+  (1-t)*F''(g(v)+t*(u-g(v))) dt,
+w_F(v,u) = (u-g(v))*sqrt(A_F(v,u)).
+```
+
+The actual segment integrals are smooth, with differentiation justified
+by compact bounds for the next jet. The fundamental theorem of calculus
+proves the exact second-order identity, including u=g(v). Consequently
+this formula for w equals the previously defined signed square root
+of twice the actual stationary deficit. On all of (1,2),
+
+```text
+c <= A_F(v,u) <= C,
+F(u)-v*u = -G(v)-w_F(v,u)^2/2,
+c/sqrt(C) <= d/du w_F(v,u) <= C/sqrt(c).
+```
+
+The actual coordinate is smooth through g(v), with positive derivative
+and strict monotonicity. Its image K_F(v)=w_F(v,(1,2)) is open and
+contains zero. Its constructed inverse h_F(v,z) satisfies both inverse
+identities, is smooth on K_F(v), and has
+
+```text
+h_F(v,0)=g(v),
+h_F'(v,0)=a_F(v)=1/sqrt(-F''(g(v))),
+sqrt(c)/C <= h_F'(v,z) <= sqrt(C)/c.
+```
+
+These are ordinary u/z derivatives for each fixed v; joint smoothness
+in (v,u) or (v,z) is not claimed. The explicit first-derivative bounds
+are uniform in F and v and depend only on sigma. Smoothness at all orders
+does not yet give uniform higher-derivative bounds: the generic
+Taylor-average proof uses locally chosen compact jet bounds.
+
+For the ORIGINAL Poisson cutoff chi, define
+
+```text
+W_chi,F(v,z) = chi(h_F(v,z))*h_F'(v,z),
+Q_chi,F(T,v) = integral_(z in K_F(v)) W_chi,F(v,z)*e(-(T/2)*z^2) dz.
+```
+
+The positive-Jacobian change of variables and integrability equivalence
+are proved for actual complex Bochner integrals. If chi is smooth,
+W is smooth on K_F(v); W(0)=chi(g(v))*a_F(v).
+If abs(chi)<=M on (1,2), M>=0, then abs(W)<=M*sqrt(C)/c.
+A nonnegative original cutoff gives a nonnegative W.
+No smooth zero-extension of W outside the actual moving image is asserted.
+
+The original normalized Fourier mode at q=T*v is exactly
+e(-T*G(v))*Q_chi,F(T,v), including T=0. For T!=0, N>0,
+v=r*N/T in J and chi supported in (1,2), the physical mode satisfies
+
+```text
+H_r(x)=T*F(x/N)-r*x,  x_r=N*g(r*N/T),
+I_r = N*e(H_r(x_r))*Q_chi,F(T,r*N/T).
+```
+
+The source consumer `modelPhase_closed_interval_poisson_morse`
+constructs chi from N and the original natural endpoints a,b BEFORE T.
+It is smooth, compactly supported in (1,2), lies in [0,1], and agrees
+exactly with the strict-interior lattice indicator. For every T>0,
+the same chi gives absolute Poisson-mode summability, source endpoint
+loss at most 2, and for every stationary integer frequency r the exact
+quadratic identity, transformed-integrand integrability and
+0<=W<=sqrt(C)/c. No slope-image membership is asserted for nonstationary
+frequencies; these modes remain in the full Poisson series.
+
+For T,N>0 the new remainder is DEFINED by
+
+```text
+R_chi,F(T,v)=Q_chi,F(T,v)-(W_chi,F(v,0)/sqrt(T))*e(-1/8).
+```
+
+The proved physical normalization is
+
+```text
+I_r-chi(g(v))*originalStationaryMainTerm_r
+    = N*e(H_r(x_r))*R_chi,F(T,v),
+norm(I_r-chi(g(v))*originalStationaryMainTerm_r)
+    = N*norm(R_chi,F(T,v)).
+```
+
+The original main term retains its actual curvature amplitude and
+negative-curvature e(-1/8) factor. The value chi(g(v)) must not be
+replaced by 1 without a proved plateau condition. These are exact
+identities; no new Fresnel improper-integral evaluation or uniform
+upper bound on R is claimed.
+
+### Green-node semantic checks
+
+- DTA: `segmentTaylorAverage_contDiffOn` differentiates actual segment
+  integrals under locally derived compact jet bounds;
+  `segmentTaylorAverage_second` proves the exact second-order identity
+  from the fundamental theorem of calculus, including a zero-length segment.
+- DQS: `modelPhaseMorseCoordinate_contDiffOn` and
+  `modelPhaseMorseCoordinate_strictMonoOn` consume the actual averaged
+  curvature and original model bounds. Positive derivative and smoothness
+  through the critical point are derived, not premises.
+- DMI: `modelPhaseMorseInverse_contDiffAt`,
+  `modelPhaseMorseInverse_coordinate` and
+  `modelPhaseMorseInverse_hasDerivAt_zero` concern the constructed inverse
+  on the actual open image. Both inverse identities and the critical
+  Jacobian are proved using the real inverse-function theorem.
+- DJB: `modelPhaseMorseCoordinate_deriv_bounds` and
+  `modelPhaseMorseInverse_deriv_bounds` derive first-derivative bounds
+  depending only on sigma from the original curvature and slope-gap bounds.
+- DQV: `integral_Ioo_eq_morseIntegral` and
+  `integrableOn_Ioo_iff_morseIntegral` apply the one-dimensional Jacobian
+  theorem to the actual inverse. Its injectivity, image and positive
+  derivative are proved, not independently supplied.
+- DMW: `modelPhaseMorseAmplitude_contDiffAt`,
+  `modelPhaseMorseAmplitude_zero` and
+  `abs_modelPhaseMorseAmplitude_le` control the actual composed original
+  cutoff times the inverse Jacobian, on the actual Morse image.
+- DQP: `modelPhase_closed_interval_poisson_morse` constructs one original
+  source cutoff before T and uses it for the real Poisson series,
+  exact stationary-mode integral, integrability and amplitude bound.
+- DQR: `modelPhaseMorseLeadingTerm_scale` and
+  `norm_modelPhaseFourierMode_sub_main` link the exact quadratic remainder
+  to the actual cutoff-weighted physical main term, including e(-1/8).
+  This node asserts normalization and an identity, not a remainder bound.
+
+### Continuing goal and preserved repair
+
+DQI remains OPEN for uniform higher coordinate/inverse/weight derivative
+bounds and a smooth compactly supported zero-extension of the actual
+transformed weight. DBT remains OPEN for a genuine uniform stationary
+integral remainder estimate, lattice-margin cutoff budgets,
+nonstationary modes/tails and moving dual-boundary bands. The original
+source endpoint loss <=2 does not control those moving dual boundaries.
+The slope-chart cutoff used by the earlier beta main-block consumer
+and the original Poisson cutoff chi are distinct constructions.
+
+Continue these actual-object analytic estimates, then complete physical
+alpha-to-1-alpha power-scale and epsilon transport, full beta reflection
+and the general B process. EPZAE-09 and EPZAE-10 remain unchecked under
+their original acceptance tests. No aggregate output is closed by an
+exact representation or by the audit count.
+
+All 54 new public theorems have explicit axiom audits and exact-signature
+regressions. Nine additional regressions exercise the actual reference
+phase, inverse identities and critical derivative, vanishing cutoff at
+the stationary point, T=0 normalization, singleton source interval and
+uniform inverse bounds: 63 new examples in total.
+
+The permanent printed-Lemma-62 counterexample remains unchanged.
+The authorized independent rho/k and rho*/k witnesses, corrected
+Heath--Brown energy relation, exact optimization and all nine Add-est
+clauses retain their verified status. No false s'/s scaling, scaled
+fifth coordinate or third witness is restored. No existing energy-proof
+module or frozen source statement is changed.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory and operational. Update backing
+production inventories, root imports, explicit audits and semantic
+regressions whenever the proof graph changes. Rerun both BATs after
+Lean, import, audit or runner edits; never narrow coverage or suppress
+diagnostics. The full EPZAE-00--41 objective, its remaining outputs and
+both build gates remain active and unchanged.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`
+  from this folder;
+  [final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log).
+  Coverage: 594 package files, 605 scanned Lean files, 9449 build jobs,
+  5267 discovered target theorems plus five imported boundaries (5272 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`
+  from `Riemann Zeta`;
+  [final foundation log](../../logs/foundation_freeze_20260922_010947.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_010947.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 54 new public audits were found once each with only permitted logical
+axioms; all 63 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 253 checkpoint source/integration/runner hashes match the verification
+snapshot. The eleven new module texts and four integration/runner texts
+also match their compiled proof texts after line-ending and terminal
+blank-line normalization; raw file hashes remain unchanged across both runs.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 48 worktree entries remain in node 63; 37 pre-existing
+dirty entries were preserved and eleven new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+### Exact mathematical results
+
+Sixteen new production modules extend EPZAE-09/10. They prove smooth
+zero-extension, uniform higher derivatives, a genuine quadratic
+stationary remainder estimate and its original-source consumer.
+The original model predicate and public output contracts are unchanged.
+
+Use the previous checkpoint's notation: sigma>0,
+c=sigma*2^(-sigma-1)/2, C=sigma+1, delta<=min(c,1),
+J=F'((1,2)), v in J, g(v)=(F')^{-1}(v), actual quadratic
+coordinate w_F(v,u), image K_F(v)=w_F(v,(1,2)), and inverse h_F(v,z).
+For the ORIGINAL smooth Poisson cutoff chi with tsupport(chi) inside
+(1,2), define its whole-line transformed weight by
+
+```text
+Wtilde_chi,F(v,z) = chi(h_F(v,z))*h_F'(v,z)  if z in K_F(v),
+                    0                     otherwise.
+```
+
+The cutoff support is compact in (1,2). Its actual coordinate image is
+compact inside K_F(v), and the support of Wtilde is contained in that
+image. Wtilde therefore vanishes on a neighborhood of every image
+boundary point, not merely at that point. Global smoothness, compact
+support, Schwartz membership and integrability of every derivative are
+proved. Uniform support containment is
+
+```text
+tsupport(Wtilde) subset [-sqrt(sigma+1), sqrt(sigma+1)].
+```
+
+The previous integral over the moving image equals the literal
+whole-line integral with Wtilde; complex integrability is proved.
+The critical value remains Wtilde(0)=chi(g(v))*a_F(v).
+No extension of the arbitrary inverse outside its real domain is
+used as a substitute for this zero-extension proof.
+
+For the actual averaged curvature A_F, every requested derivative has
+an exact segment-integral formula. If k+1<=P in the original order-P
+model condition, then throughout (1,2),
+
+```text
+abs(A_F^(k)(v,u)) <= 2*(modelPhaseJetCoefficient(sigma,k+1)+delta).
+```
+
+Finite expressions for derivatives of the ACTUAL w_F and h_F are
+differentiated by the chain/product/reciprocal rules. This proves
+explicit functions P_w(n), B_w(sigma,n), P_h(n), B_h(sigma,n) such that
+
+```text
+abs(w_F^(n)(v,u)) <= B_w(sigma,n)       for u in (1,2),
+abs(h_F^(n)(v,z)) <= B_h(sigma,n)       for z in K_F(v),
+```
+
+whenever the original model has the corresponding finite order.
+These constants are independent of F and the actual slope v; no
+phase-specific compactness constant is used for these bounds.
+
+For the transformed weight, `morseWeightCutoffOrder n` specifies the
+finite ORIGINAL cutoff jet budget needed. If
+abs(chi^(j)(u))<=M for all j through that order and u in (1,2),
+the proof supplies an explicit `morseWeightDerivativeBound sigma M n`
+on abs(Wtilde^(n)(z)) for EVERY real z, under the explicit finite
+`morseWeightDerivativeOrder n` model hypothesis.
+For a fixed smooth chi, compactness on [1,2] derives such an M;
+`modelPhaseMorseWeight_uniform_derivative` thus chooses its constant
+before F, delta, v and z.
+
+### Actual quadratic remainder estimate
+
+For any globally smooth real W supported in (-H,H], H>0, and T>0,
+suppose abs(W(0))<=M0 and the global second and third derivative
+bounds are M2 and M3. The checked whole-line estimate is
+
+```text
+norm(integral_R W(z)*e(-(T/2)*z^2) dz
+     - W(0)*e(-1/8)/sqrt(T))
+  <= K(H,M0,M2,M3)/T,
+
+K(H,M0,M2,M3)
+  = 4*M0/(H*pi)
+    + (2*H*M2 + 2*H*(M2+H*M3))/(2*pi).
+```
+
+The proof derives the exact Taylor decomposition with its actual
+second-derivative integral remainder. The linear term cancels by oddness.
+Integration by parts bounds the quadratic remainder, retaining both
+endpoints. The existing generic Fresnel evaluation and finite-window
+tail yield e(-1/8)/sqrt(T) with the displayed error. Specialized
+Atkinson/logarithmic model hypotheses are not used to stand in for F.
+
+Taking W=Wtilde and H=sqrt(sigma+1)+1 gives
+`modelPhaseMorseRemainder_uniform`: for each fixed chi and sigma,
+there exist P>=1 and C>=1 chosen BEFORE F, delta, v and T, such that
+
+```text
+norm(R_chi,F(T,v)) <= C/T
+```
+
+for every qualifying original F, actual slope v and T>0.
+The physical consumer `modelPhaseFourierMode_stationary_uniform`
+then proves, for all N,T>0 and r*N/T in J,
+
+```text
+norm(I_r-chi(g(r*N/T))*originalStationaryMainTerm_r) <= C*N/T.
+```
+
+All scales refer to the same original integral, inverse and stationary
+point. The cutoff factor is retained; no plateau condition is assumed.
+
+### Original source consumer and uniformity boundary
+
+`modelPhase_closed_interval_poisson_stationary` starts with N>0
+and the original natural endpoints a,b with N<=a and b<=2*N.
+It CONSTRUCTS chi, with exact strict-interior lattice values, before
+sigma, F or T. For every sigma>0 it then chooses P>=1 and C>=1.
+For every qualifying F and T>0, the same chi gives absolute Poisson
+summability, original endpoint error <=2 and the proved C*N/T
+stationary-mode error for every integer frequency in the actual slope
+image. Empty and singleton source intervals remain permitted.
+
+The dependence of C on the fixed chi is essential. When chi is
+constructed from N,a,b, C may consequently depend on those lattice
+parameters. This does NOT yet prove the required uniform B-process
+estimate as N and the endpoints vary. DBT still requires quantified
+lattice-margin/transition budgets, nonstationary modes and tails,
+cutoff-weighted stationary-block assembly and moving dual-boundary
+bands. The endpoint loss <=2 is not control of those moving bands.
+
+### Green-node semantic checks
+
+- DZW: `modelPhaseMorseWeight_contDiff` and
+  `modelPhaseMorseWeight_tsupport_subset` derive smooth zero-extension
+  using the compact image of the ORIGINAL cutoff support. The whole-line
+  integral and integrability are proved in
+  `modelPhaseMorseWeightedIntegral_eq_global` and
+  `modelPhaseMorseGlobalIntegrand_integrable`; the actual weight is bundled
+  as `modelPhaseMorseSchwartz`.
+- DJC: `modelPhaseMorseCoordinate_iteratedDeriv_bound` consumes actual
+  segment-integral derivatives and original model jets. Its finite
+  expression is differentiated against the real coordinate, not accepted
+  as a formal certificate without an analytic interpretation.
+- DJI: `modelPhaseMorseInverse_iteratedDeriv_bound` instantiates the
+  inverse-expression calculus at the actual quadratic inverse, using the
+  coordinate bounds and proved positive first derivative.
+- DJW: `modelPhaseMorseWeight_iteratedDeriv_bound` composes actual
+  cutoff derivatives with actual inverse derivatives and extends the bound
+  through the boundary. `modelPhaseMorseWeight_uniform_derivative`
+  derives the cutoff's finite jet bound on [1,2] and chooses C before F/v.
+- DQI: the preceding consumers prove the named all-order inverse/weight
+  estimates for each fixed original cutoff, together with smooth
+  zero-extension. Uniform control for a VARYING lattice cutoff is still
+  owned by DBT; this green node does not assert that missing control.
+- DRE: `modelPhaseMorseRemainder_uniform` applies exact Taylor
+  decomposition, odd cancellation, integration by parts and the already
+  proved GENERIC Fresnel value/tail to the actual global transformed
+  weight. It chooses one P and C before F, v and T and proves norm(R)<=C/T.
+- DSE: `modelPhase_closed_interval_poisson_stationary` constructs the
+  actual source cutoff before sigma/F/T, preserves its lattice values
+  and Poisson endpoint error, and applies
+  `modelPhaseFourierMode_stationary_uniform` to each actual stationary
+  integer frequency. The main term retains chi(g(r*N/T)).
+
+### Continuing goal, audit and preserved repair
+
+Continue DBT with uniform cutoff-family control and the remaining
+mode/boundary assembly. Then prove physical alpha-to-1-alpha
+power-window and epsilon transport, full beta reflection and the
+general B process. EPZAE-09 and EPZAE-10 remain unchecked under their
+unchanged acceptance tests. DQI's analytic completion is not aggregate
+reflection completion; no other open output is removed from the goal.
+
+All 75 new public theorems have explicit axiom audits and exact-signature
+regressions. Ten further tests cover zero cutoffs and all their
+derivatives, vanishing critical cutoff values, actual reference-phase
+higher derivatives, zero T in the exact transform, the zero-weight
+remainder, the vanishing-main-term physical estimate and a singleton
+original source interval: 85 new examples altogether.
+
+The printed-Lemma-62 counterexample remains byte-for-byte unchanged.
+Independent rho/k and rho*/k witnesses feed the corrected Heath--Brown
+energy relation, exact optimization and all nine Add-est clauses.
+No false s'/s scaling, scaled fifth coordinate or third witness returns.
+No existing energy-proof module or frozen source statement is changed.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory and operational. Every production
+addition must update root imports, exact backing inventories, public
+audits and semantic regressions. Rerun both BATs after Lean, import,
+audit or runner edits; never suppress diagnostics or narrow coverage.
+The full EPZAE-00--41 objective and all original acceptance tests remain
+active and unchanged.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`
+  from this folder;
+  [final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log).
+  Coverage: 610 package files, 621 scanned Lean files, 9465 build jobs,
+  5397 discovered target theorems plus five imported boundaries (5402 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`
+  from `Riemann Zeta`;
+  [final foundation log](../../logs/foundation_freeze_20260922_021704.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_021704.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 75 new public audits were found once each with only permitted logical
+axioms; all 85 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 269 checkpoint source/integration/runner hashes match the verification
+snapshot. The sixteen new module texts and four integration/runner texts
+also match their compiled proof texts after line-ending normalization,
+including terminal newlines; raw file hashes are unchanged across both runs.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 64 worktree entries remain in node 63; 48 pre-existing
+dirty entries were preserved and sixteen new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains unfinished.

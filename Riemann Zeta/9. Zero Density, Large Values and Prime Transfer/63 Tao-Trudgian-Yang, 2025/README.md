@@ -1,7 +1,8 @@
 # Tao--Trudgian--Yang 2025 formalization
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -4442,7 +4443,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 All fixed-order derivatives of the actual Legendre phase now satisfy
 uniform model-error estimates on compact reference-slope intervals.
@@ -4471,3 +4472,154 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+The actual Legendre phase now has canonical [1,2] model extensions,
+with exact retained values and all-order uniform errors. Fixed finite
+charts cover any compact reference-slope interval; their model-family
+properties and simultaneous eventual identities are proved in the
+original ANTEDB definitions.
+
+Eight modules, 27 audited public theorems and 35 regression examples
+are installed. The latest Goal Prompt states the precise result;
+the Reproduction Manifest records current verification evidence.
+The actual B-process sum transformation and beta reflection remain open.
+The counterexample, corrected energy powering and nine Add-est clauses
+are unchanged. The full project goal remains active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+The original closed-interval exponential sum now enters an absolutely
+convergent Poisson series with error at most two, using a constructed
+cutoff. Exact dual physical parameters and stationary-exponent sums
+are connected to the literal canonical source sum.
+
+Six modules, 32 audited public theorems and 40 regressions are installed.
+The latest Goal Prompt gives the exact scope. Uniform stationary
+integral estimates, amplitudes and moving dual-boundary bands remain
+open, so the full B process and beta reflection are not yet proved.
+The counterexample and complete repaired Add-est chain are unchanged.
+The full project goal remains active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+Eight modules now control the actual stationary curvature amplitude,
+derive its monotonicity from the original model's third derivative,
+and use finite partial summation to bound the literal stationary main
+block by canonical exponential-sum prefixes.
+`stationaryMain_bound_of_exponentSumBound` constructs the chart and
+derives the model/variation hypotheses from the original F, consuming
+only the upstream unweighted beta bound. Physical N,T and dual scales
+are linked in the same theorem.
+
+The original stationary deficit also has two-sided quadratic bounds.
+Its signed square-root coordinate gives the exact negative quadratic
+phase and has derivative sqrt(-F''(inverseSlope(v))) at the critical
+point; the reciprocal is the curvature amplitude. This is not yet a
+smooth inverse construction or an approximation of the Poisson integral.
+The chart cutoff is distinct from the original Poisson smoothing weight.
+EPZAE-09/10 and the full goal remain open. The repaired energy chain,
+all nine Add-est clauses and permanent counterexample are unchanged.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The actual quadratic coordinate and its constructed inverse are now
+smooth across the stationary point, with uniform first-derivative
+bounds. The original source cutoff enters an exact complex
+change of variables and quadratic Fourier-mode identity. The physical
+remainder is normalized to the actual cutoff-weighted main term,
+retaining the negative-curvature e(-1/8) factor.
+
+These are supporting EPZAE-09/10 results, not the full B process:
+uniform higher derivatives, smooth zero-extension, stationary
+remainder bounds and moving boundary bands remain open.
+The latest Goal Prompt records the exact consumers and quantifiers.
+Eleven modules, 54 public audits and 63 regressions are integrated.
+The counterexample, corrected two-witness powering and all nine Add-est
+clauses are preserved. The whole goal and both BAT gates stay active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+The actual transformed weight now has a smooth compactly supported
+zero-extension, with uniform all-order derivative bounds for each fixed
+original cutoff. Taylor's exact remainder, odd cancellation, integration
+by parts and the checked Fresnel value prove a genuine O(1/T)
+quadratic error. The physical Fourier-mode error is O(N/T), retaining
+the original cutoff at the stationary point and the e(-1/8) factor.
+
+The source consumer constructs the original lattice cutoff before
+sigma/F/T and preserves the exact Poisson entry and endpoint loss <=2.
+Its constant may depend on that cutoff, hence on the lattice parameters
+used to construct it. Uniform varying-cutoff budgets, nonstationary modes,
+moving dual-boundary bands and full beta reflection remain open.
+The latest Goal Prompt records the exact quantifiers and consumers.
+
+Sixteen modules, 75 public audits and 85 regressions are integrated.
+The permanent counterexample, corrected two-witness repair and all nine
+Add-est clauses are preserved. The whole goal and both BAT gates stay active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.

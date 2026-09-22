@@ -1,7 +1,8 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -10471,7 +10472,7 @@ Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
 Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
 The foundation verifier hash and all frozen source pins are unchanged.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 Eight new production modules extend the checkpoint hash set from 212
 to 220 files. Among the preceding 212 files, only the four expected
@@ -10548,3 +10549,388 @@ Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
 Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
 Foundation verifier:
 `0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+The checkpoint hash set grows from 220 to 228 files with eight new
+production modules. Only the four expected root-import, audit,
+semantic-regression and PowerShell-inventory files changed among the
+preceding files. All new modules are root-imported and explicitly covered.
+There are 27 new public audits and 35 new regression examples.
+
+The checkout began clean at commit
+`8a2cf7ab11a19ac206716066ba604ee5857c5481`; the final working tree contains
+only the scoped node-63 changes. Focused compilation exposed and fixed
+proof elaboration errors, deprecated API names and one regression tactic
+style warning. Final BAT evidence below postdates the last source edit.
+No warning, coverage or integrity policy was weakened.
+
+DHC's exact canonical compact-window extension and actual finite-cover
+model-family consumer are proved. The actual transformed-sum theorem
+and full beta reflection remain open; the whole-proof objective is unchanged.
+The original counterexample and entire repaired energy chain are preserved.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log).
+  Coverage: 569 package files, 580 scanned Lean files, 9424 build jobs,
+  5053 discovered target theorems plus five imported boundaries (5058 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260921_222922.log)
+  and [JSON manifest](../../logs/foundation_freeze_20260921_222922.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 27 new public audits were found with only permitted logical axioms;
+all 35 new regression examples pass. The earlier focused regression's
+tactic-style warning was fixed before both final runs.
+Repository scans found no prohibited proof terms; broad postulate matches
+are unchanged prose and rational structure fields.
+
+All 228 checkpoint source/integration/runner hashes agree before and
+after both final BAT runs. The permanent counterexample, existing
+energy-proof modules, BAT launchers, foundation verifier, dependency pins
+and frozen sources are unchanged. All worktree changes remain in node 63.
+No files were staged, committed or pushed. Mathematical/source completeness
+remains separate from runner PASS.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`5bf661ce4e3eac6f5eab6d73223238d19948f64e49b784b4ac39fd75cbdddfb2`.
+Final foundation log SHA-256:
+`874cbf736269d7ad424302f75889f43077eeb615389d726168eb133f8df0cfbe`.
+Final foundation JSON manifest SHA-256:
+`1c08546bdc0d6cded6a8e0dce6affa56ffca1b8ad791289ceb9d13281f756d30`.
+
+The new module hashes are:
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaSmoothCutoff` | `4146fced62f9d9eefa879f7e8bfbfc1f94a98f8ffe52c9a55b81534b7c484d3a` |
+| `BetaCutoffEstimates` | `1a6be210a3d4d77cb1851cfd9532f8ad18ec673dd0b38dcec4afd9b8cc7f0628` |
+| `BetaLegendreCorrection` | `15bc53429647a56ca828a6787573aa5061ecdd71dcbe2b700219da366f3a436d` |
+| `BetaPhaseNormalization` | `905dc2451554f20392470d214dc602e40fb2ba8831369bea635e089a5c1c99f2` |
+| `BetaCanonicalLegendre` | `5d09d6d7690ccc6aadffc4fa38dc6ea15de202dfe9aaca6ed7c40a03360eda5a` |
+| `BetaLegendreCover` | `2d04ea2151ecd4dafa058fc11bb2118e7fc5455f9547735991219839f69d5527` |
+| `BetaLegendreFamily` | `e74d6367be9253d82e4d95c7f5228f20b0ecc3ef88592945b66c0426811c474a` |
+| `BetaLegendreModelCover` | `56fd0eeb329c126d6a76c55dcea55ab4c5389a940579cae1ebf855e17cd74a50` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The architecture has 208 distinct nodes and 540 resolved edges.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+The six modules prove exact original-source Poisson entry, absolute
+convergence and physical dual/stationary-sum identities. They do not
+prove uniform stationary integral approximation or the full B process.
+See the latest Goal Prompt for the semantic completion boundaries.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log).
+  Coverage: 575 package files, 586 scanned Lean files, 9430 build jobs,
+  5119 discovered target theorems plus five imported boundaries (5124 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260921_231301.log) and [JSON manifest](../../logs/foundation_freeze_20260921_231301.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 32 new public audits were found with only permitted logical axioms;
+all 40 new regression examples pass. Initial focused regression failures
+were repaired before both final runs; no gate was weakened.
+Repository scans found no prohibited proof terms; broad postulate matches
+remain unchanged comments and rational structure fields.
+
+All 234 checkpoint source/integration/runner hashes agree before and
+after both final BAT runs. The permanent counterexample, existing
+energy-proof modules, BAT launchers, foundation verifier, frozen sources
+and dependency pins are unchanged. All worktree changes remain in node 63.
+No files were staged, committed or pushed. Mathematical/source completeness
+remains distinct from runner PASS. The full goal remains active.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`bd075bdd6895c17f4794826231f783c0672cabe66f06645b3c303f4e14431db2`.
+Final foundation log SHA-256:
+`1b6c987bf49c7c34e4e5e0c74c243651e1661e6e9118dca9e97705c1a4c16c51`.
+Final foundation JSON manifest SHA-256:
+`e5112e964185d1cbec9ba693c1349c0cb7cf26245f552a8e4df8f41472dacaa1`.
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaDualScales` | `6bd961a63598a8c947a1bb21d5ccd1f739d3d692be0f62e686d6cdd8523e98d0` |
+| `BetaModelPoisson` | `3f264b7e54758f130c0fa59b0635403e5cc32becd3ec85242323d5f51dd88902` |
+| `BetaSharpCutoff` | `13b63c87b6ee626cc30df0abfb9b63433ec6bbf5bf459704e66470db3d17af86` |
+| `BetaFourierModes` | `2f91cd0b81a2d158da38abf409b50784d940aa871ae3e9a053d3f505f4b63f63` |
+| `BetaPoissonBoundary` | `a59268f958e9c35ac74bb475aeec1c94977da9be3e5864b82d74c250413c4fd8` |
+| `BetaStationarySum` | `988c623377c1a672e67babbfa12c638c5b294f80110abac17a4aa8f5ed167499` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The architecture has 213 distinct nodes and 555 resolved edges.
+
+Git's existing LF-to-CRLF notices are not Lean diagnostics; no line-ending
+configuration was changed. The two verification logs themselves are
+diagnostic-free. The full EPZAE-00--41 objective is unchanged.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+The eight new modules prove actual curvature-amplitude control,
+constructed-chart beta bounds for the literal stationary main block,
+and an exact quadratic coordinate with its critical derivative.
+They do not prove the uniform inverse/transformed-integral estimates
+or the full B process. Exact semantic boundaries are recorded in
+the latest Goal Prompt.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log).
+  Coverage: 583 package files, 594 scanned Lean files, 9438 build jobs,
+  5198 discovered target theorems plus five imported boundaries (5203 audited).
+- Foundation: `run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260922_000107.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_000107.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 46 new public audits were found once each with only permitted logical
+axioms; all 54 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 242 checkpoint source/integration/runner hashes match the verification
+snapshot. The eight new module texts and four integration/runner texts
+also match their exact compiled sources after line-ending normalization.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 37 worktree entries remain in node 63; 29 pre-existing
+dirty entries were preserved and eight new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains active.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`2931f6a4892ff4a55fe3ea177c1d5089e0fc01ee48fe63a453d3aac7e6bbf098`.
+Final foundation log SHA-256:
+`dfd2b744bb330adae1e4c85d207907a136f2f63ec9011d7031f2c2b9422cfb54`.
+Final foundation JSON manifest SHA-256:
+`f6bdac2856eb76233aec4a9867cd38d21cb8c18d8394554f4adebebd995c657f`.
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaCurvatureAmplitude` | `3032931539ddf8316a2670ca0d2d328e3423e59f08fe96947b9dfeb081ae9f8b` |
+| `BetaAmplitudeMonotonicity` | `65afbfcda5a6c439261bda438bd91b3c1e38b11bf881b0049ec713a224fdee47` |
+| `BetaAmplitudeVariation` | `8328cfcb8e8101beb714ae9a7c1c2acd3dccf73279a423a176885a748b388049` |
+| `BetaStationaryMain` | `1efc75c319ab7c5eb99ad31e9dfe75b122891adf8cd0e14d88c8a6fa9b916cc4` |
+| `BetaAmplitudePartialSummation` | `e885a2663658eb557fc0f2ec82cdb35cbb23c22746b65ca125f985728d375caa` |
+| `BetaStationaryBetaBound` | `f2b84ebc5bce4422d6fad9a19f7446376bb194232ca802af1126d6ad414fdf86` |
+| `BetaStationaryDeficit` | `d1f09126f2be95b28596ced00333901a7ff1ab0f992b9866e37c80f03ae7e327` |
+| `BetaMorseCriticalPoint` | `fc8e2674192e726a6833ef5e3c30e3f08a40aeb08698cec4a8c4b3c2a8c4862d` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The architecture has 220 distinct nodes and 578 resolved edges.
+
+Git's existing LF-to-CRLF notices are not Lean diagnostics; no line-ending
+configuration was changed. Both verification logs are diagnostic-free.
+The full EPZAE-00--41 objective is unchanged.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+Eleven new production modules establish actual Taylor-average and
+smooth-inverse calculus, uniform first-derivative bounds, original
+Poisson-cutoff change of variables and exact physical remainder
+normalization. They do not prove a uniform stationary remainder bound,
+higher-derivative budgets, smooth zero-extension or full beta reflection.
+The exact consumers and semantic boundaries are in the latest Goal Prompt.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`
+  from this folder;
+  [final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log).
+  Coverage: 594 package files, 605 scanned Lean files, 9449 build jobs,
+  5267 discovered target theorems plus five imported boundaries (5272 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`
+  from `Riemann Zeta`;
+  [final foundation log](../../logs/foundation_freeze_20260922_010947.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_010947.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 54 new public audits were found once each with only permitted logical
+axioms; all 63 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 253 checkpoint source/integration/runner hashes match the verification
+snapshot. The eleven new module texts and four integration/runner texts
+also match their compiled proof texts after line-ending and terminal
+blank-line normalization; raw file hashes remain unchanged across both runs.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 48 worktree entries remain in node 63; 37 pre-existing
+dirty entries were preserved and eleven new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains active.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`5fbed89e2f227046f2a45673ca7858c68e9656b52ba048f0bd41a56553dd4730`.
+Final foundation log SHA-256:
+`21b2789ce78b58ecab6236b6190bfdd13a7e19b271d13ea3c2991f543dae171d`.
+Final foundation JSON manifest SHA-256:
+`a578dd87e45cc90c09e87e267a4c9a8605f2d066f3e273ddb6df896502c80598`.
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaTaylorAverage` | `cea44ead18d130375b08b92663e68b730182d5a76f1a747acd69f52577f272f9` |
+| `BetaTaylorIdentity` | `6884eb11f3f7080754643b60db672a77a9038164da7c9b60d58ab2510c9311d9` |
+| `BetaAveragedCurvature` | `b16758ad349834796e48f336e71fd17dc662ec6f92b1e92831a90a8a07325ac0` |
+| `BetaMorseMonotonicity` | `20c9bdceb53d2bab2dc23f1b77b2d8fb9aa0bc9502ca44aac3d2ead33ccfb923` |
+| `BetaMorseInverse` | `b73343f418b6bb9bb8f21f20af036fa2d370ec9169e199fb7e79dd3f2f314d32` |
+| `BetaMorseDerivativeBounds` | `989306022898ccae4cdf6d7467d55da32b122237eda0fc95e21999269d9fc68c` |
+| `BetaMorseChangeVariables` | `f9aa630b2e4d3652589b9476a15dc448a5c14ed46cf6b4cc6e6407da6b478e61` |
+| `BetaMorseAmplitude` | `cbf4c14fd86f3ec214d7999004df235f2a21781bba2f71701e42b7dc19174db8` |
+| `BetaMorseFourier` | `5a9d930a9d071f5fd6ab0eff9d4909856c6cdd2636b6e282d959222ecec4d322` |
+| `BetaMorsePoisson` | `1ee904750dd56a61a6413a32cba5fcfcfdb35f1462daff3ab6d64acc64abd3c1` |
+| `BetaMorseRemainder` | `d7b08f7854f5a8d563df3dd2b096ac2a7ab58a24955568cfb817d10c0c1a8aaf` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The architecture has 228 distinct nodes and 611 resolved, nonduplicate edges.
+
+All eleven synchronized documents preserve historical checkpoints.
+Git's existing LF-to-CRLF notices are not Lean diagnostics; no line-ending
+configuration was changed. Both complete verification logs are
+diagnostic-free. The full EPZAE-00--41 objective is unchanged.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+Sixteen new production modules prove the actual smooth zero-extension,
+uniform all-order coordinate/inverse/weight derivatives, a quantitative
+whole-line quadratic remainder and its original-source consumer.
+The physical C*N/T stationary estimate is uniform for each fixed cutoff,
+retains chi(g(r*N/T)) and e(-1/8), and does not yet give uniform
+varying-lattice cutoff budgets. Nonstationary modes, weighted stationary
+assembly, moving boundary bands and full beta reflection remain open.
+The counterexample, independent two-witness repair and all nine Add-est
+clauses are unchanged.
+
+### Current-checkout verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+at dirty HEAD `8a2cf7ab11a19ac206716066ba604ee5857c5481`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`
+  from this folder;
+  [final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log).
+  Coverage: 610 package files, 621 scanned Lean files, 9465 build jobs,
+  5397 discovered target theorems plus five imported boundaries (5402 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`
+  from `Riemann Zeta`;
+  [final foundation log](../../logs/foundation_freeze_20260922_021704.log) and
+  [JSON manifest](../../logs/foundation_freeze_20260922_021704.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 75 new public audits were found once each with only permitted logical
+axioms; all 85 new regression examples pass. Focused development errors
+were repaired before these final runs; no gate was weakened.
+Repository scans found no prohibited proof terms. Broad postulate matches
+remain unchanged comments and rational structure fields, not postulates.
+
+All 269 checkpoint source/integration/runner hashes match the verification
+snapshot. The sixteen new module texts and four integration/runner texts
+also match their compiled proof texts after line-ending normalization,
+including terminal newlines; raw file hashes are unchanged across both runs.
+The permanent counterexample, existing energy-proof modules, both BAT
+launchers, foundation verifier, frozen sources and dependency pins are
+unchanged. All 64 worktree entries remain in node 63; 48 pre-existing
+dirty entries were preserved and sixteen new proof modules were added.
+No files were staged, committed or pushed. Mathematical/source completeness
+is distinct from runner PASS. The full goal remains unfinished.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`4df678a225f115eefe461d217e2e58da406e318589c2059e5cf7b8e5027dbbd2`.
+Final foundation log SHA-256:
+`3ef717c69e0f76f2e05cffdf4bbdf47cf7e734034bdf2faf2ed5a37124993c16`.
+Final foundation JSON manifest SHA-256:
+`4cc50a51c025afd3d1a01b74f9113afb516cf863f54ef17d2c036ea56bdc7f8b`.
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaMorseSupport` | `9473a44ace248017b8a25e69612c2974192b6039e4794ae53bcdff844c8a9215` |
+| `BetaTaylorJets` | `ea2792df3d5ca12afcb47979f893b450d782fa81e401f7c856e3c2f2afa90f76` |
+| `BetaMorseGlobalIntegral` | `540268edf5501b7005c1abdfdc2046731ef840675d3317b86ec585ba21d2503a` |
+| `BetaMorseJets` | `348f9edae4c164533fd1d28c862dc87768472c09787cf63e8faf25ad6784d6fa` |
+| `BetaMorseJetBounds` | `cee8133dc24286a108744451702e2f05bdb092b978fb089d964a1ada954d817b` |
+| `BetaMorseInverseJets` | `4d4a5c3d06ea0fbfa22daf962785fbb183ed646d807ea43685a75e54ffac75b6` |
+| `BetaMorseInverseJetBounds` | `609b59ff5890f0141b21fb364a77b4a56e94d68a62e861fe01238c6a42a24cb6` |
+| `BetaMorseWeightJets` | `264b28135b82a0676a576b3910dfb9c8b551a9359fd684589fa6d079b6d259f9` |
+| `BetaMorseWeightBounds` | `ca90127af92af4e548a3eddd3c8caef62a4ccf180ec8fd7f10cfcc392f002727` |
+| `BetaTaylorGlobal` | `79d8f9275be61f4f880fccb75fdf8b7097c6421d2d17becbf7dab1bdcf6255dd` |
+| `BetaQuadraticKernel` | `41ba6318ccbd16e83dc910aecc901a76b644899a258d655ebaa9adf69747db6e` |
+| `BetaQuadraticParts` | `f6cd7e969f728a5cf3423f0ae82f9e295b6398ca385ab49fec85b6e43aef8c7d` |
+| `BetaQuadraticTaylor` | `6328a3df912ccd2168172a428797ff8cd8b610f3826536bca3974367101e0ce6` |
+| `BetaQuadraticRemainder` | `2041620e484008c471ed9c797595c617a105b83bc0fbcaf7880138ae44609a5e` |
+| `BetaMorseStationaryEstimate` | `b822536560f04a7001ef378893dd5eae950659944ccf33b6bfcb98ffd9aee7f5` |
+| `BetaMorseSourceEstimate` | `8f97fa83a5f7153e010e32b19dc169a769db49350085e103a3d624307d2203b6` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The architecture has 234 distinct nodes and 638 resolved, nonduplicate edges.
+
+All eleven synchronized documents preserve historical checkpoints.
+Git's existing LF-to-CRLF notices are not Lean diagnostics; no line-ending
+configuration was changed. Both complete verification logs are
+diagnostic-free. The full EPZAE-00--41 objective is unchanged.

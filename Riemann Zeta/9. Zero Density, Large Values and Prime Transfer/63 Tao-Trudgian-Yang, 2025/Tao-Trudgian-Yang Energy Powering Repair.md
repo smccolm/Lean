@@ -1,7 +1,8 @@
 # Authorized cardinality/energy powering repair
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -4852,7 +4853,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 This checkpoint adds only the all-order beta/B-process phase-control
 chain. No existing energy-proof module changed.
@@ -4880,3 +4881,151 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+This checkpoint changes only the beta/B-process phase branch and its
+integration/documentation. No existing energy-proof module changed.
+The printed-Lemma-62 counterexample remains a permanent audited regression,
+with SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+Independent rho/k and rho*/k witnesses, Heath--Brown consumers, exact
+energy optimization and all nine Add-est clauses remain verified.
+No false s'/s scaling, scaled fifth coordinate or third witness returns.
+EPZAE-36/37 stay DONE; DBT, reflection and the other whole-proof
+obligations remain open. Both BAT gates remain mandatory.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+This checkpoint adds only beta/B-process source-entry and dual-sum
+proofs, their integration and synchronized documentation. The permanent
+`EnergyPoweringObstruction.lean` hash remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The repaired chain remains: independent rho/k and rho*/k witnesses,
+Heath--Brown energy consumers, exact optimization, all nine Add-est
+clauses. No false s'/s scaling, scaled fifth coordinate or third witness
+is restored. No existing energy-proof module changed. EPZAE-36/37 stay
+DONE; the still-open uniform B-process and remaining whole-proof
+obligations are distinct. Both BAT gates remain mandatory.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+The permanent `EnergyPoweringObstruction.lean` remains byte-for-byte
+unchanged, with SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The authorized repair remains complete: independent rho/k and rho*/k
+witnesses with unrestricted, unrelated fifth coordinates feed the
+Heath--Brown energy relation, exact optimization and all nine Add-est
+clauses. No false s'/s scaling, scaled fifth coordinate or third witness
+is restored. Existing energy-proof modules and the source archives are
+unchanged.
+
+This checkpoint adds only beta/B-process amplitude, stationary-main
+and quadratic-coordinate proofs, their integration and synchronized
+documentation. The remaining smooth inverse and integral approximation
+obligations do not reopen or weaken the repaired energy chain.
+The whole goal remains active and both BAT gates remain mandatory.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The permanent `EnergyPoweringObstruction.lean` is unchanged, with SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The authorized route remains: corrected cardinality/energy powering
+with independent rho/k and rho*/k witnesses and unrestricted,
+unrelated fifth coordinates; Heath--Brown energy relation; exact
+optimization; all nine Add-est clauses. No false s'/s scaling, scaled
+fifth coordinate or third witness is restored.
+
+This checkpoint adds only beta/B-process Taylor, smooth-inverse,
+change-of-variables and remainder-normalization proofs plus their
+integration and documentation. No existing energy-proof module or
+source archive changed. The still-open uniform stationary remainder
+does not reopen the repaired energy chain. The full goal and both
+mandatory BAT gates remain active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+The permanent printed-Lemma-62 counterexample remains byte-for-byte
+unchanged, with `EnergyPoweringObstruction.lean` SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The authorized repaired route remains complete: independent rho/k and
+rho*/k witnesses with unrelated unrestricted fifth coordinates;
+Heath--Brown energy relation; exact optimization; all nine Add-est
+clauses. No false s'/s scaling, scaled fifth coordinate or third witness
+returns. No existing energy-proof module or frozen source changed.
+
+This checkpoint advances only the beta/B-process branch: global smooth
+weights, uniform higher derivatives and actual fixed-cutoff stationary
+remainder estimates. Uniform lattice-family and full-reflection
+obligations remain open, without reopening the repaired energy chain.
+Both mandatory BAT interfaces and the full goal remain active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.

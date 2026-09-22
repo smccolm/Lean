@@ -17709,3 +17709,2280 @@ example {ε : ℝ} (hε : 0 < ε) :
     (by norm_num : (3 : ℝ)/4 < 1) 2 hε
 
 end AllOrderLegendreRegression
+
+section CanonicalLegendreExtensionRegression
+
+open Set Expdb Filter
+open scoped Topology ContDiff
+
+example {l a b r : ℝ}
+    (hla : l < a) (hab : a ≤ b) (hbr : b < r) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      (∀ x ∈ Icc a b, χ x = 1) ∧ tsupport χ ⊆ Ioo l r ∧
+      HasCompactSupport χ ∧ ∀ x, 0 ≤ χ x ∧ χ x ≤ 1 :=
+  @exists_smooth_interval_cutoff l a b r hla hab hbr
+
+example {χ H : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hH : ∀ x ∈ tsupport χ, ContDiffAt ℝ ∞ H x) :
+    ContDiff ℝ ∞ (fun x => χ x * H x) :=
+  @smoothCutoff_mul_contDiff χ H hχ hH
+
+example {χ H : ℝ → ℝ}
+    {x : ℝ} (hx : x ∉ tsupport χ) (n : ℕ) :
+    iteratedDeriv n (fun y => χ y * H y) x = 0 :=
+  @smoothCutoff_mul_iteratedDeriv_zero χ H x hx n
+
+example (χ : ℝ → ℝ) (n : ℕ) (x : ℝ) :
+    0 ≤ cutoffOrderBudget χ n x :=
+  @cutoffOrderBudget_nonneg χ n x
+
+example (χ : ℝ → ℝ) {n Q : ℕ}
+    (hn : n ≤ Q) (x : ℝ) :
+    cutoffOrderBudget χ n x ≤ cutoffFiniteBudget χ Q x :=
+  @cutoffOrderBudget_le_finite χ n Q hn x
+
+example {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (Q : ℕ) : Continuous (cutoffFiniteBudget χ Q) :=
+  @cutoffFiniteBudget_continuous χ hχ Q
+
+example {χ H : ℝ → ℝ}
+    {x ε : ℝ} (n : ℕ)
+    (hχ : ContDiffAt ℝ n χ x) (hH : ContDiffAt ℝ n H x)
+    (he : ∀ j ≤ n, |iteratedDeriv j H x| ≤ ε) :
+    |iteratedDeriv n (fun y => χ y * H y) x| ≤ cutoffOrderBudget χ n x * ε :=
+  @smoothCutoff_mul_iteratedDeriv_le χ H x ε n hχ hH he
+
+example {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) {S : Set ℝ} (hS : IsCompact S)
+    (hs : tsupport χ ⊆ S) (Q : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (H : ℝ → ℝ) (ε : ℝ), 0 ≤ ε →
+      (∀ x ∈ tsupport χ, ContDiffAt ℝ ∞ H x) →
+      (∀ x ∈ tsupport χ, ∀ j ≤ Q, |iteratedDeriv j H x| ≤ ε) →
+      ∀ x : ℝ, ∀ n ≤ Q, |iteratedDeriv n (fun y => χ y*H y) x| ≤ C*ε :=
+  @smoothCutoff_uniform_derivative_bound χ hχ S hS hs Q
+
+example
+    {σ δ w v : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hp : 0 < v) :
+    ContDiffAt ℝ ∞ (anchoredLegendreError F σ w) v :=
+  @anchoredLegendreError_contDiffAt σ δ w v F hσ hδ hF hv hp
+
+example
+    {σ δ w v : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hp : 0 < v) (n : ℕ) :
+    iteratedDeriv (n+1) (anchoredLegendreError F σ w) v =
+      iteratedDeriv (n+1) (modelPhaseLegendreDual F) v -
+        iteratedDeriv n (modelPhase σ⁻¹) v :=
+  @anchoredLegendreError_iteratedDeriv σ δ w v F hσ hδ hF hv hp n
+
+example {χ F : ℝ → ℝ} {σ w v : ℝ}
+    (hχ : χ v = 1) :
+    legendreCutoffCorrection χ F σ w v = anchoredLegendreError F σ w v :=
+  @legendreCutoffCorrection_agrees χ F σ w v hχ
+
+example
+    {σ c d w : ℝ} (hσ : 0 < σ)
+    (hc : (2 : ℝ)^(-σ) < c) (hcd : c ≤ d) (hd : d < 1)
+    (hw : w ∈ Icc c d) {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Icc c d)
+    (Q : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      ∀ F : ℝ → ℝ,
+        IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder Q) δ →
+      Icc c d ⊆ modelPhaseSlopeRange F ∧
+      ContDiff ℝ ∞ (legendreCutoffCorrection χ F σ w) ∧
+        ∀ v : ℝ, ∀ n ≤ Q,
+          |iteratedDeriv n (legendreCutoffCorrection χ F σ w) v| ≤ ε :=
+  @legendreCutoffCorrection_uniformity σ c d w hσ hc hcd hd hw χ hχ hs Q ε hε
+
+example {H : ℝ → ℝ}
+    (hH : ContDiff ℝ ∞ H) (s A : ℝ) :
+    ContDiff ℝ ∞ (rescaledPhaseCorrection H s A) :=
+  @rescaledPhaseCorrection_contDiff H hH s A
+
+example {H : ℝ → ℝ}
+    (hH : ContDiff ℝ ∞ H) (s A u : ℝ) (n : ℕ) :
+    iteratedDeriv n (rescaledPhaseCorrection H s A) u =
+      A^(s-1) * A^n * iteratedDeriv n H (A*u) :=
+  @rescaledPhaseCorrection_iteratedDeriv H hH s A u n
+
+example (s A : ℝ) (Q : ℕ) :
+    0 < phaseRescalingBudget s A Q :=
+  @phaseRescalingBudget_pos s A Q
+
+example {H : ℝ → ℝ}
+    (hH : ContDiff ℝ ∞ H) (s A : ℝ) {Q : ℕ} {ε : ℝ} (hε : 0 ≤ ε)
+    (he : ∀ x : ℝ, ∀ n ≤ Q, |iteratedDeriv n H x| ≤ ε)
+    (u : ℝ) {n : ℕ} (hn : n ≤ Q) :
+    |iteratedDeriv n (rescaledPhaseCorrection H s A) u| ≤
+      phaseRescalingBudget s A Q * ε :=
+  @rescaledPhaseCorrection_uniform_bound H hH s A Q ε hε he u n hn
+
+example {H : ℝ → ℝ}
+    (hH : ContDiff ℝ ∞ H) (s : ℝ) (P : ℕ) {ε : ℝ}
+    (he : ∀ u ∈ Icc (1 : ℝ) 2, ∀ n ≤ P, |iteratedDeriv (n+1) H u| ≤ ε) :
+    IsApproximateModelPhaseFunction (fun u => referenceModelPrimitive s u + H u)
+      s P ε :=
+  @referencePlusCorrection_approximate H hH s P ε he
+
+example
+    (s : ℝ) {A u v : ℝ} (hA : 0 < A) (hu : 0 < u) (hv : 0 < v) :
+    A^(s-1) * (referenceModelPrimitive s (A*u) -
+      referenceModelPrimitive s (A*v)) =
+      referenceModelPrimitive s u - referenceModelPrimitive s v :=
+  @referenceModelPrimitive_scaling_difference s A u v hA hu hv
+
+example {χ F : ℝ → ℝ} {σ A w v : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hv : 0 < v) (hχ : χ v = 1) :
+    canonicalLegendrePhase χ F σ A w (v/A) =
+      A^(σ⁻¹-1)*(modelPhaseLegendreDual F v-modelPhaseLegendreDual F w) +
+        referenceModelPrimitive σ⁻¹ (w/A) :=
+  @canonicalLegendrePhase_agrees χ F σ A w v hA hw hv hχ
+
+example
+    {σ c d w : ℝ} (hσ : 0 < σ)
+    (hc : (2 : ℝ)^(-σ) < c) (hcd : c ≤ d) (hd : d < 1)
+    (hw : w ∈ Icc c d) {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Icc c d)
+    (A : ℝ) (Q : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      ∀ F : ℝ → ℝ,
+        IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+1)) δ →
+      Icc c d ⊆ modelPhaseSlopeRange F ∧
+        IsApproximateModelPhaseFunction (canonicalLegendrePhase χ F σ A w)
+          σ⁻¹ Q ε :=
+  @canonicalLegendrePhase_uniformity σ c d w hσ hc hcd hd hw χ hχ hs A Q ε hε
+
+example
+    {σ a b : ℝ} (hσ : 0 < σ)
+    (ha : (2 : ℝ)^(-σ) < a) (hab : a ≤ b) (hb : b < 1)
+    (hr : b < 2*a) :
+    ∃ A : ℝ, 0 < A ∧ A < a ∧ b < 2*A ∧
+      ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ HasCompactSupport χ ∧
+        (∀ v ∈ Icc a b, χ v = 1) ∧
+        ∀ (Q : ℕ) (ε : ℝ), 0 < ε →
+        ∃ δ : ℝ, 0 < δ ∧ δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+          ∀ F : ℝ → ℝ,
+            IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+1)) δ →
+          Icc a b ⊆ modelPhaseSlopeRange F ∧
+          IsApproximateModelPhaseFunction (canonicalLegendrePhase χ F σ A a) σ⁻¹ Q ε ∧
+          ∀ v ∈ Icc a b, v/A ∈ Ioo (1 : ℝ) 2 ∧
+            canonicalLegendrePhase χ F σ A a (v/A) =
+              A^(σ⁻¹-1)*(modelPhaseLegendreDual F v-modelPhaseLegendreDual F a) +
+                referenceModelPrimitive σ⁻¹ (a/A) :=
+  @modelPhaseLegendreDual_canonical_extension σ a b hσ ha hab hb hr
+
+example {σ x : ℝ}
+    (hx : x ∈ Ioo ((2 : ℝ)^(-σ)) 1) :
+    0 < legendreWindowRadius σ x ∧
+      (2 : ℝ)^(-σ) < x-legendreWindowRadius σ x ∧
+      x+legendreWindowRadius σ x < 1 ∧
+      x+legendreWindowRadius σ x < 2*(x-legendreWindowRadius σ x) :=
+  @legendreWindowRadius_properties σ x hx
+
+example
+    {σ a b : ℝ} (hσ : 0 < σ)
+    (ha : (2 : ℝ)^(-σ) < a) (hab : a ≤ b) (hb : b < 1) :
+    ∃ S : Finset (Icc a b), S.Nonempty ∧
+      ∃ l r A : Icc a b → ℝ, ∃ χ : Icc a b → ℝ → ℝ,
+      (∀ i ∈ S, (2 : ℝ)^(-σ) < l i ∧ l i ≤ r i ∧ r i < 1 ∧
+        0 < A i ∧ A i < l i ∧ r i < 2*A i ∧
+        ContDiff ℝ ∞ (χ i) ∧ HasCompactSupport (χ i) ∧
+        ∀ v ∈ Icc (l i) (r i), χ i v = 1) ∧
+      (∀ v ∈ Icc a b, ∃ i ∈ S, v ∈ Ioo (l i) (r i)) ∧
+      ∀ (Q : ℕ) (ε : ℝ), 0 < ε →
+      ∃ δ : ℝ, 0 < δ ∧ δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+        ∀ F : ℝ → ℝ,
+          IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+1)) δ →
+        ∀ i ∈ S, Icc (l i) (r i) ⊆ modelPhaseSlopeRange F ∧
+          IsApproximateModelPhaseFunction
+            (canonicalLegendrePhase (χ i) F σ (A i) (l i)) σ⁻¹ Q ε ∧
+          ∀ v ∈ Icc (l i) (r i), v/A i ∈ Ioo (1 : ℝ) 2 ∧
+            canonicalLegendrePhase (χ i) F σ (A i) (l i) (v/A i) =
+              (A i)^(σ⁻¹-1)*
+                (modelPhaseLegendreDual F v-modelPhaseLegendreDual F (l i)) +
+                referenceModelPrimitive σ⁻¹ (l i/A i) :=
+  @modelPhaseLegendreDual_finite_canonical_cover σ a b hσ ha hab hb
+
+example
+    {G : VariableFunction (VariableObject.fixed ℝ) ℝ} {s : ℝ}
+    (hG : IsPhaseFunction G)
+    (he : ∀ (P : ℕ) (ε : ℝ), 0 < ε →
+      ∀ᶠ i in atTop, IsApproximateModelPhaseFunction (G i) s P ε) :
+    IsModelPhaseFunctionWith G s :=
+  @modelPhaseWith_of_eventual_approximation G s hG he
+
+example
+    {H : VariableFunction (VariableObject.fixed ℝ) ℝ} (s : ℝ)
+    (he : ∀ (P : ℕ) (ε : ℝ), 0 < ε →
+      ∀ᶠ i in atTop, IsApproximateModelPhaseFunction (H i) s P ε) :
+    ∃ G : VariableFunction (VariableObject.fixed ℝ) ℝ,
+      IsModelPhaseFunctionWith G s ∧ (∀ᶠ i : ℕ in atTop, G i = H i) :=
+  @modelPhaseWith_finite_initial_repair H s he
+
+example
+    {σ a b : ℝ} (hσ : 0 < σ)
+    (ha : (2 : ℝ)^(-σ) < a) (hab : a ≤ b) (hb : b < 1)
+    (hr : b < 2*a)
+    {F : VariableFunction (VariableObject.fixed ℝ) ℝ}
+    (hF : IsModelPhaseFunctionWith F σ) :
+    ∃ A : ℝ, 0 < A ∧ A < a ∧ b < 2*A ∧
+      ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ HasCompactSupport χ ∧
+      ∃ G : VariableFunction (VariableObject.fixed ℝ) ℝ,
+        IsModelPhaseFunctionWith G σ⁻¹ ∧ IsModelPhaseFunction G ∧
+        ∀ᶠ i in atTop,
+          G i = canonicalLegendrePhase χ (F i) σ A a ∧
+          Icc a b ⊆ modelPhaseSlopeRange (F i) ∧
+          ∀ v ∈ Icc a b, v/A ∈ Ioo (1 : ℝ) 2 ∧
+            G i (v/A) =
+              A^(σ⁻¹-1)*(modelPhaseLegendreDual (F i) v-modelPhaseLegendreDual (F i) a) +
+                referenceModelPrimitive σ⁻¹ (a/A) :=
+  @modelPhaseLegendreDual_canonical_family σ a b hσ ha hab hb hr F hF
+
+-- A real cutoff includes both plateau endpoints and has buffered support.
+example : ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+    (∀ x ∈ Icc (1 : ℝ) 2, χ x = 1) ∧ tsupport χ ⊆ Ioo (0 : ℝ) 3 ∧
+    HasCompactSupport χ ∧ ∀ x, 0 ≤ χ x ∧ χ x ≤ 1 :=
+  exists_smooth_interval_cutoff (by norm_num) (by norm_num) (by norm_num)
+
+example (χ : ℝ → ℝ) (x : ℝ) : cutoffOrderBudget χ 0 x = |χ x| := by
+  simp [cutoffOrderBudget]
+
+-- Multiplicative normalization retains the actual derivative scale.
+example (u : ℝ) :
+    iteratedDeriv 2 (rescaledPhaseCorrection (fun x => x^3) 1 2) u = 48*u := by
+  rw [rescaledPhaseCorrection_iteratedDeriv (by fun_prop)]
+  norm_num [iteratedDeriv_pow]
+  ring
+
+example :
+    referenceModelPrimitive 1 6-referenceModelPrimitive 1 2 =
+      referenceModelPrimitive 1 3-referenceModelPrimitive 1 1 := by
+  convert referenceModelPrimitive_scaling_difference 1
+    (by norm_num : (0 : ℝ) < 2) (by norm_num : (0 : ℝ) < 3)
+    (by norm_num : (0 : ℝ) < 1) using 1
+  norm_num
+
+-- This includes both closed canonical endpoints and arbitrary exponents.
+example (s : ℝ) (P : ℕ) :
+    IsApproximateModelPhaseFunction
+      (fun u => referenceModelPrimitive s u+(0 : ℝ)) s P 0 := by
+  apply referencePlusCorrection_approximate contDiff_const
+  intro u _ n _
+  simp
+
+example :
+    ∃ A : ℝ, 0 < A ∧ ∃ χ : ℝ → ℝ, ∀ (Q : ℕ) (ε : ℝ), 0 < ε →
+      IsApproximateModelPhaseFunction
+        (canonicalLegendrePhase χ (referenceModelPrimitive 1) 1 A ((2 : ℝ)/3))
+        1 Q ε := by
+  obtain ⟨A,hA,_,_,χ,_,_,_,hall⟩ := modelPhaseLegendreDual_canonical_extension
+    (by norm_num : (0 : ℝ) < 1)
+    (by norm_num [Real.rpow_neg_one] : (2 : ℝ)^(-(1 : ℝ)) < (2 : ℝ)/3)
+    (by norm_num : (2 : ℝ)/3 ≤ (3 : ℝ)/4)
+    (by norm_num : (3 : ℝ)/4 < 1)
+    (by norm_num : (3 : ℝ)/4 < 2*((2 : ℝ)/3))
+  refine ⟨A,hA,χ,?_⟩
+  intro Q ε hε
+  obtain ⟨δ,hδ,_,hmodel⟩ := hall Q ε hε
+  have hF := approximateModelPhase_mono
+    (referenceModelPrimitive_approximate 1 (legendreFiniteInputOrder (Q+1)))
+    le_rfl hδ.le
+  simpa only [inv_one] using (hmodel (referenceModelPrimitive 1) hF).2.1
+
+-- [1/3,3/4] has ratio above two: the genuine finite-cover theorem still applies.
+example :
+    ∃ S : Finset (Icc ((1 : ℝ)/3) ((3 : ℝ)/4)), S.Nonempty ∧
+      ∃ l r : Icc ((1 : ℝ)/3) ((3 : ℝ)/4) → ℝ,
+        (∀ i ∈ S, r i < 2*l i) ∧
+        ∀ v ∈ Icc ((1 : ℝ)/3) ((3 : ℝ)/4), ∃ i ∈ S, v ∈ Ioo (l i) (r i) := by
+  obtain ⟨S,hS,l,r,A,χ,hgeom,hcover,_⟩ := modelPhaseLegendreDual_finite_canonical_cover
+    (by norm_num : (0 : ℝ) < 2)
+    (by norm_num [Real.rpow_neg,Real.rpow_two] :
+      (2 : ℝ)^(-(2 : ℝ)) < (1 : ℝ)/3)
+    (by norm_num : (1 : ℝ)/3 ≤ (3 : ℝ)/4)
+    (by norm_num : (3 : ℝ)/4 < 1)
+  refine ⟨S,hS,l,r,?_,hcover⟩
+  intro i hi
+  have hg := hgeom i hi
+  linarith [hg.2.2.2.2.1,hg.2.2.2.2.2.1]
+
+-- Finite-prefix repair produces the literal source model predicate.
+example :
+    ∃ G : VariableFunction (VariableObject.fixed ℝ) ℝ,
+      IsModelPhaseFunctionWith G ((1 : ℝ)/2) ∧
+      ∀ᶠ i : ℕ in atTop, G i = referenceModelPrimitive ((1 : ℝ)/2) := by
+  apply modelPhaseWith_finite_initial_repair
+  intro P ε hε
+  exact Filter.Eventually.of_forall fun _ => approximateModelPhase_mono
+    (referenceModelPrimitive_approximate ((1 : ℝ)/2) P) le_rfl hε.le
+
+example
+    {σ a b : ℝ} (hσ : 0 < σ)
+    (ha : (2 : ℝ)^(-σ) < a) (hab : a ≤ b) (hb : b < 1) :
+    ∃ S : Finset (Icc a b), S.Nonempty ∧
+      ∃ l r A : Icc a b → ℝ, ∃ χ : Icc a b → ℝ → ℝ,
+      (∀ i ∈ S, (2 : ℝ)^(-σ) < l i ∧ l i ≤ r i ∧ r i < 1 ∧
+        0 < A i ∧ A i < l i ∧ r i < 2*A i ∧
+        ContDiff ℝ ∞ (χ i) ∧ HasCompactSupport (χ i) ∧
+        ∀ v ∈ Icc (l i) (r i), χ i v = 1) ∧
+      (∀ v ∈ Icc a b, ∃ i ∈ S, v ∈ Ioo (l i) (r i)) ∧
+      ∀ F : VariableFunction (VariableObject.fixed ℝ) ℝ,
+        IsModelPhaseFunctionWith F σ →
+      ∃ G : S → VariableFunction (VariableObject.fixed ℝ) ℝ,
+        (∀ j, IsModelPhaseFunctionWith (G j) σ⁻¹ ∧ IsModelPhaseFunction (G j)) ∧
+        ∀ᶠ n in atTop, ∀ j : S,
+          G j n = canonicalLegendrePhase (χ j) (F n) σ (A j) (l j) ∧
+          Icc (l j) (r j) ⊆ modelPhaseSlopeRange (F n) ∧
+          ∀ v ∈ Icc (l j) (r j), v/A j ∈ Ioo (1 : ℝ) 2 ∧
+            G j n (v/A j) =
+              (A j)^(σ⁻¹-1)*
+                (modelPhaseLegendreDual (F n) v-modelPhaseLegendreDual (F n) (l j)) +
+                referenceModelPrimitive σ⁻¹ (l j/A j) :=
+  @modelPhaseLegendreDual_finite_model_family σ a b hσ ha hab hb
+
+end CanonicalLegendreExtensionRegression
+
+section ModelPoissonSourceRegression
+
+open Set Expdb Filter
+open scoped ContDiff FourierTransform BigOperators
+
+example {A T N : ℝ}
+    (hA : 0 < A) (hT : 0 < T) (hN : 0 < N) :
+    0 < modelPhaseDualScale A T N :=
+  @modelPhaseDualScale_pos A T N hA hT hN
+
+example (σ : ℝ) {A T : ℝ}
+    (hA : 0 < A) (hT : 0 < T) :
+    0 < modelPhaseDualParameter σ A T :=
+  @modelPhaseDualParameter_pos σ A T hA hT
+
+example {A T N : ℝ}
+    (hA : A ≠ 0) (hT : T ≠ 0) (hN : N ≠ 0) (r : ℝ) :
+    r/modelPhaseDualScale A T N = (r*N/T)/A :=
+  @modelPhaseDualScale_coordinate A T N hA hT hN r
+
+example (σ : ℝ) {A : ℝ}
+    (hA : 0 < A) (T : ℝ) :
+    modelPhaseDualParameter σ A T * A^(σ⁻¹-1) = T :=
+  @modelPhaseDualParameter_cancel σ A hA T
+
+example (σ : ℝ) {A T N : ℝ}
+    (hA : 0 < A) (hT : T ≠ 0) (hN : N ≠ 0) :
+    modelPhaseDualScale A T N / modelPhaseDualParameter σ A T = A^σ⁻¹/N :=
+  @modelPhaseDualScale_ratio σ A T N hA hT hN
+
+example (σ : ℝ) {A T N : ℝ}
+    (hA : 0 < A) (hT : 0 < T) (hN : 0 < N) :
+    modelPhaseDualScale A T N ≤ modelPhaseDualParameter σ A T ↔ A^σ⁻¹ ≤ N :=
+  @modelPhaseDualScale_le_parameter_iff σ A T N hA hT hN
+
+example {A T N : ℝ} (hN : 0 < N) :
+    1 ≤ modelPhaseDualScale A T N ↔ N ≤ A*T :=
+  @one_le_modelPhaseDualScale_iff A T N hN
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N r : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (hv : 0 < r*N/T) (hχ : χ (r*N/T) = 1) :
+    modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r) =
+      modelPhaseDualOffset F σ A w T -
+        modelPhaseDualParameter σ A T *
+          canonicalLegendrePhase χ F σ A w (r/modelPhaseDualScale A T N) :=
+  @modelPhaseStationaryPoint_canonical_phase χ F σ A w T N r hA hw hT hN hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N r : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (hv : 0 < r*N/T) (hχ : χ (r*N/T) = 1) :
+    (𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ) =
+      (𝐞 (modelPhaseDualOffset F σ A w T) : ℂ) *
+        starRingEnd ℂ (𝐞 (modelPhaseDualParameter σ A T *
+          canonicalLegendrePhase χ F σ A w (r/modelPhaseDualScale A T N))) :=
+  @modelPhaseStationaryPoint_canonical_fourier χ F σ A w T N r hA hw hT hN hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (T N : ℝ) :
+    ContDiff ℝ ∞ (modelPhaseWeightedKernel χ F T N) :=
+  @modelPhaseWeightedKernel_contDiff χ F σ δ P hχ hs hF T N
+
+example
+    {χ F : ℝ → ℝ} {N x : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2) (hN : 0 < N)
+    (hx : x ∉ Icc N (2*N)) (T : ℝ) :
+    modelPhaseWeightedKernel χ F T N x = 0 :=
+  @modelPhaseWeightedKernel_zero_of_not_mem χ F N x hs hN hx T
+
+example
+    {χ F : ℝ → ℝ} {N : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2) (hN : 0 < N) (T : ℝ) :
+    HasCompactSupport (modelPhaseWeightedKernel χ F T N) :=
+  @modelPhaseWeightedKernel_hasCompactSupport χ F N hs hN T
+
+example
+    {χ F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N) (T x : ℝ) :
+    modelPhaseWeightedSchwartz hχ hs hF hN T x =
+      modelPhaseWeightedKernel χ F T N x :=
+  @modelPhaseWeightedSchwartz_apply χ F σ δ N P hχ hs hF hN T x
+
+example
+    {χ F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N) (T r : ℝ) :
+    𝓕 (modelPhaseWeightedSchwartz hχ hs hF hN T) r =
+      modelPhaseFourierMode χ F T N r :=
+  @modelPhaseWeightedSchwartz_fourier χ F σ δ N P hχ hs hF hN T r
+
+example
+    {χ F : ℝ → ℝ} {N : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2) (hN : 0 < N) (T : ℝ) :
+    (∑' n : ℤ, modelPhaseWeightedKernel χ F T N n) =
+      ∑ n ∈ Finset.Icc ⌈N⌉ ⌊2*N⌋, modelPhaseWeightedKernel χ F T N n :=
+  @modelPhaseWeightedKernel_tsum_eq_finite χ F N hs hN T
+
+example
+    {χ F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N) (T : ℝ) :
+    (∑ n ∈ Finset.Icc ⌈N⌉ ⌊2*N⌋, modelPhaseWeightedKernel χ F T N n) =
+      ∑' r : ℤ, modelPhaseFourierMode χ F T N r :=
+  @modelPhase_weighted_poisson χ F σ δ N P hχ hs hF hN T
+
+example {N : ℝ} (hN : 0 < N)
+    {a b : ℤ} (ha : N < (a : ℝ)) (hab : a ≤ b) (hb : (b : ℝ) < 2*N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ x : ℝ, 0 ≤ χ x ∧ χ x ≤ 1) ∧
+      ∀ n : ℤ, χ ((n : ℝ)/N) = if n ∈ Finset.Icc a b then 1 else 0 :=
+  @exists_modelPhase_integer_cutoff N hN a b ha hab hb
+
+example (F : ℝ → ℝ) (T N : ℝ) (a b : ℕ) :
+    exponentialSumAt F T N a b =
+      ∑ n ∈ Finset.Icc (a : ℤ) (b : ℤ), (𝐞 (T*F ((n : ℝ)/N)) : ℂ) :=
+  @exponentialSumAt_eq_int_sum F T N a b
+
+example
+    {F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N)
+    {a b : ℕ} (ha : N < (a : ℝ)) (hab : a ≤ b) (hb : (b : ℝ) < 2*N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ n : ℤ, χ ((n : ℝ)/N) = if n ∈ Finset.Icc (a : ℤ) (b : ℤ) then 1 else 0) ∧
+      ∀ T : ℝ, exponentialSumAt F T N a b =
+        ∑' r : ℤ, modelPhaseFourierMode χ F T N r :=
+  @modelPhase_sharp_interval_poisson F σ δ N P hF hN a b ha hab hb
+
+example
+    (χ F : ℝ → ℝ) (T r : ℝ) {N : ℝ} (hN : 0 < N) :
+    modelPhaseFourierMode χ F T N r = N • modelPhaseNormalizedMode χ F T (r*N) :=
+  @modelPhaseFourierMode_eq_normalized χ F T r N hN
+
+example
+    (χ F : ℝ → ℝ) (T r : ℝ) {N : ℝ} (hN : 0 < N) :
+    ‖modelPhaseFourierMode χ F T N r‖ ≤ N * ∫ u : ℝ, |χ u| :=
+  @norm_modelPhaseFourierMode_le χ F T r N hN
+
+example
+    {χ F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N) (T : ℝ) :
+    Summable (fun r : ℤ => modelPhaseFourierMode χ F T N r) :=
+  @summable_modelPhaseFourierMode χ F σ δ N P hχ hs hF hN T
+
+example
+    {χ F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N) (T : ℝ) :
+    Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T N r‖) :=
+  @summable_norm_modelPhaseFourierMode χ F σ δ N P hχ hs hF hN T
+
+example (N : ℝ) (a b : ℤ) :
+    modelPhaseInteriorIndices N a b ⊆ Finset.Icc a b :=
+  @modelPhaseInteriorIndices_subset N a b
+
+example {N : ℝ} (hN : 0 < N) (a b : ℤ) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ x : ℝ, 0 ≤ χ x ∧ χ x ≤ 1) ∧
+      ∀ n : ℤ, χ ((n : ℝ)/N) =
+        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0 :=
+  @exists_modelPhase_interior_cutoff N hN a b
+
+example
+    {N : ℝ} {a b : ℤ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ((Finset.Icc a b) \ modelPhaseInteriorIndices N a b).card ≤ 2 :=
+  @modelPhase_boundary_indices_card_le_two N a b ha hb
+
+example
+    (F : ℝ → ℝ) (T : ℝ) {N : ℝ} {a b : ℤ}
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ‖(∑ n ∈ Finset.Icc a b, (𝐞 (T*F ((n : ℝ)/N)) : ℂ)) -
+      ∑ n ∈ modelPhaseInteriorIndices N a b, (𝐞 (T*F ((n : ℝ)/N)) : ℂ)‖ ≤ 2 :=
+  @norm_modelPhase_full_sub_interior_le_two F T N a b ha hb
+
+example
+    {F : ℝ → ℝ} {σ δ N : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hN : 0 < N)
+    {a b : ℕ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ n : ℤ, χ ((n : ℝ)/N) =
+        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0) ∧
+      ∀ T : ℝ, Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T N r‖) ∧
+        ‖exponentialSumAt F T N a b -
+          ∑' r : ℤ, modelPhaseFourierMode χ F T N r‖ ≤ 2 :=
+  @modelPhase_closed_interval_poisson F σ δ N P hF hN a b ha hb
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (S : Finset ℤ) (c : ℤ → ℝ)
+    (hv : ∀ r ∈ S, 0 < (r : ℝ)*N/T)
+    (hχ : ∀ r ∈ S, χ ((r : ℝ)*N/T) = 1) :
+    (∑ r ∈ S, (c r : ℂ) *
+      (𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)) =
+      (𝐞 (modelPhaseDualOffset F σ A w T) : ℂ) *
+        starRingEnd ℂ (∑ r ∈ S, (c r : ℂ) *
+          (𝐞 (modelPhaseDualParameter σ A T *
+            canonicalLegendrePhase χ F σ A w ((r : ℝ)/modelPhaseDualScale A T N)) : ℂ)) :=
+  @modelPhaseStationaryPoint_weighted_sum_canonical χ F σ A w T N hA hw hT hN S c hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (S : Finset ℤ) (c : ℤ → ℝ)
+    (hv : ∀ r ∈ S, 0 < (r : ℝ)*N/T)
+    (hχ : ∀ r ∈ S, χ ((r : ℝ)*N/T) = 1) :
+    ‖∑ r ∈ S, (c r : ℂ) *
+      (𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)‖ =
+      ‖∑ r ∈ S, (c r : ℂ) *
+        (𝐞 (modelPhaseDualParameter σ A T *
+          canonicalLegendrePhase χ F σ A w ((r : ℝ)/modelPhaseDualScale A T N)) : ℂ)‖ :=
+  @norm_modelPhaseStationaryPoint_weighted_sum χ F σ A w T N hA hw hT hN S c hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (a b : ℕ)
+    (hv : ∀ r ∈ Finset.Icc (a : ℤ) (b : ℤ), 0 < (r : ℝ)*N/T)
+    (hχ : ∀ r ∈ Finset.Icc (a : ℤ) (b : ℤ), χ ((r : ℝ)*N/T) = 1) :
+    (∑ r ∈ Finset.Icc (a : ℤ) (b : ℤ),
+      (𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)) =
+      (𝐞 (modelPhaseDualOffset F σ A w T) : ℂ) *
+        starRingEnd ℂ (exponentialSumAt (canonicalLegendrePhase χ F σ A w)
+          (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a b) :=
+  @modelPhaseStationaryPoint_interval_canonical χ F σ A w T N hA hw hT hN a b hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (a b : ℕ)
+    (hv : ∀ r ∈ Finset.Icc (a : ℤ) (b : ℤ), 0 < (r : ℝ)*N/T)
+    (hχ : ∀ r ∈ Finset.Icc (a : ℤ) (b : ℤ), χ ((r : ℝ)*N/T) = 1) :
+    ‖∑ r ∈ Finset.Icc (a : ℤ) (b : ℤ),
+      (𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)‖ =
+      ‖exponentialSumAt (canonicalLegendrePhase χ F σ A w)
+        (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a b‖ :=
+  @norm_modelPhaseStationaryPoint_interval χ F σ A w T N hA hw hT hN a b hv hχ
+
+-- Physical dual parameters are linked, not independently supplied exponents.
+example : modelPhaseDualScale 3 10 5 = 6 := by
+  norm_num [modelPhaseDualScale]
+
+example : modelPhaseDualParameter 1 3 10 = 10 := by
+  norm_num [modelPhaseDualParameter]
+
+-- A closed interval retains its interior integer and discards exactly two endpoints.
+example : modelPhaseInteriorIndices 2 2 4 = {3} := by
+  norm_num [modelPhaseInteriorIndices,Finset.filter_insert,Finset.filter_singleton,
+    show Finset.Icc (2 : ℤ) 4 = {2,3,4} by decide]
+
+example :
+    ((Finset.Icc (2 : ℤ) 4) \ modelPhaseInteriorIndices 2 2 4).card = 2 := by
+  norm_num [modelPhaseInteriorIndices,Finset.filter_insert,Finset.filter_singleton,
+    show Finset.Icc (2 : ℤ) 4 = {2,3,4} by decide]
+  decide
+
+-- Empty source intervals remain genuine empty intervals.
+example : modelPhaseInteriorIndices 2 4 3 = ∅ := by
+  simp [modelPhaseInteriorIndices]
+
+-- Literal source sum, with no externally assumed smoothed replacement.
+example :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ n : ℤ, χ ((n : ℝ)/2) =
+        if n ∈ modelPhaseInteriorIndices 2 2 4 then 1 else 0) ∧
+      ∀ T : ℝ,
+        Summable (fun r : ℤ => ‖modelPhaseFourierMode χ (referenceModelPrimitive 1) T 2 r‖) ∧
+        ‖exponentialSumAt (referenceModelPrimitive 1) T 2 2 4 -
+          ∑' r : ℤ, modelPhaseFourierMode χ (referenceModelPrimitive 1) T 2 r‖ ≤ 2 := by
+  exact modelPhase_closed_interval_poisson (referenceModelPrimitive_approximate 1 0)
+    (by norm_num) (by norm_num) (by norm_num)
+
+-- The strictly interior singleton has exact equality, for every phase parameter.
+example :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ n : ℤ, χ ((n : ℝ)/2) = if n ∈ Finset.Icc (3 : ℤ) 3 then 1 else 0) ∧
+      ∀ T : ℝ, exponentialSumAt (referenceModelPrimitive 1) T 2 3 3 =
+        ∑' r : ℤ, modelPhaseFourierMode χ (referenceModelPrimitive 1) T 2 r := by
+  exact modelPhase_sharp_interval_poisson (referenceModelPrimitive_approximate 1 0)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (χ F : ℝ → ℝ) (T r : ℝ) :
+    modelPhaseFourierMode χ F T 2 r =
+      (2 : ℝ) • modelPhaseNormalizedMode χ F T (r*2) :=
+  modelPhaseFourierMode_eq_normalized χ F T r (by norm_num)
+
+end ModelPoissonSourceRegression
+
+section StationaryAmplitudeMorseRegression
+
+open Set Expdb Filter
+open scoped ContDiff FourierTransform Topology NNReal BigOperators
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseCurvatureLower σ ≤ modelPhaseCurvatureAt F v ∧
+      modelPhaseCurvatureAt F v ≤ σ+1 :=
+  @modelPhaseCurvatureAt_bounds σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    0 < modelPhaseCurvatureAt F v :=
+  @modelPhaseCurvatureAt_pos σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    0 < modelPhaseStationaryAmplitude F v :=
+  @modelPhaseStationaryAmplitude_pos σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    (Real.sqrt (σ+1))⁻¹ ≤ modelPhaseStationaryAmplitude F v ∧
+      modelPhaseStationaryAmplitude F v ≤ (Real.sqrt (modelPhaseCurvatureLower σ))⁻¹ :=
+  @modelPhaseStationaryAmplitude_bounds σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    ContDiffAt ℝ ∞ (modelPhaseCurvatureAt F) v :=
+  @modelPhaseCurvatureAt_contDiffAt σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    ContDiffAt ℝ ∞ (modelPhaseStationaryAmplitude F) v :=
+  @modelPhaseStationaryAmplitude_contDiffAt σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    HasDerivAt (modelPhaseCurvatureAt F)
+      (deriv (deriv (deriv F)) (modelPhaseInverseSlope F v) /
+        modelPhaseCurvatureAt F v) v :=
+  @modelPhaseCurvatureAt_hasDerivAt σ δ F hσ hδ hF v hv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {v : ℝ} (hv : v ∈ modelPhaseSlopeRange F) :
+    HasDerivAt (modelPhaseStationaryAmplitude F)
+      (-deriv (deriv (deriv F)) (modelPhaseInverseSlope F v) /
+        (2*(modelPhaseCurvatureAt F v)^2*Real.sqrt (modelPhaseCurvatureAt F v))) v :=
+  @modelPhaseStationaryAmplitude_hasDerivAt σ δ F hσ hδ hF v hv
+
+example
+    {σ δ T N r : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    (Real.sqrt (-deriv (deriv (modelPhaseFrequencyPhase F T N r))
+      (modelPhaseStationaryPoint F T N r)))⁻¹ =
+        (N/Real.sqrt T)*modelPhaseStationaryAmplitude F (r*N/T) :=
+  @modelPhaseStationaryPoint_amplitude_scale σ δ T N r P F hF hT hN hv
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    0 < modelPhaseThirdLower σ :=
+  @modelPhaseThirdLower_pos σ hσ
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    0 < modelPhaseAmplitudeTolerance σ :=
+  @modelPhaseAmplitudeTolerance_pos σ hσ
+
+example
+    {σ δ : ℝ} {F : ℝ → ℝ} (hσ : 0 < σ)
+    (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    {u : ℝ} (hu : u ∈ phaseInterval) :
+    modelPhaseThirdLower σ ≤ iteratedDerivWithin 3 F phaseInterval u ∧
+      iteratedDerivWithin 3 F phaseInterval u ≤ σ*(σ+1)+1 :=
+  @approximateModelPhase_thirdWithin_bounds σ δ F hσ hδ hF u hu
+
+example
+    {σ δ : ℝ} {F : ℝ → ℝ} (hσ : 0 < σ)
+    (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseThirdLower σ ≤ deriv (deriv (deriv F)) u ∧
+      deriv (deriv (deriv F)) u ≤ σ*(σ+1)+1 :=
+  @approximateModelPhase_thirdDeriv_bounds σ δ F hσ hδ hF u hu
+
+example
+    {σ δ : ℝ} {F : ℝ → ℝ} (hσ : 0 < σ)
+    (hδ : δ ≤ min (modelPhaseThirdLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ) :
+    StrictMonoOn (deriv (deriv F)) (Ioo (1 : ℝ) 2) :=
+  @approximateModelPhase_secondDeriv_strictMonoOn σ δ F hσ hδ hF
+
+example
+    {σ δ : ℝ} {F : ℝ → ℝ} (hσ : 0 < σ)
+    (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) :
+    AntitoneOn (modelPhaseInverseSlope F) (modelPhaseSlopeRange F) :=
+  @modelPhaseInverseSlope_antitoneOn σ δ F hσ hδ hF
+
+example
+    {σ δ : ℝ} {F : ℝ → ℝ} (hσ : 0 < σ)
+    (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ) :
+    AntitoneOn (modelPhaseStationaryAmplitude F) (modelPhaseSlopeRange F) :=
+  @modelPhaseStationaryAmplitude_antitoneOn σ δ F hσ hδ hF
+
+example
+    {σ δ T N r : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    modelPhasePhysicalAmplitude F T N r =
+      (N/Real.sqrt T)*modelPhaseStationaryAmplitude F (r*N/T) :=
+  @modelPhasePhysicalAmplitude_eq σ δ T N r P F hF hT hN hv
+
+example
+    {σ δ T N r : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    0 < modelPhasePhysicalAmplitude F T N r :=
+  @modelPhasePhysicalAmplitude_pos σ δ T N r F hσ hδ hF hT hN hv
+
+example
+    {σ δ T N r : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    modelPhasePhysicalAmplitude F T N r ≤
+      (N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹ :=
+  @modelPhasePhysicalAmplitude_le σ δ T N r F hσ hδ hF hT hN hv
+
+example
+    {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hN : 0 < N) :
+    AntitoneOn (modelPhasePhysicalAmplitude F T N)
+      {r : ℝ | r*N/T ∈ modelPhaseSlopeRange F} :=
+  @modelPhasePhysicalAmplitude_antitoneOn σ δ T N F hσ hδ hF hT hN
+
+example
+    {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hN : 0 < N) (a : ℝ) (L : ℕ)
+    (hv : ∀ i : ℕ, i ≤ L → (a+i)*N/T ∈ modelPhaseSlopeRange F) :
+    FiniteVariationBound (fun i => (modelPhasePhysicalAmplitude F T N (a+i) : ℂ)) L
+      ((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) :=
+  @finiteVariationBound_modelPhasePhysicalAmplitude σ δ T N F hσ hδ hF hT hN a L hv
+
+example
+    {w z : ℕ → ℂ} {L : ℕ} {M B : ℝ}
+    (hw : FiniteVariationBound w L M) (hB : 0 ≤ B)
+    (hz : ∀ j ≤ L+1, ‖∑ i ∈ Finset.range j, z i‖ ≤ B) :
+    ‖∑ i ∈ Finset.range (L+1), w i*z i‖ ≤ 2*M*B :=
+  @norm_sum_range_succ_mul_le_of_finiteVariation w z L M B hw hB hz
+
+example (F : ℝ → ℝ) (T N r : ℝ) :
+    ‖modelPhaseStationaryCharacter F T N r‖ = 1 :=
+  @norm_modelPhaseStationaryCharacter F T N r
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    exponentialSumAt F T N a (a+L) =
+      ∑ i ∈ Finset.range (L+1), (𝐞 (T*F (((a : ℝ)+i)/N)) : ℂ) :=
+  @exponentialSumAt_eq_range F T N a L
+
+example (F : ℝ → ℝ) (T N : ℝ)
+    (a L j : ℕ) (hj : j ≤ L) :
+    ‖exponentialSumAt F T N a (a+j)‖ ≤ exponentialSumAtPrefixMax F T N a L :=
+  @norm_exponentialSumAt_le_prefixMax F T N a L j hj
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    0 ≤ exponentialSumAtPrefixMax F T N a L :=
+  @exponentialSumAtPrefixMax_nonneg F T N a L
+
+example {F : ℝ → ℝ} {T N B : ℝ} {a L : ℕ}
+    (h : ∀ j ≤ L, ‖exponentialSumAt F T N a (a+j)‖ ≤ B) :
+    exponentialSumAtPrefixMax F T N a L ≤ B :=
+  @exponentialSumAtPrefixMax_le F T N B a L h
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N r : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (hv : 0 < r*N/T) (hχ : χ (r*N/T) = 1) :
+    modelPhaseStationaryCharacter F T N r =
+      (𝐞 (modelPhaseDualOffset F σ A w T-1/8) : ℂ) *
+        starRingEnd ℂ (𝐞 (modelPhaseDualParameter σ A T *
+          canonicalLegendrePhase χ F σ A w (r/modelPhaseDualScale A T N))) :=
+  @modelPhaseStationaryCharacter_canonical χ F σ A w T N r hA hw hT hN hv hχ
+
+example
+    {χ F : ℝ → ℝ} {σ A w T N : ℝ}
+    (hA : 0 < A) (hw : 0 < w) (hT : T ≠ 0) (hN : N ≠ 0)
+    (a L : ℕ)
+    (hv : ∀ i : ℕ, i ≤ L → 0 < ((a : ℝ)+i)*N/T)
+    (hχ : ∀ i : ℕ, i ≤ L → χ (((a : ℝ)+i)*N/T) = 1) :
+    ‖∑ i ∈ Finset.range (L+1), modelPhaseStationaryCharacter F T N ((a : ℝ)+i)‖ =
+      ‖exponentialSumAt (canonicalLegendrePhase χ F σ A w)
+        (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a (a+L)‖ :=
+  @norm_modelPhaseStationaryCharacter_range χ F σ A w T N hA hw hT hN a L hv hχ
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    modelPhaseStationaryBlock F T N a L =
+      ∑ i ∈ Finset.range (L+1), modelPhaseStationaryMainTerm F T N ((a : ℝ)+i) :=
+  @modelPhaseStationaryBlock_eq_range F T N a L
+
+example
+    {χ F : ℝ → ℝ} {σ δ A w T N : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hA : 0 < A) (hw : 0 < w) (hT : 0 < T) (hN : 0 < N)
+    (a L : ℕ)
+    (hslope : ∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ modelPhaseSlopeRange F)
+    (hv : ∀ i : ℕ, i ≤ L → 0 < ((a : ℝ)+i)*N/T)
+    (hχ : ∀ i : ℕ, i ≤ L → χ (((a : ℝ)+i)*N/T) = 1) :
+    ‖modelPhaseStationaryBlock F T N a L‖ ≤
+      2*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+        exponentialSumAtPrefixMax (canonicalLegendrePhase χ F σ A w)
+          (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a L :=
+  @norm_modelPhaseStationaryBlock_le_prefixMax χ F σ δ A w T N hσ hδ hF hA hw hT hN a L hslope hv hχ
+
+example
+    {α : ℝ≥0} {β σ l r : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    (hl : (2 : ℝ)^(-σ) < l) (hlr : l ≤ r) (hr : r < 1) (hratio : r < 2*l) :
+    ∃ A : ℝ, 0 < A ∧ A < l ∧ r < 2*A ∧
+      ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ HasCompactSupport χ ∧
+        (∀ v ∈ Icc l r, χ v = 1) ∧
+        ∀ ε : ℝ, 0 < ε →
+        ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+          ∀ (T N : ℝ) (F : ℝ → ℝ) (a L : ℕ),
+            0 < T → 0 < N →
+            IsApproximateModelPhaseFunction F σ P δ →
+            C ≤ modelPhaseDualParameter σ A T →
+            (modelPhaseDualParameter σ A T)^((α : ℝ)-δ) ≤ modelPhaseDualScale A T N →
+            modelPhaseDualScale A T N ≤ (modelPhaseDualParameter σ A T)^((α : ℝ)+δ) →
+            (∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ Icc l r) →
+            ‖modelPhaseStationaryBlock F T N a L‖ ≤
+              2*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+                C*(modelPhaseDualParameter σ A T)^(β+ε) :=
+  @stationaryMain_bound_of_exponentSumBound α β σ l r hβ hσ hl hlr hr hratio
+
+example (F : ℝ → ℝ) (v : ℝ) :
+    modelPhaseStationaryDeficit F v (modelPhaseInverseSlope F v) = 0 :=
+  @modelPhaseStationaryDeficit_at_inverse F v
+
+example
+    {σ δ v u : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseCurvatureLower σ*(u-modelPhaseInverseSlope F v)^2/2 ≤
+        modelPhaseStationaryDeficit F v u ∧
+      modelPhaseStationaryDeficit F v u ≤
+        (σ+1)*(u-modelPhaseInverseSlope F v)^2/2 :=
+  @modelPhaseStationaryDeficit_bounds σ δ v u F hσ hδ hF hv hu
+
+example
+    {σ δ v u : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    0 ≤ modelPhaseStationaryDeficit F v u :=
+  @modelPhaseStationaryDeficit_nonneg σ δ v u F hσ hδ hF hv hu
+
+example
+    {σ δ v u : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    (modelPhaseMorseCoordinate F v u)^2 = 2*modelPhaseStationaryDeficit F v u :=
+  @modelPhaseMorseCoordinate_sq σ δ v u F hσ hδ hF hv hu
+
+example
+    (F : ℝ → ℝ) (v u : ℝ) :
+    |modelPhaseMorseCoordinate F v u| = Real.sqrt (2*modelPhaseStationaryDeficit F v u) :=
+  @modelPhaseMorseCoordinate_abs F v u
+
+example
+    {σ δ v u : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    Real.sqrt (modelPhaseCurvatureLower σ)*|u-modelPhaseInverseSlope F v| ≤
+        |modelPhaseMorseCoordinate F v u| ∧
+      |modelPhaseMorseCoordinate F v u| ≤
+        Real.sqrt (σ+1)*|u-modelPhaseInverseSlope F v| :=
+  @modelPhaseMorseCoordinate_bounds σ δ v u F hσ hδ hF hv hu
+
+example
+    {σ δ v u : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    F u-v*u = -modelPhaseLegendreDual F v-(modelPhaseMorseCoordinate F v u)^2/2 :=
+  @modelPhaseMorseCoordinate_normalForm σ δ v u F hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {T N : ℝ} (hT : T ≠ 0) (hN : N ≠ 0) (r x : ℝ) :
+    modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r) -
+        modelPhaseFrequencyPhase F T N r x =
+      T*modelPhaseStationaryDeficit F (r*N/T) (x/N) :=
+  @modelPhaseFrequencyPhase_deficit F T N hT hN r x
+
+example
+    {σ δ T N r x : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : T ≠ 0) (hN : N ≠ 0)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) (hx : x/N ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseFrequencyPhase F T N r x =
+      modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r) -
+        (T/2)*(modelPhaseMorseCoordinate F (r*N/T) (x/N))^2 :=
+  @modelPhaseFrequencyPhase_quadratic_normalForm σ δ T N r x F hσ hδ hF hT hN hv hx
+
+example (F : ℝ → ℝ) (v : ℝ) :
+    modelPhaseMorseCoordinate F v (modelPhaseInverseSlope F v) = 0 :=
+  @modelPhaseMorseCoordinate_at_inverse F v
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    Tendsto (fun u : ℝ => 2*modelPhaseStationaryDeficit F v u /
+      (u-modelPhaseInverseSlope F v)^2)
+      (𝓝[≠] modelPhaseInverseSlope F v) (𝓝 (modelPhaseCurvatureAt F v)) :=
+  @modelPhaseStationaryDeficit_ratio_tendsto F σ δ v P hF hv
+
+example (F : ℝ → ℝ) (v u : ℝ) :
+    slope (modelPhaseMorseCoordinate F v) (modelPhaseInverseSlope F v) u =
+      Real.sqrt (2*modelPhaseStationaryDeficit F v u /
+        (u-modelPhaseInverseSlope F v)^2) :=
+  @modelPhaseMorseCoordinate_slope F v u
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    HasDerivAt (modelPhaseMorseCoordinate F v) (Real.sqrt (modelPhaseCurvatureAt F v))
+      (modelPhaseInverseSlope F v) :=
+  @modelPhaseMorseCoordinate_hasDerivAt_inverse F σ δ v P hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    (deriv (modelPhaseMorseCoordinate F v) (modelPhaseInverseSlope F v))⁻¹ =
+      modelPhaseStationaryAmplitude F v :=
+  @modelPhaseMorseCoordinate_reciprocal_derivative_amplitude F σ δ v P hF hv
+
+-- One tolerance simultaneously controls curvature and the third-derivative sign.
+example : modelPhaseAmplitudeTolerance 1 = (1 : ℝ)/8 := by
+  norm_num [modelPhaseAmplitudeTolerance,modelPhaseCurvatureLower,modelPhaseThirdLower,
+    Real.rpow_neg]
+
+example : 0 < modelPhaseStationaryAmplitude (referenceModelPrimitive 1) ((2 : ℝ)/3) := by
+  exact modelPhaseStationaryAmplitude_pos (by norm_num)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (referenceModelPrimitive_slopeRange (by norm_num)
+      (by norm_num [Real.rpow_neg_one]))
+
+-- This variation bound needs only the singleton's frequency, not a point beyond it.
+example :
+    FiniteVariationBound
+      (fun i => (modelPhasePhysicalAmplitude (referenceModelPrimitive 1) 1 1
+        ((2 : ℝ)/3+i) : ℂ)) 0
+      ((1/Real.sqrt 1)*(Real.sqrt (modelPhaseCurvatureLower 1))⁻¹) := by
+  apply finiteVariationBound_modelPhasePhysicalAmplitude (by norm_num)
+    (modelPhaseAmplitudeTolerance_pos (by norm_num)).le
+    (referenceModelPrimitive_approximate 1 2) (by norm_num) (by norm_num)
+  intro i hi
+  have he : i = 0 := by omega
+  subst i
+  simpa only [Nat.cast_zero,add_zero,mul_one,div_one] using
+    referenceModelPrimitive_slopeRange (by norm_num : (0 : ℝ) < 1)
+      (by norm_num [Real.rpow_neg_one] :
+        (2 : ℝ)/3 ∈ Ioo ((2 : ℝ)^(-(1 : ℝ))) 1)
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    exponentialSumAtPrefixMax F T N a 0 = 1 := by
+  simp [exponentialSumAtPrefixMax]
+
+-- The stationary main term retains its real curvature weight.
+example (F : ℝ → ℝ) (T N r : ℝ) :
+    ‖modelPhaseStationaryMainTerm F T N r‖ = |modelPhasePhysicalAmplitude F T N r| := by
+  rw [modelPhaseStationaryMainTerm,norm_mul,norm_modelPhaseStationaryCharacter,mul_one,
+    Complex.norm_real,Real.norm_eq_abs]
+
+example (F : ℝ → ℝ) (v : ℝ) :
+    modelPhaseMorseCoordinate F v (modelPhaseInverseSlope F v) = 0 :=
+  modelPhaseMorseCoordinate_at_inverse F v
+
+-- The coordinate uses the negative square root to the left of the critical point.
+example (F : ℝ → ℝ) (v u : ℝ) (hu : u < modelPhaseInverseSlope F v) :
+    modelPhaseMorseCoordinate F v u ≤ 0 := by
+  rw [modelPhaseMorseCoordinate,if_pos hu]
+  exact neg_nonpos.mpr (Real.sqrt_nonneg _)
+
+-- A genuine logarithmic source model supplies the derivative, without a Taylor premise.
+example :
+    HasDerivAt (modelPhaseMorseCoordinate (referenceModelPrimitive 1) ((2 : ℝ)/3))
+      (Real.sqrt (modelPhaseCurvatureAt (referenceModelPrimitive 1) ((2 : ℝ)/3)))
+      (modelPhaseInverseSlope (referenceModelPrimitive 1) ((2 : ℝ)/3)) := by
+  exact modelPhaseMorseCoordinate_hasDerivAt_inverse (referenceModelPrimitive_approximate 1 0)
+    (referenceModelPrimitive_slopeRange (by norm_num)
+      (by norm_num [Real.rpow_neg_one]))
+
+end StationaryAmplitudeMorseRegression
+
+section SmoothQuadraticInverseRegression
+
+open Set Expdb Filter MeasureTheory
+open scoped ContDiff Topology FourierTransform BigOperators NNReal
+
+example {b c a x t : ℝ}
+    (ha : a ∈ Icc b c) (hx : x ∈ Icc b c) (ht : t ∈ Icc (0 : ℝ) 1) :
+    a+t*(x-a) ∈ Icc b c :=
+  @affineSegment_mem_Icc b c a x t ha hx ht
+
+example {b c a x t : ℝ}
+    (ha : a ∈ Ioo b c) (hx : x ∈ Ioo b c) (ht : t ∈ Icc (0 : ℝ) 1) :
+    a+t*(x-a) ∈ Ioo b c :=
+  @affineSegment_mem_Ioo b c a x t ha hx ht
+
+example
+    {f : ℝ → ℝ} {l r a x : ℝ}
+    (hf : ∀ u ∈ Ioo l r, ContDiffAt ℝ ∞ f u)
+    (ha : a ∈ Ioo l r) (hx : x ∈ Ioo l r) (k : ℕ) :
+    IntegrableOn (fun t : ℝ => (1-t)*t^k*iteratedDeriv k f (a+t*(x-a)))
+      (Icc (0 : ℝ) 1) :=
+  @segmentTaylorAverage_integrable f l r a x hf ha hx k
+
+example
+    {f : ℝ → ℝ} {l r a x : ℝ}
+    (hf : ∀ u ∈ Ioo l r, ContDiffAt ℝ ∞ f u)
+    (ha : a ∈ Ioo l r) (hx : x ∈ Ioo l r) (k : ℕ) :
+    HasDerivAt (segmentTaylorAverage f a k)
+      (segmentTaylorAverage f a (k+1) x) x :=
+  @segmentTaylorAverage_hasDerivAt f l r a x hf ha hx k
+
+example
+    {f : ℝ → ℝ} {l r a : ℝ}
+    (hf : ∀ u ∈ Ioo l r, ContDiffAt ℝ ∞ f u)
+    (ha : a ∈ Ioo l r) (k : ℕ) :
+    ContDiffOn ℝ ∞ (segmentTaylorAverage f a k) (Ioo l r) :=
+  @segmentTaylorAverage_contDiffOn f l r a hf ha k
+
+example (f : ℝ → ℝ) (a x : ℝ) :
+    segmentTaylorAverage f a 0 x =
+      ∫ t in (0 : ℝ)..1, (1-t)*f (a+t*(x-a)) :=
+  @segmentTaylorAverage_zero_eq_intervalIntegral f a x
+
+example (f : ℝ → ℝ) (a : ℝ) :
+    segmentTaylorAverage f a 0 a = f a/2 :=
+  @segmentTaylorAverage_at_center f a
+
+example
+    {F : ℝ → ℝ} {l r a x : ℝ}
+    (hF : ∀ u ∈ Ioo l r, ContDiffAt ℝ ∞ F u)
+    (ha : a ∈ Ioo l r) (hx : x ∈ Ioo l r) :
+    (x-a)^2*segmentTaylorAverage (deriv (deriv F)) a 0 x =
+      F x-F a-(x-a)*deriv F a :=
+  @segmentTaylorAverage_second F l r a x hF ha hx
+
+example (F : ℝ → ℝ) (v : ℝ) :
+    modelPhaseAveragedCurvature F v (modelPhaseInverseSlope F v) =
+      modelPhaseCurvatureAt F v :=
+  @modelPhaseAveragedCurvature_at_inverse F v
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    ContDiffAt ℝ ∞ (modelPhaseAveragedCurvature F v) u :=
+  @modelPhaseAveragedCurvature_contDiffAt F σ δ v u P hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseStationaryDeficit F v u =
+      (u-modelPhaseInverseSlope F v)^2/2*modelPhaseAveragedCurvature F v u :=
+  @modelPhaseStationaryDeficit_eq_averagedCurvature F σ δ v u P hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseCurvatureLower σ ≤ modelPhaseAveragedCurvature F v u ∧
+      modelPhaseAveragedCurvature F v u ≤ σ+1 :=
+  @modelPhaseAveragedCurvature_bounds F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    0 < modelPhaseAveragedCurvature F v u :=
+  @modelPhaseAveragedCurvature_pos F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseMorseCoordinate F v u =
+      (u-modelPhaseInverseSlope F v)*Real.sqrt (modelPhaseAveragedCurvature F v u) :=
+  @modelPhaseMorseCoordinate_eq_smooth F σ δ v u P hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    ContDiffAt ℝ ∞ (modelPhaseMorseCoordinate F v) u :=
+  @modelPhaseMorseCoordinate_contDiffAt F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    ContDiffOn ℝ ∞ (modelPhaseMorseCoordinate F v) (Ioo (1 : ℝ) 2) :=
+  @modelPhaseMorseCoordinate_contDiffOn F σ δ v hσ hδ hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ u : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (v : ℝ) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    HasDerivAt (modelPhaseStationaryDeficit F v) (v-deriv F u) u :=
+  @modelPhaseStationaryDeficit_hasDerivAt F σ δ u P hF v hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseMorseCoordinate F v u * deriv (modelPhaseMorseCoordinate F v) u =
+      v-deriv F u :=
+  @modelPhaseMorseCoordinate_deriv_mul F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    0 < deriv (modelPhaseMorseCoordinate F v) u :=
+  @modelPhaseMorseCoordinate_deriv_pos F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    StrictMonoOn (modelPhaseMorseCoordinate F v) (Ioo (1 : ℝ) 2) :=
+  @modelPhaseMorseCoordinate_strictMonoOn F σ δ v hσ hδ hF hv
+
+example {F : ℝ → ℝ} {v z : ℝ}
+    (hz : z ∈ modelPhaseMorseRange F v) :
+    modelPhaseMorseInverse F v z ∈ Ioo (1 : ℝ) 2 :=
+  @modelPhaseMorseInverse_mem F v z hz
+
+example {F : ℝ → ℝ} {v z : ℝ}
+    (hz : z ∈ modelPhaseMorseRange F v) :
+    modelPhaseMorseCoordinate F v (modelPhaseMorseInverse F v z) = z :=
+  @modelPhaseMorseCoordinate_inverse F v z hz
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseMorseInverse F v (modelPhaseMorseCoordinate F v u) = u :=
+  @modelPhaseMorseInverse_coordinate F σ δ v u hσ hδ hF hv hu
+
+example {F : ℝ → ℝ} {v : ℝ}
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    0 ∈ modelPhaseMorseRange F v :=
+  @zero_mem_modelPhaseMorseRange F v hv
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseMorseInverse F v 0 = modelPhaseInverseSlope F v :=
+  @modelPhaseMorseInverse_zero F σ δ v hσ hδ hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    HasStrictDerivAt (modelPhaseMorseInverse F v)
+      (deriv (modelPhaseMorseCoordinate F v) (modelPhaseMorseInverse F v z))⁻¹ z :=
+  @modelPhaseMorseInverse_hasStrictDerivAt F σ δ v z hσ hδ hF hv hz
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    IsOpen (modelPhaseMorseRange F v) :=
+  @modelPhaseMorseRange_isOpen F σ δ v hσ hδ hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    ContDiffAt ℝ ∞ (modelPhaseMorseInverse F v) z :=
+  @modelPhaseMorseInverse_contDiffAt F σ δ v z hσ hδ hF hv hz
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    HasDerivAt (modelPhaseMorseInverse F v) (modelPhaseStationaryAmplitude F v) 0 :=
+  @modelPhaseMorseInverse_hasDerivAt_zero F σ δ v hσ hδ hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    F (modelPhaseMorseInverse F v z)-v*modelPhaseMorseInverse F v z =
+      -modelPhaseLegendreDual F v-z^2/2 :=
+  @modelPhaseMorseInverse_quadratic F σ δ v z hσ hδ hF hv hz
+
+example
+    {F : ℝ → ℝ} {σ δ T N r z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : T ≠ 0) (hN : N ≠ 0)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F)
+    (hz : z ∈ modelPhaseMorseRange F (r*N/T)) :
+    modelPhaseFrequencyPhase F T N r (N*modelPhaseMorseInverse F (r*N/T) z) =
+      modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r) -(T/2)*z^2 :=
+  @modelPhaseFrequencyPhase_morseInverse F σ δ T N r z hσ hδ hF hT hN hv hz
+
+example
+    {F : ℝ → ℝ} {σ δ u w : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hu : u ∈ Ioo (1 : ℝ) 2) (hw : w ∈ Ioo (1 : ℝ) 2) :
+    |deriv F u-deriv F w| ≤ (σ+1)*|u-w| :=
+  @approximateModelPhase_slope_gap_upper_abs F σ δ u w hσ hδ hF hu hw
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseCurvatureLower σ/Real.sqrt (σ+1) ≤ deriv (modelPhaseMorseCoordinate F v) u ∧
+      deriv (modelPhaseMorseCoordinate F v) u ≤ (σ+1)/Real.sqrt (modelPhaseCurvatureLower σ) :=
+  @modelPhaseMorseCoordinate_deriv_bounds F σ δ v u hσ hδ hF hv hu
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    Real.sqrt (modelPhaseCurvatureLower σ)/(σ+1) ≤ deriv (modelPhaseMorseInverse F v) z ∧
+      deriv (modelPhaseMorseInverse F v) z ≤ Real.sqrt (σ+1)/modelPhaseCurvatureLower σ :=
+  @modelPhaseMorseInverse_deriv_bounds F σ δ v z hσ hδ hF hv hz
+
+example (F : ℝ → ℝ) (v : ℝ) :
+    InjOn (modelPhaseMorseInverse F v) (modelPhaseMorseRange F v) :=
+  @modelPhaseMorseInverse_injOn F v
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseMorseInverse F v '' modelPhaseMorseRange F v = Ioo (1 : ℝ) 2 :=
+  @modelPhaseMorseInverse_image F σ δ v hσ hδ hF hv
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    0 < deriv (modelPhaseMorseInverse F v) z :=
+  @modelPhaseMorseInverse_deriv_pos F σ δ v z hσ hδ hF hv hz
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (g : ℝ → ℂ) :
+    (∫ u in Ioo (1 : ℝ) 2, g u) =
+      ∫ z in modelPhaseMorseRange F v,
+        ((deriv (modelPhaseMorseInverse F v) z : ℝ) : ℂ)*g (modelPhaseMorseInverse F v z) :=
+  @integral_Ioo_eq_morseIntegral F σ δ v hσ hδ hF hv g
+
+example
+    {F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (g : ℝ → ℂ) :
+    IntegrableOn g (Ioo (1 : ℝ) 2) ↔
+      IntegrableOn (fun z => ((deriv (modelPhaseMorseInverse F v) z : ℝ) : ℂ)*
+        g (modelPhaseMorseInverse F v z)) (modelPhaseMorseRange F v) :=
+  @integrableOn_Ioo_iff_morseIntegral F σ δ v hσ hδ hF hv g
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) :
+    ContDiffAt ℝ ∞ (modelPhaseMorseAmplitude χ F v) z :=
+  @modelPhaseMorseAmplitude_contDiffAt χ F σ δ v z hχ hσ hδ hF hv hz
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseMorseAmplitude χ F v 0 =
+      χ (modelPhaseInverseSlope F v)*modelPhaseStationaryAmplitude F v :=
+  @modelPhaseMorseAmplitude_zero χ F σ δ v hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z M : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (hM : 0 ≤ M) (hχ : ∀ u ∈ Ioo (1 : ℝ) 2, |χ u| ≤ M) :
+    |modelPhaseMorseAmplitude χ F v z| ≤ M*(Real.sqrt (σ+1)/modelPhaseCurvatureLower σ) :=
+  @abs_modelPhaseMorseAmplitude_le χ F σ δ v z M hσ hδ hF hv hz hM hχ
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (hχ : ∀ u ∈ Ioo (1 : ℝ) 2, 0 ≤ χ u) :
+    0 ≤ modelPhaseMorseAmplitude χ F v z :=
+  @modelPhaseMorseAmplitude_nonneg χ F σ δ v z hσ hδ hF hv hz hχ
+
+example
+    {χ F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ}
+    (hχ : Continuous χ) (hF : IsApproximateModelPhaseFunction F σ P δ) (T q : ℝ) :
+    IntegrableOn (fun u : ℝ => (χ u : ℂ)*(𝐞 (T*F u-q*u) : ℂ)) (Icc (1 : ℝ) 2) :=
+  @modelPhaseNormalizedIntegrand_integrableOn χ F σ δ P hχ hF T q
+
+example
+    {χ F : ℝ → ℝ} (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2) (T q : ℝ) :
+    Function.support (fun u : ℝ => (χ u : ℂ)*(𝐞 (T*F u-q*u) : ℂ)) ⊆ Ioo (1 : ℝ) 2 :=
+  @modelPhaseNormalizedIntegrand_support χ F hs T q
+
+example
+    {χ F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ}
+    (hχ : Continuous χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (T q : ℝ) :
+    Integrable (fun u : ℝ => (χ u : ℂ)*(𝐞 (T*F u-q*u) : ℂ)) :=
+  @modelPhaseNormalizedIntegrand_integrable χ F σ δ P hχ hs hF T q
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (T : ℝ) :
+    ((deriv (modelPhaseMorseInverse F v) z : ℝ) : ℂ)*
+        ((χ (modelPhaseMorseInverse F v z) : ℂ)*
+          (𝐞 (T*F (modelPhaseMorseInverse F v z)-(T*v)*modelPhaseMorseInverse F v z) : ℂ)) =
+      (𝐞 (-T*modelPhaseLegendreDual F v) : ℂ)*
+        ((modelPhaseMorseAmplitude χ F v z : ℂ)*(𝐞 (-(T/2)*z^2) : ℂ)) :=
+  @modelPhaseMorse_integrand χ F σ δ v z hσ hδ hF hv hz T
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hχ : Continuous χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (T : ℝ) :
+    IntegrableOn (fun z => (modelPhaseMorseAmplitude χ F v z : ℂ)*
+      (𝐞 (-(T/2)*z^2) : ℂ)) (modelPhaseMorseRange F v) :=
+  @modelPhaseMorseWeightedIntegrand_integrableOn χ F σ δ v hχ hσ hδ hF hv T
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (T : ℝ) :
+    modelPhaseNormalizedMode χ F T (T*v) =
+      (𝐞 (-T*modelPhaseLegendreDual F v) : ℂ)*modelPhaseMorseWeightedIntegral χ F T v :=
+  @modelPhaseNormalizedMode_morse χ F σ δ v hs hσ hδ hF hv T
+
+example
+    {χ F : ℝ → ℝ} {σ δ T N r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : T ≠ 0) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    modelPhaseFourierMode χ F T N r =
+      (N : ℂ)*(𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)*
+        modelPhaseMorseWeightedIntegral χ F T (r*N/T) :=
+  @modelPhaseFourierMode_morse χ F σ δ T N r hs hσ hδ hF hT hN hv
+
+example
+    {F : ℝ → ℝ} {σ δ N : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hN : 0 < N)
+    {a b : ℕ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ u : ℝ, 0 ≤ χ u ∧ χ u ≤ 1) ∧
+      (∀ n : ℤ, χ ((n : ℝ)/N) =
+        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0) ∧
+      ∀ T : ℝ, 0 < T →
+        Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T N r‖) ∧
+        ‖exponentialSumAt F T N a b -
+          ∑' r : ℤ, modelPhaseFourierMode χ F T N r‖ ≤ 2 ∧
+        ∀ r : ℤ, (r : ℝ)*N/T ∈ modelPhaseSlopeRange F →
+          modelPhaseFourierMode χ F T N r =
+            (N : ℂ)*(𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)*
+              modelPhaseMorseWeightedIntegral χ F T ((r : ℝ)*N/T) ∧
+          IntegrableOn (fun z => (modelPhaseMorseAmplitude χ F ((r : ℝ)*N/T) z : ℂ)*
+            (𝐞 (-(T/2)*z^2) : ℂ)) (modelPhaseMorseRange F ((r : ℝ)*N/T)) ∧
+          ∀ z ∈ modelPhaseMorseRange F ((r : ℝ)*N/T),
+            0 ≤ modelPhaseMorseAmplitude χ F ((r : ℝ)*N/T) z ∧
+            modelPhaseMorseAmplitude χ F ((r : ℝ)*N/T) z ≤
+              Real.sqrt (σ+1)/modelPhaseCurvatureLower σ :=
+  @modelPhase_closed_interval_poisson_morse F σ δ N hσ hδ hF hN a b ha hb
+
+-- The original logarithmic model is smooth through its actual critical point.
+example :
+    ContDiffAt ℝ ∞ (modelPhaseMorseCoordinate (referenceModelPrimitive 1) ((2 : ℝ)/3))
+      (modelPhaseInverseSlope (referenceModelPrimitive 1) ((2 : ℝ)/3)) := by
+  have hv := referenceModelPrimitive_slopeRange (by norm_num : (0 : ℝ) < 1)
+    (by norm_num [Real.rpow_neg_one] : (2 : ℝ)/3 ∈ Ioo ((2 : ℝ)^(-(1 : ℝ))) 1)
+  exact modelPhaseMorseCoordinate_contDiffAt (by norm_num)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1) hv (modelPhaseInverseSlope_mem hv)
+
+example :
+    modelPhaseMorseInverse (referenceModelPrimitive 1) ((2 : ℝ)/3) 0 =
+      modelPhaseInverseSlope (referenceModelPrimitive 1) ((2 : ℝ)/3) := by
+  exact modelPhaseMorseInverse_zero (by norm_num)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (referenceModelPrimitive_slopeRange (by norm_num) (by norm_num [Real.rpow_neg_one]))
+
+example {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseMorseInverse (referenceModelPrimitive 1) ((2 : ℝ)/3)
+      (modelPhaseMorseCoordinate (referenceModelPrimitive 1) ((2 : ℝ)/3) u) = u := by
+  exact modelPhaseMorseInverse_coordinate (by norm_num)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (referenceModelPrimitive_slopeRange (by norm_num) (by norm_num [Real.rpow_neg_one])) hu
+
+example :
+    HasDerivAt (modelPhaseMorseInverse (referenceModelPrimitive 1) ((2 : ℝ)/3))
+      (modelPhaseStationaryAmplitude (referenceModelPrimitive 1) ((2 : ℝ)/3)) 0 := by
+  exact modelPhaseMorseInverse_hasDerivAt_zero (by norm_num)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (referenceModelPrimitive_slopeRange (by norm_num) (by norm_num [Real.rpow_neg_one]))
+
+-- A cutoff vanishing at the critical point must give zero main amplitude.
+example {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hχ : χ (modelPhaseInverseSlope F v) = 0) :
+    modelPhaseMorseAmplitude χ F v 0 = 0 := by
+  rw [modelPhaseMorseAmplitude_zero hσ hδ hF hv,hχ,zero_mul]
+
+-- The normalized exact identity permits T=0; it is not an asymptotic assertion.
+example {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseNormalizedMode χ F 0 0 = modelPhaseMorseWeightedIntegral χ F 0 v := by
+  simpa using modelPhaseNormalizedMode_morse hs hσ hδ hF hv 0
+
+example (χ F : ℝ → ℝ) (v : ℝ) :
+    modelPhaseMorseWeightedIntegral χ F 0 v =
+      ∫ z in modelPhaseMorseRange F v, (modelPhaseMorseAmplitude χ F v z : ℂ) := by
+  simp [modelPhaseMorseWeightedIntegral]
+
+-- An original closed endpoint singleton still enters the same source consumer.
+example :
+    ∃ χ : ℝ → ℝ, ∀ T : ℝ, 0 < T →
+      ‖exponentialSumAt (referenceModelPrimitive 1) T 1 1 1 -
+        ∑' r : ℤ, modelPhaseFourierMode χ (referenceModelPrimitive 1) T 1 r‖ ≤ 2 := by
+  obtain ⟨χ,_,_,_,_,_,h⟩ := modelPhase_closed_interval_poisson_morse
+    (by norm_num : (0 : ℝ) < 1)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1) (by norm_num : (0 : ℝ) < 1)
+    (a := 1) (b := 1) (by norm_num) (by norm_num)
+  exact ⟨χ,fun T hT => (h T hT).2.1⟩
+
+example {z : ℝ}
+    (hz : z ∈ modelPhaseMorseRange (referenceModelPrimitive 1) ((2 : ℝ)/3)) :
+    Real.sqrt (modelPhaseCurvatureLower 1)/2 ≤
+        deriv (modelPhaseMorseInverse (referenceModelPrimitive 1) ((2 : ℝ)/3)) z ∧
+      deriv (modelPhaseMorseInverse (referenceModelPrimitive 1) ((2 : ℝ)/3)) z ≤
+        Real.sqrt 2/modelPhaseCurvatureLower 1 := by
+  simpa only [show (1 : ℝ)+1 = 2 by norm_num] using
+    modelPhaseMorseInverse_deriv_bounds (by norm_num : (0 : ℝ) < 1)
+    (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (referenceModelPrimitive_slopeRange (by norm_num) (by norm_num [Real.rpow_neg_one])) hz
+
+-- The cutoff-weighted physical main term has the exact source remainder normalization.
+example
+    {χ F : ℝ → ℝ} {σ δ T N r : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    (N : ℂ)*(𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)*
+        ((modelPhaseMorseAmplitude χ F (r*N/T) 0/Real.sqrt T : ℂ)*
+          (𝐞 (-(1 : ℝ)/8) : ℂ)) =
+      (χ (modelPhaseInverseSlope F (r*N/T)) : ℂ)*modelPhaseStationaryMainTerm F T N r :=
+  @modelPhaseMorseLeadingTerm_scale χ F σ δ T N r hσ hδ hF hT hN hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ T N r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    modelPhaseFourierMode χ F T N r -
+        (χ (modelPhaseInverseSlope F (r*N/T)) : ℂ)*modelPhaseStationaryMainTerm F T N r =
+      (N : ℂ)*(𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)*
+        modelPhaseMorseRemainder χ F T (r*N/T) :=
+  @modelPhaseFourierMode_sub_main_eq_morseRemainder χ F σ δ T N r hs hσ hδ hF hT hN hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ T N r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    ‖modelPhaseFourierMode χ F T N r -
+        (χ (modelPhaseInverseSlope F (r*N/T)) : ℂ)*modelPhaseStationaryMainTerm F T N r‖ =
+      N*‖modelPhaseMorseRemainder χ F T (r*N/T)‖ :=
+  @norm_modelPhaseFourierMode_sub_main χ F σ δ T N r hs hσ hδ hF hT hN hv
+
+end SmoothQuadraticInverseRegression
+
+section UniformQuadraticRemainderRegression
+
+open Set Expdb Filter MeasureTheory
+open scoped ContDiff Topology FourierTransform BigOperators
+
+example {χ F : ℝ → ℝ} {v z : ℝ}
+    (hz : z ∈ modelPhaseMorseRange F v) :
+    modelPhaseMorseWeight χ F v z = modelPhaseMorseAmplitude χ F v z :=
+  @modelPhaseMorseWeight_eq χ F v z hz
+
+example {χ F : ℝ → ℝ} {v z : ℝ}
+    (hz : z ∉ modelPhaseMorseRange F v) :
+    modelPhaseMorseWeight χ F v z = 0 :=
+  @modelPhaseMorseWeight_zero_of_not_mem χ F v z hz
+
+example {χ F : ℝ → ℝ} {v : ℝ} :
+    Function.support (modelPhaseMorseWeight χ F v) ⊆
+      modelPhaseMorseCoordinate F v '' tsupport χ :=
+  @modelPhaseMorseWeight_support_subset χ F v
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    IsCompact (modelPhaseMorseCoordinate F v '' tsupport χ) :=
+  @isCompact_modelPhaseMorseCoordinate_image_tsupport χ F σ δ v hs hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    tsupport (modelPhaseMorseWeight χ F v) ⊆
+      modelPhaseMorseCoordinate F v '' tsupport χ :=
+  @modelPhaseMorseWeight_tsupport_subset χ F σ δ v hs hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    tsupport (modelPhaseMorseWeight χ F v) ⊆ modelPhaseMorseRange F v :=
+  @modelPhaseMorseWeight_tsupport_subset_range χ F σ δ v hs hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    ContDiff ℝ ∞ (modelPhaseMorseWeight χ F v) :=
+  @modelPhaseMorseWeight_contDiff χ F σ δ v hχ hs hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    HasCompactSupport (modelPhaseMorseWeight χ F v) :=
+  @modelPhaseMorseWeight_hasCompactSupport χ F σ δ v hs hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseMorseWeight χ F v 0 =
+      χ (modelPhaseInverseSlope F v)*modelPhaseStationaryAmplitude F v :=
+  @modelPhaseMorseWeight_zero χ F σ δ v hσ hδ hF hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    tsupport (modelPhaseMorseWeight χ F v) ⊆
+      Icc (-Real.sqrt (σ+1)) (Real.sqrt (σ+1)) :=
+  @modelPhaseMorseWeight_tsupport_uniform χ F σ δ v hs hσ hδ hF hv
+
+example
+    {f : ℝ → ℝ} {l r a x : ℝ}
+    (hf : ∀ u ∈ Ioo l r, ContDiffAt ℝ ∞ f u)
+    (ha : a ∈ Ioo l r) (hx : x ∈ Ioo l r) (k n : ℕ) :
+    iteratedDeriv n (segmentTaylorAverage f a k) x =
+      segmentTaylorAverage f a (k+n) x :=
+  @iteratedDeriv_segmentTaylorAverage f l r a x hf ha hx k n
+
+example
+    {f : ℝ → ℝ} {l r a x M : ℝ}
+    (ha : a ∈ Ioo l r) (hx : x ∈ Ioo l r) (k : ℕ)
+    (hb : ∀ u ∈ Ioo l r, |iteratedDeriv k f u| ≤ M) :
+    |segmentTaylorAverage f a k x| ≤ M :=
+  @abs_segmentTaylorAverage_le f l r a x M ha hx k hb
+
+example
+    {σ δ : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hσ : 0 ≤ σ) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) (p : ℕ) (hp : p ≤ P) :
+    |iteratedDeriv (p+1) F u| ≤ modelPhaseJetCoefficient σ p+δ :=
+  @approximateModelPhase_iteratedDeriv_abs_le σ δ P F hσ hF u hu p hp
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) (k : ℕ) :
+    iteratedDeriv k (modelPhaseAveragedCurvature F v) u =
+      -2*segmentTaylorAverage (deriv (deriv F)) (modelPhaseInverseSlope F v) k u :=
+  @iteratedDeriv_modelPhaseAveragedCurvature F σ δ v u P hF hv hu k
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hσ : 0 ≤ σ) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2)
+    (k : ℕ) (hk : k+1 ≤ P) :
+    |iteratedDeriv k (modelPhaseAveragedCurvature F v) u| ≤
+      2*(modelPhaseJetCoefficient σ (k+1)+δ) :=
+  @abs_iteratedDeriv_modelPhaseAveragedCurvature_le F σ δ v u P hσ hF hv hu k hk
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (z : ℝ) :
+    modelPhaseMorseSchwartz hχ hs hσ hδ hF hv z = modelPhaseMorseWeight χ F v z :=
+  @modelPhaseMorseSchwartz_apply χ F σ δ v hχ hs hσ hδ hF hv z
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (T : ℝ) :
+    modelPhaseMorseWeightedIntegral χ F T v =
+      ∫ z : ℝ, (modelPhaseMorseWeight χ F v z : ℂ)*(𝐞 (-(T/2)*z^2) : ℂ) :=
+  @modelPhaseMorseWeightedIntegral_eq_global χ F σ δ v hσ hδ hF hv T
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hχ : Continuous χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (T : ℝ) :
+    Integrable (fun z : ℝ => (modelPhaseMorseWeight χ F v z : ℂ)*
+      (𝐞 (-(T/2)*z^2) : ℂ)) :=
+  @modelPhaseMorseGlobalIntegrand_integrable χ F σ δ v hχ hσ hδ hF hv T
+
+example
+    {χ F : ℝ → ℝ} {σ δ T N r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : T ≠ 0) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange F) :
+    modelPhaseFourierMode χ F T N r =
+      (N : ℂ)*(𝐞 (modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r)) : ℂ)*
+        ∫ z : ℝ, (modelPhaseMorseWeight χ F (r*N/T) z : ℂ)*(𝐞 (-(T/2)*z^2) : ℂ) :=
+  @modelPhaseFourierMode_eq_global_morse χ F σ δ T N r hs hσ hδ hF hT hN hv
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (k : ℕ) :
+    tsupport (iteratedDeriv k (modelPhaseMorseWeight χ F v)) ⊆
+      modelPhaseMorseCoordinate F v '' tsupport χ :=
+  @modelPhaseMorseWeight_deriv_support χ F σ δ v hs hσ hδ hF hv k
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (k : ℕ) :
+    Integrable (iteratedDeriv k (modelPhaseMorseWeight χ F v)) :=
+  @modelPhaseMorseWeight_iteratedDeriv_integrable χ F σ δ v hχ hs hσ hδ hF hv k
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) (j : ℕ) :
+    HasDerivAt (fun x => modelPhaseMorseJet F v x j)
+      (inversePhaseEval (morseAtomDerivative j) (modelPhaseMorseJet F v u)) u :=
+  @modelPhaseMorseJet_hasDerivAt F σ δ v u hσ hδ hF hv hu j
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2)
+    (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (modelPhaseMorseJet F v x))
+      (inversePhaseEval (morseDifferentiate e) (modelPhaseMorseJet F v u)) u :=
+  @morseEval_hasDerivAt F σ δ v u hσ hδ hF hv hu e
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseCoordinate F v) u =
+      inversePhaseEval (morseDerivativeExpression n) (modelPhaseMorseJet F v u) :=
+  @iteratedDeriv_modelPhaseMorseCoordinate_formula F σ δ v u hσ hδ hF hv hu n
+
+example (σ : ℝ) (j : ℕ) :
+    0 ≤ morseJetMagnitude σ j :=
+  @morseJetMagnitude_nonneg σ j
+
+example (σ : ℝ) {K j : ℕ} (hj : j ≤ K) :
+    morseJetMagnitude σ j ≤ morseJetMagnitudeBudget σ K :=
+  @morseJetMagnitude_le_budget σ K j hj
+
+example (σ : ℝ) (n : ℕ) :
+    0 ≤ morseCoordinateDerivativeBound σ n :=
+  @morseCoordinateDerivativeBound_nonneg σ n
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hP : 1 ≤ P) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2)
+    (j : ℕ) (hj : j ≤ P) :
+    |modelPhaseMorseJet F v u j| ≤ morseJetMagnitude σ j :=
+  @modelPhaseMorseJet_abs_le F σ δ v u P hσ hδ hP hF hv hu j hj
+
+example
+    {F : ℝ → ℝ} {σ δ v u : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hu : u ∈ Ioo (1 : ℝ) 2)
+    (n : ℕ) (hP : morseCoordinateDerivativeOrder n ≤ P) :
+    |iteratedDeriv n (modelPhaseMorseCoordinate F v) u| ≤
+      morseCoordinateDerivativeBound σ n :=
+  @modelPhaseMorseCoordinate_iteratedDeriv_bound F σ δ v u P hσ hδ hF hv hu n hP
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (j : ℕ) :
+    HasDerivAt (fun x => modelPhaseMorseInverseJet F v x j)
+      (inversePhaseEval (inversePhaseAtomDerivative j) (modelPhaseMorseInverseJet F v z)) z :=
+  @modelPhaseMorseInverseJet_hasDerivAt F σ δ v z hσ hδ hF hv hz j
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (modelPhaseMorseInverseJet F v x))
+      (inversePhaseEval (inversePhaseDifferentiate e) (modelPhaseMorseInverseJet F v z)) z :=
+  @morseInverseEval_hasDerivAt F σ δ v z hσ hδ hF hv hz e
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseInverse F v) z =
+      inversePhaseEval (inversePhaseDerivativeExpression n) (modelPhaseMorseInverseJet F v z) :=
+  @iteratedDeriv_modelPhaseMorseInverse_formula F σ δ v z hσ hδ hF hv hz n
+
+example {σ : ℝ} (hσ : 0 < σ) (j : ℕ) :
+    0 ≤ morseInverseJetMagnitude σ j :=
+  @morseInverseJetMagnitude_nonneg σ hσ j
+
+example {σ : ℝ} (hσ : 0 < σ) {K j : ℕ} (hj : j ≤ K) :
+    morseInverseJetMagnitude σ j ≤ morseInverseJetBudget σ K :=
+  @morseInverseJetMagnitude_le_budget σ hσ K j hj
+
+example (n : ℕ) : 1 ≤ morseInverseDerivativeOrder n :=
+  @morseInverseDerivativeOrder_pos n
+
+example {n j : ℕ}
+    (hj : j ≤ inversePhaseOrder (inversePhaseDerivativeExpression n)) :
+    morseInverseJetOrder j ≤ morseInverseDerivativeOrder n :=
+  @morseInverseJetOrder_le_derivativeOrder n j hj
+
+example {σ : ℝ} (hσ : 0 < σ) (n : ℕ) :
+    0 ≤ morseInverseDerivativeBound σ n :=
+  @morseInverseDerivativeBound_nonneg σ hσ n
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hP : 1 ≤ P) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (j : ℕ) (hj : morseInverseJetOrder j ≤ P) :
+    |modelPhaseMorseInverseJet F v z j| ≤ morseInverseJetMagnitude σ j :=
+  @modelPhaseMorseInverseJet_abs_le F σ δ v z P hσ hδ hP hF hv hz j hj
+
+example
+    {F : ℝ → ℝ} {σ δ v z : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (n : ℕ) (hP : morseInverseDerivativeOrder n ≤ P) :
+    |iteratedDeriv n (modelPhaseMorseInverse F v) z| ≤
+      morseInverseDerivativeBound σ n :=
+  @modelPhaseMorseInverse_iteratedDeriv_bound F σ δ v z P hσ hδ hF hv hz n hP
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (j : ℕ) :
+    HasDerivAt (fun x => morseWeightJet χ F v x j)
+      (inversePhaseEval (morseWeightAtomDerivative j) (morseWeightJet χ F v z)) z :=
+  @morseWeightJet_hasDerivAt χ F σ δ v z hχ hσ hδ hF hv hz j
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (morseWeightJet χ F v x))
+      (inversePhaseEval (morseWeightDifferentiate e) (morseWeightJet χ F v z)) z :=
+  @morseWeightEval_hasDerivAt χ F σ δ v z hχ hσ hδ hF hv hz e
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseAmplitude χ F v) z =
+      inversePhaseEval (morseWeightDerivativeExpression n) (morseWeightJet χ F v z) :=
+  @iteratedDeriv_modelPhaseMorseAmplitude_formula χ F σ δ v z hχ hσ hδ hF hv hz n
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseWeight χ F v) z =
+      iteratedDeriv n (modelPhaseMorseAmplitude χ F v) z :=
+  @iteratedDeriv_modelPhaseMorseWeight_eq χ F σ δ v z hσ hδ hF hv hz n
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∉ modelPhaseMorseRange F v) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseWeight χ F v) z = 0 :=
+  @iteratedDeriv_modelPhaseMorseWeight_zero χ F σ δ v z hs hσ hδ hF hv hz n
+
+example (n : ℕ) : 1 ≤ morseWeightDerivativeOrder n :=
+  @morseWeightDerivativeOrder_pos n
+
+example {σ M : ℝ} (hσ : 0 < σ) (hM : 0 ≤ M) (n : ℕ) :
+    0 ≤ morseWeightDerivativeBound σ M n :=
+  @morseWeightDerivativeBound_nonneg σ M hσ hM n
+
+example {n j : ℕ} (hj : j ≤ morseWeightCutoffOrder n+1) :
+    morseInverseDerivativeOrder j ≤ morseWeightDerivativeOrder n :=
+  @morseWeight_inverseOrder_le n j hj
+
+example
+    {χ F : ℝ → ℝ} {σ δ v z M : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (hM : 0 ≤ M) (n : ℕ) (hP : morseWeightDerivativeOrder n ≤ P)
+    (hχ : ∀ u ∈ Ioo (1 : ℝ) 2, ∀ k ≤ morseWeightCutoffOrder n, |iteratedDeriv k χ u| ≤ M)
+    (j : ℕ) (hj : j ≤ morseWeightCutoffOrder n) :
+    |morseWeightJet χ F v z j| ≤ morseWeightJetBudget σ M n :=
+  @morseWeightJet_abs_le χ F σ δ v z M P hσ hδ hF hv hz hM n hP hχ j hj
+
+example
+    {χ F : ℝ → ℝ} {σ δ v M : ℝ} {P : ℕ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hM : 0 ≤ M)
+    (n : ℕ) (hP : morseWeightDerivativeOrder n ≤ P)
+    (hb : ∀ u ∈ Ioo (1 : ℝ) 2, ∀ k ≤ morseWeightCutoffOrder n, |iteratedDeriv k χ u| ≤ M)
+    (z : ℝ) :
+    |iteratedDeriv n (modelPhaseMorseWeight χ F v) z| ≤ morseWeightDerivativeBound σ M n :=
+  @modelPhaseMorseWeight_iteratedDeriv_bound χ F σ δ v M P hχ hs hσ hδ hF hv hM n hP hb z
+
+example {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (Q : ℕ) :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ u ∈ Ioo (1 : ℝ) 2, ∀ k ≤ Q, |iteratedDeriv k χ u| ≤ M :=
+  @smoothCutoff_finite_jet_bound χ hχ Q
+
+example
+    {χ : ℝ → ℝ} (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    {σ : ℝ} (hσ : 0 < σ) (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ v : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      IsApproximateModelPhaseFunction F σ (morseWeightDerivativeOrder n) δ →
+      v ∈ modelPhaseSlopeRange F →
+      ∀ z : ℝ, |iteratedDeriv n (modelPhaseMorseWeight χ F v) z| ≤ C :=
+  @modelPhaseMorseWeight_uniform_derivative χ hχ hs σ hσ n
+
+example
+    {f : ℝ → ℝ} (hf : ContDiff ℝ ∞ f) (a x : ℝ) (k : ℕ) :
+    HasDerivAt (segmentTaylorAverage f a k) (segmentTaylorAverage f a (k+1) x) x :=
+  @segmentTaylorAverage_hasDerivAt_global f hf a x k
+
+example
+    {f : ℝ → ℝ} (hf : ContDiff ℝ ∞ f) (a : ℝ) (k : ℕ) :
+    ContDiff ℝ ∞ (segmentTaylorAverage f a k) :=
+  @segmentTaylorAverage_contDiff_global f hf a k
+
+example
+    {f : ℝ → ℝ} {M : ℝ} (a x : ℝ) (k : ℕ)
+    (hb : ∀ u : ℝ, |iteratedDeriv k f u| ≤ M) :
+    |segmentTaylorAverage f a k x| ≤ M :=
+  @abs_segmentTaylorAverage_le_global f M a x k hb
+
+example
+    {f : ℝ → ℝ} (hf : ContDiff ℝ ∞ f) (a x : ℝ) :
+    (x-a)^2*segmentTaylorAverage (deriv (deriv f)) a 0 x =
+      f x-f a-(x-a)*deriv f a :=
+  @segmentTaylorAverage_second_global f hf a x
+
+example (T : ℝ) : Continuous (betaQuadraticKernel T) :=
+  @continuous_betaQuadraticKernel T
+
+example (T z : ℝ) : ‖betaQuadraticKernel T z‖ = 1 :=
+  @norm_betaQuadraticKernel T z
+
+example (T z : ℝ) :
+    betaQuadraticKernel T (-z) = betaQuadraticKernel T z :=
+  @betaQuadraticKernel_neg T z
+
+example (T z : ℝ) :
+    HasDerivAt (betaQuadraticKernel T)
+      ((-2*Real.pi*T : ℂ)*Complex.I*(z : ℂ)*betaQuadraticKernel T z) z :=
+  @betaQuadraticKernel_hasDerivAt T z
+
+example (T H : ℝ) :
+    (∫ z in (-H)..H, (z : ℂ)*betaQuadraticKernel T z) = 0 :=
+  @integral_betaQuadraticKernel_odd T H
+
+example (T H : ℝ) :
+    (∫ z in (-H)..H, betaQuadraticKernel T z) = atkinsonQuadraticWindow (T/2) H :=
+  @integral_betaQuadraticKernel_eq_window T H
+
+example {T H : ℝ} (hT : 0 < T) (hH : 0 < H) :
+    ‖(∫ z in (-H)..H, betaQuadraticKernel T z) -
+      (𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)‖ ≤ 4/(T*H*Real.pi) :=
+  @norm_betaQuadraticWindow_sub_main T H hT hH
+
+example
+    {V : ℝ → ℝ} {T H M L : ℝ}
+    (hV : ContDiff ℝ ∞ V) (hT : 0 < T) (hH : 0 < H)
+    (hb : ∀ z : ℝ, |V z| ≤ M) (hd : ∀ z : ℝ, |deriv V z| ≤ L) :
+    ‖∫ z in (-H)..H, ((z^2*V z : ℝ) : ℂ)*betaQuadraticKernel T z‖ ≤
+      (2*H*M+2*H*(M+H*L))/(2*Real.pi*T) :=
+  @norm_integral_sq_mul_betaQuadraticKernel_le V T H M L hV hT hH hb hd
+
+example {W : ℝ → ℝ} (hW : ContDiff ℝ ∞ W) :
+    ContDiff ℝ ∞ (quadraticTaylorCoefficient W) :=
+  @quadraticTaylorCoefficient_contDiff W hW
+
+example {W : ℝ → ℝ} (hW : ContDiff ℝ ∞ W) (z : ℝ) :
+    deriv (quadraticTaylorCoefficient W) z = segmentTaylorAverage (deriv (deriv W)) 0 1 z :=
+  @quadraticTaylorCoefficient_deriv W hW z
+
+example {W : ℝ → ℝ} {M : ℝ}
+    (hb : ∀ z : ℝ, |iteratedDeriv 2 W z| ≤ M) (z : ℝ) :
+    |quadraticTaylorCoefficient W z| ≤ M :=
+  @abs_quadraticTaylorCoefficient_le W M hb z
+
+example {W : ℝ → ℝ} {M : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hb : ∀ z : ℝ, |iteratedDeriv 3 W z| ≤ M) (z : ℝ) :
+    |deriv (quadraticTaylorCoefficient W) z| ≤ M :=
+  @abs_deriv_quadraticTaylorCoefficient_le W M hW hb z
+
+example
+    {W : ℝ → ℝ} (hW : ContDiff ℝ ∞ W) (T H : ℝ) :
+    (∫ z in (-H)..H, (W z : ℂ)*betaQuadraticKernel T z) =
+      (W 0 : ℂ)*(∫ z in (-H)..H, betaQuadraticKernel T z)+
+      ∫ z in (-H)..H, ((z^2*quadraticTaylorCoefficient W z : ℝ) : ℂ)*
+        betaQuadraticKernel T z :=
+  @integral_weighted_betaQuadraticKernel_taylor W hW T H
+
+example {H M₀ M₂ M₃ : ℝ}
+    (hH : 0 < H) (h₀ : 0 ≤ M₀) (h₂ : 0 ≤ M₂) (h₃ : 0 ≤ M₃) :
+    0 ≤ quadraticRemainderConstant H M₀ M₂ M₃ :=
+  @quadraticRemainderConstant_nonneg H M₀ M₂ M₃ hH h₀ h₂ h₃
+
+example
+    {W : ℝ → ℝ} {T H M₀ M₂ M₃ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z : ℝ, |iteratedDeriv 2 W z| ≤ M₂)
+    (h₃ : ∀ z : ℝ, |iteratedDeriv 3 W z| ≤ M₃) :
+    ‖(∫ z in (-H)..H, (W z : ℂ)*betaQuadraticKernel T z)-
+      (W 0 : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H M₀ M₂ M₃/T :=
+  @norm_quadratic_window_remainder_le W T H M₀ M₂ M₃ hW hT hH h₀ h₂ h₃
+
+example
+    {W : ℝ → ℝ} {T H M₀ M₂ M₃ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (hs : Function.support W ⊆ Ioc (-H) H)
+    (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z : ℝ, |iteratedDeriv 2 W z| ≤ M₂)
+    (h₃ : ∀ z : ℝ, |iteratedDeriv 3 W z| ≤ M₃) :
+    ‖(∫ z : ℝ, (W z : ℂ)*betaQuadraticKernel T z)-
+      (W 0 : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H M₀ M₂ M₃/T :=
+  @norm_quadratic_global_remainder_le W T H M₀ M₂ M₃ hW hT hH hs h₀ h₂ h₃
+
+example
+    {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (T : ℝ) :
+    modelPhaseMorseRemainder χ F T v =
+      (∫ z : ℝ, (modelPhaseMorseWeight χ F v z : ℂ)*betaQuadraticKernel T z)-
+        (modelPhaseMorseWeight χ F v 0 : ℂ)*
+          ((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)) :=
+  @modelPhaseMorseRemainder_eq_global χ F σ δ v hσ hδ hF hv T
+
+example
+    {χ : ℝ → ℝ} (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (δ v T : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ P δ →
+        v ∈ modelPhaseSlopeRange F → 0 < T →
+        ‖modelPhaseMorseRemainder χ F T v‖ ≤ C/T :=
+  @modelPhaseMorseRemainder_uniform χ hχ hs σ hσ
+
+example
+    {χ : ℝ → ℝ} (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (δ T N r : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ P δ →
+        0 < T → 0 < N → r*N/T ∈ modelPhaseSlopeRange F →
+        ‖modelPhaseFourierMode χ F T N r-
+          (χ (modelPhaseInverseSlope F (r*N/T)) : ℂ)*modelPhaseStationaryMainTerm F T N r‖ ≤
+            C*N/T :=
+  @modelPhaseFourierMode_stationary_uniform χ hχ hs σ hσ
+
+example
+    {N : ℝ} (hN : 0 < N) {a b : ℕ}
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ u : ℝ, 0 ≤ χ u ∧ χ u ≤ 1) ∧
+      (∀ n : ℤ, χ ((n : ℝ)/N) =
+        if n ∈ modelPhaseInteriorIndices N a b then 1 else 0) ∧
+      ∀ σ : ℝ, 0 < σ → ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (δ : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ∀ T : ℝ, 0 < T →
+            Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T N r‖) ∧
+            ‖exponentialSumAt F T N a b-∑' r : ℤ, modelPhaseFourierMode χ F T N r‖ ≤ 2 ∧
+            ∀ r : ℤ, (r : ℝ)*N/T ∈ modelPhaseSlopeRange F →
+              ‖modelPhaseFourierMode χ F T N r-
+                (χ (modelPhaseInverseSlope F ((r : ℝ)*N/T)) : ℂ)*
+                  modelPhaseStationaryMainTerm F T N r‖ ≤ C*N/T :=
+  @modelPhase_closed_interval_poisson_stationary N hN a b ha hb
+
+example (F : ℝ → ℝ) (v z : ℝ) :
+    modelPhaseMorseWeight (fun _ => 0) F v z = 0 := by
+  simp [modelPhaseMorseWeight,modelPhaseMorseAmplitude]
+
+example (F : ℝ → ℝ) (v z : ℝ) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseWeight (fun _ => 0) F v) z = 0 := by
+  have he : modelPhaseMorseWeight (fun _ => 0) F v = fun _ => 0 := by
+    funext x
+    simp [modelPhaseMorseWeight,modelPhaseMorseAmplitude]
+  rw [he]
+  simp
+
+example {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hzero : χ (modelPhaseInverseSlope F v) = 0) :
+    modelPhaseMorseWeight χ F v 0 = 0 := by
+  rw [modelPhaseMorseWeight_zero hσ hδ hF hv,hzero,zero_mul]
+
+example {σ v u : ℝ} (hσ : 0 < σ)
+    (hv : v ∈ Ioo ((2 : ℝ)^(-σ)) 1) (hu : u ∈ Ioo (1 : ℝ) 2) :
+    |iteratedDeriv 3 (modelPhaseMorseCoordinate (referenceModelPrimitive σ) v) u| ≤
+      morseCoordinateDerivativeBound σ 3 := by
+  exact modelPhaseMorseCoordinate_iteratedDeriv_bound hσ
+    (le_min (modelPhaseCurvatureLower_pos hσ).le zero_le_one)
+    (referenceModelPrimitive_approximate σ (morseCoordinateDerivativeOrder 3))
+    (referenceModelPrimitive_slopeRange hσ hv) hu 3 le_rfl
+
+example {σ v : ℝ} (hσ : 0 < σ) (hv : v ∈ Ioo ((2 : ℝ)^(-σ)) 1) :
+    |iteratedDeriv 2 (modelPhaseMorseInverse (referenceModelPrimitive σ) v) 0| ≤
+      morseInverseDerivativeBound σ 2 := by
+  have hr := referenceModelPrimitive_slopeRange hσ hv
+  exact modelPhaseMorseInverse_iteratedDeriv_bound hσ
+    (le_min (modelPhaseCurvatureLower_pos hσ).le zero_le_one)
+    (referenceModelPrimitive_approximate σ (morseInverseDerivativeOrder 2))
+    hr (zero_mem_modelPhaseMorseRange hr) 2 le_rfl
+
+example (z : ℝ) : betaQuadraticKernel 0 z = 1 := by
+  simp [betaQuadraticKernel]
+
+example {χ F : ℝ → ℝ} {σ δ v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseMorseWeightedIntegral χ F 0 v =
+      ∫ z : ℝ, (modelPhaseMorseWeight χ F v z : ℂ) := by
+  simpa using modelPhaseMorseWeightedIntegral_eq_global (χ := χ) hσ hδ hF hv 0
+
+example {T H : ℝ} (hT : 0 < T) (hH : 0 < H) :
+    ‖(∫ z : ℝ, ((0 : ℝ) : ℂ)*betaQuadraticKernel T z)-
+      ((0 : ℝ) : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H 0 0 0/T := by
+  exact norm_quadratic_global_remainder_le contDiff_const hT hH
+    (by simp) (by simp) (by simp) (by simp)
+
+example {χ : ℝ → ℝ} (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (δ T N r : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ P δ →
+        0 < T → 0 < N → r*N/T ∈ modelPhaseSlopeRange F →
+        χ (modelPhaseInverseSlope F (r*N/T)) = 0 →
+        ‖modelPhaseFourierMode χ F T N r‖ ≤ C*N/T := by
+  obtain ⟨P,hP,C,hC,hbound⟩ := modelPhaseFourierMode_stationary_uniform hχ hs hσ
+  refine ⟨P,hP,C,hC,?_⟩
+  intro F δ T N r hδ hF hT hN hv hzero
+  simpa only [hzero,Complex.ofReal_zero,zero_mul,sub_zero] using hbound F δ T N r hδ hF hT hN hv
+
+example :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧
+      tsupport χ ⊆ Ioo (1 : ℝ) 2 ∧ HasCompactSupport χ ∧
+      (∀ u : ℝ, 0 ≤ χ u ∧ χ u ≤ 1) ∧
+      (∀ n : ℤ, χ ((n : ℝ)/1) =
+        if n ∈ modelPhaseInteriorIndices 1 1 1 then 1 else 0) ∧
+      ∀ σ : ℝ, 0 < σ → ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (δ : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ∀ T : ℝ, 0 < T →
+            Summable (fun r : ℤ => ‖modelPhaseFourierMode χ F T 1 r‖) ∧
+            ‖exponentialSumAt F T 1 1 1-∑' r : ℤ, modelPhaseFourierMode χ F T 1 r‖ ≤ 2 ∧
+            ∀ r : ℤ, (r : ℝ)*1/T ∈ modelPhaseSlopeRange F →
+              ‖modelPhaseFourierMode χ F T 1 r-
+                (χ (modelPhaseInverseSlope F ((r : ℝ)*1/T)) : ℂ)*
+                  modelPhaseStationaryMainTerm F T 1 r‖ ≤ C*1/T := by
+  exact modelPhase_closed_interval_poisson_stationary (N := 1) (a := 1) (b := 1)
+    (by norm_num) (by norm_num) (by norm_num)
+
+end UniformQuadraticRemainderRegression

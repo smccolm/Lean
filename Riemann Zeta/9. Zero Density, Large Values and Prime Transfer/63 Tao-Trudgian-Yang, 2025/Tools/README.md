@@ -1,7 +1,8 @@
 # Tooling record
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -4126,7 +4127,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 The PowerShell inventory now includes all eight new modules from
 `BetaInverseExpressions` through `BetaLegendreAnchoring`.
@@ -4158,3 +4159,140 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+Root imports and the exact PowerShell inventory cover all eight canonical
+Legendre extension modules. The audit adds 27 public declarations;
+semantic regression adds 35 examples.
+
+Both BAT launchers are unchanged. Keep
+`run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory, updating backing inventories whenever
+modules change. A focused regression's style warning was corrected
+before the final BAT runs; no diagnostic rule was relaxed.
+Runner PASS does not complete DBT, beta reflection or the whole goal.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+Root imports and the exact PowerShell inventory now include all six
+new Poisson/dual-sum modules. There are 32 new explicit public audits
+and 40 semantic regression examples.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory; update their backing inventories
+as the proof develops. Both BAT launchers are unchanged. No diagnostic,
+coverage or dependency gate was weakened. Runner PASS establishes
+installed-scope integrity, not the still-open uniform stationary
+transform, beta reflection or whole-proof objective.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+The production root and exact `run_tao_trudgian_yang_build.ps1`
+inventory include all eight new amplitude/main-term/quadratic-coordinate
+modules. There are 46 new explicit public audits and 54 new semantic
+regression examples. The regression build and both full runners pass.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` mandatory and operational as the proof grows.
+Update backing inventories, imports, audits and regressions whenever
+production coverage changes. Both BAT launchers are unchanged. No
+diagnostic, source-integrity or dependency gate was weakened.
+Runner PASS concerns the installed scope; it does not complete the
+uniform stationary integral approximation or full beta reflection.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The production root and exact `run_tao_trudgian_yang_build.ps1`
+inventory now include eleven additional Taylor/Morse modules.
+There are 54 new explicit public audits and 63 new semantic regressions;
+the final integrated regression build and both mandatory BATs pass.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` operational as first-class proof interfaces.
+Update backing inventories, imports, audits and regressions whenever
+production coverage changes. Both BAT launchers remain unchanged;
+no warning, integrity, coverage or dependency gate was weakened.
+A runner PASS verifies installed scope, not the still-open uniform
+remainder estimate or the complete B process.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+The production root and exact `run_tao_trudgian_yang_build.ps1`
+inventory include all sixteen new global-weight, higher-derivative and
+stationary-remainder modules. There are 75 new explicit public audits
+and 85 new regressions, including exact signatures and source/degenerate
+cases. No prior production module was excluded.
+
+Keep `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` operational as first-class proof interfaces.
+Update backing inventories, root imports, audits and regressions as
+coverage changes; rerun both BATs after proof/integration/runner edits.
+Both BAT launchers are unchanged and no diagnostic gate was weakened.
+Verification of the installed scope does not close full reflection or
+the uniform varying-lattice B-process estimate.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](../logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.

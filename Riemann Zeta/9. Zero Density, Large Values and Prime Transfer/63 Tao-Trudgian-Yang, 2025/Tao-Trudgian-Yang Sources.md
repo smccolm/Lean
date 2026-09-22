@@ -1,7 +1,8 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
-Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
+The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
@@ -5379,7 +5380,7 @@ All 37 new public audits and 42 new regression examples pass.
 Both BATs and the counterexample are unchanged. Exact hashes and
 foundation stage evidence are in the latest Reproduction Manifest section.
 
-## Uniform all-order Legendre model control — current checkpoint
+## Uniform all-order Legendre model control — historical checkpoint
 
 The local frozen TeX's `phase-def`, equation `fpu` and example
 `phase-ex` are the source contract for this step:
@@ -5417,3 +5418,202 @@ All 220 checkpoint source/integration/runner hashes are stable across
 both final runs. The counterexample and both BAT launchers are unchanged.
 Exact hashes and foundation stage evidence are in the latest
 Reproduction Manifest section. The full goal remains active.
+
+## Canonical Legendre extension and finite model families — historical checkpoint
+
+The frozen TeX `phase-def`, `fpu` and `phase-ex` remain the source
+contract. The extension now satisfies the original closed [1,2]
+approximate-model definition and the original
+`IsModelPhaseFunctionWith`/`IsModelPhaseFunction` predicates.
+The latter are read directly from the pinned ANTEDB
+`Expdb/ExponentialSums/PhaseFunctions.lean`.
+
+Local Mathlib APIs used include real `ContDiffBump` plateaus and support,
+`IsCompact.exists_bound_of_continuousOn`, the iterated-derivative product
+and multiplicative composition formulas, finite open subcovers, and
+eventual finite conjunctions. The reference homogeneity, actual
+Legendre correction bounds and source consumers are proved locally.
+
+The source `beta-reflect` formula is still not proved. Specialized native
+logarithmic reflection and Atkinson stationary estimates have not been
+silently generalized to arbitrary model phases. No source archive,
+dependency pin or existing energy theorem changed.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-222922-4233a5f3.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_222922.log).
+The target covers 569 package files and audits 5058 declarations.
+All 27 new public audits and 35 new regression examples pass.
+All 228 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Exact Poisson source entry and physical dual sums — historical checkpoint
+
+The frozen `phase-def`, `fpu`, `phase-ex` and `beta-reflect`
+contracts remain unchanged. The literal `exponentialSumAt` and model
+predicates come from the pinned ANTEDB sources. Integer and natural
+interval conventions are bridged in Lean.
+
+The pinned Mathlib Poisson theorem is
+`SchwartzMap.tsum_eq_tsum_fourier` in
+`Mathlib/Analysis/Fourier/PoissonSummation.lean`.
+The actual weighted model kernel is proved Schwartz before use.
+Fourier integrals use Mathlib's real character with its negative sign;
+`Measure.integral_comp_div` supplies the exact x=N*u substitution.
+Schwartz polynomial decay and integer rpow summability prove absolute
+convergence. Constructed smooth interval cutoffs provide the original
+source entry; no smoothing assumption replaces the source sum.
+
+These local pinned sources were inspected directly. No source archive
+or dependency pin changed. General uniform stationary-phase asymptotics
+and the full `beta-reflect` formula remain open; specialized native
+logarithmic/Atkinson results are not generalized without proof.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 21 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260921-231301-8d992207.log)
+and [final foundation log](../../logs/foundation_freeze_20260921_231301.log).
+The target covers 575 package files and audits 5124 declarations.
+All 32 new public audits and 40 new regression examples pass.
+All 234 checkpoint source/integration/runner hashes are stable across
+the final runs. The counterexample and both BAT launchers are unchanged.
+Exact hashes and foundation stage evidence are in the latest
+Reproduction Manifest section. The full goal remains active.
+
+## Stationary amplitudes, source beta consumers and quadratic coordinates — historical checkpoint
+
+The frozen `phase-def`, `fpu`, `phase-ex` and `beta-reflect`
+contracts are unchanged. The original order-two ANTEDB model condition
+supplies the third-derivative bounds used for amplitude monotonicity;
+the source beta predicate is consumed directly at the linked dual
+physical scales. No general reflection theorem is imported from the
+specialized logarithmic/Atkinson branch.
+
+The pinned local Mathlib APIs inspected and used here include:
+
+- `Mathlib/Analysis/SpecialFunctions/Sqrt.lean` for smooth/derivative
+  square-root rules at positive curvature;
+- `Mathlib/Analysis/Calculus/Taylor.lean`,
+  `taylor_mean_remainder_lagrange_iteratedDeriv` for the two-sided
+  stationary deficit, and `Real.taylor_tendsto` for its critical limit;
+- `Mathlib/Analysis/Calculus/Deriv/Slope.lean`,
+  `hasDerivAt_iff_tendsto_slope` for the actual coordinate derivative;
+- the local `FiniteWeightVariation` and native finite summation-by-parts
+  identity, applied to the actual physical amplitude samples.
+
+These are direct inspections of pinned local sources, not a new online
+source refresh. No archive, dependency pin or source theorem changed.
+The exact quadratic phase is proved; uniform inverse/transformed-weight
+control and general stationary-phase error estimates remain open.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-000055-22681e8e.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_000107.log).
+The target covers 583 package files and audits 5203 declarations.
+All 46 new public audits and 54 new regression examples pass.
+All 242 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Smooth quadratic inverse and original-mode remainder — historical checkpoint
+
+The frozen `phase-def`, `fpu`, `phase-ex` and `beta-reflect`
+contracts remain unchanged. The new proofs consume the original
+order-one model condition and actual source Poisson cutoff, not an
+assumed stationary-phase approximation or a specialized log-phase proxy.
+
+Pinned local Mathlib sources inspected and used include:
+
+- `Analysis/Calculus/ParametricIntegral.lean`:
+  `hasDerivAt_integral_of_dominated_loc_of_deriv_le`, with compact
+  jet bounds derived locally for the actual segment integrand.
+- `Analysis/Calculus/ContDiff/Deriv.lean`: derivative induction for
+  all-order smoothness of the Taylor averages.
+- `MeasureTheory/Integral/IntervalIntegral/FundThmCalculus.lean`:
+  `integral_eq_sub_of_hasDerivAt` for the exact second-order identity.
+- `Analysis/Calculus/InverseFunctionTheorem/Deriv.lean` and
+  `InverseFunctionTheorem/ContDiff.lean`: actual local inverse
+  derivatives and smoothness, identified with the constructed inverse.
+- `MeasureTheory/Function/JacobianOneDim.lean`:
+  `integral_image_eq_integral_abs_deriv_smul` and
+  `integrableOn_image_iff_integrableOn_abs_deriv_smul`.
+- `Analysis/Calculus/MeanValue.lean`: the original curvature bound
+  supplies the upper slope-gap bound used in uniform first derivatives.
+
+These are inspections of pinned local primary sources, not a new
+online source refresh. No source archive or dependency pin changed.
+The exact quadratic transform and remainder normalization are proved;
+uniform remainder estimates, higher-derivative bounds and moving-band
+control still require proof. No Fresnel evaluation is claimed here.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-010958-9aae1d59.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_010947.log).
+The target covers 594 package files and audits 5272 declarations.
+All 54 new public audits and 63 new regression examples pass.
+All 253 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains active.
+
+## Uniform smooth weights and stationary remainder bounds — current checkpoint
+
+The frozen `phase-def`, `fpu`, `phase-ex` and `beta-reflect`
+contracts are unchanged. The new estimates consume the actual original
+model phase and cutoff; no specialized logarithmic stationary-phase
+hypothesis is promoted to arbitrary F.
+
+Pinned local primary sources and proved inputs inspected and used:
+
+- Mathlib `Topology/Algebra/Support.lean` and
+  `Topology/Compactness/Compact.lean`: compact continuous images,
+  support closure and local vanishing.
+- Mathlib `Analysis/Calculus/Deriv/Support.lean`: derivative support
+  containment, including all iterated derivatives of the zero-extension.
+- Mathlib `Analysis/Calculus/IteratedDeriv/Defs.lean` and
+  `IteratedDeriv/Lemmas.lean`: actual derivative iteration and local
+  equality transport.
+- Mathlib `MeasureTheory/Integral/Bochner/Basic.lean` and `Set.lean`:
+  bounded-integrand estimates, indicator integrability and set integrals.
+- Mathlib `Analysis/Fourier/FourierTransformDeriv.lean`:
+  `Real.hasDerivAt_fourierChar`, checked in the e(x)=exp(2*pi*i*x) convention.
+- Mathlib `MeasureTheory/Integral/IntervalIntegral/IntegrationByParts.lean`:
+  `integral_mul_deriv_eq_deriv_mul`, with both endpoint terms retained.
+- Existing `BetaInverseExpressions`: finite-expression magnitude calculus,
+  reinterpreted with proved derivative rules for the actual Morse objects.
+- Existing `FresnelEvaluation`: the GENERIC Gaussian/Fresnel phase and
+  finite-window tail, applied to the exact quadratic character. The
+  Atkinson-specific source transformation is not used as a theorem for F.
+
+The frozen TeX `beta-reflect` statement was reread. These are pinned
+local-source inspections, not a new online source refresh. No archive,
+dependency pin or source theorem changed. The new C*N/T stationary-mode
+error is fixed-cutoff uniform; varying-cutoff, nonstationary and moving-band
+estimates are still required for the full B process.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-021704-cf554732.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_021704.log).
+The target covers 610 package files and audits 5402 declarations.
+All 75 new public audits and 85 new regression examples pass.
+All 269 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
