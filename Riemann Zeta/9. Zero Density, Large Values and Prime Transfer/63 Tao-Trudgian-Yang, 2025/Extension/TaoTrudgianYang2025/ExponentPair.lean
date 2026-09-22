@@ -8,7 +8,7 @@ exponent pair in Tao--Trudgian--Yang. The asymptotic predicate below follows
 Definition `exp-pair-def`: the sum is bounded by
 `(T / N) ^ (k + o(1)) * N ^ (l + o(1))`, uniformly for model phases and
 subintervals of the dyadic block. A separate fixed-parameter predicate
-records the epsilon--delta form whose equivalence remains to be proved.
+records the epsilon--delta form, proved equivalent below.
 -/
 
 open Filter Topology

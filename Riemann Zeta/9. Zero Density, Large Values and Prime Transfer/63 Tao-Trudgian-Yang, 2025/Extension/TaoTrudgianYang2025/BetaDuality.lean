@@ -5,8 +5,9 @@ import TaoTrudgianYang2025.ExponentPair
 
 This module begins the two-way duality proof at the actual ANTEDB
 `exponentSumGrowthExponent`. The theorem here proves the analytic forward
-direction on `0 ≤ α < 1`. The remaining endpoint and converse are kept as
-separate obligations.
+direction on `0 ≤ α < 1`. `BetaUniformity` proves the compact uniform
+converse; `BetaClosedDuality` adds the endpoint and the closed-interval
+if-and-only-if. The separate beta reflection identity remains open.
 -/
 
 open Filter Topology

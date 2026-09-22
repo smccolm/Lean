@@ -1,18 +1,19 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-Current analytic progress: [Jutila physical-scale smoothing and uniform pattern bounds](#jutila-physical-scale-smoothing-and-uniform-pattern-bounds--current-checkpoint).
-The moments and full-domain clauses (i)--(ii) are proved; clauses (iii)--(ix) and the full goal remain open.
+Current analytic progress: [Uniform all-order Legendre model control](#uniform-all-order-legendre-model-control--current-checkpoint).
+Uniform all-order compact model errors, a common slope image and anchored phase-value bounds are proved. Canonical interval extension, full beta reflection and the B-process sum transformation remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
 
 
-## Manifest status
+## Historical implementation baseline
 
 **Verified implementation baseline, 20 September 2026.** A unified Lean
 package, its selected frozen dependency, exact certificate kernel, semantic
 regressions, and transitive axiom audit are installed. This is not yet a
-paper-level release: no advertised exponent-pair, density, or energy theorem
-is claimed complete.
+paper-level release: at that baseline no advertised exponent-pair, density,
+or energy theorem was claimed complete. The current checkpoint above and
+the latest evidence below supersede this historical status.
 
 ## Frozen identifiers
 
@@ -6094,7 +6095,7 @@ The final working tree has 141 reported entries, all confined to this
 target folder; earlier work is preserved. No staging, commit, push, source
 pin change, or goal-status reduction was performed.
 
-## Jutila physical-scale smoothing and uniform pattern bounds — current checkpoint
+## Jutila physical-scale smoothing and uniform pattern bounds — verified history
 
 The printed Lemma 62 counterexample remains byte-for-byte unchanged. The
 authorized independent cardinality and energy witnesses remain the powering
@@ -6149,3 +6150,4401 @@ plus the actual k=13 source-pattern consumer, its three literal terms,
 the empty-family boundary, ceiling padding, genuine zero-mode decay,
 and the derived thinning cost. Both that BAT and `run_lake_build.bat`
 remain mandatory; build integrity is separate from source completeness.
+
+Verification (2026-09-21): both principal BAT runners reached terminal
+exit 0. The target reports LEAN VERIFICATION PASS: 368 package files, 379
+integrity-scanned Lean files, and 3,619 audited declarations (3,614 discovered
+target theorems plus five imported contracts). All 21 new named audits and
+27 regressions pass. The foundation reports PASS: all six stages passed,
+with 14,290 discovered theorems audited. Final logs contain zero Lean
+errors, warnings, tactic suggestions, or linter failures. All twenty-four
+recorded source/build hashes are unchanged after the gates, including the
+original counterexample and all ten earlier Jutila modules. Repository
+scans find no forbidden proof terms; the twelve raw postulate-pattern
+matches are the previously reviewed ten comments and two rational
+structure fields. Git `diff --check` passes. Exact commands, logs and hashes
+are recorded in the Reproduction Manifest. These checks certify the
+stated finite-pattern scope, not the final Jutila exponent, seven Add-est
+clauses, or completion of the unchanged whole-proof goal.
+
+### Reproduction evidence for physical-scale smoothing
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target completed 9,223 build
+jobs and all 27 new semantic regressions. Its inventory contains 28
+required files, 20 verified pinned files, 12 verified frozen files, 368
+Lean package files, and 379 integrity-scanned Lean files. Deterministic
+certificate regeneration passed. All 3,619 audited declarations (3,614
+discovered target theorems and five imported contracts) have only permitted
+dependencies; all 21 new named theorem audits appear in the completed log.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-072909-ba548c42.log`
+SHA256: `2cd94d6d89303c5cde857abb5a90e8e52d96ca087c7e74520fc14b7eace83f24`.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and all 14,290 discovered nonprivate
+theorems. Classification remains 301 root modules, two retained
+regressions, zero excluded and zero unclassified. All stages report
+exitCode=0, warnings=0, tacticInfo=0, linterFailures=0; failures=[].
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_072921.log`
+SHA256: `7a44641ff684dcf35f24818d90cafedf00f8f2c2d9dfbfd32bf5f9d42fb686a4`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_072921.json`
+SHA256: `7c78da854e671e642fecbe14ffdcd2adc05866410d4af83cb61ca2452ffa38fe`.
+
+Verifier SHA256 remains
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+No final log contains a Lean error, warning, tactic suggestion, or linter
+failure. The repository-wide placeholder and unsafe-bypass scans have
+no matches. The twelve raw postulate-pattern matches are ten comments
+and two rational `constant` structure fields, not postulated declarations.
+Both runners' integrity gates pass; no scan was weakened.
+
+The twenty-four post-gate hashes below match the pre-gate hashes. They
+include every new source module, all ten preceding Jutila modules,
+integration/audits, exact runner inventory, both BATs, and the preserved
+counterexample.
+
+```text
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+d4a901d769fbc2978a6426ec9d88c8957988804817845ae1ff32c536d73098bf  Extension/TaoTrudgianYang2025.lean
+7b575eacf2918fdaa0a7db449fa38f89be3c606c34fa067f9f94d5fd7fd22b33  Extension/TaoTrudgianYang2025/Audit.lean
+58bc670d5fe2516c61e8d6bf769ce9a760e1f5f747e13183c3f52a9ae400e6c3  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+c91ee25a640609ce8d1f8e7950d7250a0604af7a9a2ce244df82dd40d7db08dc  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+Semantic gate: `jutila_smoothed_pattern_bound` consumes the actual
+`LargeValuePattern`, obtains its real spaced subfamily from the prior
+Gram/reflection entry, cancels the actual dual scales, bounds near and
+far errors, and absorbs all variable losses. Its constants precede the
+pattern, and its N≤T condition is explicit. No Jutila estimate or loss
+certificate is a premise. JPS is green only for this statement; JRF and
+EPZAE-19 remain OPEN until recurrence solution, short-height coverage,
+local/global optimization and the exact LV exponent are proved.
+
+The gate logs record HEAD
+`bda1d96a12d7eddca30079b59c6dde23a82e90e0` with a dirty checkout.
+During documentation finalization an external commit advanced HEAD to
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4` (`Progress Update`).
+The agent did not stage, commit, push, or revert that change. The verified
+source/runner hashes are the reproducibility identity; the final
+documentation adds the completed gate evidence on top of that commit.
+No source pin, theorem contract, or whole-goal status was changed.
+
+## Full Jutila theorem and corrected energy-region constraints — verified history
+
+The complete source `jutila-lvt` inequality is now proved, not just its
+physical-pattern precursor. For every positive integer k, fixed
+1/2 ≤ σ ≤ 1 and τ ≥ 0, `jutila_largeValueBound` gives the uniform
+epsilon--delta bound on actual large-value patterns with exponent
+
+```text
+max(2-2σ, τ+4-2/k-(6-2/k)σ, τ+(6-8σ)k).
+```
+
+`largeValueExponent_le_jutila` gives the paper's least-exponent
+conclusion; `zetaLargeValueExponent_le_jutila` gives the valid zeta
+specialization. No cutoff, moment estimate, physical absorption threshold,
+or assumed cardinality bound remains in these source-facing signatures.
+
+### Mathematical dependency and semantic checks
+
+`jutila_local_pattern_cardinality` consumes both alternatives returned by
+the proved `jutila_smoothed_pattern_bound`. It solves the actual Gram
+recurrence, pays the thinning loss, and retains the endpoint correction
+(V−1)/3. `jutila_local_cardinality_uniform` exposes the three physical
+terms N²/(V−1)², T^k N^(2k)/(V−1)^(4k), and
+T N^(6k)/(V−1)^(8k), with one arbitrary epsilon loss.
+
+`LargeValuePattern.localized` constructs genuine floor-bin patterns:
+coefficients, support, threshold and N are unchanged. Their cards sum to
+the original card. `jutila_subdivided_cardinality_native` applies the
+local theorem to these objects and uses the already constructed smooth
+cutoff. The original T is unrestricted, including T<N and a chosen
+local height larger than T.
+
+`jutila_largeValueBound_of_local_exponent` chooses the actual local
+height L=N^ℓ, derives the absorption threshold from σ>3/4, and removes
+V−1 using the actual exponent windows. Constants and the positive window
+radius precede every pattern. The optimized ℓ is
+min((4−2/k)σ−(2−2/k), (8k−2)σ−6k+2).
+`jutila_optimization_identity` identifies the exact three-term maximum.
+The σ≤3/4 range uses the proved obvious bound; ℓ<1 uses the proved
+`meanSquare_largeValueBound`, derived from the actual finite MHH
+estimate with height padding removed. Thus no short-height gap remains.
+
+`InLargeValueEnergyRegion.rho_le_of_largeValueBound` compares the
+uniform bound with actual feasible-region witnesses.
+`InCardinalityEnergyRegion.jutila_cardinality_powered` consumes the
+cardinality branch of `correctedCardinalityEnergyPowering`, giving
+ρ/q ≤ jutilaLargeValueExponent k σ (τ/q) for q≥1.
+The literal k=13 consumer gives the two affine terms
+τ/q+50/13−76σ/13 and τ/q+78−104σ needed for Add-est (iii).
+Different powering applications remain independent. No relation between
+either fifth coordinate and s/q is asserted.
+
+### Scope, preservation, and continuation
+
+The full Jutila subnode of EPZAE-19 is DONE. EPZAE-18 and EPZAE-19 as whole
+checklist items remain OPEN: the other elementary/classical interfaces
+still require their own acceptance tests, including the standalone
+uniform Huxley API. EPZAE-36/37 still have Add-est (iii)--(ix) OPEN;
+clauses (i)--(ii), corrected two-witness powering, and the full
+Heath--Brown energy relation remain proved. The endpoint-two transfer,
+sharp Atkinson source-form bridge, exponent-pair/density work, and full
+EPZAE-00--41 release contract remain in scope.
+
+The printed Lemma 62 counterexample is preserved byte-for-byte:
+`EnergyPoweringObstruction.lean` SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Neither the paper nor the advertised Add-est statements are changed.
+
+Eleven new production modules are root-imported and included in the
+exact PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`JutilaRecurrence`, `JutilaLocalCardinality`, `JutilaLocalAlgebra`,
+`JutilaLocalUniform`, `LargeValueSubdivision`, `JutilaSubdivision`,
+`JutilaPowerWindows`, `JutilaWindowBound`, `ClassicalMeanSquareBound`,
+`JutilaLargeValues`, and `JutilaEnergyRegions`.
+All 32 new public theorems have named dependency audits. There are
+43 new semantic regressions: 32 exact signatures plus 11 localization,
+endpoint, short-height, uniform-pattern and corrected-witness consumers.
+Both human-facing BATs remain mandatory and must be updated as needed.
+
+### Completed verification
+
+Both mandatory BAT processes terminated with exit 0 and PASS on
+21 September 2026. The target ran 9,234 build jobs, all 43 new semantic
+regressions, deterministic regeneration, the exact 379-file package
+inventory, and the 390-file integrity scan. All 3,669 audited declarations
+(3,664 discovered target theorems plus five imported contracts) have
+permitted dependencies; all 32 new named theorem audits are present.
+
+The foundation's six stages also passed: 8,857 root build jobs, 7,636
+explicit public declarations, and 14,290 discovered nonprivate theorems.
+Its classification remains 301 root modules, two regressions, zero
+excluded and zero unclassified. Both final gates have zero Lean errors,
+warnings, tactic suggestions or linter failures; there are no failed
+stages. Only standard Lean/Mathlib logical axioms occur.
+
+Repository-wide placeholder and unsafe-bypass scans have no matches.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+Git `diff --check` passes; Git's LF-to-CRLF notices are file-conversion
+notices, not Lean diagnostics. No scan or warning policy was weakened.
+All 35 source/integration/runner hashes match across the gates, including
+the original counterexample. Exact commands, log paths, hashes and
+checkout identity are in the Reproduction Manifest. This verifies the
+full Jutila source theorem and the stated consumers, not the seven
+remaining Add-est clauses or the unchanged whole-proof goal.
+
+### Reproduction evidence for the full Jutila theorem
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target's final status is
+`LEAN VERIFICATION PASS`; the foundation's final status is `PASS`.
+No failed stages remain. The 32 named new theorem audits were checked
+individually against the complete target log; all appear and use only
+`propext`, `Classical.choice`, and `Quot.sound`.
+The target retains 28 required files, 20 pinned files and 12 frozen
+ANTEDB files, all verified. Deterministic certificate regeneration passes.
+
+Target log: `logs/tao-trudgian-yang-build-20260921-081559-a878375b.log`
+SHA256: `6b2a0cf3ca40570ff4f707cb8fbfae3a041377d1496905cfffdb037c374b0b72`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_081610.log`
+SHA256: `d2429c452777ec64d45ae0ea589567c329a505b1942f8bc96041477d62ad683f`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_081610.json`
+SHA256: `18dfc9288a1cb215c37184c5539622251043bf1dda3d2fc237157fb234d137f0`.
+
+The foundation JSON records six passing stages with exitCode=0,
+warnings=0, tacticInfo=0 and linterFailures=0, and failures=[].
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+The recorded checkout is branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, dirty.
+No stage, commit, push, reset, deletion, source-pin change or unrelated
+edit was performed by the agent.
+
+The following 35 file hashes were captured while the gates ran and
+rechecked unchanged after both terminal results. Documentation was then
+synchronized; it does not change the verified proof/build inventory.
+
+```text
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+c697d5ba9ff40e89505a07579d4582340baf2f5e0d01c44850ce7b078dbcffa8  Extension/TaoTrudgianYang2025.lean
+4cc0b585e50dde9eebede701812a7e529a435a0d0b8682a3f91b53641d13ad3f  Extension/TaoTrudgianYang2025/Audit.lean
+b93d66dd95acac09344ac5ee402df0827234d5189f4b4cc98453daf474906a63  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+e39ad23f8c710326780253f304da15d423f1172447eb24fc891baadae535cce2  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Add-est (iii) from corrected powering — verified history
+
+The complete third printed Add-est clause is now proved on
+173/229 ≤ σ ≤ 443/586. `NewAdditiveEnergy.lean` exports
+`add_est_iii`, `add_est_iii_bound`, and
+`add_est_iii_zero_energy`. Their exact source rate is
+
+```text
+max((173−270σ)/(16(93−125σ)),
+    (653−890σ)/(10(93−125σ)),
+    (1151−1190σ)/(20(15σ−2))).
+```
+
+The first theorem bounds A*(σ)(1−σ); the last states the fully quantified
+epsilon--delta estimate for `zeroAdditiveEnergy (σ−δ) T`. This is the
+actual unit-tolerance energy of the paper's zeros with analytic
+multiplicity, not a numerical certificate or an assumed energy estimate.
+No large-value, moment, powering, or transfer theorem remains an input.
+
+### Source-to-consumer checks
+
+`InCardinalityEnergyRegion.energyClauseThree_cardinality_caps`
+applies the proved k=13 Jutila theorem to separate corrected cardinality
+witnesses at q and q+1, with q=2 or 3 linked to the original height.
+The companion witness gives ρ/q ≤ 3−3σ. The actual Guth--Maynard
+consumer supplies the other cardinality cap.
+
+`InCardinalityEnergyRegion.energyClauseThree_general` consumes
+those caps and the independent corrected energy witness: power q at
+local height at least 6/5, and power q−1 below 6/5. The nine-branch
+Heath--Brown relation is used only through its proved monotonicity in
+cardinality. No fifth coordinate is scaled or identified.
+
+The 67 closed-interval rational certificates cover both sigma ranges
+split at 241/319, all three short-height pieces, both tall-height
+pieces, and the nine short-zeta branches. The first two printed fractions
+are explicitly normalized by reversing numerator and denominator signs;
+`energyClauseThreeRate_eq_printed` proves the exact displayed formula.
+The 4359/5770 equality of the first two rates is regression-checked.
+
+`energyClauseThree_short_zeta` supplies the entire [1,2] range:
+actual cancellation below 3/2, then the proved dyadic twelfth moment and
+the actual Heath--Brown relation on [3/2,2]. Thus
+`energyClauseThree` uses the already proved endpoint-one transfer,
+with both general [2,4] and short-zeta hypotheses derived. It does not
+assume or complete the independent source endpoint-two corollary.
+
+### Inventory and remaining whole-proof scope
+
+Nine new modules are root-imported and included in the exact inventory
+behind `run_tao_trudgian_yang_build.bat`:
+`EnergyClauseThreeCaps`, `EnergyClauseThreeRates`,
+`EnergyClauseThreeLowCertificates`, `EnergyClauseThreeHighCertificates`,
+`EnergyClauseThreeTallCertificates`, `EnergyClauseThreeBranches`,
+`EnergyClauseThreeGeneral`, `EnergyClauseThreeZetaCertificates`, and
+`EnergyClauseThree`. The existing public `NewAdditiveEnergy` module
+now exports clauses (i)--(iii). All 89 new public theorems have named
+audits; 103 new regressions include every exact signature, both closed
+sigma endpoints, height transitions, the rate crossover and actual
+corrected-witness/region consumers.
+
+The original printed Lemma 62 counterexample remains byte-for-byte
+unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The archived paper and all advertised outputs remain frozen.
+
+EPZAE-36/37 now have clauses (i)--(iii) DONE and (iv)--(ix) OPEN; neither
+whole checklist item is checked off. The full Jutila theorem, corrected
+two-witness powering and Heath--Brown energy relation remain proved.
+EPZAE-33's endpoint-two corollary, other classical inputs, the sharp
+Atkinson source-form bridge, exponent-pair/density outputs, and every
+remaining EPZAE-00--41 acceptance condition stay in the active goal.
+
+### Completed verification
+
+Both mandatory BATs terminated with exit 0 and PASS on 21 September 2026.
+The target completed 9,243 build jobs and all 103 new regressions.
+Its complete inventory covers 388 package files and 399 integrity-scanned
+Lean files. Deterministic regeneration and all pinned-source checks pass.
+All 3,780 audited declarations (3,775 discovered target theorems and five
+imported contracts) have permitted dependencies; every one of the 89
+new named audits was checked in the complete log.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and 14,290 discovered nonprivate theorems.
+Classification remains 301 root modules, two regressions, zero excluded
+and zero unclassified. Both final gates have no Lean errors, warnings,
+tactic suggestions, linter failures or failed stages.
+
+Whole-repository scans find no forbidden placeholders or unsafe bypasses.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+`git diff --check` passes; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning policy or scan was weakened.
+All 45 checked source/integration/runner hashes, including the preserved
+counterexample, match before and after the gates. The Reproduction
+Manifest records exact commands, logs, hashes and checkout identity.
+
+This verifies the complete third source clause and its real consumers,
+not the other six clauses or the whole EPZAE-00--41 goal.
+
+### Reproduction evidence for Add-est (iii)
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target reports
+`LEAN VERIFICATION PASS`; the foundation reports `PASS`.
+No failed stage or Lean diagnostic remains. The 89 new named public
+audits all occur in the complete target log and contain only
+`propext`, `Classical.choice`, and `Quot.sound`.
+There remain 28 required project files, 20 verified pinned files and
+12 verified frozen ANTEDB files. Deterministic regeneration passes.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-084022-13c08289.log`
+SHA256: `8b2d07a9efc32f5f0d2bc711562da0f2f47152e0117b37c8b503bc1d6225e151`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_084034.log`
+SHA256: `7faff7ca0f0241d97c5c4c0fc1909b131a3ad417bd37b860f22d8bf61b709961`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_084034.json`
+SHA256: `136892c28bd4e72ccaf5cb2febb1433467323e3625f0b5b3947831a492254119`.
+
+The foundation JSON records failures=[] and six passing stages, each
+with exitCode=0, warnings=0, tacticInfo=0 and linterFailures=0.
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both runs use branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, with a dirty checkout.
+Pre-existing work was preserved; the agent did not stage, commit, push,
+reset, delete files or change any dependency/source pin.
+
+The 45 hashes below match the pre-gate capture. They include all nine
+new modules, the modified public output module, every preceding Jutila
+module, integration/audits, both BATs, the exact inventory and the
+counterexample. Documentation was synchronized after verification.
+
+```text
+edb6cd3a7387940341eb7c5c88cc207f3716b7a16699eabeea91431310462f1e  Extension/TaoTrudgianYang2025/EnergyClauseThreeCaps.lean
+062cbc2116481c329c9f9e62c628efc60e72d23ed67ebb4d2d2c9b4b3483084c  Extension/TaoTrudgianYang2025/EnergyClauseThreeRates.lean
+0e54c91931bb75b82d71abbee73895035afb23e6255e892c5719b504a5ad99ec  Extension/TaoTrudgianYang2025/EnergyClauseThreeLowCertificates.lean
+986396e400a2f7d66f1f058693a157d1f0b734c2687fd72b4b4f02c3c643f012  Extension/TaoTrudgianYang2025/EnergyClauseThreeHighCertificates.lean
+7b40f65fad7541b5725721772235259a25703b4be554346adbe6d6001d33dddf  Extension/TaoTrudgianYang2025/EnergyClauseThreeTallCertificates.lean
+225b2016b0e825a3e4f381b7496f2382905ed388d4a5b56e8362cda447bda13d  Extension/TaoTrudgianYang2025/EnergyClauseThreeBranches.lean
+ccdbfef46f5b3a390c669f4aa70823b0c0d7e8b7db0041215eebb208c591bd62  Extension/TaoTrudgianYang2025/EnergyClauseThreeGeneral.lean
+4045537febed90f465e20ef9838b364f98dec86dc49e4b9f2a5dab9b3c493085  Extension/TaoTrudgianYang2025/EnergyClauseThreeZetaCertificates.lean
+438dcad2ac3de3e69dd8d08376d53c116f9b7c64ea70dc72f2de5b48504dbb0a  Extension/TaoTrudgianYang2025/EnergyClauseThree.lean
+0b1db12a902fb2af35b1395ae278cda917ef5e937ba81c2708c57e3ec131f5f4  Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+fddfa8175e3231ed0632a45fc22774ac21602a99d43eb21b0e953edbab123dc2  Extension/TaoTrudgianYang2025.lean
+1b0dfd67f213e788c01d1d8797290fbe11c2dd0ca0a17b493a7ec8bfe79c528b  Extension/TaoTrudgianYang2025/Audit.lean
+e84890f04c6a49cbfc5ab3369a089f80ff6a2a31a7045c8cfa1beb749ec17e08  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+6867f0f8ee34d27c2f9d9dfc62633de91e1fe78dc3103f8928305deb6d50feee  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Add-est (iv) from corrected powering — verified history
+
+The complete fourth printed Add-est clause is now proved on the exact
+closed interval 443/586 ≤ σ ≤ 373/493. The public
+`NewAdditiveEnergy` module exports `add_est_iv`,
+`add_est_iv_bound`, and `add_est_iv_zero_energy`, with rate
+
+```text
+max((593−810σ)/(5(171−230σ)),
+    4(266−275σ)/(5(55σ−7))).
+```
+
+The first public theorem bounds A*(σ)(1−σ). The final consumer gives the
+uniform epsilon--delta estimate for the actual
+`zeroAdditiveEnergy (σ−δ) T`, with constants preceding the height
+and with the paper's unit tolerance and analytic zero multiplicities.
+No analytic, powering, moment or transfer theorem is accepted as input.
+
+### Source-to-consumer checks
+
+`jutila_twelve_formula` specializes the proved full Jutila theorem to
+the literal k=12 maximum. The actual-region consumer
+`InCardinalityEnergyRegion.energyClauseFour_cardinality_caps`
+applies it to separate corrected cardinality witnesses at q and q+1.
+Here q=2 or 3 is chosen from the original τ∈[2,4]; τ/q∈[1,3/2]
+and τ/(q+1)≤1 are derived. The companion witness gives
+ρ/q≤3−3σ, and the actual Guth--Maynard bridge gives the second cap.
+
+`InCardinalityEnergyRegion.energyClauseFour_general` then consumes
+the independent corrected energy witness at q when τ/q≥6/5, or
+at q−1 below 6/5. The sigma split is 409/541. All nine Heath--Brown
+branches and all three short-height pieces are checked. The 67 exact
+closed-interval certificates also cover both tall-height pieces and
+all nine short-zeta branches. Numerical exploration is not proof evidence.
+
+`energyClauseFourRate_eq_printed` proves equality with the printed
+fractions after explicitly reversing both signs in the first fraction.
+Both the Jutila affine-term equality and the two-rate equality at
+409/541 are regression-checked, along with denominator signs and every
+shared domain endpoint.
+
+`energyClauseFour_short_zeta` supplies all of [1,2]: actual
+cancellation below 3/2, and the proved twelfth moment plus the actual
+Heath--Brown energy relation on [3/2,2]. `energyClauseFour` uses
+the proved endpoint-one transfer with both required energy ranges
+derived. The independent source endpoint-two corollary is not assumed.
+
+### Inventory and remaining whole-proof scope
+
+Nine new production modules are root-imported and covered by the exact
+PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`EnergyClauseFourCaps`, `EnergyClauseFourRates`,
+`EnergyClauseFourLowCertificates`, `EnergyClauseFourHighCertificates`,
+`EnergyClauseFourTallCertificates`, `EnergyClauseFourBranches`,
+`EnergyClauseFourGeneral`, `EnergyClauseFourZetaCertificates`, and
+`EnergyClauseFour`. The existing public output module now exports
+clauses (i)--(iv). All 89 new public theorems have named audits.
+There are 104 new regressions: 89 exact signatures and 15 endpoint,
+split, sign, height-transition and actual independent-witness consumers.
+
+The original Lemma 62 counterexample is unchanged byte-for-byte:
+`EnergyPoweringObstruction.lean` SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Neither the original paper nor any advertised output was changed.
+No powered fifth-coordinate bound is reintroduced.
+
+EPZAE-36/37 now have clauses (i)--(iv) DONE and (v)--(ix) OPEN; neither
+whole checklist item is checked off. The full Jutila theorem, corrected
+two-witness powering and Heath--Brown energy relation remain proved.
+The independent endpoint-two transfer, other classical inputs, the
+sharp Atkinson source-form bridge, exponent-pair/density outputs, and
+all remaining EPZAE-00--41 requirements remain in the active goal.
+
+### Completed verification
+
+Both mandatory BATs terminated with exit 0 and PASS on 21 September 2026.
+The target completed 9,252 build jobs and all 104 new regressions.
+Its complete inventory covers 397 package files and 408 integrity-scanned
+Lean files. Deterministic regeneration and all pinned-source checks pass.
+All 3,888 audited declarations (3,883 discovered target theorems and five
+imported contracts) have permitted dependencies; every one of the 89
+new named audits was checked in the complete log.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and 14,290 discovered nonprivate theorems.
+Classification remains 301 root modules, two regressions, zero excluded
+and zero unclassified. Both final gates have no Lean errors, warnings,
+tactic suggestions, linter failures or failed stages.
+
+Whole-repository scans find no forbidden placeholders or unsafe bypasses.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+`git diff --check` passes; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning policy or scan was weakened.
+All 54 checked source/integration/runner hashes, including the preserved
+counterexample, match before and after the gates. The Reproduction
+Manifest records exact commands, logs, hashes and checkout identity.
+
+This verifies the complete fourth source clause and its real consumers,
+not the other five clauses or the whole EPZAE-00--41 goal.
+
+### Reproduction evidence for Add-est (iv)
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target reports
+`LEAN VERIFICATION PASS`; the foundation reports `PASS`.
+No failed stage or Lean diagnostic remains. The 89 new named public
+audits all occur in the complete target log and contain only
+`propext`, `Classical.choice`, and `Quot.sound`.
+There remain 28 required project files, 20 verified pinned files and
+12 verified frozen ANTEDB files. Deterministic regeneration passes.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-085922-6f021da2.log`
+SHA256: `011f38268c482757e19822a6abefe653aceb61f6c354b678057d931948157369`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_085933.log`
+SHA256: `53ce0cbb84aad115d072b183088c09616a168d7dc0486d93f26b37e411646a8e`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_085933.json`
+SHA256: `e66a483bf8107bd2dc27fa797e2962a2eb4a55ccd29956dc513076de73c4c8ce`.
+
+The foundation JSON records failures=[] and six passing stages, each
+with exitCode=0, warnings=0, tacticInfo=0 and linterFailures=0.
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both runs use branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, with a dirty checkout.
+Pre-existing work was preserved; the agent did not stage, commit, push,
+reset, delete files or change any dependency/source pin.
+
+The 54 hashes below match the pre-gate capture. They include all nine
+new clause-(iv) modules, the modified public output module, the preceding
+clause-(iii) and Jutila modules, integration/audits, both BATs, the exact
+inventory and the counterexample. Documentation was synchronized after
+verification; no source or build-input hash changed.
+
+Development note: overlapping focused builds briefly encountered a missing
+intermediate olean while another build was recompiling it. A subsequent
+non-overlapping focused build, the complete semantic regression, and both
+mandatory BATs all passed. The final evidence above supersedes that
+development artifact race and the subsequently repaired binder diagnostics.
+
+```text
+a999f1f29b949423e9d38dcb3776550c7a3ef81f233f346314c2502b053b242a  Extension/TaoTrudgianYang2025/EnergyClauseFourCaps.lean
+0c619852b0341c309b578da6fbda0394663937ea0914bfcc0aa5832b959a8f49  Extension/TaoTrudgianYang2025/EnergyClauseFourRates.lean
+3200d065b91abf97d267dafd74c6c1e0b2fa26a4a349d7db3f890e737ab279ac  Extension/TaoTrudgianYang2025/EnergyClauseFourLowCertificates.lean
+4b7a0da9e667ebeeacb4f12cb967c1b5e3e9e22478430e39f537823040412d10  Extension/TaoTrudgianYang2025/EnergyClauseFourHighCertificates.lean
+b159804ef5ff8b8d773ed4fb59c0b74d495956bc8564ec7eb9db8aa84ce4771e  Extension/TaoTrudgianYang2025/EnergyClauseFourTallCertificates.lean
+d00d65d8545dfb5aa816f465cb3d2ba3a0965033dc5b21486cc00bbaaffee9ca  Extension/TaoTrudgianYang2025/EnergyClauseFourBranches.lean
+e7fccaa1f25d560f35086f13f2e3017edf0bc245c00a7301b4b879e05c053335  Extension/TaoTrudgianYang2025/EnergyClauseFourGeneral.lean
+ab7591ed2477873608d0518762942ff4a36e4f270fbcbfdfa4a0b70d67ca29a1  Extension/TaoTrudgianYang2025/EnergyClauseFourZetaCertificates.lean
+6fd175c58dc3f11fb4c507f71f6eadd2e809295bf810f82ef56f265e3a0fbf37  Extension/TaoTrudgianYang2025/EnergyClauseFour.lean
+edb6cd3a7387940341eb7c5c88cc207f3716b7a16699eabeea91431310462f1e  Extension/TaoTrudgianYang2025/EnergyClauseThreeCaps.lean
+062cbc2116481c329c9f9e62c628efc60e72d23ed67ebb4d2d2c9b4b3483084c  Extension/TaoTrudgianYang2025/EnergyClauseThreeRates.lean
+0e54c91931bb75b82d71abbee73895035afb23e6255e892c5719b504a5ad99ec  Extension/TaoTrudgianYang2025/EnergyClauseThreeLowCertificates.lean
+986396e400a2f7d66f1f058693a157d1f0b734c2687fd72b4b4f02c3c643f012  Extension/TaoTrudgianYang2025/EnergyClauseThreeHighCertificates.lean
+7b40f65fad7541b5725721772235259a25703b4be554346adbe6d6001d33dddf  Extension/TaoTrudgianYang2025/EnergyClauseThreeTallCertificates.lean
+225b2016b0e825a3e4f381b7496f2382905ed388d4a5b56e8362cda447bda13d  Extension/TaoTrudgianYang2025/EnergyClauseThreeBranches.lean
+ccdbfef46f5b3a390c669f4aa70823b0c0d7e8b7db0041215eebb208c591bd62  Extension/TaoTrudgianYang2025/EnergyClauseThreeGeneral.lean
+4045537febed90f465e20ef9838b364f98dec86dc49e4b9f2a5dab9b3c493085  Extension/TaoTrudgianYang2025/EnergyClauseThreeZetaCertificates.lean
+438dcad2ac3de3e69dd8d08376d53c116f9b7c64ea70dc72f2de5b48504dbb0a  Extension/TaoTrudgianYang2025/EnergyClauseThree.lean
+00bc1f1d6d9520b5308a52a364b0f91e6430c9c9da20ec4d1eaa818f444ec4be  Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+8f426ddfd6ab0450231f6cee924d48f6c816740dea297d343e0758b7f9da99b0  Extension/TaoTrudgianYang2025.lean
+7baed61cbfc765a11e2a164bd0cf5601f61040a0e89ca50034528ecadcc1fdac  Extension/TaoTrudgianYang2025/Audit.lean
+d87df26b19a041aecd630f983be6f865c3fc804b207a8de90c600b725e980d49  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+db6eba849436cd91497909ed2bd6585126a2f06a55b8f5876aabcf53a5c5e8c5  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Add-est (v) from corrected powering — verified history
+
+The complete fifth printed Add-est clause is now proved on the exact
+closed interval 373/493 ≤ σ ≤ 103/136. `NewAdditiveEnergy` exports
+`add_est_v`, `add_est_v_bound`, and `add_est_v_zero_energy`, with rate
+
+```text
+max((533−730σ)/(30(26−35σ)),
+    3(26−33σ)/(85σ−62),
+    (174−185σ)/(31σ+2)).
+```
+
+These give the literal A*(σ)(1−σ) inequality and the uniform
+epsilon--delta bound for actual `zeroAdditiveEnergy (σ−δ) T`.
+The constants precede the height; unit tolerance and analytic zero
+multiplicities are preserved. There is no analytic, moment, powering
+or transfer theorem parameter.
+
+### Source-to-consumer checks
+
+`jutila_eleven_formula` specializes the proved Jutila theorem to k=11.
+`InCardinalityEnergyRegion.energyClauseFive_cardinality_caps`
+consumes actual corrected cardinality witnesses at q and q+1, with
+q=2 or 3 selected from the original height τ∈[2,4]. It derives
+τ/q∈[1,3/2], the literal Jutila cap, the Guth--Maynard cap and
+ρ/q≤3−3σ. No property of an independently chosen witness is
+silently transferred to another point.
+
+`InCardinalityEnergyRegion.energyClauseFive_general` applies the
+independent energy witness at q−1 for short local height and at q
+for the middle/tall ranges. The Jutila sigma split is 171/226.
+For σ above that split the energy-power switch is
+h(σ)=(31σ+2)/22, not the preceding clause's fixed 6/5 switch.
+Both the ninth q−1 branch and the first q branch meet the third
+printed rate at h(σ); the exact identities are regression-checked.
+
+All 60 closed-interval rational certificates feed actual consumers:
+27 low-sigma short certificates, 18 high-sigma short certificates,
+two middle certificates, four tall certificates and nine short-zeta
+certificates. Numerical exploration is not proof evidence.
+`energyClauseFiveRate_eq_printed` proves the first fraction's
+simultaneous sign reversal and preserves the complete three-rate maximum.
+
+`energyClauseFive_short_zeta` supplies [1,2] explicitly: actual
+cancellation below 3/2 and the proved twelfth moment with the actual
+Heath--Brown relation above it. `energyClauseFive` then consumes
+the proved endpoint-one transfer, with both energy ranges derived.
+The independent source endpoint-two corollary is not assumed.
+
+### Inventory and remaining whole-proof scope
+
+Nine new modules are root-imported and included in the exact inventory
+behind `run_tao_trudgian_yang_build.bat`:
+`EnergyClauseFiveCaps`, `EnergyClauseFiveRates`,
+`EnergyClauseFiveLowCertificates`, `EnergyClauseFiveHighCertificates`,
+`EnergyClauseFiveTallCertificates`, `EnergyClauseFiveBranches`,
+`EnergyClauseFiveGeneral`, `EnergyClauseFiveZetaCertificates`, and
+`EnergyClauseFive`. All 85 new public theorems have named audits.
+There are 104 new regressions: 85 exact signatures and 19 endpoint,
+split, sign, witness-switch and actual independent-witness checks.
+
+The original printed Lemma 62 counterexample remains byte-for-byte
+unchanged: `EnergyPoweringObstruction.lean` SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Neither the frozen source nor an advertised output was altered.
+No scaled fifth-coordinate restriction is reintroduced.
+
+Clauses (i)--(v) are proved; (vi)--(ix) remain open.
+EPZAE-36/37 remain unchecked as whole items. The independent
+endpoint-two transfer, other classical inputs, sharp Atkinson
+source-form bridge, exponent-pair/density outputs and every other
+unfinished EPZAE-00--41 acceptance condition remain in the active goal.
+
+### Completed verification
+
+Both mandatory BATs terminated with exit 0 and PASS on 21 September 2026.
+The target completed 9,261 build jobs and all 104 new regressions.
+Its complete inventory covers 406 package files and 417 integrity-scanned
+Lean files. Deterministic regeneration and all pinned-source checks pass.
+All 3,995 audited declarations (3,990 discovered target theorems and five
+imported contracts) have permitted dependencies; every one of the 85
+new named audits was checked in the complete log.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and 14,290 discovered nonprivate theorems.
+Classification remains 301 root modules, two regressions, zero excluded
+and zero unclassified. Both final gates have no Lean errors, warnings,
+tactic suggestions, linter failures or failed stages.
+
+Whole-repository scans find no forbidden placeholders or unsafe bypasses.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+`git diff --check` passes; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning policy or scan was weakened.
+All 63 checked source/integration/runner hashes, including the preserved
+counterexample, match before and after the gates. The Reproduction
+Manifest records exact commands, logs, hashes and checkout identity.
+
+This verifies the complete fifth source clause and its real consumers,
+not the other four clauses or the whole EPZAE-00--41 goal.
+
+### Reproduction evidence for Add-est (v)
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target reports
+`LEAN VERIFICATION PASS`; the foundation reports `PASS`.
+No failed stage or Lean diagnostic remains. The 85 new named public
+audits all occur in the complete target log and contain only
+`propext`, `Classical.choice`, and `Quot.sound`.
+There remain 28 required project files, 20 verified pinned files and
+12 verified frozen ANTEDB files. Deterministic regeneration passes.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-093137-47898e68.log`
+SHA256: `bdf04daafbff87fc68a74851702172d8b68c70b9142e51937527e0d937c6915f`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_093138.log`
+SHA256: `4003e9926b07e0e1546e23642f7ab20f1f8f5c8d6e13e4bf1459aec693f8898c`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_093138.json`
+SHA256: `950b4377857bb1e3bfcfcea54da87e54442139f61a69e9e5a520951a45beaf77`.
+
+The foundation JSON records failures=[] and six passing stages, each
+with exitCode=0, warnings=0, tacticInfo=0 and linterFailures=0.
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both runs use branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, with a dirty checkout.
+Pre-existing work was preserved; the agent did not stage, commit, push,
+reset, delete files or change any dependency/source pin.
+
+The 63 hashes below match the pre-gate capture. They include all nine
+new clause-(v) modules, the modified public output module, the preceding
+clause-(iii)/(iv) and Jutila development modules, integration/audits,
+both BATs, the exact inventory and the preserved counterexample.
+Documentation was synchronized after verification; no source or build-input
+hash changed.
+
+Development diagnostics were repaired before the final gates: a new helper
+was renamed to avoid collision with an existing rational certificate;
+the ninth-branch regression now unfolds its actual finite-vector entry;
+and unnecessary tactic sequencing and one intentionally unused uniform
+upper-domain binder were corrected without suppressing any linter.
+
+```text
+49c09bbbdec47fe9b484c2b4954fe43c2f4eb85e31d03f6c8e2aa0fe4d03bbd3  Extension/TaoTrudgianYang2025/EnergyClauseFiveCaps.lean
+d38b5324f74b9e29c2d44e4759a3818aa1105906d69dc4029917b15b9e3e77df  Extension/TaoTrudgianYang2025/EnergyClauseFiveRates.lean
+6e9e91ae491de3b6b05d829921c4cd30177552701abb01e6fbc888b25b14ba2c  Extension/TaoTrudgianYang2025/EnergyClauseFiveLowCertificates.lean
+b247e0e46abba83164689db393217ad2f18aa38a2fefc4f5617d12e64ccebbd7  Extension/TaoTrudgianYang2025/EnergyClauseFiveHighCertificates.lean
+f59c130039caee05786828d4fbf134e605421751d46984f350f4eb19dcf8028f  Extension/TaoTrudgianYang2025/EnergyClauseFiveTallCertificates.lean
+a8b976a5b0349ad480b1d7be22862c2396508e11045ce079a3f73389625c44b2  Extension/TaoTrudgianYang2025/EnergyClauseFiveBranches.lean
+b412a7c830d7bf87c7a6dad79c91201b724a234fc609a62f25fa98e27491a4fd  Extension/TaoTrudgianYang2025/EnergyClauseFiveGeneral.lean
+09a45dcae23e902241c33f5bcbb5027b7576e592cb4e09e56128cb04f497d34a  Extension/TaoTrudgianYang2025/EnergyClauseFiveZetaCertificates.lean
+8e80d4cf43262e1a04a84667e167486a4af99b64d44b51c551db94a984fee0bc  Extension/TaoTrudgianYang2025/EnergyClauseFive.lean
+a999f1f29b949423e9d38dcb3776550c7a3ef81f233f346314c2502b053b242a  Extension/TaoTrudgianYang2025/EnergyClauseFourCaps.lean
+0c619852b0341c309b578da6fbda0394663937ea0914bfcc0aa5832b959a8f49  Extension/TaoTrudgianYang2025/EnergyClauseFourRates.lean
+3200d065b91abf97d267dafd74c6c1e0b2fa26a4a349d7db3f890e737ab279ac  Extension/TaoTrudgianYang2025/EnergyClauseFourLowCertificates.lean
+4b7a0da9e667ebeeacb4f12cb967c1b5e3e9e22478430e39f537823040412d10  Extension/TaoTrudgianYang2025/EnergyClauseFourHighCertificates.lean
+b159804ef5ff8b8d773ed4fb59c0b74d495956bc8564ec7eb9db8aa84ce4771e  Extension/TaoTrudgianYang2025/EnergyClauseFourTallCertificates.lean
+d00d65d8545dfb5aa816f465cb3d2ba3a0965033dc5b21486cc00bbaaffee9ca  Extension/TaoTrudgianYang2025/EnergyClauseFourBranches.lean
+e7fccaa1f25d560f35086f13f2e3017edf0bc245c00a7301b4b879e05c053335  Extension/TaoTrudgianYang2025/EnergyClauseFourGeneral.lean
+ab7591ed2477873608d0518762942ff4a36e4f270fbcbfdfa4a0b70d67ca29a1  Extension/TaoTrudgianYang2025/EnergyClauseFourZetaCertificates.lean
+6fd175c58dc3f11fb4c507f71f6eadd2e809295bf810f82ef56f265e3a0fbf37  Extension/TaoTrudgianYang2025/EnergyClauseFour.lean
+edb6cd3a7387940341eb7c5c88cc207f3716b7a16699eabeea91431310462f1e  Extension/TaoTrudgianYang2025/EnergyClauseThreeCaps.lean
+062cbc2116481c329c9f9e62c628efc60e72d23ed67ebb4d2d2c9b4b3483084c  Extension/TaoTrudgianYang2025/EnergyClauseThreeRates.lean
+0e54c91931bb75b82d71abbee73895035afb23e6255e892c5719b504a5ad99ec  Extension/TaoTrudgianYang2025/EnergyClauseThreeLowCertificates.lean
+986396e400a2f7d66f1f058693a157d1f0b734c2687fd72b4b4f02c3c643f012  Extension/TaoTrudgianYang2025/EnergyClauseThreeHighCertificates.lean
+7b40f65fad7541b5725721772235259a25703b4be554346adbe6d6001d33dddf  Extension/TaoTrudgianYang2025/EnergyClauseThreeTallCertificates.lean
+225b2016b0e825a3e4f381b7496f2382905ed388d4a5b56e8362cda447bda13d  Extension/TaoTrudgianYang2025/EnergyClauseThreeBranches.lean
+ccdbfef46f5b3a390c669f4aa70823b0c0d7e8b7db0041215eebb208c591bd62  Extension/TaoTrudgianYang2025/EnergyClauseThreeGeneral.lean
+4045537febed90f465e20ef9838b364f98dec86dc49e4b9f2a5dab9b3c493085  Extension/TaoTrudgianYang2025/EnergyClauseThreeZetaCertificates.lean
+438dcad2ac3de3e69dd8d08376d53c116f9b7c64ea70dc72f2de5b48504dbb0a  Extension/TaoTrudgianYang2025/EnergyClauseThree.lean
+258d8bb31f4943c2ea88216739360bf2565f0d6132228a785773ee78d3ca210c  Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+97a9cc7219d0695e5058bb31c3c84ba0a1ecf5ed46302af22caf056af04e0221  Extension/TaoTrudgianYang2025.lean
+247e9ed9c1bc7adac0469185c912369168d5cde8651a9d06f4a8a718099774b0  Extension/TaoTrudgianYang2025/Audit.lean
+17e199d47cc63a4496a72c0a7f75dfa0e8c0dd722a92c9191c88d917ef7e83ff  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+92e4d646e12747f91737ca172dc98d35ffdd55605238268cf0dd8c63e57894a0  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Add-est (vi) from corrected powering — verified history
+
+The complete sixth printed Add-est clause is proved on the exact
+closed interval 103/136 ≤ σ ≤ 42/55. `NewAdditiveEnergy` exports
+`add_est_vi`, `add_est_vi_bound`, and `add_est_vi_zero_energy`,
+with the unchanged rate
+
+```text
+max((72−91σ)/(7(11σ−8)),
+    5(18−19σ)/(2(5σ+3))).
+```
+
+The proof also establishes the larger blueprint theorem
+`imp-energy-bound4` on its full interval [664/877,31/40].
+`energyClauseSix` gives the actual uniform zero-energy bound there;
+`energyClauseSix_blueprint` gives the literal source-facing A*
+maximum, with (1−σ) inside both printed denominators.
+`energyClauseSixRate_div_eq_blueprint` proves that normalization.
+The paper theorem is a proved interval restriction, not a weaker
+replacement for the blueprint statement.
+
+### Source-to-consumer checks
+
+`jutila_ten_formula` specializes the full Jutila theorem to k=10.
+`InCardinalityEnergyRegion.energyClauseSix_cardinality_caps`
+derives the literal cap from the actual corrected cardinality witness
+at q, and the companion cap ρ/q≤3−3σ from a separate witness at q+1.
+It derives τ/q∈[1,3/2] from the original τ∈[2,4] with q=2 or 3.
+The actual Guth--Maynard bridge supplies the tall-height cap.
+
+`InCardinalityEnergyRegion.energyClauseSix_general` consumes the
+independent energy witness at q−1 below the moving switch and at q
+above it. The sigma split is 281/371; the two switches are
+77σ/2−28 and (14σ+1)/10. Their agreement at the split and the
+actual branch-balance identities are regression-checked.
+The companion cardinality point is never identified with the
+energy-preserving point, and no fifth coordinate is scaled.
+
+All 53 exact closed-interval certificates feed the actual consumers:
+18 low-sigma short, 18 high-sigma short, four middle, four tall and
+nine short-zeta certificates. Numerical exploration is not evidence
+for any theorem. The low switch realizes the first rate; the tall
+cardinality crossover realizes the second rate.
+
+`energyClauseSix_short_zeta` supplies all of [1,2], using actual
+cancellation below 3/2 and the proved twelfth moment with the actual
+Heath--Brown relation above it. The final source theorem consumes
+the proved endpoint-one transfer with both required energy ranges
+derived. It does not assume the independent endpoint-two corollary.
+The epsilon--delta public conclusion uses actual
+`zeroAdditiveEnergy (σ−δ) T`, with constants preceding the height,
+unit tolerance, and analytic zero multiplicities.
+
+### Inventory and remaining whole-proof scope
+
+Nine production modules are root-imported and included in the exact
+inventory behind `run_tao_trudgian_yang_build.bat`:
+`EnergyClauseSixCaps`, `EnergyClauseSixRates`,
+`EnergyClauseSixLowCertificates`, `EnergyClauseSixHighCertificates`,
+`EnergyClauseSixTallCertificates`, `EnergyClauseSixBranches`,
+`EnergyClauseSixGeneral`, `EnergyClauseSixZetaCertificates`, and
+`EnergyClauseSix`. All 80 new public theorems have named audits.
+There are 102 new regressions: 80 exact signatures and 22 source/paper
+endpoint, normalization, switch, height and actual-witness checks.
+
+The original Lemma 62 counterexample is unchanged byte-for-byte:
+`EnergyPoweringObstruction.lean` SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The frozen paper and all advertised outputs are unchanged.
+
+Clauses (i)--(vi) are proved; (vii)--(ix) remain open.
+EPZAE-36/37 remain unchecked as whole items. The independent
+endpoint-two transfer, other classical inputs, sharp Atkinson
+source-form bridge, exponent-pair/density outputs and every other
+unfinished EPZAE-00--41 requirement remain in the active goal.
+
+### Completed verification
+
+Both mandatory BATs terminated with exit 0 and PASS on 21 September 2026.
+The target completed 9,270 build jobs and all 102 new regressions.
+Its complete inventory covers 415 package files and 426 integrity-scanned
+Lean files. Deterministic regeneration and all pinned-source checks pass.
+All 4,094 audited declarations (4,089 discovered target theorems and five
+imported contracts) have permitted dependencies; every one of the 80
+new named audits was checked in the complete log.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and 14,290 discovered nonprivate theorems.
+Classification remains 301 root modules, two regressions, zero excluded
+and zero unclassified. Both final gates have no Lean errors, warnings,
+tactic suggestions, linter failures or failed stages.
+
+Whole-repository scans find no forbidden placeholders or unsafe bypasses.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+`git diff --check` passes; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning policy or scan was weakened.
+All 72 checked source/integration/runner hashes, including the preserved
+counterexample, match before and after the gates. The Reproduction
+Manifest records exact commands, logs, hashes and checkout identity.
+
+This verifies the complete sixth source clause, its real consumers and
+the full blueprint `imp-energy-bound4`, not the other three clauses
+or the whole EPZAE-00--41 goal.
+
+### Reproduction evidence for Add-est (vi)
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target reports
+`LEAN VERIFICATION PASS`; the foundation reports `PASS`.
+No failed stage or Lean diagnostic remains. The 80 new named public
+audits all occur in the complete target log and contain only
+`propext`, `Classical.choice`, and `Quot.sound`.
+There remain 28 required project files, 20 verified pinned files and
+12 verified frozen ANTEDB files. Deterministic regeneration passes.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-100129-10d4ef0d.log`
+SHA256: `2b1c11f5f30a56ca93023049a551d5656882a49f9d001dd98bb413b147fd3169`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_100130.log`
+SHA256: `857d4e73856f6ed01889ff76053d67353a9a9d4be0ecd9b2e005600ea9f93be1`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_100130.json`
+SHA256: `070d41cd1b8e939a5dc2dbdf40467bdd179aee2338586921767b1bc86a2e576c`.
+
+The foundation JSON records failures=[] and six passing stages, each
+with exitCode=0, warnings=0, tacticInfo=0 and linterFailures=0.
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both runs use branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, with a dirty checkout.
+Pre-existing work was preserved; the agent did not stage, commit, push,
+reset, delete files or change any dependency/source pin.
+
+The 72 hashes below match the pre-gate capture. They include all nine
+new clause-(vi) modules, the modified public output module, the preceding
+clause-(iii)--(v) and Jutila development modules, integration/audits,
+both BATs, the exact inventory and the preserved counterexample.
+Documentation was synchronized after verification; no source or build-input
+hash changed.
+
+Development diagnostics were repaired before the final gates. Intentionally
+irrelevant uniform upper-domain binders are explicitly marked as such,
+without linter suppression. The two low-sigma witness-switch regressions
+use explicit cancellation of the positive denominator before ring
+normalization. Their final focused regression build and both final BATs
+pass; the earlier failed tactic attempts are not verification evidence.
+
+```text
+55e19ff096e48f03b0565f018244b30202e7d0daa45f31678695aa3e54e77d8d  Extension/TaoTrudgianYang2025/EnergyClauseSixCaps.lean
+361873bdb4c7b4c9be0843c17c1fd2b57c6cb142ef13b7c2d36b34dee774e49c  Extension/TaoTrudgianYang2025/EnergyClauseSixRates.lean
+8835b9f5ac0ef07dd32b7862fb2391854c47363fb2806744c77014b5798cc12f  Extension/TaoTrudgianYang2025/EnergyClauseSixLowCertificates.lean
+0d0e34d9a849fd8f7db24e5f27b757ddd8348c863e313905604b0f90e63de84c  Extension/TaoTrudgianYang2025/EnergyClauseSixHighCertificates.lean
+a68c4e2fe60d2ff15488aa2cb513b18e1151553a6da6f027dda94a29860ca7ae  Extension/TaoTrudgianYang2025/EnergyClauseSixTallCertificates.lean
+7fa7ca9088494a341165e3d1457f6f20d586dcc787c7f4b1e00becfad493cc9a  Extension/TaoTrudgianYang2025/EnergyClauseSixBranches.lean
+99531931ae33f9d0f1d5d0833bc654376f0854dcfa0426ff568ae0461f4eb902  Extension/TaoTrudgianYang2025/EnergyClauseSixGeneral.lean
+a8ca0640d892bb50ae9d6d0761e7ab158db45f3833cfe706ecbc77cdb0056b21  Extension/TaoTrudgianYang2025/EnergyClauseSixZetaCertificates.lean
+cc600e9cfa2972e96e3fabed5c80116d2f0604a3f117380cf6bea016d2482169  Extension/TaoTrudgianYang2025/EnergyClauseSix.lean
+49c09bbbdec47fe9b484c2b4954fe43c2f4eb85e31d03f6c8e2aa0fe4d03bbd3  Extension/TaoTrudgianYang2025/EnergyClauseFiveCaps.lean
+d38b5324f74b9e29c2d44e4759a3818aa1105906d69dc4029917b15b9e3e77df  Extension/TaoTrudgianYang2025/EnergyClauseFiveRates.lean
+6e9e91ae491de3b6b05d829921c4cd30177552701abb01e6fbc888b25b14ba2c  Extension/TaoTrudgianYang2025/EnergyClauseFiveLowCertificates.lean
+b247e0e46abba83164689db393217ad2f18aa38a2fefc4f5617d12e64ccebbd7  Extension/TaoTrudgianYang2025/EnergyClauseFiveHighCertificates.lean
+f59c130039caee05786828d4fbf134e605421751d46984f350f4eb19dcf8028f  Extension/TaoTrudgianYang2025/EnergyClauseFiveTallCertificates.lean
+a8b976a5b0349ad480b1d7be22862c2396508e11045ce079a3f73389625c44b2  Extension/TaoTrudgianYang2025/EnergyClauseFiveBranches.lean
+b412a7c830d7bf87c7a6dad79c91201b724a234fc609a62f25fa98e27491a4fd  Extension/TaoTrudgianYang2025/EnergyClauseFiveGeneral.lean
+09a45dcae23e902241c33f5bcbb5027b7576e592cb4e09e56128cb04f497d34a  Extension/TaoTrudgianYang2025/EnergyClauseFiveZetaCertificates.lean
+8e80d4cf43262e1a04a84667e167486a4af99b64d44b51c551db94a984fee0bc  Extension/TaoTrudgianYang2025/EnergyClauseFive.lean
+a999f1f29b949423e9d38dcb3776550c7a3ef81f233f346314c2502b053b242a  Extension/TaoTrudgianYang2025/EnergyClauseFourCaps.lean
+0c619852b0341c309b578da6fbda0394663937ea0914bfcc0aa5832b959a8f49  Extension/TaoTrudgianYang2025/EnergyClauseFourRates.lean
+3200d065b91abf97d267dafd74c6c1e0b2fa26a4a349d7db3f890e737ab279ac  Extension/TaoTrudgianYang2025/EnergyClauseFourLowCertificates.lean
+4b7a0da9e667ebeeacb4f12cb967c1b5e3e9e22478430e39f537823040412d10  Extension/TaoTrudgianYang2025/EnergyClauseFourHighCertificates.lean
+b159804ef5ff8b8d773ed4fb59c0b74d495956bc8564ec7eb9db8aa84ce4771e  Extension/TaoTrudgianYang2025/EnergyClauseFourTallCertificates.lean
+d00d65d8545dfb5aa816f465cb3d2ba3a0965033dc5b21486cc00bbaaffee9ca  Extension/TaoTrudgianYang2025/EnergyClauseFourBranches.lean
+e7fccaa1f25d560f35086f13f2e3017edf0bc245c00a7301b4b879e05c053335  Extension/TaoTrudgianYang2025/EnergyClauseFourGeneral.lean
+ab7591ed2477873608d0518762942ff4a36e4f270fbcbfdfa4a0b70d67ca29a1  Extension/TaoTrudgianYang2025/EnergyClauseFourZetaCertificates.lean
+6fd175c58dc3f11fb4c507f71f6eadd2e809295bf810f82ef56f265e3a0fbf37  Extension/TaoTrudgianYang2025/EnergyClauseFour.lean
+edb6cd3a7387940341eb7c5c88cc207f3716b7a16699eabeea91431310462f1e  Extension/TaoTrudgianYang2025/EnergyClauseThreeCaps.lean
+062cbc2116481c329c9f9e62c628efc60e72d23ed67ebb4d2d2c9b4b3483084c  Extension/TaoTrudgianYang2025/EnergyClauseThreeRates.lean
+0e54c91931bb75b82d71abbee73895035afb23e6255e892c5719b504a5ad99ec  Extension/TaoTrudgianYang2025/EnergyClauseThreeLowCertificates.lean
+986396e400a2f7d66f1f058693a157d1f0b734c2687fd72b4b4f02c3c643f012  Extension/TaoTrudgianYang2025/EnergyClauseThreeHighCertificates.lean
+7b40f65fad7541b5725721772235259a25703b4be554346adbe6d6001d33dddf  Extension/TaoTrudgianYang2025/EnergyClauseThreeTallCertificates.lean
+225b2016b0e825a3e4f381b7496f2382905ed388d4a5b56e8362cda447bda13d  Extension/TaoTrudgianYang2025/EnergyClauseThreeBranches.lean
+ccdbfef46f5b3a390c669f4aa70823b0c0d7e8b7db0041215eebb208c591bd62  Extension/TaoTrudgianYang2025/EnergyClauseThreeGeneral.lean
+4045537febed90f465e20ef9838b364f98dec86dc49e4b9f2a5dab9b3c493085  Extension/TaoTrudgianYang2025/EnergyClauseThreeZetaCertificates.lean
+438dcad2ac3de3e69dd8d08376d53c116f9b7c64ea70dc72f2de5b48504dbb0a  Extension/TaoTrudgianYang2025/EnergyClauseThree.lean
+a20b28628aeeadc548cc9dbc5afb793aeb604d7f15bcffe52b25a2541fed6baa  Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+a73428cedecef709c060aa1fc1b5f984e7b4eacd6aa6f54a8045dcb69a6d35f9  Extension/TaoTrudgianYang2025.lean
+0a05828907b9f3a6ed35c7aaa0cc3956934f2e9e299f2751f35351a88f13c5ac  Extension/TaoTrudgianYang2025/Audit.lean
+df62ed52d3708ae6c38a4dc701ab3ecd64ffcccf57fd1ede53d57d9737ba4173  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+4b39fe5a5ecbc148b3b431b3476d7c24ba22d1d0e5b62ce6fc193fcffcc80e56  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Add-est (vii) and (viii) from corrected powering — verified history
+
+The exact seventh and eighth printed Add-est clauses are proved on
+their full closed intervals. `NewAdditiveEnergy` exports
+`add_est_vii`, `add_est_vii_bound`, `add_est_vii_zero_energy`,
+`add_est_viii`, `add_est_viii_bound`, and
+`add_est_viii_zero_energy`.
+
+For [42/55,79/103], the unchanged rate for A*(σ)(1−σ) is
+
+```text
+max((18−19σ)/(6(15σ−11)), 3(18−19σ)/(4(4σ−1))).
+```
+
+For [79/103,84/109], it is
+
+```text
+max((18−19σ)/(2(37σ−27)), 5(18−19σ)/(2(13σ−3))).
+```
+
+`energyClauseSeven_blueprint` and `energyClauseEight_blueprint`
+also give the literal full-source conclusions of `imp-energy-bound6`
+and `imp-energy-bound7`, respectively. Their (1−σ) factors occur
+inside both printed denominators, with proved normalization identities.
+The public epsilon--delta conclusions use actual
+`zeroAdditiveEnergy (σ−δ) T`, analytic zero multiplicities and unit
+tolerance; constants and the positive sigma loss precede the height.
+
+### Actual witnesses and complete interval consumers
+
+The full Jutila theorem is specialized to k=6 for clause (vii) and
+k=5 for clause (viii). The respective sigma splits are 97/127 and
+33/43. Each `energyClauseSeven_cardinality_caps` /
+`energyClauseEight_cardinality_caps` theorem derives both the literal
+Jutila cap at q and the companion bound ρ/q≤3−3σ at q+1 from
+actual corrected cardinality witnesses. The energy witness is separate.
+
+For τ∈[2,4], the proved cover chooses q=2 or 3 and derives τ/q∈[1,3/2].
+Below the diagonal-cardinality crossover, the proof consumes the actual
+q−1 energy witness and all nine Heath--Brown branches. Above it, the
+actual q energy witness supplies the two proved small-height branches.
+The crossover pairs are 46σ−34 and (11σ−5)/3 for clause (vii), and
+38σ−28 and (18σ−8)/5 for clause (viii). The companion-cap crossover
+pairs are 45σ−33 and (8σ−2)/3, and 37σ−27 and (13σ−3)/5.
+The second q-energy branch realizes the corresponding printed rate
+at each companion crossover; exact identities are regression-checked.
+
+Each clause has 35 kernel-checked interval certificates: nine low-sigma
+short, nine high-sigma short, eight tall, and nine short-zeta certificates.
+All feed actual region consumers and uniform bounds. The independent
+power ratio is bounded at 2/3 only for branch 0 and at 1/2 for the other
+eight branches; the sign-sensitive branch 2 has an explicit regression.
+No fifth coordinate is scaled or identified across the witnesses.
+Numerical exploration is not proof evidence.
+
+For both clauses the full short-zeta range [1,2] is derived from actual
+cancellation below 3/2 and the proved twelfth moment above it. The final
+theorems consume the proved endpoint-one transfer with τ₀=2.
+For clause (viii), this is a documented proof refactoring: the blueprint
+uses a varying τ₀, whereas Lean derives all required bounds on [2,4]
+and [1,2] directly. The exact source conclusion is unchanged; no
+varying-height intermediate bound or endpoint-two corollary is assumed.
+
+### Inventory and unchanged whole-proof scope
+
+Eighteen production modules are root-imported and included in the exact
+inventory behind `run_tao_trudgian_yang_build.bat`. Each
+`EnergyClauseSeven` / `EnergyClauseEight` family contains `Caps`,
+`Rates`, `LowCertificates`, `HighCertificates`, `TallCertificates`,
+`Branches`, `General`, `ZetaCertificates`, and the final assembly.
+All 122 new public theorems have named audits. There are 172 new
+regressions: 122 exact signatures and 50 endpoint, normalization,
+crossover, height and actual-witness checks.
+
+The original counterexample is unchanged byte-for-byte:
+`EnergyPoweringObstruction.lean` SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The original paper and source pins are unchanged.
+
+Clauses (i)--(viii) are proved; (ix) remains open. EPZAE-36/37 remain
+unchecked as whole items. The independent endpoint-two transfer,
+remaining classical inputs, sharp Atkinson source-form bridge,
+exponent-pair/density outputs and every other unfinished EPZAE-00--41
+requirement remain in the active goal.
+
+### Completed verification
+
+Both mandatory BATs terminated with exit 0 and PASS on 21 September 2026.
+The target completed 9,288 build jobs and all 172 new regressions.
+Its complete inventory covers 433 package files and 444 integrity-scanned
+Lean files. Deterministic regeneration and all pinned-source checks pass.
+All 4,249 audited declarations (4,244 discovered target theorems and five
+imported contracts) have permitted dependencies; all 122 new named audits
+were checked in the complete target log.
+
+The foundation completed all six stages, 8,857 root build jobs, 7,636
+explicit public declarations and 14,290 discovered nonprivate theorems.
+Classification remains 301 root modules, two regressions, zero excluded
+and zero unclassified. Both final gates have no Lean errors, warnings,
+tactic suggestions, linter failures or failed stages.
+
+Whole-repository scans find no forbidden placeholders or unsafe bypasses.
+The twelve raw postulate-pattern matches are the reviewed ten comments
+and two rational structure fields, not postulated declarations.
+`git diff --check` passes; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning policy or scan was weakened.
+All 90 checked source/integration/runner hashes, including the preserved
+counterexample, match before and after the gates. The Reproduction
+Manifest records exact commands, logs, hashes and checkout identity.
+
+This verifies the complete seventh and eighth paper clauses, their real
+consumers and their full blueprint conclusions. Clause (ix) and all other
+unfinished EPZAE-00--41 requirements remain in the unchanged active goal.
+
+### Reproduction evidence for Add-est (vii) and (viii)
+
+Commands:
+
+```powershell
+# In this target folder:
+cmd /c run_tao_trudgian_yang_build.bat --no-pause
+
+# In E:/Lean/Riemann Zeta:
+cmd /c run_lake_build.bat --no-pause
+```
+
+Both processes terminated with exit 0. The target reports
+`LEAN VERIFICATION PASS`; the foundation reports `PASS`.
+No failed stage or Lean diagnostic remains. All 122 new named public
+audits occur in the complete target log and contain only
+`propext`, `Classical.choice`, and `Quot.sound`.
+There remain 28 required project files, 20 verified pinned files and
+12 verified frozen ANTEDB files. Deterministic regeneration passes.
+
+Target log:
+`logs/tao-trudgian-yang-build-20260921-102820-60f30e34.log`
+SHA256: `a3c2d2cef6e9cdd926042424e05a6ae9a6070b5f1c830ea8b605e6825753177f`.
+
+Foundation log:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_102820.log`
+SHA256: `27bde36496f555b86079e47639ed81c25d3c7a53a02618e637134bd024fb8f03`.
+
+Foundation JSON:
+`E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_102820.json`
+SHA256: `ba93889dc4f813691c66fa11ac2f16c3db7c2fc4661cf67df05dda04a4e0f718`.
+
+The foundation JSON records failures=[] and six passing stages, each
+with exitCode=0, warnings=0, tacticInfo=0 and linterFailures=0.
+Verifier SHA256:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+Both runs use branch `main`, HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, with a dirty checkout.
+Pre-existing work was preserved; the agent did not stage, commit, push,
+reset, delete files or change any dependency/source pin.
+
+The 90 hashes below match the pre-gate capture. They include all eighteen
+new clause-(vii)/(viii) modules, the modified public output module,
+preceding clause-(iii)--(vi) and Jutila development modules,
+integration/audits, both BATs, the exact inventory and the counterexample.
+Documentation was synchronized after verification; no source or build-input
+hash changed.
+
+Development diagnostics were repaired before final verification:
+the sign-sensitive branch-2 certificate now uses the actual upper bound
+a=1/2; intentionally irrelevant uniform upper-domain binders are explicitly
+marked without linter suppression. Clause-(viii) endpoint regressions were
+rewritten with their literal source coefficients, and a denominator
+cancellation regression was made explicit. The final focused regression
+build completed 9,288 jobs with no diagnostics. Earlier failed development
+attempts are not verification evidence, and no source conclusion was weakened.
+
+```text
+30009425681111855fd37bf7225c630d794c77c49c9bda25ae6eecd91ff69951  Extension/TaoTrudgianYang2025/EnergyClauseEightCaps.lean
+e0763b843cfb232540b7e3fe7c458ec2ad338c6a7c17f64368915aca626e4101  Extension/TaoTrudgianYang2025/EnergyClauseEightRates.lean
+04ce205190ae950c8f3cc70d1e7038d607d8ec1adc5d5e76f0a41ba3473c2354  Extension/TaoTrudgianYang2025/EnergyClauseEightLowCertificates.lean
+0de7555d2cf9cf77a6fb541a779a63ff06c0984e5006764b33b764fa4b0d931d  Extension/TaoTrudgianYang2025/EnergyClauseEightHighCertificates.lean
+6970ce2f2ceb4766ac222f50e516c0dbacd9aede11a82507040352ead3cd1b62  Extension/TaoTrudgianYang2025/EnergyClauseEightTallCertificates.lean
+ebf7d603b31ad41ea727c8cbbbd2d68e9275d9e3dd54cd05331fec05175588f7  Extension/TaoTrudgianYang2025/EnergyClauseEightBranches.lean
+8c16cef366184391d2924ef696a3139d089c9e9a9d4040f7d3a4695ec3145962  Extension/TaoTrudgianYang2025/EnergyClauseEightGeneral.lean
+7142ef2e77d4b1224e142fe2de94113f4f04dba6973cec09a2df3bece0ff412c  Extension/TaoTrudgianYang2025/EnergyClauseEightZetaCertificates.lean
+6c5239185d504f40cdd8e660844d2fa9ec0ebef43cedb534dd45a0105131cb44  Extension/TaoTrudgianYang2025/EnergyClauseEight.lean
+8dda496b5614c62df1caab57742165127212d62a3ad94cae1afbe452e6e3da55  Extension/TaoTrudgianYang2025/EnergyClauseSevenCaps.lean
+3d438d78eb9b37263f8b1cd495ca1169f18b381c916ee17fb18fb9692aa29a95  Extension/TaoTrudgianYang2025/EnergyClauseSevenRates.lean
+959256089cad05062e3bbeff43cb4f2f36dc8a9b27c0dfbe3fc99e0d1c871ae1  Extension/TaoTrudgianYang2025/EnergyClauseSevenLowCertificates.lean
+fc0a200455c3794bdd87a043ddf6ff19bdc192a768d69680588012b1cacc2dcc  Extension/TaoTrudgianYang2025/EnergyClauseSevenHighCertificates.lean
+07adf70d61d7fa54dcdc01b0632678ec52d8a548075546ec372662f433e9b1a0  Extension/TaoTrudgianYang2025/EnergyClauseSevenTallCertificates.lean
+e2c6bda901a34c631d44aa3ef55125dc217a5d0672da26a429cf0e5b8e7ab3ae  Extension/TaoTrudgianYang2025/EnergyClauseSevenBranches.lean
+d7c31b74eba6e074e243bce8a242e82ed6c3c0f38fd88dd0f4dd16fb51effeba  Extension/TaoTrudgianYang2025/EnergyClauseSevenGeneral.lean
+bcad4f3a70d4850d2c2c536dae904594c976ad87cd2f7a9f807d620e706ae5f4  Extension/TaoTrudgianYang2025/EnergyClauseSevenZetaCertificates.lean
+d84a732dacc6cb6de78b2460997dcd280b9170c7272a02ffaabd21f0e1e8f007  Extension/TaoTrudgianYang2025/EnergyClauseSeven.lean
+55e19ff096e48f03b0565f018244b30202e7d0daa45f31678695aa3e54e77d8d  Extension/TaoTrudgianYang2025/EnergyClauseSixCaps.lean
+361873bdb4c7b4c9be0843c17c1fd2b57c6cb142ef13b7c2d36b34dee774e49c  Extension/TaoTrudgianYang2025/EnergyClauseSixRates.lean
+8835b9f5ac0ef07dd32b7862fb2391854c47363fb2806744c77014b5798cc12f  Extension/TaoTrudgianYang2025/EnergyClauseSixLowCertificates.lean
+0d0e34d9a849fd8f7db24e5f27b757ddd8348c863e313905604b0f90e63de84c  Extension/TaoTrudgianYang2025/EnergyClauseSixHighCertificates.lean
+a68c4e2fe60d2ff15488aa2cb513b18e1151553a6da6f027dda94a29860ca7ae  Extension/TaoTrudgianYang2025/EnergyClauseSixTallCertificates.lean
+7fa7ca9088494a341165e3d1457f6f20d586dcc787c7f4b1e00becfad493cc9a  Extension/TaoTrudgianYang2025/EnergyClauseSixBranches.lean
+99531931ae33f9d0f1d5d0833bc654376f0854dcfa0426ff568ae0461f4eb902  Extension/TaoTrudgianYang2025/EnergyClauseSixGeneral.lean
+a8ca0640d892bb50ae9d6d0761e7ab158db45f3833cfe706ecbc77cdb0056b21  Extension/TaoTrudgianYang2025/EnergyClauseSixZetaCertificates.lean
+cc600e9cfa2972e96e3fabed5c80116d2f0604a3f117380cf6bea016d2482169  Extension/TaoTrudgianYang2025/EnergyClauseSix.lean
+49c09bbbdec47fe9b484c2b4954fe43c2f4eb85e31d03f6c8e2aa0fe4d03bbd3  Extension/TaoTrudgianYang2025/EnergyClauseFiveCaps.lean
+d38b5324f74b9e29c2d44e4759a3818aa1105906d69dc4029917b15b9e3e77df  Extension/TaoTrudgianYang2025/EnergyClauseFiveRates.lean
+6e9e91ae491de3b6b05d829921c4cd30177552701abb01e6fbc888b25b14ba2c  Extension/TaoTrudgianYang2025/EnergyClauseFiveLowCertificates.lean
+b247e0e46abba83164689db393217ad2f18aa38a2fefc4f5617d12e64ccebbd7  Extension/TaoTrudgianYang2025/EnergyClauseFiveHighCertificates.lean
+f59c130039caee05786828d4fbf134e605421751d46984f350f4eb19dcf8028f  Extension/TaoTrudgianYang2025/EnergyClauseFiveTallCertificates.lean
+a8b976a5b0349ad480b1d7be22862c2396508e11045ce079a3f73389625c44b2  Extension/TaoTrudgianYang2025/EnergyClauseFiveBranches.lean
+b412a7c830d7bf87c7a6dad79c91201b724a234fc609a62f25fa98e27491a4fd  Extension/TaoTrudgianYang2025/EnergyClauseFiveGeneral.lean
+09a45dcae23e902241c33f5bcbb5027b7576e592cb4e09e56128cb04f497d34a  Extension/TaoTrudgianYang2025/EnergyClauseFiveZetaCertificates.lean
+8e80d4cf43262e1a04a84667e167486a4af99b64d44b51c551db94a984fee0bc  Extension/TaoTrudgianYang2025/EnergyClauseFive.lean
+a999f1f29b949423e9d38dcb3776550c7a3ef81f233f346314c2502b053b242a  Extension/TaoTrudgianYang2025/EnergyClauseFourCaps.lean
+0c619852b0341c309b578da6fbda0394663937ea0914bfcc0aa5832b959a8f49  Extension/TaoTrudgianYang2025/EnergyClauseFourRates.lean
+3200d065b91abf97d267dafd74c6c1e0b2fa26a4a349d7db3f890e737ab279ac  Extension/TaoTrudgianYang2025/EnergyClauseFourLowCertificates.lean
+4b7a0da9e667ebeeacb4f12cb967c1b5e3e9e22478430e39f537823040412d10  Extension/TaoTrudgianYang2025/EnergyClauseFourHighCertificates.lean
+b159804ef5ff8b8d773ed4fb59c0b74d495956bc8564ec7eb9db8aa84ce4771e  Extension/TaoTrudgianYang2025/EnergyClauseFourTallCertificates.lean
+d00d65d8545dfb5aa816f465cb3d2ba3a0965033dc5b21486cc00bbaaffee9ca  Extension/TaoTrudgianYang2025/EnergyClauseFourBranches.lean
+e7fccaa1f25d560f35086f13f2e3017edf0bc245c00a7301b4b879e05c053335  Extension/TaoTrudgianYang2025/EnergyClauseFourGeneral.lean
+ab7591ed2477873608d0518762942ff4a36e4f270fbcbfdfa4a0b70d67ca29a1  Extension/TaoTrudgianYang2025/EnergyClauseFourZetaCertificates.lean
+6fd175c58dc3f11fb4c507f71f6eadd2e809295bf810f82ef56f265e3a0fbf37  Extension/TaoTrudgianYang2025/EnergyClauseFour.lean
+edb6cd3a7387940341eb7c5c88cc207f3716b7a16699eabeea91431310462f1e  Extension/TaoTrudgianYang2025/EnergyClauseThreeCaps.lean
+062cbc2116481c329c9f9e62c628efc60e72d23ed67ebb4d2d2c9b4b3483084c  Extension/TaoTrudgianYang2025/EnergyClauseThreeRates.lean
+0e54c91931bb75b82d71abbee73895035afb23e6255e892c5719b504a5ad99ec  Extension/TaoTrudgianYang2025/EnergyClauseThreeLowCertificates.lean
+986396e400a2f7d66f1f058693a157d1f0b734c2687fd72b4b4f02c3c643f012  Extension/TaoTrudgianYang2025/EnergyClauseThreeHighCertificates.lean
+7b40f65fad7541b5725721772235259a25703b4be554346adbe6d6001d33dddf  Extension/TaoTrudgianYang2025/EnergyClauseThreeTallCertificates.lean
+225b2016b0e825a3e4f381b7496f2382905ed388d4a5b56e8362cda447bda13d  Extension/TaoTrudgianYang2025/EnergyClauseThreeBranches.lean
+ccdbfef46f5b3a390c669f4aa70823b0c0d7e8b7db0041215eebb208c591bd62  Extension/TaoTrudgianYang2025/EnergyClauseThreeGeneral.lean
+4045537febed90f465e20ef9838b364f98dec86dc49e4b9f2a5dab9b3c493085  Extension/TaoTrudgianYang2025/EnergyClauseThreeZetaCertificates.lean
+438dcad2ac3de3e69dd8d08376d53c116f9b7c64ea70dc72f2de5b48504dbb0a  Extension/TaoTrudgianYang2025/EnergyClauseThree.lean
+150b7e21f13fb1cd0585ab46fe1937b627d247628bff61b368d7fc8ca57f0aad  Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean
+82bdb70f8b6c4f6dafa1e7eb9741202077cd3bd22a074985c8b77f73f7764038  Extension/TaoTrudgianYang2025/JutilaRecurrence.lean
+2749a36c0e314626a68cfdb4093635c223dd6010ea2cb1fadc2f4c98f53d3b3f  Extension/TaoTrudgianYang2025/JutilaLocalCardinality.lean
+156ead8883fbe4fdb10158b1e9a66ff4a7f0f788504f466cb126603af624abbb  Extension/TaoTrudgianYang2025/JutilaLocalAlgebra.lean
+cd76535980089e0f410656c05d5a2a906ddf5b22f4ef2c0d05b8d6339458b9bc  Extension/TaoTrudgianYang2025/JutilaLocalUniform.lean
+81a445106244f53e1bc4523eff7a9663e3a49ddc4dc15d5abcb917c748065838  Extension/TaoTrudgianYang2025/LargeValueSubdivision.lean
+746fedc2e41e2db22662a94e96fbef75c07f870135054ce50dbdb8f67ff04d19  Extension/TaoTrudgianYang2025/JutilaSubdivision.lean
+1ebcafd78db0e195752b56e2b8a393e959b3390e289ba6bbf1f4747d7ece62fe  Extension/TaoTrudgianYang2025/JutilaPowerWindows.lean
+52865d41cd92ae8a22d5435579d3d3bb1453f72cf02daac7fd4803d043051f95  Extension/TaoTrudgianYang2025/JutilaWindowBound.lean
+644353d52aa4bc698e8ca56de28ca4e6fcb2065a88bab2d55cf825452ec122da  Extension/TaoTrudgianYang2025/ClassicalMeanSquareBound.lean
+fcc030eaaf37b691fa1c4a8f80158ba6c50dc2160d193a403b5b474c61cf7056  Extension/TaoTrudgianYang2025/JutilaLargeValues.lean
+5b8f9d660faa88f79973cdc9096923576c3f127dd3f350fdc5920ddaa03521c1  Extension/TaoTrudgianYang2025/JutilaEnergyRegions.lean
+fa99ec0fc59e14a254fc3296e3cf20782b42f911a8e16865304b186603f65f1e  Extension/TaoTrudgianYang2025/JutilaDualScales.lean
+bb095955d6ebce8d708a0e89ebae57c0c6747392ee7b62632915dd22026ef274  Extension/TaoTrudgianYang2025/JutilaPhysicalMain.lean
+b521abdab7b8b071407bac7b96c2a62af838fa84b3fd124a58006f0ff338b60d  Extension/TaoTrudgianYang2025/JutilaPhysicalPatterns.lean
+4e1acd1ba15a5babc0ac05260938ac450dc20f7fa5f1dba445061c20263e3656  Extension/TaoTrudgianYang2025/JutilaSmoothingErrors.lean
+5c53b1a85fd645bd18a0b579f820f1205e8bd00da05334658eb6b4e82efe7154  Extension/TaoTrudgianYang2025/JutilaSmoothingProfile.lean
+d9e5eb5dfdce9c7bfb814ce5f414426d2d68ba9ad4a02c32cae3479a1a1d5ea0  Extension/TaoTrudgianYang2025/JutilaSmoothingLosses.lean
+a224cb810087d3d5ee05bde4846d93eefa0750d8a076f976a6d249d50fd7a281  Extension/TaoTrudgianYang2025/JutilaSmoothedPatterns.lean
+bb9027344bcb61f0334a86af8cb52a5ba1e5f372fc01dadc7ec0f74debbd9436  Extension/TaoTrudgianYang2025/JutilaPolynomialMoments.lean
+3a4776b9c08864082e8c7c66fde144ef4e6bd695613c610ca7b97946464c5506  Extension/TaoTrudgianYang2025/JutilaPrefixMoments.lean
+221c90825aa77e12aeb5549a13c9f1a3419d9b1b6f745c336591f24c77a0e2c6  Extension/TaoTrudgianYang2025/JutilaReflectionIntegrals.lean
+8a2c3b2dfeab768668b6313848e8bd27a16f19e764402275fdfdd3b831a15962  Extension/TaoTrudgianYang2025/JutilaTraceBins.lean
+cc3da2c0b322c58c3319082edf92a7f76ad110e76d99cdb7949daf2a74ceb3c7  Extension/TaoTrudgianYang2025/JutilaBinnedPatterns.lean
+fdcedc1a264fb69f488425ba03b5480c27749d13e5bbfc1e3bb5c71cec316761  Extension/TaoTrudgianYang2025/JutilaHybridPatterns.lean
+c8d552d56b32e4a61927c2f907f460ebba1323d088a29ea12e015d039fbd150f  Extension/TaoTrudgianYang2025/JutilaGram.lean
+740af0147829aaaf632eff96cc28a0b81b4df89370607fdadff00346a5afbecc  Extension/TaoTrudgianYang2025/JutilaPatternEntry.lean
+61f930fc62d50bfd1d99c302be8d5ad62ab8a33a4a1f58b779af5087bda70f6f  Extension/TaoTrudgianYang2025/JutilaPoweredMoments.lean
+6c22bb0b26ae0cb08b6fafb3d64a2e7836809edd5632e07c6c3dc1d5ef0ec252  Extension/TaoTrudgianYang2025/JutilaReflectedEntry.lean
+eb43f378d4425100b4ee76f3815f2233f2a1123574911b6448355bade5f3a644  Extension/TaoTrudgianYang2025.lean
+33e66d20fa11a043692b4d4fbb1ee61d0c1b9fa47543ed8a6a839105be052f91  Extension/TaoTrudgianYang2025/Audit.lean
+a482eede21bfde6edbaf6e7ee651c52c041ae454397147fad930837e55bd2b63  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+bb1879279a91c21f96281fe1ce8876d62d857ad4d7a1ed5fbba190b36b3c4869  Tools/run_tao_trudgian_yang_build.ps1
+6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098  run_tao_trudgian_yang_build.bat
+76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487  Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean
+a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303  E:/Lean/Riemann Zeta/run_lake_build.bat
+```
+
+## Double-zeta source bounds and Bourgain algebra — verified history
+
+The corrected powering theorem and Add-est (i)--(viii) remain proved.
+The printed Lemma 62 counterexample is byte-for-byte unchanged:
+SHA256 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+Four new modules advance the remaining clause-(ix) route:
+
+- `HeathBrownDoubleZetaFinite` proves the uniform finite double-zeta bound
+  on actual closed-support patterns, with the one-endpoint error and
+  reflected interval proved explicitly.
+- `HeathBrownDoubleZeta` proves the full frozen `hb-double` conclusion
+  `s ≤ max(max(ρ+1,2ρ),5ρ/4+τ/2)+1` for actual region points,
+  including τ=0. Its small-height and diagonal-equality consumers are proved.
+- `MixedDoubleZeta` proves the mixed Cauchy--Schwarz inequality with the
+  actual kernel at **t−u**, and consumes actual patterns with common support.
+- `BourgainLargeValueAlgebra` proves witness elimination and the exact
+  certificate for the row `ρ ≤ 9−12σ+2τ/3`. The resulting cardinality
+  bound is **conditional on the explicitly displayed Bourgain dichotomy**;
+  the finite analytic selection and its limiting bridge remain OPEN.
+
+The row certificate uses α₁=(τ+9−12σ)/6 and
+α₂=max(0,4σ+4τ/3−5), a proved alternative to the table's α₂.
+All five branches are checked on the complete stated closed row.
+A rational regression at σ=771/1000 detects the gap in simply extrapolating
+the previous Jutila/HB local peak rate; numerical sampling is not evidence
+for clause (ix).
+
+There are 25 new named audits and 35 new regressions. All four modules are
+in the root imports and the `run_tao_trudgian_yang_build.bat` PowerShell
+inventory. No source archive, dependency pin, public Add-est statement,
+or counterexample was changed. In particular, no constraint on s′/s
+has been reintroduced.
+
+Add-est (ix), its actual Bourgain input and final general/zeta optimization,
+the other public outputs, and every remaining EPZAE-00--41 acceptance test
+remain OPEN. EPZAE-19, 36 and 37 are not checked off by these supporting results.
+
+### Current verification evidence
+
+On dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: PASS, exit 0;
+  437 package Lean files, 448 integrity-scanned files, 9,292 build jobs,
+  4,277 discovered target theorems and 4,282 audited declarations.
+  All 25 new named audits permit only the standard logical axioms.
+  Log: `logs/tao-trudgian-yang-build-20260921-110817-ade1e44e.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: PASS, exit 0;
+  all six verification stages pass, with 301 root modules, 2 explicit
+  regressions, 0 unclassified files, and 14,290 discovered theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_110818.log`;
+  manifest: `logs/foundation_freeze_20260921_110818.json`.
+
+Both runs have zero Lean errors, warnings, tactic suggestions or linter failures.
+There are no remaining failed verification stages. These are build/integrity
+results for the installed scope, not a claim that clause (ix) or the whole goal
+is complete. The reproduction manifest records hashes of the tested sources.
+
+### Tested source and log hashes
+
+The existing 90-file source/integration snapshot was checked before work;
+these four added files and four changed integration files identify this pass.
+A 94-file snapshot was taken before the two runners. No Lean source or runner
+was changed during or after those runs; the following edits synchronize prose.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025.lean` | `b449622559bf98b7ddaa96e28e97abca28308342d0049a580f9588dd31e7fe27` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `09cc2a08830d606eff7384b54f68334b6b87aeba6a40aa5b248ddd526393904b` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `fae89322ff5a8350477c04fbbec30d28fbca7a4b69907db7170a090c06e04dab` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `87ebdacf90371d46ca89139db161193971aa7c13d3b0c7658a170b6162af1af1` |
+| `Extension/TaoTrudgianYang2025/HeathBrownDoubleZetaFinite.lean` | `fb832881381ffc2c6fa06fb7e90c179425a667aa60b2968f63588c7bf012fb2c` |
+| `Extension/TaoTrudgianYang2025/HeathBrownDoubleZeta.lean` | `654929ff666d92898fe6ae4827cf212c8783162206e47614fb04165062ff8417` |
+| `Extension/TaoTrudgianYang2025/BourgainLargeValueAlgebra.lean` | `27b2c3953d65e8b74fdebcf07fd15720fc16b4e68b442cf086d87bcac7edbc54` |
+| `Extension/TaoTrudgianYang2025/MixedDoubleZeta.lean` | `0287cd666af0309518b40dcb3600dfea6c13acafdabaa0f4c5c31563a4bd8bd6` |
+
+Target log SHA256: `fafb5001151de70317b0edda02f928da00ba377be18b724bfec779481052b63d`.
+
+Foundation log SHA256: `0522e4565d7fc81986b7ebba8a5f5ac52c83fbaddc08213a4df348654fbb306e`.
+
+Foundation manifest SHA256: `603a192de5101f663a55025bf50656821c707666a1eb88a56d67bea63edaafd1`.
+
+The counterexample SHA256 remains `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+## Bourgain difference counts and actual zeta moments — verified history
+
+The corrected independent cardinality/energy powering route and Add-est
+(i)--(viii) are preserved. The printed Lemma 62 counterexample remains
+byte-for-byte unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No fifth-coordinate scaling or third witness has been restored.
+
+Five production modules now prove actual upstream inputs to Bourgain's
+remaining analytic dichotomy:
+
+- `BourgainDifferenceCounts`: the strict ordered-pair count
+  Δ(ℓ)=#{(t,u)∈W²: |t−u−ℓ|<1}, a finite support cover, exact double
+  counting, ΣΔ≤2|W|², and ΣΔ²≤2|W|³ for two-separated W.
+  The cover may contain zero-count integers; these are not fabricated
+  positive bins.
+- `BourgainDifferenceLevels`: genuine nonempty dyadic level selection
+  from positive weighted mass, with the exact log₂|W|+1 loss and
+  2ʲ|Dⱼ|≤2|W|². No selector is assumed.
+- `BourgainIntegerWindows`: overlap at most 2⌈H⌉+1 and the real-difference
+  to integer-bin integral bridge. The latter explicitly enlarges H to H+1;
+  it does not assert a same-radius replacement.
+- `BourgainZetaDifferenceMoments`: actual local critical-line zeta-square
+  integrals and multiplicities, their Cauchy--Schwarz/fourth-moment
+  reduction, positive-mass level selection, and the actual real-pair
+  consumer with the unit window enlargement.
+- `BourgainFourthMoment`: the genuine symmetric fourth moment, derived
+  from the proved dyadic theorem, compact initial interval and conjugation;
+  it supplies the actual weighted-moment bound below.
+
+Writing M(W,H)=Σℓ Δ(ℓ) ∫[-H,H] |ζ(1/2+i(ℓ+u))|² du, the final consumer
+proves, for every η>0, uniform positive C and T₀≥1 such that
+
+```text
+M(W,H)² ≤ C H (2⌈H⌉+1) |W|³ (T+H+1)^(1+η)
+```
+
+for T≥T₀, H≥0, two-separated W⊂[0,T]. Constants precede W, T and H.
+The global fourth moment is proved, not an extra theorem parameter.
+The exact window loss is retained; no small-power absorption or logarithmic
+large-values limit is being claimed here.
+
+There are 31 new named audits and 45 new regressions, including strict
+endpoints, empty/zero-radius cases, and a one-separated four-point set
+where Δ(2)=5>|W|=4. This guards the necessary stronger separation.
+All five modules are root-imported and included in the exact production
+inventory behind `run_tao_trudgian_yang_build.bat`.
+
+The retained-zeta source estimate (Bourgain (4.7)), zeta-superlevel/common-shift
+selection, the full finite dichotomy and its actual-pattern logarithmic
+bridge remain OPEN. The earlier `bourgain_ninth_row_of_log_dichotomy`
+still has its explicit dichotomy premise. Add-est (ix), EPZAE-19/36/37
+as whole items, and every other unfinished EPZAE-00--41 requirement remain
+in the unchanged goal. These supporting theorems do not close those items.
+
+### Completed verification for this checkpoint
+
+Both mandatory BATs terminated with PASS and exit 0 on 21 September 2026,
+on dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`.
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: 442 package
+  Lean files, 453 integrity-scanned files, 9,297 build jobs,
+  4,322 discovered target theorems and 4,327 audited declarations.
+  All 31 new named audits have only permitted logical dependencies,
+  and all 45 new regressions pass.
+  Log: `logs/tao-trudgian-yang-build-20260921-115007-09779b5b.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: all six stages
+  pass, 301 root modules, 2 explicit regressions, 0 excluded or
+  unclassified files, 8,857 build jobs and 14,290 discovered
+  nonprivate theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_115008.log`;
+  manifest: `logs/foundation_freeze_20260921_115008.json`.
+
+There are zero Lean errors, warnings, tactic suggestions, linter failures
+or remaining failed verification stages. All 99 checked source,
+integration and runner hashes match before and after the gates,
+including the preserved counterexample. No source pin or public
+Add-est statement changed. The Reproduction Manifest records the
+exact evidence and hashes.
+
+These gates establish integrity of the installed scope. The full
+Bourgain dichotomy, Add-est (ix) and the unchanged whole-proof goal
+are not complete.
+
+### Reproduction hashes and coverage
+
+| Evidence | SHA256 |
+| --- | --- |
+| Target log `tao-trudgian-yang-build-20260921-115007-09779b5b.log` | `d809c10cb44355c9055ab7d04b5420f7bcd24e22171ab883287a6e198afb3e62` |
+| Foundation log `foundation_freeze_20260921_115008.log` | `506436dca95edfae8562256d24b4be61e34f5c6e4c07033d148a0f63b6f622c2` |
+| Foundation manifest `foundation_freeze_20260921_115008.json` | `9c7fcaa688e3f4cf3abad2ac36941633ba38da1a72ab2ab75ac94c6c86d0fb8c` |
+
+The nine new/updated proof-integration files at these gates are:
+
+| File relative to this folder | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainDifferenceCounts.lean` | `7cd20bbd607277b080a33d37691b0d6c1b735558221ae0e28b46e2d4826708db` |
+| `Extension/TaoTrudgianYang2025/BourgainDifferenceLevels.lean` | `94e0ac4beca9867eb90c63246d6b525a6d335e684ad202c9ba6db62c7962c30d` |
+| `Extension/TaoTrudgianYang2025/BourgainIntegerWindows.lean` | `bc6042bc3f3b9f961c109a3e7eaa4fddcf8770a517ae87fe12a806dbcaafc0be` |
+| `Extension/TaoTrudgianYang2025/BourgainZetaDifferenceMoments.lean` | `34e88da986c57d35a03f726767015fec96a7c56ab266bd2d2fae27634ccc2eb4` |
+| `Extension/TaoTrudgianYang2025/BourgainFourthMoment.lean` | `423be60136279afbf6df8cb9d415a1eadbc62e390b2faeecd837f6fd2af05d12` |
+| `Extension/TaoTrudgianYang2025.lean` | `5cace9c6b66d989d74c9173e84683a7ff19043dbb77e392985d4ee8b2e8fab5f` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `11171b2f1a5080ae5ea0ba2b74b45216080c8b01bba4778110cbbe15c5dfb21f` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `7d6dfa4e456bb93a007bc48614a671d33910fe5dec6403bfe5ee1f0560f87ea6` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `26970af8d6d6dbfb6e4e6554075385f1beea7723da362652d3d746de6881b6ed` |
+
+All 99 checked source/integration/runner hashes were identical before
+and after both gates. The other 90 files retain the preceding verified
+checkpoint's hashes, including the BAT launchers and counterexample.
+The five new modules occur in both the root imports and exact PowerShell
+inventory. The 31 theorem names are explicitly audited; 45 new examples
+in `BourgainDifferenceRegression` test exact signatures and semantics.
+
+The canonical diagram has 141 distinct nodes and 352 dependency edges,
+with no dangling endpoint. The three new green helper nodes are BCT
+(actual counts/levels), BWI (window overlap and real-pair bridge), and BZM
+(actual weighted moment using the symmetric fourth moment). BDI remains
+red: its retained-zeta source entry, superlevel/common-shift selection and
+full finite/logarithmic assembly are not proved. EPZAE-19/36/37 remain
+unchecked as whole tasks.
+
+Repository scans find no admitted placeholders or unsafe proof bypasses.
+Raw postulate-pattern matches remain the reviewed ten comments and two
+rational structure fields, not postulated declarations.
+`git diff --check` exits 0; Git's LF/CRLF notices are conversion notices,
+not Lean diagnostics. No warning or proof-integrity gate was weakened.
+
+## Bourgain critical-block Mellin localization — verified historical checkpoint
+
+The authorized independent cardinality/energy powering repair and Add-est
+(i)--(viii) remain intact. The printed Lemma 62 counterexample is preserved
+byte-for-byte, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No false fifth-coordinate scaling or third witness has been restored.
+
+Five new production modules supply a genuine retained-zeta estimate for
+finite critical dyadic blocks:
+
+- `BourgainCriticalMellin`: real-power weighting and physical dilation of
+  an actual compact smooth test, exact critical-line Mellin identity, and
+  its moving-pole residue. The kernel norm is scale independent; the
+  residue has its explicit square-root scale factor.
+- `BourgainMellinLocalization`: all polynomial Mellin moments are
+  integrable; the actual zeta/Mellin tail is bounded at arbitrary order.
+  The local norm estimate separates residue, local zeta integral and tail,
+  with constants independent of L, t and H.
+- `BourgainSmoothedPolynomial`: the fixed profile
+  w(x)=`zetaIntervalCutoff 1 2 x`, equal to one on [1,2] and zero at and
+  outside [1/2,5/2], produces a genuine finite-support critical polynomial.
+  Its square bound consumes the Mellin theorem and interval
+  Cauchy--Schwarz; its pair moment consumes the actual H-to-H+1 bridge.
+- `BourgainSmoothedMoments`: proved distance-shell occupancy bounds the
+  reciprocal-square overlap by four. For every positive integer q the
+  complete pole sum is at most 4|W|, not an assumed diagonal estimate.
+- `BourgainCriticalMajorant`: the actual finite block is zero-extended
+  onto the smooth support and consumed by the native positive-kernel
+  coefficient majorant. This is a full ordered-pair argument, not a
+  pointwise or arbitrarily restricted-pair majorization.
+
+The public consumer
+`bourgain_critical_block_retained_zeta_moment` proves: for each integer
+q >= 1 there is C_q > 0, independent of all physical parameters, such that
+for L > 0, B,T,H >= 0, one-separated W in [0,T], finite
+I contained in [L,2L], and |a_n| <= B n^(-1/2),
+
+```text
+sum_(t,v in W) |sum_(n in I) a_n n^(-i(t-v))|^2
+ <= C_q B^2 [
+      L |W| + H M(W,H+1)
+      + |W|^2 (1+T)^2 / (1+H)^(2q)
+    ],
+M(W,h) = sum_l Delta_W(l) integral_(-h)^h |zeta(1/2+i(l+u))|^2 du.
+```
+
+Here Delta is the previously proved strict integer difference count, and
+M is the actual finite weighted zeta-square moment. The H+1 enlargement,
+coefficient factor B^2, pole term and tail are all retained. No moment,
+contour shift, residue estimate, smoothness certificate or selector is
+assumed. One-unit separation suffices for this consumer; the earlier
+Delta <= |W| and fourth-moment count bounds still require two-unit
+separation as documented.
+
+This does **not** yet prove Bourgain (2000), equation (4.7), or the full
+analytic dichotomy. The actual reflected-prefix fourth-power convolution,
+dyadic assembly and Gram/reflection consumer must still feed this block
+estimate. The zeta-superlevel/common-shift and local-mean lower bound,
+finite/logarithmic dichotomy, ninth-row discharge and Add-est (ix) remain
+open. EPZAE-19/36/37 and the whole EPZAE-00--41 goal are not closed by
+these supporting results.
+
+All five modules are added to the root import graph and the exact
+production inventory used by `run_tao_trudgian_yang_build.bat`.
+The explicit audit adds 30 public theorems; 44 new regression examples
+cover their exact signatures, support/plateau endpoints, the nontrivial
+scale-one polynomial, the surviving diagonal and empty sets. Continue
+maintaining this BAT, its PowerShell driver and the foundation
+`run_lake_build.bat` whenever proof/build coverage changes. Neither
+runner's warning, integrity or dependency gate is narrowed.
+
+### Completed verification for this checkpoint
+
+Both mandatory BATs terminated with PASS and exit 0 on 21 September 2026,
+on dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`.
+
+- Target `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  447 package Lean files, 458 integrity-scanned files, 9,302 build jobs,
+  4,374 discovered target theorems and 4,379 audited declarations.
+  All 30 new explicit audits use only permitted logical dependencies;
+  all 44 new regression examples pass.
+  Log: `logs/tao-trudgian-yang-build-20260921-123028-c1ae7ae1.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: all six stages pass,
+  301 root modules, 2 explicit regressions, 0 excluded/unclassified files,
+  8,857 build jobs, 7,636 explicit public declarations and 14,290 discovered
+  nonprivate project theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_122534.log`;
+  manifest: `logs/foundation_freeze_20260921_122534.json`.
+
+Both completed logs have zero Lean errors or warnings. The foundation also
+records zero tactic suggestions and linter failures in every stage.
+There are no remaining failed verification stages. All 104 checked source,
+integration and runner hashes match before and after these gates, including
+the preserved counterexample. The Reproduction Manifest records full log
+hashes and the five new/four updated build-integration file hashes.
+
+These are integrity checks for the installed scope, not completion of
+source-(4.7), the Bourgain dichotomy, Add-est (ix), or the whole-proof goal.
+
+### Current evidence hashes
+
+| Artifact | SHA256 |
+|---|---|
+| Target log `tao-trudgian-yang-build-20260921-123028-c1ae7ae1.log` | `55b60141866c9c0389a082277e368b3430eefe73fa2479094f41c01cb677f0ef` |
+| Foundation log `foundation_freeze_20260921_122534.log` | `46114f2dc6056f97babb5bb9bd657998e8e0df5905dc79aa7bce0869230543d6` |
+| Foundation manifest `foundation_freeze_20260921_122534.json` | `1fda1a64daf51f896761500785dec7b15dc0446e70a7c426fd61da6b3357c9cf` |
+
+The target log is under this folder's `logs/`; foundation artifacts are
+under the `Riemann Zeta/logs/` directory. These hashes cover the completed
+files, not the foundation manifest's pre-final-summary log digest.
+
+| New or updated integration artifact | SHA256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/BourgainCriticalMellin.lean` | `f187ae20915a5725f487780a06964c72cf989adf92d310bfdc5e4b217898e4d1` |
+| `Extension/TaoTrudgianYang2025/BourgainMellinLocalization.lean` | `6053ce98f612449ac66dcb5f232cb565aef21e9998e802cfd89d20bc2a8bcaac` |
+| `Extension/TaoTrudgianYang2025/BourgainSmoothedPolynomial.lean` | `5bf3806a3463e0012ed3b7dcc530e079b8fbed1d63d1084ecfcada0548b8b867` |
+| `Extension/TaoTrudgianYang2025/BourgainSmoothedMoments.lean` | `afe6f346806bb392bd7959830288964b1fc921ebdad2a5a466b604ad47e8c88f` |
+| `Extension/TaoTrudgianYang2025/BourgainCriticalMajorant.lean` | `6927943b9ba2fe3904b5f9e52de928f15439c7d078db9053c2c9eb3bcb2e7149` |
+| `Extension/TaoTrudgianYang2025.lean` | `b8d18f80f1779fb0e725d48b19a4193a2fb7154b0680fcbfe93fca15c000928a` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `5dc482d2ed78a91bb748a02ea4dd6bcb7294e5850891f4a0744175d797095965` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `5c7c32210e6dfcc4d55ad4e806b3dad531d9d65de10835b994a92789f467c2e6` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `05725823b80f8049fd19e2bdb7726d596fca90ccbf03a6cd849d0bae4e60d5cb` |
+
+The 104-file before/after audit also covers the retained Add-est branches,
+corrected powering chain, exact public statements, toolchain and BATs.
+Only the five new production modules and the four integration artifacts
+above changed in Lean/build scope during this increment. The counterexample
+hash remains `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+Repository-wide placeholder and unsafe-bypass scans have no matches.
+The postulate regex has twelve benign matches: ten comment lines and two
+rational structure fields named `constant`; the declaration-aware runner
+passes. `git diff --check` exits 0. Its sixteen Git LF/CRLF notices are
+conversion notices, not Lean diagnostics; no warning gate was weakened.
+The proof diagram has 144 unique nodes and 361 edges, with no dangling
+references. EPZAE-19/36/37 and the full goal remain open.
+
+## Bourgain retained-zeta pattern entry — verified historical checkpoint
+
+The authorized independent cardinality/energy powering repair and Add-est
+(i)--(viii) remain intact. The printed Lemma 62 counterexample is preserved
+byte-for-byte, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No false fifth-coordinate scaling or third witness has been restored.
+
+Twelve new production modules now consume the previously proved critical
+block estimate in actual source-pattern bounds:
+
+- `BourgainWeightedMoments`, `BourgainPolynomialMoments` and
+  `BourgainPrefixMoments`: exact phase/half-weight bridges, genuine
+  powered coefficients, all dyadic prefix pieces and the literal n=1
+  term. The native reflected prefix is **unweighted**. Its factor
+  U=(2M)^k is retained; it is not silently treated as a critical prefix.
+- `BourgainReflectionIntegrals`, `BourgainTraceBins`,
+  `BourgainPatternEntry` and `BourgainHybridEntry`: interval Jensen,
+  actual difference bins, native reflection and source Gram subfamilies,
+  with the actual ceiling dual length and all reflection errors.
+- `BourgainPhysicalMain` and `BourgainPhysicalPatterns`: the
+  unweighted-prefix factor is cancelled against its own displacement
+  scale before taking terminal length bounds. Near bins, the retained
+  main term and all three reflection errors are assembled.
+- `BourgainSmoothingErrors` and `BourgainSmoothedPatterns`: native
+  smoothing discharges the Mellin tail and reflection errors; logarithmic,
+  divisor and integration-length costs are absorbed uniformly.
+- `BourgainRetainedCardinality`: the quadratic recurrence is solved
+  with the actual zeta moment retained. Exact source-power and
+  value-threshold identities account for every numerical factor.
+
+For every integer k>0 and nu>0,
+`bourgain_smoothed_pattern_retained` supplies theta,B,T0 independently
+of the actual pattern, with 0<theta<=min(1,nu), B>0 and T0>=2.
+For scale>=30, V>1, T>=T0 and N<=T, it constructs a genuine
+two-separated W in the reflected ordinates, contained in [0,T], and
+a positive integer Q with N/2<=Q<=2N. Write
+
+```text
+R = |W|, V0 = (V-1)/3, Z = B*T^nu,
+H = heathBrownSmoothingHeight T theta,
+M(W,h) = sum_l Delta_W(l) integral_(-h)^h |zeta(1/2+i(l+u))|^2 du.
+```
+
+It proves |P.ordinates|<=Z*R and the alternative
+
+```text
+R*V0^2 <= 2*Q^2
+  OR
+R^2*V0^(4k) <= Z*(2Q)^(2k) *
+  [ R^2*Q^k + R*T^k + Q^k*M(W,H+1) ].
+```
+
+The actual integer-window moment, two-unit separation, H+1 enlargement
+and source endpoint V-1 are explicit. No analytic moment or reflection
+estimate is a theorem premise.
+
+For k=2, `bourgain_high_value_pattern_retained` solves this alternative
+under the additional **numerical high-value condition**
+
+```text
+2*[Z*(4N)^4]*(2N)^2 <= V0^8.
+```
+
+With D=Z*(4N)^4, its actual subfamily satisfies
+
+```text
+|P.ordinates| <= Z * [
+  2*(2N)^2/V0^2 + 2*D*T^2/V0^8
+  + sqrt(2D)*(2N)*sqrt(M(W,H+1))/V0^4
+].
+```
+
+This is a proved high-value retained-moment consumer, **not the full
+parameter range of printed Bourgain (2000), Lemma 4.1/(4.7)**. Its
+absorption condition must be derived in the intended asymptotic range;
+the unrestricted source statement needs additional control of the near
+contribution. Neither obligation is concealed by the exact algebra.
+
+The zeta-superlevel/common-shift and local-mean lower bound, actual
+finite/logarithmic dichotomy, ninth-row discharge and Add-est (ix) remain
+open. EPZAE-19/36/37 and the whole EPZAE-00--41 goal are unchanged.
+
+All twelve modules enter the default root, the target BAT's exact production
+inventory, 30 explicit public-theorem audits and 43 semantic regressions.
+The regressions include actual unweighted prefixes at lengths 0, 1 and 2,
+the surviving literal-one pair moment, empty sets, zero radius and the
+zero retained-moment specialization. Continue maintaining
+`run_tao_trudgian_yang_build.bat`, its PowerShell driver and foundation
+`run_lake_build.bat`; no warning, integrity or dependency gate is narrowed.
+
+### Completed verification for this checkpoint
+
+Both mandatory BATs terminated with PASS and exit 0 on 21 September 2026,
+on dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`.
+
+- Target `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  459 package Lean files, 470 integrity-scanned files, 9,314 build jobs,
+  4,429 discovered target theorems and 4,434 audited declarations.
+  All 30 new explicit audits use only permitted logical dependencies;
+  all 43 new regression examples pass.
+  Log: `logs/tao-trudgian-yang-build-20260921-131005-aaa8691f.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: all six stages pass,
+  301 root modules, 2 explicit regressions, 0 excluded/unclassified files,
+  8,857 build jobs, 7,636 explicit public declarations and 14,290 discovered
+  nonprivate project theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_131248.log`;
+  manifest: `logs/foundation_freeze_20260921_131248.json`.
+
+Both completed logs have zero Lean errors or warnings. The foundation also
+records zero tactic suggestions and linter failures in every stage.
+There are no remaining failed verification stages. All 116 checked source,
+integration and runner hashes match before and after the final gates,
+including the preserved counterexample.
+
+The first foundation attempt,
+`logs/foundation_freeze_20260921_130845.log`, exited 1: a prose line
+beginning with the word "constant" matched its postulate scan. Rewording
+that comment resolved the match; the proofs and scanner policy were not
+changed. The complete rerun above is the current verification evidence.
+
+These are integrity checks for the installed scope, not completion of
+the full source-(4.7) range, Bourgain dichotomy, Add-est (ix), or the
+whole-proof goal.
+
+### Reproduction hashes and scope
+
+Final target log SHA256:
+`7fd14e51a9a7784641b8386eb26b49a1bab66a2d279c49f6d4fd6dc1daefe8bc`.
+
+Final foundation log SHA256:
+`d6e1b4e5cb39b276a8da9e844790f95a3070412fc20ec737cca1c917cfc4655d`.
+
+Final foundation manifest SHA256:
+`74f7c69fd8be98f65d11ad078dd17f746385a75c9a26a70b77677ee8ba661836`.
+
+The twelve new production files and four updated integration artifacts
+have these SHA256 hashes:
+
+```text
+6399e29154f21e89940b58a580da16c57a5fa3460d6918514a47245d14261d08  Extension/TaoTrudgianYang2025/BourgainWeightedMoments.lean
+4cf44d2397efd243040a39b585e27bfe9c43177a00eabeb8382d551be467a33f  Extension/TaoTrudgianYang2025/BourgainPolynomialMoments.lean
+38e8a626092799d38a251069be257a7c533e6d7bc75dd2452e5423221e17a8ae  Extension/TaoTrudgianYang2025/BourgainPrefixMoments.lean
+d5b6536f9ef1978ad8dfd1aea91655bba69b86481b93af0b99908605e34181e7  Extension/TaoTrudgianYang2025/BourgainReflectionIntegrals.lean
+3dfece7d4d6762ed303b10d1388be5a4ed2134e5ee43cae2a8aa0058324f14bc  Extension/TaoTrudgianYang2025/BourgainTraceBins.lean
+2b8345ae8e676bb452a1b93b70665f93be2ede935887adf3e267f96e725678e2  Extension/TaoTrudgianYang2025/BourgainPatternEntry.lean
+2e90c6a1102930be16662c7370038500c3c64c2e2f95a3270106a250bfa3c16e  Extension/TaoTrudgianYang2025/BourgainHybridEntry.lean
+42dcdda0604385160eab4f06629e1f5d6845dded9ee307803fc4cecc3e85f2e1  Extension/TaoTrudgianYang2025/BourgainPhysicalMain.lean
+863fda3bb9529464df8cf10635f03d6b8a3634c10d47d744e6d57ee8cd88d24c  Extension/TaoTrudgianYang2025/BourgainPhysicalPatterns.lean
+e1c04c0573606c5704d0eff9ca77923c2942d98e3bec3a32183918278d8fb8b3  Extension/TaoTrudgianYang2025/BourgainSmoothingErrors.lean
+4bc7cccf8424beeb3f34b8467edffa1ad443dd99b1d8fe391a277b103fce4efd  Extension/TaoTrudgianYang2025/BourgainSmoothedPatterns.lean
+19c87d9ba34a913c8a0695c172f9e24875170ca7f26490721732419ff094ae6b  Extension/TaoTrudgianYang2025/BourgainRetainedCardinality.lean
+c98b3b4e61bc786054fef9ca422a4eaac19bb6690f8a931ba446b68d51cdb1c8  Extension/TaoTrudgianYang2025.lean
+9a3d0925119d938ef8308fe22508e15f748f3b069a22dc0ed113f23ce8cd7900  Extension/TaoTrudgianYang2025/Audit.lean
+65fed3307ef6c627d164c3ebe622b59cdce107455cf4ae4854bc9f401d3f9fe0  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+22dde297250b24af1e010924760a9079301f6cf34a38b315dc5386b415450a9a  Tools/run_tao_trudgian_yang_build.ps1
+```
+
+All 116 checked source/build hashes are stable across the final gates.
+The previous 104-file baseline was revalidated before this increment.
+Existing Add-est branches, corrected powering, exact public statements,
+dependency pins and BAT entry points are preserved. The runner's
+PowerShell production inventory gains all twelve new modules; neither
+BAT is renamed or bypassed.
+
+Repository-wide placeholder and unsafe-bypass scans have no matches.
+The postulate regex has twelve benign matches: ten comment lines and two
+rational structure fields named `constant`; the declaration-aware gates
+pass. `git diff --check` exits 0. Its sixteen LF/CRLF conversion notices
+are Git notices, not Lean diagnostics; no warning gate was weakened.
+The architecture has 148 unique nodes and 370 edges, with no dangling
+references. EPZAE-19/36/37 and the full goal remain open.
+
+## Bourgain power windows and mass-level alternative — verified history
+
+The authorized two-witness powering repair and Add-est (i)--(viii) remain
+intact. `EnergyPoweringObstruction.lean` is unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No false fifth-coordinate scaling or third witness has been restored.
+
+Six new production modules advance the actual Bourgain source chain:
+
+- `BourgainMomentWindows`: monotonicity of the genuine local zeta
+  integrals and weighted difference moment; the native integer smoothing
+  radius plus one fits a larger small power at a proved threshold.
+- `BourgainRetainedUniform`: all constants and the square-root loss
+  are absorbed into one physical epsilon loss. Its intermediate numerical
+  high-value threshold remains visible.
+- `BourgainRetainedPowerWindows`: exact three-term powers and their
+  bounds from the same physical N,T,V and retained moment.
+- `BourgainRetainedSource`: derives the numerical threshold and V-1
+  endpoint loss from sigma>3/4 and the actual power windows. The abstract
+  cutoff is discharged by the existing constructed smooth cutoff.
+- `BourgainSmallMass`: solves the three-quarter-power recurrence,
+  including zero cardinality, and derives the exact small-mass powers.
+- `BourgainMassDichotomy`: consumes the actual source subfamily,
+  either obtains the small-mass cardinality estimate or selects an
+  actual nonempty dyadic integer difference level with all losses.
+
+For sigma>3/4, any fixed real tau and epsilon>0,
+`bourgain_retained_source_power_bound` supplies C>=1 and delta>0
+before the pattern. If
+
+```text
+C <= N <= T, T <= N^(tau+delta), N^(sigma-delta) <= V,
+```
+
+it constructs two-separated W contained in the reflected source ordinates
+and in [0,T]. With R0=|P.ordinates|, R=|W| and the genuine moment
+
+```text
+M(W,h) = sum_l Delta_W(l) integral_(-h)^h |zeta(1/2+i(l+u))|^2 du,
+```
+
+the conclusion is
+
+```text
+R0 <= C*N^epsilon*R,
+R0 <= C * [
+  N^(2-2sigma+epsilon) + N^(2tau+4-8sigma+epsilon)
+  + N^(3-4sigma+epsilon)*sqrt(M(W,N^epsilon))
+].
+```
+
+The numerical high-value condition is no longer a premise here. The proof
+chooses a positive exponent gap, dominates its actual constant, absorbs
+V-1, and links T to N before bounding the smoothing radius. It retains
+N<=T explicitly and permits tau=1 whenever that physical condition holds.
+The exact regression at sigma=84/109 checks the strict gap
+8sigma-6=18/109; no endpoint of Add-est (ix) was discarded.
+
+The stronger actual-pattern consumer
+`bourgain_retained_difference_level_dichotomy` chooses the same W
+before any real alpha. Put h=N^(epsilon/8). For every alpha it proves
+one of the following:
+
+```text
+R0 <= C * [
+  N^(2-2sigma+epsilon) + N^(2tau+4-8sigma+epsilon)
+  + N^(-2alpha+tau+12-16sigma+epsilon)
+]
+```
+
+or an actual integer j with D=bourgainDifferenceLevel W j such that
+
+```text
+L_R = Nat.log 2 R + 1, 0 <= j < L_R, D nonempty,
+2^j <= R, 2^j*|D| <= 2*R^2,
+N^(-alpha)*R^(3/2)*N^(tau/2) < M(W,h),
+M(W,h) <= L_R*2^(j+1)*
+           sum_(l in D) integral_(-h)^h |zeta(1/2+i(l+u))|^2 du.
+```
+
+The index condition is exactly
+`j in Finset.range (Nat.log 2 W.card + 1)`; no logarithmic limit has
+been taken. The small branch uses the actual subset-cardinality bridge
+from R to R0.
+The large branch derives positive mass and consumes the proved selector.
+No analytic mass bound, auxiliary set or selector is postulated.
+
+This is the **small-mass/heavy-difference-level alternative**, not the
+full frozen Bourgain logarithmic dichotomy. Zeta superlevel selection,
+subdivision with common parameters/shift, the local-mean lower bound and
+the final mixed-moment comparison still have to be assembled. The
+unrestricted low-value range of printed Lemma 4.1/(4.7), remaining physical
+range bridges, the finite/logarithmic transfer, ninth-row discharge and
+Add-est (ix) remain open. EPZAE-19/36/37 and the full EPZAE-00--41 contract
+are not closed by this increment.
+
+All six modules enter the root import graph and the exact production
+inventory used by `run_tao_trudgian_yang_build.bat`. Twelve explicit
+public-theorem audits and 23 regression examples cover the full signatures,
+zero/empty windows, the native ceiling, zero-cardinality recurrence and
+the exact sigma=84/109, tau=1 source-window specialization. Both the target
+BAT and foundation `run_lake_build.bat` remain mandatory; no gate is narrowed.
+
+### Completed verification for this checkpoint
+
+Both mandatory BATs terminated with PASS and exit 0 on 21 September 2026,
+on dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`.
+
+- Target `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  465 package Lean files, 476 integrity-scanned files, 9,320 build jobs,
+  4,441 discovered target theorems and 4,446 audited declarations.
+  All 12 new explicit audits use only permitted logical dependencies;
+  all 23 new regression examples pass.
+  Log: `logs/tao-trudgian-yang-build-20260921-133945-11e430fe.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: all six stages pass,
+  301 root modules, 2 explicit regressions, 0 excluded/unclassified files,
+  8,857 build jobs, 7,636 explicit public declarations and 14,290 discovered
+  nonprivate project theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_133728.log`;
+  manifest: `logs/foundation_freeze_20260921_133728.json`.
+
+Both completed logs have zero Lean errors, warnings or tactic-info
+diagnostics. Every foundation stage also records zero linter failures.
+There are no remaining failed verification stages. All 122 checked
+source, integration and runner hashes are unchanged across the final
+gates, including the preserved printed-Lemma-62 counterexample.
+The Reproduction Manifest records the full log and new-source hashes.
+
+This verifies the installed theorem scope, not the full source-(4.7)
+range, the complete Bourgain logarithmic dichotomy, Add-est (ix), or
+the unchanged whole-proof goal.
+
+### Reproduction hashes and scope
+
+Target log SHA256:
+`85b96bef1cb02c8031f8b9897755d11c2550a5acffdfd09d9ff753c3fc296896`.
+
+Foundation log SHA256:
+`5c038f4dcffed6f6fbfc0ca10d3ef38bc42b3104c38b71ccd1ada05b29281e9b`.
+
+Foundation manifest SHA256:
+`75e2a72c1225d39dd2eac89017efafe22418b5b03799bfd6278d7a0272fc713b`.
+
+The six new production files and four updated integration artifacts have
+these SHA256 hashes:
+
+```text
+5bd3e5b3d112ef086f8e855c01d9c60c6089f9faf930e4a5d4c143d431a080de  Extension/TaoTrudgianYang2025/BourgainMomentWindows.lean
+fc258867c7dbab568c23153c1fcd000dbc280cd4278c47c47a090c22427f1fb7  Extension/TaoTrudgianYang2025/BourgainRetainedUniform.lean
+5b0664d5e27300ec3d9b020fd02e3bebafae60bc1eee21d3ec775daae5dbbcc8  Extension/TaoTrudgianYang2025/BourgainRetainedPowerWindows.lean
+883893ee86b743660035922c7bce2b17547f66159208a50b985ae177f57eafee  Extension/TaoTrudgianYang2025/BourgainRetainedSource.lean
+b12f14c3a5141ae313d5d609441afbf93885a8b5148aeab5bd055a5cff9ba356  Extension/TaoTrudgianYang2025/BourgainSmallMass.lean
+99324e19000afc8da51001a837a84a79813405654fe5edf2630ed3c8e05de5ce  Extension/TaoTrudgianYang2025/BourgainMassDichotomy.lean
+d0492f097c9dccc45ef055eca076f02f134c15c2afa3bb566c502491763d7d4c  Extension/TaoTrudgianYang2025.lean
+6734e14c88c3f7badcdbb0196b314f3205590e6cbf1a85490796f74039e48cb3  Extension/TaoTrudgianYang2025/Audit.lean
+eea0b613b9b1007eafecb60a44bc27c7bf0e1da1322261989c5da1ae430839ff  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+3cabd0fe50506afe556003a5cc7c06f3a9004e00918e2c398f756b9adf816b8e  Tools/run_tao_trudgian_yang_build.ps1
+```
+
+All 122 checked source/build hashes are stable across the final gates.
+The previous 116-file baseline and all eleven documentation hashes were
+revalidated before this increment. Existing Add-est branches, corrected
+powering, exact public statements, dependency pins and BAT entry points
+are preserved. The PowerShell production inventory adds all six new
+modules; neither human-facing BAT is renamed or bypassed.
+
+Repository-wide placeholder and unsafe-bypass scans have no matches.
+The postulate regex has twelve benign matches: ten comment lines and two
+rational structure fields named `constant`; declaration-aware gates pass.
+`git diff --check` exits 0. Its sixteen LF/CRLF conversion notices are
+Git notices, not Lean diagnostics; no warning gate was weakened.
+The architecture has 152 unique nodes and 376 edges, with no dangling
+references. EPZAE-19/36/37 and the full goal remain open.
+
+## Bourgain actual zeta bands and shifted slices — verified history
+
+The authorized independent cardinality/energy powering repair and
+Add-est (i)--(viii) remain intact. The printed-Lemma-62 counterexample is
+unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+No false fifth-coordinate scaling or third witness is restored.
+
+Eight new production modules extend the genuine Bourgain large-mass chain:
+
+- `BourgainZetaBands`: actual critical-line amplitude bands, measurable
+  finite support, the proved fourth-moment measure bound and a genuine
+  global linear growth majorant.
+- `BourgainBandOccupancy`: literal translated integer counts, finite
+  interval integrability, and both cardinality and integer-overlap bounds.
+- `BourgainDyadicBands`: half-open amplitude partition and an explicit
+  ceiling-logarithmic terminal count derived from actual zeta growth.
+- `BourgainBandSelection` and `BourgainPositiveBand`: integration,
+  finite maximization, and a positive band selected from the actual mass.
+  The low-amplitude contribution is retained, then absorbed by a proved
+  choice of floor; no selector or growth estimate is assumed.
+- `BourgainBandShift`: the first moment method selects a real shift
+  for a finite weighted family, and an actual nonempty integer slice for
+  positive band mass.
+- `BourgainBandCorrelation`: the normalized occupancy is defined from
+  actual mass, measure and cardinality; its identity and finite bounds
+  are proved.
+- `BourgainPatternBand`: consumes the same W and heavy difference level
+  returned by the existing actual-pattern dichotomy and assembles all
+  these conclusions.
+
+For sigma>3/4, fixed real tau and epsilon>0,
+`bourgain_retained_zeta_band_dichotomy` supplies B>0, C>=1 and delta>0
+before the actual pattern. Under
+`C<=N<=T`, `T<=N^(tau+delta)` and `N^(sigma-delta)<=P.V`,
+it chooses two-separated W in the reflected ordinates and [0,T],
+with `|P.ordinates|<=C*N^epsilon*|W|`, before every real alpha.
+
+The small branch retains the three previously proved cardinality powers.
+In the large branch put R=|W| and use the returned integer j and
+D=bourgainDifferenceLevel W j. The theorem retains
+`j<log_2(R)+1`, D nonempty, `2^j<=R`, and `2^j*|D|<=2R^2`.
+Define the actual quantities
+
+```text
+h = N^(epsilon/8), U = T+h+1,
+L = sum_(l in D) integral_(-h)^h |zeta(1/2+i(l+u))|^2 du,
+a = sqrt(L/(4h|D|)),
+J = Nat.clog 2 (Nat.ceil (B(1+U)/a)) + 1.
+```
+
+Then L,a>0, and some q<J gives v=a*2^q>0. The band and its mass are
+
+```text
+S = {t in [-U,U] : v <= |zeta(1/2+it)| < 2v},
+I = integral_(-h)^h #{l in D : l+u in S} du,
+mu = Lebesgue measure(S), K_h = 2 Nat.ceil(h)+1,
+K = 2 (Nat.log 2 R+1) 2^(j+1) J (2v)^2.
+```
+
+The assembled actual-pattern theorem proves
+
+```text
+I>0, mu>0,
+N^(-alpha) R^(3/2) N^(tau/2) < K I,
+v^4 mu <= C U^(1+epsilon),
+I <= 2h|D|, I <= K_h mu.
+```
+
+The floor has the exact identity `2h a^2 |D|=L/2`; the other half
+selects the band. Spatial enlargement U is derived from the actual
+difference support, including its unit integer-rounding loss. The
+extra final dyadic band handles equality at powers of two.
+
+For the actual correlation `r=I/(sqrt(mu)*sqrt(|D|))`:
+
+```text
+r>0, I=r sqrt(mu) sqrt(|D|),
+r^2 <= 2h K_h,
+r^2 mu <= 4h^2 |D|,
+r^2 |D| <= K_h^2 mu.
+```
+
+There is a real u in (-h,h] for which
+`D_u={l in D : l+u in S}` is nonempty and
+`N^(-alpha) R^(3/2) N^(tau/2) < K (2h) |D_u|`.
+This is a genuine shifted slice, not an abstract mass witness.
+The separate weighted-family shift theorem uses one shift for the whole
+supplied finite family; common band parameters across source subdivisions
+have **not** yet been constructed.
+
+The ceiling-logarithmic J and all finite losses remain explicit. No
+uniform logarithmic absorption, full source subdivision, local-mean
+lower estimate, final mixed-moment comparison, frozen logarithmic
+dichotomy or ninth-row discharge is claimed. The unrestricted printed
+Lemma 4.1/(4.7) range and remaining physical-range bridges also remain
+open. Add-est (ix), EPZAE-19/36/37 and the whole EPZAE-00--41 goal
+retain their existing acceptance tests.
+
+All eight modules enter the root imports and the exact BAT inventory.
+There are 29 new explicit public-theorem audits and 43 semantic
+regressions, including full signatures, empty/zero windows, half-open
+band boundaries, exact dyadic counts, the half-mass identity and
+weighted common shifts. The target
+`run_tao_trudgian_yang_build.bat`, its PowerShell driver and foundation
+`run_lake_build.bat` remain mandatory; no verification gate is narrowed.
+
+### Completed verification for this checkpoint
+
+Both mandatory BATs terminated with PASS and exit 0 on 21 September 2026,
+on dirty `main` at HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`.
+
+- Target `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  473 package Lean files, 484 integrity-scanned files, 9,328 build jobs,
+  4,476 discovered target theorems and 4,481 audited declarations.
+  All 29 new explicit public audits have only permitted logical dependencies;
+  all 43 new semantic regressions pass.
+  Log: `logs/tao-trudgian-yang-build-20260921-141745-d2685809.log`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: all six stages pass,
+  301 root modules, 2 explicit regressions, 0 excluded/unclassified files,
+  8,857 build jobs, 7,636 explicit public declarations and 14,290 discovered
+  nonprivate project theorems audited.
+  Foundation-root log: `logs/foundation_freeze_20260921_141746.log`;
+  manifest: `logs/foundation_freeze_20260921_141746.json`.
+
+Both completed logs have zero Lean errors, warnings or tactic diagnostics.
+Every foundation stage also records zero linter failures. There are no
+remaining failed verification stages. All 130 checked source, integration
+and runner hashes are unchanged across the gates, including the preserved
+counterexample. Repository scans found no prohibited proof shortcut;
+the broad postulate search has only the same ten prose and two rational
+structure-field matches. `git diff --check` passes; its 16 LF/CRLF notices
+are Git normalization notices, not Lean diagnostics.
+
+This verifies the installed scope. It does not complete the full Bourgain
+source range/dichotomy, Add-est (ix), or the unchanged whole-proof goal.
+
+### Reproduction hashes for this checkpoint
+
+```text
+7e81dee9bdd5e0b0a2b4dd6d872f7bd31bfd0007b6622c1f7afd4d468fad9d17  logs/tao-trudgian-yang-build-20260921-141745-d2685809.log
+d8cdabf78bb5641a6d338c87a166de99c0aae85fb05604da98542524e6294eee  FOUNDATION/logs/foundation_freeze_20260921_141746.log
+b357b99146511eef119d4f4c8a78bf5fa02e4e0cc22fbf98cb3b04628f91d6e2  FOUNDATION/logs/foundation_freeze_20260921_141746.json
+1e92e9d4f9721f491de8689bf44a2c3314cf9db76cf70179e5d780d935804c97  Extension/TaoTrudgianYang2025/BourgainZetaBands.lean
+bd24c1bb54b7a35f82b7286078913f367da118abcbc4ed48429310673d09075a  Extension/TaoTrudgianYang2025/BourgainBandOccupancy.lean
+501b6fe309c9507d1bc2d9e0b682391ef12d52c41d1163a1cd417494a09f9a50  Extension/TaoTrudgianYang2025/BourgainDyadicBands.lean
+47090331d41d95dcda46381b1fceac93a842a75219863b9dd8d52cd38eb4b652  Extension/TaoTrudgianYang2025/BourgainBandSelection.lean
+e5f8e155158edc7853550bd1833770b5855be7ecde2b3f81db91db247e43bc41  Extension/TaoTrudgianYang2025/BourgainPositiveBand.lean
+e0f133bd9f75b4a3d28b585eb8030b7e5ebf244ab59a1ff5c41db6f4f13cad3a  Extension/TaoTrudgianYang2025/BourgainBandShift.lean
+d80dbabdae06779b3bd3a7b13b2b03c359aac9e6ea85dd23cf92c5ef508096f0  Extension/TaoTrudgianYang2025/BourgainBandCorrelation.lean
+a2a2025c93217869382b1273a91b0e6dbc823df5b5a3d426cc8e4755f5fd7b30  Extension/TaoTrudgianYang2025/BourgainPatternBand.lean
+59d653a7a8cd8ef79be453ed363f6077f4abd06d7f5c70b97f74d9394ebeeeb2  Extension/TaoTrudgianYang2025.lean
+4c3c34d6ea4268af9240153c1878dbe59f4994f13453fe334ce73e5657c23d9f  Extension/TaoTrudgianYang2025/Audit.lean
+6bd191615cff1793b66e66378d8f48f19c9a978ab5f405b910744a2c77e46674  Extension/TaoTrudgianYang2025/SemanticRegression.lean
+d96ec861217649c4fa356c04f9e385f716e726c6b4059882f7bcd4bb35b66087  Tools/run_tao_trudgian_yang_build.ps1
+```
+
+`FOUNDATION/` denotes `E:/Lean/Riemann Zeta/`, not the target folder.
+No toolchain, external dependency, source archive or pin was changed.
+
+## Bourgain shared grids and actual subdivision — verified historical checkpoint
+
+The corrected independent cardinality/energy witnesses and Add-est
+(i)--(viii) are preserved. The printed-Lemma-62 counterexample remains
+byte-for-byte unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The false fifth-coordinate scaling and third witness remain excluded.
+
+Six new production modules advance the actual Bourgain source chain:
+
+- `BourgainSharedFloor`: a physical amplitude floor independent of the
+  selected difference set, local mass and component. Its doubled low-value
+  cost is bounded using the actual source cardinality and heavy-level bounds.
+- `BourgainFixedBand`: selection on this supplied common floor. Its
+  explicit low-mass condition is discharged in the actual-pattern consumer.
+- `BourgainBandLogBounds`: the exact ceiling-logarithmic band count is
+  bounded by a linear logarithm, and by an arbitrary small positive power
+  with fixed-parameter constants.
+- `BourgainSharedGrid`: the existing actual source dichotomy now selects
+  its bands on that shared grid, retaining the complete measure, occupancy,
+  correlation and shifted-slice conclusions.
+- `BourgainRetainedPullback`: inverse local reflection preserves actual
+  cardinality, separation, the original coefficient polynomial and every
+  strict ordered integer difference count. Local source bins, and retained
+  subsets pulled back into distinct bins, are disjoint.
+- `BourgainSubdivisionGrid`: constructs retained subfamilies in every
+  actual localized pattern and assembles their disjoint original-source union
+  with exact cardinality and packing cost.
+
+For sigma>3/4, fixed real tau and epsilon>0,
+`bourgain_retained_shared_grid_dichotomy` gives B>0, C>=2 and
+0<delta<=1 before the pattern. It retains the physical conditions
+`C<=N<=T`, `T<=N^(tau+delta)` and `N^(sigma-delta)<=P.V`.
+The same W is selected before every real alpha. Its small branch is
+unchanged; its large branch now uses
+
+```text
+A = |alpha|+4|tau|+epsilon+20,
+a = N^(-A), h = N^(epsilon/8), U = T+h+1,
+J = Nat.clog 2 (Nat.ceil (B(1+U)/a)) + 1.
+```
+
+This a is independent of W, the difference index j, D and its actual local
+mass L_D. For the returned heavy level the proof derives
+
+```text
+2 (Nat.log 2 |W|+1) 2^(j+1) [2h a^2 |D|]
+  <= N^(-alpha) |W|^(3/2) N^(tau/2)
+  < M(W,h)
+  <= (Nat.log 2 |W|+1) 2^(j+1) L_D.
+```
+
+Thus `2(2h a^2 |D|)<L_D`, so the fixed-floor selector genuinely
+applies. The floor's crude numerical margin is proved, including negative
+alpha and tau; no new mass estimate is postulated.
+
+The proved physical radius bound and actual-pattern count conclusion are
+
+```text
+U <= 3 N^(|tau|+epsilon+1),
+J <= 2 + [log(4B+1) + (|tau|+epsilon+1+A) log N]/log 2.
+```
+
+For fixed B,A,u and any eta>0, the separate uniform theorem bounds J by
+C_eta N^eta whenever 0<=U<=3N^u and N is sufficiently large.
+Those constants may depend on A, hence on alpha; no uniform-in-alpha
+small-power absorption is asserted.
+
+The new public subdivision theorem `bourgain_subdivided_shared_grid`
+uses the actual `P.localized L hL i` patterns, with unchanged N,
+threshold, support and coefficients. Here L is the chosen local height;
+tau controls L, **not the unrestricted original height P.T**. It assumes
+`N<=L<=N^(tau+delta)` and the same scale/value conditions. It constructs
+W_i for every local component, before alpha. All components therefore use
+the same a,h,U=L+h+1,J, though their chosen amplitude index q may differ.
+
+For I=range(floor(P.T/L)+1), let
+
+```text
+S_i = { (P.localized L hL i).intervalRight - w : w in W_i },
+S = union_(i in I) S_i.
+```
+
+The source consumer proves S is contained in P.ordinates, S is one-separated,
+the original negative-phase polynomial is large at every point of S, and
+
+```text
+|S| = sum_(i in I) |W_i|,
+|P.ordinates| <= C N^epsilon |S|,
+Delta_(S_i)(l) = Delta_(W_i)(l) for every integer l.
+```
+
+The count identity uses inverse reflection and swapping the ordered pair,
+so the strict unit boundary and the same integer bin are preserved.
+One must use these pulled-back subsets for the global source union;
+normalized reflected sets from different components can overlap.
+
+Common amplitude indices, relative difference levels and correlation levels
+across the large components are still open. The shared grid and actual
+subdivision do not by themselves prove source (4.43)--(4.47). The remaining
+local-mean lower estimate, mixed-moment comparison, logarithmic transfer,
+ninth-row discharge, unrestricted source-(4.7) range and other required
+physical-range bridges remain open. Add-est (ix), EPZAE-19/36/37 and the
+whole EPZAE-00--41 completion contract are unchanged.
+
+All six modules are included in the root and the target BAT's exact
+inventory, with 22 new explicit public-theorem audits and 37 semantic
+regressions. Tests cover full signatures, common physical floors/counts,
+unchanged localized coefficients, empty unions, inverse reflection and
+strict integer-bin endpoints. Maintain both
+`run_tao_trudgian_yang_build.bat` and foundation `run_lake_build.bat`;
+no coverage, warning, integrity or dependency gate is narrowed.
+
+### Verification status for this checkpoint
+
+Both mandatory BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-145545-b9986edf.log`.
+  All 479 package Lean files are covered, 490 Lean files scanned, and
+  9334 build jobs pass. The audit checks 4501 discovered target theorems
+  plus five imported boundary declarations: all 4506 pass.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_145042.log`
+  with its matching JSON manifest. All six stages pass; 301 root modules,
+  two explicit regressions and no exclusions remain classified.
+  The 8857-job build, 7636 explicit public declarations, exhaustive
+  14290-theorem audit and declaration linters pass.
+
+All 22 newly explicit theorem audits report only `propext`,
+`Classical.choice` and `Quot.sound`; all 37 new semantic regressions
+pass. Both full logs contain zero Lean errors, warnings or tactic
+suggestions. Repository-wide shortcut scans found no prohibited proof term
+or postulate; broad textual matches are existing prose or rational
+structure-field names. The 136 recorded source/integration/runner hashes
+are unchanged across verification, including the preserved counterexample.
+The architecture has 160 distinct nodes and 397 resolved edges.
+`git diff --check` passes; Git emits 16 existing LF/CRLF normalization
+notices, not Lean diagnostics.
+
+This verifies the installed supporting theorem scope, not the remaining
+Bourgain dichotomy, Add-est (ix), or whole-proof completion.
+
+### Shared-grid checkpoint SHA256 evidence
+
+These hashes identify the verified files above; earlier checkpoint hashes
+remain historical. The other 123 entries of the 136-file comparison were
+also unchanged between the pre-gate snapshot and post-gate read.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainSharedFloor.lean` | `5b68ceb70ca0791b1006b39302e045326f4df6b192f3ec2daabc68e40853b6e3` |
+| `Extension/TaoTrudgianYang2025/BourgainFixedBand.lean` | `d8e56dbe6992c35eeb446a38d96b3e5b9cf6330b0fd309e2fe85e8c042c675e4` |
+| `Extension/TaoTrudgianYang2025/BourgainBandLogBounds.lean` | `9cd04b1232e47caac292d8195e3ce8601282a885d1a9c3bcbd59f328a6407cd4` |
+| `Extension/TaoTrudgianYang2025/BourgainSharedGrid.lean` | `7cef56d26330a5213cac8acee785427e4ef9e8184f34d2c045bdea0c9aa3e7b0` |
+| `Extension/TaoTrudgianYang2025/BourgainRetainedPullback.lean` | `6c81535fd0ae9d1165ef60b2fa2e6b5a8d1abfe3e7de22a100795ac6dddbcba5` |
+| `Extension/TaoTrudgianYang2025/BourgainSubdivisionGrid.lean` | `dcf4199746dddf0a12f1b48b65b893d745da32a0e475776951cf102178f2e465` |
+| `Extension/TaoTrudgianYang2025.lean` | `00d1a6ab39b87b3c50eb1ca86fd5dab5df812be85ffea389d77df4f613af8748` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `5ae371e0071d72f2cc779063d6f9f5abbeeab49ce8a3a754bb71fc759da8c9d2` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `7cbf6c0a7aa51735c367c563bcee84059dab66246dffcc2b168ca3713fe7087b` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `b895de2b4b3b099ece31929afc53ba01827073965c4d7fc87a377c40b2155f51` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `E:/Lean/Riemann Zeta/run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `logs/tao-trudgian-yang-build-20260921-145545-b9986edf.log` | `d20fed9d07a0b190e83974f54c56e1adf13b838040767f3afa369484f9c27832` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_145042.log` | `d4303616972bc563c9db6c4bf043a2f7957b4fb4de30ca38182d024303250b9d` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_145042.json` | `d4e33812a263c587d8e7dd02679923a454e2f90c145948562250f1471004ab2f` |
+
+## Bourgain common component levels and correlation product — verified historical checkpoint
+
+The printed-Lemma-62 counterexample is preserved byte-for-byte, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The authorized independent cardinality/energy witnesses, unrestricted fifth
+coordinates, and Add-est (i)--(viii) remain unchanged. No false scaling or
+third witness is restored.
+
+Five production modules advance the actual Bourgain component selection:
+
+- `BourgainComponentSelection` proves weighted finite-fiber selection and
+  the small/large partition estimate with its exact counting cost.
+- `BourgainCommonBand` consumes `bourgain_subdivided_shared_grid`,
+  selects one common actual zeta-amplitude index on the large components,
+  and constructs their original-source union.
+- `BourgainRelativeLevels` regrids the relative multiplicity
+  `2^j/|W|`, with a shared physical floor, logarithmic count, and
+  factor-four bounds on the actual ordered integer difference counts.
+- `BourgainCorrelationProduct` derives a finite relative/correlation
+  product lower bound from actual component mass and the fourth moment.
+- `BourgainCommonLevels` consumes the common-band family, performs the
+  second weighted selection, and derives that product inequality on the
+  actual retained components.
+
+The named proposition `BourgainComponentBand` records literal difference
+sets, zeta-band integrals, measures, correlation and shifted-slice data.
+It is a specification, not a theorem by itself. Both public subdivision
+consumers construct these witnesses from the existing analytic theorem;
+they do not accept that proposition as an analytic input.
+
+The strongest consumer is `bourgain_subdivided_common_levels`.
+For sigma>3/4, fixed real tau and epsilon>0, its constants B>0, C>=2 and
+0<delta<=1 precede the pattern. It keeps
+`C<=N<=L`, `L<=N^(tau+delta)`, and `N^(sigma-delta)<=P.V`.
+The retained W_i are chosen before alpha. Here tau controls the local
+height L, not the unrestricted original height P.T.
+
+For fixed alpha let I=range(floor(P.T/L)+1), m=|I| and
+
+```text
+h=N^(epsilon/8), U=L+h+1,
+a=N^(-(|alpha|+4|tau|+epsilon+20)),
+J=bourgainZetaBandCount B U a,
+Q=bourgainRelativeLevelCount N tau,
+F=C [N^(2-2sigma+epsilon)+N^(2tau+4-8sigma+epsilon)
+     +N^(-2alpha+tau+12-16sigma+epsilon)].
+```
+
+The theorem selects a common q<J, p<Q, and actual component indices A
+contained in I. Every selected component has original local cardinality
+strictly larger than F. Set V=a*2^q and d=N^(-(|tau|+2))*2^p.
+For each selected i, D_i is the actual heavy difference level j_i of W_i,
+R_i=|W_i|, and
+
+```text
+0<d<=1,
+d R_i <= 2^j_i < 2 d R_i,
+d R_i <= Delta_(W_i)(ell) < 4 d R_i  (ell in D_i),
+d |D_i| <= 2 R_i.
+```
+
+The common relative index is not an absolute difference index.
+The proved uniform count is
+
+```text
+Q <= 2+[log 5+(|tau|+2) log N]/log 2.
+```
+
+Writing r_i for the actual normalized band occupancy and
+Z_i=Nat.log 2 R_i+1, the consumer also proves
+
+```text
+N^(-2alpha) N^tau < 1024 Z_i^2 J^2 C U^(1+epsilon) d r_i^2.
+```
+
+This follows by squaring the actual large-mass inequality, using
+V^4 times the actual band measure <= C U^(1+epsilon), and cancelling
+the positive R_i^3. No correlation lower bound is assumed.
+
+Let S be the union of the retained sets pulled back into their original
+local bins. The consumer proves S is contained in P.ordinates,
+one-separated, and large for the unchanged original negative-phase
+coefficient polynomial. Its cardinality is exactly sum_(i in A) R_i;
+each component's strict ordered integer difference counts are preserved.
+The original total satisfies
+
+```text
+|P.ordinates| <= m F + C N^epsilon J Q |S|.
+```
+
+The selected family may be empty when the small bound suffices. No
+nonempty large family or unaccounted logarithmic loss is silently assumed.
+
+Common correlation-level selection and its finite/logarithmic losses,
+the full integer-slice common-shift inequality, the local-mean lower
+estimate and actual mixed-moment comparison remain open. So do the
+finite/logarithmic Bourgain dichotomy, its remaining physical-range
+bridges and Add-est (ix). EPZAE-19/36/37 and the whole EPZAE-00--41
+completion contract remain open and unchanged.
+
+The root and exact target BAT inventory include all five modules,
+with nine new explicit theorem audits and 23 semantic regressions.
+Both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` remain mandatory, with unchanged coverage,
+integrity and zero-warning gates.
+
+### Verification status for this checkpoint
+
+Both mandatory BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-152459-3040905f.log`.
+  All 484 package Lean files are covered, 495 Lean files scanned, and
+  9339 build jobs pass. The exhaustive audit checks 4517 discovered target
+  theorems and five imported boundary declarations: all 4522 pass.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_152045.log`
+  and its matching JSON manifest. All six stages pass, with 301 root
+  modules, two explicit regressions and no excluded/unclassified files.
+  The 8857-job build, 7636 explicit public declarations, exhaustive
+  14290-theorem audit and declaration linters pass.
+
+All nine new explicit audits report only `propext`, `Classical.choice`
+and `Quot.sound`; all 23 new semantic regressions pass.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+Repository shortcut scans find no prohibited proof term or postulate;
+the broad text search matches only existing prose and rational structure
+fields. All 141 checkpoint source/integration/runner hashes are unchanged
+between the pre-target-gate snapshot and post-gate check, including the
+preserved counterexample. The architecture has 164 distinct nodes and
+406 resolved edges. `git diff --check` passes; the 16 Git LF/CRLF
+normalization notices are not Lean diagnostics.
+
+Semantic edge check: CSEL is realized by
+`bourgain_subdivided_common_band`, which consumes the actual subdivision
+and weighted partition theorem. CRG is realized by
+`bourgain_retained_relative_level` and
+`bourgainRelativeLevelCount_log_bound`. CCP is the derived
+`BourgainComponentBand.relative_correlation_lower`, not a field assumed
+in the component predicate. CLEV is
+`bourgain_subdivided_common_levels`, which constructs its selected
+family from those actual outputs and derives the product inequality on it.
+
+This verifies the installed supporting theorem scope, not the remaining
+correlation selection, Bourgain dichotomy, Add-est (ix), or whole-proof goal.
+
+### Common-component checkpoint SHA256 evidence
+
+These identify the verified files above; earlier checkpoint hashes remain
+historical. The other 129 entries of the 141-file source/integration/runner
+comparison were also unchanged across the target-gate snapshot and final read.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainComponentSelection.lean` | `24b8732e75a6c6df566ade36df027b79451ec8b52c506a7922f23db856ede4a8` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonBand.lean` | `b005d7f2bd0ee8a151d4a47adc880a6daddd1b28dcd4fcb2f72b9a1fe2326a24` |
+| `Extension/TaoTrudgianYang2025/BourgainRelativeLevels.lean` | `7335326e0990bfb5721d6236063b5ebfde1e398cdfba121b8070fadeba405282` |
+| `Extension/TaoTrudgianYang2025/BourgainCorrelationProduct.lean` | `dcc7472399c510ef2185823fcaae28a556b1f4c81576a402d8a2921b59916a36` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonLevels.lean` | `a554b9e5d48defcda94501d257f94a7f1f931851a4ca9935416a86ee0889af97` |
+| `Extension/TaoTrudgianYang2025.lean` | `26aa39de273e862435cb2c18565d33c1d32dc43248d60e54d8c7402f8c56c5e5` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `0bc9d5cb7f18c2722b537df3af78c4fd21f3d3037abe99f7531df413741aba2a` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `2b71d4841ee4b9dea83a3b05bed79062b0fdcc768ff7d7017e8b62fd715cb141` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `dd46b466fbfc6dac352f57c2692c56a4af7e3c0e235bc40995886524535bea60` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `E:/Lean/Riemann Zeta/run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `logs/tao-trudgian-yang-build-20260921-152459-3040905f.log` | `936d082713dd09a2b0b9312722feb03e74c0e7f5f9259a6a55195a970c3f389d` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_152045.log` | `7d3858dd0d933791984445b84e89d576f7058f29425ac307da73e895e7076eeb` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_152045.json` | `588db3083b00a2eacbf2abd3feeead65dddfdd38142dcd9aa5042c4a0d4a11ff` |
+
+## Bourgain common correlation and uniform selection losses — historical checkpoint
+
+The printed-Lemma-62 counterexample remains byte-for-byte unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The authorized independent cardinality/energy witnesses and Add-est
+(i)--(viii) are preserved. False fifth-coordinate scaling and a third
+witness remain excluded.
+
+Five new production modules complete the next finite selection step:
+
+- `BourgainCorrelationScales`: a coarse polynomial amplitude-count
+  bound and shared inverse-power correlation floor, with proved exponent
+  margin and coefficient balance.
+- `BourgainCorrelationWindow`: actual retained cardinality, spatial
+  enlargement and mass/fourth-moment data force each component's correlation
+  into that shared physical window.
+- `BourgainCorrelationGrid`: a genuine finite correlation grid, its
+  logarithmic count and fixed-parameter small-power bound, and actual
+  component selection with two-sided occupancy bounds.
+- `BourgainCommonCorrelation`: consumes the actual common-amplitude/
+  relative-level family and performs the third retained-cardinality-weighted
+  selection, preserving the original-source union.
+- `BourgainSelectionLosses`: proves a joint arbitrary-small-power
+  bound for all three actual selection counts.
+
+The prior common-level module's introductory comment now scopes its
+remaining work to downstream consumers; its theorem statement is unchanged.
+
+For the already fixed B>0, C>=2, alpha, tau and epsilon>0, define
+
+```text
+u=|tau|+epsilon+1,
+A0=|alpha|+4|tau|+epsilon+20,
+E=2(|tau|+1)+2(u+A0)+u(1+epsilon),
+A1=|alpha|+|tau|+E+1,
+K0=4096 C (4B+2)^2 3^(1+epsilon)+1,
+b=N^(-A1)/K0, h=N^(epsilon/8).
+```
+
+The floor b is independent of the local component, difference level,
+local mass and band index. The proved actual-component window is
+`0<b<r_i<=4h`. Its lower endpoint follows from the existing actual
+correlation-product inequality, not an assumed correlation estimate.
+The proof bounds its coefficient by `(K0-1)N^E` and proves
+
+```text
+(K0-1) N^E b^2 <= N^(-2alpha) N^tau.
+```
+
+The shared finite count and its bound are
+
+```text
+Kc = bourgainZetaBandCount (4K0) (h-1) (N^(-A1)),
+Kc <= 2+[log(16K0+1)+(epsilon/8+A1) log N]/log 2.
+```
+
+The terminal bound is strict, including exact dyadic endpoints.
+For fixed parameters and any eta>0, the count is <=D_eta N^eta
+beyond a proved threshold. Alpha is an allowed dependency; no
+uniform-in-alpha threshold is asserted.
+
+The main consumer `bourgain_subdivided_common_correlation` retains
+sigma>3/4, `C<=N<=L<=N^(tau+delta)`,
+`N^(sigma-delta)<=P.V`, and `0<delta<=1`.
+B,C,delta precede the pattern; the same W_i precede alpha.
+Tau still describes the local height L, not the unrestricted original P.T.
+
+It constructs common indices q<J, p<Q and k<Kc and actual selected bins.
+All previous component data remain available. With
+V=N^(-A0)2^q, d=N^(-(|tau|+2))2^p, s=b2^k,
+U=L+h+1, actual difference set D_i, actual band measure mu, and
+actual correlation r_i, each selected component satisfies
+
+```text
+0<s,  s<=r_i<2s,  s<=4h,
+s sqrt(mu) sqrt(|D_i|) <= actual band occupancy
+  < 2s sqrt(mu) sqrt(|D_i|),
+N^(-2alpha) N^tau
+  < 4096 (Nat.log 2 |W_i|+1)^2 J^2 C U^(1+epsilon) d s^2.
+```
+
+The factor 4096 is derived from the prior product bound and the
+two-sided correlation band; it is not added as a field in the source
+component predicate.
+
+Let m=floor(P.T/L)+1 and F be the unchanged three-term small-component
+bound from the preceding checkpoint. The selected original-source union S
+has exact cardinality sum_i |W_i|, is one-separated, and is large for the
+unchanged original coefficient polynomial. Every component's strict ordered
+integer difference counts are preserved. The proved global bound is
+
+```text
+|P.ordinates| <= m F + C N^epsilon J Q Kc |S|.
+```
+
+The family may be empty when the small bound suffices. No nonempty large
+family is silently assumed. The main consumer retains the finite counts;
+their absorption is proved separately by
+`bourgain_selection_counts_uniform_power`: for fixed B,C,alpha,tau,epsilon
+and every eta>0, constants D,N0 precede the actual pattern and its
+physical-window parameter, and for N>=N0, `J Q Kc<=D N^eta`. For the selected
+family this applies to the actual localized pattern of height L.
+
+The full integer-slice common-shift inequality, local-mean lower estimate,
+actual mixed-moment comparison, finite/logarithmic Bourgain dichotomy and
+remaining physical-range bridges are still open. Add-est (ix),
+EPZAE-19/36/37 and the whole EPZAE-00--41 contract remain open.
+
+The root and exact target BAT inventory include all five modules, with
+17 new explicit theorem audits and 31 semantic regressions. Maintain both
+`run_tao_trudgian_yang_build.bat` and foundation `run_lake_build.bat`;
+no coverage, warning, integrity or dependency gate is narrowed.
+
+### Verification status for this checkpoint
+
+Both mandatory BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-155221-a509a790.log`.
+  All 489 package Lean files are covered, 500 Lean files scanned, and
+  9344 build jobs pass. The exhaustive audit checks 4543 discovered target
+  theorems and five imported boundary declarations: all 4548 pass.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_154836.log`
+  and its matching JSON manifest. All six stages pass, with 301 root
+  modules, two explicit regressions and no excluded/unclassified files.
+  The 8857-job build, 7636 explicit public declarations, exhaustive
+  14290-theorem audit and declaration linters pass.
+
+All 17 new explicit audits report only `propext`, `Classical.choice`
+and `Quot.sound`; all 31 new semantic regressions pass.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+Repository shortcut scans find no prohibited proof term or postulate;
+broad text matches are existing prose and rational structure fields.
+All 146 checkpoint source/integration/runner hashes are unchanged between
+the pre-target-gate snapshot and post-gate check, including the counterexample.
+The architecture has 168 distinct nodes and 417 resolved edges.
+`git diff --check` passes; 16 Git LF/CRLF normalization notices are
+not Lean diagnostics.
+
+Semantic edge check: CSCL is realized by
+`bourgain_component_correlation_window`, consuming the actual component
+product, retained-cardinality bound and proved floor balance.
+CGR is realized by `bourgain_component_correlation_grid`,
+`bourgainCorrelationLevel_terminal` and
+`bourgainCorrelationLevelCount_log_bound`.
+CCOR is `bourgain_subdivided_common_correlation`, which consumes the
+actual prior family, derives all component grid witnesses and constructs
+the third weighted fiber and original-source union.
+SLOSS is `bourgain_selection_counts_uniform_power`, whose conclusion
+uses the actual counts and linked physical height of the supplied pattern.
+These are supporting results; the full integer-slice shift, Bourgain
+dichotomy, Add-est (ix), and whole-proof contract remain unfinished.
+
+### Common-correlation checkpoint SHA256 evidence
+
+These identify the verified files above; earlier checkpoint hashes remain
+historical. The other 133 entries of the 146-file source/integration/runner
+comparison were also unchanged across the target-gate snapshot and final read.
+The prior common-level module changed only its scope comment, not its theorem.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainCorrelationScales.lean` | `20a400f2ee52f2a328b1a10d69acc18dcd8d338609e824897d14c009c6dbea55` |
+| `Extension/TaoTrudgianYang2025/BourgainCorrelationWindow.lean` | `ccc2d59170b74d562d4b8e18fcead3692f72bd7a1fcbf87b6bae5625fac78df0` |
+| `Extension/TaoTrudgianYang2025/BourgainCorrelationGrid.lean` | `ef480505c519618049d2a76ad523c2071013a5bc7edfe9ca2b1c6b8903a19874` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonCorrelation.lean` | `547b4d940bd4b0e23fae6041b983fdbc899fb950c03c68130879007027b95181` |
+| `Extension/TaoTrudgianYang2025/BourgainSelectionLosses.lean` | `c855d1592e5a9c4b10b7724271782bd2ef58e2e46a94a7ee02de92117cc9369a` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonLevels.lean` | `a34be7c56a90383c6781a7a259c1f09a15f5bb36a4df27300f9191a122520534` |
+| `Extension/TaoTrudgianYang2025.lean` | `fa3e8a6efa8109ad8852a51787d41249306499b1f22735851e1db62867b4c0e3` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `24a6e21838553c4e0df44952248cad040fab6e81ea8c7d6b12e162df4fafa8bf` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `b6a8e24efb5537ae8d5d4d9a2fec2a8cb7fd37331c89a78809a6b2a685a75504` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `e5e98878e932b2ab3eab00abcfd43308b6c4908c231b7386c628103abfeaa95b` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `E:/Lean/Riemann Zeta/run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `logs/tao-trudgian-yang-build-20260921-155221-a509a790.log` | `981704c272a69eda1da91d15d1d22dc0f5639432c8e5bef3be92200cf04285d1` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_154836.log` | `2c125e72239a2b9722e8b1172bebf3ee7bed88220aaed575d91703a953db9408` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_154836.json` | `83a700aca63e660cda497037f9e8534804232b2db5f723bdbd47f0a4b4b936b9` |
+
+## Bourgain full integer slice and source mixed lower bound — historical checkpoint
+
+The printed-Lemma-62 counterexample is preserved byte-for-byte, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent cardinality/energy witnesses and Add-est (i)--(viii)
+are unchanged. False fifth-coordinate scaling and a third witness stay excluded.
+
+Twelve new production modules prove a full two-term common shift for the
+actual selected family, a power-window local mean for the original polynomial,
+and their actual source-pattern mixed lower-bound consumer:
+
+- `BourgainIntegerSlice`, `BourgainSliceSelection`: the complete integer
+  slice, its integrated cardinality and square-root bounds, and simultaneous
+  weighted selection against both profiles.
+- `BourgainComponentMass`, `BourgainFamilySlice`, `BourgainCommonSlice`:
+  derive both weighted mass lower bounds from actual component occupancy,
+  fourth moment and common levels, then consume the actual three-level family.
+- `BourgainSliceGeometry`: the real image has the same cardinality, is
+  one-separated, and has proved spatial bounds and shifted zeta membership.
+- `BourgainLocalMean`, `BourgainPowerMean`, `BourgainLocalSquare`:
+  frequency-center the original closed-support negative-phase polynomial,
+  consume the native finite exponential-sum Fourier estimate, absorb its tail,
+  and prove the displaced local-square estimate.
+- `BourgainMixedLower`, `BourgainMixedFamily`, `BourgainCommonMixed`:
+  preserve strict ordered difference counts and original-source pullbacks,
+  sum over the disjoint bins, and assemble the actual mixed lower bound.
+
+### Exact finite physical statement and semantic edges
+
+Write h=N^(epsilon/8), U=L+h+1, Vb for the selected common zeta amplitude,
+mu for the measure of its actual band, and K=2 ceil(h)+1. The full slice is
+
+```text
+Z(u) = {ell in [-ceil(U+h),ceil(U+h)] in Z : ell+u belongs to the band}.
+```
+
+For every u in [-h,h] it contains every integer whose translate lies in the
+band, not just the integers from one component's difference level.
+`bourgainIntegerSlice_integral_card_le` and
+`bourgainIntegerSlice_integral_sqrt_card_le` prove, over [-h,h],
+
+```text
+integral |Z(u)| <= K mu,
+integral sqrt(|Z(u)|) <= sqrt(2h K mu).
+```
+
+Let R_i=|W_i|, D_i be the actual heavy difference level, d the common relative
+multiplicity, s the common correlation level, J the actual amplitude count,
+and Zlog=3+(|tau|+1) log(N)/log(2). Define
+
+```text
+beta = N^(-alpha) N^(tau/2) / [32 Zlog J d sqrt(C U^(1+epsilon))],
+a = s^2/(8hK),    b = beta/[4 sqrt(2hK)].
+```
+
+The theorem `BourgainComponentBand.weighted_mass_lower` derives its two
+mass inequalities from the actual band, not from assumed desired lower bounds.
+`bourgain_component_family_slice` consumes them and the complete slice
+moments. `bourgain_subdivided_common_slice` constructs the actual selected
+family and proves either the genuine small-component bound or a common
+u in (-h,h] with nonempty Z=Z(u) and
+
+```text
+a |Z| |S| + b sqrt(|Z|) sum_i R_i^(3/2)
+  < sum_i R_i |D_i intersect Z|.
+```
+
+Here S is exactly the disjoint union of retained sets pulled back into their
+original bins; |S|=sum_i R_i. The common levels, unchanged original
+coefficients, source containment, one-separation, strict difference counts,
+and global packing cost m F + C N^epsilon J Q Kc |S| are retained.
+No nonempty selected family is assumed; the empty case gives the small bound.
+
+For every eta>0, `bourgain_power_window_displaced_square` provides constants
+M>0 and N0>=2 before the actual pattern and points, and proves
+
+```text
+P.V^2 <= M N^eta integral_[-r,r] |F_P(x+v)|^2 dv,
+r=1+2 pi N^eta,
+```
+
+when N>=N0, sigma>=0, delta<=1, N^(sigma-delta)<=P.V, and x is within one
+unit of an actual large ordinate. The underlying exact modulation is
+exp(i log(N)t) F_P(t); its frequencies are log(N)-log(n), of absolute value
+at most one on the literal closed support [N,2N]. It uses the already
+kernel-checked native `norm_gmFiniteExpSum_le_localIntegral_add_tail`,
+then absorbs the actual tail using P.V>=N^(-1). No analytic local-mean
+hypothesis is supplied by a caller.
+
+This is a directly proved **power-window** route to the needed mixed lower
+bound, not a proof of the printed logarithmic-window lemma (4.48).
+That sharper printed statement is not marked complete.
+
+The strongest consumer `bourgain_subdivided_mixed_lower` retains
+sigma>3/4, epsilon>0, eta>0, C<=N, N0<=N,
+N<=L<=N^(tau+delta), N^(sigma-delta)<=P.V and 0<delta<=1.
+B,C,delta,M,N0 precede the actual pattern; W_i still precede alpha.
+Tau governs the local L, not the unrestricted original P.T.
+On its large branch it constructs the same nonempty full slice and proves
+
+```text
+P.V^2 d [a |Z| |S| + b sqrt(|Z|) sum_i R_i^(3/2)]
+  < M N^eta integral_[-r,r] sum_(t in S) sum_(ell in Z)
+      |F_P(t-ell+v)|^2 dv.
+```
+
+The strict-bin first-coordinate injection uses each W_i's two-separation.
+The proof transports each component's ordered counts into its original bin
+and sums over the disjoint source union. It does not identify the union's
+total difference count with the sum of component counts.
+
+This closes the finite physical common-shift and source mixed **lower**
+steps (the roles of source (4.47) and (4.53)). It does not yet combine the
+mixed upper bound with Heath--Brown, prove (4.57)--(4.63), or discharge
+the ninth-row logarithmic-dichotomy premise. Add-est (ix), EPZAE-19/36/37,
+and the whole EPZAE-00--41 goal remain open.
+
+Root imports, the exact target BAT inventory, explicit audit and semantic
+regressions include all twelve modules: 39 new public theorem audits and
+59 new regression examples, including closed endpoints, strict excluded
+difference boundaries, zero amplitude, unchanged coefficients and both
+source-facing consumer types. Both `run_tao_trudgian_yang_build.bat` and
+foundation `run_lake_build.bat` remain mandatory; no gate is narrowed.
+
+### Verification status for this checkpoint
+
+Both mandatory BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-164830-0fe87f33.log`.
+  All 501 package Lean files are covered, 512 Lean files scanned, and
+  9356 build jobs pass. The exhaustive audit checks 4601 discovered target
+  theorems and five imported boundary declarations: all 4606 pass.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_164601.log`
+  and its matching JSON manifest. All six stages pass, with 301 root
+  modules, two explicit regressions and no excluded/unclassified files.
+  The 8857-job build, 7636 explicit public declarations, exhaustive
+  14290-theorem audit and declaration linters pass.
+
+All 39 new explicit audits report only `propext`, `Classical.choice`
+and `Quot.sound`; all 59 new semantic regressions pass.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+Repository shortcut scans find no prohibited proof term or postulate;
+broad text matches are existing prose and rational structure fields.
+All 158 checkpoint source/integration/runner hashes are unchanged between
+the pre-target-gate snapshot and post-gate check, including the counterexample.
+The architecture has 172 distinct nodes and 428 resolved edges.
+
+Semantic green-node check: ISL uses
+`bourgainIntegerSlice_integral_card_le`,
+`bourgainIntegerSlice_integral_sqrt_card_le` and
+`bourgainRealSlice_separated`/`bourgainRealSlice_bounds` on the defined
+complete slice. CSH is `bourgain_subdivided_common_slice`, which consumes
+the actual common-correlation family and derived weighted mass bounds.
+LPM is `bourgain_power_window_displaced_square`, using the proved exact
+modulation, native Fourier estimate, tail absorption and interval translation.
+MLB is `bourgain_subdivided_mixed_lower`, which unpacks the actual source
+family and composes CSH, LPM, strict difference counts and original pullbacks.
+These statements preserve the stated parameter ranges and constant order.
+The full mixed upper assembly, Bourgain dichotomy, Add-est (ix) and
+whole-proof contract remain open; audit counts do not close those obligations.
+
+### Full-slice and mixed-lower checkpoint SHA256 evidence
+
+These identify the verified files above; earlier checkpoint hashes remain
+historical. The other 139 entries of the 158-file source/integration/runner
+comparison were also unchanged across the target-gate snapshot and final read.
+All twelve new source texts were also checked against the individually
+compiled versions. No existing mathematical module changed this iteration.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainIntegerSlice.lean` | `6709f08f22c1d7796ff649768a73dcdbd4312e660c1a59969c23a1e1224b93e9` |
+| `Extension/TaoTrudgianYang2025/BourgainSliceSelection.lean` | `406af91bae81d2c56fa8df79638ce242cfb00d9f7fb373f00dfec57cae45dc01` |
+| `Extension/TaoTrudgianYang2025/BourgainComponentMass.lean` | `7263bc559a936f6bde4840943a89898f35ce460b0122617322ae7629b8d346b9` |
+| `Extension/TaoTrudgianYang2025/BourgainFamilySlice.lean` | `3b8539138ae2f0969c92d4179b3ff909dbcfb32d550661c12f13f4a37e77da73` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonSlice.lean` | `378a4cc414410844acd21eeac795a2c467f2dae55490fd11241217a532920ace` |
+| `Extension/TaoTrudgianYang2025/BourgainSliceGeometry.lean` | `d524580b19414309576f457314cf2813dc78fd2826c0c100b42401675c62c856` |
+| `Extension/TaoTrudgianYang2025/BourgainLocalMean.lean` | `c8552d3608b47b375c1caf0f2e98f5e50dbfc2155158a3b08efc9d34d4d17545` |
+| `Extension/TaoTrudgianYang2025/BourgainPowerMean.lean` | `2c06e5b518b1c96031fd298a3e5c1f9bbf49de80873d306c28e5aa06e365cff2` |
+| `Extension/TaoTrudgianYang2025/BourgainLocalSquare.lean` | `31733e4df6ece31f3fa9e45a0355ac05bc9833520561c4a354ee5724122453c6` |
+| `Extension/TaoTrudgianYang2025/BourgainMixedLower.lean` | `fd4f7806d671b2d561064dd005e7026a6ce4014e13cae99bb1ddc0518c27360c` |
+| `Extension/TaoTrudgianYang2025/BourgainMixedFamily.lean` | `edbf9c03794332e3d57d595fa4c00585726393cbf1ae6e744af8b8d9d2f7e2c3` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonMixed.lean` | `de09b31a3464c44142cdcc776c91ef84e997b97cff16e0b6d80c60d9970fd52d` |
+| `Extension/TaoTrudgianYang2025.lean` | `f05c1b94bafcc418e69aa8335cf30846b4d4dfa32316df706c62bfb8c985eabb` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `e42b92c29860d5dd6f3fa5536c58417a99edba986595f7256b64d0c32825d6cc` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `b87267e5508f17897d7d5a7ee90315450fa01870f5e5faeb45408286d1aba5b7` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `2f5c1c24180df30c519bd22067119e6343b7d666545184afad1f80d71518bb7d` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `E:/Lean/Riemann Zeta/run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `logs/tao-trudgian-yang-build-20260921-164830-0fe87f33.log` | `b489a96d59dc2d2376e99d4232782cf31f9179920e7cf7bb9c3a0f45c992305a` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_164601.log` | `b27f1332ab56428bbaf56d018f2cf88f78b70b3e7ac21c36d9831331f17f96f6` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_164601.json` | `8c8742ddbe616533389a463c58e46b881569d70451d1d33c446218f61de84f04` |
+
+## Bourgain Heath–Brown comparison and linked subdivision — historical checkpoint
+
+The printed-Lemma-62 counterexample remains byte-for-byte unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The authorized independent cardinality/energy witnesses and Add-est (i)--(viii)
+are preserved; false fifth-coordinate scaling and a third witness stay excluded.
+
+Ten new production modules advance the actual mixed lower bound through
+Heath--Brown, remove the common multiplicity/correlation levels, and link
+the subdivision to the original physical height:
+
+- `BourgainSeparatedSelf`: the native Heath--Brown self-moment bound on
+  arbitrary one-separated sets, with the original polynomial's closed support
+  and explicit endpoint error. The auxiliary slice is not falsely made into
+  a large-value pattern for the original polynomial.
+- `BourgainMixedShift`, `BourgainMixedUpper`: exact unit-norm coefficient
+  twist, integer-to-real sum bridge, integration length, and the actual
+  source-set/full-slice mixed upper bound.
+- `BourgainCommonComparison`: consumes the already constructed selected
+  family and both actual analytic estimates.
+- `BourgainLevelElimination`, `BourgainLevelFreeComparison`: use the
+  genuine component product to remove correlation and multiplicity from
+  the first coefficient; cancel multiplicity exactly in the second; replace
+  the component three-halves sum by the retained union's cardinality,
+  paying the square root of the actual bin count.
+- `BourgainPhysicalUpper`, `BourgainPhysicalComparison`: prove the
+  slice's enclosing height is at most 8 times the original height when
+  N<=L<=T and epsilon<=8; absorb the constant-factor enlargement uniformly.
+- `BourgainSubdivisionScale`, `BourgainLinkedComparison`: link
+  L=T/N^chi with both original-height power bounds, prove the finite bin
+  count, and instantiate the actual comparison at the ninth-row choice.
+
+### Source-facing physical comparison
+
+The strongest general linked consumer is
+`bourgain_linked_subdivision_comparison`. It assumes sigma>3/4,
+chi>=0, lambda=tau-chi>1, eta>0, theta>0 and 0<epsilon<=8.
+Its positive constants B,C,M,D,N0 and
+0<delta<=min(1,(lambda-1)/2) precede the actual pattern.
+
+For N>=max(C,N0), N^(tau-delta)<=T<=N^(tau+delta),
+N^(sigma-delta)<=P.V and the literal L=T/N^chi, it derives N<=L<=T,
+the required local upper-height bound, and
+
+```text
+m = floor(T/L)+1 <= 2 N^chi.
+```
+
+The local band/selection constructions use **lambda**, not global tau.
+The same genuine reflected W_i are chosen before alpha. For every alpha
+the consumer preserves all three common levels, every actual component band,
+the disjoint original-source union S, exact cardinality, one-separation,
+the unchanged original polynomial and the strict ordered difference counts.
+
+Write h=N^(epsilon/8), U=L+h+1, K=2 ceil(h)+1,
+Zlog=3+(|lambda|+1) log(N)/log(2), J for the actual amplitude count,
+R=|S|, and x=|Z(u)| for the nonempty complete integer slice.
+Define the two level-free coefficients
+
+```text
+gamma = N^(-2alpha) N^lambda /
+  [32768 h K Zlog^2 J^2 C U^(1+epsilon)],
+beta = N^(-alpha) N^(lambda/2) /
+  [128 Zlog J sqrt(C U^(1+epsilon)) sqrt(2hK)],
+HB(N,T,y) = y^2 N + y N^2 + y^(5/4) T^(1/2) N.
+```
+
+The exact Lean names are `bourgainEliminatedCardCoefficient`,
+`bourgainSliceSqrtCoefficient ... 1`, and `bourgainSecondBudget`.
+Both lower coefficients are proved positive. Either the actual original
+cardinality obeys the small-component bound m F, or S is nonempty and the
+consumer constructs u in (-h,h] and the nonempty full slice satisfying
+
+```text
+P.V^2 [gamma x R + beta sqrt(x) R^(3/2)/sqrt(m)]
+  < M N^eta 2(1+2 pi N^eta) D T^theta
+      sqrt(HB(N,T,R)) sqrt(HB(N,T,x)).
+```
+
+F is the unchanged three-term small-component bound, now with local lambda.
+The companion global selection inequality remains
+`|P.ordinates| <= m F + C N^epsilon J Q Kc R`, with actual finite counts.
+No Heath--Brown, local-mean, desired correlation, or mixed-bound hypothesis
+is left for the caller to provide. Both height hypotheses and coefficient
+normalization are discharged on the actual objects.
+
+This is the full finite physical mixed comparison with the third
+Heath--Brown term retained. It is not a claim that the paper's simplified
+two-term display holds without its additional range assumptions.
+
+### Ninth-row entry and exact remaining work
+
+`bourgain_ninth_row_local_height_margin` proves that
+chi=max(0,4sigma+4tau/3-5) is nonnegative and tau-chi>1 from sigma>3/4,
+16sigma-11<=tau and 20sigma+tau/3<=16.
+`bourgain_ninth_row_physical_comparison` actually instantiates the linked
+source consumer at that choice. This closes that row's interior local-height
+entry, not the row's large-values conclusion.
+
+Next remove the finite/logarithmic losses with correctly ordered constants:
+bound gamma and beta below by the required small-power expressions, use
+the proved m bound, transfer the retained union back to total cardinality,
+control the slice-cardinality exponent, and pass the actual comparison to
+the frozen logarithmic dichotomy. Then discharge
+`bourgain_ninth_row_of_log_dichotomy` and finish Add-est (ix).
+
+The unrestricted printed-(4.7) range and other classical/source obligations
+remain open. The printed logarithmic-window (4.48) is still not claimed:
+the comparison uses the already proved power-window route.
+EPZAE-19/36/37, Add-est (ix), and the full EPZAE-00--41 goal remain open.
+
+The root imports, exact target BAT inventory, explicit audit and semantic
+regressions include all ten modules: 31 public theorem audits and 45 regression
+examples. Maintain both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat`, including coverage, dependency, integrity and
+zero-warning gates. No frozen source or dependency pin changed.
+
+### Verification status for this checkpoint
+
+Both mandatory BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-172415-5a54834a.log`.
+  All 511 package Lean files are covered, 522 Lean files scanned, and
+  9366 build jobs pass. The exhaustive audit checks 4645 discovered target
+  theorems and five imported boundary declarations: all 4650 pass.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_172230.log`
+  and its matching JSON manifest. All six stages pass, with 301 root
+  modules, two explicit regressions and no excluded/unclassified files.
+  The 8857-job build, 7636 explicit public declarations, exhaustive
+  14290-theorem audit and declaration linters pass.
+
+All 31 new explicit audits report only `propext`, `Classical.choice`
+and `Quot.sound`; all 45 new semantic regressions pass.
+Both complete logs contain zero Lean errors, warnings or tactic suggestions.
+Repository shortcut scans find no prohibited proof term or postulate;
+broad text matches are existing prose and rational structure fields.
+All 168 checkpoint source/integration/runner hashes are unchanged between
+the pre-target-gate snapshot and post-gate check, including the counterexample.
+The architecture has 177 distinct nodes and 444 resolved edges.
+`git diff --check` passes; the 16 Git LF/CRLF normalization notices
+are not Lean diagnostics.
+
+Semantic green-node check: HBSET is
+`bourgain_separated_self_moment`, applying the native moment to the
+actual reflected arbitrary set and paying the closed-support endpoint.
+SHCS is `bourgain_slice_mixed_integral_cauchySchwarz`, using the
+proved exact twist, support-only coefficient bound and complete integer image.
+MCOMP is `bourgain_subdivided_mixed_comparison`, composing the actual
+selected-family lower bound with the proved upper estimate on its source union
+and full slice. LELIM is `bourgain_subdivided_level_free_comparison`;
+its first coefficient is derived from the real component product, its second
+uses exact multiplicity cancellation, and its power-sum loss uses the actual
+disjoint-union cardinality and bin count.
+PSCALE is `bourgain_linked_subdivision_comparison` and
+`bourgain_ninth_row_physical_comparison`, deriving local ranges and
+the original-height enclosure from the literal subdivision and shrinking
+the allowed delta explicitly. No desired analytic estimate is a premise.
+
+These are finite source-comparison results. Finite-loss absorption, the
+logarithmic dichotomy, Add-est (ix), and the whole-proof contract remain
+unfinished; dependency integrity is not a claim of those endpoints.
+
+### Heath--Brown/linked-subdivision checkpoint SHA256 evidence
+
+These identify the verified files above; earlier checkpoint hashes remain
+historical. The other 151 entries of the 168-file source/integration/runner
+comparison were also unchanged across the target-gate snapshot and final read.
+All ten new source texts were checked against their individually compiled
+versions. No prior production theorem module changed in this iteration.
+
+| File | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainSeparatedSelf.lean` | `ab29efcac629632d2209e31dbbd1dcc97a3e25de8d46ccc0ed37090a4dcce03a` |
+| `Extension/TaoTrudgianYang2025/BourgainMixedShift.lean` | `eaed91e6f7cdadbdaa6b5e83e8ddda33031a1db0b9fdfb6be43abc3811a7e736` |
+| `Extension/TaoTrudgianYang2025/BourgainMixedUpper.lean` | `c24926bc99134d8bba7b9ae477090232b0daf32e07fafb7515229ff073a71968` |
+| `Extension/TaoTrudgianYang2025/BourgainCommonComparison.lean` | `6b30d1cc357722c767c0c05501a83f7c6c94c6b6971b91f38e47955f34847604` |
+| `Extension/TaoTrudgianYang2025/BourgainLevelElimination.lean` | `0966e4ea94871bb93d32b71f0fe657054e56f4c93601a0db18ffe4264d2f87c4` |
+| `Extension/TaoTrudgianYang2025/BourgainLevelFreeComparison.lean` | `107ab5d50ea8adae69f304d8affe127b947c2a8db4ba6fc9b72cb99eb8329f9c` |
+| `Extension/TaoTrudgianYang2025/BourgainPhysicalUpper.lean` | `f62d5a4417c745980d8be957728dfeba5bd66f661a81c310faff5a83a13d30b2` |
+| `Extension/TaoTrudgianYang2025/BourgainPhysicalComparison.lean` | `5c25362b175c4b30c27a0f16788091ed7f62a883b3a367385e5a9ec0810fbe9a` |
+| `Extension/TaoTrudgianYang2025/BourgainSubdivisionScale.lean` | `88fc8b7f79605a019e45b5978404650320d8f2573b18dafaea8b67a57ccffbfe` |
+| `Extension/TaoTrudgianYang2025/BourgainLinkedComparison.lean` | `5a6de1dd61642123a82ea9b2e9a5ca6221ec62302a5e36f62bfc8decf65d5a50` |
+| `Extension/TaoTrudgianYang2025.lean` | `bf9c4c8278ffeaf609164aca668ba47c283647b6f1377545fe1329022f4844b4` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `7ead039c78dc6618437cdaf8b30876ff03a1f54791ffa7386f3d1bf200667d22` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `811fb8629ec1ad85f28c1f5ce2091d805361b04d48ad33e6f259f23ae86213e4` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `f7a9ead474bf971979b202b7505c13d1be00ee2d46ee11c14a082b93c58df061` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `E:/Lean/Riemann Zeta/run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `logs/tao-trudgian-yang-build-20260921-172415-5a54834a.log` | `5d287b490e03ede67d2d9b393a1c85a458916eca8cb974783b158d98a6b937b8` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_172230.log` | `88a623956370f0dc6a22f22b3be9f0da19ecd0022677bef7e2c398e32f1962c5` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_172230.json` | `bbcc3becfacafcb7cb3c99eb8b2d49c211861dada63b690ebc7b180274ac14a5` |
+
+## Bourgain uniform finite power losses — historical checkpoint
+
+The printed-Lemma-62 counterexample remains byte-for-byte unchanged
+(SHA256 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`).
+The corrected independent cardinality and energy witnesses, Heath--Brown
+energy relation and Add-est (i)--(viii) remain preserved. No false
+s'/s fifth-coordinate scaling or third powering witness is introduced.
+
+Five production modules now express the actual comparison's finite losses
+as explicit powers, with constants chosen before the physical pattern:
+
+- `BourgainCoefficientIdentity` proves beta^2=gamma exactly, including
+  the zero fourth-moment-constant boundary, and beta=sqrt(gamma).
+- `BourgainComparisonLogLoss` bounds the literal difference logarithm
+  and amplitude count jointly by an arbitrary positive power.
+- `BourgainCoefficientLosses` derives the ceiling-window product,
+  enlarged local-height power and both coefficient lower bounds.
+- `BourgainComparisonPowerBudget` bounds the square-root bin factor
+  and original-height integration factor, and proves explicit slack control.
+- `BourgainLinkedPowerLoss` consumes the actual constructed family,
+  retained original-source union and complete integer slice.
+
+### Exact finite consumer and parameter order
+
+`bourgain_linked_power_loss_comparison` fixes
+sigma>3/4, chi>=0, lambda=tau-chi>1, alpha, positive eta/theta/kappa/zeta,
+and 0<epsilon<=8 before its constants B,C,K,G,H,N0 and
+0<delta<=min(1,(lambda-1)/2,zeta). Alpha is a permitted constant dependency;
+this theorem does not assert uniformity in alpha. The earlier stronger
+family-before-alpha construction is unchanged.
+
+For the actual pattern, N>=max(C,N0), L=T/N^chi,
+N^(tau-delta)<=T<=N^(tau+delta), and N^(sigma-delta)<=P.V,
+the theorem derives L>0 and N<=L<=T. All local grids use lambda;
+the Heath--Brown budgets retain the original T.
+
+Write R=|S|, h=N^(epsilon/8), U=L+h+1, x=|Z(u)|, and
+
+```text
+E = epsilon/4 + kappa + delta + (lambda+delta) epsilon,
+F = C [N^(2-2sigma+epsilon)
+       + N^(2lambda+4-8sigma+epsilon)
+       + N^(-2alpha+lambda+12-16sigma+epsilon)],
+HB(N,T,y) = y^2 N + y N^2 + y^(5/4) T^(1/2) N.
+```
+
+The real selected set S is a one-separated subset of the original ordinates,
+with the original polynomial large at every member. Its packing inequality is
+
+```text
+|P.ordinates| <= 2 N^chi F + C H N^(epsilon+kappa) R.
+```
+
+Either |P.ordinates|<=2 N^chi F, or S is nonempty and a genuine grid level q
+and u in (-h,h] give a nonempty complete integer slice with
+
+```text
+N^(2sigma-2delta) [
+  N^(-2alpha-E)/G * x R
+  + N^(-alpha-E/2-chi/2)/sqrt(2G) * sqrt(x) R^(3/2)]
+< K N^(2eta+(tau+delta)theta)
+    sqrt(HB(N,T,R)) sqrt(HB(N,T,x)).
+```
+
+The coefficient bounds come from the actual denominators, not assumed
+certificates. The joint J Q Kc bound is applied to the actual localized
+pattern; the bin factor comes from floor(T/L)+1<=2N^chi. The source comparison
+at its original delta is specialized using monotonicity to the smaller
+requested tolerance, while the new loss estimates use the smaller delta.
+No caller supplies an analytic bound, desired correlation, or slice witness.
+
+### Remaining acceptance work
+
+This proves the finite power-loss reduction, not the logarithmic dichotomy.
+Choose the small parameters in the required order, absorb the remaining fixed
+constants in the limiting argument, control/extract the nonempty slice's
+logarithmic cardinality, and use the actual packing inequality to relate R
+to the original count. Discharge `bourgain_ninth_row_of_log_dichotomy`,
+then the ninth energy projection and Add-est (ix).
+
+The unrestricted printed-(4.7) source range, printed logarithmic-window
+(4.48), other open classical/density/exponent-pair work, EPZAE-19/36/37,
+and the full EPZAE-00--41 goal remain open. The power-window route is retained;
+no public contract, source pin or dependency pin changes.
+
+The root import graph, exact BAT production inventory, explicit axiom audit
+and semantic regressions include these five modules and all 11 public theorems.
+There are 20 new regressions: 11 exact signatures and nine boundary/slack cases.
+Maintain both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat`, with complete coverage and unchanged integrity,
+dependency and zero-warning gates.
+
+### Verification and semantic status
+
+Both required BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-175120-bcf6f466.log`.
+  All 516 package Lean files are covered, 527 Lean files scanned, and
+  9371 build jobs pass. All 4657 discovered target theorems and five
+  imported boundary declarations pass the exhaustive 4662-declaration audit.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_175131.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  the exhaustive 14290-theorem audit and all declaration linters.
+
+All 11 new explicit theorem audits report only `propext`,
+`Classical.choice` and `Quot.sound`; all 20 new semantic regressions pass.
+Both complete current logs have zero Lean errors, warnings and tactic suggestions.
+The first foundation attempt, `foundation_freeze_20260921_175009.log`,
+failed its text scan on a prose-comment line beginning "constant boundary".
+The comment was clarified; no proof or scan gate was weakened. That failed log
+is retained as failed historical evidence, not substituted for the current PASS.
+
+All 173 checkpoint source/integration/runner hashes are unchanged between
+the pre-gate snapshot and post-gate check, including the counterexample.
+The architecture has 178 distinct nodes and 448 resolved edges.
+Repository shortcut scans find no prohibited proof term or postulate;
+remaining broad text matches are existing prose and rational structure fields.
+
+Semantic green-node check: FPOWER is exactly
+`bourgain_linked_power_loss_comparison`. Its proof unpacks
+`bourgain_linked_subdivision_comparison`, applies the uniform coefficient
+bounds to the derived local physical scale, applies the actual selection-count
+bound to `P.localized L hL 0`, and uses the genuine bin count and original T.
+It retains the source small alternative and the original polynomial, and
+constructs the same complete zeta slice rather than assuming one.
+The arbitrarily small tolerance is derived by shrinking the source delta.
+No desired analytic estimate or limiting dichotomy is a premise.
+
+This verifies finite power-loss reduction and dependency integrity only.
+The logarithmic dichotomy, Add-est (ix), and the whole-proof contract remain open.
+
+### Current reproduction hashes
+
+The following SHA256 values cover the five new production modules, all changed
+integration files, both principal BAT entry points and the preserved counterexample.
+
+| Path (relative to this node) | SHA256 |
+| --- | --- |
+| `Extension/TaoTrudgianYang2025/BourgainCoefficientIdentity.lean` | `9a5aa60db13744c4e35ff101ebe5876ad2a815ca6c7bd3a86e4b38e66d96b737` |
+| `Extension/TaoTrudgianYang2025/BourgainComparisonLogLoss.lean` | `7fae8e29f2da147c9e3fcb998a491a6c395cbf08d0fe59a8258126270c05c2f3` |
+| `Extension/TaoTrudgianYang2025/BourgainCoefficientLosses.lean` | `aadcb42065112e714e85d78b2b84421110e52fd4fec38c5d21a62a6d1efe4590` |
+| `Extension/TaoTrudgianYang2025/BourgainComparisonPowerBudget.lean` | `d6bbe6be1c73d0bf17592e0c60b02b0f9351627e880d568ebdd14793dbe1ac22` |
+| `Extension/TaoTrudgianYang2025/BourgainLinkedPowerLoss.lean` | `dda2913c7e0909092525ff9c1d779dcf77160389cd25972196456335e1cb2c34` |
+| `Extension/TaoTrudgianYang2025.lean` | `bf3c3c8f87cfa5661728e354b7b6decf386042fded4eb7fc3d8801ff0be9d607` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `c54c8b25f9e82f08544d0bdad68098e338d9b17324554bf0f19cf1cfe044e638` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `06a91ff1f3b119075cbf20f2ac60945ba9b2a8f983f54954081c7279b024aa25` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `65a856080a94d59a7dcd81baf578076d2b7a35fd11c2ff27d36ff9d4b5e3bb13` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `../../run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+
+| Verification artifact | SHA256 |
+| --- | --- |
+| `logs/tao-trudgian-yang-build-20260921-175120-bcf6f466.log` | `6bc467922a8a327f9d6bf59073563e0047fe5c267de6b61db643bc55f0fc71a7` |
+| `../../logs/foundation_freeze_20260921_175131.log` | `6d053dcb509d8a815ba8fcc05de7cc0aaced6eec67ca96ff7b20b16a1f40d498` |
+| `../../logs/foundation_freeze_20260921_175131.json` | `0868f9f856ffce423b6ff72841771a14c280e1074b549bc0cd28bdb7870573eb` |
+
+The other 161 checkpoint source/integration hashes were also unchanged
+across both gates. The foundation verifier remains SHA256
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+No dependency, frozen source or publication contract changed.
+
+## Bourgain finite logarithms and slice compactness — historical checkpoint
+
+The printed-Lemma-62 counterexample remains unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The independent corrected cardinality/energy witnesses, Heath--Brown relation,
+and Add-est (i)--(viii) remain preserved. The false fifth-coordinate scaling
+and third witness remain excluded.
+
+Seven new production modules continue from the actual finite power-loss
+comparison. They prove the physical slice-cardinality bound, translate both
+comparison terms and the original-source packing inequality into logarithms,
+and extract both real cardinality coordinates along one common subsequence.
+
+### Actual finite logarithmic alternative
+
+`bourgain_linked_logarithmic_comparison` consumes
+`bourgain_linked_power_loss_comparison` on the original pattern, with the
+same parameter order and an explicit nonempty-original-set restriction.
+This restriction is needed because Mathlib gives log(0)=0; the theorem never
+treats that convention as a logarithmic exponent for an empty set.
+
+Fix sigma>3/4, chi>=0, lambda=tau-chi>1, alpha, positive eta/theta/kappa/zeta
+and 0<epsilon<=8. Uniform B,C,K,G,H,N0 and
+0<delta<=min(1,(lambda-1)/2,zeta) precede the physical pattern. For the same
+literal subdivision L=T/N^chi and original-height/amplitude hypotheses,
+write
+
+```text
+rho = log_N |P.ordinates|, r = log_N |S|, x = log_N |Z(u)|,
+E = epsilon/4 + kappa + delta + (lambda+delta) epsilon,
+Bsmall = max(chi+2-2sigma, -chi+2tau+4-8sigma,
+             -2alpha+tau+12-16sigma),
+HBexp(t,y) = max(2y+1, y+2, 5y/4+t/2+1).
+```
+
+Either rho<=Bsmall+epsilon+log_N(6C), or the actual nonempty retained subset
+S and actual nonempty complete integer slice satisfy
+
+```text
+0 <= r <= tau+delta+log_N(2),
+0 <= x <= lambda+delta+log_N(9),
+rho <= log_N(6C+CH) + max(Bsmall+epsilon, epsilon+kappa+r),
+
+max(-2alpha+2sigma+x+r-E-2delta-log_N(G),
+    -alpha-chi/2+2sigma+x/2+3r/2-E/2-2delta-log_N(2G)/2)
+< log_N(3K)+2eta+(tau+delta)theta
+    + HBexp(tau+delta,r)/2 + HBexp(tau+delta,x)/2.
+```
+
+The source set remains one-separated and the original polynomial is large
+at its members. The common grid level q and shift u remain genuine witnesses,
+not separately supplied scalar cardinalities. All three Heath--Brown terms
+are retained.
+
+### Geometry, compactness and supporting limit algebra
+
+`BourgainLogCardinality` proves the full slice has at most 2(U+h)+1
+integers using its actual translated band, hence at most 9 N^(lambda+delta)
+on the physical local scale. Positivity and logarithmic bounds are derived
+from actual nonemptiness.
+
+`BourgainBudgetLogarithm` proves the literal three-term budget is at most
+3 N^HBexp at an actual cardinality, and proves joint continuity of HBexp and
+its delta/2 height-slack bound. `BourgainComparisonLogarithm` takes logarithms
+of both positive finite summands. `BourgainLogPacking` recovers exactly the
+frozen first-branch maximum from the three small-component powers and keeps
+the retained-to-original count loss explicit.
+
+`bourgain_source_slice_log_subsequence` in `BourgainSliceCompactness`
+derives a fixed box from actual pattern/subset/slice geometry and returns
+one strictly increasing subsequence for both coordinates:
+0<=r<=tau+2 and 0<=x<=lambda+5. No bounded-log-coordinate certificate is an
+input. The harmless box constants do not replace the sharper finite bounds.
+
+`BourgainComparisonLimits` proves fixed log_N multipliers tend to zero
+when N tends to infinity. Its `bourgain_fixed_logarithmic_limit` passes an
+explicit eventual finite logarithmic comparison and supplied coordinate
+limits to the corresponding fixed-accuracy inequality. This is supporting
+conditional limit algebra, not an assembled source-family dichotomy.
+
+### Remaining source assembly
+
+Construct the actual realizing family and select the small/large branch on
+an appropriate subsequence. Apply the common compactness and limit results
+to that selected family, use the original-count packing to identify the
+retained exponent with the source exponent as the accuracy parameters
+vanish, and remove epsilon/eta/theta/kappa/delta in their allowed order.
+Then prove the frozen logarithmic dichotomy, discharge
+`bourgain_ninth_row_of_log_dichotomy`, and assemble Add-est (ix).
+
+The finite logarithmic alternative is not the zero-loss source theorem.
+EPZAE-19/36/37, the ninth projection and clause (ix), all other unfinished
+exponent-pair/density/public/release obligations, and the full EPZAE-00--41
+goal remain open. The printed logarithmic-window (4.48) and unrestricted
+printed-(4.7) range are not claimed.
+
+All seven modules are in the root imports and exact BAT inventory, with
+explicit audits for 21 public theorems and 31 new semantic regressions
+(21 exact types plus ten boundary/source-form checks). Maintain
+`run_tao_trudgian_yang_build.bat` and foundation `run_lake_build.bat`,
+including full coverage, integrity, dependency and zero-warning gates.
+
+### Verification and semantic status
+
+Both required BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-182850-36f5160d.log`.
+  All 523 package Lean files are covered, 534 Lean files scanned, and
+  9378 build jobs pass. All 4683 discovered target theorems and five
+  imported boundary declarations pass the exhaustive 4688-declaration audit.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_182901.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  the exhaustive 14290-theorem audit and all declaration linters.
+
+All 21 new explicit theorem audits report only `propext`,
+`Classical.choice` and `Quot.sound`; all 31 new semantic regressions pass.
+Both complete current logs have zero Lean errors, warnings and tactic suggestions.
+The earlier foundation run at 182402 also passed but preceded the last source
+edit; the 182901 run above supplies the final-source evidence.
+
+All 180 checkpoint source/integration/runner hashes are unchanged between
+the pre-gate snapshot and post-gate check, including the counterexample.
+The architecture has 180 distinct nodes and 455 resolved edges.
+The runner inventory grew by exactly seven modules; source/dependency pins,
+permitted axioms, foundation verification gates and both BAT launchers are
+unchanged. No proof shortcut, postulate or warning suppression was introduced.
+
+Semantic green-node checks:
+
+- BLOG is `bourgain_linked_logarithmic_comparison`. It consumes the
+  actual `bourgain_linked_power_loss_comparison`, derives the local scales
+  from the original T and L=T/N^chi, and takes logarithms of the actual
+  original/retained counts and complete integer slice. Nonemptiness,
+  geometry, original-source packing, and both comparison terms are retained.
+  The caller supplies no desired comparison or independent scalar witness.
+- BSCOMP is `bourgain_source_slice_log_subsequence`. It derives a common
+  compact box from the physical height and subset/slice hypotheses and
+  returns one strictly increasing subsequence for both actual coordinates.
+  It does not itself choose a realizing family or select the source branch.
+- `bourgain_fixed_logarithmic_limit` is explicitly conditional supporting
+  algebra: the eventual finite comparison and coordinate limits are inputs.
+  It is not used to mark the full analytic source dichotomy green.
+
+This verifies the finite logarithmic alternative, geometric compactness and
+fixed-constant limit algebra only. Source branch selection, zero-loss limiting
+assembly, Add-est (ix), and the unchanged whole-proof contract remain open.
+
+### Current logarithmic checkpoint hashes
+
+The seven new modules, four synchronized integration files, two preserved BAT
+launchers and preserved counterexample have the following SHA256 values.
+The other 166 entries in the 180-file checkpoint retain their previously
+recorded values; all 180 match the snapshot taken before both final BAT runs.
+
+| Artifact (relative to this node unless stated) | SHA256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/BourgainLogCardinality.lean` | `d3afcb2526ba0fc3fbc75e85737434145ead8400249dd21303e2d36fc86f2cae` |
+| `Extension/TaoTrudgianYang2025/BourgainBudgetLogarithm.lean` | `acfd2c918036a9b459301c54abbcc8061069bd5258fc8412ce1ae66e5409c816` |
+| `Extension/TaoTrudgianYang2025/BourgainComparisonLogarithm.lean` | `7299b4bab144bb51137505c9dfe44667d46398e17a02732d081fdb764ae5b871` |
+| `Extension/TaoTrudgianYang2025/BourgainLogPacking.lean` | `93f9ab1cea7de86d1bfec0570a88c1068c8bebd14aaccc2e4ccd0ecb969f4159` |
+| `Extension/TaoTrudgianYang2025/BourgainLinkedLogarithm.lean` | `1f8e4c4544cf01f883ed84aa2aebbb9d533bff28ee5831dfaa19adda2cc4beaa` |
+| `Extension/TaoTrudgianYang2025/BourgainSliceCompactness.lean` | `d9b44ae7c52cbc8a9da365915fc4539e37500c27a3929ec6ea45a87dc7ff456f` |
+| `Extension/TaoTrudgianYang2025/BourgainComparisonLimits.lean` | `0593909b75f214f2bf2de1ddce0730f5469d6d81f64a171655bcd112888dbf27` |
+| `Extension/TaoTrudgianYang2025.lean` | `86575d527abf6d79de32fae41f1202c6bfa207b691cb65d36b21f26ee361ac17` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `d8392998e54a0f893a609ebff0f378e0e949f0c4205c432ed42f6e6938ea68cb` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `231c1cc531d7da91048357d8313e06f9c79ee1322045a14932190888bcca5525` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `ecab452bae137a2cbdc2374298c862723c7b22527509c7b648717b9351ccab43` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `../../run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+
+| Verification artifact | SHA256 |
+|---|---|
+| `logs/tao-trudgian-yang-build-20260921-182850-36f5160d.log` | `a7b10846c237380e1ed01a2a03067985bc0a6b799ca9876da15130237d9acb12` |
+| `../../logs/foundation_freeze_20260921_182901.log` | `baba4eaff81332f21f3c36b379dd584db405c40fd49260e3f3230786eef2a85c` |
+| `../../logs/foundation_freeze_20260921_182901.json` | `75e3ee645111024af717e88aab0cb685c8cdffca1495cb829ef11b211db66e50` |
+
+The retained counterexample hash is the original accepted hash, not a new
+replacement. The current passes certify installed source scope, not completion
+of Add-est (ix) or the full paper.
+
+## Bourgain source dichotomy and optimized region rows — historical checkpoint
+
+The printed-Lemma-62 counterexample remains unchanged, SHA256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The corrected independent cardinality/energy witnesses, the Heath--Brown
+relation and Add-est (i)--(viii) are preserved. No fifth-coordinate scaling
+or third powering witness has been restored.
+
+### Actual source-family construction and zero-loss limit
+
+`exists_bourgain_region_family` chooses actual patterns from
+`InCardinalityEnergyRegion` after arbitrary positive physical tolerances
+and arbitrary scale thresholds. Its cardinality logarithms converge to the
+source rho by the region's power sandwiches.
+
+`exists_bourgain_diagonal_family` applies the proved finite logarithmic
+alternative at accuracy `poweringAccuracy n`, choosing all analytic constants
+before the patterns. One finite sum of exponential thresholds absorbs the
+five varying factors G, 2G, 3K, 6C and 6C+CH. If rho>Bsmall, the source count
+limit rules out the small branch on a tail. The retained source subsets,
+original polynomial values and complete integer slices are actual witnesses,
+not independent scalar inputs.
+
+The resulting family has source packing
+
+```text
+rho_n <= epsilon_n + max(Bsmall+epsilon_n, 2epsilon_n+r_n)
+```
+
+and, for the same actual retained/slice cardinalities,
+
+```text
+max(-2alpha+2sigma+x_n+r_n,
+    -alpha-chi/2+2sigma+x_n/2+3r_n/2)
+<= (2tau-chi+12)epsilon_n
+   + HBexp(tau,r_n)/2 + HBexp(tau,x_n)/2.
+```
+
+The explicit diagonal loss tends to zero. Joint geometric compactness
+extracts r and x along one common subsequence. Subset monotonicity gives
+r<=rho; the original-source packing and rho>Bsmall give rho<=r.
+Thus r=rho, and continuity gives the exact zero-loss comparison.
+
+The public consumer
+`InCardinalityEnergyRegion.bourgain_log_dichotomy` now proves
+
+```text
+rho <= Bsmall
+or exists x>=0,
+  max(-2alpha+2sigma+x+rho,
+      -alpha-chi/2+2sigma+x/2+3rho/2)
+  <= HBexp(tau,rho)/2 + HBexp(tau,x)/2,
+```
+
+from actual region membership, sigma>3/4, chi>=0 and tau-chi>1.
+It takes no source family, branch-stability assertion, coordinate-limit
+certificate or analytic dichotomy as a premise. This closes the formerly
+open source branch selection and zero-loss assembly in that physical range.
+
+### Optimized region rows
+
+Classical cardinality bounds discharge rho<=1 for tau<=3/2.
+`InCardinalityEnergyRegion.bourgain_ninth_row` consumes the actual
+dichotomy and the existing exact scalar certificate; its powered version
+uses the corrected cardinality-preserving witness.
+
+Three additional optimized rows follow from the same actual dichotomy.
+For all rows below, sigma>3/4 and 1<=tau<=3/2; the listed additional cell
+conditions are retained exactly.
+
+| Row | Cardinality bound | Additional cell conditions |
+|---|---|---|
+| First affine | rho <= (16-20sigma+tau)/3 | 14sigma-10<=tau<=16sigma-11; 5tau<=4+4sigma |
+| Mixed affine | rho <= 5-7sigma+3tau/4 | 4+4sigma<=5tau; 48-60sigma<=tau<=8-8sigma |
+| Diagonal | rho <= 2-2sigma | tau<=14sigma-10; tau<=3sigma-1 |
+| Ninth row | rho <= 9-12sigma+2tau/3 | 16sigma-11<=tau; 20sigma+tau/3<=16 |
+
+The first-affine and diagonal height-one boundaries use the classical
+estimate, not a weakened strict-margin hypothesis. The mixed cell itself
+forces tau>1. Exact regressions include the common affine corner
+(sigma,tau,rho-bound)=(59/76,27/19,12/19), the original 84/109 endpoint,
+the height-one boundary and the actual power-two consumer.
+
+### Remaining acceptance work
+
+Add-est (ix) is still open. The frozen ANTEDB
+`prove_zero_density_energy_7()` recipe uses tau0=8sigma-4, Bourgain and
+Jutila-k=5 cardinality inputs, powers 2 through 5, the zeta moment and
+Heath--Brown energy. Continue with actual corrected witnesses and exact
+general/zeta energy projection over the entire interval [84/109,5/6].
+Do not treat the proved cardinality row as the final energy bound.
+
+The complete unrestricted Bourgain source range, its uniform LV-facing
+assembly, any additional optimized cells required by that projection,
+EPZAE-19/36/37, the other unfinished exponent-pair/density/public/release
+obligations and the full EPZAE-00--41 goal remain open. Neither the printed
+logarithmic-window (4.48) nor the unrestricted printed-(4.7) range is claimed.
+
+Six new modules are root-imported and included in the exact BAT inventory.
+All 15 public theorems have explicit audits and 24 new semantic regressions
+(15 exact signatures and nine endpoint/object checks). The old
+`NewAdditiveEnergy` module comment was corrected to say (i)--(viii), matching
+its already proved theorem surface. Maintain both
+`run_tao_trudgian_yang_build.bat` and foundation `run_lake_build.bat`,
+with no exclusions, weakened scans, changed dependency pins or warning suppression.
+
+### Verification and semantic status
+
+Both required BAT gates passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-190824-8fa4580d.log`.
+  All 529 package files are covered, 540 Lean files scanned and 9384
+  build jobs pass. The exhaustive audit passes 4723 discovered target
+  theorems plus five imported boundary declarations, 4728 in total.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_190824.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  all 14290 discovered project theorems and all declaration linters.
+
+All 15 new public audits report only `propext`, `Classical.choice`
+and `Quot.sound`. All 24 new regressions pass. Both complete final logs
+contain zero Lean errors, warnings or tactic suggestions. Repository-wide
+shortcut scans have no prohibited proof-term match; the broad declaration
+search matches only existing prose and the two genuine rational structure
+fields, also accepted by the contract-aware scanners.
+
+All 186 checkpoint source/integration/runner hashes match the snapshot
+taken before the final BAT runs. The counterexample and both BAT launchers
+are unchanged. Only five existing integration/status files changed; the
+remaining new Lean work is in the six named modules. No source/dependency
+pin, permitted-axiom policy or verification gate was weakened.
+
+The architecture has 183 distinct nodes and 464 resolved edges.
+Semantic green-node checks:
+
+- BDFAM is `exists_bourgain_diagonal_family`: it consumes actual region
+  realizations and the finite analytic alternative, absorbs constants by
+  its chosen physical scales, and derives branch selection on a tail.
+- BDICH is `InCardinalityEnergyRegion.bourgain_log_dichotomy`: it invokes
+  that constructor and `BourgainDiagonalFamily.source_witness`; the latter
+  consumes actual geometric compactness and original-source packing to
+  prove r=rho before taking the zero-loss limit.
+- BROWS consists of the four stated actual-region row theorems and
+  `bourgain_ninth_row_powered`. They consume the proved dichotomy,
+  classical side-condition bridge, exact scalar algebra and corrected
+  cardinality witness. The height-one cases are handled explicitly.
+
+These passes verify the installed region dichotomy and specified cardinality
+cells, not the full Bourgain source range, Add-est (ix), or whole-proof
+completion. The energy projection and all other open goal obligations remain open.
+
+### Current source-dichotomy checkpoint hashes
+
+The six new modules, five synchronized integration/status files, two preserved
+BAT launchers and preserved counterexample have these SHA256 values. The other
+172 entries retain their previously recorded values. All 186 source checkpoint
+hashes were revalidated after both final BAT runs.
+
+| Artifact (relative to this node unless stated) | SHA256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/BourgainRegionRealization.lean` | `6dc294182ac1745865d3810ddeef162d3408793f56008fb0dbab44a10632b141` |
+| `Extension/TaoTrudgianYang2025/BourgainDiagonalLoss.lean` | `db53afc086f730134766c8c06906558bed75f4967d47a15bb0742c225d2d8cfb` |
+| `Extension/TaoTrudgianYang2025/BourgainDiagonalFamily.lean` | `cb6680d96cbca1d2433f0566d3e9e1563564437cd91ddd316801c632edfb56d2` |
+| `Extension/TaoTrudgianYang2025/BourgainRegionDichotomy.lean` | `4070773ffd13f84445cd40d465c2b22130011f421e8aaa90ed41285fa4dfbb49` |
+| `Extension/TaoTrudgianYang2025/BourgainNinthRow.lean` | `61f89edf6cc666c9a9b55bf2303b4ae32f35456128a1ac91b6fa24f232f04276` |
+| `Extension/TaoTrudgianYang2025/BourgainLowHeightRows.lean` | `b32b049be5c61d3f02b2cb79476426e769b9533d3b36533988be845e1e6591a3` |
+| `Extension/TaoTrudgianYang2025.lean` | `d8d06ef945eea21500797e8d08885db5ac9f171cbf3d99977a304e32837de434` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `94000758449fed64fd40278417b177e977298aa1b07ffc9d22373d3026cfbfb6` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `0551c5f72aab00b3625ada814e167abff80ef5840f3043d43ee385bec3c258cb` |
+| `Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean` | `53c4d2c8e36c8de74283050de71c09447c352fb5d9c918e81b7503b6d5d1f85c` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `3241cd7c880b5c21f32ac08ec7c46a2c423156521ab1873d1d9574263df02d61` |
+| `run_tao_trudgian_yang_build.bat` | `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098` |
+| `Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean` | `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487` |
+| `../../run_lake_build.bat` | `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303` |
+
+| Verification artifact | SHA256 |
+|---|---|
+| `logs/tao-trudgian-yang-build-20260921-190824-8fa4580d.log` | `f0d9f1f735c4c488f1eb3ae4341ef95236c5b52a946f624e5af56e89305a5349` |
+| `../../logs/foundation_freeze_20260921_190824.log` | `b07b7ee8b13c06fa0ab3e49ecf0275826e891fc006cfcbdadce1174bf5da8918` |
+| `../../logs/foundation_freeze_20260921_190824.json` | `e59c9a626210870609acd06e45b2d2c92b21147d1be0bc4987951c89f61d3038` |
+
+The complete current logs and JSON, not historical checkpoint counts, support
+the verification claims above. No commit or push was performed.
+
+## All nine Add-est clauses recovered by corrected powering — historical checkpoint
+
+### Result and preserved obstruction
+
+The authorized repair now recovers every printed Add-est clause (i)--(ix).
+The original singleton counterexample in `EnergyPoweringObstruction.lean`
+is unchanged (SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`).
+Printed Lemma 62 remains false as printed: its fifth-coordinate scaling
+has not been restored or assumed. The archived source and public output
+statements have not been changed.
+
+`correctedCardinalityEnergyPowering` supplies separate cardinality- and
+energy-preserving witnesses. Their fifth exponents remain independently
+existential. The actual Heath--Brown consumer uses the appropriate witness,
+and cardinality monotonicity supplies the other coordinate's upper bound.
+This is not a claim that an arbitrary four-coordinate polytope is preserved.
+
+### Exact final-clause consumer
+
+On the entire closed interval `84/109 <= sigma <= 5/6`, write
+
+```text
+B(sigma) = max((18-19sigma)/(9(3sigma-2)),
+               4(10-9sigma)/(5(4sigma-1))).
+```
+
+The new public declarations are:
+
+- `add_est_ix_bound`: `IsZeroDensityEnergyBound sigma (B(sigma)/(1-sigma))`.
+- `add_est_ix`: the literal printed extended-real inequality
+  `A*(sigma)(1-sigma) <= B(sigma)`.
+- `add_est_ix_zero_energy`: for every positive epsilon, one constant and
+  one positive sigma-shift bound the actual multiplicity-aware zero energy
+  by `C T^(B(sigma)+epsilon)` for every sufficiently large T.
+- `energyClauseNine_blueprint`: the exact divided blueprint normalization.
+
+These theorems have only the stated sigma interval hypotheses. They do not
+accept an energy estimate, cardinality theorem, source dichotomy, moment,
+or optimization result as an analytic theorem premise.
+
+The full general range `8sigma-4 <= tau <= 2(8sigma-4)` is derived by
+`InCardinalityEnergyRegion.energyClauseNine_general`. Below sigma=4/5,
+the exact power cover chooses q=2 or 3. Independent cardinality witnesses
+at q and q+1 give rho/q<=3-3sigma. At t=tau/q<=6/5, Jutila k=5 and the
+energy witness at q-1 feed all nine Heath--Brown branches. For
+6/5<=t<=3/2, the actual corrected cardinality witness consumes the proved
+Bourgain first-affine, mixed-affine or ninth row, while the independent
+q-energy witness supplies the two energy branches. Above 3/2, all six
+q-energy branches use the cardinality cap. For sigma>=4/5, the already
+proved clause-(i) general rate is compared exactly with B.
+
+The middle-height cover is exact, not sampled. Its sigma split is 17/22;
+its switching lines are (81-96sigma)/5, (13-8sigma)/5, 16sigma-11,
+(4+4sigma)/5, 48-60sigma, (27sigma-18)/2 and (16sigma-8)/3.
+All overlaps and boundary cases are included. The proof needs no additional
+high-height Bourgain row or unrestricted Bourgain theorem.
+
+`energyClauseNine_zeta_bound` derives the complete interval
+`1 <= tau <= 8sigma-4`: actual emptiness below 3/2, the proved twelfth
+moment with cubic energy on [3/2,2], and the actual clause-(i) zeta
+Heath--Brown consumer above 2. `energyClauseNine` then invokes the proved
+endpoint-one bounded-range transfer with the source cutoff tau0=8sigma-4.
+No endpoint-two source corollary is assumed.
+
+### Coverage, source fidelity and remaining goal
+
+Nine new modules are installed: `EnergyClauseNineRates`,
+`EnergyClauseNineShortCertificates`, `EnergyClauseNineMiddleCertificates`,
+`EnergyClauseNineTallCertificates`, `EnergyClauseNineBranches`,
+`EnergyClauseNineRegion`, `EnergyClauseNineGeneral`,
+`EnergyClauseNineZeta` and `EnergyClauseNine`.
+There are 42 new closed-range branch certificates, 71 explicitly audited
+public theorems including the three new `NewAdditiveEnergy` exports, and
+85 new semantic regressions (71 exact signatures and 14 endpoint/object
+checks). Every module is root-imported and listed in the exact BAT inventory.
+
+The literal rate and domain were checked against frozen TeX label
+`Add-est`, clause (ix), and the paper-time ANTEDB
+`prove_zero_density_energy_7()` recipe with tau0=8sigma-4. Numerical
+exploration was used only for discovery. Lean checks every certificate
+and every actual-region consumer. The repaired proof is not a claim to
+replay the archived Python's false five-coordinate powering transformation.
+
+EPZAE-36 and EPZAE-37 now meet their mathematical acceptance tests: all
+nine clause projections feed actual general/zeta consumers, and every
+printed interval has an audited source-facing theorem and actual-zero
+epsilon--delta consequence. EPZAE-06 remains open for deterministic
+projection-recipe reproduction, rather than missing energy mathematics.
+EPZAE-19's unrestricted Bourgain source range and uniform LV assembly,
+EPZAE-33's separate source endpoint-two corollary, the other exponent-pair,
+density, public-assembly and release obligations, and the full EPZAE-00--41
+goal remain open.
+
+Both `run_tao_trudgian_yang_build.bat` and foundation `run_lake_build.bat`
+remain required acceptance interfaces. Maintain their exact inventory and
+explicit audits whenever modules change; no exclusion, dependency-pin
+change, relaxed warning rule or fifth-coordinate shortcut is permitted.
+
+### Current-checkout verification and semantic audit
+
+Both mandatory commands passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-194712-b1ebacdc.log`.
+  All 538 package files are covered, 549 Lean files scanned and 9393
+  build jobs pass. The exhaustive audit passes all 4809 discovered target
+  theorems plus five imported boundary declarations: 4814 in total.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_194607.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  all 14290 discovered project theorems and the declaration-linter gate.
+
+Every one of the 71 new explicit public audits was found in the final
+target log and has only permitted standard logical dependencies
+(`propext`, `Classical.choice`, `Quot.sound`, or subsets). All 85 new
+semantic regressions pass. The complete final logs contain zero Lean
+warnings, errors or tactic suggestions. The repository shortcut scans
+have no prohibited proof-term match; broad declaration matches are
+existing prose and the two genuine rational structure fields.
+
+All 195 checkpoint source/integration/runner hashes match the snapshot
+taken before the final target BAT run. The counterexample, both BAT
+launchers, frozen sources and dependency pins are unchanged. Relative to
+the preceding checkpoint, exactly five existing integration/status files
+and the nine new Lean modules carry the implementation. All 186 dirty
+worktree entries remain within node 63; unrelated work was not changed.
+`git diff --check` passes; Git's CRLF-conversion notices are not Lean
+diagnostics.
+
+The architecture has 187 distinct nodes and 481 resolved edges.
+The semantic green-node checks are:
+
+- EC9C: the 42 explicit short/middle/tall branch inequalities, together
+  with the rate/sign lemmas, are exact on their complete stated ranges.
+  `energyClauseNine_short_branch`, the middle consumers and
+  `energyClauseNine_tall_branch` apply them to the actual branch outputs.
+- EC9G: `InCardinalityEnergyRegion.energyClauseNine_general` consumes
+  genuine region membership, derives the power cover and cardinality caps,
+  unpacks the corrected cardinality witness, and invokes the independent
+  Heath--Brown energy witness. `energyClauseNine_general_bound` supplies
+  the uniform epsilon-loss estimate by the proved region realization.
+- EC9Z: `energyClauseNine_zeta_bound` consumes actual short-pattern
+  emptiness, the proved twelfth moment and the actual zeta-region
+  Heath--Brown consumer. No zeta-energy estimate is assumed.
+- EC9/NAE: `energyClauseNine` consumes both full uniform ranges at
+  tau0=8sigma-4. The three `add_est_ix` exports preserve the literal
+  paper maximum, its full closed sigma interval, the real shifted zero
+  multiset and analytic multiplicities. Alongside the already audited
+  (i)--(viii) exports, this completes the nine-clause Add-est acceptance
+  test, not the other public theorem families or the whole goal.
+
+The mathematical completion of EPZAE-36/37 and the integrity-gate PASS
+are separate conclusions; neither is inferred merely from audit counts.
+
+### Current verification artifact hashes
+
+| Artifact | SHA-256 |
+|---|---|
+| `logs/tao-trudgian-yang-build-20260921-194712-b1ebacdc.log` | `e405f9e886dd83922c750c23e8ef6e33db5aeb608d7022e73bd2beaaff0ab890` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_194607.log` | `bdd6cbf63e1c5c3ff4b6dd8c80d4a9acd7230b63b8f53301c823b4a1e657c914` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_194607.json` | `25a041c18689e1ea5d3d4058fd88c8f3603abcc8ca97fb1bf1be585e33b517c9` |
+
+### Final-clause implementation hashes
+
+The older checkpoint rows remain historical. The following are the current
+changed/new implementation files; the remaining checkpoint files were
+revalidated byte-for-byte against the preceding 186-file snapshot.
+
+| File | SHA-256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineRates.lean` | `de3159eb63738ecc761551e75a08b1e3df8a010f812791ccd6a386745e884b71` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineShortCertificates.lean` | `1c1ec2a259d038bdb7d6784b8b7457181e8ad94efa61a97ba6f1366872ca4d6f` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineMiddleCertificates.lean` | `6d33fc39404a60ccef08482cbed47e729913e0d87e81ff684a26f667105fc72f` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineTallCertificates.lean` | `b6513aced62919bde7409c51990f68ec31587c4c2bcbcbc8e513fa24697b5b05` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineBranches.lean` | `d3fc633825c2a06e43ad50218215f2505c1743be742a088f8a86251af153fab0` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineRegion.lean` | `86eb243d957d80b5523afe205942e8c175d08f90c90b5a3de768ec816d379edd` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineGeneral.lean` | `8b06cffc234d9eb277f65688a5e250d47a8ace6d33c030733630baa1bd6b5014` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNineZeta.lean` | `fe67a16f33fd3a953f5ef412ff2310524d59f616244a557e872d7e1ed5984131` |
+| `Extension/TaoTrudgianYang2025/EnergyClauseNine.lean` | `3eb448a59a827f80fbc42235d67be8eda2daa76d8c0e987bcf3147c9832af281` |
+| `Extension/TaoTrudgianYang2025/NewAdditiveEnergy.lean` | `f2cf0a34387ef1414daeb37f31637af2be9a27cb1bf5f4a9f74b01dc06c80741` |
+| `Extension/TaoTrudgianYang2025.lean` | `20bb55182acb13c8b9e73327520598554bcfbf53fcc477fdd4bda23ff0afbd26` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `5493255ea3ac1cbd8fa836c0284a33b5905c8b6a9312d4ffc9330482f781dcd3` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `8f132fff211cb84e7cee24d01a3e230cb9544e7578ce73998a9b1d8aa4324843` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `dbe442ea9af85ef8709a035d58fc7937b7504af2de8b9da4f56163f934abbcfd` |
+
+The archived-paper counterexample and both BAT launchers retain the
+unchanged hashes recorded in the preceding checkpoint. The foundation
+verifier SHA-256 remains
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+## Closed beta duality from actual model-phase sums — historical checkpoint
+
+### Exact mathematical result
+
+`exponentPair_iff_beta_bound` proves frozen TeX label `beta-duality`
+with its full closed range: for every candidate in the source triangle,
+the actual analytic `ExponentPair k l` predicate is equivalent to
+`beta(alpha) <= k + (l-k)*alpha` for every `0 <= alpha <= 1`.
+This is not polygon membership or an assumed exponent-pair estimate.
+
+The converse, `isExponentPairEstimateNonAsymptotic_of_beta_bound`,
+takes a finite subcover of the compact alpha interval. Minimum phase
+tolerance, maximum derivative order and maximum threshold supply one
+uniform set of constants for every physical pair `1 <= N <= T`.
+The proof links alpha to `log_T N` and proves the exact real-power
+identity with the original epsilon losses.
+
+For the forward endpoint, the actual approximate-model condition gives
+`c_sigma <= -F'' <= sigma+1` on the interior, with
+`c_sigma = sigma*2^(-sigma-1)/2 > 0`.
+`betaModelSample_secondDifference_bounds` transports this curvature
+to the physical samples `-2*pi*T*F((A+n)/N)`.
+`norm_exponentialSumAt_le_secondDerivative` consumes that result,
+the native Guth--Maynard finite second-difference estimate, the proved
+complex-conjugation/radians bridge, and all three boundary terms. It yields
+
+```text
+||sum_{a <= n <= b} e(T F(n/N))||
+  <= K_sigma (sqrt(T) + N/sqrt(T))
+```
+
+for `T,N >= 1`, `T <= N^2`, the original dyadic endpoints, and
+the stated approximate-model tolerance. The estimate is not a premise.
+The non-asymptotic ANTEDB interface then gives
+`exponentSumGrowthExponent_one_le_half`.
+Together with the existing forward theorem on alpha<1, this proves
+`exponentSumGrowthExponent_le_exponentPairLine_closed`.
+`exponentSumGrowthExponent_zero` also proves beta(0)=0.
+
+### Semantic status and remaining obligations
+
+EPZAE-09's convex closure and exact closed-interval two-way duality are
+proved. EPZAE-09 remains OPEN: the source reflection identity
+`beta(1-alpha)=1/2-alpha+beta(alpha)` and the lower endpoint bound
+`1/2 <= beta(1)` are not claimed here. The finite second-derivative
+estimate is not the source dual-phase B transformation, and does not
+complete EPZAE-10's B-process, the A/C/D processes, the derivative inputs,
+the beta table, or any of the four new exponent-pair outputs.
+
+Seven modules are installed: `BetaUniformity`, `BetaSecondDerivative`,
+`BetaDiscreteCurvature`, `BetaBProcessMajorant`, `BetaFiniteSum`,
+`BetaModelSumBound` and `BetaClosedDuality`.
+Their 21 public theorems have explicit dependency audits and exact-type
+regressions; six additional checks cover the closed endpoints, the uniform
+physical estimate and an actual closed-interval model sum at T=N.
+All seven modules are root-imported and listed in the exact principal BAT
+inventory.
+
+The permanent singleton counterexample to printed Lemma 62 is unchanged.
+The corrected independent rho/k and rho*/k witnesses, Heath--Brown
+consumers, and all nine proved Add-est clauses remain intact.
+No fifth-coordinate scaling or third witness has been restored.
+EPZAE-36/37 remain DONE; the whole EPZAE-00--41 objective and its other
+open acceptance tests remain unchanged.
+
+`run_tao_trudgian_yang_build.bat` remains the target's principal
+acceptance interface, alongside foundation `run_lake_build.bat`.
+Maintain their exact module inventory, explicit audits, warning gate and
+source-integrity checks as work continues. This checkpoint is concrete
+progress toward the original whole-proof goal, not a replacement goal.
+
+### Current-checkout verification and semantic audit
+
+Both mandatory commands passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-202605-c2073498.log`.
+  All 545 package files are covered, 556 Lean files scanned and 9400
+  build jobs pass. The exhaustive audit passes 4840 discovered target
+  theorems plus five imported boundary declarations: 4845 in total.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_202606.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  14290 discovered project theorems and the declaration-linter gate.
+
+All 21 new explicit public audits were found in the final target log;
+each has only `propext`, `Classical.choice` and `Quot.sound`.
+All 27 new semantic regressions pass. The complete final logs contain
+zero Lean warnings, errors or tactic suggestions. Repository-wide
+shortcut scans contain no prohibited proof-term match; broad postulate
+matches are existing prose and genuine rational structure fields.
+
+All 204 checkpoint source/integration/runner hashes match the snapshot
+taken before both final BAT runs. The 195-file preceding snapshot has
+only the four expected integration/runner changes; coverage also adds
+seven new Lean modules and the two existing module headers corrected
+to describe the now-proved equivalences. The permanent counterexample
+retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Both BAT launchers, frozen archives and dependency pins are unchanged.
+All 195 dirty worktree entries remain within node 63. No unrelated
+user changes were reverted, staged, committed or pushed.
+`git diff --check` passes; Git's CRLF-conversion notices are not Lean
+diagnostics.
+
+The architecture has 193 distinct nodes and 496 resolved edges.
+Its new green-node checks are:
+
+- DUC: `ExponentPair.convexCombination` is the previously proved
+  analytic convex-closure theorem, not just triangle closure.
+- DUU: `isExponentPairEstimateNonAsymptotic_of_beta_bound` consumes
+  actual ANTEDB beta bounds at every alpha and derives uniform physical
+  constants through a finite subcover; N and T are linked by log_T N.
+- DUS: `norm_exponentialSumAt_le_secondDerivative` consumes the
+  actual approximate-model phase, derived curvature, physical discrete
+  differences, conjugation identity and three boundary terms.
+- DUE: `exponentSumGrowthExponent_zero` proves beta(0)=0, and
+  `exponentSumGrowthExponent_one_le_half` consumes the complete
+  finite estimate through the genuine non-asymptotic beta definition.
+- DUF: `exponentPair_iff_beta_bound` assembles both directions for
+  the exact source triangle and every alpha in the closed unit interval.
+  It does not assume an exponent-pair estimate in the converse or a
+  beta reflection theorem in the endpoint proof.
+
+DUR and aggregate EPZAE-09 remain open for the exact reflection identity
+and beta(1)>=1/2. The named source `beta-duality` lemma is proved,
+but this does not complete its broader Checklist item, the remaining
+public-output families or the whole goal. Mathematical/source
+completeness and dependency-integrity PASS are separate conclusions.
+
+### Current verification artifact hashes
+
+| Artifact | SHA-256 |
+|---|---|
+| `logs/tao-trudgian-yang-build-20260921-202605-c2073498.log` | `32fde85b7f313397661ec343ab263b93268eeb9f7f61e1d5920aecb00fa6e6c6` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_202606.log` | `4694e03a39cd7b95186f8de948bddaffe12d30378166bbec4ebcd30ab8cceab9` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_202606.json` | `11ba0f18d18e3610c162e1829049e6313816c2d7dad03b4207c8684b566a4b6a` |
+
+### Closed-duality implementation hashes
+
+Older checkpoint rows are historical. These are the changed or new files
+for the current duality checkpoint; all 204 covered source hashes were
+revalidated against the final pre-gate snapshot.
+
+| File | SHA-256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/BetaUniformity.lean` | `236fc77e6958c6179416af759075a6644b1a08bd740ad1c9d6e6894ffe8e8ef5` |
+| `Extension/TaoTrudgianYang2025/BetaSecondDerivative.lean` | `405316470ef10cf23502cef6558990d921dc4ff69297eab08c31eefb59521507` |
+| `Extension/TaoTrudgianYang2025/BetaDiscreteCurvature.lean` | `e83248803c0090494d9bc7c643268e3fa3e94acb93b3b7fbc951b95ebe5bc155` |
+| `Extension/TaoTrudgianYang2025/BetaBProcessMajorant.lean` | `f9b21ad359730fecb3d91490b997abe67c30e1070ca9665efda59b7565dae7fc` |
+| `Extension/TaoTrudgianYang2025/BetaFiniteSum.lean` | `2d613a5c51eae3c219429468ce7af391b70ca83c58da2f83a442bd01442744cf` |
+| `Extension/TaoTrudgianYang2025/BetaModelSumBound.lean` | `dd13d0a92e18284bec5a97005ff02d50ff212be741637e9ca1a1b57e7dee90bb` |
+| `Extension/TaoTrudgianYang2025/BetaClosedDuality.lean` | `ca8aa4428721830dd2a5950119357386a5c7d335338e29f2ab6c920d05c062ba` |
+| `Extension/TaoTrudgianYang2025/ExponentPair.lean` | `b3c55c85e224c126cfe6bed34eacc4ff4e2cce63d41cb6cba0493a3d5373d789` |
+| `Extension/TaoTrudgianYang2025/BetaDuality.lean` | `0cfdeae1c39a0d738a8c0acab0a2ef30014d061e618cf3547c8dcb911f6f2adb` |
+| `Extension/TaoTrudgianYang2025.lean` | `b401537f7984848f0b430ce67dc4a69e1cd4dcf5cde369a3b1193eb3b3758b55` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `411c05def733ecaacec4c8e59421cd5ca0ed62a4ed65d0f237c5d677abc326e1` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `29d7646a05eb53ff0b2b4ce466a1500d2ae60d8604a5f81cb0e87c6257d9c66c` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `3ebe17a178d810b349e9b8f38a82f87cf51b3af31a979e52a9693a01b81eaad2` |
+
+Both BAT launchers retain their prior hashes. The unchanged foundation
+verifier SHA-256 is
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+## Exact beta endpoints and classical second-derivative pair — historical checkpoint
+
+### Exact mathematical results
+
+`exponentSumGrowthExponent_endpoints` now proves the complete frozen
+`beta-end` statement: beta(0)=0 and beta(1)=1/2.
+`half_le_exponentSumGrowthExponent_one` supplies the missing lower bound
+from the actual logarithmic model phase, without a mean-square estimate
+as an assumption.
+
+For every natural m, set N=T=16(m+1)^2 and use the closed integer interval
+[N,N+m]. For each 0<=j<=m, the proved elementary logarithm inequalities give
+
+```text
+|N log((N+j)/N)-j| <= j^2/N <= 1/16.
+```
+
+Cosine periodicity removes the integer j in the real part of the original
+oscillatory factor. The remaining angle has absolute value at most one,
+so each term has real part at least 1/2.
+`norm_logPhase_resonant_sum_lower` therefore proves, for this actual sum,
+
+```text
+||sum_{N <= n <= N+m} e(N log(n/N))|| >= sqrt(N)/8.
+```
+
+The scale is unbounded, both dyadic endpoints are derived, and N=T gives
+the exact power-asymptotic exponent one. The audited ANTEDB logarithmic
+lower-bound consumer yields beta(1)>=1/2. Together with the prior
+second-derivative upper bound, this proves equality. This is an alternate
+proof of the exact endpoint claim; it does not claim to formalize the
+paper's separate L2 proof of beta(alpha)>=alpha/2 for every alpha.
+
+`isExponentPairEstimateNonAsymptotic_half_half` also proves the genuine
+uniform estimate for the classical pair (1/2,1/2).
+For T<=N^2 it consumes the actual model-phase second-derivative estimate;
+N<=T bounds N/sqrt(T) by sqrt(T). For T>N^2, the original finite sum is
+bounded by 3sqrt(T) using its cardinality. The phase tolerance, derivative
+order and constant depend only on the source parameters, and every
+epsilon loss is retained.
+`exponentPair_half_half` converts this to the original asymptotic
+predicate. Closed duality then proves
+`exponentSumGrowthExponent_le_half` and the combined bound
+`exponentSumGrowthExponent_le_min_self_half` on 0<=alpha<=1.
+
+### Coverage and remaining whole-proof obligations
+
+Four new modules are installed: `BetaLogCoherence`, `BetaResonantSum`,
+`BetaEndpoints` and `ClassicalSecondDerivativePair`.
+Their 18 public theorems have explicit audits and exact-signature
+regressions, plus six additional actual-sum, analytic-predicate and
+endpoint checks. The root imports and the exact PowerShell inventory
+behind `run_tao_trudgian_yang_build.bat` cover every module.
+
+EPZAE-09 now has proved convex closure, full closed-interval two-way
+duality, and both exact beta endpoints. Its sole remaining acceptance
+obligation is the reflection identity on the whole unit interval.
+The two endpoint reflection regressions do not establish the interior
+identity. The classical seed is not the full B transformation; all
+unproved A/B/C/D process, derivative, beta-table, advertised new-pair,
+density, public-assembly and release obligations retain their status.
+The whole EPZAE-00--41 goal remains active and unchanged.
+
+The original Lemma 62 counterexample is preserved byte-for-byte.
+Corrected independent rho/k and rho*/k powering, the Heath--Brown
+consumers, and all nine Add-est clauses are unchanged; EPZAE-36/37
+remain DONE. No scaled fifth coordinate or third witness is assumed.
+
+Keep both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` as mandatory acceptance gates. Continue updating
+the exact module inventory, root imports, explicit audits and semantic
+regressions whenever the proof graph changes; never bypass their
+warning or proof-integrity checks.
+
+### Current-checkout verification and semantic audit
+
+Both required commands passed on 21 September 2026 at dirty HEAD
+`e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`, each with exit code 0:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  log `logs/tao-trudgian-yang-build-20260921-204634-0b462a03.log`.
+  All 549 package files are covered, 560 Lean files scanned and 9404
+  build jobs pass. The exhaustive audit passes 4870 discovered target
+  theorems plus five imported boundary declarations: 4875 in total.
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  log `Riemann Zeta/logs/foundation_freeze_20260921_204635.log`
+  and its matching JSON manifest. All six stages pass: 301 root modules,
+  two explicit regressions, 8857 build jobs, 7636 explicit declarations,
+  14290 discovered project theorems and the declaration-linter gate.
+
+Each of the 18 new explicit public audits was found in the final target
+log with only `propext`, `Classical.choice` and `Quot.sound`.
+All 24 new semantic regressions pass. The complete final logs contain
+zero Lean warnings, errors or tactic suggestions. Repository-wide
+shortcut scans contain no prohibited proof-term match; broad postulate
+matches are existing prose and genuine rational structure fields.
+
+All 208 checkpoint source/integration/runner hashes match the snapshot
+taken before both final BAT runs. Relative to the preceding 204-file
+checkpoint, only the four integration/runner files changed, and the four
+new production modules extend the hash coverage. The counterexample
+retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Both BAT launchers, dependency pins, frozen sources and all existing
+energy-proof modules are unchanged. All 199 dirty worktree entries
+remain within node 63; no unrelated changes were reverted, staged,
+committed or pushed. `git diff --check` passes; Git's CRLF-conversion
+notices are not Lean diagnostics.
+
+The architecture has 195 distinct nodes and 503 resolved edges.
+Its changed green-node checks are:
+
+- DUL: `norm_logPhase_resonant_sum_lower` derives the lower bound
+  for the literal ANTEDB sum at the actual natural scale and endpoints.
+  The logarithmic remainder, integer periodicity, real-part estimate,
+  term count and square-root normalization are proved.
+- DUE: `half_le_exponentSumGrowthExponent_one` supplies an unbounded
+  logarithmic model family, proves its dyadic endpoints and N=T relation,
+  and invokes the genuine beta lower-bound consumer.
+  `exponentSumGrowthExponent_endpoints` combines it with the already
+  proved zero endpoint and endpoint-one upper bound.
+- CSP: `isExponentPairEstimateNonAsymptotic_half_half` derives one
+  uniform model-phase estimate on the whole 1<=N<=T domain by the two
+  complementary scale cases. `exponentPair_half_half` returns the
+  actual analytic predicate, and the beta corollaries consume closed
+  duality. No exponential-sum estimate is assumed as a terminal premise.
+
+The existing closed-duality proof needs only the upper endpoint bound;
+it does not rely on the new logarithmic lower-bound construction.
+DUR and aggregate EPZAE-09 remain open solely for the full reflection
+identity. The classical seed does not close EPZAE-10's general processes.
+The other open Checklist items and the original whole-proof goal remain
+open. These semantic conclusions are independent of the audit count.
+
+### Current verification artifact hashes
+
+| Artifact | SHA-256 |
+|---|---|
+| `logs/tao-trudgian-yang-build-20260921-204634-0b462a03.log` | `e8340e4c07c198113387dd8ec7682433b1cc4157b4fde5ca244dafa09949d051` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_204635.log` | `4c6a1101f5fba7e4615c1dfc3cb8eab3dab007b942a645492a502abd53adc660` |
+| `E:/Lean/Riemann Zeta/logs/foundation_freeze_20260921_204635.json` | `5a73222227b09f4e1fe299e4e520f9e53e70391486241871b59c23f67b53ebe2` |
+
+### Exact-endpoint implementation hashes
+
+Older checkpoint rows are historical. These are the changed or new files
+for this checkpoint; all 208 covered source hashes were revalidated
+against the final pre-gate snapshot.
+
+| File | SHA-256 |
+|---|---|
+| `Extension/TaoTrudgianYang2025/BetaLogCoherence.lean` | `b58d102fc21f9277426f36349cf4321a486049d06e0ea6caeb362b1ecafa6039` |
+| `Extension/TaoTrudgianYang2025/BetaResonantSum.lean` | `aa468ef72d4ed8906d1f4ccbc99030729896f1c20c1f052a0b83a263b1fde0e4` |
+| `Extension/TaoTrudgianYang2025/BetaEndpoints.lean` | `4ffb41860f2f26902b8e0806159134939f2e00f2000e6839aa934c0cbc40897b` |
+| `Extension/TaoTrudgianYang2025/ClassicalSecondDerivativePair.lean` | `52432a8c824da8bd62ac7723daeab17cecfe148ad60e32d599252abb46883e27` |
+| `Extension/TaoTrudgianYang2025.lean` | `9e6d457f2356cb2368f84161a4b7db4b335eee37582be2a07446e89c7bbf68b1` |
+| `Extension/TaoTrudgianYang2025/Audit.lean` | `cc4127d10293e40db5e0fcc1322e0ec718d6e2945fca142a38ad94a66b1b2fc3` |
+| `Extension/TaoTrudgianYang2025/SemanticRegression.lean` | `41fb94d741d2684f17808a4519e81993d513563cbff464f79bed50ec2eb3359f` |
+| `Tools/run_tao_trudgian_yang_build.ps1` | `ac3367a794e8dc72818fb77f12bf375bfb2519fdbf194aacadb408107a4f9a70` |
+
+Both BAT launchers retain their prior hashes. The unchanged foundation
+verifier SHA-256 is
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
+
+## Actual inverse and Legendre phases — historical checkpoint
+
+Four new modules are installed: `BetaSlopeInverse`,
+`BetaLegendreDual`, `BetaInverseStability` and `BetaStationaryPoint`.
+The root imports, exact PowerShell production inventory, explicit audits
+and semantic regressions cover all four. There are 37 new public audits
+and 42 new regression examples (37 exact types plus five actual-model
+checks). The full source conclusions and limitations are recorded in
+the latest Goal Prompt section.
+
+The 212-file checkpoint hash set extends the previous 208-file set
+with these four modules. Only the four expected integration/runner
+files changed among the previous checkpoint files. No existing energy
+module, counterexample, frozen dependency, archive or BAT launcher changed.
+Full beta reflection and the general B-process transformation remain
+open despite successful phase-side consumers. The full goal is unchanged.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  `logs/tao-trudgian-yang-build-20260921-211419-4caca476.log`.
+  Coverage: 553 package files, 564 scanned Lean files, 9408 build jobs,
+  4924 discovered target theorems plus five imported boundaries (4929 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  `Riemann Zeta/logs/foundation_freeze_20260921_211419.log` and matching JSON.
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 37 new public audits were found with only the permitted logical axioms;
+all 42 new regression examples pass. Repository scans found no prohibited
+proof terms; broad postulate matches are existing prose and rational fields.
+All 212 checkpoint source/integration/runner hashes agree before and after
+both final runs. The counterexample and both BAT launchers are unchanged.
+All 203 dirty worktree entries remain within node 63. No files were staged,
+committed or pushed. Full source completeness remains separate from runner PASS.
+
+### Reproduction hashes
+
+The final target log SHA-256 is
+`8738f7955628ce73f4ed79eeb346236cf3ecf3707ce245b7fc2077bc34a18549`.
+Foundation final log:
+`989b57c80bbc3e125d8e194e76e5c3e863e5496cd6284fd9d5a2dee4efce292f`.
+Foundation JSON manifest:
+`00a810218f150c90274429aea8a46fb3c6514905cd8a8387ee09fd9ac2f09751`.
+
+The new module hashes are:
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaSlopeInverse` | `299aa15e5576f8cb4d74c4a3cf449a0fa65c7318551da831675cd51bb2ea65e2` |
+| `BetaLegendreDual` | `ff8f214dbadef5364f3a525982f439feb7cf8dc0fd9736ece4b5de4a9439e0f3` |
+| `BetaInverseStability` | `78a766bf772117355d13495c3248abb6cb0a77622e5be4dead49494613febdaa` |
+| `BetaStationaryPoint` | `feecc46db8bb2bcf9814d69ad3e62cc133ad5cc8058a1c2200eb5819ea05d6c1` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+The foundation verifier hash and all frozen source pins are unchanged.
+
+## Uniform all-order Legendre model control — current checkpoint
+
+Eight new production modules extend the checkpoint hash set from 212
+to 220 files. Among the preceding 212 files, only the four expected
+root-import/audit/regression/PowerShell-inventory files changed.
+The new module source, root imports and exact runner inventory agree.
+There are 44 new public audits and 52 new regression examples.
+
+The initial target run
+`logs/tao-trudgian-yang-build-20260921-215033-a21d36d8.log`
+and contemporaneous foundation run found a comment line starting with
+`constant`. The sentence was reworded without changing any proof,
+declaration, scanner or diagnostic policy. Those runs are retained as
+historical failures. Final evidence below refers to runs started after
+the last Lean-source edit.
+
+The actual all-order compact phase-control consumer is proved; canonical
+[1,2] extension and the transformed-sum theorem remain OPEN. Exact
+quantifiers and source limitations are in the latest Goal Prompt section.
+The original counterexample, authorized powering repair and all nine
+Add-est clauses remain unchanged, as does the whole-proof objective.
+
+### Current-checkout verification
+
+Both mandatory BAT commands passed with exit code 0 on 21 September 2026,
+at dirty HEAD `e85f4145652f6f309da0554c3bc86ca5d4e8f9a4`:
+
+- Target: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+  [final target log](logs/tao-trudgian-yang-build-20260921-215130-00a61f53.log).
+  Coverage: 561 package files, 572 scanned Lean files, 9416 build jobs,
+  5021 discovered target theorems plus five imported boundaries (5026 audited).
+- Foundation: `cmd /c run_lake_build.bat --no-pause`;
+  [final foundation log](../../logs/foundation_freeze_20260921_215409.log)
+  and [JSON manifest](../../logs/foundation_freeze_20260921_215409.json).
+  All six stages pass; 301 root modules plus two regressions, 8857 jobs,
+  7636 explicit declarations and 14290 discovered project theorems.
+
+Both complete logs have zero Lean warnings, errors or tactic suggestions.
+All 44 new public audits were found with only the permitted logical axioms;
+all 52 new regression examples pass. Initial scans rejected a comment
+starting with `constant`; the comment was reworded without weakening
+the scanner. Both final runs started after that last Lean-source edit.
+
+All 220 checkpoint source/integration/runner hashes agree before and
+after both final runs. The counterexample, existing energy-proof modules,
+both BAT launchers, foundation verifier and frozen pins are unchanged.
+All 211 dirty worktree entries remain within node 63. No files were staged,
+committed or pushed. Full source completeness remains separate from runner PASS.
+
+### Reproduction hashes
+
+Final target log SHA-256:
+`74b5bf0256e7a21ab4474c2cc6b21ecbed4dcdd0668772a43350f045712575bd`.
+Final foundation log SHA-256:
+`5c3b6d01fb85164984921f62674e8acbeba38421f85c30c6999de79dcabd3e7e`.
+Final foundation JSON manifest SHA-256:
+`7eb03f1bdd0f7f7e27ad7e549f8be8c65cec7e02ddd1e20ae826b45de7f0feb2`.
+
+The new module hashes are:
+
+| Module | SHA-256 |
+| --- | --- |
+| `BetaInverseExpressions` | `4b43362917fbb074579fee1d39f5d70726da712485a539eaaba4433e696bdf40` |
+| `BetaInverseJets` | `d9ec364cffc441b63575927d9462672c88889f4faf4c2e24c4156903d9a6e1a3` |
+| `BetaReferencePhase` | `46e6292b80b1805827c69bc421d6d8f7021f70e70d564599c5f5048a3514c8ea` |
+| `BetaModelJetEstimates` | `73dc60888dc80e665efb6c998183c9561a90a01e39828bd7e491966dedb0d0f4` |
+| `BetaInverseJetBounds` | `f7dbfec463d3ec62c419707f410bb9a63e07e98d90d845ea8110c2486d6cce98` |
+| `BetaLegendreAllOrders` | `cfa7ea995f2646b9c7c9d2bc20411d00df7499651ff1738e02b3a2ef010a8534` |
+| `BetaLegendreCompact` | `a1ff081c400d68976d504952867c2cbd82bac607026f25d3cb0c139416004739` |
+| `BetaLegendreAnchoring` | `f20a92c2c4a2d85d1cb982ee5471c7ba48784b57692539aa16fd7029c2c0218d` |
+
+The permanent `EnergyPoweringObstruction.lean` SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Target BAT: `6bf52b0784baf7758375bb68de12ad9b691bd9884f6d48a87ddf3c7822961098`.
+Foundation BAT: `a726c1afbc7870391088977cc5be23cf7df9741713b18a7f830e9bfd6850d303`.
+Foundation verifier:
+`0bafd5bd2ff5847da4dd40e4af713472c38ccd162fc78127b8f98b84214af1a7`.
