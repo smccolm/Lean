@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
-Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
-The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Width-independent curvature and the bounded inner core](#width-independent-curvature-and-the-bounded-inner-core--current-checkpoint).
+The actual Fourier modes now obey a cutoff-width-independent C_sigma*N/sqrt(T) bound. The genuine endpoint slopes determine the exact stationary integer interval; the complete inner-core nonstationary complement has a derived N/sqrt(T) plus logarithmic bound. The original source expansion contains only actual cutoff-weighted stationary main terms, with every remaining error explicit. Sharp stationary/source error balance, canonical dual-chart assembly and full beta reflection remain open. The counterexample and all nine repaired Add-est clauses are preserved; the full goal remains unfinished.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -4397,7 +4397,7 @@ verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains active.
 
-## Uniform smooth weights and stationary remainder bounds — current checkpoint
+## Uniform smooth weights and stationary remainder bounds — historical checkpoint
 
 | Obligation | Exact public consumer | Status |
 | --- | --- | --- |
@@ -4430,3 +4430,213 @@ All 269 checkpoint source/integration/runner hashes match the
 verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Controlled cutoff families and weighted Fourier bounds — historical checkpoint
+
+These production declarations advance the original model-phase
+B-process, with no change to the source predicate or advertised outputs.
+Each name below is explicitly audited and checked by an exact-signature
+regression; all are in namespace `TaoTrudgianYang2025`.
+
+| Module | Exact public declarations |
+|---|---|
+| [BetaBufferedCutoff](Extension/TaoTrudgianYang2025/BetaBufferedCutoff.lean) | `smoothTransition_finite_jet_bound`<br/>`modelPhaseBufferedCutoff_nonneg`<br/>`modelPhaseBufferedCutoff_le_one`<br/>`modelPhaseBufferedCutoff_contDiff`<br/>`modelPhaseBufferedCutoff_zero_left`<br/>`modelPhaseBufferedCutoff_zero_right`<br/>`modelPhaseBufferedCutoff_one`<br/>`modelPhaseBufferedCutoff_tsupport`<br/>`modelPhaseBufferedCutoff_hasCompactSupport`<br/>`modelPhaseBufferedCutoff_tsupport_model` |
+| [BetaBufferedJets](Extension/TaoTrudgianYang2025/BetaBufferedJets.lean) | `iteratedDeriv_modelPhaseBufferedCutoff`<br/>`abs_iteratedDeriv_modelPhaseBufferedCutoff_le`<br/>`modelPhaseBufferedCutoff_uniform_jets`<br/>`modelPhaseBufferedCutoff_uniform_ordered_jets` |
+| [BetaJetPolynomial](Extension/TaoTrudgianYang2025/BetaJetPolynomial.lean) | `inversePhaseMagnitude_mono`<br/>`inversePhaseMagnitude_scale_le`<br/>`morseWeightDerivativeBound_scaled` |
+| [BetaBufferedMorseBounds](Extension/TaoTrudgianYang2025/BetaBufferedMorseBounds.lean) | `modelPhaseBufferedMorseWeight_uniform_derivative` |
+| [BetaBufferedBoundary](Extension/TaoTrudgianYang2025/BetaBufferedBoundary.lean) | `modelPhaseBufferedBoundary_card_le`<br/>`modelPhaseBufferedCutoff_one_off_boundary`<br/>`modelPhaseBufferedKernel_zero_outside`<br/>`norm_modelPhase_source_sub_buffered_le`<br/>`modelPhase_buffered_poisson` |
+| [BetaBufferedStationary](Extension/TaoTrudgianYang2025/BetaBufferedStationary.lean) | `quadraticRemainderConstant_scale`<br/>`bufferedStationaryPhaseOrder_pos`<br/>`modelPhaseBufferedMorseRemainder_uniform`<br/>`modelPhaseBufferedFourierMode_stationary_uniform` |
+| [BetaBufferedSource](Extension/TaoTrudgianYang2025/BetaBufferedSource.lean) | `modelPhase_buffered_poisson_stationary` |
+| [BetaBufferedVariation](Extension/TaoTrudgianYang2025/BetaBufferedVariation.lean) | `modelPhaseBufferedCutoff_eq_band`<br/>`finiteVariationBound_modelPhaseBufferedCutoff_sample`<br/>`finiteVariationBound_modelPhaseBufferedCutoff_inverse`<br/>`finiteVariationBound_modelPhaseBufferedAmplitude` |
+| [BetaBufferedMain](Extension/TaoTrudgianYang2025/BetaBufferedMain.lean) | `modelPhaseBufferedStationaryBlock_eq_range`<br/>`norm_modelPhaseBufferedStationaryBlock_le_prefixMax` |
+| [BetaBufferedBetaBound](Extension/TaoTrudgianYang2025/BetaBufferedBetaBound.lean) | `bufferedStationaryMain_bound_of_exponentSumBound` |
+| [BetaWeightedPrimitive](Extension/TaoTrudgianYang2025/BetaWeightedPrimitive.lean) | `IntervalC1Bound.integral_mul_of_primitive_bound` |
+| [BetaWeightedPhase](Extension/TaoTrudgianYang2025/BetaWeightedPhase.lean) | `norm_fourierCharIntegral_le_of_slope_gap`<br/>`IntervalC1Bound.fourierChar_of_slope_gap` |
+| [BetaBufferedNonstationary](Extension/TaoTrudgianYang2025/BetaBufferedNonstationary.lean) | `modelPhaseBufferedCutoff_support_open`<br/>`modelPhaseBufferedCutoff_eq_zero_of_overlap`<br/>`intervalC1Bound_modelPhaseBufferedCutoff`<br/>`norm_modelPhaseBufferedNormalizedMode_nonstationary`<br/>`norm_modelPhaseBufferedFourierMode_nonstationary` |
+| [BetaBufferedFrequencyGap](Extension/TaoTrudgianYang2025/BetaBufferedFrequencyGap.lean) | `approximateModelPhase_firstDeriv_bounds`<br/>`norm_modelPhaseBufferedFourierMode_of_envelope_gap`<br/>`norm_modelPhaseBufferedFourierMode_of_frequency_gap` |
+| [BetaMorseWidthDegree](Extension/TaoTrudgianYang2025/BetaMorseWidthDegree.lean) | `inversePhaseEval_abs_le_weighted`<br/>`morseWeightAtomDerivative_widthDegree_le`<br/>`morseWeightDifferentiate_widthDegree_le`<br/>`morseWeightDerivativeExpression_widthDegree_le` |
+
+The source entry is `modelPhase_buffered_poisson_stationary`:
+same actual Fourier series, source discrepancy <=4*N*eta+2 and
+stationary-mode errors <=C*N/(T*eta^3), with C fixed before N,a,b,eta.
+The main term retains the ORIGINAL critical cutoff and e(-1/8).
+The transformed weight's order-n derivative costs eta^(-n);
+`bufferedStationaryWidthDegree` is exactly 3.
+
+`bufferedStationaryMain_bound_of_exponentSumBound` constructs
+the separate canonical slope chart and consumes an upstream unweighted
+beta bound, retaining the linked physical dual scales.
+`norm_modelPhaseBufferedFourierMode_of_frequency_gap` derives
+the physical 4/(pi*d) bound from the original derivative envelope.
+
+DBT still requires summed-error balance, quantitative far tails and moving
+bands; DUR/full reflection and aggregate EPZAE-09/10 remain OPEN.
+Exact quantifiers and the six green-node tests are in the latest Goal Prompt.
+The counterexample and all nine repaired Add-est clauses are preserved.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-085137-4fb8b007.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_085138.log).
+The target covers 625 package files and audits 5516 declarations.
+All 50 new explicit public audits and 66 new regression examples pass.
+All 284 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Quantitative Fourier tails and the actual core expansion — historical checkpoint
+
+Each declaration below is explicitly audited and checked by an
+exact-signature regression. Names are in namespace
+`TaoTrudgianYang2025`; the paper's original model and outputs are unchanged.
+
+| Production module | Exact public declarations |
+|---|---|
+| [BetaFourierCarrierBounds](Extension/TaoTrudgianYang2025/BetaFourierCarrierBounds.lean) | `intervalC2Bound_fourierChar_of_derivative_bounds`<br/>`modelPhaseBufferedCutoff_uniform_c2` |
+| [BetaBufferedKernelJets](Extension/TaoTrudgianYang2025/BetaBufferedKernelJets.lean) | `norm_modelPhaseBufferedKernel_le_one`<br/>`modelPhaseBufferedKernel_uniform_second_derivative` |
+| [BetaBufferedFourierDecay](Extension/TaoTrudgianYang2025/BetaBufferedFourierDecay.lean) | `modelPhaseNormalizedMode_eq_fourier`<br/>`modelPhaseBufferedFourierMode_uniform_decay`<br/>`modelPhaseBufferedFourierMode_inverse_square_bound` |
+| [IntegerFourierTails](Extension/TaoTrudgianYang2025/IntegerFourierTails.lean) | `tsum_nat_inverse_square_tail_le`<br/>`tsum_int_inverse_square_tail_le`<br/>`norm_integer_far_tail_le_of_inverse_square`<br/>`tsum_int_eq_sum_Icc_add_far` |
+| [BetaBufferedFourierTail](Extension/TaoTrudgianYang2025/BetaBufferedFourierTail.lean) | `modelPhaseBufferedFarTail_uniform`<br/>`modelPhase_buffered_poisson_truncated`<br/>`modelPhase_buffered_poisson_truncated_precision` |
+| [BetaBufferedNonstationarySums](Extension/TaoTrudgianYang2025/BetaBufferedNonstationarySums.lean) | `sum_norm_bufferedModes_right_le_harmonic`<br/>`sum_norm_bufferedModes_left_le_harmonic`<br/>`norm_bufferedModes_exterior_blocks_le_log` |
+| [IntegerFourierWindows](Extension/TaoTrudgianYang2025/IntegerFourierWindows.lean) | `sum_int_interval_three_parts`<br/>`sum_int_Ico_eq_reverse_range`<br/>`sum_int_Ioc_eq_forward_range` |
+| [BetaBufferedCore](Extension/TaoTrudgianYang2025/BetaBufferedCore.lean) | `modelPhaseCoreLower_le_upper`<br/>`modelPhase_buffered_poisson_core`<br/>`modelPhase_buffered_poisson_core_precision` |
+| [BetaBufferedCoreStationary](Extension/TaoTrudgianYang2025/BetaBufferedCoreStationary.lean) | `modelPhaseCore_card_le`<br/>`modelPhaseCoreStationarySet_mem`<br/>`modelPhaseCoreStationarySet_card_le`<br/>`modelPhaseBufferedCoreStationary_error` |
+| [BetaBufferedCoreExpansion](Extension/TaoTrudgianYang2025/BetaBufferedCoreExpansion.lean) | `modelPhaseCore_sub_bufferedExpansion`<br/>`modelPhase_buffered_source_core_expansion` |
+
+The final source-facing consumer is
+`modelPhase_buffered_source_core_expansion`. Its explicit radius
+controls the actual infinite tail and contains the physical core.
+The original source is compared with actual stationary main terms PLUS
+the unestimated inner-core nonstationary modes. It pays the original
+smoothing, exterior logarithmic and summed stationary errors; see the
+latest Goal Prompt for exact quantifiers and formulas.
+
+The auxiliary radius does not determine the stationary count:
+`modelPhaseCoreStationarySet_card_le` derives <=3*T/N+3 from the
+model's physical slope envelope. The cutoff and e(-1/8) are retained.
+This is not a B-process conclusion or a bound for the inner-core residue.
+DBT/DUR remain OPEN. The counterexample and all repaired Add-est clauses
+are preserved.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-094603-f91c6946.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_094604.log).
+The target covers 635 package files and audits 5587 declarations.
+All 29 new explicit public audits and 41 new regression examples pass.
+All 294 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Width-independent curvature and the bounded inner core — current checkpoint
+
+| Module | Actual checked contribution |
+|---|---|
+| `PhaseSlopePartition` | Derived slope cut points and curvature-controlled width |
+| `PhaseSecondDerivativeIntegral` | Threshold and optimized actual integral bounds |
+| `PhaseWeightedCurvature` | Weighted consumer through every prefix primitive |
+| `BetaBufferedCurvature` | Original all-frequency modes: C_sigma*N/sqrt(T) |
+| `BetaClosedSlope` | One-sided endpoint derivatives and exact slope image |
+| `BetaEndpointNonstationary` | Genuine endpoint gaps and harmonic/log blocks |
+| `BetaEndpointCore` | Exact stationary integer interval and disjoint complement |
+| `BetaCoreNonstationary` | Fully bounded actual inner-core nonstationary sum |
+| `BetaBufferedStationaryExpansion` | Original source with only actual stationary main terms |
+
+The original Fourier modes now satisfy C_sigma*N/sqrt(T), uniformly in
+every real frequency and original cutoff width. Genuine derivatives
+within [1,2] at the endpoints give the exact slope image. If
+L=floor((T/N)*s_F(2)) and U=ceil((T/N)*s_F(1)), the actual stationary
+core is precisely the open integer interval (L,U). Its complement is
+[A,L] disjoint-union [U,B], not an assumed or approximated selection.
+
+The two nearest modes use curvature; all others use derived actual
+endpoint gaps and harmonic sums. The full complement is bounded by
+
+```text
+2*C_sigma*N/sqrt(T)+(8/pi)*(1+log(3*T/N+3)).
+```
+
+The new source consumer contains only the original cutoff-weighted
+stationary main terms over (L,U). Its paid errors include original
+smoothing, far-tail/exterior reduction, the stationary remainder, and
+the displayed complete nonstationary-core bound.
+
+### Exact consumer/green-node audit
+
+- DCI: `norm_fourierCharIntegral_le_of_negative_curvature` derives
+  the actual integral bound by selecting the two slope thresholds with
+  the intermediate value theorem, bounding their separation by the
+  negative curvature, and applying the first-derivative theorem on both
+  exterior intervals. `IntervalC1Bound.fourierChar_of_negative_curvature`
+  consumes that bound on every prefix in integration by parts.
+- DMU: `modelPhaseBufferedFourierMode_uniform_curvature` consumes the
+  ORIGINAL order-one model phase, its derived negative curvature, and
+  the original cutoff's proved variation bound. Its positive constant
+  precedes every endpoint, width, qualifying phase and physical scale.
+  The normalized-to-physical N factor is retained; all real frequencies
+  are covered, with no stationarity, slope-gap or eta<=1 hypothesis.
+- DCE: `modelPhaseSlopeRange_eq_endpoint_Ioo` proves the original open
+  derivative image is exactly the interval between the genuine one-sided
+  endpoint slopes. The endpoint derivative is taken WITHIN [1,2], with
+  an eventual equality to the ordinary derivative at every interior point.
+  Continuity, quantitative decrease and the endpoint model error are
+  derived from the original model; exterior smoothness is not assumed.
+- DNP: `modelPhaseCoreStationarySet_eq_endpoint_Ioo` identifies the
+  ACTUAL filtered core with the literal open integer interval (L,U).
+  `modelPhaseCore_nonstationary_sum` partitions its actual complement
+  into [A,L] and [U,B]. Core containment, strict L<U, integer rounding,
+  inclusion of endpoint frequencies and disjointness are all proved.
+- DNE: `modelPhaseBufferedCoreNonstationary_uniform` consumes DNP,
+  uses DMU for L and U, and applies genuine endpoint-slope reciprocal
+  bounds to every remaining integer. Exact reverse/forward enumeration
+  and harmonic sums give the logarithmic term. Both block lengths are
+  bounded by the original core count. No residual nonstationary mode or
+  positive endpoint gap remains as an assumed input.
+- DSX: `modelPhase_buffered_source_stationary_expansion` starts with
+  the original closed natural-endpoint source sum, consumes the previous
+  actual core expansion and DNE, and rewrites the actual stationary set
+  using DNP. Its sole main expression is the literal cutoff-weighted
+  stationary sum over (L,U); the original curvature amplitude and
+  negative-curvature Fourier factor are unchanged. Every error below
+  is paid, not silently omitted. This does not close the B process.
+
+DBT/full beta reflection remain OPEN. The original source loss
+4*N*eta+2 and stationary loss D*eta^(-3)*(1+N/T) still need a sharp
+physical-scale balance. Actual stationary-frequency assembly through
+the canonical dual charts, moving/reference endpoint conventions,
+and alpha-to-1-alpha epsilon/power-window transport remain required.
+No aggregate EPZAE checkbox or source theorem is marked complete here.
+
+The source remains the frozen beta-reflect identity; these are genuine
+supporting deductions, not a claim that its final source conclusion has
+been proved. The nine energy outputs and printed-Lemma-62 counterexample
+retain their previous crosswalk and source status.
+
+### Verified build evidence
+
+On 22 September 2026, after the final Lean and integration edits:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: PASS, exit 0;
+  [complete target log](logs/tao-trudgian-yang-build-20260922-103135-cc078125.log). Coverage is 655 scanned Lean files,
+  644 production package files and 9499 build jobs. The audit checks
+  5649 discovered target theorems plus five imported declarations, 5654 total.
+- `cmd /c run_lake_build.bat --no-pause` from the foundation root:
+  PASS, exit 0; [complete foundation log](../../logs/foundation_freeze_20260922_103132.log) and
+  [machine-readable manifest](../../logs/foundation_freeze_20260922_103132.json). All six stages pass;
+  301 root modules plus two regressions, 8857 jobs, 7636 explicit
+  declarations and 14290 discovered theorems retain their verified status.
+
+Both complete physical logs contain zero Lean warnings, errors or tactic
+suggestions. All 32 new explicit audits occur once, with permitted logical
+axioms only. The final 9499-job focused regression build is warning-free;
+all 42 new examples pass. The target also verifies all 20 pinned source
+files, 12 frozen ANTEDB files and deterministic certificate regeneration.
+No coverage, integrity, dependency, warning or output gate was weakened.
+Runner PASS verifies the installed scope, not full beta reflection or
+the unfinished whole-proof goal.

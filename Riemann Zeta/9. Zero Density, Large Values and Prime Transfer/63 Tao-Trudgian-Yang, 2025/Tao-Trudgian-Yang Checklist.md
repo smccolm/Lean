@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 checklist
 
-Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
-The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Width-independent curvature and the bounded inner core](#width-independent-curvature-and-the-bounded-inner-core--current-checkpoint).
+The actual Fourier modes now obey a cutoff-width-independent C_sigma*N/sqrt(T) bound. The genuine endpoint slopes determine the exact stationary integer interval; the complete inner-core nonstationary complement has a derived N/sqrt(T) plus logarithmic bound. The original source expansion contains only actual cutoff-weighted stationary main terms, with every remaining error explicit. Sharp stationary/source error balance, canonical dual-chart assembly and full beta reflection remain open. The counterexample and all nine repaired Add-est clauses are preserved; the full goal remains unfinished.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -4620,7 +4620,7 @@ verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains active.
 
-## Uniform smooth weights and stationary remainder bounds — current checkpoint
+## Uniform smooth weights and stationary remainder bounds — historical checkpoint
 
 DZW, DJC, DJI and DJW prove actual smooth zero-extension, uniform
 all-order coordinate/inverse derivatives and global weight bounds with
@@ -4653,3 +4653,161 @@ All 269 checkpoint source/integration/runner hashes match the
 verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Controlled cutoff families and weighted Fourier bounds — historical checkpoint
+
+Installed sub-obligations, each with a production consumer:
+
+- DCB: controlled original cutoff, sharp finite-order jets and actual
+  source-to-Poisson loss <=4*N*eta+2.
+- DWB: actual global transformed-weight order-n bound C*eta^(-n).
+- DSW: genuine varying-cutoff stationary mode error C*N/(T*eta^3),
+  with its constant chosen before N,a,b,eta.
+- DWM: actual original-cutoff-weighted main block, bounded using the
+  physically linked unweighted source beta predicate.
+- DNS: original-model nonstationary estimate, both slope signs,
+  with cutoff C1 bound derived independently of width.
+- DFG: original derivative envelope discharges the gap condition;
+  the resulting physical mode bound is 4/(pi*d).
+
+These are proved estimates, not supplied hypotheses matching their
+conclusions. Exact green-node tests are recorded in the Goal Prompt.
+No aggregate checkbox changed. EPZAE-09/10 remain OPEN: DBT owns
+summed-error balance, quantitative far tails and moving boundary bands;
+DUR owns physical power-window/epsilon transport and full reflection.
+Absolute summability and a pointwise inverse-gap estimate do not
+discharge those quantitative tasks.
+
+EPZAE-36/37 stay DONE. The permanent counterexample, independent
+rho/k and rho*/k witnesses and all nine Add-est clauses are preserved.
+The full objective and both mandatory BAT gates remain active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-085137-4fb8b007.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_085138.log).
+The target covers 625 package files and audits 5516 declarations.
+All 50 new explicit public audits and 66 new regression examples pass.
+All 284 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Quantitative Fourier tails and the actual core expansion — historical checkpoint
+
+Six new DONE subnodes record exact consumers, not aggregate completion:
+
+- DKE: actual normalized kernel's uniform order-two derivative budget.
+- DFT: actual two-sided infinite tail with explicit inverse-radius decay.
+- DNL: actual exterior integer blocks with width-independent harmonic/log cost.
+- DCR: original source-to-core reduction with a derived sufficient radius.
+- DCS: actual stationary subset, physical count and summed stationary error.
+- DCX: original source expansion with the unestimated core residue retained.
+
+The latest Goal Prompt records the six green-node semantic checks.
+DBT still owns inner-core nonstationary/moving-band estimates, canonical
+chart assembly and sufficiently strong stationary/source error balance.
+DUR still owns physical power-window/epsilon transport and full reflection.
+An expansion containing a literal residual sum is not an estimate for it.
+
+No aggregate checkbox changed. EPZAE-09/10 remain OPEN; EPZAE-36/37
+and all nine repaired Add-est clauses retain their verified status.
+The full EPZAE-00--41 objective and both mandatory BAT gates stay active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-094603-f91c6946.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_094604.log).
+The target covers 635 package files and audits 5587 declarations.
+All 29 new explicit public audits and 41 new regression examples pass.
+All 294 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Width-independent curvature and the bounded inner core — current checkpoint
+
+Six exact supporting consumers are now green inside the still-open
+EPZAE-09/10 aggregate contract:
+
+- DCI: `norm_fourierCharIntegral_le_of_negative_curvature` derives
+  the actual integral bound by selecting the two slope thresholds with
+  the intermediate value theorem, bounding their separation by the
+  negative curvature, and applying the first-derivative theorem on both
+  exterior intervals. `IntervalC1Bound.fourierChar_of_negative_curvature`
+  consumes that bound on every prefix in integration by parts.
+- DMU: `modelPhaseBufferedFourierMode_uniform_curvature` consumes the
+  ORIGINAL order-one model phase, its derived negative curvature, and
+  the original cutoff's proved variation bound. Its positive constant
+  precedes every endpoint, width, qualifying phase and physical scale.
+  The normalized-to-physical N factor is retained; all real frequencies
+  are covered, with no stationarity, slope-gap or eta<=1 hypothesis.
+- DCE: `modelPhaseSlopeRange_eq_endpoint_Ioo` proves the original open
+  derivative image is exactly the interval between the genuine one-sided
+  endpoint slopes. The endpoint derivative is taken WITHIN [1,2], with
+  an eventual equality to the ordinary derivative at every interior point.
+  Continuity, quantitative decrease and the endpoint model error are
+  derived from the original model; exterior smoothness is not assumed.
+- DNP: `modelPhaseCoreStationarySet_eq_endpoint_Ioo` identifies the
+  ACTUAL filtered core with the literal open integer interval (L,U).
+  `modelPhaseCore_nonstationary_sum` partitions its actual complement
+  into [A,L] and [U,B]. Core containment, strict L<U, integer rounding,
+  inclusion of endpoint frequencies and disjointness are all proved.
+- DNE: `modelPhaseBufferedCoreNonstationary_uniform` consumes DNP,
+  uses DMU for L and U, and applies genuine endpoint-slope reciprocal
+  bounds to every remaining integer. Exact reverse/forward enumeration
+  and harmonic sums give the logarithmic term. Both block lengths are
+  bounded by the original core count. No residual nonstationary mode or
+  positive endpoint gap remains as an assumed input.
+- DSX: `modelPhase_buffered_source_stationary_expansion` starts with
+  the original closed natural-endpoint source sum, consumes the previous
+  actual core expansion and DNE, and rewrites the actual stationary set
+  using DNP. Its sole main expression is the literal cutoff-weighted
+  stationary sum over (L,U); the original curvature amplitude and
+  negative-curvature Fourier factor are unchanged. Every error below
+  is paid, not silently omitted. This does not close the B process.
+
+DBT/full beta reflection remain OPEN. The original source loss
+4*N*eta+2 and stationary loss D*eta^(-3)*(1+N/T) still need a sharp
+physical-scale balance. Actual stationary-frequency assembly through
+the canonical dual charts, moving/reference endpoint conventions,
+and alpha-to-1-alpha epsilon/power-window transport remain required.
+No aggregate EPZAE checkbox or source theorem is marked complete here.
+
+All 42 original aggregate checkbox entries are preserved. The new
+supporting results add nine integrated production modules, 32 explicit
+public audits and 42 regression examples; those counts are integrity
+coverage, not proof that the full source B process is complete.
+
+The permanent printed-Lemma-62 counterexample, independent rho/k and
+rho*/k witnesses with unrelated fifth coordinates, Heath--Brown energy
+relation, exact optimization and all nine Add-est clauses are unchanged.
+No false s'/s scaling or third witness is restored. The full
+EPZAE-00--41 objective remains active and unfinished.
+
+### Verified build evidence
+
+On 22 September 2026, after the final Lean and integration edits:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: PASS, exit 0;
+  [complete target log](logs/tao-trudgian-yang-build-20260922-103135-cc078125.log). Coverage is 655 scanned Lean files,
+  644 production package files and 9499 build jobs. The audit checks
+  5649 discovered target theorems plus five imported declarations, 5654 total.
+- `cmd /c run_lake_build.bat --no-pause` from the foundation root:
+  PASS, exit 0; [complete foundation log](../../logs/foundation_freeze_20260922_103132.log) and
+  [machine-readable manifest](../../logs/foundation_freeze_20260922_103132.json). All six stages pass;
+  301 root modules plus two regressions, 8857 jobs, 7636 explicit
+  declarations and 14290 discovered theorems retain their verified status.
+
+Both complete physical logs contain zero Lean warnings, errors or tactic
+suggestions. All 32 new explicit audits occur once, with permitted logical
+axioms only. The final 9499-job focused regression build is warning-free;
+all 42 new examples pass. The target also verifies all 20 pinned source
+files, 12 frozen ANTEDB files and deterministic certificate regeneration.
+No coverage, integrity, dependency, warning or output gate was weakened.
+Runner PASS verifies the installed scope, not full beta reflection or
+the unfinished whole-proof goal.

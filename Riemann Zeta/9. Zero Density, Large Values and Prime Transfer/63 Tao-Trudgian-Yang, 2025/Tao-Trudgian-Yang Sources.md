@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
-The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Width-independent curvature and the bounded inner core](#width-independent-curvature-and-the-bounded-inner-core--current-checkpoint).
+The actual Fourier modes now obey a cutoff-width-independent C_sigma*N/sqrt(T) bound. The genuine endpoint slopes determine the exact stationary integer interval; the complete inner-core nonstationary complement has a derived N/sqrt(T) plus logarithmic bound. The original source expansion contains only actual cutoff-weighted stationary main terms, with every remaining error explicit. Sharp stationary/source error balance, canonical dual-chart assembly and full beta reflection remain open. The counterexample and all nine repaired Add-est clauses are preserved; the full goal remains unfinished.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -5570,7 +5570,7 @@ verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains active.
 
-## Uniform smooth weights and stationary remainder bounds — current checkpoint
+## Uniform smooth weights and stationary remainder bounds — historical checkpoint
 
 The frozen `phase-def`, `fpu`, `phase-ex` and `beta-reflect`
 contracts are unchanged. The new estimates consume the actual original
@@ -5617,3 +5617,164 @@ All 269 checkpoint source/integration/runner hashes match the
 verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Controlled cutoff families and weighted Fourier bounds — historical checkpoint
+
+This checkpoint uses the existing pinned local Lean and paper sources;
+it is not a new online literature refresh. No archive, source statement,
+toolchain or dependency pin changed.
+
+- Mathlib's fixed `Real.smoothTransition`, its smoothness and endpoint
+  rules, together with the existing local affine derivative formula,
+  supply the actual two-transition cutoff.
+- `iteratedDeriv_fun_mul` and `Nat.sum_range_choose` give exact
+  Leibniz/binomial width budgets. Compactness bounds only the fixed
+  transition's finite jets, not a different cutoff for each lattice.
+- Mathlib finite integer intervals and natural ceilings support the
+  original endpoint-band count and the explicit 4*N*eta+2 source loss.
+- Existing actual Morse jets and the checked generic quadratic remainder
+  supply the stationary estimate; the new weighted-expression degree
+  argument tracks cutoff derivative order and proves the sharp eta^(-n).
+- `AtkinsonResidualVariation` supplies only its GENERIC two-transition
+  finite-variation result; `AtkinsonAmplitudeIntegral` supplies the
+  amplitude interface. The carrier FTC/integration-by-parts theorem is
+  proved for an arbitrary continuous carrier on an open set.
+- `AtkinsonFirstDerivative` supplies GENERIC positive/negative reciprocal-
+  slope integral estimates. Their Fourier normalization and actual
+  original-model slope hypotheses are proved in the new consumers.
+  No Atkinson-specific phase transformation is asserted for F.
+- The frozen TeX `beta-reflect` source statement and the existing
+  physical dual-scale interfaces remain the target. The source beta
+  predicate used in the weighted-main theorem is upstream and unweighted;
+  neither full reflection nor the weighted conclusion is assumed.
+
+Quantitative far tails, summed error balance and moving boundary bands
+remain requirements of the original source theorem. None is imported
+from informal prose or inferred from absolute summability.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-085137-4fb8b007.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_085138.log).
+The target covers 625 package files and audits 5516 declarations.
+All 50 new explicit public audits and 66 new regression examples pass.
+All 284 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Quantitative Fourier tails and the actual core expansion — historical checkpoint
+
+This checkpoint uses the pinned local source tree, not a new online
+literature refresh. The frozen TeX `beta-reflect` statement was reread;
+no archive, dependency pin or original source theorem changed.
+
+- Mathlib's `Real.fourier_iteratedDeriv` and its integrability/normalization
+  requirements were inspected. The existing foundation theorem
+  `one_add_abs_fourier_decay_of_support_of_bounds_order` is applied
+  only in its GENERIC compact-support form, with the actual kernel's
+  uniform derivative bounds derived in the new consumer.
+- The existing generic complex exponential and second-order chain/product
+  rules provide carrier derivatives. The original phase's first two jet
+  bounds supply the constants; no Atkinson-specific root phase is substituted.
+- `tsum_nat_rpow_tail_le` supplies the checked real integral comparison.
+  Mathlib's integer positive/negative sum decomposition and indicator
+  summability are used to prove the two-sided inverse-square tail.
+- Mathlib finite integer intervals, floor/ceiling inequalities, harmonic
+  numbers and `harmonic_le_one_add_log` supply the actual signed window
+  partition and the logarithmic exterior cost.
+- The previous actual stationary Fourier-mode theorem is applied to the
+  core filtered by the ORIGINAL slope image. Its cardinality is derived
+  from the original model envelope, independently of the tail radius.
+
+The final consumer begins at the original exponential sum and retains
+the unevaluated inner-core nonstationary contribution. The source's
+full B-process/reflection conclusion still needs that contribution and
+the required power-saving error balance; neither is an imported premise.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-094603-f91c6946.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_094604.log).
+The target covers 635 package files and audits 5587 declarations.
+All 29 new explicit public audits and 41 new regression examples pass.
+All 294 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Width-independent curvature and the bounded inner core — current checkpoint
+
+No external source or dependency pin changed at this checkpoint. The
+primary statement was reread in frozen
+`Sources/TaoTrudgianYang-v1-source/Tao_Trudgian_Yang_v2.tex`,
+lines 297--307, especially `beta-reflect`. Its whole-interval beta
+symmetry remains unproved; the new modules supply original-object
+analytic inputs toward that statement.
+
+Mathlib was searched before proving the integral bound. The pinned
+`Analysis/Calculus/Deriv/MeanValue.lean` supplies the quantitative
+secant inequality, `Topology/Order/IntermediateValue.lean` supplies
+actual slope thresholds, and the interval-integral/continuous-derivative
+APIs supply additivity, trivial length bounds and one-sided endpoint
+continuity. The existing locally audited first-derivative oscillatory
+integral theorem and actual cutoff variation theorem are consumed.
+
+The second-derivative integral bound, uniform original-mode consumer,
+closed-slope image, exact integer partition and actual inner-core estimate
+are new Lean deductions here, not imported from a newly discovered repo
+or certified by an external solver. No browser/search result is claimed
+as evidence for this checkpoint.
+
+The original Fourier modes now satisfy C_sigma*N/sqrt(T), uniformly in
+every real frequency and original cutoff width. Genuine derivatives
+within [1,2] at the endpoints give the exact slope image. If
+L=floor((T/N)*s_F(2)) and U=ceil((T/N)*s_F(1)), the actual stationary
+core is precisely the open integer interval (L,U). Its complement is
+[A,L] disjoint-union [U,B], not an assumed or approximated selection.
+
+The two nearest modes use curvature; all others use derived actual
+endpoint gaps and harmonic sums. The full complement is bounded by
+
+```text
+2*C_sigma*N/sqrt(T)+(8/pi)*(1+log(3*T/N+3)).
+```
+
+The new source consumer contains only the original cutoff-weighted
+stationary main terms over (L,U). Its paid errors include original
+smoothing, far-tail/exterior reduction, the stationary remainder, and
+the displayed complete nonstationary-core bound.
+
+DBT/full beta reflection remain OPEN. The original source loss
+4*N*eta+2 and stationary loss D*eta^(-3)*(1+N/T) still need a sharp
+physical-scale balance. Actual stationary-frequency assembly through
+the canonical dual charts, moving/reference endpoint conventions,
+and alpha-to-1-alpha epsilon/power-window transport remain required.
+No aggregate EPZAE checkbox or source theorem is marked complete here.
+
+### Verified build evidence
+
+On 22 September 2026, after the final Lean and integration edits:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: PASS, exit 0;
+  [complete target log](logs/tao-trudgian-yang-build-20260922-103135-cc078125.log). Coverage is 655 scanned Lean files,
+  644 production package files and 9499 build jobs. The audit checks
+  5649 discovered target theorems plus five imported declarations, 5654 total.
+- `cmd /c run_lake_build.bat --no-pause` from the foundation root:
+  PASS, exit 0; [complete foundation log](../../logs/foundation_freeze_20260922_103132.log) and
+  [machine-readable manifest](../../logs/foundation_freeze_20260922_103132.json). All six stages pass;
+  301 root modules plus two regressions, 8857 jobs, 7636 explicit
+  declarations and 14290 discovered theorems retain their verified status.
+
+Both complete physical logs contain zero Lean warnings, errors or tactic
+suggestions. All 32 new explicit audits occur once, with permitted logical
+axioms only. The final 9499-job focused regression build is warning-free;
+all 42 new examples pass. The target also verifies all 20 pinned source
+files, 12 frozen ANTEDB files and deterministic certificate regeneration.
+No coverage, integrity, dependency, warning or output gate was weakened.
+Runner PASS verifies the installed scope, not full beta reflection or
+the unfinished whole-proof goal.

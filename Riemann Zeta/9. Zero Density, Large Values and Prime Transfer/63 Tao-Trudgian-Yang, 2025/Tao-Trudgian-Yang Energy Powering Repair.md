@@ -1,7 +1,7 @@
 # Authorized cardinality/energy powering repair
 
-Current analytic progress: [Uniform smooth weights and stationary remainder bounds](#uniform-smooth-weights-and-stationary-remainder-bounds--current-checkpoint).
-The actual transformed weight now has a smooth compactly supported zero-extension and uniform all-order derivative bounds for each fixed original cutoff. A proved quadratic remainder estimate gives O(N/T) physical stationary-mode errors, retaining the cutoff value and phase. Uniform lattice-dependent cutoff budgets, nonstationary modes and moving boundary bands remain open. The counterexample, corrected powering and all nine Add-est clauses are preserved; the full EPZAE-00--41 goal remains active.
+Current analytic progress: [Width-independent curvature and the bounded inner core](#width-independent-curvature-and-the-bounded-inner-core--current-checkpoint).
+The actual Fourier modes now obey a cutoff-width-independent C_sigma*N/sqrt(T) bound. The genuine endpoint slopes determine the exact stationary integer interval; the complete inner-core nonstationary complement has a derived N/sqrt(T) plus logarithmic bound. The original source expansion contains only actual cutoff-weighted stationary main terms, with every remaining error explicit. Sharp stationary/source error balance, canonical dual-chart assembly and full beta reflection remain open. The counterexample and all nine repaired Add-est clauses are preserved; the full goal remains unfinished.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -4999,7 +4999,7 @@ verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains active.
 
-## Uniform smooth weights and stationary remainder bounds — current checkpoint
+## Uniform smooth weights and stationary remainder bounds — historical checkpoint
 
 The permanent printed-Lemma-62 counterexample remains byte-for-byte
 unchanged, with `EnergyPoweringObstruction.lean` SHA-256
@@ -5029,3 +5029,117 @@ All 269 checkpoint source/integration/runner hashes match the
 verification snapshot. The counterexample and both BAT launchers
 are unchanged. Exact hashes and foundation stage evidence are in
 the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Controlled cutoff families and weighted Fourier bounds — historical checkpoint
+
+The permanent printed-Lemma-62 counterexample remains byte-for-byte
+unchanged in `EnergyPoweringObstruction.lean`, SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The authorized chain remains proved: corrected cardinality/energy
+powering; independent rho/k and rho*/k witnesses with unrelated,
+unrestricted fifth coordinates; Heath--Brown energy relation; exact
+energy optimization; all nine Add-est clauses. No false s'/s scaling,
+scaled fifth coordinate or third witness returns. Existing energy-proof
+modules, their semantics and the frozen paper are unchanged.
+
+This checkpoint advances only the beta/B-process branch through
+controlled source cutoffs, sharp width-dependent stationary remainders,
+the actual cutoff-weighted main block and original nonstationary modes.
+The remaining summed-error, far-tail and moving-band tasks do not reopen
+the completed repaired energy chain. The full goal and both mandatory
+BAT interfaces remain active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-085137-4fb8b007.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_085138.log).
+The target covers 625 package files and audits 5516 declarations.
+All 50 new explicit public audits and 66 new regression examples pass.
+All 284 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Quantitative Fourier tails and the actual core expansion — historical checkpoint
+
+The permanent `EnergyPoweringObstruction.lean` counterexample remains
+byte-for-byte unchanged, SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The authorized repair remains proved: independent rho/k and rho*/k
+witnesses with unrelated unrestricted fifth coordinates, the Heath--Brown
+energy relation, exact optimization and all nine Add-est clauses.
+No false s'/s scaling, scaled fifth coordinate or third witness returns.
+No existing energy-proof module or frozen source changed.
+
+The new work is confined to the beta/B-process branch: quantitative
+actual Fourier tails, exterior logarithmic sums, a physical core
+reduction and summed stationary errors in an actual source expansion.
+Inner-core residual estimates and full reflection remain open without
+reopening the completed corrected energy chain. The full goal and both
+mandatory BAT interfaces remain active.
+
+### Verification
+
+Both mandatory BAT runners passed with exit code 0 on 22 September 2026,
+with zero Lean warnings, errors or tactic suggestions:
+[final target log](logs/tao-trudgian-yang-build-20260922-094603-f91c6946.log)
+and [final foundation log](../../logs/foundation_freeze_20260922_094604.log).
+The target covers 635 package files and audits 5587 declarations.
+All 29 new explicit public audits and 41 new regression examples pass.
+All 294 checkpoint source/integration/runner hashes match the
+verification snapshot. The counterexample and both BAT launchers
+are unchanged. Exact hashes and foundation stage evidence are in
+the latest Reproduction Manifest section. The full goal remains unfinished.
+
+## Width-independent curvature and the bounded inner core — current checkpoint
+
+The permanent printed-Lemma-62 counterexample, independent rho/k and
+rho*/k witnesses with unrelated fifth coordinates, Heath--Brown energy
+relation, exact optimization and all nine Add-est clauses are unchanged.
+No false s'/s scaling or third witness is restored. The full
+EPZAE-00--41 objective remains active and unfinished.
+
+This checkpoint changes the downstream beta/B-process branch only.
+The actual nonstationary core residual is now estimated using the
+original-mode curvature bound, genuine one-sided endpoint slopes and
+an exact disjoint integer partition. The source consumer has only
+actual cutoff-weighted stationary main terms; the analytic estimates
+are not a replacement for or relaxation of the authorized powering repair.
+
+DBT/full beta reflection remain OPEN. The original source loss
+4*N*eta+2 and stationary loss D*eta^(-3)*(1+N/T) still need a sharp
+physical-scale balance. Actual stationary-frequency assembly through
+the canonical dual charts, moving/reference endpoint conventions,
+and alpha-to-1-alpha epsilon/power-window transport remain required.
+No aggregate EPZAE checkbox or source theorem is marked complete here.
+
+Keep both `run_tao_trudgian_yang_build.bat` and foundation
+`run_lake_build.bat` operational as proof coverage changes. All existing
+energy proof files and the obstruction file retain their verified bytes.
+
+### Verified build evidence
+
+On 22 September 2026, after the final Lean and integration edits:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: PASS, exit 0;
+  [complete target log](logs/tao-trudgian-yang-build-20260922-103135-cc078125.log). Coverage is 655 scanned Lean files,
+  644 production package files and 9499 build jobs. The audit checks
+  5649 discovered target theorems plus five imported declarations, 5654 total.
+- `cmd /c run_lake_build.bat --no-pause` from the foundation root:
+  PASS, exit 0; [complete foundation log](../../logs/foundation_freeze_20260922_103132.log) and
+  [machine-readable manifest](../../logs/foundation_freeze_20260922_103132.json). All six stages pass;
+  301 root modules plus two regressions, 8857 jobs, 7636 explicit
+  declarations and 14290 discovered theorems retain their verified status.
+
+Both complete physical logs contain zero Lean warnings, errors or tactic
+suggestions. All 32 new explicit audits occur once, with permitted logical
+axioms only. The final 9499-job focused regression build is warning-free;
+all 42 new examples pass. The target also verifies all 20 pinned source
+files, 12 frozen ANTEDB files and deterministic certificate regeneration.
+No coverage, integrity, dependency, warning or output gate was weakened.
+Runner PASS verifies the installed scope, not full beta reflection or
+the unfinished whole-proof goal.

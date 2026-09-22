@@ -19986,3 +19986,1518 @@ example :
     (by norm_num) (by norm_num) (by norm_num)
 
 end UniformQuadraticRemainderRegression
+
+section BufferedFamilyRegression
+
+open Set Expdb Filter MeasureTheory
+open scoped ContDiff Topology FourierTransform BigOperators
+
+example (Q : ℕ) :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ x : ℝ, ∀ j ≤ Q,
+      |iteratedDeriv j Real.smoothTransition x| ≤ M :=
+  @smoothTransition_finite_jet_bound Q
+
+example (l r η u : ℝ) :
+    0 ≤ modelPhaseBufferedCutoff l r η u :=
+  @modelPhaseBufferedCutoff_nonneg l r η u
+
+example (l r η u : ℝ) :
+    modelPhaseBufferedCutoff l r η u ≤ 1 :=
+  @modelPhaseBufferedCutoff_le_one l r η u
+
+example (l r η : ℝ) :
+    ContDiff ℝ ∞ (modelPhaseBufferedCutoff l r η) :=
+  @modelPhaseBufferedCutoff_contDiff l r η
+
+example {l r η u : ℝ}
+    (hη : 0 < η) (hu : u ≤ l+η) :
+    modelPhaseBufferedCutoff l r η u = 0 :=
+  @modelPhaseBufferedCutoff_zero_left l r η u hη hu
+
+example {l r η u : ℝ}
+    (hη : 0 < η) (hu : r-η ≤ u) :
+    modelPhaseBufferedCutoff l r η u = 0 :=
+  @modelPhaseBufferedCutoff_zero_right l r η u hη hu
+
+example {l r η u : ℝ}
+    (hη : 0 < η) (hl : l+2*η ≤ u) (hr : u ≤ r-2*η) :
+    modelPhaseBufferedCutoff l r η u = 1 :=
+  @modelPhaseBufferedCutoff_one l r η u hη hl hr
+
+example {l r η : ℝ} (hη : 0 < η) :
+    tsupport (modelPhaseBufferedCutoff l r η) ⊆ Icc (l+η) (r-η) :=
+  @modelPhaseBufferedCutoff_tsupport l r η hη
+
+example {l r η : ℝ} (hη : 0 < η) :
+    HasCompactSupport (modelPhaseBufferedCutoff l r η) :=
+  @modelPhaseBufferedCutoff_hasCompactSupport l r η hη
+
+example {l r η : ℝ}
+    (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) :
+    tsupport (modelPhaseBufferedCutoff l r η) ⊆ Ioo (1 : ℝ) 2 :=
+  @modelPhaseBufferedCutoff_tsupport_model l r η hη hl hr
+
+example
+    (l r η u : ℝ) (n : ℕ) :
+    iteratedDeriv n (modelPhaseBufferedCutoff l r η) u =
+      ∑ j ∈ Finset.range (n+1), (n.choose j : ℝ) *
+        ((η⁻¹)^j * iteratedDeriv j Real.smoothTransition ((u-l)/η-1)) *
+        ((-η⁻¹)^(n-j) * iteratedDeriv (n-j) Real.smoothTransition ((r-u)/η-1)) :=
+  @iteratedDeriv_modelPhaseBufferedCutoff l r η u n
+
+example
+    {M η : ℝ} (hM : 0 ≤ M) (hη : 0 < η)
+    (n : ℕ)
+    (hb : ∀ x : ℝ, ∀ j ≤ n, |iteratedDeriv j Real.smoothTransition x| ≤ M)
+    (l r u : ℝ) :
+    |iteratedDeriv n (modelPhaseBufferedCutoff l r η) u| ≤
+      (2 : ℝ)^n*M^2*(η⁻¹)^n :=
+  @abs_iteratedDeriv_modelPhaseBufferedCutoff_le M η hM hη n hb l r u
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η u : ℝ), 0 < η → η ≤ 1 →
+      ∀ j ≤ Q, |iteratedDeriv j (modelPhaseBufferedCutoff l r η) u| ≤ C*(η⁻¹)^Q :=
+  @modelPhaseBufferedCutoff_uniform_jets Q
+
+example (e : InversePhaseExpression)
+    {B C : ℝ} (hB : 0 ≤ B) (hBC : B ≤ C) :
+    inversePhaseMagnitude e B ≤ inversePhaseMagnitude e C :=
+  @inversePhaseMagnitude_mono e B C hB hBC
+
+example (e : InversePhaseExpression)
+    {B A : ℝ} (hB : 0 ≤ B) (hA : 1 ≤ A) :
+    inversePhaseMagnitude e (B*A) ≤ inversePhaseMagnitude e B*A^(inversePhaseDegree e) :=
+  @inversePhaseMagnitude_scale_le e B A hB hA
+
+example {σ M A : ℝ}
+    (hσ : 0 < σ) (hM : 0 ≤ M) (hA : 1 ≤ A) (n Q : ℕ) :
+    morseWeightDerivativeBound σ (M*A^Q) n ≤
+      morseWeightDerivativeBound σ M n *
+        A^(Q*inversePhaseDegree (morseWeightDerivativeExpression n)) :=
+  @morseWeightDerivativeBound_scaled σ M A hσ hM hA n Q
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ v : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ (morseWeightDerivativeOrder n) δ →
+        v ∈ modelPhaseSlopeRange F →
+        ∀ z : ℝ,
+          |iteratedDeriv n (modelPhaseMorseWeight (modelPhaseBufferedCutoff l r η) F v) z| ≤
+            C*(η⁻¹)^(bufferedMorseDerivativeDegree n) :=
+  @modelPhaseBufferedMorseWeight_uniform_derivative σ hσ n
+
+example (a b : ℤ) (m : ℕ) :
+    (modelPhaseBufferedBoundary a b m).card ≤ 2*m :=
+  @modelPhaseBufferedBoundary_card_le a b m
+
+example
+    {N η : ℝ} (hN : 0 < N) (hη : 0 < η)
+    {a b n : ℤ} (hn : n ∈ Finset.Icc a b)
+    (hnot : n ∉ modelPhaseBufferedBoundary a b ⌈2*N*η⌉₊) :
+    modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η ((n : ℝ)/N) = 1 :=
+  @modelPhaseBufferedCutoff_one_off_boundary N η hN hη a b n hn hnot
+
+example
+    {N η : ℝ} (hN : 0 < N) (hη : 0 < η)
+    (F : ℝ → ℝ) (T : ℝ) {a b n : ℤ} (hn : n ∉ Finset.Icc a b) :
+    modelPhaseWeightedKernel (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η)
+      F T N n = 0 :=
+  @modelPhaseBufferedKernel_zero_outside N η hN hη F T a b n hn
+
+example
+    {N η : ℝ} (hN : 0 < N) (hη : 0 < η) (F : ℝ → ℝ) (T : ℝ) (a b : ℤ) :
+    ‖(∑ n ∈ Finset.Icc a b, (𝐞 (T*F ((n : ℝ)/N)) : ℂ))-
+      ∑' n : ℤ, modelPhaseWeightedKernel
+        (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N n‖ ≤ 4*N*η+2 :=
+  @norm_modelPhase_source_sub_buffered_le N η hN hη F T a b
+
+example
+    {F : ℝ → ℝ} {σ δ N η : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hN : 0 < N) (hη : 0 < η)
+    {a b : ℕ} (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) (T : ℝ) :
+    Summable (fun r : ℤ => ‖modelPhaseFourierMode
+      (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N r‖) ∧
+    ‖exponentialSumAt F T N a b-
+      ∑' r : ℤ, modelPhaseFourierMode
+        (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N r‖ ≤ 4*N*η+2 :=
+  @modelPhase_buffered_poisson F σ δ N η P hF hN hη a b ha hb T
+
+example (H M₀ M₂ M₃ A : ℝ) :
+    quadraticRemainderConstant H (M₀*A) (M₂*A) (M₃*A) =
+      quadraticRemainderConstant H M₀ M₂ M₃*A :=
+  @quadraticRemainderConstant_scale H M₀ M₂ M₃ A
+
+example : 1 ≤ bufferedStationaryPhaseOrder :=
+  @bufferedStationaryPhaseOrder_pos
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ v T : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ →
+        v ∈ modelPhaseSlopeRange F → 0 < T →
+        ‖modelPhaseMorseRemainder (modelPhaseBufferedCutoff l r η) F T v‖ ≤
+          C*(η⁻¹)^bufferedStationaryWidthDegree/T :=
+  @modelPhaseBufferedMorseRemainder_uniform σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T N q : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ →
+        0 < T → 0 < N → q*N/T ∈ modelPhaseSlopeRange F →
+        ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+          (modelPhaseBufferedCutoff l r η
+            (modelPhaseInverseSlope F (q*N/T)) : ℂ)*modelPhaseStationaryMainTerm F T N q‖ ≤
+          C*(η⁻¹)^bufferedStationaryWidthDegree*N/T :=
+  @modelPhaseBufferedFourierMode_stationary_uniform σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N η : ℝ) (a b : ℕ),
+      0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ T : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ → 0 < T →
+        Summable (fun q : ℤ => ‖modelPhaseFourierMode
+          (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖) ∧
+        ‖exponentialSumAt F T N a b-
+          ∑' q : ℤ, modelPhaseFourierMode
+            (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖ ≤ 4*N*η+2 ∧
+        ∀ q : ℤ, (q : ℝ)*N/T ∈ modelPhaseSlopeRange F →
+          ‖modelPhaseFourierMode
+              (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q-
+            (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η
+              (modelPhaseInverseSlope F ((q : ℝ)*N/T)) : ℂ)*
+                modelPhaseStationaryMainTerm F T N q‖ ≤
+            C*(η⁻¹)^bufferedStationaryWidthDegree*N/T :=
+  @modelPhase_buffered_poisson_stationary σ hσ
+
+example {η : ℝ} (hη : 0 < η) (l r u : ℝ) :
+    modelPhaseBufferedCutoff l r η u =
+      zetaBandCutoff (l+η) (l+2*η) (r-2*η) (r-η) u :=
+  @modelPhaseBufferedCutoff_eq_band η hη l r u
+
+example
+    {η : ℝ} (hη : 0 < η) (l r : ℝ) (u : ℕ → ℝ) (L : ℕ)
+    (hu : MonotoneOn u (Iic L) ∨ AntitoneOn u (Iic L)) :
+    FiniteVariationBound (fun i => (modelPhaseBufferedCutoff l r η (u i) : ℂ)) L 2 :=
+  @finiteVariationBound_modelPhaseBufferedCutoff_sample η hη l r u L hu
+
+example
+    {σ δ T N η : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (l r a : ℝ) (L : ℕ)
+    (hv : ∀ i : ℕ, i ≤ L → (a+i)*N/T ∈ modelPhaseSlopeRange F) :
+    FiniteVariationBound
+      (fun i => (modelPhaseBufferedCutoff l r η
+        (modelPhaseInverseSlope F ((a+i)*N/T)) : ℂ)) L 2 :=
+  @finiteVariationBound_modelPhaseBufferedCutoff_inverse σ δ T N η F hσ hδ hF hT hN hη l r a L hv
+
+example
+    {σ δ T N η : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (l r a : ℝ) (L : ℕ)
+    (hv : ∀ i : ℕ, i ≤ L → (a+i)*N/T ∈ modelPhaseSlopeRange F) :
+    FiniteVariationBound
+      (fun i => (modelPhaseBufferedCutoff l r η
+        (modelPhaseInverseSlope F ((a+i)*N/T)) : ℂ)*
+          (modelPhasePhysicalAmplitude F T N (a+i) : ℂ)) L
+      (4*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹)) :=
+  @finiteVariationBound_modelPhaseBufferedAmplitude σ δ T N η F hσ hδ hF hT hN hη l r a L hv
+
+example
+    (F : ℝ → ℝ) (l r η T N : ℝ) (a L : ℕ) :
+    modelPhaseBufferedStationaryBlock F l r η T N a L =
+      ∑ i ∈ Finset.range (L+1),
+        (modelPhaseBufferedCutoff l r η
+          (modelPhaseInverseSlope F (((a : ℝ)+i)*N/T)) : ℂ)*
+            modelPhaseStationaryMainTerm F T N ((a : ℝ)+i) :=
+  @modelPhaseBufferedStationaryBlock_eq_range F l r η T N a L
+
+example
+    {χ F : ℝ → ℝ} {σ δ A w T N η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hA : 0 < A) (hw : 0 < w) (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (l r : ℝ) (a L : ℕ)
+    (hslope : ∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ modelPhaseSlopeRange F)
+    (hv : ∀ i : ℕ, i ≤ L → 0 < ((a : ℝ)+i)*N/T)
+    (hχ : ∀ i : ℕ, i ≤ L → χ (((a : ℝ)+i)*N/T) = 1) :
+    ‖modelPhaseBufferedStationaryBlock F l r η T N a L‖ ≤
+      8*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+        exponentialSumAtPrefixMax (canonicalLegendrePhase χ F σ A w)
+          (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a L :=
+  @norm_modelPhaseBufferedStationaryBlock_le_prefixMax χ F σ δ A w T N η hσ hδ hF hA hw hT hN hη l r a L hslope hv hχ
+
+example
+    {α : ℝ≥0} {β σ l r : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    (hl : (2 : ℝ)^(-σ) < l) (hlr : l ≤ r) (hr : r < 1) (hratio : r < 2*l) :
+    ∃ A : ℝ, 0 < A ∧ A < l ∧ r < 2*A ∧
+      ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ HasCompactSupport χ ∧
+        (∀ v ∈ Icc l r, χ v = 1) ∧
+        ∀ ε : ℝ, 0 < ε →
+        ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+          ∀ (T N : ℝ) (F : ℝ → ℝ) (a L : ℕ) (p q η : ℝ),
+            0 < η →
+            0 < T → 0 < N →
+            IsApproximateModelPhaseFunction F σ P δ →
+            C ≤ modelPhaseDualParameter σ A T →
+            (modelPhaseDualParameter σ A T)^((α : ℝ)-δ) ≤ modelPhaseDualScale A T N →
+            modelPhaseDualScale A T N ≤ (modelPhaseDualParameter σ A T)^((α : ℝ)+δ) →
+            (∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ Icc l r) →
+            ‖modelPhaseBufferedStationaryBlock F p q η T N a L‖ ≤
+              8*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+                C*(modelPhaseDualParameter σ A T)^(β+ε) :=
+  @bufferedStationaryMain_bound_of_exponentSumBound α β σ l r hβ hσ hl hlr hr hratio
+
+example
+    {f k : ℝ → ℂ} {a b M B : ℝ} {J : Set ℝ}
+    (hf : IntervalC1Bound f a b M) (hab : a ≤ b)
+    (hJ : IsOpen J) (hsub : Icc a b ⊆ J)
+    (hk : ∀ x ∈ J, ContinuousAt k x)
+    (hprimitive : ∀ x ∈ Icc a b, ‖∫ y in a..x, k y‖ ≤ B) :
+    ‖∫ y in a..b, f y*k y‖ ≤ 2*B*M :=
+  @IntervalC1Bound.integral_mul_of_primitive_bound f k a b M B J hf hab hJ hsub hk hprimitive
+
+example
+    {φ : ℝ → ℝ} {a b lam : ℝ} (hab : a ≤ b) (hlam : 0 < lam)
+    (hφ : ∀ x ∈ Icc a b, ContDiffAt ℝ 2 φ x)
+    (hmono : AntitoneOn (deriv φ) (Icc a b))
+    (hgap : (∀ x ∈ Icc a b, lam ≤ deriv φ x) ∨
+      (∀ x ∈ Icc a b, deriv φ x ≤ -lam)) :
+    ‖∫ x in a..b, (𝐞 (φ x) : ℂ)‖ ≤ 1/(lam*Real.pi) :=
+  @norm_fourierCharIntegral_le_of_slope_gap φ a b lam hab hlam hφ hmono hgap
+
+example
+    {f : ℝ → ℂ} {φ : ℝ → ℝ} {a b M lam : ℝ} {J : Set ℝ}
+    (hf : IntervalC1Bound f a b M) (hab : a ≤ b) (hlam : 0 < lam)
+    (hJ : IsOpen J) (hsub : Icc a b ⊆ J)
+    (hφ : ∀ x ∈ J, ContDiffAt ℝ 2 φ x)
+    (hmono : AntitoneOn (deriv φ) J)
+    (hgap : (∀ x ∈ J, lam ≤ deriv φ x) ∨
+      (∀ x ∈ J, deriv φ x ≤ -lam)) :
+    ‖∫ x in a..b, f x*(𝐞 (φ x) : ℂ)‖ ≤ 2*M/(lam*Real.pi) :=
+  @IntervalC1Bound.fourierChar_of_slope_gap f φ a b M lam J hf hab hlam hJ hsub hφ hmono hgap
+
+example {l r η : ℝ} (hη : 0 < η) :
+    Function.support (modelPhaseBufferedCutoff l r η) ⊆ Ioo (l+η) (r-η) :=
+  @modelPhaseBufferedCutoff_support_open l r η hη
+
+example {l r η : ℝ}
+    (hη : 0 < η) (h : r-η ≤ l+η) :
+    modelPhaseBufferedCutoff l r η = fun _ => 0 :=
+  @modelPhaseBufferedCutoff_eq_zero_of_overlap l r η hη h
+
+example
+    {l r η a b : ℝ} (hη : 0 < η) (hab : a ≤ b) :
+    IntervalC1Bound (fun u => (modelPhaseBufferedCutoff l r η u : ℂ)) a b 2 :=
+  @intervalC1Bound_modelPhaseBufferedCutoff l r η a b hη hab
+
+example
+    {F : ℝ → ℝ} {σ δ T q l r η lam : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hlam : 0 < lam)
+    (hgap : (∀ u ∈ Ioo (1 : ℝ) 2, lam ≤ T*deriv F u-q) ∨
+      (∀ u ∈ Ioo (1 : ℝ) 2, T*deriv F u-q ≤ -lam)) :
+    ‖modelPhaseNormalizedMode (modelPhaseBufferedCutoff l r η) F T q‖ ≤
+      4/(lam*Real.pi) :=
+  @norm_modelPhaseBufferedNormalizedMode_nonstationary F σ δ T q l r η lam hσ hδ hF hT hη hl hr hlam hgap
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η lam : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hlam : 0 < lam)
+    (hgap : (∀ u ∈ Ioo (1 : ℝ) 2, lam ≤ T*deriv F u-q*N) ∨
+      (∀ u ∈ Ioo (1 : ℝ) 2, T*deriv F u-q*N ≤ -lam)) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4*N/(lam*Real.pi) :=
+  @norm_modelPhaseBufferedFourierMode_nonstationary F σ δ T N q l r η lam hσ hδ hF hT hN hη hl hr hlam hgap
+
+example
+    {F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ} (hσ : 0 < σ)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) :
+    (2 : ℝ)^(-σ)-δ ≤ deriv F u ∧ deriv F u ≤ 1+δ :=
+  @approximateModelPhase_firstDeriv_bounds F σ δ P hσ hF u hu
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η lam : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hlam : 0 < lam)
+    (hgap : q*N ≤ T*((2 : ℝ)^(-σ)-δ)-lam ∨ T*(1+δ)+lam ≤ q*N) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4*N/(lam*Real.pi) :=
+  @norm_modelPhaseBufferedFourierMode_of_envelope_gap F σ δ T N q l r η lam hσ hδ hF hT hN hη hl hr hlam hgap
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η d : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hgap : q ≤ (T/N)*((2 : ℝ)^(-σ)-δ)-d ∨ (T/N)*(1+δ)+d ≤ q) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4/(d*Real.pi) :=
+  @norm_modelPhaseBufferedFourierMode_of_frequency_gap F σ δ T N q l r η d hσ hδ hF hT hN hη hl hr hd hgap
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η u : ℝ), 0 < η →
+      ∀ j ≤ Q, |iteratedDeriv j (modelPhaseBufferedCutoff l r η) u| ≤ C*(η⁻¹)^j :=
+  @modelPhaseBufferedCutoff_uniform_ordered_jets Q
+
+example (w : ℕ → ℕ) (e : InversePhaseExpression)
+    {B A : ℝ} {x : ℕ → ℝ} (hB : 0 ≤ B) (hA : 1 ≤ A)
+    (hx : ∀ j ≤ inversePhaseOrder e, |x j| ≤ B*A^(w j)) :
+    |inversePhaseEval e x| ≤
+      inversePhaseMagnitude e B*A^(inversePhaseWeightedDegree w e) :=
+  @inversePhaseEval_abs_le_weighted w e B A x hB hA hx
+
+example (j : ℕ) :
+    inversePhaseWeightedDegree morseWeightWidthAtomDegree (morseWeightAtomDerivative j) ≤
+      morseWeightWidthAtomDegree j+1 :=
+  @morseWeightAtomDerivative_widthDegree_le j
+
+example (e : InversePhaseExpression) :
+    inversePhaseWeightedDegree morseWeightWidthAtomDegree (morseWeightDifferentiate e) ≤
+      inversePhaseWeightedDegree morseWeightWidthAtomDegree e+1 :=
+  @morseWeightDifferentiate_widthDegree_le e
+
+example (n : ℕ) :
+    inversePhaseWeightedDegree morseWeightWidthAtomDegree (morseWeightDerivativeExpression n) ≤ n :=
+  @morseWeightDerivativeExpression_widthDegree_le n
+
+example : modelPhaseBufferedCutoff 1 2 (1/8) (9/8) = 0 := by
+  apply modelPhaseBufferedCutoff_zero_left <;> norm_num
+
+example : modelPhaseBufferedCutoff 1 2 (1/8) (15/8) = 0 := by
+  apply modelPhaseBufferedCutoff_zero_right <;> norm_num
+
+example : modelPhaseBufferedCutoff 1 2 (1/8) (3/2) = 1 := by
+  apply modelPhaseBufferedCutoff_one <;> norm_num
+
+example : modelPhaseBufferedCutoff 1 2 1 = fun _ => 0 := by
+  apply modelPhaseBufferedCutoff_eq_zero_of_overlap <;> norm_num
+
+example : modelPhaseBufferedCutoff 2 1 (1/8) = fun _ => 0 := by
+  apply modelPhaseBufferedCutoff_eq_zero_of_overlap <;> norm_num
+
+example (j : ℕ) (u : ℝ) :
+    iteratedDeriv j (modelPhaseBufferedCutoff 1 1 (1/8)) u = 0 := by
+  rw [modelPhaseBufferedCutoff_eq_zero_of_overlap (by norm_num) (by norm_num)]
+  simp
+
+example (F : ℝ → ℝ) (T N q : ℝ) :
+    modelPhaseFourierMode (modelPhaseBufferedCutoff 1 1 (1/8)) F T N q = 0 := by
+  rw [modelPhaseBufferedCutoff_eq_zero_of_overlap (by norm_num) (by norm_num)]
+  simp [modelPhaseFourierMode]
+
+example (a b : ℤ) : (modelPhaseBufferedBoundary a b 0).card = 0 :=
+  Nat.eq_zero_of_le_zero (by simpa using modelPhaseBufferedBoundary_card_le a b 0)
+
+example : (modelPhaseBufferedBoundary 1 1 1).card ≤ 2 := by
+  simpa using modelPhaseBufferedBoundary_card_le 1 1 1
+
+example {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) :
+    (1 : ℝ)/2 ≤ deriv (referenceModelPrimitive 1) u ∧
+      deriv (referenceModelPrimitive 1) u ≤ 1 := by
+  have h := approximateModelPhase_firstDeriv_bounds (by norm_num : (0 : ℝ) < 1)
+    (referenceModelPrimitive_approximate 1 1) hu
+  norm_num [Real.rpow_neg_one] at h
+  exact h
+
+example {η : ℝ} (hη : 0 < η) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff 1 2 η)
+      (referenceModelPrimitive 1) 1 1 3‖ ≤ 4/Real.pi := by
+  have h := norm_modelPhaseBufferedFourierMode_of_frequency_gap
+    (σ := 1) (δ := 0) (T := 1) (N := 1) (q := 3) (l := 1) (r := 2) (d := 1)
+    (by norm_num) (le_min (modelPhaseCurvatureLower_pos (by norm_num)).le zero_le_one)
+    (referenceModelPrimitive_approximate 1 1)
+    (by norm_num) (by norm_num) hη (by norm_num) (by norm_num) (by norm_num)
+    (Or.inr (by norm_num))
+  simpa only [one_mul] using h
+
+example {η : ℝ} (hη : 0 < η) (l r u : ℝ) :
+    FiniteVariationBound (fun _ => (modelPhaseBufferedCutoff l r η u : ℂ)) 0 2 := by
+  exact finiteVariationBound_modelPhaseBufferedCutoff_sample hη l r (fun _ => u) 0
+    (Or.inl (fun _ _ _ _ _ => le_rfl))
+
+example {η : ℝ} (hη : 0 < η) :
+    Summable (fun q : ℤ => ‖modelPhaseFourierMode
+      (modelPhaseBufferedCutoff 1 1 η) (referenceModelPrimitive 1) 0 1 q‖) ∧
+      ‖exponentialSumAt (referenceModelPrimitive 1) 0 1 1 1-
+        ∑' q : ℤ, modelPhaseFourierMode
+          (modelPhaseBufferedCutoff 1 1 η) (referenceModelPrimitive 1) 0 1 q‖ ≤ 4*η+2 := by
+  simpa only [Nat.cast_one,div_one,mul_one] using
+    modelPhase_buffered_poisson (referenceModelPrimitive_approximate 1 1)
+      (N := 1) (a := 1) (b := 1) (by norm_num) hη (by norm_num) (by norm_num) 0
+
+example : bufferedStationaryWidthDegree = 3 := rfl
+
+example (n : ℕ) : bufferedMorseDerivativeDegree n = n := rfl
+
+example : inversePhaseWeightedDegree morseWeightWidthAtomDegree
+    (morseWeightDerivativeExpression 3) = 3 := by decide
+
+end BufferedFamilyRegression
+
+section QuantitativeBufferedTailRegression
+
+open Set Expdb Filter MeasureTheory
+open scoped ContDiff Topology FourierTransform BigOperators
+
+example
+    {F : ℝ → ℝ} {a b K : ℝ} (hK : 1 ≤ K)
+    (hF : ∀ x ∈ Icc a b, ContDiffAt ℝ 2 F x)
+    (hF₁ : ∀ x ∈ Icc a b, |deriv F x| ≤ K)
+    (hF₂ : ∀ x ∈ Icc a b, |iteratedDeriv 2 F x| ≤ K)
+    (T : ℝ) :
+    IntervalC2Bound (fun x => (𝐞 (T*F x) : ℂ)) a b
+      ((2*Real.pi)^2*K^2+2*Real.pi*K+1) (1+|T|) :=
+  @intervalC2Bound_fourierChar_of_derivative_bounds F a b K hK hF hF₁ hF₂ T
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (l r η a b : ℝ), 0 < η →
+      IntervalC2Bound (fun x => (modelPhaseBufferedCutoff l r η x : ℂ))
+        a b M η⁻¹ :=
+  @modelPhaseBufferedCutoff_uniform_c2
+
+example (l r η T N x : ℝ) (F : ℝ → ℝ) :
+    ‖modelPhaseWeightedKernel (modelPhaseBufferedCutoff l r η) F T N x‖ ≤ 1 :=
+  @norm_modelPhaseBufferedKernel_le_one l r η T N x F
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ →
+        ∀ u : ℝ,
+          ‖iteratedDeriv 2 (modelPhaseWeightedKernel
+            (modelPhaseBufferedCutoff l r η) F T 1) u‖ ≤ C*(η⁻¹)^2*(1+|T|)^2 :=
+  @modelPhaseBufferedKernel_uniform_second_derivative σ hσ
+
+example (χ F : ℝ → ℝ) (T ξ : ℝ) :
+    modelPhaseNormalizedMode χ F T ξ =
+      𝓕 (modelPhaseWeightedKernel χ F T 1) ξ :=
+  @modelPhaseNormalizedMode_eq_fourier χ F T ξ
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T N q : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < N →
+        (1+|q*N|)^2 *
+          ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+          C*N*(η⁻¹)^2*(1+|T|)^2 :=
+  @modelPhaseBufferedFourierMode_uniform_decay σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T N q : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < N → q ≠ 0 →
+        ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+          C*(η⁻¹)^2*(1+|T|)^2/(N*q^2) :=
+  @modelPhaseBufferedFourierMode_inverse_square_bound σ hσ
+
+example {R : ℕ} (hR : 0 < R) :
+    (∑' n : ℕ, if R < n then 1/(n : ℝ)^2 else 0) ≤ 1/(R : ℝ) :=
+  @tsum_nat_inverse_square_tail_le R hR
+
+example {R : ℕ} (hR : 0 < R) :
+    (∑' q : ℤ, if R < q.natAbs then 1/(q : ℝ)^2 else 0) ≤ 2/(R : ℝ) :=
+  @tsum_int_inverse_square_tail_le R hR
+
+example
+    {f : ℤ → ℂ} {K : ℝ} (hK : 0 ≤ K)
+    (hf : Summable (fun q => ‖f q‖))
+    (hb : ∀ q : ℤ, q ≠ 0 → ‖f q‖ ≤ K/(q : ℝ)^2)
+    {R : ℕ} (hR : 0 < R) :
+    ‖∑' q : ℤ, if R < q.natAbs then f q else 0‖ ≤ 2*K/(R : ℝ) :=
+  @norm_integer_far_tail_le_of_inverse_square f K hK hf hb R hR
+
+example {f : ℤ → ℂ}
+    (hf : Summable f) (R : ℕ) :
+    (∑' q : ℤ, f q) =
+      (∑ q ∈ Finset.Icc (-(R : ℤ)) (R : ℤ), f q) +
+        ∑' q : ℤ, if R < q.natAbs then f q else 0 :=
+  @tsum_int_eq_sum_Icc_add_far f hf R
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < N →
+        ∀ R : ℕ, 0 < R →
+          ‖modelPhaseBufferedFarTail l r η F T N R‖ ≤
+            C*(η⁻¹)^2*(1+|T|)^2/(N*(R : ℝ)) :=
+  @modelPhaseBufferedFarTail_uniform σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N η : ℝ) (a b : ℕ),
+      0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ T : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ →
+        ∀ R : ℕ, 0 < R →
+          ‖exponentialSumAt F T N a b-
+            ∑ q ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+              modelPhaseFourierMode
+                (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖ ≤
+            4*N*η+2+C*(η⁻¹)^2*(1+|T|)^2/(N*(R : ℝ)) :=
+  @modelPhase_buffered_poisson_truncated σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N η : ℝ) (a b : ℕ),
+      0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ T ε : ℝ), δ ≤ 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < ε →
+        let R : ℕ := ⌈C*(η⁻¹)^2*(1+|T|)^2/(N*ε)⌉₊+1
+        0 < R ∧
+          ‖exponentialSumAt F T N a b-
+            ∑ q ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+              modelPhaseFourierMode
+                (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖ ≤
+            4*N*η+2+ε :=
+  @modelPhase_buffered_poisson_truncated_precision σ hσ
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Q : ℤ) (hQ : (T/N)*(1+δ) ≤ (Q : ℝ)) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)+((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) :=
+  @sum_norm_bufferedModes_right_le_harmonic F σ δ T N l r η hσ hδ hF hT hN hη hl hr Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Q : ℤ) (hQ : (Q : ℝ) ≤ (T/N)*((2 : ℝ)^(-σ)-δ)) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)-((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) :=
+  @sum_norm_bufferedModes_left_le_harmonic F σ δ T N l r η hσ hδ hF hT hN hη hl hr Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Lminus Lplus : ℕ) :
+    ‖(∑ n ∈ Finset.range Lminus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌊(T/N)*((2 : ℝ)^(-σ)-δ)⌋ : ℤ)-((n+1 : ℕ) : ℝ)))+
+      (∑ n ∈ Finset.range Lplus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌈(T/N)*(1+δ)⌉ : ℤ)+((n+1 : ℕ) : ℝ)))‖ ≤
+      (4/Real.pi)*(2+Real.log (Lminus : ℝ)+Real.log (Lplus : ℝ)) :=
+  @norm_bufferedModes_exterior_blocks_le_log F σ δ T N l r η hσ hδ hF hT hN hη hl hr Lminus Lplus
+
+example (f : ℤ → ℂ)
+    {a b c d : ℤ} (hab : a ≤ b) (hbc : b ≤ c) (hcd : c ≤ d) :
+    (∑ q ∈ Finset.Icc a d, f q) =
+      (∑ q ∈ Finset.Ico a b, f q)+(∑ q ∈ Finset.Icc b c, f q)+
+        ∑ q ∈ Finset.Ioc c d, f q :=
+  @sum_int_interval_three_parts f a b c d hab hbc hcd
+
+example (f : ℤ → ℂ) {a b : ℤ} (hab : a ≤ b) :
+    (∑ q ∈ Finset.Ico a b, f q) =
+      ∑ n ∈ Finset.range (b-a).toNat, f (b-((n+1 : ℕ) : ℤ)) :=
+  @sum_int_Ico_eq_reverse_range f a b hab
+
+example (f : ℤ → ℂ) {a b : ℤ} (hab : a ≤ b) :
+    (∑ q ∈ Finset.Ioc a b, f q) =
+      ∑ n ∈ Finset.range (b-a).toNat, f (a+((n+1 : ℕ) : ℤ)) :=
+  @sum_int_Ioc_eq_forward_range f a b hab
+
+example
+    {σ δ T N : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hT : 0 ≤ T) (hN : 0 < N) :
+    modelPhaseCoreLower σ δ T N ≤ modelPhaseCoreUpper δ T N :=
+  @modelPhaseCoreLower_le_upper σ δ T N hσ hδ hT hN
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N η : ℝ) (a b : ℕ),
+      0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ T : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < T →
+        ∀ R : ℕ, 0 < R →
+          -(R : ℤ) ≤ modelPhaseCoreLower σ δ T N →
+          modelPhaseCoreUpper δ T N ≤ (R : ℤ) →
+          ‖exponentialSumAt F T N a b-
+            ∑ q ∈ Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N),
+              modelPhaseFourierMode
+                (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖ ≤
+            4*N*η+2+C*(η⁻¹)^2*(1+|T|)^2/(N*(R : ℝ))+
+              (4/Real.pi)*(2+
+                Real.log (((modelPhaseCoreLower σ δ T N+(R : ℤ)).toNat : ℕ) : ℝ)+
+                Real.log ((((R : ℤ)-modelPhaseCoreUpper δ T N).toNat : ℕ) : ℝ)) :=
+  @modelPhase_buffered_poisson_core σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N η : ℝ) (a b : ℕ),
+      0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ T ε : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < T → 0 < ε →
+        let A := modelPhaseCoreLower σ δ T N
+        let B := modelPhaseCoreUpper δ T N
+        let R : ℕ := ⌈C*(η⁻¹)^2*(1+|T|)^2/(N*ε)⌉₊+A.natAbs+B.natAbs+1
+        0 < R ∧ -(R : ℤ) ≤ A ∧ B ≤ (R : ℤ) ∧
+          ‖exponentialSumAt F T N a b-
+            ∑ q ∈ Finset.Icc A B,
+              modelPhaseFourierMode
+                (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η) F T N q‖ ≤
+            4*N*η+2+ε+(4/Real.pi)*(2+
+              Real.log ((A+(R : ℤ)).toNat : ℝ)+Real.log (((R : ℤ)-B).toNat : ℝ)) :=
+  @modelPhase_buffered_poisson_core_precision σ hσ
+
+example
+    {σ δ T N : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hδ₁ : δ ≤ 1)
+    (hT : 0 ≤ T) (hN : 0 < N) :
+    ((Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N)).card : ℝ) ≤
+      3*(T/N)+3 :=
+  @modelPhaseCore_card_le σ δ T N hσ hδ hδ₁ hT hN
+
+example {F : ℝ → ℝ} {σ δ T N : ℝ} {q : ℤ} :
+    q ∈ modelPhaseCoreStationarySet F σ δ T N ↔
+      q ∈ Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N) ∧
+        (q : ℝ)*N/T ∈ modelPhaseSlopeRange F :=
+  @modelPhaseCoreStationarySet_mem F σ δ T N q
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hδ₁ : δ ≤ 1)
+    (hT : 0 ≤ T) (hN : 0 < N) :
+    ((modelPhaseCoreStationarySet F σ δ T N).card : ℝ) ≤ 3*(T/N)+3 :=
+  @modelPhaseCoreStationarySet_card_le F σ δ T N hσ hδ hδ₁ hT hN
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ →
+        0 < T → 0 < N →
+        ‖∑ q ∈ modelPhaseCoreStationarySet F σ δ T N,
+          (modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+            (modelPhaseBufferedCutoff l r η (modelPhaseInverseSlope F ((q : ℝ)*N/T)) : ℂ)*
+              modelPhaseStationaryMainTerm F T N q)‖ ≤
+          C*(η⁻¹)^3*(1+N/T) :=
+  @modelPhaseBufferedCoreStationary_error σ hσ
+
+example (l r η : ℝ) (F : ℝ → ℝ)
+    (σ δ T N : ℝ) :
+    (∑ q ∈ Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N),
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q)-
+        modelPhaseBufferedCoreExpansion l r η F σ δ T N =
+      ∑ q ∈ modelPhaseCoreStationarySet F σ δ T N,
+        (modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+          (modelPhaseBufferedCutoff l r η (modelPhaseInverseSlope F ((q : ℝ)*N/T)) : ℂ)*
+            modelPhaseStationaryMainTerm F T N q) :=
+  @modelPhaseCore_sub_bufferedExpansion l r η F σ δ T N
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧
+      ∀ (N η : ℝ) (a b : ℕ),
+        0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        ∀ (F : ℝ → ℝ) (δ T ε : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ →
+          0 < T → 0 < ε →
+          let A := modelPhaseCoreLower σ δ T N
+          let B := modelPhaseCoreUpper δ T N
+          let R : ℕ := ⌈C*(η⁻¹)^2*(1+|T|)^2/(N*ε)⌉₊+A.natAbs+B.natAbs+1
+          ‖exponentialSumAt F T N a b-
+            modelPhaseBufferedCoreExpansion ((a : ℝ)/N) ((b : ℝ)/N) η F σ δ T N‖ ≤
+            4*N*η+2+ε+
+              (4/Real.pi)*(2+Real.log ((A+(R : ℤ)).toNat : ℝ)+
+                Real.log (((R : ℤ)-B).toNat : ℝ))+
+              D*(η⁻¹)^3*(1+N/T) :=
+  @modelPhase_buffered_source_core_expansion σ hσ
+
+example : (∑' n : ℕ, if 1 < n then 1/(n : ℝ)^2 else 0) ≤ 1 := by
+  simpa using tsum_nat_inverse_square_tail_le (R := 1) (by decide)
+
+example : (∑' q : ℤ, if 1 < q.natAbs then 1/(q : ℝ)^2 else 0) ≤ 2 := by
+  simpa using tsum_int_inverse_square_tail_le (R := 1) (by decide)
+
+example {f : ℤ → ℂ} (hf : Summable f) :
+    (∑' q : ℤ, f q) = f 0+(∑' q : ℤ, if 0 < q.natAbs then f q else 0) := by
+  simpa using tsum_int_eq_sum_Icc_add_far hf 0
+
+example (f : ℤ → ℂ) (a : ℤ) :
+    (∑ q ∈ Finset.Ico a a, f q) = 0 := by
+  simp
+
+example (f : ℤ → ℂ) (a : ℤ) :
+    (∑ q ∈ Finset.Ioc a a, f q) = 0 := by
+  simp
+
+example (f : ℤ → ℂ) (a : ℤ) :
+    (∑ q ∈ Finset.Icc a a, f q) = f a := by simp
+
+example (f : ℤ → ℂ) :
+    (∑ q ∈ Finset.Ico (-2 : ℤ) 0, f q) =
+      ∑ n ∈ Finset.range 2, f (-((n+1 : ℕ) : ℤ)) := by
+  simpa using sum_int_Ico_eq_reverse_range f (a := -2) (b := 0) (by norm_num)
+
+example (f : ℤ → ℂ) :
+    (∑ q ∈ Finset.Ioc (0 : ℤ) 2, f q) =
+      ∑ n ∈ Finset.range 2, f ((n+1 : ℕ) : ℤ) := by
+  simpa using sum_int_Ioc_eq_forward_range f (a := 0) (b := 2) (by norm_num)
+
+example (l r η x : ℝ) (F : ℝ → ℝ) :
+    ‖modelPhaseWeightedKernel (modelPhaseBufferedCutoff l r η) F 0 0 x‖ ≤ 1 :=
+  norm_modelPhaseBufferedKernel_le_one l r η 0 0 x F
+
+example {η : ℝ} (hη : 0 < η) (l : ℝ) (F : ℝ → ℝ) (T N : ℝ) (R : ℕ) :
+    modelPhaseBufferedFarTail l l η F T N R = 0 := by
+  have hzero := modelPhaseBufferedCutoff_eq_zero_of_overlap (l := l) (r := l) hη
+    (by linarith : l-η ≤ l+η)
+  simp [modelPhaseBufferedFarTail,hzero,modelPhaseFourierMode]
+
+example : modelPhaseCoreLower 1 0 1 1 = 0 ∧ modelPhaseCoreUpper 0 1 1 = 1 := by
+  norm_num [modelPhaseCoreLower,modelPhaseCoreUpper,Real.rpow_neg_one]
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ R : ℕ, 0 < R →
+      ‖exponentialSumAt (referenceModelPrimitive 1) 0 1 1 1-
+        ∑ q ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+          modelPhaseFourierMode (modelPhaseBufferedCutoff 1 1 1)
+            (referenceModelPrimitive 1) 0 1 q‖ ≤ 6+C/(R : ℝ) := by
+  obtain ⟨C,hC,htrunc⟩ := modelPhase_buffered_poisson_truncated (σ := 1) (by norm_num)
+  refine ⟨C,hC,?_⟩
+  intro R hR
+  simpa only [Nat.cast_one,div_one,inv_one,one_pow,mul_one,abs_zero,
+    add_zero,one_mul,show (4 : ℝ)+2 = 6 by norm_num] using
+    htrunc 1 1 1 1 (by norm_num) (by norm_num) (by norm_num)
+      (by norm_num) (by norm_num) (referenceModelPrimitive 1) 0 0 (by norm_num)
+      (referenceModelPrimitive_approximate 1 1) R hR
+
+end QuantitativeBufferedTailRegression
+
+section CurvatureEndpointCoreRegression
+
+open Set Expdb MeasureTheory Filter
+open scoped ContDiff FourierTransform Topology BigOperators
+
+example {f : ℝ → ℝ} {a b m : ℝ}
+    (hf : ∀ x ∈ Icc a b, DifferentiableAt ℝ f x)
+    (hd : ∀ x ∈ Icc a b, deriv f x ≤ -m)
+    {x y : ℝ} (hx : x ∈ Icc a b) (hy : y ∈ Icc a b) (hxy : x ≤ y) :
+    m*(y-x) ≤ f x-f y :=
+  slope_drop_of_deriv_le (f := f) (a := a) (b := b) (m := m) hf hd (x := x) (y := y) hx hy hxy
+
+example {f : ℝ → ℝ} {a b lam : ℝ}
+    (hab : a ≤ b) (hlam : 0 ≤ lam) (hf : ContinuousOn f (Icc a b))
+    (hlo : f b ≤ lam) (hhi : -lam ≤ f a) :
+    ∃ c d : ℝ, a ≤ c ∧ c ≤ d ∧ d ≤ b ∧
+      f c ≤ lam ∧ -lam ≤ f d ∧
+      (c = a ∨ f c = lam) ∧ (d = b ∨ f d = -lam) :=
+  exists_slope_transition_partition (f := f) (a := a) (b := b) (lam := lam) hab hlam hf hlo hhi
+
+example {f : ℝ → ℝ} {a b c d m lam : ℝ}
+    (hm : 0 < m)
+    (hf : ∀ x ∈ Icc a b, DifferentiableAt ℝ f x)
+    (hd : ∀ x ∈ Icc a b, deriv f x ≤ -m)
+    (hc : c ∈ Icc a b) (he : d ∈ Icc a b) (hcd : c ≤ d)
+    (hcl : f c ≤ lam) (hdl : -lam ≤ f d) :
+    d-c ≤ 2*lam/m :=
+  slope_transition_width_le (f := f) (a := a) (b := b) (c := c) (d := d) (m := m) (lam := lam) hm hf hd hc he hcd hcl hdl
+
+example
+    {φ : ℝ → ℝ} {a b m lam : ℝ}
+    (hab : a ≤ b) (hm : 0 < m) (hlam : 0 < lam)
+    (hφ : ∀ x ∈ Icc a b, ContDiffAt ℝ 2 φ x)
+    (hcurv : ∀ x ∈ Icc a b, deriv (deriv φ) x ≤ -m) :
+    ‖∫ x in a..b, (𝐞 (φ x) : ℂ)‖ ≤ 2/(lam*Real.pi)+2*lam/m :=
+  norm_fourierCharIntegral_le_of_curvature_threshold (φ := φ) (a := a) (b := b) (m := m) (lam := lam) hab hm hlam hφ hcurv
+
+example
+    {φ : ℝ → ℝ} {a b m : ℝ}
+    (hab : a ≤ b) (hm : 0 < m)
+    (hφ : ∀ x ∈ Icc a b, ContDiffAt ℝ 2 φ x)
+    (hcurv : ∀ x ∈ Icc a b, deriv (deriv φ) x ≤ -m) :
+    ‖∫ x in a..b, (𝐞 (φ x) : ℂ)‖ ≤ (2/Real.pi+2)/Real.sqrt m :=
+  norm_fourierCharIntegral_le_of_negative_curvature (φ := φ) (a := a) (b := b) (m := m) hab hm hφ hcurv
+
+example
+    {f : ℝ → ℂ} {φ : ℝ → ℝ} {a b M m : ℝ} {J : Set ℝ}
+    (hf : IntervalC1Bound f a b M) (hab : a ≤ b) (hm : 0 < m)
+    (hJ : IsOpen J) (hsub : Icc a b ⊆ J)
+    (hφ : ∀ x ∈ J, ContDiffAt ℝ 2 φ x)
+    (hcurv : ∀ x ∈ J, deriv (deriv φ) x ≤ -m) :
+    ‖∫ x in a..b, f x*(𝐞 (φ x) : ℂ)‖ ≤
+      2*M*(2/Real.pi+2)/Real.sqrt m :=
+  IntervalC1Bound.fourierChar_of_negative_curvature (f := f) (φ := φ) (a := a) (b := b) (M := M) (m := m) (J := J) hf hab hm hJ hsub hφ hcurv
+
+example
+    {F : ℝ → ℝ} {σ δ T q l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) :
+    ‖modelPhaseNormalizedMode (modelPhaseBufferedCutoff l r η) F T q‖ ≤
+      4*(2/Real.pi+2)/Real.sqrt (T*modelPhaseCurvatureLower σ) :=
+  norm_modelPhaseBufferedNormalizedMode_curvature (F := F) (σ := σ) (δ := δ) (T := T) (q := q) (l := l) (r := r) (η := η) hσ hδ hF hT hη hl hr
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4*(2/Real.pi+2)*N/Real.sqrt (T*modelPhaseCurvatureLower σ) :=
+  norm_modelPhaseBufferedFourierMode_curvature (F := F) (σ := σ) (δ := δ) (T := T) (N := N) (q := q) (l := l) (r := r) (η := η) hσ hδ hF hT hN hη hl hr
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l r η : ℝ),
+      1 ≤ l → r ≤ 2 → 0 < η →
+      ∀ (F : ℝ → ℝ) (δ T N q : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ →
+        0 < T → 0 < N →
+        ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+          C*N/Real.sqrt T :=
+  modelPhaseBufferedFourierMode_uniform_curvature (σ := σ) hσ
+
+example {F : ℝ → ℝ} {u : ℝ}
+    (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseClosedSlope F u = deriv F u :=
+  modelPhaseClosedSlope_eq_deriv (F := F) (u := u) hu
+
+example {F : ℝ → ℝ} {u : ℝ}
+    (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseClosedSlope F =ᶠ[𝓝 u] deriv F :=
+  modelPhaseClosedSlope_eventuallyEq_deriv (F := F) (u := u) hu
+
+example {σ δ : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ) :
+    ContinuousOn (modelPhaseClosedSlope F) (Icc (1 : ℝ) 2) :=
+  modelPhaseClosedSlope_continuousOn (σ := σ) (δ := δ) (P := P) (F := F) hF
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {u v : ℝ} (hu : u ∈ Icc (1 : ℝ) 2) (hv : v ∈ Icc (1 : ℝ) 2)
+    (huv : u ≤ v) :
+    modelPhaseCurvatureLower σ*(v-u) ≤ modelPhaseClosedSlope F u-modelPhaseClosedSlope F v :=
+  modelPhaseClosedSlope_drop (σ := σ) (δ := δ) (F := F) hσ hδ hF (u := u) (v := v) hu hv huv
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) :
+    StrictAntiOn (modelPhaseClosedSlope F) (Icc (1 : ℝ) 2) :=
+  modelPhaseClosedSlope_strictAntiOn (σ := σ) (δ := δ) (F := F) hσ hδ hF
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) :
+    modelPhaseSlopeRange F = Ioo (modelPhaseClosedSlope F 2) (modelPhaseClosedSlope F 1) :=
+  modelPhaseSlopeRange_eq_endpoint_Ioo (σ := σ) (δ := δ) (F := F) hσ hδ hF
+
+example {σ δ : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    {u : ℝ} (hu : u ∈ phaseInterval) :
+    |modelPhaseClosedSlope F u-u^(-σ)| ≤ δ :=
+  modelPhaseClosedSlope_model_error (σ := σ) (δ := δ) (P := P) (F := F) hF (u := u) hu
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    {u : ℝ} (hu : u ∈ Ioo (1 : ℝ) 2) :
+    modelPhaseClosedSlope F 2 ≤ deriv F u ∧ deriv F u ≤ modelPhaseClosedSlope F 1 :=
+  modelPhaseClosedSlope_deriv_bounds (σ := σ) (δ := δ) (F := F) hσ hδ hF (u := u) hu
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η d : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hgap : q ≤ (T/N)*modelPhaseClosedSlope F 2-d ∨
+      (T/N)*modelPhaseClosedSlope F 1+d ≤ q) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4/(d*Real.pi) :=
+  norm_modelPhaseBufferedFourierMode_of_endpoint_gap (F := F) (σ := σ) (δ := δ) (T := T) (N := N) (q := q) (l := l) (r := r) (η := η) (d := d) hσ hδ hF hT hN hη hl hr hd hgap
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Q : ℤ) (hQ : (T/N)*modelPhaseClosedSlope F 1 ≤ (Q : ℝ)) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)+((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) :=
+  sum_norm_bufferedModes_endpoint_right_le_harmonic (F := F) (σ := σ) (δ := δ) (T := T) (N := N) (l := l) (r := r) (η := η) hσ hδ hF hT hN hη hl hr Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Q : ℤ) (hQ : (Q : ℝ) ≤ (T/N)*modelPhaseClosedSlope F 2) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)-((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) :=
+  sum_norm_bufferedModes_endpoint_left_le_harmonic (F := F) (σ := σ) (δ := δ) (T := T) (N := N) (l := l) (r := r) (η := η) hσ hδ hF hT hN hη hl hr Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2)
+    (Lminus Lplus : ℕ) :
+    ‖(∑ n ∈ Finset.range Lminus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌊(T/N)*modelPhaseClosedSlope F 2⌋ : ℤ)-((n+1 : ℕ) : ℝ)))+
+      (∑ n ∈ Finset.range Lplus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌈(T/N)*modelPhaseClosedSlope F 1⌉ : ℤ)+((n+1 : ℕ) : ℝ)))‖ ≤
+      (4/Real.pi)*(2+Real.log (Lminus : ℝ)+Real.log (Lplus : ℝ)) :=
+  norm_bufferedModes_endpoint_blocks_le_log (F := F) (σ := σ) (δ := δ) (T := T) (N := N) (l := l) (r := r) (η := η) hσ hδ hF hT hN hη hl hr Lminus Lplus
+
+example {σ δ T N q : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    q*N/T ∈ modelPhaseSlopeRange F ↔
+      (T/N)*modelPhaseClosedSlope F 2 < q ∧ q < (T/N)*modelPhaseClosedSlope F 1 :=
+  modelPhaseFrequency_mem_slopeRange_iff (σ := σ) (δ := δ) (T := T) (N := N) (q := q) (F := F) hσ hδ hF hT hN
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    (q : ℝ)*N/T ∉ modelPhaseSlopeRange F ↔
+      q ≤ modelPhaseEndpointLower F T N ∨ modelPhaseEndpointUpper F T N ≤ q :=
+  modelPhaseFrequency_not_stationary_iff (σ := σ) (δ := δ) (T := T) (N := N) (F := F) (q := q) hσ hδ hF hT hN
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    modelPhaseEndpointLower F T N < modelPhaseEndpointUpper F T N :=
+  modelPhaseEndpointLower_lt_upper (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hσ hδ hF hT hN
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 ≤ T) (hN : 0 < N) :
+    modelPhaseCoreLower σ δ T N ≤ modelPhaseEndpointLower F T N ∧
+      modelPhaseEndpointUpper F T N ≤ modelPhaseCoreUpper δ T N :=
+  modelPhaseEndpoints_inside_core (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hF hT hN
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    (Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N)) \
+      modelPhaseCoreStationarySet F σ δ T N =
+        Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseEndpointLower F T N) ∪
+        Finset.Icc (modelPhaseEndpointUpper F T N) (modelPhaseCoreUpper δ T N) :=
+  modelPhaseCore_nonstationary_eq_endpoint_union (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hσ hδ hF hT hN
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N)
+    (f : ℤ → ℂ) :
+    (∑ q ∈ (Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N)) \
+      modelPhaseCoreStationarySet F σ δ T N, f q) =
+        (∑ q ∈ Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseEndpointLower F T N), f q)+
+        ∑ q ∈ Finset.Icc (modelPhaseEndpointUpper F T N) (modelPhaseCoreUpper δ T N), f q :=
+  modelPhaseCore_nonstationary_sum (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hσ hδ hF hT hN f
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    modelPhaseCoreStationarySet F σ δ T N =
+      Finset.Ioo (modelPhaseEndpointLower F T N) (modelPhaseEndpointUpper F T N) :=
+  modelPhaseCoreStationarySet_eq_endpoint_Ioo (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hσ hδ hF hT hN
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < T → 0 < N →
+        let A := modelPhaseCoreLower σ δ T N
+        let B := modelPhaseCoreUpper δ T N
+        let L := modelPhaseEndpointLower F T N
+        let U := modelPhaseEndpointUpper F T N
+        ‖∑ q ∈ (Finset.Icc A B) \ modelPhaseCoreStationarySet F σ δ T N,
+          modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+            2*C*N/Real.sqrt T+
+              (4/Real.pi)*(2+Real.log ((L-A).toNat : ℝ)+Real.log ((B-U).toNat : ℝ)) :=
+  modelPhaseBufferedCoreNonstationary_error (σ := σ) hσ
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    (((modelPhaseEndpointLower F T N-modelPhaseCoreLower σ δ T N).toNat : ℕ) : ℝ) ≤
+        3*(T/N)+3 ∧
+      (((modelPhaseCoreUpper δ T N-modelPhaseEndpointUpper F T N).toNat : ℕ) : ℝ) ≤
+        3*(T/N)+3 :=
+  modelPhaseEndpointBlockLengths_le (σ := σ) (δ := δ) (T := T) (N := N) (F := F) hσ hδ hF hT hN
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < T → 0 < N →
+        ‖∑ q ∈ (Finset.Icc (modelPhaseCoreLower σ δ T N) (modelPhaseCoreUpper δ T N)) \
+          modelPhaseCoreStationarySet F σ δ T N,
+          modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+            2*C*N/Real.sqrt T+(8/Real.pi)*(1+Real.log (3*(T/N)+3)) :=
+  modelPhaseBufferedCoreNonstationary_uniform (σ := σ) hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∀ (N η : ℝ) (a b : ℕ),
+        0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        ∀ (F : ℝ → ℝ) (δ T ε : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ bufferedStationaryPhaseOrder δ →
+          0 < T → 0 < ε →
+          let A := modelPhaseCoreLower σ δ T N
+          let B := modelPhaseCoreUpper δ T N
+          let R : ℕ := ⌈C*(η⁻¹)^2*(1+|T|)^2/(N*ε)⌉₊+A.natAbs+B.natAbs+1
+          ‖exponentialSumAt F T N a b-
+            ∑ q ∈ Finset.Ioo (modelPhaseEndpointLower F T N) (modelPhaseEndpointUpper F T N),
+              (modelPhaseBufferedCutoff ((a : ℝ)/N) ((b : ℝ)/N) η
+                (modelPhaseInverseSlope F ((q : ℝ)*N/T)) : ℂ)*
+                  modelPhaseStationaryMainTerm F T N q‖ ≤
+            4*N*η+2+ε+
+              (4/Real.pi)*(2+Real.log ((A+(R : ℤ)).toNat : ℝ)+
+                Real.log (((R : ℤ)-B).toNat : ℝ))+
+              D*(η⁻¹)^3*(1+N/T)+
+              2*E*N/Real.sqrt T+(8/Real.pi)*(1+Real.log (3*(T/N)+3)) :=
+  modelPhase_buffered_source_stationary_expansion (σ := σ) hσ
+
+example {a b : ℝ} (hab : a ≤ b) :
+    ‖∫ x in a..b, (𝐞 (-(x^2)) : ℂ)‖ ≤ (2/Real.pi+2)/Real.sqrt 2 := by
+  apply norm_fourierCharIntegral_le_of_negative_curvature hab (by norm_num)
+    (fun x _ => by fun_prop)
+  intro x hx
+  have hd : deriv (fun y : ℝ => -(y^2)) = fun y => (-2)*y := by
+    funext y
+    convert ((hasDerivAt_id y).pow 2).neg.deriv using 1
+    dsimp
+    ring
+  rw [hd]
+  have hh := ((hasDerivAt_id x).const_mul (-2)).deriv
+  simp only [mul_one] at hh
+  exact hh.le
+
+example (a : ℝ) (φ : ℝ → ℝ) :
+    ‖∫ x in a..a, (𝐞 (φ x) : ℂ)‖ = 0 := by simp
+
+example :
+    ∃ c d : ℝ, (-1 : ℝ) ≤ c ∧ c ≤ d ∧ d ≤ 1 ∧
+      -c ≤ 0 ∧ 0 ≤ -d ∧ (c = -1 ∨ -c = 0) ∧ (d = 1 ∨ -d = 0) := by
+  simpa using exists_slope_transition_partition (f := fun x : ℝ => -x)
+    (a := -1) (b := 1) (lam := 0) (by norm_num) (by norm_num)
+    (by fun_prop) (by norm_num) (by norm_num)
+
+example (F : ℝ → ℝ) (T N q : ℝ) :
+    modelPhaseFourierMode (modelPhaseBufferedCutoff 1 2 2) F T N q = 0 := by
+  have hz := modelPhaseBufferedCutoff_eq_zero_of_overlap
+    (l := 1) (r := 2) (η := 2) (by norm_num) (by norm_num)
+  simp [hz,modelPhaseFourierMode]
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    ((modelPhaseEndpointLower F T N : ℤ) : ℝ)*N/T ∉ modelPhaseSlopeRange F := by
+  exact (modelPhaseFrequency_not_stationary_iff hσ hδ hF hT hN).mpr (Or.inl le_rfl)
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N) :
+    ((modelPhaseEndpointUpper F T N : ℤ) : ℝ)*N/T ∉ modelPhaseSlopeRange F := by
+  exact (modelPhaseFrequency_not_stationary_iff hσ hδ hF hT hN).mpr (Or.inr le_rfl)
+
+example {σ δ : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) :
+    modelPhaseClosedSlope F 1 ∉ modelPhaseSlopeRange F ∧
+      modelPhaseClosedSlope F 2 ∉ modelPhaseSlopeRange F := by
+  rw [modelPhaseSlopeRange_eq_endpoint_Ioo hσ hδ hF]
+  simp
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N)
+    (hgap : modelPhaseEndpointUpper F T N = modelPhaseEndpointLower F T N+1) :
+    modelPhaseCoreStationarySet F σ δ T N = ∅ := by
+  rw [modelPhaseCoreStationarySet_eq_endpoint_Ioo hσ hδ hF hT hN]
+  ext q
+  simp only [Finset.mem_Ioo,Finset.notMem_empty,iff_false]
+  omega
+
+example {σ δ T N : ℝ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) (hT : 0 < T) (hN : 0 < N)
+    (hgap : modelPhaseEndpointUpper F T N = modelPhaseEndpointLower F T N+2) :
+    modelPhaseCoreStationarySet F σ δ T N = {modelPhaseEndpointLower F T N+1} := by
+  rw [modelPhaseCoreStationarySet_eq_endpoint_Ioo hσ hδ hF hT hN]
+  ext q
+  simp only [Finset.mem_Ioo,Finset.mem_singleton]
+  omega
+
+example : modelPhaseClosedSlope (referenceModelPrimitive 1) 2 = (1 : ℝ)/2 := by
+  have h := modelPhaseClosedSlope_model_error (referenceModelPrimitive_approximate 1 1)
+    (show (2 : ℝ) ∈ phaseInterval by norm_num [phaseInterval])
+  norm_num only [Real.rpow_neg_one,inv_eq_one_div] at h
+  have he := abs_eq_zero.mp (le_antisymm h (abs_nonneg _))
+  linarith
+
+end CurvatureEndpointCoreRegression
+
+section InteriorStationaryRegression
+
+open Set Expdb MeasureTheory
+open scoped ContDiff FourierTransform
+
+example
+    {f : ℝ → ℝ} {l r a x M : ℝ}
+    (ha : a ∈ Icc l r) (hx : x ∈ Icc l r) (k : ℕ)
+    (hb : ∀ u ∈ Icc l r, |iteratedDeriv k f u| ≤ M) :
+    |segmentTaylorAverage f a k x| ≤ M := by
+  exact @abs_segmentTaylorAverage_le_closed f l r a x M ha hx k hb
+
+example {W : ℝ → ℝ} {H M z : ℝ}
+    (hH : 0 ≤ H) (hb : ∀ x ∈ Icc (-H) H, |iteratedDeriv 2 W x| ≤ M)
+    (hz : z ∈ Icc (-H) H) :
+    |quadraticTaylorCoefficient W z| ≤ M := by
+  exact @abs_quadraticTaylorCoefficient_le_local W H M z hH hb hz
+
+example {W : ℝ → ℝ} {H M z : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hH : 0 ≤ H)
+    (hb : ∀ x ∈ Icc (-H) H, |iteratedDeriv 3 W x| ≤ M)
+    (hz : z ∈ Icc (-H) H) :
+    |deriv (quadraticTaylorCoefficient W) z| ≤ M := by
+  exact @abs_deriv_quadraticTaylorCoefficient_le_local W H M z hW hH hb hz
+
+example
+    {V : ℝ → ℝ} {T H M L : ℝ}
+    (hV : ContDiff ℝ ∞ V) (hT : 0 < T) (hH : 0 < H)
+    (hb : ∀ z ∈ Icc (-H) H, |V z| ≤ M)
+    (hd : ∀ z ∈ Icc (-H) H, |deriv V z| ≤ L) :
+    ‖∫ z in (-H)..H, ((z^2*V z : ℝ) : ℂ)*betaQuadraticKernel T z‖ ≤
+      (2*H*M+2*H*(M+H*L))/(2*Real.pi*T) := by
+  exact @norm_integral_sq_mul_betaQuadraticKernel_le_local V T H M L hV hT hH hb hd
+
+example
+    {W : ℝ → ℝ} {T H M₀ M₂ M₃ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z ∈ Icc (-H) H, |iteratedDeriv 2 W z| ≤ M₂)
+    (h₃ : ∀ z ∈ Icc (-H) H, |iteratedDeriv 3 W z| ≤ M₃) :
+    ‖(∫ z in (-H)..H, (W z : ℂ)*betaQuadraticKernel T z)-
+      (W 0 : ℂ)*((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H M₀ M₂ M₃/T := by
+  exact @norm_quadratic_window_remainder_le_local W T H M₀ M₂ M₃ hW hT hH h₀ h₂ h₃
+
+example
+    {H M₀ M₂ M₃ : ℝ} (hH : 0 < H) (hH₁ : H ≤ 1)
+    (h₂ : 0 ≤ M₂) (h₃ : 0 ≤ M₃) :
+    quadraticRemainderConstant H M₀ M₂ M₃ ≤
+      (4*M₀/Real.pi+(4*M₂+2*M₃)/(2*Real.pi))/H := by
+  exact @quadraticRemainderConstant_le_inverse_window H M₀ M₂ M₃ hH hH₁ h₂ h₃
+
+example
+    {F : ℝ → ℝ} {σ δ v d H z : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hd : 0 < d)
+    (hl : 1 < modelPhaseInverseSlope F v-d)
+    (hr : modelPhaseInverseSlope F v+d < 2)
+    (hH : H < Real.sqrt (modelPhaseCurvatureLower σ)*d)
+    (hz : z ∈ Icc (-H) H) :
+    z ∈ modelPhaseMorseRange F v ∧
+      |modelPhaseMorseInverse F v z-modelPhaseInverseSlope F v| < d := by
+  exact @modelPhaseMorseWindow_mem_and_inverse F σ δ v d H z hσ hδ hF hv hd hl hr hH hz
+
+example
+    {F : ℝ → ℝ} {σ δ v z l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hz : z ∈ modelPhaseMorseRange F v)
+    (hη : 0 < η)
+    (hl : l+2*η < modelPhaseMorseInverse F v z)
+    (hr : modelPhaseMorseInverse F v z < r-2*η) (n : ℕ) :
+    iteratedDeriv n (modelPhaseMorseWeight (modelPhaseBufferedCutoff l r η) F v) z =
+      iteratedDeriv (n+1) (modelPhaseMorseInverse F v) z := by
+  exact @iteratedDeriv_bufferedMorseWeight_of_flat F σ δ v z l r η hσ hδ hF hv hz hη hl hr n
+
+example
+    {F : ℝ → ℝ} {σ δ v l r η d H z : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ modelPhaseInverseSlope F v)
+    (hright : modelPhaseInverseSlope F v+d ≤ r-2*η)
+    (hH : H < Real.sqrt (modelPhaseCurvatureLower σ)*d)
+    (hz : z ∈ Icc (-H) H) (n : ℕ)
+    (hP : morseInverseDerivativeOrder (n+1) ≤ P) :
+    |iteratedDeriv n (modelPhaseMorseWeight (modelPhaseBufferedCutoff l r η) F v) z| ≤
+      morseInverseDerivativeBound σ (n+1) := by
+  exact @bufferedMorseWeight_local_jet_bound F σ δ v l r η d H z P hσ hδ hF hv hη hl hr hd hleft hright hH hz n hP
+
+example : 1 ≤ bufferedLocalStationaryOrder := by
+  exact @bufferedLocalStationaryOrder_pos
+
+example
+    {F : ℝ → ℝ} {σ δ v l r η d H T : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ modelPhaseInverseSlope F v)
+    (hright : modelPhaseInverseSlope F v+d ≤ r-2*η)
+    (hH : 0 < H) (hsmall : H < Real.sqrt (modelPhaseCurvatureLower σ)*d)
+    (hT : 0 < T) :
+    ‖(∫ z in (-H)..H,
+      (modelPhaseMorseWeight (modelPhaseBufferedCutoff l r η) F v z : ℂ)*
+        betaQuadraticKernel T z)-
+      (modelPhaseStationaryAmplitude F v : ℂ)*
+        ((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+      quadraticRemainderConstant H (morseInverseDerivativeBound σ 1)
+        (morseInverseDerivativeBound σ 3) (morseInverseDerivativeBound σ 4)/T := by
+  exact @bufferedMorseWeight_local_window_remainder F σ δ v l r η d H T hσ hδ hF hv hη hl hr hd hleft hright hH hsmall hT
+
+example
+    {F : ℝ → ℝ} {σ δ v l r η d H T : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ modelPhaseInverseSlope F v)
+    (hright : modelPhaseInverseSlope F v+d ≤ r-2*η)
+    (hH : 0 < H) (hH₁ : H ≤ 1)
+    (hsmall : H < Real.sqrt (modelPhaseCurvatureLower σ)*d)
+    (hT : 0 < T) :
+    ‖(∫ z in (-H)..H,
+      (modelPhaseMorseWeight (modelPhaseBufferedCutoff l r η) F v z : ℂ)*
+        betaQuadraticKernel T z)-
+      (modelPhaseStationaryAmplitude F v : ℂ)*
+        ((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+      (4*morseInverseDerivativeBound σ 1/Real.pi+
+        (4*morseInverseDerivativeBound σ 3+2*morseInverseDerivativeBound σ 4)/(2*Real.pi))/(T*H) := by
+  exact @bufferedMorseWeight_local_window_remainder_inverse F σ δ v l r η d H T hσ hδ hF hv hη hl hr hd hleft hright hH hH₁ hsmall hT
+
+example
+    {F : ℝ → ℝ} {σ δ v H : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hH : 0 ≤ H)
+    (hs : Icc (-H) H ⊆ modelPhaseMorseRange F v)
+    {g : ℝ → ℂ} (hg : ContinuousOn g (Ioo (1 : ℝ) 2)) :
+    (∫ u in modelPhaseMorseInverse F v (-H)..modelPhaseMorseInverse F v H, g u) =
+      ∫ z in (-H)..H, ((deriv (modelPhaseMorseInverse F v) z : ℝ) : ℂ)*
+        g (modelPhaseMorseInverse F v z) := by
+  exact @integral_inverseMorse_window F σ δ v H hσ hδ hF hv hH hs g hg
+
+example
+    {χ F : ℝ → ℝ} {σ δ v H : ℝ}
+    (hχ : Continuous χ)
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hH : 0 ≤ H)
+    (hs : Icc (-H) H ⊆ modelPhaseMorseRange F v) (T : ℝ) :
+    (∫ u in modelPhaseMorseInverse F v (-H)..modelPhaseMorseInverse F v H,
+      (χ u : ℂ)*(𝐞 (T*F u-(T*v)*u) : ℂ)) =
+      (𝐞 (-T*modelPhaseLegendreDual F v) : ℂ)*
+        ∫ z in (-H)..H, (modelPhaseMorseWeight χ F v z : ℂ)*betaQuadraticKernel T z := by
+  exact @modelPhaseMorse_window_integral χ F σ δ v H hχ hσ hδ hF hv hH hs T
+
+example
+    {f : ℝ → ℂ} {φ : ℝ → ℝ} {a b M lam : ℝ} {J : Set ℝ}
+    (hf : IntervalC1Bound f a b M) (hab : a ≤ b) (hlam : 0 < lam)
+    (hJ : IsOpen J) (hsub : Icc a b ⊆ J)
+    (hφ : ∀ x ∈ J, ContDiffAt ℝ 2 φ x)
+    (hmono : AntitoneOn (deriv φ) (Icc a b))
+    (hgap : (∀ x ∈ Icc a b, lam ≤ deriv φ x) ∨
+      (∀ x ∈ Icc a b, deriv φ x ≤ -lam)) :
+    ‖∫ x in a..b, f x*(𝐞 (φ x) : ℂ)‖ ≤ 2*M/(lam*Real.pi) := by
+  exact @IntervalC1Bound.fourierChar_of_closed_slope_gap f φ a b M lam J hf hab hlam hJ hsub hφ hmono hgap
+
+example
+    {F : ℝ → ℝ} {σ δ T q l r η a b lam : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hη : 0 < η) (hab : a ≤ b)
+    (ha : 1 < a) (hb : b < 2) (hlam : 0 < lam)
+    (hgap : (∀ u ∈ Icc a b, lam ≤ T*deriv F u-q) ∨
+      (∀ u ∈ Icc a b, T*deriv F u-q ≤ -lam)) :
+    ‖∫ u in a..b, (modelPhaseBufferedCutoff l r η u : ℂ)*
+      (𝐞 (T*F u-q*u) : ℂ)‖ ≤ 4/(lam*Real.pi) := by
+  exact @norm_buffered_subinterval_nonstationary F σ δ T q l r η a b lam hσ hδ hF hT hη hab ha hb hlam hgap
+
+example
+    {F : ℝ → ℝ} {σ δ v H : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F) (hH : 0 ≤ H)
+    (hleft : -H ∈ modelPhaseMorseRange F v) (hright : H ∈ modelPhaseMorseRange F v) :
+    H*modelPhaseCurvatureLower σ/Real.sqrt (σ+1) ≤
+        deriv F (modelPhaseMorseInverse F v (-H))-v ∧
+      H*modelPhaseCurvatureLower σ/Real.sqrt (σ+1) ≤
+        v-deriv F (modelPhaseMorseInverse F v H) := by
+  exact @modelPhaseMorseInverse_window_slope_gaps F σ δ v H hσ hδ hF hv hH hleft hright
+
+example
+    {F : ℝ → ℝ} {σ δ T v l r η H : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hT : 0 < T) (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hH : 0 < H)
+    (hleft : -H ∈ modelPhaseMorseRange F v) (hright : H ∈ modelPhaseMorseRange F v)
+    (hcutleft : l+η ≤ modelPhaseMorseInverse F v (-H))
+    (hcutright : modelPhaseMorseInverse F v H ≤ r-η) :
+    ‖modelPhaseNormalizedMode (modelPhaseBufferedCutoff l r η) F T (T*v)-
+      (∫ u in modelPhaseMorseInverse F v (-H)..modelPhaseMorseInverse F v H,
+        (modelPhaseBufferedCutoff l r η u : ℂ)*(𝐞 (T*F u-(T*v)*u) : ℂ))‖ ≤
+      8*Real.sqrt (σ+1)/(T*H*modelPhaseCurvatureLower σ*Real.pi) := by
+  exact @norm_bufferedNormalizedMode_sub_window_le F σ δ T v l r η H hσ hδ hF hv hT hη hl hr hH hleft hright hcutleft hcutright
+
+example
+    {F : ℝ → ℝ} {σ δ v l r η d H T : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (hη : 0 < η) (hl : 1 ≤ l) (hr : r ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ modelPhaseInverseSlope F v)
+    (hright : modelPhaseInverseSlope F v+d ≤ r-2*η)
+    (hH : 0 < H) (hH₁ : H ≤ 1)
+    (hsmall : H < Real.sqrt (modelPhaseCurvatureLower σ)*d) (hT : 0 < T) :
+    ‖modelPhaseNormalizedMode (modelPhaseBufferedCutoff l r η) F T (T*v)-
+      (𝐞 (-T*modelPhaseLegendreDual F v) : ℂ)*
+        ((modelPhaseStationaryAmplitude F v : ℂ)*
+          ((𝐞 (-(1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)))‖ ≤
+      bufferedInteriorStationaryConstant σ/(T*H) := by
+  exact @bufferedNormalizedMode_interior_window_remainder F σ δ v l r η d H T hσ hδ hF hv hη hl hr hd hleft hright hH hH₁ hsmall hT
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η d : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → 0 < d →
+      ∀ (F : ℝ → ℝ) (δ v T : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        v ∈ modelPhaseSlopeRange F → 0 < T →
+        l+2*η+d ≤ modelPhaseInverseSlope F v →
+        modelPhaseInverseSlope F v+d ≤ r-2*η →
+        ‖modelPhaseMorseRemainder (modelPhaseBufferedCutoff l r η) F T v‖ ≤ C/(T*d) := by
+  exact @modelPhaseBufferedMorseRemainder_interior_uniform σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η d : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → 0 < d →
+      ∀ (F : ℝ → ℝ) (δ T N q : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        0 < T → 0 < N → q*N/T ∈ modelPhaseSlopeRange F →
+        l+2*η+d ≤ modelPhaseInverseSlope F (q*N/T) →
+        modelPhaseInverseSlope F (q*N/T)+d ≤ r-2*η →
+        ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+          modelPhaseStationaryMainTerm F T N q‖ ≤ C*N/(T*d) := by
+  exact @modelPhaseBufferedFourierMode_interior_uniform σ hσ
+
+example
+    {F : ℝ → ℝ} {σ δ v a b w : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hv : v ∈ modelPhaseSlopeRange F)
+    (ha : a ∈ Ioo (1 : ℝ) 2) (hb : b ∈ Ioo (1 : ℝ) 2) (hw : 0 < w)
+    (hleft : v+w ≤ deriv F a) (hright : deriv F b+w ≤ v) :
+    a+w/(σ+1) ≤ modelPhaseInverseSlope F v ∧
+      modelPhaseInverseSlope F v+w/(σ+1) ≤ b := by
+  exact @modelPhaseInverseSlope_interior_of_gap F σ δ v a b w hσ hδ hF hv ha hb hw hleft hright
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N q lam : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        0 < T → 0 < N → 0 < lam →
+        (T/N)*deriv F (r-2*η)+lam ≤ q →
+        q+lam ≤ (T/N)*deriv F (l+2*η) →
+        ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+          modelPhaseStationaryMainTerm F T N q‖ ≤ C/lam := by
+  exact @modelPhaseBufferedFourierMode_interior_frequency_uniform σ hσ
+
+example (L : ℕ) :
+    (∑ n ∈ Finset.range L, (1/((n+1 : ℕ) : ℝ)+1/((L-n : ℕ) : ℝ))) =
+      2*(harmonic L : ℝ) := by
+  exact @sum_range_two_edge_reciprocals L
+
+example
+    {f : ℕ → ℂ} {C : ℝ} {L : ℕ} (hC : 0 ≤ C)
+    (hb : ∀ n < L, ‖f n‖ ≤ C/min ((n+1 : ℕ) : ℝ) ((L-n : ℕ) : ℝ)) :
+    ‖∑ n ∈ Finset.range L, f n‖ ≤ 2*C*(harmonic L : ℝ) := by
+  exact @norm_sum_range_le_two_edge_harmonic f C L hC hb
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N Q : ℝ) (L : ℕ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        0 < T → 0 < N →
+        (T/N)*deriv F (r-2*η) ≤ Q →
+        Q+(L : ℝ)+1 ≤ (T/N)*deriv F (l+2*η) →
+        ‖∑ n ∈ Finset.range L,
+          (modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N (Q+((n+1 : ℕ) : ℝ))-
+            modelPhaseStationaryMainTerm F T N (Q+((n+1 : ℕ) : ℝ)))‖ ≤
+          C*(1+Real.log (L : ℝ)) := by
+  exact @modelPhaseBufferedInteriorRange_error σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ) (A B : ℤ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        0 < T → 0 < N →
+        (T/N)*deriv F (r-2*η) ≤ (A : ℝ) →
+        (B : ℝ) ≤ (T/N)*deriv F (l+2*η) →
+        ‖∑ q ∈ Finset.Ioo A B,
+          (modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q-
+            modelPhaseStationaryMainTerm F T N q)‖ ≤
+          C*(1+Real.log ((B-A-1).toNat : ℝ)) := by
+  exact @modelPhaseBufferedInteriorBlock_error σ hσ
+
+example :
+    (∑ n ∈ Finset.range 0, (1/((n+1 : ℕ) : ℝ)+1/((0-n : ℕ) : ℝ))) = 0 := by
+  simp
+
+example :
+    (∑ n ∈ Finset.range 1, (1/((n+1 : ℕ) : ℝ)+1/((1-n : ℕ) : ℝ))) = 2 := by
+  norm_num
+
+example :
+    (∑ n ∈ Finset.range 2, (1/((n+1 : ℕ) : ℝ)+1/((2-n : ℕ) : ℝ))) = 3 := by
+  norm_num [Finset.sum_range_succ]
+
+end InteriorStationaryRegression
