@@ -1,21 +1,36 @@
-{"version": "1.2.0",
+{
+ "version": "1.2.0",
  "packagesDir": "../../../.lake/packages",
- "packages":
- [{"type": "path",
+ "packages": [
+  {
+   "type": "path",
+   "scope": "",
+   "name": "GafniTaoNative",
+   "manifestFile": "lake-manifest.json",
+   "inherited": false,
+   "dir": "../Dependencies/GafniTaoNative",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "type": "path",
    "scope": "",
    "name": "ExpdbFrozen",
    "manifestFile": "lake-manifest.json",
    "inherited": false,
    "dir": "../Dependencies/ANTEDBFrozen",
-   "configFile": "lakefile.toml"},
-  {"type": "path",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "type": "path",
    "scope": "",
    "name": "RiemannZeta",
    "manifestFile": "lake-manifest.json",
    "inherited": false,
    "dir": "../../..",
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/mathlib4.git",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/mathlib4.git",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -24,8 +39,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
    "inherited": true,
-   "configFile": "lakefile.lean"},
-  {"url": "https://github.com/leanprover-community/plausible",
+   "configFile": "lakefile.lean"
+  },
+  {
+   "url": "https://github.com/leanprover-community/plausible",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -34,8 +51,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/LeanSearchClient",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/LeanSearchClient",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -44,8 +63,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/import-graph",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/import-graph",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -54,8 +75,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/ProofWidgets4",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/ProofWidgets4",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -64,8 +87,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v0.0.99",
    "inherited": true,
-   "configFile": "lakefile.lean"},
-  {"url": "https://github.com/leanprover-community/aesop",
+   "configFile": "lakefile.lean"
+  },
+  {
+   "url": "https://github.com/leanprover-community/aesop",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -74,8 +99,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/quote4",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/quote4",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -84,8 +111,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover-community/batteries",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover-community/batteries",
    "type": "git",
    "subDir": null,
    "scope": "leanprover-community",
@@ -94,8 +123,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/leanprover/lean4-cli",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/leanprover/lean4-cli",
    "type": "git",
    "subDir": null,
    "scope": "leanprover",
@@ -104,8 +135,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -114,8 +147,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "4ecb950126c4290293c5662dfe0e884123171df5",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/b-mehta/PrimeCert",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/b-mehta/PrimeCert",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -124,8 +159,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/alerad/leancert",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/alerad/leancert",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -134,8 +171,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0.5",
    "inherited": true,
-   "configFile": "lakefile.toml"},
-  {"url": "https://github.com/PatrickMassot/checkdecls.git",
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/PatrickMassot/checkdecls.git",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -144,8 +183,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": null,
    "inherited": true,
-   "configFile": "lakefile.lean"},
-  {"url": "https://github.com/hanwenzhu/LeanArchitect.git",
+   "configFile": "lakefile.lean"
+  },
+  {
+   "url": "https://github.com/hanwenzhu/LeanArchitect.git",
    "type": "git",
    "subDir": null,
    "scope": "",
@@ -154,7 +195,10 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.30.0",
    "inherited": true,
-   "configFile": "lakefile.lean"}],
+   "configFile": "lakefile.lean"
+  }
+ ],
  "name": "TaoTrudgianYang2025",
  "lakeDir": ".lake",
- "fixedToolchain": false}
+ "fixedToolchain": false
+}

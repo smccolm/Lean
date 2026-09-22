@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-Current analytic progress: [Width-independent curvature and the bounded inner core](#width-independent-curvature-and-the-bounded-inner-core--current-checkpoint).
-The actual Fourier modes now obey a cutoff-width-independent C_sigma*N/sqrt(T) bound. The genuine endpoint slopes determine the exact stationary integer interval; the complete inner-core nonstationary complement has a derived N/sqrt(T) plus logarithmic bound. The original source expansion contains only actual cutoff-weighted stationary main terms, with every remaining error explicit. Sharp stationary/source error balance, canonical dual-chart assembly and full beta reflection remain open. The counterexample and all nine repaired Add-est clauses are preserved; the full goal remains unfinished.
+Current analytic progress: [General analytic A-process from original source sums](#general-analytic-a-process-from-original-source-sums--current-checkpoint).
+The exact A-process now preserves the actual analytic exponent-pair predicate. All dual heights, original source intervals, integer shifts and epsilon losses are covered. EPZAE-09, both A/B processes, the counterexample and all nine repaired Add-est clauses are preserved; C and the remaining whole-proof outputs remain open.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -11169,7 +11169,7 @@ All 42 aggregate checklist entries are unchanged.
 Git LF-to-CRLF notices are not Lean diagnostics; no line-ending
 configuration changed. The original full goal is unfinished.
 
-## Width-independent curvature and the bounded inner core — current checkpoint
+## Width-independent curvature and the bounded inner core — historical checkpoint
 
 | Module | Actual checked contribution |
 |---|---|
@@ -11306,3 +11306,602 @@ or pushed.
 
 Permanent `EnergyPoweringObstruction.lean` SHA-256:
 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+## Sharp stationary source expansion and interior logarithmic sums — previous checkpoint
+
+The ORIGINAL source now has a sharp interior C_sigma*N/(T*d) error,
+a logarithmic sum over the actual plateau integers, a proved transition
+count, and support-exterior harmonic bounds. The assembled source theorem
+chooses eta=T^(-1/2), giving nonlogarithmic error
+(4+6*E)*N/sqrt(T)+3+2*E*(sigma+1), with every remaining logarithm and
+the polynomial far-tail radius explicit. The actual short-interval source
+branch is also proved. No eta^(-3) stationary loss is needed in this route.
+
+Public consumers:
+`modelPhaseBufferedFourierMode_interior_uniform`,
+`modelPhaseBufferedInteriorBlock_error`,
+`modelPhaseBufferedTransition_error`,
+`modelPhaseBufferedSharpCore_error`,
+`modelPhase_buffered_source_inverse_sqrt_expansion`, and
+`norm_exponentialSumAt_le_buffered_short`.
+
+Uniform logarithmic budgets, the actual moving canonical dual-chart
+assembly, alpha-to-1-alpha power-window transport, full beta reflection,
+and the general B process remain OPEN under EPZAE-09/10. No aggregate
+checkbox changes. The full EPZAE-00--41 objective remains unfinished.
+See the latest Goal Prompt for exact hypotheses, constants, formulas
+and the six green-node semantic checks.
+
+All 12 new modules enter the default imports and exact runner inventory;
+44 public axioms audits and 49 regressions accompany them.
+The counterexample and corrected powering/Heath--Brown/optimization/
+nine-clause Add-est chain are preserved. Both build BATs remain mandatory.
+
+### Production modules
+
+- `Extension/TaoTrudgianYang2025/BetaQuadraticLocalRemainder.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedMorseLocal.lean`
+- `Extension/TaoTrudgianYang2025/BetaMorseWindowIntegral.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedLocalNonstationary.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedWindowTails.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedInteriorStationary.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedInteriorFrequency.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedInteriorSum.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedSupportGap.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedTransitionBands.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedSharpCore.lean`
+- `Extension/TaoTrudgianYang2025/BetaBufferedSharpSource.lean`
+
+### Explicit public audits
+
+- `abs_segmentTaylorAverage_le_closed`
+- `abs_quadraticTaylorCoefficient_le_local`
+- `abs_deriv_quadraticTaylorCoefficient_le_local`
+- `norm_integral_sq_mul_betaQuadraticKernel_le_local`
+- `norm_quadratic_window_remainder_le_local`
+- `quadraticRemainderConstant_le_inverse_window`
+- `modelPhaseMorseWindow_mem_and_inverse`
+- `iteratedDeriv_bufferedMorseWeight_of_flat`
+- `bufferedMorseWeight_local_jet_bound`
+- `bufferedLocalStationaryOrder_pos`
+- `bufferedMorseWeight_local_window_remainder`
+- `bufferedMorseWeight_local_window_remainder_inverse`
+- `integral_inverseMorse_window`
+- `modelPhaseMorse_window_integral`
+- `IntervalC1Bound.fourierChar_of_closed_slope_gap`
+- `norm_buffered_subinterval_nonstationary`
+- `modelPhaseMorseInverse_window_slope_gaps`
+- `norm_bufferedNormalizedMode_sub_window_le`
+- `bufferedNormalizedMode_interior_window_remainder`
+- `modelPhaseBufferedMorseRemainder_interior_uniform`
+- `modelPhaseBufferedFourierMode_interior_uniform`
+- `modelPhaseInverseSlope_interior_of_gap`
+- `modelPhaseBufferedFourierMode_interior_frequency_uniform`
+- `sum_range_two_edge_reciprocals`
+- `norm_sum_range_le_two_edge_harmonic`
+- `modelPhaseBufferedInteriorRange_error`
+- `modelPhaseBufferedInteriorBlock_error`
+- `modelPhaseBufferedNormalizedMode_eq_interval`
+- `norm_modelPhaseBufferedFourierMode_of_support_gap`
+- `sum_norm_bufferedModes_support_right_le_harmonic`
+- `sum_norm_bufferedModes_support_left_le_harmonic`
+- `norm_bufferedModes_support_blocks_le_log`
+- `modelPhaseBufferedBand_endpoints`
+- `modelPhaseBufferedBand_card_bounds`
+- `modelPhaseBufferedTransition_card_le`
+- `modelPhaseBufferedSupport_inside_core`
+- `modelPhaseBufferedTransition_error`
+- `modelPhaseBufferedSupportCore_error`
+- `modelPhaseBufferedSharpCore_error`
+- `modelPhase_buffered_source_sharp_expansion`
+- `bufferedTransitionCost_eq`
+- `bufferedTransitionCost_inverse_sqrt`
+- `modelPhase_buffered_source_inverse_sqrt_expansion`
+- `norm_exponentialSumAt_le_buffered_short`
+
+Turn-start HEAD was `c1656d25781ca47831cc8730a0a742b6309cd717`.
+The owner committed during this implementation; final verification used
+`6b19864d9be669882d1762e263ebb43ed7915d04`. All existing changes
+were preserved. Twelve new production modules were developed; eleven
+are now in the owner commit, and `BetaBufferedSharpSource.lean` remains
+untracked. No agent staging, commit or push was performed.
+
+### Verification
+
+Both mandatory BAT runners passed on 22 September 2026 with exit code 0,
+zero Lean warnings/errors/tactic suggestions, and passing integrity and
+dependency gates. The target covers 656 production-package files,
+scans 667 Lean files, and audits 5778 imported/target declarations.
+All 44 new explicit audits and 49 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-113320-9230abb9.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_113331.log).
+All 315 checkpoint source/integration/runner hashes agree before and
+after the BATs. The graph has 258 nodes and 713 resolved, nonduplicate
+edges; all 42 aggregate checklist checkboxes are unchanged.
+The full goal remains unfinished.
+
+The focused command was `lake build TaoTrudgianYang2025.SemanticRegression`:
+exit 0, 9511 jobs, no Lean warnings. Exact-type regressions retain the
+full original objects, constant quantifier order, finite model order,
+support/plateau rounding, source endpoints, and physical factors.
+All 44 public audits occur once and use only permitted
+`propext`, `Classical.choice`, and `Quot.sound` dependencies.
+
+The target command was
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`.
+It discovered 5773 nonprivate target theorems plus 5 imported anchors,
+for 5778 audited declarations. Its log SHA-256 is
+`f36440ad86bad8b5ecf55e0397c518f5f3fb8d9ad17a0c04806906a9d724a3cb`.
+
+The foundation command was `cmd /c run_lake_build.bat --no-pause`.
+All six manifest stages passed: root build, exact publication contract,
+two retained regressions, transitive/output audit and declaration linter.
+It covers 301 root modules plus 2 explicit regressions, with 8857 jobs,
+7636 explicit public declarations and 14290 discovered nonprivate
+theorems. The complete physical log has no Lean diagnostics.
+Log SHA-256:
+`e601aacc443e1db0bb96b7c44413de12eaa075a1b21f51ac68eed67eeec05fe0`.
+Manifest SHA-256:
+`db3abcb8b9597c7f52d9cb8d5ccce6005f3c6ff9d273ece12fb202583b29dbb9`.
+
+The twelve new source texts and four integration texts match their
+verified snapshots after line-ending normalization. The counterexample,
+existing energy proofs, both BAT launchers, foundation verifier, frozen
+sources and dependency pins are unchanged. Repository scans match only
+ordinary comments and two genuine rational structure fields named
+`constant`; no prohibited postulate or proof term was found.
+
+The turn began at HEAD `c1656d25781ca47831cc8730a0a742b6309cd717`.
+An external owner commit, `6b19864d9be669882d1762e263ebb43ed7915d04`
+("Progress Update", 11:21:37 Pacific), occurred during implementation.
+No agent staging, commit or push was performed, and no source contents
+were reverted or lost. The final verified checkout is at that new HEAD,
+with 15 modified node-63 files and one untracked new production file,
+`BetaBufferedSharpSource.lean`; the other eleven new modules were
+included by the external commit. The 49 dirty entries present at turn
+start were preserved through the work, not reset.
+
+## Uniform source power error and full moving-slope geometry — previous checkpoint
+
+The original source now satisfies the uniform comparison
+C_sigma,epsilon*(N/sqrt(T)+T^epsilon), with constants chosen before all
+physical data. The actual retained plateau integers are used in the long
+branch; the genuine source cardinality pays for the entire short branch.
+Every retained frequency has a derived actual critical point and an
+explicit positive endpoint margin.
+
+The full actual slope image, under delta<=min(2^(-sigma)/2,1), lies in
+[2^(-sigma)/2,2]. Inverse-point stability and every original derivative
+comparison at the explicit reciprocal reference point now hold there,
+including outside the strict reference interval. This does not assume
+smoothness of the original phase outside [1,2].
+
+Public consumers: `modelPhase_source_sharp_comparison`,
+`modelPhaseSharpStationarySet_critical_geometry`, and
+`modelPhaseInverse_iteratedDeriv_expanded_reference_error`.
+See the latest Goal Prompt for exact signatures, bounds and green-node
+checks. Higher inverse/Legendre errors on the expanded window, exact
+moving canonical charts, physical power-window transport, full beta
+reflection and the general B process remain OPEN under EPZAE-09/10.
+All 42 aggregate checkboxes are unchanged.
+
+Six new modules, 23 public audits and 27 regressions are integrated.
+The permanent counterexample and corrected powering/Heath--Brown/
+optimization/nine-clause Add-est chain are unchanged.
+Both build BATs remain mandatory and must track production coverage.
+
+Production additions:
+
+- `BetaBufferedLogBudget.lean`
+- `BetaBufferedUniformError.lean`
+- `BetaBufferedPowerError.lean`
+- `BetaBufferedRetainedGeometry.lean`
+- `BetaExpandedInverseStability.lean`
+- `BetaExpandedModelJets.lean`
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 662 package files, scans 673
+Lean files and audits 5817 discovered target theorems plus 5 imported
+anchors (5822 declarations). All 23 new explicit audits occur once and
+use only permitted standard logical axioms; all 27 regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-120938-14509d95.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_120949.log).
+All 321 checkpoint source/integration/runner hashes match before and after
+the BATs. Six source texts and four integration texts also match their
+normalized snapshots. The graph has 262 nodes and 722 resolved,
+nonduplicate edges; all 42 aggregate checkboxes are unchanged.
+The counterexample and repaired energy chain remain unchanged.
+
+The focused command `lake build TaoTrudgianYang2025.SemanticRegression`
+passed with 9517 jobs and zero diagnostics. Exact-type regressions retain
+the original objects, quantifiers, physical scales and finite model order.
+The target command was
+`cmd /c run_tao_trudgian_yang_build.bat --no-pause`;
+its log SHA-256 is `233b63a9b474dfbd4add564812905e4566c9e853d7f4122c8b2f37513d76152c`.
+
+The foundation command was `cmd /c run_lake_build.bat --no-pause`.
+All six manifest stages passed: root build, exact publication contract,
+two retained regressions, transitive/output audit and declaration linter.
+It covers 301 root modules plus two regressions (8857 jobs), with 7636
+explicit public declarations and 14290 discovered nonprivate theorems.
+Foundation log SHA-256: `2a29a874777bdedb2d3ce3fe7c62c0743a038a0d09caf5dfeda90346d0ba7090`.
+Manifest SHA-256: `a321a4e4c6293b122c96bfa09ca9ff7cdab7a39e5d34b58d0c0f856473b46a1f`.
+
+Repository-wide scans match only ordinary comments and two genuine
+rational structure fields named `constant`; no prohibited proof term or
+postulate was found. `git diff --check` passes; Git's LF-to-CRLF notices
+are not Lean diagnostics. HEAD remains
+`6b19864d9be669882d1762e263ebb43ed7915d04`.
+The pre-existing dirty worktree is preserved. No agent staging, commit
+or push was performed. This is a verified implementation checkpoint,
+not completion of the full EPZAE-00--41 goal.
+
+## Moving canonical Taylor extensions and retained-frequency coverage — previous checkpoint
+
+The actual Legendre error now has a globally smooth moving-endpoint
+Taylor extension, exact on its retained plateau, with uniform finite
+derivative bounds independent of the shrinking buffer width. Full-image
+inverse/reference jet estimates and a five-region proof supply the bounds;
+no exterior regularity of the original phase is assumed.
+
+`modelPhase_source_canonicalTaylorPhase` chooses its model tolerance
+before the source data, derives h=min(c_sigma,1)/(4*sqrt(T)) and the anchor
+F'(3/2), proves the full closed-[1,2] canonical model condition, and proves
+exact phase identities for EVERY retained stationary integer.
+It does not assert that all integers belong to one multiplicative chart.
+
+The finite positive-slope chart partition, whole stationary main-sum beta
+bound, physical power-window transport, beta reflection and general
+B process remain OPEN under EPZAE-09/10. All 42 aggregate checkboxes are
+unchanged. See the latest Goal Prompt for the exact formulas, finite input
+orders, constant dependencies and four green-node semantic checks.
+
+Eighteen modules, 53 public audits and 60 regressions are integrated.
+The permanent counterexample and corrected powering/Heath--Brown/
+optimization/all-nine-Add-est chain are preserved.
+Both build BATs remain mandatory and must track production coverage.
+
+Production additions:
+
+- `BetaExpandedReferenceJets.lean`
+- `BetaExpandedJetBounds.lean`
+- `BetaExpandedAllOrders.lean`
+- `BetaExpandedAnchoring.lean`
+- `BetaTaylorPolynomialJets.lean`
+- `BetaTaylorPolynomialRemainder.lean`
+- `BetaTaylorCutoffBudget.lean`
+- `BetaTaylorTransitionBudget.lean`
+- `BetaLegendreTaylorTransition.lean`
+- `BetaTaylorPastedExtension.lean`
+- `BetaTaylorPolynomialBudget.lean`
+- `BetaTaylorPastedTransitionBounds.lean`
+- `BetaTaylorPastedUniform.lean`
+- `BetaExpandedEndpointGeometry.lean`
+- `BetaLegendreTaylorExtension.lean`
+- `BetaCanonicalTaylorLegendre.lean`
+- `BetaTaylorRetainedCoverage.lean`
+- `BetaSourceTaylorPhase.lean`
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 680 package files, scans 691
+Lean files and audits 5904 discovered target theorems plus 5 imported
+anchors (5909 declarations). All 53 new explicit audits occur once and
+use only permitted standard logical axioms; all 60 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-130811-0ad529b7.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_130808.log).
+All 339 checkpoint source/integration/runner hashes match before and after
+the BATs. Eighteen source texts and four integration texts also match
+their normalized snapshots. The graph has 266 nodes and 732 edges, with
+no duplicate nodes or unresolved endpoints; all 42 aggregate checkboxes
+are unchanged. The counterexample and repaired energy chain remain unchanged.
+
+Target log SHA-256:
+`8c4b6ae5f9f0f5f471ef6f23d176809009069aa2b2e76fe1472750631561b566`.
+Foundation log SHA-256:
+`6895a34b32a29065de84b494519181776acfc44f29ba75689ca62ebb26fceea9`.
+Foundation JSON SHA-256:
+`68033d003c3c5768c80c59216f37a9dceedb529805d0e7f376630b8219edcbe1`.
+The foundation manifest records six passing stages, a 301-module root
+graph plus two explicit regressions, 8857 build jobs, 7636 explicit
+public declarations and 14290 discovered theorems. The target default
+build completes 9535 jobs. Repository-wide shortcut scans retain only
+ordinary comments and the two genuine rational-valued `constant`
+fields, not mathematical postulates. `git diff --check` exits 0;
+Git's LF-to-CRLF advisories are not Lean diagnostics.
+
+## Full source chart assembly and the analytic B-process — previous checkpoint
+
+The exact finite positive-slope grid now partitions EVERY original
+retained stationary integer into contiguous natural-number chart blocks.
+The moving Taylor phases, actual amplitude variation and upstream beta
+bounds are assembled, with physical dual windows derived from N,T.
+`sourceExponentialSum_reflection_estimate` proves the complete original
+sum bound, including C*(N/sqrt(T)+T^epsilon) source error.
+
+The resulting nonasymptotic reflection bound has exponent
+max(0,beta+1/2-alpha). Its max is removed only when the reflected exponent
+is proved nonnegative. The full beta-reflection identity remains OPEN.
+
+`ExponentPair.bProcess` now proves the paper's analytic transformation
+(k,l)->(l-1/2,k+1/2); its target affine line is nonnegative by the triangle
+conditions. It does not assume the still-open exact reflection identity.
+The next reflection obligation is a genuine beta lower bound sufficient
+to remove the zero envelope. A and C processes remain open, so EPZAE-10
+is not crossed out. All 42 aggregate checkbox states are unchanged.
+
+Eleven modules, 35 public audits and 41 regressions are integrated.
+The printed counterexample, corrected independent powering witnesses,
+Heath--Brown energy relation, exact optimization and all nine repaired
+Add-est clauses are unchanged. BOTH build BATs remain mandatory and
+their imports, inventory and audits must track production changes.
+See the current Goal Prompt for quantifiers and all five green-node tests.
+
+Installed production modules:
+
+- `PositiveSlopeCharts.lean`
+- `PositiveSlopeChartFibers.lean`
+- `BetaSourceChartPartition.lean`
+- `BetaTaylorStationaryMain.lean`
+- `BetaSourceChartBound.lean`
+- `BetaDualPowerWindows.lean`
+- `BetaSourceChartPhysical.lean`
+- `BetaSourceMainBound.lean`
+- `BetaSourceReflectionEstimate.lean`
+- `BetaReflectionEnvelope.lean`
+- `ExponentPairBProcess.lean`
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 691 package files, scans 702
+Lean files and audits 5960 discovered target theorems plus 5 imported
+anchors (5965 declarations). All 35 new explicit audits occur once and
+use only permitted standard logical axioms; all 41 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-135040-f8df686c.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_135036.log).
+All 350 checkpoint source/integration/runner hashes match before and after
+the BATs. Eleven source texts and four integration texts also match
+their normalized snapshots. The graph has 270 nodes and 740 edges, with
+no duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+checkbox states are unchanged. The counterexample and completed repaired
+energy chain remain unchanged. These checks verify this recorded scope;
+they do not assert whole-goal completion.
+
+Target log SHA-256:
+`bafbe968aff73e71023f1dfe09c2bb8f1b1348408ebb0a8d11be274bad3b227d`.
+Foundation log SHA-256:
+`237acb4477c6eee1b8d8c1046c13e7c81b5041e514af39b833419c7222fab077`.
+Foundation JSON SHA-256:
+`1e2d43eac58b0d8883d762432b4129a309bd7ea3363f63e00df85d11d2369369`.
+The foundation manifest records six passing stages, a 301-module root
+graph plus two explicit regressions, 8857 build jobs, 7636 explicit
+public declarations and 14290 discovered theorems. The target default
+build completes 9546 jobs. Repository-wide shortcut scans match only
+ordinary comments and the two genuine rational-valued `constant`
+fields, not mathematical postulates. `git diff --check` exits 0;
+Git's LF-to-CRLF advisories are not Lean diagnostics.
+
+## Exact beta reflection from coherent source sums — previous checkpoint
+
+`exponentSumGrowthExponent_reflection` now proves the exact printed
+identity beta(1-alpha)=1/2-alpha+beta(alpha) for every 0<=alpha<=1,
+including endpoints. Convex closure, closed two-way duality and the
+endpoint values were already proved; all EPZAE-09 mathematical
+acceptance clauses are now supplied.
+
+The new lower-bound proof is independent of reflection and the B-process.
+It constructs actual phases log(u)+c*(u-1) with integral linear
+oscillation at integer N, controls every finite model jet, and sums
+a genuine closed coherent block. Beyond every threshold it produces
+T^alpha=N and norm(original sum)>=T^(alpha-1/2)/8, proving
+beta(alpha)>=alpha-1/2. This removes the zero envelope from the
+previous complete original-source estimate; the two reflected
+inequalities then give equality. No stronger alpha/2 bound is claimed.
+
+Six modules, 18 public audits and 24 regressions are integrated.
+EPZAE-10 remains OPEN: its general B-process is proved, A and C are not.
+Continue with those analytic processes and the remaining whole-proof
+obligations; this checkpoint does not complete the full goal.
+
+The printed counterexample, corrected independent powering witnesses,
+Heath--Brown relation, exact energy optimization and all nine repaired
+Add-est clauses remain unchanged. BOTH build BATs remain mandatory,
+and production imports, inventory and audits must track source changes.
+See the current Goal Prompt for quantifiers and semantic checks.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 697 package files, scans 708
+Lean files and audits 5990 discovered target theorems plus 5 imported
+anchors (5995 declarations). All 18 new explicit audits occur once and
+use only permitted standard logical axioms; all 24 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-141433-3e901ee8.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_141443.log).
+All 356 checkpoint source/integration/runner hashes match before and after
+the BATs. Six source texts and four integration texts also match their
+normalized snapshots. The graph has 274 nodes and 748 edges, with no
+duplicate nodes or edges and no unresolved endpoints. There are still
+42 aggregate checkboxes: only EPZAE-09 changes to complete; all others
+retain their status. The counterexample and completed repaired energy
+chain are unchanged. These checks verify this recorded scope, not
+whole-goal completion.
+
+Target log SHA-256:
+`82967e30036458f8f1f9e54d267b2a0693e6ef9d7fb7306cd6d9d95f9c92c1e3`.
+Foundation log SHA-256:
+`5970bd5ae7f8f7731c960b71618652bffcb85e60d05e8323618321e56aa110bf`.
+Foundation JSON SHA-256:
+`cd69a2842a4fcf1bcb511a90bffbe618539f8178efeed0ed13e94af2366dce5b`.
+The foundation manifest records six passing stages, a 301-module root
+graph plus two explicit regressions, 8857 build jobs, 7636 explicit
+public declarations and 14290 discovered theorems. The target default
+build completes 9552 jobs. Repository-wide shortcut scans match only
+ordinary comments and the two genuine rational-valued `constant`
+fields, not mathematical postulates. `git diff --check` exits 0;
+Git's LF-to-CRLF advisories are not Lean diagnostics.
+
+## Domain-preserving A-process models and source differencing — previous checkpoint
+
+The A-process now has a domain-preserving shifted-model constructor,
+exact original-source correlation identities, and a summed-correlation
+Weyl inequality on the literal source exponential sum.
+
+The constructed phase uses affine compression inside [1,2] and has
+model parameter sigma+1, with every requested finite derivative and
+both endpoints controlled by one tolerance chosen before the source.
+Its physical parameters are exactly N'=N-r and T'=sigma*T*r/N;
+the reindexed integers and conjugation are proved, including empty
+overlaps. The analytic exponent-pair consumer derives its model and
+endpoint conditions but explicitly retains C<=T' and N'<=T'.
+
+`source_exponentialSum_weyl` constructs the actual padded source
+sequence and keeps 2*H times the SUM of nonzero correlations. It has
+no assumed analytic estimate. The small-dual-parameter branch and
+integer shift optimization remain OPEN; A is not yet proved.
+EPZAE-09 and the B-process remain complete. C remains open.
+All 42 aggregate checkbox states are unchanged.
+
+Eleven modules, 32 public audits and 39 regressions are integrated.
+The printed counterexample and the corrected powering/Heath--Brown/
+optimization/all-nine-Add-est chain remain unchanged. BOTH build BATs
+remain mandatory and must track production imports, inventory and audits.
+See the current Goal Prompt for exact quantifiers and semantic checks.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 708 package files, scans 719
+Lean files and audits 6069 discovered target theorems plus 5 imported
+anchors (6074 declarations). All 32 new explicit audits occur once and
+use only permitted standard logical axioms; all 39 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-150004-71e72f6e.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_150014.log).
+All 367 checkpoint source/integration/runner hashes match before and after
+the BATs. Eleven source texts and four integration texts also match their
+normalized snapshots. The graph has 280 nodes and 760 edges, with no
+duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+checkbox states are unchanged. The counterexample and completed repaired
+energy chain are unchanged. These checks verify this recorded scope,
+not the still-open A-process or whole-goal completion.
+
+Target log SHA-256:
+`36df9abf688bbc2ec810eda70c09f8708c1a612391609095be417b46e13b9b65`.
+Foundation log SHA-256:
+`7681b49842893de408ccfbd635eb9ae072d062c424798838142a2be6ea05a6ca`.
+Foundation JSON SHA-256:
+`a4ac6da13e48d4ae6e030b31cc8750d3e4bb346b4e35cc39bdfe250eb42b7f79`.
+The foundation manifest records six passing stages, a 301-module root
+graph plus two explicit regressions, 8857 build jobs, 7636 explicit
+public declarations and 14290 discovered theorems. The target default
+build completes 9563 jobs. Repository-wide shortcut scans match only
+ordinary comments and the two genuine rational-valued `constant`
+fields, not mathematical postulates. `git diff --check` exits 0;
+Git's LF-to-CRLF advisories are not Lean diagnostics.
+
+## General analytic A-process from original source sums — current checkpoint
+
+The classical A-process is now proved for the paper's actual analytic
+exponent-pair predicate:
+
+    ExponentPair k l
+      ==> ExponentPair (k/(2*k+2)) (l/(2*k+2)+1/2).
+
+The public consumer is `ExponentPair.aProcess`. Its proof derives the
+closed shifted model, source reindexing and conjugation, all positive
+dual-height estimates, summed correlations, the original-source Weyl
+bound, a genuine natural-number shift and the full epsilon budget.
+It does not assume a transformed-phase estimate, a dual-height window,
+an optimization certificate, or the output exponent-pair estimate.
+
+The formerly open small-height branch is proved by the full closed-source
+`norm_exponentialSumAt_le_firstDerivative`; curvature handles transition
+heights, and `ExponentPair.allPositiveHeight_bound` combines every positive
+height with the actual input pair. `sourceShiftCorrelation_normalized_bound`
+links the result back to N,T,r, including the N^2/(T*r) term.
+`sum_sourceShiftCorrelation_le` retains its harmonic sum.
+`source_exponentialSum_differencing_bound` consumes the literal source sum.
+
+`integer_shift_optimization` uses an actual floor-comparable natural H;
+when that scale is too small, the original sum's cardinality supplies
+the separate branch. `aProcessOptimizationScale_balance` and
+`aProcessOptimizationScale_cost` link the optimum exactly to N,T.
+The logarithmic loss is absorbed by `aProcess_power_budget`.
+`source_exponentialSum_aProcess_bound` and
+`isExponentPairEstimateNonAsymptotic_aProcess` assemble every source
+interval, empty interval and bounded-N case with constants chosen first.
+
+Fifteen production modules, 33 explicit public-theorem audits and 40
+regressions are integrated. The extra fixtures include actual A/A/B
+compositions yielding (1/6,2/3), (1/14,11/14), and (2/7,4/7), the H=0/H=1
+harmonic endpoints, and two optimization-scale checks.
+
+EPZAE-09 and both A/B processes are complete; C remains OPEN, so EPZAE-10
+remains unchecked. D, Heath--Brown derivative inputs, certified beta
+tables, the four advertised pairs and the remaining density/public
+release obligations remain in the whole-proof goal. All 42 aggregate
+checkbox states are unchanged.
+
+The printed counterexample, corrected independent rho/k and rho*/k
+witnesses, unrestricted fifth coordinates, Heath--Brown energy relation,
+exact energy optimization and all nine repaired Add-est clauses are
+preserved. BOTH build BATs remain mandatory; keep their production
+imports, PowerShell inventory, audits and regression coverage synchronized.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+Lean warnings, errors, tactic suggestions or linter failures in their
+complete physical logs. The target covers 723 package files, scans 734
+Lean files and audits 6118 discovered target theorems plus 5 imported
+anchors (6123 declarations). All 33 new explicit audits occur once and
+use only permitted standard logical axioms; all 40 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-155044-98a95e32.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_155054.log).
+All 382 checkpoint source/integration/runner hashes match before and after
+the BATs. Fifteen source texts and four integration texts also match their
+normalized snapshots. The graph has 281 nodes and 762 edges, with no
+duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+checkbox states are unchanged. This verifies the exact analytic A-process,
+not C or whole-goal completion. The counterexample and the completed
+repaired energy chain remain unchanged.
+
+### Exact reproduction evidence
+
+- Target command: `cmd /c run_tao_trudgian_yang_build.bat --no-pause`; exit 0,
+  `LEAN VERIFICATION PASS`, 9578 build jobs, 723 package files, 734 scanned
+  Lean files, 6118 discovered + 5 anchors = 6123 audited declarations.
+  Log SHA-256: `1bbba3e7c64a3954372b664410c9f588437c292b66105e6ab551317df5e1e2f7`.
+- Foundation command: `cmd /c run_lake_build.bat --no-pause`; exit 0,
+  `PASS`, all six stages pass, 301 root modules + 2 retained regressions,
+  8857 build jobs, 7636 explicit declarations and 14290 discovered theorems.
+  Log SHA-256: `5f330bbf4d03a358d393dd746248d178933bb4482b2558e456dd5e3f6190a2f4`.
+  JSON SHA-256: `6a3ff641de27ef1f66234af654588e16def1073a224f10466fac20dda1a2b63c`.
+- All 33 new public audits occur exactly once with no prohibited dependency.
+  Complete physical logs contain zero Lean warnings/errors/suggestions.
+- All 382 source/integration/runner hashes match before and after both BATs.
+  All 15 new source texts and four integration texts match normalized snapshots.
+- Counterexample SHA-256 remains
+  `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+  BATs and the foundation verifier are unchanged; the target's backing
+  production inventory now includes every new module.
+- Owner HEAD remains `6b19864d9be669882d1762e263ebb43ed7915d04`.
+  The worktree is dirty; nothing was staged, committed or pushed.
+  Repository shortcut scans find only ordinary comments and the two genuine
+  rational structure fields named `constant`, not mathematical postulates.

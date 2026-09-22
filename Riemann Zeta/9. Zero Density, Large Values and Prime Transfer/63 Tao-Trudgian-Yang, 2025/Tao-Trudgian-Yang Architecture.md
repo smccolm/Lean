@@ -1,6 +1,6 @@
 flowchart TD
-%% Current checkpoint: actual curvature bound, exact endpoint slopes and bounded nonstationary core DONE.
-%% EPZAE-09/10 sharp stationary/source error balance and canonical dual-chart assembly OPEN.
+%% Current checkpoint: general analytic A-process from the actual source sum DONE.
+%% EPZAE-09 and A/B processes complete; C/D and Heath--Brown derivative inputs remain OPEN.
 %% Corrected powering, all nine Add-est clauses and the permanent counterexample are preserved.
 %% Earlier checkpoint prose is historical; the full EPZAE-00--41 goal is unchanged.
     ML["Mathlib analytic and finite foundations<br/>AVAILABLE"]
@@ -15,7 +15,7 @@ flowchart TD
     AB["EPZAE-07 asymptotic/phase bridge<br/>DONE"]
 
     EP["EPZAE-08 exponent-pair semantics<br/>DONE"]
-    DU["EPZAE-09 convexity and beta duality<br/>closed duality + exact endpoints DONE;<br/>reflection OPEN"]
+    DU["EPZAE-09 convexity and beta duality<br/>closed duality + exact endpoints + reflection DONE"]
     DUC["EPZAE-09 actual exponent-pair convex closure<br/>DONE"]
     DUU["EPZAE-09 compact alpha cover<br/>uniform physical-parameter converse DONE"]
     DUS["EPZAE-09 actual model-phase second derivative<br/>radians, discrete curvature and boundary terms DONE"]
@@ -79,9 +79,38 @@ flowchart TD
     DNP["EPZAE-09/10 actual integer stationary interval<br/>exact disjoint nonstationary core partition DONE"]
     DNE["EPZAE-09/10 complete inner-core nonstationary error<br/>nearest modes + phase-uniform logarithmic bound DONE"]
     DSX["EPZAE-09/10 original source stationary expansion<br/>no unestimated nonstationary core residual DONE"]
-    DBT["EPZAE-09/10 uniform varying-lattice B-process<br/>sharp stationary/source balance + dual-chart assembly OPEN"]
-    DUR["EPZAE-09 beta reflection identity<br/>whole closed unit interval OPEN"]
-    PR["EPZAE-10--12 A/B/C/D and<br/>Heath--Brown processes<br/>OPEN"]
+    QLJ["EPZAE-09/10 closed local quadratic budgets<br/>actual cutoff-plateau inverse jets DONE"]
+    QWI["EPZAE-09/10 original central integral transport<br/>both original-variable tails DONE"]
+    QIE["EPZAE-09/10 whole original interior mode<br/>sharp C_sigma*N/(T*d) error DONE"]
+    QIS["EPZAE-09/10 actual frequency-edge gaps<br/>logarithmic interior integer sum DONE"]
+    QTR["EPZAE-09/10 actual transition bands<br/>cardinality + curvature + support exterior DONE"]
+    QSS["EPZAE-09/10 sharp original-source expansion<br/>eta=T^(-1/2) and short-source branch DONE"]
+    QLB["EPZAE-09/10 actual radius and five integer lengths<br/>uniform logarithmic error budget DONE"]
+    QSC["EPZAE-09/10 entire original source comparison<br/>C*(N/sqrt(T)+T^epsilon), short branch included DONE"]
+    QRG["EPZAE-09/10 every retained stationary integer<br/>actual image + critical-point endpoint margins DONE"]
+    QEW["EPZAE-09/10 full positive slope window<br/>inverse-point and original-jet comparison DONE"]
+    QEA["EPZAE-09/10 full actual-image inverse derivatives<br/>explicit reference jets + anchored finite budgets DONE"]
+    QJT["EPZAE-09/10 actual finite Taylor matching<br/>two-sided remainder + shrinking-cutoff cancellation DONE"]
+    QPE["EPZAE-09/10 genuine global moving extension<br/>five-region finite jets + exact plateau DONE"]
+    QCT["EPZAE-09/10 actual source canonical model<br/>chosen buffer + every retained phase identity DONE"]
+    QCP["EPZAE-09/10 actual retained integer chart partition<br/>exact finite sum + contiguous natural blocks DONE"]
+    QSM["EPZAE-09/10 entire stationary main sum<br/>derived physical windows + common finite budgets DONE"]
+    DBT["EPZAE-09/10 complete original-source reflection estimate<br/>main sum + source error + uniform quantifiers DONE"]
+    BEN["EPZAE-09 reflected beta envelope<br/>max(0,beta+1/2-alpha) DONE"]
+    BPR["EPZAE-10 general analytic B-process<br/>(k,l) to (l-1/2,k+1/2) DONE"]
+    RLC["EPZAE-09 actual resonant log model<br/>integer slope + all finite jets DONE"]
+    RLB["EPZAE-09 original coherent closed sum<br/>norm >= N/(8 sqrt(T)); singleton included DONE"]
+    RLW["EPZAE-09 constructed physical witnesses<br/>T^alpha=N; all thresholds and finite jets DONE"]
+    RLL["EPZAE-09 independent beta lower bound<br/>beta(alpha) >= alpha-1/2 DONE"]
+    DUR["EPZAE-09 beta reflection identity<br/>whole closed unit interval DONE"]
+    AXM["EPZAE-10 actual compressed difference model<br/>closed endpoints + uniform finite jets DONE"]
+    AXC["EPZAE-10 actual source correlations<br/>linked N-r and sigma*T*r/N + exact reindexing DONE"]
+    AXB["EPZAE-10 large-dual correlation consumer<br/>height conditions explicit; model + endpoints derived DONE"]
+    AXW["EPZAE-10 literal source Weyl inequality<br/>2H times summed correlations + exact padding DONE"]
+    AXL["EPZAE-10 actual all-height correlations<br/>low + transition + bounded + large regimes DONE"]
+    AXO["EPZAE-10 optimized original-source estimate<br/>harmonic sum + actual integer H + epsilon budget DONE"]
+    AXP["EPZAE-10 general analytic A-process<br/>(k,l) to (k/(2k+2),l/(2k+2)+1/2) DONE"]
+    PR["EPZAE-10--12 processes<br/>A/B DONE; C/D and Heath--Brown OPEN"]
     BT["EPZAE-13 certified beta table<br/>OPEN"]
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     MU["EPZAE-15 zeta-growth bridge<br/>OPEN"]
@@ -410,7 +439,33 @@ flowchart TD
     DCC --> DBT
     DMF --> DBT
     DHC --> DUR
-    DBT --> DUR
+    DBT --> BEN
+    BEN --> DUR
+    AB --> RLC
+    DUL --> RLB
+    RLC --> RLB
+    RLC --> RLW
+    RLB --> RLW
+    RLW --> RLL
+    DUE --> RLL
+    RLL --> DUR
+    BEN --> BPR
+    DUF --> BPR
+    BPR --> PR
+    AB --> AXM
+    AXM --> AXC
+    AXC --> AXB
+    EP --> AXB
+    GM --> AXW
+    AXC --> AXW
+    AXM --> AXL
+    DUS --> AXL
+    EP --> AXL
+    AXC --> AXL
+    AXL --> AXO
+    AXW --> AXO
+    AXO --> AXP
+    AXP --> PR
     DUS -->|upper endpoint| DUE
     ED --> DUL
     DUL -->|lower endpoint| DUE
@@ -983,6 +1038,46 @@ flowchart TD
     DNP --> DSX
     DSX --> DBT
 
+    DTA --> QLJ
+    DJI --> QLJ
+    DMI --> QWI
+    DJB --> QWI
+    QLJ --> QIE
+    QWI --> QIE
+    QIE --> QIS
+    DCE --> QIS
+    DMU --> QTR
+    DJB --> QTR
+    DCR --> QSS
+    QIS --> QSS
+    QTR --> QSS
+    QSS --> QLB
+    QLB --> QSC
+    QSS --> QSC
+    QTR --> QRG
+    QIS --> QRG
+    QSC --> QRG
+    QRG --> QEW
+    DHR --> QEW
+    QSC --> DBT
+    QEW --> QEA
+    DHE --> QEA
+    QEA --> QJT
+    ML --> QJT
+    QJT --> QPE
+    QEA --> QPE
+    QPE --> QCT
+    QRG --> QCT
+    DHC --> QCT
+    DCE --> QCT
+    QCT --> QCP
+    QCP --> QSM
+    DVA --> QSM
+    DXS --> QSM
+    QSM --> DBT
+    class QEA,QJT,QPE,QCT done;
+    class QLB,QSC,QRG,QEW done;
+    class QLJ,QWI,QIE,QIS,QTR,QSS done;
     class DCI,DMU,DCE,DNP,DNE,DSX done;
 
     classDef available fill:#dcecff,stroke:#245b9e,color:#0d2542,stroke-width:2px;
@@ -991,7 +1086,7 @@ flowchart TD
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC available;
     class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP,ZWG,ZFG,ZDS,ZVT,ZK,ZAP,ZAM,ZAY,ZAC,ZCR,ZFT,ZSR,ZFE,ZBT,ZSE,ZMN,ZVB,ZDA,ZMG,ZPC,ZNH,ZFH,ZPH,ZLC,ZGK,ZEO,ZL3,ZQ44,ZOC,ZVW,ZPG,ZHR,ZHM,ZLF,Z4K,Z4C,ZGB,ZTM,ZTL,EC1ZA,EC1S,EC1,EC2G,ZP6,EC2Z,EC2 done;
-    class GEN,DU,PR,BT,NEP,MU,LVC,ZLV,ZAT,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PUB,SEM,REL open;
+    class GEN,PR,BT,NEP,MU,LVC,ZLV,ZAT,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PUB,SEM,REL open;
     class PL62 preserved;
     class DUC,DUU,DUS,DUE,DUF,DUL,CSP,DSI,DLG,DIS,DSP done;
     class DHE,DHR,DHU,DHA done;
@@ -1001,8 +1096,10 @@ flowchart TD
     class DTA,DQS,DMI,DJB,DQV,DMW,DQP,DQR done;
     class DZW,DJC,DJI,DJW,DRE,DSE,DQI done;
     class DCB,DWB,DSW,DWM,DNS,DFG done;
-    class DBT open;
-    class DUR open;
+    class QCP,QSM,DBT,BEN,BPR done;
+    class DU,DUR,RLC,RLB,RLW,RLL done;
+    class AXM,AXC,AXB,AXW done;
+    class AXL,AXO,AXP done;
 
 %% ZFE semantic audit: exists_atkinsonPowerIntegral_source_power_saving.
 %% Actual carrier and constructed saddle amplitude consume the proved Fresnel value and tail.
@@ -4764,7 +4861,7 @@ flowchart TD
 %% are unchanged. Exact hashes and foundation stage evidence are in
 %% the latest Reproduction Manifest section. The full goal remains unfinished.
 
-%% ## Width-independent curvature and the bounded inner core — current checkpoint
+%% ## Width-independent curvature and the bounded inner core — historical checkpoint
 %%
 %% The original Fourier modes now satisfy C_sigma*N/sqrt(T), uniformly in
 %% every real frequency and original cutoff width. Genuine derivatives
@@ -4859,4 +4956,503 @@ flowchart TD
 %% No coverage, integrity, dependency, warning or output gate was weakened.
 %% Runner PASS verifies the installed scope, not full beta reflection or
 %% the unfinished whole-proof goal.
+%%
+
+%% ## Sharp stationary source expansion and interior logarithmic sums — previous checkpoint
+%%
+%% This checkpoint advances EPZAE-09/10 without changing their acceptance
+%% tests or the whole EPZAE-00--41 objective. The source-balance obstruction
+%% reported in the preceding historical checkpoint has been overcome:
+%% the new source theorem no longer pays eta^(-3)*(1+N/T).
+%% The full B process and beta reflection are still OPEN.
+%%
+%% ### Actual interior estimate
+%%
+%% Write c_sigma = modelPhaseCurvatureLower sigma and
+%% u0 = modelPhaseInverseSlope F v. For the ORIGINAL cutoff chi(l,r,eta),
+%% assume l+2*eta+d <= u0 and u0+d <= r-2*eta, with d>0.
+%% The derived closed Morse window satisfies |inverse(z)-u0|<d.
+%% On it the actual weight is locally inverse'(z), so its orders 0, 2
+%% and 3 use the inverse orders 1, 3 and 4, independently of eta.
+%% The fixed finite original-model order is
+%%
+%%     bufferedLocalStationaryOrder =
+%%       morseInverseDerivativeOrder 1 +
+%%       morseInverseDerivativeOrder 3 +
+%%       morseInverseDerivativeOrder 4.
+%%
+%% The local quadratic error is C_sigma/(T*H). Both omitted ORIGINAL
+%% integral tails are bounded by
+%%
+%%     8*sqrt(sigma+1)/(T*H*c_sigma*pi).
+%%
+%% Choosing H = min(1,sqrt(c_sigma)/2)*d is justified by the actual
+%% plateau geometry. Thus `modelPhaseBufferedFourierMode_interior_uniform`
+%% proves C_sigma*N/(T*d) for the entire original physical mode, with its
+%% actual curvature amplitude and e(-1/8) factor unchanged.
+%%
+%% The actual slope's upper curvature bound converts frequency-edge gap
+%% lambda into physical distance N*lambda/(T*(sigma+1)).
+%% Stationary-image membership is derived, not assumed, by the frequency
+%% consumer. Both reciprocal edge distances sum to two harmonic sums,
+%% giving the exact integer-block logarithmic estimate.
+%%
+%% ### Actual transition and exterior pieces
+%%
+%% Set K=T/N and, for the same original cutoff, define
+%%
+%%     L = floor(K*F'(r-eta)),       U = ceil(K*F'(l+eta)),
+%%     P = ceil(K*F'(r-2*eta)),      Q = floor(K*F'(l+2*eta)).
+%%
+%% The proof derives L<=P<=U and L<=Q<=U without assuming P<Q.
+%% The literal transition set [L,U] \\ (P,Q) has at most
+%% 2*K*(sigma+1)*eta+6 integers. Every one of these modes uses the
+%% width-independent C_sigma*N/sqrt(T) curvature estimate; endpoint
+%% and exact-resonance frequencies remain included.
+%%
+%% The frequencies outside [L,U] use reciprocal distances from the
+%% ACTUAL cutoff-support slopes. Their critical points elsewhere in
+%% the original model interval are irrelevant because the original cutoff
+%% vanishes there. The two exterior blocks are summed exactly, not dropped.
+%%
+%% ### Original-source theorem and chosen width
+%%
+%% `modelPhase_buffered_source_sharp_expansion` begins with
+%% `exponentialSumAt F T N a b`. It assumes positive N,T, 0<eta<=1,
+%% N<=a, b<=2*N, and the explicit nonempty-plateau condition
+%% a/N+4*eta<b/N. Its original-model order is the finite order above.
+%% All constants C,D>=1 and E>0 are chosen before those physical data.
+%%
+%% Let A0,B0 be the original model-envelope core endpoints. The literal
+%% stationary sum is over P<q<Q, with l=a/N and r=b/N. For any kappa>0,
+%% the far-tail radius is derived as
+%%
+%%     R = ceilNat(C*eta^(-2)*(1+abs(T))^2/(N*kappa))
+%%           + natAbs(A0) + natAbs(B0) + 1.
+%%
+%% The error is bounded by
+%%
+%%     4*N*eta + 2 + kappa
+%%       + (4/pi)*(2 + log((A0+R).toNat) + log((R-B0).toNat))
+%%       + D*(1 + log((Q-P-1).toNat))
+%%       + (2*(T/N)*(sigma+1)*eta+6)*E*N/sqrt(T)
+%%       + (4/pi)*(2 + log((L-A0).toNat) + log((B0-U).toNat)).
+%%
+%% All integer casts and interval conventions are explicit in Lean;
+%% log(0)=0 is retained when a block is empty. This is an assembled
+%% original-source estimate, not a conditional consequence of an assumed
+%% stationary-error certificate.
+%%
+%% `modelPhase_buffered_source_inverse_sqrt_expansion` chooses
+%% eta=1/sqrt(T) and kappa=1 for T>=1. Its radius becomes
+%%
+%%     R = ceilNat(C*T*(1+T)^2/N) + natAbs(A0) + natAbs(B0) + 1.
+%%
+%% Its nonlogarithmic error is
+%%
+%%     (4+6*E)*N/sqrt(T) + 3 + 2*E*(sigma+1).
+%%
+%% The remaining terms are the explicit logarithms above. The long-interval
+%% condition is a/N+4/sqrt(T)<b/N. In the complementary short regime,
+%% `norm_exponentialSumAt_le_buffered_short` proves the actual source bound
+%% 4*N*eta+1, without phase assumptions or an unproved cardinality claim.
+%% No new global source theorem silently assumes that the plateau is nonempty.
+%%
+%% ### Green-node semantic checks
+%%
+%% - QLJ: `bufferedMorseWeight_local_jet_bound` derives every needed local
+%%   weight derivative from the ORIGINAL buffered cutoff and the ACTUAL
+%%   smooth inverse. `modelPhaseMorseWindow_mem_and_inverse` proves the
+%%   closed central window belongs to the moving image and stays within the
+%%   cutoff plateau. Local equality removes remote transition derivatives.
+%%   The generic quadratic estimate uses only the closed central derivative
+%%   budgets; it does not replace the weight with a different function.
+%% - QWI: `modelPhaseMorse_window_integral` transports the original
+%%   central integral by the actual inverse and its derivative. The original
+%%   phase, cutoff, complex Fourier sign, and endpoint images are retained.
+%%   `norm_bufferedNormalizedMode_sub_window_le` estimates BOTH omitted
+%%   original-variable tails using their derived slope gaps and the original
+%%   cutoff's variation, not an assumed transformed-tail estimate.
+%% - QIE: `modelPhaseBufferedFourierMode_interior_uniform` consumes QLJ
+%%   and QWI to bound the ENTIRE original physical Fourier mode minus its
+%%   actual uncut stationary main term by C_sigma*N/(T*d). The cutoff is
+%%   proved to equal one at the critical point. The constant precedes all
+%%   endpoints, widths, phases, physical scales and distances; the finite
+%%   model order is `bufferedLocalStationaryOrder`. No eta<=1 assumption
+%%   or inverse power of eta is used in this theorem.
+%% - QIS: `modelPhaseBufferedFourierMode_interior_frequency_uniform`
+%%   derives stationary-image membership and physical critical-point
+%%   distances from the two actual plateau-endpoint slope gaps.
+%%   `modelPhaseBufferedInteriorBlock_error` then consumes these estimates
+%%   for EVERY integer in (A,B), using both reciprocal edge distances and
+%%   two harmonic sums. It returns C_sigma*(1+log((B-A-1).toNat)),
+%%   including empty and reversed blocks, without supplied per-mode bounds.
+%% - QTR: `modelPhaseBufferedTransition_card_le` derives the actual
+%%   support/plateau floor-ceiling endpoints and counts the literal set
+%%   difference. It is at most 2*(T/N)*(sigma+1)*eta+6.
+%%   `modelPhaseBufferedTransition_error` consumes that set and the
+%%   all-frequency curvature theorem. `norm_bufferedModes_support_blocks_le_log`
+%%   estimates every further mode using the ACTUAL cutoff-support slopes,
+%%   even if its phase has a critical point elsewhere in (1,2).
+%% - QSS: `modelPhase_buffered_source_inverse_sqrt_expansion` starts at
+%%   the original closed natural-endpoint exponential sum, consumes the
+%%   genuine Poisson core, QIS, QTR, and its original far-tail tolerance
+%%   radius. It assembles only the actual stationary main terms over the
+%%   derived plateau integer interval, with every other mode paid for.
+%%   The cutoff width is chosen as T^(-1/2) in the theorem, not suggested
+%%   afterward. `norm_exponentialSumAt_le_buffered_short` proves the
+%%   genuine short-source fallback, including empty/reversed/singleton sums.
+%%   This does not by itself supply the remaining canonical chart assembly.
+%%
+%% ### Remaining whole-proof obligations
+%%
+%% The old global eta^(-3) stationary bound remains a valid historical
+%% theorem but is no longer the obstacle for this sharp source route.
+%% The new theorem has NOT yet been substituted into a complete uniform
+%% beta-reflection proof.
+%%
+%% Continue by controlling its explicit harmonic lengths and chosen
+%% polynomial far-tail radius in the physical power windows. Assemble the
+%% actual plateau integer main interval through the canonical dual charts,
+%% including all moving endpoint/reference-window conventions. The existing
+%% finite chart cover is on a fixed interior reference-slope window; it is
+%% not a proof that every moving plateau interval is covered.
+%%
+%% Then consume the checked main-block beta estimate, complete the physical
+%% alpha-to-1-alpha window and epsilon transport, and prove full beta
+%% reflection and the general B process. DBT and DUR remain OPEN.
+%% All 42 aggregate checklist checkboxes are unchanged. The full goal is
+%% active and unfinished; this checkpoint is not its acceptance test.
+%%
+%% ### Preservation and mandatory runners
+%%
+%% The printed-Lemma-62 singleton counterexample is preserved. The corrected
+%% independent rho/k and rho*/k witnesses keep their unrelated unrestricted
+%% fifth coordinates. The Heath--Brown energy relation, exact energy
+%% optimization, and all nine repaired Add-est clauses are unchanged.
+%% No false s'/s scaling or third witness is reintroduced.
+%%
+%% Twelve new production modules are added to the root imports and exact
+%% runner backing inventory. All 44 new public theorems have explicit axiom
+%% audits and exact-signature regressions. Five additional regressions
+%% cover empty/one/two-term harmonic arithmetic, the actual singleton
+%% source bound, and the T=1 transition-cost specialization: 49 examples.
+%%
+%% Keep `run_tao_trudgian_yang_build.bat` and foundation
+%% `run_lake_build.bat` mandatory and operational. Update the production
+%% imports, backing inventory, public audits, semantic regressions and docs
+%% as needed; rerun BOTH BATs after Lean or integration edits. Never relax
+%% their warning, dependency, integrity, coverage, or output gates.
+%%
+%% ### Verification
+%%
+%% Both mandatory BAT runners passed on 22 September 2026 with exit code 0,
+%% zero Lean warnings/errors/tactic suggestions, and passing integrity and
+%% dependency gates. The target covers 656 production-package files,
+%% scans 667 Lean files, and audits 5778 imported/target declarations.
+%% All 44 new explicit audits and 49 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-113320-9230abb9.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_113331.log).
+%% All 315 checkpoint source/integration/runner hashes agree before and
+%% after the BATs. The graph has 258 nodes and 713 resolved, nonduplicate
+%% edges; all 42 aggregate checklist checkboxes are unchanged.
+%% The full goal remains unfinished.
+%%
+
+%% ## Uniform source power error and full moving-slope geometry — previous checkpoint
+%%
+%% The original source now satisfies the uniform comparison
+%% C_sigma,epsilon*(N/sqrt(T)+T^epsilon), with constants chosen before all
+%% physical data. The actual retained plateau integers are used in the long
+%% branch; the genuine source cardinality pays for the entire short branch.
+%% Every retained frequency has a derived actual critical point and an
+%% explicit positive endpoint margin.
+%%
+%% The full actual slope image, under delta<=min(2^(-sigma)/2,1), lies in
+%% [2^(-sigma)/2,2]. Inverse-point stability and every original derivative
+%% comparison at the explicit reciprocal reference point now hold there,
+%% including outside the strict reference interval. This does not assume
+%% smoothness of the original phase outside [1,2].
+%%
+%% Public consumers: `modelPhase_source_sharp_comparison`,
+%% `modelPhaseSharpStationarySet_critical_geometry`, and
+%% `modelPhaseInverse_iteratedDeriv_expanded_reference_error`.
+%% See the latest Goal Prompt for exact signatures, bounds and green-node
+%% checks. Higher inverse/Legendre errors on the expanded window, exact
+%% moving canonical charts, physical power-window transport, full beta
+%% reflection and the general B process remain OPEN under EPZAE-09/10.
+%% All 42 aggregate checkboxes are unchanged.
+%%
+%% Six new modules, 23 public audits and 27 regressions are integrated.
+%% The permanent counterexample and corrected powering/Heath--Brown/
+%% optimization/nine-clause Add-est chain are unchanged.
+%% Both build BATs remain mandatory and must track production coverage.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 662 package files, scans 673
+%% Lean files and audits 5817 discovered target theorems plus 5 imported
+%% anchors (5822 declarations). All 23 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 27 regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-120938-14509d95.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_120949.log).
+%% All 321 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Six source texts and four integration texts also match their
+%% normalized snapshots. The graph has 262 nodes and 722 resolved,
+%% nonduplicate edges; all 42 aggregate checkboxes are unchanged.
+%% The counterexample and repaired energy chain remain unchanged.
+
+%% ## Moving canonical Taylor extensions and retained-frequency coverage — previous checkpoint
+%%
+%% The actual Legendre error now has a globally smooth moving-endpoint
+%% Taylor extension, exact on its retained plateau, with uniform finite
+%% derivative bounds independent of the shrinking buffer width. Full-image
+%% inverse/reference jet estimates and a five-region proof supply the bounds;
+%% no exterior regularity of the original phase is assumed.
+%%
+%% `modelPhase_source_canonicalTaylorPhase` chooses its model tolerance
+%% before the source data, derives h=min(c_sigma,1)/(4*sqrt(T)) and the anchor
+%% F'(3/2), proves the full closed-[1,2] canonical model condition, and proves
+%% exact phase identities for EVERY retained stationary integer.
+%% It does not assert that all integers belong to one multiplicative chart.
+%%
+%% The finite positive-slope chart partition, whole stationary main-sum beta
+%% bound, physical power-window transport, beta reflection and general
+%% B process remain OPEN under EPZAE-09/10. All 42 aggregate checkboxes are
+%% unchanged. See the latest Goal Prompt for the exact formulas, finite input
+%% orders, constant dependencies and four green-node semantic checks.
+%%
+%% Eighteen modules, 53 public audits and 60 regressions are integrated.
+%% The permanent counterexample and corrected powering/Heath--Brown/
+%% optimization/all-nine-Add-est chain are preserved.
+%% Both build BATs remain mandatory and must track production coverage.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 680 package files, scans 691
+%% Lean files and audits 5904 discovered target theorems plus 5 imported
+%% anchors (5909 declarations). All 53 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 60 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-130811-0ad529b7.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_130808.log).
+%% All 339 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Eighteen source texts and four integration texts also match
+%% their normalized snapshots. The graph has 266 nodes and 732 edges, with
+%% no duplicate nodes or unresolved endpoints; all 42 aggregate checkboxes
+%% are unchanged. The counterexample and repaired energy chain remain unchanged.
+
+%% ## Full source chart assembly and the analytic B-process — previous checkpoint
+%%
+%% The exact finite positive-slope grid now partitions EVERY original
+%% retained stationary integer into contiguous natural-number chart blocks.
+%% The moving Taylor phases, actual amplitude variation and upstream beta
+%% bounds are assembled, with physical dual windows derived from N,T.
+%% `sourceExponentialSum_reflection_estimate` proves the complete original
+%% sum bound, including C*(N/sqrt(T)+T^epsilon) source error.
+%%
+%% The resulting nonasymptotic reflection bound has exponent
+%% max(0,beta+1/2-alpha). Its max is removed only when the reflected exponent
+%% is proved nonnegative. The full beta-reflection identity remains OPEN.
+%%
+%% `ExponentPair.bProcess` now proves the paper's analytic transformation
+%% (k,l)->(l-1/2,k+1/2); its target affine line is nonnegative by the triangle
+%% conditions. It does not assume the still-open exact reflection identity.
+%% The next reflection obligation is a genuine beta lower bound sufficient
+%% to remove the zero envelope. A and C processes remain open, so EPZAE-10
+%% is not crossed out. All 42 aggregate checkbox states are unchanged.
+%%
+%% Eleven modules, 35 public audits and 41 regressions are integrated.
+%% The printed counterexample, corrected independent powering witnesses,
+%% Heath--Brown energy relation, exact optimization and all nine repaired
+%% Add-est clauses are unchanged. BOTH build BATs remain mandatory and
+%% their imports, inventory and audits must track production changes.
+%% See the current Goal Prompt for quantifiers and all five green-node tests.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 691 package files, scans 702
+%% Lean files and audits 5960 discovered target theorems plus 5 imported
+%% anchors (5965 declarations). All 35 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 41 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-135040-f8df686c.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_135036.log).
+%% All 350 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Eleven source texts and four integration texts also match
+%% their normalized snapshots. The graph has 270 nodes and 740 edges, with
+%% no duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+%% checkbox states are unchanged. The counterexample and completed repaired
+%% energy chain remain unchanged. These checks verify this recorded scope;
+%% they do not assert whole-goal completion.
+
+%% ## Exact beta reflection from coherent source sums — previous checkpoint
+%%
+%% `exponentSumGrowthExponent_reflection` now proves the exact printed
+%% identity beta(1-alpha)=1/2-alpha+beta(alpha) for every 0<=alpha<=1,
+%% including endpoints. Convex closure, closed two-way duality and the
+%% endpoint values were already proved; all EPZAE-09 mathematical
+%% acceptance clauses are now supplied.
+%%
+%% The new lower-bound proof is independent of reflection and the B-process.
+%% It constructs actual phases log(u)+c*(u-1) with integral linear
+%% oscillation at integer N, controls every finite model jet, and sums
+%% a genuine closed coherent block. Beyond every threshold it produces
+%% T^alpha=N and norm(original sum)>=T^(alpha-1/2)/8, proving
+%% beta(alpha)>=alpha-1/2. This removes the zero envelope from the
+%% previous complete original-source estimate; the two reflected
+%% inequalities then give equality. No stronger alpha/2 bound is claimed.
+%%
+%% Six modules, 18 public audits and 24 regressions are integrated.
+%% EPZAE-10 remains OPEN: its general B-process is proved, A and C are not.
+%% Continue with those analytic processes and the remaining whole-proof
+%% obligations; this checkpoint does not complete the full goal.
+%%
+%% The printed counterexample, corrected independent powering witnesses,
+%% Heath--Brown relation, exact energy optimization and all nine repaired
+%% Add-est clauses remain unchanged. BOTH build BATs remain mandatory,
+%% and production imports, inventory and audits must track source changes.
+%% See the current Goal Prompt for quantifiers and semantic checks.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 697 package files, scans 708
+%% Lean files and audits 5990 discovered target theorems plus 5 imported
+%% anchors (5995 declarations). All 18 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 24 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-141433-3e901ee8.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_141443.log).
+%% All 356 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Six source texts and four integration texts also match their
+%% normalized snapshots. The graph has 274 nodes and 748 edges, with no
+%% duplicate nodes or edges and no unresolved endpoints. There are still
+%% 42 aggregate checkboxes: only EPZAE-09 changes to complete; all others
+%% retain their status. The counterexample and completed repaired energy
+%% chain are unchanged. These checks verify this recorded scope, not
+%% whole-goal completion.
+
+%% ## Domain-preserving A-process models and source differencing — previous checkpoint
+%%
+%% The A-process now has a domain-preserving shifted-model constructor,
+%% exact original-source correlation identities, and a summed-correlation
+%% Weyl inequality on the literal source exponential sum.
+%%
+%% The constructed phase uses affine compression inside [1,2] and has
+%% model parameter sigma+1, with every requested finite derivative and
+%% both endpoints controlled by one tolerance chosen before the source.
+%% Its physical parameters are exactly N'=N-r and T'=sigma*T*r/N;
+%% the reindexed integers and conjugation are proved, including empty
+%% overlaps. The analytic exponent-pair consumer derives its model and
+%% endpoint conditions but explicitly retains C<=T' and N'<=T'.
+%%
+%% `source_exponentialSum_weyl` constructs the actual padded source
+%% sequence and keeps 2*H times the SUM of nonzero correlations. It has
+%% no assumed analytic estimate. The small-dual-parameter branch and
+%% integer shift optimization remain OPEN; A is not yet proved.
+%% EPZAE-09 and the B-process remain complete. C remains open.
+%% All 42 aggregate checkbox states are unchanged.
+%%
+%% Eleven modules, 32 public audits and 39 regressions are integrated.
+%% The printed counterexample and the corrected powering/Heath--Brown/
+%% optimization/all-nine-Add-est chain remain unchanged. BOTH build BATs
+%% remain mandatory and must track production imports, inventory and audits.
+%% See the current Goal Prompt for exact quantifiers and semantic checks.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 708 package files, scans 719
+%% Lean files and audits 6069 discovered target theorems plus 5 imported
+%% anchors (6074 declarations). All 32 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 39 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-150004-71e72f6e.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_150014.log).
+%% All 367 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Eleven source texts and four integration texts also match their
+%% normalized snapshots. The graph has 280 nodes and 760 edges, with no
+%% duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+%% checkbox states are unchanged. The counterexample and completed repaired
+%% energy chain are unchanged. These checks verify this recorded scope,
+%% not the still-open A-process or whole-goal completion.
+
+%% ## General analytic A-process from original source sums — current checkpoint
+%%
+%% The classical A-process is now proved for the paper's actual analytic
+%% exponent-pair predicate:
+%%
+%%     ExponentPair k l
+%%       ==> ExponentPair (k/(2*k+2)) (l/(2*k+2)+1/2).
+%%
+%% The public consumer is `ExponentPair.aProcess`. Its proof derives the
+%% closed shifted model, source reindexing and conjugation, all positive
+%% dual-height estimates, summed correlations, the original-source Weyl
+%% bound, a genuine natural-number shift and the full epsilon budget.
+%% It does not assume a transformed-phase estimate, a dual-height window,
+%% an optimization certificate, or the output exponent-pair estimate.
+%%
+%% The formerly open small-height branch is proved by the full closed-source
+%% `norm_exponentialSumAt_le_firstDerivative`; curvature handles transition
+%% heights, and `ExponentPair.allPositiveHeight_bound` combines every positive
+%% height with the actual input pair. `sourceShiftCorrelation_normalized_bound`
+%% links the result back to N,T,r, including the N^2/(T*r) term.
+%% `sum_sourceShiftCorrelation_le` retains its harmonic sum.
+%% `source_exponentialSum_differencing_bound` consumes the literal source sum.
+%%
+%% `integer_shift_optimization` uses an actual floor-comparable natural H;
+%% when that scale is too small, the original sum's cardinality supplies
+%% the separate branch. `aProcessOptimizationScale_balance` and
+%% `aProcessOptimizationScale_cost` link the optimum exactly to N,T.
+%% The logarithmic loss is absorbed by `aProcess_power_budget`.
+%% `source_exponentialSum_aProcess_bound` and
+%% `isExponentPairEstimateNonAsymptotic_aProcess` assemble every source
+%% interval, empty interval and bounded-N case with constants chosen first.
+%%
+%% Fifteen production modules, 33 explicit public-theorem audits and 40
+%% regressions are integrated. The extra fixtures include actual A/A/B
+%% compositions yielding (1/6,2/3), (1/14,11/14), and (2/7,4/7), the H=0/H=1
+%% harmonic endpoints, and two optimization-scale checks.
+%%
+%% EPZAE-09 and both A/B processes are complete; C remains OPEN, so EPZAE-10
+%% remains unchecked. D, Heath--Brown derivative inputs, certified beta
+%% tables, the four advertised pairs and the remaining density/public
+%% release obligations remain in the whole-proof goal. All 42 aggregate
+%% checkbox states are unchanged.
+%%
+%% The printed counterexample, corrected independent rho/k and rho*/k
+%% witnesses, unrestricted fifth coordinates, Heath--Brown energy relation,
+%% exact energy optimization and all nine repaired Add-est clauses are
+%% preserved. BOTH build BATs remain mandatory; keep their production
+%% imports, PowerShell inventory, audits and regression coverage synchronized.
+%%
+%% ### Verification
+%%
+%% Both mandatory BATs passed on 22 September 2026, exit code 0, with zero
+%% Lean warnings, errors, tactic suggestions or linter failures in their
+%% complete physical logs. The target covers 723 package files, scans 734
+%% Lean files and audits 6118 discovered target theorems plus 5 imported
+%% anchors (6123 declarations). All 33 new explicit audits occur once and
+%% use only permitted standard logical axioms; all 40 new regressions pass.
+%%
+%% Target: [verified build log](logs/tao-trudgian-yang-build-20260922-155044-98a95e32.log).
+%% Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_155054.log).
+%% All 382 checkpoint source/integration/runner hashes match before and after
+%% the BATs. Fifteen source texts and four integration texts also match their
+%% normalized snapshots. The graph has 281 nodes and 762 edges, with no
+%% duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
+%% checkbox states are unchanged. This verifies the exact analytic A-process,
+%% not C or whole-goal completion. The counterexample and the completed
+%% repaired energy chain remain unchanged.
 %%

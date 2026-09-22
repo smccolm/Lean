@@ -21500,4 +21500,1950 @@ example :
     (∑ n ∈ Finset.range 2, (1/((n+1 : ℕ) : ℝ)+1/((2-n : ℕ) : ℝ))) = 3 := by
   norm_num [Finset.sum_range_succ]
 
+example
+    {l r η : ℝ} (hη : 0 < η) (F : ℝ → ℝ) (T q : ℝ) :
+    modelPhaseNormalizedMode (modelPhaseBufferedCutoff l r η) F T q =
+      ∫ u in (l+η)..(r-η), (modelPhaseBufferedCutoff l r η u : ℂ)*(𝐞 (T*F u-q*u) : ℂ) := by
+  exact @modelPhaseBufferedNormalizedMode_eq_interval l r η hη F T q
+
+example
+    {F : ℝ → ℝ} {σ δ T N q l r η d : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hsep : l+2*η ≤ r) (hd : 0 < d)
+    (hgap : q ≤ (T/N)*deriv F (r-η)-d ∨
+      (T/N)*deriv F (l+η)+d ≤ q) :
+    ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+      4/(d*Real.pi) := by
+  exact @norm_modelPhaseBufferedFourierMode_of_support_gap F σ δ T N q l r η d hσ hδ hF hT hN hη hl hr hsep hd hgap
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hsep : l+2*η ≤ r)
+    (Q : ℤ) (hQ : (T/N)*deriv F (l+η) ≤ (Q : ℝ)) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)+((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) := by
+  exact @sum_norm_bufferedModes_support_right_le_harmonic F σ δ T N l r η hσ hδ hF hT hN hη hl hr hsep Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hsep : l+2*η ≤ r)
+    (Q : ℤ) (hQ : (Q : ℝ) ≤ (T/N)*deriv F (r-η)) (L : ℕ) :
+    (∑ n ∈ Finset.range L,
+      ‖modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((Q : ℝ)-((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) := by
+  exact @sum_norm_bufferedModes_support_left_le_harmonic F σ δ T N l r η hσ hδ hF hT hN hη hl hr hsep Q hQ L
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hsep : l+2*η ≤ r)
+    (Lminus Lplus : ℕ) :
+    ‖(∑ n ∈ Finset.range Lminus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌊(T/N)*deriv F (r-η)⌋ : ℤ)-((n+1 : ℕ) : ℝ)))+
+      (∑ n ∈ Finset.range Lplus,
+      modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N
+        ((⌈(T/N)*deriv F (l+η)⌉ : ℤ)+((n+1 : ℕ) : ℝ)))‖ ≤
+      (4/Real.pi)*(2+Real.log (Lminus : ℝ)+Real.log (Lplus : ℝ)) := by
+  exact @norm_bufferedModes_support_blocks_le_log F σ δ T N l r η hσ hδ hF hT hN hη hl hr hsep Lminus Lplus
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r) :
+    modelPhaseBufferedSupportLower F r η T N ≤ modelPhaseBufferedPlateauLower F r η T N ∧
+      modelPhaseBufferedPlateauLower F r η T N ≤ modelPhaseBufferedSupportUpper F l η T N ∧
+      modelPhaseBufferedSupportLower F r η T N ≤ modelPhaseBufferedPlateauUpper F l η T N ∧
+      modelPhaseBufferedPlateauUpper F l η T N ≤ modelPhaseBufferedSupportUpper F l η T N := by
+  exact @modelPhaseBufferedBand_endpoints F σ δ T N l r η hσ hδ hF hT hN hη hl hr hflat
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r) :
+    ((Finset.Icc (modelPhaseBufferedSupportLower F r η T N)
+      (modelPhaseBufferedPlateauLower F r η T N)).card : ℝ) ≤ (T/N)*(σ+1)*η+3 ∧
+    ((Finset.Icc (modelPhaseBufferedPlateauUpper F l η T N)
+      (modelPhaseBufferedSupportUpper F l η T N)).card : ℝ) ≤ (T/N)*(σ+1)*η+3 := by
+  exact @modelPhaseBufferedBand_card_bounds F σ δ T N l r η hσ hδ hF hT hN hη hl hr hflat
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r) :
+    (((Finset.Icc (modelPhaseBufferedSupportLower F r η T N)
+        (modelPhaseBufferedSupportUpper F l η T N)) \
+      (Finset.Ioo (modelPhaseBufferedPlateauLower F r η T N)
+        (modelPhaseBufferedPlateauUpper F l η T N))).card : ℝ) ≤
+      2*(T/N)*(σ+1)*η+6 := by
+  exact @modelPhaseBufferedTransition_card_le F σ δ T N l r η hσ hδ hF hT hN hη hl hr hflat
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r) :
+    modelPhaseCoreLower σ δ T N ≤ modelPhaseBufferedSupportLower F r η T N ∧
+      modelPhaseBufferedSupportUpper F l η T N ≤ modelPhaseCoreUpper δ T N := by
+  exact @modelPhaseBufferedSupport_inside_core F σ δ T N l r η hσ hδ hF hT hN hη hl hr hflat
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ 1 δ → 0 < T → 0 < N →
+        ‖∑ q ∈ (Finset.Icc (modelPhaseBufferedSupportLower F r η T N)
+            (modelPhaseBufferedSupportUpper F l η T N)) \
+          (Finset.Ioo (modelPhaseBufferedPlateauLower F r η T N)
+            (modelPhaseBufferedPlateauUpper F l η T N)),
+          modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q‖ ≤
+          (2*(T/N)*(σ+1)*η+6)*C*N/Real.sqrt T := by
+  exact @modelPhaseBufferedTransition_error σ hσ
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ → 0 < T → 0 < N →
+        let L := modelPhaseBufferedSupportLower F r η T N
+        let U := modelPhaseBufferedSupportUpper F l η T N
+        let A := modelPhaseBufferedPlateauLower F r η T N
+        let B := modelPhaseBufferedPlateauUpper F l η T N
+        ‖(∑ q ∈ Finset.Icc L U, modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q)-
+          (∑ q ∈ Finset.Ioo A B, modelPhaseStationaryMainTerm F T N q)‖ ≤
+          C*(1+Real.log ((B-A-1).toNat : ℝ))+
+            (2*(T/N)*(σ+1)*η+6)*D*N/Real.sqrt T := by
+  exact @modelPhaseBufferedSupportCore_error σ hσ
+
+example {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (F : ℝ → ℝ) (δ T N : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ → 0 < T → 0 < N →
+        let A := modelPhaseCoreLower σ δ T N
+        let B := modelPhaseCoreUpper δ T N
+        let L := modelPhaseBufferedSupportLower F r η T N
+        let U := modelPhaseBufferedSupportUpper F l η T N
+        let P := modelPhaseBufferedPlateauLower F r η T N
+        let Q := modelPhaseBufferedPlateauUpper F l η T N
+        ‖(∑ q ∈ Finset.Icc A B, modelPhaseFourierMode (modelPhaseBufferedCutoff l r η) F T N q)-
+          (∑ q ∈ Finset.Ioo P Q, modelPhaseStationaryMainTerm F T N q)‖ ≤
+          C*(1+Real.log ((Q-P-1).toNat : ℝ))+
+            (2*(T/N)*(σ+1)*η+6)*D*N/Real.sqrt T+
+            (4/Real.pi)*(2+Real.log ((L-A).toNat : ℝ)+Real.log ((B-U).toNat : ℝ)) := by
+  exact @modelPhaseBufferedSharpCore_error σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∀ (N η : ℝ) (a b : ℕ),
+        0 < N → 0 < η → η ≤ 1 → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        (a : ℝ)/N+4*η < (b : ℝ)/N →
+        ∀ (F : ℝ → ℝ) (δ T ε : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+          0 < T → 0 < ε →
+          let A := modelPhaseCoreLower σ δ T N
+          let B := modelPhaseCoreUpper δ T N
+          let L := modelPhaseBufferedSupportLower F ((b : ℝ)/N) η T N
+          let U := modelPhaseBufferedSupportUpper F ((a : ℝ)/N) η T N
+          let P := modelPhaseBufferedPlateauLower F ((b : ℝ)/N) η T N
+          let Q := modelPhaseBufferedPlateauUpper F ((a : ℝ)/N) η T N
+          let R : ℕ := ⌈C*(η⁻¹)^2*(1+|T|)^2/(N*ε)⌉₊+A.natAbs+B.natAbs+1
+          ‖exponentialSumAt F T N a b-
+            (∑ q ∈ Finset.Ioo P Q, modelPhaseStationaryMainTerm F T N q)‖ ≤
+            4*N*η+2+ε+
+              (4/Real.pi)*(2+Real.log ((A+(R : ℤ)).toNat : ℝ)+
+                Real.log (((R : ℤ)-B).toNat : ℝ))+
+              D*(1+Real.log ((Q-P-1).toNat : ℝ))+
+              (2*(T/N)*(σ+1)*η+6)*E*N/Real.sqrt T+
+              (4/Real.pi)*(2+Real.log ((L-A).toNat : ℝ)+Real.log ((B-U).toNat : ℝ)) := by
+  exact @modelPhase_buffered_source_sharp_expansion σ hσ
+
+example {T N : ℝ} (hN : 0 < N) (σ D η : ℝ) :
+    (2*(T/N)*(σ+1)*η+6)*D*N/Real.sqrt T =
+      2*D*(σ+1)*η*Real.sqrt T+6*D*N/Real.sqrt T := by
+  exact @bufferedTransitionCost_eq T N hN σ D η
+
+example {T N : ℝ} (hT : 0 < T) (hN : 0 < N) (σ D : ℝ) :
+    (2*(T/N)*(σ+1)*(Real.sqrt T)⁻¹+6)*D*N/Real.sqrt T =
+      2*D*(σ+1)+6*D*N/Real.sqrt T := by
+  exact @bufferedTransitionCost_inverse_sqrt T N hT hN σ D
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∀ (N T : ℝ) (a b : ℕ),
+        0 < N → 1 ≤ T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+        ∀ (F : ℝ → ℝ) (δ : ℝ),
+          δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+          IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+          let η := (Real.sqrt T)⁻¹
+          let A := modelPhaseCoreLower σ δ T N
+          let B := modelPhaseCoreUpper δ T N
+          let L := modelPhaseBufferedSupportLower F ((b : ℝ)/N) η T N
+          let U := modelPhaseBufferedSupportUpper F ((a : ℝ)/N) η T N
+          let P := modelPhaseBufferedPlateauLower F ((b : ℝ)/N) η T N
+          let Q := modelPhaseBufferedPlateauUpper F ((a : ℝ)/N) η T N
+          let R : ℕ := ⌈C*T*(1+T)^2/N⌉₊+A.natAbs+B.natAbs+1
+          ‖exponentialSumAt F T N a b-
+            (∑ q ∈ Finset.Ioo P Q, modelPhaseStationaryMainTerm F T N q)‖ ≤
+            (4+6*E)*N/Real.sqrt T+3+2*E*(σ+1)+
+              (4/Real.pi)*(2+Real.log ((A+(R : ℤ)).toNat : ℝ)+
+                Real.log (((R : ℤ)-B).toNat : ℝ))+
+              D*(1+Real.log ((Q-P-1).toNat : ℝ))+
+              (4/Real.pi)*(2+Real.log ((L-A).toNat : ℝ)+Real.log ((B-U).toNat : ℝ)) := by
+  exact @modelPhase_buffered_source_inverse_sqrt_expansion σ hσ
+
+example
+    {N η : ℝ} (hN : 0 < N) (hη : 0 ≤ η)
+    (F : ℝ → ℝ) (T : ℝ) (a b : ℕ)
+    (hshort : (b : ℝ)/N ≤ (a : ℝ)/N+4*η) :
+    ‖exponentialSumAt F T N a b‖ ≤ 4*N*η+1 := by
+  exact @norm_exponentialSumAt_le_buffered_short N η hN hη F T a b hshort
+
+
+example {N : ℝ} (hN : 0 < N) (F : ℝ → ℝ) (T : ℝ) (a : ℕ) :
+    ‖exponentialSumAt F T N a a‖ ≤ 1 := by
+  simpa only [mul_zero,zero_add] using norm_exponentialSumAt_le_buffered_short hN (η := 0) le_rfl F T a a (by simp)
+
+example {N : ℝ} (hN : 0 < N) (σ D : ℝ) :
+    (2*(1/N)*(σ+1)+6)*D*N = 2*D*(σ+1)+6*D*N := by
+  simpa using bufferedTransitionCost_inverse_sqrt (T := 1) (by norm_num) hN σ D
+
 end InteriorStationaryRegression
+
+section SharpSourceBudgetRegression
+
+open Set Expdb
+open scoped BigOperators ContDiff
+
+example
+    {σ δ T N : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hδ₁ : δ ≤ 1)
+    (hT : 0 ≤ T) (hN : 1 ≤ N) :
+    ((modelPhaseCoreLower σ δ T N).natAbs : ℝ) ≤ T+1 ∧
+      ((modelPhaseCoreUpper δ T N).natAbs : ℝ) ≤ 2*T+1 := by
+  exact @modelPhaseCore_natAbs_bounds σ δ T N hσ hδ hδ₁ hT hN
+
+example
+    {σ δ T N C : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hδ₁ : δ ≤ 1)
+    (hT : 0 ≤ T) (hN : 1 ≤ N) (hC : 0 ≤ C) :
+    ((⌈C*T*(1+T)^2/N⌉₊+(modelPhaseCoreLower σ δ T N).natAbs+
+      (modelPhaseCoreUpper δ T N).natAbs+1 : ℕ) : ℝ) ≤
+      (C+4)*(T+1)^3 := by
+  exact @modelPhaseSharpRadius_le_polynomial σ δ T N C hσ hδ hδ₁ hT hN hC
+
+example
+    {n : ℕ} {K T : ℝ} (hK : 1 ≤ K) (hT : 0 ≤ T)
+    (hn : (n : ℝ) ≤ K*(T+1)^3) :
+    Real.log (n : ℝ) ≤ Real.log K+3*Real.log (T+1) := by
+  exact @log_nat_le_polynomial_budget n K T hK hT hn
+
+example
+    {σ δ T N C : ℝ} (hσ : 0 ≤ σ) (hδ : 0 ≤ δ) (hδ₁ : δ ≤ 1)
+    (hT : 0 ≤ T) (hN : 1 ≤ N) (hC : 0 ≤ C) :
+    let A := modelPhaseCoreLower σ δ T N
+    let B := modelPhaseCoreUpper δ T N
+    let R : ℕ := ⌈C*T*(1+T)^2/N⌉₊+A.natAbs+B.natAbs+1
+    (((A+(R : ℤ)).toNat : ℕ) : ℝ) ≤ (C+6)*(T+1)^3 ∧
+      ((((R : ℤ)-B).toNat : ℕ) : ℝ) ≤ (C+6)*(T+1)^3 := by
+  exact @modelPhaseSharpFarLengths_le_polynomial σ δ T N C hσ hδ hδ₁ hT hN hC
+
+example
+    {F : ℝ → ℝ} {σ δ T N l r η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r) :
+    let A := modelPhaseCoreLower σ δ T N
+    let B := modelPhaseCoreUpper δ T N
+    let L := modelPhaseBufferedSupportLower F r η T N
+    let U := modelPhaseBufferedSupportUpper F l η T N
+    let P := modelPhaseBufferedPlateauLower F r η T N
+    let Q := modelPhaseBufferedPlateauUpper F l η T N
+    ((L-A).toNat : ℝ) ≤ 3*(T/N)+3 ∧
+      ((B-U).toNat : ℝ) ≤ 3*(T/N)+3 ∧
+      ((Q-P-1).toNat : ℝ) ≤ 3*(T/N)+3 := by
+  exact @modelPhaseBufferedInnerLengths_le F σ δ T N l r η hσ hδ hF hT hN hη hl hr hflat
+
+example {C T N : ℝ}
+    (hC : 0 ≤ C) (hT : 0 ≤ T) (hN : 1 ≤ N) :
+    3*(T/N)+3 ≤ (C+6)*(T+1)^3 := by
+  exact @three_scale_le_polynomial_budget C T N hC hT hN
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (N T : ℝ) (a b : ℕ),
+      1 ≤ N → 1 ≤ T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+      ∀ (F : ℝ → ℝ) (δ : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        ‖exponentialSumAt F T N a b-
+          (∑ q ∈ Finset.Ioo
+            (modelPhaseBufferedPlateauLower F ((b : ℝ)/N) ((Real.sqrt T)⁻¹) T N)
+            (modelPhaseBufferedPlateauUpper F ((a : ℝ)/N) ((Real.sqrt T)⁻¹) T N),
+            modelPhaseStationaryMainTerm F T N q)‖ ≤
+          M*(N/Real.sqrt T+1+Real.log (T+1)) := by
+  exact @modelPhase_buffered_source_uniform_error σ hσ
+
+example {T ε : ℝ} (hT : 1 ≤ T) (hε : 0 < ε) :
+    1+Real.log (T+1) ≤ (1+(2 : ℝ)^ε/ε)*T^ε := by
+  exact @one_add_log_add_one_le_rpow T ε hT hε
+
+example
+    {σ ε : ℝ} (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N T : ℝ) (a b : ℕ),
+      1 ≤ N → 1 ≤ T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+      ∀ (F : ℝ → ℝ) (δ : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        ‖exponentialSumAt F T N a b-
+          (∑ q ∈ Finset.Ioo
+            (modelPhaseBufferedPlateauLower F ((b : ℝ)/N) ((Real.sqrt T)⁻¹) T N)
+            (modelPhaseBufferedPlateauUpper F ((a : ℝ)/N) ((Real.sqrt T)⁻¹) T N),
+            modelPhaseStationaryMainTerm F T N q)‖ ≤
+          C*(N/Real.sqrt T+T^ε) := by
+  exact @modelPhase_buffered_source_power_error σ ε hσ hε
+
+example
+    {F : ℝ → ℝ} {T N : ℝ} {a b : ℕ}
+    (hlong : (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N) :
+    modelPhaseSharpStationarySet F T N a b =
+      Finset.Ioo
+        (modelPhaseBufferedPlateauLower F ((b : ℝ)/N) ((Real.sqrt T)⁻¹) T N)
+        (modelPhaseBufferedPlateauUpper F ((a : ℝ)/N) ((Real.sqrt T)⁻¹) T N) := by
+  exact @modelPhaseSharpStationarySet_of_long F T N a b hlong
+
+example
+    {F : ℝ → ℝ} {T N : ℝ} {a b : ℕ}
+    (hshort : (b : ℝ)/N ≤ (a : ℝ)/N+4*(Real.sqrt T)⁻¹) :
+    modelPhaseSharpStationarySet F T N a b = ∅ := by
+  exact @modelPhaseSharpStationarySet_of_short F T N a b hshort
+
+example
+    {σ ε : ℝ} (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N T : ℝ) (a b : ℕ),
+      1 ≤ N → 1 ≤ T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ∀ (F : ℝ → ℝ) (δ : ℝ),
+        δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+        IsApproximateModelPhaseFunction F σ bufferedLocalStationaryOrder δ →
+        ‖exponentialSumAt F T N a b-
+          (∑ q ∈ modelPhaseSharpStationarySet F T N a b,
+            modelPhaseStationaryMainTerm F T N q)‖ ≤ C*(N/Real.sqrt T+T^ε) := by
+  exact @modelPhase_source_sharp_comparison σ ε hσ hε
+
+example
+    {F : ℝ → ℝ} {l r η T N : ℝ} {q : ℤ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hq : q ∈ Finset.Ioo
+      (modelPhaseBufferedPlateauLower F r η T N)
+      (modelPhaseBufferedPlateauUpper F l η T N)) :
+    deriv F (r-2*η)+N/T ≤ (q : ℝ)*N/T ∧
+      (q : ℝ)*N/T+N/T ≤ deriv F (l+2*η) := by
+  exact @modelPhaseBufferedPlateau_frequency_gaps F l r η T N q hT hN hq
+
+example
+    {F : ℝ → ℝ} {σ δ l r η T N : ℝ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (hη : 0 < η)
+    (hl : 1 ≤ l) (hr : r ≤ 2) (hflat : l+4*η < r)
+    (hq : q ∈ Finset.Ioo
+      (modelPhaseBufferedPlateauLower F r η T N)
+      (modelPhaseBufferedPlateauUpper F l η T N)) :
+    (q : ℝ)*N/T ∈ modelPhaseSlopeRange F ∧
+      l+2*η+N/(T*(σ+1)) ≤ modelPhaseInverseSlope F ((q : ℝ)*N/T) ∧
+      modelPhaseInverseSlope F ((q : ℝ)*N/T)+N/(T*(σ+1)) ≤ r-2*η := by
+  exact @modelPhaseBufferedPlateau_critical_geometry F σ δ l r η T N q hσ hδ hF hT hN hη hl hr hflat hq
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N)
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet F T N a b) :
+    (q : ℝ)*N/T ∈ modelPhaseSlopeRange F ∧
+      (a : ℝ)/N+2*(Real.sqrt T)⁻¹+N/(T*(σ+1)) ≤
+        modelPhaseInverseSlope F ((q : ℝ)*N/T) ∧
+      modelPhaseInverseSlope F ((q : ℝ)*N/T)+N/(T*(σ+1)) ≤
+        (b : ℝ)/N-2*(Real.sqrt T)⁻¹ := by
+  exact @modelPhaseSharpStationarySet_critical_geometry F σ δ T N a b q hσ hδ hF hT hN ha hb hq
+
+example
+    {F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ} {v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    v ∈ Icc ((2 : ℝ)^(-σ)/2) 2 := by
+  exact @modelPhaseSlopeRange_positive_window F σ δ P v hσ hδ hF hv
+
+example
+    {l r : ℝ} (hl : 0 < l) (p : ℝ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ x ∈ Icc l r, ∀ y ∈ Icc l r,
+      |x^p-y^p| ≤ C*|x-y| := by
+  exact @real_rpow_lipschitz_on_positive_compact l r hl p
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ) (P : ℕ),
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ P δ →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |modelPhaseInverseSlope F v-v^(-σ⁻¹)| ≤ C*δ := by
+  exact @modelPhaseInverseSlope_expanded_model_error σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ 1 δ →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |deriv (modelPhaseLegendreDual F) v-v^(-σ⁻¹)| ≤ C*δ := by
+  exact @modelPhaseLegendreDual_expanded_firstDeriv_error σ hσ
+
+example
+    {l r : ℝ} (hl : 0 < l) (σ : ℝ) (p : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ x ∈ Icc l r, ∀ y ∈ Icc l r,
+      |iteratedDeriv p (modelPhase σ) x-iteratedDeriv p (modelPhase σ) y| ≤
+        C*|x-y| := by
+  exact @iteratedDeriv_modelPhase_positive_compact_lipschitz l r hl σ p
+
+example (σ : ℝ) :
+    0 < expandedModelPointLower σ := by
+  exact @expandedModelPointLower_pos σ
+
+example
+    {F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ} {v : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hv : v ∈ modelPhaseSlopeRange F) :
+    modelPhaseInverseSlope F v ∈ Icc (expandedModelPointLower σ) (expandedModelPointUpper σ) ∧
+      v^(-σ⁻¹) ∈ Icc (expandedModelPointLower σ) (expandedModelPointUpper σ) := by
+  exact @modelPhaseInverseSlope_expanded_points F σ δ P v hσ hδ hF hv
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (p : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ) (P : ℕ),
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ P δ → p ≤ P →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |iteratedDeriv (p+1) F (modelPhaseInverseSlope F v)-
+          iteratedDeriv (p+1) (referenceModelPrimitive σ) (v^(-σ⁻¹))| ≤ C*δ := by
+  exact @modelPhaseInverse_iteratedDeriv_expanded_reference_error σ hσ p
+
+example : Real.log (0 : ℝ) ≤ Real.log (1 : ℝ)+3*Real.log ((0 : ℝ)+1) := by
+  simpa only [Nat.cast_zero] using
+    log_nat_le_polynomial_budget (n := 0) le_rfl le_rfl (by norm_num)
+
+example : 1+Real.log ((1 : ℝ)+1) ≤ (1+(2 : ℝ)^(1 : ℝ)/1)*(1 : ℝ)^(1 : ℝ) := by
+  exact one_add_log_add_one_le_rpow le_rfl zero_lt_one
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    modelPhaseSharpStationarySet F T N a a = ∅ := by
+  apply modelPhaseSharpStationarySet_of_short
+  have h : 0 ≤ (Real.sqrt T)⁻¹ := inv_nonneg.mpr (Real.sqrt_nonneg T)
+  linarith
+
+example (F : ℝ → ℝ) (T : ℝ) {N : ℝ} (hN : 0 < N) {a b : ℕ} (hba : b ≤ a) :
+    modelPhaseSharpStationarySet F T N a b = ∅ := by
+  apply modelPhaseSharpStationarySet_of_short
+  have h : 0 ≤ (Real.sqrt T)⁻¹ := inv_nonneg.mpr (Real.sqrt_nonneg T)
+  have hab : (b : ℝ)/N ≤ (a : ℝ)/N :=
+    div_le_div_of_nonneg_right (by exact_mod_cast hba) hN.le
+  linarith
+
+end SharpSourceBudgetRegression
+
+section MovingTaylorExtensionRegression
+
+open Set Expdb Filter
+open scoped BigOperators ContDiff Topology
+
+example
+    {σ v : ℝ} (hσ : 0 < σ) (hv : 0 < v) :
+    HasDerivAt (fun w : ℝ => w^(-σ⁻¹))
+      (deriv (deriv (referenceModelPrimitive σ)) (v^(-σ⁻¹)))⁻¹ v := by
+  exact @reciprocalModel_hasDerivAt_inverse_curvature σ v hσ hv
+
+example
+    {σ v : ℝ} (hσ : 0 < σ) (hv : 0 < v) :
+    deriv (deriv (referenceModelPrimitive σ)) (v^(-σ⁻¹)) ≠ 0 := by
+  exact @referenceModelPrimitive_secondDeriv_reciprocal_ne_zero σ v hσ hv
+
+example
+    {σ v : ℝ} (hσ : 0 < σ) (hv : 0 < v) (j : ℕ) :
+    HasDerivAt (fun w => expandedReferenceInverseJet σ w j)
+      (inversePhaseEval (inversePhaseAtomDerivative j) (expandedReferenceInverseJet σ v)) v := by
+  exact @expandedReferenceInverseJet_hasDerivAt σ v hσ hv j
+
+example
+    {σ v : ℝ} (hσ : 0 < σ) (hv : 0 < v) (e : InversePhaseExpression) :
+    HasDerivAt (fun w => inversePhaseEval e (expandedReferenceInverseJet σ w))
+      (inversePhaseEval (inversePhaseDifferentiate e) (expandedReferenceInverseJet σ v)) v := by
+  exact @inversePhaseEval_expandedReferenceInverseJet_hasDerivAt σ v hσ hv e
+
+example
+    {σ v : ℝ} (hσ : 0 < σ) (hv : 0 < v) (n : ℕ) :
+    iteratedDeriv n (modelPhase σ⁻¹) v =
+      inversePhaseEval (inversePhaseDerivativeExpression n) (expandedReferenceInverseJet σ v) := by
+  exact @iteratedDeriv_modelPhase_expanded_inverseJet_formula σ v hσ hv n
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (K : ℕ) :
+    ∃ B : ℝ, 1 ≤ B ∧ ∀ v ∈ Icc ((2 : ℝ)^(-σ)/2) 2,
+      ∀ j ≤ K, |expandedReferenceInverseJet σ v j| ≤ B := by
+  exact @expandedReferenceInverseJet_uniform_bound σ hσ K
+
+example
+    {a b : ℝ} (ha : a ≠ 0) (hb : b ≠ 0) :
+    |a⁻¹-b⁻¹| ≤ |a-b| *|a⁻¹| *|b⁻¹| := by
+  exact @abs_inverse_sub_inverse_le_product a b ha hb
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (j : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ) (P : ℕ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      1 ≤ P → IsApproximateModelPhaseFunction F σ P δ → j ≤ P →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |modelPhaseInverseJet F v j-expandedReferenceInverseJet σ v j| ≤ C*δ := by
+  exact @modelPhaseInverseJet_expanded_reference_error σ hσ j
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (e : InversePhaseExpression) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ) (P : ℕ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      1 ≤ P → IsApproximateModelPhaseFunction F σ P δ →
+      inversePhaseOrder e ≤ P → ∀ v ∈ modelPhaseSlopeRange F,
+        |inversePhaseEval e (modelPhaseInverseJet F v)-
+          inversePhaseEval e (expandedReferenceInverseJet σ v)| ≤ C*δ := by
+  exact @inversePhaseEval_modelPhaseInverseJet_expanded_error σ hσ e
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ
+        (inversePhaseOrder (inversePhaseDerivativeExpression n)+1) δ →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |iteratedDeriv n (modelPhaseInverseSlope F) v-
+          iteratedDeriv n (modelPhase σ⁻¹) v| ≤ C*δ := by
+  exact @modelPhaseInverseSlope_expanded_allOrder_uniformity σ hσ n
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ
+        (inversePhaseOrder (inversePhaseDerivativeExpression n)+1) δ →
+      ∀ v ∈ modelPhaseSlopeRange F,
+        |iteratedDeriv (n+1) (modelPhaseLegendreDual F) v-
+          iteratedDeriv n (modelPhase σ⁻¹) v| ≤ C*δ := by
+  exact @modelPhaseLegendreDual_expanded_allOrder_uniformity σ hσ n
+
+example
+    {σ : ℝ} (hσ : 0 < σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ 1 δ →
+      ∀ v ∈ modelPhaseSlopeRange F, ∀ w ∈ modelPhaseSlopeRange F,
+        |anchoredLegendreError F σ w v| ≤ C*δ := by
+  exact @modelPhaseLegendreDual_expanded_anchored_bound σ hσ
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder Q) δ →
+      ∀ w ∈ modelPhaseSlopeRange F, ∀ v ∈ modelPhaseSlopeRange F,
+        ∀ n ≤ Q, |iteratedDeriv n (anchoredLegendreError F σ w) v| ≤ C*δ := by
+  exact @anchoredLegendreError_expanded_finite_uniformity σ hσ Q
+
+example (f : ℝ → ℝ) (Q : ℕ) (a : ℝ) :
+    ContDiff ℝ ∞ (finiteTaylorPolynomial f Q a) := by
+  exact @finiteTaylorPolynomial_contDiff f Q a
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) (a x : ℝ) :
+    HasDerivAt (finiteTaylorPolynomial f (Q+1) a)
+      (finiteTaylorPolynomial (deriv f) Q a x) x := by
+  exact @finiteTaylorPolynomial_succ_hasDerivAt f Q a x
+
+example
+    (f : ℝ → ℝ) (a : ℝ) {n Q : ℕ} (hn : n ≤ Q) (x : ℝ) :
+    iteratedDeriv n (finiteTaylorPolynomial f Q a) x =
+      finiteTaylorPolynomial (iteratedDeriv n f) (Q-n) a x := by
+  exact @iteratedDeriv_finiteTaylorPolynomial f a n Q hn x
+
+example
+    (f : ℝ → ℝ) (a : ℝ) {n Q : ℕ} (hn : n ≤ Q) :
+    iteratedDeriv n (finiteTaylorPolynomial f Q a) a = iteratedDeriv n f a := by
+  exact @finiteTaylorPolynomial_matches_jet f a n Q hn
+
+example
+    {f : ℝ → ℝ} {a x : ℝ} (hax : a ≠ x)
+    (hf : ContDiffAt ℝ ∞ f a) (n : ℕ) :
+    taylorWithinEval f n (uIcc a x) a x = finiteTaylorPolynomial f n a x := by
+  exact @taylorWithinEval_uIcc_eq_finiteTaylorPolynomial f a x hax hf n
+
+example
+    {f : ℝ → ℝ} {a x M : ℝ} (n : ℕ)
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ ∞ f y)
+    (hb : ∀ y ∈ uIcc a x, |iteratedDeriv (n+1) f y| ≤ M) :
+    |f x-finiteTaylorPolynomial f n a x| ≤
+      M*|x-a|^(n+1)/(n+1).factorial := by
+  exact @abs_finiteTaylorPolynomial_remainder_le f a x M n hf hb
+
+example (i j : ℕ) (f : ℝ → ℝ) :
+    iteratedDeriv i (iteratedDeriv j f) = iteratedDeriv (i+j) f := by
+  exact @iteratedDeriv_real_comp_order i j f
+
+example
+    {f : ℝ → ℝ} {a x M : ℝ} {j Q : ℕ} (hj : j ≤ Q)
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ ∞ f y)
+    (hb : ∀ y ∈ uIcc a x, |iteratedDeriv (Q+1) f y| ≤ M) :
+    |iteratedDeriv j (fun y => f y-finiteTaylorPolynomial f Q a y) x| ≤
+      M*|x-a|^(Q+1-j) := by
+  exact @abs_iteratedDeriv_finiteTaylorPolynomial_remainder_le f a x M j Q hj hf hb
+
+example
+    {χ f : ℝ → ℝ} {a x h A M : ℝ} {n Q : ℕ}
+    (hn : n ≤ Q) (hh : 0 < h) (hx : |x-a| ≤ h)
+    (hχ : ContDiffAt ℝ n χ x)
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ ∞ f y)
+    (hχb : ∀ i ≤ n, |iteratedDeriv i χ x| ≤ A*(h⁻¹)^i)
+    (hb : ∀ y ∈ uIcc a x, |iteratedDeriv (Q+1) f y| ≤ M) :
+    |iteratedDeriv n (fun y => χ y*(f y-finiteTaylorPolynomial f Q a y)) x| ≤
+      (2 : ℝ)^n*A*M*h^(Q+1-n) := by
+  exact @abs_iteratedDeriv_cutoff_taylor_remainder_le χ f a x h A M n Q hn hh hx hχ hf hχb hb
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (f : ℝ → ℝ) (a x h s t M : ℝ),
+      0 < h → h ≤ 1 → |s| ≤ 1 → |x-a| ≤ h →
+      (∀ y ∈ uIcc a x, ContDiffAt ℝ ∞ f y) →
+      (∀ y ∈ uIcc a x, |iteratedDeriv (Q+1) f y| ≤ M) →
+      ∀ n ≤ Q,
+        |iteratedDeriv n (fun y => Real.smoothTransition (s*y/h+t)*
+          (f y-finiteTaylorPolynomial f Q a y)) x| ≤ C*M := by
+  exact @smoothTransition_taylor_remainder_uniform_jets Q
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+1)) δ →
+      ∀ w ∈ modelPhaseSlopeRange F, ∀ a ∈ modelPhaseSlopeRange F,
+      ∀ x ∈ modelPhaseSlopeRange F, ∀ h s t : ℝ,
+        0 < h → h ≤ 1 → |s| ≤ 1 → |x-a| ≤ h → ∀ n ≤ Q,
+          |iteratedDeriv n (fun y =>
+            Real.smoothTransition (s*y/h+t)*
+              (anchoredLegendreError F σ w y-
+                finiteTaylorPolynomial (anchoredLegendreError F σ w) Q a y)) x| ≤ C*δ := by
+  exact @anchoredLegendreError_transition_remainder_uniformity σ hσ Q
+
+example {l h x : ℝ} (hh : 0 < h) (hx : l+2*h ≤ x) :
+    taylorLeftTransition l h x = 1 := by
+  exact @taylorLeftTransition_one l h x hh hx
+
+example {r h x : ℝ} (hh : 0 < h) (hx : x ≤ r-2*h) :
+    taylorRightTransition r h x = 1 := by
+  exact @taylorRightTransition_one r h x hh hx
+
+example {l h x : ℝ} (hh : 0 < h) (hx : x ≤ l+h) :
+    taylorLeftTransition l h x = 0 := by
+  exact @taylorLeftTransition_zero l h x hh hx
+
+example {r h x : ℝ} (hh : 0 < h) (hx : r-h ≤ x) :
+    taylorRightTransition r h x = 0 := by
+  exact @taylorRightTransition_zero r h x hh hx
+
+example
+    {f : ℝ → ℝ} {l r h : ℝ} (hh : 0 < h)
+    (hf : ∀ x ∈ Ioo l r, ContDiffAt ℝ ∞ f x) (Q : ℕ) :
+    ContDiff ℝ ∞ (taylorPastedExtension f Q l r h) := by
+  exact @taylorPastedExtension_contDiff f l r h hh hf Q
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : x ∈ Icc (l+2*h) (r-2*h)) :
+    taylorPastedExtension f Q l r h x = f x := by
+  exact @taylorPastedExtension_agrees f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : x ≤ r-2*h) :
+    taylorPastedExtension f Q l r h x =
+      finiteTaylorPolynomial f Q (l+2*h) x+
+        taylorLeftTransition l h x*(f x-finiteTaylorPolynomial f Q (l+2*h) x) := by
+  exact @taylorPastedExtension_left_formula f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : l+2*h ≤ x) :
+    taylorPastedExtension f Q l r h x =
+      finiteTaylorPolynomial f Q (r-2*h) x+
+        taylorRightTransition r h x*(f x-finiteTaylorPolynomial f Q (r-2*h) x) := by
+  exact @taylorPastedExtension_right_formula f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : x < r-2*h) :
+    taylorPastedExtension f Q l r h =ᶠ[𝓝 x]
+      (fun y => finiteTaylorPolynomial f Q (l+2*h) y+
+        taylorLeftTransition l h y*(f y-finiteTaylorPolynomial f Q (l+2*h) y)) := by
+  exact @taylorPastedExtension_eventuallyEq_left_formula f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : l+2*h < x) :
+    taylorPastedExtension f Q l r h =ᶠ[𝓝 x]
+      (fun y => finiteTaylorPolynomial f Q (r-2*h) y+
+        taylorRightTransition r h y*(f y-finiteTaylorPolynomial f Q (r-2*h) y)) := by
+  exact @taylorPastedExtension_eventuallyEq_right_formula f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hx : x ∈ Ioo (l+2*h) (r-2*h)) :
+    taylorPastedExtension f Q l r h =ᶠ[𝓝 x] f := by
+  exact @taylorPastedExtension_eventuallyEq_plateau f Q l r h x hh hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hgap : l+4*h < r) (hx : x < l+h) :
+    taylorPastedExtension f Q l r h =ᶠ[𝓝 x]
+      finiteTaylorPolynomial f Q (l+2*h) := by
+  exact @taylorPastedExtension_eventuallyEq_left_polynomial f Q l r h x hh hgap hx
+
+example
+    (f : ℝ → ℝ) (Q : ℕ) {l r h x : ℝ} (hh : 0 < h)
+    (hgap : l+4*h < r) (hx : r-h < x) :
+    taylorPastedExtension f Q l r h =ᶠ[𝓝 x]
+      finiteTaylorPolynomial f Q (r-2*h) := by
+  exact @taylorPastedExtension_eventuallyEq_right_polynomial f Q l r h x hh hgap hx
+
+example
+    {f : ℝ → ℝ} {a x D M : ℝ} (Q : ℕ)
+    (hD : 1 ≤ D) (hx : |x-a| ≤ D)
+    (hb : ∀ j ≤ Q, |iteratedDeriv j f a| ≤ M) :
+    |finiteTaylorPolynomial f Q a x| ≤ (Q+1 : ℕ)*D^Q*M := by
+  exact @abs_finiteTaylorPolynomial_le f a x D M Q hD hx hb
+
+example
+    {f : ℝ → ℝ} {a x D M : ℝ} {Q n : ℕ}
+    (hn : n ≤ Q) (hD : 1 ≤ D) (hx : |x-a| ≤ D)
+    (hb : ∀ j ≤ Q, |iteratedDeriv j f a| ≤ M) :
+    |iteratedDeriv n (finiteTaylorPolynomial f Q a) x| ≤ (Q+1 : ℕ)*D^Q*M := by
+  exact @abs_iteratedDeriv_finiteTaylorPolynomial_le f a x D M Q n hn hD hx hb
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (f : ℝ → ℝ) (l r h x M : ℝ),
+      0 < h → h ≤ 1 → l+4*h < r →
+      (∀ y ∈ Ioo l r, ContDiffAt ℝ ∞ f y) →
+      (∀ y ∈ Ioo l r, ∀ j ≤ Q+1, |iteratedDeriv j f y| ≤ M) →
+      x ∈ Icc (l+h) (l+2*h) → ∀ n ≤ Q,
+        |iteratedDeriv n (taylorPastedExtension f Q l r h) x| ≤ C*M := by
+  exact @taylorPastedExtension_left_transition_bound Q
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (f : ℝ → ℝ) (l r h x M : ℝ),
+      0 < h → h ≤ 1 → l+4*h < r →
+      (∀ y ∈ Ioo l r, ContDiffAt ℝ ∞ f y) →
+      (∀ y ∈ Ioo l r, ∀ j ≤ Q+1, |iteratedDeriv j f y| ≤ M) →
+      x ∈ Icc (r-2*h) (r-h) → ∀ n ≤ Q,
+        |iteratedDeriv n (taylorPastedExtension f Q l r h) x| ≤ C*M := by
+  exact @taylorPastedExtension_right_transition_bound Q
+
+example
+    (Q : ℕ) {D : ℝ} (hD : 1 ≤ D) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (f : ℝ → ℝ) (l r h x M : ℝ),
+      0 < h → h ≤ 1 → l+4*h < r →
+      (∀ y ∈ Ioo l r, ContDiffAt ℝ ∞ f y) →
+      (∀ y ∈ Ioo l r, ∀ j ≤ Q+1, |iteratedDeriv j f y| ≤ M) →
+      |x-(l+2*h)| ≤ D → |x-(r-2*h)| ≤ D → ∀ n ≤ Q,
+        |iteratedDeriv n (taylorPastedExtension f Q l r h) x| ≤ C*M := by
+  exact @taylorPastedExtension_uniform_jets Q D hD
+
+example
+    {F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    {u : ℝ} (hu : u ∈ phaseInterval) :
+    modelPhaseClosedSlope F u ∈ Icc ((2 : ℝ)^(-σ)/2) 2 := by
+  exact @modelPhaseClosedSlope_positive_window F σ δ P hσ hδ hF u hu
+
+example
+    {F : ℝ → ℝ} {σ δ : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ) :
+    modelPhaseCurvatureLower σ ≤ modelPhaseClosedSlope F 1-modelPhaseClosedSlope F 2 := by
+  exact @modelPhaseClosedSlope_endpoint_width F σ δ hσ hδ hF
+
+example
+    {σ : ℝ} (hσ : 0 < σ) (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (F : ℝ → ℝ) (δ : ℝ),
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 →
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 →
+      IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+1)) δ →
+      ∀ w ∈ modelPhaseSlopeRange F, ∀ h : ℝ,
+        0 < h → h ≤ 1 →
+        modelPhaseClosedSlope F 2+4*h < modelPhaseClosedSlope F 1 →
+        ContDiff ℝ ∞ (modelPhaseTaylorExtension F σ Q w h) ∧
+        (∀ v ∈ Icc (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h),
+          modelPhaseTaylorExtension F σ Q w h v = anchoredLegendreError F σ w v) ∧
+        ∀ v ∈ Icc (0 : ℝ) 4, ∀ n ≤ Q,
+          |iteratedDeriv n (modelPhaseTaylorExtension F σ Q w h) v| ≤ C*δ := by
+  exact @modelPhaseTaylorExtension_uniformity σ hσ Q
+
+example
+    {F : ℝ → ℝ} {σ A w v h : ℝ} (Q : ℕ)
+    (hA : 0 < A) (hw : 0 < w) (hv : 0 < v) (hh : 0 < h)
+    (hplateau : v ∈ Icc (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h)) :
+    canonicalTaylorLegendrePhase F σ A Q w h (v/A) =
+      A^(σ⁻¹-1)*(modelPhaseLegendreDual F v-modelPhaseLegendreDual F w)+
+        referenceModelPrimitive σ⁻¹ (w/A) := by
+  exact @canonicalTaylorLegendrePhase_agrees F σ A w v h Q hA hw hv hh hplateau
+
+example
+    {σ A : ℝ} (hσ : 0 < σ) (hA : 0 < A) (hA₂ : A ≤ 2)
+    (Q : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∀ F : ℝ → ℝ,
+        IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+2)) δ →
+        ∀ w ∈ modelPhaseSlopeRange F, ∀ h : ℝ,
+          0 < h → h ≤ 1 →
+          modelPhaseClosedSlope F 2+4*h < modelPhaseClosedSlope F 1 →
+          IsApproximateModelPhaseFunction (canonicalTaylorLegendrePhase F σ A Q w h)
+            σ⁻¹ Q ε := by
+  exact @canonicalTaylorLegendrePhase_uniformity σ A hσ hA hA₂ Q ε hε
+
+example {σ η : ℝ} (hσ : 0 < σ) (hη : 0 < η) :
+    0 < modelPhaseTaylorWidth σ η := by
+  exact @modelPhaseTaylorWidth_pos σ η hσ hη
+
+example {σ η : ℝ} (hη : 0 ≤ η) (hη₁ : η ≤ 1) :
+    modelPhaseTaylorWidth σ η ≤ 1 := by
+  exact @modelPhaseTaylorWidth_le_one σ η hη hη₁
+
+example
+    {F : ℝ → ℝ} {σ δ η : ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hη : 0 < η) (hη₁ : η < 1) :
+    0 < modelPhaseTaylorWidth σ η ∧ modelPhaseTaylorWidth σ η ≤ 1 ∧
+      modelPhaseClosedSlope F 2+4*modelPhaseTaylorWidth σ η < modelPhaseClosedSlope F 1 := by
+  exact @modelPhaseTaylorWidth_admissible F σ δ η hσ hδ hF hη hη₁
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet F T N a b) :
+    (q : ℝ)*N/T ∈ Icc
+      (modelPhaseClosedSlope F 2+2*modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹))
+      (modelPhaseClosedSlope F 1-2*modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹)) := by
+  exact @modelPhaseSharpStationarySet_taylor_plateau F σ δ T N a b q hσ hδ hF hT hN ha hb hq
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hlong : (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N) :
+    0 < modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹) ∧
+      modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹) ≤ 1 ∧
+      modelPhaseClosedSlope F 2+4*modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹) <
+        modelPhaseClosedSlope F 1 := by
+  exact @modelPhaseTaylorWidth_source_admissible F σ δ T N a b hσ hδ hF hT hN ha hb hlong
+
+example
+    {σ A : ℝ} (hσ : 0 < σ) (hA : 0 < A) (hA₂ : A ≤ 2)
+    (Q : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∀ (F : ℝ → ℝ),
+        IsApproximateModelPhaseFunction F σ (legendreFiniteInputOrder (Q+2)) δ →
+        ∀ (N T : ℝ) (a b : ℕ),
+          0 < N → 0 < T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+          (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+          let w := deriv F ((3 : ℝ)/2)
+          let h := modelPhaseTaylorWidth σ ((Real.sqrt T)⁻¹)
+          IsApproximateModelPhaseFunction (canonicalTaylorLegendrePhase F σ A Q w h)
+            σ⁻¹ Q ε ∧
+          ∀ q ∈ modelPhaseSharpStationarySet F T N a b,
+            canonicalTaylorLegendrePhase F σ A Q w h (((q : ℝ)*N/T)/A) =
+              A^(σ⁻¹-1)*(modelPhaseLegendreDual F ((q : ℝ)*N/T)-modelPhaseLegendreDual F w)+
+                referenceModelPrimitive σ⁻¹ (w/A) := by
+  exact @modelPhase_source_canonicalTaylorPhase σ A hσ hA hA₂ Q ε hε
+
+example (f : ℝ → ℝ) (a x : ℝ) : finiteTaylorPolynomial f 0 a x = f a := by
+  exact taylor_within_zero_eval f univ a x
+
+example (f : ℝ → ℝ) (a : ℝ) (Q : ℕ) :
+    iteratedDeriv Q (finiteTaylorPolynomial f Q a) a = iteratedDeriv Q f a := by
+  exact finiteTaylorPolynomial_matches_jet f a le_rfl
+
+example {l h : ℝ} (hh : 0 < h) : taylorLeftTransition l h (l+h) = 0 := by
+  exact taylorLeftTransition_zero hh le_rfl
+
+example {r h : ℝ} (hh : 0 < h) : taylorRightTransition r h (r-2*h) = 1 := by
+  exact taylorRightTransition_one hh le_rfl
+
+example (f : ℝ → ℝ) (Q : ℕ) {l r h : ℝ} (hh : 0 < h) (hgap : l+4*h ≤ r) :
+    taylorPastedExtension f Q l r h (l+2*h) = f (l+2*h) := by
+  exact taylorPastedExtension_agrees f Q hh ⟨le_rfl,by linarith⟩
+
+example (f : ℝ → ℝ) (Q : ℕ) {l r h : ℝ} (hh : 0 < h) (hgap : l+4*h ≤ r) :
+    taylorPastedExtension f Q l r h (r-2*h) = f (r-2*h) := by
+  exact taylorPastedExtension_agrees f Q hh ⟨by linarith,le_rfl⟩
+
+example (n : ℕ) :
+    iteratedDeriv n (modelPhase (1 : ℝ)⁻¹) 2 =
+      inversePhaseEval (inversePhaseDerivativeExpression n) (expandedReferenceInverseJet 1 2) := by
+  exact iteratedDeriv_modelPhase_expanded_inverseJet_formula (by norm_num) (by norm_num) n
+
+end MovingTaylorExtensionRegression
+
+section OriginalChartReflectionRegression
+
+open Set Expdb Filter
+open scoped BigOperators ContDiff Topology
+
+example {d v : ℝ} (hd : 0 < d)
+    (hv : 0 ≤ v) (j : ℕ) :
+    positiveSlopeChartIndex d v = j ↔
+      (j : ℝ)*d ≤ v ∧ v < ((j : ℝ)+1)*d := by
+  exact @positiveSlopeChartIndex_eq_iff d v hd hv j
+
+example {d : ℝ} (hd : 0 < d) :
+    Monotone (positiveSlopeChartIndex d) := by
+  exact @positiveSlopeChartIndex_mono d hd
+
+example {d v : ℝ} (hd : 0 < d)
+    (hv : v ∈ Icc (4*d) 2) :
+    positiveSlopeChartIndex d v ∈ positiveSlopeChartIndices d := by
+  exact @positiveSlopeChartIndex_mem d v hd hv
+
+example {d : ℝ} {j : ℕ}
+    (hd : 0 < d) (hj : j ∈ positiveSlopeChartIndices d) :
+    0 < positiveSlopeChartScale d j ∧ positiveSlopeChartScale d j ≤ 3/2 := by
+  exact @positiveSlopeChartScale_bounds d j hd hj
+
+example {d v : ℝ} {j : ℕ}
+    (hd : 0 < d) (hj : 4 ≤ j)
+    (hv : (j : ℝ)*d ≤ v ∧ v < ((j : ℝ)+1)*d) :
+    v/positiveSlopeChartScale d j ∈ Ioo (1 : ℝ) 2 := by
+  exact @positiveSlopeChart_coordinate d v j hd hj hv
+
+example {s : Finset ℤ} {d N T : ℝ} {j : ℕ} {q : ℤ} :
+    q ∈ positiveSlopeChartFiber s d N T j ↔
+      q ∈ s ∧ positiveSlopeChartIndex d ((q : ℝ)*N/T) = j := by
+  exact @mem_positiveSlopeChartFiber s d N T j q
+
+example {d N T : ℝ}
+    (hd : 0 < d) (hN : 0 < N) (hT : 0 < T) :
+    Monotone (fun q : ℤ => positiveSlopeChartIndex d ((q : ℝ)*N/T)) := by
+  exact @positiveSlopeChart_frequency_mono d N T hd hN hT
+
+example {s : Finset ℤ} {d N T : ℝ}
+    (hd : 0 < d)
+    (hwindow : ∀ q ∈ s, (q : ℝ)*N/T ∈ Icc (4*d) 2)
+    (f : ℤ → ℂ) :
+    ∑ j ∈ positiveSlopeChartIndices d, ∑ q ∈ positiveSlopeChartFiber s d N T j, f q =
+      ∑ q ∈ s, f q := by
+  exact @sum_positiveSlopeChartFibers s d N T hd hwindow f
+
+example {x y : ℤ} {d N T : ℝ} {j : ℕ}
+    (hd : 0 < d) (hN : 0 < N) (hT : 0 < T)
+    (hne : (positiveSlopeChartFiber (Finset.Ioo x y) d N T j).Nonempty) :
+    positiveSlopeChartFiber (Finset.Ioo x y) d N T j =
+      Finset.Icc ((positiveSlopeChartFiber (Finset.Ioo x y) d N T j).min' hne)
+        ((positiveSlopeChartFiber (Finset.Ioo x y) d N T j).max' hne) := by
+  exact @positiveSlopeChartFiber_Ioo_eq_Icc x y d N T j hd hN hT hne
+
+example {x y : ℤ} (hx : 0 ≤ x) (hxy : x ≤ y) :
+    Finset.Icc x y = (Finset.Icc x.toNat y.toNat).image (fun n : ℕ => (n : ℤ)) := by
+  exact @int_Icc_eq_image_nat_Icc x y hx hxy
+
+example {x y : ℤ} {d N T : ℝ} {j : ℕ}
+    (hd : 0 < d) (hN : 0 < N) (hT : 0 < T)
+    (hne : (positiveSlopeChartFiber (Finset.Ioo x y) d N T j).Nonempty)
+    (hnonneg : ∀ q ∈ positiveSlopeChartFiber (Finset.Ioo x y) d N T j, 0 ≤ q) :
+    ∃ a L : ℕ, positiveSlopeChartFiber (Finset.Ioo x y) d N T j =
+      (Finset.Icc a (a+L)).image (fun n : ℕ => (n : ℤ)) := by
+  exact @positiveSlopeChartFiber_Ioo_natural_interval x y d N T j hd hN hT hne hnonneg
+
+example (σ : ℝ) : 0 < modelPhaseSlopeMesh σ := by
+  exact @modelPhaseSlopeMesh_pos σ
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hpos : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet F T N a b) :
+    (q : ℝ)*N/T ∈ Icc (4*modelPhaseSlopeMesh σ) 2 := by
+  exact @modelPhaseSharpStationarySet_grid_window F σ δ T N a b q hσ hδ hpos hF hT hN ha hb hq
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hpos : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet F T N a b) :
+    0 < q := by
+  exact @modelPhaseSharpStationarySet_positive F σ δ T N a b q hσ hδ hpos hF hT hN ha hb hq
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hpos : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (f : ℤ → ℂ) :
+    ∑ j ∈ positiveSlopeChartIndices (modelPhaseSlopeMesh σ),
+      ∑ q ∈ positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+        (modelPhaseSlopeMesh σ) N T j, f q =
+      ∑ q ∈ modelPhaseSharpStationarySet F T N a b, f q := by
+  exact @modelPhaseSharpStationarySet_chart_partition F σ δ T N a b hσ hδ hpos hF hT hN ha hb f
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b j : ℕ} {q : ℤ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hpos : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+      (modelPhaseSlopeMesh σ) N T j) :
+    ((q : ℝ)*N/T)/positiveSlopeChartScale (modelPhaseSlopeMesh σ) j ∈ Ioo (1 : ℝ) 2 := by
+  exact @modelPhaseSharpStationarySet_chart_coordinate F σ δ T N a b j q hσ hδ hpos hF hT hN ha hb hq
+
+example
+    {F : ℝ → ℝ} {σ δ T N : ℝ} {a b j : ℕ}
+    (hσ : 0 < σ) (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hpos : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hne : (positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+      (modelPhaseSlopeMesh σ) N T j).Nonempty) :
+    ∃ c L : ℕ, positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+      (modelPhaseSlopeMesh σ) N T j =
+        (Finset.Icc c (c+L)).image (fun n : ℕ => (n : ℤ)) := by
+  exact @modelPhaseSharpStationarySet_chart_natural_interval F σ δ T N a b j hσ hδ hpos hF hT hN ha hb hne
+
+example
+    {F : ℝ → ℝ} {σ A w h T N r : ℝ} (Q : ℕ)
+    (hA : 0 < A) (hw : 0 < w) (hh : 0 < h)
+    (hT : T ≠ 0) (hN : N ≠ 0) (hv : 0 < r*N/T)
+    (hplateau : r*N/T ∈ Icc
+      (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h)) :
+    modelPhaseFrequencyPhase F T N r (modelPhaseStationaryPoint F T N r) =
+      modelPhaseDualOffset F σ A w T -
+        modelPhaseDualParameter σ A T *
+          canonicalTaylorLegendrePhase F σ A Q w h (r/modelPhaseDualScale A T N) := by
+  exact @modelPhaseStationaryPoint_taylor_phase F σ A w h T N r Q hA hw hh hT hN hv hplateau
+
+example
+    {F : ℝ → ℝ} {σ A w h T N r : ℝ} (Q : ℕ)
+    (hA : 0 < A) (hw : 0 < w) (hh : 0 < h)
+    (hT : T ≠ 0) (hN : N ≠ 0) (hv : 0 < r*N/T)
+    (hplateau : r*N/T ∈ Icc
+      (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h)) :
+    modelPhaseStationaryCharacter F T N r =
+      (𝐞 (modelPhaseDualOffset F σ A w T-1/8) : ℂ) *
+        starRingEnd ℂ (𝐞 (modelPhaseDualParameter σ A T *
+          canonicalTaylorLegendrePhase F σ A Q w h (r/modelPhaseDualScale A T N))) := by
+  exact @modelPhaseStationaryCharacter_taylor F σ A w h T N r Q hA hw hh hT hN hv hplateau
+
+example
+    {F : ℝ → ℝ} {σ A w h T N : ℝ} (Q : ℕ)
+    (hA : 0 < A) (hw : 0 < w) (hh : 0 < h)
+    (hT : T ≠ 0) (hN : N ≠ 0) (a L : ℕ)
+    (hv : ∀ i : ℕ, i ≤ L → 0 < ((a : ℝ)+i)*N/T)
+    (hplateau : ∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ Icc
+      (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h)) :
+    ‖∑ i ∈ Finset.range (L+1), modelPhaseStationaryCharacter F T N ((a : ℝ)+i)‖ =
+      ‖exponentialSumAt (canonicalTaylorLegendrePhase F σ A Q w h)
+        (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a (a+L)‖ := by
+  exact @norm_modelPhaseStationaryCharacter_taylor_range F σ A w h T N Q hA hw hh hT hN a L hv hplateau
+
+example
+    {F : ℝ → ℝ} {σ δ A w h T N : ℝ} (Q : ℕ)
+    (hσ : 0 < σ) (hδ : δ ≤ modelPhaseAmplitudeTolerance σ)
+    (hF : IsApproximateModelPhaseFunction F σ 2 δ)
+    (hA : 0 < A) (hw : 0 < w) (hh : 0 < h) (hT : 0 < T) (hN : 0 < N)
+    (a L : ℕ)
+    (hslope : ∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ modelPhaseSlopeRange F)
+    (hv : ∀ i : ℕ, i ≤ L → 0 < ((a : ℝ)+i)*N/T)
+    (hplateau : ∀ i : ℕ, i ≤ L → ((a : ℝ)+i)*N/T ∈ Icc
+      (modelPhaseClosedSlope F 2+2*h) (modelPhaseClosedSlope F 1-2*h)) :
+    ‖modelPhaseStationaryBlock F T N a L‖ ≤
+      2*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+        exponentialSumAtPrefixMax (canonicalTaylorLegendrePhase F σ A Q w h)
+          (modelPhaseDualParameter σ A T) (modelPhaseDualScale A T N) a L := by
+  exact @norm_modelPhaseStationaryBlock_le_taylor_prefixMax F σ δ A w h T N Q hσ hδ hF hA hw hh hT hN a L hslope hv hplateau
+
+example
+    {α : ℝ≥0} {β σ : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    (j : ℕ) (hj : j ∈ positiveSlopeChartIndices (modelPhaseSlopeMesh σ))
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+          0 < T → 0 < N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+          (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          let A := positiveSlopeChartScale (modelPhaseSlopeMesh σ) j
+          C ≤ modelPhaseDualParameter σ A T →
+          (modelPhaseDualParameter σ A T)^((α : ℝ)-δ) ≤ modelPhaseDualScale A T N →
+          modelPhaseDualScale A T N ≤ (modelPhaseDualParameter σ A T)^((α : ℝ)+δ) →
+          ‖∑ q ∈ positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+              (modelPhaseSlopeMesh σ) N T j, modelPhaseStationaryMainTerm F T N q‖ ≤
+            2*((N/Real.sqrt T)*(Real.sqrt (modelPhaseCurvatureLower σ))⁻¹) *
+              C*(modelPhaseDualParameter σ A T)^(β+ε) := by
+  exact @sourceStationaryChart_bound_of_exponentSumBound α β σ hβ hσ j hj ε hε
+
+example {k : ℝ} (hk : 0 < k) (C : ℝ) :
+    ∀ᶠ T : ℝ in atTop, C ≤ k*T := by
+  exact @eventually_fixed_multiple_ge k hk C
+
+example {A k δ : ℝ}
+    (hA : 0 < A) (hk : 0 < k) (hδ : 0 < δ) (α : ℝ) :
+    ∀ᶠ T : ℝ in atTop, ∀ N : ℝ, 0 < N →
+      T^(1-α-δ/2) ≤ N → N ≤ T^(1-α+δ/2) →
+      (k*T)^(α-δ) ≤ A*T/N ∧ A*T/N ≤ (k*T)^(α+δ) := by
+  exact @eventually_reflected_power_windows A k δ hA hk hδ α
+
+example {σ A δ : ℝ}
+    (hA : 0 < A) (hδ : 0 < δ) (α C : ℝ) :
+    ∀ᶠ T : ℝ in atTop, C ≤ modelPhaseDualParameter σ A T ∧
+      ∀ N : ℝ, 0 < N →
+        T^(1-α-δ/2) ≤ N → N ≤ T^(1-α+δ/2) →
+        (modelPhaseDualParameter σ A T)^(α-δ) ≤ modelPhaseDualScale A T N ∧
+        modelPhaseDualScale A T N ≤ (modelPhaseDualParameter σ A T)^(α+δ) := by
+  exact @eventually_modelPhaseDual_power_windows σ A δ hA hδ α C
+
+example
+    {α : ℝ≥0} {β σ : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    (j : ℕ) (hj : j ∈ positiveSlopeChartIndices (modelPhaseSlopeMesh σ))
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+          C ≤ T → 0 < N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+          T^(1-(α : ℝ)-δ) ≤ N → N ≤ T^(1-(α : ℝ)+δ) →
+          (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖∑ q ∈ positiveSlopeChartFiber (modelPhaseSharpStationarySet F T N a b)
+              (modelPhaseSlopeMesh σ) N T j, modelPhaseStationaryMainTerm F T N q‖ ≤
+            C*(N/Real.sqrt T)*T^(β+ε) := by
+  exact @sourceStationaryChart_physical_bound α β σ hβ hσ j hj ε hε
+
+example
+    {α : ℝ≥0} {β σ : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+          C ≤ T → 0 < N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+          T^(1-(α : ℝ)-δ) ≤ N → N ≤ T^(1-(α : ℝ)+δ) →
+          (a : ℝ)/N+4*(Real.sqrt T)⁻¹ < (b : ℝ)/N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖∑ q ∈ modelPhaseSharpStationarySet F T N a b,
+              modelPhaseStationaryMainTerm F T N q‖ ≤
+            C*(N/Real.sqrt T)*T^(β+ε) := by
+  exact @sourceStationaryMain_physical_bound α β σ hβ hσ ε hε
+
+example
+    {α : ℝ≥0} {β σ : ℝ}
+    (hβ : IsExponentSumBoundNonAsymptotic α β) (hσ : 0 < σ)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧
+      δ ≤ min (modelPhaseCurvatureLower σ) 1 ∧
+      δ ≤ min ((2 : ℝ)^(-σ)/2) 1 ∧
+      ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+          C ≤ T → 1 ≤ N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+          T^(1-(α : ℝ)-δ) ≤ N → N ≤ T^(1-(α : ℝ)+δ) →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖exponentialSumAt F T N a b‖ ≤
+            C*((N/Real.sqrt T)*T^(β+ε)+N/Real.sqrt T+T^ε) := by
+  exact @sourceExponentialSum_reflection_estimate α β σ hβ hσ ε hε
+
+example
+    {α : ℝ≥0} {β : ℝ} (hα : (α : ℝ) ≤ 1)
+    (hβ : IsExponentSumBoundNonAsymptotic α β) :
+    IsExponentSumBoundNonAsymptotic (1-α) (max 0 (β+1/2-(α : ℝ))) := by
+  exact @isExponentSumBoundNonAsymptotic_reflect_max α β hα hβ
+
+example
+    {α : ℝ≥0} {β : ℝ} (hα : (α : ℝ) ≤ 1)
+    (hβ : IsExponentSumBoundNonAsymptotic α β)
+    (hreflect : 0 ≤ β+1/2-(α : ℝ)) :
+    IsExponentSumBoundNonAsymptotic (1-α) (β+1/2-(α : ℝ)) := by
+  exact @isExponentSumBoundNonAsymptotic_reflect_nonnegative α β hα hβ hreflect
+
+example
+    {α : ℝ≥0} (hα : (α : ℝ) ≤ 1) :
+    exponentSumGrowthExponent (1-α) ≤
+      max 0 (exponentSumGrowthExponent α+1/2-(α : ℝ)) := by
+  exact @exponentSumGrowthExponent_reflect_le_max α hα
+
+example {k l : ℝ}
+    (h : InExponentPairTriangle k l) :
+    InExponentPairTriangle (l-1/2) (k+1/2) := by
+  exact @InExponentPairTriangle.bProcess k l h
+
+example (k l α : ℝ) :
+    exponentPairLine k l (1-α)+1/2-(1-α) =
+      exponentPairLine (l-1/2) (k+1/2) α := by
+  exact @exponentPairLine_bProcess k l α
+
+example {k l : ℝ} (h : ExponentPair k l) :
+    ExponentPair (l-1/2) (k+1/2) := by
+  exact @ExponentPair.bProcess k l h
+
+example {k l : ℝ} :
+    ExponentPair (l-1/2) (k+1/2) ↔ ExponentPair k l := by
+  exact @exponentPair_bProcess_iff k l
+
+example : positiveSlopeChartIndex ((1 : ℝ)/8) (1/2) = 4 := by
+  norm_num [positiveSlopeChartIndex]
+
+example : positiveSlopeChartIndex ((1 : ℝ)/8) 2 = 16 := by
+  norm_num [positiveSlopeChartIndex]
+
+example : positiveSlopeChartScale ((1 : ℝ)/8) 16 = 3/2 := by
+  norm_num [positiveSlopeChartScale]
+
+example (d N T : ℝ) (j : ℕ) :
+    positiveSlopeChartFiber ∅ d N T j = ∅ := by
+  classical
+  simp only [positiveSlopeChartFiber,Finset.filter_empty]
+
+example (h : ExponentPair 0 1) : ExponentPair (1/2) (1/2) := by
+  convert h.bProcess using 1 <;> norm_num
+
+example (h : ExponentPair (1/2) (1/2)) : ExponentPair 0 1 := by
+  convert h.bProcess using 1 <;> norm_num
+
+end OriginalChartReflectionRegression
+
+section ExactBetaReflectionRegression
+
+open Set Expdb Filter
+open scoped BigOperators ContDiff Topology
+
+example (P : ℕ) {c δ : ℝ} (hc : |c| ≤ δ) :
+    IsApproximateModelPhaseFunction (twistedLogPhase c) 1 P δ := by
+  exact @twistedLogPhase_approximate P c δ hc
+
+example {T N : ℝ} (hT : 0 < T) (hN : 0 < N) :
+    0 ≤ betaResonantCorrection T N ∧ betaResonantCorrection T N < N/T := by
+  exact @betaResonantCorrection_bounds T N hT hN
+
+example {T N : ℝ}
+    (hT : T ≠ 0) (hN : N ≠ 0) :
+    T*(1+betaResonantCorrection T N) = (⌈T/N⌉₊ : ℝ)*N := by
+  exact @betaResonantCorrection_integer_slope T N hT hN
+
+example {T N δ : ℝ}
+    (hT : 0 < T) (hN : 0 < N) (hsmall : N/T ≤ δ) (P : ℕ) :
+    IsApproximateModelPhaseFunction (twistedLogPhase (betaResonantCorrection T N)) 1 P δ := by
+  exact @betaResonantCorrection_model T N δ hT hN hsmall P
+
+example {T N d : ℝ}
+    (hT : 0 ≤ T) (hN : 0 < N) (hd : 0 ≤ d) :
+    |T*Real.log ((N+d)/N)-T*d/N| ≤ T*d^2/N^2 := by
+  exact @logPhase_physical_remainder T N d hT hN hd
+
+example
+    {T N c : ℝ} (hN : N ≠ 0) (k j : ℕ)
+    (hinteger : T*(1+c) = (k : ℝ)*N) :
+    (oscillatory (twistedLogPhase c) T N (N+j)).re =
+      Real.cos (2*Real.pi*(T*Real.log ((N+j)/N)-T*j/N)) := by
+  exact @oscillatory_twistedLog_re_eq_cos_remainder T N c hN k j hinteger
+
+example
+    {T N c : ℝ} (hT : 0 ≤ T) (hN : 0 < N) (k j : ℕ)
+    (hinteger : T*(1+c) = (k : ℝ)*N)
+    (hsmall : T*(j : ℝ)^2/N^2 ≤ 1/16) :
+    (1 : ℝ)/2 ≤ (oscillatory (twistedLogPhase c) T N (N+j)).re := by
+  exact @oscillatory_twistedLog_re_ge_half T N c hT hN k j hinteger hsmall
+
+example {T N : ℝ} (hT : 1 ≤ T) (hN : 0 ≤ N) :
+    (betaCoherentLength T N : ℝ) ≤ N := by
+  exact @betaCoherentLength_le_scale T N hT hN
+
+example {T N : ℝ}
+    (hT : 1 ≤ T) (hN : 0 < N) {j : ℕ}
+    (hj : j ≤ betaCoherentLength T N) :
+    T*(j : ℝ)^2/N^2 ≤ 1/16 := by
+  exact @betaCoherentLength_quadratic_budget T N hT hN j hj
+
+example {T N : ℝ} :
+    N/(8*Real.sqrt T) ≤ ((betaCoherentLength T N : ℝ)+1)/2 := by
+  exact @betaCoherentLength_count_lower T N
+
+example {T : ℝ} (hT : 1 ≤ T) (N : ℕ) :
+    ((N+betaCoherentLength T N : ℕ) : ℝ) ≤ 2*(N : ℝ) := by
+  exact @betaCoherentLength_source_end T hT N
+
+example {T : ℝ} {N : ℕ}
+    (hT : 1 ≤ T) (hN : 1 ≤ N) :
+    (N : ℝ)/(8*Real.sqrt T) ≤
+      ‖exponentialSumAt (twistedLogPhase (betaResonantCorrection T N)) T N
+        N (N+betaCoherentLength T N)‖ := by
+  exact @norm_twistedLog_coherent_sum_lower T N hT hN
+
+example {α δ : ℝ}
+    (hα : 0 < α) (hαone : α < 1) (hδ : 0 < δ) (B : ℝ) :
+    ∃ (T : ℝ) (N : ℕ), 1 ≤ T ∧ B ≤ T ∧ 1 ≤ N ∧
+      T^α = (N : ℝ) ∧
+      ((N+betaCoherentLength T N : ℕ) : ℝ) ≤ 2*(N : ℝ) ∧
+      (∀ P : ℕ, IsApproximateModelPhaseFunction
+        (twistedLogPhase (betaResonantCorrection T N)) 1 P δ) ∧
+      T^(α-1/2)/8 ≤
+        ‖exponentialSumAt (twistedLogPhase (betaResonantCorrection T N)) T N
+          N (N+betaCoherentLength T N)‖ := by
+  exact @exists_twistedLog_power_witness α δ hα hαone hδ B
+
+example
+    {α : ℝ≥0} {β : ℝ} (hα : (α : ℝ) ≤ 1)
+    (hβ : IsExponentSumBoundNonAsymptotic α β) :
+    (α : ℝ)-1/2 ≤ β := by
+  exact @alpha_sub_half_le_of_exponentSumBoundNonAsymptotic α β hα hβ
+
+example
+    {α : ℝ≥0} (hα : (α : ℝ) ≤ 1) :
+    (α : ℝ)-1/2 ≤ exponentSumGrowthExponent α := by
+  exact @alpha_sub_half_le_exponentSumGrowthExponent α hα
+
+example
+    {α : ℝ≥0} {β : ℝ} (hα : (α : ℝ) ≤ 1)
+    (hβ : IsExponentSumBoundNonAsymptotic α β) :
+    IsExponentSumBoundNonAsymptotic (1-α) (β+1/2-(α : ℝ)) := by
+  exact @isExponentSumBoundNonAsymptotic_reflect α β hα hβ
+
+example
+    {α : ℝ≥0} (hα : (α : ℝ) ≤ 1) :
+    exponentSumGrowthExponent (1-α) ≤
+      exponentSumGrowthExponent α+1/2-(α : ℝ) := by
+  exact @exponentSumGrowthExponent_reflect_le α hα
+
+example
+    {α : ℝ≥0} (hα : (α : ℝ) ≤ 1) :
+    exponentSumGrowthExponent (1-α) =
+      1/2-(α : ℝ)+exponentSumGrowthExponent α := by
+  exact @exponentSumGrowthExponent_reflection α hα
+
+example (P : ℕ) : IsApproximateModelPhaseFunction (twistedLogPhase 0) 1 P 0 := by
+  exact twistedLogPhase_approximate P (by norm_num)
+
+example : betaResonantCorrection 16 1 = 0 := by
+  norm_num [betaResonantCorrection]
+
+example : betaCoherentLength 16 1 = 0 := by
+  norm_num [betaCoherentLength]
+
+example : (1 : ℝ)/(8*Real.sqrt 16) ≤
+    ‖exponentialSumAt (twistedLogPhase (betaResonantCorrection 16 1)) 16 1 1 1‖ := by
+  have h := norm_twistedLog_coherent_sum_lower (T := 16) (N := 1)
+    (by norm_num) (by norm_num)
+  norm_num [betaCoherentLength] at h ⊢
+
+example : exponentSumGrowthExponent 1 = 1/2+exponentSumGrowthExponent 0 := by
+  simpa using exponentSumGrowthExponent_reflection (α := 0) (by norm_num)
+
+example : exponentSumGrowthExponent 0 = -1/2+exponentSumGrowthExponent 1 := by
+  have h := exponentSumGrowthExponent_reflection (α := 1) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+end ExactBetaReflectionRegression
+
+section DomainPreservingAProcessRegression
+
+open Set Expdb RiemannZeta.GuthMaynard
+open scoped BigOperators ContDiff Topology FourierTransform InnerProductSpace
+
+example {η t u : ℝ}
+    (hη : 0 ≤ η) (hη₁ : η ≤ 1) (ht : t ∈ Icc (0 : ℝ) 1)
+    (hu : u ∈ Icc (1 : ℝ) 2) :
+    aProcessShiftPoint η t u ∈ Icc (1 : ℝ) 2 := by
+  exact @aProcessShiftPoint_mem_Icc η t u hη hη₁ ht hu
+
+example {η t u : ℝ}
+    (hη : 0 ≤ η) (hη₁ : η < 1) (ht : t ∈ Icc (0 : ℝ) 1)
+    (hu : u ∈ Ioo (1 : ℝ) 2) :
+    aProcessShiftPoint η t u ∈ Ioo (1 : ℝ) 2 := by
+  exact @aProcessShiftPoint_mem_Ioo η t u hη hη₁ ht hu
+
+example {η t u : ℝ}
+    (hη : 0 ≤ η) (ht : t ∈ Icc (0 : ℝ) 1)
+    (hu : u ∈ Icc (1 : ℝ) 2) :
+    |aProcessShiftPoint η t u-u| ≤ η := by
+  exact @aProcessShiftPoint_distance η t u hη ht hu
+
+example {F : ℝ → ℝ} {η : ℝ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hη : 0 ≤ η) (hη₁ : η ≤ 1)
+    (σ : ℝ) : ContDiffOn ℝ ∞ (aProcessShiftPhase F σ η) phaseInterval := by
+  exact @aProcessShiftPhase_contDiffOn F η hF hη hη₁ σ
+
+example {F : ℝ → ℝ} {η u : ℝ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hη : 0 ≤ η) (hη₁ : η ≤ 1)
+    (hu : u ∈ phaseInterval) (σ : ℝ) (n : ℕ) :
+    iteratedDerivWithin n (aProcessShiftPhase F σ η) phaseInterval u =
+      (1-η)^n/(σ*η) *
+        (iteratedDerivWithin n F phaseInterval (aProcessShiftPoint η 0 u)-
+         iteratedDerivWithin n F phaseInterval (aProcessShiftPoint η 1 u)) := by
+  exact @aProcessShiftPhase_iteratedDerivWithin F η u hF hη hη₁ hu σ n
+
+example {N r m : ℝ}
+    (hN : N ≠ 0) (hNr : N-r ≠ 0) :
+    aProcessShiftPoint (r/N) 0 ((m-r)/(N-r)) = m/N ∧
+    aProcessShiftPoint (r/N) 1 ((m-r)/(N-r)) = (m+r)/N := by
+  exact @aProcessShiftPoint_physical N r m hN hNr
+
+example {F : ℝ → ℝ} {σ T N r m : ℝ}
+    (hN : N ≠ 0) (hNr : N-r ≠ 0) (hσ : σ ≠ 0) (hr : r ≠ 0) :
+    (σ*T*r/N)*aProcessShiftPhase F σ (r/N) ((m-r)/(N-r)) =
+      T*(F (m/N)-F ((m+r)/N)) := by
+  exact @aProcessShiftPhase_physical F σ T N r m hN hNr hσ hr
+
+example (σ : ℝ) {u : ℝ}
+    (hu : 0 < u) (p : ℕ) :
+    iteratedDeriv (p+1) (modelPhase σ) u =
+      -σ*iteratedDeriv p (modelPhase (σ+1)) u := by
+  exact @modelPhase_iteratedDeriv_succ_parameter σ u hu p
+
+example
+    {F : ℝ → ℝ} {σ ε : ℝ} {P : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval)
+    (hb : ∀ u ∈ Ioo (1 : ℝ) 2, ∀ p ≤ P,
+      |iteratedDeriv (p+1) F u-iteratedDeriv p (modelPhase σ) u| ≤ ε) :
+    IsApproximateModelPhaseFunction F σ P ε := by
+  exact @approximateModelPhase_of_interior_bounds F σ ε P hF hb
+
+example
+    {F : ℝ → ℝ} {η u : ℝ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hη : 0 ≤ η) (hη₁ : η < 1)
+    (hu : u ∈ Ioo (1 : ℝ) 2) (σ : ℝ) (n : ℕ) :
+    iteratedDeriv n (aProcessShiftPhase F σ η) u =
+      (1-η)^n/(σ*η) *
+        (iteratedDeriv n F (aProcessShiftPoint η 0 u)-
+         iteratedDeriv n F (aProcessShiftPoint η 1 u)) := by
+  exact @aProcessShiftPhase_iteratedDeriv F η u hF hη hη₁ hu σ n
+
+example
+    {F : ℝ → ℝ} {σ δ η u v w : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hu : u ∈ Ioo (1 : ℝ) 2) (hv : v ∈ Ioo (1 : ℝ) 2)
+    (hw : w ∈ Ioo (1 : ℝ) 2) (hvw : v ≤ w)
+    (hvu : |v-u| ≤ η) (hwu : |w-u| ≤ η) (p : ℕ) (hp : p+1 ≤ P) :
+    |iteratedDeriv (p+1) F v-iteratedDeriv (p+1) F w-
+      σ*(w-v)*iteratedDeriv p (modelPhase (σ+1)) u| ≤
+      (δ+σ*modelPhaseJetCoefficient (σ+1) (p+1)*η)*(w-v) := by
+  exact @modelPhase_jet_difference_error F σ δ η u v w P hσ hF hu hv hw hvw hvu hwu p hp
+
+example {η : ℝ}
+    (hη : 0 ≤ η) (hη₁ : η ≤ 1) (n : ℕ) :
+    |(1-η)^n-1| ≤ (n : ℝ)*η := by
+  exact @abs_compression_pow_sub_one η hη hη₁ n
+
+example
+    {F : ℝ → ℝ} {σ δ η u : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hη : 0 < η) (hη₁ : η < 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hu : u ∈ Ioo (1 : ℝ) 2) (p : ℕ) (hp : p+1 ≤ P) :
+    |iteratedDeriv (p+1) (aProcessShiftPhase F σ η) u-
+      iteratedDeriv p (modelPhase (σ+1)) u| ≤
+      δ/σ+(modelPhaseJetCoefficient (σ+1) (p+1)+
+        (p+1 : ℕ)*modelPhaseJetCoefficient (σ+1) p)*η := by
+  exact @aProcessShiftPhase_jet_error F σ δ η u P hσ hη hη₁ hF hu p hp
+
+example (σ : ℝ) (P : ℕ) :
+    1 ≤ aProcessShiftJetBudget σ P := by
+  exact @aProcessShiftJetBudget_ge_one σ P
+
+example (σ : ℝ) {P p : ℕ} (hp : p ≤ P) :
+    modelPhaseJetCoefficient (σ+1) (p+1)+
+      (p+1 : ℕ)*modelPhaseJetCoefficient (σ+1) p ≤ aProcessShiftJetBudget σ P := by
+  exact @aProcessShiftJetCoefficient_le_budget σ P p hp
+
+example {σ : ℝ}
+    (hσ : 0 < σ) (P : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ η₀ : ℝ, 0 < δ ∧ 0 < η₀ ∧ η₀ ≤ 1/2 ∧
+      ∀ (F : ℝ → ℝ) (η : ℝ),
+        IsApproximateModelPhaseFunction F σ (P+1) δ →
+        0 < η → η ≤ η₀ →
+        IsApproximateModelPhaseFunction (aProcessShiftPhase F σ η) (σ+1) P ε := by
+  exact @aProcessShiftPhase_uniform_model σ hσ P ε hε
+
+example (a : ℤ → ℂ) (N H h k : ℕ)
+    (hh : h < H) (hk : k < H) (hhk : h < k) :
+    (∑ n ∈ Finset.Ico (-(H : ℤ)) N,
+      star (paddedShift a N n h)*paddedShift a N n k) =
+      ∑ m ∈ Finset.range (N-(k-h)), star (a m)*a (m+(k-h)) := by
+  exact @padded_sequence_correlation_eq a N H h k hh hk hhk
+
+example (a : ℤ → ℂ) (N H h k : ℕ) :
+    (∑ n ∈ Finset.Ico (-(H : ℤ)) N,
+      star (paddedShift a N n h)*paddedShift a N n k) =
+    star (∑ n ∈ Finset.Ico (-(H : ℤ)) N,
+      star (paddedShift a N n k)*paddedShift a N n h) := by
+  exact @padded_sequence_correlation_reverse a N H h k
+
+example {F : ℝ → ℝ} {σ T N r m : ℝ}
+    (hN : N ≠ 0) (hNr : N-r ≠ 0) (hσ : σ ≠ 0) (hr : r ≠ 0) :
+    starRingEnd ℂ (oscillatory F T N m)*oscillatory F T N (m+r) =
+      starRingEnd ℂ (oscillatory (aProcessShiftPhase F σ (r/N))
+        (σ*T*r/N) (N-r) (m-r)) := by
+  exact @aProcessShiftPhase_character F σ T N r m hN hNr hσ hr
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L r : ℕ)
+    (hr : L < r) : sourceShiftCorrelation F T N a L r = 0 := by
+  exact @sourceShiftCorrelation_empty F T N a L r hr
+
+example {F : ℝ → ℝ} {σ T N : ℝ}
+    {a L r : ℕ} (hN : N ≠ 0) (hNr : N-(r : ℝ) ≠ 0)
+    (hσ : σ ≠ 0) (hr : 0 < r) (hra : r ≤ a) (hrL : r ≤ L) :
+    sourceShiftCorrelation F T N a L r =
+      starRingEnd ℂ (exponentialSumAt (aProcessShiftPhase F σ ((r : ℝ)/N))
+        (σ*T*r/N) (N-r) (a-r) ((a-r)+(L-r))) := by
+  exact @sourceShiftCorrelation_compressed_sum F σ T N a L r hN hNr hσ hr hra hrL
+
+example {F : ℝ → ℝ} {σ T N : ℝ}
+    {a L r : ℕ} (hN : N ≠ 0) (hNr : N-(r : ℝ) ≠ 0)
+    (hσ : σ ≠ 0) (hr : 0 < r) (hra : r ≤ a) (hrL : r ≤ L) :
+    ‖sourceShiftCorrelation F T N a L r‖ =
+      ‖exponentialSumAt (aProcessShiftPhase F σ ((r : ℝ)/N))
+        (σ*T*r/N) (N-r) (a-r) ((a-r)+(L-r))‖ := by
+  exact @norm_sourceShiftCorrelation_compressed_sum F σ T N a L r hN hNr hσ hr hra hrL
+
+example {N : ℝ} {a L r : ℕ}
+    (ha : N ≤ (a : ℝ)) (hb : ((a+L : ℕ) : ℝ) ≤ 2*N)
+    (hrN : (r : ℝ) < N) (hrL : r ≤ L) :
+    N-(r : ℝ) ≤ ((a-r : ℕ) : ℝ) ∧
+      (((a-r)+(L-r) : ℕ) : ℝ) ≤ 2*(N-r) := by
+  exact @sourceShiftCorrelation_compressed_endpoints N a L r ha hb hrN hrL
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧
+      ∃ η₀ : ℝ, 0 < η₀ ∧ η₀ ≤ 1/2 ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N : ℝ) (a L r : ℕ),
+          2 ≤ N → 0 < r → (r : ℝ) ≤ η₀*N →
+          N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          C ≤ σ*T*r/N → N-r ≤ σ*T*r/N →
+          ‖sourceShiftCorrelation F T N a L r‖ ≤
+            C*((σ*T*r/N)/(N-r))^(k+ε)*(N-r)^(l+ε) := by
+  exact @sourceShiftCorrelation_bound_of_exponentPair k l σ ε hkl hσ hε
+
+example (C : ℕ → ℝ) {H h : ℕ}
+    (hh : h < H) (hC : ∀ r ∈ Finset.Icc 1 (H-1), 0 ≤ C r) :
+    (∑ k ∈ Finset.range H, if k < h then C (h-k) else 0) ≤
+      ∑ r ∈ Finset.Icc 1 (H-1), C r := by
+  exact @sum_lower_shift_distances_le C H h hh hC
+
+example (C : ℕ → ℝ) {H h : ℕ}
+    (hC : ∀ r ∈ Finset.Icc 1 (H-1), 0 ≤ C r) :
+    (∑ k ∈ Finset.range H, if h < k then C (k-h) else 0) ≤
+      ∑ r ∈ Finset.Icc 1 (H-1), C r := by
+  exact @sum_upper_shift_distances_le C H h hC
+
+example (C : ℕ → ℝ) (D : ℝ) {H h : ℕ}
+    (hh : h < H) (hC : ∀ r ∈ Finset.Icc 1 (H-1), 0 ≤ C r) :
+    (∑ k ∈ Finset.range H, if h = k then D else C (shiftDistance h k)) ≤
+      D+2*∑ r ∈ Finset.Icc 1 (H-1), C r := by
+  exact @sum_shift_distance_row_le C D H h hh hC
+
+example
+    (a : ℤ → ℂ) (N H : ℕ) (C : ℕ → ℝ)
+    (ha : ∀ n ∈ Finset.Ico (0 : ℤ) N, ‖a n‖ ≤ 1)
+    (hC : ∀ r ∈ Finset.Icc 1 (H-1), 0 ≤ C r)
+    (hcorr : ∀ h ∈ Finset.range H, ∀ k ∈ Finset.range H, h ≠ k →
+      ‖∑ n ∈ Finset.Ico (-(H : ℤ)) N,
+        star (paddedShift a N n h)*paddedShift a N n k‖ ≤ C (shiftDistance h k)) :
+    (H : ℝ)^2*‖∑ n ∈ Finset.Ico (0 : ℤ) N, a n‖^2 ≤
+      ((N+H : ℕ) : ℝ)*((H : ℝ)*N+2*H*∑ r ∈ Finset.Icc 1 (H-1), C r) := by
+  exact @interval_weyl_differencing_sum a N H C ha hC hcorr
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    (∑ n ∈ Finset.Ico (0 : ℤ) ((L+1 : ℕ) : ℤ), sourceOscillatorySequence F T N a n) =
+      exponentialSumAt F T N a (a+L) := by
+  exact @sum_sourceOscillatorySequence F T N a L
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L H h k : ℕ)
+    (hh : h < H) (hk : k < H) (hhk : h < k) :
+    (∑ n ∈ Finset.Ico (-(H : ℤ)) ((L+1 : ℕ) : ℤ),
+      star (paddedShift (sourceOscillatorySequence F T N a) (L+1) n h)*
+        paddedShift (sourceOscillatorySequence F T N a) (L+1) n k) =
+      sourceShiftCorrelation F T N a L (k-h) := by
+  exact @padded_source_correlation_eq F T N a L H h k hh hk hhk
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L H h k : ℕ)
+    (hh : h < H) (hk : k < H) (hne : h ≠ k) :
+    ‖∑ n ∈ Finset.Ico (-(H : ℤ)) ((L+1 : ℕ) : ℤ),
+      star (paddedShift (sourceOscillatorySequence F T N a) (L+1) n h)*
+        paddedShift (sourceOscillatorySequence F T N a) (L+1) n k‖ =
+      ‖sourceShiftCorrelation F T N a L (shiftDistance h k)‖ := by
+  exact @norm_padded_source_correlation F T N a L H h k hh hk hne
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L H : ℕ) :
+    (H : ℝ)^2*‖exponentialSumAt F T N a (a+L)‖^2 ≤
+      ((L+1+H : ℕ) : ℝ)*((H : ℝ)*(L+1)+
+        2*H*∑ r ∈ Finset.Icc 1 (H-1), ‖sourceShiftCorrelation F T N a L r‖) := by
+  exact @source_exponentialSum_weyl F T N a L H
+
+example : aProcessShiftPoint (1/2) 0 1 = 1 := by
+  norm_num [aProcessShiftPoint]
+
+example : aProcessShiftPoint (1/2) 1 2 = 2 := by
+  norm_num [aProcessShiftPoint]
+
+example : aProcessShiftPoint (1/2) 0 2 = 3/2 := by
+  norm_num [aProcessShiftPoint]
+
+example (F : ℝ → ℝ) (T N : ℝ) :
+    sourceShiftCorrelation F T N 5 0 1 = 0 := by
+  exact sourceShiftCorrelation_empty F T N 5 0 1 (by norm_num)
+
+example : |(1-(1/2 : ℝ))^0-1| ≤ (0 : ℕ)*(1/2 : ℝ) := by
+  exact abs_compression_pow_sub_one (by norm_num) (by norm_num) 0
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    ‖exponentialSumAt F T N a (a+L)‖^2 ≤ (L+2 : ℝ)*(L+1) := by
+  simpa [add_assoc] using source_exponentialSum_weyl F T N a L 1
+
+example (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ) :
+    (0 : ℝ)^2*‖exponentialSumAt F T N a (a+L)‖^2 ≤ ((L+1 : ℕ) : ℝ)*0 := by
+  convert source_exponentialSum_weyl F T N a L 0 using 1 <;> simp
+
+end DomainPreservingAProcessRegression
+
+section AnalyticAProcessRegression
+open Set Expdb
+open scoped ContDiff
+
+example {σ δ : ℝ} {P : ℕ} {F : ℝ → ℝ}
+    (hσ : 0 < σ) (hδ : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    {u : ℝ} (hu : u ∈ phaseInterval) :
+    (2 : ℝ)^(-σ)/2 ≤ modelPhaseClosedSlope F u ∧ modelPhaseClosedSlope F u ≤ 2 := by
+  exact @modelPhaseClosedSlope_positive_bounds σ δ P F hσ hδ hF u hu
+
+example
+    {σ δ T N A : ℝ} {F : ℝ → ℝ} {P L : ℕ}
+    (hσ : 0 < σ) (hT : 0 < T) (hN : 0 < N)
+    (hδ : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hstart : N < A) (hend : A+(L : ℝ)+1 < 2*N)
+    (n : ℕ) (hn : n ≤ L) :
+    -4*Real.pi*T/N ≤ betaModelSample F T N A (n+1)-betaModelSample F T N A n ∧
+      betaModelSample F T N A (n+1)-betaModelSample F T N A n ≤
+        -Real.pi*(2 : ℝ)^(-σ)*T/N := by
+  exact @betaModelSample_firstDifference_bounds σ δ T N A F P L hσ hT hN hδ hF hstart hend n hn
+
+example
+    {σ δ T N A : ℝ} {F : ℝ → ℝ} {L : ℕ}
+    (hσ : 0 < σ) (hT : 0 < T) (hN : 0 < N)
+    (hslope : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hcurv : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (hstart : N < A) (hend : A+(L : ℝ)+1 < 2*N)
+    (hscale : T ≤ N/4) :
+    ‖∑ n ∈ Finset.range (L+1), oscillatory F T N (A+n)‖ ≤
+      (2/(2 : ℝ)^(-σ))*(N/T) := by
+  exact @norm_modelPhaseCore_le_firstDerivative σ δ T N A F L hσ hT hN hslope hcurv hF hstart hend hscale
+
+example (σ : ℝ) :
+    0 < modelPhaseFirstDerivativeConstant σ := by
+  exact @modelPhaseFirstDerivativeConstant_pos σ
+
+example
+    {σ δ T N : ℝ} {F : ℝ → ℝ} {a b : ℕ}
+    (hσ : 0 < σ) (hT : 0 < T) (hN : 0 < N)
+    (hslope : δ ≤ min ((2 : ℝ)^(-σ)/2) 1)
+    (hcurv : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hscale : T ≤ N/4) :
+    ‖exponentialSumAt F T N a b‖ ≤ modelPhaseFirstDerivativeConstant σ*(N/T) := by
+  exact @norm_exponentialSumAt_le_firstDerivative σ δ T N F a b hσ hT hN hslope hcurv hF ha hb hscale
+
+example {T N : ℝ}
+    (hN : 0 < N) (hlo : N/4 ≤ T) (hhi : T ≤ N) :
+    Real.sqrt T+N/Real.sqrt T ≤ 3*Real.sqrt N := by
+  exact @sqrt_add_div_sqrt_le_transition T N hN hlo hhi
+
+example {k l ε T N : ℝ}
+    (hk : 0 ≤ k) (hl : 1/2 ≤ l) (hε : 0 ≤ ε)
+    (hN : 1 ≤ N) (hlo : N/4 ≤ T) :
+    Real.sqrt N ≤ (4 : ℝ)^(k+ε)*((T/N)^(k+ε)*N^(l+ε)) := by
+  exact @sqrt_le_exponentPair_transition k l ε T N hk hl hε hN hlo
+
+example
+    {k l σ δ ε T N : ℝ} {F : ℝ → ℝ} {a b : ℕ}
+    (hk : 0 ≤ k) (hl : 1/2 ≤ l) (hε : 0 ≤ ε)
+    (hσ : 0 < σ) (hN : 4 ≤ N)
+    (hδ : δ ≤ min (modelPhaseCurvatureLower σ) 1)
+    (hF : IsApproximateModelPhaseFunction F σ 1 δ)
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hlo : N/4 ≤ T) (hhi : T ≤ N) :
+    ‖exponentialSumAt F T N a b‖ ≤
+      (3*modelPhaseSumConstant σ*(4 : ℝ)^(k+ε))*
+        ((T/N)^(k+ε)*N^(l+ε)) := by
+  exact @norm_exponentialSumAt_le_transition k l σ δ ε T N F a b hk hl hε hσ hN hδ hF ha hb hlo hhi
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+        0 < T → 1 ≤ N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        IsApproximateModelPhaseFunction F σ P δ →
+        ‖exponentialSumAt F T N a b‖ ≤
+          C*((T/N)^(k+ε)*N^(l+ε)+N/T) := by
+  exact @ExponentPair.allPositiveHeight_bound k l σ ε hkl hσ hε
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧
+      ∃ η₀ : ℝ, 0 < η₀ ∧ η₀ ≤ 1/2 ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N : ℝ) (a L r : ℕ),
+          0 < T → 2 ≤ N → 0 < r → (r : ℝ) ≤ η₀*N →
+          N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖sourceShiftCorrelation F T N a L r‖ ≤
+            C*(((σ*T*r/N)/(N-r))^(k+ε)*(N-r)^(l+ε)+
+              (N-r)/(σ*T*r/N)) := by
+  exact @sourceShiftCorrelation_bound_allHeights k l σ ε hkl hσ hε
+
+example
+    {q p σ T N r : ℝ} (hq : 0 ≤ q) (hp : 0 ≤ p)
+    (hσ : 0 < σ) (hT : 0 < T) (hN : 0 < N)
+    (hr : 0 < r) (hrN : r ≤ N/2) :
+    ((σ*T*r/N)/(N-r))^q*(N-r)^p ≤
+      (2*σ)^q*((T/N^2)^q*N^p*r^q) := by
+  exact @compressedHeight_main_le q p σ T N r hq hp hσ hT hN hr hrN
+
+example
+    {σ T N r : ℝ} (hσ : 0 < σ) (hT : 0 < T)
+    (hN : 0 < N) (hr : 0 < r) :
+    (N-r)/(σ*T*r/N) ≤ (1/σ)*(N^2/(T*r)) := by
+  exact @compressedHeight_inverse_le σ T N r hσ hT hN hr
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧
+      ∃ η₀ : ℝ, 0 < η₀ ∧ η₀ ≤ 1/2 ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N : ℝ) (a L r : ℕ),
+          0 < T → 2 ≤ N → 0 < r → (r : ℝ) ≤ η₀*N →
+          N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖sourceShiftCorrelation F T N a L r‖ ≤
+            C*((T/N^2)^(k+ε)*N^(l+ε)*(r : ℝ)^(k+ε)+N^2/(T*r)) := by
+  exact @sourceShiftCorrelation_normalized_bound k l σ ε hkl hσ hε
+
+example {q : ℝ} (hq : 0 ≤ q) (H : ℕ) :
+    ∑ r ∈ Finset.Icc 1 (H-1), (r : ℝ)^q ≤ (H : ℝ)*(H : ℝ)^q := by
+  exact @sum_shift_rpow_le q hq H
+
+example (H : ℕ) :
+    ∑ r ∈ Finset.Icc 1 (H-1), (r : ℝ)⁻¹ ≤ 1+Real.log H := by
+  exact @sum_shift_inv_le H
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧
+      ∃ η₀ : ℝ, 0 < η₀ ∧ η₀ ≤ 1/2 ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N : ℝ) (a L H : ℕ),
+          0 < T → 2 ≤ N → (H : ℝ) ≤ η₀*N →
+          N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          (∑ r ∈ Finset.Icc 1 (H-1), ‖sourceShiftCorrelation F T N a L r‖) ≤
+            C*((T/N^2)^(k+ε)*N^(l+ε)*(H : ℝ)*(H : ℝ)^(k+ε)+
+              (N^2/T)*(1+Real.log H)) := by
+  exact @sum_sourceShiftCorrelation_le k l σ ε hkl hσ hε
+
+example
+    {X S V T N H L C B : ℝ}
+    (hS : 0 ≤ S) (hV : 0 ≤ V) (hN : 0 < N) (hH : 0 < H)
+    (hL : 0 ≤ L) (hLN : L ≤ 2*N) (hHN : H ≤ N)
+    (hNT : N ≤ T) (hC : 1 ≤ C) (hB : 1 ≤ B)
+    (hweyl : H^2*X^2 ≤ (L+H)*(H*L+2*H*S))
+    (hsum : S ≤ C*(H*V+(N^2/T)*B)) :
+    X^2 ≤ 12*C*((N^2/H)*B+N*V) := by
+  exact @weyl_correlation_sum_majorant X S V T N H L C B hS hV hN hH hL hLN hHN hNT hC hB hweyl hsum
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧
+      ∃ η₀ : ℝ, 0 < η₀ ∧ η₀ ≤ 1/2 ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N : ℝ) (a L H : ℕ),
+          2 ≤ N → N ≤ T → 1 ≤ H → (H : ℝ) ≤ η₀*N →
+          N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+          IsApproximateModelPhaseFunction F σ P δ →
+          ‖exponentialSumAt F T N a (a+L)‖^2 ≤
+            C*((N^2/(H : ℝ))*(1+Real.log N)+
+              N*(T/N^2)^(k+ε)*N^(l+ε)*(H : ℝ)^(k+ε)) := by
+  exact @source_exponentialSum_differencing_bound k l σ ε hkl hσ hε
+
+example
+    {η R N : ℝ} (hη : 0 < η) (hη₁ : η ≤ 1) (hRN : R ≤ N)
+    (hlarge : 2 ≤ η*R) :
+    ∃ H : ℕ, 1 ≤ H ∧ (H : ℝ) ≤ η*N ∧
+      η*R/2 ≤ (H : ℝ) ∧ (H : ℝ) ≤ R := by
+  exact @exists_comparable_source_shift η R N hη hη₁ hRN hlarge
+
+example
+    {X N M R q η C B : ℝ}
+    (hN : 0 < N) (hM : 0 ≤ M) (hR : 0 < R) (hq : 0 ≤ q)
+    (hRN : R ≤ N) (hη : 0 < η) (hη₁ : η ≤ 1)
+    (hC : 1 ≤ C) (hB : 1 ≤ B)
+    (hbalance : M*R^(q+1) = N)
+    (htrivial : X^2 ≤ 9*N^2)
+    (hbound : ∀ H : ℕ, 1 ≤ H → (H : ℝ) ≤ η*N →
+      X^2 ≤ C*((N^2/(H : ℝ))*B+N*M*(H : ℝ)^q)) :
+    X^2 ≤ (20*C/η)*(N^2/R)*B := by
+  exact @integer_shift_optimization X N M R q η C B hN hM hR hq hRN hη hη₁ hC hB hbalance htrivial hbound
+
+example {q p T N : ℝ}
+    (hT : 0 < T) (hN : 0 < N) :
+    0 < aProcessOptimizationScale q p T N := by
+  exact @aProcessOptimizationScale_pos q p T N hT hN
+
+example {q p T N : ℝ}
+    (hq : 0 ≤ q) (hp : 0 ≤ p) (hN : 1 ≤ N) (hNT : N ≤ T) :
+    aProcessOptimizationScale q p T N ≤ N := by
+  exact @aProcessOptimizationScale_le q p T N hq hp hN hNT
+
+example {q p T N : ℝ}
+    (hT : 0 < T) (hN : 0 < N) :
+    Real.log (aProcessOptimizationScale q p T N) =
+      (-q/(q+1))*Real.log (T/N)+((1-p+q)/(q+1))*Real.log N := by
+  exact @aProcessOptimizationScale_log q p T N hT hN
+
+example {q p T N : ℝ}
+    (hq : 0 ≤ q) (hT : 0 < T) (hN : 0 < N) :
+    ((T/N^2)^q*N^p)*(aProcessOptimizationScale q p T N)^(q+1) = N := by
+  exact @aProcessOptimizationScale_balance q p T N hq hT hN
+
+example {q p T N : ℝ}
+    (hq : 0 ≤ q) (hT : 0 < T) (hN : 0 < N) :
+    N^2/aProcessOptimizationScale q p T N =
+      (T/N)^(q/(q+1))*N^(1+p/(q+1)) := by
+  exact @aProcessOptimizationScale_cost q p T N hq hT hN
+
+example {k ε : ℝ} (hk : 0 ≤ k) (hε : 0 ≤ ε) :
+    (k+ε)/(k+ε+1) ≤ k/(k+1)+ε := by
+  exact @aProcess_first_exponent_loss k ε hk hε
+
+example {k l ε : ℝ}
+    (hk : 0 ≤ k) (hl : 0 ≤ l) (hε : 0 ≤ ε) :
+    (l+ε)/(k+ε+1) ≤ l/(k+1)+ε := by
+  exact @aProcess_second_exponent_loss k l ε hk hl hε
+
+example {N ε : ℝ} (hN : 1 ≤ N) (hε : 0 < ε) :
+    1+Real.log N ≤ (1+1/ε)*N^ε := by
+  exact @one_add_log_le_rpow_budget N ε hN hε
+
+example {k l ε U N : ℝ}
+    (hk : 0 ≤ k) (hl : 0 ≤ l) (hε : 0 < ε) (hU : 1 ≤ U) (hN : 1 ≤ N) :
+    U^((k+ε)/(k+ε+1))*N^(1+(l+ε)/(k+ε+1))*(1+Real.log N) ≤
+      (1+1/ε)*(U^(k/(2*k+2)+ε)*N^(l/(2*k+2)+1/2+ε))^2 := by
+  exact @aProcess_power_budget k l ε U N hk hl hε hU hN
+
+example
+    {k l σ ε : ℝ} (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 2 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ),
+        2 ≤ N → N ≤ T → N ≤ (a : ℝ) → ((a+L : ℕ) : ℝ) ≤ 2*N →
+        IsApproximateModelPhaseFunction F σ P δ →
+        ‖exponentialSumAt F T N a (a+L)‖^2 ≤
+          C*((T/N)^(k/(2*k+2)+ε)*N^(l/(2*k+2)+1/2+ε))^2 := by
+  exact @source_exponentialSum_aProcess_bound k l σ ε hkl hσ hε
+
+example {k l : ℝ}
+    (h : InExponentPairTriangle k l) :
+    InExponentPairTriangle (k/(2*k+2)) (l/(2*k+2)+1/2) := by
+  exact @InExponentPairTriangle.aProcess k l h
+
+example
+    {k l : ℝ} (hkl : ExponentPair k l) :
+    IsExponentPairEstimateNonAsymptotic (k/(2*k+2)) (l/(2*k+2)+1/2) := by
+  exact @isExponentPairEstimateNonAsymptotic_aProcess k l hkl
+
+example {k l : ℝ} (h : ExponentPair k l) :
+    ExponentPair (k/(2*k+2)) (l/(2*k+2)+1/2) := by
+  exact @ExponentPair.aProcess k l h
+
+example : ExponentPair (1/6 : ℝ) (2/3 : ℝ) := by
+  convert exponentPair_half_half.aProcess using 1 <;> norm_num
+
+example : ExponentPair (1/14 : ℝ) (11/14 : ℝ) := by
+  convert exponentPair_half_half.aProcess.aProcess using 1 <;> norm_num
+
+example : ExponentPair (2/7 : ℝ) (4/7 : ℝ) := by
+  convert exponentPair_half_half.aProcess.aProcess.bProcess using 1 <;> norm_num
+
+example : (∑ r ∈ Finset.Icc 1 (0-1 : ℕ), (r : ℝ)⁻¹) ≤ 1+Real.log (0 : ℝ) :=
+  by simpa only [Nat.cast_zero] using sum_shift_inv_le 0
+
+example : (∑ r ∈ Finset.Icc 1 (1-1 : ℕ), (r : ℝ)⁻¹) ≤ 1+Real.log (1 : ℝ) :=
+  by simpa only [Nat.cast_one] using sum_shift_inv_le 1
+
+example (T N : ℝ) : aProcessOptimizationScale 0 1 T N = 1 := by
+  simp [aProcessOptimizationScale]
+
+example : ∃ H : ℕ, 1 ≤ H ∧ (H : ℝ) ≤ (1/2 : ℝ)*4 ∧
+    (1/2 : ℝ)*4/2 ≤ (H : ℝ) ∧ (H : ℝ) ≤ 4 :=
+  exists_comparable_source_shift (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+end AnalyticAProcessRegression

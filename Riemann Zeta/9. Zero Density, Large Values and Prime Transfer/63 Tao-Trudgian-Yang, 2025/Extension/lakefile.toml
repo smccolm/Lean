@@ -19,3 +19,7 @@ path = "../../.."
 [[require]]
 name = "ExpdbFrozen"
 path = "../Dependencies/ANTEDBFrozen"
+
+[[require]]
+name = "GafniTaoNative"
+path = "../Dependencies/GafniTaoNative"

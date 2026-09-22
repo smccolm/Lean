@@ -1,0 +1,1890 @@
+{
+  "sourceCommit": "6b19864d9be669882d1762e263ebb43ed7915d04",
+  "date": "2026-09-22",
+  "sourceRoot": "../../../74 Gafni-Tao, 2026/Extension",
+  "boundary": "GafniTao.WooleyNative",
+  "toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "pnt": "4ecb950126c4290293c5662dfe0e884123171df5",
+  "normalization": "LF line endings; trim terminal whitespace; preserve all declarations and proofs",
+  "canonicalImportAdapted": [
+    "GafniTao.SourceConventions",
+    "GafniTao.SharpPerronResidueProduct",
+    "GafniTao.SharpPerronZetaSurrogate",
+    "GafniTao.SharpPerronResidue",
+    "GafniTao.FordZeroDetectorKernel",
+    "GafniTao.FordZetaBasic",
+    "GafniTao.FourierBump"
+  ],
+  "primePacketImportAdapted": "PrimeNumberTheoremAnd.Consequences -> GafniTao.PrimeConsequences",
+  "sourceModules": [
+    {
+      "module": "GafniTao.WooleyNative",
+      "sha256": "1e46becdd0ccc194d6a35f8169ee3573550c07c75df810cefca312619f62c90e"
+    },
+    {
+      "module": "GafniTao.WooleySourceCriticalBase",
+      "sha256": "d2067fa4fb8766e143ce4196510950a34dada7aa2035f6b6e74ee6d7ed053a0d"
+    },
+    {
+      "module": "GafniTao.WooleySourceToPadic",
+      "sha256": "b5a53b8399e5d40b5778f98652e5ecb67c637d5214d7173732599d8e47457d0c"
+    },
+    {
+      "module": "GafniTao.WooleyPadicToCritical",
+      "sha256": "4ab84d6ebf903b2c3ae7c43e9072fda079b0ea28dd46a1734a993c1ee847129a"
+    },
+    {
+      "module": "GafniTao.HeathBrownKthDerivativeConditional",
+      "sha256": "fb9df522b75c163ff968196f11807baf4ef2bdfa05770e7d4c187950194d9e3d"
+    },
+    {
+      "module": "GafniTao.WooleySection10Theorem",
+      "sha256": "70fab5985aebf4a79b988d4fc0d843149ce4fc925208e6b052e2b3d57d97da92"
+    },
+    {
+      "module": "GafniTao.WooleySourceBoxing",
+      "sha256": "b7a6a4f2ce7db471dfac59d1991ccc14888c81399a881d211de67ffc098035ba"
+    },
+    {
+      "module": "GafniTao.WooleyCoefficientBridge",
+      "sha256": "93521039cbd8b6a3add63405a1ea8bffb5400b536ae100c5b586df773ccbe848"
+    },
+    {
+      "module": "GafniTao.WooleyPadicConcentration",
+      "sha256": "3b2bcff5a7719523cbfcf11c9add5cdbc828f9969e54f0486c49deedd89b8f42"
+    },
+    {
+      "module": "GafniTao.WooleyPadicScale",
+      "sha256": "9f7529684106164b584bb4c1c2f361125845f9eff9941135080c3602208b5b00"
+    },
+    {
+      "module": "GafniTao.WooleyCriticalBase",
+      "sha256": "10090a0d90856e28c1ad76ff1acd0d0ec63ed646f015f4f17f14146aee64c4aa"
+    },
+    {
+      "module": "GafniTao.HeathBrownTrivialBranches",
+      "sha256": "c9454c309d072301dbe22b3893107cb0e96aa9eec3f95e5b51772d92ab985d91"
+    },
+    {
+      "module": "GafniTao.WooleySection10SeparatedHierarchy",
+      "sha256": "2212b7f13935de86ff234888dc852bde2600ddb42de3e774dcceff46ce6eedfa"
+    },
+    {
+      "module": "GafniTao.WooleySection9Admissible",
+      "sha256": "ce0b9eec72b374842fde080f1398b991a03c3cef0fe0c1f8a1916176e955e0d5"
+    },
+    {
+      "module": "GafniTao.WooleyExponent",
+      "sha256": "eab81adb462b8ca69b262d0085005241134d729b367d71743d15cb7f834cb7a3"
+    },
+    {
+      "module": "GafniTao.WooleySourceAffine",
+      "sha256": "7c9ef2b42245e5f199deae963ce8aef6567901070d9e0de7e2c2e2329d84c88c"
+    },
+    {
+      "module": "GafniTao.WooleySourceBox",
+      "sha256": "d9dc8e82da6d6f8876d689c37f1f8c4008aee0c73969fd280e4dbb3671eab849"
+    },
+    {
+      "module": "GafniTao.WooleyPadicSetup",
+      "sha256": "66d4b6d5478106c13dd32c0029fa6bea9b5602753120ab8c62b079613284f063"
+    },
+    {
+      "module": "GafniTao.VinogradovCriticalReduction",
+      "sha256": "84f0be5645bd2bcd5d05bc1c483dee2bf202377de089e037ab97878e03583906"
+    },
+    {
+      "module": "GafniTao.HeathBrownBadScale",
+      "sha256": "a4b561e2b6c4c35558b24aca0709130e70db54fcb9665bde07e6121c96586a40"
+    },
+    {
+      "module": "GafniTao.WooleySection10TwoLossContradiction",
+      "sha256": "6ec4d88481190be7e7eee7be7e7820ab6c5127e710975d71a6c54c06bdfb9953"
+    },
+    {
+      "module": "GafniTao.WooleySection10HierarchySelection",
+      "sha256": "1db8e25a50c1a56b381d2b4a727239f1abaa1700e280a41f1f1c2dcf73d94a78"
+    },
+    {
+      "module": "GafniTao.WooleySection7",
+      "sha256": "f4f69210fffbe6668b07a043c6b7e712415168c37c4a171b6b4ebb539ae25a84"
+    },
+    {
+      "module": "GafniTao.WooleySection9Source",
+      "sha256": "d3eed103e33606a73f0579203505836c40bcadb8ef43494cb4e86ef14d583a4a"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialBasic",
+      "sha256": "fa1f170a2d41ee7d90d2e9488a626b438e0a3508dd52ee0cdb6ab977485da848"
+    },
+    {
+      "module": "GafniTao.WooleyNormalization",
+      "sha256": "68de33af1acf695755217a64398df76fc828a80f570ce8999d138f49e1d05228"
+    },
+    {
+      "module": "GafniTao.WooleySourceRestriction",
+      "sha256": "3016a5b8beda6f40d964cef36a88766e01fec6c0cdc8bf5388ea582bbc0d54b8"
+    },
+    {
+      "module": "GafniTao.WooleySourceMean",
+      "sha256": "3fe2973052bcab3125d1c3eb1da222b700055b91e48de5118a7c782cfcf74a49"
+    },
+    {
+      "module": "GafniTao.HeathBrownKthDerivativeSetup",
+      "sha256": "a5916464e0d6325948571ffd8e66147c289206dbabb12f45aa26d48046b7c609"
+    },
+    {
+      "module": "GafniTao.FordMomentInterpolation",
+      "sha256": "a5e85c12888a1f724d1e2413492fc1618601db50b6c176500ce0ce83b82ecc79"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneGoodBranch",
+      "sha256": "9d20e5f46bce2cd91784eca326157d2475a5f43a5b4d0d97336cce6d11926422"
+    },
+    {
+      "module": "GafniTao.WooleySection6TwoLoss",
+      "sha256": "55801b61db296bfc9a7d8d8c20e0d20015cef24f868fe93d8063456fab6f6e6e"
+    },
+    {
+      "module": "GafniTao.WooleySection10Contradiction",
+      "sha256": "b7d5b12cbe3a0ae648c1d59d2f18b58546af5e276d104eca7139a775e1c30f88"
+    },
+    {
+      "module": "GafniTao.WooleySection10ActualStep",
+      "sha256": "8e06375e70e2cda336bf9d97828823803e819b0609a4648a1ecb58ed9be56a1a"
+    },
+    {
+      "module": "GafniTao.WooleySection4Arithmetic",
+      "sha256": "c40277799a0d524769c2eaac9dac98eb2ae0f067b7e668c45757577c86cb52cc"
+    },
+    {
+      "module": "GafniTao.WooleySection7Hard",
+      "sha256": "04ea52c69647ff840f54fd2d7c822f16b6a010cbe1043da45dd199f0a1e7acbe"
+    },
+    {
+      "module": "GafniTao.WooleySourceSections68",
+      "sha256": "dfaf79a86ee13fe0a2294c33ac0221ae676c4676a54443612fd162244abdca52"
+    },
+    {
+      "module": "GafniTao.WooleySection8Ratio",
+      "sha256": "db6a3b7881d8eea2a5dc207b50e479335134b47ec90042ff9b25e67263c0997c"
+    },
+    {
+      "module": "GafniTao.WooleySection9Product",
+      "sha256": "98f5a1f66572b7fe061fba6985d8ca0b0ac7fae666e660b223c1d85720444ea2"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialSystem",
+      "sha256": "b52710f8bd6fdaf28ce1c988b40d0a08586a39532d8854045d328c55f48211fa"
+    },
+    {
+      "module": "GafniTao.WooleyEquation39",
+      "sha256": "209146f723613649d0883a936427a460320d0219c776145fbdc415bf96c0d6d8"
+    },
+    {
+      "module": "GafniTao.WooleySourceSection8",
+      "sha256": "25af75b309b560bb1cbf90865529fc9de4332cd23fea9b600d6e49637b3c71eb"
+    },
+    {
+      "module": "GafniTao.FordLemma34Terminal",
+      "sha256": "390406895cc66adde12a1c74a2032a2fb983ae898a0ca8c2bafb6db28a75055f"
+    },
+    {
+      "module": "GafniTao.FordLemma36Moment",
+      "sha256": "f25210eba15323bf14976c26b3fb374be49fa79044c027765c504b216bffcfc8"
+    },
+    {
+      "module": "GafniTao.HeathBrownFactorAlignment",
+      "sha256": "a6b4881f37ae93598d140535facb07beab0244c4cc7468b0479405436c383177"
+    },
+    {
+      "module": "GafniTao.WooleySection10Upper",
+      "sha256": "b6f74bf83b0fc3e6abb95d2cddbae4115567243b805dcfbfd567480ae8369cea"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialLemma63",
+      "sha256": "f752966eb591d6af5eb48ede9f0fb5cc1647ce286bd783f447cd5c2d939e4513"
+    },
+    {
+      "module": "GafniTao.WooleySection10Initial",
+      "sha256": "e3d563b405a954bf6b94c41a6a614acd965f4370d5edc4bc23219d502ad3d827"
+    },
+    {
+      "module": "GafniTao.WooleySection10Terminal",
+      "sha256": "5992f8d57df95e2182b96b02d7c31f3efd077520aa1df629371fa600cd79186e"
+    },
+    {
+      "module": "GafniTao.WooleyIterationArithmetic",
+      "sha256": "372fbc4f4ac6acd8b24612667919a4f5e1fd3bf2f5f930ee29d0594cd42cd341"
+    },
+    {
+      "module": "GafniTao.WooleySection9Hierarchy",
+      "sha256": "67b5255b1568d01deef0382cb0def588acb6fd08ae94e8e997c757277f959aab"
+    },
+    {
+      "module": "GafniTao.WooleySection10Step",
+      "sha256": "20023359c614e007a3d5e72a7b9746808c63494d7e09b9f917bc423663bad60e"
+    },
+    {
+      "module": "GafniTao.WooleySection10Chain",
+      "sha256": "ae9651022c0a7286b269ef6a720e91060ab34e3fb99e3d881e85d6708e511bfe"
+    },
+    {
+      "module": "GafniTao.WooleyConditioningTower",
+      "sha256": "04f8334e2aaa3301b4ba7d8f0782d7e995a34f2800b57c6b26bdf1edb1acb0b0"
+    },
+    {
+      "module": "GafniTao.WooleyEquation724",
+      "sha256": "fe5a6df9a6d51abd5a1f25caa24718122d1189e67b064d770473e73572bb1ddd"
+    },
+    {
+      "module": "GafniTao.WooleySection7HardPower",
+      "sha256": "ca7673a73158ea687087b95330cc1e2e50c751d9357c912c7e4b64042997599a"
+    },
+    {
+      "module": "GafniTao.WooleySourceMixed",
+      "sha256": "2429f6ef121555f6b9761043e763811871c8027103c86346996863bc0d7a0c21"
+    },
+    {
+      "module": "GafniTao.WooleySection8",
+      "sha256": "fef44ec7ff1a608315b1fcbc4b965dfef7fcb815123a95156cc581b9328074e0"
+    },
+    {
+      "module": "GafniTao.WooleySection8Normalized",
+      "sha256": "751701d055977d0f35e558df3bd3c0f9c3c5094601f36be74aa3626abe1bcb57"
+    },
+    {
+      "module": "GafniTao.WooleySection9Selection",
+      "sha256": "3562467a7f03de2d736568ef2aafb15cb7fa02672dc24ec3dffc19b91e09faab"
+    },
+    {
+      "module": "GafniTao.WooleyInitialConditioning",
+      "sha256": "83d173e36cdf0276410a57e0bd73c95ab1c7f53fbcd50b739a931b17064fb8d5"
+    },
+    {
+      "module": "GafniTao.WooleyWeightedComplexHolder",
+      "sha256": "9659fb1a8b4049327166f790fce7e6df0915553f530aa923ae31b190f9a7529b"
+    },
+    {
+      "module": "GafniTao.WooleyWeightedMean",
+      "sha256": "89bd47ec718127b2fd0cb69824426a071e2e9e092dc6fe2aa7bb256a0f4ec13b"
+    },
+    {
+      "module": "GafniTao.FordLemma34Step",
+      "sha256": "fa209ddadcea9a25a065af4372c1def8f6eef1b3b6157e468b35ca1a3174850b"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation320",
+      "sha256": "5c3b531caeb863550ca602244f195a05295dbe3d8987798dd9c466d828df0612"
+    },
+    {
+      "module": "GafniTao.HeathBrownFloorRemainder",
+      "sha256": "593131182bf51c0730c0652a73e0e87c52b9f4d7193255169b6f0db1ad61f181"
+    },
+    {
+      "module": "GafniTao.WooleySection4Lemma42",
+      "sha256": "d6d32c54ad3590a3450621e6d39683762e58ecb96f274fb7fc5d447764ae3eab"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialInitial",
+      "sha256": "e376cabaa6c95f447cc030758425528182897e7944c2ad65ab1b484454b5f56e"
+    },
+    {
+      "module": "GafniTao.WooleySection10Bound",
+      "sha256": "581eb0e485bff2b67c9101de79535cde087a00d313fe355f9a850efc9ac2a2e6"
+    },
+    {
+      "module": "GafniTao.WooleySection9Lemma93",
+      "sha256": "6c3590760b87643c0caefbe3799e3ceaa3e6bf3fe9851f622652f34842f93c67"
+    },
+    {
+      "module": "GafniTao.WooleyMixedRadix",
+      "sha256": "ae11cb98c0ec318468ecfee1c371b069d8d6aea104c26cc3ef25f5f9f4002f70"
+    },
+    {
+      "module": "GafniTao.WooleyAffineComposition",
+      "sha256": "3e2915d5929fbda31cd3d5208c661029f069a10fa528b87bfc4b75d0568e2084"
+    },
+    {
+      "module": "GafniTao.WooleyEquation723",
+      "sha256": "7dccecb27fdce914f4662653edb75853619484f66068ae19948ac870462f843c"
+    },
+    {
+      "module": "GafniTao.WooleySection7HardArithmetic",
+      "sha256": "25bcefe1a433ff2b90e8ab4ef2f61795a08969d65060863accacd2b27b9c5e5b"
+    },
+    {
+      "module": "GafniTao.WooleySection8Arithmetic",
+      "sha256": "e1f73d6d4bfb457df56ee6de22d72273474ab1253931eb3823f15174e959d8e2"
+    },
+    {
+      "module": "GafniTao.WooleySection9Arithmetic",
+      "sha256": "7b8af64fa4c44a810ed9b2fedf26e6cb6376efe38b6fa2e0a8c723a0b7abd7b9"
+    },
+    {
+      "module": "GafniTao.WooleyLemma63",
+      "sha256": "1995d18b2f52b04a209f2c5f1e63f567cfaec5f9e51372631c7981d77eaf30ef"
+    },
+    {
+      "module": "GafniTao.WooleyThreeFactorHolder",
+      "sha256": "06954616558ffd28e7c308f6b760676afcfec2cbe5c00a40359d241d249f3c94"
+    },
+    {
+      "module": "GafniTao.WooleyWeightedHolder",
+      "sha256": "09a267b5a2992a21acd73513028340a4d51d93d5bcf98e1596254ecdb3d5fbf1"
+    },
+    {
+      "module": "GafniTao.WooleyConditioning",
+      "sha256": "6959769d2c38a4fb1f747a0b27a4ef6bf8e1cc847696029eb85d9ae5dd9b6437"
+    },
+    {
+      "module": "GafniTao.FordCountMonotone",
+      "sha256": "9fdf8300cb11573a893fda0d7933de6aa6e63acb81bfbb91f7d8b3f9c4c38185"
+    },
+    {
+      "module": "GafniTao.FordLemma36Decrement",
+      "sha256": "42e798f0a9ae14d8c6780fd659dbe5643f875deb2a1b96680c239ed0713aa841"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneOpenInterval",
+      "sha256": "263c7c6cd9e313b467715a312f820ee9a79df8dbc88845b1385acd2e80b69b8f"
+    },
+    {
+      "module": "GafniTao.WooleySection4Holder",
+      "sha256": "66541716cf5065699409439a94f7d1185bacb8a1620c765f930eff12e1a59419"
+    },
+    {
+      "module": "GafniTao.WooleySection4Lemma41",
+      "sha256": "7496dc5ae9ec52815155382a680b1aa4f671e8191ae05f0ce26fc35ad34d1708"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialRefinement",
+      "sha256": "e6fc693560d8295a1b2bf2ffac84f3c2c7a3a6d87337dd42ff8d941b350651f2"
+    },
+    {
+      "module": "GafniTao.WooleySection9TwoStep",
+      "sha256": "6fe2e0ff3bab928a493e2218f4d5433762ad7225806d138283893fa43fdcdb70"
+    },
+    {
+      "module": "GafniTao.WooleySection4Conditioned",
+      "sha256": "8a7239d230df5ee7a79f5672f234811404baebeda2b7dfced107af037c8da3df"
+    },
+    {
+      "module": "GafniTao.WooleySection7LocalIdentity",
+      "sha256": "71cffd00ee0e13a5f0ca805ef47e2bcc12a7f5c428a988bb269ced8240f292b2"
+    },
+    {
+      "module": "GafniTao.WooleyRefinementTower",
+      "sha256": "9b157c938550b47dd0131c25f49ea277dd400e753b5995694ebd38c0a85a2b21"
+    },
+    {
+      "module": "GafniTao.WooleySection7Easy",
+      "sha256": "ec535d8278066e1640e771ed1615e0e94b65cd2c59d114938d51d001567b9da3"
+    },
+    {
+      "module": "GafniTao.WooleyTwoFactorHolder",
+      "sha256": "c613a1480adc99ab5cdad44c5663a4adb5f7e5d9f3740ecfb00ac265a89c4312"
+    },
+    {
+      "module": "GafniTao.WooleyMixedMean",
+      "sha256": "c48c7c600bd916c169a14efe44139e90d87677da623e6c85217e0e1d6460b94b"
+    },
+    {
+      "module": "GafniTao.WooleyResidueRefinement",
+      "sha256": "8a7a07f3e4757a125c5305fd616b897535340ac8d026135f524f1bd564f17cc4"
+    },
+    {
+      "module": "GafniTao.WooleyFiniteMean",
+      "sha256": "f22c654de2c36fe16b5e100b5c8960eb0380b1ac911cfd6a117fc6d72d6a21d2"
+    },
+    {
+      "module": "GafniTao.FordPrimePacketEventually",
+      "sha256": "97a7fe191b64450e88e034060cd0a7d0fcdbd6e58ff5742b1c46ff005808ad65"
+    },
+    {
+      "module": "GafniTao.FordLemma36LowerIterate",
+      "sha256": "0e10ab28501983d041684f14e193055a4b5db375dea0ab36b959f7d9fb07097d"
+    },
+    {
+      "module": "GafniTao.HeathBrownThreeTermMonotone",
+      "sha256": "0dcab867271de1b8d6128d4bfc16221151f784fc2d8aea52c35faea79f41cdc4"
+    },
+    {
+      "module": "GafniTao.WooleySection4Insertion",
+      "sha256": "7300ca7c8551d5040ac21e14deb864c04fa18d53f7dc4801d83b6627f82e8f3b"
+    },
+    {
+      "module": "GafniTao.WooleySection7ConditionedExpansion",
+      "sha256": "621d1d3abf48837e51acb5fdced43b7341bf6cebae903d7b6c68f546409fbbb9"
+    },
+    {
+      "module": "GafniTao.WooleySection7ShiftedMoment",
+      "sha256": "1515a1517dcb344aaf9402e1f1fc0a7608de3d75d42f8bd3f5e2af373b5be57a"
+    },
+    {
+      "module": "GafniTao.WooleySection7Coefficient",
+      "sha256": "43bf178ae43b7167db181b29f44601ec2122a23bfb89a3088007b1976fbc6976"
+    },
+    {
+      "module": "GafniTao.WooleyPadicSeparation",
+      "sha256": "0c7807916ece8cab82f1b2e5efab16aa9c18199f5a86f4c9a34fb3a93711b7bb"
+    },
+    {
+      "module": "GafniTao.WooleySection7IntegratedRefinement",
+      "sha256": "645c430feea53d2af6c453bf36684757fe56180b5b7b0d813a5b8c3763068590"
+    },
+    {
+      "module": "GafniTao.FordLemma34Assembly",
+      "sha256": "73b419bc02362490116277f552af1beb4d2e987bc7c028f37c1fb82e02d3a8fe"
+    },
+    {
+      "module": "GafniTao.FordPrimeSet",
+      "sha256": "cbd326c278c069186172ac518e2f2596eb9224dc089ec18d13da66b31d4790a9"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation321",
+      "sha256": "92ebe4c0528fac9615499e8cb8c8d85c06671e3116972a8005b9f79af2925546"
+    },
+    {
+      "module": "GafniTao.FordExpCertificate",
+      "sha256": "5c12c5cf11867ef7e2d6af0e9ec0dfeb71bfbf1b23c51f5d93be6604a347eed4"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneCompact",
+      "sha256": "45470cd0258e244e08c64d4f49adfbdbf64d364a34ef6c35769ec4b527cc4c92"
+    },
+    {
+      "module": "GafniTao.HeathBrownInteriorShift",
+      "sha256": "edffb0eb4f7972ac2917726f6f8a8b487524cfcb24ae4be26f4b38b6112fd2a3"
+    },
+    {
+      "module": "GafniTao.WooleySection4Congruence",
+      "sha256": "f4f878163c0dd23884f4422e04732f8c8037d4521896bca3d59082cea3f0dbe6"
+    },
+    {
+      "module": "GafniTao.WooleySection7MomentIdentity",
+      "sha256": "4dc97c2de3dde238d06644361467fc4ee58dc2c645d354dbe626531407f119d4"
+    },
+    {
+      "module": "GafniTao.WooleySourceRefinement",
+      "sha256": "fbffae70dc7d9d2d04ac0816a53c2c89eaeea48ac082922834d0dc1345f7917d"
+    },
+    {
+      "module": "GafniTao.WooleySection7SourceShift",
+      "sha256": "e658c0f543ccd984d1e54f92e3f50086fe8bdd51b7e38eefb209b7ab86295106"
+    },
+    {
+      "module": "GafniTao.WooleySourceTwist",
+      "sha256": "92e932b3ace5109cd6131ef2e31efb5dfb1b2fcb16457a713ec69ab6d1c154fe"
+    },
+    {
+      "module": "GafniTao.WooleySection7Arithmetic",
+      "sha256": "b2727aff5e2b9acb95d2e0b073a410dd9f023097d7e17440c7dd4c2a738c8b44"
+    },
+    {
+      "module": "GafniTao.WooleySection7LocalBound",
+      "sha256": "94d760d68e38e5c4253da96b4e5530442aea154512d7e8f08fd6558cc4307494"
+    },
+    {
+      "module": "GafniTao.FordLemma34E",
+      "sha256": "1d27e4097a05e19b611445ce190f415f21787af8cccb491985a97544c9f236fd"
+    },
+    {
+      "module": "GafniTao.FordLemma32Source",
+      "sha256": "219c09017820361a9fa786c463622bf4f4149bf2697fdd1eeb7f965667210ab7"
+    },
+    {
+      "module": "GafniTao.FordLemma36Exponent",
+      "sha256": "bb29ddfac877d563f45ab39f3c013fc47a8f61cd4018beeed2ee81b2e3c91ead"
+    },
+    {
+      "module": "GafniTao.FordNormalizedIntegralCenter",
+      "sha256": "bf922430a9936b592c36ddd1bba954f0a01cf8837c2c6da450a801aa2244cb20"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneSourceScale",
+      "sha256": "d3ae3a582656812366c1928a63dba66a912b60d94c7b5db347c0932ad926c1fd"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneDivision",
+      "sha256": "320919b763b74ff7247f256acd5e2fd489b55201548887909d21d649718b0c9c"
+    },
+    {
+      "module": "GafniTao.WooleySection4Dilation",
+      "sha256": "7fa9cf3b841d0ed9475207217c68cd6de5c8e6b53bf82476879edf3bec4cfc1d"
+    },
+    {
+      "module": "GafniTao.WooleySection7Congruence",
+      "sha256": "021f2d8fd4edcbe3c9ab2a5952a473dd7d84093487a61ea126823d95eda98f25"
+    },
+    {
+      "module": "GafniTao.WooleyTranslationDilation",
+      "sha256": "98486bedca9e8996d6753571e49c59c2a02c97d7bb2906bf16fe97ab4ba35012"
+    },
+    {
+      "module": "GafniTao.WooleyNormalFormChange",
+      "sha256": "04c0777ca38012a33877ce720636b956511ae0bdb9b23246a435afc4272b5880"
+    },
+    {
+      "module": "GafniTao.WooleySection7Reverse",
+      "sha256": "ff0c6c57c4ac80a141b69333aceea0074a4247af5d9eedd9ac88cb9f2f76c523"
+    },
+    {
+      "module": "GafniTao.WooleyTranslatedNormalChange",
+      "sha256": "0d395397ccc150181549e1ac875f312fbdd287051de4d4ebb4dc6dab9eeaca8b"
+    },
+    {
+      "module": "GafniTao.FordLemma34Eta",
+      "sha256": "07235cd5472197c00046f207de78fb02c5a5488ee72a4f98f02eaed00be60458"
+    },
+    {
+      "module": "GafniTao.FordLemma32Finite",
+      "sha256": "ccc61121cbafaed1e11379b881876981d7022ff1d4158059a0a716315699cab3"
+    },
+    {
+      "module": "GafniTao.FordLemma36Crossing",
+      "sha256": "9ddb205d39800ca54d6380743c93d26868c4b1c1b4275492fddd7d2bbe10d349"
+    },
+    {
+      "module": "GafniTao.FordSourceScale",
+      "sha256": "eb0537b987888957682d2216adc6174761a02b7de09ec2f9aaedc1195e960138"
+    },
+    {
+      "module": "GafniTao.HeathBrownSpacingMonomials",
+      "sha256": "7a9cec48bb9addf399f969d02e34984200e4116dcedd0ad8cbd4425a54a6e2bf"
+    },
+    {
+      "module": "GafniTao.HeathBrownSourceRegularity",
+      "sha256": "7ab81768ac49648fb5dc6c1248ea113793bb1e66c0ab2e6933aa9cde60c3c17e"
+    },
+    {
+      "module": "GafniTao.WooleySection7Transform",
+      "sha256": "353dad617071fcbb2d24c09670281b5d7c986491d413aa74e745186ba450b26e"
+    },
+    {
+      "module": "GafniTao.WooleySection7TopExtraction",
+      "sha256": "e474af0d4f326c610b8ddbc134d6738e09e48e3ac9cc4f88756e04c88cb793c1"
+    },
+    {
+      "module": "GafniTao.WooleyTranslationMatrix",
+      "sha256": "3e3cd264dc13b9920b522d18adfc6a0d7286a1c0ee234e501dc74191209ed90e"
+    },
+    {
+      "module": "GafniTao.FordLemma34Numerics",
+      "sha256": "00298c6c6bab603de9037907a0a6b5a9442f89edbcfb9af62e2765539a3194e8"
+    },
+    {
+      "module": "GafniTao.FordEquation33GoodPrime",
+      "sha256": "05f9ec218db1f0ffdb3571a95e9303417c2222d4064eccc3685506a647211b22"
+    },
+    {
+      "module": "GafniTao.FordLemma36Below",
+      "sha256": "d3e6589a673135e071d6446092399f839ea28b39d328e84761e5db6d8deb3f72"
+    },
+    {
+      "module": "GafniTao.FordNormalizedIntegral",
+      "sha256": "c987eb9b30b55479f6538e5f3f8dceffd00306fe97a0deb183d9e6a4cadda389"
+    },
+    {
+      "module": "GafniTao.HeathBrownLogAbsorption",
+      "sha256": "aac569cb2d1519cfaccc526432e4640511191a87bef2ff59fcf5f5f267827c11"
+    },
+    {
+      "module": "GafniTao.HeathBrownMajorantInsertion",
+      "sha256": "07ba0a8ab7763b02c5bc2fabdf5bd477c6ff7325f8ce77380a4aab4afaf77b0d"
+    },
+    {
+      "module": "GafniTao.WooleySection7Translated",
+      "sha256": "530297d905f1adf1dcadc9df69e4f5aa50163b775a644218954ac143023cbfc5"
+    },
+    {
+      "module": "GafniTao.FordLemma34Parameters",
+      "sha256": "aaba3377b32bb96499e45418232a699fdb1b80316fc2a71d43f4efa5e7727d7a"
+    },
+    {
+      "module": "GafniTao.FordKContradiction",
+      "sha256": "23a94b9d7c12c83fe93490f204203cb81416265b43e87a8dc30dff66dd4ef8be"
+    },
+    {
+      "module": "GafniTao.FordLemma36FinalExponent",
+      "sha256": "19942a45e7db643cab6f8ea392db3a482171484d31da06b95994fb84e71bff97"
+    },
+    {
+      "module": "GafniTao.FordCubicScaling",
+      "sha256": "aa2a52dd51e65bae148fa22a21bd00cc2a12260618ae0829628b3dcff0eb46fc"
+    },
+    {
+      "module": "GafniTao.HeathBrownCriticalExponents",
+      "sha256": "7014cb05675ad6243294cff4e3f3cba98d9e044a024f65477a5ae6d7599b489d"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneFinite",
+      "sha256": "f1440cb7ff931a1110958f89461ea70dd067f15105481a6d5cd2525211d028f3"
+    },
+    {
+      "module": "GafniTao.HeathBrownRefinedCountFinal",
+      "sha256": "17554d37329fcbddf245e5c7b86fab5739e5fb8e30852d111117fd84bc6ea74a"
+    },
+    {
+      "module": "GafniTao.WooleySection7Valuation",
+      "sha256": "641fac8c02ffc68e27f4c5d5cb67c9b79575d516eacd10b77dc7cfdd0529e489"
+    },
+    {
+      "module": "GafniTao.FordLemma33Finite",
+      "sha256": "2c264c53490da605b54f040627528be3b9bec3375621f9647ce29e5150837d01"
+    },
+    {
+      "module": "GafniTao.FordKRepeatedBound",
+      "sha256": "9c73eee0ce47c116cb096d6ddd4973578addaa930bd7833806c6fe22e9a79849"
+    },
+    {
+      "module": "GafniTao.FordLemma36Decay",
+      "sha256": "4c966cac64452ff5464420d428a6130846f9cb9956423a94f3afdb8b7af783cd"
+    },
+    {
+      "module": "GafniTao.FordCubicIntegral",
+      "sha256": "8908cfeaaee26ebf4301a209a0c2cd9591d50bb13c1899ab5c21ba588c206776"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneCore",
+      "sha256": "58858c1880a88c7a57a0c94bd287ab7c74b75ab13eb0d5bed095539abb2137c6"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneAverage",
+      "sha256": "0261a15b9c8f2fd6f9732a46974460002678d9943ee23664f777b3d54b278bde"
+    },
+    {
+      "module": "GafniTao.HeathBrownChosenAlgebra",
+      "sha256": "7c46272116484e0392f3dde59bbb2a78902caa013e504e7e045b5aa4295f4c1c"
+    },
+    {
+      "module": "GafniTao.WooleySection7Omega",
+      "sha256": "6104afd26320ddfd065d074e09853899d4d48216247d90984a920c5a242057ba"
+    },
+    {
+      "module": "GafniTao.WooleyTupleDisplacement",
+      "sha256": "4d039592821295ef96dbed39d6f53c02a18061e2ddf9791f12c6dcd9b53e0fdc"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalBranch",
+      "sha256": "a299d6a5bab1c67e51aa90670d9331b943f2a81488b9839b00427a96a7d5bc45"
+    },
+    {
+      "module": "GafniTao.FordKPowerMoment",
+      "sha256": "2e8aab93bd98c43feca9cbf6304435dc5529cfdfefced6a491f07a24374dca7c"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation319",
+      "sha256": "7622b7e1fcb2fba9f10c0375e745d05afd298da52948617821815f24d9a4f642"
+    },
+    {
+      "module": "GafniTao.FordCubicSum",
+      "sha256": "4c7b69d69127f6b042dac4f9d4780ce07185ee28435b7df0e43c4d54377602c7"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneAlgebra",
+      "sha256": "66301b3ec8c5313f8fc551923d2cf4815939a49a00805c5bfa2ff53ce1fc6003"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOnePreVMVT",
+      "sha256": "31c5cc6be6da355485a971054146a5b6d701059e2825d6e6e70941ba90c5aba9"
+    },
+    {
+      "module": "GafniTao.HeathBrownCenterWeyl",
+      "sha256": "0537b5b83764ac66f86adb13c1ad521a63b30ee797adc7133e5b54be3938dea7"
+    },
+    {
+      "module": "GafniTao.HeathBrownRefinedScaleBound",
+      "sha256": "a259cddb1351462dfc9ff66d3642fc2d690b905475a1ee0d4338789cc3cc78d8"
+    },
+    {
+      "module": "GafniTao.WooleyTaylorCoefficient",
+      "sha256": "320cc4b470ab4ef76849c19fce20c4e394694a4be109712deda1843a477353a7"
+    },
+    {
+      "module": "GafniTao.WooleyWeightedTuple",
+      "sha256": "9aa04d2f2bfa7ec7a3a9b69d8f0f0804423eef27fd7383f4e1bb2a0d82009ed4"
+    },
+    {
+      "module": "GafniTao.FordLShiftCauchy",
+      "sha256": "62100642480a7b8ccb7152effec7334faa3c63c406b796eb1f0c6cecc51e7760"
+    },
+    {
+      "module": "GafniTao.FordKThreeHolder",
+      "sha256": "a385a7986bad1b47ee1bc8baa0ee1b4e49ac63413c5b075cfa0db6adc4ef417f"
+    },
+    {
+      "module": "GafniTao.FordLemma36ReciprocalSum",
+      "sha256": "dcb017e4682e717c38b49022ecc7ed40486491ff73f1a9d2d4ccde1a6fa96f0a"
+    },
+    {
+      "module": "GafniTao.FordUnimodalSum",
+      "sha256": "555f813a1f46ac6f6e4824ab476aac3d9447f70dbd7ac4d2b76f9f05b6d2fa66"
+    },
+    {
+      "module": "GafniTao.HeathBrownLemmaOneReal",
+      "sha256": "802e29ec89640936a831f7890d2539bc22137a1c6053050a6d348b56562db207"
+    },
+    {
+      "module": "GafniTao.HeathBrownCellAveraging",
+      "sha256": "e4f7564214ac95bff93a9654f46bbb38948d4264032c79eac06a0ba6a5dae137"
+    },
+    {
+      "module": "GafniTao.HeathBrownWeylMoment",
+      "sha256": "57ca48095f40b64543669f48504c7c60799e41e7003d7c760c886a20ada14305"
+    },
+    {
+      "module": "GafniTao.FordLemma51Fibers",
+      "sha256": "21f07a9c930509c52c3a11077b2e3e75b8b3372cc691d62563b836c0747b1485"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftScale",
+      "sha256": "fd21e98b197e4a6085d303b0be27b8ce59320d1725abefdc40eae02b409e1cd4"
+    },
+    {
+      "module": "GafniTao.WooleyBinomialMatrix",
+      "sha256": "4d390ca3472beb133ac07d60457df97459f2e879c11c6dc8f8697c0f4e1418c0"
+    },
+    {
+      "module": "GafniTao.WooleyOrthogonalityInsertion",
+      "sha256": "1de590534f00c59d735d4ac4899b76cda258e6f16247f4849a2aabda753a0294"
+    },
+    {
+      "module": "GafniTao.FordLShiftRaisedWeyl",
+      "sha256": "af3087397fe5d695c55c94b8bd06bf1d0dfa62c10e81f90cbde32e48c0a8f248"
+    },
+    {
+      "module": "GafniTao.FordKRepeatedIntegral",
+      "sha256": "13b6f6731387bcdc6b3557d8e89d8d43bd816ae0402134bc8914fefd25f66a3e"
+    },
+    {
+      "module": "GafniTao.FordLemma36PotentialIteration",
+      "sha256": "f1d3017d38b63529f5c6ae8ae10a2a85a1e6dc724d5772c2cb98da7f0d2cff24"
+    },
+    {
+      "module": "GafniTao.FordCubicExponent",
+      "sha256": "4bd58d37304bd8e7706f54e6f95b91de9ad0713ac8958f573b0e9150a318e184"
+    },
+    {
+      "module": "GafniTao.HeathBrownCoefficientAbel",
+      "sha256": "2b79b7c1458e42bf3cd134656eb1cec43a702c173b0bb5d86bc83f3c12642c1e"
+    },
+    {
+      "module": "GafniTao.HeathBrownIntegratedHolder",
+      "sha256": "48d292510b2096d0abad05432e8e7002ba3313208be33aa7de467101af3ad36d"
+    },
+    {
+      "module": "GafniTao.HeathBrownNuMoments",
+      "sha256": "ebec96b16ba314ba8d089c423a885d37a5f881724b47ec3c54ff39abb31cf8e4"
+    },
+    {
+      "module": "GafniTao.FordVinogradovMomentMonotone",
+      "sha256": "e8ec8a0fe42d4da27aeedeef4f276491b98803d2483dd3015434e4310973bba4"
+    },
+    {
+      "module": "GafniTao.FordSecondHolder",
+      "sha256": "cad49c5afc5f660fa6b1f25f40925a175caab003c451f9daa6e68e63ee9deedf"
+    },
+    {
+      "module": "GafniTao.FordVinogradovIntegral",
+      "sha256": "dcbd71b8ced5ef4265b5201145564e09c0115bc955c62d4a567b99db63691f88"
+    },
+    {
+      "module": "GafniTao.HeathBrownRefinedCountChoice",
+      "sha256": "a7a9e505970950465ba29530285e5c12dc694766d1c3d86e3525f4390a83d814"
+    },
+    {
+      "module": "GafniTao.WooleyMatrixInverse",
+      "sha256": "99d4509ad6e991d7533ff0ea1096d33a4b39818a22f022424f6634f6af840460"
+    },
+    {
+      "module": "GafniTao.FordLShiftRaisedMoment",
+      "sha256": "16721e47efb59cd084e45564fad71037282af96a47a06d360a3546a8732cb28b"
+    },
+    {
+      "module": "GafniTao.FordKRepeatedFactor",
+      "sha256": "a1959e5b82aa741cdbf0e1dbfe96ee108fedec2c4fc3a51f0c7e32ade1e83c05"
+    },
+    {
+      "module": "GafniTao.FordLemma36Sequence",
+      "sha256": "f02d835f545d021d4cf56cd3f941df119e602a9d8c2b3adf12f9ea4e45bb1b21"
+    },
+    {
+      "module": "GafniTao.FordDyadicExponent",
+      "sha256": "34d831a2aef0c58207c663daf1b589367a6aa3a752dc45f9e6af7f5f3035e84a"
+    },
+    {
+      "module": "GafniTao.HeathBrownCoefficientVariation",
+      "sha256": "d9579655b06c2bb47f421cb6545be7facc8408b1822a1f1fb3f8a6386a707710"
+    },
+    {
+      "module": "GafniTao.HeathBrownHolder",
+      "sha256": "3012263b031c3c09cc50f6cafbf09ac3b742cdaf824dff32a26ad7ea97091ad8"
+    },
+    {
+      "module": "GafniTao.HeathBrownCellPairCount",
+      "sha256": "75d326f220b1a038a4677b271cf545f37458f49ebf982db3a55b39ad18ca6399"
+    },
+    {
+      "module": "GafniTao.FordLemma63Abel",
+      "sha256": "6059baa6d63203fcd4af14e0ac174bb1f928c84691434eb81d4f6f2f0a78bd41"
+    },
+    {
+      "module": "GafniTao.FordLemma51Holder",
+      "sha256": "5a6379ad8d6fe2e94f6e476f45fe0d50223ce8d4cd97902c4c6f337331b6ffdd"
+    },
+    {
+      "module": "GafniTao.FordZeroRepresentation",
+      "sha256": "d8963828f1ec1b56691e8a3978690d23b81f76f41f9edf4f31de47d639d174c4"
+    },
+    {
+      "module": "GafniTao.HeathBrownHChoice",
+      "sha256": "06836640941453d10ba325f9c3f90ed01e5b8e5e8d048736f333d68031e8e480"
+    },
+    {
+      "module": "GafniTao.WooleyPolynomialNormalForm",
+      "sha256": "0a98fb418e6bb83f6b8573bbe6a338933becfc164abe506ba8f7a529e2fccf33"
+    },
+    {
+      "module": "GafniTao.FordLShiftMaximum",
+      "sha256": "ed805cdd42854c47a6e2d2ccb8dd05acbff3f3034b997583c77da54c2fba1f63"
+    },
+    {
+      "module": "GafniTao.FordKRepeatedCover",
+      "sha256": "17b18fb6a79a5a38dc39c93c1bc7bdefdc8b5395fb6f9a98d9c643c0678f7fb7"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation318",
+      "sha256": "2f77c1d6ea28b67e712c439b038099b34d8168e45267f59684f352a3e6238060"
+    },
+    {
+      "module": "GafniTao.FordDyadicDecomposition",
+      "sha256": "1f9e5ef1af9767711ced89f4d38b0219c3de8ca8767662ea49620f5c0e3368e0"
+    },
+    {
+      "module": "GafniTao.HeathBrownCoefficientPhase",
+      "sha256": "18fe9cc15b42344c87fa412a3024e7cc0c563cfb74cb269d48a4ef5607f7c36c"
+    },
+    {
+      "module": "GafniTao.HeathBrownMultiplicitySecondMoment",
+      "sha256": "53df626442eb4f069f6bfe62ab2e54479e564e337db3ff16d3ee28c13426bf07"
+    },
+    {
+      "module": "GafniTao.FordLemma63Phase",
+      "sha256": "a1a75078f4d6eaa55c6edbeccdefeef3dbedc65a19560b25241b3792a954910f"
+    },
+    {
+      "module": "GafniTao.FordFiniteHolder",
+      "sha256": "117c50e42b377b4c1e027c18aa6536855ec4e9fd1ad5226396cc8be1690429b8"
+    },
+    {
+      "module": "GafniTao.FordExponentialSum",
+      "sha256": "f76c7b3c777d01cf3d7a5b657d73ed2782507c2a84055c3ce826ebd0ee0e3699"
+    },
+    {
+      "module": "GafniTao.HeathBrownRefinedCountBound",
+      "sha256": "cf8c686f15316ac567e218a4e68b91c18f1b9d618423aa421b38d2a321771343"
+    },
+    {
+      "module": "GafniTao.WooleyEquation717Tuple",
+      "sha256": "8dd80eef49b572180a72942954a7acb411b474e1d2d0fc0011320df2987d9848"
+    },
+    {
+      "module": "GafniTao.FordLShiftJensen",
+      "sha256": "eae6ab84ce462c33f2476c738fb1e80dfb500df9f64dbed665ffa696e51b3524"
+    },
+    {
+      "module": "GafniTao.FordKDiagonal",
+      "sha256": "d80d3cd00f467706021032d9279c85f9c1e090f74d5b09809fcff58c27c6ef55"
+    },
+    {
+      "module": "GafniTao.FordLemma36PotentialStep",
+      "sha256": "0d1208781c9884deee5656a50c3f5423f233bbc6138478cfd2c24e18b29a06e6"
+    },
+    {
+      "module": "GafniTao.FordExponentialSumAbel",
+      "sha256": "88529939680fa99465447f1621ac2dc6298393e7fbf9395482044a21cbd8b14b"
+    },
+    {
+      "module": "GafniTao.HeathBrownCellDisplacement",
+      "sha256": "7fda7edafa73dac9eea83f526fc00d79f1c09a66602f346034358c2ca0d81223"
+    },
+    {
+      "module": "GafniTao.HeathBrownMultiplicity",
+      "sha256": "6e21ef4e9b148c9899c72dddcfafcd2d432b86916f403c06c0543011ecfb8fef"
+    },
+    {
+      "module": "GafniTao.FordEquation67",
+      "sha256": "f2f63dab77ef2e49fdbfded0efb4588a0b97f4f1509f52051dc189fe4510bad6"
+    },
+    {
+      "module": "GafniTao.FordTaylorPhase",
+      "sha256": "7357efb0963d85f7b0f1da0d9fb9e1e09ddcc45a82463dd78028d1d09c437f61"
+    },
+    {
+      "module": "GafniTao.FordLemma51Entry",
+      "sha256": "2c4f55c3b542d220ad506f121da92144ea7d7d7d12d49fe322b6ab260c642499"
+    },
+    {
+      "module": "GafniTao.FordSource",
+      "sha256": "8d599a67af7e03630fc51dabe9804376ea5d2da62a2bf2e380dd9cbffc74bd6d"
+    },
+    {
+      "module": "GafniTao.HeathBrownHarmonicBound",
+      "sha256": "305eb96a1b075bdadd8299f8c5b665f93264d3e75d25c6489776604f4aa31d6e"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalAggregate",
+      "sha256": "52308e2d197108554b256e440c745d6dad058d7555068fccaa4095f60f67c2cc"
+    },
+    {
+      "module": "GafniTao.FordKFourier",
+      "sha256": "04d8be6df26af35b41c9e28bfb1687d2ecfbd37e34a3373bbfe049eb12bc6f2b"
+    },
+    {
+      "module": "GafniTao.FordLemma36Potential",
+      "sha256": "e8cff4d34bcc343012c3258671953a5306d37b3f827e6f23f05c438156aa2a40"
+    },
+    {
+      "module": "GafniTao.FordLaplaceInversion",
+      "sha256": "64cd9d031c7b57ae1abdf81eb0c257fef0e18810d0f122643a0fb0b370d87fa0"
+    },
+    {
+      "module": "GafniTao.HeathBrownCellVolume",
+      "sha256": "fc75a652023be18167e4b693e259da0e4be5fba96f9d2ea5229f0a1617bb0fb5"
+    },
+    {
+      "module": "GafniTao.FordEquation61",
+      "sha256": "19ce746595cf4e9d0d41966eb89e11c01d72d539e4b55d7e85dca6e72f612e34"
+    },
+    {
+      "module": "GafniTao.FordLogTaylor",
+      "sha256": "a5ad04252ad21e199a5be595434bf7f08ff5993ae1a54a24d6d1eb827b0fb8ec"
+    },
+    {
+      "module": "GafniTao.VinogradovKorobov",
+      "sha256": "3d5655367ca0751d1df77c824855335fe8346bde2e67d57582de009af718c536"
+    },
+    {
+      "module": "GafniTao.HeathBrownHarmonicSum",
+      "sha256": "3bc0dad8729a3a056bfa9fe5f73a673a9285ffc013e7490826252edb8661f5a0"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalFourier",
+      "sha256": "1806b6589cb1d96a256b0e4d82b02131d4efba40d8a7c11c5a362d8b9e1f2a6f"
+    },
+    {
+      "module": "GafniTao.FordKMaximal",
+      "sha256": "4bf60d894cf490bd2c43d0308979fd7af443d546ea273f1d3091f1c7faefdbc2"
+    },
+    {
+      "module": "GafniTao.FordLemma36LogTaylor",
+      "sha256": "a350d7a943fa6a016c3e8f450cf0bbe6ab85d5fbbcc9f4b8083af34c49a557e8"
+    },
+    {
+      "module": "GafniTao.FordKFiniteRectangle",
+      "sha256": "d52453edd40781324eca628e74f43fd923fa7cfdf16c9ef66e33781ff10326fc"
+    },
+    {
+      "module": "GafniTao.HeathBrownCoefficientCells",
+      "sha256": "0fb096bf45d95c5b72a6f6151a18f464f11c19aab3911293c587bdf3fdf2349d"
+    },
+    {
+      "module": "GafniTao.FordLemma51Shift",
+      "sha256": "b6c210fa4634605e9cfdde9beabcc51b78ea0a85e0160db091d20655f20452a9"
+    },
+    {
+      "module": "GafniTao.NearOneInputs",
+      "sha256": "52f03d8387ae2c2a0968e070ce84a87386f3b1c768538be0bb140ab31fd7e95e"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftFiberBound",
+      "sha256": "8a62521ed5040b3d3f69723960199d41905e5b02bb417d0ffe3525885c55b4af"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalEnlargement",
+      "sha256": "7f5fb8d28ea36001d372c6a44d9a97dc576337e3f5e156e4d577914c3ac2e4b8"
+    },
+    {
+      "module": "GafniTao.FordEquation33Source",
+      "sha256": "e5ddc3063c80c4350c9ba4a6d56b652ea66e47a6a7c2da05a27bf20951444ee4"
+    },
+    {
+      "module": "GafniTao.FordLemma36Lower",
+      "sha256": "a3abc26a8f79dab1802aa07fb84fd1a986291b6e72ee1ee058b754c84cce7aa9"
+    },
+    {
+      "module": "GafniTao.FordKFiniteResidues",
+      "sha256": "9113165b8bf9e4edce073e895939c1fa51be64ed11ee36165758ea8a3bdf4b5f"
+    },
+    {
+      "module": "GafniTao.HeathBrownAbelTransfer",
+      "sha256": "bd093df7029ab3f21494f6843cd16de7ad1ccc67fbce7562d82d78d67bd1771b"
+    },
+    {
+      "module": "GafniTao.FordLemma51W",
+      "sha256": "378789e470e9104c01eeaf3e6e4a37b62254a33870ee38b621439ec2175e05fd"
+    },
+    {
+      "module": "GafniTao.ZeroEnergy",
+      "sha256": "abc769a3257d083c2828ce4e1aecb88bb2dc6d86f8d9de6688f7072355d1530f"
+    },
+    {
+      "module": "GafniTao.HeathBrownSpacingRealBound",
+      "sha256": "70a790a5188fdb7d0a7d7708d96a3bfdb34660f87c1e5ca16a76e4d0ee1c1a15"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalFixed",
+      "sha256": "85fb32b3efe0a3d1baf7ff3ce15d351e96126af28eb6569e27c8e9d4f0a1c3dc"
+    },
+    {
+      "module": "GafniTao.FordEquation37Source",
+      "sha256": "27a53c51902f8a1c9d993637478163905e0a7111d4af136c40cb890048208006"
+    },
+    {
+      "module": "GafniTao.FordPrimeSelection",
+      "sha256": "40dd42fd28e3621c0c0e7ef608aebb7476bb958adf4e8fed3f919af45945d5e3"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation314",
+      "sha256": "5cf6782f2312e2a8bdf5162522e970502537377052f712b569dfb93af54ec755"
+    },
+    {
+      "module": "GafniTao.FordLeftLineIntegral",
+      "sha256": "04bf1fbdfeb6c14ed9af01c4c538271fc6e0ac556fcd4bf651ffe78488ba208c"
+    },
+    {
+      "module": "GafniTao.SharpPerronRectangle",
+      "sha256": "e15b1b4c9d343aa67b73ac84dc1f753b5d74ce785960f0c2b4d82d38dac7236d"
+    },
+    {
+      "module": "GafniTao.HeathBrownSourceAbel",
+      "sha256": "5edf62976720bfa60711ba4aac3bfa07db007515e71069732ca84c1b9620f15c"
+    },
+    {
+      "module": "GafniTao.FordLemma51Spacing",
+      "sha256": "bf72072efec08e6a9ab6d147f4a741f91960b5bea57c3a5748529142da99de5b"
+    },
+    {
+      "module": "GafniTao.Asymptotics",
+      "sha256": "2b28dabe972dc32fd75fb38affe328c55cf3a16eed5bfb9c999c0af61a752113"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftRange",
+      "sha256": "e7d06754f518846e03f01a08060e998486ce42ecc9bd71816fc0233476935cc7"
+    },
+    {
+      "module": "GafniTao.FordLOffDiagonalShift",
+      "sha256": "eb230886662e9e9ee46c28a7f657cd4179c114036624b63995b049b03c4e1067"
+    },
+    {
+      "module": "GafniTao.FordS4Resolution",
+      "sha256": "cb79d5663e4e53b19ffa8ac5d9137afd0c640af07560be68c954e650d0d5a2db"
+    },
+    {
+      "module": "GafniTao.FordEquation34SourceS3",
+      "sha256": "f63cd308112bdee699bd8cf2dc5c28d5c93589433416519e8cca0ef187e65475"
+    },
+    {
+      "module": "GafniTao.FordLemma32Arithmetic",
+      "sha256": "fe3811c6e1609e4a5157d01bfa6b87af2054c14410a7bf451fdee0688306a6d7"
+    },
+    {
+      "module": "GafniTao.FordCompleteCounts",
+      "sha256": "bc383626eac83cbf06524bd864e789a1fafc947ad0ab901d21966b9b4b7bbe0e"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation317",
+      "sha256": "f36ebc6e7a62ad904e830d64888359544271b809bb486e941546067b363ba867"
+    },
+    {
+      "module": "GafniTao.FordLeftLine",
+      "sha256": "04fc32d133e8a00bfa30fefae622927ca2d1075e49f15e08b3685f4d89ca752c"
+    },
+    {
+      "module": "GafniTao.SharpPerronResidueAssembly",
+      "sha256": "09b265b0520ee225f9d684f6e12a9394791649105c42d4a7adf1e4384a03682c"
+    },
+    {
+      "module": "GafniTao.SharpPerronOptimalLine",
+      "sha256": "d2bc88018c4230f85132dd86c34566702a043849272c933f040fb816614609d1"
+    },
+    {
+      "module": "GafniTao.HeathBrownAbelWeight",
+      "sha256": "953a72079a26152b9c68bfe86df3255bbbd2523a82191865dcc4361268b5ee28"
+    },
+    {
+      "module": "GafniTao.FordEquation54Window",
+      "sha256": "c7d266dd281a8d5d0e72132bfec9c9aed0678e85cbbf86b6e87f7d3287b2cdde"
+    },
+    {
+      "module": "GafniTao.SourceConventions",
+      "sha256": "a2640b398f3beea6372ad819f763013eb795138d84bb4aac1404d76623f34f61"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftDecomposition",
+      "sha256": "a1f3fe865cba6f0909ad9c1d9d57b555be76d26a70501315528c05fb0a683052"
+    },
+    {
+      "module": "GafniTao.FordLDiagonalBranch",
+      "sha256": "8eaa2820e677c536dd9bb1d111423642b43b7a39c40484aa0b58fc9a5872e31a"
+    },
+    {
+      "module": "GafniTao.FordS4BoundaryDominance",
+      "sha256": "250ae1101a1e4e4dcd9255bceea5d99b7eef1a11e7bf5b4541da455386605b63"
+    },
+    {
+      "module": "GafniTao.FordS4ToS6",
+      "sha256": "37a3cd17d0d5e1414fe2a02b65c01df766c8651d0935153c4ea60c0f0893d3b3"
+    },
+    {
+      "module": "GafniTao.FordEquation34S3Count",
+      "sha256": "ee30db755e9b2344db326c4bbedee4b193aec49d5f6e8099d99b3b7b5985be39"
+    },
+    {
+      "module": "GafniTao.FordJacobianAvoidance",
+      "sha256": "8e10ca28c8ad8de922cc486857d54573a3755db36dd30871c7ab655a0a31c431"
+    },
+    {
+      "module": "GafniTao.FordIntegerPolynomialSystem",
+      "sha256": "6acf071278b396de78d1d5b91a249d2aa14d25cb46b2320d3a287499955c4a4e"
+    },
+    {
+      "module": "GafniTao.FordLemma36Equation316",
+      "sha256": "3904893f5cb5cfdd9d3ff7f3cada65126685fd44e54cc0dc95df470faba0cb75"
+    },
+    {
+      "module": "GafniTao.FordLogDerivative",
+      "sha256": "2aa9a5769de6b303084746f0a0aacbb933d0ad78bab79e27f65ad3fdb8beb465"
+    },
+    {
+      "module": "GafniTao.SharpPerronLeftVertical",
+      "sha256": "9d2f4a87e74f803124a04267f9781924f8b5e79a9eb6b35c1051034b57ac2bf5"
+    },
+    {
+      "module": "GafniTao.SharpPerronZeroLocation",
+      "sha256": "aff6b53a104a4474db611864dab6bf907c8a36b6856c06f47e35c2f991885af6"
+    },
+    {
+      "module": "GafniTao.SharpPerronAdditiveBounds",
+      "sha256": "8e0da07c12cc3ab94b9849669ab5e65b8c0b535990045bdeca7f80eed5512661"
+    },
+    {
+      "module": "GafniTao.HeathBrownTaylorPhaseDerivative",
+      "sha256": "a153bbb0cf9445f9c8f6eb0aaf0967ef48b0b137c3b272bff5dddb6673dc70a1"
+    },
+    {
+      "module": "GafniTao.FordEquation54Counting",
+      "sha256": "0d05c1c725c859844bc7e3108d8da06f55c4b4f35a36effac25ac233acf71a49"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftFibers",
+      "sha256": "38aaa39ca68225ebd5055bb85e9163675890fed1854b89a61e2392aa423fffa6"
+    },
+    {
+      "module": "GafniTao.FordLDiagonalHolder",
+      "sha256": "5a05aab6e3053cf979861a049db008a6fdac584c37c23a7b3dd21742539ebb34"
+    },
+    {
+      "module": "GafniTao.FordOddHolder",
+      "sha256": "cc6794d17782ce4067b7c60982fd2172e7cb15a7af1af2622e8b8c56b947611a"
+    },
+    {
+      "module": "GafniTao.FordShiftedBinomial",
+      "sha256": "878810c72e7d2c7776dac489dc7c8de6d651fef90a2b43db38234685f1e3274b"
+    },
+    {
+      "module": "GafniTao.FordEquation37S6",
+      "sha256": "00e527ffc3b884fc3e5ee8c62125955f60359191e046888678137f707e010f2f"
+    },
+    {
+      "module": "GafniTao.FordEquation34Count",
+      "sha256": "916291d82a35b1ca106e995f03cb6483d76e998c51da68ef63f776e906d00f15"
+    },
+    {
+      "module": "GafniTao.FordPowerResidueFiber",
+      "sha256": "a01ce7cd4be2ee60a40dff43b6ab723b19808d8bf6310b9fb109a5f8d2b49c27"
+    },
+    {
+      "module": "GafniTao.FordFiniteDifference",
+      "sha256": "060a6c3abb8d320a2852d3b92fdc831cc6a651a94d199e7e09a9539b4c0a59fb"
+    },
+    {
+      "module": "GafniTao.FordLemma36PhiUpper",
+      "sha256": "4c47a87d381a384d2f4536fd205d1358863f5222cc5391f8715b2d6187606e36"
+    },
+    {
+      "module": "GafniTao.FordZetaBasicExplicit",
+      "sha256": "69c17fc33c9355a36eb6072e528358d95bbe04b16400b11d18e102bf7f2b2360"
+    },
+    {
+      "module": "GafniTao.SharpPerronHorizontalEdges",
+      "sha256": "2340e8a47218d6df876f4dd63a9b6b96b41679168ad3b55cf21825bf9227726a"
+    },
+    {
+      "module": "GafniTao.SharpPerronResidues",
+      "sha256": "4ba501c7cabdc4111a0f3b649d6cf6fd4b5fc289b1e8d5e08cd91b12ab2dc73d"
+    },
+    {
+      "module": "GafniTao.CriticalStripReflection",
+      "sha256": "a5178c45b2e7a53e54467d9ee6f6300489cbc9a504b0e8c27793de1f3ea8b8c2"
+    },
+    {
+      "module": "GafniTao.SharpPerronLogDistance",
+      "sha256": "6db535b04ced628a0ff60c6251b1e818e35c4a63fe0a807865c4f1a136d9c20d"
+    },
+    {
+      "module": "GafniTao.HeathBrownTaylorPolynomialBridge",
+      "sha256": "427c3c407b0f0ffe119d37d9567bcc52de4cb6939ff3960db51e9608360ececa"
+    },
+    {
+      "module": "GafniTao.FordEquation54Resonance",
+      "sha256": "f03842e3ceaf7ae8dbd979851278d00bec118664edb2fc46bb108a88ea9a0aef"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftedDifference",
+      "sha256": "466c6e3f1a3817afcc907a4555bcd73c9f8e737ac3128c2292e8415cb451d3a6"
+    },
+    {
+      "module": "GafniTao.FordLAwayFourier",
+      "sha256": "85d0ebc64fbd35c0b06079f431763826a3a087fdd9f87b2411fb9c6b5a7f4b53"
+    },
+    {
+      "module": "GafniTao.FordBoundaryCover",
+      "sha256": "e80caa4387347ae4b7c550f1742ac196ddaa1b1453b1e6c9ce6ceda28c7b03d4"
+    },
+    {
+      "module": "GafniTao.FordMomentTransform",
+      "sha256": "9529cc4921855fc227606d1bcfe0d0c6b5a9884f598a083605517512a908a095"
+    },
+    {
+      "module": "GafniTao.FordS6ToL",
+      "sha256": "90c470d481ec1e66e6d590c6f7294f0e28157d29c26b21d5dc623478c2168354"
+    },
+    {
+      "module": "GafniTao.FordEquation34Fourier",
+      "sha256": "46890fb277ee2b9ca74212b83555b36337967a08d532e2421c5936c194f8e280"
+    },
+    {
+      "module": "GafniTao.FordFourierCollision",
+      "sha256": "dcabf3714f9188bd9c0aed8087473ebc6269cfe8497d2ba4c9c6aa5b8873ba5d"
+    },
+    {
+      "module": "GafniTao.FordNewtonCongruence",
+      "sha256": "23afd4dc600a6d9ffcf66f26ec05843f7c70713a6f9b1006146e461c7eb31fb5"
+    },
+    {
+      "module": "GafniTao.FordPolynomialSystem",
+      "sha256": "975764fdad1d6f4a9e3f275c980fc82239c3d7175573b724c83d723329fa2365"
+    },
+    {
+      "module": "GafniTao.FordLemma36Dyadic",
+      "sha256": "beadb7f95f60306a0feb969d5113f2a4a7674f7722321fb128237bdc15eb2324"
+    },
+    {
+      "module": "GafniTao.FordZetaConvex",
+      "sha256": "7c0165cd47eba2a862259e95250b8a6e7054f768a0dc741a30f9d4d6e9f2ba64"
+    },
+    {
+      "module": "GafniTao.SharpPerronHorizontalIntegrand",
+      "sha256": "cd4874ee33c74b77aa995d4bb952a7a397b5eb23d97c138423aee91063ceab7b"
+    },
+    {
+      "module": "GafniTao.SharpPerronContour",
+      "sha256": "baced330d415e9829f766c848abc7bce09dc97b73558d643726f68c64d46dba8"
+    },
+    {
+      "module": "GafniTao.SharpPerronResidueProduct",
+      "sha256": "279d3cc90442bb188acc9a4022189ee6df6a24d43a85384b94467b93eedb70e7"
+    },
+    {
+      "module": "GafniTao.SharpPerronHalfPoint",
+      "sha256": "ac5aee982f701d584f57a92eb48592b5c7c641b46b6380f77d313ebe0a7fb4da"
+    },
+    {
+      "module": "GafniTao.HeathBrownTaylorRemainder",
+      "sha256": "a5e180cdd37509d5b9b56140cf268f64cb09fa74dbea698775d308d424a81e01"
+    },
+    {
+      "module": "GafniTao.FordEquation54Bound",
+      "sha256": "0f93cd58d55b494cf4d29e1d2fa7b46bb8002bd215394a600d0bd3d1519c222b"
+    },
+    {
+      "module": "GafniTao.HeathBrownBlockSpread",
+      "sha256": "0c394431b2baba40281e65455fc2d4c844a0396397c7c4610d78060464eced37"
+    },
+    {
+      "module": "GafniTao.FordLDiagonalDeletion",
+      "sha256": "87c9f422d362683b02dddc4e0e807e481b2ec4603a776a458e36c7c10ff9029d"
+    },
+    {
+      "module": "GafniTao.FordBoundaryCollision",
+      "sha256": "b8881f8bc99d43d2543f5d3eaae9c74f309cfef91cc72d94ae48167e76d58bee"
+    },
+    {
+      "module": "GafniTao.FordS4Interior",
+      "sha256": "d37ce0eb2c68c915625da1a51d92277ff39de7e2ee6198c454d2a99ad6028a5e"
+    },
+    {
+      "module": "GafniTao.FordBinomialTransform",
+      "sha256": "7ff0e5f446357506322a7af656dc22e62cd05a6a98504c1ce4b8e07bffd039c4"
+    },
+    {
+      "module": "GafniTao.FordS6Cauchy",
+      "sha256": "00a672d213b87ef8d6c6ad8e763a4226a47c1ef8be9dc61d5429d3b25fb7e129"
+    },
+    {
+      "module": "GafniTao.FordEquation34AMGM",
+      "sha256": "63722d1860dabb32299a5cd4addf0d773743f636c5a71ba4596675490618975d"
+    },
+    {
+      "module": "GafniTao.FordS6Setup",
+      "sha256": "bb9da4da29609fdae9069094bdecfd6c15ada3cd57820d7d436df8f46d5b0ad6"
+    },
+    {
+      "module": "GafniTao.FordVandermondeDeterminant",
+      "sha256": "7f639a34271e7ec421a0e5e8cb35f0b97ad65b40e16b3005a5ec6dbd4a71232c"
+    },
+    {
+      "module": "GafniTao.FordLemma36Theta",
+      "sha256": "547c67a2948b351941104a4b0186065df0ee0f87330473accb65af203c160b72"
+    },
+    {
+      "module": "GafniTao.FordZeroDetectorEdges",
+      "sha256": "bef8dd1727525d5882812115b580d27d491e295db3757284e432d44e9718c17b"
+    },
+    {
+      "module": "GafniTao.SharpPerronHorizontalAll",
+      "sha256": "847949301303fcebad26b1122437f72966a8eb3a84a9b132480c0cf5ca9c80fb"
+    },
+    {
+      "module": "GafniTao.SharpPerronRightEdge",
+      "sha256": "9bb46be3f03088d04a10f9a1d7b39a4c68a1ef358590b619b8a58f8fcb553ca8"
+    },
+    {
+      "module": "GafniTao.SharpPerronBounds",
+      "sha256": "bb3dfeb1bf1c5a33746b012ae8a4a391b081d6c6f8d7b15363f214cc81298a99"
+    },
+    {
+      "module": "GafniTao.SharpPerronZetaSurrogate",
+      "sha256": "33fbf5123bd98f655b83aa14bcb90cf3a9043bb7c0cd3b3524e425e11f045ed3"
+    },
+    {
+      "module": "GafniTao.SharpPerronGlobal",
+      "sha256": "e34d2920fc62168036ab9b14468f5e894a315e8ea60e91959ce7906c6fecd326"
+    },
+    {
+      "module": "GafniTao.HeathBrownPolynomialPhase",
+      "sha256": "61b687a9395cac85b99845b0e875d2acc0cc4983dfc7b09f2ef6164d22a8c921"
+    },
+    {
+      "module": "GafniTao.FordEquation54Interchange",
+      "sha256": "842cbc871ac3749c017b39e0d1c1d5a7534cd8524c3fdddd0e659807654d74dc"
+    },
+    {
+      "module": "GafniTao.HeathBrownCountLocalization",
+      "sha256": "5ca22589f12dc62adec3d8c3d2a66881ee6f65f5b5dd7b00b46e9e78dd1d10d2"
+    },
+    {
+      "module": "GafniTao.HeathBrownDerivativeCoordinates",
+      "sha256": "0cf3e5b78cc6fd3f8441512957a2c79eb738bee7595e5ef387a25102df7d6904"
+    },
+    {
+      "module": "GafniTao.FordLReducedFourier",
+      "sha256": "94e7ad2357119f305cd0ea78bc51ec5881147026e3a3cedeccfc3e235d85a550"
+    },
+    {
+      "module": "GafniTao.FordBoundaryWeyl",
+      "sha256": "ca505678e815688144c5c5455ecbb22216d033fb7fd1f48a622daf8e34e2d819"
+    },
+    {
+      "module": "GafniTao.FordS4Shifted",
+      "sha256": "8c72f11ee912018c01e8790f48b1943c5840e4a778f9557ccaaf7ee83a70ec69"
+    },
+    {
+      "module": "GafniTao.FordS6Signature",
+      "sha256": "adc459eafe8df565c4c0f8a454c64364566406e690996fe53612400c5c4f86f4"
+    },
+    {
+      "module": "GafniTao.FordResiduePartition",
+      "sha256": "b489baa5be57016b85c5c734d67b6e648f572475c409a85bd451cb3002d07267"
+    },
+    {
+      "module": "GafniTao.FordBStarCollision",
+      "sha256": "8048c6e99d3bdbb5c1d5dd706b84a9f5d28893fb86cbcbf371ab843cbdf02f4d"
+    },
+    {
+      "module": "GafniTao.FordLemma51Real",
+      "sha256": "0d7cc5435a25a19bd48c2ace1af2ab8202f2dce3d47b69600eeeb44fd3fbb502"
+    },
+    {
+      "module": "GafniTao.FordLemma36Admissible",
+      "sha256": "cdc9fdfc62ee6ca3838b304467f1f3accc5b59791f7990c6b5b8c9ded3b0606a"
+    },
+    {
+      "module": "GafniTao.FordCotangentPositivity",
+      "sha256": "543cfba114d0cab0478fbfba3d1d2fe4024eea9fbb33c877d34aea8cb19404e2"
+    },
+    {
+      "module": "GafniTao.SharpPerronLeftHorizontal",
+      "sha256": "e58093d26e87ef774f5ad46e6032aed63040e4d8c05a79096e00520344b7b00e"
+    },
+    {
+      "module": "GafniTao.SharpPerronRectangleSum",
+      "sha256": "19cc711cff2a12ad18c285e3b56538e8c712aaa5986ec5d34bb80c99b31402da"
+    },
+    {
+      "module": "GafniTao.SharpPerronSeries",
+      "sha256": "dbd77f9bfb48d954c757d5b8cb61402db06578f2a2a93c7a7df13cd767941e8c"
+    },
+    {
+      "module": "GafniTao.SharpPerronResidue",
+      "sha256": "598fca1b281451adfd7c9948ffb2eed504739726cad69291f2ff91a4a70aceff"
+    },
+    {
+      "module": "GafniTao.SharpPerronEndpoint",
+      "sha256": "147b1917d0b847983fd32f2ec3ad217810314ccf20a97a4d3c69d16ccc323b78"
+    },
+    {
+      "module": "GafniTao.HeathBrownSourceAverage",
+      "sha256": "b5e2f9cd9807f419e5db04099636397d724768c3fe92ed0ec746424fc60fe4c9"
+    },
+    {
+      "module": "GafniTao.FordEquation54Fourier",
+      "sha256": "fc95c1573f98ec4978790dff9a0406c90a0a0ab6f1b4147d79d5dc3455c54cfa"
+    },
+    {
+      "module": "GafniTao.HeathBrownBlockEnergy",
+      "sha256": "f190ebd771e68ffae798c902570c9e6d56dea74a9fa092edb7778c6b24c99d26"
+    },
+    {
+      "module": "GafniTao.HeathBrownBlockParameter",
+      "sha256": "a9d5cbfabb6edbdd1ac511e90fe9dca2061aa0f0226957b1cbd5247079e17f26"
+    },
+    {
+      "module": "GafniTao.FordLPartition",
+      "sha256": "26ff73e1236d0fb02a31181d9524d880fc2856f2a0d0358cadfc2ebcda676108"
+    },
+    {
+      "module": "GafniTao.FordCrossCollision",
+      "sha256": "39b9edc4bf8caa8a8a17fe427f0f496fc250ebddcea59aa99441c8e1c3a84593"
+    },
+    {
+      "module": "GafniTao.FordResidueShift",
+      "sha256": "b2b725ed07916494a0c3bb78c10bb5237fa0260254fcbeae2884edfe005aa44a"
+    },
+    {
+      "module": "GafniTao.FordFiniteAMGM",
+      "sha256": "155043e45b03efdeb2876fb86d31c2cc46e026f3f8295be660e44d717e9b374f"
+    },
+    {
+      "module": "GafniTao.FordFiniteCollision",
+      "sha256": "6c574a8a207fb0e378eadb4ee8305793409f1e438c4a6b9769ccc3fdb4e2d580"
+    },
+    {
+      "module": "GafniTao.FordLemma51Normalize",
+      "sha256": "bdac347b9e9a7e58c9970b914bbfae711db63663961240bbf17b0aa0fa047305"
+    },
+    {
+      "module": "GafniTao.FordLemma36Rounding",
+      "sha256": "0e13ed1cbfa6208370525b2e63cd2bb30f873eef41bd6a68a7722de3cb1da7ff"
+    },
+    {
+      "module": "GafniTao.FordZeroDetectorResidues",
+      "sha256": "215820a42f7d1f972d0d312ef96d6e2a401be016db2cdbde053eb39d16afb523"
+    },
+    {
+      "module": "GafniTao.SharpPerronHorizontalSymmetry",
+      "sha256": "5cb5cddba28109e20d2c3a1b0c3df1a9150d7930a282d9e9182544c098b813f7"
+    },
+    {
+      "module": "GafniTao.SharpPerronFunctionalEquation",
+      "sha256": "1bd5f048372f40d2e3f4246b02beea41c81eeb107c754c821449843d56d78d0b"
+    },
+    {
+      "module": "GafniTao.SharpPerronKernel",
+      "sha256": "a2dc2a2a77c4e9b338e11b46f5311d66201846c1eaf2eb3e47f89a82e9d504b5"
+    },
+    {
+      "module": "GafniTao.SharpPerronTermBounds",
+      "sha256": "e65a8884811e79870720c4caea11ed4f6e6ee844f577e510d516f49cc0bf4b88"
+    },
+    {
+      "module": "GafniTao.HeathBrownShiftAverage",
+      "sha256": "2131cbfc5bdfb29a1669c6a23cae15dfe4b3c63f5d2a3738116955df795ffc3b"
+    },
+    {
+      "module": "GafniTao.FordEquation54Expansion",
+      "sha256": "11d1004973dfca5257eca33e4764da8b288b3d1e87f1ff25c1ff429af2434870"
+    },
+    {
+      "module": "GafniTao.HeathBrownKernelEnergy",
+      "sha256": "2e773443242638c0a8514e8c41a5f2b5f17c83d1d60648454035af85a1e9d18c"
+    },
+    {
+      "module": "GafniTao.HeathBrownClosePairs",
+      "sha256": "be597288de7ef88e5e42e49020780cee36be59db0f24745d6d88e88f87992f8b"
+    },
+    {
+      "module": "GafniTao.FordLCoordinatePositive",
+      "sha256": "614108b5d67c68fb9cdc9c027c92460fc8e65a09c2d68e96087d4c410b047c45"
+    },
+    {
+      "module": "GafniTao.FordS4Diagonal",
+      "sha256": "1e581a28542e5d0b7b3364cc2a64e67a742066860a9edceb3f923de9c771d47b"
+    },
+    {
+      "module": "GafniTao.FordBStarCongruence",
+      "sha256": "f1fa9a06c7f6021c2b88b9bd15e7cad87a6186efb75f3d971fb699e06d9c336e"
+    },
+    {
+      "module": "GafniTao.FordLemma51Exponential",
+      "sha256": "17444358b788a52d231f9450c9f8f1f341a511692858018e2758f81bf67454c5"
+    },
+    {
+      "module": "GafniTao.FordLemma35Induction",
+      "sha256": "9b4a01b1cd11019fd5b05591be320246547ff73777fc1bc58c7139f6ae94b324"
+    },
+    {
+      "module": "GafniTao.FordZeroDetectorKernel",
+      "sha256": "8a6e97fb1b46a96895ea907e2fc7dcfb7afa029032e06c9924b57eb351d20afa"
+    },
+    {
+      "module": "GafniTao.SharpPerronPhysicalHorizontal",
+      "sha256": "d8ff63cd2261775007353ea7d13738bd3a45c43785322e0c44d09187dde5006f"
+    },
+    {
+      "module": "GafniTao.SharpPerron",
+      "sha256": "85174c365ea8112c6a29195b925ad0a51b1c2b3854b1b4f1c129d046c9353d73"
+    },
+    {
+      "module": "GafniTao.SharpPerronCutoff",
+      "sha256": "bf64cd168f7a857c18ffd0c256101391d35f11cdb36b4f3de8c5b834f0249867"
+    },
+    {
+      "module": "GafniTao.FordEquation54Setup",
+      "sha256": "13da91f9244194db2df78c019f81a255a8c0b7749009fe59e6047522540ae9d0"
+    },
+    {
+      "module": "GafniTao.HeathBrownBlocks",
+      "sha256": "d1969f0d175cfa4cd8ab069d88ba3e79f11c16c7df658ad5640414fee1934122"
+    },
+    {
+      "module": "GafniTao.HeathBrownTriangularKernel",
+      "sha256": "111fb55a66bed1fe5d9430dc9ccd43d4935fae982718ec578c86a93307cf2658"
+    },
+    {
+      "module": "GafniTao.FordLFourier",
+      "sha256": "d6977ececa559fa9187ec632d607605b5f89dc164048c2ac6b54bd3ca8b5fe1b"
+    },
+    {
+      "module": "GafniTao.FordHolderInterpolation",
+      "sha256": "1dd75de800e1e4f1bc40fdc7978c1ba3d2e8ae957e79d4d47930e02a0a8815a2"
+    },
+    {
+      "module": "GafniTao.FordBStarSource",
+      "sha256": "ab3d2fe34d00ad12020a273676f1bcbcf2f5dbcdc5ea903c89236f67c3018e34"
+    },
+    {
+      "module": "GafniTao.FordEquation52",
+      "sha256": "4616005c4e371fcad4587a760844f093c6287ba34ac323bc60657e96d8a21127"
+    },
+    {
+      "module": "GafniTao.FordLemma35OneStep",
+      "sha256": "46e1668042b8776f1437c4b75db1662a030a8723aca1ae2d9b1c6a77e54a8b77"
+    },
+    {
+      "module": "GafniTao.FordZetaBasic",
+      "sha256": "fd6f4976c85d1466b648f0aa2363f67397f0cb9d08f9b2e04993a8af6381b6eb"
+    },
+    {
+      "module": "GafniTao.SharpPerronHorizontalPositive",
+      "sha256": "7d6aef2a448998f271d46153650ab84d6b7f770704d9db3ce42edc0d762dbb4d"
+    },
+    {
+      "module": "GafniTao.SharpExplicitFormula",
+      "sha256": "eb2565f83906301a1dbe3866cbc758f337c41a2933778935b2bb8caafa069be1"
+    },
+    {
+      "module": "GafniTao.SharpPerronPhysical",
+      "sha256": "a947babd9a4b75b006c9037d9aeba10ec0f94c86cd30e7383e55364366ea5fdd"
+    },
+    {
+      "module": "GafniTao.FordLemma51Equation53",
+      "sha256": "de377700f220e73d5da58727fbaf2143ab7d772caabd4fdb42fceba12522376b"
+    },
+    {
+      "module": "GafniTao.FordTentSeries",
+      "sha256": "2201bb37be8f387d23f7e41ae3aee01d2efd5d7763fb147ff6d7348a3f3e4d58"
+    },
+    {
+      "module": "GafniTao.HeathBrownKernelFourier",
+      "sha256": "26d47cb97d6e3f7672189301751ec8d0d7dfaa7db0ddb85b03f6e5122b20a17a"
+    },
+    {
+      "module": "GafniTao.HeathBrownRefinedCount",
+      "sha256": "6187eb43315cef3b3bcd76c8d97c69ae08cc95df2203518b6869c5b66df8c0e1"
+    },
+    {
+      "module": "GafniTao.FordZeroFourier",
+      "sha256": "915f47b8c55eb3b8f295e4d933990ba2cd101399a6c4373d3c68b2b6bdf4644f"
+    },
+    {
+      "module": "GafniTao.FordS4BoundaryRange",
+      "sha256": "1e4b16da227b6e0d3e929ff7cfa5490b4b8c7bb81fc24e2d606f0a19482a9bad"
+    },
+    {
+      "module": "GafniTao.FordBStarBound",
+      "sha256": "3684b38e0e7c53c85f5ac0b5d8c547b5a8f8a3b820673a34d1f5e07c81a661ef"
+    },
+    {
+      "module": "GafniTao.FordLemma51Average",
+      "sha256": "f1a7ec83ab4811a2adbae7353f11b3563b04b5d48e7075d5aa3be2b1d46b790e"
+    },
+    {
+      "module": "GafniTao.FordLemma35InitialMoment",
+      "sha256": "5ebe6d7633864f0524fbd528c167b93ced1f2387c0190c101ec7603cef758c65"
+    },
+    {
+      "module": "GafniTao.FordLemma51",
+      "sha256": "174719aad8e3efe5374a4a92443814d9b2016cfc99b3b0a27c4583b21c524bc6"
+    },
+    {
+      "module": "GafniTao.SharpPerronPartialFraction",
+      "sha256": "61f65066358e1f08ae1c1969d7040d4667d954ac90c56f4fc835fe31a5d4a5db"
+    },
+    {
+      "module": "GafniTao.StripAssembly",
+      "sha256": "a92b9bc2ac3f2f8be2d4df58552a1b8e3377104cc38530e407fed976f78372bf"
+    },
+    {
+      "module": "GafniTao.SharpPerronEdges",
+      "sha256": "5d0920b0ba26188b15ba6c6f1d94e655d04f9d34443a79618b4c8e8be0e5d941"
+    },
+    {
+      "module": "GafniTao.FordTentWeights",
+      "sha256": "dbd02981b5f47f779c6a585b7a70a7d4b46dda4771300fa8e1bea9bf4f31d8ee"
+    },
+    {
+      "module": "GafniTao.HeathBrownSpacing",
+      "sha256": "4b4a6908b108a040d22dc14634fd1cc1dbe71d28ead22b3fd236ac08b96e3358"
+    },
+    {
+      "module": "GafniTao.FordIntegerDifferenceSystem",
+      "sha256": "6d5df426fbe4ccdb526b817df048a393d2b6ccc8e35ee85092c6a9543137d663"
+    },
+    {
+      "module": "GafniTao.FordPrimePowerLifts",
+      "sha256": "9b1cc77ed4324f725d7ac020757d668635e9172f834e1456ccf17349c04332e6"
+    },
+    {
+      "module": "GafniTao.FordMomentEventually",
+      "sha256": "49bba9998543d3420946b9575e9360268ff6c46223315517ae43e1ec6156493f"
+    },
+    {
+      "module": "GafniTao.FordEulerProduct",
+      "sha256": "841a81d0f29940e8a75fc3b63444348c735888df3deba59c9f05ec7a848e8dce"
+    },
+    {
+      "module": "GafniTao.SharpPerronGoodHeightChoice",
+      "sha256": "8394310ca0cb4a8a5e8ec8a03b1e63b1e6dd45534da52d5555c72a9f23828cb7"
+    },
+    {
+      "module": "GafniTao.FourthMoment",
+      "sha256": "709b9eacc2a115e7c2c5ec52f1474fddfb94682f73635dfd66c1d399f3c9f175"
+    },
+    {
+      "module": "GafniTao.FordSpacingCount",
+      "sha256": "fd62fa73641a6559ad17629440aad8d261b032bf4b1db297892b6781e89aa348"
+    },
+    {
+      "module": "GafniTao.FordSourcePrimePowerSystem",
+      "sha256": "cb98fc9ef328723bc2b22edefb7ac7aae66a7465b2afdf3f5a7251bff847994e"
+    },
+    {
+      "module": "GafniTao.FordLemma35Index",
+      "sha256": "787aae6266b2c4cc20648e42611fb29e1e5c2519379aa210e56ec740a2d1fac7"
+    },
+    {
+      "module": "GafniTao.FordFourierKernel",
+      "sha256": "6059053a0908ad0dfdf59d8c619a96666cc0f77784416aba46dbece0dba57cb7"
+    },
+    {
+      "module": "GafniTao.SharpPerronLandauZeros",
+      "sha256": "3ced280f8a4866f2d69e4df111ef162deebc5e6674992f69e2d8f2a9550b810b"
+    },
+    {
+      "module": "GafniTao.SecondMoment",
+      "sha256": "249cc2c57cfc2690d57dbcb1d06d2f32f6914f8b5787b60f1a4c509f1d98ce9e"
+    },
+    {
+      "module": "GafniTao.FordIntegerInterval",
+      "sha256": "11068003db7fe0a4fddd93f93184adf41c2f14ee7753c23a2b601879d1338cd1"
+    },
+    {
+      "module": "GafniTao.FordPrimePowerTriangular",
+      "sha256": "a60db9bfbd583c08602e214ce49eddc5903bd154458734df22eaf69750c7dfc8"
+    },
+    {
+      "module": "GafniTao.FordLemma35Phi",
+      "sha256": "bbfc3e001bf60dd726972b361d697509e52465e023ad6910dc74b260a67493db"
+    },
+    {
+      "module": "GafniTao.FordTrigonometric",
+      "sha256": "181c7d9d6d141bec9aa683e679fb3a11d7d5ddde785ecf5baa4df86448c1b268"
+    },
+    {
+      "module": "GafniTao.SharpPerronLandauSetup",
+      "sha256": "6e1e409055845aacd56534f8e392a777f9222773e83a56fb371878d476f0a997"
+    },
+    {
+      "module": "GafniTao.LocalZeroCount",
+      "sha256": "e074ef8b52a72ee08a6c27a99902e619174bfdba8292da1d0a7d83c3eb96c046"
+    },
+    {
+      "module": "GafniTao.FourierBump",
+      "sha256": "caa503d3165ef07eb615cca775e4e506bed7ea0e32778378e42b4d5a780e1e97"
+    },
+    {
+      "module": "GafniTao.ZeroSumSup",
+      "sha256": "8bb2df4beeb90704ebf8fb3eb02e7e093cb581409840bcaf5524337101644440"
+    },
+    {
+      "module": "GafniTao.FordPrimePowerNewton",
+      "sha256": "8d37844bba2719980563c20c2afb6dbbf6ad608ed14dd8812f9b73031ef70023"
+    },
+    {
+      "module": "GafniTao.FordLemma35Schedule",
+      "sha256": "999577e71a63f92b0f6167f9ab467b731cfcdea4337a5ca237d0da2fdcedd42c"
+    },
+    {
+      "module": "GafniTao.StrongPNTPrefix",
+      "sha256": "4ce444a5c52384d270ee8633a28473a99318245960a22768490fa2f55815f6c1"
+    },
+    {
+      "module": "GafniTao.ExplicitFormulaSetup",
+      "sha256": "5a5bdec8ff0db8011c7decdf2c24fe5c28e8d92185d96b0ba38942190e219277"
+    },
+    {
+      "module": "GafniTao.LocalCover",
+      "sha256": "2caa06be56cc053ba72b1114673c05b3ef87798173dfe415989ed6d463d60183"
+    },
+    {
+      "module": "GafniTao.FordTriangularFiber",
+      "sha256": "99f6cf8a2b6c7e715b31cda0292dd427eaba2233e781d860260494c24138ed0a"
+    },
+    {
+      "module": "GafniTao.FordLemma34Final",
+      "sha256": "463492b1a22d5493b40a999825bd3c101f1020aaf9f10e34e645e68a20853d0d"
+    },
+    {
+      "module": "GafniTao.ExceptionalSet",
+      "sha256": "40a5a35137c9a14887a5eaa9af8678e92c0a8d20fe95b3f4fec8f05f1c69e403"
+    },
+    {
+      "module": "GafniTao.FordLemma34Initial",
+      "sha256": "91d10ef1f005cddb1f1b4a7415a911d187deda0c7826bde094b58193030f27eb"
+    },
+    {
+      "module": "GafniTao.FordLemma34EventualData",
+      "sha256": "b7c4053627360db89207f46ea7d76ea9f5dd942d92164e45ec17d3ec04cf8e10"
+    },
+    {
+      "module": "GafniTao.FordLemma34Induction",
+      "sha256": "385a76f8e7206beb4a9dca3740a1bca3c98a2e2853e4eb90ca7a9922f3ac0545"
+    },
+    {
+      "module": "GafniTao.FordLemma34Backward",
+      "sha256": "6c10ec0d6c17c890964a1d7b5807de20caceb10ea129bf6c21e22f97736cb5ed"
+    },
+    {
+      "module": "GafniTao.FordLemma34ScaleBridges",
+      "sha256": "37cde8c166685325dcb34c994b39b84fe4151dc5f1a693e13fd9dc8836936072"
+    },
+    {
+      "module": "GafniTao.FordLemma34RawAlgebra",
+      "sha256": "7895732c82064f421c76533d5adf9509954a622463880f147545282be391202d"
+    },
+    {
+      "module": "GafniTao.FordLemma34Scales",
+      "sha256": "b5b2873cab56a1a031e4bbcc548e359c9309ccb5eb01ec53625670ed8913dc71"
+    },
+    {
+      "module": "GafniTao.FordLemma34BackwardComposition",
+      "sha256": "8984c831cfead1d6dcd5ef821235ee2e9220342c13000e124ffdc7f9e687012e"
+    },
+    {
+      "module": "GafniTao.FordLemma32Real",
+      "sha256": "6535ec8f1da7040f88ff524b126f17ec18be9993c689e1c8f8d919c36aac3a31"
+    },
+    {
+      "module": "GafniTao.FordLemma34Raw",
+      "sha256": "9b4d8182593ad74409de5eff4a86f44d1723e5dc625db6704dc51a00292c56b5"
+    },
+    {
+      "module": "GafniTao.FordRealCounts",
+      "sha256": "189a1b2d80dd64370490bd3b6cd351306579d32f7cf3617cd32cc68979dfb4d5"
+    },
+    {
+      "module": "GafniTao.FordLemma34BackwardCombinatorial",
+      "sha256": "ccced56d326ea9db7f1208187c60f0ea39dc8f3bb970385b0a20925c99aca8a7"
+    },
+    {
+      "module": "GafniTao.FordLemma34Recurrence",
+      "sha256": "1ed324781865ab77fd9abfce0b065065e533c1cbbbab796d80ed3126f8c01cf3"
+    },
+    {
+      "module": "GafniTao.FordLemma34BackwardAlgebra",
+      "sha256": "8458f717e39a88372b9bc0e266373d2674909a919fcca586d3f8b1590432cc15"
+    },
+    {
+      "module": "GafniTao.FordLemma34ScaleBounds",
+      "sha256": "baade47ccc6b5ac6cc001620112d7a48d0b9e94f925ca96f0aa65eae77410834"
+    },
+    {
+      "module": "GafniTao.FordLemma34InductionPredicate",
+      "sha256": "cd4a89afa2d771b51e180be9d925afcd93192d35bf314b58ba9a07874d69b867"
+    },
+    {
+      "module": "GafniTao.FordMomentReal",
+      "sha256": "e61d06710654e3a16aa08ad65463f402cdbf16f29893303b3ad337408f88d993"
+    },
+    {
+      "module": "GafniTao.FordLemma34RealRecurrence",
+      "sha256": "15a78ac141edbc74f011bcca220500c473fbb0a90fd9b7c9d07bee54c7fda359"
+    },
+    {
+      "module": "GafniTao.FordLemma34RealStep",
+      "sha256": "1a63152a368029f8b28561a8d472014bb11e928b7b560a709be880b3b741394e"
+    }
+  ],
+  "prefixes": [
+    {
+      "module": "GafniTao.WienerSource",
+      "source": "../../../74 Gafni-Tao, 2026/Dependencies/PrimeNumberTheoremAndClean/PrimeNumberTheoremAnd/Wiener.lean",
+      "sha256": "e55ebc39a66f5c2c59d8f62b3328a0d98876dcc85d6915c80805b05a41504f3d",
+      "lines": [
+        1,
+        2397
+      ],
+      "endDeclaration": "WeakPNT",
+      "adaptation": "Remove existing set_option linter.style.header false; normalize line endings and terminal whitespace."
+    },
+    {
+      "module": "GafniTao.PrimeConsequences",
+      "source": "../../../74 Gafni-Tao, 2026/Dependencies/PrimeNumberTheoremAndClean/PrimeNumberTheoremAnd/Consequences.lean",
+      "sha256": "922a98be40ba87aa4dee002addb23d0506b218e6defe7f18b05ae11de14007c5",
+      "lines": [
+        1,
+        185
+      ],
+      "endDeclaration": "chebyshev_asymptotic",
+      "adaptation": "Change Wiener import to GafniTao.WienerSource; normalize line endings and terminal whitespace."
+    }
+  ],
+  "license": {
+    "source": "../../../../.lake/packages/PrimeNumberTheoremAnd/LICENSE",
+    "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  }
+}

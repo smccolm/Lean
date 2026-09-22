@@ -1,0 +1,20 @@
+name = "GafniTaoNative"
+version = "0.1.0"
+defaultTargets = ["GafniTaoNative"]
+packagesDir = "../../../../.lake/packages"
+buildDir = "E:/Lean/.lake/tao-trudgian-yang-gafnitao-build"
+
+[[lean_lib]]
+name = "GafniTao"
+globs = ["GafniTao.+"]
+
+[[lean_lib]]
+name = "GafniTaoNative"
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "RiemannZeta"
+path = "../../../.."
