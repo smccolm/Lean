@@ -1,7 +1,7 @@
 # Lean extension
 
-Current analytic progress: [Robert–Sargos small-alpha sixth moment](#robertsargos-small-alpha-sixth-moment--current-checkpoint).
-The actual unweighted maximal sixth moment on the small-alpha window is proved with explicit bound 44845498368 (1+log N)^5 and a literal source (log N)^6 corollary. Higher-moment window transfer and the global bootstrap/C-process remain open. The permanent counterexample and all nine repaired Add-est clauses are preserved.
+Current analytic progress: [Sargos initial-interval moments and uniform sextuple count](#sargos-initial-interval-moments-and-uniform-sextuple-count--current-checkpoint).
+The initial-interval sixth moment and Sargos's shift-uniform sextuple count are proved. Symmetric differencing, A-bar-four and C-process remain open. The counterexample and all nine repaired Add-est clauses are preserved.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -6928,7 +6928,7 @@ remain unchanged (22 checked). The counterexample SHA-256 remains
 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
 The completed repaired energy branch is unchanged; the whole goal remains open.
 
-## Robert–Sargos small-alpha sixth moment — current checkpoint
+## Robert–Sargos small-alpha sixth moment — previous checkpoint
 
 `sargosQuartic_small_sixth_moment` proves, for every natural N >= 1,
 
@@ -7023,3 +7023,1698 @@ endpoints or unclassified nodes. All 42 aggregate checkbox states
 remain unchanged (22 checked). The counterexample SHA-256 remains
 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
 The completed repaired energy branch is unchanged; the whole goal remains open.
+
+## Robert–Sargos full window comparison — previous checkpoint
+
+The full higher-moment window comparison in Robert–Sargos Lemma 1 is now
+kernel-checked for every natural N >= 2 and p >= 1. The public consumers are
+`sargos_lemma_one_upper` and `sargos_lemma_one`; the latter derives
+integrability from measurability and the proved majorant. No count,
+cancellation estimate, window comparison, or moment bound is assumed.
+
+Write B for the literal number of ordered pairs of p-tuples of integers
+in (N,2N] satisfying the source quadratic and quartic tolerances
+1/delta and 1/lambda. Let J be the unweighted fixed-sum 2p moment on
+[-Delta/2,Delta/2] x [-mu/2,mu/2]. With derivative bound K/N on the actual
+source interval and parameter rectangle, set
+
+```text
+C(p,K) = 16 [3 (1 + 2 pi K) (1 + 1/log 2)]^(2p).
+U <= C(p,K) delta lambda (log N)^(2p) B,
+B <= 64/(Delta mu) J,
+0 < Delta <= delta, 0 < mu <= lambda.
+```
+
+Here U is the genuine upper integral of the actual slow-phase prefix
+maximum; arbitrary, even nonmeasurable parameter dependence is allowed.
+For an AEStronglyMeasurable integrand the ordinary iterated integral is
+proved to agree, and the source-normalized inequality
+U / [(log N)^(2p) delta lambda] <= C(p,K) B is exposed.
+The result even permits delta > 1. The finite maximum includes the empty
+prefix, whose norm is zero; the estimate therefore covers all source
+nonempty prefixes as well. The coefficient family is fixed in the two
+parameters and has norm at most one on the actual source interval.
+
+The dependency chain is substantive:
+
+- The p-th power is expanded exactly over `Fin p -> (N,2N]`.
+- The physical tolerance identities retain both N^2 and N^4.
+- The upper sinc-kernel window bound yields 16 delta lambda times the count.
+- A dual tent Gram identity bounds that count by the central integral.
+  Its compact support and weight at most one are proved, and every counted
+  pair contributes at least Delta mu/64; all remaining weights are nonnegative.
+- Finite weighted Jensen and actual Fourier completion work for every
+  positive integer power. The common prefix kernel has mass at most
+  3(1+log N); each completed mode has fixed unit-modulus-twisted coefficients.
+- Actual Abel removal supplies the factor (1+2 pi K)^(2p), and a proved
+  log-normalization inequality recovers the literal source log.
+
+The 13 modules are `SargosWeightedPowers`, `SargosMomentTuples`,
+`SargosMomentCount`, `SargosDualTentKernel`, `SargosDualTentGram`,
+`SargosDualTentWindow`, `SargosMomentCentral`, `SargosPowerRegularity`,
+`SargosPowerCompletion`, `SargosMaximalWindow`, `SargosSlowPowerWindow`,
+`SargosLemmaOne`, and `SargosLemmaOneMeasurable`.
+All 57 public theorems are explicitly audited. The 66 new regressions
+comprise 57 exact signatures and nine additional fixtures, including
+N=1 count scaling, delta > 1, sixth/tenth moments, both tent-support
+directions, a smooth sine phase, and an arbitrary bounded linear-phase family.
+
+Source: [Robert–Sargos, section 4, Lemma 1](https://arxiv.org/html/2307.03554v1#S4).
+The explicit derivative loss uses the correct O(K) variation over an
+interval of length N, not the printed O(1/N) variation sentence.
+
+This closes the higher-moment window-comparison subbranch of EPZAE-10.
+The global sixth-moment bootstrap, real dual-scale interval handling,
+quartic B/Legendre and sextic slow-error calculation, and C-process are
+still open. The previous small-alpha sixth moment remains available
+with its verified log^5 estimate and exact source log^6 corollary.
+No aggregate task is newly marked complete.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  LEAN VERIFICATION PASS; 790 production modules, 1264 scanned Lean files,
+  10122 Lake jobs, 6607 target + 6240 pinned + 5 boundary declarations
+  audited (12852 total). All 57 public declarations appear exactly once
+  in the explicit audit and use only permitted logical axioms.
+  [Full extension log](../logs/tao-trudgian-yang-build-20260922-234413-dcbd04c1.log).
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, PASS; all six stages
+  passed, with 8857 root jobs, 301 root modules, two retained regressions,
+  7636 explicit public declarations and 14290 discovered foundation
+  theorems audited. [Foundation log](../../../logs/foundation_freeze_20260922_234712.log) and
+  [manifest](../../../logs/foundation_freeze_20260922_234712.json).
+- Both logs have zero errors, warnings, tactic suggestions and linter
+  failures. The production inventory, root imports, explicit audit and
+  semantic regressions were updated together.
+- All 1285 source/config/tooling files were byte-identical across the
+  BAT pair; the 17 normalized source/integration hashes are recorded in
+  the [checkpoint JSON](../logs/tao-trudgian-yang-sargos-windows-20260922-234413-dcbd04c1.json).
+  Of the previous 1272 files, only the root import, audit, regression and
+  PowerShell runner inventory changed; the 13 new modules were added.
+
+The evaluated foundation HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`
+with a dirty worktree. An owner Progress Update advanced the previous
+HEAD during ongoing work; no agent commit or push was performed.
+All 509 protected tracked files are unchanged against this HEAD.
+The permanent counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 301 nodes and 801 edges, with no missing endpoints,
+duplicates or unclassified nodes. All 42 aggregate checkbox states are
+unchanged (22 checked). The repaired energy branch and all nine Add-est
+clauses remain intact; the whole-proof goal is still open.
+
+## Robert–Sargos sixth-moment base and strip reduction — previous checkpoint
+
+The actual base integral `sargosSixthBaseMoment N` is defined by the
+unweighted fixed sum on alpha in [0,1] and gamma in [-N^-3,N^-3].
+Its kernel-checked bounds are
+
+```text
+1/64 <= I(N) <= 2 N^3                     (natural N >= 1).
+```
+
+The lower bound is derived from the literal diagonal tuple injection:
+there are N^p source p-tuples, and each pair (t,t) satisfies both
+nonnegative tolerances. The dual-tent count-to-central integral theorem
+is then consumed. Exact complex conjugation under
+(alpha,gamma) -> (-alpha,-gamma), actual integral reflection and
+rectangle inclusion relate the central integral to I(N). No positive
+lower bound, diagonal count or base-moment estimate is a parameter.
+
+The same sign/window bridge consumes the previously proved small-alpha
+maximal estimate and yields the fixed-sum central sixth moment on
+[-1/sqrt N,1/sqrt N] x [-N^-3,N^-3] bounded by
+
+```text
+89690996736 (1+log N)^5.
+```
+
+For N >= 2, the literal source log^6 corollary has absolute constant
+89690996736 (1+1/log 2)^6.
+
+The completed Lemma 1 now has a further actual consumer:
+`sargosQuartic_maximal_sixth_strip_reduction` bounds the weighted prefix
+maximum on any translated unit-width alpha strip and any positive
+height width lambda by
+
+```text
+128 C(3,0) (1 + lambda N^3) (log N)^6 I(N).
+```
+
+The ordinary and upper-integral slow-phase consumers replace C(3,0)
+by C(3,K), for the proved derivative bound K/N. C is the explicit
+constant from the preceding full-window checkpoint. The upper-integral
+version allows arbitrary nonmeasurable parameter dependence; the
+ordinary version derives integrability from measurability. The width
+choice min(lambda,2/N^3), its positivity, physical count monotonicity,
+central window inclusion and factor 1+lambda N^3 are all proved.
+
+The six new modules are `SargosDiagonalMoment`, `SargosSymmetricWindow`,
+`SargosCentralSixthMoment`, `SargosSixthBaseMoment`,
+`SargosSixthStripCount`, and `SargosSixthStripTransfer`. Their 24 public
+theorems are explicitly audited. The 34 new regressions comprise all
+24 exact signatures and ten additional fixtures, including empty-tuple
+counting, N=1 bounds, a concrete translated strip, the scale boundary,
+a smooth sine phase and arbitrary bounded nonmeasurable linear phases.
+
+These are the actual initial beta=3 estimate, nonvanishing base bound
+and height-strip reduction used around
+[Robert–Sargos, section 7](https://arxiv.org/html/2307.03554v1#S7).
+They do not establish I(N) << N^epsilon. The exponent-improving recurrence,
+quartic B/Legendre expansion, real dual-scale interval conversion and
+C-process remain open. No aggregate checklist status changes.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  LEAN VERIFICATION PASS; 796 production modules, 1270 scanned Lean files,
+  10128 Lake jobs, and 6640 target + 6240 pinned + 5 boundary declarations
+  audited (12885 total). All 24 public theorems appear exactly once in the
+  explicit audit with only permitted logical axioms.
+  [Extension log](../logs/tao-trudgian-yang-build-20260923-001009-8680cd0c.log).
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, PASS; all six stages
+  passed, 8857 root jobs, 301 root modules, two retained regressions,
+  7636 explicit public declarations and 14290 discovered foundation
+  theorems audited. [Foundation log](../../../logs/foundation_freeze_20260923_001404.log) and
+  [manifest](../../../logs/foundation_freeze_20260923_001404.json).
+- Both logs have zero errors, warnings, tactic suggestions and linter
+  failures. Root imports, runner inventory, audit and regressions are
+  synchronized. All 1291 source/config/tooling files were byte-identical
+  across the BAT pair; ten normalized source/integration hashes and all
+  physical hashes appear in the [checkpoint JSON](../logs/tao-trudgian-yang-sargos-base-20260923-001009-8680cd0c.json).
+  Of the preceding 1285 files, only the root import, audit, regression and
+  PowerShell runner inventory changed; the six new modules were added.
+
+HEAD remains `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78` with a dirty worktree.
+No agent commit or push was performed. All 509 protected tracked files
+remain unchanged against that HEAD. The permanent counterexample retains
+SHA-256 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 303 nodes and 805 edges, without duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The repaired energy branch and all nine Add-est clauses
+remain intact; the whole-proof goal is still open.
+
+## Robert–Sargos actual quartic Legendre expansion — previous checkpoint
+
+The actual source phase g(x)=alpha*x^2+gamma*x^4 now has a kernel-checked
+inverse slope on [N,2N]. Under N>0, alpha>0 and
+|gamma| <= alpha/(96*N^2), its curvature lies between 3*alpha/2 and
+5*alpha/2. The chosen inverse is proved to invert the real polynomial;
+it is smooth on the open slope image. The signed phase
+g*(y)=g(w(y))-y*w(y) has derivative -w(y).
+
+For this actual phase, the residual v is defined by the exact identity
+
+```text
+g*(y) = -y^2/(4*alpha) + gamma*y^4/(16*alpha^4)
+        - gamma^2*y^6/(16*alpha^7) + v(y).
+|v(y)|  <= 10240*|gamma|^3*N^8/alpha^2.
+|v'(y)| <= 16384*|gamma|^3*N^7/alpha^3.
+```
+
+Both bounds are proved by exact rational polynomial identities, not
+assumed asymptotic expansions. With x=w(y), u=2*gamma*x^2/alpha,
+the residual polynomials have absolute bounds 5 and 16 for |u|<=1/12.
+The derivative is that of the same residual used in the phase identity.
+
+For N>=9216, alpha>=1/sqrt(N), and |gamma|<=N^-3, the scale
+hypotheses are derived, giving |v|<=10240 and |v'|<=16384/(alpha*N).
+The actual slope image equals the open interval between the endpoint
+slopes and is convex. Consequently the residual has the corresponding
+Lipschitz bound on that image. For alpha in [Delta,2*Delta], the image
+is contained in (2*Delta*N-4,8*Delta*N+32).
+
+This is the quartic specialization of
+[Robert–Sargos (6.7), with the large-scale threshold and dual interval in section 7](https://arxiv.org/html/2307.03554v1#S6).
+It does not prove the generic perturbation Lemma 4 or the oscillatory
+B-transform. The source display (6.2) omits a square root in the
+stationary amplitude; (7.5) has the required inverse square root.
+The remaining transform must use that correct amplitude, with a
+proved full error bound. This discrepancy does not change any frozen
+Tao–Trudgian–Yang public output.
+
+The seven modules are `SargosQuarticPhase`, `SargosQuarticInverse`,
+`SargosQuarticLegendreAlgebra`, `SargosQuarticLegendreRemainder`,
+`SargosQuarticLegendreBounds`, `SargosQuarticLegendreScale`,
+and `SargosQuarticDualRange`. Their 44 public theorems are explicitly
+audited. The 59 regressions comprise all exact signatures and 15 fixtures,
+including both signs of a nonzero quartic coefficient, the Legendre
+sign, inverse endpoints, the exact quadratic residual, both polynomial
+boundaries, N=9216, and a physical dyadic dual interval.
+
+Still open: the actual oscillatory B-transform, curvature-amplitude
+and residual removal from its integer sum, real dual-scale/integer-block
+conversion, the parameter Jacobian and covering, the bounded N range,
+the exponent-improving sixth-moment recurrence, and the C-process.
+The previous base-moment and all-height strip bounds remain available.
+No aggregate checklist status changes; the permanent printed-Lemma-62
+counterexample, corrected powering, and all nine Add-est clauses remain
+unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 803 production files, 1,277 scanned Lean
+  files and 10,135 build jobs. The audit covers 6,731 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (12,976 total).
+  All 44 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-004528-1a1e7f39.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_004918.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_004918.json).
+- All 1,298 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-legendre-20260923-004528-1a1e7f39.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 305 nodes and 809 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos quartic stationary coordinate and Poisson entry — previous checkpoint
+
+The normalized quartic phase F(u)=u^2+epsilon*u^4 now has an explicit
+positive quadratic coordinate about the actual stationary point:
+
+```text
+L(epsilon,r,u) = 1 + epsilon*(u^2 + 2*u*r + 3*r^2),
+z(epsilon,r,u) = (u-r)*sqrt(2*L(epsilon,r,u)).
+F(u)-F(r)-F'(r)*(u-r) = z(epsilon,r,u)^2/2.
+```
+
+For |epsilon|<=1/96 and r,u in [0,3], the proved coefficient bounds are
+7/16<=L<=25/16. The exact coordinate derivative is
+
+```text
+(2+4*epsilon*(u^2+u*r+r^2))/sqrt(2*L),
+```
+
+and lies in [7/16,25/4]. The coordinate is smooth wherever L>0 and
+strictly increasing on the closed extended interval. Its actual chosen
+inverse is proved smooth on the open image, with derivative in
+[4/25,16/7]. The inverse maps zero to r, and its derivative there is
+1/sqrt(2+12*epsilon*r^2).
+
+The physical consumer uses epsilon=gamma*N^2/alpha, T=alpha*N^2,
+and r=w(y)/N, where w is the already proved inverse quartic slope.
+All range and coefficient hypotheses are derived from the source
+curvature assumptions. It proves the exact original-variable identity
+
+```text
+g(x)-y*x = g*(y) + (T/2)*z(epsilon,r,x/N)^2.
+```
+
+The physical stationary Jacobian is also proved exactly:
+(N/sqrt(T))*(inverse-coordinate)'(0)=1/sqrt(g''(w(y))).
+Thus the required square-root curvature amplitude is derived from
+the actual coordinate, not supplied as an input.
+
+A separate actual-source entry constructs a smooth compact cutoff
+chi with 0<=chi<=1 from the literal source lattice. For every natural
+N>=1, one cutoff works for all real alpha,gamma. The theorem
+`sargosQuartic_source_poisson` proves absolute summability of the
+original Fourier integrals
+
+```text
+Integral chi(x/N)*e(alpha*x^2+gamma*x^4-m*x) dx
+```
+
+over all integer m, and bounds the difference between their full
+Poisson series and the unweighted source sum on (N,2N] by 2.
+The endpoint count, cutoff values, real/complex character convention,
+Schwartz decay and Poisson equality are all derived. No
+approximate-model-phase or oscillatory-transform hypothesis is used.
+
+The four modules are `SargosQuarticMorse`,
+`SargosQuarticMorseInverse`, `SargosQuarticMorsePhysical`, and
+`SargosQuarticPoisson`. Their 40 public theorems are explicitly audited.
+The 52 regressions comprise every exact signature and 12 fixtures,
+covering both signs at the coefficient bounds, the actual inverse
+and critical derivative, physical scaling/amplitude, and N=1 source
+and endpoint behavior.
+
+This supplies the actual-coordinate and Poisson-entry obligations
+behind [Robert–Sargos section 6 and (7.5)](https://arxiv.org/html/2307.03554v1#S6).
+It does not yet estimate the individual Fourier modes or prove the
+B-transform. The exact lattice cutoff carries no claimed uniform derivative
+budget; the quantitative step must choose controlled cutoffs and pay their
+source-endpoint loss. Remaining: uniform higher inverse/weight derivatives,
+actual integral substitution and cutoff transport, complete
+stationary/nonstationary mode errors and lattice summation, the
+curvature-amplitude/residual Abel steps, dual block conversion,
+parameter Jacobian/covering, bounded N range, the sixth-moment
+recurrence, and the C-process. No aggregate checklist status changes.
+The permanent counterexample, corrected powering and all nine repaired
+Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 807 production files, 1,281 scanned Lean
+  files and 10,139 build jobs. The audit covers 6,818 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,063 total).
+  All 40 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-011542-75b94f86.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_011847.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_011847.json).
+- All 1,302 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The four modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-morse-20260923-011542-75b94f86.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 307 nodes and 816 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos uniform quartic jets and cutoff transport — previous checkpoint
+
+The actual positive quadratic coordinate and its inverse now have
+all-order derivative bounds uniform in |epsilon|<=1/96 and r in [0,3].
+The coordinate bounds hold on u in (0,3); inverse bounds hold on the
+actual moving open image. Constants depend only on the derivative
+order, not on epsilon, r or the individual phase.
+
+The polynomial A=2*(1+epsilon*(u^2+2*u*r+3*r^2)) has exact derivatives
+A'=4*epsilon*(u+r), A''=4*epsilon and A^(j)=0 for j>=3.
+Every atom in the coordinate's proved finite derivative expression
+has absolute value at most 3. Explicit finite expression magnitudes
+give the coordinate bounds; explicit finite sums of those bounds give
+the inverse bounds. The formulas are proved against the actual
+coordinate/inverse, not a model-phase surrogate.
+
+The positive inverse Jacobian now transports both the complex
+Bochner integral and integrability between (0,3) and the actual
+coordinate image. The transported source cutoff is exactly
+
+```text
+W(z) = chi(inverse(z))*inverse'(z) on the actual open image,
+W(z) = 0 outside that image.
+W(0) = chi(r)/sqrt(2+12*epsilon*r^2).
+```
+
+For smooth chi with closed support contained in (0,3), W is globally
+smooth and compactly supported, including across the moving image
+boundary. Its closed support lies in the actual coordinate image of
+the closed support of chi, and uniformly in [-6,6]. Every derivative
+is integrable and supported in that same compact image. The whole-line
+identity holds for arbitrary complex g:
+
+```text
+Integral chi(u)*g(u) du = Integral W(z)*g(inverse(z)) dz.
+```
+
+Global all-order weight estimates retain an explicit finite cutoff
+jet budget M. Their constants depend only on M and the output order,
+not on the phase parameters. No derivative budget uniform in a
+varying cutoff family is inferred from compactness.
+
+Eleven modules are installed: `SargosQuarticMorseCurvature`,
+`SargosQuarticMorseJets`, `SargosQuarticMorseJetBounds`,
+`SargosQuarticMorseInverseJets`, `SargosQuarticMorseInverseJetBounds`,
+`SargosQuarticMorseChangeVariables`, `SargosQuarticMorseAmplitude`,
+`SargosQuarticMorseSupport`, `SargosQuarticMorseGlobalIntegral`,
+`SargosQuarticMorseWeightJets`, and `SargosQuarticMorseWeightBounds`.
+All 50 public theorems have exact-signature regressions and explicit
+axiom audits; 12 additional fixtures cover signed boundary coefficients,
+high-order vanishing, arbitrary derivative orders, cutoff retention,
+moving-image exterior behavior and global cutoff budgets.
+
+These results discharge further actual-coordinate analytic obligations
+behind [Robert–Sargos section 6 and (7.5)](https://arxiv.org/html/2307.03554v1#S6).
+They do not yet prove a Fourier-mode remainder or the B-transform.
+Remaining are the physical positive-quadratic Fourier identity and
+Fresnel remainder, controlled cutoff family and source loss, complete
+stationary/nonstationary mode errors and lattice sums, curvature and
+Legendre-residual Abel steps, integer dual blocks, parameter
+Jacobian/covering, bounded N, sixth-moment recurrence and C-process.
+No aggregate checklist status changes. The permanent counterexample,
+corrected powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 818 production files, 1,292 scanned Lean
+  files and 10,150 build jobs. The audit covers 6,891 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,136 total).
+  All 50 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-014238-0efee296.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_014551.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_014551.json).
+- All 1,313 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eleven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-morse-jets-20260923-014238-0efee296.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 309 nodes and 822 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos physical stationary estimates and controlled source entry — previous checkpoint
+
+The actual physical quartic Fourier integral is now proved equal to
+its positive-quadratic representation. For N>0, alpha>0,
+|gamma|<=alpha/(96*N^2), and y in the actual open quartic slope image,
+put epsilon=gamma*N^2/alpha, T=alpha*N^2 and r=w(y)/N. Then
+
+```text
+Integral chi(x/N)*e(g(x)-y*x) dx
+  = N*e(g*(y))*Integral W(z)*e((T/2)*z^2) dz,
+main(y) = e(g*(y)+1/8)/sqrt(g''(w(y))).
+```
+
+The original cutoff has closed support in (1,2), and W is its actual
+smooth transported weight from the preceding checkpoint. The physical
+factor N, actual stationary point, signed Legendre phase, positive
+Fresnel sign and square-root curvature amplitude are all proved.
+The leading coefficient is chi(r)*main(y); the cutoff is not dropped.
+
+Exact complex conjugation transfers the already proved negative
+quadratic Fresnel remainder to positive curvature. With the finite
+original-cutoff derivative budget M visible, the theorem
+`sargosQuarticFourierMode_stationary_bound` bounds the difference
+from chi(r)*main(y) by C(M)/(alpha*N). Its constants do not depend
+on N, alpha, gamma or y.
+
+A separate varying-cutoff theorem chooses constants before both
+endpoints, the width eta, and the quartic parameters. Its actual
+transformed nth derivative costs at most C_n*eta^(-n), for 0<eta<=1.
+This yields
+
+```text
+|physical mode - chi(r)*main(y)| <= C*eta^(-3)/(alpha*N).
+```
+
+The exponent -3 is explicitly retained. This estimate alone is not
+the sharp summed B-transform error; a local plateau argument and
+complete mode/lattice analysis are still required.
+
+The source-facing controlled cutoff is now constructed explicitly:
+chi(u)=bufferedCutoff((N+1)/N,2,eta)(u), for natural N>=1 and eta>0.
+`sargosQuartic_buffered_poisson` proves absolute summability of the
+original physical Fourier modes and
+
+```text
+|Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4) - Sum_(m in Z) mode(m)|
+  <= 4*N*eta+2.
+```
+
+Its endpoint count, literal source interval, source phase and
+normalizations are derived. No model-phase approximation, Poisson
+error certificate, or stationary-phase estimate is an input.
+
+Seven modules are installed: `SargosQuarticMorseFourier`,
+`SargosPositiveQuadraticRemainder`, `SargosQuarticMorseRemainder`,
+`SargosQuarticStationaryEstimate`, `SargosQuarticBufferedJets`,
+`SargosQuarticBufferedStationary`, and `SargosQuarticBufferedPoisson`.
+All 17 public theorems have exact-signature regressions and explicit
+axiom audits. Twelve additional fixtures test the Fresnel sign,
+physical normalization and amplitude, arbitrary derivative order,
+explicit width powers, and N=1,2 source support/endpoint behavior.
+
+These are supporting steps toward
+[Robert–Sargos section 6 and (7.5)](https://arxiv.org/html/2307.03554v1#S6).
+The sharp interior, near-edge, exterior and infinite-tail estimates,
+their integer sums, curvature/residual Abel steps, integer dual-block
+conversion, parameter Jacobian/covering, bounded N, sixth-moment
+recurrence and C-process remain open. No aggregate checklist status
+changes. The permanent counterexample, corrected powering and all
+nine repaired Add-est clauses remain unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 825 production files, 1,299 scanned Lean
+  files and 10,157 build jobs. The audit covers 6,930 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,175 total).
+  All 17 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-020618-a3f2de7d.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_020944.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_020944.json).
+- All 1,320 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-stationary-20260923-020618-a3f2de7d.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 312 nodes and 833 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos sharp quartic interior stationary error — previous checkpoint
+
+The actual positive-curvature quartic Fourier mode now has a sharp
+interior error with no inverse cutoff-width loss. For N>0, alpha>0,
+|gamma|<=alpha/(96*N^2), and y in the actual open slope image, write
+r=w(y)/N for its actual normalized stationary point. For the controlled
+cutoff chi=bufferedCutoff(l,b,eta), assume 1<=l, b<=2, eta>0, d>0,
+l+2*eta+d<=r and r+d<=b-2*eta. Then
+
+```text
+|mode(y) - e(g*(y)+1/8)/sqrt(g''(w(y)))| <= C/(alpha*N*d).
+```
+
+The constant is chosen before l, b, eta, d and all physical parameters.
+The cutoff coefficient is one because the actual stationary point
+lies inside its proved plateau; it is not discarded by assumption.
+The source mode, inverse, signed Legendre phase, positive Fresnel sign,
+physical N factor and square-root amplitude are the original objects.
+
+The proof derives an actual quadratic-coordinate window |z|<=H.
+Uniform coordinate distances and slope gaps locate its inverse images.
+On that window the transported cutoff's derivatives are actual inverse
+derivatives, so their constants do not grow as eta tends to zero.
+The local positive-quadratic remainder is bounded by C_local/(T*H).
+
+An exact positive-Jacobian change of variables identifies the central
+original-integral piece. The two omitted original-integral tails
+are bounded together by 128/(7*pi*T*H), using actual slope gaps and
+the proved width-independent cutoff variation. Choosing H=d/4 and
+T=alpha*N^2 gives the displayed physical estimate. All hypotheses
+for the window, tails, plateau and normalization are derived.
+
+Nine modules are installed: `SargosQuarticMorseGeometry`,
+`SargosQuarticMorseWindow`, `SargosPositiveQuadraticLocal`,
+`SargosQuarticLocalRemainder`, `SargosQuarticCenteredPhase`,
+`SargosQuarticWindowIntegral`, `SargosQuarticLocalNonstationary`,
+`SargosQuarticWindowTails`, and `SargosQuarticInteriorStationary`.
+All 25 public theorems have exact-signature regressions and explicit
+axiom audits. Twelve further fixtures check both perturbation endpoints,
+the quadratic specialization and derivative, actual inverse windows,
+genuine integrability, positive central transport, varying widths,
+and the quarter-distance physical bound.
+
+This completes the sharp interior component, not the full
+[Robert–Sargos B-transform](https://arxiv.org/html/2307.03554v1#S6).
+Near-edge, exterior and infinite-tail bounds and their integer sums
+remain open, followed by curvature/residual Abel steps, integer dual
+blocks, parameter Jacobian/covering, bounded N, the sixth-moment
+recurrence and C-process. Aggregate checklist states do not change.
+The permanent counterexample, corrected powering and all nine repaired
+Add-est clauses remain unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 834 production files, 1,308 scanned Lean
+  files and 10,166 build jobs. The audit covers 6,960 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,205 total).
+  All 25 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-023612-86705e16.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_023922.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_023922.json).
+- All 1,329 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The nine modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-interior-20260923-023612-86705e16.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 314 nodes and 840 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos sharp quartic support-frequency core — previous checkpoint
+
+The original quartic Fourier modes now have uniform estimates at
+every real frequency, including frequencies without a stationary
+point and those at moving support endpoints. For N>0, alpha>0,
+|gamma|<=alpha/(96*N^2), and the actual controlled cutoff
+chi=bufferedCutoff(l,b,eta), with 1<=l, b<=2 and eta>0,
+
+```text
+|mode(y)| <= 4*(2/pi+2)/sqrt(alpha).
+```
+
+This follows from the actual quartic curvature and the proved cutoff
+variation, by exact complex conjugation of the negative-curvature
+integral theorem. No model-phase approximation is assumed. The actual
+stationary main term has norm at most 1/sqrt(alpha).
+
+Outside the support's actual slope interval, the original physical
+mode has a reciprocal-gap bound 4/(pi*gap), where gap is the distance
+from y to g'(N*(l+eta)) or g'(N*(b-eta)). The physical normalization
+and the cutoff-empty case are proved. These are pointwise exterior
+bounds; their integer sums are not yet included.
+
+For the interior, the actual quartic curvature upper bound converts
+frequency gaps to distances of the real inverse stationary point.
+The preceding C/(alpha*N*d) estimate therefore becomes C'/gap.
+Summing the two reciprocal edge distances gives a logarithmic error
+over the literal integer interval; no stationary-image or per-mode
+estimate is left as an input.
+
+Support endpoints are rounded outwards, plateau endpoints inwards:
+
+```text
+L = floor g'(N*(l+eta)),     U = ceil g'(N*(b-eta)),
+A = ceil  g'(N*(l+2*eta)),   B = floor g'(N*(b-2*eta)).
+```
+
+If l+4*eta<b, the transition complement Icc(L,U) minus Ioo(A,B)
+has at most 5*alpha*N*eta+6 elements. Exactly resonant and nearest
+endpoint frequencies are included. The public consumer
+`sargosQuarticBufferedSupportCore_error` proves
+
+```text
+|Sum_(L<=y<=U) mode(y) - Sum_(A<y<B) main(y)|
+ <= C*(1+log((B-A-1).toNat)) + (5*alpha*N*eta+6)*D/sqrt(alpha),
+main(y) = e(g*(y)+1/8)/sqrt(g''(w(y))).
+```
+
+C>=1 and D>0 are chosen before all cutoff and physical parameters.
+The source Fourier modes and actual signed stationary main terms are
+used throughout. Empty integer interior blocks are handled explicitly.
+
+Six modules are installed: `SargosQuarticFourierCurvature`,
+`SargosQuarticExteriorModes`, `SargosQuarticInteriorFrequency`,
+`SargosQuarticInteriorSum`, `SargosQuarticTransitionBands`, and
+`SargosQuarticSharpCore`. All 18 public theorems have exact-signature
+regressions and explicit axiom audits. Twelve further fixtures cover
+all-frequency quadratic and extreme perturbation bounds, empty
+cutoffs, physical stationary amplitude, both exterior gaps, exact
+rounding at N=8, and the actual eleven-frequency interior block.
+
+This is the sharp finite support-frequency core, not the full
+[Robert–Sargos B-transform](https://arxiv.org/html/2307.03554v1#S6).
+Exterior integer sums, quantitative infinite-tail bounds and full
+source assembly remain open, followed by curvature/residual Abel
+steps, integer dual blocks, parameter Jacobian/covering, bounded N,
+the sixth-moment recurrence and C-process. No aggregate checklist
+status changes. The permanent counterexample, corrected powering
+and all nine repaired Add-est clauses remain unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 840 production files, 1,314 scanned Lean
+  files and 10,172 build jobs. The audit covers 7,000 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,245 total).
+  All 18 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-025806-560f1b5d.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_030120.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_030120.json).
+- All 1,335 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The six modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-support-core-20260923-025806-560f1b5d.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 317 nodes and 849 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos complete explicit-parameter quartic source expansion — previous checkpoint
+
+The literal quartic source sum is now connected to its actual signed
+stationary main terms through every Fourier-mode class. Exterior
+integer sums, quantitative two-sided infinite tails and source
+assembly are proved. The cutoff width, truncation radius and
+logarithmic lengths remain explicit; the final stationary-scale
+error simplification is not yet claimed.
+
+The original normalized quartic kernel has uniform second-derivative
+bound C*eta^(-2)*(1+|T|)^2. Its actual phase has first two derivative
+bounds proved from |epsilon|<=1/96 on [1,2]. Exact normalization links
+T=alpha*N^2, epsilon=gamma*N^2/alpha and Fourier frequency y*N to the
+original physical mode. Consequently,
+
+```text
+|mode(y)| <= C*eta^(-2)*(1+alpha*N^2)^2/(N*y^2), y != 0,
+|Sum_(|y|>R) mode(y)| <= C*eta^(-2)*(1+alpha*N^2)^2/(N*R).
+```
+
+The omitted series is the actual two-sided integer tail. Both signs,
+absolute convergence, zero-frequency exclusion and the physical N
+factor are proved. A separate source consumer chooses an explicit
+positive radius achieving any requested tail tolerance.
+
+The left and right support-exterior blocks each have norm sums bounded
+by (4/pi)*harmonic(length); both together have logarithmic loss.
+They are exactly reindexed, with no omitted or duplicated nearest
+exterior integer. Combining them with the preceding sharp support
+core gives the complete finite Fourier-window expansion.
+
+For the literal source Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4), take
+natural N>=1, alpha>0, |gamma|<=alpha/(96*N^2), 0<eta<=1,
+l=(N+1)/N, and l+4*eta<2. Let L,U be the outward-rounded support
+slopes and A,B the inward-rounded plateau slopes. Then
+`sargosQuartic_source_stationary_expansion` proves
+
+```text
+|source - Sum_(A<y<B) e(g*(y)+1/8)/sqrt(g''(w(y)))|
+ <= 4*N*eta+2
+  + C*eta^(-2)*(1+alpha*N^2)^2/(N*R)
+  + D*(1+log((B-A-1).toNat))
+  + (5*alpha*N*eta+6)*E/sqrt(alpha)
+  + (4/pi)*(2+log((L+R).toNat)+log((R-U).toNat)).
+```
+
+Here R is a positive natural number whose symmetric interval contains
+[L,U], and C>=1, D>=1, E>0 are chosen before all source parameters.
+The precision consumer constructs
+R=ceil(C*eta^(-2)*(1+alpha*N^2)^2/(N*tolerance))+|L|+|U|+1,
+proves the required interval containment, and replaces the actual
+tail term by tolerance. No Poisson, stationary or tail estimate is
+left as an assumption.
+
+Six modules are installed: `SargosQuarticExteriorSum`,
+`SargosQuarticKernelJets`, `SargosQuarticFourierDecay`,
+`SargosQuarticFourierTail`, `SargosQuarticFourierWindow`, and
+`SargosQuarticSourceExpansion`. All 17 public theorems have exact
+signature regressions and explicit axiom audits. Twelve further
+fixtures check extreme perturbations, the actual kernel and carrier,
+physical decay/tail constants, a concrete truncation tolerance,
+empty exterior blocks, rounded finite windows, and the literal N=8
+source's nine-frequency stationary block.
+
+This assembles the explicit-parameter source chain toward
+[Robert–Sargos section 6 and (7.5)](https://arxiv.org/html/2307.03554v1#S6).
+Still open: the linked stationary-scale cutoff choice, polynomial
+radius/logarithmic budgets and the final uniform B-transform error;
+then curvature/residual Abel steps, integer dual blocks, parameter
+Jacobian/covering, bounded N, the sixth-moment recurrence and C-process.
+No aggregate checklist status changes. The permanent counterexample,
+corrected powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 846 production files, 1,320 scanned Lean
+  files and 10,178 build jobs. The audit covers 7,026 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,271 total).
+  All 17 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-032157-6b77f0c9.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_032511.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_032511.json).
+- All 1,341 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The six modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-source-expansion-20260923-032157-6b77f0c9.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 320 nodes and 860 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos large-source quartic B-transform — previous checkpoint
+
+The literal quartic source now has a uniform B-transform into its full
+closed stationary integer range. The actual cutoff choice, every
+frequency logarithm, both infinite tails and the omitted endpoint
+terms are consumed by one public theorem. This closes the large-source
+oscillatory-transform step, not the sixth-moment recurrence.
+
+For natural N>=9216, 1/sqrt(N)<=alpha<=1 and |gamma|<=N^(-3),
+`sargosQuartic_source_B_transform` proves, with one constant M>=1
+chosen before N, alpha and gamma,
+
+```text
+|Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4)
+ - Sum_(g'(N)<=y<=g'(2N), y integer)
+     e(g*(y)+1/8)/sqrt(g''(w(y)))|
+ <= M*(1/sqrt(alpha)+1+log(2+alpha*N)).
+```
+
+Here g(x)=alpha*x^2+gamma*x^4, w is its actual inverse slope on
+[N,2N], and g*(y)=g(w(y))-y*w(y). Both integer endpoint resonances
+are included with full weight; their possible boundary contributions
+are covered by the proved error. The positive square-root amplitude
+is retained, consistently with (7.5). The earlier documented
+missing square root in displayed (6.2) is not imported as an identity.
+
+The stationary cutoff is eta=1/sqrt(alpha*N^2)=1/(N*sqrt(alpha)).
+Its positivity, eta<=1 and nonempty source plateau are derived from
+the original source range. Smoothing contributes 4/sqrt(alpha);
+the transition term simplifies with no surviving inverse-width loss.
+Every actual rounded slope has absolute integer size at most
+6*alpha*N^2+1. The prescribed positive radius is at most
+(C+16)*(alpha*N^2+1)^3; all three logarithmic lengths are bounded
+using (C+24)*(alpha*N^2+1)^3, including zero-length cases.
+
+The intermediate uniform consumer retains the actual buffered main
+range. A separate closed-range bridge proves inverse-slope and
+amplitude bounds at the endpoints, plateau containment, and the
+count of omitted terms:
+```text
+omitted cardinality <= 5*alpha/2+10*alpha*N*eta+4.
+```
+At the stationary width and alpha<=1 their total norm is at most
+17*(1/sqrt(alpha)+1). The final consumer restores the full closed
+stationary sum and derives its logarithmic error from linked source
+scales; no cutoff, stationary estimate or endpoint certificate is
+assumed.
+
+Nine modules are installed: `SargosQuarticStationaryWidth`,
+`SargosQuarticRoundedBounds`, `SargosQuarticRadiusBudget`,
+`SargosQuarticLogBudget`, `SargosQuarticUniformSource`,
+`SargosQuarticClosedRange`, `SargosQuarticEndpointBands`,
+`SargosQuarticEndpointError`, and `SargosQuarticBTransform`.
+All 25 public theorems have exact-signature regressions and explicit
+axiom audits. Fourteen further fixtures check the stationary width,
+degenerate inverse-square identity, threshold plateau, smoothing,
+transition algebra, prescribed radius, full closed range, both
+resonant endpoints, exterior exclusion, boundary amplitude, omitted
+cardinality and the assembled source estimate.
+
+This realizes the large-integer-source B-transform needed toward
+[Robert–Sargos section 6 and (7.5)](https://arxiv.org/html/2307.03554v1#S6).
+Still open: the power-scale error corollary, actual curvature and
+residual Abel steps, integer dual blocks and real-scale conventions,
+parameter Jacobian/covering, bounded N, the sixth-moment recurrence
+and C-process. It does not assert the general C4 version of (6.2).
+No aggregate checklist status changes. The permanent counterexample,
+corrected powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 855 production files, 1,329 scanned Lean
+  files and 10,187 build jobs. The audit covers 7,076 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,321 total).
+  All 25 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-035345-754b20b2.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_035655.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_035655.json).
+- All 1,350 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The nine modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-b-transform-20260923-035345-754b20b2.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 322 nodes and 866 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos source power error and both Abel steps — previous checkpoint
+
+The literal quartic source is now bounded by the actual degree-six
+polynomial prefix maximum. The quarter-power error and both Abel
+steps are proved, including the full closed stationary range and
+its resonant endpoints. Neither amplitude variation nor residual
+variation is an assumed analytic input.
+
+For natural N>=9216, 1/sqrt(N)<=alpha<=1 and |gamma|<=N^(-3),
+`sargosQuartic_source_le_polynomialPrefixMaximum` proves
+
+```text
+|Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4)|
+ <= C*(alpha^(-1/2)*Pmax(N,alpha,gamma)+N^(1/4)).
+```
+
+The single constant C>=1 is chosen before N, alpha and gamma.
+Pmax is the attained maximum over every prefix, including the empty
+prefix, of the actual integer interval
+[ceil(g'(N)), floor(g'(2N))], with phase
+
+```text
+p(y) = -y^2/(4*alpha)+gamma*y^4/(16*alpha^4)
+       -gamma^2*y^6/(16*alpha^7).
+```
+
+The prefix definition uses the exact integer interval length and
+works also for an empty interval. It is not a separately supplied
+exponential-sum majorant. The source consumer links every parameter
+to the original phase g(x)=alpha*x^2+gamma*x^4.
+
+The preceding full B-transform now has error at most C*N^(1/4).
+The proof derives alpha^(-1/2)<=N^(1/4) and
+log(N+1)<=1+4*N^(1/4), then consumes the actual logarithmic error.
+
+The actual amplitude 1/sqrt(g''(w(y))) is positive, bounded by
+alpha^(-1/2), and monotone or antitone according to the sign of
+gamma on the closed slope range. Its sampled finite variation is
+at most alpha^(-1/2). Exact integer reindexing and Abel summation
+bound the full stationary sum by twice this scale times the genuine
+unweighted Legendre-prefix maximum. The unit phase e(1/8) is removed
+by an exact identity and norm equality.
+
+The literal Legendre residual v(y)=g*(y)-p(y) uses the existing
+source derivative bound 16384/(alpha*N). Its character has interior
+Lipschitz constant 32768*pi/(alpha*N), while the actual slope interval
+has length at most 5*alpha*N/2. Interior sampled variation is therefore
+at most 81920*pi. On the full closed range, the first and last possible
+boundary jumps each cost at most 2 by unit modulus. This yields the
+uniform finite-variation budget 5+81920*pi, without extending the
+derivative theorem to an unproved endpoint domain. The residual Abel
+consumer retains every endpoint and supplies the polynomial maximum
+used by the final source theorem.
+
+Eight modules are installed: `SargosQuarticPowerError`,
+`SargosQuarticAmplitude`, `SargosQuarticAmplitudeVariation`,
+`SargosIntegerPrefix`, `SargosQuarticAmplitudeAbel`,
+`SargosQuarticResidualVariation`, `SargosQuarticResidualBoundary`,
+and `SargosQuarticResidualAbel`. All 29 public theorems have
+exact-signature regressions and explicit axiom audits. Fourteen
+additional fixtures cover quarter powers, threshold source errors,
+constant curvature, both monotonicity signs, inverse endpoints,
+sampled amplitude variation, negative and empty integer prefixes,
+the literal dual polynomial, closed residual boundary variation,
+and the final source-to-polynomial bound.
+
+This completes the power-scale and actual-weight/residual steps toward
+[Robert–Sargos (7.5)–(7.8)](https://arxiv.org/html/2307.03554v1#S7).
+Still open: dyadic integer block conversion and real-scale conventions,
+the sign-conjugation bridge to the source parameter change, parameter
+Jacobian/covering, bounded N, the sixth-moment recurrence and C-process.
+No integral transfer or recurrence is claimed here. No aggregate
+checklist status changes. The permanent counterexample, corrected
+powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 863 production files, 1,337 scanned Lean
+  files and 10,195 build jobs. The audit covers 7,128 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,373 total).
+  All 29 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-042459-0f7675ca.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_042813.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_042813.json).
+- All 1,358 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eight modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-source-abel-20260923-042459-0f7675ca.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 324 nodes and 872 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos rounded dyadic blocks and exact conjugation — previous checkpoint
+
+The actual closed stationary-prefix interval now reduces to two integer
+dyadic blocks. Exact conjugation converts their phases to positive
+quadratic phases while retaining the sextic correction.
+
+For natural N>=9216, N^(-1/2)<=Delta<=1/2,
+alpha in [Delta,2*Delta] and |gamma|<=N^(-3), let
+m=floor(2*Delta*N). The source-facing theorem
+`sargosQuartic_source_le_two_slow_blocks` proves, with one C>=1
+chosen before every source parameter,
+
+```text
+|Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4)|
+ <= C*(Delta^(-1/2)*(Smax(m)+Smax(2*m))+N^(1/4)),
+Smax(h) = max_(0<=L<=h)
+ |Sum_(h<n<=h+L) e(x*n^2+y*n^4+phi(n))|,
+x=1/(4*alpha), y=-gamma/(16*alpha^4),
+phi(t)=gamma^2*t^6/(16*alpha^7).
+```
+
+These are the actual slow quartic maxima, not assumed majorants.
+The scale is linked to the source: m>=192 and
+Delta*N<=m<=2*Delta*N<m+1. The integer stationary endpoints satisfy
+ceil(g'(N))>=m-4 and floor(g'(2N))<=4*m+35.
+At most 40 unit-modulus terms lie outside (m,4*m].
+Each retained interval is the difference of two prefixes in
+(m,2*m] or (2*m,4*m]. This yields the two genuine maxima
+and a bounded loss absorbed in the existing quarter-power error.
+
+The polynomial sign reversal, character conjugation, prefix conjugation
+and maximum equality are exact. In particular, the correction
+gamma^2*t^6/(16*alpha^7) is retained. The natural scale m is not
+silently identified with the paper's real scale 2*Delta*N.
+
+Six production modules are installed: `SargosIntegerBlock`,
+`SargosIntegerTwoBlocks`, `SargosIntegerDyadicTrim`,
+`SargosQuarticRoundedScale`, `SargosQuarticPrefixBlocks`,
+and `SargosQuarticDualConjugation`. All 19 public theorems have
+exact-signature regressions and explicit axiom audits. Thirteen
+additional fixtures cover negative and empty intervals, the exact
+40-term trimming bound, integral and nonintegral rounded scales,
+both extreme perturbation signs, the actual sextic polynomial,
+and the source bound at N=9216.
+
+This is a pointwise source reduction toward
+[Robert–Sargos Section 7](https://arxiv.org/html/2307.03554v1#S7).
+Parameter change, Jacobian, rectangle covering, integrated transfer,
+the real-scale convention, bounded N, recurrence and C-process remain
+open. No integral estimate or recurrence is claimed. All 42 aggregate
+checkbox states are unchanged. The permanent counterexample,
+corrected powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 869 production files, 1,343 scanned Lean
+  files and 10,201 build jobs. The audit covers 7,188 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,433 total).
+  All 19 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-045149-2aa62e03.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_045504.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_045504.json).
+- All 1,364 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The six modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-dyadic-conjugation-20260923-045149-2aa62e03.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 326 nodes and 874 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos actual parameter change and sextic rectangle moment — previous checkpoint
+
+The actual source parameter substitution and the moment bound on each
+admissible parameter rectangle are now proved. No Jacobian formula,
+inverse map, phase-variation bound or rectangle moment is assumed.
+
+The map
+`(alpha,gamma) -> (1/(4*alpha),-gamma/(16*alpha^4))`
+is its own inverse when alpha is nonzero. Its exact scalar derivatives
+give the inverse Jacobian weight 1/(64*x^6). Two genuine set-integral
+substitutions prove the triangular change of variables, including
+the variable vertical range [-16*H*x^4,16*H*x^4]. For Delta>0 and H>=0,
+this yields the fixed-rectangle bound
+
+```text
+Integral_(Delta<=alpha<=2Delta, |gamma|<=H) F(map(alpha,gamma))
+ <= 4096*Delta^6 *
+    Integral_(1/(8Delta)<=x<=1/(4Delta), |y|<=H/(16Delta^4)) F(x,y).
+```
+
+This statement is for nonnegative extended-real iterated integrals,
+and does not require an integrand-measurability hypothesis.
+`sargosQuarticDual_sixth_parameter_transfer` consumes it for the
+actual source-linked slow maxima. The exact sextic identity changes
+gamma^2*t^6/(16*alpha^7) into 4*y^2*t^6/x.
+
+On a unit-width rectangle [c,c+1] by [d,d+2/M^3], with
+M>=2, 0<Delta<=1/2, c>=1/(8*Delta) and
+|d|<=5/(Delta*M^3), the frozen coefficients are exactly
+e(4*d^2*n^6/c), of modulus one. Their residual phase is
+4*(y^2/x-d^2/c)*t^6. The proved coefficient bound is
+2496/M^6 and the derivative bound is 1916928/M.
+The actual prefix and maximum are unchanged by this freezing.
+
+The completed Lemma 1 consumer then proves
+
+```text
+Integral_rectangle Smax(M,x,y,4*y^2*t^6/x)^6
+ <= 384*Cwindow(3,1916928)*(log M)^6*I(M).
+```
+
+Both a genuine upper-integral theorem and the ordinary nonnegative
+iterated-integral theorem are installed. Measurability of the actual
+sextic maximum is proved, not assumed. These are estimates for each
+admissible rectangle; the finite covering has not yet been assembled.
+
+Eight modules are installed: `SargosQuarticParameterMap`,
+`SargosQuarticParameterDomain`, `SargosQuarticParameterChange`,
+`SargosQuarticParameterTransfer`, `SargosQuarticSexticFreeze`,
+`SargosQuarticSexticBounds`, `SargosQuarticSexticRectangle`,
+and `SargosQuarticMomentTransfer`. All 26 public theorems have
+exact-signature regressions and explicit axiom audits. Fourteen
+additional fixtures check reciprocal images, source-scale parameters,
+the sextic identity, the extremal Jacobian bound, frozen unit modulus,
+rectangle boundaries and the actual source-moment transfer.
+
+This advances the source reduction in
+[Robert–Sargos Section 7](https://arxiv.org/html/2307.03554v1#S7).
+Still open: finite rectangular covering and its count, assembled
+large-source sixth-moment bound, rounded/real-scale conventions,
+bounded N, recurrence and C-process. The original quartic pointwise
+bound uses the linked integer scales m=floor(2*Delta*N) and 2*m;
+this checkpoint does not silently replace them by real scales.
+All aggregate checklist states, the permanent counterexample,
+corrected powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 877 production files, 1,351 scanned Lean
+  files and 10,209 build jobs. The audit covers 7,254 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13,499 total).
+  All 26 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-051922-22d50561.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_052320.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_052320.json).
+- All 1,372 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eight modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-parameter-rectangle-20260923-051922-22d50561.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 328 nodes and 878 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos large-source sixth moment at rounded scales — previous checkpoint
+
+The literal source sixth moment now satisfies the large-source
+two-scale reduction. The public theorem
+`sargosQuartic_large_source_sixth_moment` chooses one C>=1 before
+all N and Delta, and proves for natural N>=9216 and
+N^(-1/2)<=Delta<=1/4, with m=floor(2*Delta*N),
+
+```text
+R(N,Delta) <= C*Delta*(log N)^6*(I(m)+I(2*m)),
+R(N,Delta) =
+ Integral_(Delta<=alpha<=2Delta, |gamma|<=N^(-3))
+ |Sum_(N<n<=2N) e(alpha*n^2+gamma*n^4)|^6.
+```
+
+R and I are the actual Bochner integrals of the literal quartic sums.
+No majorant, Jacobian, covering, slow-phase estimate or moment
+inequality is supplied as an analytic premise.
+
+The closed transformed rectangle has a finite grid cover retaining
+all endpoints. Its horizontal count is at most 2/Delta and its
+vertical count at most 5/Delta. Every corner satisfies the already
+proved sextic rectangle theorem. A finite-cover integration inequality
+allows overlapping boundaries; no disjointness or boundary omission
+is assumed. Summing the actual rectangle moments and applying the
+proved source parameter change gives, at either admissible integer
+scale M,
+
+```text
+Integral_source DualMax(M)^6
+ <= 15728640*Cwindow(3,1916928)*Delta^4*(log M)^6*I(M).
+```
+
+The source-facing sixth-power consumer uses both real dual maxima
+and the original pointwise source bound. It bounds the sixth power
+of the quarter-power error by N^3, whose integral over the source
+rectangle is exactly 2*Delta. Measurability of the actual dual maxima
+and the bridge from the original Bochner integral to nonnegative
+iterated integrals are proved. The linked scales satisfy
+m>=2, 2*m>=2, m<=N and 2*m<=N, so both logarithms transfer to log N.
+The actual lower bound I(m)>=1/64 absorbs the error, without an
+extra logarithmic loss.
+
+Eleven modules are installed: `SargosIntervalGrid`,
+`SargosFiniteCoverIntegral`, `SargosQuarticCoverGeometry`,
+`SargosQuarticCoverMoment`, `SargosQuarticDualMoment`,
+`SargosQuarticSixthPower`, `SargosQuarticMomentIntegration`,
+`SargosRectangleLinearIntegral`, `SargosQuarticSourceMoment`,
+`SargosQuarticMomentScale`, and `SargosQuarticLargeSourceMoment`.
+All 24 public theorems have exact-signature regressions and explicit
+axiom audits. Fifteen additional fixtures cover zero/nonintegral
+grid lengths, closed right endpoints, negative grid origins, actual
+source grid counts at both scales, boundary corners, sixth powers,
+the integrated source error, and the final threshold, nonintegral
+rounding and Delta=1/4 source estimates.
+
+This is the natural-N, rounded-scale, large-source form of the
+reduction in [Robert–Sargos Section 7](https://arxiv.org/html/2307.03554v1#S7).
+It does not identify m with the real number 2*Delta*N.
+Still open: the bounded source range, the source's real-scale
+convention, global recurrence and C-process. No aggregate checklist
+status changes. The permanent counterexample, corrected powering
+and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 888 production files, 1,362 scanned Lean
+  files and 10,220 build jobs. The audit covers 7338 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13583 total).
+  All 24 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-054924-c8e7f79f.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_055711.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_055711.json).
+- All 1,383 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eleven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-large-source-moment-20260923-054924-c8e7f79f.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 330 nodes and 883 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos bounded reduction and finite-scale bootstrap — previous checkpoint
+
+The rounded two-scale reduction now covers every natural N>=16.
+The theorem `sargosQuartic_sixth_moment_reduction` chooses one C>=1
+before N and Delta, and proves, for N^(-1/2)<=Delta<=1/4 and
+m=floor(2*Delta*N),
+
+```text
+R(N,Delta) <= C*Delta*(log N)^6*(I(m)+I(2*m)).
+```
+
+The previously omitted range 16<=N<=9216 is discharged using the
+actual source rectangle inclusion, I(N)<=2*N^3, I(m)>=1/64,
+m>=8 and Delta>=1/96. No additional analytic premise is introduced.
+
+The recurrence now has an actual finite-scale consumer.
+For the literal full-sum moment, the near-count upper/lower bounds
+and symmetry prove localization without a maximal-completion loss:
+
+```text
+I(N) <= (1024/A)*InitialMoment(N,A),       0<A<=1/2.
+```
+
+A finite dyadic split retains every interval endpoint. Its linked
+scales delta_i start at N^(-1/2), satisfy delta_i<=A, cover [0,A]
+together with the small-alpha interval, and obey sum(delta_i)<=2*A.
+If A is below the first scale, direct integral monotonicity applies.
+The integration theorem consumes the actual R(N,delta_i), not a
+separately supplied surrogate integral.
+
+`sargosSixthBaseMoment_power_bootstrap` chooses C>=1 before
+beta and B. For beta,B>=0, a genuine upstream bound
+I(M)<=B*M^beta for every natural M>=1 implies, for N>=16 and
+0<A<=1/4,
+
+```text
+I(N) <= C*((1+log N)^5/A + B*(log N)^6*(4*A*N)^beta).
+```
+
+Both rounded moment scales are explicitly bounded by 4*A*N in this
+consumer. The upstream power bound is an explicit, narrower input:
+it is used at those smaller linked moments. It is not a premise
+equivalent to the bootstrap conclusion.
+`sargosSixthBaseMoment_cubic_bootstrap` discharges that input using
+the proved trivial estimate. Separately,
+`sargosSixthBaseMoment_sqrt_bound` consumes the actual small-alpha
+estimate and localization to prove for natural N>=4
+
+```text
+I(N) <= (1024*44845498368)*sqrt(N)*(1+log N)^5.
+```
+
+Seven modules are installed: `SargosQuarticBoundedScale`,
+`SargosQuarticBoundedMoment`, `SargosSixthLocalization`,
+`SargosDyadicIntegral`, `SargosSixthDyadicBudget`,
+`SargosSixthPowerBootstrap`, and `SargosSixthBootstrapInputs`.
+All 18 public theorems have exact-signature regressions and explicit
+axiom audits. Fourteen additional fixtures cover threshold scales,
+the bounded-range constant, empty/nonempty dyadic sums, the source
+scale budget, negative/zero integration cases, localization,
+small-alpha and square-root estimates, and actual source consumers.
+
+This advances [Robert–Sargos Section 7](https://arxiv.org/html/2307.03554v1#S7).
+The finite-scale bootstrap is proved; the epsilon-quantified exponent
+improvement and its iteration are not yet proved. The exact real-scale
+convention and C-process also remain open. The integer m is not
+identified with 2*Delta*N. Aggregate checklist states, the permanent
+counterexample, corrected powering and all nine Add-est clauses
+remain unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 895 production files, 1,369 scanned Lean
+  files and 10,227 build jobs. The audit covers 7374 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13619 total).
+  All 18 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-061935-4e284490.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_062253.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_062253.json).
+- All 1,390 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-bounded-bootstrap-20260923-061935-4e284490.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 335 nodes and 894 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos natural-scale maximal sixth moment — previous checkpoint
+
+The global recurrence and its iteration are now proved for the actual
+natural-scale quartic moment. The public source-facing consumer
+`sargosQuartic_maximal_sixth_moment` proves:
+
+```text
+For every epsilon>0 there is C>=1, chosen before N,z,lambda,c,d,
+such that for every natural N>=2, |z(n)|<=1 on N<n<=2N,
+lambda>0 and real c,d,
+
+ Integral_(c<=alpha<=c+1, d<=gamma<=d+lambda)
+   Max_(0<=H<=N)|Sum_(N<n<=N+H) z(n)e(alpha*n^2+gamma*n^4)|^6
+ <= C*(lambda*N^(3+epsilon)+N^epsilon).
+```
+
+The maximum, coefficients, integer prefixes and Bochner integrals
+are the actual previously defined objects. No moment estimate,
+recurrence, exponent iteration or epsilon-loss bound is assumed
+in this final theorem.
+
+The finite-scale bootstrap is optimized at
+A=(1/4)*N^(-beta/(1+beta)). Its admissibility is proved uniformly,
+including beta=0. Exact real-power identities give the improved
+exponent beta/(1+beta). The global logarithm estimate
+
+```text
+(1+log x)^6 <= (1+6/epsilon)^6*x^epsilon,    x>=1, epsilon>0
+```
+
+discharges the loss without an eventual-threshold assumption.
+`SargosSixthMomentExponent beta` records the actual
+epsilon-quantified estimate, with the constant chosen before N.
+`sargosSixthMomentExponent_step` proves the genuine implication
+from beta to beta/(1+beta), and explicitly handles all small N.
+
+The proved trivial exponent 3 initiates the sequence
+beta_n=3/(1+3*n). Its exact recurrence and arbitrarily small values
+yield `sargosSixthBaseMoment_subpolynomial`:
+for every epsilon>0, I(N)<=C*N^epsilon for every natural N>=1.
+The final weighted maximal theorem consumes this bound and the
+completed source-height strip transfer, then absorbs its logarithm.
+The stronger square-root initial estimate remains available.
+
+Six modules are installed: `SargosSixthExponentAlgebra`,
+`SargosSixthLogAbsorption`, `SargosSixthOptimizedBootstrap`,
+`SargosSixthMomentExponents`, `SargosSixthMomentIteration`,
+and `SargosSixthMomentTheorem`. All 15 public theorems have
+exact-signature regressions and explicit axiom audits.
+Fourteen additional fixtures check zero-exponent parameters,
+exact successive exponents, logarithmic absorption at x=1,
+iteration outputs, subpolynomial bounds and the actual weighted
+maximal integral at the smallest permitted natural block N=2.
+
+This is the natural-block form of the sixth-moment theorem in
+[Robert–Sargos Sections 3 and 7](https://arxiv.org/html/2307.03554v1#S7).
+It does not yet replace natural block endpoints by arbitrary real
+scales. That real-scale bridge, the exact real-scale Lemma 5
+convention, and the C-process remain open. No aggregate checklist
+item changes status. The permanent counterexample, corrected
+powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 901 production files, 1,375 scanned Lean
+  files and 10,233 build jobs. The audit covers 7402 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13647 total).
+  All 15 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-063351-3ad01f0f.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_063758.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_063758.json).
+- All 1,396 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The six modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-natural-sixth-theorem-20260923-063351-3ad01f0f.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 338 nodes and 897 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Robert–Sargos real-scale maximal sixth moment — previous checkpoint
+
+The source-facing theorem `sargos_source_maximal_sixth_moment`
+now proves the weighted maximal sixth-moment estimate at arbitrary
+real scales, with the actual maximum over real endpoints:
+
+```text
+For every epsilon>0 there is C>=1, chosen before M,z,lambda,c,d,
+such that for every real M>=2, |z(n)|<=1 on M<n<=2M,
+lambda>0 and real c,d,
+
+ Integral_(c<=alpha<=c+1, d<=gamma<=d+lambda)
+   Max_(M<X<=2M)|Sum_(M<n<=X) z(n)e(alpha*n^2+gamma*n^4)|^6
+ <= C*(lambda*M^(3+epsilon)+M^epsilon).
+```
+
+The endpoint maximum is the supremum of the literal integer sums
+over the real interval M<X<=2M. Its equality to a finite prefix
+maximum and its attainment are proved, not assumed.
+The coefficient condition is stated on the physical interval
+M<n<=2M. The double integral is the actual Bochner integral.
+No moment estimate or endpoint bridge is a hypothesis of the
+final theorem.
+
+With m=floor(M), the real block has m or m+1 terms. The literal
+prefix comparison gives Max_real<=Max_natural+1, including the
+possible extra upper-endpoint term. The sixth-power bound
+Max_real^6<=32*(Max_natural^6+1) is integrated over the actual
+rectangle; the constant contribution is exactly lambda.
+Continuity and the needed product, inner and outer integrability
+are proved. Monotonicity of real powers transfers the completed
+natural-scale theorem from m to M and absorbs the extra lambda.
+The final uniform constant is 32*(C_natural+1).
+
+Seven modules are installed: `SargosRealQuarticBlock`,
+`SargosRealQuarticPrefix`, `SargosRealQuarticRegularity`,
+`SargosRealQuarticMomentTransfer`, `SargosRealSixthMomentTheorem`,
+`SargosRealQuarticEndpoints`, and `SargosSourceSixthMoment`.
+All 22 public theorems have exact-signature regressions and
+explicit axiom audits. Fourteen additional fixtures check
+integer and noninteger scales, the strict left and closed right
+endpoints, both possible block lengths, zero prefixes, attained
+real maxima, translated rectangles, zero-height integration and
+the source theorem at M=5/2.
+
+This realizes the source maximal sixth-moment theorem in
+[Robert–Sargos Sections 3 and 7](https://arxiv.org/html/2307.03554v1#S7).
+It does not claim the separate exact real-scale Lemma 5 convention,
+nor Sargos's C-process. Those remain open. No aggregate checklist
+item changes status. The permanent counterexample, corrected
+powering and all nine repaired Add-est clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 908 production files, 1,382 scanned Lean
+  files and 10,240 build jobs. The audit covers 7445 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13690 total).
+  All 22 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-070029-00a8fc3c.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_070350.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_070350.json).
+- All 1,403 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-real-sixth-theorem-20260923-070029-00a8fc3c.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 341 nodes and 901 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos initial-interval moments and uniform sextuple count — current checkpoint
+
+`sargos_initial_sextuple_count` proves the actual source count:
+
+```text
+For every epsilon>0 there is C>=1, chosen before N and c,
+such that for every natural N>=1 and every real c,
+
+ #{(n,n') in {1,...,N}^3 x {1,...,N}^3 :
+     sum_i n_i^2 = sum_i n'_i^2,
+     c <= sum_i n_i^4-sum_i n'_i^4 <= c+N^3}
+ <= C*N^(3+epsilon).
+```
+
+Triples are literal functions from Fin 3 to the integer interval
+1<=n<=N. Their square and fourth-power sums are integer sums;
+ordered pairs retain all multiplicities. Both window endpoints
+are closed. The theorem's constant is uniform in the real shift c.
+This realizes [Sargos 2003, Lemma 2](https://www.impan.pl/shop/en/publication/transaction/download/product/82873).
+
+The stronger theorem `sargosInitialSextupleWindow_card_bound`
+allows every positive width B and proves
+card<=C*(N^3+B)*N^epsilon, uniformly in N,B,c.
+No count estimate is assumed.
+
+The initial-interval moment is also proved. The actual dyadic
+decomposition separates {1,2} and the blocks (2^i,2^(i+1)].
+A finite sixth-power inequality is integrated with all needed
+integrability established. Literal zero-padding transfers an
+arbitrary N to a power-of-two P with N<=P<=2N. The dyadic count's
+sixth power is absorbed by a proved logarithmic/epsilon bound.
+`sargosInitialQuartic_sixth_moment` gives, uniformly in bounded
+coefficients and translated windows,
+
+```text
+Integral_(c<=alpha<=c+1, d<=gamma<=d+lambda)
+ |Sum_(1<=n<=N) z(n)e(alpha*n^2+gamma*n^4)|^6
+ <= C*(lambda*N^(3+epsilon)+N^epsilon).
+```
+
+The shift-uniform count does not assume a translation principle.
+The shifted tent-kernel Gram identity is proved with its actual
+character factor. Taking the norm of the integral bounds it by
+the same central unshifted moment. The actual tuple-power
+expansion and source-window inclusion then give the count.
+
+Ten modules are installed: `SargosInitialInterval`,
+`SargosInitialRegularity`, `SargosInitialMomentTransfer`,
+`SargosInitialDyadicMoment`, `SargosInitialTruncation`,
+`SargosInitialSixthMoment`, `SargosShiftedTentGram`,
+`SargosShiftedNearCount`, `SargosInitialMomentTuples`,
+and `SargosInitialSextupleCount`. All 33 public theorems have
+exact-signature regressions and explicit axiom audits.
+Eighteen additional fixtures cover empty and non-dyadic intervals,
+zero-padding at and beyond the endpoint, dyadic decomposition,
+zero-height integration, exact tuple multiplicities, empty and
+closed-endpoint shifted windows, arbitrary real shifts, and
+the actual N=1 and N=3 moment/count consumers.
+
+The real-scale maximal moment remains complete. Sargos's
+symmetric differencing inequality, Taylor-remainder assembly,
+A-bar-four inequality and C-process remain open. The separate
+exact real-scale Robert–Sargos Lemma 5 convention also remains
+open. No aggregate checklist item changes status. Preserve
+the permanent counterexample, corrected powering and all nine
+repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 918 production files, 1,392 scanned Lean
+  files and 10,250 build jobs. The audit covers 7506 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13751 total).
+  All 33 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](../logs/tao-trudgian-yang-build-20260923-072955-0a22d012.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../../logs/foundation_freeze_20260923_073326.log)
+  and [manifest](../../../logs/foundation_freeze_20260923_073326.json).
+- All 1,413 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The ten modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](../logs/tao-trudgian-yang-sargos-initial-sextuple-20260923-072955-0a22d012.json).
+
+The evaluated owner HEAD is `cc0a4c4e05ac16ce8a5eba174ce075725cd34a78`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 344 nodes and 906 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.

@@ -25161,3 +25161,4863 @@ example :
   simpa using sargosQuartic_small_sixth_moment_source (N := 2) (by norm_num)
 
 end SargosSmallSixthMomentRegression
+
+namespace SargosLemmaOneRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set GafniTao
+open scoped BigOperators ENNReal
+
+example {ι : Type*} (S : Finset ι)
+    (b x : ι → ℝ) (hb : ∀ i ∈ S, 0 ≤ b i) (hx : ∀ i ∈ S, 0 ≤ x i)
+    (hB : 0 < ∑ i ∈ S, b i) (p : ℕ) :
+    (∑ i ∈ S, b i*x i)^(p+1) ≤
+      (∑ i ∈ S, b i)^p*(∑ i ∈ S, b i*(x i)^(p+1)) := by
+  exact @sargos_weighted_sum_pow_succ ι S b x hb hx hB p
+
+example {N : ℕ} [NeZero N] :
+    0 < ∑ k : ZMod N, sargosPrefixMajorant k := by
+  exact @sum_sargosPrefixMajorant_pos N _
+
+example {N : ℕ} [NeZero N]
+    (p : ℕ) (f : ZMod N → ℂ) :
+    0 ≤ sargosFourierPowerMajorant p f := by
+  exact @sargosFourierPowerMajorant_nonneg N _ p f
+
+example {N H : ℕ} [NeZero N]
+    (p : ℕ) (f : ZMod N → ℂ) (hH : H ≤ N) :
+    ‖sargosFinitePrefix f H‖^(p+1) ≤ sargosFourierPowerMajorant p f := by
+  exact @norm_sargosFinitePrefix_pow_succ_le N H _ p f hH
+
+example {N : ℕ} [NeZero N]
+    (p : ℕ) (f : ZMod N → ℂ) :
+    (sargosFinitePrefixMaximum f)^(p+1) ≤ sargosFourierPowerMajorant p f := by
+  exact @sargosFinitePrefixMaximum_pow_succ_le N _ p f
+
+example {ι : Type*} (S : Finset ι) (f : ι → ℝ) :
+    (∏ i ∈ S, fordAdditiveCharacter (f i)) =
+      fordAdditiveCharacter (∑ i ∈ S, f i) := by
+  exact @sargos_character_finset_prod ι S f
+
+example (N p : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    (sargosQuarticSum N z α γ)^p =
+      sargosPlanarSum (Finset.univ : Finset (SargosMomentTuple N p))
+        (sargosTupleCoefficient z) sargosTupleSquareFrequency sargosTupleFourthFrequency α γ := by
+  exact @sargosQuarticSum_pow_eq_tuple_sum N p z α γ
+
+example (N p : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    ‖sargosQuarticSum N z α γ‖^(2*p) =
+      ‖sargosPlanarSum (Finset.univ : Finset (SargosMomentTuple N p))
+        (sargosTupleCoefficient z) sargosTupleSquareFrequency sargosTupleFourthFrequency α γ‖^2 := by
+  exact @sargosQuarticSum_norm_even_eq_tuple_norm_sq N p z α γ
+
+example {N p : ℕ} {z : ℤ → ℂ}
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1) (t : SargosMomentTuple N p) :
+    ‖sargosTupleCoefficient z t‖ ≤ 1 := by
+  exact @sargosTupleCoefficient_norm_le_one N p z hz t
+
+example {N p : ℕ} (t : SargosMomentTuple N p) :
+    sargosTupleCoefficient (fun _ => 1) t = 1 := by
+  exact @sargosTupleCoefficient_one N p t
+
+example {N p : ℕ} {A B : ℝ}
+    (t : SargosMomentTuple N p × SargosMomentTuple N p) :
+    t ∈ sargosMomentNearPairs N p A B ↔
+      |sargosTupleSquareFrequency t.1-sargosTupleSquareFrequency t.2| ≤ A ∧
+      |sargosTupleFourthFrequency t.1-sargosTupleFourthFrequency t.2| ≤ B := by
+  exact @mem_sargosMomentNearPairs N p A B t
+
+example (N p : ℕ) {A B A' B' : ℝ}
+    (hA : A ≤ A') (hB : B ≤ B') :
+    sargosMomentNearPairs N p A B ⊆ sargosMomentNearPairs N p A' B' := by
+  exact @sargosMomentNearPairs_mono N p A B A' B' hA hB
+
+example {N : ℕ} (hN : 1 ≤ N)
+    (p : ℕ) {δ lambda : ℝ} (hδ : 0 < δ) (hlambda : 0 < lambda) :
+    sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) =
+      (sargosMomentNearPairs N p (1/δ) (1/lambda)).card := by
+  exact @sargosMomentNearCount_physical N hN p δ lambda hδ hlambda
+
+example {N : ℕ} (hN : 1 ≤ N)
+    (p : ℕ) {Δ δ μ lambda : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda) :
+    sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) ≤
+      sargosMomentNearCount N p (1/(Δ*(N : ℝ)^2)) (1/(μ*(N : ℝ)^4)) := by
+  exact @sargosMomentNearCount_window_mono N hN p Δ δ μ lambda hΔ hμ hδ hlambda
+
+example {N : ℕ} (hN : 1 ≤ N)
+    (p : ℕ) (z : ℤ → ℂ) (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {δ lambda : ℝ} (hδ : 0 < δ) (hlambda : 0 < lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      ‖sargosQuarticSum N z α γ‖^(2*p)) ≤
+      (16*δ*lambda)*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) := by
+  exact @sargosQuartic_even_moment_window_le_count N hN p z hz δ lambda hδ hlambda c d
+
+example {w : ℝ}
+    (hw : 0 < w) (ξ : ℝ) :
+    (∫ x : ℝ, (sargosRealTent w x : ℂ)*fordAdditiveCharacter (ξ*x)) =
+      (sargosSincKernel w ξ : ℂ) := by
+  exact @integral_sargosRealTent_character_positive w hw ξ
+
+example {w : ℝ}
+    (hw : 0 < w) (ξ : ℝ) :
+    Integrable (fun x : ℝ => (sargosRealTent w x : ℂ)*fordAdditiveCharacter (ξ*x)) := by
+  exact @integrable_sargosRealTent_character_positive w hw ξ
+
+example {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (ξ η : ℝ) :
+    Integrable (sargosTentKernelTerm a b ξ η) (volume.prod volume) := by
+  exact @integrable_sargosTentKernelTerm a b ha hb ξ η
+
+example {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (ξ η : ℝ) :
+    (∫ p : ℝ × ℝ, sargosTentKernelTerm a b ξ η p ∂(volume.prod volume)) =
+      (sargosSincKernel a ξ : ℂ)*(sargosSincKernel b η : ℂ) := by
+  exact @integral_sargosTentKernelTerm a b ha hb ξ η
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) (a b : ℝ) (p : ℝ × ℝ) :
+    (sargosTentPlanarIntegrand S u v a b p : ℂ) =
+      ∑ q ∈ S ×ˢ S, sargosTentKernelTerm a b (u q.1-u q.2) (v q.1-v q.2) p := by
+  exact @sargosTentPlanarIntegrand_eq_gram ι S u v a b p
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) (a b : ℝ) (p : ℝ × ℝ) :
+    0 ≤ sargosTentPlanarIntegrand S u v a b p := by
+  exact @sargosTentPlanarIntegrand_nonneg ι S u v a b p
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    Integrable (fun p : ℝ × ℝ => (sargosTentPlanarIntegrand S u v a b p : ℂ))
+      (volume.prod volume) := by
+  exact @integrable_sargosTentPlanarIntegrand_complex ι S u v a b ha hb
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    Integrable (sargosTentPlanarIntegrand S u v a b) (volume.prod volume) := by
+  exact @integrable_sargosTentPlanarIntegrand ι S u v a b ha hb
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    (∫ p : ℝ × ℝ, sargosTentPlanarIntegrand S u v a b p ∂(volume.prod volume)) =
+      ∑ q ∈ S ×ˢ S,
+        sargosSincKernel a (u q.1-u q.2)*sargosSincKernel b (v q.1-v q.2) := by
+  exact @integral_sargosTentPlanarIntegrand_eq_gram ι S u v a b ha hb
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b A B : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (hA : a*A ≤ 1/2) (hB : b*B ≤ 1/2) :
+    (a*b/16)*((sargosNearPairs S u v A B).card : ℝ) ≤
+      ∑ q ∈ S ×ˢ S,
+        sargosSincKernel a (u q.1-u q.2)*sargosSincKernel b (v q.1-v q.2) := by
+  exact @sargosNearPairs_weighted_card_le_gram ι S u v a b A B ha hb hA hB
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b A B : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (hA : a*A ≤ 1/2) (hB : b*B ≤ 1/2) :
+    (a*b/16)*((sargosNearPairs S u v A B).card : ℝ) ≤
+      ∫ p : ℝ × ℝ, sargosTentPlanarIntegrand S u v a b p ∂(volume.prod volume) := by
+  exact @sargosNearPairs_weighted_card_le_tentIntegral ι S u v a b A B ha hb hA hB
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (p : ℝ × ℝ) (hp : p ∉ (Icc (-a) a) ×ˢ (Icc (-b) b)) :
+    sargosTentPlanarIntegrand S u v a b p = 0 := by
+  exact @sargosTentPlanarIntegrand_zero_outside ι S u v a b ha hb p hp
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (p : ℝ × ℝ) :
+    sargosTentPlanarIntegrand S u v a b p ≤
+      ‖sargosPlanarSum S (fun _ => 1) u v p.1 p.2‖^2 := by
+  exact @sargosTentPlanarIntegrand_le_norm_sq ι S u v a b ha hb p
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    (∫ p : ℝ × ℝ, sargosTentPlanarIntegrand S u v a b p ∂(volume.prod volume)) ≤
+      ∫ α in Icc (-a) a, ∫ γ in Icc (-b) b,
+        ‖sargosPlanarSum S (fun _ => 1) u v α γ‖^2 := by
+  exact @sargosTentPlanarIntegral_le_central ι S u v a b ha hb
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {Δ μ : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ) :
+    ((sargosNearPairs S u v (1/Δ) (1/μ)).card : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosPlanarSum S (fun _ => 1) u v α γ‖^2) := by
+  exact @sargosNearPairs_card_le_central ι S u v Δ μ hΔ hμ
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    {Δ μ : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ) :
+    (sargosMomentNearCount N p (1/(Δ*(N : ℝ)^2)) (1/(μ*(N : ℝ)^4)) : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p)) := by
+  exact @sargosMomentNearCount_le_central N hN p Δ μ hΔ hμ
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    {Δ δ μ lambda : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda) :
+    (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p)) := by
+  exact @sargosMomentNearCount_window_le_central N hN p Δ δ μ lambda hΔ hμ hδ hlambda
+
+example (N p : ℕ) (z : ℤ → ℂ) :
+    Continuous (fun t : ℝ × ℝ => ‖sargosQuarticSum N z t.1 t.2‖^p) := by
+  exact @continuous_sargosQuarticNormPower N p z
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    Integrable (fun t : ℝ × ℝ => ‖sargosQuarticSum N z t.1 t.2‖^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))) := by
+  exact @integrable_sargosQuarticNormPower_rectangle N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    IntegrableOn (fun α : ℝ => ∫ γ in Icc c d, ‖sargosQuarticSum N z α γ‖^p) (Icc a b) := by
+  exact @integrable_sargosQuarticNormPower_outer N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (α c d : ℝ) :
+    IntegrableOn (fun γ : ℝ => ‖sargosQuarticSum N z α γ‖^p) (Icc c d) := by
+  exact @integrable_sargosQuarticNormPower_inner N p z α c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    Integrable (fun t : ℝ × ℝ => (sargosQuarticPrefixMaximum N z t.1 t.2)^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))) := by
+  exact @integrable_sargosQuarticMaximumPower_rectangle N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    IntegrableOn
+      (fun α : ℝ => ∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^p) (Icc a b) := by
+  exact @integrable_sargosQuarticMaximumPower_outer N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (α c d : ℝ) :
+    IntegrableOn (fun γ : ℝ => (sargosQuarticPrefixMaximum N z α γ)^p) (Icc c d) := by
+  exact @integrable_sargosQuarticMaximumPower_inner N p z α c d
+
+example {N : ℕ} [NeZero N]
+    (p : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    (sargosQuarticPrefixMaximum N z α γ)^(p+1) ≤
+      (∑ k : ZMod N, sargosPrefixMajorant k)^p*
+        (∑ k : ZMod N, sargosPrefixMajorant k*
+          ‖sargosQuarticSum N (sargosQuarticTwist z k) α γ‖^(p+1)) := by
+  exact @sargosQuarticMaximum_pow_succ_le_completed N _ p z α γ
+
+example {N : ℕ} [NeZero N]
+    (p : ℕ) (z : ℤ → ℂ) (α c d : ℝ) :
+    (∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^(p+1)) ≤
+      (∑ k : ZMod N, sargosPrefixMajorant k)^p*
+        (∑ k : ZMod N, sargosPrefixMajorant k*
+          (∫ γ in Icc c d, ‖sargosQuarticSum N (sargosQuarticTwist z k) α γ‖^(p+1))) := by
+  exact @sargosQuarticMaximum_power_inner_le_completed N _ p z α c d
+
+example {N : ℕ} [NeZero N]
+    (p : ℕ) (z : ℤ → ℂ) (a b c d : ℝ) :
+    (∫ α in Icc a b, ∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^(p+1)) ≤
+      (∑ k : ZMod N, sargosPrefixMajorant k)^p*
+        (∑ k : ZMod N, sargosPrefixMajorant k*
+          (∫ α in Icc a b, ∫ γ in Icc c d,
+            ‖sargosQuarticSum N (sargosQuarticTwist z k) α γ‖^(p+1))) := by
+  exact @sargosQuarticMaximum_power_rectangle_le_completed N _ p z a b c d
+
+example {N p : ℕ}
+    (hN : 1 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {δ lambda : ℝ} (hδ : 0 < δ) (hlambda : 0 < lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosQuarticPrefixMaximum N z α γ)^(2*p)) ≤
+      (3*(1+Real.log N))^(2*p)*(16*δ*lambda)*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) := by
+  exact @sargosQuartic_maximal_even_window_le_count N p hN hp z hz δ lambda hδ hlambda c d
+
+example {N p : ℕ}
+    (hN : 1 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {Δ δ μ lambda : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosQuarticPrefixMaximum N z α γ)^(2*p)) ≤
+      (1024*(3*(1+Real.log N))^(2*p)*δ*lambda/(Δ*μ))*
+        (∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+          ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p)) := by
+  exact @sargosQuartic_maximal_even_window_transfer N p hN hp z hz Δ δ μ lambda hΔ hμ hδ hlambda c d
+
+example {N : ℕ} (hN : 2 ≤ N) :
+    1+Real.log (N : ℝ) ≤ (1+1/Real.log 2)*Real.log N := by
+  exact @sargos_one_add_log_le_source N hN
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    (z : ℤ → ℂ) {K : ℝ} (hK : 0 ≤ K) (a b c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      ‖φ' α γ x‖ ≤ K/N) :
+    ∀ᵐ t ∂((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))),
+      (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^p ≤
+        (1+2*Real.pi*K)^p*(sargosQuarticPrefixMaximum N z t.1 t.2)^p := by
+  exact @sargosSlowQuartic_power_le_ae N hN p z K hK a b c d φ φ' hφ hφ'
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    (z : ℤ → ℂ) {K : ℝ} (hK : 0 ≤ K) (a b c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      ‖φ' α γ x‖ ≤ K/N) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d)))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^p)) ≤
+      ENNReal.ofReal ((1+2*Real.pi*K)^p*
+        (∫ α in Icc a b, ∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^p)) := by
+  exact @sargosSlowQuartic_upper_power_rectangle_le N hN p z K hK a b c d φ φ' hφ hφ'
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    (z : ℤ → ℂ) {K : ℝ} (hK : 0 ≤ K) (a b c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d)))) :
+    Integrable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))) := by
+  exact @integrable_sargosSlowQuarticPower N hN p z K hK a b c d φ φ' hφ hφ' hm
+
+example {N : ℕ} (hN : 1 ≤ N) (p : ℕ)
+    (z : ℤ → ℂ) {K : ℝ} (hK : 0 ≤ K) (a b c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc a b, ∀ γ ∈ Icc c d, ∀ x ∈ Icc (N : ℝ) (2*N),
+      ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d)))) :
+    (∫ α in Icc a b, ∫ γ in Icc c d,
+      (sargosSlowQuarticMaximum N z α γ (φ α γ))^p) ≤
+      (1+2*Real.pi*K)^p*
+        (∫ α in Icc a b, ∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^p) := by
+  exact @sargosSlowQuartic_power_rectangle_le N hN p z K hK a b c d φ φ' hφ hφ' hm
+
+example (p : ℕ) {K : ℝ} (hK : 0 ≤ K) :
+    0 ≤ sargosWindowConstant p K := by
+  exact @sargosWindowConstant_nonneg p K hK
+
+example {N : ℕ} (hN : 2 ≤ N) (p : ℕ)
+    {K : ℝ} (hK : 0 ≤ K) :
+    (1+2*Real.pi*K)^(2*p)*(3*(1+Real.log N))^(2*p) ≤
+      (sargosWindowConstant p K/16)*(Real.log N)^(2*p) := by
+  exact @sargosWindow_coefficient_le N hN p K hK
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K δ lambda : ℝ} (hK : 0 ≤ K) (hδ : 0 < δ) (hlambda : 0 < lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))) ≤
+      ENNReal.ofReal (sargosWindowConstant p K*δ*lambda*(Real.log N)^(2*p)*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ)) := by
+  exact @sargosSlowQuartic_upper_even_window_le_count N p hN hp z hz K δ lambda hK hδ hlambda c d φ φ' hφ hφ'
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K Δ δ μ lambda : ℝ} (hK : 0 ≤ K) (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N) :
+    (sargosUpperIntegral
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))) ≤
+      ENNReal.ofReal (sargosWindowConstant p K*δ*lambda*(Real.log N)^(2*p)*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ))) ∧
+    ((sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p))) := by
+  exact @sargos_lemma_one_upper N p hN hp z hz K Δ δ μ lambda hK hΔ hμ hδ hlambda c d φ φ' hφ hφ'
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K Δ δ μ lambda : ℝ} (hK : 0 ≤ K) (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))) ≤
+      ENNReal.ofReal ((64*sargosWindowConstant p K*δ*lambda*(Real.log N)^(2*p)/(Δ*μ))*
+        (∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+          ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p))) := by
+  exact @sargosSlowQuartic_upper_even_window_transfer N p hN hp z hz K Δ δ μ lambda hK hΔ hμ hδ hlambda c d φ φ' hφ hφ'
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K δ lambda : ℝ} (hK : 0 ≤ K) (hδ : 0 < δ) (hlambda : 0 < lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (φ α γ))^(2*p)) ≤
+      sargosWindowConstant p K*δ*lambda*(Real.log N)^(2*p)*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) := by
+  exact @sargosSlowQuartic_even_window_le_count N p hN hp z hz K δ lambda hK hδ hlambda c d φ φ' hφ hφ' hm
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K Δ δ μ lambda : ℝ} (hK : 0 ≤ K) (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))) :
+    ((∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (φ α γ))^(2*p))/
+      ((Real.log N)^(2*p)*δ*lambda) ≤
+      sargosWindowConstant p K*
+        (sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ)) ∧
+    ((sargosMomentNearCount N p (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p))) := by
+  exact @sargos_lemma_one N p hN hp z hz K Δ δ μ lambda hK hΔ hμ hδ hlambda c d φ φ' hφ hφ' hm
+
+example {N p : ℕ}
+    (hN : 2 ≤ N) (hp : 1 ≤ p) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K Δ δ μ lambda : ℝ} (hK : 0 ≤ K) (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda)
+    (c d : ℝ) (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^(2*p))
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (φ α γ))^(2*p)) ≤
+      (64*sargosWindowConstant p K*δ*lambda*(Real.log N)^(2*p)/(Δ*μ))*
+        (∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+          ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p)) := by
+  exact @sargosSlowQuartic_even_window_transfer N p hN hp z hz K Δ δ μ lambda hK hΔ hμ hδ hlambda c d φ φ' hφ hφ' hm
+
+-- The empty tuple has the actual empty coefficient product.
+example (N : ℕ) (z : ℤ → ℂ) (t : SargosMomentTuple N 0) :
+    sargosTupleCoefficient z t = 1 := by
+  simp [sargosTupleCoefficient]
+
+-- The first nontrivial sixth-moment central count, with concrete source size.
+example :
+    (sargosMomentNearCount 2 3 (1/((1 : ℝ)*2^2)) (1/((1 : ℝ)*2^4)) : ℝ) ≤
+      (64/((1 : ℝ)*1))*(∫ α in Icc (-((1 : ℝ)/2)) ((1 : ℝ)/2),
+        ∫ γ in Icc (-((1 : ℝ)/2)) ((1 : ℝ)/2),
+          ‖sargosQuarticSum 2 (fun _ => 1) α γ‖^(2*3)) := by
+  exact sargosMomentNearCount_le_central (by norm_num) 3 (by norm_num) (by norm_num)
+
+-- Delta can exceed one: the proved transfer is stronger in that restriction.
+example :
+    (∫ α in Icc (7 : ℝ) (7+2), ∫ γ in Icc (-3 : ℝ) (-3+1),
+      (sargosQuarticPrefixMaximum 2 (fun _ => 1) α γ)^(2*3)) ≤
+      (1024*(3*(1+Real.log 2))^(2*3)*2*1/((1 : ℝ)*1))*
+        (∫ α in Icc (-((1 : ℝ)/2)) ((1 : ℝ)/2),
+          ∫ γ in Icc (-((1 : ℝ)/2)) ((1 : ℝ)/2),
+            ‖sargosQuarticSum 2 (fun _ => 1) α γ‖^(2*3)) := by
+  exact sargosQuartic_maximal_even_window_transfer (by norm_num) (by norm_num)
+    (fun _ => 1) (by intro n hn; simp) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) 7 (-3)
+
+-- The physical count scaling also retains the N = 1 boundary.
+example :
+    sargosMomentNearCount 1 1 (1/((2 : ℝ)*1^2)) (1/((3 : ℝ)*1^4)) =
+      (sargosMomentNearPairs 1 1 (1/(2 : ℝ)) (1/(3 : ℝ))).card := by
+  simpa only [Nat.cast_one] using sargosMomentNearCount_physical (N := 1) (δ := 2) (lambda := 3)
+    (by norm_num) 1 (by norm_num) (by norm_num)
+
+-- The tenth moment uses the same literal source-tuple expansion.
+example {N : ℕ} (hN : 1 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {δ lambda : ℝ} (hδ : 0 < δ) (hlambda : 0 < lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda), ‖sargosQuarticSum N z α γ‖^10) ≤
+      (16*δ*lambda)*
+        (sargosMomentNearCount N 5 (1/(δ*(N : ℝ)^2)) (1/(lambda*(N : ℝ)^4)) : ℝ) := by
+  exact sargosQuartic_even_moment_window_le_count hN 5 z hz hδ hlambda c d
+
+-- A genuinely parameter-dependent smooth phase consumes the ordinary source theorem.
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {Δ δ μ lambda : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+δ), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (fun x => Real.sin α*x/N))^6) ≤
+      (64*sargosWindowConstant 3 1*δ*lambda*(Real.log N)^6/(Δ*μ))*
+        (∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+          ‖sargosQuarticSum N (fun _ => 1) α γ‖^6) := by
+  apply sargosSlowQuartic_even_window_transfer hN (by norm_num : 1 ≤ 3) z hz
+    (by norm_num : (0 : ℝ) ≤ 1) hΔ hμ hδ hlambda c d
+    (fun α _γ x => Real.sin α*x/N) (fun α _γ _x => Real.sin α/N)
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_hasDerivWithin N (Real.sin α) x
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_derivative_bound (by omega) (Real.abs_sin_le_one α)
+  · exact ((continuous_sargosSlowQuarticMaximum N z (fun α _γ x => Real.sin α*x/N)
+      (fun n => by fun_prop)).pow 6).aestronglyMeasurable
+
+-- No parameter measurability is required for a bounded arbitrary linear-phase family.
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {Δ δ μ lambda : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (hδ : Δ ≤ δ) (hlambda : μ ≤ lambda) (c d : ℝ) (u : ℝ → ℝ → ℝ)
+    (hu : ∀ α ∈ Icc c (c+δ), ∀ γ ∈ Icc d (d+lambda), |u α γ| ≤ 1) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+δ))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (fun x => u t.1 t.2*x/N))^10)) ≤
+      ENNReal.ofReal ((64*sargosWindowConstant 5 1*δ*lambda*(Real.log N)^10/(Δ*μ))*
+        (∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+          ‖sargosQuarticSum N (fun _ => 1) α γ‖^10)) := by
+  apply sargosSlowQuartic_upper_even_window_transfer hN (by norm_num : 1 ≤ 5) z hz
+    (by norm_num : (0 : ℝ) ≤ 1) hΔ hμ hδ hlambda c d
+    (fun α γ x => u α γ*x/N) (fun α γ _x => u α γ/N)
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_hasDerivWithin N (u α γ) x
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_derivative_bound (by omega) (hu α hα γ hγ)
+
+-- Both tensor factors of the actual tent vanish correctly outside the support.
+example {ι : Type*} (S : Finset ι) (u v : ι → ℝ) :
+    sargosTentPlanarIntegrand S u v 1 2 (3,0) = 0 := by
+  apply sargosTentPlanarIntegrand_zero_outside S u v (by norm_num) (by norm_num)
+  norm_num
+
+example {ι : Type*} (S : Finset ι) (u v : ι → ℝ) :
+    sargosTentPlanarIntegrand S u v 1 2 (0,3) = 0 := by
+  apply sargosTentPlanarIntegrand_zero_outside S u v (by norm_num) (by norm_num)
+  norm_num
+
+end SargosLemmaOneRegression
+
+namespace SargosSixthBaseRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set GafniTao
+open scoped BigOperators ENNReal ComplexConjugate
+
+example (N : ℕ) :
+    (sargosSourceInterval N).card = N := by
+  exact @card_sargosSourceInterval N
+
+example (N p : ℕ) :
+    Fintype.card (SargosMomentTuple N p) = N^p := by
+  exact @card_sargosMomentTuple N p
+
+example (N p : ℕ) {A B : ℝ}
+    (hA : 0 ≤ A) (hB : 0 ≤ B) :
+    N^p ≤ (sargosMomentNearPairs N p A B).card := by
+  exact @sargosMomentNearPairs_card_ge_diagonal N p A B hA hB
+
+example (N p : ℕ) {δ lambda : ℝ}
+    (hδ : 0 ≤ δ) (hlambda : 0 ≤ lambda) :
+    N^p ≤ sargosMomentNearCount N p δ lambda := by
+  exact @sargosMomentNearCount_ge_diagonal N p δ lambda hδ hlambda
+
+example {N : ℕ} (hN : 1 ≤ N)
+    (p : ℕ) {Δ μ : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ) :
+    (Δ*μ/64)*(N : ℝ)^p ≤
+      ∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^(2*p) := by
+  exact @sargosQuartic_central_even_moment_lower N hN p Δ μ hΔ hμ
+
+example (N : ℕ) (α γ : ℝ) :
+    sargosQuarticSum N (fun _ => 1) (-α) (-γ) =
+      conj (sargosQuarticSum N (fun _ => 1) α γ) := by
+  exact @sargosQuarticSum_unweighted_neg N α γ
+
+example (N : ℕ) (α γ : ℝ) :
+    ‖sargosQuarticSum N (fun _ => 1) (-α) (-γ)‖ =
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ := by
+  exact @sargosQuarticSum_unweighted_norm_neg N α γ
+
+example (f : ℝ → ℝ) (a b : ℝ) (hab : a ≤ b) :
+    (∫ x in Icc a b, f (-x)) = ∫ x in Icc (-b) (-a), f x := by
+  exact @sargos_setIntegral_Icc_comp_neg f a b hab
+
+example (N p : ℕ) (α : ℝ) {B : ℝ} (hB : 0 ≤ B) :
+    (∫ γ in Icc (-B) B, ‖sargosQuarticSum N (fun _ => 1) (-α) γ‖^p) =
+      ∫ γ in Icc (-B) B, ‖sargosQuarticSum N (fun _ => 1) α γ‖^p := by
+  exact @sargosQuartic_inner_power_neg N p α B hB
+
+example (N p : ℕ)
+    {A B : ℝ} (hA : 0 ≤ A) (hB : 0 ≤ B) :
+    (∫ α in Icc (-A) A, ∫ γ in Icc (-B) B,
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖^p) ≤
+      2*(∫ α in Icc (0 : ℝ) A, ∫ γ in Icc (-B) B,
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^p) := by
+  exact @sargosQuartic_central_power_le_positive N p A B hA hB
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    (∫ α in Icc a b, ∫ γ in Icc c d, ‖sargosQuarticSum N z α γ‖^p) ≤
+      ∫ α in Icc a b, ∫ γ in Icc c d, (sargosQuarticPrefixMaximum N z α γ)^p := by
+  exact @sargosQuartic_fixed_power_le_maximal N p z a b c d
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    (∫ α in Icc (-(1/Real.sqrt N)) (1/Real.sqrt N),
+      ∫ γ in Icc (-(1/(N : ℝ)^3)) (1/(N : ℝ)^3),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^6) ≤
+      89690996736*(1+Real.log N)^5 := by
+  exact @sargosQuartic_central_small_sixth N hN
+
+example {N : ℕ} (hN : 2 ≤ N) :
+    (∫ α in Icc (-(1/Real.sqrt N)) (1/Real.sqrt N),
+      ∫ γ in Icc (-(1/(N : ℝ)^3)) (1/(N : ℝ)^3),
+        ‖sargosQuarticSum N (fun _ => 1) α γ‖^6) ≤
+      (89690996736*(1+1/Real.log 2)^6)*(Real.log N)^6 := by
+  exact @sargosQuartic_central_small_sixth_source N hN
+
+example (N : ℕ) : 0 ≤ sargosSixthBaseMoment N := by
+  exact @sargosSixthBaseMoment_nonneg N
+
+example (N : ℕ) {A : ℝ} (hA : 0 ≤ A) (hA1 : A ≤ 1) :
+    (∫ α in Icc (-A) A, ∫ γ in Icc (-(1/(N : ℝ)^3)) (1/(N : ℝ)^3),
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖^6) ≤ 2*sargosSixthBaseMoment N := by
+  exact @sargosQuartic_central_sixth_le_base N A hA hA1
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    (1/64 : ℝ) ≤ sargosSixthBaseMoment N := by
+  exact @sargosSixthBaseMoment_lower N hN
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    sargosSixthBaseMoment N ≤ 2*(N : ℝ)^3 := by
+  exact @sargosSixthBaseMoment_trivial N hN
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    {a b c d a' b' c' d' : ℝ} (ha : a' ≤ a) (hb : b ≤ b') (hc : c' ≤ c) (hd : d ≤ d') :
+    (∫ α in Icc a b, ∫ γ in Icc c d, ‖sargosQuarticSum N z α γ‖^p) ≤
+      ∫ α in Icc a' b', ∫ γ in Icc c' d', ‖sargosQuarticSum N z α γ‖^p := by
+  exact @sargosQuartic_power_rectangle_mono N p z a b c d a' b' c' d' ha hb hc hd
+
+example (N : ℕ)
+    {A B : ℝ} (hA : 0 ≤ A) (hA1 : A ≤ 1) (hB : B ≤ 1/(N : ℝ)^3) :
+    (∫ α in Icc (-A) A, ∫ γ in Icc (-B) B,
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖^6) ≤ 2*sargosSixthBaseMoment N := by
+  exact @sargosQuartic_central_strip_le_base N A B hA hA1 hB
+
+example {N : ℕ} (hN : 1 ≤ N)
+    {lambda : ℝ} (hlambda : 0 < lambda) :
+    lambda/min lambda (2/(N : ℝ)^3) ≤ 1+lambda*(N : ℝ)^3 := by
+  exact @sargos_strip_width_ratio N hN lambda hlambda
+
+example {N : ℕ} (hN : 1 ≤ N)
+    {lambda : ℝ} (hlambda : 0 < lambda) :
+    lambda*(sargosMomentNearCount N 3 (1/((1 : ℝ)*(N : ℝ)^2))
+      (1/(lambda*(N : ℝ)^4)) : ℝ) ≤
+      128*(1+lambda*(N : ℝ)^3)*sargosSixthBaseMoment N := by
+  exact @sargosMomentNearCount_unit_strip_le_base N hN lambda hlambda
+
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K lambda : ℝ} (hK : 0 ≤ K) (hlambda : 0 < lambda) (c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+1), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+1), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+1))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^6)) ≤
+      ENNReal.ofReal (128*sargosWindowConstant 3 K*
+        (1+lambda*(N : ℝ)^3)*(Real.log N)^6*sargosSixthBaseMoment N) := by
+  exact @sargosSlowQuartic_upper_sixth_strip_reduction N hN z hz K lambda hK hlambda c d φ φ' hφ hφ'
+
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {K lambda : ℝ} (hK : 0 ≤ K) (hlambda : 0 < lambda) (c d : ℝ)
+    (φ φ' : ℝ → ℝ → ℝ → ℝ)
+    (hφ : ∀ α ∈ Icc c (c+1), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N),
+        HasDerivWithinAt (φ α γ) (φ' α γ x) (Icc (N : ℝ) (2*N)) x)
+    (hφ' : ∀ α ∈ Icc c (c+1), ∀ γ ∈ Icc d (d+lambda),
+      ∀ x ∈ Icc (N : ℝ) (2*N), ‖φ' α γ x‖ ≤ K/N)
+    (hm : AEStronglyMeasurable
+      (fun t : ℝ × ℝ => (sargosSlowQuarticMaximum N z t.1 t.2 (φ t.1 t.2))^6)
+      ((volume.restrict (Icc c (c+1))).prod (volume.restrict (Icc d (d+lambda))))) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (φ α γ))^6) ≤
+      128*sargosWindowConstant 3 K*
+        (1+lambda*(N : ℝ)^3)*(Real.log N)^6*sargosSixthBaseMoment N := by
+  exact @sargosSlowQuartic_sixth_strip_reduction N hN z hz K lambda hK hlambda c d φ φ' hφ hφ' hm
+
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {lambda : ℝ} (hlambda : 0 < lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      (sargosQuarticPrefixMaximum N z α γ)^6) ≤
+      128*sargosWindowConstant 3 0*
+        (1+lambda*(N : ℝ)^3)*(Real.log N)^6*sargosSixthBaseMoment N := by
+  exact @sargosQuartic_maximal_sixth_strip_reduction N hN z hz lambda hlambda c d
+
+example : (sargosSourceInterval 0).card = 0 := card_sargosSourceInterval 0
+
+example (N : ℕ) : Fintype.card (SargosMomentTuple N 0) = 1 := by
+  rw [card_sargosMomentTuple,pow_zero]
+
+example : 1 ≤ sargosMomentNearCount 0 0 0 0 := by
+  have h := sargosMomentNearCount_ge_diagonal 0 0 (le_refl (0 : ℝ)) (le_refl (0 : ℝ))
+  norm_num only [pow_zero] at h
+  exact h
+
+example : (1/64 : ℝ) ≤ sargosSixthBaseMoment 1 :=
+  sargosSixthBaseMoment_lower (by norm_num)
+
+example : sargosSixthBaseMoment 1 ≤ 2 := by
+  simpa using sargosSixthBaseMoment_trivial (N := 1) (by norm_num)
+
+example :
+    (∫ α in Icc (-(1/Real.sqrt 2)) (1/Real.sqrt 2),
+      ∫ γ in Icc (-(1/(2 : ℝ)^3)) (1/(2 : ℝ)^3),
+        ‖sargosQuarticSum 2 (fun _ => 1) α γ‖^6) ≤
+      89690996736*(1+Real.log 2)^5 := by
+  simpa using sargosQuartic_central_small_sixth (N := 2) (by norm_num)
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    (2/(N : ℝ)^3)/min (2/(N : ℝ)^3) (2/(N : ℝ)^3) ≤
+      1+(2/(N : ℝ)^3)*(N : ℝ)^3 := by
+  have hNp : (0 : ℝ) < N := by exact_mod_cast (by omega : 0 < N)
+  exact sargos_strip_width_ratio hN (by positivity)
+
+example :
+    (∫ α in Icc (3 : ℝ) (3+1), ∫ γ in Icc (-2 : ℝ) (-2+1),
+      (sargosQuarticPrefixMaximum 2 (fun _ => 1) α γ)^6) ≤
+      128*sargosWindowConstant 3 0*(1+(1 : ℝ)*2^3)*(Real.log 2)^6*sargosSixthBaseMoment 2 := by
+  exact sargosQuartic_maximal_sixth_strip_reduction (by norm_num) (fun _ => 1)
+    (by intro n hn; simp) (by norm_num) 3 (-2)
+
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {lambda : ℝ} (hlambda : 0 < lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      (sargosSlowQuarticMaximum N z α γ (fun x => Real.sin α*x/N))^6) ≤
+      128*sargosWindowConstant 3 1*(1+lambda*(N : ℝ)^3)*(Real.log N)^6*sargosSixthBaseMoment N := by
+  apply sargosSlowQuartic_sixth_strip_reduction hN z hz (by norm_num : (0 : ℝ) ≤ 1)
+    hlambda c d (fun α _γ x => Real.sin α*x/N) (fun α _γ _x => Real.sin α/N)
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_hasDerivWithin N (Real.sin α) x
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_derivative_bound (by omega) (Real.abs_sin_le_one α)
+  · exact ((continuous_sargosSlowQuarticMaximum N z (fun α _γ x => Real.sin α*x/N)
+      (fun n => by fun_prop)).pow 6).aestronglyMeasurable
+
+example {N : ℕ} (hN : 2 ≤ N) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1)
+    {lambda : ℝ} (hlambda : 0 < lambda) (c d : ℝ) (u : ℝ → ℝ → ℝ)
+    (hu : ∀ α ∈ Icc c (c+1), ∀ γ ∈ Icc d (d+lambda), |u α γ| ≤ 1) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+1))).prod (volume.restrict (Icc d (d+lambda))))
+      (fun t : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum N z t.1 t.2 (fun x => u t.1 t.2*x/N))^6)) ≤
+      ENNReal.ofReal (128*sargosWindowConstant 3 1*
+        (1+lambda*(N : ℝ)^3)*(Real.log N)^6*sargosSixthBaseMoment N) := by
+  apply sargosSlowQuartic_upper_sixth_strip_reduction hN z hz (by norm_num : (0 : ℝ) ≤ 1)
+    hlambda c d (fun α γ x => u α γ*x/N) (fun α γ _x => u α γ/N)
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_hasDerivWithin N (u α γ) x
+  · intro α hα γ hγ x hx
+    exact sargos_linear_phase_derivative_bound (by omega) (hu α hα γ hγ)
+
+end SargosSixthBaseRegression
+
+namespace SargosQuarticLegendreRegression
+
+open Set GafniTao
+open scoped BigOperators ContDiff
+
+example (N : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosQuarticSum N z α γ =
+      ∑ n ∈ sargosSourceInterval N, z n*fordAdditiveCharacter (sargosQuarticPhase α γ n) := by
+  exact @sargosQuarticSum_eq_phase N z α γ
+
+example (α γ x : ℝ) :
+    HasDerivAt (sargosQuarticPhase α γ) (sargosQuarticSlope α γ x) x := by
+  exact @sargosQuarticPhase_hasDerivAt α γ x
+
+example (α γ x : ℝ) :
+    HasDerivAt (sargosQuarticSlope α γ) (2*α+12*γ*x^2) x := by
+  exact @sargosQuarticSlope_hasDerivAt α γ x
+
+example (α γ : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticPhase α γ) := by
+  exact @contDiff_sargosQuarticPhase α γ
+
+example (α γ : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticSlope α γ) := by
+  exact @contDiff_sargosQuarticSlope α γ
+
+example {N α γ x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) (hx : x ∈ Icc N (2*N)) :
+    |12*γ*x^2| ≤ α/2 := by
+  exact @sargosQuartic_curvature_error N α γ x hN hα hγ hx
+
+example {N α γ x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) (hx : x ∈ Icc N (2*N)) :
+    3*α/2 ≤ 2*α+12*γ*x^2 ∧ 2*α+12*γ*x^2 ≤ 5*α/2 := by
+  exact @sargosQuarticPhase_curvature N α γ x hN hα hγ hx
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    StrictMonoOn (sargosQuarticSlope α γ) (Icc N (2*N)) := by
+  exact @sargosQuarticSlope_strictMonoOn N α γ hN hα hγ
+
+example {N α γ x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) (hx : x ∈ Icc N (2*N)) :
+    |2*γ*x^2/α| ≤ 1/12 := by
+  exact @sargosQuartic_ratio_bound N α γ x hN hα hγ hx
+
+example {N α γ x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hx : x ∈ Icc N (2*N)) :
+    sargosQuarticInverseSlope N α γ (sargosQuarticSlope α γ x) = x := by
+  exact @sargosQuarticInverseSlope_slope N α γ x hN hα hγ hx
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticInverseSlope N α γ y ∈ Ioo N (2*N) := by
+  exact @sargosQuarticInverseSlope_mem N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticSlope α γ (sargosQuarticInverseSlope N α γ y) = y := by
+  exact @sargosQuarticSlope_inverse N α γ y hy
+
+example (α γ x : ℝ) :
+    HasStrictDerivAt (sargosQuarticSlope α γ) (2*α+12*γ*x^2) x := by
+  exact @sargosQuarticSlope_hasStrictDerivAt α γ x
+
+example {N α γ x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hx : x ∈ Icc N (2*N)) :
+    0 < 2*α+12*γ*x^2 := by
+  exact @sargosQuartic_curvature_pos N α γ x hN hα hγ hx
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    HasStrictDerivAt (sargosQuarticInverseSlope N α γ)
+      (2*α+12*γ*(sargosQuarticInverseSlope N α γ y)^2)⁻¹ y := by
+  exact @sargosQuarticInverseSlope_hasStrictDerivAt N α γ y hN hα hγ hy
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    IsOpen (sargosQuarticSlopeRange N α γ) := by
+  exact @sargosQuarticSlopeRange_isOpen N α γ hN hα hγ
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ContDiffAt ℝ ∞ (sargosQuarticInverseSlope N α γ) y := by
+  exact @sargosQuarticInverseSlope_contDiffAt N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    HasDerivAt (sargosQuarticLegendre N α γ) (-sargosQuarticInverseSlope N α γ y) y := by
+  exact @sargosQuarticLegendre_hasDerivAt N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ContDiffAt ℝ ∞ (sargosQuarticLegendre N α γ) y := by
+  exact @sargosQuarticLegendre_contDiffAt N α γ y hN hα hγ hy
+
+example {α : ℝ} (hα : α ≠ 0) (γ x : ℝ) :
+    sargosQuarticPhase α γ x-sargosQuarticSlope α γ x*x+
+      (sargosQuarticSlope α γ x)^2/(4*α)-
+      γ*(sargosQuarticSlope α γ x)^4/(16*α^4)+
+      γ^2*(sargosQuarticSlope α γ x)^6/(16*α^7) =
+    α*x^2*(2*γ*x^2/α)^3*sargosQuarticRemainderPolynomial (2*γ*x^2/α) := by
+  exact @sargosQuartic_legendre_algebra α hα γ x
+
+example {α : ℝ} (hα : α ≠ 0) (γ x : ℝ) :
+    -x+sargosQuarticSlope α γ x/(2*α)-
+      γ*(sargosQuarticSlope α γ x)^3/(4*α^4)+
+      3*γ^2*(sargosQuarticSlope α γ x)^5/(8*α^7) =
+    x*(2*γ*x^2/α)^3*sargosQuarticRemainderDerivativePolynomial (2*γ*x^2/α) := by
+  exact @sargosQuartic_legendre_derivative_algebra α hα γ x
+
+example {u : ℝ} (hu : |u| ≤ 1/12) :
+    |sargosQuarticRemainderPolynomial u| ≤ 5 := by
+  exact @sargosQuarticRemainderPolynomial_bound u hu
+
+example {u : ℝ} (hu : |u| ≤ 1/12) :
+    |sargosQuarticRemainderDerivativePolynomial u| ≤ 16 := by
+  exact @sargosQuarticRemainderDerivativePolynomial_bound u hu
+
+example (N α γ y : ℝ) :
+    sargosQuarticLegendre N α γ y =
+      -y^2/(4*α)+γ*y^4/(16*α^4)-γ^2*y^6/(16*α^7)+
+        sargosQuarticLegendreRemainder N α γ y := by
+  exact @sargosQuarticLegendre_expansion N α γ y
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    HasDerivAt (sargosQuarticLegendreRemainder N α γ)
+      (sargosQuarticLegendreRemainderDerivative N α γ y) y := by
+  exact @sargosQuarticLegendreRemainder_hasDerivAt N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hα : α ≠ 0) (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticLegendreRemainder N α γ y =
+      α*(sargosQuarticInverseSlope N α γ y)^2*
+        (2*γ*(sargosQuarticInverseSlope N α γ y)^2/α)^3*
+        sargosQuarticRemainderPolynomial (2*γ*(sargosQuarticInverseSlope N α γ y)^2/α) := by
+  exact @sargosQuarticLegendreRemainder_eq N α γ y hα hy
+
+example {N α γ y : ℝ}
+    (hα : α ≠ 0) (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticLegendreRemainderDerivative N α γ y =
+      sargosQuarticInverseSlope N α γ y*
+        (2*γ*(sargosQuarticInverseSlope N α γ y)^2/α)^3*
+        sargosQuarticRemainderDerivativePolynomial
+          (2*γ*(sargosQuarticInverseSlope N α γ y)^2/α) := by
+  exact @sargosQuarticLegendreRemainderDerivative_eq N α γ y hα hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ContDiffAt ℝ ∞ (sargosQuarticLegendreRemainder N α γ) y := by
+  exact @sargosQuarticLegendreRemainder_contDiffAt N α γ y hN hα hγ hy
+
+example {α γ x : ℝ}
+    (hα : 0 < α) (hx : 0 ≤ x) (hu : |2*γ*x^2/α| ≤ 1/12) :
+    |α*x^2*(2*γ*x^2/α)^3*sargosQuarticRemainderPolynomial (2*γ*x^2/α)| ≤
+      40*|γ|^3*x^8/α^2 := by
+  exact @sargosQuartic_remainder_product_bound α γ x hα hx hu
+
+example {α γ x : ℝ}
+    (hα : 0 < α) (hx : 0 ≤ x) (hu : |2*γ*x^2/α| ≤ 1/12) :
+    |x*(2*γ*x^2/α)^3*sargosQuarticRemainderDerivativePolynomial (2*γ*x^2/α)| ≤
+      128*|γ|^3*x^7/α^3 := by
+  exact @sargosQuartic_remainder_derivative_product_bound α γ x hα hx hu
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    |sargosQuarticLegendreRemainder N α γ y| ≤ 10240*|γ|^3*N^8/α^2 := by
+  exact @sargosQuarticLegendreRemainder_bound N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    |sargosQuarticLegendreRemainderDerivative N α γ y| ≤
+      16384*|γ|^3*N^7/α^3 := by
+  exact @sargosQuarticLegendreRemainderDerivative_bound N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    |deriv (sargosQuarticLegendreRemainder N α γ) y| ≤ 16384*|γ|^3*N^7/α^3 := by
+  exact @sargosQuarticLegendreRemainder_deriv_bound N α γ y hN hα hγ hy
+
+example {N α : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) :
+    0 < α ∧ 96 ≤ α*N ∧ 1 ≤ N*α^2 := by
+  exact @sargosQuartic_source_scale N α hN hα
+
+example {N α γ : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3) :
+    |γ| ≤ α/(96*N^2) := by
+  exact @sargosQuartic_source_smallness N α γ hN hα hγ
+
+example {N α γ y : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    |sargosQuarticLegendreRemainder N α γ y| ≤ 10240 := by
+  exact @sargosQuarticLegendreRemainder_source_bound N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    |sargosQuarticLegendreRemainderDerivative N α γ y| ≤ 16384/(α*N) := by
+  exact @sargosQuarticLegendreRemainderDerivative_source_bound N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    HasDerivAt (sargosQuarticLegendreRemainder N α γ)
+        (sargosQuarticLegendreRemainderDerivative N α γ y) y ∧
+      |sargosQuarticLegendreRemainderDerivative N α γ y| ≤ 16384/(α*N) := by
+  exact @sargosQuarticLegendreRemainder_source_hasDerivAt N α γ y hN hα hγ hy
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    sargosQuarticSlopeRange N α γ =
+      Ioo (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N)) := by
+  exact @sargosQuarticSlopeRange_eq N α γ hN hα hγ
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    Convex ℝ (sargosQuarticSlopeRange N α γ) := by
+  exact @sargosQuarticSlopeRange_convex N α γ hN hα hγ
+
+example {N γ : ℝ}
+    (hN : 0 < N) (hγ : |γ| ≤ 1/N^3) : |γ*N^3| ≤ 1 := by
+  exact @sargosQuartic_source_cubic_bound N γ hN hγ
+
+example {N α γ : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3) :
+    sargosQuarticSlopeRange N α γ ⊆ Ioo (2*α*N-4) (4*α*N+32) := by
+  exact @sargosQuarticSlopeRange_source_subset N α γ hN hα hγ
+
+example {N Δ α γ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) (hα : α ∈ Icc Δ (2*Δ))
+    (hγ : |γ| ≤ 1/N^3) :
+    sargosQuarticSlopeRange N α γ ⊆ Ioo (2*Δ*N-4) (4*(2*Δ*N)+32) := by
+  exact @sargosQuarticSlopeRange_dyadic_subset N Δ α γ hN hΔ hα hγ
+
+example {N α γ u v : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (hu : u ∈ sargosQuarticSlopeRange N α γ) (hv : v ∈ sargosQuarticSlopeRange N α γ) :
+    |sargosQuarticLegendreRemainder N α γ v-sargosQuarticLegendreRemainder N α γ u| ≤
+      (16384/(α*N))*|v-u| := by
+  exact @sargosQuarticLegendreRemainder_source_lipschitz N α γ u v hN hα hγ hu hv
+
+example : sargosQuarticPhase 1 (1/1000) (3/2) = 9/4+81/16000 := by
+  norm_num [sargosQuarticPhase]
+
+example : sargosQuarticSlope 1 (1/1000) (3/2) = 6027/2000 := by
+  norm_num [sargosQuarticSlope]
+
+example : sargosQuarticInverseSlope 1 1 0 2 = 1 := by
+  convert sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := 0) (x := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc]) using 1
+  norm_num [sargosQuarticSlope]
+
+example : sargosQuarticInverseSlope 1 1 0 3 = 3/2 := by
+  convert sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := 0) (x := 3/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc]) using 1
+  norm_num [sargosQuarticSlope]
+
+example : sargosQuarticLegendre 1 1 0 3 = -9/4 := by
+  have hi := sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := 0) (x := 3/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc])
+  norm_num [sargosQuarticSlope] at hi
+  norm_num [sargosQuarticLegendre,sargosQuarticPhase,hi]
+
+example : sargosQuarticInverseSlope 1 1 (1/1000) (6027/2000) = 3/2 := by
+  convert sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := 1/1000) (x := 3/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc]) using 1
+  norm_num [sargosQuarticSlope]
+
+example : sargosQuarticInverseSlope 1 1 (-1/1000) (5973/2000) = 3/2 := by
+  convert sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := -1/1000) (x := 3/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc]) using 1
+  norm_num [sargosQuarticSlope]
+
+example : sargosQuarticLegendreRemainder 1 1 0 3 = 0 := by
+  have hi := sargosQuarticInverseSlope_slope (N := 1) (α := 1) (γ := 0) (x := 3/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num [mem_Icc])
+  norm_num [sargosQuarticSlope] at hi
+  norm_num [sargosQuarticLegendreRemainder,sargosQuarticLegendre,sargosQuarticPhase,hi]
+
+example : |sargosQuarticRemainderPolynomial (1/12)| ≤ 5 :=
+  sargosQuarticRemainderPolynomial_bound (by norm_num)
+
+example : |sargosQuarticRemainderDerivativePolynomial (-1/12)| ≤ 16 :=
+  sargosQuarticRemainderDerivativePolynomial_bound (by norm_num)
+
+example : sargosQuarticSlopeRange 1 1 0 = Ioo 2 4 := by
+  convert sargosQuarticSlopeRange_eq (N := 1) (α := 1) (γ := 0)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num [sargosQuarticSlope]
+
+example {y : ℝ} (hy : y ∈ sargosQuarticSlopeRange 10000 (1/100) (1/1000000000000)) :
+    |sargosQuarticLegendreRemainder 10000 (1/100) (1/1000000000000) y| ≤ 10240 := by
+  exact sargosQuarticLegendreRemainder_source_bound (by norm_num) (by norm_num)
+    (by norm_num) hy
+
+example {y : ℝ} (hy : y ∈ sargosQuarticSlopeRange 10000 (1/100) (1/1000000000000)) :
+    |sargosQuarticLegendreRemainderDerivative 10000 (1/100) (1/1000000000000) y| ≤
+      4096/25 := by
+  convert sargosQuarticLegendreRemainderDerivative_source_bound
+    (by norm_num : (9216:ℝ) ≤ 10000) (by norm_num : 1/Real.sqrt 10000 ≤ (1/100:ℝ))
+    (by norm_num : |(1/1000000000000:ℝ)| ≤ 1/10000^3) hy using 1
+  norm_num
+
+example : sargosQuarticSlopeRange 10000 (1/50) (1/1000000000000) ⊆ Ioo 196 832 := by
+  convert sargosQuarticSlopeRange_dyadic_subset (N := 10000) (Δ := 1/100)
+    (α := 1/50) (γ := 1/1000000000000) (by norm_num) (by norm_num)
+    (by norm_num [mem_Icc]) (by norm_num) using 1
+  norm_num
+
+example : 0 < (1/96:ℝ) ∧ 96 ≤ (1/96:ℝ)*9216 ∧ 1 ≤ (9216:ℝ)*(1/96)^2 :=
+  sargosQuartic_source_scale (by norm_num) (by norm_num)
+
+end SargosQuarticLegendreRegression
+
+namespace SargosQuarticMorsePoissonRegression
+
+open Set Expdb GafniTao
+open scoped BigOperators ContDiff FourierTransform
+
+example (ε r u : ℝ) :
+    sargosQuarticPhase 1 ε u-sargosQuarticPhase 1 ε r-
+        sargosQuarticSlope 1 ε r*(u-r) =
+      (u-r)^2*sargosQuarticMorseCoefficient ε r u := by
+  exact @sargosQuartic_stationary_factor ε r u
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    7/16 ≤ sargosQuarticMorseCoefficient ε r u ∧
+      sargosQuarticMorseCoefficient ε r u ≤ 25/16 := by
+  exact @sargosQuarticMorseCoefficient_bounds ε r u hε hr hu
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    7/8 ≤ sargosQuarticMorseNumerator ε r u ∧
+      sargosQuarticMorseNumerator ε r u ≤ 25/8 := by
+  exact @sargosQuarticMorseNumerator_bounds ε r u hε hr hu
+
+example (ε r u : ℝ) :
+    HasDerivAt (sargosQuarticMorseCoefficient ε r) (ε*(2*u+2*r)) u := by
+  exact @sargosQuarticMorseCoefficient_hasDerivAt ε r u
+
+example {ε r u : ℝ}
+    (hp : 0 < sargosQuarticMorseCoefficient ε r u) :
+    HasDerivAt (sargosQuarticMorseCoordinate ε r)
+      (sargosQuarticMorseNumerator ε r u/Real.sqrt (2*sargosQuarticMorseCoefficient ε r u)) u := by
+  exact @sargosQuarticMorseCoordinate_hasDerivAt ε r u hp
+
+example {ε r u : ℝ}
+    (hp : 0 < sargosQuarticMorseCoefficient ε r u) :
+    ContDiffAt ℝ ∞ (sargosQuarticMorseCoordinate ε r) u := by
+  exact @sargosQuarticMorseCoordinate_contDiffAt ε r u hp
+
+example {ε r u : ℝ}
+    (hp : 0 ≤ sargosQuarticMorseCoefficient ε r u) :
+    sargosQuarticPhase 1 ε u-sargosQuarticPhase 1 ε r-
+        sargosQuarticSlope 1 ε r*(u-r) =
+      (sargosQuarticMorseCoordinate ε r u)^2/2 := by
+  exact @sargosQuarticMorseCoordinate_normalForm ε r u hp
+
+example (ε r : ℝ) :
+    sargosQuarticMorseCoordinate ε r r = 0 := by
+  exact @sargosQuarticMorseCoordinate_at_center ε r
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    1/2 ≤ Real.sqrt (2*sargosQuarticMorseCoefficient ε r u) ∧
+      Real.sqrt (2*sargosQuarticMorseCoefficient ε r u) ≤ 2 := by
+  exact @sargosQuarticMorseCoordinate_sqrt_bounds ε r u hε hr hu
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    7/16 ≤ deriv (sargosQuarticMorseCoordinate ε r) u ∧
+      deriv (sargosQuarticMorseCoordinate ε r) u ≤ 25/4 := by
+  exact @sargosQuarticMorseCoordinate_deriv_bounds ε r u hε hr hu
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    StrictMonoOn (sargosQuarticMorseCoordinate ε r) (Icc 0 3) := by
+  exact @sargosQuarticMorseCoordinate_strictMonoOn ε r hε hr
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    sargosQuarticMorseInverse ε r (sargosQuarticMorseCoordinate ε r u) = u := by
+  exact @sargosQuarticMorseInverse_coordinate ε r u hε hr hu
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) :
+    sargosQuarticMorseInverse ε r z ∈ Ioo 0 3 := by
+  exact @sargosQuarticMorseInverse_mem ε r z hε hr hz
+
+example {ε r z : ℝ}
+    (hz : z ∈ sargosQuarticMorseRange ε r) :
+    sargosQuarticMorseCoordinate ε r (sargosQuarticMorseInverse ε r z) = z := by
+  exact @sargosQuarticMorseCoordinate_inverse ε r z hz
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    HasStrictDerivAt (sargosQuarticMorseCoordinate ε r)
+      (deriv (sargosQuarticMorseCoordinate ε r) u) u := by
+  exact @sargosQuarticMorseCoordinate_hasStrictDerivAt ε r u hε hr hu
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) :
+    HasStrictDerivAt (sargosQuarticMorseInverse ε r)
+      (deriv (sargosQuarticMorseCoordinate ε r) (sargosQuarticMorseInverse ε r z))⁻¹ z := by
+  exact @sargosQuarticMorseInverse_hasStrictDerivAt ε r z hε hr hz
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    IsOpen (sargosQuarticMorseRange ε r) := by
+  exact @sargosQuarticMorseRange_isOpen ε r hε hr
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) :
+    ContDiffAt ℝ ∞ (sargosQuarticMorseInverse ε r) z := by
+  exact @sargosQuarticMorseInverse_contDiffAt ε r z hε hr hz
+
+example {ε r : ℝ} (hr : r ∈ Ioo 0 3) :
+    0 ∈ sargosQuarticMorseRange ε r := by
+  exact @sargosQuarticMorseRange_zero ε r hr
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    sargosQuarticMorseInverse ε r 0 = r := by
+  exact @sargosQuarticMorseInverse_zero ε r hε hr
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) :
+    4/25 ≤ deriv (sargosQuarticMorseInverse ε r) z ∧
+      deriv (sargosQuarticMorseInverse ε r) z ≤ 16/7 := by
+  exact @sargosQuarticMorseInverse_deriv_bounds ε r z hε hr hz
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    deriv (sargosQuarticMorseCoordinate ε r) r = Real.sqrt (2+12*ε*r^2) := by
+  exact @sargosQuarticMorseCoordinate_deriv_center ε r hε hr
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Ioo 0 3) :
+    deriv (sargosQuarticMorseInverse ε r) 0 = (Real.sqrt (2+12*ε*r^2))⁻¹ := by
+  exact @sargosQuarticMorseInverse_deriv_zero ε r hε hr
+
+example {N α : ℝ}
+    (hN : N ≠ 0) (hα : α ≠ 0) (γ x : ℝ) :
+    α*N^2*sargosQuarticPhase 1 (γ*N^2/α) (x/N) = sargosQuarticPhase α γ x := by
+  exact @sargosQuarticPhase_normalize N α hN hα γ x
+
+example {N α : ℝ}
+    (hN : N ≠ 0) (hα : α ≠ 0) (γ x : ℝ) :
+    α*N*sargosQuarticSlope 1 (γ*N^2/α) (x/N) = sargosQuarticSlope α γ x := by
+  exact @sargosQuarticSlope_normalize N α hN hα γ x
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    |γ*N^2/α| ≤ 1/96 := by
+  exact @sargosQuartic_normalized_coefficient_bound N α γ hN hα hγ
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticInverseSlope N α γ y/N ∈ Ioo 1 2 := by
+  exact @sargosQuartic_normalized_inverse_mem N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : N ≠ 0) (hα : α ≠ 0) (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticSlope 1 (γ*N^2/α) (sargosQuarticInverseSlope N α γ y/N) = y/(α*N) := by
+  exact @sargosQuartic_normalized_stationary_slope N α γ y hN hα hy
+
+example {N α γ y x : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) (hx : x ∈ Icc N (2*N)) :
+    sargosQuarticPhase α γ x-y*x =
+      sargosQuarticLegendre N α γ y+
+        (α*N^2/2)*(sargosQuarticMorseCoordinate (γ*N^2/α)
+          (sargosQuarticInverseSlope N α γ y/N) (x/N))^2 := by
+  exact @sargosQuartic_physical_quadratic_normalForm N α γ y x hN hα hγ hy hx
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    (N/Real.sqrt (α*N^2))*
+        deriv (sargosQuarticMorseInverse (γ*N^2/α)
+          (sargosQuarticInverseSlope N α γ y/N)) 0 =
+      1/Real.sqrt (2*α+12*γ*(sargosQuarticInverseSlope N α γ y)^2) := by
+  exact @sargosQuartic_physical_stationary_amplitude N α γ y hN hα hγ hy
+
+example (x : ℝ) :
+    fordAdditiveCharacter x = (𝐞 x : ℂ) := by
+  exact @sargos_ford_character_eq_fourier x
+
+example {χ : ℝ → ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (N α γ : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticWeightedKernel χ N α γ) := by
+  exact @sargosQuarticWeightedKernel_contDiff χ hχ N α γ
+
+example {χ : ℝ → ℝ} {N x : ℝ}
+    (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (hx : x ∉ Icc N (2*N)) (α γ : ℝ) :
+    sargosQuarticWeightedKernel χ N α γ x = 0 := by
+  exact @sargosQuarticWeightedKernel_zero_of_not_mem χ N x hs hN hx α γ
+
+example {χ : ℝ → ℝ} {N : ℝ}
+    (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (α γ : ℝ) :
+    HasCompactSupport (sargosQuarticWeightedKernel χ N α γ) := by
+  exact @sargosQuarticWeightedKernel_hasCompactSupport χ N hs hN α γ
+
+example {χ : ℝ → ℝ} {N : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (α γ x : ℝ) :
+    sargosQuarticWeightedSchwartz hχ hs hN α γ x = sargosQuarticWeightedKernel χ N α γ x := by
+  exact @sargosQuarticWeightedSchwartz_apply χ N hχ hs hN α γ x
+
+example {χ : ℝ → ℝ} {N : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (α γ m : ℝ) :
+    𝓕 (sargosQuarticWeightedSchwartz hχ hs hN α γ) m = sargosQuarticFourierMode χ N α γ m := by
+  exact @sargosQuarticWeightedSchwartz_fourier χ N hχ hs hN α γ m
+
+example {χ : ℝ → ℝ} {N : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (α γ : ℝ) :
+    (∑' n : ℤ, sargosQuarticWeightedKernel χ N α γ n) =
+      ∑' m : ℤ, sargosQuarticFourierMode χ N α γ m := by
+  exact @sargosQuartic_weighted_poisson χ N hχ hs hN α γ
+
+example {χ : ℝ → ℝ} {N : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo 1 2) (hN : 0 < N) (α γ : ℝ) :
+    Summable (fun m : ℤ => ‖sargosQuarticFourierMode χ N α γ m‖) := by
+  exact @summable_norm_sargosQuarticFourierMode χ N hχ hs hN α γ
+
+example (N : ℕ) (α γ : ℝ) :
+    sargosQuarticSum N (fun _ => 1) α γ =
+      ∑ n ∈ Finset.Icc ((N : ℤ)+1) (2*N), (𝐞 (sargosQuarticPhase α γ n) : ℂ) := by
+  exact @sargosQuarticSum_eq_fourier_interval N α γ
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ tsupport χ ⊆ Ioo 1 2 ∧ HasCompactSupport χ ∧
+      (∀ x : ℝ, 0 ≤ χ x ∧ χ x ≤ 1) ∧
+      (∀ n : ℤ, χ ((n : ℝ)/N) =
+        if n ∈ modelPhaseInteriorIndices N ((N : ℤ)+1) (2*N) then 1 else 0) ∧
+      ∀ α γ : ℝ, Summable (fun m : ℤ => ‖sargosQuarticFourierMode χ N α γ m‖) ∧
+        ‖sargosQuarticSum N (fun _ => 1) α γ-
+          ∑' m : ℤ, sargosQuarticFourierMode χ N α γ m‖ ≤ 2 := by
+  exact @sargosQuartic_source_poisson N hN
+
+example : sargosQuarticMorseCoefficient (1/96) 3 3 = 25/16 := by
+  norm_num [sargosQuarticMorseCoefficient]
+
+example : sargosQuarticMorseCoefficient (-1/96) 3 3 = 7/16 := by
+  norm_num [sargosQuarticMorseCoefficient]
+
+example : sargosQuarticMorseNumerator (1/96) 3 3 = 25/8 := by
+  norm_num [sargosQuarticMorseNumerator]
+
+example : sargosQuarticMorseNumerator (-1/96) 3 3 = 7/8 := by
+  norm_num [sargosQuarticMorseNumerator]
+
+example (r u : ℝ) : sargosQuarticMorseCoordinate 0 r u = (u-r)*Real.sqrt 2 := by
+  simp only [sargosQuarticMorseCoordinate,sargosQuarticMorseCoefficient,zero_mul,add_zero,mul_one]
+
+example : sargosQuarticMorseInverse (1/96) (3/2) 0 = 3/2 :=
+  sargosQuarticMorseInverse_zero (by norm_num) (by norm_num [mem_Icc])
+
+example : deriv (sargosQuarticMorseInverse 0 (3/2)) 0 = (Real.sqrt 2)⁻¹ := by
+  simpa using sargosQuarticMorseInverse_deriv_zero (ε := 0) (r := 3/2)
+    (by norm_num) (by norm_num [mem_Ioo])
+
+example (x : ℝ) :
+    (3:ℝ)*2^2*sargosQuarticPhase 1 ((-1/1000)*2^2/3) (x/2) =
+      sargosQuarticPhase 3 (-1/1000) x :=
+  sargosQuarticPhase_normalize (by norm_num) (by norm_num) (-1/1000) x
+
+example :
+    (1/Real.sqrt 1)*deriv (sargosQuarticMorseInverse 0
+      (sargosQuarticInverseSlope 1 1 0 3)) 0 = 1/Real.sqrt 2 := by
+  have hy : (3:ℝ) ∈ sargosQuarticSlopeRange 1 1 0 :=
+    ⟨3/2,by norm_num [mem_Ioo],by norm_num [sargosQuarticSlope]⟩
+  simpa using sargosQuartic_physical_stationary_amplitude
+    (by norm_num : (0:ℝ) < 1) (by norm_num : (0:ℝ) < 1) (by norm_num) hy
+
+example : fordAdditiveCharacter 0 = (𝐞 (0:ℝ) : ℂ) :=
+  sargos_ford_character_eq_fourier 0
+
+example (α γ : ℝ) :
+    sargosQuarticSum 1 (fun _ => 1) α γ = (𝐞 (4*α+16*γ) : ℂ) := by
+  rw [sargosQuarticSum_eq_fourier_interval]
+  norm_num [sargosQuarticPhase]
+  congr 1
+  ring
+
+example : ∃ χ : ℝ → ℝ, ContDiff ℝ ∞ χ ∧ tsupport χ ⊆ Ioo 1 2 ∧
+    ∀ α γ : ℝ, ‖sargosQuarticSum 1 (fun _ => 1) α γ-
+      ∑' m : ℤ, sargosQuarticFourierMode χ 1 α γ m‖ ≤ 2 := by
+  obtain ⟨χ,hχ,hs,_,_,_,h⟩ := sargosQuartic_source_poisson (N := 1) (by norm_num)
+  refine ⟨χ,hχ,hs,?_⟩
+  intro α γ
+  simpa only [Nat.cast_one] using (h α γ).2
+
+end SargosQuarticMorsePoissonRegression
+
+namespace SargosQuarticMorseJetsRegression
+
+open TaoTrudgianYang2025 Set Filter MeasureTheory
+open scoped ContDiff Topology BigOperators
+
+example (ε r : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticMorseCurvature ε r) := by
+  exact @sargosQuarticMorseCurvature_contDiff ε r
+
+example (ε r u : ℝ) :
+    HasDerivAt (sargosQuarticMorseCurvature ε r) (4*ε*(u+r)) u := by
+  exact @sargosQuarticMorseCurvature_hasDerivAt ε r u
+
+example (ε r : ℝ) :
+    deriv (sargosQuarticMorseCurvature ε r) = fun u => 4*ε*(u+r) := by
+  exact @sargosQuarticMorseCurvature_deriv ε r
+
+example (ε r : ℝ) :
+    deriv (fun u : ℝ => 4*ε*(u+r)) = fun _ => 4*ε := by
+  exact @sargosQuarticMorseCurvature_deriv_two ε r
+
+example (ε r u : ℝ) (n : ℕ) :
+    iteratedDeriv (n+3) (sargosQuarticMorseCurvature ε r) u = 0 := by
+  exact @sargosQuarticMorseCurvature_high_deriv ε r u n
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Ioo 0 3) (j : ℕ) :
+    HasDerivAt (fun x => sargosQuarticMorseJet ε r x j)
+      (inversePhaseEval (morseAtomDerivative j) (sargosQuarticMorseJet ε r u)) u := by
+  exact @sargosQuarticMorseJet_hasDerivAt ε r u hε hr hu j
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Ioo 0 3)
+    (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (sargosQuarticMorseJet ε r x))
+      (inversePhaseEval (morseDifferentiate e) (sargosQuarticMorseJet ε r u)) u := by
+  exact @sargosQuarticMorseEval_hasDerivAt ε r u hε hr hu e
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Ioo 0 3) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseCoordinate ε r) u =
+      inversePhaseEval (morseDerivativeExpression n) (sargosQuarticMorseJet ε r u) := by
+  exact @sargosQuarticMorseCoordinate_iteratedDeriv_formula ε r u hε hr hu n
+
+example (n : ℕ) :
+    0 ≤ sargosQuarticMorseDerivativeBound n := by
+  exact @sargosQuarticMorseDerivativeBound_nonneg n
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3)
+    (j : ℕ) (hj : 1 ≤ j) :
+    |iteratedDeriv j (sargosQuarticMorseCurvature ε r) u| ≤ 3 := by
+  exact @sargosQuarticMorseCurvature_derivative_bound ε r u hε hr hu j hj
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) (j : ℕ) :
+    |sargosQuarticMorseJet ε r u j| ≤ 3 := by
+  exact @sargosQuarticMorseJet_abs_le ε r u hε hr hu j
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Ioo 0 3) (n : ℕ) :
+    |iteratedDeriv n (sargosQuarticMorseCoordinate ε r) u| ≤
+      sargosQuarticMorseDerivativeBound n := by
+  exact @sargosQuarticMorseCoordinate_iteratedDeriv_bound ε r u hε hr hu n
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (j : ℕ) :
+    HasDerivAt (fun x => sargosQuarticMorseInverseJet ε r x j)
+      (inversePhaseEval (inversePhaseAtomDerivative j) (sargosQuarticMorseInverseJet ε r z)) z := by
+  exact @sargosQuarticMorseInverseJet_hasDerivAt ε r z hε hr hz j
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (sargosQuarticMorseInverseJet ε r x))
+      (inversePhaseEval (inversePhaseDifferentiate e) (sargosQuarticMorseInverseJet ε r z)) z := by
+  exact @sargosQuarticMorseInverseEval_hasDerivAt ε r z hε hr hz e
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseInverse ε r) z =
+      inversePhaseEval (inversePhaseDerivativeExpression n) (sargosQuarticMorseInverseJet ε r z) := by
+  exact @sargosQuarticMorseInverse_iteratedDeriv_formula ε r z hε hr hz n
+
+example (j : ℕ) :
+    0 ≤ sargosQuarticMorseInverseJetMagnitude j := by
+  exact @sargosQuarticMorseInverseJetMagnitude_nonneg j
+
+example {K j : ℕ} (hj : j ≤ K) :
+    sargosQuarticMorseInverseJetMagnitude j ≤ sargosQuarticMorseInverseJetBudget K := by
+  exact @sargosQuarticMorseInverseJetMagnitude_le_budget K j hj
+
+example (n : ℕ) :
+    0 ≤ sargosQuarticMorseInverseDerivativeBound n := by
+  exact @sargosQuarticMorseInverseDerivativeBound_nonneg n
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (j : ℕ) :
+    |sargosQuarticMorseInverseJet ε r z j| ≤ sargosQuarticMorseInverseJetMagnitude j := by
+  exact @sargosQuarticMorseInverseJet_abs_le ε r z hε hr hz j
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (n : ℕ) :
+    |iteratedDeriv n (sargosQuarticMorseInverse ε r) z| ≤
+      sargosQuarticMorseInverseDerivativeBound n := by
+  exact @sargosQuarticMorseInverse_iteratedDeriv_bound ε r z hε hr hz n
+
+example (ε r : ℝ) :
+    InjOn (sargosQuarticMorseInverse ε r) (sargosQuarticMorseRange ε r) := by
+  exact @sargosQuarticMorseInverse_injOn ε r
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    sargosQuarticMorseInverse ε r '' sargosQuarticMorseRange ε r = Ioo 0 3 := by
+  exact @sargosQuarticMorseInverse_image ε r hε hr
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) :
+    0 < deriv (sargosQuarticMorseInverse ε r) z := by
+  exact @sargosQuarticMorseInverse_deriv_pos ε r z hε hr hz
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (g : ℝ → ℂ) :
+    (∫ u in Ioo (0 : ℝ) 3, g u) =
+      ∫ z in sargosQuarticMorseRange ε r,
+        ((deriv (sargosQuarticMorseInverse ε r) z : ℝ) : ℂ)*
+          g (sargosQuarticMorseInverse ε r z) := by
+  exact @sargosQuartic_integral_Ioo_eq_morseIntegral ε r hε hr g
+
+example {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (g : ℝ → ℂ) :
+    IntegrableOn g (Ioo (0 : ℝ) 3) ↔
+      IntegrableOn (fun z => ((deriv (sargosQuarticMorseInverse ε r) z : ℝ) : ℂ)*
+        g (sargosQuarticMorseInverse ε r z)) (sargosQuarticMorseRange ε r) := by
+  exact @sargosQuartic_integrableOn_Ioo_iff_morseIntegral ε r hε hr g
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) :
+    ContDiffAt ℝ ∞ (sargosQuarticMorseAmplitude χ ε r) z := by
+  exact @sargosQuarticMorseAmplitude_contDiffAt χ ε r z hχ hε hr hz
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Ioo 0 3) :
+    sargosQuarticMorseAmplitude χ ε r 0 = χ r*(Real.sqrt (2+12*ε*r^2))⁻¹ := by
+  exact @sargosQuarticMorseAmplitude_zero χ ε r hε hr
+
+example {χ : ℝ → ℝ} {ε r z M : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r)
+    (hM : 0 ≤ M) (hχ : ∀ u ∈ Ioo (0 : ℝ) 3, |χ u| ≤ M) :
+    |sargosQuarticMorseAmplitude χ ε r z| ≤ M*(16/7) := by
+  exact @sargosQuarticMorseAmplitude_abs_le χ ε r z M hε hr hz hM hχ
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r)
+    (hχ : ∀ u ∈ Ioo (0 : ℝ) 3, 0 ≤ χ u) :
+    0 ≤ sargosQuarticMorseAmplitude χ ε r z := by
+  exact @sargosQuarticMorseAmplitude_nonneg χ ε r z hε hr hz hχ
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hz : z ∈ sargosQuarticMorseRange ε r) :
+    sargosQuarticMorseWeight χ ε r z = sargosQuarticMorseAmplitude χ ε r z := by
+  exact @sargosQuarticMorseWeight_eq χ ε r z hz
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hz : z ∉ sargosQuarticMorseRange ε r) :
+    sargosQuarticMorseWeight χ ε r z = 0 := by
+  exact @sargosQuarticMorseWeight_zero_of_not_mem χ ε r z hz
+
+example {χ : ℝ → ℝ} {ε r : ℝ} :
+    Function.support (sargosQuarticMorseWeight χ ε r) ⊆
+      sargosQuarticMorseCoordinate ε r '' tsupport χ := by
+  exact @sargosQuarticMorseWeight_support_subset χ ε r
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    IsCompact (sargosQuarticMorseCoordinate ε r '' tsupport χ) := by
+  exact @sargosQuarticMorseCoordinate_image_tsupport_isCompact χ ε r hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    tsupport (sargosQuarticMorseWeight χ ε r) ⊆
+      sargosQuarticMorseCoordinate ε r '' tsupport χ := by
+  exact @sargosQuarticMorseWeight_tsupport_subset χ ε r hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    tsupport (sargosQuarticMorseWeight χ ε r) ⊆ sargosQuarticMorseRange ε r := by
+  exact @sargosQuarticMorseWeight_tsupport_subset_range χ ε r hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    ContDiff ℝ ∞ (sargosQuarticMorseWeight χ ε r) := by
+  exact @sargosQuarticMorseWeight_contDiff χ ε r hχ hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    HasCompactSupport (sargosQuarticMorseWeight χ ε r) := by
+  exact @sargosQuarticMorseWeight_hasCompactSupport χ ε r hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Ioo 0 3) :
+    sargosQuarticMorseWeight χ ε r 0 = χ r*(Real.sqrt (2+12*ε*r^2))⁻¹ := by
+  exact @sargosQuarticMorseWeight_zero χ ε r hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) :
+    tsupport (sargosQuarticMorseWeight χ ε r) ⊆ Icc (-6 : ℝ) 6 := by
+  exact @sargosQuarticMorseWeight_tsupport_uniform χ ε r hs hε hr
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (g : ℝ → ℂ) :
+    (∫ u : ℝ, (χ u : ℂ)*g u) =
+      ∫ z : ℝ, (sargosQuarticMorseWeight χ ε r z : ℂ)*g (sargosQuarticMorseInverse ε r z) := by
+  exact @sargosQuartic_integral_eq_global_morse χ ε r hs hε hr g
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (k : ℕ) :
+    tsupport (iteratedDeriv k (sargosQuarticMorseWeight χ ε r)) ⊆
+      sargosQuarticMorseCoordinate ε r '' tsupport χ := by
+  exact @sargosQuarticMorseWeight_deriv_support χ ε r hs hε hr k
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (k : ℕ) :
+    Integrable (iteratedDeriv k (sargosQuarticMorseWeight χ ε r)) := by
+  exact @sargosQuarticMorseWeight_iteratedDeriv_integrable χ ε r hχ hs hε hr k
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) (j : ℕ) :
+    HasDerivAt (fun x => sargosQuarticMorseWeightJet χ ε r x j)
+      (inversePhaseEval (morseWeightAtomDerivative j) (sargosQuarticMorseWeightJet χ ε r z)) z := by
+  exact @sargosQuarticMorseWeightJet_hasDerivAt χ ε r z hχ hε hr hz j
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r)
+    (e : InversePhaseExpression) :
+    HasDerivAt (fun x => inversePhaseEval e (sargosQuarticMorseWeightJet χ ε r x))
+      (inversePhaseEval (morseWeightDifferentiate e) (sargosQuarticMorseWeightJet χ ε r z)) z := by
+  exact @sargosQuarticMorseWeightEval_hasDerivAt χ ε r z hχ hε hr hz e
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hχ : ContDiff ℝ ∞ χ)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseAmplitude χ ε r) z =
+      inversePhaseEval (morseWeightDerivativeExpression n) (sargosQuarticMorseWeightJet χ ε r z) := by
+  exact @sargosQuarticMorseAmplitude_iteratedDeriv_formula χ ε r z hχ hε hr hz n
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseWeight χ ε r) z =
+      iteratedDeriv n (sargosQuarticMorseAmplitude χ ε r) z := by
+  exact @sargosQuarticMorseWeight_iteratedDeriv_eq χ ε r z hε hr hz n
+
+example {χ : ℝ → ℝ} {ε r z : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∉ sargosQuarticMorseRange ε r) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseWeight χ ε r) z = 0 := by
+  exact @sargosQuarticMorseWeight_iteratedDeriv_zero χ ε r z hs hε hr hz n
+
+example {M : ℝ} (hM : 0 ≤ M) (n : ℕ) :
+    0 ≤ sargosQuarticMorseWeightDerivativeBound M n := by
+  exact @sargosQuarticMorseWeightDerivativeBound_nonneg M hM n
+
+example {χ : ℝ → ℝ} {ε r z M : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r)
+    (hM : 0 ≤ M) (n : ℕ)
+    (hχ : ∀ u ∈ Ioo (0 : ℝ) 3, ∀ k ≤ sargosQuarticMorseWeightCutoffOrder n,
+      |iteratedDeriv k χ u| ≤ M)
+    (j : ℕ) (hj : j ≤ sargosQuarticMorseWeightCutoffOrder n) :
+    |sargosQuarticMorseWeightJet χ ε r z j| ≤ sargosQuarticMorseWeightJetBudget M n := by
+  exact @sargosQuarticMorseWeightJet_abs_le χ ε r z M hε hr hz hM n hχ j hj
+
+example {χ : ℝ → ℝ} {ε r M : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hM : 0 ≤ M) (n : ℕ)
+    (hb : ∀ u ∈ Ioo (0 : ℝ) 3, ∀ k ≤ sargosQuarticMorseWeightCutoffOrder n,
+      |iteratedDeriv k χ u| ≤ M) (z : ℝ) :
+    |iteratedDeriv n (sargosQuarticMorseWeight χ ε r) z| ≤
+      sargosQuarticMorseWeightDerivativeBound M n := by
+  exact @sargosQuarticMorseWeight_iteratedDeriv_bound χ ε r M hχ hs hε hr hM n hb z
+
+example : deriv (sargosQuarticMorseCurvature (1/96) 3) 3 = 1/4 := by
+  rw [sargosQuarticMorseCurvature_deriv]
+  norm_num
+
+example : deriv (sargosQuarticMorseCurvature (-1/96) 3) 3 = -1/4 := by
+  rw [sargosQuarticMorseCurvature_deriv]
+  norm_num
+
+example (ε r u : ℝ) : iteratedDeriv 17 (sargosQuarticMorseCurvature ε r) u = 0 :=
+  sargosQuarticMorseCurvature_high_deriv ε r u 14
+
+example (j : ℕ) : |sargosQuarticMorseJet (-1/96) 3 0 j| ≤ 3 :=
+  sargosQuarticMorseJet_abs_le (by norm_num) (by norm_num [mem_Icc])
+    (by norm_num [mem_Icc]) j
+
+example (n : ℕ) : |iteratedDeriv n (sargosQuarticMorseCoordinate (1/96) 3) (3/2)| ≤
+    sargosQuarticMorseDerivativeBound n :=
+  sargosQuarticMorseCoordinate_iteratedDeriv_bound (by norm_num)
+    (by norm_num [mem_Icc]) (by norm_num [mem_Ioo]) n
+
+example (n : ℕ) : |iteratedDeriv n (sargosQuarticMorseInverse (-1/96) (3/2)) 0| ≤
+    sargosQuarticMorseInverseDerivativeBound n :=
+  sargosQuarticMorseInverse_iteratedDeriv_bound (by norm_num) (by norm_num [mem_Icc])
+    (sargosQuarticMorseRange_zero (by norm_num [mem_Ioo])) n
+
+example (χ : ℝ → ℝ) :
+    sargosQuarticMorseWeight χ (1/96) (3/2) 0 = χ (3/2)*(Real.sqrt (73/32))⁻¹ := by
+  convert sargosQuarticMorseWeight_zero (χ := χ) (ε := 1/96) (r := 3/2)
+    (by norm_num) (by norm_num [mem_Ioo]) using 1
+  norm_num
+
+example (χ : ℝ → ℝ) (ε r z : ℝ) (hz : z ∉ sargosQuarticMorseRange ε r) :
+    sargosQuarticMorseWeight χ ε r z = 0 :=
+  sargosQuarticMorseWeight_zero_of_not_mem hz
+
+example (χ : ℝ → ℝ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3) :
+    tsupport (sargosQuarticMorseWeight χ (-1/96) 3) ⊆ Icc (-6 : ℝ) 6 :=
+  sargosQuarticMorseWeight_tsupport_uniform hs (by norm_num) (by norm_num [mem_Icc])
+
+example (χ : ℝ → ℝ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (z : ℝ) (hz : z ∉ sargosQuarticMorseRange (1/96) 0) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseWeight χ (1/96) 0) z = 0 :=
+  sargosQuarticMorseWeight_iteratedDeriv_zero hs (by norm_num)
+    (by norm_num [mem_Icc]) hz n
+
+example (χ : ℝ → ℝ) (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (n : ℕ) :
+    Integrable (iteratedDeriv n (sargosQuarticMorseWeight χ (-1/96) (3/2))) :=
+  sargosQuarticMorseWeight_iteratedDeriv_integrable hχ hs (by norm_num)
+    (by norm_num [mem_Icc]) n
+
+example (χ : ℝ → ℝ) (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (n : ℕ) (hb : ∀ u ∈ Ioo (0 : ℝ) 3, ∀ k ≤ sargosQuarticMorseWeightCutoffOrder n,
+      |iteratedDeriv k χ u| ≤ 2) (z : ℝ) :
+    |iteratedDeriv n (sargosQuarticMorseWeight χ (-1/96) 3) z| ≤
+      sargosQuarticMorseWeightDerivativeBound 2 n :=
+  sargosQuarticMorseWeight_iteratedDeriv_bound hχ hs (by norm_num)
+    (by norm_num [mem_Icc]) (by norm_num) n hb z
+
+end SargosQuarticMorseJetsRegression
+
+namespace SargosQuarticStationaryRegression
+
+open TaoTrudgianYang2025 Set Filter MeasureTheory Expdb
+open scoped ContDiff Topology BigOperators FourierTransform ComplexConjugate
+
+example (χ : ℝ → ℝ) {N : ℝ} (hN : 0 < N) (α γ y : ℝ) :
+    sargosQuarticFourierMode χ N α γ y =
+      (N : ℂ)*(∫ u : ℝ, (χ u : ℂ)*(𝐞 (sargosQuarticPhase α γ (N*u)-y*(N*u)) : ℂ)) := by
+  exact @sargosQuarticFourierMode_eq_normalized χ N hN α γ y
+
+example {χ : ℝ → ℝ} {N α γ y : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticFourierMode χ N α γ y =
+      (N : ℂ)*(𝐞 (sargosQuarticLegendre N α γ y) : ℂ)*
+        ∫ z : ℝ, (sargosQuarticMorseWeight χ (γ*N^2/α)
+          (sargosQuarticInverseSlope N α γ y/N) z : ℂ)*(𝐞 ((α*N^2/2)*z^2) : ℂ) := by
+  exact @sargosQuarticFourierMode_eq_global_morse χ N α γ y hs hN hα hγ hy
+
+example (t : ℝ) :
+    conj (𝐞 (-t) : ℂ) = (𝐞 t : ℂ) := by
+  exact @sargos_fourier_conj t
+
+example (T z : ℝ) :
+    conj (betaQuadraticKernel T z) = (𝐞 ((T/2)*z^2) : ℂ) := by
+  exact @sargos_positive_quadratic_conj T z
+
+example {W : ℝ → ℝ} {T H M₀ M₂ M₃ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (hs : Function.support W ⊆ Ioc (-H) H) (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z : ℝ, |iteratedDeriv 2 W z| ≤ M₂)
+    (h₃ : ∀ z : ℝ, |iteratedDeriv 3 W z| ≤ M₃) :
+    ‖(∫ z : ℝ, (W z : ℂ)*(𝐞 ((T/2)*z^2) : ℂ))-
+      (W 0 : ℂ)*((𝐞 ((1 : ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H M₀ M₂ M₃/T := by
+  exact @sargos_positive_quadratic_global_remainder W T H M₀ M₂ M₃ hW hT hH hs h₀ h₂ h₃
+
+example {χ : ℝ → ℝ} {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    (N : ℂ)*(𝐞 (sargosQuarticLegendre N α γ y) : ℂ)*
+        ((sargosQuarticMorseWeight χ (γ*N^2/α)
+          (sargosQuarticInverseSlope N α γ y/N) 0 : ℂ)*
+          ((𝐞 ((1:ℝ)/8) : ℂ)/(Real.sqrt (α*N^2) : ℂ))) =
+      (χ (sargosQuarticInverseSlope N α γ y/N) : ℂ)*sargosQuarticStationaryMainTerm N α γ y := by
+  exact @sargosQuarticMorseLeadingTerm_scale χ N α γ y hN hα hγ hy
+
+example {χ : ℝ → ℝ} {N α γ y : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticFourierMode χ N α γ y-
+        (χ (sargosQuarticInverseSlope N α γ y/N) : ℂ)*sargosQuarticStationaryMainTerm N α γ y =
+      (N : ℂ)*(𝐞 (sargosQuarticLegendre N α γ y) : ℂ)*
+        sargosQuarticMorseRemainder χ (γ*N^2/α) (sargosQuarticInverseSlope N α γ y/N) (α*N^2) := by
+  exact @sargosQuarticFourierMode_sub_main_eq_morseRemainder χ N α γ y hs hN hα hγ hy
+
+example {χ : ℝ → ℝ} {N α γ y : ℝ}
+    (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ‖sargosQuarticFourierMode χ N α γ y-
+        (χ (sargosQuarticInverseSlope N α γ y/N) : ℂ)*sargosQuarticStationaryMainTerm N α γ y‖ =
+      N*‖sargosQuarticMorseRemainder χ (γ*N^2/α)
+        (sargosQuarticInverseSlope N α γ y/N) (α*N^2)‖ := by
+  exact @sargosQuarticFourierMode_sub_main_norm χ N α γ y hs hN hα hγ hy
+
+example {M : ℝ} (hM : 0 ≤ M) :
+    0 ≤ sargosQuarticStationaryRemainderConstant M := by
+  exact @sargosQuarticStationaryRemainderConstant_nonneg M hM
+
+example {χ : ℝ → ℝ} {ε r T M : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hT : 0 < T) (hM : 0 ≤ M)
+    (hb : ∀ u ∈ Ioo (0 : ℝ) 3, ∀ k ≤ sargosQuarticStationaryCutoffOrder,
+      |iteratedDeriv k χ u| ≤ M) :
+    ‖sargosQuarticMorseRemainder χ ε r T‖ ≤ sargosQuarticStationaryRemainderConstant M/T := by
+  exact @sargosQuarticMorseRemainder_bound χ ε r T M hχ hs hε hr hT hM hb
+
+example {χ : ℝ → ℝ} {N α γ y M : ℝ}
+    (hχ : ContDiff ℝ ∞ χ) (hs : tsupport χ ⊆ Ioo (1 : ℝ) 2)
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) (hM : 0 ≤ M)
+    (hb : ∀ u ∈ Ioo (0 : ℝ) 3, ∀ k ≤ sargosQuarticStationaryCutoffOrder,
+      |iteratedDeriv k χ u| ≤ M) :
+    ‖sargosQuarticFourierMode χ N α γ y-
+      (χ (sargosQuarticInverseSlope N α γ y/N) : ℂ)*sargosQuarticStationaryMainTerm N α γ y‖ ≤
+        sargosQuarticStationaryRemainderConstant M/(α*N) := by
+  exact @sargosQuarticFourierMode_stationary_bound χ N α γ y M hχ hs hN hα hγ hy hM hb
+
+example (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (ε r : ℝ), |ε| ≤ 1/96 → r ∈ Icc 0 3 →
+      ∀ z : ℝ,
+        |iteratedDeriv n (sargosQuarticMorseWeight (modelPhaseBufferedCutoff l b η) ε r) z| ≤
+          C*(η⁻¹)^n := by
+  exact @sargosQuarticBufferedWeight_uniform_derivative n
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (ε r T : ℝ), |ε| ≤ 1/96 → r ∈ Icc 0 3 → 0 < T →
+      ‖sargosQuarticMorseRemainder (modelPhaseBufferedCutoff l b η) ε r T‖ ≤
+        C*(η⁻¹)^3/T := by
+  exact @sargosQuarticBufferedRemainder_uniform
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (N α γ y : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      y ∈ sargosQuarticSlopeRange N α γ →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y-
+        (modelPhaseBufferedCutoff l b η (sargosQuarticInverseSlope N α γ y/N) : ℂ)*
+          sargosQuarticStationaryMainTerm N α γ y‖ ≤ C*(η⁻¹)^3/(α*N) := by
+  exact @sargosQuarticBufferedFourierMode_stationary_uniform
+
+example (N : ℕ) (η : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticBufferedCutoff N η) := by
+  exact @sargosQuarticBufferedCutoff_contDiff N η
+
+example {N : ℕ} {η : ℝ}
+    (hN : 1 ≤ N) (hη : 0 < η) :
+    tsupport (sargosQuarticBufferedCutoff N η) ⊆ Ioo (1 : ℝ) 2 := by
+  exact @sargosQuarticBufferedCutoff_tsupport N η hN hη
+
+example {N : ℕ} {η : ℝ}
+    (hN : 1 ≤ N) (hη : 0 < η) (α γ : ℝ) :
+    Summable (fun m : ℤ => ‖sargosQuarticFourierMode (sargosQuarticBufferedCutoff N η) N α γ m‖) ∧
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        ∑' m : ℤ, sargosQuarticFourierMode (sargosQuarticBufferedCutoff N η) N α γ m‖ ≤
+          4*N*η+2 := by
+  exact @sargosQuartic_buffered_poisson N η hN hη α γ
+
+example : conj (𝐞 (-(1:ℝ)/8) : ℂ) = (𝐞 ((1:ℝ)/8) : ℂ) := by
+  simpa only [neg_div] using sargos_fourier_conj ((1:ℝ)/8)
+
+example : conj (betaQuadraticKernel 2 3) = (𝐞 (9:ℝ) : ℂ) := by
+  convert sargos_positive_quadratic_conj 2 3 using 1
+  norm_num
+
+example (N y : ℝ) :
+    ‖sargosQuarticStationaryMainTerm N 1 0 y‖ = 1/Real.sqrt 2 := by
+  simp only [sargosQuarticStationaryMainTerm,norm_div,Circle.norm_coe,Complex.norm_real,
+    Real.norm_eq_abs,abs_of_nonneg (Real.sqrt_nonneg _)]
+  norm_num
+
+example : 0 ≤ sargosQuarticStationaryRemainderConstant 1 :=
+  sargosQuarticStationaryRemainderConstant_nonneg (by norm_num)
+
+example (χ : ℝ → ℝ) (α γ y : ℝ) :
+    sargosQuarticFourierMode χ 1 α γ y =
+      ∫ u : ℝ, (χ u : ℂ)*(𝐞 (sargosQuarticPhase α γ u-y*u) : ℂ) := by
+  simpa only [one_mul,Complex.ofReal_one] using
+    sargosQuarticFourierMode_eq_normalized χ (by norm_num : (0:ℝ) < 1) α γ y
+
+example (n : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (ε r : ℝ), |ε| ≤ 1/96 → r ∈ Icc 0 3 →
+      ∀ z : ℝ, |iteratedDeriv n
+        (sargosQuarticMorseWeight (modelPhaseBufferedCutoff 1 2 (1/10)) ε r) z| ≤ C*10^n := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedWeight_uniform_derivative n
+  refine ⟨C,hC,?_⟩
+  intro ε r hε hr z
+  have hj := h 1 2 (1/10) (by norm_num) (by norm_num) (by norm_num) (by norm_num) ε r hε hr z
+  norm_num at hj
+  exact hj
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (ε r T : ℝ), |ε| ≤ 1/96 → r ∈ Icc 0 3 → 0 < T →
+      ‖sargosQuarticMorseRemainder (modelPhaseBufferedCutoff 1 2 (1/8)) ε r T‖ ≤ C*512/T := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedRemainder_uniform
+  refine ⟨C,hC,?_⟩
+  intro ε r T hε hr hT
+  have hj := h 1 2 (1/8) (by norm_num) (by norm_num) (by norm_num) (by norm_num) ε r T hε hr hT
+  norm_num at hj
+  exact hj
+
+example (η : ℝ) : ContDiff ℝ ∞ (sargosQuarticBufferedCutoff 1 η) :=
+  sargosQuarticBufferedCutoff_contDiff 1 η
+
+example : tsupport (sargosQuarticBufferedCutoff 1 (1/8)) ⊆ Ioo (1:ℝ) 2 :=
+  sargosQuarticBufferedCutoff_tsupport (by norm_num) (by norm_num)
+
+example (α γ : ℝ) :
+    ‖sargosQuarticSum 1 (fun _ => 1) α γ-
+      ∑' m : ℤ, sargosQuarticFourierMode (sargosQuarticBufferedCutoff 1 (1/4)) 1 α γ m‖ ≤ 3 := by
+  have h := (sargosQuartic_buffered_poisson (N := 1) (η := 1/4)
+    (by norm_num) (by norm_num) α γ).2
+  norm_num at h
+  exact h
+
+example (α γ : ℝ) :
+    ‖sargosQuarticSum 2 (fun _ => 1) α γ-
+      ∑' m : ℤ, sargosQuarticFourierMode (sargosQuarticBufferedCutoff 2 (1/4)) 2 α γ m‖ ≤ 4 := by
+  have h := (sargosQuartic_buffered_poisson (N := 2) (η := 1/4)
+    (by norm_num) (by norm_num) α γ).2
+  norm_num at h
+  exact h
+
+example (α γ : ℝ) :
+    Summable (fun m : ℤ =>
+      ‖sargosQuarticFourierMode (sargosQuarticBufferedCutoff 2 (1/100)) 2 α γ m‖) := by
+  simpa only [Nat.cast_ofNat] using
+    (sargosQuartic_buffered_poisson (N := 2) (η := 1/100)
+      (by norm_num) (by norm_num) α γ).1
+
+end SargosQuarticStationaryRegression
+
+namespace SargosQuarticInteriorRegression
+
+open TaoTrudgianYang2025 Set Filter MeasureTheory
+open scoped ContDiff Topology FourierTransform
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    |u-r|/2 ≤ |sargosQuarticMorseCoordinate ε r u| ∧
+      |sargosQuarticMorseCoordinate ε r u| ≤ 2*|u-r| := by
+  exact @sargosQuarticMorseCoordinate_abs_bounds ε r u hε hr hu
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    sargosQuarticMorseCoordinate ε r u*deriv (sargosQuarticMorseCoordinate ε r) u =
+      sargosQuarticSlope 1 ε u-sargosQuarticSlope 1 ε r := by
+  exact @sargosQuarticMorseCoordinate_mul_deriv ε r u hε hr hu
+
+example {ε r H : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hH : 0 ≤ H)
+    (hleft : -H ∈ sargosQuarticMorseRange ε r) (hright : H ∈ sargosQuarticMorseRange ε r) :
+    7*H/16 ≤ sargosQuarticSlope 1 ε r-
+        sargosQuarticSlope 1 ε (sargosQuarticMorseInverse ε r (-H)) ∧
+      7*H/16 ≤ sargosQuarticSlope 1 ε (sargosQuarticMorseInverse ε r H)-
+        sargosQuarticSlope 1 ε r := by
+  exact @sargosQuarticMorseInverse_window_slope_gaps ε r H hε hr hH hleft hright
+
+example {ε r d H z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hd : 0 < d)
+    (hleft : 0 < r-d) (hright : r+d < 3) (hH : H < d/2)
+    (hz : z ∈ Icc (-H) H) :
+    z ∈ sargosQuarticMorseRange ε r ∧ |sargosQuarticMorseInverse ε r z-r| < d := by
+  exact @sargosQuarticMorseWindow_mem_and_inverse ε r d H z hε hr hd hleft hright hH hz
+
+example {ε r z l b η : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hz : z ∈ sargosQuarticMorseRange ε r) (hη : 0 < η)
+    (hleft : l+2*η < sargosQuarticMorseInverse ε r z)
+    (hright : sargosQuarticMorseInverse ε r z < b-2*η) (n : ℕ) :
+    iteratedDeriv n (sargosQuarticMorseWeight (modelPhaseBufferedCutoff l b η) ε r) z =
+      iteratedDeriv (n+1) (sargosQuarticMorseInverse ε r) z := by
+  exact @sargosQuarticBufferedWeight_iteratedDeriv_of_flat ε r z l b η hε hr hz hη hleft hright n
+
+example {ε r z l b η d H : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ r) (hright : r+d ≤ b-2*η)
+    (hH : H < d/2) (hz : z ∈ Icc (-H) H) (n : ℕ) :
+    |iteratedDeriv n (sargosQuarticMorseWeight (modelPhaseBufferedCutoff l b η) ε r) z| ≤
+      sargosQuarticMorseInverseDerivativeBound (n+1) := by
+  exact @sargosQuarticBufferedWeight_local_jet_bound ε r z l b η d H hε hr hη hl hb hd hleft hright hH hz n
+
+example {W : ℝ → ℝ} {T H M₀ M₂ M₃ : ℝ}
+    (hW : ContDiff ℝ ∞ W) (hT : 0 < T) (hH : 0 < H)
+    (h₀ : |W 0| ≤ M₀)
+    (h₂ : ∀ z ∈ Icc (-H) H, |iteratedDeriv 2 W z| ≤ M₂)
+    (h₃ : ∀ z ∈ Icc (-H) H, |iteratedDeriv 3 W z| ≤ M₃) :
+    ‖(∫ z in (-H)..H, (W z : ℂ)*(𝐞 ((T/2)*z^2) : ℂ))-
+      (W 0 : ℂ)*((𝐞 ((1:ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+        quadraticRemainderConstant H M₀ M₂ M₃/T := by
+  exact @sargos_positive_quadratic_window_remainder W T H M₀ M₂ M₃ hW hT hH h₀ h₂ h₃
+
+example :
+    0 ≤ sargosQuarticLocalRemainderConstant := by
+  exact @sargosQuarticLocalRemainderConstant_nonneg
+
+example {ε r l b η d H T : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ r) (hright : r+d ≤ b-2*η)
+    (hH : 0 < H) (hsmall : H < d/2) (hT : 0 < T) :
+    ‖(∫ z in (-H)..H,
+        (sargosQuarticMorseWeight (modelPhaseBufferedCutoff l b η) ε r z : ℂ)*
+          (𝐞 ((T/2)*z^2) : ℂ))-
+      ((deriv (sargosQuarticMorseInverse ε r) 0 : ℝ) : ℂ)*
+        ((𝐞 ((1:ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+      quadraticRemainderConstant H (sargosQuarticMorseInverseDerivativeBound 1)
+        (sargosQuarticMorseInverseDerivativeBound 3) (sargosQuarticMorseInverseDerivativeBound 4)/T := by
+  exact @sargosQuarticBufferedWeight_local_window_remainder ε r l b η d H T hε hr hη hl hb hd hleft hright hH hsmall hT
+
+example {ε r l b η d H T : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ r) (hright : r+d ≤ b-2*η)
+    (hH : 0 < H) (hH₁ : H ≤ 1) (hsmall : H < d/2) (hT : 0 < T) :
+    ‖(∫ z in (-H)..H,
+        (sargosQuarticMorseWeight (modelPhaseBufferedCutoff l b η) ε r z : ℂ)*
+          (𝐞 ((T/2)*z^2) : ℂ))-
+      ((deriv (sargosQuarticMorseInverse ε r) 0 : ℝ) : ℂ)*
+        ((𝐞 ((1:ℝ)/8) : ℂ)/(Real.sqrt T : ℂ))‖ ≤
+      sargosQuarticLocalRemainderConstant/(T*H) := by
+  exact @sargosQuarticBufferedWeight_local_window_remainder_inverse ε r l b η d H T hε hr hη hl hb hd hleft hright hH hH₁ hsmall hT
+
+example (ε r : ℝ) :
+    ContDiff ℝ ∞ (sargosQuarticCenteredPhase ε r) := by
+  exact @sargosQuarticCenteredPhase_contDiff ε r
+
+example (ε r u : ℝ) :
+    HasDerivAt (sargosQuarticCenteredPhase ε r)
+      (sargosQuarticSlope 1 ε u-sargosQuarticSlope 1 ε r) u := by
+  exact @sargosQuarticCenteredPhase_hasDerivAt ε r u
+
+example {ε r u : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    sargosQuarticCenteredPhase ε r u =
+      sargosQuarticCenteredPhase ε r r+(sargosQuarticMorseCoordinate ε r u)^2/2 := by
+  exact @sargosQuarticCenteredPhase_normalForm ε r u hε hr hu
+
+example {ε r z : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hz : z ∈ sargosQuarticMorseRange ε r) :
+    sargosQuarticCenteredPhase ε r (sargosQuarticMorseInverse ε r z) =
+      sargosQuarticCenteredPhase ε r r+z^2/2 := by
+  exact @sargosQuarticCenteredPhase_inverse ε r z hε hr hz
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hs : tsupport χ ⊆ Ioo (0 : ℝ) 3)
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (T : ℝ) :
+    sargosQuarticCenteredMode χ ε r T =
+      (𝐞 (T*sargosQuarticCenteredPhase ε r r) : ℂ)*
+        ∫ z : ℝ, (sargosQuarticMorseWeight χ ε r z : ℂ)*(𝐞 ((T/2)*z^2) : ℂ) := by
+  exact @sargosQuarticCenteredMode_eq_morse χ ε r hs hε hr T
+
+example {χ : ℝ → ℝ} {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    sargosQuarticFourierMode χ N α γ y =
+      (N : ℂ)*sargosQuarticCenteredMode χ (γ*N^2/α)
+        (sargosQuarticInverseSlope N α γ y/N) (α*N^2) := by
+  exact @sargosQuarticFourierMode_eq_centered χ N α γ y hN hα hy
+
+example {ε r H : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hH : 0 ≤ H)
+    (hs : Icc (-H) H ⊆ sargosQuarticMorseRange ε r)
+    {g : ℝ → ℂ} (hg : ContinuousOn g (Ioo (0 : ℝ) 3)) :
+    (∫ u in sargosQuarticMorseInverse ε r (-H)..sargosQuarticMorseInverse ε r H, g u) =
+      ∫ z in (-H)..H, ((deriv (sargosQuarticMorseInverse ε r) z : ℝ) : ℂ)*
+        g (sargosQuarticMorseInverse ε r z) := by
+  exact @sargosQuartic_integral_inverse_window ε r H hε hr hH hs g hg
+
+example {χ : ℝ → ℝ} {ε r H : ℝ}
+    (hχ : Continuous χ) (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hH : 0 ≤ H)
+    (hs : Icc (-H) H ⊆ sargosQuarticMorseRange ε r) (T : ℝ) :
+    (∫ u in sargosQuarticMorseInverse ε r (-H)..sargosQuarticMorseInverse ε r H,
+      (χ u : ℂ)*(𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ)) =
+      (𝐞 (T*sargosQuarticCenteredPhase ε r r) : ℂ)*
+        ∫ z in (-H)..H, (sargosQuarticMorseWeight χ ε r z : ℂ)*(𝐞 ((T/2)*z^2) : ℂ) := by
+  exact @sargosQuarticCentered_window_integral χ ε r H hχ hε hr hH hs T
+
+example {ε r T l b η a c lam : ℝ}
+    (hε : |ε| ≤ 1/96) (hT : 0 < T) (hη : 0 < η)
+    (hac : a ≤ c) (ha : 1 ≤ a) (hc : c ≤ 2) (hlam : 0 < lam)
+    (hgap : (∀ u ∈ Icc a c, lam ≤ T*(sargosQuarticSlope 1 ε u-sargosQuarticSlope 1 ε r)) ∨
+      (∀ u ∈ Icc a c, T*(sargosQuarticSlope 1 ε u-sargosQuarticSlope 1 ε r) ≤ -lam)) :
+    ‖∫ u in a..c, (modelPhaseBufferedCutoff l b η u : ℂ)*
+      (𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ)‖ ≤ 4/(lam*Real.pi) := by
+  exact @sargosQuarticBuffered_subinterval_nonstationary ε r T l b η a c lam hε hT hη hac ha hc hlam hgap
+
+example {χ : ℝ → ℝ}
+    (hχ : Continuous χ) (hs : HasCompactSupport χ) (ε r T : ℝ) :
+    Integrable (fun u : ℝ => (χ u : ℂ)*(𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ)) := by
+  exact @sargosQuarticCenteredIntegrand_integrable χ hχ hs ε r T
+
+example {ε r T l b η H : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3) (hT : 0 < T)
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hH : 0 < H)
+    (hleft : -H ∈ sargosQuarticMorseRange ε r) (hright : H ∈ sargosQuarticMorseRange ε r)
+    (hcutleft : l+η ≤ sargosQuarticMorseInverse ε r (-H))
+    (hcutright : sargosQuarticMorseInverse ε r H ≤ b-η) :
+    ‖sargosQuarticCenteredMode (modelPhaseBufferedCutoff l b η) ε r T-
+      (∫ u in sargosQuarticMorseInverse ε r (-H)..sargosQuarticMorseInverse ε r H,
+        (modelPhaseBufferedCutoff l b η u : ℂ)*(𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ))‖ ≤
+      128/(7*Real.pi*T*H) := by
+  exact @sargosQuarticBufferedMode_sub_window ε r T l b η H hε hr hT hη hl hb hH hleft hright hcutleft hcutright
+
+example :
+    0 ≤ sargosQuarticInteriorStationaryConstant := by
+  exact @sargosQuarticInteriorStationaryConstant_nonneg
+
+example {ε r l b η d H T : ℝ}
+    (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hd : 0 < d)
+    (hleft : l+2*η+d ≤ r) (hright : r+d ≤ b-2*η)
+    (hH : 0 < H) (hH₁ : H ≤ 1) (hsmall : H < d/2) (hT : 0 < T) :
+    ‖sargosQuarticCenteredMode (modelPhaseBufferedCutoff l b η) ε r T-
+      (𝐞 (T*sargosQuarticCenteredPhase ε r r) : ℂ)*
+        (((deriv (sargosQuarticMorseInverse ε r) 0 : ℝ) : ℂ)*
+          ((𝐞 ((1:ℝ)/8) : ℂ)/(Real.sqrt T : ℂ)))‖ ≤
+      sargosQuarticInteriorStationaryConstant/(T*H) := by
+  exact @sargosQuarticBufferedMode_interior_window ε r l b η d H T hε hr hη hl hb hd hleft hright hH hH₁ hsmall hT
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η d : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → 0 < d →
+      ∀ (ε r T : ℝ), |ε| ≤ 1/96 → r ∈ Icc 0 3 → 0 < T →
+      l+2*η+d ≤ r → r+d ≤ b-2*η →
+      ‖sargosQuarticMorseRemainder (modelPhaseBufferedCutoff l b η) ε r T‖ ≤ C/(T*d) := by
+  exact @sargosQuarticBufferedRemainder_interior_uniform
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η d : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → 0 < d →
+      ∀ (N α γ y : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      y ∈ sargosQuarticSlopeRange N α γ →
+      l+2*η+d ≤ sargosQuarticInverseSlope N α γ y/N →
+      sargosQuarticInverseSlope N α γ y/N+d ≤ b-2*η →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y-
+        sargosQuarticStationaryMainTerm N α γ y‖ ≤ C/(α*N*d) := by
+  exact @sargosQuarticBufferedFourierMode_interior_uniform
+
+example : 0 ≤ sargosQuarticInteriorStationaryConstant :=
+  sargosQuarticInteriorStationaryConstant_nonneg
+
+example : 0 ≤ sargosQuarticLocalRemainderConstant :=
+  sargosQuarticLocalRemainderConstant_nonneg
+
+example (r u : ℝ) : sargosQuarticCenteredPhase 0 r u = u^2-2*r*u := by
+  simp only [sargosQuarticCenteredPhase,sargosQuarticPhase,sargosQuarticSlope]
+  ring
+
+example (r u : ℝ) :
+    HasDerivAt (sargosQuarticCenteredPhase 0 r) (2*u-2*r) u := by
+  convert sargosQuarticCenteredPhase_hasDerivAt 0 r u using 1
+  simp only [sargosQuarticSlope]
+  ring
+
+example {r u : ℝ} (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    |u-r|/2 ≤ |sargosQuarticMorseCoordinate (1/96) r u| ∧
+      |sargosQuarticMorseCoordinate (1/96) r u| ≤ 2*|u-r| :=
+  sargosQuarticMorseCoordinate_abs_bounds (by norm_num) hr hu
+
+example {r u : ℝ} (hr : r ∈ Icc 0 3) (hu : u ∈ Icc 0 3) :
+    |u-r|/2 ≤ |sargosQuarticMorseCoordinate (-(1/96)) r u| ∧
+      |sargosQuarticMorseCoordinate (-(1/96)) r u| ≤ 2*|u-r| :=
+  sargosQuarticMorseCoordinate_abs_bounds (by norm_num) hr hu
+
+example {ε z : ℝ} (hε : |ε| ≤ 1/96) (hz : z ∈ Icc (-(1/8)) (1/8)) :
+    z ∈ sargosQuarticMorseRange ε (3/2) ∧
+      |sargosQuarticMorseInverse ε (3/2) z-3/2| < 1/2 :=
+  sargosQuarticMorseWindow_mem_and_inverse hε (by constructor <;> norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) hz
+
+example {η : ℝ} (hη : 0 < η) (ε r T : ℝ) :
+    Integrable (fun u : ℝ => (modelPhaseBufferedCutoff 1 2 η u : ℂ)*
+      (𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ)) :=
+  sargosQuarticCenteredIntegrand_integrable (modelPhaseBufferedCutoff_contDiff 1 2 η).continuous
+    (modelPhaseBufferedCutoff_hasCompactSupport hη) ε r T
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (η ε T : ℝ), 0 < η → η ≤ 1/8 →
+      |ε| ≤ 1/96 → 0 < T →
+      ‖sargosQuarticMorseRemainder (modelPhaseBufferedCutoff 1 2 η) ε (3/2) T‖ ≤ C*4/T := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedRemainder_interior_uniform
+  refine ⟨C,hC,?_⟩
+  intro η ε T hη hη₁ hε hT
+  have hb := h 1 2 η (1/4) (by norm_num) (by norm_num) hη (by norm_num)
+    ε (3/2) T hε (by constructor <;> norm_num) hT (by linarith) (by linarith)
+  convert hb using 1
+  ring
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (η N α γ y : ℝ), 0 < η → 0 < N → 0 < α →
+      |γ| ≤ α/(96*N^2) → y ∈ sargosQuarticSlopeRange N α γ →
+      1+2*η+1/4 ≤ sargosQuarticInverseSlope N α γ y/N →
+      sargosQuarticInverseSlope N α γ y/N+1/4 ≤ 2-2*η →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 η) N α γ y-
+        sargosQuarticStationaryMainTerm N α γ y‖ ≤ C*4/(α*N) := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedFourierMode_interior_uniform
+  refine ⟨C,hC,?_⟩
+  intro η N α γ y hη hN hα hγ hy hl hr
+  have hb := h 1 2 η (1/4) (by norm_num) (by norm_num) hη (by norm_num)
+    N α γ y hN hα hγ hy hl hr
+  convert hb using 1
+  ring
+
+example {χ : ℝ → ℝ} {ε r : ℝ}
+    (hχ : Continuous χ) (hε : |ε| ≤ 1/96) (hr : r ∈ Icc 0 3)
+    (hs : Icc (-(1/8)) (1/8) ⊆ sargosQuarticMorseRange ε r) (T : ℝ) :
+    (∫ u in sargosQuarticMorseInverse ε r (-(1/8))..sargosQuarticMorseInverse ε r (1/8),
+      (χ u : ℂ)*(𝐞 (T*sargosQuarticCenteredPhase ε r u) : ℂ)) =
+      (𝐞 (T*sargosQuarticCenteredPhase ε r r) : ℂ)*
+        ∫ z in (-(1/8))..(1/8), (sargosQuarticMorseWeight χ ε r z : ℂ)*
+          (𝐞 ((T/2)*z^2) : ℂ) :=
+  sargosQuarticCentered_window_integral hχ hε hr (by norm_num) hs T
+
+example (χ : ℝ → ℝ) (T : ℝ) :
+    sargosQuarticCenteredMode χ 0 0 T =
+      ∫ u : ℝ, (χ u : ℂ)*(𝐞 (T*u^2) : ℂ) := by
+  simp only [sargosQuarticCenteredMode,sargosQuarticCenteredPhase,sargosQuarticPhase,
+    sargosQuarticSlope,mul_zero,zero_mul,add_zero,sub_zero,one_mul]
+
+end SargosQuarticInteriorRegression
+
+namespace SargosQuarticCoreRegression
+
+open TaoTrudgianYang2025 Set MeasureTheory
+open scoped ContDiff FourierTransform BigOperators
+
+example {N α γ y l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) :
+    ‖∫ u : ℝ, (modelPhaseBufferedCutoff l b η u : ℂ)*
+      (𝐞 (sargosQuarticPhase α γ (N*u)-y*(N*u)) : ℂ)‖ ≤
+      4*(2/Real.pi+2)/Real.sqrt (α*N^2) := by
+  exact @sargosQuarticBuffered_normalized_curvature N α γ y l b η hN hα hγ hη hl hb
+
+example {N α γ y l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+      4*(2/Real.pi+2)/Real.sqrt α := by
+  exact @sargosQuarticBufferedFourierMode_curvature N α γ y l b η hN hα hγ hη hl hb
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ‖sargosQuarticStationaryMainTerm N α γ y‖ ≤ 1/Real.sqrt α := by
+  exact @sargosQuarticStationaryMainTerm_norm_bound N α γ y hN hα hγ hy
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η →
+      ∀ (N α γ y : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤ C/Real.sqrt α := by
+  exact @sargosQuarticBufferedFourierMode_uniform_curvature
+
+example {N α γ y l b η lam : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hlam : 0 < lam)
+    (hgap : (∀ u ∈ Icc (l+η) (b-η), lam ≤ sargosQuarticSlope α γ (N*u)-y) ∨
+      (∀ u ∈ Icc (l+η) (b-η), sargosQuarticSlope α γ (N*u)-y ≤ -lam)) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤ 4/(lam*Real.pi) := by
+  exact @sargosQuarticBufferedFourierMode_of_slope_gap N α γ y l b η lam hN hα hγ hη hl hb hlam hgap
+
+example {N α γ y l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+2*η ≤ b)
+    (hy : y < sargosQuarticSlope α γ (N*(l+η))) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+      4/((sargosQuarticSlope α γ (N*(l+η))-y)*Real.pi) := by
+  exact @sargosQuarticBufferedFourierMode_left_of_support N α γ y l b η hN hα hγ hη hl hb hflat hy
+
+example {N α γ y l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+2*η ≤ b)
+    (hy : sargosQuarticSlope α γ (N*(b-η)) < y) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+      4/((y-sargosQuarticSlope α γ (N*(b-η)))*Real.pi) := by
+  exact @sargosQuarticBufferedFourierMode_right_of_support N α γ y l b η hN hα hγ hη hl hb hflat hy
+
+example {N α γ a b : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (ha : a ∈ Icc N (2*N)) (hb : b ∈ Icc N (2*N)) (hab : a ≤ b) :
+    sargosQuarticSlope α γ b-sargosQuarticSlope α γ a ≤ (5*α/2)*(b-a) := by
+  exact @sargosQuarticSlope_gap_upper N α γ a b hN hα hγ ha hb hab
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    sargosQuarticSlopeRange N α γ =
+      Ioo (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N)) := by
+  exact @sargosQuarticSlopeRange_eq_endpoint_Ioo N α γ hN hα hγ
+
+example {N α γ y a b lam : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ sargosQuarticSlopeRange N α γ)
+    (ha : a ∈ Icc N (2*N)) (hb : b ∈ Icc N (2*N)) (hlam : 0 < lam)
+    (hleft : sargosQuarticSlope α γ a+lam ≤ y)
+    (hright : y+lam ≤ sargosQuarticSlope α γ b) :
+    a+lam/(5*α/2) ≤ sargosQuarticInverseSlope N α γ y ∧
+      sargosQuarticInverseSlope N α γ y+lam/(5*α/2) ≤ b := by
+  exact @sargosQuarticInverseSlope_interior_of_gap N α γ y a b lam hN hα hγ hy ha hb hlam hleft hright
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → l+4*η < b →
+      ∀ (N α γ y lam : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) → 0 < lam →
+      sargosQuarticSlope α γ (N*(l+2*η))+lam ≤ y →
+      y+lam ≤ sargosQuarticSlope α γ (N*(b-2*η)) →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y-
+        sargosQuarticStationaryMainTerm N α γ y‖ ≤ C/lam := by
+  exact @sargosQuarticBufferedFourierMode_interior_frequency_uniform
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (N α γ Q : ℝ) (L : ℕ),
+        0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+        sargosQuarticSlope α γ (N*(l+2*η)) ≤ Q →
+        Q+(L : ℝ)+1 ≤ sargosQuarticSlope α γ (N*(r-2*η)) →
+        ‖∑ n ∈ Finset.range L,
+          (sargosQuarticFourierMode (modelPhaseBufferedCutoff l r η) N α γ (Q+((n+1 : ℕ) : ℝ))-
+            sargosQuarticStationaryMainTerm N α γ (Q+((n+1 : ℕ) : ℝ)))‖ ≤
+          C*(1+Real.log (L : ℝ)) := by
+  exact @sargosQuarticBufferedInteriorRange_error
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l r η : ℝ), 1 ≤ l → r ≤ 2 → 0 < η → l+4*η < r →
+      ∀ (N α γ : ℝ) (A B : ℤ),
+        0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+        sargosQuarticSlope α γ (N*(l+2*η)) ≤ (A : ℝ) →
+        (B : ℝ) ≤ sargosQuarticSlope α γ (N*(r-2*η)) →
+        ‖∑ q ∈ Finset.Ioo A B,
+          (sargosQuarticFourierMode (modelPhaseBufferedCutoff l r η) N α γ q-
+            sargosQuarticStationaryMainTerm N α γ q)‖ ≤
+          C*(1+Real.log ((B-A-1).toNat : ℝ)) := by
+  exact @sargosQuarticBufferedInteriorBlock_error
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    sargosQuarticSupportLower N α γ l η ≤ sargosQuarticPlateauLower N α γ l η ∧
+      sargosQuarticPlateauLower N α γ l η ≤ sargosQuarticSupportUpper N α γ b η ∧
+      sargosQuarticSupportLower N α γ l η ≤ sargosQuarticPlateauUpper N α γ b η ∧
+      sargosQuarticPlateauUpper N α γ b η ≤ sargosQuarticSupportUpper N α γ b η := by
+  exact @sargosQuarticBand_endpoints N α γ l b η hN hα hγ hη hl hb hflat
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    ((Finset.Icc (sargosQuarticSupportLower N α γ l η)
+      (sargosQuarticPlateauLower N α γ l η)).card : ℝ) ≤ 5*α*N*η/2+3 ∧
+    ((Finset.Icc (sargosQuarticPlateauUpper N α γ b η)
+      (sargosQuarticSupportUpper N α γ b η)).card : ℝ) ≤ 5*α*N*η/2+3 := by
+  exact @sargosQuarticBand_card_bounds N α γ l b η hN hα hγ hη hl hb hflat
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    (((Finset.Icc (sargosQuarticSupportLower N α γ l η)
+        (sargosQuarticSupportUpper N α γ b η)) \
+      (Finset.Ioo (sargosQuarticPlateauLower N α γ l η)
+        (sargosQuarticPlateauUpper N α γ b η))).card : ℝ) ≤ 5*α*N*η+6 := by
+  exact @sargosQuarticTransition_card_le N α γ l b η hN hα hγ hη hl hb hflat
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → l+4*η < b →
+      ∀ (N α γ : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      ‖∑ y ∈ (Finset.Icc (sargosQuarticSupportLower N α γ l η)
+          (sargosQuarticSupportUpper N α γ b η)) \
+        (Finset.Ioo (sargosQuarticPlateauLower N α γ l η)
+          (sargosQuarticPlateauUpper N α γ b η)),
+        sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+          (5*α*N*η+6)*C/Real.sqrt α := by
+  exact @sargosQuarticBufferedTransition_error
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → l+4*η < b →
+      ∀ (N α γ : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      let L := sargosQuarticSupportLower N α γ l η
+      let U := sargosQuarticSupportUpper N α γ b η
+      let A := sargosQuarticPlateauLower N α γ l η
+      let B := sargosQuarticPlateauUpper N α γ b η
+      ‖(∑ y ∈ Finset.Icc L U, sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y)-
+        (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        C*(1+Real.log ((B-A-1).toNat : ℝ))+(5*α*N*η+6)*D/Real.sqrt α := by
+  exact @sargosQuarticBufferedSupportCore_error
+
+example {η : ℝ} (hη : 0 < η) (y : ℝ) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 η) 1 1 0 y‖ ≤
+      4*(2/Real.pi+2) := by
+  have h := sargosQuarticBufferedFourierMode_curvature (y := y) (l := 1) (b := 2)
+    (by norm_num : (0:ℝ) < 1) (by norm_num : (0:ℝ) < 1)
+    (by norm_num : |(0:ℝ)| ≤ 1/(96*1^2)) hη (by norm_num) (by norm_num)
+  simpa only [Real.sqrt_one,div_one] using h
+
+example (y : ℝ) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 1 1 (1/96) y‖ ≤
+      4*(2/Real.pi+2) := by
+  have h := sargosQuarticBufferedFourierMode_curvature (y := y) (l := 1) (b := 2)
+    (by norm_num : (0:ℝ) < 1) (by norm_num : (0:ℝ) < 1)
+    (by norm_num : |(1/96:ℝ)| ≤ 1/(96*1^2))
+    (by norm_num : (0:ℝ) < 1/16) (by norm_num) (by norm_num)
+  simpa only [Real.sqrt_one,div_one] using h
+
+example (y : ℝ) :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 1 1 (-(1/96)) y‖ ≤
+      4*(2/Real.pi+2) := by
+  have h := sargosQuarticBufferedFourierMode_curvature (y := y) (l := 1) (b := 2)
+    (by norm_num : (0:ℝ) < 1) (by norm_num : (0:ℝ) < 1)
+    (by norm_num : |(-(1/96):ℝ)| ≤ 1/(96*1^2))
+    (by norm_num : (0:ℝ) < 1/16) (by norm_num) (by norm_num)
+  simpa only [Real.sqrt_one,div_one] using h
+
+example (N α γ y : ℝ) :
+    sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 1) N α γ y = 0 := by
+  have hz := modelPhaseBufferedCutoff_eq_zero_of_overlap
+    (l := 1) (r := 2) (η := 1) (by norm_num) (by norm_num)
+  simp only [sargosQuarticFourierMode,hz,Complex.ofReal_zero,zero_mul,integral_zero]
+
+example : ‖sargosQuarticStationaryMainTerm 1 1 0 3‖ ≤ 1 := by
+  have hy : (3:ℝ) ∈ sargosQuarticSlopeRange 1 1 0 := by
+    rw [sargosQuarticSlopeRange_eq_endpoint_Ioo (by norm_num) (by norm_num) (by norm_num)]
+    norm_num [sargosQuarticSlope]
+  have h := sargosQuarticStationaryMainTerm_norm_bound (by norm_num) (by norm_num) (by norm_num) hy
+  simpa only [Real.sqrt_one,div_one] using h
+
+example :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 1 1 0 1‖ ≤
+      32/(9*Real.pi) := by
+  have h := sargosQuarticBufferedFourierMode_left_of_support
+    (N := 1) (α := 1) (γ := 0) (y := 1) (l := 1) (b := 2) (η := 1/16)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num [sargosQuarticSlope])
+  apply h.trans_eq
+  simp only [sargosQuarticSlope]
+  ring
+
+example :
+    ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 1 1 0 5‖ ≤
+      32/(9*Real.pi) := by
+  have h := sargosQuarticBufferedFourierMode_right_of_support
+    (N := 1) (α := 1) (γ := 0) (y := 5) (l := 1) (b := 2) (η := 1/16)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num [sargosQuarticSlope])
+  apply h.trans_eq
+  simp only [sargosQuarticSlope]
+  ring
+
+example : sargosQuarticSupportLower 8 1 0 1 (1/16) = 17 := by
+  norm_num [sargosQuarticSupportLower,sargosQuarticSlope]
+
+example : sargosQuarticSupportUpper 8 1 0 2 (1/16) = 31 := by
+  norm_num [sargosQuarticSupportUpper,sargosQuarticSlope]
+
+example : sargosQuarticPlateauLower 8 1 0 1 (1/16) = 18 := by
+  norm_num [sargosQuarticPlateauLower,sargosQuarticSlope]
+
+example : sargosQuarticPlateauUpper 8 1 0 2 (1/16) = 30 := by
+  norm_num [sargosQuarticPlateauUpper,sargosQuarticSlope]
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧
+      ‖∑ y ∈ Finset.Ioo (18:ℤ) 30,
+        (sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 8 1 0 y-
+          sargosQuarticStationaryMainTerm 8 1 0 y)‖ ≤ C*(1+Real.log 11) := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedInteriorBlock_error
+  refine ⟨C,hC,?_⟩
+  have hb := h 1 2 (1/16) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    8 1 0 18 30 (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num [sargosQuarticSlope]) (by norm_num [sargosQuarticSlope])
+  simpa only [show ((30:ℤ)-18-1).toNat = 11 by decide,Nat.cast_ofNat] using hb
+
+end SargosQuarticCoreRegression
+
+namespace SargosQuarticSourceExpansionRegression
+
+open TaoTrudgianYang2025 Set MeasureTheory
+open scoped ContDiff FourierTransform BigOperators
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hsep : l+2*η ≤ b)
+    (Q : ℤ) (hQ : sargosQuarticSlope α γ (N*(b-η)) ≤ (Q : ℝ)) (L : ℕ) :
+    (∑ n ∈ Finset.range L, ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η)
+      N α γ ((Q : ℝ)+((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) := by
+  exact @sargosQuarticExterior_right_harmonic N α γ l b η hN hα hγ hη hl hb hsep Q hQ L
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hsep : l+2*η ≤ b)
+    (Q : ℤ) (hQ : (Q : ℝ) ≤ sargosQuarticSlope α γ (N*(l+η))) (L : ℕ) :
+    (∑ n ∈ Finset.range L, ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η)
+      N α γ ((Q : ℝ)-((n+1 : ℕ) : ℝ))‖) ≤ (4/Real.pi)*(harmonic L : ℝ) := by
+  exact @sargosQuarticExterior_left_harmonic N α γ l b η hN hα hγ hη hl hb hsep Q hQ L
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hsep : l+2*η ≤ b)
+    (Lminus Lplus : ℕ) :
+    ‖(∑ n ∈ Finset.range Lminus,
+      sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ
+        ((sargosQuarticSupportLower N α γ l η : ℝ)-((n+1 : ℕ) : ℝ)))+
+      (∑ n ∈ Finset.range Lplus,
+      sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ
+        ((sargosQuarticSupportUpper N α γ b η : ℝ)+((n+1 : ℕ) : ℝ)))‖ ≤
+      (4/Real.pi)*(2+Real.log (Lminus : ℝ)+Real.log (Lplus : ℝ)) := by
+  exact @sargosQuarticExterior_blocks_log N α γ l b η hN hα hγ hη hl hb hsep Lminus Lplus
+
+example {ε u : ℝ}
+    (hε : |ε| ≤ 1/96) (hu : u ∈ Icc (1:ℝ) 2) :
+    |sargosQuarticSlope 1 ε u| ≤ 6 := by
+  exact @sargosQuartic_normalized_slope_bound ε u hε hu
+
+example {ε u : ℝ}
+    (hε : |ε| ≤ 1/96) (hu : u ∈ Icc (1:ℝ) 2) :
+    |iteratedDeriv 2 (sargosQuarticPhase 1 ε) u| ≤ 6 := by
+  exact @sargosQuartic_normalized_secondDeriv_bound ε u hε hu
+
+example (χ : ℝ → ℝ) (T ε u : ℝ) :
+    sargosQuarticWeightedKernel χ 1 T (T*ε) u =
+      (χ u : ℂ)*(𝐞 (T*sargosQuarticPhase 1 ε u) : ℂ) := by
+  exact @sargosQuarticWeightedKernel_normalized χ T ε u
+
+example (l b η N α γ x : ℝ) :
+    ‖sargosQuarticWeightedKernel (modelPhaseBufferedCutoff l b η) N α γ x‖ ≤ 1 := by
+  exact @sargosQuarticBufferedKernel_norm_le_one l b η N α γ x
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (ε T : ℝ), |ε| ≤ 1/96 →
+      ∀ u : ℝ,
+        ‖iteratedDeriv 2 (sargosQuarticWeightedKernel
+          (modelPhaseBufferedCutoff l b η) 1 T (T*ε)) u‖ ≤ C*(η⁻¹)^2*(1+|T|)^2 := by
+  exact @sargosQuarticBufferedKernel_uniform_second_derivative
+
+example (χ : ℝ → ℝ) {N α : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (γ y : ℝ) :
+    sargosQuarticFourierMode χ N α γ y =
+      (N : ℂ)*𝓕 (sargosQuarticWeightedKernel χ 1 (α*N^2) ((α*N^2)*(γ*N^2/α))) (y*N) := by
+  exact @sargosQuarticFourierMode_eq_scaled_fourier χ N α hN hα γ y
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (N α γ y : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      (1+|y*N|)^2*‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+        C*N*(η⁻¹)^2*(1+α*N^2)^2 := by
+  exact @sargosQuarticBufferedFourierMode_uniform_decay
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (N α γ y : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) → y ≠ 0 →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y‖ ≤
+        C*(η⁻¹)^2*(1+α*N^2)^2/(N*y^2) := by
+  exact @sargosQuarticBufferedFourierMode_inverse_square_bound
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → η ≤ 1 →
+      ∀ (N α γ : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      ∀ R : ℕ, 0 < R →
+        ‖sargosQuarticBufferedFarTail l b η N α γ R‖ ≤
+          C*(η⁻¹)^2*(1+α*N^2)^2/(N*(R : ℝ)) := by
+  exact @sargosQuarticBufferedFarTail_uniform
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (η α γ : ℝ),
+      1 ≤ N → 0 < η → η ≤ 1 → 0 < α → |γ| ≤ α/(96*(N : ℝ)^2) →
+      ∀ R : ℕ, 0 < R →
+        ‖sargosQuarticSum N (fun _ => 1) α γ-
+          ∑ y ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+            sargosQuarticFourierMode (sargosQuarticBufferedCutoff N η) N α γ y‖ ≤
+          4*N*η+2+C*(η⁻¹)^2*(1+α*(N : ℝ)^2)^2/((N : ℝ)*(R : ℝ)) := by
+  exact @sargosQuartic_buffered_poisson_truncated
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (η α γ ε : ℝ),
+      1 ≤ N → 0 < η → η ≤ 1 → 0 < α → |γ| ≤ α/(96*(N : ℝ)^2) → 0 < ε →
+      let R : ℕ := ⌈C*(η⁻¹)^2*(1+α*(N : ℝ)^2)^2/((N : ℝ)*ε)⌉₊+1
+      0 < R ∧
+        ‖sargosQuarticSum N (fun _ => 1) α γ-
+          ∑ y ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+            sargosQuarticFourierMode (sargosQuarticBufferedCutoff N η) N α γ y‖ ≤
+          4*N*η+2+ε := by
+  exact @sargosQuartic_buffered_poisson_truncated_precision
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ∀ (l b η : ℝ), 1 ≤ l → b ≤ 2 → 0 < η → l+4*η < b →
+      ∀ (N α γ : ℝ), 0 < N → 0 < α → |γ| ≤ α/(96*N^2) →
+      ∀ (a b' : ℤ),
+        a ≤ sargosQuarticSupportLower N α γ l η →
+        sargosQuarticSupportUpper N α γ b η ≤ b' →
+      let L := sargosQuarticSupportLower N α γ l η
+      let U := sargosQuarticSupportUpper N α γ b η
+      let A := sargosQuarticPlateauLower N α γ l η
+      let B := sargosQuarticPlateauUpper N α γ b η
+      ‖(∑ y ∈ Finset.Icc a b', sargosQuarticFourierMode (modelPhaseBufferedCutoff l b η) N α γ y)-
+        (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        C*(1+Real.log ((B-A-1).toNat : ℝ))+(5*α*N*η+6)*D/Real.sqrt α+
+          (4/Real.pi)*(2+Real.log ((L-a).toNat : ℝ)+Real.log ((b'-U).toNat : ℝ)) := by
+  exact @sargosQuarticBufferedWindow_error
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∀ (N : ℕ) (η α γ : ℝ),
+        1 ≤ N → 0 < η → η ≤ 1 → 0 < α → |γ| ≤ α/(96*(N : ℝ)^2) →
+        ((N : ℝ)+1)/N+4*η < 2 →
+      ∀ R : ℕ, 0 < R →
+        -(R : ℤ) ≤ sargosQuarticSupportLower N α γ (((N : ℝ)+1)/N) η →
+        sargosQuarticSupportUpper N α γ 2 η ≤ (R : ℤ) →
+      let L := sargosQuarticSupportLower N α γ (((N : ℝ)+1)/N) η
+      let U := sargosQuarticSupportUpper N α γ 2 η
+      let A := sargosQuarticPlateauLower N α γ (((N : ℝ)+1)/N) η
+      let B := sargosQuarticPlateauUpper N α γ 2 η
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        4*N*η+2+C*(η⁻¹)^2*(1+α*(N : ℝ)^2)^2/((N : ℝ)*(R : ℝ))+
+          D*(1+Real.log ((B-A-1).toNat : ℝ))+(5*α*N*η+6)*E/Real.sqrt α+
+          (4/Real.pi)*(2+Real.log ((L+(R : ℤ)).toNat : ℝ)+Real.log (((R : ℤ)-U).toNat : ℝ)) := by
+  exact @sargosQuartic_source_stationary_expansion
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∀ (N : ℕ) (η α γ ε : ℝ),
+        1 ≤ N → 0 < η → η ≤ 1 → 0 < α → |γ| ≤ α/(96*(N : ℝ)^2) →
+        ((N : ℝ)+1)/N+4*η < 2 → 0 < ε →
+      let L := sargosQuarticSupportLower N α γ (((N : ℝ)+1)/N) η
+      let U := sargosQuarticSupportUpper N α γ 2 η
+      let A := sargosQuarticPlateauLower N α γ (((N : ℝ)+1)/N) η
+      let B := sargosQuarticPlateauUpper N α γ 2 η
+      let R : ℕ := ⌈C*(η⁻¹)^2*(1+α*(N : ℝ)^2)^2/((N : ℝ)*ε)⌉₊+L.natAbs+U.natAbs+1
+      0 < R ∧ -(R : ℤ) ≤ L ∧ U ≤ (R : ℤ) ∧
+        ‖sargosQuarticSum N (fun _ => 1) α γ-
+          (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+          4*N*η+2+ε+D*(1+Real.log ((B-A-1).toNat : ℝ))+(5*α*N*η+6)*E/Real.sqrt α+
+            (4/Real.pi)*(2+Real.log ((L+(R : ℤ)).toNat : ℝ)+Real.log (((R : ℤ)-U).toNat : ℝ)) := by
+  exact @sargosQuartic_source_stationary_expansion_precision
+
+example : |sargosQuarticSlope 1 (1/96) 2| ≤ 6 :=
+  sargosQuartic_normalized_slope_bound (by norm_num) (by constructor <;> norm_num)
+
+example : |sargosQuarticSlope 1 (-(1/96)) 1| ≤ 6 :=
+  sargosQuartic_normalized_slope_bound (by norm_num) (by constructor <;> norm_num)
+
+example : |iteratedDeriv 2 (sargosQuarticPhase 1 (1/96)) 2| ≤ 6 :=
+  sargosQuartic_normalized_secondDeriv_bound (by norm_num) (by constructor <;> norm_num)
+
+example : |iteratedDeriv 2 (sargosQuarticPhase 1 (-(1/96))) 2| ≤ 6 :=
+  sargosQuartic_normalized_secondDeriv_bound (by norm_num) (by constructor <;> norm_num)
+
+example (N α γ x : ℝ) :
+    ‖sargosQuarticWeightedKernel (modelPhaseBufferedCutoff 1 2 (1/16)) N α γ x‖ ≤ 1 :=
+  sargosQuarticBufferedKernel_norm_le_one 1 2 (1/16) N α γ x
+
+example (χ : ℝ → ℝ) (T u : ℝ) :
+    sargosQuarticWeightedKernel χ 1 T 0 u = (χ u : ℂ)*(𝐞 (T*u^2) : ℂ) := by
+  simpa only [mul_zero,sargosQuarticPhase,one_mul,zero_mul,add_zero] using
+    sargosQuarticWeightedKernel_normalized χ T 0 u
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ y : ℝ, y ≠ 0 →
+      ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 1 1 0 y‖ ≤
+        C*1024/y^2 := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedFourierMode_inverse_square_bound
+  refine ⟨C,hC,?_⟩
+  intro y hy
+  have hb := h 1 2 (1/16) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    1 1 0 y (by norm_num) (by norm_num) (by norm_num) hy
+  convert hb using 1
+  norm_num
+  ring
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ R : ℕ, 0 < R →
+      ‖sargosQuarticBufferedFarTail 1 2 (1/16) 1 1 0 R‖ ≤ C*1024/(R : ℝ) := by
+  obtain ⟨C,hC,h⟩ := sargosQuarticBufferedFarTail_uniform
+  refine ⟨C,hC,?_⟩
+  intro R hR
+  have hb := h 1 2 (1/16) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    1 1 0 (by norm_num) (by norm_num) (by norm_num) R hR
+  convert hb using 1
+  norm_num
+  ring
+
+example :
+    ∃ R : ℕ, 0 < R ∧
+      ‖sargosQuarticSum 2 (fun _ => 1) 1 0-
+        ∑ y ∈ Finset.Icc (-(R : ℤ)) (R : ℤ),
+          sargosQuarticFourierMode (sargosQuarticBufferedCutoff 2 (1/16)) 2 1 0 y‖ ≤ 7/2 := by
+  obtain ⟨C,_hC,h⟩ := sargosQuartic_buffered_poisson_truncated_precision
+  have hb := h 2 (1/16) 1 0 1 (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+  refine ⟨_,hb.1,?_⟩
+  simpa only [Nat.cast_ofNat,show (4:ℝ)*2*(1/16)+2+1 = 7/2 by norm_num] using hb.2
+
+example :
+    (∑ n ∈ Finset.range 0, ‖sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16))
+      1 1 0 ((2:ℝ)-((n+1 : ℕ) : ℝ))‖) = 0 := by simp
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ‖(∑ y ∈ Finset.Icc (0:ℤ) 32,
+          sargosQuarticFourierMode (modelPhaseBufferedCutoff 1 2 (1/16)) 8 1 0 y)-
+        (∑ y ∈ Finset.Ioo (18:ℤ) 30, sargosQuarticStationaryMainTerm 8 1 0 y)‖ ≤
+        C*(1+Real.log 11)+17*D/2+(4/Real.pi)*(2+Real.log 17) := by
+  obtain ⟨C,hC,D,hD,h⟩ := sargosQuarticBufferedWindow_error
+  refine ⟨C,hC,D,hD,?_⟩
+  have hb := h 1 2 (1/16) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    8 1 0 (by norm_num) (by norm_num) (by norm_num) 0 32
+    (by norm_num [sargosQuarticSupportLower,sargosQuarticSlope])
+    (by norm_num [sargosQuarticSupportUpper,sargosQuarticSlope])
+  norm_num [sargosQuarticSupportLower,sargosQuarticSupportUpper,sargosQuarticPlateauLower,
+    sargosQuarticPlateauUpper,sargosQuarticSlope] at hb
+  simp only [show (11:ℤ).toNat = 11 by decide,show (17:ℤ).toNat = 17 by decide,
+    Nat.cast_ofNat] at hb
+  convert hb using 1
+  ring
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 1 ≤ D ∧ ∃ E : ℝ, 0 < E ∧
+      ∃ R : ℕ, 0 < R ∧ -(R : ℤ) ≤ 19 ∧ (31:ℤ) ≤ R ∧
+      ‖sargosQuarticSum 8 (fun _ => 1) 1 0-
+        (∑ y ∈ Finset.Ioo (20:ℤ) 30, sargosQuarticStationaryMainTerm 8 1 0 y)‖ ≤
+        5+D*(1+Real.log 9)+17*E/2+
+          (4/Real.pi)*(2+Real.log (((19:ℤ)+(R:ℤ)).toNat : ℝ)+
+            Real.log (((R:ℤ)-31).toNat : ℝ)) := by
+  obtain ⟨C,hC,D,hD,E,hE,h⟩ := sargosQuartic_source_stationary_expansion_precision
+  have hb := h 8 (1/16) 1 0 1 (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  have hL : sargosQuarticSupportLower 8 1 0 ((8+1)/8) (1/16) = 19 := by
+    norm_num [sargosQuarticSupportLower,sargosQuarticSlope]
+  have hU : sargosQuarticSupportUpper 8 1 0 2 (1/16) = 31 := by
+    norm_num [sargosQuarticSupportUpper,sargosQuarticSlope]
+  have hA : sargosQuarticPlateauLower 8 1 0 ((8+1)/8) (1/16) = 20 := by
+    norm_num [sargosQuarticPlateauLower,sargosQuarticSlope]
+  have hB : sargosQuarticPlateauUpper 8 1 0 2 (1/16) = 30 := by
+    norm_num [sargosQuarticPlateauUpper,sargosQuarticSlope]
+  simp only [Nat.cast_ofNat,hL,hU,hA,hB] at hb
+  refine ⟨C,hC,D,hD,E,hE,_,hb.1,hb.2.1,hb.2.2.1,?_⟩
+  have hh := hb.2.2.2
+  simp only [show ((30:ℤ)-20-1).toNat = 9 by decide,Nat.cast_ofNat,Real.sqrt_one,div_one] at hh
+  convert hh using 1
+  ring
+
+end SargosQuarticSourceExpansionRegression
+
+
+namespace SargosQuarticBTransformRegression
+
+open TaoTrudgianYang2025 Set
+open scoped BigOperators
+
+example {N α : ℝ} (hN : 0 < N) (hα : 0 < α) :
+    sargosQuarticStationaryWidth N α = 1/(N*Real.sqrt α) := by
+  exact @sargosQuarticStationaryWidth_eq N α hN hα
+
+example {N α : ℝ} (hα : 0 ≤ α) :
+    (sargosQuarticStationaryWidth N α)⁻¹^2 = α*N^2 := by
+  exact @sargosQuarticStationaryWidth_inverse_sq N α hα
+
+example {N : ℕ} {α : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt (N : ℝ) ≤ α) :
+    0 < sargosQuarticStationaryWidth N α ∧
+      sargosQuarticStationaryWidth N α ≤ 1 ∧
+      ((N : ℝ)+1)/N+4*sargosQuarticStationaryWidth N α < 2 := by
+  exact @sargosQuarticStationaryWidth_source N α hN hα
+
+example {N α : ℝ}
+    (hN : 0 < N) (hα : 0 < α) :
+    4*N*sargosQuarticStationaryWidth N α = 4/Real.sqrt α := by
+  exact @sargosQuarticStationaryWidth_smoothing N α hN hα
+
+example {N α : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (E : ℝ) :
+    (5*α*N*sargosQuarticStationaryWidth N α+6)*E/Real.sqrt α =
+      5*E+6*E/Real.sqrt α := by
+  exact @sargosQuarticStationaryWidth_transition N α hN hα E
+
+example {N α γ u : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hu : u ∈ Icc (1:ℝ) 2) :
+    |sargosQuarticSlope α γ (N*u)| ≤ 6*α*N := by
+  exact @sargosQuarticSlope_scaled_abs_le N α γ u hN hα hγ hu
+
+example {x B : ℝ} (hx : |x| ≤ B) :
+    ((⌊x⌋ : ℤ).natAbs : ℝ) ≤ B+1 ∧ ((⌈x⌉ : ℤ).natAbs : ℝ) ≤ B+1 := by
+  exact @sargos_rounding_natAbs_bound x B hx
+
+example {N α γ l b η : ℝ}
+    (hN : 1 ≤ N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    ((sargosQuarticSupportLower N α γ l η).natAbs : ℝ) ≤ 6*(α*N^2)+1 ∧
+      ((sargosQuarticSupportUpper N α γ b η).natAbs : ℝ) ≤ 6*(α*N^2)+1 ∧
+      ((sargosQuarticPlateauLower N α γ l η).natAbs : ℝ) ≤ 6*(α*N^2)+1 ∧
+      ((sargosQuarticPlateauUpper N α γ b η).natAbs : ℝ) ≤ 6*(α*N^2)+1 := by
+  exact @sargosQuarticBand_natAbs_bounds N α γ l b η hN hα hγ hη hl hb hflat
+
+example (C N α γ l b η : ℝ) :
+    0 < sargosQuarticSharpRadius C N α γ l b η ∧
+      -(sargosQuarticSharpRadius C N α γ l b η : ℤ) ≤ sargosQuarticSupportLower N α γ l η ∧
+      sargosQuarticSupportUpper N α γ b η ≤ (sargosQuarticSharpRadius C N α γ l b η : ℤ) := by
+  exact @sargosQuarticSharpRadius_contains C N α γ l b η
+
+example {C N α γ l b η : ℝ}
+    (hC : 0 ≤ C) (hN : 1 ≤ N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    (sargosQuarticSharpRadius C N α γ l b η : ℝ) ≤ (C+16)*(α*N^2+1)^3 := by
+  exact @sargosQuarticSharpRadius_le_polynomial C N α γ l b η hC hN hα hγ hη hl hb hflat
+
+example {C N α γ l b η : ℝ}
+    (hC : 0 ≤ C) (hN : 1 ≤ N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    let L := sargosQuarticSupportLower N α γ l η
+    let U := sargosQuarticSupportUpper N α γ b η
+    let R := sargosQuarticSharpRadius C N α γ l b η
+    ((L+(R : ℤ)).toNat : ℝ) ≤ (C+24)*(α*N^2+1)^3 ∧
+      (((R : ℤ)-U).toNat : ℝ) ≤ (C+24)*(α*N^2+1)^3 := by
+  exact @sargosQuarticSharpFarLengths_le_polynomial C N α γ l b η hC hN hα hγ hη hl hb hflat
+
+example {C N α γ l b η : ℝ}
+    (hC : 0 ≤ C) (hN : 1 ≤ N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    (((sargosQuarticPlateauUpper N α γ b η-
+      sargosQuarticPlateauLower N α γ l η-1).toNat : ℕ) : ℝ) ≤ (C+24)*(α*N^2+1)^3 := by
+  exact @sargosQuarticSharpInnerLength_le_polynomial C N α γ l b η hC hN hα hγ hη hl hb hflat
+
+example {C N α γ l b η : ℝ}
+    (hC : 0 ≤ C) (hN : 1 ≤ N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    let L := sargosQuarticSupportLower N α γ l η
+    let U := sargosQuarticSupportUpper N α γ b η
+    let A := sargosQuarticPlateauLower N α γ l η
+    let B := sargosQuarticPlateauUpper N α γ b η
+    let R := sargosQuarticSharpRadius C N α γ l b η
+    let G := Real.log (C+24)+3*Real.log (α*N^2+1)
+    Real.log ((B-A-1).toNat : ℝ) ≤ G ∧
+      Real.log ((L+(R : ℤ)).toNat : ℝ) ≤ G ∧
+      Real.log (((R : ℤ)-U).toNat : ℝ) ≤ G := by
+  exact @sargosQuarticSharpLengths_log_budget C N α γ l b η hC hN hα hγ hη hl hb hflat
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → |γ| ≤ 1/(N : ℝ)^3 →
+      let η := sargosQuarticStationaryWidth N α
+      let A := sargosQuarticPlateauLower N α γ (((N : ℝ)+1)/N) η
+      let B := sargosQuarticPlateauUpper N α γ 2 η
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        M*(1/Real.sqrt α+1+Real.log (α*(N : ℝ)^2+1)) := by
+  exact @sargosQuartic_source_buffered_uniform
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      let η := sargosQuarticStationaryWidth N α
+      let A := sargosQuarticPlateauLower N α γ (((N : ℝ)+1)/N) η
+      let B := sargosQuarticPlateauUpper N α γ 2 η
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        M*(1/Real.sqrt α+1+Real.log ((N : ℝ)+1)) := by
+  exact @sargosQuartic_source_buffered_uniform_logN
+
+example {N α γ : ℝ} {y : ℤ} :
+    y ∈ sargosQuarticStationaryFrequencies N α γ ↔
+      (y : ℝ) ∈ Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N)) := by
+  exact @mem_sargosQuarticStationaryFrequencies N α γ y
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    sargosQuarticInverseSlope N α γ y ∈ Icc N (2*N) := by
+  exact @sargosQuarticInverseSlope_mem_closed N α γ y hN hα hγ hy
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    ‖sargosQuarticStationaryMainTerm N α γ y‖ ≤ 1/Real.sqrt α := by
+  exact @sargosQuarticStationaryMainTerm_norm_bound_closed N α γ y hN hα hγ hy
+
+example {N α γ l b η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hl : 1 ≤ l) (hb : b ≤ 2) (hflat : l+4*η < b) :
+    Finset.Ioo (sargosQuarticPlateauLower N α γ l η)
+      (sargosQuarticPlateauUpper N α γ b η) ⊆ sargosQuarticStationaryFrequencies N α γ := by
+  exact @sargosQuarticPlateau_subset_stationaryFrequencies N α γ l b η hN hα hγ hη hl hb hflat
+
+example {N α γ η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hflat : (N+1)/N+4*η < 2) :
+    ((Finset.Icc ⌈sargosQuarticSlope α γ N⌉
+      (sargosQuarticPlateauLower N α γ ((N+1)/N) η)).card : ℝ) ≤
+        5*α/2+5*α*N*η+2 ∧
+    ((Finset.Icc (sargosQuarticPlateauUpper N α γ 2 η)
+      ⌊sargosQuarticSlope α γ (2*N)⌋).card : ℝ) ≤ 5*α*N*η+2 := by
+  exact @sargosQuarticEndpointBands_card N α γ η hN hα hγ hη hflat
+
+example {N α γ η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hflat : (N+1)/N+4*η < 2) :
+    let A := sargosQuarticPlateauLower N α γ ((N+1)/N) η
+    let B := sargosQuarticPlateauUpper N α γ 2 η
+    (((sargosQuarticStationaryFrequencies N α γ) \ (Finset.Ioo A B)).card : ℝ) ≤
+      5*α/2+10*α*N*η+4 := by
+  exact @sargosQuarticOmittedStationary_card N α γ η hN hα hγ hη hflat
+
+example {N α γ η : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hη : 0 < η) (hflat : (N+1)/N+4*η < 2) :
+    let A := sargosQuarticPlateauLower N α γ ((N+1)/N) η
+    let B := sargosQuarticPlateauUpper N α γ 2 η
+    ‖(∑ y ∈ sargosQuarticStationaryFrequencies N α γ, sargosQuarticStationaryMainTerm N α γ y)-
+      (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        (5*α/2+10*α*N*η+4)/Real.sqrt α := by
+  exact @sargosQuarticStationary_endpoint_error N α γ η hN hα hγ hη hflat
+
+example {N : ℕ} {α γ : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt (N : ℝ) ≤ α)
+    (hα₁ : α ≤ 1) (hγ : |γ| ≤ 1/(N : ℝ)^3) :
+    let η := sargosQuarticStationaryWidth N α
+    let A := sargosQuarticPlateauLower N α γ (((N : ℝ)+1)/N) η
+    let B := sargosQuarticPlateauUpper N α γ 2 η
+    ‖(∑ y ∈ sargosQuarticStationaryFrequencies N α γ, sargosQuarticStationaryMainTerm N α γ y)-
+      (∑ y ∈ Finset.Ioo A B, sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        17*(1/Real.sqrt α+1) := by
+  exact @sargosQuarticStationary_endpoint_error_source N α γ hN hα hα₁ hγ
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ sargosQuarticStationaryFrequencies N α γ,
+          sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        M*(1/Real.sqrt α+1+Real.log ((N : ℝ)+1)) := by
+  exact @sargosQuartic_source_B_transform_logN
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ sargosQuarticStationaryFrequencies N α γ,
+          sargosQuarticStationaryMainTerm N α γ y)‖ ≤
+        M*(1/Real.sqrt α+1+Real.log (2+α*N)) := by
+  exact @sargosQuartic_source_B_transform
+
+example : sargosQuarticStationaryWidth 64 (1/4) = 1/32 := by
+  norm_num [sargosQuarticStationaryWidth]
+
+example : (sargosQuarticStationaryWidth 64 0)⁻¹^2 = 0 := by
+  simpa only [zero_mul] using sargosQuarticStationaryWidth_inverse_sq (N := 64) (by norm_num : (0:ℝ) ≤ 0)
+
+example :
+    0 < sargosQuarticStationaryWidth 9216 1 ∧ sargosQuarticStationaryWidth 9216 1 ≤ 1 ∧
+      ((9216:ℝ)+1)/9216+4*sargosQuarticStationaryWidth 9216 1 < 2 := by
+  exact sargosQuarticStationaryWidth_source (N := 9216) (by norm_num) (by norm_num)
+
+example : 4*64*sargosQuarticStationaryWidth 64 (1/4) = 8 := by
+  norm_num [sargosQuarticStationaryWidth]
+
+example : (5*(1/4)*64*sargosQuarticStationaryWidth 64 (1/4)+6)*3/Real.sqrt (1/4) = 51 := by
+  norm_num [sargosQuarticStationaryWidth]
+
+example : sargosQuarticSharpRadius 1 8 1 0 (9/8) 2 (1/16) = 33851 := by
+  norm_num [sargosQuarticSharpRadius,sargosQuarticSupportLower,sargosQuarticSupportUpper,sargosQuarticSlope]
+
+example : sargosQuarticStationaryFrequencies 8 1 0 = Finset.Icc (16:ℤ) 32 := by
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticSlope]
+
+example : (sargosQuarticStationaryFrequencies 8 1 0).card = 17 := by
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticSlope,Int.card_Icc]
+  decide
+
+example : (16:ℤ) ∈ sargosQuarticStationaryFrequencies 8 1 0 ∧
+    (32:ℤ) ∈ sargosQuarticStationaryFrequencies 8 1 0 := by
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticSlope]
+
+example : (15:ℤ) ∉ sargosQuarticStationaryFrequencies 8 1 0 ∧
+    (33:ℤ) ∉ sargosQuarticStationaryFrequencies 8 1 0 := by
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticSlope]
+
+example : ‖sargosQuarticStationaryMainTerm 8 1 0 16‖ ≤ 1 := by
+  have h := sargosQuarticStationaryMainTerm_norm_bound_closed
+    (N := 8) (α := 1) (γ := 0) (y := 16) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num [sargosQuarticSlope])
+  simpa only [Real.sqrt_one,div_one] using h
+
+example : (((sargosQuarticStationaryFrequencies 8 1 0) \
+    Finset.Ioo (sargosQuarticPlateauLower 8 1 0 (9/8) (1/16))
+      (sargosQuarticPlateauUpper 8 1 0 2 (1/16))).card : ℕ) = 8 := by
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticPlateauLower,
+    sargosQuarticPlateauUpper,sargosQuarticSlope]
+  decide
+
+example :
+    ‖(∑ y ∈ Finset.Icc (16:ℤ) 32, sargosQuarticStationaryMainTerm 8 1 0 y)-
+      (∑ y ∈ Finset.Ioo (20:ℤ) 30, sargosQuarticStationaryMainTerm 8 1 0 y)‖ ≤ 23/2 := by
+  have h := sargosQuarticStationary_endpoint_error (N := 8) (α := 1) (γ := 0) (η := 1/16)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num [sargosQuarticStationaryFrequencies,sargosQuarticPlateauLower,
+    sargosQuarticPlateauUpper,sargosQuarticSlope] at h
+  exact h
+
+example :
+    ∃ M : ℝ, 1 ≤ M ∧
+      ‖sargosQuarticSum 9216 (fun _ => 1) 1 0-
+        (∑ y ∈ Finset.Icc (18432:ℤ) 36864, sargosQuarticStationaryMainTerm 9216 1 0 y)‖ ≤
+        M*(2+Real.log 9217) := by
+  obtain ⟨M,hM,h⟩ := sargosQuartic_source_B_transform_logN
+  refine ⟨M,hM,?_⟩
+  have hh := h 9216 1 0 (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  have hf : sargosQuarticStationaryFrequencies 9216 1 0 = Finset.Icc (18432:ℤ) 36864 := by
+    norm_num [sargosQuarticStationaryFrequencies,sargosQuarticSlope]
+  simpa only [Nat.cast_ofNat,hf,Real.sqrt_one,div_one,
+    show (1+1:ℝ) = 2 by norm_num,show (9216+1:ℝ) = 9217 by norm_num] using hh
+
+end SargosQuarticBTransformRegression
+
+
+namespace SargosQuarticAbelRegression
+
+open TaoTrudgianYang2025 Set
+open scoped BigOperators FourierTransform
+
+example {N : ℝ} (hN : 0 ≤ N) :
+    (N^((1:ℝ)/4))^2 = Real.sqrt N := by
+  exact @sargos_quarterPower_sq N hN
+
+example {N α : ℝ}
+    (hN : 1 ≤ N) (hα : 1/Real.sqrt N ≤ α) :
+    1/Real.sqrt α ≤ N^((1:ℝ)/4) := by
+  exact @sargos_source_inverse_sqrt_le_quarterPower N α hN hα
+
+example {N : ℝ} (hN : 1 ≤ N) :
+    Real.log (N+1) ≤ 1+4*N^((1:ℝ)/4) := by
+  exact @sargos_log_one_add_le_quarterPower N hN
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ-
+        (∑ y ∈ sargosQuarticStationaryFrequencies N α γ,
+          sargosQuarticStationaryMainTerm N α γ y)‖ ≤ C*(N : ℝ)^((1:ℝ)/4) := by
+  exact @sargosQuartic_source_B_transform_quarterPower
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ ≤
+        ‖∑ y ∈ sargosQuarticStationaryFrequencies N α γ,
+          sargosQuarticStationaryMainTerm N α γ y‖+C*(N : ℝ)^((1:ℝ)/4) := by
+  exact @sargosQuartic_source_le_stationary_quarterPower
+
+example {N α γ y : ℝ}
+    (hN : 0 < N)
+    (hy : y ∈ Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    sargosQuarticSlope α γ (sargosQuarticInverseSlope N α γ y) = y := by
+  exact @sargosQuarticSlope_inverse_closed N α γ y hN hy
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    StrictMonoOn (sargosQuarticInverseSlope N α γ)
+      (Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) := by
+  exact @sargosQuarticInverseSlope_strictMonoOn_closed N α γ hN hα hγ
+
+example {N α γ y : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (hy : y ∈ Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    0 < sargosQuarticStationaryAmplitude N α γ y ∧
+      sargosQuarticStationaryAmplitude N α γ y ≤ 1/Real.sqrt α := by
+  exact @sargosQuarticStationaryAmplitude_pos_bound N α γ y hN hα hγ hy
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) (hγ₀ : 0 ≤ γ) :
+    AntitoneOn (sargosQuarticStationaryAmplitude N α γ)
+      (Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) := by
+  exact @sargosQuarticStationaryAmplitude_antitoneOn_of_nonneg N α γ hN hα hγ hγ₀
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) (hγ₀ : γ ≤ 0) :
+    MonotoneOn (sargosQuarticStationaryAmplitude N α γ)
+      (Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) := by
+  exact @sargosQuarticStationaryAmplitude_monotoneOn_of_nonpos N α γ hN hα hγ hγ₀
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    MonotoneOn (sargosQuarticStationaryAmplitude N α γ)
+      (Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) ∨
+    AntitoneOn (sargosQuarticStationaryAmplitude N α γ)
+      (Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) := by
+  exact @sargosQuarticStationaryAmplitude_monotone_or_antitone N α γ hN hα hγ
+
+example (N α γ y : ℝ) :
+    ‖sargosQuarticStationaryMainTerm N α γ y‖ = sargosQuarticStationaryAmplitude N α γ y := by
+  exact @sargosQuarticStationaryMainTerm_norm_eq_amplitude N α γ y
+
+example {N α γ : ℝ} (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (a : ℝ) (L : ℕ)
+    (hr : ∀ i : ℕ, i ≤ L → a+i ∈
+      Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    FiniteVariationBound (fun i => (sargosQuarticStationaryAmplitude N α γ (a+i) : ℂ))
+      L (1/Real.sqrt α) := by
+  exact @finiteVariationBound_sargosQuarticStationaryAmplitude N α γ hN hα hγ a L hr
+
+example {N α γ : ℝ} (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2))
+    (a : ℝ) (L : ℕ)
+    (hr : ∀ i : ℕ, i ≤ L → a+i ∈
+      Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N)))
+    (z : ℕ → ℂ) {B : ℝ} (hB : 0 ≤ B)
+    (hz : ∀ j ≤ L+1, ‖∑ i ∈ Finset.range j, z i‖ ≤ B) :
+    ‖∑ i ∈ Finset.range (L+1), (sargosQuarticStationaryAmplitude N α γ (a+i) : ℂ)*z i‖ ≤
+      (2/Real.sqrt α)*B := by
+  exact @sargosQuarticStationaryAmplitude_sum_le_prefix_bound N α γ hN hα hγ a L hr z B hB hz
+
+example (a : ℤ) (H : ℕ) (f : ℤ → ℂ) :
+    ∃ L : ℕ, L ≤ H ∧ sargosIntegerPrefixMaximum a H f = ‖sargosIntegerPrefix a L f‖ := by
+  exact @sargosIntegerPrefixMaximum_attained a H f
+
+example (a : ℤ) (H : ℕ) (f : ℤ → ℂ) :
+    0 ≤ sargosIntegerPrefixMaximum a H f := by
+  exact @sargosIntegerPrefixMaximum_nonneg a H f
+
+example (a : ℤ) (H L : ℕ) (f : ℤ → ℂ) (hL : L ≤ H) :
+    ‖sargosIntegerPrefix a L f‖ ≤ sargosIntegerPrefixMaximum a H f := by
+  exact @norm_sargosIntegerPrefix_le_maximum a H L f hL
+
+example {A : Type*} [AddCommMonoid A] (a b : ℤ) (f : ℤ → A) :
+    (∑ y ∈ Finset.Icc a b, f y) = ∑ j ∈ Finset.range (b+1-a).toNat, f (a+j) := by
+  exact @sargos_sum_Icc_eq_range A _ a b f
+
+example (a b : ℤ) (f : ℤ → ℂ) :
+    ‖∑ y ∈ Finset.Icc a b, f y‖ ≤ sargosIntegerPrefixMaximum a (b+1-a).toNat f := by
+  exact @norm_sargos_sum_Icc_le_prefixMaximum a b f
+
+example (N α γ y : ℝ) :
+    sargosQuarticStationaryMainTerm N α γ y =
+      (𝐞 ((1:ℝ)/8) : ℂ)*((sargosQuarticStationaryAmplitude N α γ y : ℂ)*
+        (𝐞 (sargosQuarticLegendre N α γ y) : ℂ)) := by
+  exact @sargosQuarticStationaryMainTerm_eq_amplitude_character N α γ y
+
+example {N α γ : ℝ}
+    (hN : 0 < N) (hα : 0 < α) (hγ : |γ| ≤ α/(96*N^2)) :
+    ‖∑ y ∈ sargosQuarticStationaryFrequencies N α γ,
+      sargosQuarticStationaryMainTerm N α γ y‖ ≤
+        (2/Real.sqrt α)*sargosQuarticStationaryPrefixMaximum N α γ := by
+  exact @sargosQuarticStationarySum_le_prefixMaximum N α γ hN hα hγ
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ ≤
+        (2/Real.sqrt α)*sargosQuarticStationaryPrefixMaximum N α γ+
+          C*(N : ℝ)^((1:ℝ)/4) := by
+  exact @sargosQuartic_source_le_stationaryPrefixMaximum
+
+example {N α γ x y : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (hx : x ∈ sargosQuarticSlopeRange N α γ) (hy : y ∈ sargosQuarticSlopeRange N α γ) :
+    ‖(𝐞 (sargosQuarticLegendreRemainder N α γ y) : ℂ)-
+      (𝐞 (sargosQuarticLegendreRemainder N α γ x) : ℂ)‖ ≤
+        (32768*Real.pi/(α*N))*|y-x| := by
+  exact @sargosQuarticLegendreRemainder_character_lipschitz N α γ x y hN hα hγ hx hy
+
+example {N α γ : ℝ} (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (a : ℝ) (L : ℕ)
+    (hr : ∀ i : ℕ, i ≤ L → a+i ∈ sargosQuarticSlopeRange N α γ) :
+    FiniteVariationBound (fun i => (𝐞 (sargosQuarticLegendreRemainder N α γ (a+i)) : ℂ))
+      L (1+81920*Real.pi) := by
+  exact @finiteVariationBound_sargosQuarticLegendreRemainder N α γ hN hα hγ a L hr
+
+example {N α γ : ℝ} (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (a : ℝ) (L : ℕ)
+    (hr : ∀ i : ℕ, i ≤ L → a+i ∈
+      Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    FiniteVariationBound (fun i => (𝐞 (sargosQuarticLegendreRemainder N α γ (a+i)) : ℂ))
+      L (5+81920*Real.pi) := by
+  exact @finiteVariationBound_sargosQuarticLegendreRemainder_closed N α γ hN hα hγ a L hr
+
+example (N α γ y : ℝ) :
+    (𝐞 (sargosQuarticLegendre N α γ y) : ℂ) =
+      (𝐞 (sargosQuarticLegendreRemainder N α γ y) : ℂ)*
+        (𝐞 (sargosQuarticDualPolynomial α γ y) : ℂ) := by
+  exact @sargosQuarticLegendre_character_eq N α γ y
+
+example {N α γ : ℝ} (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3)
+    (a : ℤ) (H L : ℕ) (hL : L ≤ H)
+    (hr : ∀ i : ℕ, i < H → (a : ℝ)+i ∈
+      Icc (sargosQuarticSlope α γ N) (sargosQuarticSlope α γ (2*N))) :
+    ‖sargosIntegerPrefix a L (fun y => (𝐞 (sargosQuarticLegendre N α γ y) : ℂ))‖ ≤
+      (2*(5+81920*Real.pi))*sargosIntegerPrefixMaximum a H
+        (fun y => (𝐞 (sargosQuarticDualPolynomial α γ y) : ℂ)) := by
+  exact @sargosQuarticLegendrePrefix_le_polynomialMaximum N α γ hN hα hγ a H L hL hr
+
+example {N α γ : ℝ}
+    (hN : 9216 ≤ N) (hα : 1/Real.sqrt N ≤ α) (hγ : |γ| ≤ 1/N^3) :
+    sargosQuarticStationaryPrefixMaximum N α γ ≤
+      (2*(5+81920*Real.pi))*sargosQuarticPolynomialPrefixMaximum N α γ := by
+  exact @sargosQuarticStationaryPrefixMaximum_le_polynomial N α γ hN hα hγ
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ α → α ≤ 1 → |γ| ≤ 1/(N : ℝ)^3 →
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ ≤
+        C*((1/Real.sqrt α)*sargosQuarticPolynomialPrefixMaximum N α γ+
+          (N : ℝ)^((1:ℝ)/4)) := by
+  exact @sargosQuartic_source_le_polynomialPrefixMaximum
+
+example : ((16:ℝ)^((1:ℝ)/4))^2 = 4 := by
+  simpa only [show Real.sqrt (16:ℝ) = 4 by norm_num] using
+    sargos_quarterPower_sq (by norm_num : (0:ℝ) ≤ 16)
+
+example : 1/Real.sqrt (1/4) ≤ (16:ℝ)^((1:ℝ)/4) :=
+  sargos_source_inverse_sqrt_le_quarterPower (by norm_num) (by norm_num)
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧
+      ‖sargosQuarticSum 9216 (fun _ => 1) 1 0-
+        (∑ y ∈ sargosQuarticStationaryFrequencies 9216 1 0,
+          sargosQuarticStationaryMainTerm 9216 1 0 y)‖ ≤ C*(9216:ℝ)^((1:ℝ)/4) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_source_B_transform_quarterPower
+  exact ⟨C,hC,h 9216 1 0 (by norm_num) (by norm_num) (by norm_num) (by norm_num)⟩
+
+example (y : ℝ) : sargosQuarticStationaryAmplitude 8 (1/2) 0 y = 1 := by
+  norm_num [sargosQuarticStationaryAmplitude]
+
+example : sargosQuarticInverseSlope 8 1 0 16 = 8 ∧ sargosQuarticInverseSlope 8 1 0 32 = 16 := by
+  constructor
+  · simpa only [sargosQuarticSlope,mul_zero,zero_mul,add_zero,show (2*1*8:ℝ) = 16 by norm_num] using
+      sargosQuarticInverseSlope_slope (N := 8) (α := 1) (γ := 0) (x := 8)
+        (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  · simpa only [sargosQuarticSlope,mul_zero,zero_mul,add_zero,show (2*1*16:ℝ) = 32 by norm_num] using
+      sargosQuarticInverseSlope_slope (N := 8) (α := 1) (γ := 0) (x := 16)
+        (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : AntitoneOn (sargosQuarticStationaryAmplitude 8 1 (1/6144))
+    (Icc (sargosQuarticSlope 1 (1/6144) 8) (sargosQuarticSlope 1 (1/6144) 16)) := by
+  simpa only [show (2*8:ℝ) = 16 by norm_num] using
+    sargosQuarticStationaryAmplitude_antitoneOn_of_nonneg (N := 8) (α := 1) (γ := 1/6144)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : MonotoneOn (sargosQuarticStationaryAmplitude 8 1 (-1/6144))
+    (Icc (sargosQuarticSlope 1 (-1/6144) 8) (sargosQuarticSlope 1 (-1/6144) 16)) := by
+  simpa only [show (2*8:ℝ) = 16 by norm_num] using
+    sargosQuarticStationaryAmplitude_monotoneOn_of_nonpos (N := 8) (α := 1) (γ := -1/6144)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : FiniteVariationBound
+    (fun i : ℕ => (sargosQuarticStationaryAmplitude 8 1 0 (16+i) : ℂ)) 16 1 := by
+  have h := finiteVariationBound_sargosQuarticStationaryAmplitude
+    (N := 8) (α := 1) (γ := 0) (by norm_num) (by norm_num) (by norm_num) 16 16 (by
+      intro i hi
+      have hir : (i:ℝ) ≤ 16 := by exact_mod_cast hi
+      constructor <;> norm_num [sargosQuarticSlope]
+      linarith [Nat.cast_nonneg (α := ℝ) i])
+  simpa only [Real.sqrt_one,div_one] using h
+
+example : sargosIntegerPrefix (-2) 4 (fun y => (y:ℂ)) = -2 := by
+  norm_num [sargosIntegerPrefix,Finset.sum_range_succ]
+
+example (a : ℤ) (f : ℤ → ℂ) : sargosIntegerPrefixMaximum a 0 f = 0 := by
+  simp [sargosIntegerPrefixMaximum,sargosIntegerPrefix]
+
+example (y : ℝ) : sargosQuarticDualPolynomial 1 0 y = -y^2/4 := by
+  norm_num [sargosQuarticDualPolynomial]
+
+example : sargosQuarticDualPolynomial 1 (1/96) 4 = -139/36 := by
+  norm_num [sargosQuarticDualPolynomial]
+
+example : FiniteVariationBound
+    (fun i : ℕ => (𝐞 (sargosQuarticLegendreRemainder 9216 1 0 (18432+i)) : ℂ))
+      18432 (5+81920*Real.pi) := by
+  apply finiteVariationBound_sargosQuarticLegendreRemainder_closed
+    (by norm_num) (by norm_num) (by norm_num)
+  intro i hi
+  have hir : (i:ℝ) ≤ 18432 := by exact_mod_cast hi
+  constructor <;> norm_num [sargosQuarticSlope]
+  linarith [Nat.cast_nonneg (α := ℝ) i]
+
+example : ∃ C : ℝ, 1 ≤ C ∧
+    ‖sargosQuarticSum 9216 (fun _ => 1) 1 0‖ ≤
+      C*(sargosQuarticPolynomialPrefixMaximum 9216 1 0+(9216:ℝ)^((1:ℝ)/4)) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_source_le_polynomialPrefixMaximum
+  refine ⟨C,hC,?_⟩
+  simpa only [Nat.cast_ofNat,Real.sqrt_one,div_one,one_mul] using
+    h 9216 1 0 (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+end SargosQuarticAbelRegression
+
+
+namespace SargosQuarticDyadicRegression
+
+open TaoTrudgianYang2025 Set GafniTao
+open scoped BigOperators FourierTransform ComplexConjugate
+
+example (a : ℤ) (H : ℕ) (f : ℤ → ℂ) :
+    (∑ y ∈ Finset.Ioc a (a+H), f y) = sargosIntegerPrefix (a+1) H f := by
+  exact @sargos_sum_Ioc_eq_integerPrefix a H f
+
+example (n a b : ℤ) (H : ℕ) (f : ℤ → ℂ)
+    (hna : n < a) (hb : b ≤ n+H) :
+    ‖∑ y ∈ Finset.Icc a b, f y‖ ≤ 2*sargosIntegerPrefixMaximum (n+1) H f := by
+  exact @norm_sargosInteger_interval_le_two_prefixMaximum n a b H f hna hb
+
+example (n a b : ℤ) (H : ℕ) (f : ℤ → ℂ) :
+    ‖∑ y ∈ (Finset.Icc a b) ∩ (Finset.Ioc n (n+H)), f y‖ ≤
+      2*sargosIntegerPrefixMaximum (n+1) H f := by
+  exact @norm_sargosInteger_intersection_le_two_prefixMaximum n a b H f
+
+example (m : ℕ) (a b : ℤ) (f : ℤ → ℂ) :
+    ‖∑ y ∈ (Finset.Icc a b) ∩ (Finset.Ioc (m:ℤ) (4*m)), f y‖ ≤
+      2*sargosIntegerPrefixMaximum ((m:ℤ)+1) m f+
+        2*sargosIntegerPrefixMaximum ((2*m:ℤ)+1) (2*m) f := by
+  exact @norm_sargosInteger_intersection_two_dyadic m a b f
+
+example (m : ℕ) (a b : ℤ)
+    (ha : (m:ℤ)-4 ≤ a) (hb : b ≤ 4*m+35) :
+    (((Finset.Icc a b) \ (Finset.Ioc (m:ℤ) (4*m))).card : ℝ) ≤ 40 := by
+  exact @sargosInteger_dyadic_omitted_card m a b ha hb
+
+example (m : ℕ) (a b : ℤ) (f : ℤ → ℂ)
+    (ha : (m:ℤ)-4 ≤ a) (hb : b ≤ 4*m+35) (hf : ∀ y, ‖f y‖ ≤ 1) :
+    ‖∑ y ∈ (Finset.Icc a b) \ (Finset.Ioc (m:ℤ) (4*m)), f y‖ ≤ 40 := by
+  exact @norm_sargosInteger_dyadic_omitted m a b f ha hb hf
+
+example (m : ℕ) (a b : ℤ) (f : ℤ → ℂ)
+    (ha : (m:ℤ)-4 ≤ a) (hb : b ≤ 4*m+35) (hf : ∀ y, ‖f y‖ ≤ 1) :
+    ‖∑ y ∈ Finset.Icc a b, f y‖ ≤
+      2*sargosIntegerPrefixMaximum ((m:ℤ)+1) m f+
+        2*sargosIntegerPrefixMaximum ((2*m:ℤ)+1) (2*m) f+40 := by
+  exact @norm_sargosInteger_interval_le_two_dyadic m a b f ha hb hf
+
+example {N Δ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) :
+    192 ≤ sargosQuarticRoundedDualScale N Δ ∧
+      (sargosQuarticRoundedDualScale N Δ : ℝ) ≤ 2*Δ*N ∧
+      2*Δ*N < (sargosQuarticRoundedDualScale N Δ : ℝ)+1 ∧
+      Δ*N ≤ (sargosQuarticRoundedDualScale N Δ : ℝ) := by
+  exact @sargosQuarticRoundedDualScale_bounds N Δ hN hΔ
+
+example {N Δ α γ : ℝ}
+    (hN : 0 < N) (hΔα : Δ ≤ α) (hαΔ : α ≤ 2*Δ) (hγ : |γ| ≤ 1/N^3) :
+    2*Δ*N-4 ≤ sargosQuarticSlope α γ N ∧
+      sargosQuarticSlope α γ (2*N) ≤ 8*Δ*N+32 := by
+  exact @sargosQuartic_closed_slopes_dyadic_bounds N Δ α γ hN hΔα hαΔ hγ
+
+example {N Δ α γ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) (hα : α ∈ Icc Δ (2*Δ))
+    (hγ : |γ| ≤ 1/N^3) :
+    (sargosQuarticRoundedDualScale N Δ : ℤ)-4 ≤ ⌈sargosQuarticSlope α γ N⌉ ∧
+      ⌊sargosQuarticSlope α γ (2*N)⌋ ≤ 4*(sargosQuarticRoundedDualScale N Δ : ℤ)+35 := by
+  exact @sargosQuarticRoundedFrequency_bounds N Δ α γ hN hΔ hα hγ
+
+example {N Δ α γ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) (hα : α ∈ Icc Δ (2*Δ))
+    (hγ : |γ| ≤ 1/N^3) :
+    sargosQuarticStationaryFrequencies N α γ ⊆
+      Finset.Icc ((sargosQuarticRoundedDualScale N Δ : ℤ)-4)
+        (4*(sargosQuarticRoundedDualScale N Δ : ℤ)+35) := by
+  exact @sargosQuarticStationaryFrequencies_subset_rounded N Δ α γ hN hΔ hα hγ
+
+example (m : ℕ) (α γ : ℝ) :
+    0 ≤ sargosQuarticDualBlockMaximum m α γ := by
+  exact @sargosQuarticDualBlockMaximum_nonneg m α γ
+
+example {N Δ α γ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) (hα : α ∈ Icc Δ (2*Δ))
+    (hγ : |γ| ≤ 1/N^3) :
+    let m := sargosQuarticRoundedDualScale N Δ
+    sargosQuarticPolynomialPrefixMaximum N α γ ≤
+      2*sargosQuarticDualBlockMaximum m α γ+
+        2*sargosQuarticDualBlockMaximum (2*m) α γ+40 := by
+  exact @sargosQuarticPolynomialPrefixMaximum_le_two_blocks N Δ α γ hN hΔ hα hγ
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (Δ α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ Δ → Δ ≤ 1/2 →
+      α ∈ Icc Δ (2*Δ) → |γ| ≤ 1/(N : ℝ)^3 →
+      let m := sargosQuarticRoundedDualScale N Δ
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ ≤
+        C*((1/Real.sqrt Δ)*(sargosQuarticDualBlockMaximum m α γ+
+          sargosQuarticDualBlockMaximum (2*m) α γ)+(N : ℝ)^((1:ℝ)/4)) := by
+  exact @sargosQuartic_source_le_two_dual_blocks
+
+example (α γ y : ℝ) :
+    -sargosQuarticDualPolynomial α γ y =
+      y^2*(1/(4*α))+y^4*(-γ/(16*α^4))+γ^2*y^6/(16*α^7) := by
+  exact @sargosQuarticDualPolynomial_neg_eq α γ y
+
+example (α γ y : ℝ) :
+    (𝐞 (sargosQuarticDualPolynomial α γ y) : ℂ) =
+      conj (fordAdditiveCharacter
+        (y^2*(1/(4*α))+y^4*(-γ/(16*α^4))+γ^2*y^6/(16*α^7))) := by
+  exact @sargosQuarticDualCharacter_eq_conj α γ y
+
+example (m H : ℕ) (α γ : ℝ) :
+    sargosIntegerPrefix ((m:ℤ)+1) H (fun y => (𝐞 (sargosQuarticDualPolynomial α γ y) : ℂ)) =
+      conj (sargosSlowQuarticPrefix m H (fun _ => 1) (1/(4*α)) (-γ/(16*α^4))
+        (fun y => γ^2*y^6/(16*α^7))) := by
+  exact @sargosQuarticDualPrefix_eq_conj_slow m H α γ
+
+example (m : ℕ) (α γ : ℝ) :
+    sargosQuarticDualBlockMaximum m α γ =
+      sargosSlowQuarticMaximum m (fun _ => 1) (1/(4*α)) (-γ/(16*α^4))
+        (fun y => γ^2*y^6/(16*α^7)) := by
+  exact @sargosQuarticDualBlockMaximum_eq_slow m α γ
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (Δ α γ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N : ℝ) ≤ Δ → Δ ≤ 1/2 →
+      α ∈ Icc Δ (2*Δ) → |γ| ≤ 1/(N : ℝ)^3 →
+      let m := sargosQuarticRoundedDualScale N Δ
+      ‖sargosQuarticSum N (fun _ => 1) α γ‖ ≤
+        C*((1/Real.sqrt Δ)*
+          (sargosSlowQuarticMaximum m (fun _ => 1) (1/(4*α)) (-γ/(16*α^4))
+            (fun y => γ^2*y^6/(16*α^7))+
+           sargosSlowQuarticMaximum (2*m) (fun _ => 1) (1/(4*α)) (-γ/(16*α^4))
+            (fun y => γ^2*y^6/(16*α^7)))+(N : ℝ)^((1:ℝ)/4)) := by
+  exact @sargosQuartic_source_le_two_slow_blocks
+
+example : (∑ _y ∈ Finset.Ioc (-3:ℤ) 1, (1:ℂ)) = sargosIntegerPrefix (-2) 4 (fun _ => 1) := by
+  simpa only [show (-3+(4:ℕ):ℤ) = 1 by norm_num,show (-3+1:ℤ) = -2 by norm_num] using
+    sargos_sum_Ioc_eq_integerPrefix (-3) 4 (fun _ => 1)
+
+example : 3 ≤ 2*sargosIntegerPrefixMaximum 1 8 (fun _ => 1) := by
+  have h := norm_sargosInteger_interval_le_two_prefixMaximum 0 2 4 8 (fun _ => 1)
+    (by norm_num) (by norm_num)
+  rw [Finset.sum_const,nsmul_eq_mul,show (Finset.Icc (2:ℤ) 4).card = 3 by decide] at h
+  norm_num at h
+  exact h
+
+example : (Finset.Icc (-2:ℤ) 14) ∩ (Finset.Ioc (4:ℤ) 16) = Finset.Icc 5 14 := by
+  ext y
+  simp only [Finset.mem_inter,Finset.mem_Icc,Finset.mem_Ioc]
+  omega
+
+example : (((Finset.Icc (6:ℤ) 75) \ (Finset.Ioc (10:ℤ) 40)).card : ℕ) = 40 := by
+  decide
+
+example : (((Finset.Icc (-4:ℤ) 35) \ (Finset.Ioc (0:ℤ) 0)).card : ℕ) = 40 := by
+  decide
+
+example : sargosQuarticRoundedDualScale 9216 (1/96) = 192 := by
+  norm_num [sargosQuarticRoundedDualScale]
+
+example : sargosQuarticRoundedDualScale 9216 (1/95) = 194 := by
+  norm_num [sargosQuarticRoundedDualScale]
+
+example : 192 ≤ sargosQuarticRoundedDualScale 9216 (1/95) ∧
+    (sargosQuarticRoundedDualScale 9216 (1/95) : ℝ) ≤ 2*(1/95)*9216 ∧
+    2*(1/95)*9216 < (sargosQuarticRoundedDualScale 9216 (1/95) : ℝ)+1 ∧
+    (1/95)*9216 ≤ (sargosQuarticRoundedDualScale 9216 (1/95) : ℝ) :=
+  sargosQuarticRoundedDualScale_bounds (by norm_num) (by norm_num)
+
+example : ⌊sargosQuarticSlope (1/48) (1/(9216:ℝ)^3) (2*9216)⌋ = (800:ℤ) := by
+  norm_num [sargosQuarticSlope]
+
+example : ⌈sargosQuarticSlope (1/96) (-1/(9216:ℝ)^3) 9216⌉ = (188:ℤ) := by
+  norm_num [sargosQuarticSlope]
+
+example : -sargosQuarticDualPolynomial 1 (1/96) 4 = 139/36 := by
+  norm_num [sargosQuarticDualPolynomial]
+
+example : sargosQuarticDualBlockMaximum 3 1 0 =
+    sargosSlowQuarticMaximum 3 (fun _ => 1) (1/4) 0 (fun _ => 0) := by
+  simpa only [mul_one,neg_zero,zero_pow (by decide : 2 ≠ 0),zero_mul,zero_div] using
+    sargosQuarticDualBlockMaximum_eq_slow 3 1 0
+
+example : ∃ C : ℝ, 1 ≤ C ∧
+    ‖sargosQuarticSum 9216 (fun _ => 1) (1/96) 0‖ ≤
+      C*((1/Real.sqrt (1/96))*
+        (sargosSlowQuarticMaximum 192 (fun _ => 1) 24 0 (fun _ => 0)+
+          sargosSlowQuarticMaximum 384 (fun _ => 1) 24 0 (fun _ => 0))+
+            (9216:ℝ)^((1:ℝ)/4)) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_source_le_two_slow_blocks
+  refine ⟨C,hC,?_⟩
+  have hh := h 9216 (1/96) (1/96) 0 (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 9216 (1/96) = 192 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*192:ℕ) = 384 by norm_num,
+    show 1/(4*((1:ℝ)/96)) = 24 by norm_num,neg_zero,zero_div,
+    zero_pow (by decide : 2 ≠ 0),zero_mul] using hh
+
+end SargosQuarticDyadicRegression
+
+namespace SargosQuarticParameterRegression
+
+open TaoTrudgianYang2025 Set MeasureTheory GafniTao
+open scoped ENNReal BigOperators
+
+example {α : ℝ} (hα : α ≠ 0) (γ : ℝ) :
+    sargosQuarticParameterMap (sargosQuarticParameterMap (α,γ)) = (α,γ) := by
+  exact @sargosQuarticParameterMap_involutive α hα γ
+
+example :
+    InjOn sargosQuarticParameterMap {p : ℝ × ℝ | p.1 ≠ 0} := by
+  exact @sargosQuarticParameterMap_injOn
+
+example {α : ℝ} (hα : α ≠ 0) (γ t : ℝ) :
+    γ^2*t^6/(16*α^7) =
+      4*(sargosQuarticParameterMap (α,γ)).2^2/
+        (sargosQuarticParameterMap (α,γ)).1*t^6 := by
+  exact @sargosQuarticParameterMap_sextic α hα γ t
+
+example {x : ℝ} (hx : x ≠ 0) :
+    HasDerivAt (fun t : ℝ => 1/(4*t)) (-1/(4*x^2)) x := by
+  exact @sargosQuarticParameter_reciprocal_deriv x hx
+
+example (x y : ℝ) :
+    HasDerivAt (fun t : ℝ => -t/(16*x^4)) (-1/(16*x^4)) y := by
+  exact @sargosQuarticParameter_vertical_deriv x y
+
+example (x : ℝ) :
+    |(-1/(4*x^2))| * |(-1/(16*x^4))| = 1/(64*x^6) := by
+  exact @sargosQuarticParameter_jacobian_product x
+
+example {a b x : ℝ}
+    (ha : 0 < a) (hab : a ≤ b) :
+    1/(4*x) ∈ Icc a b ↔ x ∈ Icc (1/(4*b)) (1/(4*a)) := by
+  exact @sargosQuarticParameter_horizontal_mem a b x ha hab
+
+example {a b : ℝ}
+    (ha : 0 < a) (hab : a ≤ b) :
+    (fun x : ℝ => 1/(4*x)) '' Icc (1/(4*b)) (1/(4*a)) = Icc a b := by
+  exact @sargosQuarticParameter_horizontal_image a b ha hab
+
+example {x : ℝ} (hx : 0 < x) (H : ℝ) :
+    (fun y : ℝ => -y/(16*x^4)) '' Icc (-16*H*x^4) (16*H*x^4) =
+      Icc (-H) H := by
+  exact @sargosQuarticParameter_vertical_image x hx H
+
+example {Δ x : ℝ}
+    (hΔ : 0 < Δ) (hx : 1/(8*Δ) ≤ x) :
+    1/(64*x^6) ≤ 4096*Δ^6 := by
+  exact @sargosQuarticParameter_jacobian_bound Δ x hΔ hx
+
+example {a b : ℝ}
+    (ha : 0 < a) (hab : a ≤ b) (G : ℝ → ℝ≥0∞) :
+    (∫⁻ α in Icc a b, G α) =
+      ∫⁻ x in Icc (1/(4*b)) (1/(4*a)),
+        ENNReal.ofReal (1/(4*x^2))*G (1/(4*x)) := by
+  exact @sargosQuarticParameter_horizontal_lintegral a b ha hab G
+
+example {x : ℝ} (hx : 0 < x)
+    (H : ℝ) (G : ℝ → ℝ≥0∞) :
+    (∫⁻ γ in Icc (-H) H, G γ) =
+      ∫⁻ y in Icc (-16*H*x^4) (16*H*x^4),
+        ENNReal.ofReal (1/(16*x^4))*G (-y/(16*x^4)) := by
+  exact @sargosQuarticParameter_vertical_lintegral x hx H G
+
+example {Δ : ℝ}
+    (hΔ : 0 < Δ) (H : ℝ) (F : ℝ × ℝ → ℝ≥0∞) :
+    (∫⁻ α in Icc Δ (2*Δ), ∫⁻ γ in Icc (-H) H,
+      F (sargosQuarticParameterMap (α,γ))) =
+      ∫⁻ x in Icc (1/(8*Δ)) (1/(4*Δ)),
+        ∫⁻ y in Icc (-16*H*x^4) (16*H*x^4),
+          ENNReal.ofReal (1/(64*x^6))*F (x,y) := by
+  exact @sargosQuarticParameter_source_lintegral_change Δ hΔ H F
+
+example {Δ H x : ℝ}
+    (hΔ : 0 < Δ) (hH : 0 ≤ H) (hx : x ∈ Icc (1/(8*Δ)) (1/(4*Δ))) :
+    16*H*x^4 ≤ H/(16*Δ^4) := by
+  exact @sargosQuarticParameter_vertical_extent Δ H x hΔ hH hx
+
+example {Δ H : ℝ}
+    (hΔ : 0 < Δ) (hH : 0 ≤ H) (F : ℝ × ℝ → ℝ≥0∞) :
+    (∫⁻ α in Icc Δ (2*Δ), ∫⁻ γ in Icc (-H) H,
+      F (sargosQuarticParameterMap (α,γ))) ≤
+      ENNReal.ofReal (4096*Δ^6)*
+        ∫⁻ x in Icc (1/(8*Δ)) (1/(4*Δ)),
+          ∫⁻ y in Icc (-H/(16*Δ^4)) (H/(16*Δ^4)), F (x,y) := by
+  exact @sargosQuarticParameter_source_lintegral_le_rectangle Δ H hΔ hH F
+
+example (c d : ℝ) (n : ℤ) :
+    ‖sargosQuarticFrozenSexticCoeff c d n‖ = 1 := by
+  exact @sargosQuarticFrozenSexticCoeff_norm c d n
+
+example (N H : ℕ) (c d x y : ℝ) :
+    sargosSlowQuarticPrefix N H (fun _ => 1) x y (fun t => 4*y^2/x*t^6) =
+      sargosSlowQuarticPrefix N H (sargosQuarticFrozenSexticCoeff c d) x y
+        (sargosQuarticFrozenSexticPhase c d x y) := by
+  exact @sargosQuarticSexticPrefix_freeze N H c d x y
+
+example (N : ℕ) (c d x y : ℝ) :
+    sargosSlowQuarticMaximum N (fun _ => 1) x y (fun t => 4*y^2/x*t^6) =
+      sargosSlowQuarticMaximum N (sargosQuarticFrozenSexticCoeff c d) x y
+        (sargosQuarticFrozenSexticPhase c d x y) := by
+  exact @sargosQuarticSexticMaximum_freeze N c d x y
+
+example (c d x y t : ℝ) :
+    HasDerivAt (sargosQuarticFrozenSexticPhase c d x y)
+      (24*(y^2/x-d^2/c)*t^5) t := by
+  exact @sargosQuarticFrozenSexticPhase_deriv c d x y t
+
+example {x c y d R B η : ℝ}
+    (hx : 0 < x) (hc : 0 < c) (hxR : 1/x ≤ R) (hcR : 1/c ≤ R)
+    (hxc : |x-c| ≤ 1) (hy : |y| ≤ B) (hd : |d| ≤ B) (hyd : |y-d| ≤ η) :
+    |y^2/x-d^2/c| ≤ 2*η*B*R+B^2*R^2 := by
+  exact @sargosQuarticSextic_coefficient_bound x c y d R B η hx hc hxR hcR hxc hy hd hyd
+
+example {Δ M c d x y : ℝ}
+    (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2) (hM : 0 < M)
+    (hc : 1/(8*Δ) ≤ c) (hd : |d| ≤ 5/(Δ*M^3))
+    (hx : x ∈ Icc c (c+1)) (hy : y ∈ Icc d (d+2/M^3)) :
+    |y^2/x-d^2/c| ≤ 2496/M^6 := by
+  exact @sargosQuarticSextic_rectangle_coefficient Δ M c d x y hΔ hΔ₁ hM hc hd hx hy
+
+example {Δ M c d x y t : ℝ}
+    (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2) (hM : 0 < M)
+    (hc : 1/(8*Δ) ≤ c) (hd : |d| ≤ 5/(Δ*M^3))
+    (hx : x ∈ Icc c (c+1)) (hy : y ∈ Icc d (d+2/M^3))
+    (ht : t ∈ Icc M (2*M)) :
+    ‖24*(y^2/x-d^2/c)*t^5‖ ≤ 1916928/M := by
+  exact @sargosQuarticFrozenSexticPhase_deriv_bound Δ M c d x y t hΔ hΔ₁ hM hc hd hx hy ht
+
+example {M : ℕ}
+    (hM : 2 ≤ M) {Δ c d : ℝ} (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2)
+    (hc : 1/(8*Δ) ≤ c) (hd : |d| ≤ 5/(Δ*(M:ℝ)^3)) :
+    sargosUpperIntegral
+      ((volume.restrict (Icc c (c+1))).prod
+        (volume.restrict (Icc d (d+2/(M:ℝ)^3))))
+      (fun p : ℝ × ℝ => ENNReal.ofReal
+        ((sargosSlowQuarticMaximum M (fun _ => 1) p.1 p.2
+          (fun t => 4*p.2^2/p.1*t^6))^6)) ≤
+      ENNReal.ofReal (384*sargosWindowConstant 3 1916928*
+        (Real.log M)^6*sargosSixthBaseMoment M) := by
+  exact @sargosQuarticSextic_rectangle_upper_moment M hM Δ c d hΔ hΔ₁ hc hd
+
+example (M : ℕ) :
+    Measurable (fun p : ℝ × ℝ => sargosSlowQuarticMaximum M (fun _ => 1)
+      p.1 p.2 (fun t => 4*p.2^2/p.1*t^6)) := by
+  exact @measurable_sargosQuarticSexticMaximum M
+
+example {M : ℕ}
+    (hM : 2 ≤ M) {Δ c d : ℝ} (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2)
+    (hc : 1/(8*Δ) ≤ c) (hd : |d| ≤ 5/(Δ*(M:ℝ)^3)) :
+    (∫⁻ x in Icc c (c+1), ∫⁻ y in Icc d (d+2/(M:ℝ)^3),
+      ENNReal.ofReal ((sargosSlowQuarticMaximum M (fun _ => 1) x y
+        (fun t => 4*y^2/x*t^6))^6)) ≤
+      ENNReal.ofReal (384*sargosWindowConstant 3 1916928*
+        (Real.log M)^6*sargosSixthBaseMoment M) := by
+  exact @sargosQuarticSextic_rectangle_lintegral M hM Δ c d hΔ hΔ₁ hc hd
+
+example (M : ℕ) {N Δ : ℝ}
+    (hN : 0 < N) (hΔ : 0 < Δ) :
+    (∫⁻ α in Icc Δ (2*Δ), ∫⁻ γ in Icc (-(1/N^3)) (1/N^3),
+      ENNReal.ofReal ((sargosSlowQuarticMaximum M (fun _ => 1)
+        (1/(4*α)) (-γ/(16*α^4)) (fun t => γ^2*t^6/(16*α^7)))^6)) ≤
+      ENNReal.ofReal (4096*Δ^6)*
+        ∫⁻ x in Icc (1/(8*Δ)) (1/(4*Δ)),
+          ∫⁻ y in Icc (-(1/N^3)/(16*Δ^4)) ((1/N^3)/(16*Δ^4)),
+            ENNReal.ofReal ((sargosSlowQuarticMaximum M (fun _ => 1)
+              x y (fun t => 4*y^2/x*t^6))^6) := by
+  exact @sargosQuarticDual_sixth_parameter_transfer M N Δ hN hΔ
+
+example : sargosQuarticParameterMap ((1:ℝ)/96,0) = (24,0) := by
+  norm_num [sargosQuarticParameterMap]
+
+example : sargosQuarticParameterMap ((1:ℝ),1/96) = (1/4,-1/1536) := by
+  norm_num [sargosQuarticParameterMap]
+
+example : sargosQuarticParameterMap (sargosQuarticParameterMap ((1:ℝ)/96,1/9216^3)) =
+    ((1:ℝ)/96,1/9216^3) := by
+  exact sargosQuarticParameterMap_involutive (by norm_num) _
+
+example : ((1:ℝ)/96)^2*4^6/(16*1^7) =
+    4*(sargosQuarticParameterMap ((1:ℝ),1/96)).2^2/
+      (sargosQuarticParameterMap ((1:ℝ),1/96)).1*4^6 := by
+  exact sargosQuarticParameterMap_sextic (by norm_num) _ _
+
+example : (fun x : ℝ => 1/(4*x)) '' Icc ((1:ℝ)/8) (1/4) = Icc 1 2 := by
+  simpa only [show (4*(2:ℝ)) = 8 by norm_num,show 4*(1:ℝ) = 4 by norm_num] using
+    sargosQuarticParameter_horizontal_image (by norm_num : (0:ℝ) < 1) (by norm_num : (1:ℝ) ≤ 2)
+
+example : (fun y : ℝ => -y) '' Icc (-(1:ℝ)/16) (1/16) = Icc (-(1:ℝ)/16) (1/16) := by
+  simpa only [show (16*((1:ℝ)/2)^4) = 1 by norm_num,div_one,neg_div,
+    show -16*((1:ℝ)/16)*((1:ℝ)/2)^4 = -1/16 by norm_num,
+    show 16*((1:ℝ)/16)*((1:ℝ)/2)^4 = 1/16 by norm_num] using
+      sargosQuarticParameter_vertical_image (by norm_num : (0:ℝ) < 1/2) (1/16)
+
+example : 1/(64*((1:ℝ)/8)^6) ≤ 4096 := by
+  simpa only [one_pow,mul_one] using
+    sargosQuarticParameter_jacobian_bound (by norm_num : (0:ℝ) < 1)
+      (by norm_num : (1:ℝ)/(8*1) ≤ 1/8)
+
+example : 16*((1:ℝ)/8)*((1:ℝ)/2)^4 ≤ ((1:ℝ)/8)/(16*((1:ℝ)/2)^4) := by
+  exact sargosQuarticParameter_vertical_extent (by norm_num) (by norm_num) (by norm_num)
+
+example : ‖sargosQuarticFrozenSexticCoeff 1 2 (-3)‖ = 1 := by
+  exact sargosQuarticFrozenSexticCoeff_norm _ _ _
+
+example : sargosQuarticFrozenSexticPhase 3 2 3 2 5 = 0 := by
+  norm_num [sargosQuarticFrozenSexticPhase]
+
+example : |((3:ℝ)/2)^2/(5/4)-(5/4)^2/(1/4)| ≤ 2496/(2:ℝ)^6 := by
+  exact sargosQuarticSextic_rectangle_coefficient
+    (by norm_num : (0:ℝ) < 1/2) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : ‖24*(((3:ℝ)/2)^2/(5/4)-(5/4)^2/(1/4))*4^5‖ ≤ 1916928/(2:ℝ) := by
+  exact sargosQuarticFrozenSexticPhase_deriv_bound
+    (by norm_num : (0:ℝ) < 1/2) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example :
+    (∫⁻ x in Icc ((1:ℝ)/4) (1/4+1), ∫⁻ y in Icc ((5:ℝ)/4) (5/4+2/(2:ℝ)^3),
+      ENNReal.ofReal ((sargosSlowQuarticMaximum 2 (fun _ => 1) x y
+        (fun t => 4*y^2/x*t^6))^6)) ≤
+      ENNReal.ofReal (384*sargosWindowConstant 3 1916928*
+        (Real.log 2)^6*sargosSixthBaseMoment 2) := by
+  exact sargosQuarticSextic_rectangle_lintegral (by norm_num)
+    (by norm_num : (0:ℝ) < 1/2) (by norm_num) (by norm_num) (by norm_num)
+
+example :
+    (∫⁻ α in Icc ((1:ℝ)/96) (2/96), ∫⁻ γ in Icc (-(1/(9216:ℝ)^3)) (1/(9216:ℝ)^3),
+      ENNReal.ofReal ((sargosSlowQuarticMaximum 192 (fun _ => 1)
+        (1/(4*α)) (-γ/(16*α^4)) (fun t => γ^2*t^6/(16*α^7)))^6)) ≤
+      ENNReal.ofReal (4096*((1:ℝ)/96)^6)*
+        ∫⁻ x in Icc 12 24,
+          ∫⁻ y in Icc (-(1/(9216:ℝ)^3)/(16*((1:ℝ)/96)^4))
+            ((1/(9216:ℝ)^3)/(16*((1:ℝ)/96)^4)),
+            ENNReal.ofReal ((sargosSlowQuarticMaximum 192 (fun _ => 1)
+              x y (fun t => 4*y^2/x*t^6))^6) := by
+  simpa only [show 2*((1:ℝ)/96) = 2/96 by norm_num,
+    show 1/(8*((1:ℝ)/96)) = 12 by norm_num,
+    show 1/(4*((1:ℝ)/96)) = 24 by norm_num] using
+      sargosQuarticDual_sixth_parameter_transfer 192
+        (by norm_num : (0:ℝ) < 9216) (by norm_num : (0:ℝ) < 1/96)
+
+end SargosQuarticParameterRegression
+
+namespace SargosQuarticLargeMomentRegression
+
+open TaoTrudgianYang2025 Set MeasureTheory GafniTao
+open scoped ENNReal BigOperators
+
+example {L h : ℝ} (hL : 0 ≤ L) (hh : 0 < h) :
+    (sargosIntervalGridCount L h : ℝ) ≤ L/h+2 := by
+  exact @sargosIntervalGridCount_le L h hL hh
+
+example {a L h x : ℝ}
+    (hh : 0 < h) (hx : x ∈ Icc a (a+L)) :
+    ∃ i ∈ Finset.range (sargosIntervalGridCount L h),
+      x ∈ Icc (a+(i:ℝ)*h) (a+(i:ℝ)*h+h) := by
+  exact @sargosIntervalGrid_cover a L h x hh hx
+
+example {a L h : ℝ}
+    (hL : 0 ≤ L) (hh : 0 < h) {i : ℕ}
+    (hi : i ∈ Finset.range (sargosIntervalGridCount L h)) :
+    a ≤ a+(i:ℝ)*h ∧ a+(i:ℝ)*h ≤ a+L+h := by
+  exact @sargosIntervalGrid_corner_bounds a L h hL hh i hi
+
+example {A B : Type*} [MeasurableSpace A]
+    (μ : Measure A) (s : Finset B) (t : B → Set A) (f : A → ℝ≥0∞) :
+    (∫⁻ a in ⋃ b ∈ s, t b, f a ∂μ) ≤ ∑ b ∈ s, ∫⁻ a in t b, f a ∂μ := by
+  exact @sargos_lintegral_finset_union_le A B _ μ s t f
+
+example {A B : Type*} [MeasurableSpace A]
+    (μ : Measure A) (s : Finset B) (t : B → Set A) (f : A → ℝ≥0∞)
+    {u : Set A} (hu : u ⊆ ⋃ b ∈ s, t b) :
+    (∫⁻ a in u, f a ∂μ) ≤ ∑ b ∈ s, ∫⁻ a in t b, f a ∂μ := by
+  exact @sargos_lintegral_finset_cover_le A B _ μ s t f u hu
+
+example {a b L K h k : ℝ}
+    (hh : 0 < h) (hk : 0 < k) :
+    (Icc a (a+L) ×ˢ Icc b (b+K)) ⊆
+      ⋃ p ∈ (Finset.range (sargosIntervalGridCount L h)).product
+        (Finset.range (sargosIntervalGridCount K k)),
+      (Icc (a+(p.1:ℝ)*h) (a+(p.1:ℝ)*h+h) ×ˢ
+        Icc (b+(p.2:ℝ)*k) (b+(p.2:ℝ)*k+k)) := by
+  exact @sargos_rectangle_grid_cover a b L K h k hh hk
+
+example {N Δ M : ℝ}
+    (hN : 0 < N) (hΔ : 0 < Δ) (hM : 0 < M) (hscale : M ≤ 4*Δ*N) :
+    sargosQuarticParameterHeight N Δ ≤ 4/(Δ*M^3) := by
+  exact @sargosQuarticParameterHeight_le N Δ M hN hΔ hM hscale
+
+example {Δ : ℝ}
+    (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2) :
+    (sargosIntervalGridCount (1/(8*Δ)) 1 : ℝ) ≤ 2/Δ := by
+  exact @sargosQuarticHorizontalGrid_count Δ hΔ hΔ₁
+
+example {N Δ M : ℝ}
+    (hN : 0 < N) (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2) (hM : 0 < M)
+    (hscale : M ≤ 4*Δ*N) :
+    (sargosIntervalGridCount (2*sargosQuarticParameterHeight N Δ) (2/M^3) : ℝ) ≤ 5/Δ := by
+  exact @sargosQuarticVerticalGrid_count N Δ M hN hΔ hΔ₁ hM hscale
+
+example {N Δ M : ℝ}
+    (hN : 0 < N) (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2) (hM : 0 < M)
+    (hscale : M ≤ 4*Δ*N) {j : ℕ}
+    (hj : j ∈ Finset.range
+      (sargosIntervalGridCount (2*sargosQuarticParameterHeight N Δ) (2/M^3))) :
+    |-sargosQuarticParameterHeight N Δ+(j:ℝ)*(2/M^3)| ≤ 5/(Δ*M^3) := by
+  exact @sargosQuarticVerticalGrid_corner N Δ M hN hΔ hΔ₁ hM hscale j hj
+
+example {M : ℕ}
+    (hM : 2 ≤ M) {N Δ : ℝ} (hN : 0 < N) (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2)
+    (hscale : (M:ℝ) ≤ 4*Δ*N) :
+    (∫⁻ x in Icc (1/(8*Δ)) (1/(4*Δ)),
+      ∫⁻ y in Icc (-sargosQuarticParameterHeight N Δ) (sargosQuarticParameterHeight N Δ),
+        ENNReal.ofReal ((sargosSlowQuarticMaximum M (fun _ => 1) x y
+          (fun t => 4*y^2/x*t^6))^6)) ≤
+      ENNReal.ofReal ((3840/Δ^2)*sargosWindowConstant 3 1916928*
+        (Real.log M)^6*sargosSixthBaseMoment M) := by
+  exact @sargosQuarticSextic_cover_moment M hM N Δ hN hΔ hΔ₁ hscale
+
+example {M : ℕ}
+    (hM : 2 ≤ M) {N Δ : ℝ} (hN : 0 < N) (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2)
+    (hscale : (M:ℝ) ≤ 4*Δ*N) :
+    (∫⁻ α in Icc Δ (2*Δ), ∫⁻ γ in Icc (-(1/N^3)) (1/N^3),
+      ENNReal.ofReal ((sargosSlowQuarticMaximum M (fun _ => 1)
+        (1/(4*α)) (-γ/(16*α^4)) (fun t => γ^2*t^6/(16*α^7)))^6)) ≤
+      ENNReal.ofReal (15728640*sargosWindowConstant 3 1916928*Δ^4*
+        (Real.log M)^6*sargosSixthBaseMoment M) := by
+  exact @sargosQuarticDual_sixth_moment M hM N Δ hN hΔ hΔ₁ hscale
+
+example {N : ℕ} {Δ : ℝ}
+    (hN : 9216 ≤ N) (hΔ : 1/Real.sqrt (N:ℝ) ≤ Δ) (hΔ₁ : Δ ≤ 1/4) :
+    let m := sargosQuarticRoundedDualScale N Δ
+    2 ≤ m ∧ 2 ≤ 2*m ∧ (m:ℝ) ≤ 4*Δ*N ∧ ((2*m:ℕ):ℝ) ≤ 4*Δ*N ∧ 2*m ≤ N := by
+  exact @sargosQuarticRoundedDualScale_moment_bounds N Δ hN hΔ hΔ₁
+
+example {N : ℝ} (hN : 1 ≤ N) :
+    (N^((1:ℝ)/4))^6 ≤ N^3 := by
+  exact @sargos_quarterPower_sixth_le_cube N hN
+
+example {Δ : ℝ} (hΔ : 0 < Δ) :
+    (1/Real.sqrt Δ)^6 = 1/Δ^3 := by
+  exact @sargos_inverse_sqrt_sixth Δ hΔ
+
+example {S A B C Δ N : ℝ}
+    (hS : 0 ≤ S) (hA : 0 ≤ A) (hB : 0 ≤ B) (hC : 0 ≤ C)
+    (hΔ : 0 < Δ) (hN : 1 ≤ N)
+    (hsource : S ≤ C*((1/Real.sqrt Δ)*(A+B)+N^((1:ℝ)/4))) :
+    S^6 ≤ 1024*C^6*((1/Δ^3)*(A^6+B^6)+N^3) := by
+  exact @sargos_sixth_of_two_blocks S A B C Δ N hS hA hB hC hΔ hN hsource
+
+example (M : ℕ) :
+    Measurable (fun p : ℝ × ℝ => sargosSlowQuarticMaximum M (fun _ => 1)
+      (1/(4*p.1)) (-p.2/(16*p.1^4)) (fun t => p.2^2*t^6/(16*p.1^7))) := by
+  exact @measurable_sargosQuarticDualMaximum M
+
+example (N p : ℕ) (z : ℤ → ℂ) (a b c d : ℝ) :
+    ENNReal.ofReal (∫ α in Icc a b, ∫ γ in Icc c d, ‖sargosQuarticSum N z α γ‖^p) =
+      ∫⁻ α in Icc a b, ∫⁻ γ in Icc c d, ENNReal.ofReal (‖sargosQuarticSum N z α γ‖^p) := by
+  exact @sargosQuarticNormPower_ofReal_integral N p z a b c d
+
+example {N Δ : ℝ} (hN : 0 < N) :
+    (∫⁻ _α in Icc Δ (2*Δ), ∫⁻ _γ in Icc (-(1/N^3)) (1/N^3),
+      ENNReal.ofReal (N^3)) = ENNReal.ofReal (2*Δ) := by
+  exact @sargosQuartic_source_cube_lintegral N Δ hN
+
+example (F G H : ℝ × ℝ → ℝ≥0∞)
+    (hF : Measurable F) (hG : Measurable G) (hH : Measurable H)
+    (K L a b c d : ℝ) :
+    (∫⁻ x in Icc a b, ∫⁻ y in Icc c d,
+      ENNReal.ofReal K*(ENNReal.ofReal L*(F (x,y)+G (x,y))+H (x,y))) =
+      ENNReal.ofReal K*(ENNReal.ofReal L*
+        ((∫⁻ x in Icc a b, ∫⁻ y in Icc c d, F (x,y))+
+          (∫⁻ x in Icc a b, ∫⁻ y in Icc c d, G (x,y)))+
+            (∫⁻ x in Icc a b, ∫⁻ y in Icc c d, H (x,y))) := by
+  exact @sargos_rectangle_lintegral_linear F G H hF hG hH K L a b c d
+
+example :
+    ∃ K : ℝ, 1 ≤ K ∧ ∀ (N : ℕ) (Δ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N:ℝ) ≤ Δ → Δ ≤ 1/2 →
+      let m := sargosQuarticRoundedDualScale N Δ
+      ENNReal.ofReal (sargosQuarticDyadicSixthMoment N Δ) ≤
+        ENNReal.ofReal K*(ENNReal.ofReal (1/Δ^3)*
+          (sargosQuarticDualSixthIntegral m N Δ+
+            sargosQuarticDualSixthIntegral (2*m) N Δ)+ENNReal.ofReal (2*Δ)) := by
+  exact @sargosQuartic_source_sixth_integral_bound
+
+example {M : ℕ}
+    (hM : 2 ≤ M) {N Δ : ℝ} (hN : 0 < N) (hΔ : 0 < Δ) (hΔ₁ : Δ ≤ 1/2)
+    (hscale : (M:ℝ) ≤ 4*Δ*N) (hMN : (M:ℝ) ≤ N) :
+    sargosQuarticDualSixthIntegral M N Δ ≤
+      ENNReal.ofReal (15728640*sargosWindowConstant 3 1916928*Δ^4*
+        (Real.log N)^6*sargosSixthBaseMoment M) := by
+  exact @sargosQuarticDualSixthIntegral_le_logN M hM N Δ hN hΔ hΔ₁ hscale hMN
+
+example {N Δ B : ℝ}
+    (hN : 2 ≤ N) (hΔ : 0 ≤ Δ) (hB : 1/64 ≤ B) :
+    2*Δ ≤ (128/(Real.log 2)^6)*Δ*(Real.log N)^6*B := by
+  exact @sargos_sixth_log_absorb_error N Δ B hN hΔ hB
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (Δ : ℝ),
+      9216 ≤ N → 1/Real.sqrt (N:ℝ) ≤ Δ → Δ ≤ 1/4 →
+      let m := sargosQuarticRoundedDualScale N Δ
+      sargosQuarticDyadicSixthMoment N Δ ≤
+        C*Δ*(Real.log N)^6*(sargosSixthBaseMoment m+sargosSixthBaseMoment (2*m)) := by
+  exact @sargosQuartic_large_source_sixth_moment
+
+example : sargosIntervalGridCount 0 1 = 1 := by norm_num [sargosIntervalGridCount]
+
+example : sargosIntervalGridCount ((5:ℝ)/2) 1 = 4 := by norm_num [sargosIntervalGridCount]
+
+example : ∃ i ∈ Finset.range (sargosIntervalGridCount 3 1),
+    (3:ℝ) ∈ Icc (0+(i:ℝ)*1) (0+(i:ℝ)*1+1) := by
+  exact sargosIntervalGrid_cover (by norm_num) (by norm_num)
+
+example : (-2:ℝ) ≤ -2+(3:ℝ)*1 ∧ -2+(3:ℝ)*1 ≤ -2+(5:ℝ)/2+1 := by
+  exact sargosIntervalGrid_corner_bounds (by norm_num : (0:ℝ) ≤ 5/2)
+    (by norm_num) (by norm_num [sargosIntervalGridCount])
+
+example : sargosQuarticParameterHeight 9216 (1/96) = (1:ℝ)/147456 := by
+  norm_num [sargosQuarticParameterHeight]
+
+example : sargosIntervalGridCount (1/(8*((1:ℝ)/96))) 1 = 13 := by
+  norm_num [sargosIntervalGridCount]
+
+example : sargosIntervalGridCount (2*sargosQuarticParameterHeight 9216 (1/96))
+    (2/(192:ℝ)^3) = 49 := by
+  norm_num [sargosIntervalGridCount,sargosQuarticParameterHeight]
+
+example : sargosIntervalGridCount (2*sargosQuarticParameterHeight 9216 (1/96))
+    (2/(384:ℝ)^3) = 385 := by
+  norm_num [sargosIntervalGridCount,sargosQuarticParameterHeight]
+
+example :
+    |-sargosQuarticParameterHeight 9216 (1/96)+(384:ℝ)*(2/(384:ℝ)^3)| ≤
+      5/(((1:ℝ)/96)*(384:ℝ)^3) := by
+  exact sargosQuarticVerticalGrid_corner (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+    (by norm_num [sargosIntervalGridCount,sargosQuarticParameterHeight])
+
+example : ((16:ℝ)^((1:ℝ)/4))^6 ≤ (16:ℝ)^3 := by
+  exact sargos_quarterPower_sixth_le_cube (by norm_num)
+
+example : (1/Real.sqrt ((1:ℝ)/4))^6 = 64 := by
+  simpa only [show 1/(((1:ℝ)/4)^3) = 64 by norm_num] using
+    sargos_inverse_sqrt_sixth (by norm_num : (0:ℝ) < 1/4)
+
+example : (∫⁻ _α in Icc ((1:ℝ)/96) (2*((1:ℝ)/96)),
+    ∫⁻ _γ in Icc (-(1/(9216:ℝ)^3)) (1/(9216:ℝ)^3),
+      ENNReal.ofReal ((9216:ℝ)^3)) = ENNReal.ofReal (1/48) := by
+  simpa only [show 2*((1:ℝ)/96) = 1/48 by norm_num] using
+    (sargosQuartic_source_cube_lintegral (Δ := (1:ℝ)/96) (by norm_num : (0:ℝ) < 9216))
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ sargosQuarticDyadicSixthMoment 9216 (1/96) ≤
+      C*((1:ℝ)/96)*(Real.log 9216)^6*
+        (sargosSixthBaseMoment 192+sargosSixthBaseMoment 384) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_large_source_sixth_moment
+  refine ⟨C,hC,?_⟩
+  have hh := h 9216 (1/96) (by norm_num) (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 9216 (1/96) = 192 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*192:ℕ) = 384 by norm_num] using hh
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ sargosQuarticDyadicSixthMoment 9216 (1/95) ≤
+      C*((1:ℝ)/95)*(Real.log 9216)^6*
+        (sargosSixthBaseMoment 194+sargosSixthBaseMoment 388) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_large_source_sixth_moment
+  refine ⟨C,hC,?_⟩
+  have hh := h 9216 (1/95) (by norm_num) (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 9216 (1/95) = 194 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*194:ℕ) = 388 by norm_num] using hh
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ sargosQuarticDyadicSixthMoment 9216 (1/4) ≤
+      C*((1:ℝ)/4)*(Real.log 9216)^6*
+        (sargosSixthBaseMoment 4608+sargosSixthBaseMoment 9216) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_large_source_sixth_moment
+  refine ⟨C,hC,?_⟩
+  have hh := h 9216 (1/4) (by norm_num) (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 9216 (1/4) = 4608 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*4608:ℕ) = 9216 by norm_num] using hh
+
+end SargosQuarticLargeMomentRegression
+
+namespace SargosSixthBootstrapRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set
+open scoped BigOperators
+
+example {N Δ : ℝ}
+    (hN : 16 ≤ N) (hΔ : 1/Real.sqrt N ≤ Δ) :
+    0 < Δ ∧ 4 ≤ Δ*N ∧ 8 ≤ sargosQuarticRoundedDualScale N Δ := by
+  exact @sargosQuartic_source_scale_sixteen N Δ hN hΔ
+
+example {N Δ : ℝ}
+    (hN : 0 < N) (hN₁ : N ≤ 9216) (hΔ : 1/Real.sqrt N ≤ Δ) :
+    1/96 ≤ Δ := by
+  exact @sargosQuartic_bounded_source_delta N Δ hN hN₁ hΔ
+
+example (N : ℕ) {Δ : ℝ}
+    (hΔ : 0 ≤ Δ) (hΔ₁ : Δ ≤ 1/2) :
+    sargosQuarticDyadicSixthMoment N Δ ≤ sargosSixthBaseMoment N := by
+  exact @sargosQuarticDyadicSixthMoment_le_base N Δ hΔ hΔ₁
+
+example {N : ℕ} {Δ : ℝ}
+    (hN : 16 ≤ N) (hN₁ : N ≤ 9216)
+    (hΔ : 1/Real.sqrt (N:ℝ) ≤ Δ) (hΔ₁ : Δ ≤ 1/4) :
+    let m := sargosQuarticRoundedDualScale N Δ
+    sargosQuarticDyadicSixthMoment N Δ ≤
+      (96*(9216:ℝ)^3*(128/(Real.log 2)^6))*Δ*(Real.log N)^6*
+        (sargosSixthBaseMoment m+sargosSixthBaseMoment (2*m)) := by
+  exact @sargosQuartic_bounded_source_sixth_moment N Δ hN hN₁ hΔ hΔ₁
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (Δ : ℝ),
+      16 ≤ N → 1/Real.sqrt (N:ℝ) ≤ Δ → Δ ≤ 1/4 →
+      let m := sargosQuarticRoundedDualScale N Δ
+      sargosQuarticDyadicSixthMoment N Δ ≤
+        C*Δ*(Real.log N)^6*(sargosSixthBaseMoment m+sargosSixthBaseMoment (2*m)) := by
+  exact @sargosQuartic_sixth_moment_reduction
+
+example (N : ℕ) (A : ℝ) :
+    0 ≤ sargosSixthInitialMoment N A := by
+  exact @sargosSixthInitialMoment_nonneg N A
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    sargosSixthInitialMoment N (1/Real.sqrt N) ≤
+      44845498368*(1+Real.log N)^5 := by
+  exact @sargosSixthInitialMoment_small N hN
+
+example {N : ℕ} (hN : 1 ≤ N)
+    {A : ℝ} (hA : 0 < A) (hA₁ : A ≤ 1/2) :
+    sargosSixthBaseMoment N ≤ (1024/A)*sargosSixthInitialMoment N A := by
+  exact @sargosSixthBaseMoment_localize N hN A hA hA₁
+
+example (f : ℝ → ℝ) (a : ℝ) (K : ℕ)
+    (hf : ∀ x, 0 ≤ f x) (hi : ∀ c d, IntegrableOn f (Icc c d)) :
+    (∫ x in Icc 0 (a*2^K), f x) ≤ (∫ x in Icc 0 a, f x)+
+      ∑ i ∈ Finset.range K, ∫ x in Icc (a*2^i) (2*(a*2^i)), f x := by
+  exact @sargos_integral_dyadic_split f a K hf hi
+
+example (a : ℝ) (K : ℕ) :
+    ∑ i ∈ Finset.range K, a*2^i = a*(2^K-1) := by
+  exact @sargos_dyadic_scale_sum a K
+
+example {a A : ℝ} (ha : 0 < a) (hA : a ≤ A) :
+    ∃ K : ℕ, A ≤ a*2^K ∧
+      (∀ i ∈ Finset.range K, a ≤ a*2^i ∧ a*2^i ≤ A) ∧
+      (∑ i ∈ Finset.range K, a*2^i) ≤ 2*A := by
+  exact @sargos_dyadic_scale_budget a A ha hA
+
+example (N : ℕ) {A B : ℝ} (hAB : A ≤ B) :
+    sargosSixthInitialMoment N A ≤ sargosSixthInitialMoment N B := by
+  exact @sargosSixthInitialMoment_mono N A B hAB
+
+example {N : ℕ} (hN : 1 ≤ N)
+    {A B : ℝ} (hA : 0 < A) (hB : 0 ≤ B)
+    (hdyadic : ∀ δ : ℝ, 1/Real.sqrt N ≤ δ → δ ≤ A →
+      sargosQuarticDyadicSixthMoment N δ ≤ B*δ) :
+    sargosSixthInitialMoment N A ≤ 44845498368*(1+Real.log N)^5+2*A*B := by
+  exact @sargosSixthInitialMoment_le_dyadic_budget N hN A B hA hB hdyadic
+
+example {N : ℕ} (hN : 1 ≤ N)
+    {A B : ℝ} (hA : 0 < A) (hA₁ : A ≤ 1/2) (hB : 0 ≤ B)
+    (hdyadic : ∀ δ : ℝ, 1/Real.sqrt N ≤ δ → δ ≤ A →
+      sargosQuarticDyadicSixthMoment N δ ≤ B*δ) :
+    sargosSixthBaseMoment N ≤
+      (1024/A)*(44845498368*(1+Real.log N)^5)+2048*B := by
+  exact @sargosSixthBaseMoment_le_dyadic_budget N hN A B hA hA₁ hB hdyadic
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (β B : ℝ), 0 ≤ β → 0 ≤ B →
+      (∀ M : ℕ, 1 ≤ M → sargosSixthBaseMoment M ≤ B*(M:ℝ)^β) →
+      ∀ (N : ℕ) (A δ : ℝ), 16 ≤ N → A ≤ 1/4 →
+        1/Real.sqrt N ≤ δ → δ ≤ A →
+        sargosQuarticDyadicSixthMoment N δ ≤
+          C*B*δ*(Real.log N)^6*(4*A*N)^β := by
+  exact @sargosQuarticDyadicSixthMoment_le_power
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (β B : ℝ), 0 ≤ β → 0 ≤ B →
+      (∀ M : ℕ, 1 ≤ M → sargosSixthBaseMoment M ≤ B*(M:ℝ)^β) →
+      ∀ (N : ℕ) (A : ℝ), 16 ≤ N → 0 < A → A ≤ 1/4 →
+        sargosSixthBaseMoment N ≤
+          C*((1+Real.log N)^5/A+B*(Real.log N)^6*(4*A*N)^β) := by
+  exact @sargosSixthBaseMoment_power_bootstrap
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ) (A : ℝ),
+      16 ≤ N → 0 < A → A ≤ 1/4 →
+      sargosSixthBaseMoment N ≤
+        C*((1+Real.log N)^5/A+2*(Real.log N)^6*(4*A*N)^3) := by
+  exact @sargosSixthBaseMoment_cubic_bootstrap
+
+example {N : ℕ} (hN : 4 ≤ N) :
+    sargosSixthBaseMoment N ≤
+      (1024*44845498368)*Real.sqrt N*(1+Real.log N)^5 := by
+  exact @sargosSixthBaseMoment_sqrt_bound N hN
+
+example : 0 < (1:ℝ)/4 ∧ 4 ≤ ((1:ℝ)/4)*16 ∧
+    8 ≤ sargosQuarticRoundedDualScale 16 (1/4) :=
+  sargosQuartic_source_scale_sixteen (by norm_num) (by norm_num)
+
+example : sargosQuarticRoundedDualScale 64 (1/8) = 16 := by
+  norm_num [sargosQuarticRoundedDualScale]
+
+example : (1:ℝ)/96 ≤ 1/96 :=
+  sargosQuartic_bounded_source_delta (N := 9216) (by norm_num) (by norm_num) (by norm_num)
+
+example : (∑ i ∈ Finset.range 0, ((1:ℝ)/4)*2^i) = 0 := by
+  simp
+
+example : (∑ i ∈ Finset.range 3, ((1:ℝ)/4)*2^i) = 7/4 := by
+  rw [sargos_dyadic_scale_sum]
+  norm_num
+
+example : ∃ K : ℕ, (1:ℝ)/4 ≤ (1/96)*2^K ∧
+    (∀ i ∈ Finset.range K, (1:ℝ)/96 ≤ (1/96)*2^i ∧ ((1:ℝ)/96)*2^i ≤ 1/4) ∧
+    (∑ i ∈ Finset.range K, ((1:ℝ)/96)*2^i) ≤ 2*(1/4) :=
+  sargos_dyadic_scale_budget (a := 1/96) (A := 1/4) (by norm_num) (by norm_num)
+
+example : 0 ≤ sargosSixthInitialMoment 0 (-1) :=
+  sargosSixthInitialMoment_nonneg 0 (-1)
+
+example : sargosSixthInitialMoment 16 (1/4) ≤ sargosSixthInitialMoment 16 (1/2) :=
+  sargosSixthInitialMoment_mono 16 (by norm_num)
+
+example : sargosSixthBaseMoment 16 ≤ 4096*sargosSixthInitialMoment 16 (1/4) := by
+  have h := sargosSixthBaseMoment_localize (N := 16) (by norm_num)
+    (A := 1/4) (by norm_num) (by norm_num)
+  norm_num at h
+  exact h
+
+example : sargosSixthInitialMoment 16 (1/4) ≤ 44845498368*(1+Real.log 16)^5 := by
+  simpa only [Nat.cast_ofNat,show Real.sqrt (16:ℝ) = 4 by norm_num]
+    using sargosSixthInitialMoment_small (N := 16) (by norm_num)
+
+example : sargosSixthBaseMoment 16 ≤ (1024*44845498368)*4*(1+Real.log 16)^5 := by
+  simpa only [Nat.cast_ofNat,show Real.sqrt (16:ℝ) = 4 by norm_num]
+    using sargosSixthBaseMoment_sqrt_bound (N := 16) (by norm_num)
+
+example : ∃ C : ℝ, 1 ≤ C ∧ sargosQuarticDyadicSixthMoment 16 (1/4) ≤
+    C*((1:ℝ)/4)*(Real.log 16)^6*(sargosSixthBaseMoment 8+sargosSixthBaseMoment 16) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_sixth_moment_reduction
+  refine ⟨C,hC,?_⟩
+  have hh := h 16 (1/4) (by norm_num) (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 16 (1/4) = 8 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*8:ℕ) = 16 by norm_num] using hh
+
+example : ∃ C : ℝ, 1 ≤ C ∧ sargosQuarticDyadicSixthMoment 64 (1/8) ≤
+    C*((1:ℝ)/8)*(Real.log 64)^6*(sargosSixthBaseMoment 16+sargosSixthBaseMoment 32) := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_sixth_moment_reduction
+  refine ⟨C,hC,?_⟩
+  have hh := h 64 (1/8) (by norm_num) (by norm_num) (by norm_num)
+  have hm : sargosQuarticRoundedDualScale 64 (1/8) = 16 := by
+    norm_num [sargosQuarticRoundedDualScale]
+  simpa only [Nat.cast_ofNat,hm,show (2*16:ℕ) = 32 by norm_num] using hh
+
+example : ∃ C : ℝ, 1 ≤ C ∧ sargosSixthBaseMoment 16 ≤
+    C*((1+Real.log 16)^5/(1/4)+2*(Real.log 16)^6*((4:ℝ)*(1/4)*16)^3) := by
+  obtain ⟨C,hC,h⟩ := sargosSixthBaseMoment_cubic_bootstrap
+  have hh := h 16 (1/4) (by norm_num) (by norm_num) (by norm_num)
+  exact ⟨C,hC,by simpa only [Nat.cast_ofNat] using hh⟩
+
+end SargosSixthBootstrapRegression
+
+namespace SargosSixthMomentTheoremRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set
+open scoped BigOperators
+
+example {β : ℝ} (hβ : 0 ≤ β) :
+    0 ≤ sargosSixthExponentStep β := by
+  exact @sargosSixthExponentStep_nonneg β hβ
+
+example {β : ℝ} (hβ : 0 ≤ β) :
+    (1-sargosSixthExponentStep β)*β = sargosSixthExponentStep β := by
+  exact @sargosSixthExponentStep_identity β hβ
+
+example {β η : ℝ} (hβ : 0 ≤ β) (hη : 0 ≤ η) :
+    sargosSixthExponentStep (β+η) ≤ sargosSixthExponentStep β+η := by
+  exact @sargosSixthExponentStep_add_le β η hβ hη
+
+example {N β : ℝ} (hN : 1 ≤ N) (hβ : 0 ≤ β) :
+    0 < sargosSixthBootstrapParameter N β ∧ sargosSixthBootstrapParameter N β ≤ 1/4 := by
+  exact @sargosSixthBootstrapParameter_bounds N β hN hβ
+
+example {N β : ℝ} (hN : 0 < N) :
+    1/sargosSixthBootstrapParameter N β = 4*N^(sargosSixthExponentStep β) := by
+  exact @sargosSixthBootstrapParameter_inverse N β hN
+
+example {N β : ℝ} (hN : 0 < N) (hβ : 0 ≤ β) :
+    (4*sargosSixthBootstrapParameter N β*N)^β = N^(sargosSixthExponentStep β) := by
+  exact @sargosSixthBootstrapParameter_power N β hN hβ
+
+example {x ε : ℝ} (hx : 1 ≤ x) (hε : 0 < ε) :
+    (1+Real.log x)^6 ≤ (1+6/ε)^6*x^ε := by
+  exact @sargos_log_six_le_rpow x ε hx hε
+
+example :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (β B : ℝ), 0 ≤ β → 0 ≤ B →
+      (∀ M : ℕ, 1 ≤ M → sargosSixthBaseMoment M ≤ B*(M:ℝ)^β) →
+      ∀ N : ℕ, 16 ≤ N →
+        sargosSixthBaseMoment N ≤
+          C*(4+B)*(1+Real.log N)^6*(N:ℝ)^(sargosSixthExponentStep β) := by
+  exact @sargosSixthBaseMoment_optimized_bootstrap
+
+example : SargosSixthMomentExponent 3 := by
+  exact @sargosSixthMomentExponent_three
+
+example {β : ℝ} (hβ : 0 ≤ β)
+    (h : SargosSixthMomentExponent β) :
+    SargosSixthMomentExponent (sargosSixthExponentStep β) := by
+  exact @sargosSixthMomentExponent_step β hβ h
+
+example (n : ℕ) :
+    0 ≤ sargosSixthIterationExponent n := by
+  exact @sargosSixthIterationExponent_nonneg n
+
+example (n : ℕ) :
+    sargosSixthExponentStep (sargosSixthIterationExponent n) =
+      sargosSixthIterationExponent (n+1) := by
+  exact @sargosSixthIterationExponent_step n
+
+example (n : ℕ) :
+    SargosSixthMomentExponent (sargosSixthIterationExponent n) := by
+  exact @sargosSixthMomentExponent_iterate n
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 1 ≤ N →
+      sargosSixthBaseMoment N ≤ C*(N:ℝ)^ε := by
+  exact @sargosSixthBaseMoment_subpolynomial ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N : ℕ), 2 ≤ N → ∀ z : ℤ → ℂ,
+      (∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        (sargosQuarticPrefixMaximum N z α γ)^6) ≤
+        C*(lambda*(N:ℝ)^(3+ε)+(N:ℝ)^ε) := by
+  exact @sargosQuartic_maximal_sixth_moment ε hε
+
+example : sargosSixthExponentStep 0 = 0 := by
+  norm_num [sargosSixthExponentStep]
+
+example : sargosSixthExponentStep 3 = 3/4 := by
+  norm_num [sargosSixthExponentStep]
+
+example : sargosSixthExponentStep (3/4) = 3/7 := by
+  norm_num [sargosSixthExponentStep]
+
+example : sargosSixthExponentStep ((0:ℝ)+1/2) ≤ sargosSixthExponentStep 0+1/2 :=
+  sargosSixthExponentStep_add_le (by norm_num) (by norm_num)
+
+example : sargosSixthBootstrapParameter 16 0 = 1/4 := by
+  norm_num [sargosSixthBootstrapParameter,sargosSixthExponentStep]
+
+example : sargosSixthBootstrapParameter 1 3 = 1/4 := by
+  norm_num [sargosSixthBootstrapParameter,sargosSixthExponentStep]
+
+example : (1+Real.log (1:ℝ))^6 ≤ (1+6/(1:ℝ))^6*(1:ℝ)^(1:ℝ) :=
+  sargos_log_six_le_rpow (le_refl (1:ℝ)) (by norm_num)
+
+example : sargosSixthIterationExponent 0 = 3 := by
+  norm_num [sargosSixthIterationExponent]
+
+example : sargosSixthIterationExponent 2 = 3/7 := by
+  norm_num [sargosSixthIterationExponent]
+
+example : SargosSixthMomentExponent (3/4) := by
+  have he : sargosSixthIterationExponent 1 = 3/4 := by
+    norm_num [sargosSixthIterationExponent]
+  simpa only [he] using sargosSixthMomentExponent_iterate 1
+
+example : SargosSixthMomentExponent (3/7) := by
+  have he : sargosSixthIterationExponent 2 = 3/7 := by
+    norm_num [sargosSixthIterationExponent]
+  simpa only [he] using sargosSixthMomentExponent_iterate 2
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 1 ≤ N → sargosSixthBaseMoment N ≤ C*(N:ℝ) := by
+  simpa only [Real.rpow_one] using sargosSixthBaseMoment_subpolynomial 1 (by norm_num)
+
+example : ∃ C : ℝ, 1 ≤ C ∧ sargosSixthBaseMoment 16 ≤ C*(16:ℝ)^((1:ℝ)/10) := by
+  obtain ⟨C,hC,h⟩ := sargosSixthBaseMoment_subpolynomial (1/10) (by norm_num)
+  exact ⟨C,hC,by simpa only [Nat.cast_ofNat] using h 16 (by norm_num)⟩
+
+example : ∃ C : ℝ, 1 ≤ C ∧
+    (∫ α in Icc (0:ℝ) 1, ∫ γ in Icc (0:ℝ) 1,
+      (sargosQuarticPrefixMaximum 2 (fun _ => 1) α γ)^6) ≤ C*18 := by
+  obtain ⟨C,hC,h⟩ := sargosQuartic_maximal_sixth_moment 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  have hh := h 2 (by norm_num) (fun _ => 1) (by intro n hn; simp) 1 (by norm_num) 0 0
+  have he : (1:ℝ)*(2:ℝ)^(3+(1:ℝ))+(2:ℝ)^(1:ℝ) = 18 := by norm_num
+  simpa only [Nat.cast_ofNat,zero_add,he] using hh
+
+end SargosSixthMomentTheoremRegression
+
+namespace SargosRealSixthMomentRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set
+open scoped BigOperators
+
+example (M : ℝ) (n : ℤ) :
+    n ∈ sargosRealSourceInterval M ↔ M < (n:ℝ) ∧ (n:ℝ) ≤ 2*M := by
+  exact @mem_sargosRealSourceInterval M n
+
+example {M : ℝ} (hM : 0 ≤ M) :
+    (sargosRealBlockLength M : ℤ) = ⌊2*M⌋-⌊M⌋ := by
+  exact @sargosRealBlockLength_cast M hM
+
+example {M : ℝ} (hM : 0 ≤ M) :
+    ⌊M⌋₊ ≤ sargosRealBlockLength M ∧ sargosRealBlockLength M ≤ ⌊M⌋₊+1 := by
+  exact @sargosRealBlockLength_floor_bounds M hM
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (H : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealQuarticPrefix M H z α γ = sargosQuarticPrefix ⌊M⌋₊ H z α γ := by
+  exact @sargosRealQuarticPrefix_eq_natural M hM H z α γ
+
+example {M : ℝ} (hM : 0 ≤ M) :
+    sargosSourceInterval ⌊M⌋₊ ⊆ sargosRealSourceInterval M := by
+  exact @sargosSourceInterval_subset_real M hM
+
+example (N H : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosQuarticPrefix N (H+1) z α γ =
+      sargosQuarticPrefix N H z α γ+
+        z ((N:ℤ)+H+1)*GafniTao.fordAdditiveCharacter
+          ((((N:ℤ)+H+1:ℤ):ℝ)^2*α+(((N:ℤ)+H+1:ℤ):ℝ)^4*γ) := by
+  exact @sargosQuarticPrefix_succ N H z α γ
+
+example {M : ℝ} (hM : 0 ≤ M) {H : ℕ}
+    (hH : H ≤ sargosRealBlockLength M) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1) (α γ : ℝ) :
+    ‖sargosRealQuarticPrefix M H z α γ‖ ≤ sargosQuarticPrefixMaximum ⌊M⌋₊ z α γ+1 := by
+  exact @sargosRealQuarticPrefix_norm_le M hM H hH z hz α γ
+
+example (M : ℝ) (z : ℤ → ℂ) (α γ : ℝ) :
+    0 ≤ sargosRealQuarticMaximum M z α γ := by
+  exact @sargosRealQuarticMaximum_nonneg M z α γ
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (z : ℤ → ℂ) (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1) (α γ : ℝ) :
+    sargosRealQuarticMaximum M z α γ ≤ sargosQuarticPrefixMaximum ⌊M⌋₊ z α γ+1 := by
+  exact @sargosRealQuarticMaximum_le_natural M hM z hz α γ
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (z : ℤ → ℂ) (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1) (α γ : ℝ) :
+    (sargosRealQuarticMaximum M z α γ)^6 ≤
+      32*((sargosQuarticPrefixMaximum ⌊M⌋₊ z α γ)^6+1) := by
+  exact @sargosRealQuarticMaximum_sixth_le M hM z hz α γ
+
+example (M : ℝ) (z : ℤ → ℂ) :
+    Continuous (fun t : ℝ × ℝ => sargosRealQuarticMaximum M z t.1 t.2) := by
+  exact @continuous_sargosRealQuarticMaximum M z
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (z : ℤ → ℂ) (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1)
+    (p : ℕ) (a b c d : ℝ) :
+    Integrable (fun t : ℝ × ℝ => (sargosRealQuarticMaximum M z t.1 t.2)^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))) := by
+  exact @integrable_sargosRealQuarticPower_rectangle M hM z hz p a b c d
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (z : ℤ → ℂ) (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1)
+    (p : ℕ) (a b c d : ℝ) :
+    IntegrableOn
+      (fun α : ℝ => ∫ γ in Icc c d, (sargosRealQuarticMaximum M z α γ)^p) (Icc a b) := by
+  exact @integrable_sargosRealQuarticPower_outer M hM z hz p a b c d
+
+example (M : ℝ) (z : ℤ → ℂ)
+    (p : ℕ) (α c d : ℝ) :
+    IntegrableOn (fun γ : ℝ => (sargosRealQuarticMaximum M z α γ)^p) (Icc c d) := by
+  exact @integrable_sargosRealQuarticPower_inner M z p α c d
+
+example {lambda : ℝ} (hlambda : 0 ≤ lambda)
+    (c d : ℝ) :
+    (∫ _α in Icc c (c+1), ∫ _γ in Icc d (d+lambda), (1:ℝ)) = lambda := by
+  exact @sargos_unit_rectangle_integral_one lambda hlambda c d
+
+example {M : ℝ} (hM : 0 ≤ M)
+    (z : ℤ → ℂ) (hz : ∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1)
+    {lambda : ℝ} (hlambda : 0 ≤ lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      (sargosRealQuarticMaximum M z α γ)^6) ≤
+      32*((∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        (sargosQuarticPrefixMaximum ⌊M⌋₊ z α γ)^6)+lambda) := by
+  exact @sargosRealQuartic_sixth_rectangle_le_natural M hM z hz lambda hlambda c d
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ M : ℝ, 2 ≤ M → ∀ z : ℤ → ℂ,
+      (∀ n ∈ sargosRealSourceInterval M, ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        (sargosRealQuarticMaximum M z α γ)^6) ≤
+        C*(lambda*M^(3+ε)+M^ε) := by
+  exact @sargosRealQuartic_maximal_sixth_moment ε hε
+
+example {M X : ℝ} (hMX : M ≤ X)
+    (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealQuarticSumTo M X z α γ =
+      sargosRealQuarticPrefix M (⌊X⌋-⌊M⌋).toNat z α γ := by
+  exact @sargosRealQuarticSumTo_prefix M X hMX z α γ
+
+example {M X : ℝ}
+    (hMX : M ≤ X) (hX : X ≤ 2*M) (z : ℤ → ℂ) (α γ : ℝ) :
+    ‖sargosRealQuarticSumTo M X z α γ‖ ≤ sargosRealQuarticMaximum M z α γ := by
+  exact @norm_sargosRealQuarticSumTo_le_maximum M X hMX hX z α γ
+
+example {M : ℝ} (hM : 0 < M)
+    (z : ℤ → ℂ) (α γ : ℝ) :
+    ∃ X : ℝ, X ∈ Ioc M (2*M) ∧
+      sargosRealQuarticMaximum M z α γ = ‖sargosRealQuarticSumTo M X z α γ‖ := by
+  exact @sargosRealQuarticMaximum_attained_endpoint M hM z α γ
+
+example {M : ℝ} (hM : 0 < M)
+    (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealEndpointMaximum M z α γ = sargosRealQuarticMaximum M z α γ := by
+  exact @sargosRealEndpointMaximum_eq M hM z α γ
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ M : ℝ, 2 ≤ M → ∀ z : ℤ → ℂ,
+      (∀ n : ℤ, M < (n:ℝ) → (n:ℝ) ≤ 2*M → ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        (sargosRealEndpointMaximum M z α γ)^6) ≤
+        C*(lambda*M^(3+ε)+M^ε) := by
+  exact @sargos_source_maximal_sixth_moment ε hε
+
+example : sargosRealSourceInterval 2 = ({3,4} : Finset ℤ) := by
+  ext n
+  simp only [sargosRealSourceInterval,show ⌊(2:ℝ)⌋ = (2:ℤ) by norm_num,
+    show ⌊2*(2:ℝ)⌋ = (4:ℤ) by norm_num,Finset.mem_Ioc,
+    Finset.mem_insert,Finset.mem_singleton]
+  omega
+
+example : sargosRealBlockLength (5/2) = 3 := by
+  norm_num [sargosRealBlockLength]
+  rfl
+
+example : sargosRealBlockLength (9/4) = 2 := by
+  norm_num [sargosRealBlockLength]
+  rfl
+
+example : sargosRealBlockLength 3 = 3 := by
+  norm_num [sargosRealBlockLength]
+  rfl
+
+example : (5:ℤ) ∈ sargosRealSourceInterval (5/2) := by
+  rw [mem_sargosRealSourceInterval]
+  norm_num
+
+example : (2:ℤ) ∉ sargosRealSourceInterval 2 := by
+  rw [mem_sargosRealSourceInterval]
+  norm_num
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealQuarticPrefix (5/2) 2 z α γ = sargosQuarticPrefix 2 2 z α γ := by
+  have h := sargosRealQuarticPrefix_eq_natural (M := 5/2) (by norm_num) 2 z α γ
+  have hm : ⌊((5:ℝ)/2)⌋₊ = 2 := by norm_num
+  simpa only [hm] using h
+
+example (α γ : ℝ) :
+    sargosRealQuarticMaximum (5/2) (fun _ => 1) α γ ≤
+      sargosQuarticPrefixMaximum 2 (fun _ => 1) α γ+1 := by
+  have h := sargosRealQuarticMaximum_le_natural (M := 5/2) (by norm_num)
+    (fun _ => 1) (by intro n hn; simp) α γ
+  have hm : ⌊((5:ℝ)/2)⌋₊ = 2 := by norm_num
+  simpa only [hm] using h
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealQuarticSumTo (5/2) (11/4) z α γ = 0 := by
+  have h₁ : ⌊((5:ℝ)/2)⌋ = (2:ℤ) := by norm_num
+  have h₂ : ⌊((11:ℝ)/4)⌋ = (2:ℤ) := by norm_num
+  simp only [sargosRealQuarticSumTo,h₁,h₂,Finset.Ioc_self,Finset.sum_empty]
+
+example (α γ : ℝ) :
+    ∃ X : ℝ, X ∈ Ioc ((5:ℝ)/2) (2*(5/2)) ∧
+      sargosRealQuarticMaximum (5/2) (fun _ => 0) α γ =
+        ‖sargosRealQuarticSumTo (5/2) X (fun _ => 0) α γ‖ :=
+  sargosRealQuarticMaximum_attained_endpoint (by norm_num) (fun _ => 0) α γ
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosRealEndpointMaximum (5/2) z α γ = sargosRealQuarticMaximum (5/2) z α γ :=
+  sargosRealEndpointMaximum_eq (by norm_num) z α γ
+
+example : (∫ _α in Icc (0:ℝ) (0+1), ∫ _γ in Icc (0:ℝ) (0+0), (1:ℝ)) = 0 :=
+  sargos_unit_rectangle_integral_one (le_refl (0:ℝ)) 0 0
+
+example : (∫ _α in Icc (-2:ℝ) (-2+1), ∫ _γ in Icc (-3:ℝ) (-3+2), (1:ℝ)) = 2 :=
+  sargos_unit_rectangle_integral_one (by norm_num) (-2) (-3)
+
+example : ∃ C : ℝ, 1 ≤ C ∧
+    (∫ α in Icc (0:ℝ) 1, ∫ γ in Icc (0:ℝ) 1,
+      (sargosRealEndpointMaximum (5/2) (fun _ => 1) α γ)^6) ≤ C*(665/16) := by
+  obtain ⟨C,hC,h⟩ := sargos_source_maximal_sixth_moment 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  have hh := h (5/2) (by norm_num) (fun _ => 1) (by intro n hn hn'; simp)
+    1 (by norm_num) 0 0
+  have he : (1:ℝ)*((5:ℝ)/2)^(3+(1:ℝ))+((5:ℝ)/2)^(1:ℝ) = 665/16 := by norm_num
+  simpa only [zero_add,he] using hh
+
+end SargosRealSixthMomentRegression
+
+section SargosInitialSextupleRegression
+
+open TaoTrudgianYang2025 MeasureTheory Set
+open scoped BigOperators
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℤ → A) {a b c : ℤ} (hab : a ≤ b) (hbc : b ≤ c) :
+    (∑ n ∈ Finset.Ioc a c, f n) =
+      (∑ n ∈ Finset.Ioc a b, f n)+(∑ n ∈ Finset.Ioc b c, f n) := by
+  exact @sargos_integer_Ioc_sum_split A _ f a b c hab hbc
+
+example (N : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum (2*N) z α γ =
+      sargosInitialQuarticSum N z α γ+sargosQuarticSum N z α γ := by
+  exact @sargosInitialQuarticSum_double N z α γ
+
+example (K : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum (2^(K+1)) z α γ =
+      sargosInitialQuarticSum 2 z α γ+
+        ∑ i ∈ Finset.range K, sargosQuarticSum (2^(i+1)) z α γ := by
+  exact @sargosInitialQuarticSum_dyadic K z α γ
+
+example {ι : Type*} (S : Finset ι) (f : ι → ℂ) :
+    ‖∑ i ∈ S, f i‖^6 ≤ (S.card:ℝ)^5*∑ i ∈ S, ‖f i‖^6 := by
+  exact @sargos_complex_sum_sixth ι S f
+
+example (K : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    ‖sargosInitialQuarticSum (2^(K+1)) z α γ‖^6 ≤
+      32*(‖sargosInitialQuarticSum 2 z α γ‖^6+
+        (K:ℝ)^5*∑ i ∈ Finset.range K, ‖sargosQuarticSum (2^(i+1)) z α γ‖^6) := by
+  exact @sargosInitialQuarticSum_dyadic_sixth K z α γ
+
+example (N : ℕ) (z : ℤ → ℂ) (α γ : ℝ) :
+    ‖sargosInitialQuarticSum N z α γ‖ ≤ ∑ n ∈ Finset.Ioc (0:ℤ) N, ‖z n‖ := by
+  exact @norm_sargosInitialQuarticSum_le N z α γ
+
+example (N : ℕ) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ Finset.Ioc (0:ℤ) N, ‖z n‖ ≤ 1) (α γ : ℝ) :
+    ‖sargosInitialQuarticSum N z α γ‖ ≤ N := by
+  exact @norm_sargosInitialQuarticSum_le_card N z hz α γ
+
+example (N p : ℕ) (z : ℤ → ℂ) :
+    Continuous (fun t : ℝ × ℝ => ‖sargosInitialQuarticSum N z t.1 t.2‖^p) := by
+  exact @continuous_sargosInitialQuarticNormPower N p z
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    Integrable (fun t : ℝ × ℝ => ‖sargosInitialQuarticSum N z t.1 t.2‖^p)
+      ((volume.restrict (Icc a b)).prod (volume.restrict (Icc c d))) := by
+  exact @integrable_sargosInitialQuarticNormPower_rectangle N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (a b c d : ℝ) :
+    IntegrableOn (fun α : ℝ => ∫ γ in Icc c d,
+      ‖sargosInitialQuarticSum N z α γ‖^p) (Icc a b) := by
+  exact @integrable_sargosInitialQuarticNormPower_outer N p z a b c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (α c d : ℝ) :
+    IntegrableOn (fun γ : ℝ => ‖sargosInitialQuarticSum N z α γ‖^p) (Icc c d) := by
+  exact @integrable_sargosInitialQuarticNormPower_inner N p z α c d
+
+example (N p : ℕ) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ Finset.Ioc (0:ℤ) N, ‖z n‖ ≤ 1)
+    {lambda : ℝ} (hlambda : 0 ≤ lambda) (c d : ℝ) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      ‖sargosInitialQuarticSum N z α γ‖^p) ≤ lambda*(N:ℝ)^p := by
+  exact @sargosInitialQuartic_power_rectangle_trivial N p z hz lambda hlambda c d
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 2 ≤ N → ∀ z : ℤ → ℂ,
+      (∀ n ∈ sargosSourceInterval N, ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        ‖sargosQuarticSum N z α γ‖^6) ≤
+        C*(lambda*(N:ℝ)^(3+ε)+(N:ℝ)^ε) := by
+  exact @sargosQuartic_sixth_moment ε hε
+
+example (K : ℕ) (z : ℤ → ℂ)
+    (c d lambda : ℝ) :
+    (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+      ‖sargosInitialQuarticSum (2^(K+1)) z α γ‖^6) ≤
+      32*((∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        ‖sargosInitialQuarticSum 2 z α γ‖^6)+
+        (K:ℝ)^5*∑ i ∈ Finset.range K,
+          ∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+            ‖sargosQuarticSum (2^(i+1)) z α γ‖^6) := by
+  exact @sargosInitialQuartic_dyadic_integral K z c d lambda
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ K : ℕ, ∀ z : ℤ → ℂ,
+      (∀ n ∈ Finset.Ioc (0:ℤ) (2^(K+1):ℕ), ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        ‖sargosInitialQuarticSum (2^(K+1)) z α γ‖^6) ≤
+        C*((K:ℝ)+1)^6*
+          (lambda*((2^(K+1):ℕ):ℝ)^(3+ε)+((2^(K+1):ℕ):ℝ)^ε) := by
+  exact @sargosInitialQuartic_dyadic_sixth_moment ε hε
+
+example (N P : ℕ) (z : ℤ → ℂ)
+    (hz : ∀ n ∈ Finset.Ioc (0:ℤ) N, ‖z n‖ ≤ 1) :
+    ∀ n ∈ Finset.Ioc (0:ℤ) P, ‖sargosInitialCutoff N z n‖ ≤ 1 := by
+  exact @sargosInitialCutoff_unit N P z hz
+
+example {N P : ℕ} (hNP : N ≤ P)
+    (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum P (sargosInitialCutoff N z) α γ =
+      sargosInitialQuarticSum N z α γ := by
+  exact @sargosInitialQuarticSum_cutoff N P hNP z α γ
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    ∃ K : ℕ, N ≤ 2^(K+1) ∧ 2^(K+1) ≤ 2*N := by
+  exact @sargos_initial_dyadic_cover N hN
+
+example (K : ℕ) :
+    (K:ℝ)+1 = Real.log (((2^(K+1):ℕ):ℝ))/Real.log 2 := by
+  exact @sargos_dyadic_count_log K
+
+example (K : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ((K:ℝ)+1)^6 ≤
+      ((1/Real.log 2)*(1+6/ε))^6*((2^(K+1):ℕ):ℝ)^ε := by
+  exact @sargos_dyadic_count_six_le_rpow K ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 1 ≤ N → ∀ z : ℤ → ℂ,
+      (∀ n ∈ Finset.Ioc (0:ℤ) N, ‖z n‖ ≤ 1) →
+      ∀ lambda : ℝ, 0 < lambda → ∀ c d : ℝ,
+      (∫ α in Icc c (c+1), ∫ γ in Icc d (d+lambda),
+        ‖sargosInitialQuarticSum N z α γ‖^6) ≤
+        C*(lambda*(N:ℝ)^(3+ε)+(N:ℝ)^ε) := by
+  exact @sargosInitialQuartic_sixth_moment ε hε
+
+example (a b ξ η : ℝ) (p : ℝ × ℝ) :
+    sargosTentKernelTerm a b ξ η p =
+      (sargosRealTent a p.1 : ℂ)*(sargosRealTent b p.2 : ℂ)*
+        GafniTao.fordAdditiveCharacter (ξ*p.1+η*p.2) := by
+  exact @sargosTentKernelTerm_eq_product a b ξ η p
+
+example (a b ξ η c d : ℝ) (p : ℝ × ℝ) :
+    sargosTentKernelTerm a b (ξ-c) (η-d) p =
+      sargosTentKernelTerm a b ξ η p*
+        GafniTao.fordAdditiveCharacter (-(c*p.1+d*p.2)) := by
+  exact @sargosTentKernelTerm_shift a b ξ η c d p
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) (a b c d : ℝ) (p : ℝ × ℝ) :
+    (∑ q ∈ S ×ˢ S,
+      sargosTentKernelTerm a b (u q.1-u q.2-c) (v q.1-v q.2-d) p) =
+      (sargosTentPlanarIntegrand S u v a b p : ℂ)*
+        GafniTao.fordAdditiveCharacter (-(c*p.1+d*p.2)) := by
+  exact @sargos_shifted_tent_gram_eq ι S u v a b c d p
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) (c d : ℝ) :
+    (∑ q ∈ S ×ˢ S,
+      sargosSincKernel a (u q.1-u q.2-c)*sargosSincKernel b (v q.1-v q.2-d)) ≤
+      ∫ p : ℝ × ℝ, sargosTentPlanarIntegrand S u v a b p ∂(volume.prod volume) := by
+  exact @sargos_shifted_tent_gram_le_integral ι S u v a b ha hb c d
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {a b A B : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (hA : a*A ≤ 1/2) (hB : b*B ≤ 1/2) (c d : ℝ) :
+    (a*b/16)*((sargosShiftedNearPairs S u v c d A B).card : ℝ) ≤
+      ∑ q ∈ S ×ˢ S,
+        sargosSincKernel a (u q.1-u q.2-c)*sargosSincKernel b (v q.1-v q.2-d) := by
+  exact @sargosShiftedNearPairs_weighted_card_le_gram ι S u v a b A B ha hb hA hB c d
+
+example {ι : Type*}
+    (S : Finset ι) (u v : ι → ℝ) {Δ μ : ℝ} (hΔ : 0 < Δ) (hμ : 0 < μ)
+    (c d : ℝ) :
+    ((sargosShiftedNearPairs S u v c d (1/Δ) (1/μ)).card : ℝ) ≤
+      (64/(Δ*μ))*(∫ α in Icc (-(Δ/2)) (Δ/2), ∫ γ in Icc (-(μ/2)) (μ/2),
+        ‖sargosPlanarSum S (fun _ => 1) u v α γ‖^2) := by
+  exact @sargosShiftedNearPairs_card_le_central ι S u v Δ μ hΔ hμ c d
+
+example (N p : ℕ) :
+    Fintype.card (SargosInitialMomentTuple N p) = N^p := by
+  exact @card_sargosInitialMomentTuple N p
+
+example (N p : ℕ) (α γ : ℝ) :
+    (sargosInitialQuarticSum N (fun _ => 1) α γ)^p =
+      sargosPlanarSum (Finset.univ : Finset (SargosInitialMomentTuple N p)) (fun _ => 1)
+        (fun t => (sargosInitialTuplePower 2 t : ℝ))
+        (fun t => (sargosInitialTuplePower 4 t : ℝ)) α γ := by
+  exact @sargosInitialQuarticSum_pow_eq_tuple_sum N p α γ
+
+example (N p : ℕ) (α γ : ℝ) :
+    ‖sargosInitialQuarticSum N (fun _ => 1) α γ‖^(2*p) =
+      ‖sargosPlanarSum (Finset.univ : Finset (SargosInitialMomentTuple N p)) (fun _ => 1)
+        (fun t => (sargosInitialTuplePower 2 t : ℝ))
+        (fun t => (sargosInitialTuplePower 4 t : ℝ)) α γ‖^2 := by
+  exact @sargosInitialQuarticSum_norm_even_eq_tuple_norm_sq N p α γ
+
+example (N : ℕ) (c B : ℝ) :
+    sargosInitialSextupleWindow N c B ⊆
+      sargosShiftedNearPairs Finset.univ
+        (fun t : SargosInitialMomentTuple N 3 => (sargosInitialTuplePower 2 t : ℝ))
+        (fun t => (sargosInitialTuplePower 4 t : ℝ)) 0 c 1 B := by
+  exact @sargosInitialSextupleWindow_subset_shifted N c B
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 1 ≤ N → ∀ B : ℝ, 0 < B → ∀ c : ℝ,
+      ((sargosInitialSextupleWindow N c B).card : ℝ) ≤
+        C*((N:ℝ)^3+B)*(N:ℝ)^ε := by
+  exact @sargosInitialSextupleWindow_card_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ N : ℕ, 1 ≤ N → ∀ c : ℝ,
+      ((sargosInitialSextupleWindow N c ((N:ℝ)^3)).card : ℝ) ≤ C*(N:ℝ)^(3+ε) := by
+  exact @sargos_initial_sextuple_count ε hε
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum 0 z α γ = 0 := by
+  simp [sargosInitialQuarticSum]
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum 4 z α γ =
+      sargosInitialQuarticSum 2 z α γ+sargosQuarticSum 2 z α γ := by
+  exact sargosInitialQuarticSum_double 2 z α γ
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum 8 z α γ =
+      sargosInitialQuarticSum 2 z α γ+
+        (sargosQuarticSum 2 z α γ+sargosQuarticSum 4 z α γ) := by
+  have h := sargosInitialQuarticSum_dyadic 2 z α γ
+  simpa [Finset.sum_range_succ] using h
+
+example (z : ℤ → ℂ) : sargosInitialCutoff 3 z 3 = z 3 := by
+  simp [sargosInitialCutoff]
+
+example (z : ℤ → ℂ) : sargosInitialCutoff 3 z 4 = 0 := by
+  simp [sargosInitialCutoff]
+
+example (z : ℤ → ℂ) (α γ : ℝ) :
+    sargosInitialQuarticSum 8 (sargosInitialCutoff 3 z) α γ =
+      sargosInitialQuarticSum 3 z α γ :=
+  sargosInitialQuarticSum_cutoff (by norm_num) z α γ
+
+example : ∃ K : ℕ, 3 ≤ 2^(K+1) ∧ 2^(K+1) ≤ 6 := by
+  exact sargos_initial_dyadic_cover (N := 3) (by norm_num)
+
+example : (1:ℝ)^6 ≤
+    ((1/Real.log 2)*(1+6/(1:ℝ)))^6*(2:ℝ)^(1:ℝ) := by
+  have h := sargos_dyadic_count_six_le_rpow 0 (ε := 1) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example (z : ℤ → ℂ) (_hz : ∀ n ∈ Finset.Ioc (0:ℤ) 3, ‖z n‖ ≤ 1) :
+    (∫ α in Icc (0:ℝ) 1, ∫ γ in Icc (0:ℝ) 0,
+      ‖sargosInitialQuarticSum 3 z α γ‖^6) ≤ 0 := by
+  simp
+
+example : Fintype.card (SargosInitialMomentTuple 0 3) = 0 := by
+  rw [card_sargosInitialMomentTuple]
+  norm_num
+
+example : Fintype.card (SargosInitialMomentTuple 2 3) = 8 := by
+  rw [card_sargosInitialMomentTuple]
+  norm_num
+
+example (t : SargosInitialMomentTuple 1 3) (k : ℕ) :
+    sargosInitialTuplePower k t = 3 := by
+  have hc (i : Fin 3) : (t i : ℤ) = 1 := by
+    have h := Finset.mem_Ioc.mp (t i).property
+    norm_num at h
+    omega
+  simp [sargosInitialTuplePower,hc]
+
+example : (sargosInitialSextupleWindow 1 1 1).card = 0 := by
+  have hpow (t : SargosInitialMomentTuple 1 3) (k : ℕ) :
+      sargosInitialTuplePower k t = 3 := by
+    have hc (i : Fin 3) : (t i : ℤ) = 1 := by
+      have h := Finset.mem_Ioc.mp (t i).property
+      norm_num at h
+      omega
+    simp [sargosInitialTuplePower,hc]
+  simp [sargosInitialSextupleWindow,hpow]
+
+example : (sargosInitialSextupleWindow 1 (-1) 1).card = 1 := by
+  have hpow (t : SargosInitialMomentTuple 1 3) (k : ℕ) :
+      sargosInitialTuplePower k t = 3 := by
+    have hc (i : Fin 3) : (t i : ℤ) = 1 := by
+      have h := Finset.mem_Ioc.mp (t i).property
+      norm_num at h
+      omega
+    simp [sargosInitialTuplePower,hc]
+  simp [sargosInitialSextupleWindow,hpow]
+
+example (c : ℝ) : ∃ C : ℝ, 1 ≤ C ∧
+    ((sargosInitialSextupleWindow 3 c 27).card : ℝ) ≤ C*81 := by
+  obtain ⟨C,hC,h⟩ := sargos_initial_sextuple_count 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  have hh := h 3 (by norm_num) c
+  norm_num at hh ⊢
+  exact hh
+
+example (c : ℝ) : ∃ C : ℝ, 1 ≤ C ∧
+    ((sargosInitialSextupleWindow 3 c 1).card : ℝ) ≤ C*84 := by
+  obtain ⟨C,hC,h⟩ := sargosInitialSextupleWindow_card_bound 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  have hh := h 3 (by norm_num) 1 (by norm_num) c
+  norm_num at hh ⊢
+  nlinarith only [hh]
+
+example (c : ℝ) : ∃ C : ℝ, 1 ≤ C ∧
+    ((sargosInitialSextupleWindow 1 c 1).card : ℝ) ≤ C := by
+  obtain ⟨C,hC,h⟩ := sargos_initial_sextuple_count (1/10) (by norm_num)
+  refine ⟨C,hC,?_⟩
+  simpa using h 1 (by norm_num) c
+
+example : ∃ C : ℝ, 1 ≤ C ∧
+    (∫ α in Icc (0:ℝ) 1, ∫ γ in Icc (0:ℝ) 1,
+      ‖sargosInitialQuarticSum 3 (fun _ => 1) α γ‖^6) ≤ C*84 := by
+  obtain ⟨C,hC,h⟩ := sargosInitialQuartic_sixth_moment 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  have hh := h 3 (by norm_num) (fun _ => 1) (by intro n hn; simp)
+    1 (by norm_num) 0 0
+  norm_num at hh ⊢
+  exact hh
+
+end SargosInitialSextupleRegression
