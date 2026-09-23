@@ -23,14 +23,26 @@ private def targetTheorems (env : Environment) : Array Name := Id.run do
       names := names.push name
   return names.qsort Name.quickLt
 
+private def frozenSourceTheorems (env : Environment) : Array Name := Id.run do
+  let mut names := #[]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem && !isPrivateName name then
+      if let some index := env.getModuleIdxFor? name then
+        let moduleName := env.allImportedModuleNames[index.toNat]!
+        if moduleName.getRoot == `GafniTao then
+          names := names.push name
+  return names.qsort Name.quickLt
+
 def runBootstrapDependencyAudit : CoreM Unit := do
   let env ← getEnv
   let discovered := targetTheorems env
-  let declarations := bootstrapDeclarations ++ discovered
+  let pinned := frozenSourceTheorems env
+  let declarations := bootstrapDeclarations ++ discovered ++ pinned
   let mut failures : Nat := 0
   logInfo "=== TAO--TRUDGIAN--YANG BOOTSTRAP AXIOM AUDIT ==="
   logInfo m!"Imported boundary declarations: {bootstrapDeclarations.size}"
   logInfo m!"Discovered nonprivate target theorems: {discovered.size}"
+  logInfo m!"Discovered nonprivate pinned Gafni-Tao source theorems: {pinned.size}"
   for name in declarations do
     if !env.contains name then
       failures := failures + 1
@@ -3768,3 +3780,254 @@ end TaoTrudgianYang2025.Audit
 #print axioms TaoTrudgianYang2025.InExponentPairTriangle.aProcess
 #print axioms TaoTrudgianYang2025.isExponentPairEstimateNonAsymptotic_aProcess
 #print axioms TaoTrudgianYang2025.ExponentPair.aProcess
+
+/-! Explicit source audits for the Heath--Brown derivative input and physical bridges. -/
+#print axioms GafniTao.heathBrownVMVTMainConjecture_native
+#print axioms GafniTao.heathBrownKthDerivativeTheorem_native
+#print axioms WeakPNT
+#print axioms chebyshev_asymptotic
+#print axioms TaoTrudgianYang2025.modelPhaseJetCoefficient_pos
+#print axioms TaoTrudgianYang2025.modelPhaseJetSign_abs
+#print axioms TaoTrudgianYang2025.modelPhaseJetSign_coefficient
+#print axioms TaoTrudgianYang2025.modelPhaseJetLower_pos
+#print axioms TaoTrudgianYang2025.modelPhase_signed_referenceJet_bounds
+#print axioms TaoTrudgianYang2025.approximateModelPhase_signedJet_bounds
+#print axioms TaoTrudgianYang2025.heathBrownPhysicalPoint_mem
+#print axioms TaoTrudgianYang2025.heathBrownPhysicalPoint_mem_interior
+#print axioms TaoTrudgianYang2025.heathBrownPhysicalPhase_contDiffOn
+#print axioms TaoTrudgianYang2025.heathBrownPhysicalPhase_iteratedDeriv
+#print axioms TaoTrudgianYang2025.heathBrownPhysicalPhase_signed_derivative_bounds
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeExponent_bounds
+#print axioms TaoTrudgianYang2025.heathBrownInverseExponent_pos
+#print axioms TaoTrudgianYang2025.heathBrownInverseExponent_identity
+#print axioms TaoTrudgianYang2025.heathBrownBetaBound_eq_max
+#print axioms TaoTrudgianYang2025.heathBrownBetaBound_nonneg
+#print axioms TaoTrudgianYang2025.heathBrown_physical_monomial
+#print axioms TaoTrudgianYang2025.heathBrown_monomial_window
+#print axioms TaoTrudgianYang2025.heathBrownPowerMajorant_window
+#print axioms TaoTrudgianYang2025.heathBrown_epsilon_budget
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeMajorant_expand
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeMajorant_mono_length
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeMajorant_physical
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeMajorant_le_powerMajorant
+#print axioms TaoTrudgianYang2025.one_le_heathBrownPowerMajorant
+#print axioms TaoTrudgianYang2025.exponentialSumAt_first_add_heathBrownTail
+#print axioms TaoTrudgianYang2025.norm_exponentialSumAt_le_one_add_heathBrownTail
+#print axioms TaoTrudgianYang2025.heathBrownCharacterSum_neg
+#print axioms TaoTrudgianYang2025.norm_heathBrownSourceTail_eq_signed_characterSum
+#print axioms TaoTrudgianYang2025.heathBrownCharacterSum_eq_source
+#print axioms TaoTrudgianYang2025.heathBrownDerivativeMajorant_eq_source
+#print axioms TaoTrudgianYang2025.source_exponentialSum_heathBrown_bound_of_derivative
+#print axioms TaoTrudgianYang2025.isExponentSumBoundNonAsymptotic_heathBrown_of_derivative
+#print axioms TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown_of_derivative
+#print axioms TaoTrudgianYang2025.source_exponentialSum_heathBrown_bound
+#print axioms TaoTrudgianYang2025.isExponentSumBoundNonAsymptotic_heathBrown
+#print axioms TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown
+#print axioms TaoTrudgianYang2025.heathBrownBetaBound_five_first
+#print axioms TaoTrudgianYang2025.heathBrownBetaBound_five_second
+#print axioms TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown_firstRow
+#print axioms TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown_secondSegment
+#print axioms TaoTrudgianYang2025.exponentSumGrowthExponent_le_heathBrown_secondRow
+
+-- Robert--Sargos literal fourth-power near-count: all public theorem boundaries.
+#print axioms TaoTrudgianYang2025.sargos_fourth_product_sq_identity
+#print axioms TaoTrudgianYang2025.sargos_fourth_product_gap
+#print axioms TaoTrudgianYang2025.sargos_fourth_sum_gap
+#print axioms TaoTrudgianYang2025.sargos_fourth_difference_product
+#print axioms TaoTrudgianYang2025.sargosFourthCoordinates_injective
+#print axioms TaoTrudgianYang2025.sargos_fourth_coordinate_bounds
+#print axioms TaoTrudgianYang2025.sargosFourthNearSolutions_coordinates
+#print axioms TaoTrudgianYang2025.card_sargosFourthNearSolutions_le_hyperbola
+#print axioms TaoTrudgianYang2025.card_sargosNatHyperbola_eq_sum
+#print axioms TaoTrudgianYang2025.sargosNatHyperbola_fiber_bound
+#print axioms TaoTrudgianYang2025.card_sargosNatHyperbola_le
+#print axioms TaoTrudgianYang2025.sargosSignedCoordinate_injective
+#print axioms TaoTrudgianYang2025.sargosHyperbolaEncoding_injective
+#print axioms TaoTrudgianYang2025.card_sargosSignedHyperbola_le_nat
+#print axioms TaoTrudgianYang2025.card_sargosSignedHyperbola_le
+#print axioms TaoTrudgianYang2025.sargos_hyperbola_scale_bound
+#print axioms TaoTrudgianYang2025.card_sargosFourthNearSolutions_le_log
+
+-- Robert--Sargos whole-line kernels, actual rectangular windows and fixed-sum fourth moment.
+#print axioms TaoTrudgianYang2025.sargos_mul_sinc
+#print axioms TaoTrudgianYang2025.sargos_sinc_sq_majorant
+#print axioms TaoTrudgianYang2025.integrable_sargos_sinc_sq
+#print axioms TaoTrudgianYang2025.sargosSincKernel_nonneg
+#print axioms TaoTrudgianYang2025.continuous_sargosSincKernel
+#print axioms TaoTrudgianYang2025.integrable_sargosSincKernel
+#print axioms TaoTrudgianYang2025.sargosRealTent_nonneg
+#print axioms TaoTrudgianYang2025.sargosRealTent_le_one
+#print axioms TaoTrudgianYang2025.sargosRealTent_zero_of_le_abs
+#print axioms TaoTrudgianYang2025.sargosRealTent_eq_of_abs_le
+#print axioms TaoTrudgianYang2025.continuous_sargosRealTent
+#print axioms TaoTrudgianYang2025.hasCompactSupport_sargosRealTent
+#print axioms TaoTrudgianYang2025.integrable_sargosRealTent
+#print axioms TaoTrudgianYang2025.sargosSincKernel_eq_sin
+#print axioms TaoTrudgianYang2025.sargos_integral_symmetric_tent_character
+#print axioms TaoTrudgianYang2025.sargos_integral_symmetric_tent_character_eq_kernel
+#print axioms TaoTrudgianYang2025.sargos_fourier_eq_character
+#print axioms TaoTrudgianYang2025.fourier_sargosRealTent
+#print axioms TaoTrudgianYang2025.fourier_sargosSincKernel
+#print axioms TaoTrudgianYang2025.integral_sargosSincKernel_character
+#print axioms TaoTrudgianYang2025.integral_sargosSincKernel_character_eq_zero
+#print axioms TaoTrudgianYang2025.sargos_sinc_lower
+#print axioms TaoTrudgianYang2025.sargosSincKernel_lower
+#print axioms TaoTrudgianYang2025.sargosSincKernel_rectangle_lower
+#print axioms TaoTrudgianYang2025.sargos_window_scale_control
+#print axioms TaoTrudgianYang2025.sargosSincKernel_window_rectangle
+#print axioms TaoTrudgianYang2025.sargos_character_norm
+#print axioms TaoTrudgianYang2025.integrable_sargosSincKernel_shift
+#print axioms TaoTrudgianYang2025.integrable_sargosSincKernel_shift_character
+#print axioms TaoTrudgianYang2025.integral_sargosSincKernel_shift_character
+#print axioms TaoTrudgianYang2025.norm_integral_sargosSincKernel_shift_character_le_one
+#print axioms TaoTrudgianYang2025.integral_sargosSincKernel_shift_character_eq_zero
+#print axioms TaoTrudgianYang2025.integral_sargosSincKernel_shift_character_positive
+#print axioms TaoTrudgianYang2025.integrable_sargosSincKernel_shift_character_positive
+#print axioms TaoTrudgianYang2025.integrable_sargosPlanarKernelTerm_inner
+#print axioms TaoTrudgianYang2025.integral_sargosPlanarKernelTerm_inner
+#print axioms TaoTrudgianYang2025.integrable_sargosPlanarKernelTerm_outer
+#print axioms TaoTrudgianYang2025.integral_sargosPlanarKernelTerm
+#print axioms TaoTrudgianYang2025.norm_integral_sargosPlanarKernelTerm_le_one
+#print axioms TaoTrudgianYang2025.integral_sargosPlanarKernelTerm_eq_zero
+#print axioms TaoTrudgianYang2025.sargosPlanarSum_norm_sq
+#print axioms TaoTrudgianYang2025.sargosWeightedPlanarIntegrand_eq_gram
+#print axioms TaoTrudgianYang2025.sargosWeightedPlanarIntegrand_nonneg
+#print axioms TaoTrudgianYang2025.integrable_sargosWeightedPlanarIntegrand_inner_complex
+#print axioms TaoTrudgianYang2025.integrable_sargosWeightedPlanarIntegrand_inner
+#print axioms TaoTrudgianYang2025.integral_sargosWeightedPlanarIntegrand_inner_complex
+#print axioms TaoTrudgianYang2025.integrable_sargosWeightedPlanarIntegrand_outer_complex
+#print axioms TaoTrudgianYang2025.integrable_sargosWeightedPlanarIntegrand_outer
+#print axioms TaoTrudgianYang2025.integral_sargosWeightedPlanarIntegrand_eq_gram
+#print axioms TaoTrudgianYang2025.norm_sargosPlanarGramTerm_le
+#print axioms TaoTrudgianYang2025.sargosWeightedPlanarIntegral_le_nearPairs
+#print axioms TaoTrudgianYang2025.norm_sargosPlanarSum_le_sum_norm
+#print axioms TaoTrudgianYang2025.continuous_sargosPlanarNormSq
+#print axioms TaoTrudgianYang2025.integrable_sargosPlanarNormSq_rectangle
+#print axioms TaoTrudgianYang2025.integrable_sargosPlanarNormSq_window_outer
+#print axioms TaoTrudgianYang2025.integrable_sargosPlanarNormSq_window_inner
+#print axioms TaoTrudgianYang2025.sargosPlanarNormSq_window_le_weighted
+#print axioms TaoTrudgianYang2025.sargosPlanarNormSq_window_inner_le_weighted
+#print axioms TaoTrudgianYang2025.sargosPlanar_window_le_nearPairs
+#print axioms TaoTrudgianYang2025.sargosQuarticSum_eq_source
+#print axioms TaoTrudgianYang2025.sargosQuarticSum_sq_eq_pair_sum
+#print axioms TaoTrudgianYang2025.sargosQuarticSum_norm_four_eq_pair_norm_sq
+#print axioms TaoTrudgianYang2025.sargosPairCoefficient_norm_le_one
+#print axioms TaoTrudgianYang2025.sargosPairPairsToQuad_injective
+#print axioms TaoTrudgianYang2025.sargosQuarticNearPair_mem_source
+#print axioms TaoTrudgianYang2025.card_sargosQuarticNearPairs_le_source
+#print axioms TaoTrudgianYang2025.sargosQuartic_window_le_source_count
+#print axioms TaoTrudgianYang2025.sargosQuartic_fourth_moment
+
+-- Robert--Sargos literal maximal-prefix fourth moment: all public boundaries.
+#print axioms TaoTrudgianYang2025.sargos_stdAddChar_norm
+#print axioms TaoTrudgianYang2025.sargosFinitePrefix_eq_fourier
+#print axioms TaoTrudgianYang2025.sargosPrefixKernel_zero
+#print axioms TaoTrudgianYang2025.norm_sargosPrefixKernel_zero
+#print axioms TaoTrudgianYang2025.norm_sargosPrefixKernel_zero_le_one
+#print axioms TaoTrudgianYang2025.sargos_sum_stdAddChar_eq_geom
+#print axioms TaoTrudgianYang2025.sargos_sum_stdAddChar_mul_sub_one
+#print axioms TaoTrudgianYang2025.sargos_sin_pi_lower
+#print axioms TaoTrudgianYang2025.sargos_stdAddChar_sub_one_norm
+#print axioms TaoTrudgianYang2025.sargosResidueDistance_pos
+#print axioms TaoTrudgianYang2025.sargos_stdAddChar_sub_one_lower
+#print axioms TaoTrudgianYang2025.sargos_geometric_kernel_product_le_two
+#print axioms TaoTrudgianYang2025.norm_sargosPrefixKernel_le_inv_distance
+#print axioms TaoTrudgianYang2025.sargosPrefixMajorant_nonneg
+#print axioms TaoTrudgianYang2025.norm_sargosPrefixKernel_le_majorant
+#print axioms TaoTrudgianYang2025.sargos_sum_zmod_val
+#print axioms TaoTrudgianYang2025.sargos_sum_range_inv_le_harmonic
+#print axioms TaoTrudgianYang2025.sum_sargosPrefixMajorant_eq
+#print axioms TaoTrudgianYang2025.sum_sargosPrefixMajorant_le_harmonic
+#print axioms TaoTrudgianYang2025.sum_sargosPrefixMajorant_le_log
+#print axioms TaoTrudgianYang2025.sargos_weighted_sum_pow_four
+#print axioms TaoTrudgianYang2025.sargosFourierFourthMajorant_nonneg
+#print axioms TaoTrudgianYang2025.norm_sargosFinitePrefix_le_fourierMajorant
+#print axioms TaoTrudgianYang2025.norm_sargosFinitePrefix_pow_four_le
+#print axioms TaoTrudgianYang2025.sargosFinitePrefixMaximum_attained
+#print axioms TaoTrudgianYang2025.sargosFinitePrefixMaximum_nonneg
+#print axioms TaoTrudgianYang2025.norm_sargosFinitePrefix_le_maximum
+#print axioms TaoTrudgianYang2025.sargosFinitePrefixMaximum_pow_four_le
+#print axioms TaoTrudgianYang2025.continuous_sargosFinitePrefixMaximum
+#print axioms TaoTrudgianYang2025.sargosSourceLift_mem
+#print axioms TaoTrudgianYang2025.sargosSourceResidue_lift
+#print axioms TaoTrudgianYang2025.sargosSourceLift_injective
+#print axioms TaoTrudgianYang2025.exists_sargosSourceLift
+#print axioms TaoTrudgianYang2025.sargosSourceLift_residue
+#print axioms TaoTrudgianYang2025.sargos_sum_sourceLift
+#print axioms TaoTrudgianYang2025.sargosFinitePrefix_eq_quartic
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_eq_finite
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_pow_four_le
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefix_full
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefix_zero
+#print axioms TaoTrudgianYang2025.continuous_sargosQuarticPrefixMaximum
+#print axioms TaoTrudgianYang2025.norm_sargosQuarticTwist
+#print axioms TaoTrudgianYang2025.sargosQuarticTwist_norm_le_one
+#print axioms TaoTrudgianYang2025.sargosQuarticSample_dft
+#print axioms TaoTrudgianYang2025.sargosQuartic_fourier_majorant_eq
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_attained
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_nonneg
+#print axioms TaoTrudgianYang2025.norm_sargosQuarticPrefix_le_sum_norm
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_le_sum_norm
+#print axioms TaoTrudgianYang2025.sargos_integrable_rectangle_of_continuous_bound
+#print axioms TaoTrudgianYang2025.continuous_sargosQuarticNormFour
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticNormFour_rectangle
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticNormFour_outer
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticNormFour_inner
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticPrefixMaximum_rectangle
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticPrefixMaximum_outer
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticPrefixMaximum_inner
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefix_inner_le_completed
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefix_rectangle_le_completed
+#print axioms TaoTrudgianYang2025.norm_sargosQuarticPrefix_le_maximum
+#print axioms TaoTrudgianYang2025.sargosQuartic_maximal_fourth_moment
+#print axioms TaoTrudgianYang2025.sargos_character_sub_norm_le
+#print axioms TaoTrudgianYang2025.sargos_slow_phase_lipschitz
+#print axioms TaoTrudgianYang2025.sargos_slow_character_adjacent
+#print axioms TaoTrudgianYang2025.sargos_sum_Ioc_eq_range
+#print axioms TaoTrudgianYang2025.sargos_norm_weighted_prefix_le
+#print axioms TaoTrudgianYang2025.sargos_slow_character_variation
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticPrefix_eq_range
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticMaximum_attained
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticMaximum_nonneg
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticPrefix_norm_le
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticMaximum_le
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticMaximum_pow_four_le
+#print axioms TaoTrudgianYang2025.sargosUpperIntegral_le
+#print axioms TaoTrudgianYang2025.sargosUpperIntegral_eq_lintegral
+#print axioms TaoTrudgianYang2025.sargosUpperIntegral_mono_ae
+#print axioms TaoTrudgianYang2025.sargosUpperIntegral_ofReal_le_integral
+#print axioms TaoTrudgianYang2025.sargosUpperIntegral_ofReal_eq_integral
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_pow_four_le_ae
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_upper_rectangle_le
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_upper_fourth_moment
+#print axioms TaoTrudgianYang2025.continuous_sargosSlowQuarticMaximum
+#print axioms TaoTrudgianYang2025.integrable_sargosSlowQuarticFourth
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_fourth_moment
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticPrefix_zero_phase
+#print axioms TaoTrudgianYang2025.sargosSlowQuarticMaximum_zero_phase
+#print axioms TaoTrudgianYang2025.sargos_linear_phase_hasDerivWithin
+#print axioms TaoTrudgianYang2025.sargos_linear_phase_derivative_bound
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_linear_upper_fourth_moment
+#print axioms TaoTrudgianYang2025.sargosSlowQuartic_linear_fourth_moment
+#print axioms TaoTrudgianYang2025.sargos_quartic_second_difference
+#print axioms TaoTrudgianYang2025.sargos_quartic_difference_coefficient
+#print axioms TaoTrudgianYang2025.sargos_quartic_difference_error
+#print axioms TaoTrudgianYang2025.sargos_quartic_curvature
+#print axioms TaoTrudgianYang2025.sargos_second_derivative_scale
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefix_eq_radian_sum
+#print axioms TaoTrudgianYang2025.sargosQuarticRadianSample_second_difference
+#print axioms TaoTrudgianYang2025.norm_sargosQuarticPrefix_le_curvature
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_le_curvature
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_sq_le_curvature
+#print axioms TaoTrudgianYang2025.sargosQuarticPrefixMaximum_unweighted_le
+#print axioms TaoTrudgianYang2025.continuous_sargosQuarticUnweightedPower
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticUnweightedPower_rectangle
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticUnweightedPower_outer
+#print axioms TaoTrudgianYang2025.integrable_sargosQuarticUnweightedPower_inner
+#print axioms TaoTrudgianYang2025.sargos_integral_Icc_split_le
+#print axioms TaoTrudgianYang2025.sargosQuartic_sixth_rectangle_le_of_sq_bound
+#print axioms TaoTrudgianYang2025.sargosQuartic_sixth_rectangle_le_trivial
+#print axioms TaoTrudgianYang2025.sargosQuartic_sixth_rectangle_le_curvature
+#print axioms TaoTrudgianYang2025.sargosQuartic_small_sixth_moment
+#print axioms TaoTrudgianYang2025.sargosQuartic_small_sixth_moment_log_six
+#print axioms TaoTrudgianYang2025.sargosQuartic_small_sixth_moment_source

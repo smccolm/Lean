@@ -22,7 +22,7 @@ Declaration namespaces are unchanged.
 
 `FordPrimePacketEventually` imports `GafniTao.PrimeConsequences`.
 That module is the exact prefix through `chebyshev_asymptotic`
-(lines 1–185) of node 74's clean PNT `Consequences.lean), changing
+(lines 1–185) of node 74's clean PNT `Consequences.lean`), changing
 only the Wiener import. `GafniTao.WienerSource` retains lines 1–2397
 of the neighboring clean `Wiener.lean`, ending after `WeakPNT`;
 its existing header-linter suppression is removed. The prefix is

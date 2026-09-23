@@ -98,4 +98,20 @@ theorem heathBrownDerivativeMajorant_le_powerMajorant {k : ℕ} (hk : 3 ≤ k)
   have hm := mul_le_mul_of_nonneg_left hinner (Real.rpow_nonneg hN.le η)
   convert hm using 1 <;> ring
 
+theorem one_le_heathBrownPowerMajorant {k : ℕ} (hk : 3 ≤ k)
+    {η T N : ℝ} (hη : 0 ≤ η) (hT : 0 < T) (hN : 1 ≤ N) :
+    1 ≤ heathBrownPowerMajorant k η T N := by
+  have hd := (heathBrownDerivativeExponent_bounds hk).2.2
+  have h₁ := Real.one_le_rpow hN hη
+  have h₂ := Real.one_le_rpow hN (show 0 ≤ 1-heathBrownDerivativeExponent k by linarith)
+  have hm : 1 ≤ N^η*N^(1-heathBrownDerivativeExponent k) := by
+    nlinarith [mul_nonneg (sub_nonneg.mpr h₁) (sub_nonneg.mpr h₂)]
+  apply hm.trans
+  unfold heathBrownPowerMajorant
+  apply mul_le_mul_of_nonneg_left _ (Real.rpow_nonneg (zero_le_one.trans hN) η)
+  have ha : 0 ≤ T^(heathBrownDerivativeExponent k)*
+      N^(1-(k : ℝ)*heathBrownDerivativeExponent k) := by positivity
+  have hb : 0 ≤ N*T^(-heathBrownInverseExponent k) := by positivity
+  linarith
+
 end TaoTrudgianYang2025

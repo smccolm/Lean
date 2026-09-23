@@ -1,0 +1,6 @@
+# Preserve byte-pinned source inputs, generated certificates, and the permanent regression.
+Sources/** -text
+Dependencies/ANTEDBFrozen/** -text
+Dependencies/GafniTaoNative/** -text
+Extension/TaoTrudgianYang2025/GeneratedCertificates.lean -text
+Extension/TaoTrudgianYang2025/EnergyPoweringObstruction.lean -text

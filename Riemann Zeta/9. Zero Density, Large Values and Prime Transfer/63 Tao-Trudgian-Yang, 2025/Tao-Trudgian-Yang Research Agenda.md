@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-Current analytic progress: [General analytic A-process from original source sums](#general-analytic-a-process-from-original-source-sums--current-checkpoint).
-The exact A-process now preserves the actual analytic exponent-pair predicate. All dual heights, original source intervals, integer shifts and epsilon losses are covered. EPZAE-09, both A/B processes, the counterexample and all nine repaired Add-est clauses are preserved; C and the remaining whole-proof outputs remain open.
+Current analytic progress: [Robert–Sargos small-alpha sixth moment](#robertsargos-small-alpha-sixth-moment--current-checkpoint).
+The actual unweighted maximal sixth moment on the small-alpha window is proved with explicit bound 44845498368 (1+log N)^5 and a literal source (log N)^6 corollary. Higher-moment window transfer and the global bootstrap/C-process remain open. The permanent counterexample and all nine repaired Add-est clauses are preserved.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -7082,7 +7082,7 @@ checkbox states are unchanged. The counterexample and completed repaired
 energy chain are unchanged. These checks verify this recorded scope,
 not the still-open A-process or whole-goal completion.
 
-## General analytic A-process from original source sums — current checkpoint
+## General analytic A-process from original source sums — previous checkpoint
 
 The classical A-process is now proved for the paper's actual analytic
 exponent-pair predicate:
@@ -7149,3 +7149,504 @@ duplicate nodes or edges and no unresolved endpoints. All 42 aggregate
 checkbox states are unchanged. This verifies the exact analytic A-process,
 not C or whole-goal completion. The counterexample and the completed
 repaired energy chain remain unchanged.
+
+## Native Heath–Brown derivative input and exact source beta bound — previous checkpoint
+
+The source `heath-brown-2017` conclusion is proved by
+`exponentSumGrowthExponent_le_heathBrown` for every natural k >= 3
+and every real alpha > 0, with the exact displayed three-branch formula.
+Its public signature has no derivative theorem or beta bound parameter.
+The native input is `GafniTao.heathBrownKthDerivativeTheorem_native`.
+
+The nine-module bridge derives signed model-jet bounds, the physical
+scale lambda = c*T/N^k, smoothness on the actual closed interval, exact
+translation and conjugation of the tail sum, and restoration of the
+first endpoint. It includes singleton and empty intervals. Constants,
+model accuracy and derivative order precede all actual phases, heights,
+scales and source endpoints. The source window and epsilon budget give
+the non-asymptotic beta predicate, then the exact ANTEDB growth exponent.
+
+The pinned dependency contains 460 unchanged mathematical source modules
+with documented import-path adaptations and two proved PNT prefixes.
+It inherits the canonical foundation and its existing pins, without a
+second or shadow foundation. Its ledger verifies 469 files and its root
+reaches all 463 Lean modules. The audit also checks every nonprivate
+theorem defined in those pinned modules, including the global PNT names.
+The first compatibility build that exposed unrelated admitted Wiener
+preliminaries is not accepted evidence; the proved prefixes avoid that
+monolithic import without editing the canonical external checkout.
+
+All ten new production modules, 42 named public audits, four explicit native/PNT
+boundary audits and 51 semantic regressions are integrated. The fixtures
+include the actual beta bounds beta(1/2) <= 5/12 and beta(1/3) <= 11/36,
+plus exact formula, source-table endpoints and closed-singleton checks.
+
+`HeathBrownBetaTable` proves the first two source beta-table rows from
+this analytic bound, including alpha zero and both joining endpoints.
+The second affine segment is proved on the larger closed interval
+[1/4,2/5], then restricted to the printed endpoint 890/3277. These are
+proved analytic rows, not a claim that the full beta table is complete.
+
+EPZAE-12 is complete. EPZAE-09 and A/B remain complete; C and D remain
+open, so EPZAE-10 and EPZAE-11 stay unchecked. Certified beta-table
+assembly, the four advertised exponent pairs, density and release
+obligations remain in the unchanged whole-proof contract. Only the
+EPZAE-12 checkbox changes among the 42 aggregate items.
+
+The permanent printed Lemma 62 counterexample and completed corrected
+cardinality/energy powering, Heath--Brown energy relation, exact energy
+optimization and all nine Add-est clauses are unchanged. The two powering
+witnesses still have independent, unrestricted fifth coordinates.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell module inventory,
+source verifiers, root imports, audits and regressions synchronized.
+Run it and the foundation `run_lake_build.bat` after proof, import,
+dependency, audit or runner changes. A passing build does not complete
+the remaining whole-proof outputs.
+
+Scoped `.gitattributes` rules preserve the exact bytes of pinned Sources,
+ANTEDB/native dependency files, the generated certificate and the permanent
+counterexample across Git checkouts. The runner requires this policy file.
+No repository Git configuration was changed. A read-only comparison of
+509 protected files against HEAD found 507 byte-identical; the only two
+differences are the documented native README correction and its ledger.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026 (Pacific time), each
+with exit code 0. Their complete physical logs contain no Lean warnings,
+errors, tactic suggestions or linter failures. The target covers 733
+package files and scans 1,207 Lean files; its default build checks 10,065
+jobs. The audit checks 6,191 discovered target theorems, 6,240 pinned
+source theorems and 5 imported anchors: 12,436 declarations in total.
+All 42 new named public audits and all four native/PNT boundary audits
+occur exactly once and use only permitted standard logical axioms.
+All 51 new semantic regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-174454-55b1abae.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_174825.log).
+The foundation's six stages pass with zero diagnostics: 301 root modules,
+two retained regressions, 8,857 build jobs, 7,636 explicit public declarations
+and 14,290 discovered theorem dependencies.
+
+All 1,228 recorded proof/configuration/tooling hashes are unchanged across
+both BATs. Ten source modules and five integration/verifier files match
+their normalized snapshots. The complete [source checkpoint record](logs/tao-trudgian-yang-heath-brown-20260922-174454-55b1abae.json)
+records these hashes and the exact new public signatures. The synchronized
+graph has 286 nodes and 772 edges, with no duplicate or unresolved links.
+Only EPZAE-12 changes among the 42 aggregate checkbox states. The permanent
+counterexample and completed repaired energy branch are unchanged.
+This verifies the recorded scope, not whole-goal completion.
+
+## Robert–Sargos fourth-power near-count — previous checkpoint
+
+`card_sargosFourthNearSolutions_le_log` proves, for every natural N >= 1,
+
+    card {q in (N,2N]^4 :
+      |q0²+q1²-q2²-q3²| <= N,
+      |q0⁴+q1⁴-q2⁴-q3⁴| <= N³}
+      <= 4096 N² (1+log N).
+
+The finite set contains actual integer quadruples. No counting bound,
+moment estimate or exponent-pair conclusion is a theorem parameter.
+The geometric calculation derives |q0*q1-q2*q3| <= 5N and a bounded
+sum displacement, then injects the quadruples into four integer linear
+coordinates. The two difference coordinates satisfy |u*v| <= 11N.
+The signed hyperbola count is proved via an injective sign/absolute-value
+encoding, actual natural-number fibers, division bounds and the harmonic
+sum. Zero fibers and all signs are included.
+
+Four production modules contain 17 public theorems. All have explicit
+audits and exact-signature regressions; nine additional fixtures check
+N=0/1/2 counts, zero fibers, both signs and coordinate encoding.
+This proves the counting assertion in Robert–Sargos section 5
+([author-uploaded paper](https://arxiv.org/html/2307.03554v1#S5)),
+with an explicit constant and a stronger N >= 1 domain.
+It does not yet prove the fourth-moment integral, the sixth-moment
+bootstrap or the analytic C-process. Those remain under EPZAE-10.
+D, remaining beta rows/pairs, density and public-release obligations
+also remain open. All 42 aggregate checkbox states are unchanged.
+
+The counterexample, independent corrected powering witnesses and
+completed Heath--Brown energy/optimization/all-nine-Add-est chain
+are unchanged. EPZAE-09, A/B, EPZAE-12 and the first two analytic
+beta-table rows are preserved.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell module inventory,
+root imports, source verifiers, audits and regressions synchronized.
+Both it and the foundation `run_lake_build.bat` remain mandatory after
+proof/integration/runner changes. Retain the scoped byte-preservation
+rules for the pinned inputs, generated certificate and counterexample.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026 (Pacific time), exit code 0,
+with zero Lean warnings, errors, tactic suggestions or linter failures in
+their complete physical logs. The target covers 737 package files, scans
+1,211 Lean files and completes 10,069 default-build jobs. Its audit checks
+6,232 discovered target theorems, 6,240 pinned source theorems and 5 imported
+anchors: 12,477 declarations. The 17 new explicit public audits occur once
+with only permitted standard logical axioms; all 26 new regressions pass.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-181839-3e1844f8.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_182203.log).
+The foundation passes all six stages: 301 root modules plus two retained
+regressions, 8,857 build jobs, 7,636 explicit public declarations and
+14,290 discovered theorems.
+
+All 1,232 recorded proof/configuration/tooling hashes are unchanged across
+both BATs. Four source texts and four integration texts match normalized
+snapshots. The [source checkpoint record](logs/tao-trudgian-yang-sargos-count-20260922-181839-3e1844f8.json)
+contains the hashes, exact theorem signatures and both evaluation results.
+The synchronized graph has 290 nodes and 779 edges, with no duplicates,
+unresolved endpoints or unclassified nodes. All 42 aggregate checkbox
+states are unchanged. The counterexample SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The completed repaired energy branch is unchanged; the whole goal remains open.
+
+## Robert–Sargos rectangular windows and fixed-sum fourth moment — previous checkpoint
+
+`sargosQuartic_fourth_moment` proves, for every natural N >= 1,
+every fixed complex coefficient sequence with |z_n| <= 1 on (N,2N],
+and every real Delta >= 1/N,
+
+    integral_{alpha=0}^{Delta} integral_{gamma=-N^-3}^{N^-3}
+      |sum_{N<n<=2N} z_n exp(2*pi*i*(alpha*n^2+gamma*n^4))|^4
+      <= 131072 Delta/N (1+log N).
+
+The sum, both physical windows and the four-variable count are literal.
+No counting bound, moment estimate, kernel identity or exponent-pair
+conclusion is assumed. The fixed coefficients may be arbitrary on the
+source interval but do not depend on the integration parameters.
+
+Fourteen new production modules prove whole-line sinc-square
+integrability, its real-frequency tent Fourier transform, shifted-window
+normalization, exact two-dimensional finite Gram integration, cutoff to
+actual near pairs, and the source ordered-pair square. The rectangular
+mean-square factor is exactly 16*delta*lambda. The source fourth moment
+then consumes the proved 4096 N^2(1+log N) quadruple count, with
+lambda=2/N^3. Both translated centers and non-integral frequencies are
+included. No pinned native source was modified.
+
+All 68 new public boundaries have explicit axiom audits and exact-signature
+regressions. Fourteen additional fixtures cover tent/kernel normalization,
+cutoff endpoints, a non-integral shifted frequency, N=1/2 source intervals
+and sums, zero coefficients, and a concrete fourth-moment specialization.
+
+This is the fixed-sum part of the Robert–Sargos section 4--5 analytic
+transfer ([author-uploaded paper](https://arxiv.org/html/2307.03554v1#S5)).
+It does not yet prove the maximum over prefixes in source Lemma 2,
+the slowly varying phase extension, the sixth-moment bootstrap, or the
+analytic C-process. EPZAE-10 stays open. D, the remaining beta rows,
+the four advertised pairs, density and release obligations remain open.
+All 42 aggregate checkbox states are unchanged.
+
+The permanent printed Lemma 62 counterexample, independent corrected
+cardinality/energy witnesses, Heath--Brown energy relation, exact energy
+optimization and all nine repaired Add-est clauses are unchanged.
+EPZAE-09, A/B, EPZAE-12 and the first two analytic beta rows are preserved.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell module inventory,
+root imports, source verifiers, audits and regressions synchronized.
+Run it and the foundation `run_lake_build.bat` after proof, integration,
+dependency or runner changes. Retain the scoped byte-preservation rules
+for pinned inputs, the generated certificate and the counterexample.
+
+### Verification
+
+Both mandatory BATs passed on 22 September 2026 (Pacific time), exit code 0,
+with zero Lean warnings, errors, tactic suggestions or linter failures in
+their complete physical logs. The target covers 751 package files, scans
+1,225 Lean files and completes 10,083 default-build jobs. Its audit checks
+6,330 discovered target theorems, 6,240 pinned source theorems and 5 imported
+anchors: 12,575 declarations. All 68 new explicit public audits occur once
+with permitted standard logical axioms only; all 82 new regressions pass.
+The intermediate fixture warning and conversion error were fixed before
+these accepted full runs; they are not acceptance evidence.
+
+Target: [verified build log](logs/tao-trudgian-yang-build-20260922-191919-9f77a11b.log).
+Foundation: [verified foundation log](../../logs/foundation_freeze_20260922_192240.log).
+The foundation passes all six stages: 301 root modules plus two retained
+regressions, 8,857 build jobs, 7,636 explicit public declarations and
+14,290 discovered theorems.
+
+All 1,246 recorded proof/configuration/tooling hashes are unchanged across
+both serialized BATs. Fourteen source texts and four integration texts
+match their normalized snapshots. The [source checkpoint record](logs/tao-trudgian-yang-sargos-moment-20260922-191919-9f77a11b.json)
+contains the hashes, all exact new public signatures and both evaluation
+results. The synchronized graph has 293 nodes and 784 edges, with no
+duplicates, unresolved endpoints or unclassified nodes. All 42 aggregate
+checkbox states are unchanged. The counterexample SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The completed repaired energy branch is unchanged; the whole goal remains open.
+
+## Robert–Sargos maximal-prefix fourth moment — previous checkpoint
+
+`sargosQuartic_maximal_fourth_moment` proves, for every natural N >= 1,
+fixed coefficients |z_n| <= 1 on (N,2N], and real Delta >= 1/N,
+
+    integral_{alpha=0}^{Delta} integral_{gamma=-N^-3}^{N^-3}
+      (max_{0<=H<=N}
+        |sum_{N<n<=N+H} z_n exp(2*pi*i*(alpha*n^2+gamma*n^4))|)^4
+      <= 10616832 Delta/N (1+log N)^5.
+
+H is an integer, every source prefix is present, and the maximum is
+attained. The extra H=0 prefix is the proved zero sum. This bounds the
+pointwise maximum before integration, not merely each fixed-prefix
+integral. Empty and zero-coefficient cases are retained and tested;
+the estimate itself requires N >= 1.
+
+Thirteen production modules prove exact finite Fourier inversion on
+ZMod N, the geometric kernel and unit-circle gap, and a prefix-independent
+nonnegative coefficient majorant with total mass at most 3(1+log N).
+Two finite Cauchy--Schwarz inequalities give the fourth-power bound.
+A proved residue bijection identifies the literal integer interval.
+Every completed mode is the original sum with unit-modulus coefficient
+twists independent of alpha and gamma. Maximum continuity, rectangle
+integrability and finite integral interchanges are proved. The final
+estimate consumes the earlier fixed-sum theorem and its literal
+four-variable count, without assuming any count or moment estimate.
+
+All 61 new public boundaries have explicit audits and exact-signature
+regressions. Fifteen further fixtures cover zero-frequency kernels,
+N=1/2/3 majorant masses, residue endpoints, proper/full/empty prefixes,
+zero coefficients and a concrete maximal-moment specialization.
+
+This establishes the weighted maximal fourth-moment assertion of
+Robert–Sargos section 5 for natural N, with an explicit constant and
+1+log N normalization
+([author-uploaded paper](https://arxiv.org/html/2307.03554v1#S5)).
+The parameter-dependent slow-phase extension, higher-moment window
+transfer, sixth-moment bootstrap and analytic C-process remain open.
+EPZAE-10 stays unchecked. D, remaining beta rows/pairs, density and
+release obligations remain open. All 42 aggregate checkbox states
+are unchanged.
+
+The permanent printed Lemma 62 counterexample, independent corrected
+cardinality/energy powering witnesses, Heath--Brown energy relation,
+exact energy optimization and all nine repaired Add-est clauses are
+unchanged. EPZAE-09, A/B, EPZAE-12 and the first two analytic beta rows
+are preserved.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell module inventory,
+root imports, source verifiers, audits and regressions synchronized.
+Run it and the foundation `run_lake_build.bat` after proof, integration,
+dependency or runner changes. Keep byte-preservation rules for the
+pinned inputs, generated certificates and permanent counterexample.
+
+### Verification and preservation
+
+Both required commands exited 0 with no Lean errors, warnings, tactic
+suggestions or linter failures:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  [complete target log](logs/tao-trudgian-yang-build-20260922-220844-6863d940.log);
+  764 production modules, 1238 scanned Lean files, 10096 build jobs,
+  6425 target plus 6240 pinned theorems and five imported boundaries
+  audited (12670 total). Each of the 61 new public audits appears once.
+- `cmd /c run_lake_build.bat --no-pause`:
+  [foundation log](../../logs/foundation_freeze_20260922_221514.log)
+  and [manifest](../../logs/foundation_freeze_20260922_221514.json);
+  all six stages pass, 8857 build jobs, 301 root modules and two
+  retained regressions, 7636 explicit and 14290 discovered declarations.
+
+The [source checkpoint](logs/tao-trudgian-yang-sargos-maximal-20260922-220844-6863d940.json) records
+1259 physical source/configuration/tooling hashes, unchanged across
+both runs, plus 17 normalized module/integration hashes. The 469-file
+native pin and its 463-module closure pass. No earlier proof file was
+changed: only the root, audit, regressions and runner inventory were
+extended. The synchronized graph has 295 nodes and 787 edges, with no
+duplicates, unresolved endpoints or unclassified nodes. All 42 aggregate
+checkbox states are unchanged (22 checked). The counterexample SHA-256
+remains `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The completed repaired energy branch is unchanged; the whole goal remains open.
+
+## Robert–Sargos parameter-dependent slow phase — previous checkpoint
+
+The literal quartic prefixes now admit the actual phase
+alpha*n^2+gamma*n^4+phi(alpha,gamma,n), with fixed source coefficients.
+For N >= 1, K >= 0 and Delta >= 1/N, assume only the genuine local
+derivative data on x in [N,2N] and on the integration rectangle:
+
+    |d phi(alpha,gamma,x)/dx| <= K/N.
+
+`sargosSlowQuarticMaximum_le` derives the pointwise bound by
+(1+2*pi*K) times the unperturbed prefix maximum. The proof uses the
+global character Lipschitz bound, exact integer-interval reindexing,
+and finite Abel summation. Its adjacent variation is at most 2*pi*K;
+no moment estimate or conclusion-equivalent variation bound is assumed.
+
+`sargosSlowQuartic_upper_fourth_moment` then proves
+
+    upper integral over [0,Delta] x [-N^-3,N^-3]
+      (max_{0<=H<=N} |sum_{N<n<=N+H}
+        z_n exp(2*pi*i*(alpha*n^2+gamma*n^4+phi(alpha,gamma,n)))|)^4
+      <= (1+2*pi*K)^4 * 10616832 Delta/N (1+log N)^5.
+
+There is no measurability hypothesis on the phase family here.
+`sargosUpperIntegral` is the infimum of nonnegative integrals of
+almost-everywhere measurable majorants. Its monotonicity and equality
+with the ordinary nonnegative integral on measurable integrands are
+proved. The result therefore does not exploit the default value of an
+undefined Bochner integral.
+
+For an almost-everywhere strongly measurable actual fourth-power
+integrand, `integrable_sargosSlowQuarticFourth` proves integrability
+from the existing majorant, and `sargosSlowQuartic_fourth_moment`
+proves the ordinary iterated-integral estimate via Fubini. Continuity
+of the actual maximum follows from continuity of each sampled phase.
+The linear-phase consumers derive the derivative data for
+phi(alpha,gamma,x)=u(alpha,gamma)*x/N; the upper-integral consumer
+allows an arbitrary bounded, possibly nonmeasurable u.
+
+Seven production modules contain 29 explicitly audited public theorems.
+There are 29 exact-signature regressions and nine additional fixtures,
+including a sin(alpha)-dependent phase, a bounded family without a
+measurability assumption, Dirac upper integration, zero phase,
+zero coefficients, the empty prefix and N=0 definitions.
+
+This realizes the slow-phase removal used in Robert–Sargos section 4,
+and composes it with the proved section 5 fourth moment
+([author-uploaded paper](https://arxiv.org/html/2307.03554v1#S4)).
+The printed variation sentence has an extra 1/N: a derivative of size
+K/N over an interval of length N gives variation of size K. The proof
+uses the correct explicit constant. The arbitrary higher-moment and
+two-window comparison in Lemma 1, the sixth-moment argument and the
+analytic C-process remain open. EPZAE-10 remains unchecked.
+
+The permanent printed Lemma 62 counterexample and the completed
+corrected powering -> Heath--Brown energy -> exact optimization ->
+all nine repaired Add-est clauses are unchanged. A/B, EPZAE-09,
+EPZAE-12 and the first two analytic beta rows are preserved.
+All 42 aggregate checkbox states are unchanged.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell module inventory,
+root imports, explicit audits, regressions and source verifiers
+synchronized. Run it and the foundation `run_lake_build.bat` after
+proof, integration, dependency or runner changes; preserve the pinned
+bytes, generated certificates and permanent counterexample.
+
+### Verification and preservation
+
+Both required commands exited 0, with zero Lean errors, warnings,
+tactic suggestions or linter failures:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  [target log](logs/tao-trudgian-yang-build-20260922-223544-52ff7f68.log); 771 production modules,
+  1245 scanned Lean files, 10103 build jobs; 6474 target and 6240 pinned
+  theorems plus five imported boundaries audited (12719 total).
+  All 29 new explicit public audits occur exactly once.
+- `cmd /c run_lake_build.bat --no-pause`:
+  [foundation log](../../logs/foundation_freeze_20260922_223848.log) and
+  [manifest](../../logs/foundation_freeze_20260922_223848.json); all six
+  stages pass, 8857 build jobs, 301 root modules and two retained
+  regressions, 7636 explicit and 14290 discovered declarations.
+
+The [source checkpoint](logs/tao-trudgian-yang-sargos-slowphase-20260922-223544-52ff7f68.json) records
+1266 physical source/configuration/tooling hashes, unchanged across
+both runs, and 11 normalized new-module/integration hashes. The 469-file
+native pin and 463-module closure pass. Relative to the previous
+checkpoint, every earlier proof file is unchanged; only root imports,
+audits, regressions and the runner inventory were extended.
+
+The graph has 297 nodes and 790 edges, without duplicates, missing
+endpoints or unclassified nodes. All 42 aggregate checkbox states
+remain unchanged (22 checked). The counterexample SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The completed repaired energy branch is unchanged; the whole goal remains open.
+
+## Robert–Sargos small-alpha sixth moment — current checkpoint
+
+`sargosQuartic_small_sixth_moment` proves, for every natural N >= 1,
+
+    integral_{alpha=0}^{1/sqrt(N)} integral_{gamma=-N^-3}^{N^-3}
+      (max_{0<=H<=N}
+        |sum_{N<n<=N+H} exp(2*pi*i*(alpha*n^2+gamma*n^4))|)^6
+      <= 44845498368 (1+log N)^5.
+
+This is the literal unweighted sum and its actual attained prefix
+maximum, not a bound for arbitrary bounded coefficients. Every
+integration and interval comparison has a proved integrability argument.
+There is no sixth-moment, counting or cancellation hypothesis.
+
+The quartic second difference is computed exactly. Its fourth-degree
+coefficient is at most 110 N^2 on the actual sample range. With
+|gamma| <= N^-3 and alpha >= 128/N, this gives positive curvature
+between alpha and 3 alpha before conversion to radians.
+The existing local discrete second-derivative theorem is applied to
+the exact prefix and gives |S| <= 64 N sqrt(alpha), for alpha <= 1.
+The conversion from the additive character to radians is proved.
+
+A two-window split suffices. On [0,128/N], the trivial |S|^2 <= N^2
+multiplies the proved maximal fourth moment. On [128/N,1/sqrt(N)],
+the curvature bound gives |S|^2 <= 4096 N^2/sqrt(N), and the fourth
+moment is bounded on the larger [0,1/sqrt(N)] window. The exact scale
+identity N*(1/sqrt(N))^2=1 removes N. This yields log^5 directly,
+without the extra logarithm from counting dyadic windows.
+
+`sargosQuartic_small_sixth_moment_log_six` gives the (1+log N)^6
+version. `sargosQuartic_small_sixth_moment_source` proves the literal
+logarithm convention for N >= 2, with absolute constant
+
+    44845498368 (1+1/log 2)^6
+
+multiplying (log N)^6. Thus the exact source small-alpha assertion
+is a proved consumer, including the logarithmic normalization bridge
+([Robert–Sargos, section 5, Lemma 3](https://arxiv.org/html/2307.03554v1#S5)).
+The cutoff 128/N is deliberately verified; the printed 16/N does not
+uniformly guarantee positive quartic curvature. Changing this internal
+cutoff changes only the absolute constant, not the public source result.
+
+Six production modules contain 22 public theorem boundaries, each with
+an explicit audit and exact-signature regression. Nine additional
+fixtures test the sign issue, exact quartic difference, verified cutoff,
+empty intervals, N=0 definitions, a literal full prefix, and the N=1/2
+moment and source-normalization specializations.
+
+The full higher-moment/window comparison, global sixth-moment bootstrap,
+quartic B/Legendre transfer and analytic C-process remain open.
+EPZAE-10 stays unchecked; this is the section 5 input, not the full
+sixth-moment theorem or C-process. All 42 aggregate checkbox states
+remain unchanged.
+
+The maximal fourth moment and parameter-dependent slow-phase upper
+and ordinary integral theorems are preserved. The permanent printed
+Lemma 62 counterexample and completed corrected powering ->
+Heath--Brown energy -> exact optimization -> all nine repaired Add-est
+clauses remain unchanged, as do A/B, EPZAE-09, EPZAE-12 and the first
+two analytic beta rows.
+
+Keep `run_tao_trudgian_yang_build.bat`, its PowerShell inventory,
+root imports, explicit audits, semantic regressions and source
+verifiers synchronized. Run it and the foundation
+`run_lake_build.bat` after proof, integration, dependency or runner
+changes. Preserve pinned bytes and the permanent counterexample.
+
+### Verification and preservation
+
+Both required commands exited 0, with zero Lean errors, warnings,
+tactic suggestions or linter failures:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  [target log](logs/tao-trudgian-yang-build-20260922-230214-7730af3c.log); 777 production modules,
+  1251 scanned Lean files, 10109 build jobs; 6516 target and 6240 pinned
+  theorems plus five imported boundaries audited (12761 total).
+  All 22 new explicit public audits occur exactly once.
+- `cmd /c run_lake_build.bat --no-pause`:
+  [foundation log](../../logs/foundation_freeze_20260922_230522.log) and
+  [manifest](../../logs/foundation_freeze_20260922_230522.json); all six
+  stages pass, 8857 build jobs, 301 root modules and two retained
+  regressions, 7636 explicit and 14290 discovered declarations.
+
+The [source checkpoint](logs/tao-trudgian-yang-sargos-sixth-20260922-230214-7730af3c.json) records
+1272 physical source/configuration/tooling hashes, unchanged across
+both runs, and ten normalized new-module/integration hashes. The 469-file
+native pin and 463-module closure pass. Relative to the previous
+checkpoint, all earlier proof files are unchanged; only root imports,
+audits, regressions and the runner inventory were extended.
+
+The graph has 299 nodes and 795 edges, without duplicates, missing
+endpoints or unclassified nodes. All 42 aggregate checkbox states
+remain unchanged (22 checked). The counterexample SHA-256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The completed repaired energy branch is unchanged; the whole goal remains open.
