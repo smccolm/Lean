@@ -30021,3 +30021,4149 @@ example : ∃ C : ℝ, 1 ≤ C ∧
   exact hh
 
 end SargosInitialSextupleRegression
+
+section SargosSymmetricDifferencingRegression
+
+open TaoTrudgianYang2025
+open scoped BigOperators ComplexConjugate
+
+example (a : ℤ → ℂ) (M : ℕ) {n : ℤ}
+    (hn : n ∈ Finset.Ico (0:ℤ) M) :
+    sargosPaddedSequence a M n = a n := by
+  exact @sargosPaddedSequence_eq a M n hn
+
+example (a : ℤ → ℂ) (M : ℕ) {n : ℤ}
+    (hn : n ∉ Finset.Ico (0:ℤ) M) :
+    sargosPaddedSequence a M n = 0 := by
+  exact @sargosPaddedSequence_zero a M n hn
+
+example (a : ℤ → ℂ) (M H h : ℕ) (hh : h < H) :
+    (∑ n ∈ Finset.Ico (-(2*(H:ℤ))) M, sargosPaddedSequence a M (n+2*h)) =
+      ∑ n ∈ Finset.Ico (0:ℤ) M, a n := by
+  exact @sargos_even_shift_sum a M H h hh
+
+example (a : ℤ → ℂ) (M H : ℕ) :
+    (H:ℝ)^2*‖∑ n ∈ Finset.Ico (0:ℤ) M, a n‖^2 ≤
+      ((M+2*H:ℕ):ℝ)*
+        ∑ n ∈ Finset.Ico (-(2*(H:ℤ))) M,
+          ‖∑ h ∈ Finset.range H, sargosPaddedSequence a M (n+2*h)‖^2 := by
+  exact @sargos_even_shift_averaging a M H
+
+example {H j h k : ℕ} :
+    (h,k) ∈ sargosSymmetricFiber H j ↔ h < H ∧ k < H ∧ h+k=j := by
+  exact @mem_sargosSymmetricFiber H j h k
+
+example {H j : ℕ} {n : ℤ} :
+    n ∈ sargosSymmetricOffsets H j ↔
+      ∃ h < H, ∃ k < H, h+k=j ∧ (h:ℤ)-k=n := by
+  exact @sargosSymmetricOffsets_mem H j n
+
+example {H j : ℕ} {n : ℤ}
+    (hn : n ∈ sargosSymmetricOffsets H j) :
+    -n ∈ sargosSymmetricOffsets H j := by
+  exact @sargosSymmetricOffsets_neg H j n hn
+
+example {H j : ℕ} {n : ℤ}
+    (hn : n ∈ sargosSymmetricOffsets H j) :
+    -(H:ℤ) < n ∧ n < H := by
+  exact @sargosSymmetricOffsets_bounds H j n hn
+
+example (φ : ℤ → ℂ) (H j : ℕ) (m : ℤ) :
+    (∑ q ∈ sargosSymmetricFiber H j, φ (m+2*q.1)*φ (m+2*q.2)) =
+      ∑ n ∈ sargosSymmetricOffsets H j, φ (m+j+n)*φ (m+j-n) := by
+  exact @sargosSymmetricFiber_sum φ H j m
+
+example (φ : ℤ → ℂ) (H : ℕ) (m : ℤ) :
+    (∑ h ∈ Finset.range H, φ (m+2*h))^2 =
+      ∑ j ∈ Finset.range (2*H),
+        ∑ n ∈ sargosSymmetricOffsets H j, φ (m+j+n)*φ (m+j-n) := by
+  exact @sargos_even_shift_square φ H m
+
+example (φ : ℤ → ℂ) (H : ℕ) (m : ℤ) :
+    ‖∑ h ∈ Finset.range H, φ (m+2*h)‖^2 ≤
+      ∑ j ∈ Finset.range (2*H),
+        ‖∑ n ∈ sargosSymmetricOffsets H j, φ (m+j+n)*φ (m+j-n)‖ := by
+  exact @sargos_even_shift_norm_sq φ H m
+
+example (H j : ℕ) :
+    sargosPositiveOffsets H j ⊆ Finset.Ioc (0:ℤ) H := by
+  exact @sargosPositiveOffsets_subset H j
+
+example (S : Finset ℤ)
+    (hS : ∀ n ∈ S, -n ∈ S) (f : ℤ → ℂ)
+    (hf : ∀ n, f (-n) = f n) :
+    (∑ n ∈ S, f n) =
+      (if (0:ℤ) ∈ S then f 0 else 0)+2*(∑ n ∈ S with 0 < n, f n) := by
+  exact @sargos_finite_even_sum S hS f hf
+
+example (φ : ℤ → ℂ) (H j : ℕ) (m : ℤ) :
+    (∑ n ∈ sargosSymmetricOffsets H j, φ (m+n)*φ (m-n)) =
+      (if (0:ℤ) ∈ sargosSymmetricOffsets H j then φ m^2 else 0)+
+        2*(∑ n ∈ sargosPositiveOffsets H j, φ (m+n)*φ (m-n)) := by
+  exact @sargosSymmetricOffsets_sum φ H j m
+
+example (φ : ℤ → ℂ) (H j : ℕ) (m : ℤ) :
+    ‖∑ n ∈ sargosSymmetricOffsets H j, φ (m+n)*φ (m-n)‖ ≤
+      ‖φ m‖^2+2*‖∑ n ∈ sargosPositiveOffsets H j, φ (m+n)*φ (m-n)‖ := by
+  exact @sargosSymmetricOffsets_norm φ H j m
+
+example (a : ℤ → ℂ) (M : ℕ)
+    {m : ℤ} (hm : m ∉ Finset.Ico (0:ℤ) M) (n : ℤ) :
+    sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n) = 0 := by
+  exact @sargosPaddedSequence_symmetric_zero a M m hm n
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℤ → A) (M L j : ℕ) (hj : j < L)
+    (hf : ∀ n, n ∉ Finset.Ico (0:ℤ) M → f n = 0) :
+    (∑ m ∈ Finset.Ico (-(L:ℤ)) M, f (m+j)) =
+      ∑ m ∈ Finset.Ico (0:ℤ) M, f m := by
+  exact @sargos_supported_sum_shift A _ f M L j hj hf
+
+example (a : ℤ → ℂ) (M L j : ℕ) (hj : j < L)
+    (S : Finset ℤ) :
+    (∑ m ∈ Finset.Ico (-(L:ℤ)) M,
+      ‖∑ n ∈ S, sargosPaddedSequence a M (m+j+n)*sargosPaddedSequence a M (m+j-n)‖) =
+      ∑ m ∈ Finset.Ico (0:ℤ) M,
+        ‖∑ n ∈ S, sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n)‖ := by
+  exact @sargos_symmetric_sum_shift a M L j hj S
+
+example (a : ℤ → ℂ) (M : ℕ) :
+    (∑ m ∈ Finset.Ico (0:ℤ) M, ‖sargosPaddedSequence a M m‖^2) =
+      ∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2 := by
+  exact @sargos_padded_diagonal a M
+
+example (a : ℤ → ℂ) (M H j : ℕ) :
+    0 ≤ sargosPositiveCorrelation a M H j := by
+  exact @sargosPositiveCorrelation_nonneg a M H j
+
+example (a : ℤ → ℂ) (M H : ℕ) :
+    (H:ℝ)^2*‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^2 ≤
+      ((M:ℝ)+2*H)*∑ j ∈ Finset.range (2*H),
+        ((∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)+2*sargosPositiveCorrelation a M H j) := by
+  exact @sargos_symmetric_averaging a M H
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ∃ j < 2*H,
+      (H:ℝ)*‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^2 ≤
+        6*M*((∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)+
+          2*sargosPositiveCorrelation a M H j) := by
+  exact @sargos_symmetric_differencing_scaled a M H hH hHM
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ∃ j < 2*H,
+      ‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^2 ≤
+        (6*M/(H:ℝ))*((∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)+
+          2*sargosPositiveCorrelation a M H j) := by
+  exact @sargos_symmetric_differencing a M H hH hHM
+
+example {ι : Type*} (S : Finset ι) (f : ι → ℂ) :
+    ‖∑ i ∈ S, f i‖^2 = ∑ q ∈ S ×ˢ S, (f q.1*conj (f q.2)).re := by
+  exact @sargos_finite_gram ι S f
+
+example {ι κ A : Type*}
+    [DecidableEq ι] [DecidableEq κ] [AddCommMonoid A]
+    (T : Finset ι) (K : Finset κ) (v : ι → κ)
+    (hv : ∀ t ∈ T, v t ∈ K) (f : ι × ι → A) :
+    (∑ k ∈ K, ∑ q ∈ (T.filter (fun t => v t=k)) ×ˢ
+      (T.filter (fun t => v t=k)), f q) =
+      ∑ q ∈ (T ×ˢ T).filter (fun q => v q.1=v q.2), f q := by
+  exact @sargos_frequency_diagonal_sum ι κ A _ _ _ T K v hv f
+
+example {ι κ : Type*}
+    [DecidableEq ι] [DecidableEq κ]
+    (T : Finset ι) (K : Finset κ) (v : ι → κ)
+    (hv : ∀ t ∈ T, v t ∈ K) (f : ι → ℂ) :
+    (∑ k ∈ K, ‖∑ t ∈ T with v t=k, f t‖^2) =
+      ∑ q ∈ (T ×ˢ T).filter (fun q => v q.1=v q.2),
+        (f q.1*conj (f q.2)).re := by
+  exact @sargos_grouped_gram ι κ _ _ T K v hv f
+
+example {ι κ μ : Type*}
+    [DecidableEq ι] [DecidableEq κ] [DecidableEq μ]
+    (T : Finset ι) (K : Finset κ) (J : Finset μ) (v : ι → κ)
+    (hv : ∀ t ∈ T, v t ∈ K) (F : μ → ι → ℂ) :
+    (∑ m ∈ J, ‖∑ t ∈ T, F m t‖)^2 ≤
+      (J.card:ℝ)*K.card*
+        ∑ q ∈ (T ×ˢ T).filter (fun q => v q.1=v q.2),
+          ‖∑ m ∈ J, F m q.1*conj (F m q.2)‖ := by
+  exact @sargos_grouped_second_moment ι κ μ _ _ _ T K J v hv F
+
+example (a : ℤ → ℂ) (M H j : ℕ) (m : ℤ) :
+    (∑ n ∈ Finset.Ioc (0:ℤ) H, sargosSymmetricFactor a M H j m n) =
+      ∑ n ∈ sargosPositiveOffsets H j,
+        sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n) := by
+  exact @sargosSymmetricFactor_sum a M H j m
+
+example (a : ℤ → ℂ) (M H j : ℕ) (m : ℤ) :
+    (∑ n ∈ sargosPositiveOffsets H j,
+      sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n))^3 =
+      ∑ t : SargosInitialMomentTuple H 3, sargosSymmetricTriple a M H j m t := by
+  exact @sargos_positive_symmetric_cube a M H j m
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) :
+    0 ≤ sargosInitialTuplePower 2 t ∧ sargosInitialTuplePower 2 t ≤ 3*(H:ℤ)^2 := by
+  exact @sargosInitialTuple_square_bounds H t
+
+example (H : ℕ) :
+    ((Finset.Icc (0:ℤ) (3*(H:ℤ)^2)).card:ℝ) = 3*(H:ℝ)^2+1 := by
+  exact @sargos_square_frequency_card H
+
+example {H : ℕ} (hH : 1 ≤ H) :
+    ((Finset.Icc (0:ℤ) (3*(H:ℤ)^2)).card:ℝ) ≤ 4*(H:ℝ)^2 := by
+  exact @sargos_square_frequency_card_le H hH
+
+example (a : ℤ → ℂ) (M H j : ℕ) :
+    0 ≤ sargosSymmetricSextupleCorrelation a M H j := by
+  exact @sargosSymmetricSextupleCorrelation_nonneg a M H j
+
+example (a : ℤ → ℂ) (M H j : ℕ) :
+    (sargosPositiveCorrelation a M H j)^3 ≤
+      (M:ℝ)^2*∑ m ∈ Finset.Ico (0:ℤ) M,
+        ‖∑ t : SargosInitialMomentTuple H 3, sargosSymmetricTriple a M H j m t‖ := by
+  exact @sargosPositiveCorrelation_cube a M H j
+
+example (a : ℤ → ℂ) (M H j : ℕ) :
+    (∑ m ∈ Finset.Ico (0:ℤ) M,
+      ‖∑ t : SargosInitialMomentTuple H 3, sargosSymmetricTriple a M H j m t‖)^2 ≤
+      (M:ℝ)*((Finset.Icc (0:ℤ) (3*(H:ℤ)^2)).card:ℝ)*
+        sargosSymmetricSextupleCorrelation a M H j := by
+  exact @sargosSymmetricTriple_grouped_second a M H j
+
+example (a : ℤ → ℂ) (M : ℕ) {H : ℕ}
+    (hH : 1 ≤ H) (j : ℕ) :
+    (sargosPositiveCorrelation a M H j)^6 ≤
+      4*(M:ℝ)^5*(H:ℝ)^2*sargosSymmetricSextupleCorrelation a M H j := by
+  exact @sargosPositiveCorrelation_sixth a M H hH j
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ∃ j < 2*H,
+      (H:ℝ)^6*‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^12 ≤
+        1492992*(M:ℝ)^6*(∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)^6+
+        382205952*(M:ℝ)^11*(H:ℝ)^2*sargosSymmetricSextupleCorrelation a M H j := by
+  exact @sargos_symmetric_twelfth_scaled a M H hH hHM
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ∃ j < 2*H,
+      ‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^12 ≤
+        1492992*((M:ℝ)/H)^6*(∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)^6+
+        (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosSymmetricSextupleCorrelation a M H j := by
+  exact @sargos_symmetric_twelfth a M H hH hHM
+
+example (a : ℤ → ℂ) (M H : ℕ) :
+    0 ≤ sargosFullSextupleCorrelation a M H := by
+  exact @sargosFullSextupleCorrelation_nonneg a M H
+
+example (a : ℤ → ℂ) (M H j : ℕ) (m : ℤ)
+    (t : SargosInitialMomentTuple H 3) :
+    sargosSymmetricTriple a M H j m t =
+      if (∀ i, (t i:ℤ) ∈ sargosPositiveOffsets H j)
+      then sargosFullSymmetricTriple a M H m t else 0 := by
+  exact @sargosSymmetricTriple_indicator a M H j m t
+
+example (a : ℤ → ℂ) (M H j : ℕ) :
+    sargosSymmetricSextupleCorrelation a M H j ≤ sargosFullSextupleCorrelation a M H := by
+  exact @sargosSymmetricSextupleCorrelation_le_full a M H j
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^12 ≤
+      1492992*((M:ℝ)/H)^6*(∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)^6+
+      (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosFullSextupleCorrelation a M H := by
+  exact @sargos_finite_sextuple_differencing a M H hH hHM
+
+/- Concrete support, parity, conjugation and endpoint fixtures. -/
+example (a : ℤ → ℂ) (n : ℤ) : sargosPaddedSequence a 0 n = 0 := by
+  simp [sargosPaddedSequence]
+
+example (a : ℤ → ℂ) : sargosPaddedSequence a 3 0 = a 0 := by
+  apply sargosPaddedSequence_eq
+  norm_num
+
+example (a : ℤ → ℂ) : sargosPaddedSequence a 3 3 = 0 := by
+  apply sargosPaddedSequence_zero
+  norm_num
+
+example (j : ℕ) : sargosSymmetricOffsets 0 j = ∅ := by
+  simp [sargosSymmetricOffsets,sargosSymmetricFiber]
+
+example : sargosSymmetricOffsets 1 0 = {0} := by decide
+example : sargosSymmetricOffsets 3 1 = {-1,1} := by decide
+example : sargosSymmetricOffsets 3 2 = {-2,0,2} := by decide
+example : sargosPositiveOffsets 3 2 = {2} := by decide
+example : sargosSymmetricOffsets 3 5 = ∅ := by decide
+
+example : (∑ _h ∈ Finset.range 1, Complex.I)^2 = -1 := by
+  simp
+
+example (a : ℤ → ℂ) :
+    sargosPaddedSequence a 1 (0+1)*sargosPaddedSequence a 1 (0-1) = 0 := by
+  simp [sargosPaddedSequence]
+
+example (a : ℤ → ℂ) :
+    ∃ j < 2, ‖∑ m ∈ Finset.Ico (0:ℤ) 1, a m‖^2 ≤
+      (6:ℝ)*((∑ m ∈ Finset.Ico (0:ℤ) 1, ‖a m‖^2)+
+        2*sargosPositiveCorrelation a 1 1 j) := by
+  simpa using sargos_symmetric_differencing a (M := 1) (H := 1) (by norm_num) (by norm_num)
+
+example : ((Finset.Icc (0:ℤ) 3).card:ℝ) = 4 := by
+  norm_num
+  rfl
+
+example : sargosSquareDiagonal 0 = ∅ := by
+  apply Finset.eq_empty_iff_forall_notMem.mpr
+  intro q _hq
+  have h : (q.1 (0 : Fin 3) : ℤ) ∈ Finset.Ioc (0:ℤ) 0 :=
+    (q.1 (0 : Fin 3)).property
+  have h' := Finset.mem_Ioc.mp h
+  omega
+
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    (t,t) ∈ sargosSquareDiagonal H := by
+  simp [sargosSquareDiagonal]
+
+example (M H : ℕ) : sargosFullSextupleCorrelation (fun _ => 0) M H = 0 := by
+  simp [sargosFullSextupleCorrelation,sargosFullSymmetricTriple,sargosPaddedSequence]
+
+example :
+    (Complex.I*conj Complex.I).re = 1 := by
+  norm_num
+
+example (a : ℤ → ℂ) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) 3, a m‖^12 ≤
+      1492992*((3:ℝ)/2)^6*(∑ m ∈ Finset.Ico (0:ℤ) 3, ‖a m‖^2)^6+
+      (382205952*(3:ℝ)^11/(2:ℝ)^4)*sargosFullSextupleCorrelation a 3 2 := by
+  exact sargos_finite_sextuple_differencing a (by norm_num) (by norm_num)
+
+end SargosSymmetricDifferencingRegression
+
+section SargosSourceTaylorRegression
+
+open TaoTrudgianYang2025 GafniTao Set MeasureTheory
+open scoped BigOperators ComplexConjugate ContDiff
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℤ → A) (M : ℕ) :
+    (∑ m ∈ Finset.Ico (0:ℤ) M, f (m+1)) = ∑ m ∈ Finset.Ioc (0:ℤ) M, f m := by
+  exact @sargos_sum_Ico_add_one A _ f M
+
+example (a : ℤ → ℂ) (M : ℕ) (m : ℤ) :
+    sargosPaddedSequence (fun n => a (n+1)) M m = sargosSourceSequence a M (m+1) := by
+  exact @sargosPaddedSequence_source_shift a M m
+
+example (a : ℤ → ℂ) (M H : ℕ) (m : ℤ)
+    (t : SargosInitialMomentTuple H 3) :
+    sargosFullSymmetricTriple (fun n => a (n+1)) M H m t =
+      sargosSourceSymmetricTriple a M H (m+1) t := by
+  exact @sargosFullSymmetricTriple_source_shift a M H m t
+
+example (a : ℤ → ℂ) (M H : ℕ) :
+    sargosFullSextupleCorrelation (fun n => a (n+1)) M H =
+      sargosSourceSextupleCorrelation a M H := by
+  exact @sargosFullSextupleCorrelation_source_shift a M H
+
+example (a : ℤ → ℂ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ‖∑ m ∈ Finset.Ioc (0:ℤ) M, a m‖^12 ≤
+      1492992*((M:ℝ)/H)^6*(∑ m ∈ Finset.Ioc (0:ℤ) M, ‖a m‖^2)^6+
+      (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosSourceSextupleCorrelation a M H := by
+  exact @sargos_source_sextuple_differencing a M H hH hHM
+
+example (a : ℤ → ℂ) (M : ℕ)
+    (m n : ℤ) (hn : 0 ≤ n) :
+    sargosSourceSequence a M (m+n)*sargosSourceSequence a M (m-n) =
+      if m ∈ Finset.Icc (n+1) ((M:ℤ)-n) then a (m+n)*a (m-n) else 0 := by
+  exact @sargosSourceSequence_symmetric_support a M m n hn
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    finiteTaylorPolynomial f 5 m (m+n)+finiteTaylorPolynomial f 5 m (m-n) =
+      2*f m+n^2*iteratedDeriv 2 f m+(n^4/12)*iteratedDeriv 4 f m := by
+  exact @sargos_symmetric_taylor_polynomial f m n
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    sargosSymmetricRemainder f n m =
+      (f (m+n)-finiteTaylorPolynomial f 5 m (m+n))+
+      (f (m-n)-finiteTaylorPolynomial f 5 m (m-n)) := by
+  exact @sargosSymmetricRemainder_eq_errors f m n
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    f (m+n)+f (m-n) =
+      2*f m+n^2*iteratedDeriv 2 f m+(n^4/12)*iteratedDeriv 4 f m+
+        sargosSymmetricRemainder f n m := by
+  exact @sargos_symmetric_taylor_identity f m n
+
+example {f : ℝ → ℝ} {m n B : ℝ}
+    (hn : 0 ≤ n)
+    (hf : ∀ x ∈ Icc (m-n) (m+n), ContDiffAt ℝ ∞ f x)
+    (hB : ∀ x ∈ Icc (m-n) (m+n), |iteratedDeriv 6 f x| ≤ B) :
+    |sargosSymmetricRemainder f n m| ≤ B*n^6/360 := by
+  exact @abs_sargosSymmetricRemainder_le f m n B hn hf hB
+
+example {f : ℝ → ℝ} {m n : ℝ}
+    (hp : ContDiffAt ℝ ∞ f (m+n)) (hm : ContDiffAt ℝ ∞ f (m-n))
+    (hc : ContDiffAt ℝ ∞ f m) :
+    ContDiffAt ℝ ∞ (sargosSymmetricRemainder f n) m := by
+  exact @sargosSymmetricRemainder_contDiffAt f m n hp hm hc
+
+example {f : ℝ → ℝ} {m n : ℝ}
+    (hp : ContDiffAt ℝ ∞ f (m+n)) (hm : ContDiffAt ℝ ∞ f (m-n))
+    (hc : ContDiffAt ℝ ∞ f m) (j : ℕ) :
+    iteratedDeriv j (sargosSymmetricRemainder f n) m =
+      sargosSymmetricRemainder (iteratedDeriv j f) n m := by
+  exact @iteratedDeriv_sargosSymmetricRemainder f m n hp hm hc j
+
+example {f : ℝ → ℝ} {m n B : ℝ} (hn : 0 ≤ n)
+    (hf : ∀ x ∈ Icc (m-n) (m+n), ContDiffAt ℝ ∞ f x)
+    (j : ℕ)
+    (hB : ∀ x ∈ Icc (m-n) (m+n), |iteratedDeriv (j+6) f x| ≤ B) :
+    |iteratedDeriv j (sargosSymmetricRemainder f n) m| ≤ B*n^6/360 := by
+  exact @abs_iteratedDeriv_sargosSymmetricRemainder_le f m n B hn hf j hB
+
+example {f : ℝ → ℝ} {a x : ℝ}
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ ∞ f y) (n : ℕ) :
+    f x-finiteTaylorPolynomial f n a x =
+      ∫ t in a..x, ((x-t)^n/(n.factorial:ℝ))*iteratedDeriv (n+1) f t := by
+  exact @sargos_taylor_integral_remainder f a x hf n
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    finiteTaylorPolynomial (fun x => f (m+x)) 5 0 n =
+      finiteTaylorPolynomial f 5 m (m+n) := by
+  exact @sargos_taylor_polynomial_shift f m n
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    finiteTaylorPolynomial (fun x => f (m-x)) 5 0 n =
+      finiteTaylorPolynomial f 5 m (m-n) := by
+  exact @sargos_taylor_polynomial_reflect f m n
+
+example {f : ℝ → ℝ} {m n : ℝ}
+    (hn : 0 ≤ n)
+    (hf : ∀ x ∈ Icc (m-n) (m+n), ContDiffAt ℝ ∞ f x) :
+    sargosSymmetricRemainder f n m =
+      (1/120:ℝ)*∫ t in (0:ℝ)..n,
+        (iteratedDeriv 6 f (m+t)+iteratedDeriv 6 f (m-t))*(n-t)^5 := by
+  exact @sargosSymmetricRemainder_eq_integral f m n hn hf
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) (i : Fin 3) :
+    0 < ((t i:ℤ):ℝ) ∧ ((t i:ℤ):ℝ) ≤ (H:ℝ) := by
+  exact @sargos_tuple_coordinate_bounds H t i
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) (i : Fin 3) (m : ℝ) :
+    Icc (m-((t i:ℤ):ℝ)) (m+((t i:ℤ):ℝ)) ⊆ Icc (m-(H:ℝ)) (m+(H:ℝ)) := by
+  exact @sargos_tuple_segment_subset H t i m
+
+example {H : ℕ} {f : ℝ → ℝ} {m : ℝ}
+    (hf : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), ContDiffAt ℝ ∞ f x)
+    (t : SargosInitialMomentTuple H 3) :
+    ContDiffAt ℝ ∞ (sargosTupleRemainder f t) m := by
+  exact @sargosTupleRemainder_contDiffAt H f m hf t
+
+example {H : ℕ} {f : ℝ → ℝ} {m : ℝ}
+    (hf : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), ContDiffAt ℝ ∞ f x)
+    (t : SargosInitialMomentTuple H 3) (j : ℕ) :
+    iteratedDeriv j (sargosTupleRemainder f t) m =
+      sargosTupleRemainder (iteratedDeriv j f) t m := by
+  exact @iteratedDeriv_sargosTupleRemainder H f m hf t j
+
+example {H : ℕ} {f : ℝ → ℝ} {m B : ℝ}
+    (hf : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), ContDiffAt ℝ ∞ f x)
+    (hB : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), |iteratedDeriv 6 f x| ≤ B)
+    (t : SargosInitialMomentTuple H 3) :
+    |sargosTupleRemainder f t m| ≤ B*(H:ℝ)^6/120 := by
+  exact @abs_sargosTupleRemainder_le H f m B hf hB t
+
+example {H : ℕ} {f : ℝ → ℝ} {m : ℝ}
+    (hf : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), ContDiffAt ℝ ∞ f x)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (j : ℕ) :
+    iteratedDeriv j (sargosSextupleRemainder f q) m =
+      sargosSextupleRemainder (iteratedDeriv j f) q m := by
+  exact @iteratedDeriv_sargosSextupleRemainder H f m hf q j
+
+example {H : ℕ} {f : ℝ → ℝ} {m B : ℝ}
+    (hf : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), ContDiffAt ℝ ∞ f x)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (j : ℕ)
+    (hB : ∀ x ∈ Icc (m-(H:ℝ)) (m+(H:ℝ)), |iteratedDeriv (j+6) f x| ≤ B) :
+    |iteratedDeriv j (sargosSextupleRemainder f q) m| ≤ B*(H:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosSextupleRemainder_le H f m B hf q j hB
+
+example {H : ℕ} (f : ℝ → ℝ)
+    (t : SargosInitialMomentTuple H 3) (m : ℝ) :
+    sargosSymmetricTuplePhase f t m =
+      6*f m+iteratedDeriv 2 f m*(sargosInitialTuplePower 2 t:ℝ)+
+        (iteratedDeriv 4 f m/12)*(sargosInitialTuplePower 4 t:ℝ)+
+        sargosTupleRemainder f t m := by
+  exact @sargosSymmetricTuplePhase_taylor H f t m
+
+example {H : ℕ} (f : ℝ → ℝ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosSquareDiagonal H) (m : ℝ) :
+    sargosSymmetricTuplePhase f q.1 m-sargosSymmetricTuplePhase f q.2 m =
+      (((sargosInitialTuplePower 4 q.1-sargosInitialTuplePower 4 q.2:ℤ):ℝ)/12)*
+        iteratedDeriv 4 f m+sargosSextupleRemainder f q m := by
+  exact @sargos_square_diagonal_phase H f q hq m
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) (i : Fin 3) :
+    (t i:ℤ) ≤ sargosTupleRadius t := by
+  exact @sargos_tuple_coordinate_le_radius H t i
+
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    1 ≤ sargosTupleRadius t ∧ sargosTupleRadius t ≤ H := by
+  exact @sargosTupleRadius_bounds H t
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) (M : ℕ) (m : ℤ) :
+    m ∈ Finset.Icc (sargosTupleRadius t+1) ((M:ℤ)-sargosTupleRadius t) ↔
+      ∀ i, m ∈ Finset.Icc ((t i:ℤ)+1) ((M:ℤ)-(t i:ℤ)) := by
+  exact @sargos_tuple_interval_iff H t M m
+
+example {H : ℕ} (a : ℤ → ℂ)
+    (M : ℕ) (m : ℤ) (t : SargosInitialMomentTuple H 3) :
+    sargosSourceSymmetricTriple a M H m t =
+      if m ∈ Finset.Icc (sargosTupleRadius t+1) ((M:ℤ)-sargosTupleRadius t)
+      then ∏ i, a (m+(t i:ℤ))*a (m-(t i:ℤ)) else 0 := by
+  exact @sargosSourceSymmetricTriple_support H a M m t
+
+example {H : ℕ} (f : ℝ → ℝ)
+    (M : ℕ) (m : ℤ) (t : SargosInitialMomentTuple H 3) :
+    sargosSourceSymmetricTriple (fun n => fordAdditiveCharacter (f n)) M H m t =
+      if m ∈ Finset.Icc (sargosTupleRadius t+1) ((M:ℤ)-sargosTupleRadius t)
+      then fordAdditiveCharacter (sargosSymmetricTuplePhase f t m) else 0 := by
+  exact @sargosSourceSymmetricTriple_character H f M m t
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (m : ℤ) :
+    m ∈ sargosSextupleInterval M q ↔
+      m ∈ Finset.Icc (sargosTupleRadius q.1+1) ((M:ℤ)-sargosTupleRadius q.1) ∧
+      m ∈ Finset.Icc (sargosTupleRadius q.2+1) ((M:ℤ)-sargosTupleRadius q.2) := by
+  exact @mem_sargosSextupleInterval H M q m
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosSextupleInterval M q ⊆ Finset.Ioc (0:ℤ) M := by
+  exact @sargosSextupleInterval_subset H M q
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosSquareDiagonal H) (m : ℤ) :
+    sargosSourceSymmetricTriple (fun n => fordAdditiveCharacter (f n)) M H m q.1*
+      conj (sargosSourceSymmetricTriple (fun n => fordAdditiveCharacter (f n)) M H m q.2) =
+      if m ∈ sargosSextupleInterval M q
+      then fordAdditiveCharacter (sargosSextuplePhase f q m) else 0 := by
+  exact @sargos_source_sextuple_character H f M q hq m
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosSquareDiagonal H) :
+    (∑ m ∈ Finset.Ioc (0:ℤ) M,
+      sargosSourceSymmetricTriple (fun n => fordAdditiveCharacter (f n)) M H m q.1*
+        conj (sargosSourceSymmetricTriple (fun n => fordAdditiveCharacter (f n)) M H m q.2)) =
+      ∑ m ∈ sargosSextupleInterval M q, fordAdditiveCharacter (sargosSextuplePhase f q m) := by
+  exact @sargos_source_sextuple_sum H f M q hq
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    sargosSourceSextupleCorrelation (fun n => fordAdditiveCharacter (f n)) M H =
+      ∑ q ∈ sargosSquareDiagonal H,
+        ‖∑ m ∈ sargosSextupleInterval M q, fordAdditiveCharacter (sargosSextuplePhase f q m)‖ := by
+  exact @sargosSourceSextupleCorrelation_eq_phase f M H
+
+example (f : ℝ → ℝ) {M H : ℕ}
+    (hH : 1 ≤ H) (hHM : H ≤ M) :
+    ‖∑ m ∈ Finset.Ioc (0:ℤ) M, fordAdditiveCharacter (f m)‖^12 ≤
+      1492992*((M:ℝ)/H)^6*(M:ℝ)^6+
+      (382205952*(M:ℝ)^11/(H:ℝ)^4)*
+        ∑ q ∈ sargosSquareDiagonal H,
+          ‖∑ m ∈ sargosSextupleInterval M q, fordAdditiveCharacter (sargosSextuplePhase f q m)‖ := by
+  exact @sargos_character_sextuple_differencing f M H hH hHM
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    1 ≤ sargosSextupleRadius q ∧ sargosSextupleRadius q ≤ H := by
+  exact @sargosSextupleRadius_bounds H q
+
+example {H : ℕ}
+    {f : ℝ → ℝ} {m B : ℝ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ x ∈ Icc (m-(sargosSextupleRadius q:ℝ)) (m+(sargosSextupleRadius q:ℝ)),
+      ContDiffAt ℝ ∞ f x) (j : ℕ)
+    (hB : ∀ x ∈ Icc (m-(sargosSextupleRadius q:ℝ)) (m+(sargosSextupleRadius q:ℝ)),
+      |iteratedDeriv (j+6) f x| ≤ B) :
+    |iteratedDeriv j (sargosSextupleRemainder f q) m| ≤ B*(sargosSextupleRadius q:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosSextupleRemainder_le_radius H f m B q hf j hB
+
+example {H : ℕ}
+    {f : ℝ → ℝ} {m B : ℝ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ x ∈ Icc (m-(sargosSextupleRadius q:ℝ)) (m+(sargosSextupleRadius q:ℝ)),
+      ContDiffAt ℝ ∞ f x) (j : ℕ)
+    (hB : ∀ x ∈ Icc (m-(sargosSextupleRadius q:ℝ)) (m+(sargosSextupleRadius q:ℝ)),
+      |iteratedDeriv (j+6) f x| ≤ B) :
+    |iteratedDeriv j (sargosSextupleRemainder f q) m| ≤ B*(H:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosSextupleRemainder_le_local H f m B q hf j hB
+
+example {H M : ℕ}
+    {f : ℝ → ℝ} {m B : ℝ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ x ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f x) (j : ℕ)
+    (hB : ∀ x ∈ Ioo (1:ℝ) M, |iteratedDeriv (j+6) f x| ≤ B)
+    (hm : m ∈ Ioo ((sargosSextupleRadius q:ℝ)+1) ((M:ℝ)-(sargosSextupleRadius q:ℝ))) :
+    |iteratedDeriv j (sargosSextupleRemainder f q) m| ≤ B*(H:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosSextupleRemainder_source_interior H M f m B q hf j hB hm
+
+example {H : ℕ}
+    (t : SargosInitialMomentTuple H 3) (k : ℕ) :
+    0 ≤ sargosInitialTuplePower k t ∧ sargosInitialTuplePower k t ≤ 3*(H:ℤ)^k := by
+  exact @sargosInitialTuplePower_bounds H t k
+
+example (H : ℕ) :
+    sargosSquareDiagonal H ⊆ sargosInitialSextupleWindow H (-3*(H:ℝ)^4) (6*(H:ℝ)^4) := by
+  exact @sargosSquareDiagonal_subset_window H
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H →
+      ((sargosSquareDiagonal H).card:ℝ) ≤ C*(H:ℝ)^(4+ε) := by
+  exact @sargosSquareDiagonal_card_bound ε hε
+
+example (f : ℤ → ℂ) (a b : ℤ)
+    (hf : ∀ n ∈ Finset.Icc a b, ‖f n‖ ≤ 1) :
+    ‖(∑ n ∈ Finset.Icc a b, f n)-(∑ n ∈ Finset.Ioo a b, f n)‖ ≤ 2 := by
+  exact @sargos_interval_endpoint_loss f a b hf
+
+example (f : ℤ → ℂ) (a b : ℤ)
+    (hf : ∀ n ∈ Finset.Icc a b, ‖f n‖ ≤ 1) :
+    ‖∑ n ∈ Finset.Icc a b, f n‖ ≤ ‖∑ n ∈ Finset.Ioo a b, f n‖+2 := by
+  exact @sargos_interval_norm_le_interior f a b hf
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    0 ≤ sargosInteriorSextupleCorrelation f M H := by
+  exact @sargosInteriorSextupleCorrelation_nonneg f M H
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    sargosSourceSextupleCorrelation (fun n => fordAdditiveCharacter (f n)) M H ≤
+      sargosInteriorSextupleCorrelation f M H+2*((sargosSquareDiagonal H).card:ℝ) := by
+  exact @sargosSourceSextupleCorrelation_le_interior f M H
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H → ∀ M : ℕ, ∀ f : ℝ → ℝ,
+      sargosSourceSextupleCorrelation (fun n => fordAdditiveCharacter (f n)) M H ≤
+        sargosInteriorSextupleCorrelation f M H+C*(H:ℝ)^(4+ε) := by
+  exact @sargosSourceSextupleCorrelation_interior_error ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H → ∀ M : ℕ, H ≤ M → ∀ f : ℝ → ℝ,
+      ‖∑ m ∈ Finset.Ioc (0:ℤ) M, fordAdditiveCharacter (f m)‖^12 ≤
+        1492992*((M:ℝ)/H)^6*(M:ℝ)^6+
+        (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosInteriorSextupleCorrelation f M H+
+        C*(M:ℝ)^11*(H:ℝ)^ε := by
+  exact @sargos_character_interior_differencing ε hε
+
+/- Source endpoints, exact polynomial cancellation and actual consumer fixtures. -/
+example (a : ℤ → ℂ) (n : ℤ) : sargosSourceSequence a 0 n = 0 := by
+  simp [sargosSourceSequence]
+
+example (a : ℤ → ℂ) : sargosSourceSequence a 3 0 = 0 := by
+  simp [sargosSourceSequence]
+
+example (a : ℤ → ℂ) : sargosSourceSequence a 3 3 = a 3 := by
+  simp [sargosSourceSequence]
+
+example (a : ℤ → ℂ) :
+    sargosPaddedSequence (fun n => a (n+1)) 3 2 = a 3 := by
+  rw [sargosPaddedSequence_source_shift]
+  norm_num [sargosSourceSequence]
+
+example (f : ℝ → ℝ) (m : ℝ) : sargosSymmetricRemainder f 0 m = 0 := by
+  simp [sargosSymmetricRemainder]
+  ring
+
+example (c m n : ℝ) : sargosSymmetricRemainder (fun _ => c) n m = 0 := by
+  simp [sargosSymmetricRemainder,iteratedDeriv_const]
+  ring
+
+example (m n : ℝ) : sargosSymmetricRemainder (fun x => x^4) n m = 0 := by
+  norm_num [sargosSymmetricRemainder,iteratedDeriv_pow]
+  ring
+
+example (n : ℝ) : sargosSymmetricRemainder (fun x => x^6) n 0 = 2*n^6 := by
+  norm_num [sargosSymmetricRemainder,iteratedDeriv_pow]
+  ring
+
+example (f : ℝ → ℝ) (m : ℝ) :
+    (1/120:ℝ)*(∫ t in (0:ℝ)..0,
+      (iteratedDeriv 6 f (m+t)+iteratedDeriv 6 f (m-t))*(0-t)^5) = 0 := by
+  simp
+
+example (f : ℝ → ℝ) (m : ℝ) :
+    finiteTaylorPolynomial (fun x => f (m-x)) 5 0 0 = f m := by
+  simp [finiteTaylorPolynomial]
+
+example (f : ℝ → ℝ) (m n : ℝ) :
+    iteratedDeriv 0 (sargosSymmetricRemainder f n) m = sargosSymmetricRemainder f n m := by
+  rfl
+
+example {H : ℕ} (f : ℝ → ℝ) (t : SargosInitialMomentTuple H 3) (m : ℝ) :
+    sargosSextupleRemainder f (t,t) m = 0 := by
+  simp [sargosSextupleRemainder]
+
+example {H : ℕ} (f : ℝ → ℝ) (t : SargosInitialMomentTuple H 3) (m : ℝ) :
+    sargosSextuplePhase f (t,t) m = 0 := by
+  simp [sargosSextuplePhase,sargosSextupleRemainder]
+
+example (t : SargosInitialMomentTuple 1 3) : sargosTupleRadius t = 1 := by
+  have h := sargosTupleRadius_bounds t
+  norm_num at h
+  omega
+
+example (t : SargosInitialMomentTuple 1 3) : sargosSextupleInterval 3 (t,t) = {2} := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at h; omega
+  rw [sargosSextupleInterval,hr]
+  decide
+
+example (t : SargosInitialMomentTuple 1 3) : sargosSextupleInterior 3 (t,t) = ∅ := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at h; omega
+  rw [sargosSextupleInterior,hr]
+  decide
+
+example (f : ℤ → ℂ) (a : ℤ) (hf : ‖f a‖ ≤ 1) :
+    ‖(∑ n ∈ Finset.Icc a a, f n)-(∑ n ∈ Finset.Ioo a a, f n)‖ ≤ 2 := by
+  apply sargos_interval_endpoint_loss
+  intro n hn
+  have he : n=a := by simpa using hn
+  simpa only [he] using hf
+
+example : ∃ C : ℝ, 1 ≤ C ∧ ((sargosSquareDiagonal 1).card:ℝ) ≤ C := by
+  obtain ⟨C,hC,h⟩ := sargosSquareDiagonal_card_bound 1 (by norm_num)
+  exact ⟨C,hC,by simpa using h 1 (by norm_num)⟩
+
+example (f : ℝ → ℝ) : ∃ C : ℝ, 1 ≤ C ∧
+    ‖∑ m ∈ Finset.Ioc (0:ℤ) 3, fordAdditiveCharacter (f m)‖^12 ≤
+      1492992*((3:ℝ)/2)^6*(3:ℝ)^6+
+      (382205952*(3:ℝ)^11/(2:ℝ)^4)*sargosInteriorSextupleCorrelation f 3 2+
+      C*(3:ℝ)^11*2 := by
+  obtain ⟨C,hC,h⟩ := sargos_character_interior_differencing 1 (by norm_num)
+  refine ⟨C,hC,?_⟩
+  simpa only [Real.rpow_one] using h 2 (by norm_num) 3 (by norm_num) f
+
+example (f : ℤ → ℂ) :
+    ‖(∑ n ∈ Finset.Icc (3:ℤ) 1, f n)-(∑ n ∈ Finset.Ioo (3:ℤ) 1, f n)‖ = 0 := by
+  norm_num
+
+end SargosSourceTaylorRegression
+
+namespace SargosRemainderExtensionRegression
+
+open TaoTrudgianYang2025 GafniTao Set MeasureTheory
+open scoped BigOperators ContDiff
+
+example {f : ℝ → ℝ} {l r c d x : ℝ}
+    (hf : ∀ y ∈ Ioo l r, ContDiffAt ℝ ∞ f (c*y+d))
+    (hx : x ∈ Ioo l r) (n : ℕ) :
+    iteratedDeriv n (fun y => f (c*y+d)) x =
+      c^n*iteratedDeriv n f (c*x+d) := by
+  exact @sargos_iteratedDeriv_comp_affine_local f l r c d x hf hx n
+
+example {H : ℕ} {f : ℝ → ℝ} {m : ℝ}
+    (t : SargosInitialMomentTuple H 3)
+    (hp : ∀ i, ContDiffAt ℝ ∞ f (m+((t i:ℤ):ℝ)))
+    (hm : ∀ i, ContDiffAt ℝ ∞ f (m-((t i:ℤ):ℝ)))
+    (hc : ContDiffAt ℝ ∞ f m) :
+    ContDiffAt ℝ ∞ (sargosTupleRemainder f t) m := by
+  exact @sargosTupleRemainder_contDiffAt_of_points H f m t hp hm hc
+
+example {H M : ℕ}
+    {f : ℝ → ℝ} {m : ℝ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ x ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f x)
+    (hm : m ∈ Ioo ((sargosSextupleRadius q:ℝ)+1) ((M:ℝ)-(sargosSextupleRadius q:ℝ))) :
+    ContDiffAt ℝ ∞ (sargosSextupleRemainder f q) m := by
+  exact @sargosSextupleRemainder_contDiffAt_source H M f m q hf hm
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (x : ℝ) :
+    x ∈ Ioo (sargosRemainderLeft M q) (sargosRemainderRight M q) ↔
+      (M:ℝ)*x ∈ Ioo ((sargosSextupleRadius q:ℝ)+1)
+        ((M:ℝ)-(sargosSextupleRadius q:ℝ)) := by
+  exact @mem_sargosRemainder_interval H M hM q x
+
+example {H M : ℕ} {f : ℝ → ℝ} {x : ℝ}
+    (hM : 1 ≤ M) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hx : x ∈ Ioo (sargosRemainderLeft M q) (sargosRemainderRight M q)) :
+    ContDiffAt ℝ ∞ (sargosNormalizedRemainder f M q) x := by
+  exact @sargosNormalizedRemainder_contDiffAt H M f x hM q hf hx
+
+example {H M : ℕ} {f : ℝ → ℝ} {x : ℝ}
+    (hM : 1 ≤ M) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hx : x ∈ Ioo (sargosRemainderLeft M q) (sargosRemainderRight M q)) (j : ℕ) :
+    iteratedDeriv j (sargosNormalizedRemainder f M q) x =
+      (M:ℝ)^j*iteratedDeriv j (sargosSextupleRemainder f q) ((M:ℝ)*x) := by
+  exact @iteratedDeriv_sargosNormalizedRemainder H M f x hM q hf hx j
+
+example {H M Q : ℕ}
+    {f : ℝ → ℝ} {x B : ℝ}
+    (hM : 1 ≤ M) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hB : ∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M,
+      |iteratedDeriv (j+6) f y| ≤ B/(M:ℝ)^j)
+    (hx : x ∈ Ioo (sargosRemainderLeft M q) (sargosRemainderRight M q))
+    {j : ℕ} (hj : j ≤ Q+1) :
+    |iteratedDeriv j (sargosNormalizedRemainder f M q) x| ≤ B*(H:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosNormalizedRemainder_le H M Q f x B hM q hf hB hx j hj
+
+example {M : ℕ} (hM : 1 ≤ M) :
+    0 < sargosRemainderWidth M ∧ sargosRemainderWidth M ≤ 1 := by
+  exact @sargosRemainderWidth_bounds M hM
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosRemainderLeft M q+2*sargosRemainderWidth M =
+        ((sargosSextupleRadius q:ℝ)+5/4)/M ∧
+      sargosRemainderRight M q-2*sargosRemainderWidth M =
+        ((M:ℝ)-(sargosSextupleRadius q:ℝ)-1/4)/M ∧
+      sargosRemainderLeft M q+4*sargosRemainderWidth M =
+        ((sargosSextupleRadius q:ℝ)+3/2)/M := by
+  exact @sargosRemainder_anchor_formulas H M hM q
+
+example {H M : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    (m:ℝ) ∈ Ioo ((sargosSextupleRadius q:ℝ)+1)
+      ((M:ℝ)-(sargosSextupleRadius q:ℝ)) := by
+  exact @sargosSextupleInterior_real H M q m hm
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) :
+    0 ≤ sargosRemainderLeft M q ∧ sargosRemainderRight M q ≤ 1 ∧
+      sargosRemainderLeft M q+4*sargosRemainderWidth M < sargosRemainderRight M q := by
+  exact @sargosRemainder_interval_geometry H M hM q hne
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    (m:ℝ)/M ∈ Icc (sargosRemainderLeft M q+2*sargosRemainderWidth M)
+      (sargosRemainderRight M q-2*sargosRemainderWidth M) := by
+  exact @sargosSextupleInterior_in_plateau H M hM q m hm
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) {x : ℝ} (hx : x ∈ Icc (0:ℝ) 1) :
+    |x-(sargosRemainderLeft M q+2*sargosRemainderWidth M)| ≤ 1 ∧
+      |x-(sargosRemainderRight M q-2*sargosRemainderWidth M)| ≤ 1 := by
+  exact @sargosRemainder_observation_distances H M hM q hne x hx
+
+example {H : ℕ} (f : ℝ → ℝ) (M Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (he : sargosSextupleInterior M q = ∅) :
+    sargosExtendedRemainder f M Q q = fun _ => 0 := by
+  exact @sargosExtendedRemainder_of_empty H f M Q q he
+
+example {H M : ℕ} {f : ℝ → ℝ}
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) :
+    ContDiff ℝ ∞ (sargosExtendedRemainder f M Q q) := by
+  exact @sargosExtendedRemainder_contDiff H M f hM Q q hf
+
+example {H M : ℕ} (f : ℝ → ℝ)
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosExtendedRemainder f M Q q ((m:ℝ)/M) = sargosSextupleRemainder f q m := by
+  exact @sargosExtendedRemainder_agrees H M f hM Q q m hm
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (f : ℝ → ℝ) (B : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → 0 ≤ B →
+      (∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) →
+      (∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M,
+        |iteratedDeriv (j+6) f y| ≤ B/(M:ℝ)^j) →
+      ∀ x ∈ Icc (0:ℝ) 1, ∀ j ≤ Q,
+        |iteratedDeriv j (sargosExtendedRemainder f M Q q) x| ≤ C*(B*(H:ℝ)^6/60) := by
+  exact @sargosExtendedRemainder_uniform_jets Q
+
+example {H M : ℕ} {f : ℝ → ℝ}
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) :
+    ContDiff ℝ ∞ (sargosPhysicalExtendedRemainder f M Q q) := by
+  exact @sargosPhysicalExtendedRemainder_contDiff H M f hM Q q hf
+
+example {H M : ℕ} (f : ℝ → ℝ)
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosPhysicalExtendedRemainder f M Q q m = sargosSextupleRemainder f q m := by
+  exact @sargosPhysicalExtendedRemainder_agrees H M f hM Q q m hm
+
+example {H M : ℕ} {f : ℝ → ℝ}
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) (j : ℕ) (x : ℝ) :
+    iteratedDeriv j (sargosPhysicalExtendedRemainder f M Q q) x =
+      iteratedDeriv j (sargosExtendedRemainder f M Q q) (x/M)/(M:ℝ)^j := by
+  exact @iteratedDeriv_sargosPhysicalExtendedRemainder H M f hM Q q hf j x
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (f : ℝ → ℝ) (B : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → 0 ≤ B →
+      (∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) →
+      (∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M,
+        |iteratedDeriv (j+6) f y| ≤ B/(M:ℝ)^j) →
+      ∀ x ∈ Icc (0:ℝ) M, ∀ j ≤ Q,
+        |iteratedDeriv j (sargosPhysicalExtendedRemainder f M Q q) x| ≤
+          C*(B*(H:ℝ)^6/60)/(M:ℝ)^j := by
+  exact @sargosPhysicalExtendedRemainder_uniform_jets Q
+
+example {H M : ℕ} (f : ℝ → ℝ)
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosExtendedSextuplePhase f M Q q m = sargosSextuplePhase f q m := by
+  exact @sargosExtendedSextuplePhase_agrees H M f hM Q q m hm
+
+example {H M : ℕ} (f : ℝ → ℝ)
+    (hM : 1 ≤ M) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    (∑ m ∈ sargosSextupleInterior M q,
+      fordAdditiveCharacter (sargosExtendedSextuplePhase f M Q q m)) =
+      ∑ m ∈ sargosSextupleInterior M q, fordAdditiveCharacter (sargosSextuplePhase f q m) := by
+  exact @sargos_extended_sextuple_sum H M f hM Q q
+
+example (f : ℝ → ℝ)
+    {M : ℕ} (hM : 1 ≤ M) (H Q : ℕ) :
+    sargosExtendedSextupleCorrelation f M H Q = sargosInteriorSextupleCorrelation f M H := by
+  exact @sargosExtendedSextupleCorrelation_eq_interior f M hM H Q
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H → ∀ M : ℕ, H ≤ M →
+      ∀ (f : ℝ → ℝ) (Q : ℕ),
+      ‖∑ m ∈ Finset.Ioc (0:ℤ) M, fordAdditiveCharacter (f m)‖^12 ≤
+        1492992*((M:ℝ)/H)^6*(M:ℝ)^6+
+        (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosExtendedSextupleCorrelation f M H Q+
+        C*(M:ℝ)^11*(H:ℝ)^ε := by
+  exact @sargos_character_extended_differencing ε hε
+
+example (Q : ℕ) (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (f : ℝ → ℝ) (B : ℝ),
+      1 ≤ H → H ≤ M → 0 ≤ B →
+      (∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) →
+      (∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M,
+        |iteratedDeriv (j+6) f y| ≤ B/(M:ℝ)^j) →
+      (∀ q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3,
+        ContDiff ℝ ∞ (sargosPhysicalExtendedRemainder f M Q q) ∧
+        (∀ m ∈ sargosSextupleInterior M q,
+          sargosPhysicalExtendedRemainder f M Q q m = sargosSextupleRemainder f q m) ∧
+        ∀ x ∈ Icc (0:ℝ) M, ∀ j ≤ Q,
+          |iteratedDeriv j (sargosPhysicalExtendedRemainder f M Q q) x| ≤
+            C*(B*(H:ℝ)^6/60)/(M:ℝ)^j) ∧
+      ‖∑ m ∈ Finset.Ioc (0:ℤ) M, fordAdditiveCharacter (f m)‖^12 ≤
+        1492992*((M:ℝ)/H)^6*(M:ℝ)^6+
+        (382205952*(M:ℝ)^11/(H:ℝ)^4)*sargosExtendedSextupleCorrelation f M H Q+
+        C*(M:ℝ)^11*(H:ℝ)^ε := by
+  exact @sargos_smooth_extended_reduction Q ε hε
+
+/- Scale boundaries, empty and nonempty support, and a nonzero actual remainder. -/
+example : sargosRemainderWidth 1 = 1/8 := by
+  norm_num [sargosRemainderWidth]
+
+example : sargosRemainderWidth 0 = 0 := by
+  norm_num [sargosRemainderWidth]
+
+example {f : ℝ → ℝ} {d : ℝ} (hf : ContDiffAt ℝ ∞ f d) :
+    iteratedDeriv 1 (fun _ : ℝ => f d) 0 = 0 := by
+  have h := sargos_iteratedDeriv_comp_affine_local
+    (l := -1) (r := 1) (c := 0) (d := d) (x := 0)
+    (fun y hy => by simpa using hf) (by norm_num) 1
+  simpa only [zero_mul,zero_add,pow_one] using h
+
+example {f : ℝ → ℝ} (hf : ContDiff ℝ ∞ f) :
+    iteratedDeriv 3 (fun y => f (-2*y+1)) 0 = -8*iteratedDeriv 3 f 1 := by
+  have h := sargos_iteratedDeriv_comp_affine_local
+    (l := -1) (r := 1) (c := -2) (d := 1) (x := 0)
+    (fun y hy => hf.contDiffAt) (by norm_num) 3
+  norm_num at h ⊢
+  exact h
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosRemainderLeft 1 (t,t) = 2 ∧ sargosRemainderRight 1 (t,t) = 0 := by
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  norm_num [sargosRemainderLeft,sargosRemainderRight,hr]
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosSextupleInterior 3 (t,t) = ∅ := by
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  rw [sargosSextupleInterior,hr]
+  decide
+
+example (f : ℝ → ℝ) (Q : ℕ) (t : SargosInitialMomentTuple 1 3) :
+    sargosExtendedRemainder f 3 Q (t,t) = fun _ => 0 := by
+  apply sargosExtendedRemainder_of_empty
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  rw [sargosSextupleInterior,hr]
+  decide
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosSextupleInterior 4 (t,t) = ∅ := by
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  rw [sargosSextupleInterior,hr]
+  decide
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosSextupleInterior 5 (t,t) = {3} := by
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  rw [sargosSextupleInterior,hr]
+  decide
+
+example (t : SargosInitialMomentTuple 1 3) :
+    (3/5:ℝ) ∈ Icc (sargosRemainderLeft 5 (t,t)+2*sargosRemainderWidth 5)
+      (sargosRemainderRight 5 (t,t)-2*sargosRemainderWidth 5) := by
+  apply sargosSextupleInterior_in_plateau (by norm_num) (t,t) (m := 3)
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  norm_num [sargosSextupleInterior,hr]
+
+example (f : ℝ → ℝ) (Q : ℕ) (t : SargosInitialMomentTuple 1 3) :
+    sargosPhysicalExtendedRemainder f 5 Q (t,t) 3 = 0 := by
+  have hb := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by norm_num at hb; omega
+  have hm : (3:ℤ) ∈ sargosSextupleInterior 5 (t,t) := by
+    norm_num [sargosSextupleInterior,hr]
+  simpa [sargosSextupleRemainder] using
+    sargosPhysicalExtendedRemainder_agrees f (by norm_num : 1 ≤ 5) Q (t,t) hm
+
+example (m n : ℝ) : sargosSymmetricRemainder (fun x => x^6) n m = 2*n^6 := by
+  norm_num [sargosSymmetricRemainder,iteratedDeriv_pow]
+  ring
+
+example :
+    let t1 : SargosInitialMomentTuple 5 3 :=
+      ![⟨1,by decide⟩,⟨4,by decide⟩,⟨4,by decide⟩]
+    let t2 : SargosInitialMomentTuple 5 3 :=
+      ![⟨2,by decide⟩,⟨2,by decide⟩,⟨5,by decide⟩]
+    sargosSextupleRemainder (fun x => x^6) (t1,t2) 7 = -15120 := by
+  norm_num [sargosSextupleRemainder,sargosTupleRemainder,
+    sargosSymmetricRemainder,iteratedDeriv_pow,Fin.sum_univ_succ]
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (x : ℝ) :
+    iteratedDeriv 0 (sargosNormalizedRemainder f M q) x =
+      sargosSextupleRemainder f q ((M:ℝ)*x) := rfl
+
+example {H M : ℕ} (hM : 1 ≤ M)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {x : ℝ} (hx : x ∈ Icc (0:ℝ) M) :
+    sargosPhysicalExtendedRemainder (fun _ => 0) M 0 q x = 0 := by
+  obtain ⟨C,hC,hjets⟩ := sargosPhysicalExtendedRemainder_uniform_jets 0
+  have h := hjets H M (fun _ => 0) 0 q hM le_rfl
+    (fun y hy => contDiffAt_const)
+    (fun j hj y hy => by simp)
+    x hx 0 le_rfl
+  apply abs_nonpos_iff.mp
+  simpa only [iteratedDeriv_zero,zero_mul,mul_zero,zero_div] using h
+
+example (f : ℝ → ℝ) (Q : ℕ) :
+    sargosExtendedSextupleCorrelation f 1 1 Q = 0 := by
+  apply Finset.sum_eq_zero
+  intro q hq
+  have hb := sargosSextupleRadius_bounds q
+  have hr : sargosSextupleRadius q = 1 := by norm_num at hb; omega
+  norm_num [sargosSextupleInterior,hr]
+
+end SargosRemainderExtensionRegression
+
+namespace SargosTransformedModelRegression
+
+open TaoTrudgianYang2025 GafniTao Expdb Set MeasureTheory
+open scoped BigOperators ContDiff
+
+example (σ : ℝ) (Q : ℕ) :
+    1 ≤ sargosModelJetBudget σ Q := by
+  exact @sargosModelJetBudget_one_le σ Q
+
+example {σ δ : ℝ} {Q p : ℕ}
+    (hδ : δ ≤ 1) (hp : p ≤ Q+6) :
+    modelPhaseJetCoefficient σ p+δ ≤ sargosModelJetBudget σ Q := by
+  exact @modelPhaseJetCoefficient_le_sargosBudget σ δ Q p hδ hp
+
+example {F : ℝ → ℝ} {N A x : ℝ} {M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    (hx : x ∈ Ioo (1:ℝ) M) (T : ℝ) :
+    ContDiffAt ℝ ∞ (heathBrownPhysicalPhase F T N A 1) x := by
+  exact @sargosModelPhysicalPhase_contDiffAt F N A x M hF hN ha hb hx T
+
+example {σ δ T N A : ℝ}
+    {F : ℝ → ℝ} {P Q M : ℕ}
+    (hσ : 0 ≤ σ) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hδ : δ ≤ 1) (hP : Q+6 ≤ P) (hM : 1 ≤ M)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    {j : ℕ} (hj : j ≤ Q+1) {x : ℝ} (hx : x ∈ Ioo (1:ℝ) M) :
+    |iteratedDeriv (j+6) (heathBrownPhysicalPhase F T N A 1) x| ≤
+      (sargosModelJetBudget σ Q*|T|/N^6)/(M:ℝ)^j := by
+  exact @sargosModelPhysicalPhase_source_jets σ δ T N A F P Q M hσ hF hδ hP hM hN ha hb j hj x hx
+
+example (σ : ℝ) (hσ : 0 ≤ σ)
+    (Q : ℕ) (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M P : ℕ) (F : ℝ → ℝ) (δ T N A : ℝ),
+      1 ≤ H → H ≤ M → Q+6 ≤ P → δ ≤ 1 →
+      0 < N → N ≤ A → A+(M:ℝ) ≤ 2*N →
+      IsApproximateModelPhaseFunction F σ P δ →
+      (∀ q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3,
+        ContDiff ℝ ∞ (sargosPhysicalExtendedRemainder
+          (heathBrownPhysicalPhase F T N A 1) M Q q) ∧
+        (∀ m ∈ sargosSextupleInterior M q,
+          sargosPhysicalExtendedRemainder (heathBrownPhysicalPhase F T N A 1) M Q q m =
+            sargosSextupleRemainder (heathBrownPhysicalPhase F T N A 1) q m) ∧
+        ∀ x ∈ Icc (0:ℝ) M, ∀ j ≤ Q,
+          |iteratedDeriv j (sargosPhysicalExtendedRemainder
+            (heathBrownPhysicalPhase F T N A 1) M Q q) x| ≤
+              C * |T| * (H:ℝ)^6/(60*N^6*(M:ℝ)^j)) ∧
+      ‖∑ m ∈ Finset.Ioc (0:ℤ) M,
+        fordAdditiveCharacter (heathBrownPhysicalPhase F T N A 1 m)‖^12 ≤
+        1492992*((M:ℝ)/H)^6*(M:ℝ)^6+
+        (382205952*(M:ℝ)^11/(H:ℝ)^4)*
+          sargosExtendedSextupleCorrelation (heathBrownPhysicalPhase F T N A 1) M H Q+
+        C*(M:ℝ)^11*(H:ℝ)^ε := by
+  exact @sargos_model_smooth_reduction σ hσ Q ε hε
+
+example (i j : ℕ) (f : ℝ → ℝ) (s : Set ℝ) :
+    iteratedDerivWithin i (iteratedDerivWithin j f s) s = iteratedDerivWithin (i+j) f s := by
+  exact @sargos_iteratedDerivWithin_comp_order i j f s
+
+example {f : ℝ → ℝ} {s : Set ℝ}
+    (hf : ContDiffOn ℝ ∞ f s) (hs : UniqueDiffOn ℝ s) (n : ℕ) :
+    ContDiffOn ℝ ∞ (iteratedDerivWithin n f s) s := by
+  exact @sargos_contDiffOn_iteratedDerivWithin f s hf hs n
+
+example (σ : ℝ) :
+    (descPochhammer ℝ 4).eval (-σ) = σ*(σ+1)*(σ+2)*(σ+3) := by
+  exact @sargos_descPochhammer_four σ
+
+example {σ : ℝ} (hσ : 0 ≤ σ) :
+    modelPhaseJetCoefficient σ 4 = σ*(σ+1)*(σ+2)*(σ+3) := by
+  exact @sargos_modelPhaseJetCoefficient_four σ hσ
+
+example {σ : ℝ} (hσ : 0 ≤ σ) (p : ℕ) :
+    (descPochhammer ℝ (p+4)).eval (-σ) =
+      modelPhaseJetCoefficient σ 4*(descPochhammer ℝ p).eval (-(σ+4)) := by
+  exact @sargos_descPochhammer_shift_four σ hσ p
+
+example {F : ℝ → ℝ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (σ : ℝ) :
+    ContDiffOn ℝ ∞ (sargosFourthDerivativeModel F σ) phaseInterval := by
+  exact @sargosFourthDerivativeModel_contDiffOn F hF σ
+
+example (F : ℝ → ℝ) (σ : ℝ)
+    (p : ℕ) (u : ℝ) :
+    iteratedDerivWithin (p+1) (sargosFourthDerivativeModel F σ) phaseInterval u =
+      (modelPhaseJetCoefficient σ 4)⁻¹*iteratedDerivWithin (p+5) F phaseInterval u := by
+  exact @sargosFourthDerivativeModel_iteratedDerivWithin F σ p u
+
+example {σ : ℝ} (hσ : 0 < σ)
+    (p : ℕ) {u : ℝ} (hu : u ∈ phaseInterval) :
+    (modelPhaseJetCoefficient σ 4)⁻¹*iteratedDerivWithin (p+4) (modelPhase σ) phaseInterval u =
+      iteratedDerivWithin p (modelPhase (σ+4)) phaseInterval u := by
+  exact @sargos_modelPhase_shift_four σ hσ p u hu
+
+example {F : ℝ → ℝ} {σ : ℝ}
+    (hσ : 0 < σ) (p : ℕ) {u : ℝ} (hu : u ∈ phaseInterval) :
+    modelPhaseErrorAt (sargosFourthDerivativeModel F σ) (σ+4) p u =
+      (modelPhaseJetCoefficient σ 4)⁻¹*modelPhaseErrorAt F σ (p+4) u := by
+  exact @sargosFourthDerivativeModel_error F σ hσ p u hu
+
+example {F : ℝ → ℝ} {σ δ : ℝ} {P : ℕ}
+    (hσ : 0 < σ) (hF : IsApproximateModelPhaseFunction F σ (P+4) δ) :
+    IsApproximateModelPhaseFunction (sargosFourthDerivativeModel F σ) (σ+4) P
+      (δ/modelPhaseJetCoefficient σ 4) := by
+  exact @sargosFourthDerivativeModel_approximate F σ δ P hσ hF
+
+example {F U : ℝ → ℝ} {σ δ η : ℝ} {P : ℕ}
+    (hF : IsApproximateModelPhaseFunction F σ P δ) (hU : ContDiff ℝ ∞ U)
+    (hjets : ∀ u ∈ phaseInterval, ∀ p ≤ P, |iteratedDeriv (p+1) U u| ≤ η) :
+    IsApproximateModelPhaseFunction (fun u => F u+U u) σ P (δ+η) := by
+  exact @sargos_approximateModel_add_correction F U σ δ η P hF hU hjets
+
+example {U : ℝ → ℝ} (hU : ContDiff ℝ ∞ U)
+    (M T₁ : ℝ) :
+    ContDiff ℝ ∞ (sargosPhysicalCorrection U M T₁) := by
+  exact @sargosPhysicalCorrection_contDiff U hU M T₁
+
+example {U : ℝ → ℝ} (hU : ContDiff ℝ ∞ U)
+    (M T₁ u : ℝ) (j : ℕ) :
+    iteratedDeriv j (sargosPhysicalCorrection U M T₁) u =
+      (M^j/T₁)*iteratedDeriv j U (M*(u-1)) := by
+  exact @sargosPhysicalCorrection_iteratedDeriv U hU M T₁ u j
+
+example {U : ℝ → ℝ} {M T₁ B : ℝ} {Q : ℕ}
+    (hU : ContDiff ℝ ∞ U) (hM : 0 < M) (hT : 0 < T₁)
+    (hjets : ∀ x ∈ Icc 0 M, ∀ j ≤ Q, |iteratedDeriv j U x| ≤ B/M^j)
+    {u : ℝ} (hu : u ∈ phaseInterval) {j : ℕ} (hj : j ≤ Q) :
+    |iteratedDeriv j (sargosPhysicalCorrection U M T₁) u| ≤ B/T₁ := by
+  exact @sargosPhysicalCorrection_uniform_jets U M T₁ B Q hU hM hT hjets u hu j hj
+
+example {σ τ T : ℝ} {M : ℕ}
+    (hσ : 0 < σ) (hM : 1 ≤ M) (hτ : 0 < τ) (hT : 0 < T) :
+    0 < sargosTransformedTime σ M τ T := by
+  exact @sargosTransformedTime_pos σ τ T M hσ hM hτ hT
+
+example (σ : ℝ) (hσ : 0 < σ) (P : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (F : ℝ → ℝ) (δ τ T : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ H → H ≤ M → δ ≤ 1 → 0 < τ → 0 < T →
+      IsApproximateModelPhaseFunction F σ (P+7) δ →
+      IsApproximateModelPhaseFunction (sargosTransformedModel F σ M (P+1) q τ T)
+        (σ+4) P ((δ+C*(H:ℝ)^6/(τ*(M:ℝ)^2))/modelPhaseJetCoefficient σ 4) := by
+  exact @sargosTransformedModel_approximate σ hσ P
+
+example {F : ℝ → ℝ} {σ τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ) (hM : 1 ≤ M)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {x : ℝ} (hx : x ∈ Ioo (0:ℝ) M) :
+    sargosTransformedTime σ M τ T*sargosTransformedModel F σ M Q q τ T (1+x/M) =
+      τ*iteratedDeriv 4 (heathBrownPhysicalPhase F T M M 1) x+
+        sargosPhysicalExtendedRemainder (heathBrownPhysicalPhase F T M M 1) M Q q x := by
+  exact @sargosTransformedModel_physical_identity F σ τ T H M hF hσ hM hτ hT Q q x hx
+
+example {F : ℝ → ℝ} {σ τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ) (hM : 1 ≤ M)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hfreq : (((sargosInitialTuplePower 4 q.1-sargosInitialTuplePower 4 q.2:ℤ):ℝ)/12) = τ)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosSextuplePhase (heathBrownPhysicalPhase F T M M 1) q m =
+      sargosTransformedTime σ M τ T*sargosTransformedModel F σ M Q q τ T (1+(m:ℝ)/M) := by
+  exact @sargosTransformedModel_source_phase F σ τ T H M hF hσ hM hτ hT Q q hfreq m hm
+
+example {F : ℝ → ℝ} {σ τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ) (hM : 1 ≤ M)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hfreq : (((sargosInitialTuplePower 4 q.1-sargosInitialTuplePower 4 q.2:ℤ):ℝ)/12) = τ) :
+    (∑ m ∈ sargosSextupleInterior M q,
+      fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T M M 1) q m)) =
+      ∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter
+          (sargosTransformedTime σ M τ T*sargosTransformedModel F σ M Q q τ T (1+(m:ℝ)/M)) := by
+  exact @sargosTransformedModel_source_sum F σ τ T H M hF hσ hM hτ hT Q q hfreq
+
+example (σ : ℝ) (hσ : 0 < σ) (P : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (F : ℝ → ℝ) (δ T : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ H → H ≤ M → δ ≤ 1 → 0 < T → 0 < sargosQuarticDifference q →
+      IsApproximateModelPhaseFunction F σ (P+7) δ →
+      let τ : ℝ := (sargosQuarticDifference q:ℝ)/12
+      IsApproximateModelPhaseFunction (sargosTransformedModel F σ M (P+1) q τ T)
+        (σ+4) P ((δ+C*(H:ℝ)^6/(τ*(M:ℝ)^2))/modelPhaseJetCoefficient σ 4) ∧
+      (∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T M M 1) q m)) =
+        ∑ m ∈ sargosSextupleInterior M q,
+          fordAdditiveCharacter
+            (sargosTransformedTime σ M τ T*sargosTransformedModel F σ M (P+1) q τ T
+              (1+(m:ℝ)/M)) := by
+  exact @sargos_positive_sextuple_model σ hσ P
+
+example {H M : ℕ} {τ η : ℝ}
+    (hM : 1 ≤ M) (hτ : 0 < τ)
+    (hlarge : (H:ℝ)^3 ≤ τ) (hsmall : (H:ℝ)^3/(M:ℝ)^2 ≤ η) :
+    (H:ℝ)^6/(τ*(M:ℝ)^2) ≤ η := by
+  exact @sargos_remainder_error_large_frequency H M τ η hM hτ hlarge hsmall
+
+/- Closed endpoints, reference-model normalization and linked physical scales. -/
+example : modelPhaseJetCoefficient 1 4 = 24 := by
+  norm_num [sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 1)]
+
+example : modelPhaseJetCoefficient 0 4 = 0 := by
+  norm_num [sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 0)]
+
+example : modelPhaseJetCoefficient 2 4 = 120 := by
+  norm_num [sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 2)]
+
+example :
+    (modelPhaseJetCoefficient 1 4)⁻¹*
+      iteratedDerivWithin 4 (modelPhase 1) phaseInterval 1 =
+        modelPhase 5 1 := by
+  simpa [show (1:ℝ)+4 = 5 by norm_num] using
+    sargos_modelPhase_shift_four (by norm_num : (0:ℝ) < 1) 0
+    (by norm_num [phaseInterval] : (1:ℝ) ∈ phaseInterval)
+
+example :
+    (modelPhaseJetCoefficient 1 4)⁻¹*
+      iteratedDerivWithin 4 (modelPhase 1) phaseInterval 2 =
+        modelPhase 5 2 := by
+  simpa [show (1:ℝ)+4 = 5 by norm_num] using
+    sargos_modelPhase_shift_four (by norm_num : (0:ℝ) < 1) 0
+    (by norm_num [phaseInterval] : (2:ℝ) ∈ phaseInterval)
+
+example (P : ℕ) :
+    IsApproximateModelPhaseFunction
+      (sargosFourthDerivativeModel (referenceModelPrimitive 1) 1) 5 P 0 := by
+  simpa [show (1:ℝ)+4 = 5 by norm_num] using
+    sargosFourthDerivativeModel_approximate (by norm_num : (0:ℝ) < 1)
+    (referenceModelPrimitive_approximate 1 (P+4))
+
+example (f : ℝ → ℝ) (s : Set ℝ) :
+    iteratedDerivWithin 0 (iteratedDerivWithin 4 f s) s = iteratedDerivWithin 4 f s := by
+  exact sargos_iteratedDerivWithin_comp_order 0 4 f s
+
+example (M T u : ℝ) : sargosPhysicalCorrection (fun _ => 0) M T u = 0 := by
+  simp [sargosPhysicalCorrection]
+
+example (c u : ℝ) : sargosPhysicalCorrection (fun _ => c) 1 2 u = c/2 := by
+  norm_num [sargosPhysicalCorrection]
+  ring
+
+example : sargosPhysicalCorrection (fun x => x^2) 3 2 1 = 0 := by
+  norm_num [sargosPhysicalCorrection]
+
+example : sargosPhysicalCorrection (fun x => x^2) 3 2 2 = 9/2 := by
+  norm_num [sargosPhysicalCorrection]
+
+example (u : ℝ) :
+    iteratedDeriv 2 (sargosPhysicalCorrection (fun x => x^2) 3 2) u = 9 := by
+  rw [sargosPhysicalCorrection_iteratedDeriv (by fun_prop)]
+  norm_num [iteratedDeriv_pow]
+
+example : sargosTransformedTime 1 2 3 5 = 45/2 := by
+  norm_num [sargosTransformedTime,
+    sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 1)]
+
+example (σ T : ℝ) (M : ℕ) : sargosTransformedTime σ M 0 T = 0 := by
+  simp [sargosTransformedTime]
+
+example :
+    let t1 : SargosInitialMomentTuple 5 3 :=
+      ![⟨2,by decide⟩,⟨2,by decide⟩,⟨5,by decide⟩]
+    let t2 : SargosInitialMomentTuple 5 3 :=
+      ![⟨1,by decide⟩,⟨4,by decide⟩,⟨4,by decide⟩]
+    sargosQuarticDifference (t1,t2) = 144 := by
+  norm_num [sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example :
+    let t1 : SargosInitialMomentTuple 5 3 :=
+      ![⟨2,by decide⟩,⟨2,by decide⟩,⟨5,by decide⟩]
+    let t2 : SargosInitialMomentTuple 5 3 :=
+      ![⟨1,by decide⟩,⟨4,by decide⟩,⟨4,by decide⟩]
+    (t1,t2) ∈ sargosSquareDiagonal 5 := by
+  norm_num [sargosSquareDiagonal,sargosInitialTuplePower,Fin.sum_univ_succ]
+  decide
+
+example : (2:ℝ)^6/(8*(4:ℝ)^2) ≤ 1/2 := by
+  exact sargos_remainder_error_large_frequency (H := 2) (M := 4)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example (t : SargosInitialMomentTuple 1 3) :
+    ∃ C : ℝ, 1 ≤ C ∧
+      IsApproximateModelPhaseFunction
+        (sargosTransformedModel (referenceModelPrimitive 1) 1 5 1 (t,t) 1 1)
+        5 0 (C/600) := by
+  obtain ⟨C,hC,h⟩ := sargosTransformedModel_approximate 1 (by norm_num) 0
+  refine ⟨C,hC,?_⟩
+  have hh := h 1 5 (referenceModelPrimitive 1) 0 1 1 (t,t)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (referenceModelPrimitive_approximate 1 7)
+  norm_num [sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 1)] at hh
+  convert hh using 1
+  ring
+
+end SargosTransformedModelRegression
+
+namespace SargosRealScaleSourceRegression
+
+open TaoTrudgianYang2025 GafniTao Expdb Set MeasureTheory
+open scoped BigOperators ContDiff
+
+example {H : ℕ} {N : ℝ} (hN : 0 < N) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (x : ℝ) :
+    x ∈ Ioo (sargosScaledRemainderLeft N q) (sargosScaledRemainderRight M N q) ↔
+      N*x ∈ Ioo ((sargosSextupleRadius q:ℝ)+1)
+        ((M:ℝ)-(sargosSextupleRadius q:ℝ)) := by
+  exact @mem_sargosScaledRemainder_interval H N hN M q x
+
+example {H M : ℕ} {N : ℝ} {f : ℝ → ℝ} {x : ℝ}
+    (hN : 0 < N) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hx : x ∈ Ioo (sargosScaledRemainderLeft N q) (sargosScaledRemainderRight M N q)) :
+    ContDiffAt ℝ ∞ (sargosScaledRemainder f N q) x := by
+  exact @sargosScaledRemainder_contDiffAt H M N f x hN q hf hx
+
+example {H M : ℕ} {N : ℝ} {f : ℝ → ℝ} {x : ℝ}
+    (hN : 0 < N) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hx : x ∈ Ioo (sargosScaledRemainderLeft N q) (sargosScaledRemainderRight M N q)) (j : ℕ) :
+    iteratedDeriv j (sargosScaledRemainder f N q) x =
+      N^j*iteratedDeriv j (sargosSextupleRemainder f q) (N*x) := by
+  exact @iteratedDeriv_sargosScaledRemainder H M N f x hN q hf hx j
+
+example {H M Q : ℕ}
+    {N : ℝ} {f : ℝ → ℝ} {x B : ℝ}
+    (hN : 0 < N) (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y)
+    (hB : ∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M, |iteratedDeriv (j+6) f y| ≤ B/N^j)
+    (hx : x ∈ Ioo (sargosScaledRemainderLeft N q) (sargosScaledRemainderRight M N q))
+    {j : ℕ} (hj : j ≤ Q+1) :
+    |iteratedDeriv j (sargosScaledRemainder f N q) x| ≤ B*(H:ℝ)^6/60 := by
+  exact @abs_iteratedDeriv_sargosScaledRemainder_le H M Q N f x B hN q hf hB hx j hj
+
+example {N : ℝ} (hN : 1 ≤ N) :
+    0 < sargosScaledRemainderWidth N ∧ sargosScaledRemainderWidth N ≤ 1 := by
+  exact @sargosScaledRemainderWidth_bounds N hN
+
+example {H : ℕ} {N : ℝ} (hN : 0 < N) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosScaledRemainderLeft N q+2*sargosScaledRemainderWidth N =
+        ((sargosSextupleRadius q:ℝ)+5/4)/N ∧
+      sargosScaledRemainderRight M N q-2*sargosScaledRemainderWidth N =
+        ((M:ℝ)-(sargosSextupleRadius q:ℝ)-1/4)/N ∧
+      sargosScaledRemainderLeft N q+4*sargosScaledRemainderWidth N =
+        ((sargosSextupleRadius q:ℝ)+3/2)/N := by
+  exact @sargosScaledRemainder_anchor_formulas H N hN M q
+
+example {H M : ℕ} {N : ℝ}
+    (hN : 0 < N) (hMN : (M:ℝ) ≤ N)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) :
+    0 ≤ sargosScaledRemainderLeft N q ∧ sargosScaledRemainderRight M N q ≤ 1 ∧
+      sargosScaledRemainderLeft N q+4*sargosScaledRemainderWidth N <
+        sargosScaledRemainderRight M N q := by
+  exact @sargosScaledRemainder_interval_geometry H M N hN hMN q hne
+
+example {H M : ℕ} {N : ℝ}
+    (hN : 0 < N)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    (m:ℝ)/N ∈ Icc (sargosScaledRemainderLeft N q+2*sargosScaledRemainderWidth N)
+      (sargosScaledRemainderRight M N q-2*sargosScaledRemainderWidth N) := by
+  exact @sargosSextupleInterior_in_scaled_plateau H M N hN q m hm
+
+example {H M : ℕ} {N : ℝ}
+    (hN : 0 < N) (hMN : (M:ℝ) ≤ N)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) {x : ℝ} (hx : x ∈ Icc (-1:ℝ) 1) :
+    |x-(sargosScaledRemainderLeft N q+2*sargosScaledRemainderWidth N)| ≤ 2 ∧
+      |x-(sargosScaledRemainderRight M N q-2*sargosScaledRemainderWidth N)| ≤ 2 := by
+  exact @sargosScaledRemainder_observation_distances H M N hN hMN q hne x hx
+
+example {H M : ℕ} {N : ℝ} {f : ℝ → ℝ}
+    (hN : 0 < N) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) :
+    ContDiff ℝ ∞ (sargosScaledExtendedRemainder f M N Q q) := by
+  exact @sargosScaledExtendedRemainder_contDiff H M N f hN Q q hf
+
+example {H M : ℕ} {N : ℝ} (f : ℝ → ℝ)
+    (hN : 0 < N) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosScaledExtendedRemainder f M N Q q ((m:ℝ)/N) = sargosSextupleRemainder f q m := by
+  exact @sargosScaledExtendedRemainder_agrees H M N f hN Q q m hm
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (N : ℝ) (f : ℝ → ℝ) (B : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → (M:ℝ) ≤ N → 0 ≤ B →
+      (∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) →
+      (∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M, |iteratedDeriv (j+6) f y| ≤ B/N^j) →
+      ∀ x ∈ Icc (-1:ℝ) 1, ∀ j ≤ Q,
+        |iteratedDeriv j (sargosScaledExtendedRemainder f M N Q q) x| ≤ C*(B*(H:ℝ)^6/60) := by
+  exact @sargosScaledExtendedRemainder_uniform_jets Q
+
+example {H M : ℕ} {N : ℝ} {f : ℝ → ℝ}
+    (hN : 0 < N) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) :
+    ContDiff ℝ ∞ (sargosScaledPhysicalRemainder f M N Q q) := by
+  exact @sargosScaledPhysicalRemainder_contDiff H M N f hN Q q hf
+
+example {H M : ℕ} {N : ℝ} (f : ℝ → ℝ)
+    (hN : 0 < N) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosScaledPhysicalRemainder f M N Q q m = sargosSextupleRemainder f q m := by
+  exact @sargosScaledPhysicalRemainder_agrees H M N f hN Q q m hm
+
+example {H M : ℕ} {N : ℝ} {f : ℝ → ℝ}
+    (hN : 0 < N) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hf : ∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) (j : ℕ) (x : ℝ) :
+    iteratedDeriv j (sargosScaledPhysicalRemainder f M N Q q) x =
+      iteratedDeriv j (sargosScaledExtendedRemainder f M N Q q) (x/N)/N^j := by
+  exact @iteratedDeriv_sargosScaledPhysicalRemainder H M N f hN Q q hf j x
+
+example (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (N : ℝ) (f : ℝ → ℝ) (B : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → (M:ℝ) ≤ N → 0 ≤ B →
+      (∀ y ∈ Ioo (1:ℝ) M, ContDiffAt ℝ ∞ f y) →
+      (∀ j ≤ Q+1, ∀ y ∈ Ioo (1:ℝ) M, |iteratedDeriv (j+6) f y| ≤ B/N^j) →
+      ∀ x ∈ Icc (-N) N, ∀ j ≤ Q,
+        |iteratedDeriv j (sargosScaledPhysicalRemainder f M N Q q) x| ≤
+          C*(B*(H:ℝ)^6/60)/N^j := by
+  exact @sargosScaledPhysicalRemainder_uniform_jets Q
+
+example {σ δ T N A : ℝ}
+    {F : ℝ → ℝ} {P Q M : ℕ}
+    (hσ : 0 ≤ σ) (hF : IsApproximateModelPhaseFunction F σ P δ)
+    (hδ : δ ≤ 1) (hP : Q+6 ≤ P)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    {j : ℕ} (hj : j ≤ Q+1) {x : ℝ} (hx : x ∈ Ioo (1:ℝ) M) :
+    |iteratedDeriv (j+6) (heathBrownPhysicalPhase F T N A 1) x| ≤
+      (sargosModelJetBudget σ Q*|T|/N^6)/N^j := by
+  exact @sargosModelPhysicalPhase_scale_jets σ δ T N A F P Q M hσ hF hδ hP hN ha hb j hj x hx
+
+example (σ : ℝ) (hσ : 0 ≤ σ) (Q : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M P : ℕ) (F : ℝ → ℝ) (δ T N A : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → Q+6 ≤ P → δ ≤ 1 → 0 < N → N ≤ A → A+(M:ℝ) ≤ 2*N →
+      IsApproximateModelPhaseFunction F σ P δ →
+      ContDiff ℝ ∞ (sargosScaledPhysicalRemainder
+        (heathBrownPhysicalPhase F T N A 1) M N Q q) ∧
+      (∀ m ∈ sargosSextupleInterior M q,
+        sargosScaledPhysicalRemainder (heathBrownPhysicalPhase F T N A 1) M N Q q m =
+          sargosSextupleRemainder (heathBrownPhysicalPhase F T N A 1) q m) ∧
+      ∀ x ∈ Icc (-N) N, ∀ j ≤ Q,
+        |iteratedDeriv j (sargosScaledPhysicalRemainder
+          (heathBrownPhysicalPhase F T N A 1) M N Q q) x| ≤
+            C * |T| * (H:ℝ)^6/(60*N^6*N^j) := by
+  exact @sargosScaledModelRemainder_uniform σ hσ Q
+
+example {U : ℝ → ℝ} (hU : ContDiff ℝ ∞ U)
+    (N A T₁ : ℝ) :
+    ContDiff ℝ ∞ (sargosAffinePhysicalCorrection U N A T₁) := by
+  exact @sargosAffinePhysicalCorrection_contDiff U hU N A T₁
+
+example {U : ℝ → ℝ} (hU : ContDiff ℝ ∞ U)
+    (N A T₁ u : ℝ) (j : ℕ) :
+    iteratedDeriv j (sargosAffinePhysicalCorrection U N A T₁) u =
+      (N^j/T₁)*iteratedDeriv j U (N*u-A) := by
+  exact @sargosAffinePhysicalCorrection_iteratedDeriv U hU N A T₁ u j
+
+example {U : ℝ → ℝ} {N A T₁ B : ℝ} {Q : ℕ}
+    (hU : ContDiff ℝ ∞ U) (hN : 0 < N) (hT : 0 < T₁)
+    (ha : N ≤ A) (hb : A ≤ 2*N)
+    (hjets : ∀ x ∈ Icc (-N) N, ∀ j ≤ Q, |iteratedDeriv j U x| ≤ B/N^j)
+    {u : ℝ} (hu : u ∈ phaseInterval) {j : ℕ} (hj : j ≤ Q) :
+    |iteratedDeriv j (sargosAffinePhysicalCorrection U N A T₁) u| ≤ B/T₁ := by
+  exact @sargosAffinePhysicalCorrection_uniform_jets U N A T₁ B Q hU hN hT ha hb hjets u hu j hj
+
+example {σ N τ T : ℝ}
+    (hσ : 0 < σ) (hN : 0 < N) (hτ : 0 < τ) (hT : 0 < T) :
+    0 < sargosScaledTransformedTime σ N τ T := by
+  exact @sargosScaledTransformedTime_pos σ N τ T hσ hN hτ hT
+
+example (σ : ℝ) (hσ : 0 < σ) (P : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (F : ℝ → ℝ) (δ N A τ T : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → δ ≤ 1 → 0 < N → N ≤ A → A+(M:ℝ) ≤ 2*N → 0 < τ → 0 < T →
+      IsApproximateModelPhaseFunction F σ (P+7) δ →
+      IsApproximateModelPhaseFunction (sargosScaledTransformedModel F σ M N A (P+1) q τ T)
+        (σ+4) P ((δ+C*(H:ℝ)^6/(τ*N^2))/modelPhaseJetCoefficient σ 4) := by
+  exact @sargosScaledTransformedModel_approximate σ hσ P
+
+example {F : ℝ → ℝ}
+    {σ N A τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    {x : ℝ} (hx : x ∈ Ioo (0:ℝ) M) :
+    sargosScaledTransformedTime σ N τ T*sargosScaledTransformedModel F σ M N A Q q τ T ((A+x)/N) =
+      τ*iteratedDeriv 4 (heathBrownPhysicalPhase F T N A 1) x+
+        sargosScaledPhysicalRemainder (heathBrownPhysicalPhase F T N A 1) M N Q q x := by
+  exact @sargosScaledTransformedModel_physical_identity F σ N A τ T H M hF hσ hN ha hb hτ hT Q q x hx
+
+example {F : ℝ → ℝ}
+    {σ N A τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hfreq : (sargosQuarticDifference q:ℝ)/12 = τ)
+    {m : ℤ} (hm : m ∈ sargosSextupleInterior M q) :
+    sargosSextuplePhase (heathBrownPhysicalPhase F T N A 1) q m =
+      sargosScaledTransformedTime σ N τ T*
+        sargosScaledTransformedModel F σ M N A Q q τ T ((A+m)/N) := by
+  exact @sargosScaledTransformedModel_source_phase F σ N A τ T H M hF hσ hN ha hb hτ hT Q q hfreq m hm
+
+example {F : ℝ → ℝ}
+    {σ N A τ T : ℝ} {H M : ℕ}
+    (hF : ContDiffOn ℝ ∞ F phaseInterval) (hσ : 0 < σ)
+    (hN : 0 < N) (ha : N ≤ A) (hb : A+(M:ℝ) ≤ 2*N)
+    (hτ : 0 < τ) (hT : 0 < T) (Q : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hfreq : (sargosQuarticDifference q:ℝ)/12 = τ) :
+    (∑ m ∈ sargosSextupleInterior M q,
+      fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T N A 1) q m)) =
+      ∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter
+          (sargosScaledTransformedTime σ N τ T*
+            sargosScaledTransformedModel F σ M N A Q q τ T ((A+m)/N)) := by
+  exact @sargosScaledTransformedModel_source_sum F σ N A τ T H M hF hσ hN ha hb hτ hT Q q hfreq
+
+example (σ : ℝ) (hσ : 0 < σ) (P : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (F : ℝ → ℝ) (δ N A T : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → δ ≤ 1 → 0 < N → N ≤ A → A+(M:ℝ) ≤ 2*N →
+      0 < T → 0 < sargosQuarticDifference q →
+      IsApproximateModelPhaseFunction F σ (P+7) δ →
+      let τ : ℝ := (sargosQuarticDifference q:ℝ)/12
+      IsApproximateModelPhaseFunction (sargosScaledTransformedModel F σ M N A (P+1) q τ T)
+        (σ+4) P ((δ+C*(H:ℝ)^6/(τ*N^2))/modelPhaseJetCoefficient σ 4) ∧
+      (∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T N A 1) q m)) =
+        ∑ m ∈ sargosSextupleInterior M q,
+          fordAdditiveCharacter
+            (sargosScaledTransformedTime σ N τ T*
+              sargosScaledTransformedModel F σ M N A (P+1) q τ T ((A+m)/N)) := by
+  exact @sargos_scaled_positive_sextuple_model σ hσ P
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    (∑ m ∈ Finset.Ioc (0:ℤ) M,
+      fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m)) =
+      ∑ n ∈ Finset.Ioc a (a+M), oscillatory F T N n := by
+  exact @sargos_source_model_Ioc F T N a M
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    exponentialSumAt F T N a (a+M) =
+      oscillatory F T N a+
+      ∑ m ∈ Finset.Ioc (0:ℤ) M,
+        fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m) := by
+  exact @sargos_exponentialSumAt_source_entry F T N a M
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    ‖exponentialSumAt F T N a (a+M)-
+      (∑ m ∈ Finset.Ioc (0:ℤ) M,
+        fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m))‖ = 1 := by
+  exact @sargos_exponentialSumAt_source_endpoint F T N a M
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    ‖exponentialSumAt F T N a (a+M)‖ ≤
+      1+‖∑ m ∈ Finset.Ioc (0:ℤ) M,
+        fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m)‖ := by
+  exact @sargos_exponentialSumAt_le_source F T N a M
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosSextupleRadius q.swap = sargosSextupleRadius q := by
+  exact @sargosSextupleRadius_swap H q
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosSextupleInterior M q.swap = sargosSextupleInterior M q := by
+  exact @sargosSextupleInterior_swap H M q
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosQuarticDifference q.swap = -sargosQuarticDifference q := by
+  exact @sargosQuarticDifference_swap H q
+
+example {H : ℕ} (f : ℝ → ℝ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) (m : ℝ) :
+    sargosSextuplePhase f q.swap m = -sargosSextuplePhase f q m := by
+  exact @sargosSextuplePhase_swap H f q m
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    ‖∑ m ∈ sargosSextupleInterior M q.swap,
+      fordAdditiveCharacter (sargosSextuplePhase f q.swap m)‖ =
+      ‖∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter (sargosSextuplePhase f q m)‖ := by
+  exact @sargos_sextuple_sum_norm_swap H f M q
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosQuarticDifference (sargosOrientedSextuple q) = |sargosQuarticDifference q| := by
+  exact @sargosQuarticDifference_oriented H q
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosSquareDiagonal H) :
+    sargosOrientedSextuple q ∈ sargosSquareDiagonal H := by
+  exact @sargosOrientedSextuple_mem_diagonal H q hq
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosSextupleInterior M (sargosOrientedSextuple q) = sargosSextupleInterior M q := by
+  exact @sargosSextupleInterior_oriented H M q
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    ‖∑ m ∈ sargosSextupleInterior M (sargosOrientedSextuple q),
+      fordAdditiveCharacter (sargosSextuplePhase f (sargosOrientedSextuple q) m)‖ =
+      ‖∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter (sargosSextuplePhase f q m)‖ := by
+  exact @sargos_sextuple_sum_norm_oriented H f M q
+
+example (σ : ℝ) (hσ : 0 < σ) (P : ℕ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (H M : ℕ) (F : ℝ → ℝ) (δ N A T : ℝ)
+      (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+      1 ≤ M → δ ≤ 1 → 0 < N → N ≤ A → A+(M:ℝ) ≤ 2*N →
+      0 < T → sargosQuarticDifference q ≠ 0 →
+      IsApproximateModelPhaseFunction F σ (P+7) δ →
+      let τ : ℝ := (|sargosQuarticDifference q|:ℝ)/12
+      IsApproximateModelPhaseFunction
+        (sargosScaledTransformedModel F σ M N A (P+1) (sargosOrientedSextuple q) τ T)
+        (σ+4) P ((δ+C*(H:ℝ)^6/(τ*N^2))/modelPhaseJetCoefficient σ 4) ∧
+      ‖∑ m ∈ sargosSextupleInterior M q,
+        fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T N A 1) q m)‖ =
+        ‖∑ m ∈ sargosSextupleInterior M q,
+          fordAdditiveCharacter
+            (sargosScaledTransformedTime σ N τ T*
+              sargosScaledTransformedModel F σ M N A (P+1) (sargosOrientedSextuple q) τ T
+                ((A+m)/N))‖ := by
+  exact @sargos_scaled_oriented_sextuple_model σ hσ P
+
+example {H : ℕ} (a M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) :
+    a ≤ sargosInnerStart a q ∧ sargosInnerStart a q ≤ sargosInnerEnd a M q ∧
+      sargosInnerEnd a M q ≤ a+M ∧
+      (sargosInnerStart a q:ℤ) = (a:ℤ)+sargosSextupleRadius q+2 ∧
+      (sargosInnerEnd a M q:ℤ) = (a:ℤ)+(M:ℤ)-sargosSextupleRadius q-1 := by
+  exact @sargosInnerEndpoints H a M q hne
+
+example {H : ℕ}
+    (G : ℝ → ℝ) (T N : ℝ) (a M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty) :
+    (∑ m ∈ sargosSextupleInterior M q, fordAdditiveCharacter (T * G (((a:ℝ)+m)/N))) =
+      exponentialSumAt G T N (sargosInnerStart a q) (sargosInnerEnd a M q) := by
+  exact @sargos_inner_sum_eq_exponentialSumAt H G T N a M q hne
+
+example {H : ℕ} {N : ℝ} (a M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hne : (sargosSextupleInterior M q).Nonempty)
+    (ha : N ≤ (a:ℝ)) (hb : (a:ℝ)+M ≤ 2*N) :
+    N ≤ (sargosInnerStart a q:ℝ) ∧ (sargosInnerEnd a M q:ℝ) ≤ 2*N := by
+  exact @sargosInnerEndpoints_dyadic H N a M q hne ha hb
+
+example {H : ℕ} {N τ η : ℝ}
+    (hN : 0 < N) (hτ : 0 < τ)
+    (hlarge : (H:ℝ)^3 ≤ τ) (hsmall : (H:ℝ)^3/N^2 ≤ η) :
+    (H:ℝ)^6/(τ*N^2) ≤ η := by
+  exact @sargos_large_frequency_error H N τ η hN hτ hlarge hsmall
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M a : ℕ) (F : ℝ → ℝ) (T N : ℝ)
+        (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3),
+        1 ≤ H → H ≤ M → 1 ≤ N → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N → 0 < T →
+        IsApproximateModelPhaseFunction F σ P δ →
+        let τ : ℝ := |(sargosQuarticDifference q:ℝ)|/12
+        (H:ℝ)^3 ≤ τ → (H:ℝ)^3/N^2 ≤ η →
+        ‖∑ m ∈ sargosSextupleInterior M q,
+          fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T N a 1) q m)‖ ≤
+          C*((sargosScaledTransformedTime σ N τ T/N)^(k+ε)*N^(l+ε)+
+            N/sargosScaledTransformedTime σ N τ T) := by
+  exact @sargos_large_frequency_exponentPair_bound k l σ ε hkl hσ hε
+
+/- Real scale, negative physical arguments, endpoint loss and both frequency signs. -/
+example : sargosScaledRemainderWidth (3/2) = 1/12 := by
+  norm_num [sargosScaledRemainderWidth]
+
+example (u : ℝ) : sargosAffinePhysicalCorrection (fun _ => 0) (3/2) 2 7 u = 0 := by
+  simp [sargosAffinePhysicalCorrection]
+
+example (c u : ℝ) : sargosAffinePhysicalCorrection (fun _ => c) (3/2) 2 2 u = c/2 := by
+  norm_num [sargosAffinePhysicalCorrection]
+  ring
+
+example : sargosAffinePhysicalCorrection (fun x => x) (3/2) 2 2 1 = -1/4 := by
+  norm_num [sargosAffinePhysicalCorrection]
+
+example : sargosAffinePhysicalCorrection (fun x => x) (3/2) 2 2 2 = 1/2 := by
+  norm_num [sargosAffinePhysicalCorrection]
+
+example (u : ℝ) :
+    iteratedDeriv 2 (sargosAffinePhysicalCorrection (fun x => x^2) (3/2) 2 2) u = 9/4 := by
+  rw [sargosAffinePhysicalCorrection_iteratedDeriv (by fun_prop)]
+  norm_num [iteratedDeriv_pow]
+
+example : sargosScaledTransformedTime 1 (3/2) 3 5 = 640/9 := by
+  norm_num [sargosScaledTransformedTime,
+    sargos_modelPhaseJetCoefficient_four (by norm_num : (0:ℝ) ≤ 1)]
+
+example (σ N T : ℝ) : sargosScaledTransformedTime σ N 0 T = 0 := by
+  simp [sargosScaledTransformedTime]
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    exponentialSumAt F T N a a = oscillatory F T N a := by
+  simpa only [Nat.add_zero,Nat.cast_zero,Finset.Ioc_self,Finset.sum_empty,add_zero] using
+    sargos_exponentialSumAt_source_entry F T N a 0
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    ‖exponentialSumAt F T N a a‖ = 1 := by
+  simpa only [Nat.add_zero,Nat.cast_zero,Finset.Ioc_self,Finset.sum_empty,sub_zero] using
+    sargos_exponentialSumAt_source_endpoint F T N a 0
+
+private def positiveSextuple :
+    SargosInitialMomentTuple 5 3 × SargosInitialMomentTuple 5 3 :=
+  (![⟨2,by decide⟩,⟨2,by decide⟩,⟨5,by decide⟩],
+    ![⟨1,by decide⟩,⟨4,by decide⟩,⟨4,by decide⟩])
+
+example : sargosQuarticDifference positiveSextuple = 144 := by
+  norm_num [positiveSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : sargosQuarticDifference positiveSextuple.swap = -144 := by
+  rw [sargosQuarticDifference_swap]
+  norm_num [positiveSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : sargosQuarticDifference (sargosOrientedSextuple positiveSextuple.swap) = 144 := by
+  rw [sargosQuarticDifference_oriented,sargosQuarticDifference_swap]
+  norm_num [positiveSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : positiveSextuple.swap ∈ sargosSquareDiagonal 5 := by
+  norm_num [positiveSextuple,sargosSquareDiagonal,sargosInitialTuplePower,Fin.sum_univ_succ]
+  decide
+
+example (f : ℝ → ℝ) (M : ℕ) :
+    ‖∑ m ∈ sargosSextupleInterior M positiveSextuple.swap,
+      fordAdditiveCharacter (sargosSextuplePhase f positiveSextuple.swap m)‖ =
+    ‖∑ m ∈ sargosSextupleInterior M positiveSextuple,
+      fordAdditiveCharacter (sargosSextuplePhase f positiveSextuple m)‖ := by
+  exact sargos_sextuple_sum_norm_swap f M positiveSextuple
+
+example (t : SargosInitialMomentTuple 1 3) : sargosSextupleRadius (t,t) = 1 := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  omega
+
+example (t : SargosInitialMomentTuple 1 3) (a : ℕ) :
+    sargosInnerStart a (t,t) = a+3 := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by omega
+  simp [sargosInnerStart,hr,Nat.add_assoc]
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosSextupleInterior 4 (t,t) = ∅ := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by omega
+  have he : Finset.Ioo (2:ℤ) 3 = ∅ := by decide
+  simpa only [sargosSextupleInterior,hr,show (1:ℤ)+1 = 2 from rfl,
+    show (4:ℤ)-1 = 3 from rfl] using he
+
+example (t : SargosInitialMomentTuple 1 3) :
+    sargosSextupleInterior 5 (t,t) = {3} := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by omega
+  ext m
+  simp only [sargosSextupleInterior,hr,Finset.mem_Ioo,Finset.mem_singleton]
+  constructor <;> omega
+
+example (t : SargosInitialMomentTuple 1 3) (f : ℝ → ℝ) (N : ℝ) (Q : ℕ) (x : ℝ) :
+    sargosScaledExtendedRemainder f 4 N Q (t,t) x = 0 := by
+  have h := sargosSextupleRadius_bounds (t,t)
+  have hr : sargosSextupleRadius (t,t) = 1 := by omega
+  have he : Finset.Ioo (2:ℤ) 3 = ∅ := by decide
+  simp [sargosScaledExtendedRemainder,sargosSextupleInterior,hr,he]
+
+example : (2:ℝ)^6/(8*(9/2:ℝ)^2) ≤ 32/81 := by
+  exact sargos_large_frequency_error (H := 2) (N := 9/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : (1:ℝ)^6/(1*(3/2:ℝ)^2) ≤ 4/9 := by
+  simpa only [Nat.cast_one] using
+    sargos_large_frequency_error (H := 1) (N := 3/2) (τ := 1) (η := 4/9)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+end SargosRealScaleSourceRegression
+
+namespace SargosFiniteProcessRegression
+
+open TaoTrudgianYang2025 GafniTao Expdb Set MeasureTheory
+open scoped BigOperators ContDiff
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    |(sargosQuarticDifference q:ℝ)| ≤ 3*(H:ℝ)^4 := by
+  exact @sargosQuarticDifference_abs_le H q
+
+example (H : ℕ) (c B : ℝ) :
+    sargosAbsoluteSextupleWindow H c B ⊆
+      sargosInitialSextupleWindow H c B ∪ sargosInitialSextupleWindow H (-c-B) B := by
+  exact @sargosAbsoluteSextupleWindow_subset_signed H c B
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H → ∀ c : ℝ,
+      ((sargosAbsoluteSextupleWindow H c ((H:ℝ)^3)).card:ℝ) ≤ C*(H:ℝ)^(3+ε) := by
+  exact @sargosAbsoluteSextupleWindow_card_bound ε hε
+
+example (H : ℕ) :
+    sargosSmallFrequencySextuples H ⊆
+      sargosInitialSextupleWindow H (-12*(H:ℝ)^3) (24*(H:ℝ)^3) := by
+  exact @sargosSmallFrequencySextuples_subset_window H
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H →
+      ((sargosSmallFrequencySextuples H).card:ℝ) ≤ C*(H:ℝ)^(3+ε) := by
+  exact @sargosSmallFrequencySextuples_card_bound ε hε
+
+example (H : ℕ) :
+    sargosSmallFrequencySextuples H ∪ sargosLargeFrequencySextuples H = sargosSquareDiagonal H ∧
+      Disjoint (sargosSmallFrequencySextuples H) (sargosLargeFrequencySextuples H) := by
+  exact @sargosFrequencySextuples_partition H
+
+example {H : ℕ} (hH : 1 ≤ H)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosLargeFrequencySextuples H) :
+    ∃ j ∈ Finset.Icc 1 (3*H),
+      q ∈ sargosAbsoluteSextupleWindow H ((j:ℝ)*(H:ℝ)^3) ((H:ℝ)^3) := by
+  exact @sargosLargeFrequency_window_index H hH q hq
+
+example {H : ℕ} (hH : 1 ≤ H)
+    (w : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3 → ℝ)
+    (hw : ∀ q, 0 ≤ w q) :
+    ∑ q ∈ sargosLargeFrequencySextuples H, w q ≤
+      ∑ j ∈ Finset.Icc 1 (3*H),
+        ∑ q ∈ sargosAbsoluteSextupleWindow H ((j:ℝ)*(H:ℝ)^3) ((H:ℝ)^3), w q := by
+  exact @sargosLargeFrequency_sum_le_windows H hH w hw
+
+example {H j : ℕ} (hH : 1 ≤ H) (hj : 1 ≤ j) :
+    ∑ q ∈ sargosAbsoluteSextupleWindow H ((j:ℝ)*(H:ℝ)^3) ((H:ℝ)^3),
+      12/|(sargosQuarticDifference q:ℝ)| ≤
+        ((sargosAbsoluteSextupleWindow H ((j:ℝ)*(H:ℝ)^3) ((H:ℝ)^3)).card:ℝ)*
+          (12/((j:ℝ)*(H:ℝ)^3)) := by
+  exact @sargosAbsoluteWindow_reciprocal_bound H j hH hj
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H →
+      ∑ q ∈ sargosLargeFrequencySextuples H, 12/|(sargosQuarticDifference q:ℝ)| ≤
+        C*(H:ℝ)^ε*(1+Real.log (3*(H:ℝ))) := by
+  exact @sargos_reciprocal_frequency_harmonic ε hε
+
+example {x ε : ℝ} (hx : 1 ≤ x) (hε : 0 < ε) :
+    1+Real.log (3*x) ≤ (1+Real.log 3+1/ε)*x^ε := by
+  exact @sargos_log_three_scale_le_rpow x ε hx hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H →
+      ∑ q ∈ sargosLargeFrequencySextuples H, 12/|(sargosQuarticDifference q:ℝ)| ≤
+        C*(H:ℝ)^ε := by
+  exact @sargos_reciprocal_frequency_bound ε hε
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    sargosSextupleInterior M q ⊆ Finset.Ioc (0:ℤ) M := by
+  exact @sargosSextupleInterior_subset_source H M q
+
+example {H : ℕ} (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    (sargosSextupleInterior M q).card ≤ M := by
+  exact @sargosSextupleInterior_card_le H M q
+
+example {H : ℕ} (f : ℝ → ℝ) (M : ℕ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    ‖∑ m ∈ sargosSextupleInterior M q,
+      fordAdditiveCharacter (sargosSextuplePhase f q m)‖ ≤ (M:ℝ) := by
+  exact @sargos_sextuple_inner_norm_le H f M q
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ H : ℕ, 1 ≤ H → ∀ (M : ℕ) (f : ℝ → ℝ),
+      (∑ q ∈ sargosSmallFrequencySextuples H,
+        ‖∑ m ∈ sargosSextupleInterior M q,
+          fordAdditiveCharacter (sargosSextuplePhase f q m)‖) ≤
+        C*(M:ℝ)*(H:ℝ)^(3+ε) := by
+  exact @sargos_small_frequency_contribution ε hε
+
+example {H : ℕ}
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    |(sargosQuarticDifference q:ℝ)|/12 ≤ (H:ℝ)^4 := by
+  exact @sargosSextupleFrequency_le H q
+
+example {H : ℕ} (hH : 1 ≤ H)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : q ∈ sargosLargeFrequencySextuples H) :
+    0 < |(sargosQuarticDifference q:ℝ)| ∧ (H:ℝ)^3 ≤ |(sargosQuarticDifference q:ℝ)|/12 := by
+  exact @sargosLargeFrequency_pos H hH q hq
+
+example {σ N T k ε : ℝ} {H : ℕ}
+    (hσ : 0 < σ) (hN : 0 < N) (hT : 0 < T) (hke : 0 ≤ k+ε)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    (sargosScaledTransformedTime σ N (|(sargosQuarticDifference q:ℝ)|/12) T/N)^(k+ε) ≤
+      (modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4/N^5)^(k+ε) := by
+  exact @sargosTransformedFrequency_main_le σ N T k ε H hσ hN hT hke q
+
+example {σ N T : ℝ} {H : ℕ}
+    (hσ : 0 < σ) (hN : 0 < N) (hT : 0 < T)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3)
+    (hq : 0 < |(sargosQuarticDifference q:ℝ)|) :
+    N/sargosScaledTransformedTime σ N (|(sargosQuarticDifference q:ℝ)|/12) T =
+      (N^5/(modelPhaseJetCoefficient σ 4*T))*(12/|(sargosQuarticDifference q:ℝ)|) := by
+  exact @sargosTransformedFrequency_secondary_eq σ N T H hσ hN hT q hq
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M a : ℕ) (F : ℝ → ℝ) (T N : ℝ),
+        1 ≤ H → H ≤ M → 1 ≤ N → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N → 0 < T →
+        IsApproximateModelPhaseFunction F σ P δ → (H:ℝ)^3/N^2 ≤ η →
+        (∑ q ∈ sargosLargeFrequencySextuples H,
+          ‖∑ m ∈ sargosSextupleInterior M q,
+            fordAdditiveCharacter (sargosSextuplePhase (heathBrownPhysicalPhase F T N a 1) q m)‖) ≤
+          C*((H:ℝ)^(4+ε)*(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4/N^5)^(k+ε)*N^(l+ε)+
+            (N^5/(modelPhaseJetCoefficient σ 4*T))*(H:ℝ)^ε) := by
+  exact @sargos_large_frequency_contribution k l σ ε hkl hσ hε
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M a : ℕ) (F : ℝ → ℝ) (T N : ℝ),
+        1 ≤ H → H ≤ M → 1 ≤ N → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N → 0 < T →
+        IsApproximateModelPhaseFunction F σ P δ → (H:ℝ)^3/N^2 ≤ η →
+        sargosInteriorSextupleCorrelation (heathBrownPhysicalPhase F T N a 1) M H ≤
+          C*((M:ℝ)*(H:ℝ)^(3+ε)+
+            (H:ℝ)^(4+ε)*(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4/N^5)^(k+ε)*N^(l+ε)+
+            (N^5/(modelPhaseJetCoefficient σ 4*T))*(H:ℝ)^ε) := by
+  exact @sargos_model_interior_correlation_bound k l σ ε hkl hσ hε
+
+example {N H E A B C D : ℝ}
+    (hH : 1 ≤ H) (hHN : H ≤ N) (hE : 1 ≤ E)
+    (hA : 0 ≤ A) (hB : 0 ≤ B) (hD : 1 ≤ D) :
+    1492992*(N/H)^6*N^6+
+      (382205952*N^11/H^4)*(C*(N*H^3*E+H^4*E*A+B*E))+D*N^11*E ≤
+      (1492992+382205952*C+D)*(N^12/H+N^11*A+N^11*B/H^4)*E := by
+  exact @sargos_finite_process_algebra N H E A B C D hH hHN hE hA hB hD
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M a : ℕ) (F : ℝ → ℝ) (T N : ℝ),
+        1 ≤ H → H ≤ M → 1 ≤ N → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N → 0 < T →
+        IsApproximateModelPhaseFunction F σ P δ → (H:ℝ)^3/N^2 ≤ η →
+        ‖∑ m ∈ Finset.Ioc (0:ℤ) M,
+          fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m)‖^12 ≤
+          C*(N^12/(H:ℝ)+
+            N^11*(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4/N^5)^(k+ε)*N^(l+ε)+
+            N^16/(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4))*(H:ℝ)^ε := by
+  exact @sargos_finite_model_process k l σ ε hkl hσ hε
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    ‖exponentialSumAt F T N a (a+M)‖^12 ≤
+      2048*(1+‖∑ m ∈ Finset.Ioc (0:ℤ) M,
+        fordAdditiveCharacter (heathBrownPhysicalPhase F T N a 1 m)‖^12) := by
+  exact @sargos_closed_source_twelfth_le F T N a M
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M a : ℕ) (F : ℝ → ℝ) (T N : ℝ),
+        1 ≤ H → H ≤ M → 1 ≤ N → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N → 0 < T →
+        IsApproximateModelPhaseFunction F σ P δ → (H:ℝ)^3/N^2 ≤ η →
+        ‖exponentialSumAt F T N a (a+M)‖^12 ≤
+          C*(N^12/(H:ℝ)+
+            N^11*(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4/N^5)^(k+ε)*N^(l+ε)+
+            N^16/(modelPhaseJetCoefficient σ 4*T*(H:ℝ)^4))*(H:ℝ)^ε := by
+  exact @sargos_finite_closed_model_process k l σ ε hkl hσ hε
+
+/- Concrete frequency windows, multiplicity preservation and endpoint cases. -/
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    (t,t) ∈ sargosSmallFrequencySextuples H := by
+  simp [sargosSmallFrequencySextuples,sargosSquareDiagonal,sargosQuarticDifference]
+
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    (t,t) ∉ sargosLargeFrequencySextuples H := by
+  simp [sargosLargeFrequencySextuples,sargosQuarticDifference]
+
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    (t,t) ∈ sargosAbsoluteSextupleWindow H 0 ((H:ℝ)^3) := by
+  simp [sargosAbsoluteSextupleWindow,sargosSquareDiagonal,sargosQuarticDifference]
+
+example : sargosLargeFrequencySextuples 1 = ∅ := by
+  apply Finset.eq_empty_iff_forall_notMem.mpr
+  intro q hq
+  have h := (Finset.mem_filter.mp hq).2
+  have hb := sargosQuarticDifference_abs_le q
+  norm_num at h hb
+  linarith
+
+private def largeSextuple :
+    SargosInitialMomentTuple 55 3 × SargosInitialMomentTuple 55 3 :=
+  (![⟨22,by decide⟩,⟨22,by decide⟩,⟨55,by decide⟩],
+    ![⟨11,by decide⟩,⟨44,by decide⟩,⟨44,by decide⟩])
+
+private theorem largeSextuple_difference : sargosQuarticDifference largeSextuple = 2108304 := by
+  norm_num [largeSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+private theorem largeSextuple_square : largeSextuple ∈ sargosSquareDiagonal 55 := by
+  norm_num [largeSextuple,sargosSquareDiagonal,sargosInitialTuplePower,Fin.sum_univ_succ]
+  decide
+
+private theorem largeSextuple_swap_square : largeSextuple.swap ∈ sargosSquareDiagonal 55 := by
+  norm_num [largeSextuple,sargosSquareDiagonal,sargosInitialTuplePower,Fin.sum_univ_succ]
+  decide
+
+example : sargosQuarticDifference largeSextuple = 2108304 := by
+  norm_num [largeSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : sargosQuarticDifference largeSextuple.swap = -2108304 := by
+  rw [sargosQuarticDifference_swap]
+  norm_num [largeSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : largeSextuple ∈ sargosLargeFrequencySextuples 55 := by
+  norm_num [sargosLargeFrequencySextuples,largeSextuple_difference,largeSextuple_square]
+
+example : largeSextuple.swap ∈ sargosLargeFrequencySextuples 55 := by
+  norm_num [sargosLargeFrequencySextuples,sargosQuarticDifference_swap,
+    largeSextuple_difference,largeSextuple_swap_square]
+
+example : largeSextuple ≠ largeSextuple.swap := by
+  intro h
+  have he := congrArg
+    (fun q : SargosInitialMomentTuple 55 3 × SargosInitialMomentTuple 55 3 => (q.1 0:ℤ)) h
+  norm_num [largeSextuple] at he
+
+example : largeSextuple ∈ sargosAbsoluteSextupleWindow 55
+    (12*(55:ℝ)^3) ((55:ℝ)^3) := by
+  norm_num [sargosAbsoluteSextupleWindow,largeSextuple_difference,largeSextuple_square]
+
+example : largeSextuple.swap ∈ sargosAbsoluteSextupleWindow 55
+    (12*(55:ℝ)^3) ((55:ℝ)^3) := by
+  norm_num [sargosAbsoluteSextupleWindow,sargosQuarticDifference_swap,
+    largeSextuple_difference,largeSextuple_swap_square]
+
+example : largeSextuple ∉ sargosAbsoluteSextupleWindow 55
+    (13*(55:ℝ)^3) ((55:ℝ)^3) := by
+  norm_num [sargosAbsoluteSextupleWindow,largeSextuple_difference]
+
+example : |(sargosQuarticDifference largeSextuple:ℝ)|/12 = 175692 := by
+  norm_num [largeSextuple,sargosQuarticDifference,sargosInitialTuplePower,Fin.sum_univ_succ]
+
+example : (55:ℝ)^3 ≤ 175692 := by norm_num
+
+example : (12:ℝ)/2108304 ≤ 12/(12*(55:ℝ)^3) := by norm_num
+
+example {H : ℕ} (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    (sargosSextupleInterior 0 q).card = 0 := by
+  exact Nat.eq_zero_of_le_zero (sargosSextupleInterior_card_le 0 q)
+
+example {H : ℕ} (f : ℝ → ℝ)
+    (q : SargosInitialMomentTuple H 3 × SargosInitialMomentTuple H 3) :
+    ‖∑ m ∈ sargosSextupleInterior 0 q,
+      fordAdditiveCharacter (sargosSextuplePhase f q m)‖ = 0 := by
+  apply le_antisymm
+  · simpa only [Nat.cast_zero] using sargos_sextuple_inner_norm_le f 0 q
+  · exact norm_nonneg _
+
+example {H : ℕ} :
+    (∑ _q ∈ sargosLargeFrequencySextuples H, (0:ℝ)) = 0 := by simp
+
+example {H : ℕ} (t : SargosInitialMomentTuple H 3) :
+    sargosScaledTransformedTime 1 2 (|(sargosQuarticDifference (t,t):ℝ)|/12) 3 = 0 := by
+  simp [sargosQuarticDifference,sargosScaledTransformedTime]
+
+example :
+    1492992*((2:ℝ)/1)^6*(2:ℝ)^6+
+      (382205952*(2:ℝ)^11/1^4)*(1*(2*1^3*1+1^4*1*0+0*1))+1*(2:ℝ)^11*1 ≤
+      (1492992+382205952*1+1)*((2:ℝ)^12/1+(2:ℝ)^11*0+(2:ℝ)^11*0/1^4)*1 := by
+  exact sargos_finite_process_algebra (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+end SargosFiniteProcessRegression
+
+namespace SargosCProcessRegression
+
+open TaoTrudgianYang2025 GafniTao Expdb Set MeasureTheory
+open scoped BigOperators ContDiff
+
+example {k : ℝ} (hk : 0 ≤ k) :
+    0 < 12*(1+4*k) ∧ 0 < 2+3*k := by
+  exact @sargosCProcess_denominators_pos k hk
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    InExponentPairTriangle (sargosCProcessK k) (sargosCProcessL k l) := by
+  exact @InExponentPairTriangle.sargosCProcess k l h
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    15/4 ≤ sargosCProcessThreshold k l ∧ sargosCProcessThreshold k l ≤ 5 := by
+  exact @sargosCProcessThreshold_bounds k l h
+
+example {k l : ℝ} (hk : 0 ≤ k) :
+    (1+k)*sargosCProcessThreshold k l-(1+k+3*l) =
+      (1+4*k)*(3+3*k-l)/(2+3*k) := by
+  exact @sargosCProcessThreshold_secondary_identity k l hk
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    1 ≤ (1+k)*sargosCProcessThreshold k l-(1+k+3*l) := by
+  exact @sargosCProcessThreshold_secondary_margin k l h
+
+example {k l : ℝ} (hk : 0 ≤ k) :
+    3*k*sargosCProcessThreshold k l-(1+7*k-3*l) =
+      (24*k^2-2*k+24*k*l+6*l-2)/(2+3*k) := by
+  exact @sargosCProcessThreshold_cap_identity k l hk
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    2/7 ≤ 3*k*sargosCProcessThreshold k l-(1+7*k-3*l) := by
+  exact @sargosCProcessThreshold_cap_margin k l h
+
+example : ExponentPair ((1:ℝ)/30) (26/30) := by
+  exact @sargos_classical_aCubedB_pair
+
+example :
+    IsExponentPairEstimateNonAsymptotic ((1:ℝ)/30) (26/30) := by
+  exact @sargos_classical_aCubedB_nonAsymptotic
+
+example {k l T N : ℝ} (hT : 0 < T) (hN : 0 < N) :
+    0 < sargosCProcessScale k l T N := by
+  exact @sargosCProcessScale_pos k l T N hT hN
+
+example {k l T N : ℝ} (hT : 0 < T) (hN : 0 < N) :
+    Real.log (sargosCProcessScale k l T N) =
+      (-k/(1+4*k))*Real.log (T/N)+((1+4*k-l)/(1+4*k))*Real.log N := by
+  exact @sargosCProcessScale_log k l T N hT hN
+
+example {k l T N : ℝ}
+    (hk : 0 ≤ k) (hT : 0 < T) (hN : 0 < N) :
+    Real.log (sargosCProcessScale k l T N) =
+      ((1+5*k-l)*Real.log N-k*Real.log T)/(1+4*k) := by
+  exact @sargosCProcessScale_log_physical k l T N hk hT hN
+
+example {k l T N : ℝ}
+    (hk : 0 ≤ k) (hT : 0 < T) (hN : 0 < N) :
+    ((T/N^5)^k*N^l)*(sargosCProcessScale k l T N)^(1+4*k) = N := by
+  exact @sargosCProcessScale_balance k l T N hk hT hN
+
+example {k l T N : ℝ}
+    (hk : 0 ≤ k) (hT : 0 < T) (hN : 0 < N) :
+    N^12/sargosCProcessScale k l T N =
+      ((T/N)^(sargosCProcessK k)*N^(sargosCProcessL k l))^12 := by
+  exact @sargosCProcessScale_cost k l T N hk hT hN
+
+example {k l T N : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N) (hNT : N ≤ T) :
+    sargosCProcessScale k l T N ≤ N := by
+  exact @sargosCProcessScale_le_scale k l T N hkl hN hNT
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    (1+5*k-l-k*sargosCProcessThreshold k l)/(1+4*k) ≤ 2/3-1/100 := by
+  exact @sargosCProcess_cap_exponent_bound k l h
+
+example {k l : ℝ} (h : InExponentPairTriangle k l) :
+    13/3 ≤ ((1+k)*sargosCProcessThreshold k l+3+15*k-3*l)/(1+4*k) := by
+  exact @sargosCProcess_secondary_exponent_bound k l h
+
+example {k l T N : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N)
+    (hhigh : N^(sargosCProcessThreshold k l) ≤ T) :
+    sargosCProcessScale k l T N ≤ N^(2/3-1/100:ℝ) := by
+  exact @sargosCProcessScale_high_cap k l T N hkl hN hhigh
+
+example {k l T N : ℝ}
+    (hk : 0 ≤ k) (hT : 0 < T) (hN : 0 < N) :
+    Real.log (T*(sargosCProcessScale k l T N)^3) =
+      ((1+k)*Real.log T+(3+15*k-3*l)*Real.log N)/(1+4*k) := by
+  exact @sargosCProcessScale_secondary_log k l T N hk hT hN
+
+example {k l T N : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N)
+    (hhigh : N^(sargosCProcessThreshold k l) ≤ T) :
+    N^(13/3:ℝ) ≤ T*(sargosCProcessScale k l T N)^3 := by
+  exact @sargosCProcessScale_high_secondary k l T N hkl hN hhigh
+
+example {k : ℝ} (hk : 0 ≤ k) :
+    (1:ℝ)/30-sargosCProcessK k = (2+3*k)/(60*(1+4*k)) := by
+  exact @sargosCProcess_classical_gap k hk
+
+example {k l : ℝ} (hk : 0 ≤ k) :
+    ((1:ℝ)/30-sargosCProcessK k)*(sargosCProcessThreshold k l-1)+
+      (26/30-sargosCProcessL k l) = 0 := by
+  exact @sargosCProcess_classical_threshold_identity k l hk
+
+example {k l T N ε : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N) (hNT : N ≤ T)
+    (hlow : T ≤ N^(sargosCProcessThreshold k l)) :
+    (T/N)^((1:ℝ)/30+ε)*N^(26/30+ε) ≤
+      (T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε) := by
+  exact @sargosCProcess_low_height_power_comparison k l T N ε hkl hN hNT hlow
+
+example {k l σ ε : ℝ}
+    (hkl : InExponentPairTriangle k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (T N : ℝ) (F : ℝ → ℝ) (a b : ℕ),
+        IsExponentPairSetupAt σ δ P C T N F a b →
+        T ≤ N^(sargosCProcessThreshold k l) →
+        ‖exponentialSumAt F T N a b‖ ≤
+          C*(T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε) := by
+  exact @sargos_low_height_model_bound k l σ ε hkl hσ hε
+
+example {k l T N : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N)
+    (hhigh : N^(sargosCProcessThreshold k l) ≤ T) :
+    (sargosCProcessScale k l T N)^3/N^2 ≤ N^(-3/100:ℝ) := by
+  exact @sargosCProcessScale_high_smallness k l T N hkl hN hhigh
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ N : ℝ, N₀ ≤ N →
+      N^(-3/100:ℝ) ≤ η ∧ 8 ≤ N^(1/3:ℝ) := by
+  exact @sargosCProcess_initial_threshold η hη
+
+example {k l η : ℝ}
+    (hkl : InExponentPairTriangle k l) (hη : 0 < η) :
+    ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ (T N : ℝ), N₀ ≤ N →
+      N^(sargosCProcessThreshold k l) ≤ T →
+      (sargosCProcessScale k l T N)^3/N^2 ≤ η ∧
+        8*N^4 ≤ T*(sargosCProcessScale k l T N)^3 := by
+  exact @sargosCProcessScale_high_admissibility k l η hkl hη
+
+example {M : ℕ} {R T N η : ℝ}
+    (hR : 2 ≤ R) (hRM : R ≤ (M:ℝ)) (hT : 0 < T)
+    (hsmall : R^3/N^2 ≤ η) (hsecondary : 8*N^4 ≤ T*R^3) :
+    ∃ H : ℕ, 1 ≤ H ∧ H ≤ M ∧ R/2 ≤ (H:ℝ) ∧ (H:ℝ) ≤ R ∧
+      (H:ℝ)^3/N^2 ≤ η ∧ N^4 ≤ T*(H:ℝ)^3 := by
+  exact @sargosCProcess_integer_choice M R T N η hR hRM hT hsmall hsecondary
+
+example {D T N H : ℝ}
+    (hD : 0 < D) (hT : 0 < T) (hN : 0 < N) (hH : 0 < H)
+    (hsecondary : N^4 ≤ T*H^3) :
+    N^16/(D*T*H^4) ≤ (1/D)*(N^12/H) := by
+  exact @sargosCProcess_secondary_term_le D T N H hD hT hN hH hsecondary
+
+example {N H R : ℝ}
+    (hN : 0 < N) (hR : 0 < R) (hH : R/2 ≤ H) :
+    N^12/H ≤ 2*(N^12/R) := by
+  exact @sargosCProcess_first_term_le N H R hN hR hH
+
+example {k l T N : ℝ}
+    (hk : 0 ≤ k) (hT : 0 < T) (hN : 0 < N) :
+    N^11*(T*(sargosCProcessScale k l T N)^4/N^5)^k*N^l =
+      N^12/sargosCProcessScale k l T N := by
+  exact @sargosCProcess_main_balance k l T N hk hT hN
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) :
+    ‖exponentialSumAt F T N a (a+M)‖ ≤ (M:ℝ)+1 := by
+  exact @sargos_closed_source_norm_le_length F T N a M
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) {R : ℝ}
+    (hR : 1 ≤ R) (hMR : (M:ℝ) ≤ R) (hpower : R^13 ≤ N^12) :
+    ‖exponentialSumAt F T N a (a+M)‖^12 ≤ 4096*(N^12/R) := by
+  exact @sargos_short_source_twelfth_bound F T N a M R hR hMR hpower
+
+example (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ) {R : ℝ}
+    (hN : 1 ≤ N) (hb : (a:ℝ)+M ≤ 2*N) (hR : 0 < R) (hR2 : R ≤ 2) :
+    ‖exponentialSumAt F T N a (a+M)‖^12 ≤ (2*(3:ℝ)^12)*(N^12/R) := by
+  exact @sargos_bounded_optimum_twelfth_bound F T N a M R hN hb hR hR2
+
+example {k l T N : ℝ}
+    (hkl : InExponentPairTriangle k l) (hN : 1 ≤ N)
+    (hhigh : N^(sargosCProcessThreshold k l) ≤ T) :
+    (sargosCProcessScale k l T N)^13 ≤ N^12 := by
+  exact @sargosCProcessScale_high_thirteenth k l T N hkl hN hhigh
+
+example {k l ε D T N H : ℝ}
+    (hk : 0 ≤ k) (hε : 0 ≤ ε) (hD : 0 < D) (hT : 0 < T) (hN : 0 < N) (hH : 0 < H)
+    (hHR : H ≤ sargosCProcessScale k l T N) (hHN : H ≤ N) :
+    N^11*(D*T*H^4/N^5)^(k+ε)*N^(l+ε) ≤
+      D^(k+ε)*(N^12/sargosCProcessScale k l T N)*(T/N)^ε*N^ε := by
+  exact @sargosCProcess_main_error_bound k l ε D T N H hk hε hD hT hN hH hHR hHN
+
+example {U N ε : ℝ}
+    (hU : 1 ≤ U) (hN : 1 ≤ N) (hε : 0 ≤ ε) :
+    U^ε*N^(2*ε) ≤ (U^ε*N^ε)^12 := by
+  exact @sargosCProcess_epsilon_budget U N ε hU hN hε
+
+example {k l ε D T N H : ℝ}
+    (hk : 0 ≤ k) (hε : 0 ≤ ε) (hD : 0 < D) (hN : 1 ≤ N) (hNT : N ≤ T)
+    (hH : 0 < H) (hHR : H ≤ sargosCProcessScale k l T N) (hHN : H ≤ N)
+    (hHL : sargosCProcessScale k l T N/2 ≤ H) (hsecondary : N^4 ≤ T*H^3) :
+    (N^12/H+N^11*(D*T*H^4/N^5)^(k+ε)*N^(l+ε)+N^16/(D*T*H^4))*H^ε ≤
+      (2+D^(k+ε)+2/D)*(N^12/sargosCProcessScale k l T N)*(T/N)^ε*N^(2*ε) := by
+  exact @sargosCProcess_finite_budget k l ε D T N H hk hε hD hN hNT hH hHR hHN hHL hsecondary
+
+example {k l ε T N : ℝ} (hT : 0 < T) (hN : 0 < N) :
+    (T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε) =
+      ((T/N)^(sargosCProcessK k)*N^(sargosCProcessL k l))*((T/N)^ε*N^ε) := by
+  exact @sargosCProcess_target_factor k l ε T N hT hN
+
+example {k l ε T N : ℝ}
+    (hk : 0 ≤ k) (hε : 0 ≤ ε) (hN : 1 ≤ N) (hNT : N ≤ T) :
+    (N^12/sargosCProcessScale k l T N)*(T/N)^ε*N^(2*ε) ≤
+      ((T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε))^12 := by
+  exact @sargosCProcess_cost_error_le_target k l ε T N hk hε hN hNT
+
+example {k l ε T N : ℝ}
+    (hk : 0 ≤ k) (hε : 0 ≤ ε) (hN : 1 ≤ N) (hNT : N ≤ T) :
+    N^12/sargosCProcessScale k l T N ≤
+      ((T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε))^12 := by
+  exact @sargosCProcess_cost_le_target k l ε T N hk hε hN hNT
+
+example {k l σ ε : ℝ}
+    (hkl : ExponentPair k l) (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ P : ℕ, 1 ≤ P ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∃ K : ℝ, 1 ≤ K ∧
+      ∀ (F : ℝ → ℝ) (T N : ℝ) (a M : ℕ),
+        N₀ ≤ N → N ≤ T → N ≤ (a:ℝ) → (a:ℝ)+M ≤ 2*N →
+        N^(sargosCProcessThreshold k l) ≤ T →
+        IsApproximateModelPhaseFunction F σ P δ →
+        ‖exponentialSumAt F T N a (a+M)‖^12 ≤
+          K*((T/N)^(sargosCProcessK k+ε)*N^(sargosCProcessL k l+ε))^12 := by
+  exact @sargos_high_height_source_bound k l σ ε hkl hσ hε
+
+example {k l : ℝ} (hkl : ExponentPair k l) :
+    IsExponentPairEstimateNonAsymptotic (sargosCProcessK k) (sargosCProcessL k l) := by
+  exact @isExponentPairEstimateNonAsymptotic_cProcess k l hkl
+
+example {k l : ℝ} (h : ExponentPair k l) :
+    ExponentPair (k/(12*(1+4*k))) ((11*(1+4*k)+l)/(12*(1+4*k))) := by
+  exact @ExponentPair.cProcess k l h
+
+-- Actual analytic images, not hypotheses asserting the desired output.
+example : ExponentPair ((1:ℝ)/72) (67/72) := by
+  have h := exponentPair_half_half.cProcess
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/408) (50/51) := by
+  have h := sargos_classical_aCubedB_pair.cProcess
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/30) (26/30) := by
+  exact sargos_classical_aCubedB_pair
+
+example : sargosCProcessK 0 = 0 ∧ sargosCProcessL 0 1 = 1 := by
+  norm_num [sargosCProcessK,sargosCProcessL]
+
+example : sargosCProcessK 0 = 0 ∧ sargosCProcessL 0 ((1:ℝ)/2) = 23/24 := by
+  norm_num [sargosCProcessK,sargosCProcessL]
+
+example : InExponentPairTriangle 0 ((23:ℝ)/24) := by
+  have h := (show InExponentPairTriangle 0 ((1:ℝ)/2) by
+    norm_num [InExponentPairTriangle]).sargosCProcess
+  norm_num [sargosCProcessK,sargosCProcessL] at h ⊢
+  exact h
+
+example : sargosCProcessThreshold 0 1 = 5 := by
+  norm_num [sargosCProcessThreshold]
+
+example : sargosCProcessThreshold 0 ((1:ℝ)/2) = 15/4 := by
+  norm_num [sargosCProcessThreshold]
+
+example : sargosCProcessThreshold ((1:ℝ)/2) ((1:ℝ)/2) = 30/7 := by
+  norm_num [sargosCProcessThreshold]
+
+example (k l : ℝ) : sargosCProcessScale k l 1 1 = 1 := by
+  simp [sargosCProcessScale]
+
+example (T N : ℝ) : sargosCProcessScale 0 1 T N = 1 := by
+  simp [sargosCProcessScale]
+
+example (l T N : ℝ) : sargosCProcessScale 0 l T N = N^(1-l) := by
+  simp [sargosCProcessScale]
+
+example : (⌊((5:ℝ)/2)⌋₊:ℕ) = 2 := by norm_num
+
+example :
+    ∃ H : ℕ, 1 ≤ H ∧ H ≤ 3 ∧ ((5:ℝ)/2)/2 ≤ (H:ℝ) ∧ (H:ℝ) ≤ 5/2 ∧
+      (H:ℝ)^3/1^2 ≤ 16 ∧ (1:ℝ)^4 ≤ 1*(H:ℝ)^3 := by
+  exact sargosCProcess_integer_choice (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : (1:ℝ)^12/2 ≤ 2*((1:ℝ)^12/3) := by
+  exact sargosCProcess_first_term_le (by norm_num) (by norm_num) (by norm_num)
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    ‖exponentialSumAt F T N a (a+0)‖ ≤ 1 := by
+  simpa only [Nat.cast_zero,zero_add] using sargos_closed_source_norm_le_length F T N a 0
+
+example (F : ℝ → ℝ) (T N : ℝ) (a : ℕ) :
+    ‖exponentialSumAt F T N (a+1) a‖ = 0 := by
+  rw [exponentialSumAt_of_lt (by omega) F T N,norm_zero]
+
+example (F : ℝ → ℝ) (T : ℝ) :
+    ‖exponentialSumAt F T 1 1 (1+0)‖^12 ≤ 4096*((1:ℝ)^12/1) := by
+  exact sargos_short_source_twelfth_bound F T 1 1 0
+    (by norm_num) (by norm_num) (by norm_num)
+
+example {U N : ℝ} (hU : 1 ≤ U) (hN : 1 ≤ N) :
+    U^(0:ℝ)*N^(2*(0:ℝ)) ≤ (U^(0:ℝ)*N^(0:ℝ))^12 := by
+  exact sargosCProcess_epsilon_budget hU hN (by norm_num)
+
+example : ((1:ℝ)/30-sargosCProcessK 0)*(sargosCProcessThreshold 0 1-1)+
+    (26/30-sargosCProcessL 0 1) = 0 := by
+  exact sargosCProcess_classical_threshold_identity (by norm_num)
+
+example : InExponentPairTriangle ((1:ℝ)/72) (67/72) := by
+  have h := exponentPair_half_half.inTriangle.sargosCProcess
+  norm_num [sargosCProcessK,sargosCProcessL] at h ⊢
+  exact h
+
+example {ε : ℝ} :
+    ((1:ℝ)/1)^((1:ℝ)/30+ε)*1^(26/30+ε) ≤
+      ((1:ℝ)/1)^(sargosCProcessK 0+ε)*1^(sargosCProcessL 0 1+ε) := by
+  exact sargosCProcess_low_height_power_comparison
+    (by norm_num [InExponentPairTriangle]) (by norm_num) (by norm_num) (by simp)
+
+end SargosCProcessRegression
+
+namespace HeathBrownFamilyRegression
+
+open TaoTrudgianYang2025 GafniTao Expdb Set MeasureTheory
+open scoped BigOperators ContDiff NNReal
+
+example {k l α : ℝ}
+    (hslope : 1/2 ≤ l-k) (hα : 1/2 ≤ α) :
+    1/2-(1-α)+exponentPairLine k l (1-α) ≤ exponentPairLine k l α := by
+  exact @exponentPairLine_reflected_le k l α hslope hα
+
+example {k l : ℝ}
+    (htri : InExponentPairTriangle k l) (hslope : 1/2 ≤ l-k)
+    (hbeta : ∀ α : ℝ≥0, (α:ℝ) ≤ 1/2 →
+      exponentSumGrowthExponent α ≤ exponentPairLine k l α) :
+    ExponentPair k l := by
+  exact @exponentPair_of_beta_bound_half k l htri hslope hbeta
+
+example {k l : ℝ}
+    (htri : InExponentPairTriangle k l) (hslope : 1/2 ≤ l-k) :
+    ExponentPair k l ↔ ∀ α : ℝ≥0, (α:ℝ) ≤ 1/2 →
+      exponentSumGrowthExponent α ≤ exponentPairLine k l α := by
+  exact @exponentPair_iff_beta_bound_half k l htri hslope
+
+example {k l : ℝ} (hk : 0 ≤ k) (hl : 0 ≤ l) :
+    0 < 8*(5*k+3*l+2) := by
+  exact @sargosDProcess_denominator_pos k l hk hl
+
+example {k l : ℝ} (hk : 0 ≤ k) (hl : 0 ≤ l) :
+    InExponentPairTriangle (sargosDProcessK k l) (sargosDProcessL k l) := by
+  exact @sargosDProcess_inTriangle k l hk hl
+
+example {k l : ℝ} (hk : 0 ≤ k) (hl : 0 ≤ l) :
+    1/2 ≤ sargosDProcessL k l-sargosDProcessK k l := by
+  exact @sargosDProcess_slope k l hk hl
+
+example {k l : ℝ} (hk : 0 ≤ k) (hl : 0 ≤ l) :
+    sargosDProcessK k l-1/12 = (5*k-3*l+2)/(24*(5*k+3*l+2)) := by
+  exact @sargosDProcess_zero_gap k l hk hl
+
+example {k l : ℝ} (hk : 0 ≤ k) (hl : 0 ≤ l) :
+    (sargosDProcessK k l+sargosDProcessL k l)/2-5/12 =
+      (k+3*l-2)/(24*(5*k+3*l+2)) := by
+  exact @sargosDProcess_half_gap k l hk hl
+
+example {k l α : ℝ}
+    (hk : 0 ≤ k) (hl : 0 ≤ l) (hzero : 0 ≤ 5*k-3*l+2)
+    (hhalf : 2 ≤ k+3*l) (hα : 0 ≤ α) (hαhalf : α ≤ 1/2) :
+    1/12+2/3*α ≤ exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) α := by
+  exact @sargosDProcess_secondary_le k l α hk hl hzero hhalf hα hαhalf
+
+example {k l : ℝ}
+    (hk : 0 ≤ k) (hl : 0 ≤ l) (hzero : 0 ≤ 5*k-3*l+2)
+    (hhalf : 2 ≤ k+3*l)
+    (hbeta : ∀ α : ℝ≥0, (α:ℝ) ≤ 1/2 →
+      exponentSumGrowthExponent α ≤
+        max (exponentPairLine (sargosDProcessK k l) (sargosDProcessL k l) α)
+          (1/12+2/3*(α:ℝ))) :
+    ExponentPair (sargosDProcessK k l) (sargosDProcessL k l) := by
+  exact @sargosDProcess_pair_of_beta_bound k l hk hl hzero hhalf hbeta
+
+example {r : ℝ} (hr : 3 ≤ r) : 0 < heathBrownPairK r := by
+  exact @heathBrownPairK_pos r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairIntercept r = heathBrownPairL r-heathBrownPairK r-1 := by
+  exact @heathBrownPairIntercept_eq r hr
+
+example {r : ℝ} :
+    heathBrownPairLeft (r+1) = heathBrownPairRight r := by
+  exact @heathBrownPairLeft_succ r
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairSecant r (heathBrownPairLeft r) = -1/(r*(r-1)) := by
+  exact @heathBrownPairSecant_left r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairSecant r (heathBrownPairRight r) = -1/(r*(r+1)) := by
+  exact @heathBrownPairSecant_right r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairSecant (r+1) (heathBrownPairRight r) =
+      heathBrownPairSecant r (heathBrownPairRight r) := by
+  exact @heathBrownPairSecant_join r hr
+
+example {r s : ℝ} (hr : 3 ≤ r) (hrs : r ≤ s) :
+    heathBrownPairK s ≤ heathBrownPairK r := by
+  exact @heathBrownPairK_antitone r s hr hrs
+
+example {r s : ℝ} (hr : 2 ≤ r) (hrs : r ≤ s) :
+    heathBrownPairRight r ≤ heathBrownPairRight s := by
+  exact @heathBrownPairRight_mono r s hr hrs
+
+example {r s : ℝ} (hr : 3 ≤ r) (hrs : r ≤ s) :
+    heathBrownPairLeft r ≤ heathBrownPairLeft s := by
+  exact @heathBrownPairLeft_mono r s hr hrs
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    r/2 ≤ heathBrownPairLeft r := by
+  exact @heathBrownPairLeft_half r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    r-1 ≤ heathBrownPairRight r := by
+  exact @heathBrownPairRight_lower r hr
+
+example {r τ : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairSecant (r+1) τ-heathBrownPairSecant r τ =
+      (heathBrownPairK (r+1)-heathBrownPairK r)*(τ-heathBrownPairRight r) := by
+  exact @heathBrownPairSecant_adjacent_identity r τ hr
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hτ : heathBrownPairRight r ≤ τ) :
+    heathBrownPairSecant (r+1) τ ≤ heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_next_le r τ hr hτ
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hτ : τ ≤ heathBrownPairRight r) :
+    heathBrownPairSecant r τ ≤ heathBrownPairSecant (r+1) τ := by
+  exact @heathBrownPairSecant_le_next r τ hr hτ
+
+example {j k : ℕ} (hj : 3 ≤ j) (hjk : j ≤ k)
+    {τ : ℝ} (hτ : τ ≤ heathBrownPairRight j) :
+    heathBrownPairSecant j τ ≤ heathBrownPairSecant k τ := by
+  exact @heathBrownPairSecant_le_later j k hj hjk τ hτ
+
+example {k j : ℕ} (hk : 3 ≤ k) (hkj : k ≤ j) :
+    ∀ τ : ℝ, heathBrownPairLeft j ≤ τ →
+      heathBrownPairSecant j τ ≤ heathBrownPairSecant k τ := by
+  exact @heathBrownPairSecant_le_earlier k j hk hkj
+
+example {j k : ℕ} (hj : 3 ≤ j) (hk : 3 ≤ k)
+    {τ : ℝ} (hl : heathBrownPairLeft j ≤ τ) (hr : τ ≤ heathBrownPairRight j) :
+    heathBrownPairSecant j τ ≤ heathBrownPairSecant k τ := by
+  exact @heathBrownPairSecant_segment_le j k hj hk τ hl hr
+
+example {τ : ℝ} (hτ : 2 ≤ τ) :
+    ∃ j : ℕ, 3 ≤ j ∧ heathBrownPairLeft j ≤ τ ∧ τ ≤ heathBrownPairRight j := by
+  exact @exists_heathBrownPair_segment τ hτ
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    1/2 ≤ heathBrownPairL r-heathBrownPairK r := by
+  exact @heathBrownPair_slope r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairK r+heathBrownPairL r ≤ 1 := by
+  exact @heathBrownPair_sum_le r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    InExponentPairTriangle (heathBrownPairK r) (heathBrownPairL r) := by
+  exact @heathBrownPair_inTriangle r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    heathBrownPairK r ≤ 1/(r*(r-1)) := by
+  exact @heathBrownPairK_le_derivative r hr
+
+example {r : ℝ} (hr : 3 ≤ r) :
+    (heathBrownPairRight r-r)/(r*(r-1)) = -1/(r*(r+1)) := by
+  exact @heathBrownPairRight_derivative r hr
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hτ : τ ≤ heathBrownPairRight r) :
+    (τ-r)/(r*(r-1)) ≤ heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_first_term r τ hr hτ
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hτ : heathBrownPairLeft r ≤ τ) :
+    -1/(r*(r-1)) ≤ heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_second_term r τ hr hτ
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hτ : heathBrownPairLeft r ≤ τ) :
+    -2*τ/(r^2*(r-1)) ≤ heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_third_term r τ hr hτ
+
+example {r τ : ℝ} (hr : 3 ≤ r)
+    (hl : heathBrownPairLeft r ≤ τ) (hu : τ ≤ heathBrownPairRight r) :
+    max ((τ-r)/(r*(r-1))) (max (-1/(r*(r-1))) (-2*τ/(r^2*(r-1)))) ≤
+      heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_derivative_max r τ hr hl hu
+
+example {j : ℕ} (hj : 3 ≤ j)
+    {α τ : ℝ} (hτ : 0 < τ) (hτα : τ*α = 1) :
+    τ*heathBrownBetaBound j α =
+      1+max ((τ-(j:ℝ))/((j:ℝ)*(j-1)))
+        (max (-1/((j:ℝ)*(j-1))) (-2*τ/((j:ℝ)^2*(j-1)))) := by
+  exact @heathBrownBetaBound_reciprocal_scale j hj α τ hτ hτα
+
+example {r α τ : ℝ}
+    (hr : 3 ≤ r) (hτα : τ*α = 1) :
+    τ*exponentPairLine (heathBrownPairK r) (heathBrownPairL r) α =
+      1+heathBrownPairSecant r τ := by
+  exact @heathBrownPairSecant_target r α τ hr hτα
+
+example {k : ℕ}
+    (hk : 3 ≤ k) {α : ℝ≥0} (hαhalf : (α:ℝ) ≤ 1/2) :
+    exponentSumGrowthExponent α ≤ exponentPairLine (heathBrownPairK k) (heathBrownPairL k) α := by
+  exact @exponentSumGrowthExponent_le_heathBrownPair_half k hk α hαhalf
+
+example {k : ℕ} (hk : 3 ≤ k) :
+    ExponentPair (2/(((k:ℝ)-1)^2*((k:ℝ)+2)))
+      (1-(3*(k:ℝ)-2)/((k:ℝ)*((k:ℝ)-1)*((k:ℝ)+2))) := by
+  exact @exponentPair_heathBrown k hk
+
+example : ExponentPair ((1:ℝ)/10) (23/30) := by
+  have h := exponentPair_heathBrown (by norm_num : 3 ≤ (3:ℕ))
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/27) (31/36) := by
+  have h := exponentPair_heathBrown (by norm_num : 3 ≤ (4:ℕ))
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/56) (127/140) := by
+  have h := exponentPair_heathBrown (by norm_num : 3 ≤ (5:ℕ))
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/100) (14/15) := by
+  have h := exponentPair_heathBrown (by norm_num : 3 ≤ (6:ℕ))
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/486) (263/270) := by
+  have h := exponentPair_heathBrown (by norm_num : 3 ≤ (10:ℕ))
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/22) (28/33) := by
+  have h := (exponentPair_heathBrown (by norm_num : 3 ≤ (3:ℕ))).aProcess
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((4:ℝ)/15) (3/5) := by
+  have h := (exponentPair_heathBrown (by norm_num : 3 ≤ (3:ℕ))).bProcess
+  norm_num at h ⊢
+  exact h
+
+example : ExponentPair ((1:ℝ)/372) (47/48) := by
+  have h := (exponentPair_heathBrown (by norm_num : 3 ≤ (4:ℕ))).cProcess
+  norm_num at h ⊢
+  exact h
+
+example : sargosDProcessK ((13:ℝ)/84) (55/84) = 18/199 ∧
+    sargosDProcessL ((13:ℝ)/84) (55/84) = 593/796 := by
+  norm_num [sargosDProcessK,sargosDProcessL]
+
+example : sargosDProcessK 0 1 = 3/40 ∧ sargosDProcessL 0 1 = 31/40 := by
+  norm_num [sargosDProcessK,sargosDProcessL]
+
+example : sargosDProcessK 0 1-(1:ℝ)/12 = -1/120 := by
+  norm_num [sargosDProcessK]
+
+example : (sargosDProcessK 0 ((1:ℝ)/2)+sargosDProcessL 0 ((1:ℝ)/2))/2-5/12 =
+    -1/168 := by
+  norm_num [sargosDProcessK,sargosDProcessL]
+
+example : 0 ≤ 5*((13:ℝ)/84)-3*(55/84)+2 ∧ 2 ≤ (13:ℝ)/84+3*(55/84) := by
+  norm_num
+
+example {α : ℝ} (hα : 0 ≤ α) (hαhalf : α ≤ 1/2) :
+    1/12+2/3*α ≤ exponentPairLine (sargosDProcessK ((13:ℝ)/84) (55/84))
+      (sargosDProcessL ((13:ℝ)/84) (55/84)) α := by
+  exact sargosDProcess_secondary_le (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) hα hαhalf
+
+example : heathBrownPairLeft 3 = 5/3 ∧ heathBrownPairRight 3 = 5/2 := by
+  norm_num [heathBrownPairLeft,heathBrownPairRight]
+
+example : heathBrownPairRight 4 = 17/5 ∧ heathBrownPairLeft 5 = 17/5 := by
+  norm_num [heathBrownPairLeft,heathBrownPairRight]
+
+example : heathBrownPairSecant 4 ((17:ℝ)/5) = heathBrownPairSecant 5 (17/5) := by
+  norm_num [heathBrownPairSecant,heathBrownPairK,heathBrownPairIntercept]
+
+example : ∃ j : ℕ, 3 ≤ j ∧ heathBrownPairLeft j ≤ (17:ℝ)/5 ∧
+    (17:ℝ)/5 ≤ heathBrownPairRight j := by
+  exact exists_heathBrownPair_segment (by norm_num)
+
+example : heathBrownPairSecant 4 ((17:ℝ)/5) ≤ heathBrownPairSecant 10 (17/5) := by
+  exact heathBrownPairSecant_segment_le (by norm_num : 3 ≤ (4:ℕ))
+    (by norm_num : 3 ≤ (10:ℕ))
+    (by norm_num [heathBrownPairLeft]) (by norm_num [heathBrownPairRight])
+
+example : heathBrownPairSecant 5 ((17:ℝ)/5) ≤ heathBrownPairSecant 3 (17/5) := by
+  exact heathBrownPairSecant_segment_le (by norm_num : 3 ≤ (5:ℕ))
+    (by norm_num : 3 ≤ (3:ℕ))
+    (by norm_num [heathBrownPairLeft]) (by norm_num [heathBrownPairRight])
+
+example : exponentSumGrowthExponent 0 ≤
+    exponentPairLine (heathBrownPairK 3) (heathBrownPairL 3) 0 := by
+  exact exponentSumGrowthExponent_le_heathBrownPair_half
+    (by norm_num : 3 ≤ (3:ℕ)) (by norm_num)
+
+example : exponentSumGrowthExponent ((1:ℝ≥0)/2) ≤
+    exponentPairLine (heathBrownPairK 3) (heathBrownPairL 3) ((1:ℝ)/2) := by
+  exact exponentSumGrowthExponent_le_heathBrownPair_half
+    (by norm_num : 3 ≤ (3:ℕ)) (by norm_num)
+
+example : InExponentPairTriangle (heathBrownPairK 3) (heathBrownPairL 3) := by
+  exact heathBrownPair_inTriangle (by norm_num)
+
+example : ¬ ((2:ℕ) ≥ 3) := by omega
+
+end HeathBrownFamilyRegression
+
+namespace LargeValuePoweringCalculusRegression
+
+open TaoTrudgianYang2025
+
+example {σ τ B : ℝ}
+    (h : largeValueExponent σ τ ≤ (B:EReal)) :
+    IsLargeValueBound σ τ B := by
+  exact @isLargeValueBound_of_exponent_le σ τ B h
+
+example {σ τ B : ℝ} :
+    largeValueExponent σ τ ≤ (B:EReal) ↔ IsLargeValueBound σ τ B := by
+  exact @largeValueExponent_le_iff σ τ B
+
+example {σ τ B : ℝ}
+    (h : IsLargeValueBound σ τ B) (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    0 ≤ B := by
+  exact @IsLargeValueBound.nonneg σ τ B h hσ hσ₁ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    0 ≤ largeValueExponent σ τ := by
+  exact @largeValueExponent_nonneg σ τ hσ hσ₁ hτ
+
+example {σ : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    largeValueExponent σ 0 = 0 := by
+  exact @largeValueExponent_zero_height σ hσ hσ₁
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    ((largeValueExponent σ τ).toReal:EReal) = largeValueExponent σ τ := by
+  exact @largeValueExponent_coe_toReal σ τ hσ hσ₁ hτ
+
+example {σ τ B : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ)
+    (hnot : ¬ IsLargeValueBound σ τ B) :
+    ∃ ρ e s : ℝ, InLargeValueEnergyRegion σ τ ρ e s ∧ B < ρ := by
+  exact @energyRegion_exists_rho_gt_of_not_largeValueBound σ τ B hσ hσ₁ hτ hnot
+
+example {σ τ B : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    IsLargeValueBound σ τ B ↔
+      ∀ ρ e s : ℝ, InLargeValueEnergyRegion σ τ ρ e s → ρ ≤ B := by
+  exact @isLargeValueBound_iff_region_cardinality σ τ B hσ hσ₁ hτ
+
+example {σ τ B : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ)
+    (k : ℕ) (hk : 1 ≤ k) (hbound : IsLargeValueBound σ (τ/k) B) :
+    IsLargeValueBound σ τ (k*B) := by
+  exact @IsLargeValueBound.of_powered σ τ B hσ hσ₁ hτ k hk hbound
+
+example {σ τ B : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ)
+    (k : ℕ) (hk : 1 ≤ k)
+    (hbound : largeValueExponent σ (τ/k) ≤ (B:EReal)) :
+    largeValueExponent σ τ ≤ ((k*B:ℝ):EReal) := by
+  exact @largeValueExponent_le_of_powered_real_bound σ τ B hσ hσ₁ hτ k hk hbound
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (k : ℕ) :
+    largeValueExponent σ (k*τ) ≤ (k:EReal)*largeValueExponent σ τ := by
+  exact @largeValueExponent_powering σ τ hσ hσ₁ hτ k
+
+example {σ B τ₀ : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ₀ : 0 < τ₀)
+    (hbound : ∀ τ ∈ Set.Icc τ₀ (2*τ₀), IsLargeValueBound σ τ (B*τ)) :
+    ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueBound σ τ (B*τ) := by
+  exact @isLargeValueBound_of_bounded_power_range σ B τ₀ hσ hσ₁ hτ₀ hbound
+
+example {σ τ τ' B : ℝ}
+    (h : IsLargeValueBound σ τ' B) (hτ : τ ≤ τ') :
+    IsLargeValueBound σ τ B := by
+  exact @IsLargeValueBound.of_height_le σ τ τ' B h hτ
+
+example {σ τ τ' B : ℝ}
+    (h : IsLargeValueBound σ τ B) (hτ : τ ≤ τ') :
+    IsLargeValueBound σ τ' (B+(τ'-τ)) := by
+  exact @IsLargeValueBound.subdivision σ τ τ' B h hτ
+
+example {σ τ τ' : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (hτ' : τ ≤ τ') :
+    largeValueExponent σ τ ≤ largeValueExponent σ τ' ∧
+      largeValueExponent σ τ' ≤ largeValueExponent σ τ+((τ'-τ:ℝ):EReal) := by
+  exact @largeValueExponent_subdivision σ τ τ' hσ hσ₁ hτ hτ'
+
+example {σ τ : ℝ} (hσ : 0 < σ) :
+    largeValueExponent σ τ ≤ ((max (2-2*σ) (1+τ-2*σ):ℝ):EReal) := by
+  exact @largeValueExponent_le_meanSquare σ τ hσ
+
+example {σ τ : ℝ}
+    (hσ : 0 < σ) (hτ : τ ≤ 1) :
+    largeValueExponent σ τ ≤ ((2-2*σ:ℝ):EReal) := by
+  exact @largeValueExponent_le_short_meanSquare σ τ hσ hτ
+
+example {τ : ℝ} (hτ : 0 ≤ τ) (hτ₁ : τ ≤ 1) :
+    largeValueExponent 1 τ = 0 := by
+  exact @largeValueExponent_one_short τ hτ hτ₁
+
+example : largeValueExponent ((1:ℝ)/2) 0 = 0 :=
+  largeValueExponent_zero_height (by norm_num) (by norm_num)
+
+example : largeValueExponent 1 0 = 0 :=
+  largeValueExponent_zero_height (by norm_num) (by norm_num)
+
+example : largeValueExponent 1 1 = 0 :=
+  largeValueExponent_one_short (by norm_num) (by norm_num)
+
+example : largeValueExponent 1 ((1:ℝ)/2) = 0 :=
+  largeValueExponent_one_short (by norm_num) (by norm_num)
+
+example {σ τ : ℝ} (hs : 1/2 ≤ σ) (hu : σ ≤ 1) (ht : 0 ≤ τ) :
+    largeValueExponent σ (0*τ) ≤ (0:EReal)*largeValueExponent σ τ := by
+  simpa only [Nat.cast_zero] using largeValueExponent_powering hs hu ht 0
+
+example {σ τ : ℝ} (hs : 1/2 ≤ σ) (hu : σ ≤ 1) (ht : 0 ≤ τ) :
+    largeValueExponent σ (2*τ) ≤ (2:EReal)*largeValueExponent σ τ := by
+  simpa only [Nat.cast_ofNat] using largeValueExponent_powering hs hu ht 2
+
+example {σ τ B : ℝ} (hs : 1/2 ≤ σ) (hu : σ ≤ 1) (ht : 0 ≤ τ)
+    (hb : IsLargeValueBound σ (τ/2) B) : IsLargeValueBound σ τ (2*B) := by
+  simpa only [Nat.cast_ofNat] using IsLargeValueBound.of_powered hs hu ht 2 (by omega) hb
+
+example {σ τ : ℝ} (hs : 1/2 ≤ σ) (hu : σ ≤ 1) (ht : 0 ≤ τ) :
+    largeValueExponent σ τ ≤ largeValueExponent σ τ+((τ-τ:ℝ):EReal) :=
+  (largeValueExponent_subdivision hs hu ht (le_refl τ)).2
+
+example {σ : ℝ} (hs : 1/2 ≤ σ) (hu : σ ≤ 1) :
+    largeValueExponent σ 0 ≤ largeValueExponent σ 1 :=
+  (largeValueExponent_subdivision hs hu (le_refl 0) (by norm_num : (0:ℝ) ≤ 1)).1
+
+example : largeValueExponent ((3:ℝ)/4) 1 ≤ ((1/2:ℝ):EReal) := by
+  have h := largeValueExponent_le_meanSquare (τ:=1) (by norm_num : (0:ℝ) < 3/4)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((3:ℝ)/4) 2 ≤ ((3/2:ℝ):EReal) := by
+  have h := largeValueExponent_le_meanSquare (τ:=2) (by norm_num : (0:ℝ) < 3/4)
+  norm_num at h ⊢
+  exact h
+
+example (P : LargeValuePattern) {L : ℝ} (hL : P.T ≤ L) :
+    (P.enlargeHeight L hL).ordinates = P.ordinates ∧
+    (P.enlargeHeight L hL).coeff = P.coeff := by
+  exact ⟨rfl,rfl⟩
+
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    IsLargeValueBound σ τ (max (2-2*σ) (4+τ-6*σ)) := by
+  exact @huxley_largeValueBound σ τ hσ hσ₁ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    largeValueExponent σ τ ≤ ((max (2-2*σ) (4+τ-6*σ):ℝ):EReal) := by
+  exact @largeValueExponent_le_huxley σ τ hσ hσ₁ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (hshort : τ ≤ 4*σ-2) :
+    largeValueExponent σ τ ≤ ((2-2*σ:ℝ):EReal) := by
+  exact @largeValueExponent_le_short_huxley σ τ hσ hσ₁ hτ hshort
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (k : ℕ) (hk : 1 ≤ k) :
+    largeValueExponent σ τ ≤
+      ((k*max (2-2*σ) (4+τ/k-6*σ):ℝ):EReal) := by
+  exact @largeValueExponent_le_powered_huxley σ τ hσ hσ₁ hτ k hk
+
+example : largeValueExponent ((3:ℝ)/4) 1 ≤ ((1/2:ℝ):EReal) := by
+  have h := largeValueExponent_le_short_huxley (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 1) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((3:ℝ)/4) 2 ≤ ((3/2:ℝ):EReal) := by
+  have h := largeValueExponent_le_huxley (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 2)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((3:ℝ)/4) 2 ≤ ((1:ℝ):EReal) := by
+  have h := largeValueExponent_le_powered_huxley (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 2) 2 (by omega)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent 1 2 ≤ (0:EReal) := by
+  have h := largeValueExponent_le_short_huxley (by norm_num : (1:ℝ)/2 ≤ 1)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 2) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+end LargeValuePoweringCalculusRegression
+
+namespace LargeValueRandomSignsRegression
+
+open TaoTrudgianYang2025 Finset
+open scoped BigOperators
+
+example {α : Type*} [AddGroup α] (v : List α) :
+    (finiteSignSamples v).length = 2^v.length := by
+  exact @finiteSignSamples_length α _ v
+
+example {α β : Type*} [AddGroup α] [AddGroup β]
+    (f : α →+ β) (v : List α) :
+    (finiteSignSamples v).map f = finiteSignSamples (v.map f) := by
+  exact @finiteSignSamples_map α β _ _ f v
+
+example (w z : ℂ) :
+    Complex.normSq (w+z)+Complex.normSq (w-z) =
+      2*Complex.normSq w+2*Complex.normSq z := by
+  exact @complex_sign_second_pair w z
+
+example (w z : ℂ) :
+    Complex.normSq (w+z)^2+Complex.normSq (w-z)^2 ≤
+      2*Complex.normSq w^2+12*Complex.normSq w*Complex.normSq z+
+        2*Complex.normSq z^2 := by
+  exact @complex_sign_fourth_pair w z
+
+example (v : List ℂ) :
+    ((finiteSignSamples v).map Complex.normSq).sum =
+      (2:ℝ)^v.length*(v.map Complex.normSq).sum := by
+  exact @finiteSignSamples_second_moment v
+
+example (v : List ℂ) :
+    ((finiteSignSamples v).map (fun w => Complex.normSq w^2)).sum ≤
+      3*(2:ℝ)^v.length*((v.map Complex.normSq).sum)^2 := by
+  exact @finiteSignSamples_fourth_moment v
+
+example {ι : Type*} [DecidableEq ι]
+    (s : Finset ι) (f : ι → ℝ) (V : ℝ)
+    (hf : ∀ i ∈ s, 0 ≤ f i) (hV : 0 < V)
+    (hmean : ∑ i ∈ s, f i = (s.card:ℝ)*V)
+    (hsecond : ∑ i ∈ s, (f i)^2 ≤ 3*(s.card:ℝ)*V^2) :
+    (s.card:ℝ) ≤ 12*({i ∈ s | V/2 ≤ f i}.card:ℝ) := by
+  exact @finite_moment_large_value_count ι _ s f V hf hV hmean hsecond
+
+example (v : List ℂ)
+    (hV : 0 < (v.map Complex.normSq).sum) :
+    ((finiteSignSamples v).length:ℝ) ≤
+      12*({i ∈ (univ : Finset (Fin (finiteSignSamples v).length)) |
+        (v.map Complex.normSq).sum/2 ≤
+          Complex.normSq ((finiteSignSamples v).get i)}.card:ℝ) := by
+  exact @finiteSignSamples_large_count v hV
+
+example {E : Type*} [NormedAddCommGroup E]
+    (v : List E) {a : E} (ha : a ∈ finiteSignSamples v) :
+    ‖a‖ ≤ (v.map norm).sum := by
+  exact @finiteSignSamples_norm_le E _ v a ha
+
+example {ι : Type*}
+    (v : List (ι → ℂ)) {a : ι → ℂ} (ha : a ∈ finiteSignSamples v) (i : ι) :
+    ‖a i‖ ≤ (v.map (fun b => ‖b i‖)).sum := by
+  exact @finiteSignSamples_apply_norm_le ι v a ha i
+
+example {ι κ : Type*}
+    (s : Finset ι) (w : Finset κ) (R : ι → κ → Prop) [DecidableRel R]
+    (K : ℝ) (hs : s.Nonempty)
+    (hcol : ∀ t ∈ w, (s.card:ℝ) ≤ K*({i ∈ s | R i t}.card:ℝ)) :
+    ∃ i ∈ s, (w.card:ℝ) ≤ K*({t ∈ w | R i t}.card:ℝ) := by
+  exact @finite_incidence_exists_row ι κ s w R _ K hs hcol
+
+example {E : Type*} [AddGroup E]
+    (f : E →+ ℂ) (v : List E) :
+    ((finiteSignSamples v).map (fun a => Complex.normSq (f a))).sum =
+      (2:ℝ)^v.length*(v.map (fun a => Complex.normSq (f a))).sum := by
+  exact @finiteSignSamples_second_moment_map E _ f v
+
+example {E : Type*} [AddGroup E]
+    (f : E →+ ℂ) (v : List E) :
+    ((finiteSignSamples v).map (fun a => Complex.normSq (f a)^2)).sum ≤
+      3*(2:ℝ)^v.length*((v.map (fun a => Complex.normSq (f a))).sum)^2 := by
+  exact @finiteSignSamples_fourth_moment_map E _ f v
+
+example {E : Type*} [AddGroup E]
+    (f : E →+ ℂ) (v : List E)
+    (hV : 0 < (v.map (fun a => Complex.normSq (f a))).sum) :
+    ((finiteSignSamples v).length:ℝ) ≤
+      12*({i ∈ (Finset.univ : Finset (Fin (finiteSignSamples v).length)) |
+        (v.map (fun a => Complex.normSq (f a))).sum/2 ≤
+          Complex.normSq (f ((finiteSignSamples v).get i))}.card:ℝ) := by
+  exact @finiteSignSamples_large_count_map E _ f v hV
+
+example {E ι : Type*} [AddGroup E]
+    (v : List E) (W : Finset ι) (f : ι → E →+ ℂ)
+    (hV : ∀ t ∈ W, 0 < (v.map (fun a => Complex.normSq (f t a))).sum) :
+    ∃ a ∈ finiteSignSamples v,
+      (W.card:ℝ) ≤ 12*({t ∈ W |
+        (v.map (fun b => Complex.normSq (f t b))).sum/2 ≤ Complex.normSq (f t a)}.card:ℝ) := by
+  exact @finiteSignSamples_exists_many_large E ι _ v W f hV
+
+example (I : Finset ℕ) (w : ℕ → ℂ)
+    {n : ℕ} (hn : n ∈ I) :
+    finiteCoefficientEvaluation I w (fun m => if m = n then 1 else 0) = w n := by
+  exact @finiteCoefficientEvaluation_basis I w n hn
+
+example (I : Finset ℕ) (n : ℕ) :
+    ((finiteCoefficientBasis I).map (fun a => ‖a n‖)).sum ≤ 1 := by
+  exact @finiteCoefficientBasis_norm_sum I n
+
+example (I : Finset ℕ) (w : ℕ → ℂ)
+    (hw : ∀ n ∈ I, Complex.normSq (w n) = 1) :
+    ((finiteCoefficientBasis I).map
+      (fun a => Complex.normSq (finiteCoefficientEvaluation I w a))).sum = (I.card:ℝ) := by
+  exact @finiteCoefficientBasis_variance I w hw
+
+example {ι : Type*}
+    (I : Finset ℕ) (hI : I.Nonempty) (W : Finset ι) (w : ι → ℕ → ℂ)
+    (hw : ∀ t ∈ W, ∀ n ∈ I, Complex.normSq (w t n) = 1) :
+    ∃ a : ℕ → ℂ, (∀ n, ‖a n‖ ≤ 1) ∧
+      (W.card:ℝ) ≤ 12*({t ∈ W |
+        (I.card:ℝ)/2 ≤ Complex.normSq (∑ n ∈ I, a n*w t n)}.card:ℝ) := by
+  exact @exists_bounded_coefficients_many_large ι I hI W w hw
+
+example {T t : ℝ} (hT : 0 ≤ T) (ht : t ∈ largeValueLattice T) :
+    0 ≤ t ∧ t ≤ T := by
+  exact @largeValueLattice_in_interval T t hT ht
+
+example (T : ℝ) : IsOneSeparated (largeValueLattice T) := by
+  exact @largeValueLattice_oneSeparated T
+
+example (T : ℝ) :
+    (largeValueLattice T).card = Nat.floor T+1 := by
+  exact @largeValueLattice_card T
+
+example (T : ℝ) :
+    T ≤ ((largeValueLattice T).card:ℝ) := by
+  exact @largeValueLattice_card_lower T
+
+example (N : ℕ) (hN : 2 ≤ N)
+    (T : ℝ) (hT : 0 < T) :
+    ∃ P : LargeValuePattern, P.N = (N:ℝ) ∧ P.T = T ∧
+      P.V = Real.sqrt (((N:ℝ)+1)/2) ∧ T ≤ 12*(P.ordinates.card:ℝ) := by
+  exact @exists_half_largeValuePattern N hN T hT
+
+example {N : ℝ} (hN : 1 ≤ N) :
+    (1/2)*Real.sqrt N ≤ Real.sqrt ((N+1)/2) ∧
+      Real.sqrt ((N+1)/2) ≤ Real.sqrt N := by
+  exact @halfPattern_value_sandwich N hN
+
+example {τ : ℝ} (hτ : 0 ≤ τ) :
+    ∃ e s : ℝ, InLargeValueEnergyRegion (1/2) τ τ e s := by
+  exact @exists_half_largeValueEnergyRegion τ hτ
+
+example {τ B : ℝ} (hτ : 0 ≤ τ)
+    (h : IsLargeValueBound (1/2) τ B) : τ ≤ B := by
+  exact @IsLargeValueBound.half_lower τ B hτ h
+
+example {τ : ℝ} (hτ : 0 ≤ τ) :
+    largeValueExponent (1/2) τ = (τ:EReal) := by
+  exact @largeValueExponent_half τ hτ
+
+example : finiteSignSamples ([] : List ℂ) = [0] := rfl
+
+example : finiteSignSamples [(1:ℂ)] = [1,-1] := by
+  norm_num [finiteSignSamples]
+
+example (n : ℕ) : (finiteSignSamples (List.replicate n (0:ℂ))).length = 2^n := by
+  simpa using finiteSignSamples_length (List.replicate n (0:ℂ))
+
+example : ((finiteSignSamples [(1:ℂ)]).map Complex.normSq).sum = 2 := by
+  have h := finiteSignSamples_second_moment [(1:ℂ)]
+  norm_num at h ⊢
+  exact h
+
+example : ((finiteSignSamples [(1:ℂ)]).map (fun w => Complex.normSq w^2)).sum ≤ 6 := by
+  have h := finiteSignSamples_fourth_moment [(1:ℂ)]
+  norm_num at h ⊢
+  exact h
+
+example : largeValueLattice 0 = {0} := by
+  norm_num [largeValueLattice]
+
+example : (largeValueLattice ((3:ℝ)/2)).card = 2 := by
+  rw [largeValueLattice_card]
+  norm_num
+
+example : (largeValueLattice 2).card = 3 := by
+  rw [largeValueLattice_card]
+  norm_num
+
+example : ¬ ((0:ℝ) ≤ -1) := by norm_num
+
+example (n : ℕ) :
+    ((finiteCoefficientBasis ∅).map (fun a => ‖a n‖)).sum ≤ 1 :=
+  finiteCoefficientBasis_norm_sum ∅ n
+
+example : ∃ P : LargeValuePattern, P.N = 2 ∧ P.T = (1:ℝ)/2 ∧
+    P.V = Real.sqrt (3/2) ∧ (1:ℝ)/2 ≤ 12*(P.ordinates.card:ℝ) := by
+  have h := exists_half_largeValuePattern 2 (by omega) ((1:ℝ)/2) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((1:ℝ)/2) 0 = (0:EReal) :=
+  largeValueExponent_half (le_refl 0)
+
+example : largeValueExponent ((1:ℝ)/2) ((1:ℝ)/2) = ((1/2:ℝ):EReal) :=
+  largeValueExponent_half (by norm_num)
+
+example : largeValueExponent ((1:ℝ)/2) 10 = (10:EReal) := by
+  simpa using largeValueExponent_half (by norm_num : (0:ℝ) ≤ 10)
+
+example : ∃ e s : ℝ, InLargeValueEnergyRegion ((1:ℝ)/2) 10 10 e s :=
+  exists_half_largeValueEnergyRegion (by norm_num)
+
+example {B : ℝ} (h : IsLargeValueBound ((1:ℝ)/2) ((3:ℝ)/2) B) :
+    (3:ℝ)/2 ≤ B :=
+  IsLargeValueBound.half_lower (by norm_num) h
+
+end LargeValueRandomSignsRegression
+
+namespace LargeValueBlockLowerRegression
+
+open TaoTrudgianYang2025 Finset
+open scoped BigOperators
+
+example {n : ℕ} (hn : 0 < n) (t : ℝ) :
+    dirichletPhase n t = Complex.exp (Complex.I*((-t*Real.log (n:ℝ):ℝ):ℂ)) := by
+  exact @dirichletPhase_eq_exp n hn t
+
+example (x y : ℝ) :
+    ‖Complex.exp (Complex.I*(x:ℂ))-Complex.exp (Complex.I*(y:ℂ))‖ ≤ |x-y| := by
+  exact @norm_exp_I_sub_exp_I_le x y
+
+example {a n : ℕ} (ha : 0 < a) (han : a ≤ n)
+    {t : ℝ} (ht : 0 ≤ t) :
+    ‖dirichletPhase n t-dirichletPhase a t‖ ≤ t*((n:ℝ)-(a:ℝ))/(a:ℝ) := by
+  exact @dirichletPhase_block_variation a n ha han t ht
+
+example {ι : Type*}
+    (I : Finset ℕ) (v : List (ℕ → ℂ)) (W : Finset ι) (w : ι → ℕ → ℂ)
+    (S : ℝ) (hS : 0 < S)
+    (hunit : ∀ n, (v.map (fun b => ‖b n‖)).sum ≤ 1)
+    (hvar : ∀ t ∈ W, S ≤
+      (v.map (fun b => Complex.normSq (∑ n ∈ I, b n*w t n))).sum) :
+    ∃ a : ℕ → ℂ, (∀ n, ‖a n‖ ≤ 1) ∧
+      (W.card:ℝ) ≤ 12*({t ∈ W |
+        S/2 ≤ Complex.normSq (∑ n ∈ I, a n*w t n)}.card:ℝ) := by
+  exact @exists_bounded_sign_coefficients_of_variance ι I v W w S hS hunit hvar
+
+example (N L j : ℕ) :
+    (largeValueBlock N L j).card = L := by
+  exact @largeValueBlock_card N L j
+
+example (N L j : ℕ) (hj : j < N/L) :
+    largeValueBlock N L j ⊆ Icc N (2*N) := by
+  exact @largeValueBlock_subset N L j hj
+
+example {N L j k n : ℕ}
+    (hj : n ∈ largeValueBlock N L j) (hk : n ∈ largeValueBlock N L k) :
+    j = k := by
+  exact @largeValueBlock_unique N L j k n hj hk
+
+example (N L n : ℕ) :
+    ((largeValueBlockBasis N L).map (fun b => ‖b n‖)).sum ≤ 1 := by
+  exact @largeValueBlockBasis_norm_sum N L n
+
+example (N L j : ℕ) (hj : j < N/L) (w : ℕ → ℂ) :
+    finiteCoefficientEvaluation (Icc N (2*N)) w
+      (fun n => if n ∈ largeValueBlock N L j then 1 else 0) =
+      ∑ n ∈ largeValueBlock N L j, w n := by
+  exact @largeValueBlock_evaluation N L j hj w
+
+example {N L j : ℕ} (hN : 0 < N) (hL : 0 < L)
+    {t : ℝ} (ht : 0 ≤ t) (hheight : t ≤ (N:ℝ)/(2*(L:ℝ)))
+    {n : ℕ} (hn : n ∈ largeValueBlock N L j) :
+    ‖dirichletPhase n t-dirichletPhase (N+j*L) t‖ ≤ 1/2 := by
+  exact @largeValueBlock_phase_near N L j hN hL t ht hheight n hn
+
+example {N L j : ℕ} (hN : 0 < N) (hL : 0 < L)
+    {t : ℝ} (ht : 0 ≤ t) (hheight : t ≤ (N:ℝ)/(2*(L:ℝ))) :
+    (L:ℝ)/2 ≤ ‖∑ n ∈ largeValueBlock N L j, dirichletPhase n t‖ := by
+  exact @largeValueBlock_sum_lower N L j hN hL t ht hheight
+
+example {N L : ℕ} (hL : 0 < L) (hLN : L ≤ N) :
+    N ≤ 2*((N/L)*L) := by
+  exact @largeValueBlocks_cover_half N L hL hLN
+
+example {N L : ℕ}
+    (hN : 0 < N) (hL : 0 < L) (hLN : L ≤ N)
+    {t : ℝ} (ht : 0 ≤ t) (hheight : t ≤ (N:ℝ)/(2*(L:ℝ))) :
+    (N:ℝ)*(L:ℝ)/8 ≤
+      ((largeValueBlockBasis N L).map (fun b => Complex.normSq
+        (∑ n ∈ Icc N (2*N), b n*dirichletPhase n t))).sum := by
+  exact @largeValueBlockBasis_variance N L hN hL hLN t ht hheight
+
+example (N L : ℕ) (hN : 2 ≤ N)
+    (hL : 0 < L) (hLN : L ≤ N) (T : ℝ) (hT : 0 < T) :
+    ∃ P : LargeValuePattern, P.N = (N:ℝ) ∧ P.T = T ∧
+      P.V = Real.sqrt ((N:ℝ)*(L:ℝ)/16) ∧
+      min T ((N:ℝ)/(2*(L:ℝ))) ≤ 12*(P.ordinates.card:ℝ) := by
+  exact @exists_block_largeValuePattern N L hN hL hLN T hT
+
+example {N σ : ℝ} (hN : 1 ≤ N)
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    1 ≤ exponentBlockLength N σ ∧
+      N^(2*σ-1)/2 ≤ (exponentBlockLength N σ:ℝ) ∧
+      (exponentBlockLength N σ:ℝ) ≤ N^(2*σ-1) ∧
+      (exponentBlockLength N σ:ℝ) ≤ N := by
+  exact @exponentBlockLength_bounds N σ hN hσ hσ₁
+
+example {N σ : ℝ} (hN : 1 ≤ N)
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    (1/8)*N^σ ≤ Real.sqrt (N*(exponentBlockLength N σ:ℝ)/16) ∧
+      Real.sqrt (N*(exponentBlockLength N σ:ℝ)/16) ≤ N^σ := by
+  exact @exponentBlockLength_value_sandwich N σ hN hσ hσ₁
+
+example {N σ τ : ℝ} (hN : 1 ≤ N)
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    (1/2)*N^(min τ (2-2*σ)) ≤
+      min (N^τ) (N/(2*(exponentBlockLength N σ:ℝ))) := by
+  exact @exponentBlockLength_height_lower N σ τ hN hσ hσ₁
+
+example (N : ℕ) (hN : 2 ≤ N)
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) :
+    ∃ P : LargeValuePattern, P.N = (N:ℝ) ∧ P.T = (N:ℝ)^τ ∧
+      (1/8)*(N:ℝ)^σ ≤ P.V ∧ P.V ≤ (N:ℝ)^σ ∧
+      (N:ℝ)^(min τ (2-2*σ)) ≤ 24*(P.ordinates.card:ℝ) := by
+  exact @exists_lower_largeValuePattern N hN σ τ hσ hσ₁
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    ∃ ρ e s : ℝ, InLargeValueEnergyRegion σ τ ρ e s ∧ min (2-2*σ) τ ≤ ρ := by
+  exact @exists_lower_largeValueEnergyRegion σ τ hσ hσ₁ hτ
+
+example {σ τ B : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ)
+    (h : IsLargeValueBound σ τ B) : min (2-2*σ) τ ≤ B := by
+  exact @IsLargeValueBound.source_lower σ τ B hσ hσ₁ hτ h
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) :
+    ((min (2-2*σ) τ:ℝ):EReal) ≤ largeValueExponent σ τ := by
+  exact @largeValueExponent_lower σ τ hσ hσ₁ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (hsmall : τ ≤ 2-2*σ) :
+    largeValueExponent σ τ = (τ:EReal) := by
+  exact @largeValueExponent_eq_tau_small σ τ hσ hσ₁ hτ hsmall
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (hτ₁ : τ ≤ 1) :
+    largeValueExponent σ τ = ((min (2-2*σ) τ:ℝ):EReal) := by
+  exact @largeValueExponent_eq_min_meanSquare σ τ hσ hσ₁ hτ hτ₁
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ₁ : σ ≤ 1) (hτ : 0 ≤ τ) (hshort : τ ≤ 4*σ-2) :
+    largeValueExponent σ τ = ((min (2-2*σ) τ:ℝ):EReal) := by
+  exact @largeValueExponent_eq_min_huxley σ τ hσ hσ₁ hτ hshort
+
+example {τ : ℝ} (hτ : 0 ≤ τ) :
+    largeValueExponent 1 τ = 0 := by
+  exact @largeValueExponent_one τ hτ
+
+example : (largeValueBlock 10 3 0).card = 3 := largeValueBlock_card 10 3 0
+
+example : (largeValueBlock 10 0 2).card = 0 := largeValueBlock_card 10 0 2
+
+example : largeValueBlock 10 3 2 ⊆ Icc 10 20 := by
+  exact largeValueBlock_subset 10 3 2 (by norm_num)
+
+example : 10 ≤ 2*((10/3)*3) := largeValueBlocks_cover_half (by omega) (by omega)
+
+example : exponentBlockLength 16 ((1:ℝ)/2) = 1 := by
+  norm_num [exponentBlockLength]
+
+example : exponentBlockLength 16 1 = 16 := by
+  norm_num [exponentBlockLength]
+
+example : ((largeValueBlockBasis 10 3).map (fun b => ‖b 10‖)).sum ≤ 1 :=
+  largeValueBlockBasis_norm_sum 10 3 10
+
+example : ((largeValueBlockBasis 10 3).map (fun b => ‖b 19‖)).sum ≤ 1 :=
+  largeValueBlockBasis_norm_sum 10 3 19
+
+example : ‖dirichletPhase 12 ((1:ℝ)/2)-dirichletPhase 10 ((1:ℝ)/2)‖ ≤ (1:ℝ)/10 := by
+  have h := dirichletPhase_block_variation (by omega : 0 < (10:ℕ))
+    (by omega : (10:ℕ) ≤ 12) (by norm_num : (0:ℝ) ≤ 1/2)
+  norm_num at h ⊢
+  exact h
+
+example : (3:ℝ)/2 ≤ ‖∑ n ∈ largeValueBlock 10 3 2, dirichletPhase n (5/3)‖ := by
+  exact largeValueBlock_sum_lower (N:=10) (L:=3) (j:=2) (t:=5/3)
+    (by omega) (by omega) (by norm_num) (by norm_num)
+
+example : ((1/2:ℝ):EReal) ≤ largeValueExponent ((3:ℝ)/4) 2 := by
+  have h := largeValueExponent_lower (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 2)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((3:ℝ)/4) ((1:ℝ)/2) = ((1/2:ℝ):EReal) :=
+  largeValueExponent_eq_tau_small (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : largeValueExponent ((3:ℝ)/4) 1 = ((1/2:ℝ):EReal) := by
+  have h := largeValueExponent_eq_min_meanSquare (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 1) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent ((4:ℝ)/5) ((6:ℝ)/5) = ((2/5:ℝ):EReal) := by
+  have h := largeValueExponent_eq_min_huxley (by norm_num : (1:ℝ)/2 ≤ 4/5)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 6/5) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : largeValueExponent 1 10 = 0 := largeValueExponent_one (by norm_num)
+
+example : largeValueExponent 1 0 = 0 := largeValueExponent_one (le_refl 0)
+
+example : largeValueExponent ((1:ℝ)/2) 10 = (10:EReal) := by
+  simpa using largeValueExponent_half (by norm_num : (0:ℝ) ≤ 10)
+
+example : largeValueExponent ((1:ℝ)/2) 1 = (1:EReal) := by
+  simpa using largeValueExponent_half (by norm_num : (0:ℝ) ≤ 1)
+
+example : ∃ ρ e s : ℝ, InLargeValueEnergyRegion ((3:ℝ)/4) 2 ρ e s ∧ (1:ℝ)/2 ≤ ρ := by
+  have h := exists_lower_largeValueEnergyRegion (by norm_num : (1:ℝ)/2 ≤ 3/4)
+    (by norm_num) (by norm_num : (0:ℝ) ≤ 2)
+  norm_num at h ⊢
+  exact h
+
+example : ¬ ((0:ℕ) > 0) := by omega
+
+end LargeValueBlockLowerRegression
+
+namespace SourceTypeICardinalityRegression
+
+open TaoTrudgianYang2025 RiemannZeta.GuthMaynard
+open scoped BigOperators
+
+example {ι κ : Type*} [Fintype ι] [Fintype κ] [DecidableEq κ]
+    (color : ι → κ) :
+    Fintype.card ι = ∑ c : κ, Fintype.card (EnergyColorFiber color c) := by
+  exact @cardinality_eq_sum_color_fibers ι κ _ _ _ color
+
+example {ι κ : Type*} [Fintype ι] [Fintype κ] [DecidableEq κ]
+    (color : ι → κ) (B : ℝ)
+    (hB : ∀ c : κ, (Fintype.card (EnergyColorFiber color c) : ℝ) ≤ B) :
+    (Fintype.card ι : ℝ) ≤ (Fintype.card κ : ℝ) * B := by
+  exact @cardinality_le_color_count_mul ι κ _ _ _ color B hB
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (N : ℕ) (threshold a b : ℝ) (coeff : ℕ → ℂ) (W : ι → ℝ)
+    (hN : 1 < N) (hthreshold : 0 < threshold) (hab : a < b)
+    (hcoeff : ∀ n ∈ dyadicInterval N, ‖coeff n‖ ≤ 1)
+    (hW : ∀ x, a ≤ W x ∧ W x ≤ b)
+    (hsep : ∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|)
+    (hlarge : ∀ x, threshold ≤ ‖dirichletPoly N coeff (W x)‖) :
+    (indexedDirichletLargeValuePattern N threshold a b coeff W hN
+      hthreshold hab hcoeff hW hsep hlarge).ordinates.card = Fintype.card ι := by
+  exact @indexedDirichletLargeValuePattern_card ι _ _ N threshold a b coeff W hN hthreshold hab hcoeff hW hsep hlarge
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (A N : ℕ) (V H : ℝ) (W : ι → ℝ)
+    (hN : 1 < N) (hV : 0 < V) (hH : 0 < H)
+    (hW : ∀ x, H ≤ W x ∧ W x ≤ 2 * H)
+    (hsep : ∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|)
+    (hlarge : ∀ x, V ≤
+      ‖∑ n ∈ Finset.Ioc N (min (2 * N) A), dirichletPhase n (W x)‖) :
+    (indexedClassicalTypeIZetaPattern A N V H W hN hV hH hW hsep hlarge).ordinates.card =
+      Fintype.card ι := by
+  exact @indexedClassicalTypeIZetaPattern_card ι _ _ A N V H W hN hV hH hW hsep hlarge
+
+example (σ B l u : ℝ) (hB : 0 ≤ B) (hlu : l ≤ u)
+    (hLV : ∀ τ ∈ Set.Icc l u, IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ P : ZetaLargeValuePattern,
+          C ≤ P.N →
+          (∃ α ∈ Set.Icc l u, |Real.logb P.N P.T - α| ≤ δ) →
+          P.N ^ (σ - δ) ≤ P.V →
+          (P.ordinates.card : ℝ) ≤ C * P.T ^ B * P.N ^ ε := by
+  exact @zetaLargeValueBound_uniform_near_logScale_interval σ B l u hB hlu hLV
+
+example (σ B l u : ℝ) (hB : 0 ≤ B) (hlu : l ≤ u)
+    (hLV : ∀ τ ∈ Set.Icc l u, IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ P : ZetaLargeValuePattern,
+          C ≤ P.N →
+          Real.logb P.N P.T ∈ Set.Icc l u →
+          P.N ^ (σ - δ) ≤ P.V →
+          (P.ordinates.card : ℝ) ≤ C * P.T ^ B * P.N ^ ε := by
+  exact @zetaLargeValueBound_uniform_on_logScale_interval σ B l u hB hlu hLV
+
+example (σ B l u : ℝ) (hB : 0 ≤ B) (hlu : l ≤ u)
+    (hLV : ∀ τ ∈ Set.Icc l u, IsLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ P : LargeValuePattern,
+          C ≤ P.N →
+          (∃ α ∈ Set.Icc l u, |Real.logb P.N P.T - α| ≤ δ) →
+          P.N ^ (σ - δ) ≤ P.V →
+          (P.ordinates.card : ℝ) ≤ C * P.T ^ B * P.N ^ ε := by
+  exact @largeValueBound_uniform_near_logScale_interval σ B l u hB hlu hLV
+
+example {σ τ ρ : ℝ} (hLV : IsZetaLargeValueBound σ τ ρ) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι : Type*} [Fintype ι] [DecidableEq ι]
+          (A N : ℕ) (V T : ℝ) (W : ι → ℝ),
+          1 < N → 0 < T →
+          (∀ x, T / 2 ≤ W x ∧ W x ≤ 4 * T) →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) →
+          (∀ x, V ≤ ‖∑ n ∈ Finset.Ioc N (min (2 * N) A),
+            dirichletPhase n (W x)‖) →
+          C ≤ (N : ℝ) →
+          (N : ℝ) ^ (τ - δ) ≤ T / 2 →
+          2 * T ≤ (N : ℝ) ^ (τ + δ) →
+          (N : ℝ) ^ (σ - δ) ≤ V →
+          (Fintype.card ι : ℝ) ≤
+            3 * (C * (N : ℝ) ^ (ρ + ε)) := by
+  exact @IsZetaLargeValueBound.classicalTypeI_expanded_slab_bound σ τ ρ hLV
+
+example {σLV τ ρ : ℝ} (hLV : IsZetaLargeValueBound σLV τ ρ) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+          (A N k : ℕ) (σ V T u : ℝ) (W : ι → ℝ),
+          let d := 2 * Real.pi * classicalTypeIFourierRadius A N k σ V
+          let L := Nat.ceil (2 * d + 2)
+          let Q := V / (4 * (N : ℝ) ^ (-σ) * classicalTypeIFourierL1 σ)
+          1 < N → 0 < V → 1 < k → 0 < T →
+          u + d ≤ T / 2 →
+          (∀ x, T - u ≤ W x ∧ W x ≤ 2 * T + u) →
+          (∀ x, V ≤
+            ‖dirichletPoly N (classicalZetaLongLineCoeff A σ) (W x)‖) →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) →
+          C ≤ (N : ℝ) →
+          (N : ℝ) ^ (τ - δ) ≤ T / 2 →
+          2 * T ≤ (N : ℝ) ^ (τ + δ) →
+          (N : ℝ) ^ (σLV - δ) ≤ Q →
+          (Fintype.card ι : ℝ) ≤
+            (Fintype.card (ZMod 2 × Fin (L + 1)) : ℝ) *
+              (3 * (C * (N : ℝ) ^ (ρ + ε))) := by
+  exact @IsZetaLargeValueBound.classicalTypeI_fourier_cardinality_transfer σLV τ ρ hLV
+
+example (d : ℝ) (hd : 0 ≤ d) :
+    classicalTypeIFourierCardinalityLoss d ≤ 24 * (1 + d) := by
+  exact @classicalTypeIFourierCardinalityLoss_le d hd
+
+example (θ η : ℝ) (hθ : 0 ≤ θ) (hgap : θ < η) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ d : ℝ, 0 ≤ d →
+      d ≤ 2 * Real.pi * T ^ θ →
+      classicalTypeIFourierCardinalityLoss d ≤ T ^ η := by
+  exact @eventually_classicalTypeIFourierCardinalityLoss_le_rpow θ η hθ hgap
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (haone : a ≤ 1)
+    (hLV : ∀ τ ∈ Set.Icc (1 : ℝ) (1 / a),
+      IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ᶠ T : ℝ in Filter.atTop,
+          ∀ {ι : Type*} [Fintype ι] [DecidableEq ι]
+            (A N : ℕ) (V : ℝ) (W : ι → ℝ),
+            T ^ a ≤ (N : ℝ) → (N : ℝ) ≤ 6 * T →
+            (∀ x, T / 2 ≤ W x ∧ W x ≤ 4 * T) →
+            (∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) →
+            (∀ x, V ≤ ‖∑ n ∈ Finset.Ioc N (min (2 * N) A),
+              dirichletPhase n (W x)‖) →
+            (N : ℝ) ^ (σ - δ) ≤ V →
+            (Fintype.card ι : ℝ) ≤
+              3 * (C * (2 * T) ^ B * (N : ℝ) ^ ε) := by
+  exact @classicalTypeI_uniform_expanded_slab_cardinality_bound σ B a hB ha haone hLV
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (haone : a ≤ 1)
+    (hLV : ∀ τ ∈ Set.Icc (1 : ℝ) (1 / a),
+      IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ᶠ T : ℝ in Filter.atTop,
+          ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+            (A N k : ℕ) (s V u : ℝ) (W : ι → ℝ),
+            let d := 2 * Real.pi * classicalTypeIFourierRadius A N k s V
+            let Q := V / (4 * (N : ℝ) ^ (-s) * classicalTypeIFourierL1 s)
+            1 < N → 0 < V → 1 < k → 0 < T →
+            T ^ a ≤ (N : ℝ) → (N : ℝ) ≤ 6 * T →
+            u + d ≤ T / 2 →
+            (∀ x, T - u ≤ W x ∧ W x ≤ 2 * T + u) →
+            (∀ x, V ≤
+              ‖dirichletPoly N (classicalZetaLongLineCoeff A s) (W x)‖) →
+            (∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) →
+            (N : ℝ) ^ (σ - δ) ≤ Q →
+            (Fintype.card ι : ℝ) ≤
+              classicalTypeIFourierCardinalityLoss d *
+                (C * (2 * T) ^ B * (N : ℝ) ^ ε) := by
+  exact @classicalTypeI_uniform_fourier_cardinality_transfer σ B a hB ha haone hLV
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (haone : a ≤ 1)
+    (hLV : ∀ τ ∈ Set.Icc (1 : ℝ) (1 / a),
+      IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s D : ℝ, 0 ≤ s → σ - δ / 2 ≤ s → 0 ≤ D + 1 → D ≤ a * δ / 4 →
+          ∃ θ : ℝ, 0 < θ ∧ θ < 1 ∧ θ ≤ ε / 40 ∧
+            ∀ᶠ T : ℝ in Filter.atTop,
+              ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+                (N : ℕ) (W : ι → ℝ),
+                T ^ a ≤ (N : ℝ) →
+                (∀ x, T - T ^ θ ≤ W x ∧ W x ≤ 2 * T + T ^ θ) →
+                (∀ x,
+                  ((3 / 4 : ℝ) * (T ^ (-D) / 2)) /
+                      Nat.clog 2 ⌊sharpZetaCutoff T⌋₊ ≤
+                    ‖dirichletPoly N
+                      (classicalZetaLongLineCoeff ⌊sharpZetaCutoff T⌋₊ s) (W x)‖) →
+                (∀ x y : ι, x ≠ y → 1 ≤ |W x - W y|) →
+                (Fintype.card ι : ℝ) ≤ C * T ^ (B + ε) := by
+  exact @classicalTypeI_uniform_source_cardinality_bound σ B a hB ha haone hLV
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (hatwo : a ≤ 2)
+    (hLV : ∀ τ ∈ Set.Icc (1 : ℝ) (2 / a),
+      IsZetaLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s D : ℝ, 0 ≤ s → σ - δ / 2 ≤ s → 0 ≤ D + 1 → D ≤ a * δ / 8 →
+          ∃ θ : ℝ, 0 < θ ∧ θ < 1 ∧ θ ≤ ε / 40 ∧
+            ∀ᶠ T : ℝ in Filter.atTop,
+              let Y := ⌊T ^ a⌋₊
+              ∀ (X L : ℕ)
+                (shiftedZero : ↥(zerosInRect s 1 T (2 * T)) → ℝ)
+                (baseColor : ↥(zerosInRect s 1 T (2 * T)) →
+                  ClassicalBranchScaleColor T Y)
+                (hlocal : ∀ z : ℤ,
+                  (unitBinFinset (fun x : ClassicalSlabZeroCopy s T =>
+                    shiftedZero x.1) z).card ≤ L)
+                (label : ClassicalSeparatedBranchScaleColor T Y L)
+                (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊)),
+                label.1 = some (Sum.inl r) →
+                (∀ ρ, T - T ^ θ ≤ shiftedZero ρ ∧
+                  shiftedZero ρ ≤ 2 * T + T ^ θ) →
+                (∀ x : EnergyColorFiber
+                  (classicalSeparatedBranchScaleColor s T Y
+                    shiftedZero baseColor L hlocal) label,
+                  ClassicalBranchScaleLarge s T D Y X label.1 (shiftedZero x.1.1)) →
+                (Fintype.card (EnergyColorFiber
+                    (classicalSeparatedBranchScaleColor s T Y
+                      shiftedZero baseColor L hlocal) label) : ℝ) ≤ C * T ^ (B + ε) := by
+  exact @classicalTypeI_uniform_source_class_cardinality_bound σ B a hB ha hatwo hLV
+
+example : Fintype.card (EnergyColorFiber (fun _ : Fin 4 => (0 : Fin 1)) 0) = 4 := by
+  simp [EnergyColorFiber]
+
+example : Fintype.card (EnergyColorFiber (fun _ : Fin 4 => false) true) = 0 := by
+  simp [EnergyColorFiber]
+
+example : Fintype.card (EnergyColorFiber (fun _ : Fin 0 => false) false) = 0 := by
+  simp [EnergyColorFiber]
+
+example : (4 : ℝ) ≤ (1 : ℝ) * 4 := by
+  simpa only [Fintype.card_fin, Nat.cast_ofNat, Nat.cast_one] using
+    cardinality_le_color_count_mul (fun _ : Fin 4 => (0 : Fin 1)) 4
+      (fun c => by fin_cases c; simp [EnergyColorFiber])
+
+example : Fintype.card (WeightedCopy ({0,1} : Finset ℕ) (fun _ => 3)) = 6 := by
+  rw [weightedCopy_card]
+  norm_num
+
+example : Fintype.card (WeightedCopy ({0} : Finset ℕ) (fun _ => 0)) = 0 := by
+  rw [weightedCopy_card]
+  norm_num
+
+example : ¬ (∀ x y : Fin 2, x ≠ y → (1 : ℝ) ≤ |(0 : ℝ) - 0|) := by
+  intro h
+  have hx := h 0 1 (by decide)
+  norm_num at hx
+
+example : classicalTypeIHeightColor 8 4 = 0 := by
+  norm_num [classicalTypeIHeightColor]
+
+example : classicalTypeIHeightColor 8 8 = 1 := by
+  norm_num [classicalTypeIHeightColor]
+
+example : classicalTypeIHeightColor 8 16 = 2 := by
+  norm_num [classicalTypeIHeightColor]
+
+example : classicalTypeIHeight 8 2 ≤ 32 ∧ 32 ≤ 2 * classicalTypeIHeight 8 2 := by
+  simp only [classicalTypeIHeight, Fin.reduceEq, ↓reduceIte]
+  norm_num
+
+example : classicalTypeIFourierCardinalityLoss 0 = 18 := by
+  norm_num [classicalTypeIFourierCardinalityLoss, Fintype.card_prod, ZMod.card]
+
+example : classicalTypeIFourierCardinalityLoss (1/2) = 24 := by
+  norm_num [classicalTypeIFourierCardinalityLoss, Fintype.card_prod, ZMod.card]
+
+example : classicalTypeIFourierCardinalityLoss 1 = 30 := by
+  norm_num [classicalTypeIFourierCardinalityLoss, Fintype.card_prod, ZMod.card]
+
+example : classicalTypeIFourierCardinalityLoss 1 ≤ 48 := by
+  have h := classicalTypeIFourierCardinalityLoss_le 1 (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : ∀ᶠ T : ℝ in Filter.atTop, ∀ d : ℝ, 0 ≤ d →
+    d ≤ 2 * Real.pi * T ^ (0 : ℝ) →
+      classicalTypeIFourierCardinalityLoss d ≤ T ^ ((1 : ℝ)/10) :=
+  eventually_classicalTypeIFourierCardinalityLoss_le_rpow 0 (1/10)
+    (by norm_num) (by norm_num)
+
+example : ∀ᶠ T : ℝ in Filter.atTop, ∀ d : ℝ, 0 ≤ d →
+    d ≤ 2 * Real.pi * T ^ ((1 : ℝ)/10) →
+      classicalTypeIFourierCardinalityLoss d ≤ T ^ ((1 : ℝ)/5) :=
+  eventually_classicalTypeIFourierCardinalityLoss_le_rpow (1/10) (1/5)
+    (by norm_num) (by norm_num)
+
+example : ¬ ((1 : ℝ)/10 < 1/10) := by norm_num
+
+end SourceTypeICardinalityRegression
+
+namespace ActualZeroCardinalityTransferRegression
+
+open TaoTrudgianYang2025 RiemannZeta.GuthMaynard
+open scoped BigOperators
+
+example (δ σ T D₁ η C : ℝ) (Y X L : ℕ)
+    (shiftedZero : ↥(zerosInRect σ 1 T (2 * T)) → ℝ)
+    (baseColor : ↥(zerosInRect σ 1 T (2 * T)) →
+      ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset
+        (fun x : ClassicalSlabZeroCopy σ T => shiftedZero x.1) z).card ≤ L)
+    (label : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 Y))
+    (hlabel : label.1 = some (Sum.inr r))
+    (hT : 0 < T) (hY : 1 < Y)
+    (hN : 1 < 2 ^ (r : ℕ) * X)
+    (hσ : 0 ≤ σ) (hη : 0 ≤ η) (hC : 0 < C)
+    (hCoeff : ∀ m : ℕ, 0 < m →
+      ‖sharpMollifiedCoeff Y X m‖ ≤ C * (m : ℝ) ^ η)
+    (hinterval : ∀ ρ : ↥(zerosInRect σ 1 T (2 * T)),
+      T - T ^ δ ≤ shiftedZero ρ ∧
+        shiftedZero ρ ≤ 2 * T + T ^ δ)
+    (hlarge : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor σ T Y shiftedZero baseColor L hlocal)
+        label,
+      ClassicalBranchScaleLarge σ T D₁ Y X label.1 (shiftedZero x.1.1))
+    (hsep : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor σ T Y shiftedZero baseColor L hlocal)
+        label,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1 - shiftedZero y.1.1|) :
+    ∃ P : LargeValuePattern,
+      let N := 2 ^ (r : ℕ) * X
+      let D := C * (2 * N : ℝ) ^ η * (N : ℝ) ^ (-σ)
+      P.N = (N : ℝ) ∧
+      P.scale = N ∧
+      P.T = (2 * T + T ^ δ) - (T - T ^ δ) ∧
+      P.V = (((3 / 4) * (3 / 4)) / Nat.clog 2 Y) / D ∧
+      P.ordinates.card =
+        Fintype.card (EnergyColorFiber
+          (classicalSeparatedBranchScaleColor σ T Y
+            shiftedZero baseColor L hlocal) label) := by
+  exact @exists_classicalTypeIIClassCardinalityPattern δ σ T D₁ η C Y X L shiftedZero baseColor hlocal label r hlabel hT hY hN hσ hη hC hCoeff hinterval hlarge hsep
+
+example (δ σ T D₁ η : ℝ) (Y X L : ℕ)
+    (shiftedZero : ↥(zerosInRect σ 1 T (2 * T)) → ℝ)
+    (baseColor : ↥(zerosInRect σ 1 T (2 * T)) →
+      ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset
+        (fun x : ClassicalSlabZeroCopy σ T => shiftedZero x.1) z).card ≤ L)
+    (label : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 Y))
+    (hlabel : label.1 = some (Sum.inr r))
+    (hT : 0 < T) (hY : 1 < Y)
+    (hN : 1 < 2 ^ (r : ℕ) * X)
+    (hσ : 0 ≤ σ) (hη : 0 < η)
+    (hinterval : ∀ ρ : ↥(zerosInRect σ 1 T (2 * T)),
+      T - T ^ δ ≤ shiftedZero ρ ∧
+        shiftedZero ρ ≤ 2 * T + T ^ δ)
+    (hlarge : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor σ T Y shiftedZero baseColor L hlocal)
+        label,
+      ClassicalBranchScaleLarge σ T D₁ Y X label.1 (shiftedZero x.1.1))
+    (hsep : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor σ T Y shiftedZero baseColor L hlocal)
+        label,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1 - shiftedZero y.1.1|) :
+    ∃ C : ℝ, 0 < C ∧ ∃ P : LargeValuePattern,
+      let N := 2 ^ (r : ℕ) * X
+      let D := C * (2 * N : ℝ) ^ η * (N : ℝ) ^ (-σ)
+      P.N = (N : ℝ) ∧
+      P.scale = N ∧
+      P.T = (2 * T + T ^ δ) - (T - T ^ δ) ∧
+      P.V = (((3 / 4) * (3 / 4)) / Nat.clog 2 Y) / D ∧
+      P.ordinates.card =
+        Fintype.card (EnergyColorFiber
+          (classicalSeparatedBranchScaleColor σ T Y
+            shiftedZero baseColor L hlocal) label) := by
+  exact @exists_classicalTypeIIClassCardinalityPattern_native δ σ T D₁ η Y X L shiftedZero baseColor hlocal label r hlabel hT hY hN hσ hη hinterval hlarge hsep
+
+example (σ B a b : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (hb : 0 < b)
+    (hba : b ≤ a) (haone : a ≤ 1)
+    (hLV : ∀ τ ∈ Set.Icc (1 / (a + b)) (2 / b),
+      IsLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s D θ : ℝ, 0 ≤ s → σ - δ / 2 ≤ s → θ ≤ 1 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            let Y := ⌊T ^ a⌋₊
+            let X := ⌊T ^ b⌋₊
+            ∀ (L : ℕ)
+              (shiftedZero : ↥(zerosInRect s 1 T (2 * T)) → ℝ)
+              (baseColor : ↥(zerosInRect s 1 T (2 * T)) →
+                ClassicalBranchScaleColor T Y)
+              (hlocal : ∀ z : ℤ,
+                (unitBinFinset (fun x : ClassicalSlabZeroCopy s T =>
+                  shiftedZero x.1) z).card ≤ L)
+              (label : ClassicalSeparatedBranchScaleColor T Y L)
+              (r : Fin (Nat.clog 2 Y)),
+              label.1 = some (Sum.inr r) →
+              (∀ ρ, T - T ^ θ ≤ shiftedZero ρ ∧
+                shiftedZero ρ ≤ 2 * T + T ^ θ) →
+              (∀ x : EnergyColorFiber
+                (classicalSeparatedBranchScaleColor s T Y
+                  shiftedZero baseColor L hlocal) label,
+                ClassicalBranchScaleLarge s T D Y X label.1 (shiftedZero x.1.1)) →
+              (Fintype.card (EnergyColorFiber
+                  (classicalSeparatedBranchScaleColor s T Y
+                    shiftedZero baseColor L hlocal) label) : ℝ) ≤ C * T ^ (B + ε) := by
+  exact @classicalTypeII_uniform_source_class_cardinality_bound σ B a b hB ha hb hba haone hLV
+
+example (σ δ B₁ D₁ B₂ D₂ : ℝ)
+    (hσ : 1 / 2 < σ) (hσUpper : σ ≤ 1) (hδ : 0 < δ) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+      ∀ (T : ℝ) (Y X : ℕ), T₀ ≤ T →
+        1 ≤ X → 1 < Y → X ≤ Y → Y ≤ ⌊sharpZetaCutoff T⌋₊ →
+        (∀ ρ ∈ zerosInRect σ 1 T (2 * T),
+          149 * sharpZetaCutoff T ^ (-ρ.re) ≤ T ^ (-D₁) / 2) →
+        T ^ (-D₁) * (X : ℝ) ≤ 1 / 4 →
+        finiteDirichletMass (classicalZetaLongTailSupport Y
+            ⌊sharpZetaCutoff T⌋₊) (fun _n => 1) ≤ T ^ B₁ →
+        T ^ (-D₁ - 1) ≤ T ^ (-D₁) / 2 →
+        finiteDirichletMass (sharpMollifiedTailSupport Y X)
+            (sharpMollifiedCoeff Y X) ≤ T ^ B₂ →
+        T ^ (-D₂) ≤ 3 / 4 →
+        let L := (2 * Nat.ceil (T ^ δ) + 1) *
+          classicalLocalMultiplicityCap T
+        ∃ (shiftedZero : ↥(zerosInRect σ 1 T (2 * T)) → ℝ)
+          (baseColor : ↥(zerosInRect σ 1 T (2 * T)) →
+            ClassicalBranchScaleColor T Y)
+          (hlocal : ∀ z : ℤ,
+            (unitBinFinset
+              (fun x : ClassicalSlabZeroCopy σ T => shiftedZero x.1) z).card ≤ L),
+          (∀ ρ : ↥(zerosInRect σ 1 T (2 * T)),
+            |(ρ : ℂ).im - shiftedZero ρ| ≤ T ^ δ) ∧
+          (∀ ρ : ↥(zerosInRect σ 1 T (2 * T)),
+            T - T ^ δ ≤ shiftedZero ρ ∧
+            shiftedZero ρ ≤ 2 * T + T ^ δ) ∧
+          (let shifted := fun x : ClassicalSlabZeroCopy σ T => shiftedZero x.1
+           let color := classicalSeparatedBranchScaleColor σ T Y
+             shiftedZero baseColor L hlocal
+           (∀ (c : ClassicalSeparatedBranchScaleColor T Y L)
+               (x : EnergyColorFiber color c),
+              ClassicalBranchScaleLarge σ T D₁ Y X c.1 (shifted x.1)) ∧
+           (∀ (c : ClassicalSeparatedBranchScaleColor T Y L)
+               (x y : EnergyColorFiber color c),
+              x ≠ y → 1 ≤ |shifted x.1 - shifted y.1|) ∧
+           zeroCountRect σ 1 T (2 * T) =
+             ∑ c : ClassicalSeparatedBranchScaleColor T Y L,
+               Fintype.card (EnergyColorFiber color c)) := by
+  exact @classicalSlab_exists_all_separated_cardinality_classes σ δ B₁ D₁ B₂ D₂ hσ hσUpper hδ
+
+example (θ : ℝ) (hθ : 0 < θ) :
+    ∃ K : ℝ, 0 < K ∧ ∀ᶠ T : ℝ in Filter.atTop, ∀ Y : ℕ,
+      Y ≤ ⌊sharpZetaCutoff T⌋₊ →
+      classicalSlabCardinalityLoss T θ Y ≤ K * T ^ (3 * θ) := by
+  exact @eventually_classicalSlabCardinalityLoss_le_const_mul_rpow θ hθ
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ ≤ 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 1 ≤ τ → IsZetaLargeValueBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ δ : ℝ, 0 < δ ∧ 1 / 2 < σ - δ ∧
+        ∃ C : ℝ, 1 ≤ C ∧ ∀ᶠ T : ℝ in Filter.atTop,
+          (zeroCountRect (σ - δ) 1 T (2 * T) : ℝ) ≤ C * T ^ (B + ε) := by
+  exact @classicalSlabZeroCount_bound_of_uniform_largeValue_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example {α ι : Type*} [DecidableEq α] [Fintype ι]
+    (S T : Finset α) (weight : α → ℕ) (f : ι → WeightedCopy S weight)
+    (hf : Function.Injective f) (hT : ∀ i, (f i).1.1 ∈ T) :
+    Fintype.card ι ≤ ∑ x ∈ T, weight x := by
+  exact @weightedCopy_family_card_le α ι _ _ S T weight f hf hT
+
+example {ι : Type*} [Fintype ι] (σ T H : ℝ) (f : ι → ZeroCopy σ T)
+    (hf : Function.Injective f)
+    (hH : ∀ i, H ≤ ((f i).1 : ℂ).im ∧ ((f i).1 : ℂ).im ≤ 2 * H) :
+    Fintype.card ι ≤ zeroCountRect σ 1 H (2 * H) := by
+  exact @zeroCopy_family_card_le_classicalSlab ι _ σ T H f hf hH
+
+example {ι : Type*} [Fintype ι] (σ T H : ℝ) (f : ι → ZeroCopy σ T)
+    (hf : Function.Injective f)
+    (hH : ∀ i, H ≤ -((f i).1 : ℂ).im ∧ -((f i).1 : ℂ).im ≤ 2 * H) :
+    Fintype.card ι ≤ zeroCountRect σ 1 H (2 * H) := by
+  exact @zeroCopy_family_card_le_classicalSlab_of_neg ι _ σ T H f hf hH
+
+example {ι : Type*} [Fintype ι] (σ T H : ℝ) (f : ι → ZeroCopy σ T)
+    (hf : Function.Injective f) (hH : ∀ i, |((f i).1 : ℂ).im| ≤ H) :
+    Fintype.card ι ≤ paperZeroCount σ H := by
+  exact @zeroCopy_family_card_le_low_height ι _ σ T H f hf hH
+
+example (σ T H M : ℝ) (hH : 1 ≤ H) (hM : 0 ≤ M)
+    (hlow : (paperZeroCount σ H : ℝ) ≤ M)
+    (hslab : ∀ U : ℝ, H ≤ U → U ≤ T → (zeroCountRect σ 1 U (2 * U) : ℝ) ≤ M) :
+    (paperZeroCount σ T : ℝ) ≤
+      (Fintype.card (ZeroDyadicColor T) : ℝ) * M := by
+  exact @paperZeroCount_le_dyadicSlabCount σ T H M hH hM hlow hslab
+
+example (η : ℝ) (hη : 0 < η) :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      (Fintype.card (ZeroDyadicColor T) : ℝ) ≤ T ^ η := by
+  exact @eventually_zeroDyadicColor_card_le_rpow η hη
+
+example (σ q C : ℝ) (hq : 0 ≤ q)
+    (hslab : ∀ᶠ T : ℝ in Filter.atTop,
+      (zeroCountRect σ 1 T (2 * T) : ℝ) ≤ C * T ^ q) :
+    ∀ η : ℝ, 0 < η → ∃ K : ℝ, 1 ≤ K ∧ ∀ᶠ T : ℝ in Filter.atTop,
+      (paperZeroCount σ T : ℝ) ≤ K * T ^ (q + η) := by
+  exact @paperZeroCount_bound_of_eventual_slab_bound σ q C hq hslab
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 1 ≤ τ → IsZetaLargeValueBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueBound σ τ (B * τ)) :
+    IsZeroDensityBound σ (B / (1 - σ)) := by
+  exact @isZeroDensityBound_of_uniform_largeValue_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ T : ℝ) : Fintype.card (ClassicalSlabZeroCopy σ T) =
+    zeroCountRect σ 1 T (2*T) := classicalSlabZeroCopy_card σ T
+
+example (σ T : ℝ) : Fintype.card (ZeroCopy σ T) = paperZeroCount σ T :=
+  zeroCopy_card σ T
+
+example : Fintype.card (WeightedCopy ({0} : Finset ℕ) (fun _ => 4)) = 4 := by
+  rw [weightedCopy_card]
+  norm_num
+
+example : Fintype.card (WeightedCopy (∅ : Finset ℕ) (fun _ => 4)) = 0 := by
+  rw [weightedCopy_card]
+  simp
+
+example : ZeroDyadicColorCondition 2 8 2 none := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ZeroDyadicColorCondition 2 8 (-2) none := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ZeroDyadicColorCondition 2 8 4 (some (false, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ZeroDyadicColorCondition 2 8 (-4) (some (true, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ¬ ZeroDyadicColorCondition 2 8 5 (some (false, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ¬ ZeroDyadicColorCondition 2 8 (-5) (some (true, ⟨0, by omega⟩)) := by
+  norm_num [ZeroDyadicColorCondition]
+
+example : ∀ᶠ T : ℝ in Filter.atTop,
+    (Fintype.card (ZeroDyadicColor T) : ℝ) ≤ T ^ ((1:ℝ)/10) :=
+  eventually_zeroDyadicColor_card_le_rpow (1/10) (by norm_num)
+
+example : ∃ K : ℝ, 0 < K ∧ ∀ᶠ T : ℝ in Filter.atTop, ∀ Y : ℕ,
+    Y ≤ ⌊sharpZetaCutoff T⌋₊ →
+      classicalSlabCardinalityLoss T (1/40) Y ≤ K * T ^ (3*(1/40:ℝ)) :=
+  eventually_classicalSlabCardinalityLoss_le_const_mul_rpow (1/40) (by norm_num)
+
+example : IsZeroDensityBound (3/4) 4 := by
+  have h := isZeroDensityBound_of_uniform_largeValue_bounds (3/4) 1 1
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (fun τ hτ => by
+      simpa only [one_mul] using
+        (obvious_largeValueBound (3/4) (by linarith : 0 ≤ τ)).toZeta)
+    (fun τ hτ => by
+      simpa only [one_mul] using
+        obvious_largeValueBound (3/4) (by linarith : 0 ≤ τ))
+  norm_num at h
+  exact h
+
+example : zeroDensityExponent (3/5) ≤ ((5/2:ℝ):EReal) := by
+  have h := isZeroDensityBound_of_uniform_largeValue_bounds (3/5) 1 1
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (fun τ hτ => by
+      simpa only [one_mul] using
+        (obvious_largeValueBound (3/5) (by linarith : 0 ≤ τ)).toZeta)
+    (fun τ hτ => by
+      simpa only [one_mul] using
+        obvious_largeValueBound (3/5) (by linarith : 0 ≤ τ))
+  norm_num at h
+  exact zeroDensityExponent_le_of_bound h
+
+example : ¬ ((1:ℝ)/2 < 1/2) := by norm_num
+
+example : ¬ ((1:ℝ) < 1) := by norm_num
+
+end ActualZeroCardinalityTransferRegression
+
+section EndpointOneCardinalityEnvelopeRegression
+
+example {σ τ B : ℝ}
+    (h : zetaLargeValueExponent σ τ ≤ (B:EReal)) :
+    IsZetaLargeValueBound σ τ B :=
+  @isZetaLargeValueBound_of_exponent_le σ τ B h
+
+example {σ τ B : ℝ} :
+    zetaLargeValueExponent σ τ ≤ (B:EReal) ↔ IsZetaLargeValueBound σ τ B :=
+  @zetaLargeValueExponent_le_iff σ τ B
+
+example (σ : ℝ)
+    (hσLower : 1/2 ≤ σ) (hσ : σ ≤ 1) :
+    0 ≤ zeroCardinalityTransferEnvelope σ :=
+  @zeroCardinalityTransferEnvelope_nonneg σ hσLower hσ
+
+example (σ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1) :
+    zeroDensityExponent σ * ((1 - σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueExponent σ τ / (τ : EReal)) '' Set.Ici 1))
+        (Filter.limsup (fun τ : ℝ => largeValueExponent σ τ / (τ : EReal)) Filter.atTop) :=
+  @zeroDensityExponent_le_sup_limsup_endpoint_one σ hσ hσUpper
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (1 : ℝ) τ₀, IsZetaLargeValueBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2*τ₀), IsLargeValueBound σ τ (B*τ)) :
+    IsZeroDensityBound σ (B/(1-σ)) :=
+  @isZeroDensityBound_of_bounded_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (1 : ℝ) τ₀,
+      zetaLargeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2*τ₀),
+      largeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal)) :
+    zeroDensityExponent σ ≤ ((B/(1-σ) : ℝ) : EReal) :=
+  @zeroDensityExponent_le_of_bounded_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example : zeroCardinalityTransferEnvelope (1/2) ≥ 0 :=
+  zeroCardinalityTransferEnvelope_nonneg (1/2) (by norm_num) (by norm_num)
+
+example : zeroCardinalityTransferEnvelope 1 ≥ 0 :=
+  zeroCardinalityTransferEnvelope_nonneg 1 (by norm_num) (by norm_num)
+
+example : IsZetaLargeValueBound (3/4) 1 (-7) :=
+  isZetaLargeValueBound_of_exponent_le (by
+    rw [zetaShort_largeValueExponent_eq_bot (by norm_num : (3/4:ℝ) ≤ 3/4)
+      (by norm_num : (1:ℝ) ≤ 1) (by norm_num : (1:ℝ) < 3/2)]
+    exact bot_le)
+
+example : IsZetaLargeValueBound (3/4) (5/4) (-100) :=
+  isZetaLargeValueBound_of_exponent_le (by
+    rw [zetaShort_largeValueExponent_eq_bot (by norm_num : (3/4:ℝ) ≤ 3/4)
+      (by norm_num : (1:ℝ) ≤ 5/4) (by norm_num : (5/4:ℝ) < 3/2)]
+    exact bot_le)
+
+example : zeroDensityExponent (3/4) * ((1/4:ℝ):EReal) ≤
+    zeroCardinalityTransferEnvelope (3/4) := by
+  have h := zeroDensityExponent_le_sup_limsup_endpoint_one (3/4)
+    (by norm_num) (by norm_num)
+  simpa only [show (1-(3/4:ℝ)) = 1/4 by norm_num] using h
+
+example : Set.Ico (1:ℝ) (4/5) = ∅ := by
+  exact Set.Ico_eq_empty_of_le (by norm_num)
+
+example : (1:ℝ) ∈ Set.Ico 1 2 := by norm_num
+
+example : (2:ℝ) ∉ Set.Ico 1 2 := by norm_num
+
+example : (2:ℝ) ∈ Set.Icc 2 (2*2) := by norm_num
+
+example : (4:ℝ) ∈ Set.Icc 2 (2*2) := by norm_num
+
+example : IsZeroDensityBound (3/4) (8/3) := by
+  have h := isZeroDensityBound_of_bounded_largeValue_ranges (3/4) (2/3) (3/4)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (fun τ hτ => by exfalso; rcases hτ with ⟨hl, hu⟩; linarith)
+    (fun τ hτ => by
+      apply isLargeValueBound_of_exponent_le
+      apply (largeValueExponent_le_huxley (by norm_num : (1/2:ℝ) ≤ 3/4)
+        (by norm_num : (3/4:ℝ) ≤ 1) (by linarith [hτ.1] : 0 ≤ τ)).trans
+      apply EReal.coe_le_coe_iff.mpr
+      apply max_le
+      · linarith [hτ.1]
+      · linarith [hτ.2])
+  norm_num at h
+  exact h
+
+example : zeroDensityExponent (4/5) ≤ ((5/2:ℝ):EReal) := by
+  have h := zeroDensityExponent_le_of_bounded_largeValue_ranges (4/5) (1/2) (4/5)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (fun τ hτ => by exfalso; rcases hτ with ⟨hl, hu⟩; linarith)
+    (fun τ hτ => by
+      apply (largeValueExponent_le_huxley (by norm_num : (1/2:ℝ) ≤ 4/5)
+        (by norm_num : (4/5:ℝ) ≤ 1) (by linarith [hτ.1] : 0 ≤ τ)).trans
+      apply EReal.coe_le_coe_iff.mpr
+      apply max_le
+      · linarith [hτ.1]
+      · linarith [hτ.2])
+  norm_num at h
+  exact h
+
+end EndpointOneCardinalityEnvelopeRegression
+
+section ZetaSecondDerivativeRangeRegression
+
+example {σ τ : ℝ}
+    (hσLower : 1 / 2 < σ) (hσ : σ ≤ 1) (hτ : 1 ≤ τ) (hτhi : τ < 2 * σ) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+      P.N ^ (τ - δ) ≤ P.T → P.T ≤ P.N ^ (τ + δ) →
+      P.N ^ (σ - δ) ≤ P.V → P.ordinates = ∅ :=
+  @exists_zetaSecondDerivative_empty_uniform_threshold σ τ hσLower hσ hτ hτhi
+
+example {σ τ : ℝ}
+    (hσLower : 1 / 2 < σ) (hσ : σ ≤ 1) (hτ : 1 ≤ τ) (hτhi : τ < 2 * σ) (B : ℝ) :
+    IsZetaLargeValueBound σ τ B :=
+  @zetaSecondDerivative_largeValueBound_any σ τ hσLower hσ hτ hτhi B
+
+example {σ τ : ℝ}
+    (hσLower : 1 / 2 < σ) (hσ : σ ≤ 1) (hτ : 1 ≤ τ) (hτhi : τ < 2 * σ) (B : ℝ) :
+    IsZetaLargeValueEnergyBound σ τ B :=
+  @zetaSecondDerivative_energyBound_any σ τ hσLower hσ hτ hτhi B
+
+example {σ τ : ℝ}
+    (hσLower : 1 / 2 < σ) (hσ : σ ≤ 1) (hτ : 1 ≤ τ) (hτhi : τ < 2 * σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @zetaSecondDerivative_largeValueExponent_eq_bot σ τ hσLower hσ hτ hτhi
+
+example {σ τ : ℝ}
+    (hσLower : 1 / 2 < σ) (hσ : σ ≤ 1) (hτ : 1 ≤ τ) (hτhi : τ < 2 * σ) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ (N : ℕ) (I : Finset ℕ) (t : ℝ),
+      C ≤ (N : ℝ) → IsIntegerInterval I → I ⊆ Finset.Icc N (2 * N) →
+      (N : ℝ) ^ (τ - δ) ≤ t → t ≤ (N : ℝ) ^ (τ + δ) →
+      ‖∑ n ∈ I, dirichletPhase n t‖ < (N : ℝ) ^ (σ - δ) :=
+  @zetaSecondDerivative_pointwise_powerSaving σ τ hσLower hσ hτ hτhi
+
+example : zetaLargeValueExponent (3/5) (11/10) = ⊥ :=
+  zetaSecondDerivative_largeValueExponent_eq_bot
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaLargeValueExponent 1 (7/4) = ⊥ :=
+  zetaSecondDerivative_largeValueExponent_eq_bot
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : IsZetaLargeValueBound (3/5) 1 (-5) :=
+  zetaSecondDerivative_largeValueBound_any
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (-5)
+
+example : IsZetaLargeValueEnergyBound (3/5) (11/10) (-7) :=
+  zetaSecondDerivative_energyBound_any
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (-7)
+
+example : ¬ ((1:ℝ)/2 < 1/2) := by norm_num
+
+example : ¬ ((2:ℝ) < 2*1) := by norm_num
+
+example : ¬ ((6/5:ℝ) < 2*(3/5)) := by norm_num
+
+example : ¬ ((1:ℝ) ≤ 9/10) := by norm_num
+
+end ZetaSecondDerivativeRangeRegression

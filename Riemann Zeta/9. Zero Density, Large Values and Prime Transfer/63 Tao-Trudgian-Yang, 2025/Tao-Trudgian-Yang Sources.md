@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-Current analytic progress: [Sargos initial-interval moments and uniform sextuple count](#sargos-initial-interval-moments-and-uniform-sextuple-count--current-checkpoint).
-The initial-interval sixth moment and Sargos's shift-uniform sextuple count are proved. Symmetric differencing, A-bar-four and C-process remain open. The counterexample and all nine repaired Add-est clauses are preserved.
+Current analytic progress: [Actual endpoint-one cardinality-to-density transfer](#actual-endpoint-one-cardinality-to-density-transfer--current-checkpoint).
+The actual Type-I/II, slab and symmetric-rectangle cardinality chain proves the endpoint-one density predicate. The exact sup/limsup and endpoint-two source contract remain open. EPZAE-18, corrected powering, all nine repaired Add-est clauses and the counterexample are preserved.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -8254,7 +8254,7 @@ The graph has 341 nodes and 901 edges, with no duplicate/missing endpoints
 or unclassified nodes. All 42 aggregate checkbox states are unchanged
 (22 checked). The whole-proof goal remains open.
 
-## Sargos initial-interval moments and uniform sextuple count — current checkpoint
+## Sargos initial-interval moments and uniform sextuple count — previous checkpoint
 
 `sargos_initial_sextuple_count` proves the actual source count:
 
@@ -8349,3 +8349,1425 @@ are byte-identical to HEAD. The counterexample retains SHA-256
 The graph has 344 nodes and 906 edges, with no duplicate/missing endpoints
 or unclassified nodes. All 42 aggregate checkbox states are unchanged
 (22 checked). The whole-proof goal remains open.
+
+## Sargos finite symmetric differencing — previous checkpoint
+
+`sargos_finite_sextuple_differencing` now proves the actual finite
+polynomial estimate. For arbitrary complex coefficients a and natural
+1<=H<=M, let Phi be a on the integer interval 0<=m<M and zero elsewhere.
+Set S=sum Phi(m), E=sum |Phi(m)|^2 and
+
+```text
+Q = sum_(t,t' in {1,...,H}^3, s2(t)=s2(t'))
+      |sum_(0<=m<M)
+         product_i Phi(m+t_i)Phi(m-t_i)
+         * conjugate(product_i Phi(m+t'_i)Phi(m-t'_i))|.
+
+|S|^12 <= 1492992*(M/H)^6*E^6
+           + 382205952*(M^11/H^4)*Q.
+```
+
+All tuples are literal ordered triples, their square frequencies are
+integer sums, and Q retains every square-diagonal sextuple and its
+multiplicity. The theorem assumes no differencing estimate, Gram identity,
+moment bound or analytic certificate.
+
+The proof starts with actual even shifts, finite Cauchy and exact
+parity fibers. The square is nonconjugated at this stage. Negative
+offsets pair with positive offsets, leaving the actual diagonal term.
+Zero-padding support and center translation are proved. A finite maximum
+selects an actual parity fiber. Cubing expands into literal triples;
+Holder and the exact frequency Gram identity give the sixth-power bound.
+Conjugation appears between the two triples in that Gram identity.
+Finally, the parity indicators are removed by a proved termwise majorant,
+so the public endpoint has no parity witness or restriction.
+
+This is the polynomial finite input corresponding to
+[Sargos 2003, Section 3.2](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+The paper's one-based interval convention has not yet been bridged in
+this consumer. The exact printed Lemma 1 maximum is not claimed: the
+proved parity-fiber variant supplies the downstream finite inequality
+directly. The source index bridge, Taylor-remainder assembly, derivative
+bounds, phase/support identification, witness selection, A-bar-four
+inequality and C-process remain open. The separate exact real-scale
+Robert–Sargos Lemma 5 convention also remains open.
+
+Eleven modules are installed: `SargosSymmetricAveraging`,
+`SargosSymmetricFibers`, `SargosSymmetricPositive`,
+`SargosSymmetricSupport`, `SargosSymmetricDifferencing`,
+`SargosFiniteFrequencyGram`, `SargosGroupedSecondMoment`,
+`SargosSymmetricTriples`, `SargosSymmetricSixth`,
+`SargosSymmetricTwelfth` and `SargosSextupleMajorant`.
+All 42 public theorems have exact-signature regressions and explicit
+axiom audits. Eighteen additional fixtures cover support endpoints,
+empty intervals, odd/even parity fibers, genuinely nonconjugated
+squaring, Gram conjugation, empty tuple types, diagonal multiplicities
+and the actual H=1 and (M,H)=(3,2) consumers.
+
+The completed shift-uniform sextuple count and real-scale maximal
+sixth moment are preserved. No aggregate checklist item changes
+status. Preserve the permanent counterexample, corrected powering
+and all nine repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 929 production files, 1,403 scanned Lean
+  files and 10,261 build jobs. The audit covers 7596 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13841 total).
+  All 42 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-080954-241e9fff.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_081351.log)
+  and [manifest](../../logs/foundation_freeze_20260923_081351.json).
+- All 1,424 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eleven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-symmetric-differencing-20260923-080954-241e9fff.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 346 nodes and 909 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos source Taylor and interior reduction — previous checkpoint
+
+`sargos_character_interior_differencing` proves a source-indexed
+estimate for the actual character sum. For every epsilon>0 there is
+C>=1, chosen before natural H>=1, M>=H and the real phase f, such that
+
+```text
+|sum_(1<=m<=M) e(f(m))|^12
+ <= 1492992*(M/H)^6*M^6
+    + 382205952*(M^11/H^4)*Qinterior
+    + C*M^11*H^epsilon.
+```
+
+Qinterior is the actual sum over all ordered pairs of triples in
+{1,...,H}^3 with equal integer square sums. Each term is the norm
+of the character sum over the open integer interval
+(radius+1, M-radius), where radius is the maximum of all six
+offsets. Its phase is exactly
+
+```text
+(s4(t)-s4(t'))/12 * f^(4)(m) + u(t,t',m),
+u(t,t',m) = sum_i v(t_i,m) - sum_i v(t'_i,m).
+```
+
+The one-based source bridge is proved: sums, zero-padding, triples
+and full sextuple correlations are translated exactly from the
+previous zero-based finite theorem. No source-index convention
+remains assumed in this consumer.
+
+The actual symmetric residual v is defined from f(m+n)+f(m-n)
+minus its constant, quadratic and quartic terms. Its degree-five
+Taylor cancellation and genuine integral representation are proved:
+
+```text
+v(n,m) = (1/120) * integral_0^n
+           [f^(6)(m+t)+f^(6)(m-t)]*(n-t)^5 dt.
+```
+
+Under local smoothness of the original phase on the actual segment,
+the proved bound is |v(n,m)|<=B*n^6/360 when |f^(6)|<=B there.
+Iterated derivatives commute with this constructed remainder.
+The literal six-term residual satisfies
+|u^(j)(m)|<=B*H^6/60 when the original (j+6)-th derivative is bounded
+by B on the sextuple's actual maximum-offset segment. The local
+radius theorem is obtained by an exact retyping of the same
+coordinates; it does not enlarge the required phase domain.
+A source-interior consumer uses only smoothness and original
+derivative bounds inside (1,M).
+
+The actual padded products have precisely the closed support
+[radius+1,M-radius]. Their character phase, including conjugation
+between the two triples and cancellation of the quadratic term,
+is proved. Removing its endpoints costs at most two unit terms,
+including empty, reversed and singleton intervals. The full
+square-diagonal cardinality bound is proved from the earlier
+width-general sextuple count, giving O_epsilon(H^(4+epsilon)).
+This controls the aggregate boundary error in the displayed
+interior estimate. No boundary smoothness or global remainder
+extension is assumed.
+
+These are the source-indexed polynomial differencing input and
+local Taylor/phase steps for
+[Sargos 2003, Sections 3.2–3.3](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+The global remainder extension, quartic-window witness/prefix
+selection, A-bar-four theorem and C-process remain open.
+The Taylor lemmas use local C-infinity hypotheses, as available
+for the intended model phases; the paper's separate finite-C^k
+formulation is not claimed complete. The separate exact real-scale
+Robert–Sargos Lemma 5 convention also remains open.
+
+Thirteen modules are installed: `SargosSourceDifferencing`,
+`SargosSymmetricTaylor`, `SargosSymmetricTaylorJets`,
+`SargosTaylorIntegral`, `SargosSymmetricTaylorIntegral`,
+`SargosSextupleRemainder`, `SargosSextuplePhase`,
+`SargosTupleSupport`, `SargosSourceSextuplePhase`,
+`SargosSextupleRadiusJets`, `SargosSquareDiagonalCount`,
+`SargosSextupleEndpoints` and `SargosInteriorDifferencing`.
+All 50 public theorems have exact-signature regressions and
+explicit axiom audits. Twenty additional fixtures check source
+endpoints and translation, zero/constant/quartic/sextic Taylor
+cases, the zero-height integral, derivative order zero, diagonal
+phase cancellation, actual singleton/empty supporting intervals,
+coincident/reversed endpoints, the H=1 count, and the actual
+(M,H)=(3,2) interior consumer.
+
+The earlier sixth moments, shifted sextuple count and finite
+symmetric differencing are preserved. No aggregate checklist
+item changes status. Preserve the permanent counterexample,
+corrected powering and all nine repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 942 production files, 1,416 scanned Lean
+  files and 10,274 build jobs. The audit covers 7702 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (13947 total).
+  All 50 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-084446-824cd661.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_084836.log)
+  and [manifest](../../logs/foundation_freeze_20260923_084836.json).
+- All 1,437 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The thirteen modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-source-taylor-20260923-084446-824cd661.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 350 nodes and 914 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos smooth remainder extension — previous checkpoint
+
+`sargos_smooth_extended_reduction` constructs the smooth remainder
+family used in the actual source-indexed finite reduction. For each
+finite order Q and epsilon>0, one C>=1 is chosen before H, M, the
+phase f and the original-derivative bound B. For 1<=H<=M, B>=0,
+local C-infinity regularity on (1,M), and
+
+```text
+|f^(j+6)(y)| <= B/M^j   (y in (1,M), 0<=j<=Q+1),
+```
+
+the constructed physical extension U_q satisfies, for every actual
+ordered sextuple q,
+
+```text
+U_q is globally C-infinity;
+U_q(m) = u_q(m) at every integer radius+1 < m < M-radius;
+|U_q^(j)(x)| <= C*B*H^6/(60*M^j)  (0<=x<=M, 0<=j<=Q).
+```
+
+Here u_q is the actual six-term symmetric Taylor remainder, not a
+freely supplied function. The construction normalizes it as
+u_q(M*x), proves the local affine derivative identity, and derives
+its jets from the original phase. With l=(radius+1)/M,
+r=(M-radius)/M and h=1/(8M), the actual nonempty integer support
+proves l+4h<r. Every retained integer m has m/M in the agreement
+plateau [l+2h,r-2h]. Both Taylor anchors lie within distance one
+of the observation interval [0,1]. The existing Taylor-pasted
+construction therefore gives genuine global smoothness and
+uniform finite-order bounds, even as the buffer shrinks.
+The zero branch is tied to an empty actual integer support.
+
+Exact phase and sum identities replace u_q by U_q inside every
+retained character sum, with all ordered sextuple multiplicities
+unchanged. The assembled theorem also proves
+
+```text
+|sum_(1<=m<=M) e(f(m))|^12
+ <= 1492992*(M/H)^6*M^6
+    + 382205952*(M^11/H^4)*Qextended
+    + C*M^11*H^epsilon.
+```
+
+Qextended is defined using the actual interior character sums
+with phase (s4(t)-s4(t'))*f^(4)(m)/12+U_q(m).
+The common C controls both the extension and the boundary error.
+The original phase bounds are explicit narrower analytic inputs;
+no global remainder certificate, extension existence, agreement
+condition or final sum estimate is assumed.
+
+This closes the C-infinity, finite-order uniform-constant extension
+consumer. It does **not** close the printed finite-C^k,
+constant-one remainder statement or the A-bar-four witness theorem
+in [Sargos 2003, Section 3](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+The construction uses original jets through Q+7. The physical
+model-phase input still needs its consumer, followed by signed
+quartic-window counting, witness/prefix selection, optimization
+and the C-process. The separate exact real-scale Robert–Sargos
+Lemma 5 convention also remains open.
+
+Eight modules are installed: `SargosLocalAffineJets`,
+`SargosRemainderLocalSmooth`, `SargosNormalizedRemainder`,
+`SargosRemainderGeometry`, `SargosRemainderExtension`,
+`SargosPhysicalRemainderExtension`, `SargosExtendedSextuplePhase`
+and `SargosSmoothExtendedReduction`. All 26 public theorems have
+exact-signature regressions and explicit axiom audits. Sixteen
+additional fixtures check zero/negative affine scaling, the
+M=0/1 buffer conventions, empty and singleton integer interiors,
+exact agreement, zeroth derivatives, a genuinely nonzero sextic
+remainder (-15120), zero original-phase bounds and an empty
+actual correlation.
+
+No aggregate checklist item changes status. Preserve the permanent
+counterexample, corrected powering, Heath–Brown energy relation,
+optimization certificates and all nine repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 950 production files, 1,424 scanned Lean
+  files and 10,282 build jobs. The audit covers 7755 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14000 total).
+  All 26 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-091416-0a8b1879.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_091748.log)
+  and [manifest](../../logs/foundation_freeze_20260923_091748.json).
+- All 1,445 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eight modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-remainder-extension-20260923-091416-0a8b1879.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 353 nodes and 920 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos actual transformed model — previous checkpoint
+
+The actual approximate model phase now supplies the remainder
+extension's original-derivative hypotheses. The finite budget
+D(sigma,Q)=1+sum_(p<Q+7) modelPhaseJetCoefficient(sigma,p)
+depends only on the fixed model parameter and requested order.
+For a source phase T*F((A+x)/N), N<=A and A+M<=2N imply M<=N.
+Closed-interval model data through order Q+6, with delta<=1,
+therefore gives
+
+```text
+|f^(j+6)(x)| <= (D(sigma,Q)*|T|/N^6)/M^j
+  (1<x<M, 0<=j<=Q+1).
+```
+
+Local regularity is derived inside the physical interval; no
+exterior smoothness of F is assumed. The theorem
+`sargos_model_smooth_reduction` consumes this real-scale source
+phase in the constructed extension and finite sum reduction.
+
+The transformed-model branch is proved for the natural full
+dyadic block, f(x)=T*F(1+x/M), M>=1. Put
+D4=sigma*(sigma+1)*(sigma+2)*(sigma+3)>0 and
+T1=tau*T*D4/M^4. The normalized fourth derivative is defined
+using **within-derivatives on the closed interval [1,2]**.
+Its smoothness, derivative composition, falling-factorial identity
+and exact model-error scaling are proved at both endpoints,
+giving parameter sigma+4 and error delta/D4.
+
+The actual globally smooth extension U_q is rescaled as
+U_q(M*(u-1))/T1 and added to this fourth-derivative model.
+`sargosTransformedModel_approximate` proves that, for each
+sigma>0 and finite P, one C>=1 chosen before all physical data
+gives the closed-interval model error
+
+```text
+(delta + C*H^6/(tau*M^2))/D4.
+```
+
+The source model order is P+7, the extension order is P+1,
+and tau,T are positive. The correction estimate consumes the
+constructed remainder's actual jets. No transformed-model
+predicate or global remainder bound is assumed.
+
+Exact physical entry is proved, not just an exponent inequality:
+
+```text
+T1*G(1+x/M) = tau*f^(4)(x)+U_q(x)  (0<x<M).
+```
+
+The source sextuple phase and its character sum are identified
+with this expression at every actual interior integer.
+`sargos_positive_sextuple_model` sets tau to the actual positive
+quartic difference divided by 12 and returns both the approximate
+model and the exact source-sum identity. A further proved
+inequality gives H^6/(tau*M^2)<=eta from tau>=H^3 and
+H^3/M^2<=eta.
+
+This is the actual-model input for
+[Sargos 2003, Sections 3 and 6](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+Signed quartic-window counting, the general subinterval/real-scale
+transformed-model bridge, witness/prefix selection, optimization
+and the C-process remain open. The natural full-block transformed
+consumer is not claimed to cover arbitrary real-scale subintervals.
+The printed finite-C^k constant-one A-bar-four formulation and
+separate exact real-scale Robert–Sargos Lemma 5 convention
+also remain open.
+
+Eight modules are installed: `SargosModelRemainderJets`,
+`SargosModelSmoothReduction`, `SargosWithinDerivativeCalculus`,
+`SargosFourthDerivativeModel`, `SargosPhaseCorrection`,
+`SargosTransformedModel`, `SargosTransformedSource` and
+`SargosPositiveSextupleModel`. All 26 public theorems have
+exact-signature regressions and explicit axiom audits. Eighteen
+additional fixtures cover the fourth coefficient at sigma=0,1,2,
+both closed endpoints, the exact reference primitive, derivative
+order zero, zero/constant/quadratic corrections, physical time
+normalization, zero frequency, a genuine square-diagonal sextuple
+with quartic difference 144, the large-frequency threshold and
+an actual transformed reference-model consumer.
+
+No aggregate checklist item changes status. Preserve the permanent
+counterexample, corrected powering, Heath–Brown energy relation,
+optimization certificates and all nine repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 958 production files, 1,432 scanned Lean
+  files and 10,290 build jobs. The audit covers 7821 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14066 total).
+  All 26 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-094310-2a298bd0.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_095000.log)
+  and [manifest](../../logs/foundation_freeze_20260923_095000.json).
+- All 1,453 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eight modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-transformed-model-20260923-094310-2a298bd0.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 356 nodes and 926 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos real-scale source consumer — previous checkpoint
+
+The transformed model now covers arbitrary admissible real scales
+N>=1 and natural source windows [a,a+M] inside [N,2N].
+There is no assumption that M is comparable to N. The original
+physical phase is f(x)=T*F((a+x)/N), and its actual derivative
+bounds retain N in every denominator.
+
+The six-term Taylor remainder is normalized by N, extended with
+the existing Taylor-pasting construction, and pulled back to a
+globally smooth U_q. It agrees at every actual interior integer.
+The proved jets hold on the two-sided physical observation
+interval [-N,N], which is essential because N*u-a can be negative
+even when u belongs to the canonical closed interval [1,2].
+For each fixed model parameter and finite order, one constant
+is chosen before all source scales, phases and sextuples.
+
+With D4=sigma*(sigma+1)*(sigma+2)*(sigma+3)>0,
+the actual transformed time and model are
+
+```text
+T1 = tau*T*D4/N^4,
+G(u) = F^(4)_within(u)/D4 + U_q(N*u-a)/T1,
+model error <= (delta + C*H^6/(tau*N^2))/D4.
+```
+
+All derivatives and model bounds on [1,2] include both closed
+endpoints. The original source order is P+7, and the constructed
+extension uses order P+1. No regularity of F outside its source
+interval is assumed.
+
+Both signs of the actual quartic difference are handled by
+swapping the two ordered triples when necessary. This preserves
+the radius and exact integer support, negates the actual source
+phase, and conjugates its character sum. Its norm is therefore
+unchanged. The oriented frequency is exactly the absolute
+integer quartic difference, and tau=abs(difference)/12.
+Orientation is not used to collapse the counting set: all ordered
+sextuple multiplicities remain available to subsequent estimates.
+
+The source-entry bridges are now explicit kernel-checked identities.
+The original closed natural interval sum is its one-based integer
+source sum plus one endpoint character, with norm loss exactly 1.
+For each nonempty actual inner support, translation by a gives
+the exact natural closed interval with endpoints
+a+R+2 and a+M-R-1. Its dyadic scale conditions are derived from
+N<=a and a+M<=2N. Empty supports are treated as the actual empty
+sum, not substituted for nonempty source objects.
+
+The public consumer `sargos_large_frequency_exponentPair_bound`
+uses an existing genuine exponent pair (k,l), sigma>0 and epsilon>0.
+It chooses delta>0, source order P>=1, eta>0 and C>=1 before
+all physical inputs. For the original phase model, 1<=H<=M,
+N>=1, N<=a, a+M<=2N, T>0 and
+
+```text
+tau = abs(actual quartic difference)/12 >= H^3,
+H^3/N^2 <= eta,
+```
+
+it proves the actual interior source-sum norm is at most
+
+```text
+C*((T1/N)^(k+epsilon)*N^(l+epsilon) + N/T1).
+```
+
+The proof derives the transformed model error, both-sign identity,
+natural interval and scale conditions, then invokes the existing
+all-positive-height exponent-pair theorem. None of those bridges,
+nor the desired transformed-sum bound, is an assumed certificate.
+This is a consumer of an upstream exponent pair, not yet a proof
+of the new C-transformed exponent pair.
+
+The source is
+[Sargos 2003, Sections 3 and 6](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+Remaining EPZAE-10 work is actual signed-window aggregation,
+including the reciprocal-frequency term, finite C-process
+assembly and optimization. The printed A-bar-four witness/prefix
+selection, finite-C^k constant-one formulation and separate exact
+real-scale Robert–Sargos Lemma 5 convention remain open.
+
+Thirteen production modules are installed: `SargosScaledRemainder`,
+`SargosScaledRemainderGeometry`, `SargosScaledRemainderExtension`,
+`SargosScaledPhysicalRemainder`, `SargosScaledModelRemainder`,
+`SargosAffinePhaseCorrection`, `SargosScaledTransformedModel`,
+`SargosScaledTransformedSource`, `SargosSourceModelEntry`,
+`SargosSextupleOrientation`, `SargosOrientedModelSource`,
+`SargosInnerModelEntry` and `SargosLargeFrequencyModelBound`.
+All 46 public theorems have exact-signature regressions and explicit
+axiom audits. Twenty-two further fixtures cover non-integer scales,
+negative physical arguments, correction derivatives, time scaling,
+zero frequency, source singleton/endpoint behavior, an actual
+positive and negative quartic difference, square-diagonal membership,
+conjugation, empty and singleton inner supports, the genuine empty
+extension branch and large-frequency error thresholds.
+
+No aggregate checklist item changes status. The permanent
+counterexample, corrected two-witness powering, Heath–Brown energy
+relation, optimization certificates and all nine repaired Add-est
+clauses remain preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 971 production files, 1,445 scanned Lean
+  files and 10,303 build jobs. The audit covers 7938 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14183 total).
+  All 46 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-101936-e5b0e215.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_102331.log)
+  and [manifest](../../logs/foundation_freeze_20260923_102331.json).
+- All 1,466 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The thirteen modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-real-scale-source-20260923-101936-e5b0e215.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 360 nodes and 935 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Sargos finite closed-source inequality — previous checkpoint
+
+The actual signed-frequency aggregation and finite C-process
+inequality are proved. All ordered sextuple multiplicities are
+retained; orienting a phase never replaces the counting set by
+its image.
+
+The small-frequency set has absolute quartic difference at most
+12*H^3. It lies in the actual signed window [-12*H^3,12*H^3],
+so the proved shifted-window theorem gives cardinality at most
+C_epsilon*H^(3+epsilon). Its actual inner character sum has norm
+at most M, derived from the literal integer support.
+
+For large frequencies, the absolute difference is at most 3*H^4.
+Every such sextuple is covered by an actual window
+
+```text
+j*H^3 <= abs(difference) <= (j+1)*H^3,
+1 <= j <= 3*H.
+```
+
+The index is the natural floor of abs(difference)/H^3.
+Each absolute window is contained in two actual signed windows.
+The proved finite cover inequality permits overlapping endpoints
+only through nonnegative overcounting; no disjointness or omitted
+multiplicity is assumed. Each window's reciprocal contribution is
+controlled by its actual count and 12/(j*H^3).
+The harmonic-sum estimate and an explicit logarithmic-loss bound
+therefore give
+
+```text
+sum_(large ordered sextuples) 12/abs(difference)
+  <= C_epsilon * H^epsilon.
+```
+
+This avoids the extra factor H produced by using only the full
+diagonal count and the lower frequency threshold.
+
+The actual all-positive-height exponent-pair consumer is summed
+over this set. The quartic frequency is explicitly linked to both
+terms: tau<=H^4 controls the main term, while the exact identity
+N/T1=(N^5/(D4*T))*(12/abs(difference)) supplies the secondary term.
+The small and large sets form a proved disjoint partition of the
+original square-diagonal set.
+
+The public theorem `sargos_finite_closed_model_process` consumes
+an actual exponent pair (k,l), sigma>0 and epsilon>0. It chooses
+delta>0, P>=1, eta>0 and C>=1 before all physical inputs.
+For the original model F, real N>=1, T>0, N<=a, a+M<=2N,
+1<=H<=M and H^3/N^2<=eta, it proves
+
+```text
+norm(exponentialSumAt F T N a (a+M))^12
+ <= C * H^epsilon *
+    [ N^12/H
+      + N^11*(D4*T*H^4/N^5)^(k+epsilon)*N^(l+epsilon)
+      + N^16/(D4*T*H^4) ],
+D4 = sigma*(sigma+1)*(sigma+2)*(sigma+3).
+```
+
+This is the exact original closed natural sum, not a generic
+majorant or a separately assumed transformed estimate.
+The proof consumes the actual full correlation bound and
+twelfth-power differencing theorem, derives M<=N, and absorbs
+the single endpoint character with a proved twelfth-power bound.
+
+The source is
+[Sargos 2003, Sections 3 and 6](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+The finite inequality is not yet the C-transformed exponent pair.
+Actual integer-H selection, short-window and low-height branches,
+epsilon bookkeeping and final exponent-pair assembly remain open.
+The printed A-bar-four witness/prefix selection, finite-C^k
+constant-one formulation and separate exact real-scale
+Robert–Sargos Lemma 5 convention remain distinct open obligations.
+
+Ten production modules are installed: `SargosFrequencyWindows`,
+`SargosFrequencyWindowCover`, `SargosReciprocalFrequency`,
+`SargosSmallFrequencyContribution`, `SargosFrequencyScaleBounds`,
+`SargosLargeFrequencyContribution`, `SargosModelCorrelationBound`,
+`SargosFiniteProcessAlgebra`, `SargosFiniteModelProcess` and
+`SargosFiniteClosedProcess`.
+All 26 public theorems have exact-signature regressions and explicit
+axiom audits. Twenty additional fixtures cover zero/positive/negative
+frequencies, actual large square-diagonal sextuples with quartic
+difference plus or minus 2,108,304, their distinct ordered identities,
+the correct width-H^3 bin and excluded adjacent bin, exact tau,
+empty source support, zero weights and finite-scale arithmetic.
+
+No aggregate checklist item changes status. Preserve the permanent
+counterexample, corrected two-witness powering, Heath–Brown energy
+relation, optimization certificates and all nine repaired Add-est
+clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 981 production files, 1,455 scanned Lean
+  files and 10,313 build jobs. The audit covers 7992 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14237 total).
+  All 26 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-105350-e615b783.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_105812.log)
+  and [manifest](../../logs/foundation_freeze_20260923_105812.json).
+- All 1,476 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The ten modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-sargos-finite-closed-process-20260923-105350-e615b783.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 363 nodes and 941 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(22 checked). The whole-proof goal remains open.
+
+## Exact analytic C-process — previous checkpoint
+
+EPZAE-10 is complete: the genuine analytic exponent-pair predicate is
+preserved by all three exact A/B/C formulas. The new public theorem is
+
+```text
+ExponentPair.cProcess :
+  ExponentPair k l ->
+  ExponentPair (k/(12*(1+4*k)))
+               ((11*(1+4*k)+l)/(12*(1+4*k))).
+```
+
+Its only mathematical input is the original exponent pair. It does not
+assume a transformed estimate, optimized majorant or desired output pair.
+The source formula is the C-process in the frozen paper's
+`exp-process` lemma, citing
+[Sargos 2003, Theorem 5](https://www.impan.pl/shop/publication/transaction/download/product/82873).
+
+The proof now links every optimization variable to the original physical
+parameters. With
+
+```text
+t0 = (5+15*k+5*l)/(2+3*k),
+R = (T/N)^(-k/(1+4*k)) * N^((1+4*k-l)/(1+4*k)),
+(Kc,Lc) = C(k,l),
+```
+
+Lean proves the exact balance identity and
+`N^12/R = ((T/N)^Kc*N^Lc)^12`. In the high-height range
+`N^t0 <= T`, the actual optimum satisfies
+`R <= N^(2/3-1/100)` and `N^(13/3) <= T*R^3`.
+A derived initial threshold makes the finite-process smallness and
+secondary-term conditions hold. When `2 <= R <= M`, the proof selects
+the actual natural integer `H = floor(R)`, proves `R/2 <= H <= R`,
+and consumes `sargos_finite_closed_model_process` with every condition
+discharged. The main and secondary terms, rounding loss and all epsilon
+powers are bounded by the target twelfth power.
+
+When `M < R` or `R < 2`, the literal closed source sum is controlled
+by its actual `M+1` terms. For low heights `N <= T <= N^t0`,
+three applications of the proved A-process to the genuine classical
+pair `(1/2,1/2)` yield `(1/30,26/30)`; an exact threshold identity
+compares its bound to the C-process target. Small N is absorbed into
+a uniform constant, and reversed or singleton natural intervals are
+handled with their actual source semantics.
+
+`isExponentPairEstimateNonAsymptotic_cProcess` assembles all branches.
+For every epsilon>0 and sigma>0, it chooses delta>0, derivative order
+P>=1 and C>=1 before the phase, real scales and natural endpoints.
+The existing non-asymptotic equivalence then gives
+`ExponentPair.cProcess`. Neither a comparable-length source interval
+nor a lower bound on k is imposed; k=0 remains included.
+
+The printed A-bar-four witness/prefix-selection statement, its
+constant-one finite-C^k formulation, and the separate exact real-scale
+Robert–Sargos Lemma 5 convention are **not claimed as proved**.
+They were previously listed as possible intermediate routes. The
+implemented route instead uses the proved summed finite inequality and
+the natural-rounded moment reduction. These unused stronger or
+different-convention intermediates are not additional requirements of
+EPZAE-10's unchanged acceptance test: the exact analytic C transformation
+itself is now proved.
+
+Fourteen production modules carry this final assembly:
+`SargosCProcessParameters`, `SargosClassicalLowHeight`,
+`SargosCProcessScale`, `SargosCProcessHighScale`,
+`SargosCProcessLowComparison`, `SargosCProcessThresholds`,
+`SargosCProcessIntegerChoice`, `SargosCProcessMainBalance`,
+`SargosCProcessTrivialBranches`, `SargosCProcessMainError`,
+`SargosCProcessBoundBudget`, `SargosCProcessTargetBudget`,
+`SargosCProcessHighSource` and `ExponentPairCProcess`.
+All 44 public theorems have exact-signature regressions and explicit
+axiom audits. Another 22 fixtures check actual analytic output pairs
+`(1/72,67/72)` and `(1/408,50/51)`, triangle boundaries, exact height
+thresholds, zero-k scales, nonintegral rounding, empty/singleton source
+intervals, zero epsilon and the low-height comparison.
+
+Only EPZAE-10 changes aggregate status. EPZAE-11's D-process, remaining
+beta-table rows, four advertised new pairs, zeta-growth/density bridges
+and whole-project release remain open. These two auxiliary C-images
+are not the four advertised `new-exp-pair` outputs.
+
+Preserve the permanent counterexample, corrected two-witness powering,
+Heath–Brown energy relation, optimization certificates and all nine
+repaired Add-est clauses.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 995 production files, 1,469 scanned Lean
+  files and 10,327 build jobs. The audit covers 8,051 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14,296 total).
+  All 44 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-112323-d2b42d66.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_112654.log)
+  and [manifest](../../logs/foundation_freeze_20260923_112654.json).
+- All 1,490 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The fourteen modules and four
+  integration files also have recorded normalized hashes. Full evidence
+  is in the [checkpoint JSON](logs/tao-trudgian-yang-exact-c-process-20260923-112323-d2b42d66.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 365 nodes and 945 edges, with no duplicate/missing endpoints
+or unclassified nodes. Of 42 aggregate checkbox states, only EPZAE-10
+changes to checked (23 checked). Every other state is preserved.
+The whole-proof goal remains open.
+
+## Native Heath-Brown exponent-pair family — previous checkpoint
+
+The complete native Heath–Brown family is now proved for every integer
+k>=3, with the exact source formula:
+
+```text
+exponentPair_heathBrown :
+  3 <= k ->
+  ExponentPair (2/((k-1)^2*(k+2)))
+               (1-(3*k-2)/(k*(k-1)*(k+2))).
+```
+
+The input is the natural derivative order, not an assumed exponent pair,
+derivative theorem or optimization certificate. The proof consumes the
+already kernel-checked native kth-derivative theorem through
+`isExponentSumBoundNonAsymptotic_heathBrown`.
+The source is Heath–Brown,
+[A new k-th derivative estimate for exponential sums via Vinogradov's mean value](https://arxiv.org/abs/1601.04493),
+Theorem 2 and its proof, as frozen locally at v3. The arbitrary source
+epsilon is already represented in the actual beta/exponent-pair
+definitions; no fixed positive epsilon is left in the public pair.
+
+For alpha in (0,1/2], set tau=1/alpha. The proof constructs an actual
+natural j>=3 satisfying
+
+```text
+((j-1)^2+1)/j <= tau <= (j^2+1)/(j+1).
+```
+
+The construction uses the least natural index with a sufficient upper
+endpoint and proves the lower endpoint from minimality. It does not
+assume a cover or an order-selection oracle. Exact adjacent identities
+and decreasing secant slopes prove that the selected local secant lies
+below every fixed family secant. All three actual derivative-error
+exponents are bounded on the selected interval. The reciprocal-scale
+identity links these exponents to the native beta bound.
+
+At alpha=0, the proved beta endpoint supplies the result. The new
+`exponentPair_of_beta_bound_half` uses the already-proved exact
+reflection identity and the candidate slope condition l-k>=1/2 to
+supply the other half of the closed unit interval. The family satisfies
+the entire exponent-pair triangle, including all boundary requirements.
+The existing closed duality theorem then gives the actual analytic
+exponent pair.
+
+The separate D-transform work is deliberately narrower:
+`SargosDProcessGeometry` proves denominator positivity, triangle and
+slope, exact zero/half endpoint gaps, and the secondary-line comparison.
+`sargosDProcess_pair_of_beta_bound` is **conditional** on its explicitly
+displayed source beta estimate. It derives an exponent pair using
+half-interval duality when 5*k-3*l+2>=0 and k+3*l>=2.
+It is not a proof of the analytic D-process, nor of the Bourgain input
+pair. In particular, the source's maximum cannot be dropped without
+checking the comparison conditions. The original D-process theorem
+remains EPZAE-11 OPEN. Its cited primary paper,
+[Sargos 1995, Theorem 7.1](https://doi.org/10.1112/plms/s3-70.2.285),
+has not yet been obtained in full; publisher pages restrict access,
+and the available database statement does not supply its analytic proof.
+
+Seven production modules are installed: `BetaHalfDuality`,
+`SargosDProcessGeometry`, `HeathBrownPairParameters`,
+`HeathBrownPairSecants`, `HeathBrownPairTriangle`,
+`HeathBrownPairLocalBound` and `HeathBrownExponentPairs`.
+All 41 public theorems have explicit axiom audits and exact-signature
+regressions. Another 24 fixtures exercise actual family pairs for
+k=3,4,5,6,10; genuine A/B/C images; D's exact rational formula and
+negative endpoint gaps; joined interval endpoints; both directions of
+global secant comparison; the actual order-selection theorem; and beta
+at zero and one half. These fixtures do not assert the missing
+D-process estimate.
+
+EPZAE-10 remains complete with exact A/B/C transformations. No aggregate
+checkbox changes in this checkpoint. The remaining beta rows, four
+advertised new pairs, zeta-growth/density outputs and final reproduction
+remain open. The new family is an analytic input, not a claim that
+`new-exp-pair` has been completed.
+
+The permanent powering counterexample, corrected two-witness theorem,
+Heath–Brown energy relation, optimization certificates and all nine
+repaired Add-est clauses remain preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,002 production files, 1,476 scanned Lean
+  files and 10,334 build jobs. The audit covers 8,108 target theorems,
+  6,240 pinned-source theorems and five boundary anchors (14,353 total).
+  All 41 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The full physical
+  [extension log](logs/tao-trudgian-yang-build-20260923-114934-4d93bc9c.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  The foundation covers 301 root-graph modules and two retained
+  regression modules, with 7,636 explicit and 14,290 discovered
+  theorem audits. See the [foundation log](../../logs/foundation_freeze_20260923_115307.log)
+  and [manifest](../../logs/foundation_freeze_20260923_115307.json).
+- All 1,497 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have recorded normalized hashes. Full evidence is in the
+  [checkpoint JSON](logs/tao-trudgian-yang-heath-brown-family-20260923-114934-4d93bc9c.json).
+
+The evaluated owner HEAD is `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 369 nodes and 955 edges, with no duplicate/missing endpoints
+or unclassified nodes. All 42 aggregate checkbox states are unchanged
+(23 checked). The whole-proof goal remains open.
+
+## Large-value powering and subdivision — previous checkpoint
+
+The source cardinality powering inequality is now proved by
+`largeValueExponent_powering` for every natural k, including zero:
+
+```text
+1/2 <= sigma <= 1, tau >= 0
+  -> LV(sigma,k*tau) <= k*LV(sigma,tau).
+```
+
+It consumes the actual cardinality witness of the corrected Lemma 62.
+Neither fifth coordinate is constrained or scaled. The preserved singleton
+pattern proves nonnegativity and the exact height-zero endpoint. A failed
+uniform cardinality bound now yields genuine source patterns at unbounded
+scales; their common compactness subsequence gives an actual energy-region
+point with cardinality exponent above the failed candidate.
+`isLargeValueBound_iff_region_cardinality` proves the full converse to the
+existing region consumer. Infimum closure then supplies the exact
+epsilon-loss boundary, not merely a strictly larger exponent.
+
+`largeValueExponent_subdivision` proves both printed Huxley subdivision
+inequalities for 0 <= tau <= tau'. Height enlargement preserves the actual
+coefficients and ordinates. Subdivision sums actual localized patterns and
+bounds the literal floor-bin count, with constants and radii selected
+before the input pattern. Equal heights and height zero are included.
+`isLargeValueBound_of_bounded_power_range` transfers a uniform bound from
+the closed factor-two interval to every larger height.
+
+`huxley_largeValueBound` and `largeValueExponent_le_huxley` now provide
+the standalone uniform source bound
+`LV(sigma,tau) <= max(2-2*sigma,4+tau-6*sigma)` on the full stated domain.
+Their proof consumes `InCardinalityEnergyRegion.huxley_cardinality` through
+the new actual-region converse. The powered Huxley estimate consumes the
+corrected powering theorem. The mean-square exponent API and its short-height
+and sigma=1 endpoint consequences consume the already-proved finite estimate.
+
+Seven production modules are root-imported, explicitly audited and included
+in the PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`LargeValueBoundClosure`, `LargeValueNonnegative`,
+`LargeValueRegionWitness`, `LargeValuePowering`,
+`LargeValueSubdivisionBounds`, `LargeValueElementaryBounds` and
+`LargeValueHuxleyBound`. All 22 public theorem signatures have regressions;
+16 further fixtures cover zero height/power, equal-height subdivision,
+actual unchanged coefficients/ordinates, concrete mean-square/Huxley bounds
+and an improved bound from the powered Huxley consumer.
+
+EPZAE-18 remains OPEN: the random-sign/block lower bound and the resulting
+exact sigma=1/2 identity still need their actual-pattern construction.
+The standalone Huxley sub-obligation of EPZAE-19 is complete; the other
+listed classical inputs remain open. No aggregate checkbox is changed.
+The analytic D-process, remaining beta rows, four advertised new pairs,
+zeta-growth/density outputs and whole-proof release obligations remain open.
+
+The original Lemma 62 counterexample, corrected two-witness theorem,
+Heath–Brown energy relation, exact optimization and all nine repaired
+Add-est clauses remain unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,009 production files, 1,483 scanned Lean
+  files and 10,341 build jobs. The audit covers 8,145 target theorems,
+  6,240 pinned-source theorems and five anchors (14,390 total).
+  All 22 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The complete
+  [extension log](logs/tao-trudgian-yang-build-20260923-121240-f22694a3.log) has zero errors, warnings,
+  tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_121607.log) and
+  [manifest](../../logs/foundation_freeze_20260923_121607.json).
+- All 1,504 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The seven modules and four integration
+  files also have normalized hashes in the
+  [checkpoint evidence](logs/tao-trudgian-yang-large-value-powering-20260923-121240-f22694a3.json).
+
+Owner HEAD remains `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 373 nodes and 967 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. All 42 aggregate checkbox states
+are unchanged (23 checked). The whole-proof goal remains open.
+
+## Exact square-root large-value exponent — previous checkpoint
+
+`largeValueExponent_half` now proves the exact source endpoint
+`LV(1/2,tau) = tau` for every tau>=0. It constructs genuine normalized
+Dirichlet polynomials and one-separated ordinate sets; neither the desired
+large-value bound nor an extremal-pattern family is an assumption.
+
+The finite sign samples are a literal recursively enumerated list.
+Multiplicities are retained even when different sign choices produce the
+same value. Their second moment is exactly the sum of squared block
+weights times the number of samples. Their fourth moment is at most
+three times the squared variance times that number. Finite Cauchy–Schwarz
+gives the explicit one-twelfth lower-tail count. Double counting selects
+one common sample with many large evaluations, rather than a different
+coefficient sequence at every ordinate.
+
+The input coefficient vectors are actual singleton indicators on the
+closed dyadic integer interval. The proof establishes their pointwise
+normalization and the actual additive evaluation map, so the selected
+sample supplies one coefficient function with norm at most one at every
+integer. Unit modulus of the true negative-sign Dirichlet phases gives
+the exact variance. The lattice consists of natural integers between zero
+and floor(T); its one-separation, interval membership and cardinality are
+proved explicitly.
+
+`exists_half_largeValuePattern` constructs, for every integer N>=2 and
+every real T>0, a full source pattern with scale N, physical height T,
+threshold sqrt((N+1)/2), and T<=12*card(W).
+Taking N=n+2 and T=N^tau gives actual unbounded-scale patterns.
+Constant-factor logarithmic sandwiches prove the value exponent 1/2 and
+cardinality exponent tau. The already-proved common compactness subsequence
+then yields `exists_half_largeValueEnergyRegion`, with its cardinality
+coordinate exactly tau. Every uniform candidate is at least tau, and the
+existing separation upper bound supplies the reverse inequality.
+
+Twelve production modules are root-imported, explicitly audited and
+included in the PowerShell inventory behind
+`run_tao_trudgian_yang_build.bat`:
+`FiniteSignSamples`, `FiniteSignMoments`, `FiniteMomentSelection`,
+`FiniteSignLargeValues`, `FiniteSignCoefficients`,
+`FiniteIncidenceSelection`, `FiniteSignEvaluationMoments`,
+`FiniteSignSelection`, `FiniteRandomCoefficients`,
+`LargeValueRandomLattice`, `LargeValueRandomPattern` and
+`LargeValueHalfExponent`.
+All 28 public theorem signatures have regressions. Sixteen additional
+fixtures cover empty and repeated sign samples, concrete moment estimates,
+coefficient normalization, lattice endpoint counts, the nonnegative-height
+guard, a genuine N=2/T=1/2 pattern, and the exact exponent/region statements
+at zero, fractional and large heights.
+
+EPZAE-18 remains OPEN only for the remaining general lower-bound
+construction: for 1/2<sigma<=1 prove
+`min(2-2*sigma,tau) <= LV(sigma,tau)`.
+The sigma=1 and tau=0 endpoints already follow from nonnegativity; the
+remaining substantive step is the coherent finite-block construction for
+1/2<sigma<1. Full subdivision, corrected cardinality powering, zero-height
+and upper-bound APIs stay proved. No aggregate checkbox changes here.
+
+The analytic D-process, remaining beta rows, advertised new pairs,
+remaining classical/zeta/density interfaces and final release obligations
+remain open. The original counterexample and all nine repaired Add-est
+clauses are preserved.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,021 production files, 1,495 scanned Lean
+  files and 10,353 build jobs. The audit covers 8,193 target theorems,
+  6,240 pinned-source theorems and five anchors (14,438 total).
+  All 28 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The complete
+  [extension log](logs/tao-trudgian-yang-build-20260923-123925-4025ec63.log) has zero errors, warnings,
+  tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_124307.log) and
+  [manifest](../../logs/foundation_freeze_20260923_124307.json).
+- All 1,516 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The twelve modules and four integration
+  files also have normalized hashes in the
+  [checkpoint evidence](logs/tao-trudgian-yang-random-sign-half-exponent-20260923-123925-4025ec63.json).
+
+Owner HEAD remains `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 376 nodes and 973 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. All 42 aggregate checkbox states
+are unchanged (23 checked). The whole-proof goal remains open.
+
+## Complete elementary large-value calculus — previous checkpoint
+
+EPZAE-18 is now complete. Its original acceptance test is unchanged:
+subdivision, lower/L2 bounds, obvious bounds and raising to a power all
+have actual uniform source-pattern proofs with coefficient normalization.
+The full source labels are `hux-sub`, `lv-lower`, `l2-mvt` and
+`power-lemma`.
+
+The remaining general lower bound is now proved by
+`largeValueExponent_lower`:
+
+```text
+1/2 <= sigma <= 1, tau >= 0
+  -> min(2-2*sigma,tau) <= LV(sigma,tau).
+```
+
+This includes all closed endpoints and is stronger in domain than the
+printed lower-bound clause for sigma>1/2. The separate sharp endpoint
+`largeValueExponent_half` remains LV(1/2,tau)=tau for every tau>=0.
+No Montgomery equality is asserted beyond the proved ranges.
+
+The new proof uses q=floor(N/L) actual disjoint natural blocks
+[N+j*L,N+(j+1)*L), all contained in the closed source support [N,2N].
+Each block has exactly L indices, and q*L>=N/2.
+The coefficient vectors are their actual indicators, with pointwise sum of
+norms at most one. The unused remainder and the right endpoint may carry
+zero coefficients; the source support and its closed convention are unchanged.
+
+`dirichletPhase_block_variation` proves the actual negative-sign phase bound
+from the exact complex exponential identity and log(n/a)<=n/a-1.
+For 0<=t<=N/(2L), `largeValueBlock_sum_lower` gives norm(block sum)>=L/2.
+Thus the literal block-family variance is at least N*L/8.
+The finite common-sign selection theorem consumes this variance and proves
+one normalized coefficient sequence, shared by all selected ordinates.
+
+`exists_block_largeValuePattern` constructs a full source pattern for
+every N>=2, 1<=L<=N and T>0, with
+
+```text
+V = sqrt(N*L/16);
+min(T,N/(2L)) <= 12*card(W).
+```
+
+The choice L=floor(N^(2*sigma-1)) is justified by exact real/natural
+inequalities, including its positive lower bound. It gives
+N^sigma/8<=V<=N^sigma and
+N^min(tau,2-2*sigma)<=24*card(W) when T=N^tau.
+These constants are uniform and derived before choosing the physical
+pattern. Along N=n+2 the time/value logarithmic exponents converge to
+tau/sigma. An actual common energy-region subsequence supplies a cardinality
+coordinate rho>=min(2-2*sigma,tau). The existing uniform-bound consumer
+forces every candidate B to be at least this lower bound, and the exact
+least-exponent definition supplies the public statement.
+
+The source-completion map is:
+
+| EPZAE-18 clause | Public consumer |
+| --- | --- |
+| Both subdivision inequalities | `largeValueExponent_subdivision` |
+| General lower bound | `largeValueExponent_lower` |
+| Sharp sigma=1/2 endpoint | `largeValueExponent_half` |
+| L2 mean-square upper bound | `largeValueExponent_le_meanSquare` |
+| Obvious upper bound | `largeValueExponent_le_tau` |
+| Every natural power, including zero | `largeValueExponent_powering` |
+
+Powering still consumes the corrected cardinality witness, including its
+actual convolution, divisor normalization and dyadic selection chain.
+It does not use a scaled fifth coordinate. Subdivision still uses actual
+localized patterns and its literal floor-bin count.
+
+`LargeValueElementaryCalculus` additionally assembles the exact known
+equality ranges: tau<=2-2*sigma, the mean-square range tau<=1, and the
+Huxley range tau<=4*sigma-2. `largeValueExponent_one` proves
+LV(1,tau)=0 for every tau>=0 by the proved bounded-range powering consumer.
+
+Ten production modules are root-imported and included in the PowerShell
+inventory behind `run_tao_trudgian_yang_build.bat`:
+`DirichletBlockPhase`, `FiniteBlockCoefficients`,
+`LargeValueBlockGeometry`, `LargeValueBlockCoherence`,
+`LargeValueBlockVariance`, `LargeValueBlockPattern`,
+`LargeValueBlockExponents`, `LargeValueLowerPatterns`,
+`LargeValueLowerBound` and `LargeValueElementaryCalculus`.
+All 25 public theorem signatures have explicit audits and regressions.
+Twenty additional fixtures exercise zero-length empty blocks, closed
+support, uncovered remainders, exact floor endpoints, phase coherence at
+the height boundary, actual region witnesses, lower-bound and equality
+crossovers, sigma=1 at arbitrary height, and the distinct sharp
+sigma=1/2 behavior.
+
+EPZAE-18 is the only newly checked aggregate item.
+EPZAE-19 remains OPEN for its other classical inputs; the architecture
+now separates that obligation from the completed elementary calculus.
+The analytic D-process, remaining beta rows, advertised new pairs,
+remaining zeta/density interfaces and final release obligations stay open.
+The permanent counterexample and all nine repaired Add-est clauses remain
+unchanged.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,031 production files, 1,505 scanned Lean
+  files and 10,363 build jobs. The audit covers 8,245 target theorems,
+  6,240 pinned-source theorems and five anchors (14,490 total).
+  All 25 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The complete
+  [extension log](logs/tao-trudgian-yang-build-20260923-130446-48e1dea6.log) has zero errors, warnings,
+  tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_131219.log) and
+  [manifest](../../logs/foundation_freeze_20260923_131219.json).
+- All 1,526 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The ten modules and four integration
+  files also have normalized hashes in the
+  [checkpoint evidence](logs/tao-trudgian-yang-elementary-large-values-20260923-130446-48e1dea6.json).
+
+Owner HEAD remains `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 381 nodes and 986 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. Only EPZAE-18 changes among the 42 aggregate
+checkboxes (24 checked). The whole-proof goal remains open.
+
+## Actual Type-I cardinality transfer — previous checkpoint
+
+The cardinality side of `zero-from-large` now has a complete uniform
+Type-I source consumer. This is a proved transfer from explicit upstream
+`IsZetaLargeValueBound` hypotheses, not an unconditional zero-density
+theorem. EPZAE-24 remains OPEN.
+
+`cardinality_eq_sum_color_fibers` counts every fiber of the original finite
+index type. `cardinality_le_color_count_mul` sums the corresponding bounds.
+Equal ordinate values are never collapsed here. The two exact pattern
+conversion theorems use proved one-separation to show that the finite
+ordinate image has exactly the original index cardinality. Thus analytic
+multiplicity is retained in the zero-copy domain until separation justifies
+passing to an image.
+
+`LargeValueUniformity` proves general and zeta compact-range uniformity.
+A genuine finite open subcover chooses one constant and one positive
+threshold window before the pattern. It includes finite-scale excursions
+past both interval endpoints and lowers the actual threshold without
+changing any coefficient or ordinate. The resulting bound is
+`card(W) <= C*T^B*N^epsilon`.
+
+The Type-I expanded slab [T/2,4T] is covered by three actual positive zeta
+slabs. No ordinate translation or coefficient twist is used. Every color
+fiber is counted, giving the literal factor 3. Actual Fourier deweighting
+then supplies a bounded shifted ordinate for each original index.
+The proved unit-bin occupancy estimate and parity/rank coloring separate
+every shifted fiber.
+
+The complete cardinality loss is
+
+```text
+K(d) = 3 * card(ZMod 2 x Fin(ceil(2d+2)+1))
+     <= 24*(1+d).
+```
+
+It is linear in the displacement. If 0<=theta<eta and
+d<=2*pi*T^theta, then eventually K(d)<=T^eta.
+No energy upper bound, square/cube conversion or selection of only four
+energy classes substitutes for counting all original indices.
+
+`classicalTypeI_uniform_source_cardinality_bound` consumes the actual
+sharp cutoff polynomial. Its positive threshold forces N<=6T;
+the Fourier order, normalized threshold and all loss absorption are proved.
+The zeta hypotheses select delta before the slightly shifted source line s
+and threshold exponent D. The resulting bound is
+`card(index type) <= C*T^(B+epsilon)`.
+
+`classicalTypeI_uniform_source_class_cardinality_bound` applies this to a
+literal Type-I branch/scale fiber of the shifted zero multiset. Its natural
+scale is `2^r*floor(T^a)`, with the floor loss proved. Largeness and
+one-separation follow from the genuine branch label and refined color.
+No detached source-polynomial family or final class-count estimate is
+assumed.
+
+Nine production modules are root-imported, explicitly audited and included
+in the PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`CardinalityPartition`, `ClassicalPatternCardinality`,
+`LargeValueUniformity`, `ClassicalTypeICardinalityTransfer`,
+`ClassicalTypeIFourierCardinality`, `ClassicalTypeICardinalityLoss`,
+`ClassicalTypeICardinalityUniformity`, `ClassicalTypeISourceCardinality`
+and `ClassicalTypeISourceClasses`.
+All 15 public theorem signatures have regressions. Eighteen additional
+fixtures cover empty/constant color fibers, analytic-copy multiplicity,
+coincident-ordinate exclusion, all positive-slab boundaries, exact rounded
+coloring costs and strict subpower absorption.
+
+The source-cardinality theorem uses zeta hypotheses on [1,1/a] (or
+[1,2/a] after the natural floor loss). It does not silently replace the
+paper's final tau>=2 contract. Remaining: actual Type-II cardinality,
+multiplicity-preserving slab/global assembly, the exact endpoint-two
+reflection bridge and the sup/limsup density statement and corollaries.
+No aggregate checkbox changes at this checkpoint.
+
+EPZAE-18, the corrected cardinality/energy powering, the independent rho/k
+and rho-star/k witnesses, the Heath--Brown energy relation, all nine repaired
+Add-est clauses and the permanent singleton counterexample remain proved
+and unchanged. Other classical, exponent-pair, zeta/density and release
+obligations remain open.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,040 production files, 1,514 scanned Lean
+  files and 10,372 build jobs. The audit covers 8,269 target theorems,
+  6,240 pinned-source theorems and five anchors (14,514 total).
+  All 15 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The complete
+  [extension log](logs/tao-trudgian-yang-build-20260923-132951-4bd2396c.log) has zero errors, warnings,
+  tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_133317.log) and
+  [manifest](../../logs/foundation_freeze_20260923_133317.json).
+- All 1,535 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The nine modules and four integration
+  files also have normalized hashes in the
+  [checkpoint evidence](logs/tao-trudgian-yang-type-i-cardinality-20260923-132951-4bd2396c.json).
+
+Owner HEAD remains `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 386 nodes and 997 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. All 42 aggregate checkbox states
+are unchanged (24 checked). The whole-proof goal remains open.
+
+## Actual endpoint-one cardinality-to-density transfer — current checkpoint
+
+`isZeroDensityBound_of_uniform_largeValue_bounds` now proves the complete
+intermediate cardinality transfer:
+
+```text
+1/2 < sigma < 1, B >= 0, tau0 > 0;
+LV_zeta bound B*tau for every tau >= 1;
+LV bound B*tau for every tau >= tau0
+  -> IsZeroDensityBound sigma (B/(1-sigma)).
+```
+
+The conclusion uses the actual multiplicity-weighted symmetric zero
+rectangle and the original epsilon--delta quantifier order. The large-value
+predicates are explicit, genuinely upstream inputs, not assumed zero-count
+or detector-family estimates. The source statement's stronger lower zeta
+endpoint 2 remains an independent obligation. EPZAE-24 is still OPEN.
+
+`ClassicalTypeIICardinalityPatterns` packages the actual sharp mollifier,
+with its divisor majorant and exact normalized threshold. It proves that the
+pattern ordinate count equals the complete original zero-copy class count.
+The native factory discharges the coefficient majorant. The uniform
+Type-II consumer chooses its threshold window before the source real-part
+line and consumes the literal dyadic cutoffs, scale label, expanded height
+and one-separation.
+
+`ClassicalSlabCardinalityClasses` extracts the genuine shifted source
+branch/scale for every zero. It refines this by all parity/rank colors.
+The zero count is exactly the sum of the cardinalities of these fibers;
+no selected four-class energy witness replaces this partition.
+The outer cardinality cost obeys `K*T^(3*theta)`, with the actual local
+analytic-multiplicity cap and both logarithmic dyadic counts accounted for.
+
+`classicalSlabZeroCount_bound_of_uniform_largeValue_bounds` assembles the
+Type-I and Type-II cardinality consumers. The source cutoff exponents,
+real-part shift, Fourier displacement and threshold losses are selected in
+the required dependency order. Empty branch labels have empty fibers.
+The conclusion is an actual positive-slab estimate for
+`zeroCountRect (sigma-delta) 1 T (2*T)`.
+
+`ZeroCardinalityRestrictions` injects indexed subfamilies into containing
+weighted zero sets without discarding copy numbers. Negative ordinates are
+transported through the proved zero-copy conjugation equivalence, including
+equality of analytic vanishing orders. The symmetric assembly counts every
+signed dyadic color, retains the terminal partially occupied slab, and
+absorbs the actual finite low-height zero count. The logarithmic number of
+colors is bounded by any positive height power.
+
+The final predicate follows by splitting the arbitrary epsilon loss between
+the positive-slab estimate and symmetric assembly, then choosing one global
+constant and a positive real-part shift. No root of an energy estimate, zero
+count oracle or unproved polynomial family is used.
+
+Eight production modules are root-imported, explicitly audited and included
+in the PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+`ClassicalTypeIICardinalityPatterns`, `ClassicalTypeIICardinalityTransfer`,
+`ClassicalSlabCardinalityClasses`, `ClassicalSlabCardinalityLoss`,
+`ClassicalSlabCardinalityTransfer`, `ZeroCardinalityRestrictions`,
+`ZeroCardinalityAssembly` and `ZeroCardinalityTransfer`.
+All 14 public theorem signatures have regressions. Sixteen additional
+fixtures check analytic-copy counts, empty weighted sets, both signed slab
+boundaries and excluded exterior points, strict subpower losses, and actual
+unconditional density consequences obtained by supplying the proved obvious
+large-value bounds.
+
+Remaining within EPZAE-24: the exact sup/limsup exponent formulation,
+the source's zeta endpoint-two reflection reduction, and all source
+corollaries. The current endpoint-one predicate is not a substitute for
+that unchanged aggregate acceptance contract. No aggregate checkbox changes.
+
+The permanent counterexample, corrected independent cardinality/energy
+powering witnesses, Heath--Brown energy relation, all nine repaired Add-est
+clauses and complete EPZAE-18 elementary calculus remain intact.
+Other classical, exponent-pair, zeta/density and release obligations stay open.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,048 production files, 1,522 scanned Lean
+  files and 10,380 build jobs. The audit covers 8,286 target theorems,
+  6,240 pinned-source theorems and five anchors (14,531 total).
+  All 14 new public theorems occur exactly once in the explicit audit,
+  with only permitted standard logical axioms. The complete
+  [extension log](logs/tao-trudgian-yang-build-20260923-134332-f1498f0d.log) has zero errors, warnings,
+  tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_134658.log) and
+  [manifest](../../logs/foundation_freeze_20260923_134658.json).
+- All 1,543 physical proof/configuration/tooling hashes are identical
+  before and after both runners. The eight modules and four integration
+  files also have normalized hashes in the
+  [checkpoint evidence](logs/tao-trudgian-yang-endpoint-one-density-20260923-134332-f1498f0d.json).
+
+Owner HEAD remains `f722da69a38a665f220a9e092b5d1f49460c7bd8`.
+No agent commit or push was performed. All 509 protected tracked files
+are byte-identical to HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 392 nodes and 1,011 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. All 42 aggregate checkbox states
+are unchanged (24 checked). The whole-proof goal remains open.

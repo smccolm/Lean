@@ -55,7 +55,9 @@ theorem sargos_symmetric_sum_shift (a : ℤ → ℂ) (M L j : ℕ) (hj : j < L)
       ‖∑ n ∈ S, sargosPaddedSequence a M (m+j+n)*sargosPaddedSequence a M (m+j-n)‖) =
       ∑ m ∈ Finset.Ico (0:ℤ) M,
         ‖∑ n ∈ S, sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n)‖ := by
-  apply sargos_supported_sum_shift _ M L j hj
+  apply sargos_supported_sum_shift
+    (fun m => ‖∑ n ∈ S, sargosPaddedSequence a M (m+n)*sargosPaddedSequence a M (m-n)‖)
+    M L j hj
   intro m hm
   have he (n : ℤ) := sargosPaddedSequence_symmetric_zero a M hm n
   simp only [he,Finset.sum_const_zero,norm_zero]
