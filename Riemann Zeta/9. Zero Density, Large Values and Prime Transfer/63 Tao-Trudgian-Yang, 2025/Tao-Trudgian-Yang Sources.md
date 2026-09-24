@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-Current analytic progress: [Actual endpoint-one cardinality-to-density transfer](#actual-endpoint-one-cardinality-to-density-transfer--current-checkpoint).
-The actual Type-I/II, slab and symmetric-rectangle cardinality chain proves the endpoint-one density predicate. The exact sup/limsup and endpoint-two source contract remain open. EPZAE-18, corrected powering, all nine repaired Add-est clauses and the counterexample are preserved.
+Current analytic progress: [Endpoint-one density envelopes and sharp zeta nonexistence](#endpoint-one-density-envelopes-and-sharp-zeta-nonexistence--current-checkpoint).
+The actual endpoint-one density envelope and corrected-powering bounded ranges are proved, as is sharp zeta nonexistence for 1 <= tau < 2 sigma. The exact endpoint-two source contract remains open. EPZAE-18, repaired Add-est and the counterexample are preserved.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -9668,7 +9668,7 @@ The graph has 386 nodes and 997 edges with no duplicate or missing endpoints,
 class conflicts or unclassified nodes. All 42 aggregate checkbox states
 are unchanged (24 checked). The whole-proof goal remains open.
 
-## Actual endpoint-one cardinality-to-density transfer — current checkpoint
+## Actual endpoint-one cardinality-to-density transfer — previous checkpoint
 
 `isZeroDensityBound_of_uniform_largeValue_bounds` now proves the complete
 intermediate cardinality transfer:
@@ -9769,5 +9769,113 @@ No agent commit or push was performed. All 509 protected tracked files
 are byte-identical to HEAD. The counterexample retains SHA-256
 `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
 The graph has 392 nodes and 1,011 edges with no duplicate or missing endpoints,
+class conflicts or unclassified nodes. All 42 aggregate checkbox states
+are unchanged (24 checked). The whole-proof goal remains open.
+
+## Endpoint-one density envelopes and sharp zeta nonexistence — current checkpoint
+
+The actual endpoint-one cardinality-to-density predicate now has its
+supremum/limsup formulation and a bounded-range corollary using corrected
+cardinality powering. The printed source's stronger zeta endpoint two
+remains OPEN, so EPZAE-24 is not checked off.
+
+For 1/2 < sigma < 1, the proved intermediate inequality is
+
+```text
+A(sigma)*(1-sigma)
+  <= max(sup_{tau >= 1} LV_zeta(sigma,tau)/tau,
+         limsup_{tau -> infinity} LV(sigma,tau)/tau).
+```
+
+`ZeroCardinalityExponentTransfer` consumes the actual Type-I/II
+multiplicity-weighted zero-count transfer. The general-LV singleton lower
+bound makes the envelope nonnegative. Each real number above it supplies
+all zeta hypotheses and eventually all general hypotheses. EReal division,
+infinite values and the strict real-part domain are handled explicitly.
+
+The infimum-to-uniform zeta bound is reused from the existing
+`ZetaLargeValueDiscreteness` module. `ZetaLargeValueBoundClosure` is only
+a compatibility import, not a new proof. A duplicate draft definition and
+duplicate audit entries were removed before this verification checkpoint.
+The original canonical declarations retain their explicit audit.
+Minus infinity is allowed; no false nonnegativity of zeta exponents is used.
+
+`ZeroCardinalityBoundedRanges` reduces the necessary inputs to
+
+```text
+LV_zeta(sigma,tau) <= B*tau for 1 <= tau < tau0;
+LV(sigma,tau)      <= B*tau for tau0 <= tau <= 2*tau0;
+B >= 0 and tau0 > 0
+  -> IsZeroDensityBound sigma (B/(1-sigma))
+  -> A(sigma) <= B/(1-sigma).
+```
+
+The long general range uses the corrected cardinality-powering witness.
+At and beyond tau0, the general bound also bounds zeta patterns.
+The short interval is half-open; the general interval includes both
+endpoints. For tau0 < 1 the short interval is empty. The disproved
+s-prime/s scaling and the independent energy witness are not used here.
+
+`ZetaSecondDerivativePatterns` proves the full sharp-interval range
+
+```text
+1/2 < sigma <= 1, 1 <= tau < 2*sigma
+  -> every sufficiently large admissible zeta pattern has no ordinates
+  -> LV_zeta(sigma,tau) = minus infinity.
+```
+
+It consumes the literal-polynomial bound
+`2 + 200*sqrt(t) + 12*pi*N/t`. One positive parameter window retains
+both strict gaps tau < 2*sigma and tau < 2; the threshold absorbs the
+factor two in [T,2T]. Arbitrary real cardinality/energy bounds and
+pointwise strict power saving on every sharp integer interval follow.
+Earlier restricted-range results and their consumers are unchanged.
+
+The three new analytic modules and the compatibility import are
+root-imported and included in the PowerShell inventory behind
+`run_tao_trudgian_yang_build.bat`. Nine new public theorem signatures
+and two reused closure signatures have exact regressions. Twenty further
+fixtures cover minus-infinity closure, interval boundaries, empty ranges,
+endpoint nonnegativity, strict exclusions and numerical density
+consequences from the native Huxley theorem. These include
+`IsZeroDensityBound (3/4) (8/3)` and `A(4/5) <= 5/2`;
+they are consequences, not new best-known estimates.
+
+Remaining within EPZAE-24: actual source reflection reducing the zeta input
+endpoint from one to two, and the exact source corollaries. The proved
+endpoint-one results are labeled intermediates, not replacements for that
+unchanged acceptance contract. No aggregate checkbox changes.
+
+The permanent counterexample, corrected independent cardinality/energy
+powering witnesses, Heath--Brown energy relation, all nine repaired Add-est
+clauses and complete EPZAE-18 elementary calculus remain intact.
+Other classical, exponent-pair, zeta/density and release obligations stay open.
+
+Verification for this checkpoint:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,052 production files, 1,526 scanned Lean
+  files and 10,384 build jobs. The audit covers 8,297 target theorems,
+  6,240 pinned-source theorems and five anchors (14,542 total).
+  All nine new public theorems and both reused closure theorems occur
+  exactly once in the explicit audit, with only permitted standard logical
+  axioms. The [extension log](logs/tao-trudgian-yang-build-20260923-141622-b8317f2e.log) has zero errors,
+  warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass, with zero diagnostics and 8,857 build jobs.
+  It covers 301 root modules and two retained regression modules,
+  7,636 explicit and 14,290 discovered theorem audits.
+  See the [foundation log](../../logs/foundation_freeze_20260923_142024.log) and
+  [manifest](../../logs/foundation_freeze_20260923_142024.json).
+- All 1,547 physical proof/configuration/tooling hashes are identical before
+  and after both runners. The four module files and four integration files
+  also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-endpoint-one-envelope-20260923-141622-b8317f2e.json).
+
+Owner HEAD at this checkpoint is `a8bdea22a024a84924a0c4accd6af656af969700`.
+The owner advanced HEAD during development; no agent commit or push was
+performed. All 509 protected tracked files are byte-identical to current
+HEAD. The counterexample retains SHA-256
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+The graph has 395 nodes and 1,018 edges, with no duplicate/missing endpoints,
 class conflicts or unclassified nodes. All 42 aggregate checkbox states
 are unchanged (24 checked). The whole-proof goal remains open.
