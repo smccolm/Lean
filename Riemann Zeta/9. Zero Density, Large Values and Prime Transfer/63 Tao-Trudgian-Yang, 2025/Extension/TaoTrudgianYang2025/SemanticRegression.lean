@@ -37140,3 +37140,2348 @@ example : ¬ (∀ (k l σ τ : ℝ), ExponentPair k l → 0 < τ →
     (h (1/6) (2/3) (3/4) (1/4) hp (by norm_num) (by norm_num))
 
 end ZetaLowHeightRegression
+
+section ZetaSharpLowHeightRegression
+open Expdb Filter Topology
+
+example (N L : ℕ) (hN : 1 < N) (hL : 0 < L) (hLN : L ≤ N)
+    (T : ℝ) (hT : 0 < T) (hheight : 2*T ≤ (N : ℝ)/(2*(L : ℝ))) :
+    ∃ P : ZetaLargeValuePattern, P.N = (N : ℝ) ∧ P.T = T ∧
+      P.V = (L : ℝ)/2 ∧ T ≤ (P.ordinates.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_coherentZetaLatticePattern N L hN hL hLN T hT hheight
+
+example (N : ℕ) (hN : 2 ≤ N)
+    {σ τ : ℝ} (hσ : 0 ≤ σ) (hτ : 0 ≤ τ) (hrange : σ+τ ≤ 1) :
+    ∃ P : ZetaLargeValuePattern, P.N = (N : ℝ) ∧ P.T = (N : ℝ)^τ/8 ∧
+      (1/4)*(N : ℝ)^σ ≤ P.V ∧ P.V ≤ (1/2)*(N : ℝ)^σ ∧
+      (1/8)*(N : ℝ)^τ ≤ (P.ordinates.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_coherentZetaPowerPattern N hN σ τ hσ hτ hrange
+
+example {σ τ B : ℝ}
+    (h : IsZetaLargeValueBound σ τ B) (P : ℕ → ZetaLargeValuePattern)
+    (hN : Tendsto (fun n => (P n).N) Filter.atTop Filter.atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) Filter.atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) Filter.atTop (nhds σ)) :
+    IsPowerBounded (fun n => ((P n).ordinates.card : ℝ)) (fun n => (P n).N) B :=
+  @TaoTrudgianYang2025.IsZetaLargeValueBound.family_powerBound σ τ B h P hN hT hV
+
+example {σ τ ρ c : ℝ}
+    (P : ℕ → ZetaLargeValuePattern)
+    (hN : Tendsto (fun n => (P n).N) Filter.atTop Filter.atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) Filter.atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) Filter.atTop (nhds σ))
+    (hc : 0 < c)
+    (hcard : ∀ n, c*(P n).N^ρ ≤ ((P n).ordinates.card : ℝ)) :
+    (ρ : EReal) ≤ zetaLargeValueExponent σ τ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_ge_of_family σ τ ρ c P hN hT hV hc hcard
+
+example {σ τ : ℝ}
+    (hσ : 0 ≤ σ) (hτ : 0 ≤ τ) (hrange : σ+τ ≤ 1) :
+    zetaLargeValueExponent σ τ = (τ : EReal) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_eq_tau_of_lowHeight σ τ hσ hτ hrange
+
+example {t N : ℝ} (ht : 0 < t)
+    (hN : 0 < N) (htN : t ≤ N) (a b : ℕ)
+    (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ‖∑ n ∈ Finset.Icc a b, (n : ℂ)^(-((t : ℂ)*Complex.I))‖ ≤
+      (2*Real.pi*modelPhaseFirstDerivativeConstant 1)*(N/t) :=
+  @TaoTrudgianYang2025.norm_sum_cpow_neg_im_le_lowHeight t N ht hN htN a b ha hb
+
+example {σ τ : ℝ}
+    (hτ : τ < 1) (hσ : 1-τ < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_eq_bot_of_lowHeight σ τ hτ hσ
+
+example {σ τ : ℝ}
+    (hσ : 0 ≤ σ) (hτ : 0 ≤ τ) (hτ1 : τ < 1) :
+    zetaLargeValueExponent σ τ = if σ ≤ 1-τ then (τ : EReal) else ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_lowHeight σ τ hσ hτ hτ1
+
+example : ∃ P : ZetaLargeValuePattern, P.N = 16 ∧ P.T = 1/2 ∧
+    P.V = 4 ∧ (1/2 : ℝ) ≤ (P.ordinates.card : ℝ) := by
+  convert exists_coherentZetaLatticePattern 16 8 (by norm_num) (by norm_num)
+    (by norm_num) (1/2) (by norm_num) (by norm_num) using 1
+  norm_num
+example : ∃ P : ZetaLargeValuePattern, P.N = 64 ∧ P.T = 2 ∧
+    P.V = 4 ∧ (2 : ℝ) ≤ (P.ordinates.card : ℝ) := by
+  convert exists_coherentZetaLatticePattern 64 8 (by norm_num) (by norm_num)
+    (by norm_num) 2 (by norm_num) (by norm_num) using 1
+  norm_num
+example : zetaLargeValueExponent (3/4) (1/4) = ((1/4 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent 1 0 = ((0 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) le_rfl (by norm_num)
+example : zetaLargeValueExponent 0 0 = ((0 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight le_rfl le_rfl (by norm_num)
+example : zetaLargeValueExponent 0 1 = ((1 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight le_rfl (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (1/2) (1/2) = ((1/2 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (9/10) (1/10) = ((1/10 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (1/100) (99/100) = ((99/100 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (3/4) (3/10) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_lowHeight (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (1/2) (3/4) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_lowHeight (by norm_num) (by norm_num)
+example : zetaLargeValueExponent 1 (1/10000) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_lowHeight (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (1/50) (99/100) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_lowHeight (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (11/10) 0 = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_lowHeight (by norm_num) (by norm_num)
+example {τ : ℝ} (hτ : 0 ≤ τ) (hτ1 : τ ≤ 1) :
+    zetaLargeValueExponent (1-τ) τ = (τ : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by linarith) hτ (by linarith)
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+example : ¬ (∀ σ τ : ℝ, 1/2 ≤ σ → σ ≤ 1 → 0 < τ →
+    7/10+(3/40)*τ < σ → zetaLargeValueExponent σ τ = ⊥) := by
+  intro h
+  exact zetaLargeValueExponent_three_quarters_quarter_ne_bot
+    (h (3/4) (1/4) (by norm_num) (by norm_num) (by norm_num) (by norm_num))
+example : ¬ (∀ σ τ : ℝ, 0 ≤ τ → τ < 1 → 1-τ ≤ σ →
+    zetaLargeValueExponent σ τ = ⊥) := by
+  intro h
+  exact zetaLargeValueExponent_three_quarters_quarter_ne_bot
+    (h (3/4) (1/4) (by norm_num) (by norm_num) (by norm_num))
+
+end ZetaSharpLowHeightRegression
+
+
+section HeathBrownSharpLargeValueRegression
+open Filter MeasureTheory
+
+example (N : ℕ) (I : Finset ℕ) (T t : ℝ)
+    (hN : 1 < N) (hI : IsIntegerInterval I)
+    (hIN : I ⊆ Finset.Icc N (2*N)) (hT : 0 < T)
+    (ht : t ∈ Set.Icc T (2*T))
+    (hvalue : 0 < ‖∑ n ∈ I, dirichletPhase n t‖) :
+    ∃ P : ZetaLargeValuePattern, P.N = (N : ℝ) ∧ P.T = T ∧
+      P.active = I ∧ P.V = ‖∑ n ∈ I, dirichletPhase n t‖ ∧ t ∈ P.ordinates :=
+  @TaoTrudgianYang2025.exists_zetaIntervalProbe N I T t hN hI hIN hT ht hvalue
+
+example (N : ℕ) (I : Finset ℕ) (t : ℝ) (hN : 1 < N)
+    (hI : IsIntegerInterval I) (hIN : I ⊆ Finset.Icc N (2*N))
+    (ht : 1 ≤ t) (htN : t ≤ (N : ℝ)^2) :
+    ‖∑ n ∈ I, dirichletPhase n t‖ ≤
+      2+200*Real.sqrt t+12*Real.pi*(N : ℝ)/t :=
+  @TaoTrudgianYang2025.norm_zetaInterval_le_short_majorant N I t hN hI hIN ht htN
+
+example {T : ℝ} (hT : 0 ≤ T) (t : ℝ) :
+    0 ≤ zetaMomentConvolution T t :=
+  @TaoTrudgianYang2025.zetaMomentConvolution_nonneg T hT t
+
+example (N : ℕ) (I : Finset ℕ) (T t : ℝ) (hN : 1 < N)
+    (hI : IsIntegerInterval I) (hIN : I ⊆ Finset.Icc N (2*N))
+    (hT : 0 < T) (ht : t ∈ Set.Icc T (2*T)) :
+    ‖∑ n ∈ I, dirichletPhase n t‖ ≤
+      zetaCutoffMellinConstant 1 (1/2)*Real.sqrt (N : ℝ)*zetaMomentConvolution T t+
+      zetaCutoffMellinConstant 6 1*(N : ℝ)^6/(1+|t|)^6+
+      240*zetaCutoffMellinConstant 6 (1/2)*(N : ℝ)^(11/2 : ℝ)/T^4 :=
+  @TaoTrudgianYang2025.norm_zetaInterval_le_sixth_convolution_and_errors N I T t hN hI hIN hT ht
+
+example (N : ℕ) (I : Finset ℕ) (T t : ℝ) (hN : 1 < N)
+    (hI : IsIntegerInterval I) (hIN : I ⊆ Finset.Icc N (2*N))
+    (hscale : (N : ℝ)^(11/8 : ℝ) ≤ T) (ht : t ∈ Set.Icc T (2*T)) :
+    ‖∑ n ∈ I, dirichletPhase n t‖ ≤
+      zetaCutoffMellinConstant 1 (1/2)*Real.sqrt (N : ℝ)*zetaMomentConvolution T t+
+      zetaSixthPerronError :=
+  @TaoTrudgianYang2025.norm_zetaInterval_le_sixth_convolution N I T t hN hI hIN hscale ht
+
+example (N : ℕ) (I : Finset ℕ) (T : ℝ) (W : Finset ℝ)
+    (hN : 1 < N) (hI : IsIntegerInterval I) (hIN : I ⊆ Finset.Icc N (2*N))
+    (hscale : (N : ℝ)^(11/8 : ℝ) ≤ T) (hsep : IsOneSeparated W)
+    (hW : ∀ t ∈ W, t ∈ Set.Icc T (2*T)) :
+    (∑ t ∈ W, ‖∑ n ∈ I, dirichletPhase n t‖^12) ≤
+      (2 : ℝ)^11*(zetaCutoffMellinConstant 1 (1/2)^12*(N : ℝ)^6*
+        zetaMomentLogLoss T^12*zetaTwelfthMoment T+
+        (W.card : ℝ)*zetaSixthPerronError^12) :=
+  @TaoTrudgianYang2025.sum_zetaInterval_twelfth_le N I T W hN hI hIN hscale hsep hW
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧
+      ∀ (N : ℕ) (I : Finset ℕ) (T : ℝ) (W : Finset ℝ),
+        1 < N → IsIntegerInterval I → I ⊆ Finset.Icc N (2*N) →
+        T₀ ≤ T → (N : ℝ)^(11/8 : ℝ) ≤ T → IsOneSeparated W →
+        (∀ t ∈ W, t ∈ Set.Icc T (2*T)) →
+        (∑ t ∈ W, ‖∑ n ∈ I, dirichletPhase n t‖^12) ≤
+          C*(N : ℝ)^6*T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_sum_zetaInterval_twelfth_bound ε hε
+
+example {n : ℕ} (hn : 0 < n) (t u : ℝ) :
+    dirichletPhase n t*star (dirichletPhase n u) = dirichletPhase n (t-u) :=
+  @TaoTrudgianYang2025.dirichletPhase_mul_star n hn t u
+
+example (I : Finset ℕ)
+    (hI : ∀ n ∈ I, 0 < n) (t : ℝ) :
+    ‖∑ n ∈ I, dirichletPhase n |t|‖ = ‖∑ n ∈ I, dirichletPhase n t‖ :=
+  @TaoTrudgianYang2025.norm_sum_dirichletPhase_abs I hI t
+
+example (P : LargeValuePattern) :
+    ((P.ordinates.card : ℝ)*P.V)^2 ≤
+      2*P.N*∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
+        ‖∑ n ∈ P.indices, dirichletPhase n (u-t)‖ :=
+  @TaoTrudgianYang2025.LargeValuePattern.sharp_gram P
+
+example (P : LargeValuePattern)
+    (hne : P.ordinates.Nonempty) :
+    ∃ t ∈ P.ordinates, (P.ordinates.card : ℝ)*P.V^2 ≤
+      2*P.N*∑ u ∈ P.ordinates, ‖∑ n ∈ P.indices, dirichletPhase n (u-t)‖ :=
+  @TaoTrudgianYang2025.LargeValuePattern.exists_large_sharp_gram_row P hne
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧ ∀ T : ℝ, T₀ ≤ T →
+      (∫ t in 0..T, zetaMomentCriticalNorm t^12) ≤ C*T^(2+ε) :=
+  @TaoTrudgianYang2025.zeta_twelfth_zero ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧ ∀ T : ℝ, T₀ ≤ T →
+      zetaMomentLogLoss (2*T)^12*(∫ t in 0..3*T, zetaMomentCriticalNorm t^12) ≤
+        C*T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_zeta_global_twelfth_log_bound ε hε
+
+example {T : ℝ} (hT : 0 ≤ T) (t : ℝ) :
+    0 ≤ zetaGlobalConvolution T t :=
+  @TaoTrudgianYang2025.zetaGlobalConvolution_nonneg T hT t
+
+example {T t : ℝ} (ht : 0 ≤ t) (htT : t ≤ T) :
+    zetaMomentConvolution t t ≤ zetaGlobalConvolution T t :=
+  @TaoTrudgianYang2025.zetaMomentConvolution_le_global T t ht htT
+
+example {T u : ℝ} (W : Finset ℝ) (hT : 0 < T) (hsep : IsOneSeparated W)
+    (hW : ∀ t ∈ W, t ∈ Set.Icc 0 T) (hu : u ∈ Set.Icc 0 (3*T)) :
+    (∑ t ∈ W, zetaMomentKernel t u) ≤ zetaMomentLogLoss (2*T) :=
+  @TaoTrudgianYang2025.sum_zetaMomentKernel_on_global_window T u W hT hsep hW hu
+
+example {T t : ℝ} (hT : 0 < T) (ht : t ∈ Set.Icc 0 T) :
+    0 < (∫ u in 0..3*T, zetaMomentKernel t u) ∧
+      (∫ u in 0..3*T, zetaMomentKernel t u) ≤ zetaMomentLogLoss (2*T) :=
+  @TaoTrudgianYang2025.integral_zetaMomentKernel_global_mass T t hT ht
+
+example {T : ℝ} (W : Finset ℝ) (hT : 0 < T) (hsep : IsOneSeparated W)
+    (hW : ∀ t ∈ W, t ∈ Set.Icc 0 T)
+    (f : ℝ → ℝ) (hf : Continuous f) (hf0 : ∀ u, 0 ≤ f u) :
+    (∑ t ∈ W, (∫ u in 0..3*T, zetaMomentKernel t u*f u)^12) ≤
+      zetaMomentLogLoss (2*T)^12*(∫ u in 0..3*T, f u^12) :=
+  @TaoTrudgianYang2025.sum_global_convolution_twelfth_le_moment T W hT hsep hW f hf hf0
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧ ∀ (T : ℝ) (W : Finset ℝ),
+      T₀ ≤ T → IsOneSeparated W → (∀ t ∈ W, t ∈ Set.Icc 0 T) →
+      (∑ t ∈ W, zetaGlobalConvolution T t^12) ≤ C*T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_sum_zetaGlobalConvolution_twelfth_bound ε hε
+
+example (P : LargeValuePattern)
+    {t L : ℝ} (ht : t ∈ P.ordinates) (hL : 0 ≤ L) (hLN : L ≤ P.N^2) :
+    (∑ u ∈ {u ∈ P.ordinates | |u-t| ≤ L},
+      ‖∑ n ∈ P.indices, dirichletPhase n (u-t)‖) ≤
+      2*P.N+(P.ordinates.card : ℝ)*(2+200*Real.sqrt L)+
+        24*Real.pi*P.N*(harmonic (Nat.ceil L) : ℝ) :=
+  @TaoTrudgianYang2025.LargeValuePattern.sharp_gram_near_row P t L ht hL hLN
+
+example (N : ℕ) (I : Finset ℕ) (T t : ℝ) (hN : 1 < N)
+    (hI : IsIntegerInterval I) (hIN : I ⊆ Finset.Icc N (2*N))
+    (hscale : (N : ℝ)^(11/8 : ℝ) ≤ t) (htT : t ≤ T) :
+    ‖∑ n ∈ I, dirichletPhase n t‖ ≤
+      zetaCutoffMellinConstant 1 (1/2)*Real.sqrt (N : ℝ)*zetaGlobalConvolution T t+
+      zetaSixthPerronError :=
+  @TaoTrudgianYang2025.norm_zetaInterval_le_global_convolution N I T t hN hI hIN hscale htT
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧
+      ∀ (N : ℕ) (I : Finset ℕ) (T : ℝ) (W : Finset ℝ),
+        1 < N → IsIntegerInterval I → I ⊆ Finset.Icc N (2*N) →
+        T₀ ≤ T → IsOneSeparated W →
+        (∀ t ∈ W, (N : ℝ)^(11/8 : ℝ) ≤ t ∧ t ≤ T) →
+        (∑ t ∈ W, ‖∑ n ∈ I, dirichletPhase n t‖^12) ≤ C*(N : ℝ)^6*T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_sum_zetaInterval_far_twelfth_bound ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧ ∀ (P : LargeValuePattern) (t : ℝ),
+      T₀ ≤ P.T → t ∈ P.ordinates →
+      (∑ u ∈ {u ∈ P.ordinates | P.N^(11/8 : ℝ) ≤ |u-t|},
+        ‖∑ n ∈ P.indices, dirichletPhase n (u-t)‖^12) ≤ C*P.N^6*P.T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_sharp_gram_far_twelfth ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C T₀ : ℝ, 0 < C ∧ 1 ≤ T₀ ∧ ∀ P : LargeValuePattern, T₀ ≤ P.T →
+      4*P.N*(2+200*Real.sqrt (P.N^(7/5 : ℝ))) ≤ P.V^2 →
+      (P.ordinates.card : ℝ)*P.V^2 ≤
+        8*P.N*(2*P.N+24*Real.pi*P.N*(harmonic (Nat.ceil (P.N^(7/5 : ℝ))) : ℝ)) ∨
+      (P.ordinates.card : ℝ)*P.V^24 ≤ C*P.N^18*P.T^(2+ε) :=
+  @TaoTrudgianYang2025.exists_heathBrown_sharp_finite_bound ε hε
+
+example {N : ℝ} (hN : 1 ≤ N) :
+    4*N*(2+200*Real.sqrt (N^(7/5 : ℝ))) ≤ 808*N^(17/10 : ℝ) :=
+  @TaoTrudgianYang2025.heathBrown_near_value_factor N hN
+
+example :
+    ∀ᶠ N : ℝ in Filter.atTop,
+      4*N*(2+200*Real.sqrt (N^(7/5 : ℝ))) ≤ N^(171/100 : ℝ) :=
+  @TaoTrudgianYang2025.eventually_heathBrown_near_value_factor
+
+example {η : ℝ} (hη : 0 < η) :
+    ∀ᶠ N : ℝ in Filter.atTop,
+      8*N*(2*N+24*Real.pi*N*(harmonic (Nat.ceil (N^(7/5 : ℝ))) : ℝ)) ≤
+        N^(2+η) :=
+  @TaoTrudgianYang2025.eventually_heathBrown_diagonal_factor η hη
+
+example {σ τ : ℝ}
+    (hσ : 7/8 ≤ σ) (hτ : 3/2 ≤ τ) :
+    IsLargeValueBound σ τ (max (2-2*σ) (18+2*τ-24*σ)) :=
+  @TaoTrudgianYang2025.heathBrown_sharp_local_largeValueBound σ τ hσ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) :
+    IsLargeValueBound σ τ (max (2-2*σ) (10+τ-13*σ)) :=
+  @TaoTrudgianYang2025.heathBrown_largeValueBound σ τ hσ hσ1 hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) :
+    largeValueExponent σ τ ≤ (max (2-2*σ) (10+τ-13*σ) : ℝ) :=
+  @TaoTrudgianYang2025.largeValueExponent_le_heathBrown σ τ hσ hσ1 hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) :
+    zetaLargeValueExponent σ τ ≤ (max (2-2*σ) (10+τ-13*σ) : ℝ) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_heathBrown σ τ hσ hσ1 hτ
+example : IsLargeValueBound (7/8) (13/8) (1/4) := by
+  convert heathBrown_largeValueBound (σ := 7/8) (τ := 13/8)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (9/10) (19/10) (1/5) := by
+  convert heathBrown_largeValueBound (σ := 9/10) (τ := 19/10)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (1) (3) (0) := by
+  convert heathBrown_largeValueBound (σ := 1) (τ := 3)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (1) (4) (1) := by
+  convert heathBrown_largeValueBound (σ := 1) (τ := 4)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (7/8) (0) (1/4) := by
+  convert heathBrown_largeValueBound (σ := 7/8) (τ := 0)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (10/13) (2) (2) := by
+  convert heathBrown_largeValueBound (σ := 10/13) (τ := 2)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (9/10) (2) (3/10) := by
+  convert heathBrown_largeValueBound (σ := 9/10) (τ := 2)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (4/5) (1) (3/5) := by
+  convert heathBrown_largeValueBound (σ := 4/5) (τ := 1)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : largeValueExponent 1 3 ≤ ((0 : ℝ) : EReal) := by
+  convert largeValueExponent_le_heathBrown (σ := 1) (τ := 3)
+    (by norm_num) le_rfl (by norm_num) using 1
+  norm_num
+example : zetaLargeValueExponent (7/8) (13/8) ≤ ((1/4 : ℝ) : EReal) := by
+  convert zetaLargeValueExponent_le_heathBrown (σ := 7/8) (τ := 13/8)
+    (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound (7/8) (13/8) (1/4) := by
+  convert heathBrown_sharp_local_largeValueBound (σ := 7/8) (τ := 13/8)
+    le_rfl (by norm_num) using 1
+  norm_num
+example : 4*(1 : ℝ)*(2+200*Real.sqrt ((1 : ℝ)^(7/5 : ℝ))) ≤
+    808*(1 : ℝ)^(17/10 : ℝ) :=
+  heathBrown_near_value_factor le_rfl
+example : zetaLargeValueExponent (3/4) (1/4) = ((1/4 : ℝ) : EReal) :=
+  zetaLargeValueExponent_eq_tau_of_lowHeight (by norm_num) (by norm_num) (by norm_num)
+
+end HeathBrownSharpLargeValueRegression
+
+
+section BourgainFullSourceRegression
+open Filter Topology
+
+example {σ τ ρ α χ : ℝ} (hσ : 0 ≤ σ) (hρ : 0 ≤ ρ)
+    (hα : 0 ≤ α) (hχ : 0 ≤ χ) (hlarge : 2*σ-1 ≤ 2*α) :
+    ∃ x : ℝ, 0 ≤ x ∧
+      max (-2*α+2*σ+x+ρ) (-α-χ/2+2*σ+x/2+3*ρ/2) ≤
+        heathBrownDoubleZetaExponent τ ρ/2+heathBrownDoubleZetaExponent τ x/2 :=
+  @TaoTrudgianYang2025.bourgain_auxiliary_witness_of_large_alpha σ τ ρ α χ hσ hρ hα hχ hlarge
+
+example {σ τ ρ energy χ α : ℝ}
+    (hregion : InCardinalityEnergyRegion σ τ ρ energy)
+    (hα : 0 ≤ α) (hχ : 0 ≤ χ) :
+    ρ ≤ bourgainSmallExponent σ τ α χ ∨
+      ∃ x : ℝ, 0 ≤ x ∧
+        max (-2*α+2*σ+x+ρ) (-α-χ/2+2*σ+x/2+3*ρ/2) ≤
+          heathBrownDoubleZetaExponent τ ρ/2+heathBrownDoubleZetaExponent τ x/2 :=
+  @TaoTrudgianYang2025.InCardinalityEnergyRegion.bourgain_log_dichotomy_full σ τ ρ energy χ α hregion hα hχ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) :
+    ∃ e s : ℝ,
+      InLargeValueEnergyRegion σ τ (largeValueExponent σ τ).toReal e s :=
+  @TaoTrudgianYang2025.exists_energyRegion_at_largeValueExponent σ τ hσ hσ1 hτ
+
+example {σ τ α₁ α₂ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ)
+    (hα₁ : 0 ≤ α₁) (hα₂ : 0 ≤ α₂) :
+    let ρ := (largeValueExponent σ τ).toReal
+    ρ ≤ bourgainSmallExponent σ τ α₁ α₂ ∨
+      ∃ s : ℝ, 0 ≤ s ∧
+        max (-2*α₁+2*σ+s+ρ) (-α₁-α₂/2+2*σ+s/2+3*ρ/2) ≤
+          heathBrownDoubleZetaExponent τ ρ/2+heathBrownDoubleZetaExponent τ s/2 :=
+  @TaoTrudgianYang2025.bourgain_largeValue_dichotomy σ τ α₁ α₂ hσ hσ1 hτ hα₁ hα₂
+
+example {σ τ α₁ α₂ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ)
+    (hα₁ : 0 ≤ α₁) (hα₂ : 0 ≤ α₂)
+    (hcap : largeValueExponent σ τ ≤ ((min 1 (4-2*τ) : ℝ) : EReal)) :
+    largeValueExponent σ τ ≤ ((bourgainFiveTermExponent σ τ α₁ α₂ : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.largeValueExponent_le_bourgain σ τ α₁ α₂ hσ hσ1 hτ hα₁ hα₂ hcap
+
+example {σ τ α₁ α₂ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ)
+    (hα₁ : 0 ≤ α₁) (hα₂ : 0 ≤ α₂)
+    (hcap : largeValueExponent σ τ ≤ ((min 1 (4-2*τ) : ℝ) : EReal)) :
+    IsLargeValueBound σ τ (bourgainFiveTermExponent σ τ α₁ α₂) :=
+  @TaoTrudgianYang2025.bourgain_largeValueBound σ τ α₁ α₂ hσ hσ1 hτ hα₁ hα₂ hcap
+
+example {σ τ α₁ α₂ : ℝ}
+    (hσ : 1/2 < σ) (hσ1 : σ < 1) (hτ : 0 < τ)
+    (hα₁ : 0 ≤ α₁) (hα₂ : 0 ≤ α₂) :
+    let ρ := (largeValueExponent σ τ).toReal
+    (ρ ≤ max (max (α₂+2-2*σ) (-α₂+2*τ+4-8*σ)) (-2*α₁+τ+12-16*σ) ∨
+      ∃ s : ℝ, 0 ≤ s ∧
+        max (-2*α₁+2*σ+s+ρ) (-α₁-α₂/2+2*σ+s/2+3*ρ/2) ≤
+          heathBrownDoubleZetaExponent τ ρ/2+heathBrownDoubleZetaExponent τ s/2) ∧
+    (ρ ≤ min 1 (4-2*τ) →
+      ρ ≤ max (max (max (α₂+2-2*σ) (α₁+α₂/2+2-2*σ)) (-α₂+2*τ+4-8*σ))
+        (max (-2*α₁+τ+12-16*σ) (4*α₁+2+max 1 (2*τ-2)-4*σ))) :=
+  @TaoTrudgianYang2025.bourgain_large_values σ τ α₁ α₂ hσ hσ1 hτ hα₁ hα₂
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) (hupper : τ ≤ 11*σ-8) :
+    IsLargeValueBound σ τ (2-2*σ) :=
+  @TaoTrudgianYang2025.heathBrown_montgomery_range σ τ hσ hσ1 hτ hupper
+
+example {σ : ℝ}
+    (hσ : 7/10 < σ) (hσ1 : σ < 1)
+    (hzeta : ∀ τ ∈ Set.Ico (2 : ℝ) (4*(10*σ-7)/3),
+      zetaLargeValueExponent σ τ = ⊥) :
+    zeroDensityExponent σ ≤ ((3/(10*σ-7) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.heathBrown_density_of_zeta_range σ hσ hσ1 hzeta
+
+example {σ : ℝ}
+    (hσ : 7/10 < σ) (hσUpper : σ ≤ 19/22) :
+    zeroDensityExponent σ ≤ ((3/(10*σ-7) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.heathBrown_density_classical_pair_range σ hσ hσUpper
+
+example :
+    zeroDensityExponent 1 ≤ ((1 : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.heathBrown_density_at_one
+
+example (hpair : ExponentPair (3/40) (31/40)) {σ : ℝ}
+    (hσ : 7/10 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((3/(10*σ-7) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.heathBrown_density_of_old_pair hpair σ hσ hσ1
+example : ∃ e s : ℝ, InLargeValueEnergyRegion (1/2) 0 0 e s := by
+  simpa only [largeValueExponent_zero_height le_rfl (by norm_num),EReal.toReal_zero] using
+    exists_energyRegion_at_largeValueExponent (σ := 1/2) (τ := 0)
+      le_rfl (by norm_num) le_rfl
+example : ∃ e s : ℝ, InLargeValueEnergyRegion 1 0 0 e s := by
+  simpa only [largeValueExponent_zero_height (by norm_num) le_rfl,EReal.toReal_zero] using
+    exists_energyRegion_at_largeValueExponent (σ := 1) (τ := 0)
+      (by norm_num) le_rfl le_rfl
+example : max (-2*(1/4 : ℝ)+2*(3/4)+5+2)
+    (-(1/4 : ℝ)+2*(3/4)+5/2+3*2/2) ≤
+      heathBrownDoubleZetaExponent 3 2/2+heathBrownDoubleZetaExponent 3 5/2 := by
+  norm_num [heathBrownDoubleZetaExponent]
+example : IsLargeValueBound (4/5) (6/5) (2/5) := by
+  have hc : largeValueExponent (4/5) (6/5) ≤ ((min 1 (4-2*(6/5)) : ℝ) : EReal) :=
+    (largeValueExponent_le_huxley (by norm_num) (by norm_num) (by norm_num)).trans
+      (EReal.coe_le_coe_iff.mpr (by norm_num))
+  convert bourgain_largeValueBound (α₁ := 0) (α₂ := 0)
+    (by norm_num) (by norm_num) (by norm_num) le_rfl le_rfl hc using 1
+  norm_num [bourgainFiveTermExponent]
+example : IsLargeValueBound (7/8) (13/8) (1/4) := by
+  convert heathBrown_montgomery_range (σ := 7/8) (τ := 13/8)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+example : IsLargeValueBound 1 3 0 := by
+  convert heathBrown_montgomery_range (σ := 1) (τ := 3)
+    (by norm_num) le_rfl (by norm_num) (by norm_num) using 1
+  norm_num
+example : zeroDensityExponent (19/22) ≤ ((11/6 : ℝ) : EReal) := by
+  convert heathBrown_density_classical_pair_range (σ := 19/22)
+    (by norm_num) le_rfl using 1
+  norm_num
+example : zeroDensityExponent (17/20) ≤ ((2 : ℝ) : EReal) := by
+  convert heathBrown_density_classical_pair_range (σ := 17/20)
+    (by norm_num) (by norm_num) using 1
+  norm_num
+example : zeroDensityExponent 1 ≤ ((1 : ℝ) : EReal) := heathBrown_density_at_one
+example (hpair : ExponentPair (3/40) (31/40)) :
+    zeroDensityExponent (9/10) ≤ ((3/2 : ℝ) : EReal) := by
+  convert hpair.heathBrown_density_of_old_pair (σ := 9/10)
+    (by norm_num) (by norm_num) using 1
+  norm_num
+example (hpair : ExponentPair (3/40) (31/40)) :
+    zeroDensityExponent 1 ≤ ((1 : ℝ) : EReal) := by
+  convert hpair.heathBrown_density_of_old_pair (σ := 1)
+    (by norm_num) le_rfl using 1
+  norm_num
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+end BourgainFullSourceRegression
+
+
+section GeneralRealMomentSourceRegression
+open Complex Filter MeasureTheory Set Topology
+open scoped Interval BigOperators
+
+example {c : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c < 1) (v : ℝ) :
+    ‖riemannZeta ((c : ℂ)+(v : ℂ)*I)‖ ≤ (1/(1-c)+2)*(1+|v|) :=
+  @TaoTrudgianYang2025.norm_zeta_mellin_left_boundary c hc hc1 v
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) {c : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    Integrable (fun u : ℝ => zetaMellinIntegrand g t ((c : ℂ)+(u : ℂ)*I)) :=
+  @TaoTrudgianYang2025.integrable_zetaMellin_left_boundary g hg c hc hc1 t
+
+example {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g)
+    {c : ℝ} (hc : c < 1) (t : ℝ) {R : ℝ} (hR : |t| < R) :
+    RectangleIntegral' (zetaMellinIntegrand g t)
+      ((c : ℂ) - (R : ℂ) * I) ((3 / 2 : ℂ) + (R : ℂ) * I) =
+        mellin g (1 - (t : ℂ) * I) :=
+  @TaoTrudgianYang2025.zetaMellin_general_finite_rectangle g hg c hc t R hR
+
+example {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) {c : ℝ}
+    (hc : 1 / 2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    Tendsto (fun R : ℝ => HIntegral (zetaMellinIntegrand g t) c (3 / 2) R)
+      Filter.atTop (nhds 0) ∧
+    Tendsto (fun R : ℝ => HIntegral (zetaMellinIntegrand g t) c (3 / 2) (-R))
+      Filter.atTop (nhds 0) :=
+  @TaoTrudgianYang2025.zetaMellin_general_horizontal_limits g hg c hc hc1 t
+
+example {g : ℝ → ℂ} (hg : DFIVoronoiTestFunction g) {c : ℝ}
+    (hc : 1 / 2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    VerticalIntegral' (zetaMellinIntegrand g t) (3 / 2) -
+      VerticalIntegral' (zetaMellinIntegrand g t) c = mellin g (1 - (t : ℂ) * I) :=
+  @TaoTrudgianYang2025.zetaMellin_general_vertical_shift g hg c hc hc1 t
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) {c : ℝ}
+    (hc : 1 / 2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    (∑' n : ℕ, g n * dirichletPhase n t) = mellin g (1 - (t : ℂ) * I) +
+      (1 / (2 * Real.pi) : ℂ) * ∫ u : ℝ,
+        riemannZeta ((c : ℂ) + ((u + t : ℝ) : ℂ) * I) *
+          mellin g ((c : ℂ) + (u : ℂ) * I) :=
+  @TaoTrudgianYang2025.smooth_dirichlet_sum_eq_general_zeta_mellin g hg c hc hc1 t
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b)
+    {c : ℝ} (hc : 1 / 2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    (∑ n ∈ P.indices, P.coeff n * dirichletPhase n t) =
+      mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) (1 - (t : ℂ) * I) +
+        (1 / (2 * Real.pi) : ℂ) * ∫ u : ℝ,
+          riemannZeta ((c : ℂ) + ((u + t : ℝ) : ℂ) * I) *
+            mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+              ((c : ℂ) + (u : ℂ) * I) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.polynomial_eq_general_zeta_mellin P a b hactive c hc hc1 t
+
+example (P : ZetaLargeValuePattern)
+    {c : ℝ} (hc : 1 / 2 ≤ c) (hc1 : c < 1) :
+    ∃ a b : ℕ, P.active = Finset.Icc a b ∧ 1 ≤ a ∧
+      ∀ t ∈ P.ordinates, P.V ≤
+        ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) (1 - (t : ℂ) * I) +
+          (1 / (2 * Real.pi) : ℂ) * ∫ u : ℝ,
+            riemannZeta ((c : ℂ) + ((u + t : ℝ) : ℂ) * I) *
+              mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+                ((c : ℂ) + (u : ℂ) * I)‖ :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.exists_general_zeta_mellin_large P c hc hc1
+
+example {p a x : ℝ} (hp : 1 ≤ p)
+    (ha : 0 ≤ a) (hx : 0 ≤ x) :
+    p * a ^ (p-1) * x ≤ x ^ p + (p-1) * a ^ p :=
+  @TaoTrudgianYang2025.realMoment_tangent_bound p a x hp ha hx
+
+example {α : Type*} [MeasurableSpace α] {μ : Measure α} {w f : α → ℝ}
+    {p : ℝ} (hp : 1 ≤ p)
+    (hw : ∀ x, 0 ≤ w x) (hf : ∀ x, 0 ≤ f x)
+    (hwInt : Integrable w μ) (hwfInt : Integrable (fun x => w x * f x) μ)
+    (hwfPowInt : Integrable (fun x => w x * f x ^ p) μ)
+    (hMass : 0 < ∫ x, w x ∂μ) :
+    (∫ x, w x * f x ∂μ) ^ p ≤
+      (∫ x, w x ∂μ) ^ (p-1) * ∫ x, w x * f x ^ p ∂μ :=
+  @TaoTrudgianYang2025.integral_weighted_realMoment α _ μ w f p hp hw hf hwInt hwfInt hwfPowInt hMass
+
+example {T p : ℝ} (W : Finset ℝ) (hT : 0 < T) (hp : 1 ≤ p)
+    (hSep : RiemannZeta.GuthMaynard.IsSeparated 1 W)
+    (hW : ∀ t ∈ W, t ∈ Set.Icc T (2*T))
+    (f : ℝ → ℝ) (hf : Continuous f) (hf0 : ∀ u, 0 ≤ f u) :
+    (∑ t ∈ W, (∫ u in T/2..3*T, zetaMomentKernel t u*f u)^p) ≤
+      zetaMomentLogLoss T^p * ∫ u in T/2..3*T, f u^p :=
+  @TaoTrudgianYang2025.sum_convolution_realMoment_le_moment T p W hT hp hSep hW f hf hf0
+
+example {c : ℝ} (hc : c ≠ 1) :
+    Continuous (zetaMomentLineNorm c) :=
+  @TaoTrudgianYang2025.continuous_zetaMomentLineNorm c hc
+
+example {c p T : ℝ} (hc : c ≠ 1) (hp : 1 ≤ p)
+    (W : Finset ℝ) (hT : 0 < T)
+    (hSep : RiemannZeta.GuthMaynard.IsSeparated 1 W)
+    (hW : ∀ t ∈ W, t ∈ Icc T (2*T)) :
+    (∑ t ∈ W, zetaLineMomentConvolution c T t^p) ≤
+      zetaMomentLogLoss T^p*zetaLineMoment c p T :=
+  @TaoTrudgianYang2025.sum_zetaLineMomentConvolution_rpow c p T hc hp W hT hSep hW
+
+example {c p T V : ℝ} (hc : c ≠ 1) (hp : 1 ≤ p)
+    (W : Finset ℝ) (hT : 0 < T) (hV : 0 ≤ V)
+    (hSep : RiemannZeta.GuthMaynard.IsSeparated 1 W)
+    (hW : ∀ t ∈ W, t ∈ Icc T (2*T))
+    (hLarge : ∀ t ∈ W, V ≤ zetaLineMomentConvolution c T t) :
+    (W.card : ℝ)*V^p ≤ zetaMomentLogLoss T^p*zetaLineMoment c p T :=
+  @TaoTrudgianYang2025.zetaLineMomentConvolution_largeValues c p T V hc hp W hT hV hSep hW hLarge
+
+example (P : ZetaLargeValuePattern) {c p C : ℝ} (hc : c ≠ 1) (hp : 1 ≤ p) (hC : 0 < C)
+    (hEntry : ∀ t ∈ P.ordinates,
+      P.V ≤ C*P.N^c*zetaLineMomentConvolution c P.T t) :
+    (P.ordinates.card : ℝ)*P.V^p ≤
+      C^p*P.N^(c*p)*zetaMomentLogLoss P.T^p*zetaLineMoment c p P.T :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.realMoment_cardinality_of_convolution P c p C hc hp hC hEntry
+
+example (a b : ℕ) (c t u : ℝ) :
+    zetaCutoffLineIntegrand a b c t u =
+      riemannZeta ((c : ℂ) + ((u + t : ℝ) : ℂ) * I) *
+        mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((c : ℂ) + (u : ℂ) * I) :=
+  @TaoTrudgianYang2025.zetaCutoffLineIntegrand_eq a b c t u
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    Integrable (zetaCutoffLineIntegrand a b c t) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.integrable_cutoff_line_integrand P a b hactive c hc hc1 t
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1)
+    {t u : ℝ} (ht : t ∈ Icc P.T (2 * P.T)) (hu : u ∉ zetaMellinSourceWindow P.T t) :
+    ‖zetaCutoffLineIntegrand a b c t u‖ ≤
+      ((5*(1/(1-c)+2)) * zetaCutoffMellinConstant 4 c * P.N ^ (c+3 : ℝ)) * |u| ^ (-3 : ℝ) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_integrand_far_bound P a b hactive hne c hc hc1 t u ht hu
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1)
+    {t : ℝ} (ht : t ∈ Icc P.T (2 * P.T)) :
+    ‖∫ u : ℝ in (zetaMellinSourceWindow P.T t)ᶜ, zetaCutoffLineIntegrand a b c t u‖ ≤
+      (20*(1/(1-c)+2)) * zetaCutoffMellinConstant 4 c * P.N ^ (c+3 : ℝ) / P.T ^ 2 :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_far_integral P a b hactive hne c hc hc1 t ht
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (u : ℝ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((c : ℂ)+(u : ℂ)*I)‖ ≤
+      zetaCutoffMellinConstant 1 c*P.N^c/(1+|u|) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_mellin_kernel P a b hactive hne c hc u
+
+example {T : ℝ} (hT : 0 < T) (c t : ℝ) :
+    (∫ u : ℝ in zetaMellinSourceWindow T t,
+      zetaMomentKernel t (u + t) * zetaMomentLineNorm c (u + t)) = zetaLineMomentConvolution c T t :=
+  @TaoTrudgianYang2025.integral_zetaMellinSourceWindow_lineConvolution T hT c t
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (t : ℝ) :
+    ‖∫ u : ℝ in zetaMellinSourceWindow P.T t, zetaCutoffLineIntegrand a b c t u‖ ≤
+      zetaCutoffMellinConstant 1 c * P.N^c * zetaLineMomentConvolution c P.T t :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_near_integral P a b hactive hne c hc hc1 t
+
+example (P : ZetaLargeValuePattern)
+    {a b : ℕ} (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1)
+    {t : ℝ} (ht : t ∈ Icc P.T (2 * P.T)) :
+    ‖∑ n ∈ P.indices, P.coeff n * dirichletPhase n t‖ ≤
+      zetaCutoffMellinConstant 1 c * P.N^c * zetaLineMomentConvolution c P.T t +
+        zetaCutoffMellinConstant 4 1 * P.N ^ 4 / (1 + |t|) ^ 4 +
+        (20*(1/(1-c)+2)) * zetaCutoffMellinConstant 4 c * P.N ^ (c+3 : ℝ) / P.T ^ 2 :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.polynomial_norm_le_lineConvolution_and_errors P a b hactive hne c hc hc1 t ht
+
+example {c : ℝ} (hc1 : c < 1) : 0 < zetaLinePerronError c :=
+  @TaoTrudgianYang2025.zetaLinePerronError_pos c hc1
+
+example (c : ℝ) : 0 < zetaLinePerronConstant c :=
+  @TaoTrudgianYang2025.zetaLinePerronConstant_pos c
+
+example (P : ZetaLargeValuePattern)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1)
+    (hscale : P.N ^ ((c+3)/2 : ℝ) ≤ P.T) (hvalue : 2 * zetaLinePerronError c ≤ P.V)
+    {t : ℝ} (ht : t ∈ P.ordinates) :
+    P.V ≤ zetaLinePerronConstant c * P.N^c * zetaLineMomentConvolution c P.T t :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.line_perron_entry P c hc hc1 hscale hvalue t ht
+
+example {c : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c < 1) :
+    ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+      ∀ σ τ δ : ℝ, 1 / 2 ≤ σ → 2 ≤ τ → δ ≤ min (1 / 4) ((1-c)/4) →
+        P.N ^ (τ - δ) ≤ P.T → P.N ^ (σ - δ) ≤ P.V →
+          ∀ t ∈ P.ordinates,
+            P.V ≤ zetaLinePerronConstant c * P.N^c * zetaLineMomentConvolution c P.T t :=
+  @TaoTrudgianYang2025.exists_zetaLinePerron_uniform_threshold c hc hc1
+
+example {p : ℝ} (hp : 0 ≤ p) {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop, zetaMomentLogLoss T ^ p ≤ T ^ ε :=
+  @TaoTrudgianYang2025.eventually_zetaMomentLogLoss_rpow_le_rpow p hp ε hε
+
+example {c p T : ℝ} (hc1 : c ≠ 1) (hp : 1 ≤ p) (hT : 0 < T) :
+    zetaLineMoment c p T ≤
+      (∫ u in T / 2..T, zetaMomentLineNorm c u ^ p) +
+      (∫ u in T..2 * T, zetaMomentLineNorm c u ^ p) +
+      (∫ u in 2 * T..4 * T, zetaMomentLineNorm c u ^ p) :=
+  @TaoTrudgianYang2025.zetaLineMoment_le_three_dyadic c p T hc1 hp hT
+
+example {c p C M T₀ T : ℝ} (hc1 : c ≠ 1) (hp : 1 ≤ p)
+    (hT : 0 < T) (hStart : 2*T₀ ≤ T)
+    (hDyadic : ∀ H : ℝ, T₀ ≤ H → 0 < H →
+      (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^M) :
+    zetaLineMoment c p T ≤ C*((2 : ℝ)^(-M)+1+(2 : ℝ)^M)*T^M :=
+  @TaoTrudgianYang2025.zetaLineMoment_le_of_dyadic c p C M T₀ T hc1 hp hT hStart hDyadic
+
+example {c p M : ℝ} (hc1 : c ≠ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      zetaMomentLogLoss T^p*zetaLineMoment c p T ≤ T^(M+ε) :=
+  @TaoTrudgianYang2025.eventually_zetaLineMomentLoss_of_dyadic c p M hc1 hp hDyadic ε hε
+
+example {c p M : ℝ} (hc1 : c ≠ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ T₀ : ℝ, 0 < T₀ ∧ ∀ P : ZetaLargeValuePattern, T₀ ≤ P.T →
+      ∀ C : ℝ, 0 < C →
+        (∀ t ∈ P.ordinates, P.V ≤ C*P.N^c*zetaLineMomentConvolution c P.T t) →
+        (P.ordinates.card : ℝ)*P.V^p ≤ C^p*P.N^(c*p)*P.T^(M+ε) :=
+  @TaoTrudgianYang2025.zetaPattern_realMoment_cardinality_of_dyadic_and_convolution c p M hc1 hp hDyadic ε hε
+
+example {N T τ δ B : ℝ} (hN : 0 < N) (hT : 0 ≤ T)
+    (hlo : N^(τ-δ) ≤ T) (hhi : T ≤ N^(τ+δ)) :
+    T^B ≤ N^(τ*B+δ*|B|) :=
+  @TaoTrudgianYang2025.rpow_le_from_two_sided_height_window N T τ δ B hN hT hlo hhi
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 2 ≤ τ) :
+    IsZetaLargeValueBound σ τ (τ*M-p*(σ-c)) :=
+  @TaoTrudgianYang2025.zetaRealMoment_largeValueBound_of_dyadic c p M hc hc1 hp hDyadic σ τ hσ hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 2 ≤ τ) :
+    zetaLargeValueExponent σ τ ≤ ((τ*M-p*(σ-c) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_of_realMoment c p M hc hc1 hp hDyadic σ τ hσ hτ
+
+example {n : ℕ} (hn : 0 < n) (t : ℝ) :
+    zetaOneLineTerm n t =
+      (n : ℂ)⁻¹*Complex.exp (((-Real.log (n : ℝ)*t : ℝ) : ℂ)*I) :=
+  @TaoTrudgianYang2025.zetaOneLineTerm_eq n hn t
+
+example {n : ℕ} (hn : 0 < n) :
+    Continuous (zetaOneLineTerm n) :=
+  @TaoTrudgianYang2025.continuous_zetaOneLineTerm n hn
+
+example {n : ℕ} (hn : 2 ≤ n) (a b : ℝ) :
+    ‖∫ t in a..b, zetaOneLineTerm n t‖ ≤
+      (2/Real.log 2)*(n : ℝ)⁻¹ :=
+  @TaoTrudgianYang2025.norm_integral_zetaOneLineTerm n hn a b
+
+example {b : ℕ} (hb : 1 ≤ b)
+    (a d : ℝ) :
+    ‖(∫ t in a..d, ∑ n ∈ Finset.Icc 1 b, zetaOneLineTerm n t) -
+      ((d-a : ℝ) : ℂ)‖ ≤ (2/Real.log 2)*(1+Real.log (b : ℝ)) :=
+  @TaoTrudgianYang2025.norm_integral_zetaOneLinePrefix_sub_length b hb a d
+
+example :
+    ContinuousOn (fun t : ℝ => riemannZeta (1+(t : ℂ)*I)) (Ioi 0) :=
+  @TaoTrudgianYang2025.continuousOn_zetaOneLine_positive
+
+example {H : ℝ} (hH : 0 < H) :
+    IntervalIntegrable (fun t : ℝ => riemannZeta (1+(t : ℂ)*I)) volume H (2*H) :=
+  @TaoTrudgianYang2025.intervalIntegrable_zetaOneLine H hH
+
+example {b : ℕ} (hb : 1 ≤ b)
+    {H t : ℝ} (hH : 1 ≤ H) (ht : t ∈ Icc H (2*H)) :
+    ‖riemannZeta (1+(t : ℂ)*I) -
+      ∑ n ∈ Finset.Icc 1 b, zetaOneLineTerm n t‖ ≤
+        1/H+(1+2*H)/(b : ℝ) :=
+  @TaoTrudgianYang2025.norm_zetaOneLine_sub_prefix b hb H t hH ht
+
+example {b : ℕ} (hb : 1 ≤ b)
+    {H : ℝ} (hH : 1 ≤ H) :
+    ‖(∫ t in H..2*H, riemannZeta (1+(t : ℂ)*I))-(H : ℂ)‖ ≤
+      (1/H+(1+2*H)/(b : ℝ))*H+(2/Real.log 2)*(1+Real.log (b : ℝ)) :=
+  @TaoTrudgianYang2025.norm_integral_zetaOneLine_sub_length b hb H hH
+
+example {H : ℝ} (hH : 1 ≤ H) :
+    ‖(∫ t in H..2*H, riemannZeta (1+(t : ℂ)*I))-(H : ℂ)‖ ≤
+      4+(2/Real.log 2)*(1+Real.log 2+2*Real.log H) :=
+  @TaoTrudgianYang2025.norm_integral_zetaOneLine_sub_length_le_log H hH
+
+example :
+    ∀ᶠ H : ℝ in Filter.atTop,
+      H/2 ≤ ∫ t in H..2*H, zetaMomentLineNorm 1 t :=
+  @TaoTrudgianYang2025.eventually_integral_zetaOneLine_norm_ge
+
+example {p : ℝ} (hp : 1 ≤ p) :
+    ∀ᶠ H : ℝ in Filter.atTop,
+      H/(2 : ℝ)^p ≤ ∫ t in H..2*H, zetaMomentLineNorm 1 t^p :=
+  @TaoTrudgianYang2025.eventually_zetaOneLine_realMoment_ge p hp
+
+example {p M : ℝ} (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm 1 u^p) ≤ C*H^(M+η)) :
+    1 ≤ M :=
+  @TaoTrudgianYang2025.one_le_zetaOneLine_moment_exponent p M hp hDyadic
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ) :
+    IsZetaLargeValueBound σ τ (τ*M-p*(σ-c)) :=
+  @TaoTrudgianYang2025.zetaRealMoment_largeValueBound_closed_strip c p M hc hc1 hp hDyadic σ τ hσ hσ1 hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ) :
+    zetaLargeValueExponent σ τ ≤ ((τ*M-p*(σ-c) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_of_realMoment_closed_strip c p M hc hc1 hp hDyadic σ τ hσ hσ1 hτ
+
+example (v : ℝ) :
+    ‖riemannZeta (((3/4 : ℝ) : ℂ)+(v : ℂ)*I)‖ ≤ 6*(1+|v|) := by
+  convert norm_zeta_mellin_left_boundary (c := 3/4) (by norm_num) (by norm_num) v using 1
+  norm_num
+
+example {a x : ℝ} (ha : 0 ≤ a) (hx : 0 ≤ x) :
+    x ≤ x := by
+  simpa only [sub_self,Real.rpow_zero,one_mul,Real.rpow_one,zero_mul,add_zero] using
+    realMoment_tangent_bound (p := 1) le_rfl ha hx
+
+example {a x : ℝ} (ha : 0 ≤ a) (hx : 0 ≤ x) :
+    (3/2 : ℝ)*a^(1/2 : ℝ)*x ≤ x^(3/2 : ℝ)+(1/2 : ℝ)*a^(3/2 : ℝ) := by
+  convert realMoment_tangent_bound (p := 3/2) (by norm_num) ha hx using 1 <;> norm_num
+
+example {N T δ : ℝ} (hN : 0 < N) (hT : 0 ≤ T)
+    (hlo : N^(2-δ) ≤ T) (hhi : T ≤ N^(2+δ)) :
+    T^(-1 : ℝ) ≤ N^(-2+δ) := by
+  convert rpow_le_from_two_sided_height_window (B := -1) hN hT hlo hhi using 1
+  norm_num
+
+example {M : ℝ}
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm 1 u) ≤ C*H^(M+η)) :
+    1 ≤ M := by
+  apply one_le_zetaOneLine_moment_exponent (p := 1) le_rfl
+  simpa only [Real.rpow_one] using hDyadic
+
+example {M : ℝ}
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm 1 u^(3/2 : ℝ)) ≤ C*H^(M+η)) :
+    1 ≤ M :=
+  one_le_zetaOneLine_moment_exponent (by norm_num) hDyadic
+
+example :
+    ∀ᶠ H : ℝ in Filter.atTop,
+      H/2 ≤ ∫ t in H..2*H, zetaMomentLineNorm 1 t := by
+  simpa only [Real.rpow_one] using eventually_zetaOneLine_realMoment_ge (p := 1) le_rfl
+
+example :
+    ∀ᶠ H : ℝ in Filter.atTop,
+      H/(2 : ℝ)^(3/2 : ℝ) ≤ ∫ t in H..2*H, zetaMomentLineNorm 1 t^(3/2 : ℝ) :=
+  eventually_zetaOneLine_realMoment_ge (by norm_num)
+
+example {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ) :
+    IsZetaLargeValueBound σ τ (2*τ-12*(σ-1/2)) := by
+  have hm : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm (1/2) u^(12 : ℝ)) ≤ C*H^(2+η) := by
+    simpa only [Real.rpow_ofNat,zetaMomentLineNorm,zetaMomentCriticalNorm] using zeta_twelfth_dyadic
+  convert zetaRealMoment_largeValueBound_closed_strip le_rfl (by norm_num)
+    (by norm_num : (1 : ℝ) ≤ 12) hm hσ hσ1 hτ using 1
+  ring
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, ‖riemannZeta ((c : ℂ)+(u : ℂ)*I)‖^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ) :
+    zetaLargeValueExponent σ τ ≤ ((τ*M-p*(σ-c) : ℝ) : EReal) :=
+  zetaLargeValueExponent_le_of_realMoment_closed_strip hc hc1 hp hDyadic hσ hσ1 hτ
+
+example {M : ℝ}
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm (3/4) u^(3/2 : ℝ)) ≤ C*H^(M+η)) :
+    IsZetaLargeValueBound (7/8) 2 (2*M-3/16) := by
+  convert zetaRealMoment_largeValueBound_closed_strip
+    (c := 3/4) (p := 3/2) (M := M) (σ := 7/8) (τ := 2)
+    (by norm_num) (by norm_num) (by norm_num) hDyadic
+    (by norm_num) (by norm_num) le_rfl using 1
+  ring
+
+example {M : ℝ}
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm 1 u^(3/2 : ℝ)) ≤ C*H^(M+η)) :
+    IsZetaLargeValueBound 1 2 (2*M) := by
+  convert zetaRealMoment_largeValueBound_closed_strip
+    (c := 1) (p := 3/2) (M := M) (σ := 1) (τ := 2)
+    (by norm_num) le_rfl (by norm_num) hDyadic
+    (by norm_num) le_rfl le_rfl using 1
+  ring
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+end GeneralRealMomentSourceRegression
+
+
+section GeneralGrowthHighHeightRegression
+open Complex Filter MeasureTheory Set Topology
+open scoped Interval BigOperators
+
+example (c : ℝ) :
+    ContinuousOn (fun t : ℝ => riemannZeta ((c : ℂ)+(t : ℂ)*I)) (Ioi 0) :=
+  @TaoTrudgianYang2025.continuousOn_zeta_fixedLine_positive c
+
+example (c : ℝ) {p H : ℝ}
+    (hp : 0 ≤ p) (hH : 0 < H) :
+    IntervalIntegrable (fun t => zetaMomentLineNorm c t^p) volume H (2*H) :=
+  @TaoTrudgianYang2025.intervalIntegrable_zetaLineMoment_positive c p H hp hH
+
+example {H t q : ℝ}
+    (hH : 0 < H) (ht : t ∈ Icc H (2*H)) :
+    t^q ≤ (2 : ℝ)^|q| * H^q :=
+  @TaoTrudgianYang2025.rpow_le_dyadic_height_envelope H t q hH ht
+
+example {c m p : ℝ}
+    (hGrowth : IsZetaGrowthBound c m) (hp : 1 ≤ p) :
+    ∀ ε : ℝ, 0 < ε → ∃ D H₀ : ℝ, 0 ≤ D ∧
+      ∀ H : ℝ, H₀ ≤ H → 0 < H →
+        (∫ t in H..2*H, zetaMomentLineNorm c t^p) ≤ D*H^(1+p*m+ε) :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.dyadic_realMoment c m p hGrowth hp
+
+example {c m σ τ : ℝ} (hGrowth : IsZetaGrowthBound c m)
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1)
+    (hτ : 2 ≤ τ) (hgap : c+τ*m < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.highHeight_exponent_eq_bot c m σ τ hGrowth hc hc1 hσ hσ1 hτ hgap
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ)
+    (hμ : zetaGrowthExponent c < (((σ-c)/τ : ℝ) : EReal)) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaHighHeight_exponent_eq_bot_of_growthExponent c σ τ hc hc1 hσ hσ1 hτ hμ
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ)
+    (hgap : (c : EReal)+(τ : EReal)*zetaGrowthExponent c < (σ : EReal)) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaHighHeight_exponent_eq_bot_of_mu c σ τ hc hc1 hσ hσ1 hτ hgap
+
+example {m : ℝ}
+    (hGrowth : IsZetaGrowthBound 1 m) : 0 ≤ m :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.oneLine_nonneg m hGrowth
+
+example {c m σ τ : ℝ} (hGrowth : IsZetaGrowthBound c m)
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1)
+    (hτ : 2 ≤ τ) (hgap : c+τ*m < σ) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+      P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) →
+      P.N^(σ-δ) ≤ P.V → P.V ≤ P.N^(σ+δ) → P.ordinates = ∅ :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.highHeight_empty_threshold c m σ τ hGrowth hc hc1 hσ hσ1 hτ hgap
+
+example {c m σ τ : ℝ} (hGrowth : IsZetaGrowthBound c m)
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1)
+    (hτ : 2 ≤ τ) (hgap : c+τ*m < σ) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ (N : ℕ) (I : Finset ℕ) (t : ℝ),
+      C ≤ (N : ℝ) → IsIntegerInterval I → I ⊆ Finset.Icc N (2*N) →
+      (N : ℝ)^(τ-δ) ≤ t → t ≤ (N : ℝ)^(τ+δ) →
+      ‖∑ n ∈ I, dirichletPhase n t‖ < (N : ℝ)^(σ-δ) :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.highHeight_pointwise_powerSaving c m σ τ hGrowth hc hc1 hσ hσ1 hτ hgap
+
+example : zetaLargeValueExponent (9/10) 2 = ⊥ := by
+  have hg : IsZetaGrowthBound (1/2) (1/6) := by
+    convert exponentPair_half_half.aProcess.isZetaGrowthBound using 1 <;> norm_num
+  exact hg.highHeight_exponent_eq_bot (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) le_rfl (by norm_num)
+
+example : zetaLargeValueExponent (9/10) 2 = ⊥ := by
+  apply zetaHighHeight_exponent_eq_bot_of_growthExponent (c := 1/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) le_rfl
+  exact zetaGrowth_half_le_one_sixth.trans_lt (by norm_num)
+
+example {σ τ : ℝ} (hσ : 1/2 < σ) (hσ1 : σ ≤ 1) (hτ : 2 ≤ τ)
+    (hLindelof : IsZetaGrowthBound (1/2) 0) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  hLindelof.highHeight_exponent_eq_bot le_rfl (by norm_num) hσ.le hσ1 hτ
+    (by simpa only [mul_zero,add_zero] using hσ)
+
+example (h : IsZetaGrowthBound 1 (-1/4)) : False := by
+  have hh := h.oneLine_nonneg
+  norm_num at hh
+
+example :
+    ∀ ε : ℝ, 0 < ε → ∃ D H₀ : ℝ, 0 ≤ D ∧
+      ∀ H : ℝ, H₀ ≤ H → 0 < H →
+        (∫ t in H..2*H, zetaMomentLineNorm (1/2) t^(3/2 : ℝ)) ≤ D*H^(5/4+ε) := by
+  have hg : IsZetaGrowthBound (1/2) (1/6) := by
+    convert exponentPair_half_half.aProcess.isZetaGrowthBound using 1 <;> norm_num
+  simpa only [show 1+(3/2 : ℝ)*(1/6) = 5/4 by norm_num] using
+    hg.dyadic_realMoment (p := 3/2) (by norm_num)
+
+example {H t : ℝ} (hH : 0 < H) (ht : t ∈ Icc H (2*H)) :
+    t^(-2 : ℝ) ≤ 4*H^(-2 : ℝ) := by
+  simpa only [abs_neg,abs_of_pos (by norm_num : (0 : ℝ) < 2),
+    Real.rpow_ofNat,show (2 : ℝ)^2 = 4 by norm_num] using
+      rpow_le_dyadic_height_envelope (q := -2) hH ht
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end GeneralGrowthHighHeightRegression
+
+
+section CorrectedGeneralGrowthRegression
+
+open Filter MeasureTheory Set Complex
+open scoped Interval BigOperators ComplexConjugate
+
+example (N : ℕ) (T : ℝ) (a : ℕ → ℂ) (hN : 0 < N) :
+    |(∫ t : ℝ in 0..T, ‖dirichletTime N a t‖^2) -
+      T * ∑ n ∈ Finset.Ioc N (2*N), ‖a n‖^2| ≤
+      2*(5*Real.pi+1)*(N : ℝ) * ∑ n ∈ Finset.Ioc N (2*N), ‖a n‖^2 :=
+  @TaoTrudgianYang2025.abs_integral_norm_sq_dirichletTime_sub_diagonal N T a hN
+
+example (N : ℕ) (a : ℕ → ℂ) (A B : ℝ) (hN : 0 < N) :
+    (B-A-2*(5*Real.pi+1)*(N : ℝ)) *
+        ∑ n ∈ Finset.Ioc N (2*N), ‖a n‖^2 ≤
+      ∫ t : ℝ in A..B, ‖dirichletTime N a t‖^2 :=
+  @TaoTrudgianYang2025.integral_norm_sq_dirichletTime_interval_ge N a A B hN
+
+example (N : ℕ) (t : ℝ) :
+    dirichletTime N (fun _ => 1) t =
+      ∑ n ∈ Finset.Icc (N+1) (2*N), dirichletPhase n t :=
+  @TaoTrudgianYang2025.dirichletTime_one_eq_phase_interval N t
+
+example (N : ℕ) (A B : ℝ) (hN : 0 < N) :
+    (B-A-2*(5*Real.pi+1)*(N : ℝ))*(N : ℝ) ≤
+      ∫ t : ℝ in A..B,
+        ‖∑ n ∈ Finset.Icc (N+1) (2*N), dirichletPhase n t‖^2 :=
+  @TaoTrudgianYang2025.integral_dirichletPhase_norm_sq_ge N A B hN
+
+example {τ : ℝ} (hτ : 2 ≤ τ) : zetaLargeValueExponent (1/2) τ ≠ ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_half_ne_bot_highHeight τ hτ
+
+example {c m : ℝ}
+    (hGrowth : IsZetaGrowthBound c m) (hc : 1/2 ≤ c) (hc1 : c ≤ 1) :
+    0 ≤ m :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.closedStrip_nonneg c m hGrowth hc hc1
+
+example {c : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) : 0 ≤ zetaGrowthExponent c :=
+  @TaoTrudgianYang2025.zetaGrowthExponent_closedStrip_nonneg c hc hc1
+
+example {σ : ℝ} (hσ : 1/2 < σ) :
+    zetaLargeValueExponent σ 1 = ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_heightOne_eq_bot σ hσ
+
+example {c m σ : ℝ}
+    (hGrowth : IsZetaGrowthBound c m) (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hgap : c+m < σ) : zetaLargeValueExponent σ 1 = ⊥ :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.heightOne_exponent_eq_bot c m σ hGrowth hc hc1 hgap
+
+example {c σ : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hgap : (c : EReal)+zetaGrowthExponent c < (σ : EReal)) :
+    zetaLargeValueExponent σ 1 = ⊥ :=
+  @TaoTrudgianYang2025.zetaHeightOne_exponent_eq_bot_of_mu c σ hc hc1 hgap
+
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (j : ℕ)
+    {t u : ℝ} (ht : t ∈ Icc P.T (2*P.T))
+    (hu : u ∉ zetaMellinSourceWindow P.T t) :
+    ‖zetaCutoffLineIntegrand a b c t u‖ ≤
+      (5*(1/(1-c)+2)*zetaCutoffMellinConstant (j+3) c*
+        P.N^(c+(j : ℝ)+2)) * |u|^(-((j : ℝ)+2)) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_integrand_order_far_bound P a b hactive hne c hc hc1 j t u ht hu
+
+example (j : ℕ) {c : ℝ} (hc1 : c < 1) :
+    0 < zetaLineTailConstant j c :=
+  @TaoTrudgianYang2025.zetaLineTailConstant_pos j c hc1
+
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (j : ℕ)
+    {t : ℝ} (ht : t ∈ Icc P.T (2*P.T)) :
+    ‖∫ u : ℝ in (zetaMellinSourceWindow P.T t)ᶜ,
+      zetaCutoffLineIntegrand a b c t u‖ ≤
+      zetaLineTailConstant j c*P.N^(c+(j : ℝ)+2)/P.T^(j+1) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.cutoff_line_order_far_integral P a b hactive hne c hc hc1 j t ht
+
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (hactive : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (j : ℕ)
+    {t : ℝ} (ht : t ∈ Icc P.T (2*P.T)) :
+    ‖∑ n ∈ P.indices, P.coeff n*dirichletPhase n t‖ ≤
+      zetaCutoffMellinConstant 1 c*P.N^c*zetaLineMomentConvolution c P.T t+
+      zetaCutoffMellinConstant 4 1*P.N^4/(1+|t|)^4+
+      zetaLineTailConstant j c*P.N^(c+(j : ℝ)+2)/P.T^(j+1) :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.polynomial_norm_le_lineConvolution_order_errors P a b hactive hne c hc hc1 j t ht
+
+example (P : ZetaLargeValuePattern)
+    {c : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (j : ℕ)
+    (hNT : P.N ≤ P.T) (hscale : P.N^(c+(j : ℝ)+2) ≤ P.T^(j+1))
+    (hvalue : 2*(zetaCutoffMellinConstant 4 1+zetaLineTailConstant j c) ≤ P.V)
+    {t : ℝ} (ht : t ∈ P.ordinates) :
+    P.V ≤ zetaLinePerronConstant c*P.N^c*zetaLineMomentConvolution c P.T t :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.line_order_perron_entry P c hc hc1 j hNT hscale hvalue t ht
+
+example {c τ : ℝ}
+    (hc : 1/2 ≤ c) (hc1 : c < 1) (hτ : 1 < τ) :
+    ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+      ∀ σ δ : ℝ, 1/2 ≤ σ → δ ≤ min (1/4) ((τ-1)/4) →
+        P.N^(τ-δ) ≤ P.T → P.N^(σ-δ) ≤ P.V →
+          ∀ t ∈ P.ordinates,
+            P.V ≤ zetaLinePerronConstant c*P.N^c*zetaLineMomentConvolution c P.T t :=
+  @TaoTrudgianYang2025.exists_zetaLinePerron_aboveOne_uniform_threshold c τ hc hc1 hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    IsZetaLargeValueBound σ τ (τ*M-p*(σ-c)) :=
+  @TaoTrudgianYang2025.zetaRealMoment_largeValueBound_aboveOne c p M hc hc1 hp hDyadic σ τ hσ hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    zetaLargeValueExponent σ τ ≤ ((τ*M-p*(σ-c) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_of_realMoment_aboveOne c p M hc hc1 hp hDyadic σ τ hσ hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 1 < τ) :
+    IsZetaLargeValueBound σ τ (τ*M-p*(σ-c)) :=
+  @TaoTrudgianYang2025.zetaRealMoment_largeValueBound_closedStrip_aboveOne c p M hc hc1 hp hDyadic σ τ hσ hσ1 hτ
+
+example {c p M : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hp : 1 ≤ p)
+    (hDyadic : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm c u^p) ≤ C*H^(M+η))
+    {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 1 < τ) :
+    zetaLargeValueExponent σ τ ≤ ((τ*M-p*(σ-c) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_of_realMoment_closedStrip_aboveOne c p M hc hc1 hp hDyadic σ τ hσ hσ1 hτ
+
+example {c m σ τ : ℝ} (hGrowth : IsZetaGrowthBound c m)
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1)
+    (hτ : 1 < τ) (hgap : c+τ*m < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.aboveOne_exponent_eq_bot c m σ τ hGrowth hc hc1 hσ hσ1 hτ hgap
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 1 < τ)
+    (hμ : zetaGrowthExponent c < (((σ-c)/τ : ℝ) : EReal)) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaAboveOne_exponent_eq_bot_of_growthExponent c σ τ hc hc1 hσ hσ1 hτ hμ
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hτ : 1 < τ)
+    (hgap : (c : EReal)+(τ : EReal)*zetaGrowthExponent c < (σ : EReal)) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaAboveOne_exponent_eq_bot_of_mu c σ τ hc hc1 hσ hσ1 hτ hgap
+
+example {c m σ τ : ℝ} (hGrowth : IsZetaGrowthBound c m)
+    (hc : 1/2 ≤ c) (hc1 : c ≤ 1) (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1)
+    (hres : 1-τ < σ) (hgap : c+τ*m < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.corrected_exponent_eq_bot c m σ τ hGrowth hc hc1 hσ hσ1 hres hgap
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hres : 1-τ < σ)
+    (hgap : (c : EReal)+(τ : EReal)*zetaGrowthExponent c < (σ : EReal)) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaCorrected_exponent_eq_bot_of_mu c σ τ hc hc1 hσ hσ1 hres hgap
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hres : 1-τ < σ)
+    (hgap : (c : EReal)+(τ : EReal)*zetaGrowthExponent c < (σ : EReal)) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ P : ZetaLargeValuePattern, C ≤ P.N →
+      P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) →
+      P.N^(σ-δ) ≤ P.V → P.V ≤ P.N^(σ+δ) → P.ordinates = ∅ :=
+  @TaoTrudgianYang2025.zetaCorrected_empty_threshold_of_mu c σ τ hc hc1 hσ hσ1 hres hgap
+
+example {c σ τ : ℝ} (hc : 1/2 ≤ c) (hc1 : c ≤ 1)
+    (hσ : 1/2 ≤ σ) (hσ1 : σ ≤ 1) (hres : 1-τ < σ)
+    (hgap : (c : EReal)+(τ : EReal)*zetaGrowthExponent c < (σ : EReal)) :
+    ∃ C δ : ℝ, 1 ≤ C ∧ 0 < δ ∧ ∀ (N : ℕ) (I : Finset ℕ) (t : ℝ),
+      C ≤ (N : ℝ) → IsIntegerInterval I → I ⊆ Finset.Icc N (2*N) →
+      (N : ℝ)^(τ-δ) ≤ t → t ≤ (N : ℝ)^(τ+δ) →
+      ‖∑ n ∈ I, dirichletPhase n t‖ < (N : ℝ)^(σ-δ) :=
+  @TaoTrudgianYang2025.zetaCorrected_pointwise_powerSaving_of_mu c σ τ hc hc1 hσ hσ1 hres hgap
+
+example (N : ℕ) (hN : 0 < N) :
+    (-(-2 : ℝ)+3-2*(5*Real.pi+1)*(N : ℝ))*(N : ℝ) ≤
+      ∫ t : ℝ in (-2)..3,
+        ‖∑ n ∈ Finset.Icc (N+1) (2*N), dirichletPhase n t‖^2 := by
+  convert integral_dirichletPhase_norm_sq_ge N (-2) 3 hN using 1
+  ring
+
+example : zetaLargeValueExponent (1/2) 2 ≠ ⊥ :=
+  zetaLargeValueExponent_half_ne_bot_highHeight le_rfl
+
+example : (0 : EReal) ≤ zetaGrowthExponent (3/4) :=
+  zetaGrowthExponent_closedStrip_nonneg (by norm_num) (by norm_num)
+
+example (h : IsZetaGrowthBound (1/2) (-1/100)) : False := by
+  have hh := h.closedStrip_nonneg le_rfl (by norm_num)
+  norm_num at hh
+
+example : zetaLargeValueExponent (3/4) 1 = ⊥ :=
+  zetaLargeValueExponent_heightOne_eq_bot (by norm_num)
+
+example : zetaLargeValueExponent (4/5) (3/2) = ⊥ := by
+  have hg : IsZetaGrowthBound (1/2) (1/6) := by
+    convert exponentPair_half_half.aProcess.isZetaGrowthBound using 1 <;> norm_num
+  exact hg.aboveOne_exponent_eq_bot (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaLargeValueExponent (4/5) (3/2) = ⊥ := by
+  apply zetaAboveOne_exponent_eq_bot_of_growthExponent (c := 1/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  exact zetaGrowth_half_le_one_sixth.trans_lt (by norm_num)
+
+example : zetaLargeValueExponent (3/4) (3/4) = ⊥ := by
+  have hg : IsZetaGrowthBound (1/2) (1/6) := by
+    convert exponentPair_half_half.aProcess.isZetaGrowthBound using 1 <;> norm_num
+  exact hg.corrected_exponent_eq_bot (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example {σ τ : ℝ} (hσ : 1/2 < σ) (hσ1 : σ ≤ 1) (hres : 1-τ < σ)
+    (hLindelof : IsZetaGrowthBound (1/2) 0) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  hLindelof.corrected_exponent_eq_bot le_rfl (by norm_num) hσ.le hσ1 hres
+    (by simpa only [mul_zero,add_zero] using hσ)
+
+example {M : ℝ}
+    (h : ∀ η : ℝ, 0 < η → ∃ C T₀ : ℝ, 0 ≤ C ∧
+      ∀ H : ℝ, T₀ ≤ H → 0 < H →
+        (∫ u in H..2*H, zetaMomentLineNorm 1 u^(1 : ℝ)) ≤ C*H^(M+η)) :
+    zetaLargeValueExponent (3/4) (3/2) ≤ (((3/2)*M+1/4 : ℝ) : EReal) := by
+  convert zetaLargeValueExponent_le_of_realMoment_closedStrip_aboveOne
+    (by norm_num : (1/2 : ℝ) ≤ 1) le_rfl (p := 1) le_rfl h
+    (by norm_num : (1/2 : ℝ) ≤ 3/4) (by norm_num) (by norm_num : (1 : ℝ) < 3/2) using 1
+  congr 1
+  ring
+
+example (P : ZetaLargeValuePattern) {a b : ℕ}
+    (ha : P.active = Finset.Icc a b) (hne : P.active.Nonempty)
+    {c t : ℝ} (hc : 1/2 ≤ c) (hc1 : c < 1) (ht : t ∈ Icc P.T (2*P.T)) :
+    ‖∫ u : ℝ in (zetaMellinSourceWindow P.T t)ᶜ,
+      zetaCutoffLineIntegrand a b c t u‖ ≤
+      zetaLineTailConstant 0 c*P.N^(c+2)/P.T := by
+  simpa only [Nat.cast_zero,add_zero,zero_add,pow_one] using
+    P.cutoff_line_order_far_integral ha hne hc hc1 0 ht
+
+example : ¬ (1-(1/4 : ℝ) < 3/4) := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end CorrectedGeneralGrowthRegression
+
+
+section SharpLogarithmicReflectionRegression
+
+open Filter MeasureTheory Set Complex Expdb
+open scoped Interval BigOperators FourierTransform
+
+example {v : ℝ}
+    (hv : v ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseInverseSlope Real.log v = v⁻¹ :=
+  @TaoTrudgianYang2025.modelPhaseInverseSlope_log v hv
+
+example {v : ℝ}
+    (hv : v ∈ modelPhaseSlopeRange Real.log) : 0 < v :=
+  @TaoTrudgianYang2025.modelPhaseSlopeRange_log_pos v hv
+
+example {v : ℝ}
+    (hv : v ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseCurvatureAt Real.log v = v^2 :=
+  @TaoTrudgianYang2025.modelPhaseCurvatureAt_log v hv
+
+example {v : ℝ}
+    (hv : v ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseStationaryAmplitude Real.log v = v⁻¹ :=
+  @TaoTrudgianYang2025.modelPhaseStationaryAmplitude_log v hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) : 0 < r :=
+  @TaoTrudgianYang2025.logarithmicStationaryFrequency_pos T N r hT hN hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseStationaryPoint Real.log T N r = T/r :=
+  @TaoTrudgianYang2025.modelPhaseStationaryPoint_log T N r hT hN hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    modelPhasePhysicalAmplitude Real.log T N r = Real.sqrt T/r :=
+  @TaoTrudgianYang2025.modelPhasePhysicalAmplitude_log T N r hT hN hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseFrequencyPhase Real.log T N r (modelPhaseStationaryPoint Real.log T N r) =
+      T*Real.log (T/N)-T*Real.log r-T :=
+  @TaoTrudgianYang2025.modelPhaseFrequencyPhase_log_stationary T N r hT hN hv
+
+example (T N : ℝ) :
+    ‖zetaLogReflectionCarrier T N‖ = 1 :=
+  @TaoTrudgianYang2025.norm_zetaLogReflectionCarrier T N
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseStationaryCharacter Real.log T N r =
+      zetaLogReflectionCarrier T N*(r : ℂ)^(-(I*((2*Real.pi*T : ℝ) : ℂ))) :=
+  @TaoTrudgianYang2025.modelPhaseStationaryCharacter_log T N r hT hN hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    modelPhaseStationaryMainTerm Real.log T N r =
+      zetaLogReflectionCarrier T N*(Real.sqrt T : ℂ)*
+        ((r : ℂ)⁻¹*(r : ℂ)^(-(I*((2*Real.pi*T : ℝ) : ℂ)))) :=
+  @TaoTrudgianYang2025.modelPhaseStationaryMainTerm_log T N r hT hN hv
+
+example {T N r : ℝ}
+    (hT : 0 < T) (hN : 0 < N)
+    (hv : r*N/T ∈ modelPhaseSlopeRange Real.log) :
+    T/(2*N) < r ∧ r < T/N :=
+  @TaoTrudgianYang2025.logarithmicStationaryFrequency_window T N r hT hN hv
+
+example {T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet Real.log T N a b) :
+    (q : ℝ)*N/T ∈ modelPhaseSlopeRange Real.log :=
+  @TaoTrudgianYang2025.logarithmicSharpStationarySet_slope T N a b q hT hN ha hb hq
+
+example {T N : ℝ} {a b : ℕ} {q : ℤ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hq : q ∈ modelPhaseSharpStationarySet Real.log T N a b) :
+    T/(2*N) < (q : ℝ) ∧ (q : ℝ) < T/N :=
+  @TaoTrudgianYang2025.logarithmicSharpStationarySet_window T N a b q hT hN ha hb hq
+
+example {T N : ℝ} {a b : ℕ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    ‖∑ q ∈ modelPhaseSharpStationarySet Real.log T N a b,
+        modelPhaseStationaryMainTerm Real.log T N q‖ =
+      Real.sqrt T*‖∑ q ∈ modelPhaseSharpStationarySet Real.log T N a b,
+        (q : ℂ)⁻¹*(q : ℂ)^(-(I*((2*Real.pi*T : ℝ) : ℂ)))‖ :=
+  @TaoTrudgianYang2025.norm_logarithmicSharpStationarySum T N a b hT hN ha hb
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N T : ℝ) (a b : ℕ),
+      1 ≤ N → 1 ≤ T → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        ‖exponentialSumAt Real.log T N a b‖ ≤
+          Real.sqrt T*‖∑ q ∈ modelPhaseSharpStationarySet Real.log T N a b,
+            (q : ℂ)⁻¹*(q : ℂ)^(-(I*((2*Real.pi*T : ℝ) : ℂ)))‖+
+          C*(N/Real.sqrt T+T^ε) :=
+  @TaoTrudgianYang2025.logarithmicSharp_source_comparison ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N t : ℝ) (a b : ℕ),
+      1 ≤ N → 2*Real.pi ≤ t → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        ‖∑ n ∈ Finset.Icc a b, dirichletPhase n t‖ ≤
+          Real.sqrt (t/(2*Real.pi))*
+            ‖∑ q ∈ modelPhaseSharpStationarySet Real.log (t/(2*Real.pi)) N a b,
+              (q : ℂ)⁻¹*(q : ℂ)^(-(I*(t : ℂ)))‖+
+          C*(N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) :=
+  @TaoTrudgianYang2025.dirichletInterval_sharp_log_reflection ε hε
+
+example {T N : ℝ} {a b n : ℕ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hn : n ∈ zetaLogDualInterval T N a b) :
+    T/(2*N) < (n : ℝ) ∧ (n : ℝ) < T/N :=
+  @TaoTrudgianYang2025.zetaLogDualInterval_window T N a b n hT hN ha hb hn
+
+example {T N : ℝ} {a b n : ℕ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N)
+    (hn : n ∈ zetaLogDualInterval T N a b) : 0 < n :=
+  @TaoTrudgianYang2025.zetaLogDualInterval_positive T N a b n hT hN ha hb hn
+
+example {T N : ℝ} {a b : ℕ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    IsIntegerInterval (zetaLogDualInterval T N a b) :=
+  @TaoTrudgianYang2025.zetaLogDualInterval_isIntegerInterval T N a b hT hN ha hb
+
+example {T N t : ℝ} {a b : ℕ}
+    (hT : 0 < T) (hN : 0 < N) (ha : N ≤ (a : ℝ)) (hb : (b : ℝ) ≤ 2*N) :
+    (∑ n ∈ zetaLogDualInterval T N a b, (n : ℂ)⁻¹*dirichletPhase n t) =
+      ∑ q ∈ modelPhaseSharpStationarySet Real.log T N a b,
+        (q : ℂ)⁻¹*(q : ℂ)^(-(I*(t : ℂ))) :=
+  @TaoTrudgianYang2025.zetaLogDualInterval_weighted_sum T N t a b hT hN ha hb
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (N t : ℝ) (a b : ℕ),
+      1 ≤ N → 2*Real.pi ≤ t → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+        ‖∑ n ∈ Finset.Icc a b, dirichletPhase n t‖ ≤
+          Real.sqrt (t/(2*Real.pi))*
+            ‖∑ n ∈ zetaLogDualInterval (t/(2*Real.pi)) N a b,
+              (n : ℂ)⁻¹*dirichletPhase n t‖+
+          C*(N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) :=
+  @TaoTrudgianYang2025.dirichletInterval_sharp_natural_reflection ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, 2*Real.pi ≤ P.T →
+      ∃ a b : ℕ, P.active = Finset.Icc a b ∧
+        ∀ t ∈ P.ordinates,
+          IsIntegerInterval (zetaLogDualInterval (t/(2*Real.pi)) P.N a b) ∧
+          (∀ n ∈ zetaLogDualInterval (t/(2*Real.pi)) P.N a b,
+            t/(4*Real.pi*P.N) < (n : ℝ) ∧ (n : ℝ) < t/(2*Real.pi*P.N)) ∧
+          P.V ≤ Real.sqrt (t/(2*Real.pi))*
+            ‖∑ n ∈ zetaLogDualInterval (t/(2*Real.pi)) P.N a b,
+              (n : ℂ)⁻¹*dirichletPhase n t‖+
+            C*(P.N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) :=
+  @TaoTrudgianYang2025.zetaPattern_sharp_log_reflection_entry ε hε
+
+private theorem log_three_quarters_slope :
+    (3/4 : ℝ) ∈ modelPhaseSlopeRange Real.log := by
+  refine ⟨4/3,⟨by norm_num,by norm_num⟩,?_⟩
+  rw [Real.deriv_log]
+  norm_num
+
+example : modelPhaseInverseSlope Real.log (3/4) = 4/3 := by
+  simpa using modelPhaseInverseSlope_log log_three_quarters_slope
+
+example : modelPhaseCurvatureAt Real.log (3/4) = 9/16 := by
+  norm_num [modelPhaseCurvatureAt_log log_three_quarters_slope]
+
+example : modelPhaseStationaryAmplitude Real.log (3/4) = 4/3 := by
+  simpa using modelPhaseStationaryAmplitude_log log_three_quarters_slope
+
+example : modelPhasePhysicalAmplitude Real.log 16 4 3 = 4/3 := by
+  have hv : (3 : ℝ)*4/16 ∈ modelPhaseSlopeRange Real.log := by
+    convert log_three_quarters_slope using 1
+    norm_num
+  have hs : Real.sqrt (16 : ℝ) = 4 := by
+    rw [show (16 : ℝ) = 4^2 by norm_num,Real.sqrt_sq (by norm_num : (0 : ℝ) ≤ 4)]
+  simpa only [hs] using modelPhasePhysicalAmplitude_log (by norm_num : (0 : ℝ) < 16)
+    (by norm_num : (0 : ℝ) < 4) hv
+
+example : modelPhaseStationaryPoint Real.log 16 4 3 = 16/3 := by
+  have hv : (3 : ℝ)*4/16 ∈ modelPhaseSlopeRange Real.log := by
+    convert log_three_quarters_slope using 1
+    norm_num
+  exact modelPhaseStationaryPoint_log (by norm_num) (by norm_num) hv
+
+example : zetaLogDualInterval 16 4 4 4 = ∅ := by
+  norm_num [zetaLogDualInterval,modelPhaseSharpStationarySet]
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end SharpLogarithmicReflectionRegression
+
+
+section CommonReflectionCompletionRegression
+
+open Complex Filter MeasureTheory Set
+open scoped Interval BigOperators
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) {s : ℂ} (hs : s.im ≠ 0) (j : ℕ) :
+    ‖mellin (iteratedDeriv j g) (s+j)‖ =
+      (∏ m ∈ Finset.range j, ‖s+(m : ℂ)‖)*‖mellin g s‖ :=
+  @TaoTrudgianYang2025.mellin_iteratedDeriv_norm_off_real g hg s hs j
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) (σ : ℝ) {u : ℝ} (hu : u ≠ 0) (j : ℕ) :
+    |u|^j*‖mellin g ((σ : ℂ)+(u : ℂ)*I)‖ ≤
+      ‖mellin (iteratedDeriv j g) (((σ : ℂ)+(u : ℂ)*I)+(j : ℂ))‖ :=
+  @TaoTrudgianYang2025.mellin_imaginary_weighted_norm_le_derivative g hg σ u hu j
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) {s : ℂ} (hs : s.re ≤ 1) :
+    ‖mellin g s‖ ≤ hg.lower^(s.re-1)*∫ x : ℝ, ‖g x‖ :=
+  @TaoTrudgianYang2025.norm_mellin_le_lower_mass g hg s hs
+
+example (u : ℝ) :
+    1+|u| ≤ 2*‖(-1 : ℂ)+(u : ℂ)*I‖ :=
+  @TaoTrudgianYang2025.one_add_abs_le_two_negative_mellin_factor u
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) (u : ℝ) :
+    (1+|u|)*‖mellin g ((-1 : ℂ)+(u : ℂ)*I)‖ ≤
+      2*‖mellin (deriv g) ((u : ℂ)*I)‖ :=
+  @TaoTrudgianYang2025.mellin_negative_one_weighted_norm_le_derivative g hg u
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) (u : ℝ) :
+    (1+|u|)*‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+        ((-1 : ℂ)+(u : ℂ)*I)‖ ≤
+      2*zetaCutoffDerivativeMass 1/((a : ℝ)-1/2) :=
+  @TaoTrudgianYang2025.cutoff_negative_mellin_weighted_bound a b ha hab u
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) (u : ℝ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+        ((-1 : ℂ)+(u : ℂ)*I)‖ ≤
+      (2*zetaCutoffDerivativeMass 1/((a : ℝ)-1/2))/(1+|u|) :=
+  @TaoTrudgianYang2025.cutoff_negative_mellin_bound a b ha hab u
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) {u : ℝ} (hu : u ≠ 0) (j : ℕ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ))
+        ((-1 : ℂ)+(u : ℂ)*I)‖ ≤
+      ((b : ℝ)+1/2)^j*zetaCutoffDerivativeMass (j+2)/|u|^(j+2) :=
+  @TaoTrudgianYang2025.cutoff_negative_mellin_high_order a b ha hab u hu j
+
+example {n : ℕ} (hn : n ≠ 0)
+    (g : ℝ → ℂ) (t u : ℝ) :
+    (n : ℂ)⁻¹*zetaMellinTerm g (-1) t n u =
+      mellin g ((-1 : ℂ)+(u : ℂ)*I)*dirichletPhase n (t+u) :=
+  @TaoTrudgianYang2025.reciprocal_zetaMellinTerm n hn g t u
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (t : ℝ) :
+    Integrable (fun u : ℝ => mellin g ((-1 : ℂ)+(u : ℂ)*I)*
+      ∑ n ∈ S, dirichletPhase n (t+u)) :=
+  @TaoTrudgianYang2025.integrable_reciprocal_completion_kernel g hg S hS t
+
+example {g : ℝ → ℂ}
+    (hg : DFIVoronoiTestFunction g) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (t : ℝ) :
+    (∑ n ∈ S, g n*((n : ℂ)⁻¹*dirichletPhase n t)) =
+      (1/(2*Real.pi) : ℂ)*∫ u : ℝ,
+        mellin g ((-1 : ℂ)+(u : ℂ)*I)*∑ n ∈ S, dirichletPhase n (t+u) :=
+  @TaoTrudgianYang2025.smooth_reciprocal_sum_eq_common_mellin g hg S hS t
+
+example {a b : ℕ} (ha : 1 ≤ a)
+    (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0)
+    (hsub : Finset.Icc a b ⊆ S) (t : ℝ) :
+    (∑ n ∈ Finset.Icc a b, (n : ℂ)⁻¹*dirichletPhase n t) =
+      (1/(2*Real.pi) : ℂ)*∫ u : ℝ,
+        mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+          ∑ n ∈ S, dirichletPhase n (t+u) :=
+  @TaoTrudgianYang2025.reciprocal_interval_eq_common_mellin a b ha S hS hsub t
+
+example (T N : ℝ) {n : ℕ}
+    (hn : n ∈ zetaReflectionCommonInterval T N) : 0 < n :=
+  @TaoTrudgianYang2025.zetaReflectionCommonInterval_positive T N n hn
+
+example {T N : ℝ}
+    (hT : 0 ≤ T) (hN : 0 < N) {n : ℕ}
+    (hn : n ∈ zetaReflectionCommonInterval T N) :
+    T/(4*Real.pi*N) < (n : ℝ) ∧ (n : ℝ) ≤ Nat.ceil (T/(Real.pi*N)) :=
+  @TaoTrudgianYang2025.zetaReflectionCommonInterval_window T N hT hN n hn
+
+example {T N t : ℝ}
+    (hT : 0 < T) (hN : 0 < N) (ht : T ≤ t) (ht' : t ≤ 2*T)
+    {J : Finset ℕ}
+    (hJ : ∀ n ∈ J, t/(4*Real.pi*N) < (n : ℝ) ∧ (n : ℝ) < t/(2*Real.pi*N)) :
+    J ⊆ zetaReflectionCommonInterval T N :=
+  @TaoTrudgianYang2025.logarithmic_moving_interval_subset_common T N t hT hN ht ht' J hJ
+
+example {J : Finset ℕ}
+    (hJ : IsIntegerInterval J) (hpos : ∀ n ∈ J, 0 < n) :
+    ∃ a b : ℕ, 1 ≤ a ∧ J = Finset.Icc a b :=
+  @TaoTrudgianYang2025.IsIntegerInterval.positive_endpoints J hJ hpos
+
+example {T N t : ℝ}
+    (hT : 0 < T) (hN : 0 < N) (ht : T ≤ t) (ht' : t ≤ 2*T)
+    {J : Finset ℕ} (hJ : IsIntegerInterval J)
+    (hw : ∀ n ∈ J, t/(4*Real.pi*N) < (n : ℝ) ∧ (n : ℝ) < t/(2*Real.pi*N)) :
+    ∃ a b : ℕ, 1 ≤ a ∧ J = Finset.Icc a b ∧
+      (∑ n ∈ J, (n : ℂ)⁻¹*dirichletPhase n t) =
+        (1/(2*Real.pi) : ℂ)*∫ u : ℝ,
+          mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+            ∑ n ∈ zetaReflectionCommonInterval T N, dirichletPhase n (t+u) :=
+  @TaoTrudgianYang2025.moving_reciprocal_interval_eq_common_mellin T N t hT hN ht ht' J hJ hw
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, 2*Real.pi ≤ P.T →
+      ∀ t ∈ P.ordinates, ∃ a b : ℕ, 1 ≤ a ∧
+        Integrable (fun u : ℝ =>
+          mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+            ∑ n ∈ zetaReflectionCommonInterval P.T P.N, dirichletPhase n (t+u)) ∧
+        P.V ≤ Real.sqrt (t/(2*Real.pi))*
+          ‖(1/(2*Real.pi) : ℂ)*∫ u : ℝ,
+            mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+              ∑ n ∈ zetaReflectionCommonInterval P.T P.N, dirichletPhase n (t+u)‖+
+          C*(P.N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) :=
+  @TaoTrudgianYang2025.zetaPattern_common_mellin_reflection_entry ε hε
+
+example (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (v : ℝ) :
+    ‖∑ n ∈ S, dirichletPhase n v‖ ≤ (S.card : ℝ) :=
+  @TaoTrudgianYang2025.reciprocalCompletion_phase_sum_norm_le_card S hS v
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0)
+    (t : ℝ) {u : ℝ} (hu : u ≠ 0) (j : ℕ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+        ∑ n ∈ S, dirichletPhase n (t+u)‖ ≤
+      ((S.card : ℝ)*((b : ℝ)+1/2)^j*zetaCutoffDerivativeMass (j+2))*
+        |u|^(-((j : ℝ)+2)) :=
+  @TaoTrudgianYang2025.reciprocalCompletion_integrand_high_order a b ha hab S hS t u hu j
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0)
+    (t : ℝ) {H : ℝ} (hH : 0 < H) (j : ℕ) {E : Set ℝ}
+    (hE : MeasurableSet E) (hsub : E ⊆ (Icc (-H) H)ᶜ) :
+    ‖∫ u : ℝ in E,
+      mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+        ∑ n ∈ S, dirichletPhase n (t+u)‖ ≤
+      2*(S.card : ℝ)*((b : ℝ)+1/2)^j*zetaCutoffDerivativeMass (j+2)/
+        (((j : ℝ)+1)*H^(j+1)) :=
+  @TaoTrudgianYang2025.reciprocalCompletion_tail_integral a b ha hab S hS t H hH j E hE hsub
+
+example {T N : ℝ}
+    (hT : 0 ≤ T) (hN : 0 < N) (hscale : 1 ≤ T/(4*Real.pi*N)) :
+    ((zetaReflectionCommonInterval T N).card : ℝ) ≤ 6*(T/(4*Real.pi*N)) :=
+  @TaoTrudgianYang2025.zetaReflectionCommonInterval_card_bound T N hT hN hscale
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) {M : ℝ} (hM : 1 ≤ M)
+    (hleft : M < (a : ℝ)) (u : ℝ) :
+    ‖mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)‖ ≤
+      4*zetaCutoffDerivativeMass 1/(M*(1+|u|)) :=
+  @TaoTrudgianYang2025.cutoff_negative_mellin_annulus_bound a b ha hab M hM hleft u
+
+example {T N t : ℝ}
+    (hT : 0 < T) (hN : 0 < N) (ht : T ≤ t) (ht' : t ≤ 2*T)
+    {J : Finset ℕ} (hJ : IsIntegerInterval J) (hne : J.Nonempty)
+    (hw : ∀ n ∈ J, t/(4*Real.pi*N) < (n : ℝ) ∧ (n : ℝ) < t/(2*Real.pi*N)) :
+    ∃ a b : ℕ, 1 ≤ a ∧ a ≤ b ∧ J = Finset.Icc a b ∧
+      T/(4*Real.pi*N) < (a : ℝ) ∧ (b : ℝ) < T/(Real.pi*N) :=
+  @TaoTrudgianYang2025.moving_interval_cutoff_endpoints T N t hT hN ht ht' J hJ hne hw
+
+example (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (t : ℝ) :
+    Continuous (fun u : ℝ => ∑ n ∈ S, dirichletPhase n (t+u)) :=
+  @TaoTrudgianYang2025.continuous_reciprocalCompletion_phase_sum S hS t
+
+example (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (T t : ℝ) :
+    IntegrableOn (fun u : ℝ => ‖∑ n ∈ S, dirichletPhase n (t+u)‖/(1+|u|))
+      (zetaMellinSourceWindow T t) :=
+  @TaoTrudgianYang2025.integrableOn_zetaReflectionConvolution S hS T t
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) {M : ℝ} (hM : 1 ≤ M)
+    (hleft : M < (a : ℝ)) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0) (T t : ℝ) :
+    ‖∫ u : ℝ in zetaMellinSourceWindow T t,
+      mellin (fun x => (zetaIntervalCutoff a b x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+        ∑ n ∈ S, dirichletPhase n (t+u)‖ ≤
+      (4*zetaCutoffDerivativeMass 1/M)*zetaReflectionConvolution S T t :=
+  @TaoTrudgianYang2025.reciprocalCompletion_near_integral a b ha hab M hM hleft S hS T t
+
+example {a b : ℕ}
+    (ha : 1 ≤ a) (hab : a ≤ b) {M : ℝ} (hM : 1 ≤ M)
+    (hleft : M < (a : ℝ)) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0)
+    (hsub : Finset.Icc a b ⊆ S) {T t : ℝ} (hT : 0 < T)
+    (ht : t ∈ Icc T (2*T)) (j : ℕ) :
+    ‖∑ n ∈ Finset.Icc a b, (n : ℂ)⁻¹*dirichletPhase n t‖ ≤
+      (4*zetaCutoffDerivativeMass 1/M)*zetaReflectionConvolution S T t+
+        2*(S.card : ℝ)*((b : ℝ)+1/2)^j*zetaCutoffDerivativeMass (j+2)/
+          (((j : ℝ)+1)*(T/2)^(j+1)) :=
+  @TaoTrudgianYang2025.reciprocal_interval_norm_le_common_convolution a b ha hab M hM hleft S hS hsub T t hT ht j
+
+example (j : ℕ) :
+    0 ≤ zetaReflectionTailConstant j :=
+  @TaoTrudgianYang2025.zetaReflectionTailConstant_nonneg j
+
+example (S : Finset ℕ) (T t : ℝ) :
+    0 ≤ zetaReflectionConvolution S T t :=
+  @TaoTrudgianYang2025.zetaReflectionConvolution_nonneg S T t
+
+example {T N : ℝ} (hT : 0 < T) (hN : 0 < N)
+    (hscale : 1 ≤ T/(4*Real.pi*N)) {b : ℕ} (hb : (b : ℝ) < T/(Real.pi*N)) (j : ℕ) :
+    2*((zetaReflectionCommonInterval T N).card : ℝ)*((b : ℝ)+1/2)^j*
+        zetaCutoffDerivativeMass (j+2)/(((j : ℝ)+1)*(T/2)^(j+1)) ≤
+      zetaReflectionTailConstant j/(4*Real.pi*N)^(j+1) :=
+  @TaoTrudgianYang2025.commonReflection_tail_scale T N hT hN hscale b hb j
+
+example {T N t : ℝ}
+    (hT : 0 < T) (hN : 0 < N) (hscale : 1 ≤ T/(4*Real.pi*N))
+    (ht : t ∈ Icc T (2*T)) {J : Finset ℕ} (hJ : IsIntegerInterval J)
+    (hw : ∀ n ∈ J, t/(4*Real.pi*N) < (n : ℝ) ∧ (n : ℝ) < t/(2*Real.pi*N))
+    (j : ℕ) :
+    ‖∑ n ∈ J, (n : ℂ)⁻¹*dirichletPhase n t‖ ≤
+      (4*zetaCutoffDerivativeMass 1/(T/(4*Real.pi*N)))*
+        zetaReflectionConvolution (zetaReflectionCommonInterval T N) T t+
+      zetaReflectionTailConstant j/(4*Real.pi*N)^(j+1) :=
+  @TaoTrudgianYang2025.moving_reciprocal_interval_uniform_localized T N t hT hN hscale ht J hJ hw j
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ P : ZetaLargeValuePattern, 2*Real.pi ≤ P.T →
+      1 ≤ P.T/(4*Real.pi*P.N) → ∀ t ∈ P.ordinates, ∀ j : ℕ,
+        P.V ≤ Real.sqrt (t/(2*Real.pi))*
+          ((4*zetaCutoffDerivativeMass 1/(P.T/(4*Real.pi*P.N)))*
+            zetaReflectionConvolution (zetaReflectionCommonInterval P.T P.N) P.T t+
+            zetaReflectionTailConstant j/(4*Real.pi*P.N)^(j+1))+
+          C*(P.N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) :=
+  @TaoTrudgianYang2025.zetaPattern_uniform_localized_reflection ε hε
+
+example : 1+|(0 : ℝ)| ≤ 2*‖(-1 : ℂ)+(0 : ℂ)*I‖ :=
+  one_add_abs_le_two_negative_mellin_factor 0
+
+example : 4 ≤ 2*‖(-1 : ℂ)+(3 : ℂ)*I‖ := by
+  convert one_add_abs_le_two_negative_mellin_factor 3 using 1
+  norm_num
+
+example : zetaReflectionCommonInterval 0 1 = ∅ := by
+  norm_num [zetaReflectionCommonInterval]
+
+example : zetaReflectionCommonInterval (16*Real.pi) 1 = Finset.Icc 5 16 := by
+  have hleft : (16*Real.pi)/(4*Real.pi*1) = 4 := by field_simp; ring
+  have hright : (16*Real.pi)/(Real.pi*1) = 16 := by field_simp
+  rw [zetaReflectionCommonInterval,hleft,hright]
+  norm_num
+
+example : ∃ a b : ℕ, 1 ≤ a ∧ (∅ : Finset ℕ) = Finset.Icc a b := by
+  apply IsIntegerInterval.positive_endpoints
+  · exact ⟨1,0,by norm_num⟩
+  · simp
+
+example (v : ℝ) : ‖∑ n ∈ Finset.Icc 2 5, dirichletPhase n v‖ ≤ 4 := by
+  have h := reciprocalCompletion_phase_sum_norm_le_card (Finset.Icc 2 5)
+    (fun n hn => by have := (Finset.mem_Icc.mp hn).1; omega) v
+  simpa using h
+
+example : (5/6 : ℂ) = (1/(2*Real.pi) : ℂ)*∫ u : ℝ,
+    mellin (fun x => (zetaIntervalCutoff 2 3 x : ℂ)) ((-1 : ℂ)+(u : ℂ)*I)*
+      ∑ n ∈ Finset.Icc 2 3, dirichletPhase n u := by
+  have h := reciprocal_interval_eq_common_mellin (a := 2) (b := 3) (by norm_num)
+    (Finset.Icc 2 3) (fun n hn => by have := (Finset.mem_Icc.mp hn).1; omega) (by rfl) 0
+  norm_num [Finset.sum_Icc_succ_top,dirichletPhase_zero] at h ⊢
+  exact h
+
+example (T t : ℝ) : zetaReflectionConvolution ∅ T t = 0 := by
+  simp [zetaReflectionConvolution]
+
+example : zetaReflectionTailConstant 0 = 24*zetaCutoffDerivativeMass 2 := by
+  norm_num [zetaReflectionTailConstant]
+
+example (u : ℝ) : ‖mellin (fun x => (zetaIntervalCutoff 2 3 x : ℂ))
+    ((-1 : ℂ)+(u : ℂ)*I)‖ ≤ (4*zetaCutoffDerivativeMass 1/3)/(1+|u|) := by
+  have h := cutoff_negative_mellin_bound (a := 2) (b := 3) (by norm_num) (by norm_num) u
+  convert h using 1
+  norm_num
+  ring
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end CommonReflectionCompletionRegression
+
+
+section ReflectionErrorAbsorptionRegression
+
+open Complex Filter MeasureTheory Set
+open scoped Interval BigOperators Classical
+
+example {T t : ℝ} (hT : 0 < T)
+    (ht : t ∈ Icc T (2*T)) :
+    T/(2*Real.pi) ≤ t/(2*Real.pi) ∧
+      t/(2*Real.pi) ≤ T ∧ 0 < t/(2*Real.pi) :=
+  @TaoTrudgianYang2025.reflection_scaled_height_bounds T t hT ht
+
+example {N T t : ℝ}
+    (hN : 0 ≤ N) (hT : 0 < T) (ht : t ∈ Icc T (2*T)) :
+    N/Real.sqrt (t/(2*Real.pi)) ≤ Real.sqrt (2*Real.pi)*N/Real.sqrt T :=
+  @TaoTrudgianYang2025.reflection_sqrt_source_comparison N T t hN hT ht
+
+example {N T a : ℝ}
+    (hN : 0 < N) (hT : N^a ≤ T) :
+    N^(a/2) ≤ Real.sqrt T :=
+  @TaoTrudgianYang2025.reflection_sqrt_lower_power N T a hN hT
+
+example {N T b : ℝ}
+    (hN : 0 < N) (hupper : T ≤ N^b) :
+    Real.sqrt T ≤ N^(b/2) :=
+  @TaoTrudgianYang2025.reflection_sqrt_upper_power N T b hN hupper
+
+example {N T t a : ℝ}
+    (hN : 0 < N) (hT : 0 < T) (ht : t ∈ Icc T (2*T)) (hscale : N^a ≤ T) :
+    N/Real.sqrt (t/(2*Real.pi)) ≤ Real.sqrt (2*Real.pi)*N^(1-a/2) :=
+  @TaoTrudgianYang2025.reflection_source_remainder_power N T t a hN hT ht hscale
+
+example {N T t b ε : ℝ}
+    (hN : 0 < N) (hT : 0 < T) (ht : t ∈ Icc T (2*T))
+    (hscale : T ≤ N^b) (hε : 0 ≤ ε) :
+    (t/(2*Real.pi))^ε ≤ N^(b*ε) :=
+  @TaoTrudgianYang2025.reflection_epsilon_remainder_power N T t b ε hN hT ht hscale hε
+
+example {N T t b : ℝ}
+    (hN : 1 ≤ N) (hT : 0 < T) (ht : t ∈ Icc T (2*T))
+    (hscale : T ≤ N^b) (j : ℕ) (hj : b/2 ≤ (j : ℝ)+1) :
+    Real.sqrt (t/(2*Real.pi))*
+      (zetaReflectionTailConstant j/(4*Real.pi*N)^(j+1)) ≤ zetaReflectionTailConstant j :=
+  @TaoTrudgianYang2025.reflection_tail_remainder_bounded N T t b hN hT ht hscale j hj
+
+example {N T t a b ε α C : ℝ}
+    (hN : 1 ≤ N) (hT : 0 < T) (ht : t ∈ Icc T (2*T))
+    (hlo : N^a ≤ T) (hhi : T ≤ N^b) (hε : 0 ≤ ε) (hC : 0 ≤ C)
+    (hα : 0 ≤ α) (hfirst : 1-a/2 ≤ α) (hsecond : b*ε ≤ α)
+    (j : ℕ) (hj : b/2 ≤ (j : ℝ)+1) :
+    Real.sqrt (t/(2*Real.pi))*
+        (zetaReflectionTailConstant j/(4*Real.pi*N)^(j+1))+
+      C*(N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) ≤
+        (C*(Real.sqrt (2*Real.pi)+1)+zetaReflectionTailConstant j)*N^α :=
+  @TaoTrudgianYang2025.reflection_remainders_le_power N T t a b ε α C hN hT ht hlo hhi hε hC hα hfirst hsecond j hj
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    ∃ ε : ℝ, 0 < ε ∧ ∀ C : ℝ, 0 ≤ C →
+      ∃ j : ℕ, ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+        ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+          ∀ σ : ℝ, 1/2 ≤ σ →
+            P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+              2*Real.pi ≤ P.T ∧ 1 ≤ P.T/(4*Real.pi*P.N) ∧
+                ∀ t ∈ P.ordinates,
+                  Real.sqrt (t/(2*Real.pi))*
+                      (zetaReflectionTailConstant j/(4*Real.pi*P.N)^(j+1))+
+                    C*(P.N/Real.sqrt (t/(2*Real.pi))+(t/(2*Real.pi))^ε) ≤ P.V/2 :=
+  @TaoTrudgianYang2025.exists_reflection_remainders_absorbed τ hτ
+
+example : 0 < zetaReflectionConvolutionConstant :=
+  @TaoTrudgianYang2025.zetaReflectionConvolutionConstant_pos
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+        ∀ σ : ℝ, 1/2 ≤ σ →
+          P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+            ∀ t ∈ P.ordinates,
+              P.V*Real.sqrt P.T/P.N ≤ zetaReflectionConvolutionConstant*
+                zetaReflectionConvolution (zetaReflectionCommonInterval P.T P.N) P.T t :=
+  @TaoTrudgianYang2025.exists_zetaReflectionConvolution_uniform_entry τ hτ
+
+example (W : Finset ℝ) (f : ℝ → ℝ) (a : ℝ) (j : ℕ) :
+    reflectionValueBand W f a j ⊆ W :=
+  @TaoTrudgianYang2025.reflectionValueBand_subset W f a j
+
+example {W : Finset ℝ} {f : ℝ → ℝ} {a t : ℝ} {j : ℕ}
+    (ht : t ∈ reflectionValueBand W f a j) :
+    a*(2 : ℝ)^j ≤ f t ∧ f t < 2*(a*(2 : ℝ)^j) :=
+  @TaoTrudgianYang2025.reflectionValueBand_values W f a t j ht
+
+example (W : Finset ℝ) (f : ℝ → ℝ)
+    {a : ℝ} (ha : 0 < a) (J : ℕ) (hterminal : ∀ t ∈ W, f t < a*(2 : ℝ)^J) :
+    (∑ t ∈ W, f t) ≤ a*(W.card : ℝ)+
+      ∑ j ∈ Finset.range J, 2*(a*(2 : ℝ)^j)*((reflectionValueBand W f a j).card : ℝ) :=
+  @TaoTrudgianYang2025.reflection_sum_le_low_and_bands W f a ha J hterminal
+
+example (W : Finset ℝ) (f : ℝ → ℝ)
+    {a R : ℝ} (ha : 0 < a) (hR : 0 < R) {J : ℕ} (hJ : 0 < J)
+    (hterminal : ∀ t ∈ W, f t < a*(2 : ℝ)^J)
+    (hlow : 2*a*(W.card : ℝ) ≤ R) (hsum : R ≤ ∑ t ∈ W, f t) :
+    ∃ j ∈ Finset.range J, (reflectionValueBand W f a j).Nonempty ∧
+      R/(4*(J : ℝ)) ≤ a*(2 : ℝ)^j*((reflectionValueBand W f a j).card : ℝ) :=
+  @TaoTrudgianYang2025.exists_reflectionValueBand_mass W f a R ha hR J hJ hterminal hlow hsum
+
+example (W : Finset ℝ) (f : ℝ → ℝ) (a u : ℝ) (j : ℕ) :
+    ((reflectionValueBand W f a j).image (fun t => t+u)).card =
+      (reflectionValueBand W f a j).card :=
+  @TaoTrudgianYang2025.reflectionValueBand_shift_card W f a u j
+
+example {W : Finset ℝ}
+    (hW : IsOneSeparated W) (f : ℝ → ℝ) (a u : ℝ) (j : ℕ) :
+    IsOneSeparated ((reflectionValueBand W f a j).image (fun t => t+u)) :=
+  @TaoTrudgianYang2025.reflectionValueBand_shift_oneSeparated W hW f a u j
+
+example : (2 : ℝ)/(2*Real.pi) ≤ 4/(2*Real.pi) ∧
+    (4 : ℝ)/(2*Real.pi) ≤ 2 ∧ 0 < (4 : ℝ)/(2*Real.pi) :=
+  reflection_scaled_height_bounds (by norm_num) (by constructor <;> norm_num)
+
+example : (4 : ℝ)/Real.sqrt (16/(2*Real.pi)) ≤ Real.sqrt (2*Real.pi) := by
+  have h := reflection_source_remainder_power (N := 4) (T := 16) (t := 16) (a := 2)
+    (by norm_num) (by norm_num) (by constructor <;> norm_num) (by norm_num)
+  simpa using h
+
+example : Real.sqrt ((16 : ℝ)/(2*Real.pi))*
+    (zetaReflectionTailConstant 0/(4*Real.pi*4)^1) ≤ zetaReflectionTailConstant 0 :=
+  reflection_tail_remainder_bounded (N := 4) (T := 16) (t := 16) (b := 2)
+    (by norm_num) (by norm_num) (by constructor <;> norm_num) (by norm_num) 0 (by norm_num)
+
+example : 0 < zetaReflectionConvolutionConstant :=
+  zetaReflectionConvolutionConstant_pos
+
+example : ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+    ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+      P.N^((3/2 : ℝ)-δ) ≤ P.T → P.T ≤ P.N^((3/2 : ℝ)+δ) →
+      P.N^((1/2 : ℝ)-δ) ≤ P.V → ∀ t ∈ P.ordinates,
+        P.V*Real.sqrt P.T/P.N ≤ zetaReflectionConvolutionConstant*
+          zetaReflectionConvolution (zetaReflectionCommonInterval P.T P.N) P.T t := by
+  obtain ⟨δ,hδ,N₀,hN₀,hentry⟩ := exists_zetaReflectionConvolution_uniform_entry
+    (τ := 3/2) (by norm_num)
+  exact ⟨δ,hδ,N₀,hN₀,fun P hN => hentry P hN (1/2) le_rfl⟩
+
+example : reflectionValueBand ({0,1,2} : Finset ℝ) (fun t => t+1) 1 0 = {0} := by
+  norm_num [reflectionValueBand,Finset.filter_insert,Finset.filter_singleton]
+
+example : reflectionValueBand ({0,1,2} : Finset ℝ) (fun t => t+1) 1 1 = {1,2} := by
+  norm_num [reflectionValueBand,Finset.filter_insert,Finset.filter_singleton]
+
+example : ((reflectionValueBand ({0,1,2} : Finset ℝ) (fun t => t+1) 1 1).image
+    (fun t => t+(7 : ℝ))).card = 2 := by
+  rw [reflectionValueBand_shift_card]
+  norm_num [reflectionValueBand,Finset.filter_insert,Finset.filter_singleton]
+
+example : IsOneSeparated ((reflectionValueBand ({0,1,2} : Finset ℝ)
+    (fun t => t+1) 1 1).image (fun t => t+(7 : ℝ))) := by
+  apply reflectionValueBand_shift_oneSeparated
+  intro x hx y hy hxy
+  simp only [Finset.mem_insert,Finset.mem_singleton] at hx hy
+  rcases hx with rfl | rfl | rfl <;> rcases hy with rfl | rfl | rfl <;> norm_num at *
+
+example : ∃ j ∈ Finset.range 3,
+    (reflectionValueBand ({0,1,2} : Finset ℝ) (fun t => t+1) (1/2) j).Nonempty ∧
+      (1/2 : ℝ) ≤ (1/2)*(2 : ℝ)^j*
+        ((reflectionValueBand ({0,1,2} : Finset ℝ) (fun t => t+1) (1/2) j).card : ℝ) := by
+  have h := exists_reflectionValueBand_mass ({0,1,2} : Finset ℝ) (fun t => t+1)
+    (a := 1/2) (R := 6) (by norm_num) (by norm_num) (J := 3) (by norm_num)
+    (by intro t ht; simp only [Finset.mem_insert,Finset.mem_singleton] at ht
+        rcases ht with rfl | rfl | rfl <;> norm_num)
+    (by norm_num) (by norm_num)
+  convert h using 1
+  norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionErrorAbsorptionRegression
+
+
+section ReflectionCommonShiftRegression
+
+open Complex Filter MeasureTheory Set
+open scoped Interval BigOperators Classical
+
+example (W : Finset ℝ) (S : Finset ℕ) (T u : ℝ) :
+    0 ≤ reflectionShiftMass W S T u :=
+  @TaoTrudgianYang2025.reflectionShiftMass_nonneg W S T u
+
+example (W : Finset ℝ) (S : Finset ℕ) (T u : ℝ) :
+    reflectionShiftMass W S T u =
+      ∑ t ∈ W.filter (fun t => t+u ∈ Icc (T/2) (3*T)),
+        ‖∑ n ∈ S, dirichletPhase n (t+u)‖ :=
+  @TaoTrudgianYang2025.reflectionShiftMass_eq_sum_filter W S T u
+
+example (W : Finset ℝ) (S : Finset ℕ) (T u : ℝ) :
+    reflectionShiftMass W S T u/(1+|u|) =
+      ∑ t ∈ W, (zetaMellinSourceWindow T t).indicator
+        (fun v => ‖∑ n ∈ S, dirichletPhase n (t+v)‖/(1+|v|)) u :=
+  @TaoTrudgianYang2025.reflectionShiftMass_weighted_eq W S T u
+
+example (W : Finset ℝ) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (T : ℝ) :
+    Integrable (fun u => reflectionShiftMass W S T u/(1+|u|)) :=
+  @TaoTrudgianYang2025.integrable_reflectionShiftMass_weighted W S hS T
+
+example (W : Finset ℝ) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (T : ℝ) :
+    (∑ t ∈ W, zetaReflectionConvolution S T t) =
+      ∫ u : ℝ, reflectionShiftMass W S T u/(1+|u|) :=
+  @TaoTrudgianYang2025.sum_reflectionConvolution_eq_integral_shiftMass W S hS T
+
+example {T t : ℝ}
+    (hT : 0 < T) (ht : t ∈ Icc T (2*T)) :
+    zetaMellinSourceWindow T t ⊆ Icc (-(2*T)) (2*T) :=
+  @TaoTrudgianYang2025.zetaMellinSourceWindow_subset_commonShiftWindow T t hT ht
+
+example {W : Finset ℝ} {S : Finset ℕ} {T u : ℝ}
+    (hT : 0 < T) (hW : ∀ t ∈ W, t ∈ Icc T (2*T))
+    (hu : u ∉ Icc (-(2*T)) (2*T)) : reflectionShiftMass W S T u = 0 :=
+  @TaoTrudgianYang2025.reflectionShiftMass_eq_zero_outside W S T u hT hW hu
+
+example (W : Finset ℝ) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0) {T : ℝ}
+    (hT : 0 < T) (hW : ∀ t ∈ W, t ∈ Icc T (2*T)) :
+    (∑ t ∈ W, zetaReflectionConvolution S T t) =
+      ∫ u : ℝ in Icc (-(2*T)) (2*T), reflectionShiftMass W S T u/(1+|u|) :=
+  @TaoTrudgianYang2025.sum_reflectionConvolution_eq_commonShift_integral W S hS T hT hW
+
+example {T : ℝ} (hT : 0 < T) :
+    (∫ u : ℝ in Icc (-(2*T)) (2*T), (1 : ℝ)/(1+|u|)) ≤ zetaMomentLogLoss T :=
+  @TaoTrudgianYang2025.integral_reflection_commonShift_kernel T hT
+
+example (W : Finset ℝ) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) {T L : ℝ} (hT : 0 < T) (hL : 0 < L)
+    (hW : ∀ t ∈ W, t ∈ Icc T (2*T))
+    (hlarge : L ≤ ∑ t ∈ W, zetaReflectionConvolution S T t) :
+    ∃ u ∈ Icc (-(2*T)) (2*T),
+      L/(2*zetaMomentLogLoss T) ≤ reflectionShiftMass W S T u :=
+  @TaoTrudgianYang2025.exists_reflection_common_shift W S hS T L hT hL hW hlarge
+
+example (S : Finset ℕ) (a : ℝ) :
+    0 < reflectionBandCount S a :=
+  @TaoTrudgianYang2025.reflectionBandCount_pos S a
+
+example (S : Finset ℕ) {a : ℝ} (ha : 0 < a) :
+    (S.card : ℝ) < a*(2 : ℝ)^(reflectionBandCount S a) :=
+  @TaoTrudgianYang2025.reflectionBandCount_terminal S a ha
+
+example (W : Finset ℝ) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (hsep : IsOneSeparated W) (T u : ℝ)
+    {a R : ℝ} (ha : 0 < a) (hR : 0 < R)
+    (hlow : 2*a*(W.card : ℝ) ≤ R) (hmass : R ≤ reflectionShiftMass W S T u) :
+    ∃ j ∈ Finset.range (reflectionBandCount S a), ∃ U : Finset ℝ,
+      U.Nonempty ∧ U ⊆ W.image (fun t => t+u) ∧ IsOneSeparated U ∧
+      (∀ v ∈ U, v ∈ Icc (T/2) (3*T)) ∧
+      (∀ v ∈ U, a*(2 : ℝ)^j ≤ ‖∑ n ∈ S, dirichletPhase n v‖ ∧
+        ‖∑ n ∈ S, dirichletPhase n v‖ < 2*(a*(2 : ℝ)^j)) ∧
+      R/(4*(reflectionBandCount S a : ℝ)) ≤ a*(2 : ℝ)^j*(U.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_reflection_shifted_value_family W S hS hsep T u a R ha hR hlow hmass
+
+example (W : Finset ℝ) (S : Finset ℕ)
+    (hS : ∀ n ∈ S, n ≠ 0) (hsep : IsOneSeparated W)
+    {T L a : ℝ} (hT : 0 < T) (hL : 0 < L) (ha : 0 < a)
+    (hW : ∀ t ∈ W, t ∈ Icc T (2*T))
+    (hlarge : L ≤ ∑ t ∈ W, zetaReflectionConvolution S T t)
+    (hlow : 4*a*(W.card : ℝ)*zetaMomentLogLoss T ≤ L) :
+    ∃ u ∈ Icc (-(2*T)) (2*T),
+      ∃ j ∈ Finset.range (reflectionBandCount S a), ∃ U : Finset ℝ,
+        U.Nonempty ∧ U ⊆ W.image (fun t => t+u) ∧ IsOneSeparated U ∧
+        (∀ v ∈ U, v ∈ Icc (T/2) (3*T)) ∧
+        (∀ v ∈ U, a*(2 : ℝ)^j ≤ ‖∑ n ∈ S, dirichletPhase n v‖ ∧
+          ‖∑ n ∈ S, dirichletPhase n v‖ < 2*(a*(2 : ℝ)^j)) ∧
+        L/(8*zetaMomentLogLoss T*(reflectionBandCount S a : ℝ)) ≤
+          a*(2 : ℝ)^j*(U.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_reflection_common_value_family W S hS hsep T L a hT hL ha hW hlarge hlow
+
+example (P : ZetaLargeValuePattern) :
+    0 < zetaReflectionValueFloor P :=
+  @TaoTrudgianYang2025.zetaReflectionValueFloor_pos P
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+        ∀ σ : ℝ, 1/2 ≤ σ →
+          P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+            P.ordinates.Nonempty →
+              ∃ u ∈ Icc (-(2*P.T)) (2*P.T),
+                ∃ j ∈ Finset.range (reflectionBandCount
+                    (zetaReflectionCommonInterval P.T P.N) (zetaReflectionValueFloor P)),
+                  ∃ U : Finset ℝ,
+                    U.Nonempty ∧ U ⊆ P.ordinates.image (fun t => t+u) ∧ IsOneSeparated U ∧
+                    (∀ v ∈ U, v ∈ Icc (P.T/2) (3*P.T)) ∧
+                    (∀ v ∈ U,
+                      zetaReflectionValueFloor P*(2 : ℝ)^j ≤
+                        ‖∑ n ∈ zetaReflectionCommonInterval P.T P.N, dirichletPhase n v‖ ∧
+                      ‖∑ n ∈ zetaReflectionCommonInterval P.T P.N, dirichletPhase n v‖ <
+                        2*(zetaReflectionValueFloor P*(2 : ℝ)^j)) ∧
+                    (P.ordinates.card : ℝ)*P.V*Real.sqrt P.T/
+                        (8*zetaReflectionConvolutionConstant*P.N*zetaMomentLogLoss P.T*
+                          (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+                            (zetaReflectionValueFloor P) : ℝ)) ≤
+                      zetaReflectionValueFloor P*(2 : ℝ)^j*(U.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_zetaReflection_value_family τ hτ
+
+example (S : Finset ℕ) (T u : ℝ) : reflectionShiftMass ∅ S T u = 0 := by
+  simp [reflectionShiftMass]
+
+example (W : Finset ℝ) (T u : ℝ) : reflectionShiftMass W ∅ T u = 0 := by
+  simp [reflectionShiftMass]
+
+example : reflectionShiftMass {1} {2} 1 0 = 1 := by
+  have hp : ‖dirichletPhase 2 (1 : ℝ)‖ = 1 := by
+    simpa [dirichletPhase] using Complex.norm_natCast_cpow_of_pos
+      (by norm_num : 0 < (2 : ℕ)) (-(I*(1 : ℂ)))
+  norm_num [reflectionShiftMass,zetaMellinSourceWindow,hp]
+
+example : reflectionShiftMass {1} {2} 1 (-1) = 0 := by
+  norm_num [reflectionShiftMass,zetaMellinSourceWindow]
+
+example : reflectionShiftMass {1} {2} 1 3 = 0 := by
+  norm_num [reflectionShiftMass,zetaMellinSourceWindow]
+
+example : reflectionBandCount (Finset.Icc 1 4) 1 = 3 := by
+  norm_num [reflectionBandCount]
+
+example : reflectionBandCount (∅ : Finset ℕ) 1 = 1 := by
+  norm_num [reflectionBandCount]
+
+example : (4 : ℝ) < 1*(2 : ℝ)^(reflectionBandCount (Finset.Icc 1 4) 1) := by
+  simpa using reflectionBandCount_terminal (Finset.Icc 1 4) (by norm_num : (0 : ℝ) < 1)
+
+example (W : Finset ℝ) (S : Finset ℕ) (hS : ∀ n ∈ S, n ≠ 0)
+    (hW : ∀ t ∈ W, t ∈ Icc (1 : ℝ) 2) :
+    (∑ t ∈ W, zetaReflectionConvolution S 1 t) =
+      ∫ u : ℝ in Icc (-2) 2, reflectionShiftMass W S 1 u/(1+|u|) := by
+  simpa using sum_reflectionConvolution_eq_commonShift_integral W S hS (by norm_num : (0 : ℝ) < 1)
+    (by simpa using hW)
+
+example (P : ZetaLargeValuePattern) : 0 < zetaReflectionValueFloor P :=
+  zetaReflectionValueFloor_pos P
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionCommonShiftRegression
+
+
+section ReflectionPatternNormalizationRegression
+
+open Complex Filter MeasureTheory Set
+open scoped Interval BigOperators Classical
+
+example (m b : ℕ) (i : Fin 3) :
+    reflectionDyadicBlock m b i ⊆ Finset.Icc (2^i.val*m) (2*(2^i.val*m)) :=
+  @TaoTrudgianYang2025.reflectionDyadicBlock_subset_dyadic m b i
+
+example (m b : ℕ) (i : Fin 3) :
+    reflectionDyadicBlock m b i ⊆ Finset.Icc (m+1) b :=
+  @TaoTrudgianYang2025.reflectionDyadicBlock_subset_source m b i
+
+example {m b : ℕ} (hb : b ≤ 8*m) :
+    (Finset.univ.biUnion (reflectionDyadicBlock m b)) = Finset.Icc (m+1) b :=
+  @TaoTrudgianYang2025.reflectionDyadicBlock_cover m b hb
+
+example (m b : ℕ) :
+    Set.PairwiseDisjoint (↑(Finset.univ : Finset (Fin 3))) (reflectionDyadicBlock m b) :=
+  @TaoTrudgianYang2025.reflectionDyadicBlock_pairwise_disjoint m b
+
+example {m b : ℕ} (hb : b ≤ 8*m) (t : ℝ) :
+    (∑ n ∈ Finset.Icc (m+1) b, dirichletPhase n t) =
+      ∑ i : Fin 3, ∑ n ∈ reflectionDyadicBlock m b i, dirichletPhase n t :=
+  @TaoTrudgianYang2025.sum_reflectionDyadicBlock m b hb t
+
+example {α : Type*} (W : Finset α)
+    (hW : W.Nonempty) (p : Fin 3 → α → Prop)
+    (hcover : ∀ v ∈ W, ∃ i : Fin 3, p i v) :
+    ∃ i : Fin 3, ∃ U : Finset α, U.Nonempty ∧ U ⊆ W ∧
+      (W.card : ℝ)/3 ≤ (U.card : ℝ) ∧ ∀ v ∈ U, p i v :=
+  @TaoTrudgianYang2025.exists_reflection_three_cover α W hW p hcover
+
+example {m b : ℕ} (hb : b ≤ 8*m)
+    (t A : ℝ) (hA : A ≤ ‖∑ n ∈ Finset.Icc (m+1) b, dirichletPhase n t‖) :
+    ∃ i : Fin 3, A/3 ≤ ‖∑ n ∈ reflectionDyadicBlock m b i, dirichletPhase n t‖ :=
+  @TaoTrudgianYang2025.exists_reflection_large_frequency_block m b hb t A hA
+
+example {m b : ℕ} (hb : b ≤ 8*m)
+    (W : Finset ℝ) (hW : W.Nonempty) (A : ℝ)
+    (hA : ∀ t ∈ W, A ≤ ‖∑ n ∈ Finset.Icc (m+1) b, dirichletPhase n t‖) :
+    ∃ i : Fin 3, ∃ U : Finset ℝ, U.Nonempty ∧ U ⊆ W ∧
+      (W.card : ℝ)/3 ≤ (U.card : ℝ) ∧
+      ∀ t ∈ U, A/3 ≤ ‖∑ n ∈ reflectionDyadicBlock m b i, dirichletPhase n t‖ :=
+  @TaoTrudgianYang2025.exists_reflection_frequency_family m b hb W hW A hA
+
+example {T : ℝ} (hT : 0 < T) (i : Fin 3) :
+    0 < reflectionHeightScale T i :=
+  @TaoTrudgianYang2025.reflectionHeightScale_pos T hT i
+
+example {T : ℝ} (hT : 0 < T) (i : Fin 3) :
+    T/2 ≤ reflectionHeightScale T i ∧ reflectionHeightScale T i ≤ 2*T :=
+  @TaoTrudgianYang2025.reflectionHeightScale_bounds T hT i
+
+example {T t : ℝ} (hT : 0 < T)
+    (ht : t ∈ Icc (T/2) (3*T)) :
+    ∃ i : Fin 3, t ∈ Icc (reflectionHeightScale T i) (2*reflectionHeightScale T i) :=
+  @TaoTrudgianYang2025.reflectionHeightScale_cover T t hT ht
+
+example {T : ℝ} (hT : 0 < T)
+    (W : Finset ℝ) (hW : W.Nonempty) (hheight : ∀ t ∈ W, t ∈ Icc (T/2) (3*T)) :
+    ∃ i : Fin 3, ∃ U : Finset ℝ, U.Nonempty ∧ U ⊆ W ∧
+      (W.card : ℝ)/3 ≤ (U.card : ℝ) ∧
+      ∀ t ∈ U, t ∈ Icc (reflectionHeightScale T i) (2*reflectionHeightScale T i) :=
+  @TaoTrudgianYang2025.exists_reflection_height_family T hT W hW hheight
+
+example {M : ℝ} (hM : 4 ≤ M) :
+    2 ≤ Nat.floor M ∧ M/2 ≤ (Nat.floor M : ℝ) ∧ (Nat.floor M : ℝ) ≤ M :=
+  @TaoTrudgianYang2025.reflection_floor_scale_bounds M hM
+
+example {M : ℝ} (hM : 4 ≤ M) :
+    Nat.ceil (4*M) ≤ 8*Nat.floor M :=
+  @TaoTrudgianYang2025.reflection_ceil_le_eight_floor M hM
+
+example {M : ℝ} (hM : 4 ≤ M) (i : Fin 3) :
+    1 < 2^i.val*Nat.floor M ∧
+      M/2 ≤ ((2^i.val*Nat.floor M : ℕ) : ℝ) ∧
+      ((2^i.val*Nat.floor M : ℕ) : ℝ) ≤ 4*M :=
+  @TaoTrudgianYang2025.reflection_dyadic_scale_bounds M hM i
+
+example (T N : ℝ) :
+    zetaReflectionCommonInterval T N =
+      Finset.Icc (Nat.floor (T/(4*Real.pi*N))+1)
+        (Nat.ceil (4*(T/(4*Real.pi*N)))) :=
+  @TaoTrudgianYang2025.zetaReflectionCommonInterval_eq_scaled T N
+
+example (m : ℕ) (S : Finset ℕ) (T A : ℝ)
+    (hm : 1 < m) (hS : IsIntegerInterval S)
+    (hsub : S ⊆ Finset.Icc m (2*m)) (hT : 0 < T) (hA : 0 < A)
+    (W : Finset ℝ) (hsep : IsOneSeparated W)
+    (hheight : ∀ t ∈ W, t ∈ Icc T (2*T))
+    (hlarge : ∀ t ∈ W, A ≤ ‖∑ n ∈ S, dirichletPhase n t‖) :
+    ∃ P : ZetaLargeValuePattern, P.N = (m : ℝ) ∧ P.T = T ∧
+      P.V = A ∧ P.active = S ∧ P.ordinates = W :=
+  @TaoTrudgianYang2025.exists_zetaIntervalFamilyPattern m S T A hm hS hsub hT hA W hsep hheight hlarge
+
+example {M T A : ℝ}
+    (hM : 4 ≤ M) (hT : 0 < T) (hA : 0 < A)
+    (W : Finset ℝ) (hne : W.Nonempty) (hsep : IsOneSeparated W)
+    (hheight : ∀ t ∈ W, t ∈ Icc (T/2) (3*T))
+    (hlarge : ∀ t ∈ W,
+      A ≤ ‖∑ n ∈ Finset.Icc (Nat.floor M+1) (Nat.ceil (4*M)), dirichletPhase n t‖) :
+    ∃ Q : ZetaLargeValuePattern, Q.ordinates.Nonempty ∧ Q.ordinates ⊆ W ∧
+      M/2 ≤ Q.N ∧ Q.N ≤ 4*M ∧ T/2 ≤ Q.T ∧ Q.T ≤ 2*T ∧ Q.V = A/3 ∧
+      (W.card : ℝ)/9 ≤ (Q.ordinates.card : ℝ) ∧
+      A*(W.card : ℝ)/27 ≤ Q.V*(Q.ordinates.card : ℝ) ∧
+      ∃ i k : Fin 3, Q.N = ((2^i.val*Nat.floor M : ℕ) : ℝ) ∧
+        Q.T = reflectionHeightScale T k ∧
+        Q.active = reflectionDyadicBlock (Nat.floor M) (Nat.ceil (4*M)) i :=
+  @TaoTrudgianYang2025.exists_reflection_normalized_family M T A hM hT hA W hne hsep hheight hlarge
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ N : ℝ, N₀ ≤ N → 1 < N → ∀ T : ℝ,
+        N^(τ-δ) ≤ T → 4 ≤ T/(4*Real.pi*N) :=
+  @TaoTrudgianYang2025.exists_reflection_dual_scale_window τ hτ
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+        ∀ σ : ℝ, 1/2 ≤ σ →
+          P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+            P.ordinates.Nonempty →
+              ∃ u ∈ Icc (-(2*P.T)) (2*P.T),
+                ∃ j ∈ Finset.range (reflectionBandCount
+                    (zetaReflectionCommonInterval P.T P.N) (zetaReflectionValueFloor P)),
+                  ∃ Q : ZetaLargeValuePattern,
+                    Q.ordinates.Nonempty ∧ Q.ordinates ⊆ P.ordinates.image (fun t => t+u) ∧
+                    P.T/(4*Real.pi*P.N)/2 ≤ Q.N ∧
+                    Q.N ≤ 4*(P.T/(4*Real.pi*P.N)) ∧
+                    P.T/2 ≤ Q.T ∧ Q.T ≤ 2*P.T ∧
+                    Q.V = zetaReflectionValueFloor P*(2 : ℝ)^j/3 ∧
+                    (P.ordinates.card : ℝ)*P.V*Real.sqrt P.T/
+                        (216*zetaReflectionConvolutionConstant*P.N*zetaMomentLogLoss P.T*
+                          (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+                            (zetaReflectionValueFloor P) : ℝ)) ≤
+                      Q.V*(Q.ordinates.card : ℝ) ∧
+                    ∃ i k : Fin 3,
+                      Q.N = ((2^i.val*Nat.floor (P.T/(4*Real.pi*P.N)) : ℕ) : ℝ) ∧
+                      Q.T = reflectionHeightScale P.T k ∧
+                      Q.active = reflectionDyadicBlock
+                        (Nat.floor (P.T/(4*Real.pi*P.N)))
+                        (Nat.ceil (4*(P.T/(4*Real.pi*P.N)))) i :=
+  @TaoTrudgianYang2025.exists_zetaReflection_normalized_pattern τ hτ
+
+example : reflectionDyadicBlock 4 13 0 = Finset.Icc 5 8 := by
+  norm_num [reflectionDyadicBlock]
+
+example : reflectionDyadicBlock 4 13 1 = Finset.Icc 9 13 := by
+  norm_num [reflectionDyadicBlock]
+
+example : reflectionDyadicBlock 4 13 2 = ∅ := by
+  norm_num [reflectionDyadicBlock]
+
+example : (Finset.univ.biUnion (reflectionDyadicBlock 4 13)) = Finset.Icc 5 13 :=
+  reflectionDyadicBlock_cover (by norm_num)
+
+example : reflectionHeightScale 8 0 = 4 := by norm_num [reflectionHeightScale]
+
+example : reflectionHeightScale 8 1 = 8 := by norm_num [reflectionHeightScale]
+
+example : reflectionHeightScale 8 2 = 16 := by norm_num [reflectionHeightScale]
+
+example : ∃ i : Fin 3, (24 : ℝ) ∈
+    Icc (reflectionHeightScale 8 i) (2*reflectionHeightScale 8 i) :=
+  reflectionHeightScale_cover (by norm_num) (by norm_num)
+
+example : Nat.ceil (4*(9/2 : ℝ)) ≤ 8*Nat.floor (9/2 : ℝ) :=
+  reflection_ceil_le_eight_floor (by norm_num)
+
+example : (9/2 : ℝ)/2 ≤ (Nat.floor (9/2 : ℝ) : ℝ) :=
+  (reflection_floor_scale_bounds (by norm_num : (4 : ℝ) ≤ 9/2)).2.1
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionPatternNormalizationRegression
