@@ -91,7 +91,6 @@ theorem eventually_interior_source_positive_reflected_fourier_data
   refine ⟨j, hj, U, hSepU, hRangeU, hCardU, hCoeff, hLargeU,
     hN, hNM, hScaleL, hScaleU, hLexp, hLlower, ?_⟩
   intro k hk
-  dsimp only
   let Q := 2 ^ r * Y
   let M := mediumTypeIDualCutoff T d Q
   let V : ℝ := ((3 / 4) * (T ^ (-u) / 2)) / (Nat.clog 2 A + 1 : ℕ)

@@ -1,5 +1,5 @@
 flowchart TD
-%% Current checkpoint: endpoint-one density envelope/bounded ranges and full second-derivative zeta nonexistence DONE; exact endpoint-two EPZAE-24 remains OPEN.
+%% Current checkpoint: generic exp-pair-mu and exact two-sided growth semantics DONE; EPZAE-15 remains OPEN for mu(7/10)<=3/40; whole-proof release OPEN.
 %% EPZAE-09/10/12 DONE; first two beta-table rows DONE. Remaining beta rows and D-process OPEN.
 %% Corrected powering, all nine Add-est clauses and the permanent counterexample are preserved.
 %% Earlier checkpoint prose is historical; the full EPZAE-00--41 goal is unchanged.
@@ -201,7 +201,14 @@ flowchart TD
     HFAM["EPZAE-12/13 native Heath--Brown family<br/>all integer k at least 3; exact analytic pairs DONE"]
     BT["EPZAE-13 certified beta table<br/>first two rows DONE; remaining rows/assembly OPEN"]
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
-    MU["EPZAE-15 zeta-growth bridge<br/>OPEN"]
+    ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]
+    ZGLOG["EPZAE-15 actual logarithmic-phase pair bound<br/>all positive heights + phase sign DONE"]
+    ZGWGT["EPZAE-15 genuine weighted Dirichlet blocks<br/>finite Abel + critical scale cancellation DONE"]
+    ZGCOEF["EPZAE-15 arbitrary strip-point sharp coefficients<br/>no zero membership assumed DONE"]
+    ZGSHARP["EPZAE-15 actual sharp zeta truncation<br/>closed strip and uniform remainder DONE"]
+    ZGDS["EPZAE-15 exact truncated dyadic assembly<br/>original cutoff + logarithmic count DONE"]
+    ZGBRIDGE["EPZAE-15 exp-pair-mu consumer<br/>mu(l-k) <= k with both ordinate signs DONE"]
+    MU["EPZAE-15 generic bridge DONE;<br/>mu(7/10) <= 3/40 still OPEN"]
 
     LVP["EPZAE-16 large-value patterns<br/>DONE"]
     LVS["EPZAE-17 LV and LV_zeta semantics<br/>DONE"]
@@ -299,17 +306,54 @@ flowchart TD
     CENV["EPZAE-24 endpoint-one sup/limsup density<br/>actual cardinality transfer + EReal envelope DONE"]
     CBR["EPZAE-24 endpoint-one bounded ranges<br/>corrected cardinality powering + boundary cases DONE"]
     ZSD["EPZAE-21 sharp zeta nonexistence<br/>1/2 &lt; sigma &lt;= 1; 1 &lt;= tau &lt; 2 sigma DONE"]
-    ZDT["EPZAE-24 LV-to-density transfer<br/>actual endpoint-one predicate + envelope + bounded ranges DONE;<br/>exact endpoint 2 + source corollaries OPEN"]
+    RPOS["EPZAE-21/24 positive reflected family<br/>both signs; exact isometry, separation and cardinality DONE"]
+    RSRC["EPZAE-21/24 actual interior source reflection<br/>literal coefficients, physical scales and thresholds DONE"]
+    RFCO["EPZAE-21/24 reflected coefficient-one Fourier entry<br/>exact M^sigma normalization and bounded shifts DONE"]
+    RSFC["EPZAE-21/24 actual reflected factory consumer<br/>same selected block, family and energy displacement DONE"]
+    RIND["EPZAE-21/24/33 all-index source reflection<br/>both signs + actual dyadic labels + full energy DONE"]
+    RIGE["EPZAE-21/24/33 indexed reflected geometry<br/>actual thresholds and physical scales at every index DONE"]
+    RRAD["EPZAE-21/24/33 reflected Fourier radius<br/>uniform order before all physical scales DONE"]
+    RIFC["EPZAE-21/24/33 all-index source Fourier consumer<br/>same indices + literal coefficients + combined energy loss DONE"]
+    RNTH["EPZAE-21/24/33 normalized reflected source<br/>actual threshold loss + linked scales absorbed DONE"]
+    RNHW["EPZAE-21/24/33 four positive height windows<br/>physical near-two scale and size conditions DONE"]
+    RNCO["EPZAE-21/24/33 compact zeta color transfer<br/>all occupied dyadic/separation fibers + empty cases DONE"]
+    RNST["EPZAE-21/24/33 actual interior source consumers<br/>normalization, geometry and every color discharged DONE"]
+    RNLS["EPZAE-21/24/33 actual reflected finite losses<br/>cutoff bridge + two/nine displacement powers DONE"]
+    RNUB["EPZAE-21/24/33 fixed-line interior branch<br/>uniform C*T^(B+epsilon) cardinality and energy DONE"]
+    RGLB["EPZAE-21/24/33 global source labels<br/>actual long tail; all multiplicity-copy indices retained DONE"]
+    RSLU["EPZAE-21/24/33 shifted-line interior uniformity<br/>common eta, d and C before the source line DONE"]
+    RGIC["EPZAE-21/24/33 actual detector interior 1<tau<2 fibers<br/>global labels + cardinality/energy consumers DONE"]
+    RGTE["EPZAE-21/24/33 terminal source exclusion<br/>actual point impossible; every terminal index type empty DONE"]
+    RGCL["EPZAE-21/24/33 occupied global classification<br/>actual detector: bottom or interior with tau>1 DONE"]
+    RDSU["EPZAE-21/24/33 direct source support<br/>literal annulus + two coefficient-one polynomials DONE"]
+    RDFX["EPZAE-21/24/33 fixed-profile Fourier extraction<br/>arbitrary-order tail + all-index bounded shifts DONE"]
+    RDNT["EPZAE-21/24/33 direct normalization and geometry<br/>common order, subpower radius, tau in [2,1/a] DONE"]
+    RDBD["EPZAE-21/24/33 direct interior scale>=2<br/>common shifted-line cardinality/energy epsilon bounds DONE"]
+    RDGC["EPZAE-21/24/33 actual detector direct fibers<br/>global labels + full multiplicity-copy consumers DONE"]
+    RBSX["EPZAE-24/33 bottom-source all-index extraction<br/>unit-bounded actual coefficients;<br/>floor scales in [T^(a/2),T^(2a)] DONE"]
+    RBSN["EPZAE-24/33 bottom-source normalization<br/>both logarithmic losses + shifted-line thresholds DONE"]
+    RBSB["EPZAE-24/33 bottom global detector fibers<br/>general-LV cardinality and full energy bounds DONE"]
+    RGAB["EPZAE-24/33 all occupied global blocks<br/>one common parameter window; bottom/reflected/direct DONE"]
+    RGAS["EPZAE-24/33 single-label full Type-I classes<br/>same multiplicity-copy fibers + outer losses DONE"]
+    EP2SL["EPZAE-24/33 endpoint-two positive slab<br/>Type-I/II source order + actual multiplicities DONE"]
+    EP2ZE["EPZAE-24/33 endpoint-two symmetric rectangle<br/>actual density and energy predicates DONE"]
+    EP2EX["EPZAE-24/33 endpoint-two sup/limsup<br/>printed cardinality + strengthened energy theorem DONE"]
+    EP2CO["EPZAE-24/33 exact source corollaries<br/>bounded suprema + empty intervals;<br/>two-thirds range + subdivision DONE"]
+    ZDT["EPZAE-24 LV-to-density transfer<br/>printed endpoint-two sup/limsup;<br/>all four exact density corollaries DONE"]
     CD["EPZAE-25 classical density bridges<br/>DONE"]
     HBD["EPZAE-26 improved Heath--Brown density<br/>OPEN"]
-    IBD["EPZAE-27 improved Bourgain density<br/>OPEN"]
+    BDCUT["EPZAE-27 exact cutoff and slope<br/>Jutila k=4 overlap DONE"]
+    BDCERT["EPZAE-27 two closed density cells<br/>all five affine terms + side conditions DONE"]
+    BDLV["EPZAE-27 actual Bourgain/Jutila consumers<br/>uniform general LV on [2 tau0/3,tau0] DONE"]
+    BDZV["EPZAE-27 actual twelfth-moment zeta LV<br/>exact [2,4 tau0/3) range DONE"]
+    IBD["EPZAE-27 improved Bourgain density<br/>full max formula + both closed subranges DONE"]
     BZD["EPZAE-28 Bourgain pair-to-density theorem<br/>OPEN"]
     OBD["EPZAE-29 optimized eight-piece bound<br/>OPEN"]
     ZTAB["EPZAE-30 best-known density envelope<br/>OPEN"]
 
     AE["EPZAE-31 additive-energy semantics<br/>DONE"]
     ER["EPZAE-32 energy exponents and regions<br/>DONE"]
-    ET["EPZAE-33 energy transfer<br/>zeroe-from-large source inequality DONE;<br/>actual Type-I/II + multiplicities DONE;<br/>symmetric rectangle + sup/limsup DONE;<br/>general bounded-scale reduction DONE;<br/>zeta endpoint 2 + final corollary OPEN"]
+    ET["EPZAE-33 energy transfer<br/>actual Type-I/II + multiplicities + symmetric rectangle;<br/>source inequality + corrected powering;<br/>exact endpoint-two bounded-supremum corollary DONE"]
     PL62["Printed Lemma 62: DISPROVED<br/>kernel-checked counterexample PRESERVED"]
     PW["EPZAE-34 corrected cardinality/energy powering<br/>actual normalized powered patterns;<br/>uniform limits + compactness;<br/>full two-witness theorem DONE"]
     PWC["EPZAE-34 cardinality witness<br/>rho/k exact; energy at most rho-star/k;<br/>independent existential sCard; DONE"]
@@ -798,6 +842,18 @@ flowchart TD
     DU --> BT
     BT --> NEP
     NEP --> MU
+    ML --> ZGDEF
+    EP --> ZGLOG
+    ED --> ZGLOG
+    ZGLOG --> ZGWGT
+    GM --> ZGCOEF
+    ZGCOEF --> ZGSHARP
+    GM --> ZGSHARP
+    ZGWGT --> ZGDS
+    ZGSHARP --> ZGDS
+    ZGDEF --> ZGBRIDGE
+    ZGDS --> ZGBRIDGE
+    ZGBRIDGE --> MU
 
     TC --> LVP
     AB --> LVP
@@ -974,12 +1030,113 @@ flowchart TD
     CBR --> ZDT
     GM --> ZSD
     ZSD --> ZLV
+    GM --> RPOS
+    GM --> RSRC
+    RPOS --> RSRC
+    GM --> RFCO
+    ML --> RFCO
+    RSRC --> RSFC
+    RFCO --> RSFC
+    RSFC --> ZDT
+    GM --> RIND
+    AE --> RIND
+    RIND --> RIGE
+    GM --> RIGE
+    RFCO --> RRAD
+    RFCO --> RIFC
+    RIGE --> RIFC
+    RRAD --> RIFC
+    RIFC --> ZDT
+    RIFC --> ET
+    RIFC --> RNTH
+    RIGE --> RNTH
+    ML --> RNHW
+    CUNI --> RNCO
+    ER --> RNCO
+    RNHW --> RNCO
+    RNTH --> RNST
+    RNCO --> RNST
+    RNHW --> RNST
+    GM --> RNLS
+    RIGE --> RNLS
+    RNST --> RNUB
+    RNLS --> RNUB
+    RNUB --> ZDT
+    RNUB --> ET
+    GM --> RGLB
+    CSPLIT --> RGLB
+    RNST --> RSLU
+    RNLS --> RSLU
+    RGLB --> RGIC
+    RSLU --> RGIC
+    GM --> RGTE
+    RGLB --> RGTE
+    RGIC --> ZDT
+    RGIC --> ET
+    RGTE --> ZDT
+    RGTE --> ET
+    RGTE --> RGCL
+    RGLB --> RGCL
+    RGCL --> ZDT
+    RGCL --> ET
+    GM --> RDSU
+    RDSU --> RDFX
+    ML --> RDFX
+    ER --> RDFX
+    RDFX --> RDNT
+    RDNT --> RDBD
+    RNHW --> RDBD
+    RNCO --> RDBD
+    RNLS --> RDBD
+    RGLB --> RDGC
+    RDBD --> RDGC
+    RDGC --> ZDT
+    RDGC --> ET
+    GM --> RBSX
+    RGLB --> RBSX
+    RBSX --> RBSN
+    RBSN --> RBSB
+    CUNI --> RBSB
+    RBSB --> RGAB
+    RSLU --> RGAB
+    RDBD --> RGAB
+    RGCL --> RGAB
+    RGAB --> RGAS
+    RGLB --> RGAS
+    RGAS --> EP2SL
+    CII --> EP2SL
+    CSPLIT --> EP2SL
+    CLOSS --> EP2SL
+    ER --> EP2SL
+    EP2SL --> EP2ZE
+    CGLB --> EP2ZE
+    EP2ZE --> EP2EX
+    EP2ZE --> EP2CO
+    PW --> EP2CO
+    LVPOW --> EP2CO
+    LVSUB --> EP2CO
+    CD --> EP2CO
+    EP2EX --> ZDT
+    EP2CO --> ZDT
+    EP2EX --> ET
+    EP2CO --> ET
     ZDT --> HBD
     ZDT --> IBD
     NEP --> BZD
     SRC --> BZD
     BZD --> OBD
     RC --> IBD
+    RC --> BDCUT
+    BDCUT --> BDCERT
+    BDCERT --> BDLV
+    JRF --> BDLV
+    BDICH --> BDLV
+    LVCW --> BDLV
+    ZTL --> BDZV
+    BDCUT --> BDZV
+    BDLV --> IBD
+    BDZV --> IBD
+    EP2CO --> IBD
     RC --> OBD
     HBD --> ZTAB
     IBD --> ZTAB
@@ -1200,7 +1357,7 @@ flowchart TD
     ER -->|actual feasible-region witnesses| JER
     PWC -->|independent cardinality powering| JER
     JER -->|remaining exact energy projections| EC
-    class JGE,JPM,JPF,JHB,JPS,LMS,JRF,JER,EC3G,EC3Z,EC3,EC4G,EC4Z,EC4,EC5G,EC5Z,EC5,EC6G,EC6Z,EC6S,EC6,EC7G,EC7Z,EC7,EC8G,EC8Z,EC8,CCOUNT,CUNI,CIF,CIS,CIFIB,CII,CSPLIT,CLOSS,CSLB,CGLB,CZTR,CENV,CBR,ZSD done;
+    class JGE,JPM,JPF,JHB,JPS,LMS,JRF,JER,EC3G,EC3Z,EC3,EC4G,EC4Z,EC4,EC5G,EC5Z,EC5,EC6G,EC6Z,EC6S,EC6,EC7G,EC7Z,EC7,EC8G,EC8Z,EC8,CCOUNT,CUNI,CIF,CIS,CIFIB,CII,CSPLIT,CLOSS,CSLB,CGLB,CZTR,CENV,CBR,ZSD,RPOS,RSRC,RFCO,RSFC,RIND,RIGE,RRAD,RIFC,RNTH,RNHW,RNCO,RNST,RNLS,RNUB,RGLB,RSLU,RGIC,RGTE,RGCL,RDSU,RDFX,RDNT,RDBD,RDGC,RBSX,RBSN,RBSB,RGAB,RGAS,EP2SL,EP2ZE,EP2EX,EP2CO,ZDT,ET done;
 
     GM --> DZ
     ER --> DZ
@@ -1455,13 +1612,15 @@ flowchart TD
     classDef open fill:#ffd9d9,stroke:#a32121,color:#3d0b0b,stroke-width:2px;
     classDef preserved fill:#eee5ff,stroke:#69469b,color:#35204f,stroke-width:2px;
     class ML,ED,GM,PY,SRC,GFN available;
+    class ZGDEF,ZGLOG,ZGWGT,ZGCOEF,ZGSHARP,ZGDS,ZGBRIDGE done;
     class HBJ,HBP,HBB,HBT done;
     class SCG,SCH,SCB,SKF,SPW,SQM,SFC,SPM,SSV,SUM,SQC,SSM,SMT,SWL,SBM,SSR done;
     class SQI,SLR done;
     class SMC,SPE,SCJ,SWT,SQF,SBF,SBP,SQT,SQH,SQV,SQX,SQS,SQE,SQZ,SQA,SQR,SQB,SQU,SRA,SQD,SDC,SPC,SFR,SCOV,SLMOM,SBN,SLOC,SDY,SBOOT,SINIT,SREC,SMIT,SNMOM,SRBL,SREND,SRMOM,SIP,SSHK,SXC,SDIFF,SFD,SIDX,STAY,SPH,SEPI,SNRM,SRXT,SXRD,SMJ,S4M,SENT,SRSC,SGMOD,SSENT,SLEP,SWIN,SRECIP,SFIN done;
     class COPT,CLOW,SCM,BHDU,DGC,HSEC,HFAM,LVCW,LVPOW,LVSUB,LVHUX,RSM,RSC,LVHALF,BPH,BVAR,BPAT,LVLOW,ELC done;
     class TC,RC,AB,EP,LVP,LVS,GMB,ZCB,ZDE,CD,AE,ER,PW,PWC,PWE,HBE,HBA,HUX,EC1G,EC1Z,ZMK,ZMI,ZMU,ZPE,ZPS,ZSC,ZND,ZSQ,ZGA,ZGQ,ZDL,ZGP,ZGT,ZAMP,ZWG,ZFG,ZDS,ZVT,ZK,ZAP,ZAM,ZAY,ZAC,ZCR,ZFT,ZSR,ZFE,ZBT,ZSE,ZMN,ZVB,ZDA,ZMG,ZPC,ZNH,ZFH,ZPH,ZLC,ZGK,ZEO,ZL3,ZQ44,ZOC,ZVW,ZPG,ZHR,ZHM,ZLF,Z4K,Z4C,ZGB,ZTM,ZTL,EC1ZA,EC1S,EC1,EC2G,ZP6,EC2Z,EC2 done;
-    class GEN,PR,BT,NEP,MU,LVC,ZLV,ZAT,ZDT,HBD,IBD,BZD,OBD,ZTAB,ET,PUB,SEM,REL open;
+    class GEN,PR,BT,NEP,MU,LVC,ZLV,ZAT,HBD,BZD,OBD,ZTAB,PUB,SEM,REL open;
+    class BDCUT,BDCERT,BDLV,BDZV,IBD done;
     class PL62 preserved;
     class DUC,DUU,DUS,DUE,DUF,DUL,CSP,DSI,DLG,DIS,DSP done;
     class DHE,DHR,DHU,DHA done;
@@ -9483,7 +9642,7 @@ flowchart TD
 %% are unchanged (24 checked). The whole-proof goal remains open.
 %%
 
-%% ## Endpoint-one density envelopes and sharp zeta nonexistence — current checkpoint
+%% ## Endpoint-one density envelopes and sharp zeta nonexistence — previous checkpoint
 %%
 %% The actual endpoint-one cardinality-to-density predicate now has its
 %% supremum/limsup formulation and a bounded-range corollary using corrected
@@ -9590,4 +9749,685 @@ flowchart TD
 %% The graph has 395 nodes and 1,018 edges, with no duplicate/missing endpoints,
 %% class conflicts or unclassified nodes. All 42 aggregate checkbox states
 %% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%% ## Positive reflected source and Fourier entry — previous checkpoint
+%%
+%% The actual interior Type-I source now produces a separated reflected family
+%% at genuine positive ordinates, with literal coefficients, physical scales,
+%% thresholds and cardinality loss. Its output is then explicitly consumed by
+%% bounded coefficient-one Fourier extraction. This is proved analytic entry
+%% work; the endpoint-two density transfer remains OPEN.
+%%
+%% `extract_positive_ordinate_reflected_block` treats both retained Poisson
+%% signs. For the negative sign it uses the actual isometry v -> 3*T-v.
+%% The finite image has exactly the same cardinality and remains one-separated.
+%% Both signs yield positive ordinates in [T/2,5T/2] and the exact loss
+%%
+%% ```text
+%% card(W) <= 2 * (2 * (2*ceil(H)+1)) * clog(2,M) * card(U).
+%% ```
+%%
+%% The conclusion has the literal real normalized reflected coefficients.
+%% It does not merely supply, independently for each point, a norm-equivalent
+%% positive ordinate without separation information.
+%%
+%% `eventually_interior_source_positive_reflected_data` invokes the native
+%% actual smooth-source Poisson reflection, kernel and tail bounds. It retains
+%% the source dyadic scale Q, natural dual cutoff M, detector threshold and
+%% normalized reflected threshold L. The selected scale is exactly 2^j < M.
+%% The physical logarithmic scale lies between 1/(1/2+d) and the proved fixed
+%% upper bound. Both the full source-dependent lower bound for L and
+%% `T^g/Cref <= L` are exported, with g > 0. No detached exponent or
+%% assumed cardinality estimate is substituted.
+%%
+%% The coefficient identities prove, on the actual positive natural support,
+%%
+%% ```text
+%% normalizedReflected(sigma,M,n)
+%%   = M^(-sigma) * classicalFixedLine(M,-sigma,n).
+%% ```
+%%
+%% The exact polynomial and norm identities retain this factor. In particular,
+%% M^sigma times the reflected norm equals the fixed-line norm when M > 0.
+%% The cutoff, its right endpoint and the excluded n=0 term are handled
+%% explicitly. Nonnegative sigma is not silently dropped from the native
+%% unit-coefficient bound.
+%%
+%% `exists_classicalReflected_explicitBoundedOrdinate_family` applies the
+%% proved arbitrary-order Fourier extraction at real parameter -sigma.
+%% For reflected threshold L it uses sourceV=M^sigma*L in both the radius
+%% and the coefficient-one threshold
+%%
+%% ```text
+%% sourceV / (4*N^sigma*classicalTypeIFourierL1(-sigma)).
+%% ```
+%%
+%% The Fourier step retains its input index type: the selected reflected
+%% family. Its full perturbation-energy inequality is also exported; neither
+%% powering nor the disproved s-prime/s scaling is used here. This does not
+%% transfer energy from the entire original source W through the earlier
+%% cardinality-only subset selection. That all-index energy bridge remains open.
+%%
+%% `eventually_interior_source_positive_reflected_fourier_data` unpacks the
+%% actual reflection factory and invokes this Fourier theorem on that same
+%% selected block and family, for every derivative order k > 1. Thus the
+%% factory-to-Fourier edge is a kernel-checked composition, not an inferred
+%% relationship between compatible-looking standalone statements.
+%%
+%% Five production modules are root-imported, explicitly audited and included
+%% in the PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+%% `ClassicalReflectedCardinality`, `ClassicalReflectedSourceData`,
+%% `ClassicalReflectedCoefficients`, `ClassicalReflectedFourier` and
+%% `ClassicalReflectedSourceFourier`.
+%% Eight exact public signatures and twelve further fixtures check literal
+%% coefficient values, cutoff boundaries, the negative-sigma guard, exact
+%% normalization, sign reversal, interval preservation and image cardinality.
+%%
+%% Remaining: absorb the actual Fourier radius and threshold losses; re-separate
+%% the shifted family; apply compact-range zeta bounds near tau=2; and connect
+%% all source branches back to the multiplicity-weighted zero-copy partition.
+%% The final endpoint-two cardinality/energy transfers and source corollaries
+%% are not claimed. EPZAE-21/24/33 and all aggregate checkbox states are unchanged.
+%%
+%% The endpoint-one density results, full second-derivative zeta nonexistence,
+%% EPZAE-18, corrected cardinality/energy powering, Heath--Brown energy relation,
+%% all nine repaired Add-est clauses and permanent counterexample remain intact.
+%% Other classical, exponent-pair and release obligations remain open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,057 production files, 1,531 scanned Lean
+%%   files and 10,389 build jobs. The audit covers 8,309 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,554 total).
+%%   All eight new public theorems occur
+%%   exactly once in the explicit audit, with only permitted standard logical
+%%   axioms. The [extension log](logs/tao-trudgian-yang-build-20260923-214023-ae130de3.log) has zero errors,
+%%   warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260923_214539.log) and
+%%   [manifest](../../logs/foundation_freeze_20260923_214539.json).
+%% - All 1,552 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The five module files and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-positive-reflection-20260923-214023-ae130de3.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% The owner advanced HEAD during development; no agent commit or push was
+%% performed. All 509 protected tracked files are byte-identical to current
+%% HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 399 nodes and 1,027 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. All 42 aggregate checkbox states
+%% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%% ## All-index reflected source and uniform Fourier radius — previous checkpoint
+%%
+%% The actual interior Type-I source now passes through reflection and
+%% coefficient-one Fourier extraction on its original finite index type.
+%% Every index, including coincident ordinates and multiplicity copies, is
+%% retained. This closes the all-index displacement bridge missing from the
+%% previous selected-subset construction; it does not yet prove the final
+%% endpoint-two cardinality or energy transfer.
+%%
+%% Reality of the literal normalized reflected coefficients gives exact norm
+%% symmetry for the full wide polynomial. `exists_positive_reflected_shift`
+%% therefore merges both native Poisson sign alternatives before any dyadic
+%% choice. `exists_reflected_bounded_dyadic_family` chooses a bounded shift
+%% and an actual dyadic label for every original index. It proves
+%%
+%% ```text
+%% E_1(W) <= (4*ceil(1+4*H)+6) * E_1(W').
+%% ```
+%%
+%% No large-cardinality subset is used to stand in for the original energy.
+%% The source consumer uses a finite image only to obtain the native
+%% pointwise analytic reflection and pulls the result back to every index.
+%% It exports shifts at most T^d, positive ordinates in [T/2,5T/2],
+%% the literal reflected coefficients and the full source-energy inequality.
+%%
+%% `eventually_interior_source_indexed_reflected_data` also exports the
+%% actual common threshold L, its exact source-dependent lower bound,
+%% T^g/Cref <= L with g>0, and for each retained N=2^label:
+%% 1<N<M and logarithmic scale between 1/(1/2+d) and the fixed upper bound.
+%% A singleton norm estimate is used only pointwise to bound L by N;
+%% the original indexed family remains intact in the energy conclusion.
+%%
+%% For sigma>=0, N<=M and L>=1, the factor M^sigma cancels from the
+%% Fourier-radius base estimate. The theorem
+%% `exists_order_eventually_classicalReflectedFourierRadius_le_rpow`
+%% chooses one derivative order k>1 before T,M,N,L, and bounds the actual
+%% radius by T^theta for every theta>0.
+%%
+%% `eventually_interior_source_indexed_fourier_data` consumes the actual
+%% indexed reflection output, derives L>=1 and N<=T, and applies
+%% coefficient-one extraction at each actual dyadic length with that same k.
+%% It retains the original index type and labels, the literal cutoff
+%% Ioc(N,min(2*N,M)), the exact normalized threshold
+%%
+%% ```text
+%% M^sigma * L / (4*N^sigma*classicalTypeIFourierL1(-sigma)),
+%% ```
+%%
+%% and the uniform radius estimate. Its combined displacement is
+%% D=T^d+2*pi*T^theta; its energy conclusion is for the entire original source:
+%%
+%% ```text
+%% E_1(W) <= (4*ceil(1+4*D)+6) * E_1(W_final).
+%% ```
+%%
+%% Six production modules are root-imported, explicitly audited and included
+%% in the PowerShell inventory behind `run_tao_trudgian_yang_build.bat`:
+%% `ClassicalReflectedRadius`, `ClassicalReflectedIndexed`,
+%% `ClassicalReflectedIndexedSource`, `ClassicalReflectedIndexedGeometry`,
+%% `ClassicalReflectedIndexedFourier` and
+%% `ClassicalReflectedIndexedSourceFourier`.
+%% Nine exact-signature regressions and twelve further fixtures cover both
+%% signs, coincident-index energy versus set-image cardinality, empty input,
+%% combined displacement, dyadic endpoints, the near-two scale and an
+%% instantiated uniform-radius theorem.
+%%
+%% Remaining: convert the exported threshold to the required N-power bound;
+%% separate every shifted color without losing multiplicity; apply uniform
+%% zeta bounds near tau=2; and assemble the lower-scale, near-endpoint and
+%% terminal source branches with the actual zero-copy partition.
+%% EPZAE-21/24/33 and all aggregate checkbox states remain unchanged.
+%% The endpoint-one transfers, corrected cardinality/energy powering,
+%% Heath--Brown relation, all nine repaired Add-est clauses and the permanent
+%% counterexample are preserved. Other whole-proof obligations remain open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,063 production files, 1,537 scanned Lean
+%%   files and 10,395 build jobs. The audit covers 8,329 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,574 total).
+%%   All nine new public theorems occur
+%%   exactly once in the explicit audit, with only permitted standard logical
+%%   axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-003630-1cb927cd.log) has zero errors,
+%%   warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_004011.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_004011.json).
+%% - All 1,558 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The six module files and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-all-index-reflection-20260924-003630-1cb927cd.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are byte-identical to current
+%% HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 403 nodes and 1,036 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. All 42 aggregate checkbox states
+%% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%% ## Fixed-line interior reflected source bounds — previous checkpoint
+%%
+%% The fixed-line interior smooth Type-I branch now has uniform
+%% C*T^(B+epsilon) bounds for both its cardinality and its full indexed
+%% additive energy. These are deductions from the intended compact zeta
+%% large-value or zeta-energy hypotheses on [2,U], where
+%% U=2/((sigma-1/2)/2), with 1/2<sigma<1 and B>=0.
+%% The actual source branch has 1<tau<2, Q=2^r*Y, r>=2,
+%% Y+1<=Q/2, 2*Q<=A, and A=floor(sharpZetaCutoff(T)).
+%% Other branches and the global endpoint-two transfer remain OPEN.
+%%
+%% The two source-facing consumers are:
+%%
+%% - `classicalReflected_uniform_interior_source_cardinality_bound`;
+%% - `classicalReflected_uniform_interior_source_energy_bound`.
+%%
+%% For every epsilon>0 they choose a positive perturbation exponent d and
+%% C>=1 before u, the physical scales and the indexed family. For each
+%% 0<=u<=d one height threshold then works for every actual source family.
+%% The conclusion is respectively card(ι)<=C*T^(B+epsilon) or
+%% E_1(W)<=C*T^(B+epsilon). All original indices are retained, and the
+%% hypothesis is the literal smooth source-polynomial largeness condition,
+%% not a supplied replacement family or assumed cardinality/energy estimate.
+%%
+%% The threshold normalization keeps the full source-dependent exponent.
+%% Its comparison with the actual upper length scale loses at most u+3*d.
+%% The favorable M^sigma/N^sigma factor is proved to be at least one for
+%% N<=M and sigma>=0. A uniform absorption theorem uses the exact identity
+%% T=N^(log_N T), the upper logarithmic scale U and the explicit small-loss
+%% condition U*(u+3*d)<=delta/2. The actual source consumer derives the
+%% coefficient-one lower threshold N^(sigma-delta) from these facts.
+%%
+%% Four literal positive height intervals cover [T/4,4*T], with lower
+%% heights T/4,T/2,T,2*T. Their logarithmic heights are within the chosen
+%% window of [2,U]. The compact zeta constants are chosen before the
+%% physical scales and families. No height translation or coefficient twist
+%% is used. All four cardinality fibers are counted; the energy deduction
+%% uses the proved four-fiber energy inequality, not a cardinality-selected
+%% subset. The corresponding explicit height costs are 4 and 2304.
+%%
+%% The bounded perturbation of the original separated family supplies its
+%% actual unit-bin multiplicity bound. The coloring is refined by the actual
+%% dyadic label. Every occupied color has the required scale and threshold;
+%% empty fibers and empty index/label types are handled explicitly.
+%% Both resulting bounds are for the entire original indexed source family.
+%%
+%% The physical consumer derives the large-length, near-two and positive
+%% window conditions from the source factory. Its explicit logarithmic and
+%% ceiling losses are then bounded: the cardinality loss is at most
+%% Kcard*T^(2*d), and the energy loss at most Kenergy*T^(9*d).
+%% The actual dual cutoff is proved to lie below the sharp source cutoff.
+%% Choosing d within the threshold, scale-window and epsilon budgets
+%% therefore yields the two stated source bounds with no residual radius,
+%% normalization, coloring or logarithmic-loss hypothesis.
+%%
+%% Eleven new production modules are root-imported, explicitly audited and
+%% covered by the PowerShell inventory behind
+%% `run_tao_trudgian_yang_build.bat`:
+%% `ClassicalReflectedThreshold`, `ClassicalReflectedThresholdAbsorption`,
+%% `ClassicalReflectedNormalizedSource`, `ClassicalReflectedHeightWindows`,
+%% `ClassicalReflectedCompactTransfer`, `ClassicalReflectedColorGeometry`,
+%% `ClassicalReflectedColorTransfer`, `ClassicalReflectedPhysicalWindows`,
+%% `ClassicalReflectedSourceTransfer`, `ClassicalReflectedLoss` and
+%% `ClassicalReflectedSourceBounds`.
+%% Twenty-two exact public signatures and twenty additional fixtures check
+%% closed height boundaries, literal color assignments, exponent-margin
+%% endpoints, exact finite losses, empty cutoffs and uniform physical scale
+%% conditions. Standard logical axioms are permitted; no project axiom or
+%% admitted proof is introduced.
+%%
+%% Remaining: match the detector's actual source-line and threshold
+%% conventions to this fixed-line branch; handle the lower-scale,
+%% near-endpoint and terminal source cases; and assemble every source and
+%% zero-copy color with actual analytic multiplicities. The exact endpoint-two
+%% cardinality/energy transfers and final corollaries are not claimed.
+%% EPZAE-21/24/33 and all aggregate checkbox states remain unchanged.
+%%
+%% The endpoint-one transfers, corrected two-witness powering, Heath--Brown
+%% relation, all nine repaired Add-est clauses and the permanent singleton
+%% counterexample remain intact. The full EPZAE-00--41 goal is still open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,074 production files, 1,548 scanned Lean
+%%   files and 10,406 build jobs. The audit covers 8,374 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,619 total).
+%%   All 22 new public theorems occur
+%%   exactly once in the explicit audit, with only permitted standard logical
+%%   axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-014058-1fb323df.log) has zero errors,
+%%   warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_014526.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_014526.json).
+%% - All 1,569 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The eleven module files and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-interior-source-20260924-014058-1fb323df.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are byte-identical to current
+%% HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 409 nodes and 1,051 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. All 42 aggregate checkbox states
+%% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%%
+%% ## Global detector entry and shifted-line interior bounds — previous checkpoint
+%%
+%% Seven production modules add thirteen audited public theorems and twenty
+%% semantic regressions (thirteen exact signatures and seven boundary/empty
+%% or multiplicity fixtures).
+%%
+%% The actual Type-I detector's full long-tail assertion now supplies global
+%% smooth labels on every original multiplicity-copy index. These are the
+%% global `Y,A` blocks, not the local two-block smoothing of one sharp
+%% polynomial. The exact cardinality partition and four-fiber energy
+%% inequality are retained; no cardinality-selected subfamily replaces the
+%% energy source.
+%%
+%% `classicalReflected_uniform_shifted_line_source_cardinality_bound` and
+%% `classicalReflected_uniform_shifted_line_source_energy_bound` choose one
+%% line window, displacement exponent and constant before the source line
+%% and threshold loss. They use genuine upstream zeta large-value bounds on
+%% `[2, 8/(sigma-1/2)]`. The two
+%% `classicalTypeI_global_interior_source_*_bounds` theorems consume the
+%% actual detector classes and bound every legal interior fiber with
+%% `1 < tau < 2` by `C*T^(B+epsilon)`.
+%%
+%% Terminal blocks are impossible pointwise, hence their entire index types
+%% are empty. `eventually_classicalTypeI_global_source_classification`
+%% additionally proves that every occupied global label is either one of the
+%% two bottom blocks or an interior block with actual physical `tau > 1`.
+%% The source-line parameter order is non-circular: the common window and
+%% loss budget precede the later Type-II-dependent choice of shifted line.
+%%
+%% Still open: estimates for the bottom blocks and direct interior
+%% `tau >= 2`, their joint loss budget and full multiplicity-copy slab
+%% assembly, and the printed endpoint-two density/energy corollaries.
+%% EPZAE-21/24/33 and all aggregate checkbox states remain unchanged.
+%% The endpoint-one results, corrected two-witness powering, Heath--Brown
+%% relation, all nine repaired Add-est clauses and singleton counterexample
+%% are preserved. The whole-proof goal remains open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,081 production files, 1,555 scanned Lean
+%%   files and 10,413 build jobs. The audit covers 8,405 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,650 total).
+%%   All 13 new public theorems occur
+%%   exactly once in the explicit audit, with only permitted standard logical
+%%   axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-021500-212125e6.log) has zero errors,
+%%   warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_021842.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_021842.json).
+%% - All 1,576 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The seven module files and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-global-source-20260924-021500-212125e6.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are byte-identical to current
+%% HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 414 nodes and 1,067 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. All 42 aggregate checkbox states
+%% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%%
+%% ## Direct interior source bounds and detector consumers — previous checkpoint
+%%
+%% Thirteen production modules add thirty public theorems and forty-six
+%% semantic regressions (thirty exact signatures and sixteen boundary
+%% fixtures). The new source branch is conditional only on the displayed
+%% upstream coefficient-one zeta large-value/cardinality or energy bounds.
+%%
+%% The actual global interior block is restricted to its literal annulus
+%% `(Q/2,2Q]`, with `Q=2^r*floor(T^a)`. Fourier inversion uses one fixed
+%% Schwartz profile and gives exactly the two coefficient-one dyadic lengths
+%% `Q/2` and `Q`. The arbitrary-order tail, bounded ordinate shift and
+%% full-index energy perturbation are proved without selecting a
+%% cardinality-only subfamily. One derivative order precedes the source line;
+%% profile constants affect only the eventual height threshold.
+%%
+%% The physical floor cutoff proves `N >= T^a` for both lengths. If the
+%% original source has `tau >= 2`, both actual logarithmic scales lie in
+%% `[2,1/a]`. The global smooth-label loss, Fourier mass, source threshold,
+%% height windows and every separation color are discharged and their
+%% finite losses absorbed.
+%%
+%% `classicalDirect_uniform_shifted_line_source_cardinality_bound` and
+%% `classicalDirect_uniform_shifted_line_source_energy_bound` give
+%% `C*T^(B+epsilon)` with a common line window, displacement exponent and
+%% constant chosen before the source line and threshold loss. The two
+%% `classicalTypeI_global_direct_source_*_bounds` theorems consume the
+%% actual detector's global-label fibers, retaining the exact original
+%% cardinality partition and four-fiber energy decomposition.
+%%
+%% Both interior ranges now have actual detector consumers: reflected
+%% `1 < tau < 2` and direct `tau >= 2`. Still open are the two bottom
+%% source blocks and the common-parameter, single-labeling full slab
+%% assembly with Type II and analytic multiplicities, followed by the
+%% printed endpoint-two density/energy corollaries. Separate existential
+%% label choices from the two branch consumers must not be spliced together.
+%% EPZAE-21/24/33 and all aggregate checkbox states remain unchanged.
+%% The repaired powering, Heath--Brown relation, nine Add-est clauses and
+%% permanent singleton counterexample remain intact.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,094 production files, 1,568 scanned Lean
+%%   files and 10,426 build jobs. The audit covers 8,466 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,711 total).
+%%   All 30 new public theorems occur
+%%   exactly once in the explicit audit, with only permitted standard logical
+%%   axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-025840-866df8ea.log) has zero errors,
+%%   warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_030835.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_030835.json).
+%% - All 1,589 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The thirteen module files and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-direct-source-20260924-025840-866df8ea.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are byte-identical to current
+%% HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 419 nodes and 1,080 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. All 42 aggregate checkbox states
+%% are unchanged (24 checked). The whole-proof goal remains open.
+%%
+
+%%
+%% ## Endpoint-two density and energy transfers — previous checkpoint
+%%
+%% Thirteen production modules add forty public theorems and sixty-two
+%% semantic regressions (forty exact signatures and twenty-two boundary
+%% fixtures). EPZAE-24 and EPZAE-33 now reach their source conclusions.
+%%
+%% The two bottom global blocks use the actual normalized source coefficients
+%% on every original index. Their literal support and floor cutoff prove
+%% `T^(a/2) <= N <= T^(2a)`, and both logarithmic counts are absorbed.
+%% The general large-value estimates, reflected interior estimates and direct
+%% interior estimates share constants chosen before the shifted source line.
+%%
+%% One global labeling is then selected once from the actual Type-I detector.
+%% The same fibers feed every branch; exact cardinalities and all four
+%% energy-color classes retain every analytic multiplicity copy. The common
+%% cutoff and Type-I window precede the Type-II tolerance, and the source
+%% line is chosen only after both. All outer losses are absorbed.
+%%
+%% The audited source-facing outputs are:
+%%
+%% - `zeroDensityExponent_le_sup_limsup_endpoint_two`: printed
+%%   `zero-from-large`, with zeta supremum over `tau >= 2`.
+%% - `zeroDensityExponent_le_endpointTwo_bounded_suprema`: exact
+%%   `zero-large-cor-0`, with zeta `[2,tau0)` and general
+%%   `[tau0,2*tau0]`.
+%% - `zeroDensityExponent_le_two_thirds_suprema`,
+%%   `zeroDensityExponent_le_three_div_of_largeValue_bounds`, and
+%%   `zeroDensityExponent_le_three_div_of_montgomery_range`: the other
+%%   three printed density corollaries. Powers two and three cover the
+%%   two-thirds interval; the Montgomery variant uses proved subdivision.
+%%   Its small-cutoff case uses the independently proved Ingham bridge.
+%% - `zeroDensityEnergyExponent_le_endpointTwo_bounded_suprema`: exact
+%%   `zeroe-large-cor-0`. The original endpoint-one `zeroe-from-large`
+%%   remains intact; an additional endpoint-two energy sup/limsup theorem
+%%   is proved as a strengthening, not mislabeled as the printed lemma.
+%%
+%% The short zeta supremum is literally `bottom = -infinity` when
+%% `tau0 <= 2`, including equality. Compact-range powering consumes the
+%% independent corrected cardinality or energy witness. No relation between
+%% the fifth coordinates is reintroduced.
+%%
+%% The singleton counterexample, corrected two-witness powering,
+%% Heath--Brown relation and all nine Add-est clauses are preserved.
+%% The whole-proof goal remains open: the D-process analytic input,
+%% remaining beta/exponent-pair and zeta-growth work, improved density
+%% outputs and final release assembly are separate obligations.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,107 production files, 1,581 scanned Lean
+%%   files and 10,439 build jobs. The audit covers 8,541 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,786 total).
+%%   All 40 new public theorems occur exactly once in the explicit audit,
+%%   with only permitted standard logical axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-034939-53b58c9d.log)
+%%   has zero errors, warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_035654.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_035654.json).
+%% - All 1,602 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The thirteen modules and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-endpoint-two-20260924-034939-53b58c9d.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are
+%% byte-identical to current HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 428 nodes and 1,108 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. Of 42 aggregate checklist items,
+%% 26 are checked; only EPZAE-24 and EPZAE-33 changed at this checkpoint.
+%% The whole-proof goal remains open.
+%%
+
+%%
+%% ## Improved Bourgain density — previous checkpoint
+%%
+%% Four production modules add twenty-four public theorems and forty semantic
+%% regressions (twenty-four exact signatures and sixteen boundary fixtures).
+%%
+%% EPZAE-27 reaches the unchanged source output:
+%% `zeroDensityExponent_le_bourgain_improved` proves
+%% `A(sigma) <= max(2/(9*sigma-6),9/(8*(2*sigma-1)))`
+%% for the full closed interval `17/22 <= sigma <= 4/5`.
+%% The `_lower` and `_upper` public theorems prove the two closed subranges,
+%% including their common endpoint `38/49`.
+%% `bourgain_improved_isZeroDensityBound` also gives the uniform shifted,
+%% multiplicity-weighted zero-count estimate itself.
+%%
+%% The proof uses the original cutoff
+%% `min(9*(3*sigma-2)/2,8*(2*sigma-1)/3)` and the paper's two auxiliary
+%% parameter choices. Exact certificates bound all five Bourgain terms and
+%% derive nonnegative auxiliary parameters, cardinality side conditions and
+%% the physical margin `tau-chi>1`. The existing actual-region consumer and
+%% the failure-of-uniformity equivalence then yield the genuine uniform LV
+%% bound. The proved twelfth moment supplies the zeta range, and the completed
+%% endpoint-two source transfer concludes the density estimate.
+%%
+%% One documented proof change is necessary: use the already-proved Jutila
+%% theorem with `k=4`, rather than the printed argument's insufficient
+%% `k=3` comparison. At `sigma=38/49, tau=6/5`, both displayed k=3/Bourgain
+%% estimates exceed the desired `11/20`; a kernel-checked regression records
+%% this gap. The k=4 bound closes it, and exact overlap certificates cover the
+%% entire interval. This is not a counterexample to the advertised density
+%% theorem, whose statement is unchanged.
+%%
+%% The standalone unrestricted Bourgain LV input (EPZAE-19) remains open;
+%% this proof derives every condition for the sufficient existing source range.
+%% The permanent Lemma-62 singleton counterexample, corrected independent
+%% powering witnesses, Heath--Brown relation, all nine Add-est clauses, and
+%% completed EPZAE-24/33 transfer contracts are preserved.
+%%
+%% Kernel integrity and source completeness are separate verdicts: both pass
+%% for EPZAE-27. The D-process, remaining beta/new-pair/zeta-growth work, other
+%% advertised density outputs, reproduction and whole-proof release remain open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,111 production files, 1,585 scanned Lean
+%%   files and 10,443 build jobs. The audit covers 8,582 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,827 total).
+%%   All 24 new public theorems occur exactly once in the explicit audit,
+%%   with only permitted standard logical axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-041416-2d614f2b.log)
+%%   has zero errors, warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_041829.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_041829.json).
+%% - All 1,606 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The four modules and four integration files
+%%   also have normalized hashes in the [checkpoint evidence](logs/tao-trudgian-yang-bourgain-density-20260924-041416-2d614f2b.json).
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are
+%% byte-identical to current HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 432 nodes and 1,119 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. Of 42 aggregate checklist items,
+%% 27 are checked; only EPZAE-27 changed from the preceding checkpoint.
+%% The whole-proof goal remains open.
+%%
+
+%%
+%% ## Exponent-pair zeta growth — current checkpoint
+%%
+%% Seven production modules add twenty-six public theorems and forty-two
+%% semantic regressions (twenty-six exact signatures and sixteen fixtures).
+%%
+%% The exact source lemma `exp-pair-mu` is proved by
+%% `ExponentPair.isZetaGrowthBound` and
+%% `ExponentPair.zetaGrowthExponent_le`:
+%% an actual analytic exponent pair `(k,l)` gives `mu(l-k) <= k`.
+%% The growth predicate has every epsilon quantifier and a uniform threshold,
+%% uses the actual Riemann zeta function and both signs of the ordinate.
+%% Its extended-real infimum is proved equivalent to these epsilon-loss
+%% upper bounds; no finiteness or conjectural lower bound is assumed.
+%%
+%% The consumer derives the logarithmic model phase with its exact
+%% `t/(2*pi)` normalization, conjugates the phase sign, applies finite Abel
+%% summation to the actual weighted Dirichlet sums, and cancels the dyadic
+%% scale at `sigma=l-k`. The sharp cutoff is partitioned exactly, including
+%% its last partial block. Its logarithmic count is absorbed by epsilon loss.
+%% The genuine sharp Poisson/Euler truncation is used at arbitrary strip
+%% points, with no zeta-zero hypothesis. Its three remainder terms total at
+%% most 150. This covers both strip endpoints and negative ordinates.
+%%
+%% Actual pair consumers in the regression suite prove the classical
+%% `mu(0)<=1/2`, `mu(1)<=0`, `mu(1/2)<=1/6` and `mu(5/7)<=1/14`
+%% bounds. The `mu(7/10)<=3/40` fixture deliberately retains the unproved
+%% specific pair as an explicit premise; it is not an unconditional result.
+%% EPZAE-15 remains open until that named corollary is proved.
+%%
+%% The permanent Lemma-62 singleton counterexample, corrected independent
+%% powering witnesses, Heath--Brown energy relation, all nine Add-est clauses,
+%% and completed EPZAE-24/27/33 contracts are unchanged. Preserve the
+%% Bourgain-density k=3 proof-gap regression and its proved k=4 replacement.
+%%
+%% Kernel integrity and source completeness are separate verdicts: the
+%% generic exponent-pair-to-mu source lemma is complete, but EPZAE-15 and
+%% the whole-proof release are not. The remaining D-process, beta/new-pair
+%% outputs, other advertised density outputs and reproduction stay open.
+%%
+%% Verification for this checkpoint:
+%%
+%% - `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+%%   `LEAN VERIFICATION PASS`; 1,118 production files, 1,592 scanned Lean
+%%   files and 10,450 build jobs. The audit covers 8,628 target theorems,
+%%   6,240 pinned-source theorems and five anchors (14,873 total).
+%%   All 26 new public theorems occur exactly once in the explicit audit,
+%%   with only permitted standard logical axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-060220-bc031597.log)
+%%   has zero errors, warnings, tactic suggestions and linter failures.
+%% - `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+%%   all six stages pass, with zero diagnostics and 8,857 build jobs.
+%%   It covers 301 root modules and two retained regression modules,
+%%   7,636 explicit and 14,290 discovered theorem audits.
+%%   See the [foundation log](../../logs/foundation_freeze_20260924_060604.log) and
+%%   [manifest](../../logs/foundation_freeze_20260924_060604.json).
+%% - All 1,613 physical proof/configuration/tooling hashes are identical before
+%%   and after both runners. The seven modules and four integration files
+%%   also match after normalizing line endings.
+%%
+%% Owner HEAD at this checkpoint is `a0cacfc338fdbcd6fcc58b155c00a66ddae363ec`.
+%% No agent commit or push was performed. All 509 protected tracked files are
+%% byte-identical to current HEAD. The counterexample retains SHA-256
+%% `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+%% The graph has 439 nodes and 1,131 edges, with no duplicate/missing endpoints,
+%% class conflicts or unclassified nodes. Of 42 aggregate checklist items,
+%% 27 are checked; no aggregate completion status changed in this checkpoint.
+%% The whole-proof goal remains open.
 %%

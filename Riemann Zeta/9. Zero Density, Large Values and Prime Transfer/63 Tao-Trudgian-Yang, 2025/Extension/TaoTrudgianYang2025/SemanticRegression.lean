@@ -34167,3 +34167,2976 @@ example : ¬ ((6/5:ℝ) < 2*(3/5)) := by norm_num
 example : ¬ ((1:ℝ) ≤ 9/10) := by norm_num
 
 end ZetaSecondDerivativeRangeRegression
+
+section PositiveReflectedSourceRegression
+
+example {M : ℕ} {sigma T D H S : ℝ} (W : Finset ℝ)
+    (hM : 1 < M) (hH : 0 ≤ H) (hT : 0 ≤ T)
+    (hDH : D + H ≤ T / 2)
+    (hSeparated : IsSeparated 1 W)
+    (hRange : ∀ t ∈ W, T - D ≤ t ∧ t ≤ 2 * T + D)
+    (hEach : ∀ t ∈ W,
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (-(t + u))‖) ∨
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (t - u)‖)) :
+    ∃ j ∈ Finset.range (Nat.clog 2 M), ∃ U : Finset ℝ,
+      IsSeparated 1 U ∧
+      (∀ v ∈ U, T / 2 ≤ v ∧ v ≤ 5 * T / 2) ∧
+      W.card ≤ 2 * (2 * (2 * ⌈H⌉₊ + 1)) * (Nat.clog 2 M) * U.card ∧
+      (∀ v ∈ U, S / Nat.clog 2 M ≤
+        ‖dirichletPoly (2 ^ j) (normalizedTypeIReflectedCoeff sigma M) v‖) :=
+  @extract_positive_ordinate_reflected_block M sigma T D H S W hM hH hT hDH hSeparated hRange hEach
+
+example {sigma d u : ℝ} (hsigma : 1 / 2 < sigma)
+    (hsigmaUpper : sigma < 1) (hd : 0 < d) (hdOne : d ≤ 1)
+    (hdGap : d ≤ (sigma - 1 / 2) / 1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) :
+    ∃ Clog : ℝ, 0 < Clog ∧
+      let CK := 32 * 2 ^ sigma +
+        (20 * (4 * Real.pi) ^ sigma + 4 * Real.pi ^ sigma) *
+          4 ^ (sigma + 1 / 2)
+      let Cref := mediumReflectedThresholdConstant Clog CK
+      let g := (sigma - 1 / 2) / 2
+      let Uscale := 2 / g
+      1 ≤ Cref ∧ 0 < g ∧ 0 < Uscale ∧
+      ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+        ∀ {T tau : ℝ} {Y A r : ℕ} (W : Finset ℝ), T₀ ≤ T →
+          A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+          ((Y + 1 : ℕ) : ℝ) ≤ (((2 ^ r * Y : ℕ) : ℝ) / 2) →
+          2 * (2 ^ r * Y) ≤ A →
+          tau = typeILogarithmicScale T (2 ^ r * Y) →
+          1 < tau → tau < 2 →
+          W.Nonempty → IsSeparated 1 W →
+          (∀ t ∈ W, T - T ^ d ≤ t ∧ t ≤ 2 * T + T ^ d) →
+          (∀ t ∈ W,
+            ((3 / 4) * (T ^ (-u) / 2)) /
+                (Nat.clog 2 A + 1 : ℕ) ≤
+              ‖typeISourceSmoothBlock Y A r sigma t‖) →
+          let Q := 2 ^ r * Y
+          let M := mediumTypeIDualCutoff T d Q
+          let V := ((3 / 4) * (T ^ (-u) / 2)) /
+            (Nat.clog 2 A + 1 : ℕ)
+          let R := (Real.pi * V) /
+            (8 * (Q : ℝ) * mediumTypeIStationaryKernel sigma T Q *
+              (typeIDyadicCutoffMellinL1 + 1))
+          let S := R / (2 * (M : ℝ) ^ sigma)
+          let L := S / Nat.clog 2 M
+          ∃ j ∈ Finset.range (Nat.clog 2 M), ∃ U : Finset ℝ,
+              IsSeparated 1 U ∧
+              (∀ v ∈ U, T / 2 ≤ v ∧ v ≤ 5 * T / 2) ∧
+              W.card ≤ 2 * (2 * (2 * ⌈T ^ d⌉₊ + 1)) *
+                (Nat.clog 2 M) * U.card ∧
+              (∀ n ∈ dyadicInterval (2 ^ j),
+                ‖normalizedTypeIReflectedCoeff sigma M n‖ ≤ 1) ∧
+              (∀ v ∈ U, L ≤ ‖dirichletPoly (2 ^ j)
+                (normalizedTypeIReflectedCoeff sigma M) v‖) ∧
+              1 < 2 ^ j ∧ 2 ^ j < M ∧
+              1 / (1 / 2 + d) ≤ typeILogarithmicScale T (2 ^ j) ∧
+              typeILogarithmicScale T (2 ^ j) ≤ Uscale ∧
+              T ^ (1 / 2 - u - d * sigma + (sigma - 1) / tau - d) /
+                  Cref ≤ L ∧
+              T ^ g / Cref ≤ L :=
+  @eventually_interior_source_positive_reflected_data sigma d u hsigma hsigmaUpper hd hdOne hdGap hu huD
+
+example (sigma : ℝ) (M n : ℕ) (hn : 0 < n) :
+    normalizedTypeIReflectedCoeff sigma M n =
+      (((M : ℝ) ^ (-sigma) : ℝ) : ℂ) *
+        classicalZetaLongLineCoeff M (-sigma) n :=
+  @classicalReflectedCoeff_eq_scaled_line sigma M n hn
+
+example (sigma t : ℝ) (N M : ℕ) :
+    dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) t =
+      (((M : ℝ) ^ (-sigma) : ℝ) : ℂ) *
+        dirichletPoly N (classicalZetaLongLineCoeff M (-sigma)) t :=
+  @dirichletPoly_reflected_eq_scaled_line sigma t N M
+
+example (sigma t : ℝ) (N M : ℕ) :
+    ‖dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) t‖ =
+      (M : ℝ) ^ (-sigma) *
+        ‖dirichletPoly N (classicalZetaLongLineCoeff M (-sigma)) t‖ :=
+  @norm_dirichletPoly_reflected_eq_scaled_line sigma t N M
+
+example (sigma t : ℝ) (N M : ℕ) (hM : 0 < M) :
+    (M : ℝ) ^ sigma *
+        ‖dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) t‖ =
+      ‖dirichletPoly N (classicalZetaLongLineCoeff M (-sigma)) t‖ :=
+  @rpow_mul_norm_reflected_eq_norm_line sigma t N M hM
+
+example {ι : Type*} [Fintype ι]
+    (M N k : ℕ) (sigma V : ℝ) (W : ι → ℝ)
+    (hM : 0 < M) (hN : 0 < N) (hV : 0 < V) (hk : 1 < k)
+    (hlarge : ∀ x,
+      V ≤ ‖dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) (W x)‖) :
+    let sourceV := (M : ℝ) ^ sigma * V
+    let R := classicalTypeIFourierRadius M N k (-sigma) sourceV
+    ∃ W' : ι → ℝ,
+      (∀ x, |W' x - W x| ≤ 2 * Real.pi * R) ∧
+      (∀ x,
+        sourceV / (4 * (N : ℝ) ^ sigma * classicalTypeIFourierL1 (-sigma)) ≤
+          ‖∑ n ∈ Finset.Ioc N (min (2 * N) M), dirichletPhase n (W' x)‖) ∧
+      approximateAdditiveEnergyOf 1 W ≤
+        (4 * Nat.ceil (1 + 4 * (2 * Real.pi * R)) + 6) *
+          approximateAdditiveEnergyOf 1 W' :=
+  @exists_classicalReflected_explicitBoundedOrdinate_family ι _ M N k sigma V W hM hN hV hk hlarge
+
+example {sigma d u : ℝ} (hsigma : 1 / 2 < sigma)
+    (hsigmaUpper : sigma < 1) (hd : 0 < d) (hdOne : d ≤ 1)
+    (hdGap : d ≤ (sigma - 1 / 2) / 1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) :
+    ∃ Clog : ℝ, 0 < Clog ∧
+      let CK := 32 * 2 ^ sigma +
+        (20 * (4 * Real.pi) ^ sigma + 4 * Real.pi ^ sigma) *
+          4 ^ (sigma + 1 / 2)
+      let Cref := mediumReflectedThresholdConstant Clog CK
+      let g := (sigma - 1 / 2) / 2
+      let Uscale := 2 / g
+      1 ≤ Cref ∧ 0 < g ∧ 0 < Uscale ∧
+      ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+        ∀ {T tau : ℝ} {Y A r : ℕ} (W : Finset ℝ), T₀ ≤ T →
+          A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+          ((Y + 1 : ℕ) : ℝ) ≤ (((2 ^ r * Y : ℕ) : ℝ) / 2) →
+          2 * (2 ^ r * Y) ≤ A →
+          tau = typeILogarithmicScale T (2 ^ r * Y) →
+          1 < tau → tau < 2 →
+          W.Nonempty → IsSeparated 1 W →
+          (∀ t ∈ W, T - T ^ d ≤ t ∧ t ≤ 2 * T + T ^ d) →
+          (∀ t ∈ W,
+            ((3 / 4) * (T ^ (-u) / 2)) /
+                (Nat.clog 2 A + 1 : ℕ) ≤
+              ‖typeISourceSmoothBlock Y A r sigma t‖) →
+          let Q := 2 ^ r * Y
+          let M := mediumTypeIDualCutoff T d Q
+          let V := ((3 / 4) * (T ^ (-u) / 2)) /
+            (Nat.clog 2 A + 1 : ℕ)
+          let R := (Real.pi * V) /
+            (8 * (Q : ℝ) * mediumTypeIStationaryKernel sigma T Q *
+              (typeIDyadicCutoffMellinL1 + 1))
+          let S := R / (2 * (M : ℝ) ^ sigma)
+          let L := S / Nat.clog 2 M
+          ∃ j ∈ Finset.range (Nat.clog 2 M), ∃ U : Finset ℝ,
+              IsSeparated 1 U ∧
+              (∀ v ∈ U, T / 2 ≤ v ∧ v ≤ 5 * T / 2) ∧
+              W.card ≤ 2 * (2 * (2 * ⌈T ^ d⌉₊ + 1)) *
+                (Nat.clog 2 M) * U.card ∧
+              (∀ n ∈ dyadicInterval (2 ^ j),
+                ‖normalizedTypeIReflectedCoeff sigma M n‖ ≤ 1) ∧
+              (∀ v ∈ U, L ≤ ‖dirichletPoly (2 ^ j)
+                (normalizedTypeIReflectedCoeff sigma M) v‖) ∧
+              1 < 2 ^ j ∧ 2 ^ j < M ∧
+              1 / (1 / 2 + d) ≤ typeILogarithmicScale T (2 ^ j) ∧
+              typeILogarithmicScale T (2 ^ j) ≤ Uscale ∧
+              T ^ (1 / 2 - u - d * sigma + (sigma - 1) / tau - d) /
+                  Cref ≤ L ∧
+              T ^ g / Cref ≤ L ∧
+              ∀ k : ℕ, 1 < k →
+                let sourceV := (M : ℝ) ^ sigma * L
+                let radius := classicalTypeIFourierRadius M (2 ^ j) k (-sigma) sourceV
+                ∃ W' : {v : ℝ // v ∈ U} → ℝ,
+                  (∀ x, |W' x - x.1| ≤ 2 * Real.pi * radius) ∧
+                  (∀ x,
+                    sourceV /
+                        (4 * ((2 ^ j : ℕ) : ℝ) ^ sigma * classicalTypeIFourierL1 (-sigma)) ≤
+                      ‖∑ n ∈ Finset.Ioc (2 ^ j) (min (2 * 2 ^ j) M),
+                        dirichletPhase n (W' x)‖) ∧
+                  approximateAdditiveEnergyOf 1 (fun x : {v : ℝ // v ∈ U} => x.1) ≤
+                    (4 * Nat.ceil (1 + 4 * (2 * Real.pi * radius)) + 6) *
+                      approximateAdditiveEnergyOf 1 W' :=
+  @eventually_interior_source_positive_reflected_fourier_data sigma d u hsigma hsigmaUpper hd hdOne hdGap hu huD
+
+example : normalizedTypeIReflectedCoeff 1 4 2 = (1/2:ℂ) := by
+  norm_num [normalizedTypeIReflectedCoeff]
+
+example : normalizedTypeIReflectedCoeff 1 4 4 = (1:ℂ) := by
+  norm_num [normalizedTypeIReflectedCoeff]
+
+example : normalizedTypeIReflectedCoeff 1 4 5 = (0:ℂ) := by
+  norm_num [normalizedTypeIReflectedCoeff]
+
+example (sigma : ℝ) : normalizedTypeIReflectedCoeff sigma 4 0 = 0 := by
+  simp [normalizedTypeIReflectedCoeff]
+
+example (sigma : ℝ) : normalizedTypeIReflectedCoeff sigma 0 1 = 0 := by
+  simp [normalizedTypeIReflectedCoeff]
+
+example : normalizedTypeIReflectedCoeff (-1) 4 2 = (2:ℂ) := by
+  norm_num [normalizedTypeIReflectedCoeff, Real.rpow_neg_one]
+
+example (sigma t : ℝ) (M : ℕ) :
+    dirichletPoly 0 (normalizedTypeIReflectedCoeff sigma M) t = 0 := by
+  simp [dirichletPoly, dyadicInterval]
+
+example (t : ℝ) :
+    dirichletPoly 2 (normalizedTypeIReflectedCoeff 1 4) t =
+      (1/4:ℂ) * dirichletPoly 2 (classicalZetaLongLineCoeff 4 (-1)) t := by
+  have h := dirichletPoly_reflected_eq_scaled_line 1 t 2 4
+  norm_num at h
+  exact h
+
+example (T x y : ℝ) :
+    dist (3*T-x) (3*T-y) = dist x y := by
+  rw [Real.dist_eq, Real.dist_eq]
+  have h : 3*T-x-(3*T-y) = -(x-y) := by ring
+  rw [h, abs_neg]
+
+example (T : ℝ) (U : Finset ℝ) :
+    (U.image (fun v => 3*T-v)).card = U.card := by
+  classical
+  apply Finset.card_image_of_injective
+  intro a b h
+  linarith
+
+example (T x : ℝ) (hx : x ∈ Set.Icc (T/2) (5*T/2)) :
+    3*T-x ∈ Set.Icc (T/2) (5*T/2) := by
+  rcases hx with ⟨hl,hu⟩
+  constructor <;> linarith
+
+example (sigma t : ℝ) (N M : ℕ) :
+    ‖dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) (-t)‖ =
+      ‖dirichletPoly N (normalizedTypeIReflectedCoeff sigma M) t‖ :=
+  norm_dirichletPoly_normalizedTypeIReflectedCoeff_neg sigma t N M
+
+end PositiveReflectedSourceRegression
+
+section AllIndexedReflectedSourceRegression
+
+example (M N k : ℕ) (sigma L : ℝ)
+    (hM : 0 < M) (hNM : N ≤ M) (hsigma : 0 ≤ sigma)
+    (hL : 1 ≤ L) (hk : 1 < k) :
+    1 + 4 * ((N : ℝ) ^ (-(-sigma)) *
+        (Finset.Ioc N (min (2*N) M)).card) *
+          SchwartzMap.seminorm ℝ k 0
+            (𝓕 (classicalTypeILogProfileSchwartz (-sigma))) /
+        (((k : ℝ)-1) * ((M : ℝ)^sigma * L)) ≤
+      1 + (4 * SchwartzMap.seminorm ℝ k 0
+        (𝓕 (classicalTypeILogProfileSchwartz (-sigma))) / ((k : ℝ)-1)) * N :=
+  @classicalReflectedFourier_source_base_le M N k sigma L hM hNM hsigma hL hk
+
+example (sigma theta : ℝ) (hsigma : 0 ≤ sigma) (htheta : 0 < theta) :
+    ∃ k : ℕ, 1 < k ∧ ∀ᶠ T : ℝ in Filter.atTop,
+      ∀ M N : ℕ, ∀ L : ℝ, 0 < M → N ≤ M → (N : ℝ) ≤ T → 1 ≤ L →
+        classicalTypeIFourierRadius M N k (-sigma) ((M : ℝ)^sigma*L) ≤
+          T^theta :=
+  @exists_order_eventually_classicalReflectedFourierRadius_le_rpow sigma theta hsigma htheta
+
+example (sigma t : ℝ) (Q k M : ℕ) :
+    ‖wideDirichletPoly Q k (normalizedTypeIReflectedCoeff sigma M) (-t)‖ =
+      ‖wideDirichletPoly Q k (normalizedTypeIReflectedCoeff sigma M) t‖ :=
+  @norm_wideDirichletPoly_normalizedTypeIReflectedCoeff_neg sigma t Q k M
+
+example (sigma t H S : ℝ) (M : ℕ)
+    (hEach :
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (-(t + u))‖) ∨
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (t - u)‖)) :
+    ∃ v ∈ Set.Icc (-H) H,
+      S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+        (normalizedTypeIReflectedCoeff sigma M) (t + v)‖ :=
+  @exists_positive_reflected_shift sigma t H S M hEach
+
+example {ι : Type*} [Fintype ι]
+    (M : ℕ) (sigma H S : ℝ) (W : ι → ℝ) (hM : 1 < M)
+    (hEach : ∀ x,
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (-(W x + u))‖) ∨
+      (∃ u ∈ Set.Icc (-H) H,
+        S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+          (normalizedTypeIReflectedCoeff sigma M) (W x - u)‖)) :
+    ∃ (W' : ι → ℝ) (label : ι → Fin (Nat.clog 2 M)),
+      (∀ x, |W' x - W x| ≤ H) ∧
+      (∀ x, S / Nat.clog 2 M ≤
+        ‖dirichletPoly (2 ^ (label x).val)
+          (normalizedTypeIReflectedCoeff sigma M) (W' x)‖) ∧
+      approximateAdditiveEnergyOf 1 W ≤
+        (4 * Nat.ceil (1 + 4 * H) + 6) *
+          approximateAdditiveEnergyOf 1 W' :=
+  @exists_reflected_bounded_dyadic_family ι _ M sigma H S W hM hEach
+
+example {sigma d u : ℝ} (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hd : 0 < d) (hdOne : d ≤ 1) (hdGap : d ≤ (sigma-1/2)/1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+      ∀ {ι : Type*} [Fintype ι] [Nonempty ι]
+        {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+        A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+        ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+        2*(2^r*Y) ≤ A →
+        tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+        (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+        (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+          ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+        let Q := 2^r*Y
+        let M := mediumTypeIDualCutoff T d Q
+        let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+        let R := (Real.pi*V)/
+          (8*(Q : ℝ)*mediumTypeIStationaryKernel sigma T Q*
+            (typeIDyadicCutoffMellinL1+1))
+        let S := R/(2*(M : ℝ)^sigma)
+        1 < M ∧
+        ∃ (W' : ι → ℝ) (label : ι → Fin (Nat.clog 2 M)),
+          (∀ x, |W' x-W x| ≤ T^d) ∧
+          (∀ x, T/2 ≤ W' x ∧ W' x ≤ 5*T/2) ∧
+          (∀ x, S/Nat.clog 2 M ≤
+            ‖dirichletPoly (2^(label x).val)
+              (normalizedTypeIReflectedCoeff sigma M) (W' x)‖) ∧
+          approximateAdditiveEnergyOf 1 W ≤
+            (4*Nat.ceil (1+4*T^d)+6)*approximateAdditiveEnergyOf 1 W' :=
+  @eventually_interior_source_indexed_reflection sigma d u hsigma hsigmaUpper hd hdOne hdGap hu huD
+
+example {sigma d u : ℝ} (hsigma : 1 / 2 < sigma)
+    (hsigmaUpper : sigma < 1) (hd : 0 < d) (hdOne : d ≤ 1)
+    (hdGap : d ≤ (sigma - 1 / 2) / 1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) :
+    ∃ Clog : ℝ, 0 < Clog ∧
+      let CK := 32 * 2 ^ sigma +
+        (20 * (4 * Real.pi) ^ sigma + 4 * Real.pi ^ sigma) *
+          4 ^ (sigma + 1 / 2)
+      let Cref := mediumReflectedThresholdConstant Clog CK
+      let g := (sigma - 1 / 2) / 2
+      let Uscale := 2 / g
+      1 ≤ Cref ∧ 0 < g ∧ 0 < Uscale ∧
+      ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+        ∀ {ι : Type*} [Fintype ι] [Nonempty ι]
+          {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+          A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+          ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+          2*(2^r*Y) ≤ A →
+          tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+          (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+          (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+            ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+          let Q := 2^r*Y
+          let M := mediumTypeIDualCutoff T d Q
+          let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+          let R := (Real.pi*V)/
+            (8*(Q : ℝ)*mediumTypeIStationaryKernel sigma T Q*
+              (typeIDyadicCutoffMellinL1+1))
+          let L := (R/(2*(M : ℝ)^sigma))/Nat.clog 2 M
+          ∃ (W' : ι → ℝ) (label : ι → Fin (Nat.clog 2 M)),
+            (∀ x, |W' x-W x| ≤ T^d) ∧
+            (∀ x, T/2 ≤ W' x ∧ W' x ≤ 5*T/2) ∧
+            (∀ x, L ≤ ‖dirichletPoly (2^(label x).val)
+              (normalizedTypeIReflectedCoeff sigma M) (W' x)‖) ∧
+            approximateAdditiveEnergyOf 1 W ≤
+              (4*Nat.ceil (1+4*T^d)+6)*approximateAdditiveEnergyOf 1 W' ∧
+            T^(1/2-u-d*sigma+(sigma-1)/tau-d)/Cref ≤ L ∧
+            T^g/Cref ≤ L ∧
+            (∀ x, 1 < 2^(label x).val ∧ 2^(label x).val < M ∧
+              1/(1/2+d) ≤ typeILogarithmicScale T (2^(label x).val) ∧
+              typeILogarithmicScale T (2^(label x).val) ≤ Uscale) :=
+  @eventually_interior_source_indexed_reflected_data sigma d u hsigma hsigmaUpper hd hdOne hdGap hu huD
+
+example {ι : Type*} [Fintype ι]
+    (M k : ℕ) (N : ι → ℕ) (sigma L H : ℝ) (W : ι → ℝ)
+    (hM : 0 < M) (hN : ∀ x, 0 < N x) (hL : 0 < L) (hk : 1 < k)
+    (hlarge : ∀ x, L ≤
+      ‖dirichletPoly (N x) (normalizedTypeIReflectedCoeff sigma M) (W x)‖)
+    (hradius : ∀ x,
+      classicalTypeIFourierRadius M (N x) k (-sigma) ((M : ℝ)^sigma*L) ≤ H) :
+    ∃ W' : ι → ℝ,
+      (∀ x, |W' x-W x| ≤ 2*Real.pi*H) ∧
+      (∀ x, (M : ℝ)^sigma*L /
+          (4*(N x : ℝ)^sigma*classicalTypeIFourierL1 (-sigma)) ≤
+        ‖∑ n ∈ Finset.Ioc (N x) (min (2*N x) M), dirichletPhase n (W' x)‖) ∧
+      approximateAdditiveEnergyOf 1 W ≤
+        (4*Nat.ceil (1+4*(2*Real.pi*H))+6)*approximateAdditiveEnergyOf 1 W' :=
+  @exists_classicalReflected_bounded_varying_length_family ι _ M k N sigma L H W hM hN hL hk hlarge hradius
+
+example {sigma d u theta : ℝ} (hsigma : 1 / 2 < sigma)
+    (hsigmaUpper : sigma < 1) (hd : 0 < d) (hdOne : d ≤ 1)
+    (hdGap : d ≤ (sigma - 1 / 2) / 1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) (htheta : 0 < theta) :
+    ∃ Clog : ℝ, 0 < Clog ∧
+      let CK := 32 * 2 ^ sigma +
+        (20 * (4 * Real.pi) ^ sigma + 4 * Real.pi ^ sigma) *
+          4 ^ (sigma + 1 / 2)
+      let Cref := mediumReflectedThresholdConstant Clog CK
+      let g := (sigma - 1 / 2) / 2
+      let Uscale := 2 / g
+      1 ≤ Cref ∧ 0 < g ∧ 0 < Uscale ∧
+      ∃ k : ℕ, 1 < k ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+        ∀ {ι : Type*} [Fintype ι] [Nonempty ι]
+          {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+          A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+          ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+          2*(2^r*Y) ≤ A →
+          tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+          (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+          (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+            ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+          let Q := 2^r*Y
+          let M := mediumTypeIDualCutoff T d Q
+          let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+          let R := (Real.pi*V)/
+            (8*(Q : ℝ)*mediumTypeIStationaryKernel sigma T Q*
+              (typeIDyadicCutoffMellinL1+1))
+          let L := (R/(2*(M : ℝ)^sigma))/Nat.clog 2 M
+          ∃ (W' : ι → ℝ) (label : ι → Fin (Nat.clog 2 M)),
+            (∀ x, |W' x-W x| ≤ T^d+2*Real.pi*T^theta) ∧
+            (∀ x, T/2-2*Real.pi*T^theta ≤ W' x ∧ W' x ≤ 5*T/2+2*Real.pi*T^theta) ∧
+            (∀ x, (M : ℝ)^sigma*L /
+                (4*((2^(label x).val : ℕ) : ℝ)^sigma*classicalTypeIFourierL1 (-sigma)) ≤
+              ‖∑ n ∈ Finset.Ioc (2^(label x).val) (min (2*2^(label x).val) M),
+                dirichletPhase n (W' x)‖) ∧
+            approximateAdditiveEnergyOf 1 W ≤
+              (4*Nat.ceil (1+4*(T^d+2*Real.pi*T^theta))+6)*approximateAdditiveEnergyOf 1 W' ∧
+            T^(1/2-u-d*sigma+(sigma-1)/tau-d)/Cref ≤ L ∧
+            T^g/Cref ≤ L ∧
+            (∀ x, 1 < 2^(label x).val ∧ 2^(label x).val < M ∧
+              1/(1/2+d) ≤ typeILogarithmicScale T (2^(label x).val) ∧
+              typeILogarithmicScale T (2^(label x).val) ≤ Uscale ∧
+              classicalTypeIFourierRadius M (2^(label x).val) k (-sigma)
+                ((M : ℝ)^sigma*L) ≤ T^theta) :=
+  @eventually_interior_source_indexed_fourier_data sigma d u theta hsigma hsigmaUpper hd hdOne hdGap hu huD htheta
+
+example (t : ℝ) :
+    approximateAdditiveEnergyOf 1 (fun _ : Fin 2 => t) = 16 := by
+  simp [approximateAdditiveEnergyOf, AdditiveQuadrupleOf]
+
+example (t : ℝ) :
+    approximateAdditiveEnergyOf 1 (fun _ : Fin 1 => t) = 1 := by
+  simp [approximateAdditiveEnergyOf, AdditiveQuadrupleOf]
+
+example : approximateAdditiveEnergyOf 1 (fun x : Fin 0 => Fin.elim0 x) = 0 := by
+  simp [approximateAdditiveEnergyOf, AdditiveQuadrupleOf]
+
+example (t : ℝ) :
+    (Finset.univ.image (fun _ : Fin 2 => t)).card = 1 := by
+  rw [Finset.image_const Finset.univ_nonempty, Finset.card_singleton]
+
+example (sigma t S : ℝ) (M : ℕ)
+    (h : S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+      (normalizedTypeIReflectedCoeff sigma M) (-t)‖) :
+    ∃ v ∈ Set.Icc (0 : ℝ) 0,
+      S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+        (normalizedTypeIReflectedCoeff sigma M) (t+v)‖ := by
+  simpa only [neg_zero] using exists_positive_reflected_shift sigma t 0 S M
+    (Or.inl ⟨0,by simp,by simpa using h⟩)
+
+example (sigma t S : ℝ) (M : ℕ)
+    (h : S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+      (normalizedTypeIReflectedCoeff sigma M) t‖) :
+    ∃ v ∈ Set.Icc (0 : ℝ) 0,
+      S < ‖wideDirichletPoly 1 (Nat.clog 2 M)
+        (normalizedTypeIReflectedCoeff sigma M) (t+v)‖ := by
+  simpa only [neg_zero] using exists_positive_reflected_shift sigma t 0 S M
+    (Or.inr ⟨0,by simp,by simpa using h⟩)
+
+example (t : ℝ) :
+    ‖wideDirichletPoly 1 3 (normalizedTypeIReflectedCoeff (-1) 8) (-t)‖ =
+      ‖wideDirichletPoly 1 3 (normalizedTypeIReflectedCoeff (-1) 8) t‖ :=
+  norm_wideDirichletPoly_normalizedTypeIReflectedCoeff_neg (-1) t 1 3 8
+
+example (j : Fin (Nat.clog 2 8)) : 2^j.val < (8 : ℕ) :=
+  Nat.pow_lt_of_lt_clog j.isLt
+
+example : (1 : ℝ)/(1/2+1/1000) < 2 := by norm_num
+
+example : (1 : ℝ)/(1/2+1/1000) ≥ 2-4/1000 := by norm_num
+
+example {ι : Type*} [Fintype ι] (W U V : ι → ℝ) (d h : ℝ)
+    (hU : ∀ x, |U x-W x| ≤ d) (hV : ∀ x, |V x-U x| ≤ h) :
+    approximateAdditiveEnergyOf 1 W ≤
+      (4*Nat.ceil (1+4*(d+h))+6)*approximateAdditiveEnergyOf 1 V := by
+  have hp : ∀ x, |V x-W x| ≤ d+h := by
+    intro x
+    exact (abs_sub_le _ _ _).trans (by linarith [hU x,hV x])
+  exact (approximateAdditiveEnergyOf_perturbation_le hp).trans
+    (approximateAdditiveEnergyOf_le_natCeil_mul_unit _ _)
+
+example :
+    ∃ k : ℕ, 1 < k ∧ ∀ᶠ T : ℝ in Filter.atTop,
+      ∀ M N : ℕ, ∀ L : ℝ, 0 < M → N ≤ M → (N : ℝ) ≤ T → 1 ≤ L →
+        classicalTypeIFourierRadius M N k (-(3/4)) ((M : ℝ)^(3/4:ℝ)*L) ≤
+          T^(1/100:ℝ) :=
+  exists_order_eventually_classicalReflectedFourierRadius_le_rpow
+    (3/4) (1/100) (by norm_num) (by norm_num)
+
+end AllIndexedReflectedSourceRegression
+
+section NormalizedInteriorReflectedSourceRegression
+
+example (sigma tau d u : ℝ) (hsigma : 1/2 ≤ sigma) (hsigmaUpper : sigma ≤ 1)
+    (htau : 0 < tau) (htauTwo : tau ≤ 2) (hd : 0 ≤ d) :
+    sigma*(1+d-1/tau)-u-3*d ≤
+      1/2-u-d*sigma+(sigma-1)/tau-d :=
+  @classicalReflected_threshold_exponent_margin sigma tau d u hsigma hsigmaUpper htau htauTwo hd
+
+example (sigma tau d u T C L : ℝ) (N : ℕ)
+    (hsigma : 1/2 ≤ sigma) (hsigmaUpper : sigma ≤ 1)
+    (htau : 0 < tau) (htauTwo : tau ≤ 2) (hd : 0 ≤ d)
+    (hT : 1 ≤ T) (hC : 0 < C)
+    (hN : (N : ℝ) ≤ T^(1+d-1/tau))
+    (hL : T^(1/2-u-d*sigma+(sigma-1)/tau-d)/C ≤ L) :
+    (N : ℝ)^sigma*T^(-u-3*d)/C ≤ L :=
+  @classicalReflected_threshold_lower_of_physical_scale sigma tau d u T C L N hsigma hsigmaUpper htau htauTwo hd hT hC hN hL
+
+example (sigma L : ℝ) (M N : ℕ)
+    (hsigma : 0 ≤ sigma) (hL : 0 ≤ L) (hN : 0 < N) (hNM : N ≤ M) :
+    L/(4*classicalTypeIFourierL1 (-sigma)) ≤
+      (M : ℝ)^sigma*L /
+        (4*(N : ℝ)^sigma*classicalTypeIFourierL1 (-sigma)) :=
+  @classicalReflected_normalized_threshold_ge sigma L M N hsigma hL hN hNM
+
+example {T tau d : ℝ} {Q N : ℕ}
+    (hT : 0 < T) (htau : 0 < tau) (hQ : 1 < Q)
+    (hScale : (Q : ℝ)^tau = T)
+    (hN : N ≤ mediumTypeIDualCutoff T d Q) :
+    (N : ℝ) ≤ T^(1+d-1/tau) :=
+  @classicalReflected_dyadic_length_le_physical_scale T tau d Q N hT htau hQ hScale hN
+
+example (sigma loss delta U C : ℝ) (hloss : 0 ≤ loss)
+    (hdelta : 0 < delta) (hU : 0 < U) (hC : 0 < C)
+    (hLoss : U*loss ≤ delta/2) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (N : ℕ) (L : ℝ),
+      1 < N → typeILogarithmicScale T N ≤ U →
+      (N : ℝ)^sigma*T^(-loss)/C ≤ L →
+      (N : ℝ)^(sigma-delta) ≤ L/(4*classicalTypeIFourierL1 (-sigma)) :=
+  @eventually_classicalReflected_threshold_absorbed sigma loss delta U C hloss hdelta hU hC hLoss
+
+example {sigma d u theta delta : ℝ} (hsigma : 1 / 2 < sigma)
+    (hsigmaUpper : sigma < 1) (hd : 0 < d) (hdOne : d ≤ 1)
+    (hdGap : d ≤ (sigma - 1 / 2) / 1000)
+    (hu : 0 ≤ u) (huD : u ≤ d) (htheta : 0 < theta)
+    (hdelta : 0 < delta)
+    (hLoss : (2/((sigma-1/2)/2))*(u+3*d) ≤ delta/2) :
+    ∃ Clog : ℝ, 0 < Clog ∧
+      let CK := 32 * 2 ^ sigma +
+        (20 * (4 * Real.pi) ^ sigma + 4 * Real.pi ^ sigma) *
+          4 ^ (sigma + 1 / 2)
+      let Cref := mediumReflectedThresholdConstant Clog CK
+      let g := (sigma - 1 / 2) / 2
+      let Uscale := 2 / g
+      1 ≤ Cref ∧ 0 < g ∧ 0 < Uscale ∧
+      ∃ k : ℕ, 1 < k ∧ ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+        ∀ {ι : Type*} [Fintype ι] [Nonempty ι]
+          {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+          A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+          ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+          2*(2^r*Y) ≤ A →
+          tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+          (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+          (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+            ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+          let Q := 2^r*Y
+          let M := mediumTypeIDualCutoff T d Q
+          let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+          let R := (Real.pi*V)/
+            (8*(Q : ℝ)*mediumTypeIStationaryKernel sigma T Q*
+              (typeIDyadicCutoffMellinL1+1))
+          let L := (R/(2*(M : ℝ)^sigma))/Nat.clog 2 M
+          ∃ (W' : ι → ℝ) (label : ι → Fin (Nat.clog 2 M)),
+            (∀ x, |W' x-W x| ≤ T^d+2*Real.pi*T^theta) ∧
+            (∀ x, T/2-2*Real.pi*T^theta ≤ W' x ∧ W' x ≤ 5*T/2+2*Real.pi*T^theta) ∧
+            (∀ x, ((2^(label x).val : ℕ) : ℝ)^(sigma-delta) ≤
+              ‖∑ n ∈ Finset.Ioc (2^(label x).val) (min (2*2^(label x).val) M),
+                dirichletPhase n (W' x)‖) ∧
+            (∀ x, (M : ℝ)^sigma*L /
+                (4*((2^(label x).val : ℕ) : ℝ)^sigma*classicalTypeIFourierL1 (-sigma)) ≤
+              ‖∑ n ∈ Finset.Ioc (2^(label x).val) (min (2*2^(label x).val) M),
+                dirichletPhase n (W' x)‖) ∧
+            approximateAdditiveEnergyOf 1 W ≤
+              (4*Nat.ceil (1+4*(T^d+2*Real.pi*T^theta))+6)*approximateAdditiveEnergyOf 1 W' ∧
+            T^(1/2-u-d*sigma+(sigma-1)/tau-d)/Cref ≤ L ∧
+            T^g/Cref ≤ L ∧
+            (∀ x, 1 < 2^(label x).val ∧ 2^(label x).val < M ∧
+              1/(1/2+d) ≤ typeILogarithmicScale T (2^(label x).val) ∧
+              typeILogarithmicScale T (2^(label x).val) ≤ Uscale ∧
+              classicalTypeIFourierRadius M (2^(label x).val) k (-sigma)
+                ((M : ℝ)^sigma*L) ≤ T^theta) :=
+  @eventually_interior_source_normalized_indexed_fourier_data sigma d u theta delta hsigma hsigmaUpper hd hdOne hdGap hu huD htheta hdelta hLoss
+
+example (T : ℝ) (hT : 0 < T) (c : Fin 4) :
+    0 < classicalReflectedHeight T c ∧
+      T/4 ≤ classicalReflectedHeight T c ∧ classicalReflectedHeight T c ≤ 2*T :=
+  @classicalReflectedHeight_bounds T hT c
+
+example (T t : ℝ)
+    (ht : T/4 ≤ t ∧ t ≤ 4*T) :
+    classicalReflectedHeight T (classicalReflectedHeightColor T t) ≤ t ∧
+      t ≤ 2*classicalReflectedHeight T (classicalReflectedHeightColor T t) :=
+  @classicalReflectedHeightColor_mem T t ht
+
+example (U delta T H : ℝ) (N : ℕ) (hU : 2 ≤ U) (hdelta : 0 ≤ delta)
+    (hT : 0 < T) (hN : 1 < N)
+    (hLower : 2-delta/2 ≤ typeILogarithmicScale T N)
+    (hUpper : typeILogarithmicScale T N ≤ U+delta/2)
+    (hPower : 4 ≤ (N : ℝ)^(delta/2))
+    (hHLower : T/4 ≤ H) (hHUpper : H ≤ 2*T) :
+    ∃ alpha ∈ Set.Icc (2 : ℝ) U, |Real.logb N H-alpha| ≤ delta :=
+  @classicalReflected_logScale_near_interval U delta T H N hU hdelta hT hN hLower hUpper hPower hHLower hHUpper
+
+example (σ B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ τ ∈ Set.Icc (2 : ℝ) U, IsZetaLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι : Type*} [Fintype ι] [DecidableEq ι]
+          (A N : ℕ) (V T : ℝ) (W : ι → ℝ),
+          1 < N → 0 < T → C ≤ (N : ℝ) →
+          4 ≤ (N : ℝ)^(δ/2) →
+          2-δ/2 ≤ typeILogarithmicScale T N →
+          typeILogarithmicScale T N ≤ U+δ/2 →
+          (∀ x, T/4 ≤ W x ∧ W x ≤ 4*T) →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+          (∀ x, V ≤ ‖∑ n ∈ Finset.Ioc N (min (2*N) A),
+            dirichletPhase n (W x)‖) →
+          (N : ℝ)^(σ-δ) ≤ V →
+          (Fintype.card ι : ℝ) ≤ 4*(C*(2*T)^B*(N : ℝ)^ε) :=
+  @classicalReflected_uniform_expanded_slab_cardinality_bound σ B U hB hU hLV
+
+example (σ B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ τ ∈ Set.Icc (2 : ℝ) U, IsZetaLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι : Type*} [Fintype ι] [DecidableEq ι]
+          (A N : ℕ) (V T : ℝ) (W : ι → ℝ),
+          1 < N → 0 < T → C ≤ (N : ℝ) →
+          4 ≤ (N : ℝ)^(δ/2) →
+          2-δ/2 ≤ typeILogarithmicScale T N →
+          typeILogarithmicScale T N ≤ U+δ/2 →
+          (∀ x, T/4 ≤ W x ∧ W x ≤ 4*T) →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+          (∀ x, V ≤ ‖∑ n ∈ Finset.Ioc N (min (2*N) A),
+            dirichletPhase n (W x)‖) →
+          (N : ℝ)^(σ-δ) ≤ V →
+          (approximateAdditiveEnergyOf 1 W : ℝ) ≤ 2304*(C*(2*T)^B*(N : ℝ)^ε) :=
+  @classicalReflected_uniform_expanded_slab_energy_bound σ B U hB hU hLV
+
+example {ι κ : Type*} [Fintype ι] [LinearOrder ι]
+    (W : ι → ℝ) (label : ι → κ) (L : ℕ)
+    (hlocal : ∀ z : ℤ, (unitBinFinset W z).card ≤ L)
+    (c : κ × (ZMod 2 × Fin (L+1))) :
+    ∀ x : EnergyColorFiber (fun i => (label i,boundedMultiplicityColor W L hlocal i)) c,
+      ∀ y : EnergyColorFiber (fun i => (label i,boundedMultiplicityColor W L hlocal i)) c,
+        x ≠ y → 1 ≤ |W x.1-W y.1| :=
+  @oneSeparated_on_labeled_boundedMultiplicityColor ι κ _ _ W label L hlocal c
+
+example (σ B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ τ ∈ Set.Icc (2 : ℝ) U, IsZetaLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι κ : Type*} [Fintype ι] [LinearOrder ι] [Fintype κ]
+          (A : ℕ) (N : κ → ℕ) (label : ι → κ) (T D : ℝ)
+          (W W' : ι → ℝ),
+          let L := Nat.ceil (2*D+2)
+          let K := (Fintype.card (κ × (ZMod 2 × Fin (L+1))) : ℝ)
+          0 < T → 0 ≤ D →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+          (∀ x, |W' x-W x| ≤ D) →
+          (∀ x, T/4 ≤ W' x ∧ W' x ≤ 4*T) →
+          (∀ x, 1 < N (label x) ∧ (N (label x) : ℝ) ≤ T ∧
+            C ≤ (N (label x) : ℝ) ∧ 4 ≤ (N (label x) : ℝ)^(δ/2) ∧
+            2-δ/2 ≤ typeILogarithmicScale T (N (label x)) ∧
+            typeILogarithmicScale T (N (label x)) ≤ U+δ/2) →
+          (∀ x, (N (label x) : ℝ)^(σ-δ) ≤
+            ‖∑ n ∈ Finset.Ioc (N (label x)) (min (2*N (label x)) A),
+              dirichletPhase n (W' x)‖) →
+          (Fintype.card ι : ℝ) ≤ K*(4*(C*(2*T)^B*T^ε)) :=
+  @classicalReflected_uniform_colored_cardinality_bound σ B U hB hU hLV
+
+example (σ B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ τ ∈ Set.Icc (2 : ℝ) U, IsZetaLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ {ι κ : Type*} [Fintype ι] [LinearOrder ι] [Fintype κ]
+          (A : ℕ) (N : κ → ℕ) (label : ι → κ) (T D : ℝ)
+          (W W' : ι → ℝ),
+          let L := Nat.ceil (2*D+2)
+          let K := (Fintype.card (κ × (ZMod 2 × Fin (L+1))) : ℝ)
+          0 < T → 0 ≤ D →
+          (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+          (∀ x, |W' x-W x| ≤ D) →
+          (∀ x, T/4 ≤ W' x ∧ W' x ≤ 4*T) →
+          (∀ x, 1 < N (label x) ∧ (N (label x) : ℝ) ≤ T ∧
+            C ≤ (N (label x) : ℝ) ∧ 4 ≤ (N (label x) : ℝ)^(δ/2) ∧
+            2-δ/2 ≤ typeILogarithmicScale T (N (label x)) ∧
+            typeILogarithmicScale T (N (label x)) ≤ U+δ/2) →
+          (∀ x, (N (label x) : ℝ)^(σ-δ) ≤
+            ‖∑ n ∈ Finset.Ioc (N (label x)) (min (2*N (label x)) A),
+              dirichletPhase n (W' x)‖) →
+          (approximateAdditiveEnergyOf 1 W : ℝ) ≤ (4*Nat.ceil (1+4*D)+6)*(9*K^4*(2304*(C*(2*T)^B*T^ε))) :=
+  @classicalReflected_uniform_colored_energy_bound σ B U hB hU hLV
+
+example (C U delta d : ℝ) (hU : 0 < U) (hdelta : 0 < delta)
+    (hd : 0 ≤ d) (hdHalf : d ≤ 1/2) (hdWindow : d ≤ delta/8) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ N : ℕ, 1 < N →
+      1/(1/2+d) ≤ typeILogarithmicScale T N →
+      typeILogarithmicScale T N ≤ U →
+      (N : ℝ) ≤ T ∧ C ≤ (N : ℝ) ∧ 4 ≤ (N : ℝ)^(delta/2) ∧
+      2-delta/2 ≤ typeILogarithmicScale T N ∧
+      typeILogarithmicScale T N ≤ U+delta/2 :=
+  @eventually_classicalReflected_compact_scale_conditions C U delta d hU hdelta hd hdHalf hdWindow
+
+example (d : ℝ) (hd : d < 1) :
+    ∀ᶠ T : ℝ in Filter.atTop, 2*Real.pi*T^d ≤ T/4 :=
+  @eventually_classicalReflected_fourier_displacement_fits d hd
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (2/((sigma-1/2)/2)),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ d u : ℝ, 0 < d → d ≤ (sigma-1/2)/1000 →
+          0 ≤ u → u ≤ d → d ≤ delta/8 →
+          (2/((sigma-1/2)/2))*(u+3*d) ≤ delta/2 →
+          ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+              {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+              A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+              ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+              2*(2^r*Y) ≤ A →
+              tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let M := mediumTypeIDualCutoff T d (2^r*Y)
+              let D := T^d+2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin (Nat.clog 2 M) ×
+                (ZMod 2 × Fin (L+1))) : ℝ)
+              (Fintype.card ι : ℝ) ≤ K*(4*(C*(2*T)^B*T^ε)) :=
+  @classicalReflected_interior_source_cardinality_transfer sigma B hsigma hsigmaUpper hB hLV
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (2/((sigma-1/2)/2)),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ d u : ℝ, 0 < d → d ≤ (sigma-1/2)/1000 →
+          0 ≤ u → u ≤ d → d ≤ delta/8 →
+          (2/((sigma-1/2)/2))*(u+3*d) ≤ delta/2 →
+          ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+              {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+              A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+              ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+              2*(2^r*Y) ≤ A →
+              tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let M := mediumTypeIDualCutoff T d (2^r*Y)
+              let D := T^d+2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin (Nat.clog 2 M) ×
+                (ZMod 2 × Fin (L+1))) : ℝ)
+              (approximateAdditiveEnergyOf 1 W : ℝ) ≤ (4*Nat.ceil (1+4*D)+6)*(9*K^4*(2304*(C*(2*T)^B*T^ε))) :=
+  @classicalReflected_interior_source_energy_transfer sigma B hsigma hsigmaUpper hB hLV
+
+example (d a : ℝ) (hd : 0 < d) (ha : 0 ≤ a) :
+    ∃ Kcard Kenergy : ℝ, 0 < Kcard ∧ 0 < Kenergy ∧
+      ∀ᶠ T : ℝ in Filter.atTop, ∀ (M : ℕ) (D : ℝ),
+        M ≤ ⌊sharpZetaCutoff T⌋₊ → 0 ≤ D → D ≤ a*T^d →
+        classicalReflectedCardinalityLoss M D ≤ Kcard*T^(2*d) ∧
+        classicalReflectedEnergyLoss M D ≤ Kenergy*T^(9*d) :=
+  @eventually_classicalReflected_losses_le_const_mul_rpow d a hd ha
+
+example {T tau d : ℝ} {Q : ℕ}
+    (hT : 8 ≤ T) (htau : 0 < tau) (htauTwo : tau ≤ 2)
+    (hd : d ≤ 1/2) (hQ : 1 < Q) (hScale : (Q : ℝ)^tau = T) :
+    mediumTypeIDualCutoff T d Q ≤ ⌊sharpZetaCutoff T⌋₊ :=
+  @classicalReflected_dualCutoff_le_sharpCutoff T tau d Q hT htau htauTwo hd hQ hScale
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (2/((sigma-1/2)/2)),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/1000 ∧
+        ∃ C : ℝ, 1 ≤ C ∧
+          ∀ u : ℝ, 0 ≤ u → u ≤ d →
+            ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+              ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+                {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+                A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+                ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+                2*(2^r*Y) ≤ A →
+                tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+                (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+                (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalReflected_uniform_interior_source_cardinality_bound sigma B hsigma hsigmaUpper hB hLV
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (2/((sigma-1/2)/2)),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/1000 ∧
+        ∃ C : ℝ, 1 ≤ C ∧
+          ∀ u : ℝ, 0 ≤ u → u ≤ d →
+            ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+              ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+                {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+                A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+                ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+                2*(2^r*Y) ≤ A →
+                tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+                (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock Y A r sigma (W x)‖) →
+                (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalReflected_uniform_interior_source_energy_bound sigma B hsigma hsigmaUpper hB hLV
+
+example : classicalReflectedHeightColor 8 2 = 0 := by
+  norm_num [classicalReflectedHeightColor]
+
+example : classicalReflectedHeightColor 8 4 = 1 := by
+  norm_num [classicalReflectedHeightColor]
+
+example : classicalReflectedHeightColor 8 8 = 2 := by
+  norm_num [classicalReflectedHeightColor]
+
+example : classicalReflectedHeightColor 8 16 = 3 := by
+  norm_num [classicalReflectedHeightColor]
+
+example : classicalReflectedHeightColor 8 32 = 3 := by
+  norm_num [classicalReflectedHeightColor]
+
+example : classicalReflectedHeight 8 0 = 2 := by
+  norm_num [classicalReflectedHeight, Fin.reduceEq]
+
+example : classicalReflectedHeight 8 1 = 4 := by
+  norm_num [classicalReflectedHeight, Fin.reduceEq]
+
+example : classicalReflectedHeight 8 2 = 8 := by
+  have h20 : (2 : Fin 4) ≠ 0 := by decide
+  have h21 : (2 : Fin 4) ≠ 1 := by decide
+  norm_num [classicalReflectedHeight, h20, h21]
+
+example : classicalReflectedHeight 8 3 = 16 := by
+  have h30 : (3 : Fin 4) ≠ 0 := by decide
+  have h31 : (3 : Fin 4) ≠ 1 := by decide
+  have h32 : (3 : Fin 4) ≠ 2 := by decide
+  norm_num [classicalReflectedHeight, h30, h31, h32]
+
+example (T : ℝ) (hT : 0 < T) :
+    classicalReflectedHeight T (classicalReflectedHeightColor T (T/4)) ≤ T/4 ∧
+      T/4 ≤ 2*classicalReflectedHeight T (classicalReflectedHeightColor T (T/4)) :=
+  classicalReflectedHeightColor_mem T (T/4) ⟨le_rfl,by linarith⟩
+
+example (T : ℝ) (hT : 0 < T) :
+    classicalReflectedHeight T (classicalReflectedHeightColor T (4*T)) ≤ 4*T ∧
+      4*T ≤ 2*classicalReflectedHeight T (classicalReflectedHeightColor T (4*T)) :=
+  classicalReflectedHeightColor_mem T (4*T) ⟨by linarith,le_rfl⟩
+
+example (d : ℝ) (hd : 0 ≤ d) :
+    (1/2:ℝ)*(1+d-1/2)-3*d ≤ 1/2-d*(1/2)+((1/2)-1)/2-d := by
+  simpa using classicalReflected_threshold_exponent_margin (1/2) 2 d 0
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) hd
+
+example (d u : ℝ) (hd : 0 ≤ d) :
+    (1 : ℝ)*(1+d-1/2)-u-3*d ≤ 1/2-u-d*1+(1-1)/2-d :=
+  classicalReflected_threshold_exponent_margin 1 2 d u
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) hd
+
+example : classicalReflectedColorCount 2 0 = 6 := by
+  have hc : Nat.clog 2 2 = 1 := by decide
+  norm_num [classicalReflectedColorCount, hc]
+
+example : classicalReflectedCardinalityLoss 2 0 = 24 := by
+  have hc : Nat.clog 2 2 = 1 := by decide
+  norm_num [classicalReflectedCardinalityLoss, classicalReflectedColorCount, hc]
+
+example : classicalReflectedEnergyLoss 2 0 = 268738560 := by
+  have hc : Nat.clog 2 2 = 1 := by decide
+  norm_num [classicalReflectedEnergyLoss, classicalReflectedColorCount, hc]
+
+example (D : ℝ) : classicalReflectedColorCount 0 D = 0 := by
+  simp [classicalReflectedColorCount]
+
+example (D : ℝ) : classicalReflectedCardinalityLoss 0 D = 0 := by
+  simp [classicalReflectedCardinalityLoss, classicalReflectedColorCount]
+
+example (D : ℝ) : classicalReflectedEnergyLoss 0 D = 0 := by
+  simp [classicalReflectedEnergyLoss, classicalReflectedColorCount]
+
+example (C : ℝ) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ N : ℕ, 1 < N →
+      1/(1/2+(1/1000:ℝ)) ≤ typeILogarithmicScale T N →
+      typeILogarithmicScale T N ≤ 16 →
+      (N : ℝ) ≤ T ∧ C ≤ (N : ℝ) ∧ 4 ≤ (N : ℝ)^((1/10:ℝ)/2) ∧
+      2-(1/10:ℝ)/2 ≤ typeILogarithmicScale T N ∧
+      typeILogarithmicScale T N ≤ 16+(1/10:ℝ)/2 :=
+  eventually_classicalReflected_compact_scale_conditions C 16 (1/10) (1/1000)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+end NormalizedInteriorReflectedSourceRegression
+
+section GlobalShiftedSourceRegression
+
+open scoped BigOperators
+
+example {ι : Type*} [Fintype ι]
+    (Y A k : ℕ) (sigma V : ℝ) (W : ι → ℝ)
+    (hY : 1 ≤ Y) (hA : A ≤ 2^k*Y)
+    (hLarge : ∀ x, V ≤
+      ‖classicalZetaLongTail Y A ((sigma : ℂ)+Complex.I*(W x : ℂ))‖) :
+    ∃ label : ι → Fin (k+1),
+      (∀ x, V/(k+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val sigma (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      Fintype.card ι = ∑ c : Fin (k+1), Fintype.card (EnergyColorFiber label c) :=
+  @exists_global_typeISourceSmoothBlock_indexed_labels ι _ Y A k sigma V W hY hA hLarge
+
+example (sigma T D : ℝ) (Y X L : ℕ)
+    (shiftedZero : ↥(zerosInRect sigma 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect sigma 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy sigma T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (hlabel : branchLabel.1 = some (Sum.inl r)) (hY : 1 ≤ Y)
+    (hlarge : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor sigma T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge sigma T D Y X branchLabel.1 (shiftedZero x.1.1))
+    (hsep : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor sigma T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|) :
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-D)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor sigma T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val sigma (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      ∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ)) :=
+  @exists_classicalTypeI_global_source_indexed_labels sigma T D Y X L shiftedZero baseColor hlocal branchLabel r hlabel hY hlarge hsep
+
+example (sigma B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) U,
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ s d u : ℝ, 1/2 < s → s < 1 →
+          2/((s-1/2)/2) ≤ U → sigma-delta/2 ≤ s →
+          0 < d → d ≤ (s-1/2)/1000 →
+          0 ≤ u → u ≤ d → d ≤ delta/8 →
+          U*(u+3*d) ≤ delta/4 →
+          ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+              {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+              A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+              ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+              2*(2^r*Y) ≤ A →
+              tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let M := mediumTypeIDualCutoff T d (2^r*Y)
+              let D := T^d+2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin (Nat.clog 2 M) ×
+                (ZMod 2 × Fin (L+1))) : ℝ)
+              (Fintype.card ι : ℝ) ≤ K*(4*(C*(2*T)^B*T^ε)) :=
+  @classicalReflected_shifted_line_source_cardinality_transfer sigma B U hB hU hLV
+
+example (sigma B U : ℝ) (hB : 0 ≤ B) (hU : 2 ≤ U)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) U,
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ s d u : ℝ, 1/2 < s → s < 1 →
+          2/((s-1/2)/2) ≤ U → sigma-delta/2 ≤ s →
+          0 < d → d ≤ (s-1/2)/1000 →
+          0 ≤ u → u ≤ d → d ≤ delta/8 →
+          U*(u+3*d) ≤ delta/4 →
+          ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+              {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+              A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+              ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+              2*(2^r*Y) ≤ A →
+              tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let M := mediumTypeIDualCutoff T d (2^r*Y)
+              let D := T^d+2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin (Nat.clog 2 M) ×
+                (ZMod 2 × Fin (L+1))) : ℝ)
+              (approximateAdditiveEnergyOf 1 W : ℝ) ≤ (4*Nat.ceil (1+4*D)+6)*(9*K^4*(2304*(C*(2*T)^B*T^ε))) :=
+  @classicalReflected_shifted_line_source_energy_transfer sigma B U hB hU hLV
+
+example (sigma s : ℝ) (hsigma : 1/2 < sigma) (hs : (sigma+1/2)/2 ≤ s) :
+    2/((s-1/2)/2) ≤ 8/(sigma-1/2) :=
+  @classicalReflected_sourceLine_upperScale_le sigma s hsigma hs
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (8/(sigma-1/2)),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → s ≤ sigma → 0 ≤ u → u ≤ d →
+            ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+              ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+                {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+                A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+                ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+                2*(2^r*Y) ≤ A →
+                tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+                (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+                (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalReflected_uniform_shifted_line_source_cardinality_bound sigma B hsigma hsigmaUpper hB hLV
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (8/(sigma-1/2)),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → s ≤ sigma → 0 ≤ u → u ≤ d →
+            ∃ T₀ : ℝ, 8 ≤ T₀ ∧
+              ∀ {ι : Type*} [Fintype ι] [LinearOrder ι]
+                {T tau : ℝ} {Y A r : ℕ} (W : ι → ℝ), T₀ ≤ T →
+                A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+                ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) →
+                2*(2^r*Y) ≤ A →
+                tau = typeILogarithmicScale T (2^r*Y) → 1 < tau → tau < 2 →
+                (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+                (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalReflected_uniform_shifted_line_source_energy_bound sigma B hsigma hsigmaUpper hB hLV
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (8/(sigma-1/2)),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → s ≤ sigma → 0 ≤ u → u ≤ d →
+              ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T : ℝ) (Y X L : ℕ), T₀ ≤ T →
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r)) (_ : 1 ≤ Y)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^d ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^d),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), 2 ≤ c.val →
+        ((Y+1 : ℕ) : ℝ) ≤ (((2^c.val*Y : ℕ) : ℝ)/2) →
+        2*(2^c.val*Y) ≤ A →
+        1 < typeILogarithmicScale T (2^c.val*Y) →
+        typeILogarithmicScale T (2^c.val*Y) < 2 →
+        (Fintype.card (EnergyColorFiber label c) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_interior_source_cardinality_bounds sigma B hsigma hsigmaUpper hB hLV
+
+example (sigma B : ℝ) (hsigma : 1/2 < sigma) (hsigmaUpper : sigma < 1)
+    (hB : 0 ≤ B)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (8/(sigma-1/2)),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (sigma-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → s ≤ sigma → 0 ≤ u → u ≤ d →
+              ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T : ℝ) (Y X L : ℕ), T₀ ≤ T →
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r)) (_ : 1 ≤ Y)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^d ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^d),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), 2 ≤ c.val →
+        ((Y+1 : ℕ) : ℝ) ≤ (((2^c.val*Y : ℕ) : ℝ)/2) →
+        2*(2^c.val*Y) ≤ A →
+        1 < typeILogarithmicScale T (2^c.val*Y) →
+        typeILogarithmicScale T (2^c.val*Y) < 2 →
+        (approximateAdditiveEnergyOf 1 (fun x : EnergyColorFiber label c => W x.1) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_interior_source_energy_bounds sigma B hsigma hsigmaUpper hB hLV
+
+example (s d u : ℝ) (hs : 1/2 < s) (hd : d < 1) (hu : u < s-1/2) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T t : ℝ) (Y A r : ℕ), T₀ ≤ T →
+      A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r → A < 2*(2^r*Y) →
+      T-T^d ≤ t → t ≤ 2*T+T^d →
+      ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A r s t‖ → False :=
+  @eventually_no_terminal_global_source_point s d u hs hd hu
+
+example (s d u : ℝ) (hs : 1/2 < s) (hd : d < 1) (hu : u < s-1/2) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ {ι : Type*} (T : ℝ) (Y A r : ℕ) (W : ι → ℝ),
+      T₀ ≤ T → A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+      A < 2*(2^r*Y) →
+      (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+      (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A r s (W x)‖) → IsEmpty ι :=
+  @eventually_terminal_global_source_index_isEmpty s d u hs hd hu
+
+example : 2/(((5/8:ℝ)-1/2)/2) ≤ 8/((3/4:ℝ)-1/2) :=
+  classicalReflected_sourceLine_upperScale_le (3/4) (5/8) (by norm_num) (by norm_num)
+
+example : 2/(((11/16:ℝ)-1/2)/2) ≤ 8/((7/8:ℝ)-1/2) :=
+  classicalReflected_sourceLine_upperScale_le (7/8) (11/16) (by norm_num) (by norm_num)
+
+example : 2/(((3/4:ℝ)-1/2)/2) ≤ 8/((3/4:ℝ)-1/2) :=
+  classicalReflected_sourceLine_upperScale_le (3/4) (3/4) (by norm_num) (by norm_num)
+
+example : ∃ label : Fin 0 → Fin 1,
+    (∀ x, (1 : ℝ)/(0+1 : ℕ) ≤
+      ‖typeISourceSmoothBlock 1 1 (label x).val (3/4) (0 : ℝ)‖) ∧
+    (∀ x, (label x).val < 2 ∨ 1 < 2*(2^(label x).val*1) ∨
+      (((1+1 : ℕ) : ℝ) ≤ (((2^(label x).val*1 : ℕ) : ℝ)/2) ∧
+        2*(2^(label x).val*1) ≤ 1)) ∧
+    Fintype.card (Fin 0) = ∑ c : Fin 1, Fintype.card (EnergyColorFiber label c) := by
+  exact exists_global_typeISourceSmoothBlock_indexed_labels
+    1 1 0 (3/4) 1 (fun _ : Fin 0 => 0) (by omega) (by norm_num)
+    (fun x => Fin.elim0 x)
+
+example : ∃ label : Fin 2 → Fin 1,
+    (∀ x, (0 : ℝ)/(0+1 : ℕ) ≤
+      ‖typeISourceSmoothBlock 1 1 (label x).val (3/4) (0 : ℝ)‖) ∧
+    (∀ x, (label x).val < 2 ∨ 1 < 2*(2^(label x).val*1) ∨
+      (((1+1 : ℕ) : ℝ) ≤ (((2^(label x).val*1 : ℕ) : ℝ)/2) ∧
+        2*(2^(label x).val*1) ≤ 1)) ∧
+    Fintype.card (Fin 2) = ∑ c : Fin 1, Fintype.card (EnergyColorFiber label c) := by
+  exact exists_global_typeISourceSmoothBlock_indexed_labels
+    1 1 0 (3/4) 0 (fun _ : Fin 2 => 0) (by omega) (by norm_num)
+    (fun _ => norm_nonneg _)
+
+example : ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T t : ℝ) (Y A r : ℕ), T₀ ≤ T →
+    A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r → A < 2*(2^r*Y) →
+    T-T^(1/8:ℝ) ≤ t → t ≤ 2*T+T^(1/8:ℝ) →
+    ((3/4)*(T^(-(1/16:ℝ))/2))/(Nat.clog 2 A+1 : ℕ) ≤
+      ‖typeISourceSmoothBlock Y A r (3/4) t‖ → False :=
+  eventually_no_terminal_global_source_point (3/4) (1/8) (1/16)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ {ι : Type*} (T : ℝ) (Y A r : ℕ) (W : ι → ℝ),
+    T₀ ≤ T → A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y → 2 ≤ r →
+    A < 2*(2^r*Y) →
+    (∀ x, T-T^(1/8:ℝ) ≤ W x ∧ W x ≤ 2*T+T^(1/8:ℝ)) →
+    (∀ x, ((3/4)*(T^(-(1/16:ℝ))/2))/(Nat.clog 2 A+1 : ℕ) ≤
+      ‖typeISourceSmoothBlock Y A r (3/4) (W x)‖) → IsEmpty ι :=
+  eventually_terminal_global_source_index_isEmpty (3/4) (1/8) (1/16)
+    (by norm_num) (by norm_num) (by norm_num)
+
+
+example (s d u : ℝ) (hs : 1/2 < s) (hsUpper : s < 1)
+    (hd : 0 < d) (hdGap : d ≤ (s-1/2)/1000) (huD : u ≤ d) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T t : ℝ) (Y A r : ℕ), T₀ ≤ T →
+      A = ⌊sharpZetaCutoff T⌋₊ → 0 < Y →
+      T-T^d ≤ t → t ≤ 2*T+T^d →
+      ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A r s t‖ →
+      r < 2 ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2) ∧
+          2*(2^r*Y) ≤ A ∧ 1 < typeILogarithmicScale T (2^r*Y)) :=
+  @eventually_large_global_source_classification s d u hs hsUpper hd hdGap huD
+
+example (s d u : ℝ) (hs : 1/2 < s) (hsUpper : s < 1)
+    (hd : 0 < d) (hdGap : d ≤ (s-1/2)/1000) (huD : u ≤ d) :
+    ∃ T₀ : ℝ, 8 ≤ T₀ ∧ ∀ (T : ℝ) (Y X L : ℕ), T₀ ≤ T →
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r)) (_ : 1 ≤ Y)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^d ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^d),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ x, (label x).val < 2 ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A ∧
+          1 < typeILogarithmicScale T (2^(label x).val*Y))) :=
+  @eventually_classicalTypeI_global_source_classification s d u hs hsUpper hd hdGap huD
+
+
+end GlobalShiftedSourceRegression
+
+section DirectInteriorSourceRegression
+
+open scoped BigOperators FourierTransform
+open Complex
+
+example {Y A r : ℕ} (s t : ℝ) (hr : 2 ≤ r)
+    (hUpper : 2*(2^r*Y) ≤ A) :
+    typeISourceSmoothBlock Y A r s t =
+      ∑ n ∈ Finset.Ioc ((2^r*Y)/2) (2*(2^r*Y)),
+        (typeISourceSmoothWeight Y A r n : ℂ) *
+          (n : ℂ)^(-(s : ℂ)) * (n : ℂ)^(-(t : ℂ)*Complex.I) :=
+  @typeISourceSmoothBlock_eq_annulus Y A r s t hr hUpper
+
+example {Y A r : ℕ} {s t : ℝ} (hY : 0 < Y) (hr : 2 ≤ r)
+    (hLower : ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2))
+    (hUpper : 2*(2^r*Y) ≤ A) :
+    typeISourceSmoothBlock Y A r s t =
+      ((((2^r*Y : ℕ) : ℝ)^(-s) : ℝ) : ℂ) *
+        ∫ ξ : ℝ, 𝓕 (typeIInteriorLogProfileSchwartz s) ξ *
+          Complex.exp (-(((2*Real.pi*ξ*Real.log (2^r*Y : ℕ) : ℝ) : ℂ)*Complex.I)) *
+          ∑ n ∈ Finset.Ioc ((2^r*Y)/2) (2*(2^r*Y)),
+            (n : ℂ)^(-(((t-2*Real.pi*ξ : ℝ) : ℂ))*Complex.I) :=
+  @typeISourceSmoothBlock_eq_annular_fourier_deweight Y A r s t hY hr hLower hUpper
+
+example (Q : ℕ) (t : ℝ) (hEven : 2 ∣ Q) :
+    (∑ n ∈ Finset.Ioc (Q/2) (2*Q),
+      (n : ℂ)^(-(t : ℂ)*Complex.I)) =
+      dirichletPoly (Q/2) (fun _ => 1) t +
+        dirichletPoly Q (fun _ => 1) t :=
+  @coefficientOne_annulus_eq_two_dyadic_polynomials Q t hEven
+
+example (f : SchwartzMap ℝ ℂ) :
+    0 < finiteFourierMass f :=
+  @finiteFourierMass_pos f
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c a t R : ℝ)
+    (hS : ∀ n ∈ S, 0 < n) (hc : 0 ≤ c) (hk : 1 < k) (hR : 0 < R) :
+    ‖((c : ℝ) : ℂ) *
+      ∫ ξ : ℝ in (Set.Icc (-R) R)ᶜ,
+        𝓕 (f) ξ *
+          Complex.exp
+            (-(((2 * Real.pi * ξ * a : ℝ) : ℂ) * I)) *
+          ∑ n ∈ S,
+            (n : ℂ) ^
+              (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * I)‖ ≤
+      c * (S).card *
+        ((2 * SchwartzMap.seminorm ℝ k 0
+            (𝓕 (f)) / ((k : ℝ) - 1)) *
+          R ^ (1 - (k : ℝ))) :=
+  @norm_schwartz_logShift_finite_sum_tail_le f S k c a t R hS hc hk hR
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c a V t R : ℝ)
+    (hS : ∀ n ∈ S, 0 < n) (hc : 0 < c) (hV : 0 < V)
+    (hk : 1 < k) (hR : 0 < R)
+    (hlarge : V ≤ ‖(c : ℂ) * ∑ n ∈ S,
+      f (Real.log n-a) * (n : ℂ)^(-(t : ℂ)*I)‖)
+    (htailNumeric :
+      c * (S).card *
+        ((2 * SchwartzMap.seminorm ℝ k 0
+            (𝓕 (f)) / ((k : ℝ) - 1)) *
+          R ^ (1 - (k : ℝ))) ≤ V / 2) :
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V / (4 * c * finiteFourierMass f) ≤
+        ‖∑ n ∈ S,
+          (n : ℂ) ^ (-(((t - 2 * Real.pi * ξ : ℝ) : ℂ)) * I)‖ :=
+  @exists_bounded_coefficientOne_shift_of_schwartz_logShift f S k c a V t R hS hc hV hk hR hlarge htailNumeric
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c V : ℝ) (hc : 0 ≤ c) (hV : 0 < V) (hk : 1 < k) :
+    0 < finiteFourierRadius f S k c V :=
+  @finiteFourierRadius_pos f S k c V hc hV hk
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c V : ℝ) (hc : 0 ≤ c) (hV : 0 < V) (hk : 1 < k) :
+    let R := finiteFourierRadius f S k c V
+    c * (S).card *
+        ((2 * SchwartzMap.seminorm ℝ k 0
+            (𝓕 (f)) / ((k : ℝ) - 1)) *
+          R ^ (1 - (k : ℝ))) ≤ V / 2 :=
+  @finiteFourierRadius_tail_numeric f S k c V hc hV hk
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c V T α δ : ℝ) (hc : 0 ≤ c) (hV : 0 < V) (hk : 1 < k)
+    (hT : 1 ≤ T) (horder : α ≤ δ * ((k : ℝ) - 1))
+    (hbase :
+      1 +
+          4 * (c * (S).card) *
+            SchwartzMap.seminorm ℝ k 0
+              (𝓕 (f)) /
+            (((k : ℝ) - 1) * V) ≤
+        T ^ α) :
+    finiteFourierRadius f S k c V ≤ T ^ δ :=
+  @finiteFourierRadius_le_rpow_of_base_growth f S k c V T α δ hc hV hk hT horder hbase
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) (k : ℕ) (c a V t : ℝ)
+    (hS : ∀ n ∈ S, 0 < n) (hc : 0 < c) (hV : 0 < V) (hk : 1 < k)
+    (hlarge : V ≤ ‖(c : ℂ) * ∑ n ∈ S,
+      f (Real.log n-a) * (n : ℂ)^(-(t : ℂ)*I)‖) :
+    let R := finiteFourierRadius f S k c V
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V/(4*c*finiteFourierMass f) ≤
+        ‖∑ n ∈ S, (n : ℂ)^(-(((t-2*Real.pi*ξ : ℝ) : ℂ))*I)‖ :=
+  @exists_explicitly_bounded_coefficientOne_shift_of_schwartz_logShift f S k c a V t hS hc hV hk hlarge
+
+example {Y A r : ℕ} (s V t : ℝ) (k : ℕ)
+    (hY : 0 < Y) (hr : 2 ≤ r) (hV : 0 < V) (hk : 1 < k)
+    (hLower : ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2))
+    (hUpper : 2*(2^r*Y) ≤ A)
+    (hLarge : V ≤ ‖typeISourceSmoothBlock Y A r s t‖) :
+    let Q := 2^r*Y
+    let f := typeIInteriorLogProfileSchwartz s
+    let R := finiteFourierRadius f (Finset.Ioc (Q/2) (2*Q)) k ((Q : ℝ)^(-s)) V
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V/(4*(Q : ℝ)^(-s)*finiteFourierMass f) ≤
+        ‖∑ n ∈ Finset.Ioc (Q/2) (2*Q),
+          (n : ℂ)^(-(((t-2*Real.pi*ξ : ℝ) : ℂ))*I)‖ :=
+  @exists_bounded_coefficientOne_shift_of_interior_source Y A r s V t k hY hr hV hk hLower hUpper hLarge
+
+example {Y A r : ℕ} (s V t : ℝ) (k : ℕ)
+    (hY : 0 < Y) (hr : 2 ≤ r) (hV : 0 < V) (hk : 1 < k)
+    (hLower : ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2))
+    (hUpper : 2*(2^r*Y) ≤ A)
+    (hLarge : V ≤ ‖typeISourceSmoothBlock Y A r s t‖) :
+    let Q := 2^r*Y
+    let f := typeIInteriorLogProfileSchwartz s
+    let R := finiteFourierRadius f (Finset.Ioc (Q/2) (2*Q)) k ((Q : ℝ)^(-s)) V
+    ∃ ξ ∈ Set.Icc (-R) R,
+      V/(8*(Q : ℝ)^(-s)*finiteFourierMass f) ≤
+        ‖dirichletPoly (Q/2) (fun _ => 1) (t-2*Real.pi*ξ)‖ ∨
+      V/(8*(Q : ℝ)^(-s)*finiteFourierMass f) ≤
+        ‖dirichletPoly Q (fun _ => 1) (t-2*Real.pi*ξ)‖ :=
+  @exists_bounded_two_dyadic_shift_of_interior_source Y A r s V t k hY hr hV hk hLower hUpper hLarge
+
+example (Q : ℕ) (c : Fin 2) :
+    Q/2 ≤ classicalDirectDyadicLength Q c ∧ classicalDirectDyadicLength Q c ≤ Q :=
+  @classicalDirectDyadicLength_bounds Q c
+
+example {ι : Type*} [Fintype ι] {Y A r : ℕ}
+    (s V : ℝ) (k : ℕ) (W : ι → ℝ)
+    (hY : 0 < Y) (hr : 2 ≤ r) (hV : 0 < V) (hk : 1 < k)
+    (hLower : ((Y+1 : ℕ) : ℝ) ≤ (((2^r*Y : ℕ) : ℝ)/2))
+    (hUpper : 2*(2^r*Y) ≤ A)
+    (hLarge : ∀ x, V ≤ ‖typeISourceSmoothBlock Y A r s (W x)‖) :
+    let Q := 2^r*Y
+    let f := typeIInteriorLogProfileSchwartz s
+    let R := finiteFourierRadius f (Finset.Ioc (Q/2) (2*Q)) k ((Q : ℝ)^(-s)) V
+    ∃ W' : ι → ℝ, ∃ label : ι → Fin 2,
+      (∀ x, |W' x-W x| ≤ 2*Real.pi*R) ∧
+      (∀ x, let N := classicalDirectDyadicLength Q (label x)
+        V/(8*(Q : ℝ)^(-s)*finiteFourierMass f) ≤
+          ‖dirichletPoly N (fun _ => 1) (W' x)‖) ∧
+      approximateAdditiveEnergyOf 1 W ≤
+        (4*Nat.ceil (1+4*(2*Real.pi*R))+6)*approximateAdditiveEnergyOf 1 W' :=
+  @exists_interior_source_indexed_two_dyadic_fourier_family ι _ Y A r s V k W hY hr hV hk hLower hUpper hLarge
+
+example (Q A k : ℕ) (s u T : ℝ) (hQ : 1 ≤ Q) (hQT : (Q : ℝ) ≤ T)
+    (hs : 0 ≤ s) (hk : 1 < k) :
+    let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+    1 + 4*((Q : ℝ)^(-s)*(Finset.Ioc (Q/2) (2*Q)).card)*
+      SchwartzMap.seminorm ℝ k 0 (𝓕 (typeIInteriorLogProfileSchwartz s)) /
+      (((k : ℝ)-1)*V) ≤
+    1 + ((64/3)*SchwartzMap.seminorm ℝ k 0
+      (𝓕 (typeIInteriorLogProfileSchwartz s))/((k : ℝ)-1))*
+      (Nat.clog 2 A+1 : ℕ)*T^(u+1) :=
+  @classicalDirectFourier_source_base_le Q A k s u T hQ hQT hs hk
+
+example (d : ℝ) (hd : 0 < d) :
+    ∃ k : ℕ, 1 < k ∧ ∀ s u : ℝ, 0 ≤ s → u ≤ 1 →
+      ∀ᶠ T : ℝ in Filter.atTop, ∀ Q : ℕ, 1 ≤ Q → (Q : ℝ) ≤ T →
+        let A := ⌊sharpZetaCutoff T⌋₊
+        let V := ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)
+        finiteFourierRadius (typeIInteriorLogProfileSchwartz s)
+          (Finset.Ioc (Q/2) (2*Q)) k ((Q : ℝ)^(-s)) V ≤ T^d :=
+  @exists_order_eventually_classicalDirectFourierRadius_le_rpow d hd
+
+example (T a : ℝ) (r : ℕ) (c : Fin 2)
+    (hPower : 2 ≤ T^a) (hr : 2 ≤ r) :
+    T^a ≤ (classicalDirectDyadicLength (2^r*⌊T^a⌋₊) c : ℝ) :=
+  @classicalDirectDyadicLength_physical_lower T a r c hPower hr
+
+example (T a : ℝ) (r : ℕ) (c : Fin 2)
+    (hT : 1 ≤ T) (ha : 0 < a) (hPower : 2 ≤ T^a) (hr : 2 ≤ r)
+    (hScale : 2 ≤ typeILogarithmicScale T (2^r*⌊T^a⌋₊)) :
+    let N := classicalDirectDyadicLength (2^r*⌊T^a⌋₊) c
+    1 < N ∧ (N : ℝ) ≤ T ∧ T^a ≤ (N : ℝ) ∧
+      2 ≤ typeILogarithmicScale T N ∧ typeILogarithmicScale T N ≤ 1/a :=
+  @classicalDirectDyadicLength_logarithmic_bounds T a r c hT ha hPower hr hScale
+
+example (A Q : ℕ) (s T u : ℝ) (hQ : 0 < Q) (hT : 0 < T) :
+    (((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ)) /
+        (8*(Q : ℝ)^(-s)*finiteFourierMass (typeIInteriorLogProfileSchwartz s)) =
+      (Q : ℝ)^s / ((64/3)*finiteFourierMass (typeIInteriorLogProfileSchwartz s)*
+        (Nat.clog 2 A+1 : ℕ)*T^u) :=
+  @classicalDirect_normalized_sourceThreshold_eq A Q s T u hQ hT
+
+example (s a ε u : ℝ) (hs : 0 ≤ s) (ha : 0 < a) (hε : 0 < ε)
+    (hu : u ≤ a*ε/2) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ N Q : ℕ,
+      N ≤ Q → T^a ≤ (N : ℝ) →
+      (N : ℝ)^(s-ε) ≤
+        (((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ)) /
+          (8*(Q : ℝ)^(-s)*finiteFourierMass (typeIInteriorLogProfileSchwartz s)) :=
+  @eventually_classicalDirect_normalized_sourceThreshold_lower s a ε u hs ha hε hu
+
+example (N : ℕ) (t : ℝ) :
+    dirichletPoly N (fun _ => 1) t =
+      ∑ n ∈ Finset.Ioc N (2*N), dirichletPhase n t :=
+  @dirichletPoly_coefficientOne_eq_sum_phase N t
+
+example (a d delta : ℝ) (ha : 0 < a) (hd : 0 < d) (hdelta : 0 < delta) :
+    ∃ k : ℕ, 1 < k ∧ ∀ s u : ℝ, 0 ≤ s → u ≤ 1 → u ≤ a*delta/2 →
+      ∀ᶠ T : ℝ in Filter.atTop,
+        let Y := ⌊T^a⌋₊
+        let A := ⌊sharpZetaCutoff T⌋₊
+        ∀ {ι : Type*} [Fintype ι] (r : ℕ) (W : ι → ℝ),
+          let Q := 2^r*Y
+          2 ≤ r → ((Y+1 : ℕ) : ℝ) ≤ (Q : ℝ)/2 → 2*Q ≤ A →
+          2 ≤ typeILogarithmicScale T Q →
+          (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+            ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+          ∃ W' : ι → ℝ, ∃ label : ι → Fin 2,
+            (∀ x, |W' x-W x| ≤ 2*Real.pi*T^d) ∧
+            (∀ x, let N := classicalDirectDyadicLength Q (label x)
+              1 < N ∧ (N : ℝ) ≤ T ∧ T^a ≤ (N : ℝ) ∧
+                2 ≤ typeILogarithmicScale T N ∧ typeILogarithmicScale T N ≤ 1/a ∧
+                (N : ℝ)^(s-delta) ≤
+                  ‖∑ n ∈ Finset.Ioc N (2*N), dirichletPhase n (W' x)‖) ∧
+            approximateAdditiveEnergyOf 1 W ≤
+              (4*Nat.ceil (1+4*(2*Real.pi*T^d))+6)*approximateAdditiveEnergyOf 1 W' :=
+  @exists_order_eventually_interior_source_normalized_two_dyadic_family a d delta ha hd hdelta
+
+example (sigma B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ s d u : ℝ, 0 ≤ s → sigma-delta/2 ≤ s →
+          0 < d → d < 1 → u ≤ 1 → u ≤ a*delta/4 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            let Y := ⌊T^a⌋₊
+            let A := ⌊sharpZetaCutoff T⌋₊
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+              let Q := 2^r*Y
+              2 ≤ r → ((Y+1 : ℕ) : ℝ) ≤ (Q : ℝ)/2 → 2*Q ≤ A →
+              2 ≤ typeILogarithmicScale T Q →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let D := 2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin 2 × (ZMod 2 × Fin (L+1))) : ℝ)
+              (Fintype.card ι : ℝ) ≤ K*(4*(C*(2*T)^B*T^ε)) :=
+  @classicalDirect_shifted_line_source_cardinality_transfer sigma B a hB ha haHalf hLV
+
+example (sigma B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ delta : ℝ, 0 < delta ∧
+        ∀ s d u : ℝ, 0 ≤ s → sigma-delta/2 ≤ s →
+          0 < d → d < 1 → u ≤ 1 → u ≤ a*delta/4 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            let Y := ⌊T^a⌋₊
+            let A := ⌊sharpZetaCutoff T⌋₊
+            ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+              let Q := 2^r*Y
+              2 ≤ r → ((Y+1 : ℕ) : ℝ) ≤ (Q : ℝ)/2 → 2*Q ≤ A →
+              2 ≤ typeILogarithmicScale T Q →
+              (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+              (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              let D := 2*Real.pi*T^d
+              let L := Nat.ceil (2*D+2)
+              let K := (Fintype.card (Fin 2 × (ZMod 2 × Fin (L+1))) : ℝ)
+              (approximateAdditiveEnergyOf 1 W : ℝ) ≤ (4*Nat.ceil (1+4*D)+6)*(9*K^4*(2304*(C*(2*T)^B*T^ε))) :=
+  @classicalDirect_shifted_line_source_energy_transfer sigma B a hB ha haHalf hLV
+
+example (M : ℕ) (D : ℝ) (hM : 2 ≤ Nat.clog 2 M) :
+    let K := (Fintype.card (Fin 2 × (ZMod 2 × Fin (Nat.ceil (2*D+2)+1))) : ℝ)
+    4*K ≤ classicalReflectedCardinalityLoss M D ∧
+      (4*Nat.ceil (1+4*D)+6)*9*K^4*2304 ≤ classicalReflectedEnergyLoss M D :=
+  @classicalDirect_twoColor_losses_le_reflected M D hM
+
+example (d a : ℝ) (hd : 0 < d) (ha : 0 ≤ a) :
+    ∃ Kcard Kenergy : ℝ, 0 < Kcard ∧ 0 < Kenergy ∧
+      ∀ᶠ T : ℝ in Filter.atTop, ∀ D : ℝ, 0 ≤ D → D ≤ a*T^d →
+        let K := (Fintype.card (Fin 2 × (ZMod 2 × Fin (Nat.ceil (2*D+2)+1))) : ℝ)
+        4*K ≤ Kcard*T^(2*d) ∧
+          (4*Nat.ceil (1+4*D)+6)*9*K^4*2304 ≤ Kenergy*T^(9*d) :=
+  @eventually_classicalDirect_twoColor_losses_le_const_mul_rpow d a hd ha
+
+example (sigma B a : ℝ) (hsigma : 1/2 < sigma)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ 1/4 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                let A := ⌊sharpZetaCutoff T⌋₊
+                ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+                  let Q := 2^r*Y
+                  2 ≤ r → ((Y+1 : ℕ) : ℝ) ≤ (Q : ℝ)/2 → 2*Q ≤ A →
+                  2 ≤ typeILogarithmicScale T Q →
+                  (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                  (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                    ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+                  (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                  (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalDirect_uniform_shifted_line_source_cardinality_bound sigma B a hsigma hB ha haHalf hLV
+
+example (sigma B a : ℝ) (hsigma : 1/2 < sigma)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ 1/4 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                let A := ⌊sharpZetaCutoff T⌋₊
+                ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+                  let Q := 2^r*Y
+                  2 ≤ r → ((Y+1 : ℕ) : ℝ) ≤ (Q : ℝ)/2 → 2*Q ≤ A →
+                  2 ≤ typeILogarithmicScale T Q →
+                  (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                  (∀ x, ((3/4)*(T^(-u)/2))/(Nat.clog 2 A+1 : ℕ) ≤
+                    ‖typeISourceSmoothBlock Y A r s (W x)‖) →
+                  (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                  (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalDirect_uniform_shifted_line_source_energy_bound sigma B a hsigma hB ha haHalf hLV
+
+example (sigma B a : ℝ) (hsigma : 1/2 < sigma)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ 1/4 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ X L : ℕ,
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r))
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^d ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^d),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), 2 ≤ c.val →
+        ((Y+1 : ℕ) : ℝ) ≤ (((2^c.val*Y : ℕ) : ℝ)/2) →
+        2*(2^c.val*Y) ≤ A →
+        2 ≤ typeILogarithmicScale T (2^c.val*Y) →
+        (Fintype.card (EnergyColorFiber label c) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_direct_source_cardinality_bounds sigma B a hsigma hB ha haHalf hLV
+
+example (sigma B a : ℝ) (hsigma : 1/2 < sigma)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hLV : ∀ tau ∈ Set.Icc (2 : ℝ) (1/a),
+      IsZetaLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (sigma-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ 1/4 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, sigma-eta ≤ s → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ X L : ℕ,
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r))
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^d ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^d),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), 2 ≤ c.val →
+        ((Y+1 : ℕ) : ℝ) ≤ (((2^c.val*Y : ℕ) : ℝ)/2) →
+        2*(2^c.val*Y) ≤ A →
+        2 ≤ typeILogarithmicScale T (2^c.val*Y) →
+        (approximateAdditiveEnergyOf 1 (fun x : EnergyColorFiber label c => W x.1) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_direct_source_energy_bounds sigma B a hsigma hB ha haHalf hLV
+
+example : classicalDirectDyadicLength 4 0 = 2 := by
+  norm_num [classicalDirectDyadicLength]
+
+example : classicalDirectDyadicLength 4 1 = 4 := by
+  have h10 : (1 : Fin 2) ≠ 0 := by decide
+  simp [classicalDirectDyadicLength,h10]
+
+example : classicalDirectDyadicLength 0 0 = 0 := by
+  norm_num [classicalDirectDyadicLength]
+
+example : classicalDirectDyadicLength 0 1 = 0 := by
+  have h10 : (1 : Fin 2) ≠ 0 := by decide
+  simp [classicalDirectDyadicLength,h10]
+
+example (c : Fin 2) : 2 ≤ classicalDirectDyadicLength 4 c ∧
+    classicalDirectDyadicLength 4 c ≤ 4 :=
+  classicalDirectDyadicLength_bounds 4 c
+
+example (t : ℝ) :
+    (∑ n ∈ Finset.Ioc (4/2 : ℕ) (2*4), (n : ℂ)^(-(t : ℂ)*Complex.I)) =
+      dirichletPoly (4/2) (fun _ => 1) t + dirichletPoly 4 (fun _ => 1) t :=
+  coefficientOne_annulus_eq_two_dyadic_polynomials 4 t (by decide)
+
+example (t : ℝ) :
+    (∑ n ∈ Finset.Ioc (0/2 : ℕ) (2*0), (n : ℂ)^(-(t : ℂ)*Complex.I)) =
+      dirichletPoly (0/2) (fun _ => 1) t + dirichletPoly 0 (fun _ => 1) t :=
+  coefficientOne_annulus_eq_two_dyadic_polynomials 0 t (by decide)
+
+example : (∑ n ∈ Finset.Ioc (2 : ℕ) 8, dirichletPhase n 0) = (6 : ℂ) := by
+  norm_num [dirichletPhase_zero,Nat.card_Ioc]
+
+example : dirichletPoly 2 (fun _ => 1) 0 = (2 : ℂ) := by
+  rw [dirichletPoly_coefficientOne_eq_sum_phase]
+  norm_num [dirichletPhase_zero,Nat.card_Ioc]
+
+example : finiteFourierMass (0 : SchwartzMap ℝ ℂ) = 1 := by
+  simp [finiteFourierMass]
+
+example (f : SchwartzMap ℝ ℂ) : finiteFourierRadius f ∅ 2 1 1 = 1 := by
+  simp [finiteFourierRadius]
+
+example (f : SchwartzMap ℝ ℂ) (S : Finset ℕ) :
+    finiteFourierRadius f S 2 0 1 = 1 := by
+  simp [finiteFourierRadius]
+
+example (c : Fin 2) :
+    (2 : ℝ)^(1 : ℝ) ≤ (classicalDirectDyadicLength (2^2*⌊(2 : ℝ)^(1 : ℝ)⌋₊) c : ℝ) :=
+  classicalDirectDyadicLength_physical_lower 2 1 2 c (by norm_num) (by omega)
+
+example (c : Fin 2) :
+    (8 : ℝ)^(1 : ℝ) ≤ (classicalDirectDyadicLength (2^3*⌊(8 : ℝ)^(1 : ℝ)⌋₊) c : ℝ) :=
+  classicalDirectDyadicLength_physical_lower 8 1 3 c (by norm_num) (by omega)
+
+example : (Fintype.card (Fin 2 × (ZMod 2 × Fin (Nat.ceil (2*(0 : ℝ)+2)+1))) : ℝ) = 12 := by
+  norm_num [Fintype.card_prod,ZMod.card]
+
+example (D : ℝ) :
+    let K := (Fintype.card (Fin 2 × (ZMod 2 × Fin (Nat.ceil (2*D+2)+1))) : ℝ)
+    4*K ≤ classicalReflectedCardinalityLoss 4 D ∧
+      (4*Nat.ceil (1+4*D)+6)*9*K^4*2304 ≤ classicalReflectedEnergyLoss 4 D :=
+  classicalDirect_twoColor_losses_le_reflected 4 D (by decide)
+
+end DirectInteriorSourceRegression
+
+
+namespace BottomGlobalSourceRegression
+open scoped BigOperators
+
+example (Y A r N : ℕ) (s t : ℝ)
+    (hPoly : dirichletPoly N (normalizedTypeISourceDirichletCoeff Y A r s) t ≠ 0) :
+    N < 2*(2^r*Y) ∧ 2^r*Y < 4*N :=
+  @normalized_source_dyadic_nonzero_scale Y A r N s t hPoly
+
+example {ι : Type*} [Fintype ι]
+    (Y A r : ℕ) (s V : ℝ) (W : ι → ℝ)
+    (hY : 0 < Y) (hA : 1 < A) (hs : 0 ≤ s) (hV : 0 < V)
+    (hLarge : ∀ x, V ≤ ‖typeISourceSmoothBlock Y A r s (W x)‖) :
+    let k := Nat.clog 2 (A+1)
+    let Q := 2^r*Y
+    ∃ label : ι → Fin k,
+      (∀ n, ‖normalizedTypeISourceDirichletCoeff Y A r s n‖ ≤ 1) ∧
+      (∀ x,
+        (((Q : ℝ)/2)^s*V)/k ≤
+          ‖dirichletPoly (2^(label x).val)
+            (normalizedTypeISourceDirichletCoeff Y A r s) (W x)‖) ∧
+      (∀ x, 2^(label x).val < 2*Q ∧ Q < 4*2^(label x).val) ∧
+      Fintype.card ι = ∑ c : Fin k, Fintype.card (EnergyColorFiber label c) ∧
+      ∃ chosen : Fin 4 → Fin k,
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(k : ℝ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ)) :=
+  @exists_source_normalized_indexed_dyadic_family ι _ Y A r s V W hY hA hs hV hLarge
+
+example (T a : ℝ) (r N : ℕ)
+    (hT : 0 < T) (hPower : 8 ≤ T^(a/2)) (hr : r < 2)
+    (hLower : 2^r*⌊T^a⌋₊ < 4*N)
+    (hUpper : N < 2*(2^r*⌊T^a⌋₊)) :
+    T^(a/2) ≤ (N : ℝ) ∧ (N : ℝ) ≤ T^(2*a) :=
+  @classicalBottomSource_physical_bounds T a r N hT hPower hr hLower hUpper
+
+example (a : ℝ) (ha : 0 < a) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ r N : ℕ, r < 2 →
+      2^r*⌊T^a⌋₊ < 4*N → N < 2*(2^r*⌊T^a⌋₊) →
+      T^(a/2) ≤ (N : ℝ) ∧ (N : ℝ) ≤ T^(2*a) :=
+  @eventually_classicalBottomSource_physical_bounds a ha
+
+example (a δ : ℝ) (ha : 0 < a) (hδ : 0 < δ) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ (r N : ℕ) (H : ℝ), r < 2 →
+      2^r*⌊T^a⌋₊ < 4*N → N < 2*(2^r*⌊T^a⌋₊) →
+      T ≤ H → H ≤ 3*T →
+      ∃ τ ∈ Set.Icc (1/(2*a)) (2/a), |Real.logb (N : ℝ) H-τ| ≤ δ :=
+  @eventually_classicalBottomSource_logScale_near_interval a δ ha hδ
+
+example (A : ℕ) (hA : 1 ≤ A) :
+    Nat.clog 2 (A+1) ≤ Nat.clog 2 A+1 :=
+  @classicalSource_successor_clog_le A hA
+
+example (C η : ℝ) (hC : 0 ≤ C) (hη : 0 < η) :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      C*(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ)*
+        Nat.clog 2 (⌊sharpZetaCutoff T⌋₊+1) ≤ T^η :=
+  @eventually_const_mul_classicalSource_two_clogs_le_rpow C η hC hη
+
+example (N Q : ℕ) (s : ℝ) (hs : 0 ≤ s) (hsOne : s ≤ 1)
+    (hQ : 0 < Q) (hNQ : N ≤ 2*Q) :
+    (N : ℝ)^s ≤ 4*((Q : ℝ)/2)^s :=
+  @classicalSource_annular_normalization_lower N Q s hs hsOne hQ hNQ
+
+example (s b ε u : ℝ) (hs : 0 ≤ s) (hsOne : s ≤ 1)
+    (hb : 0 < b) (hε : 0 < ε) (hu : u ≤ b*ε/2) :
+    ∀ᶠ T : ℝ in Filter.atTop, ∀ N Q : ℕ,
+      0 < Q → N ≤ 2*Q → T^b ≤ (N : ℝ) →
+      (N : ℝ)^(s-ε) ≤
+        ((((Q : ℝ)/2)^s)*
+          (((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ)))/
+            Nat.clog 2 (⌊sharpZetaCutoff T⌋₊+1) :=
+  @eventually_classicalBottomSource_normalized_threshold_lower s b ε u hs hsOne hb hε hu
+
+example (σ B a b : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (hb : 0 < b) (hba : b ≤ a)
+    (hLV : ∀ τ ∈ Set.Icc (1/a) (1/b), IsLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ θ : ℝ, θ ≤ 1 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            ∀ {ι : Type*} [Fintype ι] (N : ℕ) (V : ℝ)
+              (coeff : ℕ → ℂ) (W : ι → ℝ),
+              T^b ≤ (N : ℝ) → (N : ℝ) ≤ T^a →
+              (N : ℝ)^(σ-δ) ≤ V →
+              (∀ n ∈ dyadicInterval N, ‖coeff n‖ ≤ 1) →
+              (∀ x, T-T^θ ≤ W x ∧ W x ≤ 2*T+T^θ) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              (∀ x, V ≤ ‖dirichletPoly N coeff (W x)‖) →
+              (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalGeneral_uniform_physical_cardinality_bound σ B a b hB ha hb hba hLV
+
+example (σ B a b : ℝ) (hB : 0 ≤ B) (ha : 0 < a) (hb : 0 < b) (hba : b ≤ a)
+    (hLV : ∀ τ ∈ Set.Icc (1/a) (1/b), IsLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ θ : ℝ, θ ≤ 1 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            ∀ {ι : Type*} [Fintype ι] (N : ℕ) (V : ℝ)
+              (coeff : ℕ → ℂ) (W : ι → ℝ),
+              T^b ≤ (N : ℝ) → (N : ℝ) ≤ T^a →
+              (N : ℝ)^(σ-δ) ≤ V →
+              (∀ n ∈ dyadicInterval N, ‖coeff n‖ ≤ 1) →
+              (∀ x, T-T^θ ≤ W x ∧ W x ≤ 2*T+T^θ) →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              (∀ x, V ≤ ‖dirichletPoly N coeff (W x)‖) →
+              (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalGeneral_uniform_physical_energy_bound σ B a b hB ha hb hba hLV
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a)
+    (hLV : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s u θ : ℝ, 0 ≤ s → s ≤ 1 → σ-δ/2 ≤ s →
+          u ≤ a*δ/8 → θ ≤ 1 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            ∀ {ι : Type*} [Fintype ι] (r : ℕ) (W : ι → ℝ),
+              r < 2 →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              (∀ x, T-T^θ ≤ W x ∧ W x ≤ 2*T+T^θ) →
+              (∀ x,
+                ((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock ⌊T^a⌋₊ ⌊sharpZetaCutoff T⌋₊ r s (W x)‖) →
+              (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalBottom_uniform_shifted_line_source_cardinality_bound σ B a hB ha hLV
+
+example (σ B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a)
+    (hLV : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s u θ : ℝ, 0 ≤ s → s ≤ 1 → σ-δ/2 ≤ s →
+          u ≤ a*δ/8 → θ ≤ 1 →
+          ∀ᶠ T : ℝ in Filter.atTop,
+            ∀ {ι : Type*} [Fintype ι] (r : ℕ) (W : ι → ℝ),
+              r < 2 →
+              (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+              (∀ x, T-T^θ ≤ W x ∧ W x ≤ 2*T+T^θ) →
+              (∀ x,
+                ((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ) ≤
+                  ‖typeISourceSmoothBlock ⌊T^a⌋₊ ⌊sharpZetaCutoff T⌋₊ r s (W x)‖) →
+              (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalBottom_uniform_shifted_line_source_energy_bound σ B a hB ha hLV
+
+example (sigma B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a)
+    (hLV : ∀ tau ∈ Set.Icc (1/(2*a)) (2/a),
+      IsLargeValueBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s u θ : ℝ, 0 ≤ s → s ≤ 1 → sigma-δ/2 ≤ s →
+          u ≤ a*δ/8 → θ ≤ 1 →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ X L : ℕ,
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r))
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^θ ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^θ),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), c.val < 2 →
+        (Fintype.card (EnergyColorFiber label c) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_bottom_source_cardinality_bounds sigma B a hB ha hLV
+
+example (sigma B a : ℝ) (hB : 0 ≤ B) (ha : 0 < a)
+    (hLV : ∀ tau ∈ Set.Icc (1/(2*a)) (2/a),
+      IsLargeValueEnergyBound sigma tau (B*tau)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ C : ℝ, 1 ≤ C ∧ ∃ δ : ℝ, 0 < δ ∧
+        ∀ s u θ : ℝ, 0 ≤ s → s ≤ 1 → sigma-δ/2 ≤ s →
+          u ≤ a*δ/8 → θ ≤ 1 →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ X L : ℕ,
+    ∀ (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+    (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+    (hlocal : ∀ z : ℤ,
+      (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+    (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+    (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊))
+    (_ : branchLabel.1 = some (Sum.inl r))
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1))
+    (_ : ∀ x y : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      x ≠ y → 1 ≤ |shiftedZero x.1.1-shiftedZero y.1.1|)
+    (_ : ∀ x : EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+      T-T^θ ≤ shiftedZero x.1.1 ∧ shiftedZero x.1.1 ≤ 2*T+T^θ),
+    let A := ⌊sharpZetaCutoff T⌋₊
+    let V := (3/4)*(T^(-u)/2)
+    let ι := EnergyColorFiber
+      (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel
+    let W : ι → ℝ := fun x => shiftedZero x.1.1
+    ∃ label : ι → Fin (Nat.clog 2 A+1),
+      (∀ x, V/(Nat.clog 2 A+1 : ℕ) ≤
+        ‖typeISourceSmoothBlock Y A (label x).val s (W x)‖) ∧
+      (∀ x, (label x).val < 2 ∨ A < 2*(2^(label x).val*Y) ∨
+        (((Y+1 : ℕ) : ℝ) ≤ (((2^(label x).val*Y : ℕ) : ℝ)/2) ∧
+          2*(2^(label x).val*Y) ≤ A)) ∧
+      (∀ (c : Fin (Nat.clog 2 A+1)) (x y : EnergyColorFiber label c),
+        x ≠ y → 1 ≤ |W x.1-W y.1|) ∧
+      Fintype.card ι = ∑ c : Fin (Nat.clog 2 A+1),
+        Fintype.card (EnergyColorFiber label c) ∧
+      (∃ chosen : Fin 4 → Fin (Nat.clog 2 A+1),
+        let Wᵢ := fun i : Fin 4 => fun x : EnergyColorFiber label (chosen i) => W x.1
+        4*(approximateAdditiveEnergyOf 1 W : ℝ) ≤
+          9*(Nat.clog 2 A+1 : ℕ)^4*
+            ((approximateAdditiveEnergyOf 1 (Wᵢ 0) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 1) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 2) : ℝ) +
+              (approximateAdditiveEnergyOf 1 (Wᵢ 3) : ℝ))) ∧
+      (∀ c : Fin (Nat.clog 2 A+1), c.val < 2 →
+        (approximateAdditiveEnergyOf 1 (fun x : EnergyColorFiber label c => W x.1) : ℝ) ≤ C*T^(B+ε)) :=
+  @classicalTypeI_global_bottom_source_energy_bounds sigma B a hB ha hLV
+
+example : Nat.clog 2 (1+1) ≤ Nat.clog 2 1+1 :=
+  classicalSource_successor_clog_le 1 (by omega)
+
+example : Nat.clog 2 (2+1) ≤ Nat.clog 2 2+1 :=
+  classicalSource_successor_clog_le 2 (by omega)
+
+example : Nat.clog 2 (3+1) ≤ Nat.clog 2 3+1 :=
+  classicalSource_successor_clog_le 3 (by omega)
+
+example : Nat.clog 2 (4+1) ≤ Nat.clog 2 4+1 :=
+  classicalSource_successor_clog_le 4 (by omega)
+
+example (s : ℝ) (hs : 0 ≤ s) (hsOne : s ≤ 1) :
+    (4 : ℝ)^s ≤ 4*((2 : ℝ)/2)^s :=
+  classicalSource_annular_normalization_lower 4 2 s hs hsOne (by omega) (by omega)
+
+example (s t : ℝ) (A r N : ℕ) :
+    dirichletPoly N (normalizedTypeISourceDirichletCoeff 0 A r s) t = 0 := by
+  by_contra h
+  have hc := (normalized_source_dyadic_nonzero_scale 0 A r N s t h).1
+  simp only [mul_zero] at hc
+  omega
+
+example : (8 : ℝ) ≤ (64 : ℕ) ∧ (64 : ℝ) ≤ (8 : ℝ)^4 := by
+  have h := classicalBottomSource_physical_bounds 8 2 0 64
+    (by norm_num) (by norm_num) (by omega) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+
+example : (8 : ℝ) ≤ (128 : ℕ) ∧ (128 : ℝ) ≤ (8 : ℝ)^4 := by
+  have h := classicalBottomSource_physical_bounds 8 2 1 128
+    (by norm_num) (by norm_num) (by omega) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+
+example (W : Empty → ℝ) : approximateAdditiveEnergyOf 1 W = 0 := by
+  simp [approximateAdditiveEnergyOf,AdditiveQuadrupleOf]
+
+example : (Fintype.card (Fin 4) : ℝ)^4 = 256 := by norm_num
+
+end BottomGlobalSourceRegression
+
+
+namespace EndpointTwoSourceRegression
+open scoped BigOperators
+
+example (σ B a : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (σ-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (σ-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, σ-eta ≤ s → s ≤ σ → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+                  (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                  (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                  (∀ x,
+                    ((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ) ≤
+                      ‖typeISourceSmoothBlock ⌊T^a⌋₊ ⌊sharpZetaCutoff T⌋₊ r s (W x)‖) →
+                  (Fintype.card ι : ℝ) ≤ C*T^(B+ε) :=
+  @classicalGlobal_uniform_source_block_cardinality_bound σ B a hσ hσOne hB ha haHalf hZeta hGeneral
+
+example (σ B a : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueEnergyBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (σ-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (σ-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, σ-eta ≤ s → s ≤ σ → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                ∀ {ι : Type*} [Fintype ι] [LinearOrder ι] (r : ℕ) (W : ι → ℝ),
+                  (∀ x y : ι, x ≠ y → 1 ≤ |W x-W y|) →
+                  (∀ x, T-T^d ≤ W x ∧ W x ≤ 2*T+T^d) →
+                  (∀ x,
+                    ((3/4)*(T^(-u)/2))/(Nat.clog 2 ⌊sharpZetaCutoff T⌋₊+1 : ℕ) ≤
+                      ‖typeISourceSmoothBlock ⌊T^a⌋₊ ⌊sharpZetaCutoff T⌋₊ r s (W x)‖) →
+                  (approximateAdditiveEnergyOf 1 W : ℝ) ≤ C*T^(B+ε) :=
+  @classicalGlobal_uniform_source_block_energy_bound σ B a hσ hσOne hB ha haHalf hZeta hGeneral
+
+example (σ B a : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (σ-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (σ-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, σ-eta ≤ s → s ≤ σ → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ (X L : ℕ)
+                  (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+                  (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+                  (hlocal : ∀ z : ℤ,
+                    (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+                  (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+                  (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊)),
+                  branchLabel.1 = some (Sum.inl r) →
+                  (∀ ρ, T-T^d ≤ shiftedZero ρ ∧ shiftedZero ρ ≤ 2*T+T^d) →
+                  (∀ x : EnergyColorFiber
+                    (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+                    ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1)) →
+                  (Fintype.card (EnergyColorFiber
+                    (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel) : ℝ) ≤ C*T^(B+ε) :=
+  @classicalTypeI_uniform_global_source_class_cardinality_bound σ B a hσ hσOne hB ha haHalf hZeta hGeneral
+
+example (σ B a : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1)
+    (hB : 0 ≤ B) (ha : 0 < a) (haHalf : a ≤ 1/2)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueEnergyBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc (1/(2*a)) (2/a), IsLargeValueEnergyBound σ τ (B*τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ eta : ℝ, 0 < eta ∧ eta ≤ (σ-1/2)/2 ∧
+        ∃ d : ℝ, 0 < d ∧ d ≤ (σ-1/2)/2000 ∧ d ≤ ε/100 ∧
+          ∃ C : ℝ, 1 ≤ C ∧
+            ∀ s u : ℝ, σ-eta ≤ s → s ≤ σ → 0 ≤ u → u ≤ d →
+              ∀ᶠ T : ℝ in Filter.atTop,
+                let Y := ⌊T^a⌋₊
+                ∀ (X L : ℕ)
+                  (shiftedZero : ↥(zerosInRect s 1 T (2*T)) → ℝ)
+                  (baseColor : ↥(zerosInRect s 1 T (2*T)) → ClassicalBranchScaleColor T Y)
+                  (hlocal : ∀ z : ℤ,
+                    (unitBinFinset (fun x : ClassicalSlabZeroCopy s T => shiftedZero x.1) z).card ≤ L)
+                  (branchLabel : ClassicalSeparatedBranchScaleColor T Y L)
+                  (r : Fin (Nat.clog 2 ⌊sharpZetaCutoff T⌋₊)),
+                  branchLabel.1 = some (Sum.inl r) →
+                  (∀ ρ, T-T^d ≤ shiftedZero ρ ∧ shiftedZero ρ ≤ 2*T+T^d) →
+                  (∀ x : EnergyColorFiber
+                    (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel,
+                    ClassicalBranchScaleLarge s T u Y X branchLabel.1 (shiftedZero x.1.1)) →
+                  (approximateAdditiveEnergyOf 1 (fun x : EnergyColorFiber
+                    (classicalSeparatedBranchScaleColor s T Y shiftedZero baseColor L hlocal) branchLabel =>
+                      shiftedZero x.1.1) : ℝ) ≤ C*T^(B+ε) :=
+  @classicalTypeI_uniform_global_source_class_energy_bound σ B a hσ hσOne hB ha haHalf hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ δ : ℝ, 0 < δ ∧ 1 / 2 < σ - δ ∧
+        ∃ C : ℝ, 1 ≤ C ∧ ∀ᶠ T : ℝ in Filter.atTop,
+          (zeroCountRect (σ - δ) 1 T (2 * T) : ℝ) ≤ C * T ^ (B + ε) :=
+  @classicalSlabZeroCount_bound_of_endpointTwo_largeValue_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueEnergyBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueEnergyBound σ τ (B * τ)) :
+    ∀ ε : ℝ, 0 < ε →
+      ∃ δ : ℝ, 0 < δ ∧ 1 / 2 < σ - δ ∧
+        ∃ C : ℝ, 1 ≤ C ∧ ∀ᶠ T : ℝ in Filter.atTop,
+          (classicalSlabZeroEnergy (σ - δ) T : ℝ) ≤ C * T ^ (B + ε) :=
+  @classicalSlabZeroEnergy_bound_of_endpointTwo_energy_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueBound σ τ (B * τ)) :
+    IsZeroDensityBound σ (B / (1 - σ)) :=
+  @isZeroDensityBound_of_endpointTwo_largeValue_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ : ℝ, 2 ≤ τ → IsZetaLargeValueEnergyBound σ τ (B * τ))
+    (hGeneral : ∀ τ : ℝ, τ₀ ≤ τ → IsLargeValueEnergyBound σ τ (B * τ)) :
+    IsZeroDensityEnergyBound σ (B / (1 - σ)) :=
+  @isZeroDensityEnergyBound_of_endpointTwo_energy_bounds σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ : ℝ)
+    (hσLower : 1/2 ≤ σ) (hσ : σ ≤ 1) :
+    0 ≤ zeroCardinalityEndpointTwoEnvelope σ :=
+  @zeroCardinalityEndpointTwoEnvelope_nonneg σ hσLower hσ
+
+example (σ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1) :
+    zeroDensityExponent σ * ((1 - σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueExponent σ τ / (τ : EReal)) '' Set.Ici 2))
+        (Filter.limsup (fun τ : ℝ => largeValueExponent σ τ / (τ : EReal)) Filter.atTop) :=
+  @zeroDensityExponent_le_sup_limsup_endpoint_two σ hσ hσUpper
+
+example (σ : ℝ) (hσ : σ ≤ 1) :
+    0 ≤ zeroEnergyEndpointTwoEnvelope σ :=
+  @zeroEnergyEndpointTwoEnvelope_nonneg σ hσ
+
+example (σ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1) :
+    zeroDensityEnergyExponent σ * ((1 - σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueEnergyExponent σ τ / (τ : EReal)) '' Set.Ici 2))
+        (Filter.limsup (fun τ : ℝ => largeValueEnergyExponent σ τ / (τ : EReal)) Filter.atTop) :=
+  @zeroDensityEnergyExponent_le_sup_limsup_endpoint_two σ hσ hσUpper
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) τ₀, IsZetaLargeValueBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2*τ₀), IsLargeValueBound σ τ (B*τ)) :
+    IsZeroDensityBound σ (B/(1-σ)) :=
+  @isZeroDensityBound_of_endpointTwo_bounded_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) τ₀,
+      zetaLargeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2*τ₀),
+      largeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal)) :
+    zeroDensityExponent σ ≤ ((B/(1-σ) : ℝ) : EReal) :=
+  @zeroDensityExponent_le_of_endpointTwo_bounded_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1 / 2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) τ₀, IsZetaLargeValueEnergyBound σ τ (B * τ))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2 * τ₀), IsLargeValueEnergyBound σ τ (B * τ)) :
+    IsZeroDensityEnergyBound σ (B / (1 - σ)) :=
+  @isZeroDensityEnergyBound_of_endpointTwo_bounded_energy_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) τ₀,
+      zetaLargeValueEnergyExponent σ τ ≤ ((B*τ : ℝ) : EReal))
+    (hGeneral : ∀ τ ∈ Set.Icc τ₀ (2*τ₀),
+      largeValueEnergyExponent σ τ ≤ ((B*τ : ℝ) : EReal)) :
+    zeroDensityEnergyExponent σ ≤ ((B/(1-σ) : ℝ) : EReal) :=
+  @zeroDensityEnergyExponent_le_of_endpointTwo_bounded_energy_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1) (hτ₀ : 0 < τ₀) :
+    zeroDensityExponent σ*((1-σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueExponent σ τ/(τ : EReal)) '' Set.Ico 2 τ₀))
+        (sSup ((fun τ : ℝ => largeValueExponent σ τ/(τ : EReal)) '' Set.Icc τ₀ (2*τ₀))) :=
+  @zeroDensityExponent_le_endpointTwo_bounded_suprema σ τ₀ hσ hσUpper hτ₀
+
+example (σ τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1) (hτ₀ : 0 < τ₀) :
+    zeroDensityEnergyExponent σ*((1-σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueEnergyExponent σ τ/(τ : EReal)) '' Set.Ico 2 τ₀))
+        (sSup ((fun τ : ℝ => largeValueEnergyExponent σ τ/(τ : EReal)) '' Set.Icc τ₀ (2*τ₀))) :=
+  @zeroDensityEnergyExponent_le_endpointTwo_bounded_suprema σ τ₀ hσ hσUpper hτ₀
+
+example (f : ℝ → EReal) (τ₀ : ℝ) (hτ₀ : τ₀ ≤ 2) :
+    sSup (f '' Set.Ico 2 τ₀) = ⊥ :=
+  @endpointTwo_short_zeta_supremum_eq_bot f τ₀ hτ₀
+
+example {σ B τ₀ : ℝ} (hσ : 1/2 ≤ σ) (hσUpper : σ ≤ 1) (hτ₀ : 0 < τ₀)
+    (hGeneral : ∀ τ ∈ Set.Icc (2*τ₀/3) τ₀, IsLargeValueBound σ τ (B*τ)) :
+    ∀ τ ∈ Set.Icc (4*τ₀/3) (8*τ₀/3), IsLargeValueBound σ τ (B*τ) :=
+  @isLargeValueBound_on_doubled_range_of_two_thirds_range σ B τ₀ hσ hσUpper hτ₀ hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) (4*τ₀/3), IsZetaLargeValueBound σ τ (B*τ))
+    (hGeneral : ∀ τ ∈ Set.Icc (2*τ₀/3) τ₀, IsLargeValueBound σ τ (B*τ)) :
+    IsZeroDensityBound σ (B/(1-σ)) :=
+  @isZeroDensityBound_of_two_thirds_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ B τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1)
+    (hB : 0 ≤ B) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) (4*τ₀/3),
+      zetaLargeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal))
+    (hGeneral : ∀ τ ∈ Set.Icc (2*τ₀/3) τ₀,
+      largeValueExponent σ τ ≤ ((B*τ : ℝ) : EReal)) :
+    zeroDensityExponent σ ≤ ((B/(1-σ) : ℝ) : EReal) :=
+  @zeroDensityExponent_le_of_two_thirds_largeValue_ranges σ B τ₀ hσ hσUpper hB hτ₀ hZeta hGeneral
+
+example (σ τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) (4*τ₀/3),
+      zetaLargeValueExponent σ τ ≤ (((3-3*σ)*τ/τ₀ : ℝ) : EReal))
+    (hGeneral : ∀ τ ∈ Set.Icc (2*τ₀/3) τ₀,
+      largeValueExponent σ τ ≤ (((3-3*σ)*τ/τ₀ : ℝ) : EReal)) :
+    zeroDensityExponent σ ≤ ((3/τ₀ : ℝ) : EReal) :=
+  @zeroDensityExponent_le_three_div_of_largeValue_bounds σ τ₀ hσ hσUpper hτ₀ hZeta hGeneral
+
+example (σ τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1) (hτ₀ : 0 < τ₀)
+    (hZeta : ∀ τ ∈ Set.Ico (2 : ℝ) (4*τ₀/3),
+      zetaLargeValueExponent σ τ ≤ (((3-3*σ)*τ/τ₀ : ℝ) : EReal))
+    (hMontgomery : ∀ τ ∈ Set.Icc (0 : ℝ) (τ₀+σ-1),
+      largeValueExponent σ τ ≤ ((2-2*σ : ℝ) : EReal)) :
+    zeroDensityExponent σ ≤ ((3/τ₀ : ℝ) : EReal) :=
+  @zeroDensityExponent_le_three_div_of_montgomery_range σ τ₀ hσ hσUpper hτ₀ hZeta hMontgomery
+
+example (σ τ₀ : ℝ) (hσ : 1/2 < σ) (hσUpper : σ < 1) (hτ₀ : 0 < τ₀) :
+    zeroDensityExponent σ*((1-σ : ℝ) : EReal) ≤
+      max (sSup ((fun τ : ℝ => zetaLargeValueExponent σ τ/(τ : EReal)) '' Set.Ico 2 (4*τ₀/3)))
+        (sSup ((fun τ : ℝ => largeValueExponent σ τ/(τ : EReal)) '' Set.Icc (2*τ₀/3) τ₀)) :=
+  @zeroDensityExponent_le_two_thirds_suprema σ τ₀ hσ hσUpper hτ₀
+
+example (f : ℝ → EReal) : sSup (f '' Set.Ico (2 : ℝ) 1) = ⊥ :=
+  endpointTwo_short_zeta_supremum_eq_bot f 1 (by norm_num)
+
+example (f : ℝ → EReal) : sSup (f '' Set.Ico (2 : ℝ) 2) = ⊥ :=
+  endpointTwo_short_zeta_supremum_eq_bot f 2 le_rfl
+
+example (f : ℝ → EReal) : sSup (f '' Set.Ico (2 : ℝ) 0) = ⊥ :=
+  endpointTwo_short_zeta_supremum_eq_bot f 0 (by norm_num)
+
+example (f : ℝ → EReal) : sSup (f '' Set.Ico (2 : ℝ) (-1)) = ⊥ :=
+  endpointTwo_short_zeta_supremum_eq_bot f (-1) (by norm_num)
+
+example (σ : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1) :
+    zeroDensityExponent σ*((1-σ : ℝ) : EReal) ≤
+      sSup ((fun τ : ℝ => largeValueExponent σ τ/(τ : EReal)) '' Set.Icc 2 4) := by
+  have h := zeroDensityExponent_le_endpointTwo_bounded_suprema σ 2 hσ hσOne (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example (σ : ℝ) (hσ : 1/2 < σ) (hσOne : σ < 1) :
+    zeroDensityEnergyExponent σ*((1-σ : ℝ) : EReal) ≤
+      sSup ((fun τ : ℝ => largeValueEnergyExponent σ τ/(τ : EReal)) '' Set.Icc 2 4) := by
+  have h := zeroDensityEnergyExponent_le_endpointTwo_bounded_suprema σ 2 hσ hσOne (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : (4 : ℝ)/2 ∈ Set.Icc (2*3/3 : ℝ) 3 := by norm_num
+
+example : (6 : ℝ)/2 ∈ Set.Icc (2*3/3 : ℝ) 3 := by norm_num
+
+example : (6 : ℝ)/3 ∈ Set.Icc (2*3/3 : ℝ) 3 := by norm_num
+
+example : (8 : ℝ)/3 ∈ Set.Icc (2*3/3 : ℝ) 3 := by norm_num
+
+example : zeroDensityExponent (3/4) ≤ (24 : EReal) := by
+  have h := zeroDensityExponent_le_three_div_of_montgomery_range (3/4) (1/8)
+    (by norm_num) (by norm_num) (by norm_num)
+    (by intro τ hτ; exfalso; linarith [hτ.1,hτ.2])
+    (by intro τ hτ; exfalso; linarith [hτ.1,hτ.2])
+  norm_num at h ⊢
+  exact h
+
+example (hGeneral : ∀ τ ∈ Set.Icc (1 : ℝ) 2,
+    IsLargeValueEnergyBound (3/4) τ τ) :
+    IsZeroDensityEnergyBound (3/4) 4 := by
+  have h := isZeroDensityEnergyBound_of_endpointTwo_bounded_energy_ranges
+    (3/4) 1 1 (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intro τ hτ; exfalso; linarith [hτ.1,hτ.2])
+    (by simpa using hGeneral)
+  norm_num at h ⊢
+  exact h
+
+end EndpointTwoSourceRegression
+
+
+section BourgainImprovedDensityRegression
+open TaoTrudgianYang2025
+
+example {σ : ℝ} (hσ : σ ≤ 38/49) :
+    bourgainDensityCutoff σ = 9*(3*σ-2)/2 :=
+  @TaoTrudgianYang2025.bourgainDensityCutoff_lower_branch σ hσ
+
+example {σ : ℝ} (hσ : 38/49 ≤ σ) :
+    bourgainDensityCutoff σ = 8*(2*σ-1)/3 :=
+  @TaoTrudgianYang2025.bourgainDensityCutoff_upper_branch σ hσ
+
+example {σ : ℝ} (hσ : 17/22 ≤ σ) :
+    0 < bourgainDensityCutoff σ :=
+  @TaoTrudgianYang2025.bourgainDensityCutoff_pos σ hσ
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5) :
+    1/3 < bourgainDensitySlope σ ∧ bourgainDensitySlope σ < 1/2 :=
+  @TaoTrudgianYang2025.bourgainDensitySlope_bounds σ hσ hσ₁
+
+example {σ : ℝ} (hσ : 17/22 ≤ σ) :
+    bourgainDensitySlope σ * bourgainDensityCutoff σ = 3-3*σ :=
+  @TaoTrudgianYang2025.bourgainDensitySlope_mul_cutoff σ hσ
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5) :
+    0 ≤ bourgainDensitySlope σ*(11-7*σ)+29*σ-25 ∧
+    0 ≤ bourgainDensitySlope σ*(76*σ-56)-12*σ+8 :=
+  @TaoTrudgianYang2025.bourgainDensity_jutila_overlap σ hσ hσ₁
+
+example {σ τ ρ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hfirst : 2-2*σ ≤ bourgainDensitySlope σ*τ)
+    (hJ : ρ ≤ max (2-2*σ) (max (τ+(7-11*σ)/2) (τ+24-32*σ)))
+    (hlarge : bourgainDensitySlope σ*τ < ρ) :
+    (τ+16-20*σ)/3 ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_affine_of_jutila_large σ τ ρ hσ hσ₁ hfirst hJ hlarge
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτ : 2*bourgainDensityCutoff σ/3 ≤ τ) :
+    2-2*σ ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_first_term σ τ hσ hσ₁ hτ
+
+example {σ τ m c : ℝ}
+    (hσ : 17/22 ≤ σ) (hm : bourgainDensitySlope σ ≤ m)
+    (hτ : τ ≤ bourgainDensityCutoff σ)
+    (hend : m*bourgainDensityCutoff σ+c ≤ 3-3*σ) :
+    m*τ+c ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_affine_endpoint σ τ m c hσ hm hτ hend
+
+example {σ τ ρ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτ : τ ≤ bourgainDensityCutoff σ)
+    (hfirst : 2-2*σ ≤ bourgainDensitySlope σ*τ)
+    (hJ : ρ ≤ max (2-2*σ) (max (τ+(7-11*σ)/2) (τ+24-32*σ)))
+    (hlarge : bourgainDensitySlope σ*τ < ρ) :
+    1 < τ ∧ 14*σ-10 ≤ τ ∧ ρ ≤ 1 ∧ ρ ≤ 4-2*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_jutila_side_conditions σ τ ρ hσ hσ₁ hτ hfirst hJ hlarge
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 38/49)
+    (hτ : τ ≤ bourgainDensityCutoff σ) (ht : 1 < τ)
+    (haffine : (τ+16-20*σ)/3 ≤ bourgainDensitySlope σ*τ) :
+    let χ := max (11-16*σ+τ) 0
+    let α := τ/3-2*(7*σ-5)/3-χ/6
+    0 ≤ χ ∧ 1 < τ-χ ∧ 0 ≤ α ∧
+      bourgainDensityFiveTerms σ τ α χ ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_lower_certificate σ τ hσ hσ₁ hτ ht haffine
+
+example {σ τ : ℝ}
+    (hσ : 38/49 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτ : τ ≤ bourgainDensityCutoff σ) (ht : 1 < τ)
+    (hlo : 14*σ-10 ≤ τ)
+    (hfirst : 2-2*σ ≤ bourgainDensitySlope σ*τ)
+    (haffine : (τ+16-20*σ)/3 ≤ bourgainDensitySlope σ*τ) :
+    let χ := max (5*τ/4-1-σ) 0
+    let α := τ/3-2*(7*σ-5)/3-χ/6
+    0 ≤ χ ∧ 1 < τ-χ ∧ 0 ≤ α ∧
+      bourgainDensityFiveTerms σ τ α χ ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_upper_certificate σ τ hσ hσ₁ hτ ht hlo hfirst haffine
+
+example (σ τ : ℝ) :
+    jutilaLargeValueExponent 4 σ τ =
+      max (2-2*σ) (max (τ+(7-11*σ)/2) (τ+24-32*σ)) :=
+  @TaoTrudgianYang2025.jutila_four_formula σ τ
+
+example {σ τ ρ energy : ℝ} (h : InCardinalityEnergyRegion σ τ ρ energy)
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτlo : 2*bourgainDensityCutoff σ/3 ≤ τ)
+    (hτhi : τ ≤ bourgainDensityCutoff σ) :
+    ρ ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.InCardinalityEnergyRegion.bourgain_density_cardinality σ τ ρ energy h hσ hσ₁ hτlo hτhi
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτlo : 2*bourgainDensityCutoff σ/3 ≤ τ)
+    (hτhi : τ ≤ bourgainDensityCutoff σ) :
+    IsLargeValueBound σ τ (bourgainDensitySlope σ*τ) :=
+  @TaoTrudgianYang2025.bourgainDensity_largeValueBound σ τ hσ hσ₁ hτlo hτhi
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτlo : 2*bourgainDensityCutoff σ/3 ≤ τ)
+    (hτhi : τ ≤ bourgainDensityCutoff σ) :
+    largeValueExponent σ τ ≤ ((bourgainDensitySlope σ*τ : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.largeValueExponent_le_bourgainDensity_range σ τ hσ hσ₁ hτlo hτhi
+
+example {σ : ℝ} (hσ : σ ≤ 4/5) :
+    bourgainDensityCutoff σ ≤ 3*(4*σ-1)/4 :=
+  @TaoTrudgianYang2025.bourgainDensity_cutoff_twelfth σ hσ
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτ : τ ≤ 4*bourgainDensityCutoff σ/3) :
+    2*τ-12*(σ-1/2) ≤ bourgainDensitySlope σ*τ :=
+  @TaoTrudgianYang2025.bourgainDensity_twelfth_comparison σ τ hσ hσ₁ hτ
+
+example {σ τ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5)
+    (hτlo : 2 ≤ τ) (hτhi : τ ≤ 4*bourgainDensityCutoff σ/3) :
+    IsZetaLargeValueBound σ τ (bourgainDensitySlope σ*τ) :=
+  @TaoTrudgianYang2025.bourgainDensity_zetaLargeValueBound σ τ hσ hσ₁ hτlo hτhi
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) :
+    3/bourgainDensityCutoff σ =
+      max (2/(9*σ-6)) (9/(8*(2*σ-1))) :=
+  @TaoTrudgianYang2025.bourgainDensity_three_div_cutoff σ hσ
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5) :
+    IsZeroDensityBound σ (max (2/(9*σ-6)) (9/(8*(2*σ-1)))) :=
+  @TaoTrudgianYang2025.bourgain_improved_isZeroDensityBound σ hσ hσ₁
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 4/5) :
+    zeroDensityExponent σ ≤
+      ((max (2/(9*σ-6)) (9/(8*(2*σ-1))) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_improved σ hσ hσ₁
+
+example {σ : ℝ}
+    (hσ : 17/22 ≤ σ) (hσ₁ : σ ≤ 38/49) :
+    zeroDensityExponent σ ≤ ((2/(9*σ-6) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_improved_lower σ hσ hσ₁
+
+example {σ : ℝ}
+    (hσ : 38/49 ≤ σ) (hσ₁ : σ ≤ 4/5) :
+    zeroDensityExponent σ ≤ ((9/(8*(2*σ-1)) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zeroDensityExponent_le_bourgain_improved_upper σ hσ hσ₁
+
+
+example : bourgainDensityCutoff (17/22) = (63/44 : ℝ) := by
+  norm_num [bourgainDensityCutoff]
+example : bourgainDensityCutoff (38/49) = (72/49 : ℝ) := by
+  norm_num [bourgainDensityCutoff]
+example : bourgainDensityCutoff (4/5) = (8/5 : ℝ) := by
+  norm_num [bourgainDensityCutoff]
+example : bourgainDensitySlope (17/22) = (10/21 : ℝ) := by
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff]
+example : bourgainDensitySlope (38/49) = (11/24 : ℝ) := by
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff]
+example : bourgainDensitySlope (4/5) = (3/8 : ℝ) := by
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff]
+
+example : zeroDensityExponent (17/22) ≤ ((44/21 : ℝ) : EReal) := by
+  have h := zeroDensityExponent_le_bourgain_improved_lower (σ:=17/22)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+example : zeroDensityExponent (38/49) ≤ ((49/24 : ℝ) : EReal) := by
+  have h := zeroDensityExponent_le_bourgain_improved_lower (σ:=38/49)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+example : zeroDensityExponent (4/5) ≤ ((15/8 : ℝ) : EReal) := by
+  have h := zeroDensityExponent_le_bourgain_improved_upper (σ:=4/5)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : IsLargeValueBound (4/5) (16/15) (2/5) := by
+  have h := bourgainDensity_largeValueBound (σ:=4/5) (τ:=16/15)
+    (by norm_num) (by norm_num)
+    (by norm_num [bourgainDensityCutoff]) (by norm_num [bourgainDensityCutoff])
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff] at h
+  exact h
+example : IsLargeValueBound (4/5) (8/5) (3/5) := by
+  have h := bourgainDensity_largeValueBound (σ:=4/5) (τ:=8/5)
+    (by norm_num) (by norm_num)
+    (by norm_num [bourgainDensityCutoff]) (by norm_num [bourgainDensityCutoff])
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff] at h
+  exact h
+
+-- These two estimates in the printed k=3 argument both exceed its target.
+-- This is a gap in that deduction, not a counterexample to the density theorem.
+example : bourgainDensitySlope (38/49)*(6/5) <
+    min (jutilaLargeValueExponent 3 (38/49) (6/5))
+      (bourgainDensityFiveTerms (38/49) (6/5)
+        ((6/5)/3-2*(7*(38/49)-5)/3) 0) := by
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff,
+    jutilaLargeValueExponent,bourgainDensityFiveTerms]
+example : jutilaLargeValueExponent 4 (38/49) (6/5) ≤
+    bourgainDensitySlope (38/49)*(6/5) := by
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff,jutilaLargeValueExponent]
+
+example : (2/((9:ℝ)*(38/49)-6)) = 9/(8*(2*(38/49)-1)) := by norm_num
+example : Set.Ico (2 : ℝ) (4*bourgainDensityCutoff (17/22)/3) = ∅ := by
+  norm_num [bourgainDensityCutoff]
+example : IsZetaLargeValueBound (4/5) 2 (3/4) := by
+  have h := bourgainDensity_zetaLargeValueBound (σ:=4/5) (τ:=2)
+    (by norm_num) (by norm_num) le_rfl (by norm_num [bourgainDensityCutoff])
+  norm_num [bourgainDensitySlope,bourgainDensityCutoff] at h
+  exact h
+
+end BourgainImprovedDensityRegression
+
+section ZetaGrowthBridgeRegression
+open Expdb
+
+example {σ μ : ℝ} (h : IsZetaGrowthBound σ μ) :
+    zetaGrowthExponent σ ≤ (μ : EReal) :=
+  @TaoTrudgianYang2025.zetaGrowthExponent_le_of_bound σ μ h
+
+example {σ μ ν : ℝ}
+    (h : IsZetaGrowthBound σ μ) (hle : μ ≤ ν) : IsZetaGrowthBound σ ν :=
+  @TaoTrudgianYang2025.IsZetaGrowthBound.mono σ μ ν h hle
+
+example {σ μ : ℝ}
+    (h : zetaGrowthExponent σ ≤ (μ : EReal)) : IsZetaGrowthBound σ μ :=
+  @TaoTrudgianYang2025.isZetaGrowthBound_of_exponent_le σ μ h
+
+example {σ μ : ℝ} :
+    zetaGrowthExponent σ ≤ (μ : EReal) ↔ IsZetaGrowthBound σ μ :=
+  @TaoTrudgianYang2025.zetaGrowthExponent_le_iff σ μ
+
+example (σ t : ℝ) :
+    ‖riemannZeta ((σ : ℂ)+((-t : ℝ) : ℂ)*Complex.I)‖ =
+      ‖riemannZeta ((σ : ℂ)+(t : ℂ)*Complex.I)‖ :=
+  @TaoTrudgianYang2025.norm_zeta_growth_negative_ordinate σ t
+
+example (σ t : ℝ) :
+    ‖riemannZeta ((σ : ℂ)+((|t| : ℝ) : ℂ)*Complex.I)‖ =
+      ‖riemannZeta ((σ : ℂ)+(t : ℂ)*Complex.I)‖ :=
+  @TaoTrudgianYang2025.norm_zeta_growth_abs_ordinate σ t
+
+example {σ μ : ℝ}
+    (h : ∀ ε : ℝ, 0 < ε → ∃ B : ℝ, 0 ≤ B ∧
+      ∀ᶠ t : ℝ in Filter.atTop,
+        ‖riemannZeta ((σ : ℂ)+(t : ℂ)*Complex.I)‖ ≤ B*t^(μ+ε)) :
+    IsZetaGrowthBound σ μ :=
+  @TaoTrudgianYang2025.isZetaGrowthBound_of_eventually_positive σ μ h
+
+example (P : ℕ) {δ : ℝ} (hδ : 0 ≤ δ) :
+    IsApproximateModelPhaseFunction Real.log 1 P δ :=
+  @TaoTrudgianYang2025.log_approximateModel P δ hδ
+
+example {n : ℕ} (hn : 0 < n)
+    {N : ℝ} (hN : 0 < N) (t : ℝ) :
+    (n : ℂ)^((t : ℂ)*Complex.I) =
+      (𝐞 ((t/(2*Real.pi))*Real.log N) : ℂ) *
+        oscillatory Real.log (t/(2*Real.pi)) N n :=
+  @TaoTrudgianYang2025.cpow_im_logModel_identity n hn N hN t
+
+example (n : ℕ) (t : ℝ) :
+    (n : ℂ)^(-((t : ℂ)*Complex.I)) =
+      star ((n : ℂ)^((t : ℂ)*Complex.I)) :=
+  @TaoTrudgianYang2025.cpow_neg_im_eq_star n t
+
+example {N : ℝ} (hN : 0 < N)
+    (a b : ℕ) (ha : N ≤ (a : ℝ)) (t : ℝ) :
+    ‖∑ n ∈ Finset.Icc a b, (n : ℂ)^(-((t : ℂ)*Complex.I))‖ =
+      ‖exponentialSumAt Real.log (t/(2*Real.pi)) N a b‖ :=
+  @TaoTrudgianYang2025.norm_sum_cpow_neg_im_eq_logModel N hN a b ha t
+
+example {k l ε : ℝ}
+    (h : ExponentPair k l) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (t N : ℝ) (a b : ℕ),
+      0 < t → 1 ≤ N → N ≤ (a : ℝ) → (b : ℝ) ≤ 2*N →
+      ‖∑ n ∈ Finset.Icc a b, (n : ℂ)^(-((t : ℂ)*Complex.I))‖ ≤
+        C*((t/N)^(k+ε)*N^(l+ε)+2*Real.pi*N/t) :=
+  @TaoTrudgianYang2025.ExponentPair.logarithmic_sum_bound k l ε h hε
+
+example {n : ℕ} (hn : 0 < n) (σ t : ℝ) :
+    (n : ℂ)^(-((σ : ℂ)+(t : ℂ)*Complex.I)) =
+      (n : ℝ)^(-σ) • (n : ℂ)^(-((t : ℂ)*Complex.I)) :=
+  @TaoTrudgianYang2025.cpow_neg_eq_rpow_smul n hn σ t
+
+example {a M : ℕ} (ha : 0 < a)
+    {σ t B : ℝ} (hσ : 0 ≤ σ) (hB : 0 ≤ B)
+    (hprefix : ∀ j : ℕ, j ≤ M →
+      ‖∑ i ∈ Finset.range j,
+        ((a+i : ℕ) : ℂ)^(-((t : ℂ)*Complex.I))‖ ≤ B) :
+    ‖∑ i ∈ Finset.range M,
+      ((a+i : ℕ) : ℂ)^(-((σ : ℂ)+(t : ℂ)*Complex.I))‖ ≤ (a : ℝ)^(-σ)*B :=
+  @TaoTrudgianYang2025.norm_weighted_dirichlet_block_le a M ha σ t B hσ hB hprefix
+
+example {k l ε σ : ℝ}
+    (h : ExponentPair k l) (hε : 0 < ε) (hσ : 0 ≤ σ) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (t : ℝ) (a M : ℕ),
+      0 < t → 0 < a → M ≤ a →
+      ‖∑ i ∈ Finset.range M,
+        ((a+i : ℕ) : ℂ)^(-((σ : ℂ)+(t : ℂ)*Complex.I))‖ ≤
+        C*((a : ℝ)^(-σ)*
+          ((t/a)^(k+ε)*(a : ℝ)^(l+ε)+2*Real.pi*a/t)) :=
+  @TaoTrudgianYang2025.ExponentPair.weighted_logarithmic_sum_bound k l ε σ h hε hσ
+
+example {t N : ℝ}
+    (ht : 0 < t) (hN : 0 < N) (k l ε : ℝ) :
+    N^(-(l-k))*((t/N)^(k+ε)*N^(l+ε)) = t^(k+ε) :=
+  @TaoTrudgianYang2025.zeta_weighted_exponentPair_scale_identity t N ht hN k l ε
+
+example {k l ε : ℝ}
+    (h : ExponentPair k l) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (t : ℝ) (a M : ℕ),
+      1 ≤ t → 0 < a → (a : ℝ) ≤ 6*t → M ≤ a →
+      ‖∑ i ∈ Finset.range M,
+        ((a+i : ℕ) : ℂ)^(-(((l-k : ℝ) : ℂ)+(t : ℂ)*Complex.I))‖ ≤ C*t^(k+ε) :=
+  @TaoTrudgianYang2025.ExponentPair.zeta_weighted_dyadic_bound k l ε h hε
+
+example {T : ℝ} {s : ℂ}
+    (hT : 3/4 ≤ T) (him : s.im ∈ Set.Icc T (2*T)) :
+    Real.pi * sharpZetaTheta s (sharpZetaCutoff T) ∈
+      Set.Icc (1/12 : ℝ) (1/4 : ℝ) :=
+  @TaoTrudgianYang2025.sharpZetaPhase_mem_of_im_range T s hT him
+
+example (s : ℂ) (a : ℝ)
+    (hphase : Real.pi * sharpZetaTheta s a ∈ Set.Icc (1/12 : ℝ) (1/4 : ℝ)) :
+    ‖sharpZetaBoundaryCoeff s a‖ ≤ 14 :=
+  @TaoTrudgianYang2025.sharpZetaBoundaryCoeff_le_of_phase s a hphase
+
+example (s : ℂ) (a : ℝ)
+    (hphase : Real.pi * sharpZetaTheta s a ∈ Set.Icc (1/12 : ℝ) (1/4 : ℝ))
+    (hs0 : 0 ≤ s.re) (hs1 : s.re ≤ 1) :
+    sharpZetaErrorCoeff s a ≤ 129 :=
+  @TaoTrudgianYang2025.sharpZetaErrorCoeff_le_of_phase s a hphase hs0 hs1
+
+example {σ t : ℝ}
+    (hσ0 : 0 ≤ σ) (hσ1 : σ ≤ 1) (ht : 1 ≤ t) :
+    ‖riemannZeta ((σ : ℂ)+(t : ℂ)*Complex.I)‖ ≤
+      ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff t⌋₊,
+        (n : ℂ)^(-((σ : ℂ)+(t : ℂ)*Complex.I))‖+150 :=
+  @TaoTrudgianYang2025.norm_zeta_le_sharp_sum_add σ t hσ0 hσ1 ht
+
+example (s : ℂ) (hs : s ≠ 0) (K : ℕ) :
+    (∑ n ∈ Finset.Icc 1 K, (n : ℂ)^(-s)) =
+      ∑ j ∈ Finset.range (Nat.clog 2 (K+1)),
+        ∑ i ∈ Finset.range (truncatedDyadicLength (K+1) j),
+          ((2^j+i : ℕ) : ℂ)^(-s) :=
+  @TaoTrudgianYang2025.sum_Icc_one_eq_truncatedDyadic s hs K
+
+example {k l ε : ℝ}
+    (h : ExponentPair k l) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ t : ℝ, 1 ≤ t →
+      ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff t⌋₊,
+        (n : ℂ)^(-(((l-k : ℝ) : ℂ)+(t : ℂ)*Complex.I))‖ ≤
+      C*Nat.clog 2 (⌊sharpZetaCutoff t⌋₊+1)*t^(k+ε) :=
+  @TaoTrudgianYang2025.ExponentPair.zeta_sharp_sum_bound k l ε h hε
+
+example (C η : ℝ) (hC : 0 ≤ C) (hη : 0 < η) :
+    ∀ᶠ t : ℝ in Filter.atTop,
+      C*Nat.clog 2 (⌊sharpZetaCutoff t⌋₊+1) ≤ t^η :=
+  @TaoTrudgianYang2025.eventually_const_mul_zetaCutoff_successor_clog_le_rpow C η hC hη
+
+example {k l : ℝ} (h : ExponentPair k l) :
+    IsZetaGrowthBound (l-k) k :=
+  @TaoTrudgianYang2025.ExponentPair.isZetaGrowthBound k l h
+
+example {k l : ℝ} (h : ExponentPair k l) :
+    zetaGrowthExponent (l-k) ≤ (k : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.zetaGrowthExponent_le k l h
+
+example : IsZetaGrowthBound 0 (1/2) := by
+  convert exponentPair_half_half.isZetaGrowthBound using 1
+  norm_num
+example : zetaGrowthExponent 0 ≤ ((1/2 : ℝ) : EReal) := by
+  convert exponentPair_half_half.zetaGrowthExponent_le using 1
+  norm_num
+example : IsZetaGrowthBound 1 0 := by
+  convert exponentPair_half_half.bProcess.isZetaGrowthBound using 1 <;> norm_num
+example : zetaGrowthExponent 1 ≤ (0 : EReal) := by
+  convert exponentPair_half_half.bProcess.zetaGrowthExponent_le using 1 <;> norm_num
+example : IsZetaGrowthBound (1/2) (1/6) := by
+  convert exponentPair_half_half.aProcess.isZetaGrowthBound using 1 <;> norm_num
+example : zetaGrowthExponent (1/2) ≤ ((1/6 : ℝ) : EReal) := by
+  convert exponentPair_half_half.aProcess.zetaGrowthExponent_le using 1 <;> norm_num
+example : zetaGrowthExponent (5/7) ≤ ((1/14 : ℝ) : EReal) := by
+  convert exponentPair_half_half.aProcess.aProcess.zetaGrowthExponent_le using 1 <;> norm_num
+example (h : ExponentPair (3/40) (31/40)) :
+    zetaGrowthExponent (7/10) ≤ ((3/40 : ℝ) : EReal) := by
+  convert h.zetaGrowthExponent_le using 1
+  norm_num
+example {σ μ : ℝ} (h : IsZetaGrowthBound σ μ) : IsZetaGrowthBound σ (μ+1) :=
+  h.mono (by linarith)
+example (σ t : ℝ) :
+    ‖riemannZeta ((σ : ℂ)+((-t : ℝ) : ℂ)*Complex.I)‖ =
+      ‖riemannZeta ((σ : ℂ)+(t : ℂ)*Complex.I)‖ :=
+  norm_zeta_growth_negative_ordinate σ t
+example {t : ℝ} (ht : 1 ≤ t) :
+    ‖riemannZeta ((0 : ℂ)+(t : ℂ)*Complex.I)‖ ≤
+      ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff t⌋₊,
+        (n : ℂ)^(-((0 : ℂ)+(t : ℂ)*Complex.I))‖+150 :=
+  norm_zeta_le_sharp_sum_add (by norm_num) (by norm_num) ht
+example {t : ℝ} (ht : 1 ≤ t) :
+    ‖riemannZeta ((1 : ℂ)+(t : ℂ)*Complex.I)‖ ≤
+      ‖∑ n ∈ Finset.Icc 1 ⌊sharpZetaCutoff t⌋₊,
+        (n : ℂ)^(-((1 : ℂ)+(t : ℂ)*Complex.I))‖+150 :=
+  norm_zeta_le_sharp_sum_add (by norm_num) (by norm_num) ht
+example (s : ℂ) : (∑ n ∈ Finset.Icc 1 (0 : ℕ), (n : ℂ)^(-s)) = 0 := by simp
+example (s : ℂ) : (∑ n ∈ Finset.Icc 1 (1 : ℕ), (n : ℂ)^(-s)) = 1 := by simp
+example : Nat.clog 2 (1+1) = 1 := by norm_num
+example : Nat.clog 2 (4+1) = 3 := by norm_num
+
+end ZetaGrowthBridgeRegression
+
+section ZetaLowHeightRegression
+open Expdb Filter Topology
+
+example (N L : ℕ) (hN : 1 < N) (hL : 0 < L) (hLN : L ≤ N)
+    (T : ℝ) (hT : 0 < T) (hheight : T ≤ (N : ℝ)/(2*(L : ℝ))) :
+    (coherentZetaPattern N L hN hL hLN T hT hheight).N = (N : ℝ) :=
+  @TaoTrudgianYang2025.coherentZetaPattern_scale N L hN hL hLN T hT hheight
+
+example (N L : ℕ) (hN : 1 < N) (hL : 0 < L) (hLN : L ≤ N)
+    (T : ℝ) (hT : 0 < T) (hheight : T ≤ (N : ℝ)/(2*(L : ℝ))) :
+    (coherentZetaPattern N L hN hL hLN T hT hheight).T = T :=
+  @TaoTrudgianYang2025.coherentZetaPattern_time N L hN hL hLN T hT hheight
+
+example (N L : ℕ) (hN : 1 < N) (hL : 0 < L) (hLN : L ≤ N)
+    (T : ℝ) (hT : 0 < T) (hheight : T ≤ (N : ℝ)/(2*(L : ℝ))) :
+    (coherentZetaPattern N L hN hL hLN T hT hheight).V = (L : ℝ)/2 :=
+  @TaoTrudgianYang2025.coherentZetaPattern_value N L hN hL hLN T hT hheight
+
+example (N L : ℕ) (hN : 1 < N) (hL : 0 < L) (hLN : L ≤ N)
+    (T : ℝ) (hT : 0 < T) (hheight : T ≤ (N : ℝ)/(2*(L : ℝ))) :
+    (coherentZetaPattern N L hN hL hLN T hT hheight).ordinates = {T} :=
+  @TaoTrudgianYang2025.coherentZetaPattern_ordinates N L hN hL hLN T hT hheight
+
+example (n : ℕ) (hn : 2 ≤ n) :
+    ∃ P : ZetaLargeValuePattern,
+      P.N = (n : ℝ)^4 ∧ P.T = (n : ℝ)/4 ∧
+      P.V = (n : ℝ)^3/2 ∧ P.ordinates = {(n : ℝ)/4} :=
+  @TaoTrudgianYang2025.exists_lowHeight_zetaPattern n hn
+
+example {σ τ : ℝ} (P : ℕ → ZetaLargeValuePattern)
+    (hN : Tendsto (fun n => (P n).N) Filter.atTop Filter.atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) Filter.atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) Filter.atTop (nhds σ))
+    (hne : ∀ n, (P n).ordinates.Nonempty) :
+    zetaLargeValueExponent σ τ ≠ ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_ne_bot_of_nonempty_family σ τ P hN hT hV hne
+
+example :
+    zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_three_quarters_quarter_ne_bot 
+
+example :
+    zetaGrowthExponent (1/2) ≤ ((1/6 : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.zetaGrowth_half_le_one_sixth 
+
+example :
+    (0 : ℝ) < 1/4 ∧ (1/2 : ℝ) ≤ 1/2 ∧ (1/2 : ℝ) ≤ 1 ∧
+    ((1/2 : ℝ) : EReal)+((1/4 : ℝ) : EReal)*zetaGrowthExponent (1/2) <
+      ((3/4 : ℝ) : EReal) ∧
+    zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  @TaoTrudgianYang2025.zetaGrowth_unrestricted_largeValue_transfer_counterexample 
+
+example {k l σ τ : ℝ}
+    (hk : 0 ≤ k) (hτ : 0 ≤ τ)
+    (hmain : k*τ+l-k < σ) (hres : 1-τ < σ) :
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ 1 ∧ 0 ≤ k+δ ∧
+      (τ+δ)*(k+δ)+l-k ≤ σ-3*δ ∧ 1-τ+δ ≤ σ-3*δ :=
+  @TaoTrudgianYang2025.exists_zetaPair_nonexistence_margin k l σ τ hk hτ hmain hres
+
+example {t N : ℝ}
+    (ht : 0 < t) (hN : 0 < N) (k l ε : ℝ) :
+    (t/N)^(k+ε)*N^(l+ε) = t^(k+ε)*N^(l-k) :=
+  @TaoTrudgianYang2025.zetaPair_unweighted_scale_identity t N ht hN k l ε
+
+example {k l σ τ δ N t : ℝ}
+    (hN : 1 ≤ N) (ht : 0 < t) (hkδ : 0 ≤ k+δ)
+    (hmain : (τ+δ)*(k+δ)+l-k ≤ σ-3*δ)
+    (hres : 1-τ+δ ≤ σ-3*δ)
+    (htlo : N^(τ-δ) ≤ t) (hthi : t ≤ N^(τ+δ)) :
+    (t/N)^(k+δ)*N^(l+δ)+2*Real.pi*N/t ≤
+      (1+2*Real.pi)*N^(σ-3*δ) :=
+  @TaoTrudgianYang2025.zetaPair_power_majorant k l σ τ δ N t hN ht hkδ hmain hres htlo hthi
+
+example {k l σ τ : ℝ}
+    (h : ExponentPair k l) (hτ : 0 ≤ τ)
+    (hmain : k*τ+l-k < σ) (hres : 1-τ < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.ExponentPair.zetaLargeValueExponent_eq_bot k l σ τ h hτ hmain hres
+
+example {k l σ τ : ℝ} (h : ExponentPair k l)
+    (hσ : 1/2 ≤ σ) (hτ : 1 ≤ τ) (hmain : k*τ+l-k < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.ExponentPair.zetaLargeValueExponent_eq_bot_of_one_le_tau k l σ τ h hσ hτ hmain
+
+example {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 1 ≤ τ) (hmain : τ/6+1/2 < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_eq_bot_of_classical_pair σ τ hσ hτ hmain
+
+example : ∃ P : ZetaLargeValuePattern,
+    P.N = 16 ∧ P.T = 1/2 ∧ P.V = 4 ∧ P.ordinates = {1/2} := by
+  convert exists_lowHeight_zetaPattern 2 (by norm_num) using 1
+  norm_num
+example : ∃ P : ZetaLargeValuePattern,
+    P.N = 256 ∧ P.T = 1 ∧ P.V = 32 ∧ P.ordinates = {1} := by
+  convert exists_lowHeight_zetaPattern 4 (by norm_num) using 1
+  norm_num
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+example : 0 ≤ zetaLargeValueExponent (3/4) (1/4) := by
+  by_contra h
+  exact zetaLargeValueExponent_three_quarters_quarter_ne_bot
+    (zetaLargeValueExponent_eq_bot_of_neg (lt_of_not_ge h))
+example : ¬ IsZetaLargeValueBound (3/4) (1/4) (-1) := by
+  intro h
+  have hn : zetaLargeValueExponent (3/4) (1/4) < 0 :=
+    (zetaLargeValueExponent_le_of_bound h).trans_lt (by norm_num)
+  exact zetaLargeValueExponent_three_quarters_quarter_ne_bot
+    (zetaLargeValueExponent_eq_bot_of_neg hn)
+example : (1/2 : ℝ)+(1/4)*(1/6) < 3/4 := by norm_num
+example : (3/4 : ℝ) = 1-1/4 := by norm_num
+
+example : zetaLargeValueExponent (4/5) (1/4) = ⊥ := by
+  apply exponentPair_half_half.aProcess.zetaLargeValueExponent_eq_bot
+    (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (3/4) (1/2) = ⊥ := by
+  apply exponentPair_half_half.aProcess.zetaLargeValueExponent_eq_bot
+    (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent (3/4) 1 = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_classical_pair (by norm_num) le_rfl (by norm_num)
+example : zetaLargeValueExponent (9/10) 2 = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_classical_pair (by norm_num) (by norm_num) (by norm_num)
+example : zetaLargeValueExponent 1 (29/10) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_classical_pair (by norm_num) (by norm_num) (by norm_num)
+example (h : ExponentPair (3/40) (31/40)) :
+    zetaLargeValueExponent (19/20) 3 = ⊥ :=
+  h.zetaLargeValueExponent_eq_bot_of_one_le_tau (by norm_num) (by norm_num) (by norm_num)
+example : ¬ (∀ (k l σ τ : ℝ), ExponentPair k l → 0 < τ →
+    k*τ+l-k < σ → zetaLargeValueExponent σ τ = ⊥) := by
+  intro h
+  have hp : ExponentPair (1/6) (2/3) := by
+    convert exponentPair_half_half.aProcess using 1 <;> norm_num
+  exact zetaLargeValueExponent_three_quarters_quarter_ne_bot
+    (h (1/6) (2/3) (3/4) (1/4) hp (by norm_num) (by norm_num))
+
+end ZetaLowHeightRegression
