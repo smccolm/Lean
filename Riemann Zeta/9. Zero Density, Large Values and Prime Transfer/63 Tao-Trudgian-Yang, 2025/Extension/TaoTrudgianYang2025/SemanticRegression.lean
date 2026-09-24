@@ -39485,3 +39485,110 @@ example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
   energyPowering_source_counterexample
 
 end ReflectionPatternNormalizationRegression
+
+
+section ReflectionPowerLossRegression
+
+open Complex Filter MeasureTheory Set
+open scoped Interval BigOperators Classical
+
+example (S : Finset ℕ) {a B T u : ℝ}
+    (ha : 0 < a) (hB : 0 < B) (hT : 1 ≤ T) (hu : 0 ≤ u)
+    (hcap : (S.card : ℝ)/a ≤ B*T^u) :
+    (reflectionBandCount S a : ℝ) ≤
+      2+(Real.log (B+1)+u*Real.log T)/Real.log 2 :=
+  @TaoTrudgianYang2025.reflectionBandCount_le_power_log S a B T u ha hB hT hu hcap
+
+example (S : Finset ℕ) {a B T u : ℝ}
+    (ha : 0 < a) (hB : 0 < B) (hT : 1 ≤ T) (hlogT : 1 ≤ Real.log T)
+    (hu : 0 ≤ u) (hcap : (S.card : ℝ)/a ≤ B*T^u) :
+    (reflectionBandCount S a : ℝ) ≤
+      (2+(Real.log (B+1)+u)/Real.log 2)*Real.log T :=
+  @TaoTrudgianYang2025.reflectionBandCount_le_const_log S a B T u ha hB hT hlogT hu hcap
+
+example (P : ZetaLargeValuePattern)
+    (hT : 4 ≤ P.T) (hExp : Real.exp 1 ≤ P.T) (hV : 1 ≤ P.V)
+    (hscale : 1 ≤ P.T/(4*Real.pi*P.N)) :
+    ((zetaReflectionCommonInterval P.T P.N).card : ℝ)/zetaReflectionValueFloor P ≤
+      (336*zetaReflectionConvolutionConstant)*P.T^2 :=
+  @TaoTrudgianYang2025.zetaReflection_band_ratio_height_cap P hT hExp hV hscale
+
+example : 0 < zetaReflectionBandLogConstant :=
+  @TaoTrudgianYang2025.zetaReflectionBandLogConstant_pos
+
+example (P : ZetaLargeValuePattern)
+    (hT : 4 ≤ P.T) (hExp : Real.exp 1 ≤ P.T) (hV : 1 ≤ P.V)
+    (hscale : 1 ≤ P.T/(4*Real.pi*P.N)) :
+    (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+      (zetaReflectionValueFloor P) : ℝ) ≤ zetaReflectionBandLogConstant*Real.log P.T :=
+  @TaoTrudgianYang2025.zetaReflectionBandCount_le_log P hT hExp hV hscale
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ T₀ : ℝ, 4 ≤ T₀ ∧
+      ∀ P : ZetaLargeValuePattern, T₀ ≤ P.T → 1 ≤ P.V →
+        1 ≤ P.T/(4*Real.pi*P.N) →
+          216*zetaReflectionConvolutionConstant*zetaMomentLogLoss P.T*
+            (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+              (zetaReflectionValueFloor P) : ℝ) ≤ P.T^η :=
+  @TaoTrudgianYang2025.exists_zetaReflection_height_loss_subpower η hη
+
+example {τ ε r : ℝ}
+    (hτ : 1 < τ) (hε : 0 < ε) (hr : 0 < r) :
+    ∃ δ : ℝ, 0 < δ ∧ δ ≤ r ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N → ∀ σ : ℝ, 1/2 ≤ σ →
+        P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+          4 ≤ P.T/(4*Real.pi*P.N) ∧
+          216*zetaReflectionConvolutionConstant*zetaMomentLogLoss P.T*
+            (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+              (zetaReflectionValueFloor P) : ℝ) ≤ P.N^ε :=
+  @TaoTrudgianYang2025.exists_reflection_source_loss_window τ ε r hτ hε hr
+
+example {τ ε : ℝ}
+    (hτ : 1 < τ) (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ N₀ : ℝ, 1 ≤ N₀ ∧
+      ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N → ∀ σ : ℝ, 1/2 ≤ σ →
+        P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+          P.ordinates.Nonempty →
+            ∃ u ∈ Icc (-(2*P.T)) (2*P.T), ∃ Q : ZetaLargeValuePattern,
+              Q.ordinates.Nonempty ∧ Q.ordinates ⊆ P.ordinates.image (fun t => t+u) ∧
+              P.T/(4*Real.pi*P.N)/2 ≤ Q.N ∧
+              Q.N ≤ 4*(P.T/(4*Real.pi*P.N)) ∧
+              P.T/2 ≤ Q.T ∧ Q.T ≤ 2*P.T ∧
+              P.V*Real.sqrt P.T/(P.N*P.N^ε) ≤ Q.V ∧
+              (P.ordinates.card : ℝ)*P.V*Real.sqrt P.T/(P.N*P.N^ε) ≤
+                Q.V*(Q.ordinates.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_zetaReflection_power_loss_pattern τ ε hτ hε
+
+example : reflectionBandCount (∅ : Finset ℕ) 1 = 1 := by
+  norm_num [reflectionBandCount]
+
+example : reflectionBandCount ({1} : Finset ℕ) 1 = 1 := by
+  norm_num [reflectionBandCount]
+
+example : reflectionBandCount ({1,2} : Finset ℕ) (1/2) = 3 := by
+  norm_num [reflectionBandCount]
+
+example : reflectionBandCount (Finset.Icc 1 4) 16 = 1 := by
+  norm_num [reflectionBandCount]
+
+example : 0 < zetaReflectionBandLogConstant :=
+  zetaReflectionBandLogConstant_pos
+
+example : ∃ T₀ : ℝ, 4 ≤ T₀ ∧
+    ∀ P : ZetaLargeValuePattern, T₀ ≤ P.T → 1 ≤ P.V →
+      1 ≤ P.T/(4*Real.pi*P.N) →
+        216*zetaReflectionConvolutionConstant*zetaMomentLogLoss P.T*
+          (reflectionBandCount (zetaReflectionCommonInterval P.T P.N)
+            (zetaReflectionValueFloor P) : ℝ) ≤ P.T^(1/100 : ℝ) :=
+  exists_zetaReflection_height_loss_subpower (by norm_num)
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionPowerLossRegression

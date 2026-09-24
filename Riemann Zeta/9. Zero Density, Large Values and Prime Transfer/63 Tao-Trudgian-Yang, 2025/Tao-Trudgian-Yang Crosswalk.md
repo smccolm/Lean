@@ -1,7 +1,7 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
-Current analytic progress: [Actual common-shift reflected family](#actual-common-shift-reflected-family--current-checkpoint).
-One common shift and a literal nonempty separated family are now extracted from the actual reflection convolution, preserving the required amplitude-cardinality loss. Finite target normalization and the exact reflection supremum remain open under EPZAE-21. Completion remains 28/42; both counterexamples and all nine repaired Add-est clauses are preserved.
+Current analytic progress: [Uniform subpower reflected pattern](#uniform-subpower-reflected-pattern--current-checkpoint).
+The actual normalized reflection now has both value and amplitude-cardinality losses bounded by an arbitrary positive source power. Transformed-coordinate limits and the exact reflection supremum remain open under EPZAE-21. Completion remains 28/42; both counterexamples and all nine repaired Add-est clauses are preserved.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -132,7 +132,7 @@ certificates, not proofs of the energy-region projections.
 | Literal Neumann two-term expansion toward Ivić Theorem 6.2 | native Schläfli kernel to exact decaying ray, complete arithmetic replacement and actual zeta consumers | `dfiBesselY0_eq_neumannLaplaceIntegral` proves the actual contour/branch bridge; `abs_dfiBesselY0_sub_neumannTwoTerm_le` gives explicit `K x^(-5/2)` error for every `x>0`. Physical support links this to `T^(-5/4) n^(-5/4)`. `exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le` sums the error using the genuine divisor series at `5/4` and gives `C G`; native complete Voronoi summability identifies the original series. `exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation` and `exists_zetaSquareLocalMean_le_atkinson_twoTerm` consume the complete replacement with uniform `Cδ G log T` error on `T^δ≤G≤T^(1/2-δ)`. Thirteen modules, 71 public audits, 25 regressions. No analytic premise or changed kernel. Uniform stationary reduction, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |
 | `add-bound (ii)`, full closed strip and real orders | actual dyadic zeta moment to uniform LV and its EReal infimum | **DONE:** `zetaRealMoment_largeValueBound_closed_strip` and `zetaLargeValueExponent_le_of_realMoment_closed_strip` cover `1/2≤c,σ≤1`, all real `A≥1`, arbitrary real `M`, and `τ≥2`. The sole analytic input is the source dyadic moment. Arbitrary-line Mellin/Perron, retained residue and tails, real Hölder, signed height powers and logarithmic normalization are proved. At `c=1`, the actual first moment derives `M≥1`. The genuine twelfth moment is already proved and is a regression specialization. `zetaRealMoment_largeValueBound_closedStrip_aboveOne` and its EReal consumer strengthen the same exact source-moment implication to every `τ>1`. EPZAE-21 remains open for exact reflection and source-contract correction, not this transfer. |
 | `add-bound (i)`, independent corrected theorem | actual EReal growth infimum to actual pattern nonexistence | **DONE with the explicit residual condition `σ>1−τ`:** `zetaCorrected_exponent_eq_bot_of_mu` consumes the actual `c+τ·μ(c)<σ` on the closed line/sigma strip, without finite or attained infimum assumptions. Arbitrary-order actual Mellin tails give every `τ>1`; mean-square nonvanishing proves `μ(c)≥0` and the classical pair handles `τ=1`; the sharp low-height formula handles `τ<1`. Uniform empty-pattern and pointwise consumers are proved. The printed unrestricted statement remains disproved, not replaced. Exact reflection and source-contract correction remain open under EPZAE-21. |
-| `add-bound (iii)`, actual common-shift reflection family | actual zeta pattern to a literal separated coefficient-one value family | **ACTUAL EXTRACTION DONE:** `exists_zetaReflection_value_family` supplies one common shift and a nonempty literal subset of the translated original ordinates, in the positive height window. Actual coefficient-one values lie in one dyadic amplitude band, with the full amplitude-cardinality lower bound. The convolution input is discharged by the error-free physical entry. Finite frequency/height normalization, logarithmic losses and the exact EReal supremum remain OPEN. |
+| `add-bound (iii)`, actual subpower reflected pattern | actual source to a genuine reflected target with arbitrary source-power loss | **UNIFORM LOSS ABSORPTION DONE:** `exists_zetaReflection_power_loss_pattern` constructs an actual nonempty normalized target, with both value and amplitude-cardinality loss bounded by an arbitrary positive source power. The literal rounded band count is logarithmic and all physical side conditions are derived uniformly. Transformed-coordinate limits, compact amplitude extraction, and the exact EReal supremum remain OPEN. |
 | Actual signed carriers toward Ivić Theorem 6.2 | actual power-weighted oscillatory integrals to uniform summand bounds and complete physical source identities | `exists_norm_atkinsonPowerIntegral_le` proves `norm(Iα)≤Cα G T^(-α)` for all real b and α, with Cα depending only on α, on `T>0, G>0, G²≤2T, L>0, 8L≤G`. The proof consumes the actual square-substituted amplitude and native first-derivative test in both orientations. `zetaAtkinsonTwoTerm_eq_carrierIntegral` proves all four signed quarter-power carriers with exact factors and n=0 handling; their complete weighted series is genuinely summable. `exists_norm_zetaAtkinsonTwoTerm_le` gives the actual `n^(-1/4)` and `n^(-3/4)` summand bounds, which are not summable majorants. `exists_zetaSquarePhysicalGaussian_carrier_approximation` and `exists_zetaSquareLocalMean_le_carriers` retain the complete carrier series and uniform `Cδ G log T` source error. Ten modules, 43 public audits, 24 regressions. No analytic premise. Uniform stationary main values, sharper arithmetic tails, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |
 | `add-bound (ii)`, exact coefficient-one source entry | sharp polynomial to localized critical-zeta convolution | `ZetaLargeValuePattern.polynomial_eq_critical_zeta_mellin` retains both integer endpoints and residue `mellin cutoff (1-it)`. `ZetaMellinUniform` and `ZetaMellinLocalization` prove physical-scale kernels and the far integral. `ZetaLargeValuePattern.perron_entry` bounds and absorbs both errors; `exists_zetaPerron_uniform_threshold` derives its physical conditions from all actual windows `σ ≥ 1/2`, `τ ≥ 2`, `δ ≤ 1/4`. This critical-line entry edge is complete, not the full EPZAE-21 work package |
 | Summable correction removal toward Ivić Theorem 6.2 | actual near/far signed carriers to a leading-only physical source | `exists_norm_atkinsonPowerIntegral_far_le` proves both signs with `Cα G T^(-α)/b` for `b≥8sqrt(T)` on the full physical support. `exists_norm_atkinsonCorrectionTerm_le` combines near and far ranges into the actual divisor-Dirichlet majorant at `5/4`; `exists_norm_atkinsonCorrectionSum_le` sums the entire correction with bound `C G`. `summable_atkinsonLeadingTerm` and `zetaAtkinsonTwoTermSum_eq_leading_sub_correction` justify the complete leading series. `exists_zetaSquarePhysicalGaussian_atkinson_leading_approximation` and `exists_zetaSquareLocalMean_le_atkinson_leading` consume that error, retaining both leading carriers and uniform `Cδ G log T` source error. Four modules plus the generalized weighted-primitive helper; 19 new public audits, 16 regressions. No analytic premise or discarded source factor. Leading stationary main values, sharper leading arithmetic tails, sharp Atkinson inequality, genuine twelfth moment and all unconditional Add-est outputs remain open under EPZAE-21/37 |
@@ -10175,7 +10175,7 @@ duplicate or missing endpoints, class conflicts or unclassified nodes.
 The whole-proof goal remains active and incomplete. Recovery-record
 maintenance remains permanently skipped; no such file was changed.
 
-## Actual common-shift reflected family — current checkpoint
+## Actual common-shift reflected family — previous checkpoint
 
 The analytic common shift and actual separated value-family extraction
 are proved. `exists_zetaReflection_value_family` starts from an
@@ -10248,6 +10248,156 @@ Verification:
   `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
 
 The synchronized architecture has 485 nodes and 1,223 edges, with no
+duplicate or missing endpoints, class conflicts or unclassified nodes.
+The whole-proof goal remains active and incomplete. Recovery-record
+maintenance remains permanently skipped; no such file was changed.
+
+## Genuine normalized reflected pattern — previous checkpoint
+
+The reflection extraction now ends in a genuine
+`ZetaLargeValuePattern`, not merely a selected ordinate family.
+For every `τ>1`, one positive radius and scale threshold are chosen
+before the actual source pattern and every `σ≥1/2`.
+The theorem derives the large dual-scale condition from the physical
+window; it does not assume a reflected pattern or an LV estimate.
+
+Writing `M=T/(4πN)`, the literal common frequency interval is
+partitioned into three disjoint blocks with scales
+`floor(M), 2 floor(M), 4 floor(M)`. Each active block is an
+integer interval inside its exact dyadic support. Three positive
+height windows cover `[T/2,3T]`. Finite cover selection retains
+at least one ninth of the extracted ordinates and divides the value
+threshold by three. Exact one-separation is inherited.
+
+The resulting actual target pattern `Q` satisfies
+`M/2≤Q.N≤4M`, `T/2≤Q.T≤2T`, and
+`Q.V=a·2^j/3`, where
+`a=V sqrt(T)/(8 K N L)`, `K=zetaReflectionConvolutionConstant`,
+`L=zetaMomentLogLoss T`, and `j<J=reflectionBandCount S a`.
+Its nonempty ordinate set is a literal subset of one common translate
+of the original set, and
+
+`Q.V·|Q.W| ≥ |W| V sqrt(T)/(216 K N L J).`
+
+The actual coefficients are the indicator of the selected integer
+interval; the target has its exact required height interval
+`[Q.T,2 Q.T]`. The finite construction and the final uniform theorem
+both retain explicit frequency and height block witnesses.
+
+Six modules contain 20 public theorems and two definitions. All are
+root-imported, listed in the maintained principal BAT inventory and
+explicitly audited. The 32 regressions include all 20 exact signatures,
+literal nonempty and empty blocks, boundary heights, rounded scales,
+and both permanent counterexamples.
+See [actual-source normalized entry](Extension/TaoTrudgianYang2025/ZetaReflectionPatternEntry.lean),
+[genuine pattern construction](Extension/TaoTrudgianYang2025/ZetaReflectionNormalizedFamily.lean),
+and [literal frequency partition](Extension/TaoTrudgianYang2025/ZetaReflectionFrequencyBlocks.lean).
+
+Remaining: absorb the logarithmic and band-count losses, normalize
+the physical exponent coordinates, and prove the printed affine EReal
+supremum equality, including bottom cases. The heuristic pointwise
+reflection identity is not the target. EPZAE-21 remains OPEN and
+aggregate completion stays 28/42. Both counterexamples, corrected
+powering and all nine Add-est clauses remain preserved.
+
+Verification:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,195 production files, 1,669 scanned
+  Lean files and 10,527 build jobs. Audit: 9,155 target, 6,240 pinned
+  and five anchor theorems (15,400 total). All 20 new public theorems
+  occur exactly once in the explicit audit and use only permitted
+  logical axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-111539-73fd7038.log)
+  has zero errors, warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass with zero diagnostics and 8,857 build jobs;
+  301 root modules, two retained regressions, 7,636 explicit and
+  14,290 discovered theorem audits. See the
+  [foundation log](../../logs/foundation_freeze_20260924_111955.log) and
+  [manifest](../../logs/foundation_freeze_20260924_111955.json).
+- All 1,690 physical proof/configuration/tooling hashes are unchanged
+  across both successful gates. All 509 protected tracked files remain
+  byte-identical to owner HEAD
+  `e56b7a81701e01cbafcb6bd77d6c7b74bd507098`. The owner advanced
+  HEAD during verification; all checked physical source hashes stayed
+  identical, and the protected files also match the preceding HEAD.
+  No agent commit or push.
+  The original counterexample SHA-256 remains
+  `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The synchronized architecture has 487 nodes and 1,225 edges, with no
+duplicate or missing endpoints, class conflicts or unclassified nodes.
+The whole-proof goal remains active and incomplete. Recovery-record
+maintenance remains permanently skipped; no such file was changed.
+
+## Uniform subpower reflected pattern — current checkpoint
+
+All explicit logarithmic reflection losses are now absorbed.
+For every `τ>1` and `ε>0`,
+`exists_zetaReflection_power_loss_pattern` chooses a positive radius
+and scale threshold before the actual source pattern and every
+`σ≥1/2`. It constructs a genuine nonempty target zeta pattern `Q`
+with the same fixed-factor frequency and height bounds as before:
+
+`T/(8πN)≤Q.N≤T/(πN)`, `T/2≤Q.T≤2T`.
+
+Its ordinates are a literal subset of one common translate of the
+source ordinates, and its actual interval coefficients and exact
+one-separation are retained. Both estimates hold:
+
+`Q.V ≥ V sqrt(T)/(N·N^ε)`;
+
+`Q.V·|Q.W| ≥ |W| V sqrt(T)/(N·N^ε)`.
+
+The rounded band count is not discarded. The actual common interval
+and value floor give `|S|/a≤336 K T²` once the derived physical
+conditions hold. A ceiling-logarithm estimate bounds the literal
+`J=clog_2(ceil(|S|/a))+1` by a fixed multiple of `log T`.
+The complete factor `216 K L J` is subpower in height, then in
+source scale. One uniform window derives the required dual-scale,
+height and `V≥1` conditions. The final theorem assumes no
+reflection, loss estimate or target-pattern existence.
+
+Five modules contain eight public theorems and one definition. All
+are root-imported, listed in the maintained principal BAT inventory,
+and explicitly audited. The 16 regressions contain every exact
+signature, zero/one and rounded band counts, a concrete small
+positive loss exponent, and both permanent counterexamples.
+See [actual subpower extraction](Extension/TaoTrudgianYang2025/ZetaReflectionPowerLossPattern.lean),
+[uniform source window](Extension/TaoTrudgianYang2025/ZetaReflectionSourceLossWindow.lean),
+and [actual logarithmic height loss](Extension/TaoTrudgianYang2025/ZetaReflectionHeightLoss.lean).
+
+Remaining: construct the unbounded reflected counterexample family
+with thresholds chosen before each source pattern; prove the
+transformed exponent limits and compact amplitude subsequence;
+then establish the printed affine EReal supremum equality, including
+bottom cases. EPZAE-21 stays OPEN and completion remains 28/42.
+Both counterexamples, corrected powering and all nine Add-est clauses
+remain preserved.
+
+Verification:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,200 production files, 1,674 scanned
+  Lean files and 10,532 build jobs. Audit: 9,165 target, 6,240 pinned
+  and five anchor theorems (15,410 total). All eight new public theorems
+  occur exactly once in the explicit audit and use only permitted
+  logical axioms. The [extension log](logs/tao-trudgian-yang-build-20260924-113129-35dc65d3.log)
+  has zero errors, warnings, tactic suggestions and linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass with zero diagnostics and 8,857 build jobs;
+  301 root modules, two retained regressions, 7,636 explicit and
+  14,290 discovered theorem audits. See the
+  [foundation log](../../logs/foundation_freeze_20260924_113554.log) and
+  [manifest](../../logs/foundation_freeze_20260924_113554.json).
+- All 1,695 physical proof/configuration/tooling hashes are unchanged
+  across both successful gates. All 509 protected tracked files remain
+  byte-identical to owner HEAD
+  `e56b7a81701e01cbafcb6bd77d6c7b74bd507098`. No agent commit or push.
+  The original counterexample SHA-256 remains
+  `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+
+The synchronized architecture has 489 nodes and 1,227 edges, with no
 duplicate or missing endpoints, class conflicts or unclassified nodes.
 The whole-proof goal remains active and incomplete. Recovery-record
 maintenance remains permanently skipped; no such file was changed.
