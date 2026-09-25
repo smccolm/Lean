@@ -39592,3 +39592,5196 @@ example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
   energyPowering_source_counterexample
 
 end ReflectionPowerLossRegression
+
+
+section ReflectionCoordinateLimitsRegression
+
+open Complex Filter MeasureTheory Set Topology
+open scoped Interval BigOperators Classical
+
+example (N : ℕ → ℝ) (hN : ∀ n, 1 < N n) :
+    Tendsto (fun n => Real.logb (N n) (N n)) atTop (nhds 1) :=
+  @TaoTrudgianYang2025.tendsto_logb_self_of_one_lt N hN
+
+example (N X : ℕ → ℝ) {a : ℝ}
+    (hN : ∀ n, 1 < N n) (hX : ∀ n, 0 < X n) (ha : 0 < a)
+    (hNtop : Tendsto N atTop atTop)
+    (hlog : Tendsto (fun n => Real.logb (N n) (X n)) atTop (nhds a)) :
+    Tendsto X atTop atTop :=
+  @TaoTrudgianYang2025.tendsto_atTop_of_positive_logb_limit N X a hN hX ha hNtop hlog
+
+example (P Q : ℕ → ZetaLargeValuePattern) {τ : ℝ}
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hTlog : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hscale : ∀ n, (P n).T/(4*Real.pi*(P n).N)/2 ≤ (Q n).N ∧
+      (Q n).N ≤ 4*((P n).T/(4*Real.pi*(P n).N))) :
+    Tendsto (fun n => Real.logb (P n).N (Q n).N) atTop (nhds (τ-1)) :=
+  @TaoTrudgianYang2025.reflection_tendsto_log_scale P Q τ hNtop hTlog hscale
+
+example (P Q : ℕ → ZetaLargeValuePattern) {τ : ℝ}
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hTlog : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hheight : ∀ n, (P n).T/2 ≤ (Q n).T ∧ (Q n).T ≤ 2*(P n).T) :
+    Tendsto (fun n => Real.logb (P n).N (Q n).T) atTop (nhds τ) :=
+  @TaoTrudgianYang2025.reflection_tendsto_log_height P Q τ hNtop hTlog hheight
+
+example (P Q : ℕ → ZetaLargeValuePattern) {τ : ℝ}
+    (hτ : 1 < τ) (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hTlog : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hscale : ∀ n, (P n).T/(4*Real.pi*(P n).N)/2 ≤ (Q n).N ∧
+      (Q n).N ≤ 4*((P n).T/(4*Real.pi*(P n).N))) :
+    Tendsto (fun n => (Q n).N) atTop atTop :=
+  @TaoTrudgianYang2025.reflection_tendsto_target_scale P Q τ hτ hNtop hTlog hscale
+
+example (P Q : ℕ → ZetaLargeValuePattern) {τ : ℝ}
+    (hτ : 1 < τ) (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hTlog : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hscale : ∀ n, (P n).T/(4*Real.pi*(P n).N)/2 ≤ (Q n).N ∧
+      (Q n).N ≤ 4*((P n).T/(4*Real.pi*(P n).N)))
+    (hheight : ∀ n, (P n).T/2 ≤ (Q n).T ∧ (Q n).T ≤ 2*(P n).T) :
+    Tendsto (fun n => Real.logb (Q n).N (Q n).T) atTop (nhds (τ/(τ-1))) :=
+  @TaoTrudgianYang2025.reflection_tendsto_target_height_exponent P Q τ hτ hNtop hTlog hscale hheight
+
+example {σ τ B : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hnot : ¬ IsZetaLargeValueBound σ τ B) :
+    ∃ η : ℝ, 0 < η ∧ ∃ err : ℕ → ℝ,
+      (∀ n, 0 < err n) ∧ Tendsto err atTop (nhds 0) ∧
+      ∃ P Q : ℕ → ZetaLargeValuePattern,
+        Tendsto (fun n => (P n).N) atTop atTop ∧
+        Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ) ∧
+        Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ) ∧
+        ∀ n, (P n).N^(B+η) ≤ ((P n).ordinates.card : ℝ) ∧
+          (Q n).ordinates.Nonempty ∧
+          ((P n).T/(4*Real.pi*(P n).N)/2 ≤ (Q n).N ∧
+            (Q n).N ≤ 4*((P n).T/(4*Real.pi*(P n).N))) ∧
+          ((P n).T/2 ≤ (Q n).T ∧ (Q n).T ≤ 2*(P n).T) ∧
+          (P n).V*Real.sqrt (P n).T/((P n).N*(P n).N^(err n)) ≤ (Q n).V ∧
+          ((P n).ordinates.card : ℝ)*(P n).V*Real.sqrt (P n).T/
+              ((P n).N*(P n).N^(err n)) ≤
+            (Q n).V*((Q n).ordinates.card : ℝ) :=
+  @TaoTrudgianYang2025.exists_reflection_counterexample_families σ τ B hσ hτ hnot
+
+example (P : ZetaLargeValuePattern)
+    (hne : P.ordinates.Nonempty) : P.V ≤ 2*P.N :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.value_le_two_mul_N_of_nonempty P hne
+
+example (P : ℕ → ZetaLargeValuePattern)
+    (err : ℕ → ℝ) {σ τ : ℝ} (he : Tendsto err atTop (nhds 0))
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ)) :
+    Tendsto (fun n => Real.logb (P n).N
+      ((P n).V*Real.sqrt (P n).T/((P n).N*(P n).N^(err n))))
+      atTop (nhds (σ+τ/2-1)) :=
+  @TaoTrudgianYang2025.reflection_tendsto_log_value_floor P err σ τ he hT hV
+
+example (P Q : ℕ → ZetaLargeValuePattern)
+    (err : ℕ → ℝ) {σ τ κ : ℝ}
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (he : Tendsto err atTop (nhds 0))
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ))
+    (hscale : Tendsto (fun n => Real.logb (P n).N (Q n).N) atTop (nhds κ))
+    (hne : ∀ n, (Q n).ordinates.Nonempty)
+    (hvalue : ∀ n, (P n).V*Real.sqrt (P n).T/((P n).N*(P n).N^(err n)) ≤ (Q n).V) :
+    ∃ v ∈ Icc (σ+τ/2-1) κ, ∃ φ : ℕ → ℕ, StrictMono φ ∧
+      Tendsto (fun n => Real.logb (P (φ n)).N (Q (φ n)).V) atTop (nhds v) :=
+  @TaoTrudgianYang2025.exists_reflection_amplitude_subsequence P Q err σ τ κ hNtop he hT hV hscale hne hvalue
+
+example {σ τ B : ℝ}
+    (h : IsZetaLargeValueBound σ τ B) (P : ℕ → ZetaLargeValuePattern)
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ))
+    (hne : ∀ n, (P n).ordinates.Nonempty) {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ n in atTop, Real.logb (P n).N ((P n).ordinates.card : ℝ) ≤ B+ε :=
+  @TaoTrudgianYang2025.IsZetaLargeValueBound.eventually_log_card_le σ τ B h P hNtop hT hV hne ε hε
+
+example {σ τ B : ℝ}
+    (h : IsZetaLargeValueBound σ τ B) (P : ℕ → ZetaLargeValuePattern)
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ))
+    (hne : ∀ n, (P n).ordinates.Nonempty) : 0 ≤ B :=
+  @TaoTrudgianYang2025.IsZetaLargeValueBound.nonneg_of_nonempty_sequence σ τ B h P hNtop hT hV hne
+
+example {σ τ : ℝ}
+    (P : ℕ → ZetaLargeValuePattern)
+    (hNtop : Tendsto (fun n => (P n).N) atTop atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ))
+    (hne : ∀ n, (P n).ordinates.Nonempty) :
+    (0 : EReal) ≤ zetaLargeValueExponent σ τ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_nonneg_of_nonempty_sequence σ τ P hNtop hT hV hne
+
+example : Tendsto (fun n : ℕ => Real.logb ((n : ℝ)+2) ((n : ℝ)+2))
+    atTop (nhds 1) :=
+  tendsto_logb_self_of_one_lt _ (fun n => by have := Nat.cast_nonneg (α := ℝ) n; linarith)
+
+example (P Q : ℕ → ZetaLargeValuePattern)
+    (hN : Tendsto (fun n => (P n).N) atTop atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds 2))
+    (hs : ∀ n, (P n).T/(4*Real.pi*(P n).N)/2 ≤ (Q n).N ∧
+      (Q n).N ≤ 4*((P n).T/(4*Real.pi*(P n).N)))
+    (ht : ∀ n, (P n).T/2 ≤ (Q n).T ∧ (Q n).T ≤ 2*(P n).T) :
+    Tendsto (fun n => Real.logb (Q n).N (Q n).T) atTop (nhds 2) := by
+  simpa only [show (2 : ℝ)/(2-1) = 2 by norm_num] using
+    reflection_tendsto_target_height_exponent P Q (by norm_num : (1 : ℝ) < 2)
+    hN hT hs ht
+
+example (P : ZetaLargeValuePattern) (hne : P.ordinates.Nonempty) : P.V ≤ 2*P.N :=
+  P.value_le_two_mul_N_of_nonempty hne
+
+example {σ τ : ℝ} (P : ℕ → ZetaLargeValuePattern)
+    (hN : Tendsto (fun n => (P n).N) atTop atTop)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds τ))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds σ))
+    (hne : ∀ n, (P n).ordinates.Nonempty) : zetaLargeValueExponent σ τ ≠ ⊥ := by
+  have h := zetaLargeValueExponent_nonneg_of_nonempty_sequence P hN hT hV hne
+  intro hb
+  rw [hb] at h
+  exact (not_le_of_gt (EReal.bot_lt_coe 0)) h
+
+example {B : ℝ} (hnot : ¬ IsZetaLargeValueBound (1/2) 2 B) :
+    ∃ P : ℕ → ZetaLargeValuePattern, Tendsto (fun n => (P n).N) atTop atTop := by
+  obtain ⟨_η,_hη,_err,_he,_he0,P,_Q,hN,_hT,_hV,_hdata⟩ :=
+    exists_reflection_counterexample_families (by norm_num : (1/2 : ℝ) ≤ 1/2)
+      (by norm_num : (1 : ℝ) < 2) hnot
+  exact ⟨P,hN⟩
+
+example (P : ℕ → ZetaLargeValuePattern)
+    (hT : Tendsto (fun n => Real.logb (P n).N (P n).T) atTop (nhds 2))
+    (hV : Tendsto (fun n => Real.logb (P n).N (P n).V) atTop (nhds (1/2))) :
+    Tendsto (fun n => Real.logb (P n).N ((P n).V*Real.sqrt (P n).T/(P n).N))
+      atTop (nhds (1/2)) := by
+  simpa using reflection_tendsto_log_value_floor P (fun _ => 0) tendsto_const_nhds hT hV
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionCoordinateLimitsRegression
+
+
+section ReflectionSupremumIdentityRegression
+
+open Complex Filter MeasureTheory Set Topology
+open scoped Interval BigOperators Classical
+
+example (P Q : ℕ → ZetaLargeValuePattern)
+    (err : ℕ → ℝ) {r a v κ σ' τ' b : ℝ} (hκ : 0 < κ)
+    (hQtop : Tendsto (fun n => (Q n).N) atTop atTop)
+    (hQT : Tendsto (fun n => Real.logb (Q n).N (Q n).T) atTop (nhds τ'))
+    (hQV : Tendsto (fun n => Real.logb (Q n).N (Q n).V) atTop (nhds σ'))
+    (hne : ∀ n, (Q n).ordinates.Nonempty)
+    (hscale : Tendsto (fun n => Real.logb (P n).N (Q n).N) atTop (nhds κ))
+    (hvalue : Tendsto (fun n => Real.logb (P n).N (Q n).V) atTop (nhds v))
+    (hfloor : Tendsto (fun n => Real.logb (P n).N
+      ((P n).V*Real.sqrt (P n).T/((P n).N*(P n).N^(err n))))
+      atTop (nhds a))
+    (hcard : ∀ n, (P n).N^r ≤ ((P n).ordinates.card : ℝ))
+    (hmass : ∀ n, ((P n).ordinates.card : ℝ)*(P n).V*Real.sqrt (P n).T/
+      ((P n).N*(P n).N^(err n)) ≤ (Q n).V*((Q n).ordinates.card : ℝ))
+    (hbound : IsZetaLargeValueBound σ' τ' b) :
+    r+a ≤ v+κ*b :=
+  @TaoTrudgianYang2025.reflection_mass_log_comparison P Q err r a v κ σ' τ' b hκ hQtop hQT hQV hne hscale hvalue hfloor hcard hmass hbound
+
+example (P Q : ℕ → ZetaLargeValuePattern)
+    (err : ℕ → ℝ) {r a v κ σ' τ' : ℝ} (hκ : 0 < κ)
+    (hQtop : Tendsto (fun n => (Q n).N) atTop atTop)
+    (hQT : Tendsto (fun n => Real.logb (Q n).N (Q n).T) atTop (nhds τ'))
+    (hQV : Tendsto (fun n => Real.logb (Q n).N (Q n).V) atTop (nhds σ'))
+    (hne : ∀ n, (Q n).ordinates.Nonempty)
+    (hscale : Tendsto (fun n => Real.logb (P n).N (Q n).N) atTop (nhds κ))
+    (hvalue : Tendsto (fun n => Real.logb (P n).N (Q n).V) atTop (nhds v))
+    (hfloor : Tendsto (fun n => Real.logb (P n).N
+      ((P n).V*Real.sqrt (P n).T/((P n).N*(P n).N^(err n))))
+      atTop (nhds a))
+    (hcard : ∀ n, (P n).N^r ≤ ((P n).ordinates.card : ℝ))
+    (hmass : ∀ n, ((P n).ordinates.card : ℝ)*(P n).V*Real.sqrt (P n).T/
+      ((P n).N*(P n).N^(err n)) ≤ (Q n).V*((Q n).ordinates.card : ℝ)) :
+    (((r+a-v)/κ : ℝ) : EReal) ≤ zetaLargeValueExponent σ' τ' :=
+  @TaoTrudgianYang2025.reflection_mass_le_zeta_exponent P Q err r a v κ σ' τ' hκ hQtop hQT hQV hne hscale hvalue hfloor hcard hmass
+
+example {σ τ B : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hnot : ¬ IsZetaLargeValueBound σ τ B) :
+    ∃ η : ℝ, 0 < η ∧ ∃ v ∈ Icc (σ+τ/2-1) (τ-1),
+      (((B+η+(σ+τ/2-1)-v)/(τ-1) : ℝ) : EReal) ≤
+        zetaLargeValueExponent (v/(τ-1)) (τ/(τ-1)) :=
+  @TaoTrudgianYang2025.exists_reflection_exponent_witness σ τ B hσ hτ hnot
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    zetaLargeValueExponent σ τ ≤ zetaReflectionMassEnvelope σ τ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_le_reflectionMassEnvelope σ τ hσ hτ
+
+example {ι : Sort*} (f : ι → EReal) (a : ℝ) :
+    (⨆ i, f i)+(a : EReal) = ⨆ i, f i+(a : EReal) :=
+  @TaoTrudgianYang2025.ereal_iSup_add_real ι f a
+
+example {ι : Sort*} (f : ι → EReal) {c : ℝ} (hc : 0 < c) :
+    (c : EReal)*(⨆ i, f i) = ⨆ i, (c : EReal)*f i :=
+  @TaoTrudgianYang2025.ereal_pos_mul_iSup ι f c hc
+
+example {ι : Sort*} (f : ι → EReal) {c : ℝ}
+    (hc : 0 < c) (a : ℝ) :
+    (c : EReal)*(⨆ i, f i)+(a : EReal) =
+      ⨆ i, (c : EReal)*f i+(a : EReal) :=
+  @TaoTrudgianYang2025.ereal_pos_affine_iSup ι f c hc a
+
+example (x : EReal) {c : ℝ} (hc : 0 < c) (d a b : ℝ) :
+    (c : EReal)*((d : EReal)*x+(b : EReal))+(a : EReal) =
+      ((c*d : ℝ) : EReal)*x+((c*b+a : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ereal_pos_affine_comp x c hc d a b
+
+example {τ : ℝ} (hτ : 1 < τ) (σ : ℝ) :
+    zetaReflectionCoordinate σ τ = (σ+τ/2-1)/(τ-1) :=
+  @TaoTrudgianYang2025.zetaReflectionCoordinate_eq τ hτ σ
+
+example {σ τ : ℝ} (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    1/2 ≤ zetaReflectionCoordinate σ τ :=
+  @TaoTrudgianYang2025.zetaReflectionCoordinate_ge_half σ τ hσ hτ
+
+example {τ : ℝ} (hτ : 1 < τ) : 1 < τ/(τ-1) :=
+  @TaoTrudgianYang2025.zetaReflection_time_gt_one τ hτ
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    τ/(τ-1)-1 = 1/(τ-1) :=
+  @TaoTrudgianYang2025.zetaReflection_time_sub_one τ hτ
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    (τ/(τ-1))/(τ/(τ-1)-1) = τ :=
+  @TaoTrudgianYang2025.zetaReflection_time_involutive τ hτ
+
+example {τ : ℝ} (hτ : 1 < τ) (σ : ℝ) :
+    zetaReflectionCoordinate σ τ+(τ/(τ-1))/2-1 = σ/(τ-1) :=
+  @TaoTrudgianYang2025.zetaReflection_reverse_lower τ hτ σ
+
+example {τ : ℝ} (hτ : 1 < τ) (v : ℝ) :
+    v/(τ/(τ-1)-1) = (τ-1)*v :=
+  @TaoTrudgianYang2025.zetaReflection_reverse_frequency τ hτ v
+
+example {τ : ℝ} (hτ : 1 < τ) (v : ℝ) :
+    zetaReflectionCoordinate (v+1-τ/2) τ = v/(τ-1) :=
+  @TaoTrudgianYang2025.zetaReflection_inverse_coordinate τ hτ v
+
+example {σ τ : ℝ}
+    (hσ : τ/2 < σ) : zetaReflectionMassEnvelope σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaReflectionMassEnvelope_eq_bot_of_above_half_height σ τ hσ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hhigh : τ/2 < σ) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_eq_bot_of_above_half_height σ τ hσ hτ hhigh
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    ((τ-1 : ℝ) : EReal)*zetaReflectedAffineSupremum σ τ ≤
+      zetaLargeValueAffineSupremum σ τ :=
+  @TaoTrudgianYang2025.zeta_reflected_affine_supremum_le σ τ hσ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    zetaLargeValueAffineSupremum σ τ ≤
+      ((τ-1 : ℝ) : EReal)*zetaReflectedAffineSupremum σ τ :=
+  @TaoTrudgianYang2025.zeta_affine_supremum_le_reflected σ τ hσ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    zetaReflectedAffineSupremum σ τ =
+      ((1/(τ-1) : ℝ) : EReal)*zetaLargeValueAffineSupremum σ τ :=
+  @TaoTrudgianYang2025.zeta_reflection_affine_supremum_identity σ τ hσ hτ
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) :
+    (⨆ (s : ℝ) (_hs : s ∈ Icc σ 1),
+      zetaLargeValueExponent (1/2+(s-1/2)/(τ-1)) (τ/(τ-1))+
+        (((s-σ)/(τ-1) : ℝ) : EReal)) =
+      ((1/(τ-1) : ℝ) : EReal)*
+        (⨆ (s : ℝ) (_hs : s ∈ Icc σ 1),
+          zetaLargeValueExponent s τ+((s-σ : ℝ) : EReal)) :=
+  @TaoTrudgianYang2025.zetaLargeValueExponent_reflection_supremum σ τ hσ hτ
+
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    zetaReflectedAffineSupremum (1/2) τ =
+      ((1/(τ-1) : ℝ) : EReal)*zetaLargeValueAffineSupremum (1/2) τ :=
+  zeta_reflection_affine_supremum_identity (by norm_num) hτ
+
+example {τ : ℝ} (hτ : 1 < τ) :
+    zetaReflectedAffineSupremum 1 τ =
+      ((1/(τ-1) : ℝ) : EReal)*zetaLargeValueAffineSupremum 1 τ :=
+  zeta_reflection_affine_supremum_identity (by norm_num) hτ
+
+example {σ : ℝ} (hσ : 1/2 ≤ σ) :
+    zetaReflectedAffineSupremum σ 2 = zetaLargeValueAffineSupremum σ 2 := by
+  simpa only [show (1/(2-1) : ℝ) = 1 by norm_num, EReal.coe_one, one_mul] using
+    zeta_reflection_affine_supremum_identity hσ (by norm_num : (1 : ℝ) < 2)
+
+example {σ : ℝ} (hσ : 1/2 ≤ σ) :
+    zetaReflectedAffineSupremum σ (3/2) =
+      (2 : EReal)*zetaLargeValueAffineSupremum σ (3/2) := by
+  simpa only [show (1/((3/2)-1) : ℝ) = 2 by norm_num,
+    show ((2 : ℝ) : EReal) = 2 from rfl] using
+    zeta_reflection_affine_supremum_identity hσ (by norm_num : (1 : ℝ) < 3/2)
+
+example {σ τ : ℝ} (hσ : 1 < σ) : zetaLargeValueAffineSupremum σ τ = ⊥ := by
+  unfold zetaLargeValueAffineSupremum
+  apply le_antisymm _ bot_le
+  apply iSup_le
+  intro s
+  apply iSup_le
+  intro hs
+  exact (not_le_of_gt hσ (hs.1.trans hs.2)).elim
+
+example {σ τ : ℝ} (hσ : 1 < σ) : zetaReflectedAffineSupremum σ τ = ⊥ := by
+  unfold zetaReflectedAffineSupremum
+  apply le_antisymm _ bot_le
+  apply iSup_le
+  intro s
+  apply iSup_le
+  intro hs
+  exact (not_le_of_gt hσ (hs.1.trans hs.2)).elim
+
+example : zetaLargeValueExponent (7/8) (3/2) = ⊥ :=
+  zetaLargeValueExponent_eq_bot_of_above_half_height
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : zetaReflectionCoordinate (3/4) (3/2) = 1 := by
+  norm_num [zetaReflectionCoordinate]
+
+example : ((3/2 : ℝ)/((3/2)-1))/(((3/2)/((3/2)-1))-1) = 3/2 :=
+  zetaReflection_time_involutive (by norm_num)
+
+example (a : ℝ) :
+    (⨆ i : Empty, (i.elim : EReal))+(a : EReal) =
+      ⨆ i : Empty, (i.elim : EReal)+(a : EReal) :=
+  ereal_iSup_add_real _ a
+
+example (a : ℝ) :
+    (2 : EReal)*(⨆ i : Bool, if i then ⊤ else ⊥)+(a : EReal) =
+      ⨆ i : Bool, (2 : EReal)*(if i then ⊤ else ⊥)+(a : EReal) := by
+  exact ereal_pos_affine_iSup _ (by norm_num : (0 : ℝ) < 2) a
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ReflectionSupremumIdentityRegression
+
+
+section ExponentPairDensityBranchesRegression
+
+open Complex Filter MeasureTheory Set Topology
+open scoped Interval BigOperators Classical
+
+example (hW : ExponentPair (89/560) (369/560)) :
+    ExponentPair (3/40) (31/40) :=
+  @TaoTrudgianYang2025.ExponentPair.old_pair_of_watt hW
+
+example (hW : ExponentPair (89/560) (369/560)) :
+    IsZetaGrowthBound (7/10) (3/40) :=
+  @TaoTrudgianYang2025.ExponentPair.old_growth_bound_of_watt hW
+
+example (hW : ExponentPair (89/560) (369/560)) :
+    zetaGrowthExponent (7/10) ≤ ((3/40 : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.old_growth_exponent_of_watt hW
+
+example (hW : ExponentPair (89/560) (369/560)) {σ : ℝ}
+    (hσ : 7/10 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((3/(10*σ-7) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.heathBrown_density_of_watt hW σ hσ hσ1
+
+example (P : LargeValuePattern)
+    {t u : ℝ} (ht : t ∈ P.ordinates) (hu : u ∈ P.ordinates) :
+    |u-t| ≤ P.T :=
+  @TaoTrudgianYang2025.LargeValuePattern.ordinate_gap_le_height P t u ht hu
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ (P : LargeValuePattern) (t : ℝ), t ∈ P.ordinates →
+      (∑ u ∈ P.ordinates, ‖∑ n ∈ P.indices, dirichletPhase n (u-t)‖) ≤
+        2*P.N+C*(P.ordinates.card : ℝ)*(P.T/P.N)^(k+ε)*P.N^(l+ε)+
+          4*Real.pi*C*P.N*(harmonic (Nat.ceil P.T) : ℝ) :=
+  @TaoTrudgianYang2025.ExponentPair.sharp_gram_row_bound k l ε hpair hε
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ C : ℝ, 1 ≤ C ∧ ∀ P : LargeValuePattern,
+      4*C*P.N*(P.T/P.N)^(k+ε)*P.N^(l+ε) ≤ P.V^2 →
+      (P.ordinates.card : ℝ)*P.V^2 ≤
+        4*P.N*(2*P.N+4*Real.pi*C*P.N*(harmonic (Nat.ceil P.T) : ℝ)) :=
+  @TaoTrudgianYang2025.ExponentPair.sharp_gram_cardinality_bound k l ε hpair hε
+
+example {N T d : ℝ}
+    (hN : 2 ≤ N) (hlog : 1 ≤ Real.log N) (hd : 0 ≤ d)
+    (hT : 0 < T) (hupper : T ≤ N^d) :
+    (harmonic (Nat.ceil T) : ℝ) ≤ (d+2)*Real.log N :=
+  @TaoTrudgianYang2025.harmonic_ceil_le_log_of_power_window N T d hN hlog hd hT hupper
+
+example {C τ η : ℝ}
+    (hC : 1 ≤ C) (hτ : 0 ≤ τ) (hη : 0 < η) :
+    ∀ᶠ N : ℝ in atTop, ∀ T : ℝ, 0 < T → T ≤ N^(τ+1) →
+      4*N*(2*N+4*Real.pi*C*N*(harmonic (Nat.ceil T) : ℝ)) ≤ N^(2+η) :=
+  @TaoTrudgianYang2025.eventually_exponentPair_gram_diagonal C τ η hC hτ hη
+
+example {k l σ τ : ℝ}
+    (hpair : ExponentPair k l) (hτ : 0 ≤ τ)
+    (hgap : 1+l-k+k*τ < 2*σ) :
+    IsLargeValueBound σ τ (2-2*σ) :=
+  @TaoTrudgianYang2025.ExponentPair.local_largeValueBound k l σ τ hpair hτ hgap
+
+example {σ τ τ' B : ℝ}
+    (h : IsLargeValueBound σ τ B) :
+    IsLargeValueBound σ τ' (B+max 0 (τ'-τ)) :=
+  @TaoTrudgianYang2025.IsLargeValueBound.subdivision_max σ τ τ' B h
+
+example {k l σ c : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k) (hc : 0 < c)
+    (hscale : k*c = 2*σ-1-l+k) :
+    IsLargeValueBound σ c (2-2*σ) :=
+  @TaoTrudgianYang2025.ExponentPair.closed_local_largeValueBound k l σ c hpair hk hc hscale
+
+example {k l σ τ c : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k) (hc : 0 < c)
+    (hscale : k*c = 2*σ-1-l+k) :
+    IsLargeValueBound σ τ ((2-2*σ)+max 0 (τ-c)) :=
+  @TaoTrudgianYang2025.ExponentPair.largeValueBound_of_positive_cutoff k l σ τ c hpair hk hc hscale
+
+example {k l σ τ : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k) (hσ1 : σ ≤ 1) (hτ : 0 ≤ τ) :
+    IsLargeValueBound σ τ
+      ((2-2*σ)+max 0 (τ-(2*σ-1-l+k)/k)) :=
+  @TaoTrudgianYang2025.ExponentPair.largeValueBound k l σ τ hpair hk hσ1 hτ
+
+example {k l σ τ t : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k) (hσ : 1/2 ≤ σ)
+    (hτ : 1 ≤ τ) (ht : τ < t)
+    (hscale : k*t = 2*(1+k)*σ-1-l) :
+    zetaLargeValueExponent σ τ = ⊥ :=
+  @TaoTrudgianYang2025.ExponentPair.aProcess_zeta_cutoff k l σ τ t hpair hk hσ hτ ht hscale
+
+example {k l σ t : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k)
+    (hσ : 1/2 < σ) (hσ1 : σ < 1) (ht : 0 < t)
+    (hscale : k*t = 2*(1+k)*σ-1-l)
+    (hlong : 12*σ-8 ≤ t) :
+    zeroDensityExponent σ ≤ ((4/t : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_density_long_cutoff k l σ t hpair hk hσ hσ1 ht hscale hlong
+
+example {k l σ : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k)
+    (hσ : 1/2 < σ) (hσ1 : σ < 1)
+    (hd : 0 < 2*(1+k)*σ-1-l)
+    (hlong : 12*σ-8 ≤ (2*(1+k)*σ-1-l)/k) :
+    zeroDensityExponent σ ≤
+      ((4*k/(2*(1+k)*σ-1-l) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_density_long_branch k l σ hpair hk hσ hσ1 hd hlong
+
+example {l σ : ℝ}
+    (hpair : ExponentPair 0 l) (hσ : 1/2 < σ) (hσ1 : σ < 1)
+    (hline : (l+1)/2 < σ) :
+    zeroDensityExponent σ ≤ (0 : EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.zero_first_coordinate_density l σ hpair hσ hσ1 hline
+
+-- Strict and closed cutoffs, followed by the subdivided height range.
+example : IsLargeValueBound (3/4) (1/2) (1/2) := by
+  convert exponentPair_half_half.local_largeValueBound (σ := 3/4)
+    (by norm_num : (0 : ℝ) ≤ 1/2) (by norm_num : (1 : ℝ)+1/2-1/2+(1/2)*(1/2) < 2*(3/4))
+    using 1
+  all_goals norm_num
+
+example : IsLargeValueBound (3/4) 1 (1/2) := by
+  convert exponentPair_half_half.closed_local_largeValueBound (σ := 3/4)
+    (by norm_num) (by norm_num : (0 : ℝ) < 1) (by norm_num) using 1
+  all_goals norm_num
+
+example : IsLargeValueBound (3/4) 2 (3/2) := by
+  convert exponentPair_half_half.largeValueBound
+    (by norm_num) (by norm_num : (3/4 : ℝ) ≤ 1)
+    (by norm_num : (0 : ℝ) ≤ 2) using 1
+  all_goals norm_num
+
+-- The nonpositive-cutoff branch must remain valid.
+example : IsLargeValueBound (1/2) 0 1 := by
+  convert exponentPair_half_half.largeValueBound
+    (by norm_num) (by norm_num : (1/2 : ℝ) ≤ 1)
+    (by norm_num : (0 : ℝ) ≤ 0) using 1
+  all_goals norm_num
+
+example (h : ExponentPair 0 (1/2)) :
+    zeroDensityExponent (4/5) ≤ (0 : EReal) :=
+  h.zero_first_coordinate_density (by norm_num) (by norm_num) (by norm_num)
+
+example : zeroDensityExponent (19/20) ≤ ((8/7 : ℝ) : EReal) := by
+  have hp : ExponentPair (1/14) (11/14) := by
+    convert exponentPair_half_half.aProcess.aProcess using 1 <;> norm_num
+  convert hp.bourgain_density_long_branch (by norm_num)
+    (by norm_num : (1/2 : ℝ) < 19/20) (by norm_num)
+    (by norm_num) (by norm_num) using 1
+  all_goals norm_num
+
+-- Equality in the long-cutoff side condition is included.
+example : zeroDensityExponent (17/18) ≤ ((6/5 : ℝ) : EReal) := by
+  have hp : ExponentPair (1/14) (11/14) := by
+    convert exponentPair_half_half.aProcess.aProcess using 1 <;> norm_num
+  convert hp.bourgain_density_long_branch (by norm_num)
+    (by norm_num : (1/2 : ℝ) < 17/18) (by norm_num)
+    (by norm_num) (by norm_num) using 1
+  all_goals norm_num
+
+example (hW : ExponentPair (89/560) (369/560)) :
+    zeroDensityExponent (4/5) ≤ ((3 : ℝ) : EReal) := by
+  convert hW.heathBrown_density_of_watt
+    (by norm_num : (7/10 : ℝ) < 4/5) (by norm_num) using 1
+  all_goals norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end ExponentPairDensityBranchesRegression
+
+
+section AtkinsonExponentPairEntryRegression
+
+open Complex Filter MeasureTheory Set Topology Expdb RiemannZeta.GuthMaynard
+open scoped Interval BigOperators Classical ContDiff FourierTransform
+
+example {M t u : ℝ}
+    (hM : 0 < M) (hu : 0 < u) (htu : u < t) :
+    0 < atkinsonGapFrequency M t u :=
+  @TaoTrudgianYang2025.atkinsonGapFrequency_pos M t u hM hu htu
+
+example (r x : ℝ) :
+    atkinsonGapSlopeProfile 0 r x = 1/Real.sqrt x :=
+  @TaoTrudgianYang2025.atkinsonGapSlopeProfile_zero r x
+
+example {M T u x : ℝ}
+    (hM : 0 < M) (hT : 0 < T) (hu : 0 < u) (hx : 0 < x) :
+    atkinsonIndexRealSlope T (M*x) =
+      Real.sqrt (2*Real.pi*u/M)*
+        Real.sqrt (T/u+(Real.pi*M/(2*u))*x)/Real.sqrt x :=
+  @TaoTrudgianYang2025.atkinsonIndexRealSlope_scaled M T u x hM hT hu hx
+
+example {M t u x : ℝ}
+    (hM : 0 < M) (hu : 0 < u) (htu : u < t) (hx : 0 < x) :
+    HasDerivAt (atkinsonNormalizedGapPhase M t u)
+      (atkinsonGapSlopeProfile (Real.pi*M/(2*u)) (t/u) x) x :=
+  @TaoTrudgianYang2025.hasDerivAt_atkinsonNormalizedGapPhase M t u x hM hu htu hx
+
+example {q r x : ℝ} (hr : 0 < r) (hx : 0 < x)
+    (hqr : 0 < r+q*x) (hqx : 0 < 1+q*x) :
+    ContDiffAt ℝ ∞
+      (fun p : ℝ × ℝ × ℝ => atkinsonGapSlopeProfile p.1 p.2.1 p.2.2)
+      (q,r,x) :=
+  @TaoTrudgianYang2025.contDiffAt_atkinsonGapSlopeProfile q r x hr hx hqr hqx
+
+example (n : ℕ)
+    {q r x : ℝ} (hr : 0 < r) (hx : 0 < x)
+    (hqr : 0 < r+q*x) (hqx : 0 < 1+q*x) :
+    ContDiffAt ℝ ∞
+      (fun p : ℝ × ℝ × ℝ =>
+        iteratedDeriv n (atkinsonGapSlopeProfile p.1 p.2.1) p.2.2)
+      (q,r,x) :=
+  @TaoTrudgianYang2025.contDiffAt_atkinsonGapSlopeProfile_jet n q r x hr hx hqr hqx
+
+example (n : ℕ) (r x : ℝ) :
+    iteratedDeriv n (atkinsonGapSlopeProfile 0 r) x =
+      iteratedDeriv n (fun y : ℝ => 1/Real.sqrt y) x :=
+  @TaoTrudgianYang2025.atkinsonGapSlopeProfile_jet_zero n r x
+
+example (n : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∀ q r x : ℝ, |q| < δ →
+      r ∈ Icc (1 : ℝ) 2 → x ∈ Icc (1 : ℝ) 2 →
+      |iteratedDeriv n (atkinsonGapSlopeProfile q r) x-
+        iteratedDeriv n (fun y : ℝ => 1/Real.sqrt y) x| < ε :=
+  @TaoTrudgianYang2025.atkinsonGapSlopeProfile_uniform_jet n ε hε
+
+example (P : ℕ)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∀ n ≤ P, ∀ q r x : ℝ, |q| < δ →
+      r ∈ Icc (1 : ℝ) 2 → x ∈ Icc (1 : ℝ) 2 →
+      |iteratedDeriv n (atkinsonGapSlopeProfile q r) x-
+        iteratedDeriv n (fun y : ℝ => 1/Real.sqrt y) x| < ε :=
+  @TaoTrudgianYang2025.atkinsonGapSlopeProfile_uniform_finite_jets P ε hε
+
+example {M t u x : ℝ}
+    (hM : 0 < M) (hu : 0 < u) (htu : u < t) (hx : 0 < x) :
+    ContDiffAt ℝ ∞ (atkinsonNormalizedGapPhase M t u) x :=
+  @TaoTrudgianYang2025.contDiffAt_atkinsonNormalizedGapPhase M t u x hM hu htu hx
+
+example {x : ℝ} (hx : 0 < x) :
+    modelPhase (1/2) x = 1/Real.sqrt x :=
+  @TaoTrudgianYang2025.modelPhase_half_eq_inv_sqrt x hx
+
+example (P : ℕ) {ε : ℝ} (hε : 0 < ε) :
+    ∃ δ : ℝ, 0 < δ ∧ ∀ M t u : ℝ,
+      0 < M → 0 < u → u < t → t ≤ 2*u →
+      Real.pi*M/(2*u) < δ →
+      IsApproximateModelPhaseFunction (atkinsonNormalizedGapPhase M t u) (1/2) P ε :=
+  @TaoTrudgianYang2025.atkinsonNormalizedGapPhase_approximate P ε hε
+
+example {M t u : ℝ}
+    (hM : 0 < M) (hu : 0 < u) (htu : u < t) (n : ℕ) :
+    oscillatory (atkinsonNormalizedGapPhase M t u)
+      (atkinsonGapFrequency M t u/(2*Real.pi)) M n =
+      unitaryPhase (atkinsonSourcePhase t n-atkinsonSourcePhase u n) :=
+  @TaoTrudgianYang2025.atkinsonGap_oscillatory_identity M t u hM hu htu n
+
+example {M t u : ℝ}
+    (hM : 0 < M) (hu : 0 < u) (htu : u < t) (a b : ℕ) :
+    exponentialSumAt (atkinsonNormalizedGapPhase M t u)
+      (atkinsonGapFrequency M t u/(2*Real.pi)) M a b =
+      ∑ n ∈ Finset.Icc a b,
+        unitaryPhase (atkinsonSourcePhase t n-atkinsonSourcePhase u n) :=
+  @TaoTrudgianYang2025.atkinsonGap_exponentialSum_identity M t u hM hu htu a b
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (M t u : ℝ) (a b : ℕ), 1 ≤ M → 0 < u → u < t → t ≤ 2*u →
+        Real.pi*M/(2*u) < η → M ≤ (a : ℝ) → (b : ℝ) ≤ 2*M →
+        ‖∑ n ∈ Finset.Icc a b,
+          unitaryPhase (atkinsonSourcePhase t n-atkinsonSourcePhase u n)‖ ≤
+          C*((atkinsonGapFrequency M t u/(2*Real.pi*M))^(k+ε)*M^(l+ε)+
+            2*Real.pi*M/atkinsonGapFrequency M t u) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_gap_sum_bound k l ε hpair hε
+
+example {H M t u : ℝ}
+    (hH : 0 < H) (hM : 0 < M) (hu : H ≤ u) (hu2 : u ≤ 2*H)
+    (ht : u < t) (ht2 : t ≤ 2*u) :
+    Real.sqrt (H*M) ≤
+        M*Real.sqrt (2*Real.pi*u/M)*(Real.sqrt (t/u)+1) ∧
+      M*Real.sqrt (2*Real.pi*u/M)*(Real.sqrt (t/u)+1) ≤
+        12*Real.sqrt (H*M) :=
+  @TaoTrudgianYang2025.atkinsonGap_denominator_bounds H M t u hH hM hu hu2 ht ht2
+
+example {H M t u : ℝ}
+    (hH : 0 < H) (hM : 0 < M) (hu : H ≤ u) (hu2 : u ≤ 2*H)
+    (ht : u < t) (ht2 : t ≤ 2*u) :
+    atkinsonGapFrequency M t u/(2*Real.pi*M) ≤ (t-u)/Real.sqrt (H*M) ∧
+      2*Real.pi*M/atkinsonGapFrequency M t u ≤
+        12*Real.sqrt (H*M)/(t-u) :=
+  @TaoTrudgianYang2025.atkinsonGap_frequency_physical_bounds H M t u hH hM hu hu2 ht ht2
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H M t u : ℝ) (a b : ℕ), 0 < H → 1 ≤ M →
+        H ≤ u → u ≤ 2*H → u < t → t ≤ 2*H →
+        Real.pi*M/(2*H) < η → M ≤ (a : ℝ) → (b : ℝ) ≤ 2*M →
+        ‖∑ n ∈ Finset.Icc a b,
+          unitaryPhase (atkinsonSourcePhase t n-atkinsonSourcePhase u n)‖ ≤
+          C*(((t-u)/Real.sqrt (H*M))^(k+ε)*M^(l+ε)+
+            Real.sqrt (H*M)/(t-u)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_physical_gap_sum_bound k l ε hpair hε
+
+example (M j : ℕ) (t u : ℝ) :
+    atkinsonPrefixGram M (j+1) u t =
+      ∑ n ∈ Finset.Icc M (M+j),
+        unitaryPhase (atkinsonSourcePhase t n-atkinsonSourcePhase u n) :=
+  @TaoTrudgianYang2025.atkinsonPrefixGram_succ_eq_sum M j t u
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H t u : ℝ) (M : ℕ), 0 < H → 0 < M →
+        H ≤ t → t ≤ 2*H → H ≤ u → u ≤ 2*H → t ≠ u →
+        Real.pi*(M : ℝ)/(2*H) < η →
+        atkinsonPrefixGramMax M M t u ≤
+          C*((|t-u|/Real.sqrt (H*(M : ℝ)))^(k+ε)*(M : ℝ)^(l+ε)+
+            Real.sqrt (H*(M : ℝ))/|t-u|) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_prefixGramMax_bound k l ε hpair hε
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H G L t : ℝ) (M : ℕ) (W : Finset ℝ),
+        0 < H → 0 < G → 0 < M → RiemannZeta.GuthMaynard.IsSeparated G W → t ∈ W →
+        (∀ u ∈ W, H ≤ u ∧ u ≤ 2*H) →
+        (∀ u ∈ W, |u-t| ≤ L) → Real.pi*(M : ℝ)/(2*H) < η →
+        (∑ u ∈ W, atkinsonPrefixGramMax M M t u) ≤
+          (M : ℝ)+C*(W.card : ℝ)*
+            ((L/Real.sqrt (H*(M : ℝ)))^(k+ε)*(M : ℝ)^(l+ε))+
+          (2*C*Real.sqrt (H*(M : ℝ))/G)*(harmonic (Nat.ceil (L/G)) : ℝ) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_pair_gram_row k l ε hpair hε
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H G L : ℝ) (M : ℕ) (W : Finset ℝ),
+        0 < H → 0 < G → 0 < M → RiemannZeta.GuthMaynard.IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) → Real.pi*(M : ℝ)/(2*H) < η →
+        (∑ t ∈ W, ∑ u ∈ W, atkinsonPrefixGramMax M M t u) ≤
+          (W.card : ℝ)*(M : ℝ)+C*(W.card : ℝ)^2*
+            ((L/Real.sqrt (H*(M : ℝ)))^(k+ε)*(M : ℝ)^(l+ε))+
+          (2*C*Real.sqrt (H*(M : ℝ))/G)*(W.card : ℝ)*
+            (harmonic (Nat.ceil (L/G)) : ℝ) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_pair_gram_double_sum k l ε hpair hε
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H G L : ℝ) (M : ℕ) (W : Finset ℝ),
+        0 < H → 0 < G → 0 < M → RiemannZeta.GuthMaynard.IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) → Real.pi*(M : ℝ)/(2*H) < η →
+        (∑ t ∈ W, atkinsonPhaseBlockMax t M M)^2 ≤
+          atkinsonBlockCoefficientEnergy M M*
+            ((W.card : ℝ)*(M : ℝ)+C*(W.card : ℝ)^2*
+              ((L/Real.sqrt (H*(M : ℝ)))^(k+ε)*(M : ℝ)^(l+ε))+
+            (2*C*Real.sqrt (H*(M : ℝ))/G)*(W.card : ℝ)*
+              (harmonic (Nat.ceil (L/G)) : ℝ)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_phase_packet_pair_bound k l ε hpair hε
+
+example :
+    ExponentPair (2/9) (11/18) :=
+  @TaoTrudgianYang2025.exponentPair_two_ninths_eleven_eighteenths
+
+example :
+    (((2/9 : ℝ)+(11/18))/(2/9) = 15/4) ∧
+    (2*(1+2*(2/9 : ℝ)+2*(11/18))/(2/9) = 24) ∧
+    ((11/18 : ℝ)/(2+4*(11/18)-2*(2/9)) = 11/72) :=
+  @TaoTrudgianYang2025.ivic_sixth_pair_counting_coordinates
+
+
+-- The zero-parameter model includes equal heights and both index endpoints.
+example : atkinsonGapSlopeProfile 0 1 1 = 1 := by
+  rw [atkinsonGapSlopeProfile_zero]; norm_num
+
+example : atkinsonGapSlopeProfile 0 2 2 = 1/Real.sqrt 2 :=
+  atkinsonGapSlopeProfile_zero 2 2
+
+example (n : ℕ) :
+    iteratedDeriv n (atkinsonGapSlopeProfile 0 1) 2 =
+      iteratedDeriv n (fun y : ℝ => 1/Real.sqrt y) 2 :=
+  atkinsonGapSlopeProfile_jet_zero n 1 2
+
+example : ContDiffAt ℝ ∞
+    (fun p : ℝ × ℝ × ℝ => atkinsonGapSlopeProfile p.1 p.2.1 p.2.2) (0,1,1) :=
+  contDiffAt_atkinsonGapSlopeProfile (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : HasDerivAt (atkinsonNormalizedGapPhase 2 8 4)
+    (atkinsonGapSlopeProfile (Real.pi*2/(2*4)) (8/4) 1) 1 :=
+  hasDerivAt_atkinsonNormalizedGapPhase (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example : HasDerivAt (atkinsonNormalizedGapPhase 2 8 4)
+    (atkinsonGapSlopeProfile (Real.pi*2/(2*4)) (8/4) 2) 2 :=
+  hasDerivAt_atkinsonNormalizedGapPhase (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num)
+
+example (M : ℕ) (t u : ℝ) : atkinsonPrefixGram M 0 t u = 0 := by
+  simp [atkinsonPrefixGram]
+
+example (M : ℕ) (t u : ℝ) :
+    atkinsonPrefixGram M 1 u t =
+      unitaryPhase (atkinsonSourcePhase t M-atkinsonSourcePhase u M) := by
+  simpa using atkinsonPrefixGram_succ_eq_sum M 0 t u
+
+example (M : ℕ) (t u : ℝ) :
+    atkinsonPrefixGramMax M M u t = atkinsonPrefixGramMax M M t u :=
+  atkinsonPrefixGramMax_swap M M t u
+
+example (M : ℕ) (t : ℝ) : atkinsonPrefixGramMax M M t t = (M : ℝ) :=
+  atkinsonPrefixGramMax_self M M t
+
+example (M : ℕ) :
+    (∑ t ∈ (∅ : Finset ℝ), ∑ u ∈ (∅ : Finset ℝ),
+      atkinsonPrefixGramMax M M t u) = 0 := by simp
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end AtkinsonExponentPairEntryRegression
+
+
+section AtkinsonPairPacketsCountingRegression
+
+open Complex Filter MeasureTheory Set Topology RiemannZeta.GuthMaynard
+open scoped Interval BigOperators Classical
+
+example {H M L k l ε : ℝ}
+    (hH : 1 ≤ H) (hM : 1 ≤ M) (hMH : M ≤ H)
+    (hL : 0 < L) (hLH : L ≤ H) (hε : 0 ≤ ε) :
+    (L/Real.sqrt (H*M))^(k+ε)*M^(l+ε) ≤
+      H^(2*ε)*((L/Real.sqrt (H*M))^k*M^l) :=
+  @TaoTrudgianYang2025.atkinson_pair_epsilon_loss H M L k l ε hH hM hMH hL hLH hε
+
+example {H M : ℝ}
+    (hH : 0 < H) (hM : 0 < M) {L : ℝ} (hL : 0 ≤ L) (k l : ℝ) :
+    M^(1/2:ℝ)*((L/Real.sqrt (H*M))^k*M^l) =
+      L^k*H^(-k/2)*M^(l+1/2-k/2) :=
+  @TaoTrudgianYang2025.atkinson_weighted_pair_power H M hH hM L hL k l
+
+example {H : ℝ} {M : ℕ}
+    (hH : 0 < H) (hM : 0 < M) {L : ℝ} (hL : 0 ≤ L)
+    (C k l G : ℝ) (R : ℕ) :
+    (M : ℝ)^(1/2:ℝ)*
+      ((R : ℝ)*(M : ℝ)+C*(R : ℝ)^2*
+        ((L/Real.sqrt (H*(M : ℝ)))^k*(M : ℝ)^l)+
+        (2*C*Real.sqrt (H*(M : ℝ))/G)*(R : ℝ)*
+          (harmonic (Nat.ceil (L/G)) : ℝ)) =
+      atkinsonPairPowerTerm C k l H G L M R :=
+  @TaoTrudgianYang2025.atkinson_pair_power_term_eq H M hH hM L hL C k l G R
+
+example {C H G L : ℝ}
+    (hC : 0 ≤ C) (hH : 0 ≤ H) (hG : 0 ≤ G) (hL : 0 ≤ L)
+    (k l : ℝ) (N R : ℕ) :
+    0 ≤ atkinsonPairPowerTerm C k l H G L N R :=
+  @TaoTrudgianYang2025.atkinsonPairPowerTerm_nonneg C H G L hC hH hG hL k l N R
+
+example {C H G L k l : ℝ} {M N : ℕ}
+    (R : ℕ) (hC : 0 ≤ C) (hH : 0 ≤ H) (hG : 0 ≤ G) (hL : 0 ≤ L)
+    (hp : 0 ≤ l+1/2-k/2) (hMN : M ≤ N) :
+    atkinsonPairPowerTerm C k l H G L M R ≤
+      atkinsonPairPowerTerm C k l H G L N R :=
+  @TaoTrudgianYang2025.atkinsonPairPowerTerm_mono_index C H G L k l M N R hC hH hG hL hp hMN
+
+example (C k l H G L : ℝ) (N : ℕ) :
+    atkinsonPairPowerBudget C k l H G L N 0 = 0 :=
+  @TaoTrudgianYang2025.atkinsonPairPowerBudget_zero_card C k l H G L N
+
+example {H G ℓ L : ℝ}
+    (hH : 0 < H) (hG : 0 < G) (hℓ : 0 < ℓ) (k l : ℝ) :
+    (L^k*H^(-k/2))*
+      (G^2*H^(-(1/2:ℝ))*(74*H*ℓ^2/G^2)^(l+1/2-k/2)) =
+      (74:ℝ)^(l+1/2-k/2)*ℓ^(2*l+1-k)*
+        (L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.atkinsonPhysical_pair_scale_identity H G ℓ L hH hG hℓ k l
+
+example {H G ℓ L k l : ℝ}
+    (hH : 0 < H) (hG : 0 < G) (hℓ : 1 ≤ ℓ) (hL : 0 ≤ L)
+    (hpair : InExponentPairTriangle k l) :
+    (L^k*H^(-k/2))*
+      (G^2*H^(-(1/2:ℝ))*(74*H*ℓ^2/G^2)^(l+1/2-k/2)) ≤
+      5476*ℓ^3*(L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.atkinsonPhysical_pair_scale_le H G ℓ L k l hH hG hℓ hL hpair
+
+example {H G L : ℝ}
+    (hH : 1 ≤ H) (hG : 1 ≤ G) (hLH : L ≤ H)
+    (hlog : 1 ≤ Real.log (2*H)) :
+    (harmonic (Nat.ceil (L/G)) : ℝ) ≤ 2*Real.log (2*H) :=
+  @TaoTrudgianYang2025.atkinson_pair_harmonic_le_height_log H G L hH hG hLH hlog
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧
+      ∀ (H G L : ℝ) (M : ℕ) (W : Finset ℝ),
+        1 ≤ H → 0 < G → 0 < L → L ≤ H → 0 < M → (M : ℝ) ≤ H →
+        IsSeparated G W → (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) → Real.pi*(M : ℝ)/(2*H) < η →
+        (M : ℝ)^(1/2:ℝ)*
+          (∑ t ∈ W, ∑ u ∈ W, atkinsonPrefixGramMax M M t u) ≤
+          H^(2*ε)*atkinsonPairPowerTerm C k l H G L M W.card :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_pair_nominal_gram k l ε hpair hε
+
+example {k l ε : ℝ}
+    (hpair : ExponentPair k l) (hε : 0 < ε) :
+    ∃ η : ℝ, 0 < η ∧ ∃ C : ℝ, 1 ≤ C ∧ ∃ D : ℝ, 0 < D ∧
+      ∀ (H G L : ℝ) (N : ℕ) (W : Finset ℝ),
+        1 ≤ H → 0 < G → 0 < L → L ≤ H → (N : ℝ) ≤ H →
+        IsSeparated G W → (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) → Real.pi*(N : ℝ)/(2*H) < η →
+        atkinsonDyadicGramBudget N W ≤
+          D*H^(3*ε)*atkinsonPairPowerBudget C k l H G L N W.card :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_dyadic_gram_le_pair_budget k l ε hpair hε
+
+example {C H G L k l : ℝ} {N : ℕ} (R : ℕ)
+    (hC : 1 ≤ C) (hH : 1 ≤ H) (hG : 1 ≤ G)
+    (hL : 0 ≤ L) (hLH : L ≤ H) (hlog : 1 ≤ Real.log (2*H))
+    (hpair : InExponentPairTriangle k l)
+    (hcut : (N : ℝ) ≤ 74*H*(Real.log (2*H))^2/G^2) :
+    G^2*H^(-(1/2:ℝ))*atkinsonPairPowerTerm C k l H G L N R ≤
+      10000*C*(Real.log (2*H))^3*
+        ((R : ℝ)*H/G+(R : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.atkinsonPairPowerTerm_physical_le C H G L k l N R hC hH hG hL hLH hlog hpair hcut
+
+example {C H G L k l : ℝ} {N : ℕ} (R : ℕ)
+    (hC : 1 ≤ C) (hH : 1 ≤ H) (hG : 1 ≤ G)
+    (hL : 0 ≤ L) (hLH : L ≤ H) (hlog : 1 ≤ Real.log (2*H))
+    (hpair : InExponentPairTriangle k l) (hN : (N : ℝ) ≤ H)
+    (hcut : (N : ℝ) ≤ 74*H*(Real.log (2*H))^2/G^2) :
+    G^2*H^(-(1/2:ℝ))*atkinsonPairPowerBudget C k l H G L N R ≤
+      (10000*C*(1/Real.log 2+1)^2)*(Real.log (2*H))^5*
+        ((R : ℝ)*H/G+(R : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.atkinsonPairPowerBudget_physical_log_le C H G L k l N R hC hH hG hL hLH hlog hpair hN hcut
+
+example {δ η : ℝ}
+    (hδ : 0 < δ) (hη : 0 < η) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H G : ℝ, H₀ ≤ H →
+      H^δ ≤ G → G ≤ Real.sqrt (2*H) →
+      1 ≤ Real.log (2*H) ∧
+      (atkinsonSourceCutoff (2*H) G (Real.log (2*H)) : ℝ) ≤ H ∧
+      Real.pi*(atkinsonSourceCutoff (2*H) G (Real.log (2*H)) : ℝ)/(2*H) < η :=
+  @TaoTrudgianYang2025.exists_atkinsonPhysicalCutoff_pair_geometry δ η hδ hη
+
+example {k l δ ν : ℝ}
+    (hpair : ExponentPair k l) (hδ : 0 < δ) (hν : 0 < ν) :
+    ∃ F : ℝ, 0 < F ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G L : ℝ) (W : Finset ℝ), H₀ ≤ H →
+        H^δ ≤ G → G ≤ Real.sqrt (2*H) → 0 < L → L ≤ H →
+        RiemannZeta.GuthMaynard.IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) →
+        G^2*H^(-(1/2:ℝ))*
+          atkinsonDyadicGramBudget (atkinsonSourceCutoff (2*H) G (Real.log (2*H))) W ≤
+          F*H^ν*((W.card : ℝ)*H/G+
+            (W.card : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_physical_gram_budget k l δ ν hpair hδ hν
+
+example {k l δ ν : ℝ}
+    (hpair : ExponentPair k l) (hδ : 0 < δ) (hν : 0 < ν) :
+    ∃ F : ℝ, 0 < F ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G L : ℝ) (W : Finset ℝ), H₀ ≤ H →
+        H^δ ≤ G → G ≤ Real.sqrt (2*H) → 0 < L →
+        IsSeparated G W → (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) →
+        G^2*H^(-(1/2:ℝ))*
+          atkinsonDyadicGramBudget (atkinsonSourceCutoff (2*H) G (Real.log (2*H))) W ≤
+          F*H^ν*((W.card : ℝ)*H/G+
+            (W.card : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_physical_gram_budget_all_lengths k l δ ν hpair hδ hν
+
+example {k l δ ν : ℝ}
+    (hpair : ExponentPair k l) (hδ : 0 < δ) (hν : 0 < ν) :
+    ∃ D : ℝ, 0 < D ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G L : ℝ) (W : Finset ℝ), H₀ ≤ H → 0 < G → 0 < L →
+        IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H ∧ t^δ ≤ G ∧ G ≤ t^(1/2-δ)) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) →
+        (∑ t ∈ W, ‖atkinsonStationaryLeadingSum t G (Real.log t)‖)^2 ≤
+          D*H^ν*((W.card : ℝ)*H/G+
+            (W.card : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_stationary_pair_packet k l δ ν hpair hδ hν
+
+example {k l δ ε ν : ℝ}
+    (hpair : ExponentPair k l) (hδ : 0 < δ) (hε : 0 < ε) (hν : 0 < ν) :
+    ∃ C : ℝ, 0 < C ∧ ∃ D : ℝ, 0 < D ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G L : ℝ) (W : Finset ℝ), H₀ ≤ H → 0 < G → 0 < L →
+        IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H ∧ t^δ ≤ G ∧ G ≤ t^(1/2-δ) ∧ t^(1/4 : ℝ) ≤ G) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) →
+        (∑ t ∈ W, atkinsonLocalMeanExcess G t (C*(G*Real.log t+t^(1/4+ε))))^2 ≤
+          D*H^ν*((W.card : ℝ)*H/G+
+            (W.card : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_localMean_pair_packet k l δ ε ν hpair hδ hε hν
+
+example {k l δ κ ν : ℝ}
+    (hpair : ExponentPair k l) (hδ : 0 < δ) (hκ : 0 < κ) (hν : 0 < ν) :
+    ∃ C : ℝ, 0 < C ∧ ∃ D : ℝ, 0 < D ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G L : ℝ) (W : Finset ℝ), H₀ ≤ H → 0 < G → 0 < L →
+        IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H ∧ t^δ ≤ G ∧ G ≤ t^(1/2-δ) ∧ t^(1/4+κ) ≤ G) →
+        (∀ t ∈ W, ∀ u ∈ W, |u-t| ≤ L) →
+        (∑ t ∈ W, atkinsonLocalMeanExcess G t (C*G*Real.log t))^2 ≤
+          D*H^ν*((W.card : ℝ)*H/G+
+            (W.card : ℝ)^2*L^k*H^(l-k)*G^(1+k-2*l)) :=
+  @TaoTrudgianYang2025.ExponentPair.atkinson_localMean_pair_packet_above_fourthRoot k l δ κ ν hpair hδ hκ hν
+
+example {A H Y : ℝ}
+    (hA : 0 < A) (hH : 0 < H) (hY : 0 < Y) :
+    0 < ivicSixthAbsorptionLength A H Y :=
+  @TaoTrudgianYang2025.ivicSixthAbsorptionLength_pos A H Y hA hH hY
+
+example {A H Y : ℝ}
+    (hA : 0 < A) (hH : 0 < H) :
+    2*A*(ivicSixthAbsorptionLength A H Y)^(2/9:ℝ)*H^(7/18:ℝ) ≤ Y^2 :=
+  @TaoTrudgianYang2025.ivicSixthAbsorptionLength_absorbs A H Y hA hH
+
+example {A H Y : ℝ}
+    (hA : 0 < A) (hH : 0 < H) (hY : 0 < Y) :
+    ivicSixthAbsorptionLength A H Y =
+      Y^9/(512*A^(9/2:ℝ)*H^(7/4:ℝ)) :=
+  @TaoTrudgianYang2025.ivicSixthAbsorptionLength_eq A H Y hA hH hY
+
+example {A H G Q Y : ℝ}
+    {W : Finset ℝ} {f : ℝ → ℝ}
+    (hA : 0 < A) (hH : 0 ≤ H) (hG : 0 < G) (hY : 0 < Y)
+    (hlarge : ∀ t ∈ W, Y ≤ f t)
+    (hpacket : (∑ t ∈ W, f t)^2 ≤
+      A*((W.card : ℝ)*H/G+(W.card : ℝ)^2*Q))
+    (habsorb : 2*A*Q ≤ Y^2) :
+    (W.card : ℝ) ≤ 2*A*H/(G*Y^2) :=
+  @TaoTrudgianYang2025.atkinson_card_le_of_quadratic_packet A H G Q Y W f hA hH hG hY hlarge hpacket habsorb
+
+example {A H G Y : ℝ}
+    (hA : 0 < A) (hH : 0 < H) (hG : 0 < G) (hY : 0 < Y) :
+    ((Nat.floor (H/ivicSixthAbsorptionLength A H Y)+1:ℕ):ℝ)*
+      (2*A*H/(G*Y^2)) ≤
+      2*A*H/(G*Y^2)+1024*A^(11/2:ℝ)*H^(15/4:ℝ)/(G*Y^11) :=
+  @TaoTrudgianYang2025.ivicSixth_covered_card_budget A H G Y hA hH hG hY
+
+example {A H G Y : ℝ}
+    {W : Finset ℝ} {f : ℝ → ℝ}
+    (hA : 0 < A) (hH : 0 < H) (hG : 0 < G) (hY : 0 < Y)
+    (hrange : ∀ t ∈ W, H ≤ t ∧ t ≤ 2*H)
+    (hlarge : ∀ t ∈ W, Y ≤ f t)
+    (hpacket : ∀ U : Finset ℝ, U ⊆ W →
+      ∀ B : ℝ, (∀ t ∈ U, B ≤ t ∧ t ≤ B+ivicSixthAbsorptionLength A H Y) →
+        (∑ t ∈ U, f t)^2 ≤
+          A*((U.card : ℝ)*H/G+(U.card : ℝ)^2*
+            ((ivicSixthAbsorptionLength A H Y)^(2/9:ℝ)*H^(7/18:ℝ)))) :
+    (W.card : ℝ) ≤
+      2*A*H/(G*Y^2)+1024*A^(11/2:ℝ)*H^(15/4:ℝ)/(G*Y^11) :=
+  @TaoTrudgianYang2025.ivicSixth_card_le_of_local_packets A H G Y W f hA hH hG hY hrange hlarge hpacket
+
+example {D H G Y ν : ℝ}
+    (hD : 0 ≤ D) (hH : 1 ≤ H) (hG : 0 < G) (hY : 0 < Y) (hν : 0 ≤ ν) :
+    2*(D*H^(2*ν/11))*H/(G*Y^2)+
+        1024*(D*H^(2*ν/11))^(11/2:ℝ)*H^(15/4:ℝ)/(G*Y^11) ≤
+      (2*D+1024*D^(11/2:ℝ))*H^ν*
+        (H/(G*Y^2)+H^(15/4:ℝ)/(G*Y^11)) :=
+  @TaoTrudgianYang2025.ivicSixth_count_exponent_budget D H G Y ν hD hH hG hY hν
+
+example {δ κ ν : ℝ}
+    (hδ : 0 < δ) (hκ : 0 < κ) (hν : 0 < ν) :
+    ∃ C : ℝ, 0 < C ∧ ∃ D : ℝ, 0 < D ∧ ∃ H₀ : ℝ, 40000 ≤ H₀ ∧
+      ∀ (H G Y : ℝ) (W : Finset ℝ), H₀ ≤ H → 0 < G → 0 < Y →
+        IsSeparated G W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H ∧ t^δ ≤ G ∧
+          G ≤ t^(1/2-δ) ∧ t^(1/4+κ) ≤ G) →
+        (∀ t ∈ W, Y ≤ atkinsonLocalMeanExcess G t (C*G*Real.log t)) →
+        (W.card : ℝ) ≤ D*H^ν*
+          (H/(G*Y^2)+H^(15/4:ℝ)/(G*Y^11)) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_localMeanExcess_card_le δ κ ν hδ hκ hν
+
+
+example (C k l H G L : ℝ) (N : ℕ) :
+    atkinsonPairPowerBudget C k l H G L N 0 = 0 :=
+  atkinsonPairPowerBudget_zero_card C k l H G L N
+
+example (C k l H G L : ℝ) (R : ℕ) :
+    atkinsonPairPowerBudget C k l H G L 0 R = 0 := by
+  simp [atkinsonPairPowerBudget]
+
+example (C k l H G L : ℝ) (N : ℕ) :
+    atkinsonPairPowerTerm C k l H G L N 0 = 0 := by
+  simp [atkinsonPairPowerTerm]
+
+example (N : ℕ) : atkinsonDyadicGramBudget N ∅ = 0 := by
+  simp [atkinsonDyadicGramBudget]
+
+example (A H : ℝ) : ivicSixthAbsorptionLength A H 0 = 0 := by
+  norm_num [ivicSixthAbsorptionLength]
+
+example : ivicSixthAbsorptionLength 1 1 2 = 1 := by
+  norm_num [ivicSixthAbsorptionLength]
+
+example : 0 < ivicSixthAbsorptionLength 2 4 3 :=
+  ivicSixthAbsorptionLength_pos (by norm_num) (by norm_num) (by norm_num)
+
+example : 2*ivicSixthAbsorptionLength 1 1 2^(2/9:ℝ) ≤ 4 := by
+  simpa only [mul_one,Real.one_rpow,show (2:ℝ)^2 = 4 by norm_num]
+    using ivicSixthAbsorptionLength_absorbs (Y := 2)
+    (by norm_num : (0:ℝ) < 1) (by norm_num : (0:ℝ) < 1)
+
+example : atkinsonHeightBin 1 1 2 = 1 := by
+  norm_num [atkinsonHeightBin]
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end AtkinsonPairPacketsCountingRegression
+
+
+section RestrictedSixthMomentRegression
+
+open Complex Filter MeasureTheory Set Topology RiemannZeta.GuthMaynard
+open scoped Interval BigOperators Classical ENNReal
+
+example {δ κ ν : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) (hν : 0 < ν) :
+    ∃ P C D H₀ : ℝ, 0 < P ∧ 0 < C ∧ 0 < D ∧ 40000 ≤ H₀ ∧
+      ∀ (H G V : ℝ) (W : Finset ℝ) (m : ℕ),
+        H₀ ≤ H → 0 < G → G ≤ H → 0 < V →
+        2*(Real.log (3*H))^2 ≤ G →
+        (∀ t : ℝ, H ≤ t → t ≤ 2*H →
+          t^δ ≤ G ∧ G ≤ t^(1/2-δ) ∧ t^(1/4+κ) ≤ G) →
+        2*P*Real.log (3*H) ≤ V^2 →
+        C*G*Real.log (3*H) ≤ V^2/(16*P*Real.log (3*H)) →
+        IsSeparated 1 W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) → 0 < m →
+        ((pointClusterSuperlevel H G W m).card:ℝ) ≤
+          2*D*H^ν*
+            (H/(G*((m:ℝ)*(V^2/(16*P*Real.log (3*H))))^2) +
+              H^(15/4:ℝ)/(G*((m:ℝ)*(V^2/(16*P*Real.log (3*H))))^11)) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_pointCluster_superlevel_count δ κ ν hδ hκ hν
+
+example {H G A m : ℝ}
+    (hH : 0 ≤ H) (hG : 0 < G) (hA : 0 < A) (hm : 1 ≤ m) :
+    H/(G*(m*A)^2)+H^(15/4:ℝ)/(G*(m*A)^11) ≤
+      (H/(G*A^2)+H^(15/4:ℝ)/(G*A^11))/m^2 :=
+  @TaoTrudgianYang2025.ivicSixth_occupancy_inverse_power_budget H G A m hH hG hA hm
+
+example {δ κ ν : ℝ} (hδ : 0 < δ) (hκ : 0 < κ) (hν : 0 < ν) :
+    ∃ P C D H₀ : ℝ, 0 < P ∧ 0 < C ∧ 0 < D ∧ 40000 ≤ H₀ ∧
+      ∀ (H G V : ℝ) (W : Finset ℝ),
+        H₀ ≤ H → 0 < G → G ≤ H → 0 < V →
+        2*(Real.log (3*H))^2 ≤ G →
+        (∀ t : ℝ, H ≤ t → t ≤ 2*H →
+          t^δ ≤ G ∧ G ≤ t^(1/2-δ) ∧ t^(1/4+κ) ≤ G) →
+        2*P*Real.log (3*H) ≤ V^2 →
+        C*G*Real.log (3*H) ≤ V^2/(16*P*Real.log (3*H)) →
+        IsSeparated 1 W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) →
+        (W.card:ℝ) ≤ D*H^ν*
+          (H/(G*(V^2/(16*P*Real.log (3*H)))^2) +
+            H^(15/4:ℝ)/(G*(V^2/(16*P*Real.log (3*H)))^11)) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_pointValue_card_le_with_width δ κ ν hδ hκ hν
+
+example {P K L V H : ℝ}
+    (hP : 0 < P) (hL : 0 < L) (hV : 0 < V) :
+    H/((V^2/(K*L^2))*(V^2/(16*P*L))^2) +
+        H^(15/4:ℝ)/((V^2/(K*L^2))*(V^2/(16*P*L))^11) =
+      K*(16*P)^2*(H*L^4/V^6) + K*(16*P)^11*(H^(15/4:ℝ)*L^13/V^24) :=
+  @TaoTrudgianYang2025.ivicSixth_pointValueWidth_count_identity P K L V H hP hL hV
+
+example {δ κ ν : ℝ} (hδ : 0 < δ) (hδUpper : δ ≤ 1/4)
+    (hκ : 0 < κ) (hν : 0 < ν) :
+    ∃ K D H₀ : ℝ, 0 < K ∧ 0 < D ∧ 40000 ≤ H₀ ∧
+      ∀ (H V : ℝ) (W : Finset ℝ),
+        H₀ ≤ H → 0 < V →
+        K*(Real.log (3*H))^2*(2*H)^(1/4+κ) ≤ V^2 →
+        V^2 ≤ K*(Real.log (3*H))^2*H^(1/2-δ) →
+        IsSeparated 1 W →
+        (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+        (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) →
+        (W.card:ℝ) ≤ D*H^ν*
+          (H*(Real.log (3*H))^4/V^6 + H^(15/4:ℝ)*(Real.log (3*H))^13/V^24) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_pointValue_card_le_source_range δ κ ν hδ hδUpper hκ hν
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ (H V : ℝ) (W : Finset ℝ),
+      H₀ ≤ H → 0 < V → H^(1/8+ε) ≤ V →
+      IsSeparated 1 W →
+      (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+      (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) →
+      (W.card : ℝ) ≤ H^ε*(H/V^6+H^(15/4:ℝ)/V^24) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_pointValue_card_le ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ (H V : ℝ) (W : Finset ℝ),
+      H₀ ≤ H → 0 < V → H^(11/72+ε) ≤ V →
+      IsSeparated 1 W →
+      (∀ t ∈ W, H ≤ t ∧ t ≤ 2*H) →
+      (∀ t ∈ W, V ≤ zetaMomentCriticalNorm t) →
+      (W.card : ℝ)*V^6 ≤ H^(1+ε) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_weighted_card_le ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H V : ℝ,
+      H₀ ≤ H → 0 < V → H^(11/72+ε) ≤ V →
+      volume (pointValueSuperlevel H V) ≤ ENNReal.ofReal (2*H^(1+ε)/V^6) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_volume_superlevel_le ε hε
+
+example (H V : ℝ) :
+    IntegrableOn (fun t => zetaMomentCriticalNorm t^6) (pointValueSuperlevel H V) :=
+  @TaoTrudgianYang2025.integrableOn_ivicSixth_pointValueSuperlevel H V
+
+example {H V s C : ℝ}
+    (hV : 0 < V) (hs : 0 < s) (hC : 0 ≤ C)
+    (hcount : ∀ U : ℝ, V ≤ U →
+      volume (pointValueSuperlevel H U) ≤ ENNReal.ofReal (C/U^6)) :
+    (volume.restrict (pointValueSuperlevel H V)).real
+      {t | s ≤ zetaMomentCriticalNorm t^6} ≤ C/max (V^6) s :=
+  @TaoTrudgianYang2025.ivicSixth_power_tail_measure_le H V s C hV hs hC hcount
+
+example {H V M C : ℝ}
+    (hV : 0 < V) (hVM : V^6 ≤ M) (hC : 0 ≤ C)
+    (hGrowth : ∀ t ∈ pointValueSuperlevel H V, zetaMomentCriticalNorm t^6 ≤ M)
+    (hcount : ∀ U : ℝ, V ≤ U →
+      volume (pointValueSuperlevel H U) ≤ ENNReal.ofReal (C/U^6)) :
+    (∫ t in pointValueSuperlevel H V, zetaMomentCriticalNorm t^6) ≤
+      C*(1+Real.log (M/V^6)) :=
+  @TaoTrudgianYang2025.ivicSixth_high_integral_le_log H V M C hV hVM hC hGrowth hcount
+
+example :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H t : ℝ,
+      H₀ ≤ H → H ≤ t → t ≤ 2*H →
+      zetaMomentCriticalNorm t^6 ≤ H^3 :=
+  @TaoTrudgianYang2025.exists_ivicSixth_power_le_height_cube
+
+example {η ε : ℝ} (hgap : η < ε) :
+    ∀ᶠ H : ℝ in atTop,
+      2*H^(1+η)*(1+3*Real.log H) ≤ H^(1+ε) :=
+  @TaoTrudgianYang2025.eventually_ivicSixth_high_log_budget η ε hgap
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H : ℝ, H₀ ≤ H →
+      (∫ t in pointValueSuperlevel H (H^(11/72+ε)),
+        zetaMomentCriticalNorm t^6) ≤ H^(1+ε) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_restricted_moment ε hε
+
+
+example : (1/8:ℝ) < 11/72 := by norm_num
+
+example : (15/4:ℝ)-18*(11/72) = 1 := by norm_num
+
+example {H G A : ℝ} (hH : 0 ≤ H) (hG : 0 < G) (hA : 0 < A) :
+    H/(G*(2*A)^2)+H^(15/4:ℝ)/(G*(2*A)^11) ≤
+      (H/(G*A^2)+H^(15/4:ℝ)/(G*A^11))/2^2 :=
+  ivicSixth_occupancy_inverse_power_budget hH hG hA (by norm_num)
+
+example : ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H : ℝ, H₀ ≤ H →
+    (∫ t in pointValueSuperlevel H (H^(11/72+(1/100:ℝ))),
+      zetaMomentCriticalNorm t^6) ≤ H^(1+(1/100:ℝ)) :=
+  exists_ivicSixth_restricted_moment (by norm_num)
+
+example (H V : ℝ) : MeasurableSet (pointValueSuperlevel H V) :=
+  measurableSet_pointValueSuperlevel H V
+
+example (H V : ℝ) :
+    IntegrableOn (fun t => zetaMomentCriticalNorm t^6) (pointValueSuperlevel H V) :=
+  integrableOn_ivicSixth_pointValueSuperlevel H V
+
+example : (∫ t in (∅ : Set ℝ), zetaMomentCriticalNorm t^6) = 0 := by simp
+
+example (V : ℝ) : ((∅ : Finset ℝ).card : ℝ)*V^6 = 0 := by simp
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RestrictedSixthMomentRegression
+
+
+section RestrictedSixthTransferRegression
+
+open Complex Filter MeasureTheory Set Topology RiemannZeta.GuthMaynard
+open scoped Interval BigOperators Classical ENNReal
+
+example (U : ℝ) : Continuous (ivicSixthExcess U) :=
+  @TaoTrudgianYang2025.continuous_ivicSixthExcess U
+
+example (U u : ℝ) : 0 ≤ ivicSixthExcess U u :=
+  @TaoTrudgianYang2025.ivicSixthExcess_nonneg U u
+
+example {U u : ℝ} (h : zetaMomentCriticalNorm u ≤ U) :
+    ivicSixthExcess U u = 0 :=
+  @TaoTrudgianYang2025.ivicSixthExcess_eq_zero U u h
+
+example {U : ℝ} (hU : 0 ≤ U) (u : ℝ) :
+    ivicSixthExcess U u ≤ zetaMomentCriticalNorm u :=
+  @TaoTrudgianYang2025.ivicSixthExcess_le_norm U hU u
+
+example (U u : ℝ) :
+    zetaMomentCriticalNorm u ≤ U+ivicSixthExcess U u :=
+  @TaoTrudgianYang2025.zetaMomentCriticalNorm_le_threshold_add_excess U u
+
+example {H U V : ℝ}
+    (hH : 0 ≤ H) (hV : 0 ≤ V) (hVU : V ≤ U) :
+    (∫ u in H..2*H, ivicSixthExcess U u^6) ≤
+      ∫ u in pointValueSuperlevel H V, zetaMomentCriticalNorm u^6 :=
+  @TaoTrudgianYang2025.ivicSixthExcess_dyadic_integral_le H U V hH hV hVU
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ H₀ : ℝ, 40000 ≤ H₀ ∧ ∀ H U : ℝ, H₀ ≤ H →
+      H^(11/72+ε) ≤ U →
+      (∫ u in H..2*H, ivicSixthExcess U u^6) ≤ H^(1+ε) :=
+  @TaoTrudgianYang2025.exists_ivicSixthExcess_dyadic_bound ε hε
+
+example (U : ℝ) {T : ℝ} (hT : 0 < T) :
+    (∫ u in T/2..3*T, ivicSixthExcess U u^6) ≤
+      (∫ u in T/2..T, ivicSixthExcess U u^6)+
+      (∫ u in T..2*T, ivicSixthExcess U u^6)+
+      (∫ u in 2*T..4*T, ivicSixthExcess U u^6) :=
+  @TaoTrudgianYang2025.ivicSixthExcess_source_le_three U T hT
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∃ T₀ : ℝ, 40000 ≤ T₀ ∧ ∀ T : ℝ, T₀ ≤ T →
+      (∫ u in T/2..3*T, ivicSixthExcess ((4*T)^(11/72+ε)) u^6) ≤ C*T^(1+ε) :=
+  @TaoTrudgianYang2025.exists_ivicSixthExcess_source_moment ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ T : ℝ in atTop,
+      zetaMomentLogLoss T^6*
+        (∫ u in T/2..3*T, ivicSixthExcess ((4*T)^(11/72+ε)) u^6) ≤ T^(1+3*ε) :=
+  @TaoTrudgianYang2025.eventually_ivicSixthExcess_source_log_moment ε hε
+
+example {T U t : ℝ}
+    (hT : 0 < T) (hU : 0 ≤ U) (ht : t ∈ Icc T (2*T)) :
+    zetaMomentConvolution T t ≤ U*zetaMomentLogLoss T+
+      ∫ u in T/2..3*T, zetaMomentKernel t u*ivicSixthExcess U u :=
+  @TaoTrudgianYang2025.ivicSixth_convolution_split T U t hT hU ht
+
+example (P : ZetaLargeValuePattern) {C U : ℝ} (hC : 0 < C) (hU : 0 ≤ U)
+    (hEntry : ∀ t ∈ P.ordinates,
+      P.V ≤ C*P.N^(1/2:ℝ)*zetaMomentConvolution P.T t)
+    (hsmall : 2*(C*P.N^(1/2:ℝ))*U*zetaMomentLogLoss P.T ≤ P.V) :
+    (P.ordinates.card : ℝ)*P.V^6 ≤
+      (2*C)^6*P.N^3*zetaMomentLogLoss P.T^6*
+        ∫ u in P.T/2..3*P.T, ivicSixthExcess U u^6 :=
+  @TaoTrudgianYang2025.ZetaLargeValuePattern.ivicSixth_truncated_cardinality P C U hC hU hEntry hsmall
+
+example {η : ℝ} (hη : 0 < η) :
+    ∀ᶠ T : ℝ in atTop,
+      (4*T)^(11/72+η)*zetaMomentLogLoss T ≤ T^(11/72+3*η) :=
+  @TaoTrudgianYang2025.eventually_ivicSixth_threshold_log η hη
+
+example {C η τ σ δ : ℝ}
+    (hC : 0 < C) (hη : 0 < η) (hheight : 1 ≤ τ-δ)
+    (hgap : 1/2+η+(τ+δ)*(11/72+3*η) ≤ σ-δ) :
+    ∃ N₀ : ℝ, 1 ≤ N₀ ∧ ∀ P : ZetaLargeValuePattern, N₀ ≤ P.N →
+      P.N^(τ-δ) ≤ P.T → P.T ≤ P.N^(τ+δ) → P.N^(σ-δ) ≤ P.V →
+      2*(C*P.N^(1/2:ℝ))*(4*P.T)^(11/72+η)*zetaMomentLogLoss P.T ≤ P.V :=
+  @TaoTrudgianYang2025.exists_ivicSixth_truncation_threshold C η τ σ δ hC hη hheight hgap
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ T₀ : ℝ, 1 ≤ T₀ ∧ ∀ P : ZetaLargeValuePattern, T₀ ≤ P.T →
+      ∀ C : ℝ, 0 < C →
+      (∀ t ∈ P.ordinates, P.V ≤ C*P.N^(1/2:ℝ)*zetaMomentConvolution P.T t) →
+      2*(C*P.N^(1/2:ℝ))*(4*P.T)^(11/72+η)*zetaMomentLogLoss P.T ≤ P.V →
+      (P.ordinates.card : ℝ)*P.V^6 ≤ (2*C)^6*P.N^3*P.T^(1+3*η) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_pattern_moment η hη
+
+example {σ τ ε : ℝ}
+    (hτ : 1 < τ) (hgap : (11/72)*τ < σ-1/2) (hε : 0 < ε) :
+    ∃ η δ : ℝ, 0 < η ∧ 0 < δ ∧ δ ≤ min (1/4) ((τ-1)/4) ∧
+      1/2+η+(τ+δ)*(11/72+3*η) ≤ σ-δ ∧
+      3+(τ+δ)*(1+3*η) ≤ (τ-6*(σ-1/2)+ε)+6*(σ-δ) :=
+  @TaoTrudgianYang2025.ivicSixth_largeValue_loss_parameters σ τ ε hτ hgap hε
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hgap : (11/72)*τ < σ-1/2) :
+    IsZetaLargeValueBound σ τ (τ-6*(σ-1/2)) :=
+  @TaoTrudgianYang2025.ivicSixth_zetaLargeValueBound σ τ hσ hτ hgap
+
+example {σ τ : ℝ}
+    (hσ : 1/2 ≤ σ) (hτ : 1 < τ) (hgap : (11/72)*τ < σ-1/2) :
+    zetaLargeValueExponent σ τ ≤ ((τ-6*(σ-1/2) : ℝ) : EReal) :=
+  @TaoTrudgianYang2025.ivicSixth_zetaLargeValueExponent_le σ τ hσ hτ hgap
+example (u : ℝ) : ivicSixthExcess (zetaMomentCriticalNorm u) u = 0 :=
+  ivicSixthExcess_eq_zero le_rfl
+
+example (u : ℝ) : ivicSixthExcess 0 u = zetaMomentCriticalNorm u := by
+  simp only [ivicSixthExcess,sub_zero,max_eq_right (show 0 ≤ zetaMomentCriticalNorm u from norm_nonneg _)]
+
+example : IsZetaLargeValueBound (9/10) (5/2) (1/10) := by
+  convert ivicSixth_zetaLargeValueBound
+    (σ := 9/10) (τ := 5/2) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+
+example : zetaLargeValueExponent (9/10) (5/2) ≤ ((1/10:ℝ):EReal) := by
+  convert ivicSixth_zetaLargeValueExponent_le
+    (σ := 9/10) (τ := 5/2) (by norm_num) (by norm_num) (by norm_num) using 1
+  norm_num
+
+example : ¬ (11/72:ℝ)*2 < 29/36-1/2 := by norm_num
+
+example : ¬ (1:ℝ) < 1 := by norm_num
+
+example : (3:ℝ)+(5/2)-6*(9/10) = 1/10 := by norm_num
+
+example (U : ℝ) : (∑ t ∈ (∅ : Finset ℝ), ivicSixthExcess U t^6) = 0 := by simp
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RestrictedSixthTransferRegression
+
+
+section BourgainPairDensityCompletionRegression
+
+open Complex Filter MeasureTheory Set Topology RiemannZeta.GuthMaynard
+open scoped Interval BigOperators Classical ENNReal
+
+example {U V : ℝ} (hUV : U ≤ V) (t : ℝ) :
+    ivicSixthExcess V t ≤ ivicSixthExcess U t :=
+  @TaoTrudgianYang2025.ivicSixthExcess_antitone_threshold U V hUV t
+
+example (U t : ℝ) :
+    ivicSixthExcess U (-t) = ivicSixthExcess U t :=
+  @TaoTrudgianYang2025.ivicSixthExcess_neg U t
+
+example {η : ℝ} (hη : 0 ≤ η) :
+    Continuous (ivicSixthMovingExcess η) :=
+  @TaoTrudgianYang2025.continuous_ivicSixthMovingExcess η hη
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ B : ℝ, 40000 ≤ B ∧ ∀ H : ℝ, B ≤ H →
+      (∫ t in H..2*H, ivicSixthMovingExcess η t^6) ≤ H^(1+η) :=
+  @TaoTrudgianYang2025.exists_ivicSixthMovingExcess_dyadic η hη
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ C B : ℝ, 0 < C ∧ 40000 ≤ B ∧ ∀ T U : ℝ, B ≤ T →
+      (2*T)^(11/72+η) ≤ U →
+      (∫ t in 0..T, ivicSixthExcess U t^6) ≤ C*T^(1+η) :=
+  @TaoTrudgianYang2025.exists_ivicSixthExcess_zero_moment η hη
+
+example {η : ℝ} (hη : 0 < η) :
+    ∃ C B : ℝ, 0 < C ∧ 40000 ≤ B ∧ ∀ T U : ℝ, B ≤ T →
+      (2*T)^(11/72+η) ≤ U →
+      (∫ t in -T..T, ivicSixthExcess U t^6) ≤ C*T^(1+η) :=
+  @TaoTrudgianYang2025.exists_ivicSixthExcess_symmetric_moment η hη
+
+example {k l σ t : ℝ}
+    (hk : 0 < k) (hkfifth : k < 1/5)
+    (hpairrange : 13 < 15*l+20*k)
+    (hscale : k*t = 2*(1+k)*σ-1-l)
+    (hshort : t ≤ 12*σ-8)
+    (hside : k < 11/85 ∨
+      (11/85 < k ∧ (144*k-11*l-11)/(170*k-22) < σ)) :
+    (11/72)*(3*t/4) < 2*σ-3/2 :=
+  @TaoTrudgianYang2025.bourgain_short_cutoff_threshold k l σ t hk hkfifth hpairrange hscale hshort hside
+
+example {σ t τ : ℝ}
+    (hσ : 3/4 ≤ σ) (hσ1 : σ ≤ 1) (ht : 0 < t)
+    (hshort : t ≤ 12*σ-8) (hτlo : t/2 ≤ τ) (hτhi : τ ≤ 3*t/4) :
+    max (2-2*σ) (τ+9-12*σ) ≤ (3-3*σ)*τ/(3*t/4) :=
+  @TaoTrudgianYang2025.bourgain_short_cutoff_affine_budget σ t τ hσ hσ1 ht hshort hτlo hτhi
+
+example {Q : ℕ} (hQ : 0 < Q) (t : ℝ) :
+    ivicSixthSmoothTrace Q t =
+      ∑' n : ℕ, ((zetaIntervalCutoff 1 2 ((n:ℝ)/Q) : ℝ):ℂ)^2*
+        dirichletPhase n t :=
+  @TaoTrudgianYang2025.ivicSixthSmoothTrace_eq_tsum Q hQ t
+
+example (P : LargeValuePattern) :
+    ((P.ordinates.card : ℝ)*P.V)^2 ≤
+      2*P.N*∑ t ∈ P.ordinates, ∑ u ∈ P.ordinates,
+        ‖ivicSixthSmoothTrace P.scale (u-t)‖ :=
+  @TaoTrudgianYang2025.LargeValuePattern.smooth_sixth_gram P
+
+example (P : LargeValuePattern)
+    (hne : P.ordinates.Nonempty) :
+    ∃ t ∈ P.ordinates, (P.ordinates.card : ℝ)*P.V^2 ≤
+      2*P.N*∑ u ∈ P.ordinates, ‖ivicSixthSmoothTrace P.scale (u-t)‖ :=
+  @TaoTrudgianYang2025.LargeValuePattern.exists_large_smooth_sixth_gram_row P hne
+
+example : ivicSixthTraceProfile 0 = 0 :=
+  @TaoTrudgianYang2025.ivicSixthTraceProfile_zero
+
+example (g : ℝ → ℂ)
+    {L x : ℝ} (hL : 0 < L) (hx : 0 < x) :
+    ((L^(1/2:ℝ):ℝ):ℂ)*
+      bourgainCriticalWeight (bourgainRealPowerWeight (1/2) g) L x = g (x/L) :=
+  @TaoTrudgianYang2025.bourgainCriticalWeight_half_normalization g L x hL hx
+
+example {Q : ℕ} (hQ : 0 < Q) (t : ℝ) :
+    ivicSixthSmoothTrace Q t =
+      ((Real.sqrt (Q:ℝ):ℝ):ℂ)*
+        ∑' n : ℕ, bourgainCriticalWeight
+          (bourgainRealPowerWeight (1/2) ivicSixthTraceProfile) Q n*dirichletPhase n t :=
+  @TaoTrudgianYang2025.ivicSixthSmoothTrace_critical_normalization Q hQ t
+
+example (q : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ Q : ℕ, 0 < Q → ∀ t H : ℝ, 0 ≤ H →
+      ‖ivicSixthSmoothTrace Q t‖ ≤ C*
+        ((Q:ℝ)/(1+|t|)^q+
+          Real.sqrt (Q:ℝ)*(∫ u in -H..H,zetaMomentCriticalNorm (u+t))+
+          Real.sqrt (Q:ℝ)*(1+|t|)/(1+H)^q) :=
+  @TaoTrudgianYang2025.ivicSixthSmoothTrace_localized q
+
+example (W : Finset ℝ) (hsep : IsOneSeparated W)
+    {H : ℝ} (hH : 0 ≤ H) (x : ℝ) :
+    ((W.filter fun u => x ∈ Ioc (u-H) (u+H)).card:ℝ) ≤ 2*H+1 :=
+  @TaoTrudgianYang2025.ivicSixth_real_window_count_le W hsep H hH x
+
+example (W : Finset ℝ) (hsep : IsOneSeparated W) (f : ℝ → ℝ) (hf : Continuous f) (hf0 : ∀ x, 0 ≤ f x)
+    (H a b : ℝ) (hH : 0 ≤ H) (hab : a ≤ b)
+    (hrange : ∀ ℓ ∈ W, a ≤ (ℓ : ℝ) ∧ (ℓ : ℝ) ≤ b) :
+    (∑ ℓ ∈ W, ∫ x in (ℓ : ℝ)-H..(ℓ : ℝ)+H, f x) ≤
+      (2*H+1) * ∫ x in a-H..b+H, f x :=
+  @TaoTrudgianYang2025.ivicSixth_sum_real_window_integral_le W hsep f hf hf0 H a b hH hab hrange
+
+example (W : Finset ℝ) (hsep : IsOneSeparated W)
+    (f : ℝ → ℝ) (hf : Continuous f) (hf0 : ∀ x, 0 ≤ f x)
+    {H a b : ℝ} (hH : 0 ≤ H) (hab : a ≤ b)
+    (hrange : ∀ u ∈ W, a ≤ u ∧ u ≤ b) :
+    (∑ v ∈ W, (∫ u in -H..H, f (v+u))^6) ≤
+      (2*H)^5*(2*H+1)*(∫ u in a-H..b+H, f u^6) :=
+  @TaoTrudgianYang2025.ivicSixth_sum_real_window_sixth_le W hsep f hf hf0 H a b hH hab hrange
+
+example {H : ℝ} (hH : 0 ≤ H) (U t : ℝ) :
+    (∫ u in -H..H,zetaMomentCriticalNorm (u+t)) ≤
+      2*H*U+(∫ u in -H..H,ivicSixthExcess U (t+u)) :=
+  @TaoTrudgianYang2025.ivicSixth_local_integral_split H hH U t
+
+example (P : LargeValuePattern)
+    {t u : ℝ} (ht : t ∈ P.ordinates) (hu : u ∈ P.ordinates) :
+    |u-t| ≤ P.T :=
+  @TaoTrudgianYang2025.LargeValuePattern.difference_abs_le_height P t u ht hu
+
+example {q : ℕ} (hq : 0 < q) :
+    ∃ C : ℝ, 0 < C ∧ ∀ P : LargeValuePattern, P.ordinates.Nonempty →
+      ∀ H U : ℝ, 0 ≤ H → ∃ t ∈ P.ordinates,
+      (P.ordinates.card:ℝ)*P.V^2 ≤ 2*P.N*C*
+        (4*P.N+Real.sqrt P.N*
+          (2*H*U*(P.ordinates.card:ℝ)+
+            ∑ u ∈ P.ordinates, ∫ v in -H..H,ivicSixthExcess U (u-t+v))+
+          (P.ordinates.card:ℝ)*Real.sqrt P.N*(1+P.T)/(1+H)^(2*q)) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_gram_row_split q hq
+
+example (P : LargeValuePattern)
+    {t H : ℝ} (ht : t ∈ P.ordinates) (hH : 0 ≤ H) (U : ℝ) :
+    (∑ u ∈ P.ordinates, (∫ v in -H..H,ivicSixthExcess U (u-t+v))^6) ≤
+      (2*H)^5*(2*H+1)*
+        (∫ v in -(P.T+H)..P.T+H,ivicSixthExcess U v^6) :=
+  @TaoTrudgianYang2025.LargeValuePattern.ivicSixth_difference_window_sixth P t H ht hH U
+
+example {R N V C S E : ℝ} (hR : 0 ≤ R)
+    (hrow : R*V^2 ≤ 2*N*C*(4*N+Real.sqrt N*S+R*Real.sqrt N*E))
+    (hsmall : 4*C*N*Real.sqrt N*E ≤ V^2) :
+    R*V^2 ≤ 32*C*N^2 ∨ R*V^2 ≤ 8*C*N*Real.sqrt N*S :=
+  @TaoTrudgianYang2025.ivicSixth_gram_absorption R N V C S E hR hrow hsmall
+
+example {q : ℕ} (hq : 0 < q) :
+    ∃ C : ℝ, 0 < C ∧ ∀ P : LargeValuePattern, ∀ H U : ℝ, 0 ≤ H →
+      4*C*P.N*Real.sqrt P.N*(2*H*U+(1+P.T)/(1+H)^(2*q)) ≤ P.V^2 →
+      (P.ordinates.card:ℝ)*P.V^2 ≤ 32*C*P.N^2 ∨
+      (P.ordinates.card:ℝ)*P.V^12 ≤
+        (8*C)^6*P.N^9*(2*H)^5*(2*H+1)*
+          (∫ v in -(P.T+H)..P.T+H,ivicSixthExcess U v^6) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_gram_cardinality q hq
+
+example {η : ℝ} (hη : 0 < η)
+    {q : ℕ} (hq : 0 < q) :
+    ∃ C D T₀ : ℝ, 0 < C ∧ 0 < D ∧ 40000 ≤ T₀ ∧
+      ∀ P : LargeValuePattern, T₀ ≤ P.T → ∀ H U : ℝ,
+      0 ≤ H → H ≤ P.T → (4*P.T)^(11/72+η) ≤ U →
+      4*C*P.N*Real.sqrt P.N*(2*H*U+(1+P.T)/(1+H)^(2*q)) ≤ P.V^2 →
+      (P.ordinates.card:ℝ)*P.V^2 ≤ D*P.N^2 ∨
+      (P.ordinates.card:ℝ)*P.V^12 ≤
+        D*P.N^9*(2*H)^5*(2*H+1)*P.T^(1+η) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_physical_pattern_bound η hη q hq
+
+example {T η : ℝ} {q : ℕ}
+    (hT : 1 ≤ T) (hq : 1 ≤ (2*q:ℕ)*η) :
+    (1+T)/(1+T^η)^(2*q) ≤ 2 :=
+  @TaoTrudgianYang2025.ivicSixth_smoothing_tail_le T η q hT hq
+
+example {T η : ℝ} (hT : 1 ≤ T) (hη : 0 ≤ η) :
+    (2*T^η)^5*(2*T^η+1) ≤ 96*T^(6*η) :=
+  @TaoTrudgianYang2025.ivicSixth_smoothing_window_le T η hT hη
+
+example {η : ℝ}
+    (hη : 0 < η) (hη1 : η ≤ 1) :
+    ∃ C D T₀ : ℝ, 0 < C ∧ 0 < D ∧ 40000 ≤ T₀ ∧
+      ∀ P : LargeValuePattern, T₀ ≤ P.T →
+      4*C*P.N*Real.sqrt P.N*P.T^(11/72+2*η) ≤ P.V^2 →
+      (P.ordinates.card:ℝ)*P.V^2 ≤ D*P.N^2 ∨
+      (P.ordinates.card:ℝ)*P.V^12 ≤ D*P.N^9*P.T^(1+7*η) :=
+  @TaoTrudgianYang2025.exists_ivicSixth_smoothed_pattern_bound η hη hη1
+
+example {σ τ ε : ℝ}
+    (hτ : 0 < τ) (hgap : (11/72)*τ < 2*σ-3/2) (hε : 0 < ε) :
+    ∃ η δ : ℝ, 0 < η ∧ η ≤ 1 ∧ 0 < δ ∧ δ ≤ τ/2 ∧ 2*δ ≤ ε ∧
+      3/2+η+(τ+δ)*(11/72+2*η) ≤ 2*(σ-δ) ∧
+      7*τ*η+δ*(13+7*η) ≤ ε :=
+  @TaoTrudgianYang2025.ivicSixth_general_loss_parameters σ τ ε hτ hgap hε
+
+example {σ τ : ℝ}
+    (hτ : 0 < τ) (hgap : (11/72)*τ < 2*σ-3/2) :
+    IsLargeValueBound σ τ (max (2-2*σ) (τ+9-12*σ)) :=
+  @TaoTrudgianYang2025.ivicSixth_general_largeValueBound σ τ hτ hgap
+
+example {σ τ : ℝ}
+    (hτ : 0 < τ) (hgap : (11/72)*τ < 2*σ-3/2) :
+    largeValueExponent σ τ ≤ ((max (2-2*σ) (τ+9-12*σ):ℝ):EReal) :=
+  @TaoTrudgianYang2025.ivicSixth_general_largeValueExponent_le σ τ hτ hgap
+
+example {k l σ t : ℝ}
+    (hpair : ExponentPair k l) (hk : 0 < k)
+    (hσ : 1/2 < σ) (hσ1 : σ < 1) (ht : 0 < t)
+    (hscale : k*t = 2*(1+k)*σ-1-l)
+    (hshort : t ≤ 12*σ-8) (hgap : (11/72)*(3*t/4) < 2*σ-3/2) :
+    zeroDensityExponent σ ≤ ((4/t:ℝ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_density_short_cutoff k l σ t hpair hk hσ hσ1 ht hscale hshort hgap
+
+example (B : ℝ) :
+    zeroDensityExponent 1 ≤ (B:EReal) :=
+  @TaoTrudgianYang2025.zeroDensityExponent_at_one_le B
+
+example {k l σ : ℝ}
+    (hpair : ExponentPair k l)
+    (hk : k < 1/5) (hl : 3/5 < l) (hrange : 13 < 15*l+20*k)
+    (hline : (l+1)/(2*(k+1)) < σ) (hσ1 : σ ≤ 1)
+    (hside : k < 11/85 ∨
+      (11/85 < k ∧ (144*k-11*l-11)/(170*k-22) < σ)) :
+    zeroDensityExponent σ ≤ ((4*k/(2*(1+k)*σ-1-l):ℝ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_zero_density k l σ hpair hk hl hrange hline hσ1 hside
+example : IsLargeValueBound (9/10) (39/20) (1/5) := by
+  convert ivicSixth_general_largeValueBound
+    (σ := 9/10) (τ := 39/20) (by norm_num) (by norm_num) using 1
+  norm_num
+
+example : largeValueExponent (9/10) (39/20) ≤ ((1/5:ℝ):EReal) := by
+  convert ivicSixth_general_largeValueExponent_le
+    (σ := 9/10) (τ := 39/20) (by norm_num) (by norm_num) using 1
+  norm_num
+
+example : zeroDensityExponent (9/10) ≤ ((20/13:ℝ):EReal) := by
+  have hp : ExponentPair (1/6) (2/3) := by
+    convert exponentPair_half_half.aProcess using 1 <;> norm_num
+  have hb := hp.bourgain_zero_density (σ := 9/10)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (Or.inr ⟨by norm_num,by norm_num⟩)
+  norm_num at hb
+  exact hb
+
+example : zeroDensityExponent 1 ≤ ((-7:ℝ):EReal) :=
+  zeroDensityExponent_at_one_le (-7)
+
+example : ¬ (11/72:ℝ)*(108/55) < 2*(9/10)-3/2 := by norm_num
+
+example : ¬ ((11/85:ℝ) < 11/85 ∨
+    (11/85 < (11/85:ℝ) ∧ (144*(11/85)-11*(2/3)-11)/(170*(11/85)-22) < 9/10)) := by
+  norm_num
+
+example : (13/5:ℝ) < 12*(9/10)-8 := by norm_num
+
+example : (11/72:ℝ)*(3*(13/5)/4) < 2*(9/10)-3/2 := by norm_num
+
+example (t : ℝ) : ivicSixthSmoothTrace 0 t = 0 := by simp [ivicSixthSmoothTrace]
+
+example (U t : ℝ) : ivicSixthExcess U (-t) = ivicSixthExcess U t :=
+  ivicSixthExcess_neg U t
+
+example (U : ℝ) : (∫ t in (0:ℝ)..0,ivicSixthExcess U t^6) = 0 := by simp
+
+example : ivicSixthTraceProfile 0 = 0 := ivicSixthTraceProfile_zero
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end BourgainPairDensityCompletionRegression
+
+section BourgainDensityClosureRegression
+
+example :
+    ExponentPair (1/14) (11/14) :=
+  @TaoTrudgianYang2025.exponentPair_one_fourteenth_eleven_fourteenths
+
+example {k l σ : ℝ}
+    (hpair : ExponentPair k l)
+    (hk : k ≤ 11/85) (hl : 3/5 ≤ l) (hrange : 13 ≤ 15*l+20*k)
+    (hline : (l+1)/(2*(k+1)) < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((4*k/(2*(1+k)*σ-1-l):ℝ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_zero_density_closed_low_k k l σ hpair hk hl hrange hline hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (11/85) (59/85))
+    (hσ : 3/4 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((11/(12*(4*σ-3)):ℝ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_density_first_piece σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (11/85) (59/85))
+    (hσ : 3/4 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceOne σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_1 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (391/4595) (3461/4595))
+    (hσ : 14/15 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceTwo σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_2 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (2779/38033) (58699/76066))
+    (hσ : 2841/3016 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceThree σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_3 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (89/1282) (997/1282))
+    (hσ : 859/908 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceFour σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_4 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (652397/9713986) (7599781/9713986))
+    (hσ : 1625/1692 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceFive σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_5 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (2371/43205) (280013/345640))
+    (hσ : 3334585/3447984 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceSix σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_6 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (9/217) (1461/1736))
+    (hσ : 974605/1005296 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceSeven σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_7 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (hpair : ExponentPair (10769/351096) (609317/702192))
+    (hσ : 5857/6032 < σ) (hσ1 : σ ≤ 1) :
+    zeroDensityExponent σ ≤ ((bourgainPieceEight σ):EReal) :=
+  @TaoTrudgianYang2025.ExponentPair.bourgain_piece_8 σ hpair hσ hσ1
+
+example {σ : ℝ}
+    (h1 : ExponentPair (11/85) (59/85))
+    (h2 : ExponentPair (391/4595) (3461/4595))
+    (h3 : ExponentPair (2779/38033) (58699/76066))
+    (h4 : ExponentPair (89/1282) (997/1282))
+    (h5 : ExponentPair (652397/9713986) (7599781/9713986))
+    (h6 : ExponentPair (2371/43205) (280013/345640))
+    (h7 : ExponentPair (9/217) (1461/1736))
+    (h8 : ExponentPair (10769/351096) (609317/702192))
+    (hσ : 3/4 < σ) (hσ1 : σ < 1) :
+    zeroDensityExponent σ ≤ ((optimizedBourgainBound σ):EReal) :=
+  @TaoTrudgianYang2025.optimizedBourgain_bound_of_pairs σ h1 h2 h3 h4 h5 h6 h7 h8 hσ hσ1
+
+example : optimizedBourgainBound (14/15) = bourgainPieceOne (14/15) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (2841/3016) = bourgainPieceTwo (2841/3016) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (859/908) = bourgainPieceThree (859/908) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (1625/1692) = bourgainPieceFour (1625/1692) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (3334585/3447984) = bourgainPieceFive (3334585/3447984) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (974605/1005296) = bourgainPieceSix (974605/1005296) := by
+  norm_num [optimizedBourgainBound]
+
+example : optimizedBourgainBound (5857/6032) = bourgainPieceSeven (5857/6032) := by
+  norm_num [optimizedBourgainBound]
+
+example : zeroDensityExponent (19/20) ≤ ((8/7:ℝ):EReal) := by
+  have h := exponentPair_one_fourteenth_eleven_fourteenths.bourgain_zero_density_closed_low_k
+    (σ := 19/20) (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h
+  exact h
+
+example : ¬ (11/85:ℝ) < 11/85 := by norm_num
+
+example : 15*(59/85:ℝ)+20*(11/85) = 13 := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end BourgainDensityClosureRegression
+
+section RobertSargosArithmeticRegression
+
+example (r q h n t : ℝ) :
+    robertSargosLinear r q h (n+t) = robertSargosLinear r q h n+r*t :=
+  @TaoTrudgianYang2025.robertSargosLinear_shift r q h n t
+
+example (r q h n t : ℝ) :
+    robertSargosQuadratic r q h (n+t) =
+      robertSargosQuadratic r q h n+2*t*robertSargosLinear r q h n+r*t^2 :=
+  @TaoTrudgianYang2025.robertSargosQuadratic_shift r q h n t
+
+example {r q₁ q₂ h₁ h₂ n₁ n₂ : ℝ}
+    (h : robertSargosLinear r q₁ h₁ n₁ = robertSargosLinear r q₂ h₂ n₂) :
+    r*(n₁-n₂)+h₁*q₁-h₂*q₂ = 0 :=
+  @TaoTrudgianYang2025.robertSargos_reduced_linear r q₁ q₂ h₁ h₂ n₁ n₂ h
+
+example {r q₁ q₂ h₁ h₂ n₁ n₂ : ℝ}
+    (h : robertSargosLinear r q₁ h₁ n₁ = robertSargosLinear r q₂ h₂ n₂) :
+    robertSargosQuadratic r q₁ h₁ n₁-robertSargosQuadratic r q₂ h₂ n₂ =
+      robertSargosReduced r q₁ q₂ h₁ h₂ (n₁-n₂) :=
+  @TaoTrudgianYang2025.robertSargos_quadratic_difference r q₁ q₂ h₁ h₂ n₁ n₂ h
+
+example {r q₁ q₂ h₁ h₂ d : ℝ}
+    (h : r*d+h₁*q₁-h₂*q₂ = 0) :
+    robertSargosReduced r q₁ q₂ h₁ h₂ d =
+      (h₁*q₁+h₂*q₂)*d+h₁*q₁^2-h₂*q₂^2 :=
+  @TaoTrudgianYang2025.robertSargos_reduced_symmetric r q₁ q₂ h₁ h₂ d h
+
+example {r q₁ q₂ h₁ h₂ d : ℝ}
+    (h : r*d+h₁*q₁-h₂*q₂ = 0) :
+    r*robertSargosReduced r q₁ q₂ h₁ h₂ d =
+      h₂*(h₂-r)*q₂^2-h₁*(h₁-r)*q₁^2 :=
+  @TaoTrudgianYang2025.robertSargos_reduced_factor r q₁ q₂ h₁ h₂ d h
+
+example (r q h n : ℝ) :
+    robertSargosTaylorQuadratic r q h n =
+      robertSargosQuadratic (-r) q h n-r*h^2-r^2*h :=
+  @TaoTrudgianYang2025.robertSargosTaylorQuadratic_eq r q h n
+
+example {R H r h : ℝ}
+    (hR : 0 ≤ R) (hH : 0 ≤ H) (hRH : R ≤ H)
+    (hr : |r| ≤ R) (hh : |h| ≤ 2*H) :
+    |r*h^2+r^2*h| ≤ 6*R*H^2 :=
+  @TaoTrudgianYang2025.robertSargos_taylor_remainder_le R H r h hR hH hRH hr hh
+
+example {R H r q₁ q₂ h₁ h₂ n₁ n₂ E : ℝ}
+    (hR : 0 ≤ R) (hH : 0 ≤ H) (hRH : R ≤ H)
+    (hr : |r| ≤ R) (hh₁ : |h₁| ≤ 2*H) (hh₂ : |h₂| ≤ 2*H)
+    (hlin : robertSargosLinear (-r) q₁ h₁ n₁ =
+      robertSargosLinear (-r) q₂ h₂ n₂)
+    (hnear : |robertSargosTaylorQuadratic r q₁ h₁ n₁-
+      robertSargosTaylorQuadratic r q₂ h₂ n₂| ≤ E) :
+    |robertSargosReduced (-r) q₁ q₂ h₁ h₂ (n₁-n₂)| ≤ E+12*R*H^2 :=
+  @TaoTrudgianYang2025.robertSargos_actual_to_counting_tolerance R H r q₁ q₂ h₁ h₂ n₁ n₂ E hR hH hRH hr hh₁ hh₂ hlin hnear
+
+example (r q₁ q₂ h₁ h₂ d : ℝ) :
+    robertSargosReduced r (-q₁) (-q₂) h₁ h₂ (-d) =
+      robertSargosReduced r q₁ q₂ h₁ h₂ d :=
+  @TaoTrudgianYang2025.robertSargosReduced_neg r q₁ q₂ h₁ h₂ d
+
+example {r q₁ q₂ h₁ h₂ d H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q)
+    (hh₁ : h₁ ∈ Set.Icc H (2*H)) (hh₂ : h₂ ∈ Set.Icc H (2*H))
+    (hq₁ : q₁ ∈ Set.Icc Q (2*Q)) (hq₂ : q₂ ∈ Set.Icc Q (2*Q))
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |d| ≤ (δ+8)*Q :=
+  @TaoTrudgianYang2025.robertSargos_displacement_positive r q₁ q₂ h₁ h₂ d H Q δ hH hQ hh₁ hh₂ hq₁ hq₂ hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q)
+    (hh₁ : h₁ ∈ Set.Icc H (2*H)) (hh₂ : h₂ ∈ Set.Icc H (2*H))
+    (hq₁ : |q₁| ∈ Set.Icc Q (2*Q)) (hq₂ : |q₂| ∈ Set.Icc Q (2*Q))
+    (hsign : 0 < q₁*q₂)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |d| ≤ (δ+8)*Q :=
+  @TaoTrudgianYang2025.robertSargos_displacement_same_sign r q₁ q₂ h₁ h₂ d H Q δ hH hQ hh₁ hh₂ hq₁ hq₂ hsign hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hr : |r| ≤ H/2) (hh₂ : H ≤ h₂) (hq₁ : Q ≤ |q₁|)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |(q₂/q₁)^2-h₁*(h₁-r)/(h₂*(h₂-r))| ≤ 2*δ*|r|/H :=
+  @TaoTrudgianYang2025.robertSargos_ratio_square_gap r q₁ q₂ h₁ h₂ d H Q δ hH hQ hδ hr hh₂ hq₁ hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hr : |r| ≤ H/2) (hh₁ : H ≤ h₁) (hh₂ : H ≤ h₂)
+    (hq₁ : |q₁| ∈ Set.Icc Q (2*Q)) (hq₂ : Q ≤ |q₂|)
+    (hsign : 0 < q₁*q₂)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |q₂/q₁-Real.sqrt (h₁*(h₁-r)/(h₂*(h₂-r)))| ≤ 4*δ*|r|/H :=
+  @TaoTrudgianYang2025.robertSargos_ratio_sqrt_gap r q₁ q₂ h₁ h₂ d H Q δ hH hQ hδ hr hh₁ hh₂ hq₁ hq₂ hsign hlin hnear
+
+example {a b c u₁ v₁ u₂ v₂ : ℤ}
+    (hprim : Int.gcd (Int.gcd a b : ℤ) c = 1)
+    (h₁ : c ∣ a*u₁+b*v₁) (h₂ : c ∣ a*u₂+b*v₂) :
+    c ∣ u₁*v₂-u₂*v₁ :=
+  @TaoTrudgianYang2025.primitive_linear_congruence_determinant_dvd a b c u₁ v₁ u₂ v₂ hprim h₁ h₂
+
+example {u₁ v₁ u₂ v₂ : ℤ}
+    (hv₁ : 0 < v₁) (hv₂ : 0 < v₂)
+    (hp₁ : Nat.Coprime u₁.natAbs v₁.natAbs)
+    (hp₂ : Nat.Coprime u₂.natAbs v₂.natAbs)
+    (h : (u₁:ℝ)/v₁ = (u₂:ℝ)/v₂) :
+    u₁ = u₂ ∧ v₁ = v₂ :=
+  @TaoTrudgianYang2025.primitive_fraction_coordinates_eq u₁ v₁ u₂ v₂ hv₁ hv₂ hp₁ hp₂ h
+
+example {u₁ v₁ u₂ v₂ : ℤ}
+    (hv₁ : 0 < v₁) (hv₂ : 0 < v₂)
+    (hp₁ : Nat.Coprime u₁.natAbs v₁.natAbs)
+    (hp₂ : Nat.Coprime u₂.natAbs v₂.natAbs)
+    (hne : (u₁,v₁) ≠ (u₂,v₂)) :
+    u₁*v₂-u₂*v₁ ≠ 0 :=
+  @TaoTrudgianYang2025.primitive_fraction_determinant_ne_zero u₁ v₁ u₂ v₂ hv₁ hv₂ hp₁ hp₂ hne
+
+example {a b c u₁ v₁ u₂ v₂ : ℤ} {V : ℝ}
+    (hprim : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : 0 < c) (hV : 0 < V)
+    (hv₁ : V ≤ (v₁:ℝ)) (hv₂ : V ≤ (v₂:ℝ))
+    (hv₁u : (v₁:ℝ) ≤ 2*V) (hv₂u : (v₂:ℝ) ≤ 2*V)
+    (hp₁ : Nat.Coprime u₁.natAbs v₁.natAbs)
+    (hp₂ : Nat.Coprime u₂.natAbs v₂.natAbs)
+    (h₁ : c ∣ a*u₁+b*v₁) (h₂ : c ∣ a*u₂+b*v₂)
+    (hne : (u₁,v₁) ≠ (u₂,v₂)) :
+    (c:ℝ)/(4*V^2) ≤ |(u₁:ℝ)/v₁-(u₂:ℝ)/v₂| :=
+  @TaoTrudgianYang2025.primitive_linear_congruence_ratio_spacing a b c u₁ v₁ u₂ v₂ V hprim hc hV hv₁ hv₂ hv₁u hv₂u hp₁ hp₂ h₁ h₂ hne
+
+example (S : Finset (ℤ × ℤ))
+    {a b c : ℤ} {V α β : ℝ}
+    (hprim : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : 0 < c)
+    (hV : 0 < V) (hαβ : α ≤ β)
+    (hden : ∀ p ∈ S, V ≤ (p.2:ℝ) ∧ (p.2:ℝ) ≤ 2*V)
+    (hpair : ∀ p ∈ S, Nat.Coprime p.1.natAbs p.2.natAbs)
+    (hcong : ∀ p ∈ S, c ∣ a*p.1+b*p.2)
+    (hratio : ∀ p ∈ S, α ≤ (p.1:ℝ)/p.2 ∧ (p.1:ℝ)/p.2 ≤ β) :
+    (S.card:ℝ) ≤ 1+4*V^2*(β-α)/c :=
+  @TaoTrudgianYang2025.primitive_congruence_card_le S a b c V α β hprim hc hV hαβ hden hpair hcong hratio
+
+example {a b c u v w : ℤ}
+    (hprim : Int.gcd (Int.gcd u v : ℤ) w = 1)
+    (hline : a*u+b*v+c*w = 0) :
+    (Int.gcd u v : ℤ) ∣ c :=
+  @TaoTrudgianYang2025.primitive_linear_triple_gcd_dvd a b c u v w hprim hline
+
+example {a b c m : ℤ}
+    (hprim : Int.gcd (Int.gcd a b : ℤ) c = 1) (hm : m ∣ c) :
+    Int.gcd (Int.gcd a b : ℤ) m = 1 :=
+  @TaoTrudgianYang2025.primitive_coefficients_of_modulus_dvd a b c m hprim hm
+
+example {a b c u v w : ℤ}
+    (hv : 0 < v) (hprim : Int.gcd (Int.gcd u v : ℤ) w = 1)
+    (hline : a*u+b*v+c*w = 0) :
+    a*(u/(Int.gcd u v : ℤ))+b*(v/(Int.gcd u v : ℤ))+
+      (c/(Int.gcd u v : ℤ))*w = 0 :=
+  @TaoTrudgianYang2025.primitive_linear_triple_normalized a b c u v w hv hprim hline
+
+example {a b c u v w : ℤ}
+    (hv : 0 < v) (hprim : Int.gcd (Int.gcd u v : ℤ) w = 1)
+    (hline : a*u+b*v+c*w = 0) :
+    (c/(Int.gcd u v : ℤ)) ∣
+      a*(u/(Int.gcd u v : ℤ))+b*(v/(Int.gcd u v : ℤ)) :=
+  @TaoTrudgianYang2025.primitive_linear_triple_normalized_congruence a b c u v w hv hprim hline
+
+example (S : Finset (ℤ × ℤ × ℤ)) {a b c : ℤ} {g : ℕ} {V α β : ℝ}
+    (hcoeff : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : 0 < c)
+    (hg : 0 < g) (hgc : (g:ℤ) ∣ c) (hV : 0 < V) (hαβ : α ≤ β)
+    (hgcd : ∀ p ∈ S, Int.gcd p.1 p.2.1 = g)
+    (hden : ∀ p ∈ S, V ≤ (p.2.1:ℝ) ∧ (p.2.1:ℝ) ≤ 2*V)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, a*p.1+b*p.2.1+c*p.2.2 = 0)
+    (hratio : ∀ p ∈ S, α ≤ (p.1:ℝ)/p.2.1 ∧ (p.1:ℝ)/p.2.1 ≤ β) :
+    (S.card:ℝ) ≤ 1+4*V^2*(β-α)/((c:ℝ)*g) :=
+  @TaoTrudgianYang2025.primitive_linear_triple_gcd_fiber_card_le S a b c g V α β hcoeff hc hg hgc hV hαβ hgcd hden hprim hline hratio
+
+example (S : Finset (ℤ × ℤ × ℤ)) {a b : ℤ} {c : ℕ} {V α β : ℝ}
+    (hcoeff : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : 0 < c)
+    (hV : 0 < V) (hαβ : α ≤ β)
+    (hden : ∀ p ∈ S, V ≤ (p.2.1:ℝ) ∧ (p.2.1:ℝ) ≤ 2*V)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, a*p.1+b*p.2.1+(c:ℤ)*p.2.2 = 0)
+    (hratio : ∀ p ∈ S, α ≤ (p.1:ℝ)/p.2.1 ∧ (p.1:ℝ)/p.2.1 ≤ β) :
+    (S.card:ℝ) ≤ ∑ g ∈ c.divisors, (1+4*V^2*(β-α)/((c:ℝ)*g)) :=
+  @TaoTrudgianYang2025.primitive_linear_triple_card_le_divisor_sum S a b c V α β hcoeff hc hV hαβ hden hprim hline hratio
+
+example {c : ℕ} (hc : 0 < c) (K : ℝ) :
+    (∑ g ∈ c.divisors, (1+K/((c:ℝ)*g))) =
+      (c.divisors.card:ℝ)+K/(c:ℝ)^2*(∑ g ∈ c.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.primitive_divisor_bound_identity c hc K
+
+example (S : Finset (ℤ × ℤ × ℤ)) {a b : ℤ} {c : ℕ} {V α β : ℝ}
+    (hcoeff : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : 0 < c)
+    (hV : 0 < V) (hαβ : α ≤ β)
+    (hden : ∀ p ∈ S, V ≤ (p.2.1:ℝ) ∧ (p.2.1:ℝ) ≤ 2*V)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, a*p.1+b*p.2.1+(c:ℤ)*p.2.2 = 0)
+    (hratio : ∀ p ∈ S, α ≤ (p.1:ℝ)/p.2.1 ∧ (p.1:ℝ)/p.2.1 ≤ β) :
+    (S.card:ℝ) ≤ (c.divisors.card:ℝ)+
+      4*V^2*(β-α)/(c:ℝ)^2*(∑ g ∈ c.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.primitive_linear_triple_card_le S a b c V α β hcoeff hc hV hαβ hden hprim hline hratio
+
+example (S : Finset (ℤ × ℤ × ℤ)) {r : ℕ} {h₁ h₂ : ℤ} {H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd (-h₂) h₁ : ℤ) r = 1)
+    (hr : 0 < r) (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hrH : (r:ℝ) ≤ H/2) (hh₁ : H ≤ (h₁:ℝ)) (hh₂ : H ≤ (h₂:ℝ))
+    (hq₁ : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc Q (2*Q))
+    (hq₂ : ∀ p ∈ S, Q ≤ (p.1:ℝ))
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, (r:ℤ)*p.2.2+h₁*p.2.1-h₂*p.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced r p.2.1 p.1 h₁ h₂ p.2.2| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ (r.divisors.card:ℝ)+
+      32*δ*Q^2/(H*(r:ℝ))*(∑ g ∈ r.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_primitive_positive_fixed_coeff_card_le S r h₁ h₂ H Q δ hcoeff hr hH hQ hδ hrH hh₁ hh₂ hq₁ hq₂ hprim hline hnear
+
+example (S : Finset (ℤ × ℤ × ℤ)) {a b c : ℤ} {V α β : ℝ}
+    (hcoeff : Int.gcd (Int.gcd a b : ℤ) c = 1) (hc : c ≠ 0)
+    (hV : 0 < V) (hαβ : α ≤ β)
+    (hden : ∀ p ∈ S, V ≤ (p.2.1:ℝ) ∧ (p.2.1:ℝ) ≤ 2*V)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, a*p.1+b*p.2.1+c*p.2.2 = 0)
+    (hratio : ∀ p ∈ S, α ≤ (p.1:ℝ)/p.2.1 ∧ (p.1:ℝ)/p.2.1 ≤ β) :
+    (S.card:ℝ) ≤ (c.natAbs.divisors.card:ℝ)+
+      4*V^2*(β-α)/(c.natAbs:ℝ)^2*(∑ g ∈ c.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.primitive_linear_triple_card_le_abs_modulus S a b c V α β hcoeff hc hV hαβ hden hprim hline hratio
+
+example (S : Finset (ℤ × ℤ × ℤ)) {r h₁ h₂ : ℤ} {H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd (-h₂) h₁ : ℤ) r = 1)
+    (hr : r ≠ 0) (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hrH : |(r:ℝ)| ≤ H/2) (hh₁ : H ≤ (h₁:ℝ)) (hh₂ : H ≤ (h₂:ℝ))
+    (hq₁ : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc Q (2*Q))
+    (hq₂ : ∀ p ∈ S, Q ≤ (p.1:ℝ))
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.1 p.2.1 : ℤ) p.2.2 = 1)
+    (hline : ∀ p ∈ S, (r:ℤ)*p.2.2+h₁*p.2.1-h₂*p.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced r p.2.1 p.1 h₁ h₂ p.2.2| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ (r.natAbs.divisors.card:ℝ)+
+      32*δ*Q^2/(H*|(r:ℝ)|)*(∑ g ∈ r.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_primitive_positive_q_fixed_coeff_card_le S r h₁ h₂ H Q δ hcoeff hr hH hQ hδ hrH hh₁ hh₂ hq₁ hq₂ hprim hline hnear
+
+example (S : Finset (ℤ × ℤ × ℤ)) {r h₁ h₂ : ℤ} {H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd r h₁ : ℤ) h₂ = 1)
+    (hr : r ≠ 0) (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hrH : |(r:ℝ)| ≤ H/2) (hh₁ : H ≤ (h₁:ℝ)) (hh₂ : H ≤ (h₂:ℝ))
+    (hq₁ : ∀ p ∈ S, |(p.2.1:ℝ)| ∈ Set.Icc Q (2*Q))
+    (hq₂ : ∀ p ∈ S, Q ≤ |(p.1:ℝ)|)
+    (hsign : ∀ p ∈ S, 0 < p.2.1*p.1)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.2.1 : ℤ) p.1 = 1)
+    (hline : ∀ p ∈ S, r*p.2.2+h₁*p.2.1-h₂*p.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced r p.2.1 p.1 h₁ h₂ p.2.2| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ 2*(r.natAbs.divisors.card:ℝ)+
+      64*δ*Q^2/(H*|(r:ℝ)|)*(∑ g ∈ r.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_primitive_fixed_coeff_card_le S r h₁ h₂ H Q δ hcoeff hr hH hQ hδ hrH hh₁ hh₂ hq₁ hq₂ hsign hprim hline hnear
+
+example : robertSargosTaylorQuadratic 1 1 2 3 ≠ robertSargosQuadratic (-1) 1 2 3 := by
+  norm_num [robertSargosTaylorQuadratic,robertSargosQuadratic]
+
+example : (2:ℝ)/2 = 1/1 ∧ ((2,2):ℤ × ℤ) ≠ (1,1) := by norm_num
+
+example : (({(2,2,-1)} : Finset (ℤ × ℤ × ℤ)).card:ℝ) ≤ 3 := by
+  have h := primitive_linear_triple_card_le
+    ({(2,2,-1)} : Finset (ℤ × ℤ × ℤ))
+    (a := 1) (b := 1) (c := 4) (V := 2) (α := 1) (β := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  calc
+    _ ≤ _ := h
+    _ = 3 := by norm_num [show (Nat.divisors 4).card = 3 from by decide]
+
+example : (({(2,2,1)} : Finset (ℤ × ℤ × ℤ)).card:ℝ) ≤ 3 := by
+  have h := primitive_linear_triple_card_le_abs_modulus
+    ({(2,2,1)} : Finset (ℤ × ℤ × ℤ))
+    (a := 1) (b := 1) (c := -4) (V := 2) (α := 1) (β := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  calc
+    _ ≤ _ := h
+    _ = 3 := by norm_num [show (Nat.divisors 4).card = 3 from by decide]
+
+example : (({(1,1,0),(-1,-1,0)} : Finset (ℤ × ℤ × ℤ)).card:ℝ) ≤ 2 := by
+  have h := robertSargos_primitive_fixed_coeff_card_le
+    ({(1,1,0),(-1,-1,0)} : Finset (ℤ × ℤ × ℤ))
+    (r := -1) (h₁ := 2) (h₂ := 2) (H := 2) (Q := 1) (δ := 0)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num [robertSargosReduced])
+  calc
+    _ ≤ _ := h
+    _ = 2 := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosArithmeticRegression
+
+section RobertSargosComplementaryCountingRegression
+
+example {r q₁ q₂ h₁ h₂ d : ℝ}
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0) :
+    robertSargosReduced r q₁ q₂ h₁ h₂ d =
+      h₁*q₁*(q₁+d)-h₂*q₂*(q₂-d) :=
+  @TaoTrudgianYang2025.robertSargos_reduced_coefficient_factor r q₁ q₂ h₁ h₂ d hlin
+
+example {r q₁ q₂ h₁ h₂ d : ℝ}
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0) :
+    h₂*q₂*(q₁+2*d-q₂) =
+      robertSargosReduced r q₁ q₂ h₁ h₂ d+r*d*(q₁+d) :=
+  @TaoTrudgianYang2025.robertSargos_affine_residual_identity r q₁ q₂ h₁ h₂ d hlin
+
+example {r q₁ q₂ h₁ h₂ d R D H Q : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hr : |r| ≤ R) (hd : |d| ≤ D)
+    (hh₂ : H ≤ h₂) (hq₁ : Q ≤ |q₁|)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0) :
+    |h₁/h₂-q₂/q₁| ≤ R*D/(H*Q) :=
+  @TaoTrudgianYang2025.robertSargos_coefficient_linear_ratio_gap r q₁ q₂ h₁ h₂ d R D H Q hH hQ hr hd hh₂ hq₁ hlin
+
+example {r q₁ q₂ h₁ h₂ d H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hh₂ : H ≤ h₂) (hq₁ : Q ≤ |q₁|) (hsafe : 0 ≤ q₁*d)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |h₁/h₂-q₂*(q₂-d)/(q₁*(q₁+d))| ≤ δ :=
+  @TaoTrudgianYang2025.robertSargos_coefficient_conic_ratio_gap r q₁ q₂ h₁ h₂ d H Q δ hH hQ hδ hh₂ hq₁ hsafe hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d R D H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hr : |r| ≤ R) (hd : |d| ≤ D)
+    (hh₂ : H ≤ h₂) (hq₁ : |q₁| ≤ 2*Q) (hq₂ : Q ≤ |q₂|)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |2*d+q₁-q₂| ≤ δ*Q+R*D*(2*Q+D)/(H*Q) :=
+  @TaoTrudgianYang2025.robertSargos_affine_band_of_displacement r q₁ q₂ h₁ h₂ d R D H Q δ hH hQ hr hd hh₂ hq₁ hq₂ hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d R H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : δ ≤ 1) (hr : |r| ≤ R)
+    (hh₁ : h₁ ∈ Set.Icc H (2*H)) (hh₂ : h₂ ∈ Set.Icc H (2*H))
+    (hq₁ : |q₁| ∈ Set.Icc Q (2*Q)) (hq₂ : |q₂| ∈ Set.Icc Q (2*Q))
+    (hsign : 0 < q₁*q₂)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |2*d+q₁-q₂| ≤ δ*Q+99*R*Q/H :=
+  @TaoTrudgianYang2025.robertSargos_affine_band r q₁ q₂ h₁ h₂ d R H Q δ hH hQ hδ hr hh₁ hh₂ hq₁ hq₂ hsign hlin hnear
+
+example {r q₁ q₂ h₁ h₂ d : ℝ}
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0) :
+    robertSargosReduced r q₂ q₁ h₂ h₁ (-d) =
+      -robertSargosReduced r q₁ q₂ h₁ h₂ d :=
+  @TaoTrudgianYang2025.robertSargosReduced_swap r q₁ q₂ h₁ h₂ d hlin
+
+example {q₁ q₂ d : ℝ} (hsign : 0 < q₁*q₂) :
+    0 ≤ q₁*d ∨ 0 ≤ q₂*(-d) :=
+  @TaoTrudgianYang2025.robertSargos_safe_pivot q₁ q₂ d hsign
+
+example {r q₁ q₂ h₁ h₂ d R H Q δ : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : δ ≤ 1) (hr : |r| ≤ R)
+    (hh₁ : h₁ ∈ Set.Icc H (2*H)) (hh₂ : h₂ ∈ Set.Icc H (2*H))
+    (hq₁ : |q₁| ∈ Set.Icc Q (2*Q)) (hq₂ : |q₂| ∈ Set.Icc Q (2*Q))
+    (hsign : 0 < q₁*q₂)
+    (hlin : r*d+h₁*q₁-h₂*q₂ = 0)
+    (hnear : |robertSargosReduced r q₁ q₂ h₁ h₂ d| ≤ δ*H*Q^2) :
+    |h₁/h₂-q₂/q₁| ≤ 9*R/H :=
+  @TaoTrudgianYang2025.robertSargos_coefficient_linear_source_gap r q₁ q₂ h₁ h₂ d R H Q δ hH hQ hδ hr hh₁ hh₂ hq₁ hq₂ hsign hlin hnear
+
+example (S : Finset (ℤ × ℤ × ℤ)) {d q₁ q₂ : ℤ} {H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd d q₁ : ℤ) q₂ = 1) (hd : d ≠ 0)
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hq₁ : Q ≤ |(q₁:ℝ)|) (hsafe : 0 ≤ (q₁:ℝ)*d)
+    (hh₂ : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc H (2*H))
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.1 : ℤ) p.2.1 = 1)
+    (hline : ∀ p ∈ S, p.2.2*d+q₁*p.1-q₂*p.2.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced p.2.2 q₁ q₂ p.1 p.2.1 d| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ (d.natAbs.divisors.card:ℝ)+
+      8*H^2*δ/(d.natAbs:ℝ)^2*(∑ g ∈ d.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_fixed_displacement_safe_card_le S d q₁ q₂ H Q δ hcoeff hd hH hQ hδ hq₁ hsafe hh₂ hprim hline hnear
+
+example (S : Finset (ℤ × ℤ × ℤ)) {d q₁ q₂ : ℤ} {H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd d q₁ : ℤ) q₂ = 1) (hd : d ≠ 0)
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hq₁ : Q ≤ |(q₁:ℝ)|) (hq₂ : Q ≤ |(q₂:ℝ)|) (hsign : 0 < q₁*q₂)
+    (hh₁ : ∀ p ∈ S, (p.1:ℝ) ∈ Set.Icc H (2*H))
+    (hh₂ : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc H (2*H))
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.1 : ℤ) p.2.1 = 1)
+    (hline : ∀ p ∈ S, p.2.2*d+q₁*p.1-q₂*p.2.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced p.2.2 q₁ q₂ p.1 p.2.1 d| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ (d.natAbs.divisors.card:ℝ)+
+      8*H^2*δ/(d.natAbs:ℝ)^2*(∑ g ∈ d.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_fixed_displacement_conic_card_le S d q₁ q₂ H Q δ hcoeff hd hH hQ hδ hq₁ hq₂ hsign hh₁ hh₂ hprim hline hnear
+
+example (S : Finset (ℤ × ℤ × ℤ)) {d q₁ q₂ : ℤ} {R H Q δ : ℝ}
+    (hcoeff : Int.gcd (Int.gcd d q₁ : ℤ) q₂ = 1) (hd : d ≠ 0)
+    (hR : 0 ≤ R) (hH : 0 < H) (hQ : 0 < Q) (hδ : δ ≤ 1)
+    (hq₁ : |(q₁:ℝ)| ∈ Set.Icc Q (2*Q)) (hq₂ : |(q₂:ℝ)| ∈ Set.Icc Q (2*Q))
+    (hsign : 0 < q₁*q₂)
+    (hh₁ : ∀ p ∈ S, (p.1:ℝ) ∈ Set.Icc H (2*H))
+    (hh₂ : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc H (2*H))
+    (hr : ∀ p ∈ S, |(p.2.2:ℝ)| ≤ R)
+    (hprim : ∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.1 : ℤ) p.2.1 = 1)
+    (hline : ∀ p ∈ S, p.2.2*d+q₁*p.1-q₂*p.2.1 = 0)
+    (hnear : ∀ p ∈ S,
+      |robertSargosReduced p.2.2 q₁ q₂ p.1 p.2.1 d| ≤ δ*H*Q^2) :
+    (S.card:ℝ) ≤ (d.natAbs.divisors.card:ℝ)+
+      72*H*R/(d.natAbs:ℝ)^2*(∑ g ∈ d.natAbs.divisors, (g:ℝ)) :=
+  @TaoTrudgianYang2025.robertSargos_fixed_displacement_linear_card_le S d q₁ q₂ R H Q δ hcoeff hd hR hH hQ hδ hq₁ hq₂ hsign hh₁ hh₂ hr hprim hline hnear
+
+example (n : ℕ) :
+    (∑ g ∈ n.divisors, (g:ℝ)) ≤ (n:ℝ)*(n.divisors.card:ℝ) :=
+  @TaoTrudgianYang2025.sum_divisors_cast_le_mul_card n
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (n : ℕ) (K : ℝ), 0 < n → 0 ≤ K →
+      (n.divisors.card:ℝ)+K/(n:ℝ)^2*(∑ g ∈ n.divisors, (g:ℝ)) ≤
+        C*(n:ℝ)^ε*(1+K/n) :=
+  @TaoTrudgianYang2025.exists_primitive_divisor_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (S : Finset (ℤ × ℤ × ℤ)) (d q₁ q₂ : ℤ) (H Q δ : ℝ),
+      Int.gcd (Int.gcd d q₁ : ℤ) q₂ = 1 → d ≠ 0 →
+      0 < H → 0 < Q → 0 ≤ δ →
+      Q ≤ |(q₁:ℝ)| → Q ≤ |(q₂:ℝ)| → 0 < q₁*q₂ →
+      (∀ p ∈ S, (p.1:ℝ) ∈ Set.Icc H (2*H)) →
+      (∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc H (2*H)) →
+      (∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.1 : ℤ) p.2.1 = 1) →
+      (∀ p ∈ S, p.2.2*d+q₁*p.1-q₂*p.2.1 = 0) →
+      (∀ p ∈ S, |robertSargosReduced p.2.2 q₁ q₂ p.1 p.2.1 d| ≤ δ*H*Q^2) →
+      (S.card:ℝ) ≤ C*(d.natAbs:ℝ)^ε*(1+8*H^2*δ/d.natAbs) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fixed_displacement_conic_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (S : Finset (ℤ × ℤ × ℤ)) (d q₁ q₂ : ℤ) (R H Q δ : ℝ),
+      Int.gcd (Int.gcd d q₁ : ℤ) q₂ = 1 → d ≠ 0 →
+      0 ≤ R → 0 < H → 0 < Q → δ ≤ 1 →
+      |(q₁:ℝ)| ∈ Set.Icc Q (2*Q) → |(q₂:ℝ)| ∈ Set.Icc Q (2*Q) → 0 < q₁*q₂ →
+      (∀ p ∈ S, (p.1:ℝ) ∈ Set.Icc H (2*H)) →
+      (∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc H (2*H)) →
+      (∀ p ∈ S, |(p.2.2:ℝ)| ≤ R) →
+      (∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.1 : ℤ) p.2.1 = 1) →
+      (∀ p ∈ S, p.2.2*d+q₁*p.1-q₂*p.2.1 = 0) →
+      (∀ p ∈ S, |robertSargosReduced p.2.2 q₁ q₂ p.1 p.2.1 d| ≤ δ*H*Q^2) →
+      (S.card:ℝ) ≤ C*(d.natAbs:ℝ)^ε*(1+72*H*R/d.natAbs) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fixed_displacement_linear_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (n : ℕ) (H Q δ : ℝ),
+      0 < n → 0 < H → (n:ℝ) ≤ H → 0 ≤ δ →
+      2*(n.divisors.card:ℝ)+
+        64*δ*Q^2/(H*(n:ℝ))*(∑ g ∈ n.divisors, (g:ℝ)) ≤
+      C*H^ε*(1+δ*Q^2/H) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fixed_coeff_divisor_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (S : Finset (ℤ × ℤ × ℤ)) (r h₁ h₂ : ℤ) (H Q δ : ℝ),
+      Int.gcd (Int.gcd r h₁ : ℤ) h₂ = 1 → r ≠ 0 →
+      0 < H → 0 < Q → 0 ≤ δ →
+      |(r:ℝ)| ≤ H/2 → H ≤ (h₁:ℝ) → H ≤ (h₂:ℝ) →
+      (∀ p ∈ S, |(p.2.1:ℝ)| ∈ Set.Icc Q (2*Q)) →
+      (∀ p ∈ S, Q ≤ |(p.1:ℝ)|) →
+      (∀ p ∈ S, 0 < p.2.1*p.1) →
+      (∀ p ∈ S, Int.gcd (Int.gcd p.2.2 p.2.1 : ℤ) p.1 = 1) →
+      (∀ p ∈ S, r*p.2.2+h₁*p.2.1-h₂*p.1 = 0) →
+      (∀ p ∈ S, |robertSargosReduced r p.2.1 p.1 h₁ h₂ p.2.2| ≤ δ*H*Q^2) →
+      (S.card:ℝ) ≤ C*H^ε*(1+δ*Q^2/H) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fixed_coeff_bound ε hε
+
+example (S : Finset ℤ) {a b : ℝ}
+    (hab : a ≤ b) (hmem : ∀ n ∈ S, a ≤ (n:ℝ) ∧ (n:ℝ) ≤ b) :
+    (S.card:ℝ) ≤ b-a+1 :=
+  @TaoTrudgianYang2025.integer_card_le_interval_length_add_one S a b hab hmem
+
+example (S : Finset ℤ) {a B : ℝ}
+    (hB : 0 ≤ B) (hmem : ∀ n ∈ S, |(n:ℝ)-a| ≤ B) :
+    (S.card:ℝ) ≤ 2*B+1 :=
+  @TaoTrudgianYang2025.integer_card_le_of_abs_sub_le S a B hB hmem
+
+example (S : Finset (ℤ × ℤ × ℤ)) {D Q B : ℝ}
+    (hD : 0 ≤ D) (hQ : 0 ≤ Q) (hB : 0 ≤ B)
+    (hd : ∀ p ∈ S, |(p.1:ℝ)| ≤ 2*D)
+    (hq : ∀ p ∈ S, |(p.2.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*(p.1:ℝ)+(p.2.1:ℝ)-(p.2.2:ℝ)| ≤ B) :
+    (S.card:ℝ) ≤ (4*D+1)*(4*Q+1)*(2*B+1) :=
+  @TaoTrudgianYang2025.integer_affine_band_triples_card_le S D Q B hD hQ hB hd hq hband
+
+example (S : Finset (ℤ × ℤ × ℤ)) {D Q B : ℝ}
+    (hD : 1 ≤ D) (hQ : 1 ≤ Q) (hB : 0 ≤ B)
+    (hd : ∀ p ∈ S, |(p.1:ℝ)| ≤ 2*D)
+    (hq : ∀ p ∈ S, |(p.2.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*(p.1:ℝ)+(p.2.1:ℝ)-(p.2.2:ℝ)| ≤ B) :
+    (S.card:ℝ) ≤ 25*D*Q*(2*B+1) :=
+  @TaoTrudgianYang2025.integer_affine_band_triples_card_le_dyadic S D Q B hD hQ hB hd hq hband
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosPrimitiveSystem R H Q δ p) :
+    (p.r:ℝ)*p.d+(p.h₁:ℝ)*p.q₁-(p.h₂:ℝ)*p.q₂ = 0 :=
+  @TaoTrudgianYang2025.RobertSargosPrimitiveSystem.linear_real R H Q δ p h
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosPrimitiveSystem R H Q δ p) (hH : 0 < H) (hQ : 0 < Q) :
+    |(p.d:ℝ)| ≤ (δ+8)*Q :=
+  @TaoTrudgianYang2025.RobertSargosPrimitiveSystem.displacement_le R H Q δ p h hH hQ
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosPrimitiveSystem R H Q δ p) (hH : 0 < H) (hQ : 0 < Q)
+    (hδ : δ ≤ 1) :
+    |2*(p.d:ℝ)+(p.q₁:ℝ)-(p.q₂:ℝ)| ≤ δ*Q+99*R*Q/H :=
+  @TaoTrudgianYang2025.RobertSargosPrimitiveSystem.affine_band R H Q δ p h hH hQ hδ
+
+example {p q : RobertSargosPoint}
+    (hc : robertSargosCoefficientKey p = robertSargosCoefficientKey q)
+    (hf : robertSargosFrequencyKey p = robertSargosFrequencyKey q) : p = q :=
+  @TaoTrudgianYang2025.robertSargos_keys_injective p q hc hf
+
+example (S : Finset RobertSargosPoint) {D R H Q δ : ℝ}
+    (hD : 1 ≤ D) (hR : 0 ≤ R) (hH : 0 < H) (hQ : 1 ≤ Q)
+    (hδ : δ ∈ Set.Icc 0 1)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p)
+    (hd : ∀ p ∈ S, |(p.d:ℝ)| ≤ 2*D) :
+    ((S.image robertSargosFrequencyKey).card:ℝ) ≤
+      25*D*Q*(2*(δ*Q+99*R*Q/H)+1) :=
+  @TaoTrudgianYang2025.robertSargos_frequency_image_card_le S D R H Q δ hD hR hH hQ hδ hmem hd
+
+example : RobertSargosPrimitiveSystem 1 2 3 1 ⟨1,3,4,2,2,2⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : RobertSargosPrimitiveSystem 1 2 3 1 ⟨1,4,3,2,2,-2⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : ¬ RobertSargosPrimitiveSystem 2 4 3 1 ⟨2,3,4,4,4,2⟩ := by
+  intro h
+  have hc := h.coefficient_primitive
+  norm_num at hc
+
+example : ¬ RobertSargosPrimitiveSystem 1 2 6 1 ⟨1,6,8,2,2,4⟩ := by
+  intro h
+  have hc := h.coordinate_primitive
+  norm_num at hc
+
+example : ¬ (0:ℝ) ≤ 3*(-3) := by norm_num
+
+example : robertSargosReduced 1 1 1 2 2 (-1) ≠
+    -robertSargosReduced 1 1 1 2 2 1 := by
+  norm_num [robertSargosReduced]
+
+example : (({0,1} : Finset ℤ).card:ℝ) ≤ 2 := by
+  calc
+    _ ≤ (1:ℝ)-0+1 := integer_card_le_interval_length_add_one
+      ({0,1} : Finset ℤ) (by norm_num) (by norm_num)
+    _ = 2 := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosComplementaryCountingRegression
+
+section RobertSargosPrimitiveCountingRegression
+
+example (S : Finset (ℤ × ℤ × ℤ)) {a₁ b₁ a₂ b₂ a₃ b₃ : ℝ}
+    (h₁ : a₁ ≤ b₁) (h₂ : a₂ ≤ b₂) (h₃ : a₃ ≤ b₃)
+    (hx : ∀ p ∈ S, (p.1:ℝ) ∈ Set.Icc a₁ b₁)
+    (hy : ∀ p ∈ S, (p.2.1:ℝ) ∈ Set.Icc a₂ b₂)
+    (hz : ∀ p ∈ S, (p.2.2:ℝ) ∈ Set.Icc a₃ b₃) :
+    (S.card:ℝ) ≤ (b₁-a₁+1)*(b₂-a₂+1)*(b₃-a₃+1) :=
+  @TaoTrudgianYang2025.integer_box_triples_card_le S a₁ b₁ a₂ b₂ a₃ b₃ h₁ h₂ h₃ hx hy hz
+
+example (S : Finset RobertSargosPoint) {R H Q δ : ℝ}
+    (hR : 0 ≤ R) (hH : 0 ≤ H)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) :
+    ((S.image robertSargosCoefficientKey).card:ℝ) ≤ (2*R+1)*(H+1)^2 :=
+  @TaoTrudgianYang2025.robertSargos_coefficient_image_card_le_box S R H Q δ hR hH hmem
+
+example (S : Finset RobertSargosPoint) {R H Q δ : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) :
+    ((S.image robertSargosCoefficientKey).card:ℝ) ≤ 12*R*H^2 :=
+  @TaoTrudgianYang2025.robertSargos_coefficient_image_card_le S R H Q δ hR hH hmem
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ) (r h₁ h₂ : ℤ),
+      0 < H → 0 < Q → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (∀ p ∈ S, p.r = r ∧ p.h₁ = h₁ ∧ p.h₂ = h₂) →
+      (S.card:ℝ) ≤ C*H^ε*(1+δ*Q^2/H) :=
+  @TaoTrudgianYang2025.exists_robertSargos_coefficient_fiber_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 0 < Q → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*H^ε*(R*H^2+δ*R*H*Q^2) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_coefficient_bound ε hε
+
+example {R H Q δ ε : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hδ : 0 ≤ δ) (hε : 0 ≤ ε) (hHQ : H ≤ Q) :
+    H^ε*(R*H^2+δ*R*H*Q^2) ≤ (R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.robertSargos_wide_frequency_loss_algebra R H Q δ ε hR hH hQ hδ hε hHQ
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ δ → R ≤ H/2 → H ≤ Q →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_wide_frequency ε hε
+
+example (p : RobertSargosPoint) :
+    robertSargosFromFrequencyKey (robertSargosFrequencyKey p)
+      (robertSargosCoefficientTriple p) = p :=
+  @TaoTrudgianYang2025.robertSargos_from_frequency_coordinates p
+
+example {p : RobertSargosPoint} {z : ℤ × ℤ × ℤ}
+    (hz : robertSargosFrequencyKey p = z) :
+    robertSargosFromFrequencyKey z (robertSargosCoefficientTriple p) = p :=
+  @TaoTrudgianYang2025.robertSargos_from_fixed_frequency p z hz
+
+example (S : Finset RobertSargosPoint) {z : ℤ × ℤ × ℤ}
+    (hfix : ∀ p ∈ S, robertSargosFrequencyKey p = z) :
+    (S.image robertSargosCoefficientTriple).card = S.card :=
+  @TaoTrudgianYang2025.robertSargos_frequency_fiber_image_card S z hfix
+
+example (S : Finset RobertSargosPoint) {R H Q δ : ℝ} {z : ℤ × ℤ × ℤ}
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p)
+    (hfix : ∀ p ∈ S, robertSargosFrequencyKey p = z) :
+    ∀ t ∈ S.image robertSargosCoefficientTriple,
+      RobertSargosPrimitiveSystem R H Q δ (robertSargosFromFrequencyKey z t) :=
+  @TaoTrudgianYang2025.robertSargos_frequency_fiber_image_valid S R H Q δ z hmem hfix
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ) (z : ℤ × ℤ × ℤ),
+      0 < H → 0 < Q → 0 ≤ δ →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (∀ p ∈ S, robertSargosFrequencyKey p = z) →
+      (S.card:ℝ) ≤ C*(z.1.natAbs:ℝ)^ε*(1+8*H^2*δ/z.1.natAbs) :=
+  @TaoTrudgianYang2025.exists_robertSargos_frequency_fiber_conic_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ) (z : ℤ × ℤ × ℤ),
+      0 ≤ R → 0 < H → 0 < Q → δ ≤ 1 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (∀ p ∈ S, robertSargosFrequencyKey p = z) →
+      (S.card:ℝ) ≤ C*(z.1.natAbs:ℝ)^ε*(1+72*H*R/z.1.natAbs) :=
+  @TaoTrudgianYang2025.exists_robertSargos_frequency_fiber_linear_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) {N : ℕ} (hN : 1 ≤ N) :
+    (harmonic N:ℝ) ≤ (1+1/ε)*(N:ℝ)^ε :=
+  @TaoTrudgianYang2025.harmonic_le_rpow_loss ε hε N hN
+
+example {η A : ℝ} {N : ℕ} (hη : 0 ≤ η) (hA : 0 ≤ A) :
+    (∑ n ∈ Finset.Icc 1 N, (n:ℝ)^η*(1+A/n)) ≤
+      (N:ℝ)^η*((N:ℝ)+A*(harmonic N:ℝ)) :=
+  @TaoTrudgianYang2025.sum_positive_displacement_weight_le_harmonic η A N hη hA
+
+example {ε A : ℝ} {N : ℕ} (hε : 0 < ε) (hA : 0 ≤ A) (hN : 1 ≤ N) :
+    (∑ n ∈ Finset.Icc 1 N, (n:ℝ)^(ε/2)*(1+A/n)) ≤
+      (1+2/ε)*(N:ℝ)^ε*((N:ℝ)+A) :=
+  @TaoTrudgianYang2025.sum_positive_displacement_weight_le ε A N hε hA hN
+
+example (S : Finset (ℤ × ℤ)) {d Q B : ℝ}
+    (hQ : 0 ≤ Q) (hB : 0 ≤ B)
+    (hq : ∀ p ∈ S, |(p.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*d+(p.1:ℝ)-(p.2:ℝ)| ≤ B) :
+    (S.card:ℝ) ≤ (4*Q+1)*(2*B+1) :=
+  @TaoTrudgianYang2025.integer_affine_band_pairs_card_le S d Q B hQ hB hq hband
+
+example (S : Finset (ℤ × ℤ × ℤ)) {d : ℤ} {Q B : ℝ}
+    (hQ : 0 ≤ Q) (hB : 0 ≤ B)
+    (hd : ∀ p ∈ S, p.1 = d)
+    (hq : ∀ p ∈ S, |(p.2.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*(p.1:ℝ)+(p.2.1:ℝ)-(p.2.2:ℝ)| ≤ B) :
+    (S.card:ℝ) ≤ (4*Q+1)*(2*B+1) :=
+  @TaoTrudgianYang2025.integer_fixed_displacement_band_card_le S d Q B hQ hB hd hq hband
+
+example (S : Finset ℤ) (f : ℕ → ℝ) {N : ℕ}
+    (hf : ∀ n ∈ Finset.Icc 1 N, 0 ≤ f n)
+    (hmem : ∀ d ∈ S, d.natAbs ∈ Finset.Icc 1 N) :
+    (∑ d ∈ S, f d.natAbs) ≤ 2*∑ n ∈ Finset.Icc 1 N, f n :=
+  @TaoTrudgianYang2025.sum_integer_natAbs_le_twice S f N hf hmem
+
+example (S : Finset ℤ) {ε A : ℝ} {N : ℕ}
+    (hε : 0 < ε) (hA : 0 ≤ A) (hN : 1 ≤ N)
+    (hmem : ∀ d ∈ S, d.natAbs ∈ Finset.Icc 1 N) :
+    (∑ d ∈ S, (d.natAbs:ℝ)^(ε/2)*(1+A/d.natAbs)) ≤
+      2*(1+2/ε)*(N:ℝ)^ε*((N:ℝ)+A) :=
+  @TaoTrudgianYang2025.sum_signed_displacement_weight_le S ε A N hε hA hN hmem
+
+example (S : Finset (ℤ × ℤ × ℤ)) (f : ℕ → ℝ) {N : ℕ} {Q B : ℝ}
+    (hQ : 0 ≤ Q) (hB : 0 ≤ B)
+    (hf : ∀ n ∈ Finset.Icc 1 N, 0 ≤ f n)
+    (hd : ∀ p ∈ S, p.1.natAbs ∈ Finset.Icc 1 N)
+    (hq : ∀ p ∈ S, |(p.2.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*(p.1:ℝ)+(p.2.1:ℝ)-(p.2.2:ℝ)| ≤ B) :
+    (∑ p ∈ S, f p.1.natAbs) ≤
+      (4*Q+1)*(2*B+1)*(2*∑ n ∈ Finset.Icc 1 N, f n) :=
+  @TaoTrudgianYang2025.sum_affine_frequency_weight_le S f N Q B hQ hB hf hd hq hband
+
+example (S : Finset (ℤ × ℤ × ℤ)) {N : ℕ} {Q B ε A : ℝ}
+    (hQ : 0 ≤ Q) (hB : 0 ≤ B) (hε : 0 < ε) (hA : 0 ≤ A) (hN : 1 ≤ N)
+    (hd : ∀ p ∈ S, p.1.natAbs ∈ Finset.Icc 1 N)
+    (hq : ∀ p ∈ S, |(p.2.1:ℝ)| ≤ 2*Q)
+    (hband : ∀ p ∈ S, |2*(p.1:ℝ)+(p.2.1:ℝ)-(p.2.2:ℝ)| ≤ B) :
+    (∑ p ∈ S, (p.1.natAbs:ℝ)^(ε/2)*(1+A/p.1.natAbs)) ≤
+      2*(1+2/ε)*(4*Q+1)*(2*B+1)*(N:ℝ)^ε*((N:ℝ)+A) :=
+  @TaoTrudgianYang2025.sum_affine_frequency_rpow_weight_le S N Q B ε A hQ hB hε hA hN hd hq hband
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosPrimitiveSystem R H Q δ p)
+    (hH : 0 < H) (hQ : 0 < Q) (hδ : δ ≤ 1) :
+    p.d.natAbs ∈ Finset.Icc 1 ⌊9*Q⌋₊ :=
+  @TaoTrudgianYang2025.RobertSargosPrimitiveSystem.displacement_natAbs_mem R H Q δ p h hH hQ hδ
+
+example (S : Finset RobertSargosPoint) {R H Q δ ε A C : ℝ}
+    (hH : 0 < H) (hQ : 1 ≤ Q) (hδ : δ ∈ Set.Icc 0 1)
+    (hR : 0 ≤ R) (hε : 0 < ε) (hA : 0 ≤ A) (hC : 0 ≤ C)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p)
+    (hfiber : ∀ z : ℤ × ℤ × ℤ,
+      ((S.filter (fun p => robertSargosFrequencyKey p = z)).card:ℝ) ≤
+        C*(z.1.natAbs:ℝ)^(ε/2)*(1+A/z.1.natAbs)) :
+    (S.card:ℝ) ≤ C*(2*(1+2/ε)*(4*Q+1)*
+      (2*(δ*Q+99*R*Q/H)+1)*(⌊9*Q⌋₊:ℝ)^ε*((⌊9*Q⌋₊:ℝ)+A)) :=
+  @TaoTrudgianYang2025.robertSargos_card_le_weighted_frequency_sum S R H Q δ ε A C hH hQ hδ hR hε hA hC hmem hfiber
+
+example {Q B ε A : ℝ} (hQ : 1 ≤ Q) (hB : 0 ≤ B)
+    (hε : 0 < ε) (hA : 0 ≤ A) :
+    2*(1+2/ε)*(4*Q+1)*(2*B+1)*(⌊9*Q⌋₊:ℝ)^ε*((⌊9*Q⌋₊:ℝ)+A) ≤
+      (180*(1+2/ε)*(9:ℝ)^ε)*Q^ε*Q*(1+B)*(Q+A) :=
+  @TaoTrudgianYang2025.robertSargos_weighted_sum_scale Q B ε A hQ hB hε hA
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      0 ≤ R → 0 < H → 1 ≤ Q → δ ∈ Set.Icc 0 1 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*Q^ε*Q*(1+(δ*Q+99*R*Q/H))*(Q+8*H^2*δ) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_conic_weight ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      0 ≤ R → 0 < H → 1 ≤ Q → δ ∈ Set.Icc 0 1 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*Q^ε*Q*(1+(δ*Q+99*R*Q/H))*(Q+72*H*R) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_linear_weight ε hε
+
+example {R H Q δ : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hδ : 0 ≤ δ) (hQH : Q ≤ H) (hδR : δ ≤ R/H) :
+    Q*(1+(δ*Q+99*R*Q/H))*(Q+8*H^2*δ) ≤
+      1000*(R*H*Q)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.robertSargos_conic_count_algebra R H Q δ hR hH hQ hδ hQH hδR
+
+example {R H Q δ : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hδ : 0 ≤ δ) (hQH : Q ≤ H) (hRδ : R/H ≤ δ) :
+    Q*(1+(δ*Q+99*R*Q/H))*(Q+72*H*R) ≤
+      7300*(R*H*Q)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.robertSargos_linear_count_algebra R H Q δ hR hH hQ hδ hQH hRδ
+
+example {R H Q δ ε K W : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hε : 0 ≤ ε) (hW : 0 ≤ W)
+    (hbound : W ≤ K*(R*H*Q)*(1+δ*Q)) :
+    Q^ε*W ≤ K*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.robertSargos_frequency_loss_algebra R H Q δ ε K W hR hH hQ hε hW hbound
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → δ ∈ Set.Icc 0 1 → Q ≤ H →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_narrow_frequency ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → δ ∈ Set.Icc 0 1 → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_small_tolerance ε hε
+
+example (S : Finset (ℤ × ℤ)) {m : ℤ} (hm : m ≠ 0)
+    (hpos : ∀ p ∈ S, 0 < p.1)
+    (hprod : ∀ p ∈ S, p.1*p.2 = m) :
+    S.card ≤ m.natAbs.divisors.card :=
+  @TaoTrudgianYang2025.positive_integer_product_pairs_card_le S m hm hpos hprod
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset (ℤ × ℤ)) (m : ℤ) (M : ℝ),
+      m ≠ 0 → (m.natAbs:ℝ) ≤ M →
+      (∀ p ∈ S, 0 < p.1) → (∀ p ∈ S, p.1*p.2 = m) →
+      (S.card:ℝ) ≤ C*M^ε :=
+  @TaoTrudgianYang2025.exists_positive_integer_product_pairs_bound ε hε
+
+example (S : Finset ((ℤ × ℤ × ℤ) × ℤ)) {a₁ b₁ a₂ b₂ a₃ b₃ a₄ b₄ : ℝ}
+    (h₁ : a₁ ≤ b₁) (h₂ : a₂ ≤ b₂) (h₃ : a₃ ≤ b₃) (h₄ : a₄ ≤ b₄)
+    (hx : ∀ p ∈ S, (p.1.1:ℝ) ∈ Set.Icc a₁ b₁)
+    (hy : ∀ p ∈ S, (p.1.2.1:ℝ) ∈ Set.Icc a₂ b₂)
+    (hz : ∀ p ∈ S, (p.1.2.2:ℝ) ∈ Set.Icc a₃ b₃)
+    (hw : ∀ p ∈ S, (p.2:ℝ) ∈ Set.Icc a₄ b₄) :
+    (S.card:ℝ) ≤ (b₁-a₁+1)*(b₂-a₂+1)*(b₃-a₃+1)*(b₄-a₄+1) :=
+  @TaoTrudgianYang2025.integer_box_quadruples_card_le S a₁ b₁ a₂ b₂ a₃ b₃ a₄ b₄ h₁ h₂ h₃ h₄ hx hy hz hw
+
+example {p q : RobertSargosPoint}
+    (hk : robertSargosProductKey p = robertSargosProductKey q)
+    (hh : p.h₂ = q.h₂) (hq : p.q₂ = q.q₂) : p = q :=
+  @TaoTrudgianYang2025.robertSargos_product_key_injective p q hk hh hq
+
+example (S : Finset RobertSargosPoint) {R H Q δ : ℝ}
+    (hR : 0 ≤ R) (hH : 0 < H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) :
+    ((S.image robertSargosProductKey).card:ℝ) ≤
+      (2*R+1)*(H+1)*(4*Q+1)*(2*(δ+8)*Q+1) :=
+  @TaoTrudgianYang2025.robertSargos_product_image_card_le_box S R H Q δ hR hH hQ hδ hmem
+
+example (S : Finset RobertSargosPoint) {R H Q δ : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q) (hδ : 1 ≤ δ)
+    (hmem : ∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) :
+    ((S.image robertSargosProductKey).card:ℝ) ≤ 570*δ*R*H*Q^2 :=
+  @TaoTrudgianYang2025.robertSargos_product_image_card_le S R H Q δ hR hH hQ hδ hmem
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ)
+      (z : (ℤ × ℤ × ℤ) × ℤ), 0 < H → 0 < Q →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (∀ p ∈ S, robertSargosProductKey p = z) →
+      (S.card:ℝ) ≤ C*(4*H*Q)^ε :=
+  @TaoTrudgianYang2025.exists_robertSargos_product_fiber_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ δ →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count_large_tolerance ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosPrimitiveSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_primitive_count ε hε
+
+example : RobertSargosPrimitiveSystem 2 4 3 1 ⟨-2,6,4,5,8,-1⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : RobertSargosPrimitiveSystem 2 4 3 1 ⟨2,6,4,5,7,-1⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : robertSargosFrequencyKey ⟨-2,6,4,5,8,-1⟩ =
+    robertSargosFrequencyKey ⟨2,6,4,5,7,-1⟩ := rfl
+
+example : (⟨-2,6,4,5,8,-1⟩ : RobertSargosPoint) ≠ ⟨2,6,4,5,7,-1⟩ := by
+  decide
+
+example : (({((2:ℤ),6),(3,4),(4,3),(6,2)} : Finset (ℤ × ℤ)).card) ≤
+    (12:ℕ).divisors.card :=
+  positive_integer_product_pairs_card_le _ (by norm_num : (12:ℤ) ≠ 0)
+    (by norm_num) (by norm_num)
+
+example : (({((2:ℤ),-6),(3,-4),(4,-3),(6,-2)} : Finset (ℤ × ℤ)).card) ≤
+    (12:ℕ).divisors.card := by
+  exact positive_integer_product_pairs_card_le
+      ({((2:ℤ),-6),(3,-4),(4,-3),(6,-2)} : Finset (ℤ × ℤ))
+      (by norm_num : (-12:ℤ) ≠ 0) (by norm_num) (by norm_num)
+
+example : (∑ d ∈ ({(-2:ℤ),-1,1,2} : Finset ℤ), (d.natAbs:ℝ)) ≤
+    2*∑ n ∈ Finset.Icc (1:ℕ) 2, (n:ℝ) :=
+  sum_integer_natAbs_le_twice _ _ (by intro n _; positivity) (by norm_num)
+
+example {R H Q : ℝ} (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hQH : Q ≤ H) : Q*(1+((0:ℝ)*Q+99*R*Q/H))*(Q+8*H^2*0) ≤
+    1000*(R*H*Q)*(1+0*Q) :=
+  robertSargos_conic_count_algebra (R := R) (H := H) (Q := Q)
+    (by assumption) (by assumption) (by assumption) (by norm_num)
+    (by assumption) (by positivity)
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosPrimitiveCountingRegression
+
+section RobertSargosSevenCountingRegression
+
+example (a b c : ℤ) :
+    (integerTripleGcd a b c:ℤ) ∣ a ∧
+      (integerTripleGcd a b c:ℤ) ∣ b ∧
+      (integerTripleGcd a b c:ℤ) ∣ c :=
+  @TaoTrudgianYang2025.integerTripleGcd_dvd a b c
+
+example {a b c : ℤ} (ha : a ≠ 0) :
+    0 < integerTripleGcd a b c :=
+  @TaoTrudgianYang2025.integerTripleGcd_pos a b c ha
+
+example {a b c : ℤ} (ha : a ≠ 0) :
+    integerTripleGcd a b c ≤ a.natAbs :=
+  @TaoTrudgianYang2025.integerTripleGcd_le_natAbs a b c ha
+
+example (g : ℕ) (a b c : ℤ) :
+    integerTripleGcd ((g:ℤ)*a) ((g:ℤ)*b) ((g:ℤ)*c) =
+      g*integerTripleGcd a b c :=
+  @TaoTrudgianYang2025.integerTripleGcd_mul_nat g a b c
+
+example {a b c : ℤ} (ha : a ≠ 0) :
+    integerTripleGcd
+      (a/(integerTripleGcd a b c:ℤ))
+      (b/(integerTripleGcd a b c:ℤ))
+      (c/(integerTripleGcd a b c:ℤ)) = 1 :=
+  @TaoTrudgianYang2025.integerTripleGcd_quotient_primitive a b c ha
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosPrimitiveSystem R H Q δ p) :
+    RobertSargosReducedSystem R H Q δ p :=
+  @TaoTrudgianYang2025.RobertSargosPrimitiveSystem.to_reduced R H Q δ p h
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosReducedSystem R H Q δ p)
+    (hc : Int.gcd (Int.gcd p.d p.q₁ : ℤ) p.q₂ = 1)
+    (hh : Int.gcd (Int.gcd p.r p.h₁ : ℤ) p.h₂ = 1) :
+    RobertSargosPrimitiveSystem R H Q δ p :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.to_primitive R H Q δ p h hc hh
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosReducedSystem R H Q δ p) :
+    (p.r:ℝ)*p.d+(p.h₁:ℝ)*p.q₁-(p.h₂:ℝ)*p.q₂ = 0 :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.linear_real R H Q δ p h
+
+example {R H Q δ : ℝ} {p : RobertSargosPoint}
+    (h : RobertSargosReducedSystem R H Q δ p) (hH : 0 < H) (hQ : 0 < Q) :
+    |(p.d:ℝ)| ≤ (δ+8)*Q :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.displacement_le R H Q δ p h hH hQ
+
+example (p : RobertSargosPoint) {j k : ℕ}
+    (hj : j = robertSargosCoefficientGcd p) (hk : k = robertSargosFrequencyGcd p) :
+    robertSargosRestore j k (robertSargosNormalize j k p) = p :=
+  @TaoTrudgianYang2025.robertSargos_restore_normalize p j k hj hk
+
+example (S : Finset RobertSargosPoint) {j k : ℕ}
+    (hj : ∀ p ∈ S, j = robertSargosCoefficientGcd p)
+    (hk : ∀ p ∈ S, k = robertSargosFrequencyGcd p) :
+    Set.InjOn (robertSargosNormalize j k) S :=
+  @TaoTrudgianYang2025.robertSargos_normalize_injective_on_gcd_fiber S j k hj hk
+
+example (p : RobertSargosPoint) {j k : ℕ}
+    (hr : p.r ≠ 0) (hd : p.d ≠ 0)
+    (hj : j = robertSargosCoefficientGcd p) (hk : k = robertSargosFrequencyGcd p) :
+    robertSargosCoefficientGcd (robertSargosNormalize j k p) = 1 ∧
+      robertSargosFrequencyGcd (robertSargosNormalize j k p) = 1 :=
+  @TaoTrudgianYang2025.robertSargos_normalized_gcds p j k hr hd hj hk
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p) :
+    0 < robertSargosCoefficientGcd p :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.coefficient_gcd_pos R H Q δ p h
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p) :
+    0 < robertSargosFrequencyGcd p :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.frequency_gcd_pos R H Q δ p h
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p) :
+    (robertSargosCoefficientGcd p:ℝ) ≤ R :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.coefficient_gcd_le R H Q δ p h
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p) (hQ : 0 < Q) :
+    (robertSargosFrequencyGcd p:ℝ) ≤ 2*Q :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.frequency_gcd_le R H Q δ p h hQ
+
+example (r q₁ q₂ h₁ h₂ d j k : ℝ)
+    (hj : j ≠ 0) (hk : k ≠ 0) :
+    (r/j)*(d/k)+(h₁/j)*(q₁/k)-(h₂/j)*(q₂/k) =
+      (r*d+h₁*q₁-h₂*q₂)/(j*k) :=
+  @TaoTrudgianYang2025.robertSargos_linear_div r q₁ q₂ h₁ h₂ d j k hj hk
+
+example (r q₁ q₂ h₁ h₂ d j k : ℝ)
+    (hj : j ≠ 0) (hk : k ≠ 0) :
+    robertSargosReduced (r/j) (q₁/k) (q₂/k) (h₁/j) (h₂/j) (d/k) =
+      robertSargosReduced r q₁ q₂ h₁ h₂ d/(j*k^2) :=
+  @TaoTrudgianYang2025.robertSargos_reduced_div r q₁ q₂ h₁ h₂ d j k hj hk
+
+example {a : ℤ} {g : ℕ} {A B : ℝ}
+    (hg : 0 < g) (hdiv : (g:ℤ) ∣ a)
+    (hab : (a:ℝ) ∈ Set.Icc A B) :
+    ((a/(g:ℤ):ℤ):ℝ) ∈ Set.Icc (A/(g:ℝ)) (B/(g:ℝ)) :=
+  @TaoTrudgianYang2025.integer_ediv_interval_support a g A B hg hdiv hab
+
+example {a : ℤ} {g : ℕ} {A B : ℝ}
+    (hg : 0 < g) (hdiv : (g:ℤ) ∣ a)
+    (hab : |(a:ℝ)| ∈ Set.Icc A B) :
+    |((a/(g:ℤ):ℤ):ℝ)| ∈ Set.Icc (A/(g:ℝ)) (B/(g:ℝ)) :=
+  @TaoTrudgianYang2025.integer_ediv_abs_support a g A B hg hdiv hab
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p)
+    {j k : ℕ} (hj : j = robertSargosCoefficientGcd p)
+    (hk : k = robertSargosFrequencyGcd p) :
+    RobertSargosReducedSystem (R/j) (H/j) (Q/k) δ (robertSargosNormalize j k p) :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.normalized R H Q δ p h j k hj hk
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p)
+    (hH : 0 ≤ H) (hQ : 0 < Q) (hδ : 0 ≤ δ) :
+    RobertSargosReducedSystem R H (max 1 Q) δ p :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.frequency_at_least_one R H Q δ p h hH hQ hδ
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p)
+    (hH : 0 ≤ H) (hQ : 0 < Q) (hδ : 0 ≤ δ)
+    {j k : ℕ} (hj : j = robertSargosCoefficientGcd p)
+    (hk : k = robertSargosFrequencyGcd p) :
+    RobertSargosPrimitiveSystem (R/j) (H/j) (max 1 (Q/k)) δ
+      (robertSargosNormalize j k p) :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.normalized_primitive R H Q δ p h hH hQ hδ j k hj hk
+
+example {R H Q : ℝ} {j : ℕ} (k : ℕ)
+    (hj : 0 < j) (hjR : (j:ℝ) ≤ R) (hRH : R ≤ H/2) :
+    1 ≤ R/j ∧ 1 ≤ H/j ∧ 1 ≤ max 1 (Q/k) ∧ R/j ≤ (H/j)/2 :=
+  @TaoTrudgianYang2025.robertSargos_normalized_scale_conditions R H Q j k hj hjR hRH
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ) (j k : ℕ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosReducedSystem R H Q δ p) →
+      (∀ p ∈ S, j = robertSargosCoefficientGcd p) →
+      (∀ p ∈ S, k = robertSargosFrequencyGcd p) →
+      (S.card:ℝ) ≤ C*((R/j)*(H/j)*(max 1 (Q/k)))^(1+ε)*
+        (1+δ*max 1 (Q/k)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_gcd_fiber_count ε hε
+
+example {R H Q δ η j k : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q)
+    (hδ : 0 ≤ δ) (hη : 0 ≤ η) (hj : 1 ≤ j) (hk : 1 ≤ k) (hkQ : k ≤ 2*Q) :
+    ((R/j)*(H/j)*(max 1 (Q/k)))^(1+η)*(1+δ*max 1 (Q/k)) ≤
+      4*(2:ℝ)^η*(R*H*Q)^(1+η)*(1+δ*Q)/(j*k) :=
+  @TaoTrudgianYang2025.robertSargos_gcd_scale_bound R H Q δ η j k hR hH hQ hδ hη hj hk hkQ
+
+example (J K : ℕ) :
+    (∑ j ∈ Finset.Icc 1 J, ∑ k ∈ Finset.Icc 1 K, (1:ℝ)/((j:ℝ)*(k:ℝ))) =
+      (harmonic J:ℝ)*(harmonic K:ℝ) :=
+  @TaoTrudgianYang2025.sum_inverse_gcd_product J K
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ R H Q : ℝ, 1 ≤ R → 1 ≤ H → 1 ≤ Q →
+      (harmonic ⌊R⌋₊:ℝ)*(harmonic ⌊2*Q⌋₊:ℝ) ≤ C*(R*H*Q)^ε :=
+  @TaoTrudgianYang2025.exists_robertSargos_gcd_harmonic_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ) (j k : ℕ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ δ → R ≤ H/2 →
+      1 ≤ j → 1 ≤ k → (k:ℝ) ≤ 2*Q →
+      (∀ p ∈ S, RobertSargosReducedSystem R H Q δ p) →
+      (∀ p ∈ S, j = robertSargosCoefficientGcd p) →
+      (∀ p ∈ S, k = robertSargosFrequencyGcd p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q)/((j:ℝ)*(k:ℝ)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_weighted_gcd_fiber_count ε hε
+
+example {R H Q δ : ℝ}
+    {p : RobertSargosPoint} (h : RobertSargosReducedSystem R H Q δ p) (hQ : 0 < Q) :
+    robertSargosGcdKey p ∈ (Finset.Icc 1 ⌊R⌋₊) ×ˢ (Finset.Icc 1 ⌊2*Q⌋₊) :=
+  @TaoTrudgianYang2025.RobertSargosReducedSystem.gcd_key_mem R H Q δ p h hQ
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosPoint) (R H Q δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosReducedSystem R H Q δ p) →
+      (S.card:ℝ) ≤ C*(R*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_reduced_count ε hε
+
+example (p : RobertSargosSevenPoint) :
+    robertSargosSevenRestore (robertSargosDisplacementPoint p) p.n₂ = p :=
+  @TaoTrudgianYang2025.robertSargos_seven_restore p
+
+example {p q : RobertSargosSevenPoint}
+    (hd : robertSargosDisplacementPoint p = robertSargosDisplacementPoint q)
+    (hn : p.n₂ = q.n₂) : p = q :=
+  @TaoTrudgianYang2025.robertSargos_displacement_joint_injective p q hd hn
+
+example {R H Q N δ : ℝ}
+    {p : RobertSargosSevenPoint} (h : RobertSargosSevenSystem R H Q N δ p) :
+    robertSargosLinear p.r p.q₁ p.h₁ p.n₁ =
+      robertSargosLinear p.r p.q₂ p.h₂ p.n₂ :=
+  @TaoTrudgianYang2025.RobertSargosSevenSystem.linear_real R H Q N δ p h
+
+example {R H Q N δ : ℝ}
+    {p : RobertSargosSevenPoint} (h : RobertSargosSevenSystem R H Q N δ p)
+    (hne : p.n₁ ≠ p.n₂) :
+    RobertSargosReducedSystem R H Q δ (robertSargosDisplacementPoint p) :=
+  @TaoTrudgianYang2025.RobertSargosSevenSystem.to_reduced R H Q N δ p h hne
+
+example (S : Finset RobertSargosSevenPoint) {R H Q N δ : ℝ} {z : RobertSargosPoint}
+    (hN : 1 ≤ N) (hmem : ∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p)
+    (hfix : ∀ p ∈ S, robertSargosDisplacementPoint p = z) :
+    (S.card:ℝ) ≤ N :=
+  @TaoTrudgianYang2025.robertSargos_displacement_fiber_card_le S R H Q N δ z hN hmem hfix
+
+example (S : Finset RobertSargosSevenPoint) {R H Q N δ : ℝ}
+    (hN : 1 ≤ N) (hmem : ∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) :
+    (S.card:ℝ) ≤ N*((S.image robertSargosDisplacementPoint).card:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_seven_card_le_displacement_image S R H Q N δ hN hmem
+
+example {N B ε : ℝ}
+    (hN : 1 ≤ N) (hB : 0 ≤ B) (hε : 0 ≤ ε) :
+    N*B^(1+ε) ≤ (N*B)^(1+ε) :=
+  @TaoTrudgianYang2025.robertSargos_count_multiplicity_algebra N B ε hN hB hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) →
+      (∀ p ∈ S, p.n₁ ≠ p.n₂) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_seven_nonzero_count ε hε
+
+example {p q : RobertSargosSevenPoint}
+    (hk : robertSargosZeroKey p = robertSargosZeroKey q)
+    (hh : p.h₂ = q.h₂) (hq : p.q₂ = q.q₂)
+    (hp0 : p.n₁ = p.n₂) (hq0 : q.n₁ = q.n₂) : p = q :=
+  @TaoTrudgianYang2025.robertSargos_zero_key_injective p q hk hh hq hp0 hq0
+
+example {R H Q N δ : ℝ}
+    {p : RobertSargosSevenPoint} (h : RobertSargosSevenSystem R H Q N δ p)
+    (hzero : p.n₁ = p.n₂) : p.h₂*p.q₂ = p.h₁*p.q₁ :=
+  @TaoTrudgianYang2025.RobertSargosSevenSystem.zero_product R H Q N δ p h hzero
+
+example (S : Finset RobertSargosSevenPoint) {R H Q N δ : ℝ}
+    (hR : 1 ≤ R) (hH : 1 ≤ H) (hQ : 1 ≤ Q) (hN : 1 ≤ N)
+    (hmem : ∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) :
+    ((S.image robertSargosZeroKey).card:ℝ) ≤ 30*R*H*Q*N :=
+  @TaoTrudgianYang2025.robertSargos_zero_image_card_le S R H Q N δ hR hH hQ hN hmem
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N δ : ℝ)
+      (z : (ℤ × ℤ × ℤ) × ℤ), 0 < H → 0 < Q →
+      (∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) →
+      (∀ p ∈ S, robertSargosZeroKey p = z) →
+      (∀ p ∈ S, p.n₁ = p.n₂) →
+      (S.card:ℝ) ≤ C*(4*H*Q)^ε :=
+  @TaoTrudgianYang2025.exists_robertSargos_zero_fiber_bound ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N →
+      (∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) →
+      (∀ p ∈ S, p.n₁ = p.n₂) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε) :=
+  @TaoTrudgianYang2025.exists_robertSargos_seven_zero_count ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N → 0 ≤ δ → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosSevenSystem R H Q N δ p) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_seven_count ε hε
+
+example {R H Q N δ : ℝ} {p : RobertSargosSevenPoint}
+    (hr : 0 < |(p.r:ℝ)| ∧ |(p.r:ℝ)| < R)
+    (hq₁ : |(p.q₁:ℝ)| ∈ Set.Ico Q (2*Q))
+    (hq₂ : |(p.q₂:ℝ)| ∈ Set.Ico Q (2*Q))
+    (hh₁ : (p.h₁:ℝ) ∈ Set.Ico H (2*H))
+    (hh₂ : (p.h₂:ℝ) ∈ Set.Ico H (2*H))
+    (hn₁ : (p.n₁:ℝ) ∈ Set.Icc 1 N) (hn₂ : (p.n₂:ℝ) ∈ Set.Icc 1 N)
+    (hsign : 0 < p.q₁*p.q₂)
+    (hline : p.r*p.n₁+p.h₁*p.q₁ = p.r*p.n₂+p.h₂*p.q₂)
+    (hnear : |robertSargosQuadratic p.r p.q₁ p.h₁ p.n₁-
+      robertSargosQuadratic p.r p.q₂ p.h₂ p.n₂| ≤ δ*H*Q^2) :
+    RobertSargosSevenSystem R H Q N δ p :=
+  @TaoTrudgianYang2025.robertSargos_sevenSystem_of_source_bounds R H Q N δ p hr hq₁ hq₂ hh₁ hh₂ hn₁ hn₂ hsign hline hnear
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N δ : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N → 0 < δ → R ≤ H/2 →
+      (∀ p ∈ S, 0 < |(p.r:ℝ)| ∧ |(p.r:ℝ)| < R) →
+      (∀ p ∈ S, |(p.q₁:ℝ)| ∈ Set.Ico Q (2*Q)) →
+      (∀ p ∈ S, |(p.q₂:ℝ)| ∈ Set.Ico Q (2*Q)) →
+      (∀ p ∈ S, (p.h₁:ℝ) ∈ Set.Ico H (2*H)) →
+      (∀ p ∈ S, (p.h₂:ℝ) ∈ Set.Ico H (2*H)) →
+      (∀ p ∈ S, (p.n₁:ℝ) ∈ Set.Icc 1 N) →
+      (∀ p ∈ S, (p.n₂:ℝ) ∈ Set.Icc 1 N) →
+      (∀ p ∈ S, 0 < p.q₁*p.q₂) →
+      (∀ p ∈ S, p.r*p.n₁+p.h₁*p.q₁ = p.r*p.n₂+p.h₂*p.q₂) →
+      (∀ p ∈ S, |robertSargosQuadratic p.r p.q₁ p.h₁ p.n₁-
+        robertSargosQuadratic p.r p.q₂ p.h₂ p.n₂| ≤ δ*H*Q^2) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε)*(1+δ*Q) :=
+  @TaoTrudgianYang2025.exists_robertSargos_source_count ε hε
+
+example : integerTripleGcd 6 10 14 = 2 := by decide
+
+example : integerTripleGcd (-6) 10 (-14) = 2 := by decide
+
+example : robertSargosNormalize 2 4 ⟨2,12,16,4,4,8⟩ = ⟨1,3,4,2,2,2⟩ := by decide
+
+example : RobertSargosReducedSystem 2 4 12 1 ⟨2,12,16,4,4,8⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : RobertSargosReducedSystem 1 4 3 4 ⟨1,4,4,4,5,4⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+
+example : robertSargosFrequencyGcd ⟨1,4,4,4,5,4⟩ = 4 := by decide
+
+example : RobertSargosPrimitiveSystem 1 4 (max 1 (3/4)) 4
+    (robertSargosNormalize 1 4 ⟨1,4,4,4,5,4⟩) := by
+  have h : RobertSargosReducedSystem 1 4 3 4 ⟨1,4,4,4,5,4⟩ := by
+    constructor <;> norm_num [Set.mem_Icc,robertSargosReduced]
+  simpa only [Nat.cast_one,div_one] using
+    h.normalized_primitive (j := 1) (k := 4)
+      (by norm_num) (by norm_num) (by norm_num) (by decide) (by decide)
+
+example : (max 1 (3/4) : ℝ) = 1 := by norm_num
+
+example : RobertSargosSevenSystem (3/2) 3 3 6 4 ⟨1,3,4,4,4,5,1⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosQuadratic]
+
+example : RobertSargosSevenSystem (3/2) 3 3 6 4 ⟨1,3,4,4,4,6,2⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosQuadratic]
+
+example : RobertSargosSevenSystem (3/2) 3 3 6 4 ⟨1,-3,-4,4,4,1,5⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosQuadratic]
+
+example : RobertSargosSevenSystem (3/2) 3 3 1 0 ⟨1,3,3,4,4,1,1⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosQuadratic]
+
+example : RobertSargosSevenSystem (3/2) 3 3 6 4 ⟨1,3,4,4,4,5,1⟩ :=
+  robertSargos_sevenSystem_of_source_bounds
+    (by norm_num) (by norm_num [Set.mem_Ico]) (by norm_num [Set.mem_Ico])
+    (by norm_num [Set.mem_Ico]) (by norm_num [Set.mem_Ico])
+    (by norm_num [Set.mem_Icc]) (by norm_num [Set.mem_Icc])
+    (by norm_num) (by norm_num) (by norm_num [robertSargosQuadratic])
+
+example : (({⟨1,3,4,4,4,5,1⟩,⟨1,3,4,4,4,6,2⟩} :
+    Finset RobertSargosSevenPoint).card = 2) ∧
+    ((({⟨1,3,4,4,4,5,1⟩,⟨1,3,4,4,4,6,2⟩} :
+      Finset RobertSargosSevenPoint).image robertSargosDisplacementPoint).card = 1) := by
+  decide
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosSevenCountingRegression
+
+section RobertSargosFourthDifferencingRegression
+
+open TaoTrudgianYang2025 GafniTao Set
+open scoped BigOperators InnerProductSpace ContDiff
+
+example (p : RobertSargosSevenPoint) :
+    robertSargosReverseR (robertSargosReverseR p) = p :=
+  @TaoTrudgianYang2025.robertSargos_reverseR_involution p
+
+example : Function.Injective robertSargosReverseR :=
+  @TaoTrudgianYang2025.robertSargos_reverseR_injective
+
+example {R H Q N E : ℝ}
+    {p : RobertSargosSevenPoint} (h : RobertSargosTaylorSystem R H Q N E p)
+    (hR : 0 ≤ R) (hH : 0 ≤ H) (hRH : R ≤ H) :
+    |robertSargosQuadratic (-p.r) p.q₁ p.h₁ p.n₁-
+      robertSargosQuadratic (-p.r) p.q₂ p.h₂ p.n₂| ≤ E+12*R*H^2 :=
+  @TaoTrudgianYang2025.RobertSargosTaylorSystem.counting_near R H Q N E p h hR hH hRH
+
+example {R H Q N E δ : ℝ}
+    {p : RobertSargosSevenPoint} (h : RobertSargosTaylorSystem R H Q N E p)
+    (hR : 0 ≤ R) (hH : 0 ≤ H) (hRH : R ≤ H)
+    (hδ : E+12*R*H^2 ≤ δ*H*Q^2) :
+    RobertSargosSevenSystem R H Q N δ (robertSargosReverseR p) :=
+  @TaoTrudgianYang2025.RobertSargosTaylorSystem.to_counting R H Q N E δ p h hR hH hRH hδ
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N E : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N → 0 ≤ E → R ≤ H/2 →
+      (∀ p ∈ S, RobertSargosTaylorSystem R H Q N E p) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε)*(1+(E+12*R*H^2)/(H*Q)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_taylor_count ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (S : Finset RobertSargosSevenPoint) (R H Q N E : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 1 ≤ N → 0 ≤ E → R ≤ H/2 →
+      R*H^2 ≤ E → (∀ p ∈ S, RobertSargosTaylorSystem R H Q N E p) →
+      (S.card:ℝ) ≤ C*(R*N*H*Q)^(1+ε)*(1+13*E/(H*Q)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_taylor_count_small_correction ε hε
+
+example {f : ℝ → ℝ} {x : ℝ} {n j : ℕ}
+    (hf : ContDiffAt ℝ (n+j) f x) :
+    ContDiffAt ℝ n (iteratedDeriv j f) x :=
+  @TaoTrudgianYang2025.contDiffAt_iteratedDeriv_finite f x n j hf
+
+example {f : ℝ → ℝ} {a x : ℝ} {n : ℕ} (hax : a ≠ x)
+    (hf : ContDiffAt ℝ n f a) :
+    taylorWithinEval f n (uIcc a x) a x = finiteTaylorPolynomial f n a x :=
+  @TaoTrudgianYang2025.taylorWithinEval_uIcc_eq_finiteTaylorPolynomial_finite f a x n hax hf
+
+example {f : ℝ → ℝ} {a x M : ℝ} (n : ℕ)
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ (n+1) f y)
+    (hb : ∀ y ∈ uIcc a x, |iteratedDeriv (n+1) f y| ≤ M) :
+    |f x-finiteTaylorPolynomial f n a x| ≤
+      M*|x-a|^(n+1)/(n+1).factorial :=
+  @TaoTrudgianYang2025.abs_finiteTaylorPolynomial_remainder_le_finite f a x M n hf hb
+
+example {f : ℝ → ℝ} {a x M : ℝ} {j Q : ℕ} (hj : j ≤ Q)
+    (hf : ∀ y ∈ uIcc a x, ContDiffAt ℝ (Q+1) f y)
+    (hb : ∀ y ∈ uIcc a x, |iteratedDeriv (Q+1) f y| ≤ M) :
+    |iteratedDeriv j (fun y => f y-finiteTaylorPolynomial f Q a y) x| ≤
+      M*|x-a|^(Q+1-j) :=
+  @TaoTrudgianYang2025.abs_iteratedDeriv_finiteTaylorPolynomial_remainder_le_finite f a x M j Q hj hf hb
+
+example (f : ℝ → ℝ) (m y : ℝ) :
+    finiteTaylorPolynomial f 3 m (m+y) =
+      f m+deriv f m*y+iteratedDeriv 2 f m*y^2/2+
+        iteratedDeriv 3 f m*y^3/6 :=
+  @TaoTrudgianYang2025.robertSargos_cubic_polynomial f m y
+
+example (f : ℝ → ℝ) (m r q h n : ℝ) :
+    robertSargosSymmetricDifference f (m+n+q) h-
+      robertSargosSymmetricDifference f (m+n) (h+r) =
+      -2*r*deriv f m+2*iteratedDeriv 2 f m*robertSargosLinear (-r) q h n+
+        iteratedDeriv 3 f m*robertSargosTaylorQuadratic r q h n-
+        r^3/3*iteratedDeriv 3 f m+robertSargosMixedRemainder f m r q h n :=
+  @TaoTrudgianYang2025.robertSargos_mixed_taylor_identity f m r q h n
+
+example {f : ℝ → ℝ} {m y B : ℝ}
+    (hf : ∀ x ∈ Set.uIcc m (m+y), ContDiffAt ℝ 4 f x)
+    (hb : ∀ x ∈ Set.uIcc m (m+y), |iteratedDeriv 4 f x| ≤ B) :
+    |robertSargosCubicRemainder f m y| ≤ B*|y|^4/24 :=
+  @TaoTrudgianYang2025.abs_robertSargosCubicRemainder_le f m y B hf hb
+
+example (f : ℝ → ℝ) (m x : ℝ) :
+    iteratedDeriv 4 (finiteTaylorPolynomial f 3 m) x = 0 :=
+  @TaoTrudgianYang2025.iteratedDeriv_four_cubic_polynomial f m x
+
+example {f : ℝ → ℝ} {m y B : ℝ} {j : ℕ} (hj : j ≤ 3)
+    (hf : ∀ x ∈ Set.uIcc m (m+y), ContDiffAt ℝ 4 f x)
+    (hb : ∀ x ∈ Set.uIcc m (m+y), |iteratedDeriv 4 f x| ≤ B) :
+    |iteratedDeriv j (robertSargosCubicRemainder f m) y| ≤ B*|y|^(4-j) :=
+  @TaoTrudgianYang2025.abs_iteratedDeriv_robertSargosCubicRemainder_le f m y B j hj hf hb
+
+example {f : ℝ → ℝ} {m y : ℝ} (hf : ContDiffAt ℝ 4 f (m+y)) :
+    iteratedDeriv 4 (robertSargosCubicRemainder f m) y = iteratedDeriv 4 f (m+y) :=
+  @TaoTrudgianYang2025.iteratedDeriv_four_robertSargosCubicRemainder f m y hf
+
+example {f : ℝ → ℝ} {m y B L : ℝ} {j : ℕ} (hj : j ≤ 4)
+    (hy : |y| ≤ L)
+    (hf : ∀ x ∈ Set.uIcc m (m+y), ContDiffAt ℝ 4 f x)
+    (hb : ∀ x ∈ Set.uIcc m (m+y), |iteratedDeriv 4 f x| ≤ B) :
+    |iteratedDeriv j (robertSargosCubicRemainder f m) y| ≤ B*L^(4-j) :=
+  @TaoTrudgianYang2025.robertSargos_cubic_remainder_radius_jets f m y B L j hj hy hf hb
+
+example {ι : Type*} (S : Finset ι)
+    (w : ι → ℂ) (φ : ι → ℝ) (c : ℝ) :
+    ‖∑ i ∈ S, w i*fordAdditiveCharacter (c+φ i)‖ =
+      ‖∑ i ∈ S, w i*fordAdditiveCharacter (φ i)‖ :=
+  @TaoTrudgianYang2025.norm_sum_character_add_constant ι S w φ c
+
+example {ι : Type*} (S : Finset ι)
+    (w : ι → ℂ) (q h n : ι → ℝ) (f : ℝ → ℝ) (m r : ℝ) :
+    ‖∑ i ∈ S, w i*fordAdditiveCharacter
+      (robertSargosSymmetricDifference f (m+n i+q i) (h i)-
+        robertSargosSymmetricDifference f (m+n i) (h i+r))‖ =
+      ‖∑ i ∈ S, w i*fordAdditiveCharacter
+        (2*iteratedDeriv 2 f m*robertSargosLinear (-r) (q i) (h i) (n i)+
+          iteratedDeriv 3 f m*robertSargosTaylorQuadratic r (q i) (h i) (n i)+
+          robertSargosMixedRemainder f m r (q i) (h i) (n i))‖ :=
+  @TaoTrudgianYang2025.norm_robertSargos_mixed_sum_eq ι S w q h n f m r
+
+example (a : ℤ → ℤ → ℂ) (M H Q R q r : ℕ)
+    (hq : q < Q) (hr : r < R) :
+    (∑ m ∈ Finset.Ico (-(Q:ℤ)) M, ∑ h ∈ Finset.Ico (-(R:ℤ)) H,
+      robertSargosPaddedPlane a M H (m+q) (h+r)) =
+        ∑ m ∈ Finset.Ico (0:ℤ) M, ∑ h ∈ Finset.Ico (0:ℤ) H, a m h :=
+  @TaoTrudgianYang2025.robertSargos_plane_shift_sum a M H Q R q r hq hr
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ) :
+    ((Q*R:ℕ):ℝ)^2*
+      ‖∑ m ∈ Finset.Ico (0:ℤ) M, ∑ h ∈ Finset.Ico (0:ℤ) H, a m h‖^2 ≤
+      (((M+Q)*(H+R):ℕ):ℝ)*
+        ∑ x ∈ Finset.Ico (-(Q:ℤ)) M ×ˢ Finset.Ico (-(R:ℤ)) H,
+          ‖∑ t ∈ Finset.range Q ×ˢ Finset.range R,
+            robertSargosPaddedPlane a M H (x.1+t.1) (x.2+t.2)‖^2 :=
+  @TaoTrudgianYang2025.robertSargos_plane_averaging a M H Q R
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ) :
+    (∑ x ∈ Finset.Ico (-(Q:ℤ)) M ×ˢ Finset.Ico (-(R:ℤ)) H,
+      ‖∑ t ∈ Finset.range Q ×ˢ Finset.range R,
+        robertSargosPaddedPlane a M H (x.1+t.1) (x.2+t.2)‖^2) =
+      ∑ s ∈ Finset.range Q ×ˢ Finset.range R,
+        ∑ t ∈ Finset.range Q ×ˢ Finset.range R,
+          ∑ x ∈ Finset.Ico (-(Q:ℤ)) M ×ˢ Finset.Ico (-(R:ℤ)) H,
+            ⟪robertSargosPaddedPlane a M H (x.1+s.1) (x.2+s.2),
+              robertSargosPaddedPlane a M H (x.1+t.1) (x.2+t.2)⟫_ℝ :=
+  @TaoTrudgianYang2025.robertSargos_plane_gram a M H Q R
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (s t : ℕ × ℕ) (hs : s ∈ Finset.range Q ×ˢ Finset.range R)
+    (ht : t ∈ Finset.range Q ×ˢ Finset.range R) :
+    (∑ x ∈ Finset.Ico (-(Q:ℤ)) M ×ˢ Finset.Ico (-(R:ℤ)) H,
+      ⟪robertSargosPaddedPlane a M H (x.1+s.1) (x.2+s.2),
+        robertSargosPaddedPlane a M H (x.1+t.1) (x.2+t.2)⟫_ℝ) =
+      robertSargosPlaneCorrelation a M H ((s.1:ℤ)-t.1) ((t.2:ℤ)-s.2) :=
+  @TaoTrudgianYang2025.robertSargos_plane_gram_term a M H Q R s t hs ht
+
+example (N k : ℕ) :
+    ((Finset.range N ×ˢ Finset.range N).filter
+      (fun p => (p.1:ℤ)-p.2 = k)).card = N-k :=
+  @TaoTrudgianYang2025.card_positive_shift_difference N k
+
+example (N : ℕ) (q : ℤ) :
+    ((Finset.range N ×ˢ Finset.range N).filter
+      (fun p => (p.1:ℤ)-p.2 = -q)).card =
+      ((Finset.range N ×ˢ Finset.range N).filter
+        (fun p => (p.1:ℤ)-p.2 = q)).card :=
+  @TaoTrudgianYang2025.card_shift_difference_neg N q
+
+example (N : ℕ) (q : ℤ) :
+    ((Finset.range N ×ˢ Finset.range N).filter
+      (fun p => (p.1:ℤ)-p.2 = q)).card = N-q.natAbs :=
+  @TaoTrudgianYang2025.card_signed_shift_difference N q
+
+example (N : ℕ) (f : ℤ → ℝ) :
+    (∑ s ∈ Finset.range N, ∑ t ∈ Finset.range N, f ((s:ℤ)-t)) =
+      ∑ q ∈ Finset.Ioo (-(N:ℤ)) N, ((N-q.natAbs:ℕ):ℝ)*f q :=
+  @TaoTrudgianYang2025.sum_signed_shift_differences N f
+
+example (Q R : ℕ) (f : ℤ → ℤ → ℝ) :
+    (∑ s ∈ Finset.range Q ×ˢ Finset.range R,
+      ∑ t ∈ Finset.range Q ×ˢ Finset.range R, f ((s.1:ℤ)-t.1) ((t.2:ℤ)-s.2)) =
+      ∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+        ((Q-q.natAbs:ℕ):ℝ)*((R-r.natAbs:ℕ):ℝ)*f q r :=
+  @TaoTrudgianYang2025.sum_double_shift_differences Q R f
+
+example {N : ℕ} {q : ℤ}
+    (hq : q ∈ Finset.Ioo (-(N:ℤ)) N) :
+    ((N-q.natAbs:ℕ):ℝ) = (N:ℝ)-|(q:ℝ)| :=
+  @TaoTrudgianYang2025.signed_shift_weight_real N q hq
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) :
+    (∑ x ∈ Finset.Ico (-(Q:ℤ)) M ×ˢ Finset.Ico (-(R:ℤ)) H,
+      ‖∑ t ∈ Finset.range Q ×ˢ Finset.range R,
+        robertSargosPaddedPlane a M H (x.1+t.1) (x.2+t.2)‖^2) =
+      (Q:ℝ)*R*robertSargosWeightedCorrelations a M H Q R :=
+  @TaoTrudgianYang2025.robertSargos_plane_weighted_gram a M H Q R hQ hR
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) :
+    0 ≤ robertSargosWeightedCorrelations a M H Q R :=
+  @TaoTrudgianYang2025.robertSargos_weighted_correlations_nonneg a M H Q R hQ hR
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) M, ∑ h ∈ Finset.Ico (0:ℤ) H, a m h‖^2 ≤
+      (((M:ℝ)+Q)*((H:ℝ)+R)/((Q:ℝ)*R))*robertSargosWeightedCorrelations a M H Q R :=
+  @TaoTrudgianYang2025.robertSargos_a_times_a_exact a M H Q R hQ hR
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hQM : Q ≤ M) (hRH : R ≤ H) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) M, ∑ h ∈ Finset.Ico (0:ℤ) H, a m h‖^2 ≤
+      (4*(M:ℝ)*H/((Q:ℝ)*R))*robertSargosWeightedCorrelations a M H Q R :=
+  @TaoTrudgianYang2025.robertSargos_a_times_a a M H Q R hQ hR hQM hRH
+
+example : robertSargosReverseR ⟨1,3,4,4,5,1,9⟩ = ⟨-1,3,4,4,5,1,9⟩ := by decide
+
+example : RobertSargosTaylorSystem (3/2) 3 3 9 290 ⟨1,3,4,4,5,1,9⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosTaylorQuadratic]
+
+example : RobertSargosSevenSystem (3/2) 3 3 9 20
+    (robertSargosReverseR ⟨1,3,4,4,5,1,9⟩) := by
+  have h : RobertSargosTaylorSystem (3/2) 3 3 9 290 ⟨1,3,4,4,5,1,9⟩ := by
+    constructor <;> norm_num [Set.mem_Icc,robertSargosTaylorQuadratic]
+  exact h.to_counting (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : RobertSargosTaylorSystem (3/2) 3 3 1 0 ⟨1,3,3,4,4,1,1⟩ := by
+  constructor <;> norm_num [Set.mem_Icc,robertSargosTaylorQuadratic]
+
+example : robertSargosTaylorQuadratic 1 3 4 5 = 111 ∧
+    robertSargosQuadratic (-1) 3 4 5 = 131 := by
+  norm_num [robertSargosTaylorQuadratic,robertSargosQuadratic]
+
+example : robertSargosSymmetricDifference (fun x => x^3) 0 0-
+    robertSargosSymmetricDifference (fun x => x^3) 0 1 = -2 := by
+  norm_num [robertSargosSymmetricDifference]
+
+example : robertSargosPaddedPlane (fun m h => ((m+2*h:ℤ):ℂ)) 2 3 1 2 = 5 := by
+  norm_num [robertSargosPaddedPlane]
+
+example : robertSargosPaddedPlane (fun _ _ => (1:ℂ)) 2 3 2 2 = 0 := by
+  norm_num [robertSargosPaddedPlane]
+
+example : robertSargosPaddedPlane (fun _ _ => (1:ℂ)) 2 3 1 (-1) = 0 := by
+  norm_num [robertSargosPaddedPlane]
+
+example : ((Finset.range 5 ×ˢ Finset.range 5).filter
+    (fun p => (p.1:ℤ)-p.2 = 2)).card = 3 := by decide
+
+example : ((Finset.range 5 ×ˢ Finset.range 5).filter
+    (fun p => (p.1:ℤ)-p.2 = -2)).card = 3 := by decide
+
+example : ((Finset.range 5 ×ˢ Finset.range 5).filter
+    (fun p => (p.1:ℤ)-p.2 = 0)).card = 5 := by decide
+
+example : ((Finset.range 5 ×ˢ Finset.range 5).filter
+    (fun p => (p.1:ℤ)-p.2 = 5)).card = 0 := by decide
+
+example : ((Finset.range 5 ×ˢ Finset.range 5).filter
+    (fun p => (p.1:ℤ)-p.2 = -7)).card = 0 := by decide
+
+example : robertSargosPlaneCorrelation (fun _ _ => (1:ℂ)) 2 2 1 (-1) = 1 := by
+  norm_num [robertSargosPlaneCorrelation,robertSargosPaddedPlane,
+    show Finset.Ico (0:ℤ) 2 = {0,1} by decide,Finset.sum_product]
+
+example (a : ℤ → ℤ → ℂ) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) 4, ∑ h ∈ Finset.Ico (0:ℤ) 3, a m h‖^2 ≤
+      24*robertSargosWeightedCorrelations a 4 3 2 1 := by
+  convert robertSargos_a_times_a a 4 3 2 1 (by decide) (by decide)
+    (by decide) (by decide)
+    using 1
+  norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosFourthDifferencingRegression
+
+section RobertSargosSourceBoundaryRegression
+
+open TaoTrudgianYang2025 GafniTao
+open scoped BigOperators InnerProductSpace ComplexConjugate
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℤ → A) (M : ℕ) :
+    (∑ m ∈ Finset.Ico (0:ℤ) M, f (m+1)) = ∑ m ∈ Finset.Icc (1:ℤ) M, f m :=
+  @TaoTrudgianYang2025.robertSargos_sum_one_based A _ f M
+
+example (a : ℤ → ℤ → ℂ) (M H : ℕ)
+    (ha : ∀ m h : ℤ, m ∉ Finset.Icc (1:ℤ) M ∨ h ∉ Finset.Icc (1:ℤ) H →
+      a m h = 0) (m h : ℤ) :
+    robertSargosPaddedPlane (fun n k => a (n+1) (k+1)) M H m h = a (m+1) (h+1) :=
+  @TaoTrudgianYang2025.robertSargos_padded_source_plane a M H ha m h
+
+example (a : ℤ → ℤ → ℂ) (M H : ℕ) :
+    (∑ m ∈ Finset.Ico (0:ℤ) M, ∑ h ∈ Finset.Ico (0:ℤ) H, a (m+1) (h+1)) =
+      ∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) H, a m h :=
+  @TaoTrudgianYang2025.robertSargos_source_plane_sum a M H
+
+example (a : ℤ → ℤ → ℂ) (M H : ℕ)
+    (ha : ∀ m h : ℤ, m ∉ Finset.Icc (1:ℤ) M ∨ h ∉ Finset.Icc (1:ℤ) H →
+      a m h = 0) (q r : ℤ) :
+    robertSargosPlaneCorrelation (fun m h => a (m+1) (h+1)) M H q r =
+      ∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) H,
+        ⟪a (m+q) h,a m (h+r)⟫_ℝ :=
+  @TaoTrudgianYang2025.robertSargos_source_plane_correlation a M H ha q r
+
+example (a : ℤ → ℤ → ℂ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hQM : Q ≤ M) (hRH : R ≤ H)
+    (ha : ∀ m h : ℤ, m ∉ Finset.Icc (1:ℤ) M ∨ h ∉ Finset.Icc (1:ℤ) H →
+      a m h = 0) :
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) H, a m h‖^2 ≤
+      (4*(M:ℝ)*H/((Q:ℝ)*R))*
+        ∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+          (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+            (∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) H,
+              ⟪a (m+q) h,a m (h+r)⟫_ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_source_a_times_a a M H Q R hQ hR hQM hRH ha
+
+example (f : ℝ → ℝ) (M H : ℕ) (m h : ℤ) :
+    ‖robertSargosSymmetricArray f M H m h‖ ≤ 1 :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_array_norm f M H m h
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    (m h : ℤ) (hout : m ∉ Finset.Icc (1:ℤ) M ∨ h ∉ Finset.Icc (1:ℤ) (2*H)) :
+    robertSargosSymmetricArray f M H m h = 0 :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_array_support f M H m h hout
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    (∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) (2*H),
+      robertSargosSymmetricArray f M H m h) = robertSargosSymmetricSum f M H :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_array_sum f M H
+
+example (H : ℕ) (h r : ℤ) :
+    h ∈ robertSargosHOverlap H r ↔
+      h ∈ Finset.Ico (H:ℤ) (2*H) ∧ h+r ∈ Finset.Ico (H:ℤ) (2*H) :=
+  @TaoTrudgianYang2025.mem_robertSargosHOverlap H h r
+
+example (M : ℕ) (m h q r : ℤ) :
+    m ∈ robertSargosMOverlap M h q r ↔
+      m+q ∈ Finset.Icc (h+1) ((M:ℤ)-h) ∧
+        m ∈ Finset.Icc (h+r+1) ((M:ℤ)-(h+r)) :=
+  @TaoTrudgianYang2025.mem_robertSargosMOverlap M m h q r
+
+example (f : ℝ → ℝ) (M H : ℕ) (m h q r : ℤ) :
+    robertSargosSymmetricArray f M H (m+q) h*
+      conj (robertSargosSymmetricArray f M H m (h+r)) =
+      if h ∈ robertSargosHOverlap H r ∧ m ∈ robertSargosMOverlap M h q r then
+        fordAdditiveCharacter
+          (robertSargosSymmetricDifference f (m+q) h-
+            robertSargosSymmetricDifference f m (h+r))
+      else 0 :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_array_product f M H m h q r
+
+example (f : ℝ → ℝ) (M H : ℕ) (m h q r : ℤ) :
+    ⟪robertSargosSymmetricArray f M H (m+q) h,
+      robertSargosSymmetricArray f M H m (h+r)⟫_ℝ =
+      if h ∈ robertSargosHOverlap H r ∧ m ∈ robertSargosMOverlap M h q r then
+        (fordAdditiveCharacter
+          (robertSargosSymmetricDifference f (m+q) h-
+            robertSargosSymmetricDifference f m (h+r))).re
+      else 0 :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_array_inner f M H m h q r
+
+example (H : ℕ) (r : ℤ) :
+    robertSargosHOverlap H r ⊆ Finset.Icc (1:ℤ) (2*H) :=
+  @TaoTrudgianYang2025.robertSargos_h_overlap_subset H r
+
+example (M H : ℕ) (h q r : ℤ)
+    (hh : h ∈ robertSargosHOverlap H r) :
+    robertSargosMOverlap M h q r ⊆ Finset.Icc (1:ℤ) M :=
+  @TaoTrudgianYang2025.robertSargos_m_overlap_subset M H h q r hh
+
+example (f : ℝ → ℝ) (M H : ℕ) (q r : ℤ) :
+    (∑ m ∈ Finset.Icc (1:ℤ) M, ∑ h ∈ Finset.Icc (1:ℤ) (2*H),
+      ⟪robertSargosSymmetricArray f M H (m+q) h,
+        robertSargosSymmetricArray f M H m (h+r)⟫_ℝ) =
+      (robertSargosMixedCorrelation f M H q r).re :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_correlation_sum f M H q r
+
+example (f : ℝ → ℝ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hQM : Q ≤ M) (hRH : R ≤ 2*H) :
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      (8*(M:ℝ)*H/((Q:ℝ)*R))*
+        ∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+          (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+            (robertSargosMixedCorrelation f M H q r).re :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_a_times_a f M H Q R hQ hR hQM hRH
+
+example (S : Finset ℤ) (a b r : ℤ)
+    (hr : 0 ≤ r) :
+    S ∩ Finset.Icc (a+r) (b-r) ⊆ S ∩ Finset.Icc a b :=
+  @TaoTrudgianYang2025.integer_interval_contraction_subset S a b r hr
+
+example (S : Finset ℤ) (a b r : ℤ) :
+    (S ∩ Finset.Icc a b) \ (S ∩ Finset.Icc (a+r) (b-r)) ⊆
+      Finset.Ico a (a+r) ∪ Finset.Ioc (b-r) b :=
+  @TaoTrudgianYang2025.integer_interval_contraction_boundary S a b r
+
+example (S : Finset ℤ) (a b r : ℤ)
+    (hr : 0 ≤ r) :
+    (((S ∩ Finset.Icc a b) \ (S ∩ Finset.Icc (a+r) (b-r))).card : ℝ) ≤
+      2*(r:ℝ) :=
+  @TaoTrudgianYang2025.integer_interval_contraction_card S a b r hr
+
+example (w : ℤ → ℂ) (S : Finset ℤ)
+    (a b r : ℤ) (hr : 0 ≤ r) (hw : ∀ m ∈ S, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ S ∩ Finset.Icc a b, w m) -
+      ∑ m ∈ S ∩ Finset.Icc (a+r) (b-r), w m‖ ≤ 2*(r:ℝ) :=
+  @TaoTrudgianYang2025.norm_integer_interval_contraction w S a b r hr hw
+
+example (w : ℤ → ℂ) (S : Finset ℤ)
+    (a b r : ℤ) (hw : ∀ m ∈ S, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ S ∩ Finset.Icc (a+r) (b-r), w m) -
+      ∑ m ∈ S ∩ Finset.Icc a b, w m‖ ≤ 2*|(r:ℝ)| :=
+  @TaoTrudgianYang2025.norm_integer_interval_endpoint_shift w S a b r hw
+
+example (M : ℕ) (h q r : ℤ) :
+    robertSargosMOverlap M h q r =
+      Finset.Icc (h+1-q) ((M:ℤ)-h-q) ∩
+        Finset.Icc ((h+1)+r) (((M:ℤ)-h)-r) :=
+  @TaoTrudgianYang2025.robertSargos_m_overlap_inter M h q r
+
+example (w : ℤ → ℂ) (M : ℕ) (h q r : ℤ)
+    (hw : ∀ m ∈ Finset.Icc (h+1-q) ((M:ℤ)-h-q), ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ robertSargosMOverlap M h q r, w m) -
+      ∑ m ∈ robertSargosMOverlap M h q 0, w m‖ ≤ 2*|(r:ℝ)| :=
+  @TaoTrudgianYang2025.norm_robertSargos_m_overlap_error w M h q r hw
+
+example (H : ℕ) (r : ℤ) :
+    (robertSargosHOverlap H r).card ≤ H :=
+  @TaoTrudgianYang2025.robertSargos_h_overlap_card H r
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    (q r : ℤ) :
+    ‖robertSargosMixedCorrelation f M H q r -
+      robertSargosTrimmedCorrelation f M H q r‖ ≤ 2*(H:ℝ)*|(r:ℝ)| :=
+  @TaoTrudgianYang2025.norm_robertSargos_correlation_endpoint_error f M H q r
+
+example {N : ℕ} {q : ℤ}
+    (hq : q ∈ Finset.Ioo (-(N:ℤ)) N) : |(q:ℝ)| ≤ N :=
+  @TaoTrudgianYang2025.signed_shift_abs_le N q hq
+
+example {N : ℕ} (hN : 0 < N) {q : ℤ}
+    (hq : q ∈ Finset.Ioo (-(N:ℤ)) N) : 0 ≤ 1-|(q:ℝ)|/N :=
+  @TaoTrudgianYang2025.signed_triangular_weight_nonneg N hN q hq
+
+example (N : ℕ) (hN : 0 < N) :
+    (∑ q ∈ Finset.Ioo (-(N:ℤ)) N, (1-|(q:ℝ)|/N)) = N :=
+  @TaoTrudgianYang2025.sum_signed_triangular_weights N hN
+
+example (N : ℕ) (hN : 0 < N) :
+    (∑ q ∈ Finset.Ioo (-(N:ℤ)) N, (1-|(q:ℝ)|/N)*|(q:ℝ)|) ≤ (N:ℝ)^2 :=
+  @TaoTrudgianYang2025.signed_triangular_first_moment N hN
+
+example (Q R : ℕ) (hQ : 0 < Q) (hR : 0 < R)
+    (C : ℝ) (hC : 0 ≤ C) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(C*|(r:ℝ)|)) ≤ C*Q*(R:ℝ)^2 :=
+  @TaoTrudgianYang2025.signed_triangular_double_endpoint_error Q R hQ hR C hC
+
+example (f : ℝ → ℝ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosMixedCorrelation f M H q r).re) ≤
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosTrimmedCorrelation f M H q r).re) +
+      2*(H:ℝ)*Q*(R:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_weighted_endpoint_error f M H Q R hQ hR
+
+example (f : ℝ → ℝ) (M H Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hQM : Q ≤ M) (hRH : R ≤ 2*H) :
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      (8*(M:ℝ)*H/((Q:ℝ)*R))*
+        (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+          (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+            (robertSargosTrimmedCorrelation f M H q r).re) +
+      16*(M:ℝ)*(H:ℝ)^2*R :=
+  @TaoTrudgianYang2025.robertSargos_trimmed_a_times_a f M H Q R hQ hR hQM hRH
+
+example : robertSargosHOverlap 3 1 = Finset.Icc (3:ℤ) 4 := by decide
+
+example : robertSargosHOverlap 3 (-1) = Finset.Icc (4:ℤ) 5 := by decide
+
+example : robertSargosHOverlap 3 0 = Finset.Icc (3:ℤ) 5 := by decide
+
+example : robertSargosHOverlap 3 3 = ∅ := by decide
+
+example : robertSargosHOverlap 0 0 = ∅ := by decide
+
+example : robertSargosMOverlap 20 3 1 1 = Finset.Icc (5:ℤ) 16 := by decide
+
+example : robertSargosMOverlap 20 3 1 (-1) = Finset.Icc (3:ℤ) 16 := by decide
+
+example : robertSargosMOverlap 20 3 1 0 = Finset.Icc (4:ℤ) 16 := by decide
+
+example : (4:ℤ) ∈ robertSargosMOverlap 20 3 1 0 ∧
+    (4:ℤ) ∉ robertSargosMOverlap 20 3 1 1 := by decide
+
+example : (3:ℤ) ∈ robertSargosMOverlap 20 3 1 (-1) ∧
+    (3:ℤ) ∉ robertSargosMOverlap 20 3 1 0 := by decide
+
+example : robertSargosSymmetricArray (fun _ => 0) 20 3 4 4 = 0 := by
+  norm_num [robertSargosSymmetricArray]
+
+example : robertSargosSymmetricArray (fun _ => 0) 20 3 5 4 = 1 := by
+  norm_num [robertSargosSymmetricArray,robertSargosSymmetricDifference,fordAdditiveCharacter]
+
+example : robertSargosSymmetricArray (fun _ => 0) 20 3 10 6 = 0 := by
+  norm_num [robertSargosSymmetricArray]
+
+example : (∑ q ∈ Finset.Ioo (-3:ℤ) 3, (1-|(q:ℝ)|/3)) = 3 := by
+  simpa only [Nat.cast_ofNat] using sum_signed_triangular_weights 3 (by decide)
+
+example (w : ℤ → ℂ) (hw : ∀ m ∈ Finset.Icc (3:ℤ) 16, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ robertSargosMOverlap 20 3 1 1, w m) -
+      ∑ m ∈ robertSargosMOverlap 20 3 1 0, w m‖ ≤ 2 := by
+  convert norm_robertSargos_m_overlap_error w 20 3 1 1 hw using 1
+  norm_num
+
+example (w : ℤ → ℂ) (hw : ∀ m ∈ Finset.Icc (3:ℤ) 16, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ robertSargosMOverlap 20 3 1 (-1), w m) -
+      ∑ m ∈ robertSargosMOverlap 20 3 1 0, w m‖ ≤ 2 := by
+  convert norm_robertSargos_m_overlap_error w 20 3 1 (-1) hw using 1
+  norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosSourceBoundaryRegression
+
+section RobertSargosInitialAProcessRegression
+
+open TaoTrudgianYang2025 GafniTao
+open scoped BigOperators InnerProductSpace ComplexConjugate
+
+example (a : ℤ → ℂ) (M : ℕ) (h : ℤ) :
+    robertSargosCenteredCorrelation a M (-h) = robertSargosCenteredCorrelation a M h :=
+  @TaoTrudgianYang2025.robertSargos_centered_correlation_neg a M h
+
+example (a : ℤ → ℂ) (M : ℕ) :
+    robertSargosCenteredCorrelation a M 0 =
+      ∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2 :=
+  @TaoTrudgianYang2025.robertSargos_centered_correlation_zero a M
+
+example (a : ℤ → ℂ) (M H s t : ℕ)
+    (hs : s < H) (ht : t < H) :
+    (∑ n ∈ Finset.Ico (-(2*(H:ℤ))) M,
+      ⟪sargosPaddedSequence a M (n+2*s),sargosPaddedSequence a M (n+2*t)⟫_ℝ) =
+      robertSargosCenteredCorrelation a M ((s:ℤ)-t) :=
+  @TaoTrudgianYang2025.robertSargos_even_gram_term a M H s t hs ht
+
+example (a : ℤ → ℂ) (M H : ℕ) :
+    (∑ n ∈ Finset.Ico (-(2*(H:ℤ))) M,
+      ‖∑ s ∈ Finset.range H, sargosPaddedSequence a M (n+2*s)‖^2) =
+      ∑ h ∈ Finset.Ioo (-(H:ℤ)) H,
+        ((H-h.natAbs:ℕ):ℝ)*robertSargosCenteredCorrelation a M h :=
+  @TaoTrudgianYang2025.robertSargos_even_gram a M H
+
+example (f : ℤ → ℝ) (N : ℕ) (hN : 0 < N)
+    (hf : ∀ n, f (-n) = f n) :
+    (∑ n ∈ Finset.Ioo (-(N:ℤ)) N, f n) =
+      f 0+2*∑ n ∈ Finset.Ioo (0:ℤ) N, f n :=
+  @TaoTrudgianYang2025.sum_signed_even f N hN hf
+
+example (a : ℤ → ℂ) (M H : ℕ) (hH : 0 < H) :
+    (∑ n ∈ Finset.Ico (-(2*(H:ℤ))) M,
+      ‖∑ s ∈ Finset.range H, sargosPaddedSequence a M (n+2*s)‖^2) =
+      (H:ℝ)*(∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2) +
+      2*H*∑ h ∈ Finset.Ioo (0:ℤ) H,
+        (1-(h:ℝ)/H)*robertSargosCenteredCorrelation a M h :=
+  @TaoTrudgianYang2025.robertSargos_even_gram_positive a M H hH
+
+example (a : ℤ → ℂ) (M H : ℕ) (hH : 0 < H) :
+    ‖∑ m ∈ Finset.Ico (0:ℤ) M, a m‖^2 ≤
+      (((M:ℝ)+2*H)/H)*((∑ m ∈ Finset.Ico (0:ℤ) M, ‖a m‖^2)+
+        2*∑ h ∈ Finset.Ioo (0:ℤ) H,
+          (1-(h:ℝ)/H)*robertSargosCenteredCorrelation a M h) :=
+  @TaoTrudgianYang2025.robertSargos_conjugate_a_process a M H hH
+
+example (f : ℝ → ℝ) (M : ℕ) (m h : ℤ)
+    (hh : 0 ≤ h) :
+    ⟪sargosPaddedSequence (fun n => fordAdditiveCharacter (f (n+1))) M (m+h),
+      sargosPaddedSequence (fun n => fordAdditiveCharacter (f (n+1))) M (m-h)⟫_ℝ =
+      if m ∈ Finset.Icc h ((M:ℤ)-h-1) then
+        (fordAdditiveCharacter (robertSargosSymmetricDifference f (m+1) h)).re
+      else 0 :=
+  @TaoTrudgianYang2025.robertSargos_centered_phase_inner f M m h hh
+
+example (f : ℝ → ℝ) (M : ℕ) (h : ℤ)
+    (hh : 0 ≤ h) :
+    robertSargosCenteredCorrelation (fun n => fordAdditiveCharacter (f (n+1))) M h =
+      (robertSargosSourceCenteredPhase f M h).re :=
+  @TaoTrudgianYang2025.robertSargos_centered_phase_sum f M h hh
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    (∑ h ∈ Finset.Ioo (0:ℤ) H,
+      (1-(h:ℝ)/H)*robertSargosCenteredCorrelation
+        (fun n => fordAdditiveCharacter (f (n+1))) M h) =
+      (robertSargosWeightedSymmetricPhase f M H).re :=
+  @TaoTrudgianYang2025.robertSargos_weighted_symmetric_re f M H
+
+example (f : ℝ → ℝ) (M H : ℕ) (hH : 0 < H) :
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+      (((M:ℝ)+2*H)/H)*((M:ℝ)+2*‖robertSargosWeightedSymmetricPhase f M H‖) :=
+  @TaoTrudgianYang2025.robertSargos_initial_source_a_process f M H hH
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    (hH : 0 < H) (hHM : H ≤ M) :
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+      3*(M:ℝ)^2/H+(6*(M:ℝ)/H)*‖robertSargosWeightedSymmetricPhase f M H‖ :=
+  @TaoTrudgianYang2025.robertSargos_initial_source_a_process_range f M H hH hHM
+
+example (a : ℕ → ℂ) (H J N : ℕ)
+    (ha0 : a 0 = 0) (hNH : N ≤ H) (hNJ : N ≤ 2^J)
+    (A B : ℝ) (hA : 0 ≤ A) (hB : 0 ≤ B)
+    (ha : ∀ n < H, ‖a n‖ ≤ A)
+    (hb : ∀ k : ℕ, 0 < k → 2*k ≤ H →
+      ‖∑ j ∈ Finset.range k, a (k+j)‖ ≤ B) :
+    ‖∑ n ∈ Finset.range N, a n‖ ≤ (J:ℝ)*(A+B) :=
+  @TaoTrudgianYang2025.norm_prefix_le_doubled_blocks a H J N ha0 hNH hNJ A B hA hB ha hb
+
+example (a : ℕ → ℂ) (H : ℕ) (hH : 0 < H)
+    (B : ℝ) (hp : ∀ L ≤ H, ‖∑ n ∈ Finset.range L, a n‖ ≤ B) :
+    ‖∑ n ∈ Finset.range H, ((1-(n:ℝ)/H : ℝ):ℂ)*a n‖ ≤ B :=
+  @TaoTrudgianYang2025.norm_linear_weighted_range_le a H hH B hp
+
+example (a : ℕ → ℂ) (H : ℕ) (hH : 2 ≤ H)
+    (ha0 : a 0 = 0) (A : ℝ) (hA : 0 ≤ A)
+    (ha : ∀ n < H, ‖a n‖ ≤ A) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      ‖∑ n ∈ Finset.range H, ((1-(n:ℝ)/H : ℝ):ℂ)*a n‖ ≤
+        (Nat.clog 2 H:ℝ)*(A+‖∑ j ∈ Finset.range k, a (k+j)‖) :=
+  @TaoTrudgianYang2025.exists_doubled_block_weighted a H hH ha0 A hA ha
+
+example (f : ℝ → ℝ) (M : ℕ) (h : ℤ)
+    (hh : 0 ≤ h) : ‖robertSargosSourceCenteredPhase f M h‖ ≤ M :=
+  @TaoTrudgianYang2025.robertSargos_source_centered_phase_norm f M h hh
+
+example (f : ℝ → ℝ) (M n : ℕ) :
+    ‖robertSargosPhaseSequence f M n‖ ≤ M :=
+  @TaoTrudgianYang2025.robertSargos_phase_sequence_norm f M n
+
+example (f : ℝ → ℝ) (M k : ℕ) (hk : 0 < k) :
+    (∑ j ∈ Finset.range k, robertSargosPhaseSequence f M (k+j)) =
+      robertSargosSymmetricSum f M k :=
+  @TaoTrudgianYang2025.robertSargos_phase_sequence_block f M k hk
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    (∑ n ∈ Finset.range H, ((1-(n:ℝ)/H : ℝ):ℂ)*robertSargosPhaseSequence f M n) =
+      robertSargosWeightedSymmetricPhase f M H :=
+  @TaoTrudgianYang2025.robertSargos_phase_sequence_weighted f M H
+
+example (f : ℝ → ℝ) (M H : ℕ) (hH : 2 ≤ H) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      ‖robertSargosWeightedSymmetricPhase f M H‖ ≤
+        (Nat.clog 2 H:ℝ)*((M:ℝ)+‖robertSargosSymmetricSum f M k‖) :=
+  @TaoTrudgianYang2025.exists_robertSargos_weighted_dyadic f M H hH
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    (hH : 2 ≤ H) (hHM : H ≤ M) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+        (3+6*(Nat.clog 2 H:ℝ))*(M:ℝ)^2/H+
+          (6*(M:ℝ)*(Nat.clog 2 H:ℝ)/H)*‖robertSargosSymmetricSum f M k‖ :=
+  @TaoTrudgianYang2025.exists_robertSargos_initial_dyadic f M H hH hHM
+
+example (H : ℕ) (hH : 2 ≤ H) :
+    (Nat.clog 2 H:ℝ) ≤ 2*(Real.log H/Real.log 2) :=
+  @TaoTrudgianYang2025.nat_clog_two_le_twice_log H hH
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    (hH : 2 ≤ H) (hHM : H ≤ M) :
+    ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧
+      ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+        15*(Real.log H/Real.log 2)*
+          ((M:ℝ)^2/H+((M:ℝ)/H)*‖robertSargosSymmetricSum f M k‖) :=
+  @TaoTrudgianYang2025.exists_robertSargos_initial_dyadic_log f M H hH hHM
+
+example : robertSargosCenteredCorrelation (fun _ => 1) 4 1 = 2 := by
+  norm_num [robertSargosCenteredCorrelation,sargosPaddedSequence,
+    show Finset.Ico (0:ℤ) 4 = {0,1,2,3} by decide]
+
+example : robertSargosCenteredCorrelation (fun _ => 1) 4 (-1) = 2 := by
+  rw [robertSargos_centered_correlation_neg]
+  norm_num [robertSargosCenteredCorrelation,sargosPaddedSequence,
+    show Finset.Ico (0:ℤ) 4 = {0,1,2,3} by decide]
+
+example : robertSargosSourceCenteredPhase (fun _ => 0) 4 1 = 2 := by
+  norm_num [robertSargosSourceCenteredPhase,robertSargosSymmetricDifference,
+    fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosSourceCenteredPhase (fun _ => 0) 4 2 = 0 := by
+  norm_num [robertSargosSourceCenteredPhase]
+
+example : robertSargosWeightedSymmetricPhase (fun _ => 0) 4 2 = 1 := by
+  norm_num [robertSargosWeightedSymmetricPhase,robertSargosSourceCenteredPhase,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Ioo (0:ℤ) 2 = {1} by decide]
+
+example : robertSargosPhaseSequence (fun _ => 0) 10 0 = 0 := by
+  simp [robertSargosPhaseSequence]
+
+example : robertSargosPhaseSequence (fun _ => 0) 10 1 = 8 := by
+  norm_num [robertSargosPhaseSequence,robertSargosSourceCenteredPhase,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosSymmetricSum (fun _ => 0) 10 2 = 10 := by
+  norm_num [robertSargosSymmetricSum,robertSargosSymmetricDifference,
+    fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Ico (2:ℤ) 4 = {2,3} by decide]
+
+example : Nat.clog 2 3 = 2 := by decide
+
+example : Nat.clog 2 8 = 3 := by decide
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosInitialAProcessRegression
+
+section RobertSargosCommonShiftRegression
+
+open TaoTrudgianYang2025 GafniTao
+open scoped BigOperators
+
+example (w : ℤ → ℂ) (a b n : ℤ) :
+    (∑ m ∈ Finset.Icc (a-n) (b-n), w (m+n)) = ∑ m ∈ Finset.Icc a b, w m :=
+  @TaoTrudgianYang2025.sum_integer_interval_translate w a b n
+
+example (w : ℤ → ℂ) (a b : ℤ) (N : ℕ) (hN : 0 < N) :
+    (∑ m ∈ Finset.Icc a b, w m) =
+      (N:ℂ)⁻¹*∑ n ∈ Finset.Icc (1:ℤ) N,
+        ∑ m ∈ Finset.Icc (a-n) (b-n), w (m+n) :=
+  @TaoTrudgianYang2025.sum_integer_interval_average w a b N hN
+
+example (M H Q N : ℕ) (h q n : ℤ)
+    (hh : h ∈ Finset.Ico (H:ℤ) (2*H))
+    (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q)
+    (hn : n ∈ Finset.Icc (1:ℤ) N) :
+    robertSargosCommonMInterval M H Q N ⊆ robertSargosShiftedMInterval M h q n :=
+  @TaoTrudgianYang2025.robertSargos_common_interval_subset M H Q N h q n hh hq hn
+
+example (M H Q N : ℕ) (h q n : ℤ)
+    (hh : h ∈ Finset.Ico (H:ℤ) (2*H))
+    (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q)
+    (hn : n ∈ Finset.Icc (1:ℤ) N) :
+    robertSargosShiftedMInterval M h q n ⊆ Finset.Icc (-(Q:ℤ)-N) ((M:ℤ)+Q) :=
+  @TaoTrudgianYang2025.robertSargos_shifted_interval_outer M H Q N h q n hh hq hn
+
+example (M H Q N : ℕ) (h q n : ℤ)
+    (hh : h ∈ Finset.Ico (H:ℤ) (2*H))
+    (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q)
+    (hn : n ∈ Finset.Icc (1:ℤ) N) :
+    ((robertSargosShiftedMInterval M h q n \ robertSargosCommonMInterval M H Q N).card:ℝ)
+      ≤ 4*(H:ℝ)+4*Q+2*N :=
+  @TaoTrudgianYang2025.robertSargos_shifted_boundary_card M H Q N h q n hh hq hn
+
+example (w : ℤ → ℂ) (M H Q N : ℕ) (h q n : ℤ)
+    (hh : h ∈ Finset.Ico (H:ℤ) (2*H))
+    (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q)
+    (hn : n ∈ Finset.Icc (1:ℤ) N)
+    (hw : ∀ m, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ robertSargosShiftedMInterval M h q n, w (m+n))-
+      ∑ m ∈ robertSargosCommonMInterval M H Q N, w (m+n)‖ ≤
+      4*(H:ℝ)+4*Q+2*N :=
+  @TaoTrudgianYang2025.norm_robertSargos_shifted_boundary w M H Q N h q n hh hq hn hw
+
+example (M : ℕ) (h q : ℤ) :
+    robertSargosMOverlap M h q 0 =
+      Finset.Icc (max (h+1) (h+1-q)) (min ((M:ℤ)-h) ((M:ℤ)-h-q)) :=
+  @TaoTrudgianYang2025.robertSargos_m_overlap_zero_source M h q
+
+example (w : ℤ → ℂ) (M N : ℕ) (h q : ℤ)
+    (hN : 0 < N) :
+    (∑ m ∈ robertSargosMOverlap M h q 0, w m) =
+      (N:ℂ)⁻¹*∑ n ∈ Finset.Icc (1:ℤ) N,
+        ∑ m ∈ robertSargosShiftedMInterval M h q n, w (m+n) :=
+  @TaoTrudgianYang2025.robertSargos_source_shift_average w M N h q hN
+
+example (v : ℤ → ℂ) (N : ℕ) (hN : 0 < N) (B : ℝ)
+    (hv : ∀ n ∈ Finset.Icc (1:ℤ) N, ‖v n‖ ≤ B) :
+    ‖(N:ℂ)⁻¹*∑ n ∈ Finset.Icc (1:ℤ) N, v n‖ ≤ B :=
+  @TaoTrudgianYang2025.norm_integer_average_le v N hN B hv
+
+example (w : ℤ → ℂ) (M H Q N : ℕ) (h q : ℤ)
+    (hN : 0 < N) (hh : h ∈ Finset.Ico (H:ℤ) (2*H))
+    (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q) (hw : ∀ m, ‖w m‖ ≤ 1) :
+    ‖(∑ m ∈ robertSargosMOverlap M h q 0, w m)-
+      (N:ℂ)⁻¹*∑ n ∈ Finset.Icc (1:ℤ) N,
+        ∑ m ∈ robertSargosCommonMInterval M H Q N, w (m+n)‖ ≤
+      4*(H:ℝ)+4*Q+2*N :=
+  @TaoTrudgianYang2025.norm_robertSargos_common_shift_error w M H Q N h q hN hh hq hw
+
+example (f : ℝ → ℝ) (M H Q N : ℕ) (q r : ℤ) :
+    robertSargosShiftedCorrelation f M H Q N q r =
+      ∑ h ∈ robertSargosHOverlap H r, (N:ℂ)⁻¹*∑ n ∈ Finset.Icc (1:ℤ) N,
+        ∑ m ∈ robertSargosCommonMInterval M H Q N,
+          fordAdditiveCharacter
+            (robertSargosSymmetricDifference f (m+n+q) h-
+              robertSargosSymmetricDifference f (m+n) (h+r)) :=
+  @TaoTrudgianYang2025.robertSargos_shifted_correlation_h_sum f M H Q N q r
+
+example (f : ℝ → ℝ) (M H Q N : ℕ) (q r : ℤ)
+    (hN : 0 < N) (hq : q ∈ Finset.Ioo (-(Q:ℤ)) Q) :
+    ‖robertSargosTrimmedCorrelation f M H q r-
+      robertSargosShiftedCorrelation f M H Q N q r‖ ≤
+      (H:ℝ)*(4*(H:ℝ)+4*Q+2*N) :=
+  @TaoTrudgianYang2025.norm_robertSargos_trimmed_shift_error f M H Q N q r hN hq
+
+example (Q R : ℕ) (hQ : 0 < Q) (hR : 0 < R)
+    (C : ℝ) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*C) = C*Q*R :=
+  @TaoTrudgianYang2025.sum_signed_triangular_double_constant Q R hQ hR C
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hN : 0 < N) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosTrimmedCorrelation f M H q r).re) ≤
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosShiftedCorrelation f M H Q N q r).re) +
+      (H:ℝ)*(4*(H:ℝ)+4*Q+2*N)*Q*R :=
+  @TaoTrudgianYang2025.robertSargos_weighted_shift_error f M H Q R N hQ hR hN
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hN : 0 < N) (hQM : Q ≤ M) (hRH : R ≤ 2*H) :
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      (8*(M:ℝ)*H/((Q:ℝ)*R))*
+        (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+          (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+            (robertSargosShiftedCorrelation f M H Q N q r).re) +
+      16*(M:ℝ)*(H:ℝ)^2*R+
+      8*(M:ℝ)*(H:ℝ)^2*(4*(H:ℝ)+4*Q+2*N) :=
+  @TaoTrudgianYang2025.robertSargos_shifted_a_times_a f M H Q R N hQ hR hN hQM hRH
+
+example (f : ℝ → ℝ) (M H Q N : ℕ) (q r : ℤ) :
+    robertSargosShiftedCorrelation f M H Q N q r =
+      (N:ℂ)⁻¹*∑ m ∈ robertSargosCommonMInterval M H Q N,
+        ∑ h ∈ robertSargosHOverlap H r, ∑ n ∈ Finset.Icc (1:ℤ) N,
+          fordAdditiveCharacter
+            (robertSargosSymmetricDifference f (m+n+q) h-
+              robertSargosSymmetricDifference f (m+n) (h+r)) :=
+  @TaoTrudgianYang2025.robertSargos_shifted_correlation_m_sum f M H Q N q r
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (((1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R) : ℝ):ℂ)*
+        robertSargosShiftedCorrelation f M H Q N q r) =
+      (N:ℂ)⁻¹*∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+        ((1-|(r:ℝ)|/R : ℝ):ℂ)*
+          ∑ m ∈ robertSargosCommonMInterval M H Q N,
+            robertSargosShiftedTriple f H Q N r m :=
+  @TaoTrudgianYang2025.robertSargos_weighted_shifted_reorder f M H Q R N
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+        (robertSargosShiftedCorrelation f M H Q N q r).re) =
+      (N:ℝ)⁻¹*∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+        (1-|(r:ℝ)|/R)*
+          ∑ m ∈ robertSargosCommonMInterval M H Q N,
+            (robertSargosShiftedTriple f H Q N r m).re :=
+  @TaoTrudgianYang2025.robertSargos_weighted_shifted_re f M H Q R N
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hR : 0 < R) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+        (robertSargosShiftedCorrelation f M H Q N q r).re) ≤
+      (N:ℝ)⁻¹*∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+        ∑ m ∈ robertSargosCommonMInterval M H Q N,
+          ‖robertSargosShiftedTriple f H Q N r m‖ :=
+  @TaoTrudgianYang2025.robertSargos_weighted_shifted_re_le f M H Q R N hR
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hN : 0 < N) (hQM : Q ≤ M) (hRH : R ≤ 2*H) :
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      (8*(M:ℝ)*H/((Q:ℝ)*R*N))*
+        (∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+          ∑ m ∈ robertSargosCommonMInterval M H Q N,
+            ‖robertSargosShiftedTriple f H Q N r m‖) +
+      16*(M:ℝ)*(H:ℝ)^2*R+
+      8*(M:ℝ)*(H:ℝ)^2*(4*(H:ℝ)+4*Q+2*N) :=
+  @TaoTrudgianYang2025.robertSargos_shifted_triple_a_times_a f M H Q R N hQ hR hN hQM hRH
+
+example : robertSargosShiftedMInterval 100 5 (-4) 1 = Finset.Icc (9:ℤ) 94 := by decide
+
+example : robertSargosCommonMInterval 100 3 5 5 = Finset.Icc (11:ℤ) 84 := by decide
+
+example : (8:ℤ) ∈ Finset.Icc (3+5:ℤ) (100-2*3-5-5) ∧
+    (8:ℤ) ∉ robertSargosShiftedMInterval 100 5 (-4) 1 := by decide
+
+example : robertSargosShiftedMInterval 100 3 0 5 = Finset.Icc (-1:ℤ) 92 := by decide
+
+example : (-1:ℤ) ∈ robertSargosShiftedMInterval 100 3 0 5 ∧
+    (-1:ℤ) ∉ Finset.Icc (1:ℤ) 100 := by decide
+
+example : robertSargosCommonMInterval 10 3 5 5 = ∅ := by decide
+
+example : (robertSargosShiftedMInterval 100 5 (-4) 1 \
+    robertSargosCommonMInterval 100 3 5 5).card = 12 := by decide
+
+example : (∑ _m ∈ robertSargosMOverlap 100 5 (-4) 0, (1:ℂ)) = 86 := by
+  norm_num [robertSargosMOverlap,Int.card_Icc,Int.toNat]
+
+example : robertSargosShiftedCorrelation (fun _ => 0) 100 3 5 5 1 1 = 148 := by
+  norm_num [robertSargosShiftedCorrelation,robertSargosHOverlap,robertSargosCommonMInterval,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosShiftedTriple (fun _ => 0) 3 2 1 0 0 = 6 := by
+  norm_num [robertSargosShiftedTriple,robertSargosHOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Ioo (-2:ℤ) 2 = {-1,0,1} by decide]
+
+example : robertSargosShiftedTriple (fun _ => 0) 3 2 1 3 0 = 0 := by
+  norm_num [robertSargosShiftedTriple,robertSargosHOverlap]
+
+example : robertSargosShiftedCorrelation (fun _ => 0) 100 3 5 0 1 1 = 0 := by
+  norm_num [robertSargosShiftedCorrelation]
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosCommonShiftRegression
+
+section StandardThirdDerivativeRegression
+open Set GafniTao RiemannZeta.GuthMaynard
+open scoped ContDiff
+
+example (F F' : ℝ → ℝ) {a b μ Λ : ℝ} (hab : a ≤ b)
+    (hF : ∀ x ∈ Icc a b, HasDerivAt F (F' x) x)
+    (hlo : ∀ x ∈ Icc a b, μ ≤ F' x)
+    (hhi : ∀ x ∈ Icc a b, F' x ≤ Λ) :
+    μ*(b-a) ≤ F b-F a ∧ F b-F a ≤ Λ*(b-a) :=
+  @TaoTrudgianYang2025.derivative_increment_bounds F F' a b μ Λ hab hF hlo hhi
+
+example (F F' F'' : ℝ → ℝ) {a b μ Λ x : ℝ}
+    (hx : a ≤ x) (hxb : x+2 ≤ b)
+    (hF : ∀ y ∈ Icc a b, HasDerivAt F (F' y) y)
+    (hF' : ∀ y ∈ Icc a b, HasDerivAt F' (F'' y) y)
+    (hlo : ∀ y ∈ Icc a b, μ ≤ F'' y)
+    (hhi : ∀ y ∈ Icc a b, F'' y ≤ Λ) :
+    μ ≤ (F (x+2)-F (x+1))-(F (x+1)-F x) ∧
+      (F (x+2)-F (x+1))-(F (x+1)-F x) ≤ Λ :=
+  @TaoTrudgianYang2025.continuous_second_difference_bounds F F' F'' a b μ Λ x hx hxb hF hF' hlo hhi
+
+example {N C α : ℝ}
+    (hN : 0 ≤ N) (hC : 0 ≤ C) (hα : 0 < α) (hα1 : α ≤ 1) :
+    (N*(2*Real.pi*(C*α))/(2*Real.pi)+2)*
+      (2*Real.pi/Real.sqrt α+2*(Real.sqrt α/(2*Real.pi*α)+1)) ≤
+        12*(C*N*Real.sqrt α+2/Real.sqrt α) :=
+  @TaoTrudgianYang2025.second_derivative_scale_bound N C α hN hC hα hα1
+
+example (x : ℝ) :
+    fordAdditiveCharacter x = unitaryPhase (2*Real.pi*x) :=
+  @TaoTrudgianYang2025.fordAdditiveCharacter_eq_unitaryPhase x
+
+example (F F' F'' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C α : ℝ}
+    (hC : 0 ≤ C) (hα : 0 < α) (hα1 : α ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N+1), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N+1), HasDerivAt F' (F'' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N+1), α ≤ F'' x)
+    (hhi : ∀ x ∈ Icc A (A+N+1), F'' x ≤ C*α) :
+    ‖∑ n ∈ Finset.range (N+1), fordAdditiveCharacter (F (A+n))‖ ≤
+      12*(C*N*Real.sqrt α+2/Real.sqrt α) :=
+  @TaoTrudgianYang2025.continuous_second_derivative_bound F F' F'' A N C α hC hα hα1 hF hF' hlo hhi
+
+example (F'' F''' : ℝ → ℝ) {a b x h μ Λ : ℝ}
+    (hh : 0 ≤ h) (hx : a ≤ x) (hxb : x+h ≤ b)
+    (hder : ∀ y ∈ Icc a b, HasDerivAt F'' (F''' y) y)
+    (hlo : ∀ y ∈ Icc a b, μ ≤ F''' y)
+    (hhi : ∀ y ∈ Icc a b, F''' y ≤ Λ) :
+    h*μ ≤ F'' (x+h)-F'' x ∧ F'' (x+h)-F'' x ≤ h*Λ :=
+  @TaoTrudgianYang2025.third_derivative_shift_curvature F'' F''' a b x h μ Λ hh hx hxb hder hlo hhi
+
+example (F F' : ℝ → ℝ) {x h : ℝ}
+    (hx : HasDerivAt F (F' x) x)
+    (hxh : HasDerivAt F (F' (x+h)) (x+h)) :
+    HasDerivAt (fun y => F (y+h)-F y) (F' (x+h)-F' x) x :=
+  @TaoTrudgianYang2025.hasDerivAt_shift_difference F F' x h hx hxh
+
+example (n : ℕ) :
+    1/Real.sqrt (n+1) ≤ 2*(Real.sqrt (n+1)-Real.sqrt n) :=
+  @TaoTrudgianYang2025.inverse_sqrt_succ_le_difference n
+
+example (H : ℕ) :
+    ∑ r ∈ Finset.Icc 1 H, 1/Real.sqrt (r:ℝ) ≤ 2*Real.sqrt H :=
+  @TaoTrudgianYang2025.sum_inverse_sqrt_Icc H
+
+example (H : ℕ) :
+    ∑ r ∈ Finset.Icc 1 (H-1), 1/Real.sqrt (r:ℝ) ≤ 2*Real.sqrt H :=
+  @TaoTrudgianYang2025.sum_shift_inverse_sqrt_le H
+
+example (H : ℕ) :
+    ∑ r ∈ Finset.Icc 1 (H-1), Real.sqrt (r:ℝ) ≤ (H:ℝ)*Real.sqrt H :=
+  @TaoTrudgianYang2025.sum_shift_sqrt_le H
+
+example (F F' F'' F''' : ℝ → ℝ) (A : ℝ) (N r : ℕ) {C μ : ℝ}
+    (hC : 0 ≤ C) (hμ : 0 < μ) (hr : 0 < r) (hrμ : (r:ℝ)*μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hF'' : ∀ x ∈ Icc A (A+N), HasDerivAt F'' (F''' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), μ ≤ F''' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F''' x ≤ C*μ) :
+    ‖∑ n ∈ Finset.range (N-r),
+      fordAdditiveCharacter (F (A+n+r)-F (A+n))‖ ≤
+        12*(C*N*Real.sqrt ((r:ℝ)*μ)+2/Real.sqrt ((r:ℝ)*μ)) :=
+  @TaoTrudgianYang2025.continuous_third_derivative_correlation F F' F'' F''' A N r C μ hC hμ hr hrμ hF hF' hF'' hlo hhi
+
+example (N H : ℕ) {C μ : ℝ} (hC : 0 ≤ C) (hμ : 0 < μ) :
+    (∑ r ∈ Finset.Icc 1 (H-1),
+      12*(C*N*Real.sqrt ((r:ℝ)*μ)+2/Real.sqrt ((r:ℝ)*μ))) ≤
+        12*(C*N*Real.sqrt μ*((H:ℝ)*Real.sqrt H)+4*Real.sqrt H/Real.sqrt μ) :=
+  @TaoTrudgianYang2025.sum_third_derivative_correlation_majorant N H C μ hC hμ
+
+example (a : ℤ → ℂ) (N : ℕ) :
+    (∑ n ∈ Finset.Ico (0:ℤ) N, a n) = ∑ n ∈ Finset.range N, a n :=
+  @TaoTrudgianYang2025.sum_integer_zero_interval_eq_range a N
+
+example (F : ℝ → ℝ) (A : ℝ) (N H h k : ℕ)
+    (hh : h < H) (hk : k < H) (hhk : h < k) :
+    (∑ n ∈ Finset.Ico (-(H:ℤ)) N,
+      star (paddedShift (fun j => fordAdditiveCharacter (F (A+j))) N n h)*
+        paddedShift (fun j => fordAdditiveCharacter (F (A+j))) N n k) =
+      continuousPhaseCorrelation F A N (k-h) :=
+  @TaoTrudgianYang2025.padded_continuousPhase_correlation F A N H h k hh hk hhk
+
+example (F : ℝ → ℝ) (A : ℝ) (N H h k : ℕ)
+    (hh : h < H) (hk : k < H) (hne : h ≠ k) :
+    ‖∑ n ∈ Finset.Ico (-(H:ℤ)) N,
+      star (paddedShift (fun j => fordAdditiveCharacter (F (A+j))) N n h)*
+        paddedShift (fun j => fordAdditiveCharacter (F (A+j))) N n k‖ =
+      ‖continuousPhaseCorrelation F A N (shiftDistance h k)‖ :=
+  @TaoTrudgianYang2025.norm_padded_continuousPhase_correlation F A N H h k hh hk hne
+
+example (F : ℝ → ℝ) (A : ℝ) (N H : ℕ) :
+    (H:ℝ)^2*‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖^2 ≤
+      ((N+H:ℕ):ℝ)*((H:ℝ)*N+
+        2*H*∑ r ∈ Finset.Icc 1 (H-1), ‖continuousPhaseCorrelation F A N r‖) :=
+  @TaoTrudgianYang2025.continuous_phase_weyl F A N H
+
+example (F F' F'' F''' : ℝ → ℝ) (A : ℝ) (N H : ℕ) {C μ : ℝ}
+    (hC : 0 ≤ C) (hμ : 0 < μ) (hHμ : (H:ℝ)*μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hF'' : ∀ x ∈ Icc A (A+N), HasDerivAt F'' (F''' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), μ ≤ F''' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F''' x ≤ C*μ) :
+    (H:ℝ)^2*‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖^2 ≤
+      ((N+H:ℕ):ℝ)*((H:ℝ)*N+
+        24*H*(C*N*Real.sqrt μ*((H:ℝ)*Real.sqrt H)+
+          4*Real.sqrt H/Real.sqrt μ)) :=
+  @TaoTrudgianYang2025.continuous_third_derivative_weyl F F' F'' F''' A N H C μ hC hμ hHμ hF hF' hF'' hlo hhi
+
+example {S N H C μ : ℝ}
+    (hN : 0 ≤ N) (hH : 0 < H) (hHN : H ≤ N) (hC : 0 ≤ C) (hμ : 0 < μ)
+    (hb : H^2*S^2 ≤ (N+H)*(H*N+
+      24*H*(C*N*Real.sqrt μ*(H*Real.sqrt H)+4*Real.sqrt H/Real.sqrt μ))) :
+    S^2 ≤ 2*N^2/H+48*C*N^2*Real.sqrt μ*Real.sqrt H+
+      192*N/(Real.sqrt H*Real.sqrt μ) :=
+  @TaoTrudgianYang2025.third_derivative_weyl_normalize S N H C μ hN hH hHN hC hμ hb
+
+example {R H μ : ℝ}
+    (hR : 0 < R) (hμ : 0 < μ) (hlo : R/2 ≤ H) (hhi : H ≤ R)
+    (hscale : R^3*μ = 1) :
+    Real.sqrt μ*Real.sqrt H ≤ 1/R ∧
+      1/(Real.sqrt H*Real.sqrt μ) ≤ 2*R :=
+  @TaoTrudgianYang2025.third_derivative_root_scale R H μ hR hμ hlo hhi hscale
+
+example {S N H R C μ : ℝ}
+    (hN : 0 ≤ N) (hR : 0 < R) (hC : 1 ≤ C) (hμ : 0 < μ)
+    (hlo : R/2 ≤ H) (hhi : H ≤ R) (hscale : R^3*μ = 1)
+    (hb : S^2 ≤ 2*N^2/H+48*C*N^2*Real.sqrt μ*Real.sqrt H+
+      192*N/(Real.sqrt H*Real.sqrt μ)) :
+    S^2 ≤ 52*C*N^2/R+384*N*R :=
+  @TaoTrudgianYang2025.third_derivative_optimized_square_scale S N H R C μ hN hR hC hμ hlo hhi hscale hb
+
+example {R μ : ℝ} (N : ℕ)
+    (hR : 1 ≤ R) (hRN : R ≤ N) (hμ : 0 < μ) (hscale : R^3*μ = 1) :
+    0 < ⌊R⌋₊ ∧ ⌊R⌋₊ ≤ N ∧
+      R/2 ≤ (⌊R⌋₊:ℝ) ∧ (⌊R⌋₊:ℝ) ≤ R ∧ (⌊R⌋₊:ℝ)*μ ≤ 1 :=
+  @TaoTrudgianYang2025.third_derivative_floor_shift R μ N hR hRN hμ hscale
+
+example {S N R C : ℝ}
+    (hN : 0 ≤ N) (hR : 0 < R) (hC : 1 ≤ C)
+    (hb : S^2 ≤ 52*C*N^2/R+384*N*R) :
+    S ≤ 20*C*(N/Real.sqrt R+Real.sqrt N*Real.sqrt R) :=
+  @TaoTrudgianYang2025.third_derivative_norm_of_square S N R C hN hR hC hb
+
+example {μ : ℝ} (hμ : 0 < μ) (hμ1 : μ ≤ 1) :
+    1 ≤ μ^(-(1:ℝ)/3) ∧
+      (μ^(-(1:ℝ)/3))^3*μ = 1 ∧
+      Real.sqrt (μ^(-(1:ℝ)/3)) = μ^(-(1:ℝ)/6) ∧
+      1/Real.sqrt (μ^(-(1:ℝ)/3)) = μ^((1:ℝ)/6) :=
+  @TaoTrudgianYang2025.third_derivative_rpow_scale μ hμ hμ1
+
+example (F F' F'' F''' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C μ R : ℝ}
+    (hC : 1 ≤ C) (hμ : 0 < μ) (hR : 1 ≤ R) (hscale : R^3*μ = 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hF'' : ∀ x ∈ Icc A (A+N), HasDerivAt F'' (F''' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), μ ≤ F''' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F''' x ≤ C*μ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖^2 ≤
+      52*C*(N:ℝ)^2/R+384*N*R :=
+  @TaoTrudgianYang2025.continuous_third_derivative_square_bound F F' F'' F''' A N C μ R hC hμ hR hscale hF hF' hF'' hlo hhi
+
+example (F F' F'' F''' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C μ : ℝ}
+    (hC : 1 ≤ C) (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hF'' : ∀ x ∈ Icc A (A+N), HasDerivAt F'' (F''' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), μ ≤ F''' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F''' x ≤ C*μ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      20*C*((N:ℝ)*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.continuous_third_derivative_bound F F' F'' F''' A N C μ hC hμ hμ1 hF hF' hF'' hlo hhi
+
+example (F : ℝ → ℝ) (A : ℝ) (N : ℕ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (-F (A+n))‖ =
+      ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ :=
+  @TaoTrudgianYang2025.norm_sum_fordAdditiveCharacter_neg_phase F A N
+
+example (F F' F'' F''' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C μ : ℝ}
+    (hC : 1 ≤ C) (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hF'' : ∀ x ∈ Icc A (A+N), HasDerivAt F'' (F''' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), -(C*μ) ≤ F''' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F''' x ≤ -μ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      20*C*((N:ℝ)*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.continuous_third_derivative_negative_bound F F' F'' F''' A N C μ hC hμ hμ1 hF hF' hF'' hlo hhi
+
+example {F : ℝ → ℝ} {x : ℝ} {n j : ℕ} (hj : j < n)
+    (hF : ContDiffAt ℝ n F x) :
+    HasDerivAt (iteratedDeriv j F) (iteratedDeriv (j+1) F x) x :=
+  @TaoTrudgianYang2025.hasDerivAt_iteratedDeriv_finite F x n j hj hF
+
+example (F : ℝ → ℝ) (A : ℝ) (N : ℕ) {C μ : ℝ}
+    (hC : 1 ≤ C) (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), ContDiffAt ℝ 3 F x)
+    (hlo : ∀ x ∈ Icc A (A+N), μ ≤ iteratedDeriv 3 F x)
+    (hhi : ∀ x ∈ Icc A (A+N), iteratedDeriv 3 F x ≤ C*μ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      20*C*((N:ℝ)*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.finite_smooth_third_derivative_bound F A N C μ hC hμ hμ1 hF hlo hhi
+
+example (F : ℝ → ℝ) (A : ℝ) (N : ℕ) {C μ : ℝ}
+    (hC : 1 ≤ C) (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), ContDiffAt ℝ 3 F x)
+    (hlo : ∀ x ∈ Icc A (A+N), -(C*μ) ≤ iteratedDeriv 3 F x)
+    (hhi : ∀ x ∈ Icc A (A+N), iteratedDeriv 3 F x ≤ -μ) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      20*C*((N:ℝ)*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.finite_smooth_third_derivative_negative_bound F A N C μ hC hμ hμ1 hF hlo hhi
+
+example : (∑ r ∈ Finset.Icc 1 (0:ℕ), 1/Real.sqrt (r:ℝ)) = 0 := by simp
+
+example : (∑ r ∈ Finset.Icc 1 (1:ℕ), 1/Real.sqrt (r:ℝ)) = 1 := by norm_num
+
+example : ⌊(1:ℝ)⌋₊ = 1 := by norm_num
+
+example : ⌊(9/2:ℝ)⌋₊ = 4 := by norm_num
+
+example : (4:ℝ)^3*(1/64) = 1 := by norm_num
+
+example : continuousPhaseCorrelation (fun _ => 0) 0 5 2 = 3 := by
+  norm_num [continuousPhaseCorrelation,fordAdditiveCharacter]
+
+example : continuousPhaseCorrelation (fun _ => 0) 0 5 5 = 0 := by
+  norm_num [continuousPhaseCorrelation]
+
+example : continuousPhaseCorrelation (fun _ => 0) 0 5 6 = 0 := by
+  norm_num [continuousPhaseCorrelation]
+
+example : ‖∑ n ∈ Finset.range 4,
+    fordAdditiveCharacter ((n:ℝ)^3/6)‖ ≤ 120 := by
+  have hb := continuous_third_derivative_bound
+    (fun x => x^3/6) (fun x => x^2/2) (fun x => x) (fun _ => 1)
+    0 4 (C := 1) (μ := 1) (by norm_num) (by norm_num) (by norm_num)
+    (fun x _ => by convert ((hasDerivAt_id x).pow 3).div_const 6 using 1; dsimp only [id_eq]; ring)
+    (fun x _ => by convert ((hasDerivAt_id x).pow 2).div_const 2 using 1; dsimp only [id_eq]; ring)
+    (fun x _ => hasDerivAt_id x)
+    (fun _ _ => by norm_num) (fun _ _ => by norm_num)
+  norm_num at hb ⊢
+  exact hb
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end StandardThirdDerivativeRegression
+
+section RobertSargosSmallBlockRegression
+open Set GafniTao RiemannZeta.GuthMaynard
+open scoped ContDiff
+
+example {f : ℝ → ℝ} {x h : ℝ} {j : ℕ} (hj : j < 4)
+    (hp : ContDiffAt ℝ 4 f (x+h)) (hm : ContDiffAt ℝ 4 f (x-h)) :
+    HasDerivAt (fun y => robertSargosSymmetricDifference (iteratedDeriv j f) y h)
+      (robertSargosSymmetricDifference (iteratedDeriv (j+1) f) x h) x :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_symmetric_jet f x h j hj hp hm
+
+example {f : ℝ → ℝ} {a b x h C lam : ℝ} (hh : 0 ≤ h)
+    (hx : a ≤ x-h) (hxb : x+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc a b, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc a b, iteratedDeriv 4 f y ≤ C*lam) :
+    2*h*lam ≤ robertSargosSymmetricDifference (iteratedDeriv 3 f) x h ∧
+      robertSargosSymmetricDifference (iteratedDeriv 3 f) x h ≤ C*(2*h*lam) :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_third_curvature f a b x h C lam hh hx hxb hf hlo hhi
+
+example (f : ℝ → ℝ) (A : ℝ) (N : ℕ) {a b h C lam : ℝ}
+    (hC : 1 ≤ C) (hh : 0 < h) (hlam : 0 < lam) (hscale : 2*h*lam ≤ 1)
+    (ha : a ≤ A-h) (hb : A+N+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc a b, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc a b, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖∑ n ∈ Finset.range N,
+      fordAdditiveCharacter (robertSargosSymmetricDifference f (A+n) h)‖ ≤
+        20*C*((N:ℝ)*(2*h*lam)^((1:ℝ)/6)+
+          Real.sqrt N*(2*h*lam)^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_third_derivative_prefix f A N a b h C lam hC hh hlam hscale ha hb hf hlo hhi
+
+example (w : ℤ → ℂ) (a b : ℤ) :
+    (∑ m ∈ Finset.Ico a b, w m) =
+      ∑ n ∈ Finset.range (b-a).toNat, w (a+n) :=
+  @TaoTrudgianYang2025.sum_integer_Ico_eq_range w a b
+
+example (w : ℤ → ℂ) (a b : ℤ) (hab : a ≤ b) :
+    (∑ m ∈ Finset.Icc a b, w m) =
+      (∑ n ∈ Finset.range (b-a).toNat, w (a+n))+w b :=
+  @TaoTrudgianYang2025.sum_integer_Icc_eq_range_add w a b hab
+
+example (f : ℝ → ℝ) (M : ℕ) (h : ℤ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hh : 0 < h) (hlam : 0 < lam)
+    (hscale : 2*(h:ℝ)*lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosSourceCenteredPhase f M h‖ ≤
+      1+20*C*((M:ℝ)*(2*(h:ℝ)*lam)^((1:ℝ)/6)+
+        Real.sqrt M*(2*(h:ℝ)*lam)^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.robertSargos_source_centered_third_derivative_bound f M h C lam hC hh hlam hscale hf hlo hhi
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hH : 0 < H) (hlam : 0 < lam)
+    (hscale : 4*(H:ℝ)*lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosSymmetricSum f M H‖ ≤
+      (H:ℝ)*(1+20*C*((M:ℝ)*(4*(H:ℝ)*lam)^((1:ℝ)/6)+
+        Real.sqrt M*(2*(H:ℝ)*lam)^(-(1:ℝ)/6))) :=
+  @TaoTrudgianYang2025.robertSargos_symmetric_block_third_derivative_bound f M H C lam hC hH hlam hscale hf hlo hhi
+
+example {x : ℝ} (hx : 0 ≤ x) :
+    (x^((1:ℝ)/6))^6 = x :=
+  @TaoTrudgianYang2025.sixth_root_pow_six x hx
+
+example {H lam : ℝ}
+    (hH : 0 ≤ H) (hlam : 0 ≤ lam) (hscale : H^7*lam ≤ 1) :
+    H*(4*H*lam)^((1:ℝ)/6) ≤ 2 :=
+  @TaoTrudgianYang2025.small_block_sixth_root H lam hH hlam hscale
+
+example {M H lam : ℝ}
+    (hM : 0 ≤ M) (hH : 0 < H) (hlam : 0 < lam) (hscale : H^5 ≤ M^3*lam) :
+    H*Real.sqrt M*(2*H*lam)^(-(1:ℝ)/6) ≤ M :=
+  @TaoTrudgianYang2025.small_block_inverse_sixth_root M H lam hM hH hlam hscale
+
+example {M H C lam : ℝ}
+    (hM : 0 ≤ M) (hH : 0 < H) (hHM : H ≤ M) (hC : 1 ≤ C) (hlam : 0 < lam)
+    (hfirst : H^7*lam ≤ 1) (hsecond : H^5 ≤ M^3*lam) :
+    H*(1+20*C*(M*(4*H*lam)^((1:ℝ)/6)+
+      Real.sqrt M*(2*H*lam)^(-(1:ℝ)/6))) ≤ 61*C*M :=
+  @TaoTrudgianYang2025.small_block_third_derivative_budget M H C lam hM hH hHM hC hlam hfirst hsecond
+
+example {M H lam : ℝ}
+    (hH : 0 ≤ H) (hlam : 0 < lam) (hlamSmall : lam ≤ 1/16)
+    (hHM : H ≤ lam^(-(1:ℝ)/7)) (hM : lam^(-(8:ℝ)/13) ≤ M) :
+    H ≤ M ∧ 4*H*lam ≤ 1 ∧ H^7*lam ≤ 1 ∧ H^5 ≤ M^3*lam :=
+  @TaoTrudgianYang2025.robertSargos_small_block_parameters M H lam hH hlam hlamSmall hHM hM
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hH : 0 < H) (hlam : 0 < lam) (hlamSmall : lam ≤ 1/16)
+    (hHM : (H:ℝ) ≤ lam^(-(1:ℝ)/7)) (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosSymmetricSum f M H‖ ≤ 61*C*M :=
+  @TaoTrudgianYang2025.robertSargos_small_symmetric_block f M H C lam hC hH hlam hlamSmall hHM hM hf hlo hhi
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hH : 2 ≤ H) (hHM : H ≤ M)
+    (hlam : 0 < lam) (hlamSmall : lam ≤ 1/16) (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+        930*C*(Real.log H/Real.log 2)*((M:ℝ)^2/H) ∨
+      ∃ k : ℕ, 0 < k ∧ 2*k ≤ H ∧ lam^(-(1:ℝ)/7) < k ∧
+        ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+          15*(Real.log H/Real.log 2)*
+            ((M:ℝ)^2/H+((M:ℝ)/H)*‖robertSargosSymmetricSum f M k‖) :=
+  @TaoTrudgianYang2025.robertSargos_initial_small_or_large_block f M H C lam hC hH hHM hlam hlamSmall hM hf hlo hhi
+
+example {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192) :
+    4 ≤ lam^(-(2:ℝ)/13) :=
+  @TaoTrudgianYang2025.robertSargos_physical_shift_scale lam hlam hsmall
+
+example (M : ℕ) {lam : ℝ} (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) :
+    2 ≤ ⌊lam^(-(2:ℝ)/13)⌋₊ ∧
+      ⌊lam^(-(2:ℝ)/13)⌋₊ ≤ M ∧
+      lam^(-(2:ℝ)/13)/2 ≤ (⌊lam^(-(2:ℝ)/13)⌋₊:ℝ) ∧
+      (⌊lam^(-(2:ℝ)/13)⌋₊:ℝ) ≤ lam^(-(2:ℝ)/13) :=
+  @TaoTrudgianYang2025.robertSargos_physical_floor_shift M lam hlam hsmall hM
+
+example (M : ℕ) {C lam : ℝ} (hC : 0 ≤ C)
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192) (hM : lam^(-(8:ℝ)/13) ≤ M) :
+    930*C*(Real.log (⌊lam^(-(2:ℝ)/13)⌋₊:ℝ)/Real.log 2)*
+        ((M:ℝ)^2/(⌊lam^(-(2:ℝ)/13)⌋₊:ℝ)) ≤
+      1860*C*(Real.log M/Real.log 2)*(M:ℝ)^2*lam^((2:ℝ)/13) :=
+  @TaoTrudgianYang2025.robertSargos_initial_floor_budget M C lam hC hlam hsmall hM
+
+example (f : ℝ → ℝ) (M : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+        1860*C*(Real.log M/Real.log 2)*(M:ℝ)^2*lam^((2:ℝ)/13) ∨
+      ∃ k : ℕ, 0 < k ∧ 2*k ≤ ⌊lam^(-(2:ℝ)/13)⌋₊ ∧
+        lam^(-(1:ℝ)/7) < k ∧ (k:ℝ) ≤ lam^(-(2:ℝ)/13)/2 ∧
+        ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖^2 ≤
+          15*(Real.log (⌊lam^(-(2:ℝ)/13)⌋₊:ℝ)/Real.log 2)*
+            ((M:ℝ)^2/(⌊lam^(-(2:ℝ)/13)⌋₊:ℝ)+
+              ((M:ℝ)/(⌊lam^(-(2:ℝ)/13)⌋₊:ℝ))*‖robertSargosSymmetricSum f M k‖) :=
+  @TaoTrudgianYang2025.robertSargos_physical_initial_reduction f M C lam hC hlam hsmall hM hf hlo hhi
+
+example : (∑ n ∈ Finset.range (0:ℕ), (n:ℂ)) = 0 := by simp
+
+example : (∑ m ∈ Finset.Icc (3:ℤ) 3, (m:ℂ)) = 3 := by norm_num
+
+example : (∑ m ∈ Finset.Icc (3:ℤ) 2, (m:ℂ)) = 0 := by norm_num
+
+example : ((5:ℤ)-3).toNat = 2 := by norm_num [Int.toNat]
+
+example : (1:ℝ)^7*(1/16) ≤ 1 := by norm_num
+
+example : (1:ℝ)^5 ≤ 4^3*(1/16) := by norm_num
+
+example : robertSargosSourceCenteredPhase (fun _ => 0) 4 2 = 0 := by
+  norm_num [robertSargosSourceCenteredPhase]
+
+example : robertSargosSourceCenteredPhase (fun _ => 0) 5 2 = 1 := by
+  norm_num [robertSargosSourceCenteredPhase,robertSargosSymmetricDifference,
+    fordAdditiveCharacter]
+
+example : robertSargosSymmetricSum (fun _ => 0) 10 2 = 10 := by
+  norm_num [robertSargosSymmetricSum,robertSargosSymmetricDifference,
+    fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Ico (2:ℤ) 4 = {2,3} by decide]
+
+example : (4/13:ℚ)-5/42-1/6 = 2/91 := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosSmallBlockRegression
+
+section RobertSargosZeroRRegression
+open Set GafniTao RiemannZeta.GuthMaynard
+open scoped ContDiff
+
+example (F F' F'' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C α : ℝ}
+    (hC : 0 ≤ C) (hα : 0 < α) (hα1 : α ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), α ≤ F'' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F'' x ≤ C*α) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      12*(C*N*Real.sqrt α+2/Real.sqrt α) :=
+  @TaoTrudgianYang2025.continuous_second_derivative_range_bound F F' F'' A N C α hC hα hα1 hF hF' hlo hhi
+
+example (F F' F'' : ℝ → ℝ) (A : ℝ) (N : ℕ) {C α : ℝ}
+    (hC : 0 ≤ C) (hα : 0 < α) (hα1 : α ≤ 1)
+    (hF : ∀ x ∈ Icc A (A+N), HasDerivAt F (F' x) x)
+    (hF' : ∀ x ∈ Icc A (A+N), HasDerivAt F' (F'' x) x)
+    (hlo : ∀ x ∈ Icc A (A+N), -(C*α) ≤ F'' x)
+    (hhi : ∀ x ∈ Icc A (A+N), F'' x ≤ -α) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (F (A+n))‖ ≤
+      12*(C*N*Real.sqrt α+2/Real.sqrt α) :=
+  @TaoTrudgianYang2025.continuous_second_derivative_negative_range_bound F F' F'' A N C α hC hα hα1 hF hF' hlo hhi
+
+example {f : ℝ → ℝ} {x h q : ℝ} {j : ℕ} (hj : j < 4)
+    (hxp : ContDiffAt ℝ 4 f (x+h)) (hxm : ContDiffAt ℝ 4 f (x-h))
+    (hxqp : ContDiffAt ℝ 4 f (x+q+h)) (hxqm : ContDiffAt ℝ 4 f (x+q-h)) :
+    HasDerivAt
+      (fun y => robertSargosSymmetricDifference (iteratedDeriv j f) (y+q) h-
+        robertSargosSymmetricDifference (iteratedDeriv j f) y h)
+      (robertSargosSymmetricDifference (iteratedDeriv (j+1) f) (x+q) h-
+        robertSargosSymmetricDifference (iteratedDeriv (j+1) f) x h) x :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_zero_r_jet f x h q j hj hxp hxm hxqp hxqm
+
+example {f : ℝ → ℝ} {a b x h q C lam : ℝ} (hh : 0 ≤ h) (hq : 0 ≤ q)
+    (hx : a ≤ x-h) (hxb : x+q+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc a b, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc a b, iteratedDeriv 4 f y ≤ C*lam) :
+    2*h*q*lam ≤
+        robertSargosSymmetricDifference (iteratedDeriv 2 f) (x+q) h-
+          robertSargosSymmetricDifference (iteratedDeriv 2 f) x h ∧
+      robertSargosSymmetricDifference (iteratedDeriv 2 f) (x+q) h-
+          robertSargosSymmetricDifference (iteratedDeriv 2 f) x h ≤ C*(2*h*q*lam) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_second_curvature f a b x h q C lam hh hq hx hxb hf hlo hhi
+
+example (f : ℝ → ℝ) (A : ℝ) (N : ℕ) {a b h q C lam : ℝ}
+    (hC : 0 ≤ C) (hh : 0 < h) (hq : 0 < q) (hlam : 0 < lam)
+    (hscale : 2*h*q*lam ≤ 1) (ha : a ≤ A-h) (hb : A+N+q+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc a b, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc a b, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖∑ n ∈ Finset.range N,
+      fordAdditiveCharacter (robertSargosSymmetricDifference f (A+n+q) h-
+        robertSargosSymmetricDifference f (A+n) h)‖ ≤
+      12*(C*N*Real.sqrt (2*h*q*lam)+2/Real.sqrt (2*h*q*lam)) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_second_derivative_prefix f A N a b h q C lam hC hh hq hlam hscale ha hb hf hlo hhi
+
+example (M : ℕ) (h q : ℤ) (hq : 0 ≤ q) :
+    robertSargosMOverlap M h q 0 = Finset.Icc (h+1) ((M:ℤ)-h-q) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_positive_interval M h q hq
+
+example (f : ℝ → ℝ) (M : ℕ) (h q : ℤ) :
+    robertSargosZeroRSource f M h (-q) = star (robertSargosZeroRSource f M h q) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_source_neg f M h q
+
+example (f : ℝ → ℝ) (M : ℕ) (h q : ℤ) :
+    ‖robertSargosZeroRSource f M h (-q)‖ = ‖robertSargosZeroRSource f M h q‖ :=
+  @TaoTrudgianYang2025.norm_robertSargos_zero_r_source_neg f M h q
+
+example (f : ℝ → ℝ) (M : ℕ) (h q : ℤ) {C lam : ℝ}
+    (hC : 0 ≤ C) (hh : 0 < h) (hq : 0 < q) (hlam : 0 < lam)
+    (hscale : 2*(h:ℝ)*(q:ℝ)*lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosZeroRSource f M h q‖ ≤
+      1+12*(C*M*Real.sqrt (2*(h:ℝ)*(q:ℝ)*lam)+
+        2/Real.sqrt (2*(h:ℝ)*(q:ℝ)*lam)) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_source_positive_bound f M h q C lam hC hh hq hlam hscale hf hlo hhi
+
+example (f : ℝ → ℝ) (M : ℕ) (h q : ℤ) {C lam : ℝ}
+    (hC : 0 ≤ C) (hh : 0 < h) (hq : q ≠ 0) (hlam : 0 < lam)
+    (hscale : 2*(h:ℝ)*|(q:ℝ)| *lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosZeroRSource f M h q‖ ≤
+      1+12*(C*M*Real.sqrt (2*(h:ℝ)*|(q:ℝ)| *lam)+
+        2/Real.sqrt (2*(h:ℝ)*|(q:ℝ)| *lam)) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_source_bound f M h q C lam hC hh hq hlam hscale hf hlo hhi
+
+example (f : ℝ → ℝ) (M H : ℕ) (q : ℤ) {C lam : ℝ}
+    (hC : 0 ≤ C) (hH : 0 < H) (hq : q ≠ 0) (hlam : 0 < lam)
+    (hscale : 4*(H:ℝ)*|(q:ℝ)| *lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    ‖robertSargosTrimmedCorrelation f M H q 0‖ ≤
+      (H:ℝ)*(1+12*(C*M*Real.sqrt (4*(H:ℝ)*|(q:ℝ)| *lam)+
+        2/Real.sqrt (2*(H:ℝ)*|(q:ℝ)| *lam))) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_trimmed_correlation_bound f M H q C lam hC hH hq hlam hscale hf hlo hhi
+
+example (f : ℤ → ℝ) (Q : ℕ) :
+    (∑ q ∈ Finset.Ioo (0:ℤ) Q, f q) =
+      ∑ q ∈ Finset.Icc 1 (Q-1), f q :=
+  @TaoTrudgianYang2025.sum_positive_int_eq_nat_Icc f Q
+
+example (Q : ℕ) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, Real.sqrt |(q:ℝ)|) ≤
+      2*(Q:ℝ)*Real.sqrt Q :=
+  @TaoTrudgianYang2025.sum_signed_sqrt_le Q
+
+example (Q : ℕ) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, 1/Real.sqrt |(q:ℝ)|) ≤
+      4*Real.sqrt Q :=
+  @TaoTrudgianYang2025.sum_signed_inverse_sqrt_le Q
+
+example (M H Q : ℕ) {C lam : ℝ} (hC : 0 ≤ C) (hlam : 0 ≤ lam) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q,
+      (H:ℝ)*(1+12*(C*M*Real.sqrt (4*(H:ℝ)*|(q:ℝ)| *lam)+
+        2/Real.sqrt (2*(H:ℝ)*|(q:ℝ)| *lam)))) ≤
+      2*(H:ℝ)*Q+24*C*M*H*Real.sqrt (4*(H:ℝ)*lam)*Q*Real.sqrt Q+
+        96*H*Real.sqrt Q/Real.sqrt (2*(H:ℝ)*lam) :=
+  @TaoTrudgianYang2025.sum_robertSargos_zero_r_majorant M H Q C lam hC hlam
+
+example (f : ℝ → ℝ) (M H Q : ℕ) {C lam : ℝ}
+    (hC : 0 ≤ C) (hH : 0 < H) (hQ : 0 < Q) (hlam : 0 < lam)
+    (hscale : 4*(H:ℝ)*Q*lam ≤ 1)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0,
+      (1-|(q:ℝ)|/Q)*(robertSargosTrimmedCorrelation f M H q 0).re) ≤
+      2*(H:ℝ)*Q+24*C*M*H*Real.sqrt (4*(H:ℝ)*lam)*Q*Real.sqrt Q+
+        96*H*Real.sqrt Q/Real.sqrt (2*(H:ℝ)*lam) :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_weighted_row_bound f M H Q C lam hC hH hQ hlam hscale hf hlo hhi
+
+example {H Q R lam : ℝ}
+    (hH : 0 < H) (hQ : 0 < Q) (hR : 0 < R) (hlam : 0 < lam)
+    (hscale : H^5*Q*lam ≤ R^2) :
+    H^2*Real.sqrt (4*H*lam)*Real.sqrt Q ≤ 2*R :=
+  @TaoTrudgianYang2025.zero_r_positive_root_budget H Q R lam hH hQ hR hlam hscale
+
+example {M H Q R lam : ℝ}
+    (hM : 0 ≤ M) (hH : 0 < H) (hQ : 0 < Q) (hR : 0 < R) (hlam : 0 < lam)
+    (hscale : H^3 ≤ M^2*R^2*Q*lam) :
+    H^2*Real.sqrt Q/(Q*R*Real.sqrt (2*H*lam)) ≤ M :=
+  @TaoTrudgianYang2025.zero_r_inverse_root_budget M H Q R lam hM hH hQ hR hlam hscale
+
+example {M H Q R C lam : ℝ}
+    (hM : 0 ≤ M) (hH : 0 < H) (hQ : 0 < Q) (hR : 0 < R)
+    (hC : 1 ≤ C) (hlam : 0 < lam)
+    (hdiag : H^2 ≤ M*R) (hpos : H^5*Q*lam ≤ R^2)
+    (hinv : H^3 ≤ M^2*R^2*Q*lam) :
+    (8*M*H/(Q*R))*
+      (2*H*Q+24*C*M*H*Real.sqrt (4*H*lam)*Q*Real.sqrt Q+
+        96*H*Real.sqrt Q/Real.sqrt (2*H*lam)) ≤ 1168*C*M^2 :=
+  @TaoTrudgianYang2025.zero_r_a_times_a_row_budget M H Q R C lam hM hH hQ hR hC hlam hdiag hpos hinv
+
+example {T M H Q R lam : ℝ}
+    (hT : 2 ≤ T) (hM : T^8 ≤ M) (hH : 0 < H) (hHmax : H ≤ T^2/2)
+    (hQmin : T^3/2 ≤ Q) (hQmax : Q ≤ T^3) (hR : T/2 ≤ R)
+    (hlam : 0 < lam) (hscale : T^13*lam = 1) :
+    4*H*Q*lam ≤ 1 ∧ H^2 ≤ M*R ∧
+      H^5*Q*lam ≤ R^2 ∧ H^3 ≤ M^2*R^2*Q*lam :=
+  @TaoTrudgianYang2025.zero_r_physical_polynomial_budgets T M H Q R lam hT hM hH hHmax hQmin hQmax hR hlam hscale
+
+example {lam : ℝ} (hlam : 0 < lam) (n : ℕ) :
+    (lam^(-(1:ℝ)/13))^n = lam^(-(n:ℝ)/13) :=
+  @TaoTrudgianYang2025.thirteenth_root_nat_pow lam hlam n
+
+example {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192) :
+    2 ≤ lam^(-(1:ℝ)/13) ∧ (lam^(-(1:ℝ)/13))^13*lam = 1 :=
+  @TaoTrudgianYang2025.thirteenth_root_physical_scale lam hlam hsmall
+
+example {X : ℝ} (hX : 1 ≤ X) :
+    0 < ⌊X⌋₊ ∧ X/2 ≤ (⌊X⌋₊:ℝ) ∧ (⌊X⌋₊:ℝ) ≤ X :=
+  @TaoTrudgianYang2025.positive_floor_half_bounds X hX
+
+example (M H : ℕ) {lam : ℝ} (hH : 0 < H)
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    0 < ⌊lam^(-(3:ℝ)/13)⌋₊ ∧ 0 < ⌊lam^(-(1:ℝ)/13)⌋₊ ∧
+      4*(H:ℝ)*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*lam ≤ 1 ∧
+      (H:ℝ)^2 ≤ (M:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) ∧
+      (H:ℝ)^5*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*lam ≤ (⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)^2 ∧
+      (H:ℝ)^3 ≤ (M:ℝ)^2*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)^2*
+        (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*lam :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_floor_budgets M H lam hH hlam hsmall hM hHmax
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hH : 0 < H) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ y ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f y)
+    (hlo : ∀ y ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f y)
+    (hhi : ∀ y ∈ Icc (1:ℝ) M, iteratedDeriv 4 f y ≤ C*lam) :
+    (8*(M:ℝ)*H/
+        ((⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)))*
+      (∑ q ∈ (Finset.Ioo (-(⌊lam^(-(3:ℝ)/13)⌋₊:ℤ)) ⌊lam^(-(3:ℝ)/13)⌋₊).erase 0,
+        (1-|(q:ℝ)|/(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ))*
+          (robertSargosTrimmedCorrelation f M H q 0).re) ≤ 1168*C*(M:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_zero_r_physical_a_times_a f M H C lam hC hH hlam hsmall hM hHmax hf hlo hhi
+
+example : robertSargosMOverlap 10 2 3 0 = Finset.Icc (3:ℤ) 5 := by
+  norm_num [robertSargosMOverlap]
+
+example : robertSargosMOverlap 10 2 (-3) 0 = Finset.Icc (6:ℤ) 8 := by
+  norm_num [robertSargosMOverlap]
+
+example : robertSargosZeroRSource (fun _ => 0) 10 2 3 = 3 := by
+  norm_num [robertSargosZeroRSource,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosZeroRSource (fun _ => 0) 10 2 (-3) = 3 := by
+  norm_num [robertSargosZeroRSource,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosZeroRSource (fun _ => 0) 4 2 1 = 0 := by
+  norm_num [robertSargosZeroRSource,robertSargosMOverlap]
+
+example (x h q : ℝ) :
+    robertSargosSymmetricDifference (fun y => y^2/2) (x+q) h -
+      robertSargosSymmetricDifference (fun y => y^2/2) x h = 2*h*q := by
+  unfold robertSargosSymmetricDifference
+  ring
+
+example : (∑ q ∈ Finset.Ioo (0:ℤ) 4, (q:ℝ)) = 6 := by
+  norm_num [show Finset.Ioo (0:ℤ) 4 = {1,2,3} by decide]
+
+example : (∑ q ∈ Finset.Ioo (-1:ℤ) 1, Real.sqrt |(q:ℝ)|) = 0 := by
+  norm_num [show Finset.Ioo (-1:ℤ) 1 = {0} by decide]
+
+example : (∑ q ∈ (Finset.Ioo (-1:ℤ) 1).erase 0, (q:ℝ)) = 0 := by
+  norm_num [show Finset.Ioo (-1:ℤ) 1 = {0} by decide]
+
+example : (2:ℝ)^13*(1/8192) = 1 := by norm_num
+
+example : 4*(2:ℝ)*8*(1/8192) ≤ 1 ∧
+    (2:ℝ)^2 ≤ 256*2 ∧ (2:ℝ)^5*8*(1/8192) ≤ 2^2 ∧
+      (2:ℝ)^3 ≤ 256^2*2^2*8*(1/8192) := by norm_num
+
+example : (⌊(8:ℝ)⌋₊:ℝ) = 8 ∧ (⌊(2:ℝ)⌋₊:ℝ) = 2 := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosZeroRRegression
+
+section RobertSargosZeroShiftRegression
+open Set GafniTao RiemannZeta.GuthMaynard
+open scoped ContDiff
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    (robertSargosTrimmedCorrelation f M H 0 0).re =
+      ∑ h ∈ robertSargosHOverlap H 0, ((robertSargosMOverlap M h 0 0).card:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_zero_zero_re f M H
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    (robertSargosTrimmedCorrelation f M H 0 0).re ≤ (M:ℝ)*H :=
+  @TaoTrudgianYang2025.robertSargos_zero_zero_bound f M H
+
+example {lam : ℝ} (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    {H : ℕ} (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    (H:ℝ)^2 ≤ (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) :=
+  @TaoTrudgianYang2025.zero_zero_floor_scale lam hlam hsmall H hHmax
+
+example (f : ℝ → ℝ) (M H : ℕ)
+    {lam : ℝ} (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    (8*(M:ℝ)*H/((⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)))*
+      (robertSargosTrimmedCorrelation f M H 0 0).re ≤ 8*(M:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_zero_zero_physical_a_times_a f M H lam hlam hsmall hHmax
+
+example (f : ℝ → ℝ) (x h : ℝ) :
+    finiteTaylorPolynomial f 2 x (x+h) =
+      f x+deriv f x*h+iteratedDeriv 2 f x*h^2/2 :=
+  @TaoTrudgianYang2025.robertSargos_quadratic_polynomial f x h
+
+example {f : ℝ → ℝ} {a b x h B : ℝ} (hh : 0 ≤ h)
+    (ha : a ≤ x-h) (hb : x+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 3 f y)
+    (hd : ∀ y ∈ Icc a b, |iteratedDeriv 3 f y| ≤ B) :
+    |robertSargosSymmetricDifference f x h-2*h*deriv f x| ≤ B*h^3/3 :=
+  @TaoTrudgianYang2025.abs_symmetric_linear_remainder_le f a b x h B hh ha hb hf hd
+
+example {f : ℝ → ℝ} {a b x h B : ℝ} (hh : 0 ≤ h)
+    (ha : a ≤ x-h) (hb : x+h ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hd : ∀ y ∈ Icc a b, |iteratedDeriv 4 f y| ≤ B) :
+    |robertSargosSymmetricDifference (iteratedDeriv 1 f) x h -
+      2*h*iteratedDeriv 2 f x| ≤ B*h^3/3 :=
+  @TaoTrudgianYang2025.abs_symmetric_first_jet_remainder_le f a b x h B hh ha hb hf hd
+
+example (f : ℝ → ℝ) (h r x : ℝ) :
+    robertSargosSymmetricDifference f x h -
+      robertSargosSymmetricDifference f x (h+r) =
+        robertSargosZeroQLeading f r x+robertSargosZeroQRemainder f h r x :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_phase_identity f h r x
+
+example {f : ℝ → ℝ} {h r x : ℝ}
+    (hx : ContDiffAt ℝ 4 f x)
+    (hp : ContDiffAt ℝ 4 f (x+h)) (hm : ContDiffAt ℝ 4 f (x-h))
+    (hrp : ContDiffAt ℝ 4 f (x+(h+r))) (hrm : ContDiffAt ℝ 4 f (x-(h+r))) :
+    HasDerivAt (robertSargosZeroQRemainder f h r)
+      (robertSargosSymmetricDifference (iteratedDeriv 1 f) x h -
+        robertSargosSymmetricDifference (iteratedDeriv 1 f) x (h+r) +
+          2*r*iteratedDeriv 2 f x) x :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_zero_q_remainder f h r x hx hp hm hrp hrm
+
+example {f : ℝ → ℝ} {a b x h r B : ℝ} (hh : 0 ≤ h) (hhr : 0 ≤ h+r)
+    (ha : a ≤ x-h) (hb : x+h ≤ b)
+    (har : a ≤ x-(h+r)) (hbr : x+(h+r) ≤ b)
+    (hf : ∀ y ∈ Icc a b, ContDiffAt ℝ 4 f y)
+    (hd : ∀ y ∈ Icc a b, |iteratedDeriv 4 f y| ≤ B) :
+    |deriv (robertSargosZeroQRemainder f h r) x| ≤ B*(h^3+(h+r)^3)/3 :=
+  @TaoTrudgianYang2025.abs_robertSargos_zero_q_remainder_derivative_le f a b x h r B hh hhr ha hb har hbr hf hd
+
+example {f : ℝ → ℝ} {x r : ℝ} {j : ℕ} (hj : j < 3) (hf : ContDiffAt ℝ 4 f x) :
+    HasDerivAt (fun y => -2*r*iteratedDeriv (j+1) f y)
+      (-2*r*iteratedDeriv (j+2) f x) x :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_zero_q_leading_jet f x r j hj hf
+
+example (f : ℝ → ℝ) (A : ℝ) (N : ℕ) {r C lam : ℝ}
+    (hr : r ≠ 0) (hC : 1 ≤ C) (hlam : 0 < lam) (hscale : 2*|r| *lam ≤ 1)
+    (hf : ∀ x ∈ Icc A (A+N), ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc A (A+N), lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc A (A+N), iteratedDeriv 4 f x ≤ C*lam) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter (robertSargosZeroQLeading f r (A+n))‖ ≤
+      20*C*((N:ℝ)*(2*|r| *lam)^((1:ℝ)/6)+Real.sqrt N*(2*|r| *lam)^(-(1:ℝ)/6)) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_leading_prefix f A N r C lam hr hC hlam hscale hf hlo hhi
+
+example (w a : ℕ → ℂ) (N : ℕ) {B V : ℝ} (hB : 0 ≤ B)
+    (hp : ∀ n ≤ N, ‖∑ j ∈ Finset.range n, a j‖ ≤ B)
+    (hw : ‖w (N-1)‖ ≤ 1)
+    (hv : ∑ j ∈ Finset.range (N-1), ‖w (j+1)-w j‖ ≤ V) :
+    ‖∑ j ∈ Finset.range N, w j*a j‖ ≤ (1+V)*B :=
+  @TaoTrudgianYang2025.norm_weighted_range_of_prefix_bound w a N B V hB hp hw hv
+
+example (u u' : ℝ → ℝ) (A : ℝ) (N : ℕ) {K : ℝ} (hK : 0 ≤ K)
+    (hu : ∀ x ∈ Icc A (A+N), HasDerivAt u (u' x) x)
+    (hd : ∀ x ∈ Icc A (A+N), |u' x| ≤ K) :
+    (∑ j ∈ Finset.range (N-1),
+      ‖fordAdditiveCharacter (u (A+(j+1))) -
+        fordAdditiveCharacter (u (A+j))‖) ≤ 2*Real.pi*K*N :=
+  @TaoTrudgianYang2025.continuous_character_range_variation u u' A N K hK hu hd
+
+example (g u u' : ℝ → ℝ) (A : ℝ) (N : ℕ) {B K : ℝ}
+    (hB : 0 ≤ B) (hK : 0 ≤ K)
+    (hg : ∀ n ≤ N, ‖∑ j ∈ Finset.range n, fordAdditiveCharacter (g (A+j))‖ ≤ B)
+    (hu : ∀ x ∈ Icc A (A+N), HasDerivAt u (u' x) x)
+    (hd : ∀ x ∈ Icc A (A+N), |u' x| ≤ K) :
+    ‖∑ j ∈ Finset.range N, fordAdditiveCharacter (g (A+j)+u (A+j))‖ ≤
+      (1+2*Real.pi*K*N)*B :=
+  @TaoTrudgianYang2025.norm_continuous_perturbed_phase_prefix g u u' A N B K hB hK hg hu hd
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℕ → A) (K L : ℕ) :
+    (∑ n ∈ Finset.range (K*L), f n) =
+      ∑ k ∈ Finset.range K, ∑ j ∈ Finset.range L, f (k*L+j) :=
+  @TaoTrudgianYang2025.sum_range_mul_blocks A _ f K L
+
+example {A : Type*} [AddCommMonoid A]
+    (f : ℕ → A) (N L : ℕ) :
+    (∑ n ∈ Finset.range N, f n) =
+      (∑ k ∈ Finset.range (N/L), ∑ j ∈ Finset.range L, f (k*L+j))+
+        ∑ j ∈ Finset.range (N%L), f ((N/L)*L+j) :=
+  @TaoTrudgianYang2025.sum_range_euclidean_blocks A _ f N L
+
+example (f : ℕ → ℂ) (N L : ℕ) {B : ℝ}
+    (hb : ∀ k < N/L, ‖∑ j ∈ Finset.range L, f (k*L+j)‖ ≤ B)
+    (ht : ‖∑ j ∈ Finset.range (N%L), f ((N/L)*L+j)‖ ≤ B) :
+    ‖∑ n ∈ Finset.range N, f n‖ ≤ ((N/L:ℕ)+1:ℝ)*B :=
+  @TaoTrudgianYang2025.norm_sum_range_of_block_bounds f N L B hb ht
+
+example {N L : ℕ} (hL : 0 < L) (hLN : L ≤ N) :
+    ((N/L:ℕ)+1:ℝ) ≤ 2*(N:ℝ)/L :=
+  @TaoTrudgianYang2025.euclidean_block_count_le N L hL hLN
+
+example (f : ℝ → ℝ) (A : ℝ) (N : ℕ) {a b h r C lam : ℝ}
+    (hh : 0 ≤ h) (hhr : 0 ≤ h+r) (hr : r ≠ 0)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hscale : 2*|r| *lam ≤ 1)
+    (ha : a ≤ A-h) (hb : A+N+h ≤ b)
+    (har : a ≤ A-(h+r)) (hbr : A+N+(h+r) ≤ b)
+    (hf : ∀ x ∈ Icc a b, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc a b, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc a b, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter
+      (robertSargosSymmetricDifference f (A+n) h -
+        robertSargosSymmetricDifference f (A+n) (h+r))‖ ≤
+      (1+2*Real.pi*(C*lam*(h^3+(h+r)^3)/3)*N)*
+        (20*C*((N:ℝ)*(2*|r| *lam)^((1:ℝ)/6)+
+          Real.sqrt N*(2*|r| *lam)^(-(1:ℝ)/6))) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_perturbed_prefix f A N a b h r C lam hh hhr hr hC hlam hscale ha hb har hbr hf hlo hhi
+
+example {N μ : ℝ}
+    (hμ : 0 < μ) (hμ1 : μ ≤ 1) (hmax : N ≤ μ^(-(1:ℝ)/2)) :
+    N*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6) ≤ 2*μ^(-(5:ℝ)/12) :=
+  @TaoTrudgianYang2025.third_derivative_square_root_block_budget N μ hμ hμ1 hmax
+
+example {N K D μ : ℝ}
+    (hN : 0 ≤ N) (hD : 0 ≤ D) (hμ : 0 < μ)
+    (hmax : N ≤ μ^(-(1:ℝ)/2)) (hslow : K ≤ D*Real.sqrt μ) :
+    K*N ≤ D :=
+  @TaoTrudgianYang2025.abel_square_root_block_variation N K D μ hN hD hμ hmax hslow
+
+example {N C K D μ : ℝ}
+    (hN : 0 ≤ N) (hC : 0 ≤ C) (hD : 0 ≤ D)
+    (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hmax : N ≤ μ^(-(1:ℝ)/2)) (hslow : K ≤ D*Real.sqrt μ) :
+    (1+2*Real.pi*K*N)*(20*C*(N*μ^((1:ℝ)/6)+Real.sqrt N*μ^(-(1:ℝ)/6))) ≤
+      40*C*(1+2*Real.pi*D)*μ^(-(5:ℝ)/12) :=
+  @TaoTrudgianYang2025.third_derivative_abel_block_budget N C K D μ hN hC hD hμ hμ1 hmax hslow
+
+example {μ : ℝ} (hμ : 0 < μ) (hμ1 : μ ≤ 1) :
+    0 < ⌊μ^(-(1:ℝ)/2)⌋₊ ∧
+      μ^(-(1:ℝ)/2)/2 ≤ (⌊μ^(-(1:ℝ)/2)⌋₊:ℝ) ∧
+      (⌊μ^(-(1:ℝ)/2)⌋₊:ℝ) ≤ μ^(-(1:ℝ)/2) :=
+  @TaoTrudgianYang2025.square_root_block_floor μ hμ hμ1
+
+example {N L : ℕ} {M R : ℝ}
+    (hR : 0 < R) (hL : R/2 ≤ L) (hN : (N:ℝ) ≤ M) (hM : R ≤ M) :
+    ((N/L:ℕ)+1:ℝ) ≤ 3*M/R :=
+  @TaoTrudgianYang2025.euclidean_block_count_of_half_scale N L M R hR hL hN hM
+
+example (f : ℕ → ℂ) (N : ℕ) {M C D μ : ℝ}
+    (hC : 0 ≤ C) (hD : 0 ≤ D) (hμ : 0 < μ) (hμ1 : μ ≤ 1)
+    (hN : (N:ℝ) ≤ M) (hM : μ^(-(1:ℝ)/2) ≤ M)
+    (hb : ∀ a n : ℕ, a+n ≤ N → n ≤ ⌊μ^(-(1:ℝ)/2)⌋₊ →
+      ‖∑ j ∈ Finset.range n, f (a+j)‖ ≤
+        40*C*(1+2*Real.pi*D)*μ^(-(5:ℝ)/12)) :
+    ‖∑ j ∈ Finset.range N, f j‖ ≤ 120*C*(1+2*Real.pi*D)*M*μ^((1:ℝ)/12) :=
+  @TaoTrudgianYang2025.norm_range_from_square_root_blocks f N M C D μ hC hD hμ hμ1 hN hM hb
+
+example (f : ℝ → ℝ) (A : ℝ) (N : ℕ) {a b h r C D lam M : ℝ}
+    (hh : 0 ≤ h) (hhr : 0 ≤ h+r) (hr : r ≠ 0)
+    (hC : 1 ≤ C) (hD : 0 ≤ D) (hlam : 0 < lam) (hscale : 2*|r| *lam ≤ 1)
+    (hN : (N:ℝ) ≤ M) (hM : (2*|r| *lam)^(-(1:ℝ)/2) ≤ M)
+    (hslow : C*lam*(h^3+(h+r)^3)/3 ≤ D*Real.sqrt (2*|r| *lam))
+    (ha : a ≤ A-h) (hb : A+N+h ≤ b)
+    (har : a ≤ A-(h+r)) (hbr : A+N+(h+r) ≤ b)
+    (hf : ∀ x ∈ Icc a b, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc a b, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc a b, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖∑ n ∈ Finset.range N, fordAdditiveCharacter
+      (robertSargosSymmetricDifference f (A+n) h -
+        robertSargosSymmetricDifference f (A+n) (h+r))‖ ≤
+      120*C*(1+2*Real.pi*D)*M*(2*|r| *lam)^((1:ℝ)/12) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_full_prefix f A N a b h r C D lam M hh hhr hr hC hD hlam hscale hN hM hslow ha hb har hbr hf hlo hhi
+
+example (f : ℝ → ℝ) (M : ℕ) (h r : ℤ) {C lam : ℝ}
+    (hh : 0 ≤ h) (hhr : 0 ≤ h+r) (hr : r ≠ 0)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hscale : 2*|(r:ℝ)| *lam ≤ 1)
+    (hM : (2*|(r:ℝ)| *lam)^(-(1:ℝ)/2) ≤ M)
+    (hslow : C*lam*((h:ℝ)^3+((h:ℝ)+r)^3)/3 ≤ C*Real.sqrt (2*|(r:ℝ)| *lam))
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖robertSargosZeroQSource f M h r‖ ≤
+      1+120*C*(1+2*Real.pi*C)*M*(2*|(r:ℝ)| *lam)^((1:ℝ)/12) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_source_bound f M h r C lam hh hhr hr hC hlam hscale hM hslow hf hlo hhi
+
+example {r lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hr : |r| ≤ lam^(-(1:ℝ)/13)) :
+    2*|r| *lam ≤ 1 :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_curvature_scale r lam hlam hsmall hr
+
+example {h r C lam : ℝ}
+    (hC : 0 ≤ C) (hlam : 0 < lam) (hlam1 : lam ≤ 1)
+    (hh : 0 ≤ h) (hhr : 0 ≤ h+r)
+    (hhmax : h ≤ lam^(-(2:ℝ)/13)) (hhrmax : h+r ≤ lam^(-(2:ℝ)/13))
+    (hr : 1 ≤ |r|) :
+    C*lam*(h^3+(h+r)^3)/3 ≤ C*Real.sqrt (2*|r| *lam) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_slow_scale h r C lam hC hlam hlam1 hh hhr hhmax hhrmax hr
+
+example {r lam M : ℝ}
+    (hlam : 0 < lam) (hlam1 : lam ≤ 1) (hr : 1 ≤ |r|)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) :
+    (2*|r| *lam)^(-(1:ℝ)/2) ≤ M :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_block_length r lam M hlam hlam1 hr hM
+
+example (f : ℝ → ℝ) (M H : ℕ) (r : ℤ) {C lam : ℝ}
+    (hr : r ≠ 0) (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hrmax : |(r:ℝ)| ≤ lam^(-(1:ℝ)/13))
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖robertSargosMixedCorrelation f M H 0 r‖ ≤
+      (H:ℝ)*(1+120*C*(1+2*Real.pi*C)*M*(2*|(r:ℝ)| *lam)^((1:ℝ)/12)) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_mixed_correlation_bound f M H r C lam hr hC hlam hsmall hM hH hrmax hf hlo hhi
+
+example (f : ℝ → ℝ) (M H : ℕ) (r : ℤ) {C lam : ℝ}
+    (hr : r ≠ 0) (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hrmax : |(r:ℝ)| ≤ lam^(-(1:ℝ)/13))
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖robertSargosTrimmedCorrelation f M H 0 r‖ ≤
+      (H:ℝ)*(1+120*C*(1+2*Real.pi*C)*M*(2*|(r:ℝ)| *lam)^((1:ℝ)/12))+
+        2*H*|(r:ℝ)| :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_trimmed_correlation_bound f M H r C lam hr hC hlam hsmall hM hH hrmax hf hlo hhi
+
+example (f : ℝ → ℝ) (M H R : ℕ) {C lam : ℝ}
+    (hR : 0 < R) (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hRmax : (R:ℝ) ≤ lam^(-(1:ℝ)/13))
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+      (1-|(r:ℝ)|/R)*(robertSargosTrimmedCorrelation f M H 0 r).re) ≤
+        2*(R:ℝ)*((H:ℝ)*(1+120*C*(1+2*Real.pi*C)*M*(2*(R:ℝ)*lam)^((1:ℝ)/12))+
+          2*H*R) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_weighted_column_bound f M H R C lam hR hC hlam hsmall hM hH hRmax hf hlo hhi
+
+example {T R lam : ℝ}
+    (hT : 0 ≤ T) (hR : 0 ≤ R) (hRmax : R ≤ T) (hlam : 0 < lam)
+    (hscale : T^13*lam = 1) :
+    T*(2*R*lam)^((1:ℝ)/12) ≤ 2 :=
+  @TaoTrudgianYang2025.zero_q_twelfth_root_budget T R lam hT hR hRmax hlam hscale
+
+example {T M H Q R lam : ℝ}
+    (hT : 2 ≤ T) (hM : T^8 ≤ M) (hH : 0 ≤ H) (hHmax : H ≤ T^2/2)
+    (hQ : T^3/2 ≤ Q) (hR : 0 ≤ R) (hRmax : R ≤ T) (hlam : 0 < lam)
+    (hscale : T^13*lam = 1) :
+    H^2 ≤ M*Q/2 ∧ H^2*R ≤ M*Q/2 ∧ H^2*(2*R*lam)^((1:ℝ)/12) ≤ Q :=
+  @TaoTrudgianYang2025.zero_q_physical_polynomial_budgets T M H Q R lam hT hM hH hHmax hQ hR hRmax hlam hscale
+
+example {M H Q R C lam : ℝ}
+    (hM : 0 ≤ M) (hQ : 0 < Q) (hR : 0 < R) (hC : 1 ≤ C)
+    (hdiag : H^2 ≤ M*Q/2) (herr : H^2*R ≤ M*Q/2)
+    (hroot : H^2*(2*R*lam)^((1:ℝ)/12) ≤ Q) :
+    (8*M*H/(Q*R))*
+      (2*R*(H*(1+120*C*(1+2*Real.pi*C)*M*(2*R*lam)^((1:ℝ)/12))+2*H*R)) ≤
+        1944*C*(1+2*Real.pi*C)*M^2 :=
+  @TaoTrudgianYang2025.zero_q_a_times_a_column_budget M H Q R C lam hM hQ hR hC hdiag herr hroot
+
+example (M H : ℕ) {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    0 < ⌊lam^(-(3:ℝ)/13)⌋₊ ∧ 0 < ⌊lam^(-(1:ℝ)/13)⌋₊ ∧
+      (⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) ≤ lam^(-(1:ℝ)/13) ∧
+      (H:ℝ)^2 ≤ (M:ℝ)*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)/2 ∧
+      (H:ℝ)^2*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) ≤ (M:ℝ)*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)/2 ∧
+      (H:ℝ)^2*(2*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)*lam)^((1:ℝ)/12) ≤
+        (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_floor_budgets M H lam hlam hsmall hM hH
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    (8*(M:ℝ)*H/
+      ((⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)))*
+      (∑ r ∈ (Finset.Ioo (-(⌊lam^(-(1:ℝ)/13)⌋₊:ℤ)) ⌊lam^(-(1:ℝ)/13)⌋₊).erase 0,
+        (1-|(r:ℝ)|/(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ))*
+          (robertSargosTrimmedCorrelation f M H 0 r).re) ≤
+      1944*C*(1+2*Real.pi*C)*(M:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_zero_q_physical_a_times_a f M H C lam hC hlam hsmall hM hH hf hlo hhi
+
+example (F : ℤ → ℤ → ℝ) (Q R : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R, F q r) =
+      F 0 0+(∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0, F q 0)+
+        (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0, F 0 r)+
+          ∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0,
+            ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0, F q r :=
+  @TaoTrudgianYang2025.sum_signed_shift_axes F Q R hQ hR
+
+example (f : ℝ → ℝ) (M H Q R : ℕ) (hQ : 0 < Q) (hR : 0 < R) :
+    (∑ q ∈ Finset.Ioo (-(Q:ℤ)) Q, ∑ r ∈ Finset.Ioo (-(R:ℤ)) R,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosTrimmedCorrelation f M H q r).re) =
+    (robertSargosTrimmedCorrelation f M H 0 0).re+
+      (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0,
+        (1-|(q:ℝ)|/Q)*(robertSargosTrimmedCorrelation f M H q 0).re)+
+      (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        (1-|(r:ℝ)|/R)*(robertSargosTrimmedCorrelation f M H 0 r).re)+
+      robertSargosNonzeroShiftSum f M H Q R :=
+  @TaoTrudgianYang2025.robertSargos_weighted_zero_shift_decomposition f M H Q R hQ hR
+
+example (M H : ℕ) {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hHmin : lam^(-(1:ℝ)/7) ≤ H) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    0 < H ∧ 0 < ⌊lam^(-(3:ℝ)/13)⌋₊ ∧ 0 < ⌊lam^(-(1:ℝ)/13)⌋₊ ∧
+      ⌊lam^(-(3:ℝ)/13)⌋₊ ≤ M ∧ ⌊lam^(-(1:ℝ)/13)⌋₊ ≤ 2*H :=
+  @TaoTrudgianYang2025.robertSargos_physical_a_times_a_ranges M H lam hlam hsmall hM hHmin hHmax
+
+example (M H : ℕ) {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    16*(M:ℝ)*(H:ℝ)^2*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) ≤ 4*(M:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_physical_endpoint_budget M H lam hlam hsmall hM hHmax
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hHmin : lam^(-(1:ℝ)/7) ≤ H) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      3124*C*(1+2*Real.pi*C)*(M:ℝ)^2+
+        (8*(M:ℝ)*H/
+          ((⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)*(⌊lam^(-(1:ℝ)/13)⌋₊:ℝ)))*
+          robertSargosNonzeroShiftSum f M H
+            ⌊lam^(-(3:ℝ)/13)⌋₊ ⌊lam^(-(1:ℝ)/13)⌋₊ :=
+  @TaoTrudgianYang2025.robertSargos_physical_nonzero_a_times_a f M H C lam hC hlam hsmall hM hHmin hHmax hf hlo hhi
+
+example : (robertSargosTrimmedCorrelation (fun _ => 0) 10 0 0 0).re = 0 := by
+  norm_num [robertSargosTrimmedCorrelation,robertSargosHOverlap]
+
+example : (robertSargosTrimmedCorrelation (fun _ => 0) 10 2 0 0).re = 10 := by
+  norm_num [robertSargosTrimmedCorrelation,robertSargosHOverlap,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Icc (2:ℤ) 3 = {2,3} by decide]
+
+example : robertSargosMOverlap 10 2 0 1 = Finset.Icc (4:ℤ) 7 := by
+  norm_num [robertSargosMOverlap]
+
+example : robertSargosMOverlap 10 2 0 (-1) = Finset.Icc (3:ℤ) 8 := by
+  norm_num [robertSargosMOverlap]
+
+example : robertSargosZeroQSource (fun _ => 0) 10 2 1 = 4 := by
+  norm_num [robertSargosZeroQSource,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosZeroQSource (fun _ => 0) 10 2 (-1) = 6 := by
+  norm_num [robertSargosZeroQSource,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosZeroQSource (fun _ => 0) 4 2 1 = 0 := by
+  norm_num [robertSargosZeroQSource,robertSargosMOverlap]
+
+example : robertSargosMixedCorrelation (fun _ => 0) 10 2 0 1 = 4 := by
+  norm_num [robertSargosMixedCorrelation,robertSargosHOverlap,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example : robertSargosTrimmedCorrelation (fun _ => 0) 10 2 0 1 = 6 := by
+  norm_num [robertSargosTrimmedCorrelation,robertSargosHOverlap,robertSargosMOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat]
+
+example (f : ℝ → ℝ) (h x : ℝ) : robertSargosZeroQRemainder f h 0 x = 0 := by
+  simp [robertSargosZeroQRemainder]
+
+example : (7:ℕ)/3 = 2 ∧ 7%3 = 1 := by norm_num
+
+example : (∑ n ∈ Finset.range 7, (n:ℝ)) =
+    (∑ k ∈ Finset.range 2, ∑ j ∈ Finset.range 3, ((k*3+j:ℕ):ℝ))+
+      ∑ j ∈ Finset.range 1, ((6+j:ℕ):ℝ) := by
+  norm_num [Finset.sum_range_succ]
+
+example (f : ℕ → ℂ) :
+    (∑ n ∈ Finset.range 3, f n) =
+      (∑ k ∈ Finset.range (3/0), ∑ j ∈ Finset.range 0, f (k*0+j))+
+        ∑ j ∈ Finset.range (3%0), f ((3/0)*0+j) := by simp
+
+example : (⌊(4:ℝ)⌋₊:ℝ) = 4 ∧ (4:ℝ)/2 ≤ 4 := by norm_num
+
+example : (2:ℝ)^2 ≤ 256*8/2 ∧ (2:ℝ)^2*2 ≤ 256*8/2 := by norm_num
+
+example : (1/12:ℚ)-1/13-1/156 = 0 := by norm_num
+
+example (f : ℝ → ℝ) (M H : ℕ) :
+    robertSargosNonzeroShiftSum f M H 1 1 = 0 := by
+  simp [robertSargosNonzeroShiftSum,show Finset.Ioo (-1:ℤ) 1 = {0} by decide]
+
+example : 8+1168+1944+4 = (3124:ℕ) := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosZeroShiftRegression

@@ -63,6 +63,8 @@ theorem zetaLargeValueExponent_nonneg_of_nonempty_sequence {σ τ : ℝ}
     (0 : EReal) ≤ zetaLargeValueExponent σ τ := by
   apply le_sInf
   rintro _ ⟨B,hB,rfl⟩
-  exact_mod_cast IsZetaLargeValueBound.nonneg_of_nonempty_sequence hB P hNtop hT hV hne
+  change ((0 : ℝ) : EReal) ≤ (B : EReal)
+  exact EReal.coe_le_coe_iff.mpr
+    (IsZetaLargeValueBound.nonneg_of_nonempty_sequence hB P hNtop hT hV hne)
 
 end TaoTrudgianYang2025
