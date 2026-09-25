@@ -1,7 +1,28 @@
 # Tao--Trudgian--Yang 2025 checklist
 
-Current analytic progress: [Robert–Sargos zero-r row](#robertsargos-zero-r-row--current-checkpoint).
-The actual signed zero-r row and its A-times-A cost at the source floor scales are proved. The zero-q column, diagonal and remaining fourth-derivative assembly are OPEN; completion stays 29/42.
+Verified analytic checkpoint (25 September 2026):
+[ParabolaBilinearLocalization](Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
+now proves global dyadic bilinear decoupling for the literal source curve
+with every positive epsilon loss. For N=2^n and R=N^2 the bound is
+C(epsilon,nu)*2^(epsilon*n)/R^2 times both sums of actual source-cell
+sixth moments at radial weight scale 20R. Positive cross-family separation
+nu is imposed on actual square-root frequencies; arbitrary coefficients,
+multiplicities, empty cells and closed-grid endpoints are retained.
+The proved smaller-grid recurrence uses m=(2n+2)/3+2<n for n>=9.
+Coarse separation, independent shifts, exact scale cancellation and the
+genuine N^22 polynomial starting bound discharge all induction inputs.
+Both BAT gates pass: 82 public theorems and 156 focused regressions; this
+batch added one public theorem and four regressions in the existing module.
+Next: anisotropic-domain and bilinear-to-linear first spacing, followed by
+the independent second-spacing/cubic-Poisson inputs. The Bourgain pair,
+generic D and EPZAE-11/13/14 remain OPEN; completion is still 31/42.
+Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples and
+all Add-est results are preserved.
+
+Closure-first priority: [analytic cluster and remaining-obligation DAG](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority). EPZAE-15/26 are DONE via the actual Robert–Sargos pair. EPZAE-11/13/14 remain OPEN: the generic Sargos 1995 D-process and the Bourgain/Huxley/Trudgian–Yang analytic table inputs still need proofs.
+
+Current analytic priority: [closure-first cluster and short obligation DAG](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority).
+EPZAE-15 and EPZAE-26 are complete: the Robert–Sargos analytic pair (1/13,10/13), the exact old pair (3/40,31/40), mu(7/10) <= 3/40 and the full improved Heath–Brown density bound are kernel-checked and BAT-verified. Completion is 31/42. EPZAE-11/13/14 remain OPEN; Watt's pair and the all-length fourth-derivative estimate (1.6) are not needed for this closure.
 
 Earlier checkpoint sections retain historical status and next-step notes;
 the frozen public contract is unchanged.
@@ -99,29 +120,17 @@ additive energy**, the three output families covered by the paper.
 - [ ] **EPZAE-14 -- Four new exponent pairs.** The exact four public
   `new-exp-pair` conclusions are proved and audited without a conclusion-shaped
   hypothesis.
-- [ ] **EPZAE-15 -- Zeta growth bridge.** The generic source `exp-pair-mu`
-  lemma is proved by `ExponentPair.isZetaGrowthBound` and
-  `ExponentPair.zetaGrowthExponent_le`, with actual weighted sums,
-  arbitrary-point sharp truncation and both ordinate signs discharged.
-  `OldExponentPairDeduction` proves the exact A/B/convexity deduction
-  from Watt's analytic pair `(89/560,369/560)` to `(3/40,31/40)`,
-  then to `mu(7/10)<=3/40`. Watt's analytic input remains unproved,
-  so this explicitly conditional chain does not close the item.
-  The independent Robert--Sargos 2002 counting route is complete through
-  Theorem 2 and its actual Taylor-coordinate consumer in
-  `RobertSargosTaylorCount`. The exact cubic phase, local C4 remainder jets,
-  unit-phase extraction and finite rectangular A-times-A inequality are
-  proved. `RobertSargosSymmetricATimesA` now consumes the actual source
-  array with exact signed intersection supports. `RobertSargosWeightedBoundary`
-  proves the endpoint replacement with explicit error `16*M*H^2*R`.
-  The initial A-process, full dyadic selection, corrected common shifted
-  averaging and actual triple-sum consumer are proved. The ordinary
-  finite-C3 derivative test now feeds the actual symmetric source phase,
-  charged closed endpoints and full doubled blocks. The physical initial
-  reduction discharges the small-block branch or returns an actual large
-  block. The actual signed zero-r row and its floor-scale A-times-A budget are
-  proved. The zero-q column, diagonal, mixed partial summation, double-large-sieve and
-  fourth-derivative assembly remain OPEN; no analytic pair is assumed.
+- [x] **EPZAE-15 -- Zeta growth bridge.** The generic source `exp-pair-mu`
+  is proved by `ExponentPair.isZetaGrowthBound` and
+  `ExponentPair.zetaGrowthExponent_le`. In `RobertSargosExponentPair`,
+  `exponentPair_robertSargos` proves (1/13,10/13) from the actual
+  long-range fourth-derivative theorem and the exact model-phase bridge.
+  `exponentPair_three_fortieths` combines it with the classical
+  (1/14,11/14), with weight 7/20 on the latter, to prove (3/40,31/40).
+  `old_pair_zetaGrowthBound` and `old_pair_zetaGrowthExponent` prove
+  the named consequence mu(7/10) <= 3/40. No analytic pair or derivative
+  estimate is assumed. The retained Watt deduction is an optional
+  conditional alternative, not a dependency of this completed item.
 
 ## Large values
 
@@ -357,22 +366,14 @@ additive energy**, the three output families covered by the paper.
   corollaries preserve the source domains and empty-interval convention.
 - [x] **EPZAE-25 -- Classical density bridges.** Local Ingham, Huxley, and
   Guth--Maynard public theorems instantiate the paper's interfaces exactly.
-- [ ] **EPZAE-26 -- Improved Heath--Brown density.** `hb-density2` is proved on
-  `7/10 < sigma <= 1` with the correct endpoint handling.
-  `HeathBrownDensityRange` proves the unconditional subrange
-  `7/10 < sigma <= 19/22` and the endpoint `sigma=1`.
-  Its full-range consumer now also has the exact
-  `ExponentPair.heathBrown_density_of_watt` deduction from Watt's pair.
-  That upstream analytic pair is still unproved, so this item remains unchecked.
-  The complete Robert--Sargos 2002 seven-variable count now feeds the actual
-  Taylor-coordinate count with its correction budget. Local C4 phase estimates
-  and the finite rectangular A-times-A inequality are proved. Its actual
-  source-phase consumer now retains both h and h+r supports and charges
-  the simplified m-endpoint replacement. Initial A-process, dyadic
-  selection, corrected shifted averaging and the ordinary derivative test
-  are proved. Actual centered/doubled source consumers, small-block budgets
-  and physical initial reduction are now proved. The zero-r row is now absorbed at the actual floor scales;
-  the zero-q column, diagonal, remaining analytic steps, fourth-derivative theorem and old-pair deduction remain OPEN.
+- [x] **EPZAE-26 -- Improved Heath--Brown density.** The exact
+  `hb-density2` bound `A(sigma) <= 3/(10*sigma-7)` on
+  `7/10 < sigma <= 1` is proved by `improved_heathBrown_zeroDensity`
+  in `RobertSargosExponentPair`. It consumes the now-proved actual
+  old exponent pair through `ExponentPair.heathBrown_density_of_old_pair`;
+  the literal zero-density semantics and sigma=1 endpoint are preserved.
+  Explicit audits, the source-contract regression and numerical endpoint
+  fixtures pass both BAT gates.
 - [x] **EPZAE-27 -- Improved Bourgain density.** The exact max formula and both
   closed subranges are proved by `zeroDensityExponent_le_bourgain_improved`,
   `zeroDensityExponent_le_bourgain_improved_lower` and
@@ -12443,7 +12444,7 @@ with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.
 
-## Robert–Sargos zero-r row — current checkpoint
+## Robert–Sargos zero-r row — historical checkpoint
 
 Fifteen new production modules prove 25 public theorems and introduce
 one actual source-sum definition. The nonzero-q, zero-r row is now
@@ -12531,6 +12532,125 @@ Verification:
   foundation manifest `1046f329cd8008e746beaad1602792cbf3453b52132ab5adb36ee67f33703724`.
 
 The synchronized architecture has 550 nodes and 1,365 edges,
+with no duplicate or missing endpoints, class conflicts or unclassified
+nodes. The whole-proof goal remains active and incomplete.
+Recovery-record maintenance is permanently skipped; no such file was changed.
+
+## Robert–Sargos zero-shift removal — earlier verified checkpoint
+
+Twenty-one new production modules prove 44 public theorems and
+introduce four actual phase/source definitions. The zero-q column and
+zero-zero diagonal are now absorbed at the source floor parameters.
+Together with the previously proved zero-r row, they remove all zero
+shifts from the genuine A-times-A sum. Completion stays 29/42.
+
+[The actual diagonal](Extension/TaoTrudgianYang2025/RobertSargosZeroZero.lean)
+is counted directly on the h/m intersections and costs at most
+`8*M^2` after the source prefactor.
+[Finite symmetric quadratic Taylor cancellation](Extension/TaoTrudgianYang2025/RobertSargosSymmetricQuadratic.lean)
+feeds the [actual zero-q phase decomposition](Extension/TaoTrudgianYang2025/RobertSargosZeroQPhase.lean):
+`Delta_h f-Delta_(h+r) f = g+u`, with `g=-2*r*f'`.
+The derivative of the genuine remainder is bounded by
+`C*lambda*(h^3+(h+r)^3)/3`, using only finite C4 regularity
+on the original interval.
+
+[Both signs of the leading phase](Extension/TaoTrudgianYang2025/RobertSargosZeroQLeading.lean)
+consume the ordinary third-derivative estimate.
+[Finite Abel summation and character variation](Extension/TaoTrudgianYang2025/ContinuousPhaseAbel.lean)
+yield the [actual perturbed prefix bound](Extension/TaoTrudgianYang2025/RobertSargosZeroQPerturbedPrefix.lean).
+[Exact block subdivision](Extension/TaoTrudgianYang2025/IntegerBlockPartition.lean),
+[square-root-scale budgets](Extension/TaoTrudgianYang2025/SquareRootBlockBudget.lean)
+and [full block assembly](Extension/TaoTrudgianYang2025/SquareRootBlockAssembly.lean)
+include the final partial block. They give the
+[full actual prefix estimate](Extension/TaoTrudgianYang2025/RobertSargosZeroQFullPrefix.lean)
+`120*C*(1+2*pi*D)*M*mu^(1/12)` under its proved block/variation conditions,
+where `mu=2*abs(r)*lambda`.
+
+[The literal zero-q source](Extension/TaoTrudgianYang2025/RobertSargosZeroQSource.lean)
+retains both h and h+r endpoints and charges the final closed endpoint
+by one; empty intervals are covered.
+[Physical parameter derivation](Extension/TaoTrudgianYang2025/RobertSargosZeroQParameters.lean)
+discharges the curvature, slow-variation and block-length conditions
+with `D=C`.
+[The actual h-block](Extension/TaoTrudgianYang2025/RobertSargosZeroQBlock.lean)
+first uses the true source interval, then charges `2*H*abs(r)`
+for its trimmed replacement.
+[The weighted column](Extension/TaoTrudgianYang2025/RobertSargosZeroQWeighted.lean)
+preserves the triangular r weight and excludes r=0.
+
+[Polynomial/twelfth-root budgets](Extension/TaoTrudgianYang2025/RobertSargosZeroQPolynomialBudget.lean),
+[the A-times-A coefficient](Extension/TaoTrudgianYang2025/RobertSargosZeroQColumnBudget.lean)
+and [actual floor losses](Extension/TaoTrudgianYang2025/RobertSargosZeroQFloorBudgets.lean)
+give the [physical column theorem](Extension/TaoTrudgianYang2025/RobertSargosZeroQPhysical.lean):
+its contribution is at most `1944*C*(1+2*pi*C)*M^2`.
+No desired source-sum estimate or parameter budget is assumed.
+
+[Exact weighted axis decomposition](Extension/TaoTrudgianYang2025/RobertSargosWeightedZeroSplit.lean)
+separates the diagonal, both axes and the nonzero rectangle without
+assuming the individual real parts are nonnegative.
+[Source-window and endpoint budgets](Extension/TaoTrudgianYang2025/RobertSargosPhysicalATimesAParameters.lean)
+also charge the original A-times-A endpoint replacement.
+The [physical nonzero-shift theorem](Extension/TaoTrudgianYang2025/RobertSargosPhysicalNonzeroATimesA.lean)
+therefore proves
+
+`norm(SymmetricSum f M H)^2 <= 3124*C*(1+2*pi*C)*M^2 + (8*M*H/(Q*R))*NonzeroShiftSum f M H Q R`,
+
+with `Q=floor(lambda^(-3/13))`, `R=floor(lambda^(-1/13))`,
+`lambda^(-1/7)<=H<=lambda^(-2/13)/2`,
+`M>=lambda^(-8/13)`, `0<lambda<=1/8192`, `C>=1`,
+and the actual C4/fourth-derivative hypotheses on `[1,M]`.
+The nonzero source sum retains exactly q nonzero and r nonzero,
+the real part, both triangular weights and the true h-mask.
+
+All 21 modules are root-imported and in the principal BAT production
+inventory. All 44 public theorems have explicit audits and exact-signature
+regressions. The 64 regressions also cover the actual diagonal, true
+versus trimmed endpoints, signed/empty source intervals, final partial
+blocks, floor/polynomial cases, zero exclusions and both counterexamples.
+
+Still OPEN: carrying the zero-excluded sum through the already proved
+corrected common shift/reordering, mixed exponential derivatives and
+common-prefix multiple partial summation, double-large-sieve, sample
+spacing, remaining scale assembly, Step 0 length reductions,
+fourth-derivative theorem and analytic pair. The sharper printed
+Lemma 3 is neither assumed nor claimed proved: the ordinary test,
+Abel summation and square-root blocks suffice for the zero-q budget.
+
+Corrected two-witness powering, the Heath--Brown energy relation,
+all nine Add-est clauses and both counterexamples remain intact.
+EPZAE-28 and boundary closure remain proved; EPZAE-29 still needs
+analytic pair provenance. The false unrestricted growth contract and
+sharper Atkinson branch remain open.
+
+
+Verification:
+
+- `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  `LEAN VERIFICATION PASS`; 1,429 production files, 1,903 scanned
+  Lean files and 10,761 build jobs. Audit: 10,431 target, 6,240 pinned
+  and five anchor theorems (16,676 total). All 44 new public theorems
+  appear exactly once in the explicit audit and exact-signature
+  regressions, with only permitted logical dependencies. The
+  [extension log](logs/tao-trudgian-yang-build-20260924-223731-05e5d419.log) has no errors,
+  warnings, tactic suggestions or linter failures.
+- `cmd /c run_lake_build.bat --no-pause`: exit 0, `PASS`;
+  all six stages pass with zero diagnostics, 8,857 build jobs,
+  301 root modules, two retained regressions, 7,636 explicit and
+  14,290 discovered theorem audits. See the
+  [foundation log](../../logs/foundation_freeze_20260924_224333.log) and
+  [manifest](../../logs/foundation_freeze_20260924_224333.json).
+- All 1,924 physical proof/configuration/tooling hashes are unchanged
+  across both successful gates. All 509 protected tracked files remain
+  byte-identical to owner HEAD
+  `2351397b7eb73253aca13987109daf14339c6423`. An external owner `Progress Update` commit advanced HEAD during the
+  gates; all 1,924 physical hashes remained identical. No agent commit or push.
+  The original counterexample SHA-256 remains
+  `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+- Log SHA-256: extension `d745daf67425b7c78ce784afc03cefba72312532c002fc5a84344ffea9191414`;
+  foundation `7925a94e101bd790e5b04f5ac8f7c931ebbe7373ad7dce6e0da7cd0ccb0f2f4f`;
+  foundation manifest `22549c662505a4b3d54c5db2d02d953341a6e0ba836d860982175293f35e2af2`.
+
+The synchronized architecture has 552 nodes and 1,372 edges,
 with no duplicate or missing endpoints, class conflicts or unclassified
 nodes. The whole-proof goal remains active and incomplete.
 Recovery-record maintenance is permanently skipped; no such file was changed.

@@ -44785,3 +44785,3074 @@ example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
   energyPowering_source_counterexample
 
 end RobertSargosZeroShiftRegression
+
+section RobertSargosNonzeroTripleRegression
+open Set GafniTao RiemannZeta.GuthMaynard
+open scoped ContDiff
+
+example (Q R : ℕ) (hQ : 0 < Q) (hR : 0 < R)
+    (C : ℝ) (hC : 0 ≤ C) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0,
+      ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*C) ≤ C*Q*R :=
+  @TaoTrudgianYang2025.sum_nonzero_signed_triangular_constant_le Q R hQ hR C hC
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hQ : 0 < Q) (hR : 0 < R) (hN : 0 < N) :
+    robertSargosNonzeroShiftSum f M H Q R ≤
+      (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0,
+        ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+          (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*(robertSargosShiftedCorrelation f M H Q N q r).re)+
+        (H:ℝ)*(4*(H:ℝ)+4*Q+2*N)*Q*R :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_weighted_shift_error f M H Q R N hQ hR hN
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0, ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+      (((1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R) : ℝ):ℂ)*
+        robertSargosShiftedCorrelation f M H Q N q r) =
+      (N:ℂ)⁻¹*∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        ((1-|(r:ℝ)|/R : ℝ):ℂ)*
+          ∑ m ∈ robertSargosCommonMInterval M H Q N,
+            robertSargosNonzeroShiftedTriple f H Q N r m :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_weighted_shifted_reorder f M H Q R N
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0, ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+        (robertSargosShiftedCorrelation f M H Q N q r).re) =
+      (N:ℝ)⁻¹*∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        (1-|(r:ℝ)|/R)*
+          ∑ m ∈ robertSargosCommonMInterval M H Q N,
+            (robertSargosNonzeroShiftedTriple f H Q N r m).re :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_weighted_shifted_re f M H Q R N
+
+example (f : ℝ → ℝ) (M H Q R N : ℕ)
+    (hR : 0 < R) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0, ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+      (1-|(q:ℝ)|/Q)*(1-|(r:ℝ)|/R)*
+        (robertSargosShiftedCorrelation f M H Q N q r).re) ≤
+      (N:ℝ)⁻¹*∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        ∑ m ∈ robertSargosCommonMInterval M H Q N,
+          ‖robertSargosNonzeroShiftedTriple f H Q N r m‖ :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_weighted_shifted_re_le f M H Q R N hR
+
+example (M H : ℕ) {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    8*(M:ℝ)*(H:ℝ)^2*(4*(H:ℝ)+6*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)) ≤ 16*(M:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_physical_common_shift_budget M H lam hlam hsmall hM hHmax
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hHmin : lam^(-(1:ℝ)/7) ≤ H) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    let Q := ⌊lam^(-(3:ℝ)/13)⌋₊
+    let R := ⌊lam^(-(1:ℝ)/13)⌋₊
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      3140*C*(1+2*Real.pi*C)*(M:ℝ)^2+
+        (8*(M:ℝ)*H/((Q:ℝ)*R*Q))*
+          (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+            ∑ m ∈ robertSargosCommonMInterval M H Q Q,
+              ‖robertSargosNonzeroShiftedTriple f H Q Q r m‖) :=
+  @TaoTrudgianYang2025.robertSargos_physical_nonzero_shifted_triple f M H C lam hC hlam hsmall hM hHmin hHmax hf hlo hhi
+
+example (f : ℝ → ℝ) (H N : ℕ) (r m : ℤ) :
+    robertSargosNonzeroShiftedTriple f H 1 N r m = 0 := by
+  simp [robertSargosNonzeroShiftedTriple,show Finset.Ioo (-1:ℤ) 1 = {0} by decide]
+
+example : robertSargosNonzeroShiftedTriple (fun _ => 0) 2 2 1 1 5 = 1 := by
+  norm_num [robertSargosNonzeroShiftedTriple,robertSargosHOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,
+    show Finset.Ioo (-2:ℤ) 2 = {-1,0,1} by decide]
+
+example : robertSargosNonzeroShiftedTriple (fun _ => 0) 2 2 3 1 5 = 3 := by
+  norm_num [robertSargosNonzeroShiftedTriple,robertSargosHOverlap,
+    robertSargosSymmetricDifference,fordAdditiveCharacter,Int.card_Icc,Int.toNat,
+    show Finset.Ioo (-2:ℤ) 2 = {-1,0,1} by decide]
+
+example (f : ℝ → ℝ) (Q N : ℕ) (m : ℤ) :
+    robertSargosNonzeroShiftedTriple f 2 Q N 2 m = 0 := by
+  simp [robertSargosNonzeroShiftedTriple,robertSargosHOverlap]
+
+example : robertSargosCommonMInterval 256 2 8 8 = Finset.Icc (12:ℤ) 236 := by
+  norm_num [robertSargosCommonMInterval]
+
+example : 8*(256:ℝ)*2^2*(4*2+6*8) ≤ 16*256^2 := by norm_num
+
+example : 3124+16 = (3140:ℕ) := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosNonzeroTripleRegression
+
+section RobertSargosCommonPrefixRegression
+open Set GafniTao
+
+example (w a : ℕ → ℂ) (N : ℕ) :
+    (∑ n ∈ Finset.range N, w n*a n) =
+      ∑ j ∈ Finset.range N, robertSargosAbelDifference N w j*
+        ∑ n ∈ Finset.range (j+1), a n :=
+  @TaoTrudgianYang2025.robertSargos_abel_identity w a N
+
+example (w a : ℕ → ℕ → ℕ → ℂ) (X Y Z : ℕ) :
+    (∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y,
+      ∑ z ∈ Finset.range Z, w x y z*a x y z) =
+    ∑ k ∈ Finset.range Z, ∑ j ∈ Finset.range Y, ∑ i ∈ Finset.range X,
+      robertSargosAbelCoefficient X Y Z w i j k*
+        ∑ x ∈ Finset.range (i+1), ∑ y ∈ Finset.range (j+1),
+          ∑ z ∈ Finset.range (k+1), a x y z :=
+  @TaoTrudgianYang2025.robertSargos_rectangular_abel_identity w a X Y Z
+
+example {ι : Type*}
+    (S : Finset ι) (w a : ι → ℕ → ℕ → ℕ → ℂ)
+    {X Y Z : ℕ} (hX : 0 < X) (hY : 0 < Y) (hZ : 0 < Z) :
+    ∃ i < X, ∃ j < Y, ∃ k < Z,
+      (∑ m ∈ S, ‖∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y,
+        ∑ z ∈ Finset.range Z, w m x y z*a m x y z‖) ≤
+      robertSargosAbelVariation S X Y Z w*
+        ∑ m ∈ S, ‖∑ x ∈ Finset.range (i+1), ∑ y ∈ Finset.range (j+1),
+          ∑ z ∈ Finset.range (k+1), a m x y z‖ :=
+  @TaoTrudgianYang2025.robertSargos_rectangular_common_prefix ι S w a X Y Z hX hY hZ
+
+example (f : ℝ → ℝ) (m r Q : ℝ)
+    (q h n : ℕ → ℝ) (X Y Z : ℕ) :
+    ‖∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y, ∑ z ∈ Finset.range Z,
+      ((1-|q x|/Q : ℝ):ℂ)*fordAdditiveCharacter
+        (robertSargosSymmetricDifference f (m+n z+q x) (h y)-
+          robertSargosSymmetricDifference f (m+n z) (h y+r))‖ =
+    ‖∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y, ∑ z ∈ Finset.range Z,
+      robertSargosMixedAmplitude f m r Q (q x) (h y) (n z)*
+        robertSargosPolynomialCharacter f m r (q x) (h y) (n z)‖ :=
+  @TaoTrudgianYang2025.robertSargos_mixed_rectangular_norm f m r Q q h n X Y Z
+
+example (f : ℝ → ℝ) (S : Finset ℝ)
+    (r Q : ℝ) (q h n : ℕ → ℝ) {X Y Z : ℕ}
+    (hX : 0 < X) (hY : 0 < Y) (hZ : 0 < Z) :
+    ∃ i < X, ∃ j < Y, ∃ k < Z,
+      (∑ m ∈ S, ‖∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y,
+        ∑ z ∈ Finset.range Z, ((1-|q x|/Q : ℝ):ℂ)*fordAdditiveCharacter
+          (robertSargosSymmetricDifference f (m+n z+q x) (h y)-
+            robertSargosSymmetricDifference f (m+n z) (h y+r))‖) ≤
+      robertSargosAbelVariation S X Y Z
+        (fun m x y z => robertSargosMixedAmplitude f m r Q (q x) (h y) (n z))*
+      ∑ m ∈ S, ‖∑ x ∈ Finset.range (i+1), ∑ y ∈ Finset.range (j+1),
+        ∑ z ∈ Finset.range (k+1),
+          robertSargosPolynomialCharacter f m r (q x) (h y) (n z)‖ :=
+  @TaoTrudgianYang2025.robertSargos_mixed_common_prefix f S r Q q h n X Y Z hX hY hZ
+
+example : robertSargosAbelDifference 0 (fun n => (n:ℂ)) 0 = 0 := by
+  norm_num [robertSargosAbelDifference]
+
+example : robertSargosAbelDifference 3 (fun n => (n:ℂ)) 1 = -1 := by
+  norm_num [robertSargosAbelDifference]
+
+example : robertSargosAbelDifference 3 (fun n => (n:ℂ)) 2 = 2 := by
+  norm_num [robertSargosAbelDifference]
+
+example : robertSargosAbelCoefficient 2 2 2
+    (fun x y z => ((x+1:ℕ):ℂ)*((y+1:ℕ):ℂ)*((z+1:ℕ):ℂ)) 0 0 0 = -1 := by
+  norm_num [robertSargosAbelCoefficient,robertSargosAbelDifference]
+
+example : robertSargosAbelCoefficient 2 2 2
+    (fun x y z => ((x+1:ℕ):ℂ)*((y+1:ℕ):ℂ)*((z+1:ℕ):ℂ)) 1 1 1 = 8 := by
+  norm_num [robertSargosAbelCoefficient,robertSargosAbelDifference]
+
+example : robertSargosAbelVariation (∅ : Finset ℕ) 2 3 4
+    (fun _ _ _ _ => 1) = 0 := by
+  simp [robertSargosAbelVariation]
+
+example : robertSargosAbelVariation ({0} : Finset ℕ) 2 2 2
+    (fun _ _ _ _ => 1) = 1 := by
+  norm_num [robertSargosAbelVariation,robertSargosAbelCoefficient,
+    robertSargosAbelDifference,Finset.sum_range_succ]
+
+example (S : Finset ℕ) (w : ℕ → ℕ → ℕ → ℕ → ℂ) :
+    robertSargosAbelVariation S 0 3 4 w = 0 := by
+  simp [robertSargosAbelVariation]
+
+example : max (|(1:ℝ)|+|(0:ℝ)|) (|(0:ℝ)|+|(1:ℝ)|) = 1 ∧
+    max |(1:ℝ)| |0| + max |(0:ℝ)| |1| = 2 := by norm_num
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosCommonPrefixRegression
+
+section RobertSargosMixedJetRegression
+open Set
+open scoped ContDiff
+
+example (f : ℝ → ℝ) (m r q h n : ℝ) :
+    robertSargosMixedJet f m r 0 0 0 q h n =
+      robertSargosMixedRemainder f m r q h n :=
+  @TaoTrudgianYang2025.robertSargos_mixed_jet_zero f m r q h n
+
+example {f : ℝ → ℝ} {m r q h n : ℝ} {i j k : ℕ} (horder : i+j+k < 4)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h))) :
+    HasDerivAt (fun x => robertSargosMixedJet f m r i j k x h n)
+      (robertSargosMixedJet f m r (i+1) j k q h n) q :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_mixed_jet_q f m r q h n i j k horder hp hm
+
+example {f : ℝ → ℝ} {m r q h n : ℝ} {i j k : ℕ} (horder : i+j+k < 4)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosMixedJet f m r i j k q h x)
+      (robertSargosMixedJet f m r i j (k+1) q h n) n :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_mixed_jet_n f m r q h n i j k horder hp hm hrp hrm
+
+example {f : ℝ → ℝ} {m r q h n : ℝ} {i j k : ℕ} (horder : i+j+k < 4)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosMixedJet f m r i j k q x n)
+      (robertSargosMixedJet f m r i (j+1) k q h n) h :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_mixed_jet_h f m r q h n i j k horder hp hm hrp hrm
+
+example {f : ℝ → ℝ} {a b m r q h n B L : ℝ} {i j k : ℕ}
+    (horder : i+j+k ≤ 4) (hB : 0 ≤ B) (hm : m ∈ Set.Icc a b)
+    (hp : ∀ y ∈ ({n+q+h,n+q-h,n+h+r,n-h-r} : Finset ℝ),
+      m+y ∈ Set.Icc a b ∧ |y| ≤ L)
+    (hf : ∀ x ∈ Set.Icc a b, ContDiffAt ℝ 4 f x)
+    (hb : ∀ x ∈ Set.Icc a b, |iteratedDeriv 4 f x| ≤ B) :
+    |robertSargosMixedJet f m r i j k q h n| ≤ 4*B*L^(4-(i+j+k)) :=
+  @TaoTrudgianYang2025.abs_robertSargos_mixed_jet_le f a b m r q h n B L i j k horder hB hm hp hf hb
+
+example {M H Q m r q h n : ℝ} (hQ : 1 ≤ Q) (hH : 0 ≤ H) (hHQ : 2*H ≤ Q)
+    (hm : m ∈ Set.Icc (2*H+Q) (M-2*H-2*Q))
+    (hq : |q| ≤ Q) (hh : h ∈ Set.Icc H (2*H))
+    (hhr : h+r ∈ Set.Icc H (2*H)) (hn : n ∈ Set.Icc 1 Q) :
+    m ∈ Set.Icc 1 M ∧
+      ∀ y ∈ ({n+q+h,n+q-h,n+h+r,n-h-r} : Finset ℝ),
+        m+y ∈ Set.Icc 1 M ∧ |y| ≤ 3*Q :=
+  @TaoTrudgianYang2025.robertSargos_mixed_shift_geometry M H Q m r q h n hQ hH hHQ hm hq hh hhr hn
+
+example {f : ℝ → ℝ} {M H Q m r q h n C lam : ℝ} {i j k : ℕ}
+    (horder : i+j+k ≤ 4) (hC : 0 ≤ C) (hlam : 0 ≤ lam)
+    (hQ : 1 ≤ Q) (hH : 0 ≤ H) (hHQ : 2*H ≤ Q) (hscale : lam*Q^4 ≤ 1)
+    (hm : m ∈ Set.Icc (2*H+Q) (M-2*H-2*Q))
+    (hq : |q| ≤ Q) (hh : h ∈ Set.Icc H (2*H))
+    (hhr : h+r ∈ Set.Icc H (2*H)) (hn : n ∈ Set.Icc 1 Q)
+    (hf : ∀ x ∈ Set.Icc 1 M, ContDiffAt ℝ 4 f x)
+    (hb : ∀ x ∈ Set.Icc 1 M, |iteratedDeriv 4 f x| ≤ C*lam) :
+    Q^(i+j+k)*|robertSargosMixedJet f m r i j k q h n| ≤ 324*C :=
+  @TaoTrudgianYang2025.robertSargos_normalized_mixed_jet_bound f M H Q m r q h n C lam i j k horder hC hlam hQ hH hHQ hscale hm hq hh hhr hn hf hb
+
+example {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192) :
+    1 ≤ (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ) ∧
+      lam*(⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)^4 ≤ 1 :=
+  @TaoTrudgianYang2025.robertSargos_floor_fourth_scale lam hlam hsmall
+
+example {lam : ℝ} {H : ℕ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2) :
+    2*(H:ℝ) ≤ (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_floor_half_height lam H hlam hsmall hH
+
+example (f : ℝ → ℝ) (M H : ℕ) (m : ℤ) {C lam r q h n : ℝ} {i j k : ℕ}
+    (horder : i+j+k ≤ 4) (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hm : m ∈ robertSargosCommonMInterval M H
+      ⌊lam^(-(3:ℝ)/13)⌋₊ ⌊lam^(-(3:ℝ)/13)⌋₊)
+    (hq : |q| ≤ (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ))
+    (hh : h ∈ Set.Icc (H:ℝ) (2*H)) (hhr : h+r ∈ Set.Icc (H:ℝ) (2*H))
+    (hn : n ∈ Set.Icc 1 (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ))
+    (hf : ∀ x ∈ Set.Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Set.Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Set.Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)^(i+j+k)*
+      |robertSargosMixedJet f m r i j k q h n| ≤ 324*C :=
+  @TaoTrudgianYang2025.robertSargos_physical_mixed_jet_bound f M H m C lam r q h n i j k horder hC hlam hsmall hH hm hq hh hhr hn hf hlo hhi
+
+example (f : ℝ → ℝ) (m r q h n : ℝ) :
+    robertSargosMixedJet f m r 0 0 0 q h n =
+      robertSargosMixedRemainder f m r q h n :=
+  robertSargos_mixed_jet_zero f m r q h n
+
+example : (2:ℝ)*2 ≤ 8 ∧ (1/8192:ℝ)*8^4 ≤ 1 := by norm_num
+
+example : (4:ℝ)*3^4 = 324 := by norm_num
+
+example : (4:ℕ)-(1+1+1) = 1 := by norm_num
+
+example : (-(1:ℝ))^(1+1) = 1 ∧ (-(1:ℝ))^(1+2) = -1 := by norm_num
+
+example : (12:ℝ) ∈ Set.Icc (2*2+8) (256-2*2-2*8) := by norm_num
+
+example : zetaLargeValueExponent (3/4) (1/4) ≠ ⊥ :=
+  zetaLargeValueExponent_three_quarters_quarter_ne_bot
+
+example : InLargeValueEnergyRegion (3/4) 2 0 0 2 ∧
+    ¬ ∃ ρ' ρstar' s' : ℝ,
+      InLargeValueEnergyRegion (3/4) (2/2) ρ' ρstar' s' ∧
+        ρ' ≤ 0/2 ∧ ρstar' ≤ 0/2 ∧ s' ≤ 2/2 :=
+  energyPowering_source_counterexample
+
+end RobertSargosMixedJetRegression
+
+section RobertSargosWeightRemovalRegression
+open Set GafniTao
+open scoped ContDiff
+
+example {f : ℝ → ℝ} {m r q h n : ℝ} (b c : Bool)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h))) :
+    HasDerivAt (fun x => robertSargosCharacterJet f m r false b c x h n)
+      (robertSargosCharacterJet f m r true b c q h n) q :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_character_jet_q f m r q h n b c hp hm
+
+example {f : ℝ → ℝ} {m r q h n : ℝ} (c : Bool)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosCharacterJet f m r false false c q x n)
+      (robertSargosCharacterJet f m r false true c q h n) h :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_character_jet_h f m r q h n c hp hm hrp hrm
+
+example {f : ℝ → ℝ} {m r q h n : ℝ}
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosCharacterJet f m r false false false q h x)
+      (robertSargosCharacterJet f m r false false true q h n) n :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_character_jet_n f m r q h n hp hm hrp hrm
+
+example (f : ℝ → ℝ) (m r q h n : ℝ) {Q K : ℝ}
+    (hQ : 0 < Q) (hK : 0 ≤ K)
+    (hJ : ∀ i ≤ 1, ∀ j ≤ 1, ∀ k ≤ 1,
+      Q^(i+j+k)*|robertSargosMixedJet f m r i j k q h n| ≤ K)
+    (a b c : Bool) :
+    Q^(a.toNat+b.toNat+c.toNat)*
+      ‖robertSargosCharacterJet f m r a b c q h n‖ ≤ (1+2*Real.pi*K)^3 :=
+  @TaoTrudgianYang2025.robertSargos_character_jet_bound f m r q h n Q K hQ hK hJ a b c
+
+example (f : ℝ → ℝ) (M H : ℕ) (m : ℤ) {C lam r q h n : ℝ} (a b c : Bool)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hm : m ∈ robertSargosCommonMInterval M H
+      ⌊lam^(-(3:ℝ)/13)⌋₊ ⌊lam^(-(3:ℝ)/13)⌋₊)
+    (hq : |q| ≤ (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ))
+    (hh : h ∈ Set.Icc (H:ℝ) (2*H)) (hhr : h+r ∈ Set.Icc (H:ℝ) (2*H))
+    (hn : n ∈ Set.Icc 1 (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ))
+    (hf : ∀ x ∈ Set.Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Set.Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Set.Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    (⌊lam^(-(3:ℝ)/13)⌋₊:ℝ)^(a.toNat+b.toNat+c.toNat)*
+      ‖robertSargosCharacterJet f m r a b c q h n‖ ≤ (1+648*Real.pi*C)^3 :=
+  @TaoTrudgianYang2025.robertSargos_physical_character_jet_bound f M H m C lam r q h n a b c hC hlam hsmall hH hm hq hh hhr hn hf hlo hhi
+
+example {f : ℝ → ℝ} {m r Q s q h n : ℝ} (b c : Bool)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h))) :
+    HasDerivAt (fun x => robertSargosAmplitudeJet f m r Q s false b c x h n)
+      (robertSargosAmplitudeJet f m r Q s true b c q h n) q :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_amplitude_jet_q f m r Q s q h n b c hp hm
+
+example {f : ℝ → ℝ} {m r Q s q h n : ℝ} (c : Bool)
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosAmplitudeJet f m r Q s false false c q x n)
+      (robertSargosAmplitudeJet f m r Q s false true c q h n) h :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_amplitude_jet_h f m r Q s q h n c hp hm hrp hrm
+
+example {f : ℝ → ℝ} {m r Q s q h n : ℝ}
+    (hp : ContDiffAt ℝ 4 f (m+(n+q+h)))
+    (hm : ContDiffAt ℝ 4 f (m+(n+q-h)))
+    (hrp : ContDiffAt ℝ 4 f (m+(n+h+r)))
+    (hrm : ContDiffAt ℝ 4 f (m+(n-h-r))) :
+    HasDerivAt (fun x => robertSargosAmplitudeJet f m r Q s false false false q h x)
+      (robertSargosAmplitudeJet f m r Q s false false true q h n) n :=
+  @TaoTrudgianYang2025.hasDerivAt_robertSargos_amplitude_jet_n f m r Q s q h n hp hm hrp hrm
+
+example (f : ℝ → ℝ) (m r Q s q h n : ℝ)
+    (hq : |q| = s*q) :
+    robertSargosAmplitudeJet f m r Q s false false false q h n =
+      robertSargosMixedAmplitude f m r Q q h n :=
+  @TaoTrudgianYang2025.robertSargos_amplitude_jet_zero f m r Q s q h n hq
+
+example (f : ℝ → ℝ) (m r s q h n : ℝ)
+    {Q D : ℝ} (hQ : 0 < Q) (hD : 0 ≤ D) (hs : |s| = 1)
+    (hq : s*q ∈ Set.Icc 0 Q)
+    (hb : ∀ a b c : Bool, Q^(a.toNat+b.toNat+c.toNat)*
+      ‖robertSargosCharacterJet f m r a b c q h n‖ ≤ D)
+    (a b c : Bool) :
+    Q^(a.toNat+b.toNat+c.toNat)*
+      ‖robertSargosAmplitudeJet f m r Q s a b c q h n‖ ≤ 2*D :=
+  @TaoTrudgianYang2025.robertSargos_amplitude_jet_bound f m r s q h n Q D hQ hD hs hq hb a b c
+
+example (w : ℕ → ℕ → ℕ → ℂ)
+    (X Y Z i j k : ℕ) :
+    robertSargosAbelCoefficient X Y Z w i j k =
+      robertSargosAbelDifference Z
+        (fun z => robertSargosAbelDifference Y
+          (fun y => robertSargosAbelDifference X (fun x => w x y z) i) j) k :=
+  @TaoTrudgianYang2025.robertSargos_abel_coefficient_reverse w X Y Z i j k
+
+example (F : Bool → Bool → Bool → ℝ → ℝ → ℝ → ℂ)
+    {X Y Z i j k : ℕ} (hi : i < X) (hj : j < Y) (hk : k < Z)
+    {A B C Q D : ℝ}
+    (hfx : ∀ b c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F false b c u y z) (F true b c x y z) x)
+    (hfy : ∀ c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F false false c x u z) (F false true c x y z) y)
+    (hfz : ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F false false false x y u) (F false false true x y z) z)
+    (hb : ∀ a b c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      ‖F a b c x y z‖ ≤ D/Q^(a.toNat+b.toNat+c.toNat)) :
+    ‖robertSargosAbelCoefficient X Y Z
+      (fun x y z => F false false false (A+x) (B+y) (C+z)) i j k‖ ≤
+      D*robertSargosAbelFactor Q X i*robertSargosAbelFactor Q Y j*
+        robertSargosAbelFactor Q Z k :=
+  @TaoTrudgianYang2025.robertSargos_abel_coefficient_bound F X Y Z i j k hi hj hk A B C Q D hfx hfy hfz hb
+
+example {Q : ℝ} (hQ : 0 < Q) {N : ℕ}
+    (hN : (N:ℝ) ≤ Q) :
+    (∑ i ∈ Finset.range N, robertSargosAbelFactor Q N i) ≤ 2 :=
+  @TaoTrudgianYang2025.sum_robertSargosAbelFactor_le Q hQ N hN
+
+example {ι : Type*}
+    (S : Finset ι) (F : ι → Bool → Bool → Bool → ℝ → ℝ → ℝ → ℂ)
+    {X Y Z : ℕ} {A B C Q D : ℝ}
+    (hQ : 0 < Q) (hD : 0 ≤ D) (hX : (X:ℝ) ≤ Q)
+    (hY : (Y:ℝ) ≤ Q) (hZ : (Z:ℝ) ≤ Q)
+    (hfx : ∀ m ∈ S, ∀ b c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F m false b c u y z) (F m true b c x y z) x)
+    (hfy : ∀ m ∈ S, ∀ c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F m false false c x u z) (F m false true c x y z) y)
+    (hfz : ∀ m ∈ S, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      HasDerivAt (fun u => F m false false false x y u) (F m false false true x y z) z)
+    (hb : ∀ m ∈ S, ∀ a b c, ∀ x ∈ Icc A (A+X-1), ∀ y ∈ Icc B (B+Y-1),
+      ∀ z ∈ Icc C (C+Z-1),
+      ‖F m a b c x y z‖ ≤ D/Q^(a.toNat+b.toNat+c.toNat)) :
+    robertSargosAbelVariation S X Y Z
+      (fun m x y z => F m false false false (A+x) (B+y) (C+z)) ≤ 8*D :=
+  @TaoTrudgianYang2025.robertSargos_abel_variation_of_mixed_derivatives ι S F X Y Z A B C Q D hQ hD hX hY hZ hfx hfy hfz hb
+
+example (f : ℝ → ℝ) (M H Q X Y N : ℕ) (r A B s : ℝ) {C lam : ℝ}
+    (hQeq : Q = ⌊lam^(-(3:ℝ)/13)⌋₊)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hX : X ≤ Q) (hY : Y ≤ Q) (hN : N ≤ Q) (hs : |s| = 1)
+    (hq : ∀ x ∈ Icc A (A+X-1), s*x ∈ Icc 0 (Q:ℝ))
+    (hBlo : (H:ℝ) ≤ B) (hBhi : B+Y-1 ≤ 2*H)
+    (hBrlo : (H:ℝ) ≤ B+r) (hBrhi : B+Y-1+r ≤ 2*H)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    robertSargosAbelVariation (robertSargosCommonMInterval M H Q Q) X Y N
+      (fun m x y z => robertSargosAmplitudeJet f m r Q s false false false
+        (A+x) (B+y) (1+z)) ≤ 16*(1+648*Real.pi*C)^3 :=
+  @TaoTrudgianYang2025.robertSargos_physical_rectangle_variation f M H Q X Y N r A B s C lam hQeq hC hlam hsmall hH hX hY hN hs hq hBlo hBhi hBrlo hBrhi hf hlo hhi
+
+example (f : ℝ → ℝ) (M H Q X Y N : ℕ) (r A B s : ℝ) {C lam : ℝ}
+    (hQeq : Q = ⌊lam^(-(3:ℝ)/13)⌋₊)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hXp : 0 < X) (hYp : 0 < Y) (hNp : 0 < N)
+    (hX : X ≤ Q) (hY : Y ≤ Q) (hN : N ≤ Q) (hs : |s| = 1)
+    (hq : ∀ x ∈ Icc A (A+X-1), s*x ∈ Icc 0 (Q:ℝ))
+    (hBlo : (H:ℝ) ≤ B) (hBhi : B+Y-1 ≤ 2*H)
+    (hBrlo : (H:ℝ) ≤ B+r) (hBrhi : B+Y-1+r ≤ 2*H)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ∃ i < X, ∃ j < Y, ∃ k < N,
+      (∑ m ∈ robertSargosCommonMInterval M H Q Q,
+        ‖∑ x ∈ Finset.range X, ∑ y ∈ Finset.range Y, ∑ z ∈ Finset.range N,
+          ((1-|A+x|/Q : ℝ):ℂ)*fordAdditiveCharacter
+            (robertSargosSymmetricDifference f ((m:ℝ)+(1+z)+(A+x)) (B+y)-
+              robertSargosSymmetricDifference f ((m:ℝ)+(1+z)) (B+y+r))‖) ≤
+      16*(1+648*Real.pi*C)^3*
+        ∑ m ∈ robertSargosCommonMInterval M H Q Q,
+          ‖∑ x ∈ Finset.range (i+1), ∑ y ∈ Finset.range (j+1),
+            ∑ z ∈ Finset.range (k+1),
+              robertSargosPolynomialCharacter f m r (A+x) (B+y) (1+z)‖ :=
+  @TaoTrudgianYang2025.robertSargos_physical_rectangle_common_prefix f M H Q X Y N r A B s C lam hQeq hC hlam hsmall hH hXp hYp hNp hX hY hN hs hq hBlo hBhi hBrlo hBrhi hf hlo hhi
+
+example {A : Type*} [AddCommMonoid A]
+    (Q : ℕ) (v : ℤ → A) :
+    (∑ q ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0, v q) =
+      (∑ x ∈ Finset.range (Q-1), v (1+x)) +
+      ∑ x ∈ Finset.range (Q-1), v (1-(Q:ℤ)+x) :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_q_split A _ Q v
+
+example {A : Type*} [AddCommMonoid A]
+    (H : ℕ) (r : ℤ) (v : ℤ → A) :
+    (∑ h ∈ robertSargosHOverlap H r, v h) =
+      ∑ y ∈ Finset.range (robertSargosHOverlap H r).card,
+        v (max (H:ℤ) (H-r)+y) :=
+  @TaoTrudgianYang2025.robertSargos_overlap_sum_range A _ H r v
+
+example (f : ℝ → ℝ)
+    (H Q N : ℕ) (r m : ℤ) :
+    robertSargosNonzeroShiftedTriple f H Q N r m =
+      (∑ x ∈ Finset.range (Q-1),
+        ∑ y ∈ Finset.range (robertSargosHOverlap H r).card,
+          ∑ z ∈ Finset.range N,
+            ((1-|(1:ℝ)+x|/Q : ℝ):ℂ)*fordAdditiveCharacter
+              (robertSargosSymmetricDifference f ((m:ℝ)+(1+z)+(1+x))
+                (((max (H:ℤ) (H-r):ℤ):ℝ)+y)-
+               robertSargosSymmetricDifference f ((m:ℝ)+(1+z))
+                (((max (H:ℤ) (H-r):ℤ):ℝ)+y+r))) +
+      ∑ x ∈ Finset.range (Q-1),
+        ∑ y ∈ Finset.range (robertSargosHOverlap H r).card,
+          ∑ z ∈ Finset.range N,
+            ((1-|(1:ℝ)-Q+x|/Q : ℝ):ℂ)*fordAdditiveCharacter
+              (robertSargosSymmetricDifference f ((m:ℝ)+(1+z)+(1-Q+x))
+                (((max (H:ℤ) (H-r):ℤ):ℝ)+y)-
+               robertSargosSymmetricDifference f ((m:ℝ)+(1+z))
+                (((max (H:ℤ) (H-r):ℤ):ℝ)+y+r)) :=
+  @TaoTrudgianYang2025.robertSargos_nonzero_triple_rectangles f H Q N r m
+
+example (H : ℕ) (r : ℤ)
+    (hne : (robertSargosHOverlap H r).Nonempty) :
+    (H:ℝ) ≤ ((max (H:ℤ) (H-r):ℤ):ℝ) ∧
+    ((max (H:ℤ) (H-r):ℤ):ℝ)+(robertSargosHOverlap H r).card-1 ≤ 2*H ∧
+    (H:ℝ) ≤ ((max (H:ℤ) (H-r):ℤ):ℝ)+r ∧
+    ((max (H:ℤ) (H-r):ℤ):ℝ)+(robertSargosHOverlap H r).card-1+r ≤ 2*H :=
+  @TaoTrudgianYang2025.robertSargos_overlap_rectangle_bounds H r hne
+
+example (f : ℝ → ℝ) (M H Q : ℕ) (r : ℤ) {C lam : ℝ}
+    (hQeq : Q = ⌊lam^(-(3:ℝ)/13)⌋₊)
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hH : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    ∃ (positive : Bool) (X Y N : ℕ),
+      X ≤ Q-1 ∧ Y ≤ (robertSargosHOverlap H r).card ∧ N ≤ Q ∧
+      (∑ m ∈ robertSargosCommonMInterval M H Q Q,
+        ‖robertSargosNonzeroShiftedTriple f H Q Q r m‖) ≤
+      32*(1+648*Real.pi*C)^3*
+        ∑ m ∈ robertSargosCommonMInterval M H Q Q,
+          ‖robertSargosSignedPolynomialPrefix f H Q r m positive X Y N‖ :=
+  @TaoTrudgianYang2025.robertSargos_physical_nonzero_common_prefix f M H Q r C lam hQeq hC hlam hsmall hH hf hlo hhi
+
+example (f : ℝ → ℝ) (M H : ℕ) {C lam : ℝ}
+    (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hHmin : lam^(-(1:ℝ)/7) ≤ H) (hHmax : (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    let Q := ⌊lam^(-(3:ℝ)/13)⌋₊
+    let R := ⌊lam^(-(1:ℝ)/13)⌋₊
+    ∃ (positive : ℤ → Bool) (X Y N : ℤ → ℕ),
+      (∀ r, X r ≤ Q-1 ∧ Y r ≤ (robertSargosHOverlap H r).card ∧ N r ≤ Q) ∧
+      ‖robertSargosSymmetricSum f M H‖^2 ≤
+        3140*C*(1+2*Real.pi*C)*(M:ℝ)^2+
+          (256*(1+648*Real.pi*C)^3*(M:ℝ)*H/((Q:ℝ)*R*Q))*
+            ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+              ∑ m ∈ robertSargosCommonMInterval M H Q Q,
+                ‖robertSargosSignedPolynomialPrefix f H Q r m
+                  (positive r) (X r) (Y r) (N r)‖ :=
+  @TaoTrudgianYang2025.robertSargos_physical_polynomial_reduction f M H C lam hC hlam hsmall hM hHmin hHmax hf hlo hhi
+
+example (Q : ℝ) : robertSargosAbelFactor Q 0 0 = 1 := by
+  simp [robertSargosAbelFactor]
+
+example (Q : ℝ) : robertSargosAbelFactor Q 1 0 = 1 := by
+  simp [robertSargosAbelFactor]
+
+example : (∑ i ∈ Finset.range 2, robertSargosAbelFactor 2 2 i) = (3/2:ℝ) := by
+  norm_num [Finset.sum_range_succ,robertSargosAbelFactor]
+
+example (v : ℤ → ℂ) :
+    (∑ q ∈ (Finset.Ioo (0:ℤ) 0).erase 0, v q) = 0 := by
+  simp
+
+example (v : ℤ → ℂ) :
+    (∑ q ∈ (Finset.Ioo (-1:ℤ) 1).erase 0, v q) = 0 := by
+  simpa using robertSargos_nonzero_q_split 1 v
+
+example (v : ℤ → ℂ) :
+    (∑ q ∈ (Finset.Ioo (-3:ℤ) 3).erase 0, v q) =
+      (v 1+v 2)+(v (-2)+v (-1)) := by
+  simpa [Finset.sum_range_succ] using robertSargos_nonzero_q_split 3 v
+
+example (v : ℤ → ℂ) : (∑ h ∈ robertSargosHOverlap 2 0, v h) = v 2+v 3 := by
+  rw [robertSargos_overlap_sum_range]
+  change (∑ y ∈ Finset.range 2, v (2+y)) = v 2+v 3
+  simp [Finset.sum_range_succ]
+
+example : robertSargosHOverlap 2 2 = ∅ := by
+  decide
+
+example (f : ℝ → ℝ) (H Q Y N : ℕ) (r m : ℤ) (b : Bool) :
+    robertSargosSignedPolynomialPrefix f H Q r m b 0 Y N = 0 := by
+  simp [robertSargosSignedPolynomialPrefix]
+
+example (f : ℝ → ℝ) (H Q X N : ℕ) (r m : ℤ) (b : Bool) :
+    robertSargosSignedPolynomialPrefix f H Q r m b X 0 N = 0 := by
+  simp [robertSargosSignedPolynomialPrefix]
+
+example (f : ℝ → ℝ) (H Q X Y : ℕ) (r m : ℤ) (b : Bool) :
+    robertSargosSignedPolynomialPrefix f H Q r m b X Y 0 = 0 := by
+  simp [robertSargosSignedPolynomialPrefix]
+
+example (f : ℝ → ℝ) (H Q : ℕ) (r m : ℤ) :
+    robertSargosSignedPolynomialPrefix f H Q r m false 1 1 1 =
+      robertSargosPolynomialCharacter f m r (1-Q)
+        (((max (H:ℤ) (H-r):ℤ):ℝ)) 1 := by
+  simp [robertSargosSignedPolynomialPrefix]
+
+example (f : ℝ → ℝ) (m r Q h n : ℝ) :
+    robertSargosAmplitudeJet f m r Q (-1) false false false (-2) h n =
+      robertSargosMixedAmplitude f m r Q (-2) h n := by
+  exact robertSargos_amplitude_jet_zero f m r Q (-1) (-2) h n (by norm_num)
+
+example (f : ℝ → ℝ) (m r Q h n : ℝ) :
+    robertSargosAmplitudeJet f m r Q 1 false false false 2 h n =
+      robertSargosMixedAmplitude f m r Q 2 h n := by
+  exact robertSargos_amplitude_jet_zero f m r Q 1 2 h n (by norm_num)
+
+end RobertSargosWeightRemovalRegression
+
+section RobertSargosDoubleSieveRegression
+
+open MeasureTheory GafniTao Set
+open scoped BigOperators ContDiff
+
+example {a : ℝ} (ha : 0 < a) (c : ℝ) :
+    Integrable (fun x : ℝ => sargosRealTent a (x-c)) :=
+  @TaoTrudgianYang2025.integrable_sargosRealTent_shift a ha c
+
+example {a : ℝ} (ha : 0 < a) (c : ℝ) :
+    (∫ x : ℝ, sargosRealTent a (x-c)) = a :=
+  @TaoTrudgianYang2025.integral_sargosRealTent_shift a ha c
+
+example {a : ℝ}
+    (ha : 0 < a) (c u : ℝ) :
+    (∫ x : ℝ, (sargosRealTent a (x-c):ℂ)*fordAdditiveCharacter (u*x)) =
+      fordAdditiveCharacter (u*c)*(sargosSincKernel a u:ℂ) :=
+  @TaoTrudgianYang2025.integral_sargosRealTent_shift_character a ha c u
+
+example {a : ℝ}
+    (ha : 0 < a) (c u : ℝ) :
+    Integrable (fun x : ℝ =>
+      (sargosRealTent a (x-c):ℂ)*fordAdditiveCharacter (u*x)) :=
+  @TaoTrudgianYang2025.integrable_sargosRealTent_shift_character a ha c u
+
+example (a b c d : ℝ) :
+    Continuous (sargosTentPacket a b c d) :=
+  @TaoTrudgianYang2025.continuous_sargosTentPacket a b c d
+
+example {a b : ℝ} (ha : 0 < a) (hb : 0 < b) (c d : ℝ) :
+    Integrable (sargosTentPacket a b c d) (volume.prod volume) :=
+  @TaoTrudgianYang2025.integrable_sargosTentPacket a b ha hb c d
+
+example {a b : ℝ} (ha : 0 < a) (hb : 0 < b) (c d : ℝ) :
+    (∫ p : ℝ × ℝ, sargosTentPacket a b c d p ∂(volume.prod volume)) = a*b :=
+  @TaoTrudgianYang2025.integral_sargosTentPacket a b ha hb c d
+
+example (a b c d : ℝ) (p : ℝ × ℝ) :
+    0 ≤ sargosTentPacket a b c d p :=
+  @TaoTrudgianYang2025.sargosTentPacket_nonneg a b c d p
+
+example {a b : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (c d : ℝ) (p : ℝ × ℝ) : sargosTentPacket a b c d p ≤ 1 :=
+  @TaoTrudgianYang2025.sargosTentPacket_le_one a b ha hb c d p
+
+example {a b c d c' d' : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (p : ℝ × ℝ)
+    (hfar : 2*a ≤ |c-c'| ∨ 2*b ≤ |d-d'|) :
+    sargosTentPacket a b c d p*sargosTentPacket a b c' d' p = 0 :=
+  @TaoTrudgianYang2025.sargosTentPacket_mul_eq_zero a b c d c' d' ha hb p hfar
+
+example {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (c d u v : ℝ) :
+    Integrable (fun p : ℝ × ℝ => (sargosTentPacket a b c d p:ℂ)*
+      fordAdditiveCharacter (u*p.1+v*p.2)) (volume.prod volume) :=
+  @TaoTrudgianYang2025.integrable_sargosTentPacket_character a b ha hb c d u v
+
+example {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (c d u v : ℝ) :
+    (∫ p : ℝ × ℝ, (sargosTentPacket a b c d p:ℂ)*
+      fordAdditiveCharacter (u*p.1+v*p.2) ∂(volume.prod volume)) =
+      fordAdditiveCharacter (u*c+v*d)*
+        ((sargosSincKernel a u*sargosSincKernel b v:ℝ):ℂ) :=
+  @TaoTrudgianYang2025.integral_sargosTentPacket_character a b ha hb c d u v
+
+example {ι : Type*} (S : Finset ι)
+    (z : ι → ℂ) (x y : ι → ℝ) (a b : ℝ) :
+    Continuous (sargosTentCloud S z x y a b) :=
+  @TaoTrudgianYang2025.continuous_sargosTentCloud ι S z x y a b
+
+example {ι : Type*} (S : Finset ι)
+    (z : ι → ℂ) (x y : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (hz : ∀ i ∈ S, ‖z i‖ ≤ 1) (p : ℝ × ℝ) :
+    ‖sargosTentCloud S z x y a b p‖^2 ≤
+      ∑ ij ∈ sargosNearPairs S x y (2*a) (2*b),
+        sargosTentPacket a b (x ij.1) (y ij.1) p :=
+  @TaoTrudgianYang2025.sargosTentCloud_sq_pointwise ι S z x y a b ha hb hz p
+
+example {ι : Type*} (S : Finset ι)
+    (z : ι → ℂ) (x y : ι → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b)
+    (hz : ∀ i ∈ S, ‖z i‖ ≤ 1) :
+    Integrable (fun p : ℝ × ℝ => ‖sargosTentCloud S z x y a b p‖^2)
+      (volume.prod volume) ∧
+    (∫ p : ℝ × ℝ, ‖sargosTentCloud S z x y a b p‖^2 ∂(volume.prod volume)) ≤
+      a*b*((sargosNearPairs S x y (2*a) (2*b)).card:ℝ) :=
+  @TaoTrudgianYang2025.sargosTentCloud_energy_le_nearPairs ι S z x y a b ha hb hz
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (w : κ → ℂ)
+    (x y : ι → ℝ) (u v : κ → ℝ) {a b : ℝ} (ha : 0 < a) (hb : 0 < b) :
+    (∫ p : ℝ × ℝ, sargosTentCloud S z x y a b p*
+      sargosPlanarSum T w u v p.1 p.2 ∂(volume.prod volume)) =
+      ∑ i ∈ S, ∑ j ∈ T, z i*w j*fordAdditiveCharacter (u j*x i+v j*y i)*
+        ((sargosSincKernel a (u j)*sargosSincKernel b (v j):ℝ):ℂ) :=
+  @TaoTrudgianYang2025.sargosTentCloud_fourier_pairing ι κ S T z w x y u v a b ha hb
+
+example {ι : Type*} (S : Finset ι)
+    (z : ι → ℂ) (x y : ι → ℝ) {a b c d δ lambda : ℝ}
+    (ha : 0 < a) (hb : 0 < b)
+    (hx : ∀ i ∈ S, x i ∈ Icc c (c+δ))
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+lambda))
+    (p : ℝ × ℝ)
+    (hp : p ∉ Icc (c-a) (c+δ+a) ×ˢ Icc (d-b) (d+lambda+b)) :
+    sargosTentCloud S z x y a b p = 0 :=
+  @TaoTrudgianYang2025.sargosTentCloud_zero_outside ι S z x y a b c d δ lambda ha hb hx hy p hp
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (w : κ → ℂ)
+    (x y : ι → ℝ) (u v : κ → ℝ) {a b c d δ lambda : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ) (hlambda : 0 < lambda)
+    (hz : ∀ i ∈ S, ‖z i‖ ≤ 1) (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, x i ∈ Icc c (c+δ))
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+lambda)) :
+    ‖∑ i ∈ S, ∑ j ∈ T, z i*w j*fordAdditiveCharacter (u j*x i+v j*y i)*
+        ((sargosSincKernel a (u j)*sargosSincKernel b (v j):ℝ):ℂ)‖^2 ≤
+      16*a*b*(δ+2*a)*(lambda+2*b)*
+        ((sargosNearPairs S x y (2*a) (2*b)).card:ℝ)*
+        ((sargosNearPairs T u v (1/(δ+2*a)) (1/(lambda+2*b))).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_tent_weighted_bilinear_bound ι κ S T z w x y u v a b c d δ lambda ha hb hδ hlambda hz hw hx hy
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (w : κ → ℂ)
+    (x y : ι → ℝ) (u v : κ → ℝ) {a b c d δ lambda : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ) (hlambda : 0 < lambda)
+    (hz : ∀ i ∈ S, ‖z i‖ ≤ 1) (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, x i ∈ Icc c (c+δ))
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+lambda))
+    (hu : ∀ j ∈ T, a*|u j| ≤ 1/2)
+    (hv : ∀ j ∈ T, b*|v j| ≤ 1/2) :
+    ‖∑ i ∈ S, ∑ j ∈ T, z i*w j*fordAdditiveCharacter (u j*x i+v j*y i)‖^2 ≤
+      (4096*(δ+2*a)*(lambda+2*b)/(a*b))*
+        ((sargosNearPairs S x y (2*a) (2*b)).card:ℝ)*
+        ((sargosNearPairs T u v (1/(δ+2*a)) (1/(lambda+2*b))).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_double_large_sieve_rectangle ι κ S T z w x y u v a b c d δ lambda ha hb hδ hlambda hz hw hx hy hu hv
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (w : κ → ℂ)
+    (x y : ι → ℝ) (u v : κ → ℝ) {a b c d δ lambda : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (hδ : 0 < δ) (hlambda : 0 < lambda)
+    (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, x i ∈ Icc c (c+δ))
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+lambda))
+    (hu : ∀ j ∈ T, a*|u j| ≤ 1/2)
+    (hv : ∀ j ∈ T, b*|v j| ≤ 1/2) :
+    (∑ i ∈ S, ‖∑ j ∈ T, w j*fordAdditiveCharacter (u j*x i+v j*y i)‖)^2 ≤
+      (4096*(δ+2*a)*(lambda+2*b)/(a*b))*
+        ((sargosNearPairs S x y (2*a) (2*b)).card:ℝ)*
+        ((sargosNearPairs T u v (1/(δ+2*a)) (1/(lambda+2*b))).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_double_large_sieve_sum_norm ι κ S T w x y u v a b c d δ lambda ha hb hδ hlambda hw hx hy hu hv
+
+example (n : ℤ) (x : ℝ) :
+    fordAdditiveCharacter ((n:ℝ)*Int.fract x) = fordAdditiveCharacter ((n:ℝ)*x) :=
+  @TaoTrudgianYang2025.sargos_character_integer_fract n x
+
+example {ι : Type*}
+    (S : Finset ι) (x y : ι → ℝ) (A B : ℝ) :
+    sargosNearPairs S (fun i => Int.fract (x i)) y A B ⊆
+      sargosPeriodicNearPairs S x y A B :=
+  @TaoTrudgianYang2025.sargos_fract_nearPairs_subset_periodic ι S x y A B
+
+example {ι : Type*} (S : Finset ι)
+    (u : ι → ℤ) (v : ι → ℝ) {A B E : ℝ} (hA : A < 1) (hB : B ≤ E) :
+    sargosNearPairs S (fun i => (u i:ℝ)) v A B ⊆ sargosIntegerNearPairs S u v E :=
+  @TaoTrudgianYang2025.sargos_integer_nearPairs_subset ι S u v A B E hA hB
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (w : κ → ℂ)
+    (x y : ι → ℝ) (u : κ → ℤ) (v : κ → ℝ) {X₁ X₂ d mu : ℝ}
+    (hX₁ : 0 < X₁) (hX₂ : 0 < X₂) (hmu : 0 < mu)
+    (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+mu))
+    (hu : ∀ j ∈ T, |(u j:ℝ)| ≤ X₁)
+    (hv : ∀ j ∈ T, |v j| ≤ X₂) :
+    (∑ i ∈ S, ‖∑ j ∈ T, w j*fordAdditiveCharacter ((u j:ℝ)*x i+v j*y i)‖)^2 ≤
+      (16384*(1+X₁)*(1+mu*X₂))*
+        ((sargosPeriodicNearPairs S x y (1/X₁) (1/X₂)).card:ℝ)*
+        ((sargosIntegerNearPairs T u v (1/mu)).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_double_large_sieve_integer ι κ S T w x y u v X₁ X₂ d mu hX₁ hX₂ hmu hw hy hu hv
+
+example {ρ ι κ : Type*}
+    (R : Finset ρ) (S : Finset ι) (T : ρ → Finset κ) (w : ρ → κ → ℂ)
+    (x y : ι → ℝ) (u : ρ → κ → ℤ) (v : ρ → κ → ℝ) {X₁ X₂ d mu : ℝ}
+    (hX₁ : 0 < X₁) (hX₂ : 0 < X₂) (hmu : 0 < mu)
+    (hw : ∀ r ∈ R, ∀ j ∈ T r, ‖w r j‖ ≤ 1)
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+mu))
+    (hu : ∀ r ∈ R, ∀ j ∈ T r, |(u r j:ℝ)| ≤ X₁)
+    (hv : ∀ r ∈ R, ∀ j ∈ T r, |v r j| ≤ X₂) :
+    (∑ r ∈ R, ∑ i ∈ S,
+      ‖∑ j ∈ T r, w r j*fordAdditiveCharacter ((u r j:ℝ)*x i+v r j*y i)‖)^2 ≤
+      (16384*(R.card:ℝ)*(1+X₁)*(1+mu*X₂))*
+        ((sargosPeriodicNearPairs S x y (1/X₁) (1/X₂)).card:ℝ)*
+        ∑ r ∈ R, ((sargosIntegerNearPairs (T r) (u r) (v r) (1/mu)).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_double_large_sieve_family ρ ι κ R S T w x y u v X₁ X₂ d mu hX₁ hX₂ hmu hw hy hu hv
+
+example {ρ ι κ : Type*}
+    (R : Finset ρ) (S : Finset ι) (T : ρ → Finset κ) (w : ρ → κ → ℂ)
+    (label : ρ → κ → ℕ) (J : ℕ)
+    (x y : ι → ℝ) (u : ρ → κ → ℤ) (v : ρ → κ → ℝ) {X₁ X₂ d mu : ℝ}
+    (hX₁ : 0 < X₁) (hX₂ : 0 < X₂) (hmu : 0 < mu)
+    (hw : ∀ r ∈ R, ∀ j ∈ T r, ‖w r j‖ ≤ 1)
+    (hy : ∀ i ∈ S, y i ∈ Icc d (d+mu))
+    (hu : ∀ r ∈ R, ∀ j ∈ T r, |(u r j:ℝ)| ≤ X₁)
+    (hv : ∀ r ∈ R, ∀ j ∈ T r, |v r j| ≤ X₂)
+    (hlabel : ∀ r ∈ R, ∀ j ∈ T r, label r j < J) :
+    (∑ r ∈ R, ∑ i ∈ S,
+      ‖∑ j ∈ T r, w r j*fordAdditiveCharacter ((u r j:ℝ)*x i+v r j*y i)‖)^2 ≤
+      (16384*(J:ℝ)*(R.card:ℝ)*(1+X₁)*(1+mu*X₂))*
+        ((sargosPeriodicNearPairs S x y (1/X₁) (1/X₂)).card:ℝ)*
+        ∑ k ∈ Finset.range J, ∑ r ∈ R,
+          ((sargosIntegerNearPairs ((T r).filter (fun j => label r j = k))
+            (u r) (v r) (1/mu)).card:ℝ) :=
+  @TaoTrudgianYang2025.sargos_double_large_sieve_partition ρ ι κ R S T w label J x y u v X₁ X₂ d mu hX₁ hX₂ hmu hw hy hu hv hlabel
+
+example (f : ℝ → ℝ) (H Q : ℕ) (r m : ℤ)
+    (positive : Bool) (X Y N : ℕ) :
+    robertSargosSignedPolynomialPrefix f H Q r m positive X Y N =
+      ∑ p ∈ robertSargosPrefixBox H Q r positive X Y N,
+        robertSargosPolynomialCharacter f m r p.1 p.2.1 p.2.2 :=
+  @TaoTrudgianYang2025.robertSargos_signed_prefix_eq_box f H Q r m positive X Y N
+
+example (H Q : ℕ) (r : ℤ)
+    (positive : Bool) (X Y N : ℕ)
+    (hX : X ≤ Q-1) (hY : Y ≤ (robertSargosHOverlap H r).card)
+    (p : ℤ × ℤ × ℤ) (hp : p ∈ robertSargosPrefixBox H Q r positive X Y N) :
+    p.1 ∈ (Finset.Ioo (-(Q:ℤ)) Q).erase 0 ∧
+      p.2.1 ∈ robertSargosHOverlap H r ∧ p.2.2 ∈ Finset.Icc 1 (N:ℤ) ∧
+      (if positive then 0 < p.1 else p.1 < 0) :=
+  @TaoTrudgianYang2025.robertSargos_prefix_box_support H Q r positive X Y N hX hY p hp
+
+example {A : ℝ} {r q h n : ℝ} {Q : ℕ}
+    (hA : 0 ≤ A) (hAQ : A ≤ Q) (hr : |r| ≤ A) (hq : |q| ≤ Q)
+    (hh : |h| ≤ 2*A) (hn : |n| ≤ Q) :
+    |h*q-r*n| ≤ 3*A*Q ∧
+      |robertSargosTaylorQuadratic r q h n| ≤ 13*A*(Q:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_box_frequency_bounds A r q h n Q hA hAQ hr hq hh hn
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam : ℝ} (hC : 0 ≤ C) (hlam : 0 ≤ lam)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam)
+    (x : ℝ) (hx : x ∈ Icc (1:ℝ) M) :
+    iteratedDeriv 3 f x ∈
+      Icc (iteratedDeriv 3 f 1) (iteratedDeriv 3 f 1+C*lam*M) :=
+  @TaoTrudgianYang2025.robertSargos_third_derivative_source_range f M C lam hC hlam hf hlo hhi x hx
+
+example (H Q : ℕ) (r : ℤ)
+    (positive : Bool) (X Y N : ℕ)
+    (hX : X ≤ Q-1) (hY : Y ≤ (robertSargosHOverlap H r).card)
+    (p : ℤ × ℤ × ℤ) (hp : p ∈ robertSargosPrefixBox H Q r positive X Y N) :
+    Nat.log 2 p.1.natAbs < Nat.clog 2 Q :=
+  @TaoTrudgianYang2025.robertSargos_prefix_box_log_lt H Q r positive X Y N hX hY p hp
+
+example (H Q : ℕ) (r : ℤ)
+    (positive : Bool) (X Y N j : ℕ)
+    (hX : X ≤ Q-1) (hY : Y ≤ (robertSargosHOverlap H r).card)
+    (p : ℤ × ℤ × ℤ) (hp : p ∈ robertSargosDyadicPrefixBox H Q r positive X Y N j) :
+    |(p.1:ℝ)| ∈ Icc ((2:ℝ)^j) (2*(2:ℝ)^j) :=
+  @TaoTrudgianYang2025.robertSargos_dyadic_prefix_q_range H Q r positive X Y N j hX hY p hp
+
+example {A : ℝ}
+    (H Q : ℕ) (r : ℤ) (positive : Bool) (X Y N : ℕ)
+    (hA : 0 ≤ A) (hAQ : A ≤ Q) (hH : (H:ℝ) ≤ A) (hr : |(r:ℝ)| ≤ A)
+    (hX : X ≤ Q-1) (hY : Y ≤ (robertSargosHOverlap H r).card) (hN : N ≤ Q)
+    (p : ℤ × ℤ × ℤ) (hp : p ∈ robertSargosPrefixBox H Q r positive X Y N) :
+    |((p.2.1*p.1-r*p.2.2:ℤ):ℝ)| ≤ 3*A*Q ∧
+      |robertSargosTaylorQuadratic r p.1 p.2.1 p.2.2| ≤ 13*A*(Q:ℝ)^2 :=
+  @TaoTrudgianYang2025.robertSargos_prefix_box_frequency_bounds A H Q r positive X Y N hA hAQ hH hr hX hY hN p hp
+
+example : Function.Injective robertSargosSievePoint :=
+  @TaoTrudgianYang2025.robertSargos_sieve_point_injective
+
+example (R H Q : ℕ) (positive : ℤ → Bool)
+    (X Y N : ℤ → ℕ) (j : ℕ) (E : ℝ) :
+    (robertSargosSieveCollisions R H Q positive X Y N j E).card =
+      ∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0,
+        (sargosIntegerNearPairs
+          (robertSargosDyadicPrefixBox H Q r (positive r) (X r) (Y r) (N r) j)
+          (fun p => p.2.1*p.1-r*p.2.2)
+          (fun p => robertSargosTaylorQuadratic r p.1 p.2.1 p.2.2) E).card :=
+  @TaoTrudgianYang2025.robertSargos_sieve_collisions_card R H Q positive X Y N j E
+
+example (R H Q : ℕ) (positive : ℤ → Bool)
+    (X Y N : ℤ → ℕ) (j : ℕ) (E : ℝ)
+    (hX : ∀ r, X r ≤ Q-1) (hY : ∀ r, Y r ≤ (robertSargosHOverlap H r).card)
+    (hN : ∀ r, N r ≤ Q)
+    (p : RobertSargosSevenPoint)
+    (hp : p ∈ robertSargosSieveCollisions R H Q positive X Y N j E) :
+    RobertSargosTaylorSystem R H ((2:ℝ)^j) Q E p :=
+  @TaoTrudgianYang2025.robertSargos_sieve_collisions_system R H Q positive X Y N j E hX hY hN p hp
+
+example {a b s t ε : ℝ}
+    (ha : 0 < a) (hb : 0 ≤ b) (hs : 0 < s) (hst : s ≤ t) (hε : 0 ≤ ε) :
+    (a*s)^(1+ε)*(1+b/s) ≤ (a*t)^(1+ε)*(1+b/t) :=
+  @TaoTrudgianYang2025.robertSargos_taylor_count_scale_mono a b s t ε ha hb hs hst hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (R H Q : ℕ) (positive : ℤ → Bool) (X Y N : ℤ → ℕ)
+      (j : ℕ) (E : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ E → (R:ℝ) ≤ H/2 →
+      (∀ r, X r ≤ Q-1) → (∀ r, Y r ≤ (robertSargosHOverlap H r).card) →
+      (∀ r, N r ≤ Q) →
+      ((robertSargosSieveCollisions R H Q positive X Y N j E).card:ℝ) ≤
+        C*((R:ℝ)*Q*H*((2:ℝ)^j))^(1+ε)*
+          (1+(E+12*R*(H:ℝ)^2)/((H:ℝ)*((2:ℝ)^j))) :=
+  @TaoTrudgianYang2025.exists_robertSargos_sieve_collisions_count ε hε
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (R H Q : ℕ) (positive : ℤ → Bool) (X Y N : ℤ → ℕ)
+      (j : ℕ) (E : ℝ),
+      1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 ≤ E → (R:ℝ) ≤ H/2 →
+      (∀ r, X r ≤ Q-1) → (∀ r, Y r ≤ (robertSargosHOverlap H r).card) →
+      (∀ r, N r ≤ Q) → j < Nat.clog 2 Q →
+      ((robertSargosSieveCollisions R H Q positive X Y N j E).card:ℝ) ≤
+        C*((R:ℝ)*Q*H*Q)^(1+ε)*(1+(E+12*R*(H:ℝ)^2)/((H:ℝ)*Q)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_sieve_collisions_uniform ε hε
+
+example (f : ℝ → ℝ) (m r : ℤ)
+    (p : ℤ × ℤ × ℤ) :
+    robertSargosPolynomialCharacter f m r p.1 p.2.1 p.2.2 =
+      fordAdditiveCharacter (((p.2.1*p.1-r*p.2.2:ℤ):ℝ)*(2*iteratedDeriv 2 f m)+
+        robertSargosTaylorQuadratic r p.1 p.2.1 p.2.2*iteratedDeriv 3 f m) :=
+  @TaoTrudgianYang2025.robertSargos_polynomial_character_coordinates f m r p
+
+example (f : ℝ → ℝ) (M R H Q : ℕ)
+    (positive : ℤ → Bool) (X Y N : ℤ → ℕ) {A C lam : ℝ}
+    (hM : 1 ≤ M) (hQ : 1 ≤ Q) (hA : 0 < A) (hC : 0 < C) (hlam : 0 < lam)
+    (hAQ : A ≤ Q) (hH : (H:ℝ) ≤ A) (hR : (R:ℝ) ≤ A)
+    (hX : ∀ r, X r ≤ Q-1) (hY : ∀ r, Y r ≤ (robertSargosHOverlap H r).card)
+    (hN : ∀ r, N r ≤ Q)
+    (hf : ∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) :
+    (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0, ∑ m ∈ Finset.Icc (1:ℤ) M,
+      ‖robertSargosSignedPolynomialPrefix f H Q r m (positive r) (X r) (Y r) (N r)‖)^2 ≤
+      16384*(Nat.clog 2 Q:ℝ)*(((Finset.Ioo (-(R:ℤ)) R).erase 0).card:ℝ)*
+        (1+3*A*Q)*(1+(C*lam*M)*(13*A*(Q:ℝ)^2))*
+        ((sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+          (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m)
+          (1/(3*A*Q)) (1/(13*A*(Q:ℝ)^2))).card:ℝ)*
+        ∑ j ∈ Finset.range (Nat.clog 2 Q),
+          ((robertSargosSieveCollisions R H Q positive X Y N j (1/(C*lam*M))).card:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_polynomial_sieve f M R H Q positive X Y N A C lam hM hQ hA hC hlam hAQ hH hR hX hY hN hf hlo hhi
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (f : ℝ → ℝ) (M R H Q : ℕ)
+      (positive : ℤ → Bool) (X Y N : ℤ → ℕ) (A C lam : ℝ),
+    1 ≤ M → 1 ≤ R → 1 ≤ H → 1 ≤ Q → 0 < A → 0 < C → 0 < lam →
+    A ≤ Q → (H:ℝ) ≤ A → (R:ℝ) ≤ A → (R:ℝ) ≤ H/2 →
+    (∀ r, X r ≤ Q-1) → (∀ r, Y r ≤ (robertSargosHOverlap H r).card) →
+    (∀ r, N r ≤ Q) →
+    (∀ x ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f x) →
+    (∀ x ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f x) →
+    (∀ x ∈ Icc (1:ℝ) M, iteratedDeriv 4 f x ≤ C*lam) →
+    (∑ r ∈ (Finset.Ioo (-(R:ℤ)) R).erase 0, ∑ m ∈ Finset.Icc (1:ℤ) M,
+      ‖robertSargosSignedPolynomialPrefix f H Q r m (positive r) (X r) (Y r) (N r)‖)^2 ≤
+      K*(Nat.clog 2 Q:ℝ)^2*(((Finset.Ioo (-(R:ℤ)) R).erase 0).card:ℝ)*
+        (1+3*A*Q)*(1+(C*lam*M)*(13*A*(Q:ℝ)^2))*
+        ((sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+          (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m)
+          (1/(3*A*Q)) (1/(13*A*(Q:ℝ)^2))).card:ℝ)*
+        ((R:ℝ)*Q*H*Q)^(1+ε)*(1+(1/(C*lam*M)+12*R*(H:ℝ)^2)/((H:ℝ)*Q)) :=
+  @TaoTrudgianYang2025.exists_robertSargos_counted_polynomial_sieve ε hε
+
+example (S : Finset ℤ) (L : ℕ)
+    (g gp : ℝ → ℝ) {mu V theta : ℝ} (hL : 1 ≤ L)
+    (hmu : 0 < mu) (hV : 0 ≤ V) (htheta : 0 ≤ theta)
+    (hg : ∀ x ∈ Icc (1:ℝ) L, HasDerivAt g (gp x) x)
+    (hlo : ∀ x ∈ Icc (1:ℝ) L, mu ≤ gp x)
+    (hhi : ∀ x ∈ Icc (1:ℝ) L, gp x ≤ V)
+    (hS : ∀ n ∈ S, n ∈ Finset.Icc (1:ℤ) L ∧
+      ∃ z : ℤ, |g n-z| ≤ theta) :
+    (S.card:ℝ) ≤ 1+(2*theta/mu+1)*(V*L+2*theta+3) :=
+  @TaoTrudgianYang2025.robertSargos_spacing_source_interval S L g gp mu V theta hL hmu hV htheta hg hlo hhi hS
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam k x : ℝ} (hk : 0 ≤ k) (hx : 1 ≤ x) (hxk : x+k ≤ M)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) :
+    HasDerivAt (fun t => 2*(iteratedDeriv 2 f (t+k)-iteratedDeriv 2 f t))
+      (2*(iteratedDeriv 3 f (x+k)-iteratedDeriv 3 f x)) x ∧
+    2*k*lam ≤ 2*(iteratedDeriv 3 f (x+k)-iteratedDeriv 3 f x) ∧
+    2*(iteratedDeriv 3 f (x+k)-iteratedDeriv 3 f x) ≤ 2*C*k*lam :=
+  @TaoTrudgianYang2025.robertSargos_shifted_second_derivative f M C lam k x hk hx hxk hf hlo hhi
+
+example (f : ℝ → ℝ) (M k : ℕ)
+    {C lam theta : ℝ} (hk : 1 ≤ k) (hkM : k < M)
+    (hC : 0 ≤ C) (hlam : 0 < lam) (htheta : 0 ≤ theta)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) :
+    ((robertSargosSampleShift f M k theta).card:ℝ) ≤
+      1+(theta/((k:ℝ)*lam)+1)*(2*C*k*lam*M+2*theta+3) :=
+  @TaoTrudgianYang2025.robertSargos_sample_shift_spacing f M k C lam theta hk hkM hC hlam htheta hf hlo hhi
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam theta delta : ℝ} (hlam : 0 < lam)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam)
+    (a b : ℤ) (hab : a < b)
+    (hp : (a,b) ∈ sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+      (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m) theta delta) :
+    ∃ k ∈ Finset.Icc 1 ⌊delta/lam⌋₊,
+      a ∈ robertSargosSampleShift f M k theta ∧ b = a+k :=
+  @TaoTrudgianYang2025.robertSargos_sample_positive_pair f M C lam theta delta hlam hf hlo hhi a b hab hp
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam theta delta : ℝ} (hlam : 0 < lam)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) :
+    ((sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+      (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m) theta delta).card:ℝ) ≤
+      (M:ℝ)+2*∑ k ∈ Finset.Icc 1 ⌊delta/lam⌋₊,
+        ((robertSargosSampleShift f M k theta).card:ℝ) :=
+  @TaoTrudgianYang2025.robertSargos_sample_pairs_shift_count f M C lam theta delta hlam hf hlo hhi
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam theta delta : ℝ} (hM : 1 ≤ M) (hC : 1 ≤ C) (hlam : 0 < lam)
+    (htheta : 0 ≤ theta) (htheta1 : theta ≤ 1)
+    (hKM : ⌊delta/lam⌋₊ ≤ M)
+    (hthetaK : theta*(⌊delta/lam⌋₊:ℝ) ≤ 1)
+    (hlamK : lam*(⌊delta/lam⌋₊:ℝ)^2 ≤ 1)
+    (hthetaM : theta ≤ lam*M)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) :
+    ((sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+      (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m) theta delta).card:ℝ) ≤
+      32*C*M*(1+Real.log M) :=
+  @TaoTrudgianYang2025.robertSargos_sample_pairs_spacing_bound f M C lam theta delta hM hC hlam htheta htheta1 hKM hthetaK hlamK hthetaM hf hlo hhi
+
+example (f : ℝ → ℝ) (M : ℕ)
+    {C lam : ℝ} (hC : 1 ≤ C) (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hM : lam^(-(8:ℝ)/13) ≤ M)
+    (hf : ∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t)
+    (hlo : ∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t)
+    (hhi : ∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) :
+    let Q := ⌊lam^(-(3:ℝ)/13)⌋₊
+    let A := lam^(-(2:ℝ)/13)
+    ((sargosPeriodicNearPairs (Finset.Icc (1:ℤ) M)
+      (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m)
+      (1/(3*A*Q)) (1/(13*A*(Q:ℝ)^2))).card:ℝ) ≤ 32*C*M*(1+Real.log M) :=
+  @TaoTrudgianYang2025.robertSargos_physical_sample_spacing f M C lam hC hlam hsmall hM hf hlo hhi
+
+example (x y : ℕ → ℝ) :
+    sargosPeriodicNearPairs ∅ x y 1 1 = ∅ := by
+  simp [sargosPeriodicNearPairs]
+
+example (u : ℕ → ℤ) (v : ℕ → ℝ) :
+    sargosIntegerNearPairs ∅ u v 1 = ∅ := by
+  simp [sargosIntegerNearPairs]
+
+example : (0,0) ∈ sargosPeriodicNearPairs ({0}:Finset ℕ)
+    (fun _ => (7:ℝ)) (fun _ => (11:ℝ)) 0 0 := by
+  simp [sargosPeriodicNearPairs]
+
+example : robertSargosPrefixBox 2 3 1 true 1 1 1 = {(1,2,1)} := by
+  decide
+
+example : robertSargosPrefixBox 2 3 1 false 1 1 1 = {(-2,2,1)} := by
+  decide
+
+example : robertSargosDyadicPrefixBox 2 3 1 false 1 1 1 1 = {(-2,2,1)} := by
+  decide
+
+example : robertSargosDyadicPrefixBox 2 3 1 false 1 1 1 0 = ∅ := by
+  decide
+
+example : robertSargosPrefixBox 2 3 1 false 0 1 1 = ∅ := by
+  decide
+
+example : robertSargosPrefixBox 2 3 1 true 1 0 1 = ∅ := by
+  decide
+
+example : robertSargosPrefixBox 2 3 1 true 1 1 0 = ∅ := by
+  decide
+
+example : robertSargosTaylorQuadratic (1:ℝ) (-2) 2 1 = -7 := by
+  norm_num [robertSargosTaylorQuadratic]
+
+example : robertSargosSievePoint ⟨1,((-2,2,1),(-2,2,1))⟩ =
+    (⟨1,-2,-2,2,2,1,1⟩ : RobertSargosSevenPoint) := rfl
+
+example (f : ℝ → ℝ) (M k : ℕ) (theta : ℝ) (hk : M ≤ k) :
+    robertSargosSampleShift f M k theta = ∅ := by
+  simp [robertSargosSampleShift,Nat.sub_eq_zero_of_le hk]
+
+example (f : ℝ → ℝ) (theta delta : ℝ) :
+    sargosPeriodicNearPairs (Finset.Icc (1:ℤ) 0)
+      (fun m => 2*iteratedDeriv 2 f m) (fun m => iteratedDeriv 3 f m) theta delta = ∅ := by
+  simp [sargosPeriodicNearPairs]
+
+
+end RobertSargosDoubleSieveRegression
+
+section RobertSargosPhysicalSieveRegression
+
+open GafniTao Set
+open scoped BigOperators ContDiff
+
+example (H : ℕ) {lam : ℝ}
+    (hlam : 0 < lam) (hsmall : lam ≤ 1/8192)
+    (hHmin : lam^(-(1:ℝ)/7) ≤ H) :
+    (⌊lam^(-(1:ℝ)/13)⌋₊:ℝ) ≤ (H:ℝ)/2 :=
+  @TaoTrudgianYang2025.robertSargos_physical_shift_half_height H lam hlam hsmall hHmin
+
+example (ε : ℝ) (hε : 0 < ε) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (f : ℝ → ℝ) (M H : ℕ) (C lam : ℝ),
+    1 ≤ C → 0 < lam → lam ≤ 1/8192 →
+    lam^(-(8:ℝ)/13) ≤ M → lam^(-(1:ℝ)/7) ≤ H →
+    (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2 →
+    (∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) →
+    let Q := ⌊lam^(-(3:ℝ)/13)⌋₊
+    let R := ⌊lam^(-(1:ℝ)/13)⌋₊
+    let A := lam^(-(2:ℝ)/13)
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      3140*C*(1+2*Real.pi*C)*(M:ℝ)^2+
+        (256*(1+648*Real.pi*C)^3*(M:ℝ)*H/((Q:ℝ)*R*Q))*
+        Real.sqrt (K*C*M*(1+Real.log M)*(Nat.clog 2 Q:ℝ)^2*
+          (((Finset.Ioo (-(R:ℤ)) R).erase 0).card:ℝ)*
+          (1+3*A*Q)*(1+(C*lam*M)*(13*A*(Q:ℝ)^2))*
+          ((R:ℝ)*Q*H*Q)^(1+ε)*
+          (1+(1/(C*lam*M)+12*R*(H:ℝ)^2)/((H:ℝ)*Q))) :=
+  @TaoTrudgianYang2025.exists_robertSargos_physical_sieve_reduction ε hε
+
+example {T lam M C R H Q ε : ℝ}
+    (hT : 1 ≤ T) (hlam : 0 < lam) (hnorm : T^13*lam = 1)
+    (hM : T^8 ≤ M) (hC : 1 ≤ C) (hR : 0 < R) (hRhi : R ≤ T)
+    (hH : 0 < H) (hHhi : H ≤ T^2) (hQ : 0 < Q) (hQhi : Q ≤ T^3)
+    (hε : 0 ≤ ε) :
+    (R*Q*H*Q)^(1+ε)*(1+(1/(C*lam*M)+12*R*H^2)/(H*Q)) ≤
+      14*(T^9)^ε*T^9 :=
+  @TaoTrudgianYang2025.robertSargos_taylor_factor_budget T lam M C R H Q ε hT hlam hnorm hM hC hR hRhi hH hHhi hQ hQhi hε
+
+example {T lam M C Q : ℝ}
+    (hT : 1 ≤ T) (hlam : 0 < lam) (hnorm : T^13*lam = 1)
+    (hM : T^8 ≤ M) (hC : 1 ≤ C) (hQ : 0 ≤ Q) (hQhi : Q ≤ T^3) :
+    (1+3*T^2*Q)*(1+(C*lam*M)*(13*T^2*Q^2)) ≤ 56*C*M :=
+  @TaoTrudgianYang2025.robertSargos_frequency_factor_budget T lam M C Q hT hlam hnorm hM hC hQ hQhi
+
+example {T M H Q R : ℝ}
+    (hT : 0 < T) (hM : 0 ≤ M) (hHhi : H ≤ T^2/2)
+    (hQlo : T^3/2 ≤ Q) (hRlo : T/2 ≤ R) :
+    M*H/(Q*R*Q) ≤ 4*M/T^5 :=
+  @TaoTrudgianYang2025.robertSargos_sieve_coefficient_budget T M H Q R hT hM hHhi hQlo hRlo
+
+example {T M ε : ℝ}
+    (hT : 1 ≤ T) (hM : T^8 ≤ M) (hε : 0 ≤ ε) :
+    (T^9)^ε ≤ (M^ε)^2 :=
+  @TaoTrudgianYang2025.robertSargos_root_power_budget T M ε hT hM hε
+
+example {T lam M C R H Q K J L W ε : ℝ}
+    (hT : 1 ≤ T) (hlam : 0 < lam) (hnorm : T^13*lam = 1)
+    (hM : T^8 ≤ M) (hC : 1 ≤ C) (hR : 0 < R) (hRhi : R ≤ T)
+    (hH : 0 < H) (hHhi : H ≤ T^2) (hQ : 0 < Q) (hQhi : Q ≤ T^3)
+    (hK : 0 ≤ K) (hL : 1 ≤ L) (hW : 0 ≤ W) (hWhi : W ≤ 2*T)
+    (hε : 0 ≤ ε) :
+    K*C*M*L*J^2*W*(1+3*T^2*Q)*(1+(C*lam*M)*(13*T^2*Q^2))*
+      (R*Q*H*Q)^(1+ε)*(1+(1/(C*lam*M)+12*R*H^2)/(H*Q)) ≤
+      (Real.sqrt (1568*K)*C*M*L*J*T^5*M^ε)^2 :=
+  @TaoTrudgianYang2025.robertSargos_sieve_radicand_budget T lam M C R H Q K J L W ε hT hlam hnorm hM hC hR hRhi hH hHhi hQ hQhi hK hL hW hWhi hε
+
+example (ε : ℝ) (hε : 0 < ε)
+    (C : ℝ) (hC : 1 ≤ C) :
+    ∃ D : ℝ, 0 < D ∧ ∀ (f : ℝ → ℝ) (M H : ℕ) (lam : ℝ),
+    0 < lam → lam ≤ 1/8192 → lam^(-(8:ℝ)/13) ≤ M →
+    lam^(-(1:ℝ)/7) ≤ H → (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2 →
+    (∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) →
+    ‖robertSargosSymmetricSum f M H‖^2 ≤
+      D*(M:ℝ)^2*(1+Real.log M)^2*(M:ℝ)^ε :=
+  @TaoTrudgianYang2025.exists_robertSargos_large_block_log_bound ε hε C hC
+
+example (ε : ℝ) (hε : 0 < ε)
+    (C : ℝ) (hC : 1 ≤ C) :
+    ∃ D : ℝ, 0 < D ∧ ∀ (f : ℝ → ℝ) (M H : ℕ) (lam : ℝ),
+    0 < lam → lam ≤ 1/8192 → lam^(-(8:ℝ)/13) ≤ M →
+    lam^(-(1:ℝ)/7) ≤ H → (H:ℝ) ≤ lam^(-(2:ℝ)/13)/2 →
+    (∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) →
+    ‖robertSargosSymmetricSum f M H‖ ≤ D*(M:ℝ)^(1+ε) :=
+  @TaoTrudgianYang2025.exists_robertSargos_large_block_bound ε hε C hC
+
+example (ε : ℝ) (hε : 0 < ε)
+    (C : ℝ) (hC : 1 ≤ C) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (f : ℝ → ℝ) (M : ℕ) (lam : ℝ),
+    0 < lam → lam ≤ 1/8192 → lam^(-(8:ℝ)/13) ≤ M →
+    (∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) →
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖ ≤
+      K*(M:ℝ)^(1+ε)*lam^((1:ℝ)/13) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fourth_derivative_long_range_small ε hε C hC
+
+example (ε : ℝ) (hε : 0 < ε)
+    (C : ℝ) (hC : 1 ≤ C) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (f : ℝ → ℝ) (M : ℕ) (lam : ℝ),
+    0 < lam → lam^(-(8:ℝ)/13) ≤ M →
+    (∀ t ∈ Icc (1:ℝ) M, ContDiffAt ℝ 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, lam ≤ iteratedDeriv 4 f t) →
+    (∀ t ∈ Icc (1:ℝ) M, iteratedDeriv 4 f t ≤ C*lam) →
+    ‖∑ m ∈ Finset.Icc (1:ℤ) M, fordAdditiveCharacter (f m)‖ ≤
+      K*(M:ℝ)^(1+ε)*lam^((1:ℝ)/13) :=
+  @TaoTrudgianYang2025.exists_robertSargos_fourth_derivative_long_range ε hε C hC
+
+end RobertSargosPhysicalSieveRegression
+
+section RobertSargosExponentPairRegression
+
+open Expdb GafniTao Set Filter
+open scoped FourierTransform BigOperators ContDiff NNReal
+
+example (g : ℕ → ℂ) {A B a b : ℕ} {K : ℝ}
+    (hK : 0 ≤ K) (hAa : A ≤ a) (hab : a ≤ b) (hbB : b ≤ B)
+    (hlong : ∀ u v : ℕ, A ≤ u → u ≤ v → v ≤ B →
+      (B-A:ℕ) ≤ 2*(v-u) → ‖∑ n ∈ Finset.Ico u v, g n‖ ≤ K) :
+    ‖∑ n ∈ Finset.Ico a b, g n‖ ≤ 4*K :=
+  @TaoTrudgianYang2025.norm_sum_Ico_le_of_long_intervals g A B a b K hK hAa hab hbB hlong
+
+example (L : ℕ) (f : ℝ → ℝ) :
+    heathBrownCharacterSum L f =
+      ∑ n ∈ Finset.Icc (1:ℤ) L, fordAdditiveCharacter (f n) :=
+  @TaoTrudgianYang2025.heathBrownCharacterSum_eq_integer_sum L f
+
+example {σ η : ℝ} (hσ : 0 < σ) (hη : 0 < η) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ K : ℝ, 0 < K ∧
+      ∀ (F : ℝ → ℝ) (T N : ℝ) (a L : ℕ),
+      0 < T → 0 < N → N ≤ (a:ℝ) → (a:ℝ)+(L:ℝ) < 2*N →
+      IsApproximateModelPhaseFunction F σ 3 δ →
+      (modelPhaseJetLower σ 3*T/N^4)^(-(8:ℝ)/13) ≤ L →
+      ‖heathBrownSourceTail F T N a L‖ ≤
+        K*N^(1+η)*(modelPhaseJetLower σ 3*T/N^4)^((1:ℝ)/13) :=
+  @TaoTrudgianYang2025.exists_robertSargos_model_tail_bound σ η hσ hη
+
+example (F : ℝ → ℝ) (T N : ℝ) {u v : ℕ}
+    (hu : 1 ≤ u) (huv : u ≤ v) :
+    heathBrownSourceTail F T N (u-1) (v-u) =
+      ∑ n ∈ Finset.Ico u v, oscillatory F T N n :=
+  @TaoTrudgianYang2025.heathBrownSourceTail_eq_Ico F T N u v hu huv
+
+example {σ η : ℝ} (hσ : 0 < σ) (hη : 0 < η) :
+    ∃ δ : ℝ, 0 < δ ∧ ∃ K : ℝ, 0 < K ∧
+      ∀ (F : ℝ → ℝ) (T N : ℝ) (a b : ℕ),
+      0 < T → 8 ≤ N → N ≤ (a:ℝ) → (b:ℝ) ≤ 2*N →
+      IsApproximateModelPhaseFunction F σ 3 δ →
+      (modelPhaseJetLower σ 3*T/N^4)^(-(8:ℝ)/13) ≤ N/8 →
+      ‖exponentialSumAt F T N a b‖ ≤
+        2+4*K*N^(1+η)*(modelPhaseJetLower σ 3*T/N^4)^((1:ℝ)/13) :=
+  @TaoTrudgianYang2025.exists_robertSargos_model_sum_bound σ η hσ hη
+
+example {c T N η : ℝ}
+    (hc : 0 < c) (hT : 0 < T) (hN : 0 < N) :
+    N^(1+η)*(c*T/N^4)^((1:ℝ)/13) =
+      c^((1:ℝ)/13)*T^((1:ℝ)/13)*N^(9/13+η) :=
+  @TaoTrudgianYang2025.robertSargos_model_main_power c T N η hc hT hN
+
+example {c T N : ℝ}
+    (hc : 0 < c) (hT : 0 < T) (hN : 0 < N) :
+    (c*T/N^4)^(-(8:ℝ)/13)/N =
+      c^(-(8:ℝ)/13)*T^(-(8:ℝ)/13)*N^((19:ℝ)/13) :=
+  @TaoTrudgianYang2025.robertSargos_model_length_power c T N hc hT hN
+
+example {c a : ℝ}
+    (hc : 0 < c) (ha : a < 8/19) :
+    ∀ᶠ T : ℝ in atTop, ∀ N : ℝ, 0 < N → N ≤ T^a →
+      (c*T/N^4)^(-(8:ℝ)/13) ≤ N/8 :=
+  @TaoTrudgianYang2025.eventually_robertSargos_model_length c a hc ha
+
+example {α : ℝ≥0} (hα : 0 < (α:ℝ)) (hαupper : (α:ℝ) < 8/19) :
+    IsExponentSumBoundNonAsymptotic α ((1:ℝ)/13+(9/13)*(α:ℝ)) :=
+  @TaoTrudgianYang2025.isExponentSumBoundNonAsymptotic_robertSargos α hα hαupper
+
+example : ExponentPair (1/13) (10/13) :=
+  @TaoTrudgianYang2025.exponentPair_robertSargos
+
+example : ExponentPair (3/40) (31/40) :=
+  @TaoTrudgianYang2025.exponentPair_three_fortieths
+
+example : IsZetaGrowthBound (7/10) (3/40) :=
+  @TaoTrudgianYang2025.old_pair_zetaGrowthBound
+
+example :
+    zetaGrowthExponent (7/10) ≤ ((3/40:ℝ):EReal) :=
+  @TaoTrudgianYang2025.old_pair_zetaGrowthExponent
+
+example {σ : ℝ}
+    (hσ : 7/10 < σ) (hσ1 : σ ≤ 1) :
+    TaoTrudgianYang2025.zeroDensityExponent σ ≤ ((3/(10*σ-7):ℝ):EReal) :=
+  @TaoTrudgianYang2025.improved_heathBrown_zeroDensity σ hσ hσ1
+
+example : exponentSumGrowthExponent (8/19 : ℝ≥0) ≤ (7/19:ℝ) := by
+  have h := exponentSumGrowthExponent_le_exponentPairLine_closed
+    exponentPair_robertSargos (8/19 : ℝ≥0) (by norm_num)
+  norm_num [exponentPairLine] at h
+  exact h
+
+example : TaoTrudgianYang2025.zeroDensityExponent (9/10) ≤ ((3/2:ℝ):EReal) := by
+  have h := improved_heathBrown_zeroDensity (σ := 9/10) (by norm_num) (by norm_num)
+  norm_num at h
+  exact h
+
+example : TaoTrudgianYang2025.zeroDensityExponent 1 ≤ ((1:ℝ):EReal) := by
+  have h := improved_heathBrown_zeroDensity (σ := 1) (by norm_num) le_rfl
+  norm_num at h
+  exact h
+
+example : TaoTrudgianYang2025.zeroDensityExponent (4/5) ≤ ((3:ℝ):EReal) := by
+  have h := improved_heathBrown_zeroDensity (σ := 4/5) (by norm_num) (by norm_num)
+  norm_num at h
+  exact h
+
+example : InExponentPairTriangle (3/40) (31/40) :=
+  exponentPair_three_fortieths.inTriangle
+
+example (F : ℝ → ℝ) (T N : ℝ) :
+    heathBrownSourceTail F T N 0 0 =
+      ∑ n ∈ Finset.Ico (1:ℕ) 1, oscillatory F T N n := by
+  simpa only [Nat.sub_self] using heathBrownSourceTail_eq_Ico F T N
+    (u := 1) (v := 1) le_rfl le_rfl
+
+example : ‖∑ _n ∈ Finset.Ico (2:ℕ) 3, (0:ℂ)‖ ≤ 4*(0:ℝ) :=
+  norm_sum_Ico_le_of_long_intervals (fun _ => (0:ℂ))
+    (A := 0) (B := 4) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intros; simp)
+
+end RobertSargosExponentPairRegression
+
+section ParabolaBilinearLocalizationRegression
+open TaoTrudgianYang2025 MeasureTheory GafniTao Set
+open scoped BigOperators ComplexConjugate
+
+example {x x' y₁ y₂ y₃ y₄ w ρ b : ℝ}
+    (hw : 0 ≤ w) (hρ : 0 < ρ)
+    (h₁ : y₁ ∈ Icc 0 w) (h₂ : y₂ ∈ Icc 0 w)
+    (h₃ : y₃ ∈ Icc 0 w) (h₄ : y₄ ∈ Icc 0 w)
+    (hsep : ρ ≤ |x+x'|)
+    (hgap : (b+2*w^2)/ρ < |x-x'|) :
+    b < |x^2+y₁^2+y₂^2-(x'^2+y₃^2+y₄^2)| :=
+  @TaoTrudgianYang2025.parabola_sixth_frequency_gap x x' y₁ y₂ y₃ y₄ w ρ b hw hρ h₁ h₂ h₃ h₄ hsep hgap
+
+example {x x' d u ν : ℝ} (hν : 0 ≤ ν)
+    (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : x ∈ Icc d (d+u)) (hx' : x' ∈ Icc d (d+u)) :
+    4*ν ≤ |x+x'| :=
+  @TaoTrudgianYang2025.parabola_same_interval_separation x x' d u ν hν hu hd hx hx'
+
+example {x x' y₁ y₂ y₃ y₄ w d u ν a b : ℝ}
+    (hw : 0 < w) (hν : 0 < ν) (ha : 0 < a) (hb : 0 < b)
+    (hwidth : b ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : x ∈ Icc d (d+u)) (hx' : x' ∈ Icc d (d+u))
+    (h₁ : y₁ ∈ Icc 0 w) (h₂ : y₂ ∈ Icc 0 w)
+    (h₃ : y₃ ∈ Icc 0 w) (h₄ : y₄ ∈ Icc 0 w)
+    (hgap : 2*w^2/ν ≤ |x-x'|) (c e : ℝ) :
+    (∫ α : ℝ, ∫ γ : ℝ,
+      sargosPlanarKernelTerm a b c e
+        (x+y₁+y₂-(x'+y₃+y₄))
+        (x^2+y₁^2+y₂^2-(x'^2+y₃^2+y₄^2)) α γ) = 0 :=
+  @TaoTrudgianYang2025.integral_parabola_sixth_kernel_eq_zero x x' y₁ y₂ y₃ y₄ w d u ν a b hw hν ha hb hwidth hu hd hx hx' h₁ h₂ h₃ h₄ hgap c e
+
+example {ι κ τ : Type*} (S : Finset ι) (T : Finset κ) (V : Finset τ)
+    (z : ι → ℂ) (z' : κ → ℂ) (a₀ : τ → ℂ)
+    (x : ι → ℝ) (x' : κ → ℝ) (y : τ → ℝ)
+    {w d u ν a b : ℝ}
+    (hw : 0 < w) (hν : 0 < ν) (ha : 0 < a) (hb : 0 < b)
+    (hwidth : b ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : ∀ i ∈ S, x i ∈ Icc d (d+u))
+    (hx' : ∀ j ∈ T, x' j ∈ Icc d (d+u))
+    (hy : ∀ k ∈ V, y k ∈ Icc 0 w)
+    (hgap : ∀ i ∈ S, ∀ j ∈ T, 2*w^2/ν ≤ |x i-x' j|)
+    (c e : ℝ) :
+    (∫ α : ℝ, ∫ γ : ℝ,
+      ((sargosSincKernel a (α-c)*sargosSincKernel b (γ-e) : ℝ) : ℂ)*
+        sargosPlanarSum S z x (fun i => (x i)^2) α γ *
+        conj (sargosPlanarSum T z' x' (fun j => (x' j)^2) α γ) *
+        (‖sargosPlanarSum V a₀ y (fun k => (y k)^2) α γ‖^4 : ℝ)) = 0 :=
+  @TaoTrudgianYang2025.integral_parabola_cross_moment_eq_zero ι κ τ S T V z z' a₀ x x' y w d u ν a b hw hν ha hb hwidth hu hd hx hx' hy hgap c e
+
+example {ι τ : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+    (z : ℤ → ι → ℂ) (c : τ → ℂ)
+    (x : ℤ → ι → ℝ) (y : τ → ℝ)
+    {w d u ν a b : ℝ}
+    (hw : 0 < w) (hν : 0 < ν) (hν₁ : ν ≤ 1)
+    (ha : 0 < a) (hb : 0 < b) (hwidth : b ≤ w^2)
+    (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : ∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc d (d+u))
+    (hy : ∀ k ∈ V, y k ∈ Icc 0 w)
+    (hblock : ∀ i ∈ J, ∀ k ∈ S i,
+      x i k ∈ Ico (d+w^2*(i : ℝ)) (d+w^2*((i : ℝ)+1)))
+    (r t : ℝ) :
+    parabolaBilinearMoment (J.sigma S) V
+      (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y a b r t ≤
+      (7/ν)*∑ i ∈ J, parabolaBilinearMoment (S i) V (z i) c (x i) y a b r t :=
+  @TaoTrudgianYang2025.parabolaBilinearMoment_localization ι τ J S V z c x y w d u ν a b hw hν hν₁ ha hb hwidth hu hd hx hy hblock r t
+
+example : (4:ℝ) ≤ |(-3:ℝ)+(-2:ℝ)| := by
+  simpa only [mul_one] using
+    parabola_same_interval_separation (x := -3) (x' := -2) (ν := 1) (u := 1) (d := -3)
+      (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example :
+    (∫ α : ℝ, ∫ γ : ℝ,
+      sargosPlanarKernelTerm 1 (1/100) 7 (-4)
+        ((3:ℝ)+0+0-(31/10+0+0))
+        ((3:ℝ)^2+0^2+0^2-((31/10)^2+0^2+0^2)) α γ) = 0 :=
+  integral_parabola_sixth_kernel_eq_zero (w := 1/10) (ν := 1) (d := 3) (u := 1)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num) 7 (-4)
+
+example {ι τ : Type*} (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (a b r t : ℝ) :
+    parabolaBilinearMoment (∅ : Finset ι) V z c x y a b r t = 0 := by
+  simp [parabolaBilinearMoment,sargosPlanarSum]
+
+example {ι τ : Type*} (S : Finset ι) (V : Finset τ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (a b r t : ℝ) :
+    parabolaBilinearMoment S V (fun _ => 0) c x y a b r t = 0 := by
+  simp [parabolaBilinearMoment,sargosPlanarSum]
+
+end ParabolaBilinearLocalizationRegression
+
+section ParabolaRapidLocalizationRegression
+
+open TaoTrudgianYang2025 MeasureTheory GafniTao Set SchwartzMap FourierTransform
+open scoped BigOperators ComplexConjugate
+
+example :
+    ∃ η : 𝓢(ℝ, ℂ),
+      (∀ x : ℝ, 0 ≤ (η x).re ∧ (η x).im = 0) ∧
+      (∀ x : ℝ, |x| ≤ 1 → 1 ≤ (η x).re) ∧
+      (∀ ξ : ℝ, 1/100 ≤ |ξ| → 𝓕 η ξ = 0) ∧
+      (∀ n : ℕ, ∃ C : ℝ, 0 < C ∧
+        ∀ x : ℝ, (1+|x|)^n*‖η x‖ ≤ C) := by
+  exact @TaoTrudgianYang2025.exists_parabola_rapid_cutoff
+
+example (R c x : ℝ) :
+    0 ≤ parabolaRapidKernel R c x := by
+  exact @TaoTrudgianYang2025.parabolaRapidKernel_nonneg R c x
+
+example {R c x : ℝ}
+    (hR : 0 < R) (hx : |x-c| ≤ R) :
+    1 ≤ parabolaRapidKernel R c x := by
+  exact @TaoTrudgianYang2025.parabolaRapidKernel_one_le R c x hR hx
+
+example {R : ℝ} (hR : 0 < R) (c : ℝ) :
+    Integrable (parabolaRapidKernel R c) := by
+  exact @TaoTrudgianYang2025.integrable_parabolaRapidKernel R hR c
+
+example (n : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ R c x : ℝ,
+      (1+|(x-c)/R|)^n*parabolaRapidKernel R c x ≤ C := by
+  exact @TaoTrudgianYang2025.parabolaRapidKernel_decay n
+
+example {R ξ : ℝ} (hR : 0 < R) (hξ : 1/(100*R) ≤ |ξ|) (c : ℝ) :
+    (∫ x : ℝ, (parabolaRapidKernel R c x : ℂ)*fordAdditiveCharacter (ξ*x)) = 0 := by
+  exact @TaoTrudgianYang2025.integral_parabolaRapidKernel_character_zero R ξ hR hξ c
+
+example (R r t α γ : ℝ) :
+    0 ≤ parabolaRapidWeight R r t α γ := by
+  exact @TaoTrudgianYang2025.parabolaRapidWeight_nonneg R r t α γ
+
+example {R r t α γ : ℝ}
+    (hR : 0 < R) (hα : |α-r| ≤ R) (hγ : |γ-t| ≤ R) :
+    1 ≤ parabolaRapidWeight R r t α γ := by
+  exact @TaoTrudgianYang2025.parabolaRapidWeight_one_le R r t α γ hR hα hγ
+
+example (n : ℕ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ R r t α γ : ℝ,
+      (1+|(α-r)/R|+|(γ-t)/R|)^n*parabolaRapidWeight R r t α γ ≤ C := by
+  exact @TaoTrudgianYang2025.parabolaRapidWeight_decay n
+
+example {R u v : ℝ} (hR : 0 < R)
+    (hgap : 1/(100*R) ≤ |u| ∨ 1/(100*R) ≤ |v|) (r t : ℝ) :
+    (∫ α : ℝ, ∫ γ : ℝ, (parabolaRapidWeight R r t α γ : ℂ)*
+      fordAdditiveCharacter (u*α+v*γ)) = 0 := by
+  exact @TaoTrudgianYang2025.integral_parabolaRapidWeight_character_zero R u v hR hgap r t
+
+example {x x' y₁ y₂ y₃ y₄ w d u ν R : ℝ}
+    (hw : 0 < w) (hν : 0 < ν) (hR : 0 < R)
+    (hwidth : 1/(100*R) ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : x ∈ Icc d (d+u)) (hx' : x' ∈ Icc d (d+u))
+    (h₁ : y₁ ∈ Icc 0 w) (h₂ : y₂ ∈ Icc 0 w)
+    (h₃ : y₃ ∈ Icc 0 w) (h₄ : y₄ ∈ Icc 0 w)
+    (hgap : 2*w^2/ν ≤ |x-x'|) (r t : ℝ) :
+    (∫ α : ℝ, ∫ γ : ℝ, (parabolaRapidWeight R r t α γ : ℂ)*
+      fordAdditiveCharacter ((x+y₁+y₂-(x'+y₃+y₄))*α+
+        (x^2+y₁^2+y₂^2-(x'^2+y₃^2+y₄^2))*γ)) = 0 := by
+  exact @TaoTrudgianYang2025.integral_parabolaRapidWeight_sixth_zero x x' y₁ y₂ y₃ y₄ w d u ν R hw hν hR hwidth hu hd hx hx' h₁ h₂ h₃ h₄ hgap r t
+
+example {ι τ : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+    (z : ℤ → ι → ℂ) (c : τ → ℂ)
+    (x : ℤ → ι → ℝ) (y : τ → ℝ)
+    {w d u ν R : ℝ}
+    (hw : 0 < w) (hν : 0 < ν) (hν₁ : ν ≤ 1) (hR : 0 < R)
+    (hwidth : 1/(100*R) ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |d|)
+    (hx : ∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc d (d+u))
+    (hy : ∀ k ∈ V, y k ∈ Icc 0 w)
+    (hblock : ∀ i ∈ J, ∀ k ∈ S i,
+      x i k ∈ Ico (d+w^2*(i : ℝ)) (d+w^2*((i : ℝ)+1)))
+    (r t : ℝ) :
+    parabolaRapidBilinearMoment (J.sigma S) V
+      (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y R r t ≤
+      (7/ν)*∑ i ∈ J, parabolaRapidBilinearMoment (S i) V (z i) c (x i) y R r t := by
+  exact @TaoTrudgianYang2025.parabolaRapidBilinearMoment_localization ι τ J S V z c x y w d u ν R hw hν hν₁ hR hwidth hu hd hx hy hblock r t
+
+example (R r t α γ : ℝ) :
+    0 ≤ parabolaSourceWeight R r t α γ := by
+  exact @TaoTrudgianYang2025.parabolaSourceWeight_nonneg R r t α γ
+
+example {R : ℝ} (hR : 0 < R) (r t : ℝ) :
+    Integrable (fun p : ℝ × ℝ => parabolaSourceWeight R r t p.1 p.2) := by
+  exact @TaoTrudgianYang2025.integrable_parabolaSourceWeight R hR r t
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ R r t α γ : ℝ,
+      parabolaRapidWeight R r t α γ ≤ C*parabolaSourceWeight R r t α γ := by
+  exact @TaoTrudgianYang2025.parabolaRapidWeight_le_sourceWeight
+
+example {ι τ : Type*} :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+        (z : ℤ → ι → ℂ) (c : τ → ℂ)
+        (x : ℤ → ι → ℝ) (y : τ → ℝ)
+        (w d u ν R : ℝ),
+        0 < w → 0 < ν → ν ≤ 1 → 0 < R →
+        1/(100*R) ≤ w^2 → u ≤ ν → 3*ν ≤ |d| →
+        (∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc d (d+u)) →
+        (∀ k ∈ V, y k ∈ Icc 0 w) →
+        (∀ i ∈ J, ∀ k ∈ S i,
+          x i k ∈ Ico (d+w^2*(i : ℝ)) (d+w^2*((i : ℝ)+1))) →
+        ∀ r t : ℝ,
+        parabolaBoxBilinearMoment (J.sigma S) V
+          (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y R r t ≤
+          (C/ν)*∑ i ∈ J, parabolaSourceBilinearMoment (S i) V (z i) c (x i) y R r t := by
+  exact @TaoTrudgianYang2025.exists_parabola_source_bilinear_localization ι τ
+
+example : (∫ x : ℝ, (parabolaRapidKernel 1 (-13) x : ℂ)*
+    fordAdditiveCharacter ((1/100)*x)) = 0 :=
+  integral_parabolaRapidKernel_character_zero (by norm_num) (by norm_num) (-13)
+
+example : (∫ x : ℝ, (parabolaRapidKernel 1 7 x : ℂ)*
+    fordAdditiveCharacter ((-1/100)*x)) = 0 :=
+  integral_parabolaRapidKernel_character_zero (by norm_num) (by norm_num) 7
+
+example : 1 ≤ parabolaRapidKernel 2 (-3) (-5) :=
+  parabolaRapidKernel_one_le (by norm_num) (by norm_num)
+
+example {R : ℝ} (r t : ℝ) :
+    parabolaSourceWeight R r t r t = 1 := by
+  simp [parabolaSourceWeight]
+
+example {ι τ : Type*} (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (R r t : ℝ) :
+    parabolaBoxBilinearMoment (∅ : Finset ι) V z c x y R r t = 0 := by
+  simp [parabolaBoxBilinearMoment,sargosPlanarSum]
+
+example {ι τ : Type*} (S : Finset ι) (V : Finset τ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (R r t : ℝ) :
+    parabolaSourceBilinearMoment S V (fun _ => 0) c x y R r t = 0 := by
+  simp [parabolaSourceBilinearMoment,sargosPlanarSum]
+
+end ParabolaRapidLocalizationRegression
+
+section ParabolaShearEntryRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+
+example {ι : Type*} (S : Finset ι)
+    (z : ι → ℂ) (x : ι → ℝ) (β α γ : ℝ) :
+    sargosPlanarSum S z x (fun i => (x i)^2) α γ =
+      fordAdditiveCharacter (β*α+β^2*γ)*
+      sargosPlanarSum S z (fun i => x i-β)
+        (fun i => (x i-β)^2) (α+2*β*γ) γ :=
+  @TaoTrudgianYang2025.parabola_sum_shift ι S z x β α γ
+
+example {ι τ : Type*} :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+        (z : ℤ → ι → ℂ) (c : τ → ℂ)
+        (x : ℤ → ι → ℝ) (y : τ → ℝ)
+        (w a β u ν R : ℝ),
+        0 < w → 0 < ν → ν ≤ 1 → 0 < R →
+        |β| ≤ 1 → 1/(100*R) ≤ w^2 → u ≤ ν → 3*ν ≤ |a-β| →
+        (∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc a (a+u)) →
+        (∀ k ∈ V, y k ∈ Icc β (β+w)) →
+        (∀ i ∈ J, ∀ k ∈ S i,
+          x i k ∈ Ico (a+w^2*(i : ℝ)) (a+w^2*((i : ℝ)+1))) →
+        ∀ r t : ℝ,
+        parabolaBoxBilinearMoment (J.sigma S) V
+          (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y R r t ≤
+          (C/ν)*∑ i ∈ J, parabolaSourceBilinearMoment (S i) V (z i) c (x i) y R r t :=
+  @TaoTrudgianYang2025.exists_parabola_source_localization_arbitrary_intervals ι τ
+
+example {ι : Type*} (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) (α γ : ℝ) :
+    sargosPlanarSum S z x (fun i => (x i)^2) α γ =
+      fordAdditiveCharacter (0*α+0^2*γ)*
+        sargosPlanarSum S z (fun i => x i-0)
+          (fun i => (x i-0)^2) (α+2*0*γ) γ :=
+  parabola_sum_shift S z x 0 α γ
+
+example {ι : Type*} (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) (α γ : ℝ) :
+    sargosPlanarSum S z x (fun i => (x i)^2) α γ =
+      fordAdditiveCharacter (-α+γ)*
+        sargosPlanarSum S z (fun i => x i+1)
+          (fun i => (x i+1)^2) (α-2*γ) γ := by
+  simpa only [neg_one_mul,neg_one_sq,one_mul,sub_neg_eq_add,mul_neg_one,
+    neg_mul,sub_eq_add_neg, neg_neg] using parabola_sum_shift S z x (-1) α γ
+
+end ParabolaShearEntryRegression
+
+section ParabolaWeightedLocalizationRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+
+example (R r t α γ β δ : ℝ) :
+    parabolaSourceWeight R r t α γ * parabolaSourceWeight R α γ β δ ≤
+      (2:ℝ)^100 * parabolaSourceWeight R r t β δ *
+        (parabolaSourceWeight R r t α γ + parabolaSourceWeight R α γ β δ) := by
+  exact @TaoTrudgianYang2025.parabolaSourceWeight_product_bound R r t α γ β δ
+
+example (R r t : ℝ) :
+    (∫ p : ℝ × ℝ, parabolaSourceWeight R r t p.1 p.2) =
+      R^2 * ∫ p : ℝ × ℝ, parabolaSourceWeight 1 0 0 p.1 p.2 := by
+  exact @TaoTrudgianYang2025.integral_parabolaSourceWeight R r t
+
+example {R : ℝ} (hR : 0 < R)
+    (r t β δ : ℝ) :
+    (∫ p : ℝ × ℝ,
+      parabolaSourceWeight R r t p.1 p.2 * parabolaSourceWeight R p.1 p.2 β δ) ≤
+        (2:ℝ)^101*R^2*
+          (∫ p : ℝ × ℝ, parabolaSourceWeight 1 0 0 p.1 p.2) *
+          parabolaSourceWeight R r t β δ := by
+  exact @TaoTrudgianYang2025.parabolaSourceWeight_convolution_bound R hR r t β δ
+
+example {R : ℝ} (hR : 0 < R)
+    (r t α γ : ℝ) :
+    (4*R^2/(3:ℝ)^100)*parabolaSourceWeight R r t α γ ≤
+      ∫ p : ℝ × ℝ in Icc (α-R) (α+R) ×ˢ Icc (γ-R) (γ+R),
+        parabolaSourceWeight R r t p.1 p.2 := by
+  exact @TaoTrudgianYang2025.parabolaSourceWeight_box_average_lower R hR r t α γ
+
+example {ι τ : Type*}
+    (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) {R : ℝ} (hR : 0 < R) (r t : ℝ) :
+    (∫ q : ℝ × ℝ, parabolaSourceWeight R r t q.1 q.2*
+      parabolaSourceBilinearMoment S V z c x y R q.1 q.2) ≤
+        (2:ℝ)^101*R^2*
+          (∫ p : ℝ × ℝ, parabolaSourceWeight 1 0 0 p.1 p.2) *
+          parabolaSourceBilinearMoment S V z c x y R r t := by
+  exact @TaoTrudgianYang2025.parabolaSourceBilinearMoment_average_bound ι τ S V z c x y R hR r t
+
+example {ι τ : Type*}
+    (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) {R : ℝ} (hR : 0 < R) (r t : ℝ) :
+    (4*R^2/(3:ℝ)^100)*parabolaSourceBilinearMoment S V z c x y R r t ≤
+      ∫ q : ℝ × ℝ, parabolaSourceWeight R r t q.1 q.2*
+        parabolaBoxBilinearMoment S V z c x y R q.1 q.2 := by
+  exact @TaoTrudgianYang2025.parabolaBoxBilinearMoment_average_lower ι τ S V z c x y R hR r t
+
+example {ι τ : Type*} :
+    ∃ C : ℝ, 0 < C ∧
+      ∀ (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+        (z : ℤ → ι → ℂ) (c : τ → ℂ)
+        (x : ℤ → ι → ℝ) (y : τ → ℝ)
+        (w a β u ν R : ℝ),
+        0 < w → 0 < ν → ν ≤ 1 → 0 < R →
+        |β| ≤ 1 → 1/(100*R) ≤ w^2 → u ≤ ν → 3*ν ≤ |a-β| →
+        (∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc a (a+u)) →
+        (∀ k ∈ V, y k ∈ Icc β (β+w)) →
+        (∀ i ∈ J, ∀ k ∈ S i,
+          x i k ∈ Ico (a+w^2*(i : ℝ)) (a+w^2*((i : ℝ)+1))) →
+        ∀ r t : ℝ,
+        parabolaSourceBilinearMoment (J.sigma S) V
+          (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y R r t ≤
+          (C/ν)*∑ i ∈ J, parabolaSourceBilinearMoment (S i) V (z i) c (x i) y R r t := by
+  exact @TaoTrudgianYang2025.exists_parabola_weighted_localization ι τ
+
+example (r t : ℝ) :
+    (∫ p : ℝ × ℝ, parabolaSourceWeight 2 r t p.1 p.2) =
+      4 * ∫ p : ℝ × ℝ, parabolaSourceWeight 1 0 0 p.1 p.2 := by
+  simpa only [show (2:ℝ)^2 = 4 from by norm_num] using integral_parabolaSourceWeight 2 r t
+
+example (r t : ℝ) :
+    (∫ p : ℝ × ℝ, parabolaSourceWeight (-2) r t p.1 p.2) =
+      4 * ∫ p : ℝ × ℝ, parabolaSourceWeight 1 0 0 p.1 p.2 := by
+  simpa only [show (-2:ℝ)^2 = 4 from by norm_num] using integral_parabolaSourceWeight (-2) r t
+
+example (r t : ℝ) :
+    (∫ p : ℝ × ℝ, parabolaSourceWeight 0 r t p.1 p.2) = 0 := by
+  simpa only [zero_pow (by norm_num : (2:ℕ) ≠ 0),zero_mul] using
+    integral_parabolaSourceWeight 0 r t
+
+example {ι τ : Type*} (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (R r t : ℝ) :
+    (∫ q : ℝ × ℝ, parabolaSourceWeight R r t q.1 q.2*
+      parabolaBoxBilinearMoment (∅ : Finset ι) V z c x y R q.1 q.2) = 0 := by
+  simp [parabolaBoxBilinearMoment,sargosPlanarSum]
+
+example {ι τ : Type*} (S : Finset ι) (V : Finset τ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) (R r t : ℝ) :
+    (∫ q : ℝ × ℝ, parabolaSourceWeight R r t q.1 q.2*
+      parabolaSourceBilinearMoment S V (fun _ => 0) c x y R q.1 q.2) = 0 := by
+  simp [parabolaSourceBilinearMoment,sargosPlanarSum]
+
+end ParabolaWeightedLocalizationRegression
+
+section ParabolaBandRescalingRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+
+example (ξ κ : ℝ) : 0 ≤ parabolaBandGauge ξ κ := by
+  exact @TaoTrudgianYang2025.parabolaBandGauge_nonneg ξ κ
+
+example {a : ℝ} (ha : a ∈ Icc 0 1) (ξ κ : ℝ) :
+    |κ-2*a*ξ| ≤ parabolaBandGauge ξ κ := by
+  exact @TaoTrudgianYang2025.parabolaBandGauge_slope_le a ha ξ κ
+
+example {a σ : ℝ}
+    (hσ : 0 ≤ σ) (ha : 0 ≤ a) (haσ : a+σ ≤ 1) (ξ κ : ℝ) :
+    σ^2*parabolaBandGauge ξ κ ≤
+      parabolaBandGauge (σ*ξ) (2*a*σ*ξ+σ^2*κ) := by
+  exact @TaoTrudgianYang2025.parabolaBandGauge_rescale_le a σ hσ ha haσ ξ κ
+
+example {a σ δ ξ κ : ℝ}
+    (hσ : 0 < σ) (ha : 0 ≤ a) (haσ : a+σ ≤ 1)
+    (hgap : (δ/σ)^2 ≤ parabolaBandGauge ξ κ) :
+    δ^2 ≤ parabolaBandGauge (σ*ξ) (2*a*σ*ξ+σ^2*κ) := by
+  exact @TaoTrudgianYang2025.parabolaBandGauge_rescale_gap a σ δ ξ κ hσ ha haσ hgap
+
+example {δ a σ : ℝ} {W : ℝ × ℝ → ℝ}
+    (hW : ParabolaWeightBand δ W) (hσ : 0 < σ) (ha : 0 ≤ a) (haσ : a+σ ≤ 1) :
+    ParabolaWeightBand (δ/σ)
+      (fun p : ℝ × ℝ => W (p.1/σ-2*a*p.2/σ^2,p.2/σ^2)) := by
+  exact @TaoTrudgianYang2025.ParabolaWeightBand.rescale δ a σ W hW hσ ha haσ
+
+example {δ R : ℝ} (hR : 0 < R)
+    (hwidth : 3/(100*R) ≤ δ^2) (r t : ℝ) :
+    ParabolaWeightBand δ (fun p : ℝ × ℝ => parabolaRapidWeight R r t p.1 p.2) := by
+  exact @TaoTrudgianYang2025.parabolaRapidWeight_band δ R hR hwidth r t
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    ∃ W : ℝ × ℝ → ℝ, ParabolaWeightBand δ W ∧ 1 ≤ W (0,0) := by
+  exact @TaoTrudgianYang2025.exists_parabolaWeightBand_nonzero δ hδ
+
+example {ι : Type*} (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ)
+    (a σ α γ : ℝ) (hσ : σ ≠ 0) :
+    sargosPlanarSum S z x (fun i => (x i)^2) α γ =
+      fordAdditiveCharacter (a*α+a^2*γ)*
+        sargosPlanarSum S z (fun i => (x i-a)/σ)
+          (fun i => ((x i-a)/σ)^2) (σ*α+2*a*σ*γ) (σ^2*γ) := by
+  exact @TaoTrudgianYang2025.parabola_sum_rescale ι S z x a σ α γ hσ
+
+example {ι τ : Type*}
+    (a σ : ℝ) (hσ : σ ≠ 0) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (W : ℝ × ℝ → ℝ)
+      (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+      (x : ι → ℝ) (y : τ → ℝ),
+      parabolaWeightedBilinearMoment
+        (fun p => W (p.1/σ-2*a*p.2/σ^2,p.2/σ^2)) S V z c
+        (fun i => (x i-a)/σ) (fun j => (y j-a)/σ) =
+      C*parabolaWeightedBilinearMoment W S V z c x y := by
+  exact @TaoTrudgianYang2025.exists_parabolaWeightedBilinearMoment_rescale ι τ a σ hσ
+
+example {ι τ : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+    (z : ℤ → ι → ℂ) (c : τ → ℂ)
+    (x : ℤ → ι → ℝ) (y : τ → ℝ)
+    {w a β u ν δ : ℝ} {W : ℝ × ℝ → ℝ}
+    (hW : ParabolaWeightBand δ W)
+    (hw : 0 < w) (hν : 0 < ν) (hν₁ : ν ≤ 1) (hβ : β ∈ Icc 0 1)
+    (hwidth : δ^2 ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |a-β|)
+    (hx : ∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc a (a+u))
+    (hy : ∀ k ∈ V, y k ∈ Icc β (β+w))
+    (hblock : ∀ i ∈ J, ∀ k ∈ S i,
+      x i k ∈ Ico (a+w^2*(i : ℝ)) (a+w^2*((i : ℝ)+1))) :
+    parabolaWeightedBilinearMoment W (J.sigma S) V
+      (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y ≤
+      (7/ν)*∑ i ∈ J, parabolaWeightedBilinearMoment W (S i) V (z i) c (x i) y := by
+  exact @TaoTrudgianYang2025.parabolaWeightedBilinearMoment_localization ι τ J S V z c x y w a β u ν δ W hW hw hν hν₁ hβ hwidth hu hd hx hy hblock
+
+example {ι τ : Type*}
+    (W : ℝ × ℝ → ℝ) (hW₀ : ∀ p, 0 ≤ W p) (hW : Integrable W)
+    (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) :
+    (parabolaWeightedBilinearMoment W S V z c x y)^2 ≤
+      parabolaWeightedBilinearMoment W V S c z y x *
+        parabolaWeightedBilinearMoment W V V c c y y := by
+  exact @TaoTrudgianYang2025.parabolaWeightedBilinearMoment_holder_swap ι τ W hW₀ hW S V z c x y
+
+example {ι τ : Type*}
+    (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) {R : ℝ} (hR : 0 < R) (r t : ℝ) :
+    (parabolaSourceBilinearMoment S V z c x y R r t)^2 ≤
+      parabolaSourceBilinearMoment V S c z y x R r t *
+        parabolaSourceBilinearMoment V V c c y y R r t := by
+  exact @TaoTrudgianYang2025.parabolaSourceBilinearMoment_holder_swap ι τ S V z c x y R hR r t
+
+example (ξ κ : ℝ) : |κ| ≤ parabolaBandGauge ξ κ := by
+  simpa only [mul_zero, zero_mul, sub_zero] using
+    parabolaBandGauge_slope_le (show (0:ℝ) ∈ Icc 0 1 by norm_num) ξ κ
+
+example (ξ κ : ℝ) : |κ-ξ| ≤ parabolaBandGauge ξ κ := by
+  simpa only [show (2:ℝ)*(1/2) = 1 from by norm_num, one_mul] using
+    parabolaBandGauge_slope_le (show (1/2:ℝ) ∈ Icc 0 1 by norm_num) ξ κ
+
+example {δ : ℝ} {W : ℝ × ℝ → ℝ} (hW : ParabolaWeightBand δ W) :
+    ParabolaWeightBand δ (fun p => W (p.1,p.2)) := by
+  simpa only [div_one, zero_mul, mul_zero, sub_zero, one_pow] using
+    hW.rescale (a:=0) (σ:=1) (by norm_num) (by norm_num) (by norm_num)
+
+example (r t : ℝ) :
+    ParabolaWeightBand 1 (fun p : ℝ × ℝ => parabolaRapidWeight 1 r t p.1 p.2) := by
+  exact parabolaRapidWeight_band (by norm_num) (by norm_num) r t
+
+example {ι : Type*} (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) (a α γ : ℝ) :
+    sargosPlanarSum S z x (fun i => (x i)^2) α γ =
+      fordAdditiveCharacter (a*α+a^2*γ)*
+        sargosPlanarSum S z (fun i => (x i-a)/(-1))
+          (fun i => ((x i-a)/(-1))^2) ((-1)*α+2*a*(-1)*γ) ((-1)^2*γ) := by
+  exact parabola_sum_rescale S z x a (-1) α γ (by norm_num)
+
+example {ι τ : Type*} (W : ℝ × ℝ → ℝ) (V : Finset τ)
+    (z : ι → ℂ) (c : τ → ℂ) (x : ι → ℝ) (y : τ → ℝ) :
+    parabolaWeightedBilinearMoment W (∅ : Finset ι) V z c x y = 0 := by
+  simp [parabolaWeightedBilinearMoment,sargosPlanarSum]
+
+example {ι τ : Type*} (W : ℝ × ℝ → ℝ) (S : Finset ι) (V : Finset τ)
+    (c : τ → ℂ) (x : ι → ℝ) (y : τ → ℝ) :
+    parabolaWeightedBilinearMoment W S V (fun _ => 0) c x y = 0 := by
+  simp [parabolaWeightedBilinearMoment,sargosPlanarSum]
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ) (hW₀ : ∀ p, 0 ≤ W p) (hW : Integrable W)
+    (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) :
+    (parabolaWeightedBilinearMoment W S S z z x x)^2 ≤
+      parabolaWeightedBilinearMoment W S S z z x x *
+        parabolaWeightedBilinearMoment W S S z z x x := by
+  exact parabolaWeightedBilinearMoment_holder_swap W hW₀ hW S S z z x x
+
+end ParabolaBandRescalingRegression
+
+section ParabolaSixNormRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+universe u
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ)
+    (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) :
+    0 ≤ parabolaWeightedSixNorm W S z x := by
+  exact @TaoTrudgianYang2025.parabolaWeightedSixNorm_nonneg ι W S z x
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ)
+    (hW₀ : ∀ p, 0 ≤ W p) (hW : Integrable W)
+    (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ) :
+    (parabolaWeightedSixNorm W S z x)^6 =
+      parabolaWeightedBilinearMoment W S S z z x x := by
+  exact @TaoTrudgianYang2025.parabolaWeightedSixNorm_pow_six ι W hW₀ hW S z x
+
+example {κ ι : Type*} (J : Finset κ)
+    (S : κ → Finset ι) (z : κ → ι → ℂ) (x : κ → ι → ℝ)
+    (W : ℝ × ℝ → ℝ) (hW : Integrable W) :
+    parabolaWeightedSixNorm W (J.sigma S) (fun ij => z ij.1 ij.2)
+      (fun ij => x ij.1 ij.2) ≤
+        ∑ i ∈ J, parabolaWeightedSixNorm W (S i) (z i) (x i) := by
+  exact @TaoTrudgianYang2025.parabolaWeightedSixNorm_sum_le κ ι J S z x W hW
+
+example {κ ι : Type*} (J : Finset κ)
+    (S : κ → Finset ι) (z : κ → ι → ℂ) (x : κ → ι → ℝ)
+    (W : ℝ × ℝ → ℝ) (hW : Integrable W) :
+    (parabolaWeightedSixNorm W (J.sigma S) (fun ij => z ij.1 ij.2)
+      (fun ij => x ij.1 ij.2))^2 ≤
+        (J.card:ℝ)*∑ i ∈ J, (parabolaWeightedSixNorm W (S i) (z i) (x i))^2 := by
+  exact @TaoTrudgianYang2025.parabolaWeightedSixNorm_sq_le_card κ ι J S z x W hW
+
+example {ι τ : Type*}
+    (W : ℝ × ℝ → ℝ) (hW₀ : ∀ p, 0 ≤ W p) (hW : Integrable W)
+    (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
+    (x : ι → ℝ) (y : τ → ℝ) :
+    parabolaWeightedBilinearMoment W S V z c x y ≤
+      (parabolaWeightedSixNorm W S z x)^2*(parabolaWeightedSixNorm W V c y)^4 := by
+  exact @TaoTrudgianYang2025.parabolaWeightedBilinearMoment_le_sixNorm ι τ W hW₀ hW S V z c x y
+
+example (a σ : ℝ) (hσ : σ ≠ 0) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (ι : Type u) (W : ℝ × ℝ → ℝ),
+      (∀ p, 0 ≤ W p) → Integrable W →
+      ∀ (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ),
+      parabolaWeightedSixNorm
+        (fun p => W (p.1/σ-2*a*p.2/σ^2,p.2/σ^2)) S z (fun i => (x i-a)/σ) =
+        C*parabolaWeightedSixNorm W S z x := by
+  exact @TaoTrudgianYang2025.exists_parabolaWeightedSixNorm_rescale a σ hσ
+
+example (n : ℕ) :
+    ParabolaDecouplingBound.{u} n (Real.sqrt n) := by
+  exact @TaoTrudgianYang2025.parabolaDecouplingBound_trivial n
+
+example {n : ℕ} {D a σ : ℝ}
+    (hD : ParabolaDecouplingBound.{u} n D) (hσ : 0 < σ)
+    (ha : 0 ≤ a) (haσ : a+σ ≤ 1)
+    (ι : Type u) (W : ℝ × ℝ → ℝ) (hW : ParabolaWeightBand (σ/(n:ℝ)) W)
+    (S : Fin n → Finset ι) (z : Fin n → ι → ℂ) (x : Fin n → ι → ℝ)
+    (hx : ∀ j, ∀ k ∈ S j,
+      x j k ∈ Icc (a+σ*((j:ℕ)/(n:ℝ))) (a+σ*(((j:ℕ)+1)/(n:ℝ)))) :
+    (parabolaWeightedSixNorm W (Finset.univ.sigma S)
+      (fun jk => z jk.1 jk.2) (fun jk => x jk.1 jk.2))^2 ≤
+      D^2*∑ j, (parabolaWeightedSixNorm W (S j) (z j) (x j))^2 := by
+  exact @TaoTrudgianYang2025.ParabolaDecouplingBound.rescale n D a σ hD hσ ha haσ ι W hW S z x hx
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ) (z : ι → ℂ) (x : ι → ℝ) :
+    parabolaWeightedSixNorm W (∅ : Finset ι) z x = 0 := by
+  simp [parabolaWeightedSixNorm,sargosPlanarSum]
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ) (S : Finset ι) (x : ι → ℝ) :
+    parabolaWeightedSixNorm W S (fun _ => 0) x = 0 := by
+  simp [parabolaWeightedSixNorm,sargosPlanarSum]
+
+example : ParabolaDecouplingBound.{u} 0 0 := by
+  simpa only [Nat.cast_zero,Real.sqrt_zero] using parabolaDecouplingBound_trivial.{u} 0
+
+example : ParabolaDecouplingBound.{u} 1 1 := by
+  simpa only [Nat.cast_one,Real.sqrt_one] using parabolaDecouplingBound_trivial.{u} 1
+
+example : ParabolaDecouplingBound.{u} 9 3 := by
+  convert parabolaDecouplingBound_trivial.{u} 9 using 1
+  norm_num
+
+example (a : ℝ) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (ι : Type u) (W : ℝ × ℝ → ℝ),
+      (∀ p, 0 ≤ W p) → Integrable W →
+      ∀ (S : Finset ι) (z : ι → ℂ) (x : ι → ℝ),
+      parabolaWeightedSixNorm
+        (fun p => W (p.1/(-1)-2*a*p.2/(-1)^2,p.2/(-1)^2))
+        S z (fun i => (x i-a)/(-1)) = C*parabolaWeightedSixNorm W S z x := by
+  exact exists_parabolaWeightedSixNorm_rescale a (-1) (by norm_num)
+
+example (ι : Type u) (W : ℝ × ℝ → ℝ) (hW : ParabolaWeightBand (1/2) W)
+    (S : Fin 2 → Finset ι) (z : Fin 2 → ι → ℂ) :
+    (parabolaWeightedSixNorm W (Finset.univ.sigma S)
+      (fun jk => z jk.1 jk.2) (fun jk => ((jk.1:ℕ)+1)/2))^2 ≤
+      2*∑ j, (parabolaWeightedSixNorm W (S j) (z j)
+        (fun _ => ((j:ℕ)+1)/2))^2 := by
+  have h := (parabolaDecouplingBound_trivial.{u} 2).2 ι W hW S z
+    (fun j _ => ((j:ℕ)+1)/2) (fun j _ _ => by constructor <;> norm_num; linarith)
+  simpa only [Nat.cast_ofNat,Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 2)] using h
+
+example {ι τ : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι) (V : Finset τ)
+    (z : ℤ → ι → ℂ) (c : τ → ℂ)
+    (x : ℤ → ι → ℝ) (y : τ → ℝ)
+    {w a β u ν δ : ℝ} {W : ℝ × ℝ → ℝ}
+    (hW : ParabolaWeightBand δ W)
+    (hw : 0 < w) (hν : 0 < ν) (hν₁ : ν ≤ 1) (hβ : β ∈ Icc 0 1)
+    (hwidth : δ^2 ≤ w^2) (hu : u ≤ ν) (hd : 3*ν ≤ |a-β|)
+    (hx : ∀ i ∈ J, ∀ k ∈ S i, x i k ∈ Icc a (a+u))
+    (hy : ∀ k ∈ V, y k ∈ Icc β (β+w))
+    (hblock : ∀ i ∈ J, ∀ k ∈ S i,
+      x i k ∈ Icc (a+w^2*(i : ℝ)) (a+w^2*((i : ℝ)+1))) :
+    parabolaWeightedBilinearMoment W (J.sigma S) V
+      (fun ij => z ij.1 ij.2) c (fun ij => x ij.1 ij.2) y ≤
+      (7/ν)*∑ i ∈ J, parabolaWeightedBilinearMoment W (S i) V (z i) c (x i) y := by
+  exact @TaoTrudgianYang2025.parabolaWeightedBilinearMoment_localization_closed ι τ J S V z c x y w a β u ν δ W hW hw hν hν₁ hβ hwidth hu hd hx hy hblock
+
+end ParabolaSixNormRegression
+
+section ParabolaBilinearRecurrenceRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+universe u
+
+example (J : Finset ℤ) (f : ℤ → ℂ) :
+    ‖∑ i ∈ J, f i‖^6 ≤
+      (64*7^6:ℝ)*∑ i ∈ J, ‖f i‖^6 +
+      64*(J.card:ℝ)^5*
+        ∑ i ∈ J, ∑ j ∈ J.filter (fun j => 3 < |i-j|), ‖f j‖^2*‖f i‖^4 := by
+  exact @TaoTrudgianYang2025.parabola_bilinear_reduction_pointwise J f
+
+example {ι : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι) (z : ℤ → ι → ℂ) (x : ℤ → ι → ℝ)
+    (W : ℝ × ℝ → ℝ) (hW₀ : ∀ p, 0 ≤ W p) (hW : Integrable W) :
+    (parabolaWeightedSixNorm W (J.sigma S) (fun ij => z ij.1 ij.2)
+      (fun ij => x ij.1 ij.2))^6 ≤
+      (64*7^6:ℝ)*∑ i ∈ J, (parabolaWeightedSixNorm W (S i) (z i) (x i))^6 +
+      64*(J.card:ℝ)^5*∑ i ∈ J, ∑ j ∈ J.filter (fun j => 3 < |i-j|),
+        parabolaWeightedBilinearMoment W (S j) (S i) (z j) (z i) (x j) (x i) := by
+  exact @TaoTrudgianYang2025.parabolaWeightedSixNorm_bilinear_reduction ι J S z x W hW₀ hW
+
+example {k l : ℕ} {A B : ℝ}
+    (hk : 0 < k) (hl : 0 < l)
+    (hA : ParabolaDecouplingBound.{u} k A) (hB : ParabolaDecouplingBound.{u} l B) :
+    ParabolaDecouplingBound.{u} (k*l) (A*B) := by
+  exact @TaoTrudgianYang2025.ParabolaDecouplingBound.mul k l A B hk hl hA hB
+
+example {p q : ℕ} {δ ν A B : ℝ}
+    (hp : 0 < p) (hq : 0 < q) (hδ : 0 < δ)
+    (hA : ParabolaDecouplingBound.{u} p A) (hB : ParabolaDecouplingBound.{u} q B) :
+    ParabolaBilinearSixBound.{u} δ p q ν (A^2*B^4) := by
+  exact @TaoTrudgianYang2025.parabolaBilinearSixBound_of_linear p q δ ν A B hp hq hδ hA hB
+
+example {p q : ℕ} {δ ν : ℝ}
+    (hp : 0 < p) (hq : 0 < q) (hδ : 0 < δ) :
+    ParabolaBilinearSixBound.{u} δ p q ν ((p:ℝ)*(q:ℝ)^2) := by
+  exact @TaoTrudgianYang2025.parabolaBilinearSixBound_trivial p q δ ν hp hq hδ
+
+example {p q : ℕ} {δ ν K B : ℝ}
+    (hq : 0 < q) (hδ : 0 < δ)
+    (hK : ParabolaBilinearSixBound.{u} δ q p ν K)
+    (hB : ParabolaDecouplingBound.{u} q B) :
+    ParabolaBilinearSixBound.{u} δ p q ν (Real.sqrt K*B^3) := by
+  exact @TaoTrudgianYang2025.ParabolaBilinearSixBound.holder_swap p q δ ν K B hq hδ hK hB
+
+example {k m q : ℕ} {δ ν K : ℝ}
+    (hk : 0 < k) (hq : 0 < q) (hδ : 0 < δ)
+    (hν : 0 < ν) (hν₁ : ν ≤ 1)
+    (hsmall : δ*(k*m) ≤ ν) (hscale : δ*m = (δ*q)^2)
+    (hK : ParabolaBilinearSixBound.{u} δ m q ν K) :
+    ParabolaBilinearSixBound.{u} δ (k*m) q ν ((7/ν)*K) := by
+  exact @TaoTrudgianYang2025.ParabolaBilinearSixBound.localization k m q δ ν K hk hq hδ hν hν₁ hsmall hscale hK
+
+example {k m q : ℕ} {δ ν K B : ℝ}
+    (hk : 0 < k) (hq : 0 < q) (hδ : 0 < δ) (hν : 0 < ν) (hν₁ : ν ≤ 1)
+    (hsmall : δ*(k*m) ≤ ν) (hscale : δ*m = (δ*q)^2)
+    (hK : ParabolaBilinearSixBound.{u} δ q m ν K)
+    (hB : ParabolaDecouplingBound.{u} q B) :
+    ParabolaBilinearSixBound.{u} δ (k*m) q ν ((7/ν)*(Real.sqrt K*B^3)) := by
+  exact @TaoTrudgianYang2025.ParabolaBilinearSixBound.localization_holder k m q δ ν K B hk hq hδ hν hν₁ hsmall hscale hK hB
+
+example (f : ℤ → ℂ) : ‖∑ i ∈ (∅ : Finset ℤ), f i‖^6 = 0 := by simp
+
+example (f : ℤ → ℂ) (i : ℤ) :
+    ‖f i‖^6 ≤ (64*7^6:ℝ)*‖f i‖^6 := by
+  simpa [Finset.filter_singleton] using parabola_bilinear_reduction_pointwise {i} f
+
+example : ParabolaDecouplingBound.{u} 8 (Real.sqrt 2*2) := by
+  have h := (parabolaDecouplingBound_trivial.{u} 2).mul (by norm_num) (by norm_num)
+    (parabolaDecouplingBound_trivial.{u} 4)
+  norm_num at h ⊢
+  exact h
+
+example : ParabolaBilinearSixBound.{u} (1/64) 1 1 (1/8) 1 := by
+  simpa using parabolaBilinearSixBound_trivial.{u} (δ:=1/64) (ν:=1/8)
+    (by norm_num : 0 < (1:ℕ)) (by norm_num : 0 < (1:ℕ)) (by norm_num)
+
+example : ParabolaBilinearSixBound.{u} (1/64) 2 8 (1/8) 3584 := by
+  have hK : ParabolaBilinearSixBound.{u} (1/64) 1 8 (1/8) 64 := by
+    convert parabolaBilinearSixBound_trivial.{u} (δ:=1/64) (ν:=1/8)
+      (by norm_num : 0 < (1:ℕ)) (by norm_num : 0 < (8:ℕ)) (by norm_num) using 1
+    norm_num
+  have h := hK.localization (k:=2) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : ParabolaBilinearSixBound.{u} (1/64) 2 8 (1/8)
+    (56*(Real.sqrt 8*(Real.sqrt 8)^3)) := by
+  have hK : ParabolaBilinearSixBound.{u} (1/64) 8 1 (1/8) 8 := by
+    simpa using parabolaBilinearSixBound_trivial.{u} (δ:=1/64) (ν:=1/8)
+      (by norm_num : 0 < (8:ℕ)) (by norm_num : 0 < (1:ℕ)) (by norm_num)
+  have h := hK.localization_holder (k:=2) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (parabolaDecouplingBound_trivial.{u} 8)
+  norm_num only [Nat.cast_ofNat,show (7:ℝ)/(1/8) = 56 by norm_num] at h
+  exact h
+
+example :
+    (1/64:ℝ)*1 = ((1/64)*8)^2 ∧
+    0+(1/64:ℝ)*2+3*(1/8) ≤ 1/2 ∧ (1/2:ℝ)+(1/64)*8 ≤ 1 := by norm_num
+
+example {ι : Type*} (W : ℝ × ℝ → ℝ)
+    (z : ℤ → ι → ℂ) (x : ℤ → ι → ℝ) (J : Finset ℤ) :
+    parabolaWeightedSixNorm W (J.sigma (fun _ => (∅ : Finset ι)))
+      (fun iv => z iv.1 iv.2) (fun iv => x iv.1 iv.2) = 0 := by
+  simp [parabolaWeightedSixNorm,sargosPlanarSum,Finset.sum_sigma]
+
+end ParabolaBilinearRecurrenceRegression
+
+section ParabolaDyadicIterationRegression
+
+open TaoTrudgianYang2025 GafniTao MeasureTheory Set
+open scoped BigOperators
+universe u
+
+example {k l : ℕ} {A K : ℝ}
+    (hk : 0 < k) (hl : 0 < l) (hA : ParabolaDecouplingBound.{u} l A)
+    (hK : ParabolaBilinearSixBound.{u} (1/((k*l:ℕ):ℝ)) l l (1/(k:ℝ)) K) :
+    ParabolaDecouplingBound.{u} (k*l) (14*A+2*k*K^((6:ℝ)⁻¹)) := by
+  exact @TaoTrudgianYang2025.ParabolaDecouplingBound.of_bilinear k l A K hk hl hA hK
+
+example {n r : ℕ} {A K : ℝ}
+    (hr : r ≤ n) (hA : ParabolaDecouplingBound.{u} (2^(n-r)) A)
+    (hK : ParabolaBilinearSixBound.{u} (1/(2:ℝ)^n)
+      (2^(n-r)) (2^(n-r)) (1/(2:ℝ)^r) K) :
+    ParabolaDecouplingBound.{u} (2^n) (14*A+2*(2:ℝ)^r*K^((6:ℝ)⁻¹)) := by
+  exact @TaoTrudgianYang2025.ParabolaDecouplingBound.of_bilinear_dyadic n r A K hr hA hK
+
+example {n a b r : ℕ} {K B : ℝ}
+    (ha : a ≤ 2*b) (hb : 2*b ≤ n) (hr : r ≤ a)
+    (hK : ParabolaBilinearSixBound.{u} (1/(2:ℝ)^n)
+      (2^(n-b)) (2^(n-2*b)) (1/(2:ℝ)^r) K)
+    (hB : ParabolaDecouplingBound.{u} (2^(n-b)) B) :
+    ParabolaBilinearSixBound.{u} (1/(2:ℝ)^n)
+      (2^(n-a)) (2^(n-b)) (1/(2:ℝ)^r)
+      ((7/(1/(2:ℝ)^r))*(Real.sqrt K*B^3)) := by
+  exact @TaoTrudgianYang2025.ParabolaBilinearSixBound.dyadic_step n a b r K B ha hb hr hK hB
+
+example (D : ℕ → ℝ)
+    {n r a b t : ℕ} (hr : 0 < r) (hra : r ≤ a) (hab : a ≤ b)
+    (hb : b*2^t ≤ n)
+    (hD : ∀ j < n, ParabolaDecouplingBound.{u} (2^j) (D j)) :
+    ParabolaBilinearSixBound.{u} (1/(2:ℝ)^n) (2^(n-a)) (2^(n-b))
+      (1/(2:ℝ)^r) (parabolaDyadicBilinearBudget D n r t a b) := by
+  exact @TaoTrudgianYang2025.parabolaBilinearSixBound_dyadic_iterate D n r a b t hr hra hab hb hD
+
+example (D : ℕ → ℝ)
+    {n r t : ℕ} (hr : 0 < r) (hn : r*2^t ≤ n)
+    (hD : ∀ j < n, ParabolaDecouplingBound.{u} (2^j) (D j)) :
+    ParabolaDecouplingBound.{u} (2^n)
+      (14*D (n-r)+2*(2:ℝ)^r*
+        (parabolaDyadicBilinearBudget D n r t r r)^((6:ℝ)⁻¹)) := by
+  exact @TaoTrudgianYang2025.parabolaDecouplingBound_dyadic_iterate D n r t hr hn hD
+
+example (D : ℕ → ℝ) (n r a b : ℕ) :
+    parabolaDyadicBilinearBudget D n r 0 a b = (D (n-a))^2*(D (n-b))^4 := rfl
+
+example (D : ℕ → ℝ) (n r a b : ℕ) :
+    parabolaDyadicBilinearBudget D n r 1 a b =
+      (7/(1/(2:ℝ)^r))*(Real.sqrt ((D (n-b))^2*(D (n-2*b))^4)*(D (n-b))^3) := rfl
+
+example (n r t a b : ℕ) :
+    parabolaDyadicBilinearBudget (fun _ => 0) n r t a b = 0 := by
+  induction t generalizing a b with
+  | zero => simp [parabolaDyadicBilinearBudget]
+  | succ t ih => simp [parabolaDyadicBilinearBudget]
+
+example :
+    let D := fun j : ℕ => Real.sqrt ((2:ℝ)^j)
+    ParabolaDecouplingBound.{u} (2^1)
+      (14*D 0+2*(2:ℝ)^1*(parabolaDyadicBilinearBudget D 1 1 0 1 1)^((6:ℝ)⁻¹)) := by
+  dsimp only
+  apply parabolaDecouplingBound_dyadic_iterate (n:=1) (r:=1) (t:=0)
+    (fun j : ℕ => Real.sqrt ((2:ℝ)^j))
+    (by norm_num) (by norm_num)
+  intro j _
+  simpa only [Nat.cast_pow,Nat.cast_ofNat] using parabolaDecouplingBound_trivial.{u} (2^j)
+
+example :
+    let D := fun j : ℕ => Real.sqrt ((2:ℝ)^j)
+    ParabolaDecouplingBound.{u} (2^6)
+      (14*D 3+2*(2:ℝ)^3*(parabolaDyadicBilinearBudget D 6 3 1 3 3)^((6:ℝ)⁻¹)) := by
+  dsimp only
+  apply parabolaDecouplingBound_dyadic_iterate (n:=6) (r:=3) (t:=1)
+    (fun j : ℕ => Real.sqrt ((2:ℝ)^j))
+    (by norm_num) (by norm_num)
+  intro j _
+  simpa only [Nat.cast_pow,Nat.cast_ofNat] using parabolaDecouplingBound_trivial.{u} (2^j)
+
+example :
+    let D := fun j : ℕ => if j < 6 then Real.sqrt ((2:ℝ)^j) else -1000
+    ParabolaDecouplingBound.{u} (2^6)
+      (14*D 3+2*(2:ℝ)^3*(parabolaDyadicBilinearBudget D 6 3 1 3 3)^((6:ℝ)⁻¹)) := by
+  dsimp only
+  apply parabolaDecouplingBound_dyadic_iterate (n:=6) (r:=3) (t:=1)
+    (fun j : ℕ => if j < 6 then Real.sqrt ((2:ℝ)^j) else -1000)
+    (by norm_num) (by norm_num)
+  intro j hj
+  simpa only [if_pos hj,Nat.cast_pow,Nat.cast_ofNat] using
+    parabolaDecouplingBound_trivial.{u} (2^j)
+
+end ParabolaDyadicIterationRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.ParabolaDyadicEpsilonRegression
+universe u
+
+example {C ε : ℝ} (hC : 0 ≤ C)
+    {n r a b t : ℕ} (ht : 1 ≤ t) (hb : b*2^t ≤ n) :
+    parabolaDyadicBilinearBudget (fun j => C*(2:ℝ)^(ε*j)) n r t a b ≤
+      49*C^6*(2:ℝ)^(6*ε*n-(3*(t:ℝ)+5)*ε*b+2*r) := by
+  exact @TaoTrudgianYang2025.parabolaDyadicBilinearBudget_exponential C ε hC n r a b t ht hb
+
+example {n : ℕ} {A B : ℝ}
+    (hA : ParabolaDecouplingBound.{u} n A) (hAB : A ≤ B) :
+    ParabolaDecouplingBound.{u} n B := by
+  exact @TaoTrudgianYang2025.ParabolaDecouplingBound.mono.{u} n A B hA hAB
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ n : ℕ,
+      ParabolaDecouplingBound.{u} (2^n) (C*(2:ℝ)^(ε*n)) := by
+  exact @TaoTrudgianYang2025.exists_parabolaDecouplingBound_dyadic.{u} ε hε
+
+example : ∃ C > 0, ∀ n : ℕ,
+    ParabolaDecouplingBound.{u} (2^n) (C*(2:ℝ)^((1/100:ℝ)*n)) :=
+  exists_parabolaDecouplingBound_dyadic (by norm_num)
+
+example : ∃ C > 0, ParabolaDecouplingBound.{u} 1 C := by
+  obtain ⟨C,hC,h⟩ := exists_parabolaDecouplingBound_dyadic.{u} (ε:=1/100) (by norm_num)
+  exact ⟨C,hC,by simpa using h 0⟩
+
+example : parabolaDyadicBilinearBudget (fun j => (2:ℝ)^((1/100:ℝ)*j))
+    24 3 3 3 3 ≤
+    49*(2:ℝ)^(6*(1/100:ℝ)*24-(3*(3:ℝ)+5)*(1/100:ℝ)*3+2*3) := by
+  simpa using parabolaDyadicBilinearBudget_exponential (C:=1) (ε:=1/100)
+    (n:=24) (r:=3) (a:=3) (b:=3) (t:=3) (by norm_num) (by norm_num) (by norm_num)
+
+example {n : ℕ} {D : ℝ} (hD : ParabolaDecouplingBound.{u} n D) :
+    ParabolaDecouplingBound.{u} n (D+1) :=
+  hD.mono (by linarith)
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ n : ℕ, ∀ (ι : Type u) (W : ℝ × ℝ → ℝ),
+      ParabolaWeightBand (1/((2^n:ℕ):ℝ)) W →
+      ∀ (S : Fin (2^n) → Finset ι) (z : Fin (2^n) → ι → ℂ)
+        (x : Fin (2^n) → ι → ℝ),
+        (∀ j, ∀ k ∈ S j, x j k ∈ Icc
+          ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+        (parabolaWeightedSixNorm W (Finset.univ.sigma S)
+          (fun jk => z jk.1 jk.2) (fun jk => x jk.1 jk.2))^2 ≤
+          (C*(2:ℝ)^(ε*n))^2*
+            ∑ j, (parabolaWeightedSixNorm W (S j) (z j) (x j))^2 := by
+  obtain ⟨C,hC,h⟩ := exists_parabolaDecouplingBound_dyadic.{u} hε
+  exact ⟨C,hC,fun n => (h n).2⟩
+
+end TaoTrudgianYang2025.ParabolaDyadicEpsilonRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.ParabolaPhysicalDecouplingRegression
+universe u
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (R r t : ℝ), 0 < R →
+      3/(100*R) ≤ (1/(2:ℝ)^n)^2 →
+      ∀ (ι : Type u) (S : Fin (2^n) → Finset ι)
+        (z : Fin (2^n) → ι → ℂ) (x : Fin (2^n) → ι → ℝ),
+        (∀ j, ∀ k ∈ S j, x j k ∈ Icc
+          ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+        parabolaBoxBilinearMoment (Finset.univ.sigma S) (Finset.univ.sigma S)
+          (fun jk => z jk.1 jk.2) (fun jk => z jk.1 jk.2)
+          (fun jk => x jk.1 jk.2) (fun jk => x jk.1 jk.2) R r t ≤
+          C*(2:ℝ)^(ε*n)*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaRapidWeight R r t p.1 p.2)
+              (S j) (z j) (x j))^2)^3 := by
+  exact @TaoTrudgianYang2025.exists_parabolaBox_dyadic_decoupling.{u} ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (ι : Type u) (S : Fin 1 → Finset ι)
+      (z : Fin 1 → ι → ℂ) (x : Fin 1 → ι → ℝ),
+      (∀ j, ∀ k ∈ S j, x j k ∈ Icc 0 1) →
+      parabolaBoxBilinearMoment (Finset.univ.sigma S) (Finset.univ.sigma S)
+        (fun jk => z jk.1 jk.2) (fun jk => z jk.1 jk.2)
+        (fun jk => x jk.1 jk.2) (fun jk => x jk.1 jk.2) (3/100) 0 0 ≤
+        C*(∑ j, (parabolaWeightedSixNorm
+          (fun p : ℝ × ℝ => parabolaRapidWeight (3/100) 0 0 p.1 p.2)
+          (S j) (z j) (x j))^2)^3 := by
+  obtain ⟨C,hC,h⟩ := exists_parabolaBox_dyadic_decoupling.{u} hε
+  refine ⟨C,hC,?_⟩
+  intro ι S z x hx
+  have hcell : ∀ j : Fin 1, ∀ k ∈ S j,
+      x j k ∈ Icc ((j:ℕ)/((2^0:ℕ):ℝ)) (((j:ℕ)+1)/((2^0:ℕ):ℝ)) := by
+    intro j k hk
+    have hj : (j:ℕ)=0 := by omega
+    simpa only [hj,Nat.cast_zero,zero_div,zero_add,Nat.pow_zero,Nat.cast_one,div_one]
+      using hx j k hk
+  simpa using h 0 (3/100) 0 0 (by norm_num) (by norm_num) ι S z x hcell
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (ι : Type u) (S : Fin 2 → Finset ι)
+      (z : Fin 2 → ι → ℂ) (x : Fin 2 → ι → ℝ),
+      (∀ j, ∀ k ∈ S j, x j k ∈ Icc ((j:ℕ)/2:ℝ) (((j:ℕ)+1)/2:ℝ)) →
+      parabolaBoxBilinearMoment (Finset.univ.sigma S) (Finset.univ.sigma S)
+        (fun jk => z jk.1 jk.2) (fun jk => z jk.1 jk.2)
+        (fun jk => x jk.1 jk.2) (fun jk => x jk.1 jk.2) 4 (-2) 7 ≤
+        C*(2:ℝ)^ε*(∑ j, (parabolaWeightedSixNorm
+          (fun p : ℝ × ℝ => parabolaRapidWeight 4 (-2) 7 p.1 p.2)
+          (S j) (z j) (x j))^2)^3 := by
+  obtain ⟨C,hC,h⟩ := exists_parabolaBox_dyadic_decoupling.{u} hε
+  refine ⟨C,hC,?_⟩
+  intro ι S z x hx
+  simpa using h 1 4 (-2) 7 (by norm_num) (by norm_num) ι S z x hx
+
+example : 3/(100*(3/100:ℝ)) = (1/(2:ℝ)^0)^2 := by norm_num
+
+end TaoTrudgianYang2025.ParabolaPhysicalDecouplingRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainRemainderRegression
+universe u
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (R r t : ℝ), 0 < R →
+      3/(100*R) ≤ (1/(2:ℝ)^n)^2 →
+      ∀ (ι : Type u) (S : Fin (2^n) → Finset ι)
+        (z : Fin (2^n) → ι → ℂ) (x : Fin (2^n) → ι → ℝ),
+        (∀ j, ∀ k ∈ S j, x j k ∈ Icc
+          ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+        parabolaBoxBilinearMoment (Finset.univ.sigma S) (Finset.univ.sigma S)
+          (fun jk => z jk.1 jk.2) (fun jk => z jk.1 jk.2)
+          (fun jk => x jk.1 jk.2) (fun jk => x jk.1 jk.2) R r t ≤
+          C*(2:ℝ)^(ε*n)*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight R r t p.1 p.2)
+              (S j) (z j) (x j))^2)^3 := by
+  exact @TaoTrudgianYang2025.exists_parabolaBox_sourceWeight_decoupling.{u} ε hε
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ a ∈ Icc (-1:ℝ) 1, ∀ b ∈ Icc (-1:ℝ) 1,
+      ∃ K : ℝ → ℂ,
+        Continuous K ∧ Integrable (fun ξ => (1+|ξ|)^100*‖K ξ‖) ∧
+        (∫ ξ : ℝ, (1+|ξ|)^100*‖K ξ‖) ≤ C ∧
+        (∀ ξ : ℝ, ‖K ξ‖ ≤ C/(1+|ξ|)^102) ∧
+        ∀ s ∈ Icc (-1:ℝ) 1,
+          fordAdditiveCharacter (a*s^3+b*s^4) =
+            ∫ ξ : ℝ, K ξ*fordAdditiveCharacter (ξ*s) := by
+  exact @TaoTrudgianYang2025.exists_bourgainCubicQuartic_multiplier_kernel
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ a ∈ Icc (-1:ℝ) 1, ∀ b ∈ Icc (-1:ℝ) 1,
+      ∀ {ι : Type u} (S : Finset ι) (z : ι → ℂ) (s : ι → ℝ),
+        (∀ i ∈ S, s i ∈ Icc (-1:ℝ) 1) →
+        ‖∑ i ∈ S, z i*fordAdditiveCharacter (a*(s i)^3+b*(s i)^4)‖^6 ≤
+          C*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+            ‖∑ i ∈ S, z i*fordAdditiveCharacter (ξ*s i)‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainCubicQuartic_finite_moment.{u}
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (R r t : ℝ), 1 ≤ R →
+      3/(100*R) ≤ (1/(2:ℝ)^n)^2 →
+      ∀ (ι : Type u) (S : Fin (2^n) → Finset ι)
+        (z : Fin (2^n) → ι → ℂ) (x : Fin (2^n) → ι → ℝ),
+        (∀ j, ∀ k ∈ S j, x j k ∈ Icc
+          ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+      ∀ (a b : ℝ × ℝ → ℝ), Continuous a → Continuous b →
+      (∀ p ∈ Icc (r-R) (r+R) ×ˢ Icc (t-R) (t+R), a p ∈ Icc (-1:ℝ) 1) →
+      (∀ p ∈ Icc (r-R) (r+R) ×ˢ Icc (t-R) (t+R), b p ∈ Icc (-1:ℝ) 1) →
+      (∫ p : ℝ × ℝ in Icc (r-R) (r+R) ×ˢ Icc (t-R) (t+R),
+        ‖∑ jk ∈ Finset.univ.sigma S, z jk.1 jk.2*fordAdditiveCharacter
+          (x jk.1 jk.2*p.1+(x jk.1 jk.2)^2*p.2+
+            a p*(x jk.1 jk.2)^3+b p*(x jk.1 jk.2)^4)‖^6) ≤
+        C*(2:ℝ)^(ε*n)*
+          (∑ j, (parabolaWeightedSixNorm
+            (fun p : ℝ × ℝ => parabolaSourceWeight R r t p.1 p.2)
+            (S j) (z j) (x j))^2)^3 := by
+  exact @TaoTrudgianYang2025.exists_bourgainCubicQuartic_box_decoupling.{u} ε hε
+
+
+example : ∃ C > (0:ℝ), ∃ K : ℝ → ℂ,
+    Continuous K ∧ Integrable (fun ξ => (1+|ξ|)^100*‖K ξ‖) ∧
+    (∫ ξ : ℝ, (1+|ξ|)^100*‖K ξ‖) ≤ C ∧
+    (∀ ξ : ℝ, ‖K ξ‖ ≤ C/(1+|ξ|)^102) ∧
+    (∫ ξ : ℝ, K ξ*fordAdditiveCharacter ξ) = 1 ∧
+    (∫ ξ : ℝ, K ξ*fordAdditiveCharacter (-ξ)) =
+      fordAdditiveCharacter (-2) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainCubicQuartic_multiplier_kernel
+  obtain ⟨K,hKc,hKi,hM,hE,hR⟩ := h 1 (by norm_num) (-1) (by norm_num)
+  refine ⟨C,hC,K,hKc,hKi,hM,hE,?_,?_⟩
+  · simpa [fordAdditiveCharacter] using (hR 1 (by norm_num)).symm
+  · simpa only [one_mul,mul_one,mul_neg_one,
+      show (-1:ℝ)^3 = -1 by norm_num,show (-1:ℝ)^4 = 1 by norm_num,
+      show (-1:ℝ)+ -1 = -2 by norm_num] using (hR (-1) (by norm_num)).symm
+
+example : ∃ C > (0:ℝ), ∀ z : Fin 2 → ℂ,
+    ‖∑ i, z i*fordAdditiveCharacter (3/16)‖^6 ≤
+      C*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+        ‖∑ i, z i*fordAdditiveCharacter (ξ/2)‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainCubicQuartic_finite_moment
+  refine ⟨C,hC,?_⟩
+  intro z
+  have h' := h 1 (by norm_num) 1 (by norm_num)
+    Finset.univ z (fun _ : Fin 2 => (1/2:ℝ)) (by intro i hi; norm_num)
+  norm_num only [one_mul,show (1/2:ℝ)^3+(1/2:ℝ)^4=3/16 by norm_num,
+    mul_one_div] at h'
+  exact h'
+
+example : ∃ C > (0:ℝ), ∀ z : Fin 3 → ℂ,
+    ‖∑ i, z i*fordAdditiveCharacter (-1)‖^6 ≤
+      C*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+        ‖∑ i, z i*fordAdditiveCharacter (-ξ)‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainCubicQuartic_finite_moment
+  refine ⟨C,hC,?_⟩
+  intro z
+  simpa only [one_mul,zero_mul,add_zero,mul_neg_one,
+    show (-1:ℝ)^3 = -1 by norm_num] using h 1 (by norm_num) 0 (by norm_num)
+    Finset.univ z (fun _ : Fin 3 => (-1:ℝ)) (by intro i hi; norm_num)
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (ι : Type u) (S : Fin 1 → Finset ι)
+      (z : Fin 1 → ι → ℂ) (x : Fin 1 → ι → ℝ),
+      (∀ j, ∀ k ∈ S j, x j k ∈ Icc 0 1) →
+      (∫ p : ℝ × ℝ in Icc (-1:ℝ) 1 ×ˢ Icc (-1:ℝ) 1,
+        ‖∑ jk ∈ Finset.univ.sigma S, z jk.1 jk.2*fordAdditiveCharacter
+          (x jk.1 jk.2*p.1+(x jk.1 jk.2)^2*p.2+
+            (x jk.1 jk.2)^3-(x jk.1 jk.2)^4)‖^6) ≤
+        C*(∑ j, (parabolaWeightedSixNorm
+          (fun p : ℝ × ℝ => parabolaSourceWeight 1 0 0 p.1 p.2)
+          (S j) (z j) (x j))^2)^3 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainCubicQuartic_box_decoupling.{u} hε
+  refine ⟨C,hC,?_⟩
+  intro ι S z x hx
+  have hcell : ∀ j : Fin (2^0), ∀ k ∈ S j,
+      x j k ∈ Icc ((j:ℕ)/((2^0:ℕ):ℝ)) (((j:ℕ)+1)/((2^0:ℕ):ℝ)) := by
+    intro j k hk
+    have hj : (j:ℕ)=0 := by omega
+    simpa only [hj,Nat.cast_zero,zero_div,zero_add,Nat.pow_zero,Nat.cast_one,div_one]
+      using hx j k hk
+  simpa only [Nat.pow_zero,pow_zero,Nat.cast_zero,div_one,mul_zero,Real.rpow_zero,mul_one,
+    zero_sub,zero_add,one_mul,neg_mul,one_mul,sub_eq_add_neg] using
+    h 0 1 0 0 (by norm_num) (by norm_num) ι S z x hcell
+      (fun _ => 1) (fun _ => -1) continuous_const continuous_const
+      (by intro p hp; norm_num) (by intro p hp; norm_num)
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (ι : Type u) (S : Fin 2 → Finset ι)
+      (z : Fin 2 → ι → ℂ) (x : Fin 2 → ι → ℝ),
+      (∀ j, ∀ k ∈ S j, x j k ∈ Icc ((j:ℕ)/2:ℝ) (((j:ℕ)+1)/2:ℝ)) →
+      (∫ p : ℝ × ℝ in Icc (-6:ℝ) 2 ×ˢ Icc (3:ℝ) 11,
+        ‖∑ jk ∈ Finset.univ.sigma S, z jk.1 jk.2*fordAdditiveCharacter
+          (x jk.1 jk.2*p.1+(x jk.1 jk.2)^2*p.2+
+            ((p.1+2)/4)*(x jk.1 jk.2)^3+((p.2-7)/4)*(x jk.1 jk.2)^4)‖^6) ≤
+        C*(2:ℝ)^ε*(∑ j, (parabolaWeightedSixNorm
+          (fun p : ℝ × ℝ => parabolaSourceWeight 4 (-2) 7 p.1 p.2)
+          (S j) (z j) (x j))^2)^3 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainCubicQuartic_box_decoupling.{u} hε
+  refine ⟨C,hC,?_⟩
+  intro ι S z x hx
+  have ha : ∀ p ∈ Icc (-2-4:ℝ) (-2+4) ×ˢ Icc (7-4:ℝ) (7+4),
+      (p.1+2)/4 ∈ Icc (-1:ℝ) 1 := by
+    intro p hp
+    constructor <;> linarith [hp.1.1,hp.1.2]
+  have hb : ∀ p ∈ Icc (-2-4:ℝ) (-2+4) ×ˢ Icc (7-4:ℝ) (7+4),
+      (p.2-7)/4 ∈ Icc (-1:ℝ) 1 := by
+    intro p hp
+    constructor <;> linarith [hp.2.1,hp.2.2]
+  simpa only [pow_one,Nat.cast_one,mul_one,
+    show (-2-4:ℝ) = -6 by norm_num,show (-2+4:ℝ) = 2 by norm_num,
+    show (7-4:ℝ) = 3 by norm_num,show (7+4:ℝ) = 11 by norm_num] using
+    h 1 4 (-2) 7 (by norm_num) (by norm_num) ι S z x
+      (by simpa using hx) (fun p => (p.1+2)/4) (fun p => (p.2-7)/4)
+      (by fun_prop) (by fun_prop) ha hb
+
+example : 1 ≤ (192/25:ℝ) ∧
+    3/(100*(192/25:ℝ)) = (1/(2:ℝ)^4)^2 := by norm_num
+
+end TaoTrudgianYang2025.BourgainRemainderRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainSourceCurveRegression
+universe u
+
+example :
+    ∃ C > (0:ℝ), ∀ {ι : Type u} (S : Finset ι) (z : ι → ℂ) (s : ι → ℝ),
+      (∀ i ∈ S, s i ∈ Icc (-1:ℝ) 1) →
+      ∀ (c σ R : ℝ), |c| ≤ 1 → 0 ≤ σ → σ ≤ 1 → 0 ≤ R → 5*R*σ^3 ≤ 1 →
+      ∀ x : Fin 4 → ℝ, (∀ j, |x j| ≤ R) →
+      ‖∑ i ∈ S, z i*fordAdditiveCharacter
+        (x 0*(c+σ*s i)+x 1*(c+σ*s i)^2+
+          x 2*(c+σ*s i)^3+x 3*(c+σ*s i)^4)‖^6 ≤
+        C*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+          ‖∑ i ∈ S, z i*fordAdditiveCharacter
+            ((σ*s i)*(x 0+2*c*x 1+3*c^2*x 2+4*c^3*x 3)+
+              (σ*s i)^2*(x 1+3*c*x 2+6*c^2*x 3)+ξ*s i)‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainQuartic_scaled_moment.{u}
+
+example :
+    ∃ C > (0:ℝ), ∀ (ι τ : Type u) (S : Finset ι) (V : Finset τ)
+      (z : ι → ℂ) (c : τ → ℂ) (s : ι → ℝ) (v : τ → ℝ),
+      (∀ i ∈ S, s i ∈ Icc (-1:ℝ) 1) →
+      (∀ j ∈ V, v j ∈ Icc (-1:ℝ) 1) →
+      ∀ (a b σ R : ℝ), |a| ≤ 1 → |b| ≤ 1 → a ≠ b →
+      0 ≤ σ → σ ≤ 1 → 0 ≤ R → 5*R*σ^3 ≤ 1 →
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -R) (fun _ => R),
+        ‖∑ i ∈ S, z i*fordAdditiveCharacter
+          (x 0*(a+σ*s i)+x 1*(a+σ*s i)^2+
+            x 2*(a+σ*s i)^3+x 3*(a+σ*s i)^4)‖^6*
+        ‖∑ j ∈ V, c j*fordAdditiveCharacter
+          (x 0*(b+σ*v j)+x 1*(b+σ*v j)^2+
+            x 2*(b+σ*v j)^3+x 3*(b+σ*v j)^4)‖^6) ≤
+        C*(6*(b-a)^4)⁻¹*
+          (∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+            parabolaBoxBilinearMoment S S
+              (fun i => z i*fordAdditiveCharacter (ξ*s i))
+              (fun i => z i*fordAdditiveCharacter (ξ*s i))
+              (fun i => σ*s i) (fun i => σ*s i) (10*R) 0 0)*
+          (∫ η : ℝ, ((1+|η|)^102)⁻¹*
+            parabolaBoxBilinearMoment V V
+              (fun j => c j*fordAdditiveCharacter (η*v j))
+              (fun j => c j*fordAdditiveCharacter (η*v j))
+              (fun j => σ*v j) (fun j => σ*v j) (10*R) 0 0) := by
+  exact @TaoTrudgianYang2025.exists_bourgainQuartic_bilinear_reduction.{u}
+
+example :
+    ∃ C > (0:ℝ), ∀ (ι τ : Type u) (S : Finset ι) (V : Finset τ)
+      (z : ι → ℂ) (c : τ → ℂ) (w : ι → ℝ) (v : τ → ℝ),
+      (∀ i ∈ S, 0 ≤ w i) → (∀ j ∈ V, 0 ≤ v j) →
+      ∀ (a b σ R : ℝ), |a| ≤ 1 → |b| ≤ 1 → a ≠ b →
+      0 < σ → σ ≤ 1 → 0 ≤ R → 5*R*σ^3 ≤ 1 →
+      (∀ i ∈ S, |Real.sqrt (w i)-a| ≤ σ) →
+      (∀ j ∈ V, |Real.sqrt (v j)-b| ≤ σ) →
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -R) (fun _ => R),
+        ‖∑ i ∈ S, z i*fordAdditiveCharacter
+          (x 0*w i+x 1*(w i)^2+x 2*(w i)^((3:ℝ)/2)+x 3*Real.sqrt (w i))‖^6*
+        ‖∑ j ∈ V, c j*fordAdditiveCharacter
+          (x 0*v j+x 1*(v j)^2+x 2*(v j)^((3:ℝ)/2)+x 3*Real.sqrt (v j))‖^6) ≤
+        C*(6*(b-a)^4)⁻¹*
+          (∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+            parabolaBoxBilinearMoment S S
+              (fun i => z i*fordAdditiveCharacter (ξ*((Real.sqrt (w i)-a)/σ)))
+              (fun i => z i*fordAdditiveCharacter (ξ*((Real.sqrt (w i)-a)/σ)))
+              (fun i => Real.sqrt (w i)-a) (fun i => Real.sqrt (w i)-a) (10*R) 0 0)*
+          (∫ η : ℝ, ((1+|η|)^102)⁻¹*
+            parabolaBoxBilinearMoment V V
+              (fun j => c j*fordAdditiveCharacter (η*((Real.sqrt (v j)-b)/σ)))
+              (fun j => c j*fordAdditiveCharacter (η*((Real.sqrt (v j)-b)/σ)))
+              (fun j => Real.sqrt (v j)-b) (fun j => Real.sqrt (v j)-b) (10*R) 0 0) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_bilinear_reduction.{u}
+
+example :
+    ∃ C > (0:ℝ), ∀ {ι : Type u} (S : Finset ι) (z : ι → ℂ) (s : ι → ℝ),
+      (∀ i ∈ S, s i ∈ Icc (-1:ℝ) 1) →
+
+      ∀ x : Fin 4 → ℝ, (∀ j, |x j| ≤ (8/5:ℝ)) →
+      ‖∑ i ∈ S, z i*fordAdditiveCharacter
+        (x 0*((1/2:ℝ)+(1/2:ℝ)*s i)+x 1*((1/2:ℝ)+(1/2:ℝ)*s i)^2+
+          x 2*((1/2:ℝ)+(1/2:ℝ)*s i)^3+x 3*((1/2:ℝ)+(1/2:ℝ)*s i)^4)‖^6 ≤
+        C*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+          ‖∑ i ∈ S, z i*fordAdditiveCharacter
+            (((1/2:ℝ)*s i)*(x 0+2*(1/2:ℝ)*x 1+3*(1/2:ℝ)^2*x 2+4*(1/2:ℝ)^3*x 3)+
+              ((1/2:ℝ)*s i)^2*(x 1+3*(1/2:ℝ)*x 2+6*(1/2:ℝ)^2*x 3)+ξ*s i)‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainQuartic_scaled_moment.{u}
+  refine ⟨C,hC,?_⟩
+  intro ι S z s hs x hx
+  exact h S z s hs (1/2) (1/2) (8/5) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) x hx
+
+example :
+    ∃ C > (0:ℝ), ∀ (ι τ : Type u) (S : Finset ι) (V : Finset τ)
+      (z : ι → ℂ) (c : τ → ℂ) (s : ι → ℝ) (v : τ → ℝ),
+      (∀ i ∈ S, s i ∈ Icc (-1:ℝ) 1) →
+      (∀ j ∈ V, v j ∈ Icc (-1:ℝ) 1) →
+
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -(8/5:ℝ)) (fun _ => (8/5:ℝ)),
+        ‖∑ i ∈ S, z i*fordAdditiveCharacter
+          (x 0*((-1:ℝ)+(1/2:ℝ)*s i)+x 1*((-1:ℝ)+(1/2:ℝ)*s i)^2+
+            x 2*((-1:ℝ)+(1/2:ℝ)*s i)^3+x 3*((-1:ℝ)+(1/2:ℝ)*s i)^4)‖^6*
+        ‖∑ j ∈ V, c j*fordAdditiveCharacter
+          (x 0*((1:ℝ)+(1/2:ℝ)*v j)+x 1*((1:ℝ)+(1/2:ℝ)*v j)^2+
+            x 2*((1:ℝ)+(1/2:ℝ)*v j)^3+x 3*((1:ℝ)+(1/2:ℝ)*v j)^4)‖^6) ≤
+        C*(6*((1:ℝ)-(-1:ℝ))^4)⁻¹*
+          (∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+            parabolaBoxBilinearMoment S S
+              (fun i => z i*fordAdditiveCharacter (ξ*s i))
+              (fun i => z i*fordAdditiveCharacter (ξ*s i))
+              (fun i => (1/2:ℝ)*s i) (fun i => (1/2:ℝ)*s i) (10*(8/5:ℝ)) 0 0)*
+          (∫ η : ℝ, ((1+|η|)^102)⁻¹*
+            parabolaBoxBilinearMoment V V
+              (fun j => c j*fordAdditiveCharacter (η*v j))
+              (fun j => c j*fordAdditiveCharacter (η*v j))
+              (fun j => (1/2:ℝ)*v j) (fun j => (1/2:ℝ)*v j) (10*(8/5:ℝ)) 0 0) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainQuartic_bilinear_reduction.{u}
+  refine ⟨C,hC,?_⟩
+  intro ι τ S V z c s v hs hv
+  exact h ι τ S V z c s v hs hv (-1) 1 (1/2) (8/5)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example :
+    ∃ C > (0:ℝ), ∀ (z c : Fin 2 → ℂ),
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -(8/5:ℝ)) (fun _ => (8/5:ℝ)),
+        ‖∑ i ∈ Finset.univ, z i*fordAdditiveCharacter
+          (x 0*(![0,1/4] : Fin 2 → ℝ) i+x 1*((![0,1/4] : Fin 2 → ℝ) i)^2+x 2*((![0,1/4] : Fin 2 → ℝ) i)^((3:ℝ)/2)+x 3*Real.sqrt ((![0,1/4] : Fin 2 → ℝ) i))‖^6*
+        ‖∑ j ∈ Finset.univ, c j*fordAdditiveCharacter
+          (x 0*(![1/4,1] : Fin 2 → ℝ) j+x 1*((![1/4,1] : Fin 2 → ℝ) j)^2+x 2*((![1/4,1] : Fin 2 → ℝ) j)^((3:ℝ)/2)+x 3*Real.sqrt ((![1/4,1] : Fin 2 → ℝ) j))‖^6) ≤
+        C*(6*((1:ℝ)-(0:ℝ))^4)⁻¹*
+          (∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+            parabolaBoxBilinearMoment Finset.univ Finset.univ
+              (fun i => z i*fordAdditiveCharacter (ξ*((Real.sqrt ((![0,1/4] : Fin 2 → ℝ) i)-(0:ℝ))/(1/2:ℝ))))
+              (fun i => z i*fordAdditiveCharacter (ξ*((Real.sqrt ((![0,1/4] : Fin 2 → ℝ) i)-(0:ℝ))/(1/2:ℝ))))
+              (fun i => Real.sqrt ((![0,1/4] : Fin 2 → ℝ) i)-(0:ℝ)) (fun i => Real.sqrt ((![0,1/4] : Fin 2 → ℝ) i)-(0:ℝ)) (10*(8/5:ℝ)) 0 0)*
+          (∫ η : ℝ, ((1+|η|)^102)⁻¹*
+            parabolaBoxBilinearMoment Finset.univ Finset.univ
+              (fun j => c j*fordAdditiveCharacter (η*((Real.sqrt ((![1/4,1] : Fin 2 → ℝ) j)-(1:ℝ))/(1/2:ℝ))))
+              (fun j => c j*fordAdditiveCharacter (η*((Real.sqrt ((![1/4,1] : Fin 2 → ℝ) j)-(1:ℝ))/(1/2:ℝ))))
+              (fun j => Real.sqrt ((![1/4,1] : Fin 2 → ℝ) j)-(1:ℝ)) (fun j => Real.sqrt ((![1/4,1] : Fin 2 → ℝ) j)-(1:ℝ)) (10*(8/5:ℝ)) 0 0) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_bilinear_reduction
+  refine ⟨C,hC,?_⟩
+  intro z c
+  have hsqrt : Real.sqrt (1/4:ℝ) = 1/2 := by
+    rw [Real.sqrt_eq_iff_mul_self_eq (by norm_num) (by norm_num)]
+    norm_num
+  exact h (Fin 2) (Fin 2) Finset.univ Finset.univ z c ![0,1/4] ![1/4,1]
+    (by intro i hi; fin_cases i <;> norm_num)
+    (by intro i hi; fin_cases i <;> norm_num)
+    0 1 (1/2) (8/5) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intro i hi; fin_cases i <;> norm_num [hsqrt])
+    (by intro i hi; fin_cases i <;> norm_num [hsqrt])
+
+end TaoTrudgianYang2025.BourgainSourceCurveRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainScaledCellsRegression
+universe u
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (σ R r t : ℝ), 0 < σ → σ ≤ 1 → 1 ≤ σ*R →
+      3/(100*R) ≤ (σ/(2:ℝ)^n)^2 →
+      ∀ (ι : Type u) (S : Fin (2^n) → Finset ι)
+        (z : Fin (2^n) → ι → ℂ) (s : Fin (2^n) → ι → ℝ),
+        (∀ j, ∀ k ∈ S j, s j k ∈ Icc
+          ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+        (∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+          parabolaBoxBilinearMoment (Finset.univ.sigma S) (Finset.univ.sigma S)
+            (fun jk => z jk.1 jk.2*fordAdditiveCharacter (ξ*s jk.1 jk.2))
+            (fun jk => z jk.1 jk.2*fordAdditiveCharacter (ξ*s jk.1 jk.2))
+            (fun jk => σ*s jk.1 jk.2) (fun jk => σ*s jk.1 jk.2) R r t) ≤
+          C*(2:ℝ)^(ε*n)*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight R r t p.1 p.2)
+              (S j) (z j) (fun i => σ*s j i))^2)^3 := by
+  exact @TaoTrudgianYang2025.exists_parabolaBox_scaled_modulation_decoupling.{u} ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (a b σ R : ℝ),
+      |a| ≤ 1 → |b| ≤ 1 → a ≠ b → 0 < σ → σ ≤ 1 → 0 ≤ R →
+      5*R*σ^3 ≤ 1 → 1 ≤ σ*(10*R) →
+      3/(100*(10*R)) ≤ (σ/(2:ℝ)^n)^2 →
+      ∀ (ι τ : Type u) (S : Fin (2^n) → Finset ι) (V : Fin (2^n) → Finset τ)
+        (z : Fin (2^n) → ι → ℂ) (c : Fin (2^n) → τ → ℂ)
+        (w : Fin (2^n) → ι → ℝ) (v : Fin (2^n) → τ → ℝ),
+        (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+        (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc
+          (a+σ*((j:ℕ)/((2^n:ℕ):ℝ))) (a+σ*(((j:ℕ)+1)/((2^n:ℕ):ℝ)))) →
+        (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc
+          (b+σ*((j:ℕ)/((2^n:ℕ):ℝ))) (b+σ*(((j:ℕ)+1)/((2^n:ℕ):ℝ)))) →
+        (∫ x : Fin 4 → ℝ in Icc (fun _ => -R) (fun _ => R),
+          ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+            (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+              x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+          ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+            (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+              x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+          C*(2:ℝ)^(ε*n)*(6*(b-a)^4)⁻¹*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight (10*R) 0 0 p.1 p.2)
+              (S j) (z j) (fun i => Real.sqrt (w j i)-a))^2)^3*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight (10*R) 0 0 p.1 p.2)
+              (V j) (c j) (fun k => Real.sqrt (v j k)-b))^2)^3 := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_parabolic_cell_bound.{u} ε hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0,
+      ∀ (ι τ : Type u) (S : Fin (2^(3:ℕ)) → Finset ι) (V : Fin (2^(3:ℕ)) → Finset τ)
+        (z : Fin (2^(3:ℕ)) → ι → ℂ) (c : Fin (2^(3:ℕ)) → τ → ℂ)
+        (w : Fin (2^(3:ℕ)) → ι → ℝ) (v : Fin (2^(3:ℕ)) → τ → ℝ),
+        (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+        (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc
+          ((0:ℝ)+(1/2:ℝ)*((j:ℕ)/((2^(3:ℕ):ℕ):ℝ))) ((0:ℝ)+(1/2:ℝ)*(((j:ℕ)+1)/((2^(3:ℕ):ℕ):ℝ)))) →
+        (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc
+          ((1/2:ℝ)+(1/2:ℝ)*((j:ℕ)/((2^(3:ℕ):ℕ):ℝ))) ((1/2:ℝ)+(1/2:ℝ)*(((j:ℕ)+1)/((2^(3:ℕ):ℕ):ℝ)))) →
+        (∫ x : Fin 4 → ℝ in Icc (fun _ => -(8/5:ℝ)) (fun _ => (8/5:ℝ)),
+          ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+            (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+              x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+          ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+            (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+              x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+          C*(2:ℝ)^(ε*(3:ℕ))*(6*((1/2:ℝ)-(0:ℝ))^4)⁻¹*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight (10*(8/5:ℝ)) 0 0 p.1 p.2)
+              (S j) (z j) (fun i => Real.sqrt (w j i)-(0:ℝ)))^2)^3*
+            (∑ j, (parabolaWeightedSixNorm
+              (fun p : ℝ × ℝ => parabolaSourceWeight (10*(8/5:ℝ)) 0 0 p.1 p.2)
+              (V j) (c j) (fun k => Real.sqrt (v j k)-(1/2:ℝ)))^2)^3 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_parabolic_cell_bound.{u} hε
+  refine ⟨C,hC,?_⟩
+  exact h 3 0 (1/2) (1/2) (8/5) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+
+example : 5*(8/5:ℝ)*(1/2)^3=1 ∧ 1 ≤ (1/2:ℝ)*(10*(8/5)) ∧
+    3/(100*(10*(8/5:ℝ))) ≤ ((1/2:ℝ)/(2:ℝ)^3)^2 := by norm_num
+
+end TaoTrudgianYang2025.BourgainScaledCellsRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainActualCellsRegression
+universe u
+
+example :
+    ∃ C > (0:ℝ), ∀ {ι : Type u} (S : Finset ι) (z : ι → ℂ) (w : ι → ℝ),
+      (∀ i ∈ S, 0 ≤ w i) →
+      ∀ (a c δ R : ℝ), |a| ≤ 1 → |c| ≤ 1 → 0 < δ → δ ≤ 1 →
+      0 < R → 5*R*δ^3 ≤ 1 → 1 ≤ δ*R →
+      (∀ i ∈ S, |Real.sqrt (w i)-c| ≤ δ) →
+      (∫ p : ℝ × ℝ, parabolaSourceWeight R 0 0 p.1 p.2*
+        ‖∑ i ∈ S, z i*fordAdditiveCharacter
+          ((Real.sqrt (w i)-a)*p.1+(Real.sqrt (w i)-a)^2*p.2)‖^6) ≤
+        C/R^2*(∫ x : Fin 4 → ℝ, ((1+‖R⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ S, z i*fordAdditiveCharacter
+            (x 0*w i+x 1*(w i)^2+x 2*(w i)^((3:ℝ)/2)+x 3*Real.sqrt (w i))‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_cell_return.{u}
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0, ∀ (n : ℕ) (a b σ R : ℝ),
+      0 ≤ a → a+σ ≤ 1 → 0 ≤ b → b+σ ≤ 1 → a ≠ b →
+      0 < σ → σ ≤ 1 → 0 < R → 5*R*σ^3 ≤ 1 →
+      5*(10*R)*(σ/(2:ℝ)^n)^3 ≤ 1 → 1 ≤ (σ/(2:ℝ)^n)*(10*R) →
+      3/(100*(10*R)) ≤ (σ/(2:ℝ)^n)^2 →
+      ∀ (ι τ : Type u) (S : Fin (2^n) → Finset ι) (V : Fin (2^n) → Finset τ)
+        (z : Fin (2^n) → ι → ℂ) (c : Fin (2^n) → τ → ℂ)
+        (w : Fin (2^n) → ι → ℝ) (v : Fin (2^n) → τ → ℝ),
+        (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+        (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc
+          (a+σ*((j:ℕ)/((2^n:ℕ):ℝ))) (a+σ*(((j:ℕ)+1)/((2^n:ℕ):ℝ)))) →
+        (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc
+          (b+σ*((j:ℕ)/((2^n:ℕ):ℝ))) (b+σ*(((j:ℕ)+1)/((2^n:ℕ):ℝ)))) →
+        (∫ x : Fin 4 → ℝ in Icc (fun _ => -R) (fun _ => R),
+          ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+            (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+              x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+          ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+            (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+              x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+          C*(2:ℝ)^((ε+4)*n)/(10*R)^4*(6*(b-a)^4)⁻¹*
+            (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(10*R)⁻¹ • x‖)^100)⁻¹*
+              ‖∑ i ∈ S j, z j i*fordAdditiveCharacter
+                (x 0*w j i+x 1*(w j i)^2+x 2*(w j i)^((3:ℝ)/2)+
+                  x 3*Real.sqrt (w j i))‖^6)*
+            (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(10*R)⁻¹ • x‖)^100)⁻¹*
+              ‖∑ k ∈ V j, c j k*fordAdditiveCharacter
+                (x 0*v j k+x 1*(v j k)^2+x 2*(v j k)^((3:ℝ)/2)+
+                  x 3*Real.sqrt (v j k))‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_local_cell_decoupling.{u} ε hε
+
+example :
+    ∃ C > (0:ℝ), ∀ z : Fin 2 → ℂ,
+      (∫ p : ℝ × ℝ, parabolaSourceWeight (64/5:ℝ) 0 0 p.1 p.2*
+        ‖∑ i ∈ Finset.univ, z i*fordAdditiveCharacter
+          ((Real.sqrt ((![1/16,9/16] : Fin 2 → ℝ) i)-(0:ℝ))*p.1+(Real.sqrt ((![1/16,9/16] : Fin 2 → ℝ) i)-(0:ℝ))^2*p.2)‖^6) ≤
+        C/(64/5:ℝ)^2*(∫ x : Fin 4 → ℝ, ((1+‖(64/5:ℝ)⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ Finset.univ, z i*fordAdditiveCharacter
+            (x 0*(![1/16,9/16] : Fin 2 → ℝ) i+x 1*((![1/16,9/16] : Fin 2 → ℝ) i)^2+x 2*((![1/16,9/16] : Fin 2 → ℝ) i)^((3:ℝ)/2)+x 3*Real.sqrt ((![1/16,9/16] : Fin 2 → ℝ) i))‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_cell_return
+  refine ⟨C,hC,?_⟩
+  intro z
+  have hs₁ : Real.sqrt (1/16:ℝ) = 1/4 := by
+    rw [Real.sqrt_eq_iff_mul_self_eq (by norm_num) (by norm_num)]
+    norm_num
+  have hs₂ : Real.sqrt (9/16:ℝ) = 3/4 := by
+    rw [Real.sqrt_eq_iff_mul_self_eq (by norm_num) (by norm_num)]
+    norm_num
+  exact h Finset.univ z ![1/16,9/16] (by intro i hi; fin_cases i <;> norm_num)
+    0 (1/2) (1/4) (64/5) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intro i hi; fin_cases i <;> norm_num [hs₁,hs₂])
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > 0,       ∀ (ι τ : Type u) (S : Fin (2^(3:ℕ)) → Finset ι) (V : Fin (2^(3:ℕ)) → Finset τ)
+        (z : Fin (2^(3:ℕ)) → ι → ℂ) (c : Fin (2^(3:ℕ)) → τ → ℂ)
+        (w : Fin (2^(3:ℕ)) → ι → ℝ) (v : Fin (2^(3:ℕ)) → τ → ℝ),
+        (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+        (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc
+          ((0:ℝ)+(1/2:ℝ)*((j:ℕ)/((2^(3:ℕ):ℕ):ℝ))) ((0:ℝ)+(1/2:ℝ)*(((j:ℕ)+1)/((2^(3:ℕ):ℕ):ℝ)))) →
+        (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc
+          ((1/2:ℝ)+(1/2:ℝ)*((j:ℕ)/((2^(3:ℕ):ℕ):ℝ))) ((1/2:ℝ)+(1/2:ℝ)*(((j:ℕ)+1)/((2^(3:ℕ):ℕ):ℝ)))) →
+        (∫ x : Fin 4 → ℝ in Icc (fun _ => -(8/5:ℝ)) (fun _ => (8/5:ℝ)),
+          ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+            (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+              x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+          ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+            (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+              x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+          C*(2:ℝ)^((ε+4)*(3:ℕ))/(10*(8/5:ℝ))^4*(6*((1/2:ℝ)-(0:ℝ))^4)⁻¹*
+            (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(10*(8/5:ℝ))⁻¹ • x‖)^100)⁻¹*
+              ‖∑ i ∈ S j, z j i*fordAdditiveCharacter
+                (x 0*w j i+x 1*(w j i)^2+x 2*(w j i)^((3:ℝ)/2)+
+                  x 3*Real.sqrt (w j i))‖^6)*
+            (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(10*(8/5:ℝ))⁻¹ • x‖)^100)⁻¹*
+              ‖∑ k ∈ V j, c j k*fordAdditiveCharacter
+                (x 0*v j k+x 1*(v j k)^2+x 2*(v j k)^((3:ℝ)/2)+
+                  x 3*Real.sqrt (v j k))‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_local_cell_decoupling.{u} hε
+  refine ⟨C,hC,?_⟩
+  exact h 3 0 (1/2) (1/2) (8/5)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+
+example : 5*(64/5:ℝ)*(1/4)^3=1 ∧ 1 ≤ (1/4:ℝ)*(64/5) := by norm_num
+
+example : 5*(8/5:ℝ)*(1/2)^3=1 ∧
+    5*(10*(8/5:ℝ))*((1/2:ℝ)/(2:ℝ)^3)^3 ≤ 1 ∧
+    ((1/2:ℝ)/(2:ℝ)^3)*(10*(8/5:ℝ))=1 ∧
+    3/(100*(10*(8/5:ℝ))) ≤ ((1/2:ℝ)/(2:ℝ)^3)^2 := by norm_num
+
+end TaoTrudgianYang2025.BourgainActualCellsRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainBootstrapBaseRegression
+universe u
+
+example :
+    ∃ C > (0:ℝ), ∀ K R : ℝ, 0 < K → K ≤ R →
+      ∀ {ι : Type u} (S : Finset ι) (z : ι → ℂ) (w : ι → ℝ),
+      (∫ y : Fin 4 → ℝ, ((1+‖K⁻¹ • y‖)^100)⁻¹*
+        (∫ x : Fin 4 → ℝ, ((1+‖R⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ S, (z i*fordAdditiveCharacter
+            (y 0*w i+y 1*(w i)^2+y 2*(w i)^((3:ℝ)/2)+y 3*Real.sqrt (w i)))*
+              fordAdditiveCharacter
+                (x 0*w i+x 1*(w i)^2+x 2*(w i)^((3:ℝ)/2)+x 3*Real.sqrt (w i))‖^6)) ≤
+        C*K^4*(∫ x : Fin 4 → ℝ, ((1+‖R⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ S, z i*fordAdditiveCharacter
+            (x 0*w i+x 1*(w i)^2+x 2*(w i)^((3:ℝ)/2)+x 3*Real.sqrt (w i))‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_weighted_average.{u}
+
+example :
+    ∃ C > (0:ℝ), ∀ (n : ℕ) (ι τ : Type u)
+      (S : Fin (2^n) → Finset ι) (V : Fin (2^n) → Finset τ)
+      (z : Fin (2^n) → ι → ℂ) (c : Fin (2^n) → τ → ℂ)
+      (w : Fin (2^n) → ι → ℝ) (v : Fin (2^n) → τ → ℝ),
+      (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+      (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc 0 1) →
+      (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc 0 1) →
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -((2:ℝ)^n)^2) (fun _ => ((2:ℝ)^n)^2),
+        ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+          (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+            x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+        ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+          (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+            x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+        C*((2:ℝ)^n)^22/(((2:ℝ)^n)^2)^2*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ i ∈ S j, z j i*fordAdditiveCharacter
+              (x 0*w j i+x 1*(w j i)^2+x 2*(w j i)^((3:ℝ)/2)+x 3*Real.sqrt (w j i))‖^6)*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ k ∈ V j, c j k*fordAdditiveCharacter
+              (x 0*v j k+x 1*(v j k)^2+x 2*(v j k)^((3:ℝ)/2)+x 3*Real.sqrt (v j k))‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_polynomial_base.{u}
+
+example : ∃ C > (0:ℝ), ∀ z : Fin 3 → ℂ,
+  (∫ y : Fin 4 → ℝ, ((1+‖(2:ℝ)⁻¹ • y‖)^100)⁻¹*
+        (∫ x : Fin 4 → ℝ, ((1+‖(5:ℝ)⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ (Finset.univ : Finset (Fin 3)), (z i*fordAdditiveCharacter
+            (y 0*(![0,1/4,1/4] : Fin 3 → ℝ) i+y 1*((![0,1/4,1/4] : Fin 3 → ℝ) i)^2+y 2*((![0,1/4,1/4] : Fin 3 → ℝ) i)^((3:ℝ)/2)+y 3*Real.sqrt ((![0,1/4,1/4] : Fin 3 → ℝ) i)))*
+              fordAdditiveCharacter
+                (x 0*(![0,1/4,1/4] : Fin 3 → ℝ) i+x 1*((![0,1/4,1/4] : Fin 3 → ℝ) i)^2+x 2*((![0,1/4,1/4] : Fin 3 → ℝ) i)^((3:ℝ)/2)+x 3*Real.sqrt ((![0,1/4,1/4] : Fin 3 → ℝ) i))‖^6)) ≤
+        C*(2:ℝ)^4*(∫ x : Fin 4 → ℝ, ((1+‖(5:ℝ)⁻¹ • x‖)^100)⁻¹*
+          ‖∑ i ∈ (Finset.univ : Finset (Fin 3)), z i*fordAdditiveCharacter
+            (x 0*(![0,1/4,1/4] : Fin 3 → ℝ) i+x 1*((![0,1/4,1/4] : Fin 3 → ℝ) i)^2+x 2*((![0,1/4,1/4] : Fin 3 → ℝ) i)^((3:ℝ)/2)+x 3*Real.sqrt ((![0,1/4,1/4] : Fin 3 → ℝ) i))‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_weighted_average
+  exact ⟨C,hC,fun z => h 2 5 (by norm_num) (by norm_num) Finset.univ z ![0,1/4,1/4]⟩
+
+example : ∃ C > (0:ℝ), ∀ (z c : Fin 2 → Fin 2 → ℂ),
+  (∫ x : Fin 4 → ℝ in Icc (fun _ => -((2:ℝ)^(1:ℕ))^2) (fun _ => ((2:ℝ)^(1:ℕ))^2),
+        ‖∑ ji ∈ Finset.univ.sigma (fun _ : Fin 2 => (Finset.univ : Finset (Fin 2))), z ji.1 ji.2*fordAdditiveCharacter
+          (x 0*(fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) ji.1 ji.2+x 1*((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) ji.1 ji.2)^2+
+            x 2*((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt ((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) ji.1 ji.2))‖^6*
+        ‖∑ jk ∈ Finset.univ.sigma (fun _ : Fin 2 => (Finset.univ : Finset (Fin 2))), c jk.1 jk.2*fordAdditiveCharacter
+          (x 0*(fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) jk.1 jk.2+x 1*((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) jk.1 jk.2)^2+
+            x 2*((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt ((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) jk.1 jk.2))‖^6) ≤
+        C*((2:ℝ)^(1:ℕ))^22/(((2:ℝ)^(1:ℕ))^2)^2*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^(1:ℕ))^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ i ∈ (fun _ : Fin 2 => (Finset.univ : Finset (Fin 2))) j, z j i*fordAdditiveCharacter
+              (x 0*(fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) j i+x 1*((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) j i)^2+x 2*((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) j i)^((3:ℝ)/2)+x 3*Real.sqrt ((fun (j : Fin 2) (_i : Fin 2) => ((j:ℕ):ℝ)) j i))‖^6)*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^(1:ℕ))^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ k ∈ (fun _ : Fin 2 => (Finset.univ : Finset (Fin 2))) j, c j k*fordAdditiveCharacter
+              (x 0*(fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) j k+x 1*((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) j k)^2+x 2*((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) j k)^((3:ℝ)/2)+x 3*Real.sqrt ((fun (_j : Fin 2) (_i : Fin 2) => (1/4:ℝ)) j k))‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_polynomial_base
+  refine ⟨C,hC,?_⟩
+  intro z c
+  have hs : Real.sqrt (1/4:ℝ) = 1/2 := by
+    rw [Real.sqrt_eq_iff_mul_self_eq (by norm_num) (by norm_num)]
+    norm_num
+  exact h 1 (Fin 2) (Fin 2) (fun _ => Finset.univ) (fun _ => Finset.univ)
+    z c (fun j _ => ((j:ℕ):ℝ)) (fun _ _ => 1/4)
+    (by intro j i hi; positivity) (by intro j i hi; norm_num)
+    (by intro j i hi; fin_cases j <;> norm_num)
+    (by intro j i hi; norm_num [hs])
+
+end TaoTrudgianYang2025.BourgainBootstrapBaseRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainSourceBootstrapRegression
+universe u
+
+example {ε ν : ℝ} (hε : 0 < ε) (hν : 0 < ν) :
+    ∃ C > (0:ℝ), ∀ (n : ℕ) (ι τ : Type u)
+      (S : Fin (2^n) → Finset ι) (V : Fin (2^n) → Finset τ)
+      (z : Fin (2^n) → ι → ℂ) (c : Fin (2^n) → τ → ℂ)
+      (w : Fin (2^n) → ι → ℝ) (v : Fin (2^n) → τ → ℝ),
+      (∀ j, ∀ i ∈ S j, 0 ≤ w j i) → (∀ j, ∀ k ∈ V j, 0 ≤ v j k) →
+      (∀ j, ∀ i ∈ S j, Real.sqrt (w j i) ∈ Icc
+        ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+      (∀ j, ∀ k ∈ V j, Real.sqrt (v j k) ∈ Icc
+        ((j:ℕ)/((2^n:ℕ):ℝ)) (((j:ℕ)+1)/((2^n:ℕ):ℝ))) →
+      (∀ j k, ∀ i ∈ S j, ∀ l ∈ V k,
+        ν ≤ |Real.sqrt (w j i)-Real.sqrt (v k l)|) →
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -((2:ℝ)^n)^2) (fun _ => ((2:ℝ)^n)^2),
+        ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+          (x 0*w ji.1 ji.2+x 1*(w ji.1 ji.2)^2+
+            x 2*(w ji.1 ji.2)^((3:ℝ)/2)+x 3*Real.sqrt (w ji.1 ji.2))‖^6*
+        ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+          (x 0*v jk.1 jk.2+x 1*(v jk.1 jk.2)^2+
+            x 2*(v jk.1 jk.2)^((3:ℝ)/2)+x 3*Real.sqrt (v jk.1 jk.2))‖^6) ≤
+        C*(2:ℝ)^(ε*n)/(((2:ℝ)^n)^2)^2*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ i ∈ S j, z j i*fordAdditiveCharacter
+              (x 0*w j i+x 1*(w j i)^2+x 2*(w j i)^((3:ℝ)/2)+x 3*Real.sqrt (w j i))‖^6)*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ k ∈ V j, c j k*fordAdditiveCharacter
+              (x 0*v j k+x 1*(v j k)^2+x 2*(v j k)^((3:ℝ)/2)+x 3*Real.sqrt (v j k))‖^6) := by
+  exact @TaoTrudgianYang2025.exists_bourgainSourceCurve_dyadic_decoupling.{u} ε ν hε hν
+
+/-- This checks the exact depth formula used by the analytic induction. -/
+example {n : ℕ} (hn : 9 ≤ n) :
+    let m := (2*n+2)/3+2
+    m < n ∧ (2:ℕ)^m < 2^n := by
+  dsimp
+  have hm : (2*n+2)/3+2 < n := by omega
+  exact ⟨hm,pow_lt_pow_right₀ (by decide) hm⟩
+
+/-- Positivity at every earlier depth does not give positivity at the target.
+The actual recurrence's depth formula sees the positive earlier value. -/
+example {n : ℕ} (hn : 9 ≤ n) :
+    let m := (2*n+2)/3+2
+    let D := fun j : ℕ => if j<n then (1:ℝ) else -1
+    (∀ j<n, 0<D j) ∧ 0<D m ∧ D n=-1 ∧ ¬0≤D n := by
+  dsimp
+  have hm : (2*n+2)/3+2<n := by omega
+  refine ⟨fun j hj => by simp only [if_pos hj]; norm_num,?_,by simp,by simp⟩
+  simp only [if_pos hm]
+  norm_num
+
+/-- Both closed endpoints, repeated frequencies, arbitrary coefficients and
+genuine empty cells, at every depth including the finite base and recurrence. -/
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (n : ℕ) (z c : Fin (2^n) → Fin 2 → ℂ),
+      let S : Fin (2^n) → Finset (Fin 2) :=
+        fun j => if (j:ℕ)=0 then Finset.univ else ∅
+      let V : Fin (2^n) → Finset (Fin 2) :=
+        fun j => if (j:ℕ)+1=2^n then Finset.univ else ∅
+      (∫ x : Fin 4 → ℝ in Icc (fun _ => -((2:ℝ)^n)^2) (fun _ => ((2:ℝ)^n)^2),
+        ‖∑ ji ∈ Finset.univ.sigma S, z ji.1 ji.2*fordAdditiveCharacter
+          (x 0*(0:ℝ)+x 1*((0:ℝ))^2+
+            x 2*((0:ℝ))^((3:ℝ)/2)+x 3*Real.sqrt ((0:ℝ)))‖^6*
+        ‖∑ jk ∈ Finset.univ.sigma V, c jk.1 jk.2*fordAdditiveCharacter
+          (x 0*(1:ℝ)+x 1*((1:ℝ))^2+
+            x 2*((1:ℝ))^((3:ℝ)/2)+x 3*Real.sqrt ((1:ℝ)))‖^6) ≤
+        C*(2:ℝ)^(ε*n)/(((2:ℝ)^n)^2)^2*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ i ∈ S j, z j i*fordAdditiveCharacter
+              (x 0*(0:ℝ)+x 1*((0:ℝ))^2+x 2*((0:ℝ))^((3:ℝ)/2)+x 3*Real.sqrt ((0:ℝ)))‖^6)*
+          (∑ j, ∫ x : Fin 4 → ℝ, ((1+‖(20*((2:ℝ)^n)^2)⁻¹ • x‖)^100)⁻¹*
+            ‖∑ k ∈ V j, c j k*fordAdditiveCharacter
+              (x 0*(1:ℝ)+x 1*((1:ℝ))^2+x 2*((1:ℝ))^((3:ℝ)/2)+x 3*Real.sqrt ((1:ℝ)))‖^6) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_dyadic_decoupling hε (by norm_num : (0:ℝ)<1)
+  refine ⟨C,hC,?_⟩
+  intro n z c
+  dsimp only
+  have hS (j : Fin (2^n)) (i : Fin 2)
+      (hi : i ∈ (if (j:ℕ)=0 then (Finset.univ : Finset (Fin 2)) else ∅)) :
+      (j:ℕ)=0 := by
+    by_contra hj
+    simp only [if_neg hj,Finset.notMem_empty] at hi
+  have hV (j : Fin (2^n)) (i : Fin 2)
+      (hi : i ∈ (if (j:ℕ)+1=2^n then (Finset.univ : Finset (Fin 2)) else ∅)) :
+      (j:ℕ)+1=2^n := by
+    by_contra hj
+    simp only [if_neg hj,Finset.notMem_empty] at hi
+  apply h n (Fin 2) (Fin 2)
+    (fun j => if (j:ℕ)=0 then Finset.univ else ∅)
+    (fun j => if (j:ℕ)+1=2^n then Finset.univ else ∅)
+    z c (fun _ _ => 0) (fun _ _ => 1)
+  · intro j i hi
+    norm_num
+  · intro j i hi
+    norm_num
+  · intro j i hi
+    simp only [Real.sqrt_zero,Set.mem_Icc,hS j i hi,Nat.cast_zero,zero_div,zero_add]
+    exact ⟨le_rfl,by positivity⟩
+  · intro j i hi
+    simp only [Real.sqrt_one,Set.mem_Icc]
+    have hj := hV j i hi
+    constructor
+    · apply (div_le_one (by positivity)).mpr
+      exact_mod_cast Nat.le_of_lt j.isLt
+    · apply (le_div_iff₀ (by positivity : (0:ℝ)<((2^n:ℕ):ℝ))).mpr
+      norm_num only [one_mul]
+      exact_mod_cast hj.ge
+  · intro j k i hi l hl
+    norm_num
+
+end TaoTrudgianYang2025.BourgainSourceBootstrapRegression
