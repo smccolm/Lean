@@ -47856,3 +47856,481 @@ example {ε : ℝ} (hε : 0<ε) :
     norm_num
 
 end TaoTrudgianYang2025.BourgainSourceBootstrapRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainAnisotropicRefinementRegression
+universe u
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (j : ℕ), 3≤j →
+      let N := (2:ℝ)^(2*j)
+      let T := N^2
+      let δ := 2/N
+      ∀ (b d r q ν : ℝ), b∈Icc (1/4:ℝ) 1 → d∈Icc (1/4:ℝ) 1 →
+        |q|≤2*T → 0<ν → ν≤|Real.sqrt b-Real.sqrt d| →
+        ∀ (ι κ : Type u) (S : Fin (2^(j+2)) → Finset ι) (V : Fin (2^(j+2)) → Finset κ)
+          (z : Fin (2^(j+2)) → ι → ℂ) (c : Fin (2^(j+2)) → κ → ℂ)
+          (m : Fin (2^(j+2)) → ι → ℤ) (l : Fin (2^(j+2)) → κ → ℤ),
+          (∀ k, ∀ i∈S k, (((m k i:ℝ)/T-b)/δ)∈Icc
+            ((k:ℕ)/((2^(j+2):ℕ):ℝ)) (((k:ℕ)+1)/((2^(j+2):ℕ):ℝ))) →
+          (∀ k, ∀ i∈V k, (((l k i:ℝ)/T-d)/δ)∈Icc
+            ((k:ℕ)/((2^(j+2):ℕ):ℝ)) (((k:ℕ)+1)/((2^(j+2):ℕ):ℝ))) →
+          (∫ x : Fin 2 → ℝ in Icc (fun _ => -(2*N^3)) (fun _ => 2*N^3),
+            (∫ y : Fin 4 → ℝ, ((1+‖(20*T)⁻¹ • y‖)^100)⁻¹*
+              ‖∑ ki∈Finset.univ.sigma S, z ki.1 ki.2*fordAdditiveCharacter
+                ((r+y 0)*((m ki.1 ki.2:ℝ)/T)+(x 0+y 1)*((m ki.1 ki.2:ℝ)/T)^2+
+                  (x 1+y 2)*((m ki.1 ki.2:ℝ)/T)^((3:ℝ)/2)+
+                  (q+y 3)*Real.sqrt ((m ki.1 ki.2:ℝ)/T))‖^6)*
+            (∫ y : Fin 4 → ℝ, ((1+‖(20*T)⁻¹ • y‖)^100)⁻¹*
+              ‖∑ ki∈Finset.univ.sigma V, c ki.1 ki.2*fordAdditiveCharacter
+                ((r+y 0)*((l ki.1 ki.2:ℝ)/T)+(x 0+y 1)*((l ki.1 ki.2:ℝ)/T)^2+
+                  (x 1+y 2)*((l ki.1 ki.2:ℝ)/T)^((3:ℝ)/2)+
+                  (q+y 3)*Real.sqrt ((l ki.1 ki.2:ℝ)/T))‖^6)) ≤
+            (C/ν)*(2:ℝ)^(ε*j)*N^12*
+              (∑ k, ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+                (∫ u : ℝ in Icc (0:ℝ) 1,
+                  ‖∑ i∈S k, z k i*fordAdditiveCharacter
+                    ((m k i:ℝ)*u+y 0*((m k i:ℝ)/T)^2+
+                      y 1*((m k i:ℝ)/T)^((3:ℝ)/2)+y 2*Real.sqrt ((m k i:ℝ)/T))‖^6))*
+              (∑ k, ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+                (∫ u : ℝ in Icc (0:ℝ) 1,
+                  ‖∑ i∈V k, c k i*fordAdditiveCharacter
+                    ((l k i:ℝ)*u+y 0*((l k i:ℝ)/T)^2+
+                      y 1*((l k i:ℝ)/T)^((3:ℝ)/2)+y 2*Real.sqrt ((l k i:ℝ)/T))‖^6)) := by
+  exact @exists_bourgainSourceCurve_anisotropic_cell_refinement.{u} ε hε
+
+example :
+    let N := (2:ℝ)^(2*(3:ℕ))
+    let T := N^2
+    let δ := 2/N
+    (2*N^3)*δ^3=16 ∧ (2*T)*δ^2=8 ∧
+      2*(2*N^3)*δ^2=16*N ∧
+      16*N=((2:ℝ)^(3+2:ℕ))^2 ∧
+      (T*δ^3)^2=64/N^2 := by norm_num
+
+end TaoTrudgianYang2025.BourgainAnisotropicRefinementRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainAnisotropicEndpointRegression
+
+/-- Actual repeated endpoint frequencies in the first and last fine cells.
+All other cells are empty; the coefficients and admissible shifts are arbitrary. -/
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (z c : Fin (2^(3+2)) → Fin 2 → ℂ) (r q : ℝ), |q|≤8192 →
+      let N := (2:ℝ)^(2*(3:ℕ))
+      let T := N^2
+      let ν := (1/4:ℝ)
+      let j := (3:ℕ)
+      let S : Fin (2^(3+2)) → Finset (Fin 2) :=
+        fun k => if (k:ℕ)=0 then Finset.univ else ∅
+      let V : Fin (2^(3+2)) → Finset (Fin 2) :=
+        fun k => if (k:ℕ)=31 then Finset.univ else ∅
+      let m : Fin (2^(3+2)) → Fin 2 → ℤ := fun _ _ => 1024
+      let l : Fin (2^(3+2)) → Fin 2 → ℤ := fun _ _ => 3200
+      (∫ x : Fin 2 → ℝ in Icc (fun _ => -(2*N^3)) (fun _ => 2*N^3),
+        (∫ y : Fin 4 → ℝ, ((1+‖(20*T)⁻¹ • y‖)^100)⁻¹*
+          ‖∑ ki∈Finset.univ.sigma S, z ki.1 ki.2*fordAdditiveCharacter
+            ((r+y 0)*((m ki.1 ki.2:ℝ)/T)+(x 0+y 1)*((m ki.1 ki.2:ℝ)/T)^2+
+              (x 1+y 2)*((m ki.1 ki.2:ℝ)/T)^((3:ℝ)/2)+
+              (q+y 3)*Real.sqrt ((m ki.1 ki.2:ℝ)/T))‖^6)*
+        (∫ y : Fin 4 → ℝ, ((1+‖(20*T)⁻¹ • y‖)^100)⁻¹*
+          ‖∑ ki∈Finset.univ.sigma V, c ki.1 ki.2*fordAdditiveCharacter
+            ((r+y 0)*((l ki.1 ki.2:ℝ)/T)+(x 0+y 1)*((l ki.1 ki.2:ℝ)/T)^2+
+              (x 1+y 2)*((l ki.1 ki.2:ℝ)/T)^((3:ℝ)/2)+
+              (q+y 3)*Real.sqrt ((l ki.1 ki.2:ℝ)/T))‖^6)) ≤
+        (C/ν)*(2:ℝ)^(ε*j)*N^12*
+          (∑ k, ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+            (∫ u : ℝ in Icc (0:ℝ) 1,
+              ‖∑ i∈S k, z k i*fordAdditiveCharacter
+                ((m k i:ℝ)*u+y 0*((m k i:ℝ)/T)^2+
+                  y 1*((m k i:ℝ)/T)^((3:ℝ)/2)+y 2*Real.sqrt ((m k i:ℝ)/T))‖^6))*
+          (∑ k, ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+            (∫ u : ℝ in Icc (0:ℝ) 1,
+              ‖∑ i∈V k, c k i*fordAdditiveCharacter
+                ((l k i:ℝ)*u+y 0*((l k i:ℝ)/T)^2+
+                  y 1*((l k i:ℝ)/T)^((3:ℝ)/2)+y 2*Real.sqrt ((l k i:ℝ)/T))‖^6)) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_anisotropic_cell_refinement hε
+  refine ⟨C,hC,?_⟩
+  intro z c r q hq
+  dsimp only
+  have hsep : (1/4:ℝ)≤|Real.sqrt (1/4:ℝ)-Real.sqrt (3/4:ℝ)| := by
+    have hs : Real.sqrt (1/4:ℝ)=1/2 := by norm_num
+    have ht : (3/4:ℝ)≤Real.sqrt (3/4:ℝ) := by
+      apply (Real.le_sqrt (by norm_num) (by norm_num)).mpr
+      norm_num
+    rw [hs,abs_of_nonpos (by linarith)]
+    linarith
+  apply h 3 (by decide) (1/4) (3/4) r q (1/4)
+    (by norm_num) (by norm_num) (by simpa only [show 2*((2:ℝ)^(2*3))^2=8192 by norm_num] using hq)
+    (by norm_num) hsep (Fin 2) (Fin 2)
+    (fun k => if (k:ℕ)=0 then Finset.univ else ∅)
+    (fun k => if (k:ℕ)=31 then Finset.univ else ∅)
+    z c (fun _ _ => 1024) (fun _ _ => 3200)
+  · intro k i hi
+    have hk : (k:ℕ)=0 := by
+      by_contra hk
+      simp only [if_neg hk,Finset.notMem_empty] at hi
+    norm_num [hk]
+  · intro k i hi
+    have hk : (k:ℕ)=31 := by
+      by_contra hk
+      simp only [if_neg hk,Finset.notMem_empty] at hi
+    norm_num [hk]
+
+end TaoTrudgianYang2025.BourgainAnisotropicEndpointRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainSmallAnisotropicRegression
+universe u
+
+example {ε ν : ℝ} (hε : 0<ε) (hν : 0<ν) :
+    ∃ C>(0:ℝ), ∀ (j : ℕ), 3≤j →
+      let N := (2:ℝ)^(2*j)
+      let T := N^2
+      let δ := 2/N
+      1/N≤ν/2 →
+      ∀ (ι κ : Type u) (S : Finset ι) (V : Finset κ)
+        (z : ι → ℂ) (c : κ → ℂ) (m : ι → ℤ) (l : κ → ℤ),
+        (∀ a∈S, (m a:ℝ)/T∈Icc (1/4:ℝ) 1) →
+        (∀ a∈V, (l a:ℝ)/T∈Icc (1/4:ℝ) 1) →
+        (∀ a∈S, ∀ a'∈V, ν≤|Real.sqrt ((m a:ℝ)/T)-Real.sqrt ((l a':ℝ)/T)|) →
+        (∫ x : Fin 4 → ℝ in Icc (-![T,N^3,N^3,T]) ![T,N^3,N^3,T],
+          ‖∑ a∈S, z a*fordAdditiveCharacter
+            (x 0*((m a:ℝ)/T)+x 1*((m a:ℝ)/T)^2+
+              x 2*((m a:ℝ)/T)^((3:ℝ)/2)+x 3*Real.sqrt ((m a:ℝ)/T))‖^6*
+          ‖∑ a∈V, c a*fordAdditiveCharacter
+            (x 0*((l a:ℝ)/T)+x 1*((l a:ℝ)/T)^2+
+              x 2*((l a:ℝ)/T)^((3:ℝ)/2)+x 3*Real.sqrt ((l a:ℝ)/T))‖^6) ≤
+          C*(2:ℝ)^(ε*j)*N^4*
+          (∑ i : Fin (2^(2*j)), ∑ k : Fin (2^(j+2)),
+            ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+              (∫ u : ℝ in Icc (0:ℝ) 1,
+                ‖∑ a∈((S.filter (fun a =>
+                    min ⌊N*Real.sqrt ((m a:ℝ)/T)⌋₊ (2^(2*j)-1)=(i:ℕ))).filter
+                  (fun a => min ⌊((2^(j+2):ℕ):ℝ)*
+                    ((((m a:ℝ)/T)-(((i:ℕ):ℝ)/N)^2)/δ)⌋₊ (2^(j+2)-1)=(k:ℕ))),
+                  z a*fordAdditiveCharacter ((m a:ℝ)*u+
+                    y 0*((m a:ℝ)/T)^2+y 1*((m a:ℝ)/T)^((3:ℝ)/2)+
+                    y 2*Real.sqrt ((m a:ℝ)/T))‖^6))*
+          (∑ i : Fin (2^(2*j)), ∑ k : Fin (2^(j+2)),
+            ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+              (∫ u : ℝ in Icc (0:ℝ) 1,
+                ‖∑ a∈((V.filter (fun a =>
+                    min ⌊N*Real.sqrt ((l a:ℝ)/T)⌋₊ (2^(2*j)-1)=(i:ℕ))).filter
+                  (fun a => min ⌊((2^(j+2):ℕ):ℝ)*
+                    ((((l a:ℝ)/T)-(((i:ℕ):ℝ)/N)^2)/δ)⌋₊ (2^(j+2)-1)=(k:ℕ))),
+                  c a*fordAdditiveCharacter ((l a:ℝ)*u+
+                    y 0*((l a:ℝ)/T)^2+y 1*((l a:ℝ)/T)^((3:ℝ)/2)+
+                    y 2*Real.sqrt ((l a:ℝ)/T))‖^6)) := by
+  exact @exists_bourgainSourceCurve_small_anisotropic_refinement.{u} ε ν hε hν
+
+/-- The lower endpoint belongs to coarse cell 32; the upper endpoint is clamped
+to coarse cell 63, whose actual fine coordinate selects cell 31. -/
+example :
+    min ⌊(64:ℝ)*Real.sqrt (1/4:ℝ)⌋₊ ((2:ℕ)^6-1)=32 ∧
+    min ⌊(64:ℝ)*Real.sqrt (1:ℝ)⌋₊ ((2:ℕ)^6-1)=63 ∧
+    min ⌊(32:ℝ)*(((1:ℝ)-(63/64)^2)/(1/32))⌋₊ ((2:ℕ)^5-1)=31 ∧
+    (1/(64:ℝ)≤(1/4)/2) := by norm_num
+
+end TaoTrudgianYang2025.BourgainSmallAnisotropicRegression
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025.BourgainSmallAnisotropicEndpointRegression
+
+/-- The original-source consumer retains repeated endpoint frequencies and
+arbitrary complex coefficients; no partition or moment bound is supplied. -/
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (z c : Fin 2 → ℂ),
+      let j := (3:ℕ)
+      let N := (2:ℝ)^(2*j)
+      let T := N^2
+      let δ := 2/N
+      let S : Finset (Fin 2) := Finset.univ
+      let V : Finset (Fin 2) := Finset.univ
+      let m : Fin 2 → ℤ := fun _ => 1024
+      let l : Fin 2 → ℤ := fun _ => 4096
+      (∫ x : Fin 4 → ℝ in Icc (-![T,N^3,N^3,T]) ![T,N^3,N^3,T],
+        ‖∑ a∈S, z a*fordAdditiveCharacter
+          (x 0*((m a:ℝ)/T)+x 1*((m a:ℝ)/T)^2+
+            x 2*((m a:ℝ)/T)^((3:ℝ)/2)+x 3*Real.sqrt ((m a:ℝ)/T))‖^6*
+        ‖∑ a∈V, c a*fordAdditiveCharacter
+          (x 0*((l a:ℝ)/T)+x 1*((l a:ℝ)/T)^2+
+            x 2*((l a:ℝ)/T)^((3:ℝ)/2)+x 3*Real.sqrt ((l a:ℝ)/T))‖^6) ≤
+        C*(2:ℝ)^(ε*j)*N^4*
+        (∑ i : Fin (2^(2*j)), ∑ k : Fin (2^(j+2)),
+          ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+            (∫ u : ℝ in Icc (0:ℝ) 1,
+              ‖∑ a∈((S.filter (fun a =>
+                  min ⌊N*Real.sqrt ((m a:ℝ)/T)⌋₊ (2^(2*j)-1)=(i:ℕ))).filter
+                (fun a => min ⌊((2^(j+2):ℕ):ℝ)*
+                  ((((m a:ℝ)/T)-(((i:ℕ):ℝ)/N)^2)/δ)⌋₊ (2^(j+2)-1)=(k:ℕ))),
+                z a*fordAdditiveCharacter ((m a:ℝ)*u+
+                  y 0*((m a:ℝ)/T)^2+y 1*((m a:ℝ)/T)^((3:ℝ)/2)+
+                  y 2*Real.sqrt ((m a:ℝ)/T))‖^6))*
+        (∑ i : Fin (2^(2*j)), ∑ k : Fin (2^(j+2)),
+          ∫ y : Fin 3 → ℝ, (∏ a : Fin 3, (1+(y a/(20*T))^2)⁻¹)*
+            (∫ u : ℝ in Icc (0:ℝ) 1,
+              ‖∑ a∈((V.filter (fun a =>
+                  min ⌊N*Real.sqrt ((l a:ℝ)/T)⌋₊ (2^(2*j)-1)=(i:ℕ))).filter
+                (fun a => min ⌊((2^(j+2):ℕ):ℝ)*
+                  ((((l a:ℝ)/T)-(((i:ℕ):ℝ)/N)^2)/δ)⌋₊ (2^(j+2)-1)=(k:ℕ))),
+                c a*fordAdditiveCharacter ((l a:ℝ)*u+
+                  y 0*((l a:ℝ)/T)^2+y 1*((l a:ℝ)/T)^((3:ℝ)/2)+
+                  y 2*Real.sqrt ((l a:ℝ)/T))‖^6)) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_small_anisotropic_refinement hε
+    (by norm_num : (0:ℝ)<1/4)
+  refine ⟨C,hC,?_⟩
+  intro z c
+  dsimp only
+  exact h 3 (by decide) (by norm_num) (Fin 2) (Fin 2)
+    Finset.univ Finset.univ z c (fun _ => 1024) (fun _ => 4096)
+    (by intro a ha; norm_num) (by intro a ha; norm_num)
+    (by intro a ha a' ha'; norm_num)
+
+end TaoTrudgianYang2025.BourgainSmallAnisotropicEndpointRegression
+
+/-! Native quadratic VMVT: full physical source contract and repeated endpoints. -/
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators ComplexConjugate
+namespace TaoTrudgianYang2025
+universe u
+
+example
+    {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (b d δ T q ν : ℝ),
+      b∈Icc (1/4:ℝ) 1 → d∈Icc (1/4:ℝ) 1 →
+      δ∈Ioc (0:ℝ) (1/16) → 0<T →
+      (2*T^2)*δ^3≤32 → 2*T*δ^2≤32 → |q|≤2*T →
+      0<ν → ν≤|Real.sqrt b-Real.sqrt d| →
+      ∀ (Q P : ℕ), 1≤Q → 1≤P →
+      ∀ (ι κ : Type u) (S : Finset ι) (V : Finset κ)
+        (z : ι → ℂ) (c : κ → ℂ) (m : ι → ℤ) (n : κ → ℤ)
+        (A D : ℤ) (B H : ℝ),
+        0≤B → 0≤H →
+        (∀ i∈S,(m i:ℝ)/T∈Icc b (b+δ)) →
+        (∀ i∈V,(n i:ℝ)/T∈Icc d (d+δ)) →
+        (∀ i∈S,A < m i ∧ m i≤A+Q) →
+        (∀ i∈V,D < n i ∧ n i≤D+P) →
+        (∀ k : ℤ,(∑ i∈S.filter (fun i => m i=k),‖z i‖)≤B) →
+        (∀ k : ℤ,(∑ i∈V.filter (fun i => n i=k),‖c i‖)≤H) →
+        (∫ x : Fin 2 → ℝ in Icc (fun _ => -2*T^2) (fun _ => 2*T^2),
+          (∫ u : ℝ in Icc (0:ℝ) 1,
+            ‖∑ i∈S,z i*fordAdditiveCharacter ((m i:ℝ)*u+
+              x 0*((m i:ℝ)/T)^2+x 1*((m i:ℝ)/T)^((3:ℝ)/2)+
+              q*Real.sqrt ((m i:ℝ)/T))‖^6)*
+          (∫ u : ℝ in Icc (0:ℝ) 1,
+            ‖∑ i∈V,c i*fordAdditiveCharacter ((n i:ℝ)*u+
+              x 0*((n i:ℝ)/T)^2+x 1*((n i:ℝ)/T)^((3:ℝ)/2)+
+              q*Real.sqrt ((n i:ℝ)/T))‖^6)) ≤
+          (C/ν)*T^4*B^6*H^6*(Q:ℝ)^((3:ℝ)+ε)*(P:ℝ)^((3:ℝ)+ε) := by
+  exact exists_bourgainSourceCurve_large_plane_quadratic_bound.{u} hε
+
+example :
+    (2*(4096:ℝ)^2)*(1/1024)^3≤32 ∧
+    2*(4096:ℝ)*(1/1024)^2≤32 ∧
+    (4096:ℝ)*(1/1024)=4 ∧
+    (1:ℕ)≤6 := by norm_num
+
+end TaoTrudgianYang2025
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators ComplexConjugate
+namespace TaoTrudgianYang2025
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (z c : Fin 2 → ℂ),
+      (∫ x : Fin 2 → ℝ in Icc (fun _ => -2*(4096:ℝ)^2) (fun _ => 2*(4096:ℝ)^2),
+        (∫ u : ℝ in Icc (0:ℝ) 1,
+          ‖∑ i : Fin 2,z i*fordAdditiveCharacter ((1024:ℝ)*u+
+            x 0*((1024:ℝ)/4096)^2+x 1*((1024:ℝ)/4096)^((3:ℝ)/2)+
+            0*Real.sqrt ((1024:ℝ)/4096))‖^6)*
+        (∫ u : ℝ in Icc (0:ℝ) 1,
+          ‖∑ i : Fin 2,c i*fordAdditiveCharacter ((4096:ℝ)*u+
+            x 0*((4096:ℝ)/4096)^2+x 1*((4096:ℝ)/4096)^((3:ℝ)/2)+
+            0*Real.sqrt ((4096:ℝ)/4096))‖^6)) ≤
+        (C/(1/2:ℝ))*(4096:ℝ)^4*(‖z 0‖+‖z 1‖)^6*(‖c 0‖+‖c 1‖)^6*
+          (6:ℝ)^((3:ℝ)+ε)*(6:ℝ)^((3:ℝ)+ε) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_large_plane_quadratic_bound hε
+  refine ⟨C,hC,?_⟩
+  intro z c
+  have hmass (w : Fin 2 → ℂ) (a k : ℤ) :
+      (∑ i∈(Finset.univ : Finset (Fin 2)).filter (fun _ => a=k),‖w i‖)≤
+        ‖w 0‖+‖w 1‖ := by
+    by_cases ha : a=k
+    · simp [ha,Fin.sum_univ_two]
+    · simp only [ha,Finset.filter_false,Finset.sum_empty]
+      positivity
+  have hsep : (1/2:ℝ)≤|Real.sqrt (1/4:ℝ)-Real.sqrt 1| := by
+    norm_num [Real.sqrt_div]
+  have hh := h (1/4) 1 (1/1024) 4096 0 (1/2)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) hsep
+    6 6 (by decide) (by decide) (Fin 2) (Fin 2) Finset.univ Finset.univ
+    z c (fun _ => 1024) (fun _ => 4096) 1023 4095
+    (‖z 0‖+‖z 1‖) (‖c 0‖+‖c 1‖) (by positivity) (by positivity)
+    (by intro i hi; norm_num) (by intro i hi; norm_num)
+    (by intro i hi; norm_num) (by intro i hi; norm_num)
+    (hmass z 1024) (hmass c 4096)
+  exact hh
+
+end TaoTrudgianYang2025
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025
+universe u
+
+example
+    {ε ν : ℝ} (hε : 0<ε) (hν : 0<ν) :
+    ∃ C>(0:ℝ), ∀ (j : ℕ), 3≤j →
+      let N := (2:ℝ)^(2*j)
+      let T := N^2
+      1/N≤ν/2 →
+      ∀ (ι κ : Type u) (S : Finset ι) (V : Finset κ)
+        (z : ι → ℂ) (c : κ → ℂ) (m : ι → ℤ) (n : κ → ℤ) (B H : ℝ),
+        0≤B → 0≤H →
+        (∀ a∈S,(m a:ℝ)/T∈Icc (1/4:ℝ) 1) →
+        (∀ a∈V,(n a:ℝ)/T∈Icc (1/4:ℝ) 1) →
+        (∀ a∈S,∀ a'∈V,ν≤|Real.sqrt ((m a:ℝ)/T)-Real.sqrt ((n a':ℝ)/T)|) →
+        (∀ k : ℤ,(∑ a∈S.filter (fun a => m a=k),‖z a‖)≤B) →
+        (∀ k : ℤ,(∑ a∈V.filter (fun a => n a=k),‖c a‖)≤H) →
+        (∫ x : Fin 4 → ℝ in Icc (-![T,T^2,T^2,T]) ![T,T^2,T^2,T],
+          ‖∑ a∈S,z a*fordAdditiveCharacter (x 0*((m a:ℝ)/T)+
+            x 1*((m a:ℝ)/T)^2+x 2*((m a:ℝ)/T)^((3:ℝ)/2)+
+            x 3*Real.sqrt ((m a:ℝ)/T))‖^6*
+          ‖∑ a∈V,c a*fordAdditiveCharacter (x 0*((n a:ℝ)/T)+
+            x 1*((n a:ℝ)/T)^2+x 2*((n a:ℝ)/T)^((3:ℝ)/2)+
+            x 3*Real.sqrt ((n a:ℝ)/T))‖^6) ≤
+          C*(2:ℝ)^(ε*j)*T^12*B^6*H^6 := by
+  exact exists_bourgainSourceCurve_large_anisotropic_bilinear_bound.{u} hε hν
+
+example : (64*32:ℕ)^2*8^6=16*64^6 ∧
+    (2*(64:ℝ)^3)^2*(4096:ℝ)^12=4*(64:ℝ)^30 := by
+  norm_num
+
+end TaoTrudgianYang2025
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (z c : Fin 2 → ℂ),
+      (∫ x : Fin 4 → ℝ in
+        Icc (-![(4096:ℝ),4096^2,4096^2,4096]) ![4096,4096^2,4096^2,4096],
+        ‖∑ a : Fin 2,z a*fordAdditiveCharacter
+          (x 0*((1024:ℝ)/4096)+x 1*((1024:ℝ)/4096)^2+
+            x 2*((1024:ℝ)/4096)^((3:ℝ)/2)+x 3*Real.sqrt ((1024:ℝ)/4096))‖^6*
+        ‖∑ a : Fin 2,c a*fordAdditiveCharacter
+          (x 0*((4096:ℝ)/4096)+x 1*((4096:ℝ)/4096)^2+
+            x 2*((4096:ℝ)/4096)^((3:ℝ)/2)+x 3*Real.sqrt ((4096:ℝ)/4096))‖^6) ≤
+          C*(2:ℝ)^(ε*3)*(4096:ℝ)^12*(‖z 0‖+‖z 1‖)^6*(‖c 0‖+‖c 1‖)^6 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_large_anisotropic_bilinear_bound
+    hε (by norm_num : (0:ℝ)<1/4)
+  refine ⟨C,hC,?_⟩
+  intro z c
+  have hmass (w : Fin 2 → ℂ) (a k : ℤ) :
+      (∑ i∈(Finset.univ : Finset (Fin 2)).filter (fun _ => a=k),‖w i‖)≤
+        ‖w 0‖+‖w 1‖ := by
+    by_cases ha : a=k
+    · simp [ha,Fin.sum_univ_two]
+    · simp only [ha,Finset.filter_false,Finset.sum_empty]
+      positivity
+  have hh := h 3 (by decide) (by norm_num) (Fin 2) (Fin 2) Finset.univ Finset.univ
+    z c (fun _ => 1024) (fun _ => 4096)
+    (‖z 0‖+‖z 1‖) (‖c 0‖+‖c 1‖) (by positivity) (by positivity)
+    (by intro a ha; norm_num) (by intro a ha; norm_num)
+    (by intro a ha a' ha'; norm_num)
+    (hmass z 1024) (hmass c 4096)
+  simpa only [show ((2:ℝ)^(2*3))^2=4096 by norm_num,Nat.cast_ofNat] using hh
+
+end TaoTrudgianYang2025
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025
+universe u
+
+example {ε ν : ℝ} (hε : 0<ε) (hν : 0<ν) :
+    ∃ C>(0:ℝ), ∀ T : ℝ, 1≤T →
+      ∀ (ι κ : Type u) (S : Finset ι) (V : Finset κ)
+        (z : ι → ℂ) (c : κ → ℂ) (m : ι → ℤ) (n : κ → ℤ) (B H : ℝ),
+        0≤B → 0≤H →
+        (∀ i∈S,(m i:ℝ)/T∈Icc (1/2:ℝ) 1) →
+        (∀ i∈V,(n i:ℝ)/T∈Icc (1/2:ℝ) 1) →
+        (∀ i∈S,∀ a∈V,ν≤|Real.sqrt ((m i:ℝ)/T)-Real.sqrt ((n a:ℝ)/T)|) →
+        (∀ q : ℤ,(∑ i∈S.filter (fun i => m i=q),‖z i‖)≤B) →
+        (∀ q : ℤ,(∑ i∈V.filter (fun i => n i=q),‖c i‖)≤H) →
+        (∫ x : Fin 4 → ℝ in Icc (-![T,T^2,T^2,T]) ![T,T^2,T^2,T],
+          ‖∑ i∈S,z i*fordAdditiveCharacter (x 0*((m i:ℝ)/T)+
+            x 1*((m i:ℝ)/T)^2+x 2*((m i:ℝ)/T)^((3:ℝ)/2)+
+            x 3*Real.sqrt ((m i:ℝ)/T))‖^6*
+          ‖∑ i∈V,c i*fordAdditiveCharacter (x 0*((n i:ℝ)/T)+
+            x 1*((n i:ℝ)/T)^2+x 2*((n i:ℝ)/T)^((3:ℝ)/2)+
+            x 3*Real.sqrt ((n i:ℝ)/T))‖^6) ≤
+            C*T^((12:ℝ)+ε)*B^6*H^6 := by
+  exact exists_bourgainSourceCurve_all_scale_bilinear_bound.{u} hε hν
+
+end TaoTrudgianYang2025
+
+
+noncomputable section
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+namespace TaoTrudgianYang2025
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (z c : Fin 2 → ℂ),
+      (∫ x : Fin 4 → ℝ in
+        Icc (-![(7/2:ℝ),(7/2)^2,(7/2)^2,7/2]) ![7/2,(7/2)^2,(7/2)^2,7/2],
+        ‖∑ a : Fin 2,z a*fordAdditiveCharacter
+          (x 0*((2:ℝ)/(7/2))+x 1*((2:ℝ)/(7/2))^2+
+            x 2*((2:ℝ)/(7/2))^((3:ℝ)/2)+x 3*Real.sqrt ((2:ℝ)/(7/2)))‖^6*
+        ‖∑ a : Fin 2,c a*fordAdditiveCharacter
+          (x 0*((3:ℝ)/(7/2))+x 1*((3:ℝ)/(7/2))^2+
+            x 2*((3:ℝ)/(7/2))^((3:ℝ)/2)+x 3*Real.sqrt ((3:ℝ)/(7/2)))‖^6) ≤
+          C*(7/2:ℝ)^((12:ℝ)+ε)*(‖z 0‖+‖z 1‖)^6*(‖c 0‖+‖c 1‖)^6 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_all_scale_bilinear_bound
+    hε (by norm_num : (0:ℝ)<1/16)
+  refine ⟨C,hC,?_⟩
+  intro z c
+  have hmass (w : Fin 2 → ℂ) (a k : ℤ) :
+      (∑ i∈(Finset.univ : Finset (Fin 2)).filter (fun _ => a=k),‖w i‖)≤
+        ‖w 0‖+‖w 1‖ := by
+    by_cases ha : a=k
+    · simp [ha,Fin.sum_univ_two]
+    · simp only [ha,Finset.filter_false,Finset.sum_empty]
+      positivity
+  have hs₁ : Real.sqrt ((2:ℝ)/(7/2))≤4/5 := by
+    have he := Real.sq_sqrt (show (0:ℝ)≤2/(7/2) by norm_num)
+    have hp := Real.sqrt_nonneg ((2:ℝ)/(7/2))
+    nlinarith
+  have hs₂ : (9/10:ℝ)≤Real.sqrt ((3:ℝ)/(7/2)) := by
+    have he := Real.sq_sqrt (show (0:ℝ)≤3/(7/2) by norm_num)
+    have hp := Real.sqrt_nonneg ((3:ℝ)/(7/2))
+    nlinarith
+  have hsep : (1/16:ℝ)≤|Real.sqrt ((2:ℝ)/(7/2))-Real.sqrt ((3:ℝ)/(7/2))| := by
+    rw [abs_of_nonpos (by linarith)]
+    linarith
+  exact h (7/2) (by norm_num) (Fin 2) (Fin 2) Finset.univ Finset.univ
+    z c (fun _ => 2) (fun _ => 3)
+    (‖z 0‖+‖z 1‖) (‖c 0‖+‖c 1‖) (by positivity) (by positivity)
+    (by intro a ha; norm_num) (by intro a ha; norm_num)
+    (by intro a ha a' ha'; exact hsep)
+    (hmass z 2) (hmass c 3)
+
+end TaoTrudgianYang2025

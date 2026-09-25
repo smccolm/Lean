@@ -2,22 +2,23 @@
 
 Verified analytic checkpoint (25 September 2026):
 [ParabolaBilinearLocalization](../Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves global dyadic bilinear decoupling for the literal source curve
-with every positive epsilon loss. For N=2^n and R=N^2 the bound is
-C(epsilon,nu)*2^(epsilon*n)/R^2 times both sums of actual source-cell
-sixth moments at radial weight scale 20R. Positive cross-family separation
-nu is imposed on actual square-root frequencies; arbitrary coefficients,
-multiplicities, empty cells and closed-grid endpoints are retained.
-The proved smaller-grid recurrence uses m=(2n+2)/3+2<n for n>=9.
-Coarse separation, independent shifts, exact scale cancellation and the
-genuine N^22 polynomial starting bound discharge all induction inputs.
-Both BAT gates pass: 82 public theorems and 156 focused regressions; this
-batch added one public theorem and four regressions in the existing module.
-Next: anisotropic-domain and bilinear-to-linear first spacing, followed by
-the independent second-spacing/cubic-Poisson inputs. The Bourgain pair,
-generic D and EPZAE-11/13/14 remain OPEN; completion is still 31/42.
-Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples and
-all Add-est results are preserved.
+now proves `exists_bourgainSourceCurve_large_anisotropic_bilinear_bound`.
+For j>=3, N=2^(2j), T=N^2 and 1/N<=nu/2, the literal original-source
+bilinear sixth-moment product on the rectangle with half-widths
+(T,T^2,T^2,T) is bounded by C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6.
+B,H are actual coefficient-fiber masses. Exact middle-coordinate averaging,
+canonical fine-cell geometry, native quadratic VMVT and the physical
+cell-count cancellation are derived. Arbitrary coefficients, repeated
+frequencies, closed endpoints, empty cells and unbounded shifts are retained.
+No analytic bound is assumed and no production module was added.
+Both BAT gates pass: 86 public theorems and 168 focused regressions;
+this batch added one public theorem and three regressions.
+Next: all-scale normalization and the localized shifted-phase estimate
+needed for bilinear-to-linear first spacing. The dyadic bilinear bound
+does not itself prove linear first spacing. Second spacing/cubic-Poisson,
+the Bourgain pair and generic D remain OPEN.
+Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
+the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 
 Current analytic priority: [closure-first cluster and short obligation DAG](../Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority).
 EPZAE-15 and EPZAE-26 are complete: the Robert–Sargos analytic pair (1/13,10/13), the exact old pair (3/40,31/40), mu(7/10) <= 3/40 and the full improved Heath–Brown density bound are kernel-checked and BAT-verified. Completion is 31/42. EPZAE-11/13/14 remain OPEN; Watt's pair and the all-length fourth-derivative estimate (1.6) are not needed for this closure.

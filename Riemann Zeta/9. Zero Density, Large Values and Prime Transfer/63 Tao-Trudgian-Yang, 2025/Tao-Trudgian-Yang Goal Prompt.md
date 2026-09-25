@@ -31,47 +31,26 @@ Keep this short remaining-obligation DAG current (the Robert–Sargos alternativ
 belongs to EPZAE-15/26; the generic D-process remains a separate EPZAE-11 obligation):
 
 ```text
-zero-q column [DONE] + diagonal [DONE] + zero-r row [DONE]
-  -> zero-shift combination [DONE]
-  -> nonzero common-shift reduction [DONE]
-  -> common-prefix identity + physical C4 mixed-remainder jets [DONE]
-  -> uniform exponential-weight variation + actual signed partial summation [DONE]
-  -> original symmetric-sum-to-polynomial consumer [DONE]
-  -> source-polynomial double-large-sieve + actual arithmetic collisions [DONE]
-  -> physical sample spacing, including diagonal and both signs [DONE]
-  -> physical scale assembly [DONE]
-  -> original-sum long-range fourth-derivative theorem (1.5) [DONE]
-  -> exact model-phase/subinterval and scale-window bridge [DONE]
+zero-q column + diagonal + zero-r row -> zero-shift combination [DONE]
+  -> mixed derivatives/common-prefix partial summation [DONE]
+  -> original-sum double-large-sieve + actual physical spacing [DONE]
+  -> scale assembly -> long-range fourth-derivative theorem (1.5) [DONE]
   -> analytic pair (1/13,10/13) -> (3/40,31/40) [DONE]
-  -> EPZAE-15 / EPZAE-26 exact consumers [DONE]
+  -> EPZAE-15 growth / EPZAE-26 density [DONE]
 
 Remaining independent source gates:
 Sargos 1995 analytic curve/short-sum estimate [OPEN]
   -> generic D beta-process [EPZAE-11 OPEN]
-finite sinc-weighted parabola localization [DONE]
-  -> constructed positive rapid cutoff + finite Euclidean source localization [DONE]
-  -> frequency-shift/shear entry for arbitrary separated intervals, |beta| <= 1 [DONE]
-  -> source-weight averaging + full finite weighted localization [DONE]
-  -> actual Fourier band + nonzero cutoff entry + exact rescaling [DONE]
-  -> band localization + actual Holder swap [DONE]
-  -> actual weighted L6 norm + trivial grid bound + conditional grid rescaling [DONE]
-  -> closed-cell localization retaining all endpoints [DONE]
-  -> actual pointwise/integrated bilinear reduction + product-grid composition [DONE]
-  -> genuine bilinear base bound + linked localization/Holder recurrence [DONE]
-  -> linear/bilinear comparison + finite dyadic iteration [DONE]
-  -> numerical epsilon-loss finite parabola decoupling + physical-box entry [DONE]
-  -> actual bounded cubic/quartic kernel + sixth-moment/physical-box transfer [DONE]
-  -> exact scaled source entry + 4D frame/product reduction [DONE]
-  -> linked-scale Fourier averages + actual source-to-parabolic-cell consumer [DONE]
-  -> inverse multiplier + radial comparison + actual curve-cell return [DONE]
-  -> linked-scale local bilinear source-curve cell decoupling [DONE]
-  -> exact 4D weighted averaging + genuine N^22 polynomial base [DONE]
-  -> actual strictly smaller-scale grid entry + averaged local recurrence [DONE]
-  -> genuine strong-induction epsilon bootstrap for literal source arrays [DONE]
-  -> anisotropic-domain + bilinear-to-linear first-spacing entry [OPEN]
+finite weighted parabola decoupling + actual quartic source entry [DONE]
+  -> linked source-cell return + genuine global dyadic bootstrap [DONE]
+  -> integer periods + mixed remainder + small-anisotropic assembly [DONE]
+  -> native quadratic VMVT + actual larger-plane fine-cell bound [DONE]
+  -> exact middle averaging + global larger-rectangle bilinear bound [DONE]
+  -> all-scale normalization + localized shifted-phase estimate [OPEN]
+  -> bilinear-to-linear first-spacing theorem [OPEN]
 Bourgain second spacing + cubic-Poisson source entry [OPEN]
   -> analytic pair (13/84,55/84) [OPEN]
-D + Bourgain pair + Huxley/Trudgian–Yang beta inputs [OPEN]
+D + Bourgain pair + Huxley/Trudgian--Yang beta inputs [OPEN]
   -> exact beta table [EPZAE-13 OPEN]
   -> four new pairs [EPZAE-14 OPEN]
 ```
@@ -85,7 +64,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (82 public theorems and 156 focused
+module now passes both BAT gates (86 public theorems and 168 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -104,12 +83,48 @@ with epsilon/2. Regressions include the complete public signature, exact
 strictness, a negative target value despite positive earlier values, and
 actual repeated endpoint frequencies with empty cells at every depth.
 
-Next close anisotropic-domain assembly and bilinear-to-linear first spacing
-in Bourgain section 2, starting from the translated actual-source estimate.
-Reuse the existing source modulation, finite-cover, averaging and periodic
-integral machinery. The independent second-spacing/cubic-Poisson inputs
-also remain open. The isotropic dyadic estimate does not close the full
-first-spacing theorem, the analytic pair or generic D. Do not reopen optional
+The next public consumer, `exists_bourgainSourceCurve_anisotropic_cell_refinement`,
+now proves the actual weighted coarse-cell plane bound. With j>=3,
+N=2^(2j), T=N^2 and delta=2/N, its coefficient is
+(C(epsilon)/nu)*2^(epsilon*j)*N^12. Integer periods, the mixed Taylor
+remainder, quadratic decoupling, frame Jacobian, kernel tails and all
+physical scale conditions are derived. The existing Sargos Fourier
+kernel is reused. Arbitrary coefficients, multiplicities, empty cells,
+closed endpoints and both unbounded shift phases are retained.
+Its exact signature, smallest admissible scale and actual repeated-endpoint
+consumer are covered by three new regressions; both BAT gates pass.
+
+The original-source consumer
+`exists_bourgainSourceCurve_small_anisotropic_refinement` now derives
+outer-coordinate integration, actual root/fine assignments and global
+assembly. Its coefficient is C(epsilon,nu)*2^(epsilon*j)*N^4 on the
+rectangle with half-widths (T,N^3,N^3,T), for 1/N<=nu/2. Endpoint-safe
+floors and exact finite fibers retain all coefficients and multiplicities.
+Three further regressions cover its exact signature and repeated endpoints.
+
+The direct native-VMVT consumer
+`exists_bourgainSourceCurve_large_plane_quadratic_bound` now discharges
+the fine quadratic moments on the actual plane of half-width 2*T^2.
+Its coefficient is (C(epsilon)/nu)*T^4*B^6*H^6*
+Q^(3+epsilon)*P^(3+epsilon), with Q,P the actual short integer
+interval lengths and B,H the coefficient-fiber masses. Finite weighted
+Fourier expansion, exact periods and translation retain all multiplicities.
+Its full signature, linked scales and repeated endpoints are regression-tested.
+
+The global larger-rectangle consumer
+`exists_bourgainSourceCurve_large_anisotropic_bilinear_bound` now proves
+the actual original-source bound C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6
+on half-widths (T,T^2,T^2,T). Middle averaging, actual canonical fine
+cells, unbounded coefficient phases and all physical/count losses are derived.
+The exact signature, count cancellation and repeated endpoints are tested.
+
+Next remove the dyadic restriction and prove the actual localized
+shifted-phase estimate used in Bourgain (2.18)--(2.23), then the
+bilinear-to-linear first-spacing theorem. Do not substitute the literal
+bilinear curve bound for that stronger local source contract.
+Independent second-spacing/cubic-Poisson inputs also remain open.
+The global bilinear estimate does not close full first spacing,
+the analytic pair or generic D. Do not reopen optional
 Watt provenance or the already-complete EPZAE-15/26 branch.
 Keep both `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
 current and passing as needed. Recovery-record maintenance is permanently

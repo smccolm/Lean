@@ -1,5 +1,5 @@
 flowchart TD
-%% Actual source-curve global dyadic epsilon decoupling, strictly smaller-grid recurrence and genuine polynomial base DONE. Anisotropic/bilinear-to-linear first spacing, second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
+%% Actual global dyadic bootstrap and weighted anisotropic coarse-cell plane refinement at derived scales DONE. Outer/global anisotropic assembly, larger-domain/bilinear-to-linear first spacing, second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
 %% Closure-first EPZAE-11/13/14/15/26 cluster: see Goal Prompt, Closure-first analytic priority.
 %% Robert--Sargos 2002 DAG DONE: source axes -> common shift -> mixed jets/partial summation -> source sieve/collisions/spacing -> scales -> long-range fourth derivative (1.5) -> actual model-phase bridge -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26 DONE.
 %% This alternative branch does not discharge the separate Sargos 1995 generic D-process or missing EPZAE-13/14 source inputs.
@@ -206,12 +206,20 @@ flowchart TD
     HFAM["EPZAE-12/13 native Heath--Brown family<br/>all integer k at least 3; exact analytic pairs DONE"]
     BT["EPZAE-13 certified beta table<br/>first two rows DONE; remaining rows/assembly OPEN"]
     PLOC["EPZAE-13 finite epsilon-loss parabola decoupling<br/>actual source entry + curve-cell return + local decoupling<br/>genuine base + smaller-grid recurrence + global dyadic bootstrap DONE"]
-    PDEC["EPZAE-13 anisotropic + bilinear-to-linear first spacing,<br/>second-spacing/cubic-Poisson source entry and analytic pair OPEN"]
+    PANI["EPZAE-13 weighted coarse-cell refinement + exact outer integration<br/>canonical endpoint-safe cells + actual finite fibers<br/>original-source small-anisotropic global assembly DONE"]
+    PVM["EPZAE-13 native quadratic VMVT + exact weighted Fourier periods<br/>translated short intervals + actual coefficient fibers<br/>literal-source larger-plane fine-cell bound DONE"]
+    PGL["EPZAE-13 exact middle averaging + canonical fine-cell aggregation<br/>original-source global dyadic larger-rectangle bilinear bound DONE"]
+    PDEC["EPZAE-13 all-scale normalization + actual localized shifted phases<br/>bilinear-to-linear first spacing, second spacing/cubic-Poisson<br/>and analytic pair OPEN"]
     SKF --> PLOC
-    PLOC --> PDEC
+    PLOC --> PANI
+    PANI --> PGL
+    GFN --> PVM
+    PLOC --> PVM
+    PVM --> PGL
+    PGL --> PDEC
     SRC --> PDEC
     PDEC --> BT
-    class PLOC done;
+    class PLOC,PANI,PVM,PGL done;
     class PDEC open;
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]
