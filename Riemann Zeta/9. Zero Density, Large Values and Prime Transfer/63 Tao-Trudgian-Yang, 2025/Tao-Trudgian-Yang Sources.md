@@ -1,29 +1,29 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Current global larger-rectangle bilinear closure and reuse (25 September 2026)
+## Current all-real-scale bilinear closure and reuse (25 September 2026)
 
 [Bourgain section 2, equations (2.9)--(2.10)](https://arxiv.org/pdf/1408.5794v2)
-motivates the installed original-source dyadic larger-rectangle theorem
-`exists_bourgainSourceCurve_large_anisotropic_bilinear_bound`.
-Exact middle-coordinate averaging consumes the proved small rectangle;
-canonical endpoint-safe fine cells consume the existing native quadratic
-VMVT source-plane estimate. Actual unbounded shifts remain coefficient
-phases. The physical powers and finite cell count cancel to the displayed
-T^12 bound. No moment estimate or source entry is assumed.
+motivates the proved original-source global bilinear estimate.
+`exists_bourgainSourceCurve_all_scale_bilinear_bound` now removes the
+dyadic and large-T restrictions on comparable-frequency annuli [T/2,T].
+Exact integer dilation retains the source lattice and coefficient fibers;
+the literal diagonal rectangle Jacobian and uniform dyadic selection
+give C(epsilon,nu)*T^(12+epsilon)*B^6*H^6 for every real T>=1.
+Both BAT gates and the full-signature/nonintegral-scale regressions pass.
+The native quadratic VMVT and existing localization machinery are reused.
 
-Both BAT gates and all three new regressions pass. The existing
-GafniTaoNative quadratic VMVT, Mathlib weighted Fourier orthogonality,
-local mixed-remainder/frame machinery and Sargos kernel are reused.
-No module family, pin or vendor change was introduced.
+Equations (2.18)--(2.23) still require the actual localized residual phases.
+Rationalizing the square root gives the specific uniform family
+s=t/(sqrt(1+delta*t)+1), phi3=-s^3*(4+3*delta*s)/8, phi4=-s^4/4.
+Its exact quartic coordinate frame has determinant one, including delta=0.
+This identifies a direct route through existing quartic machinery, not
+a claim that the local analytic moment bound is already proved.
 
-For the next step, equations (2.18)--(2.23) require actual localized
-shifted phases after removing quadratic Taylor terms. All-scale
-normalization alone does not supply that contract. Bilinear-to-linear
-first spacing and independent second spacing/cubic-Poisson remain open.
-The renewed local/ANTEDB/Gafni search did not locate an unconditional
-generic D-process theorem: `SargosDProcessGeometry` remains a conditional
-consumer of the missing analytic beta estimate. Preserve the completed
-Robert--Sargos alternative rather than reopen optional Watt provenance.
+Bilinear-to-linear first spacing, independent second spacing/cubic-Poisson
+and generic D remain open. The renewed local/ANTEDB/Gafni search found the
+D-process geometry consumer still conditional on its missing analytic beta
+estimate. Preserve the completed Robert--Sargos alternative; do not reopen
+optional Watt provenance. No module family, pin or vendor changed.
 Earlier sections below are historical.
 
 ## Earlier finite weighted source localization (25 September 2026)

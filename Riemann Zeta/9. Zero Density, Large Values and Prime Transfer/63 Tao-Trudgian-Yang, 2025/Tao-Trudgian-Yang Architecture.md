@@ -208,8 +208,8 @@ flowchart TD
     PLOC["EPZAE-13 finite epsilon-loss parabola decoupling<br/>actual source entry + curve-cell return + local decoupling<br/>genuine base + smaller-grid recurrence + global dyadic bootstrap DONE"]
     PANI["EPZAE-13 weighted coarse-cell refinement + exact outer integration<br/>canonical endpoint-safe cells + actual finite fibers<br/>original-source small-anisotropic global assembly DONE"]
     PVM["EPZAE-13 native quadratic VMVT + exact weighted Fourier periods<br/>translated short intervals + actual coefficient fibers<br/>literal-source larger-plane fine-cell bound DONE"]
-    PGL["EPZAE-13 exact middle averaging + canonical fine-cell aggregation<br/>original-source global dyadic larger-rectangle bilinear bound DONE"]
-    PDEC["EPZAE-13 all-scale normalization + actual localized shifted phases<br/>bilinear-to-linear first spacing, second spacing/cubic-Poisson<br/>and analytic pair OPEN"]
+    PGL["EPZAE-13 global larger-rectangle bilinear bound<br/>exact integer dilation + actual Jacobian + uniform scale selection<br/>all-real-scale comparable-annulus source estimate DONE"]
+    PDEC["EPZAE-13 actual localized shifted-phase estimate<br/>bilinear-to-linear first spacing, second spacing/cubic-Poisson<br/>and analytic pair OPEN"]
     SKF --> PLOC
     PLOC --> PANI
     PANI --> PGL

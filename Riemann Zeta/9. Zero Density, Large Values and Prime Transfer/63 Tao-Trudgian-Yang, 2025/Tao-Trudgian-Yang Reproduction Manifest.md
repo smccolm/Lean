@@ -1,6 +1,37 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-## Verified global larger-rectangle bilinear bound (25 September 2026)
+## Verified all-real-scale bilinear bound (25 September 2026)
+
+One public theorem and two retained regressions were added in the existing
+localization module, for totals 87 and 170. No production module was added.
+Focused (9,789 jobs, 82 seconds), default (10,775 jobs) and full semantic checks pass.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260925-155456-4f4a9db9.log); 1,443 production files,
+  1,917 scanned Lean files and 17,090 audited declarations. Zero diagnostics.
+  Log SHA256: `020138792f41c774bf3a356162e47ddcd12b121355f9738a2af99a7dee6d44bc`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260925_160027.log) and [manifest](../../logs/foundation_freeze_20260925_160027.json); zero diagnostics.
+  Log SHA256: `b297919b96a300052541abff377e3f162bfdd3e6bb4117c93ae49088ab29600d`;
+  manifest SHA256: `e297de39b6d67e45cffe3fc4ce2874e322e9a5dee4675b17ccf4cd3e10f4747e`.
+
+All 1,938 proof/configuration hashes stayed identical across both gates.
+The owner advanced HEAD to `76d02951805e1152595905c0accdbd183618d59f`;
+all 509 protected tracked files remain byte-identical to that HEAD.
+The foundation verifier observed a clean worktree. No agent commit or push.
+The powering-counterexample SHA256 remains
+`76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`.
+Root/BAT coverage and explicit theorem audit are current.
+No recovery record, pin, source archive or certificate changed.
+
+Semantic scope: literal original-source bilinear product, every real T>=1,
+integer frequencies in [T/2,T], bound C(epsilon,nu)*T^(12+epsilon)*B^6*H^6.
+Integer dilation, source lattice, fibers and the physical Jacobian are derived.
+The actual localized shifted-phase and linear first-spacing contracts,
+second spacing, Bourgain pair and generic D remain OPEN. Completion is 31/42.
+
+## Earlier verified global larger-rectangle bilinear bound (25 September 2026)
 
 One public theorem and three retained regressions were added in the existing
 localization module, for totals 86 and 168. No production module was added.

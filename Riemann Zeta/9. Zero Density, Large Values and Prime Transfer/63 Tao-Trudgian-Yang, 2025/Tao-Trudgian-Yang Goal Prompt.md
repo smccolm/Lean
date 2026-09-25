@@ -46,7 +46,8 @@ finite weighted parabola decoupling + actual quartic source entry [DONE]
   -> integer periods + mixed remainder + small-anisotropic assembly [DONE]
   -> native quadratic VMVT + actual larger-plane fine-cell bound [DONE]
   -> exact middle averaging + global larger-rectangle bilinear bound [DONE]
-  -> all-scale normalization + localized shifted-phase estimate [OPEN]
+  -> exact integer dilation + all-real-scale comparable-annulus bound [DONE]
+  -> actual localized shifted-phase estimate [OPEN]
   -> bilinear-to-linear first-spacing theorem [OPEN]
 Bourgain second spacing + cubic-Poisson source entry [OPEN]
   -> analytic pair (13/84,55/84) [OPEN]
@@ -64,7 +65,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (86 public theorems and 168 focused
+module now passes both BAT gates (87 public theorems and 170 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -118,8 +119,18 @@ on half-widths (T,T^2,T^2,T). Middle averaging, actual canonical fine
 cells, unbounded coefficient phases and all physical/count losses are derived.
 The exact signature, count cancellation and repeated endpoints are tested.
 
-Next remove the dyadic restriction and prove the actual localized
-shifted-phase estimate used in Bourgain (2.18)--(2.23), then the
+The public all-scale consumer
+`exists_bourgainSourceCurve_all_scale_bilinear_bound` now removes the dyadic
+and large-T restrictions for integer frequencies in [T/2,T], every real T>=1.
+Its bound is C(epsilon,nu)*T^(12+epsilon)*B^6*H^6. Exact integer dilation,
+coefficient-fiber preservation, uniform scale selection and the physical
+Jacobian are derived. Its full signature and an actual repeated-frequency
+consumer at the nonintegral scale T=7/2 are regression-tested.
+
+Next prove the actual localized shifted-phase estimate used in
+Bourgain (2.18)--(2.23). Reuse the rationalized root coordinate and
+its determinant-one quartic frame, uniformly through the zero-ratio limit.
+Then prove the
 bilinear-to-linear first-spacing theorem. Do not substitute the literal
 bilinear curve bound for that stronger local source contract.
 Independent second-spacing/cubic-Poisson inputs also remain open.

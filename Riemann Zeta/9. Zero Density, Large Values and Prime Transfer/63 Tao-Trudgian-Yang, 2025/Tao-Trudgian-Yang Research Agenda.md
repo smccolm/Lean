@@ -1,45 +1,37 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-## Current verified global larger-rectangle bilinear bound (25 September 2026)
+## Current verified all-real-scale bilinear bound (25 September 2026)
 
-The public theorem `exists_bourgainSourceCurve_large_anisotropic_bilinear_bound`
-bounds the literal original-source bilinear sixth-moment product on the
-rectangle with half-widths (T,T^2,T^2,T) by
-C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6.
-Here j>=3, N=2^(2j), T=N^2 and 1/N<=nu/2. Original integer frequencies
-divided by T lie in [1/4,1], with cross-family root separation nu.
-C is fixed before j, all finite indexed families and all coefficients.
-B,H bound actual coefficient-fiber masses, so multiplicities remain visible.
+The public theorem `exists_bourgainSourceCurve_all_scale_bilinear_bound`
+proves the actual original-source bilinear sixth-moment product bound
+C(epsilon,nu)*T^(12+epsilon)*B^6*H^6 on half-widths (T,T^2,T^2,T),
+for every real T>=1. The original integer frequencies lie in [T/2,T],
+and their normalized square roots have cross-family separation nu.
+The constant is fixed before T, both indexed families and all coefficients.
+B,H are actual coefficient-fiber masses, retaining repeated frequencies.
 
-The proof averages the actual small-anisotropic rectangle over its two
-middle coordinates. Exact coefficient modulation retains all unbounded
-shift phases. Canonical coarse/fine cells derive their actual bases,
-root separation, short integer intervals and linked physical widths.
-The previously proved native quadratic-VMVT source-plane estimate applies
-to each actual fine-cell pair. Weighted Fubini, Lorentz kernel masses,
-the finite pair count and epsilon splitting give the global T^12 bound.
-There is no assumed moment estimate, partition or scale relation beyond
-the displayed geometric source hypotheses.
+The proof chooses a dyadic R with 4T<=R<=L(nu)*T and sufficient root-scale
+separation, then an integer dilation k with kT/R in [1/2,1].
+Original frequencies map into [R/4,R] without rounding. Multiplication
+by k preserves the integer coefficient fibers. Exact homogeneity of all
+four source coordinates gives the physical diagonal change of variables.
+Its Jacobian and rectangle containment are proved, and its determinant
+factor is at most one. The previously verified dyadic global bound,
+applied with epsilon rescaled by four, yields the exact real-power loss.
+There is no residual dyadic, large-T, moment or change-of-variables hypothesis.
 
-Three regressions cover the complete public source signature, the exact
-cell-count/physical-power cancellation, and an arbitrary-coefficient
-consumer with repeated endpoint frequencies. No production module, source
-pin, certificate or vendor file was added or changed.
-
-The larger-rectangle bilinear aggregate is now closed at the displayed
-dyadic scales. All-scale normalization and the localized shifted-phase
-estimate remain necessary for bilinear-to-linear first spacing.
-Bourgain section 2, equations (2.18)--(2.23), uses the actual residual
-phases after removing the quadratic Taylor terms; the literal bilinear
-bound must not be treated as a general-curve or linear theorem.
-Independent second spacing/cubic-Poisson, the Bourgain pair, generic D
-and the remaining beta-table inputs stay OPEN. The renewed reuse search
-found the existing D-process geometry consumer still conditional on the
-missing analytic beta estimate, not an alternative proof of it.
+Two new regressions cover the full source signature and an actual
+arbitrary-coefficient consumer with repeated frequencies at T=7/2.
+No production module, dependency pin, certificate or vendor changed.
+The comparable-annulus restriction is explicit; this is not a uniform
+localized shifted-phase theorem. Bourgain (2.18)--(2.23), bilinear-to-linear
+first spacing, independent second spacing/cubic-Poisson, the Bourgain pair
+and generic D remain OPEN. The exact rationalized shifted-phase family is
+the current proof target, reusing the existing quartic source machinery.
 Completion remains 31/42.
 
-Both BAT gates pass with zero diagnostics: 86 public localization theorems
-and 168 focused regressions. See the current reproduction manifest for logs
+Both BAT gates pass with zero diagnostics: 87 public localization theorems
+and 170 focused regressions. See the current reproduction manifest for logs
 and fixed source hashes. Existing root imports and BAT inventory cover the
 extended module; no production module was added. Earlier sections below
 record historical intermediate checkpoints, not the current terminal task.

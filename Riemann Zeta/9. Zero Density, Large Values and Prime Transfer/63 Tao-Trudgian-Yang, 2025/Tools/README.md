@@ -2,21 +2,22 @@
 
 Verified analytic checkpoint (25 September 2026):
 [ParabolaBilinearLocalization](../Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves `exists_bourgainSourceCurve_large_anisotropic_bilinear_bound`.
-For j>=3, N=2^(2j), T=N^2 and 1/N<=nu/2, the literal original-source
-bilinear sixth-moment product on the rectangle with half-widths
-(T,T^2,T^2,T) is bounded by C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6.
-B,H are actual coefficient-fiber masses. Exact middle-coordinate averaging,
-canonical fine-cell geometry, native quadratic VMVT and the physical
-cell-count cancellation are derived. Arbitrary coefficients, repeated
-frequencies, closed endpoints, empty cells and unbounded shifts are retained.
-No analytic bound is assumed and no production module was added.
-Both BAT gates pass: 86 public theorems and 168 focused regressions;
-this batch added one public theorem and three regressions.
-Next: all-scale normalization and the localized shifted-phase estimate
-needed for bilinear-to-linear first spacing. The dyadic bilinear bound
-does not itself prove linear first spacing. Second spacing/cubic-Poisson,
-the Bourgain pair and generic D remain OPEN.
+now proves `exists_bourgainSourceCurve_all_scale_bilinear_bound`.
+For every real T>=1, original integer frequencies in [T/2,T], positive
+cross-family root separation nu and actual coefficient-fiber masses B,H,
+the literal bilinear sixth-moment product on half-widths (T,T^2,T^2,T)
+is bounded by C(epsilon,nu)*T^(12+epsilon)*B^6*H^6.
+Exact integer dilation, dyadic scale selection and the physical rectangle
+Jacobian remove both the dyadic and large-T restrictions. Coefficients,
+multiplicities, endpoints and empty families are preserved.
+Both BAT gates pass: 87 public theorems and 170 focused regressions;
+this batch added one public theorem and two regressions, including an
+actual arbitrary-coefficient repeated-frequency consumer at T=7/2.
+No production module or assumed analytic estimate was added.
+Next: the localized shifted-phase estimate and bilinear-to-linear
+first spacing. This comparable-annulus bilinear bound does not supply
+that stronger local contract. Second spacing/cubic-Poisson, the Bourgain
+pair and generic D remain OPEN.
 Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
 the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 
