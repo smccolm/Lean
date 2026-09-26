@@ -31,39 +31,25 @@ Keep this short remaining-obligation DAG current (the Robert–Sargos alternativ
 belongs to EPZAE-15/26; the generic D-process remains a separate EPZAE-11 obligation):
 
 ```text
-zero-q column + diagonal + zero-r row -> zero-shift combination [DONE]
-  -> mixed derivatives/common-prefix partial summation [DONE]
-  -> original-sum double-large-sieve + actual physical spacing [DONE]
-  -> scale assembly -> long-range fourth-derivative theorem (1.5) [DONE]
-  -> analytic pair (1/13,10/13) -> (3/40,31/40) [DONE]
-  -> EPZAE-15 growth / EPZAE-26 density [DONE]
+Robert--Sargos alternative (EPZAE-15/26):
+zero-q + diagonal + zero-r -> zero-shift combination [DONE]
+  -> mixed jets/common-prefix summation -> source sieve/spacing [DONE]
+  -> scales -> long-range fourth derivative (1.5) [DONE]
+  -> (1/13,10/13) -> (3/40,31/40) -> growth/density [DONE]
 
 Remaining independent source gates:
-Sargos 1995 analytic curve/short-sum estimate [OPEN]
+Sargos 1995 short-sum/curve estimate [OPEN]
   -> generic D beta-process [EPZAE-11 OPEN]
-finite decoupling + exact source transport + finite inductions [DONE]
-  -> linear first spacing (Theorem 2) + anisotropic Corollary 3 [DONE]
-sharp cubic source -> residue Poisson + Gauss bound/phase [DONE]
-  -> physical stationary prefix + finite capped endpoint formula [DONE]
-  -> summed cubic transform, integer endpoints and every real linear term [DONE]
-  -> endpoint resonance absorbed at mu*q^2*N>=1 [DONE]
-  -> actual C4 local source + one common prefix, given curvature data [DONE]
-actual two-parity Gauss coordinate map + physical remainder [DONE]
-  -> summed amplitude/variable-window Fourier completion [DONE]
-  -> actual C4 family, one common Fourier mode for both parities [DONE]
-actual derivative data -> reduced rational curvature levels [DONE]
-  -> exact real centers + controlled integer Taylor centers [DONE]
-  -> constructed minor-arc family + explicit major-arc remainder [DONE]
-prescribed integer intervals -> derived offsets and one Fourier mode [DONE]
-global model buffer/boundary control + major-arc cancellation [OPEN]
-actual cubic physical box + C4 source-to-resonance-count reduction [DONE]
-four-coordinate double-large-sieve + actual six-tuple reduction [DONE]
-  -> actual twelve-variable first-spacing count [DONE]
-  -> source-sieve assembly with only literal outer count [DONE]
-independent resonance second spacing [OPEN]
-  -> linked-scale assembly -> analytic pair (13/84,55/84) [OPEN]
-D + Bourgain pair + Huxley/Trudgian--Yang beta inputs [OPEN]
-  -> exact beta table [EPZAE-13 OPEN]
+
+first spacing + C4 transforms + two-sector source count [DONE]
+  -> buffered model entry + finite same-family global bound [DONE]
+  -> physical band budgets + logarithms/epsilon, alpha>=3/7 [OPEN]
+  -> square-root endpoint entry [OPEN]
+refined spacing/alternate proof, alpha in [17/42,3/7] [OPEN]
+  -> global beta bound -> analytic pair (13/84,55/84) [OPEN]
+
+D + Bourgain pair + Huxley/Trudgian--Yang analytic inputs [OPEN]
+  -> complete exact beta table [EPZAE-13 OPEN]
   -> four new pairs [EPZAE-14 OPEN]
 ```
 
@@ -76,7 +62,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (120 public theorems and 248 focused
+module now passes both BAT gates (142 public theorems and 300 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -297,7 +283,89 @@ for prescribed integer intervals (L_i,L_i+H_i], H_i<=N. On each minor arc,
 A_i=(L_i-m_i).toNat satisfies N<=A_i<=3*N and m_i+A_i=L_i.
 The actual source interval is therefore unchanged. Major blocks retain H_i.
 Both BATs and the full-contract/nonzero-major-source regressions pass.
-Next prove major-arc cancellation and independent resonance counting.
+The exact inverse-coordinate resonance matrix is now constructed with integer
+entries and determinant one. Its lower-left entry obeys |gamma|<=eta*q_i*q_j.
+In the forced sector eta*q_i*q_j<1, gamma=0, q_i=q_j and q_i divides a_j-a_i.
+Actual C4 derivatives and cubic-coordinate tolerance then give source-center
+spacing, including negative fourth derivative. The prescribed block geometry
+gives a count at most B*|S|*(3+24*U*sqrt(U*Q^3)*zeta/(lambda*N)).
+The count is restricted to this forced sector; it is not general second spacing.
+The three public contracts and two nontrivial examples pass both BAT gates.
+For each nonzero integer lower-left entry, the actual C4 source now yields
+inverse-curvature profile compression and a finite fixed-matrix count.
+The profile is constructed from f''/2 and f'''/6, and its derivative is proved
+to be f''''/(3*f'''). From f'''>=L>0 and |f''''|<=L^2/16,
+`bourgain_C4_nontriangular_resonance_compression` gives width <=48*E/(|gamma|*L).
+`bourgain_C4_fixed_matrix_resonance_count` gives
+B*(1+48*E*Q^2/(|gamma|*L)), retaining actual curvature-level multiplicities B.
+E is an explicit third-derivative residual bound, not an assumed spacing bound.
+Endpoint data derive all intervening profile-domain coverage.
+Both BATs pass, including complete contracts, both signs of gamma, distinct
+source/partner points and exact zero-residual multiplicity two.
+The residual is now derived by `bourgain_C4_rounded_cubic_resonance_residual`:
+E=16*U*sqrt(U*Q^3)*zeta+3*F/4. The two half-unit center-rounding losses
+are retained, including when raw cubic-coordinate tolerance zeta is zero.
+`bourgain_C4_rounded_fixed_matrix_count` derives the matrix fractional map
+and denominator scale from the integer equations, then consumes this E.
+Its actual source hypotheses include L<=f'''<=6*U, |f''''|<=F<=L^2/16,
+real exact curvature centers and their rounded integer Taylor centers.
+No profile derivative or third-derivative residual estimate remains assumed.
+Both BATs and four new full-contract/rounding/multiplicity regressions pass.
+The full non-triangular local source sector is now kernel-checked and
+passes both BAT gates. `bourgain_curvature_level_block_multiplicity`
+derives at most 4*B source indices per exact curvature level, so a fixed
+matrix has at most 16*B^2 pairs per level. Determinant-one arithmetic
+derives the weighted matrix enumeration, retaining the 1/|gamma| saving.
+`bourgain_C4_assigned_nontriangular_pair_count` consumes these bounds;
+`exists_bourgain_C4_nontriangular_second_spacing` constructs the matrices
+from the actual inverse coordinates. With Gamma=eta*Q^2, its bound is
+16*B^2*(2*Gamma+1)*(2*X+5)^2*(Gamma+48*E*Q^2/L).
+X bounds the actual f''/2 levels. No matrix count or pair multiplicity
+is supplied as a hypothesis. Regressions include actual data forcing gamma!=0.
+`bourgain_C4_triangular_pair_count` now bounds the entire zero-gamma sector
+using its integer curvature-level difference. The two sectors are assembled
+by `bourgain_C4_two_coordinate_second_spacing`, with the exact bound and
+source hypotheses recorded in the current verified checkpoint. Both BATs
+and the four full-contract/two-sign source regressions pass.
+The source-entry bottleneck is now closed by
+`exists_bourgain_model_source_bands`. From the actual approximate model
+phase it derives buffered integer blocks, multiplicity one, a boundary
+cost 1+23*N and all needed derivative bounds. A single minimum-denominator
+arc family supplies every high-denominator, minor, direct and frozen bound.
+No independent source estimate or cardinality estimate is assumed.
+Only F<=L^2/16, F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1
+remain physical entry conditions. Derive these from T, P and the chosen N;
+do not hide them in a scale certificate.
+
+The direct and frozen source estimates, their full endpoint-resonance
+errors and the Loss^13 budget remain available. For N=T^(alpha-2/7),
+the direct range c<=alpha-11/30 overlaps the frozen range c>=alpha-8/21.
+The new `exists_bourgain_model_source_global` now sums those same-family
+bounds. With J=log_2(N)+1 it retains all J bands, the high-denominator tail,
+the boundary cost and the exact Holder factor (J+2)^11. Each band selects
+its source bound by explicit minor/frozen/direct numerical thresholds.
+The next obligation is to bound these concrete expressions in the final
+T,P window, absorb logarithms and assemble uniform epsilon constants.
+At alpha=3/7, slightly shortening N can supply strict smallness; this
+still requires a kernel proof. Check F<=L^2/16 at alpha=1/2 explicitly:
+residue-class rescaling is a candidate route, not an assumed bridge.
+The independent refined [17/42,3/7] window still needs stronger spacing
+or a faithful alternative. The present two-coordinate bound and block
+exponent changes alone have not closed it; that is not an impossibility
+claim. Generic D and remaining beta-table inputs remain OPEN.
+
+Maintain `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat` as
+first-class verification interfaces, updating coverage when needed.
+Retain the explicit Lake regression build, direct regressions, complete
+transitive audit, both counterexamples and the no-shortcut standards.
+Recovery-record maintenance stays permanently skipped.
+Bourgain's baseline (3.11)--(3.13) only covers alpha>=3/7. The refined
+window [17/42,3/7] needs the fourth-coordinate improvement (3.15)--(3.19)
+or an exact alternate proof. The proved Robert--Sargos pair supplies the
+supporting line below 17/42. A depth-eight search of 254,364 A/B/C
+descendants of proved inputs, also checking Heath--Brown beta bounds,
+did not close sampled points in the remaining window; this is discovery,
+not an impossibility theorem. Do not discard the triangular-sector term.
 The global model-phase consumer must derive buffer coverage and boundary
 losses; do not assume the local buffered hypotheses outside the given domain.
 Dirichlet error alone is not quadratic Taylor smallness; the rounded

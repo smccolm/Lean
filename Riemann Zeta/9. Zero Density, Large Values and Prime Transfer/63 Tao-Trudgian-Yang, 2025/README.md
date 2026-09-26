@@ -2,28 +2,32 @@
 
 Verified analytic checkpoint (26 September 2026):
 [ParabolaBilinearLocalization](Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now preserves prescribed integer source intervals exactly while constructing
-the rational curvature data and completing all minor blocks in one Fourier mode.
-`exists_bourgain_C4_prescribed_interval_minor_arcs` takes arbitrary left
-endpoints L_i and lengths H_i<=N. It constructs integer Taylor centers m_i
-and proves N<=A_i<=3*N and m_i+A_i=L_i on each minor block, where
-A_i=(L_i-m_i).toNat. The source remains (L_i,L_i+H_i]; no interval is moved.
-Actual derivative bounds on the stated buffer derive all Taylor, minor-arc
-and completion conditions. Each major block retains its full length H_i.
-The existing variable-window Gauss consumer is reused without a new module.
-The proved physical cubic sieve and C4-to-resonance-count reduction are
-retained, with all four tolerances, both parities and transformation errors.
-Both BAT gates pass: 120 public localization/source theorems and 248 focused
-regressions, zero Lean diagnostics and permitted dependency audits only.
-The two new regressions cover the complete contract and a nonzero prescribed
-interval (10,11] in a family with no minor arcs.
-No new import, module, pin, vendor or certificate change in this batch.
-Both counterexamples and the completed old-pair cascade are unchanged.
-Next control major arcs and prove independent resonance second spacing.
-A global model-phase application must also derive buffer coverage and
-boundary-block losses; the local prescribed-interval theorem does not
-assume or prove these global estimates. The analytic Bourgain pair,
-generic D and remaining beta inputs remain OPEN.
+now proves finite global assembly for the actual model-phase sum through
+`exists_bourgain_model_source_global`, consuming
+`exists_bourgain_model_source_bands`. Buffered integer blocks, multiplicity
+one, the boundary cost 1+23*N and derivative data are derived from the actual
+approximate model phase using existing Heath--Brown and Sargos jet results.
+One minimum-denominator arc family feeds every source estimate.
+The global theorem sums all J=log_2(N)+1 denominator bands and the
+large-denominator tail, with Holder factor (J+2)^11. Explicit numerical
+thresholds select the sparse minor, frozen intermediate or direct estimate.
+No independent source bound, family count or unlinked scale certificate
+is assumed. The three remaining physical entry conditions are
+F<=L^2/16, F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1.
+Both BAT gates pass: 142 public localization/source theorems and 300 focused
+regressions. Four new regressions check both complete contracts and genuine
+51-term logarithmic sources, including the source-tail and global consumers.
+No new production module, runner, pin, vendor or certificate change;
+two existing jet modules are imported. Both counterexamples, all prior
+regressions, Add-est and the completed old-pair/EPZAE-15/26 cascade survive.
+The BAT retains its explicit Lake regression build, direct regressions and
+complete transitive audits.
+Next: derive the three physical entry conditions and estimate every
+numerical band budget in the final T,P window; absorb logarithms and
+constants with the correct epsilon quantifiers. The independent refined
+[17/42,3/7] window still needs stronger spacing or an exact alternate proof.
+The finite global bound is NOT the final beta bound or analytic Bourgain pair.
+Generic D and remaining beta inputs stay OPEN. Whole-proof completion is 31/42.
 Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
 the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 

@@ -1,6 +1,39 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Current localized-phase moments and reuse (25 September 2026)
+## Current source-entry status (26 September 2026)
+
+The new `exists_bourgain_model_source_bands` and
+`exists_bourgain_model_source_global` give actual model entry and finite
+global source assembly. They derive the buffered integer blocks,
+boundary cost 1+23*N, multiplicity one and physical derivative data from
+the approximate model phase. Existing Heath--Brown model jets and
+Sargos affine-derivative results are reused; no new module family is added.
+One minimum-denominator curvature-arc family supplies all source estimates.
+The global theorem partitions every denominator at N, sums all
+J=log_2(N)+1 lower bands and retains the upper tail. Finite Holder gives
+(J+2)^11; explicit thresholds select sparse minor, frozen or direct bounds.
+The three remaining physical conditions are F<=L^2/16,
+F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1.
+Four new regressions cover the full contracts and genuine 51-term
+logarithmic-source consumers. Both BAT gates pass.
+
+For [Bourgain's section 3](https://arxiv.org/pdf/1408.5794v2), this closes
+finite source entry/assembly, not the final beta estimate. The existing
+direct/frozen overlap and Loss^13 budget remain checked, as do the
+counterexamples to the earlier variation-only and crude-family budgets.
+Next derive physical smallness and bound the explicit global expression,
+including logarithms and epsilon-dependent constants. The independent
+refined [17/42,3/7] range still needs stronger spacing or an exact alternative;
+changing only the block exponent has not closed it.
+
+[Huxley's survey](https://www.numdam.org/article/AST_1991__198-199-200__165_0.pdf)
+and [Bombieri--Iwaniec, pages 466--467](https://www.numdam.org/article/ASNSP_1986_4_13_3_449_0.pdf)
+remain reference sources, not assumed analytic provenance.
+The unavailable Huxley--Watt proof and generic Sargos 1995 input have not
+been replaced by axioms. The frozen-phase argument is a proved local
+alternative; the full analytic Bourgain pair is still OPEN.
+
+## Source history and localized-phase reuse (25 September 2026)
 
 [Bourgain section 2, equations (2.9)--(2.10)](https://arxiv.org/pdf/1408.5794v2)
 motivates the proved original-source global bilinear estimate.
@@ -90,7 +123,7 @@ mu and beta, with the exact main term and C/beta error uniformly for
 R>=2*r. This finite version of the Lemma 2.5 route uses an actual Morse
 coordinate and the existing quadratic remainder and avoids claiming L1
 integrability of a unit-modulus half-line kernel. Both BATs pass at
-120 public source theorems and 248 focused regressions; no module was added.
+134 public source theorems and 279 focused regressions; no module was added.
 
 The C4 cubic entry, finite four-dimensional sieve and sixth-power consumer
 are retained. `exists_bourgainSourceCurve_six_tuple_first_spacing`
@@ -140,6 +173,74 @@ prescribed integer intervals (L_i,L_i+H_i]. It derives N<=A_i<=3*N and
 m_i+A_i=L_i, where A_i=(L_i-m_i).toNat, for the constructed minor centers.
 Both BATs and two regressions pass, including a nonzero prescribed interval
 in a major-only family. The actual buffered hypotheses remain explicit.
+The actual inverse-coordinate resonance matrix is now proved by
+`bourgain_inverse_coordinate_resonance`: integer determinant-one entries,
+the exact map of (a_i,q_i) to (a_j,q_j), and |gamma|<=eta*q_i*q_j.
+When eta*q_i*q_j<1, `bourgain_upper_triangular_source_spacing` derives
+q_i=q_j, q_i dividing a_j-a_i and the source-center distance from the actual
+C4 derivative bounds and cubic-coordinate tolerance. Either sign of f'''' is
+allowed. `bourgain_upper_triangular_block_count` uses the prescribed block
+offsets and actual index multiplicity B to bound this sector by
+B*|S|*(3+24*U*sqrt(U*Q^3)*zeta/(lambda*N)). It does not estimate every near pair.
+The determinant-one resonance route is also described in
+[Li--Yang, section 4.4, (4.27)--(4.32)](https://arxiv.org/html/2308.14859v2).
+Their double-sum source contract is not imported as a single-source theorem;
+the matrix and restricted source count are independently proved here.
+Five new regressions cover all three complete contracts, a negative-fourth-
+derivative quartic with distinct centers, and different blocks sharing a center.
+Both BATs pass. IntegerIntervalCount is reused; no module was added.
+The non-triangular fixed-matrix source step is now proved by
+`bourgain_C4_nontriangular_resonance_compression` and
+`bourgain_C4_fixed_matrix_resonance_count`. The actual C4 phase supplies
+the inverse of f''/2, the profile f'''/6, and its derived derivative
+f''''/(3*f'''). If f'''>=L>0 and |f''''|<=L^2/16, the curvature-level
+width is <=48*E/(|gamma|*L), and the finite rational-level count is
+B*(1+48*E*Q^2/(|gamma|*L)). E bounds the literal third-derivative residual;
+B counts actual repeated levels. Endpoint data, including either sign
+of gamma, imply all intermediate profile-domain and scale conditions.
+The existing one-separated count theorem is reused, with no new import/module.
+Both BATs and five new regressions pass. Deriving E from rounded cubic
+coordinates and counting all integer matrices remain separate obligations.
+The real/integer-center residual is now derived by
+`bourgain_C4_rounded_cubic_resonance_residual`, giving
+E=16*U*sqrt(U*Q^3)*zeta+3*F/4 with both rounding losses.
+`bourgain_C4_rounded_fixed_matrix_count` consumes it and derives the
+fractional-linear map and comparable scale from the integer matrix equations.
+Its fixed-matrix count is B*(1+48*E*Q^2/(|gamma|*L)), with actual
+L<=f'''<=6*U, |f''''|<=F<=L^2/16, exact real curvature centers,
+half-unit integer rounding and actual level multiplicities.
+Both BATs and four new regressions pass. A quartic example retains a nonzero
+rounding error when the raw cubic-coordinate tolerance is zero; another
+consumes the whole rounded-source theorem with repeated-level multiplicity two.
+No new module/import or source pin. Global matrix enumeration and deriving
+level multiplicities/rational-arc selection from blocks are not yet claimed.
+The non-triangular sector is now estimated from the actual source:
+`bourgain_curvature_level_block_multiplicity` derives the 4*B level bound
+from source offsets, half-unit rounding and positive third derivative.
+The determinant-one identity gives separated lower-right matrix entries;
+finite weighted enumeration retains the inverse-|gamma| factor.
+`bourgain_C4_assigned_nontriangular_pair_count` derives the 16*B^2 pair
+multiplicity and sums the fixed-matrix bounds.
+`exists_bourgain_C4_nontriangular_second_spacing` constructs the matrices
+from the actual modular inverses. For Gamma=eta*Q^2, the count is bounded by
+16*B^2*(2*Gamma+1)*(2*X+5)^2*(Gamma+48*E*Q^2/L),
+where E=16*U*sqrt(U*Q^3)*zeta+3*F/4 and X bounds actual f''/2 levels.
+Neither matrix counts nor pair multiplicities are assumed.
+Both BATs and five new regressions pass, including a source configuration
+that forces a genuinely non-triangular matrix. No module/import was added.
+The entire zero-gamma sector is now bounded by its integer curvature-level
+difference, and `bourgain_C4_two_coordinate_second_spacing` assembles both
+sectors from the actual rounded C4 source. No resonance count is assumed.
+Both BATs pass for 132 public source theorems and 271 focused regressions.
+Bourgain's baseline (3.11)--(3.13) only covers alpha>=3/7. The refined
+window [17/42,3/7] needs the fourth-coordinate improvement (3.15)--(3.19)
+or an exact alternate proof. The proved Robert--Sargos pair supplies the
+supporting line below 17/42. A depth-eight search of 254,364 A/B/C
+descendants of proved inputs, also checking Heath--Brown beta bounds,
+did not close sampled points in the remaining window; this is discovery,
+not an impossibility theorem. Do not discard the triangular-sector term.
+Primary source: [Bourgain, section 3](https://arxiv.org/pdf/1408.5794v2).
+The current source-entry status is summarized at the top of this document.
 Major-arc cancellation, global model-domain buffer/boundary control,
 independent resonance second spacing and the analytic pair remain open.
 

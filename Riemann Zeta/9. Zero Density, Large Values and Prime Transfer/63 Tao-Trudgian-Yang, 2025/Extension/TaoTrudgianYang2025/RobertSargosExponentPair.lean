@@ -357,6 +357,16 @@ theorem exponentPair_robertSargos : ExponentPair (1/13) (10/13) := by
     rw [exponentSumGrowthExponent_zero]
     norm_num [exponentPairLine]
 
+/-- The already proved Robert--Sargos pair supplies the entire low-length
+range of the Bourgain supporting line, including the exact joining endpoint. -/
+theorem exponentSumGrowthExponent_le_bourgain_short_of_robertSargos
+    {alpha : ℝ≥0} (halpha : (alpha:ℝ) ≤ 17/42) :
+    exponentSumGrowthExponent alpha ≤ 13/84+(alpha:ℝ)/2 := by
+  have hb := exponentSumGrowthExponent_le_exponentPairLine_closed
+    exponentPair_robertSargos alpha (by linarith only [halpha] : (alpha:ℝ) ≤ 1)
+  unfold exponentPairLine at hb
+  linarith only [hb,halpha]
+
 theorem exponentPair_three_fortieths : ExponentPair (3/40) (31/40) := by
   have hclassical := exponentPair_half_half.aProcess.aProcess
   have hmix := exponentPair_robertSargos.convexCombination hclassical

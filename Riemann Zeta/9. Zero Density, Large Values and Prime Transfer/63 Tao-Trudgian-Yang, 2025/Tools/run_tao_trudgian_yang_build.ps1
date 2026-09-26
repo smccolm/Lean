@@ -1735,7 +1735,9 @@ try {
             Write-Host "Using inferred ELAN_HOME: $elanHomeCandidate"
         }
         Invoke-LeanGate -Label 'default Lake build' -WorkingDirectory $extensionRoot `
-            -Executable $lakeCommand.Source -Arguments @('build')
+            -Executable $lakeCommand.Source -Arguments @(
+                'build', 'TaoTrudgianYang2025', 'TaoTrudgianYang2025.SemanticRegression'
+            )
         Invoke-LeanGate -Label 'semantic regression' -WorkingDirectory $extensionRoot `
             -Executable $lakeCommand.Source -Arguments @(
                 'env', 'lean', 'TaoTrudgianYang2025\SemanticRegression.lean'

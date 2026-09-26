@@ -1,5 +1,619 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Verified finite global model-source bound (26 September 2026)
+
+The existing localization module has 142 public source theorems and
+300 focused regressions. `exists_bourgain_model_source_bands` derives the
+buffered integer blocks, multiplicity one, derivative bounds and boundary
+cost 1+23*N from the actual approximate model phase.
+`exists_bourgain_model_source_global` consumes that same arc family and
+sums every denominator band plus the high-denominator tail. Its Holder
+factor is (J+2)^11, J=log_2(N)+1, and each band selects an explicit
+minor, frozen or direct budget from numerical thresholds.
+No source estimate, cardinality estimate or unlinked scale certificate
+is imported. Three physical entry conditions remain:
+F<=L^2/16, F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1.
+
+Four new regressions check both full contracts and actual closed 51-term
+logarithmic sources. The global test retains boundary 24, the exact tail
+with D=320000, all finite bands and the factor 3^11.
+The focused build passed 10,775 jobs: source 244 seconds, root 11 seconds,
+regressions 273 seconds. Declaration-comment placement and append
+indentation errors from preliminary integrations were repaired.
+The module overview was then corrected to match the proved scope, and
+the principal BAT rebuilt the final source snapshot without diagnostics.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-154308-5940b860.log);
+  10,776 jobs, source 235 seconds, root 13 seconds, regressions 221 seconds;
+  1,443 production files, 1,917 scanned files, direct semantic regressions
+  and 17,187 audited declarations; zero Lean diagnostics.
+  Log SHA256: `39358dd2d7e7cb8377c719e3f25ffbf73cfe052d2542723d2546ab2b3111f2d3`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_154318.log) and
+  [manifest](../../logs/foundation_freeze_20260926_154318.json); zero diagnostics.
+  Log SHA256: `0acee8bc3d2a335f1751bda93ceb20090e2f2a03a9631730d6cef3c8cb23c64f`;
+  manifest SHA256: `8f0b44f158d54c04567bcc9dc6767ba05a36ec35b13ea7085e986f5ac2f62fdb`.
+
+The final proof and runner hashes were rechecked unchanged across both gates:
+
+- ParabolaBilinearLocalization.lean: `665777cc52ec5291616a1d7a1c82b56a8d00165807e3654a3d04a08cb41dafa8`.
+- RobertSargosExponentPair.lean: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit.lean: `b533ccf6521a47dee6b6dd3f6dae6df1a7ec28c1a5a981452c671c551c243504`.
+- SemanticRegression.lean: `d35bcf6f5be929c388c0a14c4eb58e749db2b516bab01b89c1a4568684013a00`.
+- run_tao_trudgian_yang_build.ps1: `bf33028c955bb9cfbedae2c46b6923f5906d9add47e5307b4a72286dc5d5c7af`.
+
+Both permanent counterexamples are unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No new production module, runner, pin, vendor or certificate change;
+two existing jet modules are imported. The BAT's explicit Lake regression,
+direct-regression and transitive-audit coverage is retained.
+Recovery-record maintenance remains permanently skipped.
+
+The physical-scale prototype is checked separately, not installed in this
+snapshot. It derives eventual smallness, floor/ceiling scale comparisons
+and the normalized frozen/minor cancellations toward P^6*T*R^3.
+The full numerical budget, logarithmic losses, uniform epsilon constants,
+square-root endpoint and refined [17/42,3/7] window remain to be closed.
+Finite global assembly is not the final beta bound or analytic Bourgain pair.
+Generic D and remaining beta inputs remain OPEN. Whole-proof completion is 31/42.
+
+## Earlier frozen-phase original-source estimate (26 September 2026)
+
+The existing localization module now has 140 public source theorems and
+296 focused regressions. `exists_bourgain_C4_frozen_source_second_spacing_reduction`
+and `exists_bourgain_C4_frozen_physical_source` close the intermediate local
+source estimate. They retain the complete bin, expanded-box, common-mode,
+physical count and endpoint-resonance losses. The original integer sums,
+curvature-level multiplicities, M=ceil(63*U*Q*N^2)+1 and
+Z=4*B*Q*(2*X*Q+1) are constructed or derived, not assumed.
+The scalar thresholds are 12<=L*Q*N^2 and 384<=L^2*Q^3*N^3;
+mu*q^2*N>=1 is not required.
+
+Four new regressions check both complete contracts and actual multiplicity-two
+one-term source families for both quartic signs. Their old minor quantity
+is exactly 9/20<1. The first integrated build exposed heartbeat costs in
+large scalar proof terms; factoring those calculations into private scalar
+lemmas resolved them without raising the 400,000 cap. The accepted focused
+build reports 249 seconds for localization, 15 seconds for the production
+root and 245 seconds for all semantic regressions: 10,775 jobs, no diagnostics.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-144718-bbb43268.log);
+  10,776 jobs, 1,443 production files, 1,917 scanned files, the direct
+  regression gate and 17,182 audited declarations; zero Lean diagnostics.
+  Log SHA256: `6fda8b6118b0bff0319d31a43e9414cf174b6e05566af70d18e0dcaa17417b36`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_144045.log) and
+  [manifest](../../logs/foundation_freeze_20260926_144045.json); zero diagnostics.
+  Log SHA256: `3517f9b5f74d42c0c636fa209b8d452230aa82885763f7f1cd14f4411683eff8`;
+  manifest SHA256: `d48efc60c652f152896a1076326764aa16759fdb3ad52121124e010165075068`.
+
+Proof and runner hashes were rechecked unchanged across the two gates:
+
+- Localization: `27fbabe349d82ae8c1d28e01ce752f53ba9db16f7dad4b8213e629c88134b055`.
+- Robert--Sargos: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit: `6d93b25adaf740e373eaa7cccad4bbd7fd6a70153ba6bb52edb376928ba3f32b`.
+- Regression: `21cec2aae66d12113a6663f5885ed13f3693ef867baa694d3a02f11ecdd0b6bb`.
+- BAT implementation: `bf33028c955bb9cfbedae2c46b6923f5906d9add47e5307b4a72286dc5d5c7af`.
+
+Both permanent counterexample hashes remain unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No new production module/import, runner, pin, vendor or certificate change.
+Recovery-record maintenance remains permanently skipped.
+
+The direct/frozen ranges overlap with the retained Loss^13 budget.
+The actual model-entry and same-family band composition are being checked
+separately; they are not part of this frozen checkpoint. Global scale/epsilon
+assembly, the refined [17/42,3/7] window, generic D and remaining beta inputs
+remain OPEN. The local source estimates do not complete the global analytic
+Bourgain pair. Whole-proof completion remains 31/42.
+
+## Earlier verified unrestricted low-denominator source bound (26 September 2026)
+
+The existing localization module contains 138 public source theorems and
+292 focused regressions. `exists_bourgain_C4_low_denominator_source` derives
+the original integer source bound from actual C4 derivatives and rational
+curvature levels, without the minor-arc condition mu*q^2*N>=1.
+Its family count Z=4*B*Q*(2*X*Q+1) is derived, and the explicit endpoint
+resonance term sqrt(12/(L*N*Q)) is retained.
+
+Four new regressions cover the full public contract, multiplicity-two
+actual one-term blocks for both quartic signs outside the minor-arc range,
+and exact direct/alternate-route budgets. The localization module built
+in 233 seconds. The first full Lake regression build exposed an undeclared
+universe in the existing physical-source namespace. An explicit universe
+declaration fixes those earlier contracts and the new contract; the corrected
+regression build passes all 10,775 jobs in 235 seconds, without diagnostics.
+
+The BAT's default build now explicitly includes both the production root
+and `TaoTrudgianYang2025.SemanticRegression`, ensuring regressions also use
+Lake's `autoImplicit = false` setting. The original direct regression,
+transitive audit, production coverage and integrity gates remain intact.
+This closes the configuration difference that exposed the universe issue;
+no failing test or module was excluded.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-133600-e5316d30.log);
+  10,776 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,175 audited declarations; zero Lean diagnostics.
+  Log SHA256: `122e62a82d7e4b7fdc71a4fd8fd96f61f7b49867287fbcad5aeebf3d9420b9c1`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_133625.log) and
+  [manifest](../../logs/foundation_freeze_20260926_133625.json); zero diagnostics.
+  Log SHA256: `568f66c29879b2014de88cd94b93a60fb31976d5fe0964276c7c981b92587e58`;
+  manifest SHA256: `5d56e6796ae594f4b1280e8badab8f17c8f547a6894071e5ded2d6ebfc2ebb5f`.
+  The earlier foundation run passed too; this rerun follows the explicit
+  regression-universe correction and BAT strengthening.
+
+Proof and runner files remained byte-identical across the two canonical gates:
+
+- Localization SHA256: `fbc98c7663e9a40bfc4463a64f7f48502b81671aa8e08d19758c69dee51f46f8`.
+- Robert--Sargos SHA256: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit SHA256: `b0d6b8b790a3305e362fcfbe8e8d5163bfda9ef5a86f63bd39b7507d308077cf`.
+- Regression SHA256: `f09faad339e92b5194fcfbef86b376d7f0ab56af99dfba17a38827ed32aa268b`.
+- BAT implementation SHA256: `bf33028c955bb9cfbedae2c46b6923f5906d9add47e5307b4a72286dc5d5c7af`.
+
+Both counterexample hashes were rechecked unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Recovery-record maintenance remains permanently skipped.
+
+The direct low-denominator budget fits for c<=alpha-11/30.
+Frozen-remainder, label, actual Gauss common-mode and weighted expanded-box
+sieve deductions pass isolated Lean checks. Their complete original-source
+consumer is not yet installed. Bin summation and physical/source assembly,
+global model buffers/boundaries, scale/epsilon quantifiers and the refined
+window remain OPEN. Generic D, remaining beta inputs and the analytic
+Bourgain pair remain OPEN. Whole-proof completion is 31/42.
+
+## Earlier verified minimum-denominator original-source consumer (26 September 2026)
+
+The existing localization module contains 137 public source theorems and
+288 focused regressions. The new consumer constructs the minimum-denominator
+curvature family, derives its rounded Taylor geometry, and retains its
+sparse count in all Holder, physical spacing and Taylor-error factors.
+It also bounds the original large-denominator source tail by the length
+bound times the derived sparse count. No source estimate or count is assumed.
+
+Three new regressions cover the complete contract, an actual nonempty
+handled band for both signs of a quartic's fourth derivative, and the
+high-denominator baseline exponent budget. Isolated tests pass without
+diagnostics. An initial focused build encountered a syntax error after the
+declaration was placed before the required scope/upstream declarations.
+The same proof was relocated after its dependencies; the corrected focused
+build passed 9,799 jobs in 220 seconds, with zero diagnostics.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-125154-738e8c38.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,171 audited declarations; zero Lean diagnostics.
+  Log SHA256: `5f60289535768b1cf7795b8f774a02be8ea41f1c3b4e12fa6cb2e8af5820f91e`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_124739.log) and
+  [manifest](../../logs/foundation_freeze_20260926_124739.json); zero diagnostics.
+  Log SHA256: `23212460f1efd8b152a7001ffd02e9c75803cde5f1821825480412ec300539fd`;
+  manifest SHA256: `aca56e13b6b046eefd7aaddfda31ee23e2a2f78fe0cdc521f161ec6258018254`.
+  The earlier foundation run also passed, but was repeated after source
+  placement was frozen; the linked rerun is the canonical batch evidence.
+
+Proof files remained byte-identical across the two canonical gates:
+
+- Localization source SHA256: `1aa4a11b62c9bebbd38a494776a82b9d734933a9a1692ff281c4ee604e128557`.
+- Robert--Sargos source SHA256: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit SHA256: `6efcb6a2471293d056d25c846801cf1085a6ed1c1f162651d19b72bb3a6ac3da`.
+- Regression SHA256: `6743ea1e08817391b7d86079527818064702a1fbb1008253ce7275ae369482c1`.
+
+Both counterexample hashes were rechecked unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Recovery-record maintenance remains permanently skipped.
+
+The existing spacing theorem now feeds actual sparse source bands.
+The high-denominator tail also fits the baseline exponent budget.
+Global model buffers/boundaries, physical scale/epsilon assembly and
+low-denominator source control remain OPEN. A variation-only extension
+was checked and fails to close its budget when the expanded-box diagonal
+cost is retained. The next alternate route freezes the leading
+inverse-square-root phase coefficient, tracking bin and box losses.
+That route is not yet an installed analytic theorem.
+The refined window, generic D, remaining beta inputs and the analytic
+Bourgain pair stay OPEN. Completion is 31/42.
+
+## Verified minimum-denominator curvature-arc sparsity (26 September 2026)
+
+The existing localization module contains 136 public source theorems and
+285 focused regressions. The new public theorem constructs minimum-denominator
+rational levels inside actual curvature arcs and exact real centers inside
+physical quarter-block intervals. It derives the denominator-at-least-Q
+family bound B*(4*(X+1)*D^2+D*(2+log(D+1))), D=8/(L*N*Q),
+from derivatives, block multiplicities, Dirichlet approximation and harmonic
+sums. No rational-family count or source-spacing bound is assumed.
+
+Three new regressions cover the complete contract, a nonempty two-block
+quartic example for both fourth-derivative signs, and exact baseline exponent
+budgets with the new family saving. The crude-family negative guard remains.
+Isolated proofs and regressions pass without diagnostics.
+Focused source build: 9,799 jobs, 212 seconds; zero diagnostics.
+An initial principal scan rejected a prohibited token in an explanatory
+comment before compilation. The comment was corrected without changing the
+scan; [failed scan log](logs/tao-trudgian-yang-build-20260926-121604-4b2c34fe.log).
+The following complete rerun verifies the corrected source.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-121630-97764403.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,169 audited declarations; zero Lean diagnostics.
+  Log SHA256: `8819cf1f536a70ea1b7fd3a094530abdbc193bd9b14239a54909e26b1ad67cad`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_121659.log) and
+  [manifest](../../logs/foundation_freeze_20260926_121659.json); zero diagnostics.
+  Log SHA256: `eac52173f48f3129e211406097d9b89de1ea311ff4a96374662b086232d9ae59`;
+  manifest SHA256: `b2c39078aef47b456d23cf4902cac8b5cd9acb0382e947a23f5c6b7210cbbdc1`.
+
+Proof files remained byte-identical across both gates:
+
+- Localization source SHA256: `f497bdf0172ab6a207b49b08260cb3f429effdd49fb19136f6f5fbaa8aaa3acb`.
+- Robert--Sargos source SHA256: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit SHA256: `10511b4af76a2ad4db035526404e6dccbb317c404b5428b81d228818848cb9e4`.
+- Regression SHA256: `7ecf7a33654d60e42d1478ca68c52f606872b16f51270cf115c6e985f807814b`.
+
+Both counterexample hashes were rechecked unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Recovery-record maintenance remains permanently skipped.
+
+With the new sparse-family count, exact Lean exponent regressions show that
+the EXISTING two-sector spacing theorem has sufficient baseline exponents
+for alpha>=3/7. No additional baseline spacing module is needed.
+The next gate is its original-sum minimum-denominator consumer, followed by
+major/high-denominator treatment and global model buffers/boundaries.
+The refined [17/42,3/7] window remains a stronger fourth-coordinate obligation.
+Generic D, remaining beta inputs and the analytic Bourgain pair stay OPEN.
+Completion is 31/42.
+
+## Verified constructed-arc source consumer (26 September 2026)
+
+The existing localization module contains 135 public source theorems and
+282 focused regressions. The new public consumer unpacks the constructed
+curvature arcs, selects a denominator band with its mass-selection logarithm,
+and links M=ceil(63*U*Q*N^2)+1. It bounds the original source twelfth power,
+retaining full complementary lengths and explicit Taylor errors.
+No band-cardinality saving or source-sum estimate is assumed.
+
+Three new regressions cover the full contract, a nonempty two-block quartic
+for both fourth-derivative signs with forced denominator 1200, and the exact
+crude-budget obstruction 41/105=31/84+3/140 at alpha=3/7.
+Isolated proofs and regressions pass without diagnostics.
+Focused source build: 9,799 jobs, 209 seconds; zero diagnostics.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-114904-f3531728.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,168 audited declarations; zero Lean diagnostics.
+  Log SHA256: `abd55d80637732504f713e32d4bdd77a284bd8fc5e4bead35895df23571b7a99`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_115456.log) and
+  [manifest](../../logs/foundation_freeze_20260926_115456.json); zero diagnostics.
+  Log SHA256: `8e2e5252719f58aba357299175824c823eecd1083163f61eebfc69d9490c5ddb`;
+  manifest SHA256: `63a392c0994a7dc76d2b29239ad6a2b3630198a01a33a577c92c23349e4acc83`.
+
+Proof files remained byte-identical across both gates:
+
+- Localization source SHA256: `afa721596187b5205cf70fa2995b5c84b4fa7cc4ccebcc3af5afced3838c9744`.
+- Robert--Sargos source SHA256: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit SHA256: `3ce8815576e197e641a61cdb8f564d91377a4527c35d839026e1fe0f812cb92f`.
+- Regression SHA256: `ec200200a298f32c7b15d4c09db8b3e2947ce21888ddbe1f81556d8faf4cd651`.
+
+Both counterexample hashes were rechecked unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Recovery-record maintenance remains permanently skipped.
+
+The next closure gate is actual minimal-denominator rational-arc sparsity
+and the sharper source spacing bound. Generic local counts and trivial
+band cardinality do not yet imply the endpoint. Intermediate denominators,
+major arcs, global buffers/boundaries and the refined [17/42,3/7] window
+remain open. Generic D, remaining beta inputs and the analytic Bourgain
+pair stay OPEN. Completion is 31/42.
+
+## Verified physical-cloud and prescribed-source assembly (26 September 2026)
+
+The existing localization module contains 134 public source theorems and
+279 focused regressions. Two new public results estimate the literal
+four-coordinate parity cloud and consume that bound in the original
+prescribed integer source sums. Rounded curvature, offsets and amplitude
+scale d=L*Q*N/12 are derived; Taylor errors and local buffers are explicit.
+The existing Robert--Sargos module now also supplies the Bourgain
+supporting line for alpha<=17/42.
+
+Eight new regressions cover all three contracts, both fourth-derivative
+signs, actual parity multiplicity, two nonempty intervals of different
+offsets/lengths, the exact short-range endpoint and the remaining-window guard.
+Isolated proofs and regressions pass without diagnostics.
+Focused source build: 9,799 jobs, 208 seconds; zero diagnostics.
+The exponent-pair module also passed its focused build.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-111229-4e0ae168.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,163 audited declarations; zero Lean diagnostics.
+  Log SHA256: `3e8439aa8534f854a1c8dc1a9f2b4ab9d5d69177c89f88dc1e654562ca06b93e`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_111829.log) and
+  [manifest](../../logs/foundation_freeze_20260926_111829.json); zero diagnostics.
+  Log SHA256: `87b7c05eab14f381733754b09606d0f58f2df4209b69640e446342a39974d44d`;
+  manifest SHA256: `ed4559b0fddf0fcc7451078649707cd0d1f62f1b8a659cda2dcc5cd2f0137b4e`.
+
+Proof files remained byte-identical across both gates:
+
+- Localization source SHA256: `8f1f02869c2f38428893792499147dd26a2e9bc73a5342ca6458729e9e8454b5`.
+- Robert--Sargos source SHA256: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit SHA256: `166e592f605fd5575011bcaf2906234216752f83473ef170e881c4d7d5858186`.
+- Regression SHA256: `0bbbece15691e2d4f11ec58ea22a6e5ebd50919e08cda0772ed65ffd8993817d`.
+
+Both counterexample hashes were rechecked unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` is preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Recovery-record maintenance remains permanently skipped.
+
+Constructed-arc consumption/denominator selection, the intermediate
+denominator sector C0<q<R, major arcs, global buffers/boundaries and
+final physical exponent budgets remain open. The refined alpha window
+[17/42,3/7] remains separate. Generic D, remaining beta inputs and the
+analytic Bourgain pair stay OPEN. Completion is 31/42.
+
+## Verified full local two-coordinate source second spacing (26 September 2026)
+
+The existing module contains 132 public localization/source theorems and
+271 focused regressions. The entire triangular sector and two-sector
+assembly are proved from the actual rounded C4 source. Both signs of
+the nonzero fourth derivative are covered. Four new regressions check
+the complete contracts and actual two-block quartic examples.
+The precise bound and remaining short-window obligation are recorded
+in the current Checklist and Goal Prompt. No spacing count is assumed.
+
+Focused build: 9,799 jobs, 178 seconds; zero diagnostics.
+Dependency audits permit only propext, Classical.choice and Quot.sound.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-103135-c2d8941a.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,157 audited declarations; zero Lean diagnostics.
+  Log SHA256: `991d26fa862c89b34abe4e1aad91511815a4e74aca8d09cc566a4840398456d8`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_103728.log) and
+  [manifest](../../logs/foundation_freeze_20260926_103728.json); zero diagnostics.
+  Log SHA256: `c480c8e4977ce2f919a5b409ce1a2b1a1849e6a9803b580d47946d9dc251b4fc`;
+  manifest SHA256: `235b38d09418c3da1ec2cd373d9941a043b6da1924fa8dd834f8c3a0b61e8e1f`.
+
+Proof files remained byte-identical across both gates:
+
+- Source SHA256: `780cf7785c79b8bf527f657a8d922027df6cd2821d40f752af4a83bd36a46400`.
+- Audit SHA256: `9a46650f274d82b70e1ce028bdc941aa7f89b51eecb55398208512b8d8b292e9`.
+- Regression SHA256: `7027b1549ebbeb4b3828407e8375243a75cea9e136ded385eacb248fdd4f8aef`.
+
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` was preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Both permanent counterexamples remain unchanged; recovery-record maintenance
+remains permanently skipped.
+
+Actual four-coordinate/source assembly, rational-arc selection, major arcs,
+global buffers/boundaries and linked scales remain open. The baseline alone
+only covers alpha>=3/7; the refined window [17/42,3/7] remains a separate gate.
+The analytic Bourgain pair, generic D and remaining beta inputs are OPEN.
+Completion is 31/42.
+
+## Verified constructed non-triangular source second spacing (26 September 2026)
+
+The existing source module contains 130 public localization/source theorems
+and 267 focused regressions. Three new public results derive source-level
+multiplicity <=4*B, fixed-matrix pair multiplicity <=16*B^2, weighted
+determinant-one matrix enumeration and the full non-triangular sector.
+The actual modular inverses construct the matrices. With Gamma=eta*Q^2
+and E=16*U*sqrt(U*Q^3)*zeta+3*F/4, the count is at most
+16*B^2*(2*Gamma+1)*(2*X+5)^2*(Gamma+48*E*Q^2/L).
+Derivative, exact curvature, rounding, comparable denominator and block
+conditions remain explicit. No matrix count or pair multiplicity is assumed.
+
+Five regressions cover all three complete contracts, different blocks sharing
+a curvature center, and actual inverse-coordinate data forcing gamma!=0.
+Isolated proofs, regressions and explicit audits pass with zero diagnostics.
+Focused build: 9,799 jobs, 185 seconds, zero diagnostics.
+Audits use only propext, Classical.choice and Quot.sound.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-101536-9ddd448e.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,154 audited declarations; zero Lean diagnostics.
+  Log SHA256: `0deb4462bb080d99a1d936fcd4c6577ade965eff2714bc5603f95d850eef6029`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_102130.log) and
+  [manifest](../../logs/foundation_freeze_20260926_102130.json); zero diagnostics.
+  Log SHA256: `3ea16216dd613a61763360cf4c909d374ab7eedb680062dbd67cbf4756d2c9fa`;
+  manifest SHA256: `7f04326599fdaa84fbbd9368b903a7477e3912cdf9f1c696f1b8d4f25b7f990b`.
+
+Proof files remained byte-identical across both gates:
+
+- Source SHA256: `40c5f1bb677f825cc521b915e01af628e43b00a636f3dad3c1497e7ddc1a9b08`.
+- Audit SHA256: `2c54ad5e00ddf8a692902143d50af2e7962d7a7080e8f5481bfe911f88782f71`.
+- Regression SHA256: `3b6081f510035fd43737088b57b9ef20a3083fb19cd7b1ebf09d5df771192e18`.
+
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` was preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Both permanent counterexamples remain unchanged.
+Recovery-record maintenance remains permanently skipped.
+
+The entire sharp zero-gamma sector and two-sector assembly remain open.
+Rational-arc selection, major-arc cancellation, global model buffer/boundary
+control and physical-scale assembly are still required for the analytic
+Bourgain pair. Generic D and remaining beta inputs stay OPEN. Completion is 31/42.
+
+## Verified rounded-source fixed-matrix count (26 September 2026)
+
+The existing source module contains 127 public localization/source theorems
+and 262 focused regressions. The two new public results derive the residual
+E=16*U*sqrt(U*Q^3)*zeta+3*F/4 from actual rounded cubic coefficients and
+retain both real-to-integer center losses. The fixed-matrix source count
+derives the fractional-linear map and comparable scale from integer equations,
+then gives B*(1+48*E*Q^2/(|gamma|*L)). Actual derivative and domain bounds,
+half-unit rounding and level multiplicities remain explicit; no spacing,
+profile derivative or third-derivative residual bound is assumed.
+
+Four regressions cover both full signatures, nonzero quartic rounding error
+with zero raw cubic-coordinate tolerance, and exact repeated-level multiplicity
+two through the complete consumer. Isolated proofs, regressions and audits
+pass with zero diagnostics. Focused build: 9,799 jobs, 188 seconds,
+zero diagnostics. Audits use only propext, Classical.choice and Quot.sound.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-095520-fa1e1b2e.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,151 audited declarations; zero Lean diagnostics.
+  Log SHA256: `d503a3608a47413d167b0b3ee2dfff21ba41dfb561da0b443f57d034ac6691c3`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_100254.log) and
+  [manifest](../../logs/foundation_freeze_20260926_100254.json); zero diagnostics.
+  Log SHA256: `3e58f8cf4d2de88609bb1fd02678eae84bb78e0b70b09b5525c15efd282b3fa6`;
+  manifest SHA256: `2f6f63374c4aa63edd54e1f9268aa05c621e4a2567762decc3cff7813e6f739d`.
+
+Proof files remained byte-identical across both gates:
+
+- Source SHA256: `3df839cbeec52d2361244c3a7dfe9e2f2c58d4ec9a14a8af2a076c9c90fc06f6`.
+- Audit SHA256: `f0113981c87da092551c4e91edc5af789c87192d3c354ef0e3feb1f5e5dc2f0a`.
+- Regression SHA256: `7a9263aebc8fe4697cd8a946fe1c89d548163c873d1221b872d5df3f4b99e56b`.
+
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` was preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+The two permanent counterexamples are unchanged.
+Recovery-record maintenance remains permanently skipped.
+
+Matrix enumeration and block-derived curvature-level multiplicities remain
+open, as do rational-arc selection, major-arc cancellation and global model
+buffer/boundary control. The general second-spacing bound, analytic Bourgain
+pair, generic D and remaining beta inputs stay OPEN. Completion is 31/42.
+
+## Verified fixed-matrix C4 source compression and count (26 September 2026)
+
+The source module contains 125 public localization/source theorems and
+258 focused regressions. The two new public consumers construct the actual
+inverse-curvature profile, derive its derivative and intervening domain
+coverage from endpoint data, and prove width <=48*E/(|gamma|*L) and count
+<=B*(1+48*E*Q^2/(|gamma|*L)) for one nonzero integer resonance matrix.
+The explicit conditions f'''>=L>0 and |f''''|<=L^2/16 remain visible.
+E bounds a third-derivative residual; the general resonance count is not assumed.
+The profile and derivative-compression helpers remain private.
+
+Five regressions cover both complete signatures, both signs of gamma with
+distinct source/partner points, and exact zero-residual multiplicity two.
+Isolated proofs, regressions and audits pass with zero diagnostics.
+Focused build: 9,799 jobs, 179 seconds, zero diagnostics.
+Audits use only propext, Classical.choice and Quot.sound.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-094111-75b193fe.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, semantic
+  regression and 17,149 audited declarations; zero Lean diagnostics.
+  Log SHA256: `b452ac6b2592598efe70748f198a9bbf6d3a67947eb6d55102fe3f91ba040f6b`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_094632.log) and
+  [manifest](../../logs/foundation_freeze_20260926_094632.json); zero diagnostics.
+  Log SHA256: `f1a6a8f6eb73ab34f8747cb072b195fc54dc1447fef6abe69b9002c10152dc37`;
+  manifest SHA256: `b40c71623a513e15beeef1886e4e62c54a4eeaac8fb76ef51309d887030b75c9`.
+
+Proof files remained byte-identical across both gates:
+
+- Source SHA256: `53765c3f14acffd8a2c6067574385df4a1a1d2672bfcff6805492206f455b882`.
+- Audit SHA256: `3d5e0bb6c3e12beceddfd459321b8007e2cf4557d6145ba8aed8c38cd53a8198`.
+- Regression SHA256: `dede337a3afd8ef59b745ae69b0934ffd41bc3fea5fe23d9012715505ed85165`.
+
+Owner HEAD `e95fa5a02604f04149d987fcc26fb9ecb3468970` was preserved.
+No agent commit/push, new module/import, pin, vendor or certificate change.
+Both BAT interfaces and production/audit coverage remain synchronized.
+Both counterexamples retain their recorded hashes, verified again in this batch.
+Recovery-record maintenance remains permanently skipped.
+
+The rounded-coordinate residual, count over integer matrices, rational-arc
+selection, major-arc cancellation and global model buffer/boundary control
+remain open. The general second-spacing bound, analytic Bourgain pair,
+generic D and remaining beta inputs are OPEN. Completion remains 31/42.
+
+## Verified forced upper-triangular resonance sector (26 September 2026)
+
+The source module contains 123 public localization/source theorems and
+253 focused regressions. Three public results construct the determinant-one
+integer resonance matrix, prove C4 source-center spacing, and count the
+forced upper-triangular sector eta*q_i*q_j<1 with actual block multiplicities.
+The general resonance count is not assumed or claimed. Five new regressions
+cover the complete signatures, distinct centers with negative fourth derivative,
+and distinct source blocks sharing a Taylor center.
+
+Isolated proofs, audits and regressions pass with zero diagnostics.
+Focused build: 9,799 jobs, 177 seconds, zero diagnostics.
+Audits use only propext, Classical.choice and Quot.sound.
+
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-090936-12ca2d23.log);
+  10,775 jobs, 1,443 production files, 1,917 scanned files, full semantic
+  regression and 17,146 audited declarations; zero Lean diagnostics.
+  Log SHA256: `45cafe697266ae229820fcce65f17af378b0b88c78e83c7b025fd61cabb540e9`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_091512.log) and
+  [manifest](../../logs/foundation_freeze_20260926_091512.json); zero diagnostics.
+  Log SHA256: `25cb3693859e0ac11e0cee3e195b6d59f173c340b45c647ff1670a596ed11ca4`;
+  manifest SHA256: `49d4a2c1ca5fe74dc3af15de7a75a68d5a9dd40d4c12a96bf51cc19936ea34fa`.
+
+The three proof files remained byte-identical across both gates:
+
+- Source SHA256: `05daf024331055acb9ba0276564c9410eac39d5f994aba90627ba25630ce01f7`.
+- Audit SHA256: `5d2ec558e89cf0d9c26aa56a48d25805299b8fe83ee30fb682b2b4a378cfc098`.
+- Regression SHA256: `0465629386bc81cd5587785c6859388819fcc3529b735b92ee1fc5932e812408`.
+
+Owner HEAD advanced during this work to
+`e95fa5a02604f04149d987fcc26fb9ecb3468970` (S. McColm, Progress Update).
+No agent commit/push or unrelated reset. The existing IntegerIntervalCount
+module is reused; no module, pin, vendor or certificate was added or changed.
+Both BAT interfaces and audit/production coverage remain intact.
+Both counterexamples retain their preceding recorded hashes.
+Recovery-record maintenance is permanently skipped.
+
+General non-triangular resonance counting, rational-arc selection, major-arc
+cancellation and global model buffer/boundary control remain open. The analytic
+Bourgain pair, generic D and remaining beta inputs stay OPEN. Completion is 31/42.
+
 ## Verified prescribed-interval source consumer (26 September 2026)
 
 The existing source module contains 120 public localization/source theorems

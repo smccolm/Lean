@@ -1,5 +1,5 @@
 flowchart TD
-%% Prescribed integer intervals + derived Taylor offsets + one Fourier mode DONE; actual physical source-to-count reduction DONE. Global buffer/boundary control, major arcs, independent second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
+%% Actual model entry, buffered integer blocks, boundaries and finite same-family global source assembly DONE. Physical exponent/epsilon assembly and refined window OPEN. Both BAT gates PASS; 31/42.
 %% Closure-first EPZAE-11/13/14/15/26 cluster: see Goal Prompt, Closure-first analytic priority.
 %% Robert--Sargos 2002 DAG DONE: source axes -> common shift -> mixed jets/partial summation -> source sieve/collisions/spacing -> scales -> long-range fourth derivative (1.5) -> actual model-phase bridge -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26 DONE.
 %% This alternative branch does not discharge the separate Sargos 1995 generic D-process or missing EPZAE-13/14 source inputs.
@@ -224,12 +224,26 @@ flowchart TD
     PCRC["EPZAE-13 actual rational curvature construction<br/>exact real + controlled integer centers DONE"]
     PCCA["EPZAE-13 constructed minor-arc source family<br/>explicit major-arc remainder + integer intervals DONE"]
     PCPI["EPZAE-13 prescribed integer source intervals<br/>derived offsets + one Fourier mode DONE"]
-    PCST["EPZAE-13 global buffer/boundary control<br/>major-arc cancellation OPEN"]
+    PCST["EPZAE-13 physical T,P,N scales and band budgets<br/>epsilon assembly OPEN"]
     PCSIV["EPZAE-13 actual cubic physical source box<br/>C4 source-to-literal-resonance-count reduction DONE"]
+    PCTR["EPZAE-13 determinant-one resonance matrix<br/>forced eta*q_i*q_j&lt;1 sector source spacing + block count DONE"]
+    PCFC["EPZAE-13 actual C4 inverse profile + endpoint domain coverage<br/>fixed nonzero matrix compression/count, explicit residual E DONE"]
+    PCRF["EPZAE-13 rounded cubic coefficients + both center errors<br/>derived residual and linked fixed-matrix source count DONE"]
+    PCNT["EPZAE-13 weighted integer matrix enumeration + block-derived pair multiplicities<br/>constructed full non-triangular source second-spacing sector DONE"]
+    PCTW["EPZAE-13 entire sharp triangular sector + full local two-coordinate source count DONE"]
+    PCTP["EPZAE-13 actual four-coordinate cloud + prescribed original source bound<br/>derived rounded loss, offsets and amplitude scale DONE"]
+    PCCS["EPZAE-13 constructed-arc original-source consumer<br/>band mass selection + canonical dual scale DONE"]
+    PCAS["EPZAE-13 actual minimum-denominator curvature arcs<br/>derived sparse-family count DONE"]
+    PCMC["EPZAE-13 minimum-denominator original-source bands<br/>derived sparse losses + high-denominator tail DONE"]
+    PCLD["EPZAE-13 actual unrestricted low-denominator source<br/>derived count + endpoint resonance DONE"]
+    PCFR["EPZAE-13 actual frozen-phase intermediate source<br/>derived scales + bin/box/count losses DONE"]
+    PCMA["EPZAE-13 actual model entry + finite global source bound<br/>buffers/boundaries + all denominator bands DONE"]
+    PCSR["EPZAE-13 proved Robert--Sargos reuse<br/>Bourgain supporting line alpha at most 17/42 DONE"]
+    PCSW["EPZAE-13 refined short window alpha in 17/42 to 3/7<br/>fourth-coordinate refinement or alternate proof OPEN"]
     P4DS["EPZAE-13 four-dimensional double large sieve<br/>both joint near-pair counts + physical factors<br/>actual six-tuple source consumer DONE"]
     P4FC["EPZAE-13 actual twelve-variable first-spacing count<br/>positive Fourier kernel + translated source box<br/>all four tolerances and multiplicities DONE"]
     P4SC["EPZAE-13 actual source-sieve assembly<br/>inner count discharged, physical thresholds derived<br/>only literal outer count retained DONE"]
-    PDEC["EPZAE-13 independent resonance second spacing<br/>linked-scale assembly and analytic pair OPEN"]
+    PDEC["EPZAE-13 sharp source budgets + physical exponent assembly<br/>global analytic pair OPEN"]
     SKF --> PLOC
     PLOC --> PANI
     PANI --> PGL
@@ -265,11 +279,45 @@ flowchart TD
     PCFS --> PCSIV
     P4SC --> PCSIV
     PCSIV --> PDEC
+    PCRC --> PCTR
+    PCPI --> PCTR
+    PCSIV --> PCTR
+    PCTR --> PDEC
+    ML --> PCFC
+    PCFC --> PDEC
+    PCFC --> PCRF
+    PCRF --> PDEC
+    PCRF --> PCNT
+    PCTR --> PCNT
+    PCNT --> PDEC
+    PCNT --> PCTW
+    PCTW --> PDEC
+    PCTW --> PCTP
+    PCPI --> PCTP
+    PCTP --> PCCS
+    PCPI --> PCCS
+    ML --> PCAS
+    PCAS --> PCMC
+    PCTP --> PCMC
+    PCMC --> PCMA
+    PCTR --> PCLD
+    PCNT --> PCLD
+    PCLD --> PCMA
+    PCGP --> PCFR
+    P4SC --> PCFR
+    PCTP --> PCFR
+    PCFR --> PCMA
+    PCMA --> PDEC
+    PCMA --> PCST
+    PCSR --> PDEC
+    PCTW --> PCSW
+    PCSW --> PDEC
     PCST --> PDEC
     SRC --> PDEC
     PDEC --> BT
-    class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP,PCDP,PCFS,PCRC,PCCA,PCPI,PCSIV,P4DS,P4FC,P4SC done;
-    class PCST,PDEC open;
+    class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP,PCDP,PCFS,PCRC,PCCA,PCPI,PCSIV,PCTR,PCFC,PCRF,PCNT,PCTW,PCTP,PCCS,PCAS,PCMC,PCSR,P4DS,P4FC,P4SC done;
+    class PCLD,PCFR,PCMA done;
+    class PCST,PCSW,PDEC open;
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]
     ZGLOG["EPZAE-15 actual logarithmic-phase pair bound<br/>all positive heights + phase sign DONE"]
