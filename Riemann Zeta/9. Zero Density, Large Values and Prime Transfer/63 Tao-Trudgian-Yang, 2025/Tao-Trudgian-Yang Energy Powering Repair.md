@@ -2,30 +2,30 @@
 
 Verified analytic checkpoint (25 September 2026):
 [ParabolaBilinearLocalization](Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves Bourgain Theorem 2, anisotropic Corollary 3, and the complete
-integer-endpoint cubic Gauss transformation
-`exists_bourgain_cubic_gauss_stationary`. For 1<=N<=N1<=2N,
-0<q<=N, mu>0, mu*N^2<=1 and coprime integer a,q, it transforms the
-literal sum over N<n<=N1 of e(mu*n^3+(a*n^2+b*n)/q).
-The exact complex main term is the Gauss-weighted sum over the closed
-integer window ceil(3*mu*q*N^2)<=h<=floor(3*mu*q*N1^2), with
-r_h=sqrt((h/q)/(3*mu)) and stationary factor
-e(1/8-2*mu*r_h^3)/sqrt(6*mu*r_h), divided by q.
-One constant before all parameters bounds the error by
-C*(sqrt(N)*log(2*N)+1/(mu*N^2)).
-The proof derives the cutoff, zero mode, capped endpoint sums,
-far-frequency tail, physical truncation and source endpoint conversion.
-Both parity branches remain in the literal Gauss coefficient.
-Both BAT gates pass: 103 public localization/source theorems and 214 focused
+now combines the actual first-spacing count with the sixth-power source
+sieve and derives the two-parity cubic Gauss phase coordinates.
+`exists_bourgainSourceCurve_double_sieve` gives the twelfth-power bound
+C(epsilon)*N^(12+epsilon)*|S|^10*B^12 times the literal outer near-pair count.
+All four physical thresholds are derived; the inner count is discharged,
+with arbitrary complex coefficients and integer-frequency multiplicities.
+`bourgain_cubic_dual_phase_coordinates` consumes the actual Gauss main
+term. With b=floor(q*ell)+p and p=0,1, it derives the coordinates
+(-r*b/q,-r/q,K,3*K*tau/2), tau=(b-q*ell)/2 and
+K=-2*mu*(sqrt(2/(3*mu*q)))^3, multiplying
+(h,h^2,h^(3/2),sqrt(h)). The amplitude and phase identity are exact.
+For the actual closed stationary window, q<=N and mu*q^2*N>=1
+give A=mu*q*N^2>=1, A<=h<=7*A and |R'(y)|<=2/A for y>=A.
+Both BAT gates pass: 113 public localization/source theorems and 236 focused
 regressions, zero Lean diagnostics and permitted dependency audits only.
-Five new regressions cover the full contract, q=1, even composite q=4,
-an empty source with a stationary endpoint, and an empty stationary window.
-No module, import, pin or vendor changed; both counterexamples are unchanged.
-Next: the actual rational-arc frequency map/common-prefix assembly,
-including its real linear coefficient, and independent second spacing.
-This theorem has integer endpoints and rational linear coefficient b/q;
-it does not yet supply the full rational-arc source entry.
-The analytic Bourgain pair, generic D and remaining beta inputs stay OPEN.
+Four new regressions retain both full contracts, repeated source points
+with arbitrary complex weights, and both parity branches at the boundary.
+No new module, import, pin or vendor change in this integration batch;
+both counterexamples are unchanged.
+The pointwise Gauss coordinate map is proved, not the completed arc sum.
+Next derive the summed amplitude/variable-window Fourier completion.
+Rational-arc construction, independent resonance second spacing and linked
+analytic pair assembly remain OPEN. Generic D and remaining beta inputs
+remain OPEN.
 Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
 the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 

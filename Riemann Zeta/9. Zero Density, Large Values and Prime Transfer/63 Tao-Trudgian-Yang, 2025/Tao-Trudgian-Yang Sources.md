@@ -90,25 +90,47 @@ mu and beta, with the exact main term and C/beta error uniformly for
 R>=2*r. This finite version of the Lemma 2.5 route uses an actual Morse
 coordinate and the existing quadratic remainder and avoids claiming L1
 integrability of a unit-modulus half-line kernel. Both BATs pass at
-103 public source theorems and 214 focused regressions; no module was added.
+113 public source theorems and 236 focused regressions; no module was added.
 
-The finite stationary formula `exists_bourgain_cubic_finite_stationary`
-is retained for both frequency signs, with its derived saddle, exact closed
-indicator and capped physical endpoint errors. It now feeds
-`exists_bourgain_cubic_gauss_stationary`, the complete summed cubic
-transformation for integer endpoints 1<=N<=N1<=2N, positive q<=N,
-mu>0, mu*N^2<=1 and coprime a,q. The literal source is N<n<=N1;
-the main term is the exact Gauss-weighted closed stationary-frequency sum,
-and the error is C*(sqrt(N)*log(2*N)+1/(mu*N^2)).
-The actual cutoff, zero mode, logarithmic capped endpoint sums, far tail
-and physical truncation are all proved. Five new regressions cover the
-full contract, pure cubic q=1, even composite q=4, an empty source with
-closed stationary endpoint, and an empty stationary window.
-This closes the integer-endpoint rational-linear version of the section 3
-transformation, not an unproved real-linear-shift extension.
-The next missing inputs are the actual rational-arc frequency map and
-common-prefix assembly, including that real linear shift, and independent
-four-coordinate/resonance second spacing.
+The C4 cubic entry, finite four-dimensional sieve and sixth-power consumer
+are retained. `exists_bourgainSourceCurve_six_tuple_first_spacing`
+now derives the actual twelve-variable near-pair count for six-tuples of
+(m,m^2,(m/N)^(3/2)/delta,sqrt(m/N)/Delta), with joint tolerances
+(1,1,1/2,1/2). A nonnegative tent Fourier kernel and exact translated
+source box connect this count to the proved anisotropic first-spacing moment.
+Its uniform bound is C(epsilon)*delta*Delta*N^(9+epsilon)*B^12.
+No count estimate is assumed; B bounds actual integer-frequency multiplicities.
+Three regressions preserve the complete contract, both linked lower window
+scales and repeated integer frequency at N=1. No import changed in this batch.
+The linked count/sieve assembly is now proved by
+`exists_bourgainSourceCurve_double_sieve`; its twelfth-power coefficient
+is C(epsilon)*N^(12+epsilon)*|S|^10*B^12 times the literal outer count.
+`bourgain_cubic_dual_phase_coordinates` gives the exact two-parity
+Gauss main-term map to (h,h^2,h^(3/2),sqrt(h)), retaining the amplitude.
+The shift |tau|<=1/2, stationary interval A<=h<=7*A and remainder
+|R'(y)|<=2/A are derived from the actual source and minor-arc scales.
+Four additional regressions cover both full contracts, repeated points
+with complex coefficients and both parity branches at the exact boundary.
+The summed amplitude/variable-window completion, rational-arc construction,
+independent resonance second spacing and analytic pair remain open.
+
+Additional primary-source review: [Olivier Robert, Sommes d'exponentielles
+avec derivee troisieme monotone](https://perso.univ-st-etienne.fr/rool6510/derivmonotone.pdf),
+sections 2--3, retains a quadratic remainder inside a Legendre transform.
+This suggests an alternative source-entry route. The existing model-phase
+B-process requires a separate contract/jet bridge before it can be applied;
+this review supplies no new analytic proof or completed generic D-process.
+
+Additional primary-source review: [Rivat--Sargos, Nombres premiers de la
+forme floor(n^c), sections 8--11](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/78EC4D0D190F4B68807DFB2495513136/S0008414X00022793a.pdf/div-class-title-nombres-premiers-de-la-forme-span-class-italic-n-span-class-sup-c-span-span-div.pdf)
+constructs rational approximants by interval partition and counts exceptional
+large denominators. Page 430 invokes Huxley's Lemma 1.6.1 for a bound
+K/(B^2*L)+K/B on those exceptional intervals. This is a potential
+rational-arc construction/count route, not the required four-coordinate
+resonance bound and not analytic provenance for generic D.
+The exact contracts must be checked before reuse; no new formal theorem
+is claimed from this literature review.
+
 The exact Poisson identity alone does not prove Lemma 3.1's estimate.
 Bourgain section 3 refers to
 Huxley--Watt (1988), section 4, for the actual frequency map x(I), and

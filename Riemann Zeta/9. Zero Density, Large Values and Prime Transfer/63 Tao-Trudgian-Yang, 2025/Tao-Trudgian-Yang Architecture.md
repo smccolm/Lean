@@ -1,5 +1,5 @@
 flowchart TD
-%% First spacing, anisotropic Corollary 3 and full integer-endpoint rational-linear cubic Gauss transform DONE. Actual rational-arc entry, second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
+%% Actual source-sieve assembly and two-parity Gauss coordinate map DONE. Summed variable-window completion, rational arcs, independent second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
 %% Closure-first EPZAE-11/13/14/15/26 cluster: see Goal Prompt, Closure-first analytic priority.
 %% Robert--Sargos 2002 DAG DONE: source axes -> common shift -> mixed jets/partial summation -> source sieve/collisions/spacing -> scales -> long-range fourth derivative (1.5) -> actual model-phase bridge -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26 DONE.
 %% This alternative branch does not discharge the separate Sargos 1995 generic D-process or missing EPZAE-13/14 source inputs.
@@ -218,9 +218,13 @@ flowchart TD
     PLOM["EPZAE-13 literal original-source local moment (2.13)<br/>exact Taylor + both periods + triangular transport<br/>cubic shift and source bound DONE"]
     PLFST["EPZAE-13 actual linear first-spacing Theorem 2<br/>integer partitions + annular/global finite inductions<br/>exact source box, N^(6+epsilon) DONE"]
     PLFSA["EPZAE-13 anisotropic first-spacing Corollary 3<br/>normalized phase + actual source-box Jacobian<br/>delta*Delta*N^(9+epsilon) DONE"]
-    PCGP["EPZAE-13 full cubic Gauss transform<br/>integer endpoints + rational linear coefficient<br/>stationary main and summed physical errors DONE"]
-    PCST["EPZAE-13 actual rational-arc source entry<br/>real linear shift + capped endpoint control<br/>frequency map/common-prefix OPEN"]
-    PDEC["EPZAE-13 independent second spacing<br/>linked-scale assembly and analytic pair OPEN"]
+    PCGP["EPZAE-13 real-linear cubic transform<br/>actual C4 local source + common prefix DONE<br/>curvature approximation remains upstream data"]
+    PCDP["EPZAE-13 exact two-parity Gauss coordinate map<br/>actual amplitude, closed window and physical remainder DONE"]
+    PCST["EPZAE-13 rational-arc construction and counts<br/>summed amplitude/variable-window completion OPEN"]
+    P4DS["EPZAE-13 four-dimensional double large sieve<br/>both joint near-pair counts + physical factors<br/>actual six-tuple source consumer DONE"]
+    P4FC["EPZAE-13 actual twelve-variable first-spacing count<br/>positive Fourier kernel + translated source box<br/>all four tolerances and multiplicities DONE"]
+    P4SC["EPZAE-13 actual source-sieve assembly<br/>inner count discharged, physical thresholds derived<br/>only literal outer count retained DONE"]
+    PDEC["EPZAE-13 independent resonance second spacing<br/>linked-scale assembly and analytic pair OPEN"]
     SKF --> PLOC
     PLOC --> PANI
     PANI --> PGL
@@ -238,13 +242,18 @@ flowchart TD
     PLPM --> PLOM
     PLOM --> PLFST
     PLFST --> PLFSA
-    PLFSA --> PDEC
+    PLFSA --> P4FC
+    P4FC --> P4SC
+    P4SC --> PDEC
+    ML --> P4DS
+    P4DS --> P4SC
     ML --> PCGP
-    PCGP --> PCST
+    PCGP --> PCDP
+    PCDP --> PCST
     PCST --> PDEC
     SRC --> PDEC
     PDEC --> BT
-    class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP done;
+    class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP,PCDP,P4DS,P4FC,P4SC done;
     class PCST,PDEC open;
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]

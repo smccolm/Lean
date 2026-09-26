@@ -43,11 +43,18 @@ Sargos 1995 analytic curve/short-sum estimate [OPEN]
   -> generic D beta-process [EPZAE-11 OPEN]
 finite decoupling + exact source transport + finite inductions [DONE]
   -> linear first spacing (Theorem 2) + anisotropic Corollary 3 [DONE]
-sharp perturbed cubic source -> residue Poisson + Gauss bound/phase [DONE]
+sharp cubic source -> residue Poisson + Gauss bound/phase [DONE]
   -> physical stationary prefix + finite capped endpoint formula [DONE]
-  -> summed cubic transform, integer endpoints and rational linear term [DONE]
-  -> actual rational-arc frequency map/common-prefix assembly [OPEN]
-four-coordinate sieve + independent resonance second spacing [OPEN]
+  -> summed cubic transform, integer endpoints and every real linear term [DONE]
+  -> endpoint resonance absorbed at mu*q^2*N>=1 [DONE]
+  -> actual C4 local source + one common prefix, given curvature data [DONE]
+actual two-parity Gauss coordinate map + physical remainder [DONE]
+  -> summed amplitude/variable-window Fourier completion [OPEN]
+rational-arc construction and independent arc counts [OPEN]
+four-coordinate double-large-sieve + actual six-tuple reduction [DONE]
+  -> actual twelve-variable first-spacing count [DONE]
+  -> source-sieve assembly with only literal outer count [DONE]
+independent resonance second spacing [OPEN]
   -> linked-scale assembly -> analytic pair (13/84,55/84) [OPEN]
 D + Bourgain pair + Huxley/Trudgian--Yang beta inputs [OPEN]
   -> exact beta table [EPZAE-13 OPEN]
@@ -63,7 +70,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (103 public theorems and 214 focused
+module now passes both BAT gates (113 public theorems and 236 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -200,27 +207,67 @@ Both BATs pass with the full contract, exact endpoint and nonintegral-saddle
 regressions. Keep `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
 synchronized and rerun both after proof changes; no new module was needed.
 
-The full finite stationary formula now feeds
-`exists_bourgain_cubic_gauss_stationary`: for natural integer endpoints
-1<=N<=N1<=2N, 0<q<=N, mu>0, mu*N^2<=1 and coprime a,q, the literal
-source N<n<=N1 is transformed to the exact Gauss-weighted stationary sum
-on ceil(3*mu*q*N^2)<=h<=floor(3*mu*q*N1^2).
-Its error is C*(sqrt(N)*log(2*N)+1/(mu*N^2)), with a uniform constant
-chosen before all source parameters. Actual cutoff, zero-mode,
-capped endpoint, far-tail and endpoint-conversion errors are discharged.
-Five new regressions retain the full contract, q=1, even composite q=4,
-empty source/closed stationary endpoint and empty stationary window.
-Both BATs pass. This is an integer-endpoint, rational-linear-coefficient
-contract; do not silently apply it to an arbitrary real linear term.
+The integer-endpoint transformation now extends to every real linear
+coefficient. `exists_bourgain_cubic_real_linear_stationary` treats the
+literal source N<n<=N1 with phase mu*n^3+a*n^2/q+ell*n.
+It derives nearest-integer centering and the exact reindexed main sum,
+using G(a,k;q), beta_k=k/q-ell and the shifted closed frequency window.
+The error is C*(sqrt(N)*log(2*N)+1/(mu*N^2)
++1/(sqrt(mu*N)*sqrt(q))). The endpoint-resonance term is essential in
+this general contract. `exists_bourgain_cubic_minor_arc_stationary`
+absorbs it using the linked condition mu*q^2*N>=1, without assuming
+a rational linear coefficient or the desired transformed estimate.
+Both BATs and six new regressions pass, including stationary zero and
+negative frequencies. Integer endpoints remain explicit.
 
-Next derive the actual rational-arc frequency map and common-prefix
-assembly, including the shifted Fourier frequencies for a real linear
-coefficient and the corresponding capped endpoint errors. Reuse the
-existing Taylor remainder, finite stationary formula and logarithmic
-lattice sums; no new support-module family is needed.
-In parallel dependency terms, the
-four-coordinate finite sieve and resonance second-spacing bound are still
-needed; the planar Sargos sieve alone is not that source estimate.
+The actual C4 local bridge is now proved:
+`bourgain_cubic_taylor_common_prefix` derives one common prefix from
+actual derivative bounds, and `exists_bourgain_cubic_C4_source_entry`
+feeds it into the real-linear minor-arc transform. The finite family
+retains all multiplicities, actual f_i'(m_i) and f_i'''(m_i)/6, and
+literal N<n<=N+H endpoints. At L=2*N+1, B*L^4<=1 and D*L^2<=1,
+the Taylor/Abel cost is bounded by 1+6*pi. C is uniform before every
+index type, finite family and source parameter. The rational curvature
+approximations, positive cubic scale and mu_i*q_i^2*N>=1 remain explicit
+upstream conditions, not conclusions claimed by this theorem.
+Both BATs and three new regressions pass, including literal cubic sources
+at H=0 and H=1. The two existing jet/Abel modules are newly imported;
+no new support-module family was added.
+
+Next construct the rational arcs from the actual model phase, derive the
+four-coordinate frequency map, and retain the required count/scale losses.
+Do not mistake the local consumer for construction of its curvature data.
+Reuse the existing completed-square Gauss identity and Taylor machinery.
+The four-coordinate finite sieve is now proved by
+`bourgain_four_dimensional_double_large_sieve`, with the literal joint
+near-pair counts on both sides and physical factor
+2^24*product(delta_d+2*a_d)/product(a_d). Exact phase alignment gives
+the outer sum of norms; `bourgain_four_dimensional_sixth_power_sieve`
+then constructs the actual six-tuples and derives the |S|^10 loss.
+Both BATs and six new regressions pass. One existing Sargos module is
+newly imported; no new support-module family was added.
+The moment-to-count consumer is now proved:
+`exists_bourgainSourceCurve_six_tuple_first_spacing` derives the actual
+twelve-variable count with all four tolerances (1,1,1/2,1/2), retaining
+integer-frequency multiplicities. A positive tent Fourier kernel, exact
+six-tuple expansion and translated source box feed the existing anisotropic
+moment. The bound is C(epsilon)*delta*Delta*N^(9+epsilon)*B^12 on the
+exact linked window ranges. Both BATs and three regressions pass,
+including both lower window scales and repeated integer frequency at N=1.
+The public `exists_bourgainSourceCurve_double_sieve` now combines that
+count with the six-tuple sieve and derives every physical threshold.
+Its twelfth-power bound is C(epsilon)*N^(12+epsilon)*|S|^10*B^12
+times the literal outer count; there is no assumed count estimate.
+The public `bourgain_cubic_dual_phase_coordinates` now derives the exact
+two-parity Gauss phase coordinates, amplitude and controlled remainder.
+Actual closed stationary windows give A<=h<=7*A and |R'(y)|<=2/A,
+where A=mu*q*N^2>=1 follows from the minor-arc scales.
+Next complete the actual weighted interval sums using existing Sargos
+Fourier completion and finite monotone-weight variation; do not replace
+that summed consumer with the pointwise identity. Rational-arc construction
+and the independent arc-count theorem are still required.
+The independent resonance second-spacing bound remains open; neither
+first spacing nor the planar Sargos bound is substituted for it.
 Search and reuse existing results before adding support code. Keep actual
 phases, maps and scales linked, and never assume the desired estimate.
 The exact Poisson identity is not the full cubic transformation inequality;

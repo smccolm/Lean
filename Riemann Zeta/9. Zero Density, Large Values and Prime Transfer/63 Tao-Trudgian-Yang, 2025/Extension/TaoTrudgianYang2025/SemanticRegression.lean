@@ -49278,4 +49278,547 @@ example :
   norm_num [bourgainQuadraticGauss] at hp ⊢
   simpa only [div_eq_mul_inv,one_mul,mul_comm] using hp
 
+
+/-- The arbitrary real linear coefficient follows the uniform error constant. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ q : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      0 < q → q ≤ N → ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 →
+      ∀ a : ℤ, IsCoprime a (q : ℤ) → ∀ ℓ : ℝ,
+        ‖(∑ n ∈ Finset.Ioc (N : ℤ) (N₁ : ℤ),
+          (𝐞 (μ*(n : ℝ)^3+(a : ℝ)*(n : ℝ)^2/(q : ℝ)+ℓ*n) : ℂ))-
+          (q : ℂ)⁻¹*∑ k ∈ Finset.Icc
+            ⌈(q : ℝ)*(3*μ*(N : ℝ)^2+ℓ)⌉ ⌊(q : ℝ)*(3*μ*(N₁ : ℝ)^2+ℓ)⌋,
+            let r := Real.sqrt (((k : ℝ)/(q : ℝ)-ℓ)/(3*μ))
+            bourgainQuadraticGauss q a k*
+              ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
+          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
+            1/(Real.sqrt (μ*(N : ℝ))*Real.sqrt q)) :=
+  exists_bourgain_cubic_real_linear_stationary
+
+/-- The endpoint resonance is absorbed only at the linked minor-arc scale. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ q : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      0 < q → q ≤ N → ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 → 1 ≤ μ*(q : ℝ)^2*N →
+      ∀ a : ℤ, IsCoprime a (q : ℤ) → ∀ ℓ : ℝ,
+        ‖(∑ n ∈ Finset.Ioc (N : ℤ) (N₁ : ℤ),
+          (𝐞 (μ*(n : ℝ)^3+(a : ℝ)*(n : ℝ)^2/(q : ℝ)+ℓ*n) : ℂ))-
+          (q : ℂ)⁻¹*∑ k ∈ Finset.Icc
+            ⌈(q : ℝ)*(3*μ*(N : ℝ)^2+ℓ)⌉ ⌊(q : ℝ)*(3*μ*(N₁ : ℝ)^2+ℓ)⌋,
+            let r := Real.sqrt (((k : ℝ)/(q : ℝ)-ℓ)/(3*μ))
+            bourgainQuadraticGauss q a k*
+              ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
+          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)) :=
+  exists_bourgain_cubic_minor_arc_stationary
+
+/-- Modulus one keeps an arbitrary real linear term and the shifted frequency window. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ : ℕ, 1 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 → ∀ ℓ : ℝ,
+        ‖(∑ n ∈ Finset.Ioc (N : ℤ) (N₁ : ℤ), (𝐞 (μ*(n : ℝ)^3+ℓ*n) : ℂ))-
+          ∑ k ∈ Finset.Icc ⌈3*μ*(N : ℝ)^2+ℓ⌉ ⌊3*μ*(N₁ : ℝ)^2+ℓ⌋,
+            let r := Real.sqrt (((k : ℝ)-ℓ)/(3*μ))
+            (𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ)‖ ≤
+          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)+
+            1/Real.sqrt (μ*(N : ℝ))) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgain_cubic_real_linear_stationary
+  refine ⟨C,hC,?_⟩
+  intro N N₁ hN hNN hN₁ μ hμ hμN ℓ
+  have hp := h N N₁ 1 hN hNN hN₁ (by omega) hN μ hμ hμN 0
+    (by norm_num [isCoprime_zero_left]) ℓ
+  simpa [bourgainQuadraticGauss] using hp
+
+/-- An even composite modulus keeps the real linear term at every admissible minor-arc scale. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ N N₁ : ℕ, 4 ≤ N → N ≤ N₁ → N₁ ≤ 2*N →
+      ∀ μ : ℝ, 0 < μ → μ*(N : ℝ)^2 ≤ 1 → 1 ≤ 16*μ*N → ∀ ℓ : ℝ,
+        ‖(∑ n ∈ Finset.Ioc (N : ℤ) (N₁ : ℤ),
+          (𝐞 (μ*(n : ℝ)^3+(n : ℝ)^2/4+ℓ*n) : ℂ))-
+          (4 : ℂ)⁻¹*∑ k ∈ Finset.Icc
+            ⌈4*(3*μ*(N : ℝ)^2+ℓ)⌉ ⌊4*(3*μ*(N₁ : ℝ)^2+ℓ)⌋,
+            let r := Real.sqrt (((k : ℝ)/4-ℓ)/(3*μ))
+            bourgainQuadraticGauss 4 1 k*
+              ((𝐞 ((1 : ℝ)/8-2*μ*r^3) : ℂ)/(Real.sqrt (6*μ*r) : ℂ))‖ ≤
+          C*(Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ*(N : ℝ)^2)) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgain_cubic_minor_arc_stationary
+  refine ⟨C,hC,?_⟩
+  intro N N₁ hN hNN hN₁ μ hμ hμN hscale ℓ
+  have hs : 1 ≤ μ*(4 : ℝ)^2*N := by nlinarith
+  have hp := h N N₁ 4 (by omega) hNN hN₁ (by omega) hN μ hμ hμN hs 1
+    (by norm_num [isCoprime_one_left]) ℓ
+  simpa only [Nat.cast_ofNat,Int.cast_one,one_mul] using hp
+
+/-- A real linear shift can make the zero Fourier mode stationary; it is not discarded. -/
+example :
+    ∃ C ≥ (1 : ℝ),
+      ‖(𝐞 ((1 : ℝ)/8-2) : ℂ)/(Real.sqrt 6 : ℂ)‖ ≤ C*(Real.log 2+1) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgain_cubic_minor_arc_stationary
+  refine ⟨C,hC,?_⟩
+  have hp := h 1 1 1 le_rfl le_rfl (by omega) (by omega) le_rfl 1
+    (by norm_num) (by norm_num) (by norm_num) 0
+    (by norm_num [isCoprime_zero_left]) (-3)
+  norm_num [bourgainQuadraticGauss] at hp ⊢
+  exact hp
+
+/-- The stationary lattice may lie at negative integers after a real linear shift. -/
+example :
+    ∃ C ≥ (1 : ℝ),
+      ‖(𝐞 ((1 : ℝ)/8-2) : ℂ)/(Real.sqrt 6 : ℂ)‖ ≤ C*(Real.log 2+1) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgain_cubic_minor_arc_stationary
+  refine ⟨C,hC,?_⟩
+  have hp := h 1 1 1 le_rfl le_rfl (by omega) (by omega) le_rfl 1
+    (by norm_num) (by norm_num) (by norm_num) 0
+    (by norm_num [isCoprime_zero_left]) (-5)
+  norm_num [bourgainQuadraticGauss] at hp ⊢
+  exact hp
+
+
+
+/-- Actual C4 Taylor data, common family prefix, and exact coefficient identities. -/
+example {ι : Type*}
+    (S : Finset ι) (f : ι → ℝ → ℝ) (m α : ι → ℝ) (A : ℝ) (H : ℕ)
+    {L B D : ℝ} (hL : 0 ≤ L) (hB : 0 ≤ B) (hD : 0 ≤ D)
+    (hRange : ∀ x ∈ Icc A (A+H), |x| ≤ L)
+    (hf : ∀ i ∈ S, ∀ y ∈ Icc (m i-L) (m i+L), ContDiffAt ℝ 4 (f i) y)
+    (hfour : ∀ i ∈ S, ∀ y ∈ Icc (m i-L) (m i+L), |iteratedDeriv 4 (f i) y| ≤ B)
+    (hα : ∀ i ∈ S, |iteratedDeriv 2 (f i) (m i)/2-α i| ≤ D) :
+    ∃ J ≤ H,
+      (∑ i ∈ S, ‖∑ j ∈ Finset.range H, (𝐞 (f i (m i+(A+j))) : ℂ)‖) ≤
+        (1+2*Real.pi*H*(B*L^3+2*D*L))*
+          ∑ i ∈ S, ‖∑ j ∈ Finset.range J,
+            (𝐞 ((iteratedDeriv 3 (f i) (m i)/6)*(A+j)^3+
+              α i*(A+j)^2+deriv (f i) (m i)*(A+j)) : ℂ)‖ := bourgain_cubic_taylor_common_prefix S f m α A H hL hB hD hRange hf hfour hα
+
+/-- The C4 source consumer retains actual phases, rational curvature and linked scales. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (m : ι → ℝ) (a : ι → ℤ) (q : ι → ℕ) (N H : ℕ),
+      1 ≤ N → H ≤ N → ∀ B D : ℝ, 0 ≤ B → 0 ≤ D →
+      B*(2*(N : ℝ)+1)^4 ≤ 1 → D*(2*(N : ℝ)+1)^2 ≤ 1 →
+      (∀ i ∈ S, ∀ y ∈ Icc (m i-(2*(N : ℝ)+1)) (m i+(2*(N : ℝ)+1)),
+        ContDiffAt ℝ 4 (f i) y) →
+      (∀ i ∈ S, ∀ y ∈ Icc (m i-(2*(N : ℝ)+1)) (m i+(2*(N : ℝ)+1)),
+        |iteratedDeriv 4 (f i) y| ≤ B) →
+      (∀ i ∈ S, |iteratedDeriv 2 (f i) (m i)/2-(a i : ℝ)/(q i : ℝ)| ≤ D) →
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      (∀ i ∈ S, 0 < q i ∧ q i ≤ N ∧ IsCoprime (a i) (q i : ℤ) ∧
+        0 < μ i ∧ μ i*(N : ℝ)^2 ≤ 1 ∧ 1 ≤ μ i*(q i : ℝ)^2*N) →
+      ∃ J ≤ H,
+        (∑ i ∈ S, ‖∑ n ∈ Finset.Ioc (N : ℤ) ((N : ℤ)+H),
+          (𝐞 (f i (m i+n)) : ℂ)‖) ≤
+        C*((∑ i ∈ S,
+          ‖(q i : ℂ)⁻¹*∑ k ∈ Finset.Icc
+            ⌈(q i : ℝ)*(3*μ i*(N : ℝ)^2+ℓ i)⌉
+            ⌊(q i : ℝ)*(3*μ i*((N : ℝ)+J)^2+ℓ i)⌋,
+            let r := Real.sqrt (((k : ℝ)/(q i : ℝ)-ℓ i)/(3*μ i))
+            bourgainQuadraticGauss (q i) (a i) k*
+              ((𝐞 ((1 : ℝ)/8-2*μ i*r^3) : ℂ)/(Real.sqrt (6*μ i*r) : ℂ))‖)+
+          ∑ i ∈ S, (Real.sqrt N*Real.log (2*(N : ℝ))+1/(μ i*(N : ℝ)^2))) := exists_bourgain_cubic_C4_source_entry
+
+/-- A genuine cubic family, arbitrary finite multiplicities, and both zero
+and nonzero source lengths exercise the full C4-to-Gauss consumer. -/
+example :
+    ∃ C ≥ (1 : ℝ), ∀ (ι : Type*) (S : Finset ι) (H : ℕ), H ≤ 1 →
+      ∃ J ≤ H,
+        (S.card : ℝ)*‖∑ n ∈ Finset.Ioc (1 : ℤ) (1+H), (𝐞 ((n : ℝ)^3) : ℂ)‖ ≤
+          C*((S.card : ℝ)*
+            ‖∑ k ∈ Finset.Icc (3 : ℤ) ⌊3*(1+(J : ℝ))^2⌋,
+              let r := Real.sqrt ((k : ℝ)/3)
+              (𝐞 ((1 : ℝ)/8-2*r^3) : ℂ)/(Real.sqrt (6*r) : ℂ)‖+
+            (S.card : ℝ)*(Real.log 2+1)) := by
+  obtain ⟨C,hC,h⟩ := exists_bourgain_cubic_C4_source_entry
+  refine ⟨C,hC,?_⟩
+  intro ι S H hH
+  have hp := h ι S (fun _ => fun x : ℝ => x^3) (fun _ => 0) (fun _ => 0) (fun _ => 1)
+    1 H le_rfl hH 0 0 (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intros; fun_prop)
+    (by intros; norm_num [iteratedDeriv_pow,Nat.descFactorial])
+    (by intros; norm_num [iteratedDeriv_pow,Nat.descFactorial])
+    (by intros; norm_num [iteratedDeriv_pow,Nat.descFactorial,isCoprime_zero_left])
+  obtain ⟨J,hJ,hbound⟩ := hp
+  refine ⟨J,hJ,?_⟩
+  norm_num [iteratedDeriv_pow,Nat.descFactorial,deriv_pow,bourgainQuadraticGauss] at hbound ⊢
+  simpa only [mul_add,mul_one] using hbound
+
 end TaoTrudgianYang2025.BourgainCubicPoissonRegression
+
+namespace TaoTrudgianYang2025.BourgainFourDimensionalSieveRegression
+
+open Set GafniTao
+open scoped BigOperators
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (w : κ → ℂ)
+    (x : ι → Fin 4 → ℝ) (u : κ → Fin 4 → ℝ) {a c δ : Fin 4 → ℝ}
+    (ha : ∀ d, 0 < a d) (hδ : ∀ d, 0 < δ d)
+    (hz : ∀ i ∈ S, ‖z i‖ ≤ 1) (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, ∀ d, x i d ∈ Icc (c d) (c d+δ d))
+    (hu : ∀ j ∈ T, ∀ d, a d*|u j d| ≤ 1/2) :
+    ‖∑ i ∈ S, ∑ j ∈ T, z i*w j*fordAdditiveCharacter (∑ d, u j d*x i d)‖^2 ≤
+      (16777216*(∏ d, (δ d+2*a d))/(∏ d, a d))*
+        (((S ×ˢ S).filter (fun ij => ∀ d, |x ij.1 d-x ij.2 d| ≤ 2*a d)).card:ℝ)*
+        (((T ×ˢ T).filter (fun ij => ∀ d, |u ij.1 d-u ij.2 d| ≤ 1/(δ d+2*a d))).card:ℝ) :=
+  bourgain_four_dimensional_double_large_sieve S T z w x u ha hδ hz hw hx hu
+
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (w : κ → ℂ)
+    (x : ι → Fin 4 → ℝ) (u : κ → Fin 4 → ℝ) {a c δ : Fin 4 → ℝ}
+    (ha : ∀ d, 0 < a d) (hδ : ∀ d, 0 < δ d)
+    (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, ∀ d, x i d ∈ Icc (c d) (c d+δ d))
+    (hu : ∀ j ∈ T, ∀ d, a d*|u j d| ≤ 1/2) :
+    (∑ i ∈ S, ‖∑ j ∈ T, w j*fordAdditiveCharacter (∑ d, u j d*x i d)‖)^2 ≤
+      (16777216*(∏ d, (δ d+2*a d))/(∏ d, a d))*
+        (((S ×ˢ S).filter (fun ij => ∀ d, |x ij.1 d-x ij.2 d| ≤ 2*a d)).card:ℝ)*
+        (((T ×ˢ T).filter (fun ij => ∀ d, |u ij.1 d-u ij.2 d| ≤ 1/(δ d+2*a d))).card:ℝ) :=
+  bourgain_four_dimensional_double_large_sieve_sum_norm S T w x u ha hδ hw hx hu
+
+-- Every coordinate can be the only separating coordinate. Neither marginal
+-- two-coordinate count may silently replace the joint count.
+example (d₀ : Fin 4) :
+    (((Finset.univ : Finset (Fin 2)) ×ˢ (Finset.univ : Finset (Fin 2))).filter
+      (fun ij => ∀ d : Fin 4,
+        |(if d=d₀ then (ij.1:ℝ)*3 else 0)-
+          (if d=d₀ then (ij.2:ℝ)*3 else 0)| ≤ 1)).card = 2 := by
+  classical
+  have he : (((Finset.univ : Finset (Fin 2)) ×ˢ (Finset.univ : Finset (Fin 2))).filter
+      (fun ij => ∀ d : Fin 4,
+        |(if d=d₀ then (ij.1:ℝ)*3 else 0)-
+          (if d=d₀ then (ij.2:ℝ)*3 else 0)| ≤ 1)) = {(0,0),(1,1)} := by
+    ext ij
+    obtain ⟨i,j⟩ := ij
+    fin_cases i <;> fin_cases j <;>
+      simp only [Finset.mem_filter,Finset.mem_product,Finset.mem_univ,true_and,
+        Finset.mem_insert,Finset.mem_singleton,Prod.mk.injEq,Fin.isValue,Nat.cast_zero,
+        Nat.cast_one,zero_mul,one_mul]
+    · simp
+    · constructor
+      · intro h
+        have hh := h d₀
+        norm_num at hh
+      · simp
+    · constructor
+      · intro h
+        have hh := h d₀
+        norm_num at hh
+      · simp
+    · simp
+  rw [he]
+  norm_num
+
+-- Literal repeated source points and distinct frequencies in all four axes.
+example {ι : Type*} (S : Finset ι) :
+    (∑ _i ∈ S, ‖∑ j : Fin 2, (1:ℂ)*
+      fordAdditiveCharacter (∑ d : Fin 4, ((j:ℝ)*((d:ℝ)+1))*0)‖)^2 ≤
+      (16777216*(∏ _d : Fin 4, (1+2*(1/16):ℝ))/(∏ _d : Fin 4, (1/16:ℝ)))*
+        (((S ×ˢ S).filter (fun _ij => ∀ _d : Fin 4, |(0:ℝ)-0| ≤ 2*(1/16))).card:ℝ)*
+        ((((Finset.univ : Finset (Fin 2)) ×ˢ (Finset.univ : Finset (Fin 2))).filter
+          (fun ij => ∀ d : Fin 4,
+            |(ij.1:ℝ)*((d:ℝ)+1)-(ij.2:ℝ)*((d:ℝ)+1)| ≤ 1/(1+2*(1/16)))).card:ℝ) := by
+  apply bourgain_four_dimensional_double_large_sieve_sum_norm
+    S (Finset.univ : Finset (Fin 2)) (fun _ => 1) (fun _ _ => 0)
+    (fun (j : Fin 2) (d : Fin 4) => (j:ℝ)*((d:ℝ)+1))
+    (a := fun _ => 1/16) (c := fun _ => 0) (δ := fun _ => 1)
+  · intro d; norm_num
+  · intro d; norm_num
+  · intro j _; norm_num
+  · intro i hi d; norm_num
+  · intro j _ d
+    fin_cases j <;> fin_cases d <;> norm_num
+example {ι κ : Type*}
+    (S : Finset ι) (T : Finset κ) (w : κ → ℂ)
+    (x : ι → Fin 4 → ℝ) (u : κ → Fin 4 → ℝ) {a c δ : Fin 4 → ℝ}
+    (ha : ∀ d, 0 < a d) (hδ : ∀ d, 0 < δ d)
+    (hw : ∀ j ∈ T, ‖w j‖ ≤ 1)
+    (hx : ∀ i ∈ S, ∀ d, x i d ∈ Icc (c d) (c d+δ d))
+    (hu : ∀ j ∈ T, ∀ d, a d*|u j d| ≤ 1/12) :
+    let V := Fintype.piFinset (fun _ : Fin 6 => T)
+    let v := fun (j : Fin 6 → κ) d => ∑ k, u (j k) d
+    (∑ i ∈ S, ‖∑ j ∈ T, w j*fordAdditiveCharacter (∑ d, u j d*x i d)‖)^12 ≤
+      (S.card:ℝ)^10*(16777216*(∏ d, (δ d+2*a d))/(∏ d, a d))*
+        (((S ×ˢ S).filter (fun ij => ∀ d, |x ij.1 d-x ij.2 d| ≤ 2*a d)).card:ℝ)*
+        (((V ×ˢ V).filter (fun ij => ∀ d, |v ij.1 d-v ij.2 d| ≤ 1/(δ d+2*a d))).card:ℝ) :=
+  bourgain_four_dimensional_sixth_power_sieve S T w x u ha hδ hw hx hu
+
+-- Closed coordinate thresholds retain equality at the physical boundary.
+example (d₀ : Fin 4) :
+    (((Finset.univ : Finset (Fin 2)) ×ˢ (Finset.univ : Finset (Fin 2))).filter
+      (fun ij => ∀ d : Fin 4,
+        |(if d=d₀ then (ij.1:ℝ)*2 else 0)-
+          (if d=d₀ then (ij.2:ℝ)*2 else 0)| ≤ 2)).card = 4 := by
+  have hh : ∀ ij ∈ ((Finset.univ : Finset (Fin 2)) ×ˢ (Finset.univ : Finset (Fin 2))),
+      ∀ d : Fin 4, |(if d=d₀ then (ij.1:ℝ)*2 else 0)-
+        (if d=d₀ then (ij.2:ℝ)*2 else 0)| ≤ 2 := by
+    intro ij _ d
+    obtain ⟨i,j⟩ := ij
+    fin_cases i <;> fin_cases j <;> by_cases hd : d=d₀ <;> norm_num [hd]
+  rw [Finset.filter_eq_self.mpr hh,Finset.card_product]
+  norm_num
+
+end TaoTrudgianYang2025.BourgainFourDimensionalSieveRegression
+
+namespace TaoTrudgianYang2025.BourgainSourceCountRegression
+
+universe v
+open Set GafniTao
+open scoped BigOperators
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (δ Δ : ℝ),
+      δ∈Icc (1/(N:ℝ)^2) 1 → Δ∈Icc (1/(N:ℝ)) 1 →
+      ∀ (ι : Type v) (S : Finset ι) (m : ι → ℤ) (B : ℝ),
+        0 ≤ B → (∀ i∈S,1 ≤ m i ∧ m i ≤ N) →
+        (∀ q : ℤ,((S.filter (fun i => m i=q)).card:ℝ) ≤ B) →
+        let U := fun i => ![(m i:ℝ),(m i:ℝ)^2,
+          (1/δ)*((m i:ℝ)/N)^((3:ℝ)/2),(1/Δ)*Real.sqrt ((m i:ℝ)/N)]
+        let V := Fintype.piFinset (fun _ : Fin 6 => S)
+        let y := fun (j : Fin 6 → ι) d => ∑ k, U (j k) d
+        (((V ×ˢ V).filter (fun ij => ∀ d,
+          |y ij.1 d-y ij.2 d| ≤ (![1,1,1/2,1/2] : Fin 4 → ℝ) d)).card:ℝ) ≤
+          C*δ*Δ*(N:ℝ)^((9:ℝ)+ε)*B^12 :=
+  exists_bourgainSourceCurve_six_tuple_first_spacing hε
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (ι : Type v) (S : Finset ι) (m : ι → ℤ) (B : ℝ),
+        0 ≤ B → (∀ i∈S,1 ≤ m i ∧ m i ≤ N) →
+        (∀ q : ℤ,((S.filter (fun i => m i=q)).card:ℝ) ≤ B) →
+        let U := fun i => ![(m i:ℝ),(m i:ℝ)^2,
+          (N:ℝ)^2*((m i:ℝ)/N)^((3:ℝ)/2),(N:ℝ)*Real.sqrt ((m i:ℝ)/N)]
+        let V := Fintype.piFinset (fun _ : Fin 6 => S)
+        let y := fun (j : Fin 6 → ι) d => ∑ k, U (j k) d
+        (((V ×ˢ V).filter (fun ij => ∀ d,
+          |y ij.1 d-y ij.2 d| ≤ (![1,1,1/2,1/2] : Fin 4 → ℝ) d)).card:ℝ) ≤
+          C*(1/(N:ℝ)^2)*(1/(N:ℝ))*(N:ℝ)^((9:ℝ)+ε)*B^12 := by
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_six_tuple_first_spacing.{v} hε
+  refine ⟨C,hC,?_⟩
+  intro N hN ι S m B hB hm hmass
+  have hNr : (1:ℝ) ≤ N := by exact_mod_cast hN
+  have hNpos : (0:ℝ) < N := by linarith
+  have hδ : 1/(N:ℝ)^2 ∈ Icc (1/(N:ℝ)^2) 1 := by
+    refine ⟨le_rfl,(div_le_one (sq_pos_of_pos hNpos)).mpr ?_⟩
+    nlinarith
+  have hΔ : 1/(N:ℝ) ∈ Icc (1/(N:ℝ)) 1 :=
+    ⟨le_rfl,(div_le_one hNpos).mpr hNr⟩
+  simpa only [one_div_one_div] using h N hN (1/(N:ℝ)^2) (1/(N:ℝ)) hδ hΔ ι S m B hB hm hmass
+
+-- Actual repeated integer frequency at the smallest admissible physical scale.
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (ι : Type v) (S : Finset ι),
+      (S.card:ℝ)^12 ≤ C*(S.card:ℝ)^12 := by
+  classical
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_six_tuple_first_spacing.{v} hε
+  refine ⟨C,hC,?_⟩
+  intro ι S
+  have hf (q : ℤ) : ((S.filter (fun _ => (1:ℤ)=q)).card:ℝ) ≤ (S.card:ℝ) :=
+    Nat.cast_le.mpr (Finset.card_filter_le _ _)
+  have hc := h 1 le_rfl 1 1 (by norm_num) (by norm_num) ι S
+    (fun _ => 1) (S.card:ℝ) (Nat.cast_nonneg _) (by intros; norm_num) hf
+  norm_num [Fin.forall_fin_succ,Fintype.card_piFinset_const,Finset.card_product] at hc
+  convert hc using 1
+  ring
+
+end TaoTrudgianYang2025.BourgainSourceCountRegression
+
+
+namespace TaoTrudgianYang2025.BourgainSievePhaseRegression
+
+open Set GafniTao
+open scoped BigOperators FourierTransform
+universe v
+
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (N : ℕ), 1≤N → ∀ (η ζ : ℝ),
+      η∈Icc (1/(N:ℝ)^2) 1 → ζ∈Icc (1/(N:ℝ)) 1 →
+      ∀ (ι κ : Type v) (S : Finset ι) (T : Finset κ) (w : κ → ℂ)
+        (m : κ → ℤ) (x : ι → Fin 4 → ℝ) (B : ℝ),
+        0≤B → (∀ j∈T,1 ≤ m j ∧ m j≤N) →
+        (∀ j∈T,‖w j‖≤1) →
+        (∀ q : ℤ,((T.filter (fun j => m j=q)).card:ℝ)≤B) →
+        (∀ i∈S,x i∈Icc ![0,0,-1,-1] (fun _ => 1)) →
+        let U := fun j => ![(m j:ℝ),(m j:ℝ)^2,
+          (1/η)*((m j:ℝ)/N)^((3:ℝ)/2),(1/ζ)*Real.sqrt ((m j:ℝ)/N)]
+        let a : Fin 4 → ℝ := ![1/(12*(N:ℝ)),1/(12*(N:ℝ)^2),η/12,ζ/12]
+        (∑ i∈S,‖∑ j∈T,w j*fordAdditiveCharacter (∑ d,U j d*x i d)‖)^12 ≤
+          C*(N:ℝ)^((12:ℝ)+ε)*(S.card:ℝ)^10*B^12*
+            (((S ×ˢ S).filter (fun ij => ∀ d, |x ij.1 d-x ij.2 d|≤2*a d)).card:ℝ) := by
+  exact exists_bourgainSourceCurve_double_sieve hε
+
+-- Arbitrary repeated labels, repeated outer points, and actual complex weights.
+example {ε : ℝ} (hε : 0<ε) :
+    ∃ C>(0:ℝ), ∀ (ι κ : Type v) (S : Finset ι) (T : Finset κ) (w : κ → ℂ),
+      (∀ j∈T, ‖w j‖≤1) →
+      (∑ _i∈S, ‖∑ j∈T,w j‖)^12 ≤ C*(S.card:ℝ)^12*(T.card:ℝ)^12 := by
+  classical
+  obtain ⟨C,hC,h⟩ := exists_bourgainSourceCurve_double_sieve.{v} hε
+  refine ⟨C,hC,?_⟩
+  intro ι κ S T w hw
+  have hf (q : ℤ) : ((T.filter (fun _ => (1:ℤ)=q)).card:ℝ) ≤ (T.card:ℝ) :=
+    Nat.cast_le.mpr (Finset.card_filter_le _ _)
+  have hx (i : ι) (_hi : i∈S) :
+      (fun _ : Fin 4 => (0:ℝ))∈Icc ![0,0,-1,-1] (fun _ => 1) := by
+    constructor
+    · intro d
+      fin_cases d <;> norm_num [Matrix.cons_val_succ]
+    · intro d
+      norm_num
+  have hc := h 1 le_rfl 1 1 (by norm_num) (by norm_num) ι κ S T w
+    (fun _ => 1) (fun _ _ => 0) (T.card:ℝ) (Nat.cast_nonneg _)
+    (by intros; norm_num) hw hf hx
+  norm_num [Fin.forall_fin_succ,fordAdditiveCharacter,
+    Finset.card_product] at hc
+  simp only [Finset.sum_const,nsmul_eq_mul]
+  convert hc using 1
+  ring
+
+example (q : ℕ) [NeZero q]
+    (a r : ℤ) (har : (q : ℤ) ∣ a*r-1) {μ : ℝ} (hμ : 0<μ)
+    (ℓ : ℝ) (p : Fin 2) :
+    let b : ℤ := ⌊(q:ℝ)*ℓ⌋+(p:ℕ)
+    let τ : ℝ := ((b:ℝ)-(q:ℝ)*ℓ)/2
+    let s := Real.sqrt (2/(3*μ*(q:ℝ)))
+    let K := -2*μ*s^3
+    let x : Fin 4 → ℝ := ![-(r:ℝ)*b/q,-(r:ℝ)/q,K,3*K*τ/2]
+    let R : ℝ → ℝ := fun y =>
+      K*((Real.sqrt (y+τ))^3-(Real.sqrt y)^3-(3*τ/2)*Real.sqrt y)
+    |τ|≤1/2 ∧
+    (∀ h : ℤ, 1 ≤ h →
+      let u := Real.sqrt ((((b+2*h:ℤ):ℝ)/(q:ℝ)-ℓ)/(3*μ))
+      bourgainQuadraticGauss q a (b+2*h)*
+          ((𝐞 ((1:ℝ)/8-2*μ*u^3) : ℂ)/(Real.sqrt (6*μ*u):ℂ)) =
+        (bourgainQuadraticGauss q a b*(𝐞 ((1:ℝ)/8):ℂ))*
+          (fordAdditiveCharacter (∑ d, x d*
+            (![ (h:ℝ),(h:ℝ)^2,(h:ℝ)^((3:ℝ)/2),Real.sqrt (h:ℝ)] : Fin 4 → ℝ) d))*
+          (fordAdditiveCharacter (R h)/(Real.sqrt (6*μ*s*Real.sqrt ((h:ℝ)+τ)):ℂ))) ∧
+    (∀ H : ℝ, 1≤H → ∀ y : ℝ, H≤y →
+      HasDerivAt R (deriv R y) y ∧ |deriv R y|≤|K|/(H*Real.sqrt H)) ∧
+    (∀ N N₁ : ℕ, 1≤N → N₁≤2*N → q≤N → 1≤μ*(q:ℝ)^2*N →
+      let A := μ*(q:ℝ)*(N:ℝ)^2
+      1≤A ∧
+      (∀ y : ℝ, A≤y → HasDerivAt R (deriv R y) y ∧ |deriv R y|≤2/A) ∧
+      (∀ h : ℤ, b+2*h∈Finset.Icc
+        ⌈(q:ℝ)*(3*μ*(N:ℝ)^2+ℓ)⌉ ⌊(q:ℝ)*(3*μ*(N₁:ℝ)^2+ℓ)⌋ →
+        (h:ℝ)∈Icc A (7*A))) := by
+  exact bourgain_cubic_dual_phase_coordinates q a r har hμ ℓ p
+
+-- Both parity branches and every real linear coefficient at the exact minor-arc boundary.
+example (ℓ : ℝ) (p : Fin 2) (h : ℤ)
+    (hh : ⌊ℓ⌋+(p:ℕ)+2*h∈Finset.Icc ⌈3+ℓ⌉ ⌊12+ℓ⌋) :
+    (h:ℝ)∈Icc 1 7 := by
+  have hp := bourgain_cubic_dual_phase_coordinates 1 1 1
+    (by norm_num) (μ:=1) (by norm_num) ℓ p
+  have ht := hp.2.2.2 1 2 le_rfl le_rfl le_rfl (by norm_num)
+  norm_num only [Nat.cast_one,Nat.cast_ofNat,one_mul,one_pow,mul_one] at ht
+  exact ht.2.2 h (by simpa using hh)
+
+end TaoTrudgianYang2025.BourgainSievePhaseRegression
+
+
+namespace TaoTrudgianYang2025.BourgainC4CompletionRegression
+
+open Set GafniTao
+open scoped BigOperators FourierTransform ContDiff
+
+example
+    {M : ℕ} [NeZero M] {ι : Type*} (S : Finset ι)
+    (q N N₁ : ι → ℕ) (a r : ι → ℤ) (μ ℓ : ι → ℝ)
+    (hq : ∀ i∈S, 0<q i) (hN : ∀ i∈S, 1≤N i)
+    (hN₁ : ∀ i∈S, N₁ i≤2*N i) (hqN : ∀ i∈S, q i≤N i)
+    (hμ : ∀ i∈S, 0<μ i) (hscale : ∀ i∈S, 1≤μ i*(q i:ℝ)^2*N i)
+    (har : ∀ i∈S, (q i:ℤ)∣a i*r i-1)
+    (hM : ∀ i∈S, 7*(μ i*(q i:ℝ)*(N i:ℝ)^2)≤M) :
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+    let K := fun i => -2*μ i*(s i)^3
+    let x := fun i p =>
+      (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    ∃ k : ZMod M,
+      (∑ i∈S, ‖(q i:ℂ)⁻¹*∑ v∈Finset.Icc
+        ⌈(q i:ℝ)*(3*μ i*(N i:ℝ)^2+ℓ i)⌉
+        ⌊(q i:ℝ)*(3*μ i*(N₁ i:ℝ)^2+ℓ i)⌋,
+        let u := Real.sqrt (((v:ℝ)/(q i:ℝ)-ℓ i)/(3*μ i))
+        bourgainQuadraticGauss (q i) (a i) v*
+          ((𝐞 ((1:ℝ)/8-2*μ i*u^3):ℂ)/(Real.sqrt (6*μ i*u):ℂ))‖) ≤
+        (6*(3+56*Real.pi)*(1+Real.log M))*
+          ∑ i∈S, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*N i)))*
+            ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+              fordAdditiveCharacter (∑ d,x i p d*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖ := by
+  exact bourgain_cubic_gauss_main_common_fourier S q N N₁ a r μ ℓ hq hN hN₁ hqN hμ hscale har hM
+
+example :
+    ∃ C≥(1:ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (m : ι → ℝ) (a : ι → ℤ) (q : ι → ℕ) (N H : ℕ),
+      1≤N → H≤N → ∀ B D : ℝ, 0≤B → 0≤D →
+      B*(2*(N:ℝ)+1)^4≤1 → D*(2*(N:ℝ)+1)^2≤1 →
+      (∀ i∈S, ∀ y∈Icc (m i-(2*(N:ℝ)+1)) (m i+(2*(N:ℝ)+1)),
+        ContDiffAt ℝ 4 (f i) y) →
+      (∀ i∈S, ∀ y∈Icc (m i-(2*(N:ℝ)+1)) (m i+(2*(N:ℝ)+1)),
+        |iteratedDeriv 4 (f i) y|≤B) →
+      (∀ i∈S, |iteratedDeriv 2 (f i) (m i)/2-(a i:ℝ)/(q i:ℝ)|≤D) →
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      (∀ i∈S, 0<q i ∧ q i≤N ∧ IsCoprime (a i) (q i:ℤ) ∧
+        0<μ i ∧ μ i*(N:ℝ)^2≤1 ∧ 1≤μ i*(q i:ℝ)^2*N) →
+      ∀ (M : ℕ) [NeZero M], (∀ i∈S, 7*(μ i*(q i:ℝ)*(N:ℝ)^2)≤M) →
+      ∃ r : ι → ℤ, (∀ i∈S, (q i:ℤ)∣a i*r i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod M,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (N:ℤ) ((N:ℤ)+H),
+          (𝐞 (f i (m i+n)):ℂ)‖) ≤
+        C*((1+Real.log M)*
+          (∑ i∈S, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*N)))*
+            ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+              fordAdditiveCharacter (∑ d,x i p d*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+          ∑ i∈S, (Real.sqrt N*Real.log (2*(N:ℝ))+1/(μ i*(N:ℝ)^2))) := by
+  exact exists_bourgain_C4_source_common_fourier
+
+-- Even modulus, exact minor-arc boundary, negative linear coefficient,
+-- and the actual closed frequency interval [-1,8], with both parities.
+example :
+    let S : Finset Unit := {()}
+    let q : Unit → ℕ := fun _ => 2
+    let N : Unit → ℕ := fun _ => 2
+    let N₁ : Unit → ℕ := fun _ => 4
+    let a : Unit → ℤ := fun _ => 1
+    let r : Unit → ℤ := fun _ => 1
+    let μ : Unit → ℝ := fun _ => 1/8
+    let ℓ : Unit → ℝ := fun _ => -2
+    let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+    let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+    let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+    let K := fun i => -2*μ i*(s i)^3
+    let x := fun i p =>
+      (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+    ∃ k : ZMod 7,
+      (∑ i∈S, ‖(q i:ℂ)⁻¹*∑ v∈Finset.Icc
+        ⌈(q i:ℝ)*(3*μ i*(N i:ℝ)^2+ℓ i)⌉
+        ⌊(q i:ℝ)*(3*μ i*(N₁ i:ℝ)^2+ℓ i)⌋,
+        let u := Real.sqrt (((v:ℝ)/(q i:ℝ)-ℓ i)/(3*μ i))
+        bourgainQuadraticGauss (q i) (a i) v*
+          ((𝐞 ((1:ℝ)/8-2*μ i*u^3):ℂ)/(Real.sqrt (6*μ i*u):ℂ))‖) ≤
+        (6*(3+56*Real.pi)*(1+Real.log 7))*
+          ∑ i∈S, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*N i)))*
+            ‖∑ j : ZMod 7,ZMod.stdAddChar (-(j*k))*
+              fordAdditiveCharacter (∑ d,x i p d*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖ := by
+  dsimp only
+  exact bourgain_cubic_gauss_main_common_fourier (M:=7) ({()}:Finset Unit)
+    (fun _ => 2) (fun _ => 2) (fun _ => 4) (fun _ => 1) (fun _ => 1)
+    (fun _ => 1/8) (fun _ => -2)
+    (by intros; norm_num) (by intros; norm_num) (by intros; norm_num)
+    (by intros; norm_num) (by intros; norm_num) (by intros; norm_num)
+    (by intros; norm_num) (by intros; norm_num)
+
+end TaoTrudgianYang2025.BourgainC4CompletionRegression
