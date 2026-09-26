@@ -41,16 +41,14 @@ zero-q column + diagonal + zero-r row -> zero-shift combination [DONE]
 Remaining independent source gates:
 Sargos 1995 analytic curve/short-sum estimate [OPEN]
   -> generic D beta-process [EPZAE-11 OPEN]
-finite weighted parabola decoupling + actual quartic source entry [DONE]
-  -> linked source-cell return + genuine global dyadic bootstrap [DONE]
-  -> integer periods + mixed remainder + small-anisotropic assembly [DONE]
-  -> native quadratic VMVT + actual larger-plane fine-cell bound [DONE]
-  -> exact middle averaging + global larger-rectangle bilinear bound [DONE]
-  -> exact integer dilation + all-real-scale comparable-annulus bound [DONE]
-  -> actual localized shifted-phase estimate [OPEN]
-  -> bilinear-to-linear first-spacing theorem [OPEN]
-Bourgain second spacing + cubic-Poisson source entry [OPEN]
-  -> analytic pair (13/84,55/84) [OPEN]
+finite decoupling + exact source transport + finite inductions [DONE]
+  -> linear first spacing (Theorem 2) + anisotropic Corollary 3 [DONE]
+sharp perturbed cubic source -> residue Poisson + Gauss bound/phase [DONE]
+  -> physical stationary prefix + finite capped endpoint formula [DONE]
+  -> summed cubic transform, integer endpoints and rational linear term [DONE]
+  -> actual rational-arc frequency map/common-prefix assembly [OPEN]
+four-coordinate sieve + independent resonance second spacing [OPEN]
+  -> linked-scale assembly -> analytic pair (13/84,55/84) [OPEN]
 D + Bourgain pair + Huxley/Trudgian--Yang beta inputs [OPEN]
   -> exact beta table [EPZAE-13 OPEN]
   -> four new pairs [EPZAE-14 OPEN]
@@ -65,7 +63,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (87 public theorems and 170 focused
+module now passes both BAT gates (103 public theorems and 214 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -127,15 +125,107 @@ coefficient-fiber preservation, uniform scale selection and the physical
 Jacobian are derived. Its full signature and an actual repeated-frequency
 consumer at the nonintegral scale T=7/2 are regression-tested.
 
-Next prove the actual localized shifted-phase estimate used in
-Bourgain (2.18)--(2.23). Reuse the rationalized root coordinate and
-its determinant-one quartic frame, uniformly through the zero-ratio limit.
-Then prove the
-bilinear-to-linear first-spacing theorem. Do not substitute the literal
-bilinear curve bound for that stronger local source contract.
-Independent second-spacing/cubic-Poisson inputs also remain open.
-The global bilinear estimate does not close full first spacing,
-the analytic pair or generic D. Do not reopen optional
+The actual localized-phase dyadic theorem
+`exists_bourgainShiftedCurve_dyadic_decoupling` now reuses the completed
+source estimate through the rationalized root and determinant-one frame.
+Its constant is uniform for delta in [0,1], with actual t-separation nu;
+the coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 and the cell weight
+has scale 320R. The enlarged cube, inverse-norm and radial comparisons
+are derived. Full-contract and literal delta=0 regressions pass both BATs.
+
+The actual localized fine-cell plane theorem
+`exists_bourgainShiftedCurve_large_plane_quadratic_bound` is BAT-verified.
+Exact rationalized Taylor remainders, uniform Fourier control, integer
+periods, the affine determinant and native quadratic VMVT give
+(C(epsilon)/nu)*T^4*B^6*H^6*Q^(3+epsilon)*P^(3+epsilon).
+Its constant precedes delta in [0,1/100], every physical scale and array.
+The exact contract and repeated-frequency/nonzero-delta consumer are tested.
+
+The public `exists_bourgainShiftedCurve_small_anisotropic_refinement`
+now derives canonical root/fine assignments, center separation, integer
+periods, physical scales and outer integration. Its uniform coefficient
+is C(epsilon,nu)*2^(epsilon*j)*N^4 on half-widths (T,N^3,N^3,T),
+where j>=4, N=2^(2*j), T=N^2 and 1/N<=nu/10.
+The right side retains actual weighted fine-cell period moments.
+The full signature, zero-parameter endpoints and repeated endpoint
+frequencies at nonzero localization pass both BAT gates.
+
+The public `exists_bourgainShiftedCurve_large_anisotropic_bilinear_bound`
+now discharges all fine-cell moments using native quadratic VMVT, canonical
+fine intervals, exact middle averaging and count/scale cancellation.
+Its actual larger-rectangle bound is C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6.
+Both BATs pass, including the complete signature, scale cancellation and
+actual repeated-frequency regressions.
+
+The public `exists_bourgainShiftedCurve_all_scale_bilinear_bound`
+now derives exact integer dilation and the quartic Jacobian for every real
+T>=1. The public `exists_bourgainShiftedCurve_local_source_moment`
+then proves the literal physical moment (2.22)--(2.23), bounded by
+C(epsilon,nu)*N^(4+epsilon)*M^2*B^6*H^6 for 1<=M and
+100*M<=N0<=N. Both window losses are derived, not assumed.
+The complete contracts, nonintegral scale and minimal-scale repeated
+endpoints pass both BATs.
+
+The public `exists_bourgainSourceCurve_original_local_moment` now proves
+the literal unexpanded moment (2.13), with the same N^(4+epsilon)*M^2
+bound and actual coefficient-fiber factors. Its exact Taylor expansion,
+common-character cancellation, two integer periods, triangular coordinate
+transport and final cubic shift are derived. Both BATs pass, including
+actual repeated unexpanded frequencies at the smallest local scale.
+
+The public `exists_bourgainSourceCurve_first_spacing` now proves the full
+literal Theorem 2 moment, C(epsilon)*N^(6+epsilon)*B^12 on the exact source
+box. Actual integer partitions, occupied child centers, cross separation,
+fiber preservation, the annular induction and the shrinking initial segment
+are derived. This finite-induction alternate proof uses larger fixed
+constants; its public source contract is unchanged.
+`exists_bourgainSourceCurve_anisotropic_first_spacing` then proves
+Corollary 3, C(epsilon)*delta*Delta*N^(9+epsilon)*B^12 with both exact
+window ranges. The normalized phase, sub-box inclusion and diagonal
+Jacobian are proved. Both BAT gates and six new source regressions pass.
+
+The exact cubic source entry now reuses Schwartz Poisson on actual residue
+classes. `bourgain_cubic_rational_source_poisson` chooses its genuine cutoff
+from the sharp integer endpoints before all phase parameters, derives the
+literal G(a,b+h;q) and h/q transform, and proves absolute convergence.
+`bourgainQuadraticGauss_norm_le` and
+`bourgainQuadraticGauss_inverse_shift` prove the actual all-modulus bound
+and signed completed-square phase. Both BATs and nine new regressions pass.
+
+The public `exists_bourgain_cubic_stationary_prefix` now derives the
+physical saddle r=sqrt(beta/(3*mu)), the exact main term, and uniform
+C/beta error for every R>=2*r. Its actual Morse coordinate/Jacobian,
+quadratic remainder and first-derivative tails are kernel-checked.
+Both BATs pass with the full contract, exact endpoint and nonintegral-saddle
+regressions. Keep `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
+synchronized and rerun both after proof changes; no new module was needed.
+
+The full finite stationary formula now feeds
+`exists_bourgain_cubic_gauss_stationary`: for natural integer endpoints
+1<=N<=N1<=2N, 0<q<=N, mu>0, mu*N^2<=1 and coprime a,q, the literal
+source N<n<=N1 is transformed to the exact Gauss-weighted stationary sum
+on ceil(3*mu*q*N^2)<=h<=floor(3*mu*q*N1^2).
+Its error is C*(sqrt(N)*log(2*N)+1/(mu*N^2)), with a uniform constant
+chosen before all source parameters. Actual cutoff, zero-mode,
+capped endpoint, far-tail and endpoint-conversion errors are discharged.
+Five new regressions retain the full contract, q=1, even composite q=4,
+empty source/closed stationary endpoint and empty stationary window.
+Both BATs pass. This is an integer-endpoint, rational-linear-coefficient
+contract; do not silently apply it to an arbitrary real linear term.
+
+Next derive the actual rational-arc frequency map and common-prefix
+assembly, including the shifted Fourier frequencies for a real linear
+coefficient and the corresponding capped endpoint errors. Reuse the
+existing Taylor remainder, finite stationary formula and logarithmic
+lattice sums; no new support-module family is needed.
+In parallel dependency terms, the
+four-coordinate finite sieve and resonance second-spacing bound are still
+needed; the planar Sargos sieve alone is not that source estimate.
+Search and reuse existing results before adding support code. Keep actual
+phases, maps and scales linked, and never assume the desired estimate.
+The exact Poisson identity is not the full cubic transformation inequality;
+first spacing and Gauss arithmetic do not prove the analytic pair.
+Generic D and remaining beta inputs stay OPEN. Do not reopen optional
 Watt provenance or the already-complete EPZAE-15/26 branch.
 Keep both `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
 current and passing as needed. Recovery-record maintenance is permanently

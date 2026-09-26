@@ -1,6 +1,6 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Current all-real-scale bilinear closure and reuse (25 September 2026)
+## Current localized-phase moments and reuse (25 September 2026)
 
 [Bourgain section 2, equations (2.9)--(2.10)](https://arxiv.org/pdf/1408.5794v2)
 motivates the proved original-source global bilinear estimate.
@@ -12,18 +12,114 @@ give C(epsilon,nu)*T^(12+epsilon)*B^6*H^6 for every real T>=1.
 Both BAT gates and the full-signature/nonintegral-scale regressions pass.
 The native quadratic VMVT and existing localization machinery are reused.
 
-Equations (2.18)--(2.23) still require the actual localized residual phases.
+Equations (2.18)--(2.23) require a stronger localized moment conclusion.
 Rationalizing the square root gives the specific uniform family
 s=t/(sqrt(1+delta*t)+1), phi3=-s^3*(4+3*delta*s)/8, phi4=-s^4/4.
 Its exact quartic coordinate frame has determinant one, including delta=0.
-This identifies a direct route through existing quartic machinery, not
-a claim that the local analytic moment bound is already proved.
+The public theorem `exists_bourgainShiftedCurve_dyadic_decoupling` now
+consumes this family, uniformly for delta in [0,1], and reuses the already
+proved global source-curve theorem. Its coefficient is
+C(epsilon,nu)*2^(epsilon*n)/R^2 at R=(2^n)^2, with actual cell moments
+weighted at scale 320R. Source separation, the enlarged cube and radial
+comparison are derived through the explicit inverse frame, not assumed.
+The zero-parameter regression is retained. The additional public theorem
+`exists_bourgainShiftedCurve_large_plane_quadratic_bound` proves the actual
+localized fine-cell plane bound
+(C(epsilon)/nu)*T^4*B^6*H^6*Q^(3+epsilon)*P^(3+epsilon).
+Exact rationalized Taylor remainders, uniform Fourier control, integer
+periods and the affine determinant feed the existing native quadratic VMVT.
+The constant is uniform for delta in [0,1/100]; small-cell and physical
+remainder conditions are explicit, with every multiplicity retained.
+Both BATs pass: 89 public localization theorems and 174 regressions,
+including the exact contract and repeated frequencies at nonzero delta.
+The additional public consumer
+`exists_bourgainShiftedCurve_small_anisotropic_refinement` now derives
+the canonical root/fine cells and the global smaller-rectangle refinement.
+Its coefficient is C(epsilon,nu)*2^(epsilon*j)*N^4, retaining weighted
+fine-cell moments; the original arrays, all endpoints and multiplicities
+are consumed directly. Both BATs pass at 90 public localization theorems
+and 177 focused regressions.
 
-Bilinear-to-linear first spacing, independent second spacing/cubic-Poisson
-and generic D remain open. The renewed local/ANTEDB/Gafni search found the
-D-process geometry consumer still conditional on its missing analytic beta
-estimate. Preserve the completed Robert--Sargos alternative; do not reopen
-optional Watt provenance. No module family, pin or vendor changed.
+The public `exists_bourgainShiftedCurve_large_anisotropic_bilinear_bound`
+now combines the actual small-rectangle refinement with native fine-cell
+VMVT and exact middle averaging. Its dyadic larger-rectangle bound is
+C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6, with all canonical cells,
+integer intervals and count/scale losses derived. Both BATs pass at
+91 public localization theorems and 180 focused regressions.
+
+The all-real consumer `exists_bourgainShiftedCurve_all_scale_bilinear_bound`
+now derives integer dilation, separation and the quartic Jacobian.
+The physical consumer `exists_bourgainShiftedCurve_local_source_moment`
+then proves the literal (2.22)--(2.23) integral, bounded by
+C(epsilon,nu)*N^(4+epsilon)*M^2*B^6*H^6 under 1<=M and
+100*M<=N0<=N. Both window factors are derived through actual rectangle
+averaging and exact physical rescaling. Both BATs pass at 93 public
+localization theorems and 184 focused regressions.
+
+The public `exists_bourgainSourceCurve_original_local_moment` now proves
+the literal unexpanded moment (2.13), with bound
+C(epsilon,nu)*N^(4+epsilon)*M^2*B^6*H^6. The direct integral route is
+complete: exact Taylor expansion, common-character cancellation, actual
+integer periods, triangular transport and a bounded cubic shift consume
+the physical localized estimate. This is an alternate proof of the source
+contract, not an assumed solution-count comparison. Both BATs pass at
+94 public localization theorems and 186 focused regressions.
+
+The public `exists_bourgainSourceCurve_first_spacing` now proves
+Theorem 2, with the exact source box and N^(6+epsilon)*B^12 bound.
+The alternate proof replaces the paper's iterated partition tree by two
+finite strong inductions on actual integer arrays; every child scale,
+occupied center, separation and coefficient fiber is derived.
+The public `exists_bourgainSourceCurve_anisotropic_first_spacing` proves
+Corollary 3 (2.28), including the literal normalized phase, both closed
+window ranges and delta*Delta*N^(9+epsilon)*B^12. The existing exact
+diagonal Jacobian supplies the volume factor. Both BATs pass at
+96 public localization theorems and 192 focused regressions.
+
+The actual Poisson/Gauss part is now proved using
+[Bombieri--Iwaniec (1986), Lemmas 2.9--2.10 and the section 3 entry](https://www.numdam.org/article/ASNSP_1986_4_13_3_449_0.pdf).
+The two Poisson consumers retain the literal perturbed cubic phase,
+G(a,b+h;q), frequency h/q, and an endpoint-constructed sharp-source cutoff.
+Absolute convergence is derived. The Gauss consumers prove sqrt(2*q)
+for all positive moduli and the signed inverse-shift phase, including
+both parity branches. Gafni--Tao finite-character orthogonality,
+Mathlib two-torsion arithmetic, existing smooth cutoffs and Schwartz
+Poisson are reused. The physical stationary prefix is now proved by
+`exists_bourgain_cubic_stationary_prefix`: the saddle is derived from
+mu and beta, with the exact main term and C/beta error uniformly for
+R>=2*r. This finite version of the Lemma 2.5 route uses an actual Morse
+coordinate and the existing quadratic remainder and avoids claiming L1
+integrability of a unit-modulus half-line kernel. Both BATs pass at
+103 public source theorems and 214 focused regressions; no module was added.
+
+The finite stationary formula `exists_bourgain_cubic_finite_stationary`
+is retained for both frequency signs, with its derived saddle, exact closed
+indicator and capped physical endpoint errors. It now feeds
+`exists_bourgain_cubic_gauss_stationary`, the complete summed cubic
+transformation for integer endpoints 1<=N<=N1<=2N, positive q<=N,
+mu>0, mu*N^2<=1 and coprime a,q. The literal source is N<n<=N1;
+the main term is the exact Gauss-weighted closed stationary-frequency sum,
+and the error is C*(sqrt(N)*log(2*N)+1/(mu*N^2)).
+The actual cutoff, zero mode, logarithmic capped endpoint sums, far tail
+and physical truncation are all proved. Five new regressions cover the
+full contract, pure cubic q=1, even composite q=4, an empty source with
+closed stationary endpoint, and an empty stationary window.
+This closes the integer-endpoint rational-linear version of the section 3
+transformation, not an unproved real-linear-shift extension.
+The next missing inputs are the actual rational-arc frequency map and
+common-prefix assembly, including that real linear shift, and independent
+four-coordinate/resonance second spacing.
+The exact Poisson identity alone does not prove Lemma 3.1's estimate.
+Bourgain section 3 refers to
+Huxley--Watt (1988), section 4, for the actual frequency map x(I), and
+Huxley (1993), section 7, for the stronger resonance-curve bound.
+A renewed local/ANTEDB/Gafni search finds existing planar finite-sieve,
+Poisson and arithmetic-spacing machinery but no ready-made exact
+four-coordinate source estimate. Reuse these only through a proved
+consumer of the actual transformed sums and linked scales.
+Generic D remains separately open. Preserve the completed Robert--Sargos
+alternative; do not reopen optional Watt provenance. No module family,
+pin or vendor changed.
 Earlier sections below are historical.
 
 ## Earlier finite weighted source localization (25 September 2026)

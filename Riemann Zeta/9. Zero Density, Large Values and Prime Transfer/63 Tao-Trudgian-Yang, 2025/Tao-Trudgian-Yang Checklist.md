@@ -2,22 +2,30 @@
 
 Verified analytic checkpoint (25 September 2026):
 [ParabolaBilinearLocalization](Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves `exists_bourgainSourceCurve_all_scale_bilinear_bound`.
-For every real T>=1, original integer frequencies in [T/2,T], positive
-cross-family root separation nu and actual coefficient-fiber masses B,H,
-the literal bilinear sixth-moment product on half-widths (T,T^2,T^2,T)
-is bounded by C(epsilon,nu)*T^(12+epsilon)*B^6*H^6.
-Exact integer dilation, dyadic scale selection and the physical rectangle
-Jacobian remove both the dyadic and large-T restrictions. Coefficients,
-multiplicities, endpoints and empty families are preserved.
-Both BAT gates pass: 87 public theorems and 170 focused regressions;
-this batch added one public theorem and two regressions, including an
-actual arbitrary-coefficient repeated-frequency consumer at T=7/2.
-No production module or assumed analytic estimate was added.
-Next: the localized shifted-phase estimate and bilinear-to-linear
-first spacing. This comparable-annulus bilinear bound does not supply
-that stronger local contract. Second spacing/cubic-Poisson, the Bourgain
-pair and generic D remain OPEN.
+now proves Bourgain Theorem 2, anisotropic Corollary 3, and the complete
+integer-endpoint cubic Gauss transformation
+`exists_bourgain_cubic_gauss_stationary`. For 1<=N<=N1<=2N,
+0<q<=N, mu>0, mu*N^2<=1 and coprime integer a,q, it transforms the
+literal sum over N<n<=N1 of e(mu*n^3+(a*n^2+b*n)/q).
+The exact complex main term is the Gauss-weighted sum over the closed
+integer window ceil(3*mu*q*N^2)<=h<=floor(3*mu*q*N1^2), with
+r_h=sqrt((h/q)/(3*mu)) and stationary factor
+e(1/8-2*mu*r_h^3)/sqrt(6*mu*r_h), divided by q.
+One constant before all parameters bounds the error by
+C*(sqrt(N)*log(2*N)+1/(mu*N^2)).
+The proof derives the cutoff, zero mode, capped endpoint sums,
+far-frequency tail, physical truncation and source endpoint conversion.
+Both parity branches remain in the literal Gauss coefficient.
+Both BAT gates pass: 103 public localization/source theorems and 214 focused
+regressions, zero Lean diagnostics and permitted dependency audits only.
+Five new regressions cover the full contract, q=1, even composite q=4,
+an empty source with a stationary endpoint, and an empty stationary window.
+No module, import, pin or vendor changed; both counterexamples are unchanged.
+Next: the actual rational-arc frequency map/common-prefix assembly,
+including its real linear coefficient, and independent second spacing.
+This theorem has integer endpoints and rational linear coefficient b/q;
+it does not yet supply the full rational-arc source entry.
+The analytic Bourgain pair, generic D and remaining beta inputs stay OPEN.
 Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
 the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 

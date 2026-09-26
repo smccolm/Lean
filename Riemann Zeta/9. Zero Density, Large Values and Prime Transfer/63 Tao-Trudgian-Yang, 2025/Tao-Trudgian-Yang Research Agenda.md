@@ -1,6 +1,233 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-## Current verified all-real-scale bilinear bound (25 September 2026)
+## Current verified integer-endpoint cubic Gauss transformation (25 September 2026)
+
+The consolidated source module now proves Bourgain Theorem 2, anisotropic Corollary 3, and the complete
+integer-endpoint cubic Gauss transformation
+`exists_bourgain_cubic_gauss_stationary`. For 1<=N<=N1<=2N,
+0<q<=N, mu>0, mu*N^2<=1 and coprime integer a,q, it transforms the
+literal sum over N<n<=N1 of e(mu*n^3+(a*n^2+b*n)/q).
+The exact complex main term is the Gauss-weighted sum over the closed
+integer window ceil(3*mu*q*N^2)<=h<=floor(3*mu*q*N1^2), with
+r_h=sqrt((h/q)/(3*mu)) and stationary factor
+e(1/8-2*mu*r_h^3)/sqrt(6*mu*r_h), divided by q.
+One constant before all parameters bounds the error by
+C*(sqrt(N)*log(2*N)+1/(mu*N^2)).
+The proof derives the cutoff, zero mode, capped endpoint sums,
+far-frequency tail, physical truncation and source endpoint conversion.
+Both parity branches remain in the literal Gauss coefficient.
+Both BAT gates pass: 103 public localization/source theorems and 214 focused
+regressions, zero Lean diagnostics and permitted dependency audits only.
+Five new regressions cover the full contract, q=1, even composite q=4,
+an empty source with a stationary endpoint, and an empty stationary window.
+No module, import, pin or vendor changed; both counterexamples are unchanged.
+Next: the actual rational-arc frequency map/common-prefix assembly,
+including its real linear coefficient, and independent second spacing.
+This theorem has integer endpoints and rational linear coefficient b/q;
+it does not yet supply the full rational-arc source entry.
+The analytic Bourgain pair, generic D and remaining beta inputs stay OPEN.
+
+The actual residue-class transform and Gauss calculation implement the
+entry used in [Bombieri--Iwaniec, section 3](https://www.numdam.org/article/ASNSP_1986_4_13_3_449_0.pdf).
+This is an alternate open-primary-source route while the cited
+Huxley--Watt full text remains unavailable. The finite stationary formula
+now feeds the complete summed transformation for integer endpoints and
+rational linear coefficient b/q. All cutoff, zero-mode, capped endpoint
+and far-frequency errors are derived. The real linear shift needed at
+actual rational arcs and the independent Huxley resonance bound remain
+open; neither is assumed in the verified theorem.
+The transformed coefficients, lattice and exact sharp-source cutoff are
+proved together; see the reproduction manifest for both BATs and hashes.
+Whole-proof completion remains 31/42.
+
+## Earlier verified linear and anisotropic first spacing (25 September 2026)
+
+`exists_bourgainSourceCurve_first_spacing` proves the literal Theorem 2
+moment, with bound C(epsilon)*N^(6+epsilon)*B^12 on
+[0,1]^2 x [-1,1]^2, for every positive integer scale and indexed array
+of frequencies in [1,N]. Coefficient fibers retain multiplicities.
+The full bilinear-to-linear step is derived: occupied integer cells,
+strict child scales, cross separation, coefficient reindexing and two
+finite inductions consume the actual local moment. No target recurrence
+or analytic moment estimate is supplied as a hypothesis.
+
+`exists_bourgainSourceCurve_anisotropic_first_spacing` proves Corollary 3
+on the same source box. Its literal normalized phase has coefficient
+1/delta on (n/N)^(3/2) and 1/Delta on sqrt(n/N), with
+N^-2<=delta<=1 and N^-1<=Delta<=1. Exact box inclusion, the diagonal
+Jacobian and the phase identity yield C(epsilon)*delta*Delta*N^(9+epsilon)*B^12.
+
+Both BATs pass at 96 public localization theorems and 192 focused regressions,
+with zero Lean diagnostics. Six new regressions cover both complete
+signatures, both literal unweighted sums, and repeated coefficients at the
+minimal closed endpoints. See the reproduction manifest for frozen hashes.
+No module, pin or vendor changed.
+
+Next: actual cubic-Poisson source entry and the independent second-spacing
+estimate, then the analytic Bourgain pair. The existing planar Sargos sieve
+and generic Poisson tools are reuse candidates, not substitutes for the
+four-coordinate source contract. Generic D and the remaining beta inputs
+stay OPEN; whole-proof completion remains 31/42. Both counterexamples and
+the completed EPZAE-15/26 cascade are preserved.
+
+## Earlier verified original unexpanded local moment (25 September 2026)
+
+`exists_bourgainSourceCurve_original_local_moment` now proves the literal
+unexpanded moment (2.13), with source frequencies N0+m and the actual
+square-root/cubic-power phase. For 1<=M, 100*M<=N0<=N and separation
+at least nu*M, its bound is C(epsilon,nu)*N^(4+epsilon)*M^2*B^6*H^6.
+The constant precedes all source scales and indexed coefficient arrays.
+Zero offsets and repeated frequencies remain.
+
+The proof is a direct integral alternative to the paper's solution-count
+comparison: exact Taylor identities, common-character cancellation,
+both integer periods, triangular coordinate transport and the last cubic
+shift feed the proved physical localized moment. No analytic estimate or
+source-entry identity remains as a hypothesis.
+
+Both BATs pass at 94 public localization theorems and 186 focused regressions,
+with zero Lean diagnostics. The full source signature and actual repeated
+unexpanded endpoints 100 and 101 are retained regressions. The source hashes
+stayed fixed across both gates; see the reproduction manifest.
+
+Next close global linear first spacing by deriving the actual finite
+integer partitions and linked induction from this local bilinear theorem.
+The maximum/near-far proof and finite Hölder machinery are available for
+reuse; larger fixed constants do not change the public epsilon contract.
+Second spacing/cubic-Poisson, the analytic Bourgain pair and generic D
+remain OPEN. Completion stays 31/42. Both counterexamples and the completed
+EPZAE-15/26 cascade remain preserved. No production module was added.
+
+## Earlier verified all-real and physical localized moments (25 September 2026)
+
+`exists_bourgainShiftedCurve_all_scale_bilinear_bound` removes every dyadic
+restriction for real T>=1. Exact integer dilation preserves the lattice,
+coefficient fibers and separation; the quartic diagonal Jacobian is derived.
+The bound is C(epsilon,nu)*T^(12+epsilon)*B^6*H^6 uniformly in
+localization [0,1/100], including zero.
+
+`exists_bourgainShiftedCurve_local_source_moment` consumes that result
+and proves the literal physical localized moment in (2.22)--(2.23).
+For 1<=M, 100*M<=N0<=N and delta=M/N0, its cubic/quartic unit-box
+integral is bounded by C(epsilon,nu)*N^(4+epsilon)*M^2*B^6*H^6.
+Both source window factors follow from actual rectangle averaging,
+coefficient modulation and a proved change of variables. No analytic
+moment hypothesis is supplied. Zero and repeated integer frequencies remain.
+
+Both BATs pass: 93 public localization theorems, 184 focused regressions,
+17,097 extension declarations audited and zero Lean diagnostics. Four new
+regressions cover both exact contracts, nonintegral scale and repeated
+endpoints at the minimal local scale. Source hashes stayed fixed across
+both gates; see the reproduction manifest.
+
+Next transport the original unexpanded source sum (2.13) into this localized
+estimate, then prove the genuine linked bilinear-to-linear first-spacing
+iteration. The physical local theorem does not discharge those two steps.
+Second spacing/cubic-Poisson, the Bourgain pair and generic D remain OPEN.
+Completion stays 31/42. The EPZAE-15/26 cascade and both counterexamples
+are preserved. No production module, pin, vendor or assumption was added.
+
+## Earlier verified localized larger-rectangle moment (25 September 2026)
+
+`exists_bourgainShiftedCurve_large_anisotropic_bilinear_bound` now consumes
+the actual indexed integer arrays and discharges every fine-cell moment.
+For j>=4, N=2^(2*j), T=N^2, 1/N<=nu/10 and localization in [0,1/100],
+the literal integral on half-widths (T,T^2,T^2,T) is bounded by
+C(epsilon,nu)*2^(epsilon*j)*T^12*B^6*H^6. Native quadratic VMVT,
+canonical short integer intervals, middle averaging and exact cell-count
+cancellation are derived. The constant precedes every source parameter;
+coefficient fibers retain zero and repeated frequencies.
+
+Both BATs pass: 91 public localization theorems, 180 focused regressions,
+17,095 extension declarations audited, and zero Lean diagnostics.
+The three new regressions cover the full signature, scale cancellation
+and actual repeated endpoints at nonzero localization. The three Lean
+source hashes stayed fixed across both gates; see the reproduction manifest.
+
+Next remove the dyadic restriction by reusing integer dilation, then
+derive the physical local moment and bilinear-to-linear first spacing.
+Second spacing/cubic-Poisson, the Bourgain pair and generic D remain OPEN.
+Completion stays 31/42. Both counterexamples and the EPZAE-15/26 cascade
+are preserved. No production module or analytic assumption was added.
+
+## Earlier verified localized small-anisotropic refinement (25 September 2026)
+
+`exists_bourgainShiftedCurve_small_anisotropic_refinement` now consumes
+the original indexed integer arrays directly. For j>=4, N=2^(2*j),
+T=N^2, 1/N<=nu/10 and localization parameter in [0,1/100], it bounds
+the moment on half-widths (T,N^3,N^3,T) by
+C(epsilon,nu)*2^(epsilon*j)*N^4 times the two actual weighted fine-period
+sums. The constant precedes the localization parameter and all arrays.
+Canonical root/fine floors, closed endpoints, center separation, source
+entry, integer periods, physical normalization and outer integration
+are derived. Repeated frequencies and empty cells remain.
+
+Both BATs pass: 90 public localization theorems, 177 focused regressions,
+17,094 extension declarations audited, and zero Lean diagnostics.
+The three new regressions cover the full contract, zero-localization
+endpoint assignments and actual repeated endpoints at nonzero localization.
+The source hashes stayed fixed across both gates; see the reproduction manifest.
+
+Next consume the fine-cell moments with the proved larger-plane VMVT,
+then derive the physical local moment and bilinear-to-linear first spacing.
+Second spacing/cubic-Poisson, the Bourgain pair and generic D remain OPEN.
+Completion stays 31/42; the old-pair/EPZAE-15/26 cascade and both
+counterexamples are preserved. No production module or assumption was added.
+
+## Earlier verified localized large-plane moment (25 September 2026)
+
+`exists_bourgainShiftedCurve_large_plane_quadratic_bound` proves the
+actual localized two-period product on the plane with half-width 2*T^2:
+(C(epsilon)/nu)*T^4*B^6*H^6*Q^(3+epsilon)*P^(3+epsilon).
+The constant precedes delta in [0,1/100], centers in [0,1], all physical
+scales and arrays. The hypotheses retain 0<h<=1/100,
+(2*T^2)*h^3<=32, |q|<=2*T^2 and actual integer links T*(b+h*s)=m.
+Q,P are integer interval lengths; B,H are coefficient-fiber masses.
+Exact rationalized Taylor identities, uniform remainder jets, weighted
+Fourier expansion, integer periods and the affine determinant are derived;
+the native quadratic VMVT supplies the short-interval moments.
+
+Both BATs pass with zero diagnostics: 89 public localization theorems,
+174 focused regressions and 17,092 audited extension declarations.
+The new regressions cover the full contract and repeated frequencies at
+delta=1/200 with nonzero quartic offset. No production module was added.
+See the reproduction manifest for the verified logs and hashes.
+
+Next: global localized anisotropic assembly, then linear first spacing.
+Second spacing/cubic-Poisson, the Bourgain pair and generic D remain OPEN.
+Completion stays 31/42; EPZAE-15/26 and both counterexamples are preserved.
+
+## Earlier verified uniform shifted-phase decoupling (25 September 2026)
+
+The public theorem `exists_bourgainShiftedCurve_dyadic_decoupling`
+consumes the actual localized phases
+s=t/(sqrt(1+delta*t)+1), phi3=-s^3*(4+3*delta*s)/8, phi4=-s^4/4.
+Its constant depends only on positive epsilon and positive separation nu
+between the original local t-frequencies, uniformly for delta in [0,1].
+At N=2^n, R=N^2 the coefficient is
+C(epsilon,nu)*2^(epsilon*n)/R^2, multiplying both sums of actual
+cell sixth moments with radial weight at scale 320R.
+
+The proof reuses the completed source-curve estimate, with no new bootstrap.
+The exact quartic frame has determinant one at every delta, including zero.
+Its explicit inverse yields uniform norm bounds by 16 in both directions.
+The existing rectangle average derives the enlarged source cube;
+translation and inverse-norm inequalities derive the radial-weight comparison.
+Root separation is derived from the original t-separation. Arbitrary indexed
+coefficients, repeated frequencies, empty cells and closed endpoints remain.
+Joint smoothness, uniform finite jets and local nondegeneracy are also proved
+for the actual residual phases, without analytic estimate assumptions.
+
+Both BAT gates pass with zero diagnostics: 88 public localization theorems,
+172 focused regressions and 17,091 audited extension declarations.
+The two new regressions cover the exact public contract and delta=0's
+literal cubic/quartic phase. No production module, pin or vendor changed.
+The next terminal obligation is the anisotropic integer-cell refinement,
+followed by bilinear-to-linear first spacing. Independent second spacing/
+cubic-Poisson, the Bourgain pair and generic D remain OPEN; completion 31/42.
+The completed old-pair/EPZAE-15/26 branch and both counterexamples are preserved.
+
+## Earlier verified all-real-scale bilinear bound (25 September 2026)
 
 The public theorem `exists_bourgainSourceCurve_all_scale_bilinear_bound`
 proves the actual original-source bilinear sixth-moment product bound

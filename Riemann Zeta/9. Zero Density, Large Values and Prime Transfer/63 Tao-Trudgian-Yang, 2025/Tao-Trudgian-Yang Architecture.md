@@ -1,5 +1,5 @@
 flowchart TD
-%% Actual global dyadic bootstrap and weighted anisotropic coarse-cell plane refinement at derived scales DONE. Outer/global anisotropic assembly, larger-domain/bilinear-to-linear first spacing, second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
+%% First spacing, anisotropic Corollary 3 and full integer-endpoint rational-linear cubic Gauss transform DONE. Actual rational-arc entry, second spacing and Bourgain pair OPEN. Both BAT gates PASS; 31/42.
 %% Closure-first EPZAE-11/13/14/15/26 cluster: see Goal Prompt, Closure-first analytic priority.
 %% Robert--Sargos 2002 DAG DONE: source axes -> common shift -> mixed jets/partial summation -> source sieve/collisions/spacing -> scales -> long-range fourth derivative (1.5) -> actual model-phase bridge -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26 DONE.
 %% This alternative branch does not discharge the separate Sargos 1995 generic D-process or missing EPZAE-13/14 source inputs.
@@ -209,18 +209,43 @@ flowchart TD
     PANI["EPZAE-13 weighted coarse-cell refinement + exact outer integration<br/>canonical endpoint-safe cells + actual finite fibers<br/>original-source small-anisotropic global assembly DONE"]
     PVM["EPZAE-13 native quadratic VMVT + exact weighted Fourier periods<br/>translated short intervals + actual coefficient fibers<br/>literal-source larger-plane fine-cell bound DONE"]
     PGL["EPZAE-13 global larger-rectangle bilinear bound<br/>exact integer dilation + actual Jacobian + uniform scale selection<br/>all-real-scale comparable-annulus source estimate DONE"]
-    PDEC["EPZAE-13 actual localized shifted-phase estimate<br/>bilinear-to-linear first spacing, second spacing/cubic-Poisson<br/>and analytic pair OPEN"]
+    PLS["EPZAE-13 actual shifted-phase dyadic decoupling<br/>uniform delta in [0,1], including zero;<br/>derived frame, enlarged cube and radial weights DONE"]
+    PLV["EPZAE-13 actual localized fine-cell large-plane bound<br/>rationalized Taylor + uniform Fourier + integer periods<br/>affine determinant + native quadratic VMVT DONE"]
+    PSA["EPZAE-13 global localized small-anisotropic refinement<br/>canonical closed cells, center separation and physical scales<br/>integer periods + outer-coordinate assembly DONE"]
+    PLG["EPZAE-13 actual localized dyadic larger-rectangle bound<br/>native fine-cell VMVT + exact middle averaging<br/>canonical counts and all scale losses DONE"]
+    PLAR["EPZAE-13 all-real localized bilinear bound<br/>exact integer dilation + quartic Jacobian<br/>uniform parameters and coefficient fibers DONE"]
+    PLPM["EPZAE-13 physical localized moment (2.22)--(2.23)<br/>actual cubic/quartic unit-box integral<br/>both window factors + N^(4+epsilon) M^2 bound DONE"]
+    PLOM["EPZAE-13 literal original-source local moment (2.13)<br/>exact Taylor + both periods + triangular transport<br/>cubic shift and source bound DONE"]
+    PLFST["EPZAE-13 actual linear first-spacing Theorem 2<br/>integer partitions + annular/global finite inductions<br/>exact source box, N^(6+epsilon) DONE"]
+    PLFSA["EPZAE-13 anisotropic first-spacing Corollary 3<br/>normalized phase + actual source-box Jacobian<br/>delta*Delta*N^(9+epsilon) DONE"]
+    PCGP["EPZAE-13 full cubic Gauss transform<br/>integer endpoints + rational linear coefficient<br/>stationary main and summed physical errors DONE"]
+    PCST["EPZAE-13 actual rational-arc source entry<br/>real linear shift + capped endpoint control<br/>frequency map/common-prefix OPEN"]
+    PDEC["EPZAE-13 independent second spacing<br/>linked-scale assembly and analytic pair OPEN"]
     SKF --> PLOC
     PLOC --> PANI
     PANI --> PGL
     GFN --> PVM
     PLOC --> PVM
     PVM --> PGL
-    PGL --> PDEC
+    PGL --> PLS
+    PLS --> PSA
+    PSA --> PLG
+    PLS --> PLV
+    GFN --> PLV
+    PLV --> PLG
+    PLG --> PLAR
+    PLAR --> PLPM
+    PLPM --> PLOM
+    PLOM --> PLFST
+    PLFST --> PLFSA
+    PLFSA --> PDEC
+    ML --> PCGP
+    PCGP --> PCST
+    PCST --> PDEC
     SRC --> PDEC
     PDEC --> BT
-    class PLOC,PANI,PVM,PGL done;
-    class PDEC open;
+    class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP done;
+    class PCST,PDEC open;
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]
     ZGLOG["EPZAE-15 actual logarithmic-phase pair bound<br/>all positive heights + phase sign DONE"]
