@@ -49,8 +49,14 @@ sharp cubic source -> residue Poisson + Gauss bound/phase [DONE]
   -> endpoint resonance absorbed at mu*q^2*N>=1 [DONE]
   -> actual C4 local source + one common prefix, given curvature data [DONE]
 actual two-parity Gauss coordinate map + physical remainder [DONE]
-  -> summed amplitude/variable-window Fourier completion [OPEN]
-rational-arc construction and independent arc counts [OPEN]
+  -> summed amplitude/variable-window Fourier completion [DONE]
+  -> actual C4 family, one common Fourier mode for both parities [DONE]
+actual derivative data -> reduced rational curvature levels [DONE]
+  -> exact real centers + controlled integer Taylor centers [DONE]
+  -> constructed minor-arc family + explicit major-arc remainder [DONE]
+prescribed integer intervals -> derived offsets and one Fourier mode [DONE]
+global model buffer/boundary control + major-arc cancellation [OPEN]
+actual cubic physical box + C4 source-to-resonance-count reduction [DONE]
 four-coordinate double-large-sieve + actual six-tuple reduction [DONE]
   -> actual twelve-variable first-spacing count [DONE]
   -> source-sieve assembly with only literal outer count [DONE]
@@ -70,7 +76,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (113 public theorems and 236 focused
+module now passes both BAT gates (120 public theorems and 248 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -262,10 +268,40 @@ The public `bourgain_cubic_dual_phase_coordinates` now derives the exact
 two-parity Gauss phase coordinates, amplitude and controlled remainder.
 Actual closed stationary windows give A<=h<=7*A and |R'(y)|<=2/A,
 where A=mu*q*N^2>=1 follows from the minor-arc scales.
-Next complete the actual weighted interval sums using existing Sargos
-Fourier completion and finite monotone-weight variation; do not replace
-that summed consumer with the pointwise identity. Rational-arc construction
-and the independent arc-count theorem are still required.
+The summed weighted consumer is now proved by
+`bourgain_cubic_gauss_main_common_fourier`, reusing existing Sargos prefix
+completion and finite monotone-weight variation. Exact parity splitting,
+amplitude normalization and variable closed windows yield one common mode.
+`exists_bourgain_C4_source_common_fourier` then consumes the actual C4
+source family, constructs modular inverses and retains the transformation
+error, at the linked completion scale 7*mu_i*q_i*N^2<=M.
+Both BATs and three new regressions pass, including even modulus q=2 and
+the negative-to-positive closed window [-1,8]. No new module was added.
+The rational centers are now constructed from actual third derivatives:
+`bourgain_rational_curvature_center` combines Mathlib Dirichlet approximation
+with mean values, intermediate values and controlled integer rounding.
+`exists_bourgain_C4_constructed_minor_arcs` feeds these centers into the
+full source-family consumer. It derives the local Taylor data and completion
+scale, retains the integer interval (m_i+N,m_i+N+H], and explicitly charges
+H for each block with lambda*q_i^2*N<3. Both BATs and four new regressions
+pass, including a nonintegral real center and a nonempty major-only family.
+The actual cubic physical box and source-sieve consumer are proved by
+`exists_bourgain_cubic_dual_source_sieve` and
+`exists_bourgain_C4_source_second_spacing_reduction`.
+For a physical lower bound d<=mu_i*q_i*N, the original source twelfth power
+is at most C(epsilon)*((2/d)^6*(1+log M)^12*M^(12+epsilon)*|S x Fin 2|^10*P+E^12).
+P is the literal joint resonance count with all four linked tolerances;
+its independent estimate is not assumed.
+`exists_bourgain_C4_prescribed_interval_minor_arcs` now constructs centers
+for prescribed integer intervals (L_i,L_i+H_i], H_i<=N. On each minor arc,
+A_i=(L_i-m_i).toNat satisfies N<=A_i<=3*N and m_i+A_i=L_i.
+The actual source interval is therefore unchanged. Major blocks retain H_i.
+Both BATs and the full-contract/nonzero-major-source regressions pass.
+Next prove major-arc cancellation and independent resonance counting.
+The global model-phase consumer must derive buffer coverage and boundary
+losses; do not assume the local buffered hypotheses outside the given domain.
+Dirichlet error alone is not quadratic Taylor smallness; the rounded
+curvature error is proved, not discarded.
 The independent resonance second-spacing bound remains open; neither
 first spacing nor the planar Sargos bound is substituted for it.
 Search and reuse existing results before adding support code. Keep actual

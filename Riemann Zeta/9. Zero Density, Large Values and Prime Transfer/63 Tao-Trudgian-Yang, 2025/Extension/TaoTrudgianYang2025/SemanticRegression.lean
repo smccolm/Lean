@@ -49822,3 +49822,501 @@ example :
     (by intros; norm_num) (by intros; norm_num)
 
 end TaoTrudgianYang2025.BourgainC4CompletionRegression
+
+
+namespace TaoTrudgianYang2025.BourgainConstructedArcsRegression
+
+open Set GafniTao
+open scoped BigOperators FourierTransform
+
+example
+    (f : ℝ → ℝ) (x : ℝ) (Q : ℕ) (hQ : 0 < Q)
+    (lambda Lambda : ℝ) (hlambda : 0 < lambda)
+    (hf : ∀ y∈Icc (x-(1/(lambda*(Q+1))+1)) (x+(1/(lambda*(Q+1))+1)),
+      ContDiffAt ℝ 3 f y)
+    (hlo : ∀ y∈Icc (x-(1/(lambda*(Q+1))+1)) (x+(1/(lambda*(Q+1))+1)),
+      lambda ≤ iteratedDeriv 3 f y/2)
+    (hhi : ∀ y∈Icc (x-(1/(lambda*(Q+1))+1)) (x+(1/(lambda*(Q+1))+1)),
+      iteratedDeriv 3 f y/2 ≤ Lambda) :
+    ∃ a : ℤ, ∃ q : ℕ, 0 < q ∧ q ≤ Q ∧ IsCoprime a (q:ℤ) ∧
+      |iteratedDeriv 2 f x/2-(a:ℝ)/(q:ℝ)| ≤ 1/(((Q:ℝ)+1)*q) ∧
+      ∃ c : ℝ, ∃ m : ℤ,
+        |c-x| ≤ 1/(lambda*((Q:ℝ)+1)*q) ∧
+        iteratedDeriv 2 f c/2=(a:ℝ)/(q:ℝ) ∧ |(m:ℝ)-c| ≤ 1/2 ∧
+        |(m:ℝ)-x| ≤ 1/(lambda*((Q:ℝ)+1)*q)+1/2 ∧
+        |iteratedDeriv 2 f m/2-(a:ℝ)/(q:ℝ)| ≤ Lambda/2 := by
+  exact bourgain_rational_curvature_center f x Q hQ lambda Lambda hlambda hf hlo hhi
+
+example :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (x : ι → ℝ) (N H : ℕ), 1 ≤ N → H ≤ N →
+      ∀ lambda Lambda B : ℝ, 0 < lambda → 0 ≤ Lambda → 0 ≤ B →
+      B*(2*(N:ℝ)+1)^4 ≤ 1 → (Lambda/2)*(2*(N:ℝ)+1)^2 ≤ 1 →
+      let R : ℝ := 1/(lambda*((N:ℝ)+1))+2*(N:ℝ)+2
+      (∀ i∈S, ∀ y∈Icc (x i-R) (x i+R), ContDiffAt ℝ 4 (f i) y) →
+      (∀ i∈S, ∀ y∈Icc (x i-R) (x i+R), |iteratedDeriv 4 (f i) y| ≤ B) →
+      (∀ i∈S, ∀ y∈Icc (x i-R) (x i+R),
+        lambda ≤ iteratedDeriv 3 (f i) y/2 ∧ iteratedDeriv 3 (f i) y/2 ≤ Lambda) →
+      ∃ (a : ι → ℤ) (q : ι → ℕ) (c : ι → ℝ) (m : ι → ℤ),
+        (∀ i∈S, 0 < q i ∧ q i ≤ N ∧ IsCoprime (a i) (q i:ℤ) ∧
+          |iteratedDeriv 2 (f i) (x i)/2-(a i:ℝ)/(q i:ℝ)| ≤ 1/(((N:ℝ)+1)*q i) ∧
+          |c i-x i| ≤ 1/(lambda*((N:ℝ)+1)*q i) ∧
+          iteratedDeriv 2 (f i) (c i)/2=(a i:ℝ)/(q i:ℝ) ∧
+          |(m i:ℝ)-c i| ≤ 1/2 ∧
+          |(m i:ℝ)-x i| ≤ 1/(lambda*((N:ℝ)+1)*q i)+1/2 ∧
+          |iteratedDeriv 2 (f i) (m i)/2-(a i:ℝ)/(q i:ℝ)| ≤ Lambda/2) ∧
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let G := S.filter (fun i => 3 ≤ lambda*(q i:ℝ)^2*N)
+      ∀ (M : ℕ) [NeZero M], 7*Lambda*(N:ℝ)^3/3 ≤ M →
+      ∃ r : ι → ℤ, (∀ i∈G, (q i:ℤ)∣a i*r i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let u := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod M,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc ((m i:ℤ)+N) ((m i:ℤ)+N+H),
+          (𝐞 (f i n):ℂ)‖) ≤
+        C*((H:ℝ)*(S.filter (fun i => lambda*(q i:ℝ)^2*N < 3)).card+
+          (1+Real.log M)*
+          (∑ i∈G, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*N)))*
+            ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+              fordAdditiveCharacter (∑ d,u i p d*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)+
+          ∑ i∈G, (Real.sqrt N*Real.log (2*(N:ℝ))+1/(μ i*(N:ℝ)^2))) := by
+  exact exists_bourgain_C4_constructed_minor_arcs
+
+-- The real curvature center is -1/4, but the integer Taylor center is 0:
+-- rounding must retain a nonzero quadratic discrepancy.
+example :
+    let f := fun y : ℝ => y^3/3+y^2/4
+    ∃ c : ℝ, ∃ m : ℤ, c=-(1/4:ℝ) ∧ m=0 ∧
+      iteratedDeriv 2 f c/2=0 ∧ iteratedDeriv 2 f (m:ℝ)/2=1/4 ∧
+      |(m:ℝ)-c| ≤ 1/2 := by
+  dsimp only
+  let f := fun y : ℝ => y^3/3+y^2/4
+  have hjet (j : ℕ) (y : ℝ) :
+      iteratedDeriv j f y=
+      (3 : ℕ).descFactorial j*y^(3-j)/3+(2 : ℕ).descFactorial j*y^(2-j)/4 := by
+    dsimp only [f]
+    rw [iteratedDeriv_fun_add (by fun_prop) (by fun_prop)]
+    simp only [iteratedDeriv_div_const,iteratedDeriv_pow]
+  have h2 (y : ℝ) : iteratedDeriv 2 f y=2*y+1/2 := by
+    rw [hjet]
+    norm_num [Nat.descFactorial]
+    ring
+  have h3 (y : ℝ) : iteratedDeriv 3 f y=2 := by
+    rw [hjet]
+    norm_num [Nat.descFactorial]
+  obtain ⟨a,q,hq,hq1,_hcop,ha,c,m,_hc,hct,hm,_hmx,_hmt⟩ :=
+    bourgain_rational_curvature_center f 0 1 (by norm_num) 1 1 (by norm_num)
+      (by intro y _; dsimp only [f]; fun_prop)
+      (by intro y _; rw [h3]; norm_num)
+      (by intro y _; rw [h3]; norm_num)
+  have hqeq : q=1 := by omega
+  subst q
+  rw [h2] at ha hct
+  norm_num at ha hct
+  have hab := abs_le.mp ha
+  have ha0 : a=0 := by
+    have ha1 : (-1:ℝ) < a := by linarith [hab.1,hab.2]
+    have ha2 : (a:ℝ) < 1 := by linarith [hab.1,hab.2]
+    have ha1' : (-1:ℤ) < a := by exact_mod_cast ha1
+    have ha2' : a < (1:ℤ) := by exact_mod_cast ha2
+    omega
+  subst a
+  have hc0 : c=-(1/4:ℝ) := by norm_num at hct; linarith
+  have hmb := abs_le.mp hm
+  have hm0 : m=0 := by
+    have hm1 : (-1:ℝ) < m := by linarith [hmb.1,hmb.2]
+    have hm2 : (m:ℝ) < 1 := by linarith [hmb.1,hmb.2]
+    have hm1' : (-1:ℤ) < m := by exact_mod_cast hm1
+    have hm2' : m < (1:ℤ) := by exact_mod_cast hm2
+    omega
+  refine ⟨c,m,hc0,hm0,?_,?_,hm⟩
+  · change iteratedDeriv 2 f c/2=0
+    rw [h2,hc0]
+    norm_num
+  · change iteratedDeriv 2 f (m:ℝ)/2=1/4
+    rw [h2,hm0]
+    norm_num
+
+-- A nonempty source family may have no minor arcs. The major-arc term
+-- must survive: this actual integer interval contains one unit-modulus term.
+example :
+    ∃ C ≥ (1:ℝ), ∃ m : ℤ,
+      0 < ‖∑ n∈Finset.Ioc (m+1) (m+1+1),
+        (𝐞 ((n:ℝ)^3/300):ℂ)‖ ∧
+      ‖∑ n∈Finset.Ioc (m+1) (m+1+1),
+        (𝐞 ((n:ℝ)^3/300):ℂ)‖ ≤ C := by
+  let f := fun y : ℝ => y^3/300
+  have h3 (y : ℝ) : iteratedDeriv 3 f y=1/50 := by
+    simp [f,iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+    norm_num
+  have h4 (y : ℝ) : iteratedDeriv 4 f y=0 := by
+    simp [f,iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+  obtain ⟨C,hC,hsource⟩ := exists_bourgain_C4_constructed_minor_arcs
+  obtain ⟨a,q,c,m,hdata,hmain⟩ := hsource Unit {()} (fun _ => f) (fun _ => 0)
+    1 1 le_rfl le_rfl (1/100) (1/100) 0
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intro i hi y hy; dsimp only [f]; fun_prop)
+    (by intro i hi y hy; rw [h4]; norm_num)
+    (by intro i hi y hy; rw [h3]; norm_num)
+  have hq : q ()=1 := by
+    have hd := hdata () (Finset.mem_singleton_self ())
+    omega
+  obtain ⟨r,_hr,k,hk⟩ := hmain 1 (by norm_num)
+  have hsmall : ({()} : Finset Unit).filter
+      (fun i => (1/100:ℝ)*(q i:ℝ)^2*1 < 3)={()} := by
+    norm_num [hq]
+  have hlarge : ({()} : Finset Unit).filter
+      (fun i => 3 ≤ (1/100:ℝ)*(q i:ℝ)^2*1)=∅ := by
+    norm_num [hq]
+  simp only [Nat.cast_one] at hk
+  rw [hlarge,hsmall] at hk
+  simp only [Finset.sum_empty,Finset.sum_singleton,
+    Finset.card_singleton,Nat.cast_one,mul_zero,add_zero,mul_one] at hk
+  refine ⟨C,hC,m (),?_,?_⟩
+  · have hI : Finset.Ioc (m ()+1) (m ()+1+1)={m ()+1+1} := by
+      ext n
+      simp only [Finset.mem_Ioc,Finset.mem_singleton]
+      omega
+    rw [hI,Finset.sum_singleton]
+    norm_num
+  · simpa only [f,Int.cast_one,Nat.cast_one] using hk
+
+end TaoTrudgianYang2025.BourgainConstructedArcsRegression
+
+
+namespace TaoTrudgianYang2025.BourgainCubicSieveRegression
+
+open Set GafniTao
+open scoped BigOperators FourierTransform
+universe v
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (M : ℕ) [NeZero M] (ι : Type v) (S : Finset ι)
+      (q N : ι → ℕ) (r : ι → ℤ) (μ ℓ : ι → ℝ),
+      (∀ i∈S, 0 < q i ∧ 1 ≤ N i ∧ q i ≤ N i ∧ 0 < μ i ∧
+        1 ≤ μ i*(q i:ℝ)^2*N i) →
+      (∀ i∈S, 7*(μ i*(q i:ℝ)*(N i:ℝ)^2) ≤ M) →
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+      let x := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+      let y := fun ip : ι × Fin 2 =>
+        (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+          x ip.1 ip.2 2/Real.sqrt M,x ip.1 ip.2 3/Real.sqrt M] : Fin 4 → ℝ)
+      let a : Fin 4 → ℝ :=
+        ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+      ∀ k : ZMod M,
+      (∑ i∈S, ∑ p : Fin 2, ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+        fordAdditiveCharacter (∑ d,x i p d*
+          (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+            Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) d)‖)^12 ≤
+        C*(M:ℝ)^((12:ℝ)+ε)*(V.card:ℝ)^10*
+          (((V ×ˢ V).filter (fun ij => ∀ d,|y ij.1 d-y ij.2 d| ≤ 2*a d)).card:ℝ) := by
+  exact exists_bourgain_cubic_dual_source_sieve hε
+
+example
+    {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (ι : Type v) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (m : ι → ℤ) (a : ι → ℤ) (q : ι → ℕ) (N H : ℕ),
+      1 ≤ N → H ≤ N → ∀ B D : ℝ, 0 ≤ B → 0 ≤ D →
+      B*(2*(N:ℝ)+1)^4 ≤ 1 → D*(2*(N:ℝ)+1)^2 ≤ 1 →
+      (∀ i∈S, ∀ y∈Icc ((m i:ℝ)-(2*(N:ℝ)+1)) ((m i:ℝ)+(2*(N:ℝ)+1)),
+        ContDiffAt ℝ 4 (f i) y) →
+      (∀ i∈S, ∀ y∈Icc ((m i:ℝ)-(2*(N:ℝ)+1)) ((m i:ℝ)+(2*(N:ℝ)+1)),
+        |iteratedDeriv 4 (f i) y| ≤ B) →
+      (∀ i∈S, |iteratedDeriv 2 (f i) (m i)/2-(a i:ℝ)/(q i:ℝ)| ≤ D) →
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      (∀ i∈S, 0 < q i ∧ q i ≤ N ∧ IsCoprime (a i) (q i:ℤ) ∧
+        0 < μ i ∧ μ i*(N:ℝ)^2 ≤ 1 ∧ 1 ≤ μ i*(q i:ℝ)^2*N) →
+      ∀ d : ℝ, 0 < d → (∀ i∈S, d ≤ μ i*(q i:ℝ)*N) →
+      ∀ (M : ℕ) [NeZero M], (∀ i∈S, 7*(μ i*(q i:ℝ)*(N:ℝ)^2) ≤ M) →
+      ∃ r : ι → ℤ, (∀ i∈S, (q i:ℤ)∣a i*r i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let K := fun i => -2*μ i*(Real.sqrt (2/(3*μ i*(q i:ℝ))))^3
+      let x := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      let V := S ×ˢ (Finset.univ : Finset (Fin 2))
+      let y := fun ip : ι × Fin 2 =>
+        (![Int.fract (x ip.1 ip.2 0),Int.fract (x ip.1 ip.2 1),
+          x ip.1 ip.2 2/Real.sqrt M,x ip.1 ip.2 3/Real.sqrt M] : Fin 4 → ℝ)
+      let A : Fin 4 → ℝ :=
+        ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+      (∑ i∈S, ‖∑ n∈Finset.Ioc (m i+N) (m i+N+H),(𝐞 (f i n):ℂ)‖)^12 ≤
+        C*((2/d)^6*(1+Real.log M)^12*(M:ℝ)^((12:ℝ)+ε)*(V.card:ℝ)^10*
+          (((V ×ˢ V).filter (fun ij => ∀ e,|y ij.1 e-y ij.2 e| ≤ 2*A e)).card:ℝ)+
+          (∑ i∈S, (Real.sqrt N*Real.log (2*(N:ℝ))+1/(μ i*(N:ℝ)^2)))^12) := by
+  exact exists_bourgain_C4_source_second_spacing_reduction hε
+
+-- The q=2, ell=-2, r=1 parity cloud with two repeated source blocks.
+-- Its exact near-pair count is 8 for every real cubic coordinate K.
+example (K : ℝ) :
+    let V : Finset (Fin 2 × Fin 2) := Finset.univ
+    let y := fun ip : Fin 2 × Fin 2 =>
+      (![Int.fract (2-(ip.2.val:ℝ)/2),(1:ℝ)/2,K/Real.sqrt 7,
+        (3*K*((ip.2.val:ℝ)/2)/2)/Real.sqrt 7] : Fin 4 → ℝ)
+    let A : Fin 4 → ℝ := ![1/(12*7),1/(12*7^2),(1/7^2)/12,(1/7)/12]
+    ((V ×ˢ V).filter (fun ij => ∀ d,|y ij.1 d-y ij.2 d| ≤ 2*A d)).card=8 := by
+  intro V y A
+  have he : (V ×ˢ V).filter (fun ij => ∀ d,|y ij.1 d-y ij.2 d| ≤ 2*A d)=
+      (V ×ˢ V).filter (fun ij => ij.1.2=ij.2.2) := by
+    ext ij
+    rcases ij with ⟨⟨i,p⟩,⟨j,p'⟩⟩
+    fin_cases p <;> fin_cases p' <;>
+      norm_num [y,A,Fin.forall_fin_succ,Matrix.cons_val_succ]
+  rw [he]
+  decide
+
+end TaoTrudgianYang2025.BourgainCubicSieveRegression
+
+namespace TaoTrudgianYang2025.BourgainPrescribedArcsRegression
+
+open Set Filter MeasureTheory GafniTao
+open scoped ContDiff Topology FourierTransform BigOperators
+
+example :
+    ∃ C ≥ (1:ℝ), ∀ (ι : Type*) (S : Finset ι) (f : ι → ℝ → ℝ)
+      (L : ι → ℤ) (H : ι → ℕ) (N : ℕ), 1 ≤ N → (∀ i∈S, H i ≤ N) →
+      ∀ lambda Lambda B : ℝ, 0 < lambda → 0 ≤ Lambda → 0 ≤ B →
+      B*(6*(N:ℝ)+1)^4 ≤ 1 → (Lambda/2)*(6*(N:ℝ)+1)^2 ≤ 1 →
+      let z := fun i => (L i:ℝ)-2*(N:ℝ)
+      let R : ℝ := 1/(lambda*((N:ℝ)+1))+6*(N:ℝ)+2
+      (∀ i∈S, ∀ y∈Icc (z i-R) (z i+R), ContDiffAt ℝ 4 (f i) y) →
+      (∀ i∈S, ∀ y∈Icc (z i-R) (z i+R), |iteratedDeriv 4 (f i) y| ≤ B) →
+      (∀ i∈S, ∀ y∈Icc (z i-R) (z i+R),
+        lambda ≤ iteratedDeriv 3 (f i) y/2 ∧ iteratedDeriv 3 (f i) y/2 ≤ Lambda) →
+      ∃ (a : ι → ℤ) (q : ι → ℕ) (c : ι → ℝ) (m : ι → ℤ),
+        (∀ i∈S, 0 < q i ∧ q i ≤ N ∧ IsCoprime (a i) (q i:ℤ) ∧
+          |iteratedDeriv 2 (f i) (z i)/2-(a i:ℝ)/(q i:ℝ)| ≤ 1/(((N:ℝ)+1)*q i) ∧
+          |c i-z i| ≤ 1/(lambda*((N:ℝ)+1)*q i) ∧
+          iteratedDeriv 2 (f i) (c i)/2=(a i:ℝ)/(q i:ℝ) ∧
+          |(m i:ℝ)-c i| ≤ 1/2 ∧
+          |(m i:ℝ)-z i| ≤ 1/(lambda*((N:ℝ)+1)*q i)+1/2 ∧
+          |iteratedDeriv 2 (f i) (m i)/2-(a i:ℝ)/(q i:ℝ)| ≤ Lambda/2) ∧
+      let μ := fun i => iteratedDeriv 3 (f i) (m i)/6
+      let ℓ := fun i => deriv (f i) (m i)
+      let A := fun i => (L i-m i).toNat
+      let G := S.filter (fun i => 3 ≤ lambda*(q i:ℝ)^2*N)
+      (∀ i∈G, N ≤ A i ∧ A i ≤ 3*N ∧ m i+(A i:ℤ)=L i) ∧
+      ∀ (M : ℕ) [NeZero M], 21*Lambda*(N:ℝ)^3 ≤ M →
+      ∃ r : ι → ℤ, (∀ i∈G, (q i:ℤ)∣a i*r i-1) ∧
+      let b := fun i (p : Fin 2) => (⌊(q i:ℝ)*ℓ i⌋+(p:ℕ) : ℤ)
+      let τ := fun i p => ((b i p:ℝ)-(q i:ℝ)*ℓ i)/2
+      let s := fun i => Real.sqrt (2/(3*μ i*(q i:ℝ)))
+      let K := fun i => -2*μ i*(s i)^3
+      let x := fun i p =>
+        (![-(r i:ℝ)*b i p/q i,-(r i:ℝ)/q i,K i,3*K i*τ i p/2] : Fin 4 → ℝ)
+      ∃ k : ZMod M,
+        (∑ i∈S, ‖∑ n∈Finset.Ioc (L i) (L i+H i),(𝐞 (f i n):ℂ)‖) ≤
+        C*((∑ i∈S.filter (fun i => lambda*(q i:ℝ)^2*N < 3),(H i:ℝ))+
+          (1+Real.log M)*
+          (∑ i∈G, ∑ p : Fin 2,
+            (Real.sqrt (2*(q i:ℝ))/((q i:ℝ)*Real.sqrt (μ i*A i)))*
+            ‖∑ j : ZMod M,ZMod.stdAddChar (-(j*k))*
+              fordAdditiveCharacter (∑ e,x i p e*
+                (![(j.val+1:ℝ),(j.val+1:ℝ)^2,(j.val+1:ℝ)^((3:ℝ)/2),
+                  Real.sqrt (j.val+1:ℝ)] : Fin 4 → ℝ) e)‖)+
+          ∑ i∈G, (Real.sqrt (A i)*Real.log (2*(A i:ℝ))+1/(μ i*(A i:ℝ)^2)))
+ := by
+  exact exists_bourgain_C4_prescribed_interval_minor_arcs
+
+-- A nonempty source family may have no minor arcs. The major-arc term
+-- must survive: this actual integer interval contains one unit-modulus term.
+example :
+    ∃ C ≥ (1:ℝ),
+      0 < ‖∑ n∈Finset.Ioc (10:ℤ) 11,
+        (𝐞 ((n:ℝ)^3/300):ℂ)‖ ∧
+      ‖∑ n∈Finset.Ioc (10:ℤ) 11,
+        (𝐞 ((n:ℝ)^3/300):ℂ)‖ ≤ C := by
+  let f := fun y : ℝ => y^3/300
+  have h3 (y : ℝ) : iteratedDeriv 3 f y=1/50 := by
+    simp [f,iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+    norm_num
+  have h4 (y : ℝ) : iteratedDeriv 4 f y=0 := by
+    simp [f,iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+  obtain ⟨C,hC,hsource⟩ := exists_bourgain_C4_prescribed_interval_minor_arcs
+  obtain ⟨a,q,c,m,hdata,_hA,hmain⟩ := hsource Unit {()} (fun _ => f) (fun _ => 10) (fun _ => 1)
+    1 le_rfl (by simp) (1/100) (1/100) 0
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by intro i hi y hy; dsimp only [f]; fun_prop)
+    (by intro i hi y hy; rw [h4]; norm_num)
+    (by intro i hi y hy; rw [h3]; norm_num)
+  have hq : q ()=1 := by
+    have hd := hdata () (Finset.mem_singleton_self ())
+    omega
+  obtain ⟨r,_hr,k,hk⟩ := hmain 1 (by norm_num)
+  have hsmall : ({()} : Finset Unit).filter
+      (fun i => (1/100:ℝ)*(q i:ℝ)^2*1 < 3)={()} := by
+    norm_num [hq]
+  have hlarge : ({()} : Finset Unit).filter
+      (fun i => 3 ≤ (1/100:ℝ)*(q i:ℝ)^2*1)=∅ := by
+    norm_num [hq]
+  simp only [Nat.cast_one] at hk
+  rw [hlarge,hsmall] at hk
+  simp only [Finset.sum_empty,Finset.sum_singleton,
+    mul_zero,add_zero,mul_one] at hk
+  refine ⟨C,hC,?_,?_⟩
+  · have hI : Finset.Ioc (10:ℤ) 11={11} := by decide
+    rw [hI,Finset.sum_singleton]
+    norm_num
+  · simpa only [f,Int.cast_one,Nat.cast_one] using hk
+
+
+end TaoTrudgianYang2025.BourgainPrescribedArcsRegression
+
+namespace TaoTrudgianYang2025.BourgainUpperTriangularRegression
+
+open Set
+open scoped BigOperators ContDiff
+
+example
+    (a a' r r' : ℤ) (q q' : ℕ) (hq : 0 < q) (hq' : 0 < q')
+    (har : (q:ℤ) ∣ a*r-1) (har' : (q':ℤ) ∣ a'*r'-1)
+    {eta : ℝ}
+    (hnear : |Int.fract (-(r:ℝ)/q)-Int.fract (-(r':ℝ)/q')| ≤ eta) :
+    ∃ alpha beta gamma delta : ℤ,
+      alpha*delta-beta*gamma=1 ∧
+      alpha*a+beta*q=a' ∧ gamma*a+delta*q=q' ∧
+      |(gamma:ℝ)| ≤ eta*(q:ℝ)*q' ∧
+      (eta*(q:ℝ)*q' < 1 → gamma=0 ∧ q=q' ∧ (q:ℤ) ∣ a'-a) := by
+  exact bourgain_inverse_coordinate_resonance a a' r r' q q' hq hq' har har' hnear
+
+example
+    (f : ℝ → ℝ) {A B lambda U eta zeta : ℝ}
+    (hlambda : 0 < lambda) (m n : ℤ)
+    (hm : (m:ℝ)∈Icc A B) (hn : (n:ℝ)∈Icc A B)
+    (hf : ∀ x∈Icc A B, ContDiffAt ℝ 4 f x)
+    (hfour : ∀ x∈Icc A B, lambda ≤ |iteratedDeriv 4 f x|)
+    (a a' r r' : ℤ) (q q' : ℕ) (hq : 0 < q) (hq' : 0 < q')
+    (har : (q:ℤ)∣a*r-1) (har' : (q':ℤ)∣a'*r'-1)
+    (hnear : |Int.fract (-(r:ℝ)/q)-Int.fract (-(r':ℝ)/q')| ≤ eta)
+    (hsmall : eta*(q:ℝ)*q' < 1) :
+    let mu := iteratedDeriv 3 f m/6
+    let nu := iteratedDeriv 3 f n/6
+    let K := fun (t d : ℝ) => -2*t*(Real.sqrt (2/(3*t*d)))^3
+    0 < mu → mu ≤ U → 0 < nu → nu ≤ U →
+    |K mu q-K nu q'| ≤ zeta →
+    q=q' ∧ (q:ℤ)∣a'-a ∧
+      |(m:ℝ)-n| ≤ (12*U*Real.sqrt (U*(q:ℝ)^3)/lambda)*zeta := by
+  exact bourgain_upper_triangular_source_spacing f hlambda m n hm hn hf hfour
+    a a' r r' q q' hq hq' har har' hnear hsmall
+
+example
+    {ι : Type*} (S : Finset ι) (f : ℝ → ℝ) (m : ι → ℤ)
+    (a r k : ι → ℤ) (q : ι → ℕ) (Q Bmul N : ℕ) (s : ℤ)
+    (hN : 0 < N)
+    (hspan : ∀ i∈S, (N:ℤ) ≤ s+(N:ℤ)*k i-m i ∧
+      s+(N:ℤ)*k i-m i ≤ 3*(N:ℤ))
+    {A B lambda U eta zeta : ℝ}
+    (hlambda : 0 < lambda) (hU : 0 < U) (hzeta : 0 ≤ zeta)
+    (hf : ∀ x∈Icc A B, ContDiffAt ℝ 4 f x)
+    (hfour : ∀ x∈Icc A B, lambda ≤ |iteratedDeriv 4 f x|)
+    (hm : ∀ i∈S, (m i:ℝ)∈Icc A B)
+    (hq : ∀ i∈S, 0 < q i ∧ q i ≤ Q)
+    (har : ∀ i∈S, (q i:ℤ)∣a i*r i-1)
+    (hmul : ∀ n : ℤ, (S.filter (fun i => k i=n)).card ≤ Bmul) :
+    let mu := fun i => iteratedDeriv 3 f (m i)/6
+    let K := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    (∀ i∈S, 0 < mu i ∧ mu i ≤ U) →
+    (((S ×ˢ S).filter (fun ij =>
+      |Int.fract (-(r ij.1:ℝ)/q ij.1)-Int.fract (-(r ij.2:ℝ)/q ij.2)| ≤ eta ∧
+      |K ij.1-K ij.2| ≤ zeta ∧ eta*(q ij.1:ℝ)*q ij.2 < 1)).card:ℝ) ≤
+      (Bmul:ℝ)*S.card*(3+(24*U*Real.sqrt (U*(Q:ℝ)^3)/(lambda*N))*zeta) := by
+  exact bourgain_upper_triangular_block_count S f m a r k q Q Bmul N s hN hspan
+    hlambda hU hzeta hf hfour hm hq har hmul
+
+
+-- Negative fourth derivative: the two integer source centers are distinct.
+example :
+    let K := fun t : ℝ => -2*t*(Real.sqrt (2/(3*t)))^3
+    1 ≤ (4*Real.sqrt ((1:ℝ)/3))*|K (1/3)-K (1/6)| := by
+  intro K
+  let f := fun y : ℝ => y^3/3-y^4/24
+  have h3 (y : ℝ) : iteratedDeriv 3 f y=2-y := by
+    dsimp only [f]
+    rw [iteratedDeriv_fun_sub (by fun_prop) (by fun_prop)]
+    simp [iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+    ring
+  have h4 (y : ℝ) : iteratedDeriv 4 f y=-1 := by
+    dsimp only [f]
+    rw [iteratedDeriv_fun_sub (by fun_prop) (by fun_prop)]
+    simp [iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+  have hb := bourgain_upper_triangular_source_spacing f (A:=0) (B:=1)
+    (lambda:=1) (U:=1/3) (eta:=0) (zeta:=|K (1/3)-K (1/6)|)
+    (by norm_num) 0 1 (by norm_num) (by norm_num)
+    (by intro y hy; dsimp only [f]; fun_prop)
+    (by intro y hy; rw [h4]; norm_num)
+    1 1 1 1 1 1 (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  simp only [h3,Int.cast_zero,Int.cast_one,Nat.cast_one,mul_one] at hb
+  have ht := hb (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+    (by dsimp only [K]; norm_num)
+  convert ht.2.2 using 1 <;> norm_num
+
+-- Two different prescribed blocks can share one Taylor center.
+-- The index multiplicity is one; all four ordered resonance pairs survive.
+example :
+    (((Finset.univ : Finset (Fin 2 × Fin 2)).filter
+      (fun _ => |Int.fract (-(1:ℝ))-Int.fract (-(1:ℝ))| ≤ 0)).card:ℝ) ≤ 6 := by
+  let f := fun y : ℝ => y^3/3-y^4/24
+  have h3 (y : ℝ) : iteratedDeriv 3 f y=2-y := by
+    dsimp only [f]
+    rw [iteratedDeriv_fun_sub (by fun_prop) (by fun_prop)]
+    simp [iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+    ring
+  have h4 (y : ℝ) : iteratedDeriv 4 f y=-1 := by
+    dsimp only [f]
+    rw [iteratedDeriv_fun_sub (by fun_prop) (by fun_prop)]
+    simp [iteratedDeriv_div_const,iteratedDeriv_pow,Nat.descFactorial]
+  have hb := bourgain_upper_triangular_block_count
+    (Finset.univ : Finset (Fin 2)) f (fun _ => 0) (fun _ => 1) (fun _ => 1)
+    (fun i => (i.val:ℤ)) (fun _ => 1) 1 1 1 1
+    (A:=0) (B:=1) (lambda:=1) (U:=1/3) (eta:=0) (zeta:=0)
+    (by norm_num)
+    (by
+      intro i hi
+      dsimp only
+      norm_num only [Nat.cast_one,one_mul,sub_zero]
+      have hi' := i.isLt
+      constructor <;> omega)
+    (by norm_num) (by norm_num) (by norm_num)
+    (by intro y hy; dsimp only [f]; fun_prop)
+    (by intro y hy; rw [h4]; norm_num)
+    (by norm_num) (by norm_num) (by norm_num)
+    (by
+      intro n
+      by_cases hn : ∃ i : Fin 2, (i.val:ℤ)=n
+      · obtain ⟨i,rfl⟩ := hn
+        have he : (Finset.univ : Finset (Fin 2)).filter
+            (fun j => (j.val:ℤ)=(i.val:ℤ))={i} := by
+          ext j
+          simp only [Finset.mem_filter,Finset.mem_univ,true_and,Finset.mem_singleton]
+          constructor
+          · intro h
+            exact Fin.ext (by exact_mod_cast h)
+          · rintro rfl
+            rfl
+        rw [he]
+        simp
+      · have he : (Finset.univ : Finset (Fin 2)).filter
+            (fun j => (j.val:ℤ)=n)=∅ := by
+          apply Finset.filter_eq_empty_iff.mpr
+          intro j _ h
+          exact hn ⟨j,h⟩
+        rw [he]
+        simp)
+  have hh := hb (by intro i hi; dsimp only; rw [h3]; norm_num)
+  convert (show (4:ℝ) ≤ 2*3 from by simpa using hh) using 1 <;> norm_num
+
+end TaoTrudgianYang2025.BourgainUpperTriangularRegression

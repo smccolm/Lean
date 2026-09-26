@@ -1,31 +1,29 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-## Current verified source sieve and cubic phase map (26 September 2026)
+## Current verified prescribed-interval source consumer (26 September 2026)
 
-The consolidated source module now combines the actual first-spacing count with the sixth-power source
-sieve and derives the two-parity cubic Gauss phase coordinates.
-`exists_bourgainSourceCurve_double_sieve` gives the twelfth-power bound
-C(epsilon)*N^(12+epsilon)*|S|^10*B^12 times the literal outer near-pair count.
-All four physical thresholds are derived; the inner count is discharged,
-with arbitrary complex coefficients and integer-frequency multiplicities.
-`bourgain_cubic_dual_phase_coordinates` consumes the actual Gauss main
-term. With b=floor(q*ell)+p and p=0,1, it derives the coordinates
-(-r*b/q,-r/q,K,3*K*tau/2), tau=(b-q*ell)/2 and
-K=-2*mu*(sqrt(2/(3*mu*q)))^3, multiplying
-(h,h^2,h^(3/2),sqrt(h)). The amplitude and phase identity are exact.
-For the actual closed stationary window, q<=N and mu*q^2*N>=1
-give A=mu*q*N^2>=1, A<=h<=7*A and |R'(y)|<=2/A for y>=A.
-Both BAT gates pass: 113 public localization/source theorems and 236 focused
+The consolidated source module now preserves prescribed integer source intervals exactly while constructing
+the rational curvature data and completing all minor blocks in one Fourier mode.
+`exists_bourgain_C4_prescribed_interval_minor_arcs` takes arbitrary left
+endpoints L_i and lengths H_i<=N. It constructs integer Taylor centers m_i
+and proves N<=A_i<=3*N and m_i+A_i=L_i on each minor block, where
+A_i=(L_i-m_i).toNat. The source remains (L_i,L_i+H_i]; no interval is moved.
+Actual derivative bounds on the stated buffer derive all Taylor, minor-arc
+and completion conditions. Each major block retains its full length H_i.
+The existing variable-window Gauss consumer is reused without a new module.
+The proved physical cubic sieve and C4-to-resonance-count reduction are
+retained, with all four tolerances, both parities and transformation errors.
+Both BAT gates pass: 120 public localization/source theorems and 248 focused
 regressions, zero Lean diagnostics and permitted dependency audits only.
-Four new regressions retain both full contracts, repeated source points
-with arbitrary complex weights, and both parity branches at the boundary.
-No new module, import, pin or vendor change in this integration batch;
-both counterexamples are unchanged.
-The pointwise Gauss coordinate map is proved, not the completed arc sum.
-Next derive the summed amplitude/variable-window Fourier completion.
-Rational-arc construction, independent resonance second spacing and linked
-analytic pair assembly remain OPEN. Generic D and remaining beta inputs
-remain OPEN.
+The two new regressions cover the complete contract and a nonzero prescribed
+interval (10,11] in a family with no minor arcs.
+No new import, module, pin, vendor or certificate change in this batch.
+Both counterexamples and the completed old-pair cascade are unchanged.
+Next control major arcs and prove independent resonance second spacing.
+A global model-phase application must also derive buffer coverage and
+boundary-block losses; the local prescribed-interval theorem does not
+assume or prove these global estimates. The analytic Bourgain pair,
+generic D and remaining beta inputs remain OPEN.
 
 The actual residue-class transform and Gauss calculation implement the
 entry used in [Bombieri--Iwaniec, section 3](https://www.numdam.org/article/ASNSP_1986_4_13_3_449_0.pdf).

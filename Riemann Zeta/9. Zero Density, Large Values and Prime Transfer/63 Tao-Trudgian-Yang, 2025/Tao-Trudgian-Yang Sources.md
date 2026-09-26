@@ -90,7 +90,7 @@ mu and beta, with the exact main term and C/beta error uniformly for
 R>=2*r. This finite version of the Lemma 2.5 route uses an actual Morse
 coordinate and the existing quadratic remainder and avoids claiming L1
 integrability of a unit-modulus half-line kernel. Both BATs pass at
-113 public source theorems and 236 focused regressions; no module was added.
+120 public source theorems and 248 focused regressions; no module was added.
 
 The C4 cubic entry, finite four-dimensional sieve and sixth-power consumer
 are retained. `exists_bourgainSourceCurve_six_tuple_first_spacing`
@@ -111,8 +111,37 @@ The shift |tau|<=1/2, stationary interval A<=h<=7*A and remainder
 |R'(y)|<=2/A are derived from the actual source and minor-arc scales.
 Four additional regressions cover both full contracts, repeated points
 with complex coefficients and both parity branches at the exact boundary.
-The summed amplitude/variable-window completion, rational-arc construction,
-independent resonance second spacing and analytic pair remain open.
+The full summed amplitude/variable-window completion is now proved by
+`bourgain_cubic_gauss_main_common_fourier`. The original-source consumer
+`exists_bourgain_C4_source_common_fourier` constructs modular inverses
+and yields one Fourier mode for the entire family and both parity branches.
+It reuses the existing Sargos prefix-completion and finite weight-variation
+modules, derives all amplitude/window bounds, and retains the C4 source error.
+Three new regressions include the even-modulus closed window [-1,8].
+Local rational curvature levels and integer Taylor centers are now proved by
+`bourgain_rational_curvature_center`, using Mathlib's
+`Real.exists_rat_abs_sub_le_and_den_le`, the mean-value theorem, intermediate
+values and rounding. The source curvature error is at most Lambda/2 when
+lambda<=f'''/2<=Lambda; the exact real center is also retained.
+`exists_bourgain_C4_constructed_minor_arcs` consumes these derived data,
+keeps the actual integer intervals, and charges H per small-denominator block.
+Four new regressions cover both exact contracts, nonintegral-center rounding,
+and a nonempty family with no minor arcs. The new import is Mathlib's existing
+DiophantineApproximation.Basic; no new module or source pin was introduced.
+The physical source box and original C4-to-count consumer are now proved by
+`exists_bourgain_cubic_dual_source_sieve` and
+`exists_bourgain_C4_source_second_spacing_reduction`. Their actual coordinates
+and four tolerances are derived; only the literal outer resonance count remains.
+The C4 bound is C(epsilon)*((2/d)^6*(1+log M)^12*M^(12+epsilon)*|S x Fin 2|^10*P+E^12)
+for d<=mu_i*q_i*N, retaining every transformation error in E.
+Both BATs and three new regressions pass, including exact parity-cloud count 8.
+`exists_bourgain_C4_prescribed_interval_minor_arcs` now preserves the exact
+prescribed integer intervals (L_i,L_i+H_i]. It derives N<=A_i<=3*N and
+m_i+A_i=L_i, where A_i=(L_i-m_i).toNat, for the constructed minor centers.
+Both BATs and two regressions pass, including a nonzero prescribed interval
+in a major-only family. The actual buffered hypotheses remain explicit.
+Major-arc cancellation, global model-domain buffer/boundary control,
+independent resonance second spacing and the analytic pair remain open.
 
 Additional primary-source review: [Olivier Robert, Sommes d'exponentielles
 avec derivee troisieme monotone](https://perso.univ-st-etienne.fr/rool6510/derivmonotone.pdf),
