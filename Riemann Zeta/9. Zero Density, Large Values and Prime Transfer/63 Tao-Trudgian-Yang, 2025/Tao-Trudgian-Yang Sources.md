@@ -1,6 +1,32 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Current closed-baseline source status (26 September 2026)
+## Refined analytic closure and table cascade (27 September 2026)
+
+The full Bourgain pair `(13/84,55/84)` and exact Watt coordinates
+`(89/560,369/560)` passed production compilation, semantic regressions
+and the standard-axiom audit. Watt uses stronger Bourgain provenance.
+The actual original-source twelfth-power estimate is
+C*P^epsilon*(1+log P)^36*(T*P^8+T^(8/3)*P^4).
+It includes every denominator band, source-family multiplicity, tail and
+endpoint; model jets derive its scales before epsilon absorption.
+
+The same proved estimate gives beta <= 2/9+alpha/3 for
+1/3<alpha<=5/12, and beta <= 1/12+2*alpha/3 for
+5/12<=alpha<=3/7. These exact table consumers are production-integrated;
+both final BATs pass with zero Lean diagnostics. The principal run checks
+7,085 regression examples and 17,207 declarations; the foundation checks 14,290.
+No production module, runner, pin, vendor or certificate was added.
+The integrated counts are 157 public source theorems and 330 focused tests.
+
+Remaining priority: generic D, then the missing Huxley/Trudgian--Yang
+table inputs and exact four-pair assembly. A renewed exact search through
+A/B/C, Heath--Brown seeds up to order 60, derivative beta pieces up to
+order 30 and the new Bourgain pieces did not discharge D or the four pairs.
+This bounded discovery is not an impossibility proof. EPZAE-11/13/14 stay
+open; completion remains 31/42. Both counterexamples and Add-est are preserved.
+Earlier checkpoint and scratch notes below are chronological history.
+
+## Earlier closed-baseline source status (26 September 2026)
 
 The exact endpoint theorem
 `isExponentSumBoundNonAsymptotic_bourgain_square_root` and the closed
@@ -56,10 +82,19 @@ start a general interpolation family without a faithful source consumer.
 The current integer-displacement alternative instead reuses the already
 proved second-derivative test and Heath--Brown tent Fourier series.
 The actual inverse-displacement curve has second derivative comparable
-to P*U^2/k. Its inverse jets, rounded-point transfer and optimized finite
-near-integer count are scratch kernel results. The resulting affine budget
-passes on 17/42<=alpha<=3/7, but source-pair fibers, curve-image boundary
-cases, signed shifts and physical source-sum assembly still need consumers.
+to P*U^2/k. Its inverse jets, rounded-point transfer, optimized finite
+near-integer count, actual source-pair fibers, two-label boundary argument,
+signed harmonic sum and literal four-coordinate source-family consumer
+are scratch kernel results. The raw frozen source-sum consumer and the
+uniform four-term physical weighted count now also check, with constants
+chosen before the source parameters. The resulting affine budget passes
+on 17/42<=alpha<=3/7. The composed physical source-sum bound and scalar
+denominator elimination now also check. Its actual common-family consumer
+derives both normalized cardinality bounds and the two-term frozen bound
+C*P^epsilon*(1+log(P))^24*(P^11*U+P^12*U^(8/3)). The small-band cutoff,
+direct bound and separate tail/endpoint bounds also check in scratch.
+Full finite assembly, model-scale insertion and epsilon absorption remain
+open; the two main terms become T*P^8 and T^(8/3)*P^4.
 Thus the full Huxley--Sargos major-arc theorem is not currently a required
 new formalization. Neither this arithmetic nor a literature citation proves
 the full Bourgain pair; all aggregate statuses remain unchanged.

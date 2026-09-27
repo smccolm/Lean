@@ -1,40 +1,26 @@
 # Tao--Trudgian--Yang 2025 formalization
 
-Verified analytic checkpoint (26 September 2026):
-[ParabolaBilinearLocalization](Extension/TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves the closed Bourgain baseline beta bound
-`exponentSumGrowthExponent_le_bourgain_baseline`:
-beta(alpha) <= 13/84+alpha/2 for 3/7 <= alpha <= 1/2.
-The exact square-root contract
-`isExponentSumBoundNonAsymptotic_bourgain_square_root`
-is derived from the interior theorem by faithful residue-class rescaling.
-For h=ceil(T^q), the phase G_r(u)=G((1-r/P)*u+r/P) has the actual
-scale P_r=(P-r)/h. Model-jet stability, physical scale and tolerance
-bounds, exact interval reindexing and at most one upper endpoint per
-residue class are proved. All constants precede T, P and the phase;
-the residue count and its endpoint cost are absorbed into epsilon.
-No continuity assumption on beta or independent source estimate is used.
-The interior proof still retains every minor/frozen/direct denominator
-band, boundary, endpoint error and high-denominator tail.
-Both BAT gates pass: 146 public localization/source theorems and 308 focused
-regressions. Four new tests cover the endpoint contract, full closed-range
-consumer and both rational endpoints, including beta(1/2)<=17/42.
-No new production module, runner, pin, vendor or certificate change;
-existing A-process affine compression, model jets and floor APIs are reused.
-Both counterexamples, all prior regressions, Add-est and the completed
-old-pair/EPZAE-15/26 cascade survive. Both BATs retain complete coverage.
-Next: close 17/42<alpha<3/7 using the actual four-coordinate source
-constraints or a faithful alternative. The closed baseline does NOT prove
-the full analytic Bourgain pair. Generic D and remaining beta inputs stay
-OPEN. Whole-proof completion is 31/42.
-Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
-the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
+Current analytic closure (27 September 2026): the refined displacement
+argument proves the full Bourgain pair `(13/84,55/84)` and the exact Watt
+coordinates `(89/560,369/560)` in the existing localization module.
+The original model phase, every source band, tail, endpoint and uniform
+epsilon dependence are retained. Watt is obtained from the stronger
+Bourgain result, not by reproducing the historical Watt argument.
 
-Current analytic priority: [closure-first cluster and short obligation DAG](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority).
-EPZAE-15 and EPZAE-26 are complete: the Robert–Sargos analytic pair (1/13,10/13), the exact old pair (3/40,31/40), mu(7/10) <= 3/40 and the full improved Heath–Brown density bound are kernel-checked and BAT-verified. Completion is 31/42. EPZAE-11/13/14 remain OPEN; Watt's pair and the all-length fourth-derivative estimate (1.6) are not needed for this closure.
+The same physical theorem now supplies both short-range Bourgain table
+pieces, with closed joining endpoints. The integrated module has 157 public
+source theorems and 330 focused regressions. The initial pair integration
+and final table extension passed the complete target and foundation BATs.
+All 7,085 regression examples and 17,207 target audit entries pass;
+the foundation audit checks 14,290 declarations. Both runs have zero Lean diagnostics.
+No new production module, runner, pin, vendor or certificate is needed.
 
-Earlier checkpoint sections retain historical status and next-step notes;
-the frozen public contract is unchanged.
+EPZAE-15/26 remain complete through Robert--Sargos. EPZAE-11/13/14 remain
+open for generic D and the other analytic table inputs; completion is 31/42.
+Both counterexamples, all nine Add-est clauses and previous regressions are
+preserved. Recovery-record maintenance is permanently skipped.
+See the [closure-first goal](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority) and [reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+Earlier checkpoint sections are historical; the frozen public contract is unchanged.
 
 
 This directory is the planning and source-control baseline for a Lean 4

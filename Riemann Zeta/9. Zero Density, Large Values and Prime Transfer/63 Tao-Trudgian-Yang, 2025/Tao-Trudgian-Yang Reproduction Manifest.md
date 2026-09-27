@@ -1,6 +1,73 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-## Verified closed baseline and square-root endpoint (26 September 2026)
+## Analytic pair and beta-table closure (27 September 2026)
+
+The exact public consumers in the existing `ParabolaBilinearLocalization`
+module are `exponentPair_bourgain`, `exponentPair_watt_of_bourgain`,
+`isExponentSumBoundNonAsymptotic_bourgain_refined`,
+`isExponentSumBoundNonAsymptotic_bourgain_piecewise`, and the two
+`exponentSumGrowthExponent_le_bourgain_table_*` theorems.
+The first pair is (13/84,55/84); the second is (89/560,369/560), proved
+by weakening the stronger Bourgain bound, not by assuming Watt's theorem.
+
+The actual four-coordinate integer-displacement count is consumed by
+`exists_displacement_physical_source_global` and
+`exists_displacement_model_global_bound`. The latter retains the original
+phase and derives the bound
+C*P^epsilon*(1+log P)^36*(T*P^8+T^(8/3)*P^4).
+Small bands, frozen bands, source-family multiplicities, tails, endpoints,
+signed model jets, physical scale conditions and epsilon absorption are
+all included. The half-range supporting line uses the already-proved
+Robert--Sargos short range, the refined window and the closed baseline.
+
+The piecewise contract yields beta <= 2/9+alpha/3 on
+1/3<alpha<=5/12 and beta <= 1/12+2*alpha/3 on
+5/12<=alpha<=3/7. Thus the last three displayed Bourgain table rows
+have analytic provenance; the first two Heath--Brown rows remain proved.
+The table as a whole, generic D, and the four advertised new pairs remain
+open. Aggregate completion is unchanged at 31/42.
+
+Integration adds eleven public declarations and twenty-two regressions:
+157 public localization/source theorems, 330 focused tests and 7,085
+examples in the complete regression module. Existing private analytic
+helpers are reused; no production module, runner, pin, vendor or certificate
+was added. A default-budget timeout in the first production attempt was
+fixed by extracting the final finite-cardinality scalar absorption lemma,
+without raising proof limits or suppressing diagnostics.
+
+Verification of the final integrated source:
+
+- Initial pair/source build and audit: exit 0, with standard logical axioms
+  only; exact regression build: exit 0 (10,776 jobs). The later table
+  extension and shared refined-window deduction also passed scratch Lean.
+- Final principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`:
+  exit 0, LEAN VERIFICATION PASS; 10,776 jobs, 1,443 production files,
+  1,917 scanned files, direct semantic regressions and 17,207 audited
+  declarations (10,962 target, 6,240 pinned Gafni--Tao and five anchors).
+  Zero Lean errors, warnings or linter diagnostics.
+  [Log](logs/tao-trudgian-yang-build-20260926-235756-39145ec4.log);
+  SHA256: `02ce84e6c63af76d9bcd630da825711137c9ca504ac567950ba4b550830d2331`.
+- Final foundation BAT: exit 0, all six stages PASS; 8,857 jobs,
+  14,290 audited declarations, zero project diagnostics.
+  [Log](../../logs/foundation_freeze_20260926_235753.log) and
+  [manifest](../../logs/foundation_freeze_20260926_235753.json).
+  Log SHA256: `6d36f3efdd32eb905e339975d4843f03e7c68de9f3b6f6d0490519b62296f299`;
+  manifest SHA256: `283bdfbd960d390bf6e087b2eff7c1d0c67d89fdc168fbf0771b2f4f512b9b56`.
+
+Final source SHA256 values:
+
+- Localization: `1edcf3729009e5a914dbc530e611b8847ce76ff7b31991b4cefc6d78ee3feb8c`.
+- Audit: `4b461e63ee07a987e236e291ebbd92c84c1ea638cfa4d70731ea5f669f4fb41f`.
+- Semantic regressions: `c3a7f0762397d47a656ecaad0535ae6516bb5255a1a9be14eefcfbd491b0cce4`.
+
+The owner HEAD is `919707c8d804b219ae2806c36a4d450104746fe8`.
+Both permanent counterexamples were rehashed unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+Recovery-record maintenance is permanently skipped. Both named BAT
+interfaces retain complete production, regression and audit coverage.
+
+## Earlier verified closed baseline and square-root endpoint (26 September 2026)
 
 The existing localization module has 146 public source theorems and
 308 focused regressions. The two new public theorems

@@ -1,5 +1,31 @@
 # Whole-proof operational goal prompt
 
+## Refined analytic closure and table cascade (27 September 2026)
+
+The full Bourgain pair `(13/84,55/84)` and exact Watt coordinates
+`(89/560,369/560)` passed production compilation, semantic regressions
+and the standard-axiom audit. Watt uses stronger Bourgain provenance.
+The actual original-source twelfth-power estimate is
+C*P^epsilon*(1+log P)^36*(T*P^8+T^(8/3)*P^4).
+It includes every denominator band, source-family multiplicity, tail and
+endpoint; model jets derive its scales before epsilon absorption.
+
+The same proved estimate gives beta <= 2/9+alpha/3 for
+1/3<alpha<=5/12, and beta <= 1/12+2*alpha/3 for
+5/12<=alpha<=3/7. These exact table consumers are production-integrated;
+both final BATs pass with zero Lean diagnostics. The principal run checks
+7,085 regression examples and 17,207 declarations; the foundation checks 14,290.
+No production module, runner, pin, vendor or certificate was added.
+The integrated counts are 157 public source theorems and 330 focused tests.
+
+Remaining priority: generic D, then the missing Huxley/Trudgian--Yang
+table inputs and exact four-pair assembly. A renewed exact search through
+A/B/C, Heath--Brown seeds up to order 60, derivative beta pieces up to
+order 30 and the new Bourgain pieces did not discharge D or the four pairs.
+This bounded discovery is not an impossibility proof. EPZAE-11/13/14 stay
+open; completion remains 31/42. Both counterexamples and Add-est are preserved.
+Earlier checkpoint and scratch notes below are chronological history.
+
 Current analytic priority: [closure-first cluster and short obligation DAG](Tao-Trudgian-Yang%20Goal%20Prompt.md#closure-first-analytic-priority).
 EPZAE-15 and EPZAE-26 are complete: the Robert–Sargos analytic pair (1/13,10/13), the exact old pair (3/40,31/40), mu(7/10) <= 3/40 and the full improved Heath–Brown density bound are kernel-checked and BAT-verified. Completion is 31/42. EPZAE-11/13/14 remain OPEN; Watt's pair and the all-length fourth-derivative estimate (1.6) are not needed for this closure.
 
@@ -12,12 +38,13 @@ the frozen public contract is unchanged.
 Treat EPZAE-11/13/14/15/26 as one dependency cluster. The old-pair bottleneck
 is now closed: `exponentPair_robertSargos` and convexity with (1/14,11/14)
 prove `ExponentPair (3/40) (31/40)`. The exact EPZAE-15 growth and EPZAE-26
-density consumers are complete, without Watt's still-unproved analytic pair.
+density consumers are complete without depending on Watt. The exact Watt pair
+is now separately proved from the stronger Bourgain pair.
 
 Continue closure-first on EPZAE-11/13/14. The next missing source inputs are
-the generic Sargos D beta-process and the Bourgain/Huxley/Trudgian–Yang
-estimates used by the table. In particular, the analytic pair (13/84,55/84)
-feeds several rows once D is available. Do not reconstruct optional Watt
+the generic Sargos D beta-process and the remaining Huxley/Trudgian–Yang
+estimates used by the table. The analytic pair (13/84,55/84) is now proved;
+it feeds further rows once D is available. Do not reconstruct optional Watt
 provenance or all-length Robert–Sargos (1.6) merely to extend the finished route.
 
 Before adding support modules, search the local proved modules, GafniTaoNative,
@@ -39,6 +66,9 @@ zero-q + diagonal + zero-r -> zero-shift combination [DONE]
 
 Remaining independent source gates:
 Sargos 1995 short-sum/curve estimate [OPEN]
+  actual negative first derivative + reused B-A-B model uniformity [SCRATCH CHECKED]
+  -> retained physical displacement charts and exact phase/scale bridge [OPEN]
+  -> sharp exponent-pair count and scale assembly [OPEN]
   -> generic D beta-process [EPZAE-11 OPEN]
 
 first spacing + C4 transforms + two-sector source count [DONE]
@@ -46,28 +76,28 @@ first spacing + C4 transforms + two-sector source count [DONE]
   -> physical budgets + interior beta contract [DONE]
   -> faithful residue rescaling + square-root endpoint [DONE]
   -> closed beta baseline, 3/7<=alpha<=1/2 [DONE]
-four-coordinate refined spacing/alternate proof, 17/42<alpha<3/7 [OPEN]
-  -> global beta bound -> analytic pair (13/84,55/84) [OPEN]
-  current displacement route:
-  raw unscaled resonance -> inverse curve + second-derivative count [SCRATCH CHECKED]
-    -> actual pair fibers + curve-image boundaries + signed shifts [OPEN]
-    -> linked physical source-sum/beta consumer [OPEN]
+four-coordinate integer-displacement route [KERNEL-CHECKED]
+  -> actual source-family count + denominator optimization [KERNEL-CHECKED]
+  -> small/frozen bands + tails/endpoints + model scales [KERNEL-CHECKED]
+  -> refined beta, 17/42<=alpha<3/7 [KERNEL-CHECKED]
+  -> full pair (13/84,55/84) -> Watt (89/560,369/560) [KERNEL-CHECKED]
+  -> exact two-piece Bourgain table bounds [DONE; BOTH BATS PASS]
 
-D + Bourgain pair + Huxley/Trudgian--Yang analytic inputs [OPEN]
+D [OPEN] + Bourgain pair [PROVED] + Huxley/Trudgian--Yang inputs [OPEN]
   -> complete exact beta table [EPZAE-13 OPEN]
   -> four new pairs [EPZAE-14 OPEN]
 ```
 
 This is the Robert–Sargos 2002 alternative branch, not a claim that the generic
 Sargos 1995 D-process follows from it. EPZAE-13/14 additionally retain their
-missing Bourgain/Huxley/Trudgian–Yang analytic inputs. Completion is 31/42.
+missing D/Huxley/Trudgian–Yang analytic inputs. Completion is 31/42.
 The 1995 primary proof is not yet accessible; try available primary-source
 alternatives rather than importing the database statement as a proof.
 A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (146 public theorems and 308 focused
+module now passes both BAT gates (157 public theorems and 330 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -410,13 +440,41 @@ Here mu=L^3/(2*F4*k), with F4 the fourth-derivative upper bound;
 its physical scale is P*U^2/k. No general interpolation/major-arc family
 is needed for this route.
 
-The second-derivative route's exact affine budgets check throughout
-17/42<=alpha<=3/7. This is arithmetic, not a completed source estimate.
-The candidate count terms are source cardinality, P^2*U^(13/6),
-P^2*U^(5/2), P*U^(5/4) and P*U^(3/2), with logarithmic losses.
-The remaining essential consumers are the original source-pair fibers,
-curve-image boundary cases, signed-shift summation and linked physical
-source-sum assembly. Do not replace these consumers with a count hypothesis.
+The scratch theorem `four_coordinate_displacement_source_count` now
+consumes the literal four-coordinate window. It derives the unscaled
+resonance and integer-shift cutoff, counts actual source-pair fibers,
+constructs the inverse-curve domain, includes its boundary cases (at most
+two outside integer displacements), and sums both signs with the existing
+Robert--Sargos harmonic-sum bound. The resulting finite count has the form
+4*B*card(S)+6*B^2*Q_count*(3*N+(144*U^2/(lambda*H))*harmonic(N)),
+with every parameter and Q_count explicit in the checked declaration.
+No q-factor is introduced by partitioning into rational denominators.
+
+The scratch theorem `exists_displacement_frozen_physical_source` now
+feeds this actual count to the existing frozen source-sum reduction,
+retaining the original sharp sums, parity multiplicity and Taylor errors.
+The separate uniform theorem `exists_displacement_physical_weighted_count`
+also checks the physical normalization L=l*U, F4=b*U/P, lambda=a*U/P,
+H=floor(1/(10*sqrt(U))). Its constant depends only on l,b,a and precedes
+P,U,M,Q. The weighted count is bounded by a constant times
+(P^2*U^(13/6)+P^2*U^(5/2)+P*U^(5/4)+P*U^(3/2))*(1+log(P)).
+The composed `exists_displacement_scaled_frozen_source` now checks;
+Taylor smallness is derived from the chosen block scale and b<=P*U.
+The denominator optimization also checks: dense Z<=B*U*Q^2 and sparse
+Z*Q^2<=B together give Loss*(2*Z)^10<=C*B^10*sqrt(U)*Q^epsilon*(1+log(Q))^12.
+Here C depends only on the derivative ratio and epsilon, not Q,U,B,Z.
+The actual buffered model-source entry has signed C5 jets and the original
+sharp-sum boundary cost. The common minimum-denominator family now supplies
+both normalized cardinality bounds to the frozen consumer. Its checked bound is
+C*P^epsilon*(1+log(P))^24*(P^11*U+P^12*U^(8/3)).
+The small-band cutoff Q<=C*U^(-1/6), its direct source estimate, and the
+large-denominator tail and endpoint majorants also check in scratch.
+These are scratch results, not a completed beta proof.
+The exact affine budgets check throughout 17/42<=alpha<=3/7:
+after U is linked to T/P^3 the two main terms are T*P^8 and T^(8/3)*P^4.
+Remaining: assemble every band, boundary and tail, consume the actual
+buffered model-phase output, and absorb all epsilon/logarithmic losses.
+Do not replace those consumers with a count hypothesis.
 The full Bourgain pair, generic D and aggregate EPZAE-11/13/14 remain OPEN;
 146 public source theorems, 308 focused regressions and 31/42 are unchanged.
 Both BAT gates must be rerun when this work is integrated into production.

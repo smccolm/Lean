@@ -1,6 +1,32 @@
 # Tao--Trudgian--Yang 2025 research agenda
 
-## Current verified closed baseline and endpoint (26 September 2026)
+## Refined analytic closure and table cascade (27 September 2026)
+
+The full Bourgain pair `(13/84,55/84)` and exact Watt coordinates
+`(89/560,369/560)` passed production compilation, semantic regressions
+and the standard-axiom audit. Watt uses stronger Bourgain provenance.
+The actual original-source twelfth-power estimate is
+C*P^epsilon*(1+log P)^36*(T*P^8+T^(8/3)*P^4).
+It includes every denominator band, source-family multiplicity, tail and
+endpoint; model jets derive its scales before epsilon absorption.
+
+The same proved estimate gives beta <= 2/9+alpha/3 for
+1/3<alpha<=5/12, and beta <= 1/12+2*alpha/3 for
+5/12<=alpha<=3/7. These exact table consumers are production-integrated;
+both final BATs pass with zero Lean diagnostics. The principal run checks
+7,085 regression examples and 17,207 declarations; the foundation checks 14,290.
+No production module, runner, pin, vendor or certificate was added.
+The integrated counts are 157 public source theorems and 330 focused tests.
+
+Remaining priority: generic D, then the missing Huxley/Trudgian--Yang
+table inputs and exact four-pair assembly. A renewed exact search through
+A/B/C, Heath--Brown seeds up to order 60, derivative beta pieces up to
+order 30 and the new Bourgain pieces did not discharge D or the four pairs.
+This bounded discovery is not an impossibility proof. EPZAE-11/13/14 stay
+open; completion remains 31/42. Both counterexamples and Add-est are preserved.
+Earlier checkpoint and scratch notes below are chronological history.
+
+## Earlier verified closed baseline and endpoint (26 September 2026)
 
 The consolidated source module now proves the closed Bourgain baseline beta bound
 `exponentSumGrowthExponent_le_bourgain_baseline`:
@@ -90,13 +116,41 @@ Here mu=L^3/(2*F4*k), with F4 the fourth-derivative upper bound;
 its physical scale is P*U^2/k. No general interpolation/major-arc family
 is needed for this route.
 
-The second-derivative route's exact affine budgets check throughout
-17/42<=alpha<=3/7. This is arithmetic, not a completed source estimate.
-The candidate count terms are source cardinality, P^2*U^(13/6),
-P^2*U^(5/2), P*U^(5/4) and P*U^(3/2), with logarithmic losses.
-The remaining essential consumers are the original source-pair fibers,
-curve-image boundary cases, signed-shift summation and linked physical
-source-sum assembly. Do not replace these consumers with a count hypothesis.
+The scratch theorem `four_coordinate_displacement_source_count` now
+consumes the literal four-coordinate window. It derives the unscaled
+resonance and integer-shift cutoff, counts actual source-pair fibers,
+constructs the inverse-curve domain, includes its boundary cases (at most
+two outside integer displacements), and sums both signs with the existing
+Robert--Sargos harmonic-sum bound. The resulting finite count has the form
+4*B*card(S)+6*B^2*Q_count*(3*N+(144*U^2/(lambda*H))*harmonic(N)),
+with every parameter and Q_count explicit in the checked declaration.
+No q-factor is introduced by partitioning into rational denominators.
+
+The scratch theorem `exists_displacement_frozen_physical_source` now
+feeds this actual count to the existing frozen source-sum reduction,
+retaining the original sharp sums, parity multiplicity and Taylor errors.
+The separate uniform theorem `exists_displacement_physical_weighted_count`
+also checks the physical normalization L=l*U, F4=b*U/P, lambda=a*U/P,
+H=floor(1/(10*sqrt(U))). Its constant depends only on l,b,a and precedes
+P,U,M,Q. The weighted count is bounded by a constant times
+(P^2*U^(13/6)+P^2*U^(5/2)+P*U^(5/4)+P*U^(3/2))*(1+log(P)).
+The composed `exists_displacement_scaled_frozen_source` now checks;
+Taylor smallness is derived from the chosen block scale and b<=P*U.
+The denominator optimization also checks: dense Z<=B*U*Q^2 and sparse
+Z*Q^2<=B together give Loss*(2*Z)^10<=C*B^10*sqrt(U)*Q^epsilon*(1+log(Q))^12.
+Here C depends only on the derivative ratio and epsilon, not Q,U,B,Z.
+The actual buffered model-source entry has signed C5 jets and the original
+sharp-sum boundary cost. The common minimum-denominator family now supplies
+both normalized cardinality bounds to the frozen consumer. Its checked bound is
+C*P^epsilon*(1+log(P))^24*(P^11*U+P^12*U^(8/3)).
+The small-band cutoff Q<=C*U^(-1/6), its direct source estimate, and the
+large-denominator tail and endpoint majorants also check in scratch.
+These are scratch results, not a completed beta proof.
+The exact affine budgets check throughout 17/42<=alpha<=3/7:
+after U is linked to T/P^3 the two main terms are T*P^8 and T^(8/3)*P^4.
+Remaining: assemble every band, boundary and tail, consume the actual
+buffered model-phase output, and absorb all epsilon/logarithmic losses.
+Do not replace those consumers with a count hypothesis.
 The full Bourgain pair, generic D and aggregate EPZAE-11/13/14 remain OPEN;
 146 public source theorems, 308 focused regressions and 31/42 are unchanged.
 Both BAT gates must be rerun when this work is integrated into production.

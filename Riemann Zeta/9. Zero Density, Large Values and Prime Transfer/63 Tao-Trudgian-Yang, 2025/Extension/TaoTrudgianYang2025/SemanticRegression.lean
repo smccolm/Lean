@@ -52193,3 +52193,186 @@ example : exponentSumGrowthExponent (3/7) ≤ (31:ℝ)/84 := by
   exact hh
 
 end TaoTrudgianYang2025.BourgainEndpointRegression
+
+namespace TaoTrudgianYang2025.BourgainRefinedRegression
+open Expdb Set
+open scoped ContDiff FourierTransform
+
+example
+    {ι : Type*} [DecidableEq ι] (S : Finset ι)
+    (center block label inverse : ι → ℤ) (z : ι → ℝ) (q : ι → ℕ)
+    (parity : ι → Fin 2) (H Bmul M Qden : ℕ) [NeZero M] (s : ℤ)
+    (f : ℝ → ℝ) {A B L U F lam : ℝ}
+    (hH : 0 < H) (hL : 0 < L) (hU : 0 < U) (hF : 0 < F) (hlam : 0 < lam)
+    (hQ : 0 < Qden) (hUsmall : 6*U ≤ 1) (hthin : (Qden:ℝ)^2 < 6*(M:ℝ)^2)
+    (hspan : ∀ i∈S, (H:ℤ) ≤ s+(H:ℤ)*block i-center i ∧
+      s+(H:ℤ)*block i-center i ≤ 3*(H:ℤ))
+    (hmul : ∀ j : ℤ, (S.filter (fun i => block i=j)).card ≤ Bmul)
+    (hf : ∀ t∈Ioo A B, ContDiffAt ℝ 5 f t)
+    (hthree : ∀ t∈Ioo A B, L ≤ iteratedDeriv 3 f t ∧ iteratedDeriv 3 f t ≤ 6*U)
+    (hfour : ∀ t∈Ioo A B, -F ≤ iteratedDeriv 4 f t ∧ iteratedDeriv 4 f t ≤ -lam)
+    (hcenter : ∀ i∈S, (center i:ℝ)∈Ioo A B)
+    (hz : ∀ i∈S, z i∈Ioo A B)
+    (hround : ∀ i∈S, |(center i:ℝ)-z i| ≤ 1/2)
+    (hq : ∀ i∈S, 0 < q i ∧ q i ≤ Qden ∧ Qden ≤ 2*q i)
+    (hinverse : ∀ i∈S, (q i:ℤ) ∣ label i*inverse i-1)
+    (hlevel : ∀ i∈S, iteratedDeriv 2 f (z i)/2=(label i:ℝ)/q i) :
+    let mu := fun i => iteratedDeriv 3 f (center i)/6
+    let ell := fun i => iteratedDeriv 1 f (center i)
+    let b := fun i => (⌊(q i:ℝ)*ell i⌋:ℤ)+(parity i:ℕ)
+    let tau := fun i => ((b i:ℝ)-(q i:ℝ)*ell i)/2
+    let coeff := fun i => -2*mu i*(Real.sqrt (2/(3*mu i*(q i:ℝ))))^3
+    let Y := fun i => (![Int.fract (-(inverse i:ℝ)*b i/q i),Int.fract (-(inverse i:ℝ)/q i),
+      coeff i/Real.sqrt M,(3*coeff i*tau i/2)/Real.sqrt M] : Fin 4 → ℝ)
+    let window : Fin 4 → ℝ :=
+      ![1/(12*(M:ℝ)),1/(12*(M:ℝ)^2),(1/(M:ℝ)^2)/12,(1/(M:ℝ))/12]
+    let R := (S ×ˢ S).filter (fun ij => ∀ j, |Y ij.1 j-Y ij.2 j| ≤ 2*window j)
+    let D₀ : ℝ := (Real.sqrt M/(9*(M:ℝ))+Real.sqrt M/(12*(M:ℝ)^2))*
+      Real.sqrt (U*(Qden:ℝ)^3)
+    let ε : ℝ := 4*D₀/(Qden:ℝ)
+    let rho := (12*U*Real.sqrt (U*(Qden:ℝ)^3)/lam)*(Real.sqrt M/(6*(M:ℝ)^2))
+    let N := ⌈3*U*(rho+1)⌉₊
+    let m := L^3/(2*F)
+    let C := max 1 (216*F*U^3/(lam*L^3))
+    let D := 144*U^2/(lam*H)
+    let Bound := 3+(52+144*C)*((2/L+1)*((N:ℝ)*(ε+9*U/4)+C*m+
+      m^((1:ℝ)/3)*(N:ℝ)^((2:ℝ)/3))+m^(-(1:ℝ)/2)*(N:ℝ)^((1:ℝ)/2))
+    (R.card:ℝ) ≤ 4*(Bmul:ℝ)*S.card+
+      6*(Bmul:ℝ)^2*Bound*(3*(N:ℝ)+D*(harmonic N:ℝ)) :=
+  four_coordinate_displacement_source_count (ι := ι) (S := S) (center := center) (block := block) (label := label) (inverse := inverse) (z := z) (q := q) (parity := parity) (H := H) (Bmul := Bmul) (M := M) (Qden := Qden) (s := s) (f := f) (A := A) (B := B) (L := L) (U := U) (F := F) (lam := lam) (hH := hH) (hL := hL) (hU := hU) (hF := hF) (hlam := hlam) (hQ := hQ) (hUsmall := hUsmall) (hthin := hthin) (hspan := hspan) (hmul := hmul) (hf := hf) (hthree := hthree) (hfour := hfour) (hcenter := hcenter) (hz := hz) (hround := hround) (hq := hq) (hinverse := hinverse) (hlevel := hlevel)
+
+example
+    {ε l b a x : ℝ} (hε : 0 < ε) (hl : 0 < l) (hb : 0 < b) (ha : 0 < a)
+    (hx : 0 ≤ x) :
+    ∃ C > (0:ℝ), ∀ (ι : Type*) [DecidableEq ι]
+      (S : Finset ι) (f : ℝ → ℝ) (k : ι → ℤ) (H : ι → ℕ)
+      (s : ℤ) (A B P U : ℝ),
+      0 < P → 0 < U → U ≤ 1/3600 → 1 ≤ P*U*Real.sqrt U → b ≤ P*U →
+      let N := ⌊1/(10*Real.sqrt U)⌋₊
+      let L := l*U
+      let F := b*U/P
+      let lam := a*U/P
+      let X := x*P*U
+      (∀ t∈Icc A B, ContDiffAt ℝ 5 f t) →
+      (∀ t∈Icc A B, L ≤ iteratedDeriv 3 f t ∧ iteratedDeriv 3 f t ≤ 6*U) →
+      (∀ t∈Icc A B, -F ≤ iteratedDeriv 4 f t ∧ iteratedDeriv 4 f t ≤ -lam) →
+      (∀ t∈Icc A B, |iteratedDeriv 2 f t/2| ≤ X) →
+      (∀ j : ℤ, (S.filter (fun i => k i=j)).card ≤ 1) →
+      (∀ i∈S, H i ≤ N) →
+      let base := fun i => (s:ℝ)-2*(N:ℝ)+(N:ℝ)*(k i:ℝ)
+      (∀ i∈S, Icc (base i-(7*(N:ℝ)+2)) (base i+(7*(N:ℝ)+2)) ⊆ Icc A B) →
+      (1+23*(N:ℝ)+∑ i∈S,
+        ‖∑ n∈Finset.Ioc (s+(N:ℤ)*k i) (s+(N:ℤ)*k i+H i),(𝐞 (f n):ℂ)‖)^12 ≤
+        C*P^ε*(1+Real.log P)^36*(P^11*U+P^12*U^((8:ℝ)/3)) :=
+  exists_displacement_physical_source_global (ε := ε) (l := l) (b := b) (a := a) (x := x) (hε := hε) (hl := hl) (hb := hb) (ha := ha) (hx := hx)
+
+example {σ ε : ℝ}
+    (hσ : 0 < σ) (hε : 0 < ε) :
+    ∃ δ > (0:ℝ), ∃ C > (0:ℝ), ∃ K ≥ (1:ℝ),
+      ∀ (G : ℝ → ℝ) (T P : ℝ) (a b : ℕ),
+      0 < T → 0 < P → a ≤ b → P ≤ a → (b:ℝ) ≤ 2*P →
+      IsApproximateModelPhaseFunction G σ 3 δ →
+      let U := (modelPhaseJetCoefficient σ 2+1)*T/P^3/6
+      U ≤ 1/3600 → 1 ≤ P*U*Real.sqrt U → K ≤ P*U →
+      ‖exponentialSumAt G T P a b‖^12 ≤
+        C*P^ε*(1+Real.log P)^36*(T*P^8+T^((8:ℝ)/3)*P^4) :=
+  exists_displacement_model_global_bound (σ := σ) (ε := ε) (hσ := hσ) (hε := hε)
+
+example
+    {α : NNReal} (hα : (17:ℝ)/42 ≤ (α:ℝ)) (hαupper : (α:ℝ) < 3/7) :
+    IsExponentSumBoundNonAsymptotic α ((13:ℝ)/84+(α:ℝ)/2) :=
+  isExponentSumBoundNonAsymptotic_bourgain_refined (α := α) (hα := hα) (hαupper := hαupper)
+
+example : ExponentPair (13/84) (55/84) :=
+  exponentPair_bourgain
+
+example : ExponentPair (89/560) (369/560) :=
+  exponentPair_watt_of_bourgain
+
+example {α : NNReal} (hα : (17:ℝ)/42 ≤ (α:ℝ)) (hαupper : (α:ℝ) < 3/7) :
+    exponentSumGrowthExponent α ≤ (13:ℝ)/84+(α:ℝ)/2 :=
+  exponentSumGrowthExponent_le_bourgain_refined hα hαupper
+
+example {α : NNReal} (hα : (α:ℝ) ≤ 1/2) :
+    exponentSumGrowthExponent α ≤ (13:ℝ)/84+(α:ℝ)/2 :=
+  exponentSumGrowthExponent_le_bourgain_half hα
+
+example : IsExponentSumBoundNonAsymptotic (17/42) ((5:ℝ)/14) := by
+  have h := isExponentSumBoundNonAsymptotic_bourgain_refined (α:=17/42) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : IsExponentSumBoundNonAsymptotic (5/12) ((61:ℝ)/168) := by
+  have h := isExponentSumBoundNonAsymptotic_bourgain_refined (α:=5/12) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent 0 ≤ (13:ℝ)/84 := by
+  have h := exponentSumGrowthExponent_le_bourgain_half (α:=0) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (3/7) ≤ (31:ℝ)/84 := by
+  have h := exponentSumGrowthExponent_le_bourgain_half (α:=3/7) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (1/2) ≤ (17:ℝ)/42 := by
+  have h := exponentSumGrowthExponent_le_bourgain_half (α:=1/2) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : IsZetaGrowthBound (1/2) (13/84) := by
+  have h := exponentPair_bourgain.isZetaGrowthBound
+  norm_num at h ⊢
+  exact h
+
+end TaoTrudgianYang2025.BourgainRefinedRegression
+
+namespace TaoTrudgianYang2025.BourgainTableRegression
+open Expdb
+
+example {α : NNReal} (hα : (1:ℝ)/3 < (α:ℝ)) (hαupper : (α:ℝ) < 3/7) :
+    IsExponentSumBoundNonAsymptotic α
+      (max ((1:ℝ)/12+2/3*(α:ℝ)) (2/9+(α:ℝ)/3)) :=
+  isExponentSumBoundNonAsymptotic_bourgain_piecewise hα hαupper
+
+example {α : NNReal} (hα : (1:ℝ)/3 < (α:ℝ)) (hαupper : (α:ℝ) ≤ 5/12) :
+    exponentSumGrowthExponent α ≤ 2/9+(α:ℝ)/3 :=
+  exponentSumGrowthExponent_le_bourgain_table_first hα hαupper
+
+example {α : NNReal} (hα : (5:ℝ)/12 ≤ (α:ℝ)) (hαupper : (α:ℝ) ≤ 3/7) :
+    exponentSumGrowthExponent α ≤ 1/12+2/3*(α:ℝ) :=
+  exponentSumGrowthExponent_le_bourgain_table_second hα hαupper
+
+example : exponentSumGrowthExponent (17/42) ≤ (5:ℝ)/14 := by
+  have h := exponentSumGrowthExponent_le_bourgain_table_first (α:=17/42)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (5/12) ≤ (13:ℝ)/36 := by
+  have h := exponentSumGrowthExponent_le_bourgain_table_first (α:=5/12)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (5/12) ≤ (13:ℝ)/36 := by
+  have h := exponentSumGrowthExponent_le_bourgain_table_second (α:=5/12)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (3/7) ≤ (31:ℝ)/84 := by
+  have h := exponentSumGrowthExponent_le_bourgain_table_second (α:=3/7)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : IsExponentSumBoundNonAsymptotic (2/5) ((16:ℝ)/45) := by
+  have h := isExponentSumBoundNonAsymptotic_bourgain_piecewise (α:=2/5)
+    (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+end TaoTrudgianYang2025.BourgainTableRegression

@@ -1,14 +1,11 @@
 flowchart TD
-%% Closed baseline beta(alpha)<=13/84+alpha/2 for3/7<=alpha<=1/2 DONE: actual physical source + faithful endpoint residue rescaling. Refined short window and full analytic pair OPEN. Both BAT gates PASS;31/42.
-%% Closure-first EPZAE-11/13/14/15/26 cluster: see Goal Prompt, Closure-first analytic priority.
-%% Refined-window scratch: the scalar Legendre band count reaches only 7/17<=alpha<=3/7, with residual (7-17*alpha)/168 below7/17. The alternate integer-displacement curve now has checked inverse jets, rounding transfer, second-derivative/Fourier finite count and affine budgets on 17/42<=alpha<=3/7. Actual pair fibers, curve-image boundaries, signed shifts and linked physical source-sum assembly remain OPEN. No production gate recolored.
-%% Robert--Sargos 2002 DAG DONE: source axes -> common shift -> mixed jets/partial summation -> source sieve/collisions/spacing -> scales -> long-range fourth derivative (1.5) -> actual model-phase bridge -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26 DONE.
-%% This alternative branch does not discharge the separate Sargos 1995 generic D-process or missing EPZAE-13/14 source inputs.
-%% Current checkpoint: exact old-pair, mu(7/10) and full improved Heath--Brown density DONE. Both BAT gates PASS; 31/42. Generic D and EPZAE-13/14 remain OPEN; all-length (1.6) not needed.
-%% The optional historical Watt route remains in OldExponentPairDeduction, but is not a dependency of the completed outputs.
-%% EPZAE-09/10/12 DONE; first two beta-table rows DONE. Remaining beta rows and D-process OPEN.
-%% Corrected powering, all nine Add-est clauses and the permanent counterexample are preserved.
-%% Earlier checkpoint prose is historical; the full EPZAE-00--41 goal is unchanged.
+%% Current closure: production Bourgain (13/84,55/84), exact Watt (89/560,369/560) and three Bourgain beta rows DONE; both BATs PASS, 7085 regressions, 17207 target audit entries, zero Lean diagnostics.
+%% The integer-displacement count retains all four source coordinates, multiplicities, both shift signs, common denominator families, small/frozen bands, tails and endpoints. Model scales and epsilon absorption are derived.
+%% The same physical estimate supplies beta <= 2/9+alpha/3 and 1/12+2alpha/3 on their source windows; exact joining endpoints are included and production-verified.
+%% Robert--Sargos DAG DONE: zero-q/diagonal/zero-r -> zero shifts -> mixed jets/common prefixes -> sieve/spacing -> scales -> long-range fourth derivative -> (1/13,10/13) -> (3/40,31/40) -> EPZAE-15/26.
+%% Generic Sargos 1995 D and the remaining Huxley/Trudgian--Yang inputs stay OPEN; EPZAE-11/13/14 are not completed by Bourgain/Watt. Completion stays 31/42.
+%% Both counterexamples, corrected powering and all nine Add-est clauses are preserved. No new production modules or runner exclusions; recovery-record maintenance skipped.
+%% Earlier checkpoint prose is historical; the full EPZAE-00--41 goal and both mandatory BAT gates remain unchanged.
     ML["Mathlib analytic and finite foundations<br/>AVAILABLE"]
     ED["ANTEDB Lean asymptotics, phases,<br/>exponential sums, Euler--Maclaurin<br/>AVAILABLE at current pin"]
     GM["Local Guth--Maynard large-values<br/>and zero-density foundation<br/>AVAILABLE and audited"]
@@ -205,7 +202,7 @@ flowchart TD
     DGC["EPZAE-11 rational D geometry + beta consumer<br/>conditional on source beta estimate DONE"]
     HSEC["EPZAE-12/13 actual derivative-order selection<br/>global secant comparison + all errors DONE"]
     HFAM["EPZAE-12/13 native Heath--Brown family<br/>all integer k at least 3; exact analytic pairs DONE"]
-    BT["EPZAE-13 certified beta table<br/>first two rows DONE; remaining rows/assembly OPEN"]
+    BT["EPZAE-13 certified beta table<br/>first two Heath--Brown + three Bourgain rows DONE;<br/>other inputs/assembly OPEN"]
     PLOC["EPZAE-13 finite epsilon-loss parabola decoupling<br/>actual source entry + curve-cell return + local decoupling<br/>genuine base + smaller-grid recurrence + global dyadic bootstrap DONE"]
     PANI["EPZAE-13 weighted coarse-cell refinement + exact outer integration<br/>canonical endpoint-safe cells + actual finite fibers<br/>original-source small-anisotropic global assembly DONE"]
     PVM["EPZAE-13 native quadratic VMVT + exact weighted Fourier periods<br/>translated short intervals + actual coefficient fibers<br/>literal-source larger-plane fine-cell bound DONE"]
@@ -241,11 +238,11 @@ flowchart TD
     PCFR["EPZAE-13 actual frozen-phase intermediate source<br/>derived scales + bin/box/count losses DONE"]
     PCMA["EPZAE-13 actual model entry + finite global source bound<br/>buffers/boundaries + all denominator bands DONE"]
     PCSR["EPZAE-13 proved Robert--Sargos reuse<br/>Bourgain supporting line alpha at most 17/42 DONE"]
-    PCSW["EPZAE-13 refined short window 17/42 &lt; alpha &lt; 3/7<br/>four-coordinate refinement or alternate proof OPEN"]
+    PCSW["EPZAE-13 refined short window 17/42 &le; alpha &lt; 3/7<br/>actual displacement source + model scales + epsilon absorption DONE"]
     P4DS["EPZAE-13 four-dimensional double large sieve<br/>both joint near-pair counts + physical factors<br/>actual six-tuple source consumer DONE"]
     P4FC["EPZAE-13 actual twelve-variable first-spacing count<br/>positive Fourier kernel + translated source box<br/>all four tolerances and multiplicities DONE"]
     P4SC["EPZAE-13 actual source-sieve assembly<br/>inner count discharged, physical thresholds derived<br/>only literal outer count retained DONE"]
-    PDEC["EPZAE-13 refined-window assembly<br/>global analytic pair OPEN"]
+    PDEC["EPZAE-13 refined-window and half-range assembly<br/>Bourgain (13/84,55/84) and Watt (89/560,369/560) DONE"]
     SKF --> PLOC
     PLOC --> PANI
     PANI --> PGL
@@ -321,7 +318,7 @@ flowchart TD
     PDEC --> BT
     class PLOC,PANI,PVM,PGL,PLS,PLV,PSA,PLG,PLAR,PLPM,PLOM,PLFST,PLFSA,PCGP,PCDP,PCFS,PCRC,PCCA,PCPI,PCSIV,PCTR,PCFC,PCRF,PCNT,PCTW,PCTP,PCCS,PCAS,PCMC,PCSR,P4DS,P4FC,P4SC done;
     class PCLD,PCFR,PCMA,PCST,PCSQ done;
-    class PCSW,PDEC open;
+    class PCSW,PDEC done;
     NEP["EPZAE-14 four new exponent pairs<br/>OPEN"]
     ZGDEF["EPZAE-15 exact two-sided zeta-growth semantics<br/>epsilon losses + extended-real infimum DONE"]
     ZGLOG["EPZAE-15 actual logarithmic-phase pair bound<br/>all positive heights + phase sign DONE"]
