@@ -1,5 +1,358 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Analytic D(Bourgain) cascade: current verified revision (27 September 2026)
+
+The literal original-model estimate now proves the missing D(Bourgain)
+interval, the analytic pair (18/199,593/796), its A-transform
+(9/217,1461/1736), and both beta-table rows on the full closed unit
+interval. Physical integer scales, Fourier widths, dyadic indices,
+source-phase uniformity and epsilon absorption are derived explicitly.
+No count, source-sum bound or target pair is an assumed input.
+
+- Focused session 71438: exit 0, 10,380 jobs, zero diagnostics.
+- Principal BAT session 38517: exit 0, **LEAN VERIFICATION PASS**,
+  7,149 regressions, 17,665 audits (11,420 target, 6,240 pinned, five
+  anchors), 1,445 package files, 1,919 scanned files, 10,778 build jobs.
+  [Log](logs/tao-trudgian-yang-build-20260927-083950-2c76428d.log),
+  SHA256 `29ccdac041969e8e2caaf67e4bb3f11d7f2c8475a29294cd655c711fae0d0609`.
+- Foundation BAT session 7120: exit 0, **PASS**, all six stages,
+  8,857 jobs and 14,290 audits.
+  [Log](../../logs/foundation_freeze_20260927_084000.log), SHA256
+  `cda28cf14bf033f776c86a33731a541bcd4b4e6663d246c6b29663ac78cf0c9c`;
+  [JSON](../../logs/foundation_freeze_20260927_084000.json), SHA256
+  `20b0521bc799611e22eb2428980bbcecbcca4a14ae7c90b694b8854019eccfef`.
+- Zero Lean errors, warnings, tactic suggestions or linter failures.
+  SHA256: SquareProductCount.lean
+  `ebcff7471429ee2a57565cea040df6c192cfabf3e4811c01812c71bcd5abd39b`;
+  audit `3971647cdc30ff5340bbE700badbcde3f85bcddd1f383283ef6f4d0e51decb04`;
+  regressions `0c2c8ea4e960f1deed2fbd84b3e3425ded35cc4e66c402a6ad629840577d3c63`.
+
+The existing SquareProductCount module has 147 public audits and 45
+regressions. The earlier principal sessions 18991 and 4101 failed on
+endpoint-test linter/arithmetic defects. Arbitrary-source tests now
+consume the theorem directly and normalize the explicit endpoint count;
+both defects are repaired without runner changes or warning suppression.
+The current complete BATs rechecked those repairs.
+
+The generic D source contract, missing Huxley/Trudgian--Yang inputs,
+full beta envelope and four advertised pairs remain OPEN; 31/42 is
+unchanged. Counterexamples, corrected powering and Add-est are preserved.
+Recovery-record maintenance is permanently skipped.
+
+## Sharp joint count and closed-source assembly: preceding revision (27 September 2026)
+
+The sharp joint derivative-pair count is production-kernel-checked:
+`CubicJointCount.original_cubicDerivativePairs_count` consumes the
+literal derivative-pair set, retaining both orders, the diagonal,
+all integer levels and every source-label multiplicity. The independent
+Fourier width, both finite covers and full displacement summation are proved.
+No additional production module, runner exclusion or weakened gate.
+
+- Focused session 54166: exit 0, 10,380 jobs, zero diagnostics.
+- Principal session 81932: exit 0, **LEAN VERIFICATION PASS**,
+  7,139 regressions, 17,638 audits (11,393 target, 6,240 pinned, five anchors).
+  [Log](logs/tao-trudgian-yang-build-20260927-080519-17ccc3f5.log),
+  SHA256 `94ea5a86ba86e82fde06a95fb79bdd7b936b19001a1030841802394d39847768`.
+- Foundation session 89797: exit 0, **PASS**, 14,290 audits.
+  [Log](../../logs/foundation_freeze_20260927_075845.log),
+  SHA256 `63c86678f7cb0995782ec1615b8d4213b4e9d6681ba5beb67cf3aa9a9a381ae6`.
+  [JSON](../../logs/foundation_freeze_20260927_075845.json),
+  SHA256 `f5bf479a7657c2d1f11c1a17347fe2d1de3bb2506ec059d791d86263be858c5a`.
+
+The complete original closed-source eighth-power estimate was subsequently
+integrated in the same module after scratch check 51012 passed, with
+three public audits and three endpoint/contract regressions. Focused
+session 43560 and foundation session 71117 pass. Principal session 18991
+correctly failed on 14 linter warnings in two constant-valued endpoint tests;
+the tests now consume arbitrary unit-bounded sources, and session 4101
+is rerunning the unchanged complete gate. No current-revision overall
+PASS is claimed before that rerun finishes.
+
+Scratch session 13585 additionally checks actual integer Taylor scales,
+the independent physical Fourier scale, all analytic side conditions,
+the dyadic-index cost and complete epsilon absorption, zero diagnostics.
+The final missing-interval beta consumer is being checked.
+EPZAE-11/13/14 remain OPEN; aggregate completion stays 31/42.
+Counterexamples and corrected powering remain unchanged; recovery records
+are permanently skipped.
+
+## Original C4 source-to-count reduction: preceding verified revision (27 September 2026)
+
+The existing `SquareProductCount.CubicSource` namespace proves the literal
+original C4 exponential-sum eighth-power reduction to its actual joint
+derivative-pair count, plus the explicit averaging boundary term.
+The existing four-dimensional sieve and common-prefix Taylor theorem
+are reused. The sharp joint near-pair count and D scale assembly remain
+OPEN; aggregate completion stays 31/42. No source/count premise is assumed.
+
+Complete scratch check session 10628: exit 0, 19 public theorem audits,
+eight endpoint/multiplicity regressions, zero diagnostics.
+Focused production session 47561: exit 0, 10,364 jobs, zero diagnostics.
+The existing module now has 99 public audits and 27 regressions;
+the package has 7,131 regression examples. No new production module,
+runner exclusion, weakened gate or recovery-record edit.
+
+- Principal BAT session 24031: exit 0, **LEAN VERIFICATION PASS**,
+  1,445 package files, 1,919 shortcut-scanned files, 10,778 build jobs,
+  7,131 regressions, 17,556 audits (11,311 target, 6,240 pinned
+  Gafni--Tao and five anchors).
+  [Log](logs/tao-trudgian-yang-build-20260927-061821-771f6876.log),
+  SHA256 `6f913392027efa3b64f169820a396cbd73f8a22e69eca0f317dc33216b9191b4`.
+- Foundation BAT session 2828: exit 0, **PASS**, all six stages,
+  8,857 jobs and 14,290 audits.
+  [Log](../../logs/foundation_freeze_20260927_061831.log), SHA256
+  `e1a50ca19b861955869d17b0d222a46440099b317fcef080952849a1442d6309`;
+  [manifest](../../logs/foundation_freeze_20260927_061831.json), SHA256
+  `c62259b5de6a342dbb66292b886260176a8504b6b015f8ce3df7e593ce56d671`.
+- Zero Lean errors, warnings, tactic suggestions or linter failures.
+  SHA256: module
+  `93c744e456c57e324f27ee1e539fc4ee0a480368e464a561267d81e4a9fd4a95`;
+  audit `4b5beace1fda4411dc45fc0ae3b380339c0a11517008684ea1fa4310aba2250e`;
+  regression `ff40cadcfcedc521611d5188957e36eea8ea046e8183dc68f7168089e5811b7d`.
+  Counterexamples, corrected powering and all Add-est clauses are preserved.
+
+The next analytic obligation is a sharp joint derivative near-pair count.
+A separate, independently tunable Fourier width is required by the
+successful D-process exponent balance. Reuse the existing Fourier kernel
+and moving double-Legendre realization. Scratch session 69254 now checks
+the full actual near-curve count, including both uniform finite slope
+covers: 31 explicit theorem audits, three retained chart regressions,
+exit 0, zero diagnostics. Its bound is
+C*(W*N+(V/P)^(k+epsilon)*N^(l+epsilon)*W^(-k-epsilon)+P/V),
+with constants chosen before the source phase and physical parameters.
+Separate geometry session 2382 checks seven actual derivative/fiber
+theorems and two regressions, exit 0, zero diagnostics.
+Scratch session 20734 subsequently proves the original-model dyadic
+joint derivative count: 43 public audits, five retained regressions,
+exit 0, zero diagnostics. It composes the original derivative resonance,
+both physical scales, all integer levels and source-label multiplicities.
+The signed derivative bounds are derived from the existing production
+model-data theorem. Width/buffer choice, displacement-block summation,
+short displacements/source edges and D scale assembly remain OPEN.
+These scratch checks do not replace production BAT evidence or complete
+D(Bourgain); no new production module or runner change was made.
+
+## Literal cubic eighth moment: preceding verified revision (27 September 2026)
+
+The existing count module now contains the literal weighted and unweighted
+cubic eighth-moment consumers. Complete scratch check session 81314 exited
+0, with 19 explicit public theorem audits, eight regressions and zero
+diagnostics. Default proof limits and standard logical axioms only.
+Focused production build passed, exit 0, 10,364 jobs, zero diagnostics.
+The module has 80 public theorem audits and 19 semantic regressions;
+the complete package has 7,123 regression examples.
+Both mandatory BATs passed after this integration; no gate or production
+coverage was narrowed. Actual original-model short-sum assembly and the
+D(Bourgain) interval remain OPEN; aggregate completion stays 31/42.
+
+- Principal BAT: exit 0, LEAN VERIFICATION PASS, 1,445 package files,
+  10,778 jobs, 7,123 regressions and 17,516 audited declarations
+  (11,271 target, 6,240 pinned Gafni--Tao, five anchors).
+  [Log](logs/tao-trudgian-yang-build-20260927-054840-5a55ce7b.log),
+  SHA256 `2439d258d5295fd6d525e0d5a4c5f4ba23c959b8794994aef2b80890c03a9287`.
+- Foundation BAT: exit 0, PASS, all six stages, 8,857 jobs, 14,290 audits.
+  [Log](../../logs/foundation_freeze_20260927_054850.log), SHA256
+  `6a0331cf8f5ed72514f1590d865b11816d70150f1962561cc4399d0ddde521f9`;
+  [manifest](../../logs/foundation_freeze_20260927_054850.json), SHA256
+  `6cdf204a1a99c9039d8893d065b8a1e5cc3a93b2bdefd70c64c0ad751878b6f4`.
+- Zero Lean errors, warnings, tactic suggestions or linter failures.
+  Module SHA256 `a62ffb3a02626d830b1c9a54ddf13d954ae04ff6a55dccb408acf3e85c10e9ca`;
+  audit `5984cb611ee63da9280053f4aedc7ffa788ff15b943a99010e9f596ee95fdd20`;
+  regression `76af2affcc864d180116f8c574bd05aa6936556873ed6d065cb422b4fa09de1e`.
+  Counterexamples and all existing regressions remain covered.
+
+## Signed square/product count: preceding verified revision (27 September 2026)
+
+Full scratch check session 64009 exited 0 with 61 explicit theorem audits,
+five exact regressions and zero Lean diagnostics, using default limits and
+standard logical axioms only. It proves the full signed square/product
+count and sharp finite cubic resonance count; literal integral assembly remains OPEN.
+
+Production `SquareProductCount.lean` adds 61 public theorem audits and 11
+semantic regressions, including generic exact endpoint contracts, sign/zero
+distinction and closed dyadic endpoints. Total regression examples: 7,115.
+Focused `lake build TaoTrudgianYang2025.SquareProductCount` passed, exit 0,
+10,364 jobs, zero diagnostics. Root imports and required runner inventory
+are synchronized. Both complete BATs passed, exit 0, zero diagnostics:
+
+- Principal: source integrity, shortcut scans (1,919 Lean files), coverage
+  (1,445 package files), deterministic regeneration, 10,778 build jobs,
+  7,115 regressions and 17,487 dependency audits (11,242 target, 6,240
+  Gafni--Tao, five anchors).
+  [Log](logs/tao-trudgian-yang-build-20260927-053004-accad1e5.log),
+  SHA256 `cc808b38eac05db6815271536791859564ae4eede5883086383fc8368cc4c9fd`.
+- Foundation: all six stages, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260927_053015.log), SHA256
+  `45e42e038229883ad9ea8f4a5f06397f14a210fa441aae3dfa3519c1470d88fc`;
+  [manifest](../../logs/foundation_freeze_20260927_053015.json), SHA256
+  `16fc8a8a77f1a0e398e2f631f7b16cc4c1edd7a3b69e7ea924cc6db7cde1495a`.
+
+Source SHA256: module
+`e21bc02a434cda5259541c84039de9e064e0da39a9e6c0799ce7e31166d8fc4b`;
+audit `2c8f7f88586216586844b875e803b39451e925f97cbb26dbfc03a3c2d1f835b1`;
+regression `b1efafc7cf0a15951d5423f24b1e2955f79c1b553dfed11e7f5aabcff4e94253`.
+The preceding verified normalized-moment checkpoint follows below.
+
+## Full normalized logarithmic moment: current verified revision (27 September 2026)
+
+`LogarithmicSixthMoment.lean` is now production-integrated: 83 explicit
+public theorem audits and 14 semantic regressions. Its exact endpoint is
+`exists_logarithmic_sixth`, with bound C*B^6*(T+N)*N^(3+epsilon), all
+N>=1, T>=0 and positive integer coefficient fibers. The literal unweighted
+consumer is also proved. Printed time-normalization, signed square/product
+count, cubic eighth moment and D source assembly remain distinct obligations.
+Aggregate completion remains 31/42.
+
+- Focused `lake build TaoTrudgianYang2025.LogarithmicSixthMoment`: exit 0,
+  10,363 jobs, zero diagnostics.
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  **LEAN VERIFICATION PASS**, 1,444 package files, 10,777 jobs, 7,104 regression
+  examples and 17,369 audits (11,124 target, 6,240 Gafni--Tao, five anchors).
+  [Complete log](logs/tao-trudgian-yang-build-20260927-044158-44d8962b.log),
+  SHA256 `15461525f995537f2eb2a89ee2ea44694d3910f6b9a50e59a27570ee8024c428`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0, **PASS**,
+  all six stages, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260927_044053.log), SHA256
+  `ebfce3edf7860bf8cf9297a727121201cb0463045625bf27ecdef41236287e38`;
+  [manifest](../../logs/foundation_freeze_20260927_044053.json), SHA256
+  `6c9e4a37f8498c337fc1e3a1eb43bd5408af1daec40f2dcd040148388190e846`.
+- Both BATs have zero Lean errors, warnings, tactic suggestions or linter
+  failures. The new module is in root imports, audit, regression and required
+  runner inventory. The first run correctly failed the inventory gate:
+  [log](logs/tao-trudgian-yang-build-20260927-044117-28acf248.log).
+  Adding its exact required entry repaired that failure; no gate was weakened.
+- The preceding full scratch check, session 15739, exited 0 with 83 audits,
+  12 regressions and zero diagnostics; production adds two endpoint regressions.
+- SHA256: logarithmic module
+  `9ebcc6e420fffc44a674e2428eeda53f06d283a3ca55b9909696536a8e70e637`;
+  audit `6722fedf9176a4c27b1daa920dc69a7d2b9e13851b864d2b5a1e7e3b794a2108`;
+  regression `3a36bec5851680e94e341ed596808d1dc6420aa5ec05cb76095e7f6df6cb83ea`.
+- Both counterexample hashes are unchanged:
+  `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`
+  and `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+  No pin, vendor, certificate or recovery-record changes were made.
+
+The following prototype and verification records are chronological history.
+
+## Earlier specific logarithmic prototype verification (27 September 2026)
+
+Full direct check of `.scratch/epzae-log-six-20260927.lean`:
+
+- Command: `lake env lean -DautoImplicit=false --stdin`.
+- Exit 0 (session 52805); seventy-nine explicit theorem audits, twelve exact regressions,
+  no Lean errors, warnings or tactic suggestions; standard axioms only.
+- Actual log cubic-remainder Fourier inversion and physical sixth-power
+  transfer, square-frequency source entry, exact affine rescaling and
+  first/second derivatives and two-way local comparison are checked. The
+  direct second route also checks actual secants and six-frequency gaps,
+  exact adapted-band stability, finite sum rescaling and finite bilinear
+  localization. The signed bound 0<=F_kappa(y)<=y^2 improves its factor
+  from 13/nu to 7/nu. Weighted localization, nonzero band weights,
+  common-factor norm rescaling, subinterval transfer and actual Holder
+  swap are checked. Actual linked-grid bilinear iteration, linear/bilinear
+  assembly and uniform epsilon-loss dyadic decoupling also pass, reusing
+  the proved parabolic scalar budget. Its constant precedes the compact
+  curve parameter and every finite array/weight; the strong induction starts
+  from the trivial bound and only consumes smaller grids. Exact short-cell
+  averaging, native quadratic VMVT, translated windows and Lorentz tails pass.
+  Two-coordinate physical rapid weights, actual Fourier bands, common-factor
+  moment transport and integer grid assembly now pass. The original block
+  bound is C*B^6*(T+X)*X^(3+epsilon), for all T>=0, X>=4 and positive frequencies
+  with X^2<=m^2<=5*X^2/4. All cell conditions are derived. Regressions retain the
+  nonempty 17-frequency short cell and the source block 64..71 for every T>=0.
+  Full-frequency-range recombination and bounded low frequencies remain before
+  the still OPEN full logarithmic sixth moment; first-route weighted return
+  remains OPEN.
+- The existing finite multiplier theorem was exposed publicly, without
+  changing its proof. The planar product and banded Gram argument now have
+  three additional narrow public reuse interfaces, audits and regressions;
+  their focused production build passed (10,362 jobs, zero diagnostics).
+  No new production module, runner exclusion, limit override or vendor edit.
+
+The current quadratic-reuse revision passes both BATs, exit 0, zero diagnostics.
+Principal: 10,776 jobs, 7,090 regressions, 17,212 audited declarations
+(10,967 target, 6,240 pinned Gafni--Tao, five anchors):
+[log](logs/tao-trudgian-yang-build-20260927-033437-61f90bd2.log),
+SHA256 `f3784c929a0f6089eb1c18ad8c7fd2b4568a8ed178fcc38b250ed0c4afb018b2`.
+Foundation: all six stages, 8,857 jobs, 14,290 audited declarations:
+[log](../../logs/foundation_freeze_20260927_033401.log) and
+[manifest](../../logs/foundation_freeze_20260927_033401.json), SHA256
+`a806e216d69bf0c9c1a609c582a0c41e25682b3b9062fceaaa125b1ecab46fa7` and
+`db189356bb34dc0ca410a21199052072e80303b6af662c742da0070bd578cecb`.
+Current localization/audit/regression SHA256 values:
+`1a971732f001a3425010373c7d9e1ded2d2168c3f9d04c1d361ded08e3da030e`,
+`4769fd66f20806d2ddaa15d6a4756146137b9b7fda3ec9c95a2760987f7dba7c`,
+`d3aa746e86f03a147432ffd258938d1f1a01e5bacb6d6c12294a82fa94ac9f41`.
+Mechanical counts are 163 public source theorem declarations in the
+localization module and 7,090 regression examples. The new public
+quadratic reuse theorem has an unchanged proof, explicit audit and generic
+coefficient-fiber regression. No module, import, pin or runner exclusion was added.
+Earlier verification records follow chronologically.
+
+The two planar interfaces passed the full principal BAT, exit 0,
+10,776 jobs, 7,088 regression examples and 17,210 audits (10,965 target,
+6,240 pinned Gafni--Tao, five anchors), zero diagnostics:
+[log](logs/tao-trudgian-yang-build-20260927-023952-2e58f550.log),
+SHA256 `f091879b1825c0e62bb2cfd69d73320b8d06c3c008a69aa757f6444e83c474b3`.
+The matching foundation BAT passed, exit 0, all six stages, 8,857 jobs,
+14,290 audits, zero diagnostics:
+[log](../../logs/foundation_freeze_20260927_024002.log) and
+[manifest](../../logs/foundation_freeze_20260927_024002.json).
+SHA256: log `96fd76a1765ccb114f17eb5a311a6374905567073371ea7097576bcd324d5608`;
+manifest `1ec4f34794a7ee5d1144eff4c3039dc233bb5a9cb984d44befebb5c519b69c68`.
+The localization/audit/regression hashes for that verified revision are
+`89fe731bcc2883383a4a2db903e6722e467bf0b61dc55a51bceb1e2c5b5aaed1`,
+`88a3277de9cd64f7d0527d34e8fdcb67ff2891fc5d735ae3680764a00e792509`,
+`5a34db1ae3d2f01ec88a9124d9e563c9243b94537fe45eebd475f23f744755de`.
+The weighted Gram interface also passed its focused build (10,362 jobs,
+zero diagnostics). The current full principal run passed, exit 0,
+10,776 jobs, 7,089 regressions, 17,211 audits (10,966 target, 6,240 pinned
+Gafni--Tao, five anchors), complete production coverage, zero diagnostics:
+[log](logs/tao-trudgian-yang-build-20260927-025833-ac7d63a8.log), SHA256
+`066b4bc11c565ce2d3098f652572c00134fd4ec3ed240bef2d788c61be79bc09`.
+Its foundation BAT passed all stages with zero diagnostics:
+[log](../../logs/foundation_freeze_20260927_025843.log) and
+[manifest](../../logs/foundation_freeze_20260927_025843.json), SHA256
+`b05d73ecd99940c9a2228b88c429246bc31150121c173bc02c950d809ce479a9` and
+`0c58793a3e4332d0fcfc9508bf0ea1253393efdd1e9ab4ff6ca9bc802d531e35`.
+The current mechanical source counts are 161 public theorem declarations
+in the localization module and 7,089 regression examples. Earlier narrative
+counts describe earlier checkpoints, not current completion evidence.
+
+Current localization/audit/regression source hashes:
+`cd6f482b88514e3406052e19024eb6eb74e2210561058133741a36e3df94f32b`,
+`e9912705b30b4b3626c2d160897df2ed3ecda27538c527d3bbb429a4f1901a30`,
+`f743cadeee56f8b6a3f500ecbee5a77816ca27e66149dbacd9df106a904ae8d7`.
+
+Preceding principal BAT: exit 0, LEAN VERIFICATION PASS (10,776 jobs);
+all production, direct regression and audit stages pass with zero diagnostics.
+There are 7,086 regression examples and 17,208 audited declarations
+(10,963 target, 6,240 pinned Gafni--Tao and five anchors).
+[Current log](logs/tao-trudgian-yang-build-20260927-020118-b815462d.log).
+Log SHA256: `7acecfde01c7e2e66d11db2c1af6b65163a1d9ba2c07e87923b3799b8269aa50`.
+The prior final PASS and hashes below describe the preceding revision.
+
+A mechanical recount gives 159 public theorem declarations in the localization
+module, including the one newly exposed existing helper; the earlier narrative
+count 157 was stale. The API exposure is reuse, not another analytic closure.
+
+Preceding foundation BAT: exit 0, all stages PASS, 8,857 jobs,
+14,290 audited declarations, zero project diagnostics.
+[Log](../../logs/foundation_freeze_20260927_020130.log) and
+[manifest](../../logs/foundation_freeze_20260927_020130.json).
+SHA256 values: log `183b7a212cf2ae0ed8fad9c48906d1b48cc244e8280b12f8598bbd3ef38d56b1`;
+manifest `1f841ad8a939b8364374733c194b473838924c110f510c4a9509908b298ff1b3`.
+
+Preceding source hashes (before the two planar interfaces):
+
+- Localization: `bcef811a31568e693ca63f537ea8957a4534d9fb9f58d8f26c2419ceb22eb5f9`.
+- Audit: `fc823a3c1e9f79a6ba80b5549e987b6142ca4cc58e9f9c15a40562ddf341b241`.
+- Regressions: `2bdcee2dd8ab95d6602bf95e597794be334b8093b78a585c2332729df5b4411d`.
+
+Both counterexamples were rehashed unchanged against the values below.
+The cubic-eight prototype also passes all eight audits and three regressions.
+No recovery-record file was edited. No aggregate gate changed (31/42).
+
 ## Analytic pair and beta-table closure (27 September 2026)
 
 The exact public consumers in the existing `ParabolaBilinearLocalization`
@@ -66,6 +419,32 @@ energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a48
 low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
 Recovery-record maintenance is permanently skipped. Both named BAT
 interfaces retain complete production, regression and audit coverage.
+
+Subsequent D-route scratch checks do not alter the verified production hashes.
+The derivative/B-A-B prototype passes twenty-one explicit standard-axiom audits;
+the retained-window phase identity includes its linear compression term.
+The latest direct check uses `lake env lean -DautoImplicit=false --stdin`
+on `.scratch/epzae-displacement-dual-20260927.lean`: exit 0, no warnings.
+It includes actual physical-scale identities, moving Taylor double-dual
+uniformity, common finite-family endpoint buffers, the actual double-dual
+model/value realization, the physical interval exponent-pair consumer for
+both nonzero integer-frequency signs, integer compression cancellation,
+finite-grid compressed coordinates, and two exact arithmetic
+diagnostics for the unchanged Robert--Sargos route. Failed development
+attempts at the finite minimum API and the character proof were repaired
+before the clean checks. The final interval consumer uses moving buffers;
+it still requires its explicit source-image, integrality and length conditions.
+Three exact chart regressions pass: the smallest grid cell, the closed upper
+endpoint and zero shift (geometry only). No new production module was added.
+The separate `.scratch/epzae-cubic-eight-20260927.lean` has eight clean
+standard-axiom theorem audits for the exact Hadamard source-count reduction.
+It proves the enlarged boxes and source multiplicity rather than assuming
+them. It does not prove the logarithmic sixth or cubic eighth moment.
+The table prototype was placed in its own namespace after production
+integration and rechecked: five audited theorems pass, including the exact
+D(Bourgain) complementary half-range and two endpoint examples.
+No estimate on (140/391,16/39), full physical chart cover, generic D or new
+advertised pair is claimed by these scratch checks.
 
 ## Earlier verified closed baseline and square-root endpoint (26 September 2026)
 

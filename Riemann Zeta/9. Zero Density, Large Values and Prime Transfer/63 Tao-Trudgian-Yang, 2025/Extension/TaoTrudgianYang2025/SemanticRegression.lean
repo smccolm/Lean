@@ -52376,3 +52376,548 @@ example : IsExponentSumBoundNonAsymptotic (2/5) ((16:ℝ)/45) := by
   exact h
 
 end TaoTrudgianYang2025.BourgainTableRegression
+
+namespace TaoTrudgianYang2025.LogRemainderReuseRegression
+open MeasureTheory GafniTao
+open scoped BigOperators
+
+-- No polynomial-phase premise: the proved transfer accepts a genuine kernel
+-- with the explicitly displayed integrability, mass and decay conditions.
+example {ι : Type*} (S : Finset ι) (z : ι → ℂ) (s : ι → ℝ)
+    {K : ℝ → ℂ} (hKc : Continuous K)
+    (hKi : Integrable (fun ξ => (1+|ξ|)^100*‖K ξ‖))
+    {C : ℝ} (hC : 0<C)
+    (hmass : (∫ ξ : ℝ, (1+|ξ|)^100*‖K ξ‖)≤C)
+    (henv : ∀ ξ : ℝ, ‖K ξ‖≤C/(1+|ξ|)^102) :
+    ‖∫ ξ : ℝ, K ξ*(∑ i∈S, z i*fordAdditiveCharacter (ξ*s i))‖^6≤
+      C^6*(∫ ξ : ℝ, ((1+|ξ|)^102)⁻¹*
+        ‖∑ i∈S, z i*fordAdditiveCharacter (ξ*s i)‖^6) :=
+  bourgain_finite_multiplier_moment S z s hKc hKi hC hmass henv
+
+end TaoTrudgianYang2025.LogRemainderReuseRegression
+
+namespace TaoTrudgianYang2025.PlanarLocalizationReuseRegression
+open MeasureTheory
+open scoped BigOperators
+
+-- Arbitrary repeated frequencies and complex coefficients are retained.
+example {ι κ : Type*} (S : Finset ι) (T : Finset κ)
+    (z : ι → ℂ) (w : κ → ℂ) (u v : ι → ℝ) (p q : κ → ℝ) (α γ : ℝ) :
+    sargosPlanarSum S z u v α γ*sargosPlanarSum T w p q α γ=
+      sargosPlanarSum (S ×ˢ T) (fun i => z i.1*w i.2)
+        (fun i => u i.1+p i.2) (fun i => v i.1+q i.2) α γ :=
+  planarSum_mul S T z w u v p q α γ
+
+-- The premise is the literal two-frequency kernel, not a supplied moment bound.
+example {ι : Type*} (J : Finset ℤ) (S : ℤ → Finset ι)
+    (z : ℤ → ι → ℂ) (u v : ℤ → ι → ℝ) {a b : ℝ}
+    (ha : 0<a) (hb : 0<b) (c d : ℝ) (m : ℕ)
+    (hzero : ∀ i∈J, ∀ j∈J, (m : ℤ) < |i-j| → ∀ s∈S i, ∀ t∈S j,
+      (∫ α : ℝ, ∫ γ : ℝ, sargosPlanarKernelTerm a b c d
+        (u i s-u j t) (v i s-v j t) α γ)=0) :
+    (∫ α : ℝ, ∫ γ : ℝ, sargosWeightedPlanarIntegrand (J.sigma S)
+      (fun ij => z ij.1 ij.2) (fun ij => u ij.1 ij.2) (fun ij => v ij.1 ij.2)
+      a b c d α γ)≤
+      (2*(m : ℝ)+1)*∑ i∈J, ∫ α : ℝ, ∫ γ : ℝ,
+        sargosWeightedPlanarIntegrand (S i) (z i) (u i) (v i) a b c d α γ :=
+  sargosPlanarFamily_banded_bound J S z u v ha hb c d m hzero
+
+example {ι : Type*} (J : Finset ℤ) (S : ℤ → Finset ι)
+    (z : ℤ → ι → ℂ) (u v : ℤ → ι → ℝ) (W : ℝ × ℝ → ℝ)
+    (hW₀ : ∀ p, 0≤W p) (hW : Integrable W) (m : ℕ)
+    (hzero : ∀ i∈J, ∀ j∈J, (m : ℤ) < |i-j| → ∀ s∈S i, ∀ t∈S j,
+      (∫ p : ℝ × ℝ, (W p : ℂ)*GafniTao.fordAdditiveCharacter
+        ((u i s-u j t)*p.1+(v i s-v j t)*p.2))=0) :
+    (∫ p : ℝ × ℝ, W p*‖sargosPlanarSum (J.sigma S)
+      (fun ij => z ij.1 ij.2) (fun ij => u ij.1 ij.2) (fun ij => v ij.1 ij.2) p.1 p.2‖^2)≤
+      (2*(m : ℝ)+1)*∑ i∈J, ∫ p : ℝ × ℝ,
+        W p*‖sargosPlanarSum (S i) (z i) (u i) (v i) p.1 p.2‖^2 :=
+  sargosWeightedPlanarFamily_banded_bound J S z u v W hW₀ hW m hzero
+
+end TaoTrudgianYang2025.PlanarLocalizationReuseRegression
+
+namespace TaoTrudgianYang2025.LogQuadraticReuseRegression
+open MeasureTheory GafniTao Set
+open scoped BigOperators
+
+-- An actual native mean-value estimate, not a supplied short-cell moment.
+-- Arbitrary coefficient fibers and integer translations are retained.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ Q : ℕ, 1 ≤ Q →
+      ∀ (ι : Type) (S : Finset ι) (z : ι → ℂ) (m : ι → ℤ) (A : ℤ) (B : ℝ),
+        0 ≤ B → (∀ i∈S, A < m i ∧ m i ≤ A+Q) →
+        (∀ k : ℤ, (∑ i∈S.filter (fun i => m i=k), ‖z i‖) ≤ B) →
+        (∫ v : ℝ in Icc (0:ℝ) 1, ∫ u : ℝ in Icc (0:ℝ) 1,
+          ‖∑ i∈S, z i*fordAdditiveCharacter ((m i:ℝ)*u+(m i:ℝ)^2*v)‖^6) ≤
+            C*B^6*(Q:ℝ)^((3:ℝ)+ε) :=
+  exists_bourgain_quadratic_weighted_finite_interval hε
+
+end TaoTrudgianYang2025.LogQuadraticReuseRegression
+
+namespace TaoTrudgianYang2025.LogarithmicSixthRegression
+open Set Filter MeasureTheory GafniTao LogarithmicSixth
+open scoped Topology ContDiff BigOperators FourierTransform ENNReal NNReal
+
+-- Zero scale is retained rather than excised by a nonzero-parameter premise.
+example (s : ℝ) : logCurve 0 s=s^2 := by simp [logCurve]
+
+-- Nonempty original source block, with unrestricted nonnegative time length.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ T : ℝ, 0 ≤ T →
+      (∫ t : ℝ in Icc (-T) T, ∫ α : ℝ in Icc (0:ℝ) 1,
+        ‖∑ m∈Finset.Icc (64:ℤ) 71,
+          fordAdditiveCharacter (α*(m:ℝ)^2+t*Real.log (m:ℝ))‖^6) ≤
+        C*(T+64)*(64:ℝ)^((3:ℝ)+ε) := by
+  obtain ⟨C,hC,h⟩ := exists_logarithmic_block_sixth hε
+  refine ⟨C,hC,?_⟩
+  intro T hT
+  have hrange (m : ℤ) (hm : m∈Finset.Icc (64:ℤ) 71) :
+      (64:ℝ) ≤ m ∧ (m:ℝ) ≤ 71 := by
+    exact_mod_cast Finset.mem_Icc.mp hm
+  have hpos (m : ℤ) (hm : m∈Finset.Icc (64:ℤ) 71) : 0 < (m:ℝ) := by
+    linarith [(hrange m hm).1]
+  have hsq (m : ℤ) (hm : m∈Finset.Icc (64:ℤ) 71) :
+      (m:ℝ)^2∈Icc ((64:ℝ)^2) (5*64^2/4) := by
+    have hh := hrange m hm
+    constructor <;> nlinarith
+  have hz (k : ℤ) :
+      (∑ _m∈(Finset.Icc (64:ℤ) 71).filter (fun m => m=k), ‖(1:ℂ)‖) ≤ (1:ℝ) := by
+    simp only [norm_one,Finset.sum_const,nsmul_eq_mul,mul_one]
+    have hsub : (Finset.Icc (64:ℤ) 71).filter (fun m => m=k) ⊆ {k} := by
+      intro m hm
+      simpa only [Finset.mem_singleton] using (Finset.mem_filter.mp hm).2
+    have hc : ((Finset.Icc (64:ℤ) 71).filter (fun m => m=k)).card ≤ 1 := by
+      simpa only [Finset.card_singleton] using Finset.card_le_card hsub
+    exact_mod_cast hc
+  have hh := h 64 T (by norm_num) hT ℤ (Finset.Icc 64 71) (fun _ => 1)
+    (fun m => m) 1 (by norm_num) hpos hsq hz
+  simpa only [one_mul,one_pow,mul_one] using hh
+
+-- One constant controls every curve parameter and every dyadic grid.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ n : ℕ, LogCurveDecouplingBound (2^n) (C*(2:ℝ)^(ε*n)) :=
+  exists_logCurveDecouplingBound_dyadic hε
+
+-- A nonempty physical short cell, including both endpoints and arbitrary
+-- translated time windows. The coefficient-fiber condition is exact here.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ t₀ : ℝ,
+      (∫ t : ℝ in Icc (-64:ℝ) 64, ∫ α : ℝ in Icc (0:ℝ) 1,
+        ‖∑ m∈Finset.Icc (56:ℤ) 72,
+          fordAdditiveCharacter (α*(m:ℝ)^2+(t+t₀)*Real.log (m:ℝ))‖^6) ≤
+        C*64*(17:ℝ)^((3:ℝ)+ε) := by
+  obtain ⟨C,hC,h⟩ := exists_logarithmic_short_cell_sixth_translated hε
+  refine ⟨C,hC,?_⟩
+  intro t₀
+  have hs (m : ℤ) (hm : m∈Finset.Icc (56:ℤ) 72) :
+      ((m:ℝ)-64)/8∈Icc (-1:ℝ) 1 := by
+    have hm' := Finset.mem_Icc.mp hm
+    have hlo : (56:ℝ) ≤ m := by exact_mod_cast hm'.1
+    have hhi : (m:ℝ) ≤ 72 := by exact_mod_cast hm'.2
+    constructor <;> linarith
+  have hm (m : ℤ) (_hm : m∈Finset.Icc (56:ℤ) 72) :
+      8*(((m:ℝ)-64)/8)=(m:ℝ)-64 := by ring
+  have hI (m : ℤ) (hm : m∈Finset.Icc (56:ℤ) 72) :
+      55 < m ∧ m ≤ 55+(17:ℕ) := by
+    have h := Finset.mem_Icc.mp hm
+    omega
+  have hz (k : ℤ) :
+      (∑ _m∈(Finset.Icc (56:ℤ) 72).filter (fun m => m=k), ‖(1:ℂ)‖) ≤ (1:ℝ) := by
+    simp only [norm_one,Finset.sum_const,nsmul_eq_mul,mul_one]
+    have hsub : (Finset.Icc (56:ℤ) 72).filter (fun m => m=k) ⊆ {k} := by
+      intro m hm
+      simpa only [Finset.mem_singleton] using (Finset.mem_filter.mp hm).2
+    have hc : ((Finset.Icc (56:ℤ) 72).filter (fun m => m=k)).card ≤ 1 := by
+      simpa only [Finset.card_singleton] using Finset.card_le_card hsub
+    exact_mod_cast hc
+  have hh := h 17 (by norm_num) ℤ (Finset.Icc 56 72) (fun _ => 1)
+    (fun m => ((m:ℝ)-64)/8) (fun m => m) 64 8 1 t₀ 55
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num) (by norm_num) hs hm hI hz
+  simpa only [one_mul,one_pow,mul_one] using hh
+
+-- The band is genuinely populated, and retains the parabolic endpoint.
+example :
+    LogCurveWeightBand (1/4) (1/4)
+      (fun p : ℝ × ℝ => logarithmicPhysicalWeight 64 ((4*p.1+32*p.2)/64^2,-64*p.2)) :=
+  logarithmicPhysicalWeight_band (by norm_num) (by norm_num)
+
+example : 1 ≤ logarithmicPhysicalWeight 64 (0,0) :=
+  logarithmicPhysicalWeight_one_le (by norm_num) (by norm_num) (by norm_num)
+
+example : ∃ W : ℝ × ℝ → ℝ, LogCurveWeightBand (1/4) 1 W ∧ 1≤W (0,0) :=
+  exists_logCurveWeightBand_nonzero (by norm_num) (by norm_num)
+
+example {δ : ℝ} {W : ℝ × ℝ → ℝ} (hW : ParabolaWeightBand δ W) :
+    LogCurveWeightBand 0 δ W := by
+  exact ParabolaWeightBand.to_logCurveWeightBand (by norm_num) (by simpa using hW)
+
+-- The actual cubic-size window: |t δ^3/A^3|=1 and |δ/A|=1/8.
+example (s : ℝ) (hs : (-1 : ℝ) ≤ s) :
+    512*Real.log (64+8*s)=512*Real.log 64+64*s-4*s^2+
+      s^3*logCubicProfile (s/8) := by
+  have h := logarithmic_physical_phase (A:=64) (by norm_num) 0 512 8 s (by linarith)
+  norm_num at h
+  rw [show (1/8:ℝ)*s=s/8 by ring] at h
+  linear_combination h
+
+-- A concrete boundary cell remains in the same compact parameter family.
+example : (1/4:ℝ)*(1/2)/(1+(1/4)*(1/2))=1/9 := by norm_num
+
+-- Both signs of the separated source interval, with closed endpoints retained.
+example {κ : ℝ} (hκ : κ∈Icc (0:ℝ) (1/4)) :
+    (1/32:ℝ)≤|logCurve κ (1/2)-logCurve κ (5/8)| := by
+  have h := logCurve_separated_secant (d:=1/2) (u:=1/8) (ν:=1/8)
+    (x:=1/2) (y:=5/8) hκ (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example {κ : ℝ} (hκ : κ∈Icc (0:ℝ) (1/4)) :
+    (1/32:ℝ)≤|logCurve κ (-1/2)-logCurve κ (-3/8)| := by
+  have h := logCurve_separated_secant (d:=-1/2) (u:=1/8) (ν:=1/8)
+    (x:=-1/2) (y:=-3/8) hκ (by norm_num) (by norm_num) (by norm_num)
+    (by norm_num) (by norm_num) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+
+-- One uniform constant precedes every physical scale and coefficient fiber.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (T : ℝ), 0 ≤ T →
+      ∀ (ι : Type) (S : Finset ι) (z : ι → ℂ) (m : ι → ℤ) (B : ℝ), 0 ≤ B →
+        (∀ i∈S, 1 ≤ m i ∧ m i ≤ N) →
+        (∀ k : ℤ, (∑ i∈S.filter (fun i => m i=k), ‖z i‖) ≤ B) →
+        logarithmicSixMoment T S z m ≤ C*B^6*(T+N)*(N:ℝ)^((3:ℝ)+ε) :=
+  exists_logarithmic_sixth hε
+
+-- Literal original natural-frequency sum, including the low frequencies.
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (T : ℝ), 0 ≤ T →
+      (∫ t : ℝ in Icc (-T) T, ∫ α : ℝ in Icc (0:ℝ) 1,
+        ‖∑ n∈Finset.Icc 1 N,
+          fordAdditiveCharacter (α*(n:ℝ)^2+t*Real.log (n:ℝ))‖^6) ≤
+        C*(T+N)*(N:ℝ)^((3:ℝ)+ε) :=
+  exists_logarithmic_sixth_unweighted hε
+
+end TaoTrudgianYang2025.LogarithmicSixthRegression
+
+namespace TaoTrudgianYang2025.SquareProductCountRegression
+open SquareProductCount SquareProductCount.CubicEight
+
+example :
+    (∑ i : Fin 4, (![0,3,5,6] : Fin 4 → ℤ) i)=
+      ∑ i : Fin 4, (![1,2,4,7] : Fin 4 → ℤ) i ∧
+    (∑ i : Fin 4, ((![0,3,5,6] : Fin 4 → ℤ) i)^2)=
+      ∑ i : Fin 4, ((![1,2,4,7] : Fin 4 → ℤ) i)^2 ∧
+    (∑ i : Fin 4, ((![0,3,5,6] : Fin 4 → ℤ) i)^3)-
+      (∑ i : Fin 4, ((![1,2,4,7] : Fin 4 → ℤ) i)^3) = -48 := by
+  norm_num [Fin.sum_univ_succ]
+
+example :
+    let x : Fin 4 → ℤ := ![0,3,5,6]
+    let y : Fin 4 → ℤ := ![1,2,4,7]
+    hadamardFour x 1*hadamardFour x 2*hadamardFour x 3-
+      hadamardFour y 1*hadamardFour y 2*hadamardFour y 3 = -128 := by
+  decide
+
+example : (sixSquareProductSolutions 0 0).card=1 := by
+  simp [sixSquareProductSolutions,Finset.filter_singleton]
+
+example : logBoxSquare (-2) ![1,1,5]=25 ∧ logBoxSquare (-1) ![1,3,4]=25 := by
+  norm_num [logBoxSquare,Fin.sum_univ_succ]
+
+example : (logCrossPairs (fun _ _ => {1}) (fun _ => -1) 0).card=1 := by
+  simp [logCrossPairs,Fintype.piFinset_singleton,logBoxSquare,logBoxLog,Finset.filter_singleton]
+
+-- Equal magnitudes do not erase the sign in the actual finite coding.
+example : positiveCode (-2)=positiveCode 2 ∧ signedBoxLabel 4 (-2) ≠ signedBoxLabel 4 2 := by
+  decide
+
+-- Zero and one have the same positive replacement, but distinct labels.
+example : positiveCode 0=positiveCode 1 ∧ signedBoxLabel 1 0 ≠ signedBoxLabel 1 1 := by
+  decide
+
+-- Both the source endpoint and exact dyadic endpoint are retained.
+example : signedBoxLength 7 (signedBoxLabel 7 7)=7 ∧
+    signedBoxLength 8 (signedBoxLabel 8 8)=8 := by
+  decide
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (P : ℝ), 0 ≤ P →
+      ∀ (Q : Finset SignedPair),
+        (∀p∈Q, ∀r, |p.1 r| ≤ N ∧ |p.2 r| ≤ N) →
+        (∀p∈Q, (∑r, (p.1 r:ℝ)^2)=(∑r, (p.2 r:ℝ)^2)) →
+        (∀p∈Q, |(∏r, (p.1 r:ℝ))-(∏r, (p.2 r:ℝ))| ≤ P) →
+      (Q.card:ℝ) ≤ C*((N:ℝ)^2+P)*(N:ℝ)^((1:ℝ)+ε) :=
+  exists_signed_square_product_count hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (P : ℕ),
+      ((sixSquareProductSolutions N P).card : ℝ) ≤
+        C*((N:ℝ)^2+P)*(N:ℝ)^((1:ℝ)+ε) :=
+  exists_sixSquareProductSolutions_bound hε
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (P : ℕ),
+      ∀ (S : Finset ((Fin 4 → ℤ) × (Fin 4 → ℤ))),
+        (∀p∈S, (∀r, |p.1 r| ≤ (N:ℤ)) ∧ ∀r, |p.2 r| ≤ (N:ℤ)) →
+        (∀p∈S, (∑r, p.1 r)=∑r, p.2 r) →
+        (∀p∈S, (∑r, (p.1 r)^2)=∑r, (p.2 r)^2) →
+        (∀p∈S, |(∑r, (p.1 r)^3)-∑r, (p.2 r)^3| ≤ (P:ℤ)) →
+      (S.card:ℝ) ≤ C*((N:ℝ)^2+P)*(N:ℝ)^((2:ℝ)+ε) :=
+  exists_cubic_eight_count hε
+
+end TaoTrudgianYang2025.SquareProductCountRegression
+
+namespace TaoTrudgianYang2025.CubicMomentRegression
+open SquareProductCount.CubicMoment
+
+-- Regression: the compressed frequency retains both moments, without
+-- identifying distinct tuples or erasing a nonzero cubic difference.
+example : cubicCombined 8 ![1,4,6,7]=cubicCombined 8 ![2,3,5,8] ∧
+    cubicThird ![1,4,6,7]-cubicThird ![2,3,5,8]=(-48:ℤ) := by
+  norm_num [cubicCombined,cubicFirst,cubicSecond,cubicThird,Fin.sum_univ_succ]
+
+example : (![1,4,6,7] : Fin 4 → ℤ)∈cubicTupleSet 8 ∧
+    (![2,3,5,8] : Fin 4 → ℤ)∈cubicTupleSet 8 := by
+  constructor <;> simp only [cubicTupleSet,Fintype.mem_piFinset,Finset.mem_Icc] <;>
+    intro r <;> fin_cases r <;> norm_num
+
+example : (∫ x : ℝ in Icc (0:ℝ) 1, fordAdditiveCharacter ((1:ℤ)*x))=0 := by
+  simpa using integral_integer_character 1
+
+example : (∫ x : ℝ in Icc (0:ℝ) 1, fordAdditiveCharacter ((0:ℤ)*x))=1 := by
+  simpa using integral_integer_character 0
+
+example {a b : ℤ} (h : |(a:ℝ)-(b:ℝ)| ≤ 1/2) : a=b :=
+  int_eq_of_real_half_gap h
+
+example {c d : ℤ} : (16+33*c=(-16:ℤ)+33*d) ↔ ((16:ℤ)= -16 ∧ c=d) :=
+  integer_carry_separation (by norm_num) (by norm_num)
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (N : ℕ), 1 ≤ N → ∀ (P : ℝ), 0 < P →
+      ∀ (z : ℤ → ℂ), (∀n∈Finset.Icc (1:ℤ) N, ‖z n‖ ≤ 1) →
+      P*cubicEighthMoment N z P ≤ C*((N:ℝ)^2+P)*(N:ℝ)^((2:ℝ)+ε) :=
+  exists_cubic_eighth_moment hε
+
+example {P : ℝ} (hP : 0 < P) (z : ℤ → ℂ) (hz : ‖z 1‖ ≤ 1) :
+    P*cubicEighthMoment 1 z P ≤
+      32*((sargosNearPairs (cubicTupleSet 1) (fun n => (cubicCombined 1 n:ℝ))
+        (fun n => (cubicThird n:ℝ)) (1/2) P).card:ℝ) := by
+  apply cubicEighthMoment_le_count 1 z _ hP
+  intro n hn
+  have hn' := Finset.mem_Icc.mp hn
+  have he : n=1 := by omega
+  simpa [he] using hz
+
+end TaoTrudgianYang2025.CubicMomentRegression
+
+namespace TaoTrudgianYang2025.CubicSourceRegression
+open SquareProductCount.CubicMoment SquareProductCount.CubicSource
+
+-- Exact source, empty common prefix, and a strict nonempty prefix.
+example : cubicSourceSum 3 (fun _ => 1) 0 0 0=3 := by
+  norm_num [cubicSourceSum,fordAdditiveCharacter,Finset.sum_const,Int.card_Icc]
+  rfl
+
+example : cubicSourceSum 8 (cubicPrefixCoefficient 0) 2 3 4=0 := by
+  rw [cubicSourceSum_prefix (by omega : 0 ≤ 8)]
+  simp
+
+example : cubicSourceSum 3 (cubicPrefixCoefficient 2) 0 0 0=2 := by
+  rw [cubicSourceSum_prefix (by omega : 2 ≤ 3)]
+  norm_num [fordAdditiveCharacter]
+
+-- Distinct source labels with identical coordinates retain all multiplicities.
+example : (cubicSamplePairs (Finset.range 3) 2 (fun _ => 0) (fun _ => 0) (fun _ => 0)).card=9 := by
+  have he : cubicSamplePairs (Finset.range 3) 2 (fun _ => 0) (fun _ => 0) (fun _ => 0)=
+      Finset.range 3 ×ˢ Finset.range 3 := by
+    unfold cubicSamplePairs
+    apply Finset.filter_eq_self.mpr
+    intro p _hp d
+    have hd := cubicSamplingScale_pos (by norm_num : 1 ≤ 2) d
+    simp only [sub_self,abs_zero]
+    positivity
+  rw [he]
+  norm_num
+
+-- The closed near-pair threshold is retained, while a larger gap is excluded.
+example : (0,1)∈cubicSamplePairs (Finset.range 2) 1 (fun i => (i:ℝ)/4)
+    (fun _ => 0) (fun _ => 0) := by
+  norm_num [cubicSamplePairs,cubicSamplePoint,cubicSamplingScale,Fin.forall_fin_succ]
+
+example : (0,1)∉cubicSamplePairs (Finset.range 2) 1 (fun i => (i:ℝ)/3)
+    (fun _ => 0) (fun _ => 0) := by
+  norm_num [cubicSamplePairs,cubicSamplePoint,cubicSamplingScale,Fin.forall_fin_succ]
+
+example (w : ℕ → ℂ) (M H : ℕ) (hw : ∀ k, ‖w k‖ ≤ 1) :
+    (H:ℝ)*‖∑ m∈Finset.range M, w m‖ ≤
+      (∑ m∈Finset.range M, ‖∑ j∈Finset.range H, w (m+(j+1))‖)+2*(H:ℝ)^2 :=
+  source_shift_average_norm w M H hw
+
+example {ε : ℝ} (hε : 0 < ε) :
+    ∃ C > (0:ℝ), ∀ (f : ℝ → ℝ) (M H : ℕ), 1 ≤ H →
+      ∀ B c μ : ℝ, 0 ≤ B → 0 < μ → B*((H:ℝ)+1)^4 ≤ 1 →
+      (∀ m∈Finset.range M, ∀ y∈Icc ((m:ℝ)-H) ((m:ℝ)+H+2), ContDiffAt ℝ 4 f y) →
+      (∀ m∈Finset.range M, ∀ y∈Icc ((m:ℝ)-H) ((m:ℝ)+H+2), |iteratedDeriv 4 f y| ≤ B) →
+      (∀ m∈Finset.range M, iteratedDeriv 3 f ((m:ℝ)+1)/6∈Icc c (c+μ)) →
+      ‖∑ m∈Finset.range M, fordAdditiveCharacter (f ((m:ℝ)+1))‖^8 ≤
+        C*((M:ℝ)^6*(cubicDerivativePairs f M H).card*(1+μ*(H:ℝ)^2)*(H:ℝ)^ε+(H:ℝ)^8) :=
+  exists_C4_source_eighth_reduction hε
+
+end TaoTrudgianYang2025.CubicSourceRegression
+
+
+namespace TaoTrudgianYang2025.CubicJointCountRegression
+
+open Set MeasureTheory Expdb Filter GafniTao
+open SquareProductCount.CubicSource CubicJointCount
+open scoped Topology ContDiff BigOperators
+
+example :
+    let A := positiveSlopeChartScale (1/4) (positiveSlopeChartIndex (1/4) 1)
+    let η := (1/4)/A
+    let y := (1/A-η)/(1-η)
+    A=3/4 ∧ η=1/3 ∧ y=3/2 ∧ A*aProcessShiftPoint η 0 y=1 ∧
+      A*aProcessShiftPoint η 1 y=5/4 := by
+  norm_num [positiveSlopeChartScale,positiveSlopeChartIndex,aProcessShiftPoint]
+
+example :
+    let A := positiveSlopeChartScale (1/4) (positiveSlopeChartIndex (1/4) 2)
+    let η := (1/4)/A
+    let y := (2/A-η)/(1-η)
+    A=3/2 ∧ η=1/6 ∧ y=7/5 ∧ A*aProcessShiftPoint η 0 y=2 ∧
+      A*aProcessShiftPoint η 1 y=9/4 := by
+  norm_num [positiveSlopeChartScale,positiveSlopeChartIndex,aProcessShiftPoint]
+
+example :
+    let A := positiveSlopeChartScale (1/4) (positiveSlopeChartIndex (1/4) 1)
+    A*aProcessShiftPoint 0 0 (4/3)=1 ∧ A*aProcessShiftPoint 0 1 (4/3)=1 := by
+  norm_num [positiveSlopeChartScale,positiveSlopeChartIndex,aProcessShiftPoint]
+
+example (f : ℝ → ℝ) {M H n : ℕ} (hH : 1 ≤ H) (hn : n < M) :
+    (n,n)∈cubicDerivativePairs f M H := by
+  unfold cubicDerivativePairs cubicSamplePairs
+  apply Finset.mem_filter.mpr
+  refine ⟨Finset.mem_product.mpr ⟨Finset.mem_range.mpr hn,Finset.mem_range.mpr hn⟩,?_⟩
+  intro d
+  simp only [sub_self,abs_zero]
+  exact (mul_pos (by norm_num : (0:ℝ)<2) (cubicSamplingScale_pos hH d)).le
+
+example (f : ℝ → ℝ) (S : Finset ℤ) {a b q B lam K : ℝ}
+    (hq : 0 < q) (hlam : 0 < lam)
+    (hf : ∀ t∈Icc a (b+q), ContDiffAt ℝ 4 f t)
+    (hfour : ∀ t∈Icc a (b+q),
+      -B ≤ iteratedDeriv 4 f t ∧ iteratedDeriv 4 f t ≤ -lam)
+    (hS : ∀ n∈S, (n:ℝ)∈Icc a b)
+    (hlevel : ∀ n∈S, (iteratedDeriv 2 f ((n:ℝ)+q)-iteratedDeriv 2 f n)/2=K) :
+    S.card ≤ 1 := by
+  have hh := cubic_second_difference_fiber_card f S (K:=K) hq hlam (le_refl (0:ℝ))
+    hf hfour hS (fun n hn => by rw [hlevel n hn]; simp)
+  norm_num only [mul_zero,zero_div,zero_add] at hh
+  exact_mod_cast hh
+
+example :
+    let R : ℝ := 1/(2*(1/16)*2*4^2)
+    let W : ℝ := max (1/(2*4)+(1/16)/((1/16)^2*2*4^4)) (1/3)
+    R=1/4 ∧ W=1/3 ∧ 1/(4*4^2)=(1/16)*2*R/2 := by norm_num
+
+example :
+    let W : ℝ := max (1/(2*2)+1/(1^2*2*2^4)) (1/2)
+    W=1/2 := by norm_num
+
+-- Exact public source contract, not a supplied derivative-pair estimate.
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 1 ≤ C ∧
+        ∀ (F : ℝ → ℝ) (T N Y : ℝ) (A : ℤ) (M H J : ℕ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 2 ≤ H → 2 ≤ Y →
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let Qcut := 3/(2*lam*(H:ℝ)^3)
+          1 ≤ Qcut → Qcut ≤ (2:ℝ)^J →
+          N < (A:ℝ)+1-(H:ℝ)^2 → (A:ℝ)+M+(H:ℝ)^2+2*Qcut < 2*N →
+          1/(4*(H:ℝ)^2) ≤ L/4 → 4*U*Qcut*N^2/(σ*T) ≤ κ₀ →
+          let g := fun x => T*F (((A:ℝ)+x)/N)
+          ((SquareProductCount.CubicSource.cubicDerivativePairs g M H).card:ℝ) ≤
+            M+2*(C*((J:ℝ)+2)*(U/(lam*(H:ℝ)^2))*
+              (1+B/(lam^2*(H:ℝ)^4)+Qcut/(H:ℝ)+Qcut/Y+
+                (T/N^2)^(k₀+ε)*Qcut^(l₀+ε)*Y^(k₀+ε)+N^2/T)) :=
+  original_cubicDerivativePairs_count hσ hpair hε hp
+
+end TaoTrudgianYang2025.CubicJointCountRegression
+
+namespace CubicClosedSourceRegression
+open Expdb GafniTao TaoTrudgianYang2025.CubicJointCount
+example (z : ℕ → ℂ) (hz : ∀ n, ‖z n‖ ≤ 1) :
+    ‖∑ n∈Finset.Icc 5 5, z n‖ ≤ 1 := by
+  simpa using cubic_source_trim z hz 5 5 0 (by norm_num)
+example (z : ℕ → ℂ) (hz : ∀ n, ‖z n‖ ≤ 1) :
+    ‖∑ n∈Finset.Icc 5 9, z n‖ ≤ 5 := by
+  have h := cubic_source_trim z hz 5 9 2 (by norm_num)
+  norm_num at h
+  exact h
+example
+    {σ k₀ l₀ ε : ℝ} (hσ : 0 < σ)
+    (hpair : ExponentPair k₀ l₀) (hε : 0 < ε) (hp : k₀+ε < 1) :
+    ∃ δ κ₀ : ℝ, 0 < δ ∧ 0 < κ₀ ∧
+      ∃ Q : ℕ, 3 ≤ Q ∧ ∃ C : ℝ, 0 < C ∧
+        ∀ (F : ℝ → ℝ) (T N Y : ℝ) (a b H J : ℕ),
+          IsApproximateModelPhaseFunction F σ Q δ →
+          0 < T → 0 < N → 2 ≤ H → 2 ≤ Y →
+          N ≤ a → (b:ℝ) ≤ 2*N →
+          let lam := modelPhaseJetLower σ 3*T/N^4
+          let B := (modelPhaseJetCoefficient σ 3+1)*T/N^4
+          let L := modelPhaseJetLower σ 2*T/N^3
+          let U := (modelPhaseJetCoefficient σ 2+1)*T/N^3
+          let Qcut := 3/(2*lam*(H:ℝ)^3)
+          1 ≤ Qcut → Qcut ≤ (2:ℝ)^J →
+          1/(4*(H:ℝ)^2) ≤ L/4 → 4*U*Qcut*N^2/(σ*T) ≤ κ₀ →
+          B*((H:ℝ)+1)^4 ≤ 1 →
+          let E := ((J:ℝ)+2)*(U/(lam*(H:ℝ)^2))*
+            (1+B/(lam^2*(H:ℝ)^4)+Qcut/(H:ℝ)+Qcut/Y+
+              (T/N^2)^(k₀+ε)*Qcut^(l₀+ε)*Y^(k₀+ε)+N^2/T)
+          ‖exponentialSumAt F T N a b‖^8 ≤
+            C*(N^6*(N+E)*(1+U*(H:ℝ)^2)*(H:ℝ)^ε+
+              (H:ℝ)^8+((H:ℝ)^2+Qcut+1)^8) := by
+  exact exists_complete_cubic_eighth_estimate hσ hpair hε hp
+end CubicClosedSourceRegression
+
+namespace CubicBourgainCascadeRegression
+open Expdb TaoTrudgianYang2025.CubicJointCount
+open scoped NNReal
+example : exponentSumGrowthExponent (2/5) ≤ (701:ℝ)/1990 := by
+  have h := exponentSumGrowthExponent_le_cubic_bourgain_gap (α:=2/5) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (140/391) ≤ (127:ℝ)/391 := by
+  have h := exponentSumGrowthExponent_le_cubic_bourgain_gap (α:=140/391) (by norm_num) (by norm_num)
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (16/39) ≤ (14:ℝ)/39 := by
+  have h := bourgain_d_target_outside_gap (α:=16/39) (by norm_num) (Or.inr (by norm_num))
+  norm_num at h ⊢
+  exact h
+
+example : TaoTrudgianYang2025.ExponentPair (18/199) (593/796) :=
+  exponentPair_sargosD_bourgain
+
+example : TaoTrudgianYang2025.ExponentPair (9/217) (1461/1736) :=
+  exponentPair_sargosAD_bourgain
+
+example {α : ℝ≥0} (hα : (α:ℝ) ≤ 1) :
+    exponentSumGrowthExponent α ≤ 18/199+(521/796)*(α:ℝ) :=
+  exponentSumGrowthExponent_le_sargosD_bourgain hα
+
+example {α : ℝ≥0} (hα : (α:ℝ) ≤ 1) :
+    exponentSumGrowthExponent α ≤ 9/217+(1389/1736)*(α:ℝ) :=
+  exponentSumGrowthExponent_le_sargosAD_bourgain hα
+end CubicBourgainCascadeRegression

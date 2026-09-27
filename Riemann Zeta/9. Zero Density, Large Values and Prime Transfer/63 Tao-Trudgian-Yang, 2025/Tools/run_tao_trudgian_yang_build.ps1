@@ -939,6 +939,8 @@ try {
             'Extension\TaoTrudgianYang2025\RobertSargosPhysicalSieve.lean',
             'Extension\TaoTrudgianYang2025\RobertSargosExponentPair.lean',
             'Extension\TaoTrudgianYang2025\ParabolaBilinearLocalization.lean',
+            'Extension\TaoTrudgianYang2025\LogarithmicSixthMoment.lean',
+            'Extension\TaoTrudgianYang2025\SquareProductCount.lean',
             'Extension\TaoTrudgianYang2025\AdditiveEnergy.lean',
             'Extension\TaoTrudgianYang2025\AsymptoticBridge.lean',
             'Extension\TaoTrudgianYang2025\Audit.lean',

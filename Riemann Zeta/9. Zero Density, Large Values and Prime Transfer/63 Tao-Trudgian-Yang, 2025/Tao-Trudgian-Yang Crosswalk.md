@@ -1,6 +1,104 @@
 # Tao--Trudgian--Yang 2025 source-to-Lean crosswalk
 
-Current analytic closure (27 September 2026): the refined displacement
+## Signed count and literal cubic eighth moment (27 September 2026)
+
+`SquareProductCount.exists_signed_square_product_count` proves the full
+signed six-variable bound C*(N^2+P)*N^(1+epsilon), for N>=1 and P>=0.
+Its equal-square-sum/near-triple-product system retains signs, zeros,
+closed endpoints and multiplicities. The preserved Hadamard injection
+then proves the sharp finite cubic resonance count.
+
+The existing [SquareProductCount.lean](Extension/TaoTrudgianYang2025/SquareProductCount.lean) now also contains
+`CubicMoment.exists_cubic_eighth_moment`: for every epsilon>0, one C>0
+works for all N>=1, P>0 and coefficients of norm at most one,
+P*integral_[0,1/P] integral_[0,1]^2 |sum_(1<=n<=N)
+z_n*e(n*alpha+n^2*beta+n^3*gamma)|^8 <= C*(N^2+P)*N^(2+epsilon).
+The literal unweighted sum is an explicit public consumer. Exact integer
+orthogonality compresses the first two moments without losing collisions;
+the proved signed count and existing rectangular-window estimate supply
+the bound. No analytic moment or count premise is assumed.
+
+The same module now proves `CubicSource.exists_C4_source_eighth_reduction`:
+the literal original C4 sum is bounded by
+C*(M^6*card(actual joint derivative pairs)*(1+mu*H^2)*H^epsilon+H^8).
+The existing four-dimensional sieve and common-prefix Taylor theorem
+supply the bound; the averaging boundary term, closed thresholds and
+source-label multiplicities are retained. No source/count bound is assumed.
+The sharp derivative-pair estimate remains OPEN.
+
+The module has 99 explicit public theorem audits and 27 regressions.
+The new reduction passed its complete scratch check (19 audits, eight
+regressions, zero diagnostics) and focused production build (10,364 jobs).
+No additional production module or runner exclusion was introduced.
+Both complete BATs passed for this source-reduction revision, exit 0:
+7,131 regressions, 17,556 principal audits and 14,290 foundation audits,
+zero Lean diagnostics. Full production coverage remains 1,445 files;
+the manifest records exact logs and revision hashes.
+
+Current EPZAE-11 DAG: normalized log sixth moment DONE -> signed count
+DONE -> literal cubic eighth moment DONE -> actual C4 source-to-count
+reduction DONE -> **sharp joint derivative-pair count OPEN** -> original
+model/scale assembly OPEN -> missing D(Bourgain) interval OPEN.
+Target the near-curve count with independently optimized Fourier width;
+its scale algebra recovers D(k,l). This is not an analytic closure claim.
+The actual joint derivative count and complete closed-source eighth-power
+estimate are now proved in the existing CubicJointCount namespace.
+The source estimate derives all derivative hypotheses, removes both
+endpoint strips, and includes short intervals and all multiplicities.
+
+The analytic bottleneck has now closed for D(Bourgain): the missing bound
+beta(alpha) <= 18/199+(521/796)*alpha on [140/391,16/39) is kernel-checked.
+Joining the proved complementary ranges gives the analytic exponent pair
+(18/199,593/796); the existing A-process gives (9/217,1461/1736).
+Both exact beta-table rows hold on the full closed unit interval.
+Actual integer Taylor scales, independent Fourier scales, dyadic indices,
+model-phase uniformity and epsilon absorption are derived, not assumed.
+Complete scratch session 21436: zero diagnostics and standard logical
+axioms only. Production integration reuses SquareProductCount.lean:
+nine additional public audits and seven endpoint/contract regressions.
+Focused production session 71438 passes (10,380 jobs, zero diagnostics).
+Both mandatory BATs pass for this revision, exit 0: 7,149 regressions,
+17,665 principal audits (11,420 target, 6,240 pinned, five anchors),
+and 14,290 foundation audits; zero Lean diagnostics. Exact logs and
+SHA256 hashes are recorded in the reproduction manifest.
+The verified module has 147 public theorem audits and 45 regressions.
+
+Remaining cluster: generic D source contract; the missing Huxley and
+Trudgian--Yang beta inputs; exact full envelope and four advertised pairs.
+A fresh local search found no proved substitute for those Huxley rows.
+A bounded A/B/C/Heath--Brown closure search using the new D(Bourgain)
+pair did not reach the four outputs; this is discovery, not a proof of
+impossibility. Reuse the completed machinery before adding support code.
+No new production module, runner exclusion or weakened audit gate.
+EPZAE-11/13/14 remain OPEN; the aggregate stays 31/42.
+EPZAE-11/13/14 remain OPEN; aggregate completion remains 31/42.
+Keep both `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
+mandatory and synchronize their existing coverage as the proof changes.
+Both counterexamples, corrected powering and Add-est remain intact.
+Recovery-record maintenance is permanently skipped.
+
+The following normalized-moment checkpoint is historical verification context.
+
+Current normalized logarithmic moment closure (27 September 2026):
+`LogarithmicSixth.exists_logarithmic_sixth` proves the full bound
+C*B^6*(T+N)*N^(3+epsilon), with actual integer frequencies, endpoints,
+low frequencies and coefficient fibers. The new targeted
+[production module](Extension/TaoTrudgianYang2025/LogarithmicSixthMoment.lean) is imported, explicitly audited and
+included in the principal runner's required inventory. It adds 83 public
+theorem audits and 14 semantic regressions.
+
+Both BATs pass with zero diagnostics: 1,444 package files, 7,104 regressions,
+17,369 principal audit entries and 14,290 foundation entries. The printed
+n^(it) convention is not yet bridged; the proved normalized phase is
+e(alpha*n^2+t*log(n)). The signed square/product count, cubic eighth
+moment, original-source short-sum estimate and missing D(Bourgain) interval
+remain OPEN. EPZAE-11/13/14 and overall 31/42 status are unchanged.
+Both counterexamples and all Add-est conclusions are preserved.
+See the [goal](Tao-Trudgian-Yang%20Goal%20Prompt.md) and [verification record](Tao-Trudgian-Yang%20Reproduction%20Manifest.md).
+
+Prior Bourgain/Watt checkpoint (historical):
+
+The refined displacement
 argument proves the full Bourgain pair `(13/84,55/84)` and the exact Watt
 coordinates `(89/560,369/560)` in the existing localization module.
 The original model phase, every source band, tail, endpoint and uniform

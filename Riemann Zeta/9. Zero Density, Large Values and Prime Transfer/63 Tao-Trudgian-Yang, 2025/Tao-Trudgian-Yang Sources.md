@@ -1,5 +1,131 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
+## Signed count and literal cubic eighth moment (27 September 2026)
+
+`SquareProductCount.exists_signed_square_product_count` proves the full
+signed six-variable bound C*(N^2+P)*N^(1+epsilon), for N>=1 and P>=0.
+Its equal-square-sum/near-triple-product system retains signs, zeros,
+closed endpoints and multiplicities. The preserved Hadamard injection
+then proves the sharp finite cubic resonance count.
+
+The existing [SquareProductCount.lean](Extension/TaoTrudgianYang2025/SquareProductCount.lean) now also contains
+`CubicMoment.exists_cubic_eighth_moment`: for every epsilon>0, one C>0
+works for all N>=1, P>0 and coefficients of norm at most one,
+P*integral_[0,1/P] integral_[0,1]^2 |sum_(1<=n<=N)
+z_n*e(n*alpha+n^2*beta+n^3*gamma)|^8 <= C*(N^2+P)*N^(2+epsilon).
+The literal unweighted sum is an explicit public consumer. Exact integer
+orthogonality compresses the first two moments without losing collisions;
+the proved signed count and existing rectangular-window estimate supply
+the bound. No analytic moment or count premise is assumed.
+
+The same module now proves `CubicSource.exists_C4_source_eighth_reduction`:
+the literal original C4 sum is bounded by
+C*(M^6*card(actual joint derivative pairs)*(1+mu*H^2)*H^epsilon+H^8).
+The existing four-dimensional sieve and common-prefix Taylor theorem
+supply the bound; the averaging boundary term, closed thresholds and
+source-label multiplicities are retained. No source/count bound is assumed.
+The sharp derivative-pair estimate remains OPEN.
+
+The module has 99 explicit public theorem audits and 27 regressions.
+The new reduction passed its complete scratch check (19 audits, eight
+regressions, zero diagnostics) and focused production build (10,364 jobs).
+No additional production module or runner exclusion was introduced.
+Both complete BATs passed for this source-reduction revision, exit 0:
+7,131 regressions, 17,556 principal audits and 14,290 foundation audits,
+zero Lean diagnostics. Full production coverage remains 1,445 files;
+the manifest records exact logs and revision hashes.
+
+Current EPZAE-11 DAG: normalized log sixth moment DONE -> signed count
+DONE -> literal cubic eighth moment DONE -> actual C4 source-to-count
+reduction DONE -> **sharp joint derivative-pair count OPEN** -> original
+model/scale assembly OPEN -> missing D(Bourgain) interval OPEN.
+Target the near-curve count with independently optimized Fourier width;
+its scale algebra recovers D(k,l). This is not an analytic closure claim.
+The actual joint derivative count and complete closed-source eighth-power
+estimate are now proved in the existing CubicJointCount namespace.
+The source estimate derives all derivative hypotheses, removes both
+endpoint strips, and includes short intervals and all multiplicities.
+
+The analytic bottleneck has now closed for D(Bourgain): the missing bound
+beta(alpha) <= 18/199+(521/796)*alpha on [140/391,16/39) is kernel-checked.
+Joining the proved complementary ranges gives the analytic exponent pair
+(18/199,593/796); the existing A-process gives (9/217,1461/1736).
+Both exact beta-table rows hold on the full closed unit interval.
+Actual integer Taylor scales, independent Fourier scales, dyadic indices,
+model-phase uniformity and epsilon absorption are derived, not assumed.
+Complete scratch session 21436: zero diagnostics and standard logical
+axioms only. Production integration reuses SquareProductCount.lean:
+nine additional public audits and seven endpoint/contract regressions.
+Focused production session 71438 passes (10,380 jobs, zero diagnostics).
+Both mandatory BATs pass for this revision, exit 0: 7,149 regressions,
+17,665 principal audits (11,420 target, 6,240 pinned, five anchors),
+and 14,290 foundation audits; zero Lean diagnostics. Exact logs and
+SHA256 hashes are recorded in the reproduction manifest.
+The verified module has 147 public theorem audits and 45 regressions.
+
+Remaining cluster: generic D source contract; the missing Huxley and
+Trudgian--Yang beta inputs; exact full envelope and four advertised pairs.
+A fresh local search found no proved substitute for those Huxley rows.
+A bounded A/B/C/Heath--Brown closure search using the new D(Bourgain)
+pair did not reach the four outputs; this is discovery, not a proof of
+impossibility. Reuse the completed machinery before adding support code.
+No new production module, runner exclusion or weakened audit gate.
+EPZAE-11/13/14 remain OPEN; the aggregate stays 31/42.
+EPZAE-11/13/14 remain OPEN; aggregate completion remains 31/42.
+Keep both `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat`
+mandatory and synchronize their existing coverage as the proof changes.
+Both counterexamples, corrected powering and Add-est remain intact.
+Recovery-record maintenance is permanently skipped.
+
+The following normalized-moment checkpoint is historical verification context.
+
+## Normalized logarithmic sixth moment (27 September 2026)
+
+The production theorem `LogarithmicSixth.exists_logarithmic_sixth` in
+[LogarithmicSixthMoment.lean](Extension/TaoTrudgianYang2025/LogarithmicSixthMoment.lean)
+now proves the literal square/log sixth moment
+C*B^6*(T+N)*N^(3+epsilon), uniformly for N>=1, T>=0, all finite positive
+integer-frequency arrays and coefficient fibers bounded by B. Its constant
+precedes every physical parameter and source array. Low frequencies,
+closed endpoints, full shell recombination and epsilon absorption are proved.
+The unweighted natural-number sum is an explicit public consumer.
+There are 83 public theorem audits and 14 new semantic regressions.
+
+This is the normalized character e(alpha*n^2+t*log(n)), where
+e(x)=exp(2*pi*i*x). The printed Bombieri--Iwaniec (5.2) convention
+e(alpha*n^2)*n^(i*t) still needs its explicit time-rescaling bridge;
+no exact printed-normalization claim is made yet. No logarithmic moment
+or general curved decoupling estimate is assumed.
+
+The second route uses actual logarithmic frequency gaps, the existing
+planar Gram/Fourier-multiplier arguments, the proved parabolic scalar
+recurrence and native quadratic VMVT. It closes the source moment without
+the first route's unresolved all-plane weighted comparison.
+
+Remaining EPZAE-11 DAG:
+normalized logarithmic sixth moment **DONE** -> signed six-variable
+square/product count **OPEN** -> cubic eighth moment **OPEN** ->
+actual original-model short-sum source **OPEN** -> missing D(Bourgain)
+interval **OPEN**. The eight-to-six injective reduction is scratch-checked;
+the count must retain signs, zero coordinates and multiplicities.
+The missing interval is 140/391<alpha<16/39, with target
+beta<=18/199+(521/796)*alpha. Complementary endpoints are checked separately.
+Generic D, missing Huxley/Trudgian--Yang inputs and EPZAE-11/13/14 remain
+OPEN; aggregate completion stays 31/42.
+
+Source: [Bombieri--Iwaniec, pp. 484--485](https://www.numdam.org/item/ASNSP_1986_4_13_3_473_0.pdf).
+A renewed local search through ANTEDB, GafniTaoNative, Mathlib and the completed
+A/B/C/Heath--Brown/Robert--Sargos machinery found no existing full signed
+square/product count. The two-frequency tent-count theorem is already
+available and will be reused. The count is not the local quartic sixth moment.
+
+Both current BATs passed, exit 0, with zero Lean diagnostics. The principal
+run checks 1,444 Lean package files, 10,777 build jobs, 7,104 regressions and
+17,369 audited declarations (11,124 target, 6,240 pinned Gafni--Tao and five
+anchors). The foundation run checks 8,857 jobs and 14,290 declarations.
+The [reproduction manifest](Tao-Trudgian-Yang%20Reproduction%20Manifest.md)
+records exact logs and hashes. Earlier verification sections are historical.
+
 ## Refined analytic closure and table cascade (27 September 2026)
 
 The full Bourgain pair `(13/84,55/84)` and exact Watt coordinates
@@ -25,6 +151,49 @@ order 30 and the new Bourgain pieces did not discharge D or the four pairs.
 This bounded discovery is not an impossibility proof. EPZAE-11/13/14 stay
 open; completion remains 31/42. Both counterexamples and Add-est are preserved.
 Earlier checkpoint and scratch notes below are chronological history.
+
+The renewed D-route search reuses the completed local Legendre, shift and
+closed derivative calculus. Twenty-one scratch theorems now check the actual
+moving double-dual model, resonance identity and physical interval exponent-pair
+bound, not the D bound.
+The D(Bourgain) target is independently proved outside (140/391,16/39);
+the original-source estimate on that interval remains missing.
+The [1995 publisher PDF](https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s3-70.2.285)
+was still unavailable on the renewed check. The accessible
+[Robert--Sargos primary paper](https://perso.univ-st-etienne.fr/rool6510/compositiorobertsargos.pdf)
+points to eighth-power cubic means for the older fourth-derivative route.
+The [Bombieri--Iwaniec primary mean-value paper](https://www.numdam.org/item/ASNSP_1986_4_13_3_473_0.pdf)
+is accessible and is being checked against existing moment machinery;
+its statements are not imported as assumptions. A hypothetical improved
+twelfth-power count was also tested by exact finite envelope discovery;
+it did not discharge the four pairs or D(Bourgain). This is not an impossibility proof.
+
+The renewed primary-paper check of Robert--Sargos, Section 4, isolates the
+loss from discarding the `r*h_i^2` and `r^2*h_i` terms in (4.25). The relaxed
+four-loss rebalancing obstruction is kernel-checked separately; no stronger
+spacing theorem is inferred. Bombieri--Iwaniec, pp. 484--485, was inspected
+from the rendered public PDF: its cubic eighth moment is reduced to a
+six-variable equal-square-sum/near-triple-product count, not to the local
+quartic sixth moment. The alternative [Bourgain 2014, Section 4](https://arxiv.org/html/1406.7862#S4)
+uses a three-dimensional hypersurface estimate; the existing planar sixth
+moment does not by itself supply that input. Neither missing theorem is
+silently substituted by ordinary VMVT or by a database hypothesis.
+The already-proved `BetaCanonicalTaylorLegendre` API does supply the needed
+moving-buffer model uniformity and is now reused twice in scratch. It also
+realizes any finite family of actual interior slope values in one closed model.
+The moving resonance identity is also checked. Its compression term is removed
+only using both physical integrality identities. The resulting interval estimate
+handles both nonzero Fourier-frequency signs and retains the low-height term.
+The already-proved positive-slope grid supplies exact compressed coordinates;
+full source-family chart assembly and the sharp count remain unproved.
+
+The cubic-eighth alternative now has an exact finite-count consumer of the
+algebra behind Bombieri--Iwaniec (5.4)--(5.12). It uses two explicit four-by-four
+Hadamard transforms, proves their inverses, retains the common sum, and derives
+the exact cubic/product factor and finite fiber bound. The next analytic
+input is the logarithmic sixth moment (5.2), or a direct bound for the same
+square/product system. Existing planar decoupling is being tested for that
+specific input; it is not silently generalized from the quartic phase.
 
 ## Earlier closed-baseline source status (26 September 2026)
 

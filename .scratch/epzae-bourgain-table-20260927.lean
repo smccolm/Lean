@@ -3,7 +3,7 @@ import TaoTrudgianYang2025.ParabolaBilinearLocalization
 noncomputable section
 open Expdb GafniTao Filter Asymptotics Set
 open scoped NNReal Topology
-namespace TaoTrudgianYang2025
+namespace TaoTrudgianYang2025.BourgainTablePrototype
 private theorem eventually_const_log36_le_rpow {D q : ℝ} (hD : 0 ≤ D) (hq : 0<q) :
     ∀ᶠ T : ℝ in atTop, D*(1+Real.log T)^36 ≤ T^q := by
   have hl := ((isLittleO_log_rpow_rpow_atTop (36:ℝ) hq).const_mul_left (D*2^36)).eventuallyLE
@@ -220,8 +220,43 @@ theorem isExponentSumBoundNonAsymptotic_bourgain_refined_from_piecewise
   apply h.trans
   exact max_le (by linarith only [hαupper]) (by linarith only [hα])
 
+/-- The already proved analytic inputs cover the D(Bourgain) target outside
+one exact open interval. No estimate on that remaining interval is assumed. -/
+theorem bourgain_d_target_outside_gap
+    {α : NNReal} (hhalf : (α:ℝ) ≤ 1/2)
+    (hgap : (α:ℝ) ≤ 140/391 ∨ 16/39 ≤ (α:ℝ)) :
+    exponentSumGrowthExponent α ≤ (18:ℝ)/199+521/796*(α:ℝ) := by
+  rcases hgap with hlo | hhi
+  · have h := exponentSumGrowthExponent_le_exponentPairLine_closed
+      exponentPair_robertSargos α (by linarith only [hhalf])
+    unfold exponentPairLine at h
+    linarith only [h,hlo]
+  · by_cases hfirst : (α:ℝ) ≤ 5/12
+    · have h := TaoTrudgianYang2025.exponentSumGrowthExponent_le_bourgain_table_first
+        (α:=α) (by linarith only [hhi]) hfirst
+      linarith only [h,hhi]
+    · by_cases hsecond : (α:ℝ) ≤ 3/7
+      · have h := TaoTrudgianYang2025.exponentSumGrowthExponent_le_bourgain_table_second
+          (α:=α) (le_of_not_ge hfirst) hsecond
+        linarith only [h,hhalf]
+      · have h := exponentSumGrowthExponent_le_bourgain_baseline
+          (α:=α) (le_of_not_ge hsecond) hhalf
+        have hα : (3:ℝ)/7 ≤ (α:ℝ) := le_of_not_ge hsecond
+        linarith only [h,hα]
+
+example : exponentSumGrowthExponent (140/391) ≤ (127:ℝ)/391 := by
+  have h := bourgain_d_target_outside_gap (α:=140/391) (by norm_num) (Or.inl (by norm_num))
+  norm_num at h ⊢
+  exact h
+
+example : exponentSumGrowthExponent (16/39) ≤ (14:ℝ)/39 := by
+  have h := bourgain_d_target_outside_gap (α:=16/39) (by norm_num) (Or.inr (by norm_num))
+  norm_num at h ⊢
+  exact h
+
+#print axioms bourgain_d_target_outside_gap
 #print axioms isExponentSumBoundNonAsymptotic_bourgain_refined_from_piecewise
 #print axioms isExponentSumBoundNonAsymptotic_bourgain_piecewise
 #print axioms exponentSumGrowthExponent_le_bourgain_table_first
 #print axioms exponentSumGrowthExponent_le_bourgain_table_second
-end TaoTrudgianYang2025
+end TaoTrudgianYang2025.BourgainTablePrototype

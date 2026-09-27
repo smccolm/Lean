@@ -150,7 +150,8 @@ theorem integral_parabola_sixth_kernel_eq_zero
   apply (div_lt_iff₀ (by positivity : 0 < 4*ν)).mpr
   nlinarith [sq_pos_of_pos hw]
 
-private theorem planarSum_mul {ι κ : Type*}
+/-- Multiplication of the actual finite planar sums, retaining all multiplicities. -/
+theorem planarSum_mul {ι κ : Type*}
     (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (w : κ → ℂ)
     (u v : ι → ℝ) (p q : κ → ℝ) (α γ : ℝ) :
     sargosPlanarSum S z u v α γ * sargosPlanarSum T w p q α γ =
@@ -490,6 +491,31 @@ private theorem planarFamily_banded_bound {ι : Type*}
     rw [hzero i hi j hj hgap]
     rfl
 
+
+/-- The existing finite banded Gram estimate exposed through its literal
+Fourier-kernel premise. This is curve-independent; geometric applications
+must derive the cancellation for their own frequencies. -/
+theorem sargosPlanarFamily_banded_bound {ι : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι)
+    (z : ℤ → ι → ℂ) (u v : ℤ → ι → ℝ) {a b : ℝ}
+    (ha : 0 < a) (hb : 0 < b) (c d : ℝ) (m : ℕ)
+    (hzero : ∀ i ∈ J, ∀ j ∈ J, (m : ℤ) < |i-j| →
+      ∀ s ∈ S i, ∀ t ∈ S j,
+        (∫ α : ℝ, ∫ γ : ℝ, sargosPlanarKernelTerm a b c d
+          (u i s-u j t) (v i s-v j t) α γ) = 0) :
+    (∫ α : ℝ, ∫ γ : ℝ,
+      sargosWeightedPlanarIntegrand (J.sigma S)
+        (fun ij => z ij.1 ij.2) (fun ij => u ij.1 ij.2) (fun ij => v ij.1 ij.2)
+        a b c d α γ) ≤
+      (2*(m : ℝ)+1)*∑ i ∈ J, ∫ α : ℝ, ∫ γ : ℝ,
+        sargosWeightedPlanarIntegrand (S i) (z i) (u i) (v i) a b c d α γ := by
+  apply planarFamily_banded_bound J S z u v ha hb c d m
+  intro i hi j hj hij
+  rw [integral_planarCross _ _ _ _ _ _ _ _ ha hb]
+  apply Finset.sum_eq_zero
+  intro st hst
+  have hs := Finset.mem_product.mp hst
+  rw [hzero i hi j hj hij st.1 hs.1 st.2 hs.2,mul_zero]
 
 private theorem parabola_product_sum {ι τ : Type*}
     (S : Finset ι) (V : Finset τ) (z : ι → ℂ) (c : τ → ℂ)
@@ -2449,6 +2475,37 @@ private theorem bandCharacter_integrable {W : ℝ × ℝ → ℝ} (hW : Integrab
     Integrable (fun p : ℝ × ℝ => (W p : ℂ)*fordAdditiveCharacter (u*p.1+v*p.2)) :=
   band_weighted_integrable (by unfold fordAdditiveCharacter; fun_prop) hW
     (fun p => (sargos_character_norm _).le)
+
+/-- Weighted version of the already proved banded Gram estimate. The input
+is literal Fourier cancellation of the weight at the specified differences,
+not an orthogonality or moment bound for the finite source sums. -/
+theorem sargosWeightedPlanarFamily_banded_bound {ι : Type*}
+    (J : Finset ℤ) (S : ℤ → Finset ι)
+    (z : ℤ → ι → ℂ) (u v : ℤ → ι → ℝ)
+    (W : ℝ × ℝ → ℝ) (hW₀ : ∀ p, 0≤W p) (hW : Integrable W) (m : ℕ)
+    (hzero : ∀ i∈J, ∀ j∈J, (m : ℤ) < |i-j| → ∀ s∈S i, ∀ t∈S j,
+      (∫ p : ℝ × ℝ, (W p : ℂ)*fordAdditiveCharacter
+        ((u i s-u j t)*p.1+(v i s-v j t)*p.2))=0) :
+    (∫ p : ℝ × ℝ, W p*‖sargosPlanarSum (J.sigma S)
+      (fun ij => z ij.1 ij.2) (fun ij => u ij.1 ij.2) (fun ij => v ij.1 ij.2) p.1 p.2‖^2)≤
+      (2*(m : ℝ)+1)*∑ i∈J, ∫ p : ℝ × ℝ,
+        W p*‖sargosPlanarSum (S i) (z i) (u i) (v i) p.1 p.2‖^2 := by
+  have hz : ∀ i∈J, ∀ j∈J, (m : ℤ) < |i-j| →
+      (∫ p : ℝ × ℝ, (W p : ℂ)*sargosPlanarSum (S i) (z i) (u i) (v i) p.1 p.2*
+        conj (sargosPlanarSum (S j) (z j) (u j) (v j) p.1 p.2))=0 := by
+    intro i hi j hj hij
+    simp_rw [rapidCross_expand]
+    rw [integral_finsetSum (S i ×ˢ S j) (fun st _ =>
+      (bandCharacter_integrable hW (u i st.1-u j st.2) (v i st.1-v j st.2)).const_mul _)]
+    apply Finset.sum_eq_zero
+    intro st hst
+    have hs := Finset.mem_product.mp hst
+    rw [integral_const_mul,hzero i hi j hj hij st.1 hs.1 st.2 hs.2,mul_zero]
+  have h := weighted_family_banded J
+    (fun i p => sargosPlanarSum (S i) (z i) (u i) (v i) p.1 p.2) W m hW₀
+    (fun i _ j _ => bandCross_integrable (S i) (S j) (z i) (z j)
+      (u i) (v i) (u j) (v j) hW) hz
+  simpa only [sargosPlanarSum,Finset.sum_sigma] using h
 
 private theorem integral_bandCross_zero {ι κ : Type*}
     (S : Finset ι) (T : Finset κ) (z : ι → ℂ) (z' : κ → ℂ)
@@ -4655,7 +4712,10 @@ private theorem bourgainRemainderEnvelope_integrable :
   exact inv_anti₀ (by positivity) (hs.trans
     (pow_le_pow_right₀ (by linarith [abs_nonneg ξ]) (by omega : (2:ℕ) ≤ 102)))
 
-private theorem bourgain_finite_multiplier_moment {ι : Type*}
+/-- Finite sixth-power transfer for an integrable Fourier multiplier.
+This existing proof is public so other actual Taylor remainders can reuse it
+without duplicating the weighted Hölder argument. -/
+theorem bourgain_finite_multiplier_moment {ι : Type*}
     (S : Finset ι) (z : ι → ℂ) (s : ι → ℝ)
     {K : ℝ → ℂ} (hKc : Continuous K)
     (hKi : Integrable (fun ξ => (1+|ξ|)^100*‖K ξ‖))
@@ -13269,7 +13329,10 @@ private theorem bourgain_integer_interval_fiber_sum {ι : Type u}
       rw [(Finset.mem_filter.mp hi).2]
     _ = _ := Finset.sum_fiberwise_of_maps_to hm' (fun i => z i*F (m i))
 
-private theorem exists_bourgain_quadratic_weighted_finite_interval {ε : ℝ} (hε : 0<ε) :
+/-- Native quadratic sixth-moment bound on an actual finite integer interval.
+The coefficient-fiber norm condition retains repeated integer frequencies;
+this is shared with the logarithmic short-cell argument. -/
+theorem exists_bourgain_quadratic_weighted_finite_interval {ε : ℝ} (hε : 0<ε) :
     ∃ C>(0:ℝ), ∀ (Q : ℕ), 1≤Q →
       ∀ (ι : Type u) (S : Finset ι) (z : ι → ℂ) (m : ι → ℤ) (A : ℤ) (B : ℝ),
         0≤B → (∀ i∈S,A < m i ∧ m i≤A+Q) →
@@ -39160,7 +39223,8 @@ theorem four_coordinate_displacement_source_count
     hH hL hU hF hlam hUsmall hε hspan hmul hf hthree hfour hcenter hz hround
     (fun _ hp => (Finset.mem_filter.mp hp).1) hRsym hshift hnear
 
-private theorem model_displacement_derivative_data {σ : ℝ} (hσ : 0 < σ) :
+/-- Actual original-model derivative data, reused by the cubic joint count. -/
+theorem model_displacement_derivative_data {σ : ℝ} (hσ : 0 < σ) :
     ∃ δ > (0:ℝ), ∀ (F : ℝ → ℝ) (T P : ℝ), 0 < T → 0 < P →
       Expdb.IsApproximateModelPhaseFunction F σ 3 δ →
       let f := fun x => T*F (x/P)
@@ -41605,6 +41669,118 @@ theorem exponentSumGrowthExponent_le_bourgain_half
   convert h using 1
   simp only [exponentPairLine]
   ring
+
+namespace CubicNearCurve
+
+/-! Near-integer counting with an independent Fourier width, using the
+existing finite Fourier kernel and its proved positive moments. -/
+
+theorem cubic_hat_fourier_power_moment
+    {B p : ℝ} (hB : 0 < B) (hBHalf : B ≤ 1/2)
+    (hp : 0 ≤ p) (hp1 : p < 1) :
+    let c := GafniTao.heathBrownHatFourierCoefficient B
+    Summable (fun r : ℤ => c r*|(r:ℝ)|^p) ∧
+    (∑' r : ℤ, c r*|(r:ℝ)|^p) ≤ (2+2/(1-p))*B^(-p) := by
+  intro c
+  let R : ℕ := ⌈1/B⌉₊
+  have hRlo : 1/B ≤ (R:ℝ) := Nat.le_ceil _
+  have hR : 0 < R := by
+    have hh : (0:ℝ) < R := (one_div_pos.mpr hB).trans_le hRlo
+    exact_mod_cast hh
+  have hRhi : (R:ℝ) ≤ 2/B := by
+    have hh := Nat.ceil_lt_add_one (show 0 ≤ 1/B by positivity)
+    change (R:ℝ) < 1/B+1 at hh
+    have h1 : 1 ≤ 1/B := (le_div_iff₀ hB).mpr (by linarith)
+    calc
+      _ ≤ 1/B+1/B := hh.le.trans (add_le_add le_rfl h1)
+      _ = _ := by ring
+  have hm := hat_fourier_positive_moment hB hBHalf hp hp1 hR
+  have hhead : (R:ℝ)^p ≤ 2*B^(-p) := by
+    calc
+      _ ≤ (2/B)^p := Real.rpow_le_rpow (Nat.cast_nonneg R) hRhi hp
+      _ = (2:ℝ)^p*B^(-p) := by
+        rw [Real.div_rpow (by norm_num) hB.le,Real.rpow_neg hB.le]
+        ring
+      _ ≤ _ := by
+        have hh : (2:ℝ)^p ≤ 2 := by
+          simpa only [Real.rpow_one] using Real.rpow_le_rpow_of_exponent_le
+            (by norm_num : (1:ℝ) ≤ 2) hp1.le
+        exact mul_le_mul_of_nonneg_right hh (by positivity)
+  have htailpow : (R:ℝ)^(p-1) ≤ B^(1-p) := by
+    calc
+      _ ≤ (1/B)^(p-1) := Real.rpow_le_rpow_of_nonpos
+        (one_div_pos.mpr hB) hRlo (by linarith)
+      _ = _ := by
+        rw [one_div,Real.inv_rpow hB.le,←Real.rpow_neg hB.le]
+        congr 1
+        ring
+  have htail : (2/B)*(R:ℝ)^(p-1)/(1-p) ≤ (2/(1-p))*B^(-p) := by
+    calc
+      _ ≤ (2/B)*B^(1-p)/(1-p) := by gcongr
+      _ = _ := by
+        have he : B^(1-p)/B=B^(-p) := by
+          rw [←Real.rpow_sub_one hB.ne']
+          congr 1
+          ring
+        calc
+          _ = (2/(1-p))*(B^(1-p)/B) := by ring
+          _ = _ := by rw [he]
+  exact ⟨hm.1,(hm.2.trans (add_le_add hhead htail)).trans_eq (by ring)⟩
+
+theorem cubic_near_integer_count_power
+    {ι : Type*} [DecidableEq ι] (S T : Finset ι) (φ : ι → ℝ)
+    {B A D p : ℝ} (hB : 0 < B) (hBHalf : B ≤ 1/2)
+    (hA : 0 ≤ A) (hD : 0 ≤ D) (hp : 0 ≤ p) (hp1 : p < 1)
+    (hTS : T ⊆ S)
+    (hnear : ∀ i∈T, ∃ e : ℤ, |φ i-(e:ℝ)| ≤ B/2)
+    (hfreq : ∀ r : ℤ, r ≠ 0 →
+      ‖∑ i∈S, GafniTao.fordAdditiveCharacter ((r:ℝ)*φ i)‖ ≤ A*|(r:ℝ)|^p+D) :
+    (T.card:ℝ) ≤ 2*B*S.card+(4+4/(1-p))*A*B^(-p)+2*D := by
+  let c := GafniTao.heathBrownHatFourierCoefficient B
+  let Z := fun r : ℤ => ∑ i∈S, GafniTao.fordAdditiveCharacter ((r:ℝ)*φ i)
+  let e := fun r : ℤ => if r=0 then B*(S.card:ℝ) else 0
+  have hc r : 0 ≤ c r := GafniTao.heathBrownHatFourierCoefficient_nonneg hB.le r
+  have hm := cubic_hat_fourier_power_moment hB hBHalf hp hp1
+  have hmass := (hat_fourier_mass_and_decay hB hBHalf).1
+  have he : HasSum e (B*(S.card:ℝ)) := hasSum_ite_eq _ _
+  have hmajor : Summable (fun r : ℤ => e r+A*(c r*|(r:ℝ)|^p)+D*c r) :=
+    (he.summable.add (hm.1.mul_left A)).add (hmass.summable.mul_left D)
+  have hpoint r : c r*‖Z r‖ ≤ e r+A*(c r*|(r:ℝ)|^p)+D*c r := by
+    by_cases hr : r=0
+    · subst r
+      have hZ : Z 0=(S.card:ℂ) := by simp [Z,GafniTao.fordAdditiveCharacter]
+      rw [hZ]
+      simp only [c,GafniTao.heathBrownHatFourierCoefficient_zero,
+        Complex.norm_natCast,e,if_pos rfl]
+      exact le_add_of_nonneg_right (add_nonneg
+        (mul_nonneg hA (mul_nonneg hB.le (Real.rpow_nonneg (abs_nonneg _) p)))
+        (mul_nonneg hD hB.le)) |>.trans_eq (by ring)
+    · have hh := mul_le_mul_of_nonneg_left (hfreq r hr) (hc r)
+      change c r*‖Z r‖ ≤ _ at hh
+      change c r*‖Z r‖ ≤ (if r=0 then B*(S.card:ℝ) else 0)+
+        A*(c r*|(r:ℝ)|^p)+D*c r
+      rw [if_neg hr,zero_add]
+      convert hh using 1
+      ring
+  have hs : Summable (fun r : ℤ => c r*‖Z r‖) :=
+    hmajor.of_nonneg_of_le (fun r => mul_nonneg (hc r) (norm_nonneg _)) hpoint
+  have hupper : (∑' r : ℤ, c r*‖Z r‖) ≤ B*S.card+(2+2/(1-p))*A*B^(-p)+D := by
+    calc
+      _ ≤ ∑' r : ℤ, (e r+A*(c r*|(r:ℝ)|^p)+D*c r) :=
+        Summable.tsum_le_tsum hpoint hs hmajor
+      _ = B*S.card+A*(∑' r : ℤ, c r*|(r:ℝ)|^p)+D := by
+        rw [Summable.tsum_add (he.summable.add (hm.1.mul_left A)) (hmass.summable.mul_left D),
+          Summable.tsum_add he.summable (hm.1.mul_left A),tsum_mul_left,tsum_mul_left,
+          he.tsum_eq,hmass.tsum_eq,mul_one]
+      _ ≤ B*S.card+A*((2+2/(1-p))*B^(-p))+D :=
+        add_le_add (add_le_add le_rfl (mul_le_mul_of_nonneg_left hm.2 hA)) le_rfl
+      _ = _ := by ring
+  have hcount := finite_near_integer_count_fourier S T φ hB hBHalf hTS hnear
+  change (T.card:ℝ) ≤ 2*∑' r : ℤ, c r*‖Z r‖ at hcount
+  exact hcount.trans ((mul_le_mul_of_nonneg_left hupper (by norm_num : (0:ℝ) ≤ 2)).trans_eq (by ring))
+
+end CubicNearCurve
+
 
 
 

@@ -1439,3 +1439,5 @@ import TaoTrudgianYang2025.RobertSargosPolynomialSieve
 import TaoTrudgianYang2025.RobertSargosPhysicalSieve
 import TaoTrudgianYang2025.RobertSargosExponentPair
 import TaoTrudgianYang2025.ParabolaBilinearLocalization
+import TaoTrudgianYang2025.LogarithmicSixthMoment
+import TaoTrudgianYang2025.SquareProductCount
