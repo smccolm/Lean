@@ -1,6 +1,135 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
-## Verified finite global model-source bound (26 September 2026)
+## Verified closed baseline and square-root endpoint (26 September 2026)
+
+The existing localization module has 146 public source theorems and
+308 focused regressions. The two new public theorems
+`isExponentSumBoundNonAsymptotic_bourgain_square_root` and
+`exponentSumGrowthExponent_le_bourgain_baseline` close the endpoint and
+prove beta(alpha) <= 13/84+alpha/2 for 3/7 <= alpha <= 1/2.
+The exact nonasymptotic endpoint contract retains every positive model
+parameter, admissible phase, uniform derivative order and closed interval.
+
+For q=min(1/100,epsilon/4), the proof uses h=ceil(T^q) and the actual
+compressed phase G_r(u)=G((1-r/P)*u+r/P) at scale P_r=(P-r)/h.
+Model-jet stability, physical scale and tolerance inequalities are derived.
+Every residue core is exactly reindexed onto a natural interval; the
+discarded upper tail has at most one point per class. Uniform constants
+precede T, P and the phase, and all residue losses are absorbed into epsilon.
+No continuity of beta, unlinked scale certificate or independent source
+estimate is assumed. Eight private helpers and two public theorems are
+integrated into the existing module, reusing A-process affine compression
+and the existing jet, asymptotic and floor APIs. Four new regressions cover
+both full contracts and the rational endpoints, including beta(1/2)<=17/42.
+
+- Focused source/regression build: exit 0, 10,775 jobs; source 287 seconds,
+  root 11 seconds, regressions 226 seconds; no diagnostics.
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-180814-e586ab84.log);
+  10,776 jobs, 1,443 production files, 1,917 scanned files, direct semantic
+  regressions and 17,192 audited declarations (10,947 target, 6,240 pinned
+  Gafni--Tao and five anchors); zero Lean diagnostics.
+  Log SHA256: `a8e617fe45da1d2e06c7fe1a637ab48066bb8878fd40e676ea49660f010f4e83`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_180824.log) and
+  [manifest](../../logs/foundation_freeze_20260926_180824.json); zero diagnostics.
+  Log SHA256: `d06853df26087d3a95a370b9d4c1669503e9dccfbd302b4c2661bb7cbfa6193f`;
+  manifest SHA256: `895b2f3bbcc8defc847a6ab9c80fc02ed27031f937b6667442f77b6e560f6a24`.
+
+Verified proof and runner SHA256 hashes:
+
+- ParabolaBilinearLocalization.lean: `6fb43d9b9bacd5fcf115a919201ea6989529f5332f3798490184c3076605139a`.
+- RobertSargosExponentPair.lean: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit.lean: `e04d950525e26d1b195159d028a7ad2ad6abed6cabd6732829297a6a62966d28`.
+- SemanticRegression.lean: `436802a3722b51590a130ed0b5d0c6ee4e5a99ed2304584acf7a533f5a6419e1`.
+- run_tao_trudgian_yang_build.ps1: `bf33028c955bb9cfbedae2c46b6923f5906d9add47e5307b4a72286dc5d5c7af`.
+
+Both permanent counterexamples are unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+The owner HEAD `3679c768952dd3356d13264b5bf4365631e4c18b` and owner
+changes are preserved. No runner, pin, vendor, certificate or production
+module was added. The explicit Lake regression build, direct regressions
+and full transitive audit remain covered by both BATs.
+No proof limits were raised or warnings suppressed.
+Recovery-record maintenance remains permanently skipped.
+
+The independent refined window 17/42<alpha<3/7 is OPEN. The next
+source-entry prototype derives integer constraints from all four actual
+coordinates; it is not a sharper source count or the full analytic pair.
+A bounded A/B/C search did not close the four new public pairs and is
+recorded only as discovery. Generic D and remaining beta-table inputs
+remain OPEN. Whole-proof completion stays 31/42.
+
+## Earlier verified interior baseline beta bound (26 September 2026)
+
+The existing localization module has 144 public source theorems and
+304 focused regressions. The two new public theorems
+`isExponentSumBoundNonAsymptotic_bourgain_baseline_interior` and
+`exponentSumGrowthExponent_le_bourgain_baseline_interior` prove
+beta(alpha) <= 13/84+alpha/2 for 3/7 <= alpha < 1/2.
+Their exact epsilon--delta contract quantifies over every positive model
+parameter, arbitrary admissible phase and closed natural interval.
+Derivative order three suffices; empty intervals are included.
+
+The proof consumes the actual finite global model-source theorem.
+It derives all physical entry conditions, floor block lengths and all
+minor/frozen/direct budgets, including j=0. The boundary, endpoint errors,
+high-denominator tail and finite Holder factor remain in the estimate.
+The explicit bound
+K^222*(K^3*T)^eta*(1+R^3/P^2)*(1+log T)^36*P^6*T*R^3
+with R=T^(2/7+eta) is absorbed using uniform epsilon choices.
+No unlinked scale certificate, assumed source estimate, family count or
+analytic pair is introduced. Forty-one private helpers and two public
+theorems are integrated into the existing module; there is no new
+production module. Four new regressions cover the complete contracts,
+alpha=3/7 with 31/84 and alpha=9/20 with 319/840.
+
+- Focused source/regression build: exit 0, 10,775 jobs; source 283 seconds,
+  root 11 seconds, regressions 222 seconds; no diagnostics.
+- Principal `cmd /c run_tao_trudgian_yang_build.bat --no-pause`: exit 0,
+  [LEAN VERIFICATION PASS log](logs/tao-trudgian-yang-build-20260926-174035-4b624732.log);
+  10,776 jobs, 1,443 production files, 1,917 scanned files, direct semantic
+  regressions and 17,189 audited declarations (10,944 target, 6,240 pinned
+  Gafni--Tao and five anchors); zero Lean diagnostics.
+  Log SHA256: `e27db6cd9f2abe11a0db8f477510e37a7d36c246b259d284cc70256aad060a36`.
+- Foundation `cmd /c run_lake_build.bat --no-pause`: exit 0,
+  all six stages PASS, 8,857 jobs and 14,290 audited declarations.
+  [Log](../../logs/foundation_freeze_20260926_174045.log) and
+  [manifest](../../logs/foundation_freeze_20260926_174045.json); zero diagnostics.
+  Log SHA256: `22a63883c1cdd1f241716da096c44c4cef7ff7026d72c920b58bcb65a79293cb`;
+  manifest SHA256: `293b07479217869aab41815bfe8cd8beb55a66ec9ef61c8aff6e6c5d2bf6ba6e`.
+
+Verified proof and runner SHA256 hashes:
+
+- ParabolaBilinearLocalization.lean: `35e22ea35fb7c67e06dfe600de0a9b6ba7db36e70ebe4275fe3bec59bda4883d`.
+- RobertSargosExponentPair.lean: `ad9d494df9d150afd5c1209eafade50c49d3cbd2db9b62612b68183be3ae24d6`.
+- Audit.lean: `16b73f00984c929b6d7266045b15e913a54378190a16ac9a4b604de40352cce4`.
+- SemanticRegression.lean: `8ac7efbd620f74ca0f7a699478505167d1735d82fa899c4347d09c63fd54c353`.
+- run_tao_trudgian_yang_build.ps1: `bf33028c955bb9cfbedae2c46b6923f5906d9add47e5307b4a72286dc5d5c7af`.
+
+Both permanent counterexamples are unchanged:
+energy powering `76301acb24e912c76557d9b02dce8a3f50cbb2c953d5578743a069d70949a487`;
+low-height zeta `6d2ab09c89079d5b816e23a62ad199275cc44123f0dbba6b056a38ddbd36b5ae`.
+The owner advanced HEAD to `3679c768952dd3356d13264b5bf4365631e4c18b`;
+that commit and owner changes are preserved. No runner, pin, vendor or
+certificate change was needed. The explicit Lake regression build,
+direct regression and full transitive audit remain covered by both BATs.
+The new proof prototype and production chain use only standard logical
+axioms; no proof limits were raised and no warnings suppressed.
+Recovery-record maintenance remains permanently skipped.
+
+The alpha=1/2 endpoint and refined 17/42 <= alpha < 3/7 window remain
+OPEN. The separate endpoint prototype currently checks affine model-jet
+stability, exact residue reindexing and at most one discarded endpoint per
+class. These six private helpers are not an installed endpoint theorem;
+the physical modulus, scale and epsilon assembly must still be checked.
+The interior baseline is not the full analytic Bourgain pair.
+Generic D and remaining beta-table inputs remain OPEN.
+Whole-proof completion stays 31/42.
+
+## Earlier verified finite global model-source bound (26 September 2026)
 
 The existing localization module has 142 public source theorems and
 300 focused regressions. `exists_bourgain_model_source_bands` derives the

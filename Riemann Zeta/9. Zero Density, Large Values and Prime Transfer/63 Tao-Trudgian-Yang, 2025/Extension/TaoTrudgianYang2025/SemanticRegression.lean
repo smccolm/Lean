@@ -52146,3 +52146,50 @@ example :
   convert hh using 1 <;> norm_num only [add_assoc]
 
 end TaoTrudgianYang2025.BourgainGlobalSourceRegression
+
+namespace TaoTrudgianYang2025.BourgainBaselineRegression
+open Expdb
+
+-- Full source contracts, the exact left endpoint, and a strict interior point.
+example {α : NNReal} (hα : (3:ℝ)/7 ≤ (α:ℝ)) (hαupper : (α:ℝ)<1/2) :
+    IsExponentSumBoundNonAsymptotic α ((13:ℝ)/84+(α:ℝ)/2) :=
+  isExponentSumBoundNonAsymptotic_bourgain_baseline_interior hα hαupper
+
+example {α : NNReal} (hα : (3:ℝ)/7 ≤ (α:ℝ)) (hαupper : (α:ℝ)<1/2) :
+    exponentSumGrowthExponent α ≤ (13:ℝ)/84+(α:ℝ)/2 :=
+  exponentSumGrowthExponent_le_bourgain_baseline_interior hα hαupper
+
+example : exponentSumGrowthExponent (3/7:NNReal) ≤ (31:ℝ)/84 := by
+  have hh := exponentSumGrowthExponent_le_bourgain_baseline_interior
+    (α:=(3/7:NNReal)) (by norm_num) (by norm_num)
+  norm_num at hh ⊢
+  exact hh
+
+example : exponentSumGrowthExponent (9/20:NNReal) ≤ (319:ℝ)/840 := by
+  have hh := exponentSumGrowthExponent_le_bourgain_baseline_interior
+    (α:=(9/20:NNReal)) (by norm_num) (by norm_num)
+  norm_num at hh ⊢
+  exact hh
+
+end TaoTrudgianYang2025.BourgainBaselineRegression
+
+namespace TaoTrudgianYang2025.BourgainEndpointRegression
+open Expdb
+
+example : IsExponentSumBoundNonAsymptotic (1/2) ((17:ℝ)/42) := isExponentSumBoundNonAsymptotic_bourgain_square_root
+
+example {α : NNReal} (hα : (3:ℝ)/7 ≤ (α:ℝ)) (hαupper : (α:ℝ) ≤ 1/2) :
+    exponentSumGrowthExponent α ≤ (13:ℝ)/84+(α:ℝ)/2 :=
+  exponentSumGrowthExponent_le_bourgain_baseline hα hαupper
+
+example : exponentSumGrowthExponent (1/2) ≤ (17:ℝ)/42 := by
+  have hh := exponentSumGrowthExponent_le_bourgain_baseline (α := 1/2) (by norm_num) (by norm_num)
+  norm_num at hh ⊢
+  exact hh
+
+example : exponentSumGrowthExponent (3/7) ≤ (31:ℝ)/84 := by
+  have hh := exponentSumGrowthExponent_le_bourgain_baseline (α := 3/7) (by norm_num) (by norm_num)
+  norm_num at hh ⊢
+  exact hh
+
+end TaoTrudgianYang2025.BourgainEndpointRegression

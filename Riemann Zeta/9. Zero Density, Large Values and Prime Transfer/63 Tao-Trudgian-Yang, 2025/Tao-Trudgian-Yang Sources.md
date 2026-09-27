@@ -1,37 +1,93 @@
 # Tao--Trudgian--Yang 2025 sources and repository survey
 
-## Current source-entry status (26 September 2026)
+## Current closed-baseline source status (26 September 2026)
 
-The new `exists_bourgain_model_source_bands` and
-`exists_bourgain_model_source_global` give actual model entry and finite
-global source assembly. They derive the buffered integer blocks,
-boundary cost 1+23*N, multiplicity one and physical derivative data from
-the approximate model phase. Existing Heath--Brown model jets and
-Sargos affine-derivative results are reused; no new module family is added.
-One minimum-denominator curvature-arc family supplies all source estimates.
-The global theorem partitions every denominator at N, sums all
-J=log_2(N)+1 lower bands and retains the upper tail. Finite Holder gives
-(J+2)^11; explicit thresholds select sparse minor, frozen or direct bounds.
-The three remaining physical conditions are F<=L^2/16,
-F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1.
-Four new regressions cover the full contracts and genuine 51-term
-logarithmic-source consumers. Both BAT gates pass.
+The exact endpoint theorem
+`isExponentSumBoundNonAsymptotic_bourgain_square_root` and the closed
+consumer `exponentSumGrowthExponent_le_bourgain_baseline` now prove
+beta(alpha) <= 13/84+alpha/2 on 3/7 <= alpha <= 1/2.
+The endpoint uses actual residue classes modulo h=ceil(T^q), with
+P_r=(P-r)/h and G_r(u)=G((1-r/P)*u+r/P). The existing A-process affine
+map, local derivative scaling, model-jet Lipschitz estimates and floor APIs
+prove phase stability, physical scales and the exact interval bridge.
+At most one upper endpoint is removed per class; its cost and the
+residue count are absorbed with the uniform epsilon quantifiers.
+There is no assumed continuity of beta or independent source estimate.
+Both BAT gates pass: 146 public localization/source theorems and
+308 focused regressions. No new production module was added.
 
 For [Bourgain's section 3](https://arxiv.org/pdf/1408.5794v2), this closes
-finite source entry/assembly, not the final beta estimate. The existing
-direct/frozen overlap and Loss^13 budget remain checked, as do the
-counterexamples to the earlier variation-only and crude-family budgets.
-Next derive physical smallness and bound the explicit global expression,
-including logarithms and epsilon-dependent constants. The independent
-refined [17/42,3/7] range still needs stronger spacing or an exact alternative;
-changing only the block exponent has not closed it.
+the baseline through the square-root endpoint, not the full analytic
+exponent pair. The independent refined window 17/42<alpha<3/7 still
+needs stronger spacing or a faithful alternative. The current two-coordinate
+count discards information from the first and fourth coordinates.
+The scratch proof now derives integer constraints from all four actual
+source coordinates and transfers them to the actual smooth resonance
+curve, with a transverse rounding loss <=9*U/4. Its short-block count
+controls integer translation labels only, not source-pair fibers; the
+refined source count and analytic pair remain OPEN.
 
+The alternate scratch route now converts the actual correlated strip to
+a near-integer Legendre-phase condition. The existing finite third-derivative
+test and native Heath--Brown tent Fourier series give an explicit finite
+count, including both frequency signs, zero frequency and quantitative
+Fourier tails. The C5 derivative-combination input is now derived from the
+original model jets, with constants before F,T,P,q,k and the exact scale
+mu=m_sigma*k*P^7/(q^2*T^3). Internal width optimization gives the count
+K_sigma*(N*(eta+mu^(1/7))+sqrt(N)*mu^(-1/6)). The actual four-coordinate
+fixed-denominator, positive-shift source-pair count now derives its label
+range V=3*q*U*P and retains the endpoint and (4*Bmul)^2 fiber multiplicity.
+The existing fourth-derivative source spacing bounds the integer shift
+and forces equal denominators when Q^2<6*M^2. The finite band count now
+assembles both signs, identity pairs and all denominators with multiplicity.
+Its affine budget reaches the target for 7/17<=alpha<=3/7, but the leading
+exponent (67*alpha+33)/168 leaves (7-17*alpha)/168 below 7/17. The physical
+source-sum consumer and stronger short-window estimate remain OPEN.
+These are scratch kernel results, not an installed analytic pair.
+
+An accessible primary alternative is
+[Huxley--Sargos, Acta Arithmetica 69 (1995), 359--366](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/4/108510/points-entiers-au-voisinage-d-une-courbe-plane-de-classe-c),
+with the [full eight-page paper](https://scispace.com/pdf/points-entiers-au-voisinage-d-une-courbe-plane-de-classe-cn-4iqui16iuo.pdf).
+It gives a divided-difference/major-arc near-curve count. This is distinct
+from Sargos's still-unretrieved D-process paper. Its third-order width term
+does not alone discharge the current scaled Legendre residual; do not
+start a general interpolation family without a faithful source consumer.
+
+The current integer-displacement alternative instead reuses the already
+proved second-derivative test and Heath--Brown tent Fourier series.
+The actual inverse-displacement curve has second derivative comparable
+to P*U^2/k. Its inverse jets, rounded-point transfer and optimized finite
+near-integer count are scratch kernel results. The resulting affine budget
+passes on 17/42<=alpha<=3/7, but source-pair fibers, curve-image boundary
+cases, signed shifts and physical source-sum assembly still need consumers.
+Thus the full Huxley--Sargos major-arc theorem is not currently a required
+new formalization. Neither this arithmetic nor a literature citation proves
+the full Bourgain pair; all aggregate statuses remain unchanged.
+
+[Watt's 2004 paper, section 8](https://www.impan.pl/shop/publication/transaction/download/product/82909)
+gives an accessible primary account of the strengthened inverse window
+and the fourth-coordinate saving. Lemma 8.1 invokes Lemmas 5.2--5.3 of
+[Huxley--Watt, The number of ideals in a quadratic field II](https://doi.org/10.1007/s11856-000-1274-x).
+The latter full proof has not been retrieved. Watt's exposition identifies
+the block length of order Delta4^(-2/3) and distinguishes identity,
+triangular and non-triangular contributions; it is a research reference,
+not a supplied Lean hypothesis. The current prototype retains those
+unresolved contributions explicitly.
+
+A depth-twelve exact-rational A/B/C search, including Heath--Brown seeds
+through order sixty, Robert--Sargos and a candidate pair suggested by the
+closed baseline, did not reach the four public pairs. This is discovery
+only, not an impossibility result or analytic provenance; no new pair
+theorem was installed from this search.
+Bourgain's reference [H1] is Huxley's
+[Exponential sums and the Riemann zeta function IV](https://doi.org/10.1112/plms/s3-66.1.1).
+Its full proof has not been retrieved.
 [Huxley's survey](https://www.numdam.org/article/AST_1991__198-199-200__165_0.pdf)
 and [Bombieri--Iwaniec, pages 466--467](https://www.numdam.org/article/ASNSP_1986_4_13_3_449_0.pdf)
-remain reference sources, not assumed analytic provenance.
-The unavailable Huxley--Watt proof and generic Sargos 1995 input have not
-been replaced by axioms. The frozen-phase argument is a proved local
-alternative; the full analytic Bourgain pair is still OPEN.
+remain primary references, not assumed estimates.
+Both permanent counterexamples and the earlier failed-budget examples
+are retained. Generic D and the full analytic Bourgain pair remain OPEN.
+Whole-proof completion stays 31/42.
 
 ## Source history and localized-phase reuse (25 September 2026)
 

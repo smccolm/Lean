@@ -2,32 +2,31 @@
 
 Verified analytic checkpoint (26 September 2026):
 [ParabolaBilinearLocalization](TaoTrudgianYang2025/ParabolaBilinearLocalization.lean)
-now proves finite global assembly for the actual model-phase sum through
-`exists_bourgain_model_source_global`, consuming
-`exists_bourgain_model_source_bands`. Buffered integer blocks, multiplicity
-one, the boundary cost 1+23*N and derivative data are derived from the actual
-approximate model phase using existing Heath--Brown and Sargos jet results.
-One minimum-denominator arc family feeds every source estimate.
-The global theorem sums all J=log_2(N)+1 denominator bands and the
-large-denominator tail, with Holder factor (J+2)^11. Explicit numerical
-thresholds select the sparse minor, frozen intermediate or direct estimate.
-No independent source bound, family count or unlinked scale certificate
-is assumed. The three remaining physical entry conditions are
-F<=L^2/16, F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1.
-Both BAT gates pass: 142 public localization/source theorems and 300 focused
-regressions. Four new regressions check both complete contracts and genuine
-51-term logarithmic sources, including the source-tail and global consumers.
+now proves the closed Bourgain baseline beta bound
+`exponentSumGrowthExponent_le_bourgain_baseline`:
+beta(alpha) <= 13/84+alpha/2 for 3/7 <= alpha <= 1/2.
+The exact square-root contract
+`isExponentSumBoundNonAsymptotic_bourgain_square_root`
+is derived from the interior theorem by faithful residue-class rescaling.
+For h=ceil(T^q), the phase G_r(u)=G((1-r/P)*u+r/P) has the actual
+scale P_r=(P-r)/h. Model-jet stability, physical scale and tolerance
+bounds, exact interval reindexing and at most one upper endpoint per
+residue class are proved. All constants precede T, P and the phase;
+the residue count and its endpoint cost are absorbed into epsilon.
+No continuity assumption on beta or independent source estimate is used.
+The interior proof still retains every minor/frozen/direct denominator
+band, boundary, endpoint error and high-denominator tail.
+Both BAT gates pass: 146 public localization/source theorems and 308 focused
+regressions. Four new tests cover the endpoint contract, full closed-range
+consumer and both rational endpoints, including beta(1/2)<=17/42.
 No new production module, runner, pin, vendor or certificate change;
-two existing jet modules are imported. Both counterexamples, all prior
-regressions, Add-est and the completed old-pair/EPZAE-15/26 cascade survive.
-The BAT retains its explicit Lake regression build, direct regressions and
-complete transitive audits.
-Next: derive the three physical entry conditions and estimate every
-numerical band budget in the final T,P window; absorb logarithms and
-constants with the correct epsilon quantifiers. The independent refined
-[17/42,3/7] window still needs stronger spacing or an exact alternate proof.
-The finite global bound is NOT the final beta bound or analytic Bourgain pair.
-Generic D and remaining beta inputs stay OPEN. Whole-proof completion is 31/42.
+existing A-process affine compression, model jets and floor APIs are reused.
+Both counterexamples, all prior regressions, Add-est and the completed
+old-pair/EPZAE-15/26 cascade survive. Both BATs retain complete coverage.
+Next: close 17/42<alpha<3/7 using the actual four-coordinate source
+constraints or a faithful alternative. The closed baseline does NOT prove
+the full analytic Bourgain pair. Generic D and remaining beta inputs stay
+OPEN. Whole-proof completion is 31/42.
 Completion stays 31/42; EPZAE-11/13/14 remain OPEN. Both counterexamples,
 the completed old-pair/EPZAE-15/26 cascade and all Add-est results are preserved.
 

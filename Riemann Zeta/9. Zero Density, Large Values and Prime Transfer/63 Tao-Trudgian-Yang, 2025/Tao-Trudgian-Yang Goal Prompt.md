@@ -43,10 +43,15 @@ Sargos 1995 short-sum/curve estimate [OPEN]
 
 first spacing + C4 transforms + two-sector source count [DONE]
   -> buffered model entry + finite same-family global bound [DONE]
-  -> physical band budgets + logarithms/epsilon, alpha>=3/7 [OPEN]
-  -> square-root endpoint entry [OPEN]
-refined spacing/alternate proof, alpha in [17/42,3/7] [OPEN]
+  -> physical budgets + interior beta contract [DONE]
+  -> faithful residue rescaling + square-root endpoint [DONE]
+  -> closed beta baseline, 3/7<=alpha<=1/2 [DONE]
+four-coordinate refined spacing/alternate proof, 17/42<alpha<3/7 [OPEN]
   -> global beta bound -> analytic pair (13/84,55/84) [OPEN]
+  current displacement route:
+  raw unscaled resonance -> inverse curve + second-derivative count [SCRATCH CHECKED]
+    -> actual pair fibers + curve-image boundaries + signed shifts [OPEN]
+    -> linked physical source-sum/beta consumer [OPEN]
 
 D + Bourgain pair + Huxley/Trudgian--Yang analytic inputs [OPEN]
   -> complete exact beta table [EPZAE-13 OPEN]
@@ -62,7 +67,7 @@ A depth-five finite A/B/C search from the proved inputs did not discharge
 the generic D contract; renewed sampled envelope searches including full
 Heath--Brown beta bounds did not close the four new pairs. These checks are
 discovery only, not impossibility proofs. The consolidated finite parabola
-module now passes both BAT gates (142 public theorems and 300 focused
+module now passes both BAT gates (146 public theorems and 308 focused
 regressions). `exists_bourgainSourceCurve_dyadic_decoupling` closes
 the finite dyadic source-curve epsilon bootstrap: at N=2^n, R=N^2,
 its coefficient is C(epsilon,nu)*2^(epsilon*n)/R^2 multiplying both
@@ -327,32 +332,104 @@ using its integer curvature-level difference. The two sectors are assembled
 by `bourgain_C4_two_coordinate_second_spacing`, with the exact bound and
 source hypotheses recorded in the current verified checkpoint. Both BATs
 and the four full-contract/two-sign source regressions pass.
-The source-entry bottleneck is now closed by
-`exists_bourgain_model_source_bands`. From the actual approximate model
-phase it derives buffered integer blocks, multiplicity one, a boundary
-cost 1+23*N and all needed derivative bounds. A single minimum-denominator
-arc family supplies every high-denominator, minor, direct and frozen bound.
-No independent source estimate or cardinality estimate is assumed.
-Only F<=L^2/16, F*(6*N+1)^4<=1 and (3*U/2)*(6*N+1)^2<=1
-remain physical entry conditions. Derive these from T, P and the chosen N;
-do not hide them in a scale certificate.
+The physical-scale, epsilon and square-root endpoint assembly is now
+closed. `exponentSumGrowthExponent_le_bourgain_baseline` proves
+beta(alpha) <= 13/84+alpha/2 for 3/7 <= alpha <= 1/2.
+The exact endpoint theorem
+`isExponentSumBoundNonAsymptotic_bourgain_square_root`
+uses h=ceil(T^q), P_r=(P-r)/h and the faithful compressed phase
+G_r(u)=G((1-r/P)*u+r/P). It derives model-jet stability, length and
+tolerance bounds, exact residue intervals and at most one upper endpoint
+per class. Uniform constants and all residue losses are absorbed into
+epsilon. No continuity of beta or assumed scale bridge is used.
 
-The direct and frozen source estimates, their full endpoint-resonance
-errors and the Loss^13 budget remain available. For N=T^(alpha-2/7),
-the direct range c<=alpha-11/30 overlaps the frozen range c>=alpha-8/21.
-The new `exists_bourgain_model_source_global` now sums those same-family
-bounds. With J=log_2(N)+1 it retains all J bands, the high-denominator tail,
-the boundary cost and the exact Holder factor (J+2)^11. Each band selects
-its source bound by explicit minor/frozen/direct numerical thresholds.
-The next obligation is to bound these concrete expressions in the final
-T,P window, absorb logarithms and assemble uniform epsilon constants.
-At alpha=3/7, slightly shortening N can supply strict smallness; this
-still requires a kernel proof. Check F<=L^2/16 at alpha=1/2 explicitly:
-residue-class rescaling is a candidate route, not an assumed bridge.
-The independent refined [17/42,3/7] window still needs stronger spacing
-or a faithful alternative. The present two-coordinate bound and block
-exponent changes alone have not closed it; that is not an impossibility
-claim. Generic D and remaining beta-table inputs remain OPEN.
+Next close the independent 17/42<alpha<3/7 window. Reuse the actual
+four-coordinate source sieve and target the short-window source estimate,
+not a new family of disconnected support modules. A faithful alternative
+to Huxley's resonance-curve bound is acceptable. Search existing
+local/ANTEDB/Mathlib and completed A/B/C, Heath--Brown and Robert--Sargos
+consumers first.
+
+The refined-window scratch proof now checks the actual four-coordinate
+integer matrix/translation constraints, their smooth-curve consumer and
+the correlated Taylor-rounding error (transverse loss <=9*U/4).
+It also checks a non-triangular short-block integer-label count, deriving
+curve variation and whole-interval residual control from actual C4
+derivatives and endpoint residuals. This counts translation labels, NOT
+source pairs. The alternate fixed-shift route below now handles its actual
+source-pair fibers; full sector assembly, physical optimization and the
+final short-window beta theorem remain OPEN.
+These checks are not installed production results; the verified public
+checkpoint stays at 146 source theorems, 308 focused regressions and 31/42.
+
+A second route narrows the inverse-coordinate window in the existing
+double large sieve. A sampled scale search with the old triangular count
+still leaves a gap; at the tested critical scale its candidate exponent
+is 5/24+3*alpha/8, exceeding the target by (3/7-alpha)/8 below 3/7.
+The identity is kernel-checked, but the search is discovery only and is
+not an impossibility theorem. Do not grow a borrowed-window support
+family without a sharper triangular estimate. The alternate Legendre route
+now has a kernel-checked finite near-integer count for the actual phase.
+It reuses the existing third-derivative test and Heath--Brown tent Fourier
+series, derives all frequency bounds (both signs), and sums the Fourier
+weights explicitly. For width W and third-derivative scale mu the bound is
+2*W*N + 200*C*N*(mu/W)^(1/6) + 40*C*sqrt(N)*mu^(-1/6).
+The C5 input, including positivity of 3*(f'''')^2-f'''*f''''', is now
+derived from the original approximate-model jets. Constants are chosen
+before F,T,P,q,k; mu=m_sigma*k*P^7/(q^2*T^3) is proved exactly.
+The actual four-coordinate band count now checks: fixed-shift integer
+labels, source-pair fibers, both shift signs, all band denominators and
+the identity contribution are assembled. It retains (4*Bmul)^2 fiber
+multiplicity, the endpoint cost and the original model-phase constants.
+The existing fourth-derivative spacing theorem derives the shift range
+and equal denominators when Q^2<6*M^2. This is a finite count, not yet
+an installed source-sum or beta theorem.
+The exact affine budgets check for 7/17<=alpha<=3/7. A scale correction
+matters: at q=(3*alpha-1)/4, mu_lo has exponent (11*alpha-5)/2 and
+mu_hi has exponent 2*alpha-1. The leading candidate exponent is
+(67*alpha+33)/168, leaving the explicit gap (7-17*alpha)/168 below
+7/17. Do not claim this route closes 17/42<alpha<7/17.
+Next connect the finite count to the physical source sums and improve
+the remaining short-window estimate, retaining the modular first-coordinate
+information or using an independently justified stronger analytic input.
+The full refined beta bound and analytic pair remain OPEN; no green gate
+or production count changes from these scratch checks.
+
+### Integer-displacement alternative (27 September 2026)
+
+The scratch proof now retains the stronger first-coordinate information:
+under Q^2<6*M^2 the literal four-coordinate window forces equal denominators,
+a'=a+k*q and an unscaled derivative difference within 2*D/q of an integer.
+It constructs D_k(v)=c(v+k)-c(v), E_k(v)=f'(c(v+k))-f'(c(v))-2*k*c(v)
+and the actual curve G_k=E_k composed with the inverse of D_k.
+The inverse jets, positive curvature bounds and the rounded-point transfer
+are kernel-checked. The existing second-derivative test and tent Fourier
+series give the finite-set bound
+1+(52+144*C)*(V*(eta+mu^(1/3))+mu^(-1/2)), retaining the endpoint cost.
+Here mu=L^3/(2*F4*k), with F4 the fourth-derivative upper bound;
+its physical scale is P*U^2/k. No general interpolation/major-arc family
+is needed for this route.
+
+The second-derivative route's exact affine budgets check throughout
+17/42<=alpha<=3/7. This is arithmetic, not a completed source estimate.
+The candidate count terms are source cardinality, P^2*U^(13/6),
+P^2*U^(5/2), P*U^(5/4) and P*U^(3/2), with logarithmic losses.
+The remaining essential consumers are the original source-pair fibers,
+curve-image boundary cases, signed-shift summation and linked physical
+source-sum assembly. Do not replace these consumers with a count hypothesis.
+The full Bourgain pair, generic D and aggregate EPZAE-11/13/14 remain OPEN;
+146 public source theorems, 308 focused regressions and 31/42 are unchanged.
+Both BAT gates must be rerun when this work is integrated into production.
+
+
+A bounded exact-rational A/B/C closure search (depth twelve, Heath--Brown
+seeds through order sixty, Robert--Sargos and a candidate pair suggested
+by the new closed baseline) did not reach any of the four public pairs.
+This is discovery only, not a kernel proof or impossibility result; no
+extra pair theorem was installed on that basis. The two-coordinate count
+and block-exponent changes alone also have not closed the refined gap.
+The full analytic Bourgain pair, generic D and remaining beta-table
+inputs remain OPEN.
 
 Maintain `run_tao_trudgian_yang_build.bat` and `run_lake_build.bat` as
 first-class verification interfaces, updating coverage when needed.
