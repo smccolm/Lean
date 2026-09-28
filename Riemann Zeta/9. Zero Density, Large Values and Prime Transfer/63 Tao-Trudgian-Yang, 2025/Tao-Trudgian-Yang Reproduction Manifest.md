@@ -1,5 +1,342 @@
 # Tao--Trudgian--Yang 2025 reproduction manifest
 
+## Source-scale density integration (28 September 2026)
+
+Twenty-five public theorems and twelve exact-signature regressions are
+integrated into HuxleyLinearForms. The module now has 119 public finite/
+rational theorems and 46 matching retained regression examples.
+The logarithm-free positive-sector count is derived from a rational anchor
+and the two source scales; strict determinant descent constructs all pieces.
+The nonlinear integer-label consumer derives both cardinality gates,
+and the physical endpoint-coverage consumer constructs every centre and
+its displacement/denominator budgets. Physical curvature interval/coordinate
+entry and source-uniform four-condition/family estimates remain open.
+
+Scratch proof/audit session 51046 passes, exit 0, zero diagnostics.
+Focused production build session 42799 passes, exit 0, 10,782 jobs,
+zero Lean diagnostics (module 21s, audit 126s, regression 309s).
+Production-import scratch session 93013 passes, exit 0, checking all
+119 public audits, 46 matching exact-type regressions and ten earlier
+independent density audits. Foundation BAT session 34388 passes, exit 0,
+all six stages, 8,857 jobs and 14,290 audits, zero Lean diagnostics:
+[log 120729](../../logs/foundation_freeze_20260928_120729.log) and
+[manifest](../../logs/foundation_freeze_20260928_120729.json).
+Principal BAT session 21469 passes, exit 0, all stages, 10,782 jobs and
+zero Lean diagnostics. All source pins, coverage and fresh historical
+replay checks pass; the two archived Python SyntaxWarnings remain visible.
+Log: [principal 121020](logs/tao-trudgian-yang-build-20260928-121020-8f66005e.log).
+Preceding principal PASS logs below describe earlier snapshots.
+Architecture validation: 612 nodes,
+1,486 edges, no duplicate nodes or unresolved endpoints.
+
+| Current density-integration artifact | SHA256 |
+| --- | --- |
+| HuxleyLinearForms.lean | `4045b97b57f69229b76f2084e440450749881fa64fc018f0eb9ed6dccdbf83c1` |
+| Audit.lean | `fd1d85fc495299250e557ffd785740b1a9508127c1d193237b147e5bf19866dd` |
+| SemanticRegression.lean | `1db35f51888e52f83b45ccf513099a15953deef0738e96c9d2092b555795dc54` |
+| Foundation transcript 120729 | `010e77e1107a72d77f362691708cb3d30c5c21f2e0fd138d5cde9675e09c9529` |
+| Foundation manifest 120729 | `4da180dacc0632e07ea1ee6b09eb4344e30e5d299595c588e2d93ffc6996d334` |
+| Principal transcript 121020 | `89c9b3bb2439b9b6fe491bec31027c6afc45f242b19bf17791e2e13ed79997b2` |
+
+Further scratch-only source entry, session 51889, passes six declarations
+and explicit audits with zero diagnostics. The canonical translated
+`rationalInterval` has an exact signed-fraction membership theorem and
+preserves cardinality. The actual physical model yields curvature width
+`kappa/(2*R^2)` from `T*(U-L)*R^2=M^3`, where
+`kappa=modelPhaseThirdLower sigma`. Its combined rational-curvature count
+is at least `kappa*K^2/(256*R^2)` under `64*q0<=K` and
+`128*R^2<=kappa*K*q0`; every counted signed rational value has a continuous
+physical preimage and a rounded integer centre with the proved error.
+The rational anchor must actually lie in the curvature range. This is not
+yet the transformed (u,t) complete-sector, uniform-coincidence or long-block
+construction. These six declarations are scratch-only, not part of this
+production BAT snapshot.
+
+Aggregate remains 34/42. No recovery record is maintained. Frozen sources,
+counterexamples and owner-authorized repairs remain intact.
+
+## Earlier Section 5 residual and actual sector-label integration (28 September 2026)
+
+The existing module integrates eighteen additional public theorems and eight
+exact-signature regressions. The source cancellation retains the curvature
+correction in beta. Its physical consumer derives the q/N error from the
+actual model, linked T*N*R^2=M^3 and source |n|^3<=M*R^2 restriction.
+The actual centred-derivative Fourth Condition then yields (5.4)--(5.6)
+with actual integer labels; the complete-sector consumer derives label
+rigidity from the still-explicit geometric and Third-Condition inputs.
+No residual-error hypothesis or conclusion-shaped assumption is introduced.
+Scratch session 66631 passes all eighteen declarations and explicit audits,
+exit 0, zero diagnostics. Focused production build session 2533 passes,
+10,782 jobs, zero Lean diagnostics. The production-import scratch passes,
+session 42623, including 94 finite/rational public audits, 34 corresponding
+regressions and ten independent density audits. The foundation BAT passes,
+session 20292, all six stages, 8,857 jobs, 14,290 audits, zero Lean diagnostics:
+[log 112211](../../logs/foundation_freeze_20260928_112211.log) and
+[manifest](../../logs/foundation_freeze_20260928_112211.json).
+The principal BAT session 68440 also passes, exit 0, 10,782 jobs, all
+7,269 semantic examples and 18,384 exhaustive audits (12,139 target,
+6,240 pinned Gafni--Tao, five anchors). There are zero Lean diagnostics.
+All 21 source pins, production coverage, fresh replay, nine replay-checker
+and six generator-rejection regressions pass. The two archived Python
+SyntaxWarnings remain visible. Log:
+[principal 112455](logs/tao-trudgian-yang-build-20260928-112455-70068b2d.log).
+The production hashes below are unchanged during the BAT. Architecture
+validation gives 610 nodes, 1,479 edges, no duplicates or unresolved endpoints.
+Earlier PASS evidence below applies to earlier production states.
+No recovery record was touched.
+Full sector construction, source-uniform propagation, quartic refinement,
+scalar/family counts, enlarged-domain/mixed-parameter entry and the fifth
+moment remain open. Aggregate stays 34/42.
+
+| Earlier residual-integration artifact | SHA256 |
+| --- | --- |
+| HuxleyLinearForms.lean | `b6465b0c280076d86537597c85a2ff0dc42bd5769162a3b0d43f0d02e306423a` |
+| Audit.lean | `5d985cf676a1b312a9dd99e168922ea6ae0575af72bf4447d99b301f0be6b01b` |
+| SemanticRegression.lean | `a6f846f1ee092c83e5e359852c698ec3e5c7f06120a52b487e574bd06410e207` |
+| Foundation transcript 112211 | `e0d39ee94388b89cf568cf91f554775f5a6a4058fc048c364139c1d7667d5be9` |
+| Foundation manifest 112211 | `27b79f1b5a966c480acd1fd3105c2e8f73eef5728c9a754fe11505bda2e492d5` |
+| Principal transcript 112455 | `37c4d32af872f22a9d44090ccde3ce1861be86ca44bd28ab1a222f6e9a600968` |
+| Historical replay transcript 112455 | `46c8922a040f6721a27bcbe5f6d510b8ce63e7ce1bef91493b4c70db827bad1f` |
+| Historical replay JSON 112455 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+
+Then-scratch-only geometric entry (six theorems, session 41225,
+exit 0, zero diagnostics) proves positive interval denominators, complete-sector
+curvature-target coverage, the rounding displacement loss of one, and
+`physicalModelPhase_sector_centres`. Endpoint curvature coverage constructs
+every physical centre on the full sector; `(H+1)^3<=M*R^2` implies the
+required cubic displacement restriction. The endpoint coverage and physical
+window are still genuine inputs; the original minor-arc density and
+source-uniform coincidence conditions are not yet derived. The actual
+denominator bound is also derived from the sector cutoff and endpoint
+values; `physicalModelPhase_constructed_sector_nonlinear` consumes the
+constructed centres in the q/N nonlinear estimate. These six declarations
+were explicitly audited but not part of that earlier production BAT;
+they are now integrated in the current density batch above.
+
+## Earlier physical source-entry integration (28 September 2026)
+
+The existing HuxleyLinearForms module integrates eighteen further public
+theorems and eight exact-type regressions. The middle-interval Third
+Condition, actual physical coefficient perturbation and rounded-centre
+coordinate estimate O(1+n^2/M) are kernel-checked. Curvature preimages
+are constructed by the intermediate value theorem, and the rounding
+errors are derived. The full sector/eight-point geometry, source residual
+entry, enlarged domain, mixed parameters and scalar/family counts remain
+open. Aggregate remains 34/42; no source contract is weakened.
+
+Focused production build: session 87327, exit 0, 9,150 jobs, zero Lean
+diagnostics. The initial exact-type scratch tests revealed unused bound
+proof names in quantified types; the tests now explicitly apply all
+parameters to the public declarations. The corrected production-import
+scratch passes, session 83294, zero diagnostics: 76 public finite/rational
+audits, 26 corresponding regression examples and ten independent density
+audits. No warning is suppressed. No recovery-record file was touched.
+
+Both full BATs pass for this production checkpoint, exit 0:
+foundation session 4659, all six stages, 8,857 jobs and 14,290 audits;
+principal session 43891, 10,782 jobs, 7,261 semantic examples and 18,335
+exhaustive audits (12,090 target, 6,240 pinned Gafni--Tao, five anchors).
+Inventory, all 21 source pins, fresh historical replay, nine checker
+regressions and six generator-rejection regressions pass. Coverage remains
+1,449 production package files / 1,923 scanned Lean files. There are zero
+Lean errors, warnings, tactic suggestions or linter diagnostics. The two
+archived Python invalid-escape SyntaxWarnings remain visible and unchanged.
+
+Logs: [principal 103951](logs/tao-trudgian-yang-build-20260928-103951-c0290db5.log),
+[foundation 103914](../../logs/foundation_freeze_20260928_103914.log),
+[foundation manifest](../../logs/foundation_freeze_20260928_103914.json).
+Architecture validation: 609 nodes, 1,475 edges, no duplicate nodes or
+unresolved endpoints. Aggregate remains 34/42.
+
+| Earlier physical-entry production artifact | SHA256 |
+| --- | --- |
+| HuxleyLinearForms.lean | `b640248640438e08d5a1014a4cc85bddc6fb579b53d77ab9694232434cff9728` |
+| Audit.lean | `8fe0d5d6f602860ccaad7a752de3dc908318e1ee0e6ee28d1fadf0f63ac36f6c` |
+| SemanticRegression.lean | `a6767ea32c483ad851cce54c2d2d2f82509d22c8ae6ec3c3355606a139c216aa` |
+| Principal transcript 103951 | `97d0bbf0b0eb031b397f8dd53eab5635173c499152453b2d910ef18a140f95d0` |
+| Historical replay transcript 103951 | `aaff16fbb4dd61905c4f95745e38fd87cf7bb064f515417ddd38f07eeffa2abc` |
+| Historical replay JSON 103951 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Foundation transcript 103914 | `e87d88bb47bc2d85b0d124c44c476ff9511a683e10046cd1ed68068f14d4c2b2` |
+| Foundation JSON 103914 | `e5c4cf9133dba7c12324c5c57fae769da70e1c95917ac3335096b8441e8e7d19` |
+
+The subsequent production-import scratch (session 86799) passes eight
+further declarations, zero diagnostics, with explicit standard-axiom
+audits. They derive the first-derivative residual (3.13)--(3.14), exact
+integer-label identity (3.15)--(3.16), and the essential Section 5
+cancellation retaining `2*delta0/(3*mu*r)` in the linear coefficient.
+The actual rounded physical phase satisfies
+`|combined residual| <= |q|*(T/M^3)*(C3*|n|^3/(6*M)+C2*D*(D+1)/2)`,
+where `D=C2/kappa+C3*n^2/(2*kappa*M)` is the already derived coordinate
+error. All derivative and rounding inputs are discharged; source-scale
+absorption and the paired Fourth-Condition/sector consumer remain next.
+These eight declarations are scratch-only, not part of the production/BAT
+checkpoint above, and do not change any aggregate gate.
+
+## Earlier rational-phase and long-block checkpoint (28 September 2026)
+
+HuxleyLinearForms now contains 23 further public theorems in
+`HuxleyRationalPhase`, with six new exact-type semantic regressions.
+The literal phase (4.9), coordinate (3.12), sector Taylor-to-integer-label
+consumer and eight-point determinant core are implemented in the existing
+module. No production module or coverage exclusion was added.
+`rationalPhase_long_block_determinant` derives
+`|r*s1-s*r1| <= 1024*K*Kmu*R^4/(L^3*N^2)` from the literal (6.1)
+residual, actual G-coordinate separation, dyadic denominator geometry and
+the linked phase scale. Curvature and the improved coincidence bound are
+not hypotheses. This is conditional on explicit geometric source inputs;
+the actual minor-arc construction, interval Third Condition, discrete
+errors, scalar/family counts and the family fifth moment are still open.
+Aggregate 34/42 is unchanged.
+
+The focused production build passes, exit 0, 9,148 jobs (session 74665),
+with zero Lean diagnostics. The production-import scratch passes all 58
+finite/rational public audits and eighteen corresponding regression
+examples, plus the ten independent density audits (session 25137), with
+standard logical axioms only. Development API/type errors, one unused
+hypothesis and a tactic suggestion were fixed; no diagnostic was suppressed
+and no resource or proof-integrity limit was relaxed.
+
+The foundation BAT passes, exit 0 (session 71886), all six stages,
+8,857 build jobs and 14,290 exhaustive dependency audits, with zero Lean
+diagnostics: [log](../../logs/foundation_freeze_20260928_095726.log) and
+[JSON](../../logs/foundation_freeze_20260928_095726.json).
+The principal BAT also passes for the frozen production state, exit 0,
+**LEAN VERIFICATION PASS** (session 99325), transcript
+[095715](logs/tao-trudgian-yang-build-20260928-095715-0f1ea45a.log).
+All 10,782 build jobs, 7,253 semantic examples and 18,272 exhaustive
+dependency audits pass: 12,027 target, 6,240 pinned Gafni--Tao and five
+imported anchors. Source inventory, historical replay, nine checker
+regressions and six generator-rejection checks pass. Coverage remains
+1,449 production package files / 1,923 scanned Lean files.
+There are zero Lean errors, warnings, tactic suggestions or linter
+diagnostics. The two archived Python invalid-escape SyntaxWarnings
+remain visible and unchanged. Earlier PASS records below apply to the
+preceding production states, not the scratch-only continuation.
+
+The continued production-import scratch now also proves four interval
+theorems (session 32619, exit 0, zero diagnostics): fractional-linear
+endpoint containment, cubic-ratio propagation, the eight-point middle
+interval consumer and `rationalPhase_long_block_third_condition`.
+The last gives `256*J*K*R^2/(L^2*N^2)` throughout the middle interval,
+from the literal residual, actual G spacing, positive dyadic denominators
+and `|mu1|<=J*|mu|`. These four declarations are scratch-only and are not
+included in the current production/BAT claim. Geometric entry and discrete
+parameter variation remain open; no aggregate gate changes status.
+The architecture check finds 608 nodes, 1,472 edges, no duplicate nodes
+and no unresolved endpoints. No recovery-record file was touched.
+
+The next scratch checkpoint (session 59666) also passes the relative-ratio
+perturbation theorem, its literal cubic-ratio consumer and the quantitative
+variation bound for the actual coefficient `iteratedDeriv 3 f / 6`.
+Thus seven continuation theorems are checked beyond the frozen production
+state. The coefficient theorem derives variation from C4 regularity,
+a fourth-derivative bound on the whole joining segment and a positive
+base third-derivative lower bound. It does not assume the relative error.
+Current scratch SHA256:
+`32a39fca810f00c65067414f4d15f509078554fc33746ef2a3ded8bfeb364ed3`.
+The six protected source/counterexample/repair artifacts rechecked at
+this checkpoint retain their previously recorded SHA256 values.
+
+The subsequent scratch check (session 64185) passes nine continuation
+theorems with zero diagnostics. It additionally proves coefficient variation
+directly from ANTEDB's actual model-phase predicate and transfers it to the
+existing Heath--Brown physical phase `T*F((A+x)/M)`. The bound retains
+`(modelPhaseJetCoefficient sigma 3+delta)*|b-a|/(modelPhaseThirdLower sigma*M)`;
+third-derivative nondegeneracy and fourth-derivative control are derived
+from existing model estimates, not supplied as new hypotheses. These nine
+theorems remain scratch-only; the production hashes and both BAT PASS
+claims above are unchanged. Composing the variation into the discrete
+Third Condition and constructing the actual minor-arc geometry remain open.
+
+Session 19380 passes the tenth scratch continuation theorem,
+`physicalModelPhase_cubic_ratio_transfer`, with zero diagnostics. It
+composes the checked physical `|b-a|/M` variation with the relative-ratio
+stability theorem for two actual model phases: fixed-base coincidence
+implies pointwise coincidence with loss `3*epsilon+4*eta` when `eta<=1/2`.
+The relative errors and nonzero base coefficients are derived, not assumed.
+The upstream fixed-base coincidence and actual minor-arc geometry are not
+claimed discharged. This ten-theorem scratch checkpoint has SHA256
+`9f8eed4a9e5cac79bc35fe290a1fa859fd1b21b413a12dc4976388b9de88baab`.
+
+| Earlier production artifact | SHA256 |
+| --- | --- |
+| HuxleyLinearForms.lean | `94ceec7be1e800ae5aed03895644668c0ed10f5d0ae141ae9b6e5c7b46ef7838` |
+| Audit.lean | `6a74a4523578dfcb64e5e9cf10d4c3452115a543587656e8cb2b3603963b1801` |
+| SemanticRegression.lean | `b88e5fc30b1325c3580f08eecc9424b3f63512adc98a6b0b1026e1c54417614b` |
+| Foundation transcript 095726 | `8a849850ae864ef5f30dacba182d6999d5176a6e84baca1522a9588d0a56bdb3` |
+| Foundation JSON 095726 | `73fb8b45ccd39cb5fb9531d96d08be7cb20482755395f558146369d05ef88fd9` |
+| Principal transcript 095715 | `638f174481c135c1230efb198ed3a11edf241ccc4b555f77282da7e09f3d6b37` |
+| Historical replay transcript 095715 | `dee398961ee36ec3ab07a350eb6197eeee349d37e1231013d4168e816d6b3a90` |
+| Historical replay JSON 095715 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+
+All sources, counterexamples, owner-authorized repairs and existing
+regressions remain preserved. Recovery-record maintenance is skipped.
+
+## Bounded-density sector continuation (28 September 2026)
+
+The existing HuxleyLinearForms module now contains thirteen further public
+theorems, culminating in `fareySector_bounded_density_dichotomy` and
+`fareySector_integer_labels`. The former retains the original complete
+sector and density hypotheses, size constant 1536B and alpha constant 8;
+beta has the explicit constant 20B, not the sharper printed universal 161.
+The latter identifies every integer label exactly once the size branch
+fails, without asserting exact integrality of alpha or beta. This proves
+the finite bounded-B consequence used in Section 5, not the actual
+rational-point/Taylor entry, long-block saving or family fifth moment.
+Aggregate 34/42 and the eight open checklist items are unchanged.
+
+The focused production build passes, 8,477 jobs, exit 0 (session 58395).
+Thirteen new explicit audits and six new exact-contract regressions are
+registered, with no additional production module or excluded file.
+The converted production-import scratch passes all 35 finite-module
+audits and twelve finite-module regression examples (session 59743),
+plus ten independent Mobius/divisor-density theorems. All use standard
+logical axioms only. Development type/API and linter failures were fixed;
+no resource limit, diagnostic gate or proof-integrity rule was relaxed.
+The scratch density theorem keeps the complete logarithmic discrepancy
+`(mu-l)*N^2/8 <= R+3*N*(1+log N)` and is not used as a constant-error bound.
+
+The first principal run correctly failed its source inventory:
+[091042 failure](logs/tao-trudgian-yang-build-20260928-091042-d41c2e43.log).
+The owner-supplied Huxley PDF had been moved into Sources by the external
+commit `8ad6a8465e741bd451903327694ed6d02f85cc92` but not added to the
+source hash ledger. Its verified, unchanged SHA256 is now registered;
+all 21 source files pass the existing gate. No source was removed or excluded.
+The full principal rerun is recorded at
+[091133 transcript](logs/tao-trudgian-yang-build-20260928-091133-1d8320ea.log):
+**LEAN VERIFICATION PASS, exit 0** (session 90761). All 10,782 build jobs,
+7,247 semantic examples and 18,201 dependency audits pass: 11,956 target,
+6,240 pinned Gafni--Tao declarations and five imported anchors. Coverage
+remains 1,449 production package files / 1,923 scanned Lean files. Historical
+replay, nine exact checker regressions and six generator rejection checks
+pass. There are zero Lean errors, warnings, tactic suggestions or linter
+diagnostics. The two archived Python invalid-escape SyntaxWarnings remain
+visible and unchanged; no diagnostic or integrity gate was narrowed.
+
+The foundation BAT passes after the production integration, exit 0,
+8,857 build jobs, 14,290 dependency audits and all six stages, with zero
+Lean diagnostics: [log](../../logs/foundation_freeze_20260928_091044.log)
+and [JSON](../../logs/foundation_freeze_20260928_091044.json).
+The architecture has 607 nodes and 1,470 edges, no duplicate nodes or
+unresolved edge endpoints. All 5,347 local links in the nine checked prose
+documents resolve (angle-bracket Markdown targets were handled explicitly).
+The frozen primary source, owner PDF, powering and low-height
+counterexamples, repair theorem and powering-obstruction document retain
+their previously recorded hashes. No recovery-record file was touched.
+
+| Production artifact | SHA256 |
+| --- | --- |
+| HuxleyLinearForms.lean | `c4833c03423925cfdf6ac7492c95861012e74909786a7e91adac2726b9e34770` |
+| Audit.lean | `5090d33c8a7aecb19d137e438ccd7eee044980d2bb8d883bd727c70624a2e378` |
+| SemanticRegression.lean | `cae550df5378c1fdadbc81214f432510862f674b0423c86c26e342ae70f41ab1` |
+| Sources/SHA256SUMS.txt | `5f76ecf6f30bbace9fde96a3074274b74c6ee17e02434a7c86ab2bf7781086e5` |
+| Owner-supplied Huxley PDF | `7eb555b6c7a29dce6b6eedca0f4cebbe64e4bc8079d85e50da24719c1b492cca` |
+| Principal transcript 091133 | `3b2b733522b2bb58d779f297add399f3a79437a55898bcb25369500d06fad928` |
+| Historical replay transcript 091133 | `2b43ad8f3ce21c9ad9f1163b8b8f87f79d4d2893e2f947a85292a6842732e39a` |
+| Historical replay JSON 091133 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
+| Foundation transcript 091044 | `28d59f1a51b3a8e098ca0b5eec961844d6f68339f67e9b4337acd4281c2a07f2` |
+| Foundation JSON 091044 | `faac2c073aebc6d7738d35243a4fb5f18a2d429f8c9ecf0f40b6b4e7e5595d40` |
+
 ## Huxley finite source estimates and preserved wording counterexample (28 September 2026)
 
 [HuxleyLinearForms.lean](Extension/TaoTrudgianYang2025/HuxleyLinearForms.lean)
@@ -24,13 +361,21 @@ The foundation BAT passes after integration, exit 0, all six stages,
 8,857 jobs and 14,290 dependency audits, zero Lean diagnostics:
 [log](../../logs/foundation_freeze_20260928_080543.log) and
 [JSON manifest](../../logs/foundation_freeze_20260928_080543.json).
-The principal BAT rerun is recorded in
-[080531 transcript](logs/tao-trudgian-yang-build-20260928-080531-57ab829a.log);
-its final result is recorded below after completion, not inferred from
-the earlier PASS checkpoint.
+The principal BAT also passes, exit 0, LEAN VERIFICATION PASS:
+[080531 transcript](logs/tao-trudgian-yang-build-20260928-080531-57ab829a.log).
+All 10,782 build jobs, 7,241 semantic examples and 18,146 exhaustive
+dependency audits pass (11,901 target, 6,240 pinned, five imported anchors).
+Coverage is 1,449 production package files / 1,923 scanned Lean files.
+The complete source inventory and pins, historical replay, nine checker
+regressions and six generator rejection regressions pass. Both BATs emit
+zero Lean errors, warnings or linter diagnostics. The two historical
+Python invalid-escape SyntaxWarnings remain visible; no gate was weakened.
 
 | Artifact | SHA256 at production freeze |
 | --- | --- |
+| Principal transcript 080531 | `3052870d309ac883b40bd8fec9fa0df8097274d9443517684af29b9a05e9c760` |
+| Historical replay transcript 080531 | `f3bc896e6de477763b2424e36be89299593c83c95d0c665b5070b498977ab18e` |
+| Historical replay JSON 080531 | `71f5d2fd82083b0d8dc627ab33f4d5677ea6b1e66850f03d9dd8fdcce145adee` |
 | HuxleyLinearForms.lean | `40f93fd1ae41bf29b84f8ae28cd99241e2bc4adcc54ce03a99eed9e3c4c7db7e` |
 | Audit.lean | `3b1c26cf33584ae9f8e668914eb31dcac87906c5af715a0dce4527e6fc7b474e` |
 | SemanticRegression.lean | `60691c5c707fa86c25aae78cc60d6a51ff54e1e47234a618b3f067a50cfa76db` |
@@ -46,6 +391,26 @@ counterexample to its statement. All aggregate statuses remain unchanged,
 34/42. Earlier checkpoints below describe their then-current scope.
 All prior counterexamples, owner-authorized repairs, audits and regressions
 are preserved. Recovery-record maintenance remains permanently skipped.
+
+Post-integration checks: ten edited canonical documents have 5,884 local
+links, none broken. All 606 architecture nodes and 1,469 edges are checked,
+with no duplicate node or missing endpoint. The Checklist still has exactly
+34 checked and eight open items. The supplied PDF and all five original
+protected source/obstruction/corrected-growth hashes match their recorded
+values. `git diff --check` passes, with only existing Git LF-to-CRLF notices.
+No commit, push or recovery-record write was performed by this agent.
+During final checks, an external Progress Update commit (8ad6a84) appeared
+and the PDF moved into Sources/. Its bytes retain the recorded SHA256;
+the two documentation links were updated to that location. All six
+production source/audit/regression/root/runner hashes still match the
+successful BAT freeze. The external commit and relocation were preserved.
+
+The subsequent scratch-only continuation passes in session 93579, exit 0,
+with 25 explicit dependency audits and the six production-contract examples.
+Its three new proved facts are the actual denominator-fiber count,
+triangular sector upper bound, and resulting large-sector width inequality.
+All dependencies are standard logical axioms; there are zero Lean
+diagnostics. No production Lean changed after the successful BAT freeze.
 
 ## Huxley PDF and uniform source entry (28 September 2026)
 

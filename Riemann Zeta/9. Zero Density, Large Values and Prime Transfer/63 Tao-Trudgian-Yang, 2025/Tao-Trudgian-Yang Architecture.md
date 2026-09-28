@@ -2,19 +2,42 @@ flowchart TD
 %% HUXLEY SOURCE UPDATE (28 September 2026): owner-supplied full PDF read; source access restored. Uniform seven polynomial tests on closed [1,2] and ordinary/logarithmic interior consumer are kernel-checked. This is not a family-moment/beta proof. EPZAE-13/14/29 remain OPEN; aggregate 34/42. Both BATs retain complete coverage.
     HUXJET["EPZAE-13 Huxley seven model-jet tests<br/>one uniform tolerance and lower bound;<br/>closed interval + interior logarithms DONE"]
     HUXFINITE["EPZAE-13 Huxley Lemma 2.1 and<br/>displayed Lemma 2.5 bounds DONE;<br/>constructed determinant-one neighbor;<br/>literal integrality counterexample preserved"]
-    HUXCOUNT["EPZAE-13 Huxley Sections 2--10<br/>Farey density Lemmas 2.3/2.6;<br/>four-condition long blocks, quartic refinement<br/>and parameter-family counts OPEN"]
+    HUXSECTOR["EPZAE-13 alternate bounded-B sector dichotomy<br/>size 1536B, alpha 8, beta 20B;<br/>exact integer-label rigidity DONE;<br/>printed universal 161 not asserted"]
+    HUXRAT["EPZAE-13 literal rational phase<br/>sector Taylor and eight-point cores;<br/>L^-3 determinant + interval L^-2 Third Condition<br/>CONDITIONALLY PROVED from explicit geometry"]
+    HUXENTRY["EPZAE-13 actual physical model-phase entry<br/>rounded curvature centres and O(1+n^2/M)<br/>coordinate error; cubic-coefficient transfer DONE<br/>interior domain, not full minor-arc geometry"]
+    HUXRES["EPZAE-13 actual Section 5 cancellation<br/>linked q/N error and paired Fourth Condition DONE;<br/>exact sector labels from explicit geometry/Third Condition<br/>CONDITIONALLY PROVED, not full minor-arc construction"]
+    HUXDENS["EPZAE-13 source-scale positive-sector density<br/>primitive rectangles + determinant descent + Dirichlet;<br/>delta K^2/128 from K >= 64q0, delta K q0 >= 64 DONE;<br/>nonlinear density/size gates derived, B=128"]
+    HUXCENT["EPZAE-13 endpoint-covered physical sector centres<br/>actual IVT roots, rounded displacement and denominator budget DONE;<br/>paired nonlinear consumer CONDITIONALLY PROVED<br/>from endpoint coverage and actual Fourth Condition"]
+    HUXCOUNT["EPZAE-13 Huxley Sections 3--10<br/>complete-sector/eight-point geometric construction;<br/>source-uniform four conditions, quartic refinement<br/>and scalar/parameter-family counts OPEN"]
     HUXMOM["EPZAE-13 Huxley Theorem 2<br/>enlarged-domain/mixed-parameter entry<br/>actual family fifth moment OPEN"]
     HUXROWS["EPZAE-13 Huxley Theorem 3<br/>differencing + five exact beta rows<br/>and page-39 short-range consumers OPEN"]
     ED --> HUXJET
     SRC --> HUXCOUNT
     SRC --> HUXFINITE
-    HUXFINITE --> HUXCOUNT
+    HUXFINITE --> HUXSECTOR
+    HUXSECTOR --> HUXCOUNT
+    HUXSECTOR --> HUXRAT
+    HUXRAT --> HUXCOUNT
+    ED --> HUXENTRY
+    HUXRAT --> HUXENTRY
+    HUXENTRY --> HUXCOUNT
+    HUXENTRY --> HUXRES
+    HUXRAT --> HUXRES
+    HUXSECTOR --> HUXRES
+    HUXRES --> HUXCOUNT
+    HUXFINITE --> HUXDENS
+    ML --> HUXDENS
+    HUXDENS --> HUXCOUNT
+    HUXDENS --> HUXRES
+    HUXENTRY --> HUXCENT
+    HUXRES --> HUXCENT
+    HUXCENT --> HUXCOUNT
     P4SC --> HUXCOUNT
     HUXJET --> HUXMOM
     HUXCOUNT --> HUXMOM
     HUXMOM --> HUXROWS
     HUXROWS --> BT
-    class HUXJET,HUXFINITE done;
+    class HUXJET,HUXFINITE,HUXSECTOR,HUXRAT,HUXENTRY,HUXRES,HUXDENS,HUXCENT done;
     class HUXCOUNT,HUXMOM,HUXROWS open;
 %% CURRENT VERIFIED CONTRACT (28 September 2026): EPZAE-21 DONE, aggregate 34/42. AtkinsonPrintedSource.exists_zetaSquareLocalMean_le_printedAtkinson proves literal Ivić Theorem 6.2 (6.20)--(6.23), including full widths, phase/prefix, endpoint-plus-integral bound, damping and cutoff. Both BATs PASS, zero Lean diagnostics; every other EPZAE-21 acceptance clause has a public consumer. Growth/nonexistence uses the owner-authorized strict sigma>1-tau repair, not the false printed statement. Frozen source, counterexamples, obstruction history and regressions remain permanent. Earlier checkpoint comments below retain their historical statuses. Shifted-height (6.24) is not asserted.
 %% EARLIER ATKINSON CHECKPOINT (28 September 2026): the actual full-width stationary error is proved in AtkinsonMorseStationary, including both signed sums, the original divisor coefficients and ceiling cutoff. The public Gaussian/local-mean consumers give C_delta*G*log(T) throughout T^delta<=G<=T^(1/2-delta). Both BATs PASS: 7,219 regressions, 17,933 principal and 14,290 foundation audits, zero Lean diagnostics. EPZAE-21 and aggregate 33/42 are unchanged because the distinct sharp printed-source-form bridge remains OPEN. Earlier smaller-width obstruction labels below are historical.

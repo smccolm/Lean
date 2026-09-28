@@ -1,5 +1,70 @@
 # Tooling record
 
+## Source-scale density integration (28 September 2026)
+
+The existing module now has 119 public finite/rational theorems and 46
+matching retained exact-signature regressions. Focused build 42799 passes,
+exit 0, 10,782 jobs, zero Lean diagnostics; production-import scratch 93013
+also passes. The foundation BAT passes, session 34388, all six stages,
+8,857 jobs and 14,290 audits, zero Lean diagnostics. Its transcript is
+`foundation_freeze_20260928_120729.log`. Principal BAT 21469 also passes,
+exit 0, all stages and zero Lean diagnostics, log
+`tao-trudgian-yang-build-20260928-121020-8f66005e.log`.
+Earlier PASS logs below refer to the preceding residual integration.
+No coverage, diagnostic gate, resource limit or runner behavior was changed.
+Recovery-record maintenance remains permanently skipped.
+
+## Earlier Section 5 residual integration (28 September 2026)
+
+Eighteen further public theorems and eight exact-signature regressions are
+integrated into the existing module. The full focused build passes, session
+2533, exit 0, 10,782 jobs, with zero Lean diagnostics. The production-import
+scratch passes, session 42623, including all 94 finite/rational public
+audits, 34 exact-signature regressions and ten independent density audits.
+The foundation BAT passes, session 20292, all six stages, 8,857 jobs and
+14,290 audits, zero Lean diagnostics. The principal BAT also passes,
+session 68440, exit 0: 7,269 semantic examples, 18,384 exhaustive audits,
+zero Lean diagnostics. The two archived Python SyntaxWarnings remain visible.
+Log: `tao-trudgian-yang-build-20260928-112455-70068b2d.log`.
+No runner exclusions, diagnostic changes or resource increases were needed.
+Recovery-record maintenance remains permanently skipped.
+
+## Earlier physical source-entry integration (28 September 2026)
+
+Eighteen further public theorems and eight exact-contract regression
+examples are integrated into the existing HuxleyLinearForms module.
+The default root and both BATs already cover this module; no exclusion,
+resource increase or diagnostic-gate change is required. The focused
+production build passes, 9,150 jobs, zero Lean diagnostics. The exact-type
+regressions explicitly apply every binder to the public theorem; the
+initial unused-name warnings in quantified test signatures were fixed.
+Both full BAT reruns pass for this production checkpoint, exit 0:
+7,261 semantic examples, 18,335 principal and 14,290 foundation dependency
+audits, zero Lean diagnostics. The two archived Python SyntaxWarnings
+remain visible. Exact logs and hashes are in the reproduction manifest.
+No recovery-record file is created or maintained.
+
+## Rational-phase continuation (28 September 2026)
+
+The existing HuxleyLinearForms module now includes the literal rational
+phase and the conditional eight-point L^-3 analytic core. Twenty-three
+public audits and six semantic regressions are added; default root and
+both BAT coverage already include this module. No runner exclusion or
+diagnostic gate changes were needed. Both full BAT reruns pass, exit 0,
+with zero Lean diagnostics; their evidence is tracked in the reproduction
+manifest. The archived Python warnings remain visible, not suppressed.
+
+## Bounded-density continuation (28 September 2026)
+
+The existing HuxleyLinearForms module gains thirteen explicit audits and
+six semantic regressions, including the alternate bounded-B dichotomy
+and exact integer-label consumer. No module is added or excluded.
+The Huxley PDF moved into Sources is registered in SHA256SUMS.txt with
+its unchanged owner-supplied hash; the source gate now checks 21 files.
+The initial run correctly rejected the unlisted file; see the reproduction
+manifest for the failure and subsequent full verification.
+Both BATs and all warning/integrity gates remain mandatory.
+
 ## Huxley source integration (28 September 2026)
 
 The principal runner inventory and default root now include

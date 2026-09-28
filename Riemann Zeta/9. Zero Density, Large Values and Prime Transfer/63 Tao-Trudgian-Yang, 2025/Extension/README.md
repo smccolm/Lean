@@ -1,5 +1,109 @@
 # Lean extension
 
+## Source-scale rational density and constructed centres (28 September 2026)
+
+The existing HuxleyLinearForms module now proves the positive-sector
+density bound `(w-l)*K^2/128 <= card(fareySector K l w)` from an actual
+rational anchor in [l,w], `64*q0 <= K` and `64 <= (w-l)*K*q0`.
+Here q0 is the anchor's reduced denominator; minimality is not required.
+Primitive rectangles, strict determinant descent and Mathlib Dirichlet
+approximation construct the count. There is no assumed density certificate
+and no logarithmic error. The two scales match the counting input cited
+at Huxley (1993), (5.9); the remaining physical-coordinate entry is not
+silently assumed.
+
+`sector_nonlinear_integer_labels_source_density` derives both cardinality
+gates of the existing nonlinear rigidity consumer with B=128 from those
+scales and an explicit scalar error budget. Six additional physical-entry
+theorems construct every sector centre from endpoint curvature coverage,
+derive rounded cubic-displacement and denominator budgets, and consume
+the actual paired Fourth Condition. Endpoint coverage and that Fourth
+Condition remain explicit analytic inputs.
+
+This batch adds 25 public theorems and 12 exact-signature regressions to
+the existing module (119 public theorems and 46 matching retained
+regressions in total); no new support module is created. Scratch proof
+and audits pass, exit 0, with zero Lean diagnostics. The full focused
+production build and audit/regressions pass (10,782 jobs), as does the
+foundation BAT (8,857 jobs, 14,290 audits, zero Lean diagnostics). The
+principal BAT also passes (session 21469, exit 0, 10,782 jobs, zero
+Lean diagnostics; log 20260928-121020-8f66005e). Earlier PASS evidence
+below remains historical.
+
+Remaining DAG: signed physical-curvature interval/width and sector
+coordinate entry -> eight-point construction and source-uniform
+coincidence propagation -> quartic refinement and scalar/family counts ->
+Theorem 2 family fifth moment -> Theorem 3 exact beta rows.
+**EPZAE-13/14/29 remain OPEN; aggregate 34/42.**
+Both `run_tao_trudgian_yang_build.bat --no-pause` and
+`run_lake_build.bat --no-pause` retain full coverage and must pass after
+production changes. All frozen sources, counterexamples, regressions and
+owner-authorized repairs are preserved. Recovery-record maintenance is
+permanently skipped.
+
+## Physical source entry and nonlinear residual (28 September 2026)
+
+The owner-supplied 40-page Huxley PDF has been read. The existing
+HuxleyLinearForms module now also derives the Section 5 nonlinear residual
+for actual rounded physical phases. Eighteen further public theorems and
+eight exact-signature regressions extend the previous physical-entry core;
+no new support module is introduced.
+
+The source cancellation retains the base-curvature correction in beta.
+From the actual model, `T*N*R^2=M^3` and `|n|^3<=M*R^2`, Lean derives
+the error `C(sigma,delta)*|q|/N`; Taylor, rounding and coordinate errors
+are not assumptions. `physicalModelPhase_fourth_condition_nonlinear`
+consumes the actual centred-derivative Fourth Condition and derives
+(5.4)--(5.6) with the actual integer labels. The consumer
+`physicalModelPhase_sector_integer_labels` feeds this result into the
+existing complete-sector rigidity theorem. Its geometry, density,
+denominator, Third-Condition and scalar size-budget hypotheses remain
+explicit upstream obligations, not claims that the full minor arcs exist.
+
+The earlier physical rounded-centre estimate O(1+n^2/M), cubic-coefficient
+transfer, literal rational-phase Taylor bound, L^-3 determinant core and
+whole-middle-interval L^-2 Third-Condition core remain proved.
+Remaining DAG: complete-sector/eight-point geometric construction and
+source-uniform coincidence propagation -> four-condition long blocks and
+quartic refinement -> scalar/parameter-family counts -> Theorem 2 family
+fifth moment -> Theorem 3 exact beta rows. Enlarged-domain and mixed-parameter
+entry remain separate obligations. **EPZAE-13/14/29 remain OPEN; 34/42.**
+
+The production build and both full BATs pass, exit 0: 7,269 semantic
+examples, 18,384 principal dependency audits and 14,290 foundation audits.
+There are zero Lean errors, warnings, tactic suggestions or linter
+diagnostics. The two archived Python SyntaxWarnings remain visible.
+Keep `run_tao_trudgian_yang_build.bat --no-pause` and
+`run_lake_build.bat --no-pause` synchronized with full coverage.
+The reproduction manifest records the current logs and hashes.
+Frozen sources, counterexamples and owner-authorized repairs remain
+preserved. Recovery-record maintenance is permanently skipped.
+## Huxley bounded-density sector continuation (28 September 2026)
+
+[HuxleyLinearForms.lean](TaoTrudgianYang2025/HuxleyLinearForms.lean)
+now proves `fareySector_bounded_density_dichotomy` on the actual complete
+sector, with the original hypotheses and size branch `R<=1536*B*delta*M*N`.
+The near-integer bounds are `8*N*delta/R` and `20*B*M*delta/R`.
+This is an alternate bounded-B estimate, **not** a proof of the printed
+universal beta constant 161 or of literal Lemma 2.3. The factor two from
+subtraction is retained, and the unit numerator difference and common-divisor
+elimination are constructed from the sector.
+
+The same module proves `fareySector_integer_labels`: when the size branch
+fails, every integer within delta of `m*alpha+n*beta` equals
+`m*round(alpha)+n*round(beta)`. This is the exact finite consequence used
+after (5.11)--(5.12); it does not say alpha or beta is an integer.
+Thirteen public audits and six regressions are added to the existing module.
+The separate retained scratch proves the alternate density lower bound
+`(mu-l)*N^2/8 <= R+3*N*(1+log N)`; no logarithmic error is silently discarded.
+
+The actual rational-point/Taylor entry, long-block savings and family fifth
+moment remain OPEN. **EPZAE-13/14/29 remain OPEN; aggregate 34/42.**
+All counterexamples and authorized repairs are preserved. Both mandatory
+BATs retain full coverage; the moved owner-supplied PDF is now included in
+the 21-file source hash manifest. Current verification evidence is recorded
+in the reproduction manifest. Recovery-record maintenance remains skipped.
+
 ## Huxley source-entry progress (28 September 2026)
 
 The finite source chain now also includes [HuxleyLinearForms.lean](TaoTrudgianYang2025/HuxleyLinearForms.lean):
